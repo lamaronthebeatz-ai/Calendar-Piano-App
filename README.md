@@ -42,6 +42,16 @@ npm run build   # type-checks, then builds to dist/, generates the service worke
 npm run preview # serve the production build locally
 ```
 
+Deploy the contents of `dist/` to any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages, S3…) to get a real, installable-on-iPhone URL for daily use.
+
+### Single-file build (Claude Artifact)
+
+```bash
+npx vite build --config vite.artifact.config.ts   # builds dist-artifact/artifact.html
+```
+
+This produces one self-contained HTML file (all JS/CSS inlined, no service worker) suitable for embedding or publishing as a Claude Artifact — everything still runs against the browser's own IndexedDB, so each viewer's schedule is private to their browser. Export Backup uses the platform's `downloads` capability when running inside an Artifact (declare `capabilities: {downloads: true}` on publish) and falls back to a normal browser download otherwise.
+
 ## Project Structure
 
 ```

@@ -20,8 +20,9 @@ export function SettingsPage() {
 
   async function handleExport() {
     const payload = await exportBackup()
-    downloadBackupFile(payload)
-    pushToast('Backup downloaded', 'success')
+    const outcome = await downloadBackupFile(payload)
+    if (outcome === 'saved') pushToast('Backup downloaded', 'success')
+    else if (outcome === 'declined') pushToast('Export cancelled')
   }
 
   function handleFileChosen(e: ChangeEvent<HTMLInputElement>) {

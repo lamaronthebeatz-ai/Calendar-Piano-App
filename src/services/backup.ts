@@ -27,17 +27,50 @@ export async function exportBackup(): Promise<BackupPayload> {
   }
 }
 
-export function downloadBackupFile(payload: BackupPayload): void {
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
+async function getDownloadsCapability(): Promise<ClaudeDownloadsNamespace | null> {
+  if (typeof window === 'undefined' || !window.claude?.use) return null
+  try {
+    return await window.claude.use('downloads')
+  } catch {
+    return null
+  }
+}
+
+export type DownloadOutcome = 'saved' | 'declined' | 'unavailable'
+
+/**
+ * Saves the backup file. Inside a published Claude Artifact, browsers block
+ * script-triggered downloads, so this offers the file through the platform's
+ * `downloads` capability when present; otherwise it falls back to a normal
+ * `<a download>` browser download (the path used for a self-hosted deploy).
+ */
+export async function downloadBackupFile(payload: BackupPayload): Promise<DownloadOutcome> {
+  const json = JSON.stringify(payload, null, 2)
+  const stamp = payload.exportedAt.slice(0, 10)
+  const filename = `piano-schedule-backup-${stamp}.json`
+
+  const downloads = await getDownloadsCapability()
+  if (downloads) {
+    try {
+      await downloads.save({ filename, data: json })
+      return 'saved'
+    } catch (err) {
+      const code = err && typeof err === 'object' && 'code' in err ? (err as ClaudeDownloadsError).code : undefined
+      if (code === 'declined') return 'declined'
+      // Any other capability error: fall through to the classic browser download below.
+    }
+  }
+
+  const blob = new Blob([json], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
-  const stamp = payload.exportedAt.slice(0, 10)
   a.href = url
-  a.download = `piano-schedule-backup-${stamp}.json`
+  a.download = filename
   document.body.appendChild(a)
   a.click()
   a.remove()
   URL.revokeObjectURL(url)
+  return 'saved'
 }
 
 export class ImportError extends Error {}
