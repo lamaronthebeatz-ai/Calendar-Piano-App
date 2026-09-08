@@ -1,19 +1,18 @@
-import type { Lesson } from '../../types'
+import type { TimetableSlot } from '../../types'
 import { timeToMinutes } from '../../utils/time'
 
-export interface PositionedLesson {
-  lesson: Lesson
+export interface PositionedSlot {
+  slot: TimetableSlot
   columnIndex: number
   columnCount: number
 }
 
-/** Assigns overlapping lessons to side-by-side columns (interval graph coloring). */
-export function layoutLessonsForDay(lessons: Lesson[]): PositionedLesson[] {
-  const visible = lessons.filter((l) => l.status !== 'cancelled')
-  const sorted = [...visible].sort((a, b) => timeToMinutes(a.startTime) - timeToMinutes(b.startTime))
+/** Assigns overlapping slots to side-by-side columns (interval graph coloring). */
+export function layoutSlotsForDay(slots: TimetableSlot[]): PositionedSlot[] {
+  const sorted = [...slots].sort((a, b) => timeToMinutes(a.startTime) - timeToMinutes(b.startTime))
 
-  const result: PositionedLesson[] = []
-  let cluster: { lesson: Lesson; col: number }[] = []
+  const result: PositionedSlot[] = []
+  let cluster: { slot: TimetableSlot; col: number }[] = []
   let clusterEnd = -Infinity
   const columnEndTimes: number[] = []
 
@@ -21,16 +20,16 @@ export function layoutLessonsForDay(lessons: Lesson[]): PositionedLesson[] {
     if (cluster.length === 0) return
     const columnCount = Math.max(...cluster.map((c) => c.col)) + 1
     for (const item of cluster) {
-      result.push({ lesson: item.lesson, columnIndex: item.col, columnCount })
+      result.push({ slot: item.slot, columnIndex: item.col, columnCount })
     }
     cluster = []
     columnEndTimes.length = 0
     clusterEnd = -Infinity
   }
 
-  for (const lesson of sorted) {
-    const start = timeToMinutes(lesson.startTime)
-    const end = timeToMinutes(lesson.endTime)
+  for (const slot of sorted) {
+    const start = timeToMinutes(slot.startTime)
+    const end = timeToMinutes(slot.endTime)
 
     if (start >= clusterEnd) {
       flushCluster()
@@ -50,7 +49,7 @@ export function layoutLessonsForDay(lessons: Lesson[]): PositionedLesson[] {
       columnEndTimes[assignedCol] = end
     }
 
-    cluster.push({ lesson, col: assignedCol })
+    cluster.push({ slot, col: assignedCol })
     clusterEnd = Math.max(clusterEnd, end)
   }
   flushCluster()

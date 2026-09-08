@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Dialog } from '../components/Dialog'
-import { CalendarIcon, NoteIcon, UsersIcon } from '../components/icons'
+import { CalendarIcon, UsersIcon } from '../components/icons'
 import { useUIStore } from '../store/uiStore'
 
 export function QuickActionsSheet() {
@@ -8,13 +8,12 @@ export function QuickActionsSheet() {
   const setOpen = useUIStore((s) => s.setQuickActionsOpen)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
   const openCreateStudent = useUIStore((s) => s.openCreateStudent)
-  const setNoteFlowOpen = useUIStore((s) => s.setNoteFlowOpen)
   const navigate = useNavigate()
 
   const actions = [
     {
       label: 'Add Lesson',
-      description: 'Schedule a new lesson',
+      description: 'Add a fixed weekly lesson',
       icon: CalendarIcon,
       onClick: () => {
         navigate('/')
@@ -26,12 +25,6 @@ export function QuickActionsSheet() {
       description: 'Create a new student profile',
       icon: UsersIcon,
       onClick: () => openCreateStudent(),
-    },
-    {
-      label: 'Add Note',
-      description: 'Write a lesson note for a student',
-      icon: NoteIcon,
-      onClick: () => setNoteFlowOpen(true),
     },
   ]
 

@@ -1,26 +1,18 @@
 import { useMemo, useState } from 'react'
 import { useUIStore } from '../../store/uiStore'
-import { useLessons, useSettings, useStudents } from '../../hooks/useLiveData'
-import { CalendarHeader } from './CalendarHeader'
+import { useSettings, useStudents, useTimetableSlots } from '../../hooks/useLiveData'
 import { WeeklyStatsBar } from './WeeklyStatsBar'
-import { WeekView } from './WeekView'
-import { DayView } from './DayView'
-import { MonthView } from './MonthView'
+import { TimetableGrid } from './TimetableGrid'
 import { FilterSheet } from './FilterSheet'
-import type { Lesson } from '../../types'
-import { getWeekDays, toDateKey } from '../../utils/date'
-import { checkConflicts, moveLesson } from '../../services/lessonsService'
+import type { DayOfWeek, TimetableSlot } from '../../types'
+import { checkConflicts, moveSlot } from '../../services/timetableService'
 import { ConfirmDialog } from '../../components/Dialog'
-import { minutesToTime } from '../../utils/time'
+import { minutesToTime, timeToMinutes } from '../../utils/time'
+import { FilterIcon, SearchIcon } from '../../components/icons'
+import { IconButton } from '../../components/Button'
+import clsx from 'clsx'
 
 export function CalendarPage() {
-  const viewMode = useUIStore((s) => s.viewMode)
-  const setViewMode = useUIStore((s) => s.setViewMode)
-  const currentDate = useUIStore((s) => s.currentDate)
-  const setCurrentDate = useUIStore((s) => s.setCurrentDate)
-  const goToday = useUIStore((s) => s.goToday)
-  const goNext = useUIStore((s) => s.goNext)
-  const goPrev = useUIStore((s) => s.goPrev)
   const filters = useUIStore((s) => s.filters)
   const setFilters = useUIStore((s) => s.setFilters)
   const clearFilters = useUIStore((s) => s.clearFilters)
@@ -31,106 +23,69 @@ export function CalendarPage() {
   const pushToast = useUIStore((s) => s.pushToast)
 
   const [filterSheetOpen, setFilterSheetOpen] = useState(false)
-  const [pendingMove, setPendingMove] = useState<{ lesson: Lesson; date: string; startTime: string; endTime: string; conflictCount: number } | null>(null)
+  const [pendingMove, setPendingMove] = useState<{ slot: TimetableSlot; dayOfWeek: DayOfWeek; startTime: string; endTime: string; conflictCount: number } | null>(null)
 
-  const allLessons = useLessons() ?? []
+  const allSlots = useTimetableSlots() ?? []
   const students = useStudents() ?? []
   const settings = useSettings()
 
   const hasActiveFilters = Object.values(filters).some(Boolean)
 
-  const filteredLessons = useMemo(() => {
-    return allLessons.filter((l) => {
-      if (filters.studentId && l.studentId !== filters.studentId) return false
-      if (filters.status && l.status !== filters.status) return false
-      if (filters.type && l.type !== filters.type) return false
-      if (filters.location && l.location !== filters.location) return false
+  const filteredSlots = useMemo(() => {
+    return allSlots.filter((s) => {
+      if (filters.studentId && s.studentId !== filters.studentId) return false
+      if (filters.type && s.type !== filters.type) return false
+      if (filters.location && s.location !== filters.location) return false
       return true
     })
-  }, [allLessons, filters])
+  }, [allSlots, filters])
 
-  const weekLessons = useMemo(() => {
-    if (viewMode !== 'week') return []
-    const days = getWeekDays(new Date(currentDate), settings.firstDayOfWeek).map(toDateKey)
-    return filteredLessons.filter((l) => days.includes(l.date))
-  }, [filteredLessons, currentDate, settings.firstDayOfWeek, viewMode])
-
-  async function handleCommitChange(lesson: Lesson, date: string, startTime: string, endTime: string) {
-    const conflicts = await checkConflicts({ id: lesson.id, date, startTime, endTime })
+  async function handleCommitChange(slot: TimetableSlot, dayOfWeek: DayOfWeek, startTime: string, endTime: string) {
+    const conflicts = await checkConflicts({ id: slot.id, dayOfWeek, startTime, endTime })
     if (conflicts.length > 0) {
-      setPendingMove({ lesson, date, startTime, endTime, conflictCount: conflicts.length })
+      setPendingMove({ slot, dayOfWeek, startTime, endTime, conflictCount: conflicts.length })
     } else {
-      await moveLesson(lesson.id, date, startTime, endTime)
+      await moveSlot(slot.id, dayOfWeek, startTime, endTime)
       pushToast('Lesson moved', 'success')
     }
   }
 
-  function handleSlotClick(date: string, startTime: string) {
-    const endTime = minutesToTime(
-      Math.min(
-        1439,
-        (() => {
-          const [h, m] = startTime.split(':').map(Number)
-          return h * 60 + m + settings.defaultLessonDuration
-        })(),
-      ),
-    )
-    openCreateLesson({ date, startTime, endTime })
+  function handleSlotClick(dayOfWeek: DayOfWeek, startTime: string) {
+    const endTime = minutesToTime(Math.min(1439, timeToMinutes(startTime) + settings.defaultLessonDuration))
+    openCreateLesson({ dayOfWeek, startTime, endTime })
   }
 
   return (
     <div className="flex h-full flex-col">
-      <CalendarHeader
-        viewMode={viewMode}
-        currentDate={currentDate}
-        weekStartsOn={settings.firstDayOfWeek}
-        onViewModeChange={setViewMode}
-        onToday={goToday}
-        onPrev={goPrev}
-        onNext={goNext}
-        onOpenSearch={() => setSearchOpen(true)}
-        onOpenFilters={() => setFilterSheetOpen(true)}
-        hasActiveFilters={hasActiveFilters}
-      />
+      <div className="flex items-center gap-3 border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
+        <h1 className="flex-1 text-[16px] font-semibold text-[var(--color-ink)] lg:text-[17px]">Weekly Timetable</h1>
+        <button
+          onClick={() => setFilterSheetOpen(true)}
+          className={clsx(
+            'flex h-9 items-center gap-1.5 rounded-lg border px-2.5 text-[13px] font-medium transition-colors',
+            hasActiveFilters
+              ? 'border-[var(--color-accent)] text-[var(--color-accent)] bg-[var(--color-status-confirmed-bg)]'
+              : 'border-[var(--color-border)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)]',
+          )}
+        >
+          <FilterIcon width={15} height={15} />
+          <span className="hidden sm:inline">Filter</span>
+        </button>
+        <IconButton label="Search" icon={<SearchIcon width={17} height={17} />} onClick={() => setSearchOpen(true)} />
+      </div>
 
-      {viewMode === 'week' && <WeeklyStatsBar lessons={weekLessons} students={students} currency={settings.currency} />}
+      <WeeklyStatsBar slots={filteredSlots} students={students} currency={settings.currency} />
 
       <div className="min-h-0 flex-1">
-        {viewMode === 'week' && (
-          <WeekView
-            currentDate={currentDate}
-            lessons={filteredLessons}
-            students={students}
-            weekStartsOn={settings.firstDayOfWeek}
-            onOpenLesson={openDetail}
-            onEditLesson={(lesson) => openEditLesson(lesson.id)}
-            onCommitChange={handleCommitChange}
-            onSlotClick={handleSlotClick}
-          />
-        )}
-        {viewMode === 'day' && (
-          <DayView
-            currentDate={currentDate}
-            lessons={filteredLessons}
-            students={students}
-            onOpenLesson={openDetail}
-            onEditLesson={(lesson) => openEditLesson(lesson.id)}
-            onCommitChange={handleCommitChange}
-            onSlotClick={handleSlotClick}
-          />
-        )}
-        {viewMode === 'month' && (
-          <MonthView
-            currentDate={currentDate}
-            lessons={filteredLessons}
-            students={students}
-            weekStartsOn={settings.firstDayOfWeek}
-            onSelectDay={(date) => {
-              setCurrentDate(date)
-              setViewMode('day')
-            }}
-          />
-        )}
+        <TimetableGrid
+          slots={filteredSlots}
+          students={students}
+          weekStartsOn={settings.firstDayOfWeek}
+          onOpenSlot={openDetail}
+          onEditSlot={(slot) => openEditLesson(slot.id)}
+          onCommitChange={handleCommitChange}
+          onSlotClick={handleSlotClick}
+        />
       </div>
 
       <FilterSheet
@@ -147,7 +102,7 @@ export function CalendarPage() {
         onClose={() => setPendingMove(null)}
         onConfirm={() => {
           if (!pendingMove) return
-          moveLesson(pendingMove.lesson.id, pendingMove.date, pendingMove.startTime, pendingMove.endTime)
+          moveSlot(pendingMove.slot.id, pendingMove.dayOfWeek, pendingMove.startTime, pendingMove.endTime)
           pushToast('Lesson moved despite conflict', 'default')
         }}
         title="Schedule Conflict"

@@ -38,7 +38,7 @@ export function SettingsPage() {
     if (!pendingFile) return
     try {
       const result = await importBackup(pendingFile, mode)
-      pushToast(`Imported ${result.students} students, ${result.lessons} lessons`, 'success')
+      pushToast(`Imported ${result.students} students, ${result.timetableSlots} lessons`, 'success')
     } catch (err) {
       pushToast(err instanceof Error ? err.message : 'Import failed', 'error')
     } finally {
@@ -132,42 +132,6 @@ export function SettingsPage() {
               </button>
             ))}
           </div>
-        </Section>
-
-        <Section title="Notifications">
-          <label className="flex items-center justify-between rounded-xl border border-[var(--color-border)] px-3.5 py-3">
-            <div>
-              <p className="text-[13.5px] font-medium text-[var(--color-ink)]">Lesson reminders</p>
-              <p className="text-[12px] text-[var(--color-ink-muted)]">Get a browser notification before each lesson.</p>
-            </div>
-            <input
-              type="checkbox"
-              checked={settings.notificationsEnabled}
-              onChange={async (e) => {
-                const enabled = e.target.checked
-                if (enabled && 'Notification' in window) {
-                  const permission = await Notification.requestPermission()
-                  if (permission !== 'granted') {
-                    pushToast('Notifications permission was not granted', 'error')
-                    return
-                  }
-                }
-                updateSettings({ notificationsEnabled: enabled })
-              }}
-              className="h-5 w-5 accent-[var(--color-accent)]"
-            />
-          </label>
-          {settings.notificationsEnabled && (
-            <Field label="Remind me before lesson" hint="minutes">
-              <SelectInput value={settings.reminderMinutesBefore} onChange={(e) => updateSettings({ reminderMinutesBefore: Number(e.target.value) })}>
-                {[5, 10, 15, 30, 60].map((m) => (
-                  <option key={m} value={m}>
-                    {m} min
-                  </option>
-                ))}
-              </SelectInput>
-            </Field>
-          )}
         </Section>
 
         <Section title="Data & Backup">

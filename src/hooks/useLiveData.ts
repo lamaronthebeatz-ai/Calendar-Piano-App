@@ -6,12 +6,8 @@ export function useStudents() {
   return useLiveQuery(() => db.students.toArray(), [], [])
 }
 
-export function useLessons() {
-  return useLiveQuery(() => db.lessons.toArray(), [], [])
-}
-
-export function useRecurringLessons() {
-  return useLiveQuery(() => db.recurringLessons.toArray(), [], [])
+export function useTimetableSlots() {
+  return useLiveQuery(() => db.timetableSlots.toArray(), [], [])
 }
 
 const FALLBACK_SETTINGS: Settings = {
@@ -22,8 +18,6 @@ const FALLBACK_SETTINGS: Settings = {
   defaultLocation: 'Studio',
   firstDayOfWeek: 1,
   theme: 'system',
-  notificationsEnabled: false,
-  reminderMinutesBefore: 30,
 }
 
 export function useSettings(): Settings {

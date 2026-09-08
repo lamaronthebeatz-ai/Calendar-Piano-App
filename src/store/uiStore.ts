@@ -1,21 +1,19 @@
 import { create } from 'zustand'
-import type { CalendarViewMode, Lesson, LessonLocation, LessonStatus, LessonType } from '../types'
-import { addDays, addMonths, addWeeks, toDateKey } from '../utils/date'
+import type { DayOfWeek, LessonLocation, LessonType, TimetableSlot } from '../types'
 
-export interface LessonDraft {
+export interface SlotDraft {
   studentId?: string
-  date?: string
+  dayOfWeek?: DayOfWeek
   startTime?: string
   endTime?: string
   location?: LessonLocation
   type?: LessonType
-  status?: LessonStatus
 }
 
-export interface LessonModalState {
+export interface SlotModalState {
   open: boolean
-  editingLessonId?: string
-  draft?: LessonDraft
+  editingSlotId?: string
+  draft?: SlotDraft
 }
 
 export interface StudentModalState {
@@ -23,9 +21,8 @@ export interface StudentModalState {
   editingStudentId?: string
 }
 
-export interface LessonFilters {
+export interface SlotFilters {
   studentId?: string
-  status?: LessonStatus
   type?: LessonType
   location?: LessonLocation
 }
@@ -37,90 +34,60 @@ export interface Toast {
 }
 
 interface UIState {
-  viewMode: CalendarViewMode
-  currentDate: string
-  filters: LessonFilters
+  filters: SlotFilters
   toasts: Toast[]
-  lessonModal: LessonModalState
+  lessonModal: SlotModalState
   studentModal: StudentModalState
-  detailLesson: Lesson | null
+  detailSlot: TimetableSlot | null
   searchOpen: boolean
   quickActionsOpen: boolean
-  noteFlowOpen: boolean
 
-  setViewMode: (mode: CalendarViewMode) => void
-  goToday: () => void
-  goNext: () => void
-  goPrev: () => void
-  setCurrentDate: (date: string) => void
-
-  openCreateLesson: (draft?: LessonDraft) => void
-  openEditLesson: (lessonId: string, draft?: LessonDraft) => void
+  openCreateLesson: (draft?: SlotDraft) => void
+  openEditLesson: (slotId: string, draft?: SlotDraft) => void
   closeLessonModal: () => void
 
   openCreateStudent: () => void
   openEditStudent: (studentId: string) => void
   closeStudentModal: () => void
 
-  openDetail: (lesson: Lesson) => void
+  openDetail: (slot: TimetableSlot) => void
   closeDetail: () => void
 
-  setFilters: (filters: LessonFilters) => void
+  setFilters: (filters: SlotFilters) => void
   clearFilters: () => void
 
   setSearchOpen: (open: boolean) => void
   setQuickActionsOpen: (open: boolean) => void
-  setNoteFlowOpen: (open: boolean) => void
 
   pushToast: (message: string, tone?: Toast['tone']) => void
   dismissToast: (id: string) => void
 }
 
 export const useUIStore = create<UIState>((set, get) => ({
-  viewMode: 'week',
-  currentDate: toDateKey(new Date()),
   filters: {},
   toasts: [],
   lessonModal: { open: false },
   studentModal: { open: false },
-  detailLesson: null,
+  detailSlot: null,
   searchOpen: false,
   quickActionsOpen: false,
-  noteFlowOpen: false,
-
-  setViewMode: (mode) => set({ viewMode: mode }),
-  goToday: () => set({ currentDate: toDateKey(new Date()) }),
-  goNext: () => {
-    const { viewMode, currentDate } = get()
-    const d = new Date(currentDate)
-    const next = viewMode === 'day' ? addDays(d, 1) : viewMode === 'week' ? addWeeks(d, 1) : addMonths(d, 1)
-    set({ currentDate: toDateKey(next) })
-  },
-  goPrev: () => {
-    const { viewMode, currentDate } = get()
-    const d = new Date(currentDate)
-    const prev = viewMode === 'day' ? addDays(d, -1) : viewMode === 'week' ? addWeeks(d, -1) : addMonths(d, -1)
-    set({ currentDate: toDateKey(prev) })
-  },
-  setCurrentDate: (date) => set({ currentDate: date }),
 
   openCreateLesson: (draft) => set({ lessonModal: { open: true, draft } }),
-  openEditLesson: (lessonId, draft) => set({ lessonModal: { open: true, editingLessonId: lessonId, draft } }),
+  openEditLesson: (slotId, draft) => set({ lessonModal: { open: true, editingSlotId: slotId, draft } }),
   closeLessonModal: () => set({ lessonModal: { open: false } }),
 
   openCreateStudent: () => set({ studentModal: { open: true } }),
   openEditStudent: (studentId) => set({ studentModal: { open: true, editingStudentId: studentId } }),
   closeStudentModal: () => set({ studentModal: { open: false } }),
 
-  openDetail: (lesson) => set({ detailLesson: lesson }),
-  closeDetail: () => set({ detailLesson: null }),
+  openDetail: (slot) => set({ detailSlot: slot }),
+  closeDetail: () => set({ detailSlot: null }),
 
   setFilters: (filters) => set({ filters }),
   clearFilters: () => set({ filters: {} }),
 
   setSearchOpen: (open) => set({ searchOpen: open }),
   setQuickActionsOpen: (open) => set({ quickActionsOpen: open }),
-  setNoteFlowOpen: (open) => set({ noteFlowOpen: open }),
 
   pushToast: (message, tone = 'default') => {
     const id = Math.random().toString(36).slice(2)

@@ -1,36 +1,29 @@
-import type { Lesson, Student } from '../types'
-import { percent } from '../utils/format'
+import type { DayOfWeek, Student, TimetableSlot } from '../types'
 
-export function lessonIncome(lesson: Lesson, student: Student | undefined): number {
+export function slotIncome(slot: TimetableSlot, student: Student | undefined): number {
   if (!student) return 0
-  if (lesson.status === 'cancelled' || lesson.status === 'no-show') return 0
   if (student.rateType === 'monthly') return 0
-  return (lesson.duration / 60) * student.rate
+  return (slot.duration / 60) * student.rate
 }
 
-export interface RangeStats {
+export interface OverallStats {
   lessonCount: number
-  teachingHours: number
+  teachingHoursPerWeek: number
   studentCount: number
-  completionRate: number
-  estimatedIncome: number
+  estimatedWeeklyIncome: number
 }
 
-export function computeRangeStats(lessons: Lesson[], students: Student[]): RangeStats {
+export function computeOverallStats(slots: TimetableSlot[], students: Student[]): OverallStats {
   const studentMap = new Map(students.map((s) => [s.id, s]))
-  const countable = lessons.filter((l) => l.status !== 'cancelled')
-  const completed = lessons.filter((l) => l.status === 'completed')
-  const finished = lessons.filter((l) => l.status === 'completed' || l.status === 'no-show')
-  const teachingMinutes = countable.reduce((sum, l) => sum + l.duration, 0)
-  const estimatedIncome = lessons.reduce((sum, l) => sum + lessonIncome(l, studentMap.get(l.studentId)), 0)
-  const studentIds = new Set(countable.map((l) => l.studentId))
+  const minutes = slots.reduce((sum, s) => sum + s.duration, 0)
+  const estimatedWeeklyIncome = slots.reduce((sum, s) => sum + slotIncome(s, studentMap.get(s.studentId)), 0)
+  const studentIds = new Set(slots.map((s) => s.studentId))
 
   return {
-    lessonCount: countable.length,
-    teachingHours: Math.round((teachingMinutes / 60) * 10) / 10,
+    lessonCount: slots.length,
+    teachingHoursPerWeek: Math.round((minutes / 60) * 10) / 10,
     studentCount: studentIds.size,
-    completionRate: finished.length > 0 ? percent(completed.length, finished.length) : 100,
-    estimatedIncome,
+    estimatedWeeklyIncome,
   }
 }
 
@@ -40,100 +33,50 @@ export interface DaySummary {
   income: number
 }
 
-export function computeDaySummary(lessons: Lesson[], students: Student[], dateKey: string): DaySummary {
-  const dayLessons = lessons.filter((l) => l.date === dateKey && l.status !== 'cancelled')
+export function computeDaySummary(slots: TimetableSlot[], students: Student[], dayOfWeek: DayOfWeek): DaySummary {
+  const daySlots = slots.filter((s) => s.dayOfWeek === dayOfWeek)
   const studentMap = new Map(students.map((s) => [s.id, s]))
-  const minutes = dayLessons.reduce((sum, l) => sum + l.duration, 0)
-  const income = dayLessons.reduce((sum, l) => sum + lessonIncome(l, studentMap.get(l.studentId)), 0)
-  return { count: dayLessons.length, hours: Math.round((minutes / 60) * 10) / 10, income }
+  const minutes = daySlots.reduce((sum, s) => sum + s.duration, 0)
+  const income = daySlots.reduce((sum, s) => sum + slotIncome(s, studentMap.get(s.studentId)), 0)
+  return { count: daySlots.length, hours: Math.round((minutes / 60) * 10) / 10, income }
 }
 
-export interface StudentStats {
-  totalLessons: number
-  completed: number
-  cancelled: number
-  noShows: number
-  teachingHours: number
-  attendanceRate: number
-  lastLesson?: Lesson
-  nextLesson?: Lesson
-  estimatedRevenue: number
+export interface StudentScheduleStats {
+  slots: TimetableSlot[]
+  weeklyLessons: number
+  weeklyHours: number
+  estimatedWeeklyRevenue: number
+  estimatedMonthlyRevenue: number
 }
 
-export function computeStudentStats(studentId: string, allLessons: Lesson[], student: Student | undefined, todayKey: string): StudentStats {
-  const lessons = allLessons.filter((l) => l.studentId === studentId)
-  const completed = lessons.filter((l) => l.status === 'completed')
-  const cancelled = lessons.filter((l) => l.status === 'cancelled')
-  const noShows = lessons.filter((l) => l.status === 'no-show')
-  const finished = completed.length + noShows.length
-  const teachingMinutes = completed.reduce((sum, l) => sum + l.duration, 0)
-  const past = lessons
-    .filter((l) => l.date < todayKey || (l.date === todayKey && l.status === 'completed'))
-    .sort((a, b) => (a.date + a.startTime < b.date + b.startTime ? 1 : -1))
-  const upcoming = lessons
-    .filter((l) => l.date >= todayKey && l.status !== 'completed' && l.status !== 'cancelled')
-    .sort((a, b) => (a.date + a.startTime > b.date + b.startTime ? 1 : -1))
-  const estimatedRevenue = lessons.reduce((sum, l) => sum + lessonIncome(l, student), 0)
+export function computeStudentScheduleStats(studentId: string, allSlots: TimetableSlot[], student: Student | undefined): StudentScheduleStats {
+  const slots = allSlots
+    .filter((s) => s.studentId === studentId)
+    .sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
+  const minutes = slots.reduce((sum, s) => sum + s.duration, 0)
+  const weeklyRevenue = student?.rateType === 'monthly' ? 0 : slots.reduce((sum, s) => sum + slotIncome(s, student), 0)
 
   return {
-    totalLessons: lessons.length,
-    completed: completed.length,
-    cancelled: cancelled.length,
-    noShows: noShows.length,
-    teachingHours: Math.round((teachingMinutes / 60) * 10) / 10,
-    attendanceRate: finished > 0 ? percent(completed.length, finished) : 100,
-    lastLesson: past[0],
-    nextLesson: upcoming[0],
-    estimatedRevenue,
+    slots,
+    weeklyLessons: slots.length,
+    weeklyHours: Math.round((minutes / 60) * 10) / 10,
+    estimatedWeeklyRevenue: weeklyRevenue,
+    estimatedMonthlyRevenue: student?.rateType === 'monthly' ? student.rate : Math.round(weeklyRevenue * 52 / 12),
   }
 }
 
-export interface OverallStats {
-  lessonsThisWeek: number
-  lessonsThisMonth: number
-  teachingHoursThisMonth: number
-  activeStudents: number
-  completionRate: number
-  cancellationRate: number
-  noShowRate: number
+export function lessonsByDayOfWeek(slots: TimetableSlot[], days: DayOfWeek[]): number[] {
+  return days.map((day) => slots.filter((s) => s.dayOfWeek === day).length)
 }
 
-export function computeOverallStats(
-  lessons: Lesson[],
-  students: Student[],
-  weekRange: [string, string],
-  monthRange: [string, string],
-): OverallStats {
-  const inWeek = lessons.filter((l) => l.date >= weekRange[0] && l.date <= weekRange[1] && l.status !== 'cancelled')
-  const inMonth = lessons.filter((l) => l.date >= monthRange[0] && l.date <= monthRange[1])
-  const monthCountable = inMonth.filter((l) => l.status !== 'cancelled')
-  const monthMinutes = monthCountable.reduce((sum, l) => sum + l.duration, 0)
-  const completed = inMonth.filter((l) => l.status === 'completed').length
-  const cancelled = inMonth.filter((l) => l.status === 'cancelled').length
-  const noShow = inMonth.filter((l) => l.status === 'no-show').length
-  const total = inMonth.length || 1
-  const concluded = completed + noShow
-
-  return {
-    lessonsThisWeek: inWeek.length,
-    lessonsThisMonth: monthCountable.length,
-    teachingHoursThisMonth: Math.round((monthMinutes / 60) * 10) / 10,
-    activeStudents: students.filter((s) => s.status === 'active').length,
-    completionRate: concluded > 0 ? percent(completed, concluded) : 100,
-    cancellationRate: percent(cancelled, total),
-    noShowRate: percent(noShow, total),
-  }
+export function hoursByDayOfWeek(slots: TimetableSlot[], days: DayOfWeek[]): number[] {
+  return days.map((day) => Math.round((slots.filter((s) => s.dayOfWeek === day).reduce((sum, s) => sum + s.duration, 0) / 60) * 10) / 10)
 }
 
-export function lessonsByDay(lessons: Lesson[], dateKeys: string[]): number[] {
-  return dateKeys.map((key) => lessons.filter((l) => l.date === key && l.status !== 'cancelled').length)
-}
-
-export function studentsByLessonCount(lessons: Lesson[], students: Student[], limit = 6): Array<{ student: Student; count: number }> {
+export function studentsBySlotCount(slots: TimetableSlot[], students: Student[], limit = 6): Array<{ student: Student; count: number }> {
   const counts = new Map<string, number>()
-  for (const l of lessons) {
-    if (l.status === 'cancelled') continue
-    counts.set(l.studentId, (counts.get(l.studentId) ?? 0) + 1)
+  for (const s of slots) {
+    counts.set(s.studentId, (counts.get(s.studentId) ?? 0) + 1)
   }
   return students
     .map((student) => ({ student, count: counts.get(student.id) ?? 0 }))

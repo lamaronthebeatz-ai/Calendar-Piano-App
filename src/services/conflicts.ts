@@ -1,19 +1,18 @@
-import type { Lesson } from '../types'
+import type { TimetableSlot } from '../types'
 import { rangesOverlap } from '../utils/time'
 
 export interface ConflictCheckInput {
   id?: string
-  date: string
+  dayOfWeek: number
   startTime: string
   endTime: string
 }
 
-/** Finds lessons that overlap the given date/time range, excluding the lesson's own id (for edits) and cancelled/no-show lessons. */
-export function findConflicts(input: ConflictCheckInput, existing: Lesson[]): Lesson[] {
-  return existing.filter((lesson) => {
-    if (lesson.id === input.id) return false
-    if (lesson.date !== input.date) return false
-    if (lesson.status === 'cancelled' || lesson.status === 'no-show') return false
-    return rangesOverlap(input.startTime, input.endTime, lesson.startTime, lesson.endTime)
+/** Finds timetable slots that overlap the given weekday/time range, excluding the slot's own id (for edits). */
+export function findConflicts(input: ConflictCheckInput, existing: TimetableSlot[]): TimetableSlot[] {
+  return existing.filter((slot) => {
+    if (slot.id === input.id) return false
+    if (slot.dayOfWeek !== input.dayOfWeek) return false
+    return rangesOverlap(input.startTime, input.endTime, slot.startTime, slot.endTime)
   })
 }

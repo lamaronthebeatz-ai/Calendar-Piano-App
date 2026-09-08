@@ -1,10 +1,9 @@
 import Dexie, { type EntityTable } from 'dexie'
-import type { Lesson, RecurringLesson, Settings, Student } from '../types'
+import type { Settings, Student, TimetableSlot } from '../types'
 
 export class PianoScheduleDB extends Dexie {
   students!: EntityTable<Student, 'id'>
-  lessons!: EntityTable<Lesson, 'id'>
-  recurringLessons!: EntityTable<RecurringLesson, 'id'>
+  timetableSlots!: EntityTable<TimetableSlot, 'id'>
   settings!: EntityTable<Settings, 'id'>
 
   constructor() {
@@ -15,6 +14,18 @@ export class PianoScheduleDB extends Dexie {
       recurringLessons: 'id, studentId, active',
       settings: 'id',
     })
+    // v2: replaced dated lessons/recurringLessons with a single fixed weekly timetable.
+    this.version(2)
+      .stores({
+        students: 'id, name, status, updatedAt',
+        lessons: null,
+        recurringLessons: null,
+        timetableSlots: 'id, studentId, dayOfWeek, [dayOfWeek+startTime]',
+        settings: 'id',
+      })
+      .upgrade(() => {
+        // Dated lesson history doesn't map onto a dateless weekly timetable — start fresh.
+      })
   }
 }
 

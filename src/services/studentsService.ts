@@ -16,17 +16,8 @@ export async function updateStudent(id: string, patch: Partial<NewStudentInput>)
 }
 
 export async function deleteStudent(id: string): Promise<void> {
-  await db.transaction('rw', db.students, db.lessons, db.recurringLessons, async () => {
-    await db.lessons.where('studentId').equals(id).delete()
-    await db.recurringLessons.where('studentId').equals(id).delete()
+  await db.transaction('rw', db.students, db.timetableSlots, async () => {
+    await db.timetableSlots.where('studentId').equals(id).delete()
     await db.students.delete(id)
   })
-}
-
-export async function countUpcomingLessonsForStudent(studentId: string, fromDate: string): Promise<number> {
-  return db.lessons
-    .where('studentId')
-    .equals(studentId)
-    .filter((l) => l.date >= fromDate && l.status !== 'cancelled')
-    .count()
 }

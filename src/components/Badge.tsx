@@ -1,9 +1,9 @@
 import clsx from 'clsx'
-import type { LessonStatus } from '../types'
-import { STATUS_PALETTE } from '../utils/color'
+import type { LessonLocation } from '../types'
+import { LOCATION_PALETTE } from '../utils/color'
 
-export function StatusBadge({ status, className }: { status: LessonStatus; className?: string }) {
-  const palette = STATUS_PALETTE[status]
+export function LocationBadge({ location, className }: { location: LessonLocation; className?: string }) {
+  const palette = LOCATION_PALETTE[location]
   return (
     <span
       className={clsx(

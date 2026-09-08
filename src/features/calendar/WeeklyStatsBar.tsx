@@ -1,27 +1,26 @@
 import clsx from 'clsx'
-import type { Lesson, Student } from '../../types'
-import { computeRangeStats } from '../../services/statistics'
+import type { Student, TimetableSlot } from '../../types'
+import { computeOverallStats } from '../../services/statistics'
 import { formatCurrency } from '../../utils/format'
 
 interface WeeklyStatsBarProps {
-  lessons: Lesson[]
+  slots: TimetableSlot[]
   students: Student[]
   currency: string
 }
 
-export function WeeklyStatsBar({ lessons, students, currency }: WeeklyStatsBarProps) {
-  const stats = computeRangeStats(lessons, students)
+export function WeeklyStatsBar({ slots, students, currency }: WeeklyStatsBarProps) {
+  const stats = computeOverallStats(slots, students)
 
   const tiles = [
-    { label: 'Lessons', value: String(stats.lessonCount) },
-    { label: 'Teaching Hours', value: `${stats.teachingHours}h` },
+    { label: 'Lessons / Week', value: String(stats.lessonCount) },
+    { label: 'Teaching Hours', value: `${stats.teachingHoursPerWeek}h` },
     { label: 'Students', value: String(stats.studentCount) },
-    { label: 'Completion', value: `${stats.completionRate}%` },
-    ...(stats.estimatedIncome > 0 ? [{ label: 'Est. Income', value: formatCurrency(stats.estimatedIncome, currency) }] : []),
+    ...(stats.estimatedWeeklyIncome > 0 ? [{ label: 'Est. Income / Week', value: formatCurrency(stats.estimatedWeeklyIncome, currency) }] : []),
   ]
 
   return (
-    <div className="grid grid-cols-2 gap-px overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-3 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-px overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-4">
       {tiles.map((tile, i) => (
         <div
           key={tile.label}

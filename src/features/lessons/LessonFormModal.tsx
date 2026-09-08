@@ -1,81 +1,67 @@
 import { useEffect, useMemo, useState } from 'react'
 import clsx from 'clsx'
-import { Dialog, ConfirmDialog } from '../../components/Dialog'
+import { ConfirmDialog, Dialog } from '../../components/Dialog'
 import { Button } from '../../components/Button'
-import { Field, SegmentedControl, SelectInput, Textarea, TextInput } from '../../components/fields'
+import { Field, SelectInput, Textarea, TextInput } from '../../components/fields'
 import { AlertTriangleIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
-import { useLessons, useSettings, useStudents } from '../../hooks/useLiveData'
-import type { LessonLocation, LessonStatus, LessonType, RecurrenceFrequency } from '../../types'
-import { checkConflicts, createLesson, createRecurringLesson, updateLesson } from '../../services/lessonsService'
+import { useSettings, useStudents, useTimetableSlots } from '../../hooks/useLiveData'
+import type { DayOfWeek, LessonLocation, LessonType } from '../../types'
+import { checkConflicts, createSlotsForDays, updateSlot } from '../../services/timetableService'
 import { durationMinutes, formatDuration, minutesToTime, snapToStep, timeToMinutes } from '../../utils/time'
-import { toDateKey } from '../../utils/date'
-import { STATUS_OPTIONS } from '../../utils/color'
+import { WEEKDAY_SHORT } from '../../utils/date'
+import { LOCATION_OPTIONS } from '../../utils/color'
 
 const LESSON_TYPES: LessonType[] = ['Piano', 'Theory', 'Piano + Theory', 'Trial Lesson', 'Makeup Lesson']
-const LOCATIONS: LessonLocation[] = ['Studio', 'Home', 'Online', 'Other']
-const DAY_LABELS = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-
-type RepeatOption = 'none' | 'weekly' | 'biweekly' | 'monthly'
+const DAY_ORDER: DayOfWeek[] = [1, 2, 3, 4, 5, 6, 0]
 
 export function LessonFormModal() {
   const modal = useUIStore((s) => s.lessonModal)
   const closeLessonModal = useUIStore((s) => s.closeLessonModal)
   const pushToast = useUIStore((s) => s.pushToast)
   const students = useStudents() ?? []
-  const lessons = useLessons() ?? []
+  const slots = useTimetableSlots() ?? []
   const settings = useSettings()
 
-  const editingLesson = modal.editingLessonId ? lessons.find((l) => l.id === modal.editingLessonId) : undefined
-  const isEditing = !!editingLesson
+  const editingSlot = modal.editingSlotId ? slots.find((s) => s.id === modal.editingSlotId) : undefined
+  const isEditing = !!editingSlot
 
   const [studentId, setStudentId] = useState('')
-  const [date, setDate] = useState('')
+  const [days, setDays] = useState<DayOfWeek[]>([])
   const [startTime, setStartTime] = useState('15:00')
   const [endTime, setEndTime] = useState('16:00')
   const [location, setLocation] = useState<LessonLocation>('Studio')
   const [type, setType] = useState<LessonType>('Piano')
-  const [status, setStatus] = useState<LessonStatus>('confirmed')
   const [note, setNote] = useState('')
-  const [repeat, setRepeat] = useState<RepeatOption>('none')
-  const [repeatDays, setRepeatDays] = useState<number[]>([])
-  const [repeatUntil, setRepeatUntil] = useState('')
   const [error, setError] = useState('')
-  const [conflictCount, setConflictCount] = useState(0)
+  const [conflictDays, setConflictDays] = useState<DayOfWeek[]>([])
   const [confirmSubmit, setConfirmSubmit] = useState(false)
   const [saving, setSaving] = useState(false)
 
   useEffect(() => {
     if (!modal.open) return
-    if (editingLesson) {
-      setStudentId(editingLesson.studentId)
-      setDate(editingLesson.date)
-      setStartTime(editingLesson.startTime)
-      setEndTime(editingLesson.endTime)
-      setLocation(editingLesson.location)
-      setType(editingLesson.type)
-      setStatus(editingLesson.status)
-      setNote(editingLesson.note ?? '')
-      setRepeat('none')
+    if (editingSlot) {
+      setStudentId(editingSlot.studentId)
+      setDays([editingSlot.dayOfWeek])
+      setStartTime(editingSlot.startTime)
+      setEndTime(editingSlot.endTime)
+      setLocation(editingSlot.location)
+      setType(editingSlot.type)
+      setNote(editingSlot.note ?? '')
     } else {
       const draft = modal.draft
-      const initialDate = draft?.date ?? toDateKey(new Date())
       setStudentId(draft?.studentId ?? '')
-      setDate(initialDate)
+      setDays(draft?.dayOfWeek !== undefined ? [draft.dayOfWeek] : [])
       setStartTime(draft?.startTime ?? '15:00')
       setEndTime(draft?.endTime ?? '16:00')
       setLocation(draft?.location ?? settings.defaultLocation)
       setType(draft?.type ?? 'Piano')
-      setStatus(draft?.status ?? 'confirmed')
       setNote('')
-      setRepeat('none')
-      setRepeatDays([new Date(initialDate).getDay()])
-      setRepeatUntil('')
     }
     setError('')
-    setConflictCount(0)
+    setConflictDays([])
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [modal.open, modal.editingLessonId])
+  }, [modal.open, modal.editingSlotId])
 
   const selectedStudent = students.find((s) => s.id === studentId)
   const duration = useMemo(() => {
@@ -84,18 +70,19 @@ export function LessonFormModal() {
   }, [startTime, endTime])
 
   useEffect(() => {
-    if (!modal.open || !date || !startTime || !endTime || duration <= 0) {
-      setConflictCount(0)
+    if (!modal.open || days.length === 0 || duration <= 0) {
+      setConflictDays([])
       return
     }
     let cancelled = false
-    checkConflicts({ id: editingLesson?.id, date, startTime, endTime }).then((conflicts) => {
-      if (!cancelled) setConflictCount(conflicts.length)
+    Promise.all(days.map((dayOfWeek) => checkConflicts({ id: editingSlot?.id, dayOfWeek, startTime, endTime }))).then((results) => {
+      if (cancelled) return
+      setConflictDays(days.filter((_, i) => results[i].length > 0))
     })
     return () => {
       cancelled = true
     }
-  }, [modal.open, date, startTime, endTime, duration, editingLesson?.id])
+  }, [modal.open, days, startTime, endTime, duration, editingSlot?.id])
 
   function handleStudentChange(id: string) {
     setStudentId(id)
@@ -116,49 +103,33 @@ export function LessonFormModal() {
     setter(snapped)
   }
 
+  function toggleDay(day: DayOfWeek) {
+    if (isEditing) {
+      setDays([day])
+      return
+    }
+    setDays((prev) => (prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day].sort()))
+  }
+
   function validate(): string | null {
     if (!studentId) return 'Please select a student.'
-    if (!date) return 'Please choose a date.'
+    if (days.length === 0) return 'Please choose at least one day of the week.'
     if (duration <= 0) return 'End time must be after the start time.'
-    if (repeat !== 'none') {
-      if (!repeatUntil) return 'Please choose an end date for the recurring lesson.'
-      if (repeatUntil < date) return 'Repeat-until date must be after the start date.'
-      if ((repeat === 'weekly' || repeat === 'biweekly') && repeatDays.length === 0) return 'Select at least one day of the week.'
-    }
     return null
   }
 
   async function performSubmit() {
     setSaving(true)
     try {
-      if (isEditing && editingLesson) {
-        await updateLesson(editingLesson.id, { studentId, date, startTime, endTime, location, type, status, note: note || undefined })
+      if (isEditing && editingSlot) {
+        await updateSlot(editingSlot.id, { studentId, dayOfWeek: days[0], startTime, endTime, location, type, note: note || undefined })
         pushToast('Lesson updated', 'success')
-      } else if (repeat !== 'none') {
-        const frequency: RecurrenceFrequency = repeat === 'monthly' ? 'monthly' : repeat === 'biweekly' ? 'biweekly' : 'weekly'
-        const result = await createRecurringLesson({
-          studentId,
-          startDate: date,
-          endDate: repeatUntil,
-          daysOfWeek: repeatDays,
-          startTime,
-          endTime,
-          frequency,
-          location,
-          type,
-          status,
-        })
-        if (result.createdCount === 0) {
-          pushToast('No new lessons were created — they already exist.', 'default')
-        } else {
-          pushToast(
-            `Created ${result.createdCount} recurring lesson${result.createdCount === 1 ? '' : 's'}${result.conflictDates.length ? ` (${result.conflictDates.length} overlap existing lessons)` : ''}`,
-            'success',
-          )
-        }
       } else {
-        await createLesson({ studentId, date, startTime, endTime, location, type, status, note: note || undefined })
-        pushToast('Lesson scheduled', 'success')
+        const result = await createSlotsForDays({ studentId, startTime, endTime, location, type, note: note || undefined }, days)
+        pushToast(
+          `Added ${result.created.length} weekly lesson${result.created.length === 1 ? '' : 's'}${result.conflictDays.length ? ` (overlaps existing lessons on ${result.conflictDays.map((d) => WEEKDAY_SHORT[d]).join(', ')})` : ''}`,
+          'success',
+        )
       }
       closeLessonModal()
     } finally {
@@ -173,15 +144,11 @@ export function LessonFormModal() {
       return
     }
     setError('')
-    if (conflictCount > 0) {
+    if (conflictDays.length > 0) {
       setConfirmSubmit(true)
     } else {
       performSubmit()
     }
-  }
-
-  function toggleDay(day: number) {
-    setRepeatDays((prev) => (prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day].sort()))
   }
 
   return (
@@ -199,7 +166,7 @@ export function LessonFormModal() {
                 Cancel
               </Button>
               <Button variant="primary" onClick={handleSubmit} disabled={saving}>
-                {isEditing ? 'Save Changes' : 'Schedule Lesson'}
+                {isEditing ? 'Save Changes' : 'Add to Timetable'}
               </Button>
             </div>
           </div>
@@ -221,10 +188,28 @@ export function LessonFormModal() {
             </SelectInput>
           </Field>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <Field label="Date">
-              <TextInput type="date" value={date} onChange={(e) => setDate(e.target.value)} />
-            </Field>
+          <div>
+            <p className="mb-1.5 text-[13px] font-medium text-[var(--color-ink-muted)]">{isEditing ? 'Day' : 'Day(s) of week'}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {DAY_ORDER.map((day) => (
+                <button
+                  key={day}
+                  type="button"
+                  onClick={() => toggleDay(day)}
+                  className={clsx(
+                    'flex h-9 min-w-[42px] items-center justify-center rounded-lg px-2 text-[12.5px] font-semibold transition-colors',
+                    days.includes(day)
+                      ? 'bg-[var(--color-accent)] text-[var(--color-accent-ink)]'
+                      : 'bg-[var(--color-surface-sunken)] text-[var(--color-ink-muted)]',
+                  )}
+                >
+                  {WEEKDAY_SHORT[day]}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
             <Field label="Start Time">
               <TextInput type="time" step={900} value={startTime} onChange={(e) => setStartTime(e.target.value)} onBlur={(e) => snapTime(e.target.value, setStartTime)} />
             </Field>
@@ -233,17 +218,17 @@ export function LessonFormModal() {
             </Field>
           </div>
 
-          {conflictCount > 0 && (
+          {conflictDays.length > 0 && (
             <div className="flex items-center gap-2 rounded-xl bg-[var(--color-status-pending-bg)] px-3 py-2.5 text-[13px] text-[var(--color-status-pending)]">
               <AlertTriangleIcon width={16} height={16} className="shrink-0" />
-              Schedule conflict — overlaps {conflictCount} other lesson{conflictCount === 1 ? '' : 's'} on this day.
+              Schedule conflict on {conflictDays.map((d) => WEEKDAY_SHORT[d]).join(', ')}.
             </div>
           )}
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <Field label="Location">
               <SelectInput value={location} onChange={(e) => setLocation(e.target.value as LessonLocation)}>
-                {LOCATIONS.map((l) => (
+                {LOCATION_OPTIONS.map((l) => (
                   <option key={l} value={l}>
                     {l}
                   </option>
@@ -259,60 +244,7 @@ export function LessonFormModal() {
                 ))}
               </SelectInput>
             </Field>
-            <Field label="Status">
-              <SelectInput value={status} onChange={(e) => setStatus(e.target.value as LessonStatus)}>
-                {STATUS_OPTIONS.map((s) => (
-                  <option key={s} value={s}>
-                    {s}
-                  </option>
-                ))}
-              </SelectInput>
-            </Field>
           </div>
-
-          {!isEditing && (
-            <div className="space-y-3 rounded-xl border border-[var(--color-border)] p-3.5">
-              <div className="flex items-center justify-between">
-                <p className="text-[13px] font-medium text-[var(--color-ink-muted)]">Repeat</p>
-                <SegmentedControl
-                  value={repeat}
-                  onChange={setRepeat}
-                  options={[
-                    { value: 'none', label: 'None' },
-                    { value: 'weekly', label: 'Weekly' },
-                    { value: 'biweekly', label: 'Biweekly' },
-                    { value: 'monthly', label: 'Monthly' },
-                  ]}
-                />
-              </div>
-              {repeat !== 'none' && (
-                <>
-                  {repeat !== 'monthly' && (
-                    <div className="flex gap-1.5">
-                      {DAY_LABELS.map((label, idx) => (
-                        <button
-                          key={idx}
-                          type="button"
-                          onClick={() => toggleDay(idx)}
-                          className={clsx(
-                            'flex h-8 w-8 items-center justify-center rounded-full text-[12px] font-semibold transition-colors',
-                            repeatDays.includes(idx)
-                              ? 'bg-[var(--color-accent)] text-[var(--color-accent-ink)]'
-                              : 'bg-[var(--color-surface-sunken)] text-[var(--color-ink-muted)]',
-                          )}
-                        >
-                          {label}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                  <Field label="Repeat until">
-                    <TextInput type="date" value={repeatUntil} onChange={(e) => setRepeatUntil(e.target.value)} min={date} />
-                  </Field>
-                </>
-              )}
-            </div>
-          )}
 
           <Field label="Notes">
             <Textarea value={note} onChange={(e) => setNote(e.target.value)} placeholder="Optional notes about this lesson…" />
@@ -327,8 +259,8 @@ export function LessonFormModal() {
         onClose={() => setConfirmSubmit(false)}
         onConfirm={performSubmit}
         title="Schedule Conflict"
-        description={`You already have ${conflictCount} lesson${conflictCount === 1 ? '' : 's'} scheduled at this time. Schedule anyway?`}
-        confirmLabel="Schedule Anyway"
+        description={`This overlaps an existing lesson on ${conflictDays.map((d) => WEEKDAY_SHORT[d]).join(', ')}. Add it anyway?`}
+        confirmLabel="Add Anyway"
         tone="danger"
       />
     </>

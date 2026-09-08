@@ -1,25 +1,24 @@
 import { useEffect, useMemo, useRef } from 'react'
 import clsx from 'clsx'
-import type { Lesson, Student } from '../../types'
-import { formatDayNumber, formatShortDay, getWeekDays, isToday, toDateKey } from '../../utils/date'
+import type { DayOfWeek, Student, TimetableSlot } from '../../types'
+import { getWeekdayOrder, todayDayOfWeek, WEEKDAY_SHORT } from '../../utils/date'
 import { formatDuration } from '../../utils/time'
 import { GRID_START_MINUTES, TimeGutter, gridBackgroundStyle } from './TimeGrid'
 import { CurrentTimeIndicator, useNowMinutes } from './CurrentTimeIndicator'
 import { LessonBlock, type ColumnRect } from './LessonBlock'
-import { layoutLessonsForDay } from './layoutLessons'
+import { layoutSlotsForDay } from './layoutLessons'
 import { computeDaySummary } from '../../services/statistics'
 import { useIsDesktop } from '../../hooks/useMediaQuery'
 import { PX_PER_MINUTE } from './constants'
 
-interface WeekViewProps {
-  currentDate: string
-  lessons: Lesson[]
+interface TimetableGridProps {
+  slots: TimetableSlot[]
   students: Student[]
   weekStartsOn: 0 | 1
-  onOpenLesson: (lesson: Lesson) => void
-  onEditLesson: (lesson: Lesson) => void
-  onCommitChange: (lesson: Lesson, date: string, startTime: string, endTime: string) => void
-  onSlotClick: (date: string, startTime: string) => void
+  onOpenSlot: (slot: TimetableSlot) => void
+  onEditSlot: (slot: TimetableSlot) => void
+  onCommitChange: (slot: TimetableSlot, dayOfWeek: DayOfWeek, startTime: string, endTime: string) => void
+  onSlotClick: (dayOfWeek: DayOfWeek, startTime: string) => void
 }
 
 function minutesToTimeStr(mins: number): string {
@@ -28,12 +27,13 @@ function minutesToTimeStr(mins: number): string {
   return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`
 }
 
-export function WeekView({ currentDate, lessons, students, weekStartsOn, onOpenLesson, onEditLesson, onCommitChange, onSlotClick }: WeekViewProps) {
+export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEditSlot, onCommitChange, onSlotClick }: TimetableGridProps) {
   const isDesktop = useIsDesktop()
-  const weekDays = useMemo(() => getWeekDays(new Date(currentDate), weekStartsOn), [currentDate, weekStartsOn])
+  const weekdays = useMemo(() => getWeekdayOrder(weekStartsOn), [weekStartsOn])
+  const today = todayDayOfWeek()
   const nowMinutes = useNowMinutes()
   const scrollRef = useRef<HTMLDivElement>(null)
-  const columnRefs = useRef<Map<string, HTMLDivElement>>(new Map())
+  const columnRefs = useRef<Map<DayOfWeek, HTMLDivElement>>(new Map())
   const studentMap = useMemo(() => new Map(students.map((s) => [s.id, s])), [students])
   const hasScrolled = useRef(false)
 
@@ -44,22 +44,21 @@ export function WeekView({ currentDate, lessons, students, weekStartsOn, onOpenL
     scrollRef.current.scrollTo({ top })
   }, [nowMinutes])
 
-  const lessonsByDate = useMemo(() => {
-    const map = new Map<string, Lesson[]>()
-    for (const lesson of lessons) {
-      const arr = map.get(lesson.date) ?? []
-      arr.push(lesson)
-      map.set(lesson.date, arr)
+  const slotsByDay = useMemo(() => {
+    const map = new Map<DayOfWeek, TimetableSlot[]>()
+    for (const slot of slots) {
+      const arr = map.get(slot.dayOfWeek) ?? []
+      arr.push(slot)
+      map.set(slot.dayOfWeek, arr)
     }
     return map
-  }, [lessons])
+  }, [slots])
 
   function getColumnRects(): ColumnRect[] {
-    return weekDays.map((d) => {
-      const key = toDateKey(d)
-      const el = columnRefs.current.get(key)
+    return weekdays.map((day) => {
+      const el = columnRefs.current.get(day)
       const rect = el?.getBoundingClientRect()
-      return { date: key, left: rect?.left ?? 0, right: rect?.right ?? 0 }
+      return { dayOfWeek: day, left: rect?.left ?? 0, right: rect?.right ?? 0 }
     })
   }
 
@@ -67,20 +66,18 @@ export function WeekView({ currentDate, lessons, students, weekStartsOn, onOpenL
     <div className="flex h-full flex-col">
       <div className="flex border-b border-[var(--color-border)] bg-[var(--color-surface-raised)]">
         <div style={{ width: 56 }} className="shrink-0" />
-        {weekDays.map((day) => {
-          const key = toDateKey(day)
-          const summary = computeDaySummary(lessons, students, key)
-          const today = isToday(day)
+        {weekdays.map((day) => {
+          const summary = computeDaySummary(slots, students, day)
+          const isToday = day === today
           return (
-            <div key={key} className="flex-1 border-l border-[var(--color-border)] px-1.5 py-2.5 text-center">
-              <p className="text-[10.5px] font-medium uppercase tracking-wide text-[var(--color-ink-faint)]">{formatShortDay(day)}</p>
+            <div key={day} className="flex-1 border-l border-[var(--color-border)] px-1.5 py-2.5 text-center">
               <p
                 className={clsx(
-                  'mx-auto mt-0.5 flex h-7 w-7 items-center justify-center rounded-full text-[14px] font-semibold',
-                  today ? 'bg-[var(--color-accent)] text-[var(--color-accent-ink)]' : 'text-[var(--color-ink)]',
+                  'mx-auto flex h-7 items-center justify-center rounded-full text-[12px] font-semibold uppercase tracking-wide',
+                  isToday ? 'bg-[var(--color-accent)] text-[var(--color-accent-ink)]' : 'text-[var(--color-ink)]',
                 )}
               >
-                {formatDayNumber(day)}
+                {WEEKDAY_SHORT[day]}
               </p>
               <p className="mt-0.5 hidden text-[10px] text-[var(--color-ink-faint)] sm:block">
                 {summary.count > 0 ? `${summary.count} · ${formatDuration(summary.hours * 60)}` : '—'}
@@ -93,16 +90,15 @@ export function WeekView({ currentDate, lessons, students, weekStartsOn, onOpenL
       <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto">
         <div className="flex">
           <TimeGutter />
-          {weekDays.map((day) => {
-            const key = toDateKey(day)
-            const dayLessons = lessonsByDate.get(key) ?? []
-            const positioned = layoutLessonsForDay(dayLessons)
-            const today = isToday(day)
+          {weekdays.map((day) => {
+            const daySlots = slotsByDay.get(day) ?? []
+            const positioned = layoutSlotsForDay(daySlots)
+            const isToday = day === today
             return (
               <div
-                key={key}
+                key={day}
                 ref={(el) => {
-                  if (el) columnRefs.current.set(key, el)
+                  if (el) columnRefs.current.set(day, el)
                 }}
                 className="relative flex-1 border-l border-[var(--color-border)]"
                 style={gridBackgroundStyle(false)}
@@ -110,24 +106,24 @@ export function WeekView({ currentDate, lessons, students, weekStartsOn, onOpenL
                   if (!isDesktop) return
                   const rect = e.currentTarget.getBoundingClientRect()
                   const y = e.clientY - rect.top + e.currentTarget.scrollTop
-                  const mins = Math.round((y / PX_PER_MINUTE) / 15) * 15 + GRID_START_MINUTES
-                  onSlotClick(key, minutesToTimeStr(mins))
+                  const mins = Math.round(y / PX_PER_MINUTE / 15) * 15 + GRID_START_MINUTES
+                  onSlotClick(day, minutesToTimeStr(mins))
                 }}
               >
-                {today && <CurrentTimeIndicator minutes={nowMinutes} />}
-                {positioned.map(({ lesson, columnIndex, columnCount }) => (
+                {isToday && <CurrentTimeIndicator minutes={nowMinutes} />}
+                {positioned.map(({ slot, columnIndex, columnCount }) => (
                   <LessonBlock
-                    key={lesson.id}
-                    lesson={lesson}
-                    student={studentMap.get(lesson.studentId)}
+                    key={slot.id}
+                    slot={slot}
+                    student={studentMap.get(slot.studentId)}
                     columnIndex={columnIndex}
                     columnCount={columnCount}
                     interactive={isDesktop}
-                    currentDate={key}
-                    onOpen={onOpenLesson}
-                    onLongPressEdit={onEditLesson}
+                    currentDayOfWeek={day}
+                    onOpen={onOpenSlot}
+                    onLongPressEdit={onEditSlot}
                     getColumnRects={getColumnRects}
-                    onCommitChange={(l, result) => onCommitChange(l, result.date, minutesToTimeStr(result.startMinutes), minutesToTimeStr(result.endMinutes))}
+                    onCommitChange={(s, result) => onCommitChange(s, result.dayOfWeek, minutesToTimeStr(result.startMinutes), minutesToTimeStr(result.endMinutes))}
                   />
                 ))}
               </div>

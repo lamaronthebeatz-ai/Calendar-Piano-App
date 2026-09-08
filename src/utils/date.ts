@@ -1,72 +1,31 @@
-import {
-  addDays,
-  addMonths,
-  addWeeks,
-  endOfMonth,
-  endOfWeek,
-  format,
-  isSameDay,
-  isSameMonth,
-  isToday,
-  parseISO,
-  startOfMonth,
-  startOfWeek,
-} from 'date-fns'
+import type { DayOfWeek } from '../types'
 
-export const ISO_DATE = 'yyyy-MM-dd'
-
-export function toDateKey(date: Date): string {
-  return format(date, ISO_DATE)
+export const WEEKDAY_NAMES: Record<DayOfWeek, string> = {
+  0: 'Sunday',
+  1: 'Monday',
+  2: 'Tuesday',
+  3: 'Wednesday',
+  4: 'Thursday',
+  5: 'Friday',
+  6: 'Saturday',
 }
 
-export function fromDateKey(key: string): Date {
-  return parseISO(key)
+export const WEEKDAY_SHORT: Record<DayOfWeek, string> = {
+  0: 'Sun',
+  1: 'Mon',
+  2: 'Tue',
+  3: 'Wed',
+  4: 'Thu',
+  5: 'Fri',
+  6: 'Sat',
 }
 
-export function formatDayLabel(date: Date): string {
-  return format(date, 'EEEE, MMMM d')
+/** Returns the 7 weekday numbers in display order, starting from the given first-day-of-week setting. */
+export function getWeekdayOrder(firstDayOfWeek: 0 | 1): DayOfWeek[] {
+  const order: DayOfWeek[] = [0, 1, 2, 3, 4, 5, 6]
+  return [...order.slice(firstDayOfWeek), ...order.slice(0, firstDayOfWeek)]
 }
 
-export function formatShortDay(date: Date): string {
-  return format(date, 'EEE')
-}
-
-export function formatDayNumber(date: Date): string {
-  return format(date, 'd')
-}
-
-export function formatMonthYear(date: Date): string {
-  return format(date, 'MMMM yyyy')
-}
-
-export function getWeekDays(date: Date, weekStartsOn: 0 | 1): Date[] {
-  const start = startOfWeek(date, { weekStartsOn })
-  return Array.from({ length: 7 }, (_, i) => addDays(start, i))
-}
-
-export function getMonthGridDays(date: Date, weekStartsOn: 0 | 1): Date[] {
-  const monthStart = startOfMonth(date)
-  const monthEnd = endOfMonth(date)
-  const gridStart = startOfWeek(monthStart, { weekStartsOn })
-  const gridEnd = endOfWeek(monthEnd, { weekStartsOn })
-  const days: Date[] = []
-  let cur = gridStart
-  while (cur <= gridEnd) {
-    days.push(cur)
-    cur = addDays(cur, 1)
-  }
-  return days
-}
-
-export {
-  addDays,
-  addWeeks,
-  addMonths,
-  isSameDay,
-  isSameMonth,
-  isToday,
-  startOfWeek,
-  endOfWeek,
-  startOfMonth,
-  endOfMonth,
+export function todayDayOfWeek(): DayOfWeek {
+  return new Date().getDay() as DayOfWeek
 }

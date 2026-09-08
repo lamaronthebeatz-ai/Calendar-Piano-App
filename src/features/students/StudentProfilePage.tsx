@@ -1,42 +1,27 @@
-import { useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useLessons, useSettings, useStudent } from '../../hooks/useLiveData'
-import { Avatar, StatusBadge } from '../../components/Badge'
+import { useSettings, useStudent, useTimetableSlots } from '../../hooks/useLiveData'
+import { Avatar } from '../../components/Badge'
 import { Button, IconButton } from '../../components/Button'
 import { EmptyState } from '../../components/EmptyState'
 import { ArrowLeftIcon, CalendarIcon, EditIcon, MapPinIcon, PhoneIcon, PlusIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
-import { computeStudentStats } from '../../services/statistics'
+import { computeStudentScheduleStats } from '../../services/statistics'
 import { formatCurrency } from '../../utils/format'
 import { formatDuration, formatTimeRange } from '../../utils/time'
-import { formatDayLabel, toDateKey } from '../../utils/date'
-import { SegmentedControl } from '../../components/fields'
-import type { Lesson } from '../../types'
+import { WEEKDAY_NAMES } from '../../utils/date'
+import type { TimetableSlot } from '../../types'
 
 export function StudentProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const student = useStudent(id)
-  const lessons = useLessons() ?? []
+  const slots = useTimetableSlots() ?? []
   const settings = useSettings()
   const openEditStudent = useUIStore((s) => s.openEditStudent)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
   const openDetail = useUIStore((s) => s.openDetail)
-  const [tab, setTab] = useState<'upcoming' | 'history'>('upcoming')
 
-  const todayKey = toDateKey(new Date())
-
-  const studentLessons = useMemo(() => lessons.filter((l) => l.studentId === id), [lessons, id])
-
-  const stats = id ? computeStudentStats(id, lessons, student ?? undefined, todayKey) : undefined
-
-  const upcoming = studentLessons
-    .filter((l) => l.date >= todayKey && l.status !== 'cancelled' && l.status !== 'completed')
-    .sort((a, b) => (a.date + a.startTime > b.date + b.startTime ? 1 : -1))
-
-  const history = studentLessons
-    .filter((l) => l.date < todayKey || l.status === 'completed' || l.status === 'cancelled' || l.status === 'no-show')
-    .sort((a, b) => (a.date + a.startTime < b.date + b.startTime ? 1 : -1))
+  const stats = id ? computeStudentScheduleStats(id, slots, student ?? undefined) : undefined
 
   if (student === undefined) {
     return null
@@ -104,13 +89,13 @@ export function StudentProfilePage() {
 
         {stats && (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <StatTile label="Completed" value={String(stats.completed)} />
-            <StatTile label="Teaching Hours" value={`${stats.teachingHours}h`} />
-            <StatTile label="Attendance" value={`${stats.attendanceRate}%`} />
-            <StatTile label="Total Lessons" value={String(stats.totalLessons)} />
-            {stats.estimatedRevenue > 0 && <StatTile label="Est. Revenue" value={formatCurrency(stats.estimatedRevenue, settings.currency)} />}
-            {stats.cancelled > 0 && <StatTile label="Cancelled" value={String(stats.cancelled)} />}
-            {stats.noShows > 0 && <StatTile label="No Shows" value={String(stats.noShows)} />}
+            <StatTile label="Lessons / Week" value={String(stats.weeklyLessons)} />
+            <StatTile label="Hours / Week" value={`${stats.weeklyHours}h`} />
+            {student.rateType === 'monthly' ? (
+              <StatTile label="Monthly Rate" value={formatCurrency(stats.estimatedMonthlyRevenue, settings.currency)} />
+            ) : (
+              stats.estimatedWeeklyRevenue > 0 && <StatTile label="Est. Revenue / Week" value={formatCurrency(stats.estimatedWeeklyRevenue, settings.currency)} />
+            )}
           </div>
         )}
 
@@ -122,38 +107,16 @@ export function StudentProfilePage() {
         )}
 
         <div>
-          <div className="mb-3 flex items-center justify-between">
-            <SegmentedControl
-              value={tab}
-              onChange={setTab}
-              options={[
-                { value: 'upcoming', label: `Upcoming (${upcoming.length})` },
-                { value: 'history', label: `History (${history.length})` },
-              ]}
-            />
-          </div>
-
-          {tab === 'upcoming' &&
-            (upcoming.length === 0 ? (
-              <EmptyState icon={<CalendarIcon width={26} height={26} />} title="No upcoming lessons" description="Schedule the next lesson for this student." />
-            ) : (
-              <ul className="space-y-2">
-                {upcoming.map((lesson) => (
-                  <LessonRow key={lesson.id} lesson={lesson} onClick={() => openDetail(lesson)} />
-                ))}
-              </ul>
-            ))}
-
-          {tab === 'history' &&
-            (history.length === 0 ? (
-              <EmptyState icon={<CalendarIcon width={26} height={26} />} title="No lesson history yet" />
-            ) : (
-              <ul className="space-y-2">
-                {history.map((lesson) => (
-                  <LessonRow key={lesson.id} lesson={lesson} onClick={() => openDetail(lesson)} />
-                ))}
-              </ul>
-            ))}
+          <p className="mb-3 text-[13px] font-semibold text-[var(--color-ink)]">Weekly Schedule</p>
+          {!stats || stats.slots.length === 0 ? (
+            <EmptyState icon={<CalendarIcon width={26} height={26} />} title="Not on the timetable yet" description="Add this student's fixed weekly lesson." />
+          ) : (
+            <ul className="space-y-2">
+              {stats.slots.map((slot) => (
+                <SlotRow key={slot.id} slot={slot} onClick={() => openDetail(slot)} />
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>
@@ -169,18 +132,17 @@ function StatTile({ label, value }: { label: string; value: string }) {
   )
 }
 
-function LessonRow({ lesson, onClick }: { lesson: Lesson; onClick: () => void }) {
+function SlotRow({ slot, onClick }: { slot: TimetableSlot; onClick: () => void }) {
   return (
     <li>
       <button onClick={onClick} className="flex w-full items-center justify-between rounded-xl border border-[var(--color-border)] p-3 text-left transition-colors hover:bg-[var(--color-surface-sunken)]">
         <div className="min-w-0">
-          <p className="text-[13.5px] font-medium text-[var(--color-ink)]">{formatDayLabel(new Date(lesson.date))}</p>
+          <p className="text-[13.5px] font-medium text-[var(--color-ink)]">{WEEKDAY_NAMES[slot.dayOfWeek]}</p>
           <p className="text-[12px] text-[var(--color-ink-muted)]">
-            {formatTimeRange(lesson.startTime, lesson.endTime)} · {formatDuration(lesson.duration)}
+            {formatTimeRange(slot.startTime, slot.endTime)} · {formatDuration(slot.duration)} · {slot.location}
           </p>
-          {lesson.note && <p className="mt-1 truncate text-[12px] italic text-[var(--color-ink-faint)]">“{lesson.note}”</p>}
+          {slot.note && <p className="mt-1 truncate text-[12px] italic text-[var(--color-ink-faint)]">“{slot.note}”</p>}
         </div>
-        <StatusBadge status={lesson.status} className="ml-3 shrink-0" />
       </button>
     </li>
   )

@@ -5,7 +5,6 @@ import { QuickActionsSheet } from './QuickActionsSheet'
 import { ToastHost } from '../components/ToastHost'
 import { LessonFormModal } from '../features/lessons/LessonFormModal'
 import { LessonDetailSheet } from '../features/lessons/LessonDetailSheet'
-import { QuickNoteModal } from '../features/lessons/QuickNoteModal'
 import { StudentFormModal } from '../features/students/StudentFormModal'
 import { SearchOverlay } from '../features/search/SearchOverlay'
 import { useGlobalShortcuts } from '../hooks/useGlobalShortcuts'
@@ -24,7 +23,6 @@ export function AppShell() {
       <QuickActionsSheet />
       <LessonFormModal />
       <LessonDetailSheet />
-      <QuickNoteModal />
       <StudentFormModal />
       <SearchOverlay />
       <ToastHost />

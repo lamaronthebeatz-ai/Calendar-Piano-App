@@ -1,33 +1,33 @@
 import { useRef, useState, type PointerEvent as ReactPointerEvent } from 'react'
 import clsx from 'clsx'
-import type { Lesson, Student } from '../../types'
-import { STATUS_PALETTE } from '../../utils/color'
+import type { DayOfWeek, Student, TimetableSlot } from '../../types'
+import { LOCATION_PALETTE } from '../../utils/color'
 import { formatTime } from '../../utils/time'
 import { GRID_END_MINUTES, GRID_START_MINUTES, MIN_LESSON_MINUTES, PX_PER_MINUTE, SNAP_MINUTES } from './constants'
 
 export interface ColumnRect {
-  date: string
+  dayOfWeek: DayOfWeek
   left: number
   right: number
 }
 
 interface DragResult {
-  date: string
+  dayOfWeek: DayOfWeek
   startMinutes: number
   endMinutes: number
 }
 
 interface LessonBlockProps {
-  lesson: Lesson
+  slot: TimetableSlot
   student: Student | undefined
   columnIndex: number
   columnCount: number
   interactive: boolean
-  onOpen: (lesson: Lesson) => void
-  onLongPressEdit?: (lesson: Lesson) => void
-  onCommitChange: (lesson: Lesson, result: DragResult) => void
+  onOpen: (slot: TimetableSlot) => void
+  onLongPressEdit?: (slot: TimetableSlot) => void
+  onCommitChange: (slot: TimetableSlot, result: DragResult) => void
   getColumnRects?: () => ColumnRect[]
-  currentDate: string
+  currentDayOfWeek: DayOfWeek
 }
 
 type DragMode = 'move' | 'resize-top' | 'resize-bottom'
@@ -48,7 +48,7 @@ function timeFromMinutes(mins: number): string {
 }
 
 export function LessonBlock({
-  lesson,
+  slot,
   student,
   columnIndex,
   columnCount,
@@ -57,20 +57,20 @@ export function LessonBlock({
   onLongPressEdit,
   onCommitChange,
   getColumnRects,
-  currentDate,
+  currentDayOfWeek,
 }: LessonBlockProps) {
-  const palette = STATUS_PALETTE[lesson.status]
-  const originStart = minutesFromTime(lesson.startTime)
-  const originEnd = minutesFromTime(lesson.endTime)
+  const palette = LOCATION_PALETTE[slot.location]
+  const originStart = minutesFromTime(slot.startTime)
+  const originEnd = minutesFromTime(slot.endTime)
 
-  const [drag, setDrag] = useState<null | { mode: DragMode; startClientX: number; startClientY: number; previewStart: number; previewEnd: number; previewDate: string }>(null)
+  const [drag, setDrag] = useState<null | { mode: DragMode; startClientX: number; startClientY: number; previewStart: number; previewEnd: number; previewDay: DayOfWeek }>(null)
   const blockRef = useRef<HTMLDivElement>(null)
   const longPressTimer = useRef<number | null>(null)
   const movedRef = useRef(false)
 
   const start = drag ? drag.previewStart : originStart
   const end = drag ? drag.previewEnd : originEnd
-  const dateForDisplay = drag ? drag.previewDate : currentDate
+  const dayForDisplay = drag ? drag.previewDay : currentDayOfWeek
 
   const top = (start - GRID_START_MINUTES) * PX_PER_MINUTE
   const height = Math.max((end - start) * PX_PER_MINUTE, 22)
@@ -85,7 +85,7 @@ export function LessonBlock({
     e.stopPropagation()
     ;(e.target as HTMLElement).setPointerCapture(e.pointerId)
     movedRef.current = false
-    setDrag({ mode, startClientX: e.clientX, startClientY: e.clientY, previewStart: originStart, previewEnd: originEnd, previewDate: currentDate })
+    setDrag({ mode, startClientX: e.clientX, startClientY: e.clientY, previewStart: originStart, previewEnd: originEnd, previewDay: currentDayOfWeek })
   }
 
   function handlePointerMove(e: ReactPointerEvent) {
@@ -96,7 +96,7 @@ export function LessonBlock({
 
     let newStart = originStart
     let newEnd = originEnd
-    let newDate = currentDate
+    let newDay = currentDayOfWeek
 
     if (drag.mode === 'move') {
       const duration = originEnd - originStart
@@ -105,7 +105,7 @@ export function LessonBlock({
       if (getColumnRects) {
         const rects = getColumnRects()
         const hit = rects.find((r) => e.clientX >= r.left && e.clientX <= r.right)
-        if (hit) newDate = hit.date
+        if (hit) newDay = hit.dayOfWeek
       }
     } else if (drag.mode === 'resize-top') {
       newStart = Math.min(Math.max(originStart + deltaMinutes, GRID_START_MINUTES), originEnd - MIN_LESSON_MINUTES)
@@ -115,29 +115,29 @@ export function LessonBlock({
       newStart = originStart
     }
 
-    setDrag({ ...drag, previewStart: newStart, previewEnd: newEnd, previewDate: newDate })
+    setDrag({ ...drag, previewStart: newStart, previewEnd: newEnd, previewDay: newDay })
   }
 
   function handlePointerUp() {
     if (!drag) return
-    const changed = drag.previewStart !== originStart || drag.previewEnd !== originEnd || drag.previewDate !== currentDate
+    const changed = drag.previewStart !== originStart || drag.previewEnd !== originEnd || drag.previewDay !== currentDayOfWeek
     const wasMoved = movedRef.current
     setDrag(null)
     if (changed && wasMoved) {
-      onCommitChange(lesson, {
-        date: drag.previewDate,
+      onCommitChange(slot, {
+        dayOfWeek: drag.previewDay,
         startMinutes: drag.previewStart,
         endMinutes: drag.previewEnd,
       })
     } else if (!wasMoved) {
-      onOpen(lesson)
+      onOpen(slot)
     }
   }
 
   function handleTouchStart() {
     if (interactive || !onLongPressEdit) return
     longPressTimer.current = window.setTimeout(() => {
-      onLongPressEdit(lesson)
+      onLongPressEdit(slot)
     }, 500)
   }
   function clearLongPress() {
@@ -152,7 +152,7 @@ export function LessonBlock({
       ref={blockRef}
       role="button"
       tabIndex={0}
-      aria-label={`${student?.nickname ?? student?.name ?? 'Lesson'} ${formatTime(lesson.startTime)} to ${formatTime(lesson.endTime)}`}
+      aria-label={`${student?.nickname ?? student?.name ?? 'Lesson'} ${formatTime(slot.startTime)} to ${formatTime(slot.endTime)}`}
       className={clsx(
         'group absolute select-none overflow-hidden rounded-lg border px-2 py-1 text-left shadow-[var(--shadow-soft)] transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]',
         palette.bg,
@@ -164,7 +164,7 @@ export function LessonBlock({
         height,
         left: `calc(${leftPct}% + 2px)`,
         width: `calc(${widthPct}% - 4px)`,
-        borderColor: `color-mix(in srgb, var(--color-status-${lesson.status === 'no-show' ? 'noshow' : lesson.status}) 35%, transparent)`,
+        borderColor: `color-mix(in srgb, var(--color-status-${slot.location === 'Studio' ? 'confirmed' : slot.location === 'Home' ? 'completed' : slot.location === 'Online' ? 'pending' : 'noshow'}) 35%, transparent)`,
       }}
       onPointerDown={(e) => {
         if (interactive) beginDrag('move', e)
@@ -175,10 +175,10 @@ export function LessonBlock({
       onTouchEnd={clearLongPress}
       onTouchMove={clearLongPress}
       onClick={() => {
-        if (!interactive) onOpen(lesson)
+        if (!interactive) onOpen(slot)
       }}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') onOpen(lesson)
+        if (e.key === 'Enter' || e.key === ' ') onOpen(slot)
       }}
     >
       {interactive && (
@@ -199,10 +199,10 @@ export function LessonBlock({
       )}
       {durationMin >= 60 && (
         <p className="truncate text-[10.5px] leading-tight text-[var(--color-ink-muted)]">
-          {lesson.type} · {lesson.location}
+          {slot.type} · {slot.location}
         </p>
       )}
-      {dateForDisplay !== currentDate && <p className="text-[10px] text-[var(--color-ink-faint)]">→ moving…</p>}
+      {dayForDisplay !== currentDayOfWeek && <p className="text-[10px] text-[var(--color-ink-faint)]">→ moving…</p>}
       {interactive && (
         <div
           className="absolute inset-x-0 bottom-0 h-1.5 cursor-ns-resize opacity-0 group-hover:opacity-100"

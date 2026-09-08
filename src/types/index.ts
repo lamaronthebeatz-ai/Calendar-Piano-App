@@ -2,15 +2,14 @@ export type LessonLocation = 'Studio' | 'Home' | 'Online' | 'Other'
 
 export type LessonType = 'Piano' | 'Theory' | 'Piano + Theory' | 'Trial Lesson' | 'Makeup Lesson'
 
-export type LessonStatus = 'confirmed' | 'pending' | 'completed' | 'cancelled' | 'no-show'
-
 export type StudentLevel = 'Beginner' | 'Elementary' | 'Intermediate' | 'Advanced'
 
 export type StudentStatus = 'active' | 'paused' | 'inactive'
 
 export type RateType = 'perLesson' | 'monthly'
 
-export type RecurrenceFrequency = 'weekly' | 'biweekly' | 'monthly'
+/** 0 = Sunday … 6 = Saturday, matching Date#getDay(). */
+export type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6
 
 export interface Student {
   id: string
@@ -31,34 +30,17 @@ export interface Student {
   updatedAt: number
 }
 
-export interface Lesson {
+/** A fixed, recurring weekly timetable entry — the schedule repeats every week with no end date. */
+export interface TimetableSlot {
   id: string
   studentId: string
-  date: string
+  dayOfWeek: DayOfWeek
   startTime: string
   endTime: string
   duration: number
   location: LessonLocation
   type: LessonType
-  status: LessonStatus
   note?: string
-  recurringLessonId?: string
-  createdAt: number
-  updatedAt: number
-}
-
-export interface RecurringLesson {
-  id: string
-  studentId: string
-  startDate: string
-  endDate: string
-  daysOfWeek: number[]
-  startTime: string
-  endTime: string
-  frequency: RecurrenceFrequency
-  location: LessonLocation
-  type: LessonType
-  active: boolean
   createdAt: number
   updatedAt: number
 }
@@ -71,12 +53,4 @@ export interface Settings {
   defaultLocation: LessonLocation
   firstDayOfWeek: 0 | 1
   theme: 'light' | 'dark' | 'system'
-  notificationsEnabled: boolean
-  reminderMinutesBefore: number
-}
-
-export type CalendarViewMode = 'day' | 'week' | 'month'
-
-export interface LessonWithStudent extends Lesson {
-  student: Student | undefined
 }

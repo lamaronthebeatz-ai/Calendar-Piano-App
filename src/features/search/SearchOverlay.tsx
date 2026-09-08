@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Dialog } from '../../components/Dialog'
-import { Avatar, StatusBadge } from '../../components/Badge'
+import { Avatar, LocationBadge } from '../../components/Badge'
 import { SearchIcon, UsersIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
-import { useLessons, useStudents } from '../../hooks/useLiveData'
-import { formatDayLabel } from '../../utils/date'
+import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
+import { WEEKDAY_NAMES } from '../../utils/date'
 import { formatTimeRange } from '../../utils/time'
 import { EmptyState } from '../../components/EmptyState'
 
@@ -13,11 +13,9 @@ export function SearchOverlay() {
   const open = useUIStore((s) => s.searchOpen)
   const setOpen = useUIStore((s) => s.setSearchOpen)
   const openDetail = useUIStore((s) => s.openDetail)
-  const setCurrentDate = useUIStore((s) => s.setCurrentDate)
-  const setViewMode = useUIStore((s) => s.setViewMode)
   const navigate = useNavigate()
   const students = useStudents() ?? []
-  const lessons = useLessons() ?? []
+  const slots = useTimetableSlots() ?? []
   const [query, setQuery] = useState('')
 
   const studentMap = useMemo(() => new Map(students.map((s) => [s.id, s])), [students])
@@ -30,24 +28,24 @@ export function SearchOverlay() {
     )
   }, [students, query])
 
-  const matchedLessons = useMemo(() => {
+  const matchedSlots = useMemo(() => {
     if (!query.trim()) return []
     const q = query.toLowerCase()
-    return lessons
-      .filter((l) => {
-        const student = studentMap.get(l.studentId)
+    return slots
+      .filter((s) => {
+        const student = studentMap.get(s.studentId)
         const studentName = (student?.nickname || student?.name || '').toLowerCase()
         return (
           studentName.includes(q) ||
-          l.location.toLowerCase().includes(q) ||
-          l.type.toLowerCase().includes(q) ||
-          l.date.includes(q) ||
-          l.note?.toLowerCase().includes(q)
+          s.location.toLowerCase().includes(q) ||
+          s.type.toLowerCase().includes(q) ||
+          WEEKDAY_NAMES[s.dayOfWeek].toLowerCase().includes(q) ||
+          s.note?.toLowerCase().includes(q)
         )
       })
-      .sort((a, b) => (a.date + a.startTime < b.date + b.startTime ? 1 : -1))
+      .sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
       .slice(0, 20)
-  }, [lessons, studentMap, query])
+  }, [slots, studentMap, query])
 
   function close() {
     setOpen(false)
@@ -63,7 +61,7 @@ export function SearchOverlay() {
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search students, lessons, dates, locations, notes…"
+            placeholder="Search students, days, locations, notes…"
             className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] pl-10 pr-3 text-[14px] outline-none focus:border-[var(--color-accent)]"
           />
         </div>
@@ -72,7 +70,7 @@ export function SearchOverlay() {
           <EmptyState icon={<SearchIcon width={26} height={26} />} title="Search your studio" description="Find students, lessons, notes, and more." />
         )}
 
-        {query.trim() && matchedStudents.length === 0 && matchedLessons.length === 0 && (
+        {query.trim() && matchedStudents.length === 0 && matchedSlots.length === 0 && (
           <EmptyState icon={<SearchIcon width={26} height={26} />} title="No results" description={`Nothing matches "${query}".`} />
         )}
 
@@ -100,21 +98,19 @@ export function SearchOverlay() {
           </div>
         )}
 
-        {matchedLessons.length > 0 && (
+        {matchedSlots.length > 0 && (
           <div>
             <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">Lessons</p>
             <div className="space-y-1">
-              {matchedLessons.map((l) => {
-                const student = studentMap.get(l.studentId)
+              {matchedSlots.map((s) => {
+                const student = studentMap.get(s.studentId)
                 return (
                   <button
-                    key={l.id}
+                    key={s.id}
                     onClick={() => {
                       close()
-                      setCurrentDate(l.date)
-                      setViewMode('day')
                       navigate('/')
-                      openDetail(l)
+                      openDetail(s)
                     }}
                     className="flex w-full items-center justify-between gap-3 rounded-lg px-2 py-2 text-left hover:bg-[var(--color-surface-sunken)]"
                   >
@@ -123,11 +119,11 @@ export function SearchOverlay() {
                       <div className="min-w-0">
                         <p className="truncate text-[13.5px] font-medium text-[var(--color-ink)]">{student?.nickname || student?.name}</p>
                         <p className="truncate text-[12px] text-[var(--color-ink-muted)]">
-                          {formatDayLabel(new Date(l.date))} · {formatTimeRange(l.startTime, l.endTime)}
+                          {WEEKDAY_NAMES[s.dayOfWeek]} · {formatTimeRange(s.startTime, s.endTime)}
                         </p>
                       </div>
                     </div>
-                    <StatusBadge status={l.status} className="shrink-0" />
+                    <LocationBadge location={s.location} className="shrink-0" />
                   </button>
                 )
               })}

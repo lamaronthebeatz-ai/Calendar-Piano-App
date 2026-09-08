@@ -1,28 +1,25 @@
 import { db } from '../data/db'
-import type { Lesson, RecurringLesson, Settings, Student } from '../types'
+import type { Settings, Student, TimetableSlot } from '../types'
 
 export interface BackupPayload {
-  version: 1
+  version: 2
   exportedAt: string
   students: Student[]
-  lessons: Lesson[]
-  recurringLessons: RecurringLesson[]
+  timetableSlots: TimetableSlot[]
   settings: Settings | undefined
 }
 
 export async function exportBackup(): Promise<BackupPayload> {
-  const [students, lessons, recurringLessons, settings] = await Promise.all([
+  const [students, timetableSlots, settings] = await Promise.all([
     db.students.toArray(),
-    db.lessons.toArray(),
-    db.recurringLessons.toArray(),
+    db.timetableSlots.toArray(),
     db.settings.get('default'),
   ])
   return {
-    version: 1,
+    version: 2,
     exportedAt: new Date().toISOString(),
     students,
-    lessons,
-    recurringLessons,
+    timetableSlots,
     settings,
   }
 }
@@ -78,10 +75,10 @@ export class ImportError extends Error {}
 function isValidPayload(data: unknown): data is BackupPayload {
   if (!data || typeof data !== 'object') return false
   const d = data as Record<string, unknown>
-  return Array.isArray(d.students) && Array.isArray(d.lessons) && Array.isArray(d.recurringLessons)
+  return d.version === 2 && Array.isArray(d.students) && Array.isArray(d.timetableSlots)
 }
 
-export async function importBackup(file: File, mode: 'replace' | 'merge'): Promise<{ students: number; lessons: number; recurringLessons: number }> {
+export async function importBackup(file: File, mode: 'replace' | 'merge'): Promise<{ students: number; timetableSlots: number }> {
   let data: unknown
   try {
     const text = await file.text()
@@ -91,18 +88,17 @@ export async function importBackup(file: File, mode: 'replace' | 'merge'): Promi
   }
 
   if (!isValidPayload(data)) {
-    throw new ImportError('This does not look like a valid Piano Schedule backup file.')
+    throw new ImportError('This does not look like a valid Piano Schedule backup file for this version of the app.')
   }
 
-  await db.transaction('rw', db.students, db.lessons, db.recurringLessons, db.settings, async () => {
+  await db.transaction('rw', db.students, db.timetableSlots, db.settings, async () => {
     if (mode === 'replace') {
-      await Promise.all([db.students.clear(), db.lessons.clear(), db.recurringLessons.clear()])
+      await Promise.all([db.students.clear(), db.timetableSlots.clear()])
     }
     if (data.students.length) await db.students.bulkPut(data.students)
-    if (data.lessons.length) await db.lessons.bulkPut(data.lessons)
-    if (data.recurringLessons.length) await db.recurringLessons.bulkPut(data.recurringLessons)
+    if (data.timetableSlots.length) await db.timetableSlots.bulkPut(data.timetableSlots)
     if (data.settings) await db.settings.put(data.settings)
   })
 
-  return { students: data.students.length, lessons: data.lessons.length, recurringLessons: data.recurringLessons.length }
+  return { students: data.students.length, timetableSlots: data.timetableSlots.length }
 }

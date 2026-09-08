@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
-import { useLessons, useStudents } from '../../hooks/useLiveData'
+import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
 import { Avatar } from '../../components/Badge'
 import { Button } from '../../components/Button'
 import { EmptyState } from '../../components/EmptyState'
@@ -9,29 +9,33 @@ import { SegmentedControl } from '../../components/fields'
 import { PlusIcon, UsersIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
 import type { Student, StudentStatus } from '../../types'
-import { toDateKey } from '../../utils/date'
+import { WEEKDAY_SHORT } from '../../utils/date'
+import { formatTime } from '../../utils/time'
 
 type FilterValue = 'all' | StudentStatus
 
 export function StudentsListPage() {
   const students = useStudents() ?? []
-  const lessons = useLessons() ?? []
+  const slots = useTimetableSlots() ?? []
   const openCreateStudent = useUIStore((s) => s.openCreateStudent)
   const navigate = useNavigate()
   const [filter, setFilter] = useState<FilterValue>('all')
   const [query, setQuery] = useState('')
 
-  const todayKey = toDateKey(new Date())
-
-  const nextLessonByStudent = useMemo(() => {
+  const scheduleByStudent = useMemo(() => {
     const map = new Map<string, string>()
-    for (const l of lessons) {
-      if (l.status === 'cancelled' || l.date < todayKey) continue
-      const existing = map.get(l.studentId)
-      if (!existing || l.date < existing) map.set(l.studentId, l.date)
+    const grouped = new Map<string, typeof slots>()
+    for (const s of slots) {
+      const arr = grouped.get(s.studentId) ?? []
+      arr.push(s)
+      grouped.set(s.studentId, arr)
+    }
+    for (const [studentId, studentSlots] of grouped) {
+      const sorted = studentSlots.slice().sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
+      map.set(studentId, sorted.map((s) => `${WEEKDAY_SHORT[s.dayOfWeek]} ${formatTime(s.startTime)}`).join(', '))
     }
     return map
-  }, [lessons, todayKey])
+  }, [slots])
 
   const filtered = students
     .filter((s) => filter === 'all' || s.status === filter)
@@ -72,7 +76,7 @@ export function StudentsListPage() {
           <EmptyState
             icon={<UsersIcon width={30} height={30} />}
             title={students.length === 0 ? 'No students yet' : 'No students match'}
-            description={students.length === 0 ? 'Add your first student to start scheduling lessons.' : 'Try a different search or filter.'}
+            description={students.length === 0 ? 'Add your first student to start building your timetable.' : 'Try a different search or filter.'}
             action={
               students.length === 0 ? (
                 <Button variant="primary" onClick={openCreateStudent}>
@@ -84,7 +88,7 @@ export function StudentsListPage() {
         ) : (
           <ul className="divide-y divide-[var(--color-border)]">
             {filtered.map((student) => (
-              <StudentRow key={student.id} student={student} nextLesson={nextLessonByStudent.get(student.id)} onClick={() => navigate(`/students/${student.id}`)} />
+              <StudentRow key={student.id} student={student} schedule={scheduleByStudent.get(student.id)} onClick={() => navigate(`/students/${student.id}`)} />
             ))}
           </ul>
         )}
@@ -102,7 +106,7 @@ export function StudentsListPage() {
   )
 }
 
-function StudentRow({ student, nextLesson, onClick }: { student: Student; nextLesson?: string; onClick: () => void }) {
+function StudentRow({ student, schedule, onClick }: { student: Student; schedule?: string; onClick: () => void }) {
   return (
     <li>
       <button onClick={onClick} className="flex w-full items-center gap-3.5 px-4 py-3 text-left transition-colors hover:bg-[var(--color-surface-sunken)] lg:px-6">
@@ -123,7 +127,7 @@ function StudentRow({ student, nextLesson, onClick }: { student: Student; nextLe
           </div>
           <p className="truncate text-[12.5px] text-[var(--color-ink-muted)]">
             {student.level} · {student.defaultLocation}
-            {nextLesson && ` · Next: ${new Date(nextLesson).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`}
+            {schedule ? ` · ${schedule}` : ' · No fixed lessons yet'}
           </p>
         </div>
       </button>
