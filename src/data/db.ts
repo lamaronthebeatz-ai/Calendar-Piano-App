@@ -37,6 +37,18 @@ export class PianoScheduleDB extends Dexie {
         await tx.table('students').clear()
         await tx.table('timetableSlots').clear()
       })
+    // v4: corrected student names — v3 guessed abbreviated nicknames from full
+    // names, which mangled several of them. Re-seed with exact full names.
+    this.version(4)
+      .stores({
+        students: 'id, name, status, updatedAt',
+        timetableSlots: 'id, studentId, dayOfWeek, [dayOfWeek+startTime]',
+        settings: 'id',
+      })
+      .upgrade(async (tx) => {
+        await tx.table('students').clear()
+        await tx.table('timetableSlots').clear()
+      })
   }
 }
 
