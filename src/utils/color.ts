@@ -15,19 +15,19 @@ export const LOCATION_PALETTE: Record<LessonLocation, LocationPalette> = {
     dot: 'bg-[var(--color-status-confirmed)]',
   },
   Home: {
-    label: 'Home',
+    label: 'Tại nhà',
     text: 'text-[var(--color-status-completed)]',
     bg: 'bg-[var(--color-status-completed-bg)]',
     dot: 'bg-[var(--color-status-completed)]',
   },
   Online: {
-    label: 'Online',
+    label: 'Trực tuyến',
     text: 'text-[var(--color-status-pending)]',
     bg: 'bg-[var(--color-status-pending-bg)]',
     dot: 'bg-[var(--color-status-pending)]',
   },
   Other: {
-    label: 'Other',
+    label: 'Khác',
     text: 'text-[var(--color-status-noshow)]',
     bg: 'bg-[var(--color-status-noshow-bg)]',
     dot: 'bg-[var(--color-status-noshow)]',

@@ -6,10 +6,10 @@ import { useSettings } from '../hooks/useLiveData'
 import { applyThemeToDocument, updateSettings } from '../services/settingsService'
 
 const navItems = [
-  { to: '/', label: 'Calendar', icon: CalendarIcon, end: true },
-  { to: '/students', label: 'Students', icon: UsersIcon, end: false },
-  { to: '/statistics', label: 'Statistics', icon: ChartIcon, end: false },
-  { to: '/settings', label: 'Settings', icon: SettingsIcon, end: false },
+  { to: '/', label: 'Lịch', icon: CalendarIcon, end: true },
+  { to: '/students', label: 'Học viên', icon: UsersIcon, end: false },
+  { to: '/statistics', label: 'Thống kê', icon: ChartIcon, end: false },
+  { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
 ]
 
 export function Sidebar() {
@@ -27,8 +27,8 @@ export function Sidebar() {
   return (
     <aside className="hidden w-64 shrink-0 flex-col border-r border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-6 lg:flex">
       <div className="mb-8 px-2">
-        <p className="text-[15px] font-semibold tracking-tight text-[var(--color-ink)]">Piano Schedule</p>
-        <p className="text-[12px] text-[var(--color-ink-muted)]">Private Piano Teaching Manager</p>
+        <p className="text-[15px] font-semibold tracking-tight text-[var(--color-ink)]">Lịch Dạy Piano</p>
+        <p className="text-[12px] text-[var(--color-ink-muted)]">Quản lý dạy piano cá nhân</p>
       </div>
 
       <button
@@ -36,7 +36,7 @@ export function Sidebar() {
         className="mb-5 flex h-10 items-center justify-center gap-2 rounded-xl bg-[var(--color-accent)] text-sm font-medium text-[var(--color-accent-ink)] transition-opacity hover:opacity-90"
       >
         <PlusIcon width={16} height={16} />
-        New Lesson
+        Thêm buổi học
       </button>
 
       <nav className="flex flex-1 flex-col gap-1">
@@ -66,12 +66,12 @@ export function Sidebar() {
           className="flex h-9 flex-1 items-center gap-2 rounded-lg px-2.5 text-[13px] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)]"
         >
           <SearchIcon width={16} height={16} />
-          Search
+          Tìm kiếm
           <kbd className="ml-auto rounded border border-[var(--color-border)] px-1.5 py-0.5 text-[10px] text-[var(--color-ink-faint)]">/</kbd>
         </button>
         <button
           onClick={toggleTheme}
-          aria-label="Toggle theme"
+          aria-label="Đổi giao diện sáng/tối"
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)]"
         >
           {isDark ? <MoonIcon width={16} height={16} /> : <SunIcon width={16} height={16} />}

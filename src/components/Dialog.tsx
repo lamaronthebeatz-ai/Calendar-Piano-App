@@ -40,7 +40,7 @@ export function Dialog({ open, onClose, title, subtitle, children, footer, width
         <h2 className="text-[15px] font-semibold text-[var(--color-ink)]">{title}</h2>
         {subtitle && <p className="mt-0.5 text-[13px] text-[var(--color-ink-muted)]">{subtitle}</p>}
       </div>
-      <IconButton label="Close" icon={<XIcon width={18} height={18} />} onClick={onClose} />
+      <IconButton label="Đóng" icon={<XIcon width={18} height={18} />} onClick={onClose} />
     </div>
   )
 
@@ -80,7 +80,7 @@ export function ConfirmDialog({
   onConfirm,
   title,
   description,
-  confirmLabel = 'Confirm',
+  confirmLabel = 'Xác nhận',
   tone = 'default',
 }: {
   open: boolean
@@ -103,7 +103,7 @@ export function ConfirmDialog({
             onClick={onClose}
             className="h-10 rounded-xl border border-[var(--color-border)] px-4 text-sm font-medium text-[var(--color-ink)] hover:bg-[var(--color-surface-sunken)]"
           >
-            Cancel
+            Huỷ
           </button>
           <button
             onClick={() => {

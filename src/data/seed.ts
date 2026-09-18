@@ -98,7 +98,7 @@ const timetableSlots: TimetableSlot[] = [
 
 const defaultSettings: Settings = {
   id: 'default',
-  teacherName: 'Teacher',
+  teacherName: 'Giáo viên',
   currency: 'VND',
   defaultLessonDuration: 60,
   defaultLocation: 'Studio',

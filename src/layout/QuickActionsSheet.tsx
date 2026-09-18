@@ -12,8 +12,8 @@ export function QuickActionsSheet() {
 
   const actions = [
     {
-      label: 'Add Lesson',
-      description: 'Add a fixed weekly lesson',
+      label: 'Thêm buổi học',
+      description: 'Thêm một buổi học cố định hằng tuần',
       icon: CalendarIcon,
       onClick: () => {
         navigate('/')
@@ -21,15 +21,15 @@ export function QuickActionsSheet() {
       },
     },
     {
-      label: 'Add Student',
-      description: 'Create a new student profile',
+      label: 'Thêm học viên',
+      description: 'Tạo hồ sơ học viên mới',
       icon: UsersIcon,
       onClick: () => openCreateStudent(),
     },
   ]
 
   return (
-    <Dialog open={open} onClose={() => setOpen(false)} title="Quick Add" width="sm">
+    <Dialog open={open} onClose={() => setOpen(false)} title="Thêm nhanh" width="sm">
       <div className="space-y-1.5">
         {actions.map((action) => (
           <button

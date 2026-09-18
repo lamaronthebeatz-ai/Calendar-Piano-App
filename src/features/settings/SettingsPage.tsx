@@ -8,6 +8,7 @@ import { ConfirmDialog } from '../../components/Dialog'
 import { CloudIcon, DownloadIcon, MoonIcon, SunIcon, UploadIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
 import type { LessonLocation } from '../../types'
+import { LOCATION_PALETTE } from '../../utils/color'
 
 const CURRENCIES = ['VND', 'USD', 'EUR', 'GBP']
 
@@ -21,8 +22,8 @@ export function SettingsPage() {
   async function handleExport() {
     const payload = await exportBackup()
     const outcome = await downloadBackupFile(payload)
-    if (outcome === 'saved') pushToast('Backup downloaded', 'success')
-    else if (outcome === 'declined') pushToast('Export cancelled')
+    if (outcome === 'saved') pushToast('Đã tải bản sao lưu', 'success')
+    else if (outcome === 'declined') pushToast('Đã huỷ xuất dữ liệu')
   }
 
   function handleFileChosen(e: ChangeEvent<HTMLInputElement>) {
@@ -38,9 +39,9 @@ export function SettingsPage() {
     if (!pendingFile) return
     try {
       const result = await importBackup(pendingFile, mode)
-      pushToast(`Imported ${result.students} students, ${result.timetableSlots} lessons`, 'success')
+      pushToast(`Đã nhập ${result.students} học viên, ${result.timetableSlots} buổi học`, 'success')
     } catch (err) {
-      pushToast(err instanceof Error ? err.message : 'Import failed', 'error')
+      pushToast(err instanceof Error ? err.message : 'Nhập dữ liệu thất bại', 'error')
     } finally {
       setPendingFile(null)
       setImportMode(null)
@@ -50,54 +51,54 @@ export function SettingsPage() {
   return (
     <div className="h-full overflow-y-auto pb-24 lg:pb-6">
       <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
-        <h1 className="text-[17px] font-semibold text-[var(--color-ink)]">Settings</h1>
+        <h1 className="text-[17px] font-semibold text-[var(--color-ink)]">Cài đặt</h1>
       </div>
 
       <div className="mx-auto max-w-xl space-y-8 px-4 py-6 lg:px-6">
-        <Section title="Profile">
-          <Field label="Teacher Name">
+        <Section title="Hồ sơ">
+          <Field label="Tên giáo viên">
             <TextInput value={settings.teacherName} onChange={(e) => updateSettings({ teacherName: e.target.value })} />
           </Field>
         </Section>
 
-        <Section title="Scheduling Defaults">
+        <Section title="Mặc định lịch dạy">
           <div className="grid grid-cols-2 gap-4">
-            <Field label="Default Duration" hint="minutes">
+            <Field label="Thời lượng mặc định" hint="phút">
               <SelectInput
                 value={settings.defaultLessonDuration}
                 onChange={(e) => updateSettings({ defaultLessonDuration: Number(e.target.value) })}
               >
                 {[30, 45, 60, 90].map((d) => (
                   <option key={d} value={d}>
-                    {d} min
+                    {d} phút
                   </option>
                 ))}
               </SelectInput>
             </Field>
-            <Field label="Default Location">
+            <Field label="Địa điểm mặc định">
               <SelectInput value={settings.defaultLocation} onChange={(e) => updateSettings({ defaultLocation: e.target.value as LessonLocation })}>
                 {(['Studio', 'Home', 'Online', 'Other'] as LessonLocation[]).map((l) => (
                   <option key={l} value={l}>
-                    {l}
+                    {LOCATION_PALETTE[l].label}
                   </option>
                 ))}
               </SelectInput>
             </Field>
           </div>
-          <Field label="First Day of Week">
+          <Field label="Ngày đầu tuần">
             <SegmentedControl
               value={String(settings.firstDayOfWeek)}
               onChange={(v) => updateSettings({ firstDayOfWeek: Number(v) as 0 | 1 })}
               options={[
-                { value: '1', label: 'Monday' },
-                { value: '0', label: 'Sunday' },
+                { value: '1', label: 'Thứ Hai' },
+                { value: '0', label: 'Chủ Nhật' },
               ]}
             />
           </Field>
         </Section>
 
-        <Section title="Currency">
-          <Field label="Currency">
+        <Section title="Đơn vị tiền tệ">
+          <Field label="Đơn vị tiền tệ">
             <SelectInput value={settings.currency} onChange={(e) => updateSettings({ currency: e.target.value })}>
               {CURRENCIES.map((c) => (
                 <option key={c} value={c}>
@@ -108,13 +109,13 @@ export function SettingsPage() {
           </Field>
         </Section>
 
-        <Section title="Appearance">
+        <Section title="Giao diện">
           <div className="flex gap-2">
             {(
               [
-                { value: 'light', label: 'Light', icon: SunIcon },
-                { value: 'dark', label: 'Dark', icon: MoonIcon },
-                { value: 'system', label: 'System', icon: CloudIcon },
+                { value: 'light', label: 'Sáng', icon: SunIcon },
+                { value: 'dark', label: 'Tối', icon: MoonIcon },
+                { value: 'system', label: 'Hệ thống', icon: CloudIcon },
               ] as const
             ).map((opt) => (
               <button
@@ -134,16 +135,16 @@ export function SettingsPage() {
           </div>
         </Section>
 
-        <Section title="Data & Backup">
+        <Section title="Dữ liệu & Sao lưu">
           <p className="text-[13px] text-[var(--color-ink-muted)]">
-            Your schedule lives in this browser. Export a backup regularly so it's never trapped on one device.
+            Lịch dạy của bạn được lưu ngay trên trình duyệt này. Hãy xuất bản sao lưu thường xuyên để dữ liệu không bị kẹt trên một thiết bị.
           </p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button variant="secondary" icon={<DownloadIcon width={15} height={15} />} onClick={handleExport} fullWidth>
-              Export Backup
+              Xuất bản sao lưu
             </Button>
             <Button variant="secondary" icon={<UploadIcon width={15} height={15} />} onClick={() => fileInputRef.current?.click()} fullWidth>
-              Import Backup
+              Nhập bản sao lưu
             </Button>
             <input ref={fileInputRef} type="file" accept="application/json" hidden onChange={handleFileChosen} />
           </div>
@@ -157,9 +158,9 @@ export function SettingsPage() {
           setPendingFile(null)
         }}
         onConfirm={() => importMode && performImport(importMode)}
-        title="Import backup"
-        description="Merge will add these students and lessons alongside your existing data (updating any that share the same ID). This won't delete anything."
-        confirmLabel="Merge Backup"
+        title="Nhập bản sao lưu"
+        description="Gộp dữ liệu sẽ thêm các học viên và buổi học này vào dữ liệu hiện có (cập nhật nếu trùng ID). Thao tác này không xoá bất cứ gì."
+        confirmLabel="Gộp dữ liệu"
       />
     </div>
   )

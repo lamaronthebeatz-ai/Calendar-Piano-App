@@ -5,8 +5,10 @@ import { Button } from '../../components/Button'
 import { Textarea } from '../../components/fields'
 import { useUIStore } from '../../store/uiStore'
 import { useStudents } from '../../hooks/useLiveData'
-import { WEEKDAY_NAMES } from '../../utils/date'
+import { WEEKDAY_NAMES, WEEKDAY_SHORT } from '../../utils/date'
 import { formatDuration, formatTimeRange } from '../../utils/time'
+import { LOCATION_PALETTE } from '../../utils/color'
+import { LESSON_TYPE_LABELS } from '../../utils/labels'
 import { ClockIcon, CopyIcon, EditIcon, MapPinIcon, TrashIcon } from '../../components/icons'
 import { deleteSlot, duplicateSlot, updateSlot } from '../../services/timetableService'
 import type { DayOfWeek } from '../../types'
@@ -34,27 +36,27 @@ export function LessonDetailSheet() {
 
   const saveNote = async () => {
     await updateSlot(slot.id, { note })
-    pushToast('Note saved', 'success')
+    pushToast('Đã lưu ghi chú', 'success')
   }
 
   const handleDuplicate = async (targetDay: DayOfWeek) => {
     await duplicateSlot(slot, targetDay)
-    pushToast(`Duplicated to ${WEEKDAY_NAMES[targetDay]}`, 'success')
+    pushToast(`Đã nhân bản sang ${WEEKDAY_NAMES[targetDay]}`, 'success')
     closeDetail()
   }
 
   const handleDelete = async () => {
     await deleteSlot(slot.id)
-    pushToast('Lesson removed', 'success')
+    pushToast('Đã xoá buổi học', 'success')
     closeDetail()
   }
 
   return (
     <>
-      <Dialog open={!!slot} onClose={closeDetail} title={student?.nickname || student?.name || 'Lesson'} width="sm">
+      <Dialog open={!!slot} onClose={closeDetail} title={student?.nickname || student?.name || 'Buổi học'} width="sm">
         <div className="space-y-5">
           <span className="inline-flex items-center rounded-full bg-[var(--color-surface-sunken)] px-2.5 py-1 text-[12px] font-medium text-[var(--color-ink-muted)]">
-            {slot.type}
+            {LESSON_TYPE_LABELS[slot.type]}
           </span>
 
           <div className="space-y-2.5 text-[14px] text-[var(--color-ink)]">
@@ -65,18 +67,18 @@ export function LessonDetailSheet() {
             </div>
             <div className="flex items-center gap-2.5">
               <MapPinIcon width={16} height={16} className="text-[var(--color-ink-faint)]" />
-              {slot.location}
+              {LOCATION_PALETTE[slot.location].label}
             </div>
           </div>
 
           <p className="rounded-lg bg-[var(--color-surface-sunken)] px-3 py-2 text-[12.5px] text-[var(--color-ink-muted)]">
-            Repeats every week.
+            Lặp lại hằng tuần.
           </p>
 
           <div>
             <div className="flex gap-2">
               <Button size="sm" variant="secondary" icon={<CopyIcon width={14} height={14} />} onClick={() => setDuplicating((v) => !v)} fullWidth>
-                Duplicate
+                Nhân bản
               </Button>
             </div>
             {duplicating && (
@@ -90,7 +92,7 @@ export function LessonDetailSheet() {
                       'bg-[var(--color-surface-sunken)] text-[var(--color-ink-muted)] hover:bg-[var(--color-accent)] hover:text-[var(--color-accent-ink)]',
                     )}
                   >
-                    {WEEKDAY_NAMES[day].slice(0, 3)}
+                    {WEEKDAY_SHORT[day]}
                   </button>
                 ))}
               </div>
@@ -98,11 +100,11 @@ export function LessonDetailSheet() {
           </div>
 
           <div>
-            <p className="mb-1.5 text-[13px] font-medium text-[var(--color-ink-muted)]">Note</p>
-            <Textarea value={note} onChange={(e) => setNote(e.target.value)} placeholder="Repertoire, reminders, anything to remember…" />
+            <p className="mb-1.5 text-[13px] font-medium text-[var(--color-ink-muted)]">Ghi chú</p>
+            <Textarea value={note} onChange={(e) => setNote(e.target.value)} placeholder="Nội dung học, điều cần nhớ…" />
             <div className="mt-2 flex justify-end">
               <Button size="sm" variant="primary" onClick={saveNote} disabled={note === (slot.note ?? '')}>
-                Save Note
+                Lưu ghi chú
               </Button>
             </div>
           </div>
@@ -114,7 +116,7 @@ export function LessonDetailSheet() {
             className="flex items-center gap-1.5 text-[13px] font-medium text-[var(--color-status-cancelled)] hover:opacity-80"
           >
             <TrashIcon width={15} height={15} />
-            Remove
+            Xoá
           </button>
           <Button
             size="sm"
@@ -126,7 +128,7 @@ export function LessonDetailSheet() {
               openEditLesson(current.id)
             }}
           >
-            Edit Lesson
+            Sửa buổi học
           </Button>
         </div>
       </Dialog>
@@ -135,9 +137,9 @@ export function LessonDetailSheet() {
         open={confirmDelete}
         onClose={() => setConfirmDelete(false)}
         onConfirm={handleDelete}
-        title="Remove this lesson?"
-        description={`This removes ${student?.nickname || student?.name}'s ${WEEKDAY_NAMES[slot.dayOfWeek]} lesson from the timetable. This cannot be undone.`}
-        confirmLabel="Remove"
+        title="Xoá buổi học này?"
+        description={`Thao tác này sẽ xoá buổi học ${WEEKDAY_NAMES[slot.dayOfWeek]} của ${student?.nickname || student?.name} khỏi thời khóa biểu. Không thể hoàn tác.`}
+        confirmLabel="Xoá"
         tone="danger"
       />
     </>

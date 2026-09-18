@@ -132,7 +132,7 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
         </div>
       </div>
       <div className="hidden border-t border-[var(--color-border)] px-4 py-1.5 text-center text-[11px] text-[var(--color-ink-faint)] lg:block">
-        Double-click a slot to add a lesson · Drag to move · Drag edges to resize
+        Nhấp đúp vào ô trống để thêm buổi học · Kéo để di chuyển · Kéo mép để đổi thời lượng
       </div>
     </div>
   )

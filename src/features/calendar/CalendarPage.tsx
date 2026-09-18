@@ -46,7 +46,7 @@ export function CalendarPage() {
       setPendingMove({ slot, dayOfWeek, startTime, endTime, conflictCount: conflicts.length })
     } else {
       await moveSlot(slot.id, dayOfWeek, startTime, endTime)
-      pushToast('Lesson moved', 'success')
+      pushToast('Đã chuyển buổi học', 'success')
     }
   }
 
@@ -58,7 +58,7 @@ export function CalendarPage() {
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center gap-3 border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
-        <h1 className="flex-1 text-[16px] font-semibold text-[var(--color-ink)] lg:text-[17px]">Weekly Timetable</h1>
+        <h1 className="flex-1 text-[16px] font-semibold text-[var(--color-ink)] lg:text-[17px]">Thời Khóa Biểu</h1>
         <button
           onClick={() => setFilterSheetOpen(true)}
           className={clsx(
@@ -69,9 +69,9 @@ export function CalendarPage() {
           )}
         >
           <FilterIcon width={15} height={15} />
-          <span className="hidden sm:inline">Filter</span>
+          <span className="hidden sm:inline">Lọc</span>
         </button>
-        <IconButton label="Search" icon={<SearchIcon width={17} height={17} />} onClick={() => setSearchOpen(true)} />
+        <IconButton label="Tìm kiếm" icon={<SearchIcon width={17} height={17} />} onClick={() => setSearchOpen(true)} />
       </div>
 
       <WeeklyStatsBar slots={filteredSlots} students={students} currency={settings.currency} />
@@ -103,11 +103,11 @@ export function CalendarPage() {
         onConfirm={() => {
           if (!pendingMove) return
           moveSlot(pendingMove.slot.id, pendingMove.dayOfWeek, pendingMove.startTime, pendingMove.endTime)
-          pushToast('Lesson moved despite conflict', 'default')
+          pushToast('Đã chuyển buổi học dù bị trùng lịch', 'default')
         }}
-        title="Schedule Conflict"
-        description={`This time overlaps with ${pendingMove?.conflictCount ?? 0} other lesson${pendingMove?.conflictCount === 1 ? '' : 's'}. Schedule anyway?`}
-        confirmLabel="Schedule Anyway"
+        title="Trùng lịch"
+        description={`Khung giờ này trùng với ${pendingMove?.conflictCount ?? 0} buổi học khác. Vẫn muốn xếp vào đây?`}
+        confirmLabel="Vẫn xếp lịch"
         tone="danger"
       />
     </div>

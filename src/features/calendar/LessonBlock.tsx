@@ -2,6 +2,7 @@ import { useRef, useState, type PointerEvent as ReactPointerEvent } from 'react'
 import clsx from 'clsx'
 import type { DayOfWeek, Student, TimetableSlot } from '../../types'
 import { LOCATION_PALETTE } from '../../utils/color'
+import { LESSON_TYPE_LABELS } from '../../utils/labels'
 import { formatTime } from '../../utils/time'
 import { GRID_END_MINUTES, GRID_START_MINUTES, MIN_LESSON_MINUTES, PX_PER_MINUTE, SNAP_MINUTES } from './constants'
 
@@ -152,7 +153,7 @@ export function LessonBlock({
       ref={blockRef}
       role="button"
       tabIndex={0}
-      aria-label={`${student?.nickname ?? student?.name ?? 'Lesson'} ${formatTime(slot.startTime)} to ${formatTime(slot.endTime)}`}
+      aria-label={`${student?.nickname ?? student?.name ?? 'Buổi học'} ${formatTime(slot.startTime)} đến ${formatTime(slot.endTime)}`}
       className={clsx(
         'group absolute select-none overflow-hidden rounded-lg border px-2 py-1 text-left shadow-[var(--shadow-soft)] transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]',
         palette.bg,
@@ -199,10 +200,10 @@ export function LessonBlock({
       )}
       {durationMin >= 60 && (
         <p className="truncate text-[10.5px] leading-tight text-[var(--color-ink-muted)]">
-          {slot.type} · {slot.location}
+          {LESSON_TYPE_LABELS[slot.type]} · {LOCATION_PALETTE[slot.location].label}
         </p>
       )}
-      {dayForDisplay !== currentDayOfWeek && <p className="text-[10px] text-[var(--color-ink-faint)]">→ moving…</p>}
+      {dayForDisplay !== currentDayOfWeek && <p className="text-[10px] text-[var(--color-ink-faint)]">→ đang di chuyển…</p>}
       {interactive && (
         <div
           className="absolute inset-x-0 bottom-0 h-1.5 cursor-ns-resize opacity-0 group-hover:opacity-100"

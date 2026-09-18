@@ -4,10 +4,10 @@ import { CalendarIcon, ChartIcon, PlusIcon, SettingsIcon, UsersIcon } from '../c
 import { useUIStore } from '../store/uiStore'
 
 const navItems = [
-  { to: '/', label: 'Calendar', icon: CalendarIcon, end: true },
-  { to: '/students', label: 'Students', icon: UsersIcon, end: false },
-  { to: '/statistics', label: 'Stats', icon: ChartIcon, end: false },
-  { to: '/settings', label: 'Settings', icon: SettingsIcon, end: false },
+  { to: '/', label: 'Lịch', icon: CalendarIcon, end: true },
+  { to: '/students', label: 'Học viên', icon: UsersIcon, end: false },
+  { to: '/statistics', label: 'Thống kê', icon: ChartIcon, end: false },
+  { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
 ]
 
 export function BottomNav() {
@@ -16,7 +16,7 @@ export function BottomNav() {
   return (
     <nav
       className="fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] bg-[var(--color-surface-raised)]/95 backdrop-blur pb-[env(safe-area-inset-bottom)] lg:hidden"
-      aria-label="Primary"
+      aria-label="Điều hướng chính"
     >
       {navItems.slice(0, 2).map((item) => (
         <NavItem key={item.to} item={item} />
@@ -25,7 +25,7 @@ export function BottomNav() {
       <div className="relative flex w-16 items-center justify-center">
         <button
           onClick={() => setQuickActionsOpen(true)}
-          aria-label="Quick add"
+          aria-label="Thêm nhanh"
           className="absolute -top-5 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] active:scale-95 transition-transform"
         >
           <PlusIcon width={24} height={24} />

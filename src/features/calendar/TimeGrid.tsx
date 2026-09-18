@@ -3,9 +3,7 @@ import { GRID_END_MINUTES, GRID_HEIGHT, GRID_START_MINUTES, GUTTER_WIDTH, HOUR_H
 
 function formatHourLabel(minutes: number): string {
   const h = Math.floor(minutes / 60)
-  const period = h >= 12 ? 'PM' : 'AM'
-  const hour12 = h % 12 === 0 ? 12 : h % 12
-  return `${hour12} ${period}`
+  return `${String(h).padStart(2, '0')}:00`
 }
 
 export function TimeGutter() {

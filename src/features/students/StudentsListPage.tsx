@@ -11,6 +11,8 @@ import { useUIStore } from '../../store/uiStore'
 import type { Student, StudentStatus } from '../../types'
 import { WEEKDAY_SHORT } from '../../utils/date'
 import { formatTime } from '../../utils/time'
+import { LOCATION_PALETTE } from '../../utils/color'
+import { LEVEL_LABELS, STUDENT_STATUS_LABELS } from '../../utils/labels'
 
 type FilterValue = 'all' | StudentStatus
 
@@ -46,26 +48,26 @@ export function StudentsListPage() {
     <div className="flex h-full flex-col">
       <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
         <div className="flex items-center justify-between gap-3">
-          <h1 className="text-[17px] font-semibold text-[var(--color-ink)]">Students</h1>
+          <h1 className="text-[17px] font-semibold text-[var(--color-ink)]">Học viên</h1>
           <Button variant="primary" size="sm" icon={<PlusIcon width={15} height={15} />} onClick={openCreateStudent} className="hidden sm:inline-flex">
-            Add Student
+            Thêm học viên
           </Button>
         </div>
         <div className="mt-3 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search students…"
+            placeholder="Tìm học viên…"
             className="h-9 w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 text-[13px] outline-none focus:border-[var(--color-accent)] sm:max-w-xs"
           />
           <SegmentedControl
             value={filter}
             onChange={setFilter}
             options={[
-              { value: 'all', label: 'All' },
-              { value: 'active', label: 'Active' },
-              { value: 'paused', label: 'Paused' },
-              { value: 'inactive', label: 'Inactive' },
+              { value: 'all', label: 'Tất cả' },
+              { value: 'active', label: 'Đang học' },
+              { value: 'paused', label: 'Tạm nghỉ' },
+              { value: 'inactive', label: 'Đã nghỉ' },
             ]}
           />
         </div>
@@ -75,12 +77,12 @@ export function StudentsListPage() {
         {filtered.length === 0 ? (
           <EmptyState
             icon={<UsersIcon width={30} height={30} />}
-            title={students.length === 0 ? 'No students yet' : 'No students match'}
-            description={students.length === 0 ? 'Add your first student to start building your timetable.' : 'Try a different search or filter.'}
+            title={students.length === 0 ? 'Chưa có học viên nào' : 'Không tìm thấy học viên'}
+            description={students.length === 0 ? 'Thêm học viên đầu tiên để bắt đầu xây dựng thời khóa biểu.' : 'Thử tìm kiếm hoặc bộ lọc khác.'}
             action={
               students.length === 0 ? (
                 <Button variant="primary" onClick={openCreateStudent}>
-                  Add Student
+                  Thêm học viên
                 </Button>
               ) : undefined
             }
@@ -97,7 +99,7 @@ export function StudentsListPage() {
       <button
         onClick={openCreateStudent}
         className="fixed bottom-24 right-5 z-30 flex items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] sm:hidden"
-        aria-label="Add student"
+        aria-label="Thêm học viên"
         style={{ height: 52, width: 52 }}
       >
         <PlusIcon width={22} height={22} />
@@ -121,13 +123,13 @@ function StudentRow({ student, schedule, onClick }: { student: Student; schedule
                   student.status === 'paused' ? 'bg-[var(--color-status-pending-bg)] text-[var(--color-status-pending)]' : 'bg-[var(--color-status-noshow-bg)] text-[var(--color-status-noshow)]',
                 )}
               >
-                {student.status}
+                {STUDENT_STATUS_LABELS[student.status]}
               </span>
             )}
           </div>
           <p className="truncate text-[12.5px] text-[var(--color-ink-muted)]">
-            {student.level} · {student.defaultLocation}
-            {schedule ? ` · ${schedule}` : ' · No fixed lessons yet'}
+            {LEVEL_LABELS[student.level]} · {LOCATION_PALETTE[student.defaultLocation].label}
+            {schedule ? ` · ${schedule}` : ' · Chưa có lịch cố định'}
           </p>
         </div>
       </button>

@@ -8,6 +8,7 @@ import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
 import { WEEKDAY_NAMES } from '../../utils/date'
 import { formatTimeRange } from '../../utils/time'
 import { EmptyState } from '../../components/EmptyState'
+import { LEVEL_LABELS } from '../../utils/labels'
 
 export function SearchOverlay() {
   const open = useUIStore((s) => s.searchOpen)
@@ -53,7 +54,7 @@ export function SearchOverlay() {
   }
 
   return (
-    <Dialog open={open} onClose={close} title="Search" width="lg">
+    <Dialog open={open} onClose={close} title="Tìm kiếm" width="lg">
       <div className="space-y-4">
         <div className="relative">
           <SearchIcon width={17} height={17} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-ink-faint)]" />
@@ -61,22 +62,22 @@ export function SearchOverlay() {
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search students, days, locations, notes…"
+            placeholder="Tìm học viên, ngày, địa điểm, ghi chú…"
             className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] pl-10 pr-3 text-[14px] outline-none focus:border-[var(--color-accent)]"
           />
         </div>
 
         {!query.trim() && (
-          <EmptyState icon={<SearchIcon width={26} height={26} />} title="Search your studio" description="Find students, lessons, notes, and more." />
+          <EmptyState icon={<SearchIcon width={26} height={26} />} title="Tìm kiếm trong lịch dạy" description="Tìm học viên, buổi học, ghi chú và nhiều hơn nữa." />
         )}
 
         {query.trim() && matchedStudents.length === 0 && matchedSlots.length === 0 && (
-          <EmptyState icon={<SearchIcon width={26} height={26} />} title="No results" description={`Nothing matches "${query}".`} />
+          <EmptyState icon={<SearchIcon width={26} height={26} />} title="Không có kết quả" description={`Không tìm thấy gì khớp với "${query}".`} />
         )}
 
         {matchedStudents.length > 0 && (
           <div>
-            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">Students</p>
+            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">Học viên</p>
             <div className="space-y-1">
               {matchedStudents.map((s) => (
                 <button
@@ -90,7 +91,7 @@ export function SearchOverlay() {
                   <Avatar name={s.nickname || s.name} size={32} />
                   <div className="min-w-0">
                     <p className="truncate text-[13.5px] font-medium text-[var(--color-ink)]">{s.name}</p>
-                    <p className="truncate text-[12px] text-[var(--color-ink-muted)]">{s.level}</p>
+                    <p className="truncate text-[12px] text-[var(--color-ink-muted)]">{LEVEL_LABELS[s.level]}</p>
                   </div>
                 </button>
               ))}
@@ -100,7 +101,7 @@ export function SearchOverlay() {
 
         {matchedSlots.length > 0 && (
           <div>
-            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">Lessons</p>
+            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">Buổi học</p>
             <div className="space-y-1">
               {matchedSlots.map((s) => {
                 const student = studentMap.get(s.studentId)
@@ -133,7 +134,7 @@ export function SearchOverlay() {
 
         {students.length === 0 && (
           <div className="flex items-center gap-2 text-[12.5px] text-[var(--color-ink-faint)]">
-            <UsersIcon width={14} height={14} /> Add students to start searching your studio.
+            <UsersIcon width={14} height={14} /> Thêm học viên để bắt đầu tìm kiếm.
           </div>
         )}
       </div>

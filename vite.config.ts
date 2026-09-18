@@ -12,9 +12,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/*.png'],
       manifest: {
-        name: 'Piano Schedule',
-        short_name: 'Piano Schedule',
-        description: 'Private Piano Teaching Manager',
+        name: 'Lịch Dạy Piano',
+        short_name: 'Lịch Dạy Piano',
+        description: 'Ứng dụng quản lý dạy piano cá nhân',
+        lang: 'vi',
         theme_color: '#f7f5f2',
         background_color: '#f7f5f2',
         display: 'standalone',

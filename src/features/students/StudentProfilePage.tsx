@@ -9,6 +9,8 @@ import { computeStudentScheduleStats } from '../../services/statistics'
 import { formatCurrency } from '../../utils/format'
 import { formatDuration, formatTimeRange } from '../../utils/time'
 import { WEEKDAY_NAMES } from '../../utils/date'
+import { LOCATION_PALETTE } from '../../utils/color'
+import { LEVEL_LABELS, STUDENT_STATUS_LABELS } from '../../utils/labels'
 import type { TimetableSlot } from '../../types'
 
 export function StudentProfilePage() {
@@ -28,7 +30,7 @@ export function StudentProfilePage() {
   }
   if (!student) {
     return (
-      <EmptyState title="Student not found" description="This student may have been deleted." action={<Button onClick={() => navigate('/students')}>Back to Students</Button>} />
+      <EmptyState title="Không tìm thấy học viên" description="Học viên này có thể đã bị xoá." action={<Button onClick={() => navigate('/students')}>Về danh sách học viên</Button>} />
     )
   }
 
@@ -36,36 +38,36 @@ export function StudentProfilePage() {
     <div className="flex h-full flex-col overflow-y-auto pb-24 lg:pb-6">
       <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
         <div className="flex items-center gap-2">
-          <IconButton label="Back" icon={<ArrowLeftIcon width={18} height={18} />} onClick={() => navigate('/students')} />
+          <IconButton label="Quay lại" icon={<ArrowLeftIcon width={18} height={18} />} onClick={() => navigate('/students')} />
         </div>
         <div className="mt-2 flex items-center gap-4">
           <Avatar name={student.nickname || student.name} size={56} />
           <div className="min-w-0 flex-1">
             <h1 className="truncate text-[19px] font-semibold text-[var(--color-ink)]">{student.name}</h1>
             <div className="mt-1 flex flex-wrap items-center gap-2 text-[12.5px] text-[var(--color-ink-muted)]">
-              <span>{student.level}</span>
+              <span>{LEVEL_LABELS[student.level]}</span>
               <span>·</span>
               <span>{student.instrument}</span>
               {student.status !== 'active' && (
-                <span className="rounded-full bg-[var(--color-status-pending-bg)] px-2 py-0.5 text-[11px] font-medium text-[var(--color-status-pending)]">{student.status}</span>
+                <span className="rounded-full bg-[var(--color-status-pending-bg)] px-2 py-0.5 text-[11px] font-medium text-[var(--color-status-pending)]">{STUDENT_STATUS_LABELS[student.status]}</span>
               )}
             </div>
           </div>
           <div className="hidden gap-2 sm:flex">
             <Button variant="secondary" icon={<EditIcon width={14} height={14} />} onClick={() => openEditStudent(student.id)}>
-              Edit
+              Sửa
             </Button>
             <Button variant="primary" icon={<PlusIcon width={14} height={14} />} onClick={() => openCreateLesson({ studentId: student.id })}>
-              Add Lesson
+              Thêm buổi học
             </Button>
           </div>
         </div>
         <div className="mt-3 flex gap-2 sm:hidden">
           <Button variant="secondary" size="sm" fullWidth icon={<EditIcon width={13} height={13} />} onClick={() => openEditStudent(student.id)}>
-            Edit
+            Sửa
           </Button>
           <Button variant="primary" size="sm" fullWidth icon={<PlusIcon width={13} height={13} />} onClick={() => openCreateLesson({ studentId: student.id })}>
-            Add Lesson
+            Thêm buổi học
           </Button>
         </div>
       </div>
@@ -83,33 +85,33 @@ export function StudentProfilePage() {
                 <MapPinIcon width={14} height={14} /> {student.guardian}
               </span>
             )}
-            {student.age && <span>Age {student.age}</span>}
+            {student.age && <span>{student.age} tuổi</span>}
           </div>
         )}
 
         {stats && (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <StatTile label="Lessons / Week" value={String(stats.weeklyLessons)} />
-            <StatTile label="Hours / Week" value={`${stats.weeklyHours}h`} />
+            <StatTile label="Buổi học / Tuần" value={String(stats.weeklyLessons)} />
+            <StatTile label="Giờ học / Tuần" value={`${stats.weeklyHours}h`} />
             {student.rateType === 'monthly' ? (
-              <StatTile label="Monthly Rate" value={formatCurrency(stats.estimatedMonthlyRevenue, settings.currency)} />
+              <StatTile label="Học phí / Tháng" value={formatCurrency(stats.estimatedMonthlyRevenue, settings.currency)} />
             ) : (
-              stats.estimatedWeeklyRevenue > 0 && <StatTile label="Est. Revenue / Week" value={formatCurrency(stats.estimatedWeeklyRevenue, settings.currency)} />
+              stats.estimatedWeeklyRevenue > 0 && <StatTile label="Doanh thu ước tính / Tuần" value={formatCurrency(stats.estimatedWeeklyRevenue, settings.currency)} />
             )}
           </div>
         )}
 
         {student.notes && (
           <div className="rounded-xl bg-[var(--color-surface-sunken)] p-3.5">
-            <p className="mb-1 text-[12px] font-medium uppercase tracking-wide text-[var(--color-ink-faint)]">Notes</p>
+            <p className="mb-1 text-[12px] font-medium uppercase tracking-wide text-[var(--color-ink-faint)]">Ghi chú</p>
             <p className="text-[13.5px] text-[var(--color-ink)]">{student.notes}</p>
           </div>
         )}
 
         <div>
-          <p className="mb-3 text-[13px] font-semibold text-[var(--color-ink)]">Weekly Schedule</p>
+          <p className="mb-3 text-[13px] font-semibold text-[var(--color-ink)]">Lịch học hằng tuần</p>
           {!stats || stats.slots.length === 0 ? (
-            <EmptyState icon={<CalendarIcon width={26} height={26} />} title="Not on the timetable yet" description="Add this student's fixed weekly lesson." />
+            <EmptyState icon={<CalendarIcon width={26} height={26} />} title="Chưa có trong thời khóa biểu" description="Thêm buổi học cố định hằng tuần cho học viên này." />
           ) : (
             <ul className="space-y-2">
               {stats.slots.map((slot) => (
@@ -139,7 +141,7 @@ function SlotRow({ slot, onClick }: { slot: TimetableSlot; onClick: () => void }
         <div className="min-w-0">
           <p className="text-[13.5px] font-medium text-[var(--color-ink)]">{WEEKDAY_NAMES[slot.dayOfWeek]}</p>
           <p className="text-[12px] text-[var(--color-ink-muted)]">
-            {formatTimeRange(slot.startTime, slot.endTime)} · {formatDuration(slot.duration)} · {slot.location}
+            {formatTimeRange(slot.startTime, slot.endTime)} · {formatDuration(slot.duration)} · {LOCATION_PALETTE[slot.location].label}
           </p>
           {slot.note && <p className="mt-1 truncate text-[12px] italic text-[var(--color-ink-faint)]">“{slot.note}”</p>}
         </div>
