@@ -26,6 +26,17 @@ export class PianoScheduleDB extends Dexie {
       .upgrade(() => {
         // Dated lesson history doesn't map onto a dateless weekly timetable — start fresh.
       })
+    // v3: swapped the built-in sample roster for the teacher's real weekly timetable.
+    this.version(3)
+      .stores({
+        students: 'id, name, status, updatedAt',
+        timetableSlots: 'id, studentId, dayOfWeek, [dayOfWeek+startTime]',
+        settings: 'id',
+      })
+      .upgrade(async (tx) => {
+        await tx.table('students').clear()
+        await tx.table('timetableSlots').clear()
+      })
   }
 }
 
