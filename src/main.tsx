@@ -19,4 +19,11 @@ async function bootstrap() {
   )
 }
 
+// The service worker serves the cached build first; once a new deploy takes over,
+// reload so the user sees it right away instead of on the next launch.
+// (Skipped on first install, when there was no previous controller.)
+if (navigator.serviceWorker?.controller) {
+  navigator.serviceWorker.addEventListener('controllerchange', () => window.location.reload())
+}
+
 bootstrap()
