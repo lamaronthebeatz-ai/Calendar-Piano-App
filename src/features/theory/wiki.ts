@@ -13,13 +13,17 @@ export interface Article {
   aliases?: string[]
   summary: string
   body: string
+  /** English Wikipedia article title, shown as the reference for further reading. */
+  wiki?: string
 }
 
 export const normalize = (s: string) =>
   s.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase().trim()
 
 const byKey = new Map<string, Article>()
-for (const a of ARTICLES) for (const k of [a.slug, a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a)
+for (const a of ARTICLES) for (const k of [a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a)
+// Slugs win over titles/aliases that normalise to the same key (e.g. "trùng âm" vs "trung âm").
+for (const a of ARTICLES) byKey.set(a.slug, a)
 
 /** Resolve a slug, title or alias to its article. */
 export const findArticle = (key: string) => byKey.get(normalize(key))

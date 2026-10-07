@@ -63,9 +63,28 @@ function Index() {
           </section>
         ))
       )}
+
+      <footer className="space-y-1 border-t border-[var(--color-border)] pt-4 text-[13px] text-[var(--color-ink-muted)]">
+        <p className="font-semibold text-[var(--color-ink)]">Nguồn tham khảo miễn phí</p>
+        <ul className="space-y-1">
+          {SOURCES.map(([name, url, note]) => (
+            <li key={url}>
+              <a href={url} target="_blank" rel="noreferrer" className="text-[var(--color-accent)] hover:underline">{name}</a> — {note}
+            </li>
+          ))}
+        </ul>
+      </footer>
     </div>
   )
 }
+
+const SOURCES = [
+  ['Open Music Theory', 'https://viva.pressbooks.pub/openmusictheory/', 'giáo trình đại học mở (CC BY-SA)'],
+  ['musictheory.net', 'https://www.musictheory.net/lessons', 'bài học và bài tập tương tác miễn phí'],
+  ['Wikipedia', 'https://en.wikipedia.org/wiki/Music_theory', 'bách khoa toàn thư mở'],
+  ['Wikimedia Commons', 'https://commons.wikimedia.org/wiki/Category:Musical_notation', 'nguồn hình ảnh ký hiệu nhạc (public domain / CC)'],
+  ['IMSLP', 'https://imslp.org/', 'thư viện bản nhạc cổ điển miễn phí'],
+]
 
 function ArticleList({ articles }: { articles: Article[] }) {
   return (
@@ -97,6 +116,14 @@ function ArticleView({ article }: { article: Article }) {
 
       <Markup source={article.body} />
 
+      {article.wiki && (
+        <p className="text-[13px] text-[var(--color-ink-faint)]">
+          Đọc thêm:{' '}
+          <a href={`https://en.wikipedia.org/wiki/${encodeURIComponent(article.wiki)}`} target="_blank" rel="noreferrer" className="text-[var(--color-accent)] hover:underline">
+            Wikipedia — {article.wiki.replace(/_/g, ' ')}
+          </a>
+        </p>
+      )}
       {backlinks.length > 0 && <RelatedSection title="Các bài nhắc đến trang này" articles={backlinks} />}
       {siblings.length > 0 && <RelatedSection title="Cùng chủ đề" articles={siblings} />}
     </article>

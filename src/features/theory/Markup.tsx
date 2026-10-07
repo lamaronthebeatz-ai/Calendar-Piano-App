@@ -1,18 +1,21 @@
 import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { findArticle } from './wiki'
-import { CircleOfFifths, Keyboard, Staff } from './diagrams'
+import { CircleOfFifths, Keyboard, Staff, type Clef } from './diagrams'
 
-/** Inline markup: **bold** and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia). */
+/**
+ * Inline markup: **bold** and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
+ * Without a label, a link shows the article title, lower-cased unless it starts the text.
+ */
 function Inline({ text }: { text: string }) {
-  return text.split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/g).map((part, i) => {
+  return text.split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
     if (part.startsWith('**')) return <strong key={i} className="font-semibold text-[var(--color-ink)]">{part.slice(2, -2)}</strong>
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
     const article = findArticle(target)
     return article ? (
       <Link key={i} to={`/theory/${article.slug}`} className="text-[var(--color-accent)] underline-offset-2 hover:underline">
-        {label ?? article.title}
+        {label ?? (i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
       </Link>
     ) : (
       <span key={i} title="Chưa có bài viết" className="text-[var(--color-status-cancelled)]">
@@ -59,7 +62,7 @@ function Directive({ line }: { line: string }) {
     case 'keyboard':
       return <Figure caption={caption}><Keyboard notes={args} /></Figure>
     case 'staff':
-      return <Figure caption={caption}><Staff clef={args[0] === 'bass' ? 'bass' : 'treble'} notes={args.slice(1)} /></Figure>
+      return <Figure caption={caption}><Staff clef={args[0] as Clef} notes={args.slice(1)} /></Figure>
     case 'circle-of-fifths':
       return <Figure caption={caption}><CircleOfFifths /></Figure>
     case 'img':

@@ -48,11 +48,19 @@ export function Keyboard({ notes }: { notes: string[] }) {
   )
 }
 
-/** Five-line staff showing whole notes on a treble or bass clef. */
-export function Staff({ clef, notes }: { clef: 'treble' | 'bass'; notes: string[] }) {
+const CLEFS = {
+  // base: diatonic index of the bottom line (E4 / G2 / F3); glyph metrics are tuned per clef.
+  treble: { base: 30, glyph: '𝄞', size: 58, dy: 9 },
+  bass: { base: 18, glyph: '𝄢', size: 38, dy: -13 },
+  alto: { base: 24, glyph: '𝄡', size: 41, dy: 0 },
+}
+export type Clef = keyof typeof CLEFS
+
+/** Five-line staff of whole notes; "C4+E4+G4" stacks notes into a chord (chords are named in the caption). */
+export function Staff({ clef, notes }: { clef: Clef; notes: string[] }) {
   const GAP = 10
   const BOTTOM = 70 // y of the bottom staff line
-  const base = clef === 'treble' ? 30 : 18 // diatonic index of the bottom line: E4 / G2
+  const c = CLEFS[clef] ?? CLEFS.treble
   const yOf = (pos: number) => BOTTOM - (pos * GAP) / 2
   const width = 70 + notes.length * 30
 
@@ -61,37 +69,36 @@ export function Staff({ clef, notes }: { clef: 'treble' | 'bass'; notes: string[
       {[0, 2, 4, 6, 8].map((p) => (
         <line key={p} x1={0} x2={width} y1={yOf(p)} y2={yOf(p)} stroke={INK} strokeWidth={1} />
       ))}
-      <text
-        x={4}
-        y={clef === 'treble' ? BOTTOM + 9 : yOf(8) + 27}
-        fontSize={clef === 'treble' ? 58 : 38}
-        fill={INK}
-        fontFamily="'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif"
-      >
-        {clef === 'treble' ? '𝄞' : '𝄢'}
+      <text x={4} y={BOTTOM + c.dy} fontSize={c.size} fill={INK} fontFamily="'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif">
+        {c.glyph}
       </text>
-      {notes.map((name, i) => {
-        const n = parseNote(name)
-        if (!n) return null
-        const pos = n.diatonic - base
+      {notes.map((column, i) => {
         const x = 70 + i * 30
+        const chord = column.split('+').map(parseNote).filter((n) => n !== null)
+        const positions = chord.map((n) => n.diatonic - c.base)
         const ledgers = []
-        for (let p = -2; p >= pos; p -= 2) ledgers.push(p)
-        for (let p = 10; p <= pos; p += 2) ledgers.push(p)
+        for (let p = -2; p >= Math.min(...positions); p -= 2) ledgers.push(p)
+        for (let p = 10; p <= Math.max(...positions); p += 2) ledgers.push(p)
         return (
           <g key={i}>
             {ledgers.map((p) => (
               <line key={p} x1={x - 10} x2={x + 10} y1={yOf(p)} y2={yOf(p)} stroke={INK} />
             ))}
-            <ellipse cx={x} cy={yOf(pos)} rx={6.5} ry={4.6} transform={`rotate(-20 ${x} ${yOf(pos)})`} fill="none" stroke={ACCENT} strokeWidth={2} />
-            {n.accidental && (
-              <text x={x - 18} y={yOf(pos) + 5} fontSize={15} fill={ACCENT}>
-                {n.accidental === '#' ? '♯' : '♭'}
+            {chord.map((n, j) => (
+              <g key={j}>
+                <ellipse cx={x} cy={yOf(positions[j])} rx={6.5} ry={4.6} transform={`rotate(-20 ${x} ${yOf(positions[j])})`} fill="none" stroke={ACCENT} strokeWidth={2} />
+                {n.accidental && (
+                  <text x={x - 18} y={yOf(positions[j]) + 5} fontSize={15} fill={ACCENT}>
+                    {n.accidental === '#' ? '♯' : '♭'}
+                  </text>
+                )}
+              </g>
+            ))}
+            {chord.length === 1 && (
+              <text x={x} y={104} textAnchor="middle" fontSize={10} fill="var(--color-ink-muted)">
+                {column}
               </text>
             )}
-            <text x={x} y={104} textAnchor="middle" fontSize={10} fill="var(--color-ink-muted)">
-              {name}
-            </text>
           </g>
         )
       })}
