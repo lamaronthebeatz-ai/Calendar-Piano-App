@@ -200,3 +200,9 @@ export const HomeIconGlyph = (p: IconProps) => (
     <path d="M6 10v9.5a1 1 0 0 0 1 1h3.5V15h3v5.5H17a1 1 0 0 0 1-1V10" />
   </svg>
 )
+export const BookIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z" />
+    <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5" />
+  </svg>
+)

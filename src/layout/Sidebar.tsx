@@ -1,16 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
-import { CalendarIcon, ChartIcon, MoonIcon, PlusIcon, SearchIcon, SettingsIcon, SunIcon, UsersIcon } from '../components/icons'
+import { MoonIcon, PlusIcon, SearchIcon, SunIcon } from '../components/icons'
+import { navItems } from './navItems'
 import { useUIStore } from '../store/uiStore'
 import { useSettings } from '../hooks/useLiveData'
 import { applyThemeToDocument, updateSettings } from '../services/settingsService'
-
-const navItems = [
-  { to: '/', label: 'Lịch', icon: CalendarIcon, end: true },
-  { to: '/students', label: 'Học viên', icon: UsersIcon, end: false },
-  { to: '/statistics', label: 'Thống kê', icon: ChartIcon, end: false },
-  { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
-]
 
 export function Sidebar() {
   const settings = useSettings()

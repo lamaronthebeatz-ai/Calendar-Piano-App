@@ -5,6 +5,7 @@ import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
 import { StatisticsPage } from './features/statistics/StatisticsPage'
 import { SettingsPage } from './features/settings/SettingsPage'
+import { TheoryPage } from './features/theory/TheoryPage'
 
 export function App() {
   return (
@@ -16,6 +17,7 @@ export function App() {
           <Route path="/students/:id" element={<StudentProfilePage />} />
           <Route path="/statistics" element={<StatisticsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/theory/:slug?" element={<TheoryPage />} />
         </Route>
       </Routes>
     </HashRouter>

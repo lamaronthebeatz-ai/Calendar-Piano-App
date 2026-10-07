@@ -1,14 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
-import { CalendarIcon, ChartIcon, PlusIcon, SettingsIcon, UsersIcon } from '../components/icons'
+import { PlusIcon } from '../components/icons'
+import { navItems } from './navItems'
 import { useUIStore } from '../store/uiStore'
-
-const navItems = [
-  { to: '/', label: 'Lịch', icon: CalendarIcon, end: true },
-  { to: '/students', label: 'Học viên', icon: UsersIcon, end: false },
-  { to: '/statistics', label: 'Thống kê', icon: ChartIcon, end: false },
-  { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
-]
 
 export function BottomNav() {
   const setQuickActionsOpen = useUIStore((s) => s.setQuickActionsOpen)
