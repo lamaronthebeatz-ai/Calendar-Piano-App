@@ -1,11 +1,12 @@
 import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { findArticle } from './wiki'
+import { findArticle, normalize } from './wiki'
 import { CircleOfFifths, Keyboard, Staff, type Clef } from './diagrams'
 
 /**
  * Inline markup: **bold** and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
- * Without a label, a link shows the article title, lower-cased unless it starts the text.
+ * Without a label, a link written by slug shows the article title (lower-cased unless it starts the text);
+ * one written by title or alias, like [[Bach]], shows that text as written.
  */
 function Inline({ text }: { text: string }) {
   return text.split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
@@ -15,7 +16,7 @@ function Inline({ text }: { text: string }) {
     const article = findArticle(target)
     return article ? (
       <Link key={i} to={`/theory/${article.slug}`} className="text-[var(--color-accent)] underline-offset-2 hover:underline">
-        {label ?? (i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
+        {label ?? (normalize(target) !== article.slug ? target : i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
       </Link>
     ) : (
       <span key={i} title="Chưa có bài viết" className="text-[var(--color-status-cancelled)]">

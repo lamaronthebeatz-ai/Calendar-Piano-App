@@ -127,7 +127,7 @@ Chủ đề **A** (refrain) luôn ở giọng chính; các đoạn xen **B, C** 
 Rondo thường vui tươi, nhanh — rất hay dùng cho **chương cuối** của sonata và concerto thời Cổ điển.
 
 ## Ví dụ cho người học piano
-- "Für Elise" (Beethoven): A B A C A.
+- "Für Elise" ([[Beethoven]]): A B A C A.
 - "Rondo alla Turca" — chương 3 Sonata K. 331 (Mozart).
 
 Xem tổng quan: [[hinh-thuc-am-nhac]]. So sánh: [[hinh-thuc-sonata]].
@@ -176,7 +176,7 @@ Sơ đồ: **A – A1 – A2 – A3 …** Chủ đề thường ngắn, dạng [
 - **Nhịp độ và tính chất**: biến tấu chậm Adagio, biến tấu kết thúc nhanh rực rỡ.
 
 ## Tác phẩm tiêu biểu
-- Mozart — 12 biến tấu "Ah vous dirai-je, Maman" K. 265 (giai điệu "Twinkle Twinkle Little Star").
+- [[Mozart]] — 12 biến tấu "Ah vous dirai-je, Maman" K. 265 (giai điệu "Twinkle Twinkle Little Star").
 - Bach — Goldberg Variations.
 - Beethoven — Diabelli Variations.
 - Rachmaninoff — Rhapsody on a Theme of Paganini.
@@ -225,7 +225,7 @@ Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinat
 | **Ngược chiều** | Một bè lên, một bè xuống — tạo độc lập tốt nhất |
 | Xiên | Một bè đứng yên, bè kia di chuyển |
 
-Quy tắc kinh điển (Fux, "Gradus ad Parnassum", 1725): ưu tiên chuyển động ngược chiều, tránh [[dan-giong|quãng 5/8 song song]], xử lý [[thuan-nghich|nghịch âm]] cẩn thận.
+Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên chuyển động ngược chiều, tránh [[dan-giong|quãng 5/8 song song]], xử lý [[thuan-nghich|nghịch âm]] cẩn thận.
 
 ## Mô phỏng và canon
 - **Mô phỏng**: bè thứ hai nhắc lại giai điệu bè thứ nhất sau một khoảng thời gian.
@@ -253,7 +253,7 @@ Quy tắc kinh điển (Fux, "Gradus ad Parnassum", 1725): ưu tiên chuyển đ
 ::img BWV846-Dux-Comes.svg | Chủ đề (dux) và đáp đề (comes) trong Fugue số 1 Đô trưởng BWV 846 của Bach
 
 ## Tác phẩm tiêu biểu
-- Bach — **Clavier bình quân** (Das Wohltemperierte Klavier), 2 tập × 24 prelude và fugue ở đủ 24 giọng (xem [[luat-binh-quan]]).
+- [[Bach]] — **Clavier bình quân** (Das Wohltemperierte Klavier), 2 tập × 24 prelude và fugue ở đủ 24 giọng (xem [[luat-binh-quan]]).
 - Bach — **Nghệ thuật Fugue** (Die Kunst der Fuge).
 
 Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thường có [[bass-ngan]] trên át âm.
@@ -300,7 +300,7 @@ Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]]. So 
 
 ## Passacaglia và chaconne
 Hai thể loại Baroque dạng [[bien-tau]] trên một bass lặp hoặc một [[vong-hop-am]] lặp, thường ở nhịp 3/4:
-- Purcell — "Dido's Lament" (bass đi xuống cromatic).
+- [[Purcell]] — "Dido's Lament" (bass đi xuống cromatic).
 - Bach — Passacaglia Đô thứ cho organ BWV 582; Chaconne trong Partita số 2 Rê thứ cho violin.
 - Pachelbel — Canon in D: canon ba bè trên một bass lặp 8 nốt (xem [[doi-am-kep]]).
 
@@ -314,7 +314,7 @@ Liên quan: [[bass-ngan]] (một nốt lặp/ngân thay vì một mẫu), [[ket-
     slug: 'doi-am-5-loai',
     title: 'Đối âm 5 loại',
     category: 'form',
-    aliases: ['species counterpoint', 'đối âm theo loại', 'cantus firmus', 'Fux', 'Gradus ad Parnassum', 'đối âm loại 1'],
+    aliases: ['species counterpoint', 'đối âm theo loại', 'cantus firmus', 'Gradus ad Parnassum', 'đối âm loại 1'],
     summary: 'Phương pháp học đối âm kinh điển của Fux (1725): viết bè mới trên một giai điệu cho sẵn, qua 5 cấp độ nhịp điệu tăng dần.',
     wiki: 'Counterpoint',
     body: `

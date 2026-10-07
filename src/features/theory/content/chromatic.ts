@@ -25,7 +25,7 @@ Hoà âm **diatonic** chỉ dùng 7 nốt của [[hoa-bieu|giọng]]. Hoà âm *
 ## Dẫn giọng cromatic
 Ở cuối thế kỷ 19, nhiều hợp âm "khó gọi tên" xuất hiện do các bè trượt từng [[cung-nua-cung|nửa cung]] — điều quan trọng là **chuyển động bè**, không phải tên hợp âm (xem [[dan-giong]]).
 
-::img TristanChord.svg | Hợp âm Tristan (F – B – D♯ – G♯) mở đầu vở opera "Tristan und Isolde" của Wagner (1859)
+::img TristanChord.svg | Hợp âm Tristan (F – B – D♯ – G♯) mở đầu vở opera "Tristan und Isolde" của [[Wagner]] (1859)
 
 Hợp âm Tristan trì hoãn sự giải quyết suốt nhiều giờ nhạc kịch và thường được coi là bước đầu tiên dẫn tới [[phi-dieu-tinh|âm nhạc phi điệu tính]]. Bối cảnh lịch sử: [[cac-thoi-ky]].
 `,
@@ -254,7 +254,7 @@ Trong nhạc Baroque (Bach, Handel, Corelli), người chơi harpsichord/organ �
     summary: 'Phương pháp phân tích cho thấy cả tác phẩm có tính điệu là sự "kéo dài" của một cấu trúc nền đơn giản: giai điệu đi xuống về chủ âm trên bè trầm I – V – I.',
     wiki: 'Schenkerian_analysis',
     body: `
-Heinrich Schenker (1868–1935) cho rằng âm nhạc được tổ chức theo **nhiều tầng**, giống câu văn có cấu trúc ngữ pháp sâu bên dưới các từ ngữ bề mặt.
+Heinrich Schenker (1868–1935), nhà lý thuyết người Áo, cho rằng âm nhạc được tổ chức theo **nhiều tầng**, giống câu văn có cấu trúc ngữ pháp sâu bên dưới các từ ngữ bề mặt.
 
 ## Ba tầng
 - **Tiền cảnh**: các nốt thực sự trong bản nhạc.

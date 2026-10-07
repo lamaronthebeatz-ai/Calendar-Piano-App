@@ -9,6 +9,7 @@ import { expression } from './content/expression'
 import { chromatic } from './content/chromatic'
 import { jazz } from './content/jazz'
 import { modern } from './content/modern'
+import { composers } from './content/composers'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -26,6 +27,7 @@ export const CATEGORIES = {
   expression: { title: 'Diễn tấu & ký hiệu', description: 'Cường độ, cách đánh, hoa mỹ, pedal, ngón bấm và thuật ngữ.' },
   jazz: { title: 'Jazz & hoà âm hiện đại', description: 'Swing, xếp hợp âm, hệ thống hợp âm – âm giai, thay thế tritone, tái hoà âm.' },
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', description: 'Các thời kỳ lịch sử, ấn tượng, phi điệu tính, 12 âm, tập hợp cao độ, tối giản.' },
+  composers: { title: 'Nhà soạn nhạc', description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern]
+export const ARTICLES: Article[] = [...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern, ...composers]

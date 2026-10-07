@@ -176,7 +176,7 @@ Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chi
 - **Đánh đổi**: các quãng (trừ quãng 8) đều lệch nhẹ so với tỉ lệ tự nhiên của [[chuoi-boi-am]]; quãng 3 trưởng hơi rộng.
 
 ## Lịch sử
-Bối cảnh lịch sử: [[cac-thoi-ky]]. Trước đó, các hệ thống như **Pythagore** hay **bình quân bất đều** (well temperament) khiến mỗi giọng có màu sắc riêng. Bộ "Clavier bình quân" (Das Wohltemperierte Klavier) của J.S. Bach gồm 24 Prelude và Fugue ở đủ 24 giọng trưởng – thứ, chứng minh việc chơi được ở mọi giọng (xem [[fugue]]).
+Bối cảnh lịch sử: [[cac-thoi-ky]]. Trước đó, các hệ thống như **Pythagore** hay **bình quân bất đều** (well temperament) khiến mỗi giọng có màu sắc riêng. Bộ "Clavier bình quân" (Das Wohltemperierte Klavier) của [[Bach|J.S. Bach]] gồm 24 Prelude và Fugue ở đủ 24 giọng trưởng – thứ, chứng minh việc chơi được ở mọi giọng (xem [[fugue]]).
 `,
   },
 ]

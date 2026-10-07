@@ -11,15 +11,17 @@ export const modern: Article[] = [
     body: `
 | Thời kỳ | Khoảng năm | Nhà soạn nhạc tiêu biểu | Đặc trưng lý thuyết |
 |---|---|---|---|
-| **Trung cổ** | ~500–1400 | Hildegard von Bingen, Machaut | Thánh ca đơn âm, [[dieu-thuc|điệu thức nhà thờ]], khởi đầu phức điệu |
-| **Phục hưng** | ~1400–1600 | Josquin, Palestrina | [[doi-am]] thanh nhạc, quãng 3 và 6 trở thành [[thuan-nghich|thuận]] |
-| **Baroque** | ~1600–1750 | Bach, Handel, Vivaldi | [[bass-so]], [[fugue]], [[mo-tien-hoa-am]], hệ thống trưởng – thứ được xác lập |
-| **Cổ điển** | ~1750–1820 | Haydn, Mozart, Beethoven | [[hinh-thuc-sonata]], [[ket-cau|chủ điệu]] với bass Alberti, câu nhạc cân đối |
-| **Lãng mạn** | ~1820–1900 | Chopin, Schumann, Liszt, Brahms, Wagner | [[hoa-am-cromatic]], [[trung-am-cromatic]], rubato, tiểu phẩm piano |
-| **Thế kỷ 20 – nay** | 1900– | Debussy, Schoenberg, Stravinsky, Bartók, Reich | [[an-tuong]], [[phi-dieu-tinh]], [[ky-thuat-12-am]], [[nhip-hon-hop]], [[toi-gian]] |
+| [[thoi-ky-trung-co|Trung cổ]] | ~500–1400 | [[Hildegard von Bingen]], [[Machaut]] | Thánh ca đơn âm, [[dieu-thuc|điệu thức nhà thờ]], khởi đầu phức điệu |
+| [[thoi-ky-phuc-hung|Phục hưng]] | ~1400–1600 | [[Josquin]], [[Palestrina]] | [[doi-am]] thanh nhạc, quãng 3 và 6 trở thành [[thuan-nghich|thuận]] |
+| [[thoi-ky-baroque|Baroque]] | ~1600–1750 | [[Bach]], [[Handel]], [[Vivaldi]] | [[bass-so]], [[fugue]], [[mo-tien-hoa-am]], hệ thống trưởng – thứ được xác lập |
+| [[thoi-ky-co-dien|Cổ điển]] | ~1750–1820 | [[Haydn]], [[Mozart]], [[Beethoven]] | [[hinh-thuc-sonata]], [[ket-cau|chủ điệu]] với bass Alberti, câu nhạc cân đối |
+| [[thoi-ky-lang-man|Lãng mạn]] | ~1820–1900 | [[Chopin]], [[Schumann]], [[Liszt]], [[Brahms]], [[Wagner]] | [[hoa-am-cromatic]], [[trung-am-cromatic]], rubato, tiểu phẩm piano |
+| [[thoi-ky-the-ky-20|Thế kỷ 20 – nay]] | 1900– | [[Debussy]], [[Schoenberg]], [[Stravinsky]], [[Bartók]], [[Steve Reich|Reich]] | [[an-tuong]], [[phi-dieu-tinh]], [[ky-thuat-12-am]], [[nhip-hon-hop]], [[toi-gian]] |
 
 ## Song song với nhạc cổ điển
 Từ đầu thế kỷ 20: **jazz** (ragtime → swing → bebop → modal…), rồi nhạc pop/rock — kế thừa hoà âm chức năng và phát triển theo hướng riêng (xem [[swing]], [[he-thong-hop-am-am-giai]]).
+
+Danh sách đầy đủ theo từng thời kỳ và trường phái: xem nhóm **Nhà soạn nhạc** — mỗi người có một trang riêng.
 
 ## Với người học piano
 Biết thời kỳ giúp chọn cách chơi đúng phong cách: hoa mỹ và cách dùng pedal (xem [[ky-hieu-hoa-my]], [[ban-dap]]) ở nhạc Bach khác hẳn Chopin.
@@ -31,12 +33,12 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
     slug: 'an-tuong',
     title: 'Hoà âm ấn tượng',
     category: 'modern',
-    aliases: ['ấn tượng', 'impressionism', 'Debussy', 'Ravel', 'planing', 'hợp âm song song', 'hoà âm phi chức năng'],
+    aliases: ['ấn tượng', 'impressionism', 'planing', 'hợp âm song song', 'hoà âm phi chức năng'],
     summary: 'Phong cách đầu thế kỷ 20 (Debussy, Ravel): hợp âm được dùng như "màu sắc" thay vì chức năng, các hợp âm trượt song song, âm giai ngũ cung và toàn cung.',
     wiki: 'Impressionism_in_music',
     body: `
 ## Các kỹ thuật đặc trưng
-- **Hợp âm trượt song song** (planing): cả khối hợp âm di chuyển cùng hướng, phá bỏ quy tắc cấm [[dan-giong|quãng 5 song song]]. Ví dụ: "La cathédrale engloutie" của Debussy.
+- **Hợp âm trượt song song** (planing): cả khối hợp âm di chuyển cùng hướng, phá bỏ quy tắc cấm [[dan-giong|quãng 5 song song]]. Ví dụ: "La cathédrale engloutie" của [[Debussy]].
 - **Âm giai không trưởng – thứ**: [[am-giai-cromatic|toàn cung]], [[am-giai-ngu-cung|ngũ cung]], [[dieu-thuc|điệu thức nhà thờ]].
 - **Hợp âm mở rộng không giải quyết**: hợp âm 9, 11, 13 được ngân như một màu sắc ([[hop-am-mo-rong]]).
 - **Hoà âm quãng 4 và 5**: xem [[hoa-am-quang-bon]].
@@ -45,8 +47,8 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
 ::staff treble C4+E4+G4+B4 D4+F4+A4+C5 E4+G4+B4+D5 F4+A4+C5+E5 | Hợp âm 7 trượt song song theo âm giai — "planing" diatonic
 
 ## Tác phẩm piano tiêu biểu
-- Debussy: "Clair de lune", 24 Préludes, Estampes.
-- Ravel: Jeux d'eau, Gaspard de la nuit.
+- [[Debussy]]: "Clair de lune", 24 Préludes, Estampes.
+- [[Ravel]]: Jeux d'eau, Gaspard de la nuit.
 
 Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc phim. Bối cảnh: [[cac-thoi-ky]].
 `,
@@ -59,7 +61,7 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc
     summary: 'Âm nhạc không có chủ âm hay giọng làm trung tâm; mọi 12 nửa cung bình đẳng, nghịch âm không cần giải quyết.',
     wiki: 'Atonality',
     body: `
-Âm nhạc có tính điệu được tổ chức quanh một [[bac-am-giai|chủ âm]] và [[chuc-nang-hoa-am|hoà âm chức năng]]. Từ khoảng năm 1908–1909, **Arnold Schoenberg** viết những tác phẩm từ bỏ hoàn toàn trung tâm này — ví dụ Ba tiểu phẩm piano Op. 11 (1909).
+Âm nhạc có tính điệu được tổ chức quanh một [[bac-am-giai|chủ âm]] và [[chuc-nang-hoa-am|hoà âm chức năng]]. Từ khoảng năm 1908–1909, **[[Schoenberg|Arnold Schoenberg]]** viết những tác phẩm từ bỏ hoàn toàn trung tâm này — ví dụ Ba tiểu phẩm piano Op. 11 (1909).
 
 ## Đặc điểm
 - Không có [[hoa-bieu]]; [[dau-hoa]] được ghi trực tiếp cho từng nốt.
@@ -67,7 +69,7 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc
 - Sự mạch lạc đến từ [[motif]], quãng đặc trưng và tập hợp nốt, thay vì từ [[cau-ket]].
 
 ## Trường phái Vienna thứ hai
-Schoenberg cùng hai học trò **Alban Berg** và **Anton Webern**. Giai đoạn "phi điệu tính tự do" (khoảng 1908–1921) dẫn tới [[ky-thuat-12-am]].
+[[Schoenberg]] cùng hai học trò [[Alban Berg]] và [[Anton Webern]]. Giai đoạn "phi điệu tính tự do" (khoảng 1908–1921) dẫn tới [[ky-thuat-12-am]].
 
 ## Công cụ phân tích
 [[tap-hop-cao-do|Lý thuyết tập hợp cao độ]] được phát triển để phân tích loại nhạc này. Tiền thân: [[hoa-am-cromatic]] cuối thời Lãng mạn.
@@ -99,7 +101,7 @@ Nhà soạn nhạc sắp xếp 12 nốt của [[am-giai-cromatic]] theo một th
 Mỗi dạng có thể dịch lên 12 cao độ → **48 dạng** của một chuỗi, thường được sắp xếp thành **ma trận 12 × 12**. Các phép biến đổi này giống kỹ thuật phát triển [[motif]] truyền thống.
 
 ## Chủ nghĩa chuỗi toàn phần
-Sau 1945, Messiaen, Boulez, Stockhausen áp dụng "chuỗi" cả cho [[truong-do]], [[cuong-do]], [[cach-dien-tau]]. Công cụ phân tích: [[tap-hop-cao-do]].
+Sau 1945, [[Messiaen]], [[Boulez]], [[Karlheinz Stockhausen|Stockhausen]] áp dụng "chuỗi" cả cho [[truong-do]], [[cuong-do]], [[cach-dien-tau]]. Công cụ phân tích: [[tap-hop-cao-do]].
 `,
   },
   {
@@ -165,15 +167,15 @@ Phân tích bằng [[tap-hop-cao-do]]: {0, 1, 3, 4, 6, 7, 9, 10}.
 Mỗi lớp giữ [[hoa-bieu|giọng]] riêng của nó, tạo ra những va chạm [[thuan-nghich|nghịch]] có tổ chức.
 
 ## Hợp âm Petrushka
-Stravinsky (ballet "Petrushka", 1911): **C trưởng + F♯ trưởng** vang cùng lúc — hai giọng cách nhau một tritone, xa nhau nhất trên [[vong-quang-nam]].
+[[Stravinsky]] (ballet "Petrushka", 1911): **C trưởng + F♯ trưởng** vang cùng lúc — hai giọng cách nhau một tritone, xa nhau nhất trên [[vong-quang-nam]].
 
 ::keyboard C4 E4 G4 F#5 A#5 C#6 | Hợp âm Petrushka: C trưởng (dưới) + F♯ trưởng (trên)
 
 Đáng chú ý: tất cả các nốt của hợp âm này nằm trong một [[am-giai-bat-cung]].
 
 ## Các nhà soạn nhạc
-- Darius Milhaud — "Saudades do Brasil" (piano).
-- Charles Ives, Béla Bartók.
+- [[Milhaud|Darius Milhaud]] — "Saudades do Brasil" (piano).
+- [[Ives|Charles Ives]], [[Bartók|Béla Bartók]].
 
 ## Thử trên piano
 Tay phải chơi giai điệu đơn giản trên phím trắng, tay trái đệm hợp âm trên phím đen (F♯ – A♯ – C♯) — một bài tập [[ket-cau]] thú vị. Liên quan: [[phi-dieu-tinh]], [[cac-thoi-ky]].
@@ -198,7 +200,7 @@ Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang
 - **Cromatic**: cả phím trắng và đen — dày đặc nhất.
 
 ## Nhà soạn nhạc
-- **Henry Cowell** — "The Tides of Manaunaun" (1917): tay trái chơi âm cụm bằng cẳng tay.
+- **[[Cowell|Henry Cowell]]** — "The Tides of Manaunaun" (1917): tay trái chơi âm cụm bằng cẳng tay.
 - Charles Ives — Concord Sonata (dùng một thanh gỗ để nhấn âm cụm).
 - Ligeti, Penderecki — âm cụm cho dàn nhạc.
 
@@ -209,7 +211,7 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
     slug: 'toi-gian',
     title: 'Âm nhạc tối giản',
     category: 'modern',
-    aliases: ['minimalism', 'tối giản', 'minimal music', 'phasing', 'lệch pha', 'Steve Reich', 'Philip Glass'],
+    aliases: ['minimalism', 'tối giản', 'minimal music', 'phasing', 'lệch pha'],
     summary: 'Phong cách từ những năm 1960: các mẫu ngắn lặp lại liên tục và biến đổi rất chậm, hoà âm đơn giản, nhịp đều.',
     wiki: 'Minimal_music',
     body: `
@@ -220,9 +222,9 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
 - **Hoà âm tĩnh**: một hoặc vài hợp âm kéo dài; thay đổi nhỏ trở nên rất rõ.
 
 ## Tác phẩm tiêu biểu
-- Terry Riley — "In C" (1964): 53 mẫu nhạc ngắn, mỗi người chơi tự quyết định khi nào chuyển mẫu.
-- Steve Reich — "Music for 18 Musicians".
-- Philip Glass — "Metamorphosis", "Glassworks" (piano).
+- [[Terry Riley]] — "In C" (1964): 53 mẫu nhạc ngắn, mỗi người chơi tự quyết định khi nào chuyển mẫu.
+- [[Steve Reich]] — "Music for 18 Musicians".
+- [[Philip Glass]] — "Metamorphosis", "Glassworks" (piano).
 
 ## Ảnh hưởng
 Nhạc phim, nhạc điện tử, post-rock và nhạc piano "tân cổ điển" (Ludovico Einaudi, Max Richter). Liên quan: [[da-nhip]], [[ket-cau]], [[cac-thoi-ky]].

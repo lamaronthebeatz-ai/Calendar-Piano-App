@@ -15,6 +15,8 @@ export interface Article {
   body: string
   /** English Wikipedia article title, shown as the reference for further reading. */
   wiki?: string
+  /** Reachable by links and search but not listed in the index (e.g. one page per composer). */
+  unlisted?: boolean
 }
 
 export const normalize = (s: string) =>
@@ -41,7 +43,7 @@ export const getBacklinks = (slug: string) => backlinks.get(slug) ?? []
 export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'][]).map((id) => ({
   id,
   ...CATEGORIES[id],
-  articles: ARTICLES.filter((a) => a.category === id),
+  articles: ARTICLES.filter((a) => a.category === id && !a.unlisted),
 }))
 
 export function searchArticles(query: string) {
