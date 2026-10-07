@@ -111,9 +111,9 @@ Bản nhạc được chia thành các **ô nhịp** bằng **vạch nhịp**. S
 Chữ C có gạch dọc là **alla breve** (cut time), tương đương 2/2.
 
 ## Nhịp lẻ
-5/4, 7/8… ghép từ các nhóm 2 và 3 (ví dụ 7/8 = 2+2+3), thường gặp trong nhạc dân gian Balkan và jazz.
+5/4, 7/8… ghép từ các nhóm 2 và 3 (ví dụ 7/8 = 2+2+3), thường gặp trong nhạc dân gian Balkan và jazz — xem [[nhip-hon-hop]].
 
-Xem thêm: [[nhip-do]], [[nhip-lay-da]], [[dao-phach]].
+Xem thêm: [[nhip-do]], [[nhip-lay-da]], [[dao-phach]], [[hemiola]].
 `,
   },
   {
@@ -179,7 +179,7 @@ Trong nhịp đơn, phách bình thường chỉ chia đôi. Muốn chia ba, ta 
 - Đếm "**1**-la-li **2**-la-li" cho liên ba, chia đều ba phần.
 - Bài khó kinh điển cho piano: **3 chọi 2** (tay phải liên ba, tay trái hai nốt). Câu gợi nhớ: "nice cup of tea" — tay trái đánh ở "nice" và "of".
 
-So sánh với [[so-chi-nhip|nhịp kép]], nơi phách vốn đã chia ba.
+So sánh với [[so-chi-nhip|nhịp kép]], nơi phách vốn đã chia ba. Nâng cao: [[da-nhip]] (đa tiết tấu), [[swing]] (móc đơn chơi theo cảm giác liên ba).
 `,
   },
   {
@@ -198,7 +198,7 @@ Mỗi [[so-chi-nhip]] có quy luật phách mạnh – nhẹ. **Đảo phách** 
 - **Dấu nhấn (>)** đặt trên phách nhẹ (xem [[cach-dien-tau]]).
 - **[[dau-lang|Dấu lặng]] ở phách mạnh**.
 
-Đảo phách là linh hồn của ragtime, jazz, Latin, funk và pop hiện đại.
+Đảo phách là linh hồn của ragtime, jazz, Latin, funk và pop hiện đại (xem [[swing]]). Một dạng đảo phách có tổ chức trong nhạc cổ điển: [[hemiola]].
 
 Xem thêm: [[am-giai-blues]], [[blues-12-nhip]].
 `,
@@ -222,6 +222,84 @@ Theo truyền thống, **ô nhịp cuối** bài sẽ thiếu đúng phần mà 
 - "Für Elise" (Beethoven) bắt đầu bằng nốt lấy đà E5 – D♯5 trước ô nhịp đầu tiên.
 
 Khi đếm, hãy đếm cả các phách còn thiếu trước nốt lấy đà để vào đúng nhịp. Xem thêm [[so-chi-nhip]], [[cau-nhac]].
+`,
+  },
+  {
+    slug: 'nhip-hon-hop',
+    title: 'Nhịp lẻ và nhịp thay đổi',
+    category: 'rhythm',
+    aliases: ['nhịp lẻ', 'nhịp hỗn hợp', 'asymmetric meter', 'odd meter', '5/4', '7/8', 'nhịp thay đổi', 'changing meter', 'nhịp cộng', 'additive meter', 'aksak'],
+    summary: 'Nhịp có phách không đều (5/8, 7/8 ghép từ nhóm 2 và 3) và nhịp đổi liên tục giữa các ô — đặc trưng của nhạc dân gian Đông Âu và thế kỷ 20.',
+    wiki: 'Metre_(music)',
+    body: `
+## Nhịp lẻ (nhịp cộng)
+Ô nhịp gồm các nhóm phách **dài – ngắn không đều**, ghép từ nhóm 2 và 3 nốt móc đơn:
+| Nhịp | Cách chia thường gặp | Ví dụ |
+|---|---|---|
+| 5/4 | 3 + 2 | "Take Five" (Dave Brubeck), "Mars" (Holst) |
+| 5/8 | 2 + 3 hoặc 3 + 2 | Nhạc dân gian Hy Lạp, Bulgaria |
+| 7/8 | 2 + 2 + 3, 3 + 2 + 2 | Nhạc Balkan, "Money" (Pink Floyd, 7/4) |
+| 9/8 | 2 + 2 + 2 + 3 | "Blue Rondo à la Turk" (Brubeck) |
+
+Lưu ý: 9/8 thông thường là [[so-chi-nhip|nhịp kép]] 3 + 3 + 3; cách chia 2 + 2 + 2 + 3 là nhịp lẻ "aksak" (khập khiễng).
+
+## Nhịp thay đổi
+Số chỉ nhịp đổi ở nhiều ô nhịp liên tiếp (3/16 – 2/16 – 3/16 – 5/16…). Stravinsky, "Le Sacre du printemps" (1913), phần "Danse sacrale" là ví dụ kinh điển; Bartók dùng nhiều trong bộ "Mikrokosmos" cho piano.
+
+## Mẹo đếm
+Đếm theo nhóm, nhấn đầu mỗi nhóm: 7/8 (2+2+3) = "**1**-2 **1**-2 **1**-2-3". Liên quan: [[da-nhip]], [[cac-thoi-ky]].
+`,
+  },
+  {
+    slug: 'hemiola',
+    title: 'Hemiola',
+    category: 'rhythm',
+    aliases: ['hemiolia', 'nhịp 3 thành 2', 'chuyển nhóm phách'],
+    summary: 'Hai ô nhịp 3 phách được nhấn như thể ba nhóm 2 phách (3 × 2 thành 2 × 3) — thường xuất hiện ngay trước kết.',
+    wiki: 'Hemiola',
+    body: `
+Trong [[so-chi-nhip|nhịp 3/4]], hai ô nhịp có 6 phách: bình thường nhóm **3 + 3**. Hemiola nhóm lại thành **2 + 2 + 2** — như thể tạm thời chuyển sang một ô 3/2.
+
+| | Phách 1 | 2 | 3 | 1 | 2 | 3 |
+|---|---|---|---|---|---|---|
+| Bình thường | **M** | n | n | **M** | n | n |
+| Hemiola | **M** | n | **M** | n | **M** | n |
+
+::img Mozart piano sonata K332 hemiola excerpt.svg | Hemiola ở hai ô nhịp sau trong Sonata K. 332 của Mozart
+
+## Ở đâu?
+- **Kết câu** trong vũ khúc Baroque (courante, minuet, sarabande) — hemiola làm chậm lại cảm giác nhịp ngay trước [[cau-ket]].
+- Brahms dùng rất nhiều để tạo sự mơ hồ về nhịp.
+- Trong 6/8 ↔ 3/4: cùng 6 nốt móc đơn, nhóm 3+3 hay 2+2+2 — rất phổ biến trong nhạc Mỹ Latin ("America" trong West Side Story).
+
+Hemiola là một dạng [[dao-phach]] có tổ chức và họ hàng gần với [[da-nhip]] (3 chọi 2 theo thời gian nối tiếp thay vì đồng thời).
+`,
+  },
+  {
+    slug: 'da-nhip',
+    title: 'Đa nhịp',
+    category: 'rhythm',
+    aliases: ['polyrhythm', 'đa tiết tấu', 'polymeter', 'nhịp chéo', 'cross-rhythm', '3 chọi 2', '4 chọi 3'],
+    summary: 'Hai (hoặc nhiều) cách chia phách khác nhau vang cùng lúc, như 3 nốt chọi 2 nốt — hoặc hai số chỉ nhịp chồng lên nhau.',
+    wiki: 'Polyrhythm',
+    body: `
+## Đa tiết tấu (polyrhythm)
+Trong cùng một khoảng thời gian, một bè chia 3, bè kia chia 2 (hoặc 4 chọi 3, 5 chọi 4…). Cách viết dùng [[lien-ba]].
+
+## Cách luyện: tìm bội số chung nhỏ nhất
+**3 chọi 2** → chia phách thành **6** phần nhỏ:
+| Phần | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| Tay phải (3) | ● | | ● | | ● | |
+| Tay trái (2) | ● | | | ● | | |
+| Kết hợp | cả hai | | phải | trái | phải | |
+
+Câu gợi nhớ: "**nice cup of tea**". Với **4 chọi 3**: chia 12 phần — "**pass** the **gol**-den **but**-ter" (Chopin, "Fantaisie-Impromptu").
+
+## Đa nhịp (polymeter)
+Hai bè có **độ dài ô nhịp khác nhau**: ví dụ một bè lặp mẫu 3 phách, bè kia lặp mẫu 4 phách — sau 12 phách chúng mới gặp lại ở phách đầu. Rất phổ biến trong nhạc châu Phi, nhạc [[toi-gian]] và progressive rock.
+
+Liên quan: [[hemiola]], [[nhip-hon-hop]].
 `,
   },
 ]

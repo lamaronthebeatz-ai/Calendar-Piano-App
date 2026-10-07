@@ -125,7 +125,7 @@ Hoa mỹ dùng nốt trong [[am-giai-truong|âm giai]] hiện hành; nếu cần
 - **Cổ điển** (Mozart, Haydn): rõ ràng, thanh lịch.
 - **Lãng mạn** (Chopin): hoa mỹ được viết ra thành chuỗi nốt nhỏ dài, chơi tự do ([[nhip-do|rubato]]).
 
-Về bản chất, hoa mỹ là các [[not-ngoai-hop-am]] (nốt thêu, nốt dựa) được viết tắt.
+Về bản chất, hoa mỹ là các [[not-ngoai-hop-am]] (nốt thêu, nốt dựa) được viết tắt. Phong cách từng thời kỳ: [[cac-thoi-ky]].
 `,
   },
   {
@@ -224,7 +224,7 @@ Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa ch�
 | ma | Nhưng | |
 | assai | Rất, khá | Allegro assai |
 
-Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]].
+Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]]. Tên thể loại (nocturne, étude…): xem [[the-loai]].
 `,
   },
 ]

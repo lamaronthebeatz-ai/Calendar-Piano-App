@@ -62,7 +62,7 @@ Hai nốt vang **lần lượt** là quãng giai điệu; vang **cùng lúc** l�
 - Quãng 5 đúng đi lên: chủ đề "Star Wars".
 - Quãng 8 đi lên: "Somewhere Over the Rainbow".
 
-Liên quan: [[quang-dao]], [[thuan-nghich]], [[hop-am-ba]], [[vong-quang-nam]].
+Liên quan: [[quang-dao]], [[thuan-nghich]], [[hop-am-ba]], [[vong-quang-nam]]. Cách đếm quãng bằng số nửa cung (0–11) là nền tảng của [[tap-hop-cao-do]].
 `,
   },
   {
@@ -129,7 +129,7 @@ Tên nốt phụ thuộc vào **chức năng**, không chỉ cao độ:
 - Trong [[am-giai-truong|Rê trưởng]], nốt bậc 7 là **C♯**, không phải D♭ (mỗi tên chữ cái chỉ xuất hiện một lần).
 - [[quang|Quãng]] C–D♯ là **2 tăng**, còn C–E♭ là **3 thứ** — cùng âm thanh, khác chức năng.
 
-Trùng âm còn dùng để **chuyển giọng** bất ngờ (xem [[chuyen-giong]]) và giúp khép kín [[vong-quang-nam]] (F♯ trưởng = G♭ trưởng).
+Trùng âm còn dùng để **chuyển giọng** bất ngờ (xem [[chuyen-giong]], [[hop-am-bay-giam]], [[hop-am-sau-tang]]) và giúp khép kín [[vong-quang-nam]] (F♯ trưởng = G♭ trưởng).
 `,
   },
   {
@@ -176,7 +176,7 @@ Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chi
 - **Đánh đổi**: các quãng (trừ quãng 8) đều lệch nhẹ so với tỉ lệ tự nhiên của [[chuoi-boi-am]]; quãng 3 trưởng hơi rộng.
 
 ## Lịch sử
-Trước đó, các hệ thống như **Pythagore** hay **bình quân bất đều** (well temperament) khiến mỗi giọng có màu sắc riêng. Bộ "Clavier bình quân" (Das Wohltemperierte Klavier) của J.S. Bach gồm 24 Prelude và Fugue ở đủ 24 giọng trưởng – thứ, chứng minh việc chơi được ở mọi giọng (xem [[fugue]]).
+Bối cảnh lịch sử: [[cac-thoi-ky]]. Trước đó, các hệ thống như **Pythagore** hay **bình quân bất đều** (well temperament) khiến mỗi giọng có màu sắc riêng. Bộ "Clavier bình quân" (Das Wohltemperierte Klavier) của J.S. Bach gồm 24 Prelude và Fugue ở đủ 24 giọng trưởng – thứ, chứng minh việc chơi được ở mọi giọng (xem [[fugue]]).
 `,
   },
 ]

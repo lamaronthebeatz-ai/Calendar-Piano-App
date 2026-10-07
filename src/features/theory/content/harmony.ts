@@ -29,7 +29,7 @@ Dựng hợp âm ba trên từng bậc của [[am-giai-truong]] (chỉ dùng n�
 
 Quy luật cho mọi giọng trưởng: **I, IV, V trưởng; ii, iii, vi thứ; vii° giảm**. Trong [[am-giai-thu|giọng thứ hoà âm]]: i, ii°, III⁺, iv, V, VI, vii°.
 
-Liên quan: [[the-dao-hop-am]], [[hop-am-bay]], [[ky-hieu-hop-am]], [[chuc-nang-hoa-am]].
+Liên quan: [[the-dao-hop-am]], [[hop-am-bay]], [[ky-hieu-hop-am]], [[chuc-nang-hoa-am]]. Chồng quãng khác thay cho quãng 3: [[hoa-am-quang-bon]] (quãng 4), [[am-cum]] (quãng 2).
 `,
   },
   {
@@ -54,14 +54,14 @@ Thể đảo được xác định bởi **nốt thấp nhất** (bè trầm), k
 - **Tay đỡ di chuyển**: trên piano, chuyển C → F → G bằng thể đảo (C–E–G → C–F–A → B–D–G) chỉ cần dịch ngón tối thiểu — xem [[dan-giong]].
 - **Màu sắc**: đảo 2 nghe chưa ổn định, thường dùng ở **I6/4 kết** trước V (xem [[cau-ket]]).
 
-Hợp âm 7 có thêm **đảo 3** (nốt bậc 7 ở bè trầm). Các số "6", "6/4" đến từ cách ghi [[quang]] so với bè trầm.
+Hợp âm 7 có thêm **đảo 3** (nốt bậc 7 ở bè trầm). Các số "6", "6/4" đến từ cách ghi [[quang]] so với bè trầm — xem [[bass-so]].
 `,
   },
   {
     slug: 'hop-am-bay',
     title: 'Hợp âm bảy',
     category: 'harmony',
-    aliases: ['hợp âm 7', 'seventh chord', 'hợp âm 7 át', 'dominant seventh', 'maj7', 'm7', 'm7b5', 'dim7', 'hợp âm 7 giảm', 'nửa giảm', 'G7'],
+    aliases: ['hợp âm 7', 'seventh chord', 'hợp âm 7 át', 'dominant seventh', 'maj7', 'm7', 'm7b5', 'nửa giảm', 'G7'],
     summary: 'Hợp âm ba thêm một quãng 3 nữa phía trên (nốt bậc 7); có 5 loại chính, quan trọng nhất là hợp âm 7 át (V7).',
     wiki: 'Seventh_chord',
     body: `
@@ -84,7 +84,7 @@ Chứa [[thuan-nghich|tritone]] giữa bậc 3 và bậc 7 (B–F trong G7). Tri
 |---|---|---|---|---|---|---|
 | Cmaj7 | Dm7 | Em7 | Fmaj7 | G7 | Am7 | Bø7 |
 
-Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii – V – I]]). Thêm nốt cao hơn: [[hop-am-mo-rong]].
+Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii – V – I]]). Thêm nốt cao hơn: [[hop-am-mo-rong]]. Hợp âm 7 giảm có cấu trúc đối xứng đặc biệt: [[hop-am-bay-giam]]. Thay V7 bằng ♭II7: [[thay-the-tritone]].
 `,
   },
   {
@@ -146,9 +146,9 @@ Hợp âm 13 đầy đủ có 7 nốt — quá nhiều cho hai tay. Thứ tự �
 ::keyboard E4 G4 B4 D5 | Cmaj9 không nốt gốc: E – G – B – D (tay phải), thường gặp trong jazz piano
 
 ## Nốt căng biến hoá
-Trên hợp âm 7 át còn có ♭9, ♯9, ♯11, ♭13 — tạo sức căng mạnh trước khi giải quyết. Nốt 11 tự nhiên thường **tránh** trên hợp âm trưởng vì [[thuan-nghich|nghịch]] với nốt bậc 3.
+Trên hợp âm 7 át còn có ♭9, ♯9, ♯11, ♭13 — tạo sức căng mạnh trước khi giải quyết (xem âm giai biến đổi trong [[he-thong-hop-am-am-giai]]). Nốt 11 tự nhiên thường **tránh** trên hợp âm trưởng vì [[thuan-nghich|nghịch]] với nốt bậc 3.
 
-Xem thêm: [[ky-hieu-hop-am]], [[vong-hop-am]].
+Xem thêm: [[ky-hieu-hop-am]], [[vong-hop-am]], [[xep-hop-am]] (cách xếp nốt), [[he-thong-hop-am-am-giai]] (chọn nốt căng).
 `,
   },
   {
@@ -174,7 +174,7 @@ Hầu hết âm nhạc có tính điệu đi theo vòng: **nghỉ → rời đi 
 ## Vì sao V muốn về I?
 Hợp âm V chứa **cảm âm** (B trong Đô trưởng) cách chủ âm nửa cung; V7 còn có thêm [[thuan-nghich|tritone]]. Cả hai tạo lực hút mạnh về I — nền tảng của [[cau-ket]].
 
-Ứng dụng: [[vong-hop-am]], [[hop-am-at-phu]], [[chuyen-giong]].
+Ứng dụng: [[vong-hop-am]], [[hop-am-at-phu]], [[chuyen-giong]]. Mở rộng nhóm hạ át bằng hợp âm cromatic: [[hoa-am-cromatic]]. Phân tích nhiều tầng: [[phan-tich-schenker]].
 `,
   },
   {
@@ -201,9 +201,9 @@ Hợp âm V chứa **cảm âm** (B trong Đô trưởng) cách chủ âm nửa 
 1. Chơi vòng ở **nguyên vị** để hiểu cấu trúc.
 2. Chuyển sang [[the-dao-hop-am|thể đảo]] gần nhất để tay phải gần như không di chuyển ([[dan-giong]]).
 3. Tay trái chơi nốt gốc, sau đó thử các kiểu đệm (rải, Alberti, nhịp).
-4. **Dịch giọng**: chơi lại cùng vòng ở G, F, D… — dùng [[vong-quang-nam]] để biết các hợp âm.
+4. **Dịch giọng**: chơi lại cùng vòng ở G, F, D… — dùng [[vong-quang-nam]] để biết các hợp âm (xem [[dich-giong]]).
 
-Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]].
+Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]], [[mo-tien-hoa-am]]. Biến tấu vòng hợp âm: [[tai-hoa-am]].
 `,
   },
   {
@@ -230,7 +230,7 @@ Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]].
 ## Kết với I6/4
 Trong nhạc cổ điển, trước V thường có **hợp âm I đảo 2** (C/G → G7 → C) — gọi là "6/4 kết", thực chất là âm thêu của V (xem [[the-dao-hop-am]]).
 
-Kết là nền tảng chia [[cau-nhac]] và [[hinh-thuc-am-nhac|hình thức]]. Lý do V → I mạnh: xem [[chuc-nang-hoa-am]].
+Kết là nền tảng chia [[cau-nhac]] và [[hinh-thuc-am-nhac|hình thức]]. Lý do V → I mạnh: xem [[chuc-nang-hoa-am]]. Hợp âm hạ át cromatic trước V trong kết: [[hop-am-napoli]], [[hop-am-sau-tang]].
 `,
   },
   {
@@ -253,7 +253,7 @@ Hoà âm cổ điển viết cho **4 bè**: Soprano – Alto – Tenor – Bass 
 ::staff treble C4+E4+G4 C4+F4+A4 B3+D4+G4 C4+E4+G4 | I – IV – V – I với dẫn giọng mượt: mỗi nốt di chuyển tối đa một bậc
 
 ## Ứng dụng cho piano
-Khi đệm hát, chọn [[the-dao-hop-am|thể đảo]] sao cho tay phải di chuyển ít nhất — đó chính là dẫn giọng tốt. Nguyên tắc này cũng là gốc của [[doi-am]].
+Khi đệm hát, chọn [[the-dao-hop-am|thể đảo]] sao cho tay phải di chuyển ít nhất — đó chính là dẫn giọng tốt. Nguyên tắc này cũng là gốc của [[doi-am]] và [[doi-am-5-loai]]. Lý thuyết đo khoảng cách dẫn giọng giữa các hợp âm: [[neo-riemann]].
 
 Liên quan: [[not-ngoai-hop-am]], [[thuan-nghich]].
 `,
@@ -328,14 +328,14 @@ Chuỗi át phụ nối tiếp nhau tạo nên vòng E7 – A7 – D7 – G7 –
 
 Vòng **I – ♭VI – ♭VII – I** (C – A♭ – B♭ – C) là "kết anh hùng" nổi tiếng trong nhạc phim và game.
 
-Khác với [[hop-am-at-phu]] (tạo lực hút về một hợp âm), hợp âm mượn chủ yếu thay đổi **màu sắc**. Liên quan: [[dieu-thuc]], [[vong-hop-am]].
+Khác với [[hop-am-at-phu]] (tạo lực hút về một hợp âm), hợp âm mượn chủ yếu thay đổi **màu sắc**. Hợp âm ♭VI, ♭III cũng là [[trung-am-cromatic]] của I. Liên quan: [[dieu-thuc]], [[vong-hop-am]].
 `,
   },
   {
     slug: 'chuyen-giong',
     title: 'Chuyển giọng',
     category: 'harmony',
-    aliases: ['chuyển điệu', 'modulation', 'đổi tông', 'chuyển tông', 'hợp âm chung', 'pivot chord'],
+    aliases: ['chuyển điệu', 'modulation', 'đổi tông', 'hợp âm chung', 'pivot chord'],
     summary: 'Chuyển trung tâm âm nhạc từ giọng này sang giọng khác, xác nhận bằng một kết ở giọng mới.',
     wiki: 'Modulation_(music)',
     body: `
@@ -343,7 +343,7 @@ Khác với [[hop-am-at-phu]] (tạo lực hút về một hợp âm), hợp âm
 - **Qua hợp âm chung (pivot)**: tìm hợp âm thuộc cả hai giọng. Đô trưởng → Sol trưởng: Am là vi của C **và** ii của G → Am – D7 – G.
 - **Qua át của giọng mới**: dùng [[hop-am-at-phu|hợp âm át]] của giọng đích rồi kết ở đó.
 - **Trực tiếp (đột ngột)**: nhảy thẳng sang giọng mới, thường lên nửa cung hoặc một cung ở điệp khúc cuối bài pop ("truck driver's modulation").
-- **Qua [[trung-am]]**: viết lại tên một hợp âm 7 giảm hay nốt chung để rẽ sang giọng xa.
+- **Qua [[trung-am]]**: viết lại tên một [[hop-am-bay-giam|hợp âm 7 giảm]] hoặc [[hop-am-sau-tang|hợp âm 6 Đức]] để rẽ sang giọng xa.
 
 ## Giọng đích phổ biến
 Giọng **át** (lên quãng 5), giọng **[[giong-song-song|song song]]**, giọng **hạ át** — tức các giọng họ hàng gần trên [[vong-quang-nam]].

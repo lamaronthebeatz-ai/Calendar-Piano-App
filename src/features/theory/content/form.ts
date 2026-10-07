@@ -71,6 +71,16 @@ Nếu câu 2 bắt đầu giống câu 1 → **đoạn song song**; nếu khác 
 ## Khi tập đàn
 Hãy "thở" ở cuối mỗi câu — nhấc tay nhẹ, giảm âm lượng — như ca sĩ lấy hơi. Đánh dấu chỗ kết giúp ghi nhớ bài nhanh hơn.
 
+## Câu nhạc kiểu "sentence"
+Một cấu trúc 8 ô nhịp khác (theo William Caplin), rất phổ biến từ Beethoven:
+| Phần | Ô nhịp | Nội dung |
+|---|---|---|
+| Trình bày ý cơ bản | 1–2 | [[motif|Ý nhạc]] 2 ô |
+| Nhắc lại ý cơ bản | 3–4 | Lặp lại (thường trên hợp âm V) |
+| Tiếp nối – kết | 5–8 | Chia nhỏ, tăng tốc, đẩy tới [[cau-ket|kết]] |
+
+Ví dụ: chủ đề mở đầu Sonata piano Op. 2 số 1 của Beethoven.
+
 Liên quan: [[motif]], [[giai-dieu]], [[nhip-lay-da]], [[hinh-thuc-am-nhac]].
 `,
   },
@@ -96,7 +106,7 @@ Phần giống nhau mang cùng chữ cái; **A′** là A có biến đổi.
 ## Hình thức bài hát pop
 **Intro – Phiên khúc (Verse) – Tiền điệp khúc – Điệp khúc (Chorus) – Phiên khúc – Điệp khúc – Bridge – Điệp khúc – Outro.** Điệp khúc giữ nguyên lời và nhạc; phiên khúc giữ nhạc nhưng đổi lời.
 
-Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]].
+Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]]. Hình thức ca khúc jazz: [[hinh-thuc-ca-khuc-32]]. Các thể loại nhiều chương: [[the-loai]]. Biến tấu trên bass lặp: [[ostinato]].
 `,
   },
   {
@@ -145,7 +155,7 @@ Trình bày tạo **xung đột** giữa hai giọng; phát triển đẩy xung 
 ## Lưu ý thuật ngữ
 "Sonata" là **tác phẩm** nhiều chương (thường 3–4) cho một hoặc hai nhạc cụ. "Hình thức sonata" là **cấu trúc** của một chương — thường là chương đầu. Sonatina là sonata nhỏ, đơn giản (Clementi, Kuhlau) — bài tập kinh điển cho học sinh piano.
 
-Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]].
+Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]]. Đoạn phát triển thường kết bằng [[bass-ngan]] trên át âm.
 `,
   },
   {
@@ -194,7 +204,7 @@ Sơ đồ: **A – A1 – A2 – A3 …** Chủ đề thường ngắn, dạng [
 - **Bass Alberti**: thấp – cao – giữa – cao (C–G–E–G), rất phổ biến thời Mozart.
 - **Stride / oom-pah**: bass trầm ở phách mạnh, hợp âm ở phách nhẹ (valse, ragtime).
 
-Phức điệu: xem [[doi-am]] và [[fugue]].
+Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinato]].
 `,
   },
   {
@@ -221,7 +231,7 @@ Quy tắc kinh điển (Fux, "Gradus ad Parnassum", 1725): ưu tiên chuyển đ
 - **Mô phỏng**: bè thứ hai nhắc lại giai điệu bè thứ nhất sau một khoảng thời gian.
 - **Canon**: mô phỏng nghiêm ngặt từ đầu đến cuối — ví dụ hát nối "Frère Jacques" (Kìa con bướm vàng).
 
-Đỉnh cao của đối âm là [[fugue]]. Người học piano bắt đầu với **Inventions 2 bè** của Bach. Liên quan: [[ket-cau]], [[motif]].
+Đỉnh cao của đối âm là [[fugue]]. Người học piano bắt đầu với **Inventions 2 bè** của Bach. Phương pháp học từng bước: [[doi-am-5-loai]]. Đổi chỗ các bè và các loại canon: [[doi-am-kep]]. Liên quan: [[ket-cau]], [[motif]].
 `,
   },
   {
@@ -246,7 +256,7 @@ Quy tắc kinh điển (Fux, "Gradus ad Parnassum", 1725): ưu tiên chuyển đ
 - Bach — **Clavier bình quân** (Das Wohltemperierte Klavier), 2 tập × 24 prelude và fugue ở đủ 24 giọng (xem [[luat-binh-quan]]).
 - Bach — **Nghệ thuật Fugue** (Die Kunst der Fuge).
 
-Nền tảng: [[doi-am]], [[ket-cau]].
+Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thường có [[bass-ngan]] trên át âm.
 `,
   },
   {
@@ -273,7 +283,116 @@ Mỗi ô là một ô nhịp 4/4, trong giọng Đô:
 ## Bass boogie-woogie cho tay trái
 C – E – G – A – B♭ – A – G – E (mỗi nốt một móc đơn), dịch lên F và G theo hợp âm.
 
-Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]].
+Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]]. So sánh với khuôn 32 ô nhịp: [[hinh-thuc-ca-khuc-32]].
+`,
+  },
+  {
+    slug: 'ostinato',
+    title: 'Ostinato',
+    category: 'form',
+    aliases: ['bass lặp', 'ground bass', 'basso ostinato', 'passacaglia', 'chaconne', 'riff', 'mẫu lặp'],
+    summary: 'Một mẫu nhạc ngắn (giai điệu, nhịp điệu hoặc hợp âm) lặp lại liên tục; khi ở bè trầm, nó là nền cho các thể loại passacaglia và chaconne.',
+    wiki: 'Ostinato',
+    body: `
+## Các dạng
+- **Ostinato giai điệu / nhịp điệu**: ví dụ tay trái lặp mẫu trong "Boléro" (Ravel), hay riff guitar trong rock.
+- **Bass lặp** (basso ostinato, ground bass): một câu bè trầm lặp lại, phía trên là các [[bien-tau|biến tấu]].
+
+## Passacaglia và chaconne
+Hai thể loại Baroque dạng [[bien-tau]] trên một bass lặp hoặc một [[vong-hop-am]] lặp, thường ở nhịp 3/4:
+- Purcell — "Dido's Lament" (bass đi xuống cromatic).
+- Bach — Passacaglia Đô thứ cho organ BWV 582; Chaconne trong Partita số 2 Rê thứ cho violin.
+- Pachelbel — Canon in D: canon ba bè trên một bass lặp 8 nốt (xem [[doi-am-kep]]).
+
+## Trong nhạc hiện đại
+Riff và vòng lặp (loop) là ostinato; nhạc [[toi-gian]] được xây hoàn toàn từ ostinato. Bè trầm boogie-woogie trong [[blues-12-nhip]] cũng là ostinato.
+
+Liên quan: [[bass-ngan]] (một nốt lặp/ngân thay vì một mẫu), [[ket-cau]].
+`,
+  },
+  {
+    slug: 'doi-am-5-loai',
+    title: 'Đối âm 5 loại',
+    category: 'form',
+    aliases: ['species counterpoint', 'đối âm theo loại', 'cantus firmus', 'Fux', 'Gradus ad Parnassum', 'đối âm loại 1'],
+    summary: 'Phương pháp học đối âm kinh điển của Fux (1725): viết bè mới trên một giai điệu cho sẵn, qua 5 cấp độ nhịp điệu tăng dần.',
+    wiki: 'Counterpoint',
+    body: `
+Cho sẵn một **cantus firmus** (giai điệu nốt tròn, đi chủ yếu liền bậc). Người học viết một bè đối âm phía trên hoặc dưới, theo 5 "loại":
+| Loại | Tỉ lệ nốt (đối âm : cantus) | Học được gì |
+|---|---|---|
+| 1 | 1 : 1 (nốt tròn) | Chỉ dùng [[thuan-nghich|quãng thuận]]; các kiểu chuyển động |
+| 2 | 2 : 1 (nốt trắng) | [[not-ngoai-hop-am|Nốt lướt]] ở phách nhẹ |
+| 3 | 4 : 1 (nốt đen) | Nốt lướt, nốt thêu, các hình giai điệu |
+| 4 | Nốt nối lệch phách | **Nốt trễ** (suspension): chuẩn bị – nghịch – giải quyết |
+| 5 | Hoa mỹ (kết hợp tự do) | Kết hợp tất cả |
+
+## Quy tắc cơ bản (loại 1)
+- Bắt đầu và kết thúc bằng **quãng thuận hoàn toàn** (đồng âm, 5, 8).
+- Kết bằng bước liền bậc vào chủ âm, với [[bac-am-giai|cảm âm]] đi lên.
+- Ưu tiên **chuyển động ngược chiều**; tránh [[dan-giong|quãng 5 và quãng 8 song song]] và cả quãng 5/8 "ẩn" (cùng chiều tới quãng hoàn toàn với nhảy ở bè trên).
+- Dùng nhiều quãng 3 và 6; không lặp nốt quá nhiều; một [[giai-dieu|đỉnh giai điệu]] duy nhất.
+
+Phương pháp này được Haydn, Mozart, Beethoven học và vẫn được dạy ở nhạc viện ngày nay. Bước tiếp theo: [[doi-am-kep]], [[fugue]]. Tổng quan: [[doi-am]].
+`,
+  },
+  {
+    slug: 'doi-am-kep',
+    title: 'Đối âm kép và canon',
+    category: 'form',
+    aliases: ['đối âm kép', 'invertible counterpoint', 'double counterpoint', 'canon đảo', 'canon cua', 'crab canon', 'round', 'hát nối', 'canon nghịch hành'],
+    summary: 'Đối âm kép: hai bè có thể đổi chỗ trên – dưới mà vẫn đúng. Canon: một bè được bè khác mô phỏng nghiêm ngặt, với nhiều biến thể đảo, nghịch hành, tăng trường độ.',
+    wiki: 'Invertible_counterpoint',
+    body: `
+## Đối âm kép (ở quãng 8)
+Viết hai bè sao cho khi đưa bè dưới lên trên một quãng 8, kết quả vẫn hay. Khi [[quang-dao|đảo quãng]]: 3 ↔ 6 (vẫn thuận), nhưng **5 ↔ 4** — quãng 5 thuận trở thành quãng 4 nghịch (trên bè trầm), nên phải dùng quãng 5 thận trọng.
+
+Đây là bí quyết của **Inventions 2 bè** của Bach: chủ đề xuất hiện lần lượt ở tay phải rồi tay trái, đối đề đổi chỗ theo. Rất quan trọng trong [[fugue]].
+
+## Các loại canon
+| Loại | Bè sau mô phỏng bè trước bằng cách |
+|---|---|
+| Canon đồng âm / quãng 8 | Lặp nguyên cao độ (hát nối, "round") |
+| Canon ở quãng 5, quãng 4… | Dịch lên một [[quang]] cố định |
+| Canon đảo | Lật ngược hướng các quãng |
+| Canon tăng/giảm trường độ | Chơi chậm/nhanh gấp đôi |
+| Canon cua (nghịch hành) | Đọc ngược từ cuối về đầu |
+
+Bach's "Goldberg Variations" có một canon ở mỗi biến tấu thứ ba, lần lượt ở quãng đồng âm, 2, 3… đến 9 (xem [[bien-tau]]). "Musikalisches Opfer" (Lễ vật âm nhạc) có canon cua nổi tiếng.
+
+Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, nghịch hành).
+`,
+  },
+  {
+    slug: 'the-loai',
+    title: 'Thể loại khí nhạc',
+    category: 'form',
+    aliases: ['thể loại', 'genre', 'giao hưởng', 'symphony', 'concerto', 'tổ khúc', 'suite', 'tứ tấu', 'etude', 'nocturne', 'prelude', 'ballade', 'tiểu phẩm', 'cadenza', 'minuet', 'scherzo'],
+    summary: 'Các thể loại lớn và nhỏ của nhạc cổ điển — sonata, giao hưởng, concerto, tổ khúc, tiểu phẩm — và cấu trúc chương điển hình của chúng.',
+    wiki: 'Musical_form',
+    body: `
+## Thể loại nhiều chương
+| Thể loại | Dàn dựng | Chương điển hình |
+|---|---|---|
+| **Sonata** | 1 nhạc cụ (hoặc + piano) | Nhanh ([[hinh-thuc-sonata]]) – Chậm – (Minuet/Scherzo) – Nhanh ([[rondo]]) |
+| **Giao hưởng** | Dàn nhạc | Như sonata, thường 4 chương |
+| **Tứ tấu đàn dây** | 2 violin, viola, cello | Như sonata, 4 chương |
+| **Concerto** | Độc tấu + dàn nhạc | Nhanh – Chậm – Nhanh; có **cadenza** (độc tấu ngẫu hứng, ngay trước [[cau-ket|kết]]) |
+| **Tổ khúc Baroque** | Đàn phím hoặc hoà tấu | Chuỗi vũ khúc cùng giọng: Allemande – Courante – Sarabande – Gigue |
+
+Minuet (3/4, vừa phải) ở thời Cổ điển được Beethoven thay bằng **Scherzo** (nhanh, đùa vui) — cả hai thường có dạng [[hinh-thuc-am-nhac|ba đoạn]] với đoạn giữa gọi là Trio.
+
+## Tiểu phẩm piano (thế kỷ 19)
+| Thể loại | Tính chất | Ví dụ |
+|---|---|---|
+| Prelude | Ngắn, khám phá một ý | Chopin, 24 Préludes Op. 28 |
+| Étude (luyện ngón) | Tập trung một kỹ thuật, nhưng là tác phẩm nghệ thuật | Chopin, Liszt |
+| Nocturne | Trữ tình, giai điệu hát trên đệm rải | Field, Chopin |
+| Ballade | Kể chuyện, kịch tính | Chopin, Brahms |
+| Impromptu | Như ngẫu hứng | Schubert, Chopin |
+| Bài ca không lời | Giai điệu như ca khúc | Mendelssohn |
+
+Bối cảnh: [[cac-thoi-ky]]. Phức điệu: [[fugue]], [[ostinato|passacaglia]].
 `,
   },
 ]

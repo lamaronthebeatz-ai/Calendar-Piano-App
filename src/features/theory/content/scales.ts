@@ -107,7 +107,7 @@ Hoá biểu gồm các [[dau-hoa]] đặt ngay sau [[khoa-nhac]], áp dụng cho
 | 6 | F♯ | d♯ | G♭ | e♭ |
 | 7 | C♯ | a♯ | C♭ | a♭ |
 
-Mỗi hoá biểu ứng với một [[am-giai-truong]] và một [[am-giai-thu]] — xem [[giong-song-song]]. Toàn bộ được sắp xếp gọn trong [[vong-quang-nam]].
+Mỗi hoá biểu ứng với một [[am-giai-truong]] và một [[am-giai-thu]] — xem [[giong-song-song]]. Đổi cả bài sang hoá biểu khác: [[dich-giong]]. Toàn bộ được sắp xếp gọn trong [[vong-quang-nam]].
 `,
   },
   {
@@ -127,7 +127,8 @@ Mỗi hoá biểu ứng với một [[am-giai-truong]] và một [[am-giai-thu]]
 - Tìm giọng song song: cặp trong–ngoài cùng ô (C – a). Xem [[giong-song-song]].
 - Các giọng **cạnh nhau** chỉ khác một dấu hoá → [[chuyen-giong]] mượt mà.
 - Ba ô liền nhau (F – C – G) cho ba [[hop-am-ba|hợp âm]] chính IV – I – V của giọng ở giữa.
-- Đi ngược chiều kim đồng hồ là chuỗi **át âm → chủ âm** (G → C → F → B♭…), nền tảng của nhiều [[vong-hop-am]] như ii – V – I.
+- Đi ngược chiều kim đồng hồ là chuỗi **át âm → chủ âm** (G → C → F → B♭…), nền tảng của nhiều [[vong-hop-am]] như ii – V – I và [[mo-tien-hoa-am|mô tiến quãng 5]].
+- Hai giọng **đối diện** nhau (C và F♯) xa nhau nhất — vang cùng lúc tạo [[da-dieu-tinh]].
 `,
   },
   {
@@ -180,7 +181,7 @@ Chơi các phím trắng nhưng lấy **nốt khác** làm âm chủ, ta đượ
 ## Cách nghĩ thực hành
 So sánh với âm giai trưởng/thứ cùng âm chủ và chỉ nhớ **nốt khác biệt**. Ví dụ: Dorian = thứ tự nhiên nhưng bậc 6 nâng lên.
 
-Điệu thức có nguồn gốc từ thánh ca Trung cổ và được dùng nhiều trong jazz, nhạc dân gian và nhạc phim. Xem thêm [[am-giai-ngu-cung]], [[am-giai-blues]].
+Điệu thức có nguồn gốc từ thánh ca Trung cổ và được dùng nhiều trong jazz, nhạc dân gian và nhạc phim. Xem thêm [[am-giai-ngu-cung]], [[am-giai-blues]]. Trong jazz, mỗi điệu thức gắn với một loại hợp âm: [[he-thong-hop-am-am-giai]].
 `,
   },
   {
@@ -245,7 +246,42 @@ Sáu nốt cách đều nhau **một cung**: C – D – E – F♯ – G♯ –
 
 ::keyboard C4 D4 E4 F#4 G#4 A#4 | Âm giai toàn cung trên C
 
-Claude Debussy dùng âm giai toàn cung rất nhiều (ví dụ prelude "Voiles"). Hợp âm tăng (xem [[hop-am-ba]]) được dựng hoàn toàn từ âm giai này.
+Claude Debussy dùng âm giai toàn cung rất nhiều (ví dụ prelude "Voiles") — xem [[an-tuong]]. Hợp âm tăng (xem [[hop-am-ba]]) được dựng hoàn toàn từ âm giai này. Một âm giai đối xứng khác: [[am-giai-bat-cung]]. Dùng 12 nốt bình đẳng như một hệ thống: [[ky-thuat-12-am]].
+`,
+  },
+  {
+    slug: 'dich-giong',
+    title: 'Dịch giọng',
+    category: 'scales',
+    aliases: ['transposition', 'chuyển tông', 'dịch tông', 'nhạc cụ chuyển giọng', 'transposing instrument', 'concert pitch', 'cao độ thực'],
+    summary: 'Chuyển toàn bộ bản nhạc lên hoặc xuống một quãng cố định, giữ nguyên mọi quan hệ giữa các nốt.',
+    wiki: 'Transposition_(music)',
+    body: `
+Dịch giọng khác với [[chuyen-giong]]: chuyển giọng là chuyển động **bên trong** tác phẩm; dịch giọng là viết/chơi **cả tác phẩm** ở cao độ khác — ví dụ hạ một bài hát xuống cho vừa giọng học trò.
+
+## Các bước dịch giọng
+1. Xác định [[quang]] cần dịch (C trưởng → E♭ trưởng: lên 3 thứ).
+2. Đổi [[hoa-bieu]] sang giọng mới (0 dấu → 3 dấu giáng).
+3. Dời mỗi nốt đúng **số bậc** (quãng 3 → mỗi nốt lên 2 bậc tên nốt): C → E♭, D → F, E → G…
+4. Điều chỉnh các [[dau-hoa|dấu hoá bất thường]] theo cùng quãng: F♯ trong C trưởng → A (bình) trong E♭ trưởng.
+5. Với [[ky-hieu-hop-am|hợp âm]]: dời gốc hợp âm cùng quãng, giữ nguyên hậu tố (Dm7 → Fm7).
+
+::keyboard C4 E4 G4 | C trưởng
+::keyboard Eb4 G4 Bb4 | Dịch lên 3 thứ → E♭ trưởng: cùng hình dạng quãng
+
+Suy nghĩ bằng **số bậc** (I – IV – V, xem [[bac-am-giai]]) thay vì tên nốt giúp dịch giọng tức thì.
+
+## Nhạc cụ chuyển giọng
+Một số nhạc cụ đọc nốt khác với âm thanh thực (cao độ thực = **concert pitch**, cao độ của piano):
+| Nhạc cụ | Viết C, nghe ra |
+|---|---|
+| Clarinet, trumpet, sax tenor (B♭) | B♭ (thấp hơn 2 trưởng; sax tenor thấp thêm 1 quãng 8) |
+| Kèn cor (F) | F (thấp hơn 5 đúng) |
+| Sax alto (E♭) | E♭ (thấp hơn 6 trưởng) |
+| Guitar, contrabass | C thấp hơn 1 quãng 8 |
+| Piccolo | C cao hơn 1 quãng 8 |
+
+Khi đệm piano cho các nhạc cụ này, cần biết bản của họ đang viết ở giọng nào.
 `,
   },
 ]

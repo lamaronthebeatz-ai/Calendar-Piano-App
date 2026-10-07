@@ -6,6 +6,9 @@ import { scales } from './content/scales'
 import { harmony } from './content/harmony'
 import { form } from './content/form'
 import { expression } from './content/expression'
+import { chromatic } from './content/chromatic'
+import { jazz } from './content/jazz'
+import { modern } from './content/modern'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -18,8 +21,11 @@ export const CATEGORIES = {
   pitch: { title: 'Cao độ & quãng', description: 'Khoảng cách giữa các nốt và cơ sở âm học của chúng.' },
   scales: { title: 'Âm giai & giọng', description: 'Âm giai, điệu thức, hoá biểu và quan hệ giữa các giọng.' },
   harmony: { title: 'Hợp âm & hoà âm', description: 'Hợp âm, chức năng, vòng hợp âm, kết và chuyển giọng.' },
+  chromatic: { title: 'Hoà âm cromatic & phân tích', description: 'Nâng cao: Napoli, hợp âm 6 tăng, 7 giảm, mô tiến, bass số, Schenker, Neo-Riemann.' },
   form: { title: 'Giai điệu & hình thức', description: 'Từ motif, câu nhạc đến cấu trúc của cả tác phẩm.' },
   expression: { title: 'Diễn tấu & ký hiệu', description: 'Cường độ, cách đánh, hoa mỹ, pedal, ngón bấm và thuật ngữ.' },
+  jazz: { title: 'Jazz & hoà âm hiện đại', description: 'Swing, xếp hợp âm, hệ thống hợp âm – âm giai, thay thế tritone, tái hoà âm.' },
+  modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', description: 'Các thời kỳ lịch sử, ấn tượng, phi điệu tính, 12 âm, tập hợp cao độ, tối giản.' },
 }
 
-export const ARTICLES: Article[] = [...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...form, ...expression]
+export const ARTICLES: Article[] = [...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern]
