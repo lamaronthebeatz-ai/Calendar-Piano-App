@@ -199,6 +199,8 @@ Trong hợp âm, nốt cao nhất thường là giai điệu:
     refs: [
       ['Colourful Keys — Note identification methods', 'https://colourfulkeys.ie/note-identification-methods-one/'],
       ['Compose Create — An integrated approach to reading music', 'https://composecreate.com/an-integrated-approach-to-reading-music/'],
+      ['Brent Hugh — Teaching note reading skills with flashcards', 'https://brenthugh.com/piano/flashcardteaching.html'],
+      ['Hoffman Academy — Piano note flashcards', 'https://hoffmanacademy.com/store/learning-and-teaching-resources/piano-note-flashcards'],
     ],
     body: `
 ## Nốt mốc
@@ -219,6 +221,20 @@ Thay vì gọi tên từng nốt, đọc **khoảng cách** từ nốt trước:
 3. Khi lạc, quay về mốc gần nhất rồi đọc tiếp.
 
 Một mẹo bổ trợ: lướt qua một nhóm nốt trước để thấy **hướng đi** (lên, xuống, đứng yên), rồi mới gọi tên từ mốc.
+
+## Bài tập thẻ nốt theo cấp
+Vòng tập cơ bản: **giơ thẻ → chơi nốt đó trên đàn → nói tên nốt**. Mục tiêu chính là nối **ký hiệu – phím – âm thanh**; gọi được tên nốt có ích nhưng là thứ yếu.
+| Cấp | Bộ thẻ | Cách tập |
+|---|---|---|
+| 1 | Các nốt Đô: C2, C3, **C4**, C5, C6 | Bắt đầu chỉ với **2–3 thẻ**, thuộc thẻ nào thì thêm thẻ tiếp theo |
+| 2 | Thêm F2, F3 (khoá Fa), G4, G5 (khoá Sol) | Giống cấp 1 |
+| 3 | Nốt mốc ± quãng 2 và quãng 3 | Đọc theo quãng từ mốc gần nhất |
+| 4 | Cả bộ, **xáo trộn** mỗi lượt | Xáo để phải thật sự đọc, không đoán theo thứ tự |
+
+::staff treble C4 G4 C5 G5 C6 | Nốt mốc khoá Sol cho cấp 1–2
+::staff bass C2 F2 C3 F3 C4 | Nốt mốc khoá Fa cho cấp 1–2
+
+Có thể dùng thẻ in sẵn (in trên giấy cứng) hoặc ứng dụng có hẹn giờ. Một số ứng dụng gợi ý tập **khoảng 10 phút mỗi ngày** và cho tắt đồng hồ khi mới học. Thời gian để đọc quen là ước tính của người bán thẻ (vài tuần đến vài tháng), không phải số liệu nghiên cứu.
 
 ## So với câu gợi nhớ
 Giáo viên có quan điểm khác nhau: có người cho rằng câu gợi nhớ là cách chậm nhất với phần lớn học sinh piano; có người cho rằng học sinh dùng câu gợi nhớ vẫn sẽ đọc tốt hơn nếu học thêm cách nhận quãng. Xem cách đọc nốt từng khoá trong [[khoa-sol]], [[khoa-fa]]. Bước tiếp theo: [[thi-tau]].

@@ -193,6 +193,12 @@ Pedal hoạt động bằng cách nâng bộ giảm âm — xem [[bo-may-piano]]
     aliases: ['số ngón', 'fingering', 'thế bấm', 'luồn ngón', 'vắt ngón', 'thế tay năm ngón'],
     summary: 'Hệ thống đánh số ngón tay 1–5 (ngón cái là 1) ghi trên bản nhạc, giúp chơi trôi chảy và ổn định.',
     wiki: 'Fingering_(music)',
+    refs: [
+      ['MTNA 2024 — Teaching the skill and artistry of piano fingering (B. Wristen, handout)', 'https://www.mtna.org/downloads/conference/handouts/2024/Teaching%20Skill%2C%20Artistry%20of%20Fingering_B.%20Wristen%20handout.docx'],
+      ['Interlude — Fluent fingers', 'https://interlude.hk/fluent-fingers/'],
+      ['Melanie Spanswick — Fruitful fingering, part 2', 'https://melaniespanswick.com/2019/01/12/fruitful-fingering-part-2/'],
+      ['Fran\'s Piano Studio — Fingering schemes: help or hindrance?', 'https://franspianostudio.me/2020/03/08/fingering-schemes-help-or-hindrance/'],
+    ],
     body: `
 Cả hai tay: **1 = ngón cái, 2 = trỏ, 3 = giữa, 4 = áp út, 5 = út**.
 
@@ -214,6 +220,26 @@ Ngón bấm đủ 12 âm giai trưởng: xem bảng trong [[luyen-am-giai]].
 - Dùng **cùng một ngón bấm** mỗi lần tập — để "trí nhớ cơ bắp" hình thành.
 - Ở các đoạn nhắc lại, ngón bấm giống nhau → dễ thuộc [[motif]] và [[cau-nhac]].
 - Âm giai [[am-giai-cromatic|cromatic]]: ngón 3 trên phím đen.
+
+## Thêm nguyên tắc từ giáo trình sư phạm
+Một bài trình bày tại hội nghị MTNA 2024 tóm tắt:
+- Quay về **thế tay nhỏ, tự nhiên nhất** càng thường càng tốt.
+- **Không** vắt ngón số nhỏ qua ngón số lớn.
+- **Ngón mạnh** (hoặc lực cánh tay) cho **phách mạnh**.
+- Khoảng cách [[quang]] phải **vừa với độ mở** giữa hai ngón.
+- Ngón dài hợp với phím đen. **Cỡ bàn tay** cũng là một yếu tố.
+
+Cố định ngón bấm giúp nhạc trôi và dễ thuộc. Đổi ngón giữa chừng (ví dụ từ 1–2 sang 2–1) trong đoạn nhanh là nguyên nhân hay gây vấp. Chỉ ghi lên bản nhạc **những số ngón cần thiết**: ghi quá nhiều, học sinh sẽ quen bỏ qua tất cả. Đôi khi một ngón bấm "kém hiệu quả" lại **biểu cảm hơn** — nhưng đó phải là lựa chọn có chủ ý.
+
+## Bài tập theo cấp
+| Cấp | Bài tập |
+|---|---|
+| 1 | Năm ngón **lần lượt, liền bậc** trong thế tay năm ngón (C – D – E – F – G và ngược lại) |
+| 2 | Vẫn thế tay đó nhưng **nhảy quãng 3** (C – E, D – F…) |
+| 3 | [[luyen-am-giai|Âm giai]], [[luyen-hop-am-rai|hợp âm rải]] và hợp âm rời — thuộc các mẫu này thì ngón bấm của bản nhạc sẽ "tự nhiên" hơn |
+| 4 | Với bài mới: **dành vài buổi đầu** tìm ngón bấm trước khi chơi, tự đề xuất rồi thử. Ghi vào bản nhạc và **giữ nguyên**; chỉ đổi khi có lý do, và đổi thì tập lại từ đầu |
+
+Ngón bấm in sẵn không phải bất di bất dịch: nếu không hợp tay thì đổi — nhưng nên quyết định sớm. Thuộc ngón không thay được việc hiểu hoà âm của bài (xem [[hoc-thuoc-bai]]).
 
 Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa chọn ngón bấm cho âm giai có [[dau-hoa]]. Kỹ thuật luồn ngón chi tiết: [[luyen-am-giai]], [[luyen-hop-am-rai]]. Bài tập ngón (Hanon, Czerny): [[bai-tap-ngon]]. Tư thế tay đúng: [[tu-the]].
 `,

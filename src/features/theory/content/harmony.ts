@@ -8,6 +8,10 @@ export const harmony: Article[] = [
     aliases: ['hợp âm', 'chord', 'triad', 'hợp âm trưởng', 'hợp âm thứ', 'hợp âm giảm', 'hợp âm tăng'],
     summary: 'Ba nốt xếp chồng theo quãng 3: nốt gốc, nốt bậc 3 và nốt bậc 5.',
     wiki: 'Triad_(music)',
+    refs: [
+      ['Hear and Play — Six exercises on the major triad', 'https://www.hearandplay.com/main/here-are-six-exercises-on-the-major-triad-that-you-can-add-to-your-warm-up-routine'],
+      ['PianoGroove — Triads jazz piano lesson', 'https://www.pianogroove.com/?p=110'],
+    ],
     body: `
 Hợp âm ba được xây bằng cách chồng hai [[quang|quãng 3]] lên nốt gốc. Tính chất của hai quãng 3 quyết định loại hợp âm:
 | Loại | Cấu tạo (nửa cung) | Ví dụ | Ký hiệu |
@@ -28,6 +32,28 @@ Dựng hợp âm ba trên từng bậc của [[am-giai-truong]] (chỉ dùng n�
 | C | Dm | Em | F | G | Am | B° |
 
 Quy luật cho mọi giọng trưởng: **I, IV, V trưởng; ii, iii, vi thứ; vii° giảm**. Trong [[am-giai-thu|giọng thứ hoà âm]]: i, ii°, III⁺, iv, V, VI, vii°.
+
+## Bài tập: hợp âm ba ở cả 12 giọng
+Bảng dưới được suy ra trực tiếp từ công thức 4 + 3 nửa cung ở trên, nhóm theo **hình dạng phím trắng/đen** để dễ nhớ:
+| Hình dạng | Hợp âm trưởng |
+|---|---|
+| Ba phím trắng | C (C–E–G), F (F–A–C), G (G–B–D) |
+| Trắng – **đen** – trắng | D (D–F♯–A), E (E–G♯–B), A (A–C♯–E) |
+| **Đen** – trắng – **đen** | D♭ (D♭–F–A♭), E♭ (E♭–G–B♭), A♭ (A♭–C–E♭) |
+| Ba phím đen | G♭ (G♭–B♭–D♭) |
+| Trắng – đen – đen | B (B–D♯–F♯) |
+| Đen – trắng – trắng | B♭ (B♭–D–F) |
+
+::keyboard D4 F#4 A4 | D trưởng: nốt giữa là phím đen
+::keyboard Db4 F4 Ab4 | D♭ trưởng: hai nốt ngoài là phím đen
+
+Lộ trình tập (tổng hợp từ các bài hướng dẫn piano):
+1. **Vài giọng mỗi buổi**: bắt đầu 2–3 giọng, buổi sau chọn 3 giọng khác, đến khi đủ 12.
+2. **Đi theo [[vong-quang-nam]]**: chơi một hợp âm trưởng, lên quãng 5, chơi hợp âm tiếp theo, đến hết 12 giọng. Sau đó làm lại với hợp âm thứ.
+3. **Trưởng → thứ bằng một nốt**: hạ nốt bậc 3 xuống nửa cung (C → Cm), đi lần lượt lên theo nửa cung đến khi về C. Làm ngược lại: nâng bậc 3 để đổi thứ → trưởng.
+4. **Thêm thể đảo**: mỗi giọng chơi nguyên vị, đảo 1, đảo 2 — xem [[the-dao-hop-am]].
+5. **Xáo thứ tự giọng**, chơi cả hợp âm khối và rải, từng tay riêng. Giữ **tốc độ chậm** để mọi hợp âm đều đúng.
+6. Khi trưởng và thứ đã chắc, thêm hợp âm **giảm** và **nói to tính chất** (trưởng / thứ / giảm) khi chơi để luyện tai — xem [[luyen-tai]].
 
 Liên quan: [[the-dao-hop-am]], [[hop-am-bay]], [[ky-hieu-hop-am]], [[chuc-nang-hoa-am]]. Chồng quãng khác thay cho quãng 3: [[hoa-am-quang-bon]] (quãng 4), [[am-cum]] (quãng 2).
 `,
