@@ -206,4 +206,103 @@ Theo teoria.com, Träumerei là ví dụ của **[[hinh-thuc-am-nhac|hình thứ
 Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 68 (xem [[lo-trinh-tac-pham]]). Lưu ý: chi tiết số ô nhịp và các kết câu cần đối chiếu trên bản nhạc (ví dụ ấn bản miễn phí trên IMSLP).
 `,
   },
+  {
+    slug: 'phan-tich-rondo-alla-turca',
+    title: 'Phân tích: Rondo alla Turca',
+    category: 'analysis',
+    aliases: ['Rondo alla Turca', 'Hành khúc Thổ Nhĩ Kỳ', 'Turkish March', 'K. 331', 'Sonata K. 331', 'Alla turca'],
+    summary: 'Chương 3 Sonata La trưởng K. 331 của Mozart (khoảng 1783): một rondo mô phỏng âm thanh ban nhạc quân đội Janissary của Thổ Nhĩ Kỳ — "mốt" của Vienna thời đó.',
+    wiki: 'Piano_Sonata_No._11_(Mozart)',
+    refs: [
+      ['Wikipedia — Piano Sonata No. 11 (Mozart)', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._11_(Mozart)'],
+      ['Hoffman Academy — Rondo alla turca (form note)', 'https://hoffmanacademy.com/store/sheet-music/rondo-alla-turca-k-331-3rd-movement'],
+    ],
+    body: `
+## Tổng quan
+- Chương 3 (Alla turca – Allegretto) của **Sonata La trưởng K. 331** ([[Mozart]]). Cả ba chương đều ở **La trưởng hoặc La thứ** (cùng âm chủ — xem [[giong-song-song|giọng cùng tên]]).
+- Thời gian, địa điểm sáng tác **không chắc chắn**; khả năng cao nhất là Vienna hoặc Salzburg khoảng **1783**, Artaria xuất bản năm **1784**.
+
+## "Alla turca"
+Chương nhạc mô phỏng âm thanh của **ban nhạc Janissary** (quân đội Ottoman) — rất được ưa chuộng ở Vienna lúc bấy giờ. Một số đàn piano thời đó có **"Turkish stop"** — bộ phận tạo tiếng chuông, trống — và chương này đôi khi được biểu diễn trên những cây đàn như vậy (xem [[lich-su-piano]]). Trên piano hiện đại, tay trái mô phỏng tiếng trống bằng hợp âm nhấn, [[ky-hieu-nang-cao|hợp âm rải nhanh]] và quãng 8.
+
+## Hình thức
+Là một **[[rondo]]**, nhưng các phân tích **chia đoạn khác nhau**: một nghiên cứu ghi A – B – C – B – A – B′ – coda; một nguồn khác mô tả các đoạn hai phần có tái hiện ghép thành một cấu trúc ba đoạn lớn. Khi dạy, hãy cùng học trò đánh dấu các lần chủ đề trở lại trên bản nhạc.
+
+## Gợi ý khi dạy
+- Chủ đề mở đầu là chuỗi [[not-ngoai-hop-am|nốt thêu]] móc kép: luyện [[kiem-soat-toc-do|tăng tốc từng bậc]] và [[phuong-phap-luyen-tap|biến thể tiết tấu]].
+- Hợp âm rải nhanh ở tay trái: rải gọn từ dưới lên, không làm chậm phách.
+- Đoạn quãng 8 tay phải: xem [[ky-thuat-quang-tam]].
+
+Lưu ý: các nguồn tìm được không nêu rõ giọng của từng đoạn, nên bài không ghi chi tiết đó — hãy đối chiếu trên bản nhạc.
+`,
+  },
+  {
+    slug: 'phan-tich-clair-de-lune',
+    title: 'Phân tích: Clair de lune',
+    category: 'analysis',
+    aliases: ['Clair de lune', 'Ánh trăng Debussy', 'Suite bergamasque', 'Suite bergamasque Debussy'],
+    summary: 'Chương 3 của Suite bergamasque (Debussy): giọng Rê♭ trưởng, Debussy ghi năm sáng tác 1890 nhưng chỉ xuất bản năm 1905; tên gọi gắn với thơ Verlaine.',
+    wiki: 'Suite_bergamasque',
+    refs: [
+      ['College Music Symposium — Review of Bhogal, Claude Debussy\'s Clair de lune', 'https://symposium.music.org/volume-59-no-1/book-reviews-1752877061/claude-debussy-s-clair-de-lune-by-gurminder-kaur-bhogal'],
+      ['University of Kansas — dissertation on Suite bergamasque', 'https://kuscholarworks.ku.edu/entities/publication/b2f715bb-3983-442a-9052-9360e5691c33'],
+    ],
+    body: `
+## Tổng quan
+- Chương thứ 3 trong 4 chương của **Suite bergamasque** của [[Debussy]], giọng **Rê♭ trưởng** (5 dấu giáng — xem [[hoa-bieu]]).
+- Bộ tổ khúc được bắt đầu khoảng **1890**, hoàn chỉnh và xuất bản năm **1905**. Bản thảo gốc của Clair de lune đã mất; năm 1890 dựa trên lời của chính Debussy khi xuất bản.
+- Các chương khác — Prélude, Menuet, Passepied — là phiên bản hiện đại của các chương [[the-loai|tổ khúc Baroque]]; **Clair de lune là chương duy nhất có tên mô tả**.
+
+## Verlaine
+Tên bài gắn với bài thơ "Clair de lune" của **Paul Verlaine** — Debussy cũng phổ nhạc bài thơ này trong tập ca khúc *Fêtes galantes* đầu tiên (1890). Chương 3 của tổ khúc ban đầu dự định mang tên "Promenade sentimentale" — cũng là tên một bài thơ của Verlaine.
+
+## Ngôn ngữ âm nhạc
+Theo bản nhạc, bài viết ở nhịp **9/8** (ba phách lớn chia ba — [[so-chi-nhip|nhịp kép]]) và thường được mô tả là có **ba phần**. Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — hợp âm trượt song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
+
+## Gợi ý khi dạy
+- Đếm nhịp 9/8 cẩn thận, nhất là các chỗ nhóm 2 nốt ([[lien-ba|liên hai]]) chồng lên phách chia ba (xem [[da-nhip]]).
+- [[ban-dap|Pedal]] đổi theo hoà âm để giữ tiếng trong trẻo; có thể kết hợp pedal una corda ở các đoạn rất nhỏ.
+- Chơi rất nhỏ (pp) mà vẫn rõ — luyện [[lam-noi-giai-dieu]] ở mức cường độ thấp.
+
+Lưu ý: nhịp 9/8 và cấu trúc ba phần chưa được xác nhận qua các nguồn tìm được trong lần tra cứu này — hãy đối chiếu bản nhạc.
+`,
+  },
+  {
+    slug: 'phan-tich-canon-pachelbel',
+    title: 'Phân tích: Canon cung Rê của Pachelbel',
+    category: 'analysis',
+    aliases: ['Canon in D', 'Canon cung Rê', 'Pachelbel Canon', 'Canon Pachelbel'],
+    summary: 'Canon ba violin đồng âm trên một bè trầm lặp (ground bass), kèm một gigue; bị lãng quên gần 200 năm và trở nên nổi tiếng sau bản thu của Jean-François Paillard năm 1968.',
+    wiki: 'Pachelbel%27s_Canon',
+    refs: [
+      ['Wikipedia — Pachelbel\'s Canon', 'https://en.wikipedia.org/wiki/Pachelbel%27s_Canon'],
+      ['University of Richmond — Arachnophonia: Pachelbel\'s Canon in D', 'https://create.richmond.edu/parsons/?p=5020'],
+    ],
+    body: `
+## Cấu trúc
+- Viết cho **ba violin và [[bass-so|basso continuo]]**, đi kèm một gigue.
+- Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một giai điệu, lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** (basso ostinato / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
+
+## Bè trầm và vòng hợp âm
+Bè trầm 8 nốt lặp lại tạo nên vòng hợp âm nổi tiếng **D – A – Bm – F♯m – G – D – G – A** (trong Đô trưởng: C – G – Am – Em – F – C – F – G), dùng trong vô số bài hát — xem [[vong-hop-am]] và [[mo-tien-hoa-am|mô tiến đi xuống 5–6]].
+
+::keyboard D4 F#4 A4 | Hợp âm chủ Rê trưởng — hoá biểu 2 dấu thăng (F♯, C♯)
+
+## Lịch sử
+| Mốc | Sự kiện |
+|---|---|
+| 1680–1706? | Thời điểm sáng tác **không rõ** |
+| 1838–1842 | Bản chép tay cổ nhất còn lại |
+| 1919 | Gustav Beckmann công bố bản tổng phổ trong một bài nghiên cứu về nhạc thính phòng của Pachelbel |
+| 1929 | Max Seiffert xuất bản một bản chuyển soạn |
+| 1940 | Bản thu của Boston Pops (Arthur Fiedler) — có thể là bản thu đầu tiên, ít được chú ý |
+| 1968 | Bản thu của dàn nhạc thính phòng **Jean-François Paillard**: chậm hơn, phong cách Lãng mạn, thêm các bè tự viết — thay đổi số phận bài nhạc |
+
+Từ thập niên 1970, Canon được thu âm bởi rất nhiều nhóm nhạc. Xem [[Pachelbel]].
+
+## Gợi ý khi dạy
+- Tay trái chơi bè trầm 8 nốt, tay phải lần lượt các biến thể — bài tập tốt về [[dem-hat-piano|đệm]] và [[the-dao-hop-am|thể đảo]].
+- Dùng vòng hợp âm này để tập [[ngau-hung-piano|ngẫu hứng]] trên âm giai Rê trưởng.
+`,
+  },
 ]

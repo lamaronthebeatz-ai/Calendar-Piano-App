@@ -28,7 +28,7 @@ Các nội dung này chính là phần **thi nghe** trong các kỳ thi piano (x
 - Nhận ra [[cau-ket|kết]] (trọn, nửa, lừa) và [[so-chi-nhip|nhịp 2, 3, 4]].
 - Vỗ lại tiết tấu; hát lại giai điệu; nhận biết giai điệu đi lên hay đi xuống.
 
-Hát bằng [[xuong-am|xướng âm]] là công cụ luyện tai truyền thống.
+Hát bằng [[xuong-am|xướng âm]] là công cụ luyện tai truyền thống. Luyện nghe tác phẩm trọn vẹn: [[nghe-nhac-chu-dong]].
 `,
   },
   {

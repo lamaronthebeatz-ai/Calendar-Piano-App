@@ -153,7 +153,7 @@ Khi gõ một phím đàn, dây đàn rung cả chiều dài **và** từng ph�
 | 5 | 5f | E4 — 2 quãng 8 + 3 trưởng |
 | 6 | 6f | G4 |
 
-Các bồi âm 4–5–6 tạo thành [[hop-am-ba|hợp âm trưởng]] C–E–G — một lý do hợp âm trưởng nghe "tự nhiên". Tỉ lệ tần số càng đơn giản (2:1, 3:2) thì quãng càng [[thuan-nghich|thuận]].
+Kiến thức nền về tần số, dB, phạm vi nghe: [[am-hoc-co-ban]]. Các bồi âm 4–5–6 tạo thành [[hop-am-ba|hợp âm trưởng]] C–E–G — một lý do hợp âm trưởng nghe "tự nhiên". Tỉ lệ tần số càng đơn giản (2:1, 3:2) thì quãng càng [[thuan-nghich|thuận]].
 
 ## Âm sắc
 Cường độ tương đối của các bồi âm quyết định **âm sắc** — lý do piano và violin chơi cùng nốt nhưng nghe khác nhau.
@@ -163,7 +163,7 @@ Cường độ tương đối của các bồi âm quyết định **âm sắc**
     slug: 'luat-binh-quan',
     title: 'Luật bình quân',
     category: 'pitch',
-    aliases: ['bình quân 12', 'equal temperament', 'A440', 'La 440', 'cao độ chuẩn', 'lên dây', 'tần số'],
+    aliases: ['bình quân 12', 'equal temperament', 'A440', 'La 440', 'cao độ chuẩn', 'lên dây'],
     summary: 'Hệ thống lên dây chia quãng 8 thành 12 nửa cung bằng nhau; chuẩn hiện đại lấy A4 = 440 Hz.',
     wiki: 'Equal_temperament',
     body: `

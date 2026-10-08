@@ -220,7 +220,7 @@ Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]], [[mo-tien-
 | **Kết chính không trọn** | V → I nhưng có thể đảo hoặc giai điệu không ở chủ âm | Kết nhưng còn mở | Dấu chấm phẩy |
 | **Kết nửa** | … → V | Dừng lửng, chờ tiếp | Dấu phẩy, dấu hỏi |
 | **Kết plagal (Amen)** | IV → I | Nhẹ nhàng, trang trọng | "A-men" cuối thánh ca |
-| **Kết lừa** | V → vi | Bất ngờ, kéo dài câu nhạc | Câu chưa xong |
+| **Kết lừa** | V → vi | Bất ngờ, kéo dài câu nhạc — làm trái [[cam-xuc-am-nhac|kỳ vọng]] của người nghe | Câu chưa xong |
 
 ::staff treble B3+D4+G4 C4+E4+G4 | Kết chính V → I (G → C)
 ::staff treble B3+D4+G4 C4+E4+A4 | Kết lừa V → vi (G → Am)
