@@ -464,6 +464,7 @@ Thu âm cho phép nghe cách các thế hệ nghệ sĩ chơi cùng một tác p
     slug: 'so-sanh-ban-thu',
     title: 'So sánh bản thu',
     category: 'listening',
+    also: ['analysis'],
     aliases: ['so sánh bản thu', 'phân tích biểu diễn', 'performance analysis', 'CHARM', 'Mazurka Project', 'Sonic Visualiser', 'nghe nhiều bản thu', 'đường cong nhịp độ', 'tempo map'],
     summary: 'Nghe và phân tích nhiều bản thu của cùng một tác phẩm: so sánh nhịp độ, rubato, cường độ, pedal. Dự án CHARM (Chopin Mazurka) cho thấy có thể đo các khác biệt này và lần ra "phả hệ" phong cách giữa thầy và trò.',
     refs: [

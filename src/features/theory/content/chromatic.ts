@@ -365,6 +365,7 @@ Trong nhạc Baroque (Bach, Handel, Corelli), người chơi harpsichord/organ �
     slug: 'phan-tich-schenker',
     title: 'Phân tích Schenker',
     category: 'chromatic',
+    also: ['analysis'],
     aliases: ['Schenker', 'Schenkerian analysis', 'Ursatz', 'Urlinie', 'cấu trúc nền', 'kéo dài', 'prolongation'],
     summary: 'Phương pháp phân tích cho thấy cả tác phẩm có tính điệu là sự "kéo dài" của một cấu trúc nền đơn giản: giai điệu đi xuống về chủ âm trên bè trầm I – V – I.',
     wiki: 'Schenkerian_analysis',
