@@ -246,7 +246,7 @@ Khoảng BPM chỉ mang tính tham khảo; người biểu diễn quyết địn
 | rallentando | rall. | Chậm dần |
 | accelerando | accel. | Nhanh dần |
 | a tempo | | Trở lại nhịp độ ban đầu |
-| rubato | | Co giãn nhịp tự do để biểu cảm |
+| [[rubato]] | | Co giãn nhịp tự do để biểu cảm |
 | fermata | 𝄐 | Ngân dài tuỳ ý (xem [[cach-dien-tau]]) |
 
 Thuật ngữ về tính chất (dolce, cantabile…): xem [[thuat-ngu]].
@@ -266,7 +266,7 @@ Thuật ngữ về tính chất (dolce, cantabile…): xem [[thuat-ngu]].
 Op. 106 là sonata piano **duy nhất** của Beethoven có số metronome. Chương 1 ghi **nốt trắng = 138** — nhanh đến mức Moscheles, trong bản in của mình, đã đổi thành nốt đen = 138. Nhiều học giả và người chơi cho rằng nốt trắng = 138 là ý của Beethoven, nhưng phần lớn chơi chậm hơn. Các số metronome của Beethoven nói chung bị coi là **quá nhanh**; có giả thuyết cho rằng máy của ông bị hỏng, có giả thuyết khác cho rằng chúng khớp với bảng tốc độ do chính Maelzel đề xuất.
 
 ## Rubato
-**Tempo rubato** ("thời gian bị đánh cắp") là sự co giãn nhịp độ để biểu cảm. Cách hiểu thay đổi theo thời kỳ — ở thời Mozart và Chopin, phần đệm thường được giữ đều trong khi giai điệu tự do (xem [[phong-cach-dien-tau]]). Nghiên cứu về cách người biểu diễn uốn nhịp theo câu: [[dien-dat-cau-nhac]]. Cách tập với máy đếm nhịp: [[kiem-soat-toc-do]].
+**Tempo rubato** ("thời gian bị đánh cắp") là sự co giãn nhịp độ để biểu cảm. Cách hiểu thay đổi theo thời kỳ — ở thời Mozart và Chopin, phần đệm thường được giữ đều trong khi giai điệu tự do (xem [[phong-cach-dien-tau]]). Bài đầy đủ: [[rubato]]. Nghiên cứu về cách người biểu diễn uốn nhịp theo câu: [[dien-dat-cau-nhac]]. Cách tập với máy đếm nhịp: [[kiem-soat-toc-do]].
 `,
   },
   {

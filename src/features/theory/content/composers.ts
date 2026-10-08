@@ -72,7 +72,7 @@ const PERIODS = [
     slug: 'thoi-ky-lang-man',
     title: 'Thời kỳ Lãng mạn',
     years: '~1820–1910',
-    intro: `Cảm xúc cá nhân và kịch tính lên ngôi. [[hoa-am-cromatic|Hoà âm cromatic]], [[trung-am-cromatic]], [[nhip-do|rubato]]; dàn nhạc mở rộng; tiểu phẩm piano (nocturne, ballade, étude — xem [[the-loai]]). Cuối thế kỷ 19, các trường phái **dân tộc** đưa dân ca và [[dieu-thuc|điệu thức]] của quê hương vào âm nhạc.`,
+    intro: `Cảm xúc cá nhân và kịch tính lên ngôi. [[hoa-am-cromatic|Hoà âm cromatic]], [[trung-am-cromatic]], [[rubato]]; dàn nhạc mở rộng; tiểu phẩm piano (nocturne, ballade, étude — xem [[the-loai]]). Cuối thế kỷ 19, các trường phái **dân tộc** đưa dân ca và [[dieu-thuc|điệu thức]] của quê hương vào âm nhạc.`,
     groups: [
       ['early', 'Lãng mạn sớm và trung kỳ'],
       ['opera', 'Opera và operetta'],

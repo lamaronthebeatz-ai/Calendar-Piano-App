@@ -745,7 +745,7 @@ Liên hệ phương pháp: vì sự khác biệt chủ yếu nằm ở hoa mỹ 
 
 ## Gợi ý khi dạy
 - Giai điệu tay phải phải **hát**: dùng trọng lượng cánh tay, tay trái thật nhẹ ([[lam-noi-giai-dieu]]).
-- Chuỗi nốt hoa mỹ: phân nhóm theo phách tay trái trước, rồi mới thả tự do theo [[nhip-do|rubato]] ([[dien-dat-cau-nhac]]).
+- Chuỗi nốt hoa mỹ: phân nhóm theo phách tay trái trước, rồi mới thả tự do theo [[rubato]] ([[dien-dat-cau-nhac]]).
 - [[ban-dap|Pedal]] đổi theo từng nốt trầm của tay trái.
 
 Phân tích Schenker về bài này (Schachter & Siegel) chỉ ra nhiều điểm "khó hiểu" trong cách phân bố trọng tâm cấu trúc — xem [[phan-tich-schenker]].

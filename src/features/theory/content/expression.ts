@@ -203,7 +203,7 @@ Cách chơi láy rền: [[ky-thuat-lay-ren]].
 ## Theo phong cách
 - **Baroque** (Bach, Handel): hoa mỹ rất nhiều, người chơi được phép tự thêm.
 - **Cổ điển** (Mozart, Haydn): rõ ràng, thanh lịch.
-- **Lãng mạn** (Chopin): hoa mỹ được viết ra thành chuỗi nốt nhỏ dài, chơi tự do ([[nhip-do|rubato]]).
+- **Lãng mạn** (Chopin): hoa mỹ được viết ra thành chuỗi nốt nhỏ dài, chơi tự do ([[rubato]]).
 
 Về bản chất, hoa mỹ là các [[not-ngoai-hop-am]] (nốt thêu, nốt dựa) được viết tắt. Phong cách từng thời kỳ: [[cac-thoi-ky]].
 `,
@@ -501,6 +501,83 @@ Mỗi thuật ngữ tiếng Việt là một liên kết tới bài giải thíc
 | Sight-reading | [[thi-tau|Thị tấu]] | — |
 | Phrasing | [[dien-dat-cau-nhac|Diễn đạt câu nhạc]] | — |
 | With expression / Sweetly / Singing | [[thuat-ngu|Biểu cảm / Ngọt ngào / Như hát]] | espressivo / dolce / cantabile |
+`,
+  },
+  {
+    slug: 'rubato',
+    title: 'Rubato',
+    category: 'expression',
+    also: ['rhythm', 'technique'],
+    aliases: ['tempo rubato', 'rubato', 'thời gian bị đánh cắp', 'stolen time', 'co giãn nhịp độ', 'thời gian biểu cảm', 'agogic', 'trọng âm trường độ', 'ritardando cuối bài', 'vòm câu nhạc'],
+    summary: 'Sự co giãn thời gian có chủ ý khi biểu diễn. Có hai loại: rubato kiểu cũ (giai điệu xê dịch trên phần đệm đều — Mozart, Chopin) và rubato kiểu mới (cả nhịp độ co giãn). Lịch sử, nghiên cứu đo đạc bản thu và cách dạy.',
+    wiki: 'Tempo_rubato',
+    refs: [
+      ['Hudson — Stolen Time: The History of Tempo Rubato (Oxford, Clarendon Press, 1994)', 'https://academic.oup.com/book/49267'],
+      ['Hudson — Stolen Time, chapter on violin and keyboard sources', 'https://academic.oup.com/book/49267/chapter/422339966'],
+      ['Wikipedia — Tempo rubato', 'https://en.wikipedia.org/wiki/Tempo_rubato'],
+      ['Mozart — letter from Augsburg, October 1777 (German text, Projekt Gutenberg)', 'https://projekt-gutenberg.org/authors/wolfgang-amadeus-mozart/books/mozarts-briefe/chapter/27'],
+      ['Research Catalogue — Ingredients that make the performance more flexible in early recordings (Leopold Mozart, C. P. E. Bach)', 'https://researchcatalogue.net/view/2388267/2587890'],
+      ['Lawrence-King — Looking for a good time? (Tosi and rubamento di tempo)', 'https://andrewlawrenceking.com/category/history-of-emotions/moving-the-passions/page/2/'],
+      ['Repp (1992), JASA — Diversity and commonality in music performance: Träumerei (abstract)', 'https://labs.sonicfield.org/library/diversity-and-commonality-in-music-performance-an-analysis-of-timing-microstruct'],
+      ['Todd (1985), Music Perception — A model of expressive timing in tonal music (PDF)', 'https://www.continuum-hypothesis.com/music/todd.pdf'],
+      ['Demos, Lisboa & Chaffin (2016), Frontiers in Psychology — Flexibility of expressive timing in repeated musical performances', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5047881/'],
+      ['Friberg & Sundberg (1999), JASA — Does music performance allude to locomotion? (PDF)', 'https://continuum-hypothesis.com/music/Does_music_performance_allude_to_locomotion_A_mode.pdf'],
+      ['Honing (2004) — on kinematic models of the final ritard', 'https://mcg.uva.nl/mcg-2023/abstracts/honing-2004a.html'],
+      ["Rothstein (2005), Music Theory Online — Like falling off a log: rubato in Chopin's Prelude in A-flat major", 'https://www.mtosmt.org/issues/mto.05.11.1/mto.05.11.1.rothstein_essay.html'],
+      ['Philip — Early Recordings and Musical Style, 1900–1950 (Cambridge, 1992), catalogue record', 'https://cageweb.be/catalog/orp01:000015042'],
+    ],
+    body: `
+**Tempo rubato** (tiếng Ý: "thời gian bị đánh cắp") là sự **co giãn thời gian có chủ ý** khi biểu diễn: kéo dài chỗ này, rút ngắn chỗ kia so với nhịp đều. Rubato không phải là "chơi tự do theo cảm hứng" mà là một kỹ năng có lịch sử, có quy luật và có thể đo đạc.
+
+## Hai loại rubato
+Nhà âm nhạc học **Richard Hudson** (*Stolen Time: The History of Tempo Rubato*, Oxford, 1994) phân biệt:
+| | Rubato kiểu cũ | Rubato kiểu mới |
+|---|---|---|
+| Cái gì co giãn? | Chỉ **giai điệu**: các nốt được kéo, đẩy so với phách | **Toàn bộ** nhịp độ: cả giai điệu lẫn phần đệm |
+| Phần đệm | Giữ **nhịp đều** | Co giãn theo |
+| Thời kỳ tiêu biểu | Thế kỷ 17–18, còn trong Chopin | Thế kỷ 19 đến nay |
+| Hình ảnh | Giai điệu "trôi" trên một nền nhịp vững | Cả câu nhạc "thở" nhanh – chậm |
+Khi bàn về "rubato đúng phong cách", cần nói rõ đang nói về loại nào.
+
+## Lịch sử
+- **Thanh nhạc**: theo Hudson, thực hành này có trong ca hát từ lâu trước khi có tên. Khảo luận về ca hát của **Pier Francesco Tosi** (*Opinioni de' cantori antichi*, 1723) thường được coi là nơi sớm nhất nói tới việc "đánh cắp thời gian" (*rubamento di tempo*) — người hát xê dịch nốt giai điệu trong khi bè trầm giữ nhịp.
+- **Đàn phím**: Quantz nhắc đến tempo rubato với người đệm đàn phím năm 1752; Marpurg đưa nó vào sách dạy đàn phím năm 1755–1756.
+- **Leopold Mozart** cho rằng nghệ sĩ độc tấu thật sự được uốn giai điệu tự do, còn người đệm phải giữ nhịp đều và **không bị kéo theo**.
+- **W. A. Mozart**, trong thư gửi cha từ Augsburg (tháng 10/1777), kể rằng người nghe ở đó ngạc nhiên vì ông **luôn giữ đúng nhịp**; họ không hiểu được rằng trong một Adagio có tempo rubato, **tay trái vẫn đi đều**, trong khi ở Augsburg tay trái cứ chạy theo giai điệu. Đây là mô tả rõ nhất của rubato kiểu cũ trên đàn phím. Theo Hudson, Haydn, Mozart và Beethoven đều **không viết chữ "rubato"** trong bản nhạc.
+- **Chopin**: các học trò kể ông yêu cầu tay trái (phần đệm) **giữ nhịp chặt chẽ**, còn giai điệu được tự do co giãn (Georges Mathias, 1882, thuật lại lời bà Camille Dubois). Câu nói "tay trái là người chỉ huy" và hình ảnh của Liszt về **gió lay lá trên một thân cây đứng vững** được lưu truyền rộng rãi nhưng chỉ qua nguồn thứ cấp — có thể dùng để minh hoạ, không nên trích như lời nguyên văn (xem [[Chopin]]).
+- **Thế kỷ 19–20**: rubato kiểu mới — co giãn toàn bộ nhịp độ — trở thành phổ biến. Nghiên cứu bản thu đầu thế kỷ 20 (Robert Philip, *Early Recordings and Musical Style*, 1992) cho thấy cách co giãn nhịp độ và xử lý tiết tấu là một trong những lĩnh vực **thay đổi nhiều nhất** trong phong cách biểu diễn giai đoạn 1900–1950 (xem [[lich-su-thu-am]], [[phong-cach-dien-tau]]).
+
+## Rubato đo được: nghiên cứu khoa học
+**Repp (1992) — 28 bản thu Träumerei.** Bruno Repp đo khoảng cách giữa các nốt trong 28 bản thu [[phan-tich-traumerei|Träumerei]] của Schumann:
+- Nhịp độ **chậm lại rõ rệt ở cuối các phần lớn**, và các nốt nhấn trong những cử chỉ giai điệu thường được **kéo dài**.
+- Ở tầng **lớn** (theo cấu trúc phần, câu), các nghệ sĩ **giống nhau**; khác biệt cá nhân nằm chủ yếu ở các đoạn **ngắn**. Nhạc càng nhiều ranh giới cấu trúc thì đường cong nhịp độ của các nghệ sĩ càng giống nhau.
+- Hình dạng thời gian phổ biến nhất của một cử chỉ giai điệu lặp lại là **hình parabol** (chậm – nhanh – chậm).
+
+**Hình vòm câu nhạc.** Mô hình của Neil Todd (1985) suy ra cách co giãn nhịp độ từ **cấu trúc nhóm** của âm nhạc: **chậm ở ranh giới câu, nhanh hơn ở giữa câu**. Một nghiên cứu năm 2016 (Demos, Lisboa và Chaffin) cũng thấy nhịp độ **chậm và kém ổn định ở đầu và cuối câu**, nhanh và ổn định hơn ở giữa (xem [[cau-nhac]], [[sieu-nhip]]).
+
+**Chậm lại cuối bài.** Friberg và Sundberg (1999) so sánh **ritardando cuối bài** với cách người chạy (vũ công chuyên nghiệp) **dừng lại**: vận tốc trung bình khi dừng chạy khớp tốt với nhịp độ trung bình trong các ritardando cuối bài. Các mô hình "động học" này có giới hạn — chúng bỏ qua số nốt và cấu trúc tiết tấu (Honing, 2004).
+
+**Rubato và phân tích.** William Rothstein (*Music Theory Online*, 2005), phân tích rubato trong Prelude Op. 28 số 17 của Chopin, cho rằng một cách tiếp cận **có ý thức** với rubato là điều thiết yếu khi dạy "phân tích cho người biểu diễn" (xem [[phan-tich-va-bieu-dien]]).
+
+## Bốn dạng rubato thường gặp
+Tổng hợp từ các nghiên cứu trên:
+| Dạng | Mô tả | Liên hệ |
+|---|---|---|
+| **Vòm câu nhạc** | Nhanh dần tới giữa câu, chậm lại ở cuối câu | Todd; [[dien-dat-cau-nhac]] |
+| **Kéo dài nốt nhấn** (agogic) | Kéo dài nhẹ một nốt quan trọng thay vì đánh to hơn | Repp |
+| **Chậm cuối phần, cuối bài** | Ritardando ở ranh giới cấu trúc lớn | Repp; Friberg – Sundberg |
+| **Giai điệu tự do trên đệm đều** | Rubato kiểu cũ | Mozart, Chopin |
+
+## Gợi ý dạy học
+Các gợi ý sau là kinh nghiệm sư phạm, dựa trên các nguyên tắc ở trên:
+1. **Chơi đúng nhịp trước** (có máy đếm nhịp): rubato chỉ có nghĩa khi người chơi có một nhịp gốc vững để "vay" và "trả".
+2. **Tìm cấu trúc**: đánh dấu câu nhạc, đỉnh câu, các kết — rubato đi theo cấu trúc (xem [[phuong-phap-phan-tich-tac-pham]]).
+3. **Luyện rubato kiểu cũ**: tay trái giữ nhịp đều với máy đếm nhịp, tay phải hát giai điệu xê dịch nhẹ quanh phách.
+4. **So sánh bản thu**: nghe 2–3 nghệ sĩ chơi cùng đoạn và đánh dấu chỗ họ chậm lại (xem [[so-sanh-ban-thu]]).
+5. **Tự thu âm và nghe lại**: rubato người chơi cảm thấy thường khác với rubato người nghe nghe thấy.
+6. **Tránh công thức**: chậm lại ở **mọi** cuối câu như nhau làm bản nhạc rời rạc; mức độ nên phụ thuộc vào tầm quan trọng của ranh giới.
+
+Liên quan: [[nhip-do]], [[ky-vong-am-nhac]], [[phan-tich-nocturne-op9-so2]], [[phong-cach-dien-tau]].
 `,
   },
   {

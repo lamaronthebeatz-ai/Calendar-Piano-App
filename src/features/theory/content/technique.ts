@@ -314,7 +314,7 @@ Phần này tổng hợp từ các bài khác trong thư viện — chúng là n
 ## Kết hợp chậm và nhanh
 Không phải nguồn nào cũng chỉ khuyên "chậm rồi nhanh dần": một số giáo viên cho rằng hiệu quả nhất là **kết hợp** tập chậm với những lần thử ở tốc độ cao hơn mục tiêu, rồi quay về. Xem thêm [[phuong-phap-luyen-tap]].
 
-Khi đã vững nhịp, sự co giãn có chủ đích ([[nhip-do|rubato]]) mới thực sự có ý nghĩa — xem [[dien-dat-cau-nhac]].
+Khi đã vững nhịp, sự co giãn có chủ đích ([[rubato]]) mới thực sự có ý nghĩa — xem [[dien-dat-cau-nhac]].
 `,
   },
   {

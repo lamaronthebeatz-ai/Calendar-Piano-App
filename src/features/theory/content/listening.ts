@@ -311,7 +311,7 @@ Một ý quan trọng: **đoán đúng tự nó đã là niềm vui** — vì th
 Nghiên cứu của Salimpoor và cộng sự (2011) thấy dopamine được giải phóng cả **trong lúc chờ đợi** khoảnh khắc đỉnh của bản nhạc yêu thích, không chỉ lúc đỉnh tới — phù hợp với vai trò của sự chờ đợi (xem [[cam-xuc-am-nhac]]).
 
 ## Ý nghĩa khi biểu diễn
-Người chơi quyết định **người nghe cảm nhận kỳ vọng mạnh đến đâu**: ngân dài hợp âm át, chậm lại trước kết, nhấn hợp âm của kết lừa (xem [[dien-dat-cau-nhac]], [[nhip-do|rubato]]).
+Người chơi quyết định **người nghe cảm nhận kỳ vọng mạnh đến đâu**: ngân dài hợp âm át, chậm lại trước kết, nhấn hợp âm của kết lừa (xem [[dien-dat-cau-nhac]], [[rubato]]).
 `,
   },
   {
@@ -487,7 +487,7 @@ Bản nhạc không ghi hết mọi thứ: nhịp độ chính xác, độ co gi
 | Khía cạnh | Câu hỏi khi nghe |
 |---|---|
 | **Nhịp độ chung** | Nhanh hay chậm? Có khác nhiều so với chỉ dẫn [[nhip-do]]? |
-| **Co giãn** | Chậm lại ở đâu: cuối câu, đỉnh câu, hợp âm lạ? ([[nhip-do|rubato]]) |
+| **Co giãn** | Chậm lại ở đâu: cuối câu, đỉnh câu, hợp âm lạ? ([[rubato]]) |
 | **Cường độ** | Đỉnh lớn nhất ở đâu? Tương phản rộng hay hẹp? ([[cuong-do]]) |
 | **Cân bằng bè** | Bè nào được làm nổi? ([[lam-noi-giai-dieu]]) |
 | **Cách diễn tấu, pedal** | Liền hay tách? Âm thanh "khô" hay "ướt"? ([[cach-dien-tau]], [[ban-dap]]) |
