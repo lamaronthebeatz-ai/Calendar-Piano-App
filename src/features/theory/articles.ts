@@ -29,7 +29,7 @@ export const CATEGORIES = {
   basics: { title: 'Ký âm cơ bản', hue: 220, description: 'Nốt, khuông nhạc, khoá, bàn phím và dấu hoá — đọc được bản nhạc.' },
   rhythm: { title: 'Nhịp & tiết tấu', hue: 25, description: 'Trường độ, phách, nhịp và nhịp độ: lịch sử ký âm, cảm nhận phách, đảo phách, nhịp lẻ và đa nhịp.' },
   pitch: { title: 'Cao độ & quãng', hue: 285, description: 'Khoảng cách giữa các nốt và cơ sở âm học của chúng.' },
-  scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu và quan hệ giữa các giọng.' },
+  scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu, vòng quãng 5 và quan hệ giữa các giọng — kèm lịch sử và nghiên cứu về cảm nhận giọng.' },
   harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hợp âm, chức năng, vòng hợp âm, kết và chuyển giọng.' },
   chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Nâng cao: Napoli, hợp âm 6 tăng, 7 giảm, mô tiến, bass số, Schenker, Neo-Riemann.' },
   form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Từ motif, câu nhạc đến cấu trúc của cả tác phẩm.' },
