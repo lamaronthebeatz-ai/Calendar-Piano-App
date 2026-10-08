@@ -559,4 +559,81 @@ Nốt lặp **rất nhanh** gần như không thể chơi bằng một ngón. Ng
 Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm không cần liền tiếng, dùng cùng một ngón vẫn cho kết quả tốt. Lưu ý: nội dung bài chủ yếu từ một giáo viên (Robert Estrin) và tạp chí Pianist.
 `,
   },
+  {
+    slug: 'dem-hat-piano',
+    title: 'Đệm hát và các kiểu đệm',
+    category: 'technique',
+    aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'comping', 'kiểu đệm', 'Alberti bass', 'stride piano', 'stride', 'đệm valse', 'chơi theo hợp âm'],
+    summary: 'Các kiểu đệm cơ bản: hợp âm khối, hợp âm rải, bass Alberti, đệm valse, đệm pop, stride — và cách tập đệm từ bản nhạc chỉ có giai điệu và ký hiệu hợp âm.',
+    refs: [
+      ['Musicnotes — 7 ways to play lead sheets with your left hand', 'https://www.musicnotes.com/blog/7-ways-to-play-lead-sheets-with-your-left-hand'],
+      ['Soundfly — 3 common broken chord patterns', 'https://flypaper.soundfly.com/tips/broken-chord-patterns-theory-inspire-beginner-pianists/'],
+      ['Skoove — Piano accompaniment', 'https://skoove.com/blog/piano-accompaniment'],
+      ['Wikipedia — Stride (music)', 'https://en.wikipedia.org/wiki/Stride_(music)'],
+      ['MasterClass — Stride piano guide', 'https://www.masterclass.com/articles/stride-piano-guide'],
+    ],
+    body: `
+## Các kiểu đệm
+| Kiểu | Cách chơi | Hợp với |
+|---|---|---|
+| **Hợp âm khối** | Đánh cả hợp âm cùng lúc | Kiểu cơ bản nhất, mọi thể loại |
+| **Hợp âm rải** | Đánh lần lượt từng nốt của hợp âm | Ballad, nhạc trữ tình |
+| **Bass Alberti** | Thấp – cao – giữa – cao (C–G–E–G) | Nhịp 4/4, móc đơn hoặc nốt đen; đặc trưng thời Cổ điển nhưng dùng được ở nhiều phong cách |
+| **Đệm valse** | Nốt trầm một mình, rồi hai nốt trên hai lần (trầm – hợp âm – hợp âm) | Nhịp 3/4 |
+| **Đệm "pop"** | Đung đưa giữa nốt dưới và các nốt trên của hợp âm | Pop, ballad |
+| **Stride** | Nốt bass ở phách 1 và 3, hợp âm ở phách 2 và 4 — tay trái nhảy xa liên tục | Ragtime, jazz Harlem |
+
+::keyboard C3 E3 G3 | Hợp âm C để luyện các kiểu đệm: thử khối, rải, Alberti (C–G–E–G)
+
+Các kiểu này chính là các dạng [[ket-cau|kết cấu chủ điệu]]. Đệm Alberti và stride là bài tập tốt cho [[buoc-nhay-xa]] và [[dan-giong]].
+
+## Stride
+Phong cách jazz bắt nguồn từ ragtime. Nốt bass thường là nốt gốc hoặc nốt 5, có thể chơi đơn, quãng 8 hoặc quãng 10; hợp âm ở phách 2 và 4 thường gọn 2–3 nốt (thường gốc, 3, 7 — xem [[xep-hop-am|shell voicing]]). Tay trái nhảy liên tục giúp tay phải tự do chơi giai điệu và ngẫu hứng. James P. Johnson được coi là "cha đẻ" của stride; học trò ông, Fats Waller, đưa stride đến với công chúng (xem [[nghe-si-piano-jazz]]).
+
+## Đệm từ bản nhạc hợp âm (lead sheet)
+Bản lead sheet chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay trái được khuyên:
+1. Chơi **một nốt** — nốt gốc của hợp âm.
+2. Chơi **quãng 8**.
+3. Chơi **cả hợp âm**, rồi chuyển sang các kiểu đệm ở bảng trên.
+
+Ghi nhớ trước vài hợp âm hay gặp trong bài và luyện chuyển qua lại giữa chúng (xem [[vong-hop-am]], [[the-dao-hop-am]]).
+
+## Tay trái theo thể loại
+Trong jazz, blues và nhạc cổ điển, tay trái thường giữ nhịp đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
+`,
+  },
+  {
+    slug: 'ngau-hung-piano',
+    title: 'Ngẫu hứng cơ bản',
+    category: 'technique',
+    aliases: ['ngẫu hứng', 'improvisation', 'improvise', 'tự chơi', 'hỏi – đáp', 'call and response', 'chơi ngẫu hứng'],
+    summary: 'Bắt đầu với âm giai ngũ cung trên một vòng hợp âm lặp lại, luyện theo lối hỏi – đáp, mở rộng dần âm vực rồi mới nhắm vào nốt của hợp âm.',
+    refs: [
+      ['Music Mark — A Common Approach: keyboard improvisation (UK curriculum)', 'https://www.musicmark.org.uk/a-common-approach/keyboard/area-c/pos-2/c1/'],
+      ['Skillshare — Piano improvisation for beginners', 'https://www.skillshare.com/en/classes/piano-improvisation-for-beginners/228353354'],
+    ],
+    body: `
+Một lộ trình được chương trình giáo dục âm nhạc ở Anh và các khoá học cho người mới gợi ý, từ đơn giản đến nâng cao:
+
+## 1. Vòng hợp âm lặp lại
+Một người (giáo viên hoặc đệm tự động) chơi một [[vong-hop-am]] 8 ô nhịp lặp lại, sau đó mở rộng lên [[blues-12-nhip|12 ô nhịp]]. Người học **đếm nhịp cẩn thận**, theo kịp chỗ đổi hợp âm, và cho đoạn ngẫu hứng một **mở đầu và kết thúc rõ ràng**.
+
+## 2. Năm nốt ngũ cung
+[[am-giai-ngu-cung|Âm giai ngũ cung]] chỉ có 5 nốt, không có nửa cung nên rất "dễ nghe". Ngũ cung **thứ** thường nằm vừa tay hơn ngũ cung trưởng. Ví dụ: **Mi thứ ngũ cung (E – G – A – B – D)** trên các hợp âm Em, A7, C, Am, B7.
+
+::keyboard E4 G4 A4 B4 D5 | Mi thứ ngũ cung — năm nốt để bắt đầu ngẫu hứng
+
+Một khoá học cho người mới bắt đầu ngay trên **5 phím đen** (cũng là một âm giai ngũ cung) rồi mới chuyển sang phím trắng.
+
+## 3. Hỏi – đáp
+Bài tập cốt lõi: một câu "**hỏi**" bằng giai điệu, rồi một câu "**đáp**" bổ sung — như một cuộc trò chuyện (giống câu hỏi – câu trả lời trong [[cau-nhac]]). Giáo viên chơi câu hỏi, học trò đáp; sau đó đổi vai. Dần dần yêu cầu chính xác hơn về tiết tấu, [[cuong-do]] và [[cach-dien-tau]].
+
+## 4. Mở rộng
+- Trải âm giai ngũ cung ra **hai quãng 8** trở lên.
+- Thử [[am-giai-blues]] và [[dieu-thuc|điệu thức]].
+- Nhắm vào **nốt của hợp âm** đang vang ở phách mạnh; dùng âm giai trưởng trên hợp âm I, Lydian trên IV, Mixolydian trên V (xem [[he-thong-hop-am-am-giai]]).
+
+Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng tác những đoạn nhạc đơn giản ngay tại chỗ. Các nguồn này là chương trình giảng dạy và khoá học, chưa có nghiên cứu đối chứng.
+`,
+  },
 ]

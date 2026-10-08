@@ -1,28 +1,13 @@
 import type { Article } from '../wiki'
+import { buildPeople, person, type Person } from './people'
 
 /**
  * Nhà soạn nhạc phương Tây, Trung cổ → thế kỷ 20. Mỗi người là một dòng dữ liệu; trang thời kỳ
  * (bảng theo trường phái, xếp theo năm sinh) và trang riêng của từng người được sinh tự động.
- * Thêm người: thêm một dòng c(...) vào đúng nhóm. Nhóm có dạng "thời kỳ:trường phái".
+ * Thêm người: thêm một dòng c(...) vào đúng nhóm. Nhóm có dạng "thời kỳ:trường phái". Trang được sinh bởi people.ts.
  */
 
-interface Composer {
-  name: string
-  years: string
-  country: string
-  group: string
-  desc: string
-  works: string[]
-  /** Short name that also links here, e.g. "Bach" (only when unambiguous). */
-  short?: string
-  /** Related theory article slugs. */
-  topics?: string[]
-  wiki?: string
-}
-
-const c = (name: string, years: string, country: string, group: string, desc: string, works: string[], extra: Partial<Composer> = {}): Composer => ({
-  name, years, country, group, desc, works, ...extra,
-})
+const c = person
 
 const PERIODS = [
   {
@@ -118,7 +103,7 @@ const PERIODS = [
   },
 ] as const
 
-const COMPOSERS: Composer[] = [
+const COMPOSERS: Person[] = [
   // ── Trung cổ ──
   c('Guido d\'Arezzo', 'k. 991–sau 1033', 'Ý', 'med:chant', 'Nhà lý thuyết, cha đẻ của khuông nhạc 4 dòng và hệ thống đọc nốt Ut–Re–Mi (solmization).', ['Micrologus (khảo luận)'], { topics: ['khuong-nhac', 'not-nhac', 'xuong-am'], wiki: 'Guido_of_Arezzo' }),
   c('Hildegard von Bingen', '1098–1179', 'Đức', 'med:chant', 'Nữ tu viện trưởng, nhà thần bí; một trong những nhà soạn nhạc đầu tiên được biết tên với khối lượng thánh ca lớn.', ['Ordo Virtutum', 'Symphonia armonie celestium revelationum'], { topics: ['ket-cau', 'dieu-thuc'], wiki: 'Hildegard_of_Bingen' }),
@@ -269,7 +254,7 @@ const COMPOSERS: Composer[] = [
   c('Étienne Méhul', '1763–1817', 'Pháp', 'cla:europe', 'Nhà soạn opera thời Cách mạng và Napoleon.', ['Joseph', 'Le chant du départ']),
   c('Anton Diabelli', '1781–1858', 'Áo', 'cla:europe', 'Nhà xuất bản và nhà soạn nhạc; chủ đề valse của ông được Beethoven viết 33 biến tấu.', ['Sonatina Op. 151 và 168'], { topics: ['bien-tau'] }),
   c('Friedrich Kuhlau', '1786–1832', 'Đức – Đan Mạch', 'cla:europe', 'Sonatina piano là giáo trình kinh điển cho học sinh.', ['Sonatina Op. 20 và 55', 'Elverhøj'], { short: 'Kuhlau', topics: ['hinh-thuc-sonata'] }),
-  c('Carl Czerny', '1791–1857', 'Áo', 'cla:europe', 'Học trò Beethoven, thầy của Liszt; hàng nghìn bài luyện ngón cho piano.', ['Die Schule der Geläufigkeit Op. 299', 'Op. 740 (Nghệ thuật luyện ngón)', 'Op. 599'], { short: 'Czerny', topics: ['ngon-bam', 'bai-tap-ngon'] }),
+  c('Carl Czerny', '1791–1857', 'Áo', 'cla:europe', 'Học trò Beethoven, thầy của Liszt; hàng nghìn bài luyện ngón cho piano.', ['Die Schule der Geläufigkeit Op. 299', 'Op. 740 (Nghệ thuật luyện ngón)', 'Op. 599'], { short: 'Czerny', topics: ['ngon-bam', 'bai-tap-ngon', 'lo-trinh-tac-pham'] }),
 
   // ── Lãng mạn ──
   c('John Field', '1782–1837', 'Ireland', 'rom:early', 'Người sáng tạo thể loại nocturne cho piano, ảnh hưởng trực tiếp tới Chopin.', ['18 Nocturne'], { topics: ['the-loai'] }),
@@ -286,6 +271,8 @@ const COMPOSERS: Composer[] = [
   c('Frédéric Chopin', '1810–1849', 'Ba Lan – Pháp', 'rom:early', '"Nhà thơ của piano"; gần như toàn bộ tác phẩm viết cho piano, đỉnh cao của rubato và pedal.', ['Nocturne', 'Ballade', '24 Prélude Op. 28', 'Étude Op. 10 và 25', 'Polonaise và Mazurka', 'Fantaisie-Impromptu'], { short: 'Chopin', topics: ['the-loai', 'nhip-do', 'ban-dap', 'ky-hieu-hoa-my', 'da-nhip'] }),
   c('Robert Schumann', '1810–1856', 'Đức', 'rom:early', 'Tiểu phẩm piano giàu tính văn học, Lied, nhà phê bình âm nhạc.', ['Kinderszenen ("Träumerei")', 'Carnaval', 'Dichterliebe', 'Concerto piano La thứ'], { short: 'Schumann', topics: ['the-loai', 'hemiola'] }),
   c('Franz Liszt', '1811–1886', 'Hungary', 'rom:early', 'Nghệ sĩ piano vĩ đại nhất thế kỷ 19; sáng tạo thơ giao hưởng và độc tấu (recital).', ['Hungarian Rhapsodies', 'Sonata Si thứ', 'Liebestraum số 3', 'Études d\'exécution transcendante', 'La campanella'], { short: 'Liszt', topics: ['hoa-am-cromatic', 'trung-am-cromatic', 'the-loai'] }),
+  c('Friedrich Burgmüller', '1806–1874', 'Đức – Pháp', 'rom:early', 'Sống ở Paris; các tuyển tập luyện tập của ông là giáo trình piano kinh điển cho học sinh.', ['25 Études faciles et progressives Op. 100', '18 Études Op. 109'], { short: 'Burgmüller', topics: ['lo-trinh-tac-pham', 'dien-dat-cau-nhac'] }),
+  c('Stephen Heller', '1813–1888', 'Hungary – Pháp', 'rom:early', 'Nghệ sĩ piano sống ở Paris, bạn của Chopin và Liszt; nổi tiếng với các tuyển tập étude giàu chất trữ tình.', ['30 Études mélodiques et progressives Op. 46', '25 Études Op. 45'], { short: 'Heller', topics: ['lo-trinh-tac-pham'] }),
   c('Charles-Valentin Alkan', '1813–1888', 'Pháp', 'rom:early', 'Nhạc piano cực kỳ khó và độc đáo.', ['Grande sonate "Les quatre âges"', '12 Études Op. 39']),
   c('Clara Schumann', '1819–1896', 'Đức', 'rom:early', 'Một trong những nghệ sĩ piano lớn nhất thế kỷ 19, vợ của Robert Schumann.', ['Concerto piano La thứ', 'Tam tấu piano Op. 17']),
   c('Giacomo Meyerbeer', '1791–1864', 'Đức – Pháp', 'rom:opera', 'Ông hoàng của "grand opéra" Paris.', ['Les Huguenots', 'Robert le diable']),
@@ -454,50 +441,10 @@ const COMPOSERS: Composer[] = [
   c('Joe Hisaishi', '1950–', 'Nhật Bản', 'm20:film', 'Nhạc phim Studio Ghibli của Hayao Miyazaki, chịu ảnh hưởng tối giản.', ['Spirited Away ("One Summer\'s Day")', 'My Neighbor Totoro', 'Howl\'s Moving Castle'], { topics: ['toi-gian'] }),
 ]
 
-const slugify = (s: string) =>
-  s.normalize('NFD').replace(/\p{M}/gu, '').replace(/[đĐ]/g, 'd').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-const birthYear = (c: Composer) => Number(/\d{3,4}/.exec(c.years)?.[0] ?? 0)
-
-const periodOf = (c: Composer) => PERIODS.find((p) => p.id === c.group.split(':')[0])!
-const groupTitle = (c: Composer) => periodOf(c).groups.find(([id]) => id === c.group.split(':')[1])![1]
-
-const composerArticle = (c: Composer): Article => ({
-  slug: slugify(c.name),
-  title: c.name,
+export const composers: Article[] = buildPeople(PERIODS, COMPOSERS, {
   category: 'composers',
-  unlisted: true,
-  aliases: c.short ? [c.short] : undefined,
-  summary: `${c.years} · ${c.country} · ${c.desc}`,
-  wiki: c.wiki ?? c.name.replace(/ /g, '_'),
-  body: [
-    `**Thời kỳ:** [[${periodOf(c).slug}|${periodOf(c).title}]] · **Trường phái:** ${groupTitle(c)} · **Quốc gia:** ${c.country}`,
-    '## Tác phẩm tiêu biểu',
-    c.works.map((w) => `- ${w}`).join('\n'),
-    c.topics ? `Lý thuyết liên quan: ${c.topics.map((t) => `[[${t}]]`).join(', ')}.` : '',
-  ].join('\n\n'),
+  noun: 'nhà soạn nhạc',
+  groupLabel: 'Trường phái',
+  worksTitle: 'Tác phẩm tiêu biểu',
+  footer: 'Tổng quan các thời kỳ và đặc trưng lý thuyết: [[cac-thoi-ky]].',
 })
-
-const periodArticle = (p: (typeof PERIODS)[number]): Article => {
-  const members = COMPOSERS.filter((c) => periodOf(c) === p).sort((a, b) => birthYear(a) - birthYear(b))
-  return {
-    slug: p.slug,
-    title: p.title,
-    category: 'composers',
-    aliases: [`nhà soạn nhạc ${p.title.replace('Thời kỳ ', '')}`],
-    summary: `${p.years} · ${members.length} nhà soạn nhạc, chia theo trường phái và xếp theo năm sinh.`,
-    body: [
-      p.intro,
-      ...p.groups.flatMap(([id, title]) => [
-        `## ${title}`,
-        '| Nhà soạn nhạc | Năm | Quốc gia | Nổi bật |\n|---|---|---|---|\n' +
-          members
-            .filter((c) => c.group === `${p.id}:${id}`)
-            .map((c) => `| [[${slugify(c.name)}|${c.name}]] | ${c.years} | ${c.country} | ${c.works[0]} |`)
-            .join('\n'),
-      ]),
-      'Tổng quan các thời kỳ và đặc trưng lý thuyết: [[cac-thoi-ky]].',
-    ].join('\n\n'),
-  }
-}
-
-export const composers: Article[] = [...PERIODS.map(periodArticle), ...COMPOSERS.map(composerArticle)]

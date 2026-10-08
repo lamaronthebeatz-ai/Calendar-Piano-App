@@ -204,6 +204,8 @@ Sơ đồ: **A – A1 – A2 – A3 …** Chủ đề thường ngắn, dạng [
 - **Bass Alberti**: thấp – cao – giữa – cao (C–G–E–G), rất phổ biến thời Mozart.
 - **Stride / oom-pah**: bass trầm ở phách mạnh, hợp âm ở phách nhẹ (valse, ragtime).
 
+Cách luyện từng kiểu đệm: [[dem-hat-piano]].
+
 Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinato]].
 `,
   },
@@ -283,7 +285,7 @@ Mỗi ô là một ô nhịp 4/4, trong giọng Đô:
 ## Bass boogie-woogie cho tay trái
 C – E – G – A – B♭ – A – G – E (mỗi nốt một móc đơn), dịch lên F và G theo hợp âm.
 
-Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]]. So sánh với khuôn 32 ô nhịp: [[hinh-thuc-ca-khuc-32]].
+Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]], [[ngau-hung-piano]]. So sánh với khuôn 32 ô nhịp: [[hinh-thuc-ca-khuc-32]].
 `,
   },
   {

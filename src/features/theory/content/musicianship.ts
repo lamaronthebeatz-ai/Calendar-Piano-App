@@ -150,10 +150,43 @@ Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp c�
 - **Âm giai và hợp âm rải**: [[luyen-am-giai]], [[luyen-hop-am-rai]]; Grade 1 bắt đầu với âm giai Đô trưởng và hợp âm rải đơn giản.
 - **Thị tấu**: chơi một bản ngắn chưa từng thấy sau thời gian xem ngắn — xem [[thi-tau]].
 - **Thi nghe**: vỗ lại tiết tấu, nhận ra giai điệu đi lên hay xuống… — xem [[luyen-tai]].
-- **Bài chuẩn bị**: thường gồm các phong cách khác nhau — xem [[cac-thoi-ky]] và [[dien-dat-cau-nhac]].
+- **Bài chuẩn bị**: thường gồm các phong cách khác nhau — xem [[cac-thoi-ky]], [[dien-dat-cau-nhac]] và gợi ý tác phẩm theo cấp độ ở [[lo-trinh-tac-pham]].
 
 ## Lưu ý
 Bảng điểm trên lấy từ hướng dẫn của giáo viên, khớp tổng 150 điểm ở nhiều nguồn; yêu cầu chi tiết (đặc biệt Grade 5–8 và các điều kiện kèm theo) cần đối chiếu **syllabus chính thức mới nhất của ABRSM**, vì nội dung thay đổi theo từng chu kỳ.
+`,
+  },
+  {
+    slug: 'lo-trinh-tac-pham',
+    title: 'Lộ trình tác phẩm theo cấp độ',
+    category: 'musicianship',
+    aliases: ['tác phẩm theo cấp độ', 'repertoire', 'chọn bài', 'bài cho người mới', 'Burgmüller Op. 100', 'Anna Magdalena', 'Album for the Young', 'Inventions'],
+    summary: 'Các tuyển tập kinh điển xếp theo độ khó: sách Anna Magdalena → Burgmüller Op. 100 → Album cho tuổi trẻ (Schumann, Tchaikovsky) → sonatina Clementi → Inventions của Bach.',
+    refs: [
+      ['University of Michigan Library — Finding elementary and intermediate piano music', 'https://guides.lib.umich.edu/easypiano/suggrep'],
+      ['Kjos — Grade levels (PDF)', 'https://media.kjos.com/kjos/global.mt.lldns.net/kjos/pdf/GP462_GradeLevels.pdf'],
+      ['Pianist Magazine — Classic piano repertoire for intermediate level pianists', 'https://www.pianistmagazine.com/blogs/classic-piano-repertoire-for-intermediate-level-pianists'],
+      ['Piano Library — Schumann: Album für die Jugend Op. 68', 'https://www.pianolibrary.org/composers/schumann/album-fuer-die-jugend-68/'],
+    ],
+    body: `
+Mỗi nhà xuất bản và hệ thống thi có thang độ khó riêng (thang Kjos không trùng với Grade của [[thi-cap-do|ABRSM]]), nên bảng dưới chỉ là hướng dẫn tương đối.
+
+| Giai đoạn | Tuyển tập | Ghi chú từ nguồn |
+|---|---|---|
+| Sơ cấp – trung cấp sớm | **Sách nhỏ cho Anna Magdalena Bach** | Tuyển tập bài sơ cấp và trung cấp |
+| Trung cấp sớm (khoảng Grade 2–5) | [[Burgmüller]] — **25 bài luyện tiến bộ Op. 100** | Khoảng Grade 2–5; các bài 9, 15, 20, 21 hợp Grade 4–5 |
+| Trung cấp sớm → trung cấp cao | [[Schumann]] — **Album cho tuổi trẻ Op. 68** | Tập 1 (số 1–18) cho trẻ nhỏ, tập 2 (19–43) khó hơn; ấn bản ABRSM ghi Grade 4–7 |
+| Trung cấp → trung cấp cao | [[Tchaikovsky]] — **Album cho thiếu nhi Op. 39** | Thường được xếp cao hơn Op. 68 một bậc |
+| Trung cấp | [[Clementi]] — **Sonatina Op. 36** | Bước tiếp theo phổ biến sau Burgmüller (xem [[hinh-thuc-sonata]]) |
+| Trung cấp | [[Heller]] — **Études Op. 45, 46** | Op. 46 số 1–5 là điểm bắt đầu hay dùng |
+| Trung cấp (khoảng Grade 4–6 trở lên) | [[Bach]] — **Inventions 2 bè** | Bắt đầu với số 1 (Đô trưởng), rồi số 8 (Fa trưởng); số 6 khó hơn |
+| Trung cấp cao | Bach — **Sinfonia (Inventions 3 bè)** | Số 10 và 14 được gợi ý |
+
+## Vì sao những tuyển tập này?
+- Mỗi tuyển tập gắn với một kỹ năng: Bach luyện [[doi-am]] và hai tay độc lập; Burgmüller và Schumann luyện [[dien-dat-cau-nhac|diễn đạt]] và tính chất (mỗi bài có tên gợi hình ảnh); sonatina luyện [[hinh-thuc-sonata]] và [[luyen-am-giai|âm giai]].
+- Kết hợp với bài luyện ngón của [[Czerny]] (xem [[bai-tap-ngon]]).
+
+Thông tin về các nhà soạn nhạc: [[thoi-ky-baroque]], [[thoi-ky-co-dien]], [[thoi-ky-lang-man]].
 `,
   },
 ]

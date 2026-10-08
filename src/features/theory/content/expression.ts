@@ -66,7 +66,7 @@ Cường độ là **tương đối**: f trong nhạc Mozart nhẹ hơn f trong 
 - **Staccato**: nảy từ cổ tay (nhịp nhanh, nhẹ) hoặc từ ngón (rất nhanh).
 - Cuối dấu luyến, nhấc tay nhẹ nhàng — như "thở" ở cuối [[cau-nhac]].
 
-Đừng nhầm dấu luyến với [[cham-doi-dau-noi|dấu nối]] (nối hai nốt **cùng** cao độ).
+Đừng nhầm dấu luyến với [[cham-doi-dau-noi|dấu nối]] (nối hai nốt **cùng** cao độ). Tremolo, glissando, hợp âm rải có ký hiệu: [[ky-hieu-nang-cao]].
 `,
   },
   {
@@ -225,6 +225,36 @@ Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa ch�
 | assai | Rất, khá | Allegro assai |
 
 Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]]. Tên thể loại (nocturne, étude…): xem [[the-loai]].
+`,
+  },
+  {
+    slug: 'ky-hieu-nang-cao',
+    title: 'Ký hiệu piano nâng cao',
+    category: 'expression',
+    aliases: ['tremolo', 'glissando', 'hợp âm rải có ký hiệu', 'arpeggiato', 'đường lượn sóng', 'cross-staff', 'chơi chéo khuông', 'ký hiệu viết tắt'],
+    summary: 'Tremolo (gạch chéo trên đuôi nốt), glissando (đường thẳng hoặc lượn sóng), hợp âm rải (đường lượn sóng dọc) và nốt chéo khuông.',
+    wiki: 'Abbreviation_(music)',
+    refs: [
+      ['MuseScore Handbook — Arpeggios and glissandos', 'https://handbook.musescore.org/notation/expressive-markings/arpeggios-and-glissandos'],
+      ['LilyPond — Tremolo repeats', 'https://lilypond.org/doc/v2.25/Documentation/notation/tremolo-repeats'],
+      ['LilyPond — Common notation for keyboards', 'https://lilypond.org/doc/v2.25/Documentation/notation/common-notation-for-keyboards'],
+    ],
+    body: `
+## Tremolo
+Lặp lại rất nhanh. Trên piano thường là **luân phiên giữa hai nốt hoặc hai hợp âm** (quãng 8, hợp âm), vì lặp một nốt đơn nhanh khó hơn nhiều so với nhạc cụ dây.
+- Số **gạch chéo** trên đuôi nốt cho biết cách chia nhỏ: mỗi gạch tương đương một gạch nối. Ví dụ nốt trắng có **một gạch** = chơi thành **4 nốt móc đơn** (xem [[truong-do]]).
+- Tremolo có thể chia cho **hai tay**.
+
+## Glissando
+Đường **thẳng hoặc lượn sóng** nối hai nốt, kèm chữ "gliss.": trên piano là một lần **vuốt** nhanh qua các phím — thường trên phím trắng, đôi khi trên phím đen. Glissando có thể đi qua cả hai khuông.
+
+## Hợp âm rải có ký hiệu (arpeggiato)
+**Đường lượn sóng dọc** bên cạnh hợp âm: chơi các nốt **lần lượt thật nhanh**, thường từ dưới lên (có mũi tên xuống thì rải từ trên xuống). Một đường lượn sóng có thể trải qua **cả hai khuông** — khi đó hai tay rải liền một mạch. Khác với [[luyen-hop-am-rai|hợp âm rải]] viết ra thành nốt.
+
+## Nốt chéo khuông
+Nốt được viết trên khuông này nhưng chơi bằng tay thường đọc khuông kia — hay gặp khi giai điệu chuyển qua lại giữa hai tay. Tremolo và hợp âm rải hai tay cũng thường được viết chéo khuông (xem [[khuong-nhac|khuông nhạc đôi]]).
+
+Lưu ý: phần lớn nguồn là hướng dẫn của phần mềm ký âm (MuseScore, LilyPond). Các ký hiệu cơ bản khác: [[cach-dien-tau]], [[ky-hieu-hoa-my]], [[dau-nhac-lai]], [[ky-hieu-quang-tam]].
 `,
   },
 ]
