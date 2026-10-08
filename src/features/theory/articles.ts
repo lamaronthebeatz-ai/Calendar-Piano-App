@@ -30,7 +30,7 @@ export const CATEGORIES = {
   rhythm: { title: 'Nhịp & tiết tấu', hue: 25, description: 'Trường độ, phách, nhịp và nhịp độ: lịch sử ký âm, cảm nhận phách, đảo phách, nhịp lẻ và đa nhịp.' },
   pitch: { title: 'Cao độ & quãng', hue: 285, description: 'Khoảng cách giữa các nốt và cơ sở âm học của chúng.' },
   scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu, vòng quãng 5 và quan hệ giữa các giọng — kèm lịch sử và nghiên cứu về cảm nhận giọng.' },
-  harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hợp âm, chức năng, vòng hợp âm, kết và chuyển giọng.' },
+  harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hai hệ thống: hoà âm cổ điển (hợp âm, chức năng, luật bốn bè, kết, chuyển giọng, phân tích và phối hoà âm) và hoà âm thế kỷ XX.' },
   chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Nâng cao: Napoli, hợp âm 6 tăng, 7 giảm, mô tiến, bass số, Schenker, Neo-Riemann.' },
   form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Từ motif, câu nhạc đến cấu trúc của cả tác phẩm.' },
   expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách diễn tấu, hoa mỹ, pedal, ngón bấm, thuật ngữ, phong cách từng thời kỳ và cách chọn ấn bản.' },

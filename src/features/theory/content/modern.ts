@@ -33,7 +33,7 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
     slug: 'an-tuong',
     title: 'Hoà âm ấn tượng',
     category: 'modern',
-    aliases: ['ấn tượng', 'impressionism', 'planing', 'hợp âm song song', 'hoà âm phi chức năng'],
+    aliases: ['ấn tượng', 'impressionism', 'hợp âm song song', 'hoà âm phi chức năng'],
     summary: 'Phong cách đầu thế kỷ 20 (Debussy, Ravel): hợp âm được dùng như "màu sắc" thay vì chức năng, các hợp âm trượt song song, âm giai ngũ cung và toàn cung.',
     wiki: 'Impressionism_in_music',
     body: `
