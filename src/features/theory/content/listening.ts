@@ -120,6 +120,7 @@ Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ s
       ['Juslin (2013) — From everyday emotions to aesthetic emotions (Physics of Life Reviews)', 'https://doi.org/10.1016/j.plrev.2013.05.008'],
       ['Hunter, Schellenberg & Schimmack (2010) — Feelings and perceptions of happiness and sadness induced by music (PDF)', 'https://sites.utm.utoronto.ca/sites/sites.utm.utoronto.ca.glenn_website/files/download/HunterEtAl2010.pdf'],
       ['Dalla Bella et al. (2001) — A developmental study of the affective value of tempo and mode in music', 'https://pubmed.ncbi.nlm.nih.gov/11274986/'],
+      ['Salimpoor et al. (2011), Nature Neuroscience — Anatomically distinct dopamine release during anticipation and experience of peak emotion to music (PDF)', 'https://www.zlab.mcgill.ca/publications/docs/salimpoor_2011_nn.pdf'],
     ],
     body: `
 ## Mô hình BRECVEMA
@@ -145,7 +146,10 @@ Patrik Juslin cho rằng không có **một** cơ chế duy nhất, mà âm nh�
 - Giải thích cho học trò **vì sao** một đoạn nhạc gây cảm xúc: [[chuyen-giong]], [[hop-am-muon]], [[trung-am-cromatic]], [[cau-ket|kết lừa]] đều là "kỳ vọng bị làm trái".
 - Kết hợp với [[dien-dat-cau-nhac]] và [[nghe-nhac-chu-dong]].
 
-Lưu ý: lần tra cứu này chưa tìm được nguồn về "rùng mình khi nghe nhạc" (chills, frisson) nên bài chưa đề cập.
+## Rùng mình khi nghe nhạc (frisson)
+Nghiên cứu của Valorie Salimpoor và cộng sự (phòng thí nghiệm Robert Zatorre, Đại học McGill; *Nature Neuroscience*, 2011) dùng chụp PET đo **dopamine** khi người nghe nghe bản nhạc **họ yêu thích** (8 người tham gia, mỗi người tự mang nhạc đến). Cảm giác "rùng mình" được dùng làm dấu hiệu của khoảnh khắc cảm xúc đỉnh điểm. Kết quả: dopamine được giải phóng theo **hai pha** — ở nhân đuôi (caudate) trong **vài giây chờ đợi** trước đỉnh, và ở nhân accumbens **ngay tại đỉnh**. Nghĩa là ngay cả **sự chờ đợi** một đoạn nhạc hay cũng tạo khoái cảm — khớp với cơ chế "kỳ vọng âm nhạc" ở trên.
+
+Nghiên cứu dùng nhạc tự chọn nên **không xác định** yếu tố hoà âm cụ thể nào gây rùng mình; mẫu cũng nhỏ.
 `,
   },
 ]

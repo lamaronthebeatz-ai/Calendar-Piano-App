@@ -8,6 +8,10 @@ export const chromatic: Article[] = [
     aliases: ['chromaticism', 'hoà âm nửa cung', 'hợp âm Tristan', 'Tristan chord', 'cromatic hoá'],
     summary: 'Hoà âm dùng các nốt ngoài âm giai (nốt cromatic) để tăng màu sắc và sức căng — đỉnh cao ở cuối thời Lãng mạn.',
     wiki: 'Chromaticism',
+    refs: [
+      ['Classical Music — What is the Tristan chord?', 'https://www.classical-music.com/features/articles/tristan-chord-explained/'],
+      ['Playbill — Journey to bliss (Tristan und Isolde)', 'https://playbill.com/article/journey-to-bliss'],
+    ],
     body: `
 Hoà âm **diatonic** chỉ dùng 7 nốt của [[hoa-bieu|giọng]]. Hoà âm **cromatic** đưa thêm các nốt thuộc [[am-giai-cromatic]] — nhưng vẫn phục vụ một trung tâm điệu tính.
 
@@ -27,7 +31,7 @@ Hoà âm **diatonic** chỉ dùng 7 nốt của [[hoa-bieu|giọng]]. Hoà âm *
 
 ::img TristanChord.svg | Hợp âm Tristan (F – B – D♯ – G♯) mở đầu vở opera "Tristan und Isolde" của [[Wagner]] (1859)
 
-Hợp âm Tristan trì hoãn sự giải quyết suốt nhiều giờ nhạc kịch và thường được coi là bước đầu tiên dẫn tới [[phi-dieu-tinh|âm nhạc phi điệu tính]]. Bối cảnh lịch sử: [[cac-thoi-ky]].
+Sự giải quyết của hợp âm Tristan bị trì hoãn **gần bốn giờ** — chỉ đến ở cuối vở, trong khúc "Liebestod" của Isolde, về giọng **Si trưởng**. Hợp âm này và thường được coi là bước đầu tiên dẫn tới [[phi-dieu-tinh|âm nhạc phi điệu tính]]. Bối cảnh lịch sử: [[cac-thoi-ky]].
 `,
   },
   {

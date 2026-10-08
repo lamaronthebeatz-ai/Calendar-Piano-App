@@ -12,6 +12,8 @@ export const analysis: Article[] = [
     refs: [
       ['Wikipedia — Für Elise', 'https://en.wikipedia.org/wiki/F%C3%BCr_Elise'],
       ['G. Henle Verlag — Critical report (PDF)', 'https://www.henle.de/download/KB_ausfuehrlich/2207_2_153-155.pdf'],
+      ['Piano Composer Teacher London — Für Elise: complete analysis', 'https://www.piano-composer-teacher-london.co.uk/post/fur-elise'],
+      ['PTNA Piano Encyclopedia — Für Elise WoO 59', 'https://enc.piano.or.jp/en/musics/446'],
     ],
     body: `
 ## Lịch sử
@@ -26,10 +28,12 @@ Thường được phân tích là **[[rondo]] A – B – A – C – A** (cũn
 | Đoạn | Nội dung |
 |---|---|
 | **A** | Chủ đề La thứ nổi tiếng, nhịp 3/8, mở đầu bằng [[nhip-lay-da|nốt lấy đà]] E – D♯ |
-| **B** | Tương phản, chuyển sang giọng trưởng, nhiều nốt chạy |
+| **B** | Bắt đầu ở ô 23, giọng **Fa trưởng** (bậc 6 của La thứ), rồi chuyển sang **Đô trưởng** với các chuỗi nốt móc ba lặp lại một vòng kết |
 | **A** | Chủ đề trở lại |
-| **C** | Tương phản kịch tính hơn |
-| **A** | Chủ đề trở lại lần cuối |
+| **C** | Đoạn căng thẳng nhất về hoà âm: một chuỗi **[[hop-am-bay-giam|hợp âm 7 giảm]]**; nhiều phân tích mô tả nốt **A lặp lại ở bè trầm** như một [[bass-ngan|bass ngân]] |
+| **A** | Chủ đề trở lại lần cuối; từ ô 59 kết thúc trên một **bass ngân chủ âm** |
+
+Chủ đề A xoay quanh dao động giữa **E (át âm) và D♯** — đó là nét nhận diện của bài. Giọng của đoạn C được các nguồn ghi khác nhau (một nguồn ghi Rê thứ nhưng chưa được nguồn đáng tin xác nhận), nên bài không khẳng định.
 
 ::staff treble E5 D#5 E5 D#5 E5 B4 D5 C5 A4 | Cao độ của câu mở đầu (chưa thể hiện trường độ): E–D♯ dao động [[cung-nua-cung|nửa cung]] rồi đi xuống về A
 
@@ -49,6 +53,8 @@ Thường được phân tích là **[[rondo]] A – B – A – C – A** (cũn
     refs: [
       ['Wikipedia — Prelude and Fugue in C major, BWV 846', 'https://en.wikipedia.org/wiki/Prelude_and_Fugue_in_C_major,_BWV_846'],
       ['Wikipedia — Ave Maria (Bach/Gounod)', 'https://en.wikipedia.org/wiki/Ave_Maria_(Bach/Gounod)'],
+      ['Research Catalogue — Prolonged pedal point (BWV 846)', 'https://researchcatalogue.net/view/231816/357695'],
+      ['teoria.com — BWV 846: last measures', 'https://www.teoria.com/en/articles/2017/BWV846/final.php'],
     ],
     body: `
 ## Tổng quan
@@ -59,7 +65,14 @@ Mỗi ô nhịp là **một hợp âm**, rải theo cùng một mẫu (lặp l�
 
 ::staff treble C4+E4+G4+C5+E5 C4+D4+A4+D5+F5 B3+D4+G4+D5+F5 C4+E4+G4+C5+E5 | Bốn ô nhịp đầu: C – Dm7/C – G7/B – C (I – ii7 – V7 – I)
 
-Bốn ô đầu đã là một vòng [[chuc-nang-hoa-am|chủ – hạ át – át – chủ]] trọn vẹn, với bè trầm C – C – B – C gần như đứng yên. Phần còn lại đi xa hơn với nhiều [[hop-am-at-phu|át phụ]] và [[hop-am-bay-giam|hợp âm 7 giảm]], rồi kết thúc trên một bass ngân C.
+Bốn ô đầu đã là một vòng [[chuc-nang-hoa-am|chủ – hạ át – át – chủ]] trọn vẹn, với bè trầm C – C – B – C gần như đứng yên. Phần giữa đi xa hơn với nhiều [[hop-am-at-phu|át phụ]] và [[hop-am-bay-giam|hợp âm 7 giảm]].
+
+## Hai bass ngân ở cuối bài
+- **Ô 23** gợi ý rất mạnh hợp âm át nhưng Bach **trì hoãn** nó; hợp âm G7 chỉ đến ở **ô 24**.
+- **Ô 24–31**: nốt **G** (át âm) giữ ở bè trầm suốt **8 ô nhịp** — một [[bass-ngan|bass ngân át âm]] dẫn tới cao trào.
+- **Từ ô 32**: biến thể cuối cùng của vòng **ii – V – I** trên **bass ngân chủ âm C**, rồi hợp âm Đô trưởng khối kết bài.
+
+Số ô nhịp tính theo bản 35 ô (không có "ô Schwencke" — xem dưới); ấn bản có ô chèn thêm sẽ lệch một ô.
 
 ## "Ô nhịp Schwencke"
 Ô 22 có F♯ ở bè trầm, sang ô 23 nhảy lên A♭ — một [[quang|quãng 3 giảm]]. Một số ấn bản (trong đó có ấn bản Gounod dùng) **chèn thêm một ô** với G ở bè trầm để "làm mượt". Ô này không có trong bản chép tay năm 1725 của học trò Bach, Heinrich Gerber, và đã bị Franz Kroll (1862), August Halm (1905) đặt nghi vấn.
@@ -188,6 +201,7 @@ Lưu ý: tên hợp âm lấy từ một phân tích; các ấn bản có thể 
     refs: [
       ['teoria.com — Ternary form: Schumann, Träumerei', 'https://teoria.com/en/tutorials/forms/ternary/03-schumann.php'],
       ['PTNA Piano Encyclopedia — Kinderszenen Op. 15', 'https://enc.piano.or.jp/en/musics/65'],
+      ['Despois (2025), Intégral — The Dream Cadence: a Romantic gesture of the ascending ninth', 'https://theory.esm.rochester.edu/integral/38-2025/despois/'],
     ],
     body: `
 ## Tổng quan
@@ -203,7 +217,10 @@ Theo teoria.com, Träumerei là ví dụ của **[[hinh-thuc-am-nhac|hình thứ
 - Nhịp độ chậm, uốn câu theo hình vòm và chậm nhẹ ở cuối câu ([[dien-dat-cau-nhac]]).
 - Pedal đổi theo hợp âm, giữ cho các bè không bị nhoè ([[ban-dap]]).
 
-Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 68 (xem [[lo-trinh-tac-pham]]). Lưu ý: chi tiết số ô nhịp và các kết câu cần đối chiếu trên bản nhạc (ví dụ ấn bản miễn phí trên IMSLP).
+## "Kết giấc mơ"
+Bài dài **24 ô nhịp**. Kết cuối cùng ở **ô 24** đặc biệt đến mức nhà lý thuyết Julien Despois (2025) đặt tên cho cả một kiểu kết theo bài này — **"Dream Cadence"**: một [[hop-am-mo-rong|hợp âm át 9]] trong đó nốt 9 **đi lên** từng bậc (bậc 6 – 7 – 1) để giải quyết, thay vì đi xuống như thường lệ; nốt 9 thường được nhấn biểu cảm hoặc chậm lại (rallentando) trước [[cau-ket|kết trọn]]. Đây là chỗ đáng dừng lại khi dạy.
+
+Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 68 (xem [[lo-trinh-tac-pham]]). Ranh giới chính xác (theo số ô) của các phần A – B – A′ vẫn cần đối chiếu trên bản nhạc.
 `,
   },
   {
@@ -216,6 +233,7 @@ Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 
     refs: [
       ['Wikipedia — Piano Sonata No. 11 (Mozart)', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._11_(Mozart)'],
       ['Hoffman Academy — Rondo alla turca (form note)', 'https://hoffmanacademy.com/store/sheet-music/rondo-alla-turca-k-331-3rd-movement'],
+      ['Ekspresi (ISI Padangpanjang) — Rondo alla Turca structure analysis', 'https://journal.isi-padangpanjang.ac.id/index.php/Ekspresi/article/download/3118/1289'],
     ],
     body: `
 ## Tổng quan
@@ -223,17 +241,27 @@ Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 
 - Thời gian, địa điểm sáng tác **không chắc chắn**; khả năng cao nhất là Vienna hoặc Salzburg khoảng **1783**, Artaria xuất bản năm **1784**.
 
 ## "Alla turca"
-Chương nhạc mô phỏng âm thanh của **ban nhạc Janissary** (quân đội Ottoman) — rất được ưa chuộng ở Vienna lúc bấy giờ. Một số đàn piano thời đó có **"Turkish stop"** — bộ phận tạo tiếng chuông, trống — và chương này đôi khi được biểu diễn trên những cây đàn như vậy (xem [[lich-su-piano]]). Trên piano hiện đại, tay trái mô phỏng tiếng trống bằng hợp âm nhấn, [[ky-hieu-nang-cao|hợp âm rải nhanh]] và quãng 8.
+Chương nhạc mô phỏng âm thanh của **ban nhạc Janissary** (quân đội Ottoman) — rất được ưa chuộng ở Vienna lúc bấy giờ. Một số đàn piano thời đó có **"Turkish stop"** — bộ phận tạo tiếng chuông, trống — và chương này đôi khi được biểu diễn trên những cây đàn như vậy (xem [[lich-su-piano]]).
 
 ## Hình thức
-Là một **[[rondo]]**, nhưng các phân tích **chia đoạn khác nhau**: một nghiên cứu ghi A – B – C – B – A – B′ – coda; một nguồn khác mô tả các đoạn hai phần có tái hiện ghép thành một cấu trúc ba đoạn lớn. Khi dạy, hãy cùng học trò đánh dấu các lần chủ đề trở lại trên bản nhạc.
+Là một **[[rondo]]**, nhưng các phân tích **chia đoạn khác nhau**. Bản chi tiết nhất ghi: **A – B – C – D – E – C – A – B – C – coda**, mỗi đoạn (trừ coda) đều nhắc lại.
+| Đoạn | Nội dung | Giọng |
+|---|---|---|
+| **A** | 8 ô: hình móc kép đi lên rồi móc đơn đi xuống, trên đệm móc đơn ngắt tiếng | La thứ |
+| **B** | Chất liệu mới đi bằng quãng 3, rồi biến tấu A với crescendo, trở về nhỏ | |
+| **C** | Hành khúc **forte** bằng **quãng 8** trên đệm [[ky-hieu-nang-cao|hợp âm rải]] — đoạn "Thổ Nhĩ Kỳ" nổi tiếng | **La trưởng** |
+| **D** | Chuỗi móc kép liên tục, nhỏ, trên đệm hợp âm rải | Fa♯ thứ |
+| **E** | Chủ đề forte dạng âm giai, rồi biến thể của D | |
+| **Coda** | Hợp âm và quãng 8 forte, chen một lần nhắc chủ đề nhỏ; kết bằng các quãng 8 A và C♯ xen kẽ rồi hai hợp âm La trưởng | La trưởng |
+
+Một nghiên cứu khác gộp lại thành A – B – C – B – A – B′ – coda; một nguồn nữa mô tả các đoạn hai phần có tái hiện ghép thành cấu trúc ba đoạn lớn. Khi dạy, hãy cùng học trò đánh dấu các lần đoạn C quay lại trên bản nhạc.
 
 ## Gợi ý khi dạy
 - Chủ đề mở đầu là chuỗi [[not-ngoai-hop-am|nốt thêu]] móc kép: luyện [[kiem-soat-toc-do|tăng tốc từng bậc]] và [[phuong-phap-luyen-tap|biến thể tiết tấu]].
 - Hợp âm rải nhanh ở tay trái: rải gọn từ dưới lên, không làm chậm phách.
 - Đoạn quãng 8 tay phải: xem [[ky-thuat-quang-tam]].
 
-Lưu ý: các nguồn tìm được không nêu rõ giọng của từng đoạn, nên bài không ghi chi tiết đó — hãy đối chiếu trên bản nhạc.
+Lưu ý: giọng La thứ và Fa♯ thứ của đoạn A, D chỉ thấy ở một nguồn — nên đối chiếu bản nhạc khi trích dẫn.
 `,
   },
   {
@@ -246,6 +274,8 @@ Lưu ý: các nguồn tìm được không nêu rõ giọng của từng đoạn
     refs: [
       ['College Music Symposium — Review of Bhogal, Claude Debussy\'s Clair de lune', 'https://symposium.music.org/volume-59-no-1/book-reviews-1752877061/claude-debussy-s-clair-de-lune-by-gurminder-kaur-bhogal'],
       ['University of Kansas — dissertation on Suite bergamasque', 'https://kuscholarworks.ku.edu/entities/publication/b2f715bb-3983-442a-9052-9360e5691c33'],
+      ['Piano Composer Teacher London — Clair de lune: complete analysis', 'https://www.piano-composer-teacher-london.co.uk/clair-de-lune-by-debussy-complete-analysis-2/'],
+      ['Ethan Hein — Clair de lune', 'https://ethanhein.com/wp/2020/clair-de-lune/'],
     ],
     body: `
 ## Tổng quan
@@ -257,14 +287,15 @@ Lưu ý: các nguồn tìm được không nêu rõ giọng của từng đoạn
 Tên bài gắn với bài thơ "Clair de lune" của **Paul Verlaine** — Debussy cũng phổ nhạc bài thơ này trong tập ca khúc *Fêtes galantes* đầu tiên (1890). Chương 3 của tổ khúc ban đầu dự định mang tên "Promenade sentimentale" — cũng là tên một bài thơ của Verlaine.
 
 ## Ngôn ngữ âm nhạc
-Theo bản nhạc, bài viết ở nhịp **9/8** (ba phách lớn chia ba — [[so-chi-nhip|nhịp kép]]) và thường được mô tả là có **ba phần**. Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — hợp âm trượt song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
+Bài viết ở nhịp **9/8**, nhóm **3 + 3 + 3** ([[so-chi-nhip|nhịp kép]]) — cảm giác như một điệu valse rất chậm, mỗi phách lại chia ba; các chỗ [[dao-phach|đảo phách]] đến từ những nhóm nhịp kiểu [[hemiola]].
+
+Hình thức **ba đoạn A – B – A′** dài **72 ô nhịp** (theo một phân tích dùng thuật ngữ của Caplin: khoảng 26 – 24 – 22 ô): A là một [[cau-nhac|đoạn nhạc]] kép mở rộng, B gồm ba đoạn nhạc đều đặn, A′ là sự trở lại có biến đổi kèm coda. Cuối A nối liền vào đầu B quanh **ô 27**, nên ranh giới chỉ mang tính gần đúng.
+ Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — hợp âm trượt song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
 
 ## Gợi ý khi dạy
 - Đếm nhịp 9/8 cẩn thận, nhất là các chỗ nhóm 2 nốt ([[lien-ba|liên hai]]) chồng lên phách chia ba (xem [[da-nhip]]).
 - [[ban-dap|Pedal]] đổi theo hoà âm để giữ tiếng trong trẻo; có thể kết hợp pedal una corda ở các đoạn rất nhỏ.
 - Chơi rất nhỏ (pp) mà vẫn rõ — luyện [[lam-noi-giai-dieu]] ở mức cường độ thấp.
-
-Lưu ý: nhịp 9/8 và cấu trúc ba phần chưa được xác nhận qua các nguồn tìm được trong lần tra cứu này — hãy đối chiếu bản nhạc.
 `,
   },
   {
