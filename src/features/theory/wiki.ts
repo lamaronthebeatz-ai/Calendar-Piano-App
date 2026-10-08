@@ -19,6 +19,8 @@ export interface Article {
   unlisted?: boolean
   /** Further sources beyond Wikipedia, as [title, url]. */
   refs?: [string, string][]
+  /** Other categories whose index also lists this article (it still lives in `category`). */
+  also?: (keyof typeof CATEGORIES)[]
 }
 
 /** Section titles of an article, in order (Markup gives them ids sec-0, sec-1…). */
@@ -48,7 +50,11 @@ export const getBacklinks = (slug: string) => backlinks.get(slug) ?? []
 export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'][]).map((id) => ({
   id,
   ...CATEGORIES[id],
-  articles: ARTICLES.filter((a) => a.category === id && !a.unlisted),
+  // Own articles first, then ones cross-listed here from other categories.
+  articles: [
+    ...ARTICLES.filter((a) => a.category === id && !a.unlisted),
+    ...ARTICLES.filter((a) => a.category !== id && a.also?.includes(id)),
+  ],
 }))
 
 export function searchArticles(query: string) {

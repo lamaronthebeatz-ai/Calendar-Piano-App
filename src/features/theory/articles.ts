@@ -34,7 +34,7 @@ export const CATEGORIES = {
   chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Hoà âm cromatic (giáo trình chương 7–8): Napoli, 6 tăng, 7 giảm, hợp âm nốt chung, hợp âm ba tăng, trung âm cromatic, mô tiến, bass ngân, bass số, Schenker, Neo-Riemann.' },
   form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Từ motif, câu nhạc đến cấu trúc của cả tác phẩm.' },
   expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách diễn tấu, hoa mỹ, pedal, ngón bấm, thuật ngữ, phong cách từng thời kỳ và cách chọn ấn bản.' },
-  jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Swing, xếp hợp âm, hệ thống hợp âm – âm giai, thay thế tritone, tái hoà âm.' },
+  jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Hoà âm jazz đầy đủ (Phần III giáo trình): swing, blues, ii – V – I, hợp âm – âm giai, hợp âm át biến hoá, xếp hợp âm, thay thế, tái hoà âm, rhythm changes, vòng Coltrane — kèm các bài hoà âm liên quan được xếp chéo từ nhóm khác.' },
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử và hoà âm thế kỷ XX: ấn tượng, hoà âm điệu thức, toàn diatonic, hợp âm chồng, điệu thức Messiaen, phi điệu tính, 12 âm, tập hợp cao độ, tối giản, nhạc phổ.' },
   listening: { title: 'Nghe, cảm thụ & âm học', hue: 210, description: 'Âm học cơ bản, lịch sử thu âm, nghe nhạc chủ động và tâm lý học cảm xúc âm nhạc.' },
   analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phân tích các bài hay dạy: Für Elise, Prelude của Bach, K. 545, Nocturne, Gymnopédie, Clair de lune, Canon…' },

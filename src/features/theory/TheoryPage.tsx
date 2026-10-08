@@ -108,7 +108,7 @@ function Index() {
             <h2 className="text-[18px] font-semibold text-[var(--color-ink)]">{active.title}</h2>
             <p className="text-[13px] text-[var(--color-ink-muted)]">{active.description}</p>
           </header>
-          <ArticleGrid key={`${active.id}-list`} articles={active.articles} />
+          <ArticleGrid key={`${active.id}-list`} articles={active.articles} home={active.id} />
         </>
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -179,7 +179,7 @@ function CategoryChips({ active, onSelect }: { active: CategoryId; onSelect: (id
   )
 }
 
-function ArticleGrid({ articles }: { articles: Article[] }) {
+function ArticleGrid({ articles, home }: { articles: Article[]; home?: CategoryId }) {
   return (
     <ul className="grid gap-2 sm:grid-cols-2">
       {articles.map((a, i) => (
@@ -193,6 +193,9 @@ function ArticleGrid({ articles }: { articles: Article[] }) {
             <span className="min-w-0">
               <span className="block text-[15px] font-medium leading-snug text-[var(--color-ink)]">{a.title}</span>
               <span className="line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{a.summary}</span>
+              {home && a.category !== home && (
+                <span className="mt-1 block text-[11px] font-medium text-[var(--tint)]">↗ Bài thuộc nhóm {CATEGORIES[a.category].title}</span>
+              )}
             </span>
           </Link>
         </li>

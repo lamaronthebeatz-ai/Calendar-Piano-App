@@ -127,14 +127,18 @@ Tổng quan và bảng các thủ pháp: [[hoa-am-the-ky-20]]. Bối cảnh: [[c
 61. [[nhac-pho|Âm nhạc phổ]].
 
 ## Phần III — Nhánh ứng dụng: jazz và nhạc phổ thông
-Học sau Chương 7 (cần hợp âm 7, chức năng, át phụ, hợp âm mượn).
-62. [[blues-12-nhip|Blues 12 ô nhịp]] và [[am-giai-blues|âm giai blues]].
-63. [[he-thong-hop-am-am-giai|Hệ thống hợp âm – âm giai]].
-64. [[xep-hop-am|Cách xếp hợp âm (voicing)]].
-65. [[thay-the-tritone|Thay thế tritone]].
-66. [[tai-hoa-am|Tái hoà âm]].
-67. [[hinh-thuc-ca-khuc-32|Hình thức ca khúc 32 ô]].
-68. [[dem-hat-piano|Đệm hát bằng piano]].
+Học sau Chương 7 (cần hợp âm 7, chức năng, át phụ, hợp âm mượn). Tổng quan và lộ trình chi tiết: [[hoa-am-jazz]] — toàn bộ các bài nằm (hoặc được xếp chéo) trong mục **Jazz & hoà âm hiện đại**.
+62. [[swing|Swing]].
+63. [[blues-12-nhip|Blues 12 ô nhịp]] và [[am-giai-blues|âm giai blues]].
+64. [[ii-v-i|ii – V – I và nốt dẫn hướng]].
+65. [[he-thong-hop-am-am-giai|Hệ thống hợp âm – âm giai]].
+66. [[hop-am-at-bien-hoa|Hợp âm át biến hoá và nốt căng]].
+67. [[xep-hop-am|Cách xếp hợp âm (voicing)]].
+68. [[thay-the-hop-am|Thay thế hợp âm]] và [[thay-the-tritone|thay thế tritone]].
+69. [[tai-hoa-am|Tái hoà âm]].
+70. [[hinh-thuc-ca-khuc-32|Hình thức ca khúc 32 ô]] và [[rhythm-changes]].
+71. [[vong-coltrane|Vòng Coltrane]].
+72. [[dem-hat-piano|Đệm hát bằng piano]].
 
 ## Ba nguyên tắc xuyên suốt
 - **Nghe trước, gọi tên sau**: mỗi khái niệm phải gắn với một âm thanh cụ thể.
@@ -234,7 +238,15 @@ Thuật ngữ hoà âm tiếng Việt chưa thống nhất giữa các giáo tr�
 | Kỹ thuật 12 âm; chuỗi | twelve-tone technique; row, serialism | [[ky-thuat-12-am]] |
 | Nhạc tối giản | minimalism | [[toi-gian]] |
 | Âm nhạc phổ | spectral music | [[nhac-pho]] |
+| Hoà âm jazz | jazz harmony | [[hoa-am-jazz]] |
+| ii – V – I; nốt dẫn hướng | ii–V–I; guide tones | [[ii-v-i]] |
 | Hệ thống hợp âm – âm giai | chord–scale theory | [[he-thong-hop-am-am-giai]] |
+| Hợp âm át biến hoá; âm giai biến đổi | altered dominant; altered scale | [[hop-am-at-bien-hoa]] |
+| Thay thế hợp âm; backdoor | chord substitution; backdoor progression | [[thay-the-hop-am]] |
+| Rhythm changes; contrafact | rhythm changes; contrafact | [[rhythm-changes]] |
+| Vòng Coltrane | Coltrane changes | [[vong-coltrane]] |
+| Swing | swing | [[swing]] |
+| Blues 12 ô | twelve-bar blues | [[blues-12-nhip]] |
 | Xếp hợp âm | voicing | [[xep-hop-am]] |
 | Thay thế tritone | tritone substitution | [[thay-the-tritone]] |
 | Tái hoà âm | reharmonization | [[tai-hoa-am]] |
@@ -378,7 +390,7 @@ Thứ tự chi tiết: Phần II của [[giao-trinh-hoa-am]].
 4. **Ngoài điệu tính**: [[phi-dieu-tinh]], [[tap-hop-cao-do]], [[ky-thuat-12-am]].
 5. **Nửa sau thế kỷ**: [[toi-gian]], [[nhac-pho]].
 
-Hoà âm jazz (cũng là một nhánh của thế kỷ 20): [[he-thong-hop-am-am-giai]], [[xep-hop-am]], [[thay-the-tritone]], [[tai-hoa-am]].
+Hoà âm jazz (cũng là một nhánh của thế kỷ 20): [[hoa-am-jazz]].
 `,
   },
   {
@@ -535,6 +547,7 @@ Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii –
     slug: 'ky-hieu-hop-am',
     title: 'Ký hiệu hợp âm',
     category: 'harmony',
+    also: ['jazz'],
     aliases: ['hợp âm ký hiệu', 'chord symbol', 'lead sheet', 'đọc hợp âm', 'tên hợp âm', 'sus'],
     summary: 'Cách viết tắt hợp âm bằng chữ cái và hậu tố (Cm, G7, Fmaj7, Dsus4…), dùng trong nhạc pop, jazz và đệm hát.',
     wiki: 'Chord_chart',
@@ -582,6 +595,7 @@ Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 th
     slug: 'hop-am-mo-rong',
     title: 'Hợp âm mở rộng',
     category: 'harmony',
+    also: ['jazz'],
     aliases: ['hợp âm 9', 'hợp âm 11', 'hợp âm 13', 'extended chord', 'tension', 'nốt căng', 'hợp âm jazz'],
     summary: 'Hợp âm 7 tiếp tục chồng quãng 3 lên trên để có nốt 9, 11, 13 — màu sắc phong phú của jazz và R&B.',
     wiki: 'Extended_chord',
@@ -660,7 +674,8 @@ Theo Schoenberg, nốt gốc **lên quãng 4 (xuống quãng 5)** hoặc **xuố
     slug: 'vong-hop-am',
     title: 'Vòng hợp âm',
     category: 'harmony',
-    aliases: ['tiến trình hợp âm', 'chord progression', 'vòng hòa âm', 'I-V-vi-IV', 'ii-V-I', 'vòng Canon', 'vòng 4 hợp âm'],
+    also: ['jazz'],
+    aliases: ['tiến trình hợp âm', 'chord progression', 'vòng hòa âm', 'I-V-vi-IV', 'vòng Canon', 'vòng 4 hợp âm'],
     summary: 'Chuỗi hợp âm nối tiếp nhau; một số vòng phổ biến xuất hiện trong hàng ngàn bài hát.',
     wiki: 'Chord_progression',
     refs: [
@@ -685,7 +700,7 @@ Theo Schoenberg, nốt gốc **lên quãng 4 (xuống quãng 5)** hoặc **xuố
 ## Câu chuyện của vòng I – V – vi – IV
 - Hoà âm của **Canon** (Pachelbel) là I – V – vi – iii – IV – I – IV – V. Rất ít bài pop dùng đúng nguyên vòng (một ví dụ: "Graduation (Friends Forever)"), nhưng **rất nhiều** bài dùng dạng rút gọn hoặc biến đổi, như "Basket Case" (Green Day).
 - Vòng **I – V – vi – IV** nổi tiếng nhờ màn medley "4 Chords" của nhóm hài Axis of Awesome, ghép hàng chục bài hit dùng cùng vòng này.
-- **ii – V – I** được nhiều tài liệu coi là tiến trình phổ biến nhất trong jazz (nhận định định tính, chưa có thống kê); ví dụ "Autumn Leaves", "Tune-Up", "Lady Bird".
+- **[[ii-v-i|ii – V – I]]** được nhiều tài liệu coi là tiến trình phổ biến nhất trong jazz (nhận định định tính, chưa có thống kê); ví dụ "Autumn Leaves", "Tune-Up", "Lady Bird".
 - Trong thánh ca Bach, chuyển động nốt gốc **xuống quãng 5** là phổ biến nhất — gốc rễ của vòng quãng 5 và ii – V – I (xem [[he-thong-hoa-am-co-dien]]).
 
 ## Cách luyện trên piano
@@ -953,6 +968,7 @@ Hoá biểu khác nhau **không quá một dấu**: **Sol trưởng, Fa trưởn
     slug: 'hop-am-6-va-add',
     title: 'Hợp âm 6 và hợp âm add',
     category: 'harmony',
+    also: ['jazz'],
     aliases: ['hợp âm 6', 'C6', 'Cm6', 'hợp âm add9', 'add9', 'add2', 'hợp âm thêm nốt', 'sixth chord', 'added tone chord'],
     summary: 'C6 (C–E–G–A) có cùng bốn nốt với Am7 nhưng khác nốt trầm và chức năng; Cadd9 thêm nốt 9 mà không có nốt 7 nên vẫn ổn định, còn C9 có nốt 7 thứ nên mang tính át.',
     wiki: 'Added_tone_chord',

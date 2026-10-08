@@ -441,48 +441,6 @@ Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thư�
 `,
   },
   {
-    slug: 'blues-12-nhip',
-    title: 'Blues 12 ô nhịp',
-    category: 'form',
-    aliases: ['12 bar blues', 'blues 12 ô', 'vòng blues', 'twelve-bar blues', 'blues'],
-    summary: 'Khung hoà âm 12 ô nhịp dùng các hợp âm I, IV, V — nền tảng của blues, rock and roll và jazz.',
-    wiki: 'Twelve-bar_blues',
-    refs: [
-      ['Wikipedia — The Memphis Blues', 'https://en.wikipedia.org/wiki/The_Memphis_Blues'],
-      ['American Songwriter — Behind the song: "St. Louis Blues"', 'https://americansongwriter.com/behind-the-song-st-louis-blues/'],
-      ['St. Olaf College — W. C. Handy and the blues', 'https://pages.stolaf.edu/americanmusic/author/findle1/'],
-    ],
-    body: `
-Mỗi ô là một ô nhịp 4/4, trong giọng Đô:
-| Ô 1–4 | Ô 5–8 | Ô 9–12 |
-|---|---|---|
-| C7 · C7 · C7 · C7 | F7 · F7 · C7 · C7 | G7 · F7 · C7 · G7 |
-
-Ô 12 dùng G7 (**turnaround**) để quay về đầu vòng. Phiên bản "quick change" đổi ô 2 thành F7.
-
-## Đặc trưng
-- Cả ba hợp âm đều là [[hop-am-bay|hợp âm 7 át]] — điều "phạm luật" theo hoà âm cổ điển nhưng tạo nên màu blues.
-- Giai điệu và ngẫu hứng dùng [[am-giai-blues]].
-- Nhịp **swing**: cặp móc đơn được chơi dài – ngắn (gần với [[lien-ba]] 2+1).
-- Lời thường theo cấu trúc **AAB**: câu 1 nêu ý, câu 2 lặp lại, câu 3 đáp.
-
-## Bass boogie-woogie cho tay trái
-C – E – G – A – B♭ – A – G – E (mỗi nốt một móc đơn), dịch lên F và G theo hợp âm.
-
-## Lịch sử: những bản blues in đầu tiên
-Blues bắt nguồn từ truyền thống dân gian của người Mỹ gốc Phi; những bản **được in** đầu tiên xuất hiện năm 1912. Các nguồn không thống nhất "bản đầu tiên" là bản nào:
-| Bản | Năm in | Ghi chú |
-|---|---|---|
-| *Dallas Blues* — Hart Wand | 1912 | In ở Oklahoma City, **vài tháng trước** bản blues của Handy |
-| *The Memphis Blues* — W. C. Handy | 1912 | Viết năm 1909 cho một ứng viên thị trưởng Memphis |
-| *St. Louis Blues* — W. C. Handy | 1914 | Bản hit lớn, đưa blues thành một trong những thể loại phổ biến nhất nước Mỹ |
-
-Một điểm thú vị: cả *Memphis Blues* lẫn *St. Louis Blues* đều **không hoàn toàn** theo khuôn 12 ô nhịp. Sau đoạn mở đầu ngắn, chúng đặt một đoạn 12 ô nhịp blues cạnh một đoạn **16 ô nhịp** thông thường. *St. Louis Blues* còn chuyển giọng ra ngoài khuôn rồi mới quay về. Vì vậy câu trả lời cho "bản blues đầu tiên" tuỳ vào việc tính bản đầu tiên có chữ "blues" trong tên, bản 12 ô nhịp đầu tiên, hay bản hit đầu tiên.
-
-Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]], [[ngau-hung-piano]]. So sánh với khuôn 32 ô nhịp: [[hinh-thuc-ca-khuc-32]].
-`,
-  },
-  {
     slug: 'ostinato',
     title: 'Ostinato',
     category: 'form',

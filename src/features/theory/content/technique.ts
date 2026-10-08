@@ -664,6 +664,7 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
     slug: 'dem-hat-piano',
     title: 'Đệm hát và các kiểu đệm',
     category: 'technique',
+    also: ['jazz'],
     aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'comping', 'kiểu đệm', 'Alberti bass', 'stride piano', 'stride', 'đệm valse', 'chơi theo hợp âm'],
     summary: 'Các kiểu đệm cơ bản: hợp âm khối, hợp âm rải, bass Alberti, đệm valse, đệm pop, stride — và cách tập đệm từ bản nhạc chỉ có giai điệu và ký hiệu hợp âm.',
     refs: [

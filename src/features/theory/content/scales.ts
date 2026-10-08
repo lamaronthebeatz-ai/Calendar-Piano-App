@@ -333,44 +333,6 @@ Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng 
 `,
   },
   {
-    slug: 'am-giai-blues',
-    title: 'Âm giai blues',
-    category: 'scales',
-    aliases: ['blues scale', 'nốt blue', 'blue note', 'gam blues'],
-    summary: 'Ngũ cung thứ thêm nốt "blue" (bậc 5 giáng), tạo màu sắc đặc trưng của blues, jazz và rock.',
-    wiki: 'Blues_scale',
-    refs: [
-      ['Wikipedia — Blue note', 'https://en.wikipedia.org/wiki/Blue_note'],
-      ['Cutting (2019), Empirical Musicology Review — Microtonal analysis of "blue notes" and the blues scale', 'https://www.osu.tests.sfulib4.publicknowledgeproject.org/index.php/EMR/article/view/6316'],
-      ['University of Rochester — Unlocking the secrets of blue notes', 'https://www.rochester.edu/newscenter/unlocking-the-secrets-of-blue-notes-230482/'],
-      ['Martin (2025), Music Theory Online — The evolution of improvisation in early jazz piano pedagogy', 'https://mtosmt.org/issues/mto.25.31.3/mto.25.31.3.martin.php'],
-      ['Ethan Iverson / Asher Tobin Chodos — The history of the blues… scale?', 'https://ethaniverson.com/the-history-of-the-blues-scale-guest-post-by-asher-tobin-chodos/'],
-    ],
-    body: `
-Âm giai blues (dạng 6 nốt) = [[am-giai-ngu-cung|ngũ cung thứ]] + **♭5**:
-**1 – ♭3 – 4 – ♭5 – 5 – ♭7**
-
-::keyboard C4 Eb4 F4 Gb4 G4 Bb4 | Âm giai blues trên C: C – E♭ – F – G♭ – G – B♭
-
-## Nốt blue
-Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng hát, chúng thường được uốn (bend) vào khoảng giữa hai phím đàn; trên piano, người chơi mô phỏng bằng cách **láy nhanh** từ ♭3 lên 3 (E♭ → E).
-
-Âm giai blues thường được chơi trên khung [[blues-12-nhip]] với các [[hop-am-bay|hợp âm 7 át]]. Liên quan: [[dieu-thuc|Mixolydian]], [[dao-phach]].
-
-## Nốt blue thực sự cao bao nhiêu?
-- Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một phần tư cung đến nửa cung**.
-- Court Cutting (2019) đo cao độ trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 cent** — **giữa** quãng 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
-- Vì piano không có cao độ giữa hai phím, người chơi chỉ có thể **gợi** nốt blue — ví dụ [[nghe-si-piano-jazz|Thelonious Monk]] đánh **hai phím liền nhau cùng lúc**, hoặc láy nhanh từ ♭3 lên 3.
-
-## Âm giai blues là sản phẩm của sách dạy
-- Nguồn gốc nốt blue còn **tranh cãi**: Gerhard Kubik cho rằng chúng đến từ chuỗi bồi âm trong truyền thống châu Phi, không phải từ việc "hạ" các nốt bình quân.
-- "Âm giai blues" như một **bài học** xuất hiện muộn: phương pháp piano của Vincent Lopez (1933–34) có lẽ là ấn phẩm đầu tiên nêu một âm giai blues. Trước khi jazz vào giảng đường (khoảng 1967), có **nhiều phiên bản** âm giai blues khác nhau; dạng 6 nốt quen thuộc được các nhà giáo dục jazz như David Baker và Jamey Aebersold phổ biến.
-- Có người phê phán âm giai này **quá đơn giản**, không nắm được tinh thần của blues.
-
-Ý nghĩa với người dạy: âm giai blues là **điểm khởi đầu** hữu ích để ngẫu hứng (xem [[ngau-hung-piano]]), nhưng nên cho học sinh **nghe nhiều bản thu blues** để hiểu nốt blue thật sự "uốn" thế nào.
-`,
-  },
-  {
     slug: 'am-giai-cromatic',
     title: 'Âm giai cromatic và âm giai toàn cung',
     category: 'scales',
