@@ -494,6 +494,7 @@ Liên quan: [[hemiola]], [[nhip-hon-hop]]. Cách tập đa nhịp hai tay trên 
     slug: 'cam-nhan-phach',
     title: 'Cảm nhận phách',
     category: 'rhythm',
+    also: ['listening'],
     aliases: ['mạch phách', 'beat perception', 'cảm nhịp', 'giữ phách', 'groove', 'đồng bộ nhịp', 'vận động theo nhịp'],
     summary: 'Khả năng nghe ra phách có từ khi mới sinh, được củng cố bằng vận động cơ thể và luyện tập; nghiên cứu cho thấy người học nhạc đồng bộ nhịp chính xác hơn.',
     refs: [
