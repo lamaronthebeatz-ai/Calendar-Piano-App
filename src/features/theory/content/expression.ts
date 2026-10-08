@@ -80,7 +80,7 @@ Cường độ là **tương đối**: f trong nhạc Mozart nhẹ hơn f trong 
 - **Staccato**: nảy từ cổ tay (nhịp nhanh, nhẹ) hoặc từ ngón (rất nhanh).
 - Cuối dấu luyến, nhấc tay nhẹ nhàng — như "thở" ở cuối [[cau-nhac]].
 
-Đừng nhầm dấu luyến với [[cham-doi-dau-noi|dấu nối]] (nối hai nốt **cùng** cao độ). Tremolo, glissando, hợp âm rải có ký hiệu: [[ky-hieu-nang-cao]].
+Đừng nhầm dấu luyến với [[cham-doi-dau-noi|dấu nối]] (nối hai nốt **cùng** cao độ). Tremolo, glissando, hợp âm rải có ký hiệu: [[ky-hieu-nang-cao]]. Cách tay tạo ra legato, staccato, portato: [[ky-thuat-cham-phim]].
 `,
   },
   {
@@ -314,6 +314,8 @@ Lặp lại rất nhanh. Trên piano thường là **luân phiên giữa hai n�
 Nốt được viết trên khuông này nhưng chơi bằng tay thường đọc khuông kia — hay gặp khi giai điệu chuyển qua lại giữa hai tay. Tremolo và hợp âm rải hai tay cũng thường được viết chéo khuông (xem [[khuong-nhac|khuông nhạc đôi]]).
 
 Lưu ý: phần lớn nguồn là hướng dẫn của phần mềm ký âm (MuseScore, LilyPond). Các ký hiệu cơ bản khác: [[cach-dien-tau]], [[ky-hieu-hoa-my]], [[dau-nhac-lai]], [[ky-hieu-quang-tam]].
+
+Cách chơi tremolo bằng xoay cẳng tay: [[tremolo-xoay-cang-tay]].
 `,
   },
   {

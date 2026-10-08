@@ -313,7 +313,7 @@ Câu gợi nhớ: "**nice cup of tea**". Với **4 chọi 3**: chia 12 phần �
 ## Đa nhịp (polymeter)
 Hai bè có **độ dài ô nhịp khác nhau**: ví dụ một bè lặp mẫu 3 phách, bè kia lặp mẫu 4 phách — sau 12 phách chúng mới gặp lại ở phách đầu. Rất phổ biến trong nhạc châu Phi, nhạc [[toi-gian]] và progressive rock.
 
-Liên quan: [[hemiola]], [[nhip-hon-hop]].
+Liên quan: [[hemiola]], [[nhip-hon-hop]]. Cách tập đa nhịp hai tay trên piano: [[phoi-hop-hai-tay]].
 `,
   },
 ]

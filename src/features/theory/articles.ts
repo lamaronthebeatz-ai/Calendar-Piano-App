@@ -23,7 +23,7 @@ import { listening } from './content/listening'
  * được. Mục "Các bài nhắc đến trang này" tự sinh từ các liên kết đó.
  */
 export const CATEGORIES = {
-  technique: { title: 'Kỹ thuật & luyện tập piano', hue: 140, description: 'Tư thế, âm giai, hợp âm rải, đọc nốt, thị tấu, tốc độ, học thuộc, biểu cảm và sức khoẻ người chơi.' },
+  technique: { title: 'Kỹ thuật & luyện tập piano', hue: 140, description: 'Tư thế, cách chạm phím, âm giai, hợp âm rải, nốt kép, phối hợp hai tay, đọc nốt, thị tấu, phương pháp luyện tập, học thuộc, biểu diễn, sức khoẻ và lịch sử kỹ thuật piano.' },
   instrument: { title: 'Cây đàn piano', hue: 30, description: 'Lịch sử, harpsichord và clavichord, cấu tạo, bộ máy, các loại đàn, bảo dưỡng và lên dây.' },
   musicianship: { title: 'Luyện tai & sư phạm', hue: 265, description: 'Cảm âm tương đối và tuyệt đối, xướng âm, các phương pháp giáo dục âm nhạc, thi cấp độ.' },
   basics: { title: 'Ký âm cơ bản', hue: 220, description: 'Nốt, khuông nhạc, khoá, bàn phím và dấu hoá — đọc được bản nhạc.' },
