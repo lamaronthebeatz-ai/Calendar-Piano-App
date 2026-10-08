@@ -33,7 +33,7 @@ export const CATEGORIES = {
   harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hợp âm, chức năng, vòng hợp âm, kết và chuyển giọng.' },
   chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Nâng cao: Napoli, hợp âm 6 tăng, 7 giảm, mô tiến, bass số, Schenker, Neo-Riemann.' },
   form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Từ motif, câu nhạc đến cấu trúc của cả tác phẩm.' },
-  expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách đánh, hoa mỹ, pedal, ngón bấm và thuật ngữ.' },
+  expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách diễn tấu, hoa mỹ, pedal, ngón bấm, thuật ngữ, phong cách từng thời kỳ và cách chọn ấn bản.' },
   jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Swing, xếp hợp âm, hệ thống hợp âm – âm giai, thay thế tritone, tái hoà âm.' },
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử, ấn tượng, phi điệu tính, 12 âm, tập hợp cao độ, tối giản.' },
   listening: { title: 'Nghe, cảm thụ & âm học', hue: 210, description: 'Âm học cơ bản, lịch sử thu âm, nghe nhạc chủ động và tâm lý học cảm xúc âm nhạc.' },
