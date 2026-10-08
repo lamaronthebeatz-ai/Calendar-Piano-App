@@ -8,6 +8,11 @@ export const modern: Article[] = [
     aliases: ['thời kỳ', 'lịch sử âm nhạc', 'Baroque', 'Cổ điển', 'Lãng mạn', 'Phục hưng', 'Trung cổ', 'Classical period', 'Romantic', 'Renaissance', 'phong cách'],
     summary: 'Sáu giai đoạn lớn từ Trung cổ đến thế kỷ 20 — mỗi thời kỳ gắn với những kỹ thuật lý thuyết riêng.',
     wiki: 'Classical_music',
+    refs: [
+      ['Wikipedia — Baroque music', 'https://en.wikipedia.org/wiki/Baroque_music'],
+      ['Wikipedia — Common practice period', 'https://en.wikipedia.org/wiki/Common_practice_period'],
+      ['Oxford History of Western Music, vol. 2 — Music in the seventeenth and eighteenth centuries', 'https://academic.oup.com/book/60818/chapter/531540660'],
+    ],
     body: `
 | Thời kỳ | Khoảng năm | Nhà soạn nhạc tiêu biểu | Đặc trưng lý thuyết |
 |---|---|---|---|
@@ -17,6 +22,19 @@ export const modern: Article[] = [
 | [[thoi-ky-co-dien|Cổ điển]] | ~1750–1820 | [[Haydn]], [[Mozart]], [[Beethoven]] | [[hinh-thuc-sonata]], [[ket-cau|chủ điệu]] với bass Alberti, câu nhạc cân đối |
 | [[thoi-ky-lang-man|Lãng mạn]] | ~1820–1900 | [[Chopin]], [[Schumann]], [[Liszt]], [[Brahms]], [[Wagner]] | [[hoa-am-cromatic]], [[trung-am-cromatic]], rubato, tiểu phẩm piano |
 | [[thoi-ky-the-ky-20|Thế kỷ 20 – nay]] | 1900– | [[Debussy]], [[Schoenberg]], [[Stravinsky]], [[Bartók]], [[Steve Reich|Reich]] | [[an-tuong]], [[phi-dieu-tinh]], [[ky-thuat-12-am]], [[nhip-hon-hop]], [[toi-gian]] |
+
+## Mốc năm chỉ là quy ước
+- Tên và mốc năm các thời kỳ đều do **người đời sau** đặt ra; các nhà soạn nhạc không tự gọi mình là "Baroque" hay "Cổ điển". Các thời kỳ **chồng lấn** nhau: Wikipedia chia Baroque thành ba giai đoạn sớm – giữa – muộn với các mốc chồng lên nhau (khoảng 1580–1650, 1630–1700, 1680–1750).
+- Chữ **"Baroque"** ban đầu mang nghĩa **chê**: gốc tiếng Bồ Đào Nha chỉ viên ngọc trai méo, rồi được dùng cho phong cách bị coi là rườm rà; khi áp vào âm nhạc ở thế kỷ 18, nó cũng là lời phê phán. Việc dùng nó như **tên một thời kỳ** âm nhạc khá muộn — Curt Sachs áp lý thuyết Baroque của Heinrich Wölfflin vào âm nhạc năm **1919**.
+- **"Thời kỳ thông dụng"** (common practice) là tên gọi khoảng từ Baroque đến cuối Lãng mạn, khi [[he-thong-hoa-am-co-dien|hoà âm chức năng]] và các luật hoà âm – đối âm được dùng chung.
+
+## Thời kỳ và giáo trình hoà âm
+| Thời kỳ | Phần giáo trình liên quan |
+|---|---|
+| Trung cổ, Phục hưng | [[dieu-thuc]], [[doi-am-5-loai]] |
+| Baroque, Cổ điển | Chương 1–6: [[giao-trinh-hoa-am]], [[bass-so]], [[luoc-do-galant]] |
+| Lãng mạn | Chương 7–8: [[hoa-am-cromatic]], [[neo-riemann]] |
+| Thế kỷ 20 | Phần II: [[hoa-am-the-ky-20]] |
 
 ## Song song với nhạc cổ điển
 Từ đầu thế kỷ 20: **jazz** (ragtime → swing → bebop → modal…), rồi nhạc pop/rock — kế thừa hoà âm chức năng và phát triển theo hướng riêng (xem [[swing]], [[he-thong-hop-am-am-giai]]).
@@ -36,6 +54,12 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
     aliases: ['ấn tượng', 'impressionism', 'hợp âm song song', 'hoà âm phi chức năng'],
     summary: 'Phong cách đầu thế kỷ 20 (Debussy, Ravel): hợp âm được dùng như "màu sắc" thay vì chức năng, các hợp âm trượt song song, âm giai ngũ cung và toàn cung.',
     wiki: 'Impressionism_in_music',
+    refs: [
+      ['Wikipedia — Impressionism in music', 'https://en.wikipedia.org/wiki/Impressionism_in_music'],
+      ['Wikipedia — Voiles', 'https://en.wikipedia.org/wiki/Voiles'],
+      ['OUP Blog — Was Claude Debussy an impressionist?', 'https://blog.oup.com/2018/03/claude-debussy-impressionist-music/'],
+      ['Qobuz — Bill Evans biography', 'https://www.qobuz.com/ie-en/composer/bill-evans/27183'],
+    ],
     body: `
 ## Các kỹ thuật đặc trưng
 - **Hợp âm trượt song song** (planing): cả khối hợp âm di chuyển cùng hướng, phá bỏ quy tắc cấm [[dan-giong|quãng 5 song song]]. Ví dụ: "La cathédrale engloutie" của [[Debussy]].
@@ -50,7 +74,19 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
 - [[Debussy]]: "Clair de lune", 24 Préludes, Estampes.
 - [[Ravel]]: Jeux d'eau, Gaspard de la nuit.
 
-Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc phim. Bối cảnh: [[cac-thoi-ky]].
+## Ví dụ phân tích: "Voiles" (Préludes quyển 1)
+- Hầu như toàn bộ bản nhạc dùng **[[am-giai-cromatic|âm giai toàn cung]]**; vì sáu nốt cách đều nhau nên **không có cảm âm, không có chủ âm** rõ rệt.
+- Đoạn giữa ngắn chuyển sang **âm giai ngũ cung** (phím đen) — dày hơn, nhanh hơn, tạo tương phản trước khi chất liệu mở đầu quay lại.
+- Một nốt **B♭ trầm** được ngân và lặp lại gần như suốt bài như một [[bass-ngan|bass ngân]].
+- Hình thức: một biến thể của **ba đoạn** (A – B – A').
+
+## Cái tên "ấn tượng"
+- Chữ "ấn tượng" lấy từ hội hoạ: một nhà phê bình năm 1874 dùng nó để **chế giễu** bức *Impression, soleil levant* của Monet.
+- **Debussy phản đối** cái nhãn này: trong thư gửi nhà xuất bản Durand (1908), ông viết rằng những gì ông cố làm trong *Images* bị "những kẻ ngốc" gọi là "chủ nghĩa ấn tượng", một thuật ngữ dùng **hết sức thiếu chính xác**. Ravel cũng tỏ ra không thoải mái với nó.
+- Các học giả vẫn dùng thuật ngữ này như một **quy ước** cho phong cách; khi dạy nên nói rõ đó là nhãn của người đời sau.
+
+## Ảnh hưởng
+Hoà âm ấn tượng ảnh hưởng mạnh đến jazz: các tiểu sử về **Bill Evans** ghi nhận ông vay mượn nhiều từ Debussy và Ravel, đặc biệt trong cách xếp hợp âm của nhạc jazz điệu thức cuối thập niên 1950 (xem [[hoa-am-dieu-thuc]], [[xep-hop-am]]). Bối cảnh: [[cac-thoi-ky]].
 `,
   },
   {
@@ -60,8 +96,14 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc
     aliases: ['phi điệu tính', 'atonality', 'atonal', 'vô điệu tính', 'giải phóng nghịch âm', 'Trường phái Vienna thứ hai'],
     summary: 'Âm nhạc không có chủ âm hay giọng làm trung tâm; mọi 12 nửa cung bình đẳng, nghịch âm không cần giải quyết.',
     wiki: 'Atonality',
+    refs: [
+      ['Wikipedia — Atonality', 'https://en.wikipedia.org/wiki/Atonality'],
+      ["Boss — Schoenberg's Atonal Music (Cambridge), excerpt", 'https://assets.cambridge.org/97811084/09933/excerpt/9781108409933_excerpt.pdf'],
+      ['Routledge Encyclopedia of Modernism — Atonality', 'https://www.rem.routledge.com/articles/atonality-1'],
+      ['Wikipedia — Emancipation of the dissonance', 'https://en.wikipedia.org/wiki/Emancipation_of_the_dissonance'],
+    ],
     body: `
-Âm nhạc có tính điệu được tổ chức quanh một [[bac-am-giai|chủ âm]] và [[chuc-nang-hoa-am|hoà âm chức năng]]. Từ khoảng năm 1908–1909, **[[Schoenberg|Arnold Schoenberg]]** viết những tác phẩm từ bỏ hoàn toàn trung tâm này — ví dụ Ba tiểu phẩm piano Op. 11 (1909).
+Âm nhạc có tính điệu được tổ chức quanh một [[bac-am-giai|chủ âm]] và [[chuc-nang-hoa-am|hoà âm chức năng]]. Từ khoảng năm 1908–1909, **[[Schoenberg|Arnold Schoenberg]]** viết những tác phẩm từ bỏ trung tâm này. Các tác phẩm thường được coi là điểm khởi đầu: hai chương cuối của **Tứ tấu đàn dây số 2, Op. 10** (1907–08) và **Ba tiểu phẩm piano Op. 11** (1909).
 
 ## Đặc điểm
 - Không có [[hoa-bieu]]; [[dau-hoa]] được ghi trực tiếp cho từng nốt.
@@ -70,6 +112,18 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc
 
 ## Trường phái Vienna thứ hai
 [[Schoenberg]] cùng hai học trò [[Alban Berg]] và [[Anton Webern]]. Giai đoạn "phi điệu tính tự do" (khoảng 1908–1921) dẫn tới [[ky-thuat-12-am]].
+
+## Vấn đề thuật ngữ
+- Schoenberg **không thích** chữ "atonal" (phi điệu tính): theo ông, nghĩa đen của nó là "không có âm thanh". Ông thích chữ **"pantonal"** (toàn điệu tính) hơn. Các từ thay thế ("pantonal", "non-tonal") đều không phổ biến, nên "phi điệu tính" vẫn là thuật ngữ thông dụng.
+- Một số học giả (Ethan Haimo, Jack Boss) cho rằng cặp đối lập "có điệu tính / phi điệu tính" làm đơn giản hoá quá trình chuyển đổi từ từ trong âm nhạc Schoenberg.
+
+## "Giải phóng nghịch âm" nghĩa là gì?
+Cụm từ của Schoenberg (in trong tuyển tập tiểu luận *Style and Idea*): nghịch âm được hiểu như **thuận âm ở xa hơn** trong [[chuoi-boi-am|chuỗi bồi âm]], nên không có khác biệt bản chất giữa hai loại — nghịch âm **không cần giải quyết**.
+
+## Nghe nhạc phi điệu tính thế nào?
+- Theo dõi **[[motif]]** và các nhóm quãng lặp lại (thường là vài nốt), thay vì tìm hợp âm và giọng.
+- Chú ý **âm sắc, cường độ, mật độ** — những yếu tố gánh vai trò tạo cấu trúc khi hoà âm chức năng vắng mặt.
+- Bắt đầu bằng những tiểu phẩm ngắn: Op. 11 và Op. 19 (Schoenberg) cho piano.
 
 ## Công cụ phân tích
 [[tap-hop-cao-do|Lý thuyết tập hợp cao độ]] được phát triển để phân tích loại nhạc này. Tiền thân: [[hoa-am-cromatic]] cuối thời Lãng mạn.
@@ -82,8 +136,17 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz (Bill Evans) và nhạc
     aliases: ['12 âm', 'twelve-tone', 'dodecaphony', 'serialism', 'chuỗi 12 âm', 'tone row', 'hàng âm', 'âm nhạc chuỗi', 'ma trận 12 âm'],
     summary: 'Phương pháp sáng tác của Schoenberg: cả bản nhạc được xây từ một "chuỗi" sắp xếp đủ 12 nửa cung, mỗi nốt chỉ xuất hiện một lần.',
     wiki: 'Twelve-tone_technique',
+    refs: [
+      ['Wikipedia — Twelve-tone technique', 'https://en.wikipedia.org/wiki/Twelve-tone_technique'],
+      ['Wikipedia — Tone row', 'https://en.wikipedia.org/wiki/Tone_row'],
+      ['Wikipedia — Combinatoriality', 'https://en.wikipedia.org/wiki/Combinatoriality'],
+      ['Wikipedia — Violin Concerto (Berg)', 'https://en.wikipedia.org/wiki/Violin_Concerto_(Berg)'],
+      ['Wikipedia — Josef Matthias Hauer', 'https://en.wikipedia.org/wiki/Josef_Matthias_Hauer'],
+    ],
     body: `
-Schoenberg hệ thống hoá phương pháp này vào đầu những năm 1920 để tạo trật tự cho [[phi-dieu-tinh|âm nhạc phi điệu tính]]. Suite cho piano Op. 25 là một trong những tác phẩm 12 âm hoàn chỉnh đầu tiên.
+Schoenberg hệ thống hoá phương pháp này vào đầu những năm 1920 để tạo trật tự cho [[phi-dieu-tinh|âm nhạc phi điệu tính]]. **Suite cho piano Op. 25** (hoàn thành 1923) là tác phẩm xuất bản đầu tiên của ông viết hoàn toàn bằng phương pháp 12 âm — với các chương mượn tên vũ khúc Baroque: gavotte, musette, menuet, gigue.
+
+**Josef Matthias Hauer** (Áo) đã viết nhạc 12 âm chặt chẽ từ năm **1919** (*Nomos*, Op. 19 cho piano) và phát triển một hệ thống riêng dựa trên **44 "trope"** — chia 12 nốt thành hai nhóm 6 nốt không xếp thứ tự, khác với chuỗi có thứ tự của Schoenberg.
 
 ## Chuỗi (hàng âm)
 Nhà soạn nhạc sắp xếp 12 nốt của [[am-giai-cromatic]] theo một thứ tự riêng. Không nốt nào được lặp lại trước khi đủ 12 nốt — để không nốt nào nổi lên thành chủ âm.
@@ -100,6 +163,18 @@ Nhà soạn nhạc sắp xếp 12 nốt của [[am-giai-cromatic]] theo một th
 
 Mỗi dạng có thể dịch lên 12 cao độ → **48 dạng** của một chuỗi, thường được sắp xếp thành **ma trận 12 × 12**. Các phép biến đổi này giống kỹ thuật phát triển [[motif]] truyền thống.
 
+## Chuỗi có thể nghe "điệu tính": Concerto violin của Berg
+[[Alban Berg]] (1935) xây chuỗi từ các **hợp âm ba chồng nối nhau**: G thứ – D trưởng – A thứ – E trưởng, rồi bốn nốt cuối B – C♯ – E♭ – F đi lên theo **âm giai toàn cung**. Bốn nốt gốc G – D – A – E trùng với **bốn dây buông** của violin — và đó là những nốt đầu tiên nghệ sĩ độc tấu chơi. Ví dụ này cho thấy: 12 âm là **cách tổ chức**, không bắt buộc âm thanh phải phi điệu tính.
+
+## Tổ hợp (combinatoriality)
+Thuật ngữ do **Milton Babbitt** dùng từ năm 1950: chọn chuỗi sao cho **nửa đầu (6 nốt)** của một dạng chuỗi và nửa đầu của một dạng khác (ví dụ dạng đảo) **ghép lại đủ 12 nốt**. Nhờ vậy hai bè có thể vang cùng lúc mà vẫn giữ nguyên tắc "đủ 12 nốt mới lặp".
+
+## Cách phân tích một chuỗi
+1. Ghi chuỗi bằng số 0–11 (xem [[tap-hop-cao-do]]).
+2. Dựng **ma trận 12 × 12**: hàng đầu là P0, cột đầu là I0.
+3. Tìm trong bản nhạc dạng nào đang được dùng — nốt của chuỗi có thể chia giữa giai điệu và hợp âm.
+4. Xem chuỗi được **chia đoạn** ra sao (3 + 3 + 3 + 3, 6 + 6…): chính cách chia này tạo hoà âm của tác phẩm.
+
 ## Chủ nghĩa chuỗi toàn phần
 Sau 1945, [[Messiaen]], [[Boulez]], [[Karlheinz Stockhausen|Stockhausen]] áp dụng "chuỗi" cả cho [[truong-do]], [[cuong-do]], [[cach-dien-tau]]. Công cụ phân tích: [[tap-hop-cao-do]].
 `,
@@ -111,6 +186,13 @@ Sau 1945, [[Messiaen]], [[Boulez]], [[Karlheinz Stockhausen|Stockhausen]] áp d�
     aliases: ['pitch-class set', 'set theory', 'lớp cao độ', 'pitch class', 'số Forte', 'Forte number', 'prime form', 'vector quãng', 'interval vector', 'ký hiệu số nguyên'],
     summary: 'Công cụ phân tích nhạc thế kỷ 20: biểu diễn nốt bằng số 0–11, nhóm thành tập hợp và so sánh cấu trúc quãng giữa chúng.',
     wiki: 'Set_theory_(music)',
+    refs: [
+      ['Wikipedia — Set theory (music)', 'https://en.wikipedia.org/wiki/Set_theory_(music)'],
+      ['Wikipedia — Forte number', 'https://en.wikipedia.org/wiki/Forte_number'],
+      ['Wikipedia — Interval vector (Z-relation)', 'https://en.wikipedia.org/wiki/Interval_vector'],
+      ['Wikipedia — All-interval tetrachord', 'https://en.wikipedia.org/wiki/All-interval_tetrachord'],
+      ['Hutchinson, Music Theory for the 21st-Century Classroom — Forte numbers', 'https://musictheory.pugetsound.edu/mt21c/ForteNumbers.html'],
+    ],
     body: `
 ## Lớp cao độ và số nguyên
 Bỏ qua quãng 8 và tên [[trung-am]], mỗi nốt là một **lớp cao độ** đánh số: C = 0, C♯/D♭ = 1, D = 2 … B = 11. Phép tính theo **mod 12** (như mặt đồng hồ).
@@ -126,6 +208,22 @@ Bỏ qua quãng 8 và tên [[trung-am]], mỗi nốt là một **lớp cao độ
 ## Vector quãng
 Đếm số lần xuất hiện của 6 loại quãng (1 đến 6 nửa cung) trong tập hợp. Hợp âm trưởng (037) có vector **⟨001110⟩**: một quãng 3 thứ, một quãng 3 trưởng, một quãng 4 đúng (= 5 đúng đảo).
 
+## Số Forte
+Trong phụ lục sách *The Structure of Atonal Music* (Yale, 1973), Allen Forte lập danh mục mọi tập hợp từ 3 đến 9 nốt và đặt cho mỗi dạng nguyên tố một **số gồm hai phần**: số nốt – số thứ tự. Ví dụ hợp âm trưởng/thứ là **3-11**, hợp âm 7 giảm là **4-28**.
+
+## Hai cách tính dạng nguyên tố
+Có hai thuật toán: của **Forte** (bản gốc) và của **John Rahn** (*Basic Atonal Theory*, 1980), được Joseph Straus dùng trong *Introduction to Post-Tonal Theory* và nay **phổ biến hơn**. Với hầu hết tập hợp hai cách cho cùng kết quả; khi đọc tài liệu, cần kiểm tra sách đang dùng cách nào.
+
+## Quan hệ Z
+Hai tập hợp có **cùng vector quãng** nhưng **không** dịch giọng hay đảo được thành nhau gọi là có **quan hệ Z** (Forte đặt chữ "Z" từ năm 1964). Ví dụ nổi tiếng là hai **hợp âm 4 nốt chứa đủ 6 loại quãng**: **4-Z15** (0146) và **4-Z29** (0137), cùng vector ⟨111111⟩.
+
+## Các bước phân tích một nhóm nốt
+1. Đổi nốt thành số, bỏ nốt trùng.
+2. Xếp thành **dạng chuẩn** (normal form): thứ tự gọn nhất trong một quãng 8.
+3. Đưa về **dạng nguyên tố** và tra **số Forte**.
+4. Tính **vector quãng** để biết "màu" của tập hợp (nhiều quãng 2 thứ? nhiều tritone?).
+5. Tìm các tập hợp **cùng loại** xuất hiện ở chỗ khác trong bản nhạc — đó là sợi chỉ liên kết tác phẩm.
+
 ## Ứng dụng
 Allen Forte (*The Structure of Atonal Music*, 1973) hệ thống hoá phương pháp này để phân tích [[phi-dieu-tinh]] và [[ky-thuat-12-am]]. Tư duy "đồng hồ 12 giờ" cũng giải thích vì sao [[hop-am-bay-giam]] và [[am-giai-bat-cung]] đối xứng.
 `,
@@ -137,6 +235,12 @@ Allen Forte (*The Structure of Atonal Music*, 1973) hệ thống hoá phương p
     aliases: ['octatonic', 'octatonic scale', 'diminished scale', 'âm giai giảm', 'nửa cung – cung', 'cung – nửa cung', 'mode 2 Messiaen'],
     summary: 'Âm giai 8 nốt xen kẽ nửa cung và cung; chỉ có 3 phiên bản khác nhau — gắn liền với hợp âm 7 giảm.',
     wiki: 'Octatonic_scale',
+    refs: [
+      ['Wikipedia — Octatonic scale', 'https://en.wikipedia.org/wiki/Octatonic_scale'],
+      ['Tymoczko — Stravinsky and the octatonic: a reconsideration (PDF)', 'https://edisciplinas.usp.br/mod/resource/view.php?id=139657'],
+      ['Merriam-Webster — octatonic', 'https://www.merriam-webster.com/dictionary/octatonic'],
+      ['Wikipedia — Mode of limited transposition', 'https://en.wikipedia.org/wiki/Mode_of_limited_transposition'],
+    ],
     body: `
 Hai dạng (bắt đầu từ C):
 - **Nửa cung – cung**: C – D♭ – E♭ – E – F♯ – G – A – B♭.
@@ -146,6 +250,15 @@ Hai dạng (bắt đầu từ C):
 
 ## Đối xứng
 Âm giai là hợp của **hai [[hop-am-bay-giam|hợp âm 7 giảm]]** (C – E♭ – F♯ – A và D♭ – E – G – B♭). Dịch lên quãng 3 thứ cho ra chính nó → chỉ có **3** âm giai bát cung khác nhau (giống [[am-giai-cromatic|âm giai toàn cung]] chỉ có 2).
+
+## Lịch sử tên gọi
+- Trong giới nhạc sĩ quanh **Rimsky-Korsakov** ở St. Petersburg đầu thế kỷ 20, âm giai này quen thuộc đến mức được gọi là **"âm giai Korsakov"** (theo nghiên cứu của Richard Taruskin).
+- Thuật ngữ **"octatonic"** được **Arthur Berger** đưa vào tiếng Anh trong bài *Problems of Pitch Organization in Stravinsky* (**1963**). Từ đó các nghiên cứu về Stravinsky (Pieter van den Toorn, Taruskin) dùng nó làm khái niệm trung tâm; Dmitri Tymoczko sau này tranh luận lại về mức độ Stravinsky thực sự "nghĩ" theo âm giai này.
+
+## Hợp âm trong âm giai bát cung
+Âm giai bát cung trên C (nửa cung – cung) chứa **bốn hợp âm trưởng** và **bốn hợp âm thứ** có gốc cách nhau quãng 3 thứ: C, E♭, F♯, A (trưởng và thứ) — cùng các hợp âm 7 át C7, E♭7, F♯7, A7. Vì vậy:
+- Hai hợp âm trưởng cách nhau **tritone** (C và F♯) cùng nằm trong một âm giai bát cung — cơ sở của [[hop-am-chong|hợp âm Petrushka]] và của [[thay-the-tritone]] trong jazz.
+- Âm giai này là cầu nối giữa hợp âm 7 giảm, các quan hệ [[trung-am-cromatic|quãng 3 thứ]] và hoà âm thế kỷ 20.
 
 ## Ứng dụng
 - **Jazz**: dạng nửa cung – cung trên hợp âm 7 át ♭9 (C7♭9); dạng cung – nửa cung trên hợp âm °7 (xem [[he-thong-hop-am-am-giai]]).
@@ -163,6 +276,11 @@ Phân tích bằng [[tap-hop-cao-do]]: {0, 1, 3, 4, 6, 7, 9, 10}.
     aliases: ['polytonality', 'bitonality', 'song điệu tính', 'hợp âm Petrushka', 'Petrushka chord'],
     summary: 'Hai hoặc nhiều giọng vang lên cùng lúc — ví dụ tay phải ở Đô trưởng, tay trái ở Fa♯ trưởng.',
     wiki: 'Polytonality',
+    refs: [
+      ['Wikipedia — Polytonality', 'https://en.wikipedia.org/wiki/Polytonality'],
+      ['Milhaud — Polytonality and atonality (1923), bản dịch (PDF)', 'https://edisciplinas.usp.br/pluginfile.php/4438491/mod_resource/content/1/Politonality%20and%20Atonality%20%28Milhaud%201923%20trad%202006%29.pdf'],
+      ['Chromatone — Polytonality', 'https://chromatone.center/theory/harmony/polytonality/'],
+    ],
     body: `
 Mỗi lớp giữ [[hoa-bieu|giọng]] riêng của nó, tạo ra những va chạm [[thuan-nghich|nghịch]] có tổ chức.
 
@@ -173,9 +291,19 @@ Mỗi lớp giữ [[hoa-bieu|giọng]] riêng của nó, tạo ra những va ch�
 
 Đáng chú ý: tất cả các nốt của hợp âm này nằm trong một [[am-giai-bat-cung]].
 
+## Trước thế kỷ 20: đa điệu tính để gây cười
+Những ví dụ sớm đều có **mục đích minh hoạ**: *Battalia* (1673) của Biber tả đám lính say hát mỗi người một giọng; chương cuối *Một trò đùa âm nhạc* (K. 522) của [[Mozart]] cho các bè chơi **lệch giọng** để chế giễu nhạc công kém. Đa điệu tính như một **ngôn ngữ nghiêm túc** chỉ xuất hiện từ đầu thế kỷ 20.
+
+## Đa điệu tính, hợp âm chồng hay một hợp âm?
+- Thuật ngữ: **song điệu tính** (bitonality) là trường hợp riêng với đúng **hai** giọng.
+- Một khoảnh khắc hai hợp âm vang cùng lúc là [[hop-am-chong|hợp âm chồng]]; chỉ khi **hai lớp** giữ giọng riêng **trong một đoạn nhạc**, ta mới nói đến đa điệu tính.
+- Nhiều nhà phân tích cho rằng tai người khó nghe hai chủ âm cùng lúc; những gì nghe "đa điệu tính" thường được giải thích lại bằng [[am-giai-bat-cung|âm giai bát cung]] hoặc đa **điệu thức** (polymodality).
+
 ## Các nhà soạn nhạc
-- [[Milhaud|Darius Milhaud]] — "Saudades do Brasil" (piano).
-- [[Ives|Charles Ives]], [[Bartók|Béla Bartók]].
+- [[Bartók|Béla Bartók]] — **14 Bagatelles, Op. 6** (1908): thường được nêu trong số những ví dụ đa điệu tính sớm nhất **không mang tính minh hoạ**.
+- [[Ives|Charles Ives]] — *Variations on "America"*; theo các tiểu sử, cha ông từng cho con hát một bài ở một giọng trong khi đệm ở giọng khác.
+- [[Stravinsky]] — *Petrushka* (1911), *Le Sacre du printemps* (1913).
+- [[Milhaud|Darius Milhaud]] — người viết lý thuyết cho kỹ thuật này: bài báo **"Polytonalité et atonalité" (1923)** phân biệt đa điệu tính với phi điệu tính; tác phẩm piano *Saudades do Brasil*.
 
 ## Thử trên piano
 Tay phải chơi giai điệu đơn giản trên phím trắng, tay trái đệm hợp âm trên phím đen (F♯ – A♯ – C♯) — một bài tập [[ket-cau]] thú vị. Liên quan: [[phi-dieu-tinh]], [[cac-thoi-ky]].
@@ -188,6 +316,12 @@ Tay phải chơi giai điệu đơn giản trên phím trắng, tay trái đệm
     aliases: ['tone cluster', 'cluster', 'cụm âm', 'hợp âm cụm'],
     summary: 'Nhiều nốt liền nhau (cách nhau nửa cung hoặc một cung) vang cùng lúc — thường chơi bằng lòng bàn tay hoặc cẳng tay.',
     wiki: 'Tone_cluster',
+    refs: [
+      ['Wikipedia — Tone cluster', 'https://en.wikipedia.org/wiki/Tone_cluster'],
+      ['Library of Congress — Henry Cowell and the joys of noise', 'https://blogs.loc.gov/music/2020/11/henry-cowell-and-the-joys-of-noise/'],
+      ['Cowell — New Musical Resources (1969 ed., PDF)', 'https://monoskop.org/images/9/97/Cowell_Henry_New_Musical_Resources_1969.pdf'],
+      ['Wikipedia — Piano Sonata No. 2 (Ives) (Concord)', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._2_(Ives)'],
+    ],
     body: `
 Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang-bon]]), âm cụm chồng **quãng 2** — âm thanh dày đặc, giống một "khối màu" hơn là hợp âm.
 
@@ -199,8 +333,17 @@ Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang
 - **Ngũ cung**: chỉ phím đen.
 - **Cromatic**: cả phím trắng và đen — dày đặc nhất.
 
+## Trước Cowell
+Âm cụm không hoàn toàn mới: *Battalia* (1673) của Biber đã có âm cụm diatonic; đoạn "Hỗn mang" mở đầu ballet *Les Élémens* (1737–38) của **Jean-Féry Rebel** cho dàn nhạc chơi cùng lúc **mọi nốt** của âm giai thứ hoà âm. Nhưng trước thế kỷ 20, những ví dụ như vậy chỉ lẻ tẻ và ngắn.
+
+## Ký hiệu và cách chơi
+- Thường ghi bằng **một thanh đậm** nối nốt thấp nhất và cao nhất; dấu hoá đặt cạnh cho biết phím trắng, phím đen hay cả hai.
+- Chơi bằng **lòng bàn tay, nắm tay, cẳng tay**: giữ cổ tay mềm, thả **trọng lượng** cánh tay thay vì đập (xem [[ky-thuat-cham-phim]]).
+- Âm cụm lớn nên đánh với **pedal** để âm vang hoà vào nhau (xem [[ban-dap]]).
+
 ## Nhà soạn nhạc
-- **[[Cowell|Henry Cowell]]** — "The Tides of Manaunaun" (1917): tay trái chơi âm cụm bằng cẳng tay.
+- **[[Cowell|Henry Cowell]]** — người **đặt tên** "tone cluster" và khám phá có hệ thống: *Adventures in Harmony* (khoảng 1913, ngày tháng còn tranh cãi), *Dynamic Motion* (1916), **"The Tides of Manaunaun"** (1917, tác phẩm nổi tiếng nhất: tay trái chơi âm cụm bằng cẳng tay). Lý thuyết được trình bày trong sách *New Musical Resources* (viết từ khoảng 1917, xuất bản 1930).
+- **[[Bartók]]**: sau khi nghe Cowell biểu diễn, ông **xin phép Cowell** để dùng kỹ thuật này; âm cụm xuất hiện trong Sonata piano và tập *Out of Doors* (cùng năm 1926).
 - Charles Ives — Concord Sonata (dùng một thanh gỗ để nhấn âm cụm).
 - Ligeti, Penderecki — âm cụm cho dàn nhạc.
 
@@ -214,6 +357,13 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
     aliases: ['minimalism', 'tối giản', 'minimal music', 'phasing', 'lệch pha'],
     summary: 'Phong cách từ những năm 1960: các mẫu ngắn lặp lại liên tục và biến đổi rất chậm, hoà âm đơn giản, nhịp đều.',
     wiki: 'Minimal_music',
+    refs: [
+      ['Wikipedia — Minimal music', 'https://en.wikipedia.org/wiki/Minimal_music'],
+      ['Wikipedia — Michael Nyman', 'https://en.wikipedia.org/wiki/Michael_Nyman'],
+      ['Potter, Gann & Siôn — Ashgate Research Companion to Minimalist and Postminimalist Music, Introduction (PDF)', 'https://music.arts.uci.edu/abauer/9.3/readings/Introduction_AshgateResearchCompanionMinimalist.pdf'],
+      ['Wikipedia — In C', 'https://en.wikipedia.org/wiki/In_C'],
+      ['Wikipedia — Piano Phase', 'https://en.wikipedia.org/wiki/Piano_Phase'],
+    ],
     body: `
 ## Kỹ thuật chính
 - **Lặp lại**: một [[ostinato]] ngắn được lặp đi lặp lại hàng chục, hàng trăm lần.
@@ -225,6 +375,19 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
 - [[Terry Riley]] — "In C" (1964): 53 mẫu nhạc ngắn, mỗi người chơi tự quyết định khi nào chuyển mẫu.
 - [[Steve Reich]] — "Music for 18 Musicians".
 - [[Philip Glass]] — "Metamorphosis", "Glassworks" (piano).
+
+## Tên gọi
+- Nguồn gốc chữ **"minimal music"** còn tranh cãi: Steve Reich và một số học giả cho là do nhà phê bình **Michael Nyman** (bài báo năm **1968**); Philip Glass lại cho là Tom Johnson.
+- **Glass không nhận** nhãn "tối giản", tự gọi mình là người viết "nhạc có cấu trúc lặp"; ông cho rằng nhãn này cùng lắm chỉ đúng với tác phẩm thập niên 1960–70 của ông.
+- Bốn tên tuổi "cốt lõi" thường được nêu: **La Monte Young, Terry Riley, Steve Reich, Philip Glass**.
+
+## Hoà âm trong nhạc tối giản
+- Hoà âm thường là **diatonic**, nhiều khi chỉ vài hợp âm, thay đổi rất chậm — gần với [[toan-diatonic|toàn diatonic]] và [[hoa-am-dieu-thuc|hoà âm điệu thức]].
+- Sự thay đổi chậm của [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] khiến **mỗi lần đổi hợp âm trở thành một sự kiện**.
+- Steve Reich gọi cách làm của mình là **"quá trình"**: người nghe phải nghe được quá trình biến đổi đang diễn ra (tiểu luận *Music as a Gradual Process*, 1968).
+
+## Gợi ý dạy học
+"In C" (Riley) chơi được với **mọi nhạc cụ và mọi trình độ**: cả lớp cùng đi qua 53 mẫu nhạc theo tốc độ riêng — một bài học về nghe nhau và hoà âm tạo thành từ sự chồng lớp.
 
 ## Ảnh hưởng
 Nhạc phim, nhạc điện tử, post-rock và nhạc piano "tân cổ điển" (Ludovico Einaudi, Max Richter). Liên quan: [[da-nhip]], [[ket-cau]], [[cac-thoi-ky]].
