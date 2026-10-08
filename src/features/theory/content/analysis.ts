@@ -109,4 +109,101 @@ Xem lý thuyết ở [[hinh-thuc-sonata]].
 - Trước khi tập, cho học trò tìm ranh giới trình bày – phát triển – tái hiện trên bản nhạc: hiểu cấu trúc giúp [[hoc-thuoc-bai|học thuộc]] nhanh hơn.
 `,
   },
+  {
+    slug: 'phan-tich-nocturne-op9-so2',
+    title: 'Phân tích: Nocturne Op. 9 số 2',
+    category: 'analysis',
+    aliases: ['Nocturne Op. 9 No. 2', 'Nocturne Mi giáng trưởng', 'Op. 9 số 2', 'Chopin Nocturne'],
+    summary: 'Nocturne Mi♭ trưởng của Chopin (1830–1832): nhịp 12/8, hình thức hai đoạn có tái hiện — mỗi lần giai điệu trở lại được trang trí hoa mỹ phong phú hơn.',
+    wiki: 'Nocturnes,_Op._9_(Chopin)',
+    refs: [
+      ['Wikipedia — Nocturnes, Op. 9 (Chopin)', 'https://en.wikipedia.org/wiki/Nocturnes,_Op._9_(Chopin)'],
+      ['PTNA Piano Encyclopedia — Chopin Nocturne Op. 9-2', 'https://enc.piano.or.jp/en/musics/21883'],
+      ['Schachter & Siegel — Structural momentum and closure in Chopin\'s Nocturne Op. 9 No. 2 (Schenker Studies 2)', 'https://www.cambridge.org/core/books/schenker-studies-2/structural-momentum-and-closure-in-chopins-nocturne-op-9-no-2/62A040B19DE1E60948923A19C67FB7D8'],
+    ],
+    body: `
+## Tổng quan
+[[Chopin]] viết bộ ba Nocturne Op. 9 khoảng **1830–1832**, khi mới khoảng 20 tuổi, đề tặng **Marie Pleyel** — một nghệ sĩ piano trẻ tài năng. Thể loại nocturne học từ [[John Field]] (xem [[the-loai]]).
+
+## Nhịp 12/8
+12 phách nhỏ chia thành **bốn nhóm 3** ([[so-chi-nhip|nhịp kép]], giống cảm giác [[dieu-dem-pho-bien|slow rock 12/8]]). Tay trái đệm kiểu **nốt trầm – hợp âm – hợp âm** trong mỗi nhóm ba, gợi nhịp valse — xem [[dem-hat-piano]] và [[buoc-nhay-xa]].
+
+::keyboard Eb4 G4 Bb4 | Hợp âm chủ Mi♭ trưởng (E♭ – G – B♭); hoá biểu 3 dấu giáng
+
+## Hình thức
+Dài **34 ô nhịp**, thường được phân tích là **hai đoạn có tái hiện**: A – A – B – A – B – A, cộng **coda** (một nghiên cứu năm 2025 chia chi tiết hơn: A – B – A′ – coda – coda′ – cadenza).
+- Mỗi lần A và B trở lại, giai điệu được **trang trí phong phú hơn**: láy rền kéo dài, chuỗi nốt nhỏ — xem [[ky-hieu-hoa-my]].
+- Đoạn B có hoà âm "lang thang", bè trầm đi xuống nửa cung rồi về IV – I — mang dấu ấn ngẫu hứng của Chopin.
+- Gần cuối, chỉ dẫn **senza tempo** (không theo nhịp) cho phép một đoạn rất tự do trước khi kết.
+
+## Gợi ý khi dạy
+- Giai điệu tay phải phải **hát**: dùng trọng lượng cánh tay, tay trái thật nhẹ ([[lam-noi-giai-dieu]]).
+- Chuỗi nốt hoa mỹ: phân nhóm theo phách tay trái trước, rồi mới thả tự do theo [[nhip-do|rubato]] ([[dien-dat-cau-nhac]]).
+- [[ban-dap|Pedal]] đổi theo từng nốt trầm của tay trái.
+
+Phân tích Schenker về bài này (Schachter & Siegel) chỉ ra nhiều điểm "khó hiểu" trong cách phân bố trọng tâm cấu trúc — xem [[phan-tich-schenker]].
+`,
+  },
+  {
+    slug: 'phan-tich-gymnopedie-so1',
+    title: 'Phân tích: Gymnopédie số 1',
+    category: 'analysis',
+    aliases: ['Gymnopédie', 'Gymnopedie', 'Gymnopédie No. 1', 'Lent et douloureux'],
+    summary: 'Tiểu phẩm 3/4 của Satie (1888): hai hợp âm 7 trưởng xen kẽ Gmaj7 – Dmaj7 dưới một giai điệu đơn giản, tạo nên không khí tĩnh lặng, u buồn.',
+    wiki: 'Gymnopédies',
+    refs: [
+      ['Pianist Musings — What makes Gymnopédie No. 1 so special?', 'https://pianistmusings.com/2019/06/14/what-makes-gymnopedie-no-1-so-special/'],
+      ['Piano Street — Satie: Gymnopédie No. 1', 'https://www.pianostreet.com/satie-sheet-music/gymnopedies/gymnopedie-1-d-major.htm'],
+      ['Dartmouth — Satie analysis project (PDF)', 'https://gauss.dartmouth.edu/~m5f10/proj/Hopkins.pdf'],
+    ],
+    body: `
+## Tổng quan
+Bộ ba Gymnopédie của [[Satie]] hoàn thành ngày **2/4/1888**; cả ba đều ở nhịp **3/4**. Bài số 1 ở giọng **Rê trưởng**, đoạn giữa nghiêng sang Rê thứ. Chỉ dẫn "**Lent et douloureux**" (chậm và đau buồn) có trong bản in; bản viết tay ghi "Très lent". [[Debussy]] sau này phối khí cho dàn nhạc bài số 1 và số 3.
+
+## Hai hợp âm xen kẽ
+Phần mở đầu chỉ luân phiên **hai hợp âm 7 trưởng**:
+
+::keyboard G3 B3 D4 F#4 | Gmaj7: G – B – D – F♯
+::keyboard D3 F#3 A3 C#4 | Dmaj7: D – F♯ – A – C♯
+
+Cả hai đều chứa **F♯** — nốt chung giữ hai hợp âm gắn kết và tạo màu u buồn đặc trưng. Toàn bộ trang đầu chỉ dùng hai hợp âm này: hoà âm **không tiến triển** theo [[chuc-nang-hoa-am|chức năng]] mà như một màu sắc tĩnh — gần với [[an-tuong|hoà âm ấn tượng]] và là tiền thân của [[toi-gian|âm nhạc tối giản]].
+
+Về sau hoà âm hướng tới Rê thứ và La thứ, với [[bass-ngan|bass ngân]] D trầm bên dưới các [[hop-am-bay|hợp âm 7]] xen kẽ.
+
+## Gợi ý khi dạy
+- Bài tốt để luyện **[[buoc-nhay-xa|bước nhảy]] tay trái**: nốt trầm ở phách 1, hợp âm ở phách 2.
+- Giai điệu bắt đầu ở phách 2 — đếm kỹ để không vào sớm.
+- Pedal đổi mỗi ô nhịp, tiếng đàn mềm, đều — xem [[ban-dap]], [[cuong-do]].
+
+Lưu ý: tên hợp âm lấy từ một phân tích; các ấn bản có thể ghi cách xếp nốt khác.
+`,
+  },
+  {
+    slug: 'phan-tich-traumerei',
+    title: 'Phân tích: Träumerei',
+    category: 'analysis',
+    aliases: ['Träumerei', 'Traumerei', 'Mơ mộng', 'Kinderszenen', 'Cảnh tuổi thơ', 'Op. 15 số 7'],
+    summary: 'Bài số 7 trong "Cảnh tuổi thơ" Op. 15 của Schumann (1838): giai điệu Fa trưởng ngắn gọn, hình thức ba đoạn, được biết đến như một trong những tiểu phẩm piano nổi tiếng nhất.',
+    wiki: 'Kinderszenen',
+    refs: [
+      ['teoria.com — Ternary form: Schumann, Träumerei', 'https://teoria.com/en/tutorials/forms/ternary/03-schumann.php'],
+      ['PTNA Piano Encyclopedia — Kinderszenen Op. 15', 'https://enc.piano.or.jp/en/musics/65'],
+    ],
+    body: `
+## Tổng quan
+**Kinderszenen** ("Cảnh tuổi thơ") Op. 15 gồm **13 tiểu phẩm**, [[Schumann]] viết năm **1838**, Breitkopf & Härtel xuất bản năm **1839**. **Träumerei** ("Mơ mộng") là bài **số 7**, ở giọng **Fa trưởng**. Schumann ban đầu gọi tập này là những bài dễ, và về sau nói rằng các tên bài **chỉ là "gợi ý tinh tế cho cách thể hiện"**, không phải một câu chuyện có chương trình.
+
+## Hình thức
+Theo teoria.com, Träumerei là ví dụ của **[[hinh-thuc-am-nhac|hình thức ba đoạn]]**: đoạn A gồm **hai câu nhạc**; khi A trở lại thì **ngắn hơn và có biến đổi nhỏ** (A′). Xem [[cau-nhac]].
+
+::keyboard F4 A4 C5 | Hợp âm chủ Fa trưởng (hoá biểu 1 dấu giáng — B♭)
+
+## Gợi ý khi dạy
+- Giai điệu nằm ở bè trên nhưng các bè giữa cũng có đường nét riêng — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] và nghe từng bè ([[dan-giong]], [[doi-am]]).
+- Nhịp độ chậm, uốn câu theo hình vòm và chậm nhẹ ở cuối câu ([[dien-dat-cau-nhac]]).
+- Pedal đổi theo hợp âm, giữ cho các bè không bị nhoè ([[ban-dap]]).
+
+Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 68 (xem [[lo-trinh-tac-pham]]). Lưu ý: chi tiết số ô nhịp và các kết câu cần đối chiếu trên bản nhạc (ví dụ ấn bản miễn phí trên IMSLP).
+`,
+  },
 ]

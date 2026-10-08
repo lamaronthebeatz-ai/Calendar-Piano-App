@@ -115,7 +115,7 @@ Orff và Kodály đều coi trọng **âm thanh trước ký hiệu**: biết h�
 - Hát giai điệu trước khi chơi; dùng [[am-giai-ngu-cung|âm giai ngũ cung]] và bài dân ca quen thuộc (Kodály, Orff).
 - Nghe bản thu bài sắp học và mời phụ huynh cùng tham gia buổi tập (Suzuki).
 
-Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp còn hạn chế.
+Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp còn hạn chế. Gợi ý theo lứa tuổi: [[day-tre-em]], [[day-nguoi-lon]].
 `,
   },
   {
@@ -187,6 +187,70 @@ Mỗi nhà xuất bản và hệ thống thi có thang độ khó riêng (thang 
 - Kết hợp với bài luyện ngón của [[Czerny]] (xem [[bai-tap-ngon]]).
 
 Thông tin về các nhà soạn nhạc: [[thoi-ky-baroque]], [[thoi-ky-co-dien]], [[thoi-ky-lang-man]].
+`,
+  },
+  {
+    slug: 'day-tre-em',
+    title: 'Dạy piano cho trẻ em',
+    category: 'musicianship',
+    aliases: ['dạy trẻ em', 'trẻ em học piano', 'tuổi bắt đầu học đàn', 'mấy tuổi học piano', 'dạy trẻ nhỏ'],
+    summary: 'Không có độ tuổi "chuẩn" được nghiên cứu xác nhận; nhiều giáo viên khuyên bắt đầu khoảng 6–8 tuổi, nhưng mức độ sẵn sàng của từng trẻ quan trọng hơn tuổi.',
+    refs: [
+      ['Intersections (érudit) — music education paper on starting age (PDF)', 'https://www.erudit.org/en/revue/is/2015/v35/n1/1038943ar.pdf'],
+      ['School of Rock — What is the best age to learn piano?', 'https://www.schoolofrock.com/resources/keyboard/what-is-the-best-age-to-learn-piano'],
+    ],
+    body: `
+## Bắt đầu từ mấy tuổi?
+- Chưa có **đồng thuận khoa học** về một độ tuổi tốt nhất.
+- Một bài viết giáo dục âm nhạc cho biết: có người ủng hộ bắt đầu sớm ở 4–5 tuổi, có người muốn chờ, nhưng **đa số giáo viên** vẫn cho rằng 7–8 tuổi là tuổi tốt nhất để bắt đầu học đàn **cá nhân** — đây là ý kiến giáo viên, chưa phải kết quả đo lường.
+- Các trường nhạc thường gợi ý **6–9 tuổi**. Trẻ 4–5 tuổi tỏ ra thích thú có thể bắt đầu bằng các buổi làm quen **ngắn, mang tính trò chơi**.
+
+## Dấu hiệu sẵn sàng
+Thường được đánh giá **kết hợp** nhiều yếu tố hơn là chỉ tuổi:
+- **Vận động tinh**: phối hợp và độc lập các ngón, kích thước bàn tay.
+- **Khả năng tập trung**, ngồi yên, nghe và làm theo hướng dẫn.
+- **Điều hoà cảm xúc** và khả năng hiểu khái niệm trừu tượng (ví dụ ký hiệu nốt).
+
+## Gợi ý khi dạy trẻ nhỏ
+Phần này vận dụng các bài khác trong thư viện:
+- **Âm thanh trước ký hiệu**: hát, vỗ tay, vận động theo nhịp trước khi đọc nốt (tinh thần Kodály, Orff, Dalcroze — xem [[phuong-phap-giao-duc-am-nhac]]).
+- Buổi học **ngắn**, chia nhiều hoạt động; chơi trên phím đen ([[am-giai-ngu-cung|ngũ cung]]) để trẻ ngẫu hứng sớm ([[ngau-hung-piano]]).
+- Đọc nốt bằng **nốt mốc** ([[doc-not-nhanh]]); [[tu-the|tư thế]] với bục kê chân.
+- Phụ huynh tham gia buổi tập ở nhà (tinh thần Suzuki).
+
+Các con số về thời gian tập trung theo tuổi hay "lợi ích nhận thức" được nhiều trang quảng cáo nêu nhưng **không có nguồn kiểm chứng**, nên không đưa vào đây.
+`,
+  },
+  {
+    slug: 'day-nguoi-lon',
+    title: 'Dạy piano cho người lớn',
+    category: 'musicianship',
+    aliases: ['người lớn học piano', 'adult beginner', 'học đàn khi lớn tuổi', 'học viên người lớn'],
+    summary: 'Người lớn thường có động lực nội tại mạnh (thực hiện ước mơ) nhưng gặp khó về thời gian, nỗi sợ bị đánh giá và việc tay "chậm hơn đầu".',
+    refs: [
+      ['Du — Literature review on motivation of piano beginners (Atlantis Press, PDF)', 'https://www.atlantis-press.com/article/125969895.pdf'],
+      ['HRMARS — Challenges in teaching music among adult beginners', 'https://hrmars.com/ijarped/article/view/24388/Challenges-in-Teaching-Music-among-Adult-Beginner-of-Private-Esperto-Music-Studio'],
+      ['Teoh (2020), University of Malaya — Adult piano learners (thesis record)', 'https://knova.um.edu.my/student_works_2020s/364/'],
+      ['Piano Inspires — 5 things about career-aged adult piano learners', 'https://pianoinspires.com/5-things-adult-learners/'],
+    ],
+    body: `
+## Động lực
+- Một động lực rất phổ biến là **thực hiện ước mơ** ấp ủ từ lâu; người lớn thường có **động lực nội tại** mạnh hơn trẻ em.
+- Một luận văn (phỏng vấn 5 người đi làm học piano) thấy động lực đến từ nhu cầu **tự hoàn thiện**, nhưng việc **tự học tự quản** lại là thách thức.
+- Một tổng quan tài liệu kết luận: giáo viên cần hiểu **hoàn cảnh và động lực** của từng học viên.
+
+## Khó khăn thường gặp
+- **Thời gian** tập, chỗ đặt đàn, sự sẵn sàng về tinh thần.
+- Một khảo sát học viên người lớn ở một studio thấy **hơn một nửa gặp khó với thị tấu** (xem [[thi-tau]]), và **nỗi sợ thất bại hay bị đánh giá** khá phổ biến.
+- Người lớn **hiểu khái niệm nhanh** nhưng **cơ tay theo không kịp** — dễ nản.
+
+## Gợi ý khi dạy
+- **Cùng học viên chọn bài** họ muốn chơi, không chỉ theo giáo trình; người lớn thích học theo nhịp độ riêng (xem [[lo-trinh-tac-pham]], [[dem-hat-piano]]).
+- Tận dụng khả năng **phân tích**: giải thích lý thuyết, cấu trúc ([[hoc-thuoc-bai|trí nhớ phân tích]]).
+- Thực tế với thời gian tập: các buổi ngắn mà đều đặn ([[phuong-phap-luyen-tap|luyện phân bổ]]).
+- Xử lý sớm nỗi lo bị đánh giá (xem [[hoi-hop-bieu-dien]]).
+
+Lưu ý: các nghiên cứu về người lớn học piano còn ít và quy mô nhỏ. Một số con số lan truyền trên mạng (như tỉ lệ người lớn bỏ cuộc sau năm đầu) không tìm được nguồn gốc nên không đưa vào.
 `,
   },
 ]

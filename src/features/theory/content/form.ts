@@ -389,7 +389,7 @@ Minuet (3/4, vừa phải) ở thời Cổ điển được Beethoven thay bằn
 |---|---|---|
 | Prelude | Ngắn, khám phá một ý | Chopin, 24 Préludes Op. 28 |
 | Étude (luyện ngón) | Tập trung một kỹ thuật, nhưng là tác phẩm nghệ thuật | Chopin, Liszt |
-| Nocturne | Trữ tình, giai điệu hát trên đệm rải | Field, Chopin |
+| Nocturne | Trữ tình, giai điệu hát trên đệm rải | Field, Chopin ([[phan-tich-nocturne-op9-so2|phân tích Op. 9 số 2]]) |
 | Ballade | Kể chuyện, kịch tính | Chopin, Brahms |
 | Impromptu | Như ngẫu hứng | Schubert, Chopin |
 | Bài ca không lời | Giai điệu như ca khúc | Mendelssohn |

@@ -224,7 +224,7 @@ Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa ch�
 | ma | Nhưng | |
 | assai | Rất, khá | Allegro assai |
 
-Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]]. Tên thể loại (nocturne, étude…): xem [[the-loai]].
+Bảng tra nhanh Anh – Việt – Ý: [[bang-thuat-ngu]]. Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]]. Tên thể loại (nocturne, étude…): xem [[the-loai]].
 `,
   },
   {
@@ -255,6 +255,67 @@ Lặp lại rất nhanh. Trên piano thường là **luân phiên giữa hai n�
 Nốt được viết trên khuông này nhưng chơi bằng tay thường đọc khuông kia — hay gặp khi giai điệu chuyển qua lại giữa hai tay. Tremolo và hợp âm rải hai tay cũng thường được viết chéo khuông (xem [[khuong-nhac|khuông nhạc đôi]]).
 
 Lưu ý: phần lớn nguồn là hướng dẫn của phần mềm ký âm (MuseScore, LilyPond). Các ký hiệu cơ bản khác: [[cach-dien-tau]], [[ky-hieu-hoa-my]], [[dau-nhac-lai]], [[ky-hieu-quang-tam]].
+`,
+  },
+  {
+    slug: 'bang-thuat-ngu',
+    title: 'Bảng thuật ngữ Anh – Việt – Ý',
+    category: 'expression',
+    aliases: ['thuật ngữ Anh Việt', 'glossary', 'từ điển âm nhạc', 'tra thuật ngữ', 'English Vietnamese music terms'],
+    summary: 'Bảng tra nhanh các thuật ngữ thường gặp bằng tiếng Anh, tiếng Việt và tiếng Ý (hoặc ký hiệu), mỗi dòng dẫn tới bài viết chi tiết.',
+    body: `
+Mỗi thuật ngữ tiếng Việt là một liên kết tới bài giải thích.
+
+## Ký âm và nhịp
+| Tiếng Anh | Tiếng Việt | Ý / ký hiệu |
+|---|---|---|
+| Note | [[not-nhac|Nốt nhạc]] | nota |
+| Staff (Stave) | [[khuong-nhac|Khuông nhạc]] | — |
+| Clef (treble / bass) | [[khoa-nhac|Khoá nhạc]] (Sol / Fa) | 𝄞 / 𝄢 |
+| Sharp / Flat / Natural | [[dau-hoa|Dấu thăng / giáng / bình]] | ♯ ♭ ♮ |
+| Key signature | [[hoa-bieu|Hoá biểu]] | — |
+| Time signature | [[so-chi-nhip|Số chỉ nhịp]] | 4/4, 3/4… |
+| Bar (Measure) | Ô nhịp | — |
+| Beat | Phách | — |
+| Whole / Half / Quarter / Eighth note | [[truong-do|Nốt tròn / trắng / đen / móc đơn]] | — |
+| Rest | [[dau-lang|Dấu lặng]] | — |
+| Tie / Dotted note | [[cham-doi-dau-noi|Dấu nối / Chấm dôi]] | — |
+| Triplet | [[lien-ba|Liên ba]] | 3 |
+| Upbeat (Pickup) | [[nhip-lay-da|Nhịp lấy đà]] | anacrusi |
+
+## Cao độ, âm giai, hoà âm
+| Tiếng Anh | Tiếng Việt | Ý / ký hiệu |
+|---|---|---|
+| Semitone / Whole tone | [[cung-nua-cung|Nửa cung / Cung]] | — |
+| Interval | [[quang|Quãng]] | — |
+| Octave | Quãng 8 | 8va |
+| Major / Minor scale | [[am-giai-truong|Âm giai trưởng]] / [[am-giai-thu|thứ]] | maggiore / minore |
+| Scale degree (tonic, dominant…) | [[bac-am-giai|Bậc (chủ âm, át âm…)]] | — |
+| Chord / Triad | [[hop-am-ba|Hợp âm / Hợp âm ba]] | accordo |
+| Inversion | [[the-dao-hop-am|Thể đảo]] | — |
+| Cadence | [[cau-ket|Kết]] | cadenza |
+| Modulation | [[chuyen-giong|Chuyển giọng]] | — |
+| Transposition | [[dich-giong|Dịch giọng]] | — |
+| Arpeggio | [[luyen-hop-am-rai|Hợp âm rải]] | arpeggio |
+
+## Diễn tấu
+| Tiếng Anh | Tiếng Việt | Ý / ký hiệu |
+|---|---|---|
+| Tempo | [[nhip-do|Nhịp độ]] | Allegro, Andante, Adagio… |
+| Slowing down / Speeding up | Chậm dần / Nhanh dần | ritardando / accelerando |
+| Dynamics: soft / loud | [[cuong-do|Cường độ]]: nhỏ / to | piano (p) / forte (f) |
+| Getting louder / softer | To dần / Nhỏ dần | crescendo / diminuendo |
+| Smoothly connected | [[cach-dien-tau|Liền tiếng (dấu luyến)]] | legato |
+| Short, detached | Ngắt tiếng, nảy | staccato |
+| Hold (pause) | Ngân tuỳ ý | fermata 𝄐 |
+| Ornament / Trill | [[ky-hieu-hoa-my|Hoa mỹ / Láy rền]] | tr |
+| Repeat | [[dau-nhac-lai|Dấu nhắc lại]] | da capo, dal segno |
+| Sustain pedal | [[ban-dap|Pedal vang]] | Ped. |
+| Soft pedal | Pedal giảm âm | una corda |
+| Fingering | [[ngon-bam|Ngón bấm]] | 1–5 |
+| Sight-reading | [[thi-tau|Thị tấu]] | — |
+| Phrasing | [[dien-dat-cau-nhac|Diễn đạt câu nhạc]] | — |
+| With expression / Sweetly / Singing | [[thuat-ngu|Biểu cảm / Ngọt ngào / Như hát]] | espressivo / dolce / cantabile |
 `,
   },
 ]
