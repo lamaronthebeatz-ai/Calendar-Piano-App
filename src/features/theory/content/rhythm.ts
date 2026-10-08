@@ -120,7 +120,7 @@ Xem thêm: [[nhip-do]], [[nhip-lay-da]], [[dao-phach]], [[hemiola]].
     slug: 'nhip-do',
     title: 'Nhịp độ',
     category: 'rhythm',
-    aliases: ['tempo', 'tốc độ', 'BPM', 'metronome', 'máy đếm nhịp', 'Allegro', 'Andante', 'Adagio', 'Largo', 'Presto', 'Moderato', 'ritardando', 'accelerando'],
+    aliases: ['tempo', 'tốc độ', 'BPM', 'máy đếm nhịp', 'Allegro', 'Andante', 'Adagio', 'Largo', 'Presto', 'Moderato', 'ritardando', 'accelerando'],
     summary: 'Tốc độ của bản nhạc, đo bằng số phách mỗi phút (BPM) hoặc ghi bằng thuật ngữ tiếng Ý.',
     wiki: 'Tempo',
     body: `

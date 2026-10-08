@@ -17,7 +17,12 @@ export interface Article {
   wiki?: string
   /** Reachable by links and search but not listed in the index (e.g. one page per composer). */
   unlisted?: boolean
+  /** Further sources beyond Wikipedia, as [title, url]. */
+  refs?: [string, string][]
 }
+
+/** Section titles of an article, in order (Markup gives them ids sec-0, sec-1…). */
+export const headings = (body: string) => [...body.matchAll(/^\s*## (.+)$/gm)].map((m) => m[1].trim())
 
 export const normalize = (s: string) =>
   s.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase().trim()

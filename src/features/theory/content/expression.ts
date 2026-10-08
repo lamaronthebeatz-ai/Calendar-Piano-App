@@ -182,7 +182,7 @@ Cả hai tay: **1 = ngón cái, 2 = trỏ, 3 = giữa, 4 = áp út, 5 = út**.
 - Ở các đoạn nhắc lại, ngón bấm giống nhau → dễ thuộc [[motif]] và [[cau-nhac]].
 - Âm giai [[am-giai-cromatic|cromatic]]: ngón 3 trên phím đen.
 
-Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa chọn ngón bấm cho âm giai có [[dau-hoa]].
+Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa chọn ngón bấm cho âm giai có [[dau-hoa]]. Kỹ thuật luồn ngón chi tiết: [[luyen-am-giai]], [[luyen-hop-am-rai]]. Tư thế tay đúng: [[tu-the]].
 `,
   },
   {

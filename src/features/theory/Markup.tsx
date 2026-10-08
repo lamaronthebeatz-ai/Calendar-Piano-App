@@ -81,6 +81,7 @@ export function Markup({ source }: { source: string }) {
   let block = null as { kind: 'p' | 'li' | 'tr'; lines: string[] } | null
   const out: ReactNode[] = []
   const lines = source.trim().split('\n').map((l) => l.trim())
+  let section = 0 // h2 ids match the order of headings(), which feeds the table of contents
 
   const flush = () => {
     const b = block
@@ -98,14 +99,14 @@ export function Markup({ source }: { source: string }) {
         const [head, ...rows] = b.lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map(cells)
         out.push(
           <div key={k} className="overflow-x-auto rounded-xl border border-[var(--color-border)]">
-            <table className="w-full text-left text-[14px]">
+            <table className="w-full text-left text-[13px] sm:text-[14px]">
               <thead className="bg-[var(--color-surface-sunken)]">
-                <tr>{head.map((c, i) => <th key={i} className="px-3 py-2 font-semibold"><Inline text={c} /></th>)}</tr>
+                <tr>{head.map((c, i) => <th key={i} className="px-2.5 py-2 font-semibold sm:px-3"><Inline text={c} /></th>)}</tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
                   <tr key={i} className="border-t border-[var(--color-border)]">
-                    {r.map((c, j) => <td key={j} className="px-3 py-2"><Inline text={c} /></td>)}
+                    {r.map((c, j) => <td key={j} className="px-2.5 py-2 sm:px-3"><Inline text={c} /></td>)}
                   </tr>
                 ))}
               </tbody>
@@ -120,7 +121,12 @@ export function Markup({ source }: { source: string }) {
     const kind = line.startsWith('- ') ? 'li' : line.startsWith('|') ? 'tr' : 'p'
     if (!line || line.startsWith('## ') || line.startsWith('::') || block?.kind !== kind) flush()
     if (!line) continue
-    if (line.startsWith('## ')) out.push(<h2 key={out.length} className="pt-3 text-[18px] font-semibold text-[var(--color-ink)]">{line.slice(3)}</h2>)
+    if (line.startsWith('## '))
+      out.push(
+        <h2 key={out.length} id={`sec-${section++}`} className="scroll-mt-24 pt-3 text-[18px] font-semibold text-[var(--color-ink)]">
+          {line.slice(3)}
+        </h2>,
+      )
     else if (line.startsWith('::')) out.push(<Directive key={out.length} line={line} />)
     else (block ??= { kind, lines: [] }).lines.push(kind === 'li' ? line.slice(2) : line)
   }

@@ -62,7 +62,7 @@ Hai nốt vang **lần lượt** là quãng giai điệu; vang **cùng lúc** l�
 - Quãng 5 đúng đi lên: chủ đề "Star Wars".
 - Quãng 8 đi lên: "Somewhere Over the Rainbow".
 
-Liên quan: [[quang-dao]], [[thuan-nghich]], [[hop-am-ba]], [[vong-quang-nam]]. Cách đếm quãng bằng số nửa cung (0–11) là nền tảng của [[tap-hop-cao-do]].
+Liên quan: [[quang-dao]], [[thuan-nghich]], [[hop-am-ba]], [[vong-quang-nam]]. Đọc nốt bằng quãng: [[doc-not-nhanh]]. Chơi quãng 8 trên piano: [[ky-thuat-quang-tam]]. Cách đếm quãng bằng số nửa cung (0–11) là nền tảng của [[tap-hop-cao-do]].
 `,
   },
   {

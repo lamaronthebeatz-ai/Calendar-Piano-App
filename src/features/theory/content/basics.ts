@@ -158,7 +158,7 @@ Piano có 88 phím, từ **A0** (thấp nhất) đến **C8** (cao nhất) — h
 
 ::img 88-key piano colored octaves.svg | 88 phím, mỗi màu là một quãng 8; Đô giữa và La 440 Hz được đánh dấu
 
-Xem thêm: [[ban-dap]] (pedal), [[ngon-bam]], [[ky-hieu-quang-tam]] (chơi cao/thấp một quãng 8).
+Xem thêm: [[tu-the]] (cách ngồi), [[ban-dap]] (pedal), [[ngon-bam]], [[ky-hieu-quang-tam]] (chơi cao/thấp một quãng 8).
 `,
   },
   {
