@@ -372,6 +372,7 @@ Nghiên cứu dùng nhạc tự chọn nên **không xác định** yếu tố h
     slug: 'nghe-nhac-chu-dong',
     title: 'Nghe nhạc chủ động',
     category: 'listening',
+    also: ['musicianship'],
     aliases: ['nghe nhạc', 'nghe có định hướng', 'active listening', 'guided listening', 'cảm thụ âm nhạc', 'musicogram'],
     summary: 'Nghe có mục đích: tham gia trước khi nghe (hát, vỗ, vận động), rồi theo dõi hình thức bằng sơ đồ; nghe lặp lại nhiều lần, mỗi lần một trọng tâm.',
     refs: [

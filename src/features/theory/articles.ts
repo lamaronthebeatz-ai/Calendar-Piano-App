@@ -25,7 +25,7 @@ import { listening } from './content/listening'
 export const CATEGORIES = {
   technique: { title: 'Kỹ thuật & luyện tập piano', hue: 140, description: 'Tư thế, cách chạm phím, âm giai, hợp âm rải, nốt kép, phối hợp hai tay, đọc nốt, thị tấu, phương pháp luyện tập, học thuộc, biểu diễn, sức khoẻ và lịch sử kỹ thuật piano.' },
   instrument: { title: 'Cây đàn piano', hue: 30, description: 'Lịch sử, harpsichord và clavichord, cấu tạo, bộ máy, các loại đàn, bảo dưỡng và lên dây.' },
-  musicianship: { title: 'Luyện tai & sư phạm', hue: 265, description: 'Cảm âm tương đối và tuyệt đối, xướng âm, các phương pháp giáo dục âm nhạc, thi cấp độ.' },
+  musicianship: { title: 'Luyện tai & sư phạm', hue: 265, description: 'Kỹ năng nghe (luyện tai, cảm âm, xướng âm, âm tiết nhịp, ký âm, audiation) và sư phạm (các phương pháp giáo dục, dạy đọc nốt, giảng dạy hiệu quả, dạy theo lứa tuổi, chọn bài, thi cấp độ) — kèm lộ trình.' },
   basics: { title: 'Ký âm cơ bản', hue: 220, description: 'Nốt, khuông nhạc, khoá, bàn phím và dấu hoá — đọc được bản nhạc.' },
   rhythm: { title: 'Nhịp & tiết tấu', hue: 25, description: 'Trường độ, phách, nhịp và nhịp độ: lịch sử ký âm, cảm nhận phách, đảo phách, nhịp lẻ và đa nhịp.' },
   pitch: { title: 'Cao độ & quãng', hue: 285, description: 'Khoảng cách giữa các nốt và cơ sở âm học của chúng.' },

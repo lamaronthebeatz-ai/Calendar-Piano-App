@@ -3,6 +3,45 @@ import type { Article } from '../wiki'
 /** Luyện tai, xướng âm và sư phạm âm nhạc. Nguồn ghi trong `refs`. */
 export const musicianship: Article[] = [
   {
+    slug: 'lo-trinh-luyen-tai-su-pham',
+    title: 'Luyện tai và sư phạm: hệ thống và lộ trình',
+    category: 'musicianship',
+    aliases: ['lộ trình luyện tai', 'sư phạm piano', 'music pedagogy', 'piano pedagogy', 'kỹ năng nghe', 'giáo viên piano'],
+    summary: 'Bài tổng quan của mục: hai mảng lớn — kỹ năng nghe (luyện tai, xướng âm, âm tiết nhịp, ký âm, nghe trong đầu) và sư phạm (các phương pháp giáo dục, dạy đọc nốt, giảng dạy hiệu quả, dạy theo lứa tuổi, thi cấp độ) — sắp theo thứ tự học.',
+    wiki: 'Music_education',
+    refs: [
+      ['Wikipedia — Music education', 'https://en.wikipedia.org/wiki/Music_education'],
+      ['Utah Education Network — Aural skills (open textbook)', 'https://uen.pressbooks.pub/auralskills/chapter/chunking-and-extractive-listening/'],
+      ['UT Austin Center for Music Learning — The nature of expertise', 'https://cml.music.utexas.edu/online-resources/the-nature-of-expertise'],
+    ],
+    body: `
+Mục này dành cho hai đối tượng: **người học** muốn có đôi tai tốt, và **người dạy** muốn dạy có phương pháp. Hai mảng gắn với nhau: phần lớn các phương pháp giáo dục âm nhạc lớn đều đặt **nghe và hát** trước **ký hiệu**.
+
+## Phần A — Kỹ năng nghe
+1. [[luyen-tai]] — cảm âm tương đối, nội dung cần luyện.
+2. [[cao-do-tuyet-doi]] — hiểu đúng về cảm âm tuyệt đối.
+3. [[xuong-am]] — Đô cố định và Đô di động.
+4. [[am-tiet-nhip]] — đọc tiết tấu bằng âm tiết (ta – ti, takadimi…).
+5. [[ky-am]] — nghe và ghi lại giai điệu, tiết tấu, hoà âm.
+6. [[ly-thuyet-hoc-am-nhac-gordon]] — "nghe trong đầu" (audiation) và trình tự học.
+7. [[tap-trong-dau]] — luyện tập không cần đàn.
+Liên quan: [[nghe-nhac-chu-dong]], [[cam-nhan-am-thanh]], [[phan-luong-thinh-giac]].
+
+## Phần B — Sư phạm
+8. [[phuong-phap-giao-duc-am-nhac]] — Dalcroze, Kodály, Orff, Suzuki.
+9. [[cach-day-doc-not]] — các cách dạy đọc nốt cho người mới.
+10. [[giang-day-hieu-qua]] — nghiên cứu về buổi học hiệu quả, phản hồi và động lực.
+11. [[day-tre-em]], [[day-nguoi-lon]] — dạy theo lứa tuổi.
+12. [[lo-trinh-tac-pham]], [[thi-cap-do]] — chọn bài và thi cấp độ.
+Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[hoi-hop-bieu-dien]], [[phan-tich-va-bieu-dien]].
+
+## Ba nguyên tắc chung rút ra từ mục này
+- **Âm thanh trước ký hiệu**: hát, vận động, nghe trước; đọc và gọi tên sau (Kodály, Orff, Dalcroze, Gordon).
+- **Từng bước, có trình tự**: từ mẫu ngắn đến ý nhạc dài, từ bắt chước đến tự tạo (Gordon; Duke).
+- **Phân biệt bằng chứng và kinh nghiệm**: thư viện ghi rõ đâu là kết quả nghiên cứu, đâu là gợi ý của giáo viên — nhiều câu "ai cũng biết" trong dạy nhạc chưa từng được kiểm chứng.
+`,
+  },
+  {
     slug: 'luyen-tai',
     title: 'Luyện tai và cảm âm tương đối',
     category: 'musicianship',
@@ -29,7 +68,13 @@ Các nội dung này chính là phần **thi nghe** trong các kỳ thi piano (x
 - Nhận ra [[cau-ket|kết]] (trọn, nửa, lừa) và [[so-chi-nhip|nhịp 2, 3, 4]].
 - Vỗ lại tiết tấu; hát lại giai điệu; nhận biết giai điệu đi lên hay đi xuống.
 
-Hát bằng [[xuong-am|xướng âm]] là công cụ luyện tai truyền thống. Luyện nghe tác phẩm trọn vẹn: [[nghe-nhac-chu-dong]].
+## Luyện tai có hệ thống
+Bốn công cụ bổ sung cho nhau (lộ trình ở [[lo-trinh-luyen-tai-su-pham]]):
+- **Hát**: [[xuong-am|xướng âm]] — hát được thì mới nghe chắc được.
+- **Đọc tiết tấu**: [[am-tiet-nhip]].
+- **Nghe và ghi lại**: [[ky-am]] — theo Karpinski gồm bốn khâu nghe, nhớ, hiểu, ghi; trí nhớ làm việc là nút thắt chính.
+- **Nghe trong đầu**: [[ly-thuyet-hoc-am-nhac-gordon|audiation]] và [[tap-trong-dau]].
+Luyện nghe tác phẩm trọn vẹn: [[nghe-nhac-chu-dong]]. Cơ sở tâm lý âm học: [[cam-nhan-am-thanh]].
 `,
   },
   {
@@ -91,6 +136,148 @@ Các nhà giáo dục không thống nhất: một số cho rằng Đô di độ
 `,
   },
   {
+    slug: 'am-tiet-nhip',
+    title: 'Âm tiết nhịp: ta – ti, takadimi',
+    category: 'musicianship',
+    aliases: ['âm tiết nhịp', 'rhythm syllables', 'đọc tiết tấu', 'ta ti', 'ta ti-ti', 'takadimi', 'du de', 'Gordon rhythm syllables', 'French time names', 'đếm nhịp', 'counting system'],
+    summary: 'Các hệ thống đọc tiết tấu bằng âm tiết: âm tiết Kodály (ta, ti-ti), âm tiết Gordon (du, du-de) và takadimi (Hoffman, Pelto, White, 1996) — mỗi hệ gắn âm tiết với một vị trí trong phách hoặc một giá trị nốt.',
+    wiki: 'Takadimi',
+    refs: [
+      ['Hoffman, Pelto & White (1996) — Takadimi: a beat-oriented system of rhythm pedagogy (takadimi.net)', 'https://www.takadimi.net/takadimiArticle.html'],
+      ['Palkki — Rhythm syllable pedagogy: a historical journey to Takadimi via the Kodály method (JMTP)', 'https://journals-upgrade.shareok.org/jmtp/article/view/649'],
+      ['Wikipedia — Takadimi', 'https://en.wikipedia.org/wiki/Takadimi'],
+      ["Mr. A's Music Place — A review of rhythm syllable systems", 'https://mramusicplace.net/2014/03/18/a-review-of-rhythm-syllable-systems/'],
+    ],
+    body: `
+Đọc tiết tấu bằng **âm tiết** giúp người học **nói ra** được nhịp điệu trước khi đọc và chơi nó — một bước trung gian giữa nghe và ký hiệu.
+
+## Hai cách nghĩ
+- **Gắn với giá trị nốt**: mỗi loại nốt có một âm tiết (nốt đen = "ta", hai móc đơn = "ti-ti"). Dễ cho trẻ nhỏ.
+- **Gắn với vị trí trong phách**: âm tiết cho biết nốt rơi vào **đầu phách, giữa phách hay phần nhỏ hơn**. Chính xác hơn khi nhịp phức tạp.
+
+## Các hệ thống chính
+| Hệ thống | Ví dụ (nhịp đơn) | Đặc điểm |
+|---|---|---|
+| **Kodály** (từ French Time-Names thế kỷ 19) | Nốt đen **ta**, hai móc đơn **ti-ti**; nốt đen chấm + móc đơn **taam-ti** | Gắn với giá trị nốt; không dành âm tiết riêng cho dấu chấm. Choksy (*The Kodály Context*, 1981) bổ sung âm tiết cho các chia nhỏ hơn |
+| **Gordon** | Nốt đen **du**, hai móc đơn **du-de**, bốn móc kép **du-ta-de-ta** | Theo phách; âm tiết **phụ thuộc loại nhịp**: ba móc đơn trong 6/8 là "du-da-di" nhưng trong 7/8 là "du-ba-bi" |
+| **Takadimi** (Hoffman, Pelto, White, 1996) | Phách **ta**; chia hai **ta-di**; chia bốn **ta-ka-di-mi**; chia ba **ta-ki-da** | Mỗi âm tiết là một **vị trí** trong phách; dùng được cho cả nhịp đơn và nhịp kép |
+| **Đếm số** (McHose – Tibbs và tương tự) | 1 – và – 2 – và… | Gắn trực tiếp với số chỉ nhịp |
+Kodály và takadimi đều có thể truy nguồn về hệ thống **French Time-Names** thế kỷ 19; bài của Palkki (JMTP) cho rằng takadimi phát triển dựa trên các nguyên tắc của Kodály.
+
+## Ví dụ: cùng một tiết tấu
+Tiết tấu nốt đen – hai móc đơn – nốt đen chấm + móc đơn (bốn phách):
+| Kodály | Takadimi |
+|---|---|
+| ta · ti-ti · taam – ti | ta · ta-di · ta · (giữ) – di |
+Với takadimi, âm tiết của một nốt **không đổi theo giá trị nốt** mà theo **vị trí**: nốt rơi vào nửa sau phách luôn là "di".
+
+## Chọn hệ nào?
+Chưa có nghiên cứu so sánh trực tiếp đủ mạnh để khẳng định hệ nào tốt hơn. Gợi ý thực tế (ý kiến giáo viên):
+- Trẻ nhỏ: âm tiết Kodály đơn giản, dễ nhớ.
+- Học trò lớn, nhạc có nhịp kép và chia nhỏ phức tạp: takadimi hoặc đếm số.
+- Quan trọng hơn hệ nào là **nhất quán**: cả giáo viên và học trò dùng một hệ trong thời gian đủ dài.
+Liên quan: [[truong-do]], [[so-chi-nhip]], [[cam-nhan-phach]], [[ky-am]].
+`,
+  },
+  {
+    slug: 'ky-am',
+    title: 'Ký âm',
+    category: 'musicianship',
+    aliases: ['ký âm', 'dictation', 'melodic dictation', 'nghe chép nhạc', 'chép chính tả âm nhạc', 'harmonic dictation', 'rhythmic dictation', 'ký âm giai điệu', 'Karpinski', 'extractive listening'],
+    summary: 'Nghe một đoạn nhạc và ghi lại thành nốt nhạc — bài tập trung tâm của môn luyện tai. Theo Karpinski, ký âm gồm bốn khâu: nghe, nhớ ngắn hạn, hiểu, ghi chép; trí nhớ làm việc là nút thắt chính.',
+    wiki: 'Ear_training',
+    refs: [
+      ['Chenette — From research to the classroom: working memory and melodic dictation (JMTP)', 'https://journals.ou.edu/jmtp/article/download/543/1229/1221'],
+      ['Nichols & Springer (2025), Frontiers in Psychology — Piano history, aural skills, and working memory predict melodic dictation performance', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12341474/'],
+      ['Utah Education Network — Aural skills: chunking and extractive listening', 'https://uen.pressbooks.pub/auralskills/chapter/chunking-and-extractive-listening/'],
+      ['Journal of Research in Music Education (2017) — dictation strategies (abstract)', 'https://journals.sagepub.com/doi/10.1177/0022429417728925'],
+      ['Journal of Research in Music Education — 1986 study of dictation strategies (abstract)', 'https://journals.sagepub.com/doi/10.2307/3345259'],
+    ],
+    body: `
+**Ký âm** là nghe rồi **viết lại** những gì nghe được: tiết tấu, giai điệu, hoặc hoà âm (bè trầm và hợp âm). Đây là phần khó nhất của môn [[luyen-tai]] vì đòi hỏi cùng lúc nghe, nhớ, hiểu và ghi.
+
+## Bốn khâu (Karpinski)
+Trong *Aural Skills Acquisition* (2000), Gary Karpinski chia ký âm giai điệu thành bốn khâu:
+| Khâu | Việc cần làm | Lỗi thường gặp |
+|---|---|---|
+| **Nghe** | Tiếp nhận âm thanh, chú ý đúng chỗ | Mất tập trung |
+| **Nhớ ngắn hạn** | Giữ đoạn nhạc trong đầu | Quên phần đầu khi phần sau đang vang |
+| **Hiểu** | Nhận ra bậc, quãng, tiết tấu, chức năng | Nghe được nhưng không gọi tên được |
+| **Ghi chép** | Viết thành nốt nhạc | Biết nhưng viết sai, viết chậm |
+Chenette (*Journal of Music Theory Pedagogy*) cho rằng **trí nhớ làm việc** là sợi chỉ nối cả bốn khâu, và các khâu khó tách rời: nhiều học sinh gặp khó ở nhiều khâu cùng lúc. Karpinski mô tả sự **nhiễu**: nhớ phần đầu của giai điệu bị cản trở bởi chính phần sau đang vang lên.
+
+## Hai kỹ thuật vượt giới hạn trí nhớ
+- **Nghe chọn lọc** (extractive listening): mỗi lần nghe chỉ tập trung nhớ **một phần** (ví dụ 4 nốt đầu, hoặc chỉ bè trầm).
+- **Gom nhóm** (chunking): nhớ nốt theo **nhóm có nghĩa** — một hợp âm rải, một đoạn âm giai, một motif — thay vì từng nốt rời. Có thể luyện bằng cách **nói ra** giai điệu: "đi lên theo âm giai từ bậc 1 tới bậc 5, rồi nhảy xuống bậc 3".
+
+## Nghiên cứu nói gì?
+- Một nghiên cứu năm 1986 (136 sinh viên lý thuyết) so sánh sáu chiến lược (viết ngay khi nghe, tập trung nghe trước rồi mới viết, hát trước khi viết…) **không tìm thấy khác biệt có ý nghĩa** giữa các chiến lược.
+- Beckett (1997): khi được hướng dẫn **chú ý tiết tấu trước**, học viên ghi tiết tấu chính xác hơn.
+- Nichols và Springer (2025): **kinh nghiệm học piano**, kỹ năng nghe và **trí nhớ làm việc** dự báo kết quả ký âm giai điệu.
+- Một nghiên cứu năm 2017 khuyên giáo viên **giới thiệu nhiều chiến lược** và giúp học viên chọn chiến lược phù hợp với mình.
+
+## Trình tự luyện (gợi ý dạy học)
+1. **Tiết tấu** một bè, 2 ô → 4 ô (dùng [[am-tiet-nhip]]).
+2. **Giai điệu** ngắn trong âm giai ngũ cung hoặc 5 nốt đầu, bắt đầu từ bậc 1.
+3. Giai điệu 4–8 ô, có nhảy quãng trong hợp âm chủ và át.
+4. **Hai bè**: bè trầm và giai điệu.
+5. **Hoà âm**: nghe bè trầm, rồi gọi tên chức năng (I, IV, V…) — xem [[phan-tich-hoa-am]].
+Trước khi viết, luôn **hát lại** đoạn vừa nghe: nếu chưa hát lại được, nghĩa là chưa nhớ được (xem [[xuong-am]]).
+`,
+  },
+  {
+    slug: 'ly-thuyet-hoc-am-nhac-gordon',
+    title: 'Lý thuyết học âm nhạc của Gordon',
+    category: 'musicianship',
+    aliases: ['Gordon', 'Edwin Gordon', 'Music Learning Theory', 'MLT', 'audiation', 'nội thính', 'học theo trình tự', 'whole-part-whole'],
+    summary: 'Lý thuyết của Edwin Gordon (1927–2015) xoay quanh khái niệm "audiation" — nghe và hiểu âm nhạc khi âm thanh không có mặt — và một trình tự học từ bắt chước bằng tai đến đọc ký hiệu và suy luận.',
+    wiki: 'Gordon_music_learning_theory',
+    refs: [
+      ['Wikipedia — Gordon music learning theory', 'https://en.wikipedia.org/wiki/Gordon_music_learning_theory'],
+      ['College Music Symposium — Music learning theory in collegiate music education', 'https://symposium.music.org/volume-31/forum-essays-1752877059/music-learning-theory-in-collegiate-music-education'],
+      ['GIA Publications — Gordon, Preparatory Audiation, Audiation, and Music Learning Theory', 'https://giamusic.com/resource/preparatory-audiation-audiation-and-music-learning-theory-book-g5726'],
+      ['Reference.org — Audiation', 'https://reference.org/facts/Audiation/D2Pt6PD9'],
+    ],
+    body: `
+**Edwin E. Gordon** (1927–2015), nhà nghiên cứu giáo dục âm nhạc người Mỹ, xây dựng **Lý thuyết học âm nhạc** (Music Learning Theory) — một mô tả về **cách** con người học âm nhạc, từ đó suy ra **trình tự** dạy.
+
+## Audiation — "nghe trong đầu có hiểu"
+**Audiation** là khả năng **nghe và hiểu** âm nhạc khi âm thanh **không vang lên thật** — giống như ta "nghe" một bài hát trong đầu, hoặc hiểu câu nói khi đọc thầm. Gordon phân biệt:
+- **Bắt chước**: lặp lại được âm thanh mà **chưa chắc hiểu** nó.
+- **Audiation**: âm thanh mang **ý nghĩa** — biết đâu là chủ âm, đâu là phách mạnh, nhận ra mẫu giai điệu và tiết tấu.
+Gordon về sau chia audiation thành nhiều **loại** và **giai đoạn**; các ấn bản sách của ông đưa ra con số khác nhau (ví dụ sáu giai đoạn, hoặc năm giai đoạn và tám loại), nên khi trích dẫn cần ghi rõ ấn bản.
+
+## Các giai đoạn audiation (theo bản tóm tắt sáu giai đoạn)
+1. Giữ lại âm thanh trong khoảnh khắc.
+2. Bắt chước và audiate các **mẫu cao độ** và **mẫu tiết tấu**; nhận ra **chủ âm** và các **phách lớn**.
+3. Xác lập **giọng** và **loại nhịp**.
+4. Giữ trong đầu các mẫu đã được tổ chức.
+5. Nhớ lại các mẫu đó khi gặp trong **bản nhạc khác**.
+6. **Đoán trước** các mẫu sắp đến (xem [[ky-vong-am-nhac]]).
+
+## Trình tự học
+Gordon chia học thành **học phân biệt** và **học suy luận**. Học phân biệt đi qua các bậc:
+| Bậc | Nội dung |
+|---|---|
+| **Nghe – hát** (aural/oral) | Bắt chước các mẫu cao độ, tiết tấu bằng âm tiết trung tính |
+| **Gắn tên gọi** | Gắn mẫu với tên gọi (âm tiết xướng âm, âm tiết nhịp — xem [[am-tiet-nhip]]) |
+| **Tổng hợp từng phần** | Nhận ra giọng, nhịp của một chuỗi mẫu |
+| **Gắn ký hiệu** | Đọc và viết các mẫu đã biết |
+| **Tổng hợp hoàn chỉnh** | Đọc, viết và hiểu cả chuỗi mẫu trong ngữ cảnh |
+Ở bậc **suy luận**, người học dùng những gì đã biết để hiểu các mẫu **mới**: nghe ra, ứng tác, sáng tác.
+
+Chương trình thường đi theo vòng **tổng thể – bộ phận – tổng thể**: nghe cả bài, tách ra các mẫu để học, rồi trở về bài với hiểu biết mới.
+
+## Gordon và các phương pháp khác
+Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm thanh trước ký hiệu**. Điểm riêng là tập trung vào **mẫu** (patterns) như "từ vựng" của âm nhạc, và vào **audiation** như mục tiêu chung của mọi hoạt động.
+
+## Với người dạy piano
+- Trước khi cho học trò đọc một bài mới, cho học trò **hát** giai điệu và **đọc tiết tấu** bằng âm tiết.
+- Dạy các **mẫu** hay gặp (hợp âm rải I – V, các công thức kết) như những đơn vị nghe được, không chỉ là nốt trên giấy.
+- Luyện "nghe trước" khi chơi: hình dung âm thanh rồi mới bấm phím (xem [[tap-trong-dau]]).
+`,
+  },
+  {
     slug: 'phuong-phap-giao-duc-am-nhac',
     title: 'Các phương pháp giáo dục âm nhạc',
     category: 'musicianship',
@@ -100,6 +287,12 @@ Các nhà giáo dục không thống nhất: một số cho rằng Đô di độ
     refs: [
       ['NAfME — Kodály, Orff, and Dalcroze: a who\'s who and what\'s what', 'https://nafme.org/blog/kodaly-orff-and-dalcroze-a-whos-who-and-whats-what/'],
       ['Boughen — Four approaches to music education in Australia (thesis record)', 'https://www.scpp.esrc.unimelb.edu.au/bib/P00000546.htm'],
+      ['Wikipedia — Kodály method', 'https://en.wikipedia.org/wiki/Kod%C3%A1ly_method'],
+      ['ISME — Happy 200th birthday to the developer of Tonic Sol-fa, John Curwen', 'https://www.isme.org/news/happy-200th-birthday-developer-tonic-sol-fa-john-curwen'],
+      ['Routledge Encyclopedia of Modernism — Jaques-Dalcroze, Émile', 'https://www.rem.routledge.com/articles/jaques-dalcroze-emile-1865-1950'],
+      ['Dalcroze Society of America — Émile Jaques-Dalcroze', 'https://dalcrozeusa.org/people/emile-jaques-dalcroze/'],
+      ['Comeau — Suzuki method and the mother-tongue approach (University of Ottawa)', 'https://piano.uottawa.ca/?p=481'],
+      ['Texas Tech — A reading course for Suzuki piano students', 'https://tdl-ir.tdl.org/handle/2346/15423'],
     ],
     body: `
 | Phương pháp | Người sáng lập | Trọng tâm |
@@ -108,6 +301,21 @@ Các nhà giáo dục không thống nhất: một số cho rằng Đô di độ
 | **Kodály** | [[Kodály|Zoltán Kodály]] | Hát là nền tảng; dân ca; [[xuong-am|Đô di động]] và ký hiệu tay; đọc nhạc |
 | **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết hợp âm nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, glockenspiel); ngẫu hứng nhiều hơn Kodály |
 | **Suzuki** | Shinichi Suzuki | Học nhạc như học **tiếng mẹ đẻ**: bắt đầu rất sớm, nghe nhiều, học thuộc trước, **phụ huynh** tham gia |
+
+## Lịch sử từng phương pháp
+| Phương pháp | Mốc chính |
+|---|---|
+| **Dalcroze** | Émile Jaques-Dalcroze dạy hoà âm ở Nhạc viện Geneva (khoảng 1892–1910); nhận thấy học trò **không nghe được** hoà âm mình viết, ông phát triển các trò chơi luyện tai và vận động, đặt tên **eurhythmics**. Dạy ở Hellerau (gần Dresden) khoảng 1910–1914; thành lập **Institut Jaques-Dalcroze** ở Geneva năm 1915 |
+| **Kodály** | Kodály bắt đầu quan tâm giáo dục âm nhạc cho trẻ từ khoảng **1925**; nhà nước Hungary đưa ý tưởng của ông vào trường phổ thông từ **1945**; trường tiểu học âm nhạc đầu tiên (học nhạc hằng ngày) mở năm **1950**; giới thiệu với quốc tế tại hội nghị ISME ở Vienna năm **1958**; UNESCO ghi danh là di sản văn hoá phi vật thể năm **2016** |
+| **Ký hiệu tay và Đô di động** | Lấy từ hệ **Tonic Sol-fa** của John Curwen (1816–1880) — vốn dựa trên hệ xướng âm di động của **Sarah Glover** — được Kodály tiếp nhận vào nửa đầu thế kỷ 20 (xem [[xuong-am]]) |
+| **Orff Schulwerk** | Carl Orff cùng **Gunild Keetman** phát triển từ thập niên **1920** |
+| **Suzuki** | Bắt đầu ở Nhật từ thập niên **1930** dưới tên "Phương pháp tiếng mẹ đẻ" / "Giáo dục tài năng"; gây chú ý ở Mỹ qua một bộ phim năm 1958 và chuyến lưu diễn năm 1964 của học trò nhỏ |
+
+## Tranh luận về Suzuki
+- Suzuki **hoãn việc đọc nốt** cho đến khi học trò đã có kỹ năng chơi khá cao; khi nào và bằng cách nào đưa việc đọc vào vẫn là câu hỏi mở.
+- **Gilles Comeau** (Đại học Ottawa) phân tích rằng phép so sánh "học nhạc như học tiếng mẹ đẻ" **có thể gây hiểu lầm** với việc học nhạc cụ, và nêu những lý do cần thận trọng; những người ủng hộ thì coi phép so sánh này là thế mạnh của phương pháp.
+
+Các phương pháp khác: [[ly-thuyet-hoc-am-nhac-gordon]] (Gordon), cùng lộ trình cả mục ở [[lo-trinh-luyen-tai-su-pham]].
 
 ## Điểm chung
 Orff và Kodály đều coi trọng **âm thanh trước ký hiệu**: biết hát và chơi trước, rồi mới học đọc nốt như bước phát triển tự nhiên. Một luận văn so sánh bốn phương pháp ở Úc kết luận rằng trong chương trình âm nhạc toàn diện, **cảm nhận nên đi trước hiểu biết lý thuyết**.
@@ -118,6 +326,90 @@ Orff và Kodály đều coi trọng **âm thanh trước ký hiệu**: biết h�
 - Nghe bản thu bài sắp học và mời phụ huynh cùng tham gia buổi tập (Suzuki).
 
 Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp còn hạn chế. Gợi ý theo lứa tuổi: [[day-tre-em]], [[day-nguoi-lon]].
+`,
+  },
+  {
+    slug: 'cach-day-doc-not',
+    title: 'Các cách dạy đọc nốt cho người mới',
+    category: 'musicianship',
+    aliases: ['dạy đọc nốt', 'reading approaches', 'phương pháp đọc nốt', 'Middle C approach', 'vị trí Đô giữa', 'multi-key', 'sách phương pháp piano', 'method book'],
+    summary: 'Ba cách tiếp cận chính trong các giáo trình piano cho người mới: vị trí Đô giữa, đọc theo quãng/khuôn hình (kèm nốt mốc) và đa giọng. Một nghiên cứu so sánh năm 2019 cho kết quả trái với quan niệm phổ biến.',
+    refs: [
+      ['DiCienzo (2019), University of Ottawa — A comparison of the Middle C and the mixed intervallic reading approaches', 'https://ruor.uottawa.ca/handle/10393/39944'],
+      ['University of Ottawa Piano Pedagogy Research Lab — cognitive modelling of reading methods (PDF)', 'https://piano.uottawa.ca/wp-content/uploads/2016/04/Links/archives/Cognitive_modelling_oct242013.pdf'],
+      ['Musicnotes — 5 ways to learn how to read music at the piano', 'https://www.musicnotes.com/blog/5-ways-to-learn-how-to-read-music-at-the-piano'],
+      ['Melanie Spanswick — Music and sight reading: Rami Bar-Niv', 'https://melaniespanswick.com/2025/02/16/music-and-sight-reading-rami-bar-niv/'],
+    ],
+    body: `
+Hầu hết người mới học piano bắt đầu bằng một **sách phương pháp** (method book). Các sách này khác nhau chủ yếu ở **cách dạy đọc nốt**.
+
+## Ba cách tiếp cận
+| Cách | Ý tưởng | Điểm mạnh | Điểm yếu thường được nêu |
+|---|---|---|---|
+| **Vị trí Đô giữa** | Hai ngón cái đặt trên Đô giữa, các ngón khác trên các phím liền kề; nốt được gắn với ngón tay và vị trí cố định | Mốc định hướng rõ ràng trên khuông và trên đàn | Dễ phụ thuộc "ngón nào bấm nốt nào", khó khi rời vị trí |
+| **Đọc theo quãng / khuôn hình** (intervallic) | Đọc **khoảng cách** và **hướng**: bước (quãng 2), nhảy (quãng 3), lặp lại; kết hợp vài **nốt mốc** | Gần với cách người đọc thạo nhìn bản nhạc (xem [[doc-not-nhanh]], [[thi-tau]]) | Cần thời gian để nhận ra tên từng nốt |
+| **Đa giọng** (multi-key) | Học sớm các vị trí năm ngón ở nhiều giọng | Quen với nhiều giọng, hợp âm, dịch giọng sớm | Khối lượng khái niệm lớn với người mới |
+**Nốt mốc** (landmark): chỉ thuộc lòng vài nốt quan trọng (như Đô giữa, Sol khoá Sol, Fa khoá Fa); các nốt khác được tìm bằng **bước hoặc nhảy** từ nốt mốc. Đây là cầu nối giữa cách thứ nhất và thứ hai.
+
+## Nghiên cứu: DiCienzo (Đại học Ottawa, 2019)
+- So sánh học trò **7–11 tuổi** học theo cách **Đô giữa** và theo cách **quãng – hỗn hợp**, kiểm tra nhận phím, gọi tên nốt ở hai khoá, nhận nốt đơn và quãng, nhận khuôn hình, và thị tấu.
+- Giả thuyết: nhóm Đô giữa giỏi gọi tên nốt, nhóm quãng giỏi quãng, khuôn hình và thị tấu.
+- Kết quả: nhóm **Đô giữa làm tốt hơn ở hầu hết các bài kiểm tra**, trừ nhận phím và khuôn 3 nốt ở vị trí Sol. Tác giả nhận xét điều này **đáng ngạc nhiên**, vì cách Đô giữa thường bị phê bình trong sư phạm hiện nay.
+- Lưu ý: đây là **một luận văn**, quy mô và điều kiện cụ thể cần đọc trong bản đầy đủ; chưa đủ để kết luận chung.
+
+## Gợi ý khi dạy
+Những gợi ý sau là tổng hợp kinh nghiệm, không phải kết luận nghiên cứu:
+- Dù dùng giáo trình nào, hãy dạy **cả tên nốt lẫn quãng**: tên nốt để định vị, quãng để đọc nhanh.
+- Sớm cho học trò **rời vị trí cố định** (chơi cùng giai điệu ở chỗ khác trên đàn) để tránh phụ thuộc ngón tay.
+- Kết hợp **nghe – hát trước khi đọc** (xem [[ly-thuyet-hoc-am-nhac-gordon]], [[phuong-phap-giao-duc-am-nhac]]).
+- Kiểm tra thường xuyên bằng [[thi-tau|thị tấu]] những bài **dễ hơn** trình độ đang học.
+Liên quan: [[not-nhac]], [[khuong-nhac]], [[day-tre-em]].
+`,
+  },
+  {
+    slug: 'giang-day-hieu-qua',
+    title: 'Giảng dạy hiệu quả: nghiên cứu nói gì',
+    category: 'musicianship',
+    aliases: ['giảng dạy hiệu quả', 'effective teaching', 'dạy học hiệu quả', 'phản hồi', 'feedback', 'động lực học nhạc', 'motivation', 'tự quyết', 'self-determination theory', 'Duke', 'McPherson', 'buổi học piano'],
+    summary: 'Những gì nghiên cứu cho biết về buổi học nhạc hiệu quả: quan sát các giáo viên bậc thầy (Duke & Simmons, 2006), vai trò của cam kết lâu dài ở trẻ (McPherson), và thuyết tự quyết về động lực — kèm các gợi ý ứng dụng.',
+    refs: [
+      ['UT Austin Center for Music Learning — The nature of expertise (Duke & Simmons, 2006)', 'https://cml.music.utexas.edu/online-resources/the-nature-of-expertise'],
+      ['University of New Brunswick — bibliographic record: Duke & Simmons (2006), Bulletin of the CRME 170', 'https://narrativestudies.lib.unb.ca/bibcite/reference/22712'],
+      ['Wikipedia — Robert Duke (music scholar)', 'https://en.wikipedia.org/wiki/Robert_Duke_(music_scholar)'],
+      ['Evans (2015), Psychology of Music — Self-determination theory: an approach to motivation in music education (PDF)', 'https://selfdeterminationtheory.org/wp-content/uploads/2021/05/2015_Evans_SDT_MusicEdu.pdf'],
+      ["Bonneville-Roussy & Evans (2024) — music students' practice and teachers' styles (PDF)", 'https://selfdeterminationtheory.org/wp-content/uploads/2024/12/2024_Bonneville-RoussyEvans_MusicStudents.pdf'],
+      ['Oxford Academic — McPherson (ed.), The Child as Musician', 'https://academic.oup.com/book/2564/chapter/142899152'],
+    ],
+    body: `
+## Quan sát các giáo viên bậc thầy (Duke & Simmons, 2006)
+**Robert Duke** và **Amy Simmons** (Đại học Texas ở Austin) xem khoảng **25 giờ** video các buổi học riêng của ba giáo viên nổi tiếng — nghệ sĩ oboe Richard Killmer, nghệ sĩ viola Donald McInnes và nghệ sĩ piano **Nelita True** — để tìm những điểm **chung** của cả ba. Họ mô tả **19 yếu tố**, xếp vào ba nhóm:
+| Nhóm | Câu hỏi mà nhóm yếu tố trả lời |
+|---|---|
+| **Mục tiêu và kỳ vọng** | Giáo viên đặt chuẩn âm thanh và mục tiêu cho học trò thế nào? |
+| **Tạo ra thay đổi** | Giáo viên làm gì để cách chơi của học trò **thực sự thay đổi** ngay trong buổi học? |
+| **Truyền đạt thông tin** | Giáo viên giải thích, làm mẫu, phản hồi ra sao? |
+Danh sách đầy đủ 19 yếu tố và video minh hoạ có trên trang của Trung tâm Học Âm nhạc (UT Austin). Lưu ý giới hạn: đây là quan sát **ba giáo viên** ở trình độ cao, không phải thí nghiệm có nhóm đối chứng.
+
+## Cam kết và động lực ở trẻ (McPherson)
+**Gary McPherson** theo dõi lâu dài một nhóm trẻ bắt đầu học nhạc cụ, hỏi từ đầu rằng các em **dự định chơi bao lâu**. Theo các bản tóm tắt nghiên cứu, **mức cam kết lâu dài** mà trẻ tự nêu ra liên quan chặt chẽ đến tiến bộ sau này — kể cả khi lượng luyện tập như nhau — hơn là các chỉ số như trí thông minh hay khả năng nghe. Con số cụ thể hay được trích (ví dụ "hơn 400%") đến từ sách phổ thông dẫn lại, nên cần đối chiếu công bố gốc trước khi dùng.
+
+## Thuyết tự quyết
+Thuyết tự quyết (self-determination theory) cho rằng động lực bền vững khi ba **nhu cầu tâm lý cơ bản** được đáp ứng:
+| Nhu cầu | Trong buổi học đàn |
+|---|---|
+| **Năng lực** | Học trò cảm thấy mình **đang làm được**, tiến bộ thấy rõ |
+| **Tự chủ** | Học trò có **tiếng nói**: chọn bài, chọn cách tập, hiểu vì sao |
+| **Gắn kết** | Quan hệ tốt với giáo viên, gia đình, bạn cùng học |
+Paul Evans (2015) tổng hợp cách áp dụng thuyết này cho giáo dục âm nhạc. Một nghiên cứu năm 2024 (213 sinh viên âm nhạc) xem xét mối liên hệ giữa **phong cách giảng dạy** của giáo viên với **thời lượng và chất lượng** luyện tập của sinh viên.
+
+## Gợi ý ứng dụng
+Tổng hợp từ các nguồn trên; đây là gợi ý, không phải công thức:
+- **Đặt mục tiêu âm thanh rõ ràng** cho mỗi đoạn: học trò cần biết "chơi hay" nghĩa là gì trước khi tập.
+- **Tạo thay đổi ngay trong buổi học**: chọn một vấn đề, sửa đến khi học trò làm được nhiều lần liên tiếp, thay vì nêu nhiều lỗi một lúc.
+- **Phản hồi cụ thể** về âm thanh và động tác, gắn với mục tiêu — không chỉ "tốt" hay "chưa được".
+- **Cho học trò quyền chọn** (bài, thứ tự tập) để nuôi tự chủ; giúp học trò **thấy tiến bộ** để nuôi cảm giác năng lực.
+- Hỏi và lắng nghe về **dự định lâu dài** của học trò với âm nhạc.
+Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-hop-bieu-dien]].
 `,
   },
   {
