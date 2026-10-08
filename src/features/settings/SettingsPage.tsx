@@ -4,7 +4,7 @@ import { applyThemeToDocument, updateSettings } from '../../services/settingsSer
 import { downloadBackupFile, exportBackup, importBackup } from '../../services/backup'
 import { Field, SegmentedControl, SelectInput, TextInput } from '../../components/fields'
 import { Button } from '../../components/Button'
-import { ConfirmDialog } from '../../components/Dialog'
+import { Dialog } from '../../components/Dialog'
 import { CloudIcon, DownloadIcon, MoonIcon, SunIcon, UploadIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
 import type { LessonLocation } from '../../types'
@@ -30,21 +30,25 @@ export function SettingsPage() {
     const file = e.target.files?.[0]
     if (file) {
       setPendingFile(file)
-      setImportMode('merge')
+      setImportMode('replace')
     }
     e.target.value = ''
   }
 
+  function closeImport() {
+    setImportMode(null)
+    setPendingFile(null)
+  }
+
   async function performImport(mode: 'replace' | 'merge') {
     if (!pendingFile) return
+    const file = pendingFile
+    closeImport()
     try {
-      const result = await importBackup(pendingFile, mode)
-      pushToast(`Đã nhập ${result.students} học viên, ${result.timetableSlots} buổi học`, 'success')
+      const result = await importBackup(file, mode)
+      pushToast(`${mode === 'replace' ? 'Đã ghi đè' : 'Đã gộp'}: ${result.students} học viên, ${result.timetableSlots} buổi học`, 'success')
     } catch (err) {
       pushToast(err instanceof Error ? err.message : 'Nhập dữ liệu thất bại', 'error')
-    } finally {
-      setPendingFile(null)
-      setImportMode(null)
     }
   }
 
@@ -151,17 +155,36 @@ export function SettingsPage() {
         </Section>
       </div>
 
-      <ConfirmDialog
+      <Dialog
         open={importMode !== null}
-        onClose={() => {
-          setImportMode(null)
-          setPendingFile(null)
-        }}
-        onConfirm={() => importMode && performImport(importMode)}
+        onClose={closeImport}
         title="Nhập bản sao lưu"
-        description="Gộp dữ liệu sẽ thêm các học viên và buổi học này vào dữ liệu hiện có (cập nhật nếu trùng ID). Thao tác này không xoá bất cứ gì."
-        confirmLabel="Gộp dữ liệu"
-      />
+        width="sm"
+        footer={
+          <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+            <Button variant="secondary" onClick={closeImport}>
+              Huỷ
+            </Button>
+            <Button variant="secondary" onClick={() => performImport('merge')}>
+              Gộp vào dữ liệu hiện có
+            </Button>
+            <Button variant="primary" onClick={() => performImport('replace')}>
+              Ghi đè toàn bộ
+            </Button>
+          </div>
+        }
+      >
+        <div className="space-y-3 text-[14px] leading-relaxed text-[var(--color-ink-muted)]">
+          <p>
+            <span className="font-semibold text-[var(--color-ink)]">Ghi đè toàn bộ</span> (nên dùng): xoá học viên và lịch dạy trên máy này rồi thay bằng
+            đúng nội dung của bản sao lưu. Dữ liệu trùng lặp cũ cũng được dọn sạch.
+          </p>
+          <p>
+            <span className="font-semibold text-[var(--color-ink)]">Gộp</span>: giữ dữ liệu hiện có. Học viên trùng tên và buổi học trùng (cùng học viên, cùng
+            thứ, cùng giờ bắt đầu) sẽ được cập nhật theo bản sao lưu thay vì thêm bản mới.
+          </p>
+        </div>
+      </Dialog>
     </div>
   )
 }

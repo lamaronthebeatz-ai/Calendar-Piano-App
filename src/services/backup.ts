@@ -78,6 +78,43 @@ function isValidPayload(data: unknown): data is BackupPayload {
   return d.version === 2 && Array.isArray(d.students) && Array.isArray(d.timetableSlots)
 }
 
+/** Key used to recognise the same student across devices, whose ids differ. */
+const nameKey = (name: string) => name.normalize('NFC').trim().replace(/\s+/g, ' ').toLocaleLowerCase('vi')
+
+/** Key used to recognise the same weekly slot: one student, one day, one start time. */
+const slotKey = (s: Pick<TimetableSlot, 'studentId' | 'dayOfWeek' | 'startTime'>) => `${s.studentId}|${s.dayOfWeek}|${s.startTime}`
+
+/**
+ * Collapses duplicates inside the backup itself (a backup exported after an
+ * earlier double import contains each student and slot twice). Students with
+ * the same name keep the most recently updated copy; slots are re-pointed to
+ * the kept student and then de-duplicated by student + day + start time.
+ */
+function dedupePayload(students: Student[], slots: TimetableSlot[]) {
+  const keptByName = new Map<string, Student>()
+  const idMap = new Map<string, string>()
+  for (const s of students) {
+    const k = nameKey(s.name)
+    const kept = keptByName.get(k)
+    if (!kept || s.updatedAt > kept.updatedAt) keptByName.set(k, s)
+  }
+  for (const s of students) idMap.set(s.id, keptByName.get(nameKey(s.name))!.id)
+
+  const keptSlots = new Map<string, TimetableSlot>()
+  for (const slot of slots) {
+    const remapped = { ...slot, studentId: idMap.get(slot.studentId) ?? slot.studentId }
+    const k = slotKey(remapped)
+    const kept = keptSlots.get(k)
+    if (!kept || remapped.updatedAt > kept.updatedAt) keptSlots.set(k, remapped)
+  }
+  return { students: [...keptByName.values()], slots: [...keptSlots.values()] }
+}
+
+/**
+ * replace: the backup becomes the whole schedule (everything on this device is overwritten).
+ * merge: backup records overwrite matching records on this device — matched by id, or else by
+ * student name / by student + day + start time — and only genuinely new records are added.
+ */
 export async function importBackup(file: File, mode: 'replace' | 'merge'): Promise<{ students: number; timetableSlots: number }> {
   let data: unknown
   try {
@@ -91,14 +128,39 @@ export async function importBackup(file: File, mode: 'replace' | 'merge'): Promi
     throw new ImportError('This does not look like a valid Piano Schedule backup file for this version of the app.')
   }
 
+  const incoming = dedupePayload(data.students, data.timetableSlots)
+  const settings = data.settings
+
   await db.transaction('rw', db.students, db.timetableSlots, db.settings, async () => {
+    let students = incoming.students
+    let slots = incoming.slots
+
     if (mode === 'replace') {
       await Promise.all([db.students.clear(), db.timetableSlots.clear()])
+    } else {
+      const [existingStudents, existingSlots] = await Promise.all([db.students.toArray(), db.timetableSlots.toArray()])
+      const existingIds = new Set(existingStudents.map((s) => s.id))
+      const existingByName = new Map(existingStudents.map((s) => [nameKey(s.name), s.id]))
+      const idMap = new Map<string, string>()
+      students = students.map((s) => {
+        const target = existingIds.has(s.id) ? s.id : (existingByName.get(nameKey(s.name)) ?? s.id)
+        idMap.set(s.id, target)
+        return { ...s, id: target }
+      })
+
+      const existingSlotIds = new Set(existingSlots.map((s) => s.id))
+      const existingByKey = new Map(existingSlots.map((s) => [slotKey(s), s.id]))
+      slots = slots.map((slot) => {
+        const remapped = { ...slot, studentId: idMap.get(slot.studentId) ?? slot.studentId }
+        const id = existingSlotIds.has(remapped.id) ? remapped.id : (existingByKey.get(slotKey(remapped)) ?? remapped.id)
+        return { ...remapped, id }
+      })
     }
-    if (data.students.length) await db.students.bulkPut(data.students)
-    if (data.timetableSlots.length) await db.timetableSlots.bulkPut(data.timetableSlots)
-    if (data.settings) await db.settings.put(data.settings)
+
+    if (students.length) await db.students.bulkPut(students)
+    if (slots.length) await db.timetableSlots.bulkPut(slots)
+    if (settings) await db.settings.put(settings)
   })
 
-  return { students: data.students.length, timetableSlots: data.timetableSlots.length }
+  return { students: incoming.students.length, timetableSlots: incoming.slots.length }
 }
