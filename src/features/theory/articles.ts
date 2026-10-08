@@ -27,7 +27,7 @@ export const CATEGORIES = {
   instrument: { title: 'Cây đàn piano', hue: 30, description: 'Lịch sử, harpsichord và clavichord, cấu tạo, bộ máy, các loại đàn, bảo dưỡng và lên dây.' },
   musicianship: { title: 'Luyện tai & sư phạm', hue: 265, description: 'Cảm âm tương đối và tuyệt đối, xướng âm, các phương pháp giáo dục âm nhạc, thi cấp độ.' },
   basics: { title: 'Ký âm cơ bản', hue: 220, description: 'Nốt, khuông nhạc, khoá, bàn phím và dấu hoá — đọc được bản nhạc.' },
-  rhythm: { title: 'Nhịp & tiết tấu', hue: 25, description: 'Âm thanh kéo dài bao lâu, được chia phách và nhanh chậm thế nào.' },
+  rhythm: { title: 'Nhịp & tiết tấu', hue: 25, description: 'Trường độ, phách, nhịp và nhịp độ: lịch sử ký âm, cảm nhận phách, đảo phách, nhịp lẻ và đa nhịp.' },
   pitch: { title: 'Cao độ & quãng', hue: 285, description: 'Khoảng cách giữa các nốt và cơ sở âm học của chúng.' },
   scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu và quan hệ giữa các giọng.' },
   harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hợp âm, chức năng, vòng hợp âm, kết và chuyển giọng.' },
