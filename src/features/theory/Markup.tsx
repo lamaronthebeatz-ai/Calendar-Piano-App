@@ -9,7 +9,7 @@ import { CircleOfFifths, Keyboard, Staff, type Clef } from './diagrams'
  * one written by title or alias, like [[Bach]], shows that text as written.
  */
 function Inline({ text }: { text: string }) {
-  return text.split(/(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
+  return text.split(/(\*\*(?:[^*]|\*[^*]+\*)+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
     if (part.startsWith('**')) return <strong key={i} className="font-semibold text-[var(--color-ink)]"><Inline text={part.slice(2, -2)} /></strong>
     if (part.startsWith('*') && part.length > 2) return <em key={i}><Inline text={part.slice(1, -1)} /></em>
     if (!part.startsWith('[[')) return part
