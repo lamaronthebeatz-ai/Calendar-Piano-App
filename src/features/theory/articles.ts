@@ -13,7 +13,8 @@ import { composers } from './content/composers'
 import { technique } from './content/technique'
 import { instrument } from './content/instrument'
 import { musicianship } from './content/musicianship'
-import { pianists } from './content/pianists'
+import { pianists, pianoSchools } from './content/pianists'
+import { analysis } from './content/analysis'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -34,8 +35,9 @@ export const CATEGORIES = {
   expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách đánh, hoa mỹ, pedal, ngón bấm và thuật ngữ.' },
   jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Swing, xếp hợp âm, hệ thống hợp âm – âm giai, thay thế tritone, tái hoà âm.' },
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử, ấn tượng, phi điệu tính, 12 âm, tập hợp cao độ, tối giản.' },
+  analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phân tích các bài hay dạy: Für Elise, Prelude Đô trưởng của Bach, Sonata K. 545 của Mozart.' },
   pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern, ...composers, ...pianists]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis]

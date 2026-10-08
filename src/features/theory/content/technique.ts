@@ -598,6 +598,8 @@ Bản lead sheet chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay 
 
 Ghi nhớ trước vài hợp âm hay gặp trong bài và luyện chuyển qua lại giữa chúng (xem [[vong-hop-am]], [[the-dao-hop-am]]).
 
+Các điệu có tiết tấu đặc trưng (slow rock 12/8, bossa nova, cha-cha-cha): [[dieu-dem-pho-bien]].
+
 ## Tay trái theo thể loại
 Trong jazz, blues và nhạc cổ điển, tay trái thường giữ nhịp đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
 `,
@@ -634,6 +636,45 @@ Bài tập cốt lõi: một câu "**hỏi**" bằng giai điệu, rồi một c
 - Nhắm vào **nốt của hợp âm** đang vang ở phách mạnh; dùng âm giai trưởng trên hợp âm I, Lydian trên IV, Mixolydian trên V (xem [[he-thong-hop-am-am-giai]]).
 
 Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng tác những đoạn nhạc đơn giản ngay tại chỗ. Các nguồn này là chương trình giảng dạy và khoá học, chưa có nghiên cứu đối chứng.
+`,
+  },
+  {
+    slug: 'dieu-dem-pho-bien',
+    title: 'Các điệu đệm thông dụng',
+    category: 'technique',
+    aliases: ['điệu đệm', 'tiết điệu', 'slow rock', 'bossa nova', 'cha cha cha', 'chachacha', 'clave', 'nhịp 12/8', 'ballad'],
+    summary: 'Slow rock (12/8, bốn phách lớn chia ba), bossa nova (dựa trên mẫu clave) và cha-cha-cha (nhấn "cha-cha-cha" ở phách 3 – 4) — cùng cách luyện từng điệu trên piano.',
+    refs: [
+      ['Soundbrenner — Rhythm library: 12/8', 'https://www.soundbrenner.com/blogs/articles/rhythm-library-12-8'],
+      ['Yamaha — Exploring Latin rhythms', 'https://hub.yamaha.com/keyboards/k-how-to/exploring-latin-rhythms'],
+      ['UJAM — How to make bossa nova', 'https://www.ujam.com/tutorials/how-to-make-bossa-nova/'],
+      ['PianoGroove — Cha-cha-cha & mambo', 'https://pianogroove.com/jazz-piano-lessons/cha-cha-cha-mambo-tutorial/'],
+    ],
+    body: `
+Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có tiết tấu đặc trưng.
+
+## Slow rock và ballad 12/8
+- 12/8 là [[so-chi-nhip|nhịp kép]] **bốn phách lớn**, mỗi phách chia ba: đếm "**1** và a **2** và a **3** và a **4** và a".
+- Bắt đầu bằng cảm giác **3 + 3 + 3 + 3**; nhấn mạnh nhất ở phách 1, nhưng cả bốn phách đều là phách chính.
+- Phân vai thường gặp: bè trầm giữ **bốn phách lớn**, còn piano (hoặc trống) chơi hình **chia ba** liên tục.
+- Đừng nhầm với **6/8** — chỉ có **hai** phách lớn. 12/8 chậm (dưới khoảng 100 phách/phút) cũng dùng cho jazz ballad.
+
+## Bossa nova
+- Xây dựng trên một mẫu **clave**; mẫu clave bossa nova thường được gắn với Antonio Carlos Jobim (dù chính ông chỉ coi đó là một motif tiết tấu).
+- Một bài học gợi ý tay trái: nốt gốc và nốt 5 của hợp âm, nhấn ở các nốt móc đơn thứ 1, 4–5 và 8 của ô nhịp. Tay phải [[dao-phach|đảo phách]]: các móc đơn thứ 1, 4, 7 của ô thứ nhất và 3, 6 của ô thứ hai (giáo viên khác đặt 3 và 5).
+- Yamaha luyện theo thứ tự: clave son 2-3, rồi 3-2, rồi mẫu đệm bossa; dùng [[xep-hop-am|thế bấm hợp âm]] hai tay cho tiếng đầy hơn.
+- Chạm phím **nhẹ**, tiết tấu tiết chế, hợp âm nối mượt (thường dùng [[hop-am-bay|hợp âm 7]] và [[hop-am-mo-rong|9]]).
+
+## Cha-cha-cha
+- Ra đời từ sự pha trộn giữa son và danzón của Cuba; có tiết tấu và đường bass đặc trưng.
+- Phách 3 và 4 mang tiếng "**cha-cha-cha**" đặc trưng.
+- Một cách đệm: tay trái nốt gốc ở phách 1, nốt 5 ở phách 3, lặp ở phách 4; tay phải có **hai móc đơn ở phách 2**.
+- Lời khuyên: học **đường bass trước**, rồi thêm hoà âm; luyện trên vòng [[vong-hop-am|ii – V – I]].
+
+## Cách luyện chung
+1. Vỗ tay hoặc đếm to tiết tấu trước (xem [[kiem-soat-toc-do]]).
+2. Chơi tay trái riêng trên một hợp âm, rồi trên cả [[vong-hop-am]].
+3. Thêm tay phải; nghe bản thu mẫu và bắt chước cảm giác nhịp — các nguồn khác nhau ở chi tiết nhỏ (vị trí nhấn của clave, tay nào chơi phách nghịch).
 `,
   },
 ]

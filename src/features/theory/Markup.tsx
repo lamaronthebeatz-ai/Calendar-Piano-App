@@ -10,7 +10,7 @@ import { CircleOfFifths, Keyboard, Staff, type Clef } from './diagrams'
  */
 function Inline({ text }: { text: string }) {
   return text.split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
-    if (part.startsWith('**')) return <strong key={i} className="font-semibold text-[var(--color-ink)]">{part.slice(2, -2)}</strong>
+    if (part.startsWith('**')) return <strong key={i} className="font-semibold text-[var(--color-ink)]"><Inline text={part.slice(2, -2)} /></strong>
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
     const article = findArticle(target)

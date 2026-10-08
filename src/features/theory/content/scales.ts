@@ -201,7 +201,7 @@ Bỏ bậc 4 và bậc 7 của [[am-giai-truong]] (hai nốt tạo [[cung-nua-cu
 Bắt đầu từ bậc 5 của ngũ cung trưởng: A – C – D – E – G (song song với C ngũ cung trưởng, như [[giong-song-song]]). Đây là nền tảng của [[am-giai-blues]] và solo guitar rock.
 
 ## Trong âm nhạc Việt Nam
-Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ cung với năm âm **Hò – Xự – Xang – Xê – Cống** (tương ứng gần đúng Đô – Rê – Fa – Sol – La trong một số điệu). Các **điệu Bắc, điệu Nam** và **hơi** (Xuân, Ai, Oán…) biến đổi cao độ và luyến láy trên khung ngũ cung này.
+Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ cung với năm âm **Hò – Xự – Xang – Xê – Cống** (tương ứng gần đúng Đô – Rê – Fa – Sol – La trong một số điệu). Về các tác phẩm piano Việt Nam dùng chất liệu dân gian: [[piano-viet-nam]]. Các **điệu Bắc, điệu Nam** và **hơi** (Xuân, Ai, Oán…) biến đổi cao độ và luyến láy trên khung ngũ cung này.
 
 ## Vì sao dễ nghe?
 Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng nhau đều thuận tai — lý do giáo viên hay cho học trò ngẫu hứng trên phím đen.

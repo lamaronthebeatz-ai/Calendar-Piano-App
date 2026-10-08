@@ -36,7 +36,7 @@ Liên quan: [[the-dao-hop-am]], [[hop-am-bay]], [[ky-hieu-hop-am]], [[chuc-nang-
     slug: 'the-dao-hop-am',
     title: 'Thể đảo hợp âm',
     category: 'harmony',
-    aliases: ['thể đảo', 'đảo hợp âm', 'inversion', 'thế đảo 1', 'thể đảo 2', 'thể nguyên vị', 'hợp âm 6', 'hợp âm 6/4', 'slash chord'],
+    aliases: ['thể đảo', 'đảo hợp âm', 'inversion', 'thế đảo 1', 'thể đảo 2', 'thể nguyên vị', 'hợp âm 6/4', 'slash chord'],
     summary: 'Cách sắp xếp hợp âm theo nốt nằm ở bè trầm: nguyên vị (nốt gốc), đảo 1 (nốt bậc 3), đảo 2 (nốt bậc 5).',
     wiki: 'Inversion_(music)',
     body: `
@@ -91,7 +91,7 @@ Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii –
     slug: 'ky-hieu-hop-am',
     title: 'Ký hiệu hợp âm',
     category: 'harmony',
-    aliases: ['hợp âm ký hiệu', 'chord symbol', 'lead sheet', 'đọc hợp âm', 'tên hợp âm', 'sus', 'add9'],
+    aliases: ['hợp âm ký hiệu', 'chord symbol', 'lead sheet', 'đọc hợp âm', 'tên hợp âm', 'sus'],
     summary: 'Cách viết tắt hợp âm bằng chữ cái và hậu tố (Cm, G7, Fmaj7, Dsus4…), dùng trong nhạc pop, jazz và đệm hát.',
     wiki: 'Chord_chart',
     body: `
@@ -120,7 +120,7 @@ Thay nốt bậc 3 bằng bậc 4 (sus4) hoặc bậc 2 (sus2) → không trư�
 ## Ký hiệu gạch chéo
 **C/E** nghĩa là hợp âm C với **E ở bè trầm** — chính là [[the-dao-hop-am|thể đảo 1]]. Nốt sau gạch có thể không thuộc hợp âm (C/B♭).
 
-Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]].
+Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 thế nào, add9 khác 9 thế nào: [[hop-am-6-va-add]].
 `,
   },
   {
@@ -352,6 +352,46 @@ Giọng **át** (lên quãng 5), giọng **[[giong-song-song|song song]]**, gi�
 Xuất hiện đều đặn một [[dau-hoa]] lạ (ví dụ F♯ liên tục trong bài Đô trưởng) kèm [[cau-ket]] ở giọng mới → đã chuyển sang Sol trưởng.
 
 Chuyển giọng là trụ cột của [[hinh-thuc-sonata]].
+`,
+  },
+  {
+    slug: 'hop-am-6-va-add',
+    title: 'Hợp âm 6 và hợp âm add',
+    category: 'harmony',
+    aliases: ['hợp âm 6', 'C6', 'Cm6', 'hợp âm add9', 'add9', 'add2', 'hợp âm thêm nốt', 'sixth chord', 'added tone chord'],
+    summary: 'C6 (C–E–G–A) có cùng bốn nốt với Am7 nhưng khác nốt trầm và chức năng; Cadd9 thêm nốt 9 mà không có nốt 7 nên vẫn ổn định, còn C9 có nốt 7 thứ nên mang tính át.',
+    wiki: 'Added_tone_chord',
+    refs: [
+      ['oolimo — Sixth chords', 'https://www.oolimo.com/en/chord-types/sixth-chords'],
+      ['KVR Audio forum — Why a C6 is not an Am7?', 'https://kvraudio.com/forum/viewtopic.php?p=7191029'],
+    ],
+    body: `
+## Hợp âm 6
+Hợp âm ba trưởng thêm nốt [[quang|quãng 6 trưởng]] trên nốt gốc: **C6 = C – E – G – A**. Cm6 = C – E♭ – G – A.
+
+::keyboard C4 E4 G4 A4 | C6: C – E – G – A
+
+## C6 hay Am7?
+Am7 = A – C – E – G: **cùng bốn nốt** với C6. Khác nhau ở:
+| | C6 | Am7 |
+|---|---|---|
+| Nốt trầm thường dùng | C | A |
+| Nốt gốc được nghe | C | A |
+| Chức năng | Hợp âm chủ trưởng có màu sắc (thường thay cho I) | Hợp âm thứ — ví dụ ii trong Sol trưởng (hạ át) |
+
+Tên hợp âm cho người chơi biết **nên nghe đâu là nốt gốc** (xem [[the-dao-hop-am]], [[chuc-nang-hoa-am]]). C6 rất hay gặp ở hợp âm kết của swing và nhạc pop cổ (xem [[ky-hieu-hop-am]]).
+
+## Hợp âm add
+Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
+| Ký hiệu | Nốt (gốc C) | Đặc điểm |
+|---|---|---|
+| **Cadd9** (Cadd2) | C – E – G – D | Không có nốt 7 → **ổn định**, hay dùng như hợp âm chủ có màu sắc |
+| **C9** | C – E – G – B♭ – D | Có nốt **7 thứ** → mang tính **át**, muốn giải quyết (thường về F) — xem [[hop-am-mo-rong]] |
+| Cmaj9 | C – E – G – B – D | Có nốt 7 trưởng → màu jazz, mơ màng |
+
+::keyboard C4 D4 E4 G4 | Cadd9 xếp hẹp: C – D – E – G — nốt 9 sát nốt 3 tạo âm thanh "lấp lánh"
+
+Điểm mấu chốt: **có nốt 7 hay không** quyết định hợp âm nghe ổn định hay căng (xem [[thuan-nghich]], [[hop-am-bay]]).
 `,
   },
 ]

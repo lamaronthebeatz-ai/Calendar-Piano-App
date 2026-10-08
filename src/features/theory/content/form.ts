@@ -127,7 +127,7 @@ Chủ đề **A** (refrain) luôn ở giọng chính; các đoạn xen **B, C** 
 Rondo thường vui tươi, nhanh — rất hay dùng cho **chương cuối** của sonata và concerto thời Cổ điển.
 
 ## Ví dụ cho người học piano
-- "Für Elise" ([[Beethoven]]): A B A C A.
+- "Für Elise" ([[Beethoven]]): A B A C A — xem [[phan-tich-fur-elise]].
 - "Rondo alla Turca" — chương 3 Sonata K. 331 (Mozart).
 
 Xem tổng quan: [[hinh-thuc-am-nhac]]. So sánh: [[hinh-thuc-sonata]].
@@ -155,7 +155,7 @@ Trình bày tạo **xung đột** giữa hai giọng; phát triển đẩy xung 
 ## Lưu ý thuật ngữ
 "Sonata" là **tác phẩm** nhiều chương (thường 3–4) cho một hoặc hai nhạc cụ. "Hình thức sonata" là **cấu trúc** của một chương — thường là chương đầu. Sonatina là sonata nhỏ, đơn giản (Clementi, Kuhlau) — bài tập kinh điển cho học sinh piano.
 
-Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]]. Đoạn phát triển thường kết bằng [[bass-ngan]] trên át âm.
+Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]]. Phân tích một ví dụ cụ thể: [[phan-tich-sonata-k545]]. Đoạn phát triển thường kết bằng [[bass-ngan]] trên át âm.
 `,
   },
   {
