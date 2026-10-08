@@ -4,13 +4,14 @@ import { findArticle, normalize } from './wiki'
 import { CircleOfFifths, Keyboard, Staff, type Clef } from './diagrams'
 
 /**
- * Inline markup: **bold** and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
+ * Inline markup: **bold**, *italic* and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
  * Without a label, a link written by slug shows the article title (lower-cased unless it starts the text);
  * one written by title or alias, like [[Bach]], shows that text as written.
  */
 function Inline({ text }: { text: string }) {
-  return text.split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
+  return text.split(/(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
     if (part.startsWith('**')) return <strong key={i} className="font-semibold text-[var(--color-ink)]"><Inline text={part.slice(2, -2)} /></strong>
+    if (part.startsWith('*') && part.length > 2) return <em key={i}><Inline text={part.slice(1, -1)} /></em>
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
     const article = findArticle(target)
@@ -50,15 +51,16 @@ function Figure({ caption, children }: { caption?: string; children: ReactNode }
   return (
     <figure className="my-5 flex flex-col items-center gap-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4">
       {children}
-      {caption && <figcaption className="text-center text-[13px] text-[var(--color-ink-muted)]">{caption}</figcaption>}
+      {caption && <figcaption className="text-center text-[13px] text-[var(--color-ink-muted)]"><Inline text={caption} /></figcaption>}
     </figure>
   )
 }
 
 /** `::name args | caption` directives that embed a diagram or image. */
 function Directive({ line }: { line: string }) {
-  const [spec, caption] = line.slice(2).split('|').map((s) => s.trim())
-  const [name, ...args] = spec.split(/\s+/)
+  const [spec, ...rest] = line.slice(2).split(PIPE)
+  const caption = rest.join('|').trim()
+  const [name, ...args] = spec.trim().split(/\s+/)
   switch (name) {
     case 'keyboard':
       return <Figure caption={caption}><Keyboard notes={args} /></Figure>
@@ -73,8 +75,9 @@ function Directive({ line }: { line: string }) {
   }
 }
 
-// Split on pipes, except those inside [[slug|label]] links.
-const cells = (row: string) => row.split(/\|(?![^[]*\]\])/).slice(1, -1).map((c) => c.trim())
+// Pipes that separate cells or a caption — not those inside [[slug|label]] links.
+const PIPE = /\|(?![^[]*\]\])/
+const cells = (row: string) => row.split(PIPE).slice(1, -1).map((c) => c.trim())
 
 /** Renders an article body: groups consecutive lines of the same kind into blocks. */
 export function Markup({ source }: { source: string }) {

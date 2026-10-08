@@ -8,6 +8,10 @@ export const expression: Article[] = [
     aliases: ['sắc thái', 'dynamics', 'to nhỏ', 'piano', 'forte', 'crescendo', 'diminuendo', 'decrescendo', 'pp', 'mf', 'ff', 'sforzando'],
     summary: 'Độ to nhỏ của âm thanh, ghi bằng ký hiệu tiếng Ý từ pp (rất nhỏ) đến ff (rất to).',
     wiki: 'Dynamics_(music)',
+    refs: [
+      ['Pianist Magazine — 5 top tips for voicing (key speed and weight)', 'https://www.pianistmagazine.com/5-top-tips-for-voicing'],
+      ['Elliott Sound Products — Frequency, amplitude & dB', 'https://www.sound-au.com/articles/fadb.htm'],
+    ],
     body: `
 | Ký hiệu | Tên | Nghĩa |
 |---|---|---|
@@ -34,6 +38,16 @@ Tên đầy đủ của cây đàn piano là **[[lich-su-piano|pianoforte]]** �
 | sf, sfz (sforzando) | Nhấn mạnh đột ngột một nốt |
 | fp (fortepiano) | To rồi lập tức nhỏ |
 | subito p | Đột ngột nhỏ |
+
+## Tạo to nhỏ trên piano
+- Độ to phụ thuộc vào **tốc độ búa gõ dây**, tức là tốc độ nhấn phím: nhấn **nhanh, chắc** → to; nhấn **chậm, nhẹ** → nhỏ (xem [[bo-may-piano]]). Đây cũng là cách làm nổi một nốt trong hợp âm ([[lam-noi-giai-dieu]]).
+- Dùng **trọng lượng cánh tay** thay vì chỉ sức ngón để có tiếng to mà vẫn đẹp; giữ cổ tay mềm.
+- Tai người cảm nhận độ to theo thang logarit: phải tăng khoảng **10 dB** mới nghe "to gấp đôi" (xem [[am-hoc-co-ban]]) — nên dải pp – ff cần được **phân bậc có chủ ý**.
+
+## Gợi ý luyện cường độ
+- Chơi cùng một câu ở **ba mức** p – mf – f, rồi ghi âm nghe lại để kiểm tra sự khác biệt có thật rõ không.
+- Luyện crescendo/diminuendo đều trên một [[luyen-am-giai|âm giai]] đi lên – đi xuống.
+- Phân biệt **cường độ** với **tốc độ**: học trò hay vô tình nhanh dần khi to dần (xem [[kiem-soat-toc-do]]).
 
 Cường độ là **tương đối**: f trong nhạc Mozart nhẹ hơn f trong nhạc Rachmaninoff. Kết hợp với [[cach-dien-tau]] và [[nhip-do]] để tạo biểu cảm.
 `,

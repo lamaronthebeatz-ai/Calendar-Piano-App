@@ -21,6 +21,10 @@ export interface Person {
   wiki?: string
   /** Already has a page elsewhere (e.g. a composer who was also a great pianist): list them, but don't generate a page. */
   existing?: boolean
+  /** Extra article markup (biography, graded works…) placed after the header line. */
+  more?: string
+  /** Sources for `more`, as [title, url]. */
+  refs?: [string, string][]
 }
 
 export interface Period {
@@ -59,8 +63,10 @@ export function buildPeople(
     aliases: p.short ? [p.short] : undefined,
     summary: `${years(p)} · ${p.country} · ${p.desc}`,
     wiki: p.wiki ?? p.name.replace(/ /g, '_'),
+    refs: p.refs,
     body: [
       `**Thời kỳ:** [[${periodOf(p).slug}|${periodOf(p).title}]] · **${cfg.groupLabel}:** ${groupTitle(p)} · **Quốc gia:** ${p.country}`,
+      p.more?.trim() ?? '',
       `## ${cfg.worksTitle}`,
       p.works.map((w) => `- ${w}`).join('\n'),
       p.topics ? `Liên quan: ${p.topics.map((t) => `[[${t}]]`).join(', ')}.` : '',
