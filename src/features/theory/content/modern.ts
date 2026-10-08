@@ -230,4 +230,183 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
 Nhạc phim, nhạc điện tử, post-rock và nhạc piano "tân cổ điển" (Ludovico Einaudi, Max Richter). Liên quan: [[da-nhip]], [[ket-cau]], [[cac-thoi-ky]].
 `,
   },
+  {
+    slug: 'hoa-am-dieu-thuc',
+    title: 'Hoà âm điệu thức',
+    category: 'modern',
+    aliases: ['modal harmony', 'hợp âm điệu thức', 'kết điệu thức', 'modal cadence', 'Dorian shuttle', 'nốt đặc trưng điệu thức', 'characteristic pitch'],
+    summary: 'Cách dựng và nối hợp âm để làm nổi màu của một điệu thức (Dorian, Mixolydian, Lydian…) thay vì kéo về chủ âm bằng V – I: chọn hợp âm chứa nốt đặc trưng và dùng các kết riêng của từng điệu.',
+    wiki: 'Mode_(music)',
+    refs: [
+      ['Open Music Theory 2e — Modal schemas', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/07%3A_Popular_Music/7.12%3A_Modal_Schemas'],
+      ['Wardley — How do I mode? (PDF)', 'https://wardley.org/images/music/theory/HowDoIMode.pdf'],
+      ['Open Music Theory — Popular music: modal harmony', 'https://pressbooks.nebraska.edu/openmusictheory/?p=558'],
+      ['Wikipedia — So What (Miles Davis composition)', 'https://en.wikipedia.org/wiki/So_What_(Miles_Davis_composition)'],
+    ],
+    body: `
+Trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], giọng được xác lập bằng **V – I** và cảm âm. Trong **hoà âm điệu thức**, mục tiêu khác: làm nghe rõ **màu riêng** của một [[dieu-thuc|điệu thức]]. Thủ pháp này phổ biến trong nhạc ấn tượng, jazz điệu thức, nhạc phim và rất nhiều nhạc pop – rock.
+
+## Nguyên tắc 1: làm nổi nốt đặc trưng
+**Nốt đặc trưng** là nốt phân biệt điệu thức với âm giai trưởng hoặc thứ cùng chủ âm. Chọn hợp âm **chứa** nốt đó.
+| Điệu thức | Nốt đặc trưng | Hợp âm đặc trưng | Tiến trình / kết tiêu biểu |
+|---|---|---|---|
+| **Dorian** | ♮6 | **IV trưởng** | i – IV ("con thoi Dorian") |
+| **Mixolydian** | ♭7 | **♭VII** | ♭VII – I; kết "plagal kép" ♭VII – IV – I |
+| **Lydian** | ♯4 | **II trưởng** | I – II; kết II – IV – I |
+| **Aeolian** | ♭6, ♭7 | ♭VI, ♭VII | ♭VI – ♭VII – i (hoặc I) |
+| **Phrygian** | ♭2 | **♭II** | ♭II – i |
+
+## Nguyên tắc 2: tránh "kéo" về hoà âm trưởng – thứ
+- Hợp âm **V7** và tritone của nó gợi mạnh giọng trưởng – thứ. Ví dụ ở Sol Mixolydian, G7 làm nổi tritone F – B; có thể xếp các nốt thành hợp âm **sus** trên G để tránh tritone.
+- Hạn chế **cảm âm**: trong Dorian, Mixolydian, Aeolian, bậc 7 cách chủ âm **một cung** — chính điều này làm mất lực hút V – I.
+
+## Hợp âm điệu thức vẫn có chức năng
+Các hợp âm điệu thức nhìn chung vẫn **tương ứng chức năng** với hợp âm diatonic cùng vị trí, nhưng các nốt biến đổi làm ranh giới giữa các chức năng **chồng lấn** nhiều hơn. Vì thế kết điệu thức vẫn nghe có **đích đến** dù không có V – I.
+
+## Ví dụ
+- **"So What"** (Miles Davis, 1959): 16 ô Rê Dorian – 8 ô Mi♭ Dorian – 8 ô Rê Dorian; chỉ hai "vùng" hợp âm, người ngẫu hứng tự do theo điệu thức.
+- **Debussy**: nhiều đoạn dùng điệu thức để "tắt" chức năng cảm âm (xem [[an-tuong]], [[hoa-am-song-song]]).
+- **Hợp âm mượn** trong nhạc pop (♭VII, ♭VI) chính là mượn từ Mixolydian và Aeolian — xem [[hop-am-muon]].
+
+Hệ thống hợp âm – âm giai trong jazz: [[he-thong-hop-am-am-giai]].
+`,
+  },
+  {
+    slug: 'toan-diatonic',
+    title: 'Toàn diatonic',
+    category: 'modern',
+    aliases: ['toàn diatonic', 'pandiatonicism', 'pandiatonic', 'toàn âm giai', 'hoà âm toàn diatonic', 'pandiatonism'],
+    summary: 'Dùng tự do mọi nốt của âm giai diatonic — kể cả vang cùng lúc — mà không theo cú pháp chức năng T – S – D; thường tạo hợp âm có quãng 2.',
+    wiki: 'Pandiatonicism',
+    refs: [
+      ['Wikipedia — Pandiatonicism', 'https://en.wikipedia.org/wiki/Pandiatonicism'],
+      ['Andy Brick — Contemporary theory notes: pandiatonicism', 'https://personal.stevens.edu/~abrick/contemp_theory/contemp_theory_notes_11.html'],
+      ['Hutchinson, Music Theory for the 21st-Century Classroom — Impressionism and extended tonality', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/32%3A_Impressionism_and_Extended_Tonality'],
+      ['LCS Productions — Music history glossary: pandiatonicism', 'https://lcsproductions.net/MusicHistory/MusHistRev/Glossary/P.html'],
+    ],
+    body: `
+**Toàn diatonic** (pandiatonicism) là kỹ thuật dùng âm giai **diatonic** (7 nốt, ví dụ chỉ phím trắng) **mà không bị ràng buộc bởi điệu tính chức năng**: các nốt không cần đóng vai trò bậc hay hợp âm có hướng giải quyết.
+
+## Định nghĩa của Slonimsky
+Thuật ngữ do nhà âm nhạc học **Nicolas Slonimsky** đặt (các nguồn ghi nơi xuất hiện khác nhau — trong sách *Music since 1900* hoặc trong từ điển Baker's). Theo ông, toàn diatonic cho phép dùng **cùng lúc bất kỳ hoặc tất cả bảy nốt** của âm giai diatonic, trong đó **bè trầm quyết định** hoà âm.
+
+## Nhận biết
+- Hoà âm **diatonic** (không có nốt lạ) nhưng **không có** tiến trình T – PD – D – T (xem [[chuc-nang-hoa-am]]).
+- Hợp âm thường chứa ít nhất một **quãng 2** — không còn là chồng quãng 3 thuần tuý.
+- Nghịch âm diatonic **không cần giải quyết**; âm thanh "trong" nhưng không "đi đâu".
+
+## So sánh nhanh
+| | Hoà âm chức năng | Toàn diatonic | [[am-cum|Âm cụm diatonic]] |
+|---|---|---|---|
+| Nguồn nốt | Diatonic + cromatic | Chỉ diatonic | Diatonic |
+| Cách xếp | Chồng quãng 3 | Tự do, có quãng 2 | Toàn quãng 2 liền nhau |
+| Hướng đi | Có (về chủ âm) | Không bắt buộc | Không |
+
+## Ví dụ
+[[Stravinsky]] — *Pulcinella*, một số đoạn trong *Petrushka*. Tổng quan các thủ pháp: [[hoa-am-the-ky-20]].
+`,
+  },
+  {
+    slug: 'hop-am-chong',
+    title: 'Hợp âm chồng',
+    category: 'modern',
+    aliases: ['polychord', 'hợp âm chồng', 'hợp âm kép', 'upper structure', 'upper structure triad', 'hợp âm cấu trúc trên', 'bichord'],
+    summary: 'Hai (hoặc nhiều) hợp âm vang cùng lúc, nghe được như những khối riêng — khác với đa điệu tính (hai giọng kéo dài) và với hợp âm mở rộng (một hợp âm cao).',
+    wiki: 'Polychord',
+    refs: [
+      ['Wikipedia — Polychord', 'https://en.wikipedia.org/wiki/Polychord'],
+      ['Wikipedia — Polytonality', 'https://en.wikipedia.org/wiki/Polytonality'],
+      ['Wikipedia — Upper structure', 'https://en.wikipedia.org/wiki/Upper_structure'],
+      ['Wikipedia — Petrushka chord', 'https://en.wikipedia.org/wiki/Petrushka_chord'],
+      ['Kaminsky — Ravel\'s late music and the problem of polytonality / polymodality (PDF)', 'https://music.arts.uci.edu/abauer/201_2018/downloads/Kaminsky_Ravel_polymodality.pdf'],
+      ['Harmony and Musicianship with Solfège — 20th-century compositional techniques', 'https://pressbooks.pub/harmonyandmusicianshipwithsolfege/?p=395'],
+    ],
+    body: `
+**Hợp âm chồng** gồm hai hay nhiều hợp âm đặt chồng lên nhau, thường là **hai hợp âm ba**. Ký hiệu: hợp âm trên viết **trên** một vạch ngang, hợp âm dưới viết **dưới** (ví dụ F trên C).
+
+## Ba khái niệm dễ nhầm
+| Khái niệm | Bản chất | Cách nghe |
+|---|---|---|
+| **[[hop-am-mo-rong|Hợp âm mở rộng]]** | Một hợp âm cao (9, 11, 13) | Một khối, một nốt gốc |
+| **Hợp âm chồng** | Hai hợp âm chồng nhau, là **một sự kiện âm thanh** | Tai phải nghe được **hai khối riêng** |
+| **[[da-dieu-tinh|Đa điệu tính]]** | Hai **giọng** (trung tâm điệu tính) song song **kéo dài** | Hai lớp nhạc ở hai giọng |
+
+Một tiêu chí cảm nhận: hai hợp âm **gần nhau** (nhiều nốt chung, gần trên vòng quãng 5) thường được nghe là **một hợp âm mở rộng**; hai hợp âm **xa nhau** mới được nghe là hợp âm chồng. Hindemith và Milton Babbitt thậm chí cho rằng tai **không thể** cảm nhận hai nốt gốc cùng lúc — vấn đề vẫn còn tranh luận.
+
+## Hợp âm Petrushka
+[[Stravinsky]] (*Petrushka*, 1911): **Đô trưởng + Fa♯ trưởng**, hai hợp âm cách nhau tritone. Hợp âm thường được giải thích bằng hình ảnh một nghệ sĩ piano rải đồng thời trên **phím trắng** và **phím đen**. Có tài liệu chỉ ra âm thanh tương tự đã xuất hiện trong *Jeux d'eau* (1901) của [[Ravel]] — mười năm trước.
+
+::keyboard C4 E4 G4 F#5 A#5 C#6 | Đô trưởng + Fa♯ trưởng
+
+## Trong jazz: hợp âm ba cấu trúc trên
+Người chơi piano jazz đặt một **hợp âm ba** ở tay phải trên **khung 3 – 7** của hợp âm 7 át ở tay trái — gọi là **upper structure triad**. Ví dụ hợp âm Rê trưởng trên C7 cho ra C13♯11 (ký hiệu "US II"). Cách này chủ yếu dùng cho hợp âm át biến đổi (xem [[xep-hop-am]], [[he-thong-hop-am-am-giai]]).
+
+Tổng quan: [[hoa-am-the-ky-20]].
+`,
+  },
+  {
+    slug: 'dieu-thuc-chuyen-vi-gioi-han',
+    title: 'Điệu thức chuyển vị giới hạn',
+    category: 'modern',
+    aliases: ['modes of limited transposition', 'điệu thức Messiaen', 'Messiaen modes', 'chuyển vị giới hạn', 'âm giai đối xứng'],
+    summary: 'Bảy âm giai đối xứng của Olivier Messiaen (1944): vì cấu trúc lặp lại bên trong, mỗi âm giai chỉ dịch giọng được một số ít lần trước khi trùng lại chính nó.',
+    wiki: 'Mode_of_limited_transposition',
+    refs: [
+      ['Wikipedia — Mode of limited transposition', 'https://en.wikipedia.org/wiki/Mode_of_limited_transposition'],
+      ['Routledge Encyclopedia of Modernism — Technique de mon langage musical', 'https://www.rem.routledge.com/articles/technique-de-mon-langage-musical'],
+      ['arXiv — Messiaen et les mathématiques', 'https://arxiv.org/pdf/2008.11936'],
+    ],
+    body: `
+Trong sách *Technique de mon langage musical* (Kỹ thuật ngôn ngữ âm nhạc của tôi, **1944**, NXB Leduc), [[Messiaen]] trình bày **bảy "điệu thức chuyển vị giới hạn"**.
+
+## "Chuyển vị giới hạn" nghĩa là gì?
+[[am-giai-truong|Âm giai trưởng]] dịch được sang **12** cao độ khác nhau. Nhưng một âm giai được xây từ **một mẫu quãng lặp lại** sẽ trùng lại chính nó sau ít lần dịch. Ví dụ âm giai toàn cung C – D – E – F♯ – G♯ – A♯: dịch lên nửa cung được một âm giai mới, nhưng dịch lên **một cung** lại ra **đúng các nốt cũ** → chỉ có **2** phiên bản.
+
+## Bảy điệu thức
+| Điệu | Cấu trúc | Số nốt | Số phiên bản |
+|---|---|---|---|
+| **1** | Toàn cung — [[am-giai-cromatic|âm giai toàn cung]] | 6 | 2 |
+| **2** | Nửa cung – cung xen kẽ — [[am-giai-bat-cung|âm giai bát cung]] | 8 | 3 |
+| **3** | Cung – nửa cung – nửa cung lặp lại | 9 | 4 |
+| **4 – 7** | Các mẫu đối xứng khác | 6 – 10 | 6 mỗi điệu |
+
+Điệu 1 và điệu 2 đã có trước Messiaen (âm giai toàn cung ở Debussy; âm giai bát cung ở các nhà soạn nhạc Nga như Rimsky-Korsakov); Messiaen hệ thống hoá chúng cùng các điệu mới thành một bộ.
+
+## Vì sao "giới hạn" lại hấp dẫn?
+- Vì mẫu lặp **chia quãng 8 thành các phần bằng nhau**, âm giai **không có một chủ âm duy nhất** — tạo cảm giác lơ lửng, "bất động", rất hợp với ý tưởng tôn giáo về sự vĩnh cửu trong nhạc Messiaen.
+- Messiaen ưa thích **điệu 2**; ông có cảm thụ **màu – âm** và liên kết điệu này với các sắc **xanh – tím**.
+
+Công cụ phân tích các âm giai đối xứng: [[tap-hop-cao-do]]. Tổng quan: [[hoa-am-the-ky-20]].
+`,
+  },
+  {
+    slug: 'nhac-pho',
+    title: 'Âm nhạc phổ',
+    category: 'modern',
+    aliases: ['spectral music', 'spectralism', 'nhạc phổ', 'hoà âm phổ', 'Grisey', 'Murail'],
+    summary: 'Trào lưu Pháp từ thập niên 1970 (Grisey, Murail): xây hoà âm từ phân tích phổ của âm thanh thật — các bồi âm và sự biến đổi của chúng theo thời gian.',
+    wiki: 'Spectral_music',
+    refs: [
+      ['Wikipedia — Partiels', 'https://en.wikipedia.org/wiki/Partiels'],
+      ['Wikipedia — Gérard Grisey', 'https://en.wikipedia.org/wiki/G%C3%A9rard_Grisey'],
+      ['Hasegawa (2009) — Gérard Grisey and the "nature" of harmony (PDF)', 'https://hasegawa.research.mcgill.ca/pdf/Hasegawa-Grisey_and_the_Nature_of_Harmony_2009.pdf'],
+      ['MusicWeb International — Grisey, Les Espaces Acoustiques (review)', 'https://www.musicweb-international.com/classrev/2002/Oct02/Grisey.htm'],
+    ],
+    body: `
+**Âm nhạc phổ** ra đời ở Pháp trong thập niên 1970, phần nào là **phản ứng** trước sự trừu tượng của [[ky-thuat-12-am|nhạc chuỗi]]. Thay vì xây tác phẩm từ chuỗi nốt hay [[motif]], các nhà soạn nhạc lấy cảm hứng từ **tính chất vật lý của chính âm thanh**. Nhóm tiêu biểu (sinh trong thập niên 1940): **Gérard Grisey**, **Tristan Murail**, Michaël Levinas, Hugues Dufourt — gắn với nhóm hoà tấu **L'Itinéraire**.
+
+## Từ bồi âm thành hợp âm
+Mỗi nốt nhạc là tổng của nhiều [[chuoi-boi-am|bồi âm]]. Nhạc phổ "phóng to" cấu trúc đó: dùng máy phân tích phổ (sonogram) để xem một âm thanh thật gồm những bồi âm nào, mạnh yếu ra sao, thay đổi thế nào theo thời gian — rồi **giao mỗi bồi âm cho một nhạc cụ**.
+
+## Ví dụ kinh điển: Partiels (Grisey, 1975)
+- Viết cho 18 nhạc cụ; mở đầu bằng **phân tích sonogram tiếng tấn công của một nốt Mi trầm trên kèn trombone** (các nguồn ghi E2 hoặc E1).
+- Phổ âm đó được "tổng hợp lại bằng dàn nhạc": mỗi nhạc cụ đảm nhận một bồi âm, mô phỏng cả sự **biến đổi theo thời gian** của tiếng kèn.
+- Là phần thứ ba của chu kỳ *Les Espaces acoustiques* (1974–1985); được coi là tác phẩm **định hình** nhạc phổ. Trước đó, *Périodes* (1974) đã thử nghiệm kỹ thuật này.
+
+Grisey về sau **không nhận** cái nhãn "nhạc phổ" trong các bài phỏng vấn và bài viết.
+
+## Liên hệ với hoà âm truyền thống
+Ý tưởng hoà âm bắt nguồn từ chuỗi bồi âm đã có từ [[Rameau]] (xem [[he-thong-hoa-am-co-dien]]). Nhạc phổ đưa ý tưởng này đến tận cùng: hoà âm **là** âm sắc. Các bồi âm cao **không khớp** với 12 nốt bình quân, nên nhạc phổ thường dùng **vi cung** (quãng nhỏ hơn nửa cung — xem [[luat-binh-quan]]).
+`,
+  },
 ]

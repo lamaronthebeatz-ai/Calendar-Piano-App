@@ -81,7 +81,7 @@ const cells = (row: string) => row.split(PIPE).slice(1, -1).map((c) => c.trim())
 
 /** Renders an article body: groups consecutive lines of the same kind into blocks. */
 export function Markup({ source }: { source: string }) {
-  let block = null as { kind: 'p' | 'li' | 'tr'; lines: string[] } | null
+  let block = null as { kind: 'p' | 'li' | 'ol' | 'tr'; lines: string[]; start?: number } | null
   const out: ReactNode[] = []
   const lines = source.trim().split('\n').map((l) => l.trim())
   let section = 0 // h2 ids match the order of headings(), which feeds the table of contents
@@ -97,6 +97,12 @@ export function Markup({ source }: { source: string }) {
           <ul key={k} className="list-disc space-y-1 pl-5">
             {b.lines.map((l, i) => <li key={i}><Inline text={l} /></li>)}
           </ul>,
+        )
+      if (b.kind === 'ol')
+        out.push(
+          <ol key={k} start={b.start} className="list-decimal space-y-1 pl-6">
+            {b.lines.map((l, i) => <li key={i}><Inline text={l} /></li>)}
+          </ol>,
         )
       if (b.kind === 'tr') {
         const [head, ...rows] = b.lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map(cells)
@@ -121,7 +127,8 @@ export function Markup({ source }: { source: string }) {
   }
 
   for (const line of lines) {
-    const kind = line.startsWith('- ') ? 'li' : line.startsWith('|') ? 'tr' : 'p'
+    const num = /^(\d+)\. /.exec(line)
+    const kind = line.startsWith('- ') ? 'li' : num ? 'ol' : line.startsWith('|') ? 'tr' : 'p'
     if (!line || line.startsWith('## ') || line.startsWith('::') || block?.kind !== kind) flush()
     if (!line) continue
     if (line.startsWith('## '))
@@ -131,7 +138,7 @@ export function Markup({ source }: { source: string }) {
         </h2>,
       )
     else if (line.startsWith('::')) out.push(<Directive key={out.length} line={line} />)
-    else (block ??= { kind, lines: [] }).lines.push(kind === 'li' ? line.slice(2) : line)
+    else (block ??= { kind, lines: [], start: num ? Number(num[1]) : undefined }).lines.push(kind === 'li' ? line.slice(2) : num ? line.slice(num[0].length) : line)
   }
   flush()
 
