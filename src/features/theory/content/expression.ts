@@ -584,6 +584,7 @@ Liên quan: [[nhip-do]], [[ky-vong-am-nhac]], [[phan-tich-nocturne-op9-so2]], [[
     slug: 'phong-cach-dien-tau',
     title: 'Phong cách diễn tấu theo thời kỳ',
     category: 'expression',
+    also: ['philosophy'],
     aliases: ['diễn tấu theo phong cách', 'historically informed performance', 'HIP', 'chơi Bach trên piano', 'chơi Mozart', 'phong cách Baroque', 'phong cách Cổ điển'],
     summary: 'Cùng một ký hiệu nhưng mỗi thời kỳ chơi khác nhau. Chơi nhạc Baroque, Cổ điển và Lãng mạn trên piano hiện đại đặt ra những câu hỏi về cường độ, nối – ngắt, pedal, hoa mỹ và rubato.',
     refs: [
@@ -620,6 +621,8 @@ Hệ quả: những chỗ Mozart viết **ngắt, tách** khó tạo hiệu qu�
 
 ## Ý nghĩa với người dạy
 Không có một "cách đúng duy nhất". Mục tiêu là giúp học sinh **biết các lựa chọn và lý do** của chúng — đọc ký hiệu trong bối cảnh thời kỳ, nghe nhiều bản thu khác nhau (xem [[nghe-nhac-chu-dong]]), và dùng ấn bản đáng tin cậy (xem [[an-ban-urtext]]).
+
+Tranh luận triết học về "biểu diễn xác thực" (Kivy, Taruskin): [[tinh-xac-thuc-bieu-dien]].
 `,
   },
   {

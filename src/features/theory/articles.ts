@@ -16,6 +16,7 @@ import { musicianship } from './content/musicianship'
 import { pianists, pianoSchools } from './content/pianists'
 import { analysis } from './content/analysis'
 import { listening } from './content/listening'
+import { philosophy } from './content/philosophy'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -37,9 +38,10 @@ export const CATEGORIES = {
   jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Hoà âm jazz đầy đủ (Phần III giáo trình): swing, blues, ii – V – I, hợp âm – âm giai, hợp âm át biến hoá, xếp hợp âm, thay thế, tái hoà âm, rhythm changes, vòng Coltrane — kèm các bài hoà âm liên quan được xếp chéo từ nhóm khác.' },
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử và hoà âm thế kỷ XX: ấn tượng, hoà âm điệu thức, toàn diatonic, hợp âm chồng, điệu thức Messiaen, phi điệu tính, 12 âm, tập hợp cao độ, tối giản, nhạc phổ.' },
   listening: { title: 'Nghe, cảm thụ & âm học', hue: 210, description: 'Từ vật lý đến cảm xúc: âm học, âm sắc, âm học phòng, tâm lý âm học, phân luồng thính giác, kỳ vọng và cảm xúc âm nhạc, nghe chủ động, lịch sử và so sánh bản thu, bảo vệ thính giác.' },
+  philosophy: { title: 'Triết học & thẩm mỹ âm nhạc', hue: 175, description: 'Âm nhạc là gì, vì sao biểu hiện cảm xúc, có ý nghĩa gì, tác phẩm tồn tại thế nào, thế nào là chơi xác thực, cái hay có chuẩn mực không — từ Plato, Nho gia, Rousseau, Hanslick, Schopenhauer đến Adorno và triết học hiện đại.' },
   analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 9 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
   pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy]

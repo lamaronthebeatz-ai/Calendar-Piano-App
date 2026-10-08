@@ -268,6 +268,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
     slug: 'ky-vong-am-nhac',
     title: 'Kỳ vọng âm nhạc',
     category: 'listening',
+    also: ['philosophy'],
     aliases: ['kỳ vọng âm nhạc', 'musical expectation', 'expectancy', 'ITPRA', 'Sweet Anticipation', 'Leonard Meyer', 'David Huron', 'chờ đợi trong âm nhạc', 'dự đoán âm nhạc'],
     summary: 'Người nghe liên tục đoán điều sắp xảy ra; âm nhạc tạo cảm xúc bằng cách đáp ứng, trì hoãn hoặc làm trái sự chờ đợi đó — từ lý thuyết của Leonard Meyer (1956) đến mô hình ITPRA của David Huron (2006).',
     refs: [
@@ -318,6 +319,7 @@ Người chơi quyết định **người nghe cảm nhận kỳ vọng mạnh �
     slug: 'cam-xuc-am-nhac',
     title: 'Âm nhạc và cảm xúc',
     category: 'listening',
+    also: ['philosophy'],
     aliases: ['cảm xúc âm nhạc', 'tâm lý học âm nhạc', 'music psychology', 'BRECVEMA', 'Juslin', 'nhạc buồn', 'nhạc vui', 'trưởng vui thứ buồn'],
     summary: 'Tâm lý học âm nhạc giải thích âm nhạc gây cảm xúc qua nhiều cơ chế (mô hình BRECVEMA của Juslin); nhịp độ và giọng trưởng – thứ ảnh hưởng mạnh tới cảm nhận vui – buồn.',
     wiki: 'Music_and_emotion',
@@ -366,6 +368,8 @@ Vì sao ta **thích** nghe nhạc buồn? Bài tổng quan của **Eerola và c�
 Nghiên cứu của Valorie Salimpoor và cộng sự (phòng thí nghiệm Robert Zatorre, Đại học McGill; *Nature Neuroscience*, 2011) dùng chụp PET đo **dopamine** khi người nghe nghe bản nhạc **họ yêu thích** (8 người tham gia, mỗi người tự mang nhạc đến). Cảm giác "rùng mình" được dùng làm dấu hiệu của khoảnh khắc cảm xúc đỉnh điểm. Kết quả: dopamine được giải phóng theo **hai pha** — ở nhân đuôi (caudate) trong **vài giây chờ đợi** trước đỉnh, và ở nhân accumbens **ngay tại đỉnh**. Nghĩa là ngay cả **sự chờ đợi** một đoạn nhạc hay cũng tạo khoái cảm — khớp với cơ chế "kỳ vọng âm nhạc" ở trên.
 
 Nghiên cứu dùng nhạc tự chọn nên **không xác định** yếu tố hoà âm cụ thể nào gây rùng mình; mẫu cũng nhỏ.
+
+Góc nhìn triết học về câu hỏi "nhạc buồn nghĩa là gì": [[bieu-hien-cam-xuc-am-nhac]].
 `,
   },
   {
