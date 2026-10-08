@@ -32,7 +32,7 @@ export const CATEGORIES = {
   scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu, vòng quãng 5 và quan hệ giữa các giọng — kèm lịch sử và nghiên cứu về cảm nhận giọng.' },
   harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hai hệ thống: hoà âm cổ điển (hợp âm, chức năng, luật bốn bè, kết, chuyển giọng, phân tích và phối hoà âm) và hoà âm thế kỷ XX.' },
   chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Hoà âm cromatic (giáo trình chương 7–8): Napoli, 6 tăng, 7 giảm, hợp âm nốt chung, hợp âm ba tăng, trung âm cromatic, mô tiến, bass ngân, bass số, Schenker, Neo-Riemann.' },
-  form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Từ motif, câu nhạc đến cấu trúc của cả tác phẩm.' },
+  form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Hệ thống hình thức từ motif, câu nhạc đến tác phẩm nhiều chương: hai đoạn, ba đoạn, minuet và trio, biến tấu, rondo, sonata, concerto, đối âm và fugue, biến đổi chủ đề — kèm lộ trình học.' },
   expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách diễn tấu, hoa mỹ, pedal, ngón bấm, thuật ngữ, phong cách từng thời kỳ và cách chọn ấn bản.' },
   jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Hoà âm jazz đầy đủ (Phần III giáo trình): swing, blues, ii – V – I, hợp âm – âm giai, hợp âm át biến hoá, xếp hợp âm, thay thế, tái hoà âm, rhythm changes, vòng Coltrane — kèm các bài hoà âm liên quan được xếp chéo từ nhóm khác.' },
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử và hoà âm thế kỷ XX: ấn tượng, hoà âm điệu thức, toàn diatonic, hợp âm chồng, điệu thức Messiaen, phi điệu tính, 12 âm, tập hợp cao độ, tối giản, nhạc phổ.' },

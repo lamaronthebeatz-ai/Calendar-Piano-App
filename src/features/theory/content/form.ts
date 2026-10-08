@@ -2,6 +2,56 @@ import type { Article } from '../wiki'
 
 export const form: Article[] = [
   {
+    slug: 'lo-trinh-hinh-thuc',
+    title: 'Giai điệu và hình thức: hệ thống và lộ trình',
+    category: 'form',
+    aliases: ['lộ trình hình thức', 'học hình thức âm nhạc', 'cấu trúc âm nhạc', 'musical form overview', 'Formenlehre tổng quan', 'các cấp độ hình thức'],
+    summary: 'Bài tổng quan của mục: âm nhạc được xây theo nhiều tầng (motif → câu → đoạn → phần → chương → tác phẩm nhiều chương), hai cách hiểu hình thức (khuôn mẫu và chức năng), và thứ tự học các bài.',
+    wiki: 'Musical_form',
+    refs: [
+      ['Open Music Theory 2e — Form (mục lục chương)', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/03%3A_Form'],
+      ['Wikipedia — Musical form', 'https://en.wikipedia.org/wiki/Musical_form'],
+      ['Caplin — What are formal functions? (PDF)', 'https://www.music.mcgill.ca/~caplin/what-are-formal-functions.pdf'],
+      ['Deutsche Biographie — Marx, Adolph Bernhard (Formenlehre)', 'https://www.deutsche-biographie.de/119065290.html'],
+    ],
+    body: `
+**Hình thức** là cách các phần của một tác phẩm được sắp xếp theo thời gian: cái gì lặp lại, cái gì tương phản, cái gì quay về. Hiểu hình thức giúp **nghe** có định hướng, **học thuộc** nhanh và **biểu diễn** có đường đi.
+
+## Âm nhạc được xây theo tầng
+| Tầng | Đơn vị | Bài |
+|---|---|---|
+| Nhỏ nhất | **Motif** — vài nốt có bản sắc | [[motif]] |
+| | **Ý nhạc** (khoảng 2 ô) | [[cau-nhac]] |
+| | **Câu nhạc** — kết thúc bằng một kết | [[cau-nhac]], [[cau-ket]] |
+| | **Đoạn nhạc / chủ đề** (thường 8 ô): period, sentence | [[cau-nhac]] |
+| | **Phần** — A, B… | [[hinh-thuc-am-nhac]] |
+| | **Chương** — hai đoạn, ba đoạn, rondo, sonata, biến tấu… | các bài bên dưới |
+| Lớn nhất | **Tác phẩm nhiều chương** — sonata, giao hưởng, concerto, tổ khúc | [[the-loai]] |
+Giai điệu là "sợi chỉ" chạy qua các tầng (xem [[giai-dieu]]); hoà âm — đặc biệt là các [[cau-ket|kết]] và [[chuyen-giong|chuyển giọng]] — đánh dấu ranh giới giữa các đơn vị.
+
+## Hai cách hiểu hình thức
+- **Khuôn mẫu** (truyền thống Formenlehre của thế kỷ 19, từ A. B. Marx): hình thức là các **mẫu** có tên — hai đoạn, ba đoạn, rondo, sonata. Câu hỏi: tác phẩm thuộc mẫu nào?
+- **Chức năng** (Schoenberg, Ratz, Caplin): mỗi phần đóng một **vai trò theo thời gian** — mở đầu, ở giữa, kết thúc (xem [[chuc-nang-hinh-thuc]]). Câu hỏi: phần này đang **làm gì**?
+Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép từ các **khuôn mẫu bè trầm – giai điệu** (xem [[luoc-do-galant]]) và từ các câu có "dấu câu" khác nhau (xem [[lich-su-phan-tich-am-nhac]]).
+
+## Lộ trình học
+1. **Giai điệu và ý nhạc**: [[giai-dieu]] → [[motif]].
+2. **Câu nhạc**: [[cau-nhac]] → [[mo-rong-cau-nhac]] → [[sieu-nhip]]; ôn [[cau-ket]].
+3. **Hình thức nhỏ**: [[hinh-thuc-am-nhac]] (hai đoạn, ba đoạn) → [[minuet-va-trio]] (ba đoạn kép).
+4. **Hình thức lớn**: [[bien-tau]] → [[ostinato]] → [[rondo]] → [[hinh-thuc-sonata]] → [[hinh-thuc-concerto]].
+5. **Lý thuyết hình thức hiện đại**: [[chuc-nang-hinh-thuc]], [[luoc-do-galant]].
+6. **Đối âm và hình thức phức điệu**: [[doi-am]] → [[doi-am-5-loai]] → [[doi-am-kep]] → [[fugue]].
+7. **Kết cấu, thể loại, thế kỷ 19**: [[ket-cau]] → [[the-loai]] → [[bien-doi-chu-de]].
+8. **Hình thức phổ thông và jazz**: [[blues-12-nhip]], [[hinh-thuc-ca-khuc-32]].
+Áp dụng vào tác phẩm cụ thể: [[phuong-phap-phan-tich-tac-pham]].
+
+## Mẹo nhận ra hình thức khi nghe
+- Đánh dấu chỗ **chủ đề mở đầu quay lại**: đó là cột mốc lớn nhất.
+- Để ý các **kết mạnh** và chỗ **đổi giọng**: chúng chia các phần.
+- Hỏi: phần mới **tương phản** (chất liệu mới) hay **phát triển** (chất liệu cũ bị xé nhỏ, chuyển giọng liên tục)?
+`,
+  },
+  {
     slug: 'giai-dieu',
     title: 'Giai điệu',
     category: 'form',
@@ -141,6 +191,47 @@ Liên quan: [[motif]], [[giai-dieu]], [[nhip-lay-da]], [[hinh-thuc-am-nhac]].
 `,
   },
   {
+    slug: 'mo-rong-cau-nhac',
+    title: 'Mở rộng câu nhạc',
+    category: 'form',
+    aliases: ['mở rộng câu nhạc', 'phrase expansion', 'phrase extension', 'kéo dài câu', 'chồng câu', 'phrase overlap', 'elision', 'câu nhạc không đều', 'phrase rhythm', 'nhịp câu'],
+    summary: 'Câu nhạc "chuẩn" dài 4 hoặc 8 ô, nhưng nhạc thực tế thường lệch chuẩn: câu được kéo dài, mở rộng bên trong, chồng lên câu sau. Khái niệm "nhịp câu" của William Rothstein (1989) giúp nhận ra và giải thích những chỗ lệch đó.',
+    wiki: 'Phrase_(music)',
+    refs: [
+      ['Wikipedia — Phrase (music)', 'https://en.wikipedia.org/wiki/Phrase_(music)'],
+      ['UBC thesis (2021) — on Rothstein, Phrase Rhythm in Tonal Music', 'https://open.library.ubc.ca/cIRcle/collections/24/items/1.0445514'],
+      ['Rothstein — reading excerpt (PDF)', 'https://www.midside.com/pdf/eastman/fall06/th581/rothstein_reading.pdf'],
+      ['Braunschweig — Intégral 18/19 (PDF)', 'https://theory.esm.rochester.edu/integral/wp-content/uploads/2019/06/INTEGRAL_18_19_braunschweig.pdf'],
+      ['Oxford Academic — Hypermetric manipulations in Haydn and Mozart', 'https://academic.oup.com/book/40036/chapter/340418497'],
+    ],
+    body: `
+Trong [[cau-nhac]], câu nhạc thường được mô tả dài **4 ô** và chủ đề **8 ô**. Đó là **chuẩn**, không phải luật: nhạc hay thường **lệch chuẩn** có chủ ý. Phân tích hiện đại coi các câu dài hơn là kết quả của việc **mở rộng** một câu chuẩn.
+
+## Nhịp câu (Rothstein, 1989)
+Trong *Phrase Rhythm in Tonal Music* (1989), **William Rothstein** nghiên cứu sự tương tác giữa **câu nhạc** (giai điệu, tiến trình hoà âm) và **siêu nhịp** (các ô mạnh – nhẹ, xem [[sieu-nhip]]); sự tương tác ấy ông gọi là **"nhịp câu"** (phrase rhythm). Các kỹ thuật thường được liệt kê: **chồng câu, dẫn vào, kéo dài, mở rộng, diễn giải lại và nuốt ô**.
+
+## Các cách làm câu lệch chuẩn
+| Kỹ thuật | Mô tả | Hiệu quả |
+|---|---|---|
+| **Kéo dài** (extension) | Thêm ô **sau** kết: lặp lại kết, kéo dài hợp âm chủ | Nhấn mạnh sự khép lại |
+| **Mở rộng bên trong** (expansion) | Thêm ô **trong** câu: lặp một ý, kéo dài một hợp âm, chèn mô tiến trước kết | Trì hoãn kết, tăng căng thẳng |
+| **Dẫn vào** (lead-in) | Vài nốt nối từ câu trước sang câu sau, ngoài khung siêu nhịp | Liền mạch |
+| **Chồng câu** (overlap) | Điểm **kết** của câu này **trùng** với điểm **bắt đầu** của câu sau | Liên tục, không có chỗ nghỉ |
+| **Diễn giải lại / nuốt ô** (reinterpretation, elision) | Một ô vốn **nhẹ** (cuối câu) được nghe lại thành ô **mạnh** (đầu câu mới) — siêu nhịp bị "dịch" | Đẩy âm nhạc tiến lên |
+Theo Rothstein, **chồng câu** giữ sự liên tục, còn **diễn giải lại** tạo lực đẩy. Chồng câu đôi khi giữ nguyên siêu nhịp, đôi khi làm nó không đều.
+
+## Cách nhận ra một câu đã được mở rộng
+1. Đếm số ô từ đầu câu đến kết. Nếu không phải 4 hay 8, hãy hỏi: **ô nào có thể bỏ** mà câu vẫn trọn vẹn?
+2. Những ô "bỏ được" thường là: lặp lại một ý, kéo dài một hợp âm, mô tiến, nhắc lại kết.
+3. Thử chơi phiên bản **rút gọn** rồi so với bản gốc — sự khác biệt cho thấy nhà soạn nhạc muốn tạo hiệu quả gì.
+Lưu ý: cách nhìn này giả định chuẩn 4–8 ô; một số nhà lý thuyết (như Braunschweig) nhắc rằng đó là **giả định** của phương pháp, và không phải câu dài nào cũng cần được giải thích như một "chuẩn bị mở rộng".
+
+## Với người chơi đàn
+- Biết chỗ nào là **mở rộng** giúp quyết định cách giữ căng thẳng: không "kết" sớm ở chỗ chỉ là một kết bị trì hoãn.
+- Ở chỗ **chồng câu**, không ngắt hơi như ở cuối câu bình thường — phần cuối câu cũ đồng thời là khởi đầu mạnh của câu mới (xem [[dien-dat-cau-nhac]], [[rubato]]).
+`,
+  },
+  {
     slug: 'hinh-thuc-am-nhac',
     title: 'Hình thức âm nhạc',
     category: 'form',
@@ -180,7 +271,56 @@ Hai đoạn có tái hiện được coi là **tổ tiên của [[hinh-thuc-sona
 ## Hình thức bài hát pop
 **Intro – Phiên khúc (Verse) – Tiền điệp khúc – Điệp khúc (Chorus) – Phiên khúc – Điệp khúc – Bridge – Điệp khúc – Outro.** Điệp khúc giữ nguyên lời và nhạc; phiên khúc giữ nhạc nhưng đổi lời.
 
-Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]]. Hình thức ca khúc jazz: [[hinh-thuc-ca-khuc-32]]. Các thể loại nhiều chương: [[the-loai]]. Biến tấu trên bass lặp: [[ostinato]].
+Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-va-trio]]. Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]]. Hình thức ca khúc jazz: [[hinh-thuc-ca-khuc-32]]. Các thể loại nhiều chương: [[the-loai]]. Biến tấu trên bass lặp: [[ostinato]].
+`,
+  },
+  {
+    slug: 'minuet-va-trio',
+    title: 'Minuet và trio',
+    category: 'form',
+    aliases: ['minuet', 'menuet', 'minuet and trio', 'trio', 'scherzo', 'scherzo và trio', 'ba đoạn kép', 'compound ternary', 'Minuet in G', 'Petzold'],
+    summary: 'Hình thức ba đoạn kép: minuet – trio – minuet da capo, mỗi phần lại là một hình thức hai đoạn có tái hiện. Từ vũ điệu cung đình Louis XIV đến chương ba của sonata, giao hưởng và scherzo của Beethoven.',
+    wiki: 'Minuet',
+    refs: [
+      ['Open Music Theory — Minuet form (LibreTexts)', 'https://human.libretexts.org/Bookshelves/Music/Book%3A_Open_Music_Theory/05%3A_Form_(II)_-_Other_Forms_and_Thematic_Structures/5.12%3A_Other_Formal_Structures_in_the_Classical_Style_-_Minuet_Form'],
+      ['Hutchinson, Music Theory for the 21st-Century Classroom — Ternary form', 'https://musictheory.pugetsound.edu/mt21c/TernaryForm.html'],
+      ['learnmusictheory.net — Compound ternary (PDF)', 'https://learnmusictheory.net/PDFs/pdffiles/05-05-CompoundPartFormsCompoundTernary.pdf'],
+      ['Open Book Publishers — The minuet as part of instrumental and dance music in Europe', 'https://books.openbookpublishers.com/10.11647/obp.0314/ch3.xhtml'],
+      ['Wikipedia — Scherzo', 'https://en.wikipedia.org/wiki/Scherzo'],
+      ['Britannica — Scherzo', 'https://www.britannica.com/art/scherzo'],
+      ['Musopen — Two minuets by Christian Petzold, BWV Anh. 114–115', 'https://musopen.org/music/19797-menuets-in-g-major-bwv-anh-114-115/'],
+    ],
+    body: `
+## Lịch sử: từ phòng khiêu vũ đến phòng hoà nhạc
+- Minuet là **vũ điệu Pháp**, phổ biến từ khoảng **1650** ở triều đình **Louis XIV**. **Lully** — nhạc sĩ và vũ công phục vụ nhà vua — viết rất nhiều minuet cho opera và ballet.
+- Nhịp **3/4**; bước nhảy cơ bản kéo dài **sáu phách**, tức là hai ô 3/4 — một lý do khiến minuet thường đi theo **cặp ô nhịp** (xem [[sieu-nhip]]).
+- Đây là vũ điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **tổ khúc đàn phím** (xem [[the-loai]]).
+- Ví dụ quen thuộc với học trò piano: hai **Minuet Sol trưởng và Sol thứ** trong *Sổ tay cho Anna Magdalena Bach* (1725) — được chép thành **một cặp, chơi da capo**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ organ ở Dresden.
+
+## Hình thức: ba đoạn kép
+| Tầng | Cấu trúc |
+|---|---|
+| **Lớn** | **Minuet** (A) – **Trio** (B) – **Minuet da capo** (A, thường **bỏ** các dấu nhắc lại) |
+| **Nhỏ** (trong minuet) | **Hai đoạn có tái hiện**: ‖: a :‖: b a′ :‖ |
+| **Nhỏ** (trong trio) | Cũng là hai đoạn hoặc ba đoạn nhỏ |
+Vì mỗi phần của hình thức lớn lại chứa một hình thức nhỏ, toàn chương được gọi là **ba đoạn kép** (compound ternary). Ba mô-đun a – b – a′ của minuet được gom thành **hai** phần lớn, mỗi phần nhắc lại — đây là [[hinh-thuc-am-nhac|hai đoạn có tái hiện]].
+
+Trio thường **tương phản** với minuet — về giọng, kết cấu hoặc tính cách. Tên "trio" thường được giải thích là bắt nguồn từ thói quen viết đoạn này cho **ba nhạc cụ** (ba bè).
+
+## Từ minuet đến scherzo
+- Trong bộ tứ tấu đàn dây **Op. 33** (1781), [[Haydn]] thay tên "Minuet" bằng **"Scherzo"** (tiếng Ý: trò đùa) — khung hình thức vẫn là minuet – trio.
+- [[Beethoven]] biến nhịp điệu lịch sự của minuet thành một vũ điệu **mãnh liệt** hơn, nhanh hơn. Ông viết scherzo trong hầu hết chín bản giao hưởng, dù chỉ gọi tên "scherzo" trong bản số 2 và số 3.
+- Thời Cổ điển, minuet (sau là scherzo) thường là **chương ba** của sonata, tứ tấu, giao hưởng.
+
+## Phân tích một minuet: các bước
+1. Tìm dấu nhắc lại → xác định hai phần lớn.
+2. Trong phần hai, tìm chỗ **a′ quay lại** (thường ở giọng chủ) → hai đoạn có tái hiện.
+3. Phần một kết ở đâu: giọng chủ hay giọng át? (hai đoạn **khép** hay **mở** — xem [[hinh-thuc-am-nhac]]).
+4. So sánh trio với minuet: giọng, kết cấu, tính cách.
+
+## Gợi ý khi dạy
+- Bắt đầu với các minuet trong *Sổ tay Anna Magdalena*: ngắn, hình thức rõ, ở trình độ sơ – trung cấp (xem [[lo-trinh-tac-pham]]).
+- Nhắc học trò đây là **nhạc khiêu vũ**: phách 1 nhẹ nhàng nâng lên, nhóm hai ô nhịp, không nặng nề.
 `,
   },
   {
@@ -279,6 +419,54 @@ Cuốn *Elements of Sonata Theory* (2006) đưa ra hai mốc phân tích nay đ�
 "Sonata" là **tác phẩm** nhiều chương (thường 3–4) cho một hoặc hai nhạc cụ. "Hình thức sonata" là **cấu trúc** của một chương — thường là chương đầu. Sonatina là sonata nhỏ, đơn giản (Clementi, Kuhlau) — bài tập kinh điển cho học sinh piano.
 
 Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]]. Phân tích một ví dụ cụ thể: [[phan-tich-sonata-k545]]. Đoạn phát triển thường kết bằng [[bass-ngan]] trên át âm.
+`,
+  },
+  {
+    slug: 'hinh-thuc-concerto',
+    title: 'Hình thức concerto',
+    category: 'form',
+    aliases: ['hình thức concerto', 'concerto form', 'ritornello', 'hình thức ritornello', 'ritornello form', 'trình bày kép', 'double exposition', 'tutti', 'solo', 'cadenza', 'sonata loại 5', 'Type 5 sonata'],
+    summary: 'Hai hình thức của chương nhanh trong concerto: hình thức ritornello thời Baroque (Vivaldi) — dàn nhạc nhắc lại một chủ đề xen với các đoạn độc tấu — và chương 1 concerto Cổ điển (Mozart), nơi ritornello kết hợp với hình thức sonata.',
+    wiki: 'Ritornello',
+    refs: [
+      ['Wikipedia — Ritornello', 'https://en.wikipedia.org/wiki/Ritornello'],
+      ['San José State University — Vivaldi and ritornello form (PDF)', 'https://gcp-web.sjsu.edu/people/gordon.haramaki/courses/baroque/s1/9.-Vivaldi-and-Ritornello-Form.pdf'],
+      ['Oxford Academic — Hepokoski & Darcy, Elements of Sonata Theory (2006)', 'https://academic.oup.com/book/4770'],
+      ['GMTH — on concerto first-movement form and the Type 5 sonata', 'https://storage.gmth.de/zgmth/pdf/1110'],
+      ["Wiley — Beethoven's error? The modulating ritornello and the Type 5 sonata", 'https://plosjournal.deepdyve.com/lp/wiley/beethoven-s-error-the-modulating-ritornello-and-the-type-5-sonata-in-0oPUzgyhhV'],
+      ['Wikipedia — Cadenza', 'https://en.wikipedia.org/wiki/Cadenza'],
+    ],
+    body: `
+Concerto đặt **một nghệ sĩ độc tấu** đối diện **dàn nhạc** (tutti). Hình thức của nó là câu trả lời cho câu hỏi: hai lực lượng này **chia nhau** chất liệu và các giọng như thế nào?
+
+## Hình thức ritornello (Baroque)
+- **Ritornello** (tiếng Ý: "khúc quay lại") là đoạn nhạc của dàn nhạc được **nhắc lại** nhiều lần, xen giữa là các **đoạn độc tấu**. Mô hình này có ở các concerto violin của **Torelli** và được **Vivaldi** chuẩn hoá trong hàng trăm concerto.
+- Một chương nhanh điển hình của Vivaldi: khoảng **năm ritornello xen với bốn đoạn độc tấu**.
+| Vai trò | Ritornello (dàn nhạc) | Đoạn độc tấu |
+|---|---|---|
+| Giọng | **Ổn định**: mở và đóng chương ở giọng chủ, xác nhận các giọng mới | **Chuyển giọng**, đi tới các vùng giọng xa |
+| Chất liệu | Nhắc lại chủ đề ritornello (đôi khi chỉ vài motif của nó) | Hình nhạc kỹ thuật, điêu luyện |
+- Các ritornello ở giữa thường **ngắn hơn** và ở **giọng khác**; ritornello cuối trở về đầy đủ ở giọng chủ.
+- Trên piano, [[Bach]] dùng tư duy này trong *Bản concerto Ý* (Italienisches Konzert) cho đàn phím solo — hai bàn phím của harpsichord luân phiên vai "tutti" và "solo".
+
+## Chương 1 concerto Cổ điển
+Thời Cổ điển, ritornello **kết hợp** với [[hinh-thuc-sonata|hình thức sonata]]. Hepokoski và Darcy (*Elements of Sonata Theory*, 2006) gọi đây là **"sonata loại 5"**, xây dựng chủ yếu từ các concerto của [[Mozart]]:
+| Phần | Ký hiệu | Nội dung |
+|---|---|---|
+| Ritornello mở đầu | R1 | Dàn nhạc trình bày các chủ đề, thường **ở lại giọng chủ** |
+| Trình bày độc tấu | S1 (+ R2) | Độc tấu vào, **chuyển sang giọng mới** cho chủ đề phụ; dàn nhạc khép lại bằng ritornello thứ hai |
+| Phát triển | S2 | Chủ yếu là độc tấu |
+| Tái hiện | S3 (+ R4) | Tổng hợp chất liệu của cả R1 và S1 ở giọng chủ |
+| Cadenza | | Độc tấu ngẫu hứng (hoặc viết sẵn), thường ngay trước ritornello cuối |
+Vì có hai lần trình bày (dàn nhạc rồi độc tấu), các sách cũ gọi đây là **"trình bày kép"**.
+
+## Một tranh luận
+- R1 có nên **chuyển giọng** như phần trình bày giao hưởng không? Mozart chủ yếu để việc chuyển giọng cho **độc tấu**. Donald Tovey từng coi việc Beethoven cho R1 chuyển sang giọng của chủ đề phụ trong **Concerto piano số 3** là một "lỗi"; Hepokoski và Darcy giải thích các ngoại lệ ở Mozart như những **biến dạng** có chủ ý.
+- Caplin nhấn mạnh rằng **dấu vết của ritornello** vẫn còn trong sự luân phiên tutti – solo, dù nằm trong kế hoạch giọng của sonata. Một số nhà nghiên cứu khác cho rằng chương concerto có **tính độc lập** riêng, không nên coi đơn giản là một biến thể của sonata.
+
+## Với người học piano
+- Khi học một concerto (kể cả bản rút gọn hai đàn piano), xác định **R1, S1, phát triển, tái hiện, cadenza** trên bản nhạc — giúp hiểu khi nào mình "dẫn" và khi nào mình "đáp" dàn nhạc.
+- Cadenza là chỗ thể hiện sự tự do — nhưng thường đi theo một [[hop-am-sau-bon|hợp âm 6/4 kết]] và kết bằng hợp âm át có láy rền (xem [[ky-hieu-hoa-my]]).
 `,
   },
   {
@@ -578,7 +766,7 @@ Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, 
     slug: 'the-loai',
     title: 'Thể loại khí nhạc',
     category: 'form',
-    aliases: ['thể loại', 'genre', 'giao hưởng', 'symphony', 'concerto', 'tổ khúc', 'suite', 'tứ tấu', 'etude', 'nocturne', 'prelude', 'ballade', 'tiểu phẩm', 'cadenza', 'minuet', 'scherzo'],
+    aliases: ['thể loại', 'genre', 'giao hưởng', 'symphony', 'concerto', 'tổ khúc', 'suite', 'tứ tấu', 'etude', 'nocturne', 'prelude', 'ballade', 'tiểu phẩm'],
     summary: 'Các thể loại lớn và nhỏ của nhạc cổ điển — sonata, giao hưởng, concerto, tổ khúc, tiểu phẩm — và cấu trúc chương điển hình của chúng.',
     wiki: 'Musical_form',
     refs: [
@@ -618,6 +806,49 @@ Minuet (3/4, vừa phải) ở thời Cổ điển được Beethoven thay bằn
 | Bài ca không lời | Giai điệu như ca khúc | Mendelssohn |
 
 Bối cảnh: [[cac-thoi-ky]]. Phức điệu: [[fugue]], [[ostinato|passacaglia]].
+`,
+  },
+  {
+    slug: 'bien-doi-chu-de',
+    title: 'Biến đổi chủ đề và hình thức tuần hoàn',
+    category: 'form',
+    aliases: ['biến đổi chủ đề', 'thematic transformation', 'hình thức tuần hoàn', 'cyclic form', 'chu kỳ', 'idée fixe', 'leitmotif', 'leitmotiv', 'motif dẫn dắt', 'Wanderer Fantasy', 'Sonata Si thứ Liszt'],
+    summary: 'Thế kỷ 19 tìm cách thống nhất cả tác phẩm nhiều chương bằng một chủ đề quay lại và biến đổi tính cách: từ Wanderer Fantasy của Schubert (1822), idée fixe của Berlioz (1830), Sonata Si thứ của Liszt, leitmotif của Wagner đến hình thức tuần hoàn của Franck.',
+    wiki: 'Thematic_transformation',
+    refs: [
+      ['Britannica — Cyclic form', 'https://britannica.com/art/cyclic-form'],
+      ['Britannica — Idée fixe', 'https://www.britannica.com/art/idee-fixe'],
+      ['Wikipedia — Symphonie fantastique', 'https://en.wikipedia.org/wiki/Symphonie_fantastique'],
+      ["University of Arizona thesis — Schubert's Wanderer Fantasie: a creative springboard to Liszt's Sonata in B minor", 'https://repository.arizona.edu/handle/10150/282346?show=full'],
+      ['Wikipedia — Leitmotif', 'https://en.wikipedia.org/wiki/Leitmotif'],
+      ['Wikipedia — Symphony in D minor (Franck)', 'https://en.wikipedia.org/wiki/Symphony_in_D_minor_(Franck)'],
+      ['Wikipedia — Thematic transformation', 'https://en.wikipedia.org/wiki/Thematic_transformation'],
+    ],
+    body: `
+Trong một sonata Cổ điển, các chương thường có chất liệu **riêng**. Từ đầu thế kỷ 19, nhiều nhà soạn nhạc muốn cả tác phẩm **gắn kết** bằng một chủ đề chung — quay lại, đổi tính cách, đổi vai trò.
+
+## Ba khái niệm
+| Khái niệm | Ý nghĩa | Tiêu biểu |
+|---|---|---|
+| **Hình thức tuần hoàn** (cyclic form) | Chủ đề **quay lại** ở nhiều chương | Berlioz, Franck |
+| **Biến đổi chủ đề** (thematic transformation) | Một chủ đề **đổi tính cách** (nhịp, nhịp độ, hoà âm, cách diễn tấu) nhưng vẫn nhận ra được | Liszt |
+| **Leitmotif** | Motif gắn với một **nhân vật, đồ vật, ý tưởng** trong nhạc kịch | Wagner |
+Khác với [[bien-tau|biến tấu]] (chủ đề và các biến thể nối tiếp nhau thành từng đoạn) và với phát triển [[motif]] trong phần phát triển của sonata, ở đây chủ đề **xuyên suốt** cả tác phẩm lớn và mang **ý nghĩa** (thường là ý nghĩa kể chuyện).
+
+## Lịch sử
+- **Schubert — Wanderer Fantasy** (1822, cho piano): chủ đề lấy từ ca khúc *Der Wanderer* của chính ông được dùng và biến đổi qua **bốn chương liền nhau**. Đây là tiền đề mà Schumann, Liszt và những người khác tiếp nối; Liszt còn soạn lại tác phẩm cho piano và dàn nhạc (1851).
+- **Berlioz — Symphonie fantastique** (1830): một giai điệu duy nhất — **idée fixe** (ý tưởng ám ảnh), tượng trưng cho người yêu — xuất hiện ở **cả năm chương**, mỗi lần một **tính cách khác** (theo nội dung chương trình). Giai điệu này vốn lấy từ cantata *Herminie* (1828) của ông.
+- **Liszt — Sonata Si thứ** (hoàn thành 1853): bản sonata piano đầu tiên **gộp ba – bốn chương thành một chương liền**; toàn bộ chất liệu được phát triển từ **vài motif** ở các ô mở đầu, biến đổi tính cách mạnh mẽ (một motif dữ dội có thể trở thành một giai điệu trữ tình). Liszt cũng dùng kỹ thuật này trong các thơ giao hưởng và Concerto piano số 2.
+- **Wagner — leitmotif**: chữ "leitmotif" phổ biến nhờ **Hans von Wolzogen**, người xuất bản năm 1876 một cuốn hướng dẫn đặt tên cho các motif của bộ *Nhẫn*. Wagner **không** dùng chữ này, mà gọi là "Grundthema", "Hauptmotiv" hay đơn giản là "motif"; cách đặt tên của Wolzogen nhiều khi quá máy móc.
+- **Franck — Giao hưởng Rê thứ** (1888): các chủ đề quan trọng **quay lại ở cả ba chương**; chương cuối tập hợp lại chủ đề của các chương trước. Phương pháp này ảnh hưởng tới các học trò của ông như Vincent d'Indy, Ernest Chausson.
+
+## Phân tích biến đổi chủ đề
+1. Tìm **dạng gốc** của chủ đề (thường ở đầu tác phẩm).
+2. Khi chủ đề quay lại, so sánh: cao độ (quãng, đường nét) **giữ** gì? Nhịp, nhịp độ, hoà âm, cường độ, cách diễn tấu **đổi** gì?
+3. Tính cách mới gắn với **vị trí** nào trong hình thức (đỉnh cao, kết, chương chậm…)?
+
+## Với người chơi đàn
+Khi một chủ đề quay lại với tính cách mới, người chơi cần làm **rõ cả hai điều**: người nghe phải **nhận ra** chủ đề, và phải **cảm thấy** sự thay đổi. Xem [[dien-dat-cau-nhac]], [[ly-thuyet-chu-de]].
 `,
   },
 ]

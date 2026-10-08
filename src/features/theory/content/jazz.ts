@@ -561,6 +561,7 @@ Liên quan: [[vong-hop-am]], [[he-thong-hop-am-am-giai]].
     slug: 'hinh-thuc-ca-khuc-32',
     title: 'Hình thức ca khúc 32 ô nhịp',
     category: 'jazz',
+    also: ['form'],
     aliases: ['AABA', '32-bar form', 'hình thức AABA', 'bridge', 'jazz standard', 'Great American Songbook', 'middle eight', 'chorus jazz', 'head'],
     summary: 'Cấu trúc AABA, mỗi đoạn 8 ô nhịp — khuôn mẫu của ca khúc Broadway, Tin Pan Alley và phần lớn jazz standard.',
     wiki: 'Thirty-two-bar_form',
