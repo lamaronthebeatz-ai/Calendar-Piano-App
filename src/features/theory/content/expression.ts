@@ -135,6 +135,11 @@ Về bản chất, hoa mỹ là các [[not-ngoai-hop-am]] (nốt thêu, nốt d�
     aliases: ['pedal', 'pê-đan', 'pedan', 'pedal vang', 'sustain pedal', 'una corda', 'sostenuto', 'pedal giảm âm', 'Ped.'],
     summary: 'Piano có ba pedal: phải (vang — giữ tiếng), trái (una corda — nhỏ và mềm), giữa (sostenuto — giữ tiếng chọn lọc).',
     wiki: 'Piano_pedals',
+    refs: [
+      ['Melanie Spanswick — Perfect pedalling', 'https://melaniespanswick.com/2015/05/19/perfect-pedalling/'],
+      ['Yamaha — Piano pedagogy: pedaling', 'https://hub.yamaha.com/music-educators/instruments/piano/piano-pedagogy-pedaling'],
+      ['Pianist Magazine — 5 top tips to help with pedalling', 'https://www.pianistmagazine.com/blogs/5-top-tips-to-help-with-pedalling/'],
+    ],
     body: `
 ::img Steinway grand piano - pedals.jpg | Ba pedal của đàn grand piano, từ trái sang phải: una corda, sostenuto, pedal vang
 
@@ -148,6 +153,18 @@ Về bản chất, hoa mỹ là các [[not-ngoai-hop-am]] (nốt thêu, nốt d�
 - **Ped.** … **✱**: đạp tại "Ped.", nhả tại dấu sao.
 - Đường ngang có dấu móc ⌊___⋀___⌋: chữ V ngược là chỗ **thay pedal** (nhả rồi đạp lại ngay).
 - **una corda** / **tre corde**: bật / tắt pedal trái.
+
+## Các kỹ thuật pedal
+| Kỹ thuật | Cách làm | Dùng khi |
+|---|---|---|
+| **Pedal liền tiếng** (legato, "pedal trễ") | Đạp **ngay sau** khi tay đánh hợp âm mới — nhả và đạp lại thật nhanh | Nối các hợp âm liền mạch; phổ biến nhất |
+| **Pedal trực tiếp** | Đạp **cùng lúc** với tay, nhả **cùng lúc** khi nhấc tay | Hợp âm khối rõ ràng, vang; tạo nhấn nhịp |
+| **Nửa pedal** | Chỉ đạp **một phần**: một số bộ giảm âm vẫn chạm dây | Giảm nhoè ở các nốt cao mà vẫn giữ nốt trầm |
+| **Pedal rung** (flutter) | Nhấp pedal **rất nhanh, nhẹ** liên tục | Giảm tích tụ âm thanh; tạo màu lung linh trong nhạc ấn tượng |
+
+**Độ sâu pedal là một dải**, không chỉ "lên" hay "xuống"; pedal una corda cũng dùng được ở các độ sâu khác nhau. Ký hiệu pedal trên bản nhạc **không bao giờ** cho biết chính xác đạp sâu bao nhiêu — người chơi phải nghe để điều chỉnh.
+
+Nhiều giáo viên nhấn mạnh: **legato trước hết là việc của ngón tay**; pedal chủ yếu thêm màu sắc, độ vang, hoặc nối những chỗ ngón tay không nối được (như [[buoc-nhay-xa|bước nhảy xa]]).
 
 ## Pedal đổi hợp âm (pedal "nối")
 Kỹ thuật cơ bản nhất: **đánh hợp âm mới → ngay sau đó nhả pedal → đạp lại**. Pedal đạp **sau** khi tay đánh (không phải cùng lúc) để tiếng của hợp âm cũ không lẫn vào hợp âm mới.
@@ -175,6 +192,8 @@ Cả hai tay: **1 = ngón cái, 2 = trỏ, 3 = giữa, 4 = áp út, 5 = út**.
 | Trái | 5 4 3 2 1 – **3** 2 1 (vắt ngón 3 qua ngón 1 sang A) |
 
 ::keyboard C4 D4 E4 F4 G4 A4 B4 C5 | Tay phải luồn ngón cái ở F
+
+Ngón bấm đủ 12 âm giai trưởng: xem bảng trong [[luyen-am-giai]].
 
 ## Nguyên tắc chọn ngón
 - Ngón cái và ngón út **hạn chế** đặt trên phím đen (trừ khi bắt buộc).

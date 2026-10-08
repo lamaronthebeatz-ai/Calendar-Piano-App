@@ -8,6 +8,11 @@ export const rhythm: Article[] = [
     aliases: ['độ dài nốt', 'hình nốt', 'nốt tròn', 'nốt trắng', 'nốt đen', 'nốt móc đơn', 'nốt móc kép', 'note value'],
     summary: 'Độ dài của một nốt, thể hiện qua hình dạng nốt; mỗi hình nốt bằng một nửa hình nốt trước nó.',
     wiki: 'Note_value',
+    refs: [
+      ['LibreTexts — Counting systems', 'https://human.libretexts.org/Bookshelves/Music/Music_Education_and_Training/Do_You_Want_to_Major_in_Music_(Wilson_and_Royston)/05%3A_Aural_Skills/5.03%3A_Counting_Systems'],
+      ['Dynamic Music Room — Counting rhythm syllables: 9 systems explained', 'https://dynamicmusicroom.com/counting-rhythm-and-rhythm-syllables/'],
+      ['Takadimi article (Hoffman, Pelto & White) — PDF', 'https://musescore.org/sites/musescore.org/files/2024-10/Takadimi%20Article.pdf'],
+    ],
     body: `
 Trường độ được tính bằng **phách**. Trong nhịp phổ biến 4/4 (xem [[so-chi-nhip]]), nốt đen = 1 phách:
 | Hình nốt | Giá trị | Số phách (4/4) | Dấu lặng tương ứng |
@@ -27,6 +32,15 @@ Trường độ được tính bằng **phách**. Trong nhịp phổ biến 4/4 
 
 ## Gạch nối
 Các nốt móc đơn trở xuống thường được **nối bằng gạch ngang** theo từng phách để dễ đọc — một gạch = móc đơn, hai gạch = móc kép.
+
+## Các hệ thống đếm phách
+| Hệ thống | Cách đọc | Ưu – nhược |
+|---|---|---|
+| **Đếm số "1 e & a"** | Nốt đen: "1 2 3 4"; móc đơn: "1 & 2 &"; móc kép: "1 e & a" | Phổ biến nhất ở trường học Mỹ; cho biết vị trí nốt trong phách, nhưng phải hiểu [[so-chi-nhip]] trước |
+| **Kodály** | Nốt đen "ta", cặp móc đơn "ti-ti", nốt trắng "ta-a", móc kép "ti-ri ti-ri", đen giữa hai móc đơn "syn-co-pa" | Dễ cho trẻ nhỏ; mỗi âm tiết gắn với một **hình nốt** nên kém gắn với phách khi nhịp phức tạp |
+| **Takadimi** | Đầu phách luôn là "ta"; nửa phách "di"; móc kép "ta-ka-di-mi" | Âm tiết gắn với **vị trí trong phách**, dùng được cho cả nhịp đơn và nhịp kép, từ sơ cấp đến nâng cao |
+
+Nên đọc to tiết tấu trước khi chơi (xem [[kiem-soat-toc-do]]). Nghiên cứu so sánh hiệu quả các hệ thống còn ít.
 
 Kéo dài trường độ: xem [[cham-doi-dau-noi]]. Im lặng: xem [[dau-lang]].
 `,

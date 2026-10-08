@@ -54,6 +54,7 @@ Nếu thấy **đau, tê hoặc nóng rát**, hãy dừng lại — xem [[suc-kh
     refs: [
       ['Practising the Piano — Principles of scale fingerings', 'https://practisingthepiano.com/principles-scale-fingerings/'],
       ['pianoscales.org — Scale fingerings', 'https://www.pianoscales.org/fingerings.html'],
+      ['Piano Keyboard Guide — Major scales in all 12 keys', 'https://piano-keyboard-guide.com/?p=766'],
     ],
     body: `
 ## Nhóm ngón
@@ -73,6 +74,24 @@ Mỗi quãng 8 ngón 4 chỉ xuất hiện **một lần** cho mỗi tay. Nhớ 
 - Ngón bấm của Đô trưởng dùng chung cho **C, G, D, A, E trưởng** và các giọng [[giong-song-song|thứ song song]] của chúng.
 - Các âm giai khác cần điều chỉnh, ví dụ **F trưởng** tay phải: 1 2 3 4 · 1 2 3 · 1 2 3 4 · 1 2 3 4 (ngón 4 rơi vào B♭).
 - Luồn ngón cái **sau một phím đen** dễ hơn sau phím trắng — vì vậy một số giáo viên cho tay phải tập **Si trưởng** trước Đô trưởng.
+
+## Bảng ngón bấm 12 âm giai trưởng (một quãng 8, đi lên)
+Đi xuống thì đọc ngược lại. Số 1 là ngón cái, 5 là ngón út.
+| Giọng | Tay phải | Tay trái |
+|---|---|---|
+| C, G, D, A, E | 1 2 3 1 2 3 4 5 | 5 4 3 2 1 3 2 1 |
+| B | 1 2 3 1 2 3 4 5 | **4 3 2 1 4 3 2 1** |
+| F | **1 2 3 4** 1 2 3 4 | 5 4 3 2 1 3 2 1 |
+| B♭ | 4 1 2 3 1 2 3 4 | 3 2 1 4 3 2 1 3 |
+| E♭ | 3 1 2 3 4 1 2 3 | 3 2 1 4 3 2 1 3 |
+| A♭ | 3 4 1 2 3 1 2 3 | 3 2 1 4 3 2 1 3 |
+| D♭ (C♯) | 2 3 1 2 3 4 1 2 | 3 2 1 4 3 2 1 3 |
+| G♭ (F♯) | 2 3 4 1 2 3 1 2 | 4 3 2 1 3 2 1 4 |
+
+Quy luật dễ nhớ:
+- Các âm giai bắt đầu trên **phím trắng** dùng chung ngón bấm tay trái **5 4 3 2 1 3 2 1** — trừ **Si trưởng**.
+- Với các âm giai bắt đầu trên **phím đen**, ngón cái **không bao giờ** đặt trên phím đen; tìm vị trí ngón 4 (mỗi tay một lần mỗi quãng 8) là nhớ cả âm giai.
+- Ngón bấm tay phải các âm giai phím đen ít đồng nhất hơn, nên cần học thuộc từng giọng.
 
 ## Lộ trình luyện
 Đi lần lượt qua các giọng theo [[vong-quang-nam]]; tập từng tay rồi hai tay; tăng tốc từ từ bằng máy đếm nhịp (xem [[kiem-soat-toc-do]]). Âm giai [[am-giai-cromatic|cromatic]] có quy tắc ngón riêng (ngón 3 trên phím đen). Bước tiếp theo: [[luyen-hop-am-rai]] và [[ky-thuat-quang-tam]].
