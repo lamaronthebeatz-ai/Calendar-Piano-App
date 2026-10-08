@@ -120,7 +120,7 @@ const PERIODS = [
 
 const COMPOSERS: Composer[] = [
   // ── Trung cổ ──
-  c('Guido d\'Arezzo', 'k. 991–sau 1033', 'Ý', 'med:chant', 'Nhà lý thuyết, cha đẻ của khuông nhạc 4 dòng và hệ thống đọc nốt Ut–Re–Mi (solmization).', ['Micrologus (khảo luận)'], { topics: ['khuong-nhac', 'not-nhac'], wiki: 'Guido_of_Arezzo' }),
+  c('Guido d\'Arezzo', 'k. 991–sau 1033', 'Ý', 'med:chant', 'Nhà lý thuyết, cha đẻ của khuông nhạc 4 dòng và hệ thống đọc nốt Ut–Re–Mi (solmization).', ['Micrologus (khảo luận)'], { topics: ['khuong-nhac', 'not-nhac', 'xuong-am'], wiki: 'Guido_of_Arezzo' }),
   c('Hildegard von Bingen', '1098–1179', 'Đức', 'med:chant', 'Nữ tu viện trưởng, nhà thần bí; một trong những nhà soạn nhạc đầu tiên được biết tên với khối lượng thánh ca lớn.', ['Ordo Virtutum', 'Symphonia armonie celestium revelationum'], { topics: ['ket-cau', 'dieu-thuc'], wiki: 'Hildegard_of_Bingen' }),
   c('Bernart de Ventadorn', 'k. 1130–k. 1190', 'Pháp', 'med:troubadour', 'Troubadour nổi tiếng nhất, viết những bài tình ca bằng tiếng Occitan.', ['Can vei la lauzeta mover']),
   c('Comtessa de Dia', 'thế kỷ 12', 'Pháp', 'med:troubadour', 'Nữ troubadour (trobairitz) duy nhất còn lưu lại một bài hát có cả nhạc.', ['A chantar m\'er de so qu\'eu no volria'], { wiki: 'Comtessa_de_Dia' }),
@@ -269,7 +269,7 @@ const COMPOSERS: Composer[] = [
   c('Étienne Méhul', '1763–1817', 'Pháp', 'cla:europe', 'Nhà soạn opera thời Cách mạng và Napoleon.', ['Joseph', 'Le chant du départ']),
   c('Anton Diabelli', '1781–1858', 'Áo', 'cla:europe', 'Nhà xuất bản và nhà soạn nhạc; chủ đề valse của ông được Beethoven viết 33 biến tấu.', ['Sonatina Op. 151 và 168'], { topics: ['bien-tau'] }),
   c('Friedrich Kuhlau', '1786–1832', 'Đức – Đan Mạch', 'cla:europe', 'Sonatina piano là giáo trình kinh điển cho học sinh.', ['Sonatina Op. 20 và 55', 'Elverhøj'], { short: 'Kuhlau', topics: ['hinh-thuc-sonata'] }),
-  c('Carl Czerny', '1791–1857', 'Áo', 'cla:europe', 'Học trò Beethoven, thầy của Liszt; hàng nghìn bài luyện ngón cho piano.', ['Die Schule der Geläufigkeit Op. 299', 'Op. 740 (Nghệ thuật luyện ngón)', 'Op. 599'], { short: 'Czerny', topics: ['ngon-bam'] }),
+  c('Carl Czerny', '1791–1857', 'Áo', 'cla:europe', 'Học trò Beethoven, thầy của Liszt; hàng nghìn bài luyện ngón cho piano.', ['Die Schule der Geläufigkeit Op. 299', 'Op. 740 (Nghệ thuật luyện ngón)', 'Op. 599'], { short: 'Czerny', topics: ['ngon-bam', 'bai-tap-ngon'] }),
 
   // ── Lãng mạn ──
   c('John Field', '1782–1837', 'Ireland', 'rom:early', 'Người sáng tạo thể loại nocturne cho piano, ảnh hưởng trực tiếp tới Chopin.', ['18 Nocturne'], { topics: ['the-loai'] }),
@@ -378,7 +378,7 @@ const COMPOSERS: Composer[] = [
   c('Arthur Honegger', '1892–1955', 'Thuỵ Sĩ – Pháp', 'm20:neoclassical', 'Thành viên Les Six; nổi tiếng với tác phẩm mô tả đầu máy xe lửa.', ['Pacific 231', 'Le roi David']),
   c('Germaine Tailleferre', '1892–1983', 'Pháp', 'm20:neoclassical', 'Nữ thành viên duy nhất của Les Six.', ['Concertino cho đàn hạc']),
   c('Paul Hindemith', '1895–1963', 'Đức – Mỹ', 'm20:neoclassical', 'Nhạc sĩ đa năng, nhà sư phạm; xây dựng lý thuyết hoà âm riêng dựa trên quãng 4.', ['Mathis der Maler', 'Ludus tonalis (piano)', 'Unterweisung im Tonsatz (sách lý thuyết)'], { short: 'Hindemith', topics: ['hoa-am-quang-bon', 'fugue'] }),
-  c('Carl Orff', '1895–1982', 'Đức', 'm20:neoclassical', 'Nhịp điệu nguyên sơ, ostinato; sáng lập phương pháp dạy nhạc Orff-Schulwerk cho trẻ em.', ['Carmina Burana', 'Schulwerk'], { short: 'Orff', topics: ['ostinato', 'am-giai-ngu-cung'] }),
+  c('Carl Orff', '1895–1982', 'Đức', 'm20:neoclassical', 'Nhịp điệu nguyên sơ, ostinato; sáng lập phương pháp dạy nhạc Orff-Schulwerk cho trẻ em.', ['Carmina Burana', 'Schulwerk'], { short: 'Orff', topics: ['ostinato', 'am-giai-ngu-cung', 'phuong-phap-giao-duc-am-nhac'] }),
   c('Francis Poulenc', '1899–1963', 'Pháp', 'm20:neoclassical', 'Thành viên Les Six; giai điệu duyên dáng xen lẫn thánh nhạc sâu lắng.', ['Gloria', 'Dialogues des Carmélites', 'Sonata sáo'], { short: 'Poulenc' }),
   c('Georges Auric', '1899–1983', 'Pháp', 'm20:neoclassical', 'Thành viên Les Six, viết nhiều nhạc phim.', ['Nhạc phim "Moulin Rouge" (1952)']),
   c('Kurt Weill', '1900–1950', 'Đức – Mỹ', 'm20:neoclassical', 'Nhạc kịch sân khấu với Brecht, sau đó Broadway.', ['Die Dreigroschenoper ("Mack the Knife")']),
@@ -387,7 +387,7 @@ const COMPOSERS: Composer[] = [
   c('Ernest Bloch', '1880–1959', 'Thuỵ Sĩ – Mỹ', 'm20:national', 'Âm nhạc lấy cảm hứng từ văn hoá Do Thái.', ['Schelomo']),
   c('Béla Bartók', '1881–1945', 'Hungary', 'm20:national', 'Nhà sưu tầm dân ca, kết hợp nhịp lẻ và điệu thức dân gian với ngôn ngữ hiện đại; bộ Mikrokosmos là giáo trình piano.', ['Mikrokosmos', 'Concerto cho dàn nhạc', 'Music for Strings, Percussion and Celesta', 'Allegro barbaro', 'Vũ khúc dân gian Romania'], { short: 'Bartók', topics: ['nhip-hon-hop', 'dieu-thuc', 'am-cum', 'hoa-am-quang-bon'] }),
   c('George Enescu', '1881–1955', 'Romania', 'm20:national', 'Nghệ sĩ violin, nhà soạn nhạc, thầy của Menuhin.', ['Rhapsody Romania số 1', 'Œdipe']),
-  c('Zoltán Kodály', '1882–1967', 'Hungary', 'm20:national', 'Nhà sưu tầm dân ca và nhà giáo dục; phương pháp Kodály (đọc nốt bằng solfège, ký hiệu tay).', ['Háry János', 'Psalmus Hungaricus', 'Sonata cello độc tấu'], { short: 'Kodály', topics: ['am-giai-ngu-cung', 'not-nhac'] }),
+  c('Zoltán Kodály', '1882–1967', 'Hungary', 'm20:national', 'Nhà sưu tầm dân ca và nhà giáo dục; phương pháp Kodály (đọc nốt bằng solfège, ký hiệu tay).', ['Háry János', 'Psalmus Hungaricus', 'Sonata cello độc tấu'], { short: 'Kodály', topics: ['am-giai-ngu-cung', 'xuong-am', 'phuong-phap-giao-duc-am-nhac'] }),
   c('Karol Szymanowski', '1882–1937', 'Ba Lan', 'm20:national', 'Kết hợp ấn tượng, phương Đông và dân ca vùng núi Ba Lan.', ['Król Roger', 'Mazurka Op. 50']),
   c('Heitor Villa-Lobos', '1887–1959', 'Brazil', 'm20:national', 'Nhà soạn nhạc Mỹ Latinh nổi tiếng nhất, kết hợp Bach với âm nhạc Brazil.', ['Bachianas Brasileiras số 5', 'Chôros', 'Prelude cho guitar']),
   c('Carlos Chávez', '1899–1978', 'Mexico', 'm20:national', 'Kết hợp âm nhạc bản địa Mexico với ngôn ngữ hiện đại.', ['Sinfonía india']),

@@ -134,7 +134,7 @@ Kỹ thuật quãng 8 bắt đầu từ **cổ tay**. Cổ tay hoạt động nh
 Nếu quãng 8 còn quá rộng, tập quãng 6, rồi quãng 7, rồi mới đến quãng 8 (xem [[quang]]). Luyện chậm và **dừng lại nếu khó chịu** — căng cơ là dấu hiệu bàn tay cần thả lỏng hơn (xem [[suc-khoe-nguoi-choi-dan]]).
 
 ## Ngón 1 – 5 hay 1 – 4?
-Khi 1 – 5 đã thoải mái, thử thêm **1 – 4** — đặc biệt hữu ích khi nối hợp âm với quãng 8. Chỉ dùng 1 – 5 thường hạn chế tốc độ, nhất là trên phím đen.
+Quãng 8 liên tiếp ở xa nhau là một dạng [[buoc-nhay-xa|bước nhảy]]. Khi 1 – 5 đã thoải mái, thử thêm **1 – 4** — đặc biệt hữu ích khi nối hợp âm với quãng 8. Chỉ dùng 1 – 5 thường hạn chế tốc độ, nhất là trên phím đen.
 `,
   },
   {
@@ -422,6 +422,141 @@ Hiệp hội Y học Nghệ thuật Biểu diễn Anh (BAPAM) khuyên người c
 
 ## Lưu ý về bằng chứng
 Tổng quan trên tổng hợp các nghiên cứu quan sát, nên chưa có con số chuẩn cho thời lượng nghỉ hay bài khởi động cụ thể.
+`,
+  },
+  {
+    slug: 'ky-thuat-lay-ren',
+    title: 'Kỹ thuật láy rền',
+    category: 'technique',
+    aliases: ['chơi láy rền', 'trill technique', 'ngón láy', 'luyện trill'],
+    summary: 'Láy rền cần đúng cặp ngón và bàn tay thật thả lỏng; láy ngắn dùng động tác ngón, láy to hoặc dài thường kết hợp xoay cổ tay.',
+    refs: [
+      ['Pianist Magazine — Trills at the piano', 'https://pianistmagazine.com/trills-at-the-piano'],
+      ['Living Pianos — 3 ways to make trills easier on the piano', 'https://www.livingpianos.com/articles/3-ways-to-make-trills-easier-on-the-piano/'],
+      ['Living Pianos — How to play trills on the piano', 'https://www.livingpianos.com/articles/conquer-trills-on-the-piano/'],
+    ],
+    body: `
+Ký hiệu và cách đọc láy rền: xem [[ky-hieu-hoa-my]]. Bài này nói về **cách chơi**.
+
+## Hai kiểu chuyển động
+- **Động tác ngón**: các ngón luân phiên, bàn tay gần như yên.
+- **Xoay cổ tay**: bàn tay xoay qua lại giữa hai nốt (xem kỹ thuật xoay ở [[luyen-hop-am-rai]]).
+Láy rền **to hoặc dài** thường cần kết hợp cả hai.
+
+## Chọn cặp ngón
+| Cặp ngón | Nhận xét của giáo viên |
+|---|---|
+| 3 – 1 | Được xếp là chắc nhất |
+| 3 – 2 | Chắc, đáng tin cậy |
+| 2 – 4 | Kém thuận hơn |
+| 1 – 4 | Ngón xa nhau → giữ ngón yên, dùng cổ tay xoay |
+| 4 – 5 | Khó nhất (hai ngón yếu) |
+
+Trong nhạc đối âm (ví dụ [[fugue]] của Bach), các bè khác có thể buộc phải dùng cặp ngón kém thuận; một số người chơi còn **đổi cặp ngón giữa chừng** trong láy rền dài (ví dụ 3-1-3-2).
+
+## Thả lỏng là yêu cầu số một
+- Căng cơ tích tụ dần trong láy rền dài — chú ý giữ ngón mềm.
+- **Trọng lượng cánh tay cản trở** láy rền: hãy cảm giác như tay **lơ lửng nhẹ** trên phím.
+- Một giáo viên gợi ý **hít vào trước** khi láy và bắt đầu láy khi thở ra.
+
+## Cách luyện
+- Bắt đầu chậm, **ngón luôn chạm phím**: nhấn nhẹ phím, rồi nâng phím lên nhẹ nhàng mà không nhấc ngón khỏi phím.
+- Tăng tốc từ từ và **dừng tăng** trước khi bàn tay, cánh tay hay vai bắt đầu căng (xem [[kiem-soat-toc-do]]).
+- **Đếm số nốt** của láy rền để kết thúc gọn và đúng nhịp.
+- Luyện hai cách: xoay cổ tay hoàn toàn, và không xoay mà nâng ngón cao.
+- Luyện phần kết: chơi tới trước các nốt cuối, dừng thoải mái rồi chơi tiếp; thu ngắn dần khoảng dừng cho đến khi người nghe không nhận ra.
+
+Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh dễ hơn trên đàn upright.
+`,
+  },
+  {
+    slug: 'bai-tap-ngon',
+    title: 'Bài tập ngón: Hanon và Czerny',
+    category: 'technique',
+    aliases: ['Hanon', 'Charles-Louis Hanon', 'The Virtuoso Pianist', 'bài tập ngón độc lập', 'finger independence', 'luyện ngón', 'Czerny Op. 599', 'etude kỹ thuật'],
+    summary: 'Hanon được dùng rộng rãi nhưng gây tranh cãi; Czerny thường được coi là lựa chọn "có tính âm nhạc" hơn. Các nguồn đồng ý về mục tiêu, khác nhau về con đường.',
+    wiki: 'Charles-Louis_Hanon',
+    refs: [
+      ['Practising the Piano — The Hanon debate', 'https://practisingthepiano.com/the-hanon-debate/'],
+      ['Pianist Magazine — Why Hanon exercises are a waste of time and possibly dangerous', 'https://www.pianistmagazine.com/blogs/this-is-why-hanon-exercises-are-a-waste-of-time-and-possibly-dangerous/'],
+      ['Hoffman Academy — The benefits of Hanon exercises', 'https://stratos.hoffmanacademy.com/blog/the-benefits-of-hanon-exercises-for-piano-players'],
+    ],
+    body: `
+## Hanon — "The Virtuoso Pianist in 60 Exercises"
+**Ủng hộ** cho rằng: luyện **lực, độ đều** của ngón, sự cân bằng hai tay và sức bền; là bài **khởi động** hằng ngày tốt.
+
+**Phản đối** cho rằng:
+- Mọi hoạt động chơi đàn đều luyện lực và độ độc lập của ngón — Hanon không có gì đặc biệt.
+- Ngón tay **không thể đều và độc lập tuyệt đối** về mặt giải phẫu, dù lặp lại bao nhiêu.
+- Hanon yêu cầu giữ yên cánh tay và cổ tay, chỉ cử động ngón — trong khi kỹ thuật hiện đại coi trọng **sự phối hợp cả cánh tay**. Một số nhà sư phạm (như Abby Whiteside) còn coi chúng là **có hại** nếu tập sai.
+
+**Trung dung**: dùng có chọn lọc cho vấn đề cụ thể, ví dụ một giáo viên dùng bài 32–37 để sửa ngón cái cứng hoặc "sập".
+
+## Czerny
+[[Czerny|Carl Czerny]] được gọi là "cha đẻ của kỹ thuật piano hiện đại". Các tuyển tập như **Op. 599** (cho người mới học), **Op. 299**, **Op. 740** và **Op. 802** (có phần dành riêng cho **độc lập từng ngón**) thường được đánh giá là **có tính âm nhạc hơn** bài tập ngón thuần tuý — dù một số người thấy chúng hơi nhàm và khuyên học kèm tác phẩm phong phú hơn.
+
+## Kết luận thực tế
+- Mục tiêu (kỹ thuật vững, ngón độc lập) đáng theo đuổi; tranh cãi là **con đường**.
+- Lựa chọn được nhiều giáo viên khuyên: [[luyen-am-giai|âm giai]], [[luyen-hop-am-rai|hợp âm rải]], hợp âm và **tác phẩm thật**.
+- Dù tập bài nào: luôn **thả lỏng**, dừng khi đau (xem [[suc-khoe-nguoi-choi-dan]]) và tập có mục đích (xem [[phuong-phap-luyen-tap]]).
+`,
+  },
+  {
+    slug: 'buoc-nhay-xa',
+    title: 'Bước nhảy xa trên bàn phím',
+    category: 'technique',
+    aliases: ['nhảy quãng xa', 'leaps', 'jumps', 'chơi không nhìn tay', 'nhảy tay', 'định vị phím'],
+    summary: 'Tách riêng bước nhảy để luyện, tập nhắm mắt để cảm nhận khoảng cách, và di chuyển tay ngang thật nhanh rồi hạ thẳng xuống.',
+    refs: [
+      ['Gramophone / International Piano — The nuts and bolts of piano technique: Leaps', 'https://gramophone.co.uk/international-piano/articles/the-nuts-and-bolts-of-piano-technique-leaps'],
+      ['Key Notes — Changing hand positions without looking', 'https://www.key-notes.com/blog/changing-hand-positions-without-looking'],
+      ['Piano Fundamentals — Practicing jumps', 'https://mail.pianofundamentals.com/book/en/1.III.7.6'],
+    ],
+    body: `
+## Tách riêng và lặp lại
+Thay vì tập cả đoạn khó, **tách riêng bước nhảy** và lặp lại bình tĩnh — kể cả **nhắm mắt** — để xây dựng trí nhớ về khoảng cách trên [[ban-phim]].
+
+## Quỹ đạo của bàn tay
+Lỗi thường gặp: tay đi theo hình **chữ V ngược**, hạ xuống ở góc ngẫu nhiên → khó trúng phím. Tốt hơn là hình **chữ U ngược**: di chuyển **ngang thật nhanh** trước, rồi **hạ thẳng** xuống phím — để còn thời gian định vị phím sau khi tay đến nơi. Khi tập chậm, **chạm nhẹ** phím trước khi đánh.
+
+## Cảm nhận thay vì nhìn
+- Người chơi dây và người chơi piano khiếm thị định vị bằng **cảm giác khoảng cách**; các nhóm 2 và 3 phím đen là mốc chạm được.
+- "Bản đồ bàn phím" là một dạng **cảm nhận vị trí cơ thể**; luyện [[thi-tau]] đều đặn giúp phát triển nó.
+- Dùng **tầm nhìn ngoại vi** để thấy tay khi mắt vẫn nhìn bản nhạc; nếu phải nhìn tay, chỉ liếc khi nhảy và biết trước chỗ quay lại trên bản nhạc.
+
+## Bước nhảy hợp âm (tay trái)
+1. Nhảy từ **nốt dưới** của hợp âm này sang nốt dưới của hợp âm kia, giữ nguyên ngón, cho đến khi làm được khi nhắm mắt.
+2. Lặp lại với nốt giữa, rồi nốt trên.
+3. Thêm dần nốt cho đến đủ hợp âm.
+
+Kiểu đệm stride trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
+`,
+  },
+  {
+    slug: 'not-lap-lai',
+    title: 'Nốt lặp nhanh',
+    category: 'technique',
+    aliases: ['nốt lặp', 'repeated notes', 'đổi ngón nốt lặp', 'ngón 3-2-1'],
+    summary: 'Nốt lặp nhanh gần như không thể chơi bằng một ngón; đổi ngón (thường 3-2-1), giữ ngón sát phím và tăng tốc từ từ.',
+    refs: [
+      ['Living Pianos — How to play repeated notes on the piano', 'https://www.livingpianos.com/articles/how-to-play-repeated-notes-on-the-piano-piano-techniques/'],
+      ['Living Pianos — 2 reasons you must change fingers on repeated notes', 'https://www.livingpianos.com/articles/2-reasons-you-must-change-fingers-on-repeated-notes/'],
+      ['Pianist Magazine — How to play repeated notes on the piano', 'https://www.pianistmagazine.com/how-to-play-repeated-notes-on-the-piano'],
+    ],
+    body: `
+## Đổi ngón
+Nốt lặp **rất nhanh** gần như không thể chơi bằng một ngón. Ngón bấm thường được khuyên là **3 – 2 – 1** lặp vòng — nhưng điều quan trọng nhất là tìm ra ngón bấm hợp với tay mình.
+
+## Kỹ thuật
+- Giữ ngón **sát ngay trên phím** — không có thời gian cho động tác thừa.
+- Bàn tay khá yên, ngón cong tròn, đánh vào **giữa phím**.
+- Tập chậm với máy đếm nhịp rồi tăng dần (xem [[kiem-soat-toc-do]]).
+- Đàn **upright** khó đáp ứng nốt lặp rất nhanh vì không có bộ máy thoát kép (xem [[bo-may-piano]]).
+
+## Nốt lặp chậm, liền tiếng
+Đổi ngón cũng giúp nốt lặp **liền tiếng** hơn: nhấc ngón trước **trong khi** ngón sau đang hạ xuống, nốt lặp đến sớm hơn và nối tiếng tốt hơn. Giữ bàn tay **nhẹ**, gần như lơ lửng, dùng rất ít trọng lượng cánh tay.
+
+Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm không cần liền tiếng, dùng cùng một ngón vẫn cho kết quả tốt. Lưu ý: nội dung bài chủ yếu từ một giáo viên (Robert Estrin) và tạp chí Pianist.
 `,
   },
 ]

@@ -22,7 +22,7 @@ export const expression: Article[] = [
 
 ::img Music dynamic piano.svg | Ký hiệu p (piano — nhỏ)
 
-Tên đầy đủ của cây đàn piano là **pianoforte** — "nhỏ – to", vì nó là nhạc cụ phím đầu tiên chơi được cả nhỏ lẫn to tuỳ lực ngón tay.
+Tên đầy đủ của cây đàn piano là **[[lich-su-piano|pianoforte]]** — "nhỏ – to", vì nó là nhạc cụ phím đầu tiên chơi được cả nhỏ lẫn to tuỳ lực ngón tay.
 
 ## Thay đổi cường độ
 ::img Crescendo-decrescendo.svg | "Dấu càng" crescendo (to dần) và decrescendo (nhỏ dần)
@@ -152,7 +152,7 @@ Về bản chất, hoa mỹ là các [[not-ngoai-hop-am]] (nốt thêu, nốt d�
 ## Pedal đổi hợp âm (pedal "nối")
 Kỹ thuật cơ bản nhất: **đánh hợp âm mới → ngay sau đó nhả pedal → đạp lại**. Pedal đạp **sau** khi tay đánh (không phải cùng lúc) để tiếng của hợp âm cũ không lẫn vào hợp âm mới.
 
-Quy tắc chung: đổi pedal mỗi khi đổi hợp âm (xem [[vong-hop-am]]). Pedal không thay thế cho legato của ngón tay (xem [[cach-dien-tau]]).
+Pedal hoạt động bằng cách nâng bộ giảm âm — xem [[bo-may-piano]]. Quy tắc chung: đổi pedal mỗi khi đổi hợp âm (xem [[vong-hop-am]]). Pedal không thay thế cho legato của ngón tay (xem [[cach-dien-tau]]).
 `,
   },
   {
@@ -182,7 +182,7 @@ Cả hai tay: **1 = ngón cái, 2 = trỏ, 3 = giữa, 4 = áp út, 5 = út**.
 - Ở các đoạn nhắc lại, ngón bấm giống nhau → dễ thuộc [[motif]] và [[cau-nhac]].
 - Âm giai [[am-giai-cromatic|cromatic]]: ngón 3 trên phím đen.
 
-Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa chọn ngón bấm cho âm giai có [[dau-hoa]]. Kỹ thuật luồn ngón chi tiết: [[luyen-am-giai]], [[luyen-hop-am-rai]]. Tư thế tay đúng: [[tu-the]].
+Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa chọn ngón bấm cho âm giai có [[dau-hoa]]. Kỹ thuật luồn ngón chi tiết: [[luyen-am-giai]], [[luyen-hop-am-rai]]. Bài tập ngón (Hanon, Czerny): [[bai-tap-ngon]]. Tư thế tay đúng: [[tu-the]].
 `,
   },
   {

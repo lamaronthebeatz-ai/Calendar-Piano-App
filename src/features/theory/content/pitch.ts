@@ -163,7 +163,7 @@ Cường độ tương đối của các bồi âm quyết định **âm sắc**
     slug: 'luat-binh-quan',
     title: 'Luật bình quân',
     category: 'pitch',
-    aliases: ['bình quân 12', 'equal temperament', 'A440', 'La 440', 'cao độ chuẩn', 'lên dây', 'tuning', 'tần số'],
+    aliases: ['bình quân 12', 'equal temperament', 'A440', 'La 440', 'cao độ chuẩn', 'lên dây', 'tần số'],
     summary: 'Hệ thống lên dây chia quãng 8 thành 12 nửa cung bằng nhau; chuẩn hiện đại lấy A4 = 440 Hz.',
     wiki: 'Equal_temperament',
     body: `
@@ -176,7 +176,7 @@ Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chi
 - **Đánh đổi**: các quãng (trừ quãng 8) đều lệch nhẹ so với tỉ lệ tự nhiên của [[chuoi-boi-am]]; quãng 3 trưởng hơi rộng.
 
 ## Lịch sử
-Bối cảnh lịch sử: [[cac-thoi-ky]]. Trước đó, các hệ thống như **Pythagore** hay **bình quân bất đều** (well temperament) khiến mỗi giọng có màu sắc riêng. Bộ "Clavier bình quân" (Das Wohltemperierte Klavier) của [[Bach|J.S. Bach]] gồm 24 Prelude và Fugue ở đủ 24 giọng trưởng – thứ, chứng minh việc chơi được ở mọi giọng (xem [[fugue]]).
+Bối cảnh lịch sử: [[cac-thoi-ky]]. Lên dây và bảo quản đàn trong thực tế: [[bao-duong-piano]]. Trước đó, các hệ thống như **Pythagore** hay **bình quân bất đều** (well temperament) khiến mỗi giọng có màu sắc riêng. Bộ "Clavier bình quân" (Das Wohltemperierte Klavier) của [[Bach|J.S. Bach]] gồm 24 Prelude và Fugue ở đủ 24 giọng trưởng – thứ, chứng minh việc chơi được ở mọi giọng (xem [[fugue]]).
 `,
   },
 ]
