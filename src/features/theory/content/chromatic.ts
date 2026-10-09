@@ -376,6 +376,7 @@ Trong nhạc [[thoi-ky-baroque|Baroque]] ([[johann-sebastian-bach|Bach]], [[geor
       ['Wikipedia — Felix Salzer', 'https://en.wikipedia.org/wiki/Felix_Salzer'],
     ],
     body: `
+::wiki Heinrich_Schenker | Heinrich Schenker (ảnh đầu bài Wikipedia *Heinrich Schenker*)
 Heinrich Schenker (1868–1935), nhà lý thuyết người Áo, cho rằng âm nhạc được tổ chức theo **nhiều tầng**, giống câu văn có cấu trúc ngữ pháp sâu bên dưới các từ ngữ bề mặt.
 
 ## Ba tầng

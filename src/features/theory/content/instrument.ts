@@ -17,6 +17,7 @@ export const instrument: Article[] = [
 Đàn piano là nhạc cụ có **dây** được **búa gõ** khi nhấn phím. Tên gọi đầy đủ *pianoforte* ("nhỏ – to") nói lên điểm mới của nó so với harpsichord: độ to **thay đổi theo lực nhấn**. Nhạc cụ đầu tiên thuộc loại này do Bartolomeo **Cristofori** chế tạo ở Florence vào khoảng năm 1700 (xem [[lich-su-piano]]).
 
 ## Vì sao người chơi cần hiểu nhạc cụ?
+::wiki Piano | Đàn piano (ảnh đầu bài Wikipedia *Piano*)
 - **Âm thanh**: biết búa, dây, bảng cộng hưởng hoạt động thế nào giúp hiểu vì sao "[[ky-thuat-cham-phim|chạm phím]]" tạo khác biệt và vì sao âm piano **tắt dần** (xem [[cau-tao-piano]], [[am-sac]]).
 - **Kỹ thuật**: bộ máy quyết định nốt lặp nhanh, cách giữ phím nửa chừng, cách bàn đạp làm việc (xem [[bo-may-piano]], [[not-lap-lai]], [[ban-dap]]).
 - **Phong cách**: nhạc [[johann-sebastian-bach|Bach]], [[wolfgang-amadeus-mozart|Mozart]], [[ludwig-van-beethoven|Beethoven]] được viết cho những nhạc cụ khác đàn hiện đại (xem [[dan-phim-co]], [[phong-cach-dien-tau]], [[tinh-xac-thuc-bieu-dien]]).
@@ -44,6 +45,7 @@ export const instrument: Article[] = [
     ],
     body: `
 ## Người phát minh
+::wiki Bartolomeo_Cristofori | Bartolomeo Cristofori (ảnh đầu bài Wikipedia *Bartolomeo Cristofori*)
 **Bartolomeo Cristofori** (sinh ở Padua) là thợ làm đàn harpsichord. Khoảng năm 1690 ông chuyển đến Florence theo lời mời của hoàng tử **Ferdinando de' Medici** để chăm sóc bộ sưu tập nhạc cụ.
 
 ## Mốc thời gian
@@ -60,6 +62,7 @@ Các nguồn cho năm phát minh khác nhau (1698, 1700, khoảng 1709), vì v�
 Thay cơ chế **gảy dây** của [[dan-phim-co|harpsichord]] bằng **búa gõ** dây với lực mạnh nhẹ tuỳ ngón tay → chơi được cả nhỏ lẫn to, đúng như tên gọi **piano – forte** (xem [[cuong-do]]). Bộ phận quan trọng nhất là cơ cấu thoát búa (xem [[bo-may-piano]]).
 
 ## Từ fortepiano tới piano hiện đại
+::wiki Fortepiano | Đàn fortepiano (ảnh đầu bài Wikipedia *Fortepiano*)
 - Khung đàn của Cristofori bằng gỗ, chưa chịu nổi lực căng dây lớn.
 - Tên gọi rút dần: pianoforte / fortepiano → **piano**. "Fortepiano" thường chỉ các cây đàn từ thời Cristofori đến đầu thế kỷ 19 — loại đàn [[wolfgang-amadeus-mozart|Mozart]] và [[ludwig-van-beethoven|Beethoven]] thời trẻ sử dụng.
 - Từ thời Beethoven, đàn phát triển liên tục và đạt tới cây **grand hiện đại** vào cuối thế kỷ 19, với khung gang (xem [[cau-tao-piano]]).
@@ -86,9 +89,11 @@ Thay cơ chế **gảy dây** của [[dan-phim-co|harpsichord]] bằng **búa g�
 | **Piano** | **Búa** gõ dây rồi bật ra ngay | Rộng, từ rất nhỏ đến rất to |
 
 ## Harpsichord
+::wiki Harpsichord | Đàn harpsichord (ảnh đầu bài Wikipedia *Harpsichord*)
 Vì là cơ chế gảy, harpsichord không thể chơi to nhỏ theo lực ngón; người chơi tạo sắc thái bằng [[cach-dien-tau|cách ngắt tiếng]], [[ky-hieu-hoa-my|hoa mỹ]] và chuyển bàn phím/đổi bộ dây. Đây là nhạc cụ chủ lực của [[thoi-ky-baroque|thời Baroque]] — [[johann-sebastian-bach|Bach]], [[Couperin]], [[domenico-scarlatti|Domenico Scarlatti]] viết cho nó. Virginal và spinet là những dạng harpsichord nhỏ.
 
 ## Clavichord
+::wiki Clavichord | Đàn clavichord (ảnh đầu bài Wikipedia *Clavichord*)
 Phím hoạt động như đòn bẩy: nhấn phím, đầu kia nâng lên và **tangent** đập vào dây. Tangent ở lại trên dây khi còn giữ phím, đồng thời quyết định chiều dài dây rung — vì vậy tiếng rất nhỏ. Bù lại, người chơi điều khiển được to nhỏ và tạo được **rung tiếng (bebung)** bằng cách thay đổi lực ấn.
 
 ## Piano kế thừa gì?
@@ -149,6 +154,7 @@ Pedal una corda trên đàn grand dịch búa để gõ ít dây hơn — vì v�
     ],
     body: `
 ## Cơ cấu thoát búa
+::wiki Action_(piano) | Bộ máy đàn piano (ảnh đầu bài Wikipedia *Action (piano)*)
 Khi nhấn phím, búa được đẩy lên gõ vào dây rồi **rơi ra ngay** — kể cả khi ngón tay vẫn giữ phím — để không chặn tiếng dây. Đây là phát minh cốt lõi của [[lich-su-piano|Cristofori]]. Khi nhả phím, **bộ giảm âm** (damper) hạ xuống chặn dây; [[ban-dap|pedal vang]] nâng toàn bộ bộ giảm âm lên.
 
 ## Thoát kép (double escapement)
@@ -181,10 +187,12 @@ Xem thêm: [[cac-loai-dan-piano]], [[cau-tao-piano]].
     ],
     body: `
 ## Piano cơ
+::wiki Grand_piano | Đàn grand piano (ảnh đầu bài Wikipedia *Grand piano*)
 - **Grand**: dây nằm ngang, bộ máy thoát kép, phản hồi nhanh — chuẩn cho biểu diễn (xem [[bo-may-piano]]).
 - **Upright** (piano đứng): dây dựng đứng, gọn hơn, phổ biến trong gia đình.
 
 ## Piano điện
+::wiki Digital_piano | Đàn piano điện (ảnh đầu bài Wikipedia *Digital piano*)
 Không có búa gõ dây: đàn đo **tốc độ nhấn phím** rồi phát âm thanh to nhỏ tương ứng.
 | Kiểu phím | Đặc điểm |
 |---|---|
@@ -223,6 +231,7 @@ Hội Kỹ thuật viên Piano Mỹ (Piano Technicians Guild — PTG) nêu đi�
 Các nguồn đều nhấn mạnh **độ ẩm thay đổi theo mùa** là nguyên nhân chính khiến đàn lệch dây — với khí hậu nóng ẩm, có mùa nồm, càng cần giữ phòng đàn ổn định.
 
 ## Bao lâu lên dây một lần?
+::wiki Piano_tuning | Lên dây đàn piano (ảnh đầu bài Wikipedia *Piano tuning*)
 PTG **không đưa con số cố định** mà khuyên hỏi thợ có chuyên môn, tuỳ mức sử dụng và môi trường. Các khuyến nghị thường gặp:
 | Trường hợp | Tần suất |
 |---|---|

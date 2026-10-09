@@ -120,6 +120,7 @@ Lưu ý: con số 4% đến từ một tổng quan duy nhất; các con số kh�
     ],
     body: `
 Hệ thống tên Ut–Re–Mi bắt nguồn từ [[Guido d'Arezzo]] (thế kỷ 11) — và vốn là hệ thống **di động**.
+::wiki Guidonian_hand | Bàn tay Guido (ảnh đầu bài Wikipedia *Guidonian hand*)
 
 ## Hai hệ thống
 | | Đô cố định | Đô di động |

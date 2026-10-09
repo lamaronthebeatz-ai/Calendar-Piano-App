@@ -203,6 +203,8 @@ Bỏ qua [[quang|quãng 8]] và tên [[trung-am]], mỗi nốt là một **lớp
 
 ## Dạng chuẩn và dạng nguyên tố
 - C trưởng = {0, 4, 7}; A thứ = {9, 0, 4}.
+::pc-clock 0 4 7 | C trưởng = {0, 4, 7}
+::pc-clock 9 0 4 | A thứ = {9, 0, 4}: cùng các quãng nhưng xếp theo chiều ngược lại — hợp âm thứ là phép đảo của hợp âm trưởng
 - **Dạng nguyên tố** (prime form) đưa tập hợp về dạng gọn nhất bắt đầu từ 0, coi phép [[dich-giong|dịch giọng]] và phép đảo là tương đương. [[hop-am-ba|Hợp âm trưởng]] và thứ có chung dạng nguyên tố **(037)** — Allen [[cuong-do|Forte]] đặt tên là **3-11**.
 
 ## Vector quãng
@@ -420,6 +422,7 @@ Trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], giọng được xác l
 | **Lydian** | ♯4 | **II trưởng** | I – II; kết II – IV – I |
 | **Aeolian** | ♭6, ♭7 | ♭VI, ♭VII | ♭VI – ♭VII – i (hoặc I) |
 | **Phrygian** | ♭2 | **♭II** | ♭II – i |
+::staff treble D4+F4+A4=i G4+B4+D5=IV / F4+A4+C5=♭VII G4+B4+D5=I / C4+E4+G4=I D4+F#4+A4=II / F4+A4+C5=♭II E4+G4+B4=i | Hợp âm đặc trưng: Rê Dorian i – IV (B♮) · Sol Mixolydian ♭VII – I (F♮) · Đô Lydian I – II (F♯) · Mi Phrygian ♭II – i (F♮)
 
 ## Nguyên tắc 2: tránh "kéo" về hoà âm trưởng – thứ
 - Hợp âm **V7** và [[quang|tritone]] của nó gợi mạnh giọng trưởng – thứ. Ví dụ ở Sol Mixolydian, G7 làm nổi tritone F – B; có thể xếp các nốt thành hợp âm **sus** trên G để tránh tritone.
@@ -535,6 +538,9 @@ Trong sách *Technique de mon langage musical* (Kỹ thuật ngôn ngữ âm nh�
 | **2** | Nửa cung – cung xen kẽ — [[am-giai-bat-cung|âm giai bát cung]] | 8 | 3 |
 | **3** | Cung – nửa cung – nửa cung lặp lại | 9 | 4 |
 | **4 – 7** | Các mẫu đối xứng khác | 6 – 10 | 6 mỗi điệu |
+::pc-clock 0 2 4 6 8 10 | Điệu 1 (toàn cung) trên C: hình lục giác đều — chỉ có 2 phiên bản
+::pc-clock 0 1 3 4 6 7 9 10 | Điệu 2 (bát cung, bắt đầu nửa cung) trên C: lặp lại sau mỗi 3 nửa cung — 3 phiên bản
+::pc-clock 0 2 3 4 6 7 8 10 11 | Điệu 3 trên C (cung – nửa cung – nửa cung): lặp lại sau mỗi 4 nửa cung — 4 phiên bản
 
 Điệu 1 và điệu 2 đã có trước Messiaen (âm giai toàn cung ở [[claude-debussy|Debussy]]; âm giai bát cung ở các nhà soạn nhạc Nga như [[nikolai-rimsky-korsakov|Rimsky-Korsakov]]); Messiaen hệ thống hoá chúng cùng các điệu mới thành một bộ.
 

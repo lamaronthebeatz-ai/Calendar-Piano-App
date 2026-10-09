@@ -103,6 +103,8 @@ Nốt dài, rơi vào [[so-chi-nhip|phách mạnh]] thường là nốt của [[
     ],
     body: `
 Ví dụ nổi tiếng nhất: bốn nốt **ngắn – ngắn – ngắn – dài** mở đầu **[[the-loai|Giao hưởng]] số 5** Đô thứ của [[Beethoven]].
+::rhythm 2/4 re e-e-e / h // | Ngắn – ngắn – ngắn – dài: tiết tấu motif mở đầu Giao hưởng số 5
+::staff treble G4 G4 G4 Eb4 | Cao độ của motif: G – G – G – E♭
 
 ## Một motif cho cả bản giao hưởng
 - Motif bốn nốt của Giao hưởng số 5 xuất hiện **gần như trong mọi [[so-chi-nhip|ô nhịp]]** của chương 1, kể cả trong đoạn phát triển.
@@ -153,6 +155,7 @@ Hai câu nhạc liên quan tạo thành **câu hỏi – câu trả lời**:
 |---|---|---|
 | Câu 1 — hỏi (antecedent) | Kết nửa (→ V) | Còn bỏ ngỏ |
 | Câu 2 — đáp (consequent) | Kết chính (V → I) | Trọn vẹn |
+::form Câu_hỏi:4 Câu_đáp:4 | Đoạn nhạc 8 ô: câu hỏi kết nửa, câu đáp kết chính
 
 Nếu câu 2 bắt đầu giống câu 1 → **đoạn song song**; nếu khác → **đoạn tương phản**.
 
@@ -166,6 +169,7 @@ Một cấu trúc 8 ô nhịp khác (theo William [[chuc-nang-hinh-thuc|Caplin]]
 | Trình bày ý cơ bản | 1–2 | [[motif|Ý nhạc]] 2 ô |
 | Nhắc lại ý cơ bản | 3–4 | Lặp lại (thường trên [[hop-am-ba|hợp âm]] V) |
 | Tiếp nối – kết | 5–8 | Chia nhỏ, [[kiem-soat-toc-do|tăng tốc]], đẩy tới [[cau-ket|kết]] |
+::form Ý_cơ_bản:2 Nhắc_lại:2 Tiếp_nối_–_kết:4 | Sentence 8 ô: trình bày (2 + 2) rồi tiếp nối tới kết
 
 Ví dụ: chủ đề mở đầu [[hinh-thuc-sonata|Sonata]] piano Op. 2 số 1 của Beethoven.
 
@@ -263,6 +267,9 @@ Phần giống nhau mang cùng chữ cái; **A′** là A có biến đổi.
 | Hai đoạn **có tái hiện** (rounded binary) | ‖: A :‖: B A′ :‖ | Cuối B, **một phần** của A quay lại |
 | Ba đoạn đơn | A B A | Mỗi đoạn **trọn vẹn, đứng riêng được**; A trở lại **đầy đủ** |
 | Viết liền (through-composed) | A B C… | Mỗi đoạn là nhạc mới, không quay lại |
+::form A B | Hai đoạn: ‖: A :‖: B :‖
+::form A B A' | Hai đoạn có tái hiện: cuối B, một phần của A quay lại (A′)
+::form A B A | Ba đoạn: A trở lại đầy đủ
 
 Chỗ dễ nhầm nhất là **hai đoạn có tái hiện** và **ba đoạn**. Ở hai đoạn có tái hiện, các phần **không đứng riêng được**. Ở ba đoạn, đoạn A kết dứt khoát và có thể chơi một mình. Đoạn B của ba đoạn thường mang chất liệu tương phản, hay ở giọng mới và kém ổn định.
 
@@ -303,6 +310,7 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
 | **Lớn** | **Minuet** (A) – **Trio** (B) – **Minuet da capo** (A, thường **bỏ** các dấu nhắc lại) |
 | **Nhỏ** (trong minuet) | **Hai đoạn có tái hiện**: ‖: a :‖: b a′ :‖ |
 | **Nhỏ** (trong trio) | Cũng là hai đoạn hoặc ba đoạn nhỏ |
+::form Minuet Trio Minuet | Ba đoạn kép: Minuet (A) – Trio (B) – Minuet da capo (A, chơi lại phần đầu)
 Vì mỗi phần của hình thức lớn lại chứa một hình thức nhỏ, toàn chương được gọi là **ba đoạn kép** (compound ternary). Ba mô-đun a – b – a′ của minuet được gom thành **hai** phần lớn, mỗi phần nhắc lại — đây là [[hinh-thuc-am-nhac|hai đoạn có tái hiện]].
 
 Trio thường **tương phản** với minuet — về giọng, kết cấu hoặc tính cách. Tên "trio" thường được giải thích là bắt nguồn từ thói quen viết đoạn này cho **ba nhạc cụ** (ba bè).
@@ -345,6 +353,8 @@ Chủ đề **A** (refrain) luôn ở giọng chính; các đoạn xen **B, C** 
 | Rondo 5 phần | A B A C A |
 | Rondo 7 phần | A B A C A B A |
 | Sonata-rondo | A B A – C (phát triển) – A B A |
+::form A B A C A | Rondo 5 phần
+::form A B A C A B A | Rondo 7 phần: A luôn ở giọng chính, B và C sang giọng khác
 
 Rondo thường vui tươi, nhanh — rất hay dùng cho **chương cuối** của sonata và [[hinh-thuc-concerto|concerto]] thời Cổ điển.
 
@@ -397,6 +407,8 @@ Xem tổng quan: [[hinh-thuc-am-nhac]]. So sánh: [[hinh-thuc-sonata]].
 | **Phát triển** | Biến đổi, xé lẻ các [[motif]], [[chuyen-giong]] liên tục | Nhiều giọng xa |
 | **Tái hiện** | Nhắc lại chủ đề 1 và 2 | **Cả hai** ở giọng chính |
 | (Coda) | Đoạn kết, khẳng định giọng chính | Giọng chính |
+::form (Mở_đầu) Trình_bày Phát_triển Tái_hiện (Coda) | Các phần của hình thức sonata (phần trong ngoặc là tuỳ chọn)
+::form Chủ_đề_1 Cầu_nối Chủ_đề_2 Kết_đoạn | Bên trong phần trình bày: chủ đề 1 ở giọng chính, chủ đề 2 ở giọng át (trưởng) hoặc giọng song song trưởng (thứ)
 
 ## Kịch tính của hình thức sonata
 Trình bày tạo **xung đột** giữa hai giọng; phát triển đẩy xung đột lên cao trào; tái hiện **giải quyết** bằng cách đưa mọi thứ về giọng chính.
@@ -459,6 +471,7 @@ Thời Cổ điển, ritornello **kết hợp** với [[hinh-thuc-sonata|hình t
 | Phát triển | S2 | Chủ yếu là độc tấu |
 | Tái hiện | S3 (+ R4) | Tổng hợp chất liệu của cả R1 và S1 ở giọng chủ |
 | [[cadenza|Cadenza]] | | Độc tấu [[ngau-hung-piano|ngẫu hứng]] (hoặc viết sẵn), thường ngay trước ritornello cuối |
+::form R1 S1 S2 S3 Cadenza | Concerto Cổ điển: ritornello mở đầu (R1), trình bày độc tấu (S1), phát triển (S2), tái hiện (S3), cadenza
 Vì có hai lần trình bày (dàn nhạc rồi độc tấu), các sách cũ gọi đây là **"trình bày kép"**.
 
 ## Một tranh luận
@@ -700,6 +713,7 @@ Cho sẵn một **cantus firmus** (giai điệu [[truong-do|nốt tròn]], đi c
 | 3 | 4 : 1 (nốt đen) | Nốt lướt, nốt thêu, các hình giai điệu |
 | 4 | Nốt nối lệch phách | **Nốt trễ** (suspension): chuẩn bị – nghịch – giải quyết |
 | 5 | [[ky-hieu-hoa-my|Hoa mỹ]] (kết hợp tự do) | Kết hợp tất cả |
+::rhythm w / h h / q q q q / rh h~ / h h // | Bè đối âm trên một nốt tròn của cantus: loại 1 (1 : 1), loại 2 (2 : 1), loại 3 (4 : 1), loại 4 (nối lệch phách)
 
 ## Quy tắc cơ bản (loại 1)
 - Bắt đầu và kết thúc bằng **quãng thuận hoàn toàn** (đồng âm, 5, 8).

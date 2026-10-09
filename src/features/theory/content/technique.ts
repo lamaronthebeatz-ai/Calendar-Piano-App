@@ -98,6 +98,7 @@ Nếu thấy **đau, tê hoặc nóng rát**, hãy dừng lại — xem [[suc-kh
 ## Nhóm ngón
 Ngón bấm âm giai được xây từ hai nhóm luân phiên: **nhóm ngắn (1-2-3)** và **nhóm dài (1-2-3-4)**. Ví dụ [[am-giai-truong|Đô trưởng]] hai [[quang|quãng 8]], tay phải đi lên:
 **1 2 3 · 1 2 3 4 · 1 2 3 · 1 2 3 4 5**
+::staff treble C4=1 D4=2 E4=3 F4=1 G4=2 A4=3 B4=4 C5=1 D5=2 E5=3 F5=1 G5=2 A5=3 B5=4 C6=5 | Âm giai Đô trưởng hai quãng 8, tay phải đi lên: số dưới mỗi nốt là ngón bấm
 
 Tay trái là hình ảnh đối xứng: đi xuống dùng 5-4-3-2-1 · 3-2-1 (xem bảng ngón trong [[ngon-bam]]).
 
@@ -626,6 +627,7 @@ Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh 
       ['Hoffman Academy — The benefits of Hanon exercises', 'https://stratos.hoffmanacademy.com/blog/the-benefits-of-hanon-exercises-for-piano-players'],
     ],
     body: `
+::wiki Charles-Louis_Hanon | Charles-Louis Hanon (ảnh đầu bài Wikipedia *Charles-Louis Hanon*)
 ## Hanon — "The Virtuoso Pianist in 60 Exercises"
 **Ủng hộ** cho rằng: luyện **lực, độ đều** của ngón, sự [[lam-noi-giai-dieu|cân bằng hai tay]] và sức bền; là bài **khởi động** hằng ngày tốt.
 
@@ -767,6 +769,7 @@ Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-h
 ## Slow rock và ballad 12/8
 - 12/8 là [[so-chi-nhip|nhịp kép]] **bốn phách lớn**, mỗi phách chia ba: đếm "**1** và a **2** và a **3** và a **4** và a".
 - Bắt đầu bằng cảm giác **3 + 3 + 3 + 3**; nhấn mạnh nhất ở phách 1, nhưng cả bốn phách đều là phách chính.
+::rhythm 12/8 >e-e-e e-e-e e-e-e e-e-e // | 12/8: bốn phách lớn, mỗi phách chia ba
 - Phân vai thường gặp: bè trầm giữ **bốn phách lớn**, còn piano (hoặc trống) chơi hình **chia ba** liên tục.
 - Đừng nhầm với **6/8** — chỉ có **hai** phách lớn. 12/8 chậm (dưới khoảng 100 phách/phút) cũng dùng cho jazz ballad.
 
@@ -780,6 +783,8 @@ Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-h
 - Ra đời từ sự pha trộn giữa son và danzón của Cuba; có tiết tấu và đường bass đặc trưng.
 - Phách 3 và 4 mang tiếng "**cha-cha-cha**" đặc trưng.
 - Một cách đệm: tay trái nốt gốc ở phách 1, nốt 5 ở phách 3, lặp ở phách 4; tay phải có **hai móc đơn ở phách 2**.
+::rhythm 4/4 q:gốc rq q:5 q:5 // | Tay trái cha-cha-cha: nốt gốc ở phách 1, nốt 5 ở phách 3 và lặp ở phách 4
+::rhythm 4/4 rq e-e rq rq // | Tay phải: hai móc đơn ở phách 2
 - Lời khuyên: học **đường bass trước**, rồi thêm hoà âm; luyện trên vòng [[vong-hop-am|ii – V – I]].
 
 ## Cách luyện chung

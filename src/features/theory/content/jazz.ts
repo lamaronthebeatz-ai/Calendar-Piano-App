@@ -115,8 +115,10 @@ Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, trong giọng Đô:
 | Ô 1–4 | Ô 5–8 | Ô 9–12 |
 |---|---|---|
 | C7 · C7 · C7 · C7 | F7 · F7 · C7 · C7 | G7 · F7 · C7 · G7 |
+::form C7:4 F7:2 C7:2 G7:1 F7:1 C7:1 G7:1 | Vòng blues 12 ô ở Đô: số dưới mỗi khối là số ô
 
 Ô 12 dùng G7 (**turnaround**) để quay về đầu vòng. Phiên bản "quick change" đổi ô 2 thành F7.
+::staff treble C4+E4+G4+Bb4=C7 F4+A4+C5+Eb5=F7 G4+B4+D5+F5=G7 | Ba hợp âm 7 át của blues ở Đô: C7 (I7), F7 (IV7), G7 (V7)
 
 ## Đặc trưng
 - Cả ba [[hop-am-ba|hợp âm]] đều là [[hop-am-bay|hợp âm 7 át]] — điều "phạm luật" theo [[he-thong-hoa-am-co-dien|hoà âm cổ điển]] nhưng tạo nên màu blues.
@@ -126,6 +128,7 @@ Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, trong giọng Đô:
 
 ## Bass boogie-woogie cho tay trái
 C – E – G – A – B♭ – A – G – E (mỗi nốt một móc đơn), dịch lên F và G theo hợp âm.
+::staff bass C3 E3 G3 A3 Bb3 A3 G3 E3 | Bè trầm boogie-woogie trên C7
 
 ## Lịch sử: những bản blues in đầu tiên
 Blues bắt nguồn từ truyền thống dân gian của người Mỹ gốc Phi; những bản **được in** đầu tiên xuất hiện năm 1912. Các nguồn không thống nhất "bản đầu tiên" là bản nào:
@@ -247,6 +250,9 @@ Mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một [[am-giai|âm gia
 | Dm7 | D Dorian | Phím trắng từ D (xem [[dieu-thuc]]) |
 | G7 | G Mixolydian | Phím trắng từ G |
 | Cmaj7 | C Ionian hoặc C Lydian | F là **nốt tránh** trên Cmaj7; Lydian (F♯) tránh được điều đó |
+::staff treble D4 E4 F4 G4 A4 B4 C5 D5 | D Dorian cho Dm7: các phím trắng từ D
+::staff treble G4 A4 B4 C5 D5 E5 F5 G5 | G Mixolydian cho G7: các phím trắng từ G
+::staff treble C4 D4 E4 F#4 G4 A4 B4 C5 | C Lydian cho Cmaj7: F♯ thay cho nốt tránh F
 
 ## Âm giai cho hợp âm 7 át
 Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, bát cung, âm giai biến đổi…) tuỳ theo nốt căng và hướng giải quyết — xem bảng đầy đủ ở [[hop-am-at-bien-hoa]].
@@ -501,11 +507,13 @@ Thay V7 bằng hợp âm 7 át cách nó một tritone (G7 → D♭7) — hai h�
 ## 5. Backdoor (cửa sau)
 **iv7 – ♭VII7 – I**: trong Đô trưởng **Fm7 – B♭7 – Cmaj7**. Tên gọi do Jerry Coker đặt: nếu ii – V – I là "cửa trước" thì đây là "cửa sau".
 - B♭7 mượn từ giọng thứ cùng tên; A♭ và F của nó đi xuống [[cung-nua-cung|nửa cung]] tới G và E của hợp âm chủ.
+::staff treble F4+Ab4+C5+Eb5=Fm7 F4+Ab4+Bb4+D5=B♭7 E4+G4+B4+C5=Cmaj7 | Backdoor ở Đô trưởng: A♭ và F của B♭7 đi xuống nửa cung tới G và E
 - Ví dụ trong standard: "Yardbird [[the-loai|Suite]]" (ô 2–3: Fm7 – B♭7 – Cmaj7), "How Deep Is the Ocean", "Lady Bird", "Misty".
 - Hợp âm 7 át của backdoor thường mang ♯11 ([[hop-am-at-bien-hoa|Lydian át]]).
 
 ## 6. Hợp âm 7 giảm
 - **Giảm lướt đi lên**: C – **C♯°7** – Dm7: bè trầm đi lên [[am-giai-cromatic|cromatic]]. C♯°7 chính là vii°7/ii — một át phụ của Dm7 (xem [[hop-am-cam-am]]).
+::staff bass C3+E3+G3=C C#3+E3+G3+Bb3=C♯°7 D3+F3+A3+C4=Dm7 | Hợp âm 7 giảm lướt: bè trầm C – C♯ – D đi lên cromatic
 - **Giảm nốt chung**: Cmaj7 – **C°7** (CT°7) – Cmaj7: nốt chung C giữ nguyên, các bè thêu quanh — Open Music Theory xếp đây là một kỹ thuật thêm hợp âm chính của jazz (xem [[hop-am-not-chung]]).
 
 ## Điều kiện để thay thế
@@ -546,6 +554,7 @@ Nguyên tắc: nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng ([[so-chi
 
 ## Ví dụ từng bước
 Giai điệu 4 ô: **E – F – B – C** (mỗi ô một nốt dài), hoà âm gốc **C – F – G7 – C**.
+::grand E5/C3=C F5/F2=F B4/G2=G7 C5/C3=C | Hoà âm gốc: giai điệu E – F – B – C trên bè trầm C – F – G – C
 | Bước | Ô 1 (E) | Ô 2 (F) | Ô 3 (B) | Ô 4 (C) | Nốt giai điệu so với hợp âm mới |
 |---|---|---|---|---|---|
 | Gốc | C | F | G7 | C | 3, gốc, 3, gốc |
@@ -553,6 +562,7 @@ Giai điệu 4 ô: **E – F – B – C** (mỗi ô một nốt dài), hoà âm
 | 2. Cùng chức năng | Am7 | Dm7 | G7 | Cmaj7 | 5, 3, 3, gốc |
 | 3. Thay thế tritone | Am7 | Dm7 | D♭7 | Cmaj7 | 5, 3, **7** (C♭ = B), gốc |
 Ở mỗi bước, kiểm tra nốt giai điệu vẫn là nốt hợp âm hoặc nốt căng hợp lý của hợp âm mới. Bước 3 tạo bè trầm A – D – D♭ – C đi xuống mượt.
+::grand E5/A2=Am7 F5/D3=Dm7 B4/Db3=D♭7 C5/C3=Cmaj7 | Sau bước 3: cùng giai điệu, bè trầm A – D – D♭ – C đi xuống mượt
 
 ## Tái hoà âm trong biểu diễn
 Nhiều phép thay thế được dùng **ngay khi chơi**, nên người đệm và người độc tấu phải nghe nhau: nếu piano thay G7 bằng D♭7 trong khi bass vẫn chơi G, hai hợp âm sẽ va chạm. [[ky-hieu-hop-am|Lead sheet]] chỉ là **khung**; tái hoà âm là phần sáng tạo của người chơi.
@@ -585,6 +595,7 @@ Liên quan: [[vong-hop-am]], [[he-thong-hop-am-am-giai]].
 | A | 8 | Nhắc lại (có thể đổi kết) |
 | **B** (bridge, "middle eight") | 8 | Tương phản: [[giai-dieu|giai điệu]] mới, hoà âm khác — thường ly giọng hoặc [[chuyen-giong|chuyển giọng]] |
 | A | 8 | Quay lại chủ đề |
+::form A:8 A:8 B:8 A:8 | Khuôn AABA 32 ô nhịp: số dưới mỗi đoạn là số ô
 
 ## Ví dụ
 - "Over the Rainbow" (Harold Arlen, 1939).
@@ -630,6 +641,8 @@ So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên kh�
 | **A** | Xoay quanh **I – vi – ii – V** (và các biến thể) | B♭ – Gm7 – Cm7 – F7 … |
 | **B** (bridge) | Chuỗi [[hop-am-bay|hợp âm 7 át]] theo [[vong-quang-nam|quãng 5]]: **III7 – VI7 – II7 – V7**, mỗi [[hop-am-ba|hợp âm]] 2 ô | D7 – G7 – C7 – F7 |
 | **A** | Như A đầu | |
+::form A:8 A:8 B:8 A:8 | Rhythm changes: hình thức AABA, mỗi đoạn 8 ô
+::staff treble D4+F#4+A4+C5=D7 G4+B4+D5+F5=G7 C4+E4+G4+Bb4=C7 F4+A4+C5+Eb5=F7 | Đoạn B của rhythm changes trong B♭: III7 – VI7 – II7 – V7, mỗi hợp âm 2 ô
 - Đoạn B là một [[mo-tien-hoa-am|mô tiến]] [[quang|quãng]] 5 của các [[hop-am-at-phu|át phụ]], đưa về V7 để quay lại đoạn A. Người chơi thường chèn thêm hợp âm lướt (ví dụ biến mỗi hợp âm 7 át thành một cặp ii – V).
 - Bản gốc có thêm một **đuôi 2 ô** mà các bản jazz thường bỏ.
 - Bản thân các tiến trình I – vi – ii – V và chuỗi át phụ đã có từ lâu trước Gershwin; điều ông đóng góp là **một bài hát** khiến khung hoà âm này thành chuẩn chung.
@@ -665,7 +678,9 @@ So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên kh�
 ## Ý tưởng: ba giọng cách nhau quãng 3 trưởng
 - Ba [[dieu-tinh|trung tâm giọng]] của "Giant Steps": **Si trưởng, Sol trưởng, Mi giáng trưởng** — mỗi giọng **thấp hơn giọng trước một [[quang|quãng]] 3 trưởng**.
 - Chồng các quãng 3 trưởng sẽ quay về điểm xuất phát sau **ba** bước (B – G – E♭ – B) — tức là ba gốc này tạo thành một [[hop-am-ba-tang|hợp âm ba tăng]]. Quãng 8 được chia thành **ba phần bằng nhau**, một kiểu đối xứng giống [[dieu-thuc-chuyen-vi-gioi-han|các âm giai đối xứng]].
+::keyboard Eb4 G4 B4 | B – G – E♭: ba trung tâm giọng cách nhau quãng 3 trưởng, cùng tạo thành một hợp âm ba tăng
 - Mỗi giọng được dẫn vào bằng **[[hop-am-bay|hợp âm 7 át]]** của nó: Bmaj7 – **D7** – Gmaj7 – **B♭7** – E♭maj7 …
+::staff treble B3+D#4+F#4+A#4=Bmaj7 D4+F#4+A4+C5=D7 G4+B4+D5+F#5=Gmaj7 Bb3+D4+F4+Ab4=B♭7 Eb4+G4+Bb4+D5=E♭maj7 | Bmaj7 – D7 – Gmaj7 – B♭7 – E♭maj7: mỗi giọng mới được dẫn vào bằng hợp âm 7 át của nó
 
 ## Như một phép thay thế cho ii – V – I
 Coltrane cũng dùng hệ thống này để **[[tai-hoa-am|tái hoà âm]]** các tiến trình sẵn có: một [[ii-v-i]] được "lấp đầy" bằng các chặng cách nhau quãng 3 trưởng trước khi về chủ. Ví dụ "Countdown" là bản tái hoà âm của "Tune Up" (Miles Davis): khung lớn vẫn là các giọng của "Tune Up", nhưng từng chặng được chia nhỏ theo vòng Coltrane.

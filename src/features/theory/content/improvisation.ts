@@ -155,6 +155,7 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
 ## Cadenza là gì?
 - Trong concerto Cổ điển, dàn nhạc dừng trên **[[luat-hoa-am-bon-be|hợp âm 6/4 kết]]** có **[[cach-dien-tau|dấu ngân]]** (xem [[hop-am-sau-bon]]); người độc tấu chơi một đoạn **tự do**, thường kết bằng [[hop-am-ba|hợp âm]] **át có [[ky-hieu-hoa-my|láy rền]]**, rồi dàn nhạc vào lại (xem [[hinh-thuc-concerto]]).
 - **Eingang** (đoạn dẫn vào) là một đoạn ứng tác ngắn hơn, trên dấu ngân ở **hợp âm át**, dẫn vào sự trở lại của một chủ đề.
+::grand E4+G4+C5/G2=6/4 F4+B4+D5/G2=V7 E4+G4+C5/C3=I | Khung hoà âm của cadenza Cổ điển (Đô trưởng): dàn nhạc dừng ở 6/4 kết → cadenza → kết bằng V7 có láy rền → dàn nhạc vào ở I
 - Cadenza đã có trong **aria** opera trước khi phổ biến trong concerto; một nguồn đặt dạng cadenza trên bè trầm ngân vào khoảng 1710–1716.
 
 ## Mozart

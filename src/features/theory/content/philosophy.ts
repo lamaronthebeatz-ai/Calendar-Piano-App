@@ -60,6 +60,7 @@ Mỗi khi nói với học trò "chơi đoạn này buồn hơn", "tôn trọng 
       ['Wikipedia — Musical system of ancient Greece', 'https://en.wikipedia.org/wiki/Musical_system_of_ancient_Greece'],
     ],
     body: `
+::wiki Plato | Platon (ảnh đầu bài Wikipedia *Plato*)
 ## Âm nhạc rèn tính cách
 Trong *Cộng hoà* và *Luật pháp*, **Plato** để Socrates trình bày âm nhạc như một **sức mạnh hình thành tính cách**: âm nhạc thấm dần vào tâm hồn, rồi lan sang cách cư xử, luật pháp và cả thể chế. Ông nhắc lời **Damon** (thế kỷ 5 TCN): phong cách âm nhạc **không thể thay đổi mà không làm thay đổi những luật lệ nền tảng của thành bang**.
 
@@ -91,6 +92,7 @@ Học giả **Stefan Hagel** (2019) đặt nghi vấn: hình ảnh một "lý th
       ['Wikipedia — Harmonices Mundi', 'https://en.wikipedia.org/wiki/Harmonices_Mundi'],
     ],
     body: `
+::wiki Pythagoras | Pythagoras (ảnh đầu bài Wikipedia *Pythagoras*)
 ## Pythagoras: âm nhạc là con số
 Truyền thống Pythagoras gắn âm nhạc với **toán học**: [[cao-do|cao độ]] tỉ lệ nghịch với độ dài dây, và các quãng **thuận** ứng với **tỉ lệ số đơn giản** — [[quang|quãng 8]] là 2 : 1, quãng 5 là 3 : 2, quãng 4 là 4 : 3 (xem [[chuoi-boi-am]], [[luat-binh-quan]], [[thuan-nghich]]). Từ đó nảy sinh ý tưởng **musica universalis**: chuyển động của Mặt Trời, Mặt Trăng và các hành tinh cũng là một thứ "âm nhạc" theo những tỉ lệ ấy.
 
@@ -163,6 +165,7 @@ Hai truyền thống độc lập nhưng cùng đặt âm nhạc vào trung tâm
       ['Wikipedia — Treatise on Harmony (Rameau, 1722)', 'https://en.wikipedia.org/wiki/Treatise_on_Harmony'],
     ],
     body: `
+::wiki Jean-Jacques_Rousseau | Jean-Jacques Rousseau (ảnh đầu bài Wikipedia *Jean-Jacques Rousseau*)
 ## Bối cảnh: hai lý thuyết gia, hai quan niệm
 - **[[jean-philippe-rameau|Jean-Philippe Rameau]]**: nhà soạn nhạc opera Pháp hàng đầu và tác giả *Traité de l'harmonie* (1722) — lý thuyết **bè trầm gốc** coi **hoà âm** là nền tảng tự nhiên của âm nhạc (xem [[he-thong-hoa-am-co-dien]]).
 - **Jean-Jacques Rousseau**: triết gia, cũng là nhà soạn nhạc; tin rằng âm nhạc bắt nguồn từ **lời nói và đam mê**, nên **[[giai-dieu|giai điệu]]** mới là cốt lõi.
@@ -201,6 +204,7 @@ Câu hỏi "giai điệu hay hoà âm đi trước" vẫn hiện diện trong c�
       ['Wikipedia — Arthur Schopenhauer', 'https://en.wikipedia.org/wiki/Arthur_Schopenhauer'],
     ],
     body: `
+::wiki Arthur_Schopenhauer | Arthur Schopenhauer (ảnh đầu bài Wikipedia *Arthur Schopenhauer*)
 Trong thế kỷ 18, nhạc không lời thường bị coi **kém** nhạc có lời, vì "không nói được gì". Khoảng năm 1800, quan niệm này **đảo ngược**: chính vì không bị ràng buộc vào lời và khái niệm, nhạc khí nhạc được coi là nghệ thuật **cao nhất**.
 
 ## E. T. A. Hoffmann (1810)
@@ -239,6 +243,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
       ['Wikipedia — Program music', 'https://en.wikipedia.org/wiki/Program_music'],
     ],
     body: `
+::wiki Eduard_Hanslick | Eduard Hanslick (ảnh đầu bài Wikipedia *Eduard Hanslick*)
 ## Hai quan niệm
 | | Âm nhạc chương trình | Âm nhạc tuyệt đối |
 |---|---|---|
@@ -472,6 +477,7 @@ Trong các tiểu luận tập hợp ở *Text and Act* (1995), nhà âm nhạc 
       ['Wikipedia — Of the Standard of Taste', 'https://en.wikipedia.org/wiki/Of_the_Standard_of_Taste'],
     ],
     body: `
+::wiki Immanuel_Kant | Immanuel Kant (ảnh đầu bài Wikipedia *Immanuel Kant*)
 ## Câu hỏi
 "Bản này hay" có phải chỉ là "tôi thích bản này"? Nếu chỉ là sở thích thì không thể tranh luận; nhưng thực tế ta vẫn tranh luận, vẫn dạy học trò phân biệt chơi hay và chơi chưa hay. Thế kỷ 18 để lại hai câu trả lời kinh điển.
 
@@ -513,6 +519,7 @@ Năm phẩm chất của Hume — tinh tế, thực hành, so sánh, không đ�
       ['CLACSO repository — study of Adorno\'s writings on jazz', 'https://biblioteca-repositorio.clacso.edu.ar/handle/CLACSO/244981?mode=full'],
     ],
     body: `
+::wiki Theodor_W._Adorno | Theodor W. Adorno (ảnh đầu bài Wikipedia *Theodor W. Adorno*)
 **Theodor W. Adorno** (1903–1969) — triết gia, nhà xã hội học thuộc **trường phái Frankfurt**, từng học sáng tác — coi âm nhạc là nơi phản chiếu và cũng có thể **phê phán** xã hội.
 
 ## Nhạc đại chúng: chuẩn hoá và cá nhân hoá giả (1941)

@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { findArticle, normalize } from './wiki'
-import { CircleOfFifths, GrandStaff, Keyboard, Rhythm, Staff, type Clef } from './diagrams'
+import { CircleOfFifths, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
 
@@ -109,6 +109,10 @@ function Directive({ line }: { line: string }) {
       const keySig = parseKey(args[0])
       return <Figure caption={caption}><GrandStaff keySig={keySig} columns={args.slice(keySig ? 1 : 0)} /></Figure>
     }
+    case 'form':
+      return <Figure caption={caption}><FormChart sections={args} /></Figure>
+    case 'pc-clock':
+      return <Figure caption={caption}><PitchClock set={args.map(Number)} /></Figure>
     case 'rhythm':
       return <Figure caption={caption}><Rhythm tokens={args} /></Figure>
     case 'wiki':

@@ -344,3 +344,75 @@ export function CircleOfFifths() {
     </svg>
   )
 }
+
+const PC_NAMES = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B']
+
+/** Pitch-class clock (C = 0 at the top): the set's members are lit and joined, so symmetry and shape are visible. */
+export function PitchClock({ set }: { set: number[] }) {
+  const at = (pc: number, r: number) => {
+    const a = (pc * 30 - 90) * (Math.PI / 180)
+    return { x: 110 + r * Math.cos(a), y: 110 + r * Math.sin(a) }
+  }
+  const lit = new Set(set)
+  const polygon = set.map((pc) => at(pc, 72)).map((p) => `${p.x},${p.y}`).join(' ')
+  return (
+    <svg viewBox="0 0 220 220" className="w-full max-w-[15rem]" role="img" aria-label={`Đồng hồ lớp cao độ: ${set.join(', ')}`}>
+      <circle cx={110} cy={110} r={72} fill="none" stroke="var(--color-border-strong)" />
+      <polygon points={polygon} fill="color-mix(in oklch, var(--color-accent) 18%, transparent)" stroke={ACCENT} strokeWidth={1.5} />
+      {PC_NAMES.map((name, pc) => {
+        const dot = at(pc, 72)
+        const label = at(pc, 94)
+        return (
+          <g key={pc}>
+            <circle cx={dot.x} cy={dot.y} r={lit.has(pc) ? 9 : 3} fill={lit.has(pc) ? ACCENT : 'var(--color-border-strong)'} />
+            {lit.has(pc) && (
+              <text x={dot.x} y={dot.y + 3.5} textAnchor="middle" fontSize={10} fontWeight={600} fill="var(--color-accent-ink)">
+                {pc}
+              </text>
+            )}
+            <text x={label.x} y={label.y + 4} textAnchor="middle" fontSize={11} fill={lit.has(pc) ? INK : 'var(--color-ink-muted)'}>
+              {name}
+            </text>
+          </g>
+        )
+      })}
+    </svg>
+  )
+}
+
+const FORM_HUES = [250, 25, 145, 300, 75, 190]
+
+/**
+ * Form chart: "A:8 A:8 B:8 A:8" — one block per section, width proportional to its length; sections with the
+ * same name (ignoring primes and trailing numbers, so A and A' match) share a colour. Underscores become spaces.
+ */
+export function FormChart({ sections }: { sections: string[] }) {
+  const parts = sections.map((s) => {
+    const [name, len] = s.split(':')
+    return { name: name.replace(/_/g, ' '), len: Number(len) || 1 }
+  })
+  const keys = [...new Set(parts.map((p) => p.name.replace(/['’\d]+$/, '')))]
+  const total = parts.reduce((s, p) => s + p.len, 0)
+  const W = 320
+  const starts = parts.map((_, i) => (parts.slice(0, i).reduce((s, p) => s + p.len, 0) / total) * W)
+  return (
+    <svg viewBox={`0 0 ${W} 54`} className="w-full max-w-xl" role="img" aria-label={`Sơ đồ hình thức: ${parts.map((p) => p.name).join(' – ')}`}>
+      {parts.map((p, i) => {
+        const x = starts[i]
+        const w = (p.len / total) * W
+        const hue = FORM_HUES[keys.indexOf(p.name.replace(/['’\d]+$/, '')) % FORM_HUES.length]
+        return (
+          <g key={i}>
+            <rect x={x + 1} y={4} width={w - 2} height={30} rx={5} fill={`oklch(0.85 0.07 ${hue})`} stroke={`oklch(0.55 0.1 ${hue})`} />
+            <text x={x + w / 2} y={23.5} textAnchor="middle" fontSize={w < 30 ? 8.5 : 11} fontWeight={600} fill="oklch(0.25 0.03 260)">
+              {p.name}
+            </text>
+            <text x={x + w / 2} y={48} textAnchor="middle" fontSize={9} fill="var(--color-ink-muted)">
+              {sections[i].includes(':') ? p.len : ''}
+            </text>
+          </g>
+        )
+      })}
+    </svg>
+  )
+}

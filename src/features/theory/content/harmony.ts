@@ -1042,6 +1042,7 @@ Các quy tắc viết bè được rút ra từ việc nghiên cứu thực tế
 | Alto | G3 – C5 |
 | Tenor | C3 – G4 |
 | Bass | E2 – C4 |
+::grand C4+G5/=Soprano G3+C5/=Alto /C3+G4=Tenor /E2+C4=Bass | Âm vực thường dùng của bốn bè: nốt thấp nhất và cao nhất của mỗi bè
 
 ## 2. Khoảng cách và vị trí
 - Hai bè **liền nhau ở phía trên** (S–A, A–T) cách nhau **không quá một [[quang|quãng 8]]**. Bass và Tenor được phép xa hơn.
@@ -1060,6 +1061,8 @@ Có bốn kiểu chuyển động giữa hai bè: **song song, cùng chiều, ng
 - **Quãng 5 và quãng 8 song song** (hai bè cách nhau quãng 5 hoặc 8 rồi cùng chuyển sang quãng 5 hoặc 8 khác): bị cấm vì làm hai bè **"dính" vào nhau**, mất độc lập. Lịch sử: Johannes de Garlandia là người đầu tiên cấm (khoảng năm 1300), dù thế kỷ 14 vẫn còn dùng nhiều; quy ước ổn định từ khoảng **1450**.
 - **Quãng 5 và 8 ẩn** (trực tiếp): **hai bè ngoài** (Soprano và Bass) đi **cùng chiều** tới một quãng 5 hoặc 8, trong khi Soprano **nhảy**. Nếu Soprano đi **liền bậc** thì được chấp nhận. Một số giáo viên chặt hơn, tránh cả khi Soprano đi liền bậc.
 - **Quãng 2 tăng** trong giọng thứ (bậc 6 lên bậc 7 nâng) — tránh trong một bè (xem [[am-giai-thu]]).
+::staff treble C4+G4=5 D4+A4=5 | Quãng 5 song song: hai bè cách nhau quãng 5 (C – G) cùng chuyển sang một quãng 5 khác (D – A)
+::staff treble F4 G#4 | Quãng 2 tăng F – G♯ (bậc 6 lên bậc 7 nâng) trong La thứ hoà âm
 
 ## 5. Nốt khuynh hướng
 | Nốt | Phải đi | Ngoại lệ |
@@ -1068,6 +1071,7 @@ Có bốn kiểu chuyển động giữa hai bè: **song song, cùng chiều, ng
 | **Nốt 7 của [[hop-am-bay|hợp âm 7]]** | **Xuống liền bậc** | Trong V7 → I, nốt 7 (bậc 4) xuống bậc 3 |
 
 Nốt 7 của hợp âm 7 cũng nên được **chuẩn bị**: đến bằng nốt chung (như một [[not-ngoai-hop-am|nốt trễ]]) hoặc bằng bước liền bậc. Khi V7 nguyên vị → I nguyên vị, hai nốt khuynh hướng kéo ngược nhau; cách giải: để **một hợp âm thiếu nốt 5**, hoặc cho cảm âm ở bè giữa xuống quãng 3.
+::grand F4+D5/G2+B3=V7 E4+C5/C3+C4=I | V7 → I trong Đô trưởng: cảm âm B lên C, nốt 7 (F) xuống E; hợp âm I thiếu nốt 5 và nhân ba nốt gốc
 
 ## 6. Bốn loại hợp âm 6/4
 Hợp âm [[the-dao-hop-am|đảo 2]] nghe chưa ổn định nên chỉ dùng trong bốn tình huống:
@@ -1077,6 +1081,7 @@ Hợp âm [[the-dao-hop-am|đảo 2]] nghe chưa ổn định nên chỉ dùng t
 | **[[hop-am-sau-bon|6/4 lướt]]** | Đi **liền bậc** qua nốt giữa | Nằm giữa hai hợp âm **cùng chức năng** (ví dụ I – V6/4 – I6) |
 | **6/4 thêu** (6/4 [[bass-ngan|bass ngân]]) | **Đứng yên** | Hai bè trên đi lên nốt thêu rồi về (ví dụ I – IV6/4 – I) |
 | **6/4 rải** | Nhảy qua các nốt của **một hợp âm** | Bass rải hợp âm (như kiểu [[dem-hat-piano|đệm valse]]) |
+::grand E4+G4+C5/G2=6/4 D4+G4+B4/G2=5/3 E4+G4+C5/C3=I | 6/4 kết: trên bè trầm G, nốt 6 và 4 (E, C) xuống 5 và 3 (D, B) — tức V được trang trí — rồi về I
 
 ## 7. Cách nối hai hợp âm
 1. **Giữ nốt chung** trong cùng bè.
@@ -1371,6 +1376,7 @@ Trong [[the-dao-hop-am|thể đảo 2]], bè trầm là nốt 5 của [[hop-am-b
 - Mô tả sớm nhất có lẽ của **Antonio Bruschi (1711)**; tên gọi do **François Campion** đặt năm **1716**.
 - Nguyên tắc tóm gọn: **trừ bậc 1 và bậc 5** (mang hợp âm 5/3), các bậc khác **"mang [[quang|quãng]] 6"** (hợp âm 6/3, 6/5/3 hoặc 6/4/3).
 - Có cách đặt khác nhau cho chiều **đi lên** và **đi xuống**, và có **nhiều biến thể**. Ví dụ bản bốn bè của Fenaroli khi đi lên: 1: 5/3 · 2: 6/4/3 · 3: 6/3 · 4: 6/5/3 · 5: 5/3 · 6: 6/3 · 7: 6/5/3 · 8: 5/3.
+::staff bass C3=5/3 D3=6/4/3 E3=6/3 F3=6/5/3 G3=5/3 A3=6/3 B3=6/5/3 C4=5/3 | Quy tắc quãng 8 đi lên (bản của Fenaroli) ở Đô trưởng: dưới mỗi nốt bè trầm là hợp âm đặt trên nó
 - [[Rameau]] dựa nhiều vào quy tắc này trong *Traité de l'harmonie* (1722); có ý kiến cho rằng lý thuyết **bè trầm cơ bản** của ông là nỗ lực giải thích nó.
 - Nghiên cứu gần đây (Menke và cộng sự, *Music Theory Online*, 2026) đề nghị hiểu quy tắc này là **tập hợp hợp âm được kỳ vọng** cho mỗi bậc bè trầm, hơn là một công thức hoà âm âm giai.
 
@@ -1386,6 +1392,8 @@ Robert Gjerdingen, trong *Music in the Galant Style* (Oxford, 2007), đặt tên
 | **Fonte** | Sau vạch nhắc, đầu phần hai | Mô tiến **đi xuống** một bậc | Đơn vị thứ hai thấp hơn một bậc | Đơn vị 1 ở giọng **ii** (thứ), đơn vị 2 ở **I** |
 | **Monte** | Phần hai, đi lên cao trào | Mô tiến **đi lên**: 7 – 1, rồi lặp cao hơn | — | Thường V7/IV – IV, V7/V – V |
 | **Ponte** | Kéo dài trước khi quay về | Đứng yên ở **bậc 5** | 5 – 7 – 2 | Kéo dài hợp âm át ("cây cầu") |
+::grand A4/F3=6/4 G4/E3=5/3 F4/D3=4/2 E4/C3=3/1 | Prinner ở Đô trưởng: giai điệu 6 – 5 – 4 – 3 trên bè trầm 4 – 3 – 2 – 1 (số dưới: bậc giai điệu / bậc bè trầm), hai bè song song quãng 10
+::grand G4/G2=5 B4/G2=7 D5/G2=2 | Ponte ở Đô trưởng: bè trầm đứng yên ở bậc 5 (G), giai điệu 5 – 7 – 2
 
 - **Fonte, Monte, Ponte** được **Joseph Riepel** (1709–1782) mô tả trong các đối thoại thầy – trò (1752–1765).
 - Cặp quen thuộc: **Romanesca** (đề xuất) rồi **Prinner** (đáp); [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] của Prinner thường **nhanh gấp đôi** Romanesca.

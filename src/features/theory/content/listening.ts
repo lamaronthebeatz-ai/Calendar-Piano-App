@@ -437,6 +437,7 @@ Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ s
     ],
     body: `
 ## Bốn thời kỳ
+::wiki Phonograph | Máy hát (ảnh đầu bài Wikipedia *Phonograph*)
 | Thời kỳ | Năm | Mốc chính |
 |---|---|---|
 | **[[am-hoc-co-ban|Âm học]]** | 1877–1925 | 1877: máy phonograph của Edison ghi và phát lại âm thanh trên lá thiếc; Bell và Tainter thay bằng sáp; 1887: Emile [[ngau-hung-jazz|Berliner]] phát minh **gramophone** dùng đĩa |
@@ -450,6 +451,7 @@ Trước Edison, phonautograph (bằng sáng chế 1857) đã vẽ được són
 Ngày **2/12/1889**, Theo Wangemann — người của Edison — thu âm [[Brahms]] chơi hai [[cau-nhac|đoạn nhạc]] trên piano: một trong những bản thu cổ nhất còn lại của một nhà soạn nhạc lớn tự chơi nhạc của mình. Tiếng nhạc gần như bị tiếng ồn che lấp; các nhà nghiên cứu đã phục dựng [[nhip-do|nhịp độ]] để hình dung cách Brahms chơi (không đủ để biết [[cuong-do|cường độ]] hay [[ban-dap|pedal]]).
 
 ## Cuộn piano (piano roll)
+::wiki Piano_roll | Cuộn piano (ảnh đầu bài Wikipedia *Piano roll*)
 Hệ thống **Welte-Mignon** (phát minh năm 1904) ghi lại cách chơi bằng cuộn giấy đục lỗ cho đàn tự chơi. Lưu ý: các album "Brahms trên Welte-Mignon" là các nghệ sĩ khác chơi nhạc Brahms, **không phải** Brahms tự chơi.
 
 ## Bản thu phòng thu: ghép nhiều lần chơi
