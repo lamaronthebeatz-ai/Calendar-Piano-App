@@ -159,3 +159,12 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .theory-card, .theory-to-top { transition: none; }
 }
+
+/* Floating buttons and toasts sit above the mobile tab bar; follow it down when it auto-hides. */
+@media (max-width: 1023.98px) {
+  .above-nav { transition: translate 300ms ease-out; }
+  html[data-nav-hidden] .above-nav { translate: 0 4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .above-nav { transition: none; }
+}

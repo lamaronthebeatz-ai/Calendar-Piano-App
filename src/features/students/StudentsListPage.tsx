@@ -98,7 +98,7 @@ export function StudentsListPage() {
 
       <button
         onClick={openCreateStudent}
-        className="fixed bottom-24 right-5 z-30 flex items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] sm:hidden"
+        className="above-nav fixed bottom-24 right-5 z-30 flex items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] sm:hidden"
         aria-label="Thêm học viên"
         style={{ height: 52, width: 52 }}
       >

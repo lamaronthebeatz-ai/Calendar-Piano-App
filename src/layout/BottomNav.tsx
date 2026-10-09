@@ -4,12 +4,17 @@ import { PlusIcon } from '../components/icons'
 import { navItems } from './navItems'
 import { useUIStore } from '../store/uiStore'
 
-export function BottomNav() {
+export function BottomNav({ hidden = false }: { hidden?: boolean }) {
   const setQuickActionsOpen = useUIStore((s) => s.setQuickActionsOpen)
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] bg-[var(--color-surface-raised)]/95 backdrop-blur pb-[env(safe-area-inset-bottom)] lg:hidden"
+      className={clsx(
+        'fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] bg-[var(--color-surface-raised)]/95 backdrop-blur pb-[env(safe-area-inset-bottom)] transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden',
+        // Slide fully off-screen, including the raised "+" button above the bar.
+        hidden && 'translate-y-[calc(100%+1.75rem)]',
+      )}
+      inert={hidden}
       aria-label="Điều hướng chính"
     >
       {navItems.slice(0, 2).map((item) => (

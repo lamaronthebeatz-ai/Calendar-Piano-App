@@ -60,7 +60,7 @@ export function TheoryPage() {
         ref={toTop}
         onClick={() => scroller.current?.scrollTo({ top: 0 })}
         aria-label="Về đầu trang"
-        className="theory-to-top fixed bottom-24 right-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] lg:bottom-6 lg:right-8"
+        className="above-nav theory-to-top fixed bottom-24 right-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] lg:bottom-6 lg:right-8"
       >
         <ChevronLeftIcon width={20} height={20} className="rotate-90" />
       </button>

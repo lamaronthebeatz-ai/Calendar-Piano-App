@@ -8,7 +8,7 @@ export function ToastHost() {
   const dismissToast = useUIStore((s) => s.dismissToast)
 
   return createPortal(
-    <div className="pointer-events-none fixed inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+84px)] z-[60] flex flex-col items-center gap-2 lg:bottom-6">
+    <div className="above-nav pointer-events-none fixed inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+84px)] z-[60] flex flex-col items-center gap-2 lg:bottom-6">
       {toasts.map((toast) => (
         <div
           key={toast.id}
