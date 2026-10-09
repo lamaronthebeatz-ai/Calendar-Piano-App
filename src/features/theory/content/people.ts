@@ -1,4 +1,5 @@
 import type { Article } from '../wiki'
+import { SCHOOLS } from './schools'
 
 /**
  * Shared generator for people directories (composers, pianists): each person is one data row;
@@ -84,10 +85,12 @@ export function buildPeople(
       title: period.title,
       category: cfg.category,
       summary: `${period.years} · ${members.length} ${cfg.noun}, chia theo nhóm và xếp theo năm sinh.`,
+      refs: [...new Map(period.groups.flatMap(([id]) => SCHOOLS[`${period.id}:${id}`]?.refs ?? []).map((r) => [r[1], r])).values()],
       body: [
         period.intro,
         ...period.groups.flatMap(([id, title]) => [
           `## ${title}`,
+          SCHOOLS[`${period.id}:${id}`]?.intro ?? '',
           `| ${cfg.noun[0].toUpperCase() + cfg.noun.slice(1)} | Năm | Quốc gia | Nổi bật |\n|---|---|---|---|\n` +
             members
               .filter((p) => p.group === `${period.id}:${id}`)
