@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { ArrowLeftIcon, BookIcon, ChevronLeftIcon, ChevronRightIcon, SearchIcon } from '../../components/icons'
 import { EmptyState } from '../../components/EmptyState'
 import { ARTICLES, CATEGORIES } from './articles'
-import { Markup } from './Markup'
+import { Markup, WikiImage } from './Markup'
 import { articlesByCategory, findArticle, getBacklinks, headings, searchArticles, type Article } from './wiki'
 
 type CategoryId = Article['category']
@@ -225,6 +225,8 @@ function ArticleView({ article, scroller }: { article: Article; scroller: RefObj
           {article.summary}
         </p>
       </header>
+
+      {article.portrait && <WikiImage key={article.slug} titles={article.portrait.titles} years={article.portrait.years} caption={article.title} portrait />}
 
       {sections.length > 1 && (
         <nav aria-label="Mục lục bài" className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 lg:mx-0 lg:flex-wrap lg:px-0">

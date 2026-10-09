@@ -19,6 +19,8 @@ export interface Article {
   unlisted?: boolean
   /** Further sources beyond Wikipedia, as [title, url]. */
   refs?: [string, string][]
+  /** People pages: Wikipedia titles to try for a portrait (the first with a free lead image wins), and their years to check it against. */
+  portrait?: { titles: string[]; years?: string }
   /** Other categories whose index also lists this article (it still lives in `category`). */
   also?: (keyof typeof CATEGORIES)[]
 }

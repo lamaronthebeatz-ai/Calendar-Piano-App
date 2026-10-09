@@ -31,6 +31,24 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         navigateFallbackDenylist: [/^\/api\//],
+        // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.hostname === 'en.wikipedia.org' && url.pathname === '/w/api.php',
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'wiki-api', expiration: { maxEntries: 800, maxAgeSeconds: 60 * 60 * 24 * 90 } },
+          },
+          {
+            urlPattern: ({ url }) => url.hostname === 'upload.wikimedia.org' || url.hostname === 'commons.wikimedia.org',
+            handler: 'CacheFirst',
+            options: { cacheName: 'wiki-images', expiration: { maxEntries: 800, maxAgeSeconds: 60 * 60 * 24 * 180 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+          {
+            urlPattern: ({ url }) => url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com',
+            handler: 'CacheFirst',
+            options: { cacheName: 'fonts', expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+        ],
       },
       devOptions: {
         enabled: false,

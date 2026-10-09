@@ -1,7 +1,9 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { findArticle, normalize } from './wiki'
-import { CircleOfFifths, Keyboard, Staff, type Clef } from './diagrams'
+import { CircleOfFifths, GrandStaff, Keyboard, Rhythm, Staff, type Clef } from './diagrams'
+import { parseKey } from './notation'
+import { leadImage, type LeadImage } from './wikiImage'
 
 /**
  * Inline markup: **bold**, *italic* and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
@@ -47,6 +49,41 @@ function CommonsImage({ file, caption }: { file: string; caption: string }) {
   )
 }
 
+/**
+ * Lead image of a Wikipedia article (see wikiImage.ts), with a link to the file's licence page.
+ * Renders nothing while loading, offline, or when the article has no free image.
+ */
+export function WikiImage({ titles, years, caption, portrait }: { titles: string[]; years?: string; caption: string; portrait?: boolean }) {
+  const key = titles.join('|')
+  const [img, setImg] = useState<{ key: string; value: LeadImage | null }>()
+  const [failed, setFailed] = useState(false)
+  useEffect(() => {
+    let live = true
+    leadImage(key.split('|'), years).then((value) => live && setImg({ key, value }))
+    return () => {
+      live = false
+    }
+  }, [key, years])
+  const lead = img?.key === key ? img.value : null
+  if (!lead || failed) return null
+  return (
+    <Figure caption={caption}>
+      <img
+        src={lead.src}
+        width={lead.width}
+        height={lead.height}
+        alt={caption}
+        loading="lazy"
+        onError={() => setFailed(true)}
+        className={portrait ? 'max-h-60 w-auto rounded-xl object-cover' : 'max-h-64 w-auto rounded-lg bg-white'}
+      />
+      <a href={`https://en.wikipedia.org/wiki/File:${encodeURIComponent(lead.file)}`} target="_blank" rel="noreferrer" className="text-[11px] text-[var(--color-ink-faint)] hover:underline">
+        Nguồn ảnh: Wikipedia — {lead.page} (giấy phép tự do)
+      </a>
+    </Figure>
+  )
+}
+
 function Figure({ caption, children }: { caption?: string; children: ReactNode }) {
   return (
     <figure className="my-5 flex flex-col items-center gap-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4">
@@ -64,8 +101,18 @@ function Directive({ line }: { line: string }) {
   switch (name) {
     case 'keyboard':
       return <Figure caption={caption}><Keyboard notes={args} /></Figure>
-    case 'staff':
-      return <Figure caption={caption}><Staff clef={args[0] as Clef} notes={args.slice(1)} /></Figure>
+    case 'staff': {
+      const keySig = parseKey(args[1])
+      return <Figure caption={caption}><Staff clef={args[0] as Clef} keySig={keySig} notes={args.slice(keySig ? 2 : 1)} /></Figure>
+    }
+    case 'grand': {
+      const keySig = parseKey(args[0])
+      return <Figure caption={caption}><GrandStaff keySig={keySig} columns={args.slice(keySig ? 1 : 0)} /></Figure>
+    }
+    case 'rhythm':
+      return <Figure caption={caption}><Rhythm tokens={args} /></Figure>
+    case 'wiki':
+      return <WikiImage titles={[args.join('_')]} caption={caption} />
     case 'circle-of-fifths':
       return <Figure caption={caption}><CircleOfFifths /></Figure>
     case 'img':

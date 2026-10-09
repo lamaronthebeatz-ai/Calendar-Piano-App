@@ -63,6 +63,10 @@ export function buildPeople(
     aliases: p.short ? [p.short] : undefined,
     summary: `${years(p)} · ${p.country} · ${p.desc}`,
     wiki: p.wiki ?? p.name.replace(/ /g, '_'),
+    portrait: {
+      titles: [...new Set([p.wiki ?? p.name, `${p.name} (composer)`, `${p.name} (pianist)`, `${p.name} (musician)`])],
+      years: p.years,
+    },
     refs: p.refs,
     body: [
       `**Thời kỳ:** [[${periodOf(p).slug}|${periodOf(p).title}]] · **${cfg.groupLabel}:** ${groupTitle(p)} · **Quốc gia:** ${p.country}`,
