@@ -21,10 +21,10 @@ export const COMPOSER_DETAILS: Record<string, Pick<Person, 'more' | 'refs'>> = {
 ## Tác phẩm piano theo cấp độ
 | Giai đoạn | Tác phẩm | Ghi chú |
 |---|---|---|
-| Sơ cấp | Minuet Sol trưởng BWV Anh. 114 (sách Anna Magdalena) | Từ năm 1970 được xác định là của **Christian Petzold**, không phải Bach |
+| Sơ cấp | [[phan-tich-minuet-sol-truong|Minuet Sol trưởng BWV Anh. 114]] (sách Anna Magdalena) | Từ năm 1970 được xác định là của **Christian Petzold**, không phải Bach |
 | Sơ cấp | Minuet Sol thứ BWV Anh. 115, Minuet Sol trưởng Anh. 116, Hành khúc Rê trưởng Anh. 122 | Trong các tuyển tập "bài dễ" của Bärenreiter |
 | Sơ – trung cấp | Little Preludes (BWV 924, 926, 927, 933–938, 939, 942…) | Bước tiếp theo sau các minuet |
-| Trung cấp | [[lo-trinh-tac-pham|Inventions 2 bè]] BWV 772–786 (bắt đầu số 1, số 8) | Luyện hai tay độc lập |
+| Trung cấp | [[lo-trinh-tac-pham|Inventions 2 bè]] BWV 772–786 (bắt đầu [[phan-tich-invention-so-1|số 1]], số 8) | Luyện hai tay độc lập |
 | Trung cấp cao | Sinfonia (Inventions 3 bè), các tổ khúc | |
 | Nâng cao | Clavier bình quân, Goldberg Variations | Xem [[phan-tich-prelude-do-truong]] |
 
@@ -83,7 +83,7 @@ Số BWV và các phiên bản có thể khác nhau giữa các ấn bản.
 | Sơ – trung cấp sớm | **Sonatina Sol trưởng Anh. 5 số 1** | Bài dạy rất phổ biến, nhưng giới nghiên cứu **nghi ngờ** Beethoven là tác giả (tìm thấy trong giấy tờ sau khi ông mất) |
 | Sơ – trung cấp | Écossaise Mi♭ WoO 86, Sáu Écossaise WoO 83, Sonatina Fa trưởng | Có trong tuyển tập *My First Beethoven* (Schott) |
 | Trung cấp | **[[phan-tich-fur-elise|Für Elise]]** WoO 59; Bagatelle Op. 33 số 3 và số 6 | |
-| Trung – cao | Sonata "Pathétique" Op. 13, chương 1 Sonata "Ánh trăng" | Ô nhịp 3 của "Ánh trăng" có [[hop-am-napoli]] |
+| Trung – cao | Sonata "Pathétique" Op. 13 ([[phan-tich-pathetique-chuong-2|chương 2]]), chương 1 Sonata "[[phan-tich-anh-trang-chuong-1|Ánh trăng]]" | Ô nhịp 3 của "Ánh trăng" có [[hop-am-napoli]] |
 | Nâng cao | Các sonata còn lại, concerto | |
 `,
     refs: [
@@ -110,8 +110,8 @@ Gần như toàn bộ tác phẩm của Chopin viết cho piano — xem các th�
 Chopin không có bài cho người mới bắt đầu. Các tuyển tập "dễ nhất" (như *14 of His Easiest Piano Selections* của Alfred) được xếp ở mức **trung cấp – trung cấp cao**:
 | Tác phẩm | Ghi chú |
 |---|---|
-| Prelude Mi thứ Op. 28 số 4 | Thường là bài Chopin đầu tiên được giao |
-| Prelude La trưởng Op. 28 số 7, Prelude Si thứ Op. 28 số 6 | |
+| [[phan-tich-prelude-mi-thu-op28-so4|Prelude Mi thứ Op. 28 số 4]] | Thường là bài Chopin đầu tiên được giao |
+| [[phan-tich-prelude-la-truong-op28-so7|Prelude La trưởng Op. 28 số 7]], Prelude Si thứ Op. 28 số 6 | |
 | Mazurka Fa trưởng Op. 68 số 3 | Làm quen tiết tấu mazurka |
 | Valse La thứ (xuất bản sau khi mất) | |
 | Nocturne Sol thứ Op. 37 số 1 | Một nocturne dễ hơn |
@@ -182,6 +182,7 @@ Các bài Op. 100 số 9 (La Chasse), 15 (Ballade), 20 (La Tarentelle), 21 (Barc
 - Thế kỷ 19 gọi ông là "cha đẻ của piano" — đây là lời tôn vinh, không phải danh hiệu chính thức. Mất năm **1832**.
 
 ## Sonatina Op. 36 theo cấp độ
+Phân tích chương 1 của số 1: [[phan-tich-sonatina-clementi-op36-1]].
 Sáu sonatina được **đánh số theo độ khó tăng dần**. Mức dưới đây theo thang của Piano Street (đọc từ bảng, nên chỉ mang tính tương đối):
 | Sonatina | Giọng | Mức (Piano Street) |
 |---|---|---|
@@ -242,7 +243,7 @@ Theo nhà xuất bản Alfred, Op. 20 nên học **sau** Sonatina Op. 36 của [
 - Bệnh tâm thần xuất hiện từ 1833. Ngày 27/9/1854 ông nhảy xuống sông Rhine, được cứu, rồi tự xin vào nhà thương ở **Endenich** (gần Bonn). Ông mất ở đó năm **1856**.
 
 ## Tác phẩm theo cấp độ
-**Album für die Jugend** (Album cho tuổi trẻ) Op. 68 — 43 tiểu phẩm viết năm **1848** cho các con gái. Khác với *Kinderszenen* (cảnh tuổi thơ, viết **về** trẻ em), tập này **cho trẻ em chơi**. Phần II, từ số 19, dành cho người lớn và khó hơn.
+**Album für die Jugend** (Album cho tuổi trẻ) Op. 68 (phân tích một bài: [[phan-tich-wilder-reiter]]) — 43 tiểu phẩm viết năm **1848** cho các con gái. Khác với *Kinderszenen* (cảnh tuổi thơ, viết **về** trẻ em), tập này **cho trẻ em chơi**. Phần II, từ số 19, dành cho người lớn và khó hơn.
 | Bài | Ghi chú |
 |---|---|
 | Số 1 — Melodie | Mở đầu tập, giai điệu đơn giản; Piano Street xếp mức 3 |
@@ -292,7 +293,7 @@ Op. 39 được viết từ tháng 5 đến tháng 7/1878 khi ông ở Kamenka v
 ## Tiểu sử ngắn
 - Vào **Nhạc viện Paris** khoảng năm 1872, khi mới 10 tuổi.
 - Đoạt giải nhì Prix de Rome năm 1883. Năm **1884** đoạt **Prix de Rome** với cantata *L'Enfant prodigue*, được sang Villa Médicis ở Rome, nhưng về Paris sớm hơn hạn.
-- Con gái **Claude-Emma ("Chouchou")** sinh ngày 30/10/1905. Ông viết *Children's Corner* (1906–1908, in năm 1908) và ballet *La Boîte à joujoux* cho con.
+- Con gái **Claude-Emma ("Chouchou")** sinh ngày 30/10/1905. Ông viết *Children's Corner* (1906–1908, in năm 1908 — xem [[phan-tich-golliwogg-cakewalk]]) và ballet *La Boîte à joujoux* cho con.
 - Mất năm **1918**. Phong cách: xem [[an-tuong]].
 
 ## Tác phẩm theo cấp độ

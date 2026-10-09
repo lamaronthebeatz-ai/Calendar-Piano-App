@@ -304,7 +304,7 @@ Nhiều giáo viên nhấn mạnh: **legato trước hết là việc của ngó
 Mozart **không ghi ký hiệu pedal** nào trong bản nhạc, nên cách ông dùng pedal vẫn là ẩn số.
 
 ## Ký hiệu pedal của các nhà soạn nhạc lớn
-- **[[Beethoven]] — "Ánh trăng" Op. 27 số 2, chương 1**: ghi "*Si deve suonare tutto questo pezzo delicatissimamente e senza sordino*" — chơi cả chương thật nhẹ và **không có bộ giảm âm**, tức là **giữ pedal vang suốt chương**. Trên đàn của Beethoven tiếng tắt nhanh; trên đàn grand hiện đại, giữ suốt sẽ thành một khối âm ồn, nên phần lớn người chơi **đổi pedal theo hợp âm** để giữ tính chất mà không bị nhoè.
+- **[[Beethoven]] — "Ánh trăng" [[phan-tich-anh-trang-chuong-1|Op. 27 số 2]], chương 1**: ghi "*Si deve suonare tutto questo pezzo delicatissimamente e senza sordino*" — chơi cả chương thật nhẹ và **không có bộ giảm âm**, tức là **giữ pedal vang suốt chương**. Trên đàn của Beethoven tiếng tắt nhanh; trên đàn grand hiện đại, giữ suốt sẽ thành một khối âm ồn, nên phần lớn người chơi **đổi pedal theo hợp âm** để giữ tính chất mà không bị nhoè.
 - **[[Chopin]]**: ký hiệu *Ped. … ✱* của ông **không nên đọc theo nghĩa đen**. Hệ ký hiệu này thuộc thời mà người ta thường đạp **cùng lúc** với tay, chưa phải pedal trễ. Ở nhiều chỗ Chopin chỉ ghi khi muốn một **pedal dài đặc biệt** (ví dụ giữ nốt bass trong hoà âm), còn pedal thông thường thì không cần ghi.
 - **[[Debussy]]** gần như **không ghi pedal**. Ông được cho là đã nói: "Pedal không thể viết ra được: nó thay đổi theo từng cây đàn, từng căn phòng." Pedal của đàn thời ông cũng rất không đồng đều.
 

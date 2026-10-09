@@ -69,7 +69,7 @@ Trong Đô thứ: bậc 2 là D → hạ thành **D♭** → [[hop-am-ba|hợp �
 ::img Neapolitaner.svg | Hợp âm Napoli và cách giải quyết
 
 ## Ví dụ nổi tiếng
-- Những ô đầu chương 1 **[[hinh-thuc-sonata|Sonata]] "Ánh trăng"** ([[ludwig-van-beethoven|Beethoven]], Đô♯ thứ): hợp âm **Rê trưởng** — ♭II của Đô♯ thứ — xuất hiện ở ô 3, ngay trước hợp âm át G♯ ở ô 4.
+- Những ô đầu chương 1 **[[hinh-thuc-sonata|Sonata]] "[[phan-tich-anh-trang-chuong-1|Ánh trăng]]"** ([[ludwig-van-beethoven|Beethoven]], Đô♯ thứ): hợp âm **Rê trưởng** — ♭II của Đô♯ thứ — xuất hiện ở ô 3, ngay trước hợp âm át G♯ ở ô 4.
 - **"Erlkönig"** ([[franz-schubert|Schubert]]): Open Music Theory dùng làm ví dụ — bài hát chủ âm hoá hợp âm Napoli rồi dùng nó trong tiến trình kết.
 
 ## Lịch sử tên gọi

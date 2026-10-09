@@ -285,7 +285,7 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
     slug: 'minuet-va-trio',
     title: 'Minuet và trio',
     category: 'form',
-    aliases: ['minuet', 'menuet', 'minuet and trio', 'trio', 'scherzo', 'scherzo và trio', 'ba đoạn kép', 'compound ternary', 'Minuet in G', 'Petzold'],
+    aliases: ['minuet', 'menuet', 'minuet and trio', 'trio', 'scherzo', 'scherzo và trio', 'ba đoạn kép', 'compound ternary'],
     summary: 'Hình thức ba đoạn kép: minuet – trio – minuet da capo, mỗi phần lại là một hình thức hai đoạn có tái hiện. Từ vũ điệu cung đình Louis XIV đến chương ba của sonata, giao hưởng và scherzo của Beethoven.',
     wiki: 'Minuet',
     refs: [
@@ -302,7 +302,7 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
 - Minuet là **vũ điệu Pháp**, phổ biến từ khoảng **1650** ở triều đình **Louis XIV**. **[[jean-baptiste-lully|Lully]]** — nhạc sĩ và vũ công phục vụ nhà vua — viết rất nhiều minuet cho opera và ballet.
 - Nhịp **3/4**; bước nhảy cơ bản kéo dài **sáu phách**, tức là hai ô 3/4 — một lý do khiến minuet thường đi theo **cặp [[so-chi-nhip|ô nhịp]]** (xem [[sieu-nhip]]).
 - Đây là vũ điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **tổ khúc đàn phím** (xem [[the-loai]]).
-- Ví dụ quen thuộc với học trò piano: hai **Minuet Sol trưởng và Sol thứ** trong *Sổ tay cho Anna Magdalena [[johann-sebastian-bach|Bach]]* (1725) — được chép thành **một cặp, chơi [[dau-nhac-lai|da capo]]**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ organ ở Dresden.
+- Ví dụ quen thuộc với học trò piano: hai **[[phan-tich-minuet-sol-truong|Minuet Sol trưởng]] và Sol thứ** trong *Sổ tay cho Anna Magdalena [[johann-sebastian-bach|Bach]]* (1725) — được chép thành **một cặp, chơi [[dau-nhac-lai|da capo]]**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ organ ở Dresden.
 
 ## Hình thức: ba đoạn kép
 | Tầng | Cấu trúc |
