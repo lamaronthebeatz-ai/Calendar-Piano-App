@@ -165,6 +165,7 @@ Lời khuyên thực tế của tạp chí Pianist cho **thi cấp độ**: tậ
     slug: 'ky-hieu-hoa-my',
     title: 'Hoa mỹ',
     category: 'expression',
+    also: ['improvisation'],
     aliases: ['nốt hoa mỹ', 'ornament', 'láy', 'láy rền', 'trill', 'mordent', 'láy ngân', 'turn', 'nốt hoa mỹ ngắn', 'acciaccatura', 'grace note', 'láy đơn'],
     summary: 'Các ký hiệu trang trí giai điệu: láy rền (trill), láy đơn (mordent), láy kép (turn), nốt dựa và nốt vuốt.',
     wiki: 'Ornament_(music)',

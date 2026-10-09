@@ -321,6 +321,7 @@ Khi hoà âm **trôi qua các hợp âm trưởng – thứ** mà không thiết
     slug: 'bass-so',
     title: 'Bass số',
     category: 'chromatic',
+    also: ['improvisation'],
     aliases: ['figured bass', 'basso continuo', 'continuo', 'bè trầm có số', 'ký hiệu số'],
     summary: 'Hệ thống ký hiệu thời Baroque: bè trầm được ghi kèm con số chỉ các quãng cần chơi phía trên, người chơi đàn phím tự "hiện thực hoá" hợp âm.',
     wiki: 'Figured_bass',

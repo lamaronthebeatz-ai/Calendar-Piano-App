@@ -669,7 +669,7 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
     slug: 'dem-hat-piano',
     title: 'Đệm hát và các kiểu đệm',
     category: 'technique',
-    also: ['jazz'],
+    also: ['jazz', 'improvisation'],
     aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'comping', 'kiểu đệm', 'Alberti bass', 'stride piano', 'stride', 'đệm valse', 'chơi theo hợp âm'],
     summary: 'Các kiểu đệm cơ bản: hợp âm khối, hợp âm rải, bass Alberti, đệm valse, đệm pop, stride — và cách tập đệm từ bản nhạc chỉ có giai điệu và ký hiệu hợp âm.',
     refs: [
@@ -709,40 +709,6 @@ Các điệu có tiết tấu đặc trưng (slow rock 12/8, bossa nova, cha-cha
 
 ## Tay trái theo thể loại
 Trong jazz, blues và nhạc cổ điển, tay trái thường giữ nhịp đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
-`,
-  },
-  {
-    slug: 'ngau-hung-piano',
-    title: 'Ngẫu hứng cơ bản',
-    category: 'technique',
-    aliases: ['ngẫu hứng', 'improvisation', 'improvise', 'tự chơi', 'hỏi – đáp', 'call and response', 'chơi ngẫu hứng'],
-    summary: 'Bắt đầu với âm giai ngũ cung trên một vòng hợp âm lặp lại, luyện theo lối hỏi – đáp, mở rộng dần âm vực rồi mới nhắm vào nốt của hợp âm.',
-    refs: [
-      ['Music Mark — A Common Approach: keyboard improvisation (UK curriculum)', 'https://www.musicmark.org.uk/a-common-approach/keyboard/area-c/pos-2/c1/'],
-      ['Skillshare — Piano improvisation for beginners', 'https://www.skillshare.com/en/classes/piano-improvisation-for-beginners/228353354'],
-    ],
-    body: `
-Một lộ trình được chương trình giáo dục âm nhạc ở Anh và các khoá học cho người mới gợi ý, từ đơn giản đến nâng cao:
-
-## 1. Vòng hợp âm lặp lại
-Một người (giáo viên hoặc đệm tự động) chơi một [[vong-hop-am]] 8 ô nhịp lặp lại, sau đó mở rộng lên [[blues-12-nhip|12 ô nhịp]]. Người học **đếm nhịp cẩn thận**, theo kịp chỗ đổi hợp âm, và cho đoạn ngẫu hứng một **mở đầu và kết thúc rõ ràng**.
-
-## 2. Năm nốt ngũ cung
-[[am-giai-ngu-cung|Âm giai ngũ cung]] chỉ có 5 nốt, không có nửa cung nên rất "dễ nghe". Ngũ cung **thứ** thường nằm vừa tay hơn ngũ cung trưởng. Ví dụ: **Mi thứ ngũ cung (E – G – A – B – D)** trên các hợp âm Em, A7, C, Am, B7.
-
-::keyboard E4 G4 A4 B4 D5 | Mi thứ ngũ cung — năm nốt để bắt đầu ngẫu hứng
-
-Một khoá học cho người mới bắt đầu ngay trên **5 phím đen** (cũng là một âm giai ngũ cung) rồi mới chuyển sang phím trắng.
-
-## 3. Hỏi – đáp
-Bài tập cốt lõi: một câu "**hỏi**" bằng giai điệu, rồi một câu "**đáp**" bổ sung — như một cuộc trò chuyện (giống câu hỏi – câu trả lời trong [[cau-nhac]]). Giáo viên chơi câu hỏi, học trò đáp; sau đó đổi vai. Dần dần yêu cầu chính xác hơn về tiết tấu, [[cuong-do]] và [[cach-dien-tau]].
-
-## 4. Mở rộng
-- Trải âm giai ngũ cung ra **hai quãng 8** trở lên.
-- Thử [[am-giai-blues]] và [[dieu-thuc|điệu thức]].
-- Nhắm vào **nốt của hợp âm** đang vang ở phách mạnh; dùng âm giai trưởng trên hợp âm I, Lydian trên IV, Mixolydian trên V (xem [[he-thong-hop-am-am-giai]]).
-
-Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng tác những đoạn nhạc đơn giản ngay tại chỗ. Các nguồn này là chương trình giảng dạy và khoá học, chưa có nghiên cứu đối chứng.
 `,
   },
   {
@@ -909,6 +875,7 @@ Xem [[Chopin]], [[the-loai|thể loại étude]].
     slug: 'choi-phuc-dieu',
     title: 'Chơi nhạc phức điệu',
     category: 'technique',
+    also: ['improvisation'],
     aliases: ['chơi Bach', 'chơi nhiều bè', 'đổi ngón trên phím', 'finger substitution', 'thay ngón im lặng', 'chơi fugue', 'giữ bè'],
     summary: 'Một tay có thể phải giữ hai bè; người chơi tách từng bè để nghe và tập, dùng ngón bấm và đổi ngón trên phím để giữ các bè đúng độ dài.',
     refs: [

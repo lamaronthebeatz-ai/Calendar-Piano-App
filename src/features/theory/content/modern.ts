@@ -398,7 +398,7 @@ Nhạc phim, nhạc điện tử, post-rock và nhạc piano "tân cổ điển"
     slug: 'hoa-am-dieu-thuc',
     title: 'Hoà âm điệu thức',
     category: 'modern',
-    also: ['jazz'],
+    also: ['jazz', 'improvisation'],
     aliases: ['modal harmony', 'hợp âm điệu thức', 'kết điệu thức', 'modal cadence', 'Dorian shuttle', 'nốt đặc trưng điệu thức', 'characteristic pitch'],
     summary: 'Cách dựng và nối hợp âm để làm nổi màu của một điệu thức (Dorian, Mixolydian, Lydian…) thay vì kéo về chủ âm bằng V – I: chọn hợp âm chứa nốt đặc trưng và dùng các kết riêng của từng điệu.',
     wiki: 'Mode_(music)',

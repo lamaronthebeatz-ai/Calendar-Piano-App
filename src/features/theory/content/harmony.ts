@@ -1343,8 +1343,8 @@ Trong [[the-dao-hop-am|thể đảo 2]], bè trầm là nốt 5 của hợp âm,
     slug: 'luoc-do-galant',
     title: 'Lược đồ galant và quy tắc quãng 8',
     category: 'harmony',
-    also: ['analysis', 'form'],
-    aliases: ['galant schemata', 'galant schema', 'lược đồ', 'schema', 'Prinner', 'Romanesca', 'Fonte', 'Monte', 'Ponte', 'rule of the octave', 'règle de l\'octave', 'quy tắc quãng 8', 'partimento'],
+    also: ['analysis', 'form', 'improvisation'],
+    aliases: ['galant schemata', 'galant schema', 'lược đồ', 'schema', 'Prinner', 'Romanesca', 'Fonte', 'Monte', 'Ponte', 'rule of the octave', 'règle de l\'octave', 'quy tắc quãng 8'],
     summary: 'Cách các nhạc sĩ thế kỷ 18 thực sự học hoà âm: thuộc lòng những khuôn bè trầm – giai điệu (Romanesca, Prinner, Fonte, Monte, Ponte…) và quy tắc đặt hợp âm cho từng bậc của bè trầm.',
     wiki: 'Galant_Schemata',
     refs: [
@@ -1368,7 +1368,7 @@ Giáo trình hoà âm hiện đại dạy **từng hợp âm** rồi đến **ti
 - Nghiên cứu gần đây (Menke và cộng sự, *Music Theory Online*, 2026) đề nghị hiểu quy tắc này là **tập hợp hợp âm được kỳ vọng** cho mỗi bậc bè trầm, hơn là một công thức hoà âm âm giai.
 
 ## Partimento
-**Partimento** là một bè trầm (có hoặc không có số) mà học trò phải **chơi thành bản nhạc hoàn chỉnh** trên phím đàn. Các tuyển tập partimento bắt đầu bằng "regole" (quy tắc): quy tắc quãng 8, [[cau-ket|các kết]] và [[mo-tien-hoa-am|mô tiến]] bè trầm. Các thầy Naples nổi tiếng: Durante, Fenaroli, Paisiello…
+**[[partimento|Partimento]]** là một bè trầm (có hoặc không có số) mà học trò phải **chơi thành bản nhạc hoàn chỉnh** trên phím đàn. Các tuyển tập partimento bắt đầu bằng "regole" (quy tắc): quy tắc quãng 8, [[cau-ket|các kết]] và [[mo-tien-hoa-am|mô tiến]] bè trầm. Các thầy Naples nổi tiếng: Durante, Fenaroli, Paisiello…
 
 ## Các lược đồ galant (Gjerdingen, 2007)
 Robert Gjerdingen, trong *Music in the Galant Style* (Oxford, 2007), đặt tên và mô tả một "từ vựng" khuôn mẫu, mỗi khuôn là một **cặp bè trầm – giai điệu**. Một số tên lấy từ lý thuyết gia thế kỷ 18.

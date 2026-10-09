@@ -425,7 +425,8 @@ Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]].
     slug: 'hinh-thuc-concerto',
     title: 'Hình thức concerto',
     category: 'form',
-    aliases: ['hình thức concerto', 'concerto form', 'ritornello', 'hình thức ritornello', 'ritornello form', 'trình bày kép', 'double exposition', 'tutti', 'solo', 'cadenza', 'sonata loại 5', 'Type 5 sonata'],
+    also: ['improvisation'],
+    aliases: ['hình thức concerto', 'concerto form', 'ritornello', 'hình thức ritornello', 'ritornello form', 'trình bày kép', 'double exposition', 'tutti', 'solo', 'sonata loại 5', 'Type 5 sonata'],
     summary: 'Hai hình thức của chương nhanh trong concerto: hình thức ritornello thời Baroque (Vivaldi) — dàn nhạc nhắc lại một chủ đề xen với các đoạn độc tấu — và chương 1 concerto Cổ điển (Mozart), nơi ritornello kết hợp với hình thức sonata.',
     wiki: 'Ritornello',
     refs: [
