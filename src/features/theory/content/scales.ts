@@ -375,7 +375,7 @@ So sánh với [[am-giai|âm giai]] trưởng/thứ cùng âm chủ và chỉ nh
 - Năm **1547**, Glarean thêm **Aeolian** và **Ionian** (cùng hai điệu phụ), thành **12 điệu**. **Locrian** (và Hypolocrian) không có trong hệ 12 điệu của Glarean.
 
 ## Điệu thức trong jazz
-- Năm **1953**, George Russell tự xuất bản *The Lydian Chromatic Concept of Tonal Organization* — lý thuyết đầu tiên khám phá mối quan hệ **dọc giữa hợp âm và âm giai**, được cho là đã ảnh hưởng đến jazz điệu thức.
+- Năm **1953**, George Russell tự xuất bản *The Lydian Chromatic Concept of Tonal Organization* — lý thuyết đầu tiên khám phá mối quan hệ **dọc giữa hợp âm và âm giai**, được cho là đã ảnh hưởng đến [[jazz-dieu-thuc|jazz điệu thức]].
 - **"So What"** (Miles Davis, album *Kind of Blue*, 1959): khuôn 32 [[so-chi-nhip|ô nhịp]], 16 ô **Rê Dorian**, 8 ô **Mi♭ Dorian**, rồi trở lại Rê Dorian. Chỉ hai "hợp âm" nên người [[ngau-hung-tu-do|ngẫu hứng tự do]] theo [[giai-dieu|giai điệu]] thay vì chạy theo hợp âm đổi nhanh. Hợp âm mở đầu xếp chồng quãng 4 được gọi là "**hợp âm So What**" (xem [[hoa-am-quang-bon]]).
 `,
   },

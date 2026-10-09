@@ -344,6 +344,8 @@ Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994),
 - **Đường cong** cả solo: bắt đầu đơn giản, tăng dần mật độ và [[cao-do|âm vực]], rồi khép lại.
 - **Nghe và đáp** lại các nhạc công khác.
 Lộ trình cả mục: [[ngau-hung-ung-tac]].
+
+Kỹ thuật cụ thể: [[not-tiep-can-jazz]], [[am-giai-bebop]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
 `,
   },
   {
@@ -382,6 +384,8 @@ Nghệ sĩ guitar **Derek Bailey**, trong *[[ngau-hung-piano|Improvisation]]: It
 - **Lắng nghe**: trong ngẫu hứng nhóm, phản ứng với người khác quan trọng hơn chơi nhiều nốt.
 - Thu âm và nghe lại để nhận ra thói quen của chính mình.
 Liên quan: [[dinh-nghia-am-nhac]], [[ngau-hung-ung-tac]].
+
+Trong jazz: [[post-bop-free-jazz]].
 `,
   },
   {

@@ -140,6 +140,9 @@ function Notes({ col, x, clef, bottom }: { col: Column; x: number; clef: Clef; b
 /** "C#5" → "C♯5", "Fn3" → "F♮3". */
 const prettyNote = (n: string) => n.replace(/^([A-G])(##|bb|#|b|n)/, (_, l: string, a: string) => l + ({ '#': '♯', b: '♭', '##': '𝄪', bb: '𝄫', n: '♮' } as Record<string, string>)[a])
 
+/** Column spacing wide enough for the longest label (about 6 units per character at the label's font size). */
+const columnStep = (labels: (string | undefined)[], min: number) => Math.max(min, ...labels.map((l) => (l ? l.length * 6.2 + 8 : 0)))
+
 const Label = ({ x, y, text }: { x: number; y: number; text: string }) => (
   <text x={x} y={y} textAnchor="middle" fontSize={10.5} fill="var(--color-ink-muted)">
     {text}
@@ -153,7 +156,7 @@ const Label = ({ x, y, text }: { x: number; y: number; text: string }) => (
 export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig?: number; notes: string[] }) {
   const clef = clefArg in CLEFS ? clefArg : 'treble'
   const cols = notes.map(parseColumn)
-  const step = cols.some((c) => c.label && c.label.length > 3) ? 40 : 32
+  const step = columnStep(cols.map((c) => c.label), 32)
   // "/" is a barline: it takes a narrow slot of its own.
   const xs: number[] = []
   let x = 70 + Math.abs(keySig) * SIG_W
@@ -187,7 +190,7 @@ export function GrandStaff({ keySig = 0, columns }: { keySig?: number; columns: 
     const [upper = '', lower = ''] = body.split('/')
     return { upper: parseColumn(upper), lower: parseColumn(lower), label: label?.replace(/_/g, ' ') }
   })
-  const step = cols.some((c) => c.label && c.label.length > 3) ? 44 : 34
+  const step = columnStep(cols.map((c) => c.label), 34)
   const xs: number[] = []
   let x = 74 + Math.abs(keySig) * SIG_W
   for (const c of cols) {

@@ -86,7 +86,7 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
 - Các học giả vẫn dùng thuật ngữ này như một **quy ước** cho phong cách; khi dạy nên nói rõ đó là nhãn của người đời sau.
 
 ## Ảnh hưởng
-Hoà âm ấn tượng ảnh hưởng mạnh đến jazz: các tiểu sử về **[[bill-evans|Bill Evans]]** ghi nhận ông vay mượn nhiều từ Debussy và Ravel, đặc biệt trong cách xếp hợp âm của nhạc jazz điệu thức cuối thập niên 1950 (xem [[hoa-am-dieu-thuc]], [[xep-hop-am]]). Bối cảnh: [[cac-thoi-ky]].
+Hoà âm ấn tượng ảnh hưởng mạnh đến jazz: các tiểu sử về **[[bill-evans|Bill Evans]]** ghi nhận ông vay mượn nhiều từ Debussy và Ravel, đặc biệt trong cách xếp hợp âm của nhạc [[jazz-dieu-thuc|jazz điệu thức]] cuối thập niên 1950 (xem [[hoa-am-dieu-thuc]], [[xep-hop-am]]). Bối cảnh: [[cac-thoi-ky]].
 `,
   },
   {
@@ -270,6 +270,8 @@ Hai dạng (bắt đầu từ C):
 ::img Diminished scales on Db, D, and Eb.PNG | Ba âm giai bát cung — tất cả những gì tồn tại
 
 Phân tích bằng [[tap-hop-cao-do]]: {0, 1, 3, 4, 6, 7, 9, 10}.
+
+Cách dùng trong jazz cùng âm giai toàn cung và âm giai tăng: [[am-giai-doi-xung-jazz]].
 `,
   },
   {
@@ -437,6 +439,8 @@ Các hợp âm điệu thức nhìn chung vẫn **tương ứng chức năng** v
 - **Hợp âm mượn** trong nhạc pop (♭VII, ♭VI) chính là mượn từ Mixolydian và Aeolian — xem [[hop-am-muon]].
 
 Hệ thống hợp âm – âm giai trong jazz: [[he-thong-hop-am-am-giai]].
+
+Trong jazz: [[jazz-dieu-thuc]].
 `,
   },
   {
@@ -479,7 +483,7 @@ Thuật ngữ do nhà âm nhạc học **Nicolas Slonimsky** đặt (các nguồ
     title: 'Hợp âm chồng',
     category: 'modern',
     also: ['jazz'],
-    aliases: ['polychord', 'hợp âm chồng', 'hợp âm kép', 'upper structure', 'upper structure triad', 'hợp âm cấu trúc trên', 'bichord'],
+    aliases: ['polychord', 'hợp âm chồng', 'hợp âm kép', 'bichord'],
     summary: 'Hai (hoặc nhiều) hợp âm vang cùng lúc, nghe được như những khối riêng — khác với đa điệu tính (hai giọng kéo dài) và với hợp âm mở rộng (một hợp âm cao).',
     wiki: 'Polychord',
     refs: [
@@ -511,6 +515,8 @@ Một tiêu chí cảm nhận: hai hợp âm **gần nhau** (nhiều nốt chung
 Người chơi piano jazz đặt một **hợp âm ba** ở tay phải trên **khung 3 – 7** của [[hop-am-bay|hợp âm 7 át]] ở tay trái — gọi là **upper structure triad**. Ví dụ hợp âm Rê trưởng trên C7 cho ra C13♯11 (ký hiệu "US II"). Cách này chủ yếu dùng cho hợp âm át biến đổi (xem [[xep-hop-am]], [[he-thong-hop-am-am-giai]]).
 
 Tổng quan: [[hoa-am-the-ky-20]].
+
+Chi tiết về upper structure trong jazz: [[upper-structure]].
 `,
   },
   {

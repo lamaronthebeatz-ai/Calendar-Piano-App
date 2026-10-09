@@ -362,7 +362,7 @@ Sách *Twentieth-Century Harmony* (1961) của Vincent Persichetti là giáo tr�
 | **Hợp âm chồng** (polychord) | **Hai hợp âm** vang cùng lúc, tai nghe được là **hai khối riêng** | **Hợp âm Petrushka** của [[Stravinsky]] (1911): Đô trưởng + Fa♯ trưởng, cách nhau tritone | [[hop-am-chong]], [[da-dieu-tinh]] |
 | **Hoà âm song song** (planing) | Cả hợp âm **trượt song song** — cố ý phá luật cấm quãng song song | Debussy — "La cathédrale engloutie" | [[hoa-am-song-song]] |
 | **Toàn diatonic** (pandiatonicism) | Dùng **tự do mọi nốt** của [[am-giai|âm giai]], không theo cú pháp chức năng; thường có quãng 2 trong hợp âm | Stravinsky — *Pulcinella*; thuật ngữ do Nicolas Slonimsky đặt | [[toan-diatonic]] |
-| **Hoà âm điệu thức** | Dùng [[dieu-thuc]] thay cho trưởng – thứ; mất lực hút của [[bac-am-giai|cảm âm]] | Debussy; jazz điệu thức | [[dieu-thuc]], [[hoa-am-dieu-thuc]] |
+| **Hoà âm điệu thức** | Dùng [[dieu-thuc]] thay cho trưởng – thứ; mất lực hút của [[bac-am-giai|cảm âm]] | Debussy; [[jazz-dieu-thuc|jazz điệu thức]] | [[dieu-thuc]], [[hoa-am-dieu-thuc]] |
 | **Âm giai đối xứng** | Âm giai toàn cung, âm giai bát cung | Debussy — "Voiles"; [[Messiaen]] | [[am-giai-cromatic]], [[am-giai-bat-cung]], [[dieu-thuc-chuyen-vi-gioi-han]] |
 | **Quan hệ trung âm, chuyển hoá Neo-Riemann** | Nối các hợp âm trưởng – thứ không theo chức năng mà theo **[[dan-giong|dẫn giọng]] tối thiểu** | Nhạc phim, [[richard-wagner|Wagner]] muộn | [[trung-am-cromatic]], [[neo-riemann]] |
 | **Phi điệu tính, 12 âm** | Bỏ hẳn trung tâm giọng | [[Schoenberg]], [[anton-webern|Webern]], [[alban-berg|Berg]] | [[phi-dieu-tinh]], [[ky-thuat-12-am]], [[tap-hop-cao-do]] |
@@ -457,7 +457,7 @@ Hoà âm cổ điển được xây trên nền hợp âm ba — xem bức tranh
     slug: 'the-dao-hop-am',
     title: 'Thể đảo hợp âm',
     category: 'harmony',
-    aliases: ['thể đảo', 'đảo hợp âm', 'inversion', 'thế đảo 1', 'thể đảo 2', 'thể nguyên vị', 'hợp âm 6/4', 'slash chord'],
+    aliases: ['thể đảo', 'đảo hợp âm', 'inversion', 'thế đảo 1', 'thể đảo 2', 'thể nguyên vị', 'hợp âm 6/4'],
     summary: 'Cách sắp xếp hợp âm theo nốt nằm ở bè trầm: nguyên vị (nốt gốc), đảo 1 (nốt bậc 3), đảo 2 (nốt bậc 5).',
     wiki: 'Inversion_(music)',
     refs: [

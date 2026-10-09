@@ -710,7 +710,7 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
     title: 'Đệm hát và các kiểu đệm',
     category: 'technique',
     also: ['jazz', 'improvisation'],
-    aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'comping', 'kiểu đệm', 'Alberti bass', 'stride piano', 'stride', 'đệm valse', 'chơi theo hợp âm'],
+    aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'kiểu đệm', 'Alberti bass', 'stride piano', 'stride', 'đệm valse', 'chơi theo hợp âm'],
     summary: 'Các kiểu đệm cơ bản: hợp âm khối, hợp âm rải, bass Alberti, đệm valse, đệm pop, stride — và cách tập đệm từ bản nhạc chỉ có giai điệu và ký hiệu hợp âm.',
     refs: [
       ['Musicnotes — 7 ways to play lead sheets with your left hand', 'https://www.musicnotes.com/blog/7-ways-to-play-lead-sheets-with-your-left-hand'],
@@ -749,6 +749,8 @@ Các điệu có [[tiet-tau|tiết tấu]] đặc trưng (slow rock 12/8, bossa 
 
 ## Tay trái theo thể loại
 Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường [[kiem-soat-toc-do|giữ nhịp]] đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
+
+Đệm trong jazz: [[dem-jazz]] (comping), [[bass-di-jazz]].
 `,
   },
   {
