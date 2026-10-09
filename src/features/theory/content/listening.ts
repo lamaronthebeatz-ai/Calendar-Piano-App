@@ -19,7 +19,7 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 
 ## Phần A — Âm học: âm thanh là gì
 1. [[am-hoc-co-ban]] — tần số, biên độ, decibel, bước sóng.
-2. [[chuoi-boi-am]] — vì sao mỗi nốt là nhiều tần số; tính không điều hoà của dây đàn piano.
+2. [[chuoi-boi-am]] — vì sao mỗi nốt là nhiều tần số; tính không điều hoà của [[cau-tao-piano|dây đàn]] piano.
 3. [[am-sac]] — điều gì làm tiếng piano khác tiếng violin cùng cao độ.
 4. [[am-hoc-phong]] — căn phòng thay đổi tiếng đàn ra sao.
 5. [[luat-binh-quan]] — toán học của 12 nốt.
@@ -27,7 +27,7 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 ## Phần B — Cảm nhận: tai và não xử lý âm thanh
 6. [[cam-nhan-am-thanh]] — độ to cảm nhận, cao độ, độ nhám và thuận – nghịch.
 7. [[thuan-nghich]] — thuận âm và nghịch âm trong lý thuyết.
-8. [[phan-luong-thinh-giac]] — vì sao ta nghe được giai điệu tách khỏi phần đệm.
+8. [[phan-luong-thinh-giac]] — vì sao ta nghe được [[giai-dieu|giai điệu]] tách khỏi phần đệm.
 9. [[cam-nhan-phach]] — cảm nhận nhịp.
 10. [[cao-do-tuyet-doi]] — cao độ tuyệt đối và tương đối.
 
@@ -120,17 +120,17 @@ Lưu ý: 20 Hz – 20 kHz là con số trung bình, không phải giới hạn c
     ],
     body: `
 ## Định nghĩa — và vì sao nó khó
-Định nghĩa chuẩn (ANSI, Hội Âm học Hoa Kỳ): âm sắc là **thuộc tính của cảm giác nghe giúp người nghe nhận ra hai âm khác nhau dù chúng được trình bày giống nhau, cùng độ to và cùng cao độ**. Định nghĩa này bị phê bình vì chỉ nói âm sắc **không phải** là gì: Albert Bregman gọi âm sắc là một "sọt rác" chứa mọi thứ không phải cao độ hay độ to; định nghĩa cũng bỏ sót âm thanh không có cao độ (như trống).
+Định nghĩa chuẩn (ANSI, Hội [[am-hoc-co-ban|Âm học]] Hoa Kỳ): âm sắc là **thuộc tính của cảm giác nghe giúp người nghe nhận ra hai âm khác nhau dù chúng được trình bày giống nhau, cùng độ to và cùng cao độ**. Định nghĩa này bị phê bình vì chỉ nói âm sắc **không phải** là gì: Albert Bregman gọi âm sắc là một "sọt rác" chứa mọi thứ không phải cao độ hay độ to; định nghĩa cũng bỏ sót âm thanh không có cao độ (như trống).
 
 ## Âm sắc phụ thuộc vào gì?
-- **Phổ**: cường độ tương đối của các [[chuoi-boi-am|bồi âm]]. Nhiều năng lượng ở bồi âm cao → âm thanh "sáng".
+- **Phổ**: [[cuong-do|cường độ]] tương đối của các [[chuoi-boi-am|bồi âm]]. Nhiều năng lượng ở bồi âm cao → âm thanh "sáng".
 - **Diễn biến theo thời gian**: cách âm thanh **bắt đầu** (tấn công) và **tắt dần**.
 - Nghiên cứu "không gian âm sắc" (Grey 1977, McAdams và cộng sự 1995, Lakatos 2000): người nghe đánh giá mức giống – khác của các cặp âm thanh; phân tích cho thấy hai chiều quan trọng nhất là **thời gian tấn công** (attack time) và **trọng tâm phổ** (spectral centroid — tương ứng cảm giác **sáng – tối**). Chiều thứ ba thì các nghiên cứu chưa thống nhất.
 
 ## Tiếng piano: tắt dần hai giai đoạn
 - Piano là nhạc cụ **gõ dây**: búa đánh dây rồi rời ra, nên âm thanh **không thể giữ đều** như violin hay giọng hát — nó chỉ có thể tắt dần.
 - Với phần lớn các nốt, tiếng đàn **tắt nhanh lúc đầu** ("tiếng tức thời") rồi **tắt chậm hơn** ("dư âm" — aftersound).
-- **Gabriel Weinreich** (1977) giải thích: các dây cùng một nốt (2–3 dây) **liên kết với nhau qua ngựa đàn**, và mỗi dây dao động theo hai phương. Dao động theo phương **thẳng đứng** truyền năng lượng vào bảng cộng hưởng hiệu quả hơn nên **tắt nhanh**; phương **nằm ngang** tắt chậm hơn, tạo dư âm. Thợ lên dây cố ý để các dây cùng nốt **lệch nhau rất nhẹ** để định hình đường tắt dần này.
+- **Gabriel Weinreich** (1977) giải thích: các dây cùng một nốt (2–3 dây) **liên kết với nhau qua ngựa đàn**, và mỗi dây dao động theo hai phương. Dao động theo phương **thẳng đứng** truyền năng lượng vào [[cau-tao-piano|bảng cộng hưởng]] hiệu quả hơn nên **tắt nhanh**; phương **nằm ngang** tắt chậm hơn, tạo dư âm. Thợ lên dây cố ý để các dây cùng nốt **lệch nhau rất nhẹ** để định hình đường tắt dần này.
 - Khi đạp **pedal una corda** (pedal trái của đàn grand), búa chỉ đánh vào ít dây hơn; dây không bị đánh rung theo qua ngựa đàn — làm thay đổi cả tiếng tấn công lẫn dư âm (xem [[ban-dap]]).
 
 ## Người chơi piano kiểm soát âm sắc đến đâu?
@@ -138,7 +138,7 @@ Với một nốt đơn, người chơi chủ yếu điều khiển **tốc đ�
 
 ## Gợi ý dạy học
 - Cho học trò nghe cùng một nốt trên piano, đàn điện, guitar: nhận ra **tiếng tấn công** khác nhau.
-- Chơi một hợp âm rồi nghe **dư âm** khi giữ phím; so sánh khi có và không có pedal.
+- Chơi một [[hop-am-ba|hợp âm]] rồi nghe **dư âm** khi giữ phím; so sánh khi có và không có pedal.
 `,
   },
   {
@@ -164,7 +164,7 @@ Người nghe không chỉ nghe cây đàn mà nghe **cây đàn trong một că
 ## Wallace Sabine và khởi đầu của âm học kiến trúc
 - Cuối thập niên 1890, nhà vật lý **Wallace Sabine** (Đại học Harvard) được nhờ sửa giảng đường ở bảo tàng Fogg, nơi tiếng nói vang tới khoảng **5 giây** khiến không ai nghe rõ bài giảng. Ông thêm vật liệu hút âm (nỉ treo tường, đệm ghế).
 - Từ các đo đạc, ông tìm ra **công thức Sabine**: thời gian vang **tỉ lệ thuận với thể tích phòng** và **tỉ lệ nghịch với tổng lượng hút âm** (dạng mét: T ≈ 0,161 · V / A).
-- Sabine là cố vấn âm học cho **Symphony Hall Boston** (khánh thành năm 1900) — phòng hoà nhạc đầu tiên được thiết kế theo tính toán âm học; thời gian vang khoảng **2,3 giây**, và đến nay vẫn được xếp vào hàng các phòng hoà nhạc tốt nhất.
+- Sabine là cố vấn âm học cho **[[the-loai|Symphony]] Hall Boston** (khánh thành năm 1900) — phòng hoà nhạc đầu tiên được thiết kế theo tính toán âm học; thời gian vang khoảng **2,3 giây**, và đến nay vẫn được xếp vào hàng các phòng hoà nhạc tốt nhất.
 
 ## Thời gian vang phù hợp
 | Không gian | Thời gian vang tham khảo |
@@ -176,8 +176,8 @@ Nhạc cần **độ ấm, độ hoà** thì cần vang lâu hơn; lời nói c�
 
 ## Ý nghĩa với người chơi piano
 - **Phòng vang** (nhà thờ, phòng lớn): giảm [[ban-dap|pedal]], tách nốt rõ hơn, có thể chậm lại một chút để hoà âm không bị nhoè.
-- **Phòng "khô"** (phòng nhỏ nhiều đồ vải): dùng pedal nhiều hơn, chơi legato bằng ngón kỹ hơn.
-- Luôn **thử phòng** trước buổi biểu diễn: chơi vài hợp âm mạnh rồi nghe chúng tắt. Phòng có khán giả sẽ vang **ngắn hơn** lúc tổng duyệt khi phòng trống.
+- **Phòng "khô"** (phòng nhỏ nhiều đồ vải): dùng pedal nhiều hơn, chơi [[cach-dien-tau|legato]] bằng ngón kỹ hơn.
+- Luôn **thử phòng** trước buổi biểu diễn: chơi vài [[hop-am-ba|hợp âm]] mạnh rồi nghe chúng tắt. Phòng có khán giả sẽ vang **ngắn hơn** lúc tổng duyệt khi phòng trống.
 - **Phòng tập nhỏ, tường cứng** có thể làm tiếng đàn rất to — xem [[bao-ve-thinh-giac]].
 
 Liên quan: [[am-hoc-co-ban]], [[am-sac]].
@@ -199,15 +199,15 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
       ['Texas A&M Commerce — Lecture 15: pitch perception (PDF)', 'https://faculty.tamuc.edu/cbertulani/music/lectures/lec15/lec15.pdf'],
     ],
     body: `
-**Tâm lý âm học** nghiên cứu quan hệ giữa **thông số vật lý** của âm thanh (tần số, biên độ, phổ — xem [[am-hoc-co-ban]]) và **cảm giác** của người nghe (cao độ, độ to, âm sắc).
+**Tâm lý âm học** nghiên cứu quan hệ giữa **thông số vật lý** của âm thanh (tần số, biên độ, phổ — xem [[am-hoc-co-ban]]) và **cảm giác** của người nghe (cao độ, độ to, [[am-sac|âm sắc]]).
 
 ## 1. Độ to cảm nhận và đường đồng âm lượng
 - Hai âm có **cùng mức áp suất (dB)** nhưng khác tần số **không** nghe to bằng nhau. **Fletcher và Munson** (1933) đo các **đường đồng âm lượng**: những tổ hợp tần số – mức áp suất nghe to ngang nhau so với một âm chuẩn 1000 Hz. Bộ đường hiện hành là tiêu chuẩn **ISO 226:2003**.
 - Đơn vị **phon**: một âm có mức N phon khi nó nghe to bằng âm 1000 Hz ở N dB.
-- Tai **kém nhạy ở vùng trầm**, nhất là khi nghe nhỏ. Hệ quả cho piano: khi chơi **pp**, bè trầm dễ "biến mất"; khi chơi **ff**, bè trầm lại dễ lấn át — cân bằng bè phải điều chỉnh theo cường độ chung (xem [[lam-noi-giai-dieu]]).
+- Tai **kém nhạy ở vùng trầm**, nhất là khi nghe nhỏ. Hệ quả cho piano: khi chơi **pp**, bè trầm dễ "biến mất"; khi chơi **ff**, bè trầm lại dễ lấn át — cân bằng bè phải điều chỉnh theo [[cuong-do|cường độ]] chung (xem [[lam-noi-giai-dieu]]).
 
 ## 2. Cao độ — và âm gốc vắng mặt
-- Cao độ là **cảm giác**, gắn với tần số lặp lại của âm thanh. Nếu bỏ âm gốc (hoặc cả vài bồi âm đầu) khỏi một âm phức, ta **vẫn nghe cùng cao độ** — gọi là **âm gốc vắng mặt** (missing fundamental). Seebeck đã quan sát hiện tượng này từ thế kỷ 19; Schouten chứng minh nó không phải là "âm hiệu" do tai tạo ra.
+- Cao độ là **cảm giác**, gắn với tần số lặp lại của âm thanh. Nếu bỏ âm gốc (hoặc cả vài [[chuoi-boi-am|bồi âm]] đầu) khỏi một âm phức, ta **vẫn nghe cùng cao độ** — gọi là **âm gốc vắng mặt** (missing fundamental). Seebeck đã quan sát hiện tượng này từ thế kỷ 19; Schouten chứng minh nó không phải là "âm hiệu" do tai tạo ra.
 - Vì vậy loa nhỏ không phát được tần số 55 Hz vẫn cho ta nghe nốt A1: não "suy ra" cao độ từ các bồi âm.
 - Khả năng phân biệt hai cao độ gần nhau phụ thuộc tần số, độ to, độ dài âm và việc hai âm vang **liền nhau hay cùng lúc** — không có một con số cố định.
 
@@ -218,7 +218,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
 - Giới hạn: độ nhám **không giải thích toàn bộ** thuận – nghịch; văn hoá và thói quen nghe cũng đóng vai trò lớn (xem [[thuan-nghich]]).
 
 ## Hệ quả thực hành
-- Cùng một hợp âm ba **xếp hẹp ở vùng trầm** nghe đục hơn ở vùng giữa: dải tới hạn ở vùng trầm **rộng** (tính theo nửa cung) nên các nốt gần nhau dễ tạo độ nhám. Đây là lý do các sách hoà âm khuyên xếp quãng rộng ở bè trầm (xem [[dan-giong]], [[xep-hop-am]]).
+- Cùng một [[hop-am-ba|hợp âm ba]] **xếp hẹp ở vùng trầm** nghe đục hơn ở vùng giữa: dải tới hạn ở vùng trầm **rộng** (tính theo [[cung-nua-cung|nửa cung]]) nên các nốt gần nhau dễ tạo độ nhám. Đây là lý do các sách hoà âm khuyên xếp [[quang|quãng]] rộng ở bè trầm (xem [[dan-giong]], [[xep-hop-am]]).
 - Khi luyện tai, phân biệt **nghe thấy** (cảm giác) với **gọi tên** (lý thuyết) — xem [[luyen-tai]].
 `,
   },
@@ -237,30 +237,30 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
       ['Huron (2001) — Tone and voice: a derivation of the rules of voice-leading from perceptual principles', 'https://muse.jhu.edu/book/47915'],
     ],
     body: `
-Âm thanh đến tai là **một sóng áp suất duy nhất** — tổng của mọi nguồn. Vậy mà ta nghe được giai điệu violin tách khỏi dàn nhạc, hay giai điệu tay phải tách khỏi phần đệm tay trái. Nhà tâm lý học **Albert Bregman** gọi quá trình này là **phân tích cảnh thính giác** (sách *Auditory Scene Analysis*, 1990).
+Âm thanh đến tai là **một sóng áp suất duy nhất** — tổng của mọi nguồn. Vậy mà ta nghe được [[giai-dieu|giai điệu]] violin tách khỏi dàn nhạc, hay giai điệu tay phải tách khỏi phần đệm tay trái. Nhà tâm lý học **Albert Bregman** gọi quá trình này là **phân tích cảnh thính giác** (sách *Auditory Scene Analysis*, 1990).
 
 ## Các nguyên tắc nhóm
 **Theo chiều ngang (nối tiếp)** — các nốt kế tiếp được nghe thành **một dòng** khi:
-- **Gần nhau về cao độ**. Khi hai nhóm nốt cách xa nhau và xen kẽ **nhanh**, tai buộc phải tách thành **hai dòng**. Nghiên cứu kinh điển của van Noorden (1975) cho thấy khoảng cách cần để tách phụ thuộc vào **tốc độ**: chậm thì cách xa vẫn nghe thành một dòng, nhanh thì chỉ vài nửa cung đã tách.
-- **Cùng âm sắc** và **cùng độ to**.
+- **Gần nhau về cao độ**. Khi hai nhóm nốt cách xa nhau và xen kẽ **nhanh**, tai buộc phải tách thành **hai dòng**. Nghiên cứu kinh điển của van Noorden (1975) cho thấy khoảng cách cần để tách phụ thuộc vào **tốc độ**: chậm thì cách xa vẫn nghe thành một dòng, nhanh thì chỉ vài [[cung-nua-cung|nửa cung]] đã tách.
+- **Cùng [[am-sac|âm sắc]]** và **cùng [[am-hoc-co-ban|độ to]]**.
 
 **Theo chiều dọc (đồng thời)** — các thành phần được nghe thành **một âm** khi:
 - **Bắt đầu cùng lúc**.
 - Có quan hệ **bồi âm** với nhau (xem [[chuoi-boi-am]]).
 
-**Theo hiểu biết** (schema): người nghe đã biết giai điệu thì nhận ra nó dễ hơn ngay cả khi nó bị trộn với nốt nhiễu cùng âm vực (Dowling).
+**Theo hiểu biết** ([[luoc-do-galant|schema]]): người nghe đã biết giai điệu thì nhận ra nó dễ hơn ngay cả khi nó bị trộn với nốt nhiễu cùng âm vực (Dowling).
 
 ## Âm nhạc khai thác phân luồng
-- **Giai điệu ẩn trong hình rải**: một chuỗi nốt nhanh nhảy giữa hai âm vực được nghe thành **hai bè** — Bach dùng điều này trong các tác phẩm cho nhạc cụ độc tấu (đa âm ngầm).
-- **Luật dẫn giọng**: David Huron (2001) chỉ ra các luật viết bè cổ điển (tránh quãng 8 song song, tránh bè chéo nhau…) chính là cách giữ cho các bè **được nghe tách biệt** (xem [[luat-hoa-am-bon-be]]).
+- **Giai điệu ẩn trong hình rải**: một chuỗi nốt nhanh nhảy giữa hai âm vực được nghe thành **hai bè** — [[johann-sebastian-bach|Bach]] dùng điều này trong các tác phẩm cho nhạc cụ độc tấu (đa âm ngầm).
+- **Luật dẫn giọng**: [[ky-vong-am-nhac|David Huron]] (2001) chỉ ra các luật viết bè cổ điển (tránh [[dan-giong|quãng 8 song song]], tránh bè chéo nhau…) chính là cách giữ cho các bè **được nghe tách biệt** (xem [[luat-hoa-am-bon-be]]).
 
 ## Piano: "giai điệu đi trước"
-- Đo đạc trên đàn piano ghi âm bằng máy tính cho thấy nốt giai điệu thường vang **sớm hơn khoảng 30 mili giây** so với các nốt đệm cùng hợp âm (Palmer, 1996) — giúp giai điệu nổi lên nhờ nguyên tắc "bắt đầu cùng lúc thì nhóm chung".
-- **Werner Goebl** (2001; 22 nghệ sĩ piano, Chopin Ballade Op. 38 và Étude Op. 10 số 3) đo thời điểm **ngón chạm phím** và thấy độ lệch này **gần như bằng 0**: nốt giai điệu vang sớm chủ yếu vì được **đánh mạnh hơn** nên búa tới dây nhanh hơn (giả thuyết "sản phẩm phụ của tốc độ"). Câu hỏi người chơi có **cố ý** đánh sớm hay không vẫn chưa khép lại hoàn toàn.
-- Bài học: muốn giai điệu nổi lên, hãy tập **cân bằng cường độ** giữa các ngón trong một hợp âm (xem [[lam-noi-giai-dieu]], [[ky-thuat-cham-phim]]); thời điểm sẽ tự theo.
+- Đo đạc trên đàn piano ghi âm bằng máy tính cho thấy nốt giai điệu thường vang **sớm hơn khoảng 30 mili giây** so với các nốt đệm cùng [[hop-am-ba|hợp âm]] (Palmer, 1996) — giúp giai điệu nổi lên nhờ nguyên tắc "bắt đầu cùng lúc thì nhóm chung".
+- **Werner Goebl** (2001; 22 nghệ sĩ piano, [[frederic-chopin|Chopin]] [[the-loai|Ballade]] Op. 38 và Étude Op. 10 số 3) đo thời điểm **ngón chạm phím** và thấy độ lệch này **gần như bằng 0**: nốt giai điệu vang sớm chủ yếu vì được **đánh mạnh hơn** nên búa tới dây nhanh hơn (giả thuyết "sản phẩm phụ của tốc độ"). Câu hỏi người chơi có **cố ý** đánh sớm hay không vẫn chưa khép lại hoàn toàn.
+- Bài học: muốn giai điệu nổi lên, hãy tập **cân bằng [[cuong-do|cường độ]]** giữa các ngón trong một hợp âm (xem [[lam-noi-giai-dieu]], [[ky-thuat-cham-phim]]); thời điểm sẽ tự theo.
 
 ## Gợi ý dạy học
-- Chơi hai giai điệu quen thuộc **xen kẽ từng nốt** ở cùng âm vực: học trò khó nhận ra. Chuyển một giai điệu lên một quãng 8: cả hai hiện ra ngay.
+- Chơi hai giai điệu quen thuộc **xen kẽ từng nốt** ở cùng âm vực: học trò khó nhận ra. Chuyển một giai điệu lên một [[quang|quãng 8]]: cả hai hiện ra ngay.
 - Trong [[nghe-nhac-chu-dong]], yêu cầu học trò theo dõi **một bè** suốt một đoạn fugue (xem [[fugue]]).
 `,
   },
@@ -281,7 +281,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
     ],
     body: `
 ## Leonard Meyer (1956)
-Trong *Emotion and Meaning in Music* (1956), **Leonard Meyer** đề xuất: cảm xúc âm nhạc nảy sinh khi một **xu hướng chờ đợi** do âm nhạc khơi lên bị **tạm thời kìm lại hoặc bị chặn hẳn**. Ví dụ: một âm giai đi lên dừng ở **cảm âm** khiến ta chờ **chủ âm**; nếu chủ âm không đến, ta cảm thấy căng và hụt hẫng. Cuốn sách được coi là nền móng của phần lớn nghiên cứu nhận thức âm nhạc hiện đại.
+Trong *Emotion and Meaning in Music* (1956), **Leonard Meyer** đề xuất: cảm xúc âm nhạc nảy sinh khi một **xu hướng chờ đợi** do âm nhạc khơi lên bị **tạm thời kìm lại hoặc bị chặn hẳn**. Ví dụ: một âm giai đi lên dừng ở **cảm âm** khiến ta chờ **[[bac-am-giai|chủ âm]]**; nếu chủ âm không đến, ta cảm thấy căng và hụt hẫng. Cuốn sách được coi là nền móng của phần lớn nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]] hiện đại.
 
 ## David Huron: mô hình ITPRA (2006)
 Trong *Sweet Anticipation* (MIT Press, 2006), **David Huron** mở rộng ý của Meyer thành năm phản ứng, xếp theo thời gian quanh một sự kiện:
@@ -304,7 +304,7 @@ Một ý quan trọng: **đoán đúng tự nó đã là niềm vui** — vì th
 |---|---|
 | [[cau-ket|Kết lừa]] V – vi | Chờ I, nhận vi |
 | [[fermata|Dấu ngân]] và [[dau-lang|dấu lặng]] kéo dài trước tái hiện | Trì hoãn sự kiện đã biết trước |
-| [[dao-phach|Đảo phách]] | Chờ trọng âm ở phách mạnh |
+| [[dao-phach|Đảo phách]] | Chờ trọng âm ở [[so-chi-nhip|phách mạnh]] |
 | [[chuyen-giong|Chuyển giọng]] bất ngờ, [[trung-am-cromatic]] | Chờ ở lại giọng cũ |
 | [[bass-ngan|Bass ngân]] át âm dài | Biết chủ âm sẽ tới, nhưng chưa biết khi nào |
 
@@ -312,7 +312,7 @@ Một ý quan trọng: **đoán đúng tự nó đã là niềm vui** — vì th
 Nghiên cứu của Salimpoor và cộng sự (2011) thấy dopamine được giải phóng cả **trong lúc chờ đợi** khoảnh khắc đỉnh của bản nhạc yêu thích, không chỉ lúc đỉnh tới — phù hợp với vai trò của sự chờ đợi (xem [[cam-xuc-am-nhac]]).
 
 ## Ý nghĩa khi biểu diễn
-Người chơi quyết định **người nghe cảm nhận kỳ vọng mạnh đến đâu**: ngân dài hợp âm át, chậm lại trước kết, nhấn hợp âm của kết lừa (xem [[dien-dat-cau-nhac]], [[rubato]]).
+Người chơi quyết định **người nghe cảm nhận kỳ vọng mạnh đến đâu**: ngân dài [[hop-am-ba|hợp âm]] át, chậm lại trước kết, nhấn hợp âm của kết lừa (xem [[dien-dat-cau-nhac]], [[rubato]]).
 `,
   },
   {
@@ -338,12 +338,12 @@ Patrik Juslin cho rằng không có **một** cơ chế duy nhất, mà âm nh�
 | Cơ chế | Ví dụ |
 |---|---|
 | **Phản xạ thân não** | Âm thanh đột ngột, rất to, [[thuan-nghich|nghịch tai]] gây giật mình |
-| **Đồng bộ nhịp điệu** | Nhịp tim, nhịp cơ thể dần "khớp" với nhịp nhạc |
+| **[[cam-nhan-phach|Đồng bộ nhịp]] điệu** | Nhịp tim, nhịp cơ thể dần "khớp" với nhịp nhạc |
 | **Điều kiện hoá đánh giá** | Bản nhạc từng gắn với kỷ niệm vui sẽ gợi niềm vui |
 | **Lây lan cảm xúc** | Người nghe "bắt chước" bên trong cảm xúc mà âm nhạc thể hiện |
 | **Hình ảnh** | Âm nhạc gợi hình ảnh trong đầu (ví dụ một phong cảnh) |
 | **Ký ức** | Gợi lại một sự kiện cụ thể trong đời |
-| **Kỳ vọng âm nhạc** | Âm nhạc đáp ứng hoặc làm trái điều ta chờ đợi (ví dụ [[cau-ket|kết lừa]]) |
+| **[[ky-vong-am-nhac|Kỳ vọng âm nhạc]]** | Âm nhạc đáp ứng hoặc làm trái điều ta chờ đợi (ví dụ [[cau-ket|kết lừa]]) |
 | **Đánh giá thẩm mỹ** | Cảm giác ngưỡng mộ, kinh ngạc trước vẻ đẹp |
 
 ## Nhịp độ, trưởng – thứ và vui – buồn
@@ -361,7 +361,7 @@ Patrik Juslin cho rằng không có **một** cơ chế duy nhất, mà âm nh�
 Vì sao ta **thích** nghe nhạc buồn? Bài tổng quan của **Eerola và cộng sự** (2018) xét các giải thích ở ba cấp: **sinh học**, **tâm lý – xã hội** và **văn hoá**, và kết luận **không cấp nào đủ** để giải thích một mình. Các yếu tố được bàn: hoài niệm, cảm giác **được an ủi** như có người đồng cảm, và trạng thái **xúc động** (being moved). Một nghiên cứu năm 2016 của nhóm này thấy những người **giàu đồng cảm** dễ xúc động hơn khi nghe nhạc buồn lạ.
 
 ## Ứng dụng khi dạy và biểu diễn
-- Giải thích cho học trò **vì sao** một đoạn nhạc gây cảm xúc: [[chuyen-giong]], [[hop-am-muon]], [[trung-am-cromatic]], [[cau-ket|kết lừa]] đều là "kỳ vọng bị làm trái".
+- Giải thích cho học trò **vì sao** một [[cau-nhac|đoạn nhạc]] gây cảm xúc: [[chuyen-giong]], [[hop-am-muon]], [[trung-am-cromatic]], [[cau-ket|kết lừa]] đều là "kỳ vọng bị làm trái".
 - Kết hợp với [[dien-dat-cau-nhac]] và [[nghe-nhac-chu-dong]].
 
 ## Rùng mình khi nghe nhạc (frisson)
@@ -388,12 +388,12 @@ Góc nhìn triết học về câu hỏi "nhạc buồn nghĩa là gì": [[bieu-
     ],
     body: `
 ## Ba "tầng" nghe của Copland
-Trong *What to Listen For in Music* (1939), nhà soạn nhạc **Aaron Copland** chia việc nghe thành ba tầng — ông nói rõ đây là cách chia **để phân tích**, thực tế ta nghe cả ba cùng lúc:
+Trong *What to Listen For in Music* (1939), nhà soạn nhạc **[[aaron-copland|Aaron Copland]]** chia việc nghe thành ba tầng — ông nói rõ đây là cách chia **để phân tích**, thực tế ta nghe cả ba cùng lúc:
 | Tầng | Người nghe chú ý đến | Bài liên quan |
 |---|---|---|
 | **Cảm giác** (sensuous) | Vẻ đẹp của âm thanh tự thân | [[am-sac]], [[am-hoc-phong]] |
-| **Biểu cảm** (expressive) | Cảm xúc, hình ảnh, ý nghĩa âm nhạc gợi ra | [[cam-xuc-am-nhac]], [[ky-vong-am-nhac]] |
-| **Thuần âm nhạc** (sheerly musical) | Bản thân các nốt: giai điệu, nhịp, hoà âm, hình thức | [[hinh-thuc-am-nhac]], [[phan-tich-hoa-am]] |
+| **Biểu cảm** (expressive) | Cảm xúc, hình ảnh, [[y-nghia-am-nhac|ý nghĩa âm nhạc]] gợi ra | [[cam-xuc-am-nhac]], [[ky-vong-am-nhac]] |
+| **Thuần âm nhạc** (sheerly musical) | Bản thân các nốt: [[giai-dieu|giai điệu]], nhịp, hoà âm, hình thức | [[hinh-thuc-am-nhac]], [[phan-tich-hoa-am]] |
 Copland cho rằng phần lớn người nghe dừng ở tầng cảm giác, và khuyên người nghe thông minh **tăng hiểu biết về chất liệu âm nhạc** — mục tiêu của việc nghe chủ động.
 
 ## Tai nghe được gì, và theo thứ tự nào
@@ -407,15 +407,15 @@ Phương pháp nghe chủ động (theo tổng quan của Boal-Palheiros về Jo
 Kết luận của tổng quan: các chiến lược chủ động (biểu diễn hoặc hình ảnh hoá) **tạo động lực** cho trẻ nghe nhạc và **nâng cao việc học âm nhạc**.
 
 ## Nghe lặp lại, mỗi lần một trọng tâm
-Một gợi ý thực hành (từ giáo viên, chưa phải nghiên cứu) với một concerto của Vivaldi: lần 1 nghe để thưởng thức; lần 2 tưởng tượng cây violin "đang nói gì"; các lần sau thảo luận và viết.
+Một gợi ý thực hành (từ giáo viên, chưa phải nghiên cứu) với một [[hinh-thuc-concerto|concerto]] của [[antonio-vivaldi|Vivaldi]]: lần 1 nghe để thưởng thức; lần 2 tưởng tượng cây violin "đang nói gì"; các lần sau thảo luận và viết.
 
 ## Gợi ý trọng tâm cho mỗi lần nghe
 Vận dụng các bài trong thư viện:
 - **Hình thức**: chủ đề quay lại khi nào? ([[rondo]], [[hinh-thuc-sonata]], [[hinh-thuc-am-nhac]])
 - **Hoà âm**: nghe ra các [[cau-ket|kết]], trưởng hay thứ ([[luyen-tai]]).
 - **Kết cấu**: bao nhiêu bè, ai giữ giai điệu? ([[ket-cau]], [[doi-am]])
-- **Biểu cảm**: nhịp độ co giãn ở đâu, đỉnh câu ở đâu? ([[dien-dat-cau-nhac]])
-- **So sánh bản thu**: nghe cùng một bài do hai nghệ sĩ chơi ([[lich-su-thu-am]]).
+- **Biểu cảm**: [[nhip-do|nhịp độ]] co giãn ở đâu, đỉnh câu ở đâu? ([[dien-dat-cau-nhac]])
+- **[[so-sanh-ban-thu|So sánh bản thu]]**: nghe cùng một bài do hai nghệ sĩ chơi ([[lich-su-thu-am]]).
 
 Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ số gây xao nhãng, gọi tên yếu tố âm nhạc, và nghe tự do — về sự chú ý và cảm xúc; các nghiên cứu về chủ đề này phần lớn còn nhỏ. Cảm xúc khi nghe: [[cam-xuc-am-nhac]].
 `,
@@ -439,7 +439,7 @@ Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ s
 ## Bốn thời kỳ
 | Thời kỳ | Năm | Mốc chính |
 |---|---|---|
-| **Âm học** | 1877–1925 | 1877: máy phonograph của Edison ghi và phát lại âm thanh trên lá thiếc; Bell và Tainter thay bằng sáp; 1887: Emile Berliner phát minh **gramophone** dùng đĩa |
+| **[[am-hoc-co-ban|Âm học]]** | 1877–1925 | 1877: máy phonograph của Edison ghi và phát lại âm thanh trên lá thiếc; Bell và Tainter thay bằng sáp; 1887: Emile [[ngau-hung-jazz|Berliner]] phát minh **gramophone** dùng đĩa |
 | **Điện** | 1925–1945 | 1925: những đĩa hát **thu bằng điện** đầu tiên, chất lượng tăng vọt |
 | **Từ tính** | 1945–1975 | 21/6/1948: Columbia giới thiệu **đĩa than LP** (33⅓ vòng/phút); trước đó đĩa shellac quay 78 vòng/phút |
 | **Số** | từ 1975 | Thu và phát âm thanh kỹ thuật số |
@@ -447,22 +447,22 @@ Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ s
 Trước Edison, phonautograph (bằng sáng chế 1857) đã vẽ được sóng âm nhưng không phát lại được.
 
 ## Brahms thu âm năm 1889
-Ngày **2/12/1889**, Theo Wangemann — người của Edison — thu âm [[Brahms]] chơi hai đoạn nhạc trên piano: một trong những bản thu cổ nhất còn lại của một nhà soạn nhạc lớn tự chơi nhạc của mình. Tiếng nhạc gần như bị tiếng ồn che lấp; các nhà nghiên cứu đã phục dựng nhịp độ để hình dung cách Brahms chơi (không đủ để biết cường độ hay pedal).
+Ngày **2/12/1889**, Theo Wangemann — người của Edison — thu âm [[Brahms]] chơi hai [[cau-nhac|đoạn nhạc]] trên piano: một trong những bản thu cổ nhất còn lại của một nhà soạn nhạc lớn tự chơi nhạc của mình. Tiếng nhạc gần như bị tiếng ồn che lấp; các nhà nghiên cứu đã phục dựng [[nhip-do|nhịp độ]] để hình dung cách Brahms chơi (không đủ để biết [[cuong-do|cường độ]] hay [[ban-dap|pedal]]).
 
 ## Cuộn piano (piano roll)
 Hệ thống **Welte-Mignon** (phát minh năm 1904) ghi lại cách chơi bằng cuộn giấy đục lỗ cho đàn tự chơi. Lưu ý: các album "Brahms trên Welte-Mignon" là các nghệ sĩ khác chơi nhạc Brahms, **không phải** Brahms tự chơi.
 
 ## Bản thu phòng thu: ghép nhiều lần chơi
 Từ thời băng từ, bản thu phòng thu có thể được **cắt ghép** từ nhiều lần chơi (take).
-- **Glenn Gould** biểu diễn trước công chúng lần cuối ở Chicago (**3/1964**) rồi chỉ thu âm. Ông cho rằng phòng thu là một **phương tiện nghệ thuật riêng**: người nghệ sĩ được "sửa và hoàn thiện" như nhà văn, thay vì phải làm lại từ đầu mỗi buổi hoà nhạc.
-- Trong tiểu luận *The Prospects of Recording* (tạp chí *High Fidelity*, 1966), Gould kể bản thu năm 1956 **Fugue La thứ** (Bình quân luật quyển 1) của ông được ghép từ **hai lần chơi** (take 6 và take 8): phần đầu và cuối lấy từ take 6, đoạn giữa từ take 8 — vì ông thấy cả hai, nếu nghe riêng, đều đơn điệu.
+- **[[glenn-gould|Glenn Gould]]** biểu diễn trước công chúng lần cuối ở Chicago (**3/1964**) rồi chỉ thu âm. Ông cho rằng phòng thu là một **phương tiện nghệ thuật riêng**: người nghệ sĩ được "sửa và hoàn thiện" như nhà văn, thay vì phải làm lại từ đầu mỗi buổi hoà nhạc.
+- Trong tiểu luận *The Prospects of Recording* (tạp chí *High Fidelity*, 1966), Gould kể bản thu năm 1956 **[[fugue|Fugue]] La thứ** (Bình quân luật quyển 1) của ông được ghép từ **hai lần chơi** (take 6 và take 8): phần đầu và cuối lấy từ take 6, đoạn giữa từ take 8 — vì ông thấy cả hai, nếu nghe riêng, đều đơn điệu.
 - Hệ quả cho người nghe: một bản thu phòng thu **không nhất thiết** là một lần biểu diễn liền mạch. Một bài viết trên tạp chí *The Nation* nhận xét xu hướng ngược lại: nhiều nhà sản xuất hiện ưa **thu trực tiếp** trước khán giả.
 
 ## Bản thu thay đổi cách chơi
-- Các bản thu cổ là **tài liệu lịch sử** về phong cách biểu diễn của các nghệ sĩ sinh ra từ thế kỷ 19 — ví dụ cách dùng rubato (xem nghiên cứu Étude Op. 25 số 1 ở dưới, [[phong-cach-dien-tau]]).
+- Các bản thu cổ là **tài liệu lịch sử** về phong cách biểu diễn của các nghệ sĩ sinh ra từ thế kỷ 19 — ví dụ cách dùng [[rubato|rubato]] (xem nghiên cứu Étude Op. 25 số 1 ở dưới, [[phong-cach-dien-tau]]).
 
 ## Ý nghĩa với người học đàn
-Thu âm cho phép nghe cách các thế hệ nghệ sĩ chơi cùng một tác phẩm — ví dụ nghiên cứu 127 bản thu Étude Op. 25 số 1 của Chopin cho thấy cách dùng rubato thay đổi theo thời gian (xem [[dien-dat-cau-nhac]]). Các nghệ sĩ thời đầu thu âm: [[nghe-si-piano-dau-the-ky-20]]. Cách nghe có định hướng: [[nghe-nhac-chu-dong]]; cách so sánh nhiều bản thu: [[so-sanh-ban-thu]].
+Thu âm cho phép nghe cách các thế hệ nghệ sĩ chơi cùng một tác phẩm — ví dụ nghiên cứu 127 bản thu Étude Op. 25 số 1 của [[frederic-chopin|Chopin]] cho thấy cách dùng rubato thay đổi theo thời gian (xem [[dien-dat-cau-nhac]]). Các nghệ sĩ thời đầu thu âm: [[nghe-si-piano-dau-the-ky-20]]. Cách nghe có định hướng: [[nghe-nhac-chu-dong]]; cách so sánh nhiều bản thu: [[so-sanh-ban-thu]].
 `,
   },
   {
@@ -483,7 +483,7 @@ Thu âm cho phép nghe cách các thế hệ nghệ sĩ chơi cùng một tác p
 Bản nhạc không ghi hết mọi thứ: nhịp độ chính xác, độ co giãn, cân bằng bè, pedal… đều do người chơi quyết định. So sánh nhiều bản thu là cách tốt nhất để học trò thấy **khoảng tự do diễn giải** — và giới hạn của nó.
 
 ## Nghiên cứu: dự án Mazurka của CHARM
-- **CHARM** (Trung tâm nghiên cứu Lịch sử và Phân tích Âm nhạc Thu âm, Anh) có một dự án về các bản thu **Mazurka của Chopin**: kho lưu trữ hơn **1.500 bản thu** từng bản mazurka, trong đó gần 30 bộ trọn vẹn. Mục tiêu: xây dựng phương pháp **đo** thời gian và cường độ từ bản thu, để tìm ra xu hướng lịch sử và đặc điểm phong cách của từng trường phái.
+- **CHARM** (Trung tâm nghiên cứu Lịch sử và [[phuong-phap-phan-tich-tac-pham|Phân tích Âm nhạc]] Thu âm, Anh) có một dự án về các bản thu **Mazurka của [[frederic-chopin|Chopin]]**: kho lưu trữ hơn **1.500 bản thu** từng bản mazurka, trong đó gần 30 bộ trọn vẹn. Mục tiêu: xây dựng phương pháp **đo** thời gian và cường độ từ bản thu, để tìm ra xu hướng lịch sử và đặc điểm phong cách của từng trường phái.
 - Bài báo của **Nicholas Cook, Craig Sapp và Andrew Earis** (2007) về Mazurka Op. 68 số 3: nhóm các bản thu theo **mức tương quan của đường cong nhịp độ**, và các nhóm tìm được có trường hợp **khớp với quan hệ thầy – trò** đã biết. Kết luận: **chỉ riêng dữ liệu nhịp độ** đã có thể rút ra những nhận xét có ý nghĩa.
 - Phân tích dữ liệu bản thu còn phát hiện **gian lận**: một số bản thu phát hành dưới tên nghệ sĩ Joyce Hatto và Sergio Fiorentino thực ra là bản thu của người khác.
 - Công cụ miễn phí **Sonic Visualiser** được dùng rộng rãi trong dự án; Cook trình bày nhiều kết quả trong sách *Beyond the Score* (Oxford, 2013).
@@ -492,7 +492,7 @@ Bản nhạc không ghi hết mọi thứ: nhịp độ chính xác, độ co gi
 | Khía cạnh | Câu hỏi khi nghe |
 |---|---|
 | **Nhịp độ chung** | Nhanh hay chậm? Có khác nhiều so với chỉ dẫn [[nhip-do]]? |
-| **Co giãn** | Chậm lại ở đâu: cuối câu, đỉnh câu, hợp âm lạ? ([[rubato]]) |
+| **Co giãn** | Chậm lại ở đâu: cuối câu, đỉnh câu, [[hop-am-ba|hợp âm]] lạ? ([[rubato]]) |
 | **Cường độ** | Đỉnh lớn nhất ở đâu? Tương phản rộng hay hẹp? ([[cuong-do]]) |
 | **Cân bằng bè** | Bè nào được làm nổi? ([[lam-noi-giai-dieu]]) |
 | **Cách diễn tấu, pedal** | Liền hay tách? Âm thanh "khô" hay "ướt"? ([[cach-dien-tau]], [[ban-dap]]) |
@@ -543,7 +543,7 @@ Quy tắc **"3 dB"**: cứ tăng 3 dB thì thời gian an toàn giảm một n�
 
 ## Biện pháp thực tế
 - **Phòng tập**: tránh phòng nhỏ, tường cứng, trần thấp; thêm rèm, thảm, giá sách để giảm vang (xem [[am-hoc-phong]]). Với đàn grand, có thể **hạ nắp** khi tập.
-- **Nghỉ giữa giờ**: những quãng nghỉ yên lặng giúp tai hồi phục; kết hợp với nguyên tắc nghỉ của [[phuong-phap-luyen-tap]].
+- **Nghỉ giữa giờ**: những [[quang|quãng]] nghỉ yên lặng giúp tai hồi phục; kết hợp với nguyên tắc nghỉ của [[phuong-phap-luyen-tap]].
 - **Đàn điện và tai nghe**: giữ âm lượng vừa phải — tai nghe sát tai có thể vượt ngưỡng an toàn mà người chơi không nhận ra.
 - **Nút tai cho nhạc sĩ**: giảm khoảng **15 dB** một cách tương đối **đều** giữa các dải tần (khác nút tai công nghiệp làm tiếng bị đục), nên vẫn nghe cân bằng; giảm 3 dB đã giảm một nửa liều tiếp xúc.
 - **Dấu hiệu cảnh báo**: ù tai hoặc nghe "bí" sau buổi tập là dấu hiệu tiếp xúc quá mức — cần đi khám thính học nếu kéo dài.

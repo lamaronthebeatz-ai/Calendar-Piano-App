@@ -33,7 +33,7 @@ Thay cơ chế **gảy dây** của [[dan-phim-co|harpsichord]] bằng **búa g�
 
 ## Từ fortepiano tới piano hiện đại
 - Khung đàn của Cristofori bằng gỗ, chưa chịu nổi lực căng dây lớn.
-- Tên gọi rút dần: pianoforte / fortepiano → **piano**. "Fortepiano" thường chỉ các cây đàn từ thời Cristofori đến đầu thế kỷ 19 — loại đàn Mozart và Beethoven thời trẻ sử dụng.
+- Tên gọi rút dần: pianoforte / fortepiano → **piano**. "Fortepiano" thường chỉ các cây đàn từ thời Cristofori đến đầu thế kỷ 19 — loại đàn [[wolfgang-amadeus-mozart|Mozart]] và [[ludwig-van-beethoven|Beethoven]] thời trẻ sử dụng.
 - Từ thời Beethoven, đàn phát triển liên tục và đạt tới cây **grand hiện đại** vào cuối thế kỷ 19, với khung gang (xem [[cau-tao-piano]]).
 
 Âm nhạc viết cho từng giai đoạn đàn khác nhau — xem [[cac-thoi-ky]].
@@ -51,14 +51,14 @@ Thay cơ chế **gảy dây** của [[dan-phim-co|harpsichord]] bằng **búa g�
       ['Metropolitan Museum of Art — Cristofori piano', 'https://www.metmuseum.org/art/collection/search/503271'],
     ],
     body: `
-| Đàn | Cách tạo tiếng | Điều khiển to nhỏ |
+| Đàn | Cách tạo tiếng | Điều khiển [[cuong-do|to nhỏ]] |
 |---|---|---|
 | **Harpsichord** | **Gảy** dây bằng miếng gảy (plectrum) | Gần như không thay đổi được |
 | **Clavichord** | Thanh kim loại nhỏ (**tangent**) gõ và **giữ nguyên** trên dây khi còn nhấn phím | Có, nhưng tiếng rất nhỏ |
 | **Piano** | **Búa** gõ dây rồi bật ra ngay | Rộng, từ rất nhỏ đến rất to |
 
 ## Harpsichord
-Vì là cơ chế gảy, harpsichord không thể chơi to nhỏ theo lực ngón; người chơi tạo sắc thái bằng [[cach-dien-tau|cách ngắt tiếng]], [[ky-hieu-hoa-my|hoa mỹ]] và chuyển bàn phím/đổi bộ dây. Đây là nhạc cụ chủ lực của [[thoi-ky-baroque|thời Baroque]] — Bach, [[Couperin]], Domenico Scarlatti viết cho nó. Virginal và spinet là những dạng harpsichord nhỏ.
+Vì là cơ chế gảy, harpsichord không thể chơi to nhỏ theo lực ngón; người chơi tạo sắc thái bằng [[cach-dien-tau|cách ngắt tiếng]], [[ky-hieu-hoa-my|hoa mỹ]] và chuyển bàn phím/đổi bộ dây. Đây là nhạc cụ chủ lực của [[thoi-ky-baroque|thời Baroque]] — [[johann-sebastian-bach|Bach]], [[Couperin]], [[domenico-scarlatti|Domenico Scarlatti]] viết cho nó. Virginal và spinet là những dạng harpsichord nhỏ.
 
 ## Clavichord
 Phím hoạt động như đòn bẩy: nhấn phím, đầu kia nâng lên và **tangent** đập vào dây. Tangent ở lại trên dây khi còn giữ phím, đồng thời quyết định chiều dài dây rung — vì vậy tiếng rất nhỏ. Bù lại, người chơi điều khiển được to nhỏ và tạo được **rung tiếng (bebung)** bằng cách thay đổi lực ấn.
@@ -94,7 +94,7 @@ Khi chơi nhạc Baroque trên piano, hiểu cách tạo tiếng của harpsicho
 | **Pedal** | Xem [[ban-dap]] |
 
 ## Lực căng và khung gang
-Để tiếng to hơn, dây được căng ở lực rất cao. Tổng lực căng dây của một cây **grand biểu diễn lớn** vào khoảng **30 tấn** (phần lớn đàn có ít hơn). Khung gang chịu lực này; đến cuối thế kỷ 19, gần như mọi cây piano đều dùng khung gang. Khung grand biểu diễn nặng khoảng 160–180 kg, và chính sự cộng hưởng của khung cũng góp phần vào âm sắc.
+Để tiếng to hơn, dây được căng ở lực rất cao. Tổng lực căng dây của một cây **grand biểu diễn lớn** vào khoảng **30 tấn** (phần lớn đàn có ít hơn). Khung gang chịu lực này; đến cuối thế kỷ 19, gần như mọi cây piano đều dùng khung gang. Khung grand biểu diễn nặng khoảng 160–180 kg, và chính sự cộng hưởng của khung cũng góp phần vào [[am-sac|âm sắc]].
 
 ## Số dây cho mỗi nốt
 - Vùng **cao và giữa**: mỗi nốt **3 dây** cùng cao độ.
@@ -161,13 +161,13 @@ Không có búa gõ dây: đàn đo **tốc độ nhấn phím** rồi phát âm
 | Kiểu phím | Đặc điểm |
 |---|---|
 | **Graded hammer** | Phím trầm nặng hơn phím cao — gần với grand nhất |
-| **Fully weighted** | Nặng đều trên toàn bàn phím |
+| **Fully weighted** | Nặng đều trên toàn [[ban-phim|bàn phím]] |
 | **Semi-weighted** | Nhẹ hơn, trung gian |
 | **Không trọng lượng** (synth) | Nhẹ, rẻ, hợp chơi giải trí hơn học kỹ thuật cổ điển |
 
 ## Học trên đàn nào?
 - Phím có trọng lượng và cảm ứng lực giúp phát triển **lực và kiểm soát ngón** cùng [[cuong-do|sắc thái to nhỏ]]; phím không cảm ứng lực luôn phát cùng một âm lượng.
-- Để học hình hợp âm hay giai điệu ban đầu, phím nặng chưa thật sự bắt buộc.
+- Để học hình [[hop-am-ba|hợp âm]] hay [[giai-dieu|giai điệu]] ban đầu, phím nặng chưa thật sự bắt buộc.
 - Tập trên piano điện phím nặng giúp chuyển sang piano cơ dễ hơn.
 - Lựa chọn thực tế cho người mới học tại nhà thường là **piano điện 88 phím, phím nặng** (graded hoặc fully weighted); piano cơ đáng đầu tư nếu có chỗ, ngân sách và điều kiện bảo dưỡng (xem [[bao-duong-piano]]).
 

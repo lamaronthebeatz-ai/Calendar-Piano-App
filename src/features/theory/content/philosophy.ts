@@ -16,7 +16,7 @@ export const philosophy: Article[] = [
       ['Wikipedia — Aesthetics of music', 'https://en.wikipedia.org/wiki/Aesthetics_of_music'],
     ],
     body: `
-**Triết học âm nhạc** và **thẩm mỹ (mỹ học) âm nhạc** đặt những câu hỏi mà lý thuyết âm nhạc thường bỏ qua: không phải "hợp âm này là gì" mà là **"vì sao âm thanh có tổ chức lại khiến ta xúc động"**, **"một bản sonata tồn tại ở đâu"**, **"điều gì làm một cách chơi là đúng"**.
+**Triết học âm nhạc** và **thẩm mỹ (mỹ học) âm nhạc** đặt những câu hỏi mà lý thuyết âm nhạc thường bỏ qua: không phải "[[hop-am-ba|hợp âm]] này là gì" mà là **"vì sao âm thanh có tổ chức lại khiến ta xúc động"**, **"một bản [[hinh-thuc-sonata|sonata]] tồn tại ở đâu"**, **"điều gì làm một cách chơi là đúng"**.
 
 ## Các câu hỏi lớn
 Các tài liệu tổng quan hiện đại (như mục *Philosophy of Music* của Andrew Kania trong *Stanford Encyclopedia of Philosophy*, hay tuyển tập *Philosophers on Music* do Kathleen Stock biên tập) thường chia lĩnh vực thành mấy nhóm:
@@ -34,7 +34,7 @@ Các tài liệu tổng quan hiện đại (như mục *Philosophy of Music* c�
 2. **Phương Đông cổ đại**: lễ và nhạc trong tư tưởng Nho gia — [[nhac-trong-tu-tuong-nho-gia]].
 3. **Thế kỷ 18**: giai điệu hay hoà âm là gốc — [[tranh-luan-rameau-rousseau]]; cái đẹp và thị hiếu — [[phan-doan-tham-my]].
 4. **Thế kỷ 19**: nhạc khí nhạc được tôn lên thành nghệ thuật cao nhất — [[triet-hoc-lang-man-ve-am-nhac]]; tranh luận nhạc tuyệt đối và nhạc chương trình — [[am-nhac-tuyet-doi]].
-5. **Thế kỷ 20 – nay**: triết học phân tích (biểu hiện, bản thể, tính xác thực), ký hiệu học ([[y-nghia-am-nhac]]), lý thuyết phê phán ([[adorno-va-am-nhac]]), thử nghiệm của Cage ([[dinh-nghia-am-nhac]]).
+5. **[[thoi-ky-the-ky-20|Thế kỷ 20]] – nay**: triết học phân tích (biểu hiện, bản thể, tính xác thực), ký hiệu học ([[y-nghia-am-nhac]]), lý thuyết phê phán ([[adorno-va-am-nhac]]), thử nghiệm của [[john-cage|Cage]] ([[dinh-nghia-am-nhac]]).
 
 ## Triết học và các mục khác
 - Tâm lý học thực nghiệm trả lời một phần câu hỏi về cảm xúc: [[cam-xuc-am-nhac]], [[ky-vong-am-nhac]].
@@ -66,14 +66,14 @@ Trong *Cộng hoà* và *Luật pháp*, **Plato** để Socrates trình bày âm
 ## Các "điệu" và tính cách
 - Trong *Cộng hoà* (khoảng 398–399), Socrates gắn các **harmoniai** (thường dịch là "điệu") với các trạng thái tâm hồn: một số điệu bị coi là ủ rũ hoặc uỷ mị và bị loại khỏi giáo dục; điệu **Dorian** được gắn với **lòng dũng cảm**, trong khi Lydian và Ionian bị gắn với sự **buông thả**.
 - **Aristotle**, trong quyển VIII của *Chính trị luận*, cũng bàn về vai trò giáo dục của âm nhạc. Các nghiên cứu so sánh cho thấy hai triết gia **khác nhau** về cách âm nhạc tác động lên cảm xúc và tính cách công dân, cũng như về vai trò của âm nhạc trong xã hội.
-- Lưu ý: "Dorian", "Lydian" của Hy Lạp **không phải** là các [[dieu-thuc|điệu thức nhà thờ]] cùng tên của thời Trung cổ; tên gọi được dùng lại nhưng cấu trúc khác.
+- Lưu ý: "Dorian", "Lydian" của Hy Lạp **không phải** là các [[dieu-thuc|điệu thức nhà thờ]] cùng tên của thời [[thoi-ky-trung-co|Trung cổ]]; tên gọi được dùng lại nhưng cấu trúc khác.
 
 ## Chắc chắn đến đâu?
 Học giả **Stefan Hagel** (2019) đặt nghi vấn: hình ảnh một "lý thuyết ethos" hoàn chỉnh của Damon phần lớn dựa vào một chuyên luận **muộn** (Aristides Quintilianus, thời La Mã); ông cho rằng thời Cổ điển Hy Lạp **chưa có** một lý thuyết ethos dựa trên lập luận kỹ thuật, và không nên coi mọi ý kiến về chi tiết âm nhạc trong *Cộng hoà* là quan điểm của chính Plato.
 
 ## Di sản
 - Ý tưởng "âm nhạc giáo dục con người" sống tiếp trong giáo dục châu Âu và cả trong các phương pháp hiện đại (xem [[phuong-phap-giao-duc-am-nhac]]).
-- Câu hỏi "âm nhạc có ảnh hưởng đạo đức không?" vẫn được đặt lại mỗi khi có tranh luận về các thể loại nhạc mới (xem [[adorno-va-am-nhac]]).
+- Câu hỏi "âm nhạc có ảnh hưởng đạo đức không?" vẫn được đặt lại mỗi khi có tranh luận về các [[the-loai|thể loại]] nhạc mới (xem [[adorno-va-am-nhac]]).
 - So sánh với tư tưởng phương Đông: [[nhac-trong-tu-tuong-nho-gia]]. Lộ trình cả mục: [[triet-hoc-am-nhac]].
 `,
   },
@@ -92,7 +92,7 @@ Học giả **Stefan Hagel** (2019) đặt nghi vấn: hình ảnh một "lý th
     ],
     body: `
 ## Pythagoras: âm nhạc là con số
-Truyền thống Pythagoras gắn âm nhạc với **toán học**: cao độ tỉ lệ nghịch với độ dài dây, và các quãng **thuận** ứng với **tỉ lệ số đơn giản** — quãng 8 là 2 : 1, quãng 5 là 3 : 2, quãng 4 là 4 : 3 (xem [[chuoi-boi-am]], [[luat-binh-quan]], [[thuan-nghich]]). Từ đó nảy sinh ý tưởng **musica universalis**: chuyển động của Mặt Trời, Mặt Trăng và các hành tinh cũng là một thứ "âm nhạc" theo những tỉ lệ ấy.
+Truyền thống Pythagoras gắn âm nhạc với **toán học**: cao độ tỉ lệ nghịch với độ dài dây, và các quãng **thuận** ứng với **tỉ lệ số đơn giản** — [[quang|quãng 8]] là 2 : 1, quãng 5 là 3 : 2, quãng 4 là 4 : 3 (xem [[chuoi-boi-am]], [[luat-binh-quan]], [[thuan-nghich]]). Từ đó nảy sinh ý tưởng **musica universalis**: chuyển động của Mặt Trời, Mặt Trăng và các hành tinh cũng là một thứ "âm nhạc" theo những tỉ lệ ấy.
 
 ## Boethius: ba loại âm nhạc
 Trong *De institutione musica* (đầu thế kỷ 6), **Boethius** dựa trên ý tưởng Pythagoras và chia âm nhạc thành ba loại:
@@ -101,14 +101,14 @@ Trong *De institutione musica* (đầu thế kỷ 6), **Boethius** dựa trên �
 | **Musica mundana** | "Âm nhạc của vũ trụ": trật tự của các thiên thể, sự kết hợp các nguyên tố, sự luân chuyển các mùa |
 | **Musica humana** | "Âm nhạc của con người": sự hoà hợp giữa thân thể và linh hồn |
 | **Musica instrumentalis** | Âm nhạc **nghe được**, do giọng hát và nhạc cụ tạo ra |
-Điều đáng chú ý với người hiện đại: âm nhạc **nghe được** chỉ là loại **thấp nhất** — biểu hiện bên ngoài của một trật tự sâu hơn. Sách của Boethius là giáo trình âm nhạc chuẩn suốt Trung cổ; âm nhạc thuộc **bốn môn toán học** (quadrivium) cùng số học, hình học và thiên văn.
+Điều đáng chú ý với người hiện đại: âm nhạc **nghe được** chỉ là loại **thấp nhất** — biểu hiện bên ngoài của một trật tự sâu hơn. Sách của Boethius là giáo trình âm nhạc chuẩn suốt [[thoi-ky-trung-co|Trung cổ]]; âm nhạc thuộc **bốn môn toán học** (quadrivium) cùng số học, hình học và thiên văn.
 
 ## Kepler: Harmonices Mundi (1619)
 Nhà thiên văn **Johannes Kepler** xuất bản *Harmonices Mundi* (Hoà âm của thế giới, 1619, năm quyển), tìm các tỉ lệ hoà âm trong **vận tốc** của các hành tinh. Khác với quan niệm cũ, Kepler **không** cho rằng "âm nhạc" này nghe được bằng tai — chỉ có thể "nghe" bằng tâm hồn. Chính trong công trình này ông nêu định luật thứ ba về chuyển động hành tinh.
 
 ## Ý nghĩa ngày nay
-- Ý tưởng rằng cái đẹp âm nhạc gắn với **tỉ lệ** và **trật tự** vẫn sống trong các cách giải thích thuận – nghịch bằng tỉ lệ tần số (xem [[cam-nhan-am-thanh]] để thấy giới hạn của cách giải thích này).
-- Nhà soạn nhạc Paul Hindemith viết opera *Die Harmonie der Welt* về Kepler.
+- Ý tưởng rằng cái đẹp âm nhạc gắn với **tỉ lệ** và **trật tự** vẫn sống trong các cách giải thích thuận – nghịch bằng tỉ lệ [[am-hoc-co-ban|tần số]] (xem [[cam-nhan-am-thanh]] để thấy giới hạn của cách giải thích này).
+- Nhà soạn nhạc [[paul-hindemith|Paul Hindemith]] viết opera *Die Harmonie der Welt* về Kepler.
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
 `,
   },
@@ -164,13 +164,13 @@ Hai truyền thống độc lập nhưng cùng đặt âm nhạc vào trung tâm
     ],
     body: `
 ## Bối cảnh: hai lý thuyết gia, hai quan niệm
-- **Jean-Philippe Rameau**: nhà soạn nhạc opera Pháp hàng đầu và tác giả *Traité de l'harmonie* (1722) — lý thuyết **bè trầm gốc** coi **hoà âm** là nền tảng tự nhiên của âm nhạc (xem [[he-thong-hoa-am-co-dien]]).
-- **Jean-Jacques Rousseau**: triết gia, cũng là nhà soạn nhạc; tin rằng âm nhạc bắt nguồn từ **lời nói và đam mê**, nên **giai điệu** mới là cốt lõi.
+- **[[jean-philippe-rameau|Jean-Philippe Rameau]]**: nhà soạn nhạc opera Pháp hàng đầu và tác giả *Traité de l'harmonie* (1722) — lý thuyết **bè trầm gốc** coi **hoà âm** là nền tảng tự nhiên của âm nhạc (xem [[he-thong-hoa-am-co-dien]]).
+- **Jean-Jacques Rousseau**: triết gia, cũng là nhà soạn nhạc; tin rằng âm nhạc bắt nguồn từ **lời nói và đam mê**, nên **[[giai-dieu|giai điệu]]** mới là cốt lõi.
 
 ## Cuộc chiến các Bouffons (1752–1754)
 - Ngày **1/8/1752**, đoàn hát Ý của Eustachio Bambini (các "Bouffons") diễn *La serva padrona* của **Pergolesi** ở Paris. Sự kiện châm ngòi cho một cuộc bút chiến, dù gốc rễ là sự bất mãn rộng hơn với opera Pháp và sự kiểm soát của triều đình.
 - Hai phe được gọi là **"góc nhà vua"** (ủng hộ opera Pháp) và **"góc hoàng hậu"** (ủng hộ opera Ý).
-- Cuối năm **1753**, Rousseau công bố *Lettre sur la musique française* — một lời **lên án** nhạc hát Pháp: chê hát nói (recitative) của Rameau thiếu tự nhiên so với Ý; chê hợp xướng, hoà âm và phối khí quá dày, quá nhiều đối âm; thậm chí cho rằng **tiếng Pháp** không hợp để phổ nhạc.
+- Cuối năm **1753**, Rousseau công bố *Lettre sur la musique française* — một lời **lên án** nhạc hát Pháp: chê hát nói (recitative) của Rameau thiếu tự nhiên so với Ý; chê hợp xướng, hoà âm và phối khí quá dày, quá nhiều [[doi-am|đối âm]]; thậm chí cho rằng **tiếng Pháp** không hợp để phổ nhạc.
 - Rameau đáp lại bằng *Erreurs sur la musique dans l'Encyclopédie* (1755), phản bác các mục về âm nhạc Rousseau viết cho Bách khoa thư.
 
 ## Câu hỏi triết học: giai điệu hay hoà âm?
@@ -179,7 +179,7 @@ Hai truyền thống độc lập nhưng cùng đặt âm nhạc vào trung tâm
 | Gốc của âm nhạc | Lời nói, đam mê, **giai điệu** | Quy luật tự nhiên của âm thanh, **hoà âm** |
 | Vẻ đẹp nằm ở | Giai điệu biểu cảm, đơn giản | Cấu trúc hoà âm và sự phong phú |
 | Mô hình lý tưởng | Opera Ý | Opera Pháp |
-Các nhà bình luận thường đọc cuộc tranh luận như **người hiện đại đối đầu người cổ**, và cả như một cuộc tranh luận **chính trị**: opera Pháp vốn gắn với vinh quang của nhà vua. Về sau, trong *Pygmalion* (1770), Rousseau thử một hình thức mà lời và nhạc **nối tiếp nhau** thay vì đi cùng nhau.
+Các nhà bình luận thường đọc cuộc tranh luận như **người hiện đại đối đầu người cổ**, và cả như một cuộc tranh luận **chính trị**: opera Pháp vốn gắn với vinh quang của nhà vua. Về sau, trong *Pygmalion* (1770), Rousseau thử một [[hinh-thuc-am-nhac|hình thức]] mà lời và nhạc **nối tiếp nhau** thay vì đi cùng nhau.
 
 ## Vì sao còn quan trọng?
 Câu hỏi "giai điệu hay hoà âm đi trước" vẫn hiện diện trong cách dạy: dạy phối hoà âm từ giai điệu ([[phoi-hoa-am-giai-dieu]]) hay từ bè trầm ([[bass-so]], [[luoc-do-galant]])? Lộ trình cả mục: [[triet-hoc-am-nhac]].
@@ -204,17 +204,17 @@ Câu hỏi "giai điệu hay hoà âm đi trước" vẫn hiện diện trong c�
 Trong thế kỷ 18, nhạc không lời thường bị coi **kém** nhạc có lời, vì "không nói được gì". Khoảng năm 1800, quan niệm này **đảo ngược**: chính vì không bị ràng buộc vào lời và khái niệm, nhạc khí nhạc được coi là nghệ thuật **cao nhất**.
 
 ## E. T. A. Hoffmann (1810)
-- Nhà văn, nhà soạn nhạc **E. T. A. Hoffmann** viết bài phê bình **Giao hưởng số 5** của [[Beethoven]] trên tờ *Allgemeine musikalische Zeitung* (tháng 7/1810), sau khi nhận tổng phổ năm 1809 — không rõ ông đã từng nghe tác phẩm được biểu diễn chưa.
-- Phần mở đầu bài viết là cả một **lý thuyết âm nhạc Lãng mạn**: nhạc khí nhạc, thoát khỏi thơ ca, là nghệ thuật **lãng mạn nhất** vì đối tượng của nó là **cái vô hạn**; Beethoven là nhà soạn nhạc Lãng mạn tột bậc, âm nhạc của ông đánh thức **nỗi khát khao vô tận**.
+- Nhà văn, nhà soạn nhạc **E. T. A. Hoffmann** viết bài phê bình **[[the-loai|Giao hưởng]] số 5** của [[Beethoven]] trên tờ *Allgemeine musikalische Zeitung* (tháng 7/1810), sau khi nhận tổng phổ năm 1809 — không rõ ông đã từng nghe tác phẩm được biểu diễn chưa.
+- Phần mở đầu bài viết là cả một **lý thuyết âm nhạc [[thoi-ky-lang-man|Lãng mạn]]**: nhạc khí nhạc, thoát khỏi thơ ca, là nghệ thuật **lãng mạn nhất** vì đối tượng của nó là **cái vô hạn**; Beethoven là nhà soạn nhạc Lãng mạn tột bậc, âm nhạc của ông đánh thức **nỗi khát khao vô tận**.
 - Bài viết ảnh hưởng đến thẩm mỹ âm nhạc nhiều thế hệ sau.
 
 ## Schopenhauer (1819)
 - Trong *Thế giới như là ý chí và biểu tượng* (1819), **Arthur Schopenhauer** cho rằng thế giới ta thấy là **biểu tượng** (hiện tượng), còn bản chất bên trong là **ý chí** — một sức đẩy mù quáng.
 - Các nghệ thuật khác trình bày các "Ý niệm" qua đó ý chí hiện ra; riêng **âm nhạc** là **bản sao trực tiếp của chính ý chí**, "trực tiếp như chính thế giới". Vì thế âm nhạc đứng **trên** mọi nghệ thuật khác.
-- Tư tưởng này ảnh hưởng mạnh đến [[Wagner]] và Mahler.
+- Tư tưởng này ảnh hưởng mạnh đến [[Wagner]] và [[gustav-mahler|Mahler]].
 
 ## Nietzsche (1872)
-- *Sự ra đời của bi kịch từ tinh thần âm nhạc* (1872) của **Friedrich Nietzsche** cho rằng bi kịch Hy Lạp nảy sinh từ sự kết hợp hai xung lực: **Apollo** (chừng mực, hài hoà, hình thức) và **Dionysos** (đam mê không kiềm chế, say sưa). Âm nhạc là trung tâm của xung lực Dionysos.
+- *Sự ra đời của bi kịch từ tinh thần âm nhạc* (1872) của **Friedrich Nietzsche** cho rằng bi kịch Hy Lạp nảy sinh từ sự kết hợp hai xung lực: **Apollo** (chừng mực, hài hoà, [[hinh-thuc-am-nhac|hình thức]]) và **Dionysos** (đam mê không kiềm chế, say sưa). Âm nhạc là trung tâm của xung lực Dionysos.
 - Sách chịu ảnh hưởng của Schopenhauer và lòng ngưỡng mộ âm nhạc Wagner, kết thúc bằng hy vọng bi kịch **tái sinh từ âm nhạc của Wagner**. (Về sau Nietzsche quay ra phê phán Wagner.)
 
 ## Ảnh hưởng và phản ứng
@@ -243,21 +243,21 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 | | Âm nhạc chương trình | Âm nhạc tuyệt đối |
 |---|---|---|
 | Ý tưởng | Âm nhạc gắn với một **nội dung ngoài âm nhạc**: câu chuyện, bài thơ, cảnh vật, nhân vật | Âm nhạc **không cần** và **không nên** dựa vào nội dung ngoài âm nhạc |
-| Ví dụ | Giao hưởng *Đồng quê* (Beethoven), *Symphonie fantastique* (Berlioz), các **thơ giao hưởng** của Liszt | Sonata, giao hưởng, tứ tấu không tiêu đề; Brahms thường được nêu làm đại diện |
+| Ví dụ | [[the-loai|Giao hưởng]] *Đồng quê* ([[ludwig-van-beethoven|Beethoven]]), *Symphonie fantastique* ([[hector-berlioz|Berlioz]]), các **thơ giao hưởng** của [[franz-liszt|Liszt]] | [[hinh-thuc-sonata|Sonata]], giao hưởng, tứ tấu không tiêu đề; [[johannes-brahms|Brahms]] thường được nêu làm đại diện |
 
 ## Lịch sử của một thuật ngữ
-- **Wagner** đặt ra cụm từ **"âm nhạc tuyệt đối"** năm **1846**, trong lời giới thiệu chương trình cho buổi diễn Giao hưởng số 9 của Beethoven ở Dresden: đoạn hát nói của nhạc cụ trong chương cuối "**vượt qua ranh giới của âm nhạc tuyệt đối**". Ông dùng thuật ngữ với nghĩa **chê**, để cho thấy giới hạn của nhạc thuần khí nhạc — theo Mark Evan Bonds, đó là một "hình nhân rơm" Wagner dựng lên để bác bỏ.
+- **[[richard-wagner|Wagner]]** đặt ra cụm từ **"âm nhạc tuyệt đối"** năm **1846**, trong lời giới thiệu chương trình cho buổi diễn Giao hưởng số 9 của Beethoven ở Dresden: đoạn hát nói của nhạc cụ trong chương cuối "**vượt qua ranh giới của âm nhạc tuyệt đối**". Ông dùng thuật ngữ với nghĩa **chê**, để cho thấy giới hạn của nhạc thuần khí nhạc — theo Mark Evan Bonds, đó là một "hình nhân rơm" Wagner dựng lên để bác bỏ.
 - **Liszt** sáng tạo thể loại **thơ giao hưởng**: mười hai bản đầu viết trong khoảng 1847–1858; *Les Préludes* là tác phẩm đầu tiên được gọi bằng tên này. Các tác phẩm này nuôi cuộc tranh luận về giá trị của nhạc chương trình (xem [[bien-doi-chu-de]]).
 
 ## Hanslick: Về cái đẹp trong âm nhạc (1854)
 - Nhà phê bình Vienna **Eduard Hanslick** xuất bản *Vom Musikalisch-Schönen* (Về cái đẹp trong âm nhạc) năm **1854**; sách được tái bản **mười lần** khi ông còn sống, và ông thường được coi là **người sáng lập chủ nghĩa hình thức** trong mỹ học âm nhạc.
-- Câu nổi tiếng nhất: nội dung của âm nhạc là **"những hình thức âm thanh chuyển động"** (*tönend bewegte Formen*). Hanslick bác bỏ quan niệm cho rằng mục đích của âm nhạc là **biểu hiện hay gợi cảm xúc**; vẻ đẹp âm nhạc nằm trong chính cấu trúc âm thanh.
+- Câu nổi tiếng nhất: nội dung của âm nhạc là **"những [[hinh-thuc-am-nhac|hình thức]] âm thanh chuyển động"** (*tönend bewegte Formen*). Hanslick bác bỏ quan niệm cho rằng mục đích của âm nhạc là **biểu hiện hay gợi cảm xúc**; vẻ đẹp âm nhạc nằm trong chính cấu trúc âm thanh.
 - Carl Dahlhaus lưu ý câu nói này cần đọc như một **luận điểm tranh luận** — nhằm chống lại mỹ học cảm xúc của thế kỷ 18 (như của Schubart) — chứ không phải định nghĩa đầy đủ về âm nhạc.
 - Hanslick chấp nhận chính sự **tách biệt** khỏi nội dung mà Wagner chê, coi đó là bảo đảm cho sự **thuần khiết** của âm nhạc.
 
 ## Cuộc tranh luận ngày nay
 - Phần lớn các nhà triết học hiện đại không còn chọn một trong hai cực: nhạc không lời vẫn có thể được nghe là **biểu cảm** (xem [[bieu-hien-cam-xuc-am-nhac]]), và nhạc chương trình vẫn phải **thuyết phục về mặt âm nhạc**.
-- Với người dạy: khi một tiểu phẩm có tên gợi hình (như *Cảnh tuổi thơ* của Schumann — xem [[phan-tich-traumerei]]), tên gọi có thể là **gợi ý** cho cách chơi; Schumann tự nói các tên chỉ là "gợi ý tinh tế".
+- Với người dạy: khi một tiểu phẩm có tên gợi hình (như *Cảnh tuổi thơ* của [[robert-schumann|Schumann]] — xem [[phan-tich-traumerei]]), tên gọi có thể là **gợi ý** cho cách chơi; Schumann tự nói các tên chỉ là "gợi ý tinh tế".
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
 `,
   },
@@ -280,14 +280,14 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 Một định nghĩa tốt phải bao quát **mọi** thứ ta gọi là âm nhạc — từ thánh ca, nhạc gamelan, rap đến nhạc điện tử — và **loại ra** những thứ không phải (tiếng xe cộ, tiếng nói thường). Các tiêu chí quen thuộc đều gặp phản ví dụ:
 | Tiêu chí | Phản ví dụ |
 |---|---|
-| Có **cao độ**, giai điệu | Nhạc cho trống; [[am-cum|âm cụm]]; nhạc ồn |
+| Có **cao độ**, [[giai-dieu|giai điệu]] | Nhạc cho trống; [[am-cum|âm cụm]]; nhạc ồn |
 | Do **nhạc cụ** tạo ra | Tiếng thu âm từ môi trường, nhạc điện tử |
-| Có **nhịp đều** | Thánh ca Gregorian, nhiều nhạc thế kỷ 20 |
+| Có **[[kiem-soat-toc-do|nhịp đều]]** | Thánh ca Gregorian, nhiều nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] |
 | **Dễ nghe**, đẹp | Nhiều tác phẩm cố tình gây khó chịu |
 Vì vậy các triết gia (như Jerrold Levinson, trong tuyển tập *Music, Art, and Metaphysics*, 1990) thường định nghĩa âm nhạc qua **ý định** và **cách nghe**: âm thanh được **tổ chức có chủ ý** để được **nghe như âm nhạc** — thay vì qua các đặc điểm vật lý.
 
 ## Varèse: "âm thanh có tổ chức"
-Nhà soạn nhạc **Edgard Varèse** dùng cụm từ **"âm thanh có tổ chức"** (organized sound) để mô tả thẩm mỹ của mình. Ông cho rằng với những đôi tai quen nếp, mọi cái mới trong âm nhạc đều từng bị gọi là **tiếng ồn**, và hỏi ngược lại: âm nhạc là gì nếu không phải là **những tiếng ồn có tổ chức**?
+Nhà soạn nhạc **[[edgard-varese|Edgard Varèse]]** dùng cụm từ **"âm thanh có tổ chức"** (organized sound) để mô tả thẩm mỹ của mình. Ông cho rằng với những đôi tai quen nếp, mọi cái mới trong âm nhạc đều từng bị gọi là **tiếng ồn**, và hỏi ngược lại: âm nhạc là gì nếu không phải là **những tiếng ồn có tổ chức**?
 
 ## Cage: 4′33″ (1952)
 - Ngày **29/8/1952**, trong một nhà kho được cải tạo ở **Woodstock** (New York), nghệ sĩ piano **David Tudor** công diễn lần đầu tác phẩm *4′33″* của **[[john-cage|John Cage]]**.
@@ -320,7 +320,7 @@ Cho học trò ngồi yên 1–2 phút và ghi lại mọi âm thanh nghe đư�
     ],
     body: `
 ## Câu đố
-Ta nói một đoạn nhạc "buồn" một cách rất tự nhiên. Nhưng **âm thanh không có tâm trạng**; người soạn có thể không buồn khi viết; người nghe có thể không buồn khi nghe. Vậy "buồn" ở đâu? (Phần thực nghiệm — người nghe thực sự cảm thấy gì — xem [[cam-xuc-am-nhac]].)
+Ta nói một [[cau-nhac|đoạn nhạc]] "buồn" một cách rất tự nhiên. Nhưng **âm thanh không có tâm trạng**; người soạn có thể không buồn khi viết; người nghe có thể không buồn khi nghe. Vậy "buồn" ở đâu? (Phần thực nghiệm — người nghe thực sự cảm thấy gì — xem [[cam-xuc-am-nhac]].)
 
 ## Bốn câu trả lời
 | Lý thuyết | Ý chính | Đại diện | Phê phán thường gặp |
@@ -328,7 +328,7 @@ Ta nói một đoạn nhạc "buồn" một cách rất tự nhiên. Nhưng **â
 | **Khơi gợi** (arousal) | Nhạc buồn là nhạc **làm người nghe phù hợp cảm thấy buồn** | Truyền thống lâu đời | Ta nhận ra nhạc buồn mà không cần buồn; nhạc buồn lại thường khiến ta thích thú |
 | **Đường nét / giống dáng vẻ** (contour, appearance emotionalism) | Nhạc buồn vì **dáng điệu** của nó (chậm, đi xuống, yếu) **giống** dáng vẻ bên ngoài của người buồn; buồn là **một phẩm chất của âm nhạc**, không phải sức tác động của nó | Peter Kivy (*The Corded Shell*, 1980); Stephen Davies | Ta có thể nghe biểu cảm cả ở những chỗ không giống hành vi con người nào |
 | **Nhân vật tưởng tượng** (persona) | Một đoạn nhạc biểu hiện nỗi buồn khi người nghe có kinh nghiệm **dễ dàng nghe nó như** lời bày tỏ nỗi buồn của một **nhân vật** tưởng tượng | Jerrold Levinson | Không phải ai cũng nghe thấy "nhân vật" |
-| **Hình thức** (formalism) | Cảm xúc không phải nội dung của âm nhạc; nội dung là hình thức âm thanh chuyển động | Eduard Hanslick (1854) | Khó giải thích vì sao ta mô tả nhạc bằng từ cảm xúc tự nhiên đến vậy |
+| **[[hinh-thuc-am-nhac|Hình thức]]** (formalism) | Cảm xúc không phải nội dung của âm nhạc; nội dung là hình thức âm thanh chuyển động | Eduard [[am-nhac-tuyet-doi|Hanslick]] (1854) | Khó giải thích vì sao ta mô tả nhạc bằng từ cảm xúc tự nhiên đến vậy |
 
 ## Chi tiết hơn
 - **Kivy** cho rằng nỗi buồn là **phẩm chất của âm nhạc**, không phải năng lực của âm nhạc làm gì đó với người nghe. Ông liên hệ mô hình của mình với phong cách hát của nhóm Camerata Florence quanh năm 1600 — âm nhạc như "bản đồ âm thanh" của cơ thể đang mang cảm xúc. *Sound Sentiment* (1989) tái bản toàn văn *The Corded Shell* kèm các chương trả lời phê bình.
@@ -362,7 +362,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 
 ## Susanne Langer: biểu tượng của cảm xúc
 - Trong *Philosophy in a New Key* (1942; có nguồn ghi 1941), **Susanne Langer** phân biệt hai loại biểu tượng: **biểu tượng diễn ngôn** (ngôn ngữ, nói về sự vật theo trình tự) và **biểu tượng trình hiện** (như hình ảnh, âm nhạc — được nắm bắt như một tổng thể).
-- Âm nhạc không phải bản báo cáo cảm xúc của nhà soạn nhạc; nó có **cùng hình dạng** với đời sống cảm xúc — căng và chùng, dâng lên và lắng xuống — nên biểu hiện **hình thức của cảm xúc** chứ không phải một cảm xúc cụ thể.
+- Âm nhạc không phải bản báo cáo cảm xúc của nhà soạn nhạc; nó có **cùng hình dạng** với đời sống cảm xúc — căng và chùng, dâng lên và lắng xuống — nên biểu hiện **[[hinh-thuc-am-nhac|hình thức]] của cảm xúc** chứ không phải một cảm xúc cụ thể.
 - Bà phát triển ý tưởng này cho mọi nghệ thuật trong *Feeling and Form* (1953).
 
 ## Nattiez: ba cấp độ
@@ -402,20 +402,20 @@ Mô hình ba cấp độ nhắc rằng **ý định của tác giả**, **nhữn
     ],
     body: `
 ## Câu hỏi
-Khi nói "tôi đang tập **Sonata K. 545**", ta nói về cái gì? Không phải tờ giấy (in thêm bản mới không tạo thêm tác phẩm); không phải một lần chơi (tác phẩm vẫn còn khi không ai chơi). Âm nhạc cổ điển phương Tây là nghệ thuật **"dị bản"** (allographic): tác phẩm tồn tại qua **nhiều lần thể hiện**, khác với một bức tranh chỉ có một bản gốc.
+Khi nói "tôi đang tập **[[hinh-thuc-sonata|Sonata]] [[phan-tich-sonata-k545|K. 545]]**", ta nói về cái gì? Không phải tờ giấy (in thêm bản mới không tạo thêm tác phẩm); không phải một lần chơi (tác phẩm vẫn còn khi không ai chơi). Âm nhạc cổ điển phương Tây là nghệ thuật **"dị bản"** (allographic): tác phẩm tồn tại qua **nhiều lần thể hiện**, khác với một bức tranh chỉ có một bản gốc.
 
 ## Các câu trả lời chính
 | Quan điểm | Tác phẩm là | Ưu điểm | Khó khăn |
 |---|---|---|---|
 | **Goodman** (*Languages of Art*, 1968) | **Lớp các lần biểu diễn tuân theo bản nhạc** | Tiêu chí rõ ràng: đúng bản nhạc thì là tác phẩm | Một nốt sai, nói chặt chẽ, là không còn là tác phẩm ("nghịch lý nốt sai") |
-| **Thuyết Platon** (Kivy và những người khác) | Một **cấu trúc âm thanh trừu tượng**, tồn tại vĩnh viễn; nhà soạn nhạc **khám phá** chứ không tạo ra | Giải thích vì sao tác phẩm có thể có nhiều lần thể hiện | Trái với trực giác rằng nhà soạn nhạc **sáng tạo** |
+| **Thuyết Platon** ([[bieu-hien-cam-xuc-am-nhac|Kivy]] và những người khác) | Một **cấu trúc âm thanh trừu tượng**, tồn tại vĩnh viễn; nhà soạn nhạc **khám phá** chứ không tạo ra | Giải thích vì sao tác phẩm có thể có nhiều lần thể hiện | Trái với trực giác rằng nhà soạn nhạc **sáng tạo** |
 | **Levinson** (1980) | **Cấu trúc được chỉ định**: cấu trúc âm thanh **và** phương tiện biểu diễn, được một nhà soạn nhạc chỉ định ở một **thời điểm lịch sử** | Tác phẩm được **tạo ra**; hai người viết cùng nốt ở hai thời điểm là hai tác phẩm | Có ý kiến phản đối việc coi **phối khí** là bắt buộc đối với danh tính tác phẩm |
 
 ## Goehr: khái niệm tác phẩm có lịch sử
 **Lydia Goehr** (*The Imaginary Museum of Musical Works*, 1992) đặt câu hỏi khác: không phải "tác phẩm là gì" mà là **khi nào** người ta bắt đầu nghĩ âm nhạc theo cách đó. Theo bà, **khái niệm tác phẩm** — một sản phẩm hoàn chỉnh, cố định của một tác giả, được biểu diễn trung thành theo bản nhạc — **định hình rõ khoảng năm 1800**, rồi quy định chuẩn mực và kỳ vọng của thực hành âm nhạc cổ điển. Nhiều học giả giữ ý chính của Goehr nhưng cho rằng mốc thời gian nên **sớm hơn**.
 
 ## Vì sao điều này quan trọng với người chơi?
-- Nếu tác phẩm chỉ là **nốt trên giấy** (gần Goodman), thì mọi quyết định về rubato, âm sắc, pedal là "thêm vào". Nếu tác phẩm bao gồm cả **phương tiện và bối cảnh** (gần Levinson), thì chơi Bach trên piano đặt ra câu hỏi về sự trung thành (xem [[tinh-xac-thuc-bieu-dien]]).
+- Nếu tác phẩm chỉ là **nốt trên giấy** (gần Goodman), thì mọi quyết định về [[rubato|rubato]], [[am-sac|âm sắc]], [[ban-dap|pedal]] là "thêm vào". Nếu tác phẩm bao gồm cả **phương tiện và bối cảnh** (gần Levinson), thì [[phong-cach-dien-tau|chơi Bach trên piano]] đặt ra câu hỏi về sự trung thành (xem [[tinh-xac-thuc-bieu-dien]]).
 - Quan điểm của Goehr giải thích vì sao nhạc **ngẫu hứng**, nhạc **jazz** hay nhiều truyền thống ngoài phương Tây không vừa với khuôn "tác phẩm" (xem [[ngau-hung-piano]], [[hoa-am-jazz]]).
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
 `,
@@ -436,15 +436,15 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
     ],
     body: `
 ## Phong trào biểu diễn theo phong cách lịch sử
-Từ giữa thế kỷ 20, nhiều nghệ sĩ cố gắng chơi nhạc Baroque và Cổ điển **như thời của nó**: nhạc cụ cổ (harpsichord, fortepiano), cao độ và cách lên dây cổ, cách trang trí và diễn tấu theo các khảo luận đương thời (xem [[phong-cach-dien-tau]], [[an-ban-urtext]], [[lich-su-piano]]). Phong trào từng mang tên **"biểu diễn xác thực"** (authentic performance) — và chính chữ "xác thực" gây tranh luận.
+Từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]], nhiều nghệ sĩ cố gắng chơi nhạc [[thoi-ky-baroque|Baroque]] và Cổ điển **như thời của nó**: nhạc cụ cổ ([[dan-phim-co|harpsichord]], fortepiano), cao độ và cách lên dây cổ, cách trang trí và diễn tấu theo các khảo luận đương thời (xem [[phong-cach-dien-tau]], [[an-ban-urtext]], [[lich-su-piano]]). Phong trào từng mang tên **"biểu diễn xác thực"** (authentic performance) — và chính chữ "xác thực" gây tranh luận.
 
 ## Kivy: bốn nghĩa của "xác thực"
-Trong *Authenticities* (1995), triết gia **Peter Kivy** phân biệt:
+Trong *Authenticities* (1995), triết gia **Peter [[bieu-hien-cam-xuc-am-nhac|Kivy]]** phân biệt:
 | Nghĩa | Trung thành với | Ví dụ |
 |---|---|---|
 | **Ý định** | Ý định, quan niệm của nhà soạn nhạc | Chơi theo cách tác giả muốn (nếu biết được) |
 | **Âm thanh** | Âm thanh của buổi diễn thời đó | Dùng nhạc cụ, cao độ lịch sử |
-| **Thực hành** | Quy ước biểu diễn thời đó | Trang trí, rubato, tốc độ theo khảo luận |
+| **Thực hành** | Quy ước biểu diễn thời đó | Trang trí, [[rubato|rubato]], tốc độ theo khảo luận |
 | **"Xác thực khác"** | Chính người biểu diễn: sự **chân thành**, cách hiểu riêng | Một cách chơi mang dấu ấn cá nhân sâu sắc |
 Sách chia hai phần: thế nào là xác thực (phân tích khái niệm), và **vì sao nên** xác thực (đánh giá). Các nghĩa có thể **mâu thuẫn**: chơi đúng âm thanh lịch sử chưa chắc là cách chơi chân thành nhất của người nghệ sĩ.
 
@@ -517,14 +517,14 @@ Năm phẩm chất của Hume — tinh tế, thực hành, so sánh, không đ�
 
 ## Nhạc đại chúng: chuẩn hoá và cá nhân hoá giả (1941)
 Trong *On Popular Music* (1941, viết cùng George Simpson), Adorno cho rằng đặc điểm cốt lõi của nhạc đại chúng là **chuẩn hoá**:
-- Khuôn cố định: ví dụ điệp khúc **32 ô** (xem [[hinh-thuc-ca-khuc-32]]), âm vực giai điệu gói gọn trong một quãng 8, các "kiểu" bài hát lặp lại.
+- Khuôn cố định: ví dụ điệp khúc **32 ô** (xem [[hinh-thuc-ca-khuc-32]]), âm vực [[giai-dieu|giai điệu]] gói gọn trong một [[quang|quãng 8]], các "kiểu" bài hát lặp lại.
 - **Cá nhân hoá giả**: những khác biệt bề mặt tạo **ảo giác lựa chọn tự do**, trong khi chất liệu đã được chọn sẵn cho người nghe.
 
 ## Công nghiệp văn hoá (1944)
 Trong chương "Công nghiệp văn hoá" của *Biện chứng của Khai sáng* (Horkheimer và Adorno; bản 1944, xuất bản rộng rãi năm 1947), văn hoá sản xuất hàng loạt được phân tích như một **công cụ kiểm soát xã hội** hơn là sự biểu hiện thật. Thuật ngữ "công nghiệp văn hoá" xuất hiện lần đầu ở đây.
 
 ## Triết học âm nhạc mới (1949)
-*Philosophie der neuen Musik* (1949) gồm hai tiểu luận: **"Schoenberg và sự tiến bộ"**, **"Stravinsky và sự phản động"**. Adorno đặt hai nhà soạn nhạc đối lập như hai xu hướng: âm nhạc dám đối diện với mâu thuẫn của thời đại (Schoenberg, [[ky-thuat-12-am]]) và âm nhạc quay lại các hình thức cũ (Stravinsky tân cổ điển). Sách gây tranh cãi ngay khi ra đời — **chính Schoenberg cũng không đồng tình** — nhưng có ảnh hưởng lớn với giới nhạc sĩ và học giả.
+*Philosophie der neuen Musik* (1949) gồm hai tiểu luận: **"[[arnold-schoenberg|Schoenberg]] và sự tiến bộ"**, **"[[igor-stravinsky|Stravinsky]] và sự phản động"**. Adorno đặt hai nhà soạn nhạc đối lập như hai xu hướng: âm nhạc dám đối diện với mâu thuẫn của thời đại (Schoenberg, [[ky-thuat-12-am]]) và âm nhạc quay lại các [[hinh-thuc-am-nhac|hình thức]] cũ (Stravinsky tân cổ điển). Sách gây tranh cãi ngay khi ra đời — **chính Schoenberg cũng không đồng tình** — nhưng có ảnh hưởng lớn với giới nhạc sĩ và học giả.
 
 ## Phê phán đối với Adorno
 - Tiểu luận *Über Jazz* (1936–1937, ký bút danh Hektor Rottweiler) thường bị chê là **thiên kiến** và **tinh hoa**; nhiều nhà sử học jazz bác bỏ hoàn toàn. Hiểu biết jazz của ông được cho là giới hạn ở dòng nhạc khiêu vũ kiểu ban nhạc Paul Whiteman phục vụ giới trung lưu thời Weimar.

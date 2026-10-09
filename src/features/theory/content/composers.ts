@@ -16,7 +16,7 @@ const PERIODS = [
     slug: 'thoi-ky-trung-co',
     title: 'Thời kỳ Trung cổ',
     years: '~500–1400',
-    intro: `Âm nhạc gắn với nhà thờ và triều đình. Từ thánh ca đơn âm (xem [[ket-cau]]) và [[dieu-thuc|điệu thức nhà thờ]], các nhạc sĩ dần chồng thêm bè để tạo ra phức điệu — khởi đầu của [[doi-am]]. Ký âm trên [[khuong-nhac]] cũng ra đời trong thời kỳ này.`,
+    intro: `Âm nhạc gắn với nhà thờ và triều đình. Từ thánh ca đơn âm (xem [[ket-cau]]) và [[dieu-thuc|điệu thức nhà thờ]], các nhạc sĩ dần chồng thêm bè để tạo ra phức điệu — khởi đầu của [[doi-am]]. [[ky-am|Ký âm]] trên [[khuong-nhac]] cũng ra đời trong thời kỳ này.`,
     groups: [
       ['chant', 'Thánh ca và lý thuyết thời đầu'],
       ['troubadour', 'Troubadour, trouvère và Minnesinger'],
@@ -29,7 +29,7 @@ const PERIODS = [
     slug: 'thoi-ky-phuc-hung',
     title: 'Thời kỳ Phục hưng',
     years: '~1400–1600',
-    intro: `Thời kỳ vàng son của phức điệu thanh nhạc. Quãng 3 và quãng 6 trở thành [[thuan-nghich|thuận âm]], các bè được viết cân bằng theo kỹ thuật mô phỏng ([[doi-am]]). Thể loại chính: thánh lễ, motet, madrigal và chanson. Cuối thời kỳ, [[hop-am-ba]] trưởng – thứ dần trở thành trung tâm.`,
+    intro: `Thời kỳ vàng son của phức điệu thanh nhạc. [[quang|Quãng]] 3 và quãng 6 trở thành [[thuan-nghich|thuận âm]], các bè được viết cân bằng theo kỹ thuật mô phỏng ([[doi-am]]). [[the-loai|Thể loại]] chính: thánh lễ, motet, madrigal và chanson. Cuối thời kỳ, [[hop-am-ba]] trưởng – thứ dần trở thành trung tâm.`,
     groups: [
       ['burgundy', 'Thời kỳ đầu và trường phái Burgundy'],
       ['flemish', 'Trường phái Franco-Flemish'],
@@ -45,7 +45,7 @@ const PERIODS = [
     slug: 'thoi-ky-baroque',
     title: 'Thời kỳ Baroque',
     years: '~1600–1750',
-    intro: `Opera ra đời; hệ thống giọng trưởng – thứ được xác lập, cùng [[chuc-nang-hoa-am|hoà âm chức năng]]. Đặc trưng: [[bass-so|basso continuo]], [[fugue]], [[mo-tien-hoa-am|mô tiến]], [[ky-hieu-hoa-my|hoa mỹ]] phong phú, tương phản to – nhỏ theo từng khối. Thể loại: concerto, tổ khúc, sonata, oratorio, cantata.`,
+    intro: `Opera ra đời; hệ thống [[am-giai-truong|giọng trưởng]] – thứ được xác lập, cùng [[chuc-nang-hoa-am|hoà âm chức năng]]. Đặc trưng: [[bass-so|basso continuo]], [[fugue]], [[mo-tien-hoa-am|mô tiến]], [[ky-hieu-hoa-my|hoa mỹ]] phong phú, tương phản to – nhỏ theo từng khối. [[the-loai|Thể loại]]: [[hinh-thuc-concerto|concerto]], tổ khúc, [[hinh-thuc-sonata|sonata]], oratorio, cantata.`,
     groups: [
       ['earlyitaly', 'Baroque sớm ở Ý'],
       ['germany17', 'Đức – Áo thế kỷ 17'],
@@ -60,7 +60,7 @@ const PERIODS = [
     slug: 'thoi-ky-co-dien',
     title: 'Thời kỳ Cổ điển',
     years: '~1750–1820',
-    intro: `Phong cách trong sáng, cân đối: giai điệu có đệm ([[ket-cau|chủ điệu]], bass Alberti), [[cau-nhac]] đối xứng, [[hinh-thuc-sonata]] trở thành khuôn mẫu cho sonata, giao hưởng, tứ tấu và concerto (xem [[the-loai]]). Đàn fortepiano thay thế harpsichord.`,
+    intro: `Phong cách trong sáng, cân đối: [[giai-dieu|giai điệu]] có đệm ([[ket-cau|chủ điệu]], bass Alberti), [[cau-nhac]] đối xứng, [[hinh-thuc-sonata]] trở thành khuôn mẫu cho sonata, giao hưởng, tứ tấu và [[hinh-thuc-concerto|concerto]] (xem [[the-loai]]). Đàn [[lich-su-piano|fortepiano]] thay thế [[dan-phim-co|harpsichord]].`,
     groups: [
       ['galant', 'Tiền cổ điển, galant và Mannheim'],
       ['vienna', 'Trường phái Cổ điển Vienna'],

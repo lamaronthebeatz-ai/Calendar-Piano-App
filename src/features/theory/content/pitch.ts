@@ -21,7 +21,7 @@ Vì không có phím đen giữa E–F và B–C, hai cặp này chỉ cách n�
 
 ## Nửa cung dị và nửa cung đồng
 - **Nửa cung dị** (diatonic): hai nốt khác tên — C–D♭, E–F.
-- **Nửa cung đồng** (chromatic): hai nốt cùng tên — C–C♯.
+- **Nửa cung đồng** ([[am-giai-cromatic|chromatic]]): hai nốt cùng tên — C–C♯.
 
 Cung và nửa cung là đơn vị để đo [[quang]] và để xây dựng [[am-giai-truong]]. Một quãng 8 gồm 12 nửa cung bằng nhau (xem [[luat-binh-quan]]).
 
@@ -47,7 +47,7 @@ Trong [[luat-binh-quan]], một nửa cung = **100 cent**, một quãng 8 = **12
       ['HearandPlay — Newsletter, March 2006 (naming intervals)', 'https://www.hearandplay.com/Newsletters-Mar06.html'],
     ],
     body: `
-Quãng có hai phần: **số** — đếm số tên nốt từ nốt dưới đến nốt trên (C→E là C-D-E = **quãng 3**) — và **tính chất** — xác định bằng số [[cung-nua-cung|nửa cung]].
+Quãng có hai phần: **số** — đếm số [[not-nhac|tên nốt]] từ nốt dưới đến nốt trên (C→E là C-D-E = **quãng 3**) — và **tính chất** — xác định bằng số [[cung-nua-cung|nửa cung]].
 | Nửa cung | Quãng | Ví dụ từ C |
 |---|---|---|
 | 0 | Đồng âm | C–C |
@@ -72,10 +72,10 @@ Quãng có hai phần: **số** — đếm số tên nốt từ nốt dưới đ
 - Quãng **2, 3, 6, 7**: trưởng ↔ thứ; trưởng thêm nửa cung là tăng, thứ bớt nửa cung là giảm.
 
 ## Quãng giai điệu và quãng hoà âm
-Hai nốt vang **lần lượt** là quãng giai điệu; vang **cùng lúc** là quãng hoà âm.
+Hai nốt vang **lần lượt** là quãng [[giai-dieu|giai điệu]]; vang **cùng lúc** là quãng hoà âm.
 
 ## Cách gọi tên quãng đúng: hai bước
-1. **Đếm tên chữ cái** (hoặc vị trí trên khuông), **tính cả nốt đầu là 1** → ra **số** quãng. Mọi quãng từ một nốt C bất kỳ đến một nốt D bất kỳ đều là quãng **2**, dù có dấu hoá gì.
+1. **Đếm tên chữ cái** (hoặc vị trí trên [[khuong-nhac|khuông]]), **tính cả nốt đầu là 1** → ra **số** quãng. Mọi quãng từ một nốt C bất kỳ đến một nốt D bất kỳ đều là quãng **2**, dù có [[dau-hoa|dấu hoá]] gì.
 2. **Đếm nửa cung** → ra **tính chất** (so với quãng trưởng/đúng chuẩn trong bảng).
 
 Ví dụ: C–D♯ có 3 nửa cung (bằng quãng 3 thứ), nhưng C–D là quãng **2** → C–D♯ là **2 tăng**.
@@ -83,7 +83,7 @@ Ví dụ: C–D♯ có 3 nửa cung (bằng quãng 3 thứ), nhưng C–D là qu
 ## Khi giảng dạy: lỗi hay gặp
 - **Chỉ đếm nửa cung** để gọi tên quãng: D–A♯ (5 tăng) và D–B♭ (6 thứ) đều có 8 nửa cung nhưng là hai quãng khác nhau. Số nửa cung cho biết **độ lớn**, không cho biết **tên**.
 - **Quên tính nốt đầu**: C→E là quãng 3 (C-D-E), không phải quãng 2.
-- Một số giáo viên khuyên học quãng qua **bậc của âm giai trưởng** (từ chủ âm lên mỗi bậc là quãng trưởng hoặc đúng) thay vì học thuộc số nửa cung — xem [[am-giai-truong]].
+- Một số giáo viên khuyên học quãng qua **bậc của âm giai trưởng** (từ [[bac-am-giai|chủ âm]] lên mỗi bậc là quãng trưởng hoặc đúng) thay vì học thuộc số nửa cung — xem [[am-giai-truong]].
 
 ## Mẹo nhớ bằng bài hát
 - Quãng 4 đúng đi lên: "Here Comes the Bride".
@@ -122,7 +122,7 @@ Khi đảo [[quang]], nốt dưới chuyển lên trên một quãng 8 (C–E th
 Mẹo: muốn biết quãng 6 thì đảo nó thành quãng 3 (dễ nhận hơn) rồi đổi tính chất. Đảo quãng cũng là nền tảng của [[the-dao-hop-am]].
 
 ## Kiểm tra bằng số nửa cung
-Một quãng và quãng đảo của nó luôn **cộng lại thành 12 nửa cung** (một quãng 8). Ví dụ 3 trưởng (4) + 6 thứ (8) = 12; 4 đúng (5) + 5 đúng (7) = 12; tritone (6) đảo lại vẫn là tritone (6).
+Một quãng và quãng đảo của nó luôn **cộng lại thành 12 [[cung-nua-cung|nửa cung]]** (một quãng 8). Ví dụ 3 trưởng (4) + 6 thứ (8) = 12; 4 đúng (5) + 5 đúng (7) = 12; tritone (6) đảo lại vẫn là tritone (6).
 
 ## Vì sao điều này quan trọng?
 - **Nhận quãng lớn nhanh hơn**: thay vì đếm 9 nửa cung, đảo quãng 6 thành quãng 3 rồi đổi tính chất.
@@ -144,7 +144,7 @@ Một quãng và quãng đảo của nó luôn **cộng lại thành 12 nửa cu
       ['Wikipedia — Consonance and dissonance', 'https://en.wikipedia.org/wiki/Consonance_and_dissonance'],
     ],
     body: `
-| Loại | Quãng | Cảm giác |
+| Loại | [[quang|Quãng]] | Cảm giác |
 |---|---|---|
 | Thuận hoàn toàn | Đồng âm, 8 đúng, 5 đúng | Rỗng, rất ổn định |
 | Thuận không hoàn toàn | 3 và 6 (trưởng, thứ) | Êm, ấm |
@@ -152,17 +152,17 @@ Một quãng và quãng đảo của nó luôn **cộng lại thành 12 nửa cu
 | Nghịch | 2, 7, các quãng tăng/giảm (tritone) | Căng, cần đi tiếp |
 
 ## Giải quyết
-Quãng nghịch tạo **sức căng** và thường đi tới quãng thuận gần nhất — gọi là **giải quyết**. Ví dụ: tritone B–F trong [[hop-am-bay|hợp âm G7]] giải quyết về C–E của hợp âm C.
+Quãng nghịch tạo **sức căng** và thường đi tới quãng thuận gần nhất — gọi là **giải quyết**. Ví dụ: tritone B–F trong [[hop-am-bay|hợp âm G7]] giải quyết về C–E của [[hop-am-ba|hợp âm]] C.
 
 Sự luân phiên căng – nghỉ này là động cơ của [[chuc-nang-hoa-am|hoà âm chức năng]] và [[dan-giong]]. Cơ sở vật lý của độ thuận: xem [[chuoi-boi-am]].
 
 ## Quan niệm thay đổi theo lịch sử
-- **Pythagore** (thế kỷ 6 TCN) được cho là phát hiện dây đàn cho âm hay khi chia theo **tỉ lệ đơn giản**: 2:1 (quãng 8), 3:2 (quãng 5), 4:3 (quãng 4). Ba quãng này là "thuận" trong triết học Hy Lạp. (Giai thoại ông nghe tiếng búa của thợ rèn gần như chắc chắn không đúng.)
-- **Thời Trung cổ**, quãng 3 và 6 bị coi là **không ổn định**, cần giải quyết về quãng hoàn toàn. Hệ lên dây Pythagore làm quãng 3 trưởng **rộng** (tỉ lệ 81:64), nghe khá chói.
-- Từ khoảng **1450**, quãng 3 và 6 được coi là thuận. Gioseffo Zarlino chỉnh quãng 3 trưởng về tỉ lệ thuần **5:4**. Quãng 4 nằm **trên nốt trầm nhất** thì bị coi là nghịch — một quy tắc của đối âm, không phải tính chất vật lý của quãng.
+- **Pythagore** (thế kỷ 6 TCN) được cho là phát hiện [[cau-tao-piano|dây đàn]] cho âm hay khi chia theo **tỉ lệ đơn giản**: 2:1 (quãng 8), 3:2 (quãng 5), 4:3 (quãng 4). Ba quãng này là "thuận" trong triết học Hy Lạp. (Giai thoại ông nghe tiếng búa của thợ rèn gần như chắc chắn không đúng.)
+- **Thời [[thoi-ky-trung-co|Trung cổ]]**, quãng 3 và 6 bị coi là **không ổn định**, cần giải quyết về quãng hoàn toàn. Hệ lên dây Pythagore làm quãng 3 trưởng **rộng** (tỉ lệ 81:64), nghe khá chói.
+- Từ khoảng **1450**, quãng 3 và 6 được coi là thuận. Gioseffo Zarlino chỉnh quãng 3 trưởng về tỉ lệ thuần **5:4**. Quãng 4 nằm **trên nốt trầm nhất** thì bị coi là nghịch — một quy tắc của [[doi-am|đối âm]], không phải tính chất vật lý của quãng.
 
 ## Giải thích khoa học
-- **Helmholtz** (thế kỷ 19): quãng thuận có các [[chuoi-boi-am|bồi âm]] **trùng nhau**; quãng nghịch có bồi âm **gần nhau mà không trùng**, tạo ra **phách** (beats) nghe "gồ ghề".
+- **Helmholtz** (thế kỷ 19): quãng thuận có các [[chuoi-boi-am|bồi âm]] **trùng nhau**; quãng nghịch có bồi âm **gần nhau mà không trùng**, tạo ra **phách** ([[cam-nhan-am-thanh|beats]]) nghe "gồ ghề".
 - Nghiên cứu sau (Greenwood 1961; Plomp và Levelt 1965) gắn hiện tượng này với **dải tới hạn** của tai.
 - Lý thuyết độ gồ ghề cũng bị thách thức: các thí nghiệm của McDermott và cộng sự cho thấy cảm giác thuận/nghịch có thể **tách rời** khỏi cảm giác gồ ghề. Vấn đề vẫn chưa ngã ngũ.
 `,
@@ -185,7 +185,7 @@ Trên [[ban-phim]], mỗi phím đen có (ít nhất) hai tên: C♯ = D♭, F�
 ::keyboard C#4 | Một phím: có thể gọi là C♯ hoặc D♭
 
 ## Vì sao phải chọn đúng tên?
-Tên nốt phụ thuộc vào **chức năng**, không chỉ cao độ:
+[[not-nhac|Tên nốt]] phụ thuộc vào **chức năng**, không chỉ cao độ:
 - Trong [[am-giai-truong|Rê trưởng]], nốt bậc 7 là **C♯**, không phải D♭ (mỗi tên chữ cái chỉ xuất hiện một lần).
 - [[quang|Quãng]] C–D♯ là **2 tăng**, còn C–E♭ là **3 thứ** — cùng âm thanh, khác chức năng.
 
@@ -193,11 +193,11 @@ Trùng âm còn dùng để **chuyển giọng** bất ngờ (xem [[chuyen-giong
 
 ## Không phải lúc nào C♯ cũng bằng D♭
 - Trùng âm theo nghĩa "cùng một cao độ" chỉ đúng trong [[luat-binh-quan]]. Trước đó, từ "enharmonic" chỉ những nốt **rất gần nhau nhưng không trùng**.
-- Trong **luật trung bình** (meantone) — cách lên dây phổ biến thời Phục hưng và đầu Baroque — **C♯ và D♭ là hai cao độ khác nhau**. Khoảng chênh gọi là *diesis*, đủ lớn để nghe thấy.
-- Vì thế một số đàn harpsichord Ý có **phím tách** (split key): một phím đen chia làm hai nửa trước – sau, ví dụ E♭/D♯ và G♯/A♭, để có quãng 3 chuẩn hơn.
+- Trong **luật trung bình** (meantone) — cách lên dây phổ biến thời [[thoi-ky-phuc-hung|Phục hưng]] và đầu [[thoi-ky-baroque|Baroque]] — **C♯ và D♭ là hai cao độ khác nhau**. Khoảng chênh gọi là *diesis*, đủ lớn để nghe thấy.
+- Vì thế một số đàn [[dan-phim-co|harpsichord]] Ý có **phím tách** (split key): một phím đen chia làm hai nửa trước – sau, ví dụ E♭/D♯ và G♯/A♭, để có quãng 3 chuẩn hơn.
 
 ## Chuyển giọng trùng âm
-**Viết lại** một nốt hoặc hợp âm bằng tên trùng âm để dẫn sang giọng mới. Việc này phổ biến dần từ thế kỷ 18 và được dùng nhiều trong thế kỷ 19, đặc biệt với [[hop-am-bay-giam]] và hợp âm 7 át. Chuyển giọng trùng âm trong các sonata piano của [[Schubert]] là đề tài của nhiều nghiên cứu.
+**Viết lại** một nốt hoặc [[hop-am-ba|hợp âm]] bằng tên trùng âm để dẫn sang giọng mới. Việc này phổ biến dần từ thế kỷ 18 và được dùng nhiều trong thế kỷ 19, đặc biệt với [[hop-am-bay-giam]] và [[hop-am-bay|hợp âm 7 át]]. Chuyển giọng trùng âm trong các [[hinh-thuc-sonata|sonata]] piano của [[Schubert]] là đề tài của nhiều nghiên cứu.
 
 ## Vì sao không viết tên "dễ đọc" hơn?
 Tên nốt cho biết **chức năng**. Trong La trưởng, viết C♯ để mỗi chữ cái chỉ xuất hiện một lần trong âm giai (xem [[hoa-bieu]]).
@@ -217,7 +217,7 @@ Tên nốt cho biết **chức năng**. Trong La trưởng, viết C♯ để m�
       ['Giordano (2015) — Explaining the Railsback stretch (Auburn repository)', 'https://aurora.auburn.edu/handle/11200/48533'],
     ],
     body: `
-Khi gõ một phím đàn, dây đàn rung cả chiều dài **và** từng phần ½, ⅓, ¼… của nó, tạo ra các **bồi âm** có tần số gấp 2, 3, 4… lần âm gốc.
+Khi gõ một [[ban-phim|phím đàn]], [[cau-tao-piano|dây đàn]] rung cả chiều dài **và** từng phần ½, ⅓, ¼… của nó, tạo ra các **bồi âm** có tần số gấp 2, 3, 4… lần âm gốc.
 
 ::img Music-harmonic.svg | Chuỗi bồi âm trên nốt C
 
@@ -233,7 +233,7 @@ Khi gõ một phím đàn, dây đàn rung cả chiều dài **và** từng ph�
 Kiến thức nền về tần số, dB, phạm vi nghe: [[am-hoc-co-ban]]. Các bồi âm 4–5–6 tạo thành [[hop-am-ba|hợp âm trưởng]] C–E–G — một lý do hợp âm trưởng nghe "tự nhiên". Tỉ lệ tần số càng đơn giản (2:1, 3:2) thì quãng càng [[thuan-nghich|thuận]].
 
 ## Âm sắc
-Cường độ tương đối của các bồi âm quyết định **âm sắc** — lý do piano và violin chơi cùng nốt nhưng nghe khác nhau.
+[[cuong-do|Cường độ]] tương đối của các bồi âm quyết định **[[am-sac|âm sắc]]** — lý do piano và violin chơi cùng nốt nhưng nghe khác nhau.
 
 ## Bồi âm của piano "lệch" lên
 Dây đàn piano **cứng** (dây thép ngắn, khá dày), nên các bồi âm cao **không đúng** bội số nguyên mà hơi **cao hơn** — gọi là tính **không điều hoà** (inharmonicity). Dây càng ngắn, càng dày thì càng lệch.
@@ -241,7 +241,7 @@ Dây đàn piano **cứng** (dây thép ngắn, khá dày), nên các bồi âm 
 ## Hệ quả: lên dây "kéo giãn"
 - Thợ lên dây làm các nốt **cao hơi cao lên**, nốt **trầm hơi thấp xuống**, để bồi âm của nốt thấp khớp với âm gốc của nốt cao. Quãng 8 trên piano vì vậy **rộng hơn** tỉ lệ 2:1 một chút.
 - Năm 1938, nhà vật lý O. L. Railsback đo độ kéo giãn này. **Đường cong Railsback** cho thấy độ lệch gần như không đáng kể ở giữa bàn phím nhưng lớn ở hai đầu. Ông kết luận đó là do tính không điều hoà của dây, **không phải** do thợ lên dây thiếu chính xác.
-- Giordano (2015) mô phỏng lại đường cong này từ dữ liệu về độ nghịch tai, cho thấy nó là cách lên dây làm **giảm độ nghịch** tốt nhất.
+- Giordano (2015) [[doi-am|mô phỏng]] lại đường cong này từ dữ liệu về độ nghịch tai, cho thấy nó là cách lên dây làm **giảm độ nghịch** tốt nhất.
 - Vì mỗi cây đàn lệch một khác, máy lên dây đơn giản khó tính đúng mức kéo giãn — xem [[bao-duong-piano]].
 `,
   },
@@ -266,7 +266,7 @@ Dây đàn piano **cứng** (dây thép ngắn, khá dày), nên các bồi âm 
     ],
     body: `
 ## Cao độ chuẩn
-Từ giữa thế kỷ 20, nốt **A4 = 440 Hz** được dùng làm chuẩn quốc tế (ISO 16). Mỗi [[quang|quãng 8]] lên cao thì tần số **gấp đôi**: A5 = 880 Hz, A3 = 220 Hz.
+Từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]], nốt **A4 = 440 Hz** được dùng làm chuẩn quốc tế (ISO 16). Mỗi [[quang|quãng 8]] lên cao thì [[am-hoc-co-ban|tần số]] **gấp đôi**: A5 = 880 Hz, A3 = 220 Hz.
 
 ## Bình quân 12 nửa cung
 Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chia thành 12 [[cung-nua-cung|nửa cung]] có tỉ lệ tần số bằng nhau (căn bậc 12 của 2 ≈ 1,0595).
@@ -282,19 +282,19 @@ Cao độ "La" từng dao động rất rộng — có lúc thấp đến **392 
 | 1939 | Hội nghị quốc tế tại London (11–12/5) nhất trí khuyến nghị **A = 440 Hz** |
 | 1955 / 1975 | ISO tiếp nhận thành khuyến nghị R 16 (1955), rồi chuẩn **ISO 16** (1975) |
 
-Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp hơn khoảng nửa cung) như một quy ước cho nhạc Baroque — không phải một giá trị lịch sử duy nhất. Các thuyết âm mưu cho rằng A = 440 do phát xít áp đặt đã bị kiểm chứng là sai.
+Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp hơn khoảng nửa cung) như một quy ước cho nhạc [[thoi-ky-baroque|Baroque]] — không phải một giá trị lịch sử duy nhất. Các thuyết âm mưu cho rằng A = 440 do phát xít áp đặt đã bị kiểm chứng là sai.
 
 ## Lịch sử các hệ thống lên dây
 **Vấn đề gốc — dấu phẩy Pythagore**: chồng **12 quãng 5 thuần** (3:2) không về đúng **7 quãng 8** mà dư khoảng **23,46 cent** (gần một phần tư nửa cung). Mỗi hệ thống lên dây là một cách "giấu" phần dư này:
 | Hệ thống | Cách xử lý | Hệ quả |
 |---|---|---|
 | **Pythagore** | Mọi quãng 5 thuần, dồn phần dư vào **một quãng 5 "sói"** | Quãng 3 trưởng rộng (81:64, 408 cent), nghe chói |
-| **Trung bình** (meantone, thời Phục hưng) | Thu hẹp các quãng 5 để **quãng 3 trưởng thuần** | Một quãng "sói" rất phô; giọng nhiều dấu hoá khó dùng; C♯ ≠ D♭ (xem [[trung-am]]) |
+| **Trung bình** (meantone, thời [[thoi-ky-phuc-hung|Phục hưng]]) | Thu hẹp các quãng 5 để **quãng 3 trưởng thuần** | Một quãng "sói" rất phô; giọng nhiều [[dau-hoa|dấu hoá]] khó dùng; C♯ ≠ D♭ (xem [[trung-am]]) |
 | **Bình quân bất đều** (well temperament) | Andreas Werckmeister (1691) chia phần dư cho vài quãng 5 | **Mọi giọng dùng được**, nhưng mỗi giọng có **màu riêng** |
 | **Bình quân 12** | Mỗi quãng 5 hẹp đi 1/12 dấu phẩy (khoảng 2 cent) | Mọi giọng như nhau; quãng 3 trưởng **rộng hơn thuần khoảng 14 cent** |
 
 ## "Clavier bình quân" có phải bình quân 12?
-Tên gốc là *Das Wohltemperierte Klavier* — đàn phím **"được lên dây tốt"**, nghĩa là một hệ thống mà **mọi giọng nghe đều hay**, không nhất thiết là mọi giọng **giống nhau**. Giới nghiên cứu nhìn chung cho rằng Bach **không** dùng bình quân 12, nhưng không biết chính xác hệ thống nào. Năm 2005, Bradley Lehman đề xuất rằng những đường xoắn trên trang bìa bản thảo là "công thức" lên dây của Bach — giả thuyết này bị nhiều người bác bỏ. Bộ tác phẩm gồm 24 Prelude và Fugue ở đủ 24 giọng (xem [[fugue]]).
+Tên gốc là *Das Wohltemperierte Klavier* — đàn phím **"được lên dây tốt"**, nghĩa là một hệ thống mà **mọi giọng nghe đều hay**, không nhất thiết là mọi giọng **giống nhau**. Giới nghiên cứu nhìn chung cho rằng [[johann-sebastian-bach|Bach]] **không** dùng bình quân 12, nhưng không biết chính xác hệ thống nào. Năm 2005, Bradley Lehman đề xuất rằng những đường xoắn trên trang bìa bản thảo là "công thức" lên dây của Bach — giả thuyết này bị nhiều người bác bỏ. Bộ tác phẩm gồm 24 [[the-loai|Prelude]] và Fugue ở đủ 24 giọng (xem [[fugue]]).
 
 Piano thực tế còn được lên dây "kéo giãn" một chút so với bình quân 12 lý thuyết — xem [[chuoi-boi-am]]. Bối cảnh lịch sử: [[cac-thoi-ky]]. Lên dây và bảo quản đàn: [[bao-duong-piano]].
 `,

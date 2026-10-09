@@ -38,7 +38,7 @@ Trường độ được tính bằng **phách**. Trong nhịp phổ biến 4/4 
 Các nốt móc đơn trở xuống thường được **nối bằng gạch ngang** theo từng phách để dễ đọc — một gạch = móc đơn, hai gạch = móc kép.
 
 ## Tên gọi kiểu Anh và kiểu Mỹ
-Sách tiếng Anh dùng hai hệ tên khác nhau. Giáo trình theo chuẩn Anh (như ABRSM) dùng tên **kiểu Anh**, nên giáo viên cần biết cả hai:
+Sách tiếng Anh dùng hai hệ tên khác nhau. Giáo trình theo chuẩn Anh (như [[thi-cap-do|ABRSM]]) dùng tên **kiểu Anh**, nên giáo viên cần biết cả hai:
 | Tiếng Việt | Kiểu Mỹ (theo phân số) | Kiểu Anh |
 |---|---|---|
 | Nốt tròn đôi | double whole note | breve |
@@ -49,16 +49,16 @@ Sách tiếng Anh dùng hai hệ tên khác nhau. Giáo trình theo chuẩn Anh 
 | Nốt móc kép | sixteenth note | **semiquaver** |
 
 ## Lịch sử: vì sao "nốt tròn" lại là "nửa nốt ngắn"?
-- Khoảng năm **1200** ở Pháp, nhịp điệu được ghi bằng các **"điệu thức tiết tấu"** — những mẫu dài – ngắn cố định lặp lại.
-- Chuyên luận *Ars cantus mensurabilis* (thường gán cho Franco xứ Cologne, khoảng 1260–1280) hệ thống hoá **ký âm định lượng**: chỉ có ba giá trị chính thức — **longa** (dài), **brevis** (ngắn), **semibrevis** (nửa ngắn), và mỗi nốt **chỉ chia ba**. Chia đôi chỉ được công nhận từ thế kỷ 14 (*Ars nova*).
+- Khoảng năm **1200** ở Pháp, nhịp điệu được ghi bằng các **"[[dieu-thuc|điệu thức]] tiết tấu"** — những mẫu dài – ngắn cố định lặp lại.
+- Chuyên luận *Ars cantus mensurabilis* (thường gán cho Franco xứ Cologne, khoảng 1260–1280) hệ thống hoá **[[ky-am|ký âm]] định lượng**: chỉ có ba giá trị chính thức — **longa** (dài), **brevis** (ngắn), **semibrevis** (nửa ngắn), và mỗi nốt **chỉ chia ba**. Chia đôi chỉ được công nhận từ thế kỷ 14 (*Ars nova*).
 - Về sau xuất hiện thêm **minima** ("nhỏ nhất", thế kỷ 14), rồi các nốt nhỏ hơn nữa. Khi nhạc dùng nốt ngày càng ngắn, **semibrevis** — vốn là "nửa nốt ngắn" — dần trở thành nốt **dài nhất** thường dùng. Đó là lý do nốt tròn tiếng Anh vẫn gọi là *semibreve*. Tên *crotchet* (nốt đen) đến từ tiếng Pháp cổ *crochet* — "cái móc nhỏ".
 
 ## Các hệ thống đếm phách
 | Hệ thống | Cách đọc | Ưu – nhược |
 |---|---|---|
 | **Đếm số "1 e & a"** | Nốt đen: "1 2 3 4"; móc đơn: "1 & 2 &"; móc kép: "1 e & a" | Phổ biến nhất ở trường học Mỹ; cho biết vị trí nốt trong phách, nhưng phải hiểu [[so-chi-nhip]] trước |
-| **Kodály** | Nốt đen "ta", cặp móc đơn "ti-ti", nốt trắng "ta-a", móc kép "ti-ri ti-ri", đen giữa hai móc đơn "syn-co-pa" | Dễ cho trẻ nhỏ; mỗi âm tiết gắn với một **hình nốt** nên kém gắn với phách khi nhịp phức tạp |
-| **Takadimi** | Đầu phách luôn là "ta"; nửa phách "di"; móc kép "ta-ka-di-mi" | Âm tiết gắn với **vị trí trong phách**, dùng được cho cả nhịp đơn và nhịp kép, từ sơ cấp đến nâng cao |
+| **[[zoltan-kodaly|Kodály]]** | Nốt đen "ta", cặp móc đơn "ti-ti", nốt trắng "ta-a", móc kép "ti-ri ti-ri", đen giữa hai móc đơn "syn-co-pa" | Dễ cho trẻ nhỏ; mỗi âm tiết gắn với một **hình nốt** nên kém gắn với phách khi nhịp phức tạp |
+| **[[am-tiet-nhip|Takadimi]]** | Đầu phách luôn là "ta"; nửa phách "di"; móc kép "ta-ka-di-mi" | Âm tiết gắn với **vị trí trong phách**, dùng được cho cả nhịp đơn và nhịp kép, từ sơ cấp đến nâng cao |
 
 Nên đọc to tiết tấu trước khi chơi (xem [[kiem-soat-toc-do]]). Nghiên cứu so sánh hiệu quả các hệ thống còn ít.
 
@@ -91,7 +91,7 @@ Lặng tròn còn được dùng để chỉ **im lặng cả ô nhịp**, bất
 Giá trị các dấu lặng: xem bảng trong [[truong-do]]. Dấu lặng cũng có thể có [[cham-doi-dau-noi|chấm dôi]].
 
 ## Lặng nhiều ô nhịp
-Trong bè nhạc cụ (ví dụ phần piano trong hoà tấu), nhiều ô nhịp im lặng liên tiếp được gộp thành **một vạch đậm nằm ngang** trên dòng giữa, có **con số** ghi số ô nhịp phía trên. Dấu này phải **ngắt ra** ở chỗ đổi số chỉ nhịp, đổi hoá biểu hoặc vạch kép. Người chơi phải **đếm đủ** số ô nhịp lặng trước khi vào.
+Trong bè nhạc cụ (ví dụ phần piano trong hoà tấu), nhiều ô nhịp im lặng liên tiếp được gộp thành **một vạch đậm nằm ngang** trên dòng giữa, có **con số** ghi số ô nhịp phía trên. Dấu này phải **ngắt ra** ở chỗ đổi số chỉ nhịp, đổi [[hoa-bieu|hoá biểu]] hoặc vạch kép. Người chơi phải **đếm đủ** số ô nhịp lặng trước khi vào.
 
 ## Viết dấu lặng để "lộ" phách
 Quy ước chép nhạc: dấu lặng **không được che** vị trí của phách.
@@ -130,23 +130,23 @@ Dấu chấm sau nốt làm nốt dài thêm **một nửa** giá trị của ch
 Hình tiết tấu "đen chấm dôi + móc đơn" (1½ + ½) rất phổ biến, tạo cảm giác nhún nhảy.
 
 ## Dấu nối
-Dấu nối là đường cong nối **hai nốt cùng cao độ** — chỉ đánh nốt đầu và giữ luôn cho nốt sau. Dùng khi nốt kéo **qua vạch nhịp**, hoặc khi cần độ dài không viết được bằng một hình nốt.
+Dấu nối là đường cong nối **hai nốt cùng cao độ** — chỉ đánh nốt đầu và giữ luôn cho nốt sau. Dùng khi nốt kéo **qua [[so-chi-nhip|vạch nhịp]]**, hoặc khi cần độ dài không viết được bằng một hình nốt.
 
 ::img Music-tie.svg | Dấu nối
 
 Đừng nhầm với **dấu luyến** (slur) — đường cong nối các nốt **khác** cao độ, yêu cầu chơi liền tiếng (xem [[cach-dien-tau]]).
 
 ## Chấm dôi trong nhạc Baroque: viết một đằng, chơi một nẻo?
-**Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời Baroque chơi một số hình chấm dôi **dài hơn** cách viết. Trong **khúc mở màn kiểu Pháp** (French overture), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
+**Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời [[thoi-ky-baroque|Baroque]] chơi một số hình chấm dôi **dài hơn** cách viết. Trong **khúc mở màn kiểu Pháp** (French overture), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
 - Tỉ lệ thông thường của "đen chấm dôi + móc đơn" là **3 : 1**; nhiều nguồn cho rằng khúc mở màn kiểu Pháp cần tỉ lệ gắt hơn, khoảng **7 : 1**.
 - Thập niên 1960–70, Frederick Neumann đã **phản bác** cách hiểu cực đoan này, gây tranh luận lớn.
-- Nghiên cứu thực nghiệm (Schubert và Fabian) cho thấy **tỉ lệ chấm dôi** ít ảnh hưởng đến cảm nhận tính chất hơn người ta nghĩ; **cách diễn tấu, tốc độ và cường độ** quan trọng hơn.
+- Nghiên cứu thực nghiệm ([[franz-schubert|Schubert]] và Fabian) cho thấy **tỉ lệ chấm dôi** ít ảnh hưởng đến cảm nhận tính chất hơn người ta nghĩ; **cách diễn tấu, tốc độ và [[cuong-do|cường độ]]** quan trọng hơn.
 
 ## Notes inégales — nốt "không đều" kiểu Pháp
 Ở Pháp khoảng **1690–1780**, các cặp nốt viết **đều nhau** (thường là móc đơn) được chơi **dài – ngắn**.
 - Mức "không đều" dao động từ gần như không nhận ra (7 : 5), nhẹ (không quá 2 : 1), vừa (khoảng 3 : 1) đến mạnh; dạng **nhẹ** có lẽ là phổ biến nhất.
 - Đo các bản thu hiện đại (Moelants, 2011): tỉ lệ trung bình khoảng **1,63 : 1**, mỗi người chơi khác nhau (1,33 – 1,89), và không đều hơn ở các vị trí quan trọng về phách.
-- Đây là thói quen **của nhạc Pháp**: Couperin và nhiều tác giả Pháp nói rõ **không áp dụng** cho nhạc nước khác, và nó bị huỷ khi có nốt nhỏ hơn.
+- Đây là thói quen **của nhạc Pháp**: [[francois-couperin|Couperin]] và nhiều tác giả Pháp nói rõ **không áp dụng** cho nhạc nước khác, và nó bị huỷ khi có nốt nhỏ hơn.
 
 Hiện tượng này gần giống cảm giác [[swing]] trong jazz, nhưng là hai truyền thống riêng biệt. Bối cảnh: [[phong-cach-dien-tau]].
 
@@ -171,16 +171,16 @@ Bản nhạc được chia thành các **ô nhịp** bằng **vạch nhịp**. S
 | Nhịp | Ý nghĩa | Phách mạnh – nhẹ | Gặp trong |
 |---|---|---|---|
 | 2/4 | 2 phách, nốt đen = 1 phách | M – n | Hành khúc, polka |
-| 3/4 | 3 phách, nốt đen = 1 phách | M – n – n | Valse, minuet |
+| 3/4 | 3 phách, nốt đen = 1 phách | M – n – n | Valse, [[minuet-va-trio|minuet]] |
 | 4/4 | 4 phách, nốt đen = 1 phách | M – n – m – n | Pop, rock, phần lớn nhạc |
 | 2/2 | 2 phách, nốt trắng = 1 phách | M – n | Hành khúc nhanh |
-| 6/8 | 6 nốt móc đơn, nhóm 3+3 | M – n – n – m – n – n | Barcarolle, ballad đung đưa |
+| 6/8 | 6 nốt móc đơn, nhóm 3+3 | M – n – n – m – n – n | Barcarolle, [[dieu-dem-pho-bien|ballad]] đung đưa |
 
 (M = mạnh, m = mạnh vừa, n = nhẹ)
 
 ## Nhịp đơn và nhịp kép
 - **Nhịp đơn** (2/4, 3/4, 4/4): mỗi phách **chia đôi**.
-- **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách là nốt đen chấm dôi, **chia ba**. 6/8 thực chất có **2 phách lớn**, không phải 6.
+- **Nhịp kép** (6/8, 9/8, 12/8): mỗi phách là nốt đen [[cham-doi-dau-noi|chấm dôi]], **chia ba**. 6/8 thực chất có **2 phách lớn**, không phải 6.
 
 ## Ký hiệu đặc biệt
 ::img Common time.svg | Chữ C — "common time", tương đương 4/4
@@ -188,7 +188,7 @@ Bản nhạc được chia thành các **ô nhịp** bằng **vạch nhịp**. S
 Chữ C có gạch dọc là **alla breve** (cut time), tương đương 2/2.
 
 ## Chữ "C" không phải viết tắt của "common"
-Ký hiệu **C** bắt nguồn từ **ký âm định lượng** thời Trung cổ – Phục hưng (khoảng 1260–1600):
+Ký hiệu **C** bắt nguồn từ **[[ky-am|ký âm]] định lượng** thời [[thoi-ky-trung-co|Trung cổ]] – [[thoi-ky-phuc-hung|Phục hưng]] (khoảng 1260–1600):
 - Nhịp **ba** được gọi là *tempus perfectum* ("thời hoàn hảo"), ký hiệu bằng **vòng tròn kín** — gắn với ý niệm Chúa Ba Ngôi.
 - Nhịp **đôi** là *tempus imperfectum* ("thời chưa hoàn hảo"), ký hiệu bằng **vòng tròn hở** — trông giống chữ C.
 - Vạch dọc qua vòng tròn hở là dấu **"rút gọn"**: chơi nhanh gấp đôi. Từ đó có **alla breve** — nốt *breve* chiếm thời gian vốn của *semibreve*.
@@ -196,7 +196,7 @@ Ký hiệu **C** bắt nguồn từ **ký âm định lượng** thời Trung c�
 Về sau, C được hiểu là **4 phách** mỗi ô, và tiếng Anh gọi là "common time" — một cách gọi muộn, không phải nguồn gốc của ký hiệu.
 
 ## Khi giảng dạy
-- **6/8 có hai phách**, không phải sáu: đếm theo phách lớn, ví dụ "**1**-2-3 **2**-2-3", hoặc dùng hệ thống đếm gắn với vị trí trong phách như Takadimi (xem [[truong-do]]).
+- **6/8 có hai phách**, không phải sáu: đếm theo phách lớn, ví dụ "**1**-2-3 **2**-2-3", hoặc dùng hệ thống đếm gắn với vị trí trong phách như [[am-tiet-nhip|Takadimi]] (xem [[truong-do]]).
 - Phân biệt **3/4** (ba phách, mỗi phách chia đôi) với **6/8** (hai phách, mỗi phách chia ba) dù cả hai đều có 6 móc đơn — xem [[hemiola]].
 
 ## Nhịp lẻ
@@ -221,7 +221,7 @@ Xem thêm: [[nhip-do]], [[nhip-lay-da]], [[dao-phach]], [[hemiola]].
       ['Encyclopedia.com — Rubato', 'https://encyclopedia.com/literature-and-arts/performing-arts/music-history/rubato'],
     ],
     body: `
-Nhịp độ được ghi ở đầu bản nhạc, phía trên [[so-chi-nhip]]: bằng con số máy đếm nhịp (ví dụ ♩ = 120 nghĩa là 120 nốt đen mỗi phút) hoặc bằng thuật ngữ.
+Nhịp độ được ghi ở đầu bản nhạc, phía trên [[so-chi-nhip]]: bằng con số máy đếm nhịp (ví dụ ♩ = 120 nghĩa là 120 [[truong-do|nốt đen]] mỗi phút) hoặc bằng thuật ngữ.
 
 ## Thuật ngữ nhịp độ (chậm → nhanh)
 | Thuật ngữ | Nghĩa | BPM tham khảo |
@@ -260,13 +260,13 @@ Thuật ngữ về tính chất (dolce, cantabile…): xem [[thuat-ngu]].
 ## Lịch sử máy đếm nhịp
 - **Dietrich Nikolaus Winkel** ở Amsterdam chế tạo cơ cấu con lắc ngược (khoảng 1814–1815). **Johann Nepomuk Maelzel** thêm **thang số**, đặt tên "**metronome**" (Hy Lạp: *metron* — đo + *nomos* — luật), lấy **bằng sáng chế Pháp ngày 14/9/1815** và sản xuất hàng loạt từ 1816. Một hội đồng Hà Lan sau đó xác nhận Winkel có trước, nhưng tên tuổi vẫn gắn với Maelzel.
 - Ký hiệu **M.M.** trên bản nhạc nghĩa là "**Maelzel's Metronome**".
-- [[Beethoven]] là nhà soạn nhạc lớn đầu tiên ghi số metronome: dấu đầu tiên vào tháng 12/1815; bảng tốc độ cho **8 bản giao hưởng** được đăng tháng 12/1817. Trong thư năm 1817, ông còn nói muốn **bỏ hẳn** các từ tiếng Ý.
+- [[Beethoven]] là nhà soạn nhạc lớn đầu tiên ghi số metronome: dấu đầu tiên vào tháng 12/1815; bảng tốc độ cho **8 bản [[the-loai|giao hưởng]]** được đăng tháng 12/1817. Trong thư năm 1817, ông còn nói muốn **bỏ hẳn** các từ tiếng Ý.
 
 ## Tranh cãi: Sonata "Hammerklavier"
-Op. 106 là sonata piano **duy nhất** của Beethoven có số metronome. Chương 1 ghi **nốt trắng = 138** — nhanh đến mức Moscheles, trong bản in của mình, đã đổi thành nốt đen = 138. Nhiều học giả và người chơi cho rằng nốt trắng = 138 là ý của Beethoven, nhưng phần lớn chơi chậm hơn. Các số metronome của Beethoven nói chung bị coi là **quá nhanh**; có giả thuyết cho rằng máy của ông bị hỏng, có giả thuyết khác cho rằng chúng khớp với bảng tốc độ do chính Maelzel đề xuất.
+Op. 106 là [[hinh-thuc-sonata|sonata]] piano **duy nhất** của Beethoven có số metronome. Chương 1 ghi **nốt trắng = 138** — nhanh đến mức Moscheles, trong bản in của mình, đã đổi thành nốt đen = 138. Nhiều học giả và người chơi cho rằng nốt trắng = 138 là ý của Beethoven, nhưng phần lớn chơi chậm hơn. Các số metronome của Beethoven nói chung bị coi là **quá nhanh**; có giả thuyết cho rằng máy của ông bị hỏng, có giả thuyết khác cho rằng chúng khớp với bảng tốc độ do chính Maelzel đề xuất.
 
 ## Rubato
-**Tempo rubato** ("thời gian bị đánh cắp") là sự co giãn nhịp độ để biểu cảm. Cách hiểu thay đổi theo thời kỳ — ở thời Mozart và Chopin, phần đệm thường được giữ đều trong khi giai điệu tự do (xem [[phong-cach-dien-tau]]). Bài đầy đủ: [[rubato]]. Nghiên cứu về cách người biểu diễn uốn nhịp theo câu: [[dien-dat-cau-nhac]]. Cách tập với máy đếm nhịp: [[kiem-soat-toc-do]].
+**Tempo rubato** ("thời gian bị đánh cắp") là sự co giãn nhịp độ để biểu cảm. Cách hiểu thay đổi theo thời kỳ — ở thời [[wolfgang-amadeus-mozart|Mozart]] và [[frederic-chopin|Chopin]], phần đệm thường được giữ đều trong khi [[giai-dieu|giai điệu]] tự do (xem [[phong-cach-dien-tau]]). Bài đầy đủ: [[rubato]]. Nghiên cứu về cách người biểu diễn uốn nhịp theo câu: [[dien-dat-cau-nhac]]. Cách tập với máy đếm nhịp: [[kiem-soat-toc-do]].
 `,
   },
   {
@@ -288,11 +288,11 @@ Trong nhịp đơn, phách bình thường chỉ chia đôi. Muốn chia ba, ta 
 
 | Nhóm | Chơi trong thời gian của |
 |---|---|
-| Liên ba móc đơn | 1 nốt đen (2 móc đơn) |
+| Liên ba móc đơn | 1 [[truong-do|nốt đen]] (2 móc đơn) |
 | Liên ba nốt đen | 1 nốt trắng (2 nốt đen) |
 | Liên năm móc kép | 1 nốt đen (4 móc kép) |
 | Liên sáu móc kép | 1 nốt đen (4 móc kép) |
-| Liên hai (trong nhịp kép) | 1 nốt đen chấm dôi (3 móc đơn) |
+| Liên hai (trong nhịp kép) | 1 nốt đen [[cham-doi-dau-noi|chấm dôi]] (3 móc đơn) |
 
 ## Mẹo luyện
 - Đếm "**1**-la-li **2**-la-li" cho liên ba, chia đều ba phần.
@@ -325,7 +325,7 @@ Con số trên nhóm cho biết **bao nhiêu nốt** được nhét vào; nhóm 
 Mỗi [[so-chi-nhip]] có quy luật phách mạnh – nhẹ. **Đảo phách** xảy ra khi trọng âm rơi vào chỗ lẽ ra nhẹ, tạo cảm giác bất ngờ, cuốn hút.
 
 ## Các cách tạo đảo phách
-- **Nốt dài bắt đầu ở phách nhẹ**: ví dụ trong 4/4: móc đơn – đen – móc đơn (nốt đen rơi giữa phách).
+- **Nốt dài bắt đầu ở phách nhẹ**: ví dụ trong 4/4: móc đơn – đen – móc đơn ([[truong-do|nốt đen]] rơi giữa phách).
 - **[[cham-doi-dau-noi|Dấu nối]] qua phách mạnh**: nốt bắt đầu trước phách mạnh và ngân qua nó, nên phách mạnh không được đánh.
 - **Dấu nhấn (>)** đặt trên phách nhẹ (xem [[cach-dien-tau]]).
 - **[[dau-lang|Dấu lặng]] ở phách mạnh**.
@@ -337,7 +337,7 @@ Mỗi [[so-chi-nhip]] có quy luật phách mạnh – nhẹ. **Đảo phách** 
 
 ## Ragtime: đảo phách trên nền nhịp đều
 - **"Maple Leaf Rag"** (1899) của [[Joplin|Scott Joplin]] là tác phẩm ragtime nổi tiếng nhất; theo một nguồn, đây là bản nhạc đầu tiên bán được **hơn một triệu bản in** ở Mỹ.
-- Cảm giác "rách" (*ragged*) của ragtime đến từ sự **căng thẳng** giữa phần đệm **đều đặn** ở bè trầm và giai điệu **đảo phách** ở bè trên. Một phân tích còn chỉ ra các trọng âm lặp đều tạo nhóm **3** trên nền nhịp **2** — gần với [[hemiola]].
+- Cảm giác "rách" (*ragged*) của ragtime đến từ sự **căng thẳng** giữa phần đệm **đều đặn** ở bè trầm và [[giai-dieu|giai điệu]] **đảo phách** ở bè trên. Một phân tích còn chỉ ra các trọng âm lặp đều tạo nhóm **3** trên nền nhịp **2** — gần với [[hemiola]].
 - Kỹ thuật tay trái đều: xem [[dem-hat-piano|đệm stride]].
 
 ## Khi giảng dạy
@@ -358,7 +358,7 @@ Xem thêm: [[am-giai-blues]], [[blues-12-nhip]].
       ['Wikipedia — Anacrusis', 'https://en.wikipedia.org/wiki/Anacrusis'],
     ],
     body: `
-Nhiều giai điệu không bắt đầu ở phách mạnh mà bắt đầu bằng vài nốt "lấy đà". Ô nhịp chứa các nốt này là một **ô nhịp thiếu**.
+Nhiều [[giai-dieu|giai điệu]] không bắt đầu ở phách mạnh mà bắt đầu bằng vài nốt "lấy đà". Ô nhịp chứa các nốt này là một **ô nhịp thiếu**.
 
 ## Quy tắc bù trừ
 Theo truyền thống, **ô nhịp cuối** bài sẽ thiếu đúng phần mà ô lấy đà đã dùng, để tổng hai ô cộng lại bằng một ô đầy đủ. Ví dụ bài 3/4 có lấy đà 1 phách → ô cuối có 2 phách.
@@ -366,7 +366,7 @@ Theo truyền thống, **ô nhịp cuối** bài sẽ thiếu đúng phần mà 
 ## Ví dụ quen thuộc
 - "Happy Birthday" (3/4) bắt đầu bằng 2 nốt lấy đà "Hap-py".
 - Quốc ca Mỹ "The Star-Spangled Banner" bắt đầu bằng hai nốt lấy đà "O-oh".
-- "Für Elise" (Beethoven) bắt đầu bằng nốt lấy đà E5 – D♯5 trước ô nhịp đầu tiên.
+- "[[phan-tich-fur-elise|Für Elise]]" ([[ludwig-van-beethoven|Beethoven]]) bắt đầu bằng nốt lấy đà E5 – D♯5 trước ô nhịp đầu tiên.
 
 ## Tên gọi
 "Anacrusis" vốn là thuật ngữ **thi ca**: những âm tiết ở đầu câu thơ **không tính** vào nhịp thơ. Từ gốc Hy Lạp *anakrousis* — "sự đẩy lùi", "sự bắt đầu một giai điệu" (*ana-* "lùi lại" + *krouein* "gõ").
@@ -391,22 +391,22 @@ Khi đếm, hãy đếm cả các phách còn thiếu trước nốt lấy đà 
     ],
     body: `
 ## Nhịp lẻ (nhịp cộng)
-Ô nhịp gồm các nhóm phách **dài – ngắn không đều**, ghép từ nhóm 2 và 3 nốt móc đơn:
+Ô nhịp gồm các nhóm phách **dài – ngắn không đều**, ghép từ nhóm 2 và 3 [[truong-do|nốt móc đơn]]:
 | Nhịp | Cách chia thường gặp | Ví dụ |
 |---|---|---|
-| 5/4 | 3 + 2 | "Take Five" (Dave Brubeck), "Mars" (Holst) |
+| 5/4 | 3 + 2 | "Take Five" ([[dave-brubeck|Dave Brubeck]]), "Mars" ([[gustav-holst|Holst]]) |
 | 5/8 | 2 + 3 hoặc 3 + 2 | Nhạc dân gian Hy Lạp, Bulgaria |
 | 7/8 | 2 + 2 + 3, 3 + 2 + 2 | Nhạc Balkan, "Money" (Pink Floyd, 7/4) |
-| 9/8 | 2 + 2 + 2 + 3 | "Blue Rondo à la Turk" (Brubeck) |
+| 9/8 | 2 + 2 + 2 + 3 | "Blue [[rondo|Rondo]] à la Turk" (Brubeck) |
 
 Lưu ý: 9/8 thông thường là [[so-chi-nhip|nhịp kép]] 3 + 3 + 3; cách chia 2 + 2 + 2 + 3 là nhịp lẻ "aksak" (khập khiễng).
 
 ## Nhịp thay đổi
-Số chỉ nhịp đổi ở nhiều ô nhịp liên tiếp (3/16 – 2/16 – 3/16 – 5/16…). Stravinsky, "Le Sacre du printemps" (1913), phần "Danse sacrale" là ví dụ kinh điển; Bartók dùng nhiều trong bộ "Mikrokosmos" cho piano.
+Số chỉ nhịp đổi ở nhiều ô nhịp liên tiếp (3/16 – 2/16 – 3/16 – 5/16…). [[igor-stravinsky|Stravinsky]], "Le Sacre du printemps" (1913), phần "Danse sacrale" là ví dụ kinh điển; Bartók dùng nhiều trong bộ "Mikrokosmos" cho piano.
 
 ## Ba tác phẩm tiêu biểu
 - **"Take Five"** — Paul Desmond sáng tác, Dave Brubeck Quartet thu năm **1959** trong album *Time Out*. Tay trống Joe Morello đề nghị một bài nhịp **5/4**, và tên bài lấy từ chính số chỉ nhịp. Mỗi bài trong album dùng một nhịp khác nhau, lấy cảm hứng từ chuyến lưu diễn Âu – Á năm 1958 của nhóm.
-- **"Mars"** trong *The Planets* của Holst — phác thảo mùa hè 1914; nhịp **5/4** cùng motif tiết tấu dai dẳng tạo không khí chiến tranh.
+- **"Mars"** trong *The Planets* của Holst — phác thảo mùa hè 1914; nhịp **5/4** cùng [[motif|motif]] tiết tấu dai dẳng tạo không khí chiến tranh.
 - **[[Bartók]] — "Sáu vũ khúc theo nhịp Bulgaria"**: phần kết của tuyển tập *Mikrokosmos* (1939–40), dựa trên các nhịp **lẻ** của nhạc dân gian Bulgaria. Trong "nhịp Bulgaria" của Bartók, đơn vị móc đơn **luôn hiện diện** — người chơi đếm bằng móc đơn và nhóm chúng thành 2 và 3. Đây là chất liệu piano kinh điển để dạy nhịp lẻ.
 
 ## Mẹo đếm
@@ -436,17 +436,17 @@ Trong [[so-chi-nhip|nhịp 3/4]], hai ô nhịp có 6 phách: bình thường nh
 ::img Mozart piano sonata K332 hemiola excerpt.svg | Hemiola ở hai ô nhịp sau trong Sonata K. 332 của Mozart
 
 ## Ở đâu?
-- **Kết câu** trong vũ khúc Baroque (courante, minuet, sarabande) — hemiola làm chậm lại cảm giác nhịp ngay trước [[cau-ket]].
+- **Kết câu** trong vũ khúc [[thoi-ky-baroque|Baroque]] (courante, [[minuet-va-trio|minuet]], sarabande) — hemiola làm chậm lại cảm giác nhịp ngay trước [[cau-ket]].
 - Brahms dùng rất nhiều để tạo sự mơ hồ về nhịp.
-- Trong 6/8 ↔ 3/4: cùng 6 nốt móc đơn, nhóm 3+3 hay 2+2+2 — rất phổ biến trong nhạc Mỹ Latin ("America" trong West Side Story).
+- Trong 6/8 ↔ 3/4: cùng 6 [[truong-do|nốt móc đơn]], nhóm 3+3 hay 2+2+2 — rất phổ biến trong nhạc Mỹ Latin ("America" trong West Side Story).
 
 Hemiola là một dạng [[dao-phach]] có tổ chức và họ hàng gần với [[da-nhip]] (3 chọi 2 theo thời gian nối tiếp thay vì đồng thời).
 
 ## Tên gọi
-Từ tiếng Hy Lạp *hēmiolios* — "**một rưỡi**", tức tỉ lệ **3 : 2** (tiếng Latin tương đương: *sesquialtera*). Từ này có hai nghĩa: về tiết tấu là ba phách bằng nhau trong thời gian vốn của hai; về cao độ là [[quang|quãng 5 đúng]] (tỉ lệ tần số 3 : 2).
+Từ tiếng Hy Lạp *hēmiolios* — "**một rưỡi**", tức tỉ lệ **3 : 2** (tiếng Latin tương đương: *sesquialtera*). Từ này có hai nghĩa: về tiết tấu là ba phách bằng nhau trong thời gian vốn của hai; về cao độ là [[quang|quãng 5 đúng]] (tỉ lệ [[am-hoc-co-ban|tần số]] 3 : 2).
 
 ## Lịch sử
-Việc chuyển qua lại giữa 6/4 và 3/2 đã rất phổ biến ở **thế kỷ 15** (Dunstable, Dufay) và trong **nhạc Baroque**, nơi nó là **đặc trưng của điệu courante** và thường xuất hiện ngay trước [[cau-ket|kết]] như một "hiệu ứng" làm chậm và nhấn mạnh. Ở [[Brahms]], hemiola được nghiên cứu như một cách **giải toả** những xung đột tiết tấu trước đó, làm dịu sức căng trước kết — ví dụ chương 1 Sonata piano Op. 5.
+Việc chuyển qua lại giữa 6/4 và 3/2 đã rất phổ biến ở **thế kỷ 15** (Dunstable, Dufay) và trong **nhạc Baroque**, nơi nó là **đặc trưng của điệu courante** và thường xuất hiện ngay trước [[cau-ket|kết]] như một "hiệu ứng" làm chậm và nhấn mạnh. Ở [[Brahms]], hemiola được nghiên cứu như một cách **giải toả** những xung đột tiết tấu trước đó, làm dịu sức căng trước kết — ví dụ chương 1 [[hinh-thuc-sonata|Sonata]] piano Op. 5.
 
 ## Khi giảng dạy
 Khi học vũ khúc Baroque ở nhịp 3 (minuet, courante, sarabande), hãy cho học sinh **tìm hemiola trước mỗi chỗ kết** và đánh dấu trên bản nhạc — nhấn theo nhóm 2 phách ở đó thay vì nhấn phách 1 của mỗi ô.
@@ -480,11 +480,11 @@ Trong cùng một khoảng thời gian, một bè chia 3, bè kia chia 2 (hoặc
 Câu gợi nhớ: "**nice cup of tea**" (nhóm 3: nice – cup – tea; nhóm 2: nice – of). Với **4 chọi 3**: chia 12 phần — "**pass** the **gol**-den **but**-ter" (các âm in đậm là nhóm 3). Các câu này là mẹo dạy học được truyền miệng, có nhiều biến thể.
 
 ## Đa nhịp (polymeter)
-Hai bè có **độ dài ô nhịp khác nhau**: ví dụ một bè lặp mẫu 3 phách, bè kia lặp mẫu 4 phách — sau 12 phách chúng mới gặp lại ở phách đầu. Rất phổ biến trong nhạc châu Phi, nhạc [[toi-gian]] và progressive rock.
+Hai bè có **độ dài [[so-chi-nhip|ô nhịp]] khác nhau**: ví dụ một bè lặp mẫu 3 phách, bè kia lặp mẫu 4 phách — sau 12 phách chúng mới gặp lại ở phách đầu. Rất phổ biến trong nhạc châu Phi, nhạc [[toi-gian]] và progressive rock.
 
 ## Ligeti và nhạc Trung Phi
-Năm 1982, [[Ligeti]] nghe các bản thu nhạc của người **Banda-Linda** (Cộng hoà Trung Phi) do nhà dân tộc nhạc học **Simha Arom** thực hiện, và mô tả đó là thứ âm nhạc "phức điệu, đa tiết tấu với độ phức tạp đáng kinh ngạc". Ý tưởng của Arom về một **mạch phách nhanh, đều, không phân cấp** (thay cho ô nhịp châu Âu) trở thành nền tảng cho các **Étude piano** của Ligeti, cùng với âm nhạc của Conlon Nancarrow, Chopin và Debussy.
-- **Étude số 1 "Désordre"** (1985): tay phải chỉ chơi **phím trắng**, tay trái chỉ chơi **phím đen**; câu nhạc tay phải **ngắn đi một móc đơn** mỗi lần lặp, nên trọng âm hai tay **trôi lệch** dần nhau. Theo Ligeti, người chơi giữ một nhịp đều, nhưng cách phân bố trọng âm không đều tạo ra những hình dạng **tưởng như hỗn loạn**.
+Năm 1982, [[Ligeti]] nghe các bản thu nhạc của người **Banda-Linda** (Cộng hoà Trung Phi) do nhà dân tộc nhạc học **Simha Arom** thực hiện, và mô tả đó là thứ âm nhạc "[[doi-am|phức điệu]], đa tiết tấu với độ phức tạp đáng kinh ngạc". Ý tưởng của Arom về một **[[cam-nhan-phach|mạch phách]] nhanh, đều, không phân cấp** (thay cho ô nhịp châu Âu) trở thành nền tảng cho các **Étude piano** của Ligeti, cùng với âm nhạc của Conlon Nancarrow, [[frederic-chopin|Chopin]] và [[claude-debussy|Debussy]].
+- **Étude số 1 "Désordre"** (1985): tay phải chỉ chơi **phím trắng**, tay trái chỉ chơi **phím đen**; [[cau-nhac|câu nhạc]] tay phải **ngắn đi một móc đơn** mỗi lần lặp, nên trọng âm hai tay **trôi lệch** dần nhau. Theo Ligeti, người chơi giữ một [[kiem-soat-toc-do|nhịp đều]], nhưng cách phân bố trọng âm không đều tạo ra những hình dạng **tưởng như hỗn loạn**.
 - Ông dùng các tỉ lệ phức tạp như 3 : 5, 5 : 7, thậm chí 3 : 4 : 5 : 7 thay vì 2 chọi 3 đơn giản.
 
 Liên quan: [[hemiola]], [[nhip-hon-hop]]. Cách tập đa nhịp hai tay trên piano: [[phoi-hop-hai-tay]].
@@ -523,7 +523,7 @@ Các nghiên cứu gõ nhịp cho thấy người học nhạc **gõ chính xác
 
 ## Áp dụng khi dạy
 - **Cho cơ thể tham gia**: nhún, bước, vỗ tay theo phách trước khi chơi. Đây cũng là nền tảng của phương pháp **Dalcroze** (xem [[phuong-phap-giao-duc-am-nhac]]).
-- **Đếm to** và dùng một hệ thống đếm nhất quán (xem [[truong-do]]). Tổng hợp nghiên cứu về đọc tiết tấu cho thấy các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả (xem [[thi-tau]]).
+- **Đếm to** và dùng một hệ thống đếm nhất quán (xem [[truong-do]]). Tổng hợp nghiên cứu về [[am-tiet-nhip|đọc tiết tấu]] cho thấy các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả (xem [[thi-tau]]).
 - Dùng [[kiem-soat-toc-do|máy đếm nhịp]] để **kiểm tra**, nhưng mục tiêu là học sinh giữ được **mạch phách bên trong** khi tắt máy.
 `,
   },

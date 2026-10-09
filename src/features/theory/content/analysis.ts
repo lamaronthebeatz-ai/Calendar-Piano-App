@@ -19,7 +19,7 @@ export const analysis: Article[] = [
     ],
     body: `
 ## Phân tích là gì?
-Định nghĩa thường được trích dẫn của **Ian Bent** (từ điển *New Grove*, 1980): phân tích là việc **tách một cấu trúc âm nhạc thành các thành phần tương đối đơn giản hơn**, rồi **tìm hiểu chức năng** của các thành phần ấy trong cấu trúc. Định nghĩa này nhấn mạnh **cấu trúc**; các xu hướng sau này bổ sung câu hỏi về **ý nghĩa**, **bối cảnh lịch sử** và **biểu diễn** (xem [[lich-su-phan-tich-am-nhac]]).
+Định nghĩa thường được trích dẫn của **Ian Bent** (từ điển *New Grove*, 1980): phân tích là việc **tách một [[lo-trinh-hinh-thuc|cấu trúc âm nhạc]] thành các thành phần tương đối đơn giản hơn**, rồi **tìm hiểu chức năng** của các thành phần ấy trong cấu trúc. Định nghĩa này nhấn mạnh **cấu trúc**; các xu hướng sau này bổ sung câu hỏi về **ý nghĩa**, **bối cảnh lịch sử** và **biểu diễn** (xem [[lich-su-phan-tich-am-nhac]]).
 
 Với người chơi và người dạy đàn, phân tích trả lời ba câu hỏi: **cái gì** đang xảy ra trong bản nhạc, **vì sao** nó tác động đến người nghe, và **điều đó gợi ý gì** cho cách chơi (xem [[phan-tich-va-bieu-dien]]).
 
@@ -29,7 +29,7 @@ Theo cách chia của Jan LaRue (xem [[phan-tich-phong-cach]]), mỗi yếu tố
 |---|---|---|
 | **Lớn** | Cả tác phẩm, cả chương | Kế hoạch các giọng của cả bài |
 | **Vừa** | Một đoạn, một phần lớn | Chuyển giọng trong một phần |
-| **Nhỏ** | Một câu, vài ô nhịp | Tiến trình hợp âm trong một câu |
+| **Nhỏ** | Một câu, vài [[so-chi-nhip|ô nhịp]] | [[vong-hop-am|Tiến trình hợp âm]] trong một câu |
 Nên đi **từ lớn đến nhỏ**: biết bản đồ trước rồi mới xem chi tiết — nhưng chi tiết có thể buộc ta sửa lại bản đồ.
 
 ## Quy trình phân tích từng bước
@@ -37,10 +37,10 @@ Nên đi **từ lớn đến nhỏ**: biết bản đồ trước rồi mới xe
 2. **Nghe toàn bài** vài lần, ghi lại ấn tượng — những chỗ gây bất ngờ thường là chỗ đáng phân tích (xem [[nghe-nhac-chu-dong]], [[ky-vong-am-nhac]]).
 3. **Hình thức lớn**: tìm các [[cau-ket|kết]], các chỗ [[chuyen-giong|đổi giọng]], chỗ chủ đề quay lại → vẽ sơ đồ phần (A, B, A′…) có số ô nhịp (xem [[hinh-thuc-am-nhac]]).
 4. **Câu nhạc và chức năng**: chia câu, nhận ra period hay sentence, mỗi phần đóng vai trò mở đầu, giữa hay kết thúc (xem [[cau-nhac]], [[chuc-nang-hinh-thuc]]).
-5. **Hoà âm**: ghi số La Mã, xác định giọng và các hợp âm đặc biệt (xem [[phan-tich-hoa-am]]).
+5. **Hoà âm**: ghi số La Mã, xác định giọng và các [[hop-am-ba|hợp âm]] đặc biệt (xem [[phan-tich-hoa-am]]).
 6. **Giai điệu và motif**: đường nét, đỉnh, motif và cách nó biến đổi (xem [[giai-dieu]], [[motif]]).
-7. **Nhịp điệu**: nhịp, đảo phách, nhóm ô nhịp ở tầng cao hơn (xem [[sieu-nhip]]).
-8. **Kết cấu và âm thanh**: số bè, vai trò các bè, âm vực, cường độ (xem [[ket-cau]]).
+7. **Nhịp điệu**: nhịp, [[dao-phach|đảo phách]], nhóm ô nhịp ở tầng cao hơn (xem [[sieu-nhip]]).
+8. **Kết cấu và âm thanh**: số bè, vai trò các bè, âm vực, [[cuong-do|cường độ]] (xem [[ket-cau]]).
 9. **Ý nghĩa biểu đạt**: các "chủ đề" phong cách mà tác phẩm gợi tới (xem [[ly-thuyet-chu-de]]).
 10. **Tổng hợp**: các yếu tố phối hợp với nhau ra sao để tạo **đường đi** của tác phẩm; rút ra hệ quả cho biểu diễn.
 
@@ -53,20 +53,20 @@ Nên đi **từ lớn đến nhỏ**: biết bản đồ trước rồi mới xe
 | Phân tích nhiều tầng | [[phan-tich-schenker]] |
 | Nhịp điệu tầng cao | [[sieu-nhip]] |
 | Ý nghĩa và phong cách | [[ly-thuyet-chu-de]], [[phan-tich-phong-cach]] |
-| Nhạc thế kỷ 20 | [[neo-riemann]], [[tap-hop-cao-do]], [[ky-thuat-12-am]] |
+| Nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] | [[neo-riemann]], [[tap-hop-cao-do]], [[ky-thuat-12-am]] |
 | Bản thu | [[so-sanh-ban-thu]] |
 
 ## Thứ tự đọc các bài phân tích mẫu
 Sắp từ cấu trúc đơn giản đến phức tạp (gợi ý dạy học):
 1. [[phan-tich-canon-pachelbel]] — bè trầm lặp, biến tấu.
 2. [[phan-tich-prelude-do-truong]] — một khuôn hình rải, chỉ đọc hoà âm.
-3. [[phan-tich-gymnopedie-so1]] — hai hợp âm xen kẽ, hoà âm điệu thức.
+3. [[phan-tich-gymnopedie-so1]] — hai hợp âm xen kẽ, [[hoa-am-dieu-thuc|hoà âm điệu thức]].
 4. [[phan-tich-fur-elise]] — rondo.
 5. [[phan-tich-sonata-k545]] — hình thức sonata.
 6. [[phan-tich-rondo-alla-turca]] — rondo và chủ đề biểu đạt "Thổ Nhĩ Kỳ".
-7. [[phan-tich-traumerei]] — câu nhạc và hoà âm Lãng mạn.
+7. [[phan-tich-traumerei]] — câu nhạc và hoà âm [[thoi-ky-lang-man|Lãng mạn]].
 8. [[phan-tich-nocturne-op9-so2]] — giai điệu trang trí, nhịp 12/8.
-9. [[phan-tich-clair-de-lune]] — hoà âm ấn tượng.
+9. [[phan-tich-clair-de-lune]] — [[an-tuong|hoà âm ấn tượng]].
 
 ## Viết một bài phân tích
 Một bài phân tích tốt (gợi ý cấu trúc):
@@ -96,33 +96,33 @@ Một bài phân tích tốt (gợi ý cấu trúc):
       ['Wikipedia — Ian Bent', 'https://en.wikipedia.org/wiki/Ian_Bent'],
     ],
     body: `
-Biết lịch sử giúp hiểu rằng mỗi phương pháp phân tích **sinh ra để trả lời một câu hỏi** của thời đại nó — và có giới hạn riêng.
+Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|phương pháp phân tích]] **sinh ra để trả lời một câu hỏi** của thời đại nó — và có giới hạn riêng.
 
 ## Thế kỷ 17: phân tích như tu từ học
 **Joachim Burmeister**, ở chương cuối khảo luận *Musica poetica* (**1606**), phân tích một motet của **Orlando di Lasso** để dạy người mới học sáng tác cách học từ tác phẩm mẫu. Ông dùng khái niệm của **tu từ học** (nghệ thuật hùng biện): bản nhạc được chia như một bài diễn văn, với các "hình thái" (figure) âm nhạc tương ứng các hình thái tu từ. Đây thường được coi là một trong những bài phân tích tác phẩm sớm nhất; cách hiểu nó hiện nay vẫn còn tranh luận.
 
 ## Thế kỷ 18: câu nhạc như dấu câu
-- **Joseph Riepel** (*Anfangsgründe*, từ 1752) và **Heinrich Christoph Koch** (*Versuch einer Anleitung zur Composition*, 3 tập, **1782–1793**) là hai khảo luận lớn của thế kỷ 18 bàn về câu nhạc và hình thức.
-- Koch mô tả cách ghép các **đoạn nhỏ, câu, đoạn** có các loại kết khác nhau thành tác phẩm lớn (giao hưởng, sonata, concerto) — giống như **dấu câu** trong một bài văn: các chỗ ngắt và kết chia nhạc thành từng đơn vị. Các học giả gọi đây là **"hình thức dấu câu"**. Koch hay lấy ví dụ từ nhạc [[Haydn]].
+- **Joseph Riepel** (*Anfangsgründe*, từ 1752) và **Heinrich Christoph Koch** (*Versuch einer Anleitung zur Composition*, 3 tập, **1782–1793**) là hai khảo luận lớn của thế kỷ 18 bàn về [[cau-nhac|câu nhạc]] và [[hinh-thuc-am-nhac|hình thức]].
+- Koch mô tả cách ghép các **đoạn nhỏ, câu, đoạn** có các loại kết khác nhau thành tác phẩm lớn ([[the-loai|giao hưởng]], sonata, [[hinh-thuc-concerto|concerto]]) — giống như **dấu câu** trong một bài văn: các chỗ ngắt và kết chia nhạc thành từng đơn vị. Các học giả gọi đây là **"hình thức dấu câu"**. Koch hay lấy ví dụ từ nhạc [[Haydn]].
 - Từ thập niên 1970, các học giả (Dahlhaus, Ratner, Baker, Sisman…) khôi phục Koch làm cơ sở cho phân tích **"theo đúng lịch sử"** nhạc thế kỷ 18. Cách tiếp cận theo khuôn mẫu của [[luoc-do-galant|lược đồ galant]] cũng đi theo hướng này.
 
 ## Thế kỷ 19: Formenlehre và "hình thức sonata"
-- **Anton Reicha** (1826) và **Carl Czerny** (1848) mô tả hình thức sonata; **Adolf Bernhard Marx**, trong bộ *Die Lehre von der musikalischen Komposition* (4 tập, 1837–1847; tập 3 năm 1845), xây dựng một **hệ thống các hình thức** đi từ hình thức bài hát đơn giản đến chương sonata, minh hoạ bằng sonata piano của [[Beethoven]].
+- **Anton Reicha** (1826) và **[[carl-czerny|Carl Czerny]]** (1848) mô tả hình thức sonata; **Adolf Bernhard Marx**, trong bộ *Die Lehre von der musikalischen Komposition* (4 tập, 1837–1847; tập 3 năm 1845), xây dựng một **hệ thống các hình thức** đi từ hình thức bài hát đơn giản đến chương sonata, minh hoạ bằng sonata piano của [[Beethoven]].
 - Marx **có thể** là người đặt ra thuật ngữ **"hình thức sonata"**, và thuật ngữ **"Formenlehre"** (học thuyết hình thức) cũng bắt nguồn từ ông. Lối dạy hình thức như những **khuôn mẫu** này ảnh hưởng đến giáo trình hình thức suốt thế kỷ 19–20 (xem [[hinh-thuc-sonata]]).
 - Song song là các bài **phân tích dạng ghi chú chương trình** cho người nghe hoà nhạc — truyền thống mà Donald Tovey (Anh) về sau tiêu biểu.
 
 ## Đầu thế kỷ 20: tìm sự thống nhất bên dưới
 - **Heinrich Schenker**: phân tích nhiều tầng, coi tác phẩm là sự kéo dài của một cấu trúc nền (xem [[phan-tich-schenker]]).
-- **Arnold Schoenberg**: Grundgestalt và biến tấu phát triển (xem [[motif]]).
+- **[[arnold-schoenberg|Arnold Schoenberg]]**: Grundgestalt và [[bien-tau|biến tấu]] phát triển (xem [[motif]]).
 - **Rudolph Réti** (*The Thematic Process in Music*, 1951): tìm các **"tế bào" cao độ** ẩn chung giữa các chủ đề tương phản, cho phép cả đảo, nghịch hành và **đổi thứ tự** nốt. Phương pháp bị phê bình nhiều vì **quá lỏng** — tìm "liên hệ" ở đâu cũng được, bỏ qua vai trò hoà âm của các nốt — nhưng sách vẫn được trích dẫn rất thường xuyên.
 
 ## Nửa sau thế kỷ 20 đến nay
-- Lý thuyết **tập hợp cao độ** cho nhạc phi điệu tính (Forte, 1973 — xem [[tap-hop-cao-do]]).
+- Lý thuyết **tập hợp cao độ** cho nhạc [[phi-dieu-tinh|phi điệu tính]] ([[cuong-do|Forte]], 1973 — xem [[tap-hop-cao-do]]).
 - **Phân tích phong cách** của Jan LaRue (1970 — xem [[phan-tich-phong-cach]]).
 - **Lý thuyết chủ đề biểu đạt** của Leonard Ratner (1980 — xem [[ly-thuyet-chu-de]]).
 - Lý thuyết nhịp và nhóm của Lerdahl và Jackendoff (1983 — xem [[sieu-nhip]]).
 - **Chức năng hình thức** của William Caplin (1998) và **Lý thuyết Sonata** của Hepokoski – Darcy (2006) (xem [[chuc-nang-hinh-thuc]]).
-- **Neo-Riemann** cho hoà âm cromatic (xem [[neo-riemann]]).
+- **Neo-Riemann** cho [[hoa-am-cromatic|hoà âm cromatic]] (xem [[neo-riemann]]).
 - **Phân tích biểu diễn và bản thu** (xem [[phan-tich-va-bieu-dien]], [[so-sanh-ban-thu]]).
 
 ## Phê phán: "Ta đã đi vào phân tích thế nào, và làm sao để ra"
@@ -147,10 +147,10 @@ Nhà âm nhạc học **Jan LaRue**, trong *Guidelines for Style Analysis* (W. W
 ## Năm yếu tố: S – H – M – R – G
 | Yếu tố | Gồm những gì (ví dụ) |
 |---|---|
-| **S — Âm thanh** (Sound) | Âm sắc, âm vực, [[ket-cau|kết cấu]], [[cuong-do|cường độ]] |
-| **H — Hoà âm** (Harmony) | Hợp âm, tiến trình, giọng, [[chuyen-giong|chuyển giọng]], cả đối âm |
-| **M — Giai điệu** (Melody) | Âm vực, đường nét, bước đi, [[motif]] |
-| **R — Nhịp điệu** (Rhythm) | Nhịp, nhịp độ, tiết tấu, nhịp điệu hoà âm |
+| **S — Âm thanh** (Sound) | [[am-sac|Âm sắc]], âm vực, [[ket-cau|kết cấu]], [[cuong-do|cường độ]] |
+| **H — Hoà âm** (Harmony) | [[hop-am-ba|Hợp âm]], tiến trình, giọng, [[chuyen-giong|chuyển giọng]], cả [[doi-am|đối âm]] |
+| **M — [[giai-dieu|Giai điệu]]** (Melody) | Âm vực, đường nét, bước đi, [[motif]] |
+| **R — Nhịp điệu** (Rhythm) | Nhịp, [[nhip-do|nhịp độ]], tiết tấu, [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] |
 | **G — Sự phát triển** (Growth) | **Kết quả** của bốn yếu tố trên: chuyển động và hình dạng của tác phẩm |
 Bốn yếu tố đầu **cộng lại** tạo nên **G**. LaRue phân biệt hai mặt của G: **chuyển động** (những gì hướng sự chú ý vào dòng chảy theo thời gian) và **hình dạng** (những mốc, khối, "kiến trúc" mà ta nhận ra — tức là [[hinh-thuc-am-nhac|hình thức]]).
 
@@ -160,9 +160,9 @@ Mỗi yếu tố được xét ở ba tầng **lớn – vừa – nhỏ**. Ví 
 ## Dùng SHMRG như một bảng kiểm
 | | Lớn | Vừa | Nhỏ |
 |---|---|---|---|
-| **S** | Âm vực và mật độ cả bài thay đổi ra sao? | Mỗi phần có kết cấu riêng? | Cách xếp nốt, pedal trong một ô |
+| **S** | Âm vực và mật độ cả bài thay đổi ra sao? | Mỗi phần có kết cấu riêng? | Cách xếp nốt, [[ban-dap|pedal]] trong một ô |
 | **H** | Giọng chính và các giọng phụ | Chuyển giọng giữa các phần | Hợp âm đặc biệt, [[cau-ket|kết]] |
-| **M** | Đỉnh cao của cả bài ở đâu? | Chủ đề quay lại thế nào? | Motif, quãng đặc trưng |
+| **M** | Đỉnh cao của cả bài ở đâu? | Chủ đề quay lại thế nào? | Motif, [[quang|quãng]] đặc trưng |
 | **R** | Nhịp độ các phần | [[sieu-nhip|Nhóm ô nhịp]], nhịp điệu hoà âm | Tiết tấu, [[dao-phach]] |
 | **G** | Hình thức tổng thể | Cách mỗi phần được xây | Cách một câu đẩy tới kết |
 
@@ -203,7 +203,7 @@ Sơ đồ chữ cái (A – B – A) cho biết **phần nào giống phần nà
 Cùng logic này lặp lại ở tầng nhỏ hơn. Trong **phần trình bày** sonata: **chủ đề chính** mang chức năng mở đầu, **đoạn chuyển** mang chức năng ở giữa, **chủ đề phụ** mang chức năng kết thúc. Trong một **chủ đề**: ví dụ sentence có phần trình bày (mở đầu), tiếp nối (giữa) và kết (kết thúc) — xem [[cau-nhac]].
 
 ## Nhận ra chức năng bằng tai
-- **Mở đầu**: thiết lập giọng chủ (hợp âm chủ được kéo dài), ý nhạc rõ ràng; giai điệu đi lên hoặc xoay quanh các nốt chính.
+- **Mở đầu**: thiết lập giọng chủ ([[hop-am-ba|hợp âm]] chủ được kéo dài), ý nhạc rõ ràng; [[giai-dieu|giai điệu]] đi lên hoặc xoay quanh các nốt chính.
 - **Ở giữa**: chia nhỏ ý nhạc, [[mo-tien-hoa-am|mô tiến]], hoà âm thay đổi nhanh hơn, giọng không ổn định.
 - **Kết thúc**: tiến trình [[cau-ket|kết]]; giai điệu thường đi **xuống** về bậc 1 (kết chính) hoặc bậc 2, bậc 7 (kết nửa).
 Một nghiên cứu về giai điệu ở chỗ kết (MTO) xác nhận các tín hiệu giai điệu này **bổ sung** cho, chứ không thay thế, tiêu chí hoà âm.
@@ -213,7 +213,7 @@ Caplin còn phân biệt cách tổ chức **chặt chẽ** (các đơn vị g�
 
 ## Hai trường phái hình thức sonata hiện nay
 - **Caplin**: hướng tới **chức năng** của từng đơn vị, đi từ dưới lên.
-- **Hepokoski và Darcy** (*Elements of Sonata Theory*, 2006): so sánh tác phẩm với các **chuẩn mực** thể loại — điểm ngắt giữa (MC), điểm kết của phần trình bày (EEC), các lần "xoay vòng" chất liệu — xem [[hinh-thuc-sonata]].
+- **Hepokoski và Darcy** (*Elements of Sonata Theory*, 2006): so sánh tác phẩm với các **chuẩn mực** [[the-loai|thể loại]] — điểm ngắt giữa (MC), điểm kết của phần trình bày (EEC), các lần "xoay vòng" chất liệu — xem [[hinh-thuc-sonata]].
 Hai cách nhìn bổ sung cho nhau; giáo trình hiện đại thường giới thiệu cả hai.
 
 ## Với người chơi đàn
@@ -243,21 +243,21 @@ Trong một ô nhịp có phách mạnh và phách nhẹ (xem [[so-chi-nhip]]). 
 **Fred Lerdahl** và **Ray Jackendoff** (*A Generative Theory of Tonal Music*, 1983) tách bạch hai thứ thường bị lẫn:
 | | Cấu trúc nhịp (meter) | Cấu trúc nhóm (grouping) |
 |---|---|---|
-| Đơn vị | **Phách** — những điểm thời gian, không có độ dài | **Nhóm** — các đoạn có độ dài (motif, câu, phần) |
+| Đơn vị | **Phách** — những điểm thời gian, không có độ dài | **Nhóm** — các đoạn có độ dài ([[motif|motif]], câu, phần) |
 | Đều đặn? | Có xu hướng đều | **Không cần** đều |
 | Ví dụ | Ô 1 – 2 – 3 – 4 với ô 1 và 3 mạnh | Câu 5 ô, đoạn 3 câu |
 Theo hai tác giả, ở tầng **trên ô nhịp**, nhịp **dần nhường chỗ cho nhóm**: ở tầng rất cao, ta nghe cấu trúc nhịp trong bối cảnh cấu trúc nhóm, vốn hiếm khi đều. Họ không nêu rõ nhịp "biến mất" ở tầng nào; các nhà lý thuyết khác (như Jonathan Kramer) không đồng ý về việc nhịp kéo dài lên tới đâu.
 
 ## Cone: phách mạnh cấu trúc và biểu diễn
-**Edward T. Cone** (*Musical Form and Musical Performance*, 1968) cho rằng một biểu diễn đúng đắn trước hết phụ thuộc vào việc **cảm nhận và truyền đạt đời sống nhịp điệu** của tác phẩm.
+**Edward T. Cone** (*[[hinh-thuc-am-nhac|Musical Form]] and Musical Performance*, 1968) cho rằng một biểu diễn đúng đắn trước hết phụ thuộc vào việc **cảm nhận và truyền đạt đời sống nhịp điệu** của tác phẩm.
 - Ông nói về **"phách mạnh cấu trúc"**: điểm đến của cả một câu hay một phần, thường ở chỗ kết.
 - Ông phân biệt các loại điểm mạnh: **điểm mạnh mở đầu**, **điểm mạnh kết**, và các điểm ở giữa.
 - **Phê bình**: Carl Schachter chỉ ra rằng chỗ kết thường rơi vào ô **nhẹ** của siêu nhịp, nên không nhất thiết mang "tính chất phách mạnh". Wallace Berry thì lo rằng nhấn "phách mạnh cuối" một cách máy móc sẽ làm cách chơi cứng nhắc.
 
 ## Siêu nhịp không đều
-- **Mở rộng**: một câu 4 ô bị kéo thành 5–6 ô (lặp kết, kéo dài hợp âm).
-- **Chồng ô** (elision): ô cuối của câu này **đồng thời** là ô đầu của câu sau — ô mạnh của nhóm mới "nuốt" ô nhẹ của nhóm cũ.
-- **Hemiola** ở tầng ô nhịp: hai ô 3/4 nghe như một ô 3/2 (xem [[da-nhip]]).
+- **Mở rộng**: một câu 4 ô bị kéo thành 5–6 ô (lặp kết, kéo dài [[hop-am-ba|hợp âm]]).
+- **Chồng ô** ([[mo-rong-cau-nhac|elision]]): ô cuối của câu này **đồng thời** là ô đầu của câu sau — ô mạnh của nhóm mới "nuốt" ô nhẹ của nhóm cũ.
+- **[[hemiola|Hemiola]]** ở tầng ô nhịp: hai ô 3/4 nghe như một ô 3/2 (xem [[da-nhip]]).
 Những chỗ "lệch" này thường là chỗ nhà soạn nhạc tạo **bất ngờ** (xem [[ky-vong-am-nhac]]).
 
 ## Cách tìm siêu nhịp
@@ -285,33 +285,33 @@ Siêu nhịp giúp tránh lối chơi "ô nào cũng nặng như nhau": hướng
       ['Koozin — Study scores: semiotics and topics (University of Houston)', 'https://www.uh.edu/~tkoozin/semiotics/StudyScores.html'],
     ],
     body: `
-Người nghe thế kỷ 18 sống giữa nhiều loại âm nhạc mang **ý nghĩa xã hội**: hành khúc của quân đội, tiếng tù và đi săn, vũ khúc trong cung đình, nhạc nhà thờ… Khi một bản sonata **gợi** đến những âm thanh đó, người nghe thời ấy hiểu ngay ý nghĩa. Lý thuyết **chủ đề biểu đạt** (topic theory) giúp người nghe ngày nay đọc lại các tín hiệu đó.
+Người nghe thế kỷ 18 sống giữa nhiều loại âm nhạc mang **ý nghĩa xã hội**: hành khúc của quân đội, tiếng tù và đi săn, vũ khúc trong cung đình, nhạc nhà thờ… Khi một bản [[hinh-thuc-sonata|sonata]] **gợi** đến những âm thanh đó, người nghe thời ấy hiểu ngay ý nghĩa. Lý thuyết **chủ đề biểu đạt** (topic theory) giúp người nghe ngày nay đọc lại các tín hiệu đó.
 
 ## Ratner và khái niệm "chủ đề"
 **Leonard Ratner**, trong *Classic Music: Expression, Form, and Style* (1980), định nghĩa chủ đề là **"đề tài cho diễn ngôn âm nhạc"** và chia thành hai nhóm:
-- **Loại hình** (types): những thể loại trọn vẹn như **vũ khúc** (minuet, gavotte…) và **hành khúc**.
+- **Loại hình** (types): những [[the-loai|thể loại]] trọn vẹn như **vũ khúc** ([[minuet-va-trio|minuet]], gavotte…) và **hành khúc**.
 - **Phong cách** (styles): những "màu" được mượn vào tác phẩm khác — **quân hành**, **săn bắn**, **Thổ Nhĩ Kỳ**…
 Ranh giới không cứng: minuet là một thể loại hoàn chỉnh, nhưng cũng có thể là một "phong cách" xuất hiện trong bản nhạc khác.
 
 ## Một số chủ đề thường gặp
 | Chủ đề | Dấu hiệu âm nhạc thường được mô tả | Gợi liên tưởng |
 |---|---|---|
-| **Quân hành, hành khúc** | Nhịp chẵn, tiết tấu chấm dôi, hình kèn hiệu | Uy nghi, nghi lễ |
+| **Quân hành, hành khúc** | Nhịp chẵn, tiết tấu [[cham-doi-dau-noi|chấm dôi]], hình kèn hiệu | Uy nghi, nghi lễ |
 | **Săn bắn** | Nhịp 6/8, hình **tù và** (horn call) | Ngoài trời, quý tộc |
-| **Đồng quê** (pastoral) | Bass ngân như kèn túi, nhịp chậm đung đưa | Thanh bình |
-| **Thổ Nhĩ Kỳ** (alla turca) | Bè trầm dồn dập mô phỏng trống, nốt hoa mỹ | Ngoại lai, náo nhiệt — xem [[phan-tich-rondo-alla-turca]] |
+| **Đồng quê** (pastoral) | [[bass-ngan|Bass ngân]] như kèn túi, nhịp chậm đung đưa | Thanh bình |
+| **Thổ Nhĩ Kỳ** (alla turca) | Bè trầm dồn dập mô phỏng trống, [[ky-hieu-hoa-my|nốt hoa mỹ]] | Ngoại lai, náo nhiệt — xem [[phan-tich-rondo-alla-turca]] |
 | **Phong cách bác học** (learned) | [[doi-am]] mô phỏng, [[fugue|fugato]] | Nhà thờ, truyền thống |
-| **Ombra** | Chậm, cromatic, hoà âm tối | Siêu nhiên, chết chóc |
-| **Tempesta** | Nhanh, kịch tính, tremolo | Bão tố, giận dữ |
+| **Ombra** | Chậm, [[am-giai-cromatic|cromatic]], hoà âm tối | Siêu nhiên, chết chóc |
+| **Tempesta** | Nhanh, kịch tính, [[ky-hieu-nang-cao|tremolo]] | Bão tố, giận dữ |
 Lưu ý: nhãn **"Sturm und Drang"** từng được dùng như một chủ đề; Clive McClelland cho rằng nó **không còn phù hợp** và đề xuất dùng **tempesta** — đối trọng **nhanh** của **ombra** (chậm).
 
 ## Sau Ratner
-- **Kofi Agawu** (*Playing with Signs*, 1991) kết hợp chủ đề biểu đạt với phân tích Schenker, cho thấy **ý nghĩa** (bề mặt) và **cấu trúc** (bên dưới) gắn với nhau trong nhạc Haydn, Mozart, Beethoven; mở đường cho **ký hiệu học âm nhạc** (Robert Hatten, Raymond Monelle).
-- *The Oxford Handbook of Topic Theory* (Danuta Mirka chủ biên, 2014): cuốn sách đầu tiên mang tên "lý thuyết chủ đề", nhấn mạnh rằng chủ đề là **dấu hiệu âm nhạc** của "thế kỷ 18 dài", có gốc trong lý thuyết và thẩm mỹ học thời đó.
+- **Kofi Agawu** (*Playing with Signs*, 1991) kết hợp chủ đề biểu đạt với [[phan-tich-schenker|phân tích Schenker]], cho thấy **ý nghĩa** (bề mặt) và **cấu trúc** (bên dưới) gắn với nhau trong nhạc [[joseph-haydn|Haydn]], [[wolfgang-amadeus-mozart|Mozart]], [[ludwig-van-beethoven|Beethoven]]; mở đường cho **[[y-nghia-am-nhac|ký hiệu học âm nhạc]]** (Robert Hatten, Raymond Monelle).
+- *The Oxford Handbook of Topic Theory* (Danuta Mirka chủ biên, 2014): cuốn sách đầu tiên mang tên "lý thuyết chủ đề", nhấn mạnh rằng chủ đề là **dấu hiệu âm nhạc** của "thế kỷ 18 dài", có gốc trong lý thuyết và thẩm [[triet-hoc-am-nhac|mỹ học]] thời đó.
 
 ## Với người dạy và người chơi
-- Hỏi học trò: đoạn nhạc này **gợi** điều gì — một đoàn quân, một vũ hội, một nhà thờ? Câu trả lời gợi ý ngay về [[cach-dien-tau|cách diễn tấu]], nhịp độ, âm sắc.
-- Trong một tác phẩm Cổ điển, chủ đề có thể **đổi sau vài ô nhịp**; nhận ra những lần chuyển đó giúp chơi có **tính cách** rõ ràng cho từng đoạn.
+- Hỏi học trò: [[cau-nhac|đoạn nhạc]] này **gợi** điều gì — một đoàn quân, một vũ hội, một nhà thờ? Câu trả lời gợi ý ngay về [[cach-dien-tau|cách diễn tấu]], [[nhip-do|nhịp độ]], [[am-sac|âm sắc]].
+- Trong một tác phẩm Cổ điển, chủ đề có thể **đổi sau vài [[so-chi-nhip|ô nhịp]]**; nhận ra những lần chuyển đó giúp chơi có **tính cách** rõ ràng cho từng đoạn.
 - Áp dụng chủ yếu cho nhạc **thế kỷ 18 – đầu thế kỷ 19**; với các thời kỳ khác cần thận trọng.
 `,
   },
@@ -341,7 +341,7 @@ Lưu ý: nhãn **"Sturm und Drang"** từng được dùng như một chủ đ�
 ## Phê bình hướng "từ phân tích đến biểu diễn"
 - Cook chỉ ra rằng sách của Berry đặt biểu diễn vào khung lý thuyết sẵn có, với ảnh hưởng **chỉ đi một chiều** — từ nhà phân tích đến người chơi. Ông đề nghị coi **biểu diễn là nguồn ý nghĩa riêng**.
 - Rink nhắc lại quan điểm của Donald Tovey rằng phân tích giúp người chơi, nhưng nhấn mạnh phân tích có ích cho biểu diễn khi nó **xuất phát từ nhu cầu của người chơi**: tìm đường đi của câu, chỗ căng – chùng, chỗ đỉnh.
-- Từ đầu thế kỷ 20, Riemann và Schenker đều quan tâm sâu đến biểu diễn; sau đó, trong vài thập kỷ, lý thuyết âm nhạc xa rời các vấn đề thực hành, rồi quay lại từ cuối thập niên 1980.
+- Từ đầu [[thoi-ky-the-ky-20|thế kỷ 20]], Riemann và [[phan-tich-schenker|Schenker]] đều quan tâm sâu đến biểu diễn; sau đó, trong vài thập kỷ, lý thuyết âm nhạc xa rời các vấn đề thực hành, rồi quay lại từ cuối thập niên 1980.
 
 ## Phân tích cho người chơi: những câu hỏi hữu ích
 | Câu hỏi | Công cụ |
@@ -374,10 +374,10 @@ Lưu ý: nhãn **"Sturm und Drang"** từng được dùng như một chủ đ�
     body: `
 ## Cấu trúc
 - Viết cho **ba violin và [[bass-so|basso continuo]]**, đi kèm một gigue.
-- Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một giai điệu, lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** (basso ostinato / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
+- Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một [[giai-dieu|giai điệu]], lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** (basso ostinato / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
 
 ## Bè trầm và vòng hợp âm
-Bè trầm 8 nốt lặp lại tạo nên vòng hợp âm nổi tiếng **D – A – Bm – F♯m – G – D – G – A** (trong Đô trưởng: C – G – Am – Em – F – C – F – G), dùng trong vô số bài hát — xem [[vong-hop-am]] và [[mo-tien-hoa-am|mô tiến quãng 3 đi xuống]].
+Bè trầm 8 [[not-lap-lai|nốt lặp]] lại tạo nên vòng hợp âm nổi tiếng **D – A – Bm – F♯m – G – D – G – A** (trong Đô trưởng: C – G – Am – Em – F – C – F – G), dùng trong vô số bài hát — xem [[vong-hop-am]] và [[mo-tien-hoa-am|mô tiến quãng 3 đi xuống]].
 
 ::keyboard D4 F#4 A4 | Hợp âm chủ Rê trưởng — hoá biểu 2 dấu thăng (F♯, C♯)
 
@@ -389,19 +389,19 @@ Bè trầm 8 nốt lặp lại tạo nên vòng hợp âm nổi tiếng **D – 
 | 1919 | Gustav Beckmann công bố bản tổng phổ trong một bài nghiên cứu về nhạc thính phòng của Pachelbel |
 | 1929 | Max Seiffert xuất bản một bản chuyển soạn |
 | 1940 | Bản thu của Boston Pops (Arthur Fiedler) — có thể là bản thu đầu tiên, ít được chú ý |
-| 1968 | Bản thu của dàn nhạc thính phòng **Jean-François Paillard**: chậm hơn, phong cách Lãng mạn, thêm các bè tự viết — thay đổi số phận bài nhạc |
+| 1968 | Bản thu của dàn nhạc thính phòng **Jean-François Paillard**: chậm hơn, phong cách [[thoi-ky-lang-man|Lãng mạn]], thêm các bè tự viết — thay đổi số phận bài nhạc |
 
-Từ thập niên 1970, Canon được thu âm bởi rất nhiều nhóm nhạc. Xem [[Pachelbel]].
+Từ thập niên 1970, [[doi-am|Canon]] được thu âm bởi rất nhiều nhóm nhạc. Xem [[Pachelbel]].
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
 | Yếu tố | Tóm tắt |
 |---|---|
 | **Âm thanh** | Ba violin đồng âm và basso continuo; kết cấu dày dần khi các bè canon lần lượt vào |
-| **Hoà âm** | Một vòng 8 hợp âm lặp suốt bài: I – V – vi – iii – IV – I – IV – V |
+| **Hoà âm** | Một vòng 8 [[hop-am-ba|hợp âm]] lặp suốt bài: I – V – vi – iii – IV – I – IV – V |
 | **Giai điệu** | Ba bè chơi cùng một giai điệu, vào sau nhau — [[doi-am-kep|canon]] |
 | **Nhịp điệu** | Bè trầm lặp đều; các biến thể ở bè trên dày dần về tiết tấu |
-| **Phát triển** | Hình thức biến tấu trên bè trầm lặp ([[ostinato]], [[bien-tau]]) — sự phát triển nằm ở bè trên, không ở hoà âm |
+| **Phát triển** | [[hinh-thuc-am-nhac|Hình thức]] biến tấu trên bè trầm lặp ([[ostinato]], [[bien-tau]]) — sự phát triển nằm ở bè trên, không ở hoà âm |
 
 Liên hệ phương pháp: bè trầm của vòng này là dạng nhảy của lược đồ **Romanesca** — xem [[luoc-do-galant]].
 
@@ -425,7 +425,7 @@ Liên hệ phương pháp: bè trầm của vòng này là dạng nhảy của l
     ],
     body: `
 ## Tổng quan
-Bài mở đầu của tập 1 **Clavier bình quân** ([[Bach]], 1722 — xem [[luat-binh-quan]], [[fugue]]). Dài **35 ô nhịp**, gần như toàn bộ là **[[luyen-hop-am-rai|hợp âm rải]]** theo cùng một khuôn, và kết thúc bằng một hợp âm Đô trưởng khối.
+Bài mở đầu của tập 1 **Clavier bình quân** ([[Bach]], 1722 — xem [[luat-binh-quan]], [[fugue]]). Dài **35 [[so-chi-nhip|ô nhịp]]**, gần như toàn bộ là **[[luyen-hop-am-rai|hợp âm rải]]** theo cùng một khuôn, và kết thúc bằng một [[hop-am-ba|hợp âm]] Đô trưởng khối.
 
 ## Khuôn hợp âm rải
 Mỗi ô nhịp là **một hợp âm**, rải theo cùng một mẫu (lặp lại hai lần mỗi ô). Vì kết cấu không đổi, toàn bộ sự hấp dẫn nằm ở **hoà âm** và **[[dan-giong|dẫn giọng]]**: các bè chỉ dịch chuyển từng bậc nhỏ từ hợp âm này sang hợp âm kia.
@@ -436,10 +436,10 @@ Bốn ô đầu đã là một vòng [[chuc-nang-hoa-am|chủ – hạ át – �
 
 ## Hai bass ngân ở cuối bài
 - **Ô 23** gợi ý rất mạnh hợp âm át nhưng Bach **trì hoãn** nó; hợp âm G7 chỉ đến ở **ô 24**.
-- **Ô 24–31**: nốt **G** (át âm) giữ ở bè trầm suốt **8 ô nhịp** — một [[bass-ngan|bass ngân át âm]] dẫn tới cao trào.
-- **Từ ô 32**: biến thể cuối cùng của vòng **ii – V – I** trên **bass ngân chủ âm C**, rồi hợp âm Đô trưởng khối kết bài.
+- **Ô 24–31**: nốt **G** ([[bac-am-giai|át âm]]) giữ ở bè trầm suốt **8 ô nhịp** — một [[bass-ngan|bass ngân át âm]] dẫn tới cao trào.
+- **Từ ô 32**: biến thể cuối cùng của vòng **[[ii-v-i|ii – V – I]]** trên **bass ngân chủ âm C**, rồi hợp âm Đô trưởng khối kết bài.
 
-Số ô nhịp tính theo bản 35 ô (không có "ô Schwencke" — xem dưới); ấn bản có ô chèn thêm sẽ lệch một ô.
+Số ô nhịp tính theo bản 35 ô (không có "ô Schwencke" — xem dưới); [[an-ban-urtext|ấn bản]] có ô chèn thêm sẽ lệch một ô.
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -447,7 +447,7 @@ Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm y�
 |---|---|
 | **Âm thanh** | Một khuôn hợp âm rải duy nhất suốt 35 ô; kết bằng hợp âm khối |
 | **Hoà âm** | Mỗi ô một hợp âm; mở bằng I – ii7 – V7 – I; phần giữa có át phụ và hợp âm 7 giảm; cuối bài bass ngân át (ô 24–31) rồi bass ngân chủ |
-| **Giai điệu** | Không có giai điệu nổi bật — "giai điệu" là đường đi của các bè bên trong khuôn rải ([[dan-giong]]) |
+| **[[giai-dieu|Giai điệu]]** | Không có giai điệu nổi bật — "giai điệu" là đường đi của các bè bên trong khuôn rải ([[dan-giong]]) |
 | **Nhịp điệu** | Tiết tấu không đổi; nhịp điệu hoà âm đều một hợp âm mỗi ô ([[nhip-dieu-hoa-am]]) |
 | **Phát triển** | Đường căng – chùng do hoà âm tạo ra: đi xa khỏi chủ, căng nhất trên bass ngân át, rồi khép lại trên bass ngân chủ |
 
@@ -457,12 +457,12 @@ Liên hệ phương pháp: đây là ví dụ kinh điển cho [[phan-tich-schen
 Ô 22 có F♯ ở bè trầm, sang ô 23 nhảy lên A♭ — một [[quang|quãng 3 giảm]]. Một số ấn bản (trong đó có ấn bản Gounod dùng) **chèn thêm một ô** với G ở bè trầm để "làm mượt". Ô này không có trong bản chép tay năm 1725 của học trò Bach, Heinrich Gerber, và đã bị Franz Kroll (1862), August Halm (1905) đặt nghi vấn.
 
 ## Ave Maria của Gounod
-Charles Gounod viết một giai điệu **đặt chồng lên** Prelude (hầu như không sửa đổi): bản cho violin năm 1853, và bản cho giọng hát với lời Latin "Ave Maria" năm 1859 — bản trở nên nổi tiếng.
+[[charles-gounod|Charles Gounod]] viết một giai điệu **đặt chồng lên** [[the-loai|Prelude]] (hầu như không sửa đổi): bản cho violin năm 1853, và bản cho giọng hát với lời Latin "Ave Maria" năm 1859 — bản trở nên nổi tiếng.
 
 ## Gợi ý luyện tập
-- Chơi **hợp âm khối** từng ô trước để nghe hoà âm và tìm ngón bấm (xem [[the-dao-hop-am]]).
+- Chơi **hợp âm khối** từng ô trước để nghe hoà âm và tìm [[ngon-bam|ngón bấm]] (xem [[the-dao-hop-am]]).
 - Giữ các nốt chung giữa hai ô nhịp cùng một ngón.
-- Dùng [[ban-dap|pedal]] đổi theo từng ô, hoặc chơi không pedal và giữ ngón (legato ngón).
+- Dùng [[ban-dap|pedal]] đổi theo từng ô, hoặc chơi không pedal và giữ ngón ([[ky-thuat-cham-phim|legato ngón]]).
 `,
   },
   {
@@ -487,7 +487,7 @@ Phần mở đầu chỉ luân phiên **hai hợp âm 7 trưởng**:
 ::keyboard G3 B3 D4 F#4 | Gmaj7: G – B – D – F♯
 ::keyboard D3 F#3 A3 C#4 | Dmaj7: D – F♯ – A – C♯
 
-Cả hai đều chứa **F♯** — nốt chung giữ hai hợp âm gắn kết và tạo màu u buồn đặc trưng. Toàn bộ trang đầu chỉ dùng hai hợp âm này: hoà âm **không tiến triển** theo [[chuc-nang-hoa-am|chức năng]] mà như một màu sắc tĩnh — gần với [[an-tuong|hoà âm ấn tượng]] và là tiền thân của [[toi-gian|âm nhạc tối giản]].
+Cả hai đều chứa **F♯** — nốt chung giữ hai [[hop-am-ba|hợp âm]] gắn kết và tạo màu u buồn đặc trưng. Toàn bộ trang đầu chỉ dùng hai hợp âm này: hoà âm **không tiến triển** theo [[chuc-nang-hoa-am|chức năng]] mà như một màu sắc tĩnh — gần với [[an-tuong|hoà âm ấn tượng]] và là tiền thân của [[toi-gian|âm nhạc tối giản]].
 
 Về sau hoà âm hướng tới Rê thứ và La thứ, với [[bass-ngan|bass ngân]] D trầm bên dưới các [[hop-am-bay|hợp âm 7]] xen kẽ.
 
@@ -495,7 +495,7 @@ Về sau hoà âm hướng tới Rê thứ và La thứ, với [[bass-ngan|bass 
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
 | Yếu tố | Tóm tắt |
 |---|---|
-| **Âm thanh** | Kết cấu thưa: nốt trầm – hợp âm ở tay trái, một giai điệu đơn ở tay phải; chỉ dẫn "Lent et douloureux" |
+| **Âm thanh** | Kết cấu thưa: nốt trầm – hợp âm ở tay trái, một [[giai-dieu|giai điệu]] đơn ở tay phải; chỉ dẫn "Lent et douloureux" |
 | **Hoà âm** | Hai hợp âm 7 trưởng Gmaj7 – Dmaj7 luân phiên, chung nốt F♯; không tiến triển theo chức năng; về sau nghiêng sang Rê thứ, La thứ |
 | **Giai điệu** | Đơn giản, vào ở phách 2 |
 | **Nhịp điệu** | Nhịp 3/4 chậm, đệm đều |
@@ -506,9 +506,9 @@ Liên hệ phương pháp: so sánh với [[hoa-am-dieu-thuc]] và [[an-tuong]] 
 ## Gợi ý khi dạy
 - Bài tốt để luyện **[[buoc-nhay-xa|bước nhảy]] tay trái**: nốt trầm ở phách 1, hợp âm ở phách 2.
 - Giai điệu bắt đầu ở phách 2 — đếm kỹ để không vào sớm.
-- Pedal đổi mỗi ô nhịp, tiếng đàn mềm, đều — xem [[ban-dap]], [[cuong-do]].
+- Pedal đổi mỗi [[so-chi-nhip|ô nhịp]], tiếng đàn mềm, đều — xem [[ban-dap]], [[cuong-do]].
 
-Lưu ý: tên hợp âm lấy từ một phân tích; các ấn bản có thể ghi cách xếp nốt khác.
+Lưu ý: [[ky-hieu-hop-am|tên hợp âm]] lấy từ một phân tích; các [[an-ban-urtext|ấn bản]] có thể ghi cách xếp nốt khác.
 `,
   },
   {
@@ -550,7 +550,7 @@ Chủ đề A xoay quanh dao động giữa **E (át âm) và D♯** — đó l�
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
 | Yếu tố | Tóm tắt |
 |---|---|
-| **Âm thanh** | Giai điệu chia giữa hai tay, tay trái rải hợp âm; đoạn C dày và căng hơn |
+| **Âm thanh** | [[giai-dieu|Giai điệu]] chia giữa hai tay, tay trái rải hợp âm; đoạn C dày và căng hơn |
 | **Hoà âm** | La thứ; đoạn B sang Fa trưởng rồi Đô trưởng; đoạn C dùng chuỗi hợp âm 7 giảm trên nốt A lặp ở bè trầm |
 | **Giai điệu** | Nét nhận diện: dao động nửa cung E – D♯ (nốt thêu quanh át âm) |
 | **Nhịp điệu** | Nhịp 3/8, bắt đầu bằng nốt lấy đà; đoạn B có chuỗi móc ba |
@@ -578,14 +578,14 @@ Liên hệ phương pháp: theo [[chuc-nang-hinh-thuc|chức năng hình thức]
     ],
     body: `
 ## Tổng quan
-[[Mozart]] ghi tác phẩm vào danh mục năm **1788** với lời chú "**dành cho người mới học**" — vì vậy có tên "Sonata facile" (sonata dễ). Ba chương: Allegro (Đô trưởng) – Andante (Sol trưởng) – Rondo (Đô trưởng).
+[[Mozart]] ghi tác phẩm vào danh mục năm **1788** với lời chú "**dành cho người mới học**" — vì vậy có tên "Sonata facile" (sonata dễ). Ba chương: [[nhip-do|Allegro]] (Đô trưởng) – Andante (Sol trưởng) – [[rondo|Rondo]] (Đô trưởng).
 
 ## Chương 1: hình thức sonata
 Xem lý thuyết ở [[hinh-thuc-sonata]].
 | Phần | Nội dung |
 |---|---|
-| **Trình bày** | Chủ đề 1 ở Đô trưởng (giai điệu trên bass Alberti) → đoạn nối bằng [[luyen-am-giai|âm giai]] → Chủ đề 2 ở **Sol trưởng** (giọng át) |
-| **Phát triển** | Ngắn, đi qua các giọng thứ; kết bằng [[cau-ket|kết trọn]] ở Fa trưởng |
+| **Trình bày** | Chủ đề 1 ở Đô trưởng ([[giai-dieu|giai điệu]] trên bass Alberti) → đoạn nối bằng [[luyen-am-giai|âm giai]] → Chủ đề 2 ở **Sol trưởng** (giọng át) |
+| **Phát triển** | Ngắn, đi qua các [[am-giai-thu|giọng thứ]]; kết bằng [[cau-ket|kết trọn]] ở Fa trưởng |
 | **Tái hiện** | Chủ đề 1 trở lại ở **Fa trưởng** (ô 42) — giọng **hạ át**, không phải giọng chính! Đoạn nối được mở rộng để quay về Đô; Chủ đề 2 ở **Đô trưởng** |
 
 ::staff treble C5 E5 G5 B4 C5 D5 C5 | Cao độ câu mở đầu: rải hợp âm C rồi [[not-ngoai-hop-am|nốt thêu]] quanh C
@@ -600,7 +600,7 @@ Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm y�
 |---|---|
 | **Âm thanh** | Giai điệu trên bass Alberti; các đoạn âm giai |
 | **Hoà âm** | Đô trưởng → Sol trưởng (trình bày); các giọng thứ (phát triển); tái hiện bắt đầu ở Fa trưởng |
-| **Giai điệu** | Câu mở đầu rải hợp âm C rồi thêu quanh C |
+| **Giai điệu** | Câu mở đầu rải [[hop-am-ba|hợp âm]] C rồi thêu quanh C |
 | **Nhịp điệu** | Bass Alberti đều; các chuỗi âm giai tạo đà |
 | **Phát triển** | Hình thức sonata: trình bày – phát triển – tái hiện |
 
@@ -608,7 +608,7 @@ Liên hệ phương pháp — đọc theo [[chuc-nang-hinh-thuc|chức năng hì
 
 ## Gợi ý khi dạy
 - Bass Alberti tay trái phải **nhẹ và đều** — xem [[dem-hat-piano]], [[lam-noi-giai-dieu]].
-- Các đoạn âm giai dùng ngón bấm chuẩn ([[luyen-am-giai]]) và luyện bằng [[kiem-soat-toc-do|bậc thang tốc độ]].
+- Các đoạn âm giai dùng [[ngon-bam|ngón bấm]] chuẩn ([[luyen-am-giai]]) và luyện bằng [[kiem-soat-toc-do|bậc thang tốc độ]].
 - Trước khi tập, cho học trò tìm ranh giới trình bày – phát triển – tái hiện trên bản nhạc: hiểu cấu trúc giúp [[hoc-thuoc-bai|học thuộc]] nhanh hơn.
 `,
   },
@@ -626,22 +626,22 @@ Liên hệ phương pháp — đọc theo [[chuc-nang-hinh-thuc|chức năng hì
     ],
     body: `
 ## Tổng quan
-- Chương 3 (Alla turca – Allegretto) của **Sonata La trưởng K. 331** ([[Mozart]]). Cả ba chương đều ở **La trưởng hoặc La thứ** (cùng âm chủ — xem [[giong-song-song|giọng cùng tên]]).
+- Chương 3 (Alla turca – Allegretto) của **[[hinh-thuc-sonata|Sonata]] La trưởng K. 331** ([[Mozart]]). Cả ba chương đều ở **La trưởng hoặc La thứ** (cùng âm chủ — xem [[giong-song-song|giọng cùng tên]]).
 - Thời gian, địa điểm sáng tác **không chắc chắn**; khả năng cao nhất là Vienna hoặc Salzburg khoảng **1783**, Artaria xuất bản năm **1784**.
 
 ## "Alla turca"
-Chương nhạc mô phỏng âm thanh của **ban nhạc Janissary** (quân đội Ottoman) — rất được ưa chuộng ở Vienna lúc bấy giờ. Một số đàn piano thời đó có **"Turkish stop"** — bộ phận tạo tiếng chuông, trống — và chương này đôi khi được biểu diễn trên những cây đàn như vậy (xem [[lich-su-piano]]).
+Chương nhạc [[doi-am|mô phỏng]] âm thanh của **ban nhạc Janissary** (quân đội Ottoman) — rất được ưa chuộng ở Vienna lúc bấy giờ. Một số đàn piano thời đó có **"Turkish stop"** — bộ phận tạo tiếng chuông, trống — và chương này đôi khi được biểu diễn trên những cây đàn như vậy (xem [[lich-su-piano]]).
 
 ## Hình thức
 Là một **[[rondo]]**, nhưng các phân tích **chia đoạn khác nhau**. Bản chi tiết nhất ghi: **A – B – C – D – E – C – A – B – C – coda**, mỗi đoạn (trừ coda) đều nhắc lại.
 | Đoạn | Nội dung | Giọng |
 |---|---|---|
 | **A** | 8 ô: hình móc kép đi lên rồi móc đơn đi xuống, trên đệm móc đơn ngắt tiếng | La thứ |
-| **B** | Chất liệu mới đi bằng quãng 3, rồi biến tấu A với crescendo, trở về nhỏ | |
+| **B** | Chất liệu mới đi bằng [[quang|quãng]] 3, rồi [[bien-tau|biến tấu]] A với [[cuong-do|crescendo]], trở về nhỏ | |
 | **C** | Hành khúc **forte** bằng **quãng 8** trên đệm [[ky-hieu-nang-cao|hợp âm rải]] — đoạn "Thổ Nhĩ Kỳ" nổi tiếng | **La trưởng** |
-| **D** | Chuỗi móc kép liên tục, nhỏ, trên đệm hợp âm rải | Fa♯ thứ |
+| **D** | Chuỗi móc kép liên tục, nhỏ, trên đệm [[luyen-hop-am-rai|hợp âm rải]] | Fa♯ thứ |
 | **E** | Chủ đề forte dạng âm giai, rồi biến thể của D | |
-| **Coda** | Hợp âm và quãng 8 forte, chen một lần nhắc chủ đề nhỏ; kết bằng các quãng 8 A và C♯ xen kẽ rồi hai hợp âm La trưởng | La trưởng |
+| **Coda** | [[hop-am-ba|Hợp âm]] và quãng 8 forte, chen một lần nhắc chủ đề nhỏ; kết bằng các quãng 8 A và C♯ xen kẽ rồi hai hợp âm La trưởng | La trưởng |
 
 Một nghiên cứu khác gộp lại thành A – B – C – B – A – B′ – coda; một nguồn nữa mô tả các đoạn hai phần có tái hiện ghép thành cấu trúc ba đoạn lớn. Khi dạy, hãy cùng học trò đánh dấu các lần đoạn C quay lại trên bản nhạc.
 
@@ -651,7 +651,7 @@ Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm y�
 |---|---|
 | **Âm thanh** | Mô phỏng ban nhạc Janissary: đoạn C forte bằng quãng 8 trên hợp âm rải nhanh ở tay trái |
 | **Hoà âm** | Xoay quanh La thứ và La trưởng (cùng âm chủ); một đoạn ở Fa♯ thứ (theo một nguồn) |
-| **Giai điệu** | Chủ đề mở đầu là chuỗi nốt thêu móc kép |
+| **[[giai-dieu|Giai điệu]]** | Chủ đề mở đầu là chuỗi nốt thêu móc kép |
 | **Nhịp điệu** | Nhịp hành khúc 2/4; đệm ngắt tiếng |
 | **Phát triển** | Rondo, các phân tích chia đoạn khác nhau; đoạn C quay lại nhiều lần |
 
@@ -679,7 +679,7 @@ Lưu ý: giọng La thứ và Fa♯ thứ của đoạn A, D chỉ thấy ở m�
     ],
     body: `
 ## Tổng quan
-**Kinderszenen** ("Cảnh tuổi thơ") Op. 15 gồm **13 tiểu phẩm**, [[Schumann]] viết năm **1838**, Breitkopf & Härtel xuất bản năm **1839**. **Träumerei** ("Mơ mộng") là bài **số 7**, ở giọng **Fa trưởng**. Schumann ban đầu gọi tập này là những bài dễ, và về sau nói rằng các tên bài **chỉ là "gợi ý tinh tế cho cách thể hiện"**, không phải một câu chuyện có chương trình.
+**Kinderszenen** ("Cảnh tuổi thơ") Op. 15 gồm **13 [[the-loai|tiểu phẩm]]**, [[Schumann]] viết năm **1838**, Breitkopf & Härtel xuất bản năm **1839**. **Träumerei** ("Mơ mộng") là bài **số 7**, ở giọng **Fa trưởng**. Schumann ban đầu gọi tập này là những bài dễ, và về sau nói rằng các tên bài **chỉ là "gợi ý tinh tế cho cách thể hiện"**, không phải một câu chuyện có chương trình.
 
 ## Hình thức
 Theo teoria.com, Träumerei là ví dụ của **[[hinh-thuc-am-nhac|hình thức ba đoạn]]**: đoạn A gồm **hai câu nhạc**; khi A trở lại thì **ngắn hơn và có biến đổi nhỏ** (A′). Xem [[cau-nhac]].
@@ -687,15 +687,15 @@ Theo teoria.com, Träumerei là ví dụ của **[[hinh-thuc-am-nhac|hình thứ
 ::keyboard F4 A4 C5 | Hợp âm chủ Fa trưởng (hoá biểu 1 dấu giáng — B♭)
 
 ## Gợi ý khi dạy
-- Giai điệu nằm ở bè trên nhưng các bè giữa cũng có đường nét riêng — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] và nghe từng bè ([[dan-giong]], [[doi-am]]).
-- Nhịp độ chậm, uốn câu theo hình vòm và chậm nhẹ ở cuối câu ([[dien-dat-cau-nhac]]).
-- Pedal đổi theo hợp âm, giữ cho các bè không bị nhoè ([[ban-dap]]).
+- [[giai-dieu|Giai điệu]] nằm ở bè trên nhưng các bè giữa cũng có đường nét riêng — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] và nghe từng bè ([[dan-giong]], [[doi-am]]).
+- [[nhip-do|Nhịp độ]] chậm, uốn câu theo hình vòm và chậm nhẹ ở cuối câu ([[dien-dat-cau-nhac]]).
+- Pedal đổi theo [[hop-am-ba|hợp âm]], giữ cho các bè không bị nhoè ([[ban-dap]]).
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
 | Yếu tố | Tóm tắt |
 |---|---|
-| **Âm thanh** | Nhiều bè có đường nét riêng, không chỉ giai điệu và đệm |
+| **Âm thanh** | Nhiều bè có đường nét riêng, không chỉ [[ket-cau|giai điệu và đệm]] |
 | **Hoà âm** | Fa trưởng; kết cuối dùng hợp âm át 9 với nốt 9 đi lên ("Dream Cadence") |
 | **Giai điệu** | Ngắn gọn, đặt ở bè trên |
 | **Nhịp điệu** | Chậm, co giãn theo câu |
@@ -704,7 +704,7 @@ Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm y�
 Liên hệ phương pháp: "Dream Cadence" là một trường hợp **làm trái kỳ vọng** giải quyết đi xuống — xem [[ky-vong-am-nhac]]; khi biểu diễn, chỗ chậm lại trước kết chính là nơi người chơi "dàn dựng" kỳ vọng ấy ([[phan-tich-va-bieu-dien]]).
 
 ## "Kết giấc mơ"
-Bài dài **24 ô nhịp**. Kết cuối cùng ở **ô 24** đặc biệt đến mức nhà lý thuyết Julien Despois (2025) đặt tên cho cả một kiểu kết theo bài này — **"Dream Cadence"**: một [[hop-am-mo-rong|hợp âm át 9]] trong đó nốt 9 **đi lên** từng bậc (bậc 6 – 7 – 1) để giải quyết, thay vì đi xuống như thường lệ; nốt 9 thường được nhấn biểu cảm hoặc chậm lại (rallentando) trước [[cau-ket|kết trọn]]. Đây là chỗ đáng dừng lại khi dạy.
+Bài dài **24 [[so-chi-nhip|ô nhịp]]**. Kết cuối cùng ở **ô 24** đặc biệt đến mức nhà lý thuyết Julien Despois (2025) đặt tên cho cả một kiểu kết theo bài này — **"Dream Cadence"**: một [[hop-am-mo-rong|hợp âm át 9]] trong đó nốt 9 **đi lên** từng bậc (bậc 6 – 7 – 1) để giải quyết, thay vì đi xuống như thường lệ; nốt 9 thường được nhấn biểu cảm hoặc chậm lại (rallentando) trước [[cau-ket|kết trọn]]. Đây là chỗ đáng dừng lại khi dạy.
 
 Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 68 (xem [[lo-trinh-tac-pham]]). Ranh giới chính xác (theo số ô) của các phần A – B – A′ vẫn cần đối chiếu trên bản nhạc.
 `,
@@ -726,15 +726,15 @@ Cùng thể loại tiểu phẩm cho người học: Album cho tuổi trẻ Op. 
 [[Chopin]] viết bộ ba Nocturne Op. 9 khoảng **1830–1832**, khi mới khoảng 20 tuổi, đề tặng **Marie Pleyel** — một nghệ sĩ piano trẻ tài năng. Thể loại nocturne học từ [[John Field]] (xem [[the-loai]]).
 
 ## Nhịp 12/8
-12 phách nhỏ chia thành **bốn nhóm 3** ([[so-chi-nhip|nhịp kép]], giống cảm giác [[dieu-dem-pho-bien|slow rock 12/8]]). Tay trái đệm kiểu **nốt trầm – hợp âm – hợp âm** trong mỗi nhóm ba, gợi nhịp valse — xem [[dem-hat-piano]] và [[buoc-nhay-xa]].
+12 phách nhỏ chia thành **bốn nhóm 3** ([[so-chi-nhip|nhịp kép]], giống cảm giác [[dieu-dem-pho-bien|slow rock 12/8]]). Tay trái đệm kiểu **nốt trầm – [[hop-am-ba|hợp âm]] – hợp âm** trong mỗi nhóm ba, gợi nhịp valse — xem [[dem-hat-piano]] và [[buoc-nhay-xa]].
 
 ::keyboard Eb4 G4 Bb4 | Hợp âm chủ Mi♭ trưởng (E♭ – G – B♭); hoá biểu 3 dấu giáng
 
 ## Hình thức
-Dài **34 ô nhịp**, thường được phân tích là **hai đoạn có tái hiện**: A – A – B – A – B – A, cộng **coda** (một nghiên cứu năm 2025 chia chi tiết hơn: A – B – A′ – coda – coda′ – cadenza).
-- Mỗi lần A và B trở lại, giai điệu được **trang trí phong phú hơn**: láy rền kéo dài, chuỗi nốt nhỏ — xem [[ky-hieu-hoa-my]].
-- Đoạn B có hoà âm "lang thang", bè trầm đi xuống nửa cung rồi về IV – I — mang dấu ấn ngẫu hứng của Chopin.
-- Gần cuối, chỉ dẫn **senza tempo** (không theo nhịp) cho phép một đoạn rất tự do trước khi kết.
+Dài **34 ô nhịp**, thường được phân tích là **hai đoạn có tái hiện**: A – A – B – A – B – A, cộng **coda** (một nghiên cứu năm 2025 chia chi tiết hơn: A – B – A′ – coda – coda′ – [[cadenza|cadenza]]).
+- Mỗi lần A và B trở lại, [[giai-dieu|giai điệu]] được **trang trí phong phú hơn**: láy rền kéo dài, chuỗi nốt nhỏ — xem [[ky-hieu-hoa-my]].
+- Đoạn B có hoà âm "lang thang", bè trầm đi xuống [[cung-nua-cung|nửa cung]] rồi về IV – I — mang dấu ấn [[ngau-hung-piano|ngẫu hứng]] của Chopin.
+- Gần cuối, chỉ dẫn **senza [[nhip-do|tempo]]** (không theo nhịp) cho phép một đoạn rất tự do trước khi kết.
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -771,9 +771,9 @@ Phân tích Schenker về bài này (Schachter & Siegel) chỉ ra nhiều điể
     ],
     body: `
 ## Tổng quan
-- Chương thứ 3 trong 4 chương của **Suite bergamasque** của [[Debussy]], giọng **Rê♭ trưởng** (5 dấu giáng — xem [[hoa-bieu]]).
+- Chương thứ 3 trong 4 chương của **Suite bergamasque** của [[Debussy]], giọng **Rê♭ trưởng** (5 [[dau-hoa|dấu giáng]] — xem [[hoa-bieu]]).
 - Bộ tổ khúc được bắt đầu khoảng **1890**, hoàn chỉnh và xuất bản năm **1905**. Bản thảo gốc của Clair de lune đã mất; năm 1890 dựa trên lời của chính Debussy khi xuất bản.
-- Các chương khác — Prélude, Menuet, Passepied — là phiên bản hiện đại của các chương [[the-loai|tổ khúc Baroque]]; **Clair de lune là chương duy nhất có tên mô tả**.
+- Các chương khác — Prélude, [[minuet-va-trio|Menuet]], Passepied — là phiên bản hiện đại của các chương [[the-loai|tổ khúc Baroque]]; **Clair de lune là chương duy nhất có tên mô tả**.
 
 ## Verlaine
 Tên bài gắn với bài thơ "Clair de lune" của **Paul Verlaine** — Debussy cũng phổ nhạc bài thơ này trong tập ca khúc *Fêtes galantes* đầu tiên (1890). Chương 3 của tổ khúc ban đầu dự định mang tên "Promenade sentimentale" — cũng là tên một bài thơ của Verlaine.
@@ -781,8 +781,8 @@ Tên bài gắn với bài thơ "Clair de lune" của **Paul Verlaine** — Debu
 ## Ngôn ngữ âm nhạc
 Bài viết ở nhịp **9/8**, nhóm **3 + 3 + 3** ([[so-chi-nhip|nhịp kép]]) — cảm giác như một điệu valse rất chậm, mỗi phách lại chia ba; các chỗ [[dao-phach|đảo phách]] đến từ những nhóm nhịp kiểu [[hemiola]].
 
-Hình thức **ba đoạn A – B – A′** dài **72 ô nhịp** (theo một phân tích dùng thuật ngữ của Caplin: khoảng 26 – 24 – 22 ô): A là một [[cau-nhac|đoạn nhạc]] kép mở rộng, B gồm ba đoạn nhạc đều đặn, A′ là sự trở lại có biến đổi kèm coda. Cuối A nối liền vào đầu B quanh **ô 27**, nên ranh giới chỉ mang tính gần đúng.
- Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — hợp âm trượt song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
+[[hinh-thuc-am-nhac|Hình thức]] **ba đoạn A – B – A′** dài **72 ô nhịp** (theo một phân tích dùng thuật ngữ của Caplin: khoảng 26 – 24 – 22 ô): A là một [[cau-nhac|đoạn nhạc]] kép mở rộng, B gồm ba đoạn nhạc đều đặn, A′ là sự trở lại có biến đổi kèm coda. Cuối A nối liền vào đầu B quanh **ô 27**, nên ranh giới chỉ mang tính gần đúng.
+ Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — [[hoa-am-song-song|hợp âm trượt]] song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -790,16 +790,16 @@ Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm y�
 |---|---|
 | **Âm thanh** | Rất nhỏ, âm vực rộng; hợp âm rải trải rộng ở phần giữa |
 | **Hoà âm** | Rê♭ trưởng; hợp âm trượt song song, hợp âm mở rộng — màu sắc hơn chức năng |
-| **Giai điệu** | Gắn với hình ảnh thơ Verlaine |
+| **[[giai-dieu|Giai điệu]]** | Gắn với hình ảnh thơ Verlaine |
 | **Nhịp điệu** | 9/8 (3 + 3 + 3), nhóm kiểu hemiola tạo cảm giác lơ lửng |
 | **Phát triển** | Ba đoạn A – B – A′ (khoảng 26 – 24 – 22 ô), ranh giới A – B nối liền |
 
 Liên hệ phương pháp: các nhóm nhịp lệch phách là chỗ tốt để bàn về [[sieu-nhip]] và cấu trúc nhóm; hình thức đã được phân tích bằng thuật ngữ của [[chuc-nang-hinh-thuc|Caplin]].
 
 ## Gợi ý khi dạy
-- Đếm nhịp 9/8 cẩn thận, nhất là các chỗ nhóm 2 nốt ([[lien-ba|liên hai]]) chồng lên phách chia ba (xem [[da-nhip]]).
+- [[am-tiet-nhip|Đếm nhịp]] 9/8 cẩn thận, nhất là các chỗ nhóm 2 nốt ([[lien-ba|liên hai]]) chồng lên phách chia ba (xem [[da-nhip]]).
 - [[ban-dap|Pedal]] đổi theo hoà âm để giữ tiếng trong trẻo; có thể kết hợp pedal una corda ở các đoạn rất nhỏ.
-- Chơi rất nhỏ (pp) mà vẫn rõ — luyện [[lam-noi-giai-dieu]] ở mức cường độ thấp.
+- Chơi rất nhỏ (pp) mà vẫn rõ — luyện [[lam-noi-giai-dieu]] ở mức [[cuong-do|cường độ]] thấp.
 `,
   },
 ]

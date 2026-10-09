@@ -22,13 +22,13 @@ Mục này dành cho hai đối tượng: **người học** muốn có đôi ta
 2. [[cao-do-tuyet-doi]] — hiểu đúng về cảm âm tuyệt đối.
 3. [[xuong-am]] — Đô cố định và Đô di động.
 4. [[am-tiet-nhip]] — đọc tiết tấu bằng âm tiết (ta – ti, takadimi…).
-5. [[ky-am]] — nghe và ghi lại giai điệu, tiết tấu, hoà âm.
+5. [[ky-am]] — nghe và ghi lại [[giai-dieu|giai điệu]], tiết tấu, hoà âm.
 6. [[ly-thuyet-hoc-am-nhac-gordon]] — "nghe trong đầu" (audiation) và trình tự học.
 7. [[tap-trong-dau]] — luyện tập không cần đàn.
 Liên quan: [[nghe-nhac-chu-dong]], [[cam-nhan-am-thanh]], [[phan-luong-thinh-giac]].
 
 ## Phần B — Sư phạm
-8. [[phuong-phap-giao-duc-am-nhac]] — Dalcroze, Kodály, Orff, Suzuki.
+8. [[phuong-phap-giao-duc-am-nhac]] — Dalcroze, [[zoltan-kodaly|Kodály]], [[carl-orff|Orff]], Suzuki.
 9. [[cach-day-doc-not]] — các cách dạy đọc nốt cho người mới.
 10. [[giang-day-hieu-qua]] — nghiên cứu về buổi học hiệu quả, phản hồi và động lực.
 11. [[day-tre-em]], [[day-nguoi-lon]] — dạy theo lứa tuổi.
@@ -55,10 +55,10 @@ Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[hoi-hop
     ],
     body: `
 ## Cảm âm tương đối là gì?
-Là khả năng nhận ra **[[quang|quãng]]** giữa các nốt và vai trò của chúng trong [[hoa-bieu|giọng]] — ví dụ nghe ra một giai điệu đang đi lên quãng 5, hay nốt đang nghe là [[bac-am-giai|bậc 7]] muốn về chủ âm. Kỹ năng này phổ biến hơn nhiều so với [[cao-do-tuyet-doi]].
+Là khả năng nhận ra **[[quang|quãng]]** giữa các nốt và vai trò của chúng trong [[hoa-bieu|giọng]] — ví dụ nghe ra một [[giai-dieu|giai điệu]] đang đi lên quãng 5, hay nốt đang nghe là [[bac-am-giai|bậc 7]] muốn về chủ âm. Kỹ năng này phổ biến hơn nhiều so với [[cao-do-tuyet-doi]].
 
 ## Luyện được đến đâu?
-- Người lớn có cảm âm tương đối có thể học được "**cảm âm tuyệt đối giả**": gọi tên nốt theo cách bề ngoài giống cảm âm tuyệt đối; một số người sau luyện tập nhận đúng cả 12 nốt với độ chính xác từ 90% trở lên.
+- Người lớn có cảm âm tương đối có thể học được "**cảm âm tuyệt đối giả**": gọi [[not-nhac|tên nốt]] theo cách bề ngoài giống cảm âm tuyệt đối; một số người sau luyện tập nhận đúng cả 12 nốt với độ chính xác từ 90% trở lên.
 - Nghiên cứu của Đại học Chicago (Howard Nusbaum, 2015) cho thấy người không có cảm âm tuyệt đối vẫn **học được cách nhận nốt nhanh**.
 
 ## Luyện những gì
@@ -122,11 +122,11 @@ Hệ thống tên Ut–Re–Mi bắt nguồn từ [[Guido d'Arezzo]] (thế kỷ
 ## Hai hệ thống
 | | Đô cố định | Đô di động |
 |---|---|---|
-| "Đô" là | Luôn là nốt **C** | **Âm chủ** của giọng trưởng đang hát |
-| Hợp âm trưởng trên G | Sol – Si – Rê | Đô – Mi – Sol |
-| Thế mạnh | Gắn tên với cao độ cụ thể; hợp với nhạc chuyển giọng phức tạp, nhạc thế kỷ 20–21 | Giữ nguyên quan hệ [[quang]] và [[bac-am-giai|bậc]] ở mọi giọng → luyện [[luyen-tai|cảm âm tương đối]] |
+| "Đô" là | Luôn là nốt **C** | **Âm chủ** của [[am-giai-truong|giọng trưởng]] đang hát |
+| [[hop-am-ba|Hợp âm trưởng]] trên G | Sol – Si – Rê | Đô – Mi – Sol |
+| Thế mạnh | Gắn tên với cao độ cụ thể; hợp với nhạc [[chuyen-giong|chuyển giọng]] phức tạp, nhạc [[thoi-ky-the-ky-20|thế kỷ 20]]–21 | Giữ nguyên quan hệ [[quang]] và [[bac-am-giai|bậc]] ở mọi giọng → luyện [[luyen-tai|cảm âm tương đối]] |
 
-Với Đô di động, hợp âm trưởng hát từ nốt gốc **luôn là Đô – Mi – Sol** ở bất kỳ giọng nào. Một số hệ thống dùng thêm âm tiết cho nốt cromatic (ví dụ C♯ là "di", B♭ là "ta").
+Với Đô di động, hợp âm trưởng hát từ nốt gốc **luôn là Đô – Mi – Sol** ở bất kỳ giọng nào. Một số hệ thống dùng thêm âm tiết cho nốt [[am-giai-cromatic|cromatic]] (ví dụ C♯ là "di", B♭ là "ta").
 
 ## Ở đâu dùng hệ nào?
 Theo các nguồn (chủ yếu ý kiến giáo viên, chưa phải khảo sát chính thức): Đô cố định phổ biến ở Pháp, Nam Âu, Mỹ Latinh; Đô di động phổ biến ở các nước nói tiếng Anh và tiếng Đức. Việt Nam gọi tên nốt theo kiểu Đô cố định (Đô = C, xem [[not-nhac]]). Một lựa chọn thứ ba là hát bằng **số bậc** (1, 2, 3…), hay dùng ở các nhạc viện quốc tế.
@@ -158,8 +158,8 @@ Các nhà giáo dục không thống nhất: một số cho rằng Đô di độ
 ## Các hệ thống chính
 | Hệ thống | Ví dụ (nhịp đơn) | Đặc điểm |
 |---|---|---|
-| **Kodály** (từ French Time-Names thế kỷ 19) | Nốt đen **ta**, hai móc đơn **ti-ti**; nốt đen chấm + móc đơn **taam-ti** | Gắn với giá trị nốt; không dành âm tiết riêng cho dấu chấm. Choksy (*The Kodály Context*, 1981) bổ sung âm tiết cho các chia nhỏ hơn |
-| **Gordon** | Nốt đen **du**, hai móc đơn **du-de**, bốn móc kép **du-ta-de-ta** | Theo phách; âm tiết **phụ thuộc loại nhịp**: ba móc đơn trong 6/8 là "du-da-di" nhưng trong 7/8 là "du-ba-bi" |
+| **[[zoltan-kodaly|Kodály]]** (từ French Time-Names thế kỷ 19) | Nốt đen **ta**, hai móc đơn **ti-ti**; nốt đen chấm + móc đơn **taam-ti** | Gắn với giá trị nốt; không dành âm tiết riêng cho dấu chấm. Choksy (*The Kodály Context*, 1981) bổ sung âm tiết cho các chia nhỏ hơn |
+| **[[ly-thuyet-hoc-am-nhac-gordon|Gordon]]** | Nốt đen **du**, hai móc đơn **du-de**, bốn móc kép **du-ta-de-ta** | Theo phách; âm tiết **phụ thuộc loại nhịp**: ba móc đơn trong 6/8 là "du-da-di" nhưng trong 7/8 là "du-ba-bi" |
 | **Takadimi** (Hoffman, Pelto, White, 1996) | Phách **ta**; chia hai **ta-di**; chia bốn **ta-ka-di-mi**; chia ba **ta-ki-da** | Mỗi âm tiết là một **vị trí** trong phách; dùng được cho cả nhịp đơn và nhịp kép |
 | **Đếm số** (McHose – Tibbs và tương tự) | 1 – và – 2 – và… | Gắn trực tiếp với số chỉ nhịp |
 Kodály và takadimi đều có thể truy nguồn về hệ thống **French Time-Names** thế kỷ 19; bài của Palkki (JMTP) cho rằng takadimi phát triển dựa trên các nguyên tắc của Kodály.
@@ -194,31 +194,31 @@ Liên quan: [[truong-do]], [[so-chi-nhip]], [[cam-nhan-phach]], [[ky-am]].
       ['Journal of Research in Music Education — 1986 study of dictation strategies (abstract)', 'https://journals.sagepub.com/doi/10.2307/3345259'],
     ],
     body: `
-**Ký âm** là nghe rồi **viết lại** những gì nghe được: tiết tấu, giai điệu, hoặc hoà âm (bè trầm và hợp âm). Đây là phần khó nhất của môn [[luyen-tai]] vì đòi hỏi cùng lúc nghe, nhớ, hiểu và ghi.
+**Ký âm** là nghe rồi **viết lại** những gì nghe được: tiết tấu, [[giai-dieu|giai điệu]], hoặc hoà âm (bè trầm và [[hop-am-ba|hợp âm]]). Đây là phần khó nhất của môn [[luyen-tai]] vì đòi hỏi cùng lúc nghe, nhớ, hiểu và ghi.
 
 ## Bốn khâu (Karpinski)
 Trong *Aural Skills Acquisition* (2000), Gary Karpinski chia ký âm giai điệu thành bốn khâu:
 | Khâu | Việc cần làm | Lỗi thường gặp |
 |---|---|---|
 | **Nghe** | Tiếp nhận âm thanh, chú ý đúng chỗ | Mất tập trung |
-| **Nhớ ngắn hạn** | Giữ đoạn nhạc trong đầu | Quên phần đầu khi phần sau đang vang |
-| **Hiểu** | Nhận ra bậc, quãng, tiết tấu, chức năng | Nghe được nhưng không gọi tên được |
-| **Ghi chép** | Viết thành nốt nhạc | Biết nhưng viết sai, viết chậm |
+| **Nhớ ngắn hạn** | Giữ [[cau-nhac|đoạn nhạc]] trong đầu | Quên phần đầu khi phần sau đang vang |
+| **Hiểu** | Nhận ra bậc, [[quang|quãng]], tiết tấu, chức năng | Nghe được nhưng không gọi tên được |
+| **Ghi chép** | Viết thành [[not-nhac|nốt nhạc]] | Biết nhưng viết sai, viết chậm |
 Chenette (*Journal of Music Theory Pedagogy*) cho rằng **trí nhớ làm việc** là sợi chỉ nối cả bốn khâu, và các khâu khó tách rời: nhiều học sinh gặp khó ở nhiều khâu cùng lúc. Karpinski mô tả sự **nhiễu**: nhớ phần đầu của giai điệu bị cản trở bởi chính phần sau đang vang lên.
 
 ## Hai kỹ thuật vượt giới hạn trí nhớ
 - **Nghe chọn lọc** (extractive listening): mỗi lần nghe chỉ tập trung nhớ **một phần** (ví dụ 4 nốt đầu, hoặc chỉ bè trầm).
-- **Gom nhóm** (chunking): nhớ nốt theo **nhóm có nghĩa** — một hợp âm rải, một đoạn âm giai, một motif — thay vì từng nốt rời. Có thể luyện bằng cách **nói ra** giai điệu: "đi lên theo âm giai từ bậc 1 tới bậc 5, rồi nhảy xuống bậc 3".
+- **Gom nhóm** ([[phuong-phap-luyen-tap|chunking]]): nhớ nốt theo **nhóm có nghĩa** — một [[luyen-hop-am-rai|hợp âm rải]], một đoạn âm giai, một [[motif|motif]] — thay vì từng nốt rời. Có thể luyện bằng cách **nói ra** giai điệu: "đi lên theo âm giai từ bậc 1 tới bậc 5, rồi nhảy xuống bậc 3".
 
 ## Nghiên cứu nói gì?
 - Một nghiên cứu năm 1986 (136 sinh viên lý thuyết) so sánh sáu chiến lược (viết ngay khi nghe, tập trung nghe trước rồi mới viết, hát trước khi viết…) **không tìm thấy khác biệt có ý nghĩa** giữa các chiến lược.
 - Beckett (1997): khi được hướng dẫn **chú ý tiết tấu trước**, học viên ghi tiết tấu chính xác hơn.
-- Nichols và Springer (2025): **kinh nghiệm học piano**, kỹ năng nghe và **trí nhớ làm việc** dự báo kết quả ký âm giai điệu.
+- Nichols và Springer (2025): **kinh nghiệm học piano**, [[lo-trinh-luyen-tai-su-pham|kỹ năng nghe]] và **trí nhớ làm việc** dự báo kết quả ký âm giai điệu.
 - Một nghiên cứu năm 2017 khuyên giáo viên **giới thiệu nhiều chiến lược** và giúp học viên chọn chiến lược phù hợp với mình.
 
 ## Trình tự luyện (gợi ý dạy học)
 1. **Tiết tấu** một bè, 2 ô → 4 ô (dùng [[am-tiet-nhip]]).
-2. **Giai điệu** ngắn trong âm giai ngũ cung hoặc 5 nốt đầu, bắt đầu từ bậc 1.
+2. **Giai điệu** ngắn trong [[am-giai-ngu-cung|âm giai ngũ cung]] hoặc 5 nốt đầu, bắt đầu từ bậc 1.
 3. Giai điệu 4–8 ô, có nhảy quãng trong hợp âm chủ và át.
 4. **Hai bè**: bè trầm và giai điệu.
 5. **Hoà âm**: nghe bè trầm, rồi gọi tên chức năng (I, IV, V…) — xem [[phan-tich-hoa-am]].
@@ -244,8 +244,8 @@ Trước khi viết, luôn **hát lại** đoạn vừa nghe: nếu chưa hát l
 ## Audiation — "nghe trong đầu có hiểu"
 **Audiation** là khả năng **nghe và hiểu** âm nhạc khi âm thanh **không vang lên thật** — giống như ta "nghe" một bài hát trong đầu, hoặc hiểu câu nói khi đọc thầm. Gordon phân biệt:
 - **Bắt chước**: lặp lại được âm thanh mà **chưa chắc hiểu** nó.
-- **Audiation**: âm thanh mang **ý nghĩa** — biết đâu là chủ âm, đâu là phách mạnh, nhận ra mẫu giai điệu và tiết tấu.
-Gordon về sau chia audiation thành nhiều **loại** và **giai đoạn**; các ấn bản sách của ông đưa ra con số khác nhau (ví dụ sáu giai đoạn, hoặc năm giai đoạn và tám loại), nên khi trích dẫn cần ghi rõ ấn bản.
+- **Audiation**: âm thanh mang **ý nghĩa** — biết đâu là [[bac-am-giai|chủ âm]], đâu là [[so-chi-nhip|phách mạnh]], nhận ra mẫu [[giai-dieu|giai điệu]] và tiết tấu.
+Gordon về sau chia audiation thành nhiều **loại** và **giai đoạn**; các [[an-ban-urtext|ấn bản]] sách của ông đưa ra con số khác nhau (ví dụ sáu giai đoạn, hoặc năm giai đoạn và tám loại), nên khi trích dẫn cần ghi rõ ấn bản.
 
 ## Các giai đoạn audiation (theo bản tóm tắt sáu giai đoạn)
 1. Giữ lại âm thanh trong khoảnh khắc.
@@ -260,11 +260,11 @@ Gordon chia học thành **học phân biệt** và **học suy luận**. Học 
 | Bậc | Nội dung |
 |---|---|
 | **Nghe – hát** (aural/oral) | Bắt chước các mẫu cao độ, tiết tấu bằng âm tiết trung tính |
-| **Gắn tên gọi** | Gắn mẫu với tên gọi (âm tiết xướng âm, âm tiết nhịp — xem [[am-tiet-nhip]]) |
+| **Gắn tên gọi** | Gắn mẫu với tên gọi (âm tiết [[xuong-am|xướng âm]], âm tiết nhịp — xem [[am-tiet-nhip]]) |
 | **Tổng hợp từng phần** | Nhận ra giọng, nhịp của một chuỗi mẫu |
 | **Gắn ký hiệu** | Đọc và viết các mẫu đã biết |
 | **Tổng hợp hoàn chỉnh** | Đọc, viết và hiểu cả chuỗi mẫu trong ngữ cảnh |
-Ở bậc **suy luận**, người học dùng những gì đã biết để hiểu các mẫu **mới**: nghe ra, ứng tác, sáng tác.
+Ở bậc **suy luận**, người học dùng những gì đã biết để hiểu các mẫu **mới**: nghe ra, [[ngau-hung-ung-tac|ứng tác]], sáng tác.
 
 Chương trình thường đi theo vòng **tổng thể – bộ phận – tổng thể**: nghe cả bài, tách ra các mẫu để học, rồi trở về bài với hiểu biết mới.
 
@@ -273,7 +273,7 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
 
 ## Với người dạy piano
 - Trước khi cho học trò đọc một bài mới, cho học trò **hát** giai điệu và **đọc tiết tấu** bằng âm tiết.
-- Dạy các **mẫu** hay gặp (hợp âm rải I – V, các công thức kết) như những đơn vị nghe được, không chỉ là nốt trên giấy.
+- Dạy các **mẫu** hay gặp ([[luyen-hop-am-rai|hợp âm rải]] I – V, các công thức kết) như những đơn vị nghe được, không chỉ là nốt trên giấy.
 - Luyện "nghe trước" khi chơi: hình dung âm thanh rồi mới bấm phím (xem [[tap-trong-dau]]).
 `,
   },
@@ -297,17 +297,17 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
     body: `
 | Phương pháp | Người sáng lập | Trọng tâm |
 |---|---|---|
-| **Dalcroze** | Émile Jaques-Dalcroze | Vận động cơ thể theo nhịp điệu (eurhythmics), [[xuong-am]], ngẫu hứng |
-| **Kodály** | [[Kodály|Zoltán Kodály]] | Hát là nền tảng; dân ca; [[xuong-am|Đô di động]] và ký hiệu tay; đọc nhạc |
-| **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết hợp âm nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, glockenspiel); ngẫu hứng nhiều hơn Kodály |
+| **Dalcroze** | Émile Jaques-Dalcroze | Vận động cơ thể theo nhịp điệu (eurhythmics), [[xuong-am]], [[ngau-hung-piano|ngẫu hứng]] |
+| **Kodály** | [[Kodály|Zoltán Kodály]] | Hát là nền tảng; dân ca; [[xuong-am|Đô di động]] và ký hiệu tay; [[doc-not-nhanh|đọc nhạc]] |
+| **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết [[hop-am-ba|hợp âm]] nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, glockenspiel); ngẫu hứng nhiều hơn Kodály |
 | **Suzuki** | Shinichi Suzuki | Học nhạc như học **tiếng mẹ đẻ**: bắt đầu rất sớm, nghe nhiều, học thuộc trước, **phụ huynh** tham gia |
 
 ## Lịch sử từng phương pháp
 | Phương pháp | Mốc chính |
 |---|---|
-| **Dalcroze** | Émile Jaques-Dalcroze dạy hoà âm ở Nhạc viện Geneva (khoảng 1892–1910); nhận thấy học trò **không nghe được** hoà âm mình viết, ông phát triển các trò chơi luyện tai và vận động, đặt tên **eurhythmics**. Dạy ở Hellerau (gần Dresden) khoảng 1910–1914; thành lập **Institut Jaques-Dalcroze** ở Geneva năm 1915 |
+| **Dalcroze** | Émile Jaques-Dalcroze dạy hoà âm ở Nhạc viện Geneva (khoảng 1892–1910); nhận thấy học trò **không nghe được** hoà âm mình viết, ông phát triển các trò chơi [[luyen-tai|luyện tai]] và vận động, đặt tên **eurhythmics**. Dạy ở Hellerau (gần Dresden) khoảng 1910–1914; thành lập **Institut Jaques-Dalcroze** ở Geneva năm 1915 |
 | **Kodály** | Kodály bắt đầu quan tâm giáo dục âm nhạc cho trẻ từ khoảng **1925**; nhà nước Hungary đưa ý tưởng của ông vào trường phổ thông từ **1945**; trường tiểu học âm nhạc đầu tiên (học nhạc hằng ngày) mở năm **1950**; giới thiệu với quốc tế tại hội nghị ISME ở Vienna năm **1958**; UNESCO ghi danh là di sản văn hoá phi vật thể năm **2016** |
-| **Ký hiệu tay và Đô di động** | Lấy từ hệ **Tonic Sol-fa** của John Curwen (1816–1880) — vốn dựa trên hệ xướng âm di động của **Sarah Glover** — được Kodály tiếp nhận vào nửa đầu thế kỷ 20 (xem [[xuong-am]]) |
+| **Ký hiệu tay và Đô di động** | Lấy từ hệ **[[bac-am-giai|Tonic]] Sol-fa** của John Curwen (1816–1880) — vốn dựa trên hệ xướng âm di động của **Sarah Glover** — được Kodály tiếp nhận vào nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (xem [[xuong-am]]) |
 | **Orff Schulwerk** | Carl Orff cùng **Gunild Keetman** phát triển từ thập niên **1920** |
 | **Suzuki** | Bắt đầu ở Nhật từ thập niên **1930** dưới tên "Phương pháp tiếng mẹ đẻ" / "Giáo dục tài năng"; gây chú ý ở Mỹ qua một bộ phim năm 1958 và chuyến lưu diễn năm 1964 của học trò nhỏ |
 
@@ -322,7 +322,7 @@ Orff và Kodály đều coi trọng **âm thanh trước ký hiệu**: biết h�
 
 ## Ứng dụng khi dạy piano
 - Cho trẻ vỗ tay, đi bước theo nhịp trước khi đọc [[truong-do]] (tinh thần Dalcroze).
-- Hát giai điệu trước khi chơi; dùng [[am-giai-ngu-cung|âm giai ngũ cung]] và bài dân ca quen thuộc (Kodály, Orff).
+- Hát [[giai-dieu|giai điệu]] trước khi chơi; dùng [[am-giai-ngu-cung|âm giai ngũ cung]] và bài dân ca quen thuộc (Kodály, Orff).
 - Nghe bản thu bài sắp học và mời phụ huynh cùng tham gia buổi tập (Suzuki).
 
 Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp còn hạn chế. Gợi ý theo lứa tuổi: [[day-tre-em]], [[day-nguoi-lon]].
@@ -346,10 +346,10 @@ Hầu hết người mới học piano bắt đầu bằng một **sách phươn
 ## Ba cách tiếp cận
 | Cách | Ý tưởng | Điểm mạnh | Điểm yếu thường được nêu |
 |---|---|---|---|
-| **Vị trí Đô giữa** | Hai ngón cái đặt trên Đô giữa, các ngón khác trên các phím liền kề; nốt được gắn với ngón tay và vị trí cố định | Mốc định hướng rõ ràng trên khuông và trên đàn | Dễ phụ thuộc "ngón nào bấm nốt nào", khó khi rời vị trí |
-| **Đọc theo quãng / khuôn hình** (intervallic) | Đọc **khoảng cách** và **hướng**: bước (quãng 2), nhảy (quãng 3), lặp lại; kết hợp vài **nốt mốc** | Gần với cách người đọc thạo nhìn bản nhạc (xem [[doc-not-nhanh]], [[thi-tau]]) | Cần thời gian để nhận ra tên từng nốt |
-| **Đa giọng** (multi-key) | Học sớm các vị trí năm ngón ở nhiều giọng | Quen với nhiều giọng, hợp âm, dịch giọng sớm | Khối lượng khái niệm lớn với người mới |
-**Nốt mốc** (landmark): chỉ thuộc lòng vài nốt quan trọng (như Đô giữa, Sol khoá Sol, Fa khoá Fa); các nốt khác được tìm bằng **bước hoặc nhảy** từ nốt mốc. Đây là cầu nối giữa cách thứ nhất và thứ hai.
+| **Vị trí Đô giữa** | Hai ngón cái đặt trên [[ban-phim|Đô giữa]], các ngón khác trên các phím liền kề; nốt được gắn với ngón tay và vị trí cố định | Mốc định hướng rõ ràng trên khuông và trên đàn | Dễ phụ thuộc "ngón nào bấm nốt nào", khó khi rời vị trí |
+| **Đọc theo quãng / khuôn hình** (intervallic) | Đọc **khoảng cách** và **hướng**: bước ([[quang|quãng]] 2), nhảy (quãng 3), lặp lại; kết hợp vài **nốt mốc** | Gần với cách người đọc thạo nhìn bản nhạc (xem [[doc-not-nhanh]], [[thi-tau]]) | Cần thời gian để nhận ra tên từng nốt |
+| **Đa giọng** (multi-key) | Học sớm các vị trí năm ngón ở nhiều giọng | Quen với nhiều giọng, [[hop-am-ba|hợp âm]], [[dich-giong|dịch giọng]] sớm | Khối lượng khái niệm lớn với người mới |
+**Nốt mốc** (landmark): chỉ thuộc lòng vài nốt quan trọng (như Đô giữa, Sol [[khoa-sol|khoá Sol]], Fa [[khoa-fa|khoá Fa]]); các nốt khác được tìm bằng **bước hoặc nhảy** từ nốt mốc. Đây là cầu nối giữa cách thứ nhất và thứ hai.
 
 ## Nghiên cứu: DiCienzo (Đại học Ottawa, 2019)
 - So sánh học trò **7–11 tuổi** học theo cách **Đô giữa** và theo cách **quãng – hỗn hợp**, kiểm tra nhận phím, gọi tên nốt ở hai khoá, nhận nốt đơn và quãng, nhận khuôn hình, và thị tấu.
@@ -360,7 +360,7 @@ Hầu hết người mới học piano bắt đầu bằng một **sách phươn
 ## Gợi ý khi dạy
 Những gợi ý sau là tổng hợp kinh nghiệm, không phải kết luận nghiên cứu:
 - Dù dùng giáo trình nào, hãy dạy **cả tên nốt lẫn quãng**: tên nốt để định vị, quãng để đọc nhanh.
-- Sớm cho học trò **rời vị trí cố định** (chơi cùng giai điệu ở chỗ khác trên đàn) để tránh phụ thuộc ngón tay.
+- Sớm cho học trò **rời vị trí cố định** (chơi cùng [[giai-dieu|giai điệu]] ở chỗ khác trên đàn) để tránh phụ thuộc ngón tay.
 - Kết hợp **nghe – hát trước khi đọc** (xem [[ly-thuyet-hoc-am-nhac-gordon]], [[phuong-phap-giao-duc-am-nhac]]).
 - Kiểm tra thường xuyên bằng [[thi-tau|thị tấu]] những bài **dễ hơn** trình độ đang học.
 Liên quan: [[not-nhac]], [[khuong-nhac]], [[day-tre-em]].
@@ -443,7 +443,7 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
 ## Từng phần luyện gì
 - **Âm giai và hợp âm rải**: [[luyen-am-giai]], [[luyen-hop-am-rai]]; Grade 1 bắt đầu với âm giai Đô trưởng và hợp âm rải đơn giản.
 - **Thị tấu**: chơi một bản ngắn chưa từng thấy sau thời gian xem ngắn — xem [[thi-tau]].
-- **Thi nghe**: vỗ lại tiết tấu, nhận ra giai điệu đi lên hay xuống… — xem [[luyen-tai]].
+- **Thi nghe**: vỗ lại tiết tấu, nhận ra [[giai-dieu|giai điệu]] đi lên hay xuống… — xem [[luyen-tai]].
 - **Bài chuẩn bị**: thường gồm các phong cách khác nhau — xem [[cac-thoi-ky]], [[dien-dat-cau-nhac]] và gợi ý tác phẩm theo cấp độ ở [[lo-trinh-tac-pham]].
 
 ## Lưu ý
@@ -469,15 +469,15 @@ Mỗi nhà xuất bản và hệ thống thi có thang độ khó riêng (thang 
 |---|---|---|
 | Sơ cấp – trung cấp sớm | **Sách nhỏ cho Anna Magdalena Bach** | Tuyển tập bài sơ cấp và trung cấp |
 | Trung cấp sớm (khoảng Grade 2–5) | [[Burgmüller]] — **25 bài luyện tiến bộ Op. 100** | Khoảng Grade 2–5; các bài 9, 15, 20, 21 hợp Grade 4–5 |
-| Trung cấp sớm → trung cấp cao | [[Schumann]] — **Album cho tuổi trẻ Op. 68** | Tập 1 (số 1–18) cho trẻ nhỏ, tập 2 (19–43) khó hơn; ấn bản ABRSM ghi Grade 4–7 |
+| Trung cấp sớm → trung cấp cao | [[Schumann]] — **Album cho tuổi trẻ Op. 68** | Tập 1 (số 1–18) cho trẻ nhỏ, tập 2 (19–43) khó hơn; [[an-ban-urtext|ấn bản]] ABRSM ghi Grade 4–7 |
 | Trung cấp → trung cấp cao | [[Tchaikovsky]] — **Album cho thiếu nhi Op. 39** | Thường được xếp cao hơn Op. 68 một bậc |
-| Trung cấp | [[Clementi]] — **Sonatina Op. 36**; Mozart K. 545 ([[phan-tich-sonata-k545|phân tích]]) | Bước tiếp theo phổ biến sau Burgmüller (xem [[hinh-thuc-sonata]]) |
+| Trung cấp | [[Clementi]] — **Sonatina Op. 36**; [[wolfgang-amadeus-mozart|Mozart]] K. 545 ([[phan-tich-sonata-k545|phân tích]]) | Bước tiếp theo phổ biến sau Burgmüller (xem [[hinh-thuc-sonata]]) |
 | Trung cấp | [[Heller]] — **Études Op. 45, 46** | Op. 46 số 1–5 là điểm bắt đầu hay dùng |
 | Trung cấp (khoảng Grade 4–6 trở lên) | [[Bach]] — **Inventions 2 bè** | Bắt đầu với số 1 (Đô trưởng), rồi số 8 (Fa trưởng); số 6 khó hơn |
 | Trung cấp cao | Bach — **Sinfonia (Inventions 3 bè)** | Số 10 và 14 được gợi ý |
 
 ## Vì sao những tuyển tập này?
-- Mỗi tuyển tập gắn với một kỹ năng: Bach luyện [[doi-am]] và hai tay độc lập; Burgmüller và Schumann luyện [[dien-dat-cau-nhac|diễn đạt]] và tính chất (mỗi bài có tên gợi hình ảnh); sonatina luyện [[hinh-thuc-sonata]] và [[luyen-am-giai|âm giai]].
+- Mỗi tuyển tập gắn với một kỹ năng: Bach luyện [[doi-am]] và [[phoi-hop-hai-tay|hai tay độc lập]]; Burgmüller và Schumann luyện [[dien-dat-cau-nhac|diễn đạt]] và tính chất (mỗi bài có tên gợi hình ảnh); sonatina luyện [[hinh-thuc-sonata]] và [[luyen-am-giai|âm giai]].
 - Kết hợp với bài luyện ngón của [[Czerny]] (xem [[bai-tap-ngon]]).
 
 Thông tin về các nhà soạn nhạc: [[thoi-ky-baroque]], [[thoi-ky-co-dien]], [[thoi-ky-lang-man]].
@@ -507,7 +507,7 @@ Thường được đánh giá **kết hợp** nhiều yếu tố hơn là chỉ
 
 ## Gợi ý khi dạy trẻ nhỏ
 Phần này vận dụng các bài khác trong thư viện:
-- **Âm thanh trước ký hiệu**: hát, vỗ tay, vận động theo nhịp trước khi đọc nốt (tinh thần Kodály, Orff, Dalcroze — xem [[phuong-phap-giao-duc-am-nhac]]).
+- **Âm thanh trước ký hiệu**: hát, vỗ tay, [[cam-nhan-phach|vận động theo nhịp]] trước khi đọc nốt (tinh thần [[zoltan-kodaly|Kodály]], [[carl-orff|Orff]], Dalcroze — xem [[phuong-phap-giao-duc-am-nhac]]).
 - Buổi học **ngắn**, chia nhiều hoạt động; chơi trên phím đen ([[am-giai-ngu-cung|ngũ cung]]) để trẻ ngẫu hứng sớm ([[ngau-hung-piano]]).
 - Đọc nốt bằng **nốt mốc** ([[doc-not-nhanh]]); [[tu-the|tư thế]] với bục kê chân.
 - Phụ huynh tham gia buổi tập ở nhà (tinh thần Suzuki).
@@ -539,7 +539,7 @@ Các con số về thời gian tập trung theo tuổi hay "lợi ích nhận th
 - Người lớn **hiểu khái niệm nhanh** nhưng **cơ tay theo không kịp** — dễ nản.
 
 ## Gợi ý khi dạy
-- **Cùng học viên chọn bài** họ muốn chơi, không chỉ theo giáo trình; người lớn thích học theo nhịp độ riêng (xem [[lo-trinh-tac-pham]], [[dem-hat-piano]]).
+- **Cùng học viên chọn bài** họ muốn chơi, không chỉ theo giáo trình; người lớn thích học theo [[nhip-do|nhịp độ]] riêng (xem [[lo-trinh-tac-pham]], [[dem-hat-piano]]).
 - Tận dụng khả năng **phân tích**: giải thích lý thuyết, cấu trúc ([[hoc-thuoc-bai|trí nhớ phân tích]]).
 - Thực tế với thời gian tập: các buổi ngắn mà đều đặn ([[phuong-phap-luyen-tap|luyện phân bổ]]).
 - Xử lý sớm nỗi lo bị đánh giá (xem [[hoi-hop-bieu-dien]]).

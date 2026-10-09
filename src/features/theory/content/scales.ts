@@ -29,14 +29,14 @@ Công thức tính bằng [[cung-nua-cung]]:
 Âm giai trưởng gồm hai **tứ âm** (nhóm 4 nốt) giống hệt nhau, cách nhau một cung: C–D–E–F | G–A–B–C, mỗi nhóm theo mẫu 1 – 1 – ½.
 
 ## Âm giai trưởng ra đời từ đâu?
-- Thời Trung cổ, nhạc nhà thờ dùng **tám điệu thức** (xem [[dieu-thuc]]) — chưa có khái niệm "trưởng" và "thứ".
+- Thời [[thoi-ky-trung-co|Trung cổ]], nhạc nhà thờ dùng **tám điệu thức** (xem [[dieu-thuc]]) — chưa có khái niệm "trưởng" và "thứ".
 - Năm **1547**, Heinrich Glarean (Glareanus) trong sách *Dodecachordon* thêm hai điệu **Ionian** (giống âm giai trưởng) và **Aeolian** (giống thứ tự nhiên) để mô tả thực tế âm nhạc đương thời, khi giọng trưởng và giọng thứ ngày càng phổ biến.
 - Tuy vậy, **không nên** hiểu là trưởng – thứ "sinh ra" từ Ionian – Aeolian: cả bốn đều hình thành cùng lúc từ thói quen thêm [[dau-hoa]] khi hát (*musica ficta*). Đến thế kỷ 17, hệ thống **trưởng – thứ** dần thay thế hệ điệu thức.
 
 ## Tai người nghe "thứ bậc" trong âm giai
 Trong thí nghiệm nổi tiếng của **Krumhansl và Kessler (1982)**, người nghe nghe một đoạn xác lập giọng rồi đánh giá từng nốt trong 12 nốt "hợp" đến đâu. Kết quả là một **thứ bậc bốn tầng**, giống nhau ở cả giọng trưởng và giọng thứ:
 1. **Chủ âm** — hợp nhất.
-2. Hai nốt còn lại của **hợp âm chủ** (bậc 5 và bậc 3).
+2. Hai nốt còn lại của **[[hop-am-ba|hợp âm]] chủ** (bậc 5 và bậc 3).
 3. Các nốt khác **trong âm giai**.
 4. Các nốt **ngoài âm giai** — kém hợp nhất.
 
@@ -68,7 +68,7 @@ Các dấu hoá cần thiết được gom vào [[hoa-bieu]]. Tên và vai trò 
 La thứ dùng chung [[hoa-bieu]] với Đô trưởng — xem [[giong-song-song]].
 
 ## Thứ hoà âm
-Nâng **bậc 7** lên nửa cung: A – B – C – D – E – F – **G♯** – A. Bậc 7 nâng trở thành **cảm âm**, kéo mạnh về âm chủ và cho phép có [[hop-am-ba|hợp âm V trưởng]] (E–G♯–B). Quãng F–G♯ là [[quang|quãng 2 tăng]] đặc trưng, nghe "phương Đông".
+Nâng **bậc 7** lên nửa cung: A – B – C – D – E – F – **G♯** – A. Bậc 7 nâng trở thành **[[bac-am-giai|cảm âm]]**, kéo mạnh về âm chủ và cho phép có [[hop-am-ba|hợp âm V trưởng]] (E–G♯–B). Quãng F–G♯ là [[quang|quãng 2 tăng]] đặc trưng, nghe "phương Đông".
 
 ::keyboard A4 B4 C5 D5 E5 F5 G#5 A5 | La thứ hoà âm
 
@@ -78,12 +78,12 @@ Nâng **bậc 7** lên nửa cung: A – B – C – D – E – F – **G♯** 
 ::keyboard A4 B4 C5 D5 E5 F#5 G#5 A5 | La thứ giai điệu (chiều đi lên)
 
 ## Vì sao có ba dạng?
-- **Thứ hoà âm**: bậc 7 được nâng lên để có **cảm âm** (cách chủ âm nửa cung) — vốn là một dấu hoá thêm khi hát (*musica ficta*). Nhưng việc này tạo ra quãng **2 tăng** giữa bậc 6 và 7, theo truyền thống là **khó hát**.
+- **Thứ hoà âm**: bậc 7 được nâng lên để có **cảm âm** (cách chủ âm nửa cung) — vốn là một [[dau-hoa|dấu hoá]] thêm khi hát (*musica ficta*). Nhưng việc này tạo ra quãng **2 tăng** giữa bậc 6 và 7, theo truyền thống là **khó hát**.
 - **Thứ giai điệu** ra đời để tránh quãng 2 tăng đó: nâng thêm bậc 6 khi đi lên.
 - Quy ước "đi xuống thì về thứ tự nhiên" là cách **sách giáo khoa** tóm tắt; các nhà soạn nhạc không phải lúc nào cũng theo. Có nhà lý thuyết cho rằng nên hiểu giọng thứ như **một tập hợp nốt linh hoạt** (bậc 6 và 7 có hai dạng) hơn là ba âm giai tách biệt.
 
 ## Thứ có "buồn" không?
-- Khi **tốc độ và cường độ được kiểm soát**, người nghe phương Tây thường cảm thấy giọng trưởng **vui**, giọng thứ **buồn**.
+- Khi **tốc độ và [[cuong-do|cường độ]] được kiểm soát**, người nghe phương Tây thường cảm thấy [[am-giai-truong|giọng trưởng]] **vui**, giọng thứ **buồn**.
 - Trẻ em: phần lớn nghiên cứu (Gerardi và Gerken 1995; Dalla Bella và cộng sự 2001) cho thấy mối liên hệ "trưởng – vui, thứ – buồn" chỉ **ổn định từ khoảng 6–8 tuổi**; trẻ nhỏ hơn phân biệt được trưởng – thứ nhưng chưa gắn với cảm xúc.
 - Nghiên cứu xuyên văn hoá (Fritz và cộng sự, 2009) với người **Mafa** ở Cameroon — chưa từng nghe nhạc phương Tây — thấy họ cũng thường nghe đoạn giọng trưởng là **vui**, giọng thứ là **sợ hãi**.
 `,
@@ -114,9 +114,9 @@ Nâng **bậc 7** lên nửa cung: A – B – C – D – E – F – **G♯** 
 ## Ý nghĩa
 - **Chủ âm** (1): điểm dừng, "nhà" của bản nhạc.
 - **Át âm** (5): quan trọng thứ hai, tạo lực hút mạnh về chủ âm.
-- **Cảm âm** (7): cách chủ âm nửa cung, "muốn" đi lên chủ âm. Trong [[am-giai-thu|giọng thứ tự nhiên]] bậc 7 cách chủ âm một cung nên gọi là **bậc 7 thứ** (subtonic).
+- **Cảm âm** (7): cách chủ âm [[cung-nua-cung|nửa cung]], "muốn" đi lên chủ âm. Trong [[am-giai-thu|giọng thứ tự nhiên]] bậc 7 cách chủ âm một cung nên gọi là **bậc 7 thứ** (subtonic).
 
-Hợp âm dựng trên các bậc được ghi bằng số La Mã (I, IV, V…): xem [[chuc-nang-hoa-am]]. Ứng dụng trong [[am-giai-truong]] và [[am-giai-thu]].
+[[hop-am-ba|Hợp âm]] dựng trên các bậc được ghi bằng số La Mã (I, IV, V…): xem [[chuc-nang-hoa-am]]. Ứng dụng trong [[am-giai-truong]] và [[am-giai-thu]].
 
 ## Bậc nào "quan trọng" hơn?
 Thí nghiệm của Krumhansl và Kessler (1982) cho thấy tai người nghe xếp **chủ âm** cao nhất, tiếp theo là **bậc 5 và bậc 3** (cùng tạo hợp âm chủ), rồi các bậc còn lại trong âm giai — xem [[am-giai-truong]].
@@ -168,7 +168,7 @@ Hoá biểu gồm các [[dau-hoa]] đặt ngay sau [[khoa-nhac]], áp dụng cho
 Mỗi hoá biểu ứng với một [[am-giai-truong]] và một [[am-giai-thu]] — xem [[giong-song-song]]. Đổi cả bài sang hoá biểu khác: [[dich-giong]]. Toàn bộ được sắp xếp gọn trong [[vong-quang-nam]].
 
 ## Hoá biểu "thiếu một dấu" thời Baroque
-Trong nhạc Baroque, giọng thứ đôi khi được viết với **ít hơn một dấu giáng** so với ngày nay — một thói quen còn lại từ thời điệu thức. Ví dụ nổi tiếng: Toccata và Fugue Rê thứ BWV 538 của [[Bach]] được viết **không có hoá biểu** (Rê thứ ngày nay có 1 dấu giáng), nên từ năm 1845 bị gán biệt danh "**Dorian**" — vì nhìn giống [[dieu-thuc|điệu Dorian]] trên Rê. Khi dạy học sinh đọc bản in cũ, cần lưu ý điều này: dấu B♭ sẽ được viết thành dấu hoá bất thường trong bài.
+Trong nhạc [[thoi-ky-baroque|Baroque]], giọng thứ đôi khi được viết với **ít hơn một dấu giáng** so với ngày nay — một thói quen còn lại từ thời điệu thức. Ví dụ nổi tiếng: Toccata và [[fugue|Fugue]] Rê thứ BWV 538 của [[Bach]] được viết **không có hoá biểu** (Rê thứ ngày nay có 1 dấu giáng), nên từ năm 1845 bị gán biệt danh "**Dorian**" — vì nhìn giống [[dieu-thuc|điệu Dorian]] trên Rê. Khi dạy học sinh đọc bản in cũ, cần lưu ý điều này: dấu B♭ sẽ được viết thành dấu hoá bất thường trong bài.
 
 ## "Tính cách" của các giọng
 Nhà thơ – nhạc sĩ Christian Schubart (viết khoảng 1784, in năm 1806) mô tả mỗi giọng có một tính cách riêng — ví dụ Rê thứ là "nỗi u sầu nữ tính". Cần nhớ rằng thời đó đàn phím thường được [[luat-binh-quan|lên dây không bình quân]], nên các giọng có thể nghe khác nhau; trong bình quân 12, các giọng chỉ khác nhau về **cao độ**.
@@ -193,19 +193,19 @@ Thứ tự dấu thăng "**Fa – Đô – Sol – Rê – La – Mi – Si**" �
     body: `
 ::circle-of-fifths | Vòng ngoài: giọng trưởng · vòng trong: giọng thứ song song · viền: số dấu hoá
 
-Đi **theo chiều kim đồng hồ**, mỗi bước lên một [[quang|quãng 5 đúng]] và [[hoa-bieu]] thêm một dấu thăng. Đi **ngược chiều** (lên quãng 4), mỗi bước thêm một dấu giáng. Ở đáy vòng, F♯ trưởng và G♭ trưởng là [[trung-am]] — vòng tròn khép kín nhờ [[luat-binh-quan]].
+Đi **theo chiều kim đồng hồ**, mỗi bước lên một [[quang|quãng 5 đúng]] và [[hoa-bieu]] thêm một [[dau-hoa|dấu thăng]]. Đi **ngược chiều** (lên quãng 4), mỗi bước thêm một dấu giáng. Ở đáy vòng, F♯ trưởng và G♭ trưởng là [[trung-am]] — vòng tròn khép kín nhờ [[luat-binh-quan]].
 
 ## Dùng để làm gì
 - Tra nhanh hoá biểu của mọi giọng.
 - Tìm giọng song song: cặp trong–ngoài cùng ô (C – a). Xem [[giong-song-song]].
 - Các giọng **cạnh nhau** chỉ khác một dấu hoá → [[chuyen-giong]] mượt mà.
 - Ba ô liền nhau (F – C – G) cho ba [[hop-am-ba|hợp âm]] chính IV – I – V của giọng ở giữa.
-- Đi ngược chiều kim đồng hồ là chuỗi **át âm → chủ âm** (G → C → F → B♭…), nền tảng của nhiều [[vong-hop-am]] như ii – V – I và [[mo-tien-hoa-am|mô tiến quãng 5]].
+- Đi ngược chiều kim đồng hồ là chuỗi **át âm → [[bac-am-giai|chủ âm]]** (G → C → F → B♭…), nền tảng của nhiều [[vong-hop-am]] như [[ii-v-i|ii – V – I]] và [[mo-tien-hoa-am|mô tiến quãng 5]].
 - Hai giọng **đối diện** nhau (C và F♯) xa nhau nhất — vang cùng lúc tạo [[da-dieu-tinh]].
 
 ## Lịch sử
 - Vòng quãng 5 cổ nhất được biết đến nằm trong sách *Grammatika* (khoảng **1677–1679**) của nhà lý luận gốc Kyiv **Nikolai Diletsky**. Với ông, đó chỉ là công cụ để **kéo dài** tác phẩm bằng cách chuyển giọng liên tiếp.
-- Ở Đức, **Johann David Heinichen** độc lập vẽ "vòng âm nhạc" (*Musicalischer Circul*) trong sách về bè trầm liên tục năm **1711**, và bản sửa năm 1728 gần với sơ đồ ngày nay.
+- Ở Đức, **[[johann-david-heinichen|Johann David Heinichen]]** độc lập vẽ "vòng âm nhạc" (*Musicalischer Circul*) trong sách về bè trầm liên tục năm **1711**, và bản sửa năm 1728 gần với sơ đồ ngày nay.
 - Ý tưởng đi vòng qua các quãng 5 còn sớm hơn: những năm 1540, Matthias Greiter đã chuyển một bài hát qua bảy bước theo vòng quãng 5. (Việc gán vòng quãng 5 cho Pythagore **không có bằng chứng**.)
 
 Vòng chỉ **khép kín** được trên đàn lên dây bình quân; với hệ Pythagore, 12 quãng 5 thuần **dư** ra một "dấu phẩy" (xem [[luat-binh-quan]]).
@@ -224,14 +224,14 @@ Vòng chỉ **khép kín** được trên đàn lên dây bình quân; với h�
     ],
     body: `
 ## Giọng song song (relative)
-Một giọng trưởng và một giọng thứ có **cùng [[hoa-bieu]]**:
+Một [[am-giai-truong|giọng trưởng]] và một [[am-giai-thu|giọng thứ]] có **cùng [[hoa-bieu]]**:
 - Âm chủ giọng thứ = **bậc 6** của giọng trưởng (hoặc thấp hơn [[quang|quãng 3 thứ]]).
 - C trưởng ↔ La thứ; G trưởng ↔ Mi thứ; F trưởng ↔ Rê thứ.
 
 ## Giọng cùng tên (parallel)
 Cùng **âm chủ**, khác hoá biểu:
-- C trưởng (không dấu) ↔ Đô thứ (3 dấu giáng).
-- Giọng thứ cùng tên có bậc 3, 6, 7 thấp hơn nửa cung.
+- C trưởng (không dấu) ↔ Đô thứ (3 [[dau-hoa|dấu giáng]]).
+- Giọng thứ cùng tên có bậc 3, 6, 7 thấp hơn [[cung-nua-cung|nửa cung]].
 
 ::keyboard C4 E4 G4 | C trưởng: C – E – G
 ::keyboard C4 Eb4 G4 | C thứ: C – E♭ – G (bậc 3 hạ xuống)
@@ -243,10 +243,10 @@ Thuật ngữ tiếng Việt và tiếng Anh **ngược nhau** ở chỗ này:
 | Giọng **song song** | **relative** key | C trưởng – La thứ |
 | Giọng **cùng tên** | **parallel** key | C trưởng – Đô thứ |
 
-"Parallel" dịch sát là "song song", nhưng lại chỉ **giọng cùng tên**. Khi dạy bằng giáo trình tiếng Anh (như ABRSM), cần nói rõ để học sinh không nhầm.
+"Parallel" dịch sát là "song song", nhưng lại chỉ **giọng cùng tên**. Khi dạy bằng giáo trình tiếng Anh (như [[thi-cap-do|ABRSM]]), cần nói rõ để học sinh không nhầm.
 
 ## Giọng họ hàng gần
-Các giọng có hoá biểu khác nhau không quá một dấu: giọng gốc, giọng song song, và hai giọng hai bên trên [[vong-quang-nam]] cùng các giọng song song của chúng. Đây là đích đến phổ biến khi [[chuyen-giong]]. Mượn hợp âm từ giọng cùng tên: xem [[hop-am-muon]].
+Các giọng có hoá biểu khác nhau không quá một dấu: giọng gốc, giọng song song, và hai giọng hai bên trên [[vong-quang-nam]] cùng các giọng song song của chúng. Đây là đích đến phổ biến khi [[chuyen-giong]]. Mượn [[hop-am-ba|hợp âm]] từ giọng cùng tên: xem [[hop-am-muon]].
 `,
   },
   {
@@ -271,7 +271,7 @@ Chơi các phím trắng nhưng lấy **nốt khác** làm âm chủ, ta đượ
 | Dorian | D | thứ, **6 trưởng** | ♮6 | Thứ nhưng tươi, jazz/funk |
 | Phrygian | E | thứ, **2 thứ** | ♭2 | Tây Ban Nha, flamenco |
 | Lydian | F | trưởng, **4 tăng** | ♯4 | Lơ lửng, nhạc phim |
-| Mixolydian | G | trưởng, **7 thứ** | ♭7 | Blues, rock |
+| Mixolydian | G | trưởng, **7 thứ** | ♭7 | [[blues-12-nhip|Blues]], rock |
 | Aeolian | A | = [[am-giai-thu|thứ tự nhiên]] | — | Buồn |
 | Locrian | B | thứ, **2 thứ, 5 giảm** | ♭2, ♭5 | Bất ổn, hiếm dùng |
 
@@ -281,17 +281,17 @@ Chơi các phím trắng nhưng lấy **nốt khác** làm âm chủ, ta đượ
 ## Cách nghĩ thực hành
 So sánh với âm giai trưởng/thứ cùng âm chủ và chỉ nhớ **nốt khác biệt**. Ví dụ: Dorian = thứ tự nhiên nhưng bậc 6 nâng lên.
 
-Điệu thức có nguồn gốc từ thánh ca Trung cổ và được dùng nhiều trong jazz, nhạc dân gian và nhạc phim. Xem thêm [[am-giai-ngu-cung]], [[am-giai-blues]]. Trong jazz, mỗi điệu thức gắn với một loại hợp âm: [[he-thong-hop-am-am-giai]].
+Điệu thức có nguồn gốc từ thánh ca [[thoi-ky-trung-co|Trung cổ]] và được dùng nhiều trong jazz, nhạc dân gian và nhạc phim. Xem thêm [[am-giai-ngu-cung]], [[am-giai-blues]]. Trong jazz, mỗi điệu thức gắn với một loại [[hop-am-ba|hợp âm]]: [[he-thong-hop-am-am-giai]].
 
 ## Lịch sử: tám điệu Gregorian
 - Khoảng **cuối thế kỷ 8 – thế kỷ 9**, thánh ca Gregorian được xếp vào **tám điệu thức**, có lẽ theo mô hình *oktōēchos* của Byzantine. Ban đầu chúng chỉ được gọi bằng **số thứ tự**.
-- Có **bốn nốt kết** (finalis): **D, E, F, G**. Mỗi nốt kết có hai điệu: **chính** (authentic — âm vực từ nốt kết lên trên) và **phụ** (plagal, tên có tiền tố "hypo-" — âm vực từ quãng 4 dưới đến quãng 5 trên nốt kết).
+- Có **bốn nốt kết** (finalis): **D, E, F, G**. Mỗi nốt kết có hai điệu: **chính** (authentic — âm vực từ nốt kết lên trên) và **phụ** (plagal, tên có tiền tố "hypo-" — âm vực từ [[quang|quãng]] 4 dưới đến quãng 5 trên nốt kết).
 - Tên Hy Lạp (Dorian, Phrygian…) được gắn vào từ khoảng thế kỷ 9 trong một nỗ lực **sai lầm** nhằm nối với âm nhạc Hy Lạp cổ đại — các điệu Hy Lạp thật dùng hệ lên dây khác hẳn.
 - Năm **1547**, Glarean thêm **Aeolian** và **Ionian** (cùng hai điệu phụ), thành **12 điệu**. **Locrian** (và Hypolocrian) không có trong hệ 12 điệu của Glarean.
 
 ## Điệu thức trong jazz
 - Năm **1953**, George Russell tự xuất bản *The Lydian Chromatic Concept of Tonal Organization* — lý thuyết đầu tiên khám phá mối quan hệ **dọc giữa hợp âm và âm giai**, được cho là đã ảnh hưởng đến jazz điệu thức.
-- **"So What"** (Miles Davis, album *Kind of Blue*, 1959): khuôn 32 ô nhịp, 16 ô **Rê Dorian**, 8 ô **Mi♭ Dorian**, rồi trở lại Rê Dorian. Chỉ hai "hợp âm" nên người ngẫu hứng tự do theo giai điệu thay vì chạy theo hợp âm đổi nhanh. Hợp âm mở đầu xếp chồng quãng 4 được gọi là "**hợp âm So What**" (xem [[hoa-am-quang-bon]]).
+- **"So What"** (Miles Davis, album *Kind of Blue*, 1959): khuôn 32 [[so-chi-nhip|ô nhịp]], 16 ô **Rê Dorian**, 8 ô **Mi♭ Dorian**, rồi trở lại Rê Dorian. Chỉ hai "hợp âm" nên người [[ngau-hung-tu-do|ngẫu hứng tự do]] theo [[giai-dieu|giai điệu]] thay vì chạy theo hợp âm đổi nhanh. Hợp âm mở đầu xếp chồng quãng 4 được gọi là "**hợp âm So What**" (xem [[hoa-am-quang-bon]]).
 `,
   },
   {
@@ -319,17 +319,17 @@ Bỏ bậc 4 và bậc 7 của [[am-giai-truong]] (hai nốt tạo [[cung-nua-cu
 Bắt đầu từ bậc 5 của ngũ cung trưởng: A – C – D – E – G (song song với C ngũ cung trưởng, như [[giong-song-song]]). Đây là nền tảng của [[am-giai-blues]] và solo guitar rock.
 
 ## Trong âm nhạc Việt Nam
-Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ cung. Năm âm gốc Hán **Cung – Thương – Giốc – Chủy – Vũ** được người Việt gọi là **Hò – Xự – Xang – Xê – Cống**; âm **Líu** cao hơn Hò một quãng 8.
+Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ cung. Năm âm gốc Hán **Cung – Thương – Giốc – Chủy – Vũ** được người Việt gọi là **Hò – Xự – Xang – Xê – Cống**; âm **Líu** cao hơn Hò một [[quang|quãng 8]].
 - Một nghiên cứu về Ca Huế ghi chữ **Hò = Đô**; theo đó Xự – Xang – Xê – Cống ứng với **Rê – Fa – Sol – La**. Đây là quy ước ghi chép: các nguồn khác có thể đặt Hò ở cao độ khác (ví dụ Hò = Rê).
-- Ca Huế có hai điệu thức chính: **điệu Bắc** (tươi vui hoặc trang nghiêm) và **điệu Nam** (như hơi Ai — đặc trưng miền Trung). Ghi trên khuông nhạc, điệu Nam trông giống điệu Bắc, nhưng khi diễn tấu một số âm được chơi **"già"** (cao hơn) hoặc **"non"** (thấp hơn) — điều mà khuông nhạc phương Tây **không ghi được đầy đủ**.
+- Ca Huế có hai [[dieu-thuc|điệu thức]] chính: **điệu Bắc** (tươi vui hoặc trang nghiêm) và **điệu Nam** (như hơi Ai — đặc trưng miền Trung). Ghi trên [[khuong-nhac|khuông nhạc]], điệu Nam trông giống điệu Bắc, nhưng khi diễn tấu một số âm được chơi **"già"** (cao hơn) hoặc **"non"** (thấp hơn) — điều mà khuông nhạc phương Tây **không ghi được đầy đủ**.
 - Vì vậy dùng piano để chơi nhạc cổ truyền chỉ **gần đúng**. Về các tác phẩm piano Việt Nam dùng chất liệu dân gian: [[piano-viet-nam]].
 
 ## Vì sao dễ nghe?
-Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng nhau đều thuận tai — lý do giáo viên hay cho học trò ngẫu hứng trên phím đen.
+Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng nhau đều thuận tai — lý do giáo viên hay cho học trò [[ngau-hung-piano|ngẫu hứng]] trên phím đen.
 
 ## Ngũ cung trong tác phẩm piano
-- **[[Chopin]] — Étude Op. 10 số 5 "Phím đen"**: tay phải chạy liên ba **gần như hoàn toàn trên phím đen** (chỉ có một nốt Fa tự nhiên ở ô nhịp 66), nên hoà âm mang **màu ngũ cung**. Chopin từng viết rằng đây là bài "kém thú vị nhất" với ai không biết nó được viết cho phím đen.
-- **[[Debussy]] — "Voiles"** (Prelude, 1909): gần như toàn bộ dùng [[am-giai-cromatic|âm giai toàn cung]], trừ một **đoạn ngắn ngũ cung** ở giữa (khoảng 6 ô nhịp) — một ví dụ rất tốt để học sinh nghe sự khác nhau giữa hai loại âm giai.
+- **[[Chopin]] — Étude Op. 10 số 5 "Phím đen"**: tay phải chạy [[lien-ba|liên ba]] **gần như hoàn toàn trên phím đen** (chỉ có một nốt Fa tự nhiên ở [[so-chi-nhip|ô nhịp]] 66), nên hoà âm mang **màu ngũ cung**. Chopin từng viết rằng đây là bài "kém thú vị nhất" với ai không biết nó được viết cho phím đen.
+- **[[Debussy]] — "Voiles"** ([[the-loai|Prelude]], 1909): gần như toàn bộ dùng [[am-giai-cromatic|âm giai toàn cung]], trừ một **đoạn ngắn ngũ cung** ở giữa (khoảng 6 ô nhịp) — một ví dụ rất tốt để học sinh nghe sự khác nhau giữa hai loại âm giai.
 `,
   },
   {
@@ -347,22 +347,22 @@ Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng 
     ],
     body: `
 ## Âm giai cromatic
-Đi lần lượt qua **mọi phím** (trắng và đen) — 12 [[cung-nua-cung|nửa cung]] trong một quãng 8. Quy ước: đi lên dùng dấu thăng, đi xuống dùng dấu giáng.
+Đi lần lượt qua **mọi phím** (trắng và đen) — 12 [[cung-nua-cung|nửa cung]] trong một [[quang|quãng 8]]. Quy ước: đi lên dùng [[dau-hoa|dấu thăng]], đi xuống dùng dấu giáng.
 
 ::keyboard C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 | Âm giai cromatic: tất cả 12 phím
 
 **Ngón bấm** chuẩn cho piano: ngón 3 trên mọi phím đen, ngón 1 trên phím trắng; chỗ hai phím trắng liền nhau (E–F, B–C) dùng ngón 1–2 (xem [[ngon-bam]]).
 
 ## Âm giai toàn cung
-Sáu nốt cách đều nhau **một cung**: C – D – E – F♯ – G♯ – A♯. Không có chủ âm rõ ràng nên nghe mơ hồ, như trong mơ. Chỉ có **hai** âm giai toàn cung khác nhau (bắt đầu từ C hoặc C♯).
+Sáu nốt cách đều nhau **một cung**: C – D – E – F♯ – G♯ – A♯. Không có [[bac-am-giai|chủ âm]] rõ ràng nên nghe mơ hồ, như trong mơ. Chỉ có **hai** âm giai toàn cung khác nhau (bắt đầu từ C hoặc C♯).
 
 ::keyboard C4 D4 E4 F#4 G#4 A#4 | Âm giai toàn cung trên C
 
 ## Lịch sử âm giai toàn cung
-- Trong opera *Ruslan và Lyudmila*, **Glinka** dùng âm giai toàn cung **đi xuống** gắn với nhân vật phản diện — gã lùn phù thuỷ **Chernomor**. Đây là lần đầu âm giai này xuất hiện trong nhạc Nga; các nhạc sĩ Nga đến nay vẫn gọi nó là "**âm giai Chernomor**". Ảnh hưởng của nó lan đến các nhà soạn nhạc sau, trong đó có Debussy.
+- Trong opera *Ruslan và Lyudmila*, **Glinka** dùng âm giai toàn cung **đi xuống** gắn với nhân vật phản diện — gã lùn phù thuỷ **Chernomor**. Đây là lần đầu âm giai này xuất hiện trong nhạc Nga; các nhạc sĩ Nga đến nay vẫn gọi nó là "**âm giai Chernomor**". Ảnh hưởng của nó lan đến các nhà soạn nhạc sau, trong đó có [[claude-debussy|Debussy]].
 - Vì mọi nốt cách đều nhau, âm giai toàn cung **không có cảm âm** và **không có quãng 5 đúng** — nên không có lực hút về chủ âm. Đó là lý do nó nghe "lơ lửng".
 
-Claude Debussy dùng âm giai toàn cung rất nhiều (ví dụ prelude "Voiles") — xem [[an-tuong]]. Hợp âm tăng (xem [[hop-am-ba]]) được dựng hoàn toàn từ âm giai này. Một âm giai đối xứng khác: [[am-giai-bat-cung]]. Dùng 12 nốt bình đẳng như một hệ thống: [[ky-thuat-12-am]].
+Claude Debussy dùng âm giai toàn cung rất nhiều (ví dụ [[the-loai|prelude]] "Voiles") — xem [[an-tuong]]. [[hop-am-ba-tang|Hợp âm tăng]] (xem [[hop-am-ba]]) được dựng hoàn toàn từ âm giai này. Một [[dieu-thuc-chuyen-vi-gioi-han|âm giai đối xứng]] khác: [[am-giai-bat-cung]]. Dùng 12 nốt bình đẳng như một hệ thống: [[ky-thuat-12-am]].
 `,
   },
   {
@@ -382,9 +382,9 @@ Dịch giọng khác với [[chuyen-giong]]: chuyển giọng là chuyển độ
 ## Các bước dịch giọng
 1. Xác định [[quang]] cần dịch (C trưởng → E♭ trưởng: lên 3 thứ).
 2. Đổi [[hoa-bieu]] sang giọng mới (0 dấu → 3 dấu giáng).
-3. Dời mỗi nốt đúng **số bậc** (quãng 3 → mỗi nốt lên 2 bậc tên nốt): C → E♭, D → F, E → G…
+3. Dời mỗi nốt đúng **số bậc** (quãng 3 → mỗi nốt lên 2 bậc [[not-nhac|tên nốt]]): C → E♭, D → F, E → G…
 4. Điều chỉnh các [[dau-hoa|dấu hoá bất thường]] theo cùng quãng: F♯ trong C trưởng → A (bình) trong E♭ trưởng.
-5. Với [[ky-hieu-hop-am|hợp âm]]: dời gốc hợp âm cùng quãng, giữ nguyên hậu tố (Dm7 → Fm7).
+5. Với [[ky-hieu-hop-am|hợp âm]]: dời gốc [[hop-am-ba|hợp âm]] cùng quãng, giữ nguyên hậu tố (Dm7 → Fm7).
 
 ::keyboard C4 E4 G4 | C trưởng
 ::keyboard Eb4 G4 Bb4 | Dịch lên 3 thứ → E♭ trưởng: cùng hình dạng quãng
@@ -392,7 +392,7 @@ Dịch giọng khác với [[chuyen-giong]]: chuyển giọng là chuyển độ
 Suy nghĩ bằng **số bậc** (I – IV – V, xem [[bac-am-giai]]) thay vì tên nốt giúp dịch giọng tức thì.
 
 ## Nhạc cụ chuyển giọng
-Một số nhạc cụ đọc nốt khác với âm thanh thực (cao độ thực = **concert pitch**, cao độ của piano):
+Một số nhạc cụ [[doc-not-nhanh|đọc nốt]] khác với âm thanh thực (cao độ thực = **concert pitch**, cao độ của piano):
 | Nhạc cụ | Viết C, nghe ra |
 |---|---|
 | Clarinet, trumpet, sax tenor (B♭) | B♭ (thấp hơn 2 trưởng; sax tenor thấp thêm 1 quãng 8) |
@@ -401,7 +401,7 @@ Một số nhạc cụ đọc nốt khác với âm thanh thực (cao độ th�
 | Guitar, contrabass | C thấp hơn 1 quãng 8 |
 | Piccolo | C cao hơn 1 quãng 8 |
 
-Khi đệm piano cho các nhạc cụ này, cần biết bản của họ đang viết ở giọng nào.
+Khi [[dem-hat-piano|đệm piano]] cho các nhạc cụ này, cần biết bản của họ đang viết ở giọng nào.
 
 ## Vì sao lại có nhạc cụ chuyển giọng?
 - **Kèn đồng tự nhiên**: kèn cor và trumpet ngày xưa **không có van**, chỉ chơi được các nốt trong [[chuoi-boi-am]] của một giọng. Muốn đổi giọng, người chơi **thay đoạn ống** (crook) — có khi để cả giá ống bên cạnh. Nhạc cho cor luôn được **viết như ở giọng Đô**; đoạn ống quyết định âm thanh thực. Van chỉ phổ biến trong dàn nhạc từ khoảng giữa thế kỷ 19; cor giọng **Fa** thành chuẩn từ đầu thế kỷ 19.

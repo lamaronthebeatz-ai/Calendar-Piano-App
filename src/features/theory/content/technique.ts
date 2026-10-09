@@ -58,7 +58,7 @@ Nếu thấy **đau, tê hoặc nóng rát**, hãy dừng lại — xem [[suc-kh
     ],
     body: `
 ## Nhóm ngón
-Ngón bấm âm giai được xây từ hai nhóm luân phiên: **nhóm ngắn (1-2-3)** và **nhóm dài (1-2-3-4)**. Ví dụ [[am-giai-truong|Đô trưởng]] hai quãng 8, tay phải đi lên:
+Ngón bấm âm giai được xây từ hai nhóm luân phiên: **nhóm ngắn (1-2-3)** và **nhóm dài (1-2-3-4)**. Ví dụ [[am-giai-truong|Đô trưởng]] hai [[quang|quãng 8]], tay phải đi lên:
 **1 2 3 · 1 2 3 4 · 1 2 3 · 1 2 3 4 5**
 
 Tay trái là hình ảnh đối xứng: đi xuống dùng 5-4-3-2-1 · 3-2-1 (xem bảng ngón trong [[ngon-bam]]).
@@ -94,7 +94,7 @@ Quy luật dễ nhớ:
 - Ngón bấm tay phải các âm giai phím đen ít đồng nhất hơn, nên cần học thuộc từng giọng.
 
 ## Lộ trình luyện
-Đi lần lượt qua các giọng theo [[vong-quang-nam]]; tập từng tay rồi hai tay; tăng tốc từ từ bằng máy đếm nhịp (xem [[kiem-soat-toc-do]]). Âm giai [[am-giai-cromatic|cromatic]] có quy tắc ngón riêng (ngón 3 trên phím đen). Bước tiếp theo: [[luyen-hop-am-rai]], [[ky-thuat-quang-tam]] và [[not-kep|âm giai nốt kép]].
+Đi lần lượt qua các giọng theo [[vong-quang-nam]]; tập từng tay rồi hai tay; tăng tốc từ từ bằng [[nhip-do|máy đếm nhịp]] (xem [[kiem-soat-toc-do]]). Âm giai [[am-giai-cromatic|cromatic]] có quy tắc ngón riêng (ngón 3 trên phím đen). Bước tiếp theo: [[luyen-hop-am-rai]], [[ky-thuat-quang-tam]] và [[not-kep|âm giai nốt kép]].
 `,
   },
   {
@@ -125,7 +125,7 @@ Chỉ luồn ngón cái thôi chưa đủ để với tới phím kế tiếp. H
 - Khi luyện động tác luồn ngón cái, thả lỏng bàn tay và cổ tay dễ hơn giữ chúng cứng.
 
 ## Lộ trình luyện
-Bắt đầu chậm với máy đếm nhịp (mỗi phách một nốt), rồi hai, rồi bốn nốt mỗi phách; luyện qua cả 12 giọng theo [[vong-quang-nam]]. Xem thêm [[kiem-soat-toc-do]].
+Bắt đầu chậm với [[nhip-do|máy đếm nhịp]] (mỗi phách một nốt), rồi hai, rồi bốn nốt mỗi phách; luyện qua cả 12 giọng theo [[vong-quang-nam]]. Xem thêm [[kiem-soat-toc-do]].
 `,
   },
   {
@@ -153,7 +153,7 @@ Kỹ thuật quãng 8 bắt đầu từ **cổ tay**. Cổ tay hoạt động nh
 Nếu quãng 8 còn quá rộng, tập quãng 6, rồi quãng 7, rồi mới đến quãng 8 (xem [[quang]]). Luyện chậm và **dừng lại nếu khó chịu** — căng cơ là dấu hiệu bàn tay cần thả lỏng hơn (xem [[suc-khoe-nguoi-choi-dan]]).
 
 ## Ngón 1 – 5 hay 1 – 4?
-Quãng 8 liên tiếp ở xa nhau là một dạng [[buoc-nhay-xa|bước nhảy]]. Khi 1 – 5 đã thoải mái, thử thêm **1 – 4** — đặc biệt hữu ích khi nối hợp âm với quãng 8. Chỉ dùng 1 – 5 thường hạn chế tốc độ, nhất là trên phím đen.
+Quãng 8 liên tiếp ở xa nhau là một dạng [[buoc-nhay-xa|bước nhảy]]. Khi 1 – 5 đã thoải mái, thử thêm **1 – 4** — đặc biệt hữu ích khi nối [[hop-am-ba|hợp âm]] với quãng 8. Chỉ dùng 1 – 5 thường hạn chế tốc độ, nhất là trên phím đen.
 `,
   },
   {
@@ -168,7 +168,7 @@ Quãng 8 liên tiếp ở xa nhau là một dạng [[buoc-nhay-xa|bước nhảy
       ['Living Pianos — How to play one hand louder than the other', 'https://www.livingpianos.com/articles/how-to-play-one-hand-louder-than-the-other-on-the-piano/'],
     ],
     body: `
-Trong [[ket-cau|kết cấu chủ điệu]], giai điệu phải nổi lên trên phần đệm. Trên piano, đó là chuyện **kiểm soát trọng lượng** chứ không phải sức ngón.
+Trong [[ket-cau|kết cấu chủ điệu]], [[giai-dieu|giai điệu]] phải nổi lên trên phần đệm. Trên piano, đó là chuyện **kiểm soát trọng lượng** chứ không phải sức ngón.
 
 ## Trọng lượng cánh tay
 - Trọng lượng cánh tay với người chơi piano giống như **hơi thở** với ca sĩ: nó chuyển từ nốt này sang nốt kia và tạo ra một đường giai điệu liền mạch.
@@ -176,12 +176,12 @@ Trong [[ket-cau|kết cấu chủ điệu]], giai điệu phải nổi lên trê
 - Uốn câu nhạc bằng cách **tăng dần trọng lượng tới đỉnh câu rồi giảm dần** (xem [[dien-dat-cau-nhac]]).
 
 ## Làm nổi nốt trên cùng của hợp âm
-Trong hợp âm, nốt cao nhất thường là giai điệu:
+Trong [[hop-am-ba|hợp âm]], nốt cao nhất thường là giai điệu:
 - Đánh nốt trên **nhanh và chắc** hơn; các nốt dưới nhấn **chậm và nhẹ** hơn.
 - Ngón ngoài (ngón 4, 5) làm việc nhiều hơn ngón trong; cổ tay có thể **nghiêng nhẹ** về phía nốt trên.
 
 ## Luyện theo từng bước
-1. Chơi riêng **bè trên**, giữ đúng ngón bấm sẽ dùng trong hợp âm, để cảm nhận lượng trọng lượng cần thiết.
+1. Chơi riêng **bè trên**, giữ đúng [[ngon-bam|ngón bấm]] sẽ dùng trong hợp âm, để cảm nhận lượng trọng lượng cần thiết.
 2. Chơi riêng **các nốt dưới**, thật đều và nhẹ.
 3. Ghép lại cả hợp âm, giữ nguyên sự chênh lệch.
 
@@ -205,26 +205,26 @@ Trong hợp âm, nốt cao nhất thường là giai điệu:
     ],
     body: `
 ## Nốt mốc
-Chọn vài nốt dễ nhận ra làm điểm neo trên [[khuong-nhac|khuông nhạc đôi]]. Các mốc thường dùng: **Đô giữa (C4)**, **Sol khoá Sol (G4 — dòng 2)**, **Fa khoá Fa (F3 — dòng 4)**, Đô trầm (C3) và Đô cao (C5). Các nốt Đô dễ nhận vì chúng đối xứng trên bản nhạc.
+Chọn vài nốt dễ nhận ra làm điểm neo trên [[khuong-nhac|khuông nhạc đôi]]. Các mốc thường dùng: **[[ban-phim|Đô giữa]] (C4)**, **Sol khoá Sol (G4 — dòng 2)**, **Fa khoá Fa (F3 — dòng 4)**, Đô trầm (C3) và Đô cao (C5). Các nốt Đô dễ nhận vì chúng đối xứng trên bản nhạc.
 
 ::staff treble C4 G4 C5 | Nốt mốc trên khoá Sol: C4 (dòng kẻ phụ), G4 (dòng 2), C5 (khe 3)
 ::staff bass C3 F3 C4 | Nốt mốc trên khoá Fa: C3 (khe 2), F3 (dòng 4), C4 (dòng kẻ phụ)
 
 ## Đọc theo quãng
 Thay vì gọi tên từng nốt, đọc **khoảng cách** từ nốt trước:
-- **Liền bậc**: từ dòng sang khe kế bên (hoặc ngược lại) — đi một phím.
+- **[[giai-dieu|Liền bậc]]**: từ dòng sang khe kế bên (hoặc ngược lại) — đi một phím.
 - **Nhảy quãng 3**: từ dòng sang dòng (hoặc khe sang khe) — bỏ qua một phím.
 - Nốt viết **cao hơn** → tay đi sang **phải**; **thấp hơn** → sang **trái**.
 
 ## Kết hợp hai cách
 1. Đặt tay vào một nốt mốc.
-2. Đọc tiếp theo quãng càng xa càng tốt.
+2. Đọc tiếp theo [[quang|quãng]] càng xa càng tốt.
 3. Khi lạc, quay về mốc gần nhất rồi đọc tiếp.
 
 Một mẹo bổ trợ: lướt qua một nhóm nốt trước để thấy **hướng đi** (lên, xuống, đứng yên), rồi mới gọi tên từ mốc.
 
 ## Bài tập thẻ nốt theo cấp
-Vòng tập cơ bản: **giơ thẻ → chơi nốt đó trên đàn → nói tên nốt**. Mục tiêu chính là nối **ký hiệu – phím – âm thanh**; gọi được tên nốt có ích nhưng là thứ yếu.
+Vòng tập cơ bản: **giơ thẻ → chơi nốt đó trên đàn → nói [[not-nhac|tên nốt]]**. Mục tiêu chính là nối **ký hiệu – phím – âm thanh**; gọi được tên nốt có ích nhưng là thứ yếu.
 | Cấp | Bộ thẻ | Cách tập |
 |---|---|---|
 | 1 | Các nốt Đô: C2, C3, **C4**, C5, C6 | Bắt đầu chỉ với **2–3 thẻ**, thuộc thẻ nào thì thêm thẻ tiếp theo |
@@ -267,7 +267,7 @@ Các nghiên cứu này có quy mô nhỏ và chủ yếu đo lường chứ ch�
 
 ## Yếu tố nào dự báo khả năng thị tấu?
 Nhóm của **Reinhard Kopiez và Ji In Lee** (2006 và các bài tiếp theo) đo 23 yếu tố ở người chơi piano. Tổ hợp dự báo tốt nhất gồm bốn yếu tố, cùng giải thích khoảng **60%** khác biệt:
-- **Tốc độ láy rền** (một thước đo tốc độ vận động),
+- **Tốc độ [[ky-hieu-hoa-my|láy rền]]** (một thước đo tốc độ vận động),
 - **Kinh nghiệm thị tấu tích luỹ đến 15 tuổi**,
 - **Tốc độ xử lý thông tin**,
 - **Khả năng nghe trong đầu** (inner hearing — xem [[tap-trong-dau]]).
@@ -277,12 +277,12 @@ Kết luận của họ: thị tấu giỏi là sự kết hợp của yếu t�
 ## Phương pháp nào có hiệu quả?
 **Mishra (2014)** tổng hợp 92 nghiên cứu can thiệp về thị tấu:
 - Hiệu quả chung của các phương pháp luyện **khá nhỏ**; nhóm đối chứng cũng tiến bộ theo thời gian.
-- Các loại có tác dụng tích cực rõ: **luyện tai**, **đọc có kiểm soát**, **hoạt động sáng tạo** (như [[ngau-hung-piano|ngẫu hứng]]) và **hát / [[xuong-am]]**.
+- Các loại có tác dụng tích cực rõ: **[[luyen-tai|luyện tai]]**, **đọc có kiểm soát**, **hoạt động sáng tạo** (như [[ngau-hung-piano|ngẫu hứng]]) và **hát / [[xuong-am]]**.
 - Riêng về tiết tấu, các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả.
 
 ## Những kỹ năng nền giúp thị tấu
 Phần này tổng hợp từ các bài khác trong thư viện — chúng là những gì người thị tấu phải xử lý tức thì:
-- Đọc nốt bằng **mốc và quãng** thay vì gọi tên từng nốt: [[doc-not-nhanh]].
+- Đọc nốt bằng **mốc và [[quang|quãng]]** thay vì gọi tên từng nốt: [[doc-not-nhanh]].
 - Nhận ra ngay [[hoa-bieu]] và [[so-chi-nhip]] trước khi bắt đầu.
 - Nhận ra **mẫu quen thuộc**: [[luyen-am-giai|đoạn âm giai]], [[hop-am-ba|hợp âm]] và [[the-dao-hop-am|thể đảo]], [[mo-tien-hoa-am|mô tiến]] — đọc cả cụm thay vì từng nốt.
 - Giữ nhịp đều: xem [[kiem-soat-toc-do]].
@@ -309,7 +309,7 @@ Phần này tổng hợp từ các bài khác trong thư viện — chúng là n
 
 ## Mẹo thực hành
 - Chọn tốc độ theo **đoạn khó nhất** của phần đang tập, dù các đoạn dễ sẽ thấy chậm.
-- Với đoạn rất nhanh: để máy đếm theo **phân phách** (móc kép), rồi chuyển dần sang móc đơn và nốt đen.
+- Với đoạn rất nhanh: để máy đếm theo **phân phách** (móc kép), rồi chuyển dần sang móc đơn và [[truong-do|nốt đen]].
 - **Đếm hoặc hát** tiết tấu trước khi bật máy đếm nhịp, để tách việc hiểu nhịp khỏi việc điều khiển ngón.
 - **Ghi âm** mình chơi cùng máy đếm nhịp rồi nghe lại — dễ phát hiện chỗ chạy nhanh hoặc chậm mà lúc chơi không nhận ra.
 
@@ -337,7 +337,7 @@ Khi đã vững nhịp, sự co giãn có chủ đích ([[rubato]]) mới thực
     ],
     body: `
 ## Tập "thế nào" quan trọng hơn tập "bao lâu"
-Nghiên cứu của **Duke, Simmons và Cash (2009)** với 17 sinh viên piano trình độ cao cùng học một đoạn 3 ô nhịp:
+Nghiên cứu của **Duke, Simmons và Cash (2009)** với 17 sinh viên piano trình độ cao cùng học một đoạn 3 [[so-chi-nhip|ô nhịp]]:
 - **Thời gian tập** và **số lần chơi lại** **không** dự báo được kết quả hôm sau.
 - Điều phân biệt người làm tốt nhất: **xác định chính xác chỗ khó**, rồi **lặp lại đúng chỗ đó** cho tới khi sửa xong — thay vì chơi lại cả đoạn.
 - Lưu ý: nghiên cứu có tính **tương quan** (không phải thí nghiệm), mẫu nhỏ và chỉ kiểm tra sau một ngày.
@@ -370,7 +370,7 @@ Một đoạn móc kép đều (ví dụ C–D–E–F–G–A–B–C) được
 - **Ngắn – dài** (đảo ngược): luyện tập trung vào những nốt còn lại.
 - Nhóm 3, 4, 5 nốt hoặc [[lien-ba]].
 
-Giáo viên lưu ý: cách này hiệu quả khi dùng cẩn thận nhưng **không chữa được mọi vấn đề kỹ thuật**, và cần kết hợp thả lỏng để tránh căng cơ.
+Giáo viên lưu ý: cách này hiệu quả khi dùng cẩn thận nhưng **không chữa được mọi vấn đề kỹ thuật**, và cần kết hợp thả lỏng để tránh [[suc-khoe-nguoi-choi-dan|căng cơ]].
 
 ## Chia nhỏ và nốt đích
 Cắt câu dài thành từng **cụm** ngắn, mỗi cụm bắt đầu bằng một **nốt đích** rõ ràng; tập từng cụm rồi nối lại. Biết cấu trúc [[cau-nhac]] và [[motif]] giúp chọn chỗ cắt hợp lý.
@@ -398,21 +398,21 @@ Liên quan: [[kiem-soat-toc-do]], [[hoc-thuoc-bai]].
 | Loại | Nhớ cái gì |
 |---|---|
 | **Thính giác** | Âm thanh — "nghe" trước được bản nhạc trong đầu |
-| **Thị giác** | Hình ảnh bản nhạc hoặc hình dạng tay trên bàn phím |
+| **Thị giác** | Hình ảnh bản nhạc hoặc hình dạng tay trên [[ban-phim|bàn phím]] |
 | **Vận động** (cơ bắp) | Chuỗi chuyển động của ngón và tay |
 | **Phân tích** | Cấu trúc: [[hop-am-ba|hợp âm]], [[vong-hop-am]], [[hinh-thuc-am-nhac|hình thức]], [[mo-tien-hoa-am|mô tiến]] |
 
-Các nhà sư phạm đầu thế kỷ 20 (Hughes, Matthay) chỉ nói đến ba loại đầu; trí nhớ **phân tích** (còn gọi là trí nhớ cấu trúc) được bổ sung sau, trong đó có công trình của Roger Chaffin và cộng sự.
+Các nhà sư phạm đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (Hughes, [[lich-su-ky-thuat-piano|Matthay]]) chỉ nói đến ba loại đầu; trí nhớ **phân tích** (còn gọi là trí nhớ cấu trúc) được bổ sung sau, trong đó có công trình của Roger Chaffin và cộng sự.
 
 ## Đừng chỉ dựa vào "trí nhớ ngón tay"
-Một khảo sát giáo viên piano dạy trẻ em cho thấy phương pháp **vận động** và **phân tích** được dùng nhiều nhất. Các tác giả khác cảnh báo học sinh thường **dựa quá nhiều vào trí nhớ vận động** — loại dễ "đứt" nhất khi hồi hộp. Đa số tác giả khuyên kết hợp nhiều loại trí nhớ.
+Một khảo sát giáo viên piano [[day-tre-em|dạy trẻ em]] cho thấy phương pháp **vận động** và **phân tích** được dùng nhiều nhất. Các tác giả khác cảnh báo học sinh thường **dựa quá nhiều vào trí nhớ vận động** — loại dễ "đứt" nhất khi hồi hộp. Đa số tác giả khuyên kết hợp nhiều loại trí nhớ.
 
 ## Vì sao phân tích giúp nhớ?
 Nghiên cứu về trí nhớ cho thấy nhạc sĩ có kinh nghiệm mã hoá thông tin nhanh hơn vì họ gắn nốt mới vào những **"cụm" quen thuộc** đã biết — chính là kiến thức lý thuyết trong thư viện này.
 
 ## "Mốc biểu diễn": nghiên cứu Chaffin – Imreh
-Nhà tâm lý học Roger Chaffin theo dõi nghệ sĩ piano **Gabriela Imreh** học chương Presto trong *Concerto Ý* của Bach (sách *Practicing Perfection*, 2002, viết cùng Mary Crawford):
-- Imreh **ghi âm toàn bộ quá trình tập** và mô tả cấu trúc bài cùng các quyết định: **cơ bản** (như ngón bấm), **diễn giải** (như tạo câu), và **mốc biểu diễn**.
+Nhà tâm lý học Roger Chaffin theo dõi nghệ sĩ piano **Gabriela Imreh** học chương [[nhip-do|Presto]] trong *[[hinh-thuc-concerto|Concerto]] Ý* của [[johann-sebastian-bach|Bach]] (sách *Practicing Perfection*, 2002, viết cùng Mary Crawford):
+- Imreh **ghi âm toàn bộ quá trình tập** và mô tả cấu trúc bài cùng các quyết định: **cơ bản** (như [[ngon-bam|ngón bấm]]), **diễn giải** (như tạo câu), và **mốc biểu diễn**.
 - Bản nhạc **không quá khó nhưng khó thuộc**: ở tốc độ của cô — khoảng **14 nốt mỗi giây** — không có thời gian nghĩ từng nốt; chủ đề lặp lại nhiều lần (dạng [[rondo]] kiểu Ý) dễ khiến **rẽ nhầm**.
 - Cách cô làm: **học cấu trúc hình thức trước**, rồi dùng nó làm "bản đồ" để gắn các **mốc biểu diễn** (performance cues) — những điểm trong bài mà người chơi **chủ ý chú tâm** khi biểu diễn. Các mốc được chọn và tập trong lúc luyện để chúng **tự hiện ra** khi chơi, giúp người chơi theo dõi và điều khiển những chuyển động tự động rất nhanh.
 
@@ -435,7 +435,7 @@ Bằng chứng chủ yếu từ khảo sát và luận án, chưa nhiều thí n
     ],
     body: `
 ## Hình vòm của câu nhạc
-Nghiên cứu ghi âm biểu diễn (ví dụ Demos, Lisboa & Chaffin, 2016, phân tích các bản Bach của hai nghệ sĩ độc tấu) cho thấy **nhịp độ tạo thành hình vòm**: chậm hơn và kém ổn định ở **ranh giới câu**, nhanh và ổn định hơn ở **giữa câu**. Mẫu hình vòm này được ghi nhận ở nhiều tác phẩm và người chơi ở nhiều trình độ. Người biểu diễn cũng uốn **cường độ** theo câu để đánh dấu chỗ bắt đầu và kết thúc.
+Nghiên cứu ghi âm biểu diễn (ví dụ Demos, Lisboa & Chaffin, 2016, phân tích các bản [[johann-sebastian-bach|Bach]] của hai nghệ sĩ độc tấu) cho thấy **nhịp độ tạo thành hình vòm**: chậm hơn và kém ổn định ở **ranh giới câu**, nhanh và ổn định hơn ở **giữa câu**. Mẫu hình vòm này được ghi nhận ở nhiều tác phẩm và người chơi ở nhiều trình độ. Người biểu diễn cũng uốn **cường độ** theo câu để đánh dấu chỗ bắt đầu và kết thúc.
 
 ## Chậm lại ở cuối câu
 Kéo dài nhẹ ở cuối câu là một xu hướng chung, gặp cả trong **lời nói** lẫn âm nhạc. Mô hình của Neil Todd cho rằng người biểu diễn dùng sự kéo dài này để làm **nghe thấy được cấu trúc nhóm** của bản nhạc — tức là [[cau-nhac]] và các tầng lớn hơn của [[hinh-thuc-am-nhac|hình thức]].
@@ -447,7 +447,7 @@ Kéo dài nhẹ ở cuối câu là một xu hướng chung, gặp cả trong **
 - Các [[cach-dien-tau|ký hiệu diễn tấu]] (legato, tenuto, accent) và [[thuat-ngu|thuật ngữ biểu cảm]] cho biết ý đồ của tác giả.
 
 ## Phong cách thay đổi theo thời gian
-Một nghiên cứu 127 bản thu Étude Op. 25 số 1 của Chopin (1909–2016) thấy **tổng lượng co giãn nhịp độ không đổi**, nhưng **cách dùng** rubato thì thay đổi — các bản thu gần đây kéo dài cuối câu nhiều hơn. Nghĩa là "cách chơi biểu cảm" cũng mang dấu ấn từng thời kỳ (xem [[cac-thoi-ky]]).
+Một nghiên cứu 127 bản thu Étude Op. 25 số 1 của [[frederic-chopin|Chopin]] (1909–2016) thấy **tổng lượng [[rubato|co giãn nhịp độ]] không đổi**, nhưng **cách dùng** rubato thì thay đổi — các bản thu gần đây kéo dài cuối câu nhiều hơn. Nghĩa là "cách chơi biểu cảm" cũng mang dấu ấn từng thời kỳ (xem [[cac-thoi-ky]]).
 `,
   },
   {
@@ -479,7 +479,7 @@ Một nghiên cứu định tính với người chơi piano ghi nhận các ngu
 
 ## Những gì nghiên cứu cho thấy có ích
 - **Tổng quan hệ thống năm 2025** (các nghiên cứu 2016–2023): liệu pháp chấp nhận và cam kết (ACT), liệu pháp nhận thức – hành vi (CBT), chánh niệm và yoga giúp **giảm lo âu rõ rệt**.
-- **Tổng quan về phương pháp của giáo viên**: được dùng nhiều nhất là **diễn thử** (biểu diễn mô phỏng), thái độ tích cực, **chuẩn bị kỹ** và **kỹ thuật thở**.
+- **Tổng quan về phương pháp của giáo viên**: được dùng nhiều nhất là **diễn thử** (biểu diễn [[doi-am|mô phỏng]]), thái độ tích cực, **chuẩn bị kỹ** và **kỹ thuật thở**.
 
 ## Áp dụng cho học sinh piano
 - Chuẩn bị bài thật vững, học thuộc bằng nhiều loại trí nhớ ([[hoc-thuoc-bai]]).
@@ -558,15 +558,15 @@ Láy rền **to hoặc dài** thường cần kết hợp cả hai.
 | 1 – 4 | Ngón xa nhau → giữ ngón yên, dùng cổ tay xoay |
 | 4 – 5 | Khó nhất (hai ngón yếu) |
 
-Trong nhạc đối âm (ví dụ [[fugue]] của Bach), các bè khác có thể buộc phải dùng cặp ngón kém thuận; một số người chơi còn **đổi cặp ngón giữa chừng** trong láy rền dài (ví dụ 3-1-3-2).
+Trong nhạc [[doi-am|đối âm]] (ví dụ [[fugue]] của [[johann-sebastian-bach|Bach]]), các bè khác có thể buộc phải dùng cặp ngón kém thuận; một số người chơi còn **đổi cặp ngón giữa chừng** trong láy rền dài (ví dụ 3-1-3-2).
 
 ## Thả lỏng là yêu cầu số một
-- Căng cơ tích tụ dần trong láy rền dài — chú ý giữ ngón mềm.
+- [[suc-khoe-nguoi-choi-dan|Căng cơ]] tích tụ dần trong láy rền dài — chú ý giữ ngón mềm.
 - **Trọng lượng cánh tay cản trở** láy rền: hãy cảm giác như tay **lơ lửng nhẹ** trên phím.
 - Một giáo viên gợi ý **hít vào trước** khi láy và bắt đầu láy khi thở ra.
 
 ## Cách luyện
-- Bắt đầu chậm, **ngón luôn chạm phím**: nhấn nhẹ phím, rồi nâng phím lên nhẹ nhàng mà không nhấc ngón khỏi phím.
+- Bắt đầu chậm, **ngón luôn [[ky-thuat-cham-phim|chạm phím]]**: nhấn nhẹ phím, rồi nâng phím lên nhẹ nhàng mà không nhấc ngón khỏi phím.
 - Tăng tốc từ từ và **dừng tăng** trước khi bàn tay, cánh tay hay vai bắt đầu căng (xem [[kiem-soat-toc-do]]).
 - **Đếm số nốt** của láy rền để kết thúc gọn và đúng nhịp.
 - Luyện hai cách: xoay cổ tay hoàn toàn, và không xoay mà nâng ngón cao.
@@ -589,7 +589,7 @@ Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh 
     ],
     body: `
 ## Hanon — "The Virtuoso Pianist in 60 Exercises"
-**Ủng hộ** cho rằng: luyện **lực, độ đều** của ngón, sự cân bằng hai tay và sức bền; là bài **khởi động** hằng ngày tốt.
+**Ủng hộ** cho rằng: luyện **lực, độ đều** của ngón, sự [[lam-noi-giai-dieu|cân bằng hai tay]] và sức bền; là bài **khởi động** hằng ngày tốt.
 
 **Phản đối** cho rằng:
 - Mọi hoạt động chơi đàn đều luyện lực và độ độc lập của ngón — Hanon không có gì đặc biệt.
@@ -603,7 +603,7 @@ Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh 
 
 ## Kết luận thực tế
 - Mục tiêu (kỹ thuật vững, ngón độc lập) đáng theo đuổi; tranh cãi là **con đường**.
-- Lựa chọn được nhiều giáo viên khuyên: [[luyen-am-giai|âm giai]], [[luyen-hop-am-rai|hợp âm rải]], hợp âm và **tác phẩm thật**.
+- Lựa chọn được nhiều giáo viên khuyên: [[luyen-am-giai|âm giai]], [[luyen-hop-am-rai|hợp âm rải]], [[hop-am-ba|hợp âm]] và **tác phẩm thật**.
 - Dù tập bài nào: luôn **thả lỏng**, dừng khi đau (xem [[suc-khoe-nguoi-choi-dan]]) và tập có mục đích (xem [[phuong-phap-luyen-tap]]).
 `,
   },
@@ -631,11 +631,11 @@ Lỗi thường gặp: tay đi theo hình **chữ V ngược**, hạ xuống ở
 - Dùng **tầm nhìn ngoại vi** để thấy tay khi mắt vẫn nhìn bản nhạc; nếu phải nhìn tay, chỉ liếc khi nhảy và biết trước chỗ quay lại trên bản nhạc.
 
 ## Bước nhảy hợp âm (tay trái)
-1. Nhảy từ **nốt dưới** của hợp âm này sang nốt dưới của hợp âm kia, giữ nguyên ngón, cho đến khi làm được khi nhắm mắt.
+1. Nhảy từ **nốt dưới** của [[hop-am-ba|hợp âm]] này sang nốt dưới của hợp âm kia, giữ nguyên ngón, cho đến khi làm được khi nhắm mắt.
 2. Lặp lại với nốt giữa, rồi nốt trên.
 3. Thêm dần nốt cho đến đủ hợp âm.
 
-Kiểu đệm stride trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
+[[dem-hat-piano|Kiểu đệm]] stride trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
 `,
   },
   {
@@ -651,12 +651,12 @@ Kiểu đệm stride trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyệ
     ],
     body: `
 ## Đổi ngón
-Nốt lặp **rất nhanh** gần như không thể chơi bằng một ngón. Ngón bấm thường được khuyên là **3 – 2 – 1** lặp vòng — nhưng điều quan trọng nhất là tìm ra ngón bấm hợp với tay mình.
+Nốt lặp **rất nhanh** gần như không thể chơi bằng một ngón. [[ngon-bam|Ngón bấm]] thường được khuyên là **3 – 2 – 1** lặp vòng — nhưng điều quan trọng nhất là tìm ra ngón bấm hợp với tay mình.
 
 ## Kỹ thuật
 - Giữ ngón **sát ngay trên phím** — không có thời gian cho động tác thừa.
 - Bàn tay khá yên, ngón cong tròn, đánh vào **giữa phím**.
-- Tập chậm với máy đếm nhịp rồi tăng dần (xem [[kiem-soat-toc-do]]).
+- Tập chậm với [[nhip-do|máy đếm nhịp]] rồi tăng dần (xem [[kiem-soat-toc-do]]).
 - Đàn **upright** khó đáp ứng nốt lặp rất nhanh vì không có bộ máy thoát kép (xem [[bo-may-piano]]).
 
 ## Nốt lặp chậm, liền tiếng
@@ -683,9 +683,9 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
 ## Các kiểu đệm
 | Kiểu | Cách chơi | Hợp với |
 |---|---|---|
-| **Hợp âm khối** | Đánh cả hợp âm cùng lúc | Kiểu cơ bản nhất, mọi thể loại |
-| **Hợp âm rải** | Đánh lần lượt từng nốt của hợp âm | Ballad, nhạc trữ tình |
-| **Bass Alberti** | Thấp – cao – giữa – cao (C–G–E–G) | Nhịp 4/4, móc đơn hoặc nốt đen; đặc trưng thời Cổ điển nhưng dùng được ở nhiều phong cách |
+| **[[hop-am-ba|Hợp âm]] khối** | Đánh cả hợp âm cùng lúc | Kiểu cơ bản nhất, mọi [[the-loai|thể loại]] |
+| **[[luyen-hop-am-rai|Hợp âm rải]]** | Đánh lần lượt từng nốt của hợp âm | Ballad, nhạc trữ tình |
+| **Bass Alberti** | Thấp – cao – giữa – cao (C–G–E–G) | Nhịp 4/4, móc đơn hoặc [[truong-do|nốt đen]]; đặc trưng thời Cổ điển nhưng dùng được ở nhiều phong cách |
 | **Đệm valse** | Nốt trầm một mình, rồi hai nốt trên hai lần (trầm – hợp âm – hợp âm) | Nhịp 3/4 |
 | **Đệm "pop"** | Đung đưa giữa nốt dưới và các nốt trên của hợp âm | Pop, ballad |
 | **Stride** | Nốt bass ở phách 1 và 3, hợp âm ở phách 2 và 4 — tay trái nhảy xa liên tục | Ragtime, jazz Harlem |
@@ -695,7 +695,7 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
 Các kiểu này chính là các dạng [[ket-cau|kết cấu chủ điệu]]. Đệm Alberti và stride là bài tập tốt cho [[buoc-nhay-xa]] và [[dan-giong]].
 
 ## Stride
-Phong cách jazz bắt nguồn từ ragtime. Nốt bass thường là nốt gốc hoặc nốt 5, có thể chơi đơn, quãng 8 hoặc quãng 10; hợp âm ở phách 2 và 4 thường gọn 2–3 nốt (thường gốc, 3, 7 — xem [[xep-hop-am|shell voicing]]). Tay trái nhảy liên tục giúp tay phải tự do chơi giai điệu và ngẫu hứng. James P. Johnson được coi là "cha đẻ" của stride; học trò ông, Fats Waller, đưa stride đến với công chúng (xem [[nghe-si-piano-jazz]]).
+Phong cách jazz bắt nguồn từ ragtime. Nốt bass thường là nốt gốc hoặc nốt 5, có thể chơi đơn, [[quang|quãng 8]] hoặc quãng 10; hợp âm ở phách 2 và 4 thường gọn 2–3 nốt (thường gốc, 3, 7 — xem [[xep-hop-am|shell voicing]]). Tay trái nhảy liên tục giúp tay phải tự do chơi [[giai-dieu|giai điệu]] và [[ngau-hung-piano|ngẫu hứng]]. [[james-p-johnson|James P. Johnson]] được coi là "cha đẻ" của stride; học trò ông, [[fats-waller|Fats Waller]], đưa stride đến với công chúng (xem [[nghe-si-piano-jazz]]).
 
 ## Đệm từ bản nhạc hợp âm (lead sheet)
 Bản lead sheet chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay trái được khuyên:
@@ -708,7 +708,7 @@ Ghi nhớ trước vài hợp âm hay gặp trong bài và luyện chuyển qua 
 Các điệu có tiết tấu đặc trưng (slow rock 12/8, bossa nova, cha-cha-cha): [[dieu-dem-pho-bien]].
 
 ## Tay trái theo thể loại
-Trong jazz, blues và nhạc cổ điển, tay trái thường giữ nhịp đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
+Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường [[kiem-soat-toc-do|giữ nhịp]] đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
 `,
   },
   {
@@ -733,10 +733,10 @@ Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-h
 - Đừng nhầm với **6/8** — chỉ có **hai** phách lớn. 12/8 chậm (dưới khoảng 100 phách/phút) cũng dùng cho jazz ballad.
 
 ## Bossa nova
-- Xây dựng trên một mẫu **clave**; mẫu clave bossa nova thường được gắn với Antonio Carlos Jobim (dù chính ông chỉ coi đó là một motif tiết tấu).
-- Một bài học gợi ý tay trái: nốt gốc và nốt 5 của hợp âm, nhấn ở các nốt móc đơn thứ 1, 4–5 và 8 của ô nhịp. Tay phải [[dao-phach|đảo phách]]: các móc đơn thứ 1, 4, 7 của ô thứ nhất và 3, 6 của ô thứ hai (giáo viên khác đặt 3 và 5).
+- Xây dựng trên một mẫu **clave**; mẫu clave bossa nova thường được gắn với Antonio Carlos Jobim (dù chính ông chỉ coi đó là một [[motif|motif]] tiết tấu).
+- Một bài học gợi ý tay trái: nốt gốc và nốt 5 của [[hop-am-ba|hợp âm]], nhấn ở các [[truong-do|nốt móc đơn]] thứ 1, 4–5 và 8 của ô nhịp. Tay phải [[dao-phach|đảo phách]]: các móc đơn thứ 1, 4, 7 của ô thứ nhất và 3, 6 của ô thứ hai (giáo viên khác đặt 3 và 5).
 - Yamaha luyện theo thứ tự: clave son 2-3, rồi 3-2, rồi mẫu đệm bossa; dùng [[xep-hop-am|thế bấm hợp âm]] hai tay cho tiếng đầy hơn.
-- Chạm phím **nhẹ**, tiết tấu tiết chế, hợp âm nối mượt (thường dùng [[hop-am-bay|hợp âm 7]] và [[hop-am-mo-rong|9]]).
+- [[ky-thuat-cham-phim|Chạm phím]] **nhẹ**, tiết tấu tiết chế, hợp âm nối mượt (thường dùng [[hop-am-bay|hợp âm 7]] và [[hop-am-mo-rong|9]]).
 
 ## Cha-cha-cha
 - Ra đời từ sự pha trộn giữa son và danzón của Cuba; có tiết tấu và đường bass đặc trưng.
@@ -771,8 +771,8 @@ Piano không thể nối âm thật như giọng hát: mỗi nốt tắt dần n
 | Mức | Cách làm |
 |---|---|
 | **Legato thường** | Ngón đang giữ **nhả phím đúng lúc** nốt sau vang lên |
-| **Legato chồng** (legatissimo) | Ngón trước **chỉ nhả sau khi** nốt sau đã vang, nhả từ từ — cho giai điệu "hát" |
-| **"Pedal ngón"** | Giữ hẳn một số nốt (thường là nốt hợp âm) lâu hơn giá trị viết, như một chiếc pedal nhỏ |
+| **Legato chồng** (legatissimo) | Ngón trước **chỉ nhả sau khi** nốt sau đã vang, nhả từ từ — cho [[giai-dieu|giai điệu]] "hát" |
+| **"Pedal ngón"** | Giữ hẳn một số nốt (thường là nốt [[hop-am-ba|hợp âm]]) lâu hơn giá trị viết, như một chiếc pedal nhỏ |
 
 Phím sau càng được nhấn **sớm** trong lúc phím trước đang nhả thì càng liền. Mức chồng nhiều hay ít tuỳ ngữ cảnh, **âm vực** (âm trầm ngân lâu nên dễ bị nhoè) và thẩm mỹ người chơi. Khi không thể nối bằng ngón, có thể dùng **đổi ngón trên phím** (xem [[choi-phuc-dieu]]) hoặc [[ban-dap|pedal]].
 
@@ -786,9 +786,9 @@ Lưu ý với người mới: **giữ ngón quá giá trị nốt** một cách 
 | **Cổ tay** | **Hợp âm**, nhóm 2 nốt trở lên ngắn gọn | Phải đi kèm cẳng tay, cánh tay và thân người **linh hoạt**, không chỉ "nảy cổ tay cứng" |
 | **Cánh tay** | Mọi nốt cần **nặng đều**, tiếng nảy giòn | Thả rơi cánh tay tự do rồi **bật lên** theo lực nảy |
 
-Các giáo viên **không thống nhất** động tác nào là chính: có người coi cổ tay là quan trọng nhất, có người khuyên tránh staccato chỉ bằng cổ tay vì dễ kéo ngón lên và gây căng. Điểm chung: chọn theo **âm thanh muốn có**, và cơ thể luôn thả lỏng — cánh tay, cổ tay đứng yên hoàn toàn sẽ nhanh chóng sinh căng cơ.
+Các giáo viên **không thống nhất** động tác nào là chính: có người coi cổ tay là quan trọng nhất, có người khuyên tránh staccato chỉ bằng cổ tay vì dễ kéo ngón lên và gây căng. Điểm chung: chọn theo **âm thanh muốn có**, và cơ thể luôn thả lỏng — cánh tay, cổ tay đứng yên hoàn toàn sẽ nhanh chóng sinh [[suc-khoe-nguoi-choi-dan|căng cơ]].
 
-**Jeu perlé** ("chơi như ngọc trai") là một kiểu chạm rất nhẹ, mỗi nốt **tách nhau một chút xíu**, hợp với chuỗi nốt nhanh kiểu Mozart — đặc trưng của [[truong-phai-piano|trường phái Pháp]].
+**Jeu perlé** ("chơi như ngọc trai") là một kiểu chạm rất nhẹ, mỗi nốt **tách nhau một chút xíu**, hợp với chuỗi nốt nhanh kiểu [[wolfgang-amadeus-mozart|Mozart]] — đặc trưng của [[truong-phai-piano|trường phái Pháp]].
 
 ## Portato — giữa legato và staccato
 Ký hiệu: **chấm staccato dưới dấu luyến**. Nốt được giữ **gần đủ dài nhưng hơi tách**, mỗi nốt một **động tác cánh tay riêng** qua cổ tay mềm. Một cách khác là để [[ban-dap|pedal]] nối âm, còn các động tác riêng tạo "xung" cho từng nốt; nhiều giáo viên khuyên học không pedal trước. Đừng nhầm với *portamento* — trượt cao độ, piano không làm được.
@@ -811,25 +811,25 @@ Liên quan: [[lam-noi-giai-dieu]], [[dien-dat-cau-nhac]], [[lich-su-ky-thuat-pia
     body: `
 ## Ba loại "độc lập"
 1. **Tiết tấu**: một tay móc đơn, tay kia [[lien-ba]]; hoặc một tay giữ nốt dài trong khi tay kia chạy.
-2. **Cường độ**: giai điệu to, đệm nhỏ — xem [[lam-noi-giai-dieu]].
-3. **Cách chạm phím**: một tay legato, tay kia staccato — xem [[ky-thuat-cham-phim]].
+2. **[[cuong-do|Cường độ]]**: [[giai-dieu|giai điệu]] to, đệm nhỏ — xem [[lam-noi-giai-dieu]].
+3. **Cách chạm phím**: một tay legato, tay kia [[cach-dien-tau|staccato]] — xem [[ky-thuat-cham-phim]].
 
 ## Tập tay riêng rồi ghép
-- Tập **từng tay** đến khi vững, dùng **đúng ngón bấm** sẽ dùng khi ghép.
+- Tập **từng tay** đến khi vững, dùng **đúng [[ngon-bam|ngón bấm]]** sẽ dùng khi ghép.
 - Ghép ở tốc độ **chậm hơn nhiều** so với tốc độ tay riêng (xem [[kiem-soat-toc-do]]).
 - Ghép **từng đoạn ngắn** rồi nối lại (xem [[phuong-phap-luyen-tap]]).
 - **Đếm to** phân phách — ví dụ "1 và 2 và": tay phải ở mỗi số, tay trái ở mỗi âm tiết — để thấy rõ chỗ hai tay gặp nhau.
 
 ## Hai chọi ba (2:3)
 Một tay chia phách làm 2, tay kia làm 3 (xem lý thuyết ở [[da-nhip]]):
-1. **Không cần đàn**: bật máy đếm nhịp theo nhịp 3, vỗ tay 2 tiếng đều nhau trong mỗi nhóm 3.
+1. **Không cần đàn**: bật [[nhip-do|máy đếm nhịp]] theo nhịp 3, vỗ tay 2 tiếng đều nhau trong mỗi nhóm 3.
 2. **Câu đọc**: đọc "**George Wash-ing-ton**" — các âm tiết rơi đúng vào chỗ gõ. Nốt thứ hai của nhóm 2 rơi **chính giữa** hai nốt cuối của nhóm 3.
 3. **Lên đàn**: tay phải liên ba, tay trái hai nốt; khi đã quen thì **đổi vai** hai tay.
 4. **Kiểm tra bằng tai**: một tay gõ lên nắp đàn, tay kia chơi — nghe xem nhóm 3 có đều không.
 
 Sau 2:3, bước tiếp theo thường là **3:4**. Nhiều người thấy một chiều (3 ở tay này, 4 ở tay kia) dễ hơn chiều ngược lại, nên cần tập cả hai.
 
-Inventions 2 bè của [[Bach]] là chất liệu kinh điển để luyện hai tay như hai giai điệu ngang hàng — xem [[choi-phuc-dieu]].
+[[lo-trinh-tac-pham|Inventions]] 2 bè của [[Bach]] là chất liệu kinh điển để luyện hai tay như hai giai điệu ngang hàng — xem [[choi-phuc-dieu]].
 `,
   },
   {
@@ -849,23 +849,23 @@ Inventions 2 bè của [[Bach]] là chất liệu kinh điển để luyện hai
 **Nốt kép** là hai nốt chơi cùng lúc bằng một tay, nối thành chuỗi — phổ biến nhất là [[quang|quãng 3]] và quãng 6.
 
 ## Khó ở đâu?
-- Một tay phải chơi **hai bè**, mỗi bè cần legato riêng.
+- Một tay phải chơi **hai bè**, mỗi bè cần [[cach-dien-tau|legato]] riêng.
 - Bè trên của quãng 3 tay phải thường rơi vào **ngón 4 và 5** — hai ngón yếu nhất.
-- **Không có ngón bấm chuẩn** cho quãng 3 như với [[luyen-am-giai|âm giai]] đơn; ngón bấm còn khác nhau giữa các ấn bản, nên phải thử để tìm cách hợp tay.
+- **Không có [[ngon-bam|ngón bấm]] chuẩn** cho quãng 3 như với [[luyen-am-giai|âm giai]] đơn; ngón bấm còn khác nhau giữa các [[an-ban-urtext|ấn bản]], nên phải thử để tìm cách hợp tay.
 
 ## Ngón bấm quãng 6 (khởi điểm)
-Theo bách khoa piano PTNA: **tay phải** dùng ngón 1 – 2 cho **bè trong**, ngón 3 – 4 – 5 cho **bè ngoài**; **tay trái** tương tự (3 – 4 – 5 bè ngoài, 1 – 2 bè trong). Ngón bấm cụ thể tuỳ đoạn nhạc và ấn bản.
+Theo bách khoa piano PTNA: **tay phải** dùng ngón 1 – 2 cho **bè trong**, ngón 3 – 4 – 5 cho **bè ngoài**; **tay trái** tương tự (3 – 4 – 5 bè ngoài, 1 – 2 bè trong). Ngón bấm cụ thể tuỳ [[cau-nhac|đoạn nhạc]] và ấn bản.
 
 ## Cách tập
 1. **Tách bè**: chơi riêng bè trên, rồi riêng bè dưới — **luôn dùng đúng ngón** sẽ dùng khi chơi cả hai.
-2. **Legato trên, staccato dưới**: để bè trên "hát" (thường là giai điệu), tập bè trên legato còn bè dưới staccato — lời khuyên của Jeffrey Biegel cho Étude quãng 3 của Chopin.
+2. **Legato trên, staccato dưới**: để bè trên "hát" (thường là [[giai-dieu|giai điệu]]), tập bè trên legato còn bè dưới staccato — lời khuyên của Jeffrey Biegel cho Étude quãng 3 của Chopin.
 3. **Bỏ bớt nốt**: chơi bè trên với cách một nốt bè dưới, rồi chơi phần nốt đã bỏ.
-4. **Rất chậm**, đánh **sâu tới đáy phím** khi ghép hai bè; giữ máy đếm nhịp và tăng **từng nấc** khi đã thật chắc (xem [[kiem-soat-toc-do]]).
+4. **Rất chậm**, đánh **sâu tới đáy phím** khi ghép hai bè; giữ [[nhip-do|máy đếm nhịp]] và tăng **từng nấc** khi đã thật chắc (xem [[kiem-soat-toc-do]]).
 
 Các giáo viên khác nhau về việc có nên tập **âm giai quãng 3** riêng: có người cho là hữu ích, có người khuyên rút bài tập từ chính tác phẩm.
 
 ## Hai Étude kinh điển của Chopin
-- **Op. 25 số 6** (Sol♯ thứ) — Étude **quãng 3**, tay phải chạy quãng 3 liên tục, kể cả quãng 3 **cromatic**.
+- **Op. 25 số 6** (Sol♯ thứ) — Étude **quãng 3**, tay phải chạy quãng 3 liên tục, kể cả quãng 3 **[[am-giai-cromatic|cromatic]]**.
 - **Op. 25 số 8** (Rê♭ trưởng) — Étude **quãng 6**, chuỗi quãng 6 đi lên, đi xuống và cromatic không ngắt, ở **cả hai tay**.
 
 Xem [[Chopin]], [[the-loai|thể loại étude]].
@@ -885,10 +885,10 @@ Xem [[Chopin]], [[the-loai|thể loại étude]].
       ['Organduo — How to use finger substitution to improve line', 'https://www.organduo.lt/blog/askvidasandausra-133-how-to-use-finger-substitution-to-improve-line'],
     ],
     body: `
-Trong [[ket-cau|phức điệu]] (canon, invention, [[fugue]]), các bè là những giai điệu **ngang hàng**. Trên piano, mười ngón phải chia nhau hai, ba, có khi bốn bè.
+Trong [[ket-cau|phức điệu]] (canon, invention, [[fugue]]), các bè là những [[giai-dieu|giai điệu]] **ngang hàng**. Trên piano, mười ngón phải chia nhau hai, ba, có khi bốn bè.
 
 ## Mục tiêu: mỗi bè "hát" như một giọng
-Trang tiêu đề Inventions và Sinfonias của [[Bach]] (1723) nói rõ mục đích: học chơi **hai bè rồi ba bè** sạch sẽ, và **trên hết là chơi *cantabile*** — mỗi bè được tạo câu như một ca sĩ: có cách diễn tấu, nhấn nốt chính, và **ngắt thở** đúng chỗ. Lý thuyết: [[doi-am]], [[doi-am-kep]].
+Trang tiêu đề Inventions và Sinfonias của [[Bach]] (1723) nói rõ mục đích: học chơi **hai bè rồi ba bè** sạch sẽ, và **trên hết là chơi *[[thuat-ngu|cantabile]]*** — mỗi bè được tạo câu như một ca sĩ: có cách diễn tấu, nhấn nốt chính, và **ngắt thở** đúng chỗ. Lý thuyết: [[doi-am]], [[doi-am-kep]].
 
 ## Tách bè để tập
 - Chơi **từng bè riêng** với đúng [[cach-dien-tau|cách diễn tấu]] của nó; nếu có thể, **hát** một bè trong khi chơi bè kia.
@@ -901,9 +901,9 @@ Một tay có thể vừa giữ nốt dài của bè trên vừa chạy bè dư�
 ## Đổi ngón trên phím
 **Đổi ngón im lặng**: đang giữ một phím, thay ngón này bằng ngón khác **mà không nhả phím**, để giải phóng ngón cho nốt tiếp theo. Việc này không tạo ra âm thanh, nên chọn ngón nào là chuyện **thoải mái và chắc chắn**.
 
-Các giáo viên organ (nhạc cụ dùng kỹ thuật này nhiều nhất) lại cho rằng nhạc Baroque **thường không cần** đổi ngón: Bach thường được chơi với **legato có ngắt** hoặc non-legato, nên phần lớn đoạn hai bè một tay vẫn chơi được không đổi ngón. Ngoại lệ thường gặp là ở **[[cau-ket|kết]]** có thêm bè. Gợi ý thực tế: bắt đầu không đổi ngón; chỉ thêm khi một bè buộc phải giữ trong lúc bè kia chạy.
+Các giáo viên organ (nhạc cụ dùng kỹ thuật này nhiều nhất) lại cho rằng nhạc [[thoi-ky-baroque|Baroque]] **thường không cần** đổi ngón: Bach thường được chơi với **legato có ngắt** hoặc [[ky-thuat-cham-phim|non-legato]], nên phần lớn đoạn hai bè một tay vẫn chơi được không đổi ngón. Ngoại lệ thường gặp là ở **[[cau-ket|kết]]** có thêm bè. Gợi ý thực tế: bắt đầu không đổi ngón; chỉ thêm khi một bè buộc phải giữ trong lúc bè kia chạy.
 
-Lộ trình tác phẩm theo trình độ: [[lo-trinh-tac-pham]]. Phân tích một prelude của Bach: [[phan-tich-prelude-do-truong]].
+Lộ trình tác phẩm theo trình độ: [[lo-trinh-tac-pham]]. Phân tích một [[the-loai|prelude]] của Bach: [[phan-tich-prelude-do-truong]].
 `,
   },
   {
@@ -979,9 +979,9 @@ Lời khuyên "dùng trọng lượng cánh tay chứ không dùng sức ngón" 
 
 ## 3. Khoa học và chuyển động phối hợp (thế kỷ 20)
 - **Otto Ortmann** (Nhạc viện Peabody) — *The Physiological Mechanics of Piano Technique* (**1929**): áp dụng cơ học, giải phẫu xương – cơ và sinh lý thần kinh vào cách chạm phím. Một số thuật ngữ của ông nay đã lỗi thời.
-- **Josef Lhévinne** — *Basic Principles in Pianoforte Playing* (**1924**): kỹ thuật phải **phục vụ hiểu biết âm nhạc**; trọng tâm là **tiếng đàn đẹp**, "cánh tay lơ lửng trong không khí", cổ tay như **bộ giảm xóc**. "Sự tinh tế là không thể với một cánh tay nặng nề."
+- **Josef Lhévinne** — *Basic Principles in [[lich-su-piano|Pianoforte]] Playing* (**1924**): kỹ thuật phải **phục vụ hiểu biết âm nhạc**; trọng tâm là **tiếng đàn đẹp**, "cánh tay lơ lửng trong không khí", cổ tay như **bộ giảm xóc**. "Sự tinh tế là không thể với một cánh tay nặng nề."
 - **[[heinrich-neuhaus|Heinrich Neuhaus]]** — *Nghệ thuật chơi piano*: đặt **hình tượng nghệ thuật** và **tiếng đàn** lên trước kỹ thuật thuần tuý; người học phải "**nghe âm nhạc trong đầu**" trước khi chạm đàn; mục tiêu cuối cùng là học trò **tự dạy được mình**.
-- **György Sándor** — *On Piano Playing* (1981): quy kỹ thuật về **năm chuyển động cơ bản** — rơi tự do, mẫu năm ngón (âm giai, hợp âm rải), **xoay**, staccato và **đẩy** — rồi áp dụng vào tác phẩm.
+- **György Sándor** — *On Piano Playing* (1981): quy kỹ thuật về **năm chuyển động cơ bản** — rơi tự do, mẫu năm ngón (âm giai, [[luyen-hop-am-rai|hợp âm rải]]), **xoay**, [[cach-dien-tau|staccato]] và **đẩy** — rồi áp dụng vào tác phẩm.
 - **Dorothy Taubman** (1917–2013): nổi tiếng nhờ **phục hồi cho người chơi bị chấn thương**; cho rằng kỹ thuật (hơn là tài năng) quyết định cả trình độ lẫn nguy cơ chấn thương. Trọng tâm là **chuyển động phối hợp** của cả cơ thể và **xoay cẳng tay** (xem [[tremolo-xoay-cang-tay]]). Một số thuật ngữ của phương pháp này cũng bị giới khoa học coi là đã lỗi thời.
 
 ## Ý nghĩa với người dạy
@@ -1003,7 +1003,7 @@ Xu hướng chung: từ "ngón tay làm mọi việc" sang **cả cánh tay và 
     ],
     body: `
 ## Vấn đề
-Bàn phím piano chuẩn có chiều rộng một [[quang|quãng 8]] cố định cho mọi người. Một nghiên cứu năm 2024 do Đại học Stanford dẫn đầu ước tính **87% phụ nữ** và **24% nam giới** trưởng thành có bàn tay **nhỏ hơn mức lý tưởng** cho bàn phím chuẩn.
+[[ban-phim|Bàn phím piano]] chuẩn có chiều rộng một [[quang|quãng 8]] cố định cho mọi người. Một nghiên cứu năm 2024 do Đại học Stanford dẫn đầu ước tính **87% phụ nữ** và **24% nam giới** trưởng thành có bàn tay **nhỏ hơn mức lý tưởng** cho bàn phím chuẩn.
 
 ## Bằng chứng
 - Yoshimura và Chesky (2009) khảo sát sinh viên piano đại học: người **tay nhỏ** có mức **đau và căng cơ cao hơn rõ rệt**; khi chơi trên bàn phím **hẹp hơn**, mức đau **giảm đáng kể**.
@@ -1036,20 +1036,20 @@ Các lời khuyên dưới đây đã có trong các bài khác của thư việ
       ['Wikipedia — Piano Sonata No. 8 (Beethoven)', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._8_(Beethoven)'],
     ],
     body: `
-**Tremolo** là luân phiên thật nhanh giữa hai nốt (hoặc hai nhóm nốt) cách nhau một quãng lớn — thường là [[quang|quãng 8]] rải. Ký hiệu: xem [[ky-hieu-nang-cao]]. Cùng họ với [[ky-thuat-lay-ren|láy rền]] (hai nốt liền bậc).
+**Tremolo** là luân phiên thật nhanh giữa hai nốt (hoặc hai nhóm nốt) cách nhau một quãng lớn — thường là [[quang|quãng 8]] rải. Ký hiệu: xem [[ky-hieu-nang-cao]]. Cùng họ với [[ky-thuat-lay-ren|láy rền]] (hai nốt [[giai-dieu|liền bậc]]).
 
 ## Xoay cẳng tay là gì?
 Cẳng tay có thể **xoay** quanh trục của nó như khi **vặn tay nắm cửa**. Một giáo viên gợi ý tập không cần đàn: tưởng tượng vặn núm bếp và quan sát cổ tay, cẳng tay cùng lăn theo một vòng. Nếu chỉ ngón cái và ngón út cử động, cổ tay đang cứng và bạn đang chơi chỉ bằng ngón. Xoay là một trong năm chuyển động cơ bản của György Sándor và là trọng tâm phương pháp Taubman (xem [[lich-su-ky-thuat-piano]]).
 
 ## Cách tập tremolo
 1. **Tách hai động tác**, làm thật **to và chậm**: tremolo chỉ bằng ngón (nhấc ngón cao), rồi tremolo chỉ bằng xoay (giữ ngón cố định).
-2. **Thu nhỏ** cả hai khi tăng tốc rồi **ghép lại**. Vì cả hai cùng góp phần, mỗi động tác chỉ cần rất nhỏ — nhờ vậy mà chơi được rất nhanh.
+2. **Thu nhỏ** cả hai khi [[kiem-soat-toc-do|tăng tốc]] rồi **ghép lại**. Vì cả hai cùng góp phần, mỗi động tác chỉ cần rất nhỏ — nhờ vậy mà chơi được rất nhanh.
 3. Xoay **cả cẳng tay**, không phải gập ở khớp ngón — lỗi rất hay gặp là tưởng mình đang xoay mà thực ra chỉ dùng khớp ngón.
 4. Động tác lên – xuống luôn **nhanh**; muốn chơi chậm thì **chờ** giữa hai động tác, và **thả lỏng hoàn toàn** trong lúc chờ.
 5. Bắt đầu với **ngón 2 – 5 trên quãng 4**, rồi các cặp ngón khác, cuối cùng mới đến ngón cái — dùng ngay 1 – 5 dễ làm ngón cái co rút và cổ tay bị gập.
 
 ## Ví dụ: chương 1 Sonata "Pathétique"
-Trong chương 1 Sonata Op. 13 của [[Beethoven]], chủ đề thứ nhất có tay trái chơi **quãng 8 tremolo liên tục**. Một cách tập: nảy quãng 8 C2 – C3 lặp lại, thả lỏng; khi mỏi thì **nâng dần rồi hạ cổ tay** để đổi tư thế. Tốc độ cũng cần đủ chậm để tremolo **có chỗ vang** — đừng đẩy tốc độ vượt quá mức tay còn thả lỏng được.
+Trong chương 1 [[hinh-thuc-sonata|Sonata]] Op. 13 của [[Beethoven]], chủ đề thứ nhất có tay trái chơi **quãng 8 tremolo liên tục**. Một cách tập: nảy quãng 8 C2 – C3 lặp lại, thả lỏng; khi mỏi thì **nâng dần rồi hạ cổ tay** để đổi [[tu-the|tư thế]]. Tốc độ cũng cần đủ chậm để tremolo **có chỗ vang** — đừng đẩy tốc độ vượt quá mức tay còn thả lỏng được.
 
 Xoay cẳng tay còn dùng cho [[luyen-hop-am-rai|hợp âm rải]], bass Alberti ([[dem-hat-piano]]) và [[ky-thuat-lay-ren|láy rền]].
 `,

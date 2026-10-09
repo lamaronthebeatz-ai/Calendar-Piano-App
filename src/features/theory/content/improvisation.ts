@@ -16,31 +16,31 @@ export const improvisation: Article[] = [
       ['Oxford Handbook — Pressing and models of improvisation (chapter PDF)', 'https://music.arts.uci.edu/abauer/4.3/readings/oxfordhb-9780195370935-e-007.pdf'],
     ],
     body: `
-**Ngẫu hứng** (improvisation) là tạo ra âm nhạc **ngay trong lúc biểu diễn**. Từ **ứng tác** nhấn mạnh việc sáng tác "tại chỗ", đáp ứng một hoàn cảnh: một chủ đề khán giả đưa ra, một bè trầm cho sẵn, một giai điệu cần đệm.
+**Ngẫu hứng** (improvisation) là tạo ra âm nhạc **ngay trong lúc biểu diễn**. Từ **ứng tác** nhấn mạnh việc sáng tác "tại chỗ", đáp ứng một hoàn cảnh: một chủ đề khán giả đưa ra, một bè trầm cho sẵn, một [[giai-dieu|giai điệu]] cần đệm.
 
 ## Ngẫu hứng không phải là "chơi tuỳ ý"
-Mọi truyền thống ngẫu hứng đều có **khung**: một vòng hợp âm, một bè trầm, một hình thức, một phong cách. Người ngẫu hứng giỏi là người có **kho chất liệu** lớn và biết **kết hợp** chúng nhanh — giống người nói chuyện lưu loát dùng những từ và cấu trúc quen thuộc để nói điều mới. Mô hình nhận thức của Jeff Pressing (1988) mô tả ngẫu hứng như chuỗi các **cụm sự kiện**, mỗi cụm được tạo từ những gì vừa chơi, **trí nhớ dài hạn**, mục tiêu hiện tại và một **khung tham chiếu** (xem [[khoa-hoc-ngau-hung]]).
+Mọi truyền thống ngẫu hứng đều có **khung**: một [[vong-hop-am|vòng hợp âm]], một bè trầm, một [[hinh-thuc-am-nhac|hình thức]], một phong cách. Người ngẫu hứng giỏi là người có **kho chất liệu** lớn và biết **kết hợp** chúng nhanh — giống người nói chuyện lưu loát dùng những từ và cấu trúc quen thuộc để nói điều mới. Mô hình nhận thức của Jeff Pressing (1988) mô tả ngẫu hứng như chuỗi các **cụm sự kiện**, mỗi cụm được tạo từ những gì vừa chơi, **trí nhớ dài hạn**, mục tiêu hiện tại và một **khung tham chiếu** (xem [[khoa-hoc-ngau-hung]]).
 
 ## Phổ từ ngẫu hứng đến sáng tác
 | Mức tự do | Ví dụ | Bài |
 |---|---|---|
-| Trang trí một giai điệu viết sẵn | Hoa mỹ Baroque, nốt thêm khi nhắc lại | [[ky-hieu-hoa-my]] |
+| Trang trí một giai điệu viết sẵn | Hoa mỹ [[thoi-ky-baroque|Baroque]], nốt thêm khi nhắc lại | [[ky-hieu-hoa-my]] |
 | Lấp một khoảng trống trong tác phẩm | Cadenza, Eingang (đoạn dẫn vào) | [[cadenza]] |
 | Hiện thực một bè trầm cho sẵn | Bè trầm có số, partimento | [[bass-so]], [[partimento]] |
 | Mở đầu, nối các tác phẩm | Prelude ứng tác | [[prelude-ung-tac]] |
-| Ngẫu hứng trên vòng hợp âm | Jazz, nhạc phổ thông, đệm hát | [[ngau-hung-jazz]], [[dem-hat-piano]] |
-| Ngẫu hứng trên một chủ đề | Biến tấu, fantasia ứng tác | [[lich-su-ngau-hung]] |
+| Ngẫu hứng trên vòng hợp âm | Jazz, [[nhac-pho|nhạc phổ]] thông, đệm hát | [[ngau-hung-jazz]], [[dem-hat-piano]] |
+| Ngẫu hứng trên một chủ đề | [[bien-tau|Biến tấu]], fantasia ứng tác | [[lich-su-ngau-hung]] |
 | Ngẫu hứng tự do | Không chủ đề, không vòng hợp âm định trước | [[ngau-hung-tu-do]] |
-Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — fantasia, impromptu, prelude — xem [[impromptu]].
+Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — fantasia, impromptu, [[the-loai|prelude]] — xem [[impromptu]].
 
 ## Lộ trình
 **A. Bắt đầu**
-1. [[ngau-hung-piano]] — ngũ cung, hỏi – đáp, vòng hợp âm.
-2. [[choi-phuc-dieu]] — chơi theo tai.
+1. [[ngau-hung-piano]] — [[am-giai-ngu-cung|ngũ cung]], hỏi – đáp, vòng hợp âm.
+2. [[choi-phuc-dieu]] — [[luyen-tai|chơi theo tai]].
 3. [[phuong-phap-luyen-ngau-hung]] — các cấp độ phát triển và cách luyện.
 
 **B. Truyền thống cổ điển**
-4. [[lich-su-ngau-hung]] — từ Bach đến Czerny, sự suy giảm và hồi sinh.
+4. [[lich-su-ngau-hung]] — từ [[johann-sebastian-bach|Bach]] đến [[carl-czerny|Czerny]], sự suy giảm và hồi sinh.
 5. [[bass-so]] → [[partimento]] → [[luoc-do-galant]] — ngẫu hứng trên bè trầm.
 6. [[prelude-ung-tac]], [[cadenza]], [[impromptu]].
 
@@ -68,22 +68,22 @@ Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — fantasia,
 Một lộ trình được chương trình giáo dục âm nhạc ở Anh và các khoá học cho người mới gợi ý, từ đơn giản đến nâng cao:
 
 ## 1. Vòng hợp âm lặp lại
-Một người (giáo viên hoặc đệm tự động) chơi một [[vong-hop-am]] 8 ô nhịp lặp lại, sau đó mở rộng lên [[blues-12-nhip|12 ô nhịp]]. Người học **đếm nhịp cẩn thận**, theo kịp chỗ đổi hợp âm, và cho đoạn ngẫu hứng một **mở đầu và kết thúc rõ ràng**.
+Một người (giáo viên hoặc đệm tự động) chơi một [[vong-hop-am]] 8 [[so-chi-nhip|ô nhịp]] lặp lại, sau đó mở rộng lên [[blues-12-nhip|12 ô nhịp]]. Người học **[[am-tiet-nhip|đếm nhịp]] cẩn thận**, theo kịp chỗ đổi hợp âm, và cho đoạn ngẫu hứng một **mở đầu và kết thúc rõ ràng**.
 
 ## 2. Năm nốt ngũ cung
-[[am-giai-ngu-cung|Âm giai ngũ cung]] chỉ có 5 nốt, không có nửa cung nên rất "dễ nghe". Ngũ cung **thứ** thường nằm vừa tay hơn ngũ cung trưởng. Ví dụ: **Mi thứ ngũ cung (E – G – A – B – D)** trên các hợp âm Em, A7, C, Am, B7.
+[[am-giai-ngu-cung|Âm giai ngũ cung]] chỉ có 5 nốt, không có [[cung-nua-cung|nửa cung]] nên rất "dễ nghe". Ngũ cung **thứ** thường nằm vừa tay hơn ngũ cung trưởng. Ví dụ: **Mi thứ ngũ cung (E – G – A – B – D)** trên các [[hop-am-ba|hợp âm]] Em, A7, C, Am, B7.
 
 ::keyboard E4 G4 A4 B4 D5 | Mi thứ ngũ cung — năm nốt để bắt đầu ngẫu hứng
 
 Một khoá học cho người mới bắt đầu ngay trên **5 phím đen** (cũng là một âm giai ngũ cung) rồi mới chuyển sang phím trắng.
 
 ## 3. Hỏi – đáp
-Bài tập cốt lõi: một câu "**hỏi**" bằng giai điệu, rồi một câu "**đáp**" bổ sung — như một cuộc trò chuyện (giống câu hỏi – câu trả lời trong [[cau-nhac]]). Giáo viên chơi câu hỏi, học trò đáp; sau đó đổi vai. Dần dần yêu cầu chính xác hơn về tiết tấu, [[cuong-do]] và [[cach-dien-tau]].
+Bài tập cốt lõi: một câu "**hỏi**" bằng [[giai-dieu|giai điệu]], rồi một câu "**đáp**" bổ sung — như một cuộc trò chuyện (giống câu hỏi – câu trả lời trong [[cau-nhac]]). Giáo viên chơi câu hỏi, học trò đáp; sau đó đổi vai. Dần dần yêu cầu chính xác hơn về tiết tấu, [[cuong-do]] và [[cach-dien-tau]].
 
 ## 4. Mở rộng
-- Trải âm giai ngũ cung ra **hai quãng 8** trở lên.
+- Trải âm giai ngũ cung ra **hai [[quang|quãng 8]]** trở lên.
 - Thử [[am-giai-blues]] và [[dieu-thuc|điệu thức]].
-- Nhắm vào **nốt của hợp âm** đang vang ở phách mạnh; dùng âm giai trưởng trên hợp âm I, Lydian trên IV, Mixolydian trên V (xem [[he-thong-hop-am-am-giai]]).
+- Nhắm vào **nốt của hợp âm** đang vang ở phách mạnh; dùng [[am-giai-truong|âm giai trưởng]] trên hợp âm I, Lydian trên IV, Mixolydian trên V (xem [[he-thong-hop-am-am-giai]]).
 
 Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng tác những đoạn nhạc đơn giản ngay tại chỗ. Các nguồn này là chương trình giảng dạy và khoá học, chưa có nghiên cứu đối chứng.
 
@@ -110,9 +110,9 @@ Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng
     ],
     body: `
 ## Thời Baroque: ngẫu hứng là một phần của nghề
-- Người chơi đàn phím phải **hiện thực bè trầm có số** — tức là ứng tác phần hoà âm — trong hầu hết các tác phẩm hoà tấu (xem [[bass-so]]); ca sĩ và nghệ sĩ độc tấu **trang trí** giai điệu (xem [[ky-hieu-hoa-my]]).
+- Người chơi đàn phím phải **hiện thực bè trầm có số** — tức là ứng tác phần hoà âm — trong hầu hết các tác phẩm hoà tấu (xem [[bass-so]]); ca sĩ và nghệ sĩ độc tấu **trang trí** [[giai-dieu|giai điệu]] (xem [[ky-hieu-hoa-my]]).
 - Năm **1747**, [[Bach]] đến thăm vua **Frederick Đại đế** ở Potsdam. Nhà vua đưa một chủ đề và yêu cầu Bach ứng tác một **fugue ba bè**; Bach làm ngay. Khi được thách ứng tác fugue **sáu bè**, Bach xin về viết lại rồi gửi vua. Về Leipzig, ông viết lại các ứng tác thành **Lễ vật âm nhạc** (BWV 1079), in tháng 9/1747. (Các nguồn kể khác nhau về chi tiết fugue sáu bè.) Xem [[fugue]].
-- **C. P. E. Bach**, ở chương cuối phần hai *Versuch* (1762), dạy cách **ngẫu hứng** từ những tiến trình hoà âm khép kín, các tiến trình chuyển giọng và các **cách trang trí giai điệu**, rồi minh hoạ bằng một **fantasia tự do** mẫu.
+- **C. P. E. Bach**, ở chương cuối phần hai *Versuch* (1762), dạy cách **[[ngau-hung-piano|ngẫu hứng]]** từ những tiến trình hoà âm khép kín, các tiến trình [[chuyen-giong|chuyển giọng]] và các **cách trang trí giai điệu**, rồi minh hoạ bằng một **fantasia tự do** mẫu.
 
 ## Thời Cổ điển: đấu ngẫu hứng ở Vienna
 - Thời Cổ điển được coi là thời kỳ **cuối cùng** mà ngẫu hứng trên đàn phím vừa là thực hành phổ biến vừa được xem là **kỹ năng cơ bản** của mọi nhạc công chuyên nghiệp.
@@ -120,19 +120,19 @@ Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng
 - [[Mozart]] cũng từng "đấu" với [[Clementi]] trước mặt hoàng đế (1781).
 
 ## Czerny: dạy ngẫu hứng một cách hệ thống (1829)
-**Carl Czerny**, học trò của Beethoven, xuất bản *Systematische Anleitung zum Fantasieren auf dem Pianoforte* (Op. 200, **1829**) — hệ thống hoá các loại ngẫu hứng thời đó kèm nhiều ví dụ mẫu: **prelude**, **cadenza**, fantasia, biến tấu, **fugue**, capriccio, potpourri (liên khúc các giai điệu). Bản tiếng Anh do Alice Mitchell dịch (1983).
+**[[carl-czerny|Carl Czerny]]**, học trò của Beethoven, xuất bản *Systematische Anleitung zum Fantasieren auf dem [[lich-su-piano|Pianoforte]]* (Op. 200, **1829**) — hệ thống hoá các loại ngẫu hứng thời đó kèm nhiều ví dụ mẫu: **[[the-loai|prelude]]**, **cadenza**, fantasia, [[bien-tau|biến tấu]], **fugue**, capriccio, potpourri (liên khúc các giai điệu). Bản tiếng Anh do Alice Mitchell dịch (1983).
 
 ## Thế kỷ 19: ngẫu hứng rời phòng hoà nhạc
 - Theo Dana Gooley (*Fantasies of Improvisation*, 2018), trong nửa đầu thế kỷ 19 thực hành ngẫu hứng **suy giảm**, đồng thời hình thành một **"ý niệm" về ngẫu hứng** như một kiểu biểu diễn lý tưởng. Ông cho rằng giải thích "ngẫu hứng suy giảm vì khái niệm tác phẩm lên ngôi" (xem [[ban-the-tac-pham-am-nhac]]) là **quá đơn giản**.
 - Một yếu tố khác được nêu: nhạc piano ngày càng **điêu luyện**, đòi hỏi rất nhiều thời gian luyện tập, khiến việc biểu diễn và sáng tác dần tách rời.
-- Dù vậy, các nghệ sĩ như [[Liszt]], [[Chopin]], Clara Schumann vẫn ứng tác **prelude** và đoạn nối trong buổi hoà nhạc (xem [[prelude-ung-tac]]).
+- Dù vậy, các nghệ sĩ như [[Liszt]], [[Chopin]], [[clara-schumann|Clara Schumann]] vẫn ứng tác **prelude** và đoạn nối trong buổi hoà nhạc (xem [[prelude-ung-tac]]).
 
 ## Ngẫu hứng sống tiếp trong nhà thờ
 Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **organ Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở Nhạc viện Paris, coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu thánh ca Gregorian của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1989) để lại rất nhiều bản thu ứng tác.
 
 ## Hồi sinh
-- **Robert Levin** ứng tác cadenza khi chơi concerto Mozart (xem [[cadenza]]).
-- **Gabriela Montero** (Venezuela) ứng tác trên chủ đề khán giả đưa ra trong các buổi hoà nhạc cổ điển — bắt đầu biểu diễn công khai nhờ sự khích lệ của Martha Argerich; bà nhắc rằng Bach, Mozart, Chopin, Liszt, Rachmaninov đều là những người ngẫu hứng nổi tiếng.
+- **Robert Levin** ứng tác cadenza khi chơi [[hinh-thuc-concerto|concerto]] Mozart (xem [[cadenza]]).
+- **Gabriela Montero** (Venezuela) ứng tác trên chủ đề khán giả đưa ra trong các buổi hoà nhạc cổ điển — bắt đầu biểu diễn công khai nhờ sự khích lệ của [[martha-argerich|Martha Argerich]]; bà nhắc rằng Bach, Mozart, Chopin, Liszt, Rachmaninov đều là những người ngẫu hứng nổi tiếng.
 - Phong trào học lại **partimento** và **lược đồ galant** (xem [[partimento]]).
 Lộ trình cả mục: [[ngau-hung-ung-tac]].
 `,
@@ -153,18 +153,18 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
     ],
     body: `
 ## Cadenza là gì?
-- Trong concerto Cổ điển, dàn nhạc dừng trên **hợp âm 6/4 kết** có **dấu ngân** (xem [[hop-am-sau-bon]]); người độc tấu chơi một đoạn **tự do**, thường kết bằng hợp âm **át có láy rền**, rồi dàn nhạc vào lại (xem [[hinh-thuc-concerto]]).
+- Trong concerto Cổ điển, dàn nhạc dừng trên **[[luat-hoa-am-bon-be|hợp âm 6/4 kết]]** có **[[cach-dien-tau|dấu ngân]]** (xem [[hop-am-sau-bon]]); người độc tấu chơi một đoạn **tự do**, thường kết bằng [[hop-am-ba|hợp âm]] **át có [[ky-hieu-hoa-my|láy rền]]**, rồi dàn nhạc vào lại (xem [[hinh-thuc-concerto]]).
 - **Eingang** (đoạn dẫn vào) là một đoạn ứng tác ngắn hơn, trên dấu ngân ở **hợp âm át**, dẫn vào sự trở lại của một chủ đề.
 - Cadenza đã có trong **aria** opera trước khi phổ biến trong concerto; một nguồn đặt dạng cadenza trên bè trầm ngân vào khoảng 1710–1716.
 
 ## Mozart
-- Trong bản nhạc, Mozart thường chỉ ghi **dấu ngân** ở chỗ cadenza; ấn bản *Neue Mozart-Ausgabe* giữ nguyên các dấu ngân rộng của ông.
+- Trong bản nhạc, [[wolfgang-amadeus-mozart|Mozart]] thường chỉ ghi **dấu ngân** ở chỗ cadenza; [[an-ban-urtext|ấn bản]] *Neue Mozart-Ausgabe* giữ nguyên các dấu ngân rộng của ông.
 - Tuy vậy, nhiều cadenza **do chính Mozart viết** cho các concerto piano của mình còn lại, cùng cadenza viết sẵn trong *Sinfonia concertante* K. 364 — chúng là **mẫu mực** của cadenza Cổ điển.
 
 ## Beethoven và sự chuyển sang cadenza viết sẵn
 - Năm **1809**, không hài lòng với cách các nghệ sĩ đương thời ứng tác, [[Beethoven]] viết sẵn nhiều cadenza cho các concerto của mình để người chơi lựa chọn.
 - Trong **Concerto piano số 5 "Hoàng đế"**, cadenza được **ghi đầy đủ**, có lúc có dàn nhạc đệm; một phân tích còn coi chính những ô mở đầu tác phẩm là một cadenza viết sẵn. Ở chỗ cadenza thông thường, Beethoven yêu cầu người chơi **không thêm** cadenza.
-- Từ giữa thế kỷ 19, cadenza thường được **viết sẵn**; nhiều nghệ sĩ thế kỷ 19 – đầu thế kỷ 20 viết cadenza riêng cho các concerto của Mozart, Beethoven.
+- Từ giữa thế kỷ 19, cadenza thường được **viết sẵn**; nhiều nghệ sĩ thế kỷ 19 – đầu [[thoi-ky-the-ky-20|thế kỷ 20]] viết cadenza riêng cho các concerto của Mozart, Beethoven.
 
 ## Ứng tác cadenza ngày nay
 **Robert Levin** là người ủng hộ nổi bật nhất việc **ứng tác cadenza** Mozart: năm 1966, nhạc trưởng Hans Swarowsky nói với ông rằng ai muốn chơi concerto Mozart cho đúng thì phải ứng tác. Bộ thu âm concerto Mozart của ông với Academy of Ancient Music (13 đĩa) xây trên các cadenza ứng tác. Đây là một **tái dựng hiện đại** dựa trên nghiên cứu, không phải bản sao cách chơi của Mozart.
@@ -173,7 +173,7 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
 (Tổng hợp từ các mô tả trên.)
 1. Bắt đầu sau 6/4 kết — kéo dài **cảm giác chờ** hợp âm át.
 2. Nhắc lại, biến đổi các **chủ đề** của chương.
-3. Phô diễn kỹ thuật (âm giai, hợp âm rải, quãng 8) nhưng vẫn quay quanh giọng chủ.
+3. Phô diễn kỹ thuật (âm giai, [[luyen-hop-am-rai|hợp âm rải]], [[quang|quãng 8]]) nhưng vẫn quay quanh giọng chủ.
 4. Kết trên **át có láy rền** — tín hiệu để dàn nhạc vào.
 Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
 `,
@@ -192,7 +192,7 @@ Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
       ['ClassicalConnect — Schubert Impromptus', 'https://www.classicalconnect.com/music/10064'],
     ],
     body: `
-**Impromptu** (tiếng Pháp/Latin: "ngẫu hứng, tức thời") là tên một thể loại **tiểu phẩm piano** thế kỷ 19. Tên gọi gợi cảm giác **như đang ứng tác**, nhưng các impromptu đều là tác phẩm **viết sẵn** — một ví dụ của "ý niệm về ngẫu hứng" mà Dana Gooley mô tả (xem [[lich-su-ngau-hung]]).
+**Impromptu** (tiếng Pháp/Latin: "[[ngau-hung-piano|ngẫu hứng]], tức thời") là tên một thể loại **tiểu phẩm piano** thế kỷ 19. Tên gọi gợi cảm giác **như đang ứng tác**, nhưng các impromptu đều là tác phẩm **viết sẵn** — một ví dụ của "ý niệm về ngẫu hứng" mà Dana Gooley mô tả (xem [[lich-su-ngau-hung]]).
 
 ## Lịch sử
 - Tên gọi theo nghĩa này gắn với nhà soạn nhạc Séc **Jan Václav Voříšek**: một nguồn cho rằng nhà xuất bản dùng chữ này cho một bản piano của ông năm 1817; tập **Sáu Impromptu Op. 7** của Voříšek ra đời năm **1822**. Các nguồn chưa thống nhất mốc đầu tiên.
@@ -232,7 +232,7 @@ Liên quan: [[the-loai]], [[ngau-hung-ung-tac]].
     ],
     body: `
 ## Partimento là gì?
-**Partimento** là một **bè trầm** — có hoặc không có số — được viết ra để học trò **chơi thành một bản nhạc hoàn chỉnh** trên phím đàn: thêm hoà âm, giai điệu, mô phỏng, trang trí. Khác với [[bass-so|bè trầm có số]] để đệm cho người khác, partimento là **bài học sáng tác và ứng tác** cho chính người chơi.
+**Partimento** là một **bè trầm** — có hoặc không có số — được viết ra để học trò **chơi thành một bản nhạc hoàn chỉnh** trên [[ban-phim|phím đàn]]: thêm hoà âm, [[giai-dieu|giai điệu]], [[doi-am|mô phỏng]], trang trí. Khác với [[bass-so|bè trầm có số]] để đệm cho người khác, partimento là **bài học sáng tác và ứng tác** cho chính người chơi.
 
 ## Trường phái Naples
 - Thế kỷ 18, **bốn nhạc viện ở Naples** là trung tâm đào tạo nhà soạn nhạc của châu Âu; giáo viên dùng partimento để khuyến khích **ứng tác**.
@@ -242,20 +242,20 @@ Liên quan: [[the-loai]], [[ngau-hung-ung-tac]].
 
 ## Hồi sinh
 - Hội thảo ở Viện Orpheus (Ghent, 2006) với **Robert Gjerdingen** và **Giorgio Sanguinetti** đánh dấu sự quan tâm trở lại; cuốn *Music in the Galant Style* (Gjerdingen, 2007) và trang web tư liệu partimento của ông là nguồn tham khảo chính.
-- **Sanguinetti**, *The Art of Partimento* (Oxford, **2012**): vừa là lịch sử vừa là **sổ tay thực hành**, đi từng bước từ hiện thực bè trầm đơn giản đến **trang trí giai điệu** (diminution), **mô phỏng** và **phát triển motif**.
+- **Sanguinetti**, *The Art of Partimento* (Oxford, **2012**): vừa là lịch sử vừa là **sổ tay thực hành**, đi từng bước từ hiện thực bè trầm đơn giản đến **trang trí giai điệu** (diminution), **mô phỏng** và **[[motif|phát triển motif]]**.
 - Rudolf Lutz và nhiều giáo viên khác đưa partimento vào giảng dạy. Một luận án gần đây (Monique Arar) nhận xét: nghiên cứu đã kể lại lịch sử thuyết phục, nhưng **phương pháp học hoàn chỉnh cho ngày nay** vẫn đang được xây dựng.
 
 ## Các bước học partimento
 (Theo cấu trúc của Sanguinetti và các tuyển tập Naples.)
-1. **Quy tắc quãng 8**: thuộc hợp âm cho từng bậc bè trầm khi đi lên và đi xuống.
+1. **Quy tắc quãng 8**: thuộc [[hop-am-ba|hợp âm]] cho từng bậc bè trầm khi đi lên và đi xuống.
 2. **Kết**: các công thức kết đơn giản, kết kép.
-3. **Mô tiến bè trầm** (moti del basso): đi lên quãng 4 xuống quãng 3, đi xuống quãng 3 lên quãng 2…
+3. **Mô tiến bè trầm** (moti del basso): đi lên [[quang|quãng]] 4 xuống quãng 3, đi xuống quãng 3 lên quãng 2…
 4. **Hiện thực** một partimento ngắn: tay trái bè trầm, tay phải hợp âm.
 5. **Trang trí** tay phải thành giai điệu, thêm **mô phỏng** giữa hai tay.
 6. Ghép các **lược đồ galant** thành câu và đoạn (xem [[luoc-do-galant]]).
 
 ## Vì sao người học piano hôm nay nên biết?
-Partimento rèn đúng những kỹ năng mà giáo dục hiện đại thường tách rời: **hoà âm, đối âm, ứng tác, đọc bè trầm, tư duy hình thức** — tất cả **trên bàn phím**. Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
+Partimento rèn đúng những kỹ năng mà giáo dục hiện đại thường tách rời: **hoà âm, đối âm, ứng tác, đọc bè trầm, tư duy [[hinh-thuc-am-nhac|hình thức]]** — tất cả **trên bàn phím**. Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
 `,
   },
   {
@@ -272,29 +272,29 @@ Partimento rèn đúng những kỹ năng mà giáo dục hiện đại thườn
     ],
     body: `
 ## Thực hành
-Trong các buổi hoà nhạc và salon thế kỷ 18–19, nghệ sĩ piano thường **không bắt đầu ngay** vào tác phẩm: họ ứng tác một đoạn **dạo đầu** (prelude) ngắn để:
+Trong các buổi hoà nhạc và salon thế kỷ 18–19, nghệ sĩ piano thường **không bắt đầu ngay** vào tác phẩm: họ [[ngau-hung-ung-tac|ứng tác]] một đoạn **dạo đầu** ([[the-loai|prelude]]) ngắn để:
 - **Thử đàn** và làm quen âm thanh căn phòng.
 - **Xác lập giọng** của bài sắp chơi — đặc biệt khi bài trước ở giọng khác.
 - **Dẫn khán giả** vào tâm trạng của tác phẩm.
 - **Nối** các tác phẩm trong chương trình thành một mạch liền.
 
 ## Ai đã làm?
-- Theo Valerie Woodring Goertzen (*Journal of Musicology*, 1996) và các nghiên cứu tiếp nối, truyền thống này kéo dài đến **đầu thế kỷ 20**, đạt đỉnh khoảng **1770–1840**, với [[Beethoven]], Hummel, [[Czerny]], [[Chopin]], [[Liszt]].
-- **Clara Schumann** thích chuẩn bị cho khán giả bằng các prelude và **đoạn nối** ứng tác giữa các tác phẩm trong chương trình.
+- Theo Valerie Woodring Goertzen (*Journal of Musicology*, 1996) và các nghiên cứu tiếp nối, truyền thống này kéo dài đến **đầu [[thoi-ky-the-ky-20|thế kỷ 20]]**, đạt đỉnh khoảng **1770–1840**, với [[Beethoven]], Hummel, [[Czerny]], [[Chopin]], [[Liszt]].
+- **[[clara-schumann|Clara Schumann]]** thích chuẩn bị cho khán giả bằng các prelude và **đoạn nối** ứng tác giữa các tác phẩm trong chương trình.
 - Czerny dành riêng phần cho **prelude** trong sách dạy ngẫu hứng Op. 200 (1829) (xem [[lich-su-ngau-hung]]).
 
 ## Từ prelude ứng tác đến prelude viết sẵn
-Thực hành này sinh ra các **tiểu phẩm prelude** viết sẵn: ngắn, tự do, xoay quanh một hình tiết tấu hoặc một nét kỹ thuật. **24 Prelude Op. 28** của Chopin là ví dụ nổi tiếng. Bach trước đó cũng ghép prelude với fugue (xem [[phan-tich-prelude-do-truong]]).
+Thực hành này sinh ra các **tiểu phẩm prelude** viết sẵn: ngắn, tự do, xoay quanh một hình tiết tấu hoặc một nét kỹ thuật. **24 Prelude Op. 28** của Chopin là ví dụ nổi tiếng. [[johann-sebastian-bach|Bach]] trước đó cũng ghép prelude với [[fugue|fugue]] (xem [[phan-tich-prelude-do-truong]]).
 
 ## Một prelude ứng tác thường gồm
 (Tổng hợp từ mô tả của các nghiên cứu trên.)
-- Vài **hợp âm** xác lập giọng: I – IV – V – I, có thể thêm [[hop-am-at-phu|át phụ]].
-- **Hợp âm rải** hoặc âm giai trải khắp bàn phím.
+- Vài **[[hop-am-ba|hợp âm]]** xác lập giọng: I – IV – V – I, có thể thêm [[hop-am-at-phu|át phụ]].
+- **[[luyen-hop-am-rai|Hợp âm rải]]** hoặc âm giai trải khắp [[ban-phim|bàn phím]].
 - Một **gợi ý** về chủ đề hoặc tính chất của bài sắp chơi.
 - Kết trên **hợp âm át** (để dẫn vào bài) hoặc trên chủ.
 
 ## Áp dụng ngày nay
-Trước khi chơi một bài trong buổi biểu diễn hay buổi học, chơi vài ô **dạo đầu** trong giọng của bài là cách khởi động và vào tâm thế tự nhiên — một cách luyện ngẫu hứng gắn trực tiếp với tiết mục (xem [[phuong-phap-luyen-ngau-hung]], [[hoi-hop-bieu-dien]]).
+Trước khi chơi một bài trong buổi biểu diễn hay buổi học, chơi vài ô **dạo đầu** trong giọng của bài là cách [[suc-khoe-nguoi-choi-dan|khởi động]] và vào tâm thế tự nhiên — một cách luyện ngẫu hứng gắn trực tiếp với tiết mục (xem [[phuong-phap-luyen-ngau-hung]], [[hoi-hop-bieu-dien]]).
 `,
   },
   {
@@ -313,17 +313,17 @@ Trước khi chơi một bài trong buổi biểu diễn hay buổi học, chơi
     ],
     body: `
 ## Cấu trúc một buổi chơi jazz
-- **Head**: chơi giai điệu viết sẵn của bài trong chorus đầu.
-- **Các chorus solo**: mỗi người lần lượt ngẫu hứng trên **vòng hợp âm** của bài — một, hai hay nhiều chorus tuỳ ý (một **chorus** là một lượt trọn hình thức, ví dụ 32 ô — xem [[hinh-thuc-ca-khuc-32]], hoặc 12 ô — [[blues-12-nhip]]).
+- **Head**: chơi [[giai-dieu|giai điệu]] viết sẵn của bài trong chorus đầu.
+- **Các chorus solo**: mỗi người lần lượt [[ngau-hung-piano|ngẫu hứng]] trên **[[vong-hop-am|vòng hợp âm]]** của bài — một, hai hay nhiều chorus tuỳ ý (một **chorus** là một lượt trọn [[hinh-thuc-am-nhac|hình thức]], ví dụ 32 ô — xem [[hinh-thuc-ca-khuc-32]], hoặc 12 ô — [[blues-12-nhip]]).
 - **Trading fours** (đổi bốn): hai hay nhiều người luân phiên ngẫu hứng **4 ô** mỗi người, như một cuộc trò chuyện; cũng có đổi tám, đổi hai. Thường diễn ra **sau** các solo đầy đủ.
 - **Head** trở lại để kết.
 Người chơi giữ vị trí trong hình thức nhờ **trí nhớ, nghe, tín hiệu cơ thể và cảm giác nhịp**.
 
 ## Học ngẫu hứng jazz: Berliner (1994)
 Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994), dựa trên phỏng vấn nhiều nhạc sĩ, mô tả ngẫu hứng như một **ngôn ngữ**, một thẩm mỹ và một **truyền thống**, phía sau là **cả đời chuẩn bị**:
-- **Xây từ vựng**: học thuộc các câu nhạc, cụm nốt từ bản thu của các bậc thầy — tương tự học từ và cụm từ của một ngôn ngữ.
+- **Xây từ vựng**: học thuộc các [[cau-nhac|câu nhạc]], cụm nốt từ bản thu của các bậc thầy — tương tự học từ và cụm từ của một ngôn ngữ.
 - **Chép solo** (transcription): nghe và ghi (hoặc học thuộc bằng tai) các solo nổi tiếng; sách của Berliner có các bản chép ngẫu hứng tập thể của nhóm Miles Davis và John Coltrane.
-- **Lý thuyết** hợp âm – âm giai và **từ vựng học từ bản thu** đều là thành phần thiết yếu (xem [[he-thong-hop-am-am-giai]]).
+- **Lý thuyết** [[hop-am-ba|hợp âm]] – âm giai và **từ vựng học từ bản thu** đều là thành phần thiết yếu (xem [[he-thong-hop-am-am-giai]]).
 - Nhạc sĩ hình dung âm nhạc theo nhiều cách: bằng **tai**, hình ảnh, cảm giác vận động, lời nói, cảm xúc, lý thuyết.
 
 ## Các kỹ năng nền
@@ -334,7 +334,7 @@ Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994),
 | Chọn nốt trên từng hợp âm | [[he-thong-hop-am-am-giai]], [[hop-am-at-bien-hoa]] |
 | Đệm cho người khác solo | [[xep-hop-am]] |
 | Thay đổi hoà âm khi chơi | [[thay-the-hop-am]], [[tai-hoa-am]] |
-| Ngẫu hứng điệu thức | [[hoa-am-dieu-thuc]] |
+| Ngẫu hứng [[dieu-thuc|điệu thức]] | [[hoa-am-dieu-thuc]] |
 
 ## Một solo hay thường có
 (Gợi ý tổng hợp, không phải quy tắc.)
@@ -361,22 +361,22 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
     ],
     body: `
 ## Derek Bailey: ngẫu hứng có và không có phong cách
-Nghệ sĩ guitar **Derek Bailey**, trong *Improvisation: Its Nature and Practice in Music* (1980, bản sửa 1992), khảo sát ngẫu hứng trong **nhạc cổ điển Ấn Độ, jazz, flamenco, nhạc phương Tây** (Baroque và đương đại), **rock** và ngẫu hứng **tự do**, dựa trên phỏng vấn nhiều nhạc sĩ (John Zorn, Steve Lacy, Max Roach, Evan Parker, Paco Peña…). Cuốn sách được coi là nỗ lực đầu tiên bàn về ngẫu hứng như một **khái niệm** vượt ra ngoài mọi phong cách cố định. Bailey phân biệt:
+Nghệ sĩ guitar **Derek Bailey**, trong *[[ngau-hung-piano|Improvisation]]: Its Nature and Practice in Music* (1980, bản sửa 1992), khảo sát ngẫu hứng trong **nhạc cổ điển Ấn Độ, jazz, flamenco, nhạc phương Tây** ([[thoi-ky-baroque|Baroque]] và đương đại), **rock** và ngẫu hứng **tự do**, dựa trên phỏng vấn nhiều nhạc sĩ (John Zorn, Steve Lacy, Max Roach, Evan Parker, Paco Peña…). Cuốn sách được coi là nỗ lực đầu tiên bàn về ngẫu hứng như một **khái niệm** vượt ra ngoài mọi phong cách cố định. Bailey phân biệt:
 | | Ngẫu hứng gắn với phong cách | Ngẫu hứng tự do |
 |---|---|---|
 | Khung | Một phong cách: jazz, flamenco, raga… | Không có phong cách định trước |
 | Tiêu chí "hay" | Theo chuẩn mực của phong cách | Do chính người chơi và người nghe tạo ra trong lúc chơi |
-| Ví dụ | Solo bebop, cadenza Mozart | Các nhóm ngẫu hứng tự do ở châu Âu từ thập niên 1960 |
+| Ví dụ | Solo bebop, [[cadenza|cadenza]] [[wolfgang-amadeus-mozart|Mozart]] | Các nhóm ngẫu hứng tự do ở châu Âu từ thập niên 1960 |
 
 ## Keith Jarrett — The Köln Concert (1975)
 - Ngày **24/1/1975**, ở Nhà hát Opera Köln, **[[keith-jarrett|Keith Jarrett]]** chơi một buổi độc tấu piano **gần như toàn bộ là ứng tác** (trừ bài encore viết sẵn); ECM phát hành cùng năm.
 - Hoàn cảnh khó khăn: Jarrett mệt sau chặng đường dài, đau lưng, và cây đàn được chuẩn bị là một đàn baby grand dùng để tập, gần như không chơi được; ông suýt từ chối biểu diễn.
 - Bản thu trở thành **album độc tấu jazz bán chạy nhất** và **album piano bán chạy nhất** mọi thời.
-- Đây là ví dụ cho thấy ngẫu hứng "tự do" trên piano vẫn có thể rất **dễ nghe**: các đoạn dài trên một vài hợp âm, ostinato tay trái (xem [[ostinato]]), giai điệu phát triển dần.
+- Đây là ví dụ cho thấy ngẫu hứng "tự do" trên piano vẫn có thể rất **dễ nghe**: các đoạn dài trên một vài [[hop-am-ba|hợp âm]], ostinato tay trái (xem [[ostinato]]), [[giai-dieu|giai điệu]] phát triển dần.
 
 ## Học ngẫu hứng tự do
 (Gợi ý tổng hợp.)
-- Bắt đầu bằng **một ràng buộc duy nhất** thay vì không ràng buộc nào: chỉ dùng một quãng, một nhịp điệu, một âm vực, một [[am-cum|âm cụm]]…
+- Bắt đầu bằng **một ràng buộc duy nhất** thay vì không ràng buộc nào: chỉ dùng một [[quang|quãng]], một nhịp điệu, một âm vực, một [[am-cum|âm cụm]]…
 - Chú ý **âm thanh và kết cấu**, không chỉ cao độ (xem [[am-sac]], [[ket-cau]]).
 - **Lắng nghe**: trong ngẫu hứng nhóm, phản ứng với người khác quan trọng hơn chơi nhiều nốt.
 - Thu âm và nghe lại để nhận ra thói quen của chính mình.
@@ -398,20 +398,20 @@ Liên quan: [[dinh-nghia-am-nhac]], [[ngau-hung-ung-tac]].
     ],
     body: `
 ## Mô hình Pressing (1988)
-Nhà tâm lý học – nhạc sĩ **Jeff Pressing** đề xuất một mô hình nhằm giải thích con người **ngẫu hứng thế nào**, **học ngẫu hứng thế nào**, và hành vi **mới** nảy sinh ra sao:
-- Ngẫu hứng là **chuỗi các phần không chồng lên nhau**; mỗi phần là một **cụm sự kiện** — một nhóm nốt, một cử chỉ, một câu nhạc.
-- Mỗi cụm mới được tạo từ: **các sự kiện vừa chơi**, **trí nhớ dài hạn**, **mục tiêu hiện tại** và một **khung tham chiếu** (referent) — tập hợp các cấu trúc nhận thức, tri giác, cảm xúc (như vòng hợp âm, giai điệu gốc, phong cách) dẫn đường cho người ngẫu hứng.
+Nhà tâm lý học – nhạc sĩ **Jeff Pressing** đề xuất một mô hình nhằm giải thích con người **[[ngau-hung-piano|ngẫu hứng]] thế nào**, **học ngẫu hứng thế nào**, và hành vi **mới** nảy sinh ra sao:
+- Ngẫu hứng là **chuỗi các phần không chồng lên nhau**; mỗi phần là một **cụm sự kiện** — một nhóm nốt, một cử chỉ, một [[cau-nhac|câu nhạc]].
+- Mỗi cụm mới được tạo từ: **các sự kiện vừa chơi**, **trí nhớ dài hạn**, **mục tiêu hiện tại** và một **khung tham chiếu** (referent) — tập hợp các cấu trúc nhận thức, tri giác, cảm xúc (như [[vong-hop-am|vòng hợp âm]], [[giai-dieu|giai điệu]] gốc, phong cách) dẫn đường cho người ngẫu hứng.
 - Các khung và kho chất liệu giúp người chơi làm việc trong **giới hạn rất chặt** của khả năng xử lý thông tin của con người — vì vậy ngẫu hứng giỏi cần **luyện tập lâu dài** để nhiều thứ trở thành tự động.
 
 ## Limb & Braun (2008): não khi ngẫu hứng
-- **Charles Limb** và **Allen Braun** chụp **fMRI** các nghệ sĩ piano jazz chuyên nghiệp (các báo cáo ghi **6 người**) khi chơi trên một bàn phím nhỏ trong máy chụp, so sánh: chơi **âm giai Đô trưởng** hoặc một **giai điệu blues đã học thuộc**, với **ngẫu hứng** trên cùng khung.
+- **Charles Limb** và **Allen Braun** chụp **fMRI** các [[nghe-si-piano-jazz|nghệ sĩ piano jazz]] chuyên nghiệp (các báo cáo ghi **6 người**) khi chơi trên một [[ban-phim|bàn phím]] nhỏ trong máy chụp, so sánh: chơi **âm giai Đô trưởng** hoặc một **giai điệu [[blues-12-nhip|blues]] đã học thuộc**, với **ngẫu hứng** trên cùng khung.
 - Kết quả: khi ngẫu hứng, vùng **trước trán bên lưng** (dorsolateral prefrontal) và vùng ổ mắt bên **giảm hoạt động** rộng, trong khi vùng **trước trán giữa** (cực trán) **tăng hoạt động**.
 - Tác giả diễn giải: ngẫu hứng gắn với hành vi **xuất phát từ bên trong**, trong khi các quá trình **tự giám sát** và **kiểm soát có ý thức** được "nới lỏng".
 - Giới hạn: mẫu **rất nhỏ**, môi trường máy chụp khác xa sân khấu, và đây là **một** nghiên cứu.
 
 ## Hệ quả cho việc học
 Các gợi ý sau là suy luận sư phạm từ hai công trình trên, không phải kết luận trực tiếp của chúng:
-- Cần **kho chất liệu** đủ lớn và **tự động hoá** (âm giai, hợp âm, công thức kết, lược đồ) để đầu óc rảnh cho việc tạo ý mới — đúng tinh thần của [[partimento]] và [[ngau-hung-jazz|học từ vựng jazz]].
+- Cần **kho chất liệu** đủ lớn và **tự động hoá** (âm giai, [[hop-am-ba|hợp âm]], công thức kết, lược đồ) để đầu óc rảnh cho việc tạo ý mới — đúng tinh thần của [[partimento]] và [[ngau-hung-jazz|học từ vựng jazz]].
 - Khi ngẫu hứng, **tạm gác phán xét**; việc đánh giá để dành cho lúc nghe lại bản thu.
 Liên quan: [[phuong-phap-luyen-ngau-hung]], [[ky-vong-am-nhac]], [[ngau-hung-ung-tac]].
 `,
@@ -438,7 +438,7 @@ Nhà giáo dục **John Kratus** (*Music Educators Journal*, 1991; phát triển
 | 2. **Hướng vào quá trình** | Bắt đầu kiểm soát: tạo các mẫu âm thanh có chủ ý, thường lặp lại |
 | 3. **Hướng vào sản phẩm** | Quan tâm đến kết quả âm nhạc hoàn chỉnh |
 | 4. **Lưu loát** | Chơi trôi chảy, liền mạch |
-| 5. **Cấu trúc** | Ngẫu hứng trong một hình thức, cấu trúc cho trước |
+| 5. **Cấu trúc** | Ngẫu hứng trong một [[hinh-thuc-am-nhac|hình thức]], cấu trúc cho trước |
 | 6. **Phong cách** | Ngẫu hứng trong một phong cách cụ thể |
 | 7. **Cá nhân** | Tạo được tiếng nói riêng |
 Mô tả chi tiết các cấp 3–7 nên đối chiếu bài gốc; khung này hữu ích để giáo viên **đặt mục tiêu phù hợp** với trình độ.
@@ -446,20 +446,20 @@ Mô tả chi tiết các cấp 3–7 nên đối chiếu bài gốc; khung này 
 ## Các cách luyện đã được các truyền thống dùng
 | Cách luyện | Nguồn gốc / ví dụ | Bài liên quan |
 |---|---|---|
-| **Hỏi – đáp** | Giáo dục âm nhạc phổ thông; jazz (trading fours) | [[ngau-hung-piano]], [[ngau-hung-jazz]] |
+| **Hỏi – đáp** | Giáo dục [[nhac-pho|âm nhạc phổ]] thông; jazz (trading fours) | [[ngau-hung-piano]], [[ngau-hung-jazz]] |
 | **Ràng buộc**: ít nốt (ngũ cung, phím đen), một nhịp điệu, một âm vực | Chương trình nhập môn | [[am-giai-ngu-cung]] |
-| **Phát triển một motif**: lặp, mô tiến, đảo, đổi nhịp | Kỹ thuật sáng tác cổ điển | [[motif]] |
+| **Phát triển một motif**: lặp, [[mo-tien-hoa-am|mô tiến]], đảo, đổi nhịp | Kỹ thuật sáng tác cổ điển | [[motif]] |
 | **Học khuôn mẫu** rồi kết hợp | Czerny Op. 200; quy tắc quãng 8; lược đồ galant | [[lich-su-ngau-hung]], [[partimento]], [[luoc-do-galant]] |
 | **Hiện thực bè trầm** | Bè trầm có số, partimento | [[bass-so]] |
 | **Bắt chước và chép solo** | Jazz (Berliner) | [[ngau-hung-jazz]] |
-| **Biến tấu một giai điệu quen** | Trang trí, đổi nhịp, đổi hoà âm | [[bien-tau]], [[tai-hoa-am]] |
+| **Biến tấu một [[giai-dieu|giai điệu]] quen** | Trang trí, đổi nhịp, đổi hoà âm | [[bien-tau]], [[tai-hoa-am]] |
 | **Dạo đầu trước tác phẩm** | Truyền thống preluding | [[prelude-ung-tac]] |
 | **Đệm hát** | Thực hành hằng ngày | [[dem-hat-piano]] |
-| **Chơi theo tai** | — | [[choi-phuc-dieu]] |
+| **[[luyen-tai|Chơi theo tai]]** | — | [[choi-phuc-dieu]] |
 
 ## Nguyên tắc chung (tổng hợp)
-- **Khung trước, tự do sau**: một vòng hợp âm hay bè trầm cố định giúp người học tập trung vào việc tạo giai điệu.
-- **Từ ít đến nhiều**: vài nốt → âm giai → hợp âm → hợp âm đổi nhanh.
+- **Khung trước, tự do sau**: một [[vong-hop-am|vòng hợp âm]] hay bè trầm cố định giúp người học tập trung vào việc tạo giai điệu.
+- **Từ ít đến nhiều**: vài nốt → âm giai → [[hop-am-ba|hợp âm]] → hợp âm đổi nhanh.
 - **Nghe trong đầu trước khi chơi** (xem [[ly-thuyet-hoc-am-nhac-gordon|audiation]], [[tap-trong-dau]]).
 - **Thu âm và nghe lại**: đánh giá sau, không phải trong lúc chơi (xem [[khoa-hoc-ngau-hung]]).
 - **Đều đặn**: vài phút ngẫu hứng mỗi buổi tập, thay vì thỉnh thoảng một buổi dài.

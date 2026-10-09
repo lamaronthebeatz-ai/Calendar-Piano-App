@@ -36,7 +36,7 @@ const PERIODS = [
     slug: 'nghe-si-piano-hien-dai',
     title: 'Nghệ sĩ piano từ 1950 đến nay',
     years: '1950–nay',
-    intro: `Các cuộc thi quốc tế (Chopin ở Warsaw, Tchaikovsky ở Moscow, Van Cliburn, Nữ hoàng Elisabeth…) trở thành bệ phóng sự nghiệp. Cuộc thi Chopin được tổ chức lần đầu năm 1927; năm 1980, **[[dang-thai-son|Đặng Thái Sơn]]** trở thành người châu Á đầu tiên giành giải nhất.`,
+    intro: `Các cuộc thi quốc tế ([[frederic-chopin|Chopin]] ở Warsaw, [[pyotr-ilyich-tchaikovsky|Tchaikovsky]] ở Moscow, Van Cliburn, Nữ hoàng Elisabeth…) trở thành bệ phóng sự nghiệp. Cuộc thi Chopin được tổ chức lần đầu năm 1927; năm 1980, **[[dang-thai-son|Đặng Thái Sơn]]** trở thành người châu Á đầu tiên giành giải nhất.`,
     groups: [
       ['russian', 'Trường phái Nga – Xô Viết'],
       ['western', 'Châu Âu và châu Mỹ'],
@@ -166,13 +166,13 @@ export const pianoSchools: Article[] = [
 ## Trường phái Nga
 - **Ba trụ cột** thường được nhắc tới ở Nhạc viện Moscow: **Alexander Goldenweiser**, **Konstantin Igumnov** và **[[heinrich-neuhaus|Heinrich Neuhaus]]**. Neuhaus dạy tại Nhạc viện Moscow từ 1922 đến 1964; học trò có [[Richter]] và [[Gilels]].
 - **Tiếng đàn hát**: Igumnov là ví dụ được ghi chép kỹ nhất — tiếng đàn đẹp, nhiều màu sắc, "mang tính chất giọng người"; ưa sự tinh tế, kiềm chế, pianissimo rất mỏng. ([[Richter]] nhận xét tiếng đàn của ông sáng và tinh tế nhưng âm vực sắc thái khá hẹp.)
-- Truyền thống gắn với lối chơi rộng, giàu giai điệu, bắt rễ từ dân ca Nga và dòng [[Anton Rubinstein]] – [[Rachmaninoff]].
+- Truyền thống gắn với lối chơi rộng, giàu [[giai-dieu|giai điệu]], bắt rễ từ dân ca Nga và dòng [[Anton Rubinstein]] – [[Rachmaninoff]].
 
 Kỹ thuật liên quan: [[lam-noi-giai-dieu]], [[dien-dat-cau-nhac]].
 
 ## Trường phái Pháp
 - **Jeu perlé** ("lối chơi như ngọc trai"): chuỗi nốt **nhanh, sạch, đều**; nhẹ nhưng rõ từng ngón.
-- Nhấn mạnh **ngón tay độc lập**, phát âm rõ, **dùng pedal tiết kiệm** ([[ban-dap]]); âm sắc sáng, kết cấu cân về phía bè trên.
+- Nhấn mạnh **ngón tay độc lập**, phát âm rõ, **dùng pedal tiết kiệm** ([[ban-dap]]); [[am-sac|âm sắc]] sáng, kết cấu cân về phía bè trên.
 - Lý tưởng biểu cảm thiên về sự **sáng sủa, tiết chế** hơn là cảm xúc chủ quan. [[Saint-Saëns]] và [[marguerite-long|Marguerite Long]] được nêu như những đại diện; các giáo sư Nhạc viện Paris truyền phong cách này qua khoảng 150 năm.
 
 Kỹ thuật liên quan: [[luyen-am-giai]], [[cach-dien-tau]].
@@ -184,7 +184,7 @@ Kỹ thuật liên quan: [[luyen-am-giai]], [[cach-dien-tau]].
 | Kỹ thuật nổi bật | Trọng lượng cánh tay, legato | Ngón tay độc lập, jeu perlé |
 | Biểu cảm | Nội tâm, rộng | Tiết chế, thanh lịch |
 
-Các học giả lưu ý rằng các trường phái quốc gia **đã pha trộn** trong thế kỷ 20, nên khác biệt ngày nay không còn rõ như trước. Xem các nghệ sĩ: [[nghe-si-piano-dau-the-ky-20]], [[nghe-si-piano-hien-dai]].
+Các học giả lưu ý rằng các trường phái quốc gia **đã pha trộn** trong [[thoi-ky-the-ky-20|thế kỷ 20]], nên khác biệt ngày nay không còn rõ như trước. Xem các nghệ sĩ: [[nghe-si-piano-dau-the-ky-20]], [[nghe-si-piano-hien-dai]].
 `,
   },
   {
@@ -215,16 +215,16 @@ Các học giả lưu ý rằng các trường phái quốc gia **đã pha trộ
 |---|---|---|
 | Louise Nguyễn Văn Tỵ | 1915–2007 | *Viet Nam: Album pour piano* |
 | Louise Thái Thị Lang | — | *Fêtes du Têt* (piano) |
-| Nguyễn Văn Quỳ ("Quỳ Sonate") | 1925–2022 | 9 sonata cho violin và piano |
+| Nguyễn Văn Quỳ ("Quỳ Sonate") | 1925–2022 | 9 [[hinh-thuc-sonata|sonata]] cho violin và piano |
 | Trần Tất Toại | sinh 1929 | *Dòng nước trong* |
-| Nguyễn Hữu Tuấn | 1942–2008 | Các prelude cho piano |
+| Nguyễn Hữu Tuấn | 1942–2008 | Các [[the-loai|prelude]] cho piano |
 | Nguyễn Đình Lượng | 1945–2005 | Các prelude cho piano |
 | Đặng Hữu Phúc | sinh 1953 | *Suite cho piano* |
 
 Các nhà soạn nhạc Nguyễn Văn Nam, Nguyễn Trọng Bằng, Đoàn Nho (học ở Moscow và Kiev) được biết đến chủ yếu qua tác phẩm giao hưởng.
 
 ## Nghệ sĩ biểu diễn
-Năm 1980, [[dang-thai-son|Đặng Thái Sơn]] trở thành người châu Á đầu tiên giành giải nhất cuộc thi Chopin (xem [[nghe-si-piano-hien-dai]]).
+Năm 1980, [[dang-thai-son|Đặng Thái Sơn]] trở thành người châu Á đầu tiên giành giải nhất cuộc thi [[frederic-chopin|Chopin]] (xem [[nghe-si-piano-hien-dai]]).
 
 Lưu ý: các nguồn chủ yếu là chương trình hoà nhạc và luận văn ở nước ngoài, nên danh sách trên **chưa đầy đủ**; luận văn *Solo Piano Music by Vietnamese Composers* của Nam Hoàng Nguyễn là tài liệu chuyên sâu nhất được biết đến. Bổ sung từ tư liệu trong nước sẽ giúp danh sách đầy đủ hơn.
 `,

@@ -20,7 +20,7 @@ export const basics: Article[] = [
 Mỗi nốt nhạc mang hai thông tin: **cao độ** — vị trí của nốt trên [[khuong-nhac]] — và **trường độ** — hình dạng của nốt (xem [[truong-do]]).
 
 ## Bảy tên nốt
-Âm nhạc phương Tây dùng 7 tên nốt lặp lại theo từng [[quang|quãng 8]]:
+Âm nhạc phương Tây dùng 7 tên [[not-lap-lai|nốt lặp]] lại theo từng [[quang|quãng 8]]:
 | Tên Latin | Đô | Rê | Mi | Fa | Sol | La | Si |
 |---|---|---|---|---|---|---|---|
 | Tên chữ cái | C | D | E | F | G | A | B |
@@ -33,7 +33,7 @@ Giữa các phím trắng có phím đen — đó là các nốt mang [[dau-hoa]
 
 ## Cấu tạo hình nốt
 - **Đầu nốt**: hình bầu dục, rỗng hoặc đặc — vị trí của nó cho biết cao độ.
-- **Đuôi nốt** (thân): vạch thẳng. Nốt **trên dòng 3** → đuôi quay **xuống**, gắn ở **bên trái** đầu nốt; nốt **dưới dòng 3** → đuôi quay **lên**, gắn ở **bên phải**. Nốt **đúng dòng 3**: quy ước phổ biến (và mặc định của phần mềm) là quay xuống, nhưng sách chép nhạc *Behind Bars* của Elaine Gould cho phép theo hướng các nốt xung quanh.
+- **Đuôi nốt** (thân): vạch thẳng. Nốt **trên dòng 3** → đuôi quay **xuống**, gắn ở **bên trái** đầu nốt; nốt **dưới dòng 3** → đuôi quay **lên**, gắn ở **bên phải**. Nốt **đúng dòng 3**: quy ước phổ biến (và mặc định của phần mềm) là quay xuống, nhưng sách chép nhạc *Behind Bars* của Elaine [[glenn-gould|Gould]] cho phép theo hướng các nốt xung quanh.
 - **Móc** hoặc **gạch nối**: cho biết các trường độ ngắn (móc đơn, móc kép…).
 
 ## Lịch sử tên nốt Đô – Rê – Mi
@@ -47,7 +47,7 @@ Xem cách dùng các âm tiết này khi hát: [[xuong-am]].
 ## Lịch sử hình nốt
 1. **Neume** (thế kỷ 9–12): ký hiệu chỉ hướng lên – xuống của giọng hát, chưa ghi chính xác cao độ hay trường độ.
 2. Cuối thế kỷ 13, phần lớn neume được đơn giản hoá thành **nốt vuông** — vẫn còn dùng trong sách thánh ca Gregorian ngày nay.
-3. **Ký âm định lượng** (mensural) bổ sung các hình nốt cho trường độ. Đầu nốt **hình bầu dục** hiện đại chỉ là dạng cách điệu của đầu nốt hình thoi trong ký âm vuông.
+3. **[[ky-am|Ký âm]] định lượng** (mensural) bổ sung các hình nốt cho trường độ. Đầu nốt **hình bầu dục** hiện đại chỉ là dạng cách điệu của đầu nốt hình thoi trong ký âm vuông.
 
 Từ khi khuông nhạc và hình nốt ổn định, các thay đổi lớn về sau của ký âm chủ yếu nằm ở **nhịp điệu** (xem [[truong-do]]).
 
@@ -72,17 +72,17 @@ Từ khi khuông nhạc và hình nốt ổn định, các thay đổi lớn v�
     body: `
 Khuông nhạc gồm **5 dòng** và **4 khe**, đánh số từ dưới lên. Nốt càng nằm cao trên khuông thì âm càng cao. Nốt vượt ra ngoài khuông được ghi trên **dòng kẻ phụ**.
 
-Bản thân khuông nhạc chưa cho biết tên nốt — phải nhờ [[khoa-nhac]] đặt ở đầu khuông.
+Bản thân khuông nhạc chưa cho biết [[not-nhac|tên nốt]] — phải nhờ [[khoa-nhac]] đặt ở đầu khuông.
 
 ::staff treble C4 E4 G4 B4 D5 F5 A5 | Nốt trên dòng kẻ phụ (C4, A5) và trên các dòng, khe
 
 ## Lịch sử
 - Khuông nhạc ra đời từ việc kẻ **dòng** để định vị neume. Người ta đánh dấu một dòng là một cao độ cố định, thường là **C hoặc F** — tiền thân của [[khoa-nhac]].
-- [[guido-d-arezzo|Guido d'Arezzo]] (khoảng năm 1030) theo truyền thống được coi là người tạo ra khuông **4 dòng**. Giới nghiên cứu ngày nay thận trọng hơn: dòng kẻ đã có từ trước, Guido là người **mở rộng lên 4 dòng** và phổ biến phương pháp. Theo giai thoại, khoảng năm 1028 Giáo hoàng John XIX mời ông đến Rome và học được cách đọc nhạc chỉ trong một buổi chiều.
-- Khuông **5 dòng** dùng cho ký âm định lượng (nhạc thế tục). Các nguồn không thống nhất thời điểm nó trở thành chuẩn. Sách thánh ca Gregorian đến nay vẫn dùng khuông 4 dòng.
+- [[guido-d-arezzo|Guido d'Arezzo]] (khoảng năm 1030) theo truyền thống được coi là người tạo ra khuông **4 dòng**. Giới nghiên cứu ngày nay thận trọng hơn: dòng kẻ đã có từ trước, Guido là người **mở rộng lên 4 dòng** và phổ biến phương pháp. Theo giai thoại, khoảng năm 1028 Giáo hoàng John XIX mời ông đến Rome và học được cách [[doc-not-nhanh|đọc nhạc]] chỉ trong một buổi chiều.
+- Khuông **5 dòng** dùng cho [[ky-am|ký âm]] định lượng (nhạc thế tục). Các nguồn không thống nhất thời điểm nó trở thành chuẩn. Sách thánh ca Gregorian đến nay vẫn dùng khuông 4 dòng.
 
 ## Khuông nhạc đôi
-Piano dùng **khuông nhạc đôi**, nối bằng dấu ngoặc ôm: khuông trên đặt [[khoa-sol]] (thường cho tay phải), khuông dưới đặt [[khoa-fa]] (thường cho tay trái). Hai khuông gặp nhau ở Đô giữa (C4).
+Piano dùng **khuông nhạc đôi**, nối bằng dấu ngoặc ôm: khuông trên đặt [[khoa-sol]] (thường cho tay phải), khuông dưới đặt [[khoa-fa]] (thường cho tay trái). Hai khuông gặp nhau ở [[ban-phim|Đô giữa]] (C4).
 
 ::img Grand staff.svg | Khuông nhạc đôi của piano
 
@@ -117,7 +117,7 @@ Khoá nhạc "neo" một nốt vào một dòng cụ thể trên [[khuong-nhac]]
 Khoá nhạc giúp hạn chế [[khuong-nhac|dòng kẻ phụ]]: nhạc cụ âm vực nào dùng khoá đó để nốt nằm gọn trong khuông.
 
 ## Khoá nhạc vốn là chữ cái
-Khoá nhạc ban đầu chính là **chữ cái tên nốt** viết lên một dòng của khuông; theo Merriam-Webster, chúng được dùng đều đặn từ **thế kỷ 12**.
+Khoá nhạc ban đầu chính là **chữ cái [[not-nhac|tên nốt]]** viết lên một dòng của khuông; theo Merriam-Webster, chúng được dùng đều đặn từ **thế kỷ 12**.
 | Khoá hiện đại | Bắt nguồn từ |
 |---|---|
 | [[khoa-sol]] | Chữ **G** kiểu Gothic |
@@ -127,7 +127,7 @@ Khoá nhạc ban đầu chính là **chữ cái tên nốt** viết lên một d
 ## Khoá "di động" và các khoá đã lỗi thời
 Ngày xưa khoá có thể đặt trên **nhiều dòng khác nhau** để nốt của từng bè nằm gọn trong khuông. Từ đó có nhiều tên khoá:
 - **Khoá Sol dòng 1** (khoá violin kiểu Pháp) và **khoá Đô dòng 1** (khoá soprano): đã thôi dùng.
-- Ngày nay chỉ còn hai khoá Đô di động phổ biến: **alto** (dòng 3) và **tenor** (dòng 4).
+- Ngày nay chỉ còn hai khoá [[xuong-am|Đô di động]] phổ biến: **alto** (dòng 3) và **tenor** (dòng 4).
 
 Người học piano chủ yếu cần khoá Sol và khoá Fa. Khoá Đô gặp khi đọc tổng phổ hoặc nhạc thính phòng.
 `,
@@ -146,7 +146,7 @@ Người học piano chủ yếu cần khoá Sol và khoá Fa. Khoá Đô gặp 
     body: `
 ::img GClef.svg | Ký hiệu khoá Sol
 
-Khoá Sol là một loại [[khoa-nhac]], dùng cho khuông trên của piano (tay phải).
+Khoá Sol là một loại [[khoa-nhac]], dùng cho [[khuong-nhac|khuông]] trên của piano (tay phải).
 
 ## Cách nhớ nốt
 - Các **dòng** từ dưới lên: **E4 – G4 – B4 – D5 – F5** (Mi – Sol – Si – Rê – Fa).
@@ -159,7 +159,7 @@ Khoá Sol là một loại [[khoa-nhac]], dùng cho khuông trên của piano (t
 Khoá Sol là chữ **G** kiểu Gothic được cách điệu; vòng xoắn của nó quấn quanh **dòng 2** — nốt Sol (G4). Vì thế nó còn được gọi là **khoá G**, và trước đây là **khoá violin**.
 
 ## Mốc định hướng
-Ba nốt dễ nhận nhất trên khoá Sol: **Đô giữa (C4)** trên dòng kẻ phụ dưới, **Sol (G4)** ở dòng 2, **Đô cao (C5)** ở khe 3. Từ các mốc này có thể đọc các nốt khác theo quãng (xem [[doc-not-nhanh]]).
+Ba nốt dễ nhận nhất trên khoá Sol: **[[ban-phim|Đô giữa]] (C4)** trên dòng kẻ phụ dưới, **Sol (G4)** ở dòng 2, **Đô cao (C5)** ở khe 3. Từ các mốc này có thể đọc các nốt khác theo [[quang|quãng]] (xem [[doc-not-nhanh]]).
 
 ::staff treble C4 G4 C5 | Ba nốt mốc của khoá Sol
 
@@ -180,7 +180,7 @@ So sánh với [[khoa-fa]] ở khuông dưới.
     body: `
 ::img FClef.svg | Ký hiệu khoá Fa
 
-Khoá Fa là một loại [[khoa-nhac]], dùng cho khuông dưới của piano (tay trái).
+Khoá Fa là một loại [[khoa-nhac]], dùng cho [[khuong-nhac|khuông]] dưới của piano (tay trái).
 
 ## Cách nhớ nốt
 - Các **dòng** từ dưới lên: **G2 – B2 – D3 – F3 – A3** (Sol – Si – Rê – Fa – La).
@@ -189,7 +189,7 @@ Khoá Fa là một loại [[khoa-nhac]], dùng cho khuông dưới của piano (
 ::staff bass G2 B2 D3 F3 A3 | Năm dòng của khoá Fa
 ::staff bass A2 C3 E3 G3 | Bốn khe của khoá Fa
 
-Đô giữa (C4) nằm trên dòng kẻ phụ thứ nhất **phía trên** khuông khoá Fa — cũng chính là dòng kẻ phụ **phía dưới** khuông [[khoa-sol]].
+[[ban-phim|Đô giữa]] (C4) nằm trên dòng kẻ phụ thứ nhất **phía trên** khuông khoá Fa — cũng chính là dòng kẻ phụ **phía dưới** khuông [[khoa-sol]].
 
 ## Nguồn gốc hình dạng
 Khoá Fa vốn là chữ **F**. Hai dấu chấm **kẹp lấy dòng 4** — nốt Fa (F3), Fa ngay dưới Đô giữa.
@@ -200,7 +200,7 @@ Ba nốt dễ nhận nhất: **Đô trầm (C3)** ở khe 2, **Fa (F3)** ở dò
 ::staff bass C3 F3 C4 | Ba nốt mốc của khoá Fa
 
 ## So với khoá Sol
-Cùng một vị trí trên khuông, **tên nốt** ở khoá Fa cao hơn khoá Sol **một bậc 3** (dòng 1: Sol thay vì Mi; khe 1: La thay vì Fa), nhưng **cao độ** thì thấp hơn nhiều (dòng 1 khoá Fa là G2, dòng 1 khoá Sol là E4). Vì vậy không thể đọc khoá Fa bằng cách "nhìn như khoá Sol" — cần học mốc riêng của nó.
+Cùng một vị trí trên khuông, **[[not-nhac|tên nốt]]** ở khoá Fa cao hơn khoá Sol **một bậc 3** (dòng 1: Sol thay vì Mi; khe 1: La thay vì Fa), nhưng **cao độ** thì thấp hơn nhiều (dòng 1 khoá Fa là G2, dòng 1 khoá Sol là E4). Vì vậy không thể đọc khoá Fa bằng cách "nhìn như khoá Sol" — cần học mốc riêng của nó.
 `,
   },
   {
@@ -217,14 +217,14 @@ Cùng một vị trí trên khuông, **tên nốt** ở khoá Fa cao hơn khoá 
     body: `
 ::img Alto clef.svg | Ký hiệu khoá Đô
 
-Tâm của khoá Đô chỉ vào dòng nào thì dòng đó là **Đô giữa (C4)**. Hai vị trí còn được dùng ngày nay:
+Tâm của khoá Đô chỉ vào dòng nào thì dòng đó là **[[ban-phim|Đô giữa]] (C4)**. Hai vị trí còn được dùng ngày nay:
 - **Khoá Đô dòng 3 (alto)** — viola.
 - **Khoá Đô dòng 4 (tenor)** — các nốt cao của cello, kèn bassoon, trombone.
 
 ::staff alto F3 A3 C4 E4 G4 | Năm dòng của khoá Đô dòng 3 (tâm khoá = C4 ở dòng giữa)
 
 ## Vì sao viola cần khoá riêng?
-Âm vực viola nằm **giữa** violin và cello. Viết bằng khoá Sol hay khoá Fa đều cần rất nhiều dòng kẻ phụ; khoá Đô dòng 3 đặt Đô giữa vào **giữa khuông**, nên phần lớn nốt viola nằm gọn trong 5 dòng.
+Âm vực viola nằm **giữa** violin và cello. Viết bằng [[khoa-sol|khoá Sol]] hay [[khoa-fa|khoá Fa]] đều cần rất nhiều [[khuong-nhac|dòng kẻ phụ]]; khoá Đô dòng 3 đặt Đô giữa vào **giữa khuông**, nên phần lớn nốt viola nằm gọn trong 5 dòng.
 
 ## Lịch sử
 Khoá Đô bắt nguồn từ chữ **C**, và từng được đặt ở **mọi dòng** trừ dòng trên cùng — nên gọi là khoá Đô "di động". Mỗi vị trí có tên riêng, ví dụ soprano (dòng 1), alto (dòng 3), tenor (dòng 4). Ngày nay chỉ còn alto và tenor được dùng thường xuyên.
@@ -264,11 +264,11 @@ Số phím tăng dần theo lịch sử, vì nhà soạn nhạc luôn muốn th�
 | Thời kỳ | Số phím / âm vực |
 |---|---|
 | Đàn của Cristofori (đầu thế kỷ 18) | Khoảng **49** phím |
-| Thời Mozart | **5 quãng 8** (Fa – Fa, 61 phím). Mozart không viết vượt âm vực này; Beethoven chỉ vượt từ Sonata "Waldstein" Op. 53 (1804) |
-| Giữa thế kỷ 19 (Chopin, Liszt) | Khoảng **85** phím, 7 quãng 8 |
+| Thời [[wolfgang-amadeus-mozart|Mozart]] | **5 quãng 8** (Fa – Fa, 61 phím). Mozart không viết vượt âm vực này; [[ludwig-van-beethoven|Beethoven]] chỉ vượt từ [[hinh-thuc-sonata|Sonata]] "Waldstein" Op. 53 (1804) |
+| Giữa thế kỷ 19 ([[frederic-chopin|Chopin]], [[franz-liszt|Liszt]]) | Khoảng **85** phím, 7 quãng 8 |
 | Cuối những năm 1880 | **88** phím — Steinway thêm 3 phím và chuẩn này được các hãng khác theo (có nguồn cho rằng Chickering làm trước) |
 
-Có đàn **nhiều hơn 88 phím**: mẫu **Bösendorfer Imperial** có **97 phím** (xuống đến C0). Busoni đặt làm năm 1909 để chuyển soạn một tác phẩm organ có nốt thấp hơn bàn phím thường. Các phím thêm được sơn **đen** để người chơi không nhầm.
+Có đàn **nhiều hơn 88 phím**: mẫu **Bösendorfer Imperial** có **97 phím** (xuống đến C0). [[ferruccio-busoni|Busoni]] đặt làm năm 1909 để chuyển soạn một tác phẩm organ có nốt thấp hơn bàn phím thường. Các phím thêm được sơn **đen** để người chơi không nhầm.
 
 Lịch sử cây đàn: [[lich-su-piano]].
 
@@ -300,23 +300,23 @@ Bên trong cây đàn: [[cau-tao-piano]]. Xem thêm: [[tu-the]] (cách ngồi), 
 ::keyboard C#4 Eb4 F#4 | C♯, E♭, F♯ là các phím đen
 
 ## Phạm vi hiệu lực
-- Đặt **ngay trước một nốt** (dấu hoá bất thường): hiệu lực cho các nốt **cùng cao độ, cùng quãng 8** đến **hết ô nhịp** đó, trừ khi bị một dấu hoá khác huỷ.
-- **Ngoại lệ — dấu nối**: nếu nốt có dấu hoá được **nối** sang ô nhịp sau, nốt nối vẫn giữ dấu hoá đó.
-- Đặt **ở đầu khuông** ([[hoa-bieu]]): hiệu lực cho mọi nốt cùng tên trong cả bản nhạc.
+- Đặt **ngay trước một nốt** (dấu hoá bất thường): hiệu lực cho các nốt **cùng cao độ, cùng [[quang|quãng 8]]** đến **hết [[so-chi-nhip|ô nhịp]]** đó, trừ khi bị một dấu hoá khác huỷ.
+- **Ngoại lệ — [[cham-doi-dau-noi|dấu nối]]**: nếu nốt có dấu hoá được **nối** sang ô nhịp sau, nốt nối vẫn giữ dấu hoá đó.
+- Đặt **ở đầu [[khuong-nhac|khuông]]** ([[hoa-bieu]]): hiệu lực cho mọi nốt cùng tên trong cả bản nhạc.
 
 Hai tên cho cùng một phím, như C♯ và D♭, gọi là [[trung-am]]. Chú ý: E♯ là phím F, và C♭ là phím B.
 
 ## Khi giảng dạy: ba chỗ học sinh hay sai
 1. **Quãng 8 khác**: dấu thăng trước F4 **không** áp dụng cho F5 trong cùng ô nhịp. Thực tế không phải nhà soạn nhạc nào cũng theo đúng quy tắc này, nên bản in tốt thường thêm dấu nhắc.
 2. **Sang ô nhịp mới**: dấu hoá bất thường hết hiệu lực ở vạch nhịp (trừ nốt nối).
-3. **Dấu hoá nhắc** (dấu hoá lịch sự, thường đặt trong ngoặc): chỉ để **nhắc**, không thay đổi nốt. Ví dụ ở Sol trưởng, sau một ô có F♮, nốt F ở ô kế tiếp có thể được ghi lại dấu ♯ dù hoá biểu đã có. Nhà xuất bản Henle cho biết không có quy tắc cứng về việc dùng bao nhiêu dấu nhắc.
+3. **Dấu hoá nhắc** (dấu hoá lịch sự, thường đặt trong ngoặc): chỉ để **nhắc**, không thay đổi nốt. Ví dụ ở Sol trưởng, sau một ô có F♮, nốt F ở ô kế tiếp có thể được ghi lại dấu ♯ dù hoá biểu đã có. Nhà xuất bản [[an-ban-urtext|Henle]] cho biết không có quy tắc cứng về việc dùng bao nhiêu dấu nhắc.
 
 ## Lịch sử: vì sao ♭, ♮, ♯ trông như vậy?
 - Dấu hoá đầu tiên chỉ áp dụng cho **nốt B** (khoảng thế kỷ 10).
 - **♭** bắt nguồn từ chữ **b tròn** (*b rotundum*) — nốt B được hạ xuống. Tên tiếng Pháp *bémol* nghĩa là "b mềm".
 - **♮** và **♯** đều bắt nguồn từ chữ **b vuông** (*b quadratum*) — nốt B giữ nguyên. Về sau hình vuông được kéo dài các cạnh theo hai cách, tách thành hai dấu bình và thăng.
 - Ban đầu **không có dấu bình**: dấu thăng huỷ dấu giáng và ngược lại.
-- Trong tiếng Đức, **B** là Si giáng, còn **H** (vốn là chữ b vuông bị biến dạng) là Si tự nhiên. Vì thế mới có motif B-A-C-H (Si♭ – La – Đô – Si) mà [[Bach]] và nhiều người sau dùng.
+- Trong tiếng Đức, **B** là Si giáng, còn **H** (vốn là chữ b vuông bị biến dạng) là Si tự nhiên. Vì thế mới có [[motif|motif]] B-A-C-H (Si♭ – La – Đô – Si) mà [[Bach]] và nhiều người sau dùng.
 `,
   },
   {
@@ -351,9 +351,9 @@ Khi nốt nằm quá cao hoặc quá thấp so với [[khuong-nhac]], người v
 Hai cách viết cùng nghĩa. Theo chuẩn phông ký hiệu nhạc SMuFL, dạng đúng là *8va bassa* (*8va* là viết tắt của *ottava*); **8vb** là dạng "sai" nảy sinh khi người không nói tiếng Ý tưởng "va" nghĩa là "alta" (cao). Tuy vậy, 8vb nay đã thành cách viết thông dụng.
 
 ## Khoá có số 8
-Một số khoá có số **8** nhỏ trên hoặc dưới: chơi cao hơn hoặc thấp hơn một quãng 8 so với viết. Ví dụ khoá Sol có số 8 ở dưới dùng cho guitar và giọng tenor.
+Một số khoá có số **8** nhỏ trên hoặc dưới: chơi cao hơn hoặc thấp hơn một quãng 8 so với viết. Ví dụ [[khoa-sol|khoá Sol]] có số 8 ở dưới dùng cho guitar và giọng tenor.
 
-8vb hay gặp nhất ở khoá Fa — đặc biệt **tay trái piano** và contrabass.
+8vb hay gặp nhất ở [[khoa-fa|khoá Fa]] — đặc biệt **tay trái piano** và contrabass.
 `,
   },
 ]

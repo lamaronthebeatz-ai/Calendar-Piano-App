@@ -21,18 +21,18 @@ Hoà âm jazz dựa trên nền [[he-thong-hoa-am-co-dien|hoà âm chức năng 
 | | Hoà âm cổ điển | Hoà âm jazz |
 |---|---|---|
 | Đơn vị cơ bản | [[hop-am-ba|Hợp âm ba]] | [[hop-am-bay|Hợp âm 7]]; hợp âm ba thường được thêm 6 hoặc 9 ([[hop-am-6-va-add]]) |
-| Nốt "lạ" | Nốt ngoài hợp âm phải giải quyết | **Nốt căng** 9, 11, 13 là một phần của hợp âm ([[hop-am-mo-rong]]) |
-| Ký hiệu | Số La Mã, bè trầm có số | **Ký hiệu hợp âm** trên lead sheet ([[ky-hieu-hop-am]]) |
+| Nốt "lạ" | [[not-ngoai-hop-am|Nốt ngoài hợp âm]] phải giải quyết | **Nốt căng** 9, 11, 13 là một phần của hợp âm ([[hop-am-mo-rong]]) |
+| Ký hiệu | [[chuc-nang-hoa-am|Số La Mã]], [[bass-so|bè trầm có số]] | **Ký hiệu hợp âm** trên lead sheet ([[ky-hieu-hop-am]]) |
 | Kết điển hình | IV – V – I, ii6 – V – I | **[[ii-v-i|ii – V – I]]** |
-| Viết bè | Bốn bè SATB theo luật | **Xếp hợp âm** trên đàn ([[xep-hop-am]]) |
-| Giai điệu trên hợp âm | Từ đối âm và hoà âm | **Hợp âm – âm giai** cho ngẫu hứng ([[he-thong-hop-am-am-giai]]) |
+| [[luat-hoa-am-bon-be|Viết bè]] | Bốn bè [[dan-giong|SATB]] theo luật | **Xếp hợp âm** trên đàn ([[xep-hop-am]]) |
+| [[giai-dieu|Giai điệu]] trên hợp âm | Từ [[doi-am|đối âm]] và hoà âm | **Hợp âm – âm giai** cho [[ngau-hung-piano|ngẫu hứng]] ([[he-thong-hop-am-am-giai]]) |
 | Thay đổi hợp âm | Do nhà soạn nhạc cố định | Người chơi **thay thế, tái hoà âm** khi biểu diễn ([[thay-the-hop-am]]) |
 | Tiết tấu | Chia đều | [[swing]] |
 
 Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có thể đóng vai **chủ** (I7) và không cần giải quyết (xem [[blues-12-nhip]], [[am-giai-blues]]).
 
 ## Lộ trình học trong mục này
-Điều kiện: đã học Chương 1–7 của [[giao-trinh-hoa-am]] (đặc biệt hợp âm 7, chức năng, át phụ, hợp âm mượn).
+Điều kiện: đã học Chương 1–7 của [[giao-trinh-hoa-am]] (đặc biệt hợp âm 7, chức năng, át phụ, [[hop-am-muon|hợp âm mượn]]).
 1. **Cảm nhận**: [[swing]].
 2. **Blues**: [[blues-12-nhip]], [[am-giai-blues]].
 3. **Hợp âm jazz**: [[ky-hieu-hop-am]], [[hop-am-mo-rong]], [[hop-am-6-va-add]].
@@ -41,14 +41,14 @@ Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có
 6. **Xếp hợp âm**: [[xep-hop-am]], [[hoa-am-quang-bon]], [[hop-am-chong|hợp âm ba cấu trúc trên]].
 7. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]].
 8. **Tái hoà âm**: [[tai-hoa-am]].
-9. **Hình thức và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]].
+9. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]].
 10. **Mở rộng**: [[hoa-am-dieu-thuc|jazz điệu thức]], [[vong-coltrane]].
 11. **Ứng dụng đệm hát**: [[dem-hat-piano]].
 
 ## Mẹo hiểu hoà âm jazz có hệ thống
-- Nhìn mọi tiến trình như **chuỗi các cặp ii – V** dẫn tới những "chủ âm tạm thời".
+- Nhìn mọi tiến trình như **chuỗi các cặp ii – V** dẫn tới những "[[bac-am-giai|chủ âm]] tạm thời".
 - Với mỗi hợp âm, hỏi: **nốt 3 và 7 là gì?** — hai nốt này quyết định tính chất và nối các hợp âm với nhau (nốt dẫn hướng).
-- Mọi hợp âm 7 át đều có thể **thay thế** (tritone, backdoor, hợp âm 7 giảm) — nhưng giai điệu phải hợp với hợp âm mới.
+- Mọi hợp âm 7 át đều có thể **thay thế** ([[quang|tritone]], backdoor, [[hop-am-bay-giam|hợp âm 7 giảm]]) — nhưng giai điệu phải hợp với hợp âm mới.
 `,
   },
   {
@@ -66,9 +66,9 @@ Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có
       ['Honing & de Haas (2008) — Swing once more (PDF)', 'https://mcg.uva.nl/mcg-2023/papers/honing-haas-2008.pdf'],
     ],
     body: `
-Trong jazz, hai nốt móc đơn viết bằng nhau thường **không** được chơi bằng nhau: nốt đầu dài hơn, nốt sau ngắn hơn.
+Trong jazz, hai [[truong-do|nốt móc đơn]] viết bằng nhau thường **không** được chơi bằng nhau: nốt đầu dài hơn, nốt sau ngắn hơn.
 
-| Cách viết | Cách chơi (nhịp độ vừa) |
+| Cách viết | Cách chơi ([[nhip-do|nhịp độ]] vừa) |
 |---|---|
 | Hai móc đơn ♫ | Như [[lien-ba]]: nốt đen + móc đơn trong một nhóm liên ba (2 : 1) |
 
@@ -90,7 +90,7 @@ Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2
 1. Bật máy đếm nhịp ở **phách 2 và 4** (thay vì 1 và 3) — nghe nó như tiếng hi-hat của tay trống.
 2. Chơi âm giai bằng móc đơn swing, nhấn nhẹ nốt "&" (nốt ngắn).
 3. Chơi theo bản thu ở nhiều nhịp độ khác nhau và để ý tỉ lệ dài – ngắn thay đổi.
-4. Tay trái đệm hợp âm ngắn kiểu "Charleston" (phách 1 và "& của 2") để cảm nhận [[dao-phach]].
+4. Tay trái đệm [[hop-am-ba|hợp âm]] ngắn kiểu "Charleston" (phách 1 và "& của 2") để cảm nhận [[dao-phach]].
 Lý thuyết hoà âm đi kèm: [[hoa-am-jazz]].
 `,
   },
@@ -108,7 +108,7 @@ Lý thuyết hoà âm đi kèm: [[hoa-am-jazz]].
       ['St. Olaf College — W. C. Handy and the blues', 'https://pages.stolaf.edu/americanmusic/author/findle1/'],
     ],
     body: `
-Mỗi ô là một ô nhịp 4/4, trong giọng Đô:
+Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, trong giọng Đô:
 | Ô 1–4 | Ô 5–8 | Ô 9–12 |
 |---|---|---|
 | C7 · C7 · C7 · C7 | F7 · F7 · C7 · C7 | G7 · F7 · C7 · G7 |
@@ -116,8 +116,8 @@ Mỗi ô là một ô nhịp 4/4, trong giọng Đô:
 Ô 12 dùng G7 (**turnaround**) để quay về đầu vòng. Phiên bản "quick change" đổi ô 2 thành F7.
 
 ## Đặc trưng
-- Cả ba hợp âm đều là [[hop-am-bay|hợp âm 7 át]] — điều "phạm luật" theo hoà âm cổ điển nhưng tạo nên màu blues.
-- Giai điệu và ngẫu hứng dùng [[am-giai-blues]].
+- Cả ba [[hop-am-ba|hợp âm]] đều là [[hop-am-bay|hợp âm 7 át]] — điều "phạm luật" theo [[he-thong-hoa-am-co-dien|hoà âm cổ điển]] nhưng tạo nên màu blues.
+- [[giai-dieu|Giai điệu]] và ngẫu hứng dùng [[am-giai-blues]].
 - Nhịp **swing**: cặp móc đơn được chơi dài – ngắn (gần với [[lien-ba]] 2+1).
 - Lời thường theo cấu trúc **AAB**: câu 1 nêu ý, câu 2 lặp lại, câu 3 đáp.
 
@@ -130,9 +130,9 @@ Blues bắt nguồn từ truyền thống dân gian của người Mỹ gốc Ph
 |---|---|---|
 | *Dallas Blues* — Hart Wand | 1912 | In ở Oklahoma City, **vài tháng trước** bản blues của Handy |
 | *The Memphis Blues* — W. C. Handy | 1912 | Viết năm 1909 cho một ứng viên thị trưởng Memphis |
-| *St. Louis Blues* — W. C. Handy | 1914 | Bản hit lớn, đưa blues thành một trong những thể loại phổ biến nhất nước Mỹ |
+| *St. Louis Blues* — W. C. Handy | 1914 | Bản hit lớn, đưa blues thành một trong những [[the-loai|thể loại]] phổ biến nhất nước Mỹ |
 
-Một điểm thú vị: cả *Memphis Blues* lẫn *St. Louis Blues* đều **không hoàn toàn** theo khuôn 12 ô nhịp. Sau đoạn mở đầu ngắn, chúng đặt một đoạn 12 ô nhịp blues cạnh một đoạn **16 ô nhịp** thông thường. *St. Louis Blues* còn chuyển giọng ra ngoài khuôn rồi mới quay về. Vì vậy câu trả lời cho "bản blues đầu tiên" tuỳ vào việc tính bản đầu tiên có chữ "blues" trong tên, bản 12 ô nhịp đầu tiên, hay bản hit đầu tiên.
+Một điểm thú vị: cả *Memphis Blues* lẫn *St. Louis Blues* đều **không hoàn toàn** theo khuôn 12 ô nhịp. Sau đoạn mở đầu ngắn, chúng đặt một đoạn 12 ô nhịp blues cạnh một đoạn **16 ô nhịp** thông thường. *St. Louis Blues* còn [[chuyen-giong|chuyển giọng]] ra ngoài khuôn rồi mới quay về. Vì vậy câu trả lời cho "bản blues đầu tiên" tuỳ vào việc tính bản đầu tiên có chữ "blues" trong tên, bản 12 ô nhịp đầu tiên, hay bản hit đầu tiên.
 
 Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]], [[ngau-hung-piano]]. So sánh với khuôn 32 ô nhịp: [[hinh-thuc-ca-khuc-32]].
 `,
@@ -159,21 +159,21 @@ Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]], [[n
 ::keyboard C4 Eb4 F4 Gb4 G4 Bb4 | Âm giai blues trên C: C – E♭ – F – G♭ – G – B♭
 
 ## Nốt blue
-Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng hát, chúng thường được uốn (bend) vào khoảng giữa hai phím đàn; trên piano, người chơi mô phỏng bằng cách **láy nhanh** từ ♭3 lên 3 (E♭ → E).
+Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng hát, chúng thường được uốn (bend) vào khoảng giữa hai [[ban-phim|phím đàn]]; trên piano, người chơi [[doi-am|mô phỏng]] bằng cách **láy nhanh** từ ♭3 lên 3 (E♭ → E).
 
 Âm giai blues thường được chơi trên khung [[blues-12-nhip]] với các [[hop-am-bay|hợp âm 7 át]]. Liên quan: [[dieu-thuc|Mixolydian]], [[dao-phach]].
 
 ## Nốt blue thực sự cao bao nhiêu?
-- Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một phần tư cung đến nửa cung**.
-- Court Cutting (2019) đo cao độ trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 cent** — **giữa** quãng 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
+- Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một phần tư cung đến [[cung-nua-cung|nửa cung]]**.
+- Court Cutting (2019) đo cao độ trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 cent** — **giữa** [[quang|quãng]] 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
 - Vì piano không có cao độ giữa hai phím, người chơi chỉ có thể **gợi** nốt blue — ví dụ [[nghe-si-piano-jazz|Thelonious Monk]] đánh **hai phím liền nhau cùng lúc**, hoặc láy nhanh từ ♭3 lên 3.
 
 ## Âm giai blues là sản phẩm của sách dạy
-- Nguồn gốc nốt blue còn **tranh cãi**: Gerhard Kubik cho rằng chúng đến từ chuỗi bồi âm trong truyền thống châu Phi, không phải từ việc "hạ" các nốt bình quân.
+- Nguồn gốc nốt blue còn **tranh cãi**: Gerhard Kubik cho rằng chúng đến từ [[chuoi-boi-am|chuỗi bồi âm]] trong truyền thống châu Phi, không phải từ việc "hạ" các nốt bình quân.
 - "Âm giai blues" như một **bài học** xuất hiện muộn: phương pháp piano của Vincent Lopez (1933–34) có lẽ là ấn phẩm đầu tiên nêu một âm giai blues. Trước khi jazz vào giảng đường (khoảng 1967), có **nhiều phiên bản** âm giai blues khác nhau; dạng 6 nốt quen thuộc được các nhà giáo dục jazz như David Baker và Jamey Aebersold phổ biến.
 - Có người phê phán âm giai này **quá đơn giản**, không nắm được tinh thần của blues.
 
-Ý nghĩa với người dạy: âm giai blues là **điểm khởi đầu** hữu ích để ngẫu hứng (xem [[ngau-hung-piano]]), nhưng nên cho học sinh **nghe nhiều bản thu blues** để hiểu nốt blue thật sự "uốn" thế nào.
+Ý nghĩa với người dạy: âm giai blues là **điểm khởi đầu** hữu ích để ngẫu hứng (xem [[ngau-hung-piano]]), nhưng nên cho học sinh **[[so-sanh-ban-thu|nghe nhiều bản thu]] blues** để hiểu nốt blue thật sự "uốn" thế nào.
 `,
   },
   {
@@ -190,18 +190,18 @@ Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng h
       ['Open Music Theory 2e — Substitutions (mode mixture in jazz)', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz/6.06%3A_Substitutions'],
     ],
     body: `
-**ii – V – I** là [[cau-ket|kết chính]] của hoà âm cổ điển (tiền át – át – chủ, xem [[chuc-nang-hoa-am]]) dùng **hợp âm 7** ở mọi bậc. Nhận ra nó bằng hai dấu hiệu: **nốt gốc đi theo quãng 5** và **chuỗi tính chất hợp âm** đặc trưng.
+**ii – V – I** là [[cau-ket|kết chính]] của [[he-thong-hoa-am-co-dien|hoà âm cổ điển]] (tiền át – át – chủ, xem [[chuc-nang-hoa-am]]) dùng **[[hop-am-bay|hợp âm 7]]** ở mọi bậc. Nhận ra nó bằng hai dấu hiệu: **nốt gốc đi theo [[quang|quãng]] 5** và **chuỗi tính chất [[hop-am-ba|hợp âm]]** đặc trưng.
 
 ## Giọng trưởng và giọng thứ
 | Giọng | Tiến trình | Ví dụ |
 |---|---|---|
 | Trưởng | **ii7 – V7 – Imaj7** | Dm7 – G7 – Cmaj7 |
 | Thứ | **iiø7 – V7(♭9) – i7** (hoặc i6, imaj7) | Dø7 – G7♭9 – Cm7 |
-Trong giọng thứ, ii là hợp âm **nửa giảm** và V thường thêm **♭9** — cả hai đến từ bậc 6 hạ (♭6) của giọng thứ. Open Music Theory ghi nhận iiø7 thay ii7 và V7♭9 là hai hợp âm **mượn** phổ biến nhất trong jazz, kể cả khi giọng là trưởng (xem [[hop-am-muon]]).
+Trong [[am-giai-thu|giọng thứ]], ii là hợp âm **nửa giảm** và V thường thêm **♭9** — cả hai đến từ bậc 6 hạ (♭6) của giọng thứ. Open Music Theory ghi nhận iiø7 thay ii7 và V7♭9 là hai hợp âm **mượn** phổ biến nhất trong jazz, kể cả khi giọng là trưởng (xem [[hop-am-muon]]).
 
 ## Nốt dẫn hướng (guide tones)
 Nốt **3** và **7** quyết định tính chất hợp âm. Trong ii – V – I chúng nối với nhau theo quy luật:
-- Nốt **7** của hợp âm trước đi **xuống nửa cung** thành nốt **3** của hợp âm sau.
+- Nốt **7** của hợp âm trước đi **xuống [[cung-nua-cung|nửa cung]]** thành nốt **3** của hợp âm sau.
 - Nốt **3** của hợp âm trước **giữ nguyên** thành nốt **7** của hợp âm sau.
 | | Dm7 | G7 | Cmaj7 |
 |---|---|---|---|
@@ -213,7 +213,7 @@ Nốt **3** và **7** quyết định tính chất hợp âm. Trong ii – V –
 Đây là cùng một nguyên tắc với [[dan-giong|dẫn giọng]] cổ điển: nốt 7 của hợp âm át giải quyết đi xuống.
 
 ## Chuỗi ii – V
-Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng (ii – V phụ, xem [[hop-am-at-phu]]). Nhiều standard là một chuỗi ii – V liên tiếp — ví dụ "Autumn Leaves" xen kẽ ii – V – I ở giọng trưởng và giọng thứ song song; "Tune Up" (Miles Davis) đi qua ba giọng bằng ba ii – V – I hạ dần một cung.
+Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng (ii – V phụ, xem [[hop-am-at-phu]]). Nhiều standard là một chuỗi ii – V liên tiếp — ví dụ "Autumn Leaves" xen kẽ ii – V – I ở [[am-giai-truong|giọng trưởng]] và giọng thứ song song; "Tune Up" (Miles Davis) đi qua ba giọng bằng ba ii – V – I hạ dần một cung.
 
 ## Luyện tập
 1. Chơi nốt dẫn hướng (tay trái) qua ii – V – I ở cả 12 giọng, đi theo [[vong-quang-nam]].
@@ -236,7 +236,7 @@ Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng 
       ['University of Colorado thesis — The Lydian Chromatic Concept and chord-scale theory', 'https://scholar.colorado.edu/downloads/bk128c27z'],
     ],
     body: `
-Mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một âm giai 7 nốt chứa các nốt của hợp âm cùng các [[hop-am-mo-rong|nốt mở rộng]] 9, 11, 13.
+Mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một âm giai 7 nốt chứa các nốt của [[hop-am-ba|hợp âm]] cùng các [[hop-am-mo-rong|nốt mở rộng]] 9, 11, 13.
 
 ## Trong vòng ii – V – I ở Đô trưởng
 | Hợp âm | Âm giai | Ghi chú |
@@ -250,7 +250,7 @@ Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, bát cu
 
 ## Các hợp âm còn lại
 - m7♭5 → Locrian (hoặc Locrian ♮2).
-- °7 → bát cung **cung – nửa cung**.
+- °7 → bát cung **[[am-giai-bat-cung|cung – nửa cung]]**.
 
 ## Bảng tổng hợp: bảy loại hợp âm thường gặp
 | Hợp âm | Âm giai thường dùng | Nốt căng có sẵn |
@@ -261,15 +261,15 @@ Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, bát cu
 | 7 | Mixolydian và các âm giai át khác | 9, 13 (và các biến hoá) |
 | m7♭5 | Locrian, Locrian ♮2 | 11, ♭13 (và 9 với Locrian ♮2) |
 | °7 | Bát cung cung – nửa cung | Các nốt cách gốc một cung |
-| mMaj7 | Thứ giai điệu | 9, 11, 13 |
+| mMaj7 | [[am-giai-thu|Thứ giai điệu]] | 9, 11, 13 |
 
 ## Lịch sử
-- **George Russell** tự xuất bản *Lydian Chromatic Concept of Tonal Organization* năm **1953** — lý thuyết đầu tiên đặt quan hệ **dọc** giữa hợp âm và âm giai làm trung tâm, thường được gọi là lý thuyết gốc duy nhất sinh ra từ jazz. Russell lấy **Lydian**, chứ không phải Ionian, làm âm giai tham chiếu, vì Lydian được dựng từ các quãng 5 chồng lên nhau tính từ nốt gốc.
-- Theo các tài liệu tiểu sử, Bill Evans đưa các ý tưởng này đến ban nhạc của Miles Davis, góp phần vào phong cách **jazz điệu thức** của album *Kind of Blue* (1959) — xem [[hoa-am-dieu-thuc]].
+- **George Russell** tự xuất bản *Lydian Chromatic Concept of Tonal Organization* năm **1953** — lý thuyết đầu tiên đặt quan hệ **dọc** giữa hợp âm và âm giai làm trung tâm, thường được gọi là lý thuyết gốc duy nhất sinh ra từ jazz. Russell lấy **Lydian**, chứ không phải Ionian, làm âm giai tham chiếu, vì Lydian được dựng từ các [[quang|quãng]] 5 chồng lên nhau tính từ nốt gốc.
+- Theo các tài liệu tiểu sử, [[bill-evans|Bill Evans]] đưa các ý tưởng này đến ban nhạc của Miles Davis, góp phần vào phong cách **jazz điệu thức** của album *Kind of Blue* (1959) — xem [[hoa-am-dieu-thuc]].
 - Hệ thống hợp âm – âm giai sau đó trở thành nền tảng của **giáo dục jazz** ở các trường đại học.
 
 ## Giới hạn của cách nghĩ này
-Một âm giai cho mỗi hợp âm là **điểm xuất phát**, không phải luật. Giai điệu jazz hay vẫn đến từ [[dan-giong|dẫn giọng]] giữa các hợp âm — đặc biệt [[ii-v-i|nốt dẫn hướng]] 3 và 7 — và từ nốt lướt cromatic.
+Một âm giai cho mỗi hợp âm là **điểm xuất phát**, không phải luật. [[giai-dieu|Giai điệu]] jazz hay vẫn đến từ [[dan-giong|dẫn giọng]] giữa các hợp âm — đặc biệt [[ii-v-i|nốt dẫn hướng]] 3 và 7 — và từ [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]].
 
 ## Nốt tránh
 Nốt cách một nốt hợp âm [[cung-nua-cung|nửa cung]] phía trên (như F trên Cmaj7 vì nghịch với E) — có thể lướt qua nhưng không nên ngân dài.
@@ -292,7 +292,7 @@ Các âm giai này là "bảng màu" cho [[xep-hop-am]] và [[tai-hoa-am]].
       ['PianoGroove — Improvising with the altered mode', 'https://pianogroove.com/jazz-piano-lessons/altered-scale-improv/'],
     ],
     body: `
-Hợp âm 7 át (V7) là hợp âm **căng nhất** và **linh hoạt nhất** trong jazz: ngoài gốc – 3 – 5 – 7 nó có thể mang nhiều [[hop-am-mo-rong|nốt căng]].
+[[hop-am-bay|Hợp âm 7 át]] (V7) là [[hop-am-ba|hợp âm]] **căng nhất** và **linh hoạt nhất** trong jazz: ngoài gốc – 3 – 5 – 7 nó có thể mang nhiều [[hop-am-mo-rong|nốt căng]].
 
 ## Nốt căng tự nhiên và biến hoá
 Trên hợp âm 7 át có ba nốt căng (9, 11, 13) và **bốn khả năng biến hoá**: **♭9, ♯9, ♯11, ♭13** (♭13 còn được viết ♯5).
@@ -300,17 +300,17 @@ Trên hợp âm 7 át có ba nốt căng (9, 11, 13) và **bốn khả năng bi�
 |---|---|---|
 | 9 | A | Sáng, ổn định |
 | ♭9 | A♭ | Tối, căng, "giọng thứ" |
-| ♯9 | A♯ (= B♭) | Gắt, "blues" — vang cùng nốt 3 B |
-| ♯11 | C♯ | Lơ lửng, Lydian |
+| ♯9 | A♯ (= B♭) | Gắt, "[[blues-12-nhip|blues]]" — vang cùng nốt 3 B |
+| ♯11 | C♯ | Lơ lửng, [[dieu-thuc|Lydian]] |
 | 13 | E | Sáng |
 | ♭13 | E♭ | Tối |
-Nốt **11 tự nhiên** (C trên G7) nghịch nửa cung với nốt 3 (B) nên thường bị tránh, trừ khi bỏ nốt 3 (hợp âm **sus**, xem [[ky-hieu-hop-am]]).
+Nốt **11 tự nhiên** (C trên G7) nghịch [[cung-nua-cung|nửa cung]] với nốt 3 (B) nên thường bị tránh, trừ khi bỏ nốt 3 (hợp âm **sus**, xem [[ky-hieu-hop-am]]).
 
 ## Chọn theo hướng giải quyết
-- V7 giải quyết về **chủ trưởng**: nốt căng tự nhiên (9, 13) lấy từ âm giai trưởng.
+- V7 giải quyết về **chủ trưởng**: nốt căng tự nhiên (9, 13) lấy từ [[am-giai-truong|âm giai trưởng]].
 - V7 giải quyết về **chủ thứ**: **♭9, ♭13** lấy từ âm giai thứ của giọng đích — đây là lý do G7♭9 đi tự nhiên về Cm (xem [[ii-v-i]]).
-- Có thể dùng nốt biến hoá trước chủ trưởng để **tăng sức căng**: nốt ♭9 (A♭) đi xuống G, ♭13 (E♭) đi xuống D hoặc E… — giống [[hop-am-muon|hợp âm mượn]] trong hoà âm cổ điển.
-- Hợp âm 7 át **không giải quyết xuống quãng 5** (♭VII7, thay thế tritone, IV7 trong blues) thường mang **♯11** (Lydian át).
+- Có thể dùng nốt biến hoá trước chủ trưởng để **tăng sức căng**: nốt ♭9 (A♭) đi xuống G, ♭13 (E♭) đi xuống D hoặc E… — giống [[hop-am-muon|hợp âm mượn]] trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]].
+- Hợp âm 7 át **không giải quyết xuống [[quang|quãng]] 5** (♭VII7, thay thế tritone, IV7 trong blues) thường mang **♯11** (Lydian át).
 
 ## Âm giai đi kèm
 | Ký hiệu | Âm giai | Nguồn gốc | Nốt (gốc G) |
@@ -349,23 +349,23 @@ G7 = G – **B** – D – **F**. D♭7 = D♭ – **F** – A♭ – **C♭ (= 
 ::keyboard Db4 F4 Ab4 B4 | D♭7 — chung cặp B, F với G7
 
 ## Hiệu quả
-ii – V – I: Dm7 – G7 – Cmaj7 → ii – ♭II7 – I: **Dm7 – D♭7 – Cmaj7**. Bè trầm đi xuống liền nửa cung D – D♭ – C, rất mượt.
+[[ii-v-i|ii – V – I]]: Dm7 – G7 – Cmaj7 → ii – ♭II7 – I: **Dm7 – D♭7 – Cmaj7**. Bè trầm đi xuống liền [[cung-nua-cung|nửa cung]] D – D♭ – C, rất mượt.
 
 ## Liên hệ
 - D♭7 có cấu trúc trùng âm với [[hop-am-sau-tang|hợp âm 6 Đức]] của Đô — hai truyền thống cổ điển và jazz gặp nhau.
-- Có thể áp dụng cho mọi [[hop-am-at-phu|át phụ]]: E7 – A7 – D7 – G7 – C → E7 – E♭7 – D7 – D♭7 – C (bè trầm cromatic).
+- Có thể áp dụng cho mọi [[hop-am-at-phu|át phụ]]: E7 – A7 – D7 – G7 – C → E7 – E♭7 – D7 – D♭7 – C (bè trầm [[am-giai-cromatic|cromatic]]).
 - Âm giai biến đổi của G7 chính là Lydian át của D♭7 (xem [[he-thong-hop-am-am-giai]]).
 
 ## Thay thế cả cặp ii – V
-Có thể thay luôn hợp âm ii đi kèm: Dm7 – G7 – C → **A♭m7 – D♭7** – C (ii – V "của tritone"), hoặc trộn: Dm7 – D♭7 – C. Open Music Theory nhấn mạnh tên gọi chỉ **hai điều**: hai hợp âm cách nhau tritone và **chung một tritone**.
+Có thể thay luôn [[hop-am-ba|hợp âm]] ii đi kèm: Dm7 – G7 – C → **A♭m7 – D♭7** – C (ii – V "của [[quang|tritone]]"), hoặc trộn: Dm7 – D♭7 – C. Open Music Theory nhấn mạnh tên gọi chỉ **hai điều**: hai hợp âm cách nhau tritone và **chung một tritone**.
 
 ## Lịch sử
-- Theo Wikipedia, cùng âm thanh này đã có trong nhạc cổ điển dưới tên [[hop-am-sau-tang|hợp âm 6 tăng]]. Open Music Theory coi riêng **thay thế tritone** (như một phép thay hợp âm 7 át) là kỹ thuật đặc trưng của jazz.
-- Trong jazz, kỹ thuật được **Dizzy Gillespie** và **Charlie Parker** phổ biến trong thập niên 1940; trước đó Duke Ellington, Art Tatum, Coleman Hawkins, Roy Eldridge, Benny Goodman đã dùng.
+- Theo Wikipedia, cùng âm thanh này đã có trong nhạc cổ điển dưới tên [[hop-am-sau-tang|hợp âm 6 tăng]]. Open Music Theory coi riêng **thay thế tritone** (như một phép thay [[hop-am-bay|hợp âm 7 át]]) là kỹ thuật đặc trưng của jazz.
+- Trong jazz, kỹ thuật được **Dizzy Gillespie** và **Charlie Parker** phổ biến trong thập niên 1940; trước đó [[duke-ellington|Duke Ellington]], [[art-tatum|Art Tatum]], Coleman Hawkins, Roy Eldridge, Benny Goodman đã dùng.
 - Bản thu **"Body and Soul"** của Coleman Hawkins (11/10/1939): ở ô 3, tay bass chơi D thay vì A♭ — biến A♭7 thành D7, một thay thế tritone (theo phân tích của All About Jazz).
 
 ## Nốt giai điệu cần kiểm tra
-Nốt căng tự nhiên của G7 lại là nốt **biến hoá** của D♭7: A (9 của G7) = ♭13 của D♭7; E (13 của G7) = ♯9 của D♭7. Ngược lại, nốt G — gốc của G7 — là ♯11 của D♭7. Vì vậy thay thế tritone hợp nhất khi giai điệu đang ở nốt 3, 7 hoặc các nốt biến hoá của V7 (xem [[hop-am-at-bien-hoa]]).
+[[hop-am-mo-rong|Nốt căng]] tự nhiên của G7 lại là nốt **biến hoá** của D♭7: A (9 của G7) = ♭13 của D♭7; E (13 của G7) = ♯9 của D♭7. Ngược lại, nốt G — gốc của G7 — là ♯11 của D♭7. Vì vậy thay thế tritone hợp nhất khi [[giai-dieu|giai điệu]] đang ở nốt 3, 7 hoặc các nốt biến hoá của V7 (xem [[hop-am-at-bien-hoa]]).
 
 ::img Tritone substitutions.png | Thay thế tritone (tương đương hợp âm 6 Ý)
 
@@ -387,7 +387,7 @@ Là một trong những kỹ thuật [[tai-hoa-am]] phổ biến nhất.
       ['Open Music Theory 2e — Jazz', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz'],
     ],
     body: `
-Cùng một hợp âm, cách xếp nốt khác nhau cho màu sắc rất khác nhau.
+Cùng một [[hop-am-ba|hợp âm]], cách xếp nốt khác nhau cho màu sắc rất khác nhau.
 
 ## Xếp hẹp và xếp rộng
 - **Xếp hẹp** (close): các nốt nằm trong một [[quang|quãng 8]] — C – E – G – B.
@@ -397,7 +397,7 @@ Cùng một hợp âm, cách xếp nốt khác nhau cho màu sắc rất khác n
 Chỉ chơi **gốc + 3 + 7** (hoặc gốc + 7 + 3) — đủ để xác định tính chất hợp âm. Dm7: D – F – C; G7: G – F – B; Cmaj7: C – E – B.
 
 ## Rootless voicing (xếp không gốc)
-Bỏ nốt gốc (để bass chơi), thêm nốt mở rộng. Lối xếp này được phổ biến vào **giữa – cuối thập niên 1950** bởi các nghệ sĩ như **Bill Evans, Red Garland, Wynton Kelly** (một số nguồn kể thêm Ahmad Jamal); các nguồn không thống nhất ai là người khởi xướng.
+Bỏ nốt gốc (để bass chơi), thêm nốt mở rộng. Lối xếp này được phổ biến vào **giữa – cuối thập niên 1950** bởi các nghệ sĩ như **[[bill-evans|Bill Evans]], Red Garland, Wynton Kelly** (một số nguồn kể thêm Ahmad Jamal); các nguồn không thống nhất ai là người khởi xướng.
 | Hợp âm | Dạng A (3 – 5 – 7 – 9) | Dạng B (7 – 9 – 3 – 5) |
 |---|---|---|
 | Dm9 | F – A – C – E | C – E – F – A |
@@ -410,7 +410,7 @@ Bỏ nốt gốc (để bass chơi), thêm nốt mở rộng. Lối xếp này �
 Nối ii – V – I bằng xen kẽ dạng A và B, mỗi bè chỉ di chuyển tối đa một bậc — chính là [[dan-giong]] tốt.
 
 Lưu ý khi dùng xếp không gốc:
-- Giữ hợp âm **quanh nốt Đô giữa** trở lên: nốt 9 và các quãng hẹp đặt quá thấp sẽ bị đục.
+- Giữ hợp âm **quanh nốt [[ban-phim|Đô giữa]]** trở lên: nốt 9 và các quãng hẹp đặt quá thấp sẽ bị đục.
 - Cần **bass** (nhạc công bass hoặc tay trái) chơi nốt gốc; nếu chơi một mình mà không có gốc, hợp âm nghe lơ lửng, không rõ.
 
 ## Thứ tự học xếp hợp âm
@@ -419,7 +419,7 @@ Lưu ý khi dùng xếp không gốc:
 3. **Không gốc dạng A/B** cho ii – V – I ở 12 giọng.
 4. **Quãng 4 và "So What"** ([[hoa-am-quang-bon]]).
 5. **Hợp âm ba cấu trúc trên** cho hợp âm át biến hoá ([[hop-am-chong]], [[hop-am-at-bien-hoa]]).
-6. **Drop 2**, xếp **khối** (block chords) cho giai điệu.
+6. **Drop 2**, xếp **khối** (block chords) cho [[giai-dieu|giai điệu]].
 
 ## Drop 2
 Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8: C – E – G – B → G – C – E – B. Rất phổ biến trong guitar và piano big band.
@@ -441,7 +441,7 @@ Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8
       ['The Jazz Piano Site — Quartal harmony', 'https://www.thejazzpianosite.com/?p=464'],
     ],
     body: `
-Hoà âm truyền thống chồng [[quang|quãng 3]] ([[hop-am-ba]]). Hoà âm quãng 4 chồng **quãng 4 đúng**: D – G – C – F.
+[[he-thong-hoa-am-co-dien|Hoà âm truyền thống]] chồng [[quang|quãng 3]] ([[hop-am-ba]]). Hoà âm quãng 4 chồng **quãng 4 đúng**: D – G – C – F.
 
 ::keyboard D4 G4 C5 F5 | Hợp âm quãng 4 trên D
 
@@ -450,13 +450,13 @@ Hoà âm truyền thống chồng [[quang|quãng 3]] ([[hop-am-ba]]). Hoà âm q
 - Có thể **dịch song song** theo các nốt của âm giai mà vẫn hợp — trong D Dorian: D–G–C, E–A–D, G–C–F, A–D–G…
 
 ## Hợp âm "So What"
-Ba quãng 4 + một quãng 3 trưởng ở trên: **E – A – D – G – B**. Đặt tên theo bài "So What" (Miles Davis, album *Kind of Blue*, 1959): Bill Evans dùng nó trong hình đáp "amen" sau mỗi câu giai điệu. Còn gọi là "Bill Evans voicing" hoặc "Dorian voicing". Vì là sự pha trộn giữa quãng 4 và quãng 3, hợp âm này **đa nghĩa**: cùng một khối có thể đặt lên nhiều hợp âm khác nhau, và rất hợp để [[hoa-am-song-song|dịch song song]].
+Ba quãng 4 + một quãng 3 trưởng ở trên: **E – A – D – G – B**. Đặt tên theo bài "So What" (Miles Davis, album *Kind of Blue*, 1959): [[bill-evans|Bill Evans]] dùng nó trong hình đáp "amen" sau mỗi câu [[giai-dieu|giai điệu]]. Còn gọi là "Bill Evans voicing" hoặc "Dorian voicing". Vì là sự pha trộn giữa quãng 4 và quãng 3, hợp âm này **đa nghĩa**: cùng một khối có thể đặt lên nhiều hợp âm khác nhau, và rất hợp để [[hoa-am-song-song|dịch song song]].
 
 ::keyboard E4 A4 D5 G5 B5 | Hợp âm So What (Em11 không gốc)
 
 ## Ứng dụng
-- Jazz modal: **McCoy Tyner** nổi tiếng với các khối quãng 4 thuần (ví dụ phần đệm của ông trong "Impressions" của John Coltrane); Herbie Hancock.
-- Nhạc cổ điển thế kỷ 20: Scriabin (hợp âm "huyền bí"), Hindemith, Bartók (xem [[cac-thoi-ky]]).
+- Jazz modal: **[[mccoy-tyner|McCoy Tyner]]** nổi tiếng với các khối quãng 4 thuần (ví dụ phần đệm của ông trong "Impressions" của John Coltrane); [[herbie-hancock|Herbie Hancock]].
+- Nhạc cổ điển [[thoi-ky-the-ky-20|thế kỷ 20]]: [[alexander-scriabin|Scriabin]] (hợp âm "huyền bí"), [[paul-hindemith|Hindemith]], [[bela-bartok|Bartók]] (xem [[cac-thoi-ky]]).
 - Đảo một chồng quãng 4 sẽ thành quãng 5 (**hoà âm quãng 5**, xem [[quang-dao]]).
 
 Liên quan: [[xep-hop-am]], [[an-tuong]].
@@ -477,7 +477,7 @@ Liên quan: [[xep-hop-am]], [[an-tuong]].
       ['Anton Schwartz — The backdoor ii-V progression', 'https://antonjazz.com/2012/01/backdoor-ii-v-progression/'],
     ],
     body: `
-**Thay thế** là đổi **một** hợp âm; [[tai-hoa-am|tái hoà âm]] là áp nhiều phép thay thế lên **cả** một tiến trình. Trong jazz, người chơi thay thế ngay khi biểu diễn — nên cần hiểu **vì sao** mỗi phép thay hoạt động.
+**Thay thế** là đổi **một** [[hop-am-ba|hợp âm]]; [[tai-hoa-am|tái hoà âm]] là áp nhiều phép thay thế lên **cả** một tiến trình. Trong jazz, người chơi thay thế ngay khi biểu diễn — nên cần hiểu **vì sao** mỗi phép thay hoạt động.
 
 ## 1. Thay cùng chức năng (diatonic)
 Hợp âm cùng [[chuc-nang-hoa-am|nhóm chức năng]] chung nhiều nốt nên thay được cho nhau:
@@ -486,27 +486,27 @@ Hợp âm cùng [[chuc-nang-hoa-am|nhóm chức năng]] chung nhiều nốt nên
 - **Át**: V7 ↔ vii ø7 (G7, Bø7).
 
 ## 2. Át phụ và ii phụ
-- Vì gốc đi theo quãng 5 rất thường gặp, có thể biến **hợp âm thứ nhất** trong một cặp quãng 5 thành **hợp âm 7 át cùng gốc**: Am7 – Dm7 → **A7** – Dm7 (xem [[hop-am-at-phu]]).
+- Vì gốc đi theo [[quang|quãng]] 5 rất thường gặp, có thể biến **hợp âm thứ nhất** trong một cặp quãng 5 thành **[[hop-am-bay|hợp âm 7 át]] cùng gốc**: Am7 – Dm7 → **A7** – Dm7 (xem [[hop-am-at-phu]]).
 - Rồi thêm **ii phụ** trước át phụ đó: **Em7 – A7** – Dm7 — tạo một [[ii-v-i]] nhỏ hướng về Dm7.
 
 ## 3. Hợp âm mượn
-Mượn từ giọng thứ cùng tên, phổ biến nhất trong jazz là **iiø7 thay ii7** và **V7♭9 thay V7** (Open Music Theory). Xem [[hop-am-muon]], [[hop-am-at-bien-hoa]].
+Mượn từ [[am-giai-thu|giọng thứ]] cùng tên, phổ biến nhất trong jazz là **iiø7 thay ii7** và **V7♭9 thay V7** (Open Music Theory). Xem [[hop-am-muon]], [[hop-am-at-bien-hoa]].
 
 ## 4. Thay thế tritone
 Thay V7 bằng hợp âm 7 át cách nó một tritone (G7 → D♭7) — hai hợp âm chung tritone B – F. Chi tiết: [[thay-the-tritone]].
 
 ## 5. Backdoor (cửa sau)
 **iv7 – ♭VII7 – I**: trong Đô trưởng **Fm7 – B♭7 – Cmaj7**. Tên gọi do Jerry Coker đặt: nếu ii – V – I là "cửa trước" thì đây là "cửa sau".
-- B♭7 mượn từ giọng thứ cùng tên; A♭ và F của nó đi xuống nửa cung tới G và E của hợp âm chủ.
-- Ví dụ trong standard: "Yardbird Suite" (ô 2–3: Fm7 – B♭7 – Cmaj7), "How Deep Is the Ocean", "Lady Bird", "Misty".
+- B♭7 mượn từ giọng thứ cùng tên; A♭ và F của nó đi xuống [[cung-nua-cung|nửa cung]] tới G và E của hợp âm chủ.
+- Ví dụ trong standard: "Yardbird [[the-loai|Suite]]" (ô 2–3: Fm7 – B♭7 – Cmaj7), "How Deep Is the Ocean", "Lady Bird", "Misty".
 - Hợp âm 7 át của backdoor thường mang ♯11 ([[hop-am-at-bien-hoa|Lydian át]]).
 
 ## 6. Hợp âm 7 giảm
-- **Giảm lướt đi lên**: C – **C♯°7** – Dm7: bè trầm đi lên cromatic. C♯°7 chính là vii°7/ii — một át phụ của Dm7 (xem [[hop-am-cam-am]]).
+- **Giảm lướt đi lên**: C – **C♯°7** – Dm7: bè trầm đi lên [[am-giai-cromatic|cromatic]]. C♯°7 chính là vii°7/ii — một át phụ của Dm7 (xem [[hop-am-cam-am]]).
 - **Giảm nốt chung**: Cmaj7 – **C°7** (CT°7) – Cmaj7: nốt chung C giữ nguyên, các bè thêu quanh — Open Music Theory xếp đây là một kỹ thuật thêm hợp âm chính của jazz (xem [[hop-am-not-chung]]).
 
 ## Điều kiện để thay thế
-Nốt giai điệu ở chỗ quan trọng phải là **nốt hợp âm** hoặc **nốt căng hợp lý** của hợp âm mới. Nếu va chạm nửa cung với nốt 3 hoặc 7 của hợp âm mới, hãy chọn phép thay khác.
+Nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng phải là **nốt hợp âm** hoặc **[[hop-am-mo-rong|nốt căng]] hợp lý** của hợp âm mới. Nếu va chạm nửa cung với nốt 3 hoặc 7 của hợp âm mới, hãy chọn phép thay khác.
 `,
   },
   {
@@ -524,7 +524,7 @@ Nốt giai điệu ở chỗ quan trọng phải là **nốt hợp âm** hoặc 
       ['The Jazz Piano Site — Jazz reharmonization', 'https://www.thejazzpianosite.com/?p=239'],
     ],
     body: `
-Nguyên tắc: nốt giai điệu ở chỗ quan trọng (phách mạnh, nốt dài) phải là nốt của hợp âm mới, hoặc một [[hop-am-mo-rong|nốt mở rộng]] hợp lý.
+Nguyên tắc: nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng ([[so-chi-nhip|phách mạnh]], nốt dài) phải là nốt của [[hop-am-ba|hợp âm]] mới, hoặc một [[hop-am-mo-rong|nốt mở rộng]] hợp lý.
 
 ## Các kỹ thuật (từ nhẹ đến mạnh)
 | Kỹ thuật | Ví dụ (trong Đô trưởng) | Bài liên quan |
@@ -534,12 +534,12 @@ Nguyên tắc: nốt giai điệu ở chỗ quan trọng (phách mạnh, nốt d
 | Chèn ii – V trước hợp âm đích | … → Em7 – A7 → Dm | [[hop-am-at-phu]] |
 | Thay thế tritone | G7 → D♭7 | [[thay-the-tritone]] |
 | Backdoor | G7 → Fm7 – B♭7 | [[thay-the-hop-am]] |
-| Vòng Coltrane | Chia đường về chủ thành các chặng quãng 3 trưởng | [[vong-coltrane]] |
-| Mượn từ giọng cùng tên | F → Fm | [[hop-am-muon]] |
+| Vòng Coltrane | Chia đường về chủ thành các chặng [[quang|quãng]] 3 trưởng | [[vong-coltrane]] |
+| Mượn từ [[giong-song-song|giọng cùng tên]] | F → Fm | [[hop-am-muon]] |
 | Hợp âm 7 giảm lướt | C – C♯°7 – Dm7 | [[hop-am-bay-giam]] |
 | Bass ngân | Mọi hợp âm trên G | [[bass-ngan]] |
-| Trung âm cromatic | C → A♭maj7 | [[trung-am-cromatic]] |
-| Bè trầm cromatic đi xuống | C – C/B – C/B♭ – A7 | [[dan-giong]] |
+| Trung âm cromatic | C → A♭[[hop-am-bay|maj7]] | [[trung-am-cromatic]] |
+| Bè trầm [[am-giai-cromatic|cromatic]] đi xuống | C – C/B – C/B♭ – A7 | [[dan-giong]] |
 
 ## Ví dụ từng bước
 Giai điệu 4 ô: **E – F – B – C** (mỗi ô một nốt dài), hoà âm gốc **C – F – G7 – C**.
@@ -552,7 +552,7 @@ Giai điệu 4 ô: **E – F – B – C** (mỗi ô một nốt dài), hoà âm
 Ở mỗi bước, kiểm tra nốt giai điệu vẫn là nốt hợp âm hoặc nốt căng hợp lý của hợp âm mới. Bước 3 tạo bè trầm A – D – D♭ – C đi xuống mượt.
 
 ## Tái hoà âm trong biểu diễn
-Nhiều phép thay thế được dùng **ngay khi chơi**, nên người đệm và người độc tấu phải nghe nhau: nếu piano thay G7 bằng D♭7 trong khi bass vẫn chơi G, hai hợp âm sẽ va chạm. Lead sheet chỉ là **khung**; tái hoà âm là phần sáng tạo của người chơi.
+Nhiều phép thay thế được dùng **ngay khi chơi**, nên người đệm và người độc tấu phải nghe nhau: nếu piano thay G7 bằng D♭7 trong khi bass vẫn chơi G, hai hợp âm sẽ va chạm. [[ky-hieu-hop-am|Lead sheet]] chỉ là **khung**; tái hoà âm là phần sáng tạo của người chơi.
 
 ## Gợi ý luyện tập
 1. Chọn một bài quen (ví dụ "Twinkle Twinkle Little Star") với vòng gốc I – IV – V.
@@ -576,29 +576,29 @@ Liên quan: [[vong-hop-am]], [[he-thong-hop-am-am-giai]].
       ['Wikipedia — Rhythm changes', 'https://en.wikipedia.org/wiki/Rhythm_changes'],
     ],
     body: `
-| Đoạn | Số ô nhịp | Vai trò |
+| Đoạn | Số [[so-chi-nhip|ô nhịp]] | Vai trò |
 |---|---|---|
-| A | 8 | Chủ đề chính, kết ở giọng chính |
+| A | 8 | [[chuc-nang-hinh-thuc|Chủ đề chính]], kết ở giọng chính |
 | A | 8 | Nhắc lại (có thể đổi kết) |
-| **B** (bridge, "middle eight") | 8 | Tương phản: giai điệu mới, hoà âm khác — thường ly giọng hoặc [[chuyen-giong|chuyển giọng]] |
+| **B** (bridge, "middle eight") | 8 | Tương phản: [[giai-dieu|giai điệu]] mới, hoà âm khác — thường ly giọng hoặc [[chuyen-giong|chuyển giọng]] |
 | A | 8 | Quay lại chủ đề |
 
 ## Ví dụ
 - "Over the Rainbow" (Harold Arlen, 1939).
-- "I Got Rhythm" (Gershwin, 1930) — đoạn B đi qua chuỗi hợp âm 7 át theo quãng 5; vòng hợp âm của bài là [[rhythm-changes]].
+- "I Got Rhythm" ([[george-gershwin|Gershwin]], 1930) — đoạn B đi qua chuỗi [[hop-am-bay|hợp âm 7 át]] theo [[quang|quãng]] 5; [[vong-hop-am|vòng hợp âm]] của bài là [[rhythm-changes]].
 - "Blue Skies", "The Man I Love" (theo danh sách của Wikipedia).
 - Ngoài AABA còn có biến thể 32 ô **ABAC** (hai nửa 16 ô bắt đầu giống nhau, kết khác nhau).
 
 ## Bối cảnh
-AABA còn được gọi là **"ballad form"** hay **"American popular song form"**: khuôn mẫu chung của **Tin Pan Alley** và nhạc kịch Broadway nửa đầu thế kỷ 20. Lời tựa đề thường đặt ở **câu đầu hoặc câu cuối** của mỗi đoạn A. Nhiều ca khúc nhạc kịch theo hình thức này về sau trở thành **jazz standard**.
+AABA còn được gọi là **"[[dieu-dem-pho-bien|ballad]] form"** hay **"American popular song form"**: khuôn mẫu chung của **Tin Pan Alley** và nhạc kịch Broadway nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]]. Lời tựa đề thường đặt ở **câu đầu hoặc câu cuối** của mỗi đoạn A. Nhiều ca khúc nhạc kịch theo hình thức này về sau trở thành **jazz standard**.
 
 ## Nhìn hoà âm theo hình thức
 - Đoạn A thường **mở và đóng ở chủ** — vòng I – vi – ii – V hoặc chuỗi [[ii-v-i]].
-- Đoạn B là chỗ hoà âm **đi xa nhất**: ly giọng sang IV, chuỗi át phụ (như rhythm changes), hoặc chuyển hẳn sang giọng khác.
+- Đoạn B là chỗ hoà âm **đi xa nhất**: ly giọng sang IV, chuỗi [[hop-am-at-phu|át phụ]] (như rhythm changes), hoặc chuyển hẳn sang giọng khác.
 - Ô cuối mỗi đoạn A thường có **"turnaround"** (I – vi – ii – V) để quay lại đầu.
 
 ## Trong biểu diễn jazz
-Một lượt chơi trọn 32 ô nhịp gọi là một **chorus**. Cấu trúc thường gặp: chơi giai điệu (head) → các nhạc công lần lượt ngẫu hứng nhiều chorus trên cùng vòng hợp âm → chơi lại head.
+Một lượt chơi trọn 32 ô nhịp gọi là một **chorus**. Cấu trúc thường gặp: chơi giai điệu (head) → các nhạc công lần lượt [[ngau-hung-piano|ngẫu hứng]] nhiều chorus trên cùng vòng hợp âm → chơi lại head.
 
 So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên khúc – điệp khúc]] của pop, [[hinh-thuc-am-nhac|hình thức ba đoạn]] ABA trong nhạc cổ điển.
 `,
@@ -618,29 +618,29 @@ So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên kh�
       ['Wikipedia — Thirty-two-bar form', 'https://en.wikipedia.org/wiki/Thirty-two-bar_form'],
     ],
     body: `
-"I Got Rhythm" của George Gershwin ra mắt năm **1930** trong vở nhạc kịch Broadway *Girl Crazy*. Vòng hợp âm của nó — gọi là **"rhythm changes"** — trở thành một trong những khung hoà âm được dùng lại nhiều nhất của jazz, sau [[blues-12-nhip|blues]].
+"I Got Rhythm" của [[george-gershwin|George Gershwin]] ra mắt năm **1930** trong vở nhạc kịch Broadway *Girl Crazy*. [[vong-hop-am|Vòng hợp âm]] của nó — gọi là **"rhythm changes"** — trở thành một trong những khung hoà âm được dùng lại nhiều nhất của jazz, sau [[blues-12-nhip|blues]].
 
 ## Cấu trúc (giọng gốc: Si giáng trưởng)
 [[hinh-thuc-ca-khuc-32|Hình thức AABA]], mỗi đoạn 8 ô:
 | Đoạn | Hoà âm | Ví dụ trong B♭ |
 |---|---|---|
 | **A** | Xoay quanh **I – vi – ii – V** (và các biến thể) | B♭ – Gm7 – Cm7 – F7 … |
-| **B** (bridge) | Chuỗi hợp âm 7 át theo [[vong-quang-nam|quãng 5]]: **III7 – VI7 – II7 – V7**, mỗi hợp âm 2 ô | D7 – G7 – C7 – F7 |
+| **B** (bridge) | Chuỗi [[hop-am-bay|hợp âm 7 át]] theo [[vong-quang-nam|quãng 5]]: **III7 – VI7 – II7 – V7**, mỗi [[hop-am-ba|hợp âm]] 2 ô | D7 – G7 – C7 – F7 |
 | **A** | Như A đầu | |
-- Đoạn B là một [[mo-tien-hoa-am|mô tiến]] quãng 5 của các [[hop-am-at-phu|át phụ]], đưa về V7 để quay lại đoạn A. Người chơi thường chèn thêm hợp âm lướt (ví dụ biến mỗi hợp âm 7 át thành một cặp ii – V).
+- Đoạn B là một [[mo-tien-hoa-am|mô tiến]] [[quang|quãng]] 5 của các [[hop-am-at-phu|át phụ]], đưa về V7 để quay lại đoạn A. Người chơi thường chèn thêm hợp âm lướt (ví dụ biến mỗi hợp âm 7 át thành một cặp ii – V).
 - Bản gốc có thêm một **đuôi 2 ô** mà các bản jazz thường bỏ.
 - Bản thân các tiến trình I – vi – ii – V và chuỗi át phụ đã có từ lâu trước Gershwin; điều ông đóng góp là **một bài hát** khiến khung hoà âm này thành chuẩn chung.
 
 ## Contrafact
-**Contrafact** là giai điệu mới viết trên vòng hợp âm của một bài có sẵn. Vì **vòng hợp âm không được bảo hộ bản quyền**, nhạc công jazz viết giai điệu mới trên những vòng họ thích ngẫu hứng.
+**Contrafact** là [[giai-dieu|giai điệu]] mới viết trên vòng hợp âm của một bài có sẵn. Vì **vòng hợp âm không được bảo hộ bản quyền**, nhạc công jazz viết giai điệu mới trên những vòng họ thích [[ngau-hung-piano|ngẫu hứng]].
 - Ví dụ rhythm changes sớm nhất được biết: "Shag" (Sidney Bechet, thu âm 1932).
-- Thời bebop: "Anthropology", "Moose the Mooche", "Steeplechase" (Charlie Parker); "Oleo" (Sonny Rollins); "Rhythm-a-Ning" (Thelonious Monk).
+- Thời bebop: "Anthropology", "Moose the Mooche", "Steeplechase" (Charlie Parker); "Oleo" (Sonny Rollins); "Rhythm-a-Ning" ([[thelonious-monk|Thelonious Monk]]).
 - Các nhạc công bebop còn **chồng thêm chuỗi ii – V** lên vòng này, biến nó thành "bài kiểm tra tay nghề" ngẫu hứng.
 
 ## Học rhythm changes thế nào?
 1. Thuộc đoạn A dạng đơn giản nhất (I – vi – ii – V) và đoạn B (bốn hợp âm 7 át).
 2. Chơi [[ii-v-i|nốt dẫn hướng]] qua cả 32 ô.
-3. Thử từng phép [[thay-the-hop-am|thay thế]] (I – VI7 – ii – V, thay thế tritone ở đoạn B…).
+3. Thử từng phép [[thay-the-hop-am|thay thế]] (I – VI7 – ii – V, [[thay-the-tritone|thay thế tritone]] ở đoạn B…).
 `,
   },
   {
@@ -660,18 +660,18 @@ So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên kh�
 **Vòng Coltrane** (Coltrane changes) là cách **John Coltrane** thay thế hoà âm, nổi tiếng nhất trong bài **"Giant Steps"** (thu âm tháng 5/1959, album cùng tên phát hành 1960).
 
 ## Ý tưởng: ba giọng cách nhau quãng 3 trưởng
-- Ba trung tâm giọng của "Giant Steps": **Si trưởng, Sol trưởng, Mi giáng trưởng** — mỗi giọng **thấp hơn giọng trước một quãng 3 trưởng**.
+- Ba trung tâm giọng của "Giant Steps": **Si trưởng, Sol trưởng, Mi giáng trưởng** — mỗi giọng **thấp hơn giọng trước một [[quang|quãng]] 3 trưởng**.
 - Chồng các quãng 3 trưởng sẽ quay về điểm xuất phát sau **ba** bước (B – G – E♭ – B) — tức là ba gốc này tạo thành một [[hop-am-ba-tang|hợp âm ba tăng]]. Quãng 8 được chia thành **ba phần bằng nhau**, một kiểu đối xứng giống [[dieu-thuc-chuyen-vi-gioi-han|các âm giai đối xứng]].
-- Mỗi giọng được dẫn vào bằng **hợp âm 7 át** của nó: Bmaj7 – **D7** – Gmaj7 – **B♭7** – E♭maj7 …
+- Mỗi giọng được dẫn vào bằng **[[hop-am-bay|hợp âm 7 át]]** của nó: Bmaj7 – **D7** – Gmaj7 – **B♭7** – E♭maj7 …
 
 ## Như một phép thay thế cho ii – V – I
-Coltrane cũng dùng hệ thống này để **tái hoà âm** các tiến trình sẵn có: một [[ii-v-i]] được "lấp đầy" bằng các chặng cách nhau quãng 3 trưởng trước khi về chủ. Ví dụ "Countdown" là bản tái hoà âm của "Tune Up" (Miles Davis): khung lớn vẫn là các giọng của "Tune Up", nhưng từng chặng được chia nhỏ theo vòng Coltrane.
+Coltrane cũng dùng hệ thống này để **[[tai-hoa-am|tái hoà âm]]** các tiến trình sẵn có: một [[ii-v-i]] được "lấp đầy" bằng các chặng cách nhau quãng 3 trưởng trước khi về chủ. Ví dụ "Countdown" là bản tái hoà âm của "Tune Up" (Miles Davis): khung lớn vẫn là các giọng của "Tune Up", nhưng từng chặng được chia nhỏ theo vòng Coltrane.
 
 ## Liên hệ với hoà âm cổ điển
 Các giọng cách nhau quãng 3 là chủ đề của [[trung-am-cromatic|quan hệ trung âm cromatic]] trong nhạc thế kỷ 19; chu trình chia quãng 8 thành ba phần cũng xuất hiện trong phân tích [[neo-riemann|Neo-Riemann]]. Vòng Coltrane là cách jazz kết hợp quan hệ đó với lực đẩy V7 – I.
 
 ## Luyện tập
-1. Chơi chậm chuỗi hợp âm "Giant Steps" chỉ với [[ii-v-i|nốt dẫn hướng]].
+1. Chơi chậm chuỗi [[hop-am-ba|hợp âm]] "Giant Steps" chỉ với [[ii-v-i|nốt dẫn hướng]].
 2. Nhận ra từng cặp V7 – I và giọng nó dẫn tới.
 3. Thử chèn vòng Coltrane vào một ii – V – I quen thuộc.
 `,
