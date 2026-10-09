@@ -171,6 +171,8 @@ Tiết tấu nốt đen – hai móc đơn – nốt đen chấm + móc đơn (b
 | Kodály | Takadimi |
 |---|---|
 | ta · ti-ti · taam – ti | ta · ta-di · ta · (giữ) – di |
+::rhythm 4/4 q:ta e:ti-e:ti q.:taam e:ti // | Đọc theo Kodály
+::rhythm 4/4 q:ta e:ta-e:di q.:ta e:di // | Đọc theo takadimi: nốt ở nửa sau phách luôn là "di"
 Với takadimi, âm tiết của một nốt **không đổi theo giá trị nốt** mà theo **vị trí**: nốt rơi vào nửa sau phách luôn là "di".
 
 ## Chọn hệ nào?

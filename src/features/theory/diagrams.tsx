@@ -86,6 +86,23 @@ function StaffLines({ clef, keySig, bottom, width }: { clef: Clef; keySig: numbe
   )
 }
 
+/** Accidentals of a chord, top down: each goes in the first column (0 = nearest the notes) whose last accidental is a sixth or more above. */
+function accidentalColumns(col: Column, clef: Clef) {
+  const out = new Map<number, number>()
+  const columns: number[] = []
+  const order = col.notes.map((n, i) => ({ p: n.diatonic - CLEFS[clef].base, i })).sort((a, b) => b.p - a.p)
+  for (const { p, i } of order) {
+    if (!col.notes[i].accidental) continue
+    let c = columns.findIndex((last) => last - p >= 6)
+    if (c < 0) c = columns.push(p) - 1
+    else columns[c] = p
+    out.set(i, c)
+  }
+  return out
+}
+/** Extra room a column needs on its left for stacked accidentals. */
+const accidentalPad = (col: Column, clef: Clef) => Math.max(0, ...accidentalColumns(col, clef).values()) * 10
+
 /** Whole notes of one column (a single note or a chord), with ledger lines and accidentals. */
 function Notes({ col, x, clef, bottom }: { col: Column; x: number; clef: Clef; bottom: number }) {
   const yOf = (pos: number) => bottom - (pos * GAP) / 2
@@ -97,6 +114,7 @@ function Notes({ col, x, clef, bottom }: { col: Column; x: number; clef: Clef; b
   const sorted = positions.map((p, i) => ({ p, i })).sort((a, b) => a.p - b.p)
   const shifted = new Set<number>()
   sorted.forEach(({ p, i }, k) => k > 0 && p - sorted[k - 1].p === 1 && !shifted.has(sorted[k - 1].i) && shifted.add(i))
+  const acc = accidentalColumns(col, clef)
   return (
     <g>
       {ledgers.map((p) => (
@@ -108,7 +126,7 @@ function Notes({ col, x, clef, bottom }: { col: Column; x: number; clef: Clef; b
           <g key={j}>
             <ellipse cx={cx} cy={yOf(positions[j])} rx={6.5} ry={4.6} transform={`rotate(-20 ${cx} ${yOf(positions[j])})`} fill="none" stroke={ACCENT} strokeWidth={2} />
             {n.accidental && (
-              <text x={x - 18} y={yOf(positions[j]) + 5} fontSize={15} fill={ACCENT} fontFamily={n.accidental.length > 1 ? MUSIC_FONT : undefined}>
+              <text x={x - 18 - (acc.get(j) ?? 0) * 10} y={yOf(positions[j]) + 5} fontSize={15} fill={ACCENT} fontFamily={n.accidental.length > 1 ? MUSIC_FONT : undefined}>
                 {n.accidental}
               </text>
             )}
@@ -130,24 +148,31 @@ const Label = ({ x, y, text }: { x: number; y: number; text: string }) => (
 
 /**
  * Five-line staff of whole notes. Columns: "C4", "C4+E4+G4" (chord), optional "=label" shown underneath
- * (e.g. a Roman numeral; underscores become spaces). An optional "k:3#" / "k:2b" adds a key signature.
+ * (e.g. a Roman numeral; underscores become spaces); "/" draws a barline. An optional "k:3#" / "k:2b" adds a key signature.
  */
 export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig?: number; notes: string[] }) {
   const clef = clefArg in CLEFS ? clefArg : 'treble'
   const cols = notes.map(parseColumn)
   const step = cols.some((c) => c.label && c.label.length > 3) ? 40 : 32
-  const start = 70 + Math.abs(keySig) * SIG_W
-  const width = start + cols.length * step
+  // "/" is a barline: it takes a narrow slot of its own.
+  const xs: number[] = []
+  let x = 70 + Math.abs(keySig) * SIG_W
+  notes.forEach((n, i) => {
+    if (n !== '/') x += accidentalPad(cols[i], clef)
+    xs.push(n === '/' ? x - step / 2 + 8 : x)
+    x += n === '/' ? 16 : step
+  })
+  const width = x - step / 2 + 18
   return (
     <svg viewBox={`0 0 ${width} 110`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông nhạc: ${notes.join(', ')}`}>
       <StaffLines clef={clef} keySig={keySig} bottom={70} width={width} />
       {cols.map((col, i) => {
-        const x = start + i * step
+        if (notes[i] === '/') return <line key={i} x1={xs[i]} x2={xs[i]} y1={30} y2={70} stroke={INK} />
         const text = col.label ?? (col.notes.length === 1 ? prettyNote(notes[i]) : undefined)
         return (
           <g key={i}>
-            <Notes col={col} x={x} clef={clef} bottom={70} />
-            {text && <Label x={x} y={104} text={text} />}
+            <Notes col={col} x={xs[i]} clef={clef} bottom={70} />
+            {text && <Label x={xs[i]} y={104} text={text} />}
           </g>
         )
       })}
@@ -163,15 +188,21 @@ export function GrandStaff({ keySig = 0, columns }: { keySig?: number; columns: 
     return { upper: parseColumn(upper), lower: parseColumn(lower), label: label?.replace(/_/g, ' ') }
   })
   const step = cols.some((c) => c.label && c.label.length > 3) ? 44 : 34
-  const start = 74 + Math.abs(keySig) * SIG_W
-  const width = start + cols.length * step
+  const xs: number[] = []
+  let x = 74 + Math.abs(keySig) * SIG_W
+  for (const c of cols) {
+    x += Math.max(accidentalPad(c.upper, 'treble'), accidentalPad(c.lower, 'bass'))
+    xs.push(x)
+    x += step
+  }
+  const width = x - step / 2 + 18
   return (
     <svg viewBox={`0 0 ${width} 200`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông kép: ${columns.join(', ')}`}>
       <line x1={0.5} x2={0.5} y1={30} y2={160} stroke={INK} strokeWidth={1.5} />
       <StaffLines clef="treble" keySig={keySig} bottom={70} width={width} />
       <StaffLines clef="bass" keySig={keySig} bottom={160} width={width} />
       {cols.map((col, i) => {
-        const x = start + i * step
+        const x = xs[i]
         return (
           <g key={i}>
             <Notes col={col.upper} x={x} clef="treble" bottom={70} />
@@ -229,7 +260,7 @@ export function Rhythm({ tokens }: { tokens: string[] }) {
         items.push(<ellipse key={key} cx={cx} cy={Y} rx={6} ry={4.4} transform={`rotate(-20 ${cx} ${Y})`} fill={hollow ? 'none' : ACCENT} stroke={ACCENT} strokeWidth={hollow ? 2 : 1} />)
         if (dur !== 'w') items.push(<line key={key + 's'} x1={cx + 5.4} x2={cx + 5.4} y1={Y - 2} y2={TOP} stroke={ACCENT} strokeWidth={1.3} />)
         const flags = dur === 'e' ? 1 : dur === 's' ? 2 : 0
-        if (group.length === 1)
+        if (group.length === 1 || group.some((g) => g[2] || (g[3] !== 'e' && g[3] !== 's')))
           for (let f = 0; f < flags; f++)
             items.push(<path key={key + 'f' + f} d={`M${cx + 5.4} ${TOP + f * 6} q 7 5 6 14`} fill="none" stroke={ACCENT} strokeWidth={1.6} />)
         if (accent) items.push(<path key={key + 'a'} d={`M${cx - 5} ${Y + 9} L${cx + 5} ${Y + 12} L${cx - 5} ${Y + 15}`} fill="none" stroke={INK} strokeWidth={1.3} />)
@@ -241,7 +272,7 @@ export function Rhythm({ tokens }: { tokens: string[] }) {
     })
     // Beams: the primary beam joins the whole group; a second beam joins neighbouring sixteenths (or a stub).
     const notes = group.map((m, k) => ({ d: m[3], rest: m[2], x: xs[k] + 5.4 }))
-    if (group.length > 1 && notes.every((n) => !n.rest)) {
+    if (group.length > 1 && notes.every((n) => !n.rest && (n.d === 'e' || n.d === 's'))) {
       items.push(<line key={ti + 'b1'} x1={notes[0].x} x2={notes.at(-1)!.x} y1={TOP} y2={TOP} stroke={ACCENT} strokeWidth={3.5} />)
       notes.forEach((n, k) => {
         if (n.d !== 's') return

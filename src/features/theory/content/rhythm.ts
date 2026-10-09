@@ -70,6 +70,8 @@ Trường độ được tính bằng **phách**. Trong nhịp phổ biến 4/4 
 
 ## Quy tắc chia đôi
 1 nốt tròn = 2 nốt trắng = 4 nốt đen = 8 nốt móc đơn = 16 nốt móc kép. Muốn chia ba thay vì chia đôi, dùng [[lien-ba]].
+::rhythm 4/4 w / h h / q q q q // | 1 nốt tròn = 2 nốt trắng = 4 nốt đen
+::rhythm 4/4 e-e e-e e-e e-e / s-s-s-s s-s-s-s s-s-s-s s-s-s-s // | 8 nốt móc đơn = 16 nốt móc kép — nối gạch theo từng phách (một gạch = móc đơn, hai gạch = móc kép)
 
 ## Gạch nối
 Các nốt móc đơn trở xuống thường được **nối bằng gạch ngang** theo từng phách để dễ đọc — một gạch = móc đơn, hai gạch = móc kép.
@@ -96,6 +98,7 @@ Sách tiếng Anh dùng hai hệ tên khác nhau. Giáo trình theo chuẩn Anh 
 | **Đếm số "1 e & a"** | Nốt đen: "1 2 3 4"; móc đơn: "1 & 2 &"; móc kép: "1 e & a" | Phổ biến nhất ở trường học Mỹ; cho biết vị trí nốt trong phách, nhưng phải hiểu [[so-chi-nhip]] trước |
 | **[[zoltan-kodaly|Kodály]]** | Nốt đen "ta", cặp móc đơn "ti-ti", nốt trắng "ta-a", móc kép "ti-ri ti-ri", đen giữa hai móc đơn "syn-co-pa" | Dễ cho trẻ nhỏ; mỗi âm tiết gắn với một **hình nốt** nên kém gắn với phách khi nhịp phức tạp |
 | **[[am-tiet-nhip|Takadimi]]** | Đầu phách luôn là "ta"; nửa phách "di"; móc kép "ta-ka-di-mi" | Âm tiết gắn với **vị trí trong phách**, dùng được cho cả nhịp đơn và nhịp kép, từ sơ cấp đến nâng cao |
+::rhythm 4/4 q:ta e:ti-e:ti h:ta–a / e:syn q:co e:pa s:ti-s:ri-s:ti-s:ri q:ta // | Các âm tiết Kodály trong bảng: ta · ti-ti · ta-a / syn-co-pa · ti-ri ti-ri · ta
 
 Nên đọc to tiết tấu trước khi chơi (xem [[kiem-soat-toc-do]]). Nghiên cứu so sánh hiệu quả các hệ thống còn ít.
 
@@ -165,6 +168,7 @@ Dấu chấm sau nốt làm nốt dài thêm **một nửa** giá trị của ch
 **Chấm dôi kép** (hai chấm) cộng thêm ½ rồi ¼ giá trị: nốt đen chấm dôi kép = 1 + ½ + ¼ = 1¾ phách.
 
 Hình [[tiet-tau|tiết tấu]] "đen chấm dôi + móc đơn" (1½ + ½) rất phổ biến, tạo cảm giác nhún nhảy.
+::rhythm 4/4 q. e q. e // | Đen chấm dôi + móc đơn: 1½ + ½ phách
 
 ## Dấu nối
 Dấu nối là đường cong nối **hai nốt cùng [[cao-do|cao độ]]** — chỉ đánh nốt đầu và giữ luôn cho nốt sau. Dùng khi nốt kéo **qua [[so-chi-nhip|vạch nhịp]]**, hoặc khi cần độ dài không viết được bằng một hình nốt.
@@ -235,6 +239,8 @@ Về sau, C được hiểu là **4 phách** mỗi ô, và tiếng Anh gọi là
 ## Khi giảng dạy
 - **6/8 có hai phách**, không phải sáu: đếm theo phách lớn, ví dụ "**1**-2-3 **2**-2-3", hoặc dùng hệ thống đếm gắn với vị trí trong phách như [[am-tiet-nhip|Takadimi]] (xem [[truong-do]]).
 - Phân biệt **3/4** (ba phách, mỗi phách chia đôi) với **6/8** (hai phách, mỗi phách chia ba) dù cả hai đều có 6 móc đơn — xem [[hemiola]].
+::rhythm 3/4 >e-e >e-e >e-e // | 3/4: ba phách, mỗi phách chia đôi
+::rhythm 6/8 >e-e-e >e-e-e // | 6/8: hai phách lớn, mỗi phách chia ba — cùng 6 móc đơn nhưng nhóm khác
 
 ## Nhịp lẻ
 5/4, 7/8… ghép từ các nhóm 2 và 3 (ví dụ 7/8 = 2+2+3), thường gặp trong nhạc dân gian Balkan và jazz — xem [[nhip-hon-hop]].
@@ -366,6 +372,10 @@ Mỗi [[so-chi-nhip]] có quy luật phách mạnh – nhẹ. **Đảo phách** 
 - **[[cham-doi-dau-noi|Dấu nối]] qua phách mạnh**: nốt bắt đầu trước phách mạnh và ngân qua nó, nên phách mạnh không được đánh.
 - **Dấu nhấn (>)** đặt trên phách nhẹ (xem [[cach-dien-tau]]).
 - **[[dau-lang|Dấu lặng]] ở phách mạnh**.
+::rhythm 4/4 e q e q q // | Móc đơn – đen – móc đơn: nốt đen bắt đầu giữa phách 1 và ngân qua phách 2
+::rhythm 4/4 q q q q~ / q q h // | Dấu nối qua vạch nhịp: phách 1 của ô sau không được đánh
+::rhythm 4/4 q >q q >q // | Dấu nhấn trên phách nhẹ (phách 2 và 4)
+::rhythm 4/4 rq q q q // | Dấu lặng ở phách mạnh (phách 1)
 
 Đảo phách là linh hồn của ragtime, jazz, Latin, funk và pop hiện đại (xem [[swing]]). Một dạng đảo phách có tổ chức trong nhạc cổ điển: [[hemiola]].
 
@@ -399,11 +409,13 @@ Nhiều [[giai-dieu|giai điệu]] không bắt đầu ở phách mạnh mà b�
 
 ## Quy tắc bù trừ
 Theo truyền thống, **ô nhịp cuối** bài sẽ thiếu đúng phần mà ô lấy đà đã dùng, để tổng hai ô cộng lại bằng một ô đầy đủ. Ví dụ bài 3/4 có lấy đà 1 phách → ô cuối có 2 phách.
+::rhythm 3/4 q / q q q / q q q / h // | Ô lấy đà 1 phách + ô cuối 2 phách = một ô 3/4 đầy đủ
 
 ## Ví dụ quen thuộc
 - "Happy Birthday" (3/4) bắt đầu bằng 2 nốt lấy đà "Hap-py".
 - Quốc ca Mỹ "The Star-Spangled Banner" bắt đầu bằng hai nốt lấy đà "O-oh".
 - "[[phan-tich-fur-elise|Für Elise]]" ([[ludwig-van-beethoven|Beethoven]]) bắt đầu bằng nốt lấy đà E5 – D♯5 trước ô nhịp đầu tiên.
+::staff treble E5 D#5 | Hai nốt lấy đà của Für Elise: E5 – D♯5
 
 ## Tên gọi
 "Anacrusis" vốn là thuật ngữ **thi ca**: những âm tiết ở đầu câu thơ **không tính** vào nhịp thơ. Từ gốc Hy Lạp *anakrousis* — "sự đẩy lùi", "sự bắt đầu một giai điệu" (*ana-* "lùi lại" + *krouein* "gõ").
@@ -437,6 +449,8 @@ Khi đếm, hãy đếm cả các phách còn thiếu trước nốt lấy đà 
 | 9/8 | 2 + 2 + 2 + 3 | "Blue [[rondo|Rondo]] à la Turk" (Brubeck) |
 
 Lưu ý: 9/8 thông thường là [[so-chi-nhip|nhịp kép]] 3 + 3 + 3; cách chia 2 + 2 + 2 + 3 là nhịp lẻ "aksak" (khập khiễng).
+::rhythm 5/4 >q q q >q q // | 5/4 chia 3 + 2
+::rhythm 7/8 >e:1-e:2 >e:1-e:2 >e:1-e:2-e:3 // | 7/8 chia 2 + 2 + 3: nhấn đầu mỗi nhóm
 
 ## Nhịp thay đổi
 Số chỉ nhịp đổi ở nhiều ô nhịp liên tiếp (3/16 – 2/16 – 3/16 – 5/16…). [[igor-stravinsky|Stravinsky]], "Le Sacre du printemps" (1913), phần "Danse sacrale" là ví dụ kinh điển; Bartók dùng nhiều trong bộ "Mikrokosmos" cho piano.
@@ -515,6 +529,8 @@ Trong cùng một khoảng thời gian, một bè chia 3, bè kia chia 2 (hoặc
 | Kết hợp | cả hai | | phải | trái | phải | |
 
 Câu gợi nhớ: "**nice cup of tea**" (nhóm 3: nice – cup – tea; nhóm 2: nice – of). Với **4 chọi 3**: chia 12 phần — "**pass** the **gol**-den **but**-ter" (các âm in đậm là nhóm 3). Các câu này là mẹo dạy học được truyền miệng, có nhiều biến thể.
+::rhythm 2/4 3[q:nice-q:cup-q:tea] // | Tay phải: 3 nốt (liên ba đen) trong một ô 2/4
+::rhythm 2/4 q:nice q:of // | Tay trái: 2 nốt đen trong cùng ô đó — nốt đầu trùng nhau, các nốt sau xen kẽ
 
 ## Đa nhịp (polymeter)
 Hai bè có **độ dài [[so-chi-nhip|ô nhịp]] khác nhau**: ví dụ một bè lặp mẫu 3 phách, bè kia lặp mẫu 4 phách — sau 12 phách chúng mới gặp lại ở phách đầu. Rất phổ biến trong nhạc châu Phi, nhạc [[toi-gian]] và progressive rock.

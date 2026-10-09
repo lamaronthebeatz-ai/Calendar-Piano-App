@@ -577,6 +577,8 @@ Chữ cái in hoa = **nốt gốc**. Hậu tố cho biết loại hợp âm:
 | Cadd9 | Đô thêm 9 | C E G D |
 | C9 | Đô 9 | C E G B♭ D |
 | C/E | Đô, bass Mi | E ở bè trầm + C E G |
+::staff treble C4+E4+G4=C C4+Eb4+G4=Cm C4+Eb4+Gb4=C° C4+E4+G#4=C+ C4+E4+G4+Bb4=C7 C4+E4+G4+B4=Cmaj7 C4+Eb4+G4+Bb4=Cm7 C4+Eb4+Gb4+Bb4=Cø C4+Eb4+Gb4+Bbb4=C°7 | Các hợp âm ba và hợp âm bảy gốc C trong bảng
+::staff treble C4+E4+G4+A4=C6 C4+F4+G4=Csus4 C4+D4+G4=Csus2 C4+E4+G4+D5=Cadd9 C4+E4+G4+Bb4+D5=C9 | C6, sus, add9 và 9
 
 ## Hợp âm treo (sus)
 Thay nốt bậc 3 bằng bậc 4 (sus4) hoặc bậc 2 (sus2) → không trưởng không thứ, nghe lơ lửng; truyền thống thường **giải quyết** sus4 → 3 (Csus4 → C).
@@ -817,6 +819,7 @@ Liên quan: [[not-ngoai-hop-am]], [[thuan-nghich]].
 | **Nốt trễ (suspension)** | Giữ nốt của hợp âm trước sang hợp âm sau, rồi đi xuống | F (giữ từ hợp âm F trước đó) → E |
 | **Nốt thoát** | Đi liền bậc ra rồi nhảy về | D – **E** – C |
 | **Nốt đón (anticipation)** | Vang sớm nốt của hợp âm kế tiếp | **C** trước khi hợp âm C vang |
+::staff treble E4 F4=lướt G4 / E4 F4=thêu E4 / D5=dựa C5 | Trên hợp âm C: nốt lướt (E – F – G), nốt thêu (E – F – E), nốt dựa (D → C)
 
 ## Nốt trễ: ba giai đoạn và cách gọi tên
 Nốt trễ gồm **chuẩn bị** (nốt thuộc hợp âm trước) → **trễ** (giữ sang phách mạnh của hợp âm mới, thành nghịch âm) → **giải quyết** (đi **xuống liền bậc**). Nếu giải quyết **đi lên**, gọi là **nốt trễ ngược** (retardation).
@@ -828,6 +831,7 @@ Nốt trễ được gọi bằng **hai số**: quãng với bè trầm lúc tr�
 | **7–6** | Hợp âm đảo 1 | Ví dụ iii → vi trong [[am-giai-truong|giọng trưởng]] |
 | **4–3** | Hợp âm nguyên vị | Rất hay gặp ở **kết** (trên V) |
 | **2–3** | Hợp âm đảo 1 | **Bè trầm** là bè bị trễ, nên số "ngược" |
+::grand E4+G4+C5/C3=I D4+G4+C5/G2=V_(4) D4+G4+B4/G2=V_(3) | Nốt trễ 4–3: C chuẩn bị ở hợp âm I, giữ sang hợp âm V (quãng 4 với bè trầm G), rồi đi xuống B
 
 **Chuỗi nốt trễ**: nốt giải quyết của nốt trễ này lại là nốt chuẩn bị cho nốt trễ kế tiếp — rất phổ biến trong nhạc [[thoi-ky-baroque|Baroque]].
 
@@ -941,6 +945,7 @@ Hai tiến trình rất phổ biến: **I – ♭VII – ♭VI – ♭VII** và 
     body: `
 ## Các cách chuyển giọng
 - **Qua hợp âm chung (pivot)**: tìm [[hop-am-ba|hợp âm]] thuộc cả hai giọng. Đô trưởng → Sol trưởng: Am là vi của C **và** ii của G → Am – D7 – G.
+::grand E4+G4+C5/C3=C:_I E4+A4+C5/A2=vi_(G:_ii) D4+F#4+C5/D3=V7 D4+G4+B4/G2=I | Từ Đô trưởng sang Sol trưởng qua hợp âm chung Am: C – Am – D7 – G
 - **Qua át của giọng mới**: dùng [[hop-am-at-phu|hợp âm át]] của giọng đích rồi kết ở đó.
 - **Trực tiếp (đột ngột)**: nhảy thẳng sang giọng mới, thường lên [[cung-nua-cung|nửa cung]] hoặc một cung ở điệp khúc cuối bài pop ("truck driver's modulation").
 - **Qua [[trung-am]]**: viết lại tên một [[hop-am-bay-giam|hợp âm 7 giảm]] hoặc [[hop-am-sau-tang|hợp âm 6 Đức]] để rẽ sang giọng xa.
@@ -1280,6 +1285,7 @@ Trong giáo trình *Harmony*, Walter Piston xem nhịp điệu hoà âm là **nh
 | **vii°** (hợp âm ba giảm) | B – D – F | Hầu như chỉ dùng ở **[[the-dao-hop-am|thể đảo]] 1 (vii°6)**; các thể khác tạo [[thuan-nghich|nghịch âm]] với bè trầm mà các nhà soạn nhạc thường tránh |
 | **viiø7** (7 nửa giảm) | B – D – F – A | Hợp âm 7 tự nhiên trên bậc 7 của **[[am-giai-truong|giọng trưởng]]** |
 | **vii°7** (7 giảm) | B – D – F – A♭ | Tự nhiên trong **giọng [[am-giai-thu|thứ hoà âm]]**; trong giọng trưởng các nhà soạn nhạc thường **hạ** nốt 7 (A → A♭) để có vii°7. vii°7 **phổ biến hơn nhiều** so với viiø7 |
+::staff treble B4+D5+F5=vii° B4+D5+F5+A5=viiø7 B4+D5+F5+Ab5=vii°7 | Ba dạng hợp âm cảm âm trong Đô: B – D – F, B – D – F – A, B – D – F – A♭
 
 ## Thay thế cho V7
 Gần như mọi thể của vii°7 (và vii°6) có thể **thay** cho một thể của V7, tuỳ nốt ở bè trầm:

@@ -458,6 +458,7 @@ Hợp âm 7 giảm thông thường: [[hop-am-bay-giam]]. Tổng quan: [[hoa-am-
 
 ## Đối xứng
 Ba nốt chia quãng 8 thành **ba phần bằng nhau** (mỗi phần 4 [[cung-nua-cung|nửa cung]]). Dịch hợp âm lên một quãng 3 trưởng chỉ cho ra một [[the-dao-hop-am|thể đảo]] của chính nó → chỉ có **4 hợp âm ba tăng khác nhau** về âm thanh: C+, C♯+, D+, E♭+. (Một số tài liệu ghi "3" là sai.) Giống [[hop-am-bay-giam|hợp âm 7 giảm]], sự đối xứng làm nó **mơ hồ** và linh hoạt.
+::keyboard C4 E4 G#4 C5 | C – E – G♯ – C: ba quãng 3 trưởng bằng nhau (mỗi quãng 4 nửa cung) chia đều quãng 8
 
 ## Trong hoà âm cổ điển
 Hợp âm ba tăng **hiếm hơn** các loại hợp âm ba khác; vì quãng 5 — "trụ" của hợp âm — bị biến đổi nên nó kém ổn định.
@@ -465,6 +466,7 @@ Hợp âm ba tăng **hiếm hơn** các loại hợp âm ba khác; vì quãng 5 
 |---|---|---|
 | **III+** trong giọng [[am-giai-thu|thứ hoà âm]] | Trong La thứ: C – E – G♯ | Hợp âm ba tăng **duy nhất** có sẵn trong hệ trưởng – thứ mà không cần biến âm. Chung hai nốt với V (E – G♯ – B) và với i; thường mang **tính át** |
 | **V+** trong [[am-giai-truong|giọng trưởng]] | G – B – D♯ → C | Nốt 5 nâng (D♯) là **[[not-ngoai-hop-am|nốt lướt]] cromatic**, như một [[bac-am-giai|cảm âm]] tạm thời đi lên E của hợp âm I |
+::staff treble G4+B4+D5=V G4+B4+D#5=V+ G4+C5+E5=I | V+ trong Đô trưởng: D♯ là nốt lướt cromatic đi lên E của hợp âm I
 
 Có nhà lý thuyết cho rằng hợp âm ba tăng thường **không chỉ là hợp âm lướt** mà có chức năng — gần như luôn là **át thay thế**; đây là quan điểm thiểu số.
 

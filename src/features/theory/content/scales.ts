@@ -149,6 +149,7 @@ Nâng **bậc 7** lên nửa cung: A – B – C – D – E – F – **G♯** 
 | 5 | Át âm | Dominant | G |
 | 6 | Hạ trung âm | Submediant | A |
 | 7 | Cảm âm | Leading tone | B |
+::staff treble C4=1 D4=2 E4=3 F4=4 G4=5 A4=6 B4=7 C5=1 | Bảy bậc của âm giai Đô trưởng
 
 ## Ý nghĩa
 - **Chủ âm** (1): điểm dừng, "nhà" của bản nhạc.
@@ -187,10 +188,14 @@ Hoá biểu gồm các [[dau-hoa]] đặt ngay sau [[khoa-nhac]], áp dụng cho
 ## Thứ tự dấu
 - Dấu thăng: **F – C – G – D – A – E – B** ("Fa Đô Sol Rê La Mi Si")
 - Dấu giáng: **B – E – A – D – G – C – F** (ngược lại thứ tự dấu thăng)
+::staff treble k:7# | Thứ tự 7 dấu thăng: F – C – G – D – A – E – B
+::staff treble k:7b | Thứ tự 7 dấu giáng: B – E – A – D – G – C – F
 
 ## Mẹo nhận giọng trưởng
 - Với dấu thăng: lấy dấu thăng **cuối cùng**, lên [[cung-nua-cung|nửa cung]] là âm chủ. (F♯ C♯ → D trưởng.)
 - Với dấu giáng: dấu giáng **áp chót** chính là tên giọng. (B♭ E♭ A♭ → E♭ trưởng.) Riêng 1 dấu giáng là F trưởng.
+::staff treble k:2# D4=D_trưởng | Hai dấu thăng: dấu cuối là C♯, lên nửa cung → Rê trưởng
+::staff treble k:3b Eb4=E♭_trưởng | Ba dấu giáng: dấu áp chót là E♭ → Mi giáng trưởng
 
 ## Bảng hoá biểu
 | Số dấu | Giọng trưởng (thăng) | Giọng thứ (thăng) | Giọng trưởng (giáng) | Giọng thứ (giáng) |

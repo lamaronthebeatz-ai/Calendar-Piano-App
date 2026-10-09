@@ -73,6 +73,8 @@ Trong jazz, hai [[truong-do|nốt móc đơn]] viết bằng nhau thường **kh
 | Hai móc đơn ♫ | Như [[lien-ba]]: nốt đen + móc đơn trong một nhóm liên ba (2 : 1) |
 
 Đầu bản nhạc thường ghi "**Swing**" hoặc "**Swung 8ths**" kèm công thức ♫ = ♩♪ (liên ba). Ngược lại, "**Straight 8ths**" nghĩa là chơi đều.
+::rhythm 4/4 e-e e-e e-e e-e // | Cách viết: các cặp móc đơn bằng nhau
+::rhythm 4/4 3[q-e] 3[q-e] 3[q-e] 3[q-e] // | Cách chơi swing ở nhịp độ vừa: đen + móc đơn trong nhóm liên ba (2 : 1)
 
 ## Tỉ lệ thay đổi theo nhịp độ
 - Chậm: swing đậm, gần 2 : 1 hoặc hơn.
@@ -91,6 +93,7 @@ Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2
 2. Chơi [[am-giai|âm giai]] bằng móc đơn swing, nhấn nhẹ nốt "&" (nốt ngắn).
 3. Chơi theo bản thu ở nhiều nhịp độ khác nhau và để ý tỉ lệ dài – ngắn thay đổi.
 4. Tay trái đệm [[hop-am-ba|hợp âm]] ngắn kiểu "Charleston" (phách 1 và "& của 2") để cảm nhận [[dao-phach]].
+::rhythm 4/4 q. e rh // | Mẫu Charleston: phách 1 và "&" của phách 2
 Lý thuyết hoà âm đi kèm: [[hoa-am-jazz]].
 `,
   },

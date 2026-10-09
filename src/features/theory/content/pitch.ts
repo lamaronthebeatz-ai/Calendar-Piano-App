@@ -187,6 +187,7 @@ Một quãng và quãng đảo của nó luôn **cộng lại thành 12 [[cung-n
 
 ## Giải quyết
 Quãng nghịch tạo **sức căng** và thường đi tới quãng thuận gần nhất — gọi là **giải quyết**. Ví dụ: tritone B–F trong [[hop-am-bay|hợp âm G7]] giải quyết về C–E của [[hop-am-ba|hợp âm]] C.
+::staff treble B4+F5=B–F C5+E5=C–E | Tritone B–F giải quyết vào quãng 3 C–E: B đi lên C, F đi xuống E
 
 Sự luân phiên căng – nghỉ này là động cơ của [[chuc-nang-hoa-am|hoà âm chức năng]] và [[dan-giong]]. Cơ sở vật lý của độ thuận: xem [[chuoi-boi-am]].
 
