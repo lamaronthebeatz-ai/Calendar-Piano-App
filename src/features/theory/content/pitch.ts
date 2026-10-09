@@ -2,6 +2,40 @@ import type { Article } from '../wiki'
 
 export const pitch: Article[] = [
   {
+    slug: 'cao-do',
+    title: 'Cao độ: hệ thống và lộ trình',
+    category: 'pitch',
+    aliases: ['cao độ', 'pitch', 'âm vực', 'register', 'tầm cữ', 'lộ trình cao độ'],
+    summary: 'Bài tổng quan của mục: cao độ là cảm giác "cao – thấp" của âm thanh, gắn chủ yếu với tần số; âm vực và tầm cữ; và thứ tự học từ cung – nửa cung, quãng đến bồi âm và hệ thống lên dây.',
+    wiki: 'Pitch_(music)',
+    refs: [
+      ['Open Music Theory (Gotham và cộng sự) — Phần I: Fundamentals', 'https://viva.pressbooks.pub/openmusictheory/part/fundamentals/'],
+      ['Wikipedia — Pitch (music)', 'https://en.wikipedia.org/wiki/Pitch_(music)'],
+      ['IALA Dictionary — Pitch (định nghĩa theo ANSI)', 'https://www.iala-aism.org/wiki/dictionary/index.php/Pitch'],
+      ['OpenStax (Schmidt-Jones) — Range', 'https://human.libretexts.org/Bookshelves/Music/Book%3A_Understanding_Basic_Music_Theory_(OpenSTAX)/02%3A_Defintions/2.07%3A_Range'],
+      ['EarMaster — Music theory online: Range', 'https://www.earmaster.com/music-theory-online/ch02/chapter-2-7.html'],
+    ],
+    body: `
+**Cao độ** là thuộc tính của cảm giác nghe theo đó các âm có thể được **xếp từ thấp đến cao** (định nghĩa của Viện Tiêu chuẩn Quốc gia Mỹ — ANSI). Cao độ phụ thuộc **chủ yếu vào tần số** của âm, nhưng cũng chịu ảnh hưởng của độ to và dạng sóng — tức là cao độ là **cảm nhận**, còn tần số là **đại lượng vật lý** (xem [[am-hoc-co-ban]], [[cam-nhan-am-thanh]]).
+
+## Âm vực và tầm cữ
+- **Âm vực** (range): khoảng từ nốt **thấp nhất** đến nốt **cao nhất** của một giọng, một nhạc cụ hay một bè nhạc. Âm vực piano: [[ban-phim]].
+- **Vùng âm** (register): một **phần** của âm vực có màu âm riêng — ví dụ "vùng trầm", "vùng cao" của piano, hay giọng ngực – giọng óc của ca sĩ (xem [[am-sac]]).
+- **Tầm cữ** (tessitura): vùng mà một [[giai-dieu|giai điệu]] hay một bè **nằm chủ yếu**, khác với âm vực là hai đầu mút. Các từ điển định nghĩa từ này không hoàn toàn thống nhất.
+Trong viết bè, mỗi bè có âm vực quen dùng (xem [[luat-hoa-am-bon-be]]); trong biểu diễn, vùng âm ảnh hưởng đến cách cân bằng tiếng (xem [[lam-noi-giai-dieu]]).
+
+## Lộ trình học
+1. **Tên nốt và vị trí**: [[not-nhac]], [[ban-phim]], [[ky-hieu-quang-tam]].
+2. **Khoảng cách nhỏ nhất**: [[cung-nua-cung]], [[dau-hoa]], [[trung-am]].
+3. **Quãng**: [[quang]] → [[quang-dao]] → [[thuan-nghich]].
+4. **Nền tảng vật lý**: [[chuoi-boi-am]] → [[luat-binh-quan]].
+5. **Từ quãng đến âm giai và hợp âm**: [[am-giai]], [[hop-am-ba]].
+
+## Luyện nghe cao độ
+[[luyen-tai]] (cảm âm tương đối), [[cao-do-tuyet-doi]], [[xuong-am]].
+`,
+  },
+  {
     slug: 'cung-nua-cung',
     title: 'Cung và nửa cung',
     category: 'pitch',
@@ -185,7 +219,7 @@ Trên [[ban-phim]], mỗi phím đen có (ít nhất) hai tên: C♯ = D♭, F�
 ::keyboard C#4 | Một phím: có thể gọi là C♯ hoặc D♭
 
 ## Vì sao phải chọn đúng tên?
-[[not-nhac|Tên nốt]] phụ thuộc vào **chức năng**, không chỉ cao độ:
+[[not-nhac|Tên nốt]] phụ thuộc vào **chức năng**, không chỉ [[cao-do|cao độ]]:
 - Trong [[am-giai-truong|Rê trưởng]], nốt bậc 7 là **C♯**, không phải D♭ (mỗi tên chữ cái chỉ xuất hiện một lần).
 - [[quang|Quãng]] C–D♯ là **2 tăng**, còn C–E♭ là **3 thứ** — cùng âm thanh, khác chức năng.
 
@@ -200,7 +234,7 @@ Trùng âm còn dùng để **chuyển giọng** bất ngờ (xem [[chuyen-giong
 **Viết lại** một nốt hoặc [[hop-am-ba|hợp âm]] bằng tên trùng âm để dẫn sang giọng mới. Việc này phổ biến dần từ thế kỷ 18 và được dùng nhiều trong thế kỷ 19, đặc biệt với [[hop-am-bay-giam]] và [[hop-am-bay|hợp âm 7 át]]. Chuyển giọng trùng âm trong các [[hinh-thuc-sonata|sonata]] piano của [[Schubert]] là đề tài của nhiều nghiên cứu.
 
 ## Vì sao không viết tên "dễ đọc" hơn?
-Tên nốt cho biết **chức năng**. Trong La trưởng, viết C♯ để mỗi chữ cái chỉ xuất hiện một lần trong âm giai (xem [[hoa-bieu]]).
+Tên nốt cho biết **chức năng**. Trong La trưởng, viết C♯ để mỗi chữ cái chỉ xuất hiện một lần trong [[am-giai|âm giai]] (xem [[hoa-bieu]]).
 `,
   },
   {
@@ -236,7 +270,7 @@ Kiến thức nền về tần số, dB, phạm vi nghe: [[am-hoc-co-ban]]. Các
 [[cuong-do|Cường độ]] tương đối của các bồi âm quyết định **[[am-sac|âm sắc]]** — lý do piano và violin chơi cùng nốt nhưng nghe khác nhau.
 
 ## Bồi âm của piano "lệch" lên
-Dây đàn piano **cứng** (dây thép ngắn, khá dày), nên các bồi âm cao **không đúng** bội số nguyên mà hơi **cao hơn** — gọi là tính **không điều hoà** (inharmonicity). Dây càng ngắn, càng dày thì càng lệch.
+Dây [[dan-piano|đàn piano]] **cứng** (dây thép ngắn, khá dày), nên các bồi âm cao **không đúng** bội số nguyên mà hơi **cao hơn** — gọi là tính **không điều hoà** (inharmonicity). Dây càng ngắn, càng dày thì càng lệch.
 
 ## Hệ quả: lên dây "kéo giãn"
 - Thợ lên dây làm các nốt **cao hơi cao lên**, nốt **trầm hơi thấp xuống**, để bồi âm của nốt thấp khớp với âm gốc của nốt cao. Quãng 8 trên piano vì vậy **rộng hơn** tỉ lệ 2:1 một chút.
@@ -274,7 +308,7 @@ Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chi
 - **Đánh đổi**: các quãng (trừ quãng 8) đều lệch nhẹ so với tỉ lệ tự nhiên của [[chuoi-boi-am]]; quãng 3 trưởng hơi rộng.
 
 ## Lịch sử cao độ chuẩn
-Cao độ "La" từng dao động rất rộng — có lúc thấp đến **392 Hz**, có lúc cao đến **460 Hz**.
+[[cao-do|Cao độ]] "La" từng dao động rất rộng — có lúc thấp đến **392 Hz**, có lúc cao đến **460 Hz**.
 | Năm | Mốc |
 |---|---|
 | 1834 | Johann Scheibler đề xuất **A = 440** tại một hội nghị ở Stuttgart ("cao độ Stuttgart") |

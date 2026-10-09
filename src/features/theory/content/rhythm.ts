@@ -2,6 +2,43 @@ import type { Article } from '../wiki'
 
 export const rhythm: Article[] = [
   {
+    slug: 'tiet-tau',
+    title: 'Tiết tấu và nhịp: hệ thống và lộ trình',
+    category: 'rhythm',
+    aliases: ['tiết tấu', 'nhịp điệu', 'rhythm', 'lộ trình tiết tấu', 'thời gian trong âm nhạc', 'tiết tấu và nhịp'],
+    summary: 'Bài tổng quan của mục: phân biệt tiết tấu (chuỗi trường độ cụ thể), phách (mạch đều) và nhịp (cách phách được nhóm thành mạnh – nhẹ), rồi thứ tự học từ trường độ đến đa nhịp và rubato.',
+    wiki: 'Rhythm',
+    refs: [
+      ['Open Music Theory (Gotham và cộng sự) — Phần I: Fundamentals', 'https://viva.pressbooks.pub/openmusictheory/part/fundamentals/'],
+      ['Wikipedia — Rhythm', 'https://en.wikipedia.org/wiki/Rhythm'],
+      ['Wikipedia — Metre (music)', 'https://en.wikipedia.org/wiki/Metre_(music)'],
+      ['London — Hearing in Time (Oxford UP 2004, bản 2 2012): phần mở đầu (PDF)', 'https://musikwissenschaft.univie.ac.at/fileadmin/user_upload/i_musikwissenschaft/Forschung/Vortragsreihen/J_London_Hearing_in_Time_Intro.pdf'],
+    ],
+    body: `
+Phần "thời gian" của âm nhạc có ba khái niệm hay bị lẫn với nhau:
+| Khái niệm | Là gì | Bài |
+|---|---|---|
+| **Phách** (beat, pulse) | Mạch đều mà ta gõ chân theo | [[cam-nhan-phach]] |
+| **Nhịp** (meter) | Cách các phách được **nhóm** thành mạnh – nhẹ (2, 3, 4…) và chia nhỏ (chia đôi hay chia ba) | [[so-chi-nhip]] |
+| **Tiết tấu** (rhythm) | Chuỗi **trường độ cụ thể** của các nốt và dấu lặng, đặt trên nền phách và nhịp | [[truong-do]], [[dau-lang]] |
+Nhà [[cam-xuc-am-nhac|tâm lý học âm nhạc]] Justin London (*Hearing in Time*) xem nhịp là một dạng **hành vi chú ý của người nghe** — sự đồng bộ (entrainment) của sự chú ý và vận động với những sự kiện lặp lại, một khả năng ta cũng dùng khi nghe tiếng bước chân hay tiếng nước nhỏ giọt. Tiết tấu được nghe **so với** khung nhịp đó. Vì vậy cùng một chuỗi nốt có thể nghe khác hẳn khi đặt vào nhịp khác (xem [[hemiola]], [[da-nhip]]).
+
+## Lộ trình học
+1. **Ký hiệu trường độ**: [[truong-do]] → [[dau-lang]] → [[cham-doi-dau-noi]].
+2. **Nhịp**: [[so-chi-nhip]] (nhịp đơn, nhịp kép) → [[nhip-lay-da]] → [[nhip-do]].
+3. **Chia khác thường**: [[lien-ba]].
+4. **Lệch khỏi phách mạnh**: [[dao-phach]] → [[swing]].
+5. **Nhịp phức tạp**: [[nhip-hon-hop]] → [[hemiola]] → [[da-nhip]].
+6. **Thời gian co giãn**: [[rubato]], [[kiem-soat-toc-do]].
+7. **Tầng lớn hơn ô nhịp**: [[nhip-dieu-hoa-am]] (tốc độ đổi hợp âm), [[sieu-nhip]] (nhóm các ô nhịp).
+
+## Luyện tiết tấu
+- Đọc tiết tấu bằng âm tiết: [[am-tiet-nhip]].
+- Cảm nhận phách bằng cơ thể và máy đếm nhịp: [[cam-nhan-phach]], [[kiem-soat-toc-do]].
+- Ghi lại tiết tấu nghe được: [[ky-am]].
+`,
+  },
+  {
     slug: 'truong-do',
     title: 'Trường độ',
     category: 'rhythm',
@@ -49,7 +86,7 @@ Sách tiếng Anh dùng hai hệ tên khác nhau. Giáo trình theo chuẩn Anh 
 | Nốt móc kép | sixteenth note | **semiquaver** |
 
 ## Lịch sử: vì sao "nốt tròn" lại là "nửa nốt ngắn"?
-- Khoảng năm **1200** ở Pháp, nhịp điệu được ghi bằng các **"[[dieu-thuc|điệu thức]] tiết tấu"** — những mẫu dài – ngắn cố định lặp lại.
+- Khoảng năm **1200** ở Pháp, [[tiet-tau|nhịp điệu]] được ghi bằng các **"[[dieu-thuc|điệu thức]] tiết tấu"** — những mẫu dài – ngắn cố định lặp lại.
 - Chuyên luận *Ars cantus mensurabilis* (thường gán cho Franco xứ Cologne, khoảng 1260–1280) hệ thống hoá **[[ky-am|ký âm]] định lượng**: chỉ có ba giá trị chính thức — **longa** (dài), **brevis** (ngắn), **semibrevis** (nửa ngắn), và mỗi nốt **chỉ chia ba**. Chia đôi chỉ được công nhận từ thế kỷ 14 (*Ars nova*).
 - Về sau xuất hiện thêm **minima** ("nhỏ nhất", thế kỷ 14), rồi các nốt nhỏ hơn nữa. Khi nhạc dùng nốt ngày càng ngắn, **semibrevis** — vốn là "nửa nốt ngắn" — dần trở thành nốt **dài nhất** thường dùng. Đó là lý do nốt tròn tiếng Anh vẫn gọi là *semibreve*. Tên *crotchet* (nốt đen) đến từ tiếng Pháp cổ *crochet* — "cái móc nhỏ".
 
@@ -78,7 +115,7 @@ Kéo dài trường độ: xem [[cham-doi-dau-noi]]. Im lặng: xem [[dau-lang]]
       ['CPDL forum — Rest grouping in compound meters', 'https://forums1.cpdl.org/phpBB3/viewtopic.php?p=19653'],
     ],
     body: `
-Im lặng cũng là một phần của nhịp điệu — dấu lặng phải được **đếm** chính xác như nốt.
+Im lặng cũng là một phần của [[tiet-tau|nhịp điệu]] — dấu lặng phải được **đếm** chính xác như nốt.
 
 ::img Music rests.svg | Các dấu lặng từ dài đến ngắn
 
@@ -127,10 +164,10 @@ Dấu chấm sau nốt làm nốt dài thêm **một nửa** giá trị của ch
 
 **Chấm dôi kép** (hai chấm) cộng thêm ½ rồi ¼ giá trị: nốt đen chấm dôi kép = 1 + ½ + ¼ = 1¾ phách.
 
-Hình tiết tấu "đen chấm dôi + móc đơn" (1½ + ½) rất phổ biến, tạo cảm giác nhún nhảy.
+Hình [[tiet-tau|tiết tấu]] "đen chấm dôi + móc đơn" (1½ + ½) rất phổ biến, tạo cảm giác nhún nhảy.
 
 ## Dấu nối
-Dấu nối là đường cong nối **hai nốt cùng cao độ** — chỉ đánh nốt đầu và giữ luôn cho nốt sau. Dùng khi nốt kéo **qua [[so-chi-nhip|vạch nhịp]]**, hoặc khi cần độ dài không viết được bằng một hình nốt.
+Dấu nối là đường cong nối **hai nốt cùng [[cao-do|cao độ]]** — chỉ đánh nốt đầu và giữ luôn cho nốt sau. Dùng khi nốt kéo **qua [[so-chi-nhip|vạch nhịp]]**, hoặc khi cần độ dài không viết được bằng một hình nốt.
 
 ::img Music-tie.svg | Dấu nối
 
@@ -333,7 +370,7 @@ Mỗi [[so-chi-nhip]] có quy luật phách mạnh – nhẹ. **Đảo phách** 
 Đảo phách là linh hồn của ragtime, jazz, Latin, funk và pop hiện đại (xem [[swing]]). Một dạng đảo phách có tổ chức trong nhạc cổ điển: [[hemiola]].
 
 ## Tên gọi
-"Syncopation" đến từ tiếng Hy Lạp *synkopē* — *syn* (cùng) + *koptein* (cắt): "**cắt ngắn**". Thế kỷ 16 nó chỉ việc **lược âm** trong từ ngữ; nghĩa âm nhạc có từ thập niên 1660. Từ "syncopated" chỉ tiết tấu theo nghĩa hiện đại phổ biến từ khoảng 1908 — ban đầu gắn với **ragtime**.
+"Syncopation" đến từ tiếng Hy Lạp *synkopē* — *syn* (cùng) + *koptein* (cắt): "**cắt ngắn**". Thế kỷ 16 nó chỉ việc **lược âm** trong từ ngữ; nghĩa âm nhạc có từ thập niên 1660. Từ "syncopated" chỉ [[tiet-tau|tiết tấu]] theo nghĩa hiện đại phổ biến từ khoảng 1908 — ban đầu gắn với **ragtime**.
 
 ## Ragtime: đảo phách trên nền nhịp đều
 - **"Maple Leaf Rag"** (1899) của [[Joplin|Scott Joplin]] là tác phẩm ragtime nổi tiếng nhất; theo một nguồn, đây là bản nhạc đầu tiên bán được **hơn một triệu bản in** ở Mỹ.
@@ -406,7 +443,7 @@ Số chỉ nhịp đổi ở nhiều ô nhịp liên tiếp (3/16 – 2/16 – 3
 
 ## Ba tác phẩm tiêu biểu
 - **"Take Five"** — Paul Desmond sáng tác, Dave Brubeck Quartet thu năm **1959** trong album *Time Out*. Tay trống Joe Morello đề nghị một bài nhịp **5/4**, và tên bài lấy từ chính số chỉ nhịp. Mỗi bài trong album dùng một nhịp khác nhau, lấy cảm hứng từ chuyến lưu diễn Âu – Á năm 1958 của nhóm.
-- **"Mars"** trong *The Planets* của Holst — phác thảo mùa hè 1914; nhịp **5/4** cùng [[motif|motif]] tiết tấu dai dẳng tạo không khí chiến tranh.
+- **"Mars"** trong *The Planets* của Holst — phác thảo mùa hè 1914; nhịp **5/4** cùng [[motif|motif]] [[tiet-tau|tiết tấu]] dai dẳng tạo không khí chiến tranh.
 - **[[Bartók]] — "Sáu vũ khúc theo nhịp Bulgaria"**: phần kết của tuyển tập *Mikrokosmos* (1939–40), dựa trên các nhịp **lẻ** của nhạc dân gian Bulgaria. Trong "nhịp Bulgaria" của Bartók, đơn vị móc đơn **luôn hiện diện** — người chơi đếm bằng móc đơn và nhóm chúng thành 2 và 3. Đây là chất liệu piano kinh điển để dạy nhịp lẻ.
 
 ## Mẹo đếm
@@ -443,7 +480,7 @@ Trong [[so-chi-nhip|nhịp 3/4]], hai ô nhịp có 6 phách: bình thường nh
 Hemiola là một dạng [[dao-phach]] có tổ chức và họ hàng gần với [[da-nhip]] (3 chọi 2 theo thời gian nối tiếp thay vì đồng thời).
 
 ## Tên gọi
-Từ tiếng Hy Lạp *hēmiolios* — "**một rưỡi**", tức tỉ lệ **3 : 2** (tiếng Latin tương đương: *sesquialtera*). Từ này có hai nghĩa: về tiết tấu là ba phách bằng nhau trong thời gian vốn của hai; về cao độ là [[quang|quãng 5 đúng]] (tỉ lệ [[am-hoc-co-ban|tần số]] 3 : 2).
+Từ tiếng Hy Lạp *hēmiolios* — "**một rưỡi**", tức tỉ lệ **3 : 2** (tiếng Latin tương đương: *sesquialtera*). Từ này có hai nghĩa: về [[tiet-tau|tiết tấu]] là ba phách bằng nhau trong thời gian vốn của hai; về [[cao-do|cao độ]] là [[quang|quãng 5 đúng]] (tỉ lệ [[am-hoc-co-ban|tần số]] 3 : 2).
 
 ## Lịch sử
 Việc chuyển qua lại giữa 6/4 và 3/2 đã rất phổ biến ở **thế kỷ 15** (Dunstable, Dufay) và trong **nhạc Baroque**, nơi nó là **đặc trưng của điệu courante** và thường xuất hiện ngay trước [[cau-ket|kết]] như một "hiệu ứng" làm chậm và nhấn mạnh. Ở [[Brahms]], hemiola được nghiên cứu như một cách **giải toả** những xung đột tiết tấu trước đó, làm dịu sức căng trước kết — ví dụ chương 1 [[hinh-thuc-sonata|Sonata]] piano Op. 5.
@@ -509,7 +546,7 @@ Liên quan: [[hemiola]], [[nhip-hon-hop]]. Cách tập đa nhịp hai tay trên 
 **Phách** là mạch đều mà ta cảm nhận được bên dưới âm nhạc — thứ khiến ta gõ chân theo. Mọi khái niệm khác trong nhóm này ([[so-chi-nhip]], [[dao-phach]], [[hemiola]], [[da-nhip]]) đều chỉ có nghĩa khi người chơi **cảm được phách**.
 
 ## Có từ khi mới sinh
-- **Winkler và cộng sự (2009)** đo điện não trẻ sơ sinh: khi **phách mạnh bị bỏ đi** trong một mẫu tiết tấu, não trẻ phản ứng như khi gặp điều trái với dự đoán — dù phách đó không được đánh dấu bằng trọng âm. Nhóm tác giả kết luận khả năng nhận ra phách là **bẩm sinh** (dù câu hỏi bẩm sinh hay học được chưa hoàn toàn ngã ngũ).
+- **Winkler và cộng sự (2009)** đo điện não trẻ sơ sinh: khi **phách mạnh bị bỏ đi** trong một mẫu [[tiet-tau|tiết tấu]], não trẻ phản ứng như khi gặp điều trái với dự đoán — dù phách đó không được đánh dấu bằng trọng âm. Nhóm tác giả kết luận khả năng nhận ra phách là **bẩm sinh** (dù câu hỏi bẩm sinh hay học được chưa hoàn toàn ngã ngũ).
 
 ## Cơ thể dạy tai
 - **Phillips-Silver và Trainor (2005)**: 16 trẻ 7 tháng tuổi được **nhún theo** một mẫu tiết tấu mơ hồ — nhóm nhún mỗi 2 phách, nhóm nhún mỗi 3 phách. Sau đó, trẻ "nghe" mẫu đó như **nhịp 2 (hành khúc)** hoặc **nhịp 3 (valse)** tuỳ theo cách mình đã được nhún. Trẻ chỉ **nhìn** người khác nhún thì không có hiệu ứng: chính **chuyển động của cơ thể mình** mới quyết định.

@@ -2,10 +2,49 @@ import type { Article } from '../wiki'
 
 export const basics: Article[] = [
   {
+    slug: 'nhac-ly-co-ban',
+    title: 'Nhạc lý cơ bản: hệ thống và lộ trình',
+    category: 'basics',
+    aliases: ['nhạc lý cơ bản', 'nhạc lý', 'lộ trình nhạc lý', 'music fundamentals', 'music theory basics', 'kiến thức nhạc lý'],
+    summary: 'Bài tổng quan của mục: nhạc lý cơ bản là "bảng chữ cái" để đọc và hiểu bản nhạc — ký hiệu, tiết tấu, cao độ, âm giai, hợp âm — và thứ tự học từ ký hiệu đến hoà âm, hình thức.',
+    wiki: 'Music_theory',
+    refs: [
+      ['Open Music Theory (Gotham và cộng sự) — Phần I: Fundamentals', 'https://viva.pressbooks.pub/openmusictheory/part/fundamentals/'],
+      ['Wikipedia — Music theory', 'https://en.wikipedia.org/wiki/Music_theory'],
+      ['Wikipedia — Musical notation', 'https://en.wikipedia.org/wiki/Musical_notation'],
+      ['OpenStax — Understanding Basic Music Theory (Schmidt-Jones)', 'https://human.libretexts.org/Bookshelves/Music/Book%3A_Understanding_Basic_Music_Theory_(OpenSTAX)'],
+    ],
+    body: `
+**Nhạc lý cơ bản** là những kiến thức để **đọc, viết và gọi tên** những gì nghe thấy trong âm nhạc: nốt nào, dài bao lâu, thuộc giọng nào, tạo thành hợp âm gì. Các giáo trình nhập môn như *Open Music Theory* sắp xếp phần này theo trình tự: **ký hiệu cao độ → ký hiệu tiết tấu → âm giai, hoá biểu, [[dieu-thuc|điệu thức]] → [[quang|quãng]] → hợp âm ba → hợp âm bảy**; mỗi chương giả định người học đã nắm các chương trước.
+
+## Bản nhạc ghi lại những gì?
+| Thông tin | Ghi bằng | Bài |
+|---|---|---|
+| **Cao độ** — nốt nào | Vị trí trên khuông, khoá, dấu hoá | [[not-nhac]], [[khuong-nhac]], [[khoa-nhac]], [[dau-hoa]] |
+| **Trường độ** — dài bao lâu | Hình nốt, dấu lặng, chấm dôi | [[truong-do]], [[dau-lang]], [[cham-doi-dau-noi]] |
+| **Nhịp** — phách tổ chức thế nào | Số chỉ nhịp, vạch nhịp | [[so-chi-nhip]] |
+| **Giọng** — nốt nào là trung tâm | Hoá biểu | [[hoa-bieu]], [[dieu-tinh]] |
+| **Tốc độ, sắc thái, cách đánh** | Thuật ngữ Ý, ký hiệu | [[nhip-do]], [[cuong-do]], [[cach-dien-tau]] |
+Những gì bản nhạc **không** ghi hết — [[rubato|rubato]], cân bằng các bè, [[am-sac|màu âm]] — thuộc về diễn tấu (xem [[dien-tau]]).
+
+## Lộ trình học
+1. **Đọc nốt**: [[ban-phim]] → [[not-nhac]] → [[khuong-nhac]] → [[khoa-nhac]] ([[khoa-sol]], [[khoa-fa]], [[khoa-do]]) → [[dau-hoa]] → [[ky-hieu-quang-tam]].
+2. **Tiết tấu**: theo lộ trình trong [[tiet-tau]].
+3. **Cao độ và quãng**: theo lộ trình trong [[cao-do]].
+4. **Âm giai và giọng**: theo lộ trình trong [[am-giai]].
+5. **Hợp âm và hoà âm**: [[hop-am-ba]] → [[the-dao-hop-am]] → [[hop-am-bay]], rồi toàn bộ [[giao-trinh-hoa-am]].
+6. **[[hinh-thuc-am-nhac|Hình thức]]**: [[lo-trinh-hinh-thuc]].
+7. **Ký hiệu diễn tấu**: [[dien-tau]].
+
+## Học nhạc lý cùng với tai và tay
+Nhạc lý chỉ thành kỹ năng khi gắn với **âm thanh**: đọc thì hát hoặc đánh thử, nghe thì gọi tên. Xem [[luyen-tai]], [[xuong-am]], [[am-tiet-nhip]], [[ky-am]], và về phía người dạy: [[cach-day-doc-not]], [[doc-not-nhanh]], [[lo-trinh-luyen-tai-su-pham]].
+`,
+  },
+  {
     slug: 'not-nhac',
     title: 'Nốt nhạc',
     category: 'basics',
-    aliases: ['nốt', 'note', 'tên nốt', 'cao độ'],
+    aliases: ['nốt', 'note', 'tên nốt'],
     summary: 'Ký hiệu cho một âm thanh, cho biết cao độ (cao hay thấp) và trường độ (dài hay ngắn).',
     wiki: 'Musical_note',
     refs: [
@@ -17,7 +56,7 @@ export const basics: Article[] = [
       ['Dorico manual — Stem direction', 'https://archive.steinberg.help/dorico/v2/en/dorico/topics/notation_reference/notation_reference_stems_direction_c.html'],
     ],
     body: `
-Mỗi nốt nhạc mang hai thông tin: **cao độ** — vị trí của nốt trên [[khuong-nhac]] — và **trường độ** — hình dạng của nốt (xem [[truong-do]]).
+Mỗi nốt nhạc mang hai thông tin: **[[cao-do|cao độ]]** — vị trí của nốt trên [[khuong-nhac]] — và **trường độ** — hình dạng của nốt (xem [[truong-do]]).
 
 ## Bảy tên nốt
 Âm nhạc phương Tây dùng 7 tên [[not-lap-lai|nốt lặp]] lại theo từng [[quang|quãng 8]]:
@@ -49,7 +88,7 @@ Xem cách dùng các âm tiết này khi hát: [[xuong-am]].
 2. Cuối thế kỷ 13, phần lớn neume được đơn giản hoá thành **nốt vuông** — vẫn còn dùng trong sách thánh ca Gregorian ngày nay.
 3. **[[ky-am|Ký âm]] định lượng** (mensural) bổ sung các hình nốt cho trường độ. Đầu nốt **hình bầu dục** hiện đại chỉ là dạng cách điệu của đầu nốt hình thoi trong ký âm vuông.
 
-Từ khi khuông nhạc và hình nốt ổn định, các thay đổi lớn về sau của ký âm chủ yếu nằm ở **nhịp điệu** (xem [[truong-do]]).
+Từ khi khuông nhạc và hình nốt ổn định, các thay đổi lớn về sau của ký âm chủ yếu nằm ở **[[tiet-tau|nhịp điệu]]** (xem [[truong-do]]).
 
 ## Khi giảng dạy: "Đô giữa là C4 hay C3?"
 - Theo **ký hiệu cao độ khoa học**, Đô giữa luôn là **C4**; số quãng 8 tăng lên mỗi khi đi từ Si sang Đô (nên nốt ngay dưới C4 là **B3**).
@@ -77,7 +116,7 @@ Bản thân khuông nhạc chưa cho biết [[not-nhac|tên nốt]] — phải n
 ::staff treble C4 E4 G4 B4 D5 F5 A5 | Nốt trên dòng kẻ phụ (C4, A5) và trên các dòng, khe
 
 ## Lịch sử
-- Khuông nhạc ra đời từ việc kẻ **dòng** để định vị neume. Người ta đánh dấu một dòng là một cao độ cố định, thường là **C hoặc F** — tiền thân của [[khoa-nhac]].
+- Khuông nhạc ra đời từ việc kẻ **dòng** để định vị neume. Người ta đánh dấu một dòng là một [[cao-do|cao độ]] cố định, thường là **C hoặc F** — tiền thân của [[khoa-nhac]].
 - [[guido-d-arezzo|Guido d'Arezzo]] (khoảng năm 1030) theo truyền thống được coi là người tạo ra khuông **4 dòng**. Giới nghiên cứu ngày nay thận trọng hơn: dòng kẻ đã có từ trước, Guido là người **mở rộng lên 4 dòng** và phổ biến phương pháp. Theo giai thoại, khoảng năm 1028 Giáo hoàng John XIX mời ông đến Rome và học được cách [[doc-not-nhanh|đọc nhạc]] chỉ trong một buổi chiều.
 - Khuông **5 dòng** dùng cho [[ky-am|ký âm]] định lượng (nhạc thế tục). Các nguồn không thống nhất thời điểm nó trở thành chuẩn. Sách thánh ca Gregorian đến nay vẫn dùng khuông 4 dòng.
 
@@ -114,7 +153,7 @@ Khoá nhạc "neo" một nốt vào một dòng cụ thể trên [[khuong-nhac]]
 
 ::img Middle C in four clefs.svg | Cùng một nốt Đô giữa (C4) được viết trong bốn khoá khác nhau
 
-Khoá nhạc giúp hạn chế [[khuong-nhac|dòng kẻ phụ]]: nhạc cụ âm vực nào dùng khoá đó để nốt nằm gọn trong khuông.
+Khoá nhạc giúp hạn chế [[khuong-nhac|dòng kẻ phụ]]: nhạc cụ [[cao-do|âm vực]] nào dùng khoá đó để nốt nằm gọn trong khuông.
 
 ## Khoá nhạc vốn là chữ cái
 Khoá nhạc ban đầu chính là **chữ cái [[not-nhac|tên nốt]]** viết lên một dòng của khuông; theo Merriam-Webster, chúng được dùng đều đặn từ **thế kỷ 12**.
@@ -200,7 +239,7 @@ Ba nốt dễ nhận nhất: **Đô trầm (C3)** ở khe 2, **Fa (F3)** ở dò
 ::staff bass C3 F3 C4 | Ba nốt mốc của khoá Fa
 
 ## So với khoá Sol
-Cùng một vị trí trên khuông, **[[not-nhac|tên nốt]]** ở khoá Fa cao hơn khoá Sol **một bậc 3** (dòng 1: Sol thay vì Mi; khe 1: La thay vì Fa), nhưng **cao độ** thì thấp hơn nhiều (dòng 1 khoá Fa là G2, dòng 1 khoá Sol là E4). Vì vậy không thể đọc khoá Fa bằng cách "nhìn như khoá Sol" — cần học mốc riêng của nó.
+Cùng một vị trí trên khuông, **[[not-nhac|tên nốt]]** ở khoá Fa cao hơn khoá Sol **một bậc 3** (dòng 1: Sol thay vì Mi; khe 1: La thay vì Fa), nhưng **[[cao-do|cao độ]]** thì thấp hơn nhiều (dòng 1 khoá Fa là G2, dòng 1 khoá Sol là E4). Vì vậy không thể đọc khoá Fa bằng cách "nhìn như khoá Sol" — cần học mốc riêng của nó.
 `,
   },
   {
@@ -224,7 +263,7 @@ Tâm của khoá Đô chỉ vào dòng nào thì dòng đó là **[[ban-phim|Đ�
 ::staff alto F3 A3 C4 E4 G4 | Năm dòng của khoá Đô dòng 3 (tâm khoá = C4 ở dòng giữa)
 
 ## Vì sao viola cần khoá riêng?
-Âm vực viola nằm **giữa** violin và cello. Viết bằng [[khoa-sol|khoá Sol]] hay [[khoa-fa|khoá Fa]] đều cần rất nhiều [[khuong-nhac|dòng kẻ phụ]]; khoá Đô dòng 3 đặt Đô giữa vào **giữa khuông**, nên phần lớn nốt viola nằm gọn trong 5 dòng.
+[[cao-do|Âm vực]] viola nằm **giữa** violin và cello. Viết bằng [[khoa-sol|khoá Sol]] hay [[khoa-fa|khoá Fa]] đều cần rất nhiều [[khuong-nhac|dòng kẻ phụ]]; khoá Đô dòng 3 đặt Đô giữa vào **giữa khuông**, nên phần lớn nốt viola nằm gọn trong 5 dòng.
 
 ## Lịch sử
 Khoá Đô bắt nguồn từ chữ **C**, và từng được đặt ở **mọi dòng** trừ dòng trên cùng — nên gọi là khoá Đô "di động". Mỗi vị trí có tên riêng, ví dụ soprano (dòng 1), alto (dòng 3), tenor (dòng 4). Ngày nay chỉ còn alto và tenor được dùng thường xuyên.
@@ -260,7 +299,7 @@ Piano có 88 phím, từ **A0** (thấp nhất) đến **C8** (cao nhất) — h
 ::img 88-key piano colored octaves.svg | 88 phím, mỗi màu là một quãng 8; Đô giữa và La 440 Hz được đánh dấu
 
 ## Vì sao là 88 phím?
-Số phím tăng dần theo lịch sử, vì nhà soạn nhạc luôn muốn thêm âm vực:
+Số phím tăng dần theo lịch sử, vì nhà soạn nhạc luôn muốn thêm [[cao-do|âm vực]]:
 | Thời kỳ | Số phím / âm vực |
 |---|---|
 | Đàn của Cristofori (đầu thế kỷ 18) | Khoảng **49** phím |
@@ -300,7 +339,7 @@ Bên trong cây đàn: [[cau-tao-piano]]. Xem thêm: [[tu-the]] (cách ngồi), 
 ::keyboard C#4 Eb4 F#4 | C♯, E♭, F♯ là các phím đen
 
 ## Phạm vi hiệu lực
-- Đặt **ngay trước một nốt** (dấu hoá bất thường): hiệu lực cho các nốt **cùng cao độ, cùng [[quang|quãng 8]]** đến **hết [[so-chi-nhip|ô nhịp]]** đó, trừ khi bị một dấu hoá khác huỷ.
+- Đặt **ngay trước một nốt** (dấu hoá bất thường): hiệu lực cho các nốt **cùng [[cao-do|cao độ]], cùng [[quang|quãng 8]]** đến **hết [[so-chi-nhip|ô nhịp]]** đó, trừ khi bị một dấu hoá khác huỷ.
 - **Ngoại lệ — [[cham-doi-dau-noi|dấu nối]]**: nếu nốt có dấu hoá được **nối** sang ô nhịp sau, nốt nối vẫn giữ dấu hoá đó.
 - Đặt **ở đầu [[khuong-nhac|khuông]]** ([[hoa-bieu]]): hiệu lực cho mọi nốt cùng tên trong cả bản nhạc.
 
@@ -338,7 +377,7 @@ Khi nốt nằm quá cao hoặc quá thấp so với [[khuong-nhac]], người v
 | 8va (đặt trên nốt) | Chơi **cao hơn** 1 [[quang|quãng 8]] |
 | 8vb (đặt dưới nốt) | Chơi **thấp hơn** 1 quãng 8 |
 | 15ma | Chơi cao hơn 2 quãng 8 |
-| loco | Trở lại cao độ như viết |
+| loco | Trở lại [[cao-do|cao độ]] như viết |
 
 Đường gạch đứt nối sau ký hiệu cho biết phạm vi áp dụng. Trên piano, 8va rất hay gặp ở các đoạn tay phải chạy lên [[ban-phim|vùng phím cao]].
 

@@ -12,7 +12,7 @@ const PERIODS = [
     slug: 'nghe-si-piano-the-ky-19',
     title: 'Nghệ sĩ piano thế kỷ 18–19',
     years: '~1770–1900',
-    intro: `Đàn piano phát triển từ fortepiano tới grand hiện đại (xem [[lich-su-piano]]), kéo theo thế hệ nghệ sĩ bậc thầy (virtuoso) và độc tấu piano như một loại hình biểu diễn riêng. Nhiều nghệ sĩ đồng thời là nhà soạn nhạc và nhà sư phạm.`,
+    intro: `[[dan-piano|Đàn piano]] phát triển từ fortepiano tới grand hiện đại (xem [[lich-su-piano]]), kéo theo thế hệ nghệ sĩ bậc thầy (virtuoso) và độc tấu piano như một loại hình biểu diễn riêng. Nhiều nghệ sĩ đồng thời là nhà soạn nhạc và nhà sư phạm.`,
     groups: [
       ['classical', 'Thời Cổ điển và chuyển giao'],
       ['virtuoso', 'Thời đại nghệ sĩ bậc thầy'],
@@ -165,7 +165,7 @@ export const pianoSchools: Article[] = [
     body: `
 ## Trường phái Nga
 - **Ba trụ cột** thường được nhắc tới ở Nhạc viện Moscow: **Alexander Goldenweiser**, **Konstantin Igumnov** và **[[heinrich-neuhaus|Heinrich Neuhaus]]**. Neuhaus dạy tại Nhạc viện Moscow từ 1922 đến 1964; học trò có [[Richter]] và [[Gilels]].
-- **Tiếng đàn hát**: Igumnov là ví dụ được ghi chép kỹ nhất — tiếng đàn đẹp, nhiều màu sắc, "mang tính chất giọng người"; ưa sự tinh tế, kiềm chế, pianissimo rất mỏng. ([[Richter]] nhận xét tiếng đàn của ông sáng và tinh tế nhưng âm vực sắc thái khá hẹp.)
+- **Tiếng đàn hát**: Igumnov là ví dụ được ghi chép kỹ nhất — tiếng đàn đẹp, nhiều màu sắc, "mang tính chất giọng người"; ưa sự tinh tế, kiềm chế, pianissimo rất mỏng. ([[Richter]] nhận xét tiếng đàn của ông sáng và tinh tế nhưng [[cao-do|âm vực]] sắc thái khá hẹp.)
 - Truyền thống gắn với lối chơi rộng, giàu [[giai-dieu|giai điệu]], bắt rễ từ dân ca Nga và dòng [[Anton Rubinstein]] – [[Rachmaninoff]].
 
 Kỹ thuật liên quan: [[lam-noi-giai-dieu]], [[dien-dat-cau-nhac]].

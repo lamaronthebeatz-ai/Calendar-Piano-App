@@ -25,9 +25,9 @@ Hoà âm jazz dựa trên nền [[he-thong-hoa-am-co-dien|hoà âm chức năng 
 | Ký hiệu | [[chuc-nang-hoa-am|Số La Mã]], [[bass-so|bè trầm có số]] | **Ký hiệu hợp âm** trên lead sheet ([[ky-hieu-hop-am]]) |
 | Kết điển hình | IV – V – I, ii6 – V – I | **[[ii-v-i|ii – V – I]]** |
 | [[luat-hoa-am-bon-be|Viết bè]] | Bốn bè [[dan-giong|SATB]] theo luật | **Xếp hợp âm** trên đàn ([[xep-hop-am]]) |
-| [[giai-dieu|Giai điệu]] trên hợp âm | Từ [[doi-am|đối âm]] và hoà âm | **Hợp âm – âm giai** cho [[ngau-hung-piano|ngẫu hứng]] ([[he-thong-hop-am-am-giai]]) |
+| [[giai-dieu|Giai điệu]] trên hợp âm | Từ [[doi-am|đối âm]] và hoà âm | **Hợp âm – [[am-giai|âm giai]]** cho [[ngau-hung-piano|ngẫu hứng]] ([[he-thong-hop-am-am-giai]]) |
 | Thay đổi hợp âm | Do nhà soạn nhạc cố định | Người chơi **thay thế, tái hoà âm** khi biểu diễn ([[thay-the-hop-am]]) |
-| Tiết tấu | Chia đều | [[swing]] |
+| [[tiet-tau|Tiết tấu]] | Chia đều | [[swing]] |
 
 Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có thể đóng vai **chủ** (I7) và không cần giải quyết (xem [[blues-12-nhip]], [[am-giai-blues]]).
 
@@ -88,7 +88,7 @@ Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2
 
 ## Luyện swing trên piano
 1. Bật máy đếm nhịp ở **phách 2 và 4** (thay vì 1 và 3) — nghe nó như tiếng hi-hat của tay trống.
-2. Chơi âm giai bằng móc đơn swing, nhấn nhẹ nốt "&" (nốt ngắn).
+2. Chơi [[am-giai|âm giai]] bằng móc đơn swing, nhấn nhẹ nốt "&" (nốt ngắn).
 3. Chơi theo bản thu ở nhiều nhịp độ khác nhau và để ý tỉ lệ dài – ngắn thay đổi.
 4. Tay trái đệm [[hop-am-ba|hợp âm]] ngắn kiểu "Charleston" (phách 1 và "& của 2") để cảm nhận [[dao-phach]].
 Lý thuyết hoà âm đi kèm: [[hoa-am-jazz]].
@@ -165,13 +165,13 @@ Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng h
 
 ## Nốt blue thực sự cao bao nhiêu?
 - Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một phần tư cung đến [[cung-nua-cung|nửa cung]]**.
-- Court Cutting (2019) đo cao độ trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 cent** — **giữa** [[quang|quãng]] 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
+- Court Cutting (2019) đo [[cao-do|cao độ]] trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 cent** — **giữa** [[quang|quãng]] 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
 - Vì piano không có cao độ giữa hai phím, người chơi chỉ có thể **gợi** nốt blue — ví dụ [[nghe-si-piano-jazz|Thelonious Monk]] đánh **hai phím liền nhau cùng lúc**, hoặc láy nhanh từ ♭3 lên 3.
 
 ## Âm giai blues là sản phẩm của sách dạy
 - Nguồn gốc nốt blue còn **tranh cãi**: Gerhard Kubik cho rằng chúng đến từ [[chuoi-boi-am|chuỗi bồi âm]] trong truyền thống châu Phi, không phải từ việc "hạ" các nốt bình quân.
 - "Âm giai blues" như một **bài học** xuất hiện muộn: phương pháp piano của Vincent Lopez (1933–34) có lẽ là ấn phẩm đầu tiên nêu một âm giai blues. Trước khi jazz vào giảng đường (khoảng 1967), có **nhiều phiên bản** âm giai blues khác nhau; dạng 6 nốt quen thuộc được các nhà giáo dục jazz như David Baker và Jamey Aebersold phổ biến.
-- Có người phê phán âm giai này **quá đơn giản**, không nắm được tinh thần của blues.
+- Có người phê phán [[am-giai|âm giai]] này **quá đơn giản**, không nắm được tinh thần của blues.
 
 Ý nghĩa với người dạy: âm giai blues là **điểm khởi đầu** hữu ích để ngẫu hứng (xem [[ngau-hung-piano]]), nhưng nên cho học sinh **[[so-sanh-ban-thu|nghe nhiều bản thu]] blues** để hiểu nốt blue thật sự "uốn" thế nào.
 `,
@@ -236,7 +236,7 @@ Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng 
       ['University of Colorado thesis — The Lydian Chromatic Concept and chord-scale theory', 'https://scholar.colorado.edu/downloads/bk128c27z'],
     ],
     body: `
-Mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một âm giai 7 nốt chứa các nốt của [[hop-am-ba|hợp âm]] cùng các [[hop-am-mo-rong|nốt mở rộng]] 9, 11, 13.
+Mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một [[am-giai|âm giai]] 7 nốt chứa các nốt của [[hop-am-ba|hợp âm]] cùng các [[hop-am-mo-rong|nốt mở rộng]] 9, 11, 13.
 
 ## Trong vòng ii – V – I ở Đô trưởng
 | Hợp âm | Âm giai | Ghi chú |
@@ -313,7 +313,7 @@ Nốt **11 tự nhiên** (C trên G7) nghịch [[cung-nua-cung|nửa cung]] vớ
 - Hợp âm 7 át **không giải quyết xuống [[quang|quãng]] 5** (♭VII7, thay thế tritone, IV7 trong blues) thường mang **♯11** (Lydian át).
 
 ## Âm giai đi kèm
-| Ký hiệu | Âm giai | Nguồn gốc | Nốt (gốc G) |
+| Ký hiệu | [[am-giai|Âm giai]] | Nguồn gốc | Nốt (gốc G) |
 |---|---|---|---|
 | G7, G9, G13 | Mixolydian | Bậc 5 âm giai trưởng | G A B C D E F |
 | G7♯11 | **Lydian át** | Bậc 4 của [[am-giai-thu|thứ giai điệu]] D | G A B C♯ D E F |
@@ -424,7 +424,7 @@ Lưu ý khi dùng xếp không gốc:
 ## Drop 2
 Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8: C – E – G – B → G – C – E – B. Rất phổ biến trong guitar và piano big band.
 
-Âm giai chọn nốt mở rộng: [[he-thong-hop-am-am-giai]]. Xếp theo quãng 4: [[hoa-am-quang-bon]].
+[[am-giai|Âm giai]] chọn nốt mở rộng: [[he-thong-hop-am-am-giai]]. Xếp theo quãng 4: [[hoa-am-quang-bon]].
 `,
   },
   {
@@ -447,7 +447,7 @@ Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8
 
 ## Đặc điểm
 - Không rõ trưởng hay thứ; không có lực kéo [[chuc-nang-hoa-am|chức năng]] mạnh → hợp với nhạc **điệu thức** ([[dieu-thuc]]).
-- Có thể **dịch song song** theo các nốt của âm giai mà vẫn hợp — trong D Dorian: D–G–C, E–A–D, G–C–F, A–D–G…
+- Có thể **dịch song song** theo các nốt của [[am-giai|âm giai]] mà vẫn hợp — trong D Dorian: D–G–C, E–A–D, G–C–F, A–D–G…
 
 ## Hợp âm "So What"
 Ba quãng 4 + một quãng 3 trưởng ở trên: **E – A – D – G – B**. Đặt tên theo bài "So What" (Miles Davis, album *Kind of Blue*, 1959): [[bill-evans|Bill Evans]] dùng nó trong hình đáp "amen" sau mỗi câu [[giai-dieu|giai điệu]]. Còn gọi là "Bill Evans voicing" hoặc "Dorian voicing". Vì là sự pha trộn giữa quãng 4 và quãng 3, hợp âm này **đa nghĩa**: cùng một khối có thể đặt lên nhiều hợp âm khác nhau, và rất hợp để [[hoa-am-song-song|dịch song song]].
@@ -660,7 +660,7 @@ So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên kh�
 **Vòng Coltrane** (Coltrane changes) là cách **John Coltrane** thay thế hoà âm, nổi tiếng nhất trong bài **"Giant Steps"** (thu âm tháng 5/1959, album cùng tên phát hành 1960).
 
 ## Ý tưởng: ba giọng cách nhau quãng 3 trưởng
-- Ba trung tâm giọng của "Giant Steps": **Si trưởng, Sol trưởng, Mi giáng trưởng** — mỗi giọng **thấp hơn giọng trước một [[quang|quãng]] 3 trưởng**.
+- Ba [[dieu-tinh|trung tâm giọng]] của "Giant Steps": **Si trưởng, Sol trưởng, Mi giáng trưởng** — mỗi giọng **thấp hơn giọng trước một [[quang|quãng]] 3 trưởng**.
 - Chồng các quãng 3 trưởng sẽ quay về điểm xuất phát sau **ba** bước (B – G – E♭ – B) — tức là ba gốc này tạo thành một [[hop-am-ba-tang|hợp âm ba tăng]]. Quãng 8 được chia thành **ba phần bằng nhau**, một kiểu đối xứng giống [[dieu-thuc-chuyen-vi-gioi-han|các âm giai đối xứng]].
 - Mỗi giọng được dẫn vào bằng **[[hop-am-bay|hợp âm 7 át]]** của nó: Bmaj7 – **D7** – Gmaj7 – **B♭7** – E♭maj7 …
 

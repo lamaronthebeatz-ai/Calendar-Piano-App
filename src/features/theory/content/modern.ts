@@ -63,10 +63,10 @@ Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]
     body: `
 ## Các kỹ thuật đặc trưng
 - **[[hoa-am-song-song|Hợp âm trượt]] song song** (planing): cả khối [[hop-am-ba|hợp âm]] di chuyển cùng hướng, phá bỏ quy tắc cấm [[dan-giong|quãng 5 song song]]. Ví dụ: "La cathédrale engloutie" của [[Debussy]].
-- **Âm giai không trưởng – thứ**: [[am-giai-cromatic|toàn cung]], [[am-giai-ngu-cung|ngũ cung]], [[dieu-thuc|điệu thức nhà thờ]].
+- **[[am-giai|Âm giai]] không trưởng – thứ**: [[am-giai-cromatic|toàn cung]], [[am-giai-ngu-cung|ngũ cung]], [[dieu-thuc|điệu thức nhà thờ]].
 - **Hợp âm mở rộng không giải quyết**: hợp âm 9, 11, 13 được ngân như một màu sắc ([[hop-am-mo-rong]]).
 - **Hoà âm quãng 4 và 5**: xem [[hoa-am-quang-bon]].
-- **Bass ngân dài**, nhịp điệu mềm, mờ ranh giới [[so-chi-nhip|ô nhịp]] ([[bass-ngan]]).
+- **Bass ngân dài**, [[tiet-tau|nhịp điệu]] mềm, mờ ranh giới [[so-chi-nhip|ô nhịp]] ([[bass-ngan]]).
 
 ::staff treble C4+E4+G4+B4 D4+F4+A4+C5 E4+G4+B4+D5 F4+A4+C5+E5 | Hợp âm 7 trượt song song theo âm giai — "planing" diatonic
 
@@ -114,7 +114,7 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz: các tiểu sử về 
 [[Schoenberg]] cùng hai học trò [[Alban Berg]] và [[Anton Webern]]. Giai đoạn "phi điệu tính tự do" (khoảng 1908–1921) dẫn tới [[ky-thuat-12-am]].
 
 ## Vấn đề thuật ngữ
-- Schoenberg **không thích** chữ "atonal" (phi điệu tính): theo ông, nghĩa đen của nó là "không có âm thanh". Ông thích chữ **"pantonal"** (toàn điệu tính) hơn. Các từ thay thế ("pantonal", "non-tonal") đều không phổ biến, nên "phi điệu tính" vẫn là thuật ngữ thông dụng.
+- Schoenberg **không thích** chữ "atonal" (phi điệu tính): theo ông, nghĩa đen của nó là "không có âm thanh". Ông thích chữ **"pantonal"** (toàn [[dieu-tinh|điệu tính]]) hơn. Các từ thay thế ("pantonal", "non-tonal") đều không phổ biến, nên "phi điệu tính" vẫn là thuật ngữ thông dụng.
 - Một số học giả (Ethan Haimo, Jack Boss) cho rằng cặp đối lập "có điệu tính / phi điệu tính" làm đơn giản hoá quá trình chuyển đổi từ từ trong âm nhạc Schoenberg.
 
 ## "Giải phóng nghịch âm" nghĩa là gì?
@@ -161,7 +161,7 @@ Nhà soạn nhạc sắp xếp 12 nốt của [[am-giai-cromatic]] theo một th
 | Nghịch hành | R | Đọc từ cuối về đầu |
 | Đảo nghịch hành | RI | Đảo rồi đọc ngược |
 
-Mỗi dạng có thể dịch lên 12 cao độ → **48 dạng** của một chuỗi, thường được sắp xếp thành **ma trận 12 × 12**. Các phép biến đổi này giống kỹ thuật phát triển [[motif]] truyền thống.
+Mỗi dạng có thể dịch lên 12 [[cao-do|cao độ]] → **48 dạng** của một chuỗi, thường được sắp xếp thành **ma trận 12 × 12**. Các phép biến đổi này giống kỹ thuật phát triển [[motif]] truyền thống.
 
 ## Chuỗi có thể nghe "điệu tính": Concerto violin của Berg
 [[Alban Berg]] (1935) xây chuỗi từ các **[[hop-am-ba|hợp âm ba]] chồng nối nhau**: G thứ – D trưởng – A thứ – E trưởng, rồi bốn nốt cuối B – C♯ – E♭ – F đi lên theo **âm giai toàn cung**. Bốn nốt gốc G – D – A – E trùng với **bốn dây buông** của violin — và đó là những nốt đầu tiên nghệ sĩ độc tấu chơi. Ví dụ này cho thấy: 12 âm là **cách tổ chức**, không bắt buộc âm thanh phải phi điệu tính.
@@ -250,11 +250,11 @@ Hai dạng (bắt đầu từ C):
 ::keyboard C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 | Bát cung nửa cung – cung trên C
 
 ## Đối xứng
-Âm giai là hợp của **hai [[hop-am-bay-giam|hợp âm 7 giảm]]** (C – E♭ – F♯ – A và D♭ – E – G – B♭). Dịch lên [[quang|quãng]] 3 thứ cho ra chính nó → chỉ có **3** âm giai bát cung khác nhau (giống [[am-giai-cromatic|âm giai toàn cung]] chỉ có 2).
+[[am-giai|Âm giai]] là hợp của **hai [[hop-am-bay-giam|hợp âm 7 giảm]]** (C – E♭ – F♯ – A và D♭ – E – G – B♭). Dịch lên [[quang|quãng]] 3 thứ cho ra chính nó → chỉ có **3** âm giai bát cung khác nhau (giống [[am-giai-cromatic|âm giai toàn cung]] chỉ có 2).
 
 ## Lịch sử tên gọi
 - Trong giới nhạc sĩ quanh **[[nikolai-rimsky-korsakov|Rimsky-Korsakov]]** ở St. Petersburg đầu [[thoi-ky-the-ky-20|thế kỷ 20]], âm giai này quen thuộc đến mức được gọi là **"âm giai Korsakov"** (theo nghiên cứu của Richard [[tinh-xac-thuc-bieu-dien|Taruskin]]).
-- Thuật ngữ **"octatonic"** được **Arthur Berger** đưa vào tiếng Anh trong bài *Problems of Pitch Organization in [[igor-stravinsky|Stravinsky]]* (**1963**). Từ đó các nghiên cứu về Stravinsky (Pieter van den Toorn, Taruskin) dùng nó làm khái niệm trung tâm; Dmitri Tymoczko sau này tranh luận lại về mức độ Stravinsky thực sự "nghĩ" theo âm giai này.
+- Thuật ngữ **"octatonic"** được **Arthur Berger** đưa vào tiếng Anh trong bài *Problems of [[cao-do|Pitch]] Organization in [[igor-stravinsky|Stravinsky]]* (**1963**). Từ đó các nghiên cứu về Stravinsky (Pieter van den Toorn, Taruskin) dùng nó làm khái niệm trung tâm; Dmitri Tymoczko sau này tranh luận lại về mức độ Stravinsky thực sự "nghĩ" theo âm giai này.
 
 ## Hợp âm trong âm giai bát cung
 Âm giai bát cung trên C (nửa cung – cung) chứa **bốn [[hop-am-ba|hợp âm trưởng]]** và **bốn hợp âm thứ** có gốc cách nhau quãng 3 thứ: C, E♭, F♯, A (trưởng và thứ) — cùng các [[hop-am-bay|hợp âm 7 át]] C7, E♭7, F♯7, A7. Vì vậy:
@@ -369,7 +369,7 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
 ## Kỹ thuật chính
 - **Lặp lại**: một [[ostinato]] ngắn được lặp đi lặp lại hàng chục, hàng trăm lần.
 - **Quá trình cộng**: thêm từng nốt vào mẫu (1 → 1 2 → 1 2 3…) — Philip Glass.
-- **Lệch pha** (phasing): hai người chơi cùng một mẫu, một người [[kiem-soat-toc-do|tăng tốc]] rất nhẹ cho đến khi lệch một nốt rồi khớp lại — Steve Reich, "Piano Phase" (1967) cho hai cây đàn piano.
+- **Lệch pha** (phasing): hai người chơi cùng một mẫu, một người [[kiem-soat-toc-do|tăng tốc]] rất nhẹ cho đến khi lệch một nốt rồi khớp lại — Steve Reich, "Piano Phase" (1967) cho hai cây [[dan-piano|đàn piano]].
 - **Hoà âm tĩnh**: một hoặc vài [[hop-am-ba|hợp âm]] kéo dài; thay đổi nhỏ trở nên rất rõ.
 
 ## Tác phẩm tiêu biểu
@@ -450,7 +450,7 @@ Hệ thống hợp âm – âm giai trong jazz: [[he-thong-hop-am-am-giai]].
       ['LCS Productions — Music history glossary: pandiatonicism', 'https://lcsproductions.net/MusicHistory/MusHistRev/Glossary/P.html'],
     ],
     body: `
-**Toàn diatonic** (pandiatonicism) là kỹ thuật dùng âm giai **diatonic** (7 nốt, ví dụ chỉ phím trắng) **mà không bị ràng buộc bởi điệu tính chức năng**: các nốt không cần đóng vai trò bậc hay [[hop-am-ba|hợp âm]] có hướng giải quyết.
+**Toàn diatonic** (pandiatonicism) là kỹ thuật dùng [[am-giai|âm giai]] **diatonic** (7 nốt, ví dụ chỉ phím trắng) **mà không bị ràng buộc bởi [[dieu-tinh|điệu tính]] chức năng**: các nốt không cần đóng vai trò bậc hay [[hop-am-ba|hợp âm]] có hướng giải quyết.
 
 ## Định nghĩa của Slonimsky
 Thuật ngữ do nhà âm nhạc học **Nicolas Slonimsky** đặt (các nguồn ghi nơi xuất hiện khác nhau — trong sách *Music since 1900* hoặc trong từ điển Baker's). Theo ông, toàn diatonic cho phép dùng **cùng lúc bất kỳ hoặc tất cả bảy nốt** của âm giai diatonic, trong đó **bè trầm quyết định** hoà âm.
@@ -495,7 +495,7 @@ Thuật ngữ do nhà âm nhạc học **Nicolas Slonimsky** đặt (các nguồ
 |---|---|---|
 | **[[hop-am-mo-rong|Hợp âm mở rộng]]** | Một hợp âm cao (9, 11, 13) | Một khối, một nốt gốc |
 | **Hợp âm chồng** | Hai hợp âm chồng nhau, là **một sự kiện âm thanh** | Tai phải nghe được **hai khối riêng** |
-| **[[da-dieu-tinh|Đa điệu tính]]** | Hai **giọng** (trung tâm điệu tính) song song **kéo dài** | Hai lớp nhạc ở hai giọng |
+| **[[da-dieu-tinh|Đa điệu tính]]** | Hai **giọng** (trung tâm [[dieu-tinh|điệu tính]]) song song **kéo dài** | Hai lớp nhạc ở hai giọng |
 
 Một tiêu chí cảm nhận: hai hợp âm **gần nhau** (nhiều nốt chung, gần trên [[vong-quang-nam|vòng quãng 5]]) thường được nghe là **một hợp âm mở rộng**; hai hợp âm **xa nhau** mới được nghe là hợp âm chồng. [[paul-hindemith|Hindemith]] và Milton Babbitt thậm chí cho rằng tai **không thể** cảm nhận hai nốt gốc cùng lúc — vấn đề vẫn còn tranh luận.
 
@@ -526,7 +526,7 @@ Tổng quan: [[hoa-am-the-ky-20]].
 Trong sách *Technique de mon langage musical* (Kỹ thuật ngôn ngữ âm nhạc của tôi, **1944**, NXB Leduc), [[Messiaen]] trình bày **bảy "điệu thức chuyển vị giới hạn"**.
 
 ## "Chuyển vị giới hạn" nghĩa là gì?
-[[am-giai-truong|Âm giai trưởng]] dịch được sang **12** cao độ khác nhau. Nhưng một âm giai được xây từ **một mẫu [[quang|quãng]] lặp lại** sẽ trùng lại chính nó sau ít lần dịch. Ví dụ âm giai toàn cung C – D – E – F♯ – G♯ – A♯: dịch lên [[cung-nua-cung|nửa cung]] được một âm giai mới, nhưng dịch lên **một cung** lại ra **đúng các nốt cũ** → chỉ có **2** phiên bản.
+[[am-giai-truong|Âm giai trưởng]] dịch được sang **12** [[cao-do|cao độ]] khác nhau. Nhưng một [[am-giai|âm giai]] được xây từ **một mẫu [[quang|quãng]] lặp lại** sẽ trùng lại chính nó sau ít lần dịch. Ví dụ âm giai toàn cung C – D – E – F♯ – G♯ – A♯: dịch lên [[cung-nua-cung|nửa cung]] được một âm giai mới, nhưng dịch lên **một cung** lại ra **đúng các nốt cũ** → chỉ có **2** phiên bản.
 
 ## Bảy điệu thức
 | Điệu | Cấu trúc | Số nốt | Số phiên bản |

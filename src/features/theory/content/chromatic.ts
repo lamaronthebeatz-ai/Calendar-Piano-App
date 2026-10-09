@@ -15,7 +15,7 @@ export const chromatic: Article[] = [
       ['Open Music Theory 2e — Chromatic sequences', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/05%3A_Chromaticism/5.10%3A_Chromatic_Sequences'],
     ],
     body: `
-Hoà âm **diatonic** chỉ dùng 7 nốt của [[hoa-bieu|giọng]]. Hoà âm **cromatic** đưa thêm các nốt thuộc [[am-giai-cromatic]] — nhưng vẫn phục vụ một trung tâm điệu tính.
+Hoà âm **diatonic** chỉ dùng 7 nốt của [[hoa-bieu|giọng]]. Hoà âm **cromatic** đưa thêm các nốt thuộc [[am-giai-cromatic]] — nhưng vẫn phục vụ một trung tâm [[dieu-tinh|điệu tính]].
 
 ## Các nguồn nốt cromatic (từ dễ đến khó)
 | Nguồn | Ví dụ trong Đô trưởng | Bài |
@@ -157,7 +157,7 @@ Viết lại [[ky-hieu-hop-am|tên hợp âm]] (cùng [[ban-phim|phím đàn]]) 
 - **Át phụ**: C♯°7 → Dm (thay cho A7, xem [[hop-am-at-phu]]).
 - **7 giảm nốt chung**: C – D♯°7 (D♯ – F♯ – A – C) – C: nốt C giữ nguyên, các bè khác thêu nửa cung — hợp âm **trang trí**, không có chức năng át. Chi tiết: [[hop-am-not-chung]].
 - **vii°7 trong giọng**: thay cho V7 trong vai trò át — xem [[hop-am-cam-am]].
-- Âm giai đi kèm: [[am-giai-bat-cung]].
+- [[am-giai|Âm giai]] đi kèm: [[am-giai-bat-cung]].
 `,
   },
   {
@@ -183,7 +183,7 @@ Khác với [[ban-dap|pedal của đàn piano]], "pedal" ở đây là [[thuat-n
 ::staff bass C3+E3+G3 C3+F3+A3 C3+D3+G3+B3 C3+E3+G3 | Bass ngân C dưới I – IV – V – I
 
 ## Định nghĩa chặt chẽ
-Một nốt chỉ được gọi là bass ngân khi phía trên nó có **ít nhất một [[hop-am-ba|hợp âm]] không chứa nốt đó** (tức là nghịch với nó). Nốt ngân có thể **giữ dài** hoặc **lặp lại theo tiết tấu**. Bass ngân thường bắt đầu và kết thúc khi hoà âm phía trên **khớp** với nó.
+Một nốt chỉ được gọi là bass ngân khi phía trên nó có **ít nhất một [[hop-am-ba|hợp âm]] không chứa nốt đó** (tức là nghịch với nó). Nốt ngân có thể **giữ dài** hoặc **lặp lại theo [[tiet-tau|tiết tấu]]**. Bass ngân thường bắt đầu và kết thúc khi hoà âm phía trên **khớp** với nó.
 
 ## Bass ngân và hợp âm 6/4
 6/4 thêu (I – IV6/4 – I trên bè trầm chủ âm) là bass ngân ngắn nhất; 6/4 kết rồi V trên cùng một bè trầm là bass ngân át ngắn nhất — xem [[hop-am-sau-bon]].
@@ -218,7 +218,7 @@ Mô tiến là phiên bản hoà âm của kỹ thuật mô tiến [[motif]]: m�
 ::staff treble C4+E4+G4 C4+F4+A4 B3+D4+F4 B3+E4+G4 A3+C4+E4 A3+D4+F4 G3+B3+D4 G3+C4+E4 | Mô tiến quãng 5 đi xuống: I – IV – vii° – iii – vi – ii – V – I
 
 ## Nhận biết
-Một mẫu 2 hợp âm lặp lại ít nhất 2–3 lần ở cao độ khác nhau, giai điệu cũng lặp lại theo. Mô tiến quãng 5 chính là đi ngược chiều kim đồng hồ trên [[vong-quang-nam]].
+Một mẫu 2 hợp âm lặp lại ít nhất 2–3 lần ở [[cao-do|cao độ]] khác nhau, giai điệu cũng lặp lại theo. Mô tiến quãng 5 chính là đi ngược chiều kim đồng hồ trên [[vong-quang-nam]].
 
 ## Thuật ngữ: mẫu và bản sao
 **Mẫu** (model) là lần trình bày đầu tiên — thường **hai hợp âm** cùng giai điệu đi kèm; mỗi lần lặp ở cao độ mới là một **bản sao** (copy). Mô tiến diatonic giữ **cỡ** quãng giữa các bản sao nhưng **tính chất** hợp âm thay đổi theo giọng (C trưởng, rồi B giảm, rồi A thứ…).
@@ -314,7 +314,7 @@ Mỗi phép giữ nguyên **hai nốt chung** và dịch nốt thứ ba theo bư
 - **Frank Lehman**: áp dụng vào nhạc phim (*Hollywood Harmony*, Oxford, 2018).
 
 ## Khi nào dùng Neo-Riemann?
-Khi hoà âm **trôi qua các hợp âm trưởng – thứ** mà không thiết lập giọng rõ ràng ([[franz-liszt|Liszt]], [[richard-wagner|Wagner]] muộn, nhạc phim) — chỗ mà phân tích [[chuc-nang-hoa-am|chức năng]] chỉ ghi được những số La Mã rất lạ. Với nhạc điệu tính chặt chẽ ([[johann-sebastian-bach|Bach]], [[wolfgang-amadeus-mozart|Mozart]]), phân tích chức năng vẫn là công cụ chính.
+Khi hoà âm **trôi qua các hợp âm trưởng – thứ** mà không thiết lập giọng rõ ràng ([[franz-liszt|Liszt]], [[richard-wagner|Wagner]] muộn, nhạc phim) — chỗ mà phân tích [[chuc-nang-hoa-am|chức năng]] chỉ ghi được những số La Mã rất lạ. Với nhạc [[dieu-tinh|điệu tính]] chặt chẽ ([[johann-sebastian-bach|Bach]], [[wolfgang-amadeus-mozart|Mozart]]), phân tích chức năng vẫn là công cụ chính.
 `,
   },
   {
@@ -395,8 +395,8 @@ Một [[hop-am-ba|hợp âm]] hay một nốt được "kéo dài" bằng các h
 - Học trò **Felix Salzer** sang Mỹ năm **1939**, dạy ở Mannes, và viết *Structural Hearing* (**1952**) — giúp phương pháp phổ biến ở các đại học Mỹ, nơi nó trở thành một trong những cách phân tích chủ đạo.
 
 ## Phê bình
-- Phương pháp tập trung vào nhạc **Áo – Đức** từ [[johann-sebastian-bach|Bach]] đến [[johannes-brahms|Brahms]]; khó áp dụng cho nhạc ngoài truyền thống điệu tính đó.
-- Bị cho là **xem nhẹ tiết tấu, câu nhạc và [[hinh-thuc-am-nhac|hình thức]]** so với cao độ.
+- Phương pháp tập trung vào nhạc **Áo – Đức** từ [[johann-sebastian-bach|Bach]] đến [[johannes-brahms|Brahms]]; khó áp dụng cho nhạc ngoài truyền thống [[dieu-tinh|điệu tính]] đó.
+- Bị cho là **xem nhẹ [[tiet-tau|tiết tấu]], câu nhạc và [[hinh-thuc-am-nhac|hình thức]]** so với [[cao-do|cao độ]].
 - Một số người cho rằng cấu trúc nền là **giả định** áp lên tác phẩm hơn là phát hiện từ tác phẩm; những người bảo vệ đáp rằng đó là một cách **nghe**, một diễn giải, chứ không phải "sự thật" duy nhất.
 
 ## Ý nghĩa với người chơi đàn

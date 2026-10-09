@@ -7,6 +7,44 @@ import type { Article } from '../wiki'
  */
 export const technique: Article[] = [
   {
+    slug: 'ky-thuat-piano',
+    title: 'Kỹ thuật piano: hệ thống và lộ trình',
+    category: 'technique',
+    aliases: ['kỹ thuật piano', 'lộ trình kỹ thuật', 'piano technique', 'kỹ thuật chơi đàn', 'kỹ năng piano'],
+    summary: 'Bài tổng quan của mục: các mảng kỹ thuật piano (tư thế và chuyển động, các dạng chạy ngón, chạm phím, phối hợp hai tay, đọc và học bài, biểu diễn và sức khoẻ) và thứ tự đọc các bài.',
+    wiki: 'Piano_pedagogy',
+    refs: [
+      ['Wikipedia — Piano pedagogy', 'https://en.wikipedia.org/wiki/Piano_pedagogy'],
+      ['Wikipedia — Pianist (mục Technique)', 'https://en.wikipedia.org/wiki/Pianist'],
+    ],
+    body: `
+"Kỹ thuật" không chỉ là ngón nhanh: đó là **mọi cách cơ thể tạo ra âm thanh mình muốn**, cộng với cách **luyện tập** để đạt đến đó. Các quan niệm về kỹ thuật đã thay đổi nhiều qua các thế kỷ — từ luyện ngón cô lập đến dùng trọng lượng và chuyển động cả cánh tay (xem [[lich-su-ky-thuat-piano]], [[truong-phai-piano]]).
+
+## Các mảng kỹ thuật
+| Mảng | Bài |
+|---|---|
+| **Nền tảng cơ thể** | [[tu-the]], [[suc-khoe-nguoi-choi-dan]], [[ban-tay-nho]] |
+| **Chạm phím và âm thanh** | [[ky-thuat-cham-phim]], [[lam-noi-giai-dieu]], [[ban-dap]] |
+| **Các dạng chạy ngón** | [[luyen-am-giai]], [[luyen-hop-am-rai]], [[not-kep]], [[ky-thuat-quang-tam]], [[ky-thuat-lay-ren]], [[not-lap-lai]], [[tremolo-xoay-cang-tay]], [[buoc-nhay-xa]] |
+| **Ngón bấm** | [[ngon-bam]] |
+| **Hai tay và nhiều bè** | [[phoi-hop-hai-tay]], [[choi-phuc-dieu]] |
+| **Bài tập** | [[bai-tap-ngon]] |
+| **Đọc và học bài** | [[doc-not-nhanh]], [[thi-tau]], [[hoc-thuoc-bai]], [[tap-trong-dau]], [[phuong-phap-luyen-tap]] |
+| **Thời gian và [[cau-nhac|câu nhạc]]** | [[kiem-soat-toc-do]], [[dien-dat-cau-nhac]], [[rubato]] |
+| **Đệm và ngẫu hứng** | [[dem-hat-piano]], [[dieu-dem-pho-bien]], [[ngau-hung-piano]] |
+| **Biểu diễn** | [[hoi-hop-bieu-dien]] |
+
+## Lộ trình gợi ý
+1. **Trước khi chơi**: [[tu-the]] → [[suc-khoe-nguoi-choi-dan]].
+2. **Cách luyện**: [[phuong-phap-luyen-tap]] — đọc sớm, vì nó áp dụng cho mọi bài sau.
+3. **Âm thanh**: [[ky-thuat-cham-phim]] → [[ngon-bam]] → [[lam-noi-giai-dieu]].
+4. **Các dạng kỹ thuật** theo thứ tự trong bảng trên, song song với tác phẩm phù hợp cấp độ ([[lo-trinh-tac-pham]]).
+5. **Đọc và học bài**: [[doc-not-nhanh]] → [[thi-tau]] → [[hoc-thuoc-bai]] → [[tap-trong-dau]].
+6. **Biểu diễn**: [[dien-dat-cau-nhac]] → [[hoi-hop-bieu-dien]].
+Kỹ thuật phục vụ âm nhạc: song song với các bài trên, nên học [[dien-tau]] (ký hiệu và phong [[cach-dien-tau|cách diễn tấu]]) và [[phan-tich-va-bieu-dien]].
+`,
+  },
+  {
     slug: 'tu-the',
     title: 'Tư thế ngồi đàn',
     category: 'technique',
@@ -68,7 +106,7 @@ Tay trái là hình ảnh đối xứng: đi xuống dùng 5-4-3-2-1 · 3-2-1 (x
 - **Đi xuống**: khi ngón cái đánh F, ngón 3 **vắt qua** để đánh E.
 
 ## Mẹo nhớ: ngón 4 làm mốc
-Mỗi quãng 8 ngón 4 chỉ xuất hiện **một lần** cho mỗi tay. Nhớ ngón 4 rơi vào nốt nào là nhớ được cả ngón bấm của âm giai đó.
+Mỗi quãng 8 ngón 4 chỉ xuất hiện **một lần** cho mỗi tay. Nhớ ngón 4 rơi vào nốt nào là nhớ được cả ngón bấm của [[am-giai|âm giai]] đó.
 
 ## Âm giai có phím đen
 - Ngón bấm của Đô trưởng dùng chung cho **C, G, D, A, E trưởng** và các giọng [[giong-song-song|thứ song song]] của chúng.
@@ -278,7 +316,7 @@ Kết luận của họ: thị tấu giỏi là sự kết hợp của yếu t�
 **Mishra (2014)** tổng hợp 92 nghiên cứu can thiệp về thị tấu:
 - Hiệu quả chung của các phương pháp luyện **khá nhỏ**; nhóm đối chứng cũng tiến bộ theo thời gian.
 - Các loại có tác dụng tích cực rõ: **[[luyen-tai|luyện tai]]**, **đọc có kiểm soát**, **hoạt động sáng tạo** (như [[ngau-hung-piano|ngẫu hứng]]) và **hát / [[xuong-am]]**.
-- Riêng về tiết tấu, các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả.
+- Riêng về [[tiet-tau|tiết tấu]], các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả.
 
 ## Những kỹ năng nền giúp thị tấu
 Phần này tổng hợp từ các bài khác trong thư viện — chúng là những gì người thị tấu phải xử lý tức thì:
@@ -310,7 +348,7 @@ Phần này tổng hợp từ các bài khác trong thư viện — chúng là n
 ## Mẹo thực hành
 - Chọn tốc độ theo **đoạn khó nhất** của phần đang tập, dù các đoạn dễ sẽ thấy chậm.
 - Với đoạn rất nhanh: để máy đếm theo **phân phách** (móc kép), rồi chuyển dần sang móc đơn và [[truong-do|nốt đen]].
-- **Đếm hoặc hát** tiết tấu trước khi bật máy đếm nhịp, để tách việc hiểu nhịp khỏi việc điều khiển ngón.
+- **Đếm hoặc hát** [[tiet-tau|tiết tấu]] trước khi bật máy đếm nhịp, để tách việc hiểu nhịp khỏi việc điều khiển ngón.
 - **Ghi âm** mình chơi cùng máy đếm nhịp rồi nghe lại — dễ phát hiện chỗ chạy nhanh hoặc chậm mà lúc chơi không nhận ra.
 
 ## Kết hợp chậm và nhanh
@@ -362,7 +400,7 @@ Lưu ý: nghiên cứu có quy mô nhỏ (10 người).
 Tập cùng một đoạn trong **nhiều buổi ngắn** trong ngày thay vì một buổi dài.
 
 ## Luyện biến đổi (varied)
-Tiếp cận cùng một đoạn từ nhiều phía: **tay riêng rồi tay đôi** (xem [[phoi-hop-hai-tay]]), đổi tiết tấu, đổi tốc độ, và cả [[tap-trong-dau|tập trong đầu]].
+Tiếp cận cùng một đoạn từ nhiều phía: **tay riêng rồi tay đôi** (xem [[phoi-hop-hai-tay]]), đổi [[tiet-tau|tiết tấu]], đổi tốc độ, và cả [[tap-trong-dau|tập trong đầu]].
 
 ## Biến thể tiết tấu
 Một đoạn móc kép đều (ví dụ C–D–E–F–G–A–B–C) được tập theo:
@@ -515,7 +553,7 @@ Phần lớn nghiên cứu có quy mô nhỏ hoặc mang tính định tính; b�
 Thông điệp cho giáo viên: đau khi chơi đàn **rất phổ biến**, không phải chuyện hiếm — cần hỏi học sinh thường xuyên và dạy cách phòng tránh từ sớm. Người tay nhỏ: xem [[ban-tay-nho]].
 
 ## Yếu tố nguy cơ
-Một tổng quan (17 nghiên cứu) về rối loạn cơ xương liên quan đến chơi đàn piano nêu các yếu tố: **bàn tay nhỏ**, **động tác lặp lại**, **buổi tập kéo dài không nghỉ đủ**, và **tư thế, cách bố trí đàn chưa hợp lý** (xem [[tu-the]]). Căng thẳng tâm lý được ghi nhận là yếu tố nguy cơ của **loạn trương lực cơ khu trú** (focal dystonia).
+Một tổng quan (17 nghiên cứu) về rối loạn cơ xương liên quan đến chơi [[dan-piano|đàn piano]] nêu các yếu tố: **bàn tay nhỏ**, **động tác lặp lại**, **buổi tập kéo dài không nghỉ đủ**, và **tư thế, cách bố trí đàn chưa hợp lý** (xem [[tu-the]]). Căng thẳng tâm lý được ghi nhận là yếu tố nguy cơ của **loạn trương lực cơ khu trú** (focal dystonia).
 
 ## Yếu tố bảo vệ
 - **Khởi động** và giãn cơ được ghi nhận là có tác dụng bảo vệ.
@@ -599,7 +637,7 @@ Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh 
 **Trung dung**: dùng có chọn lọc cho vấn đề cụ thể, ví dụ một giáo viên dùng bài 32–37 để sửa ngón cái cứng hoặc "sập".
 
 ## Czerny
-[[Czerny|Carl Czerny]] được gọi là "cha đẻ của kỹ thuật piano hiện đại". Các tuyển tập như **Op. 599** (cho người mới học), **Op. 299**, **Op. 740** và **Op. 802** (có phần dành riêng cho **độc lập từng ngón**) thường được đánh giá là **có tính âm nhạc hơn** bài tập ngón thuần tuý — dù một số người thấy chúng hơi nhàm và khuyên học kèm tác phẩm phong phú hơn.
+[[Czerny|Carl Czerny]] được gọi là "cha đẻ của [[ky-thuat-piano|kỹ thuật piano]] hiện đại". Các tuyển tập như **Op. 599** (cho người mới học), **Op. 299**, **Op. 740** và **Op. 802** (có phần dành riêng cho **độc lập từng ngón**) thường được đánh giá là **có tính âm nhạc hơn** bài tập ngón thuần tuý — dù một số người thấy chúng hơi nhàm và khuyên học kèm tác phẩm phong phú hơn.
 
 ## Kết luận thực tế
 - Mục tiêu (kỹ thuật vững, ngón độc lập) đáng theo đuổi; tranh cãi là **con đường**.
@@ -705,7 +743,7 @@ Bản lead sheet chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay 
 
 Ghi nhớ trước vài hợp âm hay gặp trong bài và luyện chuyển qua lại giữa chúng (xem [[vong-hop-am]], [[the-dao-hop-am]]).
 
-Các điệu có tiết tấu đặc trưng (slow rock 12/8, bossa nova, cha-cha-cha): [[dieu-dem-pho-bien]].
+Các điệu có [[tiet-tau|tiết tấu]] đặc trưng (slow rock 12/8, bossa nova, cha-cha-cha): [[dieu-dem-pho-bien]].
 
 ## Tay trái theo thể loại
 Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường [[kiem-soat-toc-do|giữ nhịp]] đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
@@ -724,7 +762,7 @@ Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường
       ['PianoGroove — Cha-cha-cha & mambo', 'https://pianogroove.com/jazz-piano-lessons/cha-cha-cha-mambo-tutorial/'],
     ],
     body: `
-Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có tiết tấu đặc trưng.
+Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có [[tiet-tau|tiết tấu]] đặc trưng.
 
 ## Slow rock và ballad 12/8
 - 12/8 là [[so-chi-nhip|nhịp kép]] **bốn phách lớn**, mỗi phách chia ba: đếm "**1** và a **2** và a **3** và a **4** và a".
@@ -774,7 +812,7 @@ Piano không thể nối âm thật như giọng hát: mỗi nốt tắt dần n
 | **Legato chồng** (legatissimo) | Ngón trước **chỉ nhả sau khi** nốt sau đã vang, nhả từ từ — cho [[giai-dieu|giai điệu]] "hát" |
 | **"Pedal ngón"** | Giữ hẳn một số nốt (thường là nốt [[hop-am-ba|hợp âm]]) lâu hơn giá trị viết, như một chiếc pedal nhỏ |
 
-Phím sau càng được nhấn **sớm** trong lúc phím trước đang nhả thì càng liền. Mức chồng nhiều hay ít tuỳ ngữ cảnh, **âm vực** (âm trầm ngân lâu nên dễ bị nhoè) và thẩm mỹ người chơi. Khi không thể nối bằng ngón, có thể dùng **đổi ngón trên phím** (xem [[choi-phuc-dieu]]) hoặc [[ban-dap|pedal]].
+Phím sau càng được nhấn **sớm** trong lúc phím trước đang nhả thì càng liền. Mức chồng nhiều hay ít tuỳ ngữ cảnh, **[[cao-do|âm vực]]** (âm trầm ngân lâu nên dễ bị nhoè) và thẩm mỹ người chơi. Khi không thể nối bằng ngón, có thể dùng **đổi ngón trên phím** (xem [[choi-phuc-dieu]]) hoặc [[ban-dap|pedal]].
 
 Lưu ý với người mới: **giữ ngón quá giá trị nốt** một cách vô tình là thói quen xấu, gây nhoè — khác với legato chồng có chủ ý.
 
@@ -810,7 +848,7 @@ Liên quan: [[lam-noi-giai-dieu]], [[dien-dat-cau-nhac]], [[lich-su-ky-thuat-pia
     ],
     body: `
 ## Ba loại "độc lập"
-1. **Tiết tấu**: một tay móc đơn, tay kia [[lien-ba]]; hoặc một tay giữ nốt dài trong khi tay kia chạy.
+1. **[[tiet-tau|Tiết tấu]]**: một tay móc đơn, tay kia [[lien-ba]]; hoặc một tay giữ nốt dài trong khi tay kia chạy.
 2. **[[cuong-do|Cường độ]]**: [[giai-dieu|giai điệu]] to, đệm nhỏ — xem [[lam-noi-giai-dieu]].
 3. **Cách chạm phím**: một tay legato, tay kia [[cach-dien-tau|staccato]] — xem [[ky-thuat-cham-phim]].
 
@@ -893,7 +931,7 @@ Trang tiêu đề Inventions và Sinfonias của [[Bach]] (1723) nói rõ mục 
 ## Tách bè để tập
 - Chơi **từng bè riêng** với đúng [[cach-dien-tau|cách diễn tấu]] của nó; nếu có thể, **hát** một bè trong khi chơi bè kia.
 - Ghép **từng cặp bè**, rồi mới cả ba.
-- Khi ghép, luôn biết **bè nào đang mang chủ đề** và bè nào làm nền tiết tấu.
+- Khi ghép, luôn biết **bè nào đang mang chủ đề** và bè nào làm nền [[tiet-tau|tiết tấu]].
 
 ## Hai bè trong một tay
 Một tay có thể vừa giữ nốt dài của bè trên vừa chạy bè dưới. Nốt giữ phải **giữ đúng giá trị** — không nhấc sớm vì tay cần di chuyển.
@@ -971,7 +1009,7 @@ Các tranh cãi về bài tập [[bai-tap-ngon|Hanon]] ngày nay bắt nguồn m
 
 ## 2. Trường phái trọng lượng (khoảng 1890–1930)
 - **Tony Bandmann** (nghiên cứu năm 1893) góp phần quyết định vào việc chuyển từ "kỹ thuật ngón" sang "kỹ thuật trọng lượng".
-- Thuật ngữ "**trọng lượng**" — dùng trọng lực một cách có ý thức — có lẽ do [[ferruccio-busoni|Busoni]] đưa vào; Busoni ủng hộ **Rudolf Breithaupt** với cuốn *Kỹ thuật piano tự nhiên*.
+- Thuật ngữ "**trọng lượng**" — dùng trọng lực một cách có ý thức — có lẽ do [[ferruccio-busoni|Busoni]] đưa vào; Busoni ủng hộ **Rudolf Breithaupt** với cuốn *[[ky-thuat-piano|Kỹ thuật piano]] tự nhiên*.
 - **Tobias Matthay** với *The Act of Touch* (**1903**) ở Anh nhấn mạnh **cánh tay, cơ thể** và trọng lượng.
 - **Friedrich Adolf Steinhausen** (1905) cung cấp cơ sở **sinh lý học**, chỉ ra các "sai lầm sinh lý" của kỹ thuật cũ.
 
@@ -981,7 +1019,7 @@ Lời khuyên "dùng trọng lượng cánh tay chứ không dùng sức ngón" 
 - **Otto Ortmann** (Nhạc viện Peabody) — *The Physiological Mechanics of Piano Technique* (**1929**): áp dụng cơ học, giải phẫu xương – cơ và sinh lý thần kinh vào cách chạm phím. Một số thuật ngữ của ông nay đã lỗi thời.
 - **Josef Lhévinne** — *Basic Principles in [[lich-su-piano|Pianoforte]] Playing* (**1924**): kỹ thuật phải **phục vụ hiểu biết âm nhạc**; trọng tâm là **tiếng đàn đẹp**, "cánh tay lơ lửng trong không khí", cổ tay như **bộ giảm xóc**. "Sự tinh tế là không thể với một cánh tay nặng nề."
 - **[[heinrich-neuhaus|Heinrich Neuhaus]]** — *Nghệ thuật chơi piano*: đặt **hình tượng nghệ thuật** và **tiếng đàn** lên trước kỹ thuật thuần tuý; người học phải "**nghe âm nhạc trong đầu**" trước khi chạm đàn; mục tiêu cuối cùng là học trò **tự dạy được mình**.
-- **György Sándor** — *On Piano Playing* (1981): quy kỹ thuật về **năm chuyển động cơ bản** — rơi tự do, mẫu năm ngón (âm giai, [[luyen-hop-am-rai|hợp âm rải]]), **xoay**, [[cach-dien-tau|staccato]] và **đẩy** — rồi áp dụng vào tác phẩm.
+- **György Sándor** — *On Piano Playing* (1981): quy kỹ thuật về **năm chuyển động cơ bản** — rơi tự do, mẫu năm ngón ([[am-giai|âm giai]], [[luyen-hop-am-rai|hợp âm rải]]), **xoay**, [[cach-dien-tau|staccato]] và **đẩy** — rồi áp dụng vào tác phẩm.
 - **Dorothy Taubman** (1917–2013): nổi tiếng nhờ **phục hồi cho người chơi bị chấn thương**; cho rằng kỹ thuật (hơn là tài năng) quyết định cả trình độ lẫn nguy cơ chấn thương. Trọng tâm là **chuyển động phối hợp** của cả cơ thể và **xoay cẳng tay** (xem [[tremolo-xoay-cang-tay]]). Một số thuật ngữ của phương pháp này cũng bị giới khoa học coi là đã lỗi thời.
 
 ## Ý nghĩa với người dạy

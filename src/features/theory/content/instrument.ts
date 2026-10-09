@@ -3,6 +3,34 @@ import type { Article } from '../wiki'
 /** Cây đàn piano: lịch sử, cấu tạo, bộ máy, các loại đàn, bảo dưỡng. Nguồn ghi trong `refs`. */
 export const instrument: Article[] = [
   {
+    slug: 'dan-piano',
+    title: 'Đàn piano: hệ thống và lộ trình',
+    category: 'instrument',
+    aliases: ['đàn piano', 'nhạc cụ piano', 'về đàn piano', 'lộ trình nhạc cụ', 'the piano'],
+    summary: 'Bài tổng quan của mục: đàn piano là nhạc cụ dây gõ bằng búa qua bàn phím. Bài nêu các mảng kiến thức về nhạc cụ — lịch sử, cấu tạo, bộ máy, các loại đàn, bảo dưỡng — và vì sao người chơi nên biết chúng.',
+    wiki: 'Piano',
+    refs: [
+      ['Wikipedia — Piano', 'https://en.wikipedia.org/wiki/Piano'],
+      ['The Met — The Piano: The Pianofortes of Bartolomeo Cristofori (1655–1731)', 'https://www.metmuseum.org/essays/the-piano-the-pianofortes-of-bartolomeo-cristofori-1655-1731'],
+    ],
+    body: `
+Đàn piano là nhạc cụ có **dây** được **búa gõ** khi nhấn phím. Tên gọi đầy đủ *pianoforte* ("nhỏ – to") nói lên điểm mới của nó so với harpsichord: độ to **thay đổi theo lực nhấn**. Nhạc cụ đầu tiên thuộc loại này do Bartolomeo **Cristofori** chế tạo ở Florence vào khoảng năm 1700 (xem [[lich-su-piano]]).
+
+## Vì sao người chơi cần hiểu nhạc cụ?
+- **Âm thanh**: biết búa, dây, bảng cộng hưởng hoạt động thế nào giúp hiểu vì sao "[[ky-thuat-cham-phim|chạm phím]]" tạo khác biệt và vì sao âm piano **tắt dần** (xem [[cau-tao-piano]], [[am-sac]]).
+- **Kỹ thuật**: bộ máy quyết định nốt lặp nhanh, cách giữ phím nửa chừng, cách bàn đạp làm việc (xem [[bo-may-piano]], [[not-lap-lai]], [[ban-dap]]).
+- **Phong cách**: nhạc [[johann-sebastian-bach|Bach]], [[wolfgang-amadeus-mozart|Mozart]], [[ludwig-van-beethoven|Beethoven]] được viết cho những nhạc cụ khác đàn hiện đại (xem [[dan-phim-co]], [[phong-cach-dien-tau]], [[tinh-xac-thuc-bieu-dien]]).
+- **Thực tế**: chọn đàn, đặt đàn, giữ đàn đúng [[cao-do|cao độ]] (xem [[cac-loai-dan-piano]], [[bao-duong-piano]], [[am-hoc-phong]]).
+
+## Lộ trình học
+1. **Lịch sử**: [[dan-phim-co]] → [[lich-su-piano]].
+2. **Bên trong cây đàn**: [[cau-tao-piano]] → [[bo-may-piano]] → [[ban-dap]].
+3. **Bàn phím và âm vực**: [[ban-phim]].
+4. **Chọn và giữ đàn**: [[cac-loai-dan-piano]] → [[bao-duong-piano]].
+5. **Âm học liên quan**: [[am-hoc-co-ban]], [[chuoi-boi-am]] (vì sao dây đàn được lên hơi lệch), [[luat-binh-quan]].
+`,
+  },
+  {
     slug: 'lich-su-piano',
     title: 'Lịch sử đàn piano',
     category: 'instrument',
@@ -97,7 +125,7 @@ Khi chơi nhạc Baroque trên piano, hiểu cách tạo tiếng của harpsicho
 Để tiếng to hơn, dây được căng ở lực rất cao. Tổng lực căng dây của một cây **grand biểu diễn lớn** vào khoảng **30 tấn** (phần lớn đàn có ít hơn). Khung gang chịu lực này; đến cuối thế kỷ 19, gần như mọi cây piano đều dùng khung gang. Khung grand biểu diễn nặng khoảng 160–180 kg, và chính sự cộng hưởng của khung cũng góp phần vào [[am-sac|âm sắc]].
 
 ## Số dây cho mỗi nốt
-- Vùng **cao và giữa**: mỗi nốt **3 dây** cùng cao độ.
+- Vùng **cao và giữa**: mỗi nốt **3 dây** cùng [[cao-do|cao độ]].
 - Vùng **trầm**: **2 dây**, rồi **1 dây** ở những nốt thấp nhất (dây quấn).
 - Tổng cộng một cây piano thường có khoảng **220–240 dây** cho 88 phím (xem [[ban-phim]]).
 
@@ -188,7 +216,7 @@ Lưu ý: nhiều nguồn về chủ đề này là trang của cửa hàng nhạ
     body: `
 ## Nhiệt độ và độ ẩm
 Hội Kỹ thuật viên Piano Mỹ (Piano Technicians Guild — PTG) nêu điều kiện lý tưởng khoảng **68 °F (≈ 20 °C)** và **độ ẩm tương đối 42%**.
-- Quá ẩm → cao độ bị **cao lên**.
+- Quá ẩm → [[cao-do|cao độ]] bị **cao lên**.
 - Quá khô → cao độ bị **thấp xuống**, và có thể làm yếu các mối keo của [[cau-tao-piano|bảng cộng hưởng]].
 - Đặt đàn **tránh xa** cửa ra vào, cửa sổ hay mở, và **cửa gió** điều hoà, máy sưởi.
 

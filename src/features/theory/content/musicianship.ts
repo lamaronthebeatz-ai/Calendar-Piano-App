@@ -17,12 +17,14 @@ export const musicianship: Article[] = [
     body: `
 Mục này dành cho hai đối tượng: **người học** muốn có đôi tai tốt, và **người dạy** muốn dạy có phương pháp. Hai mảng gắn với nhau: phần lớn các phương pháp giáo dục âm nhạc lớn đều đặt **nghe và hát** trước **ký hiệu**.
 
+Kiến thức nhạc lý đi kèm (ký hiệu, tiết tấu, cao độ, âm giai): [[nhac-ly-co-ban]].
+
 ## Phần A — Kỹ năng nghe
 1. [[luyen-tai]] — cảm âm tương đối, nội dung cần luyện.
 2. [[cao-do-tuyet-doi]] — hiểu đúng về cảm âm tuyệt đối.
 3. [[xuong-am]] — Đô cố định và Đô di động.
 4. [[am-tiet-nhip]] — đọc tiết tấu bằng âm tiết (ta – ti, takadimi…).
-5. [[ky-am]] — nghe và ghi lại [[giai-dieu|giai điệu]], tiết tấu, hoà âm.
+5. [[ky-am]] — nghe và ghi lại [[giai-dieu|giai điệu]], [[tiet-tau|tiết tấu]], hoà âm.
 6. [[ly-thuyet-hoc-am-nhac-gordon]] — "nghe trong đầu" (audiation) và trình tự học.
 7. [[tap-trong-dau]] — luyện tập không cần đàn.
 Liên quan: [[nghe-nhac-chu-dong]], [[cam-nhan-am-thanh]], [[phan-luong-thinh-giac]].
@@ -66,7 +68,7 @@ Các nội dung này chính là phần **thi nghe** trong các kỳ thi piano (x
 - Nhận ra **quãng** giai điệu và hoà âm (xem mẹo nhớ quãng bằng bài hát trong [[quang]]).
 - Phân biệt [[hop-am-ba|hợp âm]] trưởng, thứ, giảm, tăng; [[hop-am-bay]].
 - Nhận ra [[cau-ket|kết]] (trọn, nửa, lừa) và [[so-chi-nhip|nhịp 2, 3, 4]].
-- Vỗ lại tiết tấu; hát lại giai điệu; nhận biết giai điệu đi lên hay đi xuống.
+- Vỗ lại [[tiet-tau|tiết tấu]]; hát lại giai điệu; nhận biết giai điệu đi lên hay đi xuống.
 
 ## Luyện tai có hệ thống
 Bốn công cụ bổ sung cho nhau (lộ trình ở [[lo-trinh-luyen-tai-su-pham]]):
@@ -93,7 +95,7 @@ Luyện nghe tác phẩm trọn vẹn: [[nghe-nhac-chu-dong]]. Cơ sở tâm lý
 ## Phổ biến đến mức nào?
 - Con số **"1 trên 10.000"** bắt nguồn từ ước tính của Bachem (1955) dựa trên nhạc công và sinh viên âm nhạc ở Chicago — nhưng **không được bằng chứng ủng hộ**.
 - Một tổng quan năm 2019 cho thấy tỉ lệ **ít nhất khoảng 4%** trong sinh viên âm nhạc.
-- Tỉ lệ cao hơn rõ rệt ở người có tuổi thơ tại **Đông Á**. Một giải thích là tiếp xúc với cao độ gắn với tên gọi có nghĩa từ rất sớm — phù hợp với các **ngôn ngữ có thanh điệu** (như tiếng Quan Thoại, Quảng Đông). Một nghiên cứu khác thấy người gốc Đông Á lớn lên ở Mỹ, Canada không khác biệt so với người da trắng cùng vùng, nên cho rằng **kinh nghiệm ngôn ngữ** quan trọng hơn di truyền.
+- Tỉ lệ cao hơn rõ rệt ở người có tuổi thơ tại **Đông Á**. Một giải thích là tiếp xúc với [[cao-do|cao độ]] gắn với tên gọi có nghĩa từ rất sớm — phù hợp với các **ngôn ngữ có thanh điệu** (như tiếng Quan Thoại, Quảng Đông). Một nghiên cứu khác thấy người gốc Đông Á lớn lên ở Mỹ, Canada không khác biệt so với người da trắng cùng vùng, nên cho rằng **kinh nghiệm ngôn ngữ** quan trọng hơn di truyền.
 
 ## Có học được không?
 Quan niệm cũ coi cảm âm tuyệt đối là "có hoặc không" và chỉ hình thành trong một "giai đoạn vàng" thời thơ ấu đã bị thách thức: nghiên cứu ở Đại học Chicago cho thấy kỹ năng này có thể phát triển cả khi trưởng thành. Tuy vậy, một phương pháp hiệu quả với trẻ 2–4 tuổi lại **không hiệu quả với trẻ từ 5 tuổi trở lên**.
@@ -124,7 +126,7 @@ Hệ thống tên Ut–Re–Mi bắt nguồn từ [[Guido d'Arezzo]] (thế kỷ
 |---|---|---|
 | "Đô" là | Luôn là nốt **C** | **Âm chủ** của [[am-giai-truong|giọng trưởng]] đang hát |
 | [[hop-am-ba|Hợp âm trưởng]] trên G | Sol – Si – Rê | Đô – Mi – Sol |
-| Thế mạnh | Gắn tên với cao độ cụ thể; hợp với nhạc [[chuyen-giong|chuyển giọng]] phức tạp, nhạc [[thoi-ky-the-ky-20|thế kỷ 20]]–21 | Giữ nguyên quan hệ [[quang]] và [[bac-am-giai|bậc]] ở mọi giọng → luyện [[luyen-tai|cảm âm tương đối]] |
+| Thế mạnh | Gắn tên với [[cao-do|cao độ]] cụ thể; hợp với nhạc [[chuyen-giong|chuyển giọng]] phức tạp, nhạc [[thoi-ky-the-ky-20|thế kỷ 20]]–21 | Giữ nguyên quan hệ [[quang]] và [[bac-am-giai|bậc]] ở mọi giọng → luyện [[luyen-tai|cảm âm tương đối]] |
 
 Với Đô di động, hợp âm trưởng hát từ nốt gốc **luôn là Đô – Mi – Sol** ở bất kỳ giọng nào. Một số hệ thống dùng thêm âm tiết cho nốt [[am-giai-cromatic|cromatic]] (ví dụ C♯ là "di", B♭ là "ta").
 
@@ -149,7 +151,7 @@ Các nhà giáo dục không thống nhất: một số cho rằng Đô di độ
       ["Mr. A's Music Place — A review of rhythm syllable systems", 'https://mramusicplace.net/2014/03/18/a-review-of-rhythm-syllable-systems/'],
     ],
     body: `
-Đọc tiết tấu bằng **âm tiết** giúp người học **nói ra** được nhịp điệu trước khi đọc và chơi nó — một bước trung gian giữa nghe và ký hiệu.
+Đọc tiết tấu bằng **âm tiết** giúp người học **nói ra** được [[tiet-tau|nhịp điệu]] trước khi đọc và chơi nó — một bước trung gian giữa nghe và ký hiệu.
 
 ## Hai cách nghĩ
 - **Gắn với giá trị nốt**: mỗi loại nốt có một âm tiết (nốt đen = "ta", hai móc đơn = "ti-ti"). Dễ cho trẻ nhỏ.
@@ -194,7 +196,7 @@ Liên quan: [[truong-do]], [[so-chi-nhip]], [[cam-nhan-phach]], [[ky-am]].
       ['Journal of Research in Music Education — 1986 study of dictation strategies (abstract)', 'https://journals.sagepub.com/doi/10.2307/3345259'],
     ],
     body: `
-**Ký âm** là nghe rồi **viết lại** những gì nghe được: tiết tấu, [[giai-dieu|giai điệu]], hoặc hoà âm (bè trầm và [[hop-am-ba|hợp âm]]). Đây là phần khó nhất của môn [[luyen-tai]] vì đòi hỏi cùng lúc nghe, nhớ, hiểu và ghi.
+**Ký âm** là nghe rồi **viết lại** những gì nghe được: [[tiet-tau|tiết tấu]], [[giai-dieu|giai điệu]], hoặc hoà âm (bè trầm và [[hop-am-ba|hợp âm]]). Đây là phần khó nhất của môn [[luyen-tai]] vì đòi hỏi cùng lúc nghe, nhớ, hiểu và ghi.
 
 ## Bốn khâu (Karpinski)
 Trong *Aural Skills Acquisition* (2000), Gary Karpinski chia ký âm giai điệu thành bốn khâu:
@@ -208,7 +210,7 @@ Chenette (*Journal of Music Theory Pedagogy*) cho rằng **trí nhớ làm việ
 
 ## Hai kỹ thuật vượt giới hạn trí nhớ
 - **Nghe chọn lọc** (extractive listening): mỗi lần nghe chỉ tập trung nhớ **một phần** (ví dụ 4 nốt đầu, hoặc chỉ bè trầm).
-- **Gom nhóm** ([[phuong-phap-luyen-tap|chunking]]): nhớ nốt theo **nhóm có nghĩa** — một [[luyen-hop-am-rai|hợp âm rải]], một đoạn âm giai, một [[motif|motif]] — thay vì từng nốt rời. Có thể luyện bằng cách **nói ra** giai điệu: "đi lên theo âm giai từ bậc 1 tới bậc 5, rồi nhảy xuống bậc 3".
+- **Gom nhóm** ([[phuong-phap-luyen-tap|chunking]]): nhớ nốt theo **nhóm có nghĩa** — một [[luyen-hop-am-rai|hợp âm rải]], một đoạn [[am-giai|âm giai]], một [[motif|motif]] — thay vì từng nốt rời. Có thể luyện bằng cách **nói ra** giai điệu: "đi lên theo âm giai từ bậc 1 tới bậc 5, rồi nhảy xuống bậc 3".
 
 ## Nghiên cứu nói gì?
 - Một nghiên cứu năm 1986 (136 sinh viên lý thuyết) so sánh sáu chiến lược (viết ngay khi nghe, tập trung nghe trước rồi mới viết, hát trước khi viết…) **không tìm thấy khác biệt có ý nghĩa** giữa các chiến lược.
@@ -244,12 +246,12 @@ Trước khi viết, luôn **hát lại** đoạn vừa nghe: nếu chưa hát l
 ## Audiation — "nghe trong đầu có hiểu"
 **Audiation** là khả năng **nghe và hiểu** âm nhạc khi âm thanh **không vang lên thật** — giống như ta "nghe" một bài hát trong đầu, hoặc hiểu câu nói khi đọc thầm. Gordon phân biệt:
 - **Bắt chước**: lặp lại được âm thanh mà **chưa chắc hiểu** nó.
-- **Audiation**: âm thanh mang **ý nghĩa** — biết đâu là [[bac-am-giai|chủ âm]], đâu là [[so-chi-nhip|phách mạnh]], nhận ra mẫu [[giai-dieu|giai điệu]] và tiết tấu.
+- **Audiation**: âm thanh mang **ý nghĩa** — biết đâu là [[bac-am-giai|chủ âm]], đâu là [[so-chi-nhip|phách mạnh]], nhận ra mẫu [[giai-dieu|giai điệu]] và [[tiet-tau|tiết tấu]].
 Gordon về sau chia audiation thành nhiều **loại** và **giai đoạn**; các [[an-ban-urtext|ấn bản]] sách của ông đưa ra con số khác nhau (ví dụ sáu giai đoạn, hoặc năm giai đoạn và tám loại), nên khi trích dẫn cần ghi rõ ấn bản.
 
 ## Các giai đoạn audiation (theo bản tóm tắt sáu giai đoạn)
 1. Giữ lại âm thanh trong khoảnh khắc.
-2. Bắt chước và audiate các **mẫu cao độ** và **mẫu tiết tấu**; nhận ra **chủ âm** và các **phách lớn**.
+2. Bắt chước và audiate các **mẫu [[cao-do|cao độ]]** và **mẫu tiết tấu**; nhận ra **chủ âm** và các **phách lớn**.
 3. Xác lập **giọng** và **loại nhịp**.
 4. Giữ trong đầu các mẫu đã được tổ chức.
 5. Nhớ lại các mẫu đó khi gặp trong **bản nhạc khác**.
@@ -297,7 +299,7 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
     body: `
 | Phương pháp | Người sáng lập | Trọng tâm |
 |---|---|---|
-| **Dalcroze** | Émile Jaques-Dalcroze | Vận động cơ thể theo nhịp điệu (eurhythmics), [[xuong-am]], [[ngau-hung-piano|ngẫu hứng]] |
+| **Dalcroze** | Émile Jaques-Dalcroze | Vận động cơ thể theo [[tiet-tau|nhịp điệu]] (eurhythmics), [[xuong-am]], [[ngau-hung-piano|ngẫu hứng]] |
 | **Kodály** | [[Kodály|Zoltán Kodály]] | Hát là nền tảng; dân ca; [[xuong-am|Đô di động]] và ký hiệu tay; [[doc-not-nhanh|đọc nhạc]] |
 | **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết [[hop-am-ba|hợp âm]] nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, glockenspiel); ngẫu hứng nhiều hơn Kodály |
 | **Suzuki** | Shinichi Suzuki | Học nhạc như học **tiếng mẹ đẻ**: bắt đầu rất sớm, nghe nhiều, học thuộc trước, **phụ huynh** tham gia |
@@ -433,7 +435,7 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
 | Phần | Điểm |
 |---|---|
 | 3 bài chuẩn bị (mỗi bài 30) | 90 |
-| Âm giai và hợp âm rải | 21 |
+| [[am-giai|Âm giai]] và hợp âm rải | 21 |
 | Thị tấu | 21 |
 | Thi nghe | 18 |
 | **Tổng** | **150** |
@@ -443,7 +445,7 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
 ## Từng phần luyện gì
 - **Âm giai và hợp âm rải**: [[luyen-am-giai]], [[luyen-hop-am-rai]]; Grade 1 bắt đầu với âm giai Đô trưởng và hợp âm rải đơn giản.
 - **Thị tấu**: chơi một bản ngắn chưa từng thấy sau thời gian xem ngắn — xem [[thi-tau]].
-- **Thi nghe**: vỗ lại tiết tấu, nhận ra [[giai-dieu|giai điệu]] đi lên hay xuống… — xem [[luyen-tai]].
+- **Thi nghe**: vỗ lại [[tiet-tau|tiết tấu]], nhận ra [[giai-dieu|giai điệu]] đi lên hay xuống… — xem [[luyen-tai]].
 - **Bài chuẩn bị**: thường gồm các phong cách khác nhau — xem [[cac-thoi-ky]], [[dien-dat-cau-nhac]] và gợi ý tác phẩm theo cấp độ ở [[lo-trinh-tac-pham]].
 
 ## Lưu ý

@@ -92,7 +92,7 @@ Học giả **Stefan Hagel** (2019) đặt nghi vấn: hình ảnh một "lý th
     ],
     body: `
 ## Pythagoras: âm nhạc là con số
-Truyền thống Pythagoras gắn âm nhạc với **toán học**: cao độ tỉ lệ nghịch với độ dài dây, và các quãng **thuận** ứng với **tỉ lệ số đơn giản** — [[quang|quãng 8]] là 2 : 1, quãng 5 là 3 : 2, quãng 4 là 4 : 3 (xem [[chuoi-boi-am]], [[luat-binh-quan]], [[thuan-nghich]]). Từ đó nảy sinh ý tưởng **musica universalis**: chuyển động của Mặt Trời, Mặt Trăng và các hành tinh cũng là một thứ "âm nhạc" theo những tỉ lệ ấy.
+Truyền thống Pythagoras gắn âm nhạc với **toán học**: [[cao-do|cao độ]] tỉ lệ nghịch với độ dài dây, và các quãng **thuận** ứng với **tỉ lệ số đơn giản** — [[quang|quãng 8]] là 2 : 1, quãng 5 là 3 : 2, quãng 4 là 4 : 3 (xem [[chuoi-boi-am]], [[luat-binh-quan]], [[thuan-nghich]]). Từ đó nảy sinh ý tưởng **musica universalis**: chuyển động của Mặt Trời, Mặt Trăng và các hành tinh cũng là một thứ "âm nhạc" theo những tỉ lệ ấy.
 
 ## Boethius: ba loại âm nhạc
 Trong *De institutione musica* (đầu thế kỷ 6), **Boethius** dựa trên ý tưởng Pythagoras và chia âm nhạc thành ba loại:
@@ -280,7 +280,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 Một định nghĩa tốt phải bao quát **mọi** thứ ta gọi là âm nhạc — từ thánh ca, nhạc gamelan, rap đến nhạc điện tử — và **loại ra** những thứ không phải (tiếng xe cộ, tiếng nói thường). Các tiêu chí quen thuộc đều gặp phản ví dụ:
 | Tiêu chí | Phản ví dụ |
 |---|---|
-| Có **cao độ**, [[giai-dieu|giai điệu]] | Nhạc cho trống; [[am-cum|âm cụm]]; nhạc ồn |
+| Có **[[cao-do|cao độ]]**, [[giai-dieu|giai điệu]] | Nhạc cho trống; [[am-cum|âm cụm]]; nhạc ồn |
 | Do **nhạc cụ** tạo ra | Tiếng thu âm từ môi trường, nhạc điện tử |
 | Có **[[kiem-soat-toc-do|nhịp đều]]** | Thánh ca Gregorian, nhiều nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] |
 | **Dễ nghe**, đẹp | Nhiều tác phẩm cố tình gây khó chịu |
@@ -436,7 +436,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
     ],
     body: `
 ## Phong trào biểu diễn theo phong cách lịch sử
-Từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]], nhiều nghệ sĩ cố gắng chơi nhạc [[thoi-ky-baroque|Baroque]] và Cổ điển **như thời của nó**: nhạc cụ cổ ([[dan-phim-co|harpsichord]], fortepiano), cao độ và cách lên dây cổ, cách trang trí và diễn tấu theo các khảo luận đương thời (xem [[phong-cach-dien-tau]], [[an-ban-urtext]], [[lich-su-piano]]). Phong trào từng mang tên **"biểu diễn xác thực"** (authentic performance) — và chính chữ "xác thực" gây tranh luận.
+Từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]], nhiều nghệ sĩ cố gắng chơi nhạc [[thoi-ky-baroque|Baroque]] và Cổ điển **như thời của nó**: nhạc cụ cổ ([[dan-phim-co|harpsichord]], fortepiano), [[cao-do|cao độ]] và cách lên dây cổ, cách trang trí và [[dien-tau|diễn tấu]] theo các khảo luận đương thời (xem [[phong-cach-dien-tau]], [[an-ban-urtext]], [[lich-su-piano]]). Phong trào từng mang tên **"biểu diễn xác thực"** (authentic performance) — và chính chữ "xác thực" gây tranh luận.
 
 ## Kivy: bốn nghĩa của "xác thực"
 Trong *Authenticities* (1995), triết gia **Peter [[bieu-hien-cam-xuc-am-nhac|Kivy]]** phân biệt:
@@ -517,7 +517,7 @@ Năm phẩm chất của Hume — tinh tế, thực hành, so sánh, không đ�
 
 ## Nhạc đại chúng: chuẩn hoá và cá nhân hoá giả (1941)
 Trong *On Popular Music* (1941, viết cùng George Simpson), Adorno cho rằng đặc điểm cốt lõi của nhạc đại chúng là **chuẩn hoá**:
-- Khuôn cố định: ví dụ điệp khúc **32 ô** (xem [[hinh-thuc-ca-khuc-32]]), âm vực [[giai-dieu|giai điệu]] gói gọn trong một [[quang|quãng 8]], các "kiểu" bài hát lặp lại.
+- Khuôn cố định: ví dụ điệp khúc **32 ô** (xem [[hinh-thuc-ca-khuc-32]]), [[cao-do|âm vực]] [[giai-dieu|giai điệu]] gói gọn trong một [[quang|quãng 8]], các "kiểu" bài hát lặp lại.
 - **Cá nhân hoá giả**: những khác biệt bề mặt tạo **ảo giác lựa chọn tự do**, trong khi chất liệu đã được chọn sẵn cho người nghe.
 
 ## Công nghiệp văn hoá (1944)

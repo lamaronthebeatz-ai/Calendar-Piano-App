@@ -64,7 +64,7 @@ Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép
       ['Vos & Troost (1989) — Ascending and descending melodic intervals: statistical findings and their perceptual relevance (Music Perception)', 'https://labs.sonicfield.org/library/ascending-and-descending-melodic-intervals-statistical-findings-and-their-percep'],
     ],
     body: `
-Giai điệu = **cao độ** ([[not-nhac]], [[quang]]) + **nhịp điệu** ([[truong-do]]).
+Giai điệu = **[[cao-do|cao độ]]** ([[not-nhac]], [[quang]]) + **[[tiet-tau|nhịp điệu]]** ([[truong-do]]).
 
 ## Đường nét
 - **Đi lên**: tăng năng lượng, hướng tới cao trào.
@@ -72,7 +72,7 @@ Giai điệu = **cao độ** ([[not-nhac]], [[quang]]) + **nhịp điệu** ([[t
 - **Hình vòm** (lên rồi xuống): đường nét phổ biến nhất trong [[cau-nhac]].
 
 ## Chuyển động
-- **Liền bậc**: đi sang nốt kề bên trong âm giai — dễ hát, mượt.
+- **Liền bậc**: đi sang nốt kề bên trong [[am-giai|âm giai]] — dễ hát, mượt.
 - **Nhảy quãng**: quãng 3 trở lên — tạo điểm nhấn. Quy tắc cổ điển: sau một **bước nhảy lớn**, giai điệu thường **quay ngược lại** bằng bước liền bậc.
 
 ## Vì sao sau bước nhảy giai điệu hay quay lại?
@@ -111,7 +111,7 @@ Ví dụ nổi tiếng nhất: bốn nốt **ngắn – ngắn – ngắn – d�
 
 ## Grundgestalt và "biến tấu phát triển"
 [[Schoenberg]] đặt tên cho hai ý tưởng có liên hệ với nhau:
-- **Grundgestalt** ("hình dạng cơ bản"): một nhóm yếu tố — chuỗi [[quang|quãng]], nhịp điệu, quan hệ hoà âm — mà từ đó **phần lớn chất liệu** của tác phẩm được suy ra. Motif là **phần nhỏ nhất** của nó; một Grundgestalt có thể chứa nhiều motif.
+- **Grundgestalt** ("hình dạng cơ bản"): một nhóm yếu tố — chuỗi [[quang|quãng]], [[tiet-tau|nhịp điệu]], quan hệ hoà âm — mà từ đó **phần lớn chất liệu** của tác phẩm được suy ra. Motif là **phần nhỏ nhất** của nó; một Grundgestalt có thể chứa nhiều motif.
 - **Biến tấu phát triển** (developing [[bien-tau|variation]]): **quá trình** biến đổi liên tục hình dạng ấy bằng đảo, nới rộng quãng, phân đoạn, đặt lệch so với phách…
 
 Schoenberg coi [[Brahms]] là bậc thầy của lối viết này (gọi ông là "Brahms người cấp tiến"), và truy nguồn nó về các nhà soạn nhạc Cổ điển Vienna như Beethoven và [[Schubert]].
@@ -120,7 +120,7 @@ Schoenberg coi [[Brahms]] là bậc thầy của lối viết này (gọi ông l
 | Kỹ thuật | Cách làm |
 |---|---|
 | Lặp lại | Nhắc lại y nguyên |
-| Mô tiến ([[mo-tien-hoa-am|sequence]]) | Lặp lại ở cao độ khác, cao dần hoặc thấp dần |
+| Mô tiến ([[mo-tien-hoa-am|sequence]]) | Lặp lại ở [[cao-do|cao độ]] khác, cao dần hoặc thấp dần |
 | Đảo | Lật ngược chiều các quãng (lên thành xuống) |
 | Nghịch hành | Đọc từ cuối về đầu |
 | Tăng [[truong-do|trường độ]] | Kéo dài mọi nốt (thường gấp đôi) |
@@ -309,7 +309,7 @@ Trio thường **tương phản** với minuet — về giọng, kết cấu ho�
 
 ## Từ minuet đến scherzo
 - Trong bộ tứ tấu đàn dây **Op. 33** (1781), [[Haydn]] thay tên "Minuet" bằng **"Scherzo"** (tiếng Ý: trò đùa) — khung hình thức vẫn là minuet – trio.
-- [[Beethoven]] biến nhịp điệu lịch sự của minuet thành một vũ điệu **mãnh liệt** hơn, nhanh hơn. Ông viết scherzo trong hầu hết chín bản giao hưởng, dù chỉ gọi tên "scherzo" trong bản số 2 và số 3.
+- [[Beethoven]] biến [[tiet-tau|nhịp điệu]] lịch sự của minuet thành một vũ điệu **mãnh liệt** hơn, nhanh hơn. Ông viết scherzo trong hầu hết chín bản giao hưởng, dù chỉ gọi tên "scherzo" trong bản số 2 và số 3.
 - Thời Cổ điển, minuet (sau là scherzo) thường là **chương ba** của [[hinh-thuc-sonata|sonata]], tứ tấu, giao hưởng.
 
 ## Phân tích một minuet: các bước
@@ -466,7 +466,7 @@ Vì có hai lần trình bày (dàn nhạc rồi độc tấu), các sách cũ g
 - Caplin nhấn mạnh rằng **dấu vết của ritornello** vẫn còn trong sự luân phiên tutti – solo, dù nằm trong kế hoạch giọng của sonata. Một số nhà nghiên cứu khác cho rằng chương concerto có **tính độc lập** riêng, không nên coi đơn giản là một biến thể của sonata.
 
 ## Với người học piano
-- Khi học một concerto (kể cả bản rút gọn hai đàn piano), xác định **R1, S1, phát triển, tái hiện, cadenza** trên bản nhạc — giúp hiểu khi nào mình "dẫn" và khi nào mình "đáp" dàn nhạc.
+- Khi học một concerto (kể cả bản rút gọn hai [[dan-piano|đàn piano]]), xác định **R1, S1, phát triển, tái hiện, cadenza** trên bản nhạc — giúp hiểu khi nào mình "dẫn" và khi nào mình "đáp" dàn nhạc.
 - Cadenza là chỗ thể hiện sự tự do — nhưng thường đi theo một [[hop-am-sau-bon|hợp âm 6/4 kết]] và kết bằng [[hop-am-ba|hợp âm]] át có láy rền (xem [[ky-hieu-hoa-my]]).
 `,
   },
@@ -492,7 +492,7 @@ Sơ đồ: **A – A1 – A2 – A3 …** Chủ đề thường ngắn, dạng [
 
 ## Những gì có thể biến đổi
 - **[[giai-dieu|Giai điệu]]**: thêm [[ky-hieu-hoa-my|hoa mỹ]], chia nhỏ [[truong-do]], dùng [[not-ngoai-hop-am]].
-- **Nhịp điệu**: chuyển sang [[lien-ba]], [[dao-phach]], đổi [[so-chi-nhip]].
+- **[[tiet-tau|Nhịp điệu]]**: chuyển sang [[lien-ba]], [[dao-phach]], đổi [[so-chi-nhip]].
 - **Hoà âm**: đổi sang [[giong-song-song|giọng cùng tên]] thứ (biến tấu "minore"), [[tai-hoa-am|thay hợp âm]].
 - **Kết cấu**: chuyển giai điệu xuống tay trái, viết [[doi-am]] (xem [[ket-cau]]).
 - **[[nhip-do|Nhịp độ]] và tính chất**: biến tấu chậm Adagio, biến tấu kết thúc nhanh rực rỡ.
@@ -532,7 +532,7 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
 |---|---|---|
 | **Đơn âm** (monophony) | Một [[giai-dieu|giai điệu]], không đệm | Thánh ca Gregorian, hát ru |
 | **Chủ điệu** (homophony) | Một giai điệu chính + [[hop-am-ba|hợp âm]] đệm | Phần lớn nhạc pop, [[the-loai|nocturne]] [[frederic-chopin|Chopin]] |
-| **Hợp âm khối** (homorhythm) | Mọi bè cùng nhịp điệu | Thánh ca 4 bè |
+| **Hợp âm khối** (homorhythm) | Mọi bè cùng [[tiet-tau|nhịp điệu]] | Thánh ca 4 bè |
 | **Phức điệu** (polyphony) | Nhiều giai điệu độc lập, ngang hàng | Fugue, canon của [[johann-sebastian-bach|Bach]] |
 | **Dị âm** (heterophony) | Nhiều người chơi cùng giai điệu với [[bien-tau|biến tấu]] nhỏ khác nhau | Nhạc dân tộc, nhã nhạc cung đình |
 
@@ -656,7 +656,7 @@ Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thư�
 Tên gọi: tiếng Ý *ostinato* nghĩa là **"bướng bỉnh"**, cùng gốc Latin *obstinatus* với từ "obstinate" trong tiếng Anh. Số nhiều: *ostinati*.
 
 ## Các dạng
-- **Ostinato [[giai-dieu|giai điệu]] / nhịp điệu**: ví dụ mẫu trống lặp trong "Boléro" ([[Ravel]]), hay riff guitar trong rock.
+- **Ostinato [[giai-dieu|giai điệu]] / [[tiet-tau|nhịp điệu]]**: ví dụ mẫu trống lặp trong "Boléro" ([[Ravel]]), hay riff guitar trong rock.
 - **Bass lặp** (basso ostinato, ground bass): một câu bè trầm lặp lại, phía trên là các [[bien-tau|biến tấu]].
 
 ## Passacaglia và chaconne
@@ -747,7 +747,7 @@ Viết hai bè sao cho khi đưa bè dưới lên trên một quãng 8, kết qu
 ## Các loại canon
 | Loại | Bè sau mô phỏng bè trước bằng cách |
 |---|---|
-| Canon đồng âm / quãng 8 | Lặp nguyên cao độ (hát nối, "round") |
+| Canon đồng âm / quãng 8 | Lặp nguyên [[cao-do|cao độ]] (hát nối, "round") |
 | Canon ở quãng 5, quãng 4… | Dịch lên một [[quang]] cố định |
 | Canon đảo | Lật ngược hướng các quãng |
 | Canon tăng/giảm [[truong-do|trường độ]] | Chơi chậm/nhanh gấp đôi |
@@ -845,7 +845,7 @@ Khác với [[bien-tau|biến tấu]] (chủ đề và các biến thể nối t
 
 ## Phân tích biến đổi chủ đề
 1. Tìm **dạng gốc** của chủ đề (thường ở đầu tác phẩm).
-2. Khi chủ đề quay lại, so sánh: cao độ ([[quang|quãng]], đường nét) **giữ** gì? Nhịp, nhịp độ, hoà âm, [[cuong-do|cường độ]], cách diễn tấu **đổi** gì?
+2. Khi chủ đề quay lại, so sánh: [[cao-do|cao độ]] ([[quang|quãng]], đường nét) **giữ** gì? Nhịp, nhịp độ, hoà âm, [[cuong-do|cường độ]], cách diễn tấu **đổi** gì?
 3. Tính cách mới gắn với **vị trí** nào trong [[hinh-thuc-am-nhac|hình thức]] (đỉnh cao, kết, chương chậm…)?
 
 ## Với người chơi đàn

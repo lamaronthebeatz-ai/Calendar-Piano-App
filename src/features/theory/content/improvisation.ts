@@ -78,7 +78,7 @@ Một người (giáo viên hoặc đệm tự động) chơi một [[vong-hop-a
 Một khoá học cho người mới bắt đầu ngay trên **5 phím đen** (cũng là một âm giai ngũ cung) rồi mới chuyển sang phím trắng.
 
 ## 3. Hỏi – đáp
-Bài tập cốt lõi: một câu "**hỏi**" bằng [[giai-dieu|giai điệu]], rồi một câu "**đáp**" bổ sung — như một cuộc trò chuyện (giống câu hỏi – câu trả lời trong [[cau-nhac]]). Giáo viên chơi câu hỏi, học trò đáp; sau đó đổi vai. Dần dần yêu cầu chính xác hơn về tiết tấu, [[cuong-do]] và [[cach-dien-tau]].
+Bài tập cốt lõi: một câu "**hỏi**" bằng [[giai-dieu|giai điệu]], rồi một câu "**đáp**" bổ sung — như một cuộc trò chuyện (giống câu hỏi – câu trả lời trong [[cau-nhac]]). Giáo viên chơi câu hỏi, học trò đáp; sau đó đổi vai. Dần dần yêu cầu chính xác hơn về [[tiet-tau|tiết tấu]], [[cuong-do]] và [[cach-dien-tau]].
 
 ## 4. Mở rộng
 - Trải âm giai ngũ cung ra **hai [[quang|quãng 8]]** trở lên.
@@ -173,7 +173,7 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
 (Tổng hợp từ các mô tả trên.)
 1. Bắt đầu sau 6/4 kết — kéo dài **cảm giác chờ** hợp âm át.
 2. Nhắc lại, biến đổi các **chủ đề** của chương.
-3. Phô diễn kỹ thuật (âm giai, [[luyen-hop-am-rai|hợp âm rải]], [[quang|quãng 8]]) nhưng vẫn quay quanh giọng chủ.
+3. Phô diễn kỹ thuật ([[am-giai|âm giai]], [[luyen-hop-am-rai|hợp âm rải]], [[quang|quãng 8]]) nhưng vẫn quay quanh giọng chủ.
 4. Kết trên **át có láy rền** — tín hiệu để dàn nhạc vào.
 Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
 `,
@@ -284,12 +284,12 @@ Trong các buổi hoà nhạc và salon thế kỷ 18–19, nghệ sĩ piano th�
 - Czerny dành riêng phần cho **prelude** trong sách dạy ngẫu hứng Op. 200 (1829) (xem [[lich-su-ngau-hung]]).
 
 ## Từ prelude ứng tác đến prelude viết sẵn
-Thực hành này sinh ra các **tiểu phẩm prelude** viết sẵn: ngắn, tự do, xoay quanh một hình tiết tấu hoặc một nét kỹ thuật. **24 Prelude Op. 28** của Chopin là ví dụ nổi tiếng. [[johann-sebastian-bach|Bach]] trước đó cũng ghép prelude với [[fugue|fugue]] (xem [[phan-tich-prelude-do-truong]]).
+Thực hành này sinh ra các **tiểu phẩm prelude** viết sẵn: ngắn, tự do, xoay quanh một hình [[tiet-tau|tiết tấu]] hoặc một nét kỹ thuật. **24 Prelude Op. 28** của Chopin là ví dụ nổi tiếng. [[johann-sebastian-bach|Bach]] trước đó cũng ghép prelude với [[fugue|fugue]] (xem [[phan-tich-prelude-do-truong]]).
 
 ## Một prelude ứng tác thường gồm
 (Tổng hợp từ mô tả của các nghiên cứu trên.)
 - Vài **[[hop-am-ba|hợp âm]]** xác lập giọng: I – IV – V – I, có thể thêm [[hop-am-at-phu|át phụ]].
-- **[[luyen-hop-am-rai|Hợp âm rải]]** hoặc âm giai trải khắp [[ban-phim|bàn phím]].
+- **[[luyen-hop-am-rai|Hợp âm rải]]** hoặc [[am-giai|âm giai]] trải khắp [[ban-phim|bàn phím]].
 - Một **gợi ý** về chủ đề hoặc tính chất của bài sắp chơi.
 - Kết trên **hợp âm át** (để dẫn vào bài) hoặc trên chủ.
 
@@ -323,7 +323,7 @@ Người chơi giữ vị trí trong hình thức nhờ **trí nhớ, nghe, tín
 Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994), dựa trên phỏng vấn nhiều nhạc sĩ, mô tả ngẫu hứng như một **ngôn ngữ**, một thẩm mỹ và một **truyền thống**, phía sau là **cả đời chuẩn bị**:
 - **Xây từ vựng**: học thuộc các [[cau-nhac|câu nhạc]], cụm nốt từ bản thu của các bậc thầy — tương tự học từ và cụm từ của một ngôn ngữ.
 - **Chép solo** (transcription): nghe và ghi (hoặc học thuộc bằng tai) các solo nổi tiếng; sách của Berliner có các bản chép ngẫu hứng tập thể của nhóm Miles Davis và John Coltrane.
-- **Lý thuyết** [[hop-am-ba|hợp âm]] – âm giai và **từ vựng học từ bản thu** đều là thành phần thiết yếu (xem [[he-thong-hop-am-am-giai]]).
+- **Lý thuyết** [[hop-am-ba|hợp âm]] – [[am-giai|âm giai]] và **từ vựng học từ bản thu** đều là thành phần thiết yếu (xem [[he-thong-hop-am-am-giai]]).
 - Nhạc sĩ hình dung âm nhạc theo nhiều cách: bằng **tai**, hình ảnh, cảm giác vận động, lời nói, cảm xúc, lý thuyết.
 
 ## Các kỹ năng nền
@@ -340,7 +340,7 @@ Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994),
 (Gợi ý tổng hợp, không phải quy tắc.)
 - **Câu nhạc có thở**: nghỉ giữa các câu như người nói chuyện.
 - **Phát triển motif**: lặp lại, biến đổi một ý thay vì chuỗi nốt rời (xem [[motif]]).
-- **Đường cong** cả solo: bắt đầu đơn giản, tăng dần mật độ và âm vực, rồi khép lại.
+- **Đường cong** cả solo: bắt đầu đơn giản, tăng dần mật độ và [[cao-do|âm vực]], rồi khép lại.
 - **Nghe và đáp** lại các nhạc công khác.
 Lộ trình cả mục: [[ngau-hung-ung-tac]].
 `,
@@ -376,7 +376,7 @@ Nghệ sĩ guitar **Derek Bailey**, trong *[[ngau-hung-piano|Improvisation]]: It
 
 ## Học ngẫu hứng tự do
 (Gợi ý tổng hợp.)
-- Bắt đầu bằng **một ràng buộc duy nhất** thay vì không ràng buộc nào: chỉ dùng một [[quang|quãng]], một nhịp điệu, một âm vực, một [[am-cum|âm cụm]]…
+- Bắt đầu bằng **một ràng buộc duy nhất** thay vì không ràng buộc nào: chỉ dùng một [[quang|quãng]], một [[tiet-tau|nhịp điệu]], một [[cao-do|âm vực]], một [[am-cum|âm cụm]]…
 - Chú ý **âm thanh và kết cấu**, không chỉ cao độ (xem [[am-sac]], [[ket-cau]]).
 - **Lắng nghe**: trong ngẫu hứng nhóm, phản ứng với người khác quan trọng hơn chơi nhiều nốt.
 - Thu âm và nghe lại để nhận ra thói quen của chính mình.
@@ -404,7 +404,7 @@ Nhà tâm lý học – nhạc sĩ **Jeff Pressing** đề xuất một mô hìn
 - Các khung và kho chất liệu giúp người chơi làm việc trong **giới hạn rất chặt** của khả năng xử lý thông tin của con người — vì vậy ngẫu hứng giỏi cần **luyện tập lâu dài** để nhiều thứ trở thành tự động.
 
 ## Limb & Braun (2008): não khi ngẫu hứng
-- **Charles Limb** và **Allen Braun** chụp **fMRI** các [[nghe-si-piano-jazz|nghệ sĩ piano jazz]] chuyên nghiệp (các báo cáo ghi **6 người**) khi chơi trên một [[ban-phim|bàn phím]] nhỏ trong máy chụp, so sánh: chơi **âm giai Đô trưởng** hoặc một **giai điệu [[blues-12-nhip|blues]] đã học thuộc**, với **ngẫu hứng** trên cùng khung.
+- **Charles Limb** và **Allen Braun** chụp **fMRI** các [[nghe-si-piano-jazz|nghệ sĩ piano jazz]] chuyên nghiệp (các báo cáo ghi **6 người**) khi chơi trên một [[ban-phim|bàn phím]] nhỏ trong máy chụp, so sánh: chơi **[[am-giai|âm giai]] Đô trưởng** hoặc một **giai điệu [[blues-12-nhip|blues]] đã học thuộc**, với **ngẫu hứng** trên cùng khung.
 - Kết quả: khi ngẫu hứng, vùng **trước trán bên lưng** (dorsolateral prefrontal) và vùng ổ mắt bên **giảm hoạt động** rộng, trong khi vùng **trước trán giữa** (cực trán) **tăng hoạt động**.
 - Tác giả diễn giải: ngẫu hứng gắn với hành vi **xuất phát từ bên trong**, trong khi các quá trình **tự giám sát** và **kiểm soát có ý thức** được "nới lỏng".
 - Giới hạn: mẫu **rất nhỏ**, môi trường máy chụp khác xa sân khấu, và đây là **một** nghiên cứu.
@@ -447,7 +447,7 @@ Mô tả chi tiết các cấp 3–7 nên đối chiếu bài gốc; khung này 
 | Cách luyện | Nguồn gốc / ví dụ | Bài liên quan |
 |---|---|---|
 | **Hỏi – đáp** | Giáo dục [[nhac-pho|âm nhạc phổ]] thông; jazz (trading fours) | [[ngau-hung-piano]], [[ngau-hung-jazz]] |
-| **Ràng buộc**: ít nốt (ngũ cung, phím đen), một nhịp điệu, một âm vực | Chương trình nhập môn | [[am-giai-ngu-cung]] |
+| **Ràng buộc**: ít nốt (ngũ cung, phím đen), một [[tiet-tau|nhịp điệu]], một [[cao-do|âm vực]] | Chương trình nhập môn | [[am-giai-ngu-cung]] |
 | **Phát triển một motif**: lặp, [[mo-tien-hoa-am|mô tiến]], đảo, đổi nhịp | Kỹ thuật sáng tác cổ điển | [[motif]] |
 | **Học khuôn mẫu** rồi kết hợp | Czerny Op. 200; quy tắc quãng 8; lược đồ galant | [[lich-su-ngau-hung]], [[partimento]], [[luoc-do-galant]] |
 | **Hiện thực bè trầm** | Bè trầm có số, partimento | [[bass-so]] |
@@ -459,7 +459,7 @@ Mô tả chi tiết các cấp 3–7 nên đối chiếu bài gốc; khung này 
 
 ## Nguyên tắc chung (tổng hợp)
 - **Khung trước, tự do sau**: một [[vong-hop-am|vòng hợp âm]] hay bè trầm cố định giúp người học tập trung vào việc tạo giai điệu.
-- **Từ ít đến nhiều**: vài nốt → âm giai → [[hop-am-ba|hợp âm]] → hợp âm đổi nhanh.
+- **Từ ít đến nhiều**: vài nốt → [[am-giai|âm giai]] → [[hop-am-ba|hợp âm]] → hợp âm đổi nhanh.
 - **Nghe trong đầu trước khi chơi** (xem [[ly-thuyet-hoc-am-nhac-gordon|audiation]], [[tap-trong-dau]]).
 - **Thu âm và nghe lại**: đánh giá sau, không phải trong lúc chơi (xem [[khoa-hoc-ngau-hung]]).
 - **Đều đặn**: vài phút ngẫu hứng mỗi buổi tập, thay vì thỉnh thoảng một buổi dài.

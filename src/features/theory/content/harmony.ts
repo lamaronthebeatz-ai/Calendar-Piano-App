@@ -22,6 +22,7 @@ Bài này là **mục lục** của toàn bộ phần hoà âm trong thư viện
 - Mỗi bài: **đọc → nghe ví dụ → chơi trên đàn** → tìm lại trong một bản nhạc thật (xem [[phan-tich-hoa-am]]).
 - Song song suốt lộ trình: [[luyen-tai|luyện tai]] (nghe ra hợp âm và chức năng) và [[xuong-am|xướng âm]].
 - Tra từ: [[thuat-ngu-hoa-am|bảng thuật ngữ Việt – Anh]].
+- Cần nắm trước: đọc nốt, tiết tấu, cao độ, âm giai và giọng — xem [[nhac-ly-co-ban]].
 
 ## Phần I — Hoà âm cổ điển (thời kỳ thông dụng, khoảng 1650–1900)
 Tổng quan và bản đồ: [[he-thong-hoa-am-co-dien]].
@@ -76,7 +77,7 @@ Tổng quan và bản đồ: [[he-thong-hoa-am-co-dien]].
 30. [[luoc-do-galant|Lược đồ galant và quy tắc quãng 8]].
 
 ## Chương 7. Hoà âm cromatic
-*Mục tiêu: nhận ra và viết các hợp âm ngoài âm giai, chuyển giọng.*
+*Mục tiêu: nhận ra và viết các hợp âm ngoài [[am-giai|âm giai]], chuyển giọng.*
 Tổng quan: [[hoa-am-cromatic]].
 31. [[hop-am-at-phu|Hợp âm át phụ]] (cromatic hoá đơn giản nhất).
 32. [[chuyen-giong|Chuyển giọng]].
@@ -89,7 +90,7 @@ Tổng quan: [[hoa-am-cromatic]].
 39. [[trung-am-cromatic|Quan hệ trung âm cromatic]].
 
 ## Chương 8. Lý thuyết phân tích nâng cao
-*Mục tiêu: hai cách nhìn hiện đại về hoà âm điệu tính.*
+*Mục tiêu: hai cách nhìn hiện đại về hoà âm [[dieu-tinh|điệu tính]].*
 40. [[phan-tich-schenker|Phân tích Schenker]] — cấu trúc nhiều tầng.
 41. [[neo-riemann|Lý thuyết Neo-Riemann]] — hoà âm cromatic cuối thế kỷ 19.
 
@@ -234,13 +235,13 @@ Thuật ngữ hoà âm tiếng Việt chưa thống nhất giữa các giáo tr�
 | Hợp âm chồng | polychord | [[hop-am-chong]] |
 | Đa điệu tính | polytonality | [[da-dieu-tinh]] |
 | Phi điệu tính | atonality | [[phi-dieu-tinh]] |
-| Tập hợp cao độ; lớp cao độ | pitch-class set; pitch class | [[tap-hop-cao-do]] |
+| Tập hợp [[cao-do|cao độ]]; lớp cao độ | pitch-class set; pitch class | [[tap-hop-cao-do]] |
 | Kỹ thuật 12 âm; chuỗi | twelve-tone technique; row, serialism | [[ky-thuat-12-am]] |
 | Nhạc tối giản | minimalism | [[toi-gian]] |
 | Âm nhạc phổ | spectral music | [[nhac-pho]] |
 | Hoà âm jazz | jazz harmony | [[hoa-am-jazz]] |
 | ii – V – I; nốt dẫn hướng | ii–V–I; guide tones | [[ii-v-i]] |
-| Hệ thống hợp âm – âm giai | chord–scale theory | [[he-thong-hop-am-am-giai]] |
+| Hệ thống hợp âm – âm giai | chord–[[am-giai|scale]] theory | [[he-thong-hop-am-am-giai]] |
 | Hợp âm át biến hoá; âm giai biến đổi | altered dominant; altered scale | [[hop-am-at-bien-hoa]] |
 | Thay thế hợp âm; backdoor | chord substitution; backdoor progression | [[thay-the-hop-am]] |
 | Rhythm changes; contrafact | rhythm changes; contrafact | [[rhythm-changes]] |
@@ -314,7 +315,7 @@ Nghiên cứu khối liệu **254 câu nhạc** trong thánh ca 4 bè của Bach
 ## Lộ trình học hoà âm cổ điển trong thư viện
 Lộ trình chi tiết, đánh số từng bài, nằm ở [[giao-trinh-hoa-am]]. Tóm tắt tám chương của phần cổ điển:
 1. **Nền tảng âm thanh**: [[quang]], [[thuan-nghich]], [[chuoi-boi-am]].
-2. **Âm giai và giọng**: [[am-giai-truong]], [[am-giai-thu]], [[bac-am-giai]], [[vong-quang-nam]].
+2. **[[am-giai|Âm giai và giọng]]**: [[am-giai-truong]], [[am-giai-thu]], [[bac-am-giai]], [[vong-quang-nam]].
 3. **Hợp âm**: [[hop-am-ba]], [[the-dao-hop-am]], [[hop-am-bay]], [[ky-hieu-hop-am]], [[bass-so]].
 4. **Cú pháp**: [[chuc-nang-hoa-am]], [[cau-ket]], [[hop-am-cam-am]], [[nhip-dieu-hoa-am]], [[vong-hop-am]], [[mo-tien-hoa-am]].
 5. **Viết bè**: [[dan-giong]], [[luat-hoa-am-bon-be]], [[hop-am-sau-bon]], [[not-ngoai-hop-am]], [[bass-ngan]].
@@ -349,7 +350,7 @@ Sau năm 1900, nhiều nhà soạn nhạc tìm cách **phá vỡ** hoặc **mở
 - **Cách xây [[hop-am-ba|hợp âm]]**: không chỉ chồng [[quang|quãng 3]] mà còn chồng quãng 4, quãng 5, quãng 2, hoặc chồng hai hợp âm.
 - **Vai trò của hợp âm**: hợp âm được chọn vì **màu sắc âm thanh** nhiều hơn vì **chức năng** (đi đâu, giải quyết thế nào).
 
-Sách *Twentieth-Century Harmony* (1961) của Vincent Persichetti là giáo trình kinh điển trình bày có hệ thống các thủ pháp này: hợp âm chồng quãng 3, 4, 2, hợp âm thêm nốt, hợp âm chồng, chuyển động hoà âm, và hoà âm trong điệu tính, đa điệu tính, phi điệu tính, nhạc chuỗi.
+Sách *Twentieth-Century Harmony* (1961) của Vincent Persichetti là giáo trình kinh điển trình bày có hệ thống các thủ pháp này: hợp âm chồng quãng 3, 4, 2, hợp âm thêm nốt, hợp âm chồng, chuyển động hoà âm, và hoà âm trong [[dieu-tinh|điệu tính]], đa điệu tính, phi điệu tính, nhạc chuỗi.
 
 ## Bảng tổng quan các thủ pháp
 | Thủ pháp | Ý tưởng | Ví dụ tiêu biểu | Bài chi tiết |
@@ -360,7 +361,7 @@ Sách *Twentieth-Century Harmony* (1961) của Vincent Persichetti là giáo tr�
 | **Chồng quãng 2 – cụm âm** | Nốt **liền nhau** vang cùng lúc | [[Cowell]] đặt tên "tone cluster"; *Adventures in Harmony* (khoảng 1913), *Dynamic Motion* (1916) chơi bằng **cả cẳng tay** | [[am-cum]] |
 | **Hợp âm chồng** (polychord) | **Hai hợp âm** vang cùng lúc, tai nghe được là **hai khối riêng** | **Hợp âm Petrushka** của [[Stravinsky]] (1911): Đô trưởng + Fa♯ trưởng, cách nhau tritone | [[hop-am-chong]], [[da-dieu-tinh]] |
 | **Hoà âm song song** (planing) | Cả hợp âm **trượt song song** — cố ý phá luật cấm quãng song song | Debussy — "La cathédrale engloutie" | [[hoa-am-song-song]] |
-| **Toàn diatonic** (pandiatonicism) | Dùng **tự do mọi nốt** của âm giai, không theo cú pháp chức năng; thường có quãng 2 trong hợp âm | Stravinsky — *Pulcinella*; thuật ngữ do Nicolas Slonimsky đặt | [[toan-diatonic]] |
+| **Toàn diatonic** (pandiatonicism) | Dùng **tự do mọi nốt** của [[am-giai|âm giai]], không theo cú pháp chức năng; thường có quãng 2 trong hợp âm | Stravinsky — *Pulcinella*; thuật ngữ do Nicolas Slonimsky đặt | [[toan-diatonic]] |
 | **Hoà âm điệu thức** | Dùng [[dieu-thuc]] thay cho trưởng – thứ; mất lực hút của [[bac-am-giai|cảm âm]] | Debussy; jazz điệu thức | [[dieu-thuc]], [[hoa-am-dieu-thuc]] |
 | **Âm giai đối xứng** | Âm giai toàn cung, âm giai bát cung | Debussy — "Voiles"; [[Messiaen]] | [[am-giai-cromatic]], [[am-giai-bat-cung]], [[dieu-thuc-chuyen-vi-gioi-han]] |
 | **Quan hệ trung âm, chuyển hoá Neo-Riemann** | Nối các hợp âm trưởng – thứ không theo chức năng mà theo **[[dan-giong|dẫn giọng]] tối thiểu** | Nhạc phim, [[richard-wagner|Wagner]] muộn | [[trung-am-cromatic]], [[neo-riemann]] |
@@ -418,7 +419,7 @@ Hợp âm ba được xây bằng cách chồng hai [[quang|quãng 3]] lên nố
 ::staff treble C4+E4+G4 C4+Eb4+G4 B3+D4+F4 C4+E4+G#4 | Trưởng, thứ, giảm, tăng
 
 ## Hợp âm trong giọng
-Dựng hợp âm ba trên từng bậc của [[am-giai-truong]] (chỉ dùng nốt trong âm giai):
+Dựng hợp âm ba trên từng bậc của [[am-giai-truong]] (chỉ dùng nốt trong [[am-giai|âm giai]]):
 | I | ii | iii | IV | V | vi | vii° |
 |---|---|---|---|---|---|---|
 | C | Dm | Em | F | G | Am | B° |
@@ -533,7 +534,7 @@ Chứa [[thuan-nghich|tritone]] giữa bậc 3 và bậc 7 (B–F trong G7). [[q
 ## Lịch sử: nốt 7 "không được chuẩn bị"
 - Trong [[doi-am|đối âm]] [[thoi-ky-phuc-hung|Phục hưng]], quãng 7 là **nghịch âm** phải chuẩn bị và giải quyết cẩn thận (xem [[doi-am-5-loai]]).
 - Năm **1600**, nhà lý luận Giovanni Artusi chỉ trích các madrigal của [[Monteverdi]], đặc biệt *Cruda Amarilli*, vì dùng nghịch âm quá tự do — ở đó một bè **nhảy thẳng** vào nốt 7, tức coi âm thanh này là **một hợp âm tự thân** chứ không còn là nốt trễ. Monteverdi đáp lại trong lời tựa tập madrigal thứ năm (1605): quy tắc đối âm có thể bị vượt qua vì **yêu cầu biểu cảm của lời ca** — gọi là *seconda pratica* (thực hành thứ hai).
-- Hợp âm 7 át **không phổ biến ngay**: phải vài thập kỷ sau nó mới thành thông lệ; đến các [[hinh-thuc-sonata|sonata]] violin Op. 5 của [[Corelli]] (1700), hệ thống điệu tính đã hoàn chỉnh.
+- Hợp âm 7 át **không phổ biến ngay**: phải vài thập kỷ sau nó mới thành thông lệ; đến các [[hinh-thuc-sonata|sonata]] violin Op. 5 của [[Corelli]] (1700), hệ thống [[dieu-tinh|điệu tính]] đã hoàn chỉnh.
 
 ## Hợp âm 7 trong giọng trưởng
 | Imaj7 | ii7 | iii7 | IVmaj7 | V7 | vi7 | [[hop-am-cam-am|viiø7]] |
@@ -785,7 +786,7 @@ Kết là nền tảng chia [[cau-nhac]] và [[hinh-thuc-am-nhac|hình thức]].
 ::staff treble C4+E4+G4 C4+F4+A4 B3+D4+G4 C4+E4+G4 | I – IV – V – I với dẫn giọng mượt: mỗi nốt di chuyển tối đa một bậc
 
 ## Khoa học đằng sau dẫn giọng
-[[ky-vong-am-nhac|David Huron]] (2001; sách *Voice Leading*, 2016) chỉ ra rằng các quy tắc dẫn giọng truyền thống **khớp gần như hoàn toàn** với những gì khoa học biết về cảm nhận thính giác. Mục đích chính của dẫn giọng là tạo ra các **dòng giai điệu mà tai nghe tách biệt**. Sáu nguyên lý ông nêu gồm: âm có cao độ rõ (toneness), liền mạch về thời gian, hạn chế che lấp, **hoà lẫn âm** (tonal fusion), **gần nhau về cao độ** (pitch proximity) và **đồng biến cao độ** (pitch co-modulation).
+[[ky-vong-am-nhac|David Huron]] (2001; sách *Voice Leading*, 2016) chỉ ra rằng các quy tắc dẫn giọng truyền thống **khớp gần như hoàn toàn** với những gì khoa học biết về cảm nhận thính giác. Mục đích chính của dẫn giọng là tạo ra các **dòng giai điệu mà tai nghe tách biệt**. Sáu nguyên lý ông nêu gồm: âm có [[cao-do|cao độ]] rõ (toneness), liền mạch về thời gian, hạn chế che lấp, **hoà lẫn âm** (tonal fusion), **gần nhau về cao độ** (pitch proximity) và **đồng biến cao độ** (pitch co-modulation).
 
 Bộ quy tắc đầy đủ và bảng kiểm tra lỗi: [[luat-hoa-am-bon-be]].
 
@@ -960,7 +961,7 @@ Tiêu chí phân biệt chính: **có kết ở giọng mới** hay không. Ch�
 
 ## Thêm hai cách chuyển giọng
 - **Qua nốt chung**: giữ một **nốt** (không phải hợp âm) của giọng cũ làm cầu nối, thường vang một mình rồi nhạc tiếp tục ở giọng mới. Ví dụ nốt Fa ngân trong Si♭ trưởng dẫn sang Fa trưởng.
-- **Trùng âm qua hợp âm 6 Đức hoặc 7 giảm**: một [[hop-am-bay|hợp âm 7 át]] có thể được viết lại thành hợp âm [[hop-am-sau-tang|6 Đức]] (và ngược lại) bằng cách đổi [[not-nhac|tên nốt]] 7 thứ ↔ 6 tăng — dịch trung tâm giọng nửa cung. Hợp âm [[hop-am-bay-giam|7 giảm]] đối xứng nên mỗi nốt đều có thể làm [[bac-am-giai|cảm âm]] → bốn giọng đích. Kết hợp hai loại này có thể đi từ **bất kỳ giọng nào sang bất kỳ giọng nào** trong vài hợp âm — đặc trưng của thời **[[thoi-ky-lang-man|Lãng mạn]]**.
+- **Trùng âm qua hợp âm 6 Đức hoặc 7 giảm**: một [[hop-am-bay|hợp âm 7 át]] có thể được viết lại thành hợp âm [[hop-am-sau-tang|6 Đức]] (và ngược lại) bằng cách đổi [[not-nhac|tên nốt]] 7 thứ ↔ 6 tăng — dịch [[dieu-tinh|trung tâm giọng]] nửa cung. Hợp âm [[hop-am-bay-giam|7 giảm]] đối xứng nên mỗi nốt đều có thể làm [[bac-am-giai|cảm âm]] → bốn giọng đích. Kết hợp hai loại này có thể đi từ **bất kỳ giọng nào sang bất kỳ giọng nào** trong vài hợp âm — đặc trưng của thời **[[thoi-ky-lang-man|Lãng mạn]]**.
 
 **"Truck driver modulation"** trong nhạc pop: đi từ hợp âm chủ cũ sang **hợp âm át của giọng mới** (cao hơn nửa cung hoặc một cung) rồi vào chủ mới.
 `,
@@ -1025,7 +1026,7 @@ Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
     ],
     body: `
 ## Vì sao có luật?
-Các quy tắc viết bè được rút ra từ việc nghiên cứu thực tế sáng tác, đặc biệt là **thánh ca 4 bè của [[Bach]]**. Mục tiêu: mỗi bè là **một [[giai-dieu|giai điệu]] độc lập** mà tai vẫn nghe tách bạch. Nhà tâm lý học [[ky-vong-am-nhac|David Huron]] (2001) chỉ ra rằng phần lớn các quy tắc truyền thống có thể **suy ra từ các nguyên lý cảm nhận thính giác** đã được thực nghiệm (như sự gần nhau về cao độ, sự hoà lẫn âm). Luật không phải để cấm đoán tuỳ tiện — mỗi luật bảo vệ sự rõ ràng của các bè.
+Các quy tắc viết bè được rút ra từ việc nghiên cứu thực tế sáng tác, đặc biệt là **thánh ca 4 bè của [[Bach]]**. Mục tiêu: mỗi bè là **một [[giai-dieu|giai điệu]] độc lập** mà tai vẫn nghe tách bạch. Nhà tâm lý học [[ky-vong-am-nhac|David Huron]] (2001) chỉ ra rằng phần lớn các quy tắc truyền thống có thể **suy ra từ các nguyên lý cảm nhận thính giác** đã được thực nghiệm (như sự gần nhau về [[cao-do|cao độ]], sự hoà lẫn âm). Luật không phải để cấm đoán tuỳ tiện — mỗi luật bảo vệ sự rõ ràng của các bè.
 
 ## 1. Âm vực và cách viết
 - Soprano và Alto viết trên [[khuong-nhac|khuông]] **[[khoa-sol|khoá Sol]]**, Tenor và Bass trên khuông **[[khoa-fa|khoá Fa]]**; đuôi nốt Soprano và Tenor quay lên, Alto và Bass quay xuống.
@@ -1202,7 +1203,7 @@ Phối hoà âm là **ngược** với phân tích: có [[giai-dieu|giai điệu
 ## Hai loại
 | Loại | Cách làm | Kết quả |
 |---|---|---|
-| **Song song diatonic** | Hợp âm trượt **theo các nốt của âm giai** (chỉ phím trắng chẳng hạn) | **Tính chất** hợp âm thay đổi (trưởng, thứ, giảm…) theo âm giai |
+| **Song song diatonic** | Hợp âm trượt **theo các nốt của [[am-giai|âm giai]]** (chỉ phím trắng chẳng hạn) | **Tính chất** hợp âm thay đổi (trưởng, thứ, giảm…) theo âm giai |
 | **Song song [[am-giai-cromatic|cromatic]]** (song song "thật") | Mọi nốt di chuyển **đúng cùng một quãng** | Tính chất hợp âm **giữ nguyên**; nhanh chóng ra khỏi giọng |
 
 Mọi loại hợp âm đều có thể trượt song song: hợp âm ba, [[hop-am-bay|hợp âm 7]] – 9, hợp âm [[hoa-am-quang-bon|quãng 4]], [[am-cum|cụm âm]].
@@ -1240,7 +1241,7 @@ Tổng quan các thủ pháp thế kỷ 20: [[hoa-am-the-ky-20]].
       ['Fiveable — Harmonic rhythm (AP Music Theory)', 'https://fiveable.me/ap-music-theory/key-terms/harmonic-rhythm.md'],
     ],
     body: `
-**Nhịp điệu hoà âm** là tốc độ các [[hop-am-ba|hợp âm]] thay đổi, so với tốc độ các nốt. Một đoạn có dòng móc kép chạy liên tục nhưng **mỗi [[so-chi-nhip|ô nhịp]] chỉ một hợp âm** có nhịp điệu bề mặt **nhanh** mà nhịp điệu hoà âm **chậm**. Ví dụ quen thuộc: [[phan-tich-prelude-do-truong|Prelude Đô trưởng]] của [[johann-sebastian-bach|Bach]] — hợp âm được rải liên tục nhưng đổi chậm và đều.
+**Nhịp điệu hoà âm** là tốc độ các [[hop-am-ba|hợp âm]] thay đổi, so với tốc độ các nốt. Một đoạn có dòng móc kép chạy liên tục nhưng **mỗi [[so-chi-nhip|ô nhịp]] chỉ một hợp âm** có [[tiet-tau|nhịp điệu]] bề mặt **nhanh** mà nhịp điệu hoà âm **chậm**. Ví dụ quen thuộc: [[phan-tich-prelude-do-truong|Prelude Đô trưởng]] của [[johann-sebastian-bach|Bach]] — hợp âm được rải liên tục nhưng đổi chậm và đều.
 
 ## Piston: đếm sự thay đổi nốt gốc
 Trong giáo trình *Harmony*, Walter Piston xem nhịp điệu hoà âm là **nhịp của các lần đổi nốt gốc**, tách khỏi nhịp điệu viết trên bản nhạc. Một ô nhịp có thể có nhiều lần đổi gốc; một nốt gốc cũng có thể **giữ qua vạch nhịp** (gần như một kiểu [[dao-phach|đảo phách]] của hoà âm). Sự đổi hợp âm **không đều** có thể dùng để tạo hứng thú.
@@ -1360,7 +1361,7 @@ Trong [[the-dao-hop-am|thể đảo 2]], bè trầm là nốt 5 của [[hop-am-b
 [[giao-trinh-hoa-am|Giáo trình hoà âm]] hiện đại dạy **từng [[hop-am-ba|hợp âm]]** rồi đến **tiến trình**. Nhạc sĩ thế kỷ 18 — đặc biệt ở các nhạc viện Naples — học theo cách khác: họ **thuộc lòng các khuôn mẫu** bè trầm và [[giai-dieu|giai điệu]], rồi ghép chúng lại như ghép câu. Hiểu cách học này giúp phân tích nhạc [[Haydn]], [[Mozart]] gần với tư duy của chính họ hơn.
 
 ## Quy tắc quãng 8 (règle de l'octave)
-Đây là bảng **đặt hợp âm cho từng bậc của bè trầm** khi bè trầm đi lên hoặc xuống theo âm giai — một lối tắt khi [[bass-so|bè trầm]] không có số.
+Đây là bảng **đặt hợp âm cho từng bậc của bè trầm** khi bè trầm đi lên hoặc xuống theo [[am-giai|âm giai]] — một lối tắt khi [[bass-so|bè trầm]] không có số.
 - Mô tả sớm nhất có lẽ của **Antonio Bruschi (1711)**; tên gọi do **François Campion** đặt năm **1716**.
 - Nguyên tắc tóm gọn: **trừ bậc 1 và bậc 5** (mang hợp âm 5/3), các bậc khác **"mang [[quang|quãng]] 6"** (hợp âm 6/3, 6/5/3 hoặc 6/4/3).
 - Có cách đặt khác nhau cho chiều **đi lên** và **đi xuống**, và có **nhiều biến thể**. Ví dụ bản bốn bè của Fenaroli khi đi lên: 1: 5/3 · 2: 6/4/3 · 3: 6/3 · 4: 6/5/3 · 5: 5/3 · 6: 6/3 · 7: 6/5/3 · 8: 5/3.

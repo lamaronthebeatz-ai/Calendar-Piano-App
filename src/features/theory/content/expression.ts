@@ -2,6 +2,47 @@ import type { Article } from '../wiki'
 
 export const expression: Article[] = [
   {
+    slug: 'dien-tau',
+    title: 'Diễn tấu và biểu cảm: hệ thống và lộ trình',
+    category: 'expression',
+    aliases: ['diễn tấu', 'biểu cảm âm nhạc', 'lộ trình diễn tấu', 'ký hiệu diễn tấu', 'performance practice tổng quan'],
+    summary: 'Bài tổng quan của mục: những gì bản nhạc ghi về cách chơi (sắc thái, cách đánh, nhịp độ, hoa mỹ, bàn đạp, ngón bấm), những gì không ghi (rubato, phong cách thời kỳ), và thứ tự học các bài.',
+    wiki: 'Musical_expression',
+    refs: [
+      ['Wikipedia — Musical expression', 'https://en.wikipedia.org/wiki/Musical_expression'],
+      ['Wikipedia — Historically informed performance', 'https://en.wikipedia.org/wiki/Historically_informed_performance'],
+    ],
+    body: `
+Hai người chơi cùng một bản nhạc, cùng đúng nốt, vẫn có thể nghe khác hẳn nhau. Phần khác biệt đó — to nhỏ, dài ngắn, nhanh chậm, [[am-sac|màu âm]] — là **diễn tấu**. Một phần được nhà soạn nhạc **ghi lại** bằng ký hiệu và thuật ngữ; phần còn lại thuộc về **quy ước** của từng thời kỳ và **lựa chọn** của người chơi.
+
+## Những gì bản nhạc ghi
+| Thông tin | Bài |
+|---|---|
+| To – nhỏ | [[cuong-do]] |
+| Cách đánh từng nốt (legato, staccato, nhấn…) | [[cach-dien-tau]] |
+| Tốc độ | [[nhip-do]] |
+| Trang trí | [[ky-hieu-hoa-my]] |
+| Bàn đạp | [[ban-dap]] |
+| Ngón bấm | [[ngon-bam]] |
+| Nhắc lại, nhảy đoạn | [[dau-nhac-lai]] |
+| Ký hiệu ít gặp | [[ky-hieu-nang-cao]], [[ky-hieu-quang-tam]] |
+| Thuật ngữ | [[thuat-ngu]], [[bang-thuat-ngu]] |
+
+## Những gì bản nhạc không ghi hết
+- **Thời gian co giãn**: [[rubato]].
+- **[[cau-nhac|Câu nhạc]]** — hơi thở, đỉnh câu, cân bằng bè: [[dien-dat-cau-nhac]], [[lam-noi-giai-dieu]].
+- **Phong cách thời kỳ** — ví dụ hoa mỹ [[thoi-ky-baroque|Baroque]] bắt đầu từ nốt trên, pedal trong [[wolfgang-amadeus-mozart|Mozart]]: [[phong-cach-dien-tau]], [[tinh-xac-thuc-bieu-dien]].
+- **Văn bản nào là "đúng"**: các ấn bản khác nhau ghi khác nhau — [[an-ban-urtext]].
+
+## Lộ trình học
+1. **Ký hiệu cơ bản**: [[cuong-do]] → [[cach-dien-tau]] → [[nhip-do]] → [[thuat-ngu]].
+2. **Trên đàn**: [[ngon-bam]] → [[ban-dap]] → [[ky-hieu-hoa-my]].
+3. **Đọc bản nhạc đầy đủ**: [[dau-nhac-lai]] → [[ky-hieu-nang-cao]] → [[bang-thuat-ngu]].
+4. **Vượt qua ký hiệu**: [[rubato]] → [[dien-dat-cau-nhac]] → [[phong-cach-dien-tau]] → [[an-ban-urtext]].
+5. **Hiểu để diễn**: [[phan-tich-va-bieu-dien]], [[so-sanh-ban-thu]].
+`,
+  },
+  {
     slug: 'cuong-do',
     title: 'Cường độ',
     category: 'expression',
@@ -30,7 +71,7 @@ export const expression: Article[] = [
 
 ::img Music dynamic piano.svg | Ký hiệu p (piano — nhỏ)
 
-Tên đầy đủ của cây đàn piano là **[[lich-su-piano|pianoforte]]** — "nhỏ – to", vì nó là nhạc cụ phím đầu tiên chơi được cả nhỏ lẫn to tuỳ lực ngón tay.
+Tên đầy đủ của cây [[dan-piano|đàn piano]] là **[[lich-su-piano|pianoforte]]** — "nhỏ – to", vì nó là nhạc cụ phím đầu tiên chơi được cả nhỏ lẫn to tuỳ lực ngón tay.
 
 ## Thay đổi cường độ
 ::img Crescendo-decrescendo.svg | "Dấu càng" crescendo (to dần) và decrescendo (nhỏ dần)
@@ -110,7 +151,7 @@ Trong bản thảo, [[Mozart]] viết staccato khi là **chấm**, khi là **nê
 
 Bài học cho người dạy: đọc **lời tựa và phần bình chú** của ấn bản để biết biên tập viên xử lý ký hiệu thế nào — xem [[an-ban-urtext]].
 
-Đừng nhầm dấu luyến với [[cham-doi-dau-noi|dấu nối]] (nối hai nốt **cùng** cao độ). Tremolo, glissando, hợp âm rải có ký hiệu: [[ky-hieu-nang-cao]]. Cách tay tạo ra legato, staccato, portato: [[ky-thuat-cham-phim]].
+Đừng nhầm dấu luyến với [[cham-doi-dau-noi|dấu nối]] (nối hai nốt **cùng** [[cao-do|cao độ]]). Tremolo, glissando, hợp âm rải có ký hiệu: [[ky-hieu-nang-cao]]. Cách tay tạo ra legato, staccato, portato: [[ky-thuat-cham-phim]].
 `,
   },
   {
@@ -267,7 +308,7 @@ Mozart **không ghi ký hiệu pedal** nào trong bản nhạc, nên cách ông 
 - **[[Chopin]]**: ký hiệu *Ped. … ✱* của ông **không nên đọc theo nghĩa đen**. Hệ ký hiệu này thuộc thời mà người ta thường đạp **cùng lúc** với tay, chưa phải pedal trễ. Ở nhiều chỗ Chopin chỉ ghi khi muốn một **pedal dài đặc biệt** (ví dụ giữ nốt bass trong hoà âm), còn pedal thông thường thì không cần ghi.
 - **[[Debussy]]** gần như **không ghi pedal**. Ông được cho là đã nói: "Pedal không thể viết ra được: nó thay đổi theo từng cây đàn, từng căn phòng." Pedal của đàn thời ông cũng rất không đồng đều.
 
-[[anton-rubinstein|Anton Rubinstein]] gọi pedal là "**linh hồn của cây đàn piano**" (câu này hay bị gán nhầm cho [[arthur-rubinstein|Arthur Rubinstein]]).
+[[anton-rubinstein|Anton Rubinstein]] gọi pedal là "**linh hồn của cây [[dan-piano|đàn piano]]**" (câu này hay bị gán nhầm cho [[arthur-rubinstein|Arthur Rubinstein]]).
 
 ## Khi giảng dạy
 Ký hiệu pedal chỉ là **điểm khởi đầu**: như lời Debussy, phải **nghe** để điều chỉnh theo cây đàn, căn phòng và tốc độ — và luôn kiểm tra bằng tai xem hoà âm có bị lẫn không.
@@ -316,7 +357,7 @@ Ngón bấm đủ 12 [[am-giai-truong|âm giai trưởng]]: xem bảng trong [[l
 - Ngón cái và ngón út **hạn chế** đặt trên phím đen (trừ khi bắt buộc).
 - Dùng **cùng một ngón bấm** mỗi lần tập — để "trí nhớ cơ bắp" hình thành.
 - Ở các đoạn nhắc lại, ngón bấm giống nhau → dễ thuộc [[motif]] và [[cau-nhac]].
-- Âm giai [[am-giai-cromatic|cromatic]]: ngón 3 trên phím đen.
+- [[am-giai|Âm giai]] [[am-giai-cromatic|cromatic]]: ngón 3 trên phím đen.
 
 ## Thêm nguyên tắc từ giáo trình sư phạm
 Một bài trình bày tại hội nghị MTNA 2024 tóm tắt:
@@ -546,7 +587,7 @@ Khi bàn về "rubato đúng phong cách", cần nói rõ đang nói về loại
 - **[[leopold-mozart|Leopold Mozart]]** cho rằng nghệ sĩ độc tấu thật sự được uốn giai điệu tự do, còn người đệm phải giữ nhịp đều và **không bị kéo theo**.
 - **W. A. [[wolfgang-amadeus-mozart|Mozart]]**, trong thư gửi cha từ Augsburg (tháng 10/1777), kể rằng người nghe ở đó ngạc nhiên vì ông **luôn giữ đúng nhịp**; họ không hiểu được rằng trong một Adagio có tempo rubato, **tay trái vẫn đi đều**, trong khi ở Augsburg tay trái cứ chạy theo giai điệu. Đây là mô tả rõ nhất của rubato kiểu cũ trên đàn phím. Theo Hudson, [[joseph-haydn|Haydn]], Mozart và [[ludwig-van-beethoven|Beethoven]] đều **không viết chữ "rubato"** trong bản nhạc.
 - **Chopin**: các học trò kể ông yêu cầu tay trái (phần đệm) **giữ nhịp chặt chẽ**, còn giai điệu được tự do co giãn (Georges Mathias, 1882, thuật lại lời bà Camille Dubois). Câu nói "tay trái là người chỉ huy" và hình ảnh của [[franz-liszt|Liszt]] về **gió lay lá trên một thân cây đứng vững** được lưu truyền rộng rãi nhưng chỉ qua nguồn thứ cấp — có thể dùng để minh hoạ, không nên trích như lời nguyên văn (xem [[Chopin]]).
-- **Thế kỷ 19–20**: rubato kiểu mới — co giãn toàn bộ nhịp độ — trở thành phổ biến. Nghiên cứu bản thu đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (Robert Philip, *Early Recordings and Musical Style*, 1992) cho thấy cách co giãn nhịp độ và xử lý tiết tấu là một trong những lĩnh vực **thay đổi nhiều nhất** trong phong cách biểu diễn giai đoạn 1900–1950 (xem [[lich-su-thu-am]], [[phong-cach-dien-tau]]).
+- **Thế kỷ 19–20**: rubato kiểu mới — co giãn toàn bộ nhịp độ — trở thành phổ biến. Nghiên cứu bản thu đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (Robert Philip, *Early Recordings and Musical Style*, 1992) cho thấy cách co giãn nhịp độ và xử lý [[tiet-tau|tiết tấu]] là một trong những lĩnh vực **thay đổi nhiều nhất** trong phong cách biểu diễn giai đoạn 1900–1950 (xem [[lich-su-thu-am]], [[phong-cach-dien-tau]]).
 
 ## Rubato đo được: nghiên cứu khoa học
 **Repp (1992) — 28 bản thu Träumerei.** Bruno Repp đo khoảng cách giữa các nốt trong 28 bản thu [[phan-tich-traumerei|Träumerei]] của [[robert-schumann|Schumann]]:
@@ -597,7 +638,7 @@ Liên quan: [[nhip-do]], [[ky-vong-am-nhac]], [[phan-tich-nocturne-op9-so2]], [[
       ['Classical Music — Rubato: a guide to "robbed time"', 'https://www.classical-music.com/features/musical-terms/discovering-music-rubato/'],
     ],
     body: `
-Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một dấu chấm staccato hay một chữ *[[ban-dap|Ped.]]* được hiểu khác nhau ở mỗi thời kỳ. Phong trào **diễn tấu theo hiểu biết lịch sử** (historically informed performance) — tranh luận sôi nổi từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]] — tìm hiểu nhạc cụ, sách lý luận và thói quen của từng thời kỳ để đưa ra lựa chọn có cơ sở. Bối cảnh các thời kỳ: [[cac-thoi-ky]].
+Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một dấu chấm staccato hay một chữ *[[ban-dap|Ped.]]* được hiểu khác nhau ở mỗi thời kỳ. Phong trào **[[dien-tau|diễn tấu]] theo hiểu biết lịch sử** (historically informed performance) — tranh luận sôi nổi từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]] — tìm hiểu nhạc cụ, sách lý luận và thói quen của từng thời kỳ để đưa ra lựa chọn có cơ sở. Bối cảnh các thời kỳ: [[cac-thoi-ky]].
 
 ## Baroque: Bach trên piano hiện đại
 - [[johann-sebastian-bach|Bach]] **không biết** đến piano hiện đại; nhạc đàn phím của ông viết cho [[dan-phim-co|harpsichord]], clavichord, organ.
@@ -610,7 +651,7 @@ Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một d
 |---|---|---|
 | Tiếng | Nhẹ hơn, **tắt nhanh** — tính chất "**nói**" | Dài, âm trầm vang hơn — tính chất "**hát**" |
 | Pedal | Cần đầu gối, tác dụng **yếu hơn nhiều** | Pedal rất mạnh — thường chỉ dùng **nửa pedal** hoặc đổi nhiều hơn |
-| Cao độ | Phổ biến khoảng **A = 430 Hz** | Thường 440–445 Hz (xem [[luat-binh-quan]]) |
+| [[cao-do|Cao độ]] | Phổ biến khoảng **A = 430 Hz** | Thường 440–445 Hz (xem [[luat-binh-quan]]) |
 
 Hệ quả: những chỗ Mozart viết **ngắt, tách** khó tạo hiệu quả trên piano hiện đại vì tiếng ngân dài. Có hai hướng: một "trường phái hiện đại" chấp nhận chơi dài, hát hơn; phía khác (gắn với Paul Badura-Skoda, Malcolm Bilson) cho rằng đổi cách diễn tấu gốc làm mất **tính chất hùng biện** mà các nhà soạn nhạc Cổ điển theo đuổi. Xem [[cach-dien-tau]] về chấm và nêm staccato.
 
@@ -655,7 +696,7 @@ Lưu ý: Urtext là một **lý tưởng** hơn là tuyệt đối — hai biên
 
 ## Ấn bản hướng dẫn (ấn bản biên tập)
 Ấn bản **hướng dẫn** ưu tiên **dễ chơi**: người biên tập thêm ngón bấm, [[cuong-do|cường độ]], [[nhip-do|nhịp độ]], [[ban-dap|pedal]], có khi ghép nguồn hoặc sửa nốt.
-- **[[Czerny]]**: cách ghi ngón bấm và chỉ dẫn diễn tấu trở nên phổ biến từ ông. Tuy vậy, ấn bản [[johann-sebastian-bach|Bach]] của Czerny **thay đổi nhiều** so với bản gốc, nên không nên dùng làm nguồn chính.
+- **[[Czerny]]**: cách ghi ngón bấm và chỉ dẫn [[dien-tau|diễn tấu]] trở nên phổ biến từ ông. Tuy vậy, ấn bản [[johann-sebastian-bach|Bach]] của Czerny **thay đổi nhiều** so với bản gốc, nên không nên dùng làm nguồn chính.
 - **[[hans-von-bulow|Hans von Bülow]]**: ấn bản [[ludwig-van-beethoven|Beethoven]] nổi tiếng, phản ánh thói quen diễn tấu [[thoi-ky-lang-man|Lãng mạn]] thế kỷ 19 — **diễn giải** của người biên tập nổi bật hơn hẳn so với Urtext hiện đại.
 
 Những ấn bản này có **giá trị lịch sử** (cho thấy người xưa chơi thế nào), nhưng người học dễ **nhầm chỉ dẫn của biên tập viên với ý tác giả**.

@@ -20,7 +20,7 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 ## Phần A — Âm học: âm thanh là gì
 1. [[am-hoc-co-ban]] — tần số, biên độ, decibel, bước sóng.
 2. [[chuoi-boi-am]] — vì sao mỗi nốt là nhiều tần số; tính không điều hoà của [[cau-tao-piano|dây đàn]] piano.
-3. [[am-sac]] — điều gì làm tiếng piano khác tiếng violin cùng cao độ.
+3. [[am-sac]] — điều gì làm tiếng piano khác tiếng violin cùng [[cao-do|cao độ]].
 4. [[am-hoc-phong]] — căn phòng thay đổi tiếng đàn ra sao.
 5. [[luat-binh-quan]] — toán học của 12 nốt.
 
@@ -74,7 +74,7 @@ Bài đầu tiên về vật lý của âm thanh — lộ trình đầy đủ c�
 - **Bước sóng** = tốc độ ÷ tần số. Nốt A0 (27,5 Hz) có bước sóng khoảng **12,5 m**; A4 (440 Hz) khoảng **0,78 m**; C8 (4.186 Hz) khoảng **8 cm**. Sóng dài của âm trầm **vòng qua vật cản** dễ hơn sóng ngắn của âm cao.
 
 ## Tần số và cao độ
-- **Tần số** là số chu kỳ dao động mỗi giây, đơn vị **hertz (Hz)**. Tần số cao → cao độ cao.
+- **Tần số** là số chu kỳ dao động mỗi giây, đơn vị **hertz (Hz)**. Tần số cao → [[cao-do|cao độ]] cao.
 - Mỗi lần **tần số gấp đôi** là lên một [[quang|quãng 8]]. Cao độ chuẩn: **A4 = 440 Hz** (xem [[luat-binh-quan]]).
 
 ## Phạm vi nghe và phạm vi piano
@@ -120,7 +120,7 @@ Lưu ý: 20 Hz – 20 kHz là con số trung bình, không phải giới hạn c
     ],
     body: `
 ## Định nghĩa — và vì sao nó khó
-Định nghĩa chuẩn (ANSI, Hội [[am-hoc-co-ban|Âm học]] Hoa Kỳ): âm sắc là **thuộc tính của cảm giác nghe giúp người nghe nhận ra hai âm khác nhau dù chúng được trình bày giống nhau, cùng độ to và cùng cao độ**. Định nghĩa này bị phê bình vì chỉ nói âm sắc **không phải** là gì: Albert Bregman gọi âm sắc là một "sọt rác" chứa mọi thứ không phải cao độ hay độ to; định nghĩa cũng bỏ sót âm thanh không có cao độ (như trống).
+Định nghĩa chuẩn (ANSI, Hội [[am-hoc-co-ban|Âm học]] Hoa Kỳ): âm sắc là **thuộc tính của cảm giác nghe giúp người nghe nhận ra hai âm khác nhau dù chúng được trình bày giống nhau, cùng độ to và cùng [[cao-do|cao độ]]**. Định nghĩa này bị phê bình vì chỉ nói âm sắc **không phải** là gì: Albert Bregman gọi âm sắc là một "sọt rác" chứa mọi thứ không phải cao độ hay độ to; định nghĩa cũng bỏ sót âm thanh không có cao độ (như trống).
 
 ## Âm sắc phụ thuộc vào gì?
 - **Phổ**: [[cuong-do|cường độ]] tương đối của các [[chuoi-boi-am|bồi âm]]. Nhiều năng lượng ở bồi âm cao → âm thanh "sáng".
@@ -199,7 +199,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
       ['Texas A&M Commerce — Lecture 15: pitch perception (PDF)', 'https://faculty.tamuc.edu/cbertulani/music/lectures/lec15/lec15.pdf'],
     ],
     body: `
-**Tâm lý âm học** nghiên cứu quan hệ giữa **thông số vật lý** của âm thanh (tần số, biên độ, phổ — xem [[am-hoc-co-ban]]) và **cảm giác** của người nghe (cao độ, độ to, [[am-sac|âm sắc]]).
+**Tâm lý âm học** nghiên cứu quan hệ giữa **thông số vật lý** của âm thanh (tần số, biên độ, phổ — xem [[am-hoc-co-ban]]) và **cảm giác** của người nghe ([[cao-do|cao độ]], độ to, [[am-sac|âm sắc]]).
 
 ## 1. Độ to cảm nhận và đường đồng âm lượng
 - Hai âm có **cùng mức áp suất (dB)** nhưng khác tần số **không** nghe to bằng nhau. **Fletcher và Munson** (1933) đo các **đường đồng âm lượng**: những tổ hợp tần số – mức áp suất nghe to ngang nhau so với một âm chuẩn 1000 Hz. Bộ đường hiện hành là tiêu chuẩn **ISO 226:2003**.
@@ -241,7 +241,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
 
 ## Các nguyên tắc nhóm
 **Theo chiều ngang (nối tiếp)** — các nốt kế tiếp được nghe thành **một dòng** khi:
-- **Gần nhau về cao độ**. Khi hai nhóm nốt cách xa nhau và xen kẽ **nhanh**, tai buộc phải tách thành **hai dòng**. Nghiên cứu kinh điển của van Noorden (1975) cho thấy khoảng cách cần để tách phụ thuộc vào **tốc độ**: chậm thì cách xa vẫn nghe thành một dòng, nhanh thì chỉ vài [[cung-nua-cung|nửa cung]] đã tách.
+- **Gần nhau về [[cao-do|cao độ]]**. Khi hai nhóm nốt cách xa nhau và xen kẽ **nhanh**, tai buộc phải tách thành **hai dòng**. Nghiên cứu kinh điển của van Noorden (1975) cho thấy khoảng cách cần để tách phụ thuộc vào **tốc độ**: chậm thì cách xa vẫn nghe thành một dòng, nhanh thì chỉ vài [[cung-nua-cung|nửa cung]] đã tách.
 - **Cùng [[am-sac|âm sắc]]** và **cùng [[am-hoc-co-ban|độ to]]**.
 
 **Theo chiều dọc (đồng thời)** — các thành phần được nghe thành **một âm** khi:
@@ -255,7 +255,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
 - **Luật dẫn giọng**: [[ky-vong-am-nhac|David Huron]] (2001) chỉ ra các luật viết bè cổ điển (tránh [[dan-giong|quãng 8 song song]], tránh bè chéo nhau…) chính là cách giữ cho các bè **được nghe tách biệt** (xem [[luat-hoa-am-bon-be]]).
 
 ## Piano: "giai điệu đi trước"
-- Đo đạc trên đàn piano ghi âm bằng máy tính cho thấy nốt giai điệu thường vang **sớm hơn khoảng 30 mili giây** so với các nốt đệm cùng [[hop-am-ba|hợp âm]] (Palmer, 1996) — giúp giai điệu nổi lên nhờ nguyên tắc "bắt đầu cùng lúc thì nhóm chung".
+- Đo đạc trên [[dan-piano|đàn piano]] ghi âm bằng máy tính cho thấy nốt giai điệu thường vang **sớm hơn khoảng 30 mili giây** so với các nốt đệm cùng [[hop-am-ba|hợp âm]] (Palmer, 1996) — giúp giai điệu nổi lên nhờ nguyên tắc "bắt đầu cùng lúc thì nhóm chung".
 - **Werner Goebl** (2001; 22 nghệ sĩ piano, [[frederic-chopin|Chopin]] [[the-loai|Ballade]] Op. 38 và Étude Op. 10 số 3) đo thời điểm **ngón chạm phím** và thấy độ lệch này **gần như bằng 0**: nốt giai điệu vang sớm chủ yếu vì được **đánh mạnh hơn** nên búa tới dây nhanh hơn (giả thuyết "sản phẩm phụ của tốc độ"). Câu hỏi người chơi có **cố ý** đánh sớm hay không vẫn chưa khép lại hoàn toàn.
 - Bài học: muốn giai điệu nổi lên, hãy tập **cân bằng [[cuong-do|cường độ]]** giữa các ngón trong một hợp âm (xem [[lam-noi-giai-dieu]], [[ky-thuat-cham-phim]]); thời điểm sẽ tự theo.
 
@@ -281,7 +281,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
     ],
     body: `
 ## Leonard Meyer (1956)
-Trong *Emotion and Meaning in Music* (1956), **Leonard Meyer** đề xuất: cảm xúc âm nhạc nảy sinh khi một **xu hướng chờ đợi** do âm nhạc khơi lên bị **tạm thời kìm lại hoặc bị chặn hẳn**. Ví dụ: một âm giai đi lên dừng ở **cảm âm** khiến ta chờ **[[bac-am-giai|chủ âm]]**; nếu chủ âm không đến, ta cảm thấy căng và hụt hẫng. Cuốn sách được coi là nền móng của phần lớn nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]] hiện đại.
+Trong *Emotion and Meaning in Music* (1956), **Leonard Meyer** đề xuất: cảm xúc âm nhạc nảy sinh khi một **xu hướng chờ đợi** do âm nhạc khơi lên bị **tạm thời kìm lại hoặc bị chặn hẳn**. Ví dụ: một [[am-giai|âm giai]] đi lên dừng ở **cảm âm** khiến ta chờ **[[bac-am-giai|chủ âm]]**; nếu chủ âm không đến, ta cảm thấy căng và hụt hẫng. Cuốn sách được coi là nền móng của phần lớn nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]] hiện đại.
 
 ## David Huron: mô hình ITPRA (2006)
 Trong *Sweet Anticipation* (MIT Press, 2006), **David Huron** mở rộng ý của Meyer thành năm phản ứng, xếp theo thời gian quanh một sự kiện:
@@ -353,7 +353,7 @@ Patrik Juslin cho rằng không có **một** cơ chế duy nhất, mà âm nh�
 - Lưu ý: trong âm nhạc thực tế, nhạc trưởng thường nhanh và nhạc thứ thường chậm, nên hai yếu tố hay bị lẫn vào nhau.
 
 ## Có phổ quát không? Nghiên cứu với người Mafa
-**Fritz và cộng sự** (*Current Biology*, 2009) cho **21 người Mafa** ở miền bắc Cameroon — chưa từng nghe nhạc phương Tây — và 20 người phương Tây nghe các đoạn piano ngắn được soạn để thể hiện **vui, buồn, sợ hãi** theo quy ước phương Tây (giọng, nhịp độ, âm vực, tiết tấu).
+**Fritz và cộng sự** (*Current Biology*, 2009) cho **21 người Mafa** ở miền bắc Cameroon — chưa từng nghe nhạc phương Tây — và 20 người phương Tây nghe các đoạn piano ngắn được soạn để thể hiện **vui, buồn, sợ hãi** theo quy ước phương Tây (giọng, nhịp độ, [[cao-do|âm vực]], [[tiet-tau|tiết tấu]]).
 - Cả hai nhóm đều nhận ra cảm xúc **cao hơn mức ngẫu nhiên**; người Mafa cũng dựa vào **nhịp độ** và **giọng** như người phương Tây.
 - Nhưng kết quả **không đồng đều** (2/21 người Mafa ở mức ngẫu nhiên), và các tác giả **không** coi âm nhạc là "ngôn ngữ cảm xúc toàn cầu": nhạc của người Mafa không thể hiện cùng dải cảm xúc như nhạc phương Tây.
 
