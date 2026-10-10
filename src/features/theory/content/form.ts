@@ -40,7 +40,8 @@ Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép
 3. **Hình thức nhỏ**: [[hinh-thuc-am-nhac]] (hai đoạn, ba đoạn) → [[minuet-va-trio]] (ba đoạn kép).
 4. **Hình thức lớn**: [[bien-tau]] → [[ostinato]] → [[rondo]] → [[hinh-thuc-sonata]] → [[hinh-thuc-concerto]].
 5. **Lý thuyết hình thức hiện đại**: [[chuc-nang-hinh-thuc]], [[luoc-do-galant]], [[ly-thuyet-chu-de]] (các "chủ đề biểu đạt" quen thuộc).
-6. **Đối âm và hình thức phức điệu**: [[doi-am]] → [[doi-am-5-loai]] → [[doi-am-kep]] → [[fugue]].
+6. **Đối âm và hình thức phức điệu**: [[doi-am]] → [[phuc-dieu-nghiem-khac]] → [[doi-am-5-loai]] → [[doi-am-kep]] → [[fugue]].
+   Phức điệu nghiêm khắc từng bước: [[quang-va-chuyen-dong-doi-am]] → [[cantus-firmus]] → [[doi-am-loai-1]] → [[doi-am-loai-2]] → [[doi-am-loai-3]] → [[doi-am-loai-4]] → [[doi-am-loai-5]] → [[doi-am-ba-bon-be]] → [[phong-cach-palestrina]]; bảng công thức: [[cong-thuc-phuc-dieu]].
 7. **Kết cấu, thể loại, thế kỷ 19**: [[ket-cau]] → [[the-loai]] (toàn cảnh: [[the-loai-am-nhac]]) → [[bien-doi-chu-de]].
 8. **Hình thức phổ thông và jazz**: [[blues-12-nhip]], [[hinh-thuc-ca-khuc-32]].
 Áp dụng vào tác phẩm cụ thể: [[phuong-phap-phan-tich-tac-pham]].
@@ -591,7 +592,7 @@ Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinat
 
 ## Lịch sử ngắn
 - **[[organum|Organum]]** thời [[thoi-ky-trung-co|Trung cổ]] là dạng đối âm sớm nhất — xem lịch sử kết cấu ở [[ket-cau]].
-- **[[thoi-ky-phuc-hung|Phục hưng]]**: phức điệu nhiều bè ngang hàng đạt đỉnh với [[Palestrina]]. "Phong cách Palestrina" ngày nay là nền của các lớp đối âm Phục hưng ở đại học, phần lớn nhờ cuốn *Gradus ad Parnassum* (1725) của [[Fux]] (xem [[doi-am-5-loai]]).
+- **[[thoi-ky-phuc-hung|Phục hưng]]**: phức điệu nhiều bè ngang hàng đạt đỉnh với [[Palestrina]]. "[[phong-cach-palestrina|Phong cách Palestrina]]" ngày nay là nền của các lớp đối âm Phục hưng ở đại học, phần lớn nhờ cuốn *Gradus ad Parnassum* (1725) của [[Fux]] (xem [[doi-am-5-loai]]).
 - **[[thoi-ky-baroque|Baroque]]**: đối âm gắn chặt với [[chuc-nang-hoa-am|hoà âm chức năng]]; đỉnh cao là [[Bach]] với [[fugue]] và canon.
 
 ## Các loại chuyển động giữa hai bè
@@ -602,13 +603,13 @@ Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinat
 | **Ngược chiều** | Một bè lên, một bè xuống — tạo độc lập tốt nhất |
 | Xiên | Một bè đứng yên, bè kia di chuyển |
 
-Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên chuyển động ngược chiều, tránh [[dan-giong|quãng 5/8 song song]], xử lý [[thuan-nghich|nghịch âm]] cẩn thận.
+Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên [[quang-va-chuyen-dong-doi-am|chuyển động ngược chiều]], tránh [[dan-giong|quãng 5/8 song song]], xử lý [[thuan-nghich|nghịch âm]] cẩn thận.
 
 ## Mô phỏng và canon
 - **Mô phỏng**: bè thứ hai nhắc lại giai điệu bè thứ nhất sau một khoảng thời gian.
 - **Canon**: mô phỏng nghiêm ngặt từ đầu đến cuối — ví dụ hát nối "Frère Jacques" (Kìa con bướm vàng).
 
-Đỉnh cao của đối âm là [[fugue]]. Người học piano bắt đầu với **[[lo-trinh-tac-pham|Inventions]] 2 bè** của Bach. Phương pháp học từng bước: [[doi-am-5-loai]]. Đổi chỗ các bè và các loại canon: [[doi-am-kep]]. Liên quan: [[ket-cau]], [[motif]].
+Đỉnh cao của đối âm là [[fugue]]. Người học piano bắt đầu với **[[lo-trinh-tac-pham|Inventions]] 2 bè** của Bach. Phương pháp học từng bước: [[doi-am-5-loai]]; toàn bộ môn phức điệu nghiêm khắc: [[phuc-dieu-nghiem-khac]]. Đổi chỗ các bè và các loại canon: [[doi-am-kep]]. Liên quan: [[ket-cau]], [[motif]].
 `,
   },
   {
@@ -697,7 +698,7 @@ Liên quan: [[bass-ngan]] (một nốt lặp/ngân thay vì một mẫu), [[ket-
     slug: 'doi-am-5-loai',
     title: 'Đối âm 5 loại',
     category: 'form',
-    aliases: ['species counterpoint', 'đối âm theo loại', 'cantus firmus', 'Gradus ad Parnassum', 'đối âm loại 1'],
+    aliases: ['species counterpoint', 'đối âm theo loại', 'Gradus ad Parnassum', 'năm loại đối âm'],
     summary: 'Phương pháp học đối âm kinh điển của Fux (1725): viết bè mới trên một giai điệu cho sẵn, qua 5 cấp độ nhịp điệu tăng dần.',
     wiki: 'Counterpoint',
     refs: [
@@ -710,15 +711,17 @@ Liên quan: [[bass-ngan]] (một nốt lặp/ngân thay vì một mẫu), [[ket-
 Cho sẵn một **cantus firmus** (giai điệu [[truong-do|nốt tròn]], đi chủ yếu liền bậc). Người học viết một bè đối âm phía trên hoặc dưới, theo 5 "loại":
 | Loại | Tỉ lệ nốt (đối âm : cantus) | Học được gì |
 |---|---|---|
-| 1 | 1 : 1 (nốt tròn) | Chỉ dùng [[thuan-nghich|quãng thuận]]; các kiểu chuyển động |
-| 2 | 2 : 1 (nốt trắng) | [[not-ngoai-hop-am|Nốt lướt]] ở [[so-chi-nhip|phách nhẹ]] |
-| 3 | 4 : 1 (nốt đen) | Nốt lướt, nốt thêu, các hình giai điệu |
-| 4 | Nốt nối lệch phách | **Nốt trễ** (suspension): chuẩn bị – nghịch – giải quyết |
-| 5 | [[ky-hieu-hoa-my|Hoa mỹ]] (kết hợp tự do) | Kết hợp tất cả |
+| [[doi-am-loai-1|1]] | 1 : 1 (nốt tròn) | Chỉ dùng [[thuan-nghich|quãng thuận]]; các kiểu chuyển động |
+| [[doi-am-loai-2|2]] | 2 : 1 (nốt trắng) | [[not-ngoai-hop-am|Nốt lướt]] ở [[so-chi-nhip|phách nhẹ]] |
+| [[doi-am-loai-3|3]] | 4 : 1 (nốt đen) | Nốt lướt, nốt thêu, các hình giai điệu |
+| [[doi-am-loai-4|4]] | Nốt nối lệch phách | **Nốt trễ** (suspension): chuẩn bị – nghịch – giải quyết |
+| [[doi-am-loai-5|5]] | [[ky-hieu-hoa-my|Hoa mỹ]] (kết hợp tự do) | Kết hợp tất cả |
 ::rhythm w / h h / q q q q / rh h~ / h h // | Bè đối âm trên một nốt tròn của cantus: loại 1 (1 : 1), loại 2 (2 : 1), loại 3 (4 : 1), loại 4 (nối lệch phách)
 
+Mỗi loại có một bài riêng với đầy đủ quy tắc, ví dụ đã kiểm và quy trình viết; bảng tổng hợp ở [[cong-thuc-phuc-dieu]], lộ trình ở [[phuc-dieu-nghiem-khac]]. Cantus firmus: [[cantus-firmus]].
+
 ## Quy tắc cơ bản (loại 1)
-- Bắt đầu và kết thúc bằng **quãng thuận hoàn toàn** (đồng âm, 5, 8).
+- Bắt đầu và kết thúc bằng **[[quang-va-chuyen-dong-doi-am|quãng thuận hoàn toàn]]** (đồng âm, 5, 8).
 - Kết bằng bước liền bậc vào chủ âm, với [[bac-am-giai|cảm âm]] đi lên.
 - Ưu tiên **chuyển động ngược chiều**; tránh [[dan-giong|quãng 5 và quãng 8 song song]] và cả [[quang|quãng]] 5/8 "ẩn" (cùng chiều tới quãng hoàn toàn với nhảy ở bè trên).
 - Dùng nhiều quãng 3 và 6; không lặp nốt quá nhiều; một [[giai-dieu|đỉnh giai điệu]] duy nhất.
@@ -727,7 +730,7 @@ Cho sẵn một **cantus firmus** (giai điệu [[truong-do|nốt tròn]], đi c
 - [[Fux]] xuất bản sách ở **Vienna năm 1725**, viết bằng **tiếng Latin**; không lâu sau được dịch sang tiếng Đức, Pháp, Anh.
 - Sách có hai phần: phần lý thuyết về quãng như **tỉ lệ giữa các con số**, và phần thực hành đối âm viết dưới dạng **đối thoại thầy – trò**. Người thầy đại diện cho [[Palestrina]]; người học trò là chính Fux.
 - [[Haydn]] tự học đối âm bằng cuốn sách này và sau đó giới thiệu nó cho học trò [[Beethoven]].
-- Fux không phải không có sai sót: các học giả sau này, như Knud Jeppesen, đã sửa một số lỗi về phong cách. Các khoá nhập môn ngày nay cũng thường **giản lược** quy tắc của ông.
+- Fux không phải không có sai sót: các học giả sau này, như Knud [[phong-cach-palestrina|Jeppesen]], đã sửa một số lỗi về phong cách. Các khoá nhập môn ngày nay cũng thường **giản lược** quy tắc của ông.
 
 ## Beethoven học đối âm
 Năm 1792 Beethoven đến Vienna học với Haydn (đến 1794, khi Haydn sang London). Haydn sắp xếp để ông học tiếp với **Johann Georg Albrechtsberger**, thầy dạy đối âm nổi tiếng nhất Vienna lúc đó và là người theo truyền thống Fux. Lộ trình: đối âm (theo loại), rồi mô phỏng, fugue hợp xướng, đối âm kép và ba bè. Hơn **300 bài tập** có chữ sửa của Albrechtsberger vẫn còn lưu giữ.
@@ -743,6 +746,15 @@ Phương pháp này vẫn được dạy ở nhạc viện ngày nay. Bước ti
     summary: 'Đối âm kép: hai bè có thể đổi chỗ trên – dưới mà vẫn đúng. Canon: một bè được bè khác mô phỏng nghiêm ngặt, với nhiều biến thể đảo, nghịch hành, tăng trường độ.',
     wiki: 'Invertible_counterpoint',
     refs: [
+      ['IMSLP — Taneyev, Convertible Counterpoint in the Strict Style', 'https://imslp.org/wiki/Convertible_Counterpoint_in_the_Strict_Style_(Taneyev,_Sergey)'],
+      ['Segall, "Prokofiev’s Symphony No. 2 and Taneyev’s Theory" — Music Theory Online 20.3', 'https://mtosmt.org/issues/mto.14.20.3/mto.14.20.3.segall.html'],
+      ['Gran — Music Theory Online 30.2 (hệ thống Taneyev)', 'https://mtosmt.org/issues/mto.24.30.2/mto.24.30.2.gran.html'],
+      ['Collins — Music Theory Online 24.4 (đối âm dịch ngang)', 'https://mtosmt.org/issues/mto.18.24.4/mto.18.24.4.collins.html'],
+      ['Ithaca College — Double counterpoint handout', 'https://musictech.ithaca.edu/MusicTech/Form/Handouts/DblCpt.html'],
+      ['Rothfarb (UCSB) — Invertible counterpoint', 'https://rothfarb.faculty.music.ucsb.edu/courses/103/invertible-cpt.html'],
+      ['Wikipedia — Prolation canon', 'https://en.wikipedia.org/wiki/Prolation_canon'],
+      ['Wikipedia — The Musical Offering', 'https://en.wikipedia.org/wiki/The_Musical_Offering'],
+      ['Wikipedia — Goldberg Variations', 'https://en.wikipedia.org/wiki/Goldberg_Variations'],
       ['Wikipedia — Inventions and Sinfonias (Bach)', 'https://en.wikipedia.org/wiki/Inventions_and_Sinfonias'],
       ['Bärenreiter — Inventions and Sinfonias, preface (G. von Dadelsen)', 'https://www.barenreiter.co.uk/prefaces/9790006465811_Innenansicht.pdf'],
       ['Wikipedia — The Musical Offering', 'https://en.wikipedia.org/wiki/The_Musical_Offering'],
@@ -777,6 +789,542 @@ Viết hai bè sao cho khi đưa bè dưới lên trên một quãng 8, kết qu
 - **Canon cua** (*Canon a 2 cancrizans*): một bè chơi giai điệu như viết, bè kia chơi **cùng giai điệu đọc ngược từ cuối về đầu** — hai bè khớp nhau hoàn hảo.
 
 Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, nghịch hành).
+
+## Công thức đổi quãng khi đảo
+Khi hai bè đổi chỗ (bè dưới chuyển lên trên, hoặc ngược lại) với khoảng dịch là một quãng 8, 10 hay 12, mọi quãng giữa hai bè đổi theo một công thức cố định:
+| Đảo ở | Quãng n thành | Quãng "nguy hiểm" | Hệ quả khi viết |
+|---|---|---|---|
+| **Quãng 8** | 9 − n: 1 ↔ 8, 2 ↔ 7, 3 ↔ 6, 4 ↔ 5 | Quãng 5 → 4 | Dùng quãng 5 như nghịch âm (chỉ ở phách nhẹ, có chuẩn bị) |
+| **Quãng 10** | 11 − n: 1 ↔ 10, 3 ↔ 8, 5 ↔ 6 | Mọi chuyển động song song | 3 song song → 8 song song; 6 song song → 5 song song: **không dùng song song** |
+| **Quãng 12** | 13 − n: 3 ↔ 10, 5 ↔ 8, 6 → 7 | Quãng 6 → 7 | Dùng quãng 6 như nghịch âm; quãng 3 và 10 vẫn thuận |
+::staff treble C4+E4=3 D4+F4=3 / E4+C5=6 F4+D5=6 | Đảo ở quãng 8: hai quãng 3 (trái) thành hai quãng 6 (phải) khi bè dưới được chuyển lên một quãng 8 — vẫn thuận
+Đối âm đảo ở quãng 10 khó viết nhất nên hiếm; bù lại, hai dạng gốc và đảo có thể **chơi cùng lúc** thành ba bè song song quãng 3/6.
+
+## Hệ thống của Taneyev
+- Sergei Taneyev, *Đối âm di động của lối viết nghiêm khắc* (1909; bản tiếng Anh 1962: *Convertible Counterpoint in the Strict Style*), coi đối âm đảo là trường hợp riêng của **đối âm dịch dọc**: mỗi bè có thể dịch lên hoặc xuống một số bậc diatonic.
+- **Chỉ số Jv** = tổng độ dịch của hai bè; cộng Jv vào mỗi quãng gốc cho ra quãng mới. Theo các bài phân tích trên *Music Theory Online* (Segall; Gran): Jv = −9 tương ứng đảo ở quãng 10, Jv = −11 tương ứng đảo ở quãng 12 (Taneyev đánh số quãng từ 0, đồng âm = 0). Với mỗi Jv, ông lập bảng quãng nào giữ nguyên tính chất, quãng nào đổi — nên mọi trường hợp đều tính được cùng một cách.
+- **Đối âm dịch ngang** (chỉ số Jh): thay đổi **khoảng thời gian** giữa hai lần vào bè — nền tảng của canon và stretto.
+Tổng hợp công thức: [[cong-thuc-phuc-dieu]]. Nền tảng: [[phuc-dieu-nghiem-khac]].
+
+## Thêm các loại canon
+| Loại | Ví dụ |
+|---|---|
+| Canon vô tận (round) | *Sumer is icumen in* (thế kỷ 13) |
+| **Canon tỉ lệ** (mensuration): các bè hát cùng giai điệu ở **tốc độ khác nhau** | Ockeghem, *Missa prolationum* (toàn bộ là canon tỉ lệ); Josquin, *Missa L’homme armé super voces musicales* |
+| Canon xoắn ốc (per tonos): mỗi vòng lên một giọng mới | *Lễ vật âm nhạc*, "Canon per tonos" — kết cao hơn một cung |
+| Canon tăng trường độ + đảo | *Lễ vật âm nhạc*, "per augmentationem, contrario motu" |
+| Canon đảo trong Goldberg | Biến tấu 12 (canon đảo ở quãng 4) và 15 (canon đảo ở quãng 5) |
+| Canon cua và canon "bàn" (vừa ngược vừa đảo, hai người đọc từ hai phía bàn) | Bach, *Lễ vật âm nhạc* |
+`,
+  },
+  {
+    slug: 'phuc-dieu-nghiem-khac',
+    title: 'Phức điệu nghiêm khắc: hệ thống và lộ trình',
+    category: 'form',
+    aliases: ['phức điệu nghiêm khắc', 'strict counterpoint', 'strict style', 'phong cách nghiêm khắc', 'строгий стиль', 'phức điệu tự do', 'free counterpoint', 'đối âm nghiêm khắc', 'lộ trình phức điệu'],
+    summary: 'Phức điệu nghiêm khắc là lối viết nhiều bè của thanh nhạc nhà thờ thế kỷ 15–16 (Palestrina, Lassus, Josquin) và môn học dựa trên nó: học theo năm loại đối âm của Fux, các luật quãng, chuyển động, xử lý nghịch âm, rồi đến đối âm đảo và canon. Bài tổng quan giải thích khái niệm, lịch sử giáo trình và lộ trình học trong thư viện.',
+    refs: [
+      ['Большая российская энциклопедия — Полифония', 'https://bigenc.ru/c/polifoniia-b8dd42'],
+      ['Кругосвет — Контрапункт (строгий и свободный стиль)', 'https://www.krugosvet.ru/enc/muzyka/kontrapunkt'],
+      ['Bùi Ngọc Phúc — Giáo trình Phức điệu', 'https://vinhphuc.orgfree.com/main/Giao%20trinh/phuc-dieu.htm'],
+      ['Luận án: Phức điệu trong các tác phẩm thính phòng, giao hưởng Việt Nam (nhắc giáo trình Cù Lệ Duyên)', 'https://luanvan.co/luan-van/luan-an-phuc-dieu-trong-cac-tac-pham-thinh-phong-giao-huong-viet-nam-78051/'],
+      ['Wikipedia — Johann Joseph Fux', 'https://en.wikipedia.org/wiki/Johann_Joseph_Fux'],
+      ['Wikipedia — Gioseffo Zarlino', 'https://en.wikipedia.org/wiki/Gioseffo_Zarlino'],
+      ['Jeppesen, Counterpoint: The Polyphonic Vocal Style of the Sixteenth Century (Internet Archive)', 'https://ia801707.us.archive.org/2/items/counterpointpoly00jepp/counterpointpoly00jepp.pdf'],
+      ['IMSLP — Taneyev, Convertible Counterpoint in the Strict Style', 'https://imslp.org/wiki/Convertible_Counterpoint_in_the_Strict_Style_(Taneyev,_Sergey)'],
+      ['Open Music Theory 2 — Species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/'],
+    ],
+    body: `
+## Nghiêm khắc và tự do
+| | **Phức điệu nghiêm khắc** (строгий стиль) | **Phức điệu tự do** (свободный стиль) |
+|---|---|---|
+| Thời kỳ mẫu | Thế kỷ 15 – 16: [[thoi-ky-phuc-hung|Phục hưng]] | Thế kỷ 17 – 18: [[thoi-ky-baroque|Baroque]] ([[johann-sebastian-bach|Bach]], [[george-frideric-handel|Handel]]) |
+| Chất liệu | Thanh nhạc nhà thờ **a cappella** ([[thanh-le-va-requiem|thánh lễ]], [[motet]]) | Khí nhạc và thanh nhạc: [[fugue]], [[to-khuc-baroque|tổ khúc]], invention |
+| Hoà âm | [[dieu-thuc|Điệu thức]], [[hop-am-ba|hợp âm ba]] và hợp âm 6 | [[chuc-nang-hoa-am|Hoà âm chức năng]] trưởng – thứ, [[hop-am-bay|hợp âm 7]], [[chuyen-giong|chuyển giọng]] |
+| Giai điệu | Chủ yếu **liền bậc**; mỗi bước nhảy được **bù** bằng chuyển động ngược lại | Tự do hơn, có [[luyen-hop-am-rai|hợp âm rải]], nhảy xa, nốt cromatic |
+| [[thuan-nghich|Nghịch âm]] | Chỉ ở dạng [[not-ngoai-hop-am|nốt lướt]], nốt thêu, nốt treo, cambiata | Nhiều loại hơn |
+(Theo Bách khoa toàn thư Nga và Krugosvet.) Tên "nghiêm khắc" vì phong cách này có **quy tắc rất chặt** — mỗi nốt phải giải thích được. Ở Việt Nam, môn **Phức điệu** ở bậc đại học đi "từ phức điệu nghiêm khắc đến phức điệu tự do" (giáo trình của Bùi Ngọc Phúc); giáo trình *Phức điệu nghiêm khắc* của Cù Lệ Duyên (2004) được dùng ở bậc đại học.
+
+## Các mốc của môn học
+| Năm | Tác phẩm lý thuyết | Ý nghĩa |
+|---|---|---|
+| 1558 | Zarlino, *Le istitutioni harmoniche* (phần III: "Nghệ thuật đối âm") | Giải thích lệnh cấm quãng 5, [[dan-giong|quãng 8 song song]]; coi hợp âm ba là nền |
+| 1725 | Fux, *Gradus ad Parnassum* (tiếng Latin, Vienna) | Phương pháp **năm loại** — đối thoại giữa thầy Aloysius (đại diện [[giovanni-pierluigi-da-palestrina|Palestrina]]) và trò Josephus (chính Fux) |
+| 1909 | Taneyev, *Đối âm di động của lối viết nghiêm khắc* | Toán học hoá [[doi-am-kep|đối âm đảo]] bằng các chỉ số dịch chuyển |
+| 1931 | Jeppesen, *Counterpoint* (bản Đan Mạch; tiếng Anh 1939) | Sửa nhiều chỗ của Fux theo đúng phong cách Palestrina |
+Bối cảnh: [[doi-am]], [[doi-am-5-loai]], [[lich-su-phan-tich-am-nhac]].
+
+## Lộ trình học trong thư viện
+1. [[quang-va-chuyen-dong-doi-am]] — bảng quãng thuận/nghịch và **bốn quy tắc chuyển động** của Fux.
+2. [[cantus-firmus]] — cách viết và kiểm tra một giai điệu "mẫu".
+3. [[doi-am-loai-1]] — nốt đối nốt.
+4. [[doi-am-loai-2]] — hai nốt đối một; nốt lướt.
+5. [[doi-am-loai-3]] — bốn nốt đối một; nốt thêu, cambiata.
+6. [[doi-am-loai-4]] — nốt treo: chuẩn bị – nghịch – giải quyết.
+7. [[doi-am-loai-5]] — đối âm hoa mỹ.
+8. [[doi-am-ba-bon-be]] — ba và bốn bè.
+9. [[phong-cach-palestrina]] — các chuẩn mực thật của thế kỷ 16.
+10. [[doi-am-kep]] — đối âm đảo, công thức đảo ở quãng 8, 10, 12; canon.
+11. [[fugue]] — bước sang phức điệu tự do.
+**Bảng công thức và mẹo nhớ**: [[cong-thuc-phuc-dieu]].
+
+## Học thế nào cho nhanh
+- **Một quy tắc – một lý do**: hầu hết quy tắc phục vụ ba mục tiêu — (1) mỗi bè là một **giai điệu hát được**; (2) các bè **độc lập** với nhau; (3) nghịch âm luôn được **chuẩn bị và giải quyết**. Nhớ lý do thì không cần thuộc lòng.
+- **Viết ít, kiểm kỹ**: mỗi bài chỉ 8 – 12 nốt cantus; sau khi viết, kiểm theo danh sách ở [[cong-thuc-phuc-dieu]].
+- **Hát và chơi**: hát một bè, chơi bè kia trên piano — tai sẽ phát hiện quãng 5 song song nhanh hơn mắt. Xem [[xuong-am]].
+- **Đi đúng thứ tự loại 1 → 5**: mỗi loại thêm đúng **một** vấn đề mới.
+`,
+  },
+  {
+    slug: 'quang-va-chuyen-dong-doi-am',
+    title: 'Quãng và chuyển động trong đối âm',
+    category: 'form',
+    aliases: ['quãng thuận hoàn toàn', 'quãng thuận không hoàn toàn', 'perfect consonance', 'imperfect consonance', 'bốn quy tắc chuyển động', 'rules of motion', 'direct fifths', 'chuyển động ngược chiều', 'contrary motion', 'oblique motion', 'chuyển động xiên'],
+    summary: 'Nền móng của phức điệu nghiêm khắc: phân loại quãng (thuận hoàn toàn, thuận không hoàn toàn, nghịch — và vì sao quãng 4 bị coi là nghịch trong hai bè), bốn kiểu chuyển động và bốn quy tắc của Fux, cấm quãng 5/8 song song và quãng 5/8 ẩn, giới hạn khoảng cách và vượt bè.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Open Music Theory 2 — First-species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/'],
+      ['Wikibooks — Species counterpoint in two voices (bốn quy tắc chuyển động của Fux)', 'https://en.wikibooks.org/wiki/Music_Theory/Counterpoint/Species_Counterpoint/In_Two_Voices'],
+      ['Stevens Institute — Species counterpoint (quãng 4 và các bè trên)', 'https://personal.stevens.edu/~abrick/speciesctpt/spI3.html'],
+      ['Wikipedia — Gioseffo Zarlino', 'https://en.wikipedia.org/wiki/Gioseffo_Zarlino'],
+    ],
+    body: `
+## Ba nhóm quãng
+| Nhóm | Quãng (kể cả quãng kép) | Vai trò |
+|---|---|---|
+| **Thuận hoàn toàn** | Đồng âm (1), 5 đúng, 8 đúng (12, 15…) | Ổn định, "rỗng" — dùng ở đầu và cuối |
+| **Thuận không hoàn toàn** | 3 và 6 (trưởng, thứ), 10 | Ấm, đầy — là "bánh mì" của phần giữa |
+| **Nghịch** | 2, 7, 9, tritone (4 tăng / 5 giảm), **và quãng 4 đúng** | Chỉ dùng có điều kiện ([[not-ngoai-hop-am|nốt lướt]], nốt thêu, nốt treo) |
+::staff treble C4+C5=8 C4+G4=5 / C4+E4=3 C4+A4=6 C4+E5=10 / C4+D4=2 C4+F4=4 C4+F#4=4+ C4+B4=7 C4+D5=9 | Thuận hoàn toàn · thuận không hoàn toàn · nghịch (4 đúng được tính là nghịch khi có bè thấp nhất tham gia)
+- **Quãng 4**: nghịch **mỗi khi có bè thấp nhất** tham gia — nên trong hai bè, quãng 4 luôn là nghịch. Từ ba bè trở lên, quãng 4 **giữa hai bè trên** dùng được nếu cả hai bè đều thuận với bè trầm (xem [[doi-am-ba-bon-be]]).
+- Phân loại này khớp với độ "trong" của tỉ lệ dao động: 2:1, 3:2 đơn giản nhất — xem [[thuan-nghich]], [[chuoi-boi-am]].
+
+## Bốn kiểu chuyển động
+| Kiểu | Mô tả | Ví dụ (bè dưới → bè trên) |
+|---|---|---|
+| **Ngược chiều** | Một bè lên, một bè xuống | C – D dưới, G – F trên |
+| **Xiên** | Một bè đứng, một bè đi | C – C dưới, E – F trên |
+| **Cùng chiều** | Cùng hướng, quãng thay đổi | C – D dưới, E – A trên |
+| **Song song** | Cùng hướng, giữ nguyên quãng | C – D dưới, E – F trên (3 → 3) |
+
+## Bốn quy tắc chuyển động của Fux
+1. **Hoàn toàn → hoàn toàn**: chỉ ngược chiều hoặc xiên.
+2. **Hoàn toàn → không hoàn toàn**: chuyển động nào cũng được.
+3. **Không hoàn toàn → hoàn toàn**: chỉ ngược chiều hoặc xiên.
+4. **Không hoàn toàn → không hoàn toàn**: chuyển động nào cũng được.
+**Công thức gọn**: *không bao giờ đi cùng chiều hoặc song song **vào** một quãng thuận hoàn toàn.*
+::staff treble C4+G4=5 D4+A4=5✗ / C4+E4=3 D4+A4=5✗ / E4+C5=6 D4+D5=8✓ | Trái: quãng 5 song song (cấm). Giữa: quãng 5 ẩn — cùng chiều vào quãng 5 (cấm trong hai bè). Phải: ngược chiều vào quãng 8 (đúng)
+
+## Vì sao cấm quãng 5, quãng 8 song song?
+Hai bè đi song song ở quãng 8 hay 5 nghe như **một bè được tô dày**, làm mất tính độc lập — mục tiêu số một của [[doi-am|phức điệu]]. Zarlino (1558) là người đầu tiên giải thích lệnh cấm này. Lưu ý:
+- Quãng kép cũng tính: 5 → 12 vẫn là "quãng 5 song song".
+- Hai quãng hoàn toàn **khác loại** liền nhau (8 → 5) được phép nhưng nên hạn chế.
+- **Quãng 5/8 ẩn** (cùng chiều vào quãng hoàn toàn) bị cấm trong hai bè; từ ba bè trở lên được nới cho các bè trong.
+
+## Khoảng cách và vượt bè
+- Hai bè không cách nhau quá **quãng 12**; vượt quãng 10 chỉ trong chốc lát, tốt nhất ở trong một quãng 8.
+- Tránh **vượt bè** (bè dưới lên cao hơn bè trên) và **lấn bè** (một bè đi tới nốt bè kia vừa rời).
+Áp dụng: [[doi-am-loai-1]]. Tổng hợp: [[cong-thuc-phuc-dieu]]. So sánh với hoà âm bốn bè: [[luat-hoa-am-bon-be]], [[dan-giong]].
+`,
+  },
+  {
+    slug: 'cantus-firmus',
+    title: 'Cantus firmus: viết và kiểm tra giai điệu mẫu',
+    category: 'form',
+    aliases: ['cantus firmus', 'CF', 'giai điệu cố định', 'bè giọng chính', 'cantus'],
+    summary: 'Cantus firmus là giai điệu nốt tròn cho sẵn mà người học viết đối âm lên trên hoặc dưới. Bài này tổng hợp các quy tắc viết cantus (độ dài, mở và kết, tầm cữ, một đỉnh, các bước nhảy được phép và cách bù), kèm một ví dụ được phân tích từng bước.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Open Music Theory 2 — First-species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/'],
+      ['Ars Nova Counterpoint manual — Melodic rules', 'https://www.ars-nova.com/cpmanual/melodic.htm'],
+      ['Ian Stoner — Fux workbook', 'https://www.ianstoner.com/pdf/fux_workbook_0.1.pdf'],
+      ['Puget Sound — Music Theory for the 21st-Century Classroom: First species', 'https://musictheory.pugetsound.edu/mt21c/FirstSpecies.html'],
+    ],
+    body: `
+## Ví dụ
+::staff treble D4=1 F4=2 E4=3 D4=4 G4=5 F4=6 A4=7 G4=8 F4=9 E4=10 D4=11 | Một cantus firmus ở điệu thức Rê (Dorian), 11 nốt — số dưới nốt là thứ tự; được dùng làm cantus cho mọi ví dụ trong loạt bài này
+Phân tích: bắt đầu và kết ở **D**; đỉnh duy nhất **A** (nốt 7); các bước nhảy D – F, D – G, F – A là quãng 3 và 4, mỗi bước được theo sau bằng chuyển động liền bậc; kết bằng **E – D** (re – do) đi xuống liền bậc.
+
+## Quy tắc (theo Open Music Theory, đối chiếu Fux và Jeppesen)
+| Mục | Quy tắc |
+|---|---|
+| Độ dài | Khoảng 8 – 16 [[truong-do|nốt tròn]] (các tác giả khác nhau: 8 – 13, 8 – 15) |
+| Mở – kết | Bắt đầu và kết thúc trên **[[bac-am-giai|chủ âm]]** (do / finalis của [[dieu-thuc|điệu thức]]) |
+| Vào nốt kết | **Liền bậc**: thường re → do, đôi khi ti → do |
+| [[cao-do|Tầm cữ]] | Không quá **quãng 10**, thường trong một quãng 8 |
+| Đỉnh | **Một** nốt cao nhất, không lặp lại; không nên là cảm âm |
+| Chuyển động | Chủ yếu **liền bậc**, xen một vài bước nhảy nhỏ |
+| Nhảy được phép | 3 thứ, 3 trưởng, 4 đúng, 5 đúng, 8 đúng; **6 thứ chỉ khi đi lên** |
+| Nhảy bị cấm | Tritone, 7, mọi quãng tăng/giảm, quãng lớn hơn quãng 8, quãng 6 đi xuống |
+| Bù bước nhảy | Sau bước nhảy **từ quãng 4 trở lên**: đi **liền bậc ngược chiều** |
+| Nhiều bước nhảy | Tối đa **2** bước nhảy liền nhau, và không cùng chiều (trừ khi chúng tạo thành một [[hop-am-ba|hợp âm ba]] thuận) |
+| "Vẽ" quãng cấm | Không để hai điểm ngoặt của giai điệu tạo thành tritone hay quãng 7 |
+| Giọng thứ | Cảm âm (nâng lên) chỉ ở nốt áp chót |
+::staff treble D4 F4 A4 / D4 A4 G4 / D4 G#4 A4 / F4 B4 C5 | Bốn trường hợp: hai bước nhảy cùng chiều D – F – A (chỉ dung thứ vì tạo hợp âm ba) · nhảy quãng 5 rồi **bù** liền bậc ngược chiều (đúng) · quãng 4 tăng D – G♯ (cấm) · tritone F – B (cấm)
+
+## Kiểm tra nhanh một cantus (5 câu hỏi)
+1. Mở và kết trên chủ âm? Vào nốt kết bằng bước liền?
+2. Có đúng **một** đỉnh?
+3. Mọi bước nhảy đều thuộc danh sách được phép? Bước nhảy lớn đã được bù?
+4. Không quá 2 bước nhảy liền nhau? Không "vẽ" tritone?
+5. Tầm cữ ≤ quãng 10?
+Hát to cantus trước khi viết [[doi-am|đối âm]] — một cantus khó hát sẽ cho đối âm khó viết. Tiếp theo: [[doi-am-loai-1]]. Quy tắc giai điệu chi tiết hơn của thế kỷ 16: [[phong-cach-palestrina]].
+`,
+  },
+  {
+    slug: 'doi-am-loai-1',
+    title: 'Đối âm loại 1: nốt đối nốt',
+    category: 'form',
+    aliases: ['đối âm loại 1', 'first species', 'first-species counterpoint', 'loại 1', 'nốt đối nốt', '1:1'],
+    summary: 'Loại đầu tiên của Fux: mỗi nốt cantus có đúng một nốt đối âm, mọi quãng đều thuận. Bài này gom đủ quy tắc mở bài, phần giữa và kết, cách chọn quãng, các lỗi thường gặp, một quy trình viết từng bước và hai ví dụ (đối âm ở trên và ở dưới) đã được kiểm tra theo toàn bộ quy tắc.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Open Music Theory 2 — First-species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/first-species-counterpoint/'],
+      ['Wikibooks — Species counterpoint in two voices (bốn quy tắc chuyển động của Fux)', 'https://en.wikibooks.org/wiki/Music_Theory/Counterpoint/Species_Counterpoint/In_Two_Voices'],
+      ['Ian Stoner — Fux workbook', 'https://www.ianstoner.com/pdf/fux_workbook_0.1.pdf'],
+      ['Stevens Institute — First species counterpoint', 'https://personal.stevens.edu/~abrick/theory1/theory1_files/1stspeciescounterpoint.pdf'],
+    ],
+    body: `
+## Quy tắc
+| Phần | Quy tắc |
+|---|---|
+| **Mở bài** | [[doi-am|Đối âm]] ở trên: quãng 1, 5 hoặc 8. Đối âm ở dưới: **chỉ** quãng 1 hoặc 8 (quãng 5 ở dưới làm nốt chủ nghe như bậc 5 của giọng khác) |
+| **Phần giữa** | Mọi quãng **thuận**; ưu tiên **3, 6, 10**; quãng 5 và 8 dùng thưa |
+| **Đồng âm** | Chỉ ở nốt đầu và nốt cuối |
+| **Chuyển động** | Theo [[quang-va-chuyen-dong-doi-am|bốn quy tắc của Fux]]: không song song hay cùng chiều **vào** quãng hoàn toàn; ưu tiên ngược chiều |
+| **Quãng 3, 6 liên tiếp** | Tối đa **3** quãng cùng loại liền nhau (3 – 3 – 3) để giữ độc lập |
+| **Giai điệu** | Như [[cantus-firmus]]: một đỉnh, nhảy được bù; đỉnh của hai bè không trùng nhau; tối đa một [[not-lap-lai|nốt lặp]] |
+| **Kết** | Ngược chiều, liền bậc vào quãng 8 / đồng âm: ở trên là **6 → 8**, ở dưới là **3 → 1** (hoặc 10 → 8). Trong [[dieu-thuc|điệu thức]], **nâng [[bac-am-giai|cảm âm]]** ở nốt áp chót (Dorian: C♯) |
+
+## Ví dụ 1: đối âm ở trên
+::staff treble D4+A4=5 / F4+A4=3 / E4+G4=3 / D4+A4=5 / G4+B4=3 / F4+C5=5 | Ô 1 – 6
+::staff treble A4+C5=3 / G4+B4=3 / F4+D5=6 / E4+C#5=6 / D4+D5=8 | Đối âm loại 1 trên cantus Dorian (minh hoạ tự soạn, đã kiểm theo mọi quy tắc trong bảng). Số dưới nốt là quãng giữa hai bè — Ô 7 – 11
+Đọc ví dụ: mở bằng quãng 5; phần giữa chủ yếu là 3; mọi quãng 5 đều được vào bằng **chuyển động ngược chiều** (ví dụ ô 3 → 4: E → D đi xuống, G → A đi lên); đỉnh D5 chỉ một lần, không trùng đỉnh A4 của cantus; kết 6 → 8 với C♯ nâng.
+
+## Ví dụ 2: đối âm ở dưới
+::grand D4/D3=8 F4/A3=6 E4/G3=6 D4/F3=6 G4/E3=10 F4/F3=8 A4/D3=12 G4/E3=10 F4/D3=10 E4/C#3=10 D4/D3=8 | Đối âm ở dưới (khuông dưới): mở bằng quãng 8, kết 10 → 8 với C♯ (minh hoạ tự soạn, đã kiểm)
+
+## Viết từng bước
+1. **Kết trước**: điền hai nốt cuối (6 → 8 ở trên, hoặc 3 → 1 / 10 → 8 ở dưới).
+2. **Mở bài**: chọn quãng 8 hoặc 5 (ở trên), 8 hoặc 1 (ở dưới).
+3. **Phần giữa**: với mỗi nốt cantus, liệt kê các nốt tạo quãng 3, 5, 6, 8; chọn nốt **gần nốt trước nhất** sao cho không phạm bốn quy tắc chuyển động.
+4. **Vẽ đường cong**: đặt **một** đỉnh ở khoảng 2/3 bài; tránh đi tới đi lui quanh một nốt.
+5. **Kiểm tra** theo danh sách ở [[cong-thuc-phuc-dieu]].
+
+## Lỗi thường gặp
+- Quãng 5 hoặc 8 **song song** (kể cả 5 → 12).
+- Quãng 5/8 **ẩn**: cùng chiều vào quãng hoàn toàn.
+- Dùng **quãng 4** (nghịch trong hai bè).
+- Đồng âm ở giữa bài; quá nhiều quãng 3 liên tiếp; đối âm và cantus cùng đạt đỉnh một lúc.
+Tiếp theo: [[doi-am-loai-2]]. Tổng quan: [[phuc-dieu-nghiem-khac]].
+`,
+  },
+  {
+    slug: 'doi-am-loai-2',
+    title: 'Đối âm loại 2: hai nốt đối một',
+    category: 'form',
+    aliases: ['đối âm loại 2', 'second species', 'second-species counterpoint', 'loại 2', '2:1'],
+    summary: 'Mỗi nốt cantus có hai nốt trắng đối âm. Phách mạnh luôn thuận; phách nhẹ được phép nghịch nhưng chỉ khi là nốt lướt (liền bậc, cùng chiều). Bài này tổng hợp quy tắc, các mẫu phách nhẹ thuận, cách kiểm tra quãng song song giữa các phách mạnh và một ví dụ đã kiểm.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Ian Stoner — Fux workbook', 'https://www.ianstoner.com/pdf/fux_workbook_0.1.pdf'],
+      ['Rothfarb (UCSB) — Third species (so sánh nốt thêu ở loại 2 và 3)', 'https://rothfarb.faculty.music.ucsb.edu/courses/103/Third_Species(2v).html'],
+    ],
+    body: `
+## Quy tắc
+| Mục | Quy tắc |
+|---|---|
+| Mở bài | Nên bắt đầu bằng **lặng nửa ô**, rồi vào quãng hoàn toàn (như [[doi-am-loai-1|loại 1]]) |
+| **[[so-chi-nhip|Phách mạnh]]** | Luôn **thuận**; không đồng âm |
+| **Phách nhẹ** | Thuận, hoặc **nghịch dưới dạng [[not-ngoai-hop-am|nốt lướt]]**: lấp một quãng 3 bằng bước liền, cùng chiều |
+| Nốt thêu | Chỉ **nốt thêu thuận**; nốt thêu nghịch phải đợi đến [[doi-am-loai-3|loại 3]] |
+| Song song | **Phách mạnh → phách mạnh**: cấm quãng 5/8 (vì tai vẫn nghe hai phách mạnh nối nhau). **Phách nhẹ → phách mạnh**: kiểm như loại 1 |
+| Quãng ẩn giữa hai phách mạnh | Được nới (dung thứ) |
+| Đồng âm | Được ở phách nhẹ |
+| Kết | Ô áp chót: có thể là một nốt tròn, hoặc hai nốt trắng với nốt [[bac-am-giai|cảm âm]] ở phách nhẹ (6 → 8) |
+::staff treble C4+E4=3 F4=4 / E4+G4=3 | Nốt lướt nghịch ở phách nhẹ: E – F – G lấp quãng 3, quãng 4 (F trên C) nằm giữa hai quãng thuận
+
+## Các cách dùng phách nhẹ thuận
+Theo Salzer và Schachter (dẫn trong Open Music Theory): nốt lướt thuận, thay thế, nốt lướt có nhảy, chia quãng, đổi quãng 8 (đổi âm vực), trì hoãn, nốt thêu thuận. Nói gọn: phách nhẹ thuận có thể **nhảy**, phách nhẹ nghịch thì **phải đi liền bậc**.
+
+## Ví dụ
+::staff treble D4=· D5=8 / F4+C5=5 D5=6 / E4+E5=8 G5=10 / D4+F5=10 D5=8 / G4+E5=6 D5=5 / F4+A4=3 B4=4 | Ô 1 – 6
+::staff treble A4+C5=3 A4=1 / G4+B4=3 C5=4 / F4+D5=6 A4=3 / E4+B4=5 C#5=6 / D4+D5=8 | Đối âm loại 2 (minh hoạ tự soạn, đã kiểm). Các quãng 4 ở ô 6 (B trên F — tritone) và ô 8 (C trên G) đều là **nốt lướt** liền bậc, cùng chiều — Ô 7 – 11
+Đọc ví dụ: phách mạnh luôn thuận (8, 5, 8, 10, 6, 3, 3, 3, 6, 5); đỉnh G5 duy nhất ở ô 3; không có hai phách mạnh liên tiếp cùng là quãng 5 hay 8.
+
+## Viết từng bước
+1. Viết một **khung loại 1** trên các phách mạnh (nhưng tránh quãng 5/8 liên tiếp giữa phách mạnh).
+2. Điền phách nhẹ: nếu hai phách mạnh cách nhau quãng 3 → dùng **nốt lướt**; nếu cách quãng 2 → dùng nốt thuận nhảy (ví dụ nhảy quãng 3 rồi về); nếu đứng yên → **đổi quãng 8** hoặc nốt thêu thuận.
+3. Kiểm tra song song cả **phách nhẹ → phách mạnh**.
+Tiếp theo: [[doi-am-loai-3]].
+`,
+  },
+  {
+    slug: 'doi-am-loai-3',
+    title: 'Đối âm loại 3: bốn nốt đối một',
+    category: 'form',
+    aliases: ['đối âm loại 3', 'third species', 'third-species counterpoint', 'loại 3', '4:1', 'nota cambiata', 'cambiata', 'nốt thêu kép', 'double neighbor'],
+    summary: 'Bốn nốt đen trên mỗi nốt cantus: phách 1 luôn thuận, các phách còn lại được dùng nốt lướt và nốt thêu nghịch, cùng hai hình đặc biệt — nốt thêu kép và nota cambiata. Kèm quy tắc chống quãng song song "lọt khe", một ví dụ đã kiểm và quy trình viết.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Open Music Theory 2 — Third-species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/third-species-counterpoint/'],
+      ['Ian Stoner — Fux workbook', 'https://www.ianstoner.com/pdf/fux_workbook_0.1.pdf'],
+      ['Rothfarb (UCSB) — Third species', 'https://rothfarb.faculty.music.ucsb.edu/courses/103/Third_Species(2v).html'],
+    ],
+    body: `
+## Quy tắc
+| Mục | Quy tắc |
+|---|---|
+| **Phách 1** | Luôn thuận, không đồng âm |
+| Phách 2 – 4 | Thuận, hoặc nghịch dưới dạng **[[not-ngoai-hop-am|nốt lướt]]** hay **nốt thêu** (đẹp nhất ở phách 2 và 4); được phép hai nốt lướt nghịch liền nhau (ví dụ quãng 4 – 5 giảm) |
+| **Nốt thêu kép** | Đi quanh một nốt rồi tiếp tục liền bậc cùng chiều, ví dụ C – D – B – C |
+| **Nota cambiata** | Năm nốt: xuống một bậc – **xuống quãng 3** – lên một bậc – lên một bậc. Nốt 1, 3, 5 thuận; nốt 2 **nghịch mà được rời bằng bước nhảy** — ngoại lệ duy nhất |
+| Song song "lọt khe" | Quãng 5 ở phách 1 không được đứng sau quãng 5 ở phách 3 hoặc 4 của ô trước; quãng 8 ở phách 1 không đứng sau quãng 8 ở phách 2, 3, 4 |
+| Phách 1 liên tiếp | Hai ô liền có thể cùng mở bằng một quãng hoàn toàn, nhưng không được ba (Open Music Theory; nhiều giáo viên cấm cả hai) |
+| Kết | Ô áp chót đi liền bậc vào [[bac-am-giai|cảm âm]] (6 → 8 ở trên) |
+::staff treble C4+C5=8 B4=7 G4=5 A4=6 / D4+B4=6 | Nota cambiata theo Fux (8 – 7 – 5 – 6): B là nghịch nhưng **nhảy** xuống G, rồi hai bước lên — một hình rất hay gặp ở thế kỷ 16
+::staff treble C4+E5=10 F5=11 D5=9 E5=10 / A3+F5=13 | Nốt thêu kép E – F – D – E rồi đi tiếp lên F: hai nốt thêu nghịch (11, 9) bao quanh nốt chính
+
+## Ví dụ
+::staff treble D4+D5=8 C5=7 B4=6 A4=5 / F4+D5=6 C5=5 B4=4 A4=3 / E4+B4=5 C5=6 D5=7 E5=8 / D4+F5=10 E5=9 D5=8 C5=7 | Ô 1 – 4
+::staff treble G4+D5=5 E5=6 D5=5 E5=6 / F4+F5=8 E5=7 D5=6 E5=7 / A4+F5=6 E5=5 C5=3 A4=1 / G4+B4=3 C5=4 B4=3 D5=5 | Ô 5 – 8
+::staff treble F4+F5=8 G5=9 F5=8 D5=6 / E4+G4=3 A4=4 B4=5 C#5=6 / D4+D5=8 | Đối âm loại 3 (minh hoạ tự soạn, đã kiểm). Các quãng nghịch 7, 4, 9 đều là nốt lướt hoặc nốt thêu; phách 1 luôn thuận; đỉnh G5 duy nhất ở ô 9 — Ô 9 – 11
+Đọc ví dụ: ô 1 là chuỗi nốt lướt đi xuống; ô 5 và ô 6 dùng **nốt thêu trên** (D – E – D, E – D – E); ô 10 mở bằng quãng 3 sau bước nhảy quãng 5 xuống (D5 → G4) rồi đi liền bậc ngược chiều lên cảm âm C♯.
+
+## Viết từng bước
+1. Đặt **khung phách 1** như một bài [[doi-am-loai-1|loại 1]] (thưa quãng hoàn toàn).
+2. Nối hai phách 1 bằng một **đường liền bậc** (4 nốt lấp đủ quãng 5 hoặc quãng 3 + nốt thêu).
+3. Khi hai nốt khung quá gần: dùng **nốt thêu kép** hoặc **cambiata**.
+4. Kiểm tra quãng song song "lọt khe" (phách 3, 4 → phách 1 của ô sau).
+Tiếp theo: [[doi-am-loai-4]].
+`,
+  },
+  {
+    slug: 'doi-am-loai-4',
+    title: 'Đối âm loại 4: nốt treo (syncopation)',
+    category: 'form',
+    aliases: ['đối âm loại 4', 'fourth species', 'fourth-species counterpoint', 'loại 4', 'nốt treo loại 4', 'đảo phách loại 4', 'chuẩn bị – nghịch – giải quyết', '7-6', '4-3', '2-3'],
+    summary: 'Đối âm lệch phách: nốt ở phách nhẹ được nối sang phách mạnh của ô sau. Nếu thành nghịch, đó là nốt treo — phải chuẩn bị thuận, nghịch ở phách mạnh và giải quyết đi xuống liền bậc. Bài này tổng hợp các nốt treo được phép ở trên (7–6, 4–3, 9–8) và ở dưới (2–3, 4–5), các giới hạn chuỗi, cách "phá loại" và một ví dụ đã kiểm.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Open Music Theory 2 — Fourth-species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/fourth-species-counterpoint/'],
+      ['Toby Rush — Species counterpoint theory pages', 'https://tobyrush.com/theorypages/pdf/en-us/species-counterpoint-set.pdf'],
+      ['AGO — Counterpoint webinar (nốt treo, quãng 4 thuận)', 'https://wp.agohq.org/wp-content/uploads/2023/05/Final-FAGO-Counterpoint-Webinar.pdf'],
+    ],
+    body: `
+## Ba thời của nốt treo
+::form Chuẩn_bị_(thuận,_phách_nhẹ) Treo_(nghịch,_phách_mạnh) Giải_quyết_(thuận,_xuống_liền_bậc) | Công thức nốt treo: chuẩn bị → treo → giải quyết
+::staff treble F4+D5=6 / E4+D5=7 C5=6 | Nốt treo 7 – 6: D (thuận trên F) được giữ sang ô sau thành quãng 7 trên E, rồi xuống C (quãng 6)
+
+## Nốt treo được phép
+| [[doi-am|Đối âm]] ở trên | Đối âm ở dưới |
+|---|---|
+| **7 – 6** (phổ biến nhất) | **2 – 3** (phổ biến nhất) |
+| **4 – 3** | **4 – 5** (một số sách coi là tuỳ chọn) |
+| **9 – 8** (tranh cãi: có sách cấm trong hai bè vì giải quyết vào quãng 8 trống; có sách cho dùng thưa, không xích chuỗi) | 9 – 10 |
+| | 7 – 8: "về lý thuyết được nhưng nên tránh" (Open Music Theory); nhiều giáo trình cấm |
+Một nốt nối **thuận** (ví dụ 5 – 6, 3 – 3) là **[[dao-phach|đảo phách]] thuận** — không cần giải quyết.
+
+## Giới hạn
+- Không xích hai nốt treo **9 – 8** hay **4 – 5** liền nhau (tạo quãng 8 / 5 song song ở các nốt giải quyết).
+- 7 – 6 và 4 – 3: tối đa **3** lần liền.
+- Tránh quãng 5/8 song song giữa các **phách nhẹ** liên tiếp.
+- Bắt đầu bằng lặng nửa ô; kết bằng **7 – 6** (ở trên) hoặc **2 – 3** (ở dưới) ở ô áp chót.
+- **Phá loại**: khi không thể nối, tạm dùng hai nốt trắng như [[doi-am-loai-2|loại 2]] rồi trở lại chuỗi nối.
+
+## Ví dụ
+::staff treble D4=· A4=5 / F4+A4=3 D5=6 / E4+D5=7 C5=6 / D4+C5=7 B4=6 / G4+B4=3 D5=5 / F4+D5=6 F5=8 | Ô 1 – 6
+::staff treble A4+F5=6 E5=5 / G4+D5=5 E5=6 / F4+E5=7 D5=6 / E4+D5=7 C#5=6 / D4+D5=8 | Đối âm loại 4 (minh hoạ tự soạn, đã kiểm): bốn nốt treo 7 – 6 (ô 3, 4, 9, 10); ô 5 – 7 là đảo phách thuận; ô 8 "phá loại" (D5 không được nối) — Ô 7 – 11
+Đọc ví dụ: mỗi nốt ở phách nhẹ (chuẩn bị) được **giữ** sang phách mạnh ô sau; khi nó tạo quãng 7 với cantus, nó **đi xuống** một bậc thành quãng 6. Chuỗi 7 – 6, 7 – 6 ở ô 3 – 4 chính là công thức của [[mo-tien-hoa-am|mô tiến]] nốt treo trong hoà âm [[thoi-ky-baroque|Baroque]].
+
+## Mẹo
+- Nghĩ ngược: chọn **nốt giải quyết** (quãng 6 hoặc 3) trước, rồi lùi lên một bậc để có nốt treo, rồi kiểm nốt đó có **thuận** ở ô trước không.
+- Nốt treo đi xuống ở hầu hết phong cách — xem cách nó trở lại trong [[not-ngoai-hop-am]] và [[luat-hoa-am-bon-be]].
+Tiếp theo: [[doi-am-loai-5]].
+`,
+  },
+  {
+    slug: 'doi-am-loai-5',
+    title: 'Đối âm loại 5: hoa mỹ (florid)',
+    category: 'form',
+    aliases: ['đối âm loại 5', 'fifth species', 'florid counterpoint', 'đối âm hoa mỹ', 'loại 5'],
+    summary: 'Loại cuối của Fux trộn tự do bốn loại trước — nốt tròn, trắng, đen, nối lệch phách — cùng các cặp móc đơn. Bài này tổng hợp quy tắc nhịp điệu (móc đơn đi theo cặp ở phách nhẹ, liền bậc), cách trang trí nốt treo và một quy trình viết cho ra giai điệu "như hát".',
+    refs: [
+      ['Open Music Theory 2 — Fifth-species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/fifth-species-counterpoint/'],
+      ['Toby Rush — Species counterpoint theory pages', 'https://tobyrush.com/theorypages/pdf/en-us/species-counterpoint-set.pdf'],
+      ['Ars Nova — Fifth species instructions', 'https://www.ars-nova.com/musicatouch/activityinstructions/fifthspecies.html'],
+      ['Ian Stoner — Fux workbook', 'https://www.ianstoner.com/pdf/fux_workbook_0.1.pdf'],
+    ],
+    body: `
+## Quy tắc
+| Mục | Quy tắc |
+|---|---|
+| Chất liệu | Trộn [[doi-am-loai-1|loại 1]] – 4: nốt trắng, nốt đen, nốt nối lệch phách (nốt treo), thỉnh thoảng nốt tròn |
+| Mỗi loại giữ luật của nó | Nốt đen theo luật [[doi-am-loai-3|loại 3]], nốt treo theo luật [[doi-am-loai-4|loại 4]]… |
+| **Móc đơn** | Đi **theo cặp**, ở **phách nhẹ** (phách đen thứ 2 hoặc 4), vào và ra **liền bậc**; tối đa **một cặp** mỗi ô |
+| Không bắt đầu bằng móc đơn | Một ô, hay nửa sau của ô, không được mở bằng móc đơn |
+| Trang trí nốt treo | Fux cho phép trang trí nốt treo bằng hai móc đơn (thấp hơn nốt nghịch một bậc rồi về) trước khi giải quyết |
+| [[tiet-tau|Nhịp điệu]] | Tránh một dải dài chỉ một loại giá trị; tăng dần độ dày nốt về phía cao trào rồi giãn ra trước kết |
+::rhythm 4/4 h q q / q e-e h / h~ q q / h. q / w // | Một số mẫu nhịp loại 5 điển hình (minh hoạ): trắng + đen, cặp móc đơn ở phách 2, nốt nối lệch phách, kết bằng nốt tròn
+
+## Viết từng bước
+1. Phác **khung nhịp điệu** trước (như mẫu trên), có một điểm cao trào nhịp điệu.
+2. Đặt các **nốt treo** ở những chỗ cantus đi xuống liền bậc (dễ có 7 – 6).
+3. Điền phần còn lại theo luật [[doi-am-loai-2|loại 2]] và 3.
+4. Hát to: đối âm loại 5 tốt phải **nghe như một giai điệu thanh nhạc** — đây chính là cầu nối sang [[phong-cach-palestrina]].
+Tiếp theo: [[doi-am-ba-bon-be]].
+`,
+  },
+  {
+    slug: 'doi-am-ba-bon-be',
+    title: 'Đối âm nghiêm khắc ba và bốn bè',
+    category: 'form',
+    aliases: ['đối âm ba bè', 'đối âm bốn bè', 'three-voice counterpoint', 'four-voice counterpoint', 'hợp âm 5/3', 'hợp âm 6/3'],
+    summary: 'Khi có ba bè, mọi quãng được tính so với bè trầm; mỗi phách là một hợp âm ba đầy đủ hoặc hợp âm 6, không dùng 6/4. Fux coi ba bè là "hoàn hảo nhất" vì đủ cả ba nốt của hợp âm. Bài này tóm tắt các điều chỉnh so với hai bè và cách viết.',
+    refs: [
+      ['Wikibooks — Species counterpoint', 'https://en.wikibooks.org/wiki/Music_Theory/Counterpoint/Species_Counterpoint'],
+      ['Stevens Institute — Species counterpoint (quãng 4 và các bè trên)', 'https://personal.stevens.edu/~abrick/speciesctpt/spI3.html'],
+      ['Open Music Theory 2 — Species counterpoint', 'https://viva.pressbooks.pub/openmusictheory/chapter/species-counterpoint/'],
+      ['Lamotte — Species counterpoint in three voices (UCLouvain)', 'https://webperso.info.ucl.ac.be/~pvr/Lamotte_43031800_2024.pdf'],
+    ],
+    body: `
+## Điều gì thay đổi khi có bè thứ ba
+| Hai bè | Ba bè trở lên |
+|---|---|
+| Quãng 4 luôn nghịch | Quãng 4 (và tritone) **giữa hai bè trên** dùng được, nếu cả hai đều thuận với bè trầm |
+| Mỗi phách là một quãng | Mỗi phách là một **hợp âm**: 5/3 ([[hop-am-ba|hợp âm ba]] ở thể gốc) hoặc 6/3 ([[the-dao-hop-am|thể đảo]] 1); **không dùng 6/4** vì có quãng 4 trên bè trầm |
+| Quãng 5/8 ẩn bị cấm | Được nới cho các **bè trong**; hai bè ngoài vẫn nên giữ nghiêm |
+| — | Fux: ba bè là kết cấu **hoàn hảo nhất** vì chứa đủ hợp âm ba; từ bốn bè phải **nhân đôi** một nốt |
+::staff treble C4+E4+G4=5/3 E4+G4+C5=6/3 G4+C5+E5=6/4✗ | Ba thế của hợp âm C: 5/3 và 6/3 dùng được; 6/4 (quãng 4 trên bè trầm) không dùng trong lối nghiêm khắc
+- Hợp âm đầu và cuối có thể đầy đủ; Fux cho phép hợp âm cuối thiếu (chỉ có quãng 8 và 3, hoặc 8 và 5).
+- Mỗi bè vẫn phải là một giai điệu đẹp theo [[cantus-firmus|luật giai điệu]].
+
+## Cách viết
+1. Viết **bè trầm và bè trên** như một bài hai bè [[doi-am-loai-1|loại 1]] (đây là khung chịu lực).
+2. Thêm bè giữa sao cho mỗi phách thành 5/3 hoặc 6/3, ưu tiên nhân đôi nốt **gốc** hoặc **nốt 5** (không nhân đôi [[bac-am-giai|cảm âm]]).
+3. Kiểm tra song song **từng cặp bè** (với ba bè: 3 cặp; với bốn bè: 6 cặp).
+Đây cũng là nền của [[luat-hoa-am-bon-be|hoà âm bốn bè]] sau này. Áp dụng các [[doi-am-loai-2|loại 2]] – 5 cho một bè trong khi hai bè kia đi [[truong-do|nốt tròn]] là bước tiếp theo của giáo trình Fux.
+Liên quan: [[phong-cach-palestrina]], [[doi-am-kep]].
+`,
+  },
+  {
+    slug: 'phong-cach-palestrina',
+    title: 'Phong cách Palestrina: chuẩn mực thế kỷ 16',
+    category: 'form',
+    aliases: ['phong cách Palestrina', 'Palestrina style', 'phức điệu thanh nhạc thế kỷ 16', 'Jeppesen', 'consonant fourth', 'quãng 4 thuận', 'portamento (đối âm)', 'tactus'],
+    summary: 'Phức điệu nghiêm khắc là bản giản lược trong lớp học; phong cách thật của Palestrina và thế kỷ 16 (theo Jeppesen) có những chuẩn mực tinh tế hơn về giai điệu, nhịp và xử lý nghịch âm: nhảy quãng 6 thứ chỉ đi lên, nốt lướt có nhấn trong nốt đen, cambiata, portamento, quãng 4 thuận.',
+    refs: [
+      ['Jeppesen, Counterpoint: The Polyphonic Vocal Style of the Sixteenth Century (Internet Archive)', 'https://ia801707.us.archive.org/2/items/counterpointpoly00jepp/counterpointpoly00jepp.pdf'],
+      ['Ars Nova Counterpoint manual — Melodic rules', 'https://www.ars-nova.com/cpmanual/melodic.htm'],
+      ['College Music Symposium — Enumeration of dissonance in the masses of Palestrina', 'https://symposium.music.org/volume-23/articles-1752877059/enumeration-of-dissonance-in-the-masses-of-palestrina'],
+      ['AGO — Counterpoint webinar (nốt treo, quãng 4 thuận)', 'https://wp.agohq.org/wp-content/uploads/2023/05/Final-FAGO-Counterpoint-Webinar.pdf'],
+      ['Wikipedia — Giovanni Pierluigi da Palestrina', 'https://en.wikipedia.org/wiki/Giovanni_Pierluigi_da_Palestrina'],
+      ['Большая российская энциклопедия — Палестрина', 'https://bigenc.ru/c/palestrina-dzhovanni-p-erluidzhi-da-43562a'],
+    ],
+    body: `
+::wiki Giovanni_Pierluigi_da_Palestrina | Palestrina — "princeps musicae" (ảnh đầu bài Wikipedia)
+
+## Giai điệu
+| Chuẩn mực | Ghi chú |
+|---|---|
+| Nhảy đi xuống tối đa quãng 5; đi lên tối đa **quãng 6 thứ**; quãng 8 cả hai chiều | Vì vậy "6 thứ chỉ đi lên" |
+| Bước nhảy lớn được **cân bằng**: nhảy từ quãng 5 trở lên cần cân bằng hai phía, quãng 4 một phía | Đi liền bậc ngược chiều |
+| Không cấm tuyệt đối các bước nhảy liền nhau | Jeppesen (tr. 86) cho rằng cấm hẳn là sai với phong cách |
+| Không có tritone, quãng 7, quãng 2 tăng trong giai điệu | — |
+
+## Nghịch âm
+| Hình | Mô tả |
+|---|---|
+| **[[not-ngoai-hop-am|Nốt lướt]]** | Phách nhẹ, vào và ra liền bậc cùng chiều; trong [[truong-do|nốt đen]] có cả **nốt lướt có nhấn** |
+| **Nốt thêu** | Rời một nốt rồi trở về liền bậc |
+| **Nốt treo** | Chuẩn bị thuận – nghịch ở phách mạnh – giải quyết xuống liền bậc (xem [[doi-am-loai-4]]) |
+| **Nota cambiata** | Năm nốt; nốt nghịch thứ 2 nhảy quãng 3 xuống (xem [[doi-am-loai-3]]) |
+| **Portamento** | Nốt đen **đón trước** nốt giải quyết |
+| **Quãng 4 thuận** | Trường hợp bè trầm đứng yên suốt cả ba thời và quãng 4 được vào liền bậc — ngoại lệ cho phép chuẩn bị nốt treo bằng quãng 4 |
+
+## Nhịp và lời
+Thế kỷ 16 đếm theo *tactus* (đơn vị phách khoảng một nốt trắng); bản hiện đại thường ghi 4/2 (alla breve). Lời Latin được đặt sao cho trọng âm của chữ rơi vào nốt dài hoặc phách mạnh — chi tiết này nên kiểm lại trong Jeppesen khi soạn bài thực hành.
+
+## Vì sao học phong cách này?
+- Giai điệu [[giovanni-pierluigi-da-palestrina|Palestrina]] là mẫu mực của **giai điệu thanh nhạc tự nhiên** — hữu ích cả khi [[luat-hoa-am-bon-be|viết bè]] cho hợp xướng hôm nay.
+- Hiểu nó giúp nghe đúng các tác phẩm [[thanh-le-va-requiem|thánh lễ]], [[motet]], [[madrigal]] và hiểu vì sao [[johann-sebastian-bach|Bach]], [[wolfgang-amadeus-mozart|Mozart]], [[ludwig-van-beethoven|Beethoven]] đều học [[doi-am|đối âm]] "cổ" — xem [[doi-am-5-loai]].
+Tổng quan: [[phuc-dieu-nghiem-khac]].
+`,
+  },
+  {
+    slug: 'cong-thuc-phuc-dieu',
+    title: 'Bảng công thức và mẹo nhớ phức điệu nghiêm khắc',
+    category: 'form',
+    aliases: ['công thức phức điệu', 'cheat sheet đối âm', 'mẹo nhớ đối âm', 'checklist đối âm', 'tổng hợp quy tắc đối âm'],
+    summary: 'Toàn bộ quy tắc của phức điệu nghiêm khắc trên một trang: bảng quãng, ma trận chuyển động, quy tắc từng loại, bảng nốt treo, công thức đối âm đảo ở quãng 8, 10, 12, danh sách 12 câu kiểm tra và các câu thần chú dễ nhớ.',
+    refs: [
+      ['Open Music Theory (bản 1, mã nguồn GitHub) — Cantus firmus, First–Fourth species', 'https://github.com/openmusictheory/openmusictheory.github.io'],
+      ['Wikibooks — Species counterpoint in two voices (bốn quy tắc chuyển động của Fux)', 'https://en.wikibooks.org/wiki/Music_Theory/Counterpoint/Species_Counterpoint/In_Two_Voices'],
+      ['Ithaca College — Double counterpoint handout', 'https://musictech.ithaca.edu/MusicTech/Form/Handouts/DblCpt.html'],
+      ['Rothfarb (UCSB) — Invertible counterpoint', 'https://rothfarb.faculty.music.ucsb.edu/courses/103/invertible-cpt.html'],
+      ['teoria.com — Invertible counterpoint', 'https://www.teoria.com/en/reference/i/invertible-counterpoint.php'],
+      ['Toby Rush — Species counterpoint theory pages', 'https://tobyrush.com/theorypages/pdf/en-us/species-counterpoint-set.pdf'],
+    ],
+    body: `
+## 1. Quãng
+| Thuận hoàn toàn | Thuận không hoàn toàn | Nghịch |
+|---|---|---|
+| 1, 5, 8 (12, 15) | 3, 6 (10, 13) | 2, 4*, 7, 9, tritone |
+*Quãng 4 nghịch khi có bè trầm; giữa các bè trên thì thuận. Chi tiết: [[quang-va-chuyen-dong-doi-am]].
+
+## 2. Ma trận chuyển động (Fux)
+| Từ → Đến | Hoàn toàn | Không hoàn toàn |
+|---|---|---|
+| **Hoàn toàn** | Ngược chiều, xiên | Mọi chuyển động |
+| **Không hoàn toàn** | Ngược chiều, xiên | Mọi chuyển động |
+**Công thức**: *đích là quãng hoàn toàn → cấm song song và cùng chiều.*
+
+## 3. Từng loại trong một bảng
+| Loại | Tỉ lệ | [[so-chi-nhip|Phách mạnh]] | Phách nhẹ | Hình đặc trưng | Kết ([[doi-am|đối âm]] ở trên) |
+|---|---|---|---|---|---|
+| [[doi-am-loai-1|1]] | 1 : 1 | Thuận | — | — | 6 → 8 |
+| [[doi-am-loai-2|2]] | 2 : 1 | Thuận | Thuận hoặc [[not-ngoai-hop-am|nốt lướt]] | Nốt lướt | (…) 6 → 8 |
+| [[doi-am-loai-3|3]] | 4 : 1 | Thuận | Lướt, thêu | Thêu kép, cambiata | Liền bậc vào 6 → 8 |
+| [[doi-am-loai-4|4]] | Nối lệch phách | Nghịch được (nốt treo) | Thuận | Nốt treo | 7 – 6 → 8 |
+| [[doi-am-loai-5|5]] | Trộn | Theo loại tương ứng | Theo loại | Cặp móc đơn | 7 – 6 → 8 |
+
+## 4. Nốt treo
+| Ở trên | Ở dưới |
+|---|---|
+| 7 – 6, 4 – 3, (9 – 8) | 2 – 3, (4 – 5), 9 – 10 |
+Công thức ba thời: **Chuẩn bị thuận → Treo nghịch (phách mạnh) → Giải quyết xuống một bậc**.
+
+## 5. Đối âm đảo — công thức đổi quãng
+| Đảo ở | Quãng n thành | Hệ quả | Câu nhớ |
+|---|---|---|---|
+| Quãng 8 | **9 − n** (3 ↔ 6, 2 ↔ 7, 4 ↔ 5) | Quãng 5 thành 4 (nghịch) | "Đảo 8: sợ quãng 5" |
+| Quãng 10 | **11 − n** (3 ↔ 8, 5 ↔ 6) | 3 song song thành 8 song song, 6 song song thành 5 song song | "Đảo 10: cấm song song" |
+| Quãng 12 | **13 − n** (3 ↔ 10, 5 ↔ 8, 6 → 7) | Quãng 6 thành 7 (nghịch) | "Đảo 12: sợ quãng 6" |
+Chi tiết và hệ thống chỉ số của Taneyev: [[doi-am-kep]].
+
+## 6. Mười hai câu kiểm tra
+1. Mở bằng quãng hoàn toàn? (ở dưới: chỉ 1 hoặc 8)
+2. Kết đúng công thức (6 → 8 / 3 → 1, [[bac-am-giai|cảm âm]] nâng)?
+3. Phách mạnh đều thuận (trừ nốt treo loại 4)?
+4. Mọi [[thuan-nghich|nghịch âm]] là lướt, thêu, cambiata hoặc treo?
+5. Không có quãng 5/8 song song — kể cả quãng kép, kể cả phách nhẹ → phách mạnh?
+6. Không cùng chiều vào quãng hoàn toàn (quãng ẩn)?
+7. Không đồng âm ở giữa (loại 1; phách mạnh loại 2, 3)?
+8. Không quá 3 quãng 3 hoặc 6 liền nhau?
+9. Mỗi bè có **một** đỉnh, đỉnh hai bè không trùng?
+10. Mọi bước nhảy thuộc danh sách cho phép, được bù ngược chiều?
+11. Không quá 2 bước nhảy liền, không "vẽ" tritone hay quãng 7?
+12. Hai bè cách nhau không quá quãng 12, không vượt bè?
+
+## 7. Mẹo học nhanh
+- **"Hoàn toàn thì ngược"** — muốn vào quãng 5, 8: đi ngược chiều.
+- **"Nhảy rồi bù"** — nhảy lên thì bước xuống, nhảy xuống thì bước lên.
+- **"Mạnh thì thuận, nhẹ thì lướt"** — loại 2, 3.
+- **"Giữ – nghịch – xuống"** — loại 4.
+- **"Sáu thứ chỉ lên"** — quãng 6 chỉ được nhảy lên và chỉ là 6 thứ.
+- Viết **từ cuối lên** (kết trước), chọn nốt **gần nhất**, và **hát** mỗi bài trước khi coi là xong.
+- Luyện mắt: tô màu quãng hoàn toàn bằng một màu — hai ô màu liền nhau là dấu hiệu cần kiểm song song.
+Tổng quan và lộ trình: [[phuc-dieu-nghiem-khac]].
 `,
   },
   {

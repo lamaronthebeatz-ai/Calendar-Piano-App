@@ -783,7 +783,7 @@ Kết là nền tảng chia [[cau-nhac]] và [[hinh-thuc-am-nhac|hình thức]].
 - **Đi liền bậc** khi có thể; tránh nhảy xa ở các bè giữa.
 - **Cảm âm đi lên [[bac-am-giai|chủ âm]]**; nốt 7 của hợp âm 7 đi xuống (xem [[hop-am-bay]]).
 - **Tránh [[quang|quãng]] 5 và quãng 8 song song**: hai bè cách nhau quãng 5 (hoặc 8) rồi cùng chuyển sang một quãng 5 (8) khác — làm mất tính độc lập của bè.
-- **Chuyển động ngược chiều** giữa bass và soprano tạo cân bằng.
+- **[[quang-va-chuyen-dong-doi-am|Chuyển động ngược chiều]]** giữa bass và soprano tạo cân bằng.
 
 ::staff treble C4+E4+G4 C4+F4+A4 B3+D4+G4 C4+E4+G4 | I – IV – V – I với dẫn giọng mượt: mỗi nốt di chuyển tối đa một bậc
 
@@ -1391,7 +1391,7 @@ Trong [[the-dao-hop-am|thể đảo 2]], bè trầm là nốt 5 của [[hop-am-b
 ## Quy tắc quãng 8 (règle de l'octave)
 Đây là bảng **đặt hợp âm cho từng bậc của bè trầm** khi bè trầm đi lên hoặc xuống theo [[am-giai|âm giai]] — một lối tắt khi [[bass-so|bè trầm]] không có số.
 - Mô tả sớm nhất có lẽ của **Antonio Bruschi (1711)**; tên gọi do **François Campion** đặt năm **1716**.
-- Nguyên tắc tóm gọn: **trừ bậc 1 và bậc 5** (mang hợp âm 5/3), các bậc khác **"mang [[quang|quãng]] 6"** (hợp âm 6/3, 6/5/3 hoặc 6/4/3).
+- Nguyên tắc tóm gọn: **trừ bậc 1 và bậc 5** (mang [[doi-am-ba-bon-be|hợp âm 5/3]]), các bậc khác **"mang [[quang|quãng]] 6"** (hợp âm 6/3, 6/5/3 hoặc 6/4/3).
 - Có cách đặt khác nhau cho chiều **đi lên** và **đi xuống**, và có **nhiều biến thể**. Ví dụ bản bốn bè của Fenaroli khi đi lên: 1: 5/3 · 2: 6/4/3 · 3: 6/3 · 4: 6/5/3 · 5: 5/3 · 6: 6/3 · 7: 6/5/3 · 8: 5/3.
 ::staff bass C3=5/3 D3=6/4/3 E3=6/3 F3=6/5/3 G3=5/3 A3=6/3 B3=6/5/3 C4=5/3 | Quy tắc quãng 8 đi lên (bản của Fenaroli) ở Đô trưởng: dưới mỗi nốt bè trầm là hợp âm đặt trên nó
 - [[Rameau]] dựa nhiều vào quy tắc này trong *Traité de l'harmonie* (1722); có ý kiến cho rằng lý thuyết **bè trầm cơ bản** của ông là nỗ lực giải thích nó.

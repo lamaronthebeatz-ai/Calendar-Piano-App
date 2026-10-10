@@ -141,7 +141,7 @@ Bối cảnh: [[thoi-ky-trung-co]].
 ## Ba giai đoạn
 | Kiểu | Thời gian | Cách làm |
 |---|---|---|
-| **Organum song song** | Khoảng năm 900 (*Musica enchiriadis*) | Bè thêm đi **song song** với thánh ca ở quãng 4 hoặc 5, nốt đối nốt |
+| **Organum song song** | Khoảng năm 900 (*Musica enchiriadis*) | Bè thêm đi **song song** với thánh ca ở quãng 4 hoặc 5, [[doi-am-loai-1|nốt đối nốt]] |
 | **Organum tự do** | Thế kỷ 11 | Bè thêm có thể đi **ngược chiều**, gặp nhau ở quãng 8, đồng âm |
 | **Organum melisma** | Thế kỷ 12 | Thánh ca kéo thành **nốt rất dài** ở bè dưới (*tenor*, "giữ"), bè trên hát chuỗi [[ky-hieu-hoa-my|nốt hoa mỹ]] |
 ::staff treble C5+F4 D5+G4 F5+Bb4 E5+A4 D5+G4 C5+F4 | Minh hoạ organum song song: bè thêm đi song song ở quãng 5 dưới một giai điệu thánh ca
