@@ -86,6 +86,8 @@ Một bài phân tích tốt (gợi ý cấu trúc):
 - **Bằng chứng**: dẫn **số ô nhịp** cụ thể, sơ đồ hình thức, ví dụ nhạc.
 - **Phân biệt** điều chắc chắn (có trong bản nhạc) với điều là **diễn giải** (cách nghe của người phân tích).
 - **Kết luận**: điều đó thay đổi cách nghe và cách chơi thế nào.
+
+Phân tích một solo jazz: [[phan-tich-solo-jazz]].
 `,
   },
   {

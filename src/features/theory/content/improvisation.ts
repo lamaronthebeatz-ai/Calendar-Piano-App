@@ -302,7 +302,7 @@ Trước khi chơi một bài trong buổi biểu diễn hay buổi học, chơi
     slug: 'ngau-hung-jazz',
     title: 'Ngẫu hứng jazz',
     category: 'improvisation',
-    aliases: ['ngẫu hứng jazz', 'jazz improvisation', 'solo jazz', 'chorus', 'trading fours', 'đổi bốn', 'từ vựng jazz', 'lick', 'transcription', 'chép solo', 'Thinking in Jazz', 'Berliner'],
+    aliases: ['ngẫu hứng jazz', 'jazz improvisation', 'solo jazz', 'chorus', 'trading fours', 'đổi bốn', 'từ vựng jazz', 'transcription', 'chép solo', 'Thinking in Jazz', 'Berliner'],
     summary: 'Ngẫu hứng trên vòng hợp âm của một bài: cấu trúc head – các chorus solo – head, trading fours; và cách nhạc sĩ jazz học ngẫu hứng theo Paul Berliner (Thinking in Jazz, 1994): xây "từ vựng" bằng bắt chước, chép solo, kết hợp với lý thuyết hợp âm – âm giai.',
     wiki: 'Jazz_improvisation',
     refs: [
@@ -346,6 +346,8 @@ Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994),
 Lộ trình cả mục: [[ngau-hung-ung-tac]].
 
 Kỹ thuật cụ thể: [[not-tiep-can-jazz]], [[am-giai-bebop]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
+
+Các bài kỹ thuật theo The Jazz Piano Site: [[not-dan-huong]], [[trang-tri-giai-dieu-jazz]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]], [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
 `,
   },
   {
@@ -469,6 +471,8 @@ Mô tả chi tiết các cấp 3–7 nên đối chiếu bài gốc; khung này 
 - **Thu âm và nghe lại**: đánh giá sau, không phải trong lúc chơi (xem [[khoa-hoc-ngau-hung]]).
 - **Đều đặn**: vài phút ngẫu hứng mỗi buổi tập, thay vì thỉnh thoảng một buổi dài.
 Lộ trình cả mục: [[ngau-hung-ung-tac]].
+
+Bài luyện riêng cho jazz: [[meo-ngau-hung-jazz]].
 `,
   },
 ]

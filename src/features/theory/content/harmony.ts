@@ -240,7 +240,7 @@ Thuật ngữ hoà âm tiếng Việt chưa thống nhất giữa các giáo tr�
 | Nhạc tối giản | minimalism | [[toi-gian]] |
 | Âm nhạc phổ | spectral music | [[nhac-pho]] |
 | Hoà âm jazz | jazz harmony | [[hoa-am-jazz]] |
-| ii – V – I; nốt dẫn hướng | ii–V–I; guide tones | [[ii-v-i]] |
+| ii – V – I; [[not-dan-huong|nốt dẫn hướng]] | ii–V–I; guide tones | [[ii-v-i]] |
 | Hệ thống hợp âm – âm giai | chord–[[am-giai|scale]] theory | [[he-thong-hop-am-am-giai]] |
 | Hợp âm át biến hoá; âm giai biến đổi | altered dominant; altered scale | [[hop-am-at-bien-hoa]] |
 | Thay thế hợp âm; backdoor | chord substitution; backdoor progression | [[thay-the-hop-am]] |
