@@ -6,7 +6,7 @@ export const musicianship: Article[] = [
     slug: 'lo-trinh-luyen-tai-su-pham',
     title: 'Luyện tai và sư phạm: hệ thống và lộ trình',
     category: 'musicianship',
-    aliases: ['lộ trình luyện tai', 'sư phạm piano', 'music pedagogy', 'piano pedagogy', 'kỹ năng nghe', 'giáo viên piano'],
+    aliases: ['lộ trình luyện tai', 'music pedagogy', 'kỹ năng nghe'],
     summary: 'Bài tổng quan của mục: hai mảng lớn — kỹ năng nghe (luyện tai, xướng âm, âm tiết nhịp, ký âm, nghe trong đầu) và sư phạm (các phương pháp giáo dục, dạy đọc nốt, giảng dạy hiệu quả, dạy theo lứa tuổi, thi cấp độ) — sắp theo thứ tự học.',
     wiki: 'Music_education',
     refs: [
@@ -30,6 +30,7 @@ Kiến thức nhạc lý đi kèm (ký hiệu, tiết tấu, cao độ, âm giai
 Liên quan: [[nghe-nhac-chu-dong]], [[cam-nhan-am-thanh]], [[phan-luong-thinh-giac]].
 
 ## Phần B — Sư phạm
+Bài tổng quan riêng cho người dạy piano: [[su-pham-piano]] — kèm [[neuhaus-nghe-thuat-choi-piano]], [[truong-phai-su-pham-nga]], [[nha-su-pham-piano-phuong-tay]], [[giao-trinh-piano-nhap-mon]].
 8. [[phuong-phap-giao-duc-am-nhac]] — Dalcroze, [[zoltan-kodaly|Kodály]], [[carl-orff|Orff]], Suzuki.
 9. [[cach-day-doc-not]] — các cách dạy đọc nốt cho người mới.
 10. [[giang-day-hieu-qua]] — nghiên cứu về buổi học hiệu quả, phản hồi và động lực.
@@ -337,7 +338,7 @@ Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp c�
     slug: 'cach-day-doc-not',
     title: 'Các cách dạy đọc nốt cho người mới',
     category: 'musicianship',
-    aliases: ['dạy đọc nốt', 'reading approaches', 'phương pháp đọc nốt', 'Middle C approach', 'vị trí Đô giữa', 'multi-key', 'sách phương pháp piano', 'method book'],
+    aliases: ['dạy đọc nốt', 'reading approaches', 'phương pháp đọc nốt', 'Middle C approach', 'vị trí Đô giữa', 'multi-key', 'sách phương pháp piano'],
     summary: 'Ba cách tiếp cận chính trong các giáo trình piano cho người mới: vị trí Đô giữa, đọc theo quãng/khuôn hình (kèm nốt mốc) và đa giọng. Một nghiên cứu so sánh năm 2019 cho kết quả trái với quan niệm phổ biến.',
     refs: [
       ['DiCienzo (2019), University of Ottawa — A comparison of the Middle C and the mixed intervallic reading approaches', 'https://ruor.uottawa.ca/handle/10393/39944'],
@@ -346,7 +347,7 @@ Bằng chứng so sánh trực tiếp hiệu quả giữa các phương pháp c�
       ['Melanie Spanswick — Music and sight reading: Rami Bar-Niv', 'https://melaniespanswick.com/2025/02/16/music-and-sight-reading-rami-bar-niv/'],
     ],
     body: `
-Hầu hết người mới học piano bắt đầu bằng một **sách phương pháp** (method book). Các sách này khác nhau chủ yếu ở **cách dạy đọc nốt**.
+Hầu hết người mới học piano bắt đầu bằng một **sách phương pháp** (method book) — bảng so sánh các sách: [[giao-trinh-piano-nhap-mon]]. Các sách này khác nhau chủ yếu ở **cách dạy đọc nốt**.
 
 ## Ba cách tiếp cận
 | Cách | Ý tưởng | Điểm mạnh | Điểm yếu thường được nêu |
@@ -378,6 +379,13 @@ Liên quan: [[not-nhac]], [[khuong-nhac]], [[day-tre-em]].
     aliases: ['giảng dạy hiệu quả', 'effective teaching', 'dạy học hiệu quả', 'phản hồi', 'feedback', 'động lực học nhạc', 'motivation', 'tự quyết', 'self-determination theory', 'Duke', 'McPherson', 'buổi học piano'],
     summary: 'Những gì nghiên cứu cho biết về buổi học nhạc hiệu quả: quan sát các giáo viên bậc thầy (Duke & Simmons, 2006), vai trò của cam kết lâu dài ở trẻ (McPherson), và thuyết tự quyết về động lực — kèm các gợi ý ứng dụng.',
     refs: [
+      ['Duke, Simmons & Cash (2009) — JRME 56(4): 310–321', 'https://www.jstor.org/stable/40204936'],
+      ['Princeton — Becoming an expert takes more than practice (Macnamara et al. 2014)', 'https://www.princeton.edu/news/2014/07/03/becoming-expert-takes-more-practice'],
+      ['Macnamara & Maitra (2019) — Royal Society Open Science', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6731745/'],
+      ['Hattie & Timperley (2007) — The Power of Feedback', 'https://www.uky.edu/~gmswan3/575/Hattie_Timperly_2007.pdf'],
+      ['McPherson & Blackwell (2024) — phản hồi trong buổi học nhạc', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12602492/'],
+      ['Kluger & DeNisi (1996), dẫn trong PMC9251491', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9251491/'],
+      ['University of Illinois — Parents’ role (McPherson)', 'https://news.illinois.edu/parents-role-key-in-child-becoming-accomplished-musician-scholar-says/'],
       ['UT Austin Center for Music Learning — The nature of expertise (Duke & Simmons, 2006)', 'https://cml.music.utexas.edu/online-resources/the-nature-of-expertise'],
       ['University of New Brunswick — bibliographic record: Duke & Simmons (2006), Bulletin of the CRME 170', 'https://narrativestudies.lib.unb.ca/bibcite/reference/22712'],
       ['Wikipedia — Robert Duke (music scholar)', 'https://en.wikipedia.org/wiki/Robert_Duke_(music_scholar)'],
@@ -406,6 +414,30 @@ Thuyết tự quyết (self-determination theory) cho rằng động lực bền
 | **Tự chủ** | Học trò có **tiếng nói**: chọn bài, chọn cách tập, hiểu vì sao |
 | **Gắn kết** | Quan hệ tốt với giáo viên, gia đình, bạn cùng học |
 Paul Evans (2015) tổng hợp cách áp dụng thuyết này cho giáo dục âm nhạc. Một nghiên cứu năm 2024 (213 sinh viên âm nhạc) xem xét mối liên hệ giữa **phong cách giảng dạy** của giáo viên với **thời lượng và chất lượng** luyện tập của sinh viên.
+
+## Luyện tập: không phải bao nhiêu, mà là thế nào (Duke, Simmons & Cash, 2009)
+17 sinh viên piano trình độ cao tập một đoạn **3 ô** của một [[hinh-thuc-concerto|concerto]]; hôm sau được kiểm tra lại.
+- **Tổng thời gian tập** và **số lần chơi lại** **không** dự đoán được kết quả hôm sau.
+- Những người giỏi nhất: **xác định chính xác chỗ sai**, **sửa ngay** khi lỗi vừa xuất hiện, và **chậm lại** để lặp lại chính xác trước khi tăng tốc.
+- Giới hạn: nghiên cứu tương quan, một buổi tập, nhóm nhỏ.
+Ứng dụng trực tiếp: [[phuong-phap-luyen-tap]], [[kiem-soat-toc-do]].
+
+## "10.000 giờ"? (Ericsson và các nghiên cứu sau)
+| Nghiên cứu | Kết quả |
+|---|---|
+| Ericsson, Krampe & Tesch-Römer (1993), nghệ sĩ violin ở Berlin | Nhóm "giỏi nhất" trung bình hơn **10.000 giờ** tập đến 20 tuổi; tác giả cho rằng **luyện tập có chủ đích** (deliberate practice) giải thích phần lớn khác biệt |
+| Macnamara, Hambrick & Oswald (2014), phân tích tổng hợp | Luyện tập có chủ đích giải thích khoảng **21%** khác biệt thành tích trong âm nhạc (26% trò chơi, 18% thể thao) |
+| Macnamara & Maitra (2019), lặp lại nghiên cứu 1993 với 39 người chơi violin | Luyện tập **không** phân biệt được nhóm "giỏi nhất" với nhóm "giỏi"; hiệu ứng nhỏ hơn nghiên cứu gốc |
+Kết luận thận trọng: tập **nhiều và đúng cách** rất quan trọng, nhưng không phải yếu tố duy nhất; "10.000 giờ" không phải một ngưỡng thần kỳ.
+
+## Phản hồi
+- Hattie & Timperley (2007): phản hồi là một trong những tác động mạnh nhất tới việc học — nhưng có thể **tích cực hoặc tiêu cực**. Mô hình ba câu hỏi: **Đích là gì?** (feed up) – **Đang ở đâu?** (feed back) – **Bước tiếp theo?** (feed forward).
+- Kluger & DeNisi (1996): khoảng **một phần ba** các can thiệp bằng phản hồi lại **làm giảm** thành tích.
+- McPherson & Blackwell (2024) phân tích 18 buổi học nhạc: **83%** lời nhận xét là "đang ở đâu", chỉ **0,4%** là "đích là gì"; 85% nói về **nhiệm vụ trước mắt**, chỉ khoảng 5,5% giúp học trò **tự điều chỉnh việc tập** — tức là buổi học thường dạy rất ít về **cách tự tập**.
+::form Đích_là_gì? Đang_ở_đâu? Bước_tiếp_theo? | Ba câu hỏi phản hồi (Hattie & Timperley, 2007)
+
+## Vai trò của cha mẹ (McPherson & Davidson)
+Theo dõi khoảng 157 trẻ Úc bắt đầu học nhạc từ 1997: **sự hỗ trợ sớm của cha mẹ, giảm dần theo thời gian** đi kèm thành công; ép buộc mà thiếu đồng hành từ đầu đi kèm việc bỏ học.
 
 ## Gợi ý ứng dụng
 Tổng hợp từ các nguồn trên; đây là gợi ý, không phải công thức:
@@ -550,6 +582,319 @@ Các con số về thời gian tập trung theo tuổi hay "lợi ích nhận th
 - Xử lý sớm nỗi lo bị đánh giá (xem [[hoi-hop-bieu-dien]]).
 
 Lưu ý: các nghiên cứu về người lớn học piano còn ít và quy mô nhỏ. Một số con số lan truyền trên mạng (như tỉ lệ người lớn bỏ cuộc sau năm đầu) không tìm được nguồn gốc nên không đưa vào.
+`,
+  },
+  {
+    slug: 'su-pham-piano',
+    title: 'Sư phạm piano: hệ thống và lộ trình',
+    category: 'musicianship',
+    aliases: ['sư phạm piano', 'piano pedagogy', 'phương pháp dạy piano', 'dạy đàn piano', 'giáo viên piano', 'cấu trúc buổi học'],
+    summary: 'Bài tổng quan cho người dạy piano: sư phạm piano gồm những mảng nào, các truyền thống lớn (Nga – Xô Viết, Tây Âu và Mỹ), giáo trình cho người mới, bằng chứng nghiên cứu về dạy và tập, và một khung buổi học có thể dùng ngay — kèm lộ trình đọc trong thư viện.',
+    refs: [
+      ['Wikipedia — Piano pedagogy', 'https://en.wikipedia.org/wiki/Piano_pedagogy'],
+      ['Duke & Simmons — The Nature of Expertise (UT Austin)', 'https://cml.music.utexas.edu/online-resources/the-nature-of-expertise'],
+      ['Duke, Simmons & Cash (2009) — It’s Not How Much; It’s How (JRME)', 'https://www.jstor.org/stable/40204936'],
+      ['Uszler, Gordon & McBride Smith — The Well-Tempered Keyboard Teacher (2000)', 'https://en.wikipedia.org/wiki/Stewart_L._Gordon'],
+      ['Jacobson — Professional Piano Teaching', 'https://hsiaoya.com/en/products/03-00-44565-professional-piano-teaching-volume-1-2nd-edition-a-comprehensive-piano-pedagogy-textbook'],
+    ],
+    body: `
+## Sư phạm piano gồm những gì?
+| Mảng | Câu hỏi | Bài trong thư viện |
+|---|---|---|
+| **Tư tưởng sư phạm** | Dạy để làm gì? Thầy và trò quan hệ thế nào? | [[neuhaus-nghe-thuat-choi-piano]], [[truong-phai-su-pham-nga]], [[nha-su-pham-piano-phuong-tay]] |
+| **Kỹ thuật** | Cơ thể chơi đàn thế nào cho hiệu quả, không chấn thương? | [[ky-thuat-piano]], [[lich-su-ky-thuat-piano]], [[suc-khoe-nguoi-choi-dan]] |
+| **[[doc-not-nhanh|Đọc nhạc]] và nhạc cảm** | Dạy đọc nốt, nghe, nhịp ra sao? | [[cach-day-doc-not]], [[giao-trinh-piano-nhap-mon]], [[lo-trinh-luyen-tai-su-pham]] |
+| **Giáo trình và tiết mục** | Học bài gì, theo thứ tự nào? | [[lo-trinh-tac-pham]], [[thi-cap-do]] |
+| **Tâm lý và động lực** | Vì sao học trò bỏ cuộc hay tiếp tục? | [[giang-day-hieu-qua]], [[hoi-hop-bieu-dien]] |
+| **Theo lứa tuổi** | Trẻ em, người lớn khác nhau thế nào? | [[day-tre-em]], [[day-nguoi-lon]] |
+| **Phương pháp giáo dục âm nhạc chung** | Dalcroze, [[zoltan-kodaly|Kodály]], [[carl-orff|Orff]], Suzuki | [[phuong-phap-giao-duc-am-nhac]] |
+
+## Hai truyền thống lớn và một hướng mới
+- **Nga – Xô Viết**: hệ thống ba cấp (trường nhạc thiếu nhi → trung cấp → nhạc viện), trọng **[[lam-noi-giai-dieu|tiếng đàn hát]]** và **hình tượng nghệ thuật**; dòng thầy – trò liên tục từ anh em Rubinstein đến Neuhaus, Goldenweiser, Igumnov. Xem [[truong-phai-su-pham-nga]].
+- **Tây Âu và Mỹ**: từ [[carl-czerny|Czerny]], [[franz-liszt|Liszt]], Leschetizky đến Matthay, [[alfred-cortot|Cortot]], Leimer – Gieseking; ở Mỹ [[thoi-ky-the-ky-20|thế kỷ 20]] có Lhévinne, Vengerova và ngành "piano pedagogy" ở đại học với giáo trình nhập môn và đào tạo giáo viên. Xem [[nha-su-pham-piano-phuong-tay]].
+- **Nghiên cứu thực nghiệm** (từ cuối thế kỷ 20): đo xem cách dạy, cách tập nào thực sự hiệu quả — xem [[giang-day-hieu-qua]].
+
+## Khung một buổi học (gợi ý)
+Các giáo trình sư phạm thường chia buổi học thành các phần sau (đây là **thông lệ nghề**, không phải kết quả nghiên cứu; tỉ lệ thời gian tuỳ học trò):
+::form Kỹ_thuật Ôn_bài Bài_mới Lý_thuyết Sáng_tạo Giao_bài | Một khung buổi học thường gặp trong các sách sư phạm piano: khởi động và kỹ thuật → ôn bài đã giao → bài mới, thị tấu → lý thuyết và nghe → sáng tạo (ngẫu hứng, sáng tác) → giao bài kèm cách tập
+Bên trong mỗi phần, nghiên cứu của Duke và cộng sự gợi ý một **vòng lặp ngắn**: đặt mục tiêu âm thanh cụ thể → học trò thử → phản hồi cụ thể → làm lại ngay, cho đến khi học trò làm đúng **nhiều lần liên tiếp**.
+::form Mục_tiêu Thử Phản_hồi Làm_lại | Vòng lặp "tạo thay đổi ngay trong buổi học" (xem [[giang-day-hieu-qua]])
+Phần **giao bài** là phần hay bị xem nhẹ nhất: ghi rõ **tập đoạn nào, tập thế nào** (chậm, tay riêng, chia đoạn…), không chỉ "tập bài này" — xem [[phuong-phap-luyen-tap]].
+
+## Lộ trình đọc
+1. [[neuhaus-nghe-thuat-choi-piano]] — tư tưởng sư phạm kinh điển nhất.
+2. [[truong-phai-su-pham-nga]] và [[nha-su-pham-piano-phuong-tay]] — các truyền thống và dòng thầy – trò.
+3. [[lich-su-ky-thuat-piano]] — các quan niệm kỹ thuật thay đổi ra sao.
+4. [[giao-trinh-piano-nhap-mon]], [[cach-day-doc-not]] — chọn sách cho người mới.
+5. [[giang-day-hieu-qua]] — nghiên cứu về dạy, tập, phản hồi, động lực.
+6. [[day-tre-em]], [[day-nguoi-lon]], [[lo-trinh-tac-pham]], [[thi-cap-do]] — áp dụng.
+
+## Ba nguyên tắc rút ra
+- **Âm nhạc trước, kỹ thuật phục vụ âm nhạc** — điểm chung của Neuhaus, Lhévinne, Cortot, Matthay dù cách nói khác nhau.
+- **Dạy học trò tự học**: Neuhaus coi mục tiêu của thầy là "sớm trở nên không cần thiết"; nghiên cứu về phản hồi cũng cho thấy buổi học thường quá ít hướng dẫn **cách tự tập**.
+- **Phân biệt truyền thống và bằng chứng**: nhiều lời khuyên quý đến từ kinh nghiệm các bậc thầy; một số đã được nghiên cứu ủng hộ, một số chưa được kiểm chứng.
+Bối cảnh rộng hơn: [[lo-trinh-luyen-tai-su-pham]].
+`,
+  },
+  {
+    slug: 'neuhaus-nghe-thuat-choi-piano',
+    title: 'Neuhaus và "Nghệ thuật chơi piano"',
+    category: 'musicianship',
+    aliases: ['Nghệ thuật chơi piano', 'The Art of Piano Playing', 'Об искусстве фортепианной игры', 'Neuhaus', 'Heinrich Neuhaus pedagogy', 'Генрих Нейгауз', 'hình tượng nghệ thuật', 'artistic image', 'Записки педагога'],
+    summary: 'Heinrich Neuhaus (1888–1964), người thầy của Richter và Gilels, viết cuốn sách sư phạm piano nổi tiếng nhất thế kỷ 20: "Nghệ thuật chơi piano — Ghi chép của một nhà sư phạm" (1958). Bài này tóm tắt tiểu sử, cấu trúc sáu chương, các tư tưởng chính (hình tượng nghệ thuật, nhịp như mạch đập, tiếng đàn, kỹ thuật là "technē", người thầy phải sớm trở nên không cần thiết) và những giới hạn của cuốn sách.',
+    refs: [
+      ['Wikipedia — Heinrich Neuhaus', 'https://en.wikipedia.org/wiki/Heinrich_Neuhaus'],
+      ['Большая советская энциклопедия — Нейгауз (dic.academic.ru)', 'https://dic.academic.ru/dic.nsf/bse/113065'],
+      ['Kahn & Averill — The Art of Piano Playing', 'https://kahnandaverill.co.uk/?p=480'],
+      ['Hull University Library — bản dịch K. A. Leibovitch, 1973', 'https://library.hull.ac.uk/record=b1039089~S3'],
+      ['Mục lục bản tiếng Nga (libarch.nmu.org.ua)', 'https://libarch.nmu.org.ua/handle/GenofondUA/65494'],
+      ['Interlude — The Heinrich Neuhaus legacy', 'https://interlude.hk/heinrich-the-great-the-heinrich-neuhaus-legacy/'],
+      ['Wikipedia — Stanislav Neuhaus', 'https://en.wikipedia.org/wiki/Stanislav_Neuhaus'],
+      ['Piano Dao — The art of piano pedagogy', 'https://pianodao.com/2015/12/05/the-art-of-piano-pedagogy/'],
+      ['Razumovskaya — luận văn RCM (2014) về Neuhaus', 'https://researchonline.rcm.ac.uk/id/eprint/355'],
+      ['Crothers — Heinrich Neuhaus: life, philosophy and pedagogy (BCU, 2010)', 'https://open-access.bcu.ac.uk/4928/'],
+    ],
+    body: `
+::wiki Heinrich_Neuhaus | Heinrich Neuhaus (ảnh đầu bài Wikipedia)
+
+## Tiểu sử ngắn
+| Năm | Sự kiện |
+|---|---|
+| 1888 | Sinh ở Elisavetgrad (nay là Kropyvnytskyi, Ukraina); mẹ là chị của nhà sư phạm Felix Blumenfeld; [[karol-szymanowski|Karol Szymanowski]] là anh họ |
+| 1909 – 1914 | Học lớp cao học của [[leopold-godowsky|Leopold Godowsky]] ở Học viện Âm nhạc Vienna |
+| Đến 1918; 1918 – 1922 | Dạy ở Tbilisi, rồi Nhạc viện Kyiv |
+| 1922 – 1964 | Giáo sư Nhạc viện Moscow; giám đốc nhạc viện 1935 – 1937 (Bách khoa toàn thư Liên Xô; Wikipedia tiếng Anh ghi 1934) |
+| 1941 | Bị bắt khi quân Đức tiến gần Moscow, bị giam khoảng 8 tháng |
+| 1958 | Xuất bản *Об искусстве фортепианной игры. Записки педагога* |
+**Học trò**: [[sviatoslav-richter|Sviatoslav Richter]] (đến học năm 1937), [[emil-gilels|Emil Gilels]] (cao học), Yakov Zak, Yevgeny Malinin, Lev Naumov; con trai Stanislav Neuhaus cùng Malinin, Naumov làm trợ giảng những năm cuối. [[radu-lupu|Radu Lupu]] cũng học trong lớp này (cả với Stanislav). Xem [[heinrich-neuhaus]], [[truong-phai-su-pham-nga]].
+
+## Cuốn sách
+- Xuất bản lần đầu **1958**, tái bản có lời tựa mới **1961**, về sau in lại nhiều lần; bản tiếng Anh *The Art of Piano Playing* do K. A. Leibovitch dịch (London, 1973; Kahn & Averill in lại 1993).
+- Phụ đề "**Ghi chép của một nhà sư phạm**" nói đúng tính chất: đây là **suy nghĩ và kinh nghiệm**, viết như trò chuyện, không phải một giáo trình bài tập.
+| Chương | Nội dung |
+|---|---|
+| Thay lời tựa | Phương pháp dạy tóm tắt |
+| I | Hình tượng nghệ thuật của tác phẩm âm nhạc |
+| II | Đôi điều về nhịp |
+| III | Về tiếng đàn |
+| IV | Về luyện kỹ thuật (có các mục: "sự tự tin là nền của tự do", bộ máy vận động, tự do, các yếu tố kỹ thuật); phụ lục về **ngón bấm** và **pedal** |
+| V | Về người thầy và người trò |
+| VI | Về hoạt động biểu diễn |
+| Kết luận | — |
+
+## Các tư tưởng chính
+| Tư tưởng | Tóm lược (diễn ý, không phải trích nguyên văn) | Liên hệ |
+|---|---|---|
+| **Hình tượng nghệ thuật trước tiên** | Ngay sau lần làm quen đầu tiên — dù còn chơi thô — học trò phải nắm được **nội dung, chất thơ** của tác phẩm; mọi công việc sau đó lấy hình tượng ấy làm mốc | [[phan-tich-va-bieu-dien]] |
+| **Kỹ thuật là "technē"** | Kỹ thuật không chỉ là nhanh, đều, bay bướm; theo gốc Hy Lạp nó là **nghệ thuật**. Hiểu rõ mục đích nghệ thuật thì mới tìm được phương tiện để đạt nó | [[ky-thuat-piano]] |
+| **Nhịp như mạch đập** | Nhịp giống **mạch của cơ thể sống**, không giống quả lắc hay [[nhip-do|máy đếm nhịp]]: nó nhanh chậm theo cảm xúc mà vẫn khoẻ mạnh — đó là nền của một rubato không làm vỡ cấu trúc | [[rubato]], [[cam-nhan-phach]] |
+| **Tiếng đàn** | Cả một chương; tiếng đàn là phương tiện bộc lộ ý và logic âm nhạc; pedal cũng do **tai** điều khiển | [[ky-thuat-cham-phim]], [[ban-dap]] |
+| **Tự tin → tự do** | Tự do trong động tác gắn với **sự tự tin bên trong**, không phải sự buông lỏng | [[suc-khoe-nguoi-choi-dan]] |
+| **Học bài như nhạc trưởng** | Nghiên cứu bản nhạc như một tổng phổ, phân tích, thậm chí "chỉ huy" trong đầu — ngoài việc tập từng tay | [[tap-trong-dau]] |
+| **Ngón bấm** | Ngón bấm tốt nhất là ngón **phục vụ ý đồ âm nhạc** tốt nhất | [[ngon-bam]] |
+| **Thầy phải sớm trở nên không cần thiết** | Một nhiệm vụ chính của người thầy là làm sao để học trò **sớm không cần mình nữa**: có tư duy độc lập, biết cách làm việc, hiểu bản thân | [[giang-day-hieu-qua]] |
+| **Tôn trọng cá tính** | Không "xoá khuôn mặt" của học trò để biến thành bản sao của thầy | [[day-tre-em]] |
+
+## Ba giai đoạn tập một tác phẩm
+Nhiều giáo trình phương pháp của Nga tóm tắt từ Neuhaus một quy trình ba bước (đây là **cách đọc của truyền thống sư phạm**, không phải câu chữ của chính ông):
+::form Hình_tượng Chi_tiết Tổng_hợp | Ba giai đoạn làm việc với một tác phẩm theo cách hiểu phổ biến của trường phái Nga: làm quen và nắm hình tượng → luyện chi tiết, kỹ thuật → tổng hợp thành một khối sống
+Quy trình này khớp với khuyến nghị hiện đại: xem toàn cảnh trước ([[phuong-phap-phan-tich-tac-pham|phân tích]]), chia nhỏ để luyện ([[phuong-phap-luyen-tap]]), rồi luyện **chơi liền** trong điều kiện biểu diễn ([[hoi-hop-bieu-dien]]).
+
+## Đọc cuốn sách thế nào
+- **Điểm mạnh**: trao cho người dạy một **thước đo âm nhạc** cho mọi quyết định kỹ thuật; nhiều thế hệ giáo viên coi đây là sách gối đầu.
+- **Giới hạn** (nhận xét của nhiều người đọc và từ chính cấu trúc sách): viết như hồi ký, **không có hệ thống bài tập**; dựa nhiều vào tiết mục [[thoi-ky-lang-man|Lãng mạn]] – Nga và vào học trò **nhạc viện có năng khiếu**; nhiều điều phụ thuộc trực giác của người thầy. Nghiên cứu học thuật (luận văn ở Royal College of Music, Birmingham City University) đã so sánh nó với cách tiếp cận phân tích hơn của Leimer – Gieseking ([[nha-su-pham-piano-phuong-tay]]).
+- Một số câu "của Neuhaus" lan truyền trên mạng **chưa được xác nhận** là có trong sách — khi trích dẫn, nên dùng bản dịch in.
+`,
+  },
+  {
+    slug: 'truong-phai-su-pham-nga',
+    title: 'Trường phái sư phạm piano Nga – Xô Viết',
+    category: 'musicianship',
+    aliases: ['trường phái sư phạm Nga', 'Russian piano pedagogy', 'sư phạm piano Xô Viết', 'Central Music School', 'ЦМШ', 'trường Gnesin', 'Gnessin', 'Goldenweiser', 'Igumnov', 'Nikolaev', 'Zverev', 'Kogan', 'У врат мастерства', 'dòng thầy trò piano', 'piano lineage'],
+    summary: 'Từ hai nhạc viện do anh em Rubinstein lập (1862, 1866) đến hệ thống ba cấp và trường chuyên cho trẻ năng khiếu thời Xô Viết: bài này trình bày các thầy lớn (Leschetizky, Yesipova, Zverev, Safonov, Goldenweiser, Igumnov, Neuhaus, Nikolaev), dòng thầy – trò, sách sư phạm, những đặc điểm thường được gán cho "trường phái Nga" và ảnh hưởng tới Việt Nam.',
+    refs: [
+      ['Wikipedia — Theodor Leschetizky', 'https://en.wikipedia.org/wiki/Theodor_Leschetizky'],
+      ['Musica — Anna Yesipova', 'https://dc.mus-col.com/en/the-authors/21882/'],
+      ['Wikipedia — Alexander Goldenweiser', 'https://en.wikipedia.org/wiki/Alexander_Borisovich_Goldenweiser'],
+      ['Wikipedia — Konstantin Igumnov', 'https://en.wikipedia.org/wiki/Konstantin_Igumnov'],
+      ['Wikipedia — Lev Oborin', 'https://en.wikipedia.org/wiki/Lev_Oborin'],
+      ['University of Maryland — Piano genealogies: the Igumnov tradition', 'https://exhibitions.lib.umd.edu/piano-genealogies/pianist-bios/igumnov-tradition'],
+      ['Wikipedia — Leonid Nikolayev', 'https://en.wikipedia.org/wiki/Leonid_Nikolayev_(pianist)'],
+      ['Wikipedia — Elena Gnesina', 'https://en.wikipedia.org/wiki/Elena_Gnesina'],
+      ['Gnesin Academy — History', 'https://eng.gnesin-academy.ru/academy/history/'],
+      ['Pixel-online — Russian specialized music education', 'https://conference.pixel-online.net/files/foe/ed0006/FP/2720-MUE1734-FP-FOE6.pdf'],
+      ['HSE — Lapina về sách của G. Kogan', 'https://archive_vo.hse.ru/data/2013/10/20/1279364540/VO4_10%20Lapina.pdf'],
+      ['Université de Genève — luận án về truyền dạy tiếng đàn trong trường phái Nga (2021)', 'https://archive-ouverte.unige.ch/unige:157666'],
+      ['Wikipedia — Vladimir Natanson', 'https://en.wikipedia.org/wiki/Vladimir_Natanson'],
+      ['Wikipedia — Đặng Thái Sơn', 'https://en.wikipedia.org/wiki/%C4%90%E1%BA%B7ng_Th%C3%A1i_S%C6%A1n'],
+      ['Báo Pháp luật — NSND Thái Thị Liên', 'https://baophapluat.vn/nsnd-thai-thi-lien-con-mai-mot-huyen-thoai-post466571.html'],
+      ['CafeF — Học viện Âm nhạc Quốc gia Việt Nam', 'https://cafef.vn/hoc-vien-am-nhac-quoc-gia-viet-nam.html'],
+      ['Fox News (AP) — Vietnam matriarch spreads piano culture', 'https://www.foxnews.com/world/vietnam-matriarch-now-92-spread-piano-culture'],
+    ],
+    body: `
+## Nền móng (thế kỷ 19)
+| Mốc | Ý nghĩa |
+|---|---|
+| 1862 | [[anton-rubinstein|Anton Rubinstein]] lập **Nhạc viện St Petersburg**; [[theodor-leschetizky|Theodor Leschetizky]] (ở Nga khoảng 1852 – 1877/78) đứng đầu khoa piano |
+| 1866 | Nikolai Rubinstein lập **Nhạc viện Moscow** |
+| Từ 1866 | Anna Yesipova học Leschetizky (sau là vợ ông), về sau lập một trong những trường phái piano lớn nhất ở St Petersburg |
+| Thập niên 1880 | Nikolai Zverev (1832 – 1893) nuôi học trò nội trú ở nhà, khoảng **6 giờ tập mỗi ngày**; [[sergei-rachmaninoff|Rachmaninoff]] ở đó hơn 4 năm, [[alexander-scriabin|Scriabin]] cũng là học trò ông |
+| 1895 | Ba chị em **Gnesin** lập trường nhạc ở Moscow (nay là Học viện Gnesin) |
+
+## Thế kỷ 20: các thầy lớn và dòng thầy – trò
+| Thầy | Học trò tiêu biểu |
+|---|---|
+| **Alexander Goldenweiser** (vào nhạc viện 1889, lớp Siloti — dòng [[franz-liszt|Liszt]]) | Samuil Feinberg, Grigory Ginzburg, Tatiana Nikolayeva, Lazar Berman, Dmitri Bashkirov |
+| **Konstantin Igumnov** | Lev Oborin (giải nhất cuộc thi [[frederic-chopin|Chopin]] đầu tiên, 1927), Yakov Flier, Bella Davidovich |
+| **[[heinrich-neuhaus|Heinrich Neuhaus]]** | [[sviatoslav-richter|Sviatoslav Richter]], [[emil-gilels|Emil Gilels]], Yakov Zak, Stanislav Neuhaus — xem [[neuhaus-nghe-thuat-choi-piano]] |
+| **Leonid Nikolaev** (Leningrad, từ 1909) | Vladimir Sofronitsky, Maria Yudina, [[dmitri-shostakovich|Dmitri Shostakovich]] (tốt nghiệp piano 1923) |
+| **Isabelle Vengerova** (sang Mỹ 1923) | Ở Viện Curtis: [[samuel-barber|Samuel Barber]], [[leonard-bernstein|Leonard Bernstein]], Gary Graffman |
+::form Feinberg Natanson Đặng_Thái_Sơn | Một dòng thầy – trò dẫn tới Việt Nam: Samuil Feinberg → Vladimir Natanson → Đặng Thái Sơn (sau đó học thêm Dmitri Bashkirov, học trò của Goldenweiser)
+"Bộ tứ Moscow" (Goldenweiser, Igumnov, Feinberg, Neuhaus) là cách gọi quen thuộc của giới nghiên cứu — lưu ý Feinberg chính là học trò của Goldenweiser.
+
+## Hệ thống đào tạo
+::form Trường_nhạc_thiếu_nhi Trung_cấp Nhạc_viện | Hệ thống ba cấp được chuẩn hoá trên toàn Liên Xô: trường nhạc thiếu nhi (ДМШ, khoảng 7 – 14 tuổi) → trung cấp (училище) → nhạc viện
+- Từ **1935**, các nhạc viện mở **trường chuyên cho trẻ năng khiếu** gộp cấp 1, cấp 2 và học văn hoá ("trường 10 năm"); trường tiêu biểu là **Trường Âm nhạc Trung ương (ЦМШ)** trực thuộc Nhạc viện Moscow.
+
+## Sách sư phạm
+| Sách | Ghi chú |
+|---|---|
+| Neuhaus, *Nghệ thuật chơi piano — Ghi chép của một nhà sư phạm* (1958) | [[neuhaus-nghe-thuat-choi-piano]] |
+| Grigory Kogan, *Ở cửa ngõ của tay nghề* (*У врат мастерства*) | Về tâm lý làm việc của nghệ sĩ; Neuhaus viết lời tựa lần in đầu |
+| A. D. Alekseev, *Phương pháp dạy chơi piano* | Giáo trình phương pháp cho sinh viên sư phạm |
+| G. Tsypin, *Dạy chơi piano* | Giáo trình phương pháp, tái bản đến nay |
+| *Trường phái chơi piano* (*Школа игры на фортепиано*), A. Nikolaev chủ biên cùng V. Natanson, L. Roshchina | Sách cho người mới, in nhiều thập kỷ — xem [[giao-trinh-piano-nhap-mon]] |
+(Năm in lần đầu của các sách Kogan, Alekseev, Tsypin chưa được kiểm chứng trong nguồn đã tra.)
+
+## Những đặc điểm thường được nêu
+- **Tiếng đàn hát** (*пение на рояле*): giai điệu như giọng người, đòi cánh tay và cổ tay tự do — từ Field, anh em Rubinstein đến Josef Lhévinne, Igumnov. Một luận án ở Đại học Geneva (2021) cho thấy cách dạy tạo tiếng đàn trong truyền thống này có tính **liên tục** qua các thế hệ. Xem [[lam-noi-giai-dieu]].
+- **[[cau-nhac|Câu nhạc]] như lời hát – lời nói**: Chaliapin và Rachmaninoff thường được nêu làm mẫu. Xem [[dien-dat-cau-nhac]].
+- **Hình tượng nghệ thuật** dẫn dắt kỹ thuật (Neuhaus).
+- **Nền tảng kỹ thuật có hệ thống**: âm giai, [[luyen-hop-am-rai|hợp âm rải]], [[tieu-pham-piano|luyện khúc]]; kỳ kiểm tra kỹ thuật (*технический зачёт*) ở các trường. Xem [[luyen-am-giai]], [[bai-tap-ngon]].
+**Lưu ý**: "trường phái Nga" như một khối thống nhất phần lớn là cách nói của báo chí và hãng đĩa. Các nghiên cứu học thuật mô tả **nhiều dòng khác nhau** (Moscow và Leningrad; dòng Liszt – Siloti và dòng Leschetizky). Nên xem các đặc điểm trên là **xu hướng**, không phải một phương pháp cố định. So sánh với trường phái Pháp: [[truong-phai-piano]].
+
+## Với Việt Nam
+- Trường Âm nhạc Việt Nam thành lập năm **1956** (sau là Nhạc viện Hà Nội, từ 2008 là Học viện Âm nhạc Quốc gia Việt Nam). NSND **Thái Thị Liên**, một trong những người sáng lập và là nữ giảng viên piano đầu tiên, được đào tạo ở **Praha**.
+- **Đặng Thái Sơn** được nghệ sĩ Liên Xô Isaac Katz phát hiện năm 1974, sang học Nhạc viện Moscow (năm vào trường các nguồn ghi 1976 hoặc 1977) với Vladimir Natanson rồi Dmitri Bashkirov, và giành giải nhất cuộc thi Chopin tháng 10/1980 — người châu Á đầu tiên. Xem [[dang-thai-son]], [[piano-viet-nam]].
+- Một số giảng viên piano Việt Nam được đào tạo trực tiếp ở Moscow — ví dụ Trần Thu Hà (con gái NSND Thái Thị Liên) làm tiến sĩ piano ở Nhạc viện Moscow rồi về dạy ở Hà Nội. Mức độ ảnh hưởng của truyền thống Nga lên giáo trình các nhạc viện Việt Nam chưa có nghiên cứu nào được tìm thấy để dẫn.
+`,
+  },
+  {
+    slug: 'nha-su-pham-piano-phuong-tay',
+    title: 'Các nhà sư phạm piano phương Tây',
+    category: 'musicianship',
+    aliases: ['nhà sư phạm piano', 'Leschetizky method', 'The Act of Touch', 'Principes rationnels', 'Leimer', 'Leimer–Gieseking', 'Modernes Klavierspiel', 'Reflexion', 'Rosina Lhévinne', 'Vengerova', 'Frances Clark', 'Seymour Bernstein', 'Liszt masterclass', 'Deppe', 'Amy Fay'],
+    summary: 'Từ Czerny và Liszt đến Leschetizky, Matthay, Cortot, Leimer – Gieseking, Lhévinne, Vengerova, Frances Clark và các nhà sư phạm Mỹ cuối thế kỷ 20: mỗi người một cuốn sách, một ý tưởng then chốt và những học trò nổi tiếng — kèm bảng so sánh để người dạy chọn điều hữu ích cho lớp mình.',
+    refs: [
+      ['Enc. Piano (PTNA) — Czerny, Op. 500', 'https://enc.piano.or.jp/en/musics/6297'],
+      ['Britannica — Theodor Leschetizky', 'https://www.britannica.com/print/article/337079'],
+      ['Cambridge — Liszt in Context: Pupils', 'https://www.cambridge.org/core/books/liszt-in-context/pupils/6AD5A7514A5CD22547C81AED3CD65957'],
+      ['Steingraeber — Liszt’s masterclasses in Weimar', 'https://steingraeber.de/en/?p=11415'],
+      ['Wikipedia — Ludwig Deppe', 'https://en.wikipedia.org/wiki/Ludwig_Deppe'],
+      ['Crescendo — The Leschetizky Method (Brée)', 'https://www.crescendo-music.com/shop/74480-the-leschetizky-method-76252'],
+      ['Wikipedia — Tobias Matthay', 'https://en.wikipedia.org/wiki/Tobias_Matthay'],
+      ['IMSLP — Cortot, Rational Principles of Piano Technique', 'https://imslp.org/wiki/Rational_Principles_of_Piano_Technique_(Cortot,_Alfred)'],
+      ['Wikipedia — École Normale de Musique de Paris', 'https://en.wikipedia.org/wiki/%C3%89cole_Normale_de_Musique_de_Paris'],
+      ['Wikipedia — Karl Leimer', 'https://en.wikipedia.org/wiki/Karl_Leimer'],
+      ['Deutsche Biographie — Karl Leimer', 'https://www.deutsche-biographie.de/sfz20939.html'],
+      ['Jewish Women’s Archive — Rosina Lhévinne', 'https://cdn.jwa.org/encyclopedia/article/lhevinne-rosina'],
+      ['Steinway — Isabelle Vengerova', 'https://www.steinway.com/news/features/isabelle-vengerova'],
+      ['Penn State University Press — The Vengerova System of Piano Playing', 'https://www.psupress.org/books/titles/0-271-00313-8.html'],
+      ['Wikipedia — Frances Clark', 'https://en.wikipedia.org/wiki/Frances_Clark_(pianist)'],
+      ['Wikipedia — Dorothy Taubman', 'https://en.wikipedia.org/wiki/Dorothy_Taubman'],
+      ['WWU — luận văn về György Sándor', 'https://cedar.wwu.edu/wwuet/1191'],
+    ],
+    body: `
+## Thế kỷ 19
+| Người | Sách / nơi dạy | Ý tưởng then chốt | Học trò |
+|---|---|---|---|
+| **Carl Czerny** (1791 – 1857) | *Complete Theoretical and Practical Piano Forte School*, Op. 500 (1839, 4 tập) | Một trường phái **có hệ thống** từ những bước đầu đến trình độ cao: kỹ thuật, [[ngon-bam|ngón bấm]], biểu cảm, phong cách — kèm phụ lục về cách chơi [[ludwig-van-beethoven|Beethoven]] | [[franz-liszt|Liszt]], Thalberg, Leschetizky — xem [[carl-czerny]] |
+| **Franz Liszt** (Weimar) | Lớp học tại nhà Hofgärtnerei | **Lớp mẫu** (masterclass): học trò chơi trước bạn cùng lớp; **không lấy học phí** | Rất nhiều — hình thức masterclass ngày nay bắt nguồn từ đây |
+| **Ludwig Deppe** (1828 – 1890) | Không có sách lớn; được biết qua *Music-Study in Germany* (1880) của học trò Amy Fay | Động tác **cong, liền mạch** thay cho "đánh"; "rơi tự do" của cánh tay (nên hiểu như hình ảnh) — một tiền thân của kỹ thuật trọng lượng | Amy Fay, Elisabeth Caland |
+| **[[theodor-leschetizky|Theodor Leschetizky]]** (1830 – 1915) | *Die Grundlage der Methode Leschetizky* (1902) do trợ giảng **Malwine Brée** viết | Ông duyệt cuốn sách nhưng được ghi lại là nói mình **"không có phương pháp"** — dạy theo **từng học trò** | [[ignacy-jan-paderewski|Paderewski]], [[artur-schnabel|Schnabel]], Moiseiwitsch, Brailowsky |
+
+## Đầu thế kỷ 20: châu Âu
+| Người | Sách / nơi dạy | Ý tưởng then chốt | Học trò |
+|---|---|---|---|
+| **Tobias Matthay** (1858 – 1945) | *The Act of Touch* (1903); trường riêng ở London từ 1905 | Phân tích **động tác chạm phím**, **xoay cẳng tay**, thả lỏng | [[myra-hess|Myra Hess]], York Bowen, Clifford Curzon, Moura Lympany |
+| **[[alfred-cortot|Alfred Cortot]]** (1877 – 1962) | *Principes rationnels de la technique pianistique* (1928); đồng sáng lập **École Normale de Musique** (6/10/1919) | Quy kỹ thuật về **vài nhóm cơ bản**; **tách chỗ khó ra khỏi [[cau-nhac|đoạn nhạc]]** để luyện riêng; đào tạo cả **giáo viên** ("école normale" là trường sư phạm) | Lipatti, Haskil |
+| **Karl Leimer & [[walter-gieseking|Walter Gieseking]]** | *Modernes Klavierspiel* (khoảng 1931; bản Anh 1932: *The Shortest Way to Pianistic Perfection*) | **Reflexion**: học bản nhạc **bằng đầu, không cần đàn**, tập trung cao độ; luyện trí nhớ, [[luyen-tai|luyện tai]]; thả lỏng sau mỗi động tác | Gieseking là học trò của Leimer — xem [[tap-trong-dau]], [[hoc-thuoc-bai]] |
+
+## Thế kỷ 20: Mỹ
+| Người | Nơi dạy / sách | Ý tưởng | Học trò |
+|---|---|---|---|
+| **Josef & Rosina Lhévinne** | Juilliard | [[truong-phai-piano|Trường phái Nga]] ở Mỹ, **[[lam-noi-giai-dieu|tiếng đàn hát]]** | Học trò của Rosina: [[van-cliburn|Van Cliburn]] (giải nhất [[pyotr-ilyich-tchaikovsky|Tchaikovsky]] 1958), John Browning, James Levine |
+| **Isabelle Vengerova** (1877 – 1956) | Viện Curtis (từ 1924) | Hệ thống nghiêm ngặt kiểu Nga (sách *The Vengerova System* của Robert Schick) | [[samuel-barber|Samuel Barber]], [[leonard-bernstein|Leonard Bernstein]], Lukas Foss |
+| **Frances Clark** (1905 – 1998) | *[[giao-trinh-piano-nhap-mon|The Music Tree]]* (1958); New School for Music Study (1960, cùng Louise Goss) | [[doc-not-nhanh|Đọc nhạc]] bằng **nốt mốc và quãng**; đào tạo giáo viên piano | — xem [[cach-day-doc-not]] |
+| **György Sándor** | *On Piano Playing* (1981) | **Năm động tác cơ bản** | — xem [[lich-su-ky-thuat-piano]] |
+| **Dorothy Taubman** (1917 – 2013) | Phương pháp Taubman (nay qua Viện Golandsky) | **Xoay cẳng tay**, chuyển động phối hợp, phòng và chữa chấn thương (bằng chứng phần lớn từ các nguồn gắn với phương pháp) | — xem [[suc-khoe-nguoi-choi-dan]] |
+| **Seymour Bernstein** (1927 – 2024) | *With Your Own Two Hands* (1981) | Luyện tập như **tự khám phá bản thân**; tập trung; hồi hộp sân khấu | — xem [[hoi-hop-bieu-dien]] |
+
+## Dòng thầy – trò kinh điển
+::form Beethoven Czerny Liszt | Dòng nổi tiếng nhất: Beethoven dạy Czerny, Czerny dạy Liszt
+::form Czerny Leschetizky Schnabel | Leschetizky học Czerny; Artur Schnabel học Leschetizky
+Xem thêm dòng Nga ở [[truong-phai-su-pham-nga]].
+
+## Người dạy rút ra được gì?
+| Ý tưởng | Của ai | Dùng ngay |
+|---|---|---|
+| Dạy theo **từng học trò**, không theo một công thức | Leschetizky | Chẩn đoán trước khi kê "bài tập" |
+| **Tách chỗ khó** để luyện riêng rồi ghép lại | Cortot | Kết hợp với [[phuong-phap-luyen-tap]] |
+| **Học bằng đầu** trước khi chạm đàn | Leimer – Gieseking (và [[neuhaus-nghe-thuat-choi-piano|Neuhaus]]) | [[tap-trong-dau]] |
+| **Lớp mẫu**: học từ việc nghe bạn chơi | Liszt | Buổi học nhóm, buổi biểu diễn nội bộ |
+| Phân tích **động tác** để chơi nhẹ nhàng, không đau | Matthay, Taubman, Sándor | [[ky-thuat-cham-phim]], [[tremolo-xoay-cang-tay]] |
+| Đọc nhạc bằng **nốt mốc và quãng** | Frances Clark | [[cach-day-doc-not]] |
+Tổng quan: [[su-pham-piano]].
+`,
+  },
+  {
+    slug: 'giao-trinh-piano-nhap-mon',
+    title: 'Giáo trình piano nhập môn: so sánh',
+    category: 'musicianship',
+    aliases: ['giáo trình piano', 'sách học piano', 'method book', 'piano method', 'Beyer', 'Beyer Op. 101', 'John Thompson', 'Bastien', 'Alfred’s Basic Piano Library', 'Piano Adventures', 'Faber', 'The Music Tree', 'Suzuki piano', 'Michael Aaron', 'Robert Pace', 'Trường phái chơi piano Nikolaev'],
+    summary: 'Các sách nhập môn piano phổ biến — Beyer (1850), John Thompson (1936), Michael Aaron, Robert Pace (1954), Bastien, Alfred (1981), The Music Tree (1958), Piano Adventures, Suzuki, "Trường phái chơi piano" của Nga — khác nhau chủ yếu ở cách dạy đọc nốt. Bài này so sánh chúng và gợi ý cách chọn.',
+    refs: [
+      ['Wikipedia — Ferdinand Beyer', 'https://en.wikipedia.org/wiki/Ferdinand_Beyer'],
+      ['Enc. Piano (PTNA) — Beyer, Vorschule im Klavierspiel', 'https://enc.piano.or.jp/en/musics/12013'],
+      ['Wikipedia — Piano pedagogy', 'https://en.wikipedia.org/wiki/Piano_pedagogy'],
+      ['Barnard — Jane Smisor Bastien', 'https://barnard.edu/magazine/cnsmr2018/jane-smisor-bastien-57'],
+      ['Goodreads — Alfred’s Basic Piano Library 1A', 'https://www.goodreads.com/work/editions/84459-alfred-s-basic-piano-library-lesson-book-level-1a'],
+      ['Toronto Arts Academy — So sánh các giáo trình', 'https://torontoartsacademy.com/?p=8112'],
+      ['Wikipedia — Suzuki method', 'https://en.wikipedia.org/wiki/Suzuki_method'],
+      ['Comeau — The Suzuki method and the natural learning process (uOttawa)', 'https://piano.uottawa.ca/wp-content/uploads/2016/04/Publications/Methods/Suzuki%20Method/Natural%20Learning%20Process%20article.pdf'],
+      ['Hood (1982) — luận văn Western Michigan University', 'https://scholarworks.wmich.edu/cgi/viewcontent.cgi?article=2697&context=masters_theses'],
+      ['Lu (2012) — luận văn uOttawa về 18 giáo trình Bắc Mỹ', 'https://piano.uottawa.ca/wp-content/uploads/2016/04/Publications/Methods/Lu_Yuanyuan_2012_thesis.pdf'],
+      ['Lan — Школа игры на фортепиано (Nikolaev)', 'https://lanbook.com/catalog/discipline/fortepiano'],
+    ],
+    body: `
+## Bảng so sánh
+| Giáo trình | Năm | Tác giả | Cách tiếp cận |
+|---|---|---|---|
+| *Vorschule im Klavierspiel* Op. 101 | 1850 (có nguồn ghi 1851) | Ferdinand **Beyer** | 106 bài từ dễ đến khó; được Luther W. Mason đưa vào Nhật khoảng 1880 và trở thành sách nhập môn phổ biến bậc nhất ở Nhật, Hàn |
+| *Modern Course for the Piano* | 1936 | John **Thompson** | Phổ biến cách **[[ban-phim|Đô giữa]]** |
+| Michael Aaron Piano Course | 1947 – 52 | Michael **Aaron** | Đô giữa |
+| Phương pháp Pace | 1954 | Robert **Pace** | Phương pháp **đa giọng** đầu tiên |
+| Bastien | Từ 1963 (*Piano Basics* 1985) | James và Jane Smisor **Bastien** | **Đa giọng**: vị trí năm ngón ở nhiều giọng |
+| *The Music Tree* | 1958 | Frances **Clark** (cùng Goss, Holland) | **[[doc-not-nhanh|Nốt mốc]] và quãng** |
+| Alfred’s Basic Piano Library | 1981 | Palmer, Manus, Lethco | Bắt đầu bằng phím đen, rồi vị trí Đô giữa, rồi quãng |
+| Piano Adventures | Thập niên 1990 | Randall và Nancy **Faber** | **Hỗn hợp**: Đô giữa + đa giọng, dần chuyển sang đọc quãng |
+| Suzuki Piano School | Nhật | Shinichi Suzuki (piano cùng Haruko Kataoka) | **"Tiếng mẹ đẻ"**: nghe hằng ngày, bắt chước, [[luyen-tai|chơi theo tai]] **trước** khi đọc |
+| *Школа игры на фортепиано* | Nhiều thập kỷ (bản sửa 2007) | A. [[truong-phai-su-pham-nga|Nikolaev]] chủ biên, V. Natanson, L. Roshchina | Sách nhập môn chuẩn của trường nhạc Liên Xô – Nga |
+Theo luận văn của Hood (1982), hai hướng chính là **Đô giữa** và **đa giọng**, cộng các hướng khác; Lu (2012) khảo sát 18 giáo trình Bắc Mỹ. Ba cách dạy đọc nốt được phân tích kỹ ở [[cach-day-doc-not]].
+::form Đô_giữa Đa_giọng Nốt_mốc_&_quãng Hỗn_hợp Nghe_trước_(Suzuki) | Năm hướng chính của sách nhập môn
+
+## Chọn giáo trình thế nào (gợi ý)
+| Học trò | Nên ưu tiên | Lý do |
+|---|---|---|
+| Trẻ nhỏ (4 – 6 tuổi) | Sách có hình, bắt đầu bằng phím đen, nhiều bài hát; hoặc cách nghe trước | Chưa đọc chữ thạo; học bằng tai và vận động — xem [[day-tre-em]], [[phuong-phap-giao-duc-am-nhac]] |
+| Trẻ 7 – 10 tuổi | Sách hỗn hợp có đọc quãng sớm | Tránh phụ thuộc vào một vị trí ngón cố định |
+| Người lớn mới học | Sách dành riêng cho người lớn, có hợp âm và đệm hát | Mục tiêu và tốc độ khác trẻ em — xem [[day-nguoi-lon]], [[dem-hat-piano]] |
+| Học trò muốn thi cấp độ | Kết hợp giáo trình với tuyển tập bài thi | Xem [[thi-cap-do]], [[lo-trinh-tac-pham]] |
+Những gợi ý trên là **kinh nghiệm nghề**, không phải kết luận nghiên cứu. Nghiên cứu duy nhất trong thư viện so sánh trực tiếp hai cách đọc (DiCienzo, 2019) cho kết quả trái với kỳ vọng — xem [[cach-day-doc-not]].
+
+## Lưu ý về Beyer
+Beyer vẫn rất phổ biến ở châu Á. Nhận xét của người biên soạn (chưa có nghiên cứu đối chứng): sách gồm các bài ngắn tăng dần độ khó nhưng gần như không có phần nghe, sáng tạo hay đọc quãng có hệ thống — nên dùng kèm [[thi-tau]], [[ngau-hung-piano]] và bài hát quen thuộc.
+Tổng quan: [[su-pham-piano]].
 `,
   },
 ]

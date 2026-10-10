@@ -100,7 +100,7 @@ const PIANISTS = [
   p('Alicia de Larrocha', '1923–2009', 'Tây Ban Nha', 'p20a:others', 'Đại sứ của âm nhạc piano Tây Ban Nha và Mozart.', ['Iberia (Albéniz)', 'Goyescas (Granados)']),
 
   // ── Từ 1950 đến nay ──
-  p('Heinrich Neuhaus', '1888–1964', 'Nga', 'p20b:russian', 'Người thầy huyền thoại của Nhạc viện Moscow; thầy của Richter và Gilels.', ['Nghệ thuật chơi đàn piano (sách)'], { topics: ['dien-dat-cau-nhac', 'lam-noi-giai-dieu', 'truong-phai-piano'] }),
+  p('Heinrich Neuhaus', '1888–1964', 'Nga', 'p20b:russian', 'Người thầy huyền thoại của Nhạc viện Moscow; thầy của Richter và Gilels.', ['Nghệ thuật chơi đàn piano (sách)'], { topics: ['neuhaus-nghe-thuat-choi-piano', 'truong-phai-su-pham-nga', 'dien-dat-cau-nhac', 'lam-noi-giai-dieu', 'truong-phai-piano'] }),
   p('Sviatoslav Richter', '1915–1997', 'Nga', 'p20b:russian', 'Một trong những nghệ sĩ piano vĩ đại nhất thế kỷ 20, kho tác phẩm rộng lớn.', ['Clavier bình quân', 'Tranh triển lãm (Mussorgsky)'], { short: 'Richter' }),
   p('Emil Gilels', '1916–1985', 'Nga', 'p20b:russian', 'Học trò Neuhaus; giải nhất cuộc thi Ysaÿe (nay là Nữ hoàng Elisabeth) năm 1938.', ['Concerto Brahms', 'Sonata Beethoven'], { short: 'Gilels' }),
   p('Vladimir Ashkenazy', '1937–', 'Nga – Iceland', 'p20b:russian', 'Đồng giải nhất cuộc thi Tchaikovsky 1962; sau trở thành nhạc trưởng.', ['Trọn bộ Rachmaninoff', 'Étude của Chopin']),
@@ -164,7 +164,8 @@ export const pianoSchools: Article[] = [
     ],
     body: `
 ## Trường phái Nga
-- **Ba trụ cột** thường được nhắc tới ở Nhạc viện Moscow: **Alexander Goldenweiser**, **Konstantin Igumnov** và **[[heinrich-neuhaus|Heinrich Neuhaus]]**. Neuhaus dạy tại Nhạc viện Moscow từ 1922 đến 1964; học trò có [[Richter]] và [[Gilels]].
+Về hệ thống đào tạo và dòng thầy – trò: [[truong-phai-su-pham-nga]].
+- **Ba trụ cột** thường được nhắc tới ở Nhạc viện Moscow: **Alexander Goldenweiser**, **Konstantin Igumnov** và **[[heinrich-neuhaus|Heinrich Neuhaus]]**. [[neuhaus-nghe-thuat-choi-piano|Neuhaus]] dạy tại Nhạc viện Moscow từ 1922 đến 1964; học trò có [[Richter]] và [[Gilels]].
 - **Tiếng đàn hát**: Igumnov là ví dụ được ghi chép kỹ nhất — tiếng đàn đẹp, nhiều màu sắc, "mang tính chất giọng người"; ưa sự tinh tế, kiềm chế, pianissimo rất mỏng. ([[Richter]] nhận xét tiếng đàn của ông sáng và tinh tế nhưng [[cao-do|âm vực]] sắc thái khá hẹp.)
 - Truyền thống gắn với lối chơi rộng, giàu [[giai-dieu|giai điệu]], bắt rễ từ dân ca Nga và dòng [[Anton Rubinstein]] – [[Rachmaninoff]].
 

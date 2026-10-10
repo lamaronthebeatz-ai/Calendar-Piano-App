@@ -1034,6 +1034,8 @@ Lời khuyên "dùng trọng lượng cánh tay chứ không dùng sức ngón" 
 - **Dorothy Taubman** (1917–2013): nổi tiếng nhờ **phục hồi cho người chơi bị chấn thương**; cho rằng kỹ thuật (hơn là tài năng) quyết định cả trình độ lẫn nguy cơ chấn thương. Trọng tâm là **chuyển động phối hợp** của cả cơ thể và **xoay cẳng tay** (xem [[tremolo-xoay-cang-tay]]). Một số thuật ngữ của phương pháp này cũng bị giới khoa học coi là đã lỗi thời.
 
 ## Ý nghĩa với người dạy
+Về tư tưởng **sư phạm** (không chỉ kỹ thuật) của các thầy này: [[nha-su-pham-piano-phuong-tay]], [[truong-phai-su-pham-nga]], [[neuhaus-nghe-thuat-choi-piano]].
+
 Xu hướng chung: từ "ngón tay làm mọi việc" sang **cả cánh tay và cơ thể cùng làm việc**, từ "luyện cho khoẻ" sang **thả lỏng và hiệu quả**, và kỹ thuật **phục vụ âm thanh**. Các trường phái hiện đại kết hợp ưu điểm của cả hai trường phái trước. Liên quan: [[ky-thuat-cham-phim]], [[suc-khoe-nguoi-choi-dan]].
 `,
   },
