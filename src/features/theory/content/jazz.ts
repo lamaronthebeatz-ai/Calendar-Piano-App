@@ -32,14 +32,15 @@ Hoà âm jazz dựa trên nền [[he-thong-hoa-am-co-dien|hoà âm chức năng 
 Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có thể đóng vai **chủ** (I7) và không cần giải quyết (xem [[blues-12-nhip]], [[am-giai-blues]]).
 
 ## Lộ trình học trong mục này
+Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
 Điều kiện: đã học Chương 1–7 của [[giao-trinh-hoa-am]] (đặc biệt hợp âm 7, chức năng, át phụ, [[hop-am-muon|hợp âm mượn]]). Trình tự dưới đây bám theo cách chia bài của The Jazz Piano Site (cơ bản → hợp âm → tiến trình → âm giai → ngẫu hứng → thế bấm → tái hoà âm → jazz hiện đại).
 1. **Cảm nhận**: [[swing]].
 2. **Blues**: [[blues-12-nhip]], [[am-giai-blues]].
 3. **Hợp âm jazz**: [[ky-hieu-hop-am]], [[hop-am-mo-rong]], [[hop-am-6-va-add]], [[hop-am-gach-cheo]].
 4. **Kết và tiến trình**: [[ii-v-i]] → [[turnaround-jazz]] → [[line-cliche]] → [[vong-hop-am]]; đọc tiến trình: [[phan-tich-tien-trinh-jazz]].
 5. **Âm giai cho hợp âm**: [[he-thong-hop-am-am-giai]] → [[dieu-thuc-thu-giai-dieu]] → [[hop-am-at-bien-hoa]] → [[am-giai-bebop]] → [[am-giai-doi-xung-jazz]] ([[am-giai-bat-cung]]).
-6. **Xếp hợp âm**: [[xep-hop-am]] (shell, không gốc, drop 2) → [[the-bam-bac-thay-jazz]] → [[hop-am-khoi]] → [[upper-structure]] → [[hoa-am-quang-bon]].
-7. **Tay trái và đệm**: [[bass-di-jazz]], [[dem-jazz]], [[dem-hat-piano|stride và các kiểu đệm]].
+6. **Xếp hợp âm**: [[the-bam-ba-not]] → [[xep-hop-am]] (shell, không gốc, drop 2) → [[the-bam-mo]] → [[quy-tac-xep-hop-am-jazz]] → [[the-bam-bac-thay-jazz]] → [[hop-am-so-what-barron]] → [[hop-am-khoi]] → [[upper-structure]] → [[hoa-am-quang-bon]] → [[am-cum|âm cụm]]; chọn và ghép thế bấm: [[ket-hop-the-bam]], [[chon-the-bam-jazz]].
+7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]].
 8. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]], [[hop-am-luot-jazz]].
 9. **Tái hoà âm**: [[tai-hoa-am]], [[constant-structures]].
 10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]].
@@ -56,7 +57,43 @@ Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có
 - Với mỗi hợp âm, hỏi: **nốt 3 và 7 là gì?** — hai nốt này quyết định tính chất và nối các hợp âm với nhau (nốt dẫn hướng).
 - Mọi hợp âm 7 át đều có thể **thay thế** ([[quang|tritone]], backdoor, [[hop-am-bay-giam|hợp âm 7 giảm]]) — nhưng giai điệu phải hợp với hợp âm mới.
 `,
+  },  {
+    slug: 'hoc-piano-jazz',
+    title: 'Học piano jazz: bắt đầu từ đâu?',
+    category: 'jazz',
+    aliases: ['how to play jazz piano', 'học piano jazz', 'bắt đầu học jazz', 'jazz piano roadmap', 'lộ trình piano jazz'],
+    summary: 'Lộ trình thực hành của TJPS cho người bắt đầu chơi jazz: chọn một bài ballad chậm nhiều ii – V – I, học thật đơn giản (giai điệu + hợp âm 7), rồi thêm từng lớp — thế bấm, tay trái, tiết tấu, ngẫu hứng — mỗi lớp tập riêng trước khi ghép.',
+    wiki: 'Jazz_piano',
+    refs: [
+      ['The Jazz Piano Site — How to Play Jazz Piano: Beginner to Advanced', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/playing-jazz-piano-beginner-advanced/'],
+      ['The Jazz Piano Site — Jazz for Beginners: Theory & Practice', 'https://www.thejazzpianosite.com/jazz-piano-lessons/the-basics/jazz-for-beginners-theory-practice/'],
+      ['The Jazz Piano Site — Jazz Piano Roadmap (PDF)', 'https://www.thejazzpianosite.com/wp-content/uploads/2017/08/Jazz-Piano-Roadmap.pdf'],
+      ['The Jazz Piano Site — Rootless Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/rootless-voicings/'],
+    ],
+    body: `
+Bài này là **lộ trình thực hành** (tay trên phím); lộ trình lý thuyết đầy đủ nằm ở [[hoa-am-jazz]].
+
+## Kiến thức tối thiểu (theo TJPS)
+- Cấu trúc [[am-giai-truong|âm giai trưởng]].
+- Các [[hop-am-bay|hợp âm 7]] diatonic của một giọng và cách dựng từng loại (xem [[ky-hieu-hop-am]]).
+
+## Chọn bài đầu tiên
+TJPS: một bài **ballad chậm, dễ nhớ, diatonic**, có **nhiều [[ii-v-i]]**. Gợi ý: "Fly Me to the Moon", "Autumn Leaves" (xem [[phan-tich-tien-trinh-jazz]]), "All the Things You Are", "Softly as in a Morning Sunrise".
+
+## Thêm từng lớp
+1. **Học bài thật đơn giản**: giai điệu tay phải + hợp âm 7 tay trái.
+2. **Thế bấm**: shell (nốt 3 + 7) → [[the-bam-ba-not]] → [[xep-hop-am|không gốc]] (3 – 5 – 7 – 9 cho hợp âm trưởng và thứ, 3 – 7 – 9 – 13 cho V7; phát triển trong thập niên 1950 với Bill Evans, Wynton Kelly, Ahmad Jamal) → [[the-bam-mo]].
+3. **Tay trái**: [[bass-di-jazz|bass đi]], [[stride-piano|stride]].
+4. **Tiết tấu**: [[swing]], đệm Charleston ([[dem-jazz]]).
+5. **Ngẫu hứng** theo thang: rải hợp âm 7 → âm giai → nốt cromatic và side-slipping → toàn bộ cromatic; kết câu ở [[not-dan-huong|nốt dẫn hướng]] (xem [[xay-dung-bai-solo]]).
+Mỗi lớp **tập riêng** trước khi ghép với các lớp khác. Bản đồ khái niệm một trang của TJPS (*Jazz Piano Roadmap*) tóm tắt: hình thức, tiết tấu, giai điệu, hoà âm và các thế bấm (khối, shell, không gốc, mở, quãng 4, So What, upper structure, locked hands).
+
+## Thói quen luyện tập
+- Dùng [[kiem-soat-toc-do|máy đếm nhịp]], tập chậm; **20 phút mỗi ngày** tốt hơn 60 phút ba ngày một lần (TJPS — xem [[phuong-phap-luyen-tap]]).
+- **Chép solo** từ bản thu ([[phan-tich-solo-jazz]]) và **chơi cùng người khác** ([[jam-session]]).
+`,
   },
+
   {
     slug: 'swing',
     title: 'Swing',
@@ -630,7 +667,7 @@ Là một trong những kỹ thuật [[tai-hoa-am]] phổ biến nhất.
     title: 'Xếp hợp âm',
     category: 'jazz',
     also: ['improvisation'],
-    aliases: ['voicing', 'cách xếp hợp âm', 'rootless voicing', 'shell voicing', 'drop 2', 'close voicing', 'open voicing', 'thế bấm hợp âm jazz'],
+    aliases: ['voicing', 'cách xếp hợp âm', 'rootless voicing', 'shell voicing', 'drop 2', 'close voicing', 'thế bấm hợp âm jazz'],
     summary: 'Cách chọn và sắp xếp các nốt của hợp âm trên bàn phím: xếp hẹp, xếp rộng, shell, rootless, drop 2…',
     wiki: 'Voicing_(music)',
     refs: [
@@ -680,6 +717,8 @@ Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8
 [[am-giai|Âm giai]] chọn nốt mở rộng: [[he-thong-hop-am-am-giai]]. Xếp theo quãng 4: [[hoa-am-quang-bon]].
 
 Đọc tiếp: [[the-bam-bac-thay-jazz]], [[hop-am-khoi]] (drop 2 bắt nguồn từ four-way close), [[upper-structure]], [[dem-jazz]].
+
+Thêm: [[the-bam-ba-not]], [[the-bam-mo]], [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
 `,
   },  {
     slug: 'upper-structure',
@@ -726,7 +765,95 @@ Liên quan: [[xep-hop-am]], [[he-thong-hop-am-am-giai]], [[am-giai-bat-cung]] (U
 
 Trong giai điệu: [[superimposition-jazz]], [[triad-pairs]].
 `,
+  },  {
+    slug: 'the-bam-ba-not',
+    title: 'Thế bấm 3 nốt',
+    category: 'jazz',
+    aliases: ['three note voicing', 'three-note voicings', 'thế bấm 3 nốt', 'thế bấm ba nốt', 'gốc + 3 + 7'],
+    summary: 'Thế bấm jazz đơn giản nhất cho hai tay: tay trái chơi nốt gốc, tay phải chơi nốt 3 và 7 (nốt dẫn hướng). Thêm một nốt ở tay phải (giai điệu, nốt 5 hoặc nốt căng) là có thế bấm 4 nốt.',
+    refs: [
+      ['The Jazz Piano Site — Three Note Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/three-note-voicings/'],
+      ['The Jazz Piano Site — Shell Chords', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/shell-chords/'],
+    ],
+    body: `
+## Cấu tạo (theo TJPS)
+- **Tay trái**: nốt **gốc** — giúp tiến trình nghe rõ ràng.
+- **Tay phải**: **nốt 3 và nốt 7** — hai [[not-dan-huong|nốt dẫn hướng]] quyết định tính chất hợp âm (shell — xem [[xep-hop-am]]).
+::grand C4+F4/D3=Dm7 B3+F4/G2=G7 B3+E4/C3=Cmaj7 | ii – V – I ở Đô trưởng bằng thế bấm 3 nốt: tay phải chỉ đổi một nốt mỗi lần (C → B, F → E)
+Tay phải đổi từ "7 – 3" sang "3 – 7" xen kẽ nên di chuyển rất ít — đúng nguyên tắc [[dan-giong|dẫn giọng]] gần.
+
+## Mở rộng thành 4 nốt
+TJPS: thêm **một nốt** vào tay phải — **nốt giai điệu**, **nốt 5** hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Ví dụ của TJPS: **G7♭9** — tay trái G, tay phải F – B – A♭.
+::grand C4+E4+F4/D3=Dm9 B3+E4+F4/G2=G13 B3+D4+E4/C3=Cmaj9 | Thêm nốt căng vào tay phải: Dm9 (thêm E = 9), G13 (thêm E = 13), Cmaj9 (thêm D = 9)
+So sánh: [[the-bam-bac-thay-jazz|thế bấm Powell]] cũng dùng nốt gốc + nốt 3 hoặc 7, nhưng tất cả ở tay trái để tay phải tự do solo.
+
+## Khi nào dùng?
+- Bước đầu tiên khi học chơi jazz từ lead sheet: tay phải có thể đặt **giai điệu** lên trên cùng (xem [[ket-hop-the-bam]]).
+- Khi có bass, bỏ nốt gốc ở tay trái và chuyển sang [[xep-hop-am|thế bấm không gốc]].
+Tiếp theo: [[the-bam-mo]].
+`,
   },
+  {
+    slug: 'the-bam-mo',
+    title: 'Thế bấm mở (open / spread voicings)',
+    category: 'jazz',
+    aliases: ['open voicing', 'open voicings', 'spread voicing', 'thế bấm mở', 'xếp rộng jazz', 'thế bấm hai tay'],
+    summary: 'Thế bấm mở trải hợp âm trên hơn một quãng 8, mỗi tay hai nốt: tay trái nốt gốc + 7 (hoặc gốc + 10), tay phải nốt 3 + 5 (hoặc 5 + 7). Âm thanh đầy và rộng hơn thế bấm hẹp — hay dùng cho ballad.',
+    refs: [
+      ['The Jazz Piano Site — Open Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/open-voicings/'],
+      ['The Jazz Piano Site — Jazz Piano Comping', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/how-to-comp/'],
+    ],
+    body: `
+## Hai cách chia tay (theo TJPS)
+| Cách | Tay trái | Tay phải |
+|---|---|---|
+| (a) | Gốc + 7 | 3 + 5 |
+| (b) | Gốc + 10 (nốt 3 cao một quãng 8) | 5 + 7 |
+::grand F4+A4/D3+C4=Dm7_(a) D4+F4/G2+B3=G7_(b) E4+G4/C3+B3=Cmaj7_(a) | ii – V – I bằng thế bấm mở: Dm7 và Cmaj7 theo cách (a), G7 theo cách (b) với quãng 10 G – B ở tay trái
+(Bảng ví dụ của TJPS dùng các thế bấm này; hàng G7 trong bảng gốc có chỗ không thống nhất giữa hai cách chia, nên ở đây ghi theo đúng định nghĩa cách (b).)
+
+## Nguyên tắc (theo TJPS)
+- **Giai điệu ở trên cùng**.
+- **Không nhân đôi** nốt nào, trừ nốt trên cùng.
+- **Tránh quãng 5** ở tay trái; dùng **quãng rộng ở bè trầm** để khỏi đục.
+Đây cũng chính là các quy tắc chung trong [[quy-tac-xep-hop-am-jazz]]. Khi đệm cho người khác, các thế bấm rộng (quãng 4 trở lên) để lại chỗ cho người solo ([[dem-jazz]]).
+
+## Liên hệ
+Thế bấm mở là "anh em" của [[hop-am-khoi|drop 2]] (lấy từ xếp hẹp rồi hạ một nốt) và là bước tiếp theo sau [[the-bam-ba-not]]. Trong nhạc cổ điển, ý tưởng tương tự là [[dan-giong|xếp rộng]] trong hoà âm bốn bè.
+`,
+  },
+  {
+    slug: 'hop-am-so-what-barron',
+    title: 'Hợp âm So What và hợp âm Barron',
+    category: 'jazz',
+    aliases: ['So What chord', 'hợp âm So What', 'Barron chord', 'hợp âm Barron', 'Kenny Barron voicing', 'Dm11 voicing'],
+    summary: 'Hai thế bấm hợp âm thứ 11 "chữ ký" của jazz hiện đại: hợp âm So What (ba quãng 4 và một quãng 3 trưởng, của Bill Evans trong "So What", 1959) và hợp âm Barron sáu nốt (mỗi tay một chồng quãng 5, giai điệu ở nốt 11), anh em với hợp âm Hancock.',
+    wiki: 'So_What_chord',
+    refs: [
+      ['The Jazz Piano Site — So What Chord', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/so-what-chord/'],
+      ['The Jazz Piano Site — Barron Chord', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/barron-chord/'],
+      ['The Jazz Piano Site — Quartal Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/quartal-voicings/'],
+      ['Wikipedia — So What chord', 'https://en.wikipedia.org/wiki/So_What_chord'],
+      ['PianoGroove — Kenny Barron voicing', 'https://www.pianogroove.com/?p=114'],
+    ],
+    body: `
+## Hợp âm So What
+- **Năm nốt**: **ba quãng 4 đúng** chồng lên nhau và **một quãng 3 trưởng** ở trên. Trên D (TJPS): tay trái **D – G**, tay phải **C – F – A**.
+- Gốc tích: thế bấm của [[bill-evans|Bill Evans]] trong "So What" (*Kind of Blue*, 1959) — xem [[jazz-dieu-thuc]].
+- Vì xây bằng quãng 4, nó có màu hơi **treo** (sus): TJPS đọc thế bấm trên D là **Dm11**, **B♭maj13** hoặc **G9sus**.
+- TJPS: hợp âm So What chính là **[[hoa-am-quang-bon|hợp âm quãng 4]] ở thể đảo 1**; nó có 5 thể đảo, đều dùng được khi cần đổi nốt bass hay nốt giai điệu.
+- Dùng được cả trong tiến trình có chức năng (vòng quãng 5, [[ii-v-i]]) lẫn trong tiến trình điệu thức đi từng bậc — cách đệm của jazz điệu thức là **trượt song song** thế bấm này trong một điệu thức.
+::grand C4+F4+A4/D3+G3=So_What_(D) | Hợp âm So What trên D: D – G – C – F – A (ba quãng 4 + một quãng 3 trưởng) — Dm11 / G9sus / B♭maj13
+
+## Hợp âm Barron
+- **Sáu nốt**, dùng cho hợp âm **m7 khi giai điệu ở nốt 11** (TJPS). Trên Dm11: tay trái **D – A – E** (1 – 5 – 9), tay phải **F – C – G** (♭3 – ♭7 – 11), nốt 11 ở trên cùng.
+- Mỗi tay là **một chồng quãng 5**; giữa hai tay là quãng 2 thứ E – F.
+- Mang tên pianist **Kenny Barron**.
+::grand F4+C5+G5/D3+A3+E4=Dm11_(Barron) | Hợp âm Barron trên Dm11: tay trái D – A – E, tay phải F – C – G
+Anh em: [[the-bam-bac-thay-jazz|hợp âm Hancock]] cũng sáu nốt cho m7 nhưng khi giai điệu ở **nốt 9**. Chọn giữa hai hợp âm theo nốt giai điệu — xem [[ket-hop-the-bam]].
+`,
+  },
+
   {
     slug: 'hop-am-gach-cheo',
     title: 'Hợp âm gạch chéo trong jazz',
@@ -793,6 +920,13 @@ TJPS lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiế
 Xem thêm: [[nghe-si-piano-jazz]], [[dem-jazz]].
 
 Dùng khi solo: [[ngau-hung-hop-am]].
+
+## Locked hands nâng cao (theo TJPS)
+- Giữ một khung hoà âm **I – V – I – V** dưới giai điệu; thay V7 bằng **hợp âm 7 giảm cách nốt gốc của V nửa cung** — trong Đô: G7 → **A♭°7** (A♭ – B – D – F), nghe như G7♭9 không gốc (xem [[hop-am-bay-giam]], [[hop-am-luot-jazz]]).
+- Có thể **nâng một nốt** của hợp âm 7 giảm lên một cung (vẫn trong cùng [[am-giai-bat-cung|âm giai giảm]]) để có màu át biến hoá: A♭ – B – D – G, A♭ – C♯ – D – F.
+- Thế bấm V phải có **nốt 3 và 7**, không có nốt 4 và nốt 7 trưởng ([[not-tranh-va-quang-nghich|nốt tránh]]); hợp âm I có thể là C6, Cmaj9…
+- Được phá khuôn I – V – I – V khi giai điệu cần; "miễn là giữ được khung I – V – I – V bên dưới, nó sẽ nghe hay". Ví dụ trong bài của TJPS: "Blue Monk".
+::grand G4+A4+C5+E5/E4=C6 Ab4+B4+D5+F5/F4=A♭°7 A4+C5+E5+G5/G4=C6 | Minh hoạ: giai điệu E – F – G, hoà âm I – V – I; V được thay bằng A♭°7; tay trái nhân đôi giai điệu thấp một quãng 8
 `,
   },
   {
@@ -826,8 +960,107 @@ Khi giai điệu ở **nốt 9** của một hợp âm m7, TJPS giới thiệu "
 Tay phải là hai [[quang|quãng 4]] chồng lên nhau — gần với [[hoa-am-quang-bon|hợp âm quãng 4]] và hợp âm *So What* (E – A – D – G – B trên Em11) mà [[bill-evans|Bill Evans]] chơi trong "So What" (*[[jazz-dieu-thuc|Kind of Blue]]*, 1959).
 
 Liên quan: [[nghe-si-piano-jazz]], [[dem-jazz]], [[hop-am-mo-rong]].
+
+Thêm: [[hop-am-so-what-barron]] (Barron, anh em của Hancock), [[ket-hop-the-bam]].
+`,
+  },  {
+    slug: 'ket-hop-the-bam',
+    title: 'Kết hợp các thế bấm',
+    category: 'jazz',
+    aliases: ['combining chord voicings', 'kết hợp thế bấm', 'chọn thế bấm theo giai điệu', 'thế bấm theo nốt giai điệu'],
+    summary: 'Cách TJPS hướng dẫn chọn thế bấm cho cả một bài: đi từng ô, ghi hợp âm và nốt giai điệu đầu tiên, chọn thế bấm đặt nốt giai điệu lên trên cùng (So What, Barron, Hancock, upper structure…), rồi nối các hợp âm với ít chuyển động nhất.',
+    refs: [
+      ['The Jazz Piano Site — Combining Chord Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/combining-chord-voicings/'],
+      ['The Jazz Piano Site — Chord Voicings & When to Use Them', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicings-use/'],
+    ],
+    body: `
+## Quy trình (theo TJPS)
+1. Đi qua bài **từng ô nhịp**.
+2. Ghi **hợp âm** và **nốt giai điệu đầu tiên** của ô.
+3. Với loại hợp âm đó, chọn một thế bấm **đặt nốt giai điệu lên trên cùng**.
+4. Nếu chưa nghĩ ra thế bấm lý tưởng, đặt nốt giai điệu lên trên một thế bấm đơn giản ([[the-bam-ba-not]] hoặc [[the-bam-mo]]).
+5. Chọn **âm vực** hợp với hợp âm, và nối các hợp âm với **ít nốt đổi nhất** ([[dan-giong]]).
+
+## Bảng tra: hợp âm thứ 7 theo nốt giai điệu
+| Nốt giai điệu trên Dm7 | Thế bấm gợi ý |
+|---|---|
+| 9 (E) | [[the-bam-bac-thay-jazz|Hancock]] — D A F / G C E |
+| 11 (G) | [[hop-am-so-what-barron|Barron]] — D A E / F C G |
+| 3 (F) hoặc 5 (A) | [[hop-am-so-what-barron|So What]] (D G / C F A), [[hoa-am-quang-bon|quãng 4]] |
+| Nốt bất kỳ | Không gốc ([[xep-hop-am]]), mở, 3 nốt |
+Với hợp âm át: [[upper-structure]] chọn theo nốt căng ở giai điệu; với maj7: thế bấm mở hoặc không gốc.
+
+## Ví dụ: một nốt đổi
+TJPS minh hoạ Dm11 → G9 chỉ có **một nốt đổi, nửa cung**. Từ thế bấm Barron, hạ C xuống B:
+::grand F4+C5+G5/D3+A3+E4=Dm11 F4+B4+G5/D3+A3+E4=G9/D | Minh hoạ: từ hợp âm Barron trên Dm11, chỉ đổi C → B là được G9 (trên bass D) — năm nốt kia giữ nguyên
+(Đây là cách dựng lại theo mô tả của TJPS; thế bấm chính xác trong bài gốc có thể khác.)
+Liên quan: [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
 `,
   },
+  {
+    slug: 'quy-tac-xep-hop-am-jazz',
+    title: 'Quy tắc xếp hợp âm jazz',
+    category: 'jazz',
+    aliases: ['chord voicing rules', 'quy tắc xếp hợp âm', 'quy tắc voicing', 'luật xếp hợp âm jazz', 'unavailable tension'],
+    summary: 'Các quy tắc chung TJPS đưa ra để tự xếp một thế bấm: luôn có nốt 3 và 7; các quãng nhỏ hơn quãng 5 trừ quãng dưới cùng; quãng rộng ở dưới để khỏi đục; quãng nghịch ở giữa; không nhân đôi trừ nốt trên cùng; không tạo quãng 9 thứ với nốt 3 hoặc 7.',
+    refs: [
+      ['The Jazz Piano Site — Chord Voicing Rules', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicing-rules/'],
+      ['The Jazz Piano Site — Available Tensions', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/available-tensions/'],
+      ['The Jazz Piano Site — Open Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/open-voicings/'],
+    ],
+    body: `
+## Các quy tắc (theo TJPS)
+1. **Luôn có [[not-dan-huong|nốt 3 và 7]]**; nốt gốc và nốt 5 tuỳ chọn; có thể thêm [[hop-am-mo-rong|nốt căng]] 9, 11, 13.
+2. **Mọi quãng nhỏ hơn quãng 5 đúng**, **trừ** quãng giữa hai nốt thấp nhất — để các nốt nghe như **một hợp âm**.
+3. **Quãng rộng ở dưới** để tránh đục.
+4. **Quãng nghịch đặt ở giữa** thế bấm.
+5. **Đừng dùng quá nhiều quãng 3** — nghe nhạt.
+6. **Không nhân đôi** nốt nào, trừ nốt trên cùng (giai điệu).
+7. Trên **hợp âm át**, được phép tạo quãng **9 thứ** với nốt gốc hoặc nốt 5, **không** được với nốt 3 hoặc 7. Một nốt tạo quãng 9 thứ với nốt hợp âm gọi là **nốt căng không dùng được**.
+Thêm từ các bài khác: **giai điệu ở trên cùng**; nối hợp âm với **ít chuyển động nhất**; bè trên cùng đi chủ yếu **liền bậc** khi đệm.
+
+## Minh hoạ
+::grand B4/C3+E3+G3=đục E4+G4+B4/C3+B3=trong | Cmaj7: quãng 3 dày đặc ở vùng trầm nghe đục (trái); quãng 7 rộng ở dưới, các quãng hẹp ở trên nghe trong (phải) — quy tắc 2 và 3
+::grand B3+F4+C5/G2=sai B3+F4+Ab4/G2=đúng | G7: C5 tạo quãng 9 thứ với nốt 3 (B3) — tránh (trái); A♭ tạo quãng 9 thứ với nốt gốc G — được phép trên hợp âm át (phải, G7♭9) — quy tắc 7
+Các quy tắc này là phiên bản "trên phím đàn" của [[luat-hoa-am-bon-be|luật hoà âm bốn bè]] cổ điển (âm vực, khoảng cách, nhân đôi) và của [[chuoi-boi-am|chuỗi bồi âm]] (quãng rộng ở dưới, hẹp ở trên).
+Liên quan: [[xep-hop-am]], [[ket-hop-the-bam]], [[the-bam-mo]].
+`,
+  },
+  {
+    slug: 'chon-the-bam-jazz',
+    title: 'Chọn thế bấm theo phong cách',
+    category: 'jazz',
+    aliases: ['when to use voicings', 'chord voicings when to use', 'chọn thế bấm', 'thế bấm theo phong cách', 'secundal voicing'],
+    summary: 'Thế bấm nào cũng dùng được lúc nào cũng được, nhưng mỗi phong cách có thói quen riêng: shell cho bebop, hợp âm khối cho jazz sớm và stride, không gốc cho bossa nova và ballad, quãng 4 cho blues và jazz điệu thức, âm cụm cho ballad, boogie và free jazz (bảng của TJPS).',
+    refs: [
+      ['The Jazz Piano Site — Chord Voicings & When to Use Them', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicings-use/'],
+      ['The Jazz Piano Site — Monk Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/monk-voicings/'],
+      ['The Jazz Piano Site — Four Way Close, Locked Hands and Drop Two', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/four-way-close/'],
+    ],
+    body: `
+TJPS mở đầu bằng một tiền đề: **thế bấm nào cũng có thể dùng bất cứ lúc nào**; chỉ là mỗi phong cách **ưa** một số thế bấm.
+
+## Bảng của TJPS
+| Thế bấm | Phong cách hay dùng | Bài |
+|---|---|---|
+| Shell / Powell | Bebop, ballad | [[the-bam-bac-thay-jazz]], [[xep-hop-am]] |
+| Hợp âm khối | Jazz sớm, stride, gảy đều | [[stride-piano]], [[hop-am-khoi]] |
+| Không gốc | Bossa nova, ballad | [[xep-hop-am]] |
+| Mở (spread) | Ballad | [[the-bam-mo]] |
+| Quãng 4 | Blues, jazz điệu thức | [[hoa-am-quang-bon]], [[hop-am-so-what-barron]] |
+| Quãng 2 (âm cụm) | Ballad, boogie, free jazz | [[am-cum]] |
+
+## Gợi ý thêm từ các bài TJPS
+- **Shell / Powell**: đơn giản, thưa — hợp khi tay phải solo bebop nhanh.
+- **Không gốc**: lối của [[bill-evans|Bill Evans]], nối ii – V – I rất mượt.
+- **Quãng 4 sáu nốt** cho hợp âm át: hợp với blues.
+- **Drop 2 và locked hands**: cho giai điệu đi liền bậc ("Blue Bossa", "Fly Me to the Moon").
+- **Hancock** (m7, giai điệu ở nốt 9) và **Barron** (giai điệu ở nốt 11) — xem [[ket-hop-the-bam]].
+- **Monk**: hợp với những bài đổi giọng liên tục.
+- Khi **đệm**: chơi ở âm vực khác người solo ([[dem-jazz]]).
+`,
+  },
+
   {
     slug: 'dem-jazz',
     title: 'Đệm jazz (comping)',
@@ -856,7 +1089,7 @@ Liên quan: [[nghe-si-piano-jazz]], [[dem-jazz]], [[hop-am-mo-rong]].
 | Cách | Tay trái | Tay phải | Khi nào |
 |---|---|---|---|
 | Đệm cho chính mình | [[bass-di-jazz|Bass đi]] | Hợp âm không gốc | Chơi một mình, không có bass |
-| Đệm hai tay | Một nửa thế bấm | Nửa còn lại (thế bấm mở) | Có bass, người khác solo |
+| Đệm hai tay | Một nửa [[ngon-bam|thế bấm]] | Nửa còn lại ([[the-bam-mo|thế bấm mở]]) | Có bass, người khác solo |
 | Solo | Hợp âm không gốc | Giai điệu, [[ngau-hung-jazz|ngẫu hứng]] | Khi chính mình solo |
 Danh sách "kỹ năng tối thiểu" của TJPS: tay trái — bass đi, [[dem-hat-piano|stride]], nốt gốc, hợp âm đệm; tay phải — giai điệu, [[ii-v-i|nốt dẫn hướng]], ngẫu hứng; hai tay — thế bấm hai tay, [[hoa-am-quang-bon|hợp âm quãng 4]].
 
@@ -867,6 +1100,8 @@ Hai hình trên là điểm xuất phát; người đệm giỏi thay đổi li�
 
 ## Lịch sử ngắn
 Theo TJPS, lối đệm "comping" thưa xuất hiện khoảng **thập niên 1940**, khi tay bass đảm nhận đường bass đi và tay trái piano không còn phải "bơm" phách như thời [[dem-hat-piano|stride]] (xem [[nghe-si-piano-jazz]], [[the-bam-bac-thay-jazz]]).
+
+Thêm: [[dem-cho-ca-si]], [[jam-session]], [[stride-piano]].
 `,
   },
   {
@@ -903,15 +1138,113 @@ Cùng ý tưởng này dùng cho giai điệu ngẫu hứng — xem [[not-tiep-c
 - TJPS khuyên tập **tay trái riêng** cho đến khi bass đi thật đều, rồi mới thêm hợp âm hoặc giai điệu ở tay phải (xem [[phoi-hop-hai-tay]]).
 - Đổi hướng và đổi kiểu tiếp cận thường xuyên, trộn bước liền bậc với cromatic để đường bass "hát".
 - Tập trên [[blues-12-nhip]] và [[ii-v-i]] trước, rồi [[rhythm-changes]].
-Liên quan: [[dem-jazz]], [[dem-hat-piano]] (stride, kiểu đệm cũ hơn).
+Liên quan: [[dem-jazz]], [[dem-hat-piano]] ([[stride-piano|stride]], kiểu đệm cũ hơn).
+`,
+  },  {
+    slug: 'stride-piano',
+    title: 'Stride piano',
+    category: 'jazz',
+    aliases: ['stride piano', 'stride', 'Harlem stride', 'reverse stride', 'oom-pah', 'Carolina Shout'],
+    summary: 'Stride là lối tay trái của piano jazz Harlem thập niên 1920: nốt bass ở phách 1 và 3, hợp âm ở phách 2 và 4 ("bùm – chát"), tay trái nhảy xa liên tục. James P. Johnson là "cha đẻ" của stride; "Carolina Shout" (thu âm 1921) là một trong những bản solo piano jazz đầu tiên.',
+    wiki: 'Stride_(music)',
+    refs: [
+      ['The Jazz Piano Site — Stride Piano', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/stride-piano/'],
+      ['Wikipedia — Stride (music)', 'https://en.wikipedia.org/wiki/Stride_(music)'],
+      ['Wikipedia — James P. Johnson', 'https://en.wikipedia.org/wiki/James_P._Johnson'],
+      ['Wikipedia — Carolina Shout', 'https://en.wikipedia.org/wiki/Carolina_Shout'],
+      ['Wikipedia — Fats Waller', 'https://en.wikipedia.org/wiki/Fats_Waller'],
+      ['Wikipedia — Rent party', 'https://en.wikipedia.org/wiki/Rent_party'],
+    ],
+    body: `
+## Cấu tạo
+TJPS: tay trái **xen kẽ nốt bass (phách 1 và 3) với hợp âm (phách 2 và 4)** — cảm giác "bùm – chát"; "**đơn giản về khái niệm nhưng khó về kỹ thuật**" (xem [[buoc-nhay-xa]]).
+::grand /C3=1 /E3+G3+C4=2 /G2=3 /E3+G3+C4=4 | Tay trái stride trên C: nốt gốc (phách 1), hợp âm (phách 2), nốt 5 thấp (phách 3), hợp âm (phách 4)
+::rhythm 2/4 q:bùm q:chát / q:bùm q:chát // | Nhịp "bùm – chát": bass ở phách mạnh, hợp âm ở phách nhẹ
+Nốt bass có thể là nốt đơn, [[quang|quãng 8]] hoặc **quãng 10** (rải nhanh). Kiểu đệm cơ bản: [[dem-hat-piano]].
+
+## Biến thể (theo TJPS)
+- **Stride ngược**: hợp âm – bass – hợp âm – bass.
+- Trộn với [[bass-di-jazz|bass đi]].
+- Hai nốt bass hoặc hai hợp âm liền nhau; **đón trước** nốt bass hoặc hợp âm (xem [[dao-phach]]).
+
+## Cho người mới
+TJPS: giảm bước nhảy và độ phức tạp của hợp âm — dùng **quãng 10 rải** và [[not-dan-huong|nốt dẫn hướng]] (trên G7: G rồi F + B). Bắt đầu với một bài nhiều ii – V như "Satin Doll".
+
+## Lịch sử
+- Stride phát triển từ [[dao-phach|ragtime]] ở **Harlem thập niên 1920**; các nghệ sĩ piano độc tấu được thuê chơi ở những "**rent party**" (tiệc góp tiền thuê nhà).
+- **[[james-p-johnson|James P. Johnson]]** (1894–1955) được gọi là "cha đẻ của stride". "**Carolina Shout**" (viết khoảng 1918, thu âm ngày 18/10/1921) là một trong những bản solo piano jazz đầu tiên được ghi âm; [[duke-ellington|Ellington]] học bài này từ cuộn piano.
+- **[[fats-waller|Fats Waller]]** học Johnson; "Handful of Keys" (1929) thành bài thi tài trong các cuộc "đấu đàn" cùng "Carolina Shout".
+- TJPS liệt kê thêm: Willie "The Lion" Smith, Luckey Roberts, Eubie Blake, Teddy Wilson, [[art-tatum|Art Tatum]] (người dần chuyển sang lối tay trái tự do hơn).
+Xem thêm: [[nghe-si-piano-jazz]], [[chon-the-bam-jazz]].
 `,
   },
+  {
+    slug: 'dem-cho-ca-si',
+    title: 'Đệm cho ca sĩ trong jazz',
+    category: 'jazz',
+    aliases: ['comp for a vocalist', 'đệm cho ca sĩ', 'comping vocalist', 'đệm hát jazz'],
+    summary: 'Đệm cho ca sĩ khác đệm cho nhạc công: giọng hát không có cao độ cố định nên ca sĩ dựa vào hoà âm để tìm nốt. Theo TJPS: hoà âm đơn giản, đôi khi đặt giai điệu trên cùng, nhịp đều để ca sĩ tự do co giãn, chơi nhỏ hơn và tránh âm vực của ca sĩ, lấp chỗ trống khi ca sĩ nghỉ.',
+    refs: [
+      ['The Jazz Piano Site — How to Comp for a Vocalist / Singer', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/how-to-comp-for-a-vocalist/'],
+      ['The Jazz Piano Site — Jazz Piano Comping', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/how-to-comp/'],
+    ],
+    body: `
+## Vai trò
+TJPS: **ca sĩ giữ giai điệu**, người đệm giữ **tiết tấu và hoà âm**. Khác với nhạc cụ có phím, **giọng hát không có cao độ cố định** — ca sĩ dựa vào hoà âm của bạn để tìm nốt.
+
+## Nguyên tắc (theo TJPS)
+- **Hoà âm đơn giản**: [[hop-am-bay|hợp âm 7]] xếp chồng quãng 3; tránh những thế bấm dày, mơ hồ như [[hoa-am-quang-bon|quãng 4]] có thể làm ca sĩ lạc giọng.
+- **Điểm tựa**: thỉnh thoảng đặt **nốt giai điệu lên trên cùng** thế bấm; giữ [[bass-di-jazz|bass đi]] đều — nhịp đều phía sau giúp ca sĩ **tự do co giãn** câu hát (xem [[rubato]]).
+- **Âm lượng và âm vực**: chơi **nhỏ hơn** ca sĩ, **tránh âm vực** của họ — ví dụ với giọng soprano, bass ở thấp, hợp âm ở giữa.
+- **Tương tác**: ca sĩ hát dày thì đệm thưa; ca sĩ nghỉ thì **lấp chỗ trống** bằng một câu ngắn; để lại khoảng lặng.
+- **Thoả thuận trước** với ca sĩ về **giọng**, phong cách và nhịp độ — nhiều khi phải [[dich-giong|dịch giọng]] bài cho hợp tầm cữ của họ ([[cao-do|âm vực, tầm cữ]]).
+
+## Thường gặp trong thực tế
+TJPS không nói chi tiết về phần dạo đầu và kết; cách làm phổ biến (kinh nghiệm chung, không phải quy tắc) là dùng vài ô cuối bài hoặc một [[turnaround-jazz|turnaround]] làm dạo đầu, kết dạo đầu ở hợp âm V7 để ca sĩ dễ bắt nốt đầu tiên.
+Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
+`,
+  },
+  {
+    slug: 'jam-session',
+    title: 'Jam session',
+    category: 'jazz',
+    aliases: ['jam session', 'jam', 'buổi jam', 'chơi jam', "Minton's Playhouse", 'cutting session'],
+    summary: "Jam session là buổi các nhạc công jazz tụ họp chơi ngẫu hứng các bài chuẩn mà không tập trước. Bài nêu những gì pianist cần chuẩn bị và cách cư xử trên sân khấu (theo TJPS), cùng lịch sử: các jam ở Minton's Playhouse đầu thập niên 1940 là nơi bebop ra đời.",
+    wiki: 'Jam_session',
+    refs: [
+      ['The Jazz Piano Site — Preparing for a Jam Session', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/preparing-for-a-jam-session/'],
+      ["Wikipedia — Minton's Playhouse", 'https://en.wikipedia.org/wiki/Minton%27s_Playhouse'],
+      ["Wikipedia — Midnight at Minton's", 'https://en.wikipedia.org/wiki/Midnight_at_Minton%27s'],
+      ['Wikipedia — Jazz education', 'https://en.wikipedia.org/wiki/Jazz_education'],
+      ['Elon University Jazz Studies — jam session etiquette', 'https://www.elon.edu/u/academics/arts-and-sciences/jazz-studies/?p=1719'],
+    ],
+    body: `
+## Pianist cần chuẩn bị gì? (theo TJPS)
+- Xin **danh sách bài** của buổi jam trước và học các bài đó.
+- Mọi buổi jam đều nên có ít nhất một bài **[[rhythm-changes]]** — tập nó ở mọi giọng.
+- Vai trò: bạn **đệm hợp âm** ([[dem-jazz]]) và sẽ được **solo**; nếu không có bass, bạn chơi cả [[bass-di-jazz|đường bass]].
+
+## Trên sân khấu
+- **Âm vực**: tránh vùng trầm khi đã có contrabass; tránh âm vực của ca sĩ ([[dem-cho-ca-si]]).
+- **Lắng nghe người solo**: họ lên cao thì mình xuống thấp, họ nhỏ thì mình nhỏ, đáp lại câu của họ như hỏi – đáp (TJPS).
+- **Đổi bốn** (trading fours): các người solo lần lượt chơi 4 ô xen với trống, theo thứ tự solo ban đầu, cho đến hết vòng; báo hiệu quay về giai điệu bằng ánh mắt và bằng chính cách chơi; không muốn solo thì báo trước (theo hướng dẫn của Elon University).
+- Giữ solo **ngắn** trong buổi jam đông người.
+Cấu trúc chung của một lượt chơi (head – solo – head): [[ngau-hung-jazz]].
+
+## Lịch sử: Minton's Playhouse
+- Đầu thập niên 1940, câu lạc bộ **Minton's Playhouse** (Harlem) do Teddy Hill quản lý tổ chức jam thường xuyên. Ở đây [[thelonious-monk|Monk]], [[bud-powell|Bud Powell]], tay trống Kenny Clarke, Charlie Christian, Charlie Parker, Dizzy Gillespie đã phát triển **bebop**.
+- Các buổi jam nổi tiếng với **nhịp độ nhanh, giọng lạ, hoà âm bất ngờ** để "loại" người chơi yếu (*cutting session*).
+- Album trực tiếp *Midnight at Minton's* (Jerry Newman thu năm 1941) có một trong những bản thu sớm nhất của Monk.
+- Trong nửa đầu thế kỷ 20, jam session là **hình thức học jazz chính** — trước khi có trường lớp (xem nghiên cứu của Berliner trong [[ngau-hung-jazz]]).
+`,
+  },
+
 
   {
     slug: 'hoa-am-quang-bon',
     title: 'Hoà âm quãng 4',
     category: 'jazz',
-    aliases: ['quartal harmony', 'hợp âm quãng 4', 'quartal voicing', 'So What chord', 'hợp âm quãng 5', 'quintal'],
+    aliases: ['quartal harmony', 'hợp âm quãng 4', 'quartal voicing', 'hợp âm quãng 5', 'quintal'],
     summary: 'Hợp âm xây bằng các quãng 4 chồng lên nhau thay vì quãng 3 — âm thanh mở, lơ lửng của jazz modal và nhạc thế kỷ 20.',
     wiki: 'Quartal_and_quintal_harmony',
     refs: [
@@ -942,6 +1275,8 @@ Ba quãng 4 + một quãng 3 trưởng ở trên: **E – A – D – G – B**.
 Liên quan: [[xep-hop-am]], [[an-tuong]].
 
 Bối cảnh: [[jazz-dieu-thuc]], [[the-bam-bac-thay-jazz]].
+
+Hợp âm So What chi tiết: [[hop-am-so-what-barron]].
 `,
   },
   {
@@ -1857,6 +2192,8 @@ Cơ sở lý thuyết của việc chọn hợp âm và tránh lực hút V – 
 - Đệm: các hợp âm quãng 4 **di chuyển song song trong điệu thức** (lối của McCoy Tyner thập niên 1960 — TJPS) — xem [[hoa-am-quang-bon]].
 - Solo: để nghe ra điệu thức, nhấn **nốt đặc trưng** (B trong Rê Dorian); dùng [[am-giai-ngu-cung|ngũ cung]], [[choi-ngoai-jazz|side-slipping]] để tạo căng trên nền tĩnh.
 Bước tiếp theo trong lịch sử: [[post-bop-free-jazz]].
+
+Hợp âm So What: [[hop-am-so-what-barron]].
 `,
   },
   {

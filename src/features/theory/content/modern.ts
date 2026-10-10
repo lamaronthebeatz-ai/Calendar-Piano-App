@@ -353,6 +353,14 @@ Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang
 - [[gyorgy-ligeti|Ligeti]], [[krzysztof-penderecki|Penderecki]] — âm cụm cho dàn nhạc.
 
 Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở rộng]] xếp sát nhau) là một dạng âm cụm nhẹ — xem [[xep-hop-am]].
+
+## Âm cụm trong piano jazz
+TJPS gọi đây là **hoà âm quãng 2** (secundal): hợp âm có ít nhất ba nốt **liền bậc** trong một âm giai. Độ nghịch tuỳ âm giai: âm cụm **cromatic** gắt nhất, âm cụm **ngũ cung** êm hơn nhiều.
+::staff treble C4+Db4+D4=cromatic C4+D4+E4+G4=ngũ_cung A3+B3+D4+E4=đa_nghĩa | C – D♭ – D (gắt); C – D – E – G lấy từ ngũ cung (êm); A – B – D – E có thể là Cmaj13, E7sus4 hoặc D6/9
+- **Hai cách dùng**: dữ dội, gây sốc như trong free jazz — Cecil Taylor dùng âm cụm để tránh mọi giọng (xem [[post-bop-free-jazz]]); hoặc **mềm** trong ballad — lối TJPS gắn với Bill Evans.
+- Với ballad: tránh quãng 2 thứ ở trên cùng; đặt âm cụm ở **âm vực giữa** (thấp quá thì đục, cao quá thì mỏng).
+- TJPS liệt kê các pianist dùng âm cụm: Jelly Roll Morton, [[art-tatum|Art Tatum]], Herbie Nichols, Cecil Taylor, [[dave-brubeck|Dave Brubeck]], Horace Silver, [[duke-ellington|Duke Ellington]], [[thelonious-monk|Thelonious Monk]] — Monk có lúc chơi âm cụm bằng cả khuỷu tay, và quãng 2 thứ là "chữ ký" của ông (xem [[the-bam-bac-thay-jazz]]).
+Bảng chọn thế bấm theo phong cách: [[chon-the-bam-jazz]].
 `,
   },
   {

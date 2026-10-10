@@ -348,6 +348,8 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
 Kỹ thuật cụ thể: [[not-tiep-can-jazz]], [[am-giai-bebop]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
 
 Các bài kỹ thuật theo The Jazz Piano Site: [[not-dan-huong]], [[trang-tri-giai-dieu-jazz]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]], [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
+
+Chơi cùng người khác: [[jam-session]].
 `,
   },
   {

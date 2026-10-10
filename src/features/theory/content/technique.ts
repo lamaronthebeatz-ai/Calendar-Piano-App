@@ -415,6 +415,8 @@ Giáo viên lưu ý: cách này hiệu quả khi dùng cẩn thận nhưng **kh�
 Cắt câu dài thành từng **cụm** ngắn, mỗi cụm bắt đầu bằng một **nốt đích** rõ ràng; tập từng cụm rồi nối lại. Biết cấu trúc [[cau-nhac]] và [[motif]] giúp chọn chỗ cắt hợp lý.
 
 Liên quan: [[kiem-soat-toc-do]], [[hoc-thuoc-bai]].
+
+Lộ trình tập jazz: [[hoc-piano-jazz]].
 `,
   },
   {
@@ -675,7 +677,7 @@ Lỗi thường gặp: tay đi theo hình **chữ V ngược**, hạ xuống ở
 2. Lặp lại với nốt giữa, rồi nốt trên.
 3. Thêm dần nốt cho đến đủ hợp âm.
 
-[[dem-hat-piano|Kiểu đệm]] stride trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
+[[dem-hat-piano|Kiểu đệm]] [[stride-piano|stride]] trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
 `,
   },
   {
@@ -710,7 +712,7 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
     title: 'Đệm hát và các kiểu đệm',
     category: 'technique',
     also: ['jazz', 'improvisation'],
-    aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'kiểu đệm', 'Alberti bass', 'stride piano', 'stride', 'đệm valse', 'chơi theo hợp âm'],
+    aliases: ['đệm hát', 'đệm piano', 'accompaniment', 'kiểu đệm', 'Alberti bass', 'đệm valse', 'chơi theo hợp âm'],
     summary: 'Các kiểu đệm cơ bản: hợp âm khối, hợp âm rải, bass Alberti, đệm valse, đệm pop, stride — và cách tập đệm từ bản nhạc chỉ có giai điệu và ký hiệu hợp âm.',
     refs: [
       ['Musicnotes — 7 ways to play lead sheets with your left hand', 'https://www.musicnotes.com/blog/7-ways-to-play-lead-sheets-with-your-left-hand'],
@@ -751,6 +753,8 @@ Các điệu có [[tiet-tau|tiết tấu]] đặc trưng (slow rock 12/8, bossa 
 Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường [[kiem-soat-toc-do|giữ nhịp]] đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
 
 Đệm trong jazz: [[dem-jazz]] (comping), [[bass-di-jazz]].
+
+Stride chi tiết: [[stride-piano]]; đệm cho ca sĩ trong jazz: [[dem-cho-ca-si]].
 `,
   },
   {
@@ -766,7 +770,7 @@ Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường
       ['PianoGroove — Cha-cha-cha & mambo', 'https://pianogroove.com/jazz-piano-lessons/cha-cha-cha-mambo-tutorial/'],
     ],
     body: `
-Các kiểu đệm cơ bản (khối, rải, Alberti, valse, stride) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có [[tiet-tau|tiết tấu]] đặc trưng.
+Các kiểu đệm cơ bản (khối, rải, Alberti, valse, [[stride-piano|stride]]) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có [[tiet-tau|tiết tấu]] đặc trưng.
 
 ## Slow rock và ballad 12/8
 - 12/8 là [[so-chi-nhip|nhịp kép]] **bốn phách lớn**, mỗi phách chia ba: đếm "**1** và a **2** và a **3** và a **4** và a".

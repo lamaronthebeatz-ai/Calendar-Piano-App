@@ -562,7 +562,7 @@ Từ "homophony" có nghĩa khác trong thời cổ đại; nó vào tiếng Anh
 - **Hợp âm khối**: đánh cả hợp âm cùng lúc.
 - **[[luyen-hop-am-rai|Hợp âm rải]]** (arpeggio): đánh lần lượt từng nốt.
 - **Bass Alberti**: thấp – cao – giữa – cao (C–G–E–G), rất phổ biến thời [[wolfgang-amadeus-mozart|Mozart]].
-- **Stride / oom-pah**: bass trầm ở [[so-chi-nhip|phách mạnh]], hợp âm ở phách nhẹ (valse, ragtime).
+- **Stride / [[stride-piano|oom-pah]]**: bass trầm ở [[so-chi-nhip|phách mạnh]], hợp âm ở phách nhẹ (valse, ragtime).
 
 Cách luyện từng kiểu đệm: [[dem-hat-piano]].
 

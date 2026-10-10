@@ -49,7 +49,7 @@ const PERIODS = [
     slug: 'nghe-si-piano-jazz',
     title: 'Nghệ sĩ piano jazz',
     years: '1900–nay',
-    intro: `Từ ragtime và stride ở Harlem đến bebop, modal và fusion — piano jazz phát triển song song với nhạc cổ điển (xem [[swing]], [[xep-hop-am]], [[dem-hat-piano|các kiểu đệm]]).`,
+    intro: `Từ ragtime và [[stride-piano|stride]] ở Harlem đến bebop, modal và fusion — piano jazz phát triển song song với nhạc cổ điển (xem [[swing]], [[xep-hop-am]], [[dem-hat-piano|các kiểu đệm]]).`,
     groups: [
       ['early', 'Ragtime và stride'],
       ['modern', 'Swing, bebop và hiện đại'],
@@ -185,6 +185,8 @@ Kỹ thuật liên quan: [[luyen-am-giai]], [[cach-dien-tau]].
 | Biểu cảm | Nội tâm, rộng | Tiết chế, thanh lịch |
 
 Các học giả lưu ý rằng các trường phái quốc gia **đã pha trộn** trong [[thoi-ky-the-ky-20|thế kỷ 20]], nên khác biệt ngày nay không còn rõ như trước. Xem các nghệ sĩ: [[nghe-si-piano-dau-the-ky-20]], [[nghe-si-piano-hien-dai]].
+
+Kỹ thuật tay trái của thế hệ đầu: [[stride-piano]].
 `,
   },
   {
