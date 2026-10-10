@@ -28,6 +28,9 @@ export const modern: Article[] = [
 - Chữ **"Baroque"** ban đầu mang nghĩa **chê**: gốc tiếng Bồ Đào Nha chỉ viên ngọc trai méo, rồi được dùng cho phong cách bị coi là rườm rà; khi áp vào âm nhạc ở thế kỷ 18, nó cũng là lời phê phán. Việc dùng nó như **tên một thời kỳ** âm nhạc khá muộn — Curt Sachs áp lý thuyết Baroque của Heinrich Wölfflin vào âm nhạc năm **1919**.
 - **"Thời kỳ thông dụng"** (common practice) là tên gọi khoảng từ Baroque đến cuối Lãng mạn, khi [[he-thong-hoa-am-co-dien|hoà âm chức năng]] và các [[luat-hoa-am-bon-be|luật hoà âm]] – đối âm được dùng chung.
 
+## Mỗi thời kỳ, những thể loại nào?
+Thánh ca, [[organum|organum]], [[motet|motet]] (Trung cổ); [[madrigal|madrigal]], [[thanh-le-va-requiem|thánh lễ]] (Phục hưng); opera, [[to-khuc-baroque|tổ khúc]], [[concerto-grosso|concerto grosso]] (Baroque); [[giao-huong|giao hưởng]], [[nhac-thinh-phong|tứ tấu]], sonata (Cổ điển); [[lied|Lied]], [[tieu-pham-piano|tiểu phẩm piano]], thơ giao hưởng (Lãng mạn); [[nhac-dien-tu|nhạc điện tử]], [[nhac-phim-va-tro-choi|nhạc phim]], [[nhac-pho-thong-the-ky-20|nhạc phổ thông]] (thế kỷ 20). Lộ trình đầy đủ: [[the-loai-am-nhac]].
+
 ## Thời kỳ và giáo trình hoà âm
 | Thời kỳ | Phần giáo trình liên quan |
 |---|---|
@@ -63,7 +66,7 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
     slug: 'am-nhac-truyen-thong-viet-nam',
     title: 'Âm nhạc truyền thống Việt Nam và ngũ cung',
     category: 'modern',
-    also: ['scales', 'listening'],
+    also: ['scales', 'listening', 'genres'],
     aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'music of Vietnam', 'ngũ cung Việt Nam', 'hò xự xang xê cống', 'điệu Bắc', 'điệu Nam', 'hơi Bắc', 'hơi Nam', 'đờn ca tài tử', 'vọng cổ', 'ca trù', 'quan họ', 'nhã nhạc', 'đàn bầu', 'đàn tranh', 'đàn nguyệt', 'đàn nhị', 'đàn đáy'],
     summary: 'Nhạc truyền thống Việt Nam dựa trên thang năm âm (Hò – Xự – Xang – Xê – Cống), nhưng cao độ thực không theo luật bình quân và được "nhấn, rung, luyến" theo từng điệu (Bắc, Nam; hơi Xuân, Ai, Oán). Bài này giới thiệu các di sản được UNESCO ghi danh, nhạc cụ chính, đờn ca tài tử và vọng cổ, và cách người dạy piano có thể đưa chất liệu dân tộc vào bài học.',
     refs: [
@@ -88,9 +91,9 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
 ## Thang năm âm và tên gọi
 Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê – Cống** (rồi Liu, Ú… ở quãng 8 trên). Theo Viện Âm nhạc, ở **điệu Bắc** chúng tương ứng **gần đúng** với Đô – Rê – Fa – Sol – La:
 ::staff treble C4=Hò D4=Xự F4=Xang G4=Xê A4=Cống C5=Liu | Hò – Xự – Xang – Xê – Cống ứng với C – D – F – G – A (điệu Bắc, gần đúng): một [[am-giai-ngu-cung|thang ngũ cung]]
-- Tên phương Tây chỉ là **xấp xỉ**: cao độ thực **không theo** [[luat-binh-quan|luật bình quân]].
+- Tên phương Tây chỉ là **xấp xỉ**: [[dich-giong|cao độ thực]] **không theo** [[luat-binh-quan|luật bình quân]].
 - Trần Văn Khê: khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ **các bậc cách đều hay không đều**. Theo Viện Âm nhạc, ở **điệu Nam** (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp.
-- Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, hơi Oán gần với hơi vọng cổ, bậc 2 có **biên độ** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
+- Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, hơi Oán gần với hơi vọng cổ, bậc 2 có **[[am-hoc-co-ban|biên độ]]** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
 - Chưa tìm được nguồn đáng tin ghi số cent chính xác cho từng hơi, nên bài này **không** đưa con số.
 **Trên piano**: chỉ chơi được **khung** năm âm (phím đen, hoặc C – D – F – G – A); các nốt "nhấn" nằm **giữa** hai phím. Đây là bài học tốt về giới hạn của [[luat-binh-quan]] và về [[cao-do]].
 
@@ -184,7 +187,7 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz: các tiểu sử về 
       ['Wikipedia — Emancipation of the dissonance', 'https://en.wikipedia.org/wiki/Emancipation_of_the_dissonance'],
     ],
     body: `
-Âm nhạc có tính điệu được tổ chức quanh một [[bac-am-giai|chủ âm]] và [[chuc-nang-hoa-am|hoà âm chức năng]]. Từ khoảng năm 1908–1909, **[[Schoenberg|Arnold Schoenberg]]** viết những tác phẩm từ bỏ trung tâm này. Các tác phẩm thường được coi là điểm khởi đầu: hai chương cuối của **Tứ tấu đàn dây số 2, Op. 10** (1907–08) và **Ba [[the-loai|tiểu phẩm]] piano Op. 11** (1909).
+Âm nhạc có tính điệu được tổ chức quanh một [[bac-am-giai|chủ âm]] và [[chuc-nang-hoa-am|hoà âm chức năng]]. Từ khoảng năm 1908–1909, **[[Schoenberg|Arnold Schoenberg]]** viết những tác phẩm từ bỏ trung tâm này. Các tác phẩm thường được coi là điểm khởi đầu: hai chương cuối của **[[nhac-thinh-phong|Tứ tấu đàn dây]] số 2, Op. 10** (1907–08) và **Ba [[the-loai|tiểu phẩm]] piano Op. 11** (1909).
 
 ## Đặc điểm
 - Không có [[hoa-bieu]]; [[dau-hoa]] được ghi trực tiếp cho từng nốt.
@@ -204,7 +207,7 @@ Cụm từ của Schoenberg (in trong tuyển tập tiểu luận *Style and Ide
 ## Nghe nhạc phi điệu tính thế nào?
 - Theo dõi **[[motif]]** và các nhóm quãng lặp lại (thường là vài nốt), thay vì tìm [[hop-am-ba|hợp âm]] và giọng.
 - Chú ý **[[am-sac|âm sắc]], [[cuong-do|cường độ]], mật độ** — những yếu tố gánh vai trò tạo cấu trúc khi hoà âm chức năng vắng mặt.
-- Bắt đầu bằng những tiểu phẩm ngắn: Op. 11 và Op. 19 (Schoenberg) cho piano.
+- Bắt đầu bằng những [[tieu-pham-piano|tiểu phẩm]] ngắn: Op. 11 và Op. 19 (Schoenberg) cho piano.
 
 ## Công cụ phân tích
 [[tap-hop-cao-do|Lý thuyết tập hợp cao độ]] được phát triển để phân tích loại nhạc này. Tiền thân: [[hoa-am-cromatic]] cuối thời [[thoi-ky-lang-man|Lãng mạn]].
@@ -225,7 +228,7 @@ Cụm từ của Schoenberg (in trong tuyển tập tiểu luận *Style and Ide
       ['Wikipedia — Josef Matthias Hauer', 'https://en.wikipedia.org/wiki/Josef_Matthias_Hauer'],
     ],
     body: `
-[[arnold-schoenberg|Schoenberg]] hệ thống hoá phương pháp này vào đầu những năm 1920 để tạo trật tự cho [[phi-dieu-tinh|âm nhạc phi điệu tính]]. **[[the-loai|Suite]] cho piano Op. 25** (hoàn thành 1923) là tác phẩm xuất bản đầu tiên của ông viết hoàn toàn bằng phương pháp 12 âm — với các chương mượn tên vũ khúc [[thoi-ky-baroque|Baroque]]: gavotte, musette, [[minuet-va-trio|menuet]], gigue.
+[[arnold-schoenberg|Schoenberg]] hệ thống hoá phương pháp này vào đầu những năm 1920 để tạo trật tự cho [[phi-dieu-tinh|âm nhạc phi điệu tính]]. **[[the-loai|Suite]] cho piano Op. 25** (hoàn thành 1923) là tác phẩm xuất bản đầu tiên của ông viết hoàn toàn bằng phương pháp 12 âm — với các chương mượn tên vũ khúc [[thoi-ky-baroque|Baroque]]: [[to-khuc-baroque|gavotte]], musette, [[minuet-va-trio|menuet]], gigue.
 
 **Josef Matthias Hauer** (Áo) đã viết nhạc 12 âm chặt chẽ từ năm **1919** (*Nomos*, Op. 19 cho piano) và phát triển một hệ thống riêng dựa trên **44 "trope"** — chia 12 nốt thành hai nhóm 6 nốt không xếp thứ tự, khác với chuỗi có thứ tự của Schoenberg.
 
@@ -371,7 +374,7 @@ Cách dùng trong jazz cùng âm giai toàn cung và âm giai tăng: [[am-giai-d
 Mỗi lớp giữ [[hoa-bieu|giọng]] riêng của nó, tạo ra những va chạm [[thuan-nghich|nghịch]] có tổ chức.
 
 ## Hợp âm Petrushka
-[[Stravinsky]] (ballet "Petrushka", 1911): **C trưởng + F♯ trưởng** vang cùng lúc — hai giọng cách nhau một [[quang|tritone]], xa nhau nhất trên [[vong-quang-nam]].
+[[Stravinsky]] ([[ballet|ballet]] "Petrushka", 1911): **C trưởng + F♯ trưởng** vang cùng lúc — hai giọng cách nhau một [[quang|tritone]], xa nhau nhất trên [[vong-quang-nam]].
 
 ::keyboard C4 E4 G4 F#5 A#5 C#6 | Hợp âm Petrushka: C trưởng (dưới) + F♯ trưởng (trên)
 
@@ -420,7 +423,7 @@ Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang
 - **[[am-giai-cromatic|Cromatic]]**: cả phím trắng và đen — dày đặc nhất.
 
 ## Trước Cowell
-Âm cụm không hoàn toàn mới: *Battalia* (1673) của Biber đã có âm cụm diatonic; đoạn "Hỗn mang" mở đầu ballet *Les Élémens* (1737–38) của **Jean-Féry Rebel** cho dàn nhạc chơi cùng lúc **mọi nốt** của [[am-giai-thu|âm giai thứ]] hoà âm. Nhưng trước [[thoi-ky-the-ky-20|thế kỷ 20]], những ví dụ như vậy chỉ lẻ tẻ và ngắn.
+Âm cụm không hoàn toàn mới: *Battalia* (1673) của Biber đã có âm cụm diatonic; đoạn "Hỗn mang" mở đầu [[ballet|ballet]] *Les Élémens* (1737–38) của **Jean-Féry Rebel** cho dàn nhạc chơi cùng lúc **mọi nốt** của [[am-giai-thu|âm giai thứ]] hoà âm. Nhưng trước [[thoi-ky-the-ky-20|thế kỷ 20]], những ví dụ như vậy chỉ lẻ tẻ và ngắn.
 
 ## Ký hiệu và cách chơi
 - Thường ghi bằng **một thanh đậm** nối nốt thấp nhất và cao nhất; [[dau-hoa|dấu hoá]] đặt cạnh cho biết phím trắng, phím đen hay cả hai.
@@ -433,7 +436,7 @@ Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang
 - [[charles-ives|Charles Ives]] — Concord Sonata (dùng một thanh gỗ để nhấn âm cụm).
 - [[gyorgy-ligeti|Ligeti]], [[krzysztof-penderecki|Penderecki]] — âm cụm cho dàn nhạc.
 
-Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở rộng]] xếp sát nhau) là một dạng âm cụm nhẹ — xem [[xep-hop-am]].
+Trong [[nhac-pho-thong-the-ky-20|nhạc pop]] và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở rộng]] xếp sát nhau) là một dạng âm cụm nhẹ — xem [[xep-hop-am]].
 
 ## Âm cụm trong piano jazz
 TJPS gọi đây là **hoà âm quãng 2** (secundal): hợp âm có ít nhất ba nốt **liền bậc** trong một âm giai. Độ nghịch tuỳ âm giai: âm cụm **cromatic** gắt nhất, âm cụm **ngũ cung** êm hơn nhiều.
@@ -448,6 +451,7 @@ Bảng chọn thế bấm theo phong cách: [[chon-the-bam-jazz]].
     slug: 'toi-gian',
     title: 'Âm nhạc tối giản',
     category: 'modern',
+    also: ['genres'],
     aliases: ['minimalism', 'tối giản', 'minimal music', 'phasing', 'lệch pha'],
     summary: 'Phong cách từ những năm 1960: các mẫu ngắn lặp lại liên tục và biến đổi rất chậm, hoà âm đơn giản, nhịp đều.',
     wiki: 'Minimal_music',
@@ -484,7 +488,7 @@ Bảng chọn thế bấm theo phong cách: [[chon-the-bam-jazz]].
 "In C" (Riley) chơi được với **mọi nhạc cụ và mọi trình độ**: cả lớp cùng đi qua 53 mẫu nhạc theo tốc độ riêng — một bài học về nghe nhau và hoà âm tạo thành từ sự chồng lớp.
 
 ## Ảnh hưởng
-Nhạc phim, nhạc điện tử, post-rock và nhạc piano "tân cổ điển" (Ludovico Einaudi, Max Richter). Liên quan: [[da-nhip]], [[ket-cau]], [[cac-thoi-ky]].
+[[nhac-phim-va-tro-choi|Nhạc phim]], [[nhac-dien-tu|nhạc điện tử]], post-rock và nhạc piano "tân cổ điển" (Ludovico Einaudi, Max Richter). Liên quan: [[da-nhip]], [[ket-cau]], [[cac-thoi-ky]].
 `,
   },
   {
@@ -502,7 +506,7 @@ Nhạc phim, nhạc điện tử, post-rock và nhạc piano "tân cổ điển"
       ['Wikipedia — So What (Miles Davis composition)', 'https://en.wikipedia.org/wiki/So_What_(Miles_Davis_composition)'],
     ],
     body: `
-Trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], giọng được xác lập bằng **V – I** và [[bac-am-giai|cảm âm]]. Trong **hoà âm điệu thức**, mục tiêu khác: làm nghe rõ **màu riêng** của một [[dieu-thuc|điệu thức]]. Thủ pháp này phổ biến trong nhạc ấn tượng, jazz điệu thức, nhạc phim và rất nhiều nhạc pop – rock.
+Trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], giọng được xác lập bằng **V – I** và [[bac-am-giai|cảm âm]]. Trong **hoà âm điệu thức**, mục tiêu khác: làm nghe rõ **màu riêng** của một [[dieu-thuc|điệu thức]]. Thủ pháp này phổ biến trong nhạc ấn tượng, jazz điệu thức, [[nhac-phim-va-tro-choi|nhạc phim]] và rất nhiều [[nhac-pho-thong-the-ky-20|nhạc pop]] – rock.
 
 ## Nguyên tắc 1: làm nổi nốt đặc trưng
 **Nốt đặc trưng** là nốt phân biệt điệu thức với [[am-giai-truong|âm giai trưởng]] hoặc thứ cùng chủ âm. Chọn [[hop-am-ba|hợp âm]] **chứa** nốt đó.
@@ -564,7 +568,7 @@ Thuật ngữ do nhà âm nhạc học **Nicolas Slonimsky** đặt (các nguồ
 | Hướng đi | Có (về [[bac-am-giai|chủ âm]]) | Không bắt buộc | Không |
 
 ## Ví dụ
-[[Stravinsky]] — *Pulcinella*, một số đoạn trong *Petrushka*. Tổng quan các thủ pháp: [[hoa-am-the-ky-20]].
+[[Stravinsky]] — *[[trao-luu-the-ky-20|Pulcinella]]*, một số đoạn trong *Petrushka*. Tổng quan các thủ pháp: [[hoa-am-the-ky-20]].
 `,
   },
   {
@@ -650,6 +654,7 @@ Công cụ phân tích các âm giai đối xứng: [[tap-hop-cao-do]]. Tổng q
     slug: 'nhac-pho',
     title: 'Âm nhạc phổ',
     category: 'modern',
+    also: ['genres'],
     aliases: ['spectral music', 'spectralism', 'nhạc phổ', 'hoà âm phổ', 'Grisey', 'Murail'],
     summary: 'Trào lưu Pháp từ thập niên 1970 (Grisey, Murail): xây hoà âm từ phân tích phổ của âm thanh thật — các bồi âm và sự biến đổi của chúng theo thời gian.',
     wiki: 'Spectral_music',

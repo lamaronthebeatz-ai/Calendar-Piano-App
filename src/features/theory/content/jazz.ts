@@ -43,7 +43,7 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
 7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]].
 8. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]], [[hop-am-luot-jazz]].
 9. **Tái hoà âm**: [[tai-hoa-am]] (gồm cách làm bài "jazzy"), [[tai-hoa-am-gospel]], [[doi-nhip-the-loai-jazz|đổi nhịp, đổi thể loại, chơi tự do thời gian]], [[constant-structures]]; **sáng tác**: [[sang-tac-jazz]].
-10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]].
+10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]] (phân tích: [[phan-tich-giant-steps]]).
 11. **Ngẫu hứng** (theo các bài của TJPS):
    - Nền tảng: [[ngau-hung-jazz]] → [[not-dan-huong]] → [[trang-tri-giai-dieu-jazz]] → [[not-tiep-can-jazz]] → [[not-tranh-va-quang-nghich]].
    - Phương pháp: [[ngau-hung-doc-ngang]] → [[tiet-tau-ngau-hung-jazz]] → [[lick-va-trich-dan]] → [[mau-lap-chu-ky]] → [[choi-ngoai-jazz]].
@@ -146,7 +146,7 @@ Các hình đệm Charleston và "đẩy" khi đệm: [[dem-jazz]].
     slug: 'blues-12-nhip',
     title: 'Blues 12 ô nhịp',
     category: 'jazz',
-    also: ['form', 'improvisation'],
+    also: ['form', 'improvisation', 'genres'],
     aliases: ['12 bar blues', 'blues 12 ô', 'vòng blues', 'twelve-bar blues', 'blues'],
     summary: 'Khung hoà âm 12 ô nhịp dùng các hợp âm I, IV, V — nền tảng của blues, rock and roll và jazz.',
     wiki: 'Twelve-bar_blues',
@@ -1475,7 +1475,7 @@ Công cụ khác: [[line-cliche]], [[turnaround-jazz]], [[constant-structures]].
 
 ## 1. Đổi số chỉ nhịp
 - TJPS: phần lớn bài jazz ở **4/4** — có lẽ từ thời [[swing|Swing]], khi jazz là nhạc khiêu vũ và 4/4 có phách nhấn 2 – 4 dễ nhảy hơn nhiều so với kiểu 13/8.
-- Ví dụ TJPS: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **valse 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là phối khí của Quincy Jones cho Frank Sinatra (1964).
+- Ví dụ TJPS: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **[[tieu-pham-piano|valse]] 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là phối khí của Quincy Jones cho Frank Sinatra (1964).
 - TJPS gợi ý thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
 - Ở nhịp lẻ, [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] có thể không đối xứng.
 ::rhythm 4/4 h q q / w // | Minh hoạ: hai ô 4/4 của một câu giai điệu…
@@ -1603,7 +1603,7 @@ Bài TJPS gợi ý để học các kỹ thuật: "E.S.P.", "In Walked Bud", "Sa
 - Ngoài AABA còn có biến thể 32 ô **ABAC** (hai nửa 16 ô bắt đầu giống nhau, kết khác nhau).
 
 ## Bối cảnh
-AABA còn được gọi là **"[[dieu-dem-pho-bien|ballad]] form"** hay **"American popular song form"**: khuôn mẫu chung của **Tin Pan Alley** và nhạc kịch Broadway nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]]. Lời tựa đề thường đặt ở **câu đầu hoặc câu cuối** của mỗi đoạn A. Nhiều ca khúc nhạc kịch theo hình thức này về sau trở thành **jazz standard**.
+AABA còn được gọi là **"[[dieu-dem-pho-bien|ballad]] form"** hay **"American popular song form"**: khuôn mẫu chung của **Tin Pan Alley** và [[operetta-va-nhac-kich|nhạc kịch Broadway]] nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]]. Lời tựa đề thường đặt ở **câu đầu hoặc câu cuối** của mỗi đoạn A. Nhiều ca khúc nhạc kịch theo hình thức này về sau trở thành **jazz standard**.
 
 ## Nhìn hoà âm theo hình thức
 - Đoạn A thường **mở và đóng ở chủ** — vòng I – vi – ii – V hoặc chuỗi [[ii-v-i]].
@@ -1633,7 +1633,7 @@ Turnaround ở cuối mỗi đoạn A: [[turnaround-jazz]].
       ['Wikipedia — Thirty-two-bar form', 'https://en.wikipedia.org/wiki/Thirty-two-bar_form'],
     ],
     body: `
-"I Got Rhythm" của [[george-gershwin|George Gershwin]] ra mắt năm **1930** trong vở nhạc kịch Broadway *Girl Crazy*. [[vong-hop-am|Vòng hợp âm]] của nó — gọi là **"rhythm changes"** — trở thành một trong những khung hoà âm được dùng lại nhiều nhất của jazz, sau [[blues-12-nhip|blues]].
+"I Got Rhythm" của [[george-gershwin|George Gershwin]] ra mắt năm **1930** trong vở [[operetta-va-nhac-kich|nhạc kịch Broadway]] *Girl Crazy*. [[vong-hop-am|Vòng hợp âm]] của nó — gọi là **"rhythm changes"** — trở thành một trong những khung hoà âm được dùng lại nhiều nhất của jazz, sau [[blues-12-nhip|blues]].
 
 ## Cấu trúc (giọng gốc: Si giáng trưởng)
 [[hinh-thuc-ca-khuc-32|Hình thức AABA]], mỗi đoạn 8 ô:
@@ -2054,7 +2054,7 @@ Câu bảy nốt với các bậc **1 – 2 – ♭3 – 4 – 2 – ♭7 – 1*
 
 ## Trích dẫn (quoting)
 TJPS: chơi **giai điệu của một bài hoàn toàn khác** trên tiến trình đang chơi — một kỹ thuật vui và kéo khán giả vào. Ví dụ TJPS nêu:
-- **Ella Fitzgerald** — "Blue Skies": trong đoạn hát scat, trích Hành khúc cưới của [[richard-wagner|Wagner]] và *Rhapsody in Blue* của [[george-gershwin|Gershwin]].
+- **Ella Fitzgerald** — "Blue Skies": trong đoạn hát scat, trích Hành khúc cưới của [[richard-wagner|Wagner]] và *[[tieu-pham-piano|Rhapsody]] in Blue* của [[george-gershwin|Gershwin]].
 - **[[duke-ellington|Duke Ellington]]** — "Black and Tan Fantasy": trích Hành khúc tang lễ của [[frederic-chopin|Chopin]].
 - **Charlie Parker** — "White Christmas": giấu "Jingle Bells".
 - **Count Basie** — "April in Paris": trích "Pop Goes the Weasel".
@@ -2399,7 +2399,7 @@ TJPS tóm tắt [[phong-cach-jazz|lịch sử jazz]] hiện đại như một qu
 
 ## Post-bop — "tự do có kiểm soát"
 TJPS: "Nếu free jazz là *tự do hoàn toàn* thì post-bop là *tự do có kiểm soát*" — trộn bebop, hard bop, [[dieu-thuc|điệu thức]] và free.
-- **Nhóm ngũ tấu thứ hai của Miles Davis** (1964–68): [[herbie-hancock|Herbie Hancock]] (piano), Wayne Shorter (saxophone), Ron Carter (bass), Tony Williams (trống). Các album: *E.S.P.* (album phòng thu đầu tiên), *Miles Smiles*, *Sorcerer*, *Nefertiti*.
+- **Nhóm [[nhac-thinh-phong|ngũ tấu]] thứ hai của Miles Davis** (1964–68): [[herbie-hancock|Herbie Hancock]] (piano), Wayne Shorter (saxophone), Ron Carter (bass), Tony Williams (trống). Các album: *E.S.P.* (album phòng thu đầu tiên), *Miles Smiles*, *Sorcerer*, *Nefertiti*.
 - Trên sân khấu, nhóm thường bỏ hợp âm và giai điệu của một standard nhưng **giữ hình thức và nhịp** — lối chơi TJPS gọi là "**time, no changes**" (có nhịp, không hợp âm).
 - Hợp âm trong post-bop thường không theo chức năng: [[constant-structures]], hợp âm sus, [[hoa-am-quang-bon|quãng 4]].
 Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
@@ -2413,6 +2413,7 @@ Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
     slug: 'phong-cach-jazz',
     title: 'Các phong cách jazz: lịch sử ngắn',
     category: 'jazz',
+    also: ['genres'],
     aliases: ['jazz styles', 'jazz genres', 'lịch sử jazz', 'phong cách jazz', 'ragtime', 'boogie-woogie', 'boogie woogie', 'Dixieland', 'New Orleans jazz', 'bebop', 'cool jazz', 'hard bop', 'soul jazz', 'jazz fusion', 'jazz-rock', 'Latin jazz', 'Afro-Cuban jazz', 'jazz Latin', 'montuno', 'tumbao', 'smooth jazz'],
     summary: 'Khoảng một thế kỷ jazz qua các phong cách nối tiếp và chồng lấn: ragtime, New Orleans, stride, boogie-woogie, swing, bebop, cool, hard bop và soul jazz, modal, free, post-bop, fusion, Latin (Afro-Cuban, bossa nova), gospel jazz và smooth jazz — mỗi phong cách với đặc điểm nhạc, vai trò của piano, nghệ sĩ và bản thu mốc.',
     wiki: 'Jazz',

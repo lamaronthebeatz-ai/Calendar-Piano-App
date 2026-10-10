@@ -221,9 +221,9 @@ Kỹ thuật tay trái của thế hệ đầu: [[stride-piano]].
 | Trần Tất Toại | sinh 1929 | *Dòng nước trong* |
 | Nguyễn Hữu Tuấn | 1942–2008 | Các [[the-loai|prelude]] cho piano |
 | Nguyễn Đình Lượng | 1945–2005 | Các prelude cho piano |
-| Đặng Hữu Phúc | sinh 1953 | *Suite cho piano* |
+| Đặng Hữu Phúc | sinh 1953 | *[[to-khuc-baroque|Suite]] cho piano* |
 
-Các nhà soạn nhạc Nguyễn Văn Nam, Nguyễn Trọng Bằng, Đoàn Nho (học ở Moscow và Kiev) được biết đến chủ yếu qua tác phẩm giao hưởng.
+Các nhà soạn nhạc Nguyễn Văn Nam, Nguyễn Trọng Bằng, Đoàn Nho (học ở Moscow và Kiev) được biết đến chủ yếu qua tác phẩm [[giao-huong|giao hưởng]].
 
 ## Nghệ sĩ biểu diễn
 Năm 1980, [[dang-thai-son|Đặng Thái Sơn]] trở thành người châu Á đầu tiên giành giải nhất cuộc thi [[frederic-chopin|Chopin]] (xem [[nghe-si-piano-hien-dai]]).

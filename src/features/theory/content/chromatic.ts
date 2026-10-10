@@ -74,10 +74,10 @@ Trong Đô thứ: bậc 2 là D → hạ thành **D♭** → [[hop-am-ba|hợp �
 
 ## Ví dụ nổi tiếng
 - Những ô đầu chương 1 **[[hinh-thuc-sonata|Sonata]] "[[phan-tich-anh-trang-chuong-1|Ánh trăng]]"** ([[ludwig-van-beethoven|Beethoven]], Đô♯ thứ): hợp âm **Rê trưởng** — ♭II của Đô♯ thứ — xuất hiện ở ô 3, ngay trước hợp âm át G♯ ở ô 4.
-- **"Erlkönig"** ([[franz-schubert|Schubert]]): Open Music Theory dùng làm ví dụ — bài hát chủ âm hoá hợp âm Napoli rồi dùng nó trong tiến trình kết.
+- **"[[lied|Erlkönig]]"** ([[franz-schubert|Schubert]]): Open Music Theory dùng làm ví dụ — bài hát chủ âm hoá hợp âm Napoli rồi dùng nó trong tiến trình kết.
 
 ## Lịch sử tên gọi
-- Hợp âm gắn với **trường phái opera Naples** thế kỷ 18 (A. Scarlatti, Pergolesi…), nhưng đã có trước đó ở Carissimi, [[arcangelo-corelli|Corelli]], [[henry-purcell|Purcell]].
+- Hợp âm gắn với **trường phái opera Naples** thế kỷ 18 (A. Scarlatti, Pergolesi…), nhưng đã có trước đó ở [[oratorio-cantata-passion|Carissimi]], [[arcangelo-corelli|Corelli]], [[henry-purcell|Purcell]].
 - Walter Piston nhận xét rằng **khó nói được điều gì là "Naples"** ở hợp âm này — tên gọi là quy ước, không phải mô tả nguồn gốc.
 
 ## Cách dựng nhanh
@@ -179,7 +179,7 @@ Viết lại [[ky-hieu-hop-am|tên hợp âm]] (cùng [[ban-phim|phím đàn]]) 
 Khác với [[ban-dap|pedal của đàn piano]], "pedal" ở đây là [[thuat-ngu-hoa-am|thuật ngữ hoà âm]]: một nốt bất động làm nền.
 
 ## Các loại
-- **Bass ngân [[bac-am-giai|chủ âm]]**: tạo cảm giác "về nhà", hay gặp ở **đầu** và **cuối** tác phẩm. [[phan-tich-prelude-do-truong|Prelude số 1]] Đô trưởng ([[johann-sebastian-bach|Bach]], *Bình quân luật* quyển 1) là ví dụ dạy học quen thuộc (bài kế tiếp, [[phan-tich-prelude-do-thu-bwv847|Prelude số 2 Đô thứ]], cũng có một đoạn dài trên bass ngân át): gần cuối có một đoạn dài trên bass ngân **G** (át), rồi bản nhạc khép lại trên bass ngân **C** (chủ).
+- **Bass ngân [[bac-am-giai|chủ âm]]**: tạo cảm giác "về nhà", hay gặp ở **đầu** và **cuối** tác phẩm. [[phan-tich-prelude-do-truong|Prelude số 1]] Đô trưởng ([[johann-sebastian-bach|Bach]], *[[toccata-prelude-fugue|Bình quân luật]]* quyển 1) là ví dụ dạy học quen thuộc (bài kế tiếp, [[phan-tich-prelude-do-thu-bwv847|Prelude số 2 Đô thứ]], cũng có một đoạn dài trên bass ngân át): gần cuối có một đoạn dài trên bass ngân **G** (át), rồi bản nhạc khép lại trên bass ngân **C** (chủ).
 - **Bass ngân át âm**: tạo sức căng chờ đợi — rất hay gặp ngay trước phần tái hiện của [[hinh-thuc-sonata]] và gần cuối [[fugue]].
 - **Bass ngân đảo**: nốt ngân nằm ở bè **cao** hoặc bè giữa — ví dụ một [[not-lap-lai|nốt lặp]] đi lặp lại trên cao trong khi hoà âm bên dưới thay đổi.
 - **Drone** (âm nền): [[quang|quãng]] 5 chủ – át ngân suốt bài, như kèn túi hay nhạc dân gian.
@@ -269,7 +269,7 @@ So sánh với trung âm **diatonic** (Em, Am — cùng giọng, chung **hai** n
 ::keyboard C4 Eb4 Ab4 | A♭ trưởng (đảo) — chỉ chung nốt C
 
 ## Màu sắc
-Không có lực kéo chức năng như V → I, mà là một sự **đổi màu** đột ngột, thần bí hoặc hùng tráng. [[franz-schubert|Schubert]], [[franz-liszt|Liszt]], [[richard-wagner|Wagner]] dùng nhiều. Nhạc phim Hollywood cũng dùng rất nhiều — Frank Lehman phân tích hiện tượng này bằng lý thuyết Neo-Riemann trong sách *Hollywood Harmony* (Oxford, 2018).
+Không có lực kéo chức năng như V → I, mà là một sự **đổi màu** đột ngột, thần bí hoặc hùng tráng. [[franz-schubert|Schubert]], [[franz-liszt|Liszt]], [[richard-wagner|Wagner]] dùng nhiều. [[nhac-phim-va-tro-choi|Nhạc phim]] Hollywood cũng dùng rất nhiều — Frank Lehman phân tích hiện tượng này bằng lý thuyết Neo-Riemann trong sách *Hollywood Harmony* (Oxford, 2018).
 
 ## Định nghĩa: chặt và rộng
 - **Định nghĩa chặt** (David Kopp, *[[am-giai-cromatic|Chromatic]] Transformations in Nineteenth-Century Music*, 2002): hai hợp âm **cùng tính chất** (trưởng – trưởng hoặc thứ – thứ), gốc cách nhau quãng 3 trưởng hoặc thứ, chung **đúng một** nốt — bốn quan hệ trong bảng trên.
@@ -315,7 +315,7 @@ Mỗi phép giữ nguyên **hai nốt chung** và dịch nốt thứ ba theo bư
 - **Hugo Riemann** (cuối thế kỷ 19) và các nhà lý thuyết Đức trước ông đã mô tả quan hệ giữa các hợp âm bằng phép biến đổi, và dùng **Tonnetz** (lưới âm) — một sơ đồ có từ thế kỷ 18 (Euler).
 - **David Lewin**, *Generalized Musical Intervals and Transformations* (Yale University Press, **1987**): nền móng toán học cho "lý thuyết biến đổi".
 - **Richard Cohn** (1996, tạp chí *[[phuong-phap-phan-tich-tac-pham|Music Analysis]]*): chỉ ra 12 hợp âm trưởng – thứ chia thành **4 chu trình lục cung**, mỗi chu trình gồm 3 hợp âm trưởng và 3 hợp âm thứ nối nhau bằng dẫn giọng **mượt nhất có thể** (mỗi bước chỉ một nốt di chuyển nửa cung).
-- **Frank Lehman**: áp dụng vào nhạc phim (*Hollywood Harmony*, Oxford, 2018).
+- **Frank Lehman**: áp dụng vào [[nhac-phim-va-tro-choi|nhạc phim]] (*Hollywood Harmony*, Oxford, 2018).
 
 ## Khi nào dùng Neo-Riemann?
 Khi hoà âm **trôi qua các hợp âm trưởng – thứ** mà không thiết lập giọng rõ ràng ([[franz-liszt|Liszt]], [[richard-wagner|Wagner]] muộn, nhạc phim) — chỗ mà phân tích [[chuc-nang-hoa-am|chức năng]] chỉ ghi được những số La Mã rất lạ. Với nhạc [[dieu-tinh|điệu tính]] chặt chẽ ([[johann-sebastian-bach|Bach]], [[wolfgang-amadeus-mozart|Mozart]]), phân tích chức năng vẫn là công cụ chính.

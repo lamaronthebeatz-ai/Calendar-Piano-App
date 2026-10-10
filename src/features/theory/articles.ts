@@ -18,6 +18,7 @@ import { analysis } from './content/analysis'
 import { listening } from './content/listening'
 import { philosophy } from './content/philosophy'
 import { improvisation } from './content/improvisation'
+import { genres } from './content/genres'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -43,7 +44,8 @@ export const CATEGORIES = {
   philosophy: { title: 'Triết học & thẩm mỹ âm nhạc', hue: 175, description: 'Âm nhạc là gì, vì sao biểu hiện cảm xúc, có ý nghĩa gì, tác phẩm tồn tại thế nào, thế nào là chơi xác thực, cái hay có chuẩn mực không — từ Plato, Nho gia, Rousseau, Hanslick, Schopenhauer đến Adorno và triết học hiện đại.' },
   analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 20 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
   pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
+  genres: { title: 'Thể loại âm nhạc', hue: 120, description: 'Các thể loại từ Trung cổ đến hôm nay: thánh ca, organum, motet, thánh lễ, madrigal; opera, oratorio, cantata, tổ khúc, concerto; giao hưởng, nhạc thính phòng, sonata, tiểu phẩm piano, Lied, thơ giao hưởng, ballet; nhạc điện tử, nhạc phim, nhạc kịch và các dòng nhạc phổ thông — kèm sơ đồ, nhịp điệu đặc trưng và ví dụ nghe.' },
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres]

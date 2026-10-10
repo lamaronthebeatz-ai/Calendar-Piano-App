@@ -356,12 +356,12 @@ Sách *Twentieth-Century Harmony* (1961) của Vincent Persichetti là giáo tr�
 | Thủ pháp | Ý tưởng | Ví dụ tiêu biểu | Bài chi tiết |
 |---|---|---|---|
 | **Chồng quãng 3 mở rộng** | Hợp âm 9, 11, 13 dùng như **màu**, không giải quyết | [[Debussy]] dùng hợp âm 9 át **không giải quyết**; "[[phan-tich-clair-de-lune|Clair de lune]]" ô 15 có hợp âm E♭m9 với nốt 9 ở [[giai-dieu|giai điệu]] | [[hop-am-mo-rong]] |
-| **Hợp âm thêm nốt** | Thêm nốt 6, 9 vào hợp âm ba mà không thêm 7 | Nhạc phim, pop, jazz | [[hop-am-6-va-add]] |
+| **Hợp âm thêm nốt** | Thêm nốt 6, 9 vào hợp âm ba mà không thêm 7 | [[nhac-phim-va-tro-choi|Nhạc phim]], pop, jazz | [[hop-am-6-va-add]] |
 | **Chồng quãng 4 – 5** (quartal, quintal) | Hợp âm xếp bằng quãng 4 (hoặc 5) | [[Ravel]] — *Sonatine* (1906); [[Hindemith]] — *Mathis der Maler*; [[Bartók]]; [[mccoy-tyner|McCoy Tyner]] phổ biến trong jazz thập niên 1960 | [[hoa-am-quang-bon]] |
 | **Chồng quãng 2 – cụm âm** | Nốt **liền nhau** vang cùng lúc | [[Cowell]] đặt tên "tone cluster"; *Adventures in Harmony* (khoảng 1913), *Dynamic Motion* (1916) chơi bằng **cả cẳng tay** | [[am-cum]] |
 | **Hợp âm chồng** (polychord) | **Hai hợp âm** vang cùng lúc, tai nghe được là **hai khối riêng** | **Hợp âm Petrushka** của [[Stravinsky]] (1911): Đô trưởng + Fa♯ trưởng, cách nhau tritone | [[hop-am-chong]], [[da-dieu-tinh]] |
 | **Hoà âm song song** (planing) | Cả hợp âm **trượt song song** — cố ý phá luật cấm quãng song song | Debussy — "La cathédrale engloutie" | [[hoa-am-song-song]] |
-| **Toàn diatonic** (pandiatonicism) | Dùng **tự do mọi nốt** của [[am-giai|âm giai]], không theo cú pháp chức năng; thường có quãng 2 trong hợp âm | Stravinsky — *Pulcinella*; thuật ngữ do Nicolas Slonimsky đặt | [[toan-diatonic]] |
+| **Toàn diatonic** (pandiatonicism) | Dùng **tự do mọi nốt** của [[am-giai|âm giai]], không theo cú pháp chức năng; thường có quãng 2 trong hợp âm | Stravinsky — *[[trao-luu-the-ky-20|Pulcinella]]*; thuật ngữ do Nicolas Slonimsky đặt | [[toan-diatonic]] |
 | **Hoà âm điệu thức** | Dùng [[dieu-thuc]] thay cho trưởng – thứ; mất lực hút của [[bac-am-giai|cảm âm]] | Debussy; [[jazz-dieu-thuc|jazz điệu thức]] | [[dieu-thuc]], [[hoa-am-dieu-thuc]] |
 | **Âm giai đối xứng** | Âm giai toàn cung, âm giai bát cung | Debussy — "Voiles"; [[Messiaen]] | [[am-giai-cromatic]], [[am-giai-bat-cung]], [[dieu-thuc-chuyen-vi-gioi-han]] |
 | **Quan hệ trung âm, chuyển hoá Neo-Riemann** | Nối các hợp âm trưởng – thứ không theo chức năng mà theo **[[dan-giong|dẫn giọng]] tối thiểu** | Nhạc phim, [[richard-wagner|Wagner]] muộn | [[trung-am-cromatic]], [[neo-riemann]] |
@@ -533,7 +533,7 @@ Chứa [[thuan-nghich|tritone]] giữa bậc 3 và bậc 7 (B–F trong G7). [[q
 
 ## Lịch sử: nốt 7 "không được chuẩn bị"
 - Trong [[doi-am|đối âm]] [[thoi-ky-phuc-hung|Phục hưng]], quãng 7 là **nghịch âm** phải chuẩn bị và giải quyết cẩn thận (xem [[doi-am-5-loai]]).
-- Năm **1600**, nhà lý luận Giovanni Artusi chỉ trích các madrigal của [[Monteverdi]], đặc biệt *Cruda Amarilli*, vì dùng nghịch âm quá tự do — ở đó một bè **nhảy thẳng** vào nốt 7, tức coi âm thanh này là **một hợp âm tự thân** chứ không còn là nốt trễ. Monteverdi đáp lại trong lời tựa tập madrigal thứ năm (1605): quy tắc đối âm có thể bị vượt qua vì **yêu cầu biểu cảm của lời ca** — gọi là *seconda pratica* (thực hành thứ hai).
+- Năm **1600**, nhà lý luận Giovanni Artusi chỉ trích các madrigal của [[Monteverdi]], đặc biệt *Cruda Amarilli*, vì dùng nghịch âm quá tự do — ở đó một bè **nhảy thẳng** vào nốt 7, tức coi âm thanh này là **một hợp âm tự thân** chứ không còn là nốt trễ. Monteverdi đáp lại trong lời tựa tập madrigal thứ năm (1605): quy tắc đối âm có thể bị vượt qua vì **yêu cầu biểu cảm của lời ca** — gọi là *[[madrigal|seconda pratica]]* (thực hành thứ hai).
 - Hợp âm 7 át **không phổ biến ngay**: phải vài thập kỷ sau nó mới thành thông lệ; đến các [[hinh-thuc-sonata|sonata]] violin Op. 5 của [[Corelli]] (1700), hệ thống [[dieu-tinh|điệu tính]] đã hoàn chỉnh.
 
 ## Hợp âm 7 trong giọng trưởng
@@ -905,7 +905,7 @@ Ngoài hợp âm át, có thể dùng **[[hop-am-cam-am|hợp âm cảm âm]]** 
 | Hợp âm mượn | Trong Đô trưởng | Hiệu quả |
 |---|---|---|
 | iv | Fm | Buồn man mác, rất hay ở cuối bài (F → Fm → C) |
-| ♭VI | A♭ | Hùng tráng, nhạc phim |
+| ♭VI | A♭ | Hùng tráng, [[nhac-phim-va-tro-choi|nhạc phim]] |
 | ♭VII | B♭ | Rock, "Mixolydian" |
 | ♭III | E♭ | Sáng bất ngờ |
 | ii° / iiø7 | D° / Dm7♭5 | Hạ át u tối |
@@ -968,7 +968,7 @@ Tiêu chí phân biệt chính: **có kết ở giọng mới** hay không. Ch�
 - **Qua nốt chung**: giữ một **nốt** (không phải hợp âm) của giọng cũ làm cầu nối, thường vang một mình rồi nhạc tiếp tục ở giọng mới. Ví dụ nốt Fa ngân trong Si♭ trưởng dẫn sang Fa trưởng.
 - **Trùng âm qua hợp âm 6 Đức hoặc 7 giảm**: một [[hop-am-bay|hợp âm 7 át]] có thể được viết lại thành hợp âm [[hop-am-sau-tang|6 Đức]] (và ngược lại) bằng cách đổi [[not-nhac|tên nốt]] 7 thứ ↔ 6 tăng — dịch [[dieu-tinh|trung tâm giọng]] nửa cung. Hợp âm [[hop-am-bay-giam|7 giảm]] đối xứng nên mỗi nốt đều có thể làm [[bac-am-giai|cảm âm]] → bốn giọng đích. Kết hợp hai loại này có thể đi từ **bất kỳ giọng nào sang bất kỳ giọng nào** trong vài hợp âm — đặc trưng của thời **[[thoi-ky-lang-man|Lãng mạn]]**.
 
-**"Truck driver modulation"** trong nhạc pop: đi từ hợp âm chủ cũ sang **hợp âm át của giọng mới** (cao hơn nửa cung hoặc một cung) rồi vào chủ mới.
+**"Truck driver modulation"** trong [[nhac-pho-thong-the-ky-20|nhạc pop]]: đi từ hợp âm chủ cũ sang **hợp âm át của giọng mới** (cao hơn nửa cung hoặc một cung) rồi vào chủ mới.
 `,
   },
   {
@@ -999,7 +999,7 @@ Am7 = A – C – E – G: **cùng bốn nốt** với C6. Khác nhau ở:
 | Nốt gốc được nghe | C | A |
 | Chức năng | Hợp âm chủ trưởng có màu sắc (thường thay cho I) | Hợp âm thứ — ví dụ ii trong Sol trưởng (hạ át) |
 
-Tên hợp âm cho người chơi biết **nên nghe đâu là nốt gốc** (xem [[the-dao-hop-am]], [[chuc-nang-hoa-am]]). C6 rất hay gặp ở hợp âm kết của [[swing|swing]] và nhạc pop cổ (xem [[ky-hieu-hop-am]]).
+Tên hợp âm cho người chơi biết **nên nghe đâu là nốt gốc** (xem [[the-dao-hop-am]], [[chuc-nang-hoa-am]]). C6 rất hay gặp ở hợp âm kết của [[swing|swing]] và [[nhac-pho-thong-the-ky-20|nhạc pop]] cổ (xem [[ky-hieu-hop-am]]).
 
 ## Hợp âm add
 Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
@@ -1239,7 +1239,7 @@ Mọi loại hợp âm đều có thể trượt song song: hợp âm ba, [[hop-
 ::staff treble C4+E4+G4 D4+F#4+A4 E4+G#4+B4 F#4+A#4+C#5 | Song song cromatic: luôn là hợp âm trưởng — C, D, E, F♯
 
 ## Lịch sử
-- Hát song song quãng 4, quãng 5 đã có từ **organum** thời [[thoi-ky-trung-co|Trung cổ]] (sách *Musica enchiriadis*) — xem [[ket-cau]].
+- Hát song song quãng 4, quãng 5 đã có từ **organum** thời [[thoi-ky-trung-co|Trung cổ]] (sách *[[organum|Musica enchiriadis]]*) — xem [[ket-cau]].
 - [[he-thong-hoa-am-co-dien|Hoà âm cổ điển]] cấm chuyển động này để giữ các bè độc lập.
 - Cuối thế kỷ 19 – đầu [[thoi-ky-the-ky-20|thế kỷ 20]], hợp âm trượt song song trở thành dấu hiệu của **trường phái ấn tượng**; một nguồn cho rằng hoà âm quãng 4 song song đã xuất hiện trong tác phẩm năm 1891 của [[Satie]]. [[Debussy]] dùng trong nhiều tác phẩm: *Prélude à l'après-midi d'un faune*, *Nocturnes*, *La Mer*… (xem [[an-tuong]]).
 

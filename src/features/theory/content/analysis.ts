@@ -114,7 +114,7 @@ Phân tích một solo jazz: [[phan-tich-solo-jazz]].
 Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|phương pháp phân tích]] **sinh ra để trả lời một câu hỏi** của thời đại nó — và có giới hạn riêng.
 
 ## Thế kỷ 17: phân tích như tu từ học
-**Joachim Burmeister**, ở chương cuối khảo luận *Musica poetica* (**1606**), phân tích một motet của **Orlando di Lasso** để dạy người mới học sáng tác cách học từ tác phẩm mẫu. Ông dùng khái niệm của **tu từ học** (nghệ thuật hùng biện): bản nhạc được chia như một bài diễn văn, với các "hình thái" (figure) âm nhạc tương ứng các hình thái tu từ. Đây thường được coi là một trong những bài phân tích tác phẩm sớm nhất; cách hiểu nó hiện nay vẫn còn tranh luận.
+**Joachim Burmeister**, ở chương cuối khảo luận *Musica poetica* (**1606**), phân tích một [[motet|motet]] của **Orlando di Lasso** để dạy người mới học sáng tác cách học từ tác phẩm mẫu. Ông dùng khái niệm của **tu từ học** (nghệ thuật hùng biện): bản nhạc được chia như một bài diễn văn, với các "hình thái" (figure) âm nhạc tương ứng các hình thái tu từ. Đây thường được coi là một trong những bài phân tích tác phẩm sớm nhất; cách hiểu nó hiện nay vẫn còn tranh luận.
 
 ## Thế kỷ 18: câu nhạc như dấu câu
 - **Joseph Riepel** (*Anfangsgründe*, từ 1752) và **Heinrich Christoph Koch** (*Versuch einer Anleitung zur Composition*, 3 tập, **1782–1793**) là hai khảo luận lớn của thế kỷ 18 bàn về [[cau-nhac|câu nhạc]] và [[hinh-thuc-am-nhac|hình thức]].
@@ -122,7 +122,7 @@ Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|ph
 - Từ thập niên 1970, các học giả (Dahlhaus, Ratner, Baker, Sisman…) khôi phục Koch làm cơ sở cho phân tích **"theo đúng lịch sử"** nhạc thế kỷ 18. Cách tiếp cận theo khuôn mẫu của [[luoc-do-galant|lược đồ galant]] cũng đi theo hướng này.
 
 ## Thế kỷ 19: Formenlehre và "hình thức sonata"
-- **Anton Reicha** (1826) và **[[carl-czerny|Carl Czerny]]** (1848) mô tả hình thức sonata; **Adolf Bernhard Marx**, trong bộ *Die Lehre von der musikalischen Komposition* (4 tập, 1837–1847; tập 3 năm 1845), xây dựng một **hệ thống các hình thức** đi từ hình thức bài hát đơn giản đến chương sonata, minh hoạ bằng sonata piano của [[Beethoven]].
+- **Anton Reicha** (1826) và **[[carl-czerny|Carl Czerny]]** (1848) mô tả hình thức sonata; **Adolf Bernhard Marx**, trong bộ *Die Lehre von der musikalischen Komposition* (4 tập, 1837–1847; tập 3 năm 1845), xây dựng một **hệ thống các hình thức** đi từ hình thức bài hát đơn giản đến chương sonata, minh hoạ bằng [[sonata-the-loai|sonata piano]] của [[Beethoven]].
 - Marx **có thể** là người đặt ra thuật ngữ **"hình thức sonata"**, và thuật ngữ **"Formenlehre"** (học thuyết hình thức) cũng bắt nguồn từ ông. Lối dạy hình thức như những **khuôn mẫu** này ảnh hưởng đến giáo trình hình thức suốt thế kỷ 19–20 (xem [[hinh-thuc-sonata]]).
 - Song song là các bài **phân tích dạng ghi chú chương trình** cho người nghe hoà nhạc — truyền thống mà Donald Tovey (Anh) về sau tiêu biểu.
 
@@ -304,7 +304,7 @@ Người nghe thế kỷ 18 sống giữa nhiều loại âm nhạc mang **ý ng
 
 ## Ratner và khái niệm "chủ đề"
 **Leonard Ratner**, trong *Classic Music: Expression, Form, and Style* (1980), định nghĩa chủ đề là **"đề tài cho diễn ngôn âm nhạc"** và chia thành hai nhóm:
-- **Loại hình** (types): những [[the-loai|thể loại]] trọn vẹn như **vũ khúc** ([[minuet-va-trio|minuet]], gavotte…) và **hành khúc**.
+- **Loại hình** (types): những [[the-loai|thể loại]] trọn vẹn như **vũ khúc** ([[minuet-va-trio|minuet]], [[to-khuc-baroque|gavotte]]…) và **hành khúc**.
 - **Phong cách** (styles): những "màu" được mượn vào tác phẩm khác — **quân hành**, **săn bắn**, **Thổ Nhĩ Kỳ**…
 Ranh giới không cứng: minuet là một thể loại hoàn chỉnh, nhưng cũng có thể là một "phong cách" xuất hiện trong bản nhạc khác.
 
@@ -388,7 +388,7 @@ Lưu ý: nhãn **"Sturm und Drang"** từng được dùng như một chủ đ�
     ],
     body: `
 ## Cấu trúc
-- Viết cho **ba violin và [[bass-so|basso continuo]]**, đi kèm một gigue.
+- Viết cho **ba violin và [[bass-so|basso continuo]]**, đi kèm một [[to-khuc-baroque|gigue]].
 - Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một [[giai-dieu|giai điệu]], lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** (basso ostinato / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
 
 ## Bè trầm và vòng hợp âm
@@ -401,7 +401,7 @@ Bè trầm 8 [[not-lap-lai|nốt lặp]] lại tạo nên vòng hợp âm nổi 
 |---|---|
 | 1680–1706? | Thời điểm sáng tác **không rõ** |
 | 1838–1842 | Bản chép tay cổ nhất còn lại |
-| 1919 | Gustav Beckmann công bố bản tổng phổ trong một bài nghiên cứu về nhạc thính phòng của Pachelbel |
+| 1919 | Gustav Beckmann công bố bản tổng phổ trong một bài nghiên cứu về [[nhac-thinh-phong|nhạc thính phòng]] của Pachelbel |
 | 1929 | Max Seiffert xuất bản một bản chuyển soạn |
 | 1940 | Bản thu của Boston Pops (Arthur Fiedler) — có thể là bản thu đầu tiên, ít được chú ý |
 | 1968 | Bản thu của dàn nhạc thính phòng **Jean-François Paillard**: chậm hơn, phong cách [[thoi-ky-lang-man|Lãng mạn]], thêm các bè tự viết — thay đổi số phận bài nhạc |
@@ -440,7 +440,7 @@ Liên hệ phương pháp: bè trầm của vòng này là dạng nhảy của l
     ],
     body: `
 ## Tổng quan
-Bài mở đầu của tập 1 **Clavier bình quân** ([[Bach]], 1722 — xem [[luat-binh-quan]], [[fugue]]). Dài **35 [[so-chi-nhip|ô nhịp]]**, gần như toàn bộ là **[[luyen-hop-am-rai|hợp âm rải]]** theo cùng một khuôn, và kết thúc bằng một [[hop-am-ba|hợp âm]] Đô trưởng khối.
+Bài mở đầu của tập 1 **[[toccata-prelude-fugue|Clavier bình quân]]** ([[Bach]], 1722 — xem [[luat-binh-quan]], [[fugue]]). Dài **35 [[so-chi-nhip|ô nhịp]]**, gần như toàn bộ là **[[luyen-hop-am-rai|hợp âm rải]]** theo cùng một khuôn, và kết thúc bằng một [[hop-am-ba|hợp âm]] Đô trưởng khối.
 
 ## Khuôn hợp âm rải
 Mỗi ô nhịp là **một hợp âm**, rải theo cùng một mẫu (lặp lại hai lần mỗi ô). Vì kết cấu không đổi, toàn bộ sự hấp dẫn nằm ở **hoà âm** và **[[dan-giong|dẫn giọng]]**: các bè chỉ dịch chuyển từng bậc nhỏ từ hợp âm này sang hợp âm kia.
@@ -606,7 +606,7 @@ Xem lý thuyết ở [[hinh-thuc-sonata]].
 ::staff treble C5 E5 G5 B4 C5 D5 C5 | Cao độ câu mở đầu: rải hợp âm C rồi [[not-ngoai-hop-am|nốt thêu]] quanh C
 
 ## Vì sao tái hiện ở Fa trưởng là đặc biệt?
-- Charles Rosen cho rằng việc bắt đầu tái hiện ở giọng hạ át là "**hiếm** vào thời điểm đó"; về sau [[Schubert]] dùng cách này. Một phân tích khác lưu ý: không có ví dụ nào khác trong các sonata piano của Mozart, nhưng có trong các sonata kiểu cũ hơn.
+- Charles Rosen cho rằng việc bắt đầu tái hiện ở giọng hạ át là "**hiếm** vào thời điểm đó"; về sau [[Schubert]] dùng cách này. Một phân tích khác lưu ý: không có ví dụ nào khác trong các [[sonata-the-loai|sonata piano]] của Mozart, nhưng có trong các sonata kiểu cũ hơn.
 - Nếu chép nguyên phần trình bày dịch xuống Fa, đoạn nối sẽ dẫn tới **Đô** (át của Fa) chứ không phải Sol. Vì vậy Mozart **viết lại đoạn nối** với thêm [[mo-tien-hoa-am|mô tiến]] để chủ đề 2 về đúng Đô trưởng — một bài học về [[chuyen-giong]].
 
 ## Tóm tắt theo khung phân tích
@@ -721,7 +721,7 @@ Liên hệ phương pháp: "Dream Cadence" là một trường hợp **làm trá
 ## "Kết giấc mơ"
 Bài dài **24 [[so-chi-nhip|ô nhịp]]**. Kết cuối cùng ở **ô 24** đặc biệt đến mức nhà lý thuyết Julien Despois (2025) đặt tên cho cả một kiểu kết theo bài này — **"Dream Cadence"**: một [[hop-am-mo-rong|hợp âm át 9]] trong đó nốt 9 **đi lên** từng bậc (bậc 6 – 7 – 1) để giải quyết, thay vì đi xuống như thường lệ; nốt 9 thường được nhấn biểu cảm hoặc chậm lại (rallentando) trước [[cau-ket|kết trọn]]. Đây là chỗ đáng dừng lại khi dạy.
 
-Cùng thể loại tiểu phẩm cho người học: [[phan-tich-wilder-reiter|Album cho tuổi trẻ]] Op. 68 (xem [[lo-trinh-tac-pham]]). Ranh giới chính xác (theo số ô) của các phần A – B – A′ vẫn cần đối chiếu trên bản nhạc.
+Cùng thể loại [[tieu-pham-piano|tiểu phẩm]] cho người học: [[phan-tich-wilder-reiter|Album cho tuổi trẻ]] Op. 68 (xem [[lo-trinh-tac-pham]]). Ranh giới chính xác (theo số ô) của các phần A – B – A′ vẫn cần đối chiếu trên bản nhạc.
 `,
   },
   {
@@ -738,7 +738,7 @@ Cùng thể loại tiểu phẩm cho người học: [[phan-tich-wilder-reiter|A
     ],
     body: `
 ## Tổng quan
-[[Chopin]] viết bộ ba Nocturne Op. 9 khoảng **1830–1832**, khi mới khoảng 20 tuổi, đề tặng **Marie Pleyel** — một nghệ sĩ piano trẻ tài năng. Thể loại nocturne học từ [[John Field]] (xem [[the-loai]]).
+[[Chopin]] viết bộ ba [[tieu-pham-piano|Nocturne]] Op. 9 khoảng **1830–1832**, khi mới khoảng 20 tuổi, đề tặng **Marie Pleyel** — một nghệ sĩ piano trẻ tài năng. Thể loại nocturne học từ [[John Field]] (xem [[the-loai]]).
 
 ## Nhịp 12/8
 12 phách nhỏ chia thành **bốn nhóm 3** ([[so-chi-nhip|nhịp kép]], giống cảm giác [[dieu-dem-pho-bien|slow rock 12/8]]). Tay trái đệm kiểu **nốt trầm – [[hop-am-ba|hợp âm]] – hợp âm** trong mỗi nhóm ba, gợi nhịp valse — xem [[dem-hat-piano]] và [[buoc-nhay-xa]].
@@ -787,14 +787,14 @@ Phân tích Schenker về bài này (Schachter & Siegel) chỉ ra nhiều điể
     body: `
 ## Tổng quan
 - Chương thứ 3 trong 4 chương của **Suite bergamasque** của [[Debussy]], giọng **Rê♭ trưởng** (5 [[dau-hoa|dấu giáng]] — xem [[hoa-bieu]]).
-- Bộ tổ khúc được bắt đầu khoảng **1890**, hoàn chỉnh và xuất bản năm **1905**. Bản thảo gốc của Clair de lune đã mất; năm 1890 dựa trên lời của chính Debussy khi xuất bản.
+- Bộ [[to-khuc-baroque|tổ khúc]] được bắt đầu khoảng **1890**, hoàn chỉnh và xuất bản năm **1905**. Bản thảo gốc của Clair de lune đã mất; năm 1890 dựa trên lời của chính Debussy khi xuất bản.
 - Các chương khác — Prélude, [[minuet-va-trio|Menuet]], Passepied — là phiên bản hiện đại của các chương [[the-loai|tổ khúc Baroque]]; **Clair de lune là chương duy nhất có tên mô tả**.
 
 ## Verlaine
 Tên bài gắn với bài thơ "Clair de lune" của **Paul Verlaine** — Debussy cũng phổ nhạc bài thơ này trong tập ca khúc *Fêtes galantes* đầu tiên (1890). Chương 3 của tổ khúc ban đầu dự định mang tên "Promenade sentimentale" — cũng là tên một bài thơ của Verlaine.
 
 ## Ngôn ngữ âm nhạc
-Bài viết ở nhịp **9/8**, nhóm **3 + 3 + 3** ([[so-chi-nhip|nhịp kép]]) — cảm giác như một điệu valse rất chậm, mỗi phách lại chia ba; các chỗ [[dao-phach|đảo phách]] đến từ những nhóm nhịp kiểu [[hemiola]].
+Bài viết ở nhịp **9/8**, nhóm **3 + 3 + 3** ([[so-chi-nhip|nhịp kép]]) — cảm giác như một điệu [[tieu-pham-piano|valse]] rất chậm, mỗi phách lại chia ba; các chỗ [[dao-phach|đảo phách]] đến từ những nhóm nhịp kiểu [[hemiola]].
 
 [[hinh-thuc-am-nhac|Hình thức]] **ba đoạn A – B – A′** dài **72 ô nhịp** (theo một phân tích dùng thuật ngữ của Caplin: khoảng 26 – 24 – 22 ô): A là một [[cau-nhac|đoạn nhạc]] kép mở rộng, B gồm ba đoạn nhạc đều đặn, A′ là sự trở lại có biến đổi kèm coda. Cuối A nối liền vào đầu B quanh **ô 27**, nên ranh giới chỉ mang tính gần đúng.
  Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — [[hoa-am-song-song|hợp âm trượt]] song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
@@ -901,7 +901,7 @@ Trước đó có một buổi thử với Cedar Walton chơi piano (Walton nh�
 Ô có hai hợp âm thì mỗi hợp âm **hai phách**; tổng cộng **26 hợp âm trong 16 ô**.
 | | Ô thứ nhất | Ô thứ hai | Ô thứ ba | Ô thứ tư |
 |---|---|---|---|---|
-| **Ô 1 – 4** | Bmaj7 D7 | Gmaj7 B♭7 | E♭maj7 | Am7 D7 |
+| **Ô 1 – 4** | Bmaj7 D7 | Gmaj7 B♭7 | E♭[[hop-am-bay|maj7]] | Am7 D7 |
 | **Ô 5 – 8** | Gmaj7 B♭7 | E♭maj7 F♯7 | Bmaj7 | Fm7 B♭7 |
 | **Ô 9 – 12** | E♭maj7 | Am7 D7 | Gmaj7 | C♯m7 F♯7 |
 | **Ô 13 – 16** | Bmaj7 | Fm7 B♭7 | E♭maj7 | C♯m7 F♯7 |
@@ -1015,7 +1015,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-Số 7 trong 24 [[the-loai|Prelude]] Op. 28 (in 1839 — xem [[phan-tich-prelude-mi-thu-op28-so4]] về cả tập): **La trưởng**, nhịp **3/4**, **Andantino**, một nốt lấy đà rồi **16 ô** — chơi chưa đến một phút, là prelude ngắn nhất của tập. Nhịp điệu gợi điệu **mazurka** (vũ điệu Ba Lan).
+Số 7 trong 24 [[the-loai|Prelude]] Op. 28 (in 1839 — xem [[phan-tich-prelude-mi-thu-op28-so4]] về cả tập): **La trưởng**, nhịp **3/4**, **Andantino**, một nốt lấy đà rồi **16 ô** — chơi chưa đến một phút, là prelude ngắn nhất của tập. Nhịp điệu gợi điệu **[[tieu-pham-piano|mazurka]]** (vũ điệu Ba Lan).
 
 ## Một nhịp điệu, tám lần
 ::rhythm 3/4 q / e.-s q q / h q // | Mỗi nhóm hai ô có cùng nhịp điệu: móc đơn chấm dôi – móc kép – hai nốt đen – nốt trắng (cộng nốt lấy đà)
@@ -1241,7 +1241,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-[[the-loai|Prelude]] **Đô thứ**, số 2 trong tập 1 *Clavier bình quân* ([[luat-binh-quan]]) của [[johann-sebastian-bach|Bach]] — bản tự ký năm 1722. Một phiên bản sớm hơn nằm trong *Sổ tay cho [[wilhelm-friedemann-bach|Wilhelm Friedemann Bach]]* (bắt đầu 1720). Bài dài **38 ô**, nhịp 4/4. Cùng kiểu "prelude khuôn hình" với [[phan-tich-prelude-do-truong|Prelude Đô trưởng BWV 846]] ngay trước nó, nhưng **cả hai tay** cùng chạy và có một phần kết kịch tính.
+[[the-loai|Prelude]] **Đô thứ**, số 2 trong tập 1 *[[toccata-prelude-fugue|Clavier bình quân]]* ([[luat-binh-quan]]) của [[johann-sebastian-bach|Bach]] — bản tự ký năm 1722. Một phiên bản sớm hơn nằm trong *Sổ tay cho [[wilhelm-friedemann-bach|Wilhelm Friedemann Bach]]* (bắt đầu 1720). Bài dài **38 ô**, nhịp 4/4. Cùng kiểu "prelude khuôn hình" với [[phan-tich-prelude-do-truong|Prelude Đô trưởng BWV 846]] ngay trước nó, nhưng **cả hai tay** cùng chạy và có một phần kết kịch tính.
 
 ## Hình thức
 ::form Khuôn_hình:20 Bass_ngân_át:7 Presto:6 Adagio:1 Allegro:4 | Năm đoạn của bài (số dưới mỗi khối là số ô)
@@ -1293,7 +1293,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-[[ludwig-van-beethoven|Beethoven]] viết sonata **Đô thăng thứ** Op. 27 số 2 năm **1801**, in ở Vienna năm 1802 (Cappi), đề tặng nữ học trò **Giulietta Guicciardi**. Tên do chính ông đặt là ***Sonata quasi una fantasia*** ("sonata gần như một fantasia") — chương chậm đặt ở **đầu** thay vì chương nhanh. Tên "**Ánh trăng**" do nhà thơ – nhà phê bình **Ludwig Rellstab** đặt (thường ghi năm 1832, sau khi Beethoven mất) khi so sánh chương này với ánh trăng trên hồ Lucerne.
+[[ludwig-van-beethoven|Beethoven]] viết sonata **Đô thăng thứ** Op. 27 số 2 năm **1801**, in ở Vienna năm 1802 (Cappi), đề tặng nữ học trò **Giulietta Guicciardi**. Tên do chính ông đặt là ***Sonata quasi una fantasia*** ("sonata gần như một [[toccata-prelude-fugue|fantasia]]") — chương chậm đặt ở **đầu** thay vì chương nhanh. Tên "**Ánh trăng**" do nhà thơ – nhà phê bình **Ludwig Rellstab** đặt (thường ghi năm 1832, sau khi Beethoven mất) khi so sánh chương này với ánh trăng trên hồ Lucerne.
 
 Chương 1: **[[nhip-do|Adagio]] sostenuto**, nhịp **2/2** (alla breve — không phải 4/4 như nhiều bản phổ thông), dài **69 ô**. Đầu bài có lời dặn: *"Si deve suonare tutto questo pezzo delicatissimamente e senza sordino"* — "Cả chương phải chơi thật tinh tế và **không giảm âm**".
 
@@ -1373,7 +1373,7 @@ Chương 2: **Adagio cantabile**, **La giáng trưởng** (giọng [[bac-am-giai
 Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
 | Yếu tố | Tóm tắt |
 |---|---|
-| **Âm thanh** | Ba lớp như tứ tấu; liên ba thêm vào ở lần A cuối |
+| **Âm thanh** | Ba lớp như [[nhac-thinh-phong|tứ tấu]]; liên ba thêm vào ở lần A cuối |
 | **Hoà âm** | La giáng trưởng; Fa thứ (B); La giáng thứ → Mi trưởng (C) |
 | **Giai điệu** | Chủ đề hát, câu 4 ô |
 | **[[tiet-tau|Nhịp điệu]]** | 2/4 chậm; đệm từ móc kép sang liên ba |

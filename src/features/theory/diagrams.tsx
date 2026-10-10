@@ -389,6 +389,9 @@ const FORM_HUES = [250, 25, 145, 300, 75, 190]
  * Form chart: "A:8 A:8 B:8 A:8" — one block per section, width proportional to its length; sections with the
  * same name (ignoring primes and trailing numbers, so A and A' match) share a colour. Underscores become spaces.
  */
+/** Largest font size (up to 11) at which a label fits its box, assuming ~0.56em per character. */
+const labelSize = (label: string, width: number) => Math.max(5.5, Math.min(11, (width - 6) / (label.length * 0.56)))
+
 export function FormChart({ sections }: { sections: string[] }) {
   const parts = sections.map((s) => {
     const [name, len] = s.split(':')
@@ -407,7 +410,7 @@ export function FormChart({ sections }: { sections: string[] }) {
         return (
           <g key={i}>
             <rect x={x + 1} y={4} width={w - 2} height={30} rx={5} fill={`oklch(0.85 0.07 ${hue})`} stroke={`oklch(0.55 0.1 ${hue})`} />
-            <text x={x + w / 2} y={23.5} textAnchor="middle" fontSize={w < 30 ? 8.5 : 11} fontWeight={600} fill="oklch(0.25 0.03 260)">
+            <text x={x + w / 2} y={23.5} textAnchor="middle" fontSize={labelSize(p.name, w)} fontWeight={600} fill="oklch(0.25 0.03 260)">
               {p.name}
             </text>
             <text x={x + w / 2} y={48} textAnchor="middle" fontSize={9} fill="var(--color-ink-muted)">

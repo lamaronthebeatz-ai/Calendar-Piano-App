@@ -234,7 +234,8 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
     slug: 'am-nhac-tuyet-doi',
     title: 'Âm nhạc tuyệt đối và âm nhạc chương trình',
     category: 'philosophy',
-    aliases: ['âm nhạc tuyệt đối', 'absolute music', 'absolute Musik', 'âm nhạc chương trình', 'program music', 'nhạc tiêu đề', 'Hanslick', 'Vom Musikalisch-Schönen', 'tönend bewegte Formen', 'chủ nghĩa hình thức', 'formalism', 'thơ giao hưởng', 'symphonic poem'],
+    also: ['genres'],
+    aliases: ['âm nhạc tuyệt đối', 'absolute music', 'absolute Musik', 'âm nhạc chương trình', 'program music', 'nhạc tiêu đề', 'Hanslick', 'Vom Musikalisch-Schönen', 'tönend bewegte Formen', 'chủ nghĩa hình thức', 'formalism'],
     summary: 'Tranh luận lớn của thế kỷ 19: âm nhạc có nên kể chuyện, vẽ cảnh (nhạc chương trình — Berlioz, Liszt) hay vẻ đẹp của nó nằm trọn trong hình thức âm thanh (Hanslick, 1854)? Thuật ngữ "âm nhạc tuyệt đối" do Wagner đặt năm 1846 — với nghĩa chê.',
     wiki: 'Absolute_music',
     refs: [
@@ -251,7 +252,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 | | Âm nhạc chương trình | Âm nhạc tuyệt đối |
 |---|---|---|
 | Ý tưởng | Âm nhạc gắn với một **nội dung ngoài âm nhạc**: câu chuyện, bài thơ, cảnh vật, nhân vật | Âm nhạc **không cần** và **không nên** dựa vào nội dung ngoài âm nhạc |
-| Ví dụ | [[the-loai|Giao hưởng]] *Đồng quê* ([[ludwig-van-beethoven|Beethoven]]), *Symphonie fantastique* ([[hector-berlioz|Berlioz]]), các **thơ giao hưởng** của [[franz-liszt|Liszt]] | [[hinh-thuc-sonata|Sonata]], giao hưởng, tứ tấu không tiêu đề; [[johannes-brahms|Brahms]] thường được nêu làm đại diện |
+| Ví dụ | [[the-loai|Giao hưởng]] *Đồng quê* ([[ludwig-van-beethoven|Beethoven]]), *[[tho-giao-huong|Symphonie fantastique]]* ([[hector-berlioz|Berlioz]]), các **thơ giao hưởng** của [[franz-liszt|Liszt]] | [[hinh-thuc-sonata|Sonata]], [[giao-huong|giao hưởng]], [[nhac-thinh-phong|tứ tấu]] không tiêu đề; [[johannes-brahms|Brahms]] thường được nêu làm đại diện |
 
 ## Lịch sử của một thuật ngữ
 - **[[richard-wagner|Wagner]]** đặt ra cụm từ **"âm nhạc tuyệt đối"** năm **1846**, trong lời giới thiệu chương trình cho buổi diễn Giao hưởng số 9 của Beethoven ở Dresden: đoạn hát nói của nhạc cụ trong chương cuối "**vượt qua ranh giới của âm nhạc tuyệt đối**". Ông dùng thuật ngữ với nghĩa **chê**, để cho thấy giới hạn của nhạc thuần khí nhạc — theo Mark Evan Bonds, đó là một "hình nhân rơm" Wagner dựng lên để bác bỏ.
@@ -265,7 +266,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 
 ## Cuộc tranh luận ngày nay
 - Phần lớn các nhà triết học hiện đại không còn chọn một trong hai cực: nhạc không lời vẫn có thể được nghe là **biểu cảm** (xem [[bieu-hien-cam-xuc-am-nhac]]), và nhạc chương trình vẫn phải **thuyết phục về mặt âm nhạc**.
-- Với người dạy: khi một tiểu phẩm có tên gợi hình (như *Cảnh tuổi thơ* của [[robert-schumann|Schumann]] — xem [[phan-tich-traumerei]]), tên gọi có thể là **gợi ý** cho cách chơi; Schumann tự nói các tên chỉ là "gợi ý tinh tế".
+- Với người dạy: khi một [[tieu-pham-piano|tiểu phẩm]] có tên gợi hình (như *Cảnh tuổi thơ* của [[robert-schumann|Schumann]] — xem [[phan-tich-traumerei]]), tên gọi có thể là **gợi ý** cho cách chơi; Schumann tự nói các tên chỉ là "gợi ý tinh tế".
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
 
 Bối cảnh tư tưởng đầu thế kỷ 19 — vì sao khí nhạc được xem là nghệ thuật cao nhất: [[triet-hoc-lang-man-ve-am-nhac]].
@@ -287,12 +288,12 @@ Bối cảnh tư tưởng đầu thế kỷ 19 — vì sao khí nhạc được 
     ],
     body: `
 ## Vì sao khó định nghĩa?
-Một định nghĩa tốt phải bao quát **mọi** thứ ta gọi là âm nhạc — từ thánh ca, nhạc gamelan, rap đến nhạc điện tử — và **loại ra** những thứ không phải (tiếng xe cộ, tiếng nói thường). Các tiêu chí quen thuộc đều gặp phản ví dụ:
+Một định nghĩa tốt phải bao quát **mọi** thứ ta gọi là âm nhạc — từ thánh ca, nhạc gamelan, rap đến [[nhac-dien-tu|nhạc điện tử]] — và **loại ra** những thứ không phải (tiếng xe cộ, tiếng nói thường). Các tiêu chí quen thuộc đều gặp phản ví dụ:
 | Tiêu chí | Phản ví dụ |
 |---|---|
 | Có **[[cao-do|cao độ]]**, [[giai-dieu|giai điệu]] | Nhạc cho trống; [[am-cum|âm cụm]]; nhạc ồn |
 | Do **nhạc cụ** tạo ra | Tiếng thu âm từ môi trường, nhạc điện tử |
-| Có **[[kiem-soat-toc-do|nhịp đều]]** | Thánh ca Gregorian, nhiều nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] |
+| Có **[[kiem-soat-toc-do|nhịp đều]]** | [[thanh-ca-gregorian|Thánh ca Gregorian]], nhiều nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] |
 | **Dễ nghe**, đẹp | Nhiều tác phẩm cố tình gây khó chịu |
 Vì vậy các triết gia (như Jerrold Levinson, trong tuyển tập *Music, Art, and Metaphysics*, 1990) thường định nghĩa âm nhạc qua **ý định** và **cách nghe**: âm thanh được **tổ chức có chủ ý** để được **nghe như âm nhạc** — thay vì qua các đặc điểm vật lý.
 
@@ -341,7 +342,7 @@ Ta nói một [[cau-nhac|đoạn nhạc]] "buồn" một cách rất tự nhiên
 | **[[hinh-thuc-am-nhac|Hình thức]]** (formalism) | Cảm xúc không phải nội dung của âm nhạc; nội dung là hình thức âm thanh chuyển động | Eduard [[am-nhac-tuyet-doi|Hanslick]] (1854) | Khó giải thích vì sao ta mô tả nhạc bằng từ cảm xúc tự nhiên đến vậy |
 
 ## Chi tiết hơn
-- **Kivy** cho rằng nỗi buồn là **phẩm chất của âm nhạc**, không phải năng lực của âm nhạc làm gì đó với người nghe. Ông liên hệ mô hình của mình với phong cách hát của nhóm Camerata Florence quanh năm 1600 — âm nhạc như "bản đồ âm thanh" của cơ thể đang mang cảm xúc. *Sound Sentiment* (1989) tái bản toàn văn *The Corded Shell* kèm các chương trả lời phê bình.
+- **Kivy** cho rằng nỗi buồn là **phẩm chất của âm nhạc**, không phải năng lực của âm nhạc làm gì đó với người nghe. Ông liên hệ mô hình của mình với phong cách hát của nhóm [[opera|Camerata]] Florence quanh năm 1600 — âm nhạc như "bản đồ âm thanh" của cơ thể đang mang cảm xúc. *Sound Sentiment* (1989) tái bản toàn văn *The Corded Shell* kèm các chương trả lời phê bình.
 - **Davies**: âm nhạc biểu cảm vì **cấu trúc động** của nó giống những dáng điệu gắn với biểu hiện cảm xúc của con người; tính biểu cảm được **nghe trực tiếp**, không phải suy ra. Khi người nghe cũng buồn theo, đó là một dạng **lây lan** cảm xúc — gần với cơ chế "lây lan cảm xúc" trong mô hình tâm lý học của Juslin (xem [[cam-xuc-am-nhac]]).
 - Một số học giả (David Collins) cho rằng lập trường của Davies và của Levinson, hiểu theo một cách nhất định, **không thực sự đối lập**.
 
@@ -536,12 +537,12 @@ Trong *On Popular Music* (1941, viết cùng George Simpson), Adorno cho rằng 
 Trong chương "Công nghiệp văn hoá" của *Biện chứng của Khai sáng* (Horkheimer và Adorno; bản 1944, xuất bản rộng rãi năm 1947), văn hoá sản xuất hàng loạt được phân tích như một **công cụ kiểm soát xã hội** hơn là sự biểu hiện thật. Thuật ngữ "công nghiệp văn hoá" xuất hiện lần đầu ở đây.
 
 ## Triết học âm nhạc mới (1949)
-*Philosophie der neuen Musik* (1949) gồm hai tiểu luận: **"[[arnold-schoenberg|Schoenberg]] và sự tiến bộ"**, **"[[igor-stravinsky|Stravinsky]] và sự phản động"**. Adorno đặt hai nhà soạn nhạc đối lập như hai xu hướng: âm nhạc dám đối diện với mâu thuẫn của thời đại (Schoenberg, [[ky-thuat-12-am]]) và âm nhạc quay lại các [[hinh-thuc-am-nhac|hình thức]] cũ (Stravinsky tân cổ điển). Sách gây tranh cãi ngay khi ra đời — **chính Schoenberg cũng không đồng tình** — nhưng có ảnh hưởng lớn với giới nhạc sĩ và học giả.
+*Philosophie der neuen Musik* (1949) gồm hai tiểu luận: **"[[arnold-schoenberg|Schoenberg]] và sự tiến bộ"**, **"[[igor-stravinsky|Stravinsky]] và sự phản động"**. Adorno đặt hai nhà soạn nhạc đối lập như hai xu hướng: âm nhạc dám đối diện với mâu thuẫn của thời đại (Schoenberg, [[ky-thuat-12-am]]) và âm nhạc quay lại các [[hinh-thuc-am-nhac|hình thức]] cũ (Stravinsky [[trao-luu-the-ky-20|tân cổ điển]]). Sách gây tranh cãi ngay khi ra đời — **chính Schoenberg cũng không đồng tình** — nhưng có ảnh hưởng lớn với giới nhạc sĩ và học giả.
 
 ## Phê phán đối với Adorno
 - Tiểu luận *Über Jazz* (1936–1937, ký bút danh Hektor Rottweiler) thường bị chê là **thiên kiến** và **tinh hoa**; nhiều nhà sử học jazz bác bỏ hoàn toàn. Hiểu biết jazz của ông được cho là giới hạn ở dòng nhạc khiêu vũ kiểu ban nhạc Paul Whiteman phục vụ giới trung lưu thời Weimar.
 - Về sau, chính Adorno **giữ khoảng cách** với các tiểu luận jazz đầu tiên, thừa nhận ông thiếu hiểu biết về những đặc điểm riêng của jazz Mỹ và đã rút ra kết luận tâm lý – xã hội vội vàng.
-- Một số học giả bênh vực rằng các phê phán thường **bỏ qua loại nhạc cụ thể** Adorno nói tới (nhạc khiêu vũ thập niên 1920, trước những biến đổi lớn của jazz), và các tiểu luận vẫn có **giá trị lịch sử**.
+- Một số học giả bênh vực rằng các phê phán thường **bỏ qua loại [[nhac-dien-tu|nhạc cụ thể]]** Adorno nói tới (nhạc khiêu vũ thập niên 1920, trước những biến đổi lớn của jazz), và các tiểu luận vẫn có **giá trị lịch sử**.
 - Quan điểm bi quan về văn hoá đại chúng là phần bị tranh luận nhiều nhất của cả trường phái Frankfurt.
 - Dù vậy, câu hỏi của Adorno — **ai quyết định chúng ta nghe gì**, và **âm nhạc có thể chống lại sự đồng phục hoá không** — vẫn được đặt lại trong thời đại nhạc số và thuật toán gợi ý.
 

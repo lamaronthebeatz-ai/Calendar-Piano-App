@@ -76,7 +76,7 @@ Giữa các phím trắng có phím đen — đó là các nốt mang [[dau-hoa]
 - **Móc** hoặc **gạch nối**: cho biết các trường độ ngắn (móc đơn, móc kép…).
 
 ## Lịch sử tên nốt Đô – Rê – Mi
-- Tên các nốt bắt nguồn từ thánh ca Latin **"Ut queant laxis"** (lời thường được gán cho Paulus Diaconus, thế kỷ 8). Mỗi câu của bài bắt đầu **cao hơn câu trước một bậc**, nên âm tiết đầu mỗi câu — **ut, re, mi, fa, sol, la** — trở thành tên của sáu nốt. Việc đặt tên này thường được gán cho [[guido-d-arezzo|Guido d'Arezzo]] (thế kỷ 11).
+- Tên các nốt bắt nguồn từ thánh ca Latin **"[[thanh-ca-gregorian|Ut queant laxis]]"** (lời thường được gán cho Paulus Diaconus, thế kỷ 8). Mỗi câu của bài bắt đầu **cao hơn câu trước một bậc**, nên âm tiết đầu mỗi câu — **ut, re, mi, fa, sol, la** — trở thành tên của sáu nốt. Việc đặt tên này thường được gán cho [[guido-d-arezzo|Guido d'Arezzo]] (thế kỷ 11).
 - Hệ thống của Guido chỉ có **6 nốt**. Nốt thứ 7 được thêm sau, gọi là **si** — ghép từ chữ cái đầu của *Sancte Iohannes*, câu cuối bài thánh ca. Các nguồn ghi thời điểm khác nhau (từ thế kỷ 15 đến 18).
 - Thế kỷ 17 ở Ý, **ut** được đổi thành **do** vì âm "mở" dễ hát hơn; người đề xuất thường được ghi là Giovanni Battista Doni.
 - Thế kỷ 19 ở Anh, Sarah Glover đổi **si** thành **ti** để mỗi âm tiết bắt đầu bằng một chữ cái khác nhau. Các nước dùng hệ "Đô cố định" vẫn giữ **si** — cũng là cách gọi ở Việt Nam.
@@ -116,7 +116,7 @@ Bản thân khuông nhạc chưa cho biết [[not-nhac|tên nốt]] — phải n
 ::staff treble C4 E4 G4 B4 D5 F5 A5 | Nốt trên dòng kẻ phụ (C4, A5) và trên các dòng, khe
 
 ## Lịch sử
-- Khuông nhạc ra đời từ việc kẻ **dòng** để định vị neume. Người ta đánh dấu một dòng là một [[cao-do|cao độ]] cố định, thường là **C hoặc F** — tiền thân của [[khoa-nhac]].
+- Khuông nhạc ra đời từ việc kẻ **dòng** để định vị [[thanh-ca-gregorian|neume]]. Người ta đánh dấu một dòng là một [[cao-do|cao độ]] cố định, thường là **C hoặc F** — tiền thân của [[khoa-nhac]].
 - [[guido-d-arezzo|Guido d'Arezzo]] (khoảng năm 1030) theo truyền thống được coi là người tạo ra khuông **4 dòng**. Giới nghiên cứu ngày nay thận trọng hơn: dòng kẻ đã có từ trước, Guido là người **mở rộng lên 4 dòng** và phổ biến phương pháp. Theo giai thoại, khoảng năm 1028 Giáo hoàng John XIX mời ông đến Rome và học được cách [[doc-not-nhanh|đọc nhạc]] chỉ trong một buổi chiều.
 - Khuông **5 dòng** dùng cho [[ky-am|ký âm]] định lượng (nhạc thế tục). Các nguồn không thống nhất thời điểm nó trở thành chuẩn. Sách thánh ca Gregorian đến nay vẫn dùng khuông 4 dòng.
 
@@ -168,7 +168,7 @@ Ngày xưa khoá có thể đặt trên **nhiều dòng khác nhau** để nốt
 - **Khoá Sol dòng 1** (khoá violin kiểu Pháp) và **khoá Đô dòng 1** (khoá soprano): đã thôi dùng.
 - Ngày nay chỉ còn hai khoá [[xuong-am|Đô di động]] phổ biến: **alto** (dòng 3) và **tenor** (dòng 4).
 
-Người học piano chủ yếu cần khoá Sol và khoá Fa. Khoá Đô gặp khi đọc tổng phổ hoặc nhạc thính phòng.
+Người học piano chủ yếu cần khoá Sol và khoá Fa. Khoá Đô gặp khi đọc tổng phổ hoặc [[nhac-thinh-phong|nhạc thính phòng]].
 `,
   },
   {
@@ -268,7 +268,7 @@ Tâm của khoá Đô chỉ vào dòng nào thì dòng đó là **[[ban-phim|Đ�
 ## Lịch sử
 Khoá Đô bắt nguồn từ chữ **C**, và từng được đặt ở **mọi dòng** trừ dòng trên cùng — nên gọi là khoá Đô "di động". Mỗi vị trí có tên riêng, ví dụ soprano (dòng 1), alto (dòng 3), tenor (dòng 4). Ngày nay chỉ còn alto và tenor được dùng thường xuyên.
 
-Người học piano hiếm khi đọc khoá Đô, nhưng sẽ gặp nó khi đọc tổng phổ hoà tấu hoặc nhạc thính phòng. Xem thêm [[khoa-nhac]].
+Người học piano hiếm khi đọc khoá Đô, nhưng sẽ gặp nó khi đọc tổng phổ hoà tấu hoặc [[nhac-thinh-phong|nhạc thính phòng]]. Xem thêm [[khoa-nhac]].
 `,
   },
   {

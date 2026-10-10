@@ -89,7 +89,7 @@ Sách tiếng Anh dùng hai hệ tên khác nhau. Giáo trình theo chuẩn Anh 
 
 ## Lịch sử: vì sao "nốt tròn" lại là "nửa nốt ngắn"?
 - Khoảng năm **1200** ở Pháp, [[tiet-tau|nhịp điệu]] được ghi bằng các **"[[dieu-thuc|điệu thức]] tiết tấu"** — những mẫu dài – ngắn cố định lặp lại.
-- Chuyên luận *Ars cantus mensurabilis* (thường gán cho Franco xứ Cologne, khoảng 1260–1280) hệ thống hoá **[[ky-am|ký âm]] định lượng**: chỉ có ba giá trị chính thức — **longa** (dài), **brevis** (ngắn), **semibrevis** (nửa ngắn), và mỗi nốt **chỉ chia ba**. Chia đôi chỉ được công nhận từ thế kỷ 14 (*Ars nova*).
+- Chuyên luận *Ars cantus mensurabilis* (thường gán cho Franco xứ Cologne, khoảng 1260–1280) hệ thống hoá **[[ky-am|ký âm]] định lượng**: chỉ có ba giá trị chính thức — **longa** (dài), **brevis** (ngắn), **semibrevis** (nửa ngắn), và mỗi nốt **chỉ chia ba**. Chia đôi chỉ được công nhận từ thế kỷ 14 (*[[motet|Ars nova]]*).
 - Về sau xuất hiện thêm **minima** ("nhỏ nhất", thế kỷ 14), rồi các nốt nhỏ hơn nữa. Khi nhạc dùng nốt ngày càng ngắn, **semibrevis** — vốn là "nửa nốt ngắn" — dần trở thành nốt **dài nhất** thường dùng. Đó là lý do nốt tròn tiếng Anh vẫn gọi là *semibreve*. Tên *crotchet* (nốt đen) đến từ tiếng Pháp cổ *crochet* — "cái móc nhỏ".
 
 ## Các hệ thống đếm phách
@@ -178,7 +178,7 @@ Dấu nối là đường cong nối **hai nốt cùng [[cao-do|cao độ]]** �
 Đừng nhầm với **dấu luyến** (slur) — đường cong nối các nốt **khác** cao độ, yêu cầu chơi liền tiếng (xem [[cach-dien-tau]]).
 
 ## Chấm dôi trong nhạc Baroque: viết một đằng, chơi một nẻo?
-**Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời [[thoi-ky-baroque|Baroque]] chơi một số hình chấm dôi **dài hơn** cách viết. Trong **khúc mở màn kiểu Pháp** (French [[the-loai|overture]]), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
+**Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời [[thoi-ky-baroque|Baroque]] chơi một số hình chấm dôi **dài hơn** cách viết. Trong **[[khuc-mo-man|khúc mở màn kiểu Pháp]]** (French [[the-loai|overture]]), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
 - Tỉ lệ thông thường của "đen chấm dôi + móc đơn" là **3 : 1**; nhiều nguồn cho rằng khúc mở màn kiểu Pháp cần tỉ lệ gắt hơn, khoảng **7 : 1**.
 - Thập niên 1960–70, Frederick Neumann đã **phản bác** cách hiểu cực đoan này, gây tranh luận lớn.
 - Nghiên cứu thực nghiệm ([[franz-schubert|Schubert]] và Fabian) cho thấy **tỉ lệ chấm dôi** ít ảnh hưởng đến cảm nhận tính chất hơn người ta nghĩ; **cách diễn tấu, tốc độ và [[cuong-do|cường độ]]** quan trọng hơn.
@@ -212,7 +212,7 @@ Bản nhạc được chia thành các **ô nhịp** bằng **vạch nhịp**. S
 | Nhịp | Ý nghĩa | Phách mạnh – nhẹ | Gặp trong |
 |---|---|---|---|
 | 2/4 | 2 phách, nốt đen = 1 phách | M – n | Hành khúc, polka |
-| 3/4 | 3 phách, nốt đen = 1 phách | M – n – n | Valse, [[minuet-va-trio|minuet]] |
+| 3/4 | 3 phách, nốt đen = 1 phách | M – n – n | [[tieu-pham-piano|Valse]], [[minuet-va-trio|minuet]] |
 | 4/4 | 4 phách, nốt đen = 1 phách | M – n – m – n | Pop, rock, phần lớn nhạc |
 | 2/2 | 2 phách, nốt trắng = 1 phách | M – n | Hành khúc nhanh |
 | 6/8 | 6 nốt móc đơn, nhóm 3+3 | M – n – n – m – n – n | Barcarolle, [[dieu-dem-pho-bien|ballad]] đung đưa |
@@ -487,9 +487,9 @@ Trong [[so-chi-nhip|nhịp 3/4]], hai ô nhịp có 6 phách: bình thường nh
 ::img Mozart piano sonata K332 hemiola excerpt.svg | Hemiola ở hai ô nhịp sau trong Sonata K. 332 của Mozart
 
 ## Ở đâu?
-- **Kết câu** trong vũ khúc [[thoi-ky-baroque|Baroque]] (courante, [[minuet-va-trio|minuet]], sarabande) — hemiola làm chậm lại cảm giác nhịp ngay trước [[cau-ket]].
+- **Kết câu** trong vũ khúc [[thoi-ky-baroque|Baroque]] (courante, [[minuet-va-trio|minuet]], [[to-khuc-baroque|sarabande]]) — hemiola làm chậm lại cảm giác nhịp ngay trước [[cau-ket]].
 - Brahms dùng rất nhiều để tạo sự mơ hồ về nhịp.
-- Trong 6/8 ↔ 3/4: cùng 6 [[truong-do|nốt móc đơn]], nhóm 3+3 hay 2+2+2 — rất phổ biến trong nhạc Mỹ Latin ("America" trong West Side Story).
+- Trong 6/8 ↔ 3/4: cùng 6 [[truong-do|nốt móc đơn]], nhóm 3+3 hay 2+2+2 — rất phổ biến trong nhạc Mỹ Latin ("America" trong [[operetta-va-nhac-kich|West Side Story]]).
 
 Hemiola là một dạng [[dao-phach]] có tổ chức và họ hàng gần với [[da-nhip]] (3 chọi 2 theo thời gian nối tiếp thay vì đồng thời).
 
@@ -536,7 +536,7 @@ Câu gợi nhớ: "**nice cup of tea**" (nhóm 3: nice – cup – tea; nhóm 2:
 Hai bè có **độ dài [[so-chi-nhip|ô nhịp]] khác nhau**: ví dụ một bè lặp mẫu 3 phách, bè kia lặp mẫu 4 phách — sau 12 phách chúng mới gặp lại ở phách đầu. Rất phổ biến trong nhạc châu Phi, nhạc [[toi-gian]] và progressive rock.
 
 ## Ligeti và nhạc Trung Phi
-Năm 1982, [[Ligeti]] nghe các bản thu nhạc của người **Banda-Linda** (Cộng hoà Trung Phi) do nhà dân tộc nhạc học **Simha Arom** thực hiện, và mô tả đó là thứ âm nhạc "[[doi-am|phức điệu]], đa tiết tấu với độ phức tạp đáng kinh ngạc". Ý tưởng của Arom về một **[[cam-nhan-phach|mạch phách]] nhanh, đều, không phân cấp** (thay cho ô nhịp châu Âu) trở thành nền tảng cho các **Étude piano** của Ligeti, cùng với âm nhạc của Conlon Nancarrow, [[frederic-chopin|Chopin]] và [[claude-debussy|Debussy]].
+Năm 1982, [[Ligeti]] nghe các bản thu nhạc của người **Banda-Linda** (Cộng hoà Trung Phi) do nhà dân tộc nhạc học **Simha Arom** thực hiện, và mô tả đó là thứ âm nhạc "[[doi-am|phức điệu]], đa tiết tấu với độ phức tạp đáng kinh ngạc". Ý tưởng của Arom về một **[[cam-nhan-phach|mạch phách]] nhanh, đều, không phân cấp** (thay cho ô nhịp châu Âu) trở thành nền tảng cho các **[[tieu-pham-piano|Étude]] piano** của Ligeti, cùng với âm nhạc của Conlon Nancarrow, [[frederic-chopin|Chopin]] và [[claude-debussy|Debussy]].
 - **Étude số 1 "Désordre"** (1985): tay phải chỉ chơi **phím trắng**, tay trái chỉ chơi **phím đen**; [[cau-nhac|câu nhạc]] tay phải **ngắn đi một móc đơn** mỗi lần lặp, nên trọng âm hai tay **trôi lệch** dần nhau. Theo Ligeti, người chơi giữ một [[kiem-soat-toc-do|nhịp đều]], nhưng cách phân bố trọng âm không đều tạo ra những hình dạng **tưởng như hỗn loạn**.
 - Ông dùng các tỉ lệ phức tạp như 3 : 5, 5 : 7, thậm chí 3 : 4 : 5 : 7 thay vì 2 chọi 3 đơn giản.
 
@@ -565,7 +565,7 @@ Liên quan: [[hemiola]], [[nhip-hon-hop]]. Cách tập đa nhịp hai tay trên 
 - **Winkler và cộng sự (2009)** đo điện não trẻ sơ sinh: khi **phách mạnh bị bỏ đi** trong một mẫu [[tiet-tau|tiết tấu]], não trẻ phản ứng như khi gặp điều trái với dự đoán — dù phách đó không được đánh dấu bằng trọng âm. Nhóm tác giả kết luận khả năng nhận ra phách là **bẩm sinh** (dù câu hỏi bẩm sinh hay học được chưa hoàn toàn ngã ngũ).
 
 ## Cơ thể dạy tai
-- **Phillips-Silver và Trainor (2005)**: 16 trẻ 7 tháng tuổi được **nhún theo** một mẫu tiết tấu mơ hồ — nhóm nhún mỗi 2 phách, nhóm nhún mỗi 3 phách. Sau đó, trẻ "nghe" mẫu đó như **nhịp 2 (hành khúc)** hoặc **nhịp 3 (valse)** tuỳ theo cách mình đã được nhún. Trẻ chỉ **nhìn** người khác nhún thì không có hiệu ứng: chính **chuyển động của cơ thể mình** mới quyết định.
+- **Phillips-Silver và Trainor (2005)**: 16 trẻ 7 tháng tuổi được **nhún theo** một mẫu tiết tấu mơ hồ — nhóm nhún mỗi 2 phách, nhóm nhún mỗi 3 phách. Sau đó, trẻ "nghe" mẫu đó như **nhịp 2 (hành khúc)** hoặc **nhịp 3 ([[tieu-pham-piano|valse]])** tuỳ theo cách mình đã được nhún. Trẻ chỉ **nhìn** người khác nhún thì không có hiệu ứng: chính **chuyển động của cơ thể mình** mới quyết định.
 - Một nghiên cứu sau (Gerry, Faux và Trainor, 2010) thấy các lớp nhạc cho trẻ nhỏ giúp phát triển sớm hơn cảm nhận nhịp theo văn hoá.
 
 ## Người học nhạc đồng bộ tốt hơn

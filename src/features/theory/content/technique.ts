@@ -488,7 +488,7 @@ Kéo dài nhẹ ở cuối câu là một xu hướng chung, gặp cả trong **
 - Các [[cach-dien-tau|ký hiệu diễn tấu]] (legato, tenuto, accent) và [[thuat-ngu|thuật ngữ biểu cảm]] cho biết ý đồ của tác giả.
 
 ## Phong cách thay đổi theo thời gian
-Một nghiên cứu 127 bản thu Étude Op. 25 số 1 của [[frederic-chopin|Chopin]] (1909–2016) thấy **tổng lượng [[rubato|co giãn nhịp độ]] không đổi**, nhưng **cách dùng** rubato thì thay đổi — các bản thu gần đây kéo dài cuối câu nhiều hơn. Nghĩa là "cách chơi biểu cảm" cũng mang dấu ấn từng thời kỳ (xem [[cac-thoi-ky]]).
+Một nghiên cứu 127 bản thu [[tieu-pham-piano|Étude]] Op. 25 số 1 của [[frederic-chopin|Chopin]] (1909–2016) thấy **tổng lượng [[rubato|co giãn nhịp độ]] không đổi**, nhưng **cách dùng** rubato thì thay đổi — các bản thu gần đây kéo dài cuối câu nhiều hơn. Nghĩa là "cách chơi biểu cảm" cũng mang dấu ấn từng thời kỳ (xem [[cac-thoi-ky]]).
 `,
   },
   {
@@ -770,7 +770,7 @@ Stride chi tiết: [[stride-piano]]; đệm cho ca sĩ trong jazz: [[dem-cho-ca-
       ['PianoGroove — Cha-cha-cha & mambo', 'https://pianogroove.com/jazz-piano-lessons/cha-cha-cha-mambo-tutorial/'],
     ],
     body: `
-Các kiểu đệm cơ bản (khối, rải, Alberti, valse, [[stride-piano|stride]]) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có [[tiet-tau|tiết tấu]] đặc trưng.
+Các kiểu đệm cơ bản (khối, rải, Alberti, [[tieu-pham-piano|valse]], [[stride-piano|stride]]) ở [[dem-hat-piano]]. Bài này nói về các **điệu** có [[tiet-tau|tiết tấu]] đặc trưng.
 
 ## Slow rock và ballad 12/8
 - 12/8 là [[so-chi-nhip|nhịp kép]] **bốn phách lớn**, mỗi phách chia ba: đếm "**1** và a **2** và a **3** và a **4** và a".
@@ -907,7 +907,7 @@ Theo bách khoa piano PTNA: **tay phải** dùng ngón 1 – 2 cho **bè trong**
 
 ## Cách tập
 1. **Tách bè**: chơi riêng bè trên, rồi riêng bè dưới — **luôn dùng đúng ngón** sẽ dùng khi chơi cả hai.
-2. **Legato trên, staccato dưới**: để bè trên "hát" (thường là [[giai-dieu|giai điệu]]), tập bè trên legato còn bè dưới staccato — lời khuyên của Jeffrey Biegel cho Étude quãng 3 của Chopin.
+2. **Legato trên, staccato dưới**: để bè trên "hát" (thường là [[giai-dieu|giai điệu]]), tập bè trên legato còn bè dưới staccato — lời khuyên của Jeffrey Biegel cho [[tieu-pham-piano|Étude]] quãng 3 của Chopin.
 3. **Bỏ bớt nốt**: chơi bè trên với cách một nốt bè dưới, rồi chơi phần nốt đã bỏ.
 4. **Rất chậm**, đánh **sâu tới đáy phím** khi ghép hai bè; giữ [[nhip-do|máy đếm nhịp]] và tăng **từng nấc** khi đã thật chắc (xem [[kiem-soat-toc-do]]).
 

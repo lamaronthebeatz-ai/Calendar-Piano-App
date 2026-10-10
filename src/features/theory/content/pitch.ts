@@ -121,7 +121,7 @@ Ví dụ: C–D♯ có 3 nửa cung (bằng quãng 3 thứ), nhưng C–D là qu
 
 ## Mẹo nhớ bằng bài hát
 - Quãng 4 đúng đi lên: "Here Comes the Bride".
-- Quãng 5 đúng đi lên: chủ đề "Star Wars".
+- Quãng 5 đúng đi lên: chủ đề "[[nhac-phim-va-tro-choi|Star Wars]]".
 - Quãng 8 đi lên: "Somewhere Over the Rainbow".
 
 Liên quan: [[quang-dao]], [[thuan-nghich]], [[hop-am-ba]], [[vong-quang-nam]]. Đọc nốt bằng quãng: [[doc-not-nhanh]]. Chơi quãng 8 trên piano: [[ky-thuat-quang-tam]]. Cách đếm quãng bằng số nửa cung (0–11) là nền tảng của [[tap-hop-cao-do]].

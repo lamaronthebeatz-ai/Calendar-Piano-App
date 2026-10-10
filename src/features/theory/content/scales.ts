@@ -212,7 +212,7 @@ Hoá biểu gồm các [[dau-hoa]] đặt ngay sau [[khoa-nhac]], áp dụng cho
 Mỗi hoá biểu ứng với một [[am-giai-truong]] và một [[am-giai-thu]] — xem [[giong-song-song]]. Đổi cả bài sang hoá biểu khác: [[dich-giong]]. Toàn bộ được sắp xếp gọn trong [[vong-quang-nam]].
 
 ## Hoá biểu "thiếu một dấu" thời Baroque
-Trong nhạc [[thoi-ky-baroque|Baroque]], giọng thứ đôi khi được viết với **ít hơn một dấu giáng** so với ngày nay — một thói quen còn lại từ thời điệu thức. Ví dụ nổi tiếng: Toccata và [[fugue|Fugue]] Rê thứ BWV 538 của [[Bach]] được viết **không có hoá biểu** (Rê thứ ngày nay có 1 dấu giáng), nên từ năm 1845 bị gán biệt danh "**Dorian**" — vì nhìn giống [[dieu-thuc|điệu Dorian]] trên Rê. Khi dạy học sinh đọc bản in cũ, cần lưu ý điều này: dấu B♭ sẽ được viết thành dấu hoá bất thường trong bài.
+Trong nhạc [[thoi-ky-baroque|Baroque]], giọng thứ đôi khi được viết với **ít hơn một dấu giáng** so với ngày nay — một thói quen còn lại từ thời điệu thức. Ví dụ nổi tiếng: [[toccata-prelude-fugue|Toccata]] và [[fugue|Fugue]] Rê thứ BWV 538 của [[Bach]] được viết **không có hoá biểu** (Rê thứ ngày nay có 1 dấu giáng), nên từ năm 1845 bị gán biệt danh "**Dorian**" — vì nhìn giống [[dieu-thuc|điệu Dorian]] trên Rê. Khi dạy học sinh đọc bản in cũ, cần lưu ý điều này: dấu B♭ sẽ được viết thành dấu hoá bất thường trong bài.
 
 ## "Tính cách" của các giọng
 Nhà thơ – nhạc sĩ Christian Schubart (viết khoảng 1784, in năm 1806) mô tả mỗi giọng có một tính cách riêng — ví dụ Rê thứ là "nỗi u sầu nữ tính". Cần nhớ rằng thời đó đàn phím thường được [[luat-binh-quan|lên dây không bình quân]], nên các giọng có thể nghe khác nhau; trong bình quân 12, các giọng chỉ khác nhau về **[[cao-do|cao độ]]**.
@@ -321,7 +321,7 @@ Trong thí nghiệm **"nốt dò"** (probe tone) của Carol **Krumhansl** và E
 2. Các nốt còn lại của **[[hop-am-ba|hợp âm]] chủ** (bậc 3, bậc 5).
 3. Các nốt khác **trong âm giai**.
 4. Các nốt **ngoài âm giai** — thấp nhất.
-Các "hồ sơ giọng" (key profiles) này đến nay vẫn được dùng làm chuẩn trong nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]]; một số nghiên cứu sau cho thấy thứ bậc trong nhạc rock **ít phân tầng** hơn nhạc cổ điển. Liên quan: [[ky-vong-am-nhac]].
+Các "hồ sơ giọng" (key profiles) này đến nay vẫn được dùng làm chuẩn trong nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]]; một số nghiên cứu sau cho thấy thứ bậc trong [[nhac-pho-thong-the-ky-20|nhạc rock]] **ít phân tầng** hơn nhạc cổ điển. Liên quan: [[ky-vong-am-nhac]].
 
 ## Xác định giọng của một bản nhạc
 1. Đọc **hoá biểu**: thu hẹp còn hai khả năng — giọng trưởng và giọng thứ song song ([[giong-song-song]]).
@@ -355,7 +355,7 @@ Chơi các phím trắng nhưng lấy **nốt khác** làm âm chủ, ta đượ
 | Ionian | C | = [[am-giai-truong|trưởng]] | — | Sáng |
 | Dorian | D | thứ, **6 trưởng** | ♮6 | Thứ nhưng tươi, jazz/funk |
 | Phrygian | E | thứ, **2 thứ** | ♭2 | Tây Ban Nha, flamenco |
-| Lydian | F | trưởng, **4 tăng** | ♯4 | Lơ lửng, nhạc phim |
+| Lydian | F | trưởng, **4 tăng** | ♯4 | Lơ lửng, [[nhac-phim-va-tro-choi|nhạc phim]] |
 | Mixolydian | G | trưởng, **7 thứ** | ♭7 | [[blues-12-nhip|Blues]], rock |
 | Aeolian | A | = [[am-giai-thu|thứ tự nhiên]] | — | Buồn |
 | Locrian | B | thứ, **2 thứ, 5 giảm** | ♭2, ♭5 | Bất ổn, hiếm dùng |
@@ -369,7 +369,7 @@ So sánh với [[am-giai|âm giai]] trưởng/thứ cùng âm chủ và chỉ nh
 Điệu thức có nguồn gốc từ thánh ca [[thoi-ky-trung-co|Trung cổ]] và được dùng nhiều trong jazz, nhạc dân gian và nhạc phim. Xem thêm [[am-giai-ngu-cung]], [[am-giai-blues]]. Trong jazz, mỗi điệu thức gắn với một loại [[hop-am-ba|hợp âm]]: [[he-thong-hop-am-am-giai]].
 
 ## Lịch sử: tám điệu Gregorian
-- Khoảng **cuối thế kỷ 8 – thế kỷ 9**, thánh ca Gregorian được xếp vào **tám điệu thức**, có lẽ theo mô hình *oktōēchos* của Byzantine. Ban đầu chúng chỉ được gọi bằng **số thứ tự**.
+- Khoảng **cuối thế kỷ 8 – thế kỷ 9**, [[thanh-ca-gregorian|thánh ca Gregorian]] được xếp vào **tám điệu thức**, có lẽ theo mô hình *oktōēchos* của Byzantine. Ban đầu chúng chỉ được gọi bằng **số thứ tự**.
 - Có **bốn nốt kết** (finalis): **D, E, F, G**. Mỗi nốt kết có hai điệu: **chính** (authentic — [[cao-do|âm vực]] từ nốt kết lên trên) và **phụ** (plagal, tên có tiền tố "hypo-" — âm vực từ [[quang|quãng]] 4 dưới đến quãng 5 trên nốt kết).
 - Tên Hy Lạp (Dorian, Phrygian…) được gắn vào từ khoảng thế kỷ 9 trong một nỗ lực **sai lầm** nhằm nối với âm nhạc Hy Lạp cổ đại — các điệu Hy Lạp thật dùng hệ lên dây khác hẳn.
 - Năm **1547**, Glarean thêm **Aeolian** và **Ionian** (cùng hai điệu phụ), thành **12 điệu**. **Locrian** (và Hypolocrian) không có trong hệ 12 điệu của Glarean.
@@ -413,7 +413,7 @@ Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ
 Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng nhau đều thuận tai — lý do giáo viên hay cho học trò [[ngau-hung-piano|ngẫu hứng]] trên phím đen.
 
 ## Ngũ cung trong tác phẩm piano
-- **[[Chopin]] — Étude Op. 10 số 5 "Phím đen"**: tay phải chạy [[lien-ba|liên ba]] **gần như hoàn toàn trên phím đen** (chỉ có một nốt Fa tự nhiên ở [[so-chi-nhip|ô nhịp]] 66), nên hoà âm mang **màu ngũ cung**. Chopin từng viết rằng đây là bài "kém thú vị nhất" với ai không biết nó được viết cho phím đen.
+- **[[Chopin]] — [[tieu-pham-piano|Étude]] Op. 10 số 5 "Phím đen"**: tay phải chạy [[lien-ba|liên ba]] **gần như hoàn toàn trên phím đen** (chỉ có một nốt Fa tự nhiên ở [[so-chi-nhip|ô nhịp]] 66), nên hoà âm mang **màu ngũ cung**. Chopin từng viết rằng đây là bài "kém thú vị nhất" với ai không biết nó được viết cho phím đen.
 - **[[Debussy]] — "Voiles"** ([[the-loai|Prelude]], 1909): gần như toàn bộ dùng [[am-giai-cromatic|âm giai toàn cung]], trừ một **đoạn ngắn ngũ cung** ở giữa (khoảng 6 ô nhịp) — một ví dụ rất tốt để học sinh nghe sự khác nhau giữa hai loại [[am-giai|âm giai]].
 `,
   },

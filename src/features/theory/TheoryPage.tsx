@@ -49,10 +49,11 @@ const GLYPHS: Record<CategoryId, string> = {
   analysis: '𝄡',
   pianists: '♫',
   composers: '𝅗𝅥',
+  genres: '♬',
 }
 
 /** Where a newcomer should start: the roadmap article of the core groups. */
-const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trinh-hinh-thuc', 'lo-trinh-luyen-tai-su-pham', 'hoa-am-jazz', 'phuong-phap-phan-tich-tac-pham', 'cac-thoi-ky']
+const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trinh-hinh-thuc', 'lo-trinh-luyen-tai-su-pham', 'hoa-am-jazz', 'phuong-phap-phan-tich-tac-pham', 'the-loai-am-nhac']
   .map((s) => findArticle(s))
   .filter((a): a is Article => !!a)
 

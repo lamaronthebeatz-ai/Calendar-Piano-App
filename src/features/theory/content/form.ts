@@ -26,7 +26,7 @@ export const form: Article[] = [
 | | **Đoạn nhạc / chủ đề** (thường 8 ô): period, sentence | [[cau-nhac]] |
 | | **Phần** — A, B… | [[hinh-thuc-am-nhac]] |
 | | **Chương** — hai đoạn, ba đoạn, rondo, sonata, biến tấu… | các bài bên dưới |
-| Lớn nhất | **Tác phẩm nhiều chương** — sonata, giao hưởng, concerto, tổ khúc | [[the-loai]] |
+| Lớn nhất | **Tác phẩm nhiều chương** — sonata, [[giao-huong|giao hưởng]], concerto, [[to-khuc-baroque|tổ khúc]] | [[the-loai]] |
 Giai điệu là "sợi chỉ" chạy qua các tầng (xem [[giai-dieu]]); hoà âm — đặc biệt là các [[cau-ket|kết]] và [[chuyen-giong|chuyển giọng]] — đánh dấu ranh giới giữa các đơn vị.
 
 ## Hai cách hiểu hình thức
@@ -41,7 +41,7 @@ Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép
 4. **Hình thức lớn**: [[bien-tau]] → [[ostinato]] → [[rondo]] → [[hinh-thuc-sonata]] → [[hinh-thuc-concerto]].
 5. **Lý thuyết hình thức hiện đại**: [[chuc-nang-hinh-thuc]], [[luoc-do-galant]], [[ly-thuyet-chu-de]] (các "chủ đề biểu đạt" quen thuộc).
 6. **Đối âm và hình thức phức điệu**: [[doi-am]] → [[doi-am-5-loai]] → [[doi-am-kep]] → [[fugue]].
-7. **Kết cấu, thể loại, thế kỷ 19**: [[ket-cau]] → [[the-loai]] → [[bien-doi-chu-de]].
+7. **Kết cấu, thể loại, thế kỷ 19**: [[ket-cau]] → [[the-loai]] (toàn cảnh: [[the-loai-am-nhac]]) → [[bien-doi-chu-de]].
 8. **Hình thức phổ thông và jazz**: [[blues-12-nhip]], [[hinh-thuc-ca-khuc-32]].
 Áp dụng vào tác phẩm cụ thể: [[phuong-phap-phan-tich-tac-pham]].
 
@@ -107,7 +107,7 @@ Ví dụ nổi tiếng nhất: bốn nốt **ngắn – ngắn – ngắn – d�
 ::staff treble G4 G4 G4 Eb4 | Cao độ của motif: G – G – G – E♭
 
 ## Một motif cho cả bản giao hưởng
-- Motif bốn nốt của Giao hưởng số 5 xuất hiện **gần như trong mọi [[so-chi-nhip|ô nhịp]]** của chương 1, kể cả trong đoạn phát triển.
+- Motif bốn nốt của [[giao-huong|Giao hưởng]] số 5 xuất hiện **gần như trong mọi [[so-chi-nhip|ô nhịp]]** của chương 1, kể cả trong đoạn phát triển.
 - Nó còn quay lại ở **các chương sau**, thường dưới dạng biến đổi: ở chương chậm, nhịp **ngắn – ngắn – ngắn – dài** trở lại trong những hình dạng mới.
 - Câu "số phận gõ cửa" thường gắn với motif này chỉ là **giai thoại**: không có bằng chứng đáng tin rằng Beethoven từng nói vậy.
 
@@ -253,11 +253,11 @@ Phần giống nhau mang cùng chữ cái; **A′** là A có biến đổi.
 |---|---|---|---|
 | Một đoạn | A | Một [[cau-nhac|đoạn nhạc]] duy nhất | Bài hát thiếu nhi ngắn |
 | **Hai đoạn** | AB (thường ‖: A :‖: B :‖) | A chuyển sang giọng át, B quay về | Vũ khúc [[thoi-ky-baroque|Baroque]], minuet của [[johann-sebastian-bach|Bach]] |
-| **Ba đoạn** | ABA | B tương phản, A trở lại | Nhiều nocturne của [[frederic-chopin|Chopin]], aria da capo |
-| Strophic | AAA… | Cùng nhạc, lời khác | Dân ca, thánh ca |
+| **Ba đoạn** | ABA | B tương phản, A trở lại | Nhiều [[tieu-pham-piano|nocturne]] của [[frederic-chopin|Chopin]], [[opera|aria da capo]] |
+| [[lied|Strophic]] | AAA… | Cùng nhạc, lời khác | Dân ca, thánh ca |
 | [[rondo]] | ABACA… | Chủ đề A quay lại nhiều lần | Chương cuối sonata |
 | [[bien-tau]] | A A1 A2 A3… | Chủ đề và các biến thể | Biến tấu "Ah vous dirai-je, Maman" của [[wolfgang-amadeus-mozart|Mozart]] |
-| [[hinh-thuc-sonata|Sonata]] | Trình bày – Phát triển – Tái hiện | Hình thức lớn của thời Cổ điển | Chương 1 sonata, giao hưởng |
+| [[hinh-thuc-sonata|Sonata]] | Trình bày – Phát triển – Tái hiện | Hình thức lớn của thời Cổ điển | Chương 1 sonata, [[giao-huong|giao hưởng]] |
 
 ## Phân biệt kỹ hơn: hai đoạn và ba đoạn
 | Dạng | Sơ đồ | Đặc điểm |
@@ -278,13 +278,14 @@ Hai đoạn có tái hiện được coi là **tổ tiên của [[hinh-thuc-sona
 ## Hình thức bài hát pop
 **Intro – Phiên khúc (Verse) – Tiền điệp khúc – Điệp khúc (Chorus) – Phiên khúc – Điệp khúc – Bridge – Điệp khúc – Outro.** Điệp khúc giữ nguyên lời và nhạc; phiên khúc giữ nhạc nhưng đổi lời.
 
-Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-va-trio]]. Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]]. Hình thức ca khúc jazz: [[hinh-thuc-ca-khuc-32]]. Các thể loại nhiều chương: [[the-loai]]. Biến tấu trên bass lặp: [[ostinato]].
+Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-va-trio]]. Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]]. Hình thức ca khúc jazz: [[hinh-thuc-ca-khuc-32]]. [[the-loai-am-nhac|Các thể loại]] nhiều chương: [[the-loai]]. Biến tấu trên bass lặp: [[ostinato]].
 `,
   },
   {
     slug: 'minuet-va-trio',
     title: 'Minuet và trio',
     category: 'form',
+    also: ['genres'],
     aliases: ['minuet', 'menuet', 'minuet and trio', 'trio', 'scherzo', 'scherzo và trio', 'ba đoạn kép', 'compound ternary'],
     summary: 'Hình thức ba đoạn kép: minuet – trio – minuet da capo, mỗi phần lại là một hình thức hai đoạn có tái hiện. Từ vũ điệu cung đình Louis XIV đến chương ba của sonata, giao hưởng và scherzo của Beethoven.',
     wiki: 'Minuet',
@@ -299,9 +300,9 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
     ],
     body: `
 ## Lịch sử: từ phòng khiêu vũ đến phòng hoà nhạc
-- Minuet là **vũ điệu Pháp**, phổ biến từ khoảng **1650** ở triều đình **Louis XIV**. **[[jean-baptiste-lully|Lully]]** — nhạc sĩ và vũ công phục vụ nhà vua — viết rất nhiều minuet cho opera và ballet.
+- Minuet là **vũ điệu Pháp**, phổ biến từ khoảng **1650** ở triều đình **Louis XIV**. **[[jean-baptiste-lully|Lully]]** — nhạc sĩ và vũ công phục vụ nhà vua — viết rất nhiều minuet cho opera và [[ballet|ballet]].
 - Nhịp **3/4**; bước nhảy cơ bản kéo dài **sáu phách**, tức là hai ô 3/4 — một lý do khiến minuet thường đi theo **cặp [[so-chi-nhip|ô nhịp]]** (xem [[sieu-nhip]]).
-- Đây là vũ điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **tổ khúc đàn phím** (xem [[the-loai]]).
+- Đây là vũ điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **[[to-khuc-baroque|tổ khúc]] đàn phím** (xem [[the-loai]]).
 - Ví dụ quen thuộc với học trò piano: hai **[[phan-tich-minuet-sol-truong|Minuet Sol trưởng]] và Sol thứ** trong *Sổ tay cho Anna Magdalena [[johann-sebastian-bach|Bach]]* (1725) — được chép thành **một cặp, chơi [[dau-nhac-lai|da capo]]**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ organ ở Dresden.
 
 ## Hình thức: ba đoạn kép
@@ -316,8 +317,8 @@ Vì mỗi phần của hình thức lớn lại chứa một hình thức nhỏ,
 Trio thường **tương phản** với minuet — về giọng, kết cấu hoặc tính cách. Tên "trio" thường được giải thích là bắt nguồn từ thói quen viết đoạn này cho **ba nhạc cụ** (ba bè).
 
 ## Từ minuet đến scherzo
-- Trong bộ tứ tấu đàn dây **Op. 33** (1781), [[Haydn]] thay tên "Minuet" bằng **"Scherzo"** (tiếng Ý: trò đùa) — khung hình thức vẫn là minuet – trio.
-- [[Beethoven]] biến [[tiet-tau|nhịp điệu]] lịch sự của minuet thành một vũ điệu **mãnh liệt** hơn, nhanh hơn. Ông viết scherzo trong hầu hết chín bản giao hưởng, dù chỉ gọi tên "scherzo" trong bản số 2 và số 3.
+- Trong bộ [[nhac-thinh-phong|tứ tấu đàn dây]] **Op. 33** (1781), [[Haydn]] thay tên "Minuet" bằng **"Scherzo"** (tiếng Ý: trò đùa) — khung hình thức vẫn là minuet – trio.
+- [[Beethoven]] biến [[tiet-tau|nhịp điệu]] lịch sự của minuet thành một vũ điệu **mãnh liệt** hơn, nhanh hơn. Ông viết scherzo trong hầu hết chín [[giao-huong|bản giao hưởng]], dù chỉ gọi tên "scherzo" trong bản số 2 và số 3.
 - Thời Cổ điển, minuet (sau là scherzo) thường là **chương ba** của [[hinh-thuc-sonata|sonata]], tứ tấu, giao hưởng.
 
 ## Phân tích một minuet: các bước
@@ -335,7 +336,7 @@ Trio thường **tương phản** với minuet — về giọng, kết cấu ho�
     slug: 'rondo',
     title: 'Rondo',
     category: 'form',
-    also: ['analysis'],
+    also: ['analysis', 'genres'],
     aliases: ['hình thức rondo', 'rondeau', 'ABACA'],
     summary: 'Hình thức có chủ đề chính (A) quay lại nhiều lần, xen giữa là các đoạn tương phản: ABACA hoặc ABACABA.',
     wiki: 'Rondo',
@@ -365,7 +366,7 @@ Rondo thường vui tươi, nhanh — rất hay dùng cho **chương cuối** c�
 ## Lịch sử
 - **Gốc gác**: những ví dụ sớm nhất của lối viết rondo nằm trong aria và hợp xướng opera Ý đầu thế kỷ 17.
 - **Rondeau Pháp thời [[thoi-ky-baroque|Baroque]]**: [[Lully]] (đôi khi được gọi là "cha đẻ của rondeau"), Chambonnières và [[louis-couperin|Louis Couperin]] phổ biến hình thức này ở Pháp thế kỷ 17. Một **điệp khúc** (refrain) dài 8 hoặc 16 [[so-chi-nhip|ô nhịp]] xen kẽ với các **couplet** (đoạn xen), tạo chuỗi a b a c a d… dài tuỳ ý. [[Rameau]] chuẩn hoá thiết kế này. Ví dụ: *Les baricades mistérieuses* của [[Couperin|François Couperin]] (Pièces de [[dan-phim-co|clavecin]], tập 2, 1716–17).
-- **Đừng nhầm** với *rondeau* thời [[thoi-ky-trung-co|Trung cổ]] (thế kỷ 14–15) — một thể thơ và chanson có khuôn cố định, không liên quan.
+- **Đừng nhầm** với *rondeau* thời [[thoi-ky-trung-co|Trung cổ]] (thế kỷ 14–15) — một thể thơ và [[ca-khuc-the-tuc-trung-co|chanson]] có khuôn cố định, không liên quan.
 - **Thời Cổ điển**: rondo Cổ điển phát triển từ rondeau đàn phím Pháp. Rondo **[[am-giai-truong|giọng trưởng]]** trở thành dạng chương cuối mặc định. Rondo kết **[[am-giai-thu|giọng thứ]]** thì rất hiếm: [[Mozart]] chỉ viết ba, [[Haydn]] chỉ một (và còn gây tranh cãi về hình thức). Phải đến [[Beethoven]] dạng này mới thật sự phát triển.
 
 ## Ví dụ phân tích
@@ -388,7 +389,7 @@ Xem tổng quan: [[hinh-thuc-am-nhac]]. So sánh: [[hinh-thuc-sonata]].
     slug: 'hinh-thuc-sonata',
     title: 'Hình thức sonata',
     category: 'form',
-    also: ['analysis'],
+    also: ['analysis', 'genres'],
     aliases: ['sonata', 'sonata form', 'trình bày', 'phát triển', 'tái hiện', 'exposition', 'development', 'recapitulation', 'sonata allegro'],
     summary: 'Hình thức lớn quan trọng nhất thời Cổ điển: Trình bày (2 chủ đề, 2 giọng) – Phát triển – Tái hiện (cả 2 chủ đề về giọng chính).',
     wiki: 'Sonata_form',
@@ -428,7 +429,7 @@ Cuốn *Elements of Sonata Theory* (2006) đưa ra hai mốc phân tích nay đ�
 - **Điểm khép trình bày** (essential expositional closure, EEC): **kết hoàn toàn chính cách đầu tiên đạt yêu cầu** trong giọng phụ, sau đó chuyển sang chất liệu khác. Ở [[am-giai-truong|giọng trưởng]], EEC hầu như luôn là kết ở giọng V; ở [[am-giai-thu|giọng thứ]], thường là kết ở giọng III.
 
 ## Lưu ý thuật ngữ
-"Sonata" là **tác phẩm** nhiều chương (thường 3–4) cho một hoặc hai nhạc cụ. "Hình thức sonata" là **cấu trúc** của một chương — thường là chương đầu. Sonatina là sonata nhỏ, đơn giản ([[muzio-clementi|Clementi]], [[friedrich-kuhlau|Kuhlau]]) — bài tập kinh điển cho học sinh piano.
+"Sonata" là **tác phẩm** nhiều chương (thường 3–4) cho một hoặc hai nhạc cụ. "Hình thức sonata" là **cấu trúc** của một chương — thường là chương đầu. [[sonata-the-loai|Sonatina]] là sonata nhỏ, đơn giản ([[muzio-clementi|Clementi]], [[friedrich-kuhlau|Kuhlau]]) — bài tập kinh điển cho học sinh piano.
 
 Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]]. Phân tích một ví dụ cụ thể: [[phan-tich-sonata-k545]]. Đoạn phát triển thường kết bằng [[bass-ngan]] trên [[bac-am-giai|át âm]].
 `,
@@ -437,7 +438,7 @@ Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]].
     slug: 'hinh-thuc-concerto',
     title: 'Hình thức concerto',
     category: 'form',
-    also: ['improvisation'],
+    also: ['improvisation', 'genres'],
     aliases: ['hình thức concerto', 'concerto form', 'ritornello', 'hình thức ritornello', 'ritornello form', 'trình bày kép', 'double exposition', 'tutti', 'solo', 'sonata loại 5', 'Type 5 sonata'],
     summary: 'Hai hình thức của chương nhanh trong concerto: hình thức ritornello thời Baroque (Vivaldi) — dàn nhạc nhắc lại một chủ đề xen với các đoạn độc tấu — và chương 1 concerto Cổ điển (Mozart), nơi ritornello kết hợp với hình thức sonata.',
     wiki: 'Ritornello',
@@ -487,7 +488,7 @@ Vì có hai lần trình bày (dàn nhạc rồi độc tấu), các sách cũ g
     slug: 'bien-tau',
     title: 'Biến tấu',
     category: 'form',
-    also: ['analysis'],
+    also: ['analysis', 'genres'],
     aliases: ['chủ đề và biến tấu', 'theme and variations', 'variation', 'biến khúc'],
     summary: 'Một chủ đề được trình bày rồi lặp lại nhiều lần, mỗi lần biến đổi giai điệu, nhịp điệu, hoà âm hoặc kết cấu.',
     wiki: 'Variation_(music)',
@@ -516,7 +517,7 @@ Sơ đồ: **A – A1 – A2 – A3 …** Chủ đề thường ngắn, dạng [
 | [[Byrd]] — *Walsingham* | khoảng 1600 | 22 biến tấu trên một giai điệu thời Elizabeth, chép trong *My Ladye Nevells Booke* và *Fitzwilliam [[dan-phim-co|Virginal]] Book*; [[john-bull|John Bull]] cũng viết một bộ trên cùng giai điệu |
 | [[Bach]] — *Goldberg Variations* BWV 988 | 1741 | Aria + **30 biến tấu**, dựa trên **bè trầm và [[vong-hop-am|vòng hợp âm]]** của aria chứ không phải giai điệu; cứ biến tấu thứ ba là một canon; kết bằng một *quodlibet* |
 | [[Mozart]] — 12 biến tấu "Ah vous dirai-je, Maman" K. 265 | 1781–82 | Đô trưởng, viết ở Vienna, có lẽ để dạy học trò; in năm 1785. Chỉ hai biến tấu cuối có chỉ dẫn nhịp độ: **Adagio** rồi **Allegro** kết thúc rực rỡ |
-| [[Beethoven]] — *Diabelli Variations* Op. 120 | 1819–1823 | [[anton-diabelli|Diabelli]] mời nhiều nhà soạn nhạc mỗi người viết một biến tấu trên điệu valse của ông; Beethoven viết hẳn **33 biến tấu**, khai thác những chi tiết nhỏ nhất (nốt hoa mỹ mở đầu, [[quang|quãng]] 4 và 5 đi xuống, [[not-lap-lai|nốt lặp]]) |
+| [[Beethoven]] — *Diabelli Variations* Op. 120 | 1819–1823 | [[anton-diabelli|Diabelli]] mời nhiều nhà soạn nhạc mỗi người viết một biến tấu trên điệu [[tieu-pham-piano|valse]] của ông; Beethoven viết hẳn **33 biến tấu**, khai thác những chi tiết nhỏ nhất (nốt hoa mỹ mở đầu, [[quang|quãng]] 4 và 5 đi xuống, [[not-lap-lai|nốt lặp]]) |
 | [[Brahms]] — *Biến tấu và [[fugue|Fugue]] trên chủ đề của Handel* Op. 24 | 1861 | **25 biến tấu + fugue** trên aria trong [[the-loai|Suite]] số 1 Si♭ trưởng HWV 434 của [[Handel]]; đề tặng [[clara-schumann|Clara Schumann]] |
 | [[Rachmaninoff]] — *Rhapsody on a Theme of Paganini* Op. 43 | 1934 | 24 biến tấu trên Caprice số 24 của [[Paganini]]; **biến tấu 18** nổi tiếng là chủ đề **đảo ngược** (lên thành xuống) và chuyển sang **Rê♭ trưởng** |
 
@@ -543,17 +544,17 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
     body: `
 | Kết cấu | Mô tả | Ví dụ |
 |---|---|---|
-| **Đơn âm** (monophony) | Một [[giai-dieu|giai điệu]], không đệm | Thánh ca Gregorian, hát ru |
-| **Chủ điệu** (homophony) | Một giai điệu chính + [[hop-am-ba|hợp âm]] đệm | Phần lớn nhạc pop, [[the-loai|nocturne]] [[frederic-chopin|Chopin]] |
+| **Đơn âm** (monophony) | Một [[giai-dieu|giai điệu]], không đệm | [[thanh-ca-gregorian|Thánh ca Gregorian]], hát ru |
+| **Chủ điệu** (homophony) | Một giai điệu chính + [[hop-am-ba|hợp âm]] đệm | Phần lớn [[nhac-pho-thong-the-ky-20|nhạc pop]], [[the-loai|nocturne]] [[frederic-chopin|Chopin]] |
 | **Hợp âm khối** (homorhythm) | Mọi bè cùng [[tiet-tau|nhịp điệu]] | Thánh ca 4 bè |
 | **Phức điệu** (polyphony) | Nhiều giai điệu độc lập, ngang hàng | Fugue, canon của [[johann-sebastian-bach|Bach]] |
 | **Dị âm** (heterophony) | Nhiều người chơi cùng giai điệu với [[bien-tau|biến tấu]] nhỏ khác nhau | Nhạc dân tộc, [[am-nhac-truyen-thong-viet-nam|nhã nhạc]] cung đình |
 
 ## Lịch sử kết cấu trong âm nhạc phương Tây
 1. **Đơn âm** — Thánh ca là phong cách chủ đạo ở phần lớn châu Âu thời [[thoi-ky-trung-co|Trung cổ]]. Nhiều người hát đồng âm hoặc cách [[quang|quãng 8]] vẫn là đơn âm: kết cấu tính theo **số giai điệu**, không theo số người hát.
-2. **Organum** — ca sĩ thêm một bè vào thánh ca có sẵn. Dạng sớm nhất chạy **song song quãng 8 hoặc 5**, nên thực chất vẫn gần đơn âm. Đến thế kỷ 11, "organum tự do" cho các bè đi độc lập hơn — khởi đầu truyền thống **phức điệu**.
+2. **[[organum|Organum]]** — ca sĩ thêm một bè vào thánh ca có sẵn. Dạng sớm nhất chạy **song song quãng 8 hoặc 5**, nên thực chất vẫn gần đơn âm. Đến thế kỷ 11, "organum tự do" cho các bè đi độc lập hơn — khởi đầu truyền thống **phức điệu**.
 3. **Phức điệu [[thoi-ky-phuc-hung|Phục hưng]]** — các bè ngang hàng, độc lập trở thành kết cấu phổ biến (xem [[Palestrina]], [[doi-am]]). Nó bị phê phán là làm **lời ca khó nghe rõ**.
-4. **Monody (khoảng 1600)** — nhóm **Florentine Camerata** ở Ý phản ứng lại đối âm phức tạp: một giọng hát độc tấu, nhịp điệu tự do, trên phần đệm, để âm nhạc **phục vụ lời**. Từ đây ra đời opera, cantata, oratorio.
+4. **Monody (khoảng 1600)** — nhóm **[[opera|Florentine Camerata]]** ở Ý phản ứng lại đối âm phức tạp: một giọng hát độc tấu, nhịp điệu tự do, trên phần đệm, để âm nhạc **phục vụ lời**. Từ đây ra đời opera, cantata, [[oratorio-cantata-passion|oratorio]].
 5. **Chủ điệu** — từ đầu thế kỷ 17 (thời [[thoi-ky-baroque|Baroque]]), chủ điệu trở thành một trong những kết cấu chủ đạo. Các nhà soạn nhạc nghĩ theo **hoà âm dọc**, và [[bass-so|bè trầm liên tục]] (basso continuo) trở thành đặc trưng. Chủ điệu và phức điệu vẫn cùng tồn tại suốt thế kỷ 17–18.
 
 Từ "homophony" có nghĩa khác trong thời cổ đại; nó vào tiếng Anh năm **1776** qua Charles Burney.
@@ -562,7 +563,7 @@ Từ "homophony" có nghĩa khác trong thời cổ đại; nó vào tiếng Anh
 - **Hợp âm khối**: đánh cả hợp âm cùng lúc.
 - **[[luyen-hop-am-rai|Hợp âm rải]]** (arpeggio): đánh lần lượt từng nốt.
 - **Bass Alberti**: thấp – cao – giữa – cao (C–G–E–G), rất phổ biến thời [[wolfgang-amadeus-mozart|Mozart]].
-- **Stride / [[stride-piano|oom-pah]]**: bass trầm ở [[so-chi-nhip|phách mạnh]], hợp âm ở phách nhẹ (valse, [[phong-cach-jazz|ragtime]]).
+- **Stride / [[stride-piano|oom-pah]]**: bass trầm ở [[so-chi-nhip|phách mạnh]], hợp âm ở phách nhẹ ([[tieu-pham-piano|valse]], [[phong-cach-jazz|ragtime]]).
 
 Cách luyện từng kiểu đệm: [[dem-hat-piano]].
 
@@ -589,7 +590,7 @@ Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinat
 "Counterpoint" bắt nguồn từ tiếng Latin **punctus contra punctum** — "nốt chống nốt" (*punctus* là tên cũ của [[not-nhac|nốt nhạc]]). Các từ điển ghi niên đại khác nhau cho nghĩa âm nhạc của từ này, từ thế kỷ 14 đến giữa thế kỷ 15. Ban đầu nó chỉ việc **hát một bè kèm theo thánh ca**.
 
 ## Lịch sử ngắn
-- **Organum** thời [[thoi-ky-trung-co|Trung cổ]] là dạng đối âm sớm nhất — xem lịch sử kết cấu ở [[ket-cau]].
+- **[[organum|Organum]]** thời [[thoi-ky-trung-co|Trung cổ]] là dạng đối âm sớm nhất — xem lịch sử kết cấu ở [[ket-cau]].
 - **[[thoi-ky-phuc-hung|Phục hưng]]**: phức điệu nhiều bè ngang hàng đạt đỉnh với [[Palestrina]]. "Phong cách Palestrina" ngày nay là nền của các lớp đối âm Phục hưng ở đại học, phần lớn nhờ cuốn *Gradus ad Parnassum* (1725) của [[Fux]] (xem [[doi-am-5-loai]]).
 - **[[thoi-ky-baroque|Baroque]]**: đối âm gắn chặt với [[chuc-nang-hoa-am|hoà âm chức năng]]; đỉnh cao là [[Bach]] với [[fugue]] và canon.
 
@@ -614,7 +615,7 @@ Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên chuyể
     slug: 'fugue',
     title: 'Fugue',
     category: 'form',
-    also: ['analysis'],
+    also: ['analysis', 'genres'],
     aliases: ['fuga', 'tẩu khúc', 'chủ đề fugue', 'subject', 'answer', 'đối đề'],
     summary: 'Thể loại đối âm chặt chẽ: một chủ đề được các bè lần lượt mô phỏng, đan xen và phát triển.',
     wiki: 'Fugue',
@@ -632,7 +633,7 @@ Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên chuyể
 "Fugue" đến từ tiếng Ý *fuga* — **"sự chạy trốn"**, từ Latin *fugere* ("chạy trốn"). Đây là một ẩn dụ: bè đầu tiên **xuất phát một mình**, các bè vào sau như **đuổi theo** nó.
 
 ## Tiền thân: ricercar
-*Ricercar* (từ động từ Ý *ricercare* — "tìm tòi") lúc đầu **không phải** fugue: những ricercar sớm nhất cho đàn lute (cuối thế kỷ 15, một ấn phẩm năm 1507) không có mô phỏng. Về sau từ này chỉ một dạng fugue sớm, **nghiêm trang**, chủ đề dùng [[truong-do|trường độ]] dài. Trong *Lễ vật âm nhạc* (xem [[doi-am-kep]]), Bach vẫn gọi fugue 6 bè của mình là *Ricercar*.
+*Ricercar* (từ động từ Ý *ricercare* — "tìm tòi") lúc đầu **không phải** fugue: những ricercar sớm nhất cho [[nhac-khi-phuc-hung|đàn lute]] (cuối thế kỷ 15, một ấn phẩm năm 1507) không có mô phỏng. Về sau từ này chỉ một dạng fugue sớm, **nghiêm trang**, chủ đề dùng [[truong-do|trường độ]] dài. Trong *Lễ vật âm nhạc* (xem [[doi-am-kep]]), Bach vẫn gọi fugue 6 bè của mình là *Ricercar*.
 
 ## Cấu trúc
 - **Trình bày**: bè 1 nêu **chủ đề** ở giọng chính. Bè 2 vào với **đáp đề** ở giọng [[bac-am-giai|át]], trong khi bè 1 chơi **đối đề**. Lần lượt đến khi mọi bè (thường 3–4) đều vào.
@@ -643,9 +644,9 @@ Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên chuyể
 ::img BWV846-Dux-Comes.svg | Chủ đề (dux) và đáp đề (comes) trong Fugue số 1 Đô trưởng BWV 846 của Bach
 
 ## Tác phẩm tiêu biểu
-- [[Bach]] — **Clavier bình quân** (Das Wohltemperierte Klavier), 2 tập × 24 [[the-loai|prelude]] và fugue ở đủ 24 giọng (xem [[luat-binh-quan]]). Tập 1 hoàn thành năm **1722** ở Köthen, tập 2 khoảng **1742** ở Leipzig. Các giọng xếp theo thứ tự [[cung-nua-cung|nửa cung]] đi lên, trưởng trước thứ sau: Đô trưởng, Đô thứ, Đô♯ trưởng, Đô♯ thứ… "Bình quân" chỉ một **cách lên dây dùng được cho mọi giọng** — điều hiếm có thời đó.
+- [[Bach]] — **[[toccata-prelude-fugue|Clavier bình quân]]** (Das Wohltemperierte Klavier), 2 tập × 24 [[the-loai|prelude]] và fugue ở đủ 24 giọng (xem [[luat-binh-quan]]). Tập 1 hoàn thành năm **1722** ở Köthen, tập 2 khoảng **1742** ở Leipzig. Các giọng xếp theo thứ tự [[cung-nua-cung|nửa cung]] đi lên, trưởng trước thứ sau: Đô trưởng, Đô thứ, Đô♯ trưởng, Đô♯ thứ… "Bình quân" chỉ một **cách lên dây dùng được cho mọi giọng** — điều hiếm có thời đó.
 - Bach — **Nghệ thuật Fugue** (Die Kunst der Fuge).
-- [[Beethoven]] — **Grosse Fuge** Op. 133 cho tứ tấu đàn dây: một **fugue kép** khổng lồ, ban đầu (1825) là chương cuối của Tứ tấu Op. 130. Nhà xuất bản lo bán không được nên đề nghị thay chương khác; Beethoven đồng ý và fugue được in riêng năm 1827. Giới phê bình đương thời chê bai; ngày nay nó được xếp vào hàng thành tựu lớn nhất của ông.
+- [[Beethoven]] — **Grosse Fuge** Op. 133 cho [[nhac-thinh-phong|tứ tấu đàn dây]]: một **fugue kép** khổng lồ, ban đầu (1825) là chương cuối của Tứ tấu Op. 130. Nhà xuất bản lo bán không được nên đề nghị thay chương khác; Beethoven đồng ý và fugue được in riêng năm 1827. Giới phê bình đương thời chê bai; ngày nay nó được xếp vào hàng thành tựu lớn nhất của ông.
 - [[Shostakovich]] — **24 Prelude và Fugue** Op. 87 cho piano (1950–51), mỗi bài một giọng, lấy cảm hứng trực tiếp từ Clavier bình quân. Tatiana Nikolayeva, người được đề tặng, công diễn lần đầu ở Leningrad ngày 23/12/1952.
 
 Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thường có [[bass-ngan]] trên át âm.
@@ -655,6 +656,7 @@ Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thư�
     slug: 'ostinato',
     title: 'Ostinato',
     category: 'form',
+    also: ['genres'],
     aliases: ['bass lặp', 'ground bass', 'basso ostinato', 'passacaglia', 'chaconne', 'riff', 'mẫu lặp'],
     summary: 'Một mẫu nhạc ngắn (giai điệu, nhịp điệu hoặc hợp âm) lặp lại liên tục; khi ở bè trầm, nó là nền cho các thể loại passacaglia và chaconne.',
     wiki: 'Ostinato',
@@ -675,7 +677,7 @@ Tên gọi: tiếng Ý *ostinato* nghĩa là **"bướng bỉnh"**, cùng gốc 
 ## Passacaglia và chaconne
 Hai [[the-loai|thể loại]] [[thoi-ky-baroque|Baroque]] dạng [[bien-tau]] trên một bass lặp hoặc một [[vong-hop-am]] lặp, thường ở nhịp 3/4:
 - [[Purcell]] — "Dido's Lament" (bass đi xuống [[am-giai-cromatic|cromatic]]).
-- [[Bach]] — Passacaglia Đô thứ cho organ BWV 582; Chaconne trong Partita số 2 Rê thứ cho violin.
+- [[Bach]] — Passacaglia Đô thứ cho organ BWV 582; Chaconne trong [[to-khuc-baroque|Partita]] số 2 Rê thứ cho violin.
 - [[johann-pachelbel|Pachelbel]] — [[phan-tich-canon-pachelbel|Canon in D]]: [[doi-am|canon]] ba bè trên một bass lặp 8 nốt (xem [[doi-am-kep]]).
 
 ## Ba ví dụ phân tích
@@ -781,7 +783,8 @@ Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, 
     slug: 'the-loai',
     title: 'Thể loại khí nhạc',
     category: 'form',
-    aliases: ['thể loại', 'genre', 'giao hưởng', 'symphony', 'concerto', 'tổ khúc', 'suite', 'tứ tấu', 'etude', 'nocturne', 'prelude', 'ballade', 'tiểu phẩm', 'overture'],
+    also: ['genres'],
+    aliases: ['thể loại khí nhạc', 'instrumental genres', 'concerto', 'prelude'],
     summary: 'Các thể loại lớn và nhỏ của nhạc cổ điển — sonata, giao hưởng, concerto, tổ khúc, tiểu phẩm — và cấu trúc chương điển hình của chúng.',
     wiki: 'Musical_form',
     refs: [
@@ -805,7 +808,7 @@ Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, 
 Minuet (3/4, vừa phải) ở thời Cổ điển được [[ludwig-van-beethoven|Beethoven]] thay bằng **[[minuet-va-trio|Scherzo]]** (nhanh, đùa vui) — cả hai thường có dạng [[hinh-thuc-am-nhac|ba đoạn]] với đoạn giữa gọi là Trio.
 
 ## Nguồn gốc các thể loại lớn
-- **Giao hưởng** có tổ tiên trực tiếp là **khúc mở màn opera Ý** (*sinfonia*). [[alessandro-scarlatti|Alessandro Scarlatti]] định hình khúc mở màn theo khuôn **nhanh – chậm – nhanh**. Trước thế kỷ 18, "symphony" và "overture" gần như dùng lẫn cho nhau. Khúc mở màn thường được tách ra chơi riêng ở hoà nhạc — từ đó giao hưởng thành một thể loại độc lập. Đến những năm 1770, khuôn **bốn chương** trở thành chuẩn.
+- **Giao hưởng** có tổ tiên trực tiếp là **[[khuc-mo-man|khúc mở màn]] opera Ý** (*sinfonia*). [[alessandro-scarlatti|Alessandro Scarlatti]] định hình khúc mở màn theo khuôn **nhanh – chậm – nhanh**. Trước thế kỷ 18, "symphony" và "overture" gần như dùng lẫn cho nhau. Khúc mở màn thường được tách ra chơi riêng ở hoà nhạc — từ đó giao hưởng thành một thể loại độc lập. Đến những năm 1770, khuôn **bốn chương** trở thành chuẩn.
 - **[[Haydn]]** thường được gọi là "cha đẻ" của giao hưởng và tứ tấu đàn dây, với **104 giao hưởng** và **68 tứ tấu**. Ông **không phát minh** ra chúng — Franz Xaver Richter và Ignaz Holzbauer có thể đã viết tứ tấu trước — nhưng đã mở rộng rất nhiều khả năng của hai thể loại này.
 - **Concerto Baroque** dùng **hình thức ritornello**: cả dàn nhạc chơi một chủ đề quay lại nhiều lần (ritornello), xen giữa là các đoạn của người độc tấu. Giuseppe Torelli dùng ý tưởng này trước, [[Vivaldi]] chuẩn hoá nó qua hàng trăm concerto, thường ở hai chương nhanh hai đầu. [[Bach]] và [[georg-philipp-telemann|Telemann]] viết theo mẫu của Vivaldi.
 - **Nocturne** cho piano: từ *notturno* đã được dùng trước đó cho những bản trữ tình ngắn hay serenade, nhưng [[john-field|John Field]] là người biến nó thành một **thể loại piano**. Sau khi thử các tên Pastorale, Serenade, Romance, ông chọn "Nocturne" cho bản in đầu tiên năm **1812**. **21 nocturne** của [[Chopin]] là những ví dụ nổi tiếng nhất.
@@ -821,6 +824,8 @@ Minuet (3/4, vừa phải) ở thời Cổ điển được [[ludwig-van-beethov
 | Bài ca không lời | Giai điệu như ca khúc | [[felix-mendelssohn|Mendelssohn]] |
 
 Bối cảnh: [[cac-thoi-ky]]. [[doi-am|Phức điệu]]: [[fugue]], [[ostinato|passacaglia]].
+
+Toàn cảnh các thể loại từ [[thoi-ky-trung-co|Trung cổ]] đến nay, mỗi thể loại một bài: [[the-loai-am-nhac]] — ví dụ [[giao-huong]], [[nhac-thinh-phong]], [[to-khuc-baroque]], [[tieu-pham-piano]].
 `,
   },
   {
@@ -847,13 +852,13 @@ Trong một [[hinh-thuc-sonata|sonata]] Cổ điển, các chương thường c�
 |---|---|---|
 | **Hình thức tuần hoàn** (cyclic form) | Chủ đề **quay lại** ở nhiều chương | [[hector-berlioz|Berlioz]], [[cesar-franck|Franck]] |
 | **Biến đổi chủ đề** (thematic transformation) | Một chủ đề **đổi tính cách** (nhịp, [[nhip-do|nhịp độ]], hoà âm, [[cach-dien-tau|cách diễn tấu]]) nhưng vẫn nhận ra được | [[franz-liszt|Liszt]] |
-| **Leitmotif** | Motif gắn với một **nhân vật, đồ vật, ý tưởng** trong nhạc kịch | [[richard-wagner|Wagner]] |
+| **Leitmotif** | Motif gắn với một **nhân vật, đồ vật, ý tưởng** trong [[operetta-va-nhac-kich|nhạc kịch]] | [[richard-wagner|Wagner]] |
 Khác với [[bien-tau|biến tấu]] (chủ đề và các biến thể nối tiếp nhau thành từng đoạn) và với phát triển [[motif]] trong phần phát triển của sonata, ở đây chủ đề **xuyên suốt** cả tác phẩm lớn và mang **ý nghĩa** (thường là ý nghĩa kể chuyện).
 
 ## Lịch sử
 - **[[franz-schubert|Schubert]] — Wanderer Fantasy** (1822, cho piano): chủ đề lấy từ ca khúc *Der Wanderer* của chính ông được dùng và biến đổi qua **bốn chương liền nhau**. Đây là tiền đề mà [[robert-schumann|Schumann]], Liszt và những người khác tiếp nối; Liszt còn soạn lại tác phẩm cho piano và dàn nhạc (1851).
-- **Berlioz — Symphonie fantastique** (1830): một [[giai-dieu|giai điệu]] duy nhất — **idée fixe** (ý tưởng ám ảnh), tượng trưng cho người yêu — xuất hiện ở **cả năm chương**, mỗi lần một **tính cách khác** (theo nội dung chương trình). Giai điệu này vốn lấy từ cantata *Herminie* (1828) của ông.
-- **Liszt — Sonata Si thứ** (hoàn thành 1853): bản sonata piano đầu tiên **gộp ba – bốn chương thành một chương liền**; toàn bộ chất liệu được phát triển từ **vài motif** ở các ô mở đầu, biến đổi tính cách mạnh mẽ (một motif dữ dội có thể trở thành một giai điệu trữ tình). Liszt cũng dùng kỹ thuật này trong các thơ giao hưởng và [[hinh-thuc-concerto|Concerto]] piano số 2.
+- **Berlioz — [[tho-giao-huong|Symphonie fantastique]]** (1830): một [[giai-dieu|giai điệu]] duy nhất — **idée fixe** (ý tưởng ám ảnh), tượng trưng cho người yêu — xuất hiện ở **cả năm chương**, mỗi lần một **tính cách khác** (theo nội dung chương trình). Giai điệu này vốn lấy từ [[oratorio-cantata-passion|cantata]] *Herminie* (1828) của ông.
+- **Liszt — Sonata Si thứ** (hoàn thành 1853): bản [[sonata-the-loai|sonata piano]] đầu tiên **gộp ba – bốn chương thành một chương liền**; toàn bộ chất liệu được phát triển từ **vài motif** ở các ô mở đầu, biến đổi tính cách mạnh mẽ (một motif dữ dội có thể trở thành một giai điệu trữ tình). Liszt cũng dùng kỹ thuật này trong các thơ giao hưởng và [[hinh-thuc-concerto|Concerto]] piano số 2.
 - **Wagner — leitmotif**: chữ "leitmotif" phổ biến nhờ **Hans von Wolzogen**, người xuất bản năm 1876 một cuốn hướng dẫn đặt tên cho các motif của bộ *Nhẫn*. Wagner **không** dùng chữ này, mà gọi là "Grundthema", "Hauptmotiv" hay đơn giản là "motif"; cách đặt tên của Wolzogen nhiều khi quá máy móc.
 - **Franck — [[the-loai|Giao hưởng]] Rê thứ** (1888): các chủ đề quan trọng **quay lại ở cả ba chương**; chương cuối tập hợp lại chủ đề của các chương trước. Phương pháp này ảnh hưởng tới các học trò của ông như [[vincent-d-indy|Vincent d'Indy]], [[ernest-chausson|Ernest Chausson]].
 

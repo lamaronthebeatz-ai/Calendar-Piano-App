@@ -476,7 +476,7 @@ Mỗi nhà xuất bản và hệ thống thi có thang độ khó riêng (thang 
 | Trung cấp sớm (khoảng Grade 2–5) | [[Burgmüller]] — **25 bài luyện tiến bộ Op. 100** | Khoảng Grade 2–5; các bài 9, 15, 20, 21 hợp Grade 4–5 |
 | Trung cấp sớm → trung cấp cao | [[Schumann]] — **[[phan-tich-wilder-reiter|Album cho tuổi trẻ]] Op. 68** | Tập 1 (số 1–18) cho trẻ nhỏ, tập 2 (19–43) khó hơn; [[an-ban-urtext|ấn bản]] ABRSM ghi Grade 4–7 |
 | Trung cấp → trung cấp cao | [[Tchaikovsky]] — **Album cho thiếu nhi Op. 39** | Thường được xếp cao hơn Op. 68 một bậc |
-| Trung cấp | [[Clementi]] — **Sonatina Op. 36**; [[wolfgang-amadeus-mozart|Mozart]] K. 545 ([[phan-tich-sonata-k545|phân tích]]) | Bước tiếp theo phổ biến sau Burgmüller (xem [[hinh-thuc-sonata]]) |
+| Trung cấp | [[Clementi]] — **[[sonata-the-loai|Sonatina]] Op. 36**; [[wolfgang-amadeus-mozart|Mozart]] K. 545 ([[phan-tich-sonata-k545|phân tích]]) | Bước tiếp theo phổ biến sau Burgmüller (xem [[hinh-thuc-sonata]]) |
 | Trung cấp | [[Heller]] — **Études Op. 45, 46** | Op. 46 số 1–5 là điểm bắt đầu hay dùng |
 | Trung cấp (khoảng Grade 4–6 trở lên) | [[Bach]] — **Inventions 2 bè** | Bắt đầu với số 1 (Đô trưởng), rồi số 8 (Fa trưởng); số 6 khó hơn |
 | Trung cấp cao | Bach — **Sinfonia (Inventions 3 bè)** | Số 10 và 14 được gợi ý |

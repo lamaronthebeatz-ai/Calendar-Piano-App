@@ -31,7 +31,7 @@ Mọi truyền thống ngẫu hứng đều có **khung**: một [[vong-hop-am|v
 | Ngẫu hứng trên vòng hợp âm | Jazz, [[nhac-pho|nhạc phổ]] thông, đệm hát | [[ngau-hung-jazz]], [[dem-hat-piano]] |
 | Ngẫu hứng trên một chủ đề | [[bien-tau|Biến tấu]], fantasia ứng tác | [[lich-su-ngau-hung]] |
 | Ngẫu hứng tự do | Không chủ đề, không vòng hợp âm định trước | [[ngau-hung-tu-do]] |
-Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — fantasia, impromptu, [[the-loai|prelude]] — xem [[impromptu]].
+Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — [[toccata-prelude-fugue|fantasia]], impromptu, [[the-loai|prelude]] — xem [[impromptu]].
 
 ## Lộ trình
 **A. Bắt đầu**
@@ -44,7 +44,7 @@ Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — fantasia,
 5. [[bass-so]] → [[partimento]] → [[luoc-do-galant]] — ngẫu hứng trên bè trầm.
 6. [[prelude-ung-tac]], [[cadenza]] (trong [[hinh-thuc-concerto|concerto]]), [[impromptu]].
 
-**C. Jazz và nhạc phổ thông**
+**C. Jazz và [[nhac-pho-thong-the-ky-20|nhạc phổ thông]]**
 7. [[ngau-hung-jazz]] (trên nền [[swing]]) cùng các bài hoà âm: [[he-thong-hop-am-am-giai]], [[ii-v-i]], [[xep-hop-am]], [[tai-hoa-am]], [[blues-12-nhip]], [[rhythm-changes]].
 8. [[dem-hat-piano]].
 **Ngẫu hứng jazz chi tiết** (theo The Jazz Piano Site):
@@ -117,7 +117,7 @@ Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng
 ## Thời Baroque: ngẫu hứng là một phần của nghề
 - Người chơi đàn phím phải **hiện thực bè trầm có số** — tức là ứng tác phần hoà âm — trong hầu hết các tác phẩm hoà tấu (xem [[bass-so]]); ca sĩ và nghệ sĩ độc tấu **trang trí** [[giai-dieu|giai điệu]] (xem [[ky-hieu-hoa-my]]).
 - Năm **1747**, [[Bach]] đến thăm vua **Frederick Đại đế** ở Potsdam. Nhà vua đưa một chủ đề và yêu cầu Bach ứng tác một **fugue ba bè**; Bach làm ngay. Khi được thách ứng tác fugue **sáu bè**, Bach xin về viết lại rồi gửi vua. Về Leipzig, ông viết lại các ứng tác thành **Lễ vật âm nhạc** (BWV 1079), in tháng 9/1747. (Các nguồn kể khác nhau về chi tiết fugue sáu bè.) Xem [[fugue]].
-- **C. P. E. Bach**, ở chương cuối phần hai *Versuch* (1762), dạy cách **[[ngau-hung-piano|ngẫu hứng]]** từ những tiến trình hoà âm khép kín, các tiến trình [[chuyen-giong|chuyển giọng]] và các **cách trang trí giai điệu**, rồi minh hoạ bằng một **fantasia tự do** mẫu.
+- **C. P. E. Bach**, ở chương cuối phần hai *Versuch* (1762), dạy cách **[[ngau-hung-piano|ngẫu hứng]]** từ những tiến trình hoà âm khép kín, các tiến trình [[chuyen-giong|chuyển giọng]] và các **cách trang trí giai điệu**, rồi minh hoạ bằng một **[[toccata-prelude-fugue|fantasia]] tự do** mẫu.
 
 ## Thời Cổ điển: đấu ngẫu hứng ở Vienna
 - Thời Cổ điển được coi là thời kỳ **cuối cùng** mà ngẫu hứng trên đàn phím vừa là thực hành phổ biến vừa được xem là **kỹ năng cơ bản** của mọi nhạc công chuyên nghiệp.
@@ -133,7 +133,7 @@ Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng
 - Dù vậy, các nghệ sĩ như [[Liszt]], [[Chopin]], [[clara-schumann|Clara Schumann]] vẫn ứng tác **prelude** và đoạn nối trong buổi hoà nhạc (xem [[prelude-ung-tac]]).
 
 ## Ngẫu hứng sống tiếp trong nhà thờ
-Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **organ Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở Nhạc viện Paris, coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu thánh ca Gregorian của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1989) để lại rất nhiều bản thu ứng tác.
+Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **organ Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở Nhạc viện Paris, coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu [[thanh-ca-gregorian|thánh ca Gregorian]] của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1989) để lại rất nhiều bản thu ứng tác.
 
 ## Hồi sinh
 - **Robert Levin** ứng tác cadenza khi chơi [[hinh-thuc-concerto|concerto]] Mozart (xem [[cadenza]]).
@@ -146,6 +146,7 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
     slug: 'cadenza',
     title: 'Cadenza',
     category: 'improvisation',
+    also: ['genres'],
     aliases: ['cadenza', 'cadenza concerto', 'Eingang', 'đoạn dẫn vào', 'lead-in', 'cadenza ngẫu hứng', 'cadenza viết sẵn', 'Robert Levin'],
     summary: 'Đoạn độc tấu tự do ở gần cuối chương concerto (và trong aria), đánh dấu bằng dấu ngân trên hợp âm 6/4 kết, kết thúc bằng hợp âm át có láy rền. Ban đầu được ứng tác; từ Beethoven và thế kỷ 19, thường được viết sẵn.',
     wiki: 'Cadenza',
@@ -188,6 +189,7 @@ Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
     slug: 'impromptu',
     title: 'Impromptu',
     category: 'improvisation',
+    also: ['genres'],
     aliases: ['impromptu', 'ngẫu khúc', 'Schubert Impromptus', 'Fantaisie-Impromptu', 'Voříšek', 'D. 899', 'D. 935', 'Op. 66'],
     summary: 'Thể loại tiểu phẩm piano thế kỷ 19 mang tên "ngẫu hứng" nhưng được viết sẵn: Voříšek (Op. 7, 1822), Schubert (D. 899 và D. 935, 1827), Chopin (bốn impromptu, trong đó Fantaisie-Impromptu in sau khi ông mất, 1855).',
     wiki: 'Impromptu',
@@ -198,7 +200,7 @@ Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
       ['ClassicalConnect — Schubert Impromptus', 'https://www.classicalconnect.com/music/10064'],
     ],
     body: `
-**Impromptu** (tiếng Pháp/Latin: "[[ngau-hung-piano|ngẫu hứng]], tức thời") là tên một thể loại **tiểu phẩm piano** thế kỷ 19. Tên gọi gợi cảm giác **như đang ứng tác**, nhưng các impromptu đều là tác phẩm **viết sẵn** — một ví dụ của "ý niệm về ngẫu hứng" mà Dana Gooley mô tả (xem [[lich-su-ngau-hung]]).
+**Impromptu** (tiếng Pháp/Latin: "[[ngau-hung-piano|ngẫu hứng]], tức thời") là tên một thể loại **[[tieu-pham-piano|tiểu phẩm piano]]** thế kỷ 19. Tên gọi gợi cảm giác **như đang ứng tác**, nhưng các impromptu đều là tác phẩm **viết sẵn** — một ví dụ của "ý niệm về ngẫu hứng" mà Dana Gooley mô tả (xem [[lich-su-ngau-hung]]).
 
 ## Lịch sử
 - Tên gọi theo nghĩa này gắn với nhà soạn nhạc Séc **Jan Václav Voříšek**: một nguồn cho rằng nhà xuất bản dùng chữ này cho một bản piano của ông năm 1817; tập **Sáu Impromptu Op. 7** của Voříšek ra đời năm **1822**. Các nguồn chưa thống nhất mốc đầu tiên.
@@ -213,7 +215,7 @@ Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
 | Lúc tạo ra | Trong lúc biểu diễn | Trước đó, trên giấy |
 | Cố định? | Không — mỗi lần một khác | Có — bản nhạc in |
 | Điểm chung | Cảm giác tự do, liền mạch, như đang nghĩ thành tiếng | |
-Các thể loại "mang tên ngẫu hứng" khác: **fantasia**, **prelude** (xem [[prelude-ung-tac]]), **rhapsody**.
+Các thể loại "mang tên ngẫu hứng" khác: **[[toccata-prelude-fugue|fantasia]]**, **prelude** (xem [[prelude-ung-tac]]), **rhapsody**.
 
 ## Với người học piano
 - Schubert Impromptu Op. 90 (D. 899) số 2 và số 4, Op. 142 (D. 935) số 2 thường được dạy ở trình độ trung – cao cấp (xem [[lo-trinh-tac-pham]]).
@@ -268,6 +270,7 @@ Partimento rèn đúng những kỹ năng mà giáo dục hiện đại thườn
     slug: 'prelude-ung-tac',
     title: 'Prelude ứng tác',
     category: 'improvisation',
+    also: ['genres'],
     aliases: ['prelude ứng tác', 'preluding', 'dạo đầu', 'khúc dạo ứng tác', 'prelude improvisation', 'đoạn nối ứng tác'],
     summary: 'Thói quen của nghệ sĩ piano từ khoảng 1770 đến 1840 (còn kéo dài đến đầu thế kỷ 20): ứng tác một đoạn ngắn trước tác phẩm để thử đàn, xác lập giọng và dẫn khán giả vào bài, hoặc nối các bài với nhau.',
     refs: [
@@ -290,7 +293,7 @@ Trong các buổi hoà nhạc và salon thế kỷ 18–19, nghệ sĩ piano th�
 - Czerny dành riêng phần cho **prelude** trong sách dạy ngẫu hứng Op. 200 (1829) (xem [[lich-su-ngau-hung]]).
 
 ## Từ prelude ứng tác đến prelude viết sẵn
-Thực hành này sinh ra các **tiểu phẩm prelude** viết sẵn: ngắn, tự do, xoay quanh một hình [[tiet-tau|tiết tấu]] hoặc một nét kỹ thuật. **24 Prelude Op. 28** của Chopin là ví dụ nổi tiếng. [[johann-sebastian-bach|Bach]] trước đó cũng ghép prelude với [[fugue|fugue]] (xem [[phan-tich-prelude-do-truong]]).
+Thực hành này sinh ra các **[[tieu-pham-piano|tiểu phẩm]] prelude** viết sẵn: ngắn, tự do, xoay quanh một hình [[tiet-tau|tiết tấu]] hoặc một nét kỹ thuật. **24 Prelude Op. 28** của Chopin là ví dụ nổi tiếng. [[johann-sebastian-bach|Bach]] trước đó cũng ghép prelude với [[fugue|fugue]] (xem [[phan-tich-prelude-do-truong]]).
 
 ## Một prelude ứng tác thường gồm
 (Tổng hợp từ mô tả của các nghiên cứu trên.)

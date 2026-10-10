@@ -31,7 +31,7 @@ const PERIODS = [
     slug: 'thoi-ky-phuc-hung',
     title: 'Thời kỳ Phục hưng',
     years: '~1400–1600',
-    intro: `Thời kỳ vàng son của phức điệu thanh nhạc. [[quang|Quãng]] 3 và quãng 6 trở thành [[thuan-nghich|thuận âm]], các bè được viết cân bằng theo kỹ thuật mô phỏng ([[doi-am]]). [[the-loai|Thể loại]] chính: thánh lễ, motet, madrigal và chanson. Cuối thời kỳ, [[hop-am-ba]] trưởng – thứ dần trở thành trung tâm.
+    intro: `Thời kỳ vàng son của phức điệu thanh nhạc. [[quang|Quãng]] 3 và quãng 6 trở thành [[thuan-nghich|thuận âm]], các bè được viết cân bằng theo kỹ thuật mô phỏng ([[doi-am]]). [[the-loai|Thể loại]] chính: [[thanh-le-va-requiem|thánh lễ]], [[motet|motet]], [[madrigal|madrigal]] và [[ca-khuc-the-tuc-trung-co|chanson]]. Cuối thời kỳ, [[hop-am-ba]] trưởng – thứ dần trở thành trung tâm.
 
 ::wiki Renaissance_music | Âm nhạc Phục hưng (ảnh đầu bài Wikipedia *Renaissance music*)`,
     groups: [
@@ -49,7 +49,7 @@ const PERIODS = [
     slug: 'thoi-ky-baroque',
     title: 'Thời kỳ Baroque',
     years: '~1600–1750',
-    intro: `Opera ra đời; hệ thống [[am-giai-truong|giọng trưởng]] – thứ được xác lập, cùng [[chuc-nang-hoa-am|hoà âm chức năng]]. Đặc trưng: [[bass-so|basso continuo]], [[fugue]], [[mo-tien-hoa-am|mô tiến]], [[ky-hieu-hoa-my|hoa mỹ]] phong phú, tương phản to – nhỏ theo từng khối. [[the-loai|Thể loại]]: [[hinh-thuc-concerto|concerto]], tổ khúc, [[hinh-thuc-sonata|sonata]], oratorio, cantata.
+    intro: `Opera ra đời; hệ thống [[am-giai-truong|giọng trưởng]] – thứ được xác lập, cùng [[chuc-nang-hoa-am|hoà âm chức năng]]. Đặc trưng: [[bass-so|basso continuo]], [[fugue]], [[mo-tien-hoa-am|mô tiến]], [[ky-hieu-hoa-my|hoa mỹ]] phong phú, tương phản to – nhỏ theo từng khối. [[the-loai|Thể loại]]: [[hinh-thuc-concerto|concerto]], [[to-khuc-baroque|tổ khúc]], [[hinh-thuc-sonata|sonata]], [[oratorio-cantata-passion|oratorio]], cantata.
 
 ::wiki Baroque_music | Âm nhạc Baroque (ảnh đầu bài Wikipedia *Baroque music*)`,
     groups: [
@@ -66,7 +66,7 @@ const PERIODS = [
     slug: 'thoi-ky-co-dien',
     title: 'Thời kỳ Cổ điển',
     years: '~1750–1820',
-    intro: `Phong cách trong sáng, cân đối: [[giai-dieu|giai điệu]] có đệm ([[ket-cau|chủ điệu]], bass Alberti), [[cau-nhac]] đối xứng, [[hinh-thuc-sonata]] trở thành khuôn mẫu cho sonata, giao hưởng, tứ tấu và [[hinh-thuc-concerto|concerto]] (xem [[the-loai]]). Đàn [[lich-su-piano|fortepiano]] thay thế [[dan-phim-co|harpsichord]].
+    intro: `Phong cách trong sáng, cân đối: [[giai-dieu|giai điệu]] có đệm ([[ket-cau|chủ điệu]], bass Alberti), [[cau-nhac]] đối xứng, [[hinh-thuc-sonata]] trở thành khuôn mẫu cho sonata, [[giao-huong|giao hưởng]], [[nhac-thinh-phong|tứ tấu]] và [[hinh-thuc-concerto|concerto]] (xem [[the-loai]]). Đàn [[lich-su-piano|fortepiano]] thay thế [[dan-phim-co|harpsichord]].
 
 ::wiki Classical_period_(music) | Âm nhạc thời Cổ điển (ảnh đầu bài Wikipedia *Classical period (music)*)`,
     groups: [
@@ -80,7 +80,7 @@ const PERIODS = [
     slug: 'thoi-ky-lang-man',
     title: 'Thời kỳ Lãng mạn',
     years: '~1820–1910',
-    intro: `Cảm xúc cá nhân và kịch tính lên ngôi. [[hoa-am-cromatic|Hoà âm cromatic]], [[trung-am-cromatic]], [[rubato]]; dàn nhạc mở rộng; tiểu phẩm piano (nocturne, ballade, étude — xem [[the-loai]]). Cuối thế kỷ 19, các trường phái **dân tộc** đưa dân ca và [[dieu-thuc|điệu thức]] của quê hương vào âm nhạc.
+    intro: `Cảm xúc cá nhân và kịch tính lên ngôi. [[hoa-am-cromatic|Hoà âm cromatic]], [[trung-am-cromatic]], [[rubato]]; dàn nhạc mở rộng; [[tieu-pham-piano|tiểu phẩm piano]] (nocturne, ballade, étude — xem [[the-loai]]). Cuối thế kỷ 19, các trường phái **dân tộc** đưa dân ca và [[dieu-thuc|điệu thức]] của quê hương vào âm nhạc.
 
 ::wiki Romantic_music | Âm nhạc Lãng mạn (ảnh đầu bài Wikipedia *Romantic music*)`,
     groups: [
@@ -98,7 +98,7 @@ const PERIODS = [
     slug: 'thoi-ky-the-ky-20',
     title: 'Thế kỷ 20',
     years: '1900–2000',
-    intro: `Thời kỳ đa dạng nhất: [[an-tuong|ấn tượng]], [[phi-dieu-tinh|phi điệu tính]] và [[ky-thuat-12-am]], tân cổ điển, âm nhạc dân tộc mới, [[nhip-hon-hop|nhịp lẻ]], [[da-dieu-tinh]], [[am-cum]], âm nhạc điện tử, ngẫu nhiên, [[toi-gian]], cùng sự giao thoa với jazz và nhạc phim. Danh sách gồm những người có sự nghiệp chính trong thế kỷ 20.
+    intro: `Thời kỳ đa dạng nhất: [[an-tuong|ấn tượng]], [[phi-dieu-tinh|phi điệu tính]] và [[ky-thuat-12-am]], [[trao-luu-the-ky-20|tân cổ điển]], âm nhạc dân tộc mới, [[nhip-hon-hop|nhịp lẻ]], [[da-dieu-tinh]], [[am-cum]], âm [[nhac-dien-tu|nhạc điện tử]], ngẫu nhiên, [[toi-gian]], cùng sự giao thoa với jazz và [[nhac-phim-va-tro-choi|nhạc phim]]. Danh sách gồm những người có sự nghiệp chính trong thế kỷ 20.
 
 ::wiki 20th-century_classical_music | Âm nhạc cổ điển thế kỷ 20 (ảnh đầu bài Wikipedia *20th-century classical music*)`,
     groups: [

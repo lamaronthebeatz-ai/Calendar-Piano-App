@@ -170,7 +170,7 @@ Người nghe không chỉ nghe cây đàn mà nghe **cây đàn trong một că
 ## Thời gian vang phù hợp
 | Không gian | Thời gian vang tham khảo |
 |---|---|
-| Phòng hoà nhạc giao hưởng | khoảng 2 giây (Sabine: 2–2,25 giây) |
+| Phòng hoà nhạc [[giao-huong|giao hưởng]] | khoảng 2 giây (Sabine: 2–2,25 giây) |
 | Nhà hát opera | khoảng 1,0–1,4 giây |
 | Giảng đường (tiếng nói) | khoảng 0,5–0,8 giây |
 Nhạc cần **độ ấm, độ hoà** thì cần vang lâu hơn; lời nói cần **độ rõ** thì cần vang ngắn.
@@ -257,7 +257,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
 
 ## Piano: "giai điệu đi trước"
 - Đo đạc trên [[dan-piano|đàn piano]] ghi âm bằng máy tính cho thấy nốt giai điệu thường vang **sớm hơn khoảng 30 mili giây** so với các nốt đệm cùng [[hop-am-ba|hợp âm]] (Palmer, 1996) — giúp giai điệu nổi lên nhờ nguyên tắc "bắt đầu cùng lúc thì nhóm chung".
-- **Werner Goebl** (2001; 22 nghệ sĩ piano, [[frederic-chopin|Chopin]] [[the-loai|Ballade]] Op. 38 và Étude Op. 10 số 3) đo thời điểm **ngón chạm phím** và thấy độ lệch này **gần như bằng 0**: nốt giai điệu vang sớm chủ yếu vì được **đánh mạnh hơn** nên búa tới dây nhanh hơn (giả thuyết "sản phẩm phụ của tốc độ"). Câu hỏi người chơi có **cố ý** đánh sớm hay không vẫn chưa khép lại hoàn toàn.
+- **Werner Goebl** (2001; 22 nghệ sĩ piano, [[frederic-chopin|Chopin]] [[the-loai|Ballade]] Op. 38 và [[tieu-pham-piano|Étude]] Op. 10 số 3) đo thời điểm **ngón chạm phím** và thấy độ lệch này **gần như bằng 0**: nốt giai điệu vang sớm chủ yếu vì được **đánh mạnh hơn** nên búa tới dây nhanh hơn (giả thuyết "sản phẩm phụ của tốc độ"). Câu hỏi người chơi có **cố ý** đánh sớm hay không vẫn chưa khép lại hoàn toàn.
 - Bài học: muốn giai điệu nổi lên, hãy tập **cân bằng [[cuong-do|cường độ]]** giữa các ngón trong một hợp âm (xem [[lam-noi-giai-dieu]], [[ky-thuat-cham-phim]]); thời điểm sẽ tự theo.
 
 ## Gợi ý dạy học
@@ -458,11 +458,11 @@ Hệ thống **Welte-Mignon** (phát minh năm 1904) ghi lại cách chơi bằn
 ## Bản thu phòng thu: ghép nhiều lần chơi
 Từ thời băng từ, bản thu phòng thu có thể được **cắt ghép** từ nhiều lần chơi (take).
 - **[[glenn-gould|Glenn Gould]]** biểu diễn trước công chúng lần cuối ở Chicago (**3/1964**) rồi chỉ thu âm. Ông cho rằng phòng thu là một **phương tiện nghệ thuật riêng**: người nghệ sĩ được "sửa và hoàn thiện" như nhà văn, thay vì phải làm lại từ đầu mỗi buổi hoà nhạc.
-- Trong tiểu luận *The Prospects of Recording* (tạp chí *High Fidelity*, 1966), Gould kể bản thu năm 1956 **[[fugue|Fugue]] La thứ** (Bình quân luật quyển 1) của ông được ghép từ **hai lần chơi** (take 6 và take 8): phần đầu và cuối lấy từ take 6, đoạn giữa từ take 8 — vì ông thấy cả hai, nếu nghe riêng, đều đơn điệu.
+- Trong tiểu luận *The Prospects of Recording* (tạp chí *High Fidelity*, 1966), Gould kể bản thu năm 1956 **[[fugue|Fugue]] La thứ** ([[toccata-prelude-fugue|Bình quân luật]] quyển 1) của ông được ghép từ **hai lần chơi** (take 6 và take 8): phần đầu và cuối lấy từ take 6, đoạn giữa từ take 8 — vì ông thấy cả hai, nếu nghe riêng, đều đơn điệu.
 - Hệ quả cho người nghe: một bản thu phòng thu **không nhất thiết** là một lần biểu diễn liền mạch. Một bài viết trên tạp chí *The Nation* nhận xét xu hướng ngược lại: nhiều nhà sản xuất hiện ưa **thu trực tiếp** trước khán giả.
 
 ## Bản thu thay đổi cách chơi
-- Các bản thu cổ là **tài liệu lịch sử** về phong cách biểu diễn của các nghệ sĩ sinh ra từ thế kỷ 19 — ví dụ cách dùng [[rubato|rubato]] (xem nghiên cứu Étude Op. 25 số 1 ở dưới, [[phong-cach-dien-tau]]).
+- Các bản thu cổ là **tài liệu lịch sử** về phong cách biểu diễn của các nghệ sĩ sinh ra từ thế kỷ 19 — ví dụ cách dùng [[rubato|rubato]] (xem nghiên cứu [[tieu-pham-piano|Étude]] Op. 25 số 1 ở dưới, [[phong-cach-dien-tau]]).
 
 ## Ý nghĩa với người học đàn
 Thu âm cho phép nghe cách các thế hệ nghệ sĩ chơi cùng một tác phẩm — ví dụ nghiên cứu 127 bản thu Étude Op. 25 số 1 của [[frederic-chopin|Chopin]] cho thấy cách dùng rubato thay đổi theo thời gian (xem [[dien-dat-cau-nhac]]). Các nghệ sĩ thời đầu thu âm: [[nghe-si-piano-dau-the-ky-20]]. Cách nghe có định hướng: [[nghe-nhac-chu-dong]]; cách so sánh nhiều bản thu: [[so-sanh-ban-thu]].
@@ -486,7 +486,7 @@ Thu âm cho phép nghe cách các thế hệ nghệ sĩ chơi cùng một tác p
 Bản nhạc không ghi hết mọi thứ: nhịp độ chính xác, độ co giãn, cân bằng bè, pedal… đều do người chơi quyết định. So sánh nhiều bản thu là cách tốt nhất để học trò thấy **khoảng tự do diễn giải** — và giới hạn của nó.
 
 ## Nghiên cứu: dự án Mazurka của CHARM
-- **CHARM** (Trung tâm nghiên cứu Lịch sử và [[phuong-phap-phan-tich-tac-pham|Phân tích Âm nhạc]] Thu âm, Anh) có một dự án về các bản thu **Mazurka của [[frederic-chopin|Chopin]]**: kho lưu trữ hơn **1.500 bản thu** từng bản mazurka, trong đó gần 30 bộ trọn vẹn. Mục tiêu: xây dựng phương pháp **đo** thời gian và cường độ từ bản thu, để tìm ra xu hướng lịch sử và đặc điểm phong cách của từng trường phái.
+- **CHARM** (Trung tâm nghiên cứu Lịch sử và [[phuong-phap-phan-tich-tac-pham|Phân tích Âm nhạc]] Thu âm, Anh) có một dự án về các bản thu **[[tieu-pham-piano|Mazurka]] của [[frederic-chopin|Chopin]]**: kho lưu trữ hơn **1.500 bản thu** từng bản mazurka, trong đó gần 30 bộ trọn vẹn. Mục tiêu: xây dựng phương pháp **đo** thời gian và cường độ từ bản thu, để tìm ra xu hướng lịch sử và đặc điểm phong cách của từng trường phái.
 - Bài báo của **Nicholas Cook, Craig Sapp và Andrew Earis** (2007) về Mazurka Op. 68 số 3: nhóm các bản thu theo **mức tương quan của đường cong nhịp độ**, và các nhóm tìm được có trường hợp **khớp với quan hệ thầy – trò** đã biết. Kết luận: **chỉ riêng dữ liệu nhịp độ** đã có thể rút ra những nhận xét có ý nghĩa.
 - Phân tích dữ liệu bản thu còn phát hiện **gian lận**: một số bản thu phát hành dưới tên nghệ sĩ Joyce Hatto và Sergio Fiorentino thực ra là bản thu của người khác.
 - Công cụ miễn phí **Sonic Visualiser** được dùng rộng rãi trong dự án; Cook trình bày nhiều kết quả trong sách *Beyond the Score* (Oxford, 2013).

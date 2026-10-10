@@ -191,7 +191,7 @@ Các dấu này phản ánh [[hinh-thuc-am-nhac]] của bài — ví dụ ABA th
 
 ## Lần lặp lại không phải lần "photocopy"
 - **Vũ khúc [[thoi-ky-baroque|Baroque]]** thường có dạng ‖: A :‖: B :‖. Người chơi được trông đợi **thêm hoa mỹ ở lần lặp thứ hai**; một số nhà soạn nhạc (như [[Byrd]]) còn viết sẵn lần lặp có trang trí. [[Bach]] dùng vạch nhắc lại trong nhiều chương [[the-loai|tổ khúc]] và mong người chơi trang trí khi lặp lại (xem [[ky-hieu-hoa-my]]).
-- **Aria da capo** (A – B – A): khi A quay lại, ca sĩ thường **[[ngau-hung-piano|ngẫu hứng]] thêm hoa mỹ**.
+- **[[opera|Aria da capo]]** (A – B – A): khi A quay lại, ca sĩ thường **[[ngau-hung-piano|ngẫu hứng]] thêm hoa mỹ**.
 
 ## Có nên chơi lại phần trình bày sonata?
 Câu hỏi này vẫn **còn tranh cãi**, nhất là với các sonata lớn của [[Schubert]]:
@@ -443,13 +443,13 @@ Thời [[thoi-ky-baroque|Baroque]] (thế kỷ 17 – giữa thế kỷ 18), nhi
 ## Không phải lúc nào cũng tiếng Ý
 | Ngôn ngữ | Ví dụ | Ghi chú |
 |---|---|---|
-| **Đức** | *Lebhaft* (sôi nổi), *Langsam* (chậm), *Innig* (sâu lắng), *Mit Ausdruck* (biểu cảm) | [[Beethoven]] dùng tiếng Đức ở một số tác phẩm (như Giao hưởng "Đồng quê"); [[Mahler]] dùng nhiều, có khi trộn với tiếng Ý |
+| **Đức** | *Lebhaft* (sôi nổi), *Langsam* (chậm), *Innig* (sâu lắng), *Mit Ausdruck* (biểu cảm) | [[Beethoven]] dùng tiếng Đức ở một số tác phẩm (như [[giao-huong|Giao hưởng]] "Đồng quê"); [[Mahler]] dùng nhiều, có khi trộn với tiếng Ý |
 | **Pháp** | *Cédez* (chậm lại), *Retenu* (kìm lại), *Doux* (êm), *Très expressif* | [[Debussy]] ghi rất nhiều chỉ dẫn tiếng Pháp, mô tả cả **tính chất cảm xúc** của từng câu |
 | **Anh** | *Slowly*, *With feeling* | Phổ biến trong nhạc hiện đại, [[nhac-pho|nhạc phổ]] thông |
 
 Khi dạy, hãy cho học sinh tra nghĩa **mọi** chỉ dẫn trên bản nhạc trước khi tập — chúng là lời tác giả nói trực tiếp với người chơi.
 
-Bảng tra nhanh Anh – Việt – Ý: [[bang-thuat-ngu]]. Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]]. Tên thể loại (nocturne, étude…): xem [[the-loai]].
+Bảng tra nhanh Anh – Việt – Ý: [[bang-thuat-ngu]]. Thuật ngữ nhịp độ: xem [[nhip-do]]. Cường độ: xem [[cuong-do]]. Cách đánh: xem [[cach-dien-tau]]. Tên thể loại ([[tieu-pham-piano|nocturne]], étude…): xem [[the-loai]].
 `,
   },
   {
