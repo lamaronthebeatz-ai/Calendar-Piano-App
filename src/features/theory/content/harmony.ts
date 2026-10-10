@@ -22,7 +22,7 @@ Bài này là **mục lục** của toàn bộ phần hoà âm trong thư viện
 - Mỗi bài: **đọc → nghe ví dụ → chơi trên đàn** → tìm lại trong một bản nhạc thật (xem [[phan-tich-hoa-am]]).
 - Song song suốt lộ trình: [[luyen-tai|luyện tai]] (nghe ra hợp âm và chức năng) và [[xuong-am|xướng âm]].
 - Tra từ: [[thuat-ngu-hoa-am|bảng thuật ngữ Việt – Anh]].
-- Cần nắm trước: đọc nốt, tiết tấu, cao độ, âm giai và giọng — xem [[nhac-ly-co-ban]].
+- Cần nắm trước: [[doc-not-nhanh|đọc nốt]], tiết tấu, cao độ, âm giai và giọng — xem [[nhac-ly-co-ban]].
 
 ## Phần I — Hoà âm cổ điển (thời kỳ thông dụng, khoảng 1650–1900)
 Tổng quan và bản đồ: [[he-thong-hoa-am-co-dien]].
@@ -501,7 +501,7 @@ Thể đảo được xác định bởi **nốt thấp nhất** (bè trầm), k
     slug: 'hop-am-bay',
     title: 'Hợp âm bảy',
     category: 'harmony',
-    aliases: ['hợp âm 7', 'seventh chord', 'hợp âm 7 át', 'dominant seventh', 'maj7', 'm7', 'm7b5', 'nửa giảm', 'G7'],
+    aliases: ['hợp âm 7', 'seventh chord', 'hợp âm 7 át', 'dominant seventh', 'maj7', 'm7', 'm7b5', 'nửa giảm', 'G7', 'half-diminished', 'half-diminished seventh', 'hợp âm 7 nửa giảm'],
     summary: 'Hợp âm ba thêm một quãng 3 nữa phía trên (nốt bậc 7); có 5 loại chính, quan trọng nhất là hợp âm 7 át (V7).',
     wiki: 'Seventh_chord',
     refs: [
@@ -549,7 +549,7 @@ Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii –
     title: 'Ký hiệu hợp âm',
     category: 'harmony',
     also: ['jazz'],
-    aliases: ['hợp âm ký hiệu', 'chord symbol', 'lead sheet', 'đọc hợp âm', 'tên hợp âm', 'sus'],
+    aliases: ['hợp âm ký hiệu', 'chord symbol', 'lead sheet', 'đọc hợp âm', 'tên hợp âm'],
     summary: 'Cách viết tắt hợp âm bằng chữ cái và hậu tố (Cm, G7, Fmaj7, Dsus4…), dùng trong nhạc pop, jazz và đệm hát.',
     wiki: 'Chord_chart',
     refs: [
@@ -720,7 +720,7 @@ Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]], [[mo-tien-
     title: 'Kết',
     category: 'harmony',
     also: ['form'],
-    aliases: ['cadence', 'kết nhạc', 'kết chính', 'kết trọn', 'kết nửa', 'kết plagal', 'kết lừa', 'kết Amen', 'authentic cadence', 'half cadence', 'deceptive cadence'],
+    aliases: ['cadence', 'kết nhạc', 'kết chính', 'kết trọn', 'kết nửa', 'kết plagal', 'kết lừa', 'kết Amen', 'authentic cadence', 'half cadence', 'deceptive cadence', 'plagal cadence'],
     summary: 'Công thức hợp âm đánh dấu chỗ ngắt của câu nhạc — như dấu chấm, dấu phẩy trong câu văn.',
     wiki: 'Cadence',
     refs: [
@@ -767,7 +767,7 @@ Kết là nền tảng chia [[cau-nhac]] và [[hinh-thuc-am-nhac|hình thức]].
     slug: 'dan-giong',
     title: 'Dẫn giọng',
     category: 'harmony',
-    aliases: ['dẫn bè', 'voice leading', 'hoà âm 4 bè', 'SATB', 'quãng 5 song song', 'quãng 8 song song'],
+    aliases: ['dẫn bè', 'voice leading', 'hoà âm 4 bè', 'SATB', 'quãng 5 song song', 'quãng 8 song song', 'parallel fifths', 'parallel octaves'],
     summary: 'Nghệ thuật nối các hợp âm sao cho từng bè (giọng) di chuyển mượt và độc lập.',
     wiki: 'Voice_leading',
     refs: [
@@ -847,7 +847,7 @@ Khi phân tích bản nhạc, hãy xác định hợp âm trước, rồi gọi 
     slug: 'hop-am-at-phu',
     title: 'Hợp âm át phụ',
     category: 'harmony',
-    aliases: ['át phụ', 'secondary dominant', 'V/V', 'át của át', 'V7/ii'],
+    aliases: ['át phụ', 'secondary dominant', 'V/V', 'át của át', 'V7/ii', 'tonicization', 'chủ hoá'],
     summary: 'Hợp âm át "mượn" để dẫn vào một hợp âm khác ngoài chủ âm, như V/V (D7 → G trong Đô trưởng).',
     wiki: 'Secondary_chord',
     refs: [
@@ -872,7 +872,7 @@ Mỗi [[hop-am-ba|hợp âm trưởng]] hoặc thứ trong giọng có thể đ�
 ## Nhận biết
 Một hợp âm trưởng hoặc 7 át **không thuộc giọng**, tiếp theo là hợp âm cách nó [[quang|quãng]] 5 đúng xuống → gần như chắc chắn là át phụ.
 
-Chuỗi át phụ nối tiếp nhau tạo nên vòng E7 – A7 – D7 – G7 – C (ragtime, jazz). Nếu hợp âm đích được giữ lâu và có [[cau-ket]] riêng, đó là [[chuyen-giong]]. Nền tảng: [[chuc-nang-hoa-am]].
+Chuỗi át phụ nối tiếp nhau tạo nên vòng E7 – A7 – D7 – G7 – C ([[phong-cach-jazz|ragtime]], jazz). Nếu hợp âm đích được giữ lâu và có [[cau-ket]] riêng, đó là [[chuyen-giong]]. Nền tảng: [[chuc-nang-hoa-am]].
 
 ## Hợp âm cảm âm phụ
 Ngoài hợp âm át, có thể dùng **[[hop-am-cam-am|hợp âm cảm âm]]** của hợp âm đích: hợp âm **giảm**, **7 [[hop-am-bay|nửa giảm]]** hoặc **7 giảm**, có nốt gốc **thấp hơn [[cung-nua-cung|nửa cung]]** so với hợp âm đích. Ví dụ vii°7/V trong Đô trưởng = **F♯ – A – C – E♭** → G. Xem [[hop-am-bay-giam]].
@@ -973,13 +973,15 @@ Tiêu chí phân biệt chính: **có kết ở giọng mới** hay không. Ch�
   },
   {
     slug: 'hop-am-6-va-add',
-    title: 'Hợp âm 6 và hợp âm add',
+    title: 'Hợp âm 6, add, sus và power chord',
     category: 'harmony',
     also: ['jazz'],
-    aliases: ['hợp âm 6', 'C6', 'Cm6', 'hợp âm add9', 'add9', 'add2', 'hợp âm thêm nốt', 'sixth chord', 'added tone chord'],
+    aliases: ['hợp âm 6', 'C6', 'Cm6', 'hợp âm add9', 'add9', 'add2', 'hợp âm thêm nốt', 'sixth chord', 'added tone chord', 'hợp âm treo', 'suspended chord', 'sus', 'sus2', 'sus4', 'Csus4', '7sus4', 'power chord', 'hợp âm 5'],
     summary: 'C6 (C–E–G–A) có cùng bốn nốt với Am7 nhưng khác nốt trầm và chức năng; Cadd9 thêm nốt 9 mà không có nốt 7 nên vẫn ổn định, còn C9 có nốt 7 thứ nên mang tính át.',
     wiki: 'Added_tone_chord',
     refs: [
+      ['Wikipedia — Suspended chord', 'https://en.wikipedia.org/wiki/Suspended_chord'],
+      ['Wikipedia — Power chord', 'https://en.wikipedia.org/wiki/Power_chord'],
       ['oolimo — Sixth chords', 'https://www.oolimo.com/en/chord-types/sixth-chords'],
       ['KVR Audio forum — Why a C6 is not an Am7?', 'https://kvraudio.com/forum/viewtopic.php?p=7191029'],
     ],
@@ -1010,13 +1012,28 @@ Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
 ::keyboard C4 D4 E4 G4 | Cadd9 xếp hẹp: C – D – E – G — nốt 9 sát nốt 3 tạo âm thanh "lấp lánh"
 
 Điểm mấu chốt: **có nốt 7 hay không** quyết định hợp âm nghe ổn định hay căng (xem [[thuan-nghich]], [[hop-am-bay]]).
+
+## Hợp âm treo (sus)
+**Thay** nốt 3 bằng nốt 4 hoặc nốt 2 — không còn nốt 3 nên hợp âm **không trưởng cũng không thứ**:
+| Ký hiệu | Nốt (gốc C) | Ghi chú |
+|---|---|---|
+| **Csus4** | C – F – G | Nốt 4 "treo" muốn đi xuống nốt 3 (C – F – G → C – E – G) |
+| **Csus2** | C – D – G | Nốt 2 thay nốt 3; cùng nốt với Gsus4 ở thế đảo |
+| **G7sus4** | G – C – D – F | Át "treo": trong jazz thường viết **F/G** hay **Dm7/G** — xem [[hop-am-gach-cheo]] |
+::keyboard C4 F4 G4 | Csus4: nốt 3 (E) được thay bằng nốt 4 (F)
+- Tên gọi đến từ **nốt treo** trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]]: một nốt của hợp âm trước được giữ lại rồi mới giải quyết xuống (xem [[not-ngoai-hop-am]]).
+- Trong pop và rock, sus thường được dùng **như một màu riêng**, không cần giải quyết.
+- Khác hợp âm add: **add** thêm nốt và **giữ** nốt 3 (Cadd9 = C – E – G – D); **sus** **bỏ** nốt 3 (Csus2 = C – D – G).
+
+## Power chord (hợp âm 5)
+**C5 = C – G** (thường thêm C ở quãng 8): chỉ có nốt gốc và nốt 5. Vì không có nốt 3, nó cũng không trưởng không thứ. Rất phổ biến trong rock với guitar điện bị biến tiếng (distortion). Trên piano, quãng 5 trống ở tay trái là cách đệm tương tự (xem [[dem-hat-piano]], [[ostinato]]).
 `,
   },
   {
     slug: 'luat-hoa-am-bon-be',
     title: 'Luật hoà âm bốn bè',
     category: 'harmony',
-    aliases: ['luật hoà âm', 'part-writing', 'viết bè', 'hoà âm 4 bè SATB', 'nhân đôi', 'doubling', 'quãng 5 ẩn', 'hidden fifths', 'quãng 8 ẩn', 'hợp âm 6/4 kết', 'cadential 6/4'],
+    aliases: ['luật hoà âm', 'part-writing', 'viết bè', 'hoà âm 4 bè SATB', 'nhân đôi', 'doubling', 'quãng 5 ẩn', 'hidden fifths', 'quãng 8 ẩn', 'hợp âm 6/4 kết', 'cadential 6/4', 'four-part harmony'],
     summary: 'Bộ quy tắc viết hoà âm cho bốn bè Soprano – Alto – Tenor – Bass: âm vực, khoảng cách, nhân đôi, các lỗi quãng song song, nốt khuynh hướng và bốn loại hợp âm 6/4 — cùng lý do khoa học đằng sau.',
     wiki: 'Voice_leading',
     refs: [

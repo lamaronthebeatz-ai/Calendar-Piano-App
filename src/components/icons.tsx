@@ -206,3 +206,75 @@ export const BookIcon = (p: IconProps) => (
     <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5" />
   </svg>
 )
+
+export const BookmarkIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M19 21l-7-4.5L5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+  </svg>
+)
+
+export const ShuffleIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />
+  </svg>
+)
+
+export const ListIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01" />
+  </svg>
+)
+
+export const TypeIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M4 7V5h16v2M9 19h6M12 5v14" />
+  </svg>
+)
+
+export const LinkIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5" />
+    <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" />
+  </svg>
+)
+
+export const CompassIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="m15.5 8.5-2 5-5 2 2-5z" />
+  </svg>
+)
+
+export const ArrowUpRightIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M7 17 17 7M8 7h9v9" />
+  </svg>
+)
+
+export const SparkleIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z" />
+  </svg>
+)
+
+/** Brand mark: three ivory keys and two ebony keys in a rounded tile. */
+export const BrandMark = (p: IconProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={32} height={32} {...p}>
+    <defs>
+      <linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stopColor="#1d2840" />
+        <stop offset="1" stopColor="#3b2f55" />
+      </linearGradient>
+    </defs>
+    <rect width="32" height="32" rx="9" fill="url(#bm-g)" />
+    <g fill="#f6efe2">
+      <rect x="7" y="8" width="5.4" height="16" rx="1.3" />
+      <rect x="13.3" y="8" width="5.4" height="16" rx="1.3" />
+      <rect x="19.6" y="8" width="5.4" height="16" rx="1.3" />
+    </g>
+    <g fill="#d8b77f">
+      <rect x="10.6" y="8" width="3.4" height="9.5" rx="1" />
+      <rect x="17.9" y="8" width="3.4" height="9.5" rx="1" />
+    </g>
+  </svg>
+)

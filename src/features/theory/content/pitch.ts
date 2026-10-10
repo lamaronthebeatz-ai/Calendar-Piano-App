@@ -278,6 +278,8 @@ Dây [[dan-piano|đàn piano]] **cứng** (dây thép ngắn, khá dày), nên c
 - Năm 1938, nhà vật lý O. L. Railsback đo độ kéo giãn này. **Đường cong Railsback** cho thấy độ lệch gần như không đáng kể ở giữa bàn phím nhưng lớn ở hai đầu. Ông kết luận đó là do tính không điều hoà của dây, **không phải** do thợ lên dây thiếu chính xác.
 - Giordano (2015) [[doi-am|mô phỏng]] lại đường cong này từ dữ liệu về độ nghịch tai, cho thấy nó là cách lên dây làm **giảm độ nghịch** tốt nhất.
 - Vì mỗi cây đàn lệch một khác, máy lên dây đơn giản khó tính đúng mức kéo giãn — xem [[bao-duong-piano]].
+
+Các tỉ lệ đơn giản 2:1, 3:2, 4:3 từng được Pythagoras và các nhà tư tưởng sau đó xem là chìa khoá của cả vũ trụ: [[hoa-am-vu-tru]].
 `,
   },
   {
@@ -320,7 +322,7 @@ Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chi
 Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp hơn khoảng nửa cung) như một quy ước cho nhạc [[thoi-ky-baroque|Baroque]] — không phải một giá trị lịch sử duy nhất. Các thuyết âm mưu cho rằng A = 440 do phát xít áp đặt đã bị kiểm chứng là sai.
 
 ## Lịch sử các hệ thống lên dây
-**Vấn đề gốc — dấu phẩy Pythagore**: chồng **12 quãng 5 thuần** (3:2) không về đúng **7 quãng 8** mà dư khoảng **23,46 cent** (gần một phần tư nửa cung). Mỗi hệ thống lên dây là một cách "giấu" phần dư này:
+**Vấn đề gốc — dấu phẩy Pythagore** (về Pythagoras và ý tưởng âm nhạc là con số, xem [[hoa-am-vu-tru]]): chồng **12 quãng 5 thuần** (3:2) không về đúng **7 quãng 8** mà dư khoảng **23,46 cent** (gần một phần tư nửa cung). Mỗi hệ thống lên dây là một cách "giấu" phần dư này:
 | Hệ thống | Cách xử lý | Hệ quả |
 |---|---|---|
 | **Pythagore** | Mọi quãng 5 thuần, dồn phần dư vào **một quãng 5 "sói"** | Quãng 3 trưởng rộng (81:64, 408 cent), nghe chói |
@@ -329,7 +331,7 @@ Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp h
 | **Bình quân 12** | Mỗi quãng 5 hẹp đi 1/12 dấu phẩy (khoảng 2 cent) | Mọi giọng như nhau; quãng 3 trưởng **rộng hơn thuần khoảng 14 cent** |
 
 ## "Clavier bình quân" có phải bình quân 12?
-Tên gốc là *Das Wohltemperierte Klavier* — đàn phím **"được lên dây tốt"**, nghĩa là một hệ thống mà **mọi giọng nghe đều hay**, không nhất thiết là mọi giọng **giống nhau**. Giới nghiên cứu nhìn chung cho rằng [[johann-sebastian-bach|Bach]] **không** dùng bình quân 12, nhưng không biết chính xác hệ thống nào. Năm 2005, Bradley Lehman đề xuất rằng những đường xoắn trên trang bìa bản thảo là "công thức" lên dây của Bach — giả thuyết này bị nhiều người bác bỏ. Bộ tác phẩm gồm 24 [[the-loai|Prelude]] và Fugue ở đủ 24 giọng (xem [[fugue]]).
+Tên gốc là *Das Wohltemperierte Klavier* (xem hai bài phân tích: [[phan-tich-prelude-do-truong|Prelude Đô trưởng]], [[phan-tich-prelude-do-thu-bwv847|Prelude Đô thứ]]) — đàn phím **"được lên dây tốt"**, nghĩa là một hệ thống mà **mọi giọng nghe đều hay**, không nhất thiết là mọi giọng **giống nhau**. Giới nghiên cứu nhìn chung cho rằng [[johann-sebastian-bach|Bach]] **không** dùng bình quân 12, nhưng không biết chính xác hệ thống nào. Năm 2005, Bradley Lehman đề xuất rằng những đường xoắn trên trang bìa bản thảo là "công thức" lên dây của Bach — giả thuyết này bị nhiều người bác bỏ. Bộ tác phẩm gồm 24 [[the-loai|Prelude]] và Fugue ở đủ 24 giọng (xem [[fugue]]).
 
 Piano thực tế còn được lên dây "kéo giãn" một chút so với bình quân 12 lý thuyết — xem [[chuoi-boi-am]]. Bối cảnh lịch sử: [[cac-thoi-ky]]. Lên dây và bảo quản đàn: [[bao-duong-piano]].
 `,

@@ -42,11 +42,16 @@ Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — fantasia,
 **B. Truyền thống cổ điển**
 4. [[lich-su-ngau-hung]] — từ [[johann-sebastian-bach|Bach]] đến [[carl-czerny|Czerny]], sự suy giảm và hồi sinh.
 5. [[bass-so]] → [[partimento]] → [[luoc-do-galant]] — ngẫu hứng trên bè trầm.
-6. [[prelude-ung-tac]], [[cadenza]], [[impromptu]].
+6. [[prelude-ung-tac]], [[cadenza]] (trong [[hinh-thuc-concerto|concerto]]), [[impromptu]].
 
 **C. Jazz và nhạc phổ thông**
-7. [[ngau-hung-jazz]] cùng các bài hoà âm: [[he-thong-hop-am-am-giai]], [[ii-v-i]], [[xep-hop-am]], [[tai-hoa-am]], [[blues-12-nhip]], [[rhythm-changes]].
+7. [[ngau-hung-jazz]] (trên nền [[swing]]) cùng các bài hoà âm: [[he-thong-hop-am-am-giai]], [[ii-v-i]], [[xep-hop-am]], [[tai-hoa-am]], [[blues-12-nhip]], [[rhythm-changes]].
 8. [[dem-hat-piano]].
+**Ngẫu hứng jazz chi tiết** (theo The Jazz Piano Site):
+- Chọn nốt: [[not-dan-huong]], [[not-tiep-can-jazz]], [[not-tranh-va-quang-nghich]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
+- Phát triển ý: [[trang-tri-giai-dieu-jazz]], [[mau-lap-chu-ky]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]].
+- Nâng cao: [[superimposition-jazz]], [[triad-pairs]], [[sheets-of-sound]], [[ngau-hung-hop-am]].
+- Cả bài solo: [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
 
 **D. Mở rộng**
 9. [[ngau-hung-tu-do]], [[hoa-am-dieu-thuc]].
@@ -373,7 +378,7 @@ Nghệ sĩ guitar **Derek Bailey**, trong *[[ngau-hung-piano|Improvisation]]: It
 |---|---|---|
 | Khung | Một phong cách: jazz, flamenco, raga… | Không có phong cách định trước |
 | Tiêu chí "hay" | Theo chuẩn mực của phong cách | Do chính người chơi và người nghe tạo ra trong lúc chơi |
-| Ví dụ | Solo bebop, [[cadenza|cadenza]] [[wolfgang-amadeus-mozart|Mozart]] | Các nhóm ngẫu hứng tự do ở châu Âu từ thập niên 1960 |
+| Ví dụ | Solo [[phong-cach-jazz|bebop]], [[cadenza|cadenza]] [[wolfgang-amadeus-mozart|Mozart]] | Các nhóm ngẫu hứng tự do ở châu Âu từ thập niên 1960 |
 
 ## Keith Jarrett — The Köln Concert (1975)
 - Ngày **24/1/1975**, ở Nhà hát Opera Köln, **[[keith-jarrett|Keith Jarrett]]** chơi một buổi độc tấu piano **gần như toàn bộ là ứng tác** (trừ bài encore viết sẵn); ECM phát hành cùng năm.

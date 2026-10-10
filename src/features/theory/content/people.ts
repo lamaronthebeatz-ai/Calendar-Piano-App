@@ -97,6 +97,7 @@ export function buildPeople(
               .map((p) => `| [[${slugify(p.name)}|${p.name}]] | ${years(p)} | ${p.country} | ${p.works[0]} |`)
               .join('\n'),
         ]),
+        `**Các trang cùng nhóm:** ${periods.filter((x) => x !== period).map((x) => `[[${x.slug}|${x.title}]]`).join(' · ')}.`,
         cfg.footer,
       ].join('\n\n'),
     }

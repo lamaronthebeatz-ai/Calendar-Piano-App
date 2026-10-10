@@ -35,7 +35,7 @@ Liên quan: [[nghe-nhac-chu-dong]], [[cam-nhan-am-thanh]], [[phan-luong-thinh-gi
 10. [[giang-day-hieu-qua]] — nghiên cứu về buổi học hiệu quả, phản hồi và động lực.
 11. [[day-tre-em]], [[day-nguoi-lon]] — dạy theo lứa tuổi.
 12. [[lo-trinh-tac-pham]], [[thi-cap-do]] — chọn bài và thi cấp độ.
-Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[hoi-hop-bieu-dien]], [[phan-tich-va-bieu-dien]].
+Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[doc-not-nhanh]], [[hoi-hop-bieu-dien]], [[phan-tich-va-bieu-dien]].
 
 ## Ba nguyên tắc chung rút ra từ mục này
 - **Âm thanh trước ký hiệu**: hát, vận động, nghe trước; đọc và gọi tên sau (Kodály, Orff, Dalcroze, Gordon).
@@ -421,7 +421,7 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
     slug: 'thi-cap-do',
     title: 'Hệ thống thi cấp độ piano',
     category: 'musicianship',
-    aliases: ['ABRSM', 'thi ABRSM', 'grade piano', 'thi grade', 'Trinity', 'RCM', 'chứng chỉ piano', 'kỳ thi piano'],
+    aliases: ['ABRSM', 'thi ABRSM', 'grade piano', 'thi grade', 'Trinity', 'RCM', 'chứng chỉ piano', 'kỳ thi piano', 'music exam', 'thi cấp độ'],
     summary: 'Các kỳ thi như ABRSM chia trình độ thành Initial và Grade 1–8; mỗi bài thi gồm bài chuẩn bị, âm giai – hợp âm rải, thị tấu và thi nghe.',
     wiki: 'Associated_Board_of_the_Royal_Schools_of_Music',
     refs: [

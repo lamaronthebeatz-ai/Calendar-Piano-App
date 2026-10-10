@@ -63,19 +63,19 @@ Xếp từ dễ đến khó — cả về bản nhạc lẫn khái niệm phân 
 | 1 | [[phan-tich-minuet-sol-truong]] | Câu nhạc, bốn kết, hai đoạn |
 | 2 | [[phan-tich-canon-pachelbel]] | Bè trầm lặp, biến tấu |
 | 3 | [[phan-tich-wilder-reiter]] | Ba đoạn, giai điệu ở tay trái |
-| 4 | [[phan-tich-prelude-la-truong-op28-so7]] | Đoạn nhạc 8 + 8, hợp âm át phụ |
+| 4 | [[phan-tich-prelude-la-truong-op28-so7]] | Đoạn nhạc 8 + 8, [[hop-am-at-phu|hợp âm át phụ]] |
 | 5 | [[phan-tich-prelude-do-truong]] | Một khuôn hình rải, chỉ đọc hoà âm |
 | 6 | [[phan-tich-gymnopedie-so1]] | Hai hợp âm xen kẽ, [[hoa-am-dieu-thuc|hoà âm điệu thức]] |
 | 7 | [[phan-tich-sonatina-clementi-op36-1]] | Hình thức sonata thu nhỏ |
 | 8 | [[phan-tich-fur-elise]] | Rondo |
-| 9 | [[phan-tich-invention-so-1]] | Motif, đảo, mô phỏng hai bè |
+| 9 | [[phan-tich-invention-so-1]] | Motif, đảo, [[doi-am|mô phỏng]] hai bè |
 | 10 | [[phan-tich-traumerei]] | Câu nhạc và hoà âm [[thoi-ky-lang-man|Lãng mạn]] |
 | 11 | [[phan-tich-sonata-k545]] | Hình thức sonata đầy đủ |
-| 12 | [[phan-tich-prelude-mi-thu-op28-so4]] | Dẫn giọng nửa cung, chủ âm trì hoãn |
+| 12 | [[phan-tich-prelude-mi-thu-op28-so4]] | [[dan-giong|Dẫn giọng]] nửa cung, [[bac-am-giai|chủ âm]] trì hoãn |
 | 13 | [[phan-tich-rondo-alla-turca]] | Rondo và chủ đề biểu đạt "Thổ Nhĩ Kỳ" |
-| 14 | [[phan-tich-prelude-do-thu-bwv847]] | Mô tiến vòng quãng 5, bass ngân, kết kiểu cadenza |
-| 15 | [[phan-tich-anh-trang-chuong-1]] | Hợp âm Napoli, bass ngân át, ba lớp âm thanh |
-| 16 | [[phan-tich-pathetique-chuong-2]] | Rondo chậm, đổi tên trùng âm |
+| 14 | [[phan-tich-prelude-do-thu-bwv847]] | [[mo-tien-hoa-am|Mô tiến]] [[vong-quang-nam|vòng quãng 5]], [[bass-ngan|bass ngân]], kết kiểu [[cadenza|cadenza]] |
+| 15 | [[phan-tich-anh-trang-chuong-1]] | [[hop-am-napoli|Hợp âm Napoli]], bass ngân át, ba lớp âm thanh |
+| 16 | [[phan-tich-pathetique-chuong-2]] | Rondo chậm, đổi tên [[trung-am|trùng âm]] |
 | 17 | [[phan-tich-nocturne-op9-so2]] | Giai điệu trang trí, nhịp 12/8 |
 | 18 | [[phan-tich-golliwogg-cakewalk]] | Đảo phách, trích dẫn và giễu nhại |
 | 19 | [[phan-tich-clair-de-lune]] | [[an-tuong|Hoà âm ấn tượng]] |
@@ -829,13 +829,13 @@ Liên hệ phương pháp: các nhóm nhịp lệch phách là chỗ tốt để
     ],
     body: `
 ## Tổng quan
-Minuet **Sol trưởng** BWV Anh. 114 và Minuet Sol thứ BWV Anh. 115 nằm trong *Sổ tay cho Anna Magdalena Bach* (1725) nên lâu nay được gán cho [[johann-sebastian-bach|Bach]]. Thực ra cả hai đến từ một tổ khúc harpsichord của **Christian Petzold** (1677–1733), nhạc sĩ organ ở Dresden (các nguồn ghi thời điểm xác định lại tác giả là những năm 1970). Bài ở nhịp **3/4**, dài **32 ô**, hai nửa đều có dấu nhắc lại. Bối cảnh vũ điệu: [[minuet-va-trio]].
+Minuet **Sol trưởng** BWV Anh. 114 và Minuet Sol thứ BWV Anh. 115 nằm trong *Sổ tay cho [[lo-trinh-tac-pham|Anna Magdalena]] Bach* (1725) nên lâu nay được gán cho [[johann-sebastian-bach|Bach]]. Thực ra cả hai đến từ một [[the-loai|tổ khúc]] harpsichord của **Christian Petzold** (1677–1733), nhạc sĩ organ ở Dresden (các nguồn ghi thời điểm xác định lại tác giả là những năm 1970). Bài ở nhịp **3/4**, dài **32 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. Bối cảnh vũ điệu: [[minuet-va-trio]].
 
 ## Hình thức hai đoạn
 ::form A_(Sol):16 B_(Sol_→_Rê_→_Sol):16 | Hai đoạn ‖: A :‖: B :‖ (số dưới mỗi khối là số ô)
 | Ô | Nội dung | Kết |
 |---|---|---|
-| 1–8 | Câu nhạc dựng từ một motif lặp và dịch giọng | [[cau-ket|Kết nửa]] trên V (ô 8) |
+| 1–8 | Câu nhạc dựng từ một motif lặp và [[dich-giong|dịch giọng]] | [[cau-ket|Kết nửa]] trên V (ô 8) |
 | 9–16 | Câu đáp, mở đầu giống câu 1 | Kết hoàn toàn ở Sol (ô 16) — ô 1–16 là một **[[cau-nhac|đoạn song song]]** |
 | 17–24 | Chuyển sang **Rê trưởng** (giọng át): C♯ xuất hiện từ ô 20 | Kết hoàn toàn ở Rê (ô 24) |
 | — | Cuối ô 24, tay trái có **C♮**: Rê trưởng thành V7 của Sol, dẫn về giọng chính | |
@@ -860,7 +860,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 | **Âm thanh** | Hai bè: giai điệu và bè trầm |
 | **Hoà âm** | Sol → (ô 17–24) Rê → Sol |
 | **Giai điệu** | Motif lặp và dịch giọng; câu 8 ô |
-| **[[tiet-tau|Nhịp điệu]]** | 3/4, nốt đen và móc đơn |
+| **[[tiet-tau|Nhịp điệu]]** | 3/4, [[truong-do|nốt đen]] và móc đơn |
 | **Phát triển** | Hai đoạn 16 + 16, bốn câu 8 ô |
 `,
   },
@@ -880,7 +880,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-*Album für die Jugend* ("Album cho tuổi trẻ") Op. 68 bắt đầu từ tám bài [[robert-schumann|Schumann]] tặng con gái Marie nhân sinh nhật lần thứ 7 (1/9/1848); bản in hoàn chỉnh có **43 bài**. Theo nhật ký của [[clara-schumann|Clara]] (dẫn trong lời tựa Henle), Robert quyết định viết vì những bài trẻ em thường học "quá tệ". **Wilder Reiter** ("Kỵ sĩ hoang dã") là bài số 8: **La thứ**, nhịp **6/8**, một nốt lấy đà rồi **24 ô** (theo ấn bản viết đầy đủ; các ấn bản khác dùng dấu nhắc lại nên số ô in ra có thể khác).
+*Album für die Jugend* ("Album cho tuổi trẻ") Op. 68 bắt đầu từ tám bài [[robert-schumann|Schumann]] tặng con gái Marie nhân sinh nhật lần thứ 7 (1/9/1848); bản in hoàn chỉnh có **43 bài**. Theo nhật ký của [[clara-schumann|Clara]] (dẫn trong lời tựa Henle), Robert quyết định viết vì những bài trẻ em thường học "quá tệ". **Wilder Reiter** ("Kỵ sĩ hoang dã") là bài số 8: **La thứ**, nhịp **6/8**, một nốt lấy đà rồi **24 ô** (theo [[an-ban-urtext|ấn bản]] viết đầy đủ; các ấn bản khác dùng [[dau-nhac-lai|dấu nhắc lại]] nên số ô in ra có thể khác).
 
 ## Hình thức ba đoạn
 ::form A_(La_thứ):8 B_(Fa_trưởng):8 A_(La_thứ):8 | [[hinh-thuc-am-nhac|Ba đoạn]] A – B – A (số dưới mỗi khối là số ô)
@@ -889,7 +889,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 | 1–8 | A | Giai điệu móc đơn **staccato** ở tay phải, tay trái đánh hợp âm; [[cau-ket|kết nửa]] ở ô 4, kết hoàn toàn ở ô 8 |
 | 9–16 | B | **Fa trưởng** (bậc VI); **giai điệu chuyển xuống tay trái** — chính giai điệu A dịch xuống một quãng 3 trưởng; tay phải đánh hợp âm ngắt |
 | 17–24 | A | Giống ô 1–8 |
-- Không có đoạn chuyển giọng: một nốt lấy đà E đưa thẳng từ Fa trưởng về La thứ.
+- Không có đoạn [[chuyen-giong|chuyển giọng]]: một nốt lấy đà E đưa thẳng từ Fa trưởng về La thứ.
 - Các dấu nhấn *sf* rơi vào ô thứ 2 và 3 của mỗi câu 4 ô (ô 2, 3, 6, 7) — "cú thúc ngựa".
 
 ::rhythm 6/8 e / e-e-e e-e-e / e-e-e q // | Mạch móc đơn đều của nhịp 6/8 — hai phách lớn mỗi ô (xem [[so-chi-nhip]])
@@ -934,7 +934,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-Số 7 trong 24 Prelude Op. 28 (in 1839 — xem [[phan-tich-prelude-mi-thu-op28-so4]] về cả tập): **La trưởng**, nhịp **3/4**, **Andantino**, một nốt lấy đà rồi **16 ô** — chơi chưa đến một phút, là prelude ngắn nhất của tập. Nhịp điệu gợi điệu **mazurka** (vũ điệu Ba Lan).
+Số 7 trong 24 [[the-loai|Prelude]] Op. 28 (in 1839 — xem [[phan-tich-prelude-mi-thu-op28-so4]] về cả tập): **La trưởng**, nhịp **3/4**, **Andantino**, một nốt lấy đà rồi **16 ô** — chơi chưa đến một phút, là prelude ngắn nhất của tập. Nhịp điệu gợi điệu **mazurka** (vũ điệu Ba Lan).
 
 ## Một nhịp điệu, tám lần
 ::rhythm 3/4 q / e.-s q q / h q // | Mỗi nhóm hai ô có cùng nhịp điệu: móc đơn chấm dôi – móc kép – hai nốt đen – nốt trắng (cộng nốt lấy đà)
@@ -945,7 +945,7 @@ Cả bài là **tám lần** lặp lại cùng một khuôn nhịp điệu hai �
 | Ô | Hợp âm |
 |---|---|
 | 1–2 | V7 |
-| 3–4 | I (ô 3 có nốt dựa B♯) |
+| 3–4 | I (ô 3 có [[not-ngoai-hop-am|nốt dựa]] B♯) |
 | 5–6 | V7 |
 | 7–8 | I |
 | 9–10 | V7 (như ô 1–2) |
@@ -954,7 +954,7 @@ Cả bài là **tám lần** lặp lại cùng một khuôn nhịp điệu hai �
 | 13 | ii (Si thứ) |
 | 14 | V9 (E7 thêm F♯) |
 | 15–16 | I |
-- **Hai câu 8 ô** (1–8, 9–16) bắt đầu giống nhau → **[[cau-nhac|đoạn nhạc song song]]**. Câu đầu kết ở I chứ không phải kết nửa điển hình.
+- **Hai câu 8 ô** (1–8, 9–16) bắt đầu giống nhau → **[[cau-nhac|đoạn nhạc song song]]**. Câu đầu kết ở I chứ không phải [[cau-ket|kết nửa]] điển hình.
 - Câu hai đổi hướng ở ô 12 rồi kết **V9 → I** (ô 14–15).
 - Bài **bắt đầu trên hợp âm át**; phần cuối đi theo [[vong-quang-nam|vòng quãng 5]]: F♯ – B – E – A.
 
@@ -962,9 +962,9 @@ Cả bài là **tám lần** lặp lại cùng một khuôn nhịp điệu hai �
 
 ## Gợi ý khi dạy
 - Bài hoàn hảo để **giới thiệu hợp âm át phụ**: cho học trò chơi ô 11–13 với F♯ thường (F♯ thứ) rồi với F♯7, nghe sự khác biệt.
-- Nhịp điệu mazurka: nốt chấm dôi nhẹ, nhấn nhẹ phách 2 của ô đầu mỗi nhóm; giữ [[rubato]] trong khuôn khổ.
+- Nhịp điệu mazurka: [[cham-doi-dau-noi|nốt chấm dôi]] nhẹ, nhấn nhẹ phách 2 của ô đầu mỗi nhóm; giữ [[rubato]] trong khuôn khổ.
 - Ô 12 cần **cân bằng các bè** trong một hợp âm rộng — để nốt A♯ ở đỉnh hát.
-- Bài này truyền cảm hứng cho *Biến tấu trên một chủ đề Chopin* của Federico Mompou (bắt đầu 1938, hoàn thành 1957). (Biến tấu Op. 22 của Rachmaninoff dựa trên Prelude **số 20**, không phải số 7.)
+- Bài này truyền cảm hứng cho *[[bien-tau|Biến tấu]] trên một chủ đề [[frederic-chopin|Chopin]]* của Federico Mompou (bắt đầu 1938, hoàn thành 1957). (Biến tấu Op. 22 của [[sergei-rachmaninoff|Rachmaninoff]] dựa trên Prelude **số 20**, không phải số 7.)
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -991,19 +991,19 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-*Six Progressive Sonatinas* Op. 36 của [[muzio-clementi|Clementi]] được in ở London năm **1797** (Longman & Broderip); sáu bài xếp theo độ khó tăng dần. Ấn bản Henle theo bản in đầu tiên và giữ ngón bấm của chính Clementi. Chương 1 của số 1 ở **Đô trưởng**, nhịp **2/2**, dài **38 ô**, hai nửa đều có dấu nhắc lại. (Chỉ dẫn nhịp độ khác nhau giữa các ấn bản: G. Schirmer in *Spiritoso*; nên xem ấn bản dựa trên bản in gốc.)
+*Six Progressive Sonatinas* Op. 36 của [[muzio-clementi|Clementi]] được in ở London năm **1797** (Longman & Broderip); sáu bài xếp theo độ khó tăng dần. [[an-ban-urtext|Ấn bản]] Henle theo bản in đầu tiên và giữ [[ngon-bam|ngón bấm]] của chính Clementi. Chương 1 của số 1 ở **Đô trưởng**, nhịp **2/2**, dài **38 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. (Chỉ dẫn nhịp độ khác nhau giữa các ấn bản: G. Schirmer in *Spiritoso*; nên xem ấn bản dựa trên bản in gốc.)
 
 ## Hình thức sonata thu nhỏ
 ::form Trình_bày:15 Phát_triển:8 Tái_hiện:15 | Ba phần của [[hinh-thuc-sonata|hình thức sonata]] (số dưới mỗi khối là số ô)
 **Trình bày (ô 1–15)**
 - **Chủ đề 1 (ô 1–4)**: hợp âm Đô trưởng rải, kết nửa trên V ở ô 4 (bè trầm đi xuống G – F – E – D).
-- **Ô 5–7**: chủ đề bắt đầu lại rồi **chuyển giọng** — F♯ xuất hiện ở bè trầm ô 6.
-- **Vùng giọng át (ô 8–15)**: Sol trưởng, gồm âm giai đi lên và nốt lặp; [[cau-ket|kết hoàn toàn]] ở Sol trưởng ở ô 15. Không có "chủ đề 2" trữ tình tương phản — vùng giọng thứ hai được dựng từ hình âm giai và nốt lặp.
+- **Ô 5–7**: chủ đề bắt đầu lại rồi **[[chuyen-giong|chuyển giọng]]** — F♯ xuất hiện ở bè trầm ô 6.
+- **Vùng giọng át (ô 8–15)**: Sol trưởng, gồm âm giai đi lên và [[not-lap-lai|nốt lặp]]; [[cau-ket|kết hoàn toàn]] ở Sol trưởng ở ô 15. Không có "chủ đề 2" trữ tình tương phản — vùng giọng thứ hai được dựng từ hình âm giai và nốt lặp.
 
 ::staff treble C5 E5 C5 G4 / B4 D5 B4 G4 / C5 Eb5 C5 G4 | Motif mở đầu (ô 1); ở phát triển: trên G với bè trầm F (ô 16), rồi sang Đô thứ (ô 17)
 
 **Phát triển (ô 16–23)** — chỉ 8 ô:
-- Ô 16: motif trên G (với F ở bè trầm: V4/2); **ô 17 sang Đô thứ** — một [[hop-am-muon|màu mượn]] từ giọng cùng tên.
+- Ô 16: motif trên G (với F ở bè trầm: V4/2); **ô 17 sang Đô thứ** — một [[hop-am-muon|màu mượn]] từ [[giong-song-song|giọng cùng tên]].
 - Ô 20–21: tay phải lặp các quãng 8 G — một **[[bass-ngan|nốt ngân át]]** ở bè trên.
 - Ô 23: kết nửa trên G, cùng bè trầm G – F – E – D như ô 4 — chuẩn bị tái hiện.
 
@@ -1014,7 +1014,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 
 ## Gợi ý khi dạy
 - Đặt ô 8–15 cạnh ô 31–38: học trò thấy ngay ý nghĩa của "tái hiện chuyển chất liệu giọng át về giọng chủ" — điều Robert Estrin cũng nhấn mạnh khi giảng bài này.
-- Phần phát triển rất ngắn (Estrin: "ngắn gọn hơn của Beethoven") — dịp tốt để giới thiệu khái niệm [[chuc-nang-hinh-thuc|chức năng hình thức]] trước khi học [[phan-tich-sonata-k545|Sonata K. 545]].
+- Phần phát triển rất ngắn (Estrin: "ngắn gọn hơn của [[ludwig-van-beethoven|Beethoven]]") — dịp tốt để giới thiệu khái niệm [[chuc-nang-hinh-thuc|chức năng hình thức]] trước khi học [[phan-tich-sonata-k545|Sonata K. 545]].
 - Kỹ thuật: [[luyen-am-giai|âm giai]] và [[luyen-hop-am-rai|hợp âm rải]] trong khuôn khổ một tác phẩm thật.
 
 ## Tóm tắt theo khung phân tích
@@ -1045,7 +1045,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-**15 Invention hai bè** và **15 Sinfonia ba bè** được [[johann-sebastian-bach|Bach]] chép sạch năm **1723**, xếp theo các giọng đi lên (C, c, D, d, E♭, E, e, F, f, G, g, A, a, B♭, b). Bản sớm hơn của Invention số 1 nằm trong *Sổ tay cho Wilhelm Friedemann Bach* (bắt đầu năm 1720) dưới tên "Praeambulum". Bài ở **Đô trưởng**, nhịp **4/4**, dài **22 [[so-chi-nhip|ô nhịp]]**.
+**15 Invention hai bè** và **15 Sinfonia ba bè** được [[johann-sebastian-bach|Bach]] chép sạch năm **1723**, xếp theo các giọng đi lên (C, c, D, d, E♭, E, e, F, f, G, g, A, a, B♭, b). Bản sớm hơn của Invention số 1 nằm trong *Sổ tay cho [[wilhelm-friedemann-bach|Wilhelm Friedemann Bach]]* (bắt đầu năm 1720) dưới tên "Praeambulum". Bài ở **Đô trưởng**, nhịp **4/4**, dài **22 [[so-chi-nhip|ô nhịp]]**.
 
 ## Bach nói gì về mục đích của tập nhạc
 Trang tiêu đề năm 1723 (văn bản gốc thuộc phạm vi công cộng) nói đây là một "**hướng dẫn chân thành**" giúp người yêu đàn phím, nhất là người ham học:
@@ -1074,7 +1074,7 @@ Câu cuối giải thích vì sao Invention vừa là bài tập [[choi-phuc-die
 | 15–18 | Motif đảo mô tiến đi xuống, các nốt ngân nối tạo [[not-ngoai-hop-am|nốt trễ]] |
 | 18–21 | B♭ xuất hiện, nghiêng về hạ át (Fa); ô 19 motif trở lại ở Đô trong tay phải |
 | **21–22** | Kết hoàn toàn cuối cùng ở Đô |
-Lộ trình **I → V → vi → I** là khung giọng điển hình của một chương nhạc Baroque giọng trưởng (xem [[chuyen-giong]], [[giong-song-song]]).
+Lộ trình **I → V → vi → I** là khung giọng điển hình của một chương nhạc [[thoi-ky-baroque|Baroque]] [[am-giai-truong|giọng trưởng]] (xem [[chuyen-giong]], [[giong-song-song]]).
 
 ## Gợi ý khi dạy
 - Lời tựa đòi hỏi lối chơi **hát**: mỗi bè là một giai điệu. Theo lời tựa ấn bản Bärenreiter (Dadelsen), phương tiện là [[cach-dien-tau|cách diễn tấu]] — luyến những nốt thuộc về nhau, nhấn các nốt giai điệu chính; vài dấu luyến trong bản chép 1723 có lẽ được thêm khi dạy, không có hệ thống.
@@ -1112,16 +1112,16 @@ Bước tiếp theo: các Sinfonia ba bè và [[fugue]]. Lý thuyết nền: [[d
     ],
     body: `
 ## Tổng quan
-24 Prelude Op. 28 của [[frederic-chopin|Chopin]] in năm **1839**, phần lớn hoàn thành ở Valldemossa (Majorca) mùa đông 1838–39. Các bài đi theo [[vong-quang-nam|vòng quãng 5]], mỗi giọng trưởng theo sau là [[giong-song-song|giọng thứ song song]] (C, a, G, e…) — một "tập [[prelude-ung-tac|prelude]]" qua đủ 24 giọng như [[luat-binh-quan|Clavier bình quân]] của Bach. Chopin **không đặt tên** cho từng bài; các biệt danh đều do người sau.
+24 [[the-loai|Prelude]] Op. 28 của [[frederic-chopin|Chopin]] in năm **1839**, phần lớn hoàn thành ở Valldemossa (Majorca) mùa đông 1838–39. Các bài đi theo [[vong-quang-nam|vòng quãng 5]], mỗi [[am-giai-truong|giọng trưởng]] theo sau là [[giong-song-song|giọng thứ song song]] (C, a, G, e…) — một "tập [[prelude-ung-tac|prelude]]" qua đủ 24 giọng như [[luat-binh-quan|Clavier bình quân]] của [[johann-sebastian-bach|Bach]]. Chopin **không đặt tên** cho từng bài; các biệt danh đều do người sau.
 
-Số 4: **Mi thứ**, **Largo**, dài **25 ô** (cộng một nốt lấy đà). Bài được chơi (trên organ, cùng số 6) trong tang lễ Chopin ở nhà thờ Madeleine, Paris, ngày 30/10/1849.
+Số 4: **Mi thứ**, **[[nhip-do|Largo]]**, dài **25 ô** (cộng một nốt lấy đà). Bài được chơi (trên organ, cùng số 6) trong tang lễ Chopin ở nhà thờ Madeleine, Paris, ngày 30/10/1849.
 
 ## Hình thức: hai nửa song song
 ::form Nửa_đầu:12 Nửa_sau:13 | Hai nửa: ô 1–12 kết nửa trên V7; ô 13 bắt đầu lại như ô 1 (số dưới mỗi khối là số ô)
 - **Ô 1–12**: tay phải giữ nốt **B** và thêu lên **C** (bậc 5 – 6 của Mi thứ) trên các hợp âm móc đơn tay trái. **Ô 12**: một hợp âm **B7 (V7)** đứng riêng rồi một nét chạy — [[cau-ket|kết nửa]].
 - **Ô 13** lặp lại ô 1: hai nửa bắt đầu giống nhau ([[cau-nhac|đoạn song song]]).
-- **Ô 16–17: cao trào** — hợp âm có A♯, bè trầm xuống quãng 8 B thấp, nốt cao nhất của bài (C6) ở ô 17. Các ấn bản đặt chữ *stretto* (dồn) quanh ô 16, *smorzando* (lịm dần) quanh ô 19–20 — vị trí chính xác hơi khác nhau giữa các bản.
-- **Ô 23**: một hợp âm duy nhất (âm thanh kiểu 7 – [[hop-am-sau-tang|6 tăng]]) rồi **dấu lặng có dấu ngân** — khoảng lặng nổi tiếng.
+- **Ô 16–17: cao trào** — hợp âm có A♯, bè trầm xuống quãng 8 B thấp, nốt cao nhất của bài (C6) ở ô 17. Các [[an-ban-urtext|ấn bản]] đặt chữ *stretto* (dồn) quanh ô 16, *smorzando* (lịm dần) quanh ô 19–20 — vị trí chính xác hơi khác nhau giữa các bản.
+- **Ô 23**: một hợp âm duy nhất (âm thanh kiểu 7 – [[hop-am-sau-tang|6 tăng]]) rồi **[[dau-lang|dấu lặng]] có [[cach-dien-tau|dấu ngân]]** — khoảng lặng nổi tiếng.
 - **Ô 24–25**: V → i. Hợp âm chủ **nguyên vị** đầu tiên của cả bài chỉ đến ở **ô 25**; ô 1 bắt đầu bằng i ở [[the-dao-hop-am|thể đảo 1]].
 
 ## Hoà âm tay trái: trượt từng nửa cung
@@ -1139,7 +1139,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 | Yếu tố | Tóm tắt |
 |---|---|
 | **Âm thanh** | Giai điệu đơn trên hợp âm móc đơn lặp; cao trào ô 16–17 |
-| **Hoà âm** | Hợp âm trượt nửa cung; V7 ô 12; chủ nguyên vị chỉ ở ô 25 |
+| **Hoà âm** | [[hoa-am-song-song|Hợp âm trượt]] nửa cung; V7 ô 12; chủ nguyên vị chỉ ở ô 25 |
 | **Giai điệu** | Xoay quanh B – C (bậc 5 – 6) |
 | **[[tiet-tau|Nhịp điệu]]** | Largo, móc đơn đều ở tay trái |
 | **Phát triển** | Hai nửa song song 12 + 13 ô; nửa sau phá vỡ đối xứng |
@@ -1160,29 +1160,29 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-Prelude **Đô thứ**, số 2 trong tập 1 *Clavier bình quân* ([[luat-binh-quan]]) của [[johann-sebastian-bach|Bach]] — bản tự ký năm 1722. Một phiên bản sớm hơn nằm trong *Sổ tay cho Wilhelm Friedemann Bach* (bắt đầu 1720). Bài dài **38 ô**, nhịp 4/4. Cùng kiểu "prelude khuôn hình" với [[phan-tich-prelude-do-truong|Prelude Đô trưởng BWV 846]] ngay trước nó, nhưng **cả hai tay** cùng chạy và có một phần kết kịch tính.
+[[the-loai|Prelude]] **Đô thứ**, số 2 trong tập 1 *Clavier bình quân* ([[luat-binh-quan]]) của [[johann-sebastian-bach|Bach]] — bản tự ký năm 1722. Một phiên bản sớm hơn nằm trong *Sổ tay cho [[wilhelm-friedemann-bach|Wilhelm Friedemann Bach]]* (bắt đầu 1720). Bài dài **38 ô**, nhịp 4/4. Cùng kiểu "prelude khuôn hình" với [[phan-tich-prelude-do-truong|Prelude Đô trưởng BWV 846]] ngay trước nó, nhưng **cả hai tay** cùng chạy và có một phần kết kịch tính.
 
 ## Hình thức
 ::form Khuôn_hình:20 Bass_ngân_át:7 Presto:6 Adagio:1 Allegro:4 | Năm đoạn của bài (số dưới mỗi khối là số ô)
 | Ô | Nội dung |
 |---|---|
 | 1–4 | Trên bass ngân C: i – iv – vii°7 – i |
-| 5–10 | **Chuỗi [[mo-tien-hoa-am|mô tiến]] theo [[vong-quang-nam|vòng quãng 5]]**: các hợp âm 7 át phụ ở [[the-dao-hop-am|thể đảo 3]] (V4/2) giải quyết vào hợp âm đảo 1 |
-| 11–14 | Tới **Mi giáng trưởng** (giọng song song trưởng) ở ô 11, nhưng không có kết mạnh |
+| 5–10 | **Chuỗi [[mo-tien-hoa-am|mô tiến]] theo [[vong-quang-nam|vòng quãng 5]]**: các [[hop-am-bay|hợp âm 7 át]] phụ ở [[the-dao-hop-am|thể đảo 3]] (V4/2) giải quyết vào hợp âm đảo 1 |
+| 11–14 | Tới **Mi giáng trưởng** ([[giong-song-song|giọng song song]] trưởng) ở ô 11, nhưng không có kết mạnh |
 | 15–20 | Hợp âm [[hop-am-bay-giam|7 giảm]] đưa về Đô thứ; ô 20 là vii°7/V |
 | **21–28** | **[[bass-ngan|Bass ngân]] trên G** (át); từ ô 25 hai tay đan nhau |
-| 28–33 | **Presto**: tay phải chạy một mình trên G ngân, tay trái vào ở ô 29 nhắc lại tay phải một quãng 8 thấp hơn |
-| 34 | **Adagio**: hợp âm rải và những nốt chạy tự do như hát kể (recitativo) |
+| 28–33 | **[[nhip-do|Presto]]**: tay phải chạy một mình trên G ngân, tay trái vào ở ô 29 nhắc lại tay phải một quãng 8 thấp hơn |
+| 34 | **Adagio**: [[luyen-hop-am-rai|hợp âm rải]] và những nốt chạy tự do như hát kể (recitativo) |
 | 35–38 | **Allegro** trên bass ngân C (có hợp âm [[hop-am-napoli|Napoli]] D♭ ở ô 36); kết bằng hợp âm **Đô trưởng** (quãng 3 Picardy) |
-Các chỉ dẫn Presto – Adagio – Allegro có trong ấn bản Breitkopf 1866; chưa xác minh được chúng có trong bản tự ký hay không.
+Các chỉ dẫn Presto – Adagio – Allegro có trong [[an-ban-urtext|ấn bản]] Breitkopf 1866; chưa xác minh được chúng có trong bản tự ký hay không.
 
 ::grand Eb4+G4/C3=i F4+Ab4/C3=iv F4+Ab4+B3/C3=vii°7 Eb4+G4/C3=i | Khung hoà âm (rút gọn) của ô 1–4 trên bass ngân C; mỗi ô thực tế là một khuôn hình móc kép lặp hai lần
 
 ## Gợi ý khi dạy
 - Mỗi ô 1–24 là **một khuôn hình lặp hai lần**: tập bằng cách **đánh khối** mỗi ô thành hợp âm để đọc hoà âm (giống cách tập [[phan-tich-prelude-do-truong|BWV 846]]).
 - Nhận ra **chuỗi quãng 5** ở ô 5–11 và **bass ngân át** ở ô 21–28 — hai mục tiêu nghe dễ nhất.
-- Phần Presto – Adagio – Allegro có tính **ứng tác**, gần với [[cadenza]] và [[prelude-ung-tac|prelude ứng tác]]: chơi tự do hơn về thời gian nhưng giữ khung hoà âm.
-- Bài phân tích của Barolsky và Martens (*Music Theory Online*, 2012) bàn về cách Glenn Gould làm cho chuỗi khuôn hình "đơn điệu" này trở nên thuyết phục — đọc thêm ở [[phan-tich-va-bieu-dien]].
+- Phần Presto – Adagio – Allegro có tính **[[ngau-hung-ung-tac|ứng tác]]**, gần với [[cadenza]] và [[prelude-ung-tac|prelude ứng tác]]: chơi tự do hơn về thời gian nhưng giữ khung hoà âm.
+- Bài phân tích của Barolsky và Martens (*Music Theory Online*, 2012) bàn về cách [[glenn-gould|Glenn Gould]] làm cho chuỗi khuôn hình "đơn điệu" này trở nên thuyết phục — đọc thêm ở [[phan-tich-va-bieu-dien]].
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -1214,14 +1214,14 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 ## Tổng quan
 [[ludwig-van-beethoven|Beethoven]] viết sonata **Đô thăng thứ** Op. 27 số 2 năm **1801**, in ở Vienna năm 1802 (Cappi), đề tặng nữ học trò **Giulietta Guicciardi**. Tên do chính ông đặt là ***Sonata quasi una fantasia*** ("sonata gần như một fantasia") — chương chậm đặt ở **đầu** thay vì chương nhanh. Tên "**Ánh trăng**" do nhà thơ – nhà phê bình **Ludwig Rellstab** đặt (thường ghi năm 1832, sau khi Beethoven mất) khi so sánh chương này với ánh trăng trên hồ Lucerne.
 
-Chương 1: **Adagio sostenuto**, nhịp **2/2** (alla breve — không phải 4/4 như nhiều bản phổ thông), dài **69 ô**. Đầu bài có lời dặn: *"Si deve suonare tutto questo pezzo delicatissimamente e senza sordino"* — "Cả chương phải chơi thật tinh tế và **không giảm âm**".
+Chương 1: **[[nhip-do|Adagio]] sostenuto**, nhịp **2/2** (alla breve — không phải 4/4 như nhiều bản phổ thông), dài **69 ô**. Đầu bài có lời dặn: *"Si deve suonare tutto questo pezzo delicatissimamente e senza sordino"* — "Cả chương phải chơi thật tinh tế và **không giảm âm**".
 
 ## Hình thức
 ::form Mở_đầu:4 A:23 Bass_ngân_át:14 A′:18 Coda:10 | Các phần của chương (số dưới mỗi khối là số ô)
 | Ô | Nội dung |
 |---|---|
-| 1–4 | Mở đầu: liên ba trên bè trầm quãng 8 đi xuống; ô 3 có **[[hop-am-napoli|hợp âm Napoli]]** (Rê trưởng, bass F♯) dẫn vào V ở ô 4 |
-| 5–27 | Giai điệu vào ở ô 5 (nốt G♯ chấm dôi lặp lại); đi qua Mi trưởng và Si thứ |
+| 1–4 | Mở đầu: [[lien-ba|liên ba]] trên bè trầm quãng 8 đi xuống; ô 3 có **[[hop-am-napoli|hợp âm Napoli]]** (Rê trưởng, bass F♯) dẫn vào V ở ô 4 |
+| 5–27 | Giai điệu vào ở ô 5 (nốt G♯ [[cham-doi-dau-noi|chấm dôi]] lặp lại); đi qua Mi trưởng và Si thứ |
 | **28–41** | **[[bass-ngan|Bass ngân]] trên G♯** (át) gần như suốt các ô 28–40; liên ba rải lên xuống |
 | 42–59 | Giai điệu trở lại ở **Đô thăng thứ** (ô 42); ô 49–50 lại có hợp âm Napoli trước V |
 | 60–69 | Coda: bè trầm luân phiên C♯ – G♯, giai điệu xuống trầm; kết pp (ô 69 ghi *attacca* — vào ngay chương 2) |
@@ -1230,14 +1230,14 @@ Các tác giả gọi hình thức này khác nhau: có người thấy một **
 ::grand G#3+C#4+E4/C#3=i G#3+C#4+E4/B2=i_(bass_B) A3+C#4+E4/A2=VI A3+D4+F#4/F#2=N6 G#3+B#3+D#4/G#2=V | Khung hoà âm (rút gọn) của bốn ô mở đầu: bè trầm (thực tế là quãng 8) đi xuống C♯ – B – A – F♯ – G♯; hợp âm Napoli (N6) ở nửa sau ô 3
 
 ## "Senza sordino" và bàn đạp
-- *Sordino* ở đây là **bộ giảm âm** (damper): "senza sordino" = **nhấn [[ban-dap|pedal vang]]**, không phải pedal nhỏ (*una corda*).
+- *Sordino* ở đây là **[[bo-may-piano|bộ giảm âm]]** (damper): "senza sordino" = **nhấn [[ban-dap|pedal vang]]**, không phải pedal nhỏ (*una corda*).
 - Trên đàn thời Beethoven, giữ pedal lâu bị nhoè ít hơn đàn hiện đại; vì vậy phần lớn người chơi ngày nay **đổi pedal theo hợp âm**, còn một số giữ pedal lâu hơn theo nghĩa đen. Đây là một tranh luận thực sự về [[tinh-xac-thuc-bieu-dien|tính xác thực]] — xem [[phong-cach-dien-tau]].
 
 ## Gợi ý khi dạy
 - **Đếm theo hai phách** (nốt trắng), không đếm bốn — đếm nốt đen dễ làm bài lê thê.
 - Ba lớp âm thanh: bè trầm quãng 8, liên ba **pp** ở giữa, giai điệu ở ngón 5 tay phải — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] trên nền liên ba đều.
 - Nghe kỹ hai lần hợp âm Napoli (ô 3, ô 50): chỗ màu sắc thay đổi đột ngột nhất.
-- Czerny (học trò Beethoven) mô tả chương này như **một cảnh đêm với giọng than vãn vọng lại từ xa** — câu này được dẫn lại nhiều, nhưng chưa đối chiếu được nguyên văn.
+- [[carl-czerny|Czerny]] (học trò Beethoven) mô tả chương này như **một cảnh đêm với giọng than vãn vọng lại từ xa** — câu này được dẫn lại nhiều, nhưng chưa đối chiếu được nguyên văn.
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -1245,7 +1245,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 |---|---|
 | **Âm thanh** | Ba lớp: bè trầm quãng 8, liên ba, giai điệu; pedal vang |
 | **Hoà âm** | Đô thăng thứ; Napoli ở ô 3 và ô 50; bass ngân át ô 28–41 |
-| **Giai điệu** | Ít nốt, nhiều nốt lặp, nhịp chấm dôi |
+| **Giai điệu** | Ít nốt, nhiều [[not-lap-lai|nốt lặp]], nhịp chấm dôi |
 | **[[tiet-tau|Nhịp điệu]]** | Liên ba móc đơn không dứt, nhịp 2/2 |
 | **Phát triển** | 69 ô; trở lại ở ô 42; coda trên bè trầm chủ – át |
 `,
@@ -1266,9 +1266,9 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-Sonata **Đô thứ** Op. 13 được in ở Vienna (Hoffmeister) với tên ***Grande sonate pathétique***, quảng cáo trên báo *Wiener Zeitung* tháng 12/1799, đề tặng Hoàng thân Karl Lichnowsky (Beethoven-Haus ghi thời gian sáng tác 1797–1799). Việc ai đặt chữ "pathétique" — [[ludwig-van-beethoven|Beethoven]] hay nhà xuất bản — các nguồn nói khác nhau.
+[[hinh-thuc-sonata|Sonata]] **Đô thứ** Op. 13 được in ở Vienna (Hoffmeister) với tên ***Grande sonate pathétique***, quảng cáo trên báo *Wiener Zeitung* tháng 12/1799, đề tặng Hoàng thân Karl Lichnowsky (Beethoven-Haus ghi thời gian sáng tác 1797–1799). Việc ai đặt chữ "pathétique" — [[ludwig-van-beethoven|Beethoven]] hay nhà xuất bản — các nguồn nói khác nhau.
 
-Chương 2: **Adagio cantabile**, **La giáng trưởng** (giọng hạ trung âm của Đô thứ), nhịp **2/4**, dài **73 ô**.
+Chương 2: **Adagio cantabile**, **La giáng trưởng** (giọng [[bac-am-giai|hạ trung âm]] của Đô thứ), nhịp **2/4**, dài **73 ô**.
 
 ## Hình thức rondo
 ::form A:16 B:12 A:8 C:14 A:16 Coda:7 | [[rondo|Rondo]] A – B – A – C – A + coda (số dưới mỗi khối là số ô)
@@ -1277,15 +1277,15 @@ Chương 2: **Adagio cantabile**, **La giáng trưởng** (giọng hạ trung â
 | 1–16 | **A** | Chủ đề La giáng trưởng ở âm vực giữa (ô 1–8), nhắc lại cao hơn một quãng 8 (ô 9–16) |
 | 17–28 | **B** | Đoạn xen thứ nhất: Fa thứ, đi tới Mi giáng (át) để quay về |
 | 29–36 | **A** | Chủ đề trở lại, chỉ 8 ô |
-| 37–50 | **C** | Đoạn xen thứ hai: bắt đầu **La giáng thứ** (giọng cùng tên — [[hop-am-muon|màu mượn]]), đệm liên ba; ô 42–47 đi sang **Mi trưởng** (ghi bằng dấu thăng — tương đương F♭, bậc ♭VI) nhờ [[trung-am|đổi tên trùng âm]] |
+| 37–50 | **C** | Đoạn xen thứ hai: bắt đầu **La giáng thứ** ([[giong-song-song|giọng cùng tên]] — [[hop-am-muon|màu mượn]]), đệm [[lien-ba|liên ba]]; ô 42–47 đi sang **Mi trưởng** (ghi bằng [[dau-hoa|dấu thăng]] — tương đương F♭, bậc ♭VI) nhờ [[trung-am|đổi tên trùng âm]] |
 | 51–66 | **A** | Chủ đề lần cuối, đệm bằng **liên ba** lấy từ đoạn C |
 | 67–73 | Coda | Bè trầm luân phiên E♭ – A♭ (V – I) |
 Đoạn xen C là chỗ hoà âm đi xa nhất — một ví dụ [[trung-am-cromatic|quan hệ trung âm cromatic]] thời Beethoven.
 
 ## Gợi ý khi dạy
-- Nghĩ kết cấu như **tứ tấu đàn dây**: giai điệu là violin 1, móc kép ở giữa là viola (rất nhẹ), bè trầm là cello. Một tay thường phải chơi cả giai điệu lẫn một phần đệm — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] trong cùng một tay.
-- *Cantabile* = như hát: luyện [[ky-thuat-cham-phim|legato]] và [[dien-dat-cau-nhac|câu nhạc]] dài 4 ô.
-- Beethoven không ghi số máy đếm nhịp; các con số trong ấn bản là của người biên tập.
+- Nghĩ kết cấu như **[[the-loai|tứ tấu]] đàn dây**: giai điệu là violin 1, móc kép ở giữa là viola (rất nhẹ), bè trầm là cello. Một tay thường phải chơi cả giai điệu lẫn một phần đệm — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] trong cùng một tay.
+- *[[thuat-ngu|Cantabile]]* = như hát: luyện [[ky-thuat-cham-phim|legato]] và [[dien-dat-cau-nhac|câu nhạc]] dài 4 ô.
+- Beethoven không ghi số [[nhip-do|máy đếm nhịp]]; các con số trong [[an-ban-urtext|ấn bản]] là của người biên tập.
 - So sánh: chương 3 cũng là rondo (bảy phần) — xem [[rondo]].
 
 ## Tóm tắt theo khung phân tích
@@ -1318,13 +1318,13 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 *Children's Corner* ("Góc trẻ thơ") gồm sáu bài [[claude-debussy|Debussy]] viết 1906–08, Durand in năm 1908, đề tặng con gái Claude-Emma ("Chouchou", khi ấy 3 tuổi): *"Gửi Chouchou bé bỏng thân yêu, cùng lời xin lỗi dịu dàng của Cha về những gì sắp tới."* Harold Bauer chơi lần đầu ở Paris ngày 18/12/1908. **Golliwogg's Cakewalk** là bài cuối, ở Mi giáng trưởng.
 
 ## Cakewalk và ragtime
-**Cakewalk** là điệu nhảy gốc từ các đồn điền miền Nam nước Mỹ, cùng thời và cùng họ với **ragtime** (xem [[scott-joplin|Scott Joplin]], [[dao-phach]]); đầu thế kỷ 20 nó thành mốt ở Paris. Debussy dùng các hình nhịp **đảo phách** và kiểu đệm "bước nhảy" của ragtime.
+**Cakewalk** là điệu nhảy gốc từ các đồn điền miền Nam nước Mỹ, cùng thời và cùng họ với **[[phong-cach-jazz|ragtime]]** (xem [[scott-joplin|Scott Joplin]], [[dao-phach]]); đầu [[thoi-ky-the-ky-20|thế kỷ 20]] nó thành mốt ở Paris. Debussy dùng các hình nhịp **đảo phách** và kiểu đệm "bước nhảy" của ragtime.
 ::rhythm 2/4 e q e / e-e q // | Hình đảo phách móc đơn – đen – móc đơn, đặc trưng của cakewalk và ragtime (minh hoạ chung, không phải trích bản nhạc)
 
 ## Câu trích Tristan
-- Theo trang Tristan của Đại học Texas (UT Austin), sau khoảng **61 ô**, nhạc ragtime **đột ngột dừng** và vang lên một câu nhạc dài, liền tiếng: motif **"Khát khao"** mở đầu *Tristan und Isolde* của [[richard-wagner|Wagner]] — nhưng **không có hợp âm Tristan**, được hoà âm lại bằng các hợp âm khác.
-- Debussy ghi *Cédez* (chậm lại) và ***avec une grande émotion*** ("với xúc động lớn") — một lời đùa: câu nhạc lãng mạn nhất của Wagner được đặt giữa điệu nhảy của con búp bê. Motif xuất hiện **bốn lần**, mỗi lần bị "trả lời" bằng các nốt móc đơn staccato nhại tiếng **banjo**.
-- PTNA cho biết hoà âm ở đầu chủ đề chính đã có quan hệ trùng âm với hợp âm Tristan; Bauer kể Debussy dặn ông "chú ý đến câu trích Wagner", và trong cuộn piano tự thu, Debussy chơi chậm và cường điệu mỗi lần trích.
+- Theo trang Tristan của Đại học Texas (UT Austin), sau khoảng **61 ô**, nhạc ragtime **đột ngột dừng** và vang lên một [[cau-nhac|câu nhạc]] dài, liền tiếng: motif **"Khát khao"** mở đầu *Tristan und Isolde* của [[richard-wagner|Wagner]] — nhưng **không có hợp âm Tristan**, được hoà âm lại bằng các hợp âm khác.
+- Debussy ghi *Cédez* (chậm lại) và ***avec une grande émotion*** ("với xúc động lớn") — một lời đùa: câu nhạc lãng mạn nhất của Wagner được đặt giữa điệu nhảy của con búp bê. Motif xuất hiện **bốn lần**, mỗi lần bị "trả lời" bằng các [[truong-do|nốt móc đơn]] [[cach-dien-tau|staccato]] nhại tiếng **banjo**.
+- PTNA cho biết hoà âm ở đầu chủ đề chính đã có quan hệ [[trung-am|trùng âm]] với hợp âm Tristan; Bauer kể Debussy dặn ông "chú ý đến câu trích Wagner", và trong cuộn piano tự thu, Debussy chơi chậm và cường điệu mỗi lần trích.
 - Bối cảnh: thái độ của Debussy với Wagner — từ ngưỡng mộ đến chống đối — là một chủ đề lớn của nhạc Pháp đầu thế kỷ 20 (xem [[an-tuong]], [[hoa-am-cromatic]]).
 Số ô chính xác của từng lần trích cần đối chiếu trên bản in Durand (IMSLP).
 

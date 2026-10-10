@@ -39,7 +39,7 @@ Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép
 2. **Câu nhạc**: [[cau-nhac]] → [[mo-rong-cau-nhac]] → [[sieu-nhip]]; ôn [[cau-ket]].
 3. **Hình thức nhỏ**: [[hinh-thuc-am-nhac]] (hai đoạn, ba đoạn) → [[minuet-va-trio]] (ba đoạn kép).
 4. **Hình thức lớn**: [[bien-tau]] → [[ostinato]] → [[rondo]] → [[hinh-thuc-sonata]] → [[hinh-thuc-concerto]].
-5. **Lý thuyết hình thức hiện đại**: [[chuc-nang-hinh-thuc]], [[luoc-do-galant]].
+5. **Lý thuyết hình thức hiện đại**: [[chuc-nang-hinh-thuc]], [[luoc-do-galant]], [[ly-thuyet-chu-de]] (các "chủ đề biểu đạt" quen thuộc).
 6. **Đối âm và hình thức phức điệu**: [[doi-am]] → [[doi-am-5-loai]] → [[doi-am-kep]] → [[fugue]].
 7. **Kết cấu, thể loại, thế kỷ 19**: [[ket-cau]] → [[the-loai]] → [[bien-doi-chu-de]].
 8. **Hình thức phổ thông và jazz**: [[blues-12-nhip]], [[hinh-thuc-ca-khuc-32]].
@@ -137,7 +137,7 @@ Motif → [[cau-nhac]] → đoạn → [[hinh-thuc-am-nhac|hình thức]]. Các 
     title: 'Câu nhạc và đoạn nhạc',
     category: 'form',
     also: ['analysis'],
-    aliases: ['câu nhạc', 'đoạn nhạc', 'phrase', 'period', 'câu hỏi câu trả lời', 'tiết nhạc', 'antecedent', 'consequent'],
+    aliases: ['câu nhạc', 'đoạn nhạc', 'phrase', 'period', 'câu hỏi câu trả lời', 'tiết nhạc', 'antecedent', 'consequent', 'sentence', 'câu kiểu sentence'],
     summary: 'Câu nhạc là ý nhạc trọn vẹn kết thúc bằng một kết (thường 4 ô nhịp); hai câu hỏi – đáp tạo thành đoạn nhạc.',
     wiki: 'Phrase_(music)',
     refs: [
@@ -240,7 +240,7 @@ Lưu ý: cách nhìn này giả định chuẩn 4–8 ô; một số nhà lý th
     title: 'Hình thức âm nhạc',
     category: 'form',
     also: ['analysis'],
-    aliases: ['hình thức', 'cấu trúc bài', 'musical form', 'hai đoạn', 'ba đoạn', 'binary', 'ternary', 'ABA', 'AB', 'verse chorus', 'phiên khúc điệp khúc'],
+    aliases: ['hình thức', 'cấu trúc bài', 'musical form', 'hai đoạn', 'ba đoạn', 'binary', 'ternary', 'ABA', 'AB', 'verse chorus', 'phiên khúc điệp khúc', 'binary form', 'ternary form', 'hình thức hai đoạn', 'hình thức ba đoạn'],
     summary: 'Cách sắp xếp các phần của một tác phẩm, ký hiệu bằng chữ cái: A, B, A′… Phổ biến: hai đoạn (AB), ba đoạn (ABA).',
     wiki: 'Musical_form',
     refs: [
@@ -531,7 +531,7 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
     title: 'Kết cấu âm nhạc',
     category: 'form',
     also: ['analysis'],
-    aliases: ['texture', 'đơn âm', 'chủ điệu', 'monophony', 'homophony', 'polyphony', 'giai điệu và đệm'],
+    aliases: ['texture', 'đơn âm', 'chủ điệu', 'monophony', 'homophony', 'polyphony', 'giai điệu và đệm', 'heterophony', 'dị âm'],
     summary: 'Cách các lớp âm thanh kết hợp với nhau: đơn âm (một giai điệu), chủ điệu (giai điệu + đệm), phức điệu (nhiều giai điệu độc lập).',
     wiki: 'Texture_(music)',
     refs: [
@@ -547,7 +547,7 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
 | **Chủ điệu** (homophony) | Một giai điệu chính + [[hop-am-ba|hợp âm]] đệm | Phần lớn nhạc pop, [[the-loai|nocturne]] [[frederic-chopin|Chopin]] |
 | **Hợp âm khối** (homorhythm) | Mọi bè cùng [[tiet-tau|nhịp điệu]] | Thánh ca 4 bè |
 | **Phức điệu** (polyphony) | Nhiều giai điệu độc lập, ngang hàng | Fugue, canon của [[johann-sebastian-bach|Bach]] |
-| **Dị âm** (heterophony) | Nhiều người chơi cùng giai điệu với [[bien-tau|biến tấu]] nhỏ khác nhau | Nhạc dân tộc, nhã nhạc cung đình |
+| **Dị âm** (heterophony) | Nhiều người chơi cùng giai điệu với [[bien-tau|biến tấu]] nhỏ khác nhau | Nhạc dân tộc, [[am-nhac-truyen-thong-viet-nam|nhã nhạc]] cung đình |
 
 ## Lịch sử kết cấu trong âm nhạc phương Tây
 1. **Đơn âm** — Thánh ca là phong cách chủ đạo ở phần lớn châu Âu thời [[thoi-ky-trung-co|Trung cổ]]. Nhiều người hát đồng âm hoặc cách [[quang|quãng 8]] vẫn là đơn âm: kết cấu tính theo **số giai điệu**, không theo số người hát.
@@ -562,7 +562,7 @@ Từ "homophony" có nghĩa khác trong thời cổ đại; nó vào tiếng Anh
 - **Hợp âm khối**: đánh cả hợp âm cùng lúc.
 - **[[luyen-hop-am-rai|Hợp âm rải]]** (arpeggio): đánh lần lượt từng nốt.
 - **Bass Alberti**: thấp – cao – giữa – cao (C–G–E–G), rất phổ biến thời [[wolfgang-amadeus-mozart|Mozart]].
-- **Stride / [[stride-piano|oom-pah]]**: bass trầm ở [[so-chi-nhip|phách mạnh]], hợp âm ở phách nhẹ (valse, ragtime).
+- **Stride / [[stride-piano|oom-pah]]**: bass trầm ở [[so-chi-nhip|phách mạnh]], hợp âm ở phách nhẹ (valse, [[phong-cach-jazz|ragtime]]).
 
 Cách luyện từng kiểu đệm: [[dem-hat-piano]].
 
@@ -686,7 +686,7 @@ Hai [[the-loai|thể loại]] [[thoi-ky-baroque|Baroque]] dạng [[bien-tau]] tr
 **"Boléro" — Ravel (1928).** Trống snare chơi một mẫu nhịp **2 [[so-chi-nhip|ô nhịp]], 8 phách**, lặp lại **không đổi 169 lần** cho đến ô nhịp áp chót. Hai giai điệu luân phiên ở phía trên; thứ duy nhất thay đổi là **phối khí** và **âm lượng** — tăng dần từ rất nhỏ đến rất to (xem [[cuong-do]]). Công diễn lần đầu ở Nhà hát Opéra Paris ngày 22/11/1928.
 
 ## Trong nhạc hiện đại
-Riff và vòng lặp (loop) là ostinato; nhạc [[toi-gian]] được xây hoàn toàn từ ostinato. Bè trầm boogie-woogie trong [[blues-12-nhip]] cũng là ostinato.
+Riff và vòng lặp (loop) là ostinato; nhạc [[toi-gian]] được xây hoàn toàn từ ostinato. Bè trầm [[phong-cach-jazz|boogie-woogie]] trong [[blues-12-nhip]] cũng là ostinato.
 
 Liên quan: [[bass-ngan]] (một nốt lặp/ngân thay vì một mẫu), [[ket-cau]].
 `,
@@ -781,7 +781,7 @@ Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, 
     slug: 'the-loai',
     title: 'Thể loại khí nhạc',
     category: 'form',
-    aliases: ['thể loại', 'genre', 'giao hưởng', 'symphony', 'concerto', 'tổ khúc', 'suite', 'tứ tấu', 'etude', 'nocturne', 'prelude', 'ballade', 'tiểu phẩm'],
+    aliases: ['thể loại', 'genre', 'giao hưởng', 'symphony', 'concerto', 'tổ khúc', 'suite', 'tứ tấu', 'etude', 'nocturne', 'prelude', 'ballade', 'tiểu phẩm', 'overture'],
     summary: 'Các thể loại lớn và nhỏ của nhạc cổ điển — sonata, giao hưởng, concerto, tổ khúc, tiểu phẩm — và cấu trúc chương điển hình của chúng.',
     wiki: 'Musical_form',
     refs: [

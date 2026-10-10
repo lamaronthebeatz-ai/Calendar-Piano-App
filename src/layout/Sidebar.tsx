@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
-import { MoonIcon, PlusIcon, SearchIcon, SunIcon } from '../components/icons'
+import { BrandMark, MoonIcon, PlusIcon, SearchIcon, SunIcon } from '../components/icons'
 import { navItems } from './navItems'
 import { useUIStore } from '../store/uiStore'
 import { useSettings } from '../hooks/useLiveData'
@@ -19,21 +19,28 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="hidden w-64 shrink-0 flex-col border-r border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-6 lg:flex">
-      <div className="mb-8 px-2">
-        <p className="text-[15px] font-semibold tracking-tight text-[var(--color-ink)]">Lịch Dạy Piano</p>
-        <p className="text-[12px] text-[var(--color-ink-muted)]">Quản lý dạy piano cá nhân</p>
+    <aside className="relative hidden w-[260px] shrink-0 flex-col border-r border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-6 lg:flex">
+      {/* A faint wash of gold behind the brand, the only ornament on the rail. */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(120%_80%_at_0%_0%,color-mix(in_oklch,var(--color-gold)_14%,transparent),transparent_70%)]" />
+
+      <div className="relative mb-7 flex items-center gap-3 px-2">
+        <BrandMark width={36} height={36} className="shrink-0 drop-shadow-sm" />
+        <div className="min-w-0">
+          <p className="font-display text-[18px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">Lịch Dạy Piano</p>
+          <p className="text-[11.5px] uppercase tracking-[0.14em] text-[var(--color-gold)]">Studio & thư viện</p>
+        </div>
       </div>
 
       <button
         onClick={() => openCreateLesson()}
-        className="mb-5 flex h-10 items-center justify-center gap-2 rounded-xl bg-[var(--color-accent)] text-sm font-medium text-[var(--color-accent-ink)] transition-opacity hover:opacity-90"
+        className="btn-sheen relative mb-6 flex h-11 items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-b from-[color-mix(in_oklch,var(--color-accent)_88%,white)] to-[var(--color-accent)] text-sm font-medium text-[var(--color-accent-ink)] shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-px active:translate-y-0"
       >
         <PlusIcon width={16} height={16} />
         Thêm buổi học
       </button>
 
-      <nav className="flex flex-1 flex-col gap-1">
+      <p className="mb-2 px-3 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-faint)]">Điều hướng</p>
+      <nav className="flex flex-1 flex-col gap-0.5">
         {navItems.map((item) => (
           <NavLink
             key={item.to}
@@ -41,32 +48,42 @@ export function Sidebar() {
             end={item.end}
             className={({ isActive }) =>
               clsx(
-                'flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors',
+                'group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium transition-all duration-200',
                 isActive
-                  ? 'bg-[var(--color-surface-sunken)] text-[var(--color-ink)]'
+                  ? 'bg-[color-mix(in_oklch,var(--color-accent)_10%,var(--color-surface-raised))] text-[var(--color-ink)]'
                   : 'text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]',
               )
             }
           >
-            <item.icon width={18} height={18} />
-            {item.label}
+            {({ isActive }) => (
+              <>
+                <span
+                  className={clsx(
+                    'absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-[var(--color-gold)] transition-all duration-300',
+                    isActive ? 'opacity-100' : 'scale-y-0 opacity-0',
+                  )}
+                />
+                <item.icon width={18} height={18} className={clsx('transition-colors', isActive ? 'text-[var(--color-accent)]' : 'group-hover:text-[var(--color-ink)]')} />
+                {item.label}
+              </>
+            )}
           </NavLink>
         ))}
       </nav>
 
-      <div className="flex items-center gap-1 border-t border-[var(--color-border)] pt-4">
+      <div className="flex items-center gap-1 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1">
         <button
           onClick={() => setSearchOpen(true)}
-          className="flex h-9 flex-1 items-center gap-2 rounded-lg px-2.5 text-[13px] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)]"
+          className="flex h-9 flex-1 items-center gap-2 rounded-xl px-2.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-raised)] hover:text-[var(--color-ink)]"
         >
           <SearchIcon width={16} height={16} />
           Tìm kiếm
-          <kbd className="ml-auto rounded border border-[var(--color-border)] px-1.5 py-0.5 text-[10px] text-[var(--color-ink-faint)]">/</kbd>
+          <kbd className="ml-auto rounded-md border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-1.5 py-0.5 font-sans text-[10px] text-[var(--color-ink-faint)]">/</kbd>
         </button>
         <button
           onClick={toggleTheme}
           aria-label="Đổi giao diện sáng/tối"
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)]"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-raised)] hover:text-[var(--color-gold)]"
         >
           {isDark ? <MoonIcon width={16} height={16} /> : <SunIcon width={16} height={16} />}
         </button>

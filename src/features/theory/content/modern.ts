@@ -37,7 +37,7 @@ export const modern: Article[] = [
 | Thế kỷ 20 | Phần II: [[hoa-am-the-ky-20]] |
 
 ## Song song với nhạc cổ điển
-Từ đầu thế kỷ 20: **jazz** (ragtime → swing → bebop → modal…), rồi nhạc pop/rock — kế thừa [[chuc-nang-hoa-am|hoà âm chức năng]] và phát triển theo hướng riêng (xem [[swing]], [[he-thong-hop-am-am-giai]]).
+Từ đầu thế kỷ 20: **jazz** ([[phong-cach-jazz|ragtime → swing → bebop → modal…]]), rồi nhạc pop/rock — kế thừa [[chuc-nang-hoa-am|hoà âm chức năng]] và phát triển theo hướng riêng (xem [[swing]], [[he-thong-hop-am-am-giai]]).
 
 Danh sách đầy đủ theo từng thời kỳ và trường phái: xem nhóm **Nhà soạn nhạc** — mỗi người có một trang riêng.
 
@@ -45,6 +45,87 @@ Danh sách đầy đủ theo từng thời kỳ và trường phái: xem nhóm *
 Biết thời kỳ giúp chọn cách chơi đúng phong cách: hoa mỹ và cách dùng pedal (xem [[ky-hieu-hoa-my]], [[ban-dap]]) ở nhạc Bach khác hẳn Chopin.
 
 Hệ thống lên dây cũng thay đổi theo thời gian: xem [[luat-binh-quan]].
+
+## Âm nhạc thế kỷ 20 trong mục này
+- Màu sắc mới: [[an-tuong]], [[hoa-am-dieu-thuc]], [[toan-diatonic]], [[am-giai-bat-cung]], [[dieu-thuc-chuyen-vi-gioi-han]].
+- Chồng nhiều tầng: [[hop-am-chong]], [[da-dieu-tinh]], [[am-cum]].
+- Rời điệu tính: [[phi-dieu-tinh]], [[ky-thuat-12-am]], [[tap-hop-cao-do]].
+- Sau 1950: [[toi-gian]], [[nhac-pho]].
+Lộ trình đầy đủ: [[hoa-am-the-ky-20]].
+
+## Nghệ sĩ piano qua các thời kỳ
+[[nghe-si-piano-the-ky-19]] · [[nghe-si-piano-dau-the-ky-20]] · [[nghe-si-piano-hien-dai]] · [[nghe-si-piano-jazz]] — và [[truong-phai-piano|các trường phái piano]].
+
+Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
+`,
+  },
+  {
+    slug: 'am-nhac-truyen-thong-viet-nam',
+    title: 'Âm nhạc truyền thống Việt Nam và ngũ cung',
+    category: 'modern',
+    also: ['scales', 'listening'],
+    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'music of Vietnam', 'ngũ cung Việt Nam', 'hò xự xang xê cống', 'điệu Bắc', 'điệu Nam', 'hơi Bắc', 'hơi Nam', 'đờn ca tài tử', 'vọng cổ', 'ca trù', 'quan họ', 'nhã nhạc', 'đàn bầu', 'đàn tranh', 'đàn nguyệt', 'đàn nhị', 'đàn đáy'],
+    summary: 'Nhạc truyền thống Việt Nam dựa trên thang năm âm (Hò – Xự – Xang – Xê – Cống), nhưng cao độ thực không theo luật bình quân và được "nhấn, rung, luyến" theo từng điệu (Bắc, Nam; hơi Xuân, Ai, Oán). Bài này giới thiệu các di sản được UNESCO ghi danh, nhạc cụ chính, đờn ca tài tử và vọng cổ, và cách người dạy piano có thể đưa chất liệu dân tộc vào bài học.',
+    refs: [
+      ['UNESCO — Nhã nhạc, Vietnamese court music', 'https://ich.unesco.org/en/RL/00074'],
+      ['UNESCO — Space of gong culture', 'https://ich.unesco.org/en/RL/space-of-gong-culture-00120'],
+      ['UNESCO — Decision 4.COM 14.12 (Ca trù)', 'https://ich.unesco.org/en/decisions/4.COM/14.12'],
+      ['UNESCO — Decision 12.COM 11.C (Hát Xoan)', 'https://ich.unesco.org/en/decisions/12.COM/11.C'],
+      ['UNESCO — Decision 9.COM 5.b.8 (Ví, Giặm)', 'https://ich.unesco.org/en/Decisions/9.COM/5.b.8'],
+      ['UNESCO — Bài Chòi', 'https://ich.unesco.org/en/RL/the-art-of-bai-choi-in-central-viet-nam-01222'],
+      ['UNESCO — Practices of Then', 'https://ich.unesco.org/en/RL/practices-of-then-by-tay-nung-and-thai-ethnic-groups-in-viet-nam-01379'],
+      ['UNESCO — Viet Nam: elements on the lists', 'https://ich.unesco.org/en/state/viet-nam-VN?info=elements-on-the-lists'],
+      ['Viện Âm nhạc — Conversation about Đờn ca tài tử', 'https://vienamnhac.vn/heritage/don-ca-tai-tu/articles/conversation-about-%C4%91on-ca-tai-tu'],
+      ['CUNY Academic Works — luận văn về vọng cổ', 'https://academicworks.cuny.edu/cgi/viewcontent.cgi?article=1372&context=hc_sas_etds'],
+      ['Smithsonian Folkways — UNESCO Collection liner notes', 'https://folkways-media.si.edu/docs/folkways/artwork/UNES08049.pdf'],
+      ['Wikipedia — Đàn bầu', 'https://en.wikipedia.org/wiki/%C4%90%C3%A0n_b%E1%BA%A7u'],
+      ['Wikipedia — Đàn tranh', 'https://en.wikipedia.org/wiki/%C4%90%C3%A0n_tranh'],
+      ['Wikipedia — Vọng cổ', 'https://en.wikipedia.org/wiki/V%E1%BB%8Dng_c%E1%BB%95'],
+      ['Wikipedia — Cao Văn Lầu', 'https://en.wikipedia.org/wiki/Cao_V%C4%83n_L%E1%BA%A7u'],
+      ['Báo Văn hoá — Gìn giữ bài bản tổ đờn ca tài tử', 'https://baovanhoa.vn/nghe-thuat/no-luc-gin-giu-bai-ban-to-don-ca-tai-tu-94329.html'],
+    ],
+    body: `
+## Thang năm âm và tên gọi
+Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê – Cống** (rồi Liu, Ú… ở quãng 8 trên). Theo Viện Âm nhạc, ở **điệu Bắc** chúng tương ứng **gần đúng** với Đô – Rê – Fa – Sol – La:
+::staff treble C4=Hò D4=Xự F4=Xang G4=Xê A4=Cống C5=Liu | Hò – Xự – Xang – Xê – Cống ứng với C – D – F – G – A (điệu Bắc, gần đúng): một [[am-giai-ngu-cung|thang ngũ cung]]
+- Tên phương Tây chỉ là **xấp xỉ**: cao độ thực **không theo** [[luat-binh-quan|luật bình quân]].
+- Trần Văn Khê: khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ **các bậc cách đều hay không đều**. Theo Viện Âm nhạc, ở **điệu Nam** (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp.
+- Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, hơi Oán gần với hơi vọng cổ, bậc 2 có **biên độ** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
+- Chưa tìm được nguồn đáng tin ghi số cent chính xác cho từng hơi, nên bài này **không** đưa con số.
+**Trên piano**: chỉ chơi được **khung** năm âm (phím đen, hoặc C – D – F – G – A); các nốt "nhấn" nằm **giữa** hai phím. Đây là bài học tốt về giới hạn của [[luat-binh-quan]] và về [[cao-do]].
+
+## Di sản được UNESCO ghi danh
+| Di sản | Năm |
+|---|---|
+| Nhã nhạc cung đình Huế | Tuyên bố Kiệt tác 2003; vào Danh sách đại diện 2008 |
+| Không gian văn hoá cồng chiêng Tây Nguyên | Tuyên bố 2005; Danh sách đại diện 2008 |
+| Ca trù | 2009, Danh sách **cần bảo vệ khẩn cấp** |
+| Quan họ Bắc Ninh | 2009, Danh sách đại diện |
+| Hát Xoan Phú Thọ | 2011 khẩn cấp → **2017** chuyển sang Danh sách đại diện (trường hợp chuyển danh sách đầu tiên của Công ước) |
+| Đờn ca tài tử Nam Bộ | 2013 |
+| Ví, Giặm Nghệ Tĩnh | 2014 |
+| Bài Chòi Trung Bộ | 2017 |
+| Thực hành Then (Tày, Nùng, Thái) | 2019 — đệm bằng đàn tính |
+
+## Nhạc cụ
+| Nhạc cụ | Loại | Điểm đáng chú ý |
+|---|---|---|
+| **Đàn bầu** (độc huyền cầm) | Một dây | Chơi bằng **[[chuoi-boi-am|bồi âm]]**: chạm ở 1/2 dây cho quãng 8, ở 2/3 dây cho quãng 5; tay trái uốn **cần đàn** để đổi độ căng dây, nắn cao độ và rung |
+| **Đàn tranh** | Đàn dây gảy, họ hàng với guzheng | Từ 14, 15 lên **16 dây** (thế kỷ 19) thành chuẩn; lên dây theo tai |
+| **Đàn nguyệt** (đàn kìm) | Hai dây, hộp đàn tròn như mặt trăng | Dây xưa bằng tơ xe, nay bằng nylon |
+| **Đàn nhị** (đàn cò) | Hai dây, kéo vĩ | Một đầu bầu đàn bịt da rắn |
+| **Đàn đáy** | Ba dây, cần dài, hộp hình thang | Đệm cho **ca trù** |
+| **Phách** | Gõ | Đào nương ca trù gõ hai que lên bàn phách bằng tre hoặc gỗ; cùng trống chầu |
+::wiki Đàn_bầu | Đàn bầu: âm thanh chủ yếu là bồi âm — xem [[chuoi-boi-am]]
+
+## Đờn ca tài tử và vọng cổ
+- Đờn ca tài tử Nam Bộ có **20 bài bản tổ**: 6 Bắc, 3 Nam, 4 Oán và 7 bài Lễ (dùng trong nghi lễ). Ví dụ: Lưu thủy trường, Phú lục, Xuân tình (Bắc); Nam xuân, Nam ai (Nam); Tứ đại oán (Oán); Xàng xê, Long đăng (Lễ). Danh sách tên khác nhau đôi chút giữa các nguồn.
+- **Vọng cổ** bắt nguồn từ "**Dạ cổ hoài lang**" của Cao Văn Lầu (Sáu Lầu, 1892–1976, Bạc Liêu), sáng tác khoảng **1918–1919** (các nguồn không thống nhất năm), rồi phổ biến rộng từ khoảng 1927.
+
+## Chất liệu dân tộc trong piano
+- Các tác phẩm [[piano-viet-nam|piano Việt Nam]] dùng dân ca thường giữ **thang ngũ cung** và [[doi-am|mô phỏng]] nhấn – luyến bằng [[ky-hieu-hoa-my|hoa mỹ]] và [[not-ngoai-hop-am|nốt lướt]]. Ví dụ được một số nguồn nhắc đến (chưa kiểm chứng bằng bản nhạc): "Múa nàng trúc xinh" của Hoàng Cương ([[hinh-thuc-am-nhac|hình thức ba đoạn]], dùng "Cây trúc xinh" của quan họ), "Con gà rừng" cho hai đàn piano của Trần Ngọc Xương. Cũng có các tuyển tập phổ dân ca cho piano dùng trong giảng dạy.
+- Gợi ý dạy: cho học trò chơi giai điệu dân ca trên phím đen ([[ngau-hung-piano|ngẫu hứng ngũ cung]]), so sánh với cách [[an-tuong|Debussy]] dùng ngũ cung, và nghe bản gốc để cảm nhận những cao độ **không có** trên phím đàn.
+Liên quan: [[am-giai-ngu-cung]], [[dieu-thuc]], [[am-sac]], [[nhac-ly-co-ban]].
 `,
   },
   {
@@ -357,7 +438,7 @@ Trong nhạc pop và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở r
 ## Âm cụm trong piano jazz
 TJPS gọi đây là **hoà âm quãng 2** (secundal): hợp âm có ít nhất ba nốt **liền bậc** trong một âm giai. Độ nghịch tuỳ âm giai: âm cụm **cromatic** gắt nhất, âm cụm **ngũ cung** êm hơn nhiều.
 ::staff treble C4+Db4+D4=cromatic C4+D4+E4+G4=ngũ_cung A3+B3+D4+E4=đa_nghĩa | C – D♭ – D (gắt); C – D – E – G lấy từ ngũ cung (êm); A – B – D – E có thể là Cmaj13, E7sus4 hoặc D6/9
-- **Hai cách dùng**: dữ dội, gây sốc như trong free jazz — Cecil Taylor dùng âm cụm để tránh mọi giọng (xem [[post-bop-free-jazz]]); hoặc **mềm** trong ballad — lối TJPS gắn với Bill Evans.
+- **Hai cách dùng**: dữ dội, gây sốc như trong free jazz — Cecil Taylor dùng âm cụm để tránh mọi giọng (xem [[post-bop-free-jazz]]); hoặc **mềm** trong ballad — lối TJPS gắn với [[bill-evans|Bill Evans]].
 - Với ballad: tránh quãng 2 thứ ở trên cùng; đặt âm cụm ở **âm vực giữa** (thấp quá thì đục, cao quá thì mỏng).
 - TJPS liệt kê các pianist dùng âm cụm: Jelly Roll Morton, [[art-tatum|Art Tatum]], Herbie Nichols, Cecil Taylor, [[dave-brubeck|Dave Brubeck]], Horace Silver, [[duke-ellington|Duke Ellington]], [[thelonious-monk|Thelonious Monk]] — Monk có lúc chơi âm cụm bằng cả khuỷu tay, và quãng 2 thứ là "chữ ký" của ông (xem [[the-bam-bac-thay-jazz]]).
 Bảng chọn thế bấm theo phong cách: [[chon-the-bam-jazz]].

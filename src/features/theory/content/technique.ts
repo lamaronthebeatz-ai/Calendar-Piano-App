@@ -363,7 +363,7 @@ Khi đã vững nhịp, sự co giãn có chủ đích ([[rubato]]) mới thực
     title: 'Phương pháp luyện tập',
     category: 'technique',
     also: ['musicianship'],
-    aliases: ['luyện tập hiệu quả', 'cách tập đàn', 'practice', 'interleaved practice', 'luyện xen kẽ', 'chia nhỏ', 'chunking', 'biến thể tiết tấu', 'tập tay riêng'],
+    aliases: ['luyện tập hiệu quả', 'cách tập đàn', 'practice', 'interleaved practice', 'luyện xen kẽ', 'chia nhỏ', 'chunking', 'biến thể tiết tấu', 'tập tay riêng', 'practice method', 'phương pháp tập đàn'],
     summary: 'Chia nhỏ đoạn khó, thay đổi cách tập (tiết tấu, tay riêng, tốc độ), chia thời gian thành nhiều buổi ngắn và luyện xen kẽ.',
     wiki: 'Practice_(learning_method)',
     refs: [
@@ -414,7 +414,7 @@ Giáo viên lưu ý: cách này hiệu quả khi dùng cẩn thận nhưng **kh�
 ## Chia nhỏ và nốt đích
 Cắt câu dài thành từng **cụm** ngắn, mỗi cụm bắt đầu bằng một **nốt đích** rõ ràng; tập từng cụm rồi nối lại. Biết cấu trúc [[cau-nhac]] và [[motif]] giúp chọn chỗ cắt hợp lý.
 
-Liên quan: [[kiem-soat-toc-do]], [[hoc-thuoc-bai]].
+Liên quan: [[kiem-soat-toc-do]], [[hoc-thuoc-bai]]. Với người dạy — buổi học hiệu quả và động lực của học trò: [[giang-day-hieu-qua]].
 
 Lộ trình tập jazz: [[hoc-piano-jazz]].
 `,
@@ -537,7 +537,7 @@ Phần lớn nghiên cứu có quy mô nhỏ hoặc mang tính định tính; b�
     slug: 'suc-khoe-nguoi-choi-dan',
     title: 'Sức khoẻ người chơi đàn',
     category: 'technique',
-    aliases: ['chấn thương', 'đau tay', 'phòng chấn thương', 'khởi động', 'nghỉ giữa giờ', 'loạn trương lực cơ khu trú', 'focal dystonia', 'căng cơ', 'tendinitis'],
+    aliases: ['chấn thương', 'đau tay', 'phòng chấn thương', 'khởi động', 'nghỉ giữa giờ', 'loạn trương lực cơ khu trú', 'focal dystonia', 'căng cơ', 'tendinitis', 'injury', 'performance injury'],
     summary: 'Tập quá lâu không nghỉ, căng cơ và tư thế sai làm tăng nguy cơ chấn thương; khởi động, nghỉ giữa giờ và dừng khi đau giúp phòng tránh.',
     wiki: 'Repetitive_strain_injury',
     refs: [
@@ -677,7 +677,7 @@ Lỗi thường gặp: tay đi theo hình **chữ V ngược**, hạ xuống ở
 2. Lặp lại với nốt giữa, rồi nốt trên.
 3. Thêm dần nốt cho đến đủ hợp âm.
 
-[[dem-hat-piano|Kiểu đệm]] [[stride-piano|stride]] trong ragtime (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
+[[dem-hat-piano|Kiểu đệm]] [[stride-piano|stride]] trong [[phong-cach-jazz|ragtime]] (xem [[ket-cau]], [[Joplin]]) là bài luyện bước nhảy kinh điển. Lưu ý: các bài tập trên chủ yếu từ giáo viên và diễn đàn, chưa phải nghiên cứu chính thức.
 `,
   },
   {
@@ -730,7 +730,7 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
 | **Bass Alberti** | Thấp – cao – giữa – cao (C–G–E–G) | Nhịp 4/4, móc đơn hoặc [[truong-do|nốt đen]]; đặc trưng thời Cổ điển nhưng dùng được ở nhiều phong cách |
 | **Đệm valse** | Nốt trầm một mình, rồi hai nốt trên hai lần (trầm – hợp âm – hợp âm) | Nhịp 3/4 |
 | **Đệm "pop"** | Đung đưa giữa nốt dưới và các nốt trên của hợp âm | Pop, ballad |
-| **Stride** | Nốt bass ở phách 1 và 3, hợp âm ở phách 2 và 4 — tay trái nhảy xa liên tục | Ragtime, jazz Harlem |
+| **Stride** | Nốt bass ở phách 1 và 3, hợp âm ở phách 2 và 4 — tay trái nhảy xa liên tục | [[phong-cach-jazz|Ragtime]], jazz Harlem |
 
 ::keyboard C3 E3 G3 | Hợp âm C để luyện các kiểu đệm: thử khối, rải, Alberti (C–G–E–G)
 

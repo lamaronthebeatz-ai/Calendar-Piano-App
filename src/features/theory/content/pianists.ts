@@ -49,7 +49,7 @@ const PERIODS = [
     slug: 'nghe-si-piano-jazz',
     title: 'Nghệ sĩ piano jazz',
     years: '1900–nay',
-    intro: `Từ ragtime và [[stride-piano|stride]] ở Harlem đến bebop, modal và fusion — piano jazz phát triển song song với nhạc cổ điển (xem [[swing]], [[xep-hop-am]], [[dem-hat-piano|các kiểu đệm]]).`,
+    intro: `Từ [[phong-cach-jazz|ragtime]] và [[stride-piano|stride]] ở Harlem đến bebop, modal và fusion — piano jazz phát triển song song với nhạc cổ điển (xem [[swing]], [[xep-hop-am]], [[dem-hat-piano|các kiểu đệm]]).`,
     groups: [
       ['early', 'Ragtime và stride'],
       ['modern', 'Swing, bebop và hiện đại'],

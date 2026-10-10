@@ -362,7 +362,7 @@ Hai tên cho cùng một phím, như C♯ và D♭, gọi là [[trung-am]]. Chú
     slug: 'ky-hieu-quang-tam',
     title: 'Ký hiệu 8va và 8vb',
     category: 'basics',
-    aliases: ['8va', '8vb', '15ma', 'ottava', 'chơi cao một quãng 8'],
+    aliases: ['8va', '8vb', '15ma', 'ottava', 'chơi cao một quãng 8', 'octave sign', 'dấu quãng 8'],
     summary: 'Ký hiệu yêu cầu chơi cao (8va) hoặc thấp (8vb) hơn một quãng 8 so với nốt viết, để tránh quá nhiều dòng kẻ phụ.',
     wiki: 'Octave',
     refs: [

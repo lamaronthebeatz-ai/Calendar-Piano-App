@@ -35,7 +35,7 @@ export const instrument: Article[] = [
     slug: 'lich-su-piano',
     title: 'Lịch sử đàn piano',
     category: 'instrument',
-    aliases: ['Cristofori', 'Bartolomeo Cristofori', 'fortepiano', 'pianoforte', 'gravicembalo col piano e forte', 'ai phát minh ra piano'],
+    aliases: ['Cristofori', 'Bartolomeo Cristofori', 'fortepiano', 'pianoforte', 'gravicembalo col piano e forte', 'ai phát minh ra piano', 'piano history', 'lịch sử đàn piano'],
     summary: 'Bartolomeo Cristofori chế tạo cây piano đầu tiên ở Florence khoảng năm 1700; đàn liên tục phát triển cho tới cây grand hiện đại cuối thế kỷ 19.',
     wiki: 'Piano',
     refs: [
@@ -214,7 +214,7 @@ Lưu ý: nhiều nguồn về chủ đề này là trang của cửa hàng nhạ
     slug: 'bao-duong-piano',
     title: 'Bảo dưỡng và lên dây đàn',
     category: 'instrument',
-    aliases: ['lên dây đàn', 'chỉnh dây', 'tuning', 'độ ẩm', 'bảo quản đàn', 'thợ chỉnh đàn', 'piano technician'],
+    aliases: ['lên dây đàn', 'chỉnh dây', 'tuning', 'độ ẩm', 'bảo quản đàn', 'thợ chỉnh đàn', 'piano technician', 'piano tuning', 'piano maintenance'],
     summary: 'Giữ đàn ở nhiệt độ và độ ẩm ổn định (Hội Kỹ thuật viên Piano Mỹ khuyên khoảng 20 °C, độ ẩm 42%); đàn dùng ở nhà thường lên dây 1–2 lần mỗi năm.',
     refs: [
       ['Piano Technicians Guild — Piano care', 'https://www.ptg.org/servicing'],

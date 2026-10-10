@@ -49,6 +49,15 @@ for (const a of ARTICLES) {
 }
 export const getBacklinks = (slug: string) => backlinks.get(slug) ?? []
 
+/** Library-wide totals shown on the index. */
+export const libraryStats = {
+  links: [...backlinks.values()].reduce((n, list) => n + list.length, 0),
+  figures: ARTICLES.reduce((n, a) => n + (a.body.match(/^\s*::/gm)?.length ?? 0), 0),
+}
+
+/** Rough reading time in minutes (about 200 words a minute). */
+export const readingMinutes = (a: Article) => Math.max(1, Math.round(a.body.split(/\s+/).length / 200))
+
 export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'][]).map((id) => ({
   id,
   ...CATEGORIES[id],
@@ -59,8 +68,24 @@ export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'
   ],
 }))
 
+const bodies = new Map<Article, string>()
+
+/**
+ * Ranked search: title matches first, then aliases, the summary, and finally the body text,
+ * so a query always surfaces the article *about* it before articles that merely mention it.
+ */
 export function searchArticles(query: string) {
   const q = normalize(query)
   if (!q) return []
-  return ARTICLES.filter((a) => normalize([a.title, ...(a.aliases ?? []), a.summary].join(' ')).includes(q))
+  const scored: [number, Article][] = []
+  for (const a of ARTICLES) {
+    const title = normalize(a.title)
+    let score = title.startsWith(q) ? 0 : title.includes(q) ? 1 : (a.aliases ?? []).some((k) => normalize(k).includes(q)) ? 2 : normalize(a.summary).includes(q) ? 3 : -1
+    if (score < 0 && q.length > 2) {
+      if (!bodies.has(a)) bodies.set(a, normalize(a.body))
+      if (bodies.get(a)!.includes(q)) score = 4
+    }
+    if (score >= 0) scored.push([score + (a.unlisted ? 0.5 : 0), a])
+  }
+  return scored.sort((x, y) => x[0] - y[0]).map(([, a]) => a)
 }

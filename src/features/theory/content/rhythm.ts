@@ -178,7 +178,7 @@ Dấu nối là đường cong nối **hai nốt cùng [[cao-do|cao độ]]** �
 Đừng nhầm với **dấu luyến** (slur) — đường cong nối các nốt **khác** cao độ, yêu cầu chơi liền tiếng (xem [[cach-dien-tau]]).
 
 ## Chấm dôi trong nhạc Baroque: viết một đằng, chơi một nẻo?
-**Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời [[thoi-ky-baroque|Baroque]] chơi một số hình chấm dôi **dài hơn** cách viết. Trong **khúc mở màn kiểu Pháp** (French overture), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
+**Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời [[thoi-ky-baroque|Baroque]] chơi một số hình chấm dôi **dài hơn** cách viết. Trong **khúc mở màn kiểu Pháp** (French [[the-loai|overture]]), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
 - Tỉ lệ thông thường của "đen chấm dôi + móc đơn" là **3 : 1**; nhiều nguồn cho rằng khúc mở màn kiểu Pháp cần tỉ lệ gắt hơn, khoảng **7 : 1**.
 - Thập niên 1960–70, Frederick Neumann đã **phản bác** cách hiểu cực đoan này, gây tranh luận lớn.
 - Nghiên cứu thực nghiệm ([[franz-schubert|Schubert]] và Fabian) cho thấy **tỉ lệ chấm dôi** ít ảnh hưởng đến cảm nhận tính chất hơn người ta nghĩ; **cách diễn tấu, tốc độ và [[cuong-do|cường độ]]** quan trọng hơn.
@@ -198,7 +198,7 @@ Xem thêm: [[truong-do]], [[dao-phach]].
     slug: 'so-chi-nhip',
     title: 'Số chỉ nhịp',
     category: 'rhythm',
-    aliases: ['nhịp', 'loại nhịp', 'time signature', 'ô nhịp', 'vạch nhịp', 'nhịp đơn', 'nhịp kép', 'phách mạnh', 'phách nhẹ', '4/4', '3/4', '2/4', '6/8'],
+    aliases: ['nhịp', 'loại nhịp', 'time signature', 'ô nhịp', 'vạch nhịp', 'nhịp đơn', 'nhịp kép', 'phách mạnh', 'phách nhẹ', '4/4', '3/4', '2/4', '6/8', 'simple meter', 'compound meter', 'meter'],
     summary: 'Hai con số ở đầu bản nhạc: số trên là số phách trong một ô nhịp, số dưới là hình nốt được tính làm một phách.',
     wiki: 'Time_signature',
     refs: [
@@ -252,7 +252,7 @@ Xem thêm: [[nhip-do]], [[nhip-lay-da]], [[dao-phach]], [[hemiola]].
     slug: 'nhip-do',
     title: 'Nhịp độ',
     category: 'rhythm',
-    aliases: ['tempo', 'tốc độ', 'BPM', 'máy đếm nhịp', 'Allegro', 'Andante', 'Adagio', 'Largo', 'Presto', 'Moderato', 'ritardando', 'accelerando'],
+    aliases: ['tempo', 'tốc độ', 'BPM', 'máy đếm nhịp', 'Allegro', 'Andante', 'Adagio', 'Largo', 'Presto', 'Moderato', 'ritardando', 'accelerando', 'tempo marking', 'thuật ngữ nhịp độ'],
     summary: 'Tốc độ của bản nhạc, đo bằng số phách mỗi phút (BPM) hoặc ghi bằng thuật ngữ tiếng Ý.',
     wiki: 'Tempo',
     refs: [
@@ -377,7 +377,7 @@ Mỗi [[so-chi-nhip]] có quy luật phách mạnh – nhẹ. **Đảo phách** 
 ::rhythm 4/4 q >q q >q // | Dấu nhấn trên phách nhẹ (phách 2 và 4)
 ::rhythm 4/4 rq q q q // | Dấu lặng ở phách mạnh (phách 1)
 
-Đảo phách là linh hồn của ragtime, jazz, Latin, funk và pop hiện đại (xem [[swing]]). Một dạng đảo phách có tổ chức trong nhạc cổ điển: [[hemiola]].
+Đảo phách là linh hồn của [[phong-cach-jazz|ragtime]], jazz, Latin, funk và pop hiện đại (xem [[swing]]). Một dạng đảo phách có tổ chức trong nhạc cổ điển: [[hemiola]].
 
 ## Tên gọi
 "Syncopation" đến từ tiếng Hy Lạp *synkopē* — *syn* (cùng) + *koptein* (cắt): "**cắt ngắn**". Thế kỷ 16 nó chỉ việc **lược âm** trong từ ngữ; nghĩa âm nhạc có từ thập niên 1660. Từ "syncopated" chỉ [[tiet-tau|tiết tấu]] theo nghĩa hiện đại phổ biến từ khoảng 1908 — ban đầu gắn với **ragtime**.

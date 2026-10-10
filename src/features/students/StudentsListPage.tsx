@@ -46,9 +46,9 @@ export function StudentsListPage() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
+      <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
         <div className="flex items-center justify-between gap-3">
-          <h1 className="text-[17px] font-semibold text-[var(--color-ink)]">Học viên</h1>
+          <h1 className="font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Học viên</h1>
           <Button variant="primary" size="sm" icon={<PlusIcon width={15} height={15} />} onClick={openCreateStudent} className="hidden sm:inline-flex">
             Thêm học viên
           </Button>

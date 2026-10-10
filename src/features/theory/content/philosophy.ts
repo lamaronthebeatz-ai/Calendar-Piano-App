@@ -39,6 +39,7 @@ Các tài liệu tổng quan hiện đại (như mục *Philosophy of Music* c�
 ## Triết học và các mục khác
 - Tâm lý học thực nghiệm trả lời một phần câu hỏi về cảm xúc: [[cam-xuc-am-nhac]], [[ky-vong-am-nhac]].
 - Lịch sử phân tích và các tranh luận về phương pháp: [[lich-su-phan-tich-am-nhac]].
+- Âm nhạc "nói" bằng những chủ đề biểu đạt quen thuộc của một thời (khúc săn, điệu nhảy, kèn hiệu…): [[ly-thuyet-chu-de]].
 - Biểu diễn theo phong cách lịch sử: [[phong-cach-dien-tau]].
 
 ## Vì sao người dạy đàn nên quan tâm?
@@ -148,6 +149,8 @@ Song song với thuyết ethos Hy Lạp, tư tưởng Trung Hoa cổ đại — 
 | Hệ quả | Kiểm soát loại nhạc được dạy | Âm nhạc chuẩn mực đi đôi với lễ |
 | Âm nhạc "xấu" | Các điệu bị coi là uỷ mị | Nhạc dâm dật làm loạn lòng người |
 Hai truyền thống độc lập nhưng cùng đặt âm nhạc vào trung tâm của **giáo dục con người** (xem [[thuyet-ethos-hy-lap]]).
+
+Ở Việt Nam, nhạc lễ triều đình — **nhã nhạc** cung đình Huế — là di sản gắn với truyền thống nghi lễ này (xem [[am-nhac-truyen-thong-viet-nam]]). Các quan niệm phương Tây về sức mạnh của âm nhạc: [[hoa-am-vu-tru]], [[triet-hoc-am-nhac]]; nghiên cứu hiện đại về cảm xúc: [[cam-xuc-am-nhac]].
 `,
   },
   {
@@ -264,6 +267,8 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 - Phần lớn các nhà triết học hiện đại không còn chọn một trong hai cực: nhạc không lời vẫn có thể được nghe là **biểu cảm** (xem [[bieu-hien-cam-xuc-am-nhac]]), và nhạc chương trình vẫn phải **thuyết phục về mặt âm nhạc**.
 - Với người dạy: khi một tiểu phẩm có tên gợi hình (như *Cảnh tuổi thơ* của [[robert-schumann|Schumann]] — xem [[phan-tich-traumerei]]), tên gọi có thể là **gợi ý** cho cách chơi; Schumann tự nói các tên chỉ là "gợi ý tinh tế".
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
+
+Bối cảnh tư tưởng đầu thế kỷ 19 — vì sao khí nhạc được xem là nghệ thuật cao nhất: [[triet-hoc-lang-man-ve-am-nhac]].
 `,
   },
   {

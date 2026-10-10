@@ -12,13 +12,13 @@ import { leadImage, type LeadImage } from './wikiImage'
  */
 function Inline({ text }: { text: string }) {
   return text.split(/(\*\*(?:[^*]|\*[^*]+\*)+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
-    if (part.startsWith('**')) return <strong key={i} className="font-semibold text-[var(--color-ink)]"><Inline text={part.slice(2, -2)} /></strong>
+    if (part.startsWith('**')) return <strong key={i} className="font-semibold"><Inline text={part.slice(2, -2)} /></strong>
     if (part.startsWith('*') && part.length > 2) return <em key={i}><Inline text={part.slice(1, -1)} /></em>
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
     const article = findArticle(target)
     return article ? (
-      <Link key={i} to={`/theory/${article.slug}`} className="text-[var(--color-accent)] underline-offset-2 hover:underline">
+      <Link key={i} to={`/theory/${article.slug}`} data-slug={article.slug} className="wiki-link">
         {label ?? (normalize(target) !== article.slug ? target : i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
       </Link>
     ) : (
@@ -86,9 +86,9 @@ export function WikiImage({ titles, years, caption, portrait }: { titles: string
 
 function Figure({ caption, children }: { caption?: string; children: ReactNode }) {
   return (
-    <figure className="my-5 flex flex-col items-center gap-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4">
+    <figure className="my-7 flex flex-col items-center gap-3 overflow-x-auto rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 shadow-[var(--shadow-soft)]">
       {children}
-      {caption && <figcaption className="text-center text-[13px] text-[var(--color-ink-muted)]"><Inline text={caption} /></figcaption>}
+      {caption && <figcaption className="max-w-xl text-balance text-center font-sans text-[13px] leading-snug text-[var(--color-ink-muted)]"><Inline text={caption} /></figcaption>}
     </figure>
   )
 }
@@ -145,28 +145,28 @@ export function Markup({ source }: { source: string }) {
       if (b.kind === 'p') out.push(<p key={k}><Inline text={b.lines.join(' ')} /></p>)
       if (b.kind === 'li')
         out.push(
-          <ul key={k} className="list-disc space-y-1 pl-5">
+          <ul key={k} className="list-disc space-y-1.5 pl-5">
             {b.lines.map((l, i) => <li key={i}><Inline text={l} /></li>)}
           </ul>,
         )
       if (b.kind === 'ol')
         out.push(
-          <ol key={k} start={b.start} className="list-decimal space-y-1 pl-6">
+          <ol key={k} start={b.start} className="list-decimal space-y-1.5 pl-6">
             {b.lines.map((l, i) => <li key={i}><Inline text={l} /></li>)}
           </ol>,
         )
       if (b.kind === 'tr') {
         const [head, ...rows] = b.lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map(cells)
         out.push(
-          <div key={k} className="overflow-x-auto rounded-xl border border-[var(--color-border)]">
-            <table className="w-full text-left text-[13px] sm:text-[14px]">
-              <thead className="bg-[var(--color-surface-sunken)]">
-                <tr>{head.map((c, i) => <th key={i} className="px-2.5 py-2 font-semibold sm:px-3"><Inline text={c} /></th>)}</tr>
+          <div key={k} className="my-6 overflow-x-auto rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] font-sans shadow-[var(--shadow-soft)]">
+            <table className="w-full text-left text-[13px] leading-snug sm:text-[13.5px]">
+              <thead className="bg-[color-mix(in_oklch,var(--tint,var(--color-accent))_9%,var(--color-surface-raised))]">
+                <tr>{head.map((c, i) => <th key={i} className="px-3 py-2.5 text-[12px] font-semibold uppercase tracking-wide text-[var(--color-ink)] sm:px-4"><Inline text={c} /></th>)}</tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
-                  <tr key={i} className="border-t border-[var(--color-border)]">
-                    {r.map((c, j) => <td key={j} className="px-2.5 py-2 sm:px-3"><Inline text={c} /></td>)}
+                  <tr key={i} className="border-t border-[var(--color-border)] transition-colors hover:bg-[var(--color-surface-sunken)]/60">
+                    {r.map((c, j) => <td key={j} className={j ? 'px-3 py-2.5 align-top sm:px-4' : 'px-3 py-2.5 align-top font-medium text-[var(--color-ink)] sm:px-4'}><Inline text={c} /></td>)}
                   </tr>
                 ))}
               </tbody>
@@ -184,7 +184,7 @@ export function Markup({ source }: { source: string }) {
     if (!line) continue
     if (line.startsWith('## '))
       out.push(
-        <h2 key={out.length} id={`sec-${section++}`} className="scroll-mt-24 pt-3 text-[18px] font-semibold text-[var(--color-ink)]">
+        <h2 key={out.length} id={`sec-${section++}`} className="scroll-mt-24 pt-6 text-[1.4em] font-semibold leading-tight text-[var(--color-ink)]">
           {line.slice(3)}
         </h2>,
       )
@@ -193,5 +193,5 @@ export function Markup({ source }: { source: string }) {
   }
   flush()
 
-  return <div className="space-y-3 text-[15px] leading-relaxed text-[var(--color-ink-muted)]">{out}</div>
+  return <div className="space-y-4">{out}</div>
 }

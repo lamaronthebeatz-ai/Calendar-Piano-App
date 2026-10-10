@@ -40,6 +40,7 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 14. [[luyen-tai]] — luyện tai có hệ thống.
 15. [[lich-su-thu-am]] — bản thu là gì và nó đã thay đổi âm nhạc ra sao.
 16. [[so-sanh-ban-thu]] — nghe và phân tích nhiều cách chơi một tác phẩm.
+- Mở rộng: [[am-nhac-truyen-thong-viet-nam]] — nghe những cao độ nằm **giữa** các phím đàn.
 
 ## Phần E — Sức khoẻ
 17. [[bao-ve-thinh-giac]] — giữ đôi tai cho cả đời chơi nhạc.

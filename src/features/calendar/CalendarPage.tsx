@@ -57,8 +57,8 @@ export function CalendarPage() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex items-center gap-3 border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
-        <h1 className="flex-1 text-[16px] font-semibold text-[var(--color-ink)] lg:text-[17px]">Thời Khóa Biểu</h1>
+      <div className="glass relative z-10 flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
+        <h1 className="flex-1 font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">Thời Khóa Biểu</h1>
         <button
           onClick={() => setFilterSheetOpen(true)}
           className={clsx(

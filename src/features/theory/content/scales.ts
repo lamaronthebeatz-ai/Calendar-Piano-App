@@ -33,7 +33,7 @@ Các âm giai đối xứng khác: [[dieu-thuc-chuyen-vi-gioi-han]].
 2. **Giọng và hoá biểu**: [[dieu-tinh]] → [[hoa-bieu]] → [[vong-quang-nam]].
 3. **Âm giai thứ và giọng họ hàng**: [[am-giai-thu]] → [[giong-song-song]].
 4. **Đổi giọng**: [[dich-giong]] (cả bài) và [[chuyen-giong]] (trong bài).
-5. **Ngoài trưởng – thứ**: [[dieu-thuc]] → [[am-giai-ngu-cung]] → [[am-giai-blues]] → [[am-giai-cromatic]] → [[am-giai-bat-cung]].
+5. **Ngoài trưởng – thứ**: [[dieu-thuc]] → [[am-giai-ngu-cung]] ([[am-nhac-truyen-thong-viet-nam|ngũ cung trong nhạc Việt]]) → [[am-giai-blues]] → [[am-giai-cromatic]] → [[am-giai-bat-cung]].
 6. **Âm giai trong hoà âm**: [[hoa-am-dieu-thuc]], [[he-thong-hop-am-am-giai]] (jazz).
 
 ## Luyện âm giai trên đàn
@@ -338,7 +338,7 @@ Các "hồ sơ giọng" (key profiles) này đến nay vẫn được dùng làm
     slug: 'dieu-thuc',
     title: 'Điệu thức nhà thờ',
     category: 'scales',
-    aliases: ['điệu thức', 'mode', 'modes', 'Ionian', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian', 'điệu Dorian'],
+    aliases: ['điệu thức', 'mode', 'modes', 'Ionian', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian', 'điệu Dorian', 'church modes', 'điệu thức nhà thờ', 'điệu thức Hy Lạp'],
     summary: 'Bảy âm giai tạo ra khi bắt đầu từ mỗi bậc khác nhau của âm giai trưởng — mỗi điệu có màu sắc riêng.',
     wiki: 'Mode_(music)',
     refs: [
@@ -406,7 +406,7 @@ Bắt đầu từ bậc 5 của ngũ cung trưởng: A – C – D – E – G (
 ## Trong âm nhạc Việt Nam
 Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ cung. Năm âm gốc Hán **Cung – Thương – Giốc – Chủy – Vũ** được người Việt gọi là **Hò – Xự – Xang – Xê – Cống**; âm **Líu** cao hơn Hò một [[quang|quãng 8]].
 - Một nghiên cứu về Ca Huế ghi chữ **Hò = Đô**; theo đó Xự – Xang – Xê – Cống ứng với **Rê – Fa – Sol – La**. Đây là quy ước ghi chép: các nguồn khác có thể đặt Hò ở [[cao-do|cao độ]] khác (ví dụ Hò = Rê).
-- Ca Huế có hai [[dieu-thuc|điệu thức]] chính: **điệu Bắc** (tươi vui hoặc trang nghiêm) và **điệu Nam** (như hơi Ai — đặc trưng miền Trung). Ghi trên [[khuong-nhac|khuông nhạc]], điệu Nam trông giống điệu Bắc, nhưng khi [[dien-tau|diễn tấu]] một số âm được chơi **"già"** (cao hơn) hoặc **"non"** (thấp hơn) — điều mà khuông nhạc phương Tây **không ghi được đầy đủ**.
+- Ca Huế có hai [[dieu-thuc|điệu thức]] chính: **[[am-nhac-truyen-thong-viet-nam|điệu Bắc]]** (tươi vui hoặc trang nghiêm) và **điệu Nam** (như hơi Ai — đặc trưng miền Trung). Ghi trên [[khuong-nhac|khuông nhạc]], điệu Nam trông giống điệu Bắc, nhưng khi [[dien-tau|diễn tấu]] một số âm được chơi **"già"** (cao hơn) hoặc **"non"** (thấp hơn) — điều mà khuông nhạc phương Tây **không ghi được đầy đủ**.
 - Vì vậy dùng piano để chơi nhạc cổ truyền chỉ **gần đúng**. Về các tác phẩm piano Việt Nam dùng chất liệu dân gian: [[piano-viet-nam]].
 
 ## Vì sao dễ nghe?

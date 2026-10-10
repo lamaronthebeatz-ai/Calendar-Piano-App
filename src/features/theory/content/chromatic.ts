@@ -41,6 +41,10 @@ Một mô tiến diatonic giữ **cỡ** [[quang|quãng]] nhưng không giữ **
 ::img TristanChord.svg | Hợp âm Tristan (F – B – D♯ – G♯) mở đầu vở opera "Tristan und Isolde" của [[Wagner]] (1859)
 
 Sự giải quyết của hợp âm Tristan bị trì hoãn **gần bốn giờ** — chỉ đến ở cuối vở, trong khúc "Liebestod" của Isolde, về giọng **Si trưởng**. Hợp âm này thường được coi là bước đầu tiên dẫn tới [[phi-dieu-tinh|âm nhạc phi điệu tính]]. Bối cảnh lịch sử: [[cac-thoi-ky]].
+
+## Các bài khác trong nhóm
+- Bè trầm: [[bass-ngan]] (bass ngân dưới các hợp âm cromatic), [[bass-so]] (bè trầm có số của thời [[thoi-ky-baroque|Baroque]]).
+- Hai cách [[phan-tich-hoa-am|phân tích hoà âm]] cromatic: [[phan-tich-schenker]] (tầng cấu trúc) và [[neo-riemann]] (biến đổi P – L – R giữa các hợp âm ba).
 `,
   },
   {
@@ -175,7 +179,7 @@ Viết lại [[ky-hieu-hop-am|tên hợp âm]] (cùng [[ban-phim|phím đàn]]) 
 Khác với [[ban-dap|pedal của đàn piano]], "pedal" ở đây là [[thuat-ngu-hoa-am|thuật ngữ hoà âm]]: một nốt bất động làm nền.
 
 ## Các loại
-- **Bass ngân [[bac-am-giai|chủ âm]]**: tạo cảm giác "về nhà", hay gặp ở **đầu** và **cuối** tác phẩm. [[phan-tich-prelude-do-truong|Prelude số 1]] Đô trưởng ([[johann-sebastian-bach|Bach]], *Bình quân luật* quyển 1) là ví dụ dạy học quen thuộc: gần cuối có một đoạn dài trên bass ngân **G** (át), rồi bản nhạc khép lại trên bass ngân **C** (chủ).
+- **Bass ngân [[bac-am-giai|chủ âm]]**: tạo cảm giác "về nhà", hay gặp ở **đầu** và **cuối** tác phẩm. [[phan-tich-prelude-do-truong|Prelude số 1]] Đô trưởng ([[johann-sebastian-bach|Bach]], *Bình quân luật* quyển 1) là ví dụ dạy học quen thuộc (bài kế tiếp, [[phan-tich-prelude-do-thu-bwv847|Prelude số 2 Đô thứ]], cũng có một đoạn dài trên bass ngân át): gần cuối có một đoạn dài trên bass ngân **G** (át), rồi bản nhạc khép lại trên bass ngân **C** (chủ).
 - **Bass ngân át âm**: tạo sức căng chờ đợi — rất hay gặp ngay trước phần tái hiện của [[hinh-thuc-sonata]] và gần cuối [[fugue]].
 - **Bass ngân đảo**: nốt ngân nằm ở bè **cao** hoặc bè giữa — ví dụ một [[not-lap-lai|nốt lặp]] đi lặp lại trên cao trong khi hoà âm bên dưới thay đổi.
 - **Drone** (âm nền): [[quang|quãng]] 5 chủ – át ngân suốt bài, như kèn túi hay nhạc dân gian.
@@ -322,7 +326,7 @@ Khi hoà âm **trôi qua các hợp âm trưởng – thứ** mà không thiết
     title: 'Bass số',
     category: 'chromatic',
     also: ['improvisation'],
-    aliases: ['figured bass', 'basso continuo', 'continuo', 'bè trầm có số', 'ký hiệu số'],
+    aliases: ['figured bass', 'basso continuo', 'continuo', 'bè trầm có số', 'ký hiệu số', 'thoroughbass', 'thorough bass'],
     summary: 'Hệ thống ký hiệu thời Baroque: bè trầm được ghi kèm con số chỉ các quãng cần chơi phía trên, người chơi đàn phím tự "hiện thực hoá" hợp âm.',
     wiki: 'Figured_bass',
     refs: [

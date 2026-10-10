@@ -10,7 +10,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
   return (
     <nav
       className={clsx(
-        'fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] bg-[var(--color-surface-raised)]/95 backdrop-blur pb-[env(safe-area-inset-bottom)] transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden',
+        'glass fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] pb-[env(safe-area-inset-bottom)] transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden',
         // Slide fully off-screen, including the raised "+" button above the bar.
         hidden && 'translate-y-[calc(100%+1.75rem)]',
       )}
@@ -25,7 +25,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
         <button
           onClick={() => setQuickActionsOpen(true)}
           aria-label="Thêm nhanh"
-          className="absolute -top-5 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-float)] active:scale-95 transition-transform"
+          className="absolute -top-5 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[color-mix(in_oklch,var(--color-accent)_80%,white)] to-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-glow)] ring-4 ring-[var(--color-surface)] transition-transform active:scale-95"
         >
           <PlusIcon width={24} height={24} />
         </button>
@@ -45,13 +45,18 @@ function NavItem({ item }: { item: (typeof navItems)[number] }) {
       end={item.end}
       className={({ isActive }) =>
         clsx(
-          'flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-medium transition-colors',
+          'relative flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-medium transition-colors',
           isActive ? 'text-[var(--color-accent)]' : 'text-[var(--color-ink-faint)]',
         )
       }
     >
-      <item.icon width={21} height={21} />
-      {item.label}
+      {({ isActive }) => (
+        <>
+          <span className={clsx('absolute top-0 h-[3px] w-6 rounded-b-full bg-[var(--color-gold)] transition-all duration-300', isActive ? 'opacity-100' : 'scale-x-0 opacity-0')} />
+          <item.icon width={21} height={21} className={clsx('transition-transform duration-200', isActive && '-translate-y-px')} />
+          {item.label}
+        </>
+      )}
     </NavLink>
   )
 }

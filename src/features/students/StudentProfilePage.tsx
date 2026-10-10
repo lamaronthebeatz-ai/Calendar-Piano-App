@@ -36,14 +36,14 @@ export function StudentProfilePage() {
 
   return (
     <div className="flex h-full flex-col overflow-y-auto pb-24 lg:pb-6">
-      <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
+      <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
         <div className="flex items-center gap-2">
           <IconButton label="Quay lại" icon={<ArrowLeftIcon width={18} height={18} />} onClick={() => navigate('/students')} />
         </div>
         <div className="mt-2 flex items-center gap-4">
           <Avatar name={student.nickname || student.name} size={56} />
           <div className="min-w-0 flex-1">
-            <h1 className="truncate text-[19px] font-semibold text-[var(--color-ink)]">{student.name}</h1>
+            <h1 className="truncate font-display text-[24px] font-semibold tracking-tight text-[var(--color-ink)]">{student.name}</h1>
             <div className="mt-1 flex flex-wrap items-center gap-2 text-[12.5px] text-[var(--color-ink-muted)]">
               <span>{LEVEL_LABELS[student.level]}</span>
               <span>·</span>

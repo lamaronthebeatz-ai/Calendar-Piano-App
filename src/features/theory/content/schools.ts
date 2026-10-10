@@ -96,7 +96,7 @@ export const SCHOOLS: Record<string, School> = {
   },
   // ── Lãng mạn ──
   'rom:early': {
-    intro: `Thế hệ Lãng mạn đầu tiên đặt **cảm xúc cá nhân** lên hàng đầu: [[franz-schubert|Schubert]] với hàng trăm ca khúc (Lied); [[hector-berlioz|Berlioz]] với *Symphonie fantastique* (1830) kể chuyện bằng âm nhạc (xem [[am-nhac-tuyet-doi]]); [[felix-mendelssohn|Mendelssohn]] dàn dựng lại *Cuộc khổ nạn theo Thánh Matthew* của Bach (1829). Piano trở thành nhạc cụ của thời đại với các tiểu phẩm tính cách của [[frederic-chopin|Chopin]], [[robert-schumann|Schumann]], [[franz-liszt|Liszt]] và nghệ thuật trình diễn bậc thầy kiểu [[niccolo-paganini|Paganini]] (xem [[the-loai]], [[rubato]]).`,
+    intro: `Thế hệ Lãng mạn đầu tiên đặt **cảm xúc cá nhân** lên hàng đầu: [[franz-schubert|Schubert]] với hàng trăm ca khúc (Lied); [[hector-berlioz|Berlioz]] với *Symphonie fantastique* (1830) kể chuyện bằng âm nhạc (xem [[am-nhac-tuyet-doi]]); [[felix-mendelssohn|Mendelssohn]] dàn dựng lại *Cuộc khổ nạn theo Thánh Matthew* của Bach (1829). Piano trở thành nhạc cụ của thời đại với các tiểu phẩm tính cách của [[frederic-chopin|Chopin]], [[robert-schumann|Schumann]], [[franz-liszt|Liszt]] và nghệ thuật trình diễn bậc thầy kiểu [[niccolo-paganini|Paganini]] (xem [[the-loai]], [[rubato]]). Cùng lúc, các nhà tư tưởng như E. T. A. Hoffmann và Schopenhauer tôn khí nhạc lên thành nghệ thuật cao nhất (xem [[triet-hoc-lang-man-ve-am-nhac]]).`,
     refs: [W('Romantic music', 'Romantic_music'), W('Symphonie fantastique', 'Symphonie_fantastique'), W('Lied', 'Lied')],
   },
   'rom:opera': {

@@ -36,8 +36,8 @@ export function StatisticsPage() {
 
   return (
     <div className="h-full overflow-y-auto pb-24 lg:pb-6">
-      <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3 lg:px-6">
-        <h1 className="text-[17px] font-semibold text-[var(--color-ink)]">Thống kê</h1>
+      <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
+        <h1 className="font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Thống kê</h1>
       </div>
 
       {!hasAnySlots ? (

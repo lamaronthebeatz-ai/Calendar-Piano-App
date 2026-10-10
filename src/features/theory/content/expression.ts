@@ -158,7 +158,7 @@ Bài học cho người dạy: đọc **lời tựa và phần bình chú** củ
     slug: 'dau-nhac-lai',
     title: 'Dấu nhắc lại',
     category: 'expression',
-    aliases: ['dấu hồi', 'repeat', 'da capo', 'D.C.', 'dal segno', 'D.S.', 'coda', 'fine', 'volta', 'khung 1 khung 2', 'segno', 'D.C. al Fine'],
+    aliases: ['dấu hồi', 'repeat', 'da capo', 'D.C.', 'dal segno', 'D.S.', 'coda', 'fine', 'volta', 'khung 1 khung 2', 'segno', 'D.C. al Fine', 'repeat sign', 'dấu nhắc lại'],
     summary: 'Các ký hiệu điều hướng giúp viết gọn bản nhạc: vạch nhắc lại, khung 1–2, D.C., D.S., Coda, Fine.',
     wiki: 'Repeat_sign',
     refs: [
