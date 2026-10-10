@@ -79,6 +79,7 @@ Xếp từ dễ đến khó — cả về bản nhạc lẫn khái niệm phân 
 | 17 | [[phan-tich-nocturne-op9-so2]] | Giai điệu trang trí, nhịp 12/8 |
 | 18 | [[phan-tich-golliwogg-cakewalk]] | Đảo phách, trích dẫn và giễu nhại |
 | 19 | [[phan-tich-clair-de-lune]] | [[an-tuong|Hoà âm ấn tượng]] |
+| 20 | [[phan-tich-giant-steps]] | Jazz: đổi giọng theo quãng 3 trưởng, [[ii-v-i|ii – V – I]] ở nhịp độ nhanh |
 
 ## Viết một bài phân tích
 Một bài phân tích tốt (gợi ý cấu trúc):
@@ -862,6 +863,86 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 | **Giai điệu** | Motif lặp và dịch giọng; câu 8 ô |
 | **[[tiet-tau|Nhịp điệu]]** | 3/4, [[truong-do|nốt đen]] và móc đơn |
 | **Phát triển** | Hai đoạn 16 + 16, bốn câu 8 ô |
+`,
+  },
+  {
+    slug: 'phan-tich-giant-steps',
+    title: 'Phân tích: Giant Steps (John Coltrane)',
+    category: 'analysis',
+    also: ['jazz'],
+    aliases: ['Giant Steps', 'Giant Steps (composition)', 'phân tích Giant Steps', 'John Coltrane Giant Steps'],
+    summary: '"Giant Steps" (thu 5/5/1959): 16 ô với 26 hợp âm, ba giọng Si – Sol – Mi giáng cách nhau quãng 3 trưởng, nhịp độ khoảng 290 phách/phút. Nửa đầu đi xuống theo quãng 3 trưởng qua các hợp âm át; nửa sau dẫn vào từng giọng bằng ii – V – I. Bài phân tích bảng hợp âm, nguồn gốc ý tưởng, câu chuyện phòng thu và cách luyện trên piano.',
+    wiki: 'Giant_Steps_(composition)',
+    refs: [
+      ['The Jazz Piano Site — Coltrane Changes Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/coltrane-changes/'],
+      ['The Jazz Piano Site — How to Practice Playing Jazz', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/how-to-practice-playing-jazz/'],
+      ['Wikipedia — Giant Steps (album)', 'https://en.wikipedia.org/wiki/Giant_Steps'],
+      ['Wikipedia — Coltrane changes', 'https://en.wikipedia.org/wiki/Coltrane_changes'],
+      ['Library of Congress — National Recording Registry essay: Giant Steps', 'https://www.loc.gov/static/programs/national-recording-preservation-board/documents/GiantSteps.pdf'],
+      ['All About Jazz — Cedar Walton on Giant Steps', 'https://news.allaboutjazz.com/cedar-walton-on-giant-steps.php'],
+      ['Wikipedia — Giant Steps (Tommy Flanagan album)', 'https://en.wikipedia.org/wiki/Giant_Steps_(Tommy_Flanagan_album)'],
+      ['Wikipedia — Countdown (John Coltrane song)', 'https://en.wikipedia.org/wiki/Countdown_(John_Coltrane_song)'],
+      ['Wikipedia — 26-2', 'https://en.wikipedia.org/wiki/26-2'],
+    ],
+    body: `
+Bài này áp lý thuyết [[vong-coltrane]] vào chính tác phẩm đã làm nó nổi tiếng. The Jazz Piano Site (TJPS) không có bài phân tích riêng "Giant Steps", chỉ có bài "Coltrane Changes"; các chi tiết khác lấy từ Wikipedia, Thư viện Quốc hội Mỹ và các nguồn ghi ở cuối trang. Giai điệu còn bản quyền nên ở đây chỉ phân tích **hoà âm**; hãy nghe bản thu gốc khi đọc.
+
+## Bối cảnh
+| Mục | Chi tiết |
+|---|---|
+| Thu âm | Bản chính (master) thu ngày **5/5/1959** tại Atlantic Studios, New York (album thu 4–5/5/1959) |
+| Nhóm | John Coltrane (saxophone tenor), Tommy Flanagan (piano), Paul Chambers (bass), Art Taylor (trống) |
+| Phát hành | Album *Giant Steps*, Atlantic SD 1311, đầu năm 1960 (các nguồn ghi tháng 1 hoặc tháng 2) — album đầu tiên Coltrane làm trưởng nhóm cho Atlantic |
+| Nhịp độ | Khoảng **290 phách/phút** (đo trên bản thu; các nguồn ghi 290–292) |
+| Ghi danh | Năm 2004 được đưa vào Sổ đăng ký bản thu quốc gia của Thư viện Quốc hội Mỹ |
+Trước đó có một buổi thử với Cedar Walton chơi piano (Walton nhớ là 1/4/1959, nguồn khác ghi 26/3/1959); bản này chỉ được phát hành sau khi Coltrane mất.
+
+## Bảng hợp âm (16 ô)
+Ô có hai hợp âm thì mỗi hợp âm **hai phách**; tổng cộng **26 hợp âm trong 16 ô**.
+| | Ô thứ nhất | Ô thứ hai | Ô thứ ba | Ô thứ tư |
+|---|---|---|---|---|
+| **Ô 1 – 4** | Bmaj7 D7 | Gmaj7 B♭7 | E♭maj7 | Am7 D7 |
+| **Ô 5 – 8** | Gmaj7 B♭7 | E♭maj7 F♯7 | Bmaj7 | Fm7 B♭7 |
+| **Ô 9 – 12** | E♭maj7 | Am7 D7 | Gmaj7 | C♯m7 F♯7 |
+| **Ô 13 – 16** | Bmaj7 | Fm7 B♭7 | E♭maj7 | C♯m7 F♯7 |
+Đọc theo hàng, từ trái sang phải; cách đọc ký hiệu xem [[ky-hieu-hop-am]].
+::pc-clock 11 7 3 | Ba trung tâm giọng: B (11), G (7), E♭ (3) — chia vòng 12 nốt thành ba phần bằng nhau, tức một [[hop-am-ba-tang|hợp âm ba tăng]]
+
+## Hai nửa của bài
+::form Đi_xuống_quãng_3:8 ii–V–I_vào_từng_giọng:8 | Hai nửa của "Giant Steps" (ô 8 là ô nối)
+- **Ô 1 – 8**: các giọng **đi xuống quãng 3 trưởng** (B → G → E♭ …), mỗi giọng mới chỉ được dẫn vào bằng **một hợp âm át** (D7 → G, B♭7 → E♭, F♯7 → B). Ô 4 dùng một cặp ii – V (Am7 D7) để quay lại G.
+- **Ô 8 – 16**: mỗi giọng được dẫn vào bằng **trọn một [[ii-v-i]]**: Fm7 B♭7 → E♭, Am7 D7 → G, C♯m7 F♯7 → B. [[nhip-dieu-hoa-am|Nhịp điệu hoà âm]] đều hơn: một ô ii – V, một ô hợp âm chủ.
+- Ô 16 (C♯m7 F♯7) là ii – V về **Bmaj7** để quay lại ô 1 — một [[turnaround-jazz|turnaround]].
+::staff treble B3+D#4+F#4+A#4=Bmaj7 A3+C4+D4+F#4=D7 G3+B3+D4+F#4=Gmaj7 Ab3+Bb3+D4+F4=B♭7 G3+Bb3+D4+Eb4=E♭maj7 | Ô 1 – 3: Bmaj7 – D7 – Gmaj7 – B♭7 – E♭maj7, xếp gần để thấy bè trong đi mượt dù giọng đổi liên tục (minh hoạ, xem [[xep-hop-am]])
+Vì sao khó: trong 16 ô có **10 lần đổi giọng** nhưng chỉ giữa **ba giọng**; mỗi giọng chỉ đứng 2 – 4 phách ở nhịp độ rất nhanh. Người chơi không có thời gian "nghĩ âm giai" — phải **thuộc sẵn** các mẫu nốt cho từng hợp âm.
+
+## Ý tưởng đến từ đâu?
+| Giả thuyết | Mức chắc chắn |
+|---|---|
+| Đoạn [[hinh-thuc-ca-khuc-32|bridge]] của "Have You Met Miss Jones?" (Rodgers & Hart, 1937) đi qua các giọng cách nhau quãng 3 trưởng (B♭ – G♭ – D) | Wikipedia chỉ nói "Giant Steps" và "Countdown" **có thể** lấy chu trình từ đây — một giả thuyết |
+| Sách *Thesaurus of Scales and Melodic Patterns* (1947) của Nicolas Slonimsky | Bài viết của Thư viện Quốc hội Mỹ cho rằng nửa sau được lấy "trực tiếp từ một đoạn" trong sách; Lewis Porter (nhà nghiên cứu Coltrane) nghiêng về Slonimsky hơn "Miss Jones"; Quincy Jones cũng nói vậy (phỏng vấn 2018). Không rõ chính xác trang nào |
+TJPS: Coltrane **không phát minh** ra ý tưởng đổi giọng theo quãng 3 trưởng, nhưng là người **đầu tiên dùng nó một cách có hệ thống**.
+
+## Câu chuyện của người chơi piano
+- Trong bản chính, Tommy Flanagan phải [[ngau-hung-piano|ngẫu hứng]] trên [[vong-hop-am|vòng hợp âm]] này gần như **không có chuẩn bị**. Wikipedia mô tả solo của ông "đứt quãng", và về cuối ông chuyển sang chỉ chơi các hợp âm.
+- Cedar Walton (buổi thu thử) sau này nói ông "lẽ ra nên làm như Flanagan đã làm".
+- Năm 1982 Flanagan thu cả một album *Giant Steps: In Memory of John Coltrane* (Enja), với George Mraz (bass) và Al Foster (trống) — như một lời đáp sau 23 năm.
+Bài học cho học trò: ngay cả nghệ sĩ hàng đầu cũng cần **luyện trước** một vòng hợp âm lạ. Xem [[phuong-phap-luyen-ngau-hung]].
+
+## Coltrane solo thế nào
+- Coltrane dùng nhiều **mẫu 1 – 2 – 3 – 5** (bốn nốt: gốc, 2, 3, 5 của hợp âm) cho mỗi hợp âm — một mẫu nốt thuộc sẵn, chuyển nhanh theo từng hợp âm (xem [[mau-lap-chu-ky]], [[lick-va-trich-dan]]).
+::staff treble B4=1 C#5=2 D#5=3 F#5=5 / D5=1 E5=2 F#5=3 A5=5 / G4=1 A4=2 B4=3 D5=5 / Bb4=1 C5=2 D5=3 F5=5 | Mẫu 1 – 2 – 3 – 5 trên Bmaj7, D7, Gmaj7, B♭7 (minh hoạ cách luyện, không chép từ bản solo)
+- Bản chép đầy đủ solo có trong *Coltrane Omnibook*. Phong cách giai đoạn này nối tiếp [[sheets-of-sound|"sheets of sound"]].
+
+## Luyện "Giant Steps" trên piano
+1. **Chậm**: tay trái chơi nốt gốc, tay phải chơi [[not-dan-huong|nốt 3 và 7]] của từng hợp âm, ở nhịp độ thật chậm với máy đếm nhịp ([[kiem-soat-toc-do]]).
+2. **Nhìn theo ba giọng**: tô màu bảng hợp âm theo B, G, E♭ để thấy vòng lặp.
+3. **Mẫu 1 – 2 – 3 – 5** cho từng hợp âm, rồi đảo chiều (5 – 3 – 2 – 1).
+4. TJPS: muốn chơi được những bài như "Giant Steps" thì phải **thoải mái ở mọi giọng** — tập một bài chuẩn đơn giản ở cả 12 giọng (kèm [[bass-di-jazz|bass đi]]), rồi ngẫu hứng và tái hoà âm.
+5. Tăng nhịp độ từng chút; chỉ tăng khi chơi sạch.
+
+## Các bài cùng họ
+Coltrane dùng cùng chu trình để [[tai-hoa-am|tái hoà âm]] các bài có sẵn: "**Countdown**" (trên "Tune Up"), "**26-2**" (trên "Confirmation" của Charlie Parker), "**Satellite**" (trên "How High the Moon") — các contrafact (xem [[rhythm-changes]], [[sang-tac-jazz]]). Lý thuyết đầy đủ: [[vong-coltrane]]; quan hệ với [[he-thong-hoa-am-co-dien|hoà âm cổ điển]]: [[trung-am-cromatic]], [[neo-riemann]].
 `,
   },
   {

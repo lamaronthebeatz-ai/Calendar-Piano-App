@@ -41,7 +41,7 @@ export const CATEGORIES = {
   modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử, âm nhạc truyền thống Việt Nam và hoà âm thế kỷ XX: ấn tượng, hoà âm điệu thức, toàn diatonic, hợp âm chồng, điệu thức Messiaen, phi điệu tính, 12 âm, tập hợp cao độ, tối giản, nhạc phổ.' },
   listening: { title: 'Nghe, cảm thụ & âm học', hue: 210, description: 'Từ vật lý đến cảm xúc: âm học, âm sắc, âm học phòng, tâm lý âm học, phân luồng thính giác, kỳ vọng và cảm xúc âm nhạc, nghe chủ động, lịch sử và so sánh bản thu, bảo vệ thính giác.' },
   philosophy: { title: 'Triết học & thẩm mỹ âm nhạc', hue: 175, description: 'Âm nhạc là gì, vì sao biểu hiện cảm xúc, có ý nghĩa gì, tác phẩm tồn tại thế nào, thế nào là chơi xác thực, cái hay có chuẩn mực không — từ Plato, Nho gia, Rousseau, Hanslick, Schopenhauer đến Adorno và triết học hiện đại.' },
-  analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 19 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
+  analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 20 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
   pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }

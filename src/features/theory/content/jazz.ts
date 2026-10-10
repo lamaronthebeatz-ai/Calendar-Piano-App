@@ -1665,10 +1665,11 @@ Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]
     slug: 'vong-coltrane',
     title: 'Vòng Coltrane',
     category: 'jazz',
-    aliases: ['Coltrane changes', 'Giant Steps', 'vòng Giant Steps', 'chuyển giọng quãng 3 trưởng', 'Countdown', 'thay thế Coltrane'],
+    aliases: ['Coltrane changes', 'vòng Giant Steps', 'chuyển giọng quãng 3 trưởng', 'Countdown', 'thay thế Coltrane'],
     summary: 'Hệ thống thay thế hợp âm của John Coltrane (Giant Steps, 1959): chia quãng 8 thành ba giọng cách nhau quãng 3 trưởng, mỗi giọng được chuẩn bị bằng hợp âm 7 át của nó.',
     wiki: 'Coltrane_changes',
     refs: [
+      ['The Jazz Piano Site — Coltrane Changes Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/coltrane-changes/'],
       ['Wikipedia — Coltrane changes', 'https://en.wikipedia.org/wiki/Coltrane_changes'],
       ['Wikipedia — Giant Steps (composition)', 'https://en.wikipedia.org/wiki/Giant_Steps_(composition)'],
       ['Learn Jazz Standards — Understanding Coltrane changes, part 1', 'https://www.learnjazzstandards.com/blog/understanding-coltrane-changes-part-1/'],
@@ -1685,6 +1686,12 @@ Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]
 ::staff treble B3+D#4+F#4+A#4=Bmaj7 D4+F#4+A4+C5=D7 G4+B4+D5+F#5=Gmaj7 Bb3+D4+F4+Ab4=B♭7 Eb4+G4+Bb4+D5=E♭maj7 | Bmaj7 – D7 – Gmaj7 – B♭7 – E♭maj7: mỗi giọng mới được dẫn vào bằng hợp âm 7 át của nó
 
 ## Như một phép thay thế cho ii – V – I
+TJPS cho ví dụ trong Đô trưởng, thay một ii – V – I bốn ô:
+| | Ô 1 | Ô 2 | Ô 3 | Ô 4 |
+|---|---|---|---|---|
+| Gốc | Dm7 | G7 | Cmaj7 | Cmaj7 |
+| Vòng Coltrane | Dm7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7 |
+Các giọng C – A♭ – E cũng cách nhau quãng 3 trưởng (một hợp âm ba tăng); TJPS áp cách này cho cả iii – vi – ii – V (Em7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7), và lưu ý có thể đổi giọng theo **bất kỳ quãng cố định nào** (quãng 3 thứ, tritone…).
 Coltrane cũng dùng hệ thống này để **[[tai-hoa-am|tái hoà âm]]** các tiến trình sẵn có: một [[ii-v-i]] được "lấp đầy" bằng các chặng cách nhau quãng 3 trưởng trước khi về chủ. Ví dụ "Countdown" là bản tái hoà âm của "Tune Up" (Miles Davis): khung lớn vẫn là các giọng của "Tune Up", nhưng từng chặng được chia nhỏ theo vòng Coltrane.
 
 ## Liên hệ với hoà âm cổ điển
@@ -1695,7 +1702,7 @@ Các giọng cách nhau quãng 3 là chủ đề của [[trung-am-cromatic|quan 
 2. Nhận ra từng cặp V7 – I và giọng nó dẫn tới.
 3. Thử chèn vòng Coltrane vào một ii – V – I quen thuộc.
 
-Giai đoạn trước đó của Coltrane: [[sheets-of-sound]].
+Giai đoạn trước đó của Coltrane: [[sheets-of-sound]]. Phân tích chi tiết bài "Giant Steps" (bảng hợp âm 16 ô, nguồn gốc, cách luyện): [[phan-tich-giant-steps]].
 `,
   },  {
     slug: 'constant-structures',
@@ -2115,7 +2122,7 @@ Liên quan: [[triad-pairs]], [[choi-ngoai-jazz]], [[hop-am-chong]].
 - Vì đi rất nhanh, nhiều nốt chỉ là **[[not-ngoai-hop-am|nốt lướt]]** — TJPS nhắc không nên dừng lâu trên [[not-tranh-va-quang-nghich|nốt tránh]].
 
 ## Sau "sheets of sound"
-Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thành ba phần bằng nhau trong "Giant Steps" (1959) — xem [[vong-coltrane]]. Khi phân tích solo Coltrane, các chuỗi nhóm lẻ dày đặc là dấu hiệu nhận ra "sheets of sound" (xem [[phan-tich-solo-jazz]]).
+Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thành ba phần bằng nhau trong "[[phan-tich-giant-steps|Giant Steps]]" (1959) — xem [[vong-coltrane]]. Khi phân tích solo Coltrane, các chuỗi nhóm lẻ dày đặc là dấu hiệu nhận ra "sheets of sound" (xem [[phan-tich-solo-jazz]]).
 `,
   },
   {
