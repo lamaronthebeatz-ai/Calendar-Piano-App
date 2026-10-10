@@ -593,7 +593,7 @@ function ArticleView({ article, scroller }: { article: Article; scroller: RefObj
                   <span className={clsx('flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-faint)]', i && 'sm:justify-end')}>
                     {i ? <>Bài sau <ChevronRightIcon width={12} height={12} /></> : <><ChevronLeftIcon width={12} height={12} /> Bài trước</>}
                   </span>
-                  <span className="mt-1 line-clamp-2 block font-display text-[16px] font-semibold text-[var(--color-ink)] group-hover:text-[var(--tint)]">{a.title}</span>
+                  <span className="mt-1 line-clamp-2 font-display text-[16px] font-semibold text-[var(--color-ink)] group-hover:text-[var(--tint)]">{a.title}</span>
                 </Link>
               ) : null,
             )}
