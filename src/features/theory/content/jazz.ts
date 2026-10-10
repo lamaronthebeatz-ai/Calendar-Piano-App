@@ -42,7 +42,7 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
 6. **Xếp hợp âm**: [[the-bam-ba-not]] → [[xep-hop-am]] (shell, không gốc, drop 2) → [[the-bam-mo]] → [[quy-tac-xep-hop-am-jazz]] → [[the-bam-bac-thay-jazz]] → [[hop-am-so-what-barron]] → [[hop-am-khoi]] → [[upper-structure]] → [[hoa-am-quang-bon]] → [[am-cum|âm cụm]]; chọn và ghép thế bấm: [[ket-hop-the-bam]], [[chon-the-bam-jazz]].
 7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]].
 8. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]], [[hop-am-luot-jazz]].
-9. **Tái hoà âm**: [[tai-hoa-am]], [[constant-structures]].
+9. **Tái hoà âm**: [[tai-hoa-am]] (gồm cách làm bài "jazzy"), [[tai-hoa-am-gospel]], [[doi-nhip-the-loai-jazz|đổi nhịp, đổi thể loại, chơi tự do thời gian]], [[constant-structures]]; **sáng tác**: [[sang-tac-jazz]].
 10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]].
 11. **Ngẫu hứng** (theo các bài của TJPS):
    - Nền tảng: [[ngau-hung-jazz]] → [[not-dan-huong]] → [[trang-tri-giai-dieu-jazz]] → [[not-tiep-can-jazz]] → [[not-tranh-va-quang-nghich]].
@@ -1292,6 +1292,8 @@ Hợp âm So What chi tiết: [[hop-am-so-what-barron]].
       ['Wikipedia — Chord substitution', 'https://en.wikipedia.org/wiki/Chord_substitution'],
       ['Wikipedia — Backdoor progression', 'https://en.wikipedia.org/wiki/Backdoor_progression'],
       ['Anton Schwartz — The backdoor ii-V progression', 'https://antonjazz.com/2012/01/backdoor-ii-v-progression/'],
+      ['The Jazz Piano Site — II-V Substitution', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/ii-v-substitution/'],
+      ['The Jazz Piano Site — Chord Substitution', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/chord-substitution/'],
     ],
     body: `
 **Thay thế** là đổi **một** [[hop-am-ba|hợp âm]]; [[tai-hoa-am|tái hoà âm]] là áp nhiều phép thay thế lên **cả** một tiến trình. Trong jazz, người chơi thay thế ngay khi biểu diễn — nên cần hiểu **vì sao** mỗi phép thay hoạt động.
@@ -1323,6 +1325,18 @@ Thay V7 bằng hợp âm 7 át cách nó một tritone (G7 → D♭7) — hai h�
 - **Giảm lướt đi lên**: C – **C♯°7** – Dm7: bè trầm đi lên [[am-giai-cromatic|cromatic]]. C♯°7 chính là vii°7/ii — một át phụ của Dm7 (xem [[hop-am-cam-am]]).
 ::staff bass C3+E3+G3=C C#3+E3+G3+Bb3=C♯°7 D3+F3+A3+C4=Dm7 | Hợp âm 7 giảm lướt: bè trầm C – C♯ – D đi lên cromatic
 - **Giảm nốt chung**: Cmaj7 – **C°7** (CT°7) – Cmaj7: nốt chung C giữ nguyên, các bè thêu quanh — Open Music Theory xếp đây là một kỹ thuật thêm hợp âm chính của jazz (xem [[hop-am-not-chung]]).
+
+## 7. Thay thế bằng ii – V
+TJPS: một [[ii-v-i|ii – V]] tạo cảm giác **kết thúc mạnh dù dẫn về hợp âm nào**, miễn là [[dan-giong|dẫn giọng]] mượt — ii – V – vi hay ii – V – IV vẫn "chắc". Vì vậy có thể chèn ii – V trước gần như mọi hợp âm đích. Bảng thay thế của TJPS cho G7: **Dm7 – G7**, dài hơn là **Em7 – A7 | Dm7 – G7** (ii – V của ii – V).
+Bốn cách đi vào Cmaj7:
+| Tên | Trong Đô trưởng | Giải thích |
+|---|---|---|
+| ii – V thường | Dm7 – G7 → Cmaj7 | |
+| "Cửa trước" (frontdoor — tên TJPS dùng) | Bm7♭5 – E7 → Cmaj7 | ii – V của **Am7**, nhưng giải quyết về Cmaj7 (Am7 là hợp âm thay cùng chức năng của Cmaj7) |
+| Cửa sau (backdoor) | Fm7 – B♭7 → Cmaj7 | TJPS: **thay thế tritone của cửa trước** (E7 → B♭7) — xem mục 5 |
+| ii – V tritone | A♭m7 – D♭7 → Cmaj7 | Cả cặp ii – V dời đi một tritone (cách ghi phổ biến, không thấy TJPS viết riêng) |
+::staff treble D4+F4+A4+C5=Dm7 D4+F4+G4+B4=G7 E4+G4+B4+C5=Cmaj7 / D4+F4+A4+B4=Bm7♭5 D4+E4+G#4+B4=E7 E4+G4+B4+C5=Cmaj7 / C4+F4+Ab4+Eb5=Fm7 D4+F4+Ab4+Bb4=B♭7 E4+G4+B4+C5=Cmaj7 / Cb4+Eb4+Gb4+Ab4=A♭m7 Cb4+Db4+F4+Ab4=D♭7 C4+E4+G4+B4=Cmaj7 | Bốn đường ii – V về Cmaj7 (thế bấm hẹp, chỉ để so sánh nốt)
+TJPS tóm lại: các tiến trình này đều là **một ii – V hoặc thay thế tritone của một ii – V**, dẫn về I hoặc về một hợp âm thay cùng chức năng của I. Chuỗi ii – V nối nhau: [[phan-tich-tien-trinh-jazz]].
 
 ## Điều kiện để thay thế
 Nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng phải là **nốt hợp âm** hoặc **[[hop-am-mo-rong|nốt căng]] hợp lý** của hợp âm mới. Nếu va chạm nửa cung với nốt 3 hoặc 7 của hợp âm mới, hãy chọn phép thay khác.
@@ -1375,6 +1389,9 @@ Liên quan: [[tai-hoa-am]], [[dem-jazz]].
       ['Wikipedia — Reharmonization', 'https://en.wikipedia.org/wiki/Reharmonization'],
       ['Learn Jazz Standards — 10 jazz reharmonization techniques', 'https://www.learnjazzstandards.com/blog/jazz-reharmonization-techniques/'],
       ['The Jazz Piano Site — Jazz reharmonization', 'https://www.thejazzpianosite.com/?p=239'],
+      ['The Jazz Piano Site — How to turn any Song into a Jazz Song', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/turn-song-jazz-song/'],
+      ['The Jazz Piano Site — How to Reharmonize a Song', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/how-to-reharmonize-a-song/'],
+      ['The Jazz Piano Site — Chord Substitution', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/chord-substitution/'],
     ],
     body: `
 Nguyên tắc: nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng ([[so-chi-nhip|phách mạnh]], nốt dài) phải là nốt của [[hop-am-ba|hợp âm]] mới, hoặc một [[hop-am-mo-rong|nốt mở rộng]] hợp lý.
@@ -1409,6 +1426,26 @@ Giai điệu 4 ô: **E – F – B – C** (mỗi ô một nốt dài), hoà âm
 ## Tái hoà âm trong biểu diễn
 Nhiều phép thay thế được dùng **ngay khi chơi**, nên người đệm và người độc tấu phải nghe nhau: nếu piano thay G7 bằng D♭7 trong khi bass vẫn chơi G, hai hợp âm sẽ va chạm. [[ky-hieu-hop-am|Lead sheet]] chỉ là **khung**; tái hoà âm là phần sáng tạo của người chơi.
 
+## Làm một bài hát "jazzy" (TJPS)
+TJPS: kết hợp các lớp dưới đây có thể biến **gần như bất kỳ bài nào** — pop, cổ điển, đồng quê — thành một bài nghe "jazz". Xếp từ nhẹ đến mạnh:
+1. Thêm [[hop-am-bay|nốt 7]] cho mọi hợp âm.
+2. Thêm [[hop-am-mo-rong|nốt mở rộng]] (9, 13).
+3. [[hop-am-at-bien-hoa|Hợp âm biến hoá]] (♭9, ♯9, ♭13…).
+4. [[hop-am-luot-jazz|Hợp âm lướt và hợp âm tiếp cận]].
+5. [[xep-hop-am|Thế bấm jazz]].
+6. [[trang-tri-giai-dieu-jazz|Trang trí giai điệu]].
+7. **Tái hoà âm** (bảng ở trên, quy trình ở dưới).
+8. Cách tiếp cận **điệu thức**: chỉ một hai hợp âm, thường là một vamp — xem [[jazz-dieu-thuc]].
+9. **Đổi nhịp** (5/4, 7/8…) — xem [[doi-nhip-the-loai-jazz]].
+Công thức đơn giản nhất của TJPS cho piano: tay trái [[bass-di-jazz|bass đi]], tay phải [[not-dan-huong|nốt dẫn hướng]] (3 và 7) cộng giai điệu — rồi ngẫu hứng.
+
+## Quy trình tái hoà âm (TJPS)
+1. Tìm **nốt giai điệu chính** của mỗi ô — nốt duy nhất phải giữ.
+2. Đổi hợp âm (và/hoặc chỉnh giai điệu) sao cho nốt đó là **hoà âm chấp nhận được**: một nốt dẫn hướng (3 hoặc 7) hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Mọi nốt khác của hợp âm — kể cả gốc, 3, 7 — đều có thể đổi, **trừ** nốt giai điệu chính.
+3. Nối các hợp âm theo **nửa cung**, theo **bậc trong giọng** hoặc theo **[[vong-quang-nam|vòng quãng 5]]**.
+4. Điều khiển **căng – giãn**: nốt căng cao và biến hoá (♭13) tạo căng; nốt dẫn hướng và nốt căng thấp (9) tạo giãn.
+Bảng thay thế của TJPS chia các phép thay thành nhóm: cromatic (quãng cố định), [[vong-coltrane|Coltrane]], [[thay-the-hop-am|diatonic]], dựa trên giai điệu, và dựa trên bè trầm ([[bass-ngan|bass ngân]], bass đi liền bậc). Các phép thay bằng ii – V: [[thay-the-hop-am]]. Biến thể gospel: [[tai-hoa-am-gospel]]; tái hoà âm sang [[the-loai|thể loại]] khác: [[doi-nhip-the-loai-jazz]].
+
 ## Gợi ý luyện tập
 1. Chọn một bài quen (ví dụ "Twinkle Twinkle Little Star") với vòng gốc I – IV – V.
 2. Áp từng kỹ thuật một, chơi lại và nghe sự khác biệt.
@@ -1417,6 +1454,124 @@ Nhiều phép thay thế được dùng **ngay khi chơi**, nên người đệm
 Liên quan: [[vong-hop-am]], [[he-thong-hop-am-am-giai]].
 
 Công cụ khác: [[line-cliche]], [[turnaround-jazz]], [[constant-structures]].
+`,
+  },
+  {
+    slug: 'doi-nhip-the-loai-jazz',
+    title: 'Đổi nhịp, đổi thể loại và chơi tự do thời gian',
+    category: 'jazz',
+    aliases: ['changing the meter', 'jazz waltz', 'changing genre', 'đổi thể loại', 'reharmonization into different genres', 'free time', 'chơi tự do thời gian', 'intro rubato', 'dạo đầu jazz'],
+    summary: 'Ba cách "biến hình" một bài chuẩn ngoài việc đổi hợp âm: đổi số chỉ nhịp (Fly Me to the Moon vốn là điệu valse; Brubeck với 5/4, 7/4, 9/8), đổi thể loại chỉ bằng cách chọn hợp âm (pop, jazz điệu tính, điệu thức, phi điệu tính, blues), và chơi tự do thời gian — cách làm dạo đầu phổ biến của pianist solo.',
+    refs: [
+      ['The Jazz Piano Site — Changing the Meter', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/changing-the-meter/'],
+      ['The Jazz Piano Site — Reharmonization into Different Genres', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/reharmonization-into-different-genres/'],
+      ['The Jazz Piano Site — Playing in Free Time & Creating Intros', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/playing-in-free-time/'],
+      ['Wikipedia — Fly Me to the Moon', 'https://en.wikipedia.org/wiki/Fly_Me_to_the_Moon'],
+      ['Wikipedia — Time Out (Dave Brubeck album)', 'https://en.wikipedia.org/wiki/Time_Out_(album)'],
+      ['Wikipedia — Unsquare Dance', 'https://en.wikipedia.org/wiki/Unsquare_Dance'],
+    ],
+    body: `
+[[tai-hoa-am|Tái hoà âm]] đổi **hợp âm**; bài này nói về ba cách đổi **những thứ khác** của một bài chuẩn: nhịp, [[the-loai|thể loại]] và cảm giác thời gian.
+
+## 1. Đổi số chỉ nhịp
+- TJPS: phần lớn bài jazz ở **4/4** — có lẽ từ thời [[swing|Swing]], khi jazz là nhạc khiêu vũ và 4/4 có phách nhấn 2 – 4 dễ nhảy hơn nhiều so với kiểu 13/8.
+- Ví dụ TJPS: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **valse 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là phối khí của Quincy Jones cho Frank Sinatra (1964).
+- TJPS gợi ý thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
+- Ở nhịp lẻ, [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] có thể không đối xứng.
+::rhythm 4/4 h q q / w // | Minh hoạ: hai ô 4/4 của một câu giai điệu…
+::rhythm 3/4 q q q / h. // | …chuyển sang 3/4 bằng cách rút nốt dài: mỗi ô gốc thành một ô valse (một cách làm, không phải quy tắc)
+
+## 2. Đổi thể loại bằng hợp âm
+TJPS lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều thể loại; ý chính: **chỉ cần chọn hợp âm** đã có thể chuyển bài sang thể loại khác.
+| Thể loại | Hợp âm |
+|---|---|
+| Pop (bản gốc) | Phần lớn [[hop-am-ba|hợp âm ba]] trong giọng, [[giai-dieu|giai điệu]] rơi vào nốt gốc |
+| Jazz [[dieu-tinh|điệu tính]] | [[hop-am-bay|Hợp âm 7]], nhiều [[ii-v-i]]; giai điệu là [[not-dan-huong|nốt dẫn hướng]] hoặc [[hop-am-mo-rong|nốt căng]] |
+| Jazz điệu thức | Bỏ tiến trình gốc, chỉ dùng **một hai hợp âm** (xem [[jazz-dieu-thuc]]) |
+| Jazz [[phi-dieu-tinh|phi điệu tính]] | Một phiên bản phi điệu tính **khá thuận tai** — không phải [[am-cum|âm cụm]] ngẫu nhiên ([[post-bop-free-jazz]]) |
+| [[blues-12-nhip|Blues]] | Hợp âm blues **chưa đủ**: nếu giai điệu tránh [[am-giai-blues|nốt blue]] thì bài vẫn không "blues" |
+Kết luận của TJPS: thể loại đến từ **cách giai điệu và hoà âm tương tác**. Phần nhịp đệm (bass đi, [[ostinato|bass lặp]] blues, bossa nova) đổi theo — xem [[bass-di-jazz]], [[dieu-dem-pho-bien]], [[dem-jazz]].
+
+## 3. Chơi tự do thời gian
+TJPS: người học hay bỏ qua kỹ năng này, nhưng nó rất cần cho **dạo đầu**, và pianist chơi một mình không cần [[kiem-soat-toc-do|giữ nhịp]] cứng.
+**Cách làm dạo đầu phổ biến**: chơi **cả [[hinh-thuc-am-nhac|hình thức]] một lần ở thời gian tự do**, rồi **vào nhịp đột ngột** khi bài lặp lại.
+| Phần của bài | Kỹ thuật |
+|---|---|
+| **Các [[cau-nhac|câu nhạc]]** | Giữ gần nguyên để giai điệu còn nhận ra; [[trang-tri-giai-dieu-jazz|trang trí]] nhẹ; [[rubato]] có chừng mực; [[ky-thuat-quang-tam|chơi quãng 8]]; chuyển giai điệu sang [[quang|quãng 8]] khác |
+| **Chỗ nghỉ giữa các câu** | [[luyen-hop-am-rai|Hợp âm rải]], chạy [[am-giai|âm giai]], "fill" hay [[ngau-hung-piano|ngẫu hứng]] ngắn, hoặc chơi và giữ một hợp âm — ở đây có thể chậm hẳn lại, gần như không còn nhịp |
+TJPS xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp" — nên cân bằng bằng những yếu tố có cấu trúc (giai điệu rõ, hoà âm quen). Liên hệ cổ điển: [[prelude-ung-tac|prelude ứng tác]], [[cadenza]].
+`,
+  },
+  {
+    slug: 'tai-hoa-am-gospel',
+    title: 'Tái hoà âm gospel',
+    category: 'jazz',
+    aliases: ['gospel reharmonization', 'gospel jazz', 'tái hoà âm gospel', 'Amazing Grace', 'backcycling', 'gospel piano'],
+    summary: 'Gospel là hoà âm nhà thờ của người Mỹ gốc Phi, gần gũi với blues và hard bop. TJPS lấy "Amazing Grace" (giai điệu ngũ cung, chỉ ba hợp âm I – IV – V) và biến nó thành gospel – jazz: lùi vòng quãng 5 (C – F – C), hoà âm hoá gần như mọi nốt giai điệu, hợp âm 7 giảm lướt, át phụ và thay thế tritone.',
+    refs: [
+      ['The Jazz Piano Site — Gospel-Jazz Piano Techniques and Reharmonization', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/gospel-jazz-piano-techniques-and-reharmonization/'],
+      ['The Jazz Piano Site — Gospel Jazz Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/gospel-jazz-explained/'],
+      ['The Jazz Piano Site — Hard Bop & Soul Jazz Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/hard-bop-soul-jazz-explained/'],
+      ['The Jazz Piano Site — Passing Chords', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/passing-chords/'],
+    ],
+    body: `
+## Điểm xuất phát
+TJPS chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
+- Bản cơ bản chỉ dùng **I, IV, V** (C, F, G).
+- [[giai-dieu|Giai điệu]] (gần như) chỉ dùng **[[am-giai-ngu-cung|ngũ cung]] trưởng** C – D – E – G – A.
+- Tay trái là đường bass đơn giản, nhấn nốt gốc.
+
+## Các kỹ thuật gospel (theo TJPS)
+- **Lùi vòng quãng 5** (backcycling): chèn [[hop-am-ba|hợp âm]] cách một bước ngược chiều [[vong-quang-nam|vòng quãng 5]] rồi quay lại — C – F – C. Chuyển động IV – I này là màu "**nhà thờ**" ([[cau-ket|kết plagal]]); TJPS cũng gọi nó như vậy khi nói về hard bop.
+- **Hoà âm hoá gần như từng nốt giai điệu** ở tay phải, xếp hẹp, chủ yếu đi **song song**, nốt giai điệu luôn ở trên cùng — họ hàng của [[hop-am-khoi|block chords]].
+- Thêm [[hop-am-mo-rong|nốt căng]] và nốt biến hoá, [[hop-am-at-phu|át phụ]], [[hop-am-luot-jazz|hợp âm 7 giảm lướt]], [[thay-the-hop-am|thay thế]].
+
+## Từng chỗ trong bài (theo TJPS)
+| Chỗ | Kỹ thuật |
+|---|---|
+| Ô 2 | C7 hướng về Fmaj7, chèn **F°7** để **trì hoãn** giải quyết |
+| Gần ô 3 | **C°7** — hợp âm giảm lướt dẫn về C |
+| Ô 6 | **G°7** — hợp âm giảm lướt dẫn về G |
+| Ô 8 | G7 được thay bằng **D♭7** ([[thay-the-tritone]]), giai điệu ở nốt ♯9 của D♭7 (= E, nốt 3 của C), rồi về C ngay |
+::staff treble C4+E4+G4+Bb4=C7 F4+Ab4+B4+D5=F°7 F4+A4+C5+E5=Fmaj7 / Db4+F4+Ab4+Cb5=D♭7 C4+E4+G4=C | Ô 2: C7 → F°7 → Fmaj7 (hợp âm giảm làm chậm việc về IV); ô 8: D♭7 thay G7 rồi về C
+
+## Gospel và jazz
+Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60): nhiều kết IV – I, nốt blue, đệm "gõ" theo tiếng đàn organ nhà thờ (xem [[am-giai-blues]], [[blues-12-nhip]]). Các kỹ thuật trên cũng dùng trực tiếp cho [[dem-hat-piano|đệm hát]] thánh ca và [[nhac-pho|nhạc phổ]] thông.
+`,
+  },
+  {
+    slug: 'sang-tac-jazz',
+    title: 'Sáng tác jazz và phát triển giai điệu',
+    category: 'jazz',
+    aliases: ['jazz composition', 'sáng tác jazz', 'composition and melodic development', 'phát triển giai điệu', 'snowflake method', 'doodling method'],
+    summary: 'TJPS xem sáng tác là "ngẫu hứng không có tính tức thời": phân tích giai điệu theo quãng, motif, tiết tấu, âm giai, hoà âm; phát triển motif bằng đảo, ngược, giãn, co, tách mảnh; đặt đỉnh giai điệu ở khoảng 2/3–3/4 câu; hai quy trình "vẽ nguệch ngoạc" và "bông tuyết" để đi từ một câu nhạc đến một lead sheet.',
+    refs: [
+      ['The Jazz Piano Site — Composition and Melodic Development', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/composition-and-melodic-development/'],
+      ['The Jazz Piano Site — Contrafacts', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/contrafacts/'],
+      ['The Jazz Piano Site — Rhythm Changes', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/rhythm-changes/'],
+    ],
+    body: `
+TJPS: sáng tác là "**[[ngau-hung-piano|ngẫu hứng]] không có tính tức thời**" — cùng những công cụ của [[xay-dung-bai-solo|xây dựng bài solo]], nhưng có thời gian để chọn lọc.
+
+## Phân tích một giai điệu
+Năm góc nhìn (TJPS): **[[quang|quãng]]** (các bước nhảy), **motif**, **[[tiet-tau|tiết tấu]]**, **[[am-giai|âm giai]]** (giai điệu lấy nốt từ âm giai nào), **hoà âm** (nốt giai điệu so với [[hop-am-ba|hợp âm]] — xem [[not-dan-huong]], [[not-tranh-va-quang-nghich]]). Đây cũng là các yếu tố trong [[phan-tich-phong-cach|khung LaRue]].
+
+## Phát triển motif
+Đổi [[cao-do|cao độ]] hoặc tiết tấu, **đảo** ([[the-dao-hop-am|inversion]]), **ngược** (retrograde), **giãn** (augmentation), **co** (diminution), **tách mảnh** (fragmentation) — đúng các kỹ thuật cổ điển trong [[motif]], [[bien-doi-chu-de]] và [[doi-am|đối âm]].
+::staff treble C4 D4 E4 G4 / C5 B4 A4 F4 / G4 E4 D4 C4 | Minh hoạ trên một motif C – D – E – G: nguyên dạng; đảo (các bước đi xuống, bắt đầu từ C cao); ngược (đọc từ cuối về đầu)
+
+## Hình dáng giai điệu
+- Trộn **bước liền bậc, nhảy nhỏ và nhảy xa** ([[giai-dieu]]).
+- Đặt **nốt cao nhất** (đỉnh) ở khoảng **2/3 đến 3/4** [[cau-nhac|câu nhạc]] hoặc bài — gần với cách [[dien-dat-cau-nhac|câu nhạc]] cổ điển đặt cao trào.
+
+## Hai quy trình
+- **"Vẽ nguệch ngoạc"** (doodling): bắt đầu từ một giai điệu nghe hay rồi chỉnh cho hợp phong cách.
+- **"Bông tuyết"** (snowflake): dạo đàn → tìm một câu → phát triển thành motif → hoà âm hoá → có một **lead sheet** ([[ky-hieu-hop-am]]). Bước cuối: **phối** ([[hinh-thuc-am-nhac|hình thức]], [[ngon-bam|thế bấm]], nhạc cụ, [[cuong-do|cường độ]]).
+::form Dạo_đàn Một_câu Motif Hoà_âm Ký_âm Phối | Quy trình "bông tuyết" của TJPS: dạo đàn → tìm một câu → motif → hoà âm hoá → ký âm thành lead sheet → phối
+
+## Contrafact: giai điệu mới trên vòng hợp âm cũ
+Bản quyền bảo vệ giai điệu và lời, **không** bảo vệ [[vong-hop-am|vòng hợp âm]], nên nhạc công bebop viết rất nhiều **contrafact** — chi tiết và ví dụ ở [[rhythm-changes]]. Đó là cách tập sáng tác dễ nhất: giữ hoà âm quen, chỉ viết giai điệu mới.
+Bài TJPS gợi ý để học các kỹ thuật: "E.S.P.", "In Walked Bud", "Satin Doll", "Autumn Leaves", "All the Things You Are". Liên quan: [[hinh-thuc-ca-khuc-32]], [[phoi-hoa-am-giai-dieu]].
 `,
   },
   {
@@ -1499,6 +1654,7 @@ Turnaround ở cuối mỗi đoạn A: [[turnaround-jazz]].
 - Thời bebop: "Anthropology", "Moose the Mooche", "Steeplechase" (Charlie Parker); "Oleo" (Sonny Rollins); "Rhythm-a-Ning" ([[thelonious-monk|Thelonious Monk]]).
 - Các nhạc công bebop còn **chồng thêm chuỗi ii – V** lên vòng này, biến nó thành "bài kiểm tra tay nghề" ngẫu hứng.
 
+Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]], quy trình "bông tuyết"): [[sang-tac-jazz]].
 ## Học rhythm changes thế nào?
 1. Thuộc đoạn A dạng đơn giản nhất (I – vi – ii – V) và đoạn B (bốn hợp âm 7 át).
 2. Chơi [[ii-v-i|nốt dẫn hướng]] qua cả 32 ô.
@@ -2064,6 +2220,7 @@ TJPS không đưa khuôn mẫu cố định cho cả bài solo. Theo kinh nghi�
 | **Hoà âm** | Biến hoá và thay thế hợp âm; Coleman Hawkins chuyển ngẫu hứng từ dựa trên giai điệu sang **dựa trên hoà âm** ("Body and Soul", 1939) |
 | **Tiết tấu** | Groove, ví dụ clave Latin |
 | **Âm sắc** | Tiếng ồn, vi cung (free jazz — xem [[post-bop-free-jazz]]) |
+Viết ra thay vì ngẫu hứng — cùng công cụ, có thời gian chọn lọc: [[sang-tac-jazz]].
 `,
   },
   {
@@ -2166,6 +2323,7 @@ Liên quan: [[hoi-hop-bieu-dien]], [[ngau-hung-ung-tac]].
       ['Wikipedia — Kind of Blue', 'https://en.wikipedia.org/wiki/Kind_of_Blue'],
       ['Wikipedia — So What (Miles Davis composition)', 'https://en.wikipedia.org/wiki/So_What_(Miles_Davis_composition)'],
       ['Wikipedia — Impressions (John Coltrane album)', 'https://en.wikipedia.org/wiki/Impressions_(John_Coltrane_album)'],
+      ['The Jazz Piano Site — Reharmonizing a Tonal Jazz Song into a Modal Jazz Song', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/turning-tonal-song-modal-song/'],
     ],
     body: `
 ## Đặc điểm (theo TJPS)
@@ -2191,6 +2349,15 @@ Cơ sở lý thuyết của việc chọn hợp âm và tránh lực hút V – 
 ## Đệm và solo trên một điệu thức
 - Đệm: các hợp âm quãng 4 **di chuyển song song trong điệu thức** (lối của McCoy Tyner thập niên 1960 — TJPS) — xem [[hoa-am-quang-bon]].
 - Solo: để nghe ra điệu thức, nhấn **nốt đặc trưng** (B trong Rê Dorian); dùng [[am-giai-ngu-cung|ngũ cung]], [[choi-ngoai-jazz|side-slipping]] để tạo căng trên nền tĩnh.
+## Biến một bài điệu tính thành bài điệu thức (TJPS)
+- **Bỏ hẳn tiến trình gốc**, thay bằng **một** (hoặc một hai) hợp âm kéo dài — không phải gộp từng ii – V – I.
+- Thêm **vamp / riff / ostinato** dưới giai điệu: tự viết, hoặc mượn một vamp điệu thức quen ("So What", "Maiden Voyage"); lead sheet thường không ghi vamp.
+- Hợp nhất khi giai điệu **phần lớn trong một giọng**, đi liền bậc, **tránh tritone trong giọng** và tránh rải hợp âm.
+- TJPS: thế bấm **xếp chồng quãng 3** nghe điệu tính, thế bấm **quãng 4** nghe điệu thức.
+- Ví dụ: John Coltrane biến "My Favorite Things" và "Chim Chim Cher-ee" (hai bài điệu tính) thành bài điệu thức.
+::grand D4+G4+C5/D3+A3=Dm11_(D_Dorian) | Minh hoạ một vamp tĩnh: tay phải xếp quãng 4 (D – G – C) trên quãng 5 D – A — có thể thay cho cả chuỗi Dm7 – G7 – Cmaj7 nếu giai điệu nằm trong các phím trắng
+Ngược lại, đổi thể loại một bài pop sang điệu thức: [[doi-nhip-the-loai-jazz]].
+
 Bước tiếp theo trong lịch sử: [[post-bop-free-jazz]].
 
 Hợp âm So What: [[hop-am-so-what-barron]].
