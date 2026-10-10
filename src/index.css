@@ -201,22 +201,28 @@ body {
 }
 .btn-sheen:hover::after { transform: translateX(120%); }
 
-/* Ebony-and-midnight hero used by the theory library. */
+/* Theory hero: a warm-black stage lit like the pianist photograph behind it. */
 .hero-ebony {
-  background:
-    radial-gradient(90% 120% at 100% 0%, rgba(216, 183, 127, 0.22), transparent 55%),
-    radial-gradient(70% 90% at 0% 100%, rgba(120, 140, 220, 0.22), transparent 60%),
-    linear-gradient(135deg, #11131b 0%, #1c2640 52%, #33284b 100%);
-  color: #f6efe2;
+  background: #0b0806;
+  color: #f6ecdc;
 }
-/* Five faint staff lines drifting across the hero. */
-.hero-staff {
-  background-image: repeating-linear-gradient(to bottom, rgba(246, 239, 226, 0.09) 0 1px, transparent 1px 14px);
-  mask-image: linear-gradient(to right, transparent, #000 30%, #000 70%, transparent);
+.hero-wash {
+  background:
+    linear-gradient(90deg, #0b0806 0%, rgba(11, 8, 6, 0.92) 34%, rgba(11, 8, 6, 0.45) 62%, rgba(11, 8, 6, 0.05) 100%),
+    radial-gradient(60% 80% at 85% 55%, rgba(226, 150, 70, 0.10), transparent 70%),
+    linear-gradient(0deg, rgba(11, 8, 6, 0.7), transparent 45%);
+}
+@media (max-width: 640px) {
+  .hero-wash {
+    background:
+      linear-gradient(90deg, rgba(11, 8, 6, 0.94) 0%, rgba(11, 8, 6, 0.8) 55%, rgba(11, 8, 6, 0.5) 100%),
+      linear-gradient(0deg, rgba(11, 8, 6, 0.9), transparent 50%);
+  }
+  .hero-ebony p, .hero-ebony dl { text-shadow: 0 1px 12px rgba(0, 0, 0, 0.8); }
 }
 
 .text-gold-gradient {
-  background: linear-gradient(90deg, #e9cf9c, #c9a063 60%, #f1dcb2);
+  background: linear-gradient(90deg, #f3cf8e, #d9954a 55%, #f0c987);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

@@ -29,7 +29,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2}'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [

@@ -154,18 +154,22 @@ function Index() {
   return (
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
       <section className={clsx('hero-ebony relative isolate overflow-hidden rounded-[28px] shadow-[var(--shadow-float)]', active || query ? 'p-2.5' : 'animate-float-up px-5 pb-6 pt-7 sm:px-9 sm:pb-9 sm:pt-10')}>
+        {/* The pianist photograph sits on the right; a warm-black wash keeps the text side readable. */}
+        <picture aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+          <source media="(max-width: 640px)" srcSet={`${import.meta.env.BASE_URL}images/hero-piano-sm.webp`} />
+          <img src={`${import.meta.env.BASE_URL}images/hero-piano.webp`} alt="" className="h-full w-full object-cover object-[78%_45%] sm:object-[right_42%]" />
+        </picture>
+        <div aria-hidden className="hero-wash pointer-events-none absolute inset-0 -z-10" />
         {!active && !query && (
           <>
-            <div aria-hidden className="hero-staff pointer-events-none absolute inset-x-0 top-10 h-[70px]" />
-            <div aria-hidden className="pointer-events-none absolute -right-6 top-2 select-none font-['Noto_Music'] text-[180px] leading-none text-white/[0.05] sm:text-[240px]">𝄞</div>
-            <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[#d8b77f]">Thư viện lý thuyết</p>
-            <h2 className="relative mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight sm:text-[44px]">
+            <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Thư viện lý thuyết</p>
+            <h2 className="relative mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
               Âm nhạc phương Tây <span className="text-gold-gradient italic">&amp; piano</span>
             </h2>
-            <p className="relative mt-3 max-w-lg text-[14px] leading-relaxed text-white/70 sm:text-[15px]">
+            <p className="relative mt-3 max-w-md text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
               Từ ký âm cơ bản đến hoà âm jazz và phân tích tác phẩm — mọi trang liên kết với nhau như một bách khoa toàn thư, để học và để dạy.
             </p>
-            <dl className="relative mt-5 flex flex-wrap gap-x-6 gap-y-2">
+            <dl className="relative mt-5 flex max-w-md flex-wrap gap-x-6 gap-y-2">
               {[
                 [ARTICLES.length, 'trang'],
                 [articlesByCategory.length, 'chủ đề'],
@@ -173,27 +177,27 @@ function Index() {
                 [libraryStats.figures.toLocaleString('vi-VN'), 'hình minh hoạ'],
               ].map(([n, label]) => (
                 <div key={label} className="flex items-baseline gap-1.5">
-                  <dt className="font-display text-[22px] font-semibold text-white">{n}</dt>
-                  <dd className="text-[12.5px] text-white/60">{label}</dd>
+                  <dt className="font-display text-[22px] font-semibold text-[#f0c987]">{n}</dt>
+                  <dd className="text-[12.5px] text-[#e9dcc6]/60">{label}</dd>
                 </div>
               ))}
             </dl>
           </>
         )}
-        <label className={clsx(!active && !query && 'mt-6', 'relative flex h-12 items-center gap-2.5 rounded-2xl bg-white/95 px-4 text-[#625b50] shadow-[0_8px_30px_-10px_rgba(0,0,0,0.5)] ring-1 ring-white/30 transition-shadow focus-within:ring-2 focus-within:ring-[#d8b77f]')}>
+        <label className={clsx(!active && !query && 'mt-6', 'relative flex h-12 items-center gap-2.5 rounded-2xl bg-[#f7efe2]/95 px-4 text-[#7a5a3a] shadow-[0_10px_34px_-10px_rgba(0,0,0,0.7)] ring-1 ring-[#e2b66e]/30 backdrop-blur transition-shadow focus-within:ring-2 focus-within:ring-[#e2b66e]')}>
           <SearchIcon width={18} height={18} className="shrink-0" />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`Tìm trong ${ARTICLES.length} trang: hợp âm, thị tấu, Chopin…`}
-            className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-[#1a1714] outline-none placeholder:text-[#9b9384]"
+            className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-[#1c140d] outline-none placeholder:text-[#a08a70]"
           />
           {query ? (
             <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-1 hover:bg-black/5">
               <XIcon width={16} height={16} />
             </button>
           ) : (
-            <button onClick={surprise} title="Mở một bài ngẫu nhiên" className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-[12.5px] font-medium text-[#2c4a7c] hover:bg-black/5">
+            <button onClick={surprise} title="Mở một bài ngẫu nhiên" className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-[12.5px] font-medium text-[#a5632a] hover:bg-[#a5632a]/10">
               <ShuffleIcon width={14} height={14} /> <span className="hidden sm:inline">Ngẫu nhiên</span>
             </button>
           )}
@@ -201,7 +205,7 @@ function Index() {
         {!active && !query && (
           <div className="relative mt-3 flex flex-wrap gap-2">
             {SUGGESTIONS.map((s) => (
-              <button key={s} onClick={() => setQuery(s)} className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-[12.5px] text-white/80 transition-colors hover:border-[#d8b77f]/60 hover:bg-white/10 hover:text-white">
+              <button key={s} onClick={() => setQuery(s)} className="rounded-full border border-[#e2b66e]/25 bg-black/30 px-3 py-1 text-[12.5px] text-[#efe3cf]/85 backdrop-blur-sm transition-colors hover:border-[#e2b66e]/70 hover:bg-[#e2b66e]/15 hover:text-[#f6ecdc]">
                 {s}
               </button>
             ))}
