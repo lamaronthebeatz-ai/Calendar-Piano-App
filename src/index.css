@@ -289,3 +289,57 @@ body {
   .animate-float-up, .animate-popover { animation: none; }
   .btn-sheen::after { display: none; }
 }
+
+/* ---------- Welcome / passcode glass ---------- */
+.app-veil { transition: filter 900ms cubic-bezier(0.7, 0, 0.2, 1), transform 900ms cubic-bezier(0.7, 0, 0.2, 1); }
+.app-veil.is-veiled { filter: blur(16px) saturate(1.25); transform: scale(1.04); }
+.lock-glass {
+  background: color-mix(in oklch, var(--color-surface) 52%, transparent);
+  backdrop-filter: blur(30px) saturate(1.5);
+  -webkit-backdrop-filter: blur(30px) saturate(1.5);
+  transition: transform 850ms cubic-bezier(0.7, 0, 0.2, 1), border-radius 850ms ease;
+}
+/* The pane lifts off upwards, rounding its lower edge like a sheet of glass. */
+.lock-glass.is-leaving {
+  transform: translateY(-104%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.35);
+}
+.lock-glass.is-leaving .lock-content {
+  opacity: 0;
+  transform: translateY(-24px) scale(0.97);
+  transition: opacity 450ms ease, transform 600ms ease;
+}
+.lock-glow {
+  background:
+    radial-gradient(60% 45% at 20% 10%, color-mix(in oklch, var(--color-gold) 22%, transparent), transparent 70%),
+    radial-gradient(55% 40% at 90% 95%, color-mix(in oklch, var(--color-accent) 16%, transparent), transparent 70%);
+}
+.lock-key {
+  background: color-mix(in oklch, var(--color-surface-raised) 55%, transparent);
+  border: 1px solid color-mix(in oklch, var(--color-ink) 8%, transparent);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 6px 18px -10px rgba(0, 0, 0, 0.25);
+  transition: transform 120ms ease, background-color 160ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.lock-key:active {
+  transform: scale(0.92);
+  background: color-mix(in oklch, var(--color-gold) 28%, var(--color-surface-raised));
+}
+.lock-key:not(.lock-key-digit) { background: transparent; border-color: transparent; box-shadow: none; }
+.lock-dot { transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease; }
+.lock-dot.is-filled { animation: pop-in 160ms cubic-bezier(0.16, 1, 0.3, 1); transform: scale(1.05); }
+@keyframes lock-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(9px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(4px); }
+}
+.lock-shake { animation: lock-shake 420ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  .lock-glass { transition: opacity 400ms ease; }
+  .lock-glass.is-leaving { transform: none; opacity: 0; }
+  .lock-shake { animation: none; }
+}

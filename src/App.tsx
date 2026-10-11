@@ -1,6 +1,8 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useState } from 'react'
+import clsx from 'clsx'
 import { Route, HashRouter, Routes } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
+import { isUnlocked, LockScreen } from './components/LockScreen'
 import { CalendarPage } from './features/calendar/CalendarPage'
 import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
@@ -13,6 +15,30 @@ const TheoryPage = lazy(() => import('./features/theory/TheoryPage').then((m) =>
 const MusicologyPage = lazy(() => import('./features/musicology/MusicologyPage').then((m) => ({ default: m.MusicologyPage })))
 
 export function App() {
+  // The app renders behind the welcome glass from the start (so the frosting shows it), but stays inert until the code is right.
+  const [unlocked, setUnlocked] = useState(isUnlocked)
+  const [glass, setGlass] = useState(!unlocked)
+  return (
+    <>
+      {/* Blurred directly as well as through the glass's backdrop filter, which some browsers don't paint. */}
+      <div inert={!unlocked} className={clsx('app-veil', !unlocked && 'is-veiled')}>
+        <Router />
+      </div>
+      {glass && (
+        <LockScreen
+          onUnlock={() => {
+            setUnlocked(true)
+            // Fallback in case the lift's transitionend never fires.
+            setTimeout(() => setGlass(false), 1400)
+          }}
+          onDone={() => setGlass(false)}
+        />
+      )}
+    </>
+  )
+}
+
+function Router() {
   return (
     <HashRouter>
       <Routes>
