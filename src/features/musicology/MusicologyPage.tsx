@@ -7,6 +7,8 @@ import { ArticleGrid, SectionTitle } from '../theory/TheoryPage'
 import { findArticle, type Article } from '../theory/wiki'
 import { useLibrary } from '../theory/library'
 import { PARTS, RESOLVED, type PartId, type ResolvedBranch } from './taxonomy'
+import { ScrollArea } from '../../components/ScrollArea'
+import { useBack } from '../../hooks/useBack'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.6 0.13 ${hue})` }) as CSSProperties
 
@@ -37,19 +39,20 @@ function useProgress() {
 export function MusicologyPage() {
   const { branch: id } = useParams()
   const branch = id ? RESOLVED.find((b) => b.id === id) : undefined
+  const back = useBack('/musicology')
 
   return (
-    <div key={id} className="relative h-full overflow-y-auto pb-28 lg:pb-10">
+    <ScrollArea key={id} className="relative h-full overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={branch && hueTint(branch.hue)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {id && (
-            <Link
-              to="/musicology"
-              aria-label="Về bản đồ ngành"
-              className="-ml-1.5 flex h-9 w-9 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]"
+            <button
+              onClick={back}
+              aria-label="Quay lại"
+              className="-ml-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)] active:scale-90"
             >
               <ArrowLeftIcon width={18} height={18} />
-            </Link>
+            </button>
           )}
           <div className="min-w-0 flex-1">
             {branch ? (
@@ -77,7 +80,7 @@ export function MusicologyPage() {
           <EmptyState icon={<BranchesIcon width={30} height={30} />} title="Không có phân ngành này" description={`“${id}” không nằm trong bản đồ.`} />
         </div>
       )}
-    </div>
+    </ScrollArea>
   )
 }
 

@@ -195,6 +195,11 @@ body {
   backdrop-filter: saturate(1.6) blur(18px);
   -webkit-backdrop-filter: saturate(1.6) blur(18px);
 }
+/* Once the reader scrolls into dense text, the bar turns opaque: translucent glass lets the headings beneath show through. */
+.glass[data-scrolled] {
+  background: var(--color-surface-raised);
+  transition: background-color 300ms ease;
+}
 
 /* A slow band of light that sweeps across primary buttons on hover. */
 .btn-sheen::after {
@@ -250,7 +255,7 @@ body {
 .prose-theory {
   color: var(--color-prose);
   font-size: calc(var(--reader-size, 16px));
-  line-height: 1.75;
+  line-height: var(--reader-leading, 1.75);
 }
 .prose-theory[data-font="serif"] { font-family: var(--font-serif); }
 .prose-theory h2 {

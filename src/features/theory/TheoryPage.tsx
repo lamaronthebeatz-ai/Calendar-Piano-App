@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { Link, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
 import {
   ArrowLeftIcon,
@@ -7,6 +7,7 @@ import {
   BookIcon,
   BookmarkIcon,
   BranchesIcon,
+  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ClockIcon,
@@ -22,7 +23,9 @@ import { EmptyState } from '../../components/EmptyState'
 import { ARTICLES, CATEGORIES } from './articles'
 import { Markup, WikiImage } from './Markup'
 import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, searchArticles, type Article } from './wiki'
-import { markRead, toggleSaved, updateLibrary, useLibrary } from './library'
+import { markRead, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
+import { useScrollMemory } from '../../hooks/useScrollMemory'
+import { useBack } from '../../hooks/useBack'
 import { branchesOf } from '../musicology/taxonomy'
 
 type CategoryId = Article['category']
@@ -66,22 +69,82 @@ const SUGGESTIONS = ['Vòng quãng 5', 'ii – V – I', 'Hình thức sonata', 
 export function TheoryPage() {
   const { slug } = useParams()
   const article = slug ? findArticle(slug) : undefined
+  const navigation = useNavigationType()
   const scroller = useRef<HTMLDivElement>(null)
   const progress = useRef<HTMLDivElement>(null)
-  const toTop = useRef<HTMLButtonElement>(null)
+  const toTop = useRef<HTMLDivElement>(null)
   const header = useRef<HTMLDivElement>(null)
+  const sectionLabel = useRef<HTMLSpanElement>(null)
+  const remaining = useRef<HTMLSpanElement>(null)
+  const ratio = useRef(0)
+  const active = useRef(-1)
+  const sectionNodes = useRef<Element[]>([])
+  const sections = useMemo(() => (article ? headings(article.body) : []), [article])
+  const minutes = article ? readingMinutes(article) : 0
+  // The section highlighted in the sheet, captured when it opens (null: closed).
+  const [toc, setToc] = useState<number | null>(null)
+
+  useScrollMemory(scroller)
+
+  // "Continue reading": offered on a fresh visit to an article left part-way, never when coming back.
+  const lastRatio = useMemo(() => (article ? readingPosition(article.slug) : 0), [article])
+  const [dismissed, setDismissed] = useState<string>()
+  const offerResume = !!article && navigation !== 'POP' && dismissed !== article.slug && lastRatio > 0.04 && lastRatio < 0.95
+  useEffect(() => {
+    if (!offerResume || !slug) return
+    const t = setTimeout(() => setDismissed(slug), 12000)
+    return () => clearTimeout(t)
+  }, [offerResume, slug])
+  const resume = () => {
+    const el = scroller.current
+    if (el) el.scrollTo({ top: lastRatio * (el.scrollHeight - el.clientHeight), behavior: 'smooth' })
+    setDismissed(slug)
+  }
 
   // Updated through refs rather than state so scrolling never re-renders the article.
   const onScroll = () => {
     const el = scroller.current!
-    const ratio = el.scrollTop / Math.max(1, el.scrollHeight - el.clientHeight)
-    if (progress.current) progress.current.style.transform = `scaleX(${ratio})`
+    const r = el.scrollTop / Math.max(1, el.scrollHeight - el.clientHeight)
+    ratio.current = r
+    if (progress.current) progress.current.style.transform = `scaleX(${r})`
     toTop.current?.classList.toggle('is-visible', el.scrollTop > 600)
     header.current?.toggleAttribute('data-scrolled', el.scrollTop > 140)
+    if (remaining.current) remaining.current.textContent = r > 0.98 ? 'Đã đọc hết' : `còn ${Math.max(1, Math.ceil(minutes * (1 - r)))} phút`
+    if (sections.length) {
+      if (!sectionNodes.current[0]?.isConnected) sectionNodes.current = [...el.querySelectorAll('[id^="sec-"]')]
+      // The current section is the last heading above a line just under the sticky header.
+      const line = el.getBoundingClientRect().top + 96
+      let current = -1
+      for (const [i, n] of sectionNodes.current.entries()) {
+        if (n.getBoundingClientRect().top > line) break
+        current = i
+      }
+      if (current !== active.current && sectionLabel.current) {
+        active.current = current
+        sectionLabel.current.textContent = current >= 0 ? sections[current] : ''
+      }
+    }
+    if (offerResume && el.scrollTop > 400) setDismissed(slug)
   }
+  const jump = (i: number) => scroller.current?.querySelector(`#sec-${i}`)?.scrollIntoView({ block: 'start' })
+  const back = useBack(article ? `/theory?c=${article.category}` : '/theory')
 
   useEffect(() => {
     if (article) markRead(article.slug)
+  }, [article])
+
+  // Remember how far into the article the reader got, also when the app is closed mid-article.
+  useEffect(() => {
+    if (!article) return
+    ratio.current = 0
+    active.current = -1
+    const save = () => ratio.current > 0.01 && saveReadingPosition(article.slug, ratio.current)
+    const onHide = () => document.visibilityState === 'hidden' && save()
+    document.addEventListener('visibilitychange', onHide)
+    return () => {
+      document.removeEventListener('visibilitychange', onHide)
+      save()
+    }
   }, [article])
 
   return (
@@ -90,13 +153,13 @@ export function TheoryPage() {
       <div ref={header} className="glass group/header sticky top-0 z-20 border-b border-[var(--color-border)]" style={article && tint(article.category)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {slug && (
-            <Link
-              to={article ? `/theory?c=${article.category}` : '/theory'}
-              aria-label="Quay lại mục lục"
-              className="-ml-1.5 flex h-9 w-9 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]"
+            <button
+              onClick={back}
+              aria-label="Quay lại"
+              className="-ml-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)] active:scale-90"
             >
               <ArrowLeftIcon width={18} height={18} />
-            </Link>
+            </button>
           )}
           <div className="min-w-0 flex-1">
             {article ? (
@@ -107,9 +170,14 @@ export function TheoryPage() {
                   <span className="mx-1.5 text-[var(--color-ink-faint)]">/</span>
                   <Link to={`/theory?c=${article.category}`} className="font-medium text-[var(--tint)] hover:underline">{CATEGORIES[article.category].title}</Link>
                 </p>
-                <p className="h-0 truncate font-display text-[16px] font-semibold text-[var(--color-ink)] opacity-0 transition-all duration-300 group-data-[scrolled]/header:h-auto group-data-[scrolled]/header:opacity-100">
-                  {article.title}
-                </p>
+                <div className="h-0 translate-y-1 overflow-hidden opacity-0 transition-all duration-300 group-data-[scrolled]/header:h-auto group-data-[scrolled]/header:translate-y-0 group-data-[scrolled]/header:opacity-100">
+                  <p className="truncate font-display text-[15.5px] font-semibold leading-tight text-[var(--color-ink)]">{article.title}</p>
+                  {/* Where the reader is: the current section and the time left, written from the scroll handler. */}
+                  <p className="mt-0.5 truncate text-[11.5px] leading-tight text-[var(--color-ink-faint)]">
+                    <span ref={sectionLabel} className="font-medium text-[var(--tint)] after:mx-1.5 after:text-[var(--color-ink-faint)] after:content-['·'] empty:hidden" />
+                    <span ref={remaining} />
+                  </p>
+                </div>
               </>
             ) : (
               <h1 className="truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">Lý thuyết âm nhạc</h1>
@@ -123,21 +191,95 @@ export function TheoryPage() {
       {!slug ? (
         <Index />
       ) : article ? (
-        <ArticleView article={article} scroller={scroller} />
+        <ArticleView article={article} scroller={scroller} sections={sections} onJump={jump} />
       ) : (
         <div className="mx-auto max-w-3xl px-4 py-10">
           <EmptyState icon={<BookIcon width={30} height={30} />} title="Chưa có bài viết này" description={`“${slug}” chưa được viết.`} />
         </div>
       )}
 
-      <button
-        ref={toTop}
-        onClick={() => scroller.current?.scrollTo({ top: 0 })}
-        aria-label="Về đầu trang"
-        className="above-nav theory-to-top glass fixed bottom-24 right-4 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-ink)] shadow-[var(--shadow-float)] lg:bottom-8 lg:right-8"
-      >
-        <ChevronLeftIcon width={20} height={20} className="rotate-90" />
-      </button>
+      {offerResume && (
+        <div className="above-nav pointer-events-none fixed inset-x-0 bottom-24 z-30 flex justify-center px-4 lg:bottom-8">
+          <div className="animate-slide-up glass pointer-events-auto flex items-center gap-1 rounded-full border border-[var(--color-border)] p-1 shadow-[var(--shadow-float)]">
+            <button onClick={resume} className="flex items-center gap-2 rounded-full bg-[var(--color-ink)] py-2 pl-3 pr-3.5 text-[13px] font-medium text-[var(--color-surface)] transition-transform active:scale-95">
+              <ChevronDownIcon width={15} height={15} />
+              Đọc tiếp chỗ đang dừng
+              <span className="tabular-nums opacity-60">{Math.round(lastRatio * 100)}%</span>
+            </button>
+            <button onClick={() => setDismissed(slug)} aria-label="Bỏ qua" className="flex h-8 w-8 items-center justify-center rounded-full text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)]">
+              <XIcon width={15} height={15} />
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div ref={toTop} className="above-nav theory-to-top fixed bottom-24 right-4 z-20 flex flex-col gap-2 lg:bottom-8 lg:right-8">
+        {sections.length > 1 && (
+          <button
+            onClick={() => setToc(active.current)}
+            aria-label="Mục lục bài"
+            className="glass flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-ink)] shadow-[var(--shadow-float)] transition-transform active:scale-90 xl:hidden"
+          >
+            <ListIcon width={18} height={18} />
+          </button>
+        )}
+        <button
+          onClick={() => scroller.current?.scrollTo({ top: 0 })}
+          aria-label="Về đầu trang"
+          className="glass flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-ink)] shadow-[var(--shadow-float)] transition-transform active:scale-90"
+        >
+          <ChevronLeftIcon width={20} height={20} className="rotate-90" />
+        </button>
+      </div>
+
+      {toc !== null && article && (
+        <TocSheet
+          sections={sections}
+          active={toc}
+          tint={tint(article.category)}
+          onClose={() => setToc(null)}
+          onJump={(i) => {
+            setToc(null)
+            jump(i)
+          }}
+        />
+      )}
+    </div>
+  )
+}
+
+/** Bottom sheet with the article's sections, for phones and tablets (desktop has the sticky sidebar). */
+function TocSheet({ sections, active, tint: style, onClose, onJump }: { sections: string[]; active: number; tint: CSSProperties; onClose: () => void; onJump: (i: number) => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    addEventListener('keydown', onKey)
+    return () => removeEventListener('keydown', onKey)
+  }, [onClose])
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center" style={style}>
+      <div className="animate-fade-in absolute inset-0 bg-black/35 backdrop-blur-[2px]" onClick={onClose} />
+      <nav aria-label="Mục lục bài" className="animate-sheet-up relative max-h-[72dvh] w-full max-w-lg overflow-y-auto rounded-t-[28px] border border-b-0 border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-2 shadow-[var(--shadow-float)]">
+        <div className="mx-auto mb-3 mt-1 h-1 w-10 rounded-full bg-[var(--color-border-strong)]" />
+        <p className="mb-2 flex items-center gap-2 px-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-faint)]">
+          <ListIcon width={13} height={13} /> Trong bài này · {sections.length} mục
+        </p>
+        <ol>
+          {sections.map((title, i) => (
+            <li key={title + i}>
+              <button
+                onClick={() => onJump(i)}
+                className={clsx(
+                  'flex w-full items-baseline gap-3 rounded-xl px-3 py-2.5 text-left text-[14.5px] leading-snug transition-colors active:bg-[var(--color-surface-sunken)]',
+                  i === active ? 'bg-[color-mix(in_oklch,var(--tint)_12%,transparent)] font-semibold text-[var(--color-ink)]' : 'text-[var(--color-ink-muted)]',
+                )}
+              >
+                <span className={clsx('w-5 shrink-0 text-right text-[12px] tabular-nums', i === active ? 'text-[var(--tint)]' : 'text-[var(--color-ink-faint)]')}>{i + 1}</span>
+                {title}
+              </button>
+            </li>
+          ))}
+        </ol>
+      </nav>
     </div>
   )
 }
@@ -145,8 +287,13 @@ export function TheoryPage() {
 /* ------------------------------------------------------------------ index */
 
 function Index() {
-  const [query, setQuery] = useState('')
   const [params, setParams] = useSearchParams()
+  // The search is mirrored into the URL (?q=) so coming back from an article shows the same results.
+  const [query, setQueryState] = useState(() => params.get('q') ?? '')
+  const setQuery = (q: string) => {
+    setQueryState(q)
+    setParams(q ? { q } : {}, { replace: true })
+  }
   const active = articlesByCategory.find((c) => c.id === params.get('c'))
   const select = (id?: CategoryId) => setParams(id ? { c: id } : {}, { replace: true })
   const results = useMemo(() => searchArticles(query), [query])
@@ -229,7 +376,7 @@ function Index() {
         <>
           {(recent.length > 0 || saved.length > 0) && (
             <div className="grid gap-8 lg:grid-cols-2">
-              {recent.length > 0 && <Shelf title="Đọc gần đây" icon={<ClockIcon width={15} height={15} />} articles={lookup(recent).slice(0, 6)} />}
+              {recent.length > 0 && <Shelf title="Đọc gần đây" icon={<ClockIcon width={15} height={15} />} articles={lookup(recent).slice(0, 6)} progress />}
               {saved.length > 0 && <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} />}
             </div>
           )}
@@ -326,7 +473,7 @@ export function SectionTitle({ children, icon, hint }: { children: ReactNode; ic
   )
 }
 
-function Shelf({ title, icon, articles }: { title: string; icon: ReactNode; articles: Article[] }) {
+function Shelf({ title, icon, articles, progress }: { title: string; icon: ReactNode; articles: Article[]; progress?: boolean }) {
   return (
     <section className="space-y-3">
       <SectionTitle icon={icon}>{title}</SectionTitle>
@@ -338,6 +485,11 @@ function Shelf({ title, icon, articles }: { title: string; icon: ReactNode; arti
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-[14px] font-medium text-[var(--color-ink)]">{a.title}</span>
                 <span className="block truncate text-[12px] text-[var(--color-ink-faint)]">{CATEGORIES[a.category].title}</span>
+                {progress && (
+                  <span className="mt-1.5 block h-[3px] overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
+                    <span className="block h-full rounded-full bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)]" style={{ width: `${Math.max(4, readingPosition(a.slug) * 100)}%` }} />
+                  </span>
+                )}
               </span>
               <ChevronRightIcon width={15} height={15} className="text-[var(--color-ink-faint)] transition-transform group-hover:translate-x-0.5" />
             </Link>
@@ -458,8 +610,10 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
 
 /* ---------------------------------------------------------------- article */
 
+const LEADINGS: [number, string][] = [[1.6, 'Gọn'], [1.75, 'Vừa'], [1.95, 'Thoáng']]
+
 function ArticleActions({ article }: { article: Article }) {
-  const { saved, size, serif } = useLibrary()
+  const { saved, size, serif, leading } = useLibrary()
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   const isSaved = saved.includes(article.slug)
@@ -506,6 +660,21 @@ function ArticleActions({ article }: { article: Article }) {
                 </button>
               ))}
             </div>
+            <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-faint)]">Giãn dòng</p>
+            <div className="mt-2 grid grid-cols-3 gap-1 rounded-xl bg-[var(--color-surface-sunken)] p-1">
+              {LEADINGS.map(([value, label]) => (
+                <button
+                  key={value}
+                  onClick={() => updateLibrary({ leading: value })}
+                  className={clsx('rounded-lg py-1.5 text-[13px] transition-all', leading === value ? 'bg-[var(--color-surface-raised)] font-medium text-[var(--color-ink)] shadow-sm' : 'text-[var(--color-ink-muted)]')}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <p className="mt-4 rounded-xl border border-[var(--color-border)] px-3 py-2.5 text-[13px] text-[var(--color-ink-muted)]" style={{ fontSize: Math.min(size, 17), lineHeight: leading, fontFamily: serif ? 'var(--font-serif)' : undefined }}>
+              Âm nhạc là nghệ thuật của âm thanh trong thời gian.
+            </p>
           </div>
         </>
       )}
@@ -513,15 +682,13 @@ function ArticleActions({ article }: { article: Article }) {
   )
 }
 
-function ArticleView({ article, scroller }: { article: Article; scroller: RefObject<HTMLDivElement | null> }) {
+function ArticleView({ article, scroller, sections, onJump: jump }: { article: Article; scroller: RefObject<HTMLDivElement | null>; sections: string[]; onJump: (i: number) => void }) {
   const backlinks = getBacklinks(article.slug)
   const siblings = articlesByCategory.find((c) => c.id === article.category)!.articles
   const index = siblings.indexOf(article)
   const [prev, next] = index < 0 ? [] : [siblings[index - 1], siblings[index + 1]]
-  const sections = headings(article.body)
   const branches = branchesOf(article.slug).filter((b) => b.part !== 'intro')
-  const { size, serif } = useLibrary()
-  const jump = (i: number) => scroller.current?.querySelector(`#sec-${i}`)?.scrollIntoView({ block: 'start' })
+  const { size, serif, leading } = useLibrary()
 
   return (
     <div style={tint(article.category)} className="mx-auto grid max-w-6xl gap-10 px-4 py-6 lg:px-8 lg:py-10 xl:grid-cols-[minmax(0,1fr)_240px]">
@@ -580,7 +747,7 @@ function ArticleView({ article, scroller }: { article: Article; scroller: RefObj
         )}
 
         <LinkPreviews>
-          <div className="prose-theory" data-font={serif ? 'serif' : 'sans'} style={{ '--reader-size': `${size}px` } as CSSProperties}>
+          <div className="prose-theory" data-font={serif ? 'serif' : 'sans'} style={{ '--reader-size': `${size}px`, '--reader-leading': leading } as CSSProperties}>
             <Markup source={article.body} />
           </div>
         </LinkPreviews>

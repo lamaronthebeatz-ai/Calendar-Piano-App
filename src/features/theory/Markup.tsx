@@ -1,5 +1,7 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
+import { ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
@@ -85,11 +87,61 @@ export function WikiImage({ titles, years, caption, portrait }: { titles: string
 }
 
 function Figure({ caption, children }: { caption?: string; children: ReactNode }) {
+  // Width to draw the figure at when enlarged (null: closed): twice a diagram's natural size, so wide charts become readable.
+  const [zoom, setZoom] = useState<number | null>(null)
+  const ref = useRef<HTMLElement>(null)
+  const open = () => {
+    // The widest drawing in the figure (skipping small icons such as the expand button's own).
+    const natural = Math.max(0, ...[...(ref.current?.querySelectorAll('svg') ?? [])].map((svg) => svg.viewBox.baseVal?.width ?? 0))
+    setZoom(natural > 100 ? Math.min(1400, natural * 2) : 0)
+  }
   return (
-    <figure className="my-7 flex flex-col items-center gap-3 overflow-x-auto rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 shadow-[var(--shadow-soft)]">
+    <figure ref={ref} className="group/fig relative my-7 flex flex-col items-center gap-3 overflow-x-auto rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 shadow-[var(--shadow-soft)]">
+      <button
+        type="button"
+        onClick={open}
+        aria-label="Phóng to hình"
+        className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-lg text-[var(--color-ink-faint)] opacity-70 transition-all hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)] hover:opacity-100 sm:opacity-0 sm:group-hover/fig:opacity-100"
+      >
+        <ExpandIcon width={15} height={15} />
+      </button>
       {children}
       {caption && <figcaption className="max-w-xl text-balance text-center font-sans text-[13px] leading-snug text-[var(--color-ink-muted)]"><Inline text={caption} /></figcaption>}
+      {zoom !== null && <Lightbox caption={caption} width={zoom} onClose={() => setZoom(null)}>{children}</Lightbox>}
     </figure>
+  )
+}
+
+/**
+ * Full-screen view of a figure. The page disables pinch-zoom, so diagrams are drawn again at a
+ * comfortable minimum width; on a phone the reader pans sideways across them.
+ */
+function Lightbox({ caption, width, onClose, children }: { caption?: string; width: number; onClose: () => void; children: ReactNode }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    addEventListener('keydown', onKey)
+    return () => removeEventListener('keydown', onKey)
+  }, [onClose])
+  return createPortal(
+    <div role="dialog" aria-modal aria-label={caption ?? 'Hình minh hoạ'} className="animate-fade-in fixed inset-0 z-50 flex flex-col bg-[color-mix(in_oklch,var(--color-surface)_94%,transparent)] backdrop-blur-md" onClick={onClose}>
+      <div className="flex items-center justify-between gap-3 px-4 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))]">
+        <div className="min-w-0">
+          <p className="line-clamp-2 text-[13px] text-[var(--color-ink-muted)]">{caption && <Inline text={caption} />}</p>
+          {width > innerWidth - 32 && <p className="mt-0.5 text-[11.5px] font-medium text-[var(--color-accent)]">↔ Vuốt ngang để xem toàn bộ hình</p>}
+        </div>
+        <button type="button" onClick={onClose} aria-label="Đóng" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-ink)] shadow-[var(--shadow-soft)]">
+          <XIcon width={18} height={18} />
+        </button>
+      </div>
+      <div className="min-h-0 flex-1 overflow-auto px-4 pb-6" onClick={(e) => e.stopPropagation()}>
+        <div className="animate-pop-in mx-auto flex min-h-full w-max min-w-full items-center justify-center">
+          <div style={{ width: `max(min(100vw - 2rem, 1100px), ${width}px)` }} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 shadow-[var(--shadow-float)] [&_img]:mx-auto [&_img]:max-h-[80dvh] [&_img]:w-auto [&_svg]:!max-w-none">
+            {children}
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body,
   )
 }
 

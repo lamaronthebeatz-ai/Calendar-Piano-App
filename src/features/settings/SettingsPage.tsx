@@ -9,6 +9,7 @@ import { CloudIcon, DownloadIcon, MoonIcon, SunIcon, UploadIcon } from '../../co
 import { useUIStore } from '../../store/uiStore'
 import type { LessonLocation } from '../../types'
 import { LOCATION_PALETTE } from '../../utils/color'
+import { ScrollArea } from '../../components/ScrollArea'
 
 const CURRENCIES = ['VND', 'USD', 'EUR', 'GBP']
 
@@ -53,7 +54,7 @@ export function SettingsPage() {
   }
 
   return (
-    <div className="h-full overflow-y-auto pb-24 lg:pb-6">
+    <ScrollArea className="h-full overflow-y-auto pb-24 lg:pb-6">
       <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
         <h1 className="font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Cài đặt</h1>
       </div>
@@ -185,7 +186,7 @@ export function SettingsPage() {
           </p>
         </div>
       </Dialog>
-    </div>
+    </ScrollArea>
   )
 }
 

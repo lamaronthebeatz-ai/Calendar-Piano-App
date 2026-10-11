@@ -5,6 +5,22 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: {
+    rolldownOptions: {
+      output: {
+        // The theory library's text is ~2 MB; one chunk per content file keeps each under the
+        // service worker's precache limit and lets the browser fetch them in parallel.
+        codeSplitting: {
+          groups: [
+            {
+              name: (id: string) => /\/theory\/content\/([\w-]+)\.ts$/.exec(id)?.[1].replace(/^/, 'content-') ?? null,
+              test: /\/theory\/content\//,
+            },
+          ],
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),

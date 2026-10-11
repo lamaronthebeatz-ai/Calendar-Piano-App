@@ -6,6 +6,7 @@ import { formatCurrency } from '../../utils/format'
 import { BarChart, HorizontalBarChart } from './charts'
 import { EmptyState } from '../../components/EmptyState'
 import { ChartIcon } from '../../components/icons'
+import { ScrollArea } from '../../components/ScrollArea'
 
 export function StatisticsPage() {
   const slots = useTimetableSlots() ?? []
@@ -35,7 +36,7 @@ export function StatisticsPage() {
   const hasAnySlots = slots.length > 0
 
   return (
-    <div className="h-full overflow-y-auto pb-24 lg:pb-6">
+    <ScrollArea className="h-full overflow-y-auto pb-24 lg:pb-6">
       <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
         <h1 className="font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Thống kê</h1>
       </div>
@@ -69,7 +70,7 @@ export function StatisticsPage() {
           )}
         </div>
       )}
-    </div>
+    </ScrollArea>
   )
 }
 

@@ -12,10 +12,13 @@ import { WEEKDAY_NAMES } from '../../utils/date'
 import { LOCATION_PALETTE } from '../../utils/color'
 import { LEVEL_LABELS, STUDENT_STATUS_LABELS } from '../../utils/labels'
 import type { TimetableSlot } from '../../types'
+import { ScrollArea } from '../../components/ScrollArea'
+import { useBack } from '../../hooks/useBack'
 
 export function StudentProfilePage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
+  const back = useBack('/students')
   const student = useStudent(id)
   const slots = useTimetableSlots() ?? []
   const settings = useSettings()
@@ -35,10 +38,10 @@ export function StudentProfilePage() {
   }
 
   return (
-    <div className="flex h-full flex-col overflow-y-auto pb-24 lg:pb-6">
+    <ScrollArea className="flex h-full flex-col overflow-y-auto pb-24 lg:pb-6">
       <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
         <div className="flex items-center gap-2">
-          <IconButton label="Quay lại" icon={<ArrowLeftIcon width={18} height={18} />} onClick={() => navigate('/students')} />
+          <IconButton label="Quay lại" icon={<ArrowLeftIcon width={18} height={18} />} onClick={back} />
         </div>
         <div className="mt-2 flex items-center gap-4">
           <Avatar name={student.nickname || student.name} size={56} />
@@ -121,7 +124,7 @@ export function StudentProfilePage() {
           )}
         </div>
       </div>
-    </div>
+    </ScrollArea>
   )
 }
 

@@ -13,6 +13,7 @@ import { WEEKDAY_SHORT } from '../../utils/date'
 import { formatTime } from '../../utils/time'
 import { LOCATION_PALETTE } from '../../utils/color'
 import { LEVEL_LABELS, STUDENT_STATUS_LABELS } from '../../utils/labels'
+import { ScrollArea } from '../../components/ScrollArea'
 
 type FilterValue = 'all' | StudentStatus
 
@@ -73,7 +74,7 @@ export function StudentsListPage() {
         </div>
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto pb-24 lg:pb-6">
+      <ScrollArea className="min-h-0 flex-1 overflow-y-auto pb-24 lg:pb-6">
         {filtered.length === 0 ? (
           <EmptyState
             icon={<UsersIcon width={30} height={30} />}
@@ -94,7 +95,7 @@ export function StudentsListPage() {
             ))}
           </ul>
         )}
-      </div>
+      </ScrollArea>
 
       <button
         onClick={openCreateStudent}

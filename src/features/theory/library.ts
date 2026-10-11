@@ -7,13 +7,15 @@ import { useSyncExternalStore } from 'react'
 export interface LibraryState {
   size: number
   serif: boolean
+  /** Line height of the article body. */
+  leading: number
   saved: string[]
   recent: string[]
   read: string[]
 }
 
 const KEY = 'theory:library'
-const DEFAULTS: LibraryState = { size: 16, serif: false, saved: [], recent: [], read: [] }
+const DEFAULTS: LibraryState = { size: 16, serif: false, leading: 1.75, saved: [], recent: [], read: [] }
 
 function load(): LibraryState {
   try {
@@ -52,3 +54,29 @@ export const markRead = (slug: string) =>
       ? {}
       : { recent: [slug, ...s.recent.filter((x) => x !== slug)].slice(0, 12), read: s.read.includes(slug) ? s.read : [...s.read, slug] },
   )
+
+/**
+ * How far into each article the reader got (0 – 1), for "continue reading". Kept apart from the
+ * library state on purpose: it changes on every visit and nothing needs to re-render when it does.
+ */
+const POS_KEY = 'theory:positions'
+let positions: Record<string, number> = (() => {
+  try {
+    return JSON.parse(localStorage.getItem(POS_KEY) ?? '{}')
+  } catch {
+    return {}
+  }
+})()
+
+export const readingPosition = (slug: string) => positions[slug] ?? 0
+
+export function saveReadingPosition(slug: string, ratio: number) {
+  // Keep the 300 most recent so the store stays small.
+  const { [slug]: _, ...rest } = positions
+  positions = Object.fromEntries([...Object.entries(rest).slice(-299), [slug, Math.round(ratio * 1000) / 1000]])
+  try {
+    localStorage.setItem(POS_KEY, JSON.stringify(positions))
+  } catch {
+    // Storage unavailable: progress is kept for this session only.
+  }
+}
