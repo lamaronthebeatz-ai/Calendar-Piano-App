@@ -48,6 +48,8 @@ Mỗi khi nói với học trò "chơi đoạn này buồn hơn", "tôn trọng 
 **Góc nhìn nghiên cứu:** âm nhạc trong cấu trúc xã hội — Weber, Adorno — ở [[xa-hoi-hoc-am-nhac]]; vị trí của mỹ học trong toàn ngành ở [[am-nhac-hoc-he-thong]].
 
 **Góc nhìn lịch sử:** khái niệm "tác phẩm" và "kinh điển" đã hình thành ra sao — [[lich-su-tiep-nhan-am-nhac]].
+
+**Góc nhìn khoa học:** vì sao loài người có âm nhạc, và âm nhạc có phổ quát không — [[am-nhac-hoc-tien-hoa]].
 `,
   },
   {

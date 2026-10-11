@@ -530,12 +530,25 @@ export function Bars({ items }: { items: string[] }) {
   const names = opts.series?.split('/').map((n) => n.replace(/_/g, ' ')) ?? []
   const nSeries = Math.max(...data.map((d) => d.values.length))
   const peak = Math.max(...data.flatMap((d) => d.values))
-  const step = [0.5, 1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000].find((s) => peak / s <= 6) ?? 1000
+  const step = [0.05, 0.1, 0.2, 0.25, 0.5, 1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000].find((s) => peak / s <= 6) ?? 1000
   const top = Number(opts.max) || Math.ceil(peak / step) * step
   const W = 360
   const legendH = nSeries > 1 ? 16 : 0
-  const [padL, padR, padT, padB] = [24, 6, 6 + legendH, 20]
-  const H = 150 + legendH
+  // Long category labels wrap onto two lines rather than shrinking or colliding.
+  const slotW = (W - 30) / data.length
+  const lines = (label: string) => {
+    if (label.length * 8 * 0.56 <= slotW - 4) return [label]
+    const words = label.split(' ')
+    let best = [label, '']
+    for (let i = 1; i < words.length; i++) {
+      const pair = [words.slice(0, i).join(' '), words.slice(i).join(' ')]
+      if (Math.max(...pair.map((s) => s.length)) < Math.max(...best.map((s) => s.length))) best = pair
+    }
+    return best.filter(Boolean)
+  }
+  const twoLines = data.some((d) => lines(d.label).length > 1)
+  const [padL, padR, padT, padB] = [24, 6, 6 + legendH, twoLines ? 28 : 20]
+  const H = 150 + legendH + (twoLines ? 8 : 0)
   const plotW = W - padL - padR
   const plotH = H - padT - padB
   const y = (v: number) => padT + plotH - (v / top) * plotH
@@ -576,7 +589,11 @@ export function Bars({ items }: { items: string[] }) {
                 <title>{`${d.label}${names[j] ? ` — ${names[j]}` : ''}: ${v}`}</title>
               </path>
             ))}
-            <text x={padL + i * slot + slot / 2} y={H - 7} textAnchor="middle" fontSize={labelSize(d.label, slot + 4)} fill="var(--color-ink)">{d.label}</text>
+            {lines(d.label).map((line, k, all) => (
+              <text key={k} x={padL + i * slot + slot / 2} y={H - 7 - (all.length - 1 - k) * 9} textAnchor="middle" fontSize={Math.min(8.5, ...all.map((l) => labelSize(l, slot + 4)))} fill="var(--color-ink)">
+                {line}
+              </text>
+            ))}
           </g>
         )
       })}

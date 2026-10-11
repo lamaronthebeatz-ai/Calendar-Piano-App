@@ -51,8 +51,9 @@ Thẻ **Âm nhạc học** (cạnh thẻ Học viên) xếp lại toàn bộ th�
 | Lịch sử | Nhạc khí học | [[nhac-khi-hoc]] |
 | Lịch sử | Lịch sử lý thuyết | [[lich-su-phan-tich-am-nhac]] |
 | Lịch sử | Lịch sử âm nhạc Việt Nam | [[lich-su-am-nhac-viet-nam]] |
-| Hệ thống | Âm học âm nhạc | [[am-hoc-co-ban]] |
-| Hệ thống | Tâm lý học âm nhạc | [[tam-ly-hoc-am-nhac]] |
+| Hệ thống | Âm học âm nhạc | [[am-hoc-co-ban]], [[am-hoc-nhac-cu]] |
+| Hệ thống | Tâm lý học âm nhạc | [[tam-ly-hoc-am-nhac]], [[tam-ly-hoc-phat-trien-am-nhac]], [[am-nhac-va-ngon-ngu]], [[tim-giong-bang-may]], [[thiet-ke-nghien-cuu-thuc-nghiem]] |
+| Hệ thống | Thần kinh học và sinh học âm nhạc | [[than-kinh-hoc-am-nhac]], [[am-nhac-hoc-tien-hoa]], [[hoc-nhac-va-tri-tue]], [[am-nhac-tri-lieu]] |
 | Hệ thống | Khoa học biểu diễn | [[khoa-hoc-bieu-dien]] |
 | Hệ thống | Lý thuyết âm nhạc | [[nhac-ly-co-ban]], [[giao-trinh-hoa-am]], [[lo-trinh-hinh-thuc]] |
 | Hệ thống | Phân tích | [[phuong-phap-phan-tich-tac-pham]] |
@@ -212,6 +213,18 @@ Trung tâm Âm nhạc học Hệ thống của Đại học Graz (Áo) liệt k�
 
 Ở Mỹ, **lý thuyết âm nhạc** thường được coi là một ngành riêng (Hội Lý thuyết Âm nhạc — Society for Music Theory — thành lập năm 1977), trong khi Adler xếp nó vào nhánh hệ thống.
 
+## Mười phân ngành trong thư viện và lộ trình đọc
+Thẻ **Âm nhạc học** chia nhánh hệ thống thành mười phân ngành (II.1 – II.10). Lộ trình dưới đây đi từ **vật lý** đến **con người** rồi đến **xã hội**; mỗi bước dùng kiến thức của bước trước. *(Đề xuất của thư viện.)*
+1. **Âm thanh:** [[am-hoc-co-ban]] → [[chuoi-boi-am]] → [[am-sac]] → [[am-hoc-nhac-cu]] → [[luat-binh-quan]].
+2. **Tai và não:** [[cam-nhan-am-thanh]] → [[phan-luong-thinh-giac]] → [[than-kinh-hoc-am-nhac]].
+3. **Nhận thức:** [[tam-ly-hoc-am-nhac]] → [[dieu-tinh]] → [[tim-giong-bang-may]] → [[ky-vong-am-nhac]] → [[cam-xuc-am-nhac]] → [[am-nhac-va-ngon-ngu]].
+4. **Phát triển và học tập:** [[tam-ly-hoc-phat-trien-am-nhac]] → [[hoc-nhac-va-tri-tue]] → [[giang-day-hieu-qua]] → [[phuong-phap-luyen-tap]].
+5. **Cơ thể và biểu diễn:** [[khoa-hoc-bieu-dien]] → [[hoi-hop-bieu-dien]] → [[am-nhac-tri-lieu]].
+6. **Nguồn gốc:** [[am-nhac-hoc-tien-hoa]].
+7. **Cấu trúc:** [[nhac-ly-co-ban]] → [[giao-trinh-hoa-am]] → [[phuong-phap-phan-tich-tac-pham]].
+8. **Ý nghĩa và xã hội:** [[triet-hoc-am-nhac]] → [[xa-hoi-hoc-am-nhac]] → [[dan-toc-nhac-hoc]].
+9. **Công cụ:** [[phuong-phap-nghien-cuu-am-nhac]] → [[thiet-ke-nghien-cuu-thuc-nghiem]] → [[am-nhac-hoc-tinh-toan]].
+
 ## Hướng tiếp cận "thân thể" và nhận thức
 - **Marc Leman** (Đại học Ghent) trong *Embodied Music Cognition and Mediation Technology* (MIT Press) cho rằng **cơ thể là cầu nối** giữa năng lượng âm thanh vật lý và trải nghiệm tinh thần — nền tảng của [[khoa-hoc-bieu-dien]] và của việc nghiên cứu chuyển động khi nghe nhạc ([[cam-nhan-phach]]).
 - **Uwe Seifert** (Đại học Köln) từ đầu thập niên 1990 đề xuất **khoa học nhận thức** như một hệ hình nghiên cứu mới cho âm nhạc học.
@@ -356,7 +369,7 @@ Số đầu tiên của tạp chí *Empirical Musicology Review* (2006) đăng b
     title: 'Khoa học biểu diễn',
     category: 'musicology',
     also: ['technique'],
-    aliases: ['performance science', 'khoa học biểu diễn âm nhạc', 'sinh lý học âm nhạc', 'music physiology', 'embodied music cognition', 'nhận thức thân thể', 'âm nhạc trị liệu', 'music therapy'],
+    aliases: ['performance science', 'khoa học biểu diễn âm nhạc', 'sinh lý học âm nhạc', 'music physiology', 'embodied music cognition', 'nhận thức thân thể'],
     summary: 'Khoa học biểu diễn nghiên cứu người biểu diễn bằng phương pháp khoa học: cơ thể và sức khoẻ, kỹ năng và luyện tập, tâm lý sân khấu, biểu cảm. Bài này nối phần kỹ thuật piano của thư viện với ngành nghiên cứu tương ứng.',
     wiki: 'Music_performance',
     refs: [
@@ -386,7 +399,7 @@ Số đầu tiên của tạp chí *Empirical Musicology Review* (2006) đăng b
 | **Lịch sử quan niệm** | Các trường phái kỹ thuật nghĩ gì về cơ thể? | [[lich-su-ky-thuat-piano]], [[neuhaus-nghe-thuat-choi-piano]] |
 
 ## Ngành ứng dụng lân cận: âm nhạc trị liệu
-Âm nhạc trị liệu dùng âm nhạc trong chăm sóc sức khoẻ. Theo Britannica, ở Mỹ, Hiệp hội Âm nhạc Trị liệu Quốc gia (*National Association for Music Therapy*) thành lập năm 1950; năm 1998 nó hợp nhất với một hiệp hội khác thành *American Music Therapy Association*. Thư viện này chưa có bài riêng về trị liệu.
+Âm nhạc trị liệu dùng âm nhạc trong chăm sóc sức khoẻ. Theo Britannica, ở Mỹ, Hiệp hội Âm nhạc Trị liệu Quốc gia (*National Association for Music Therapy*) thành lập năm 1950; năm 1998 nó hợp nhất với một hiệp hội khác thành *American Music Therapy Association*. Chi tiết về định nghĩa và bằng chứng: [[am-nhac-tri-lieu]].
 
 ## Cách đọc
 Phần thực hành ở [[ky-thuat-piano]]; bài này cho biết **mỗi kỹ năng ấy được nghiên cứu ở đâu**, để khi dạy có thể phân biệt điều đã có bằng chứng với kinh nghiệm truyền miệng (xem [[giang-day-hieu-qua]]).
@@ -427,7 +440,7 @@ Thuật ngữ "âm nhạc dân tộc học" xuất hiện trong chương trình 
 ## Câu hỏi của ngành
 1. Âm nhạc **có nghĩa gì** với cộng đồng làm ra nó — nghi lễ, lao động, giải trí, bản sắc?
 2. Một truyền thống được **truyền dạy** ra sao (truyền khẩu, [[ky-am|ký âm]], thầy – trò)? So sánh với [[phuong-phap-giao-duc-am-nhac]].
-3. Khi các nền văn hoá gặp nhau thì điều gì xảy ra — ví dụ [[dem-bossa-nova|bossa nova]] (samba gặp jazz) hay [[tan-nhac-viet-nam]] (ca khúc phương Tây gặp ngôn ngữ thanh điệu)?
+3. Khi các nền văn hoá gặp nhau thì điều gì xảy ra — ví dụ [[dem-bossa-nova|bossa nova]] (samba gặp jazz) hay [[tan-nhac-viet-nam]] (ca khúc phương Tây gặp [[am-nhac-va-ngon-ngu|ngôn ngữ thanh điệu]])?
 4. Người nghiên cứu, khi là người ngoài cộng đồng, có quyền và trách nhiệm gì?
 
 Liên quan: [[xa-hoi-hoc-am-nhac]].
@@ -523,6 +536,8 @@ Nhạc cụ truyền thống Việt Nam: xem [[am-nhac-truyen-thong-viet-nam]].
       ['Wikipedia — International Society for Music Information Retrieval', 'https://en.wikipedia.org/wiki/International_Society_for_Music_Information_Retrieval'],
       ['Byrd (2002) — ISMIR history', 'https://ismir.ircam.fr/texts/Byrd02.html'],
       ['de Clercq & Temperley (2011) — A corpus analysis of rock harmony (PDF)', 'https://rockcorpus.midside.com/2011_paper/declercq_temperley_2011.pdf'],
+      ['de Clercq (2014) — EUROMAC slides on the rock corpus (PDF)', 'https://www.midside.com/presentations/declercq_2014_euromac_slides.pdf'],
+      ['Burgoyne, Wild & Fujinaga (2011) — An expert ground-truth set for audio chord recognition and music analysis (ISMIR, PDF)', 'https://ismir2011.ismir.net/papers/OS8-1.pdf'],
       ['Wikipedia — Journal of New Music Research', 'https://en.wikipedia.org/wiki/Journal_of_New_Music_Research'],
       ['Wikipedia — Computational musicology', 'https://en.wikipedia.org/wiki/Computational_musicology'],
     ],
@@ -539,6 +554,16 @@ Nhạc cụ truyền thống Việt Nam: xem [[am-nhac-truyen-thong-viet-nam]].
 ## Mốc
 - **1972:** tạp chí *Interface* ra đời, về sau đổi tên thành *Journal of New Music Research*.
 - **2000:** Hội nghị chuyên đề quốc tế đầu tiên về truy xuất thông tin âm nhạc (ISMIR) họp ở Plymouth, Massachusetts (23–25/10/2000); từ 2002 gọi là hội nghị (*Conference*); hội ISMIR được thành lập chính thức khoảng 2008.
+
+## Ví dụ: kho dữ liệu nhạc rock
+de Clercq và Temperley (*Popular Music*, 2011) chọn **100 bài** từ danh sách "500 bài hát hay nhất" của tạp chí *Rolling Stone* (20 bài mỗi thập niên, 1950 – 1990). Hai tác giả phân tích độc lập từng bài bằng số La Mã và trùng nhau hơn 90%. Kết luận nổi bật: sau I, hợp âm **IV** phổ biến nhất, và IV đặc biệt hay đứng ngay trước chủ âm.
+
+::bars I=32.8 IV=22.6 V=16.2 ♭VII=8.0 max=40 | Tỉ lệ (%) các hợp âm theo bậc gốc trong 100 bài rock (số liệu từ bài trình bày năm 2014 của de Clercq, dựa trên kho dữ liệu 2011)
+
+Điều này khác với hoà âm cổ điển, nơi V – I là trục chính ([[chuc-nang-hoa-am]]) — một kết luận chỉ có thể rút ra một cách chắc chắn bằng **đếm**. Xem [[hoa-am-pop]]. Một kho dữ liệu lớn khác là **Billboard** (Burgoyne, Wild và Fujinaga, ISMIR 2011): hơn 1.000 bài lấy ngẫu nhiên từ bảng xếp hạng Hot 100 giai đoạn 1958 – 1991, được các nhạc công jazz ghi hợp âm khớp thời gian.
+
+## Ví dụ: tìm giọng bằng thuật toán
+Hồ sơ giọng của Krumhansl và Kessler, cùng thuật toán so tương quan, là một ví dụ kinh điển của việc biến một kết quả tâm lý học thành thuật toán — có ví dụ tính tay ở [[tim-giong-bang-may]].
 
 ## Gần gũi với thư viện này
 - Khi biên soạn, các ví dụ [[doi-am-5-loai|đối âm]] mẫu của thư viện được kiểm tra bằng một chương trình nhỏ viết theo các luật ở [[cong-thuc-phuc-dieu]] — một ví dụ thu nhỏ của việc "viết lý thuyết thành thuật toán".

@@ -227,7 +227,7 @@ export const BRANCHES: Branch[] = [
     questions: ['Vì sao một nốt nhạc có cao độ và âm sắc?', 'Hệ thống chỉnh âm nào, đánh đổi điều gì?', 'Căn phòng biến đổi âm thanh ra sao?'],
     groups: [
       { title: 'Âm thanh và cao độ', slugs: ['am-hoc-co-ban', 'chuoi-boi-am', 'am-sac', 'thuan-nghich', 'luat-binh-quan'] },
-      { title: 'Nhạc cụ, phòng và tai', slugs: ['cau-tao-piano', 'am-hoc-phong', 'bao-ve-thinh-giac'] },
+      { title: 'Nhạc cụ, phòng và tai', slugs: ['am-hoc-nhac-cu', 'cau-tao-piano', 'am-hoc-phong', 'bao-ve-thinh-giac'] },
     ],
   },
   {
@@ -241,10 +241,28 @@ export const BRANCHES: Branch[] = [
     summary: 'Con người nghe, nhớ, chờ đợi, xúc động và học âm nhạc như thế nào — nghiên cứu bằng thực nghiệm.',
     questions: ['Tai và não tách một bản nhạc thành giọng, phách và giọng điệu ra sao?', 'Vì sao âm nhạc gây xúc động?', 'Luyện tập thế nào thì hiệu quả, theo bằng chứng?'],
     groups: [
-      { title: 'Tổng quan', slugs: ['tam-ly-hoc-am-nhac', 'lo-trinh-nghe-cam-thu'] },
+      { title: 'Tổng quan và phương pháp', slugs: ['tam-ly-hoc-am-nhac', 'lo-trinh-nghe-cam-thu', 'thiet-ke-nghien-cuu-thuc-nghiem'] },
       { title: 'Tri giác thính giác', slugs: ['cam-nhan-am-thanh', 'phan-luong-thinh-giac', 'cao-do-tuyet-doi', 'cam-nhan-phach'] },
+      { title: 'Giọng và thứ bậc điệu tính', slugs: ['dieu-tinh', 'tim-giong-bang-may'] },
       { title: 'Kỳ vọng, cảm xúc và cách nghe', slugs: ['ky-vong-am-nhac', 'cam-xuc-am-nhac', 'nghe-nhac-chu-dong'] },
-      { title: 'Học tập, trí nhớ và chuyên môn', slugs: ['phuong-phap-luyen-tap', 'tap-trong-dau', 'hoc-thuoc-bai', 'khoa-hoc-ngau-hung', 'ly-thuyet-hoc-am-nhac-gordon', 'hoi-hop-bieu-dien'] },
+      { title: 'Phát triển và ngôn ngữ', slugs: ['tam-ly-hoc-phat-trien-am-nhac', 'am-nhac-va-ngon-ngu'] },
+      { title: 'Học tập, trí nhớ và chuyên môn', slugs: ['hoc-nhac-va-tri-tue', 'phuong-phap-luyen-tap', 'tap-trong-dau', 'hoc-thuoc-bai', 'khoa-hoc-ngau-hung', 'ly-thuyet-hoc-am-nhac-gordon', 'hoi-hop-bieu-dien'] },
+    ],
+  },
+  {
+    id: 'than-kinh-sinh-hoc',
+    part: 'systematic',
+    title: 'Khoa học thần kinh và sinh học âm nhạc',
+    en: 'Neuroscience & biomusicology',
+    glyph: '𝄐',
+    hue: 320,
+    hub: 'than-kinh-hoc-am-nhac',
+    summary: 'Não nghe và học nhạc ra sao, vì sao loài người có âm nhạc, âm nhạc có phổ quát không — và âm nhạc được dùng để trị liệu thế nào.',
+    questions: ['Những vùng não nào tham gia khi nghe và chơi nhạc, và luyện tập thay đổi não ra sao?', 'Âm nhạc là sản phẩm của chọn lọc tự nhiên hay sản phẩm phụ?', 'Bằng chứng nào cho âm nhạc trị liệu?'],
+    groups: [
+      { title: 'Não và âm nhạc', slugs: ['than-kinh-hoc-am-nhac', 'khoa-hoc-ngau-hung', 'hoc-nhac-va-tri-tue'] },
+      { title: 'Tiến hoá và tính phổ quát', slugs: ['am-nhac-hoc-tien-hoa', 'am-nhac-va-ngon-ngu', 'tam-ly-hoc-phat-trien-am-nhac'] },
+      { title: 'Ứng dụng lâm sàng', slugs: ['am-nhac-tri-lieu'] },
     ],
   },
   {
@@ -328,7 +346,7 @@ export const BRANCHES: Branch[] = [
     questions: ['Âm nhạc mang nghĩa gì với cộng đồng làm ra nó?', 'Công nghiệp, công nghệ và thị trường định hình âm nhạc ra sao?'],
     groups: [
       { title: 'Tổng quan', slugs: ['dan-toc-nhac-hoc', 'xa-hoi-hoc-am-nhac'] },
-      { title: 'Âm nhạc Việt Nam', slugs: ['am-nhac-truyen-thong-viet-nam', 'am-giai-ngu-cung', 'tan-nhac-viet-nam', 'piano-viet-nam', 'dem-dieu-viet-nam'] },
+      { title: 'Âm nhạc Việt Nam', slugs: ['am-nhac-va-ngon-ngu', 'am-nhac-truyen-thong-viet-nam', 'am-giai-ngu-cung', 'tan-nhac-viet-nam', 'piano-viet-nam', 'dem-dieu-viet-nam'] },
       { title: 'Âm nhạc đại chúng và xã hội', slugs: ['nhac-pho-thong-the-ky-20', 'phong-cach-jazz', 'jam-session', 'adorno-va-am-nhac', 'nhac-trong-tu-tuong-nho-gia'] },
     ],
   },
@@ -343,6 +361,7 @@ export const BRANCHES: Branch[] = [
     summary: 'Dạy và học âm nhạc: luyện tai, xướng âm, các phương pháp giáo dục, sư phạm piano, giáo trình và lộ trình.',
     questions: ['Kỹ năng âm nhạc được hình thành theo trình tự nào?', 'Phương pháp nào có bằng chứng?'],
     groups: [
+      { title: 'Nền tảng khoa học', slugs: ['tam-ly-hoc-phat-trien-am-nhac', 'hoc-nhac-va-tri-tue'] },
       { title: 'Lộ trình và giáo trình', slugs: ['lo-trinh-luyen-tai-su-pham', 'su-pham-piano', 'giao-trinh-piano-nhap-mon', 'lo-trinh-tac-pham', 'thi-cap-do', 'giao-trinh-hoa-am'] },
       { title: 'Luyện tai', slugs: ['luyen-tai', 'xuong-am', 'am-tiet-nhip', 'ky-am', 'doc-not-nhanh', 'thi-tau'] },
       { title: 'Phương pháp và nhà sư phạm', cats: ['musicianship'] },
@@ -358,7 +377,7 @@ export const BRANCHES: Branch[] = [
     hub: 'am-nhac-hoc-tinh-toan',
     summary: 'Máy tính như công cụ nghiên cứu: mô hình hoá, phân tích kho dữ liệu lớn, truy xuất thông tin âm nhạc, âm thanh tổng hợp.',
     questions: ['Một khẳng định về phong cách có đứng vững trên hàng nghìn tác phẩm không?', 'Một lý thuyết có thể viết thành thuật toán không?'],
-    groups: [{ title: 'Các bài liên quan', slugs: ['am-nhac-hoc-tinh-toan', 'tap-hop-cao-do', 'neo-riemann', 'nhac-dien-tu', 'nhac-pho'] }],
+    groups: [{ title: 'Các bài liên quan', slugs: ['am-nhac-hoc-tinh-toan', 'tim-giong-bang-may', 'tap-hop-cao-do', 'neo-riemann', 'nhac-dien-tu', 'nhac-pho'] }],
   },
 
   // ---------------------------------------------------------------- practice

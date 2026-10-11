@@ -42,6 +42,8 @@ Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[doc-not
 - **Âm thanh trước ký hiệu**: hát, vận động, nghe trước; đọc và gọi tên sau (Kodály, Orff, Dalcroze, Gordon).
 - **Từng bước, có trình tự**: từ mẫu ngắn đến ý nhạc dài, từ bắt chước đến tự tạo (Gordon; Duke).
 - **Phân biệt bằng chứng và kinh nghiệm**: thư viện ghi rõ đâu là kết quả nghiên cứu, đâu là gợi ý của giáo viên — nhiều câu "ai cũng biết" trong dạy nhạc chưa từng được kiểm chứng.
+
+**Nền tảng khoa học:** trẻ nghe và học nhạc thế nào theo từng tuổi — [[tam-ly-hoc-phat-trien-am-nhac]]; học nhạc có làm thông minh hơn không, và nên nói gì với phụ huynh — [[hoc-nhac-va-tri-tue]].
 `,
   },
   {
@@ -401,7 +403,7 @@ Liên quan: [[not-nhac]], [[khuong-nhac]], [[day-tre-em]].
 | **Mục tiêu và kỳ vọng** | Giáo viên đặt chuẩn âm thanh và mục tiêu cho học trò thế nào? |
 | **Tạo ra thay đổi** | Giáo viên làm gì để cách chơi của học trò **thực sự thay đổi** ngay trong buổi học? |
 | **Truyền đạt thông tin** | Giáo viên giải thích, làm mẫu, phản hồi ra sao? |
-Danh sách đầy đủ 19 yếu tố và video minh hoạ có trên trang của Trung tâm Học Âm nhạc (UT Austin). Lưu ý giới hạn: đây là quan sát **ba giáo viên** ở trình độ cao, không phải thí nghiệm có nhóm đối chứng.
+Danh sách đầy đủ 19 yếu tố và video minh hoạ có trên trang của Trung tâm Học Âm nhạc (UT Austin). Lưu ý giới hạn: đây là quan sát **ba giáo viên** ở trình độ cao, không phải thí nghiệm có [[thiet-ke-nghien-cuu-thuc-nghiem|nhóm đối chứng]].
 
 ## Cam kết và động lực ở trẻ (McPherson)
 **Gary McPherson** theo dõi lâu dài một nhóm trẻ bắt đầu học nhạc cụ, hỏi từ đầu rằng các em **dự định chơi bao lâu**. Theo các bản tóm tắt nghiên cứu, **mức cam kết lâu dài** mà trẻ tự nêu ra liên quan chặt chẽ đến tiến bộ sau này — kể cả khi lượng luyện tập như nhau — hơn là các chỉ số như trí thông minh hay khả năng nghe. Con số cụ thể hay được trích (ví dụ "hơn 400%") đến từ sách phổ thông dẫn lại, nên cần đối chiếu công bố gốc trước khi dùng.

@@ -271,7 +271,7 @@ Kiến thức nền về tần số, dB, phạm vi nghe: [[am-hoc-co-ban]]. Các
 [[cuong-do|Cường độ]] tương đối của các bồi âm quyết định **[[am-sac|âm sắc]]** — lý do piano và violin chơi cùng nốt nhưng nghe khác nhau.
 
 ## Bồi âm của piano "lệch" lên
-Dây [[dan-piano|đàn piano]] **cứng** (dây thép ngắn, khá dày), nên các bồi âm cao **không đúng** bội số nguyên mà hơi **cao hơn** — gọi là tính **không điều hoà** (inharmonicity). Dây càng ngắn, càng dày thì càng lệch.
+Dây [[dan-piano|đàn piano]] **cứng** (dây thép ngắn, khá dày), nên các bồi âm cao **không đúng** bội số nguyên mà hơi **cao hơn** — gọi là tính **không điều hoà** ([[am-hoc-nhac-cu|inharmonicity]]). Dây càng ngắn, càng dày thì càng lệch.
 
 ## Hệ quả: lên dây "kéo giãn"
 - Thợ lên dây làm các nốt **cao hơi cao lên**, nốt **trầm hơi thấp xuống**, để bồi âm của nốt thấp khớp với âm gốc của nốt cao. Quãng 8 trên piano vì vậy **rộng hơn** tỉ lệ 2:1 một chút.

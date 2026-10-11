@@ -545,7 +545,7 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
     body: `
 | Kết cấu | Mô tả | Ví dụ |
 |---|---|---|
-| **Đơn âm** (monophony) | Một [[giai-dieu|giai điệu]], không đệm | [[thanh-ca-gregorian|Thánh ca Gregorian]], hát ru |
+| **Đơn âm** (monophony) | Một [[giai-dieu|giai điệu]], không đệm | [[thanh-ca-gregorian|Thánh ca Gregorian]], [[tam-ly-hoc-phat-trien-am-nhac|hát ru]] |
 | **Chủ điệu** (homophony) | Một giai điệu chính + [[hop-am-ba|hợp âm]] đệm | Phần lớn [[nhac-pho-thong-the-ky-20|nhạc pop]], [[the-loai|nocturne]] [[frederic-chopin|Chopin]] |
 | **Hợp âm khối** (homorhythm) | Mọi bè cùng [[tiet-tau|nhịp điệu]] | Thánh ca 4 bè |
 | **Phức điệu** (polyphony) | Nhiều giai điệu độc lập, ngang hàng | Fugue, canon của [[johann-sebastian-bach|Bach]] |

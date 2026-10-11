@@ -50,7 +50,7 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 - **Phân biệt nghiên cứu và kinh nghiệm**: thư viện ghi rõ khi một nhận định là kết quả nghiên cứu (kèm cỡ mẫu, giới hạn) hay chỉ là gợi ý dạy học.
 - **Quay về cây đàn**: mỗi bài đều kết thúc bằng ý nghĩa với việc chơi và dạy piano.
 
-**Góc nhìn nghiên cứu:** ngành đứng sau mục này là [[tam-ly-hoc-am-nhac]]; công cụ máy tính để kiểm tra giả thuyết trên nhiều tác phẩm là [[am-nhac-hoc-tinh-toan]].
+**Góc nhìn nghiên cứu:** ngành đứng sau mục này là [[tam-ly-hoc-am-nhac]]; não khi nghe nhạc ở [[than-kinh-hoc-am-nhac]]; âm nhạc và lời nói ở [[am-nhac-va-ngon-ngu]]; vật lý của nhạc cụ ở [[am-hoc-nhac-cu]]; công cụ máy tính để kiểm tra giả thuyết trên nhiều tác phẩm là [[am-nhac-hoc-tinh-toan]].
 `,
   },
   {

@@ -38,6 +38,8 @@ Các âm giai đối xứng khác: [[dieu-thuc-chuyen-vi-gioi-han]].
 
 ## Luyện âm giai trên đàn
 Kỹ thuật ngón: [[luyen-am-giai]], [[ngon-bam]]. Âm giai cũng là nội dung chính của các kỳ thi cấp độ (xem [[thi-cap-do]]).
+
+**Góc nhìn nghiên cứu:** thứ bậc của các bậc trong giọng đo được bằng thực nghiệm, và máy tính dùng nó để đoán giọng — [[tim-giong-bang-may]].
 `,
   },
   {
@@ -73,7 +75,7 @@ Công thức tính bằng [[cung-nua-cung]]:
 - Tuy vậy, **không nên** hiểu là trưởng – thứ "sinh ra" từ Ionian – Aeolian: cả bốn đều hình thành cùng lúc từ thói quen thêm [[dau-hoa]] khi hát (*musica ficta*). Đến thế kỷ 17, hệ thống **trưởng – thứ** dần thay thế hệ điệu thức.
 
 ## Tai người nghe "thứ bậc" trong âm giai
-Trong thí nghiệm nổi tiếng của **Krumhansl và Kessler (1982)**, người nghe nghe một đoạn xác lập giọng rồi đánh giá từng nốt trong 12 nốt "hợp" đến đâu. Kết quả là một **thứ bậc bốn tầng**, giống nhau ở cả giọng trưởng và giọng thứ:
+Trong thí nghiệm nổi tiếng của **[[tim-giong-bang-may|Krumhansl và Kessler]] (1982)**, người nghe nghe một đoạn xác lập giọng rồi đánh giá từng nốt trong 12 nốt "hợp" đến đâu. Kết quả là một **thứ bậc bốn tầng**, giống nhau ở cả giọng trưởng và giọng thứ:
 1. **Chủ âm** — hợp nhất.
 2. Hai nốt còn lại của **[[hop-am-ba|hợp âm]] chủ** (bậc 5 và bậc 3).
 3. Các nốt khác **trong [[am-giai|âm giai]]**.
@@ -159,7 +161,7 @@ Nâng **bậc 7** lên nửa cung: A – B – C – D – E – F – **G♯** 
 [[hop-am-ba|Hợp âm]] dựng trên các bậc được ghi bằng số La Mã (I, IV, V…): xem [[chuc-nang-hoa-am]]. Ứng dụng trong [[am-giai-truong]] và [[am-giai-thu]].
 
 ## Bậc nào "quan trọng" hơn?
-Thí nghiệm của Krumhansl và Kessler (1982) cho thấy tai người nghe xếp **chủ âm** cao nhất, tiếp theo là **bậc 5 và bậc 3** (cùng tạo hợp âm chủ), rồi các bậc còn lại trong [[am-giai|âm giai]] — xem [[am-giai-truong]].
+Thí nghiệm của [[tim-giong-bang-may|Krumhansl và Kessler]] (1982) cho thấy tai người nghe xếp **chủ âm** cao nhất, tiếp theo là **bậc 5 và bậc 3** (cùng tạo hợp âm chủ), rồi các bậc còn lại trong [[am-giai|âm giai]] — xem [[am-giai-truong]].
 
 ## Đọc nhạc bằng bậc
 - **Đô di động** (movable do): "Đô" luôn là chủ âm của giọng đang chơi — tên âm tiết **chính là bậc**, giúp nghe và nhớ chức năng.
@@ -321,7 +323,7 @@ Trong thí nghiệm **"nốt dò"** (probe tone) của Carol **Krumhansl** và E
 2. Các nốt còn lại của **[[hop-am-ba|hợp âm]] chủ** (bậc 3, bậc 5).
 3. Các nốt khác **trong âm giai**.
 4. Các nốt **ngoài âm giai** — thấp nhất.
-Các "hồ sơ giọng" (key profiles) này đến nay vẫn được dùng làm chuẩn trong nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]]; một số nghiên cứu sau cho thấy thứ bậc trong [[nhac-pho-thong-the-ky-20|nhạc rock]] **ít phân tầng** hơn nhạc cổ điển. Liên quan: [[ky-vong-am-nhac]].
+Các "[[tim-giong-bang-may|hồ sơ giọng]]" (key profiles) này đến nay vẫn được dùng làm chuẩn trong nghiên cứu [[lo-trinh-nghe-cam-thu|nhận thức âm nhạc]]; một số nghiên cứu sau cho thấy thứ bậc trong [[nhac-pho-thong-the-ky-20|nhạc rock]] **ít phân tầng** hơn nhạc cổ điển. Liên quan: [[ky-vong-am-nhac]].
 
 ## Xác định giọng của một bản nhạc
 1. Đọc **hoá biểu**: thu hẹp còn hai khả năng — giọng trưởng và giọng thứ song song ([[giong-song-song]]).

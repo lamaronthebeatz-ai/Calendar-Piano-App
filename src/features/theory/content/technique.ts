@@ -317,7 +317,7 @@ Kết luận của họ: thị tấu giỏi là sự kết hợp của yếu t�
 
 ## Phương pháp nào có hiệu quả?
 **Mishra (2014)** tổng hợp 92 nghiên cứu can thiệp về thị tấu:
-- Hiệu quả chung của các phương pháp luyện **khá nhỏ**; nhóm đối chứng cũng tiến bộ theo thời gian.
+- Hiệu quả chung của các phương pháp luyện **khá nhỏ**; [[thiet-ke-nghien-cuu-thuc-nghiem|nhóm đối chứng]] cũng tiến bộ theo thời gian.
 - Các loại có tác dụng tích cực rõ: **[[luyen-tai|luyện tai]]**, **đọc có kiểm soát**, **hoạt động sáng tạo** (như [[ngau-hung-piano|ngẫu hứng]]) và **hát / [[xuong-am]]**.
 - Riêng về [[tiet-tau|tiết tấu]], các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả.
 
