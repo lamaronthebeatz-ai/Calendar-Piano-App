@@ -2,17 +2,18 @@ import { useSyncExternalStore } from 'react'
 
 /**
  * Per-device reading state for the theory library: reader preferences, saved articles and
- * recently read ones. Kept in localStorage (a convenience, so every access tolerates it failing).
+ * recently read ones, and every article ever opened (for reading progress on the musicology map). Kept in localStorage (a convenience, so every access tolerates it failing).
  */
 export interface LibraryState {
   size: number
   serif: boolean
   saved: string[]
   recent: string[]
+  read: string[]
 }
 
 const KEY = 'theory:library'
-const DEFAULTS: LibraryState = { size: 16, serif: false, saved: [], recent: [] }
+const DEFAULTS: LibraryState = { size: 16, serif: false, saved: [], recent: [], read: [] }
 
 function load(): LibraryState {
   try {
@@ -46,4 +47,8 @@ export const toggleSaved = (slug: string) =>
   updateLibrary((s) => ({ saved: s.saved.includes(slug) ? s.saved.filter((x) => x !== slug) : [slug, ...s.saved] }))
 
 export const markRead = (slug: string) =>
-  updateLibrary((s) => (s.recent[0] === slug ? {} : { recent: [slug, ...s.recent.filter((x) => x !== slug)].slice(0, 12) }))
+  updateLibrary((s) =>
+    s.recent[0] === slug && s.read.includes(slug)
+      ? {}
+      : { recent: [slug, ...s.recent.filter((x) => x !== slug)].slice(0, 12), read: s.read.includes(slug) ? s.read : [...s.read, slug] },
+  )

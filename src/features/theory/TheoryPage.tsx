@@ -6,6 +6,7 @@ import {
   ArrowUpRightIcon,
   BookIcon,
   BookmarkIcon,
+  BranchesIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ClockIcon,
@@ -22,6 +23,7 @@ import { ARTICLES, CATEGORIES } from './articles'
 import { Markup, WikiImage } from './Markup'
 import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, searchArticles, type Article } from './wiki'
 import { markRead, toggleSaved, updateLibrary, useLibrary } from './library'
+import { branchesOf } from '../musicology/taxonomy'
 
 type CategoryId = Article['category']
 
@@ -50,6 +52,7 @@ const GLYPHS: Record<CategoryId, string> = {
   pianists: '♫',
   composers: '𝅗𝅥',
   genres: '♬',
+  musicology: '𝄪',
 }
 
 /** Where a newcomer should start: the roadmap article of the core groups. */
@@ -310,7 +313,7 @@ const SOURCES = [
   ['IMSLP', 'https://imslp.org/', 'thư viện bản nhạc cổ điển miễn phí'],
 ]
 
-function SectionTitle({ children, icon, hint }: { children: ReactNode; icon?: ReactNode; hint?: string }) {
+export function SectionTitle({ children, icon, hint }: { children: ReactNode; icon?: ReactNode; hint?: string }) {
   return (
     <div className="flex items-end justify-between gap-3 border-b border-[var(--color-border)] pb-2">
       <h2 className="flex items-center gap-2 font-display text-[21px] font-semibold tracking-tight text-[var(--color-ink)]">
@@ -421,7 +424,7 @@ function Highlight({ text, query }: { text: string; query?: string }) {
   )
 }
 
-function ArticleGrid({ articles, home, query, numbered }: { articles: Article[]; home?: CategoryId; query?: string; numbered?: boolean }) {
+export function ArticleGrid({ articles, home, query, numbered, showCategory }: { articles: Article[]; home?: CategoryId; query?: string; numbered?: boolean; showCategory?: boolean }) {
   return (
     <ul className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
       {articles.map((a, i) => (
@@ -441,7 +444,7 @@ function ArticleGrid({ articles, home, query, numbered }: { articles: Article[];
                 <Highlight text={a.title} query={query} />
               </span>
               <span className="mt-0.5 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{a.summary}</span>
-              {(query || (home && a.category !== home)) && (
+              {(query || showCategory || (home && a.category !== home)) && (
                 <span className="mt-1.5 block text-[11px] font-medium text-[var(--tint)]">{CATEGORIES[a.category].title}</span>
               )}
             </span>
@@ -515,6 +518,7 @@ function ArticleView({ article, scroller }: { article: Article; scroller: RefObj
   const index = siblings.indexOf(article)
   const [prev, next] = index < 0 ? [] : [siblings[index - 1], siblings[index + 1]]
   const sections = headings(article.body)
+  const branches = branchesOf(article.slug).filter((b) => b.part !== 'intro')
   const { size, serif } = useLibrary()
   const jump = (i: number) => scroller.current?.querySelector(`#sec-${i}`)?.scrollIntoView({ block: 'start' })
 
@@ -526,6 +530,16 @@ function ArticleView({ article, scroller }: { article: Article; scroller: RefObj
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--tint)] font-['Noto_Music'] text-[11px] text-white">{GLYPHS[article.category]}</span>
             {CATEGORIES[article.category].title}
           </Link>
+          {branches.length > 0 && (
+            <p className="flex flex-wrap items-center gap-1.5 text-[12px] text-[var(--color-ink-faint)]">
+              <BranchesIcon width={13} height={13} className="text-[var(--color-gold)]" /> Âm nhạc học:
+              {branches.map((b) => (
+                <Link key={b.id} to={`/musicology/${b.id}`} className="rounded-full border border-[var(--color-border)] px-2 py-0.5 font-medium text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-ink)]">
+                  {b.title}
+                </Link>
+              ))}
+            </p>
+          )}
           <h1 className="font-display text-[32px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[42px]">{article.title}</h1>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[12.5px] text-[var(--color-ink-faint)]">
             <span className="inline-flex items-center gap-1.5"><ClockIcon width={13} height={13} /> {readingMinutes(article)} phút đọc</span>

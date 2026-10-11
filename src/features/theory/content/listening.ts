@@ -6,7 +6,7 @@ export const listening: Article[] = [
     slug: 'lo-trinh-nghe-cam-thu',
     title: 'Nghe và cảm thụ: hệ thống và lộ trình',
     category: 'listening',
-    aliases: ['lộ trình nghe nhạc', 'cảm thụ âm nhạc lộ trình', 'tâm lý học âm nhạc tổng quan', 'âm học tổng quan', 'music cognition', 'nhận thức âm nhạc'],
+    aliases: ['lộ trình nghe nhạc', 'cảm thụ âm nhạc lộ trình', 'âm học tổng quan'],
     summary: 'Bài tổng quan của mục: đi từ vật lý của âm thanh (âm học), qua cách tai và não xử lý âm thanh (tâm lý âm học, nhận thức), đến ý nghĩa và cảm xúc, rồi thực hành nghe và giữ gìn thính giác.',
     wiki: 'Music_psychology',
     refs: [
@@ -49,6 +49,8 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 - **Phân biệt vật lý và cảm nhận**: tần số ≠ cao độ, biên độ ≠ độ to, phổ ≠ âm sắc. Cảm nhận phụ thuộc vào tai, não và kinh nghiệm.
 - **Phân biệt nghiên cứu và kinh nghiệm**: thư viện ghi rõ khi một nhận định là kết quả nghiên cứu (kèm cỡ mẫu, giới hạn) hay chỉ là gợi ý dạy học.
 - **Quay về cây đàn**: mỗi bài đều kết thúc bằng ý nghĩa với việc chơi và dạy piano.
+
+**Góc nhìn nghiên cứu:** ngành đứng sau mục này là [[tam-ly-hoc-am-nhac]]; công cụ máy tính để kiểm tra giả thuyết trên nhiều tác phẩm là [[am-nhac-hoc-tinh-toan]].
 `,
   },
   {
@@ -321,7 +323,7 @@ Người chơi quyết định **người nghe cảm nhận kỳ vọng mạnh �
     title: 'Âm nhạc và cảm xúc',
     category: 'listening',
     also: ['philosophy'],
-    aliases: ['cảm xúc âm nhạc', 'tâm lý học âm nhạc', 'music psychology', 'BRECVEMA', 'Juslin', 'nhạc buồn', 'nhạc vui', 'trưởng vui thứ buồn'],
+    aliases: ['cảm xúc âm nhạc', 'BRECVEMA', 'Juslin', 'nhạc buồn', 'nhạc vui', 'trưởng vui thứ buồn'],
     summary: 'Tâm lý học âm nhạc giải thích âm nhạc gây cảm xúc qua nhiều cơ chế (mô hình BRECVEMA của Juslin); nhịp độ và giọng trưởng – thứ ảnh hưởng mạnh tới cảm nhận vui – buồn.',
     wiki: 'Music_and_emotion',
     refs: [

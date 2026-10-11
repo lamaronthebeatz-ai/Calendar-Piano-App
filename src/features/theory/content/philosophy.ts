@@ -44,6 +44,8 @@ Các tài liệu tổng quan hiện đại (như mục *Philosophy of Music* c�
 
 ## Vì sao người dạy đàn nên quan tâm?
 Mỗi khi nói với học trò "chơi đoạn này buồn hơn", "tôn trọng ý tác giả", hay "bản này hay hơn bản kia", ta đã dùng một quan điểm triết học. Hiểu các quan điểm giúp **nói rõ điều mình muốn** và **tôn trọng những cách hiểu khác**.
+
+**Góc nhìn nghiên cứu:** âm nhạc trong cấu trúc xã hội — Weber, Adorno — ở [[xa-hoi-hoc-am-nhac]]; vị trí của mỹ học trong toàn ngành ở [[am-nhac-hoc-he-thong]].
 `,
   },
   {
@@ -460,7 +462,7 @@ Trong *Authenticities* (1995), triết gia **Peter [[bieu-hien-cam-xuc-am-nhac|K
 Sách chia hai phần: thế nào là xác thực (phân tích khái niệm), và **vì sao nên** xác thực (đánh giá). Các nghĩa có thể **mâu thuẫn**: chơi đúng âm thanh lịch sử chưa chắc là cách chơi chân thành nhất của người nghệ sĩ.
 
 ## Taruskin: "một phong cách hiện đại"
-Trong các tiểu luận tập hợp ở *Text and Act* (1995), nhà âm nhạc học **Richard Taruskin** lập luận rằng phong trào nhạc cổ **không** phục dựng truyền thống xưa, mà là **phong cách biểu diễn thực sự hiện đại duy nhất** của thời nay — và có giá trị **chính vì thế**, chứ không phải vì giống quá khứ. Một bài đánh giá sau này cho rằng Taruskin nhận diện đúng động cơ của một nhóm nghệ sĩ nhưng đã **khái quát quá mức**, và quan điểm của ông có lúc trở thành "chính thống mới"; các học giả – nghệ sĩ như John Butt, Peter Walls vừa ngưỡng mộ vừa phản bác ông.
+Trong các tiểu luận tập hợp ở *Text and Act* (1995), nhà [[am-nhac-hoc|âm nhạc học]] **Richard Taruskin** lập luận rằng phong trào nhạc cổ **không** phục dựng truyền thống xưa, mà là **phong cách biểu diễn thực sự hiện đại duy nhất** của thời nay — và có giá trị **chính vì thế**, chứ không phải vì giống quá khứ. Một bài đánh giá sau này cho rằng Taruskin nhận diện đúng động cơ của một nhóm nghệ sĩ nhưng đã **khái quát quá mức**, và quan điểm của ông có lúc trở thành "chính thống mới"; các học giả – nghệ sĩ như John Butt, Peter Walls vừa ngưỡng mộ vừa phản bác ông.
 
 ## Với người dạy piano
 - Chơi Bach trên piano hiện đại: không thể "xác thực về âm thanh", nhưng vẫn có thể hướng tới **xác thực về thực hành** (cách trang trí, diễn tấu, tốc độ) và **xác thực cá nhân**.

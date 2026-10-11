@@ -10,6 +10,8 @@ import { SettingsPage } from './features/settings/SettingsPage'
 // Theory content is large and independent of the timetable, so it loads on demand.
 const TheoryPage = lazy(() => import('./features/theory/TheoryPage').then((m) => ({ default: m.TheoryPage })))
 
+const MusicologyPage = lazy(() => import('./features/musicology/MusicologyPage').then((m) => ({ default: m.MusicologyPage })))
+
 export function App() {
   return (
     <HashRouter>
@@ -20,6 +22,7 @@ export function App() {
           <Route path="/students/:id" element={<StudentProfilePage />} />
           <Route path="/statistics" element={<StatisticsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
           <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />
         </Route>
       </Routes>

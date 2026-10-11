@@ -329,7 +329,7 @@ Trước khi chơi một bài trong buổi biểu diễn hay buổi học, chơi
 Người chơi giữ vị trí trong hình thức nhờ **trí nhớ, nghe, tín hiệu cơ thể và cảm giác nhịp**.
 
 ## Học ngẫu hứng jazz: Berliner (1994)
-Nhà dân tộc nhạc học **Paul Berliner**, trong *Thinking in Jazz* (1994), dựa trên phỏng vấn nhiều nhạc sĩ, mô tả ngẫu hứng như một **ngôn ngữ**, một thẩm mỹ và một **truyền thống**, phía sau là **cả đời chuẩn bị**:
+Nhà [[dan-toc-nhac-hoc|dân tộc nhạc học]] **Paul Berliner**, trong *Thinking in Jazz* (1994), dựa trên phỏng vấn nhiều nhạc sĩ, mô tả ngẫu hứng như một **ngôn ngữ**, một thẩm mỹ và một **truyền thống**, phía sau là **cả đời chuẩn bị**:
 - **Xây từ vựng**: học thuộc các [[cau-nhac|câu nhạc]], cụm nốt từ bản thu của các bậc thầy — tương tự học từ và cụm từ của một ngôn ngữ.
 - **Chép solo** (transcription): nghe và ghi (hoặc học thuộc bằng tai) các solo nổi tiếng; sách của Berliner có các bản chép ngẫu hứng tập thể của nhóm Miles Davis và John Coltrane.
 - **Lý thuyết** [[hop-am-ba|hợp âm]] – [[am-giai|âm giai]] và **từ vựng học từ bản thu** đều là thành phần thiết yếu (xem [[he-thong-hop-am-am-giai]]).

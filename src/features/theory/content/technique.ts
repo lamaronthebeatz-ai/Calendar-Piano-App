@@ -42,6 +42,8 @@ export const technique: Article[] = [
 5. **Đọc và học bài**: [[doc-not-nhanh]] → [[thi-tau]] → [[hoc-thuoc-bai]] → [[tap-trong-dau]].
 6. **Biểu diễn**: [[dien-dat-cau-nhac]] → [[hoi-hop-bieu-dien]].
 Kỹ thuật phục vụ âm nhạc: song song với các bài trên, nên học [[dien-tau]] (ký hiệu và phong [[cach-dien-tau|cách diễn tấu]]) và [[phan-tich-va-bieu-dien]].
+
+**Góc nhìn nghiên cứu:** các kỹ năng trên là đối tượng của ngành [[khoa-hoc-bieu-dien]] (xem bản đồ [[am-nhac-hoc]]).
 `,
   },
   {

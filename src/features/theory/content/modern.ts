@@ -60,6 +60,8 @@ Lộ trình đầy đủ: [[hoa-am-the-ky-20]].
 [[nghe-si-piano-the-ky-19]] · [[nghe-si-piano-dau-the-ky-20]] · [[nghe-si-piano-hien-dai]] · [[nghe-si-piano-jazz]] — và [[truong-phai-piano|các trường phái piano]].
 
 Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
+
+**Góc nhìn nghiên cứu:** khung chung của việc nghiên cứu các thời kỳ là [[am-nhac-hoc-lich-su]]; âm nhạc ngoài truyền thống phương Tây, trong văn hoá của nó, là đối tượng của [[dan-toc-nhac-hoc]].
 `,
   },
   {
@@ -553,7 +555,7 @@ Trong jazz: [[jazz-dieu-thuc]].
 **Toàn diatonic** (pandiatonicism) là kỹ thuật dùng [[am-giai|âm giai]] **diatonic** (7 nốt, ví dụ chỉ phím trắng) **mà không bị ràng buộc bởi [[dieu-tinh|điệu tính]] chức năng**: các nốt không cần đóng vai trò bậc hay [[hop-am-ba|hợp âm]] có hướng giải quyết.
 
 ## Định nghĩa của Slonimsky
-Thuật ngữ do nhà âm nhạc học **Nicolas Slonimsky** đặt (các nguồn ghi nơi xuất hiện khác nhau — trong sách *Music since 1900* hoặc trong từ điển Baker's). Theo ông, toàn diatonic cho phép dùng **cùng lúc bất kỳ hoặc tất cả bảy nốt** của âm giai diatonic, trong đó **bè trầm quyết định** hoà âm.
+Thuật ngữ do nhà [[am-nhac-hoc|âm nhạc học]] **Nicolas Slonimsky** đặt (các nguồn ghi nơi xuất hiện khác nhau — trong sách *Music since 1900* hoặc trong từ điển Baker's). Theo ông, toàn diatonic cho phép dùng **cùng lúc bất kỳ hoặc tất cả bảy nốt** của âm giai diatonic, trong đó **bè trầm quyết định** hoà âm.
 
 ## Nhận biết
 - Hoà âm **diatonic** (không có nốt lạ) nhưng **không có** tiến trình T – PD – D – T (xem [[chuc-nang-hoa-am]]).

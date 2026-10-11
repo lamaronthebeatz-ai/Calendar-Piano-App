@@ -29,6 +29,8 @@ export const instrument: Article[] = [
 3. **Bàn phím và âm vực**: [[ban-phim]].
 4. **Chọn và giữ đàn**: [[cac-loai-dan-piano]] → [[bao-duong-piano]].
 5. **Âm học liên quan**: [[am-hoc-co-ban]], [[chuoi-boi-am]] (vì sao dây đàn được lên hơi lệch), [[luat-binh-quan]].
+
+**Góc nhìn nghiên cứu:** nhạc cụ như một đối tượng khoa học — phân loại Hornbostel – Sachs, lịch sử, âm học — ở [[nhac-khi-hoc]].
 `,
   },
   {

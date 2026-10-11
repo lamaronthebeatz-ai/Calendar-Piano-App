@@ -572,7 +572,7 @@ Mỗi thuật ngữ tiếng Việt là một liên kết tới bài giải thíc
 **Tempo rubato** (tiếng Ý: "thời gian bị đánh cắp") là sự **co giãn thời gian có chủ ý** khi biểu diễn: kéo dài chỗ này, rút ngắn chỗ kia so với [[kiem-soat-toc-do|nhịp đều]]. Rubato không phải là "chơi tự do theo cảm hứng" mà là một kỹ năng có lịch sử, có quy luật và có thể đo đạc.
 
 ## Hai loại rubato
-Nhà âm nhạc học **Richard Hudson** (*Stolen Time: The History of Tempo Rubato*, Oxford, 1994) phân biệt:
+Nhà [[am-nhac-hoc|âm nhạc học]] **Richard Hudson** (*Stolen Time: The History of Tempo Rubato*, Oxford, 1994) phân biệt:
 | | Rubato kiểu cũ | Rubato kiểu mới |
 |---|---|---|
 | Cái gì co giãn? | Chỉ **[[giai-dieu|giai điệu]]**: các nốt được kéo, đẩy so với phách | **Toàn bộ** nhịp độ: cả giai điệu lẫn phần đệm |

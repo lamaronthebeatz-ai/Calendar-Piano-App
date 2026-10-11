@@ -19,6 +19,7 @@ import { listening } from './content/listening'
 import { philosophy } from './content/philosophy'
 import { improvisation } from './content/improvisation'
 import { genres } from './content/genres'
+import { musicology } from './content/musicology'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -45,7 +46,8 @@ export const CATEGORIES = {
   analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 20 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
   pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
   genres: { title: 'Thể loại âm nhạc', hue: 120, description: 'Các thể loại từ Trung cổ đến hôm nay: thánh ca, organum, motet, thánh lễ, madrigal; opera, oratorio, cantata, tổ khúc, concerto; giao hưởng, nhạc thính phòng, sonata, tiểu phẩm piano, Lied, thơ giao hưởng, ballet; nhạc điện tử, nhạc phim, nhạc kịch và các dòng nhạc phổ thông — kèm sơ đồ, nhịp điệu đặc trưng và ví dụ nghe.' },
+  musicology: { title: 'Âm nhạc học', hue: 60, description: 'Ngành nghiên cứu âm nhạc: sơ đồ Adler (lịch sử và hệ thống), âm nhạc học hệ thống hiện đại, phương pháp nghiên cứu, tâm lý học âm nhạc, khoa học biểu diễn, dân tộc nhạc học, xã hội học, nhạc khí học, âm nhạc học tính toán — kèm thẻ Âm nhạc học xếp lại toàn bộ thư viện theo khung này.' },
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology]

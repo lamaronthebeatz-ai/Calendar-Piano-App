@@ -141,7 +141,7 @@ Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|ph
 - **Phân tích biểu diễn và bản thu** (xem [[phan-tich-va-bieu-dien]], [[so-sanh-ban-thu]]).
 
 ## Phê phán: "Ta đã đi vào phân tích thế nào, và làm sao để ra"
-Bài luận nổi tiếng của nhà âm nhạc học **Joseph Kerman** (*Critical Inquiry*, **1980**) — *How We Got into Analysis, and How to Get Out* — phê phán việc phân tích tập trung vào cấu trúc kỹ thuật mà tách khỏi lịch sử, bối cảnh và **phê bình** (đánh giá, diễn giải ý nghĩa). Bài luận thường được coi là một khởi điểm của các tranh luận dẫn tới "âm nhạc học mới" ở thập niên 1980–1990. Bài học cho người dạy: phân tích là **phương tiện để hiểu và chơi hay hơn**, không phải mục đích tự thân.
+Bài luận nổi tiếng của nhà [[am-nhac-hoc|âm nhạc học]] **Joseph Kerman** (*Critical Inquiry*, **1980**) — *How We Got into Analysis, and How to Get Out* — phê phán việc phân tích tập trung vào cấu trúc kỹ thuật mà tách khỏi lịch sử, bối cảnh và **phê bình** (đánh giá, diễn giải ý nghĩa). Bài luận thường được coi là một khởi điểm của các tranh luận dẫn tới "âm nhạc học mới" ở thập niên 1980–1990. Bài học cho người dạy: phân tích là **phương tiện để hiểu và chơi hay hơn**, không phải mục đích tự thân.
 `,
   },
   {
@@ -157,7 +157,7 @@ Bài luận nổi tiếng của nhà âm nhạc học **Joseph Kerman** (*Critic
       ['York University — Jazz recordings by Ed Bickert and problems of stylistic analysis (thesis using LaRue)', 'https://yorkspace.library.yorku.ca/items/2e06c705-535e-4b02-93da-5a007d5a2bb2'],
     ],
     body: `
-Nhà âm nhạc học **Jan LaRue**, trong *Guidelines for Style Analysis* (W. W. Norton, **1970**; bản mở rộng 2011), đề xuất một khung phân tích có hệ thống để **không bỏ sót** yếu tố nào. Khung này được dùng rộng rãi trong giảng dạy, từ nhạc cổ điển đến jazz.
+Nhà [[am-nhac-hoc|âm nhạc học]] **Jan LaRue**, trong *Guidelines for Style Analysis* (W. W. Norton, **1970**; bản mở rộng 2011), đề xuất một khung phân tích có hệ thống để **không bỏ sót** yếu tố nào. Khung này được dùng rộng rãi trong giảng dạy, từ nhạc cổ điển đến jazz.
 
 ## Năm yếu tố: S – H – M – R – G
 | Yếu tố | Gồm những gì (ví dụ) |

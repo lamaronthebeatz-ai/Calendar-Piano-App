@@ -17,11 +17,11 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
       inert={hidden}
       aria-label="Điều hướng chính"
     >
-      {navItems.slice(0, 2).map((item) => (
+      {navItems.slice(0, 3).map((item) => (
         <NavItem key={item.to} item={item} />
       ))}
 
-      <div className="relative flex w-16 items-center justify-center">
+      <div className="relative flex w-14 shrink-0 items-center justify-center">
         <button
           onClick={() => setQuickActionsOpen(true)}
           aria-label="Thêm nhanh"
@@ -31,7 +31,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
         </button>
       </div>
 
-      {navItems.slice(2).map((item) => (
+      {navItems.slice(3).map((item) => (
         <NavItem key={item.to} item={item} />
       ))}
     </nav>
@@ -45,7 +45,8 @@ function NavItem({ item }: { item: (typeof navItems)[number] }) {
       end={item.end}
       className={({ isActive }) =>
         clsx(
-          'relative flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[11px] font-medium transition-colors',
+          // Sized by their labels ("Âm nhạc học" is longer than the rest), sharing the leftover width equally.
+          'relative flex flex-auto flex-col items-center justify-center gap-1 whitespace-nowrap px-0.5 py-2.5 text-[10.5px] font-medium tracking-tight transition-colors min-[400px]:text-[11px]',
           isActive ? 'text-[var(--color-accent)]' : 'text-[var(--color-ink-faint)]',
         )
       }

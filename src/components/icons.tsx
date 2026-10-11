@@ -278,3 +278,14 @@ export const BrandMark = (p: IconProps) => (
     </g>
   </svg>
 )
+
+/** A small tree of nodes: the branches of a discipline (Âm nhạc học). */
+export const BranchesIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <circle cx="12" cy="4.5" r="2" />
+    <circle cx="5" cy="19.5" r="2" />
+    <circle cx="12" cy="19.5" r="2" />
+    <circle cx="19" cy="19.5" r="2" />
+    <path d="M12 6.5v11M12 11.5H5v6M12 11.5h7v6" />
+  </svg>
+)
