@@ -513,3 +513,73 @@ export function Timeline({ items }: { items: string[] }) {
     </svg>
   )
 }
+
+/**
+ * A column chart: `label=v` (one series) or `label=v1/v2` (two series), with optional `series=A/B`
+ * names and `max=N` for the axis top. Colours are the validated chart tokens; each bar has a hover
+ * title, and two series always get a legend. Underscores become spaces.
+ */
+export function Bars({ items }: { items: string[] }) {
+  const opts = Object.fromEntries(items.filter((s) => /^(series|max)=/.test(s)).map((s) => s.split('=') as [string, string]))
+  const data = items
+    .filter((s) => !/^(series|max)=/.test(s))
+    .map((s) => {
+      const i = s.lastIndexOf('=')
+      return { label: s.slice(0, i).replace(/_/g, ' '), values: s.slice(i + 1).split('/').map(Number) }
+    })
+  const names = opts.series?.split('/').map((n) => n.replace(/_/g, ' ')) ?? []
+  const nSeries = Math.max(...data.map((d) => d.values.length))
+  const peak = Math.max(...data.flatMap((d) => d.values))
+  const step = [0.5, 1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000].find((s) => peak / s <= 6) ?? 1000
+  const top = Number(opts.max) || Math.ceil(peak / step) * step
+  const W = 360
+  const legendH = nSeries > 1 ? 16 : 0
+  const [padL, padR, padT, padB] = [24, 6, 6 + legendH, 20]
+  const H = 150 + legendH
+  const plotW = W - padL - padR
+  const plotH = H - padT - padB
+  const y = (v: number) => padT + plotH - (v / top) * plotH
+  const slot = plotW / data.length
+  const barW = Math.min(14, (slot * 0.72 - 2 * (nSeries - 1)) / nSeries)
+  const colors = ['var(--chart-1)', 'var(--chart-2)']
+  const ticks: number[] = []
+  for (let t = 0; t <= top + 1e-9; t += step) ticks.push(+t.toFixed(4))
+  // Column with a 4px-style rounded data end and a square foot on the baseline.
+  const bar = (x: number, v: number) => {
+    const y0 = y(0)
+    const y1 = y(v)
+    const r = Math.min(2.5, barW / 2, y0 - y1)
+    return `M${x},${y0}V${y1 + r}Q${x},${y1} ${x + r},${y1}H${x + barW - r}Q${x + barW},${y1} ${x + barW},${y1 + r}V${y0}Z`
+  }
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl" role="img" aria-label={`Biểu đồ cột: ${data.map((d) => `${d.label} ${d.values.join('/')}`).join(', ')}`}>
+      {nSeries > 1 &&
+        names.map((n, i) => (
+          <g key={n} transform={`translate(${padL + i * 90},4)`}>
+            <rect width={9} height={9} rx={2} fill={colors[i]} />
+            <text x={13} y={8} fontSize={8.5} fill="var(--color-ink-muted)">{n}</text>
+          </g>
+        ))}
+      {ticks.map((t) => (
+        <g key={t}>
+          <line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke="var(--color-border)" strokeWidth={t === 0 ? 1 : 0.6} />
+          <text x={padL - 4} y={y(t) + 2.5} textAnchor="end" fontSize={7.5} fill="var(--color-ink-muted)">{t}</text>
+        </g>
+      ))}
+      {data.map((d, i) => {
+        const groupW = nSeries * barW + (nSeries - 1) * 2
+        const x0 = padL + i * slot + (slot - groupW) / 2
+        return (
+          <g key={d.label + i}>
+            {d.values.map((v, j) => (
+              <path key={j} d={bar(x0 + j * (barW + 2), v)} fill={colors[j]}>
+                <title>{`${d.label}${names[j] ? ` — ${names[j]}` : ''}: ${v}`}</title>
+              </path>
+            ))}
+            <text x={padL + i * slot + slot / 2} y={H - 7} textAnchor="middle" fontSize={labelSize(d.label, slot + 4)} fill="var(--color-ink)">{d.label}</text>
+          </g>
+        )
+      })}
+    </svg>
+  )
+}

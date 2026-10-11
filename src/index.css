@@ -17,6 +17,8 @@
   --color-accent: #2c4a7c;
   --color-accent-ink: #ffffff;
   --color-gold: #a27c43;
+  --chart-1: #3a6bb8; /* chart series, validated for CVD and contrast */
+  --chart-2: #b5822a;
   --color-gold-soft: #f3e9d6;
 
   --color-status-confirmed: #4c6fa5;
@@ -48,6 +50,8 @@
   --color-accent: #93b4e8;
   --color-accent-ink: #0c1220;
   --color-gold: #d8b77f;
+  --chart-1: #5f8fd6;
+  --chart-2: #b8862f;
   --color-gold-soft: #2b2416;
 
   --color-status-confirmed: #8fb0e0;
@@ -80,6 +84,8 @@
     --color-accent: #93b4e8;
     --color-accent-ink: #0c1220;
     --color-gold: #d8b77f;
+    --chart-1: #5f8fd6;
+    --chart-2: #b8862f;
     --color-gold-soft: #2b2416;
 
     --color-status-confirmed: #8fb0e0;
