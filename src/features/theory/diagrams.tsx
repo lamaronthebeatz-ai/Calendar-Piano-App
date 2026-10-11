@@ -458,7 +458,12 @@ export function Timeline({ items }: { items: string[] }) {
   const labelW = (t: string) => t.length * 7.5 * 0.55 + 6
   const sorted = [...events].sort((a, b) => a.from - b.from)
   const text = (e: { from: number; label: string }) => `${fmt(e.from)} ${e.label}`
-  const eventRow = place(sorted, (e) => [x(e.from) - labelW(text(e)) / 2, x(e.from) + labelW(text(e)) / 2])
+  // Labels near either end slide inwards so they are never cut off by the frame.
+  const labelX = (e: { from: number; label: string }) => {
+    const half = labelW(text(e)) / 2
+    return Math.min(W - half - 1, Math.max(half + 1, x(e.from)))
+  }
+  const eventRow = place(sorted, (e) => [labelX(e) - labelW(text(e)) / 2, labelX(e) + labelW(text(e)) / 2])
 
   const spanTop = 4
   const axisY = spanTop + spanRows * 22 + 6
@@ -499,7 +504,7 @@ export function Timeline({ items }: { items: string[] }) {
           <g key={`e${i}`}>
             <line x1={ex} x2={ex} y1={axisY} y2={y + 2} stroke="var(--color-gold)" strokeWidth={0.8} strokeDasharray="1.5 1.5" />
             <circle cx={ex} cy={axisY} r={2.4} fill="var(--color-gold)" />
-            <text x={ex} y={y + 9} textAnchor="middle" fontSize={7.5} fill="var(--color-ink)">
+            <text x={labelX(e)} y={y + 9} textAnchor="middle" fontSize={7.5} fill="var(--color-ink)">
               <tspan fontWeight={600}>{fmt(e.from)}</tspan> {e.label}
             </text>
           </g>

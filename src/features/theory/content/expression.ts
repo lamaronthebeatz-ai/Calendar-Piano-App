@@ -40,6 +40,8 @@ Hai người chơi cùng một bản nhạc, cùng đúng nốt, vẫn có thể
 3. **Đọc bản nhạc đầy đủ**: [[dau-nhac-lai]] → [[ky-hieu-nang-cao]] → [[bang-thuat-ngu]].
 4. **Vượt qua ký hiệu**: [[rubato]] → [[dien-dat-cau-nhac]] → [[phong-cach-dien-tau]] → [[an-ban-urtext]].
 5. **Hiểu để diễn**: [[phan-tich-va-bieu-dien]], [[so-sanh-ban-thu]].
+
+**Góc nhìn lịch sử:** người xưa chơi thế nào và ta biết điều đó bằng cách nào — [[phong-trao-bieu-dien-lich-su]]; vì sao các ấn bản khác nhau và nên tin bản nào — [[van-ban-hoc-am-nhac]].
 `,
   },
   {
@@ -627,7 +629,7 @@ Liên quan: [[nhip-do]], [[ky-vong-am-nhac]], [[phan-tich-nocturne-op9-so2]], [[
     title: 'Phong cách diễn tấu theo thời kỳ',
     category: 'expression',
     also: ['philosophy'],
-    aliases: ['diễn tấu theo phong cách', 'historically informed performance', 'HIP', 'chơi Bach trên piano', 'chơi Mozart', 'phong cách Baroque', 'phong cách Cổ điển'],
+    aliases: ['diễn tấu theo phong cách', 'chơi Bach trên piano', 'chơi Mozart', 'phong cách Baroque', 'phong cách Cổ điển'],
     summary: 'Cùng một ký hiệu nhưng mỗi thời kỳ chơi khác nhau. Chơi nhạc Baroque, Cổ điển và Lãng mạn trên piano hiện đại đặt ra những câu hỏi về cường độ, nối – ngắt, pedal, hoa mỹ và rubato.',
     refs: [
       ['Ravinia — Bach to Bach: going for Baroque is an instrumental decision', 'https://backstage.ravinia.org/posts/2017/7/25/bach-to-bach-going-for-baroque-is-an-instrumental-decision.html'],
@@ -638,7 +640,7 @@ Liên quan: [[nhip-do]], [[ky-vong-am-nhac]], [[phan-tich-nocturne-op9-so2]], [[
       ['Classical Music — Rubato: a guide to "robbed time"', 'https://www.classical-music.com/features/musical-terms/discovering-music-rubato/'],
     ],
     body: `
-Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một dấu chấm staccato hay một chữ *[[ban-dap|Ped.]]* được hiểu khác nhau ở mỗi thời kỳ. Phong trào **[[dien-tau|diễn tấu]] theo hiểu biết lịch sử** (historically informed performance) — tranh luận sôi nổi từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]] — tìm hiểu nhạc cụ, sách lý luận và thói quen của từng thời kỳ để đưa ra lựa chọn có cơ sở. Bối cảnh các thời kỳ: [[cac-thoi-ky]].
+Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một dấu chấm staccato hay một chữ *[[ban-dap|Ped.]]* được hiểu khác nhau ở mỗi thời kỳ. Phong trào **[[dien-tau|diễn tấu]] theo hiểu biết lịch sử** ([[phong-trao-bieu-dien-lich-su|historically informed performance]]) — tranh luận sôi nổi từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]] — tìm hiểu nhạc cụ, sách lý luận và thói quen của từng thời kỳ để đưa ra lựa chọn có cơ sở. Bối cảnh các thời kỳ: [[cac-thoi-ky]].
 
 ## Baroque: Bach trên piano hiện đại
 - [[johann-sebastian-bach|Bach]] **không biết** đến piano hiện đại; nhạc đàn phím của ông viết cho [[dan-phim-co|harpsichord]], clavichord, organ.
@@ -683,7 +685,7 @@ Tranh luận triết học về "biểu diễn xác thực" ([[bieu-hien-cam-xuc
     ],
     body: `
 ## Urtext là gì?
-**Urtext** (tiếng Đức: "văn bản gốc") là ấn bản cố gắng tái hiện **đúng ý định của nhà soạn nhạc**, không thêm bớt. Biên tập viên đối chiếu mọi nguồn: **bản thảo tay** của tác giả, bản chép của học trò, trợ lý, và các **bản in đầu tiên**; các quyết định được giải thích trong **chú thích hoặc phần bình chú** cuối sách.
+**Urtext** (tiếng Đức: "văn bản gốc") là ấn bản cố gắng tái hiện **đúng ý định của nhà soạn nhạc**, không thêm bớt. Biên tập viên đối chiếu mọi nguồn: **bản thảo tay** của tác giả, bản chép của học trò, trợ lý, và các **[[van-ban-hoc-am-nhac|bản in đầu]] tiên**; các quyết định được giải thích trong **chú thích hoặc phần bình chú** cuối sách.
 
 Lưu ý: Urtext là một **lý tưởng** hơn là tuyệt đối — hai biên tập viên làm từ cùng nguồn vẫn có thể ra hai bản khác nhau. Urtext hiện đại thường là dạng **lai**: văn bản gốc kèm một ít ngón bấm gợi ý.
 

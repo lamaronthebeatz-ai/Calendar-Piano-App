@@ -20,6 +20,7 @@ import { philosophy } from './content/philosophy'
 import { improvisation } from './content/improvisation'
 import { genres } from './content/genres'
 import { musicology } from './content/musicology'
+import { history } from './content/history'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -50,4 +51,4 @@ export const CATEGORIES = {
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology, ...history]

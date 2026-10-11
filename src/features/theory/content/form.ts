@@ -558,7 +558,7 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
 4. **Monody (khoảng 1600)** — nhóm **[[opera|Florentine Camerata]]** ở Ý phản ứng lại đối âm phức tạp: một giọng hát độc tấu, nhịp điệu tự do, trên phần đệm, để âm nhạc **phục vụ lời**. Từ đây ra đời opera, cantata, [[oratorio-cantata-passion|oratorio]].
 5. **Chủ điệu** — từ đầu thế kỷ 17 (thời [[thoi-ky-baroque|Baroque]]), chủ điệu trở thành một trong những kết cấu chủ đạo. Các nhà soạn nhạc nghĩ theo **hoà âm dọc**, và [[bass-so|bè trầm liên tục]] (basso continuo) trở thành đặc trưng. Chủ điệu và phức điệu vẫn cùng tồn tại suốt thế kỷ 17–18.
 
-Từ "homophony" có nghĩa khác trong thời cổ đại; nó vào tiếng Anh năm **1776** qua Charles Burney.
+Từ "homophony" có nghĩa khác trong thời cổ đại; nó vào tiếng Anh năm **1776** qua Charles [[lich-su-nganh-am-nhac-hoc|Burney]].
 
 ## Các kiểu đệm chủ điệu trên piano
 - **Hợp âm khối**: đánh cả hợp âm cùng lúc.
@@ -1359,7 +1359,7 @@ Minuet (3/4, vừa phải) ở thời Cổ điển được [[ludwig-van-beethov
 - **Giao hưởng** có tổ tiên trực tiếp là **[[khuc-mo-man|khúc mở màn]] opera Ý** (*sinfonia*). [[alessandro-scarlatti|Alessandro Scarlatti]] định hình khúc mở màn theo khuôn **nhanh – chậm – nhanh**. Trước thế kỷ 18, "symphony" và "overture" gần như dùng lẫn cho nhau. Khúc mở màn thường được tách ra chơi riêng ở hoà nhạc — từ đó giao hưởng thành một thể loại độc lập. Đến những năm 1770, khuôn **bốn chương** trở thành chuẩn.
 - **[[Haydn]]** thường được gọi là "cha đẻ" của giao hưởng và tứ tấu đàn dây, với **104 giao hưởng** và **68 tứ tấu**. Ông **không phát minh** ra chúng — Franz Xaver Richter và Ignaz Holzbauer có thể đã viết tứ tấu trước — nhưng đã mở rộng rất nhiều khả năng của hai thể loại này.
 - **Concerto Baroque** dùng **hình thức ritornello**: cả dàn nhạc chơi một chủ đề quay lại nhiều lần (ritornello), xen giữa là các đoạn của người độc tấu. Giuseppe Torelli dùng ý tưởng này trước, [[Vivaldi]] chuẩn hoá nó qua hàng trăm concerto, thường ở hai chương nhanh hai đầu. [[Bach]] và [[georg-philipp-telemann|Telemann]] viết theo mẫu của Vivaldi.
-- **Nocturne** cho piano: từ *notturno* đã được dùng trước đó cho những bản trữ tình ngắn hay serenade, nhưng [[john-field|John Field]] là người biến nó thành một **thể loại piano**. Sau khi thử các tên Pastorale, Serenade, Romance, ông chọn "Nocturne" cho bản in đầu tiên năm **1812**. **21 nocturne** của [[Chopin]] là những ví dụ nổi tiếng nhất.
+- **Nocturne** cho piano: từ *notturno* đã được dùng trước đó cho những bản trữ tình ngắn hay serenade, nhưng [[john-field|John Field]] là người biến nó thành một **thể loại piano**. Sau khi thử các tên Pastorale, Serenade, Romance, ông chọn "Nocturne" cho [[van-ban-hoc-am-nhac|bản in đầu]] tiên năm **1812**. **21 nocturne** của [[Chopin]] là những ví dụ nổi tiếng nhất.
 
 ## Tiểu phẩm piano (thế kỷ 19)
 | Thể loại | Tính chất | Ví dụ |

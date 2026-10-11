@@ -175,7 +175,7 @@ Liên quan: [[doi-am]], [[thanh-ca-gregorian]], [[thoi-ky-trung-co]].
 |---|---|---|
 | **Thế kỷ 13** | Từ *clausula* của [[organum]] được đặt thêm lời: tenor là thánh ca, các bè trên hát **lời khác nhau**, có khi Latin và tiếng Pháp cùng lúc | Các tuyển tập motet Paris |
 | **Thế kỷ 14 – đầu 15 (Ars nova)** | **Isorhythm**: tenor lặp một **mẫu tiết tấu** (*talea*) và một **chuỗi cao độ** (*color*); hai chuỗi có thể không trùng độ dài | [[philippe-de-vitry|Philippe de Vitry]] (*Ars nova*, khoảng 1320 – 22; motet trong *Roman de Fauvel*, khoảng 1317); [[guillaume-de-machaut|Machaut]]; Dufay, *Nuper rosarum flores* (1436) |
-| **Phục hưng** | Một lời Latin thiêng, thường 4 – 5 bè, **mô phỏng** xuyên suốt | [[josquin-des-prez|Josquin]], *Ave Maria … virgo serena* (khoảng 1484 – 85; in mở đầu tuyển motet đầu tiên của Petrucci, 1502); [[giovanni-pierluigi-da-palestrina|Palestrina]], [[william-byrd|Byrd]] |
+| **Phục hưng** | Một lời Latin thiêng, thường 4 – 5 bè, **mô phỏng** xuyên suốt | [[josquin-des-prez|Josquin]], *Ave Maria … virgo serena* (khoảng 1484 – 85; in mở đầu tuyển motet đầu tiên của [[lich-su-in-an-am-nhac|Petrucci]], 1502); [[giovanni-pierluigi-da-palestrina|Palestrina]], [[william-byrd|Byrd]] |
 ::form Talea Talea Talea Talea | Minh hoạ isorhythm: một mẫu tiết tấu (talea) lặp lại ở tenor; chuỗi cao độ (color) có thể dài hơn và lệch pha với nó
 
 ## Vì sao motet quan trọng
@@ -257,7 +257,7 @@ Chủ đề chính là **tình yêu cung đình**. Bản chép tay ghi cao độ
 |---|---|---|
 | Machaut (thế kỷ 14) | Các **hình thức cố định** (*formes fixes*): [[tieu-pham-piano|ballade]], [[rondo|rondeau]], virelai — mỗi kiểu có khuôn lặp lại lời và nhạc riêng | [[guillaume-de-machaut|Guillaume de Machaut]] |
 | Burgundy (khoảng 1420 – 70) | 3 bè, giai điệu ở bè trên, tenor làm khung | Dufay, Binchois |
-| Paris (khoảng 1520 – 50) | 4 bè, phần lớn **hợp âm cùng nhịp** ([[ket-cau|chủ điệu]]), bỏ formes fixes; tiết tấu nhảy múa | Sermisy (hơn nửa tuyển tập của Attaingnant 1529), Janequin |
+| Paris (khoảng 1520 – 50) | 4 bè, phần lớn **hợp âm cùng nhịp** ([[ket-cau|chủ điệu]]), bỏ formes fixes; tiết tấu nhảy múa | Sermisy (hơn nửa tuyển tập của [[lich-su-in-an-am-nhac|Attaingnant]] 1529), Janequin |
 ::form A B a A a b A B | Khuôn rondeau (chữ hoa = điệp khúc lặp cả lời; chữ thường = cùng nhạc, lời mới)
 Janequin, *La guerre* (in khoảng 1528 – 29) [[doi-am|mô phỏng]] tiếng trận đánh — một ví dụ sớm của [[am-nhac-tuyet-doi|nhạc tả cảnh]].
 Liên quan: [[madrigal]], [[hinh-thuc-am-nhac]], [[thoi-ky-trung-co]].
@@ -421,7 +421,7 @@ Các thành phần recitative – aria giống [[opera]]; khác ở chỗ **khô
 - **Oratorio** mang tên nhà nguyện (oratory) ở Rome. Carissimi, *Jephte* (khoảng 1648) định hình oratorio Latin.
 - **[[george-frideric-handel|Handel]], *Messiah***: viết năm 1741, ra mắt **13/4/1742** ở Dublin. Hợp xướng "Hallelujah" là đoạn nổi tiếng nhất.
 - **[[johann-sebastian-bach|Bach]]** ở Leipzig từ 1723 viết các chu kỳ cantata cho cả năm phụng vụ; khoảng **200** cantata nhà thờ còn lại (các nguồn đếm khác nhau), cùng khoảng 50 cantata thế tục.
-- **Bach, *Thương khó theo Thánh Matthew*** (BWV 244): có lẽ diễn lần đầu Thứ Sáu Tuần Thánh 11/4/1727 ở nhà thờ Thomas, Leipzig (nguồn cũ ghi 1729); hai dàn nhạc, hai hợp xướng. [[felix-mendelssohn|Mendelssohn]] dàn dựng lại năm 1829, mở đầu phong trào hồi sinh Bach.
+- **Bach, *Thương khó theo Thánh Matthew*** (BWV 244): có lẽ diễn lần đầu Thứ Sáu Tuần Thánh 11/4/1727 ở nhà thờ Thomas, Leipzig (nguồn cũ ghi 1729); hai dàn nhạc, hai hợp xướng. [[felix-mendelssohn|Mendelssohn]] dàn dựng lại năm 1829, mở đầu phong trào [[lich-su-tiep-nhan-am-nhac|hồi sinh Bach]].
 
 ## Chorale trong cantata
 Mỗi cantata của Bach thường kết bằng một **chorale bốn bè** — giai điệu thánh ca Luther cả giáo đoàn quen thuộc. Các chorale này là bài mẫu kinh điển của [[luat-hoa-am-bon-be|hoà âm bốn bè]] — xem [[chorale-va-chorale-prelude]].

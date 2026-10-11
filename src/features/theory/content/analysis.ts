@@ -19,7 +19,7 @@ export const analysis: Article[] = [
     ],
     body: `
 ## Phân tích là gì?
-Định nghĩa thường được trích dẫn của **Ian Bent** (từ điển *New Grove*, 1980): phân tích là việc **tách một [[lo-trinh-hinh-thuc|cấu trúc âm nhạc]] thành các thành phần tương đối đơn giản hơn**, rồi **tìm hiểu chức năng** của các thành phần ấy trong cấu trúc. Định nghĩa này nhấn mạnh **cấu trúc**; các xu hướng sau này bổ sung câu hỏi về **ý nghĩa**, **bối cảnh lịch sử** và **biểu diễn** (xem [[lich-su-phan-tich-am-nhac]]).
+Định nghĩa thường được trích dẫn của **Ian Bent** (từ điển *[[nguon-tra-cuu-am-nhac-hoc|New Grove]]*, 1980): phân tích là việc **tách một [[lo-trinh-hinh-thuc|cấu trúc âm nhạc]] thành các thành phần tương đối đơn giản hơn**, rồi **tìm hiểu chức năng** của các thành phần ấy trong cấu trúc. Định nghĩa này nhấn mạnh **cấu trúc**; các xu hướng sau này bổ sung câu hỏi về **ý nghĩa**, **bối cảnh lịch sử** và **biểu diễn** (xem [[lich-su-phan-tich-am-nhac]]).
 
 Với người chơi và người dạy đàn, phân tích trả lời ba câu hỏi: **cái gì** đang xảy ra trong bản nhạc, **vì sao** nó tác động đến người nghe, và **điều đó gợi ý gì** cho cách chơi (xem [[phan-tich-va-bieu-dien]]).
 
@@ -119,7 +119,7 @@ Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|ph
 ## Thế kỷ 18: câu nhạc như dấu câu
 - **Joseph Riepel** (*Anfangsgründe*, từ 1752) và **Heinrich Christoph Koch** (*Versuch einer Anleitung zur Composition*, 3 tập, **1782–1793**) là hai khảo luận lớn của thế kỷ 18 bàn về [[cau-nhac|câu nhạc]] và [[hinh-thuc-am-nhac|hình thức]].
 - Koch mô tả cách ghép các **đoạn nhỏ, câu, đoạn** có các loại kết khác nhau thành tác phẩm lớn ([[the-loai|giao hưởng]], sonata, [[hinh-thuc-concerto|concerto]]) — giống như **dấu câu** trong một bài văn: các chỗ ngắt và kết chia nhạc thành từng đơn vị. Các học giả gọi đây là **"hình thức dấu câu"**. Koch hay lấy ví dụ từ nhạc [[Haydn]].
-- Từ thập niên 1970, các học giả (Dahlhaus, Ratner, Baker, Sisman…) khôi phục Koch làm cơ sở cho phân tích **"theo đúng lịch sử"** nhạc thế kỷ 18. Cách tiếp cận theo khuôn mẫu của [[luoc-do-galant|lược đồ galant]] cũng đi theo hướng này.
+- Từ thập niên 1970, các học giả ([[lich-su-nganh-am-nhac-hoc|Dahlhaus]], Ratner, Baker, Sisman…) khôi phục Koch làm cơ sở cho phân tích **"theo đúng lịch sử"** nhạc thế kỷ 18. Cách tiếp cận theo khuôn mẫu của [[luoc-do-galant|lược đồ galant]] cũng đi theo hướng này.
 
 ## Thế kỷ 19: Formenlehre và "hình thức sonata"
 - **Anton Reicha** (1826) và **[[carl-czerny|Carl Czerny]]** (1848) mô tả hình thức sonata; **Adolf Bernhard Marx**, trong bộ *Die Lehre von der musikalischen Komposition* (4 tập, 1837–1847; tập 3 năm 1845), xây dựng một **hệ thống các hình thức** đi từ hình thức bài hát đơn giản đến chương sonata, minh hoạ bằng [[sonata-the-loai|sonata piano]] của [[Beethoven]].
@@ -494,7 +494,7 @@ Liên hệ phương pháp: đây là ví dụ kinh điển cho [[phan-tich-schen
     ],
     body: `
 ## Tổng quan
-Bộ ba Gymnopédie của [[Satie]] hoàn thành ngày **2/4/1888**; cả ba đều ở nhịp **3/4**. Bài số 1 ở giọng **Rê trưởng**, đoạn giữa nghiêng sang Rê thứ. Chỉ dẫn "**Lent et douloureux**" (chậm và đau buồn) có trong bản in; bản viết tay ghi "Très lent". [[Debussy]] sau này phối khí cho dàn nhạc bài số 1 và số 3.
+Bộ ba Gymnopédie của [[Satie]] hoàn thành ngày **2/4/1888**; cả ba đều ở nhịp **3/4**. Bài số 1 ở giọng **Rê trưởng**, đoạn giữa nghiêng sang Rê thứ. Chỉ dẫn "**Lent et douloureux**" (chậm và đau buồn) có trong bản in; [[van-ban-hoc-am-nhac|bản viết tay]] ghi "Très lent". [[Debussy]] sau này phối khí cho dàn nhạc bài số 1 và số 3.
 
 ## Hai hợp âm xen kẽ
 Phần mở đầu chỉ luân phiên **hai hợp âm 7 trưởng**:
@@ -541,7 +541,7 @@ Lưu ý: [[ky-hieu-hop-am|tên hợp âm]] lấy từ một phân tích; các [[
     ],
     body: `
 ## Lịch sử
-- [[Beethoven]] phác thảo từ **1808**, viết bản đầy đủ hơn năm **1810** (Ludwig Nohl cho biết bản viết tay ghi ngày 27/4/1810), và sửa lại năm **1822** cho một lần in không thành.
+- [[Beethoven]] phác thảo từ **1808**, viết bản đầy đủ hơn năm **1810** (Ludwig Nohl cho biết [[van-ban-hoc-am-nhac|bản viết tay]] ghi ngày 27/4/1810), và sửa lại năm **1822** cho một lần in không thành.
 - Bản in đầu tiên chỉ xuất hiện năm **1867**, sau khi Beethoven mất, trong sách của Nohl (Stuttgart). Bản viết tay mà Nohl dựa vào đã **thất lạc**; có học giả còn nghi nó chưa từng tồn tại, trong khi Barry Cooper (1984) chỉ ra một phác thảo còn lại rất gần bản in.
 
 ## "Elise" là ai?
@@ -1072,7 +1072,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-*Six Progressive Sonatinas* Op. 36 của [[muzio-clementi|Clementi]] được in ở London năm **1797** (Longman & Broderip); sáu bài xếp theo độ khó tăng dần. [[an-ban-urtext|Ấn bản]] Henle theo bản in đầu tiên và giữ [[ngon-bam|ngón bấm]] của chính Clementi. Chương 1 của số 1 ở **Đô trưởng**, nhịp **2/2**, dài **38 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. (Chỉ dẫn nhịp độ khác nhau giữa các ấn bản: G. Schirmer in *Spiritoso*; nên xem ấn bản dựa trên bản in gốc.)
+*Six Progressive Sonatinas* Op. 36 của [[muzio-clementi|Clementi]] được in ở London năm **1797** (Longman & Broderip); sáu bài xếp theo độ khó tăng dần. [[an-ban-urtext|Ấn bản]] Henle theo [[van-ban-hoc-am-nhac|bản in đầu]] tiên và giữ [[ngon-bam|ngón bấm]] của chính Clementi. Chương 1 của số 1 ở **Đô trưởng**, nhịp **2/2**, dài **38 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. (Chỉ dẫn nhịp độ khác nhau giữa các ấn bản: G. Schirmer in *Spiritoso*; nên xem ấn bản dựa trên bản in gốc.)
 
 ## Hình thức sonata thu nhỏ
 ::form Trình_bày:15 Phát_triển:8 Tái_hiện:15 | Ba phần của [[hinh-thuc-sonata|hình thức sonata]] (số dưới mỗi khối là số ô)
@@ -1407,7 +1407,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 - Debussy ghi *Cédez* (chậm lại) và ***avec une grande émotion*** ("với xúc động lớn") — một lời đùa: câu nhạc lãng mạn nhất của Wagner được đặt giữa điệu nhảy của con búp bê. Motif xuất hiện **bốn lần**, mỗi lần bị "trả lời" bằng các [[truong-do|nốt móc đơn]] [[cach-dien-tau|staccato]] nhại tiếng **banjo**.
 - PTNA cho biết hoà âm ở đầu chủ đề chính đã có quan hệ [[trung-am|trùng âm]] với hợp âm Tristan; Bauer kể Debussy dặn ông "chú ý đến câu trích Wagner", và trong cuộn piano tự thu, Debussy chơi chậm và cường điệu mỗi lần trích.
 - Bối cảnh: thái độ của Debussy với Wagner — từ ngưỡng mộ đến chống đối — là một chủ đề lớn của nhạc Pháp đầu thế kỷ 20 (xem [[an-tuong]], [[hoa-am-cromatic]]).
-Số ô chính xác của từng lần trích cần đối chiếu trên bản in Durand (IMSLP).
+Số ô chính xác của từng lần trích cần đối chiếu trên bản in Durand ([[nguon-tra-cuu-am-nhac-hoc|IMSLP]]).
 
 ## Một lưu ý khi dạy
 "Golliwog" là một **hình búp bê mang tính phân biệt chủng tộc** (biếm hoạ người da đen) rất phổ biến ở châu Âu thời đó; cakewalk cũng có nguồn gốc từ đời sống nô lệ ở đồn điền. Các nghiên cứu của Davinia Caddy (2007) và Elizabeth de Martelly (*Current Musicology*, 2010) phân tích tác phẩm trong bối cảnh này. Khi dạy, nên giải thích nguồn gốc tên gọi thay vì bỏ qua.

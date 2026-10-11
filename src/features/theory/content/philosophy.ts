@@ -46,6 +46,8 @@ Các tài liệu tổng quan hiện đại (như mục *Philosophy of Music* c�
 Mỗi khi nói với học trò "chơi đoạn này buồn hơn", "tôn trọng ý tác giả", hay "bản này hay hơn bản kia", ta đã dùng một quan điểm triết học. Hiểu các quan điểm giúp **nói rõ điều mình muốn** và **tôn trọng những cách hiểu khác**.
 
 **Góc nhìn nghiên cứu:** âm nhạc trong cấu trúc xã hội — Weber, Adorno — ở [[xa-hoi-hoc-am-nhac]]; vị trí của mỹ học trong toàn ngành ở [[am-nhac-hoc-he-thong]].
+
+**Góc nhìn lịch sử:** khái niệm "tác phẩm" và "kinh điển" đã hình thành ra sao — [[lich-su-tiep-nhan-am-nhac]].
 `,
   },
   {
@@ -263,7 +265,7 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 ## Hanslick: Về cái đẹp trong âm nhạc (1854)
 - Nhà phê bình Vienna **Eduard Hanslick** xuất bản *Vom Musikalisch-Schönen* (Về cái đẹp trong âm nhạc) năm **1854**; sách được tái bản **mười lần** khi ông còn sống, và ông thường được coi là **người sáng lập chủ nghĩa hình thức** trong mỹ học âm nhạc.
 - Câu nổi tiếng nhất: nội dung của âm nhạc là **"những [[hinh-thuc-am-nhac|hình thức]] âm thanh chuyển động"** (*tönend bewegte Formen*). Hanslick bác bỏ quan niệm cho rằng mục đích của âm nhạc là **biểu hiện hay gợi cảm xúc**; vẻ đẹp âm nhạc nằm trong chính cấu trúc âm thanh.
-- Carl Dahlhaus lưu ý câu nói này cần đọc như một **luận điểm tranh luận** — nhằm chống lại mỹ học cảm xúc của thế kỷ 18 (như của Schubart) — chứ không phải định nghĩa đầy đủ về âm nhạc.
+- Carl [[lich-su-nganh-am-nhac-hoc|Dahlhaus]] lưu ý câu nói này cần đọc như một **luận điểm tranh luận** — nhằm chống lại mỹ học cảm xúc của thế kỷ 18 (như của Schubart) — chứ không phải định nghĩa đầy đủ về âm nhạc.
 - Hanslick chấp nhận chính sự **tách biệt** khỏi nội dung mà Wagner chê, coi đó là bảo đảm cho sự **thuần khiết** của âm nhạc.
 
 ## Cuộc tranh luận ngày nay

@@ -42,11 +42,15 @@ Thẻ **Âm nhạc học** (cạnh thẻ Học viên) xếp lại toàn bộ th�
 | Phần | Phân ngành | Bài tổng quan |
 |---|---|---|
 | Nhập môn | Ngành và phương pháp | [[am-nhac-hoc-lich-su]], [[am-nhac-hoc-he-thong]], [[phuong-phap-nghien-cuu-am-nhac]], [[dinh-nghia-am-nhac]] |
-| Lịch sử | Thời kỳ, phong cách, tiểu sử | [[cac-thoi-ky]] |
+| Lịch sử | Sử học: phương pháp và công cụ | [[lich-su-nganh-am-nhac-hoc]], [[phuong-phap-su-hoc-am-nhac]], [[nguon-tra-cuu-am-nhac-hoc]] |
+| Lịch sử | Nguồn, ký âm và văn bản | [[lich-su-ky-am]], [[lich-su-in-an-am-nhac]], [[van-ban-hoc-am-nhac]] |
+| Lịch sử | Thời kỳ, phong cách, tiểu sử | [[am-nhac-co-dai]], [[cac-thoi-ky]] |
 | Lịch sử | Lịch sử thể loại | [[the-loai-am-nhac]] |
-| Lịch sử | Thực hành biểu diễn, nguồn, nghệ sĩ | [[phong-cach-dien-tau]], [[an-ban-urtext]], [[truong-phai-piano]] |
+| Lịch sử | Thực hành biểu diễn và nghệ sĩ | [[phong-trao-bieu-dien-lich-su]], [[phong-cach-dien-tau]], [[truong-phai-piano]] |
+| Lịch sử | Đời sống âm nhạc và tiếp nhận | [[doi-song-am-nhac-va-thiet-che]], [[lich-su-tiep-nhan-am-nhac]] |
 | Lịch sử | Nhạc khí học | [[nhac-khi-hoc]] |
 | Lịch sử | Lịch sử lý thuyết | [[lich-su-phan-tich-am-nhac]] |
+| Lịch sử | Lịch sử âm nhạc Việt Nam | [[lich-su-am-nhac-viet-nam]] |
 | Hệ thống | Âm học âm nhạc | [[am-hoc-co-ban]] |
 | Hệ thống | Tâm lý học âm nhạc | [[tam-ly-hoc-am-nhac]] |
 | Hệ thống | Khoa học biểu diễn | [[khoa-hoc-bieu-dien]] |
@@ -115,22 +119,42 @@ Các khoa học bổ trợ của nhánh này, theo cùng các bản tóm tắt, 
 
 **Lưu ý:** *danh sách trên lấy từ nguồn thứ cấp; cách diễn đạt nguyên văn của Adler cần đối chiếu bản dịch Mugglestone (1981).*
 
-## Thư viện này theo nhánh lịch sử
-- **Thời kỳ và phong cách:** [[cac-thoi-ky]] cùng sáu trang thời kỳ ([[thoi-ky-trung-co]], [[thoi-ky-phuc-hung]], [[thoi-ky-baroque]], [[thoi-ky-co-dien]], [[thoi-ky-lang-man]], [[thoi-ky-the-ky-20]]) và hơn ba trăm trang tiểu sử nhà soạn nhạc.
-- **Thể loại:** [[the-loai-am-nhac]] — từ thánh ca Gregorian đến [[tan-nhac-viet-nam]].
-- **Thực hành biểu diễn và nguồn:** [[phong-cach-dien-tau]], [[ky-hieu-hoa-my]], [[bass-so]], [[lich-su-ngau-hung]], [[an-ban-urtext]], [[lich-su-thu-am]], [[so-sanh-ban-thu]].
-- **Nghệ sĩ:** [[truong-phai-piano]], [[nghe-si-piano-the-ky-19]], [[piano-viet-nam]].
-- **Lịch sử lý thuyết và tư tưởng:** [[lich-su-phan-tich-am-nhac]], [[tranh-luan-rameau-rousseau]], [[thuyet-ethos-hy-lap]].
+## Chín phân ngành trong thư viện
+Thẻ **Âm nhạc học** chia nhánh lịch sử thành chín phân ngành. Bảng dưới xếp theo trình tự nên học: **công cụ trước, nội dung sau**.
+| # | Phân ngành | Câu hỏi chính | Bài mở đầu |
+|---|---|---|---|
+| I.1 | **Sử học âm nhạc: phương pháp và công cụ** | Ta biết về quá khứ bằng cách nào? | [[lich-su-nganh-am-nhac-hoc]], [[phuong-phap-su-hoc-am-nhac]], [[nguon-tra-cuu-am-nhac-hoc]] |
+| I.2 | **Nguồn, ký âm và văn bản** | Đọc nguồn cũ thế nào, bản nào đáng tin? | [[lich-su-ky-am]], [[lich-su-in-an-am-nhac]], [[van-ban-hoc-am-nhac]] |
+| I.3 | **Thời kỳ, phong cách, tiểu sử** | Âm nhạc thay đổi ra sao qua các thời? | [[am-nhac-co-dai]], [[cac-thoi-ky]] |
+| I.4 | **Lịch sử thể loại** | Thể loại sinh ra và biến đổi thế nào? | [[the-loai-am-nhac]] |
+| I.5 | **Thực hành biểu diễn và nghệ sĩ** | Người xưa chơi thế nào? | [[phong-trao-bieu-dien-lich-su]], [[phong-cach-dien-tau]] |
+| I.6 | **Đời sống âm nhạc và tiếp nhận** | Ai trả tiền, ai nghe, vì sao thành kinh điển? | [[doi-song-am-nhac-va-thiet-che]], [[lich-su-tiep-nhan-am-nhac]] |
+| I.7 | **Nhạc khí học** | Nhạc cụ định hình âm nhạc ra sao? | [[nhac-khi-hoc]], [[lich-su-piano]] |
+| I.8 | **Lịch sử lý thuyết và tư tưởng** | Người xưa giải thích âm nhạc thế nào? | [[lich-su-phan-tich-am-nhac]], [[thuyet-ethos-hy-lap]] |
+| I.9 | **Lịch sử âm nhạc Việt Nam** | Ta biết gì, bằng chứng cứ nào? | [[lich-su-am-nhac-viet-nam]] |
+
+## Toàn cảnh thời gian
+::timeline 500-1400=Trung_cổ 1400-1600=Phục_hưng 1600-1750=Baroque 1750-1820=Cổ_điển 1820-1900=Lãng_mạn 1900-2000=Thế_kỷ_20 1026=Khuông_nhạc_Guido 1501=Nhạc_in_Petrucci 1637=Opera_công_cộng 1795=Nhạc_viện_Paris 1829=Bach_hồi_sinh 1885=Adler 1953=Phong_trào_HIP | Các thời kỳ (ranh giới là quy ước — [[cac-thoi-ky]]) và một số mốc của ngành
+
+## Lộ trình học nhánh lịch sử
+*(Đề xuất của thư viện; mỗi bước dựa trên bước trước.)*
+1. **Ngành và phương pháp:** [[lich-su-nganh-am-nhac-hoc]] → [[phuong-phap-su-hoc-am-nhac]] → [[nguon-tra-cuu-am-nhac-hoc]].
+2. **Đọc nguồn:** [[lich-su-ky-am]] → [[lich-su-in-an-am-nhac]] → [[van-ban-hoc-am-nhac]] → [[an-ban-urtext]].
+3. **Câu chuyện theo thời gian:** [[am-nhac-co-dai]] → [[cac-thoi-ky]] và các trang thời kỳ ([[thoi-ky-trung-co]], [[thoi-ky-phuc-hung]], [[thoi-ky-baroque]], [[thoi-ky-co-dien]], [[thoi-ky-lang-man]], [[thoi-ky-the-ky-20]]) → [[the-loai-am-nhac]].
+4. **Âm nhạc trong xã hội:** [[doi-song-am-nhac-va-thiet-che]] → [[lich-su-tiep-nhan-am-nhac]].
+5. **Âm thanh của quá khứ:** [[nhac-khi-hoc]] → [[phong-trao-bieu-dien-lich-su]] → [[phong-cach-dien-tau]] → [[lich-su-thu-am]].
+6. **Tư tưởng:** [[lich-su-phan-tich-am-nhac]], [[tranh-luan-rameau-rousseau]], [[triet-hoc-lang-man-ve-am-nhac]].
+7. **Việt Nam:** [[lich-su-am-nhac-viet-nam]] → [[am-nhac-truyen-thong-viet-nam]] → [[tan-nhac-viet-nam]] → [[piano-viet-nam]].
 
 ## Cách làm việc của nhà âm nhạc học lịch sử
-*(Tóm lược biên soạn của thư viện.)*
+*(Tóm lược biên soạn của thư viện; chi tiết ở [[phuong-phap-su-hoc-am-nhac]].)*
 1. **Nguồn trước, kết luận sau.** Bản thảo, bản in đầu, thư từ, sổ sách nhà hát là bằng chứng; giai thoại là giả thuyết cần kiểm tra.
-2. **Đặt tác phẩm vào bối cảnh:** ai đặt hàng, chơi ở đâu, cho ai nghe, nhạc cụ nào.
-3. **So sánh với lý thuyết đương thời,** không áp quy tắc đời sau lên đời trước — ví dụ [[doc-not-nhanh|đọc nhạc]] thế kỷ 16 qua [[phong-cach-palestrina]] chứ không qua sách [[luat-hoa-am-bon-be|hoà âm bốn bè]] thế kỷ 19.
+2. **Đặt tác phẩm vào bối cảnh:** ai đặt hàng, chơi ở đâu, cho ai nghe, bằng nhạc cụ nào.
+3. **So sánh với lý thuyết đương thời,** không áp quy tắc đời sau lên đời trước — ví dụ đọc nhạc thế kỷ 16 qua [[phong-cach-palestrina]] chứ không qua sách [[luat-hoa-am-bon-be|hoà âm bốn bè]] thế kỷ 19.
 4. **Phân biệt chắc chắn và phỏng đoán** khi viết — đúng như quy tắc của thư viện này.
 
 ## Liên hệ với nhánh hệ thống
-Hai nhánh bổ sung cho nhau: một câu hỏi như "vì sao nhạc Baroque dùng [[bass-so]]?" cần lịch sử (thực hành thời đó), lý thuyết (cách đọc bass số) và cả [[am-hoc-co-ban|âm học]], nhận thức. Xem [[am-nhac-hoc-he-thong]].
+Hai nhánh bổ sung cho nhau: một câu hỏi như "vì sao nhạc Baroque dùng [[bass-so]]?" cần lịch sử (thực hành thời đó), lý thuyết (cách đọc bass số) và cả âm học, nhận thức. Xem [[am-nhac-hoc-he-thong]].
 `,
   },
   {
@@ -468,7 +492,7 @@ Ranh giới với [[dan-toc-nhac-hoc]] mờ: dân tộc nhạc học thiên về
 Erich von Hornbostel và Curt Sachs công bố *Systematik der Musikinstrumente. Ein Versuch* trên *Zeitschrift für Ethnologie* (tập 46, 1914), dựa trên sơ đồ của Victor-Charles Mahillon thế kỷ 19. Tiêu chí phân loại là **vật gì rung để tạo ra âm**:
 | Lớp | Tên gốc | Vật rung | Ví dụ |
 |---|---|---|---|
-| 1 | Idiophone (tự thân vang) | Chính thân nhạc cụ | chiêng, mõ, đàn đá, celesta |
+| 1 | Idiophone (tự thân vang) | Chính thân nhạc cụ | chiêng, mõ, [[lich-su-am-nhac-viet-nam|đàn đá]], celesta |
 | 2 | Membranophone (màng rung) | Một màng căng | trống |
 | 3 | Chordophone (dây rung) | Dây căng | đàn bầu, guitar, violin, **piano**, [[dan-phim-co|harpsichord]] |
 | 4 | Aerophone (hơi) | Cột không khí | sáo, kèn, organ ống |

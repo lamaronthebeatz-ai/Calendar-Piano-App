@@ -991,7 +991,7 @@ Liên quan: [[dem-jazz]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
 ## Bolero Việt Nam
 - **Gốc**: bolero là thể loại Cuba (Santiago de Cuba, cuối thế kỷ 19), nhịp chẵn — khác bolero Tây Ban Nha nhịp 3/4. Vào Việt Nam đầu thập niên 1950 và phổ biến ở miền Nam trong dòng nhạc vàng ([[tan-nhac-viet-nam]]).
 - Bài "bolero đầu tiên" còn tranh luận: "Nắng chiều" (Lê Trọng Nguyễn, ghi "rumba – bolero", 1952/53), "Duyên quê" (Hoàng Thi Thơ), "Xóm đêm" (Phạm Đình Chương).
-- Nhạc sĩ Việt **làm chậm** tiết tấu Latin và pha luyến láy dân ca, cải lương.
+- Nhạc sĩ Việt **làm chậm** tiết tấu Latin và pha luyến láy dân ca, [[lich-su-am-nhac-viet-nam|cải lương]].
 - **Nhịp và tốc độ** (theo các trang dạy đàn): 4/4, chậm nhất trong nhóm Latin — khoảng 64 – 78 phách/phút.
 ::rhythm 4/4 e:bùm-s:chờ-s:rát q:chách q:bùm q:chách // | Mẫu bolero thường dạy: phách 1 là một móc đơn + hai móc kép ("bùm – chờ rát"), rồi "chách – bùm – chách"
 - **Trên piano**: tay trái nốt gốc ở phách 1 (có nốt lấy đà ngắn trước phách 3), nốt gốc phụ (nốt 5) ở phách 3; tay phải hợp âm ở phách 2 và 4 hoặc rải [[cach-dien-tau|legato]]. [[bien-tau|Biến tấu]] chủ yếu ở phách 3 – 4.

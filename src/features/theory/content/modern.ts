@@ -61,7 +61,7 @@ Lộ trình đầy đủ: [[hoa-am-the-ky-20]].
 
 Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
 
-**Góc nhìn nghiên cứu:** khung chung của việc nghiên cứu các thời kỳ là [[am-nhac-hoc-lich-su]]; âm nhạc ngoài truyền thống phương Tây, trong văn hoá của nó, là đối tượng của [[dan-toc-nhac-hoc]].
+**Góc nhìn nghiên cứu:** khung chung của việc nghiên cứu các thời kỳ là [[am-nhac-hoc-lich-su]]; âm nhạc trước Trung cổ ở [[am-nhac-co-dai]]; lịch sử âm nhạc Việt Nam ở [[lich-su-am-nhac-viet-nam]]; âm nhạc ngoài truyền thống phương Tây, trong văn hoá của nó, là đối tượng của [[dan-toc-nhac-hoc]].
 `,
   },
   {
@@ -94,7 +94,7 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
 Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê – Cống** (rồi Liu, Ú… ở quãng 8 trên). Theo Viện Âm nhạc, ở **điệu Bắc** chúng tương ứng **gần đúng** với Đô – Rê – Fa – Sol – La:
 ::staff treble C4=Hò D4=Xự F4=Xang G4=Xê A4=Cống C5=Liu | Hò – Xự – Xang – Xê – Cống ứng với C – D – F – G – A (điệu Bắc, gần đúng): một [[am-giai-ngu-cung|thang ngũ cung]]
 - Tên phương Tây chỉ là **xấp xỉ**: [[dich-giong|cao độ thực]] **không theo** [[luat-binh-quan|luật bình quân]].
-- Trần Văn Khê: khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ **các bậc cách đều hay không đều**. Theo Viện Âm nhạc, ở **điệu Nam** (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp.
+- [[lich-su-am-nhac-viet-nam|Trần Văn Khê]]: khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ **các bậc cách đều hay không đều**. Theo Viện Âm nhạc, ở **điệu Nam** (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp.
 - Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, hơi Oán gần với hơi vọng cổ, bậc 2 có **[[am-hoc-co-ban|biên độ]]** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
 - Chưa tìm được nguồn đáng tin ghi số cent chính xác cho từng hơi, nên bài này **không** đưa con số.
 **Trên piano**: chỉ chơi được **khung** năm âm (phím đen, hoặc C – D – F – G – A); các nốt "nhấn" nằm **giữa** hai phím. Đây là bài học tốt về giới hạn của [[luat-binh-quan]] và về [[cao-do]].

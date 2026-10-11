@@ -38,6 +38,8 @@ Những gì bản nhạc **không** ghi hết — [[rubato|rubato]], cân bằng
 
 ## Học nhạc lý cùng với tai và tay
 Nhạc lý chỉ thành kỹ năng khi gắn với **âm thanh**: đọc thì hát hoặc đánh thử, nghe thì gọi tên. Xem [[luyen-tai]], [[xuong-am]], [[am-tiet-nhip]], [[ky-am]], và về phía người dạy: [[cach-day-doc-not]], [[doc-not-nhanh]], [[lo-trinh-luyen-tai-su-pham]].
+
+**Góc nhìn lịch sử:** ký âm ngày nay là điểm cuối của gần một nghìn năm phát triển, từ neume qua khuông nhạc của Guido đến vạch nhịp thế kỷ 17 — xem [[lich-su-ky-am]].
 `,
   },
   {

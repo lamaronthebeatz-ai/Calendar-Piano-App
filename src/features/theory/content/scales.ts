@@ -313,7 +313,7 @@ Các giọng có hoá biểu khác nhau không quá một dấu: giọng gốc, 
 Một bản nhạc **ở giọng** Đô trưởng; nó **có tính điệu tính** vì mọi thứ quy về Đô. Nhạc [[phi-dieu-tinh]] là nhạc cố ý tránh một trung tâm như vậy.
 
 ## Nguồn gốc thuật ngữ
-Cách dùng từ *tonalité* trong lý luận âm nhạc thường được ghi cho Alexandre-Étienne **Choron** (1810), để phân biệt hoà âm "hiện đại" với nhạc cổ; François-Joseph **Fétis** dùng rộng rãi từ 1840 và nói về nhiều "loại điệu tính". Niên đại không hoàn toàn thống nhất: Carl Dahlhaus cho rằng Castil-Blaze đặt ra từ này năm 1821. Một số nghiên cứu gần đây chỉ ra rằng cách dùng thế kỷ 19 gắn với quan niệm xếp hạng "tiến hoá" giữa các nền âm nhạc.
+Cách dùng từ *tonalité* trong lý luận âm nhạc thường được ghi cho Alexandre-Étienne **Choron** (1810), để phân biệt hoà âm "hiện đại" với nhạc cổ; François-Joseph **Fétis** dùng rộng rãi từ 1840 và nói về nhiều "loại điệu tính". Niên đại không hoàn toàn thống nhất: Carl [[lich-su-nganh-am-nhac-hoc|Dahlhaus]] cho rằng Castil-Blaze đặt ra từ này năm 1821. Một số nghiên cứu gần đây chỉ ra rằng cách dùng thế kỷ 19 gắn với quan niệm xếp hạng "tiến hoá" giữa các nền âm nhạc.
 
 ## Thứ bậc điệu tính: đo bằng thực nghiệm
 Trong thí nghiệm **"nốt dò"** (probe tone) của Carol **Krumhansl** và Edward **Kessler** (1982), người nghe được nghe một đoạn xác lập giọng (âm giai hoặc [[vong-hop-am|vòng hợp âm]]), rồi chấm điểm mức độ "hợp" của từng nốt trong 12 nốt. Kết quả ổn định ở cả [[am-giai-truong|giọng trưởng]] và giọng thứ, tạo thành **bốn tầng**:
@@ -371,7 +371,7 @@ So sánh với [[am-giai|âm giai]] trưởng/thứ cùng âm chủ và chỉ nh
 ## Lịch sử: tám điệu Gregorian
 - Khoảng **cuối thế kỷ 8 – thế kỷ 9**, [[thanh-ca-gregorian|thánh ca Gregorian]] được xếp vào **tám điệu thức**, có lẽ theo mô hình *oktōēchos* của Byzantine. Ban đầu chúng chỉ được gọi bằng **số thứ tự**.
 - Có **bốn nốt kết** (finalis): **D, E, F, G**. Mỗi nốt kết có hai điệu: **chính** (authentic — [[cao-do|âm vực]] từ nốt kết lên trên) và **phụ** (plagal, tên có tiền tố "hypo-" — âm vực từ [[quang|quãng]] 4 dưới đến quãng 5 trên nốt kết).
-- Tên Hy Lạp (Dorian, Phrygian…) được gắn vào từ khoảng thế kỷ 9 trong một nỗ lực **sai lầm** nhằm nối với âm nhạc Hy Lạp cổ đại — các điệu Hy Lạp thật dùng hệ lên dây khác hẳn.
+- Tên Hy Lạp (Dorian, Phrygian…) được gắn vào từ khoảng thế kỷ 9 trong một nỗ lực **sai lầm** nhằm nối với [[am-nhac-co-dai|âm nhạc Hy Lạp cổ đại]] — các điệu Hy Lạp thật dùng hệ lên dây khác hẳn.
 - Năm **1547**, Glarean thêm **Aeolian** và **Ionian** (cùng hai điệu phụ), thành **12 điệu**. **Locrian** (và Hypolocrian) không có trong hệ 12 điệu của Glarean.
 
 ## Điệu thức trong jazz

@@ -174,7 +174,7 @@ Kỹ thuật liên quan: [[lam-noi-giai-dieu]], [[dien-dat-cau-nhac]].
 ## Trường phái Pháp
 - **Jeu perlé** ("lối chơi như ngọc trai"): chuỗi nốt **nhanh, sạch, đều**; nhẹ nhưng rõ từng ngón.
 - Nhấn mạnh **ngón tay độc lập**, phát âm rõ, **dùng pedal tiết kiệm** ([[ban-dap]]); [[am-sac|âm sắc]] sáng, kết cấu cân về phía bè trên.
-- Lý tưởng biểu cảm thiên về sự **sáng sủa, tiết chế** hơn là cảm xúc chủ quan. [[Saint-Saëns]] và [[marguerite-long|Marguerite Long]] được nêu như những đại diện; các giáo sư Nhạc viện Paris truyền phong cách này qua khoảng 150 năm.
+- Lý tưởng biểu cảm thiên về sự **sáng sủa, tiết chế** hơn là cảm xúc chủ quan. [[Saint-Saëns]] và [[marguerite-long|Marguerite Long]] được nêu như những đại diện; các giáo sư [[doi-song-am-nhac-va-thiet-che|Nhạc viện Paris]] truyền phong cách này qua khoảng 150 năm.
 
 Kỹ thuật liên quan: [[luyen-am-giai]], [[cach-dien-tau]].
 
