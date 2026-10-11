@@ -42,7 +42,7 @@ export function MusicologyPage() {
   const back = useBack('/musicology')
 
   return (
-    <ScrollArea key={id} className="relative h-full overflow-y-auto pb-28 lg:pb-10">
+    <ScrollArea key={id} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={branch && hueTint(branch.hue)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {id && (
@@ -152,7 +152,7 @@ function MapIndex() {
           </Link>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <PartColumn part="historical" progress={progress.of} />
           <div className="lg:col-span-2">
             <PartColumn part="systematic" progress={progress.of} wide />
@@ -294,7 +294,7 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
         </section>
       ))}
 
-      <nav className="grid gap-3 sm:grid-cols-2">
+      <nav className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {[prev, next].map((o, i) =>
           o ? (
             <Link

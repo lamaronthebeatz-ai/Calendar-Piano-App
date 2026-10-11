@@ -149,7 +149,7 @@ export function TheoryPage() {
 
   return (
     // Keyed by slug so following a link remounts the scroller at the top.
-    <div key={slug} ref={scroller} onScroll={onScroll} className="relative h-full overflow-y-auto scroll-smooth pb-28 lg:pb-10">
+    <div key={slug} ref={scroller} onScroll={onScroll} className="relative h-full overflow-x-hidden overflow-y-auto scroll-smooth pb-28 lg:pb-10">
       <div ref={header} className="glass group/header sticky top-0 z-20 border-b border-[var(--color-border)]" style={article && tint(article.category)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {slug && (
@@ -375,7 +375,7 @@ function Index() {
       ) : (
         <>
           {(recent.length > 0 || saved.length > 0) && (
-            <div className="grid gap-8 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               {recent.length > 0 && <Shelf title="Đọc gần đây" icon={<ClockIcon width={15} height={15} />} articles={lookup(recent).slice(0, 6)} progress />}
               {saved.length > 0 && <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} />}
             </div>
@@ -435,7 +435,7 @@ function Index() {
               <p className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Nguồn tham khảo mở</p>
               <p className="mt-1 leading-relaxed">Mỗi bài ghi nguồn ở cuối trang. Đây là các nguồn miễn phí dùng nhiều nhất.</p>
             </div>
-            <ul className="grid gap-2 sm:grid-cols-2">
+            <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {SOURCES.map(([name, url, note]) => (
                 <li key={url}>
                   <a href={url} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-1 font-medium text-[var(--color-ink)] hover:text-[var(--color-accent)]">
@@ -579,7 +579,7 @@ function Highlight({ text, query }: { text: string; query?: string }) {
 
 export function ArticleGrid({ articles, home, query, numbered, showCategory }: { articles: Article[]; home?: CategoryId; query?: string; numbered?: boolean; showCategory?: boolean }) {
   return (
-    <ul className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
       {articles.map((a, i) => (
         <li key={a.slug} className="animate-float-up" style={{ animationDelay: `${Math.min(i, 12) * 25}ms` }}>
           <Link
@@ -769,7 +769,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
         )}
 
         {(prev || next) && (
-          <nav className="grid gap-3 sm:grid-cols-2">
+          <nav className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[prev, next].map((a, i) =>
               a ? (
                 <Link
@@ -903,7 +903,7 @@ function Backlinks({ articles }: { articles: Article[] }) {
         Các bài nhắc đến trang này
         <span className="font-sans text-[12px] font-normal text-[var(--color-ink-faint)]">{articles.length}</span>
       </h2>
-      <ul className="grid gap-2 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {shown.map((a) => (
           <li key={a.slug}>
             <Link to={`/theory/${a.slug}`} style={tint(a.category)} className="theory-card group flex h-full items-start gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-3">
