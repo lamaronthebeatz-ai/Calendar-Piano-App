@@ -368,9 +368,9 @@ Cochrane là tổ chức chuyên tổng hợp các thử nghiệm có đối ch�
 ## 1. Ba loại vật rung
 | Vật rung | Quy luật | Hệ quả về âm sắc |
 |---|---|---|
-| **Dây căng** (piano, guitar, violin) | Định luật Mersenne (*Harmonie universelle*, 1636 – 1637): tần số cơ bản tỉ lệ nghịch với **chiều dài** dây, tỉ lệ thuận với căn bậc hai **lực căng**, tỉ lệ nghịch với căn bậc hai **khối lượng mỗi đơn vị dài** | Dây lý tưởng cho đủ chuỗi bồi âm 1, 2, 3, 4… |
-| **Cột không khí** (sáo, kèn, organ ống) | Ống hở hai đầu cho đủ bồi âm; ống lý tưởng kín một đầu chỉ cho bồi âm **lẻ** (1, 3, 5…) | Clarinet gần giống ống kín một đầu: [[cao-do|âm vực]] thấp thiên về bồi âm lẻ, cho màu "rỗng" đặc trưng |
-| **Màng căng** (trống) | Các mode rung tương ứng các nghiệm của hàm Bessel — **không** theo tỉ lệ nguyên | Tiếng trống thường không có cao độ rõ (bồi âm không hoà); trống timpani được thiết kế để kéo các mode về gần tỉ lệ hoà âm |
+| **Dây căng** (piano, guitar, [[violin|violin]]) | Định luật Mersenne (*Harmonie universelle*, 1636 – 1637): tần số cơ bản tỉ lệ nghịch với **chiều dài** dây, tỉ lệ thuận với căn bậc hai **lực căng**, tỉ lệ nghịch với căn bậc hai **khối lượng mỗi đơn vị dài** | Dây lý tưởng cho đủ chuỗi bồi âm 1, 2, 3, 4… |
+| **Cột không khí** (sáo, kèn, [[organ-ong|organ ống]]) | Ống hở hai đầu cho đủ bồi âm; ống lý tưởng kín một đầu chỉ cho bồi âm **lẻ** (1, 3, 5…) | [[clarinet|Clarinet]] gần giống ống kín một đầu: [[cao-do|âm vực]] thấp thiên về bồi âm lẻ, cho màu "rỗng" đặc trưng |
+| **Màng căng** (trống) | Các mode rung tương ứng các nghiệm của hàm Bessel — **không** theo tỉ lệ nguyên | Tiếng trống thường không có cao độ rõ (bồi âm không hoà); [[timpani|trống timpani]] được thiết kế để kéo các mode về gần tỉ lệ hoà âm |
 
 Với màng tròn lý tưởng, tính từ các nghiệm của hàm Bessel, ba mode kế tiếp có tần số khoảng **1,59; 2,14; 2,30** lần mode cơ bản *(con số do thư viện tính, chỉ cho màng lý tưởng)* — không có số nguyên nào, khác hẳn dây đàn.
 

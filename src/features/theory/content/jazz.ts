@@ -123,7 +123,7 @@ Trong jazz, hai [[truong-do|nốt móc đơn]] viết bằng nhau thường **kh
 - Chậm: swing đậm, gần 2 : 1 hoặc hơn.
 - Nhanh: swing nhẹ dần, gần như đều.
 
-Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2002) trên tiếng cymbal ride của các tay trống jazz nổi tiếng (Tony Williams, Jack DeJohnette, Jeff Watts…) cho thấy tỉ lệ swing **thay đổi rất nhiều theo nhịp độ**: ở nhịp độ nhanh gần **1 : 1** (đều), ở nhịp độ chậm tăng dần đến gần **3,5 : 1**. Kết quả này **không khớp** với quan niệm phổ biến rằng swing luôn bằng tỉ lệ liên ba 2 : 1. Ký hiệu liên ba chỉ là **quy ước gần đúng**; swing thật phải học bằng **tai**, qua việc nghe và chơi theo bản thu.
+Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2002) trên tiếng [[bo-go-dan-nhac|cymbal]] ride của các tay [[trong-jazz|trống jazz]] nổi tiếng (Tony Williams, Jack DeJohnette, Jeff Watts…) cho thấy tỉ lệ swing **thay đổi rất nhiều theo nhịp độ**: ở nhịp độ nhanh gần **1 : 1** (đều), ở nhịp độ chậm tăng dần đến gần **3,5 : 1**. Kết quả này **không khớp** với quan niệm phổ biến rằng swing luôn bằng tỉ lệ liên ba 2 : 1. Ký hiệu liên ba chỉ là **quy ước gần đúng**; swing thật phải học bằng **tai**, qua việc nghe và chơi theo bản thu.
 
 ## Trọng âm
 - Trọng âm rơi vào **phách 2 và 4** (backbeat) — ngược với nhạc cổ điển nhấn phách 1 và 3 (xem [[so-chi-nhip]]).
@@ -915,7 +915,7 @@ TJPS lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiế
 - Drop 2 là dạng **phổ biến nhất** trong các dạng "drop" (cũng có drop 3).
 
 ## Lịch sử
-- Theo Wikipedia, **George Shearing** làm locked hands nổi tiếng; chính ông nói đã nghe từ **Milt Buckner** (pianist của dàn nhạc Lionel Hampton), người thường được xem là cha đẻ lối chơi này. Buckner sau này có các album *Locked Hands* (1968), *Block Chords Parade* (1974).
+- Theo Wikipedia, **George Shearing** làm locked hands nổi tiếng; chính ông nói đã nghe từ **Milt Buckner** (pianist của dàn nhạc [[bo-go-phim|Lionel Hampton]]), người thường được xem là cha đẻ lối chơi này. Buckner sau này có các album *Locked Hands* (1968), *Block Chords Parade* (1974).
 - **Red Garland** dùng hợp âm khối theo cách riêng: theo Piano With Jonny, hợp âm tay trái của ông **giữ nguyên** đến khi đổi hợp âm, thường không có nốt gốc, âm thanh sáng hơn của Shearing.
 Xem thêm: [[nghe-si-piano-jazz]], [[dem-jazz]].
 
@@ -1225,7 +1225,7 @@ Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
 - Vai trò: bạn **đệm hợp âm** ([[dem-jazz]]) và sẽ được **solo**; nếu không có bass, bạn chơi cả [[bass-di-jazz|đường bass]].
 
 ## Trên sân khấu
-- **Âm vực**: tránh vùng trầm khi đã có contrabass; tránh âm vực của ca sĩ ([[dem-cho-ca-si]]).
+- **Âm vực**: tránh vùng trầm khi đã có [[double-bass|contrabass]]; tránh âm vực của ca sĩ ([[dem-cho-ca-si]]).
 - **Lắng nghe người solo**: họ lên cao thì mình xuống thấp, họ nhỏ thì mình nhỏ, đáp lại câu của họ như [[ngau-hung-piano|hỏi – đáp]] (TJPS).
 - **Đổi bốn** (trading fours): các người solo lần lượt chơi 4 ô xen với trống, theo thứ tự solo ban đầu, cho đến hết vòng; báo hiệu quay về giai điệu bằng ánh mắt và bằng chính cách chơi; không muốn solo thì báo trước (theo hướng dẫn của Elon University).
 - Giữ solo **ngắn** trong buổi jam đông người.
@@ -1475,7 +1475,7 @@ Công cụ khác: [[line-cliche]], [[turnaround-jazz]], [[constant-structures]].
 
 ## 1. Đổi số chỉ nhịp
 - TJPS: phần lớn bài jazz ở **4/4** — có lẽ từ thời [[swing|Swing]], khi jazz là nhạc khiêu vũ và 4/4 có phách nhấn 2 – 4 dễ nhảy hơn nhiều so với kiểu 13/8.
-- Ví dụ TJPS: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **[[tieu-pham-piano|valse]] 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là phối khí của Quincy Jones cho Frank Sinatra (1964).
+- Ví dụ TJPS: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **[[tieu-pham-piano|valse]] 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là [[dan-nhac-giao-huong|phối khí]] của Quincy Jones cho Frank Sinatra (1964).
 - TJPS gợi ý thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
 - Ở nhịp lẻ, [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] có thể không đối xứng.
 ::rhythm 4/4 h q q / w // | Minh hoạ: hai ô 4/4 của một câu giai điệu…
@@ -1536,7 +1536,7 @@ TJPS chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
 ::staff treble C4+E4+G4+Bb4=C7 F4+Ab4+B4+D5=F°7 F4+A4+C5+E5=Fmaj7 / Db4+F4+Ab4+Cb5=D♭7 C4+E4+G4=C | Ô 2: C7 → F°7 → Fmaj7 (hợp âm giảm làm chậm việc về IV); ô 8: D♭7 thay G7 rồi về C
 
 ## Gospel và jazz
-Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60): nhiều kết IV – I, nốt blue, đệm "gõ" theo tiếng đàn organ nhà thờ (xem [[am-giai-blues]], [[blues-12-nhip]]). Các kỹ thuật trên cũng dùng trực tiếp cho [[dem-hat-piano|đệm hát]] thánh ca và [[nhac-pho|nhạc phổ]] thông.
+Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60): nhiều kết IV – I, nốt blue, đệm "gõ" theo tiếng đàn [[organ-ong|organ nhà thờ]] (xem [[am-giai-blues]], [[blues-12-nhip]]). Các kỹ thuật trên cũng dùng trực tiếp cho [[dem-hat-piano|đệm hát]] thánh ca và [[nhac-pho|nhạc phổ]] thông.
 `,
   },
   {
@@ -2266,7 +2266,7 @@ TJPS phân tích cả năm solo trong "**Straight, No Chaser**" (album *[[jazz-d
 Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân tích tác phẩm]]: hoà âm (bước 1–2), [[cau-nhac|câu nhạc]] và kết (bước 3), phát triển chất liệu (bước 4). Có thể tóm tắt theo [[phan-tich-phong-cach|năm yếu tố của LaRue]].
 
 ## Nguồn nghiên cứu mở
-- **Weimar Jazz Database** (dự án Jazzomat, Học viện Âm nhạc [[franz-liszt|Franz Liszt]] Weimar, 2012–2017): kho các solo jazz được chép và chú thích hợp âm, phách; dữ liệu mở (MIDI, thư viện Python MeloSpyLib) — 456 solo tính đến 2017.
+- **Weimar Jazz Database** (dự án Jazzomat, Học viện Âm nhạc [[franz-liszt|Franz Liszt]] Weimar, 2012–2017): kho các solo jazz được chép và chú thích hợp âm, phách; dữ liệu mở ([[synthesizer|MIDI]], thư viện Python MeloSpyLib) — 456 solo tính đến 2017.
 - **Paul Berliner**, *Thinking in Jazz* (1994): nghiên cứu cách nhạc công học ngẫu hứng, kèm nhiều bản chép.
 `,
   },
@@ -2399,7 +2399,7 @@ TJPS tóm tắt [[phong-cach-jazz|lịch sử jazz]] hiện đại như một qu
 
 ## Post-bop — "tự do có kiểm soát"
 TJPS: "Nếu free jazz là *tự do hoàn toàn* thì post-bop là *tự do có kiểm soát*" — trộn bebop, hard bop, [[dieu-thuc|điệu thức]] và free.
-- **Nhóm [[nhac-thinh-phong|ngũ tấu]] thứ hai của Miles Davis** (1964–68): [[herbie-hancock|Herbie Hancock]] (piano), Wayne Shorter (saxophone), Ron Carter (bass), Tony Williams (trống). Các album: *E.S.P.* (album phòng thu đầu tiên), *Miles Smiles*, *Sorcerer*, *Nefertiti*.
+- **Nhóm [[nhac-thinh-phong|ngũ tấu]] thứ hai của Miles Davis** (1964–68): [[herbie-hancock|Herbie Hancock]] (piano), Wayne Shorter ([[saxophone|saxophone]]), Ron Carter (bass), Tony Williams (trống). Các album: *E.S.P.* (album phòng thu đầu tiên), *Miles Smiles*, *Sorcerer*, *Nefertiti*.
 - Trên sân khấu, nhóm thường bỏ hợp âm và giai điệu của một standard nhưng **giữ hình thức và nhịp** — lối chơi TJPS gọi là "**time, no changes**" (có nhịp, không hợp âm).
 - Hợp âm trong post-bop thường không theo chức năng: [[constant-structures]], hợp âm sus, [[hoa-am-quang-bon|quãng 4]].
 Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
@@ -2449,7 +2449,7 @@ Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc n�
 ## Từ swing đến bebop (1935 – 1950)
 | Phong cách | Thời gian | Đặc điểm | Piano | Mốc |
 |---|---|---|---|---|
-| **Swing / big band** | ~1935–46 | Nhạc khiêu vũ cho dàn lớn (bộ trumpet, saxophone, trombone cùng nhóm nhịp điệu); riff, đoạn "shout", [[bass-di-jazz|bass đi]] — xem [[swing]] | Piano bắt đầu **chấm phá** hợp âm thay vì giữ nhịp | Benny Goodman ở Palomar (21/8/1935); Count Basie, "One O'Clock Jump" (1937) |
+| **Swing / big band** | ~1935–46 | Nhạc khiêu vũ cho dàn lớn (bộ [[trumpet|trumpet]], [[saxophone|saxophone]], [[trombone|trombone]] cùng nhóm nhịp điệu); riff, đoạn "shout", [[bass-di-jazz|bass đi]] — xem [[swing]] | Piano bắt đầu **chấm phá** hợp âm thay vì giữ nhịp | Benny Goodman ở Palomar (21/8/1935); Count Basie, "One O'Clock Jump" (1937) |
 | **Bebop** | ~1940–50s | Từ nhạc khiêu vũ thành **nhạc nghệ thuật**: nhịp nhanh, hoà âm phức tạp, nhóm nhỏ; nhiều contrafact ([[rhythm-changes]]) | Tay trái **shell** (gốc + 3 hoặc 7) của [[bud-powell|Bud Powell]], tay phải đi giai điệu — xem [[xep-hop-am]] | Charlie Parker, "Ko-Ko" (26/11/1945, trên [[vong-hop-am|vòng hợp âm]] "Cherokee") |
 
 ## Sau bebop (1949 – 1970)

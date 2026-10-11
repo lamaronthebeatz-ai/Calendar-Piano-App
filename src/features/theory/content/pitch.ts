@@ -268,7 +268,7 @@ Khi gõ một [[ban-phim|phím đàn]], [[cau-tao-piano|dây đàn]] rung cả c
 Kiến thức nền về tần số, dB, phạm vi nghe: [[am-hoc-co-ban]]. Các bồi âm 4–5–6 tạo thành [[hop-am-ba|hợp âm trưởng]] C–E–G — một lý do hợp âm trưởng nghe "tự nhiên". Tỉ lệ tần số càng đơn giản (2:1, 3:2) thì quãng càng [[thuan-nghich|thuận]].
 
 ## Âm sắc
-[[cuong-do|Cường độ]] tương đối của các bồi âm quyết định **[[am-sac|âm sắc]]** — lý do piano và violin chơi cùng nốt nhưng nghe khác nhau.
+[[cuong-do|Cường độ]] tương đối của các bồi âm quyết định **[[am-sac|âm sắc]]** — lý do piano và [[violin|violin]] chơi cùng nốt nhưng nghe khác nhau.
 
 ## Bồi âm của piano "lệch" lên
 Dây [[dan-piano|đàn piano]] **cứng** (dây thép ngắn, khá dày), nên các bồi âm cao **không đúng** bội số nguyên mà hơi **cao hơn** — gọi là tính **không điều hoà** ([[am-hoc-nhac-cu|inharmonicity]]). Dây càng ngắn, càng dày thì càng lệch.

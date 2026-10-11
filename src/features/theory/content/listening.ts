@@ -20,7 +20,7 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 ## Phần A — Âm học: âm thanh là gì
 1. [[am-hoc-co-ban]] — tần số, biên độ, decibel, bước sóng.
 2. [[chuoi-boi-am]] — vì sao mỗi nốt là nhiều tần số; tính không điều hoà của [[cau-tao-piano|dây đàn]] piano.
-3. [[am-sac]] — điều gì làm tiếng piano khác tiếng violin cùng [[cao-do|cao độ]].
+3. [[am-sac]] — điều gì làm tiếng piano khác tiếng [[violin|violin]] cùng [[cao-do|cao độ]].
 4. [[am-hoc-phong]] — căn phòng thay đổi tiếng đàn ra sao.
 5. [[luat-binh-quan]] — toán học của 12 nốt.
 
@@ -131,7 +131,7 @@ Lưu ý: 20 Hz – 20 kHz là con số trung bình, không phải giới hạn c
 - Nghiên cứu "không gian âm sắc" (Grey 1977, McAdams và cộng sự 1995, Lakatos 2000): người nghe đánh giá mức giống – khác của các cặp âm thanh; phân tích cho thấy hai chiều quan trọng nhất là **thời gian tấn công** (attack time) và **trọng tâm phổ** (spectral centroid — tương ứng cảm giác **sáng – tối**). Chiều thứ ba thì các nghiên cứu chưa thống nhất.
 
 ## Tiếng piano: tắt dần hai giai đoạn
-- Piano là nhạc cụ **gõ dây**: búa đánh dây rồi rời ra, nên âm thanh **không thể giữ đều** như violin hay giọng hát — nó chỉ có thể tắt dần.
+- Piano là nhạc cụ **gõ dây**: búa đánh dây rồi rời ra, nên âm thanh **không thể giữ đều** như [[violin|violin]] hay giọng hát — nó chỉ có thể tắt dần.
 - Với phần lớn các nốt, tiếng đàn **tắt nhanh lúc đầu** ("tiếng tức thời") rồi **tắt chậm hơn** ("dư âm" — aftersound).
 - **Gabriel Weinreich** (1977) giải thích: các dây cùng một nốt (2–3 dây) **liên kết với nhau qua ngựa đàn**, và mỗi dây dao động theo hai phương. Dao động theo phương **thẳng đứng** truyền năng lượng vào [[cau-tao-piano|bảng cộng hưởng]] hiệu quả hơn nên **tắt nhanh**; phương **nằm ngang** tắt chậm hơn, tạo dư âm. Thợ lên dây cố ý để các dây cùng nốt **lệch nhau rất nhẹ** để định hình đường tắt dần này.
 - Khi đạp **pedal una corda** (pedal trái của đàn grand), búa chỉ đánh vào ít dây hơn; dây không bị đánh rung theo qua ngựa đàn — làm thay đổi cả tiếng tấn công lẫn dư âm (xem [[ban-dap]]).
@@ -240,7 +240,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
       ['Huron (2001) — Tone and voice: a derivation of the rules of voice-leading from perceptual principles', 'https://muse.jhu.edu/book/47915'],
     ],
     body: `
-Âm thanh đến tai là **một sóng áp suất duy nhất** — tổng của mọi nguồn. Vậy mà ta nghe được [[giai-dieu|giai điệu]] violin tách khỏi dàn nhạc, hay giai điệu tay phải tách khỏi phần đệm tay trái. Nhà tâm lý học **Albert Bregman** gọi quá trình này là **phân tích cảnh thính giác** (sách *Auditory Scene Analysis*, 1990).
+Âm thanh đến tai là **một sóng áp suất duy nhất** — tổng của mọi nguồn. Vậy mà ta nghe được [[giai-dieu|giai điệu]] [[violin|violin]] tách khỏi dàn nhạc, hay giai điệu tay phải tách khỏi phần đệm tay trái. Nhà tâm lý học **Albert Bregman** gọi quá trình này là **phân tích cảnh thính giác** (sách *Auditory Scene Analysis*, 1990).
 
 ## Các nguyên tắc nhóm
 **Theo chiều ngang (nối tiếp)** — các nốt kế tiếp được nghe thành **một dòng** khi:
@@ -410,7 +410,7 @@ Phương pháp nghe chủ động (theo tổng quan của Boal-Palheiros về Jo
 Kết luận của tổng quan: các chiến lược chủ động (biểu diễn hoặc hình ảnh hoá) **tạo động lực** cho trẻ nghe nhạc và **nâng cao việc học âm nhạc**.
 
 ## Nghe lặp lại, mỗi lần một trọng tâm
-Một gợi ý thực hành (từ giáo viên, chưa phải nghiên cứu) với một [[hinh-thuc-concerto|concerto]] của [[antonio-vivaldi|Vivaldi]]: lần 1 nghe để thưởng thức; lần 2 tưởng tượng cây violin "đang nói gì"; các lần sau thảo luận và viết.
+Một gợi ý thực hành (từ giáo viên, chưa phải nghiên cứu) với một [[hinh-thuc-concerto|concerto]] của [[antonio-vivaldi|Vivaldi]]: lần 1 nghe để thưởng thức; lần 2 tưởng tượng cây [[violin|violin]] "đang nói gì"; các lần sau thảo luận và viết.
 
 ## Gợi ý trọng tâm cho mỗi lần nghe
 Vận dụng các bài trong thư viện:

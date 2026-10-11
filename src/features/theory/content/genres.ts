@@ -300,7 +300,7 @@ Liên quan: [[ca-khuc-the-tuc-trung-co]], [[nhac-khi-phuc-hung]], [[thoi-ky-phuc
     slug: 'nhac-khi-phuc-hung',
     title: 'Lute song, vũ khúc và nhạc khí Phục hưng',
     category: 'genres',
-    aliases: ['lute song', 'ayre', 'pavane', 'galliard', 'consort', 'consort of viols', 'viol', 'đàn lute', 'Lachrimae', 'Flow my tears', 'Danserye'],
+    aliases: ['lute song', 'ayre', 'pavane', 'galliard', 'consort', 'consort of viols', 'Lachrimae', 'Flow my tears', 'Danserye'],
     summary: 'Thế kỷ 16, nhạc khí bắt đầu có tiếng nói riêng: ca khúc cho một giọng với đàn lute (ayre) của Dowland, các cặp vũ khúc pavane chậm – galliard nhanh, và nhạc "consort" cho nhóm viol hoặc nhạc cụ hỗn hợp.',
     refs: [
       ['Wikipedia — John Dowland', 'https://en.wikipedia.org/wiki/John_Dowland'],
@@ -313,7 +313,7 @@ Liên quan: [[ca-khuc-the-tuc-trung-co]], [[nhac-khi-phuc-hung]], [[thoi-ky-phuc
 ::wiki Lute | Đàn lute — nhạc cụ đệm hát phổ biến nhất thời Phục hưng (ảnh đầu bài Wikipedia *Lute*)
 
 ## Lute song (ayre)
-Nước Anh khoảng 1597 – 1622: một giọng hát với đàn lute đệm, hoặc in thành bốn bè để hát chung quanh bàn. **[[john-dowland|John Dowland]]**: *First Booke of Songes* (1597), *Flow my tears* (trong tập thứ hai, 1600). Đây là tổ tiên trực tiếp của [[dem-hat-piano|ca khúc có đệm]].
+Nước Anh khoảng 1597 – 1622: một giọng hát với [[dan-lute|đàn lute]] đệm, hoặc in thành bốn bè để hát chung quanh bàn. **[[john-dowland|John Dowland]]**: *First Booke of Songes* (1597), *Flow my tears* (trong tập thứ hai, 1600). Đây là tổ tiên trực tiếp của [[dem-hat-piano|ca khúc có đệm]].
 
 ## Cặp vũ khúc
 | Vũ khúc | Nhịp | Tính chất |
@@ -325,7 +325,7 @@ Nước Anh khoảng 1597 – 1622: một giọng hát với đàn lute đệm, 
 Ghép **chậm – nhanh, chẵn – lẻ** như vậy là hạt giống của [[to-khuc-baroque|tổ khúc Baroque]]. Dowland, *Lachrimae, or Seaven Teares* (1604): 21 vũ khúc năm bè, trong đó bảy pavane trên cùng chủ đề "Lachrimae". Susato in tuyển vũ khúc *Danserye* (1551).
 
 ## Consort
-- **Consort đồng loại**: cùng một họ nhạc cụ, ví dụ nhóm **viol** nhiều cỡ.
+- **Consort đồng loại**: cùng một họ nhạc cụ, ví dụ nhóm **[[viola-da-gamba|viol]]** nhiều cỡ.
 - **Consort hỗn hợp**: nhiều loại nhạc cụ.
 - Thể loại: *In nomine*, fantasia (tổ tiên của [[toccata-prelude-fugue|fantasia đàn phím]]).
 Liên quan: [[madrigal]], [[thoi-ky-phuc-hung]], [[dan-phim-co]].
@@ -448,7 +448,7 @@ Liên quan: [[thanh-le-va-requiem]], [[thoi-ky-baroque]].
 ::grand C5+G4/E4+C3=I C5+A4/F4+F3=IV B4+G4/D4+G3=V C5+G4/E4+C3=I | Minh hoạ cách xếp bốn bè kiểu chorale: giai điệu ở trên cùng, mỗi bè đi gần nhất có thể ([[luat-hoa-am-bon-be]])
 
 ## Chorale prelude
-Bản organ ngắn dựa trên một giai điệu chorale, chơi trước khi giáo đoàn hát. Giai điệu có thể:
+Bản [[organ-ong|organ]] ngắn dựa trên một giai điệu chorale, chơi trước khi giáo đoàn hát. Giai điệu có thể:
 - nằm nguyên ở một bè, các bè kia đệm bằng một [[motif]] lặp lại;
 - được [[ky-hieu-hoa-my|trang trí]] dày đặc;
 - trở thành chủ đề của một đoạn [[doi-am|đối âm]] mô phỏng.
@@ -554,7 +554,7 @@ Liên quan: [[impromptu]], [[thoi-ky-baroque]], [[dan-phim-co]].
 ::wiki Arcangelo_Corelli | Arcangelo Corelli (ảnh đầu bài Wikipedia)
 
 ## Trio sonata
-**Ba bè** — hai bè giai điệu (thường hai violin) và một [[bass-so|bè trầm liên tục]] — nhưng thường cần **bốn người** (cello + đàn phím cùng chơi bè trầm).
+**Ba bè** — hai bè giai điệu (thường hai [[violin|violin]]) và một [[bass-so|bè trầm liên tục]] — nhưng thường cần **bốn người** ([[cello|cello]] + đàn phím cùng chơi bè trầm).
 | Kiểu | Thứ tự chương | Ví dụ [[arcangelo-corelli|Corelli]] |
 |---|---|---|
 | ***Da chiesa*** (nhà thờ) | Chậm – nhanh – chậm – nhanh; chương nhanh hay viết kiểu [[fugue]] | Op. 1 (1681), Op. 3 (1689) |
@@ -564,7 +564,7 @@ Ranh giới hai kiểu không tuyệt đối.
 
 ## Sonata đàn phím của Scarlatti
 - **[[domenico-scarlatti|Domenico Scarlatti]]** viết **555** sonata cho harpsichord (đánh số "K." theo danh mục Kirkpatrick 1953); chỉ 30 bài (*Essercizi*) được in khi ông còn sống.
-- Mỗi bài **một chương**, [[hinh-thuc-am-nhac|hai đoạn]] có nhắc lại, đầy nhảy xa, bắt chéo tay, [[not-lap-lai|nốt lặp]] — kỹ thuật của guitar Tây Ban Nha.
+- Mỗi bài **một chương**, [[hinh-thuc-am-nhac|hai đoạn]] có nhắc lại, đầy nhảy xa, bắt chéo tay, [[not-lap-lai|nốt lặp]] — kỹ thuật của [[guitar-co-dien|guitar Tây Ban Nha]].
 ::form A A B B | Sonata Scarlatti: ‖: A :‖: B :‖ — phần B bắt đầu ở giọng át (hoặc giọng song song) rồi quay về
 Phần cuối của A và của B thường dùng **cùng chất liệu** ở hai giọng khác nhau — một bước nhỏ tới [[hinh-thuc-sonata]].
 Liên quan: [[sonata-the-loai]], [[concerto-grosso]], [[dan-phim-co]].
@@ -588,7 +588,7 @@ Liên quan: [[sonata-the-loai]], [[concerto-grosso]], [[dan-phim-co]].
 ## Hai khối âm thanh
 | | Concertino | Ripieno (tutti) |
 |---|---|---|
-| Thành phần | Nhóm độc tấu nhỏ ([[arcangelo-corelli|Corelli]]: 2 violin + cello) | Cả dàn dây + bè trầm liên tục |
+| Thành phần | Nhóm độc tấu nhỏ ([[arcangelo-corelli|Corelli]]: 2 [[violin|violin]] + [[cello|cello]]) | Cả dàn dây + bè trầm liên tục |
 | Vai trò | Đoạn khéo léo, nhẹ | Đoạn chắc, đầy |
 Sự **tương phản to – nhỏ, ít – nhiều** này cũng là gốc của [[cuong-do|cường độ]] "bậc thang" kiểu Baroque.
 
@@ -658,7 +658,7 @@ Liên quan: [[opera]], [[the-loai]].
 
 ## Lịch sử ngắn
 - **Gốc**: khúc mở màn kiểu Ý nhanh – chậm – nhanh ([[khuc-mo-man]]), được tách ra chơi ở hoà nhạc.
-- **Mannheim** (từ thập niên 1740, Stamitz): dàn nhạc nổi tiếng với **[[cuong-do|crescendo]] dài**, đổi cường độ đột ngột và "tên lửa Mannheim" — [[luyen-hop-am-rai|hợp âm rải]] đi lên nhanh. Những đổi mới tương tự cũng xảy ra ở Berlin, Vienna.
+- **[[dan-nhac-giao-huong|Mannheim]]** (từ thập niên 1740, Stamitz): dàn nhạc nổi tiếng với **[[cuong-do|crescendo]] dài**, đổi cường độ đột ngột và "tên lửa Mannheim" — [[luyen-hop-am-rai|hợp âm rải]] đi lên nhanh. Những đổi mới tương tự cũng xảy ra ở Berlin, Vienna.
 ::staff treble C4 E4 G4 C5 E5 G5 C6 | Minh hoạ "tên lửa Mannheim": hợp âm rải đi lên nhanh, thường kèm crescendo
 - **[[joseph-haydn|Haydn]]** (104 giao hưởng) và **[[wolfgang-amadeus-mozart|Mozart]]** (số cuối là số 41 "Jupiter", 1788) đưa thể loại thành chuẩn.
 - **Beethoven** (9 giao hưởng): Giao hưởng số 9 ra mắt ở Vienna 7/5/1824, chương cuối phổ "Ode an die Freude" của Schiller cho bốn giọng đơn ca và hợp xướng — thường được nói là lần đầu một nhà soạn nhạc lớn đưa giọng hát vào giao hưởng.
@@ -667,10 +667,10 @@ Liên quan: [[opera]], [[the-loai]].
 ## Dàn nhạc giao hưởng
 | Bộ | Nhạc cụ chính |
 |---|---|
-| Dây | Violin I, II, viola, cello, contrabass |
-| Gỗ | Flute, oboe, clarinet, bassoon |
-| Đồng | Horn, trumpet, trombone, tuba |
-| Gõ | Timpani và bộ gõ |
+| Dây | [[violin|Violin]] I, II, [[viola|viola]], [[cello|cello]], [[double-bass|contrabass]] |
+| Gỗ | [[sao-flute|Flute]], [[oboe|oboe]], [[clarinet|clarinet]], [[bassoon|bassoon]] |
+| Đồng | [[kenh-horn|Horn]], [[trumpet|trumpet]], [[trombone|trombone]], [[tuba|tuba]] |
+| Gõ | [[timpani|Timpani]] và [[bo-go-dan-nhac|bộ gõ]] |
 
 ## Với người học piano
 Bản chuyển soạn giao hưởng cho piano ([[franz-liszt|Liszt]] chuyển cả 9 giao hưởng Beethoven) và bản bốn tay là cách người thế kỷ 19 "nghe" giao hưởng ở nhà. Nghe chương 1 một giao hưởng Haydn với sơ đồ [[hinh-thuc-sonata]] là bài tập nghe hình thức tốt — xem [[nghe-nhac-chu-dong]].
@@ -696,10 +696,10 @@ Liên quan: [[the-loai]], [[nhac-thinh-phong]], [[thoi-ky-co-dien]].
 ## Các đội hình
 | Tên | Thành phần | Ví dụ |
 |---|---|---|
-| Sonata song tấu | Violin (cello…) + piano | [[ludwig-van-beethoven|Beethoven]], *Kreutzer* |
+| Sonata song tấu | [[violin|Violin]] ([[cello|cello]]…) + piano | [[ludwig-van-beethoven|Beethoven]], *Kreutzer* |
 | **Tam tấu piano** | Piano, violin, cello | Beethoven, *Archduke*; [[franz-schubert|Schubert]] |
-| **Tứ tấu đàn dây** | 2 violin, viola, cello | [[joseph-haydn|Haydn]] (68), [[wolfgang-amadeus-mozart|Mozart]], Beethoven (16) |
-| Ngũ tấu piano | Piano + 4 dây | Schubert, *Cá hồi* D. 667 (1819: piano, violin, viola, cello, **contrabass**; một chương [[bien-tau|biến tấu]] trên ca khúc *Die Forelle*); [[robert-schumann|Schumann]], [[johannes-brahms|Brahms]] |
+| **Tứ tấu đàn dây** | 2 violin, [[viola|viola]], cello | [[joseph-haydn|Haydn]] (68), [[wolfgang-amadeus-mozart|Mozart]], Beethoven (16) |
+| Ngũ tấu piano | Piano + 4 dây | Schubert, *Cá hồi* D. 667 (1819: piano, violin, viola, cello, **[[double-bass|contrabass]]**; một chương [[bien-tau|biến tấu]] trên ca khúc *Die Forelle*); [[robert-schumann|Schumann]], [[johannes-brahms|Brahms]] |
 | Divertimento, serenade | Nhóm nhỏ, nhiều chương nhẹ | Mozart, *Eine kleine Nachtmusik* K. 525 |
 
 ## Tứ tấu đàn dây
@@ -974,7 +974,7 @@ Liên quan: [[hoa-am-the-ky-20]], [[thoi-ky-the-ky-20]], [[ballet]].
     slug: 'nhac-dien-tu',
     title: 'Nhạc điện tử',
     category: 'genres',
-    aliases: ['nhạc điện tử', 'electronic music', 'electroacoustic music', 'nhạc điện thanh', 'musique concrète', 'nhạc cụ thể', 'elektronische Musik', 'synthesizer', 'đàn tổng hợp', 'Moog', 'Moog synthesizer', 'tape music', 'Switched-On Bach', 'Pierre Schaeffer'],
+    aliases: ['nhạc điện tử', 'electronic music', 'electroacoustic music', 'nhạc điện thanh', 'musique concrète', 'nhạc cụ thể', 'elektronische Musik', 'đàn tổng hợp', 'Moog synthesizer', 'tape music', 'Switched-On Bach', 'Pierre Schaeffer'],
     summary: 'Âm nhạc tạo, ghi và biến đổi bằng thiết bị điện tử: musique concrète của Pierre Schaeffer (1948, cắt dán âm thanh thu sẵn), elektronische Musik ở Cologne (Stockhausen), đàn tổng hợp Moog (1964) — rồi đến nhạc pop điện tử, nhạc dance và đàn phím điện tử mà người học piano dùng hằng ngày.',
     refs: [
       ['Wikipedia — Musique concrète', 'https://en.wikipedia.org/wiki/Musique_concr%C3%A8te'],
@@ -991,7 +991,7 @@ Liên quan: [[hoa-am-the-ky-20]], [[thoi-ky-the-ky-20]], [[ballet]].
 |---|---|---|---|
 | **Musique concrète** | Paris, 1948 | Thu **âm thanh thật** ("vật thể âm thanh") rồi cắt, lặp, đổi tốc độ — đầu tiên trên đĩa, sau trên băng từ | Schaeffer, *[[tieu-pham-piano|Étude]] aux chemins de fer* (tiếng tàu hoả), phát sóng 5/10/1948 — thường coi là ngày ra đời thể loại |
 | **Elektronische Musik** | Đài WDR, Cologne, từ 1951 | Dựng âm thanh từ **sóng sin** và máy phát, gắn với tư duy chuỗi | Stockhausen, *Gesang der Jünglinge* (1956) — kết hợp cả giọng hát thu |
-| **Đàn tổng hợp** | Moog, 1964 | Bộ dao động và khuếch đại **điều khiển bằng điện áp**, nối module bằng dây — đàn tổng hợp thương mại đầu tiên | Wendy Carlos, *Switched-On Bach* (1968) — [[johann-sebastian-bach|Bach]] trên Moog |
+| **Đàn tổng hợp** | [[synthesizer|Moog]], 1964 | Bộ dao động và khuếch đại **điều khiển bằng điện áp**, nối module bằng dây — đàn tổng hợp thương mại đầu tiên | Wendy Carlos, *Switched-On Bach* (1968) — [[johann-sebastian-bach|Bach]] trên Moog |
 
 ## Từ phòng thí nghiệm đến sàn nhảy
 - Đàn tổng hợp và máy trống đi vào pop, rock, rồi tạo ra các dòng **house** (Chicago, cuối thập niên 1970 – đầu 1980), **techno** (Detroit, thập niên 1980) — xem [[nhac-pho-thong-the-ky-20]].
@@ -1021,8 +1021,8 @@ Liên quan: [[trao-luu-the-ky-20]], [[toi-gian]], [[nhac-phim-va-tro-choi]].
 ## Lịch sử ngắn
 | Giai đoạn | Đặc điểm |
 |---|---|
-| Phim câm | Người chơi **piano hoặc organ** trong rạp đệm trực tiếp, thường ghép từ các [[cau-nhac|đoạn nhạc]] có sẵn theo cảnh (vui, buồn, rượt đuổi) — một nghề cần [[ngau-hung-piano|ngẫu hứng]] và [[choi-phuc-dieu|chơi theo tai]] |
-| Phim có tiếng (từ 1927) | Dàn nhạc giao hưởng kiểu Lãng mạn muộn |
+| Phim câm | Người chơi **piano hoặc [[organ-ong|organ]]** trong rạp đệm trực tiếp, thường ghép từ các [[cau-nhac|đoạn nhạc]] có sẵn theo cảnh (vui, buồn, rượt đuổi) — một nghề cần [[ngau-hung-piano|ngẫu hứng]] và [[choi-phuc-dieu|chơi theo tai]] |
+| Phim có tiếng (từ 1927) | [[dan-nhac-giao-huong|Dàn nhạc giao hưởng]] kiểu Lãng mạn muộn |
 | Max Steiner, *King Kong* (1933) | Mốc quan trọng của nhạc phim xây bằng **[[bien-doi-chu-de|leitmotif]]** (các nguồn tranh cãi về chữ "đầu tiên") |
 | [[john-williams|John Williams]], *Star Wars* (1977) | Hồi sinh phong cách giao hưởng Lãng mạn với các chủ đề nhân vật |
 
@@ -1066,8 +1066,8 @@ Liên quan: [[nhac-dien-tu]], [[operetta-va-nhac-kich]], [[giao-huong]].
 | **Blues** | Thu âm từ 1920 | Khung [[blues-12-nhip|12 ô]] I – IV – V, [[am-giai-blues|nốt blue]] | W. C. Handy, *St. Louis Blues* (in 1914); Mamie Smith, *Crazy Blues* (thu 10/8/1920) |
 | **Jazz** | Đầu [[thoi-ky-the-ky-20|thế kỷ 20]] | [[swing|Swing]], [[ngau-hung-piano|ngẫu hứng]] | Xem [[phong-cach-jazz]] |
 | **Gospel** | Thập niên 1930 | Hỏi – đáp, hoà giọng dày | Thomas A. Dorsey — xem [[tai-hoa-am-gospel]] |
-| **Country** | Thập niên 1920 | Fiddle, guitar steel, hoà âm đơn giản, kể chuyện | |
-| **Rock and roll** | Giữa thập niên 1950 | **Backbeat** (nhấn phách 2 – 4), guitar điện, khung 12 ô | Chuck [[phan-tich-va-bieu-dien|Berry]], Elvis Presley |
+| **Country** | Thập niên 1920 | [[violin|Fiddle]], guitar steel, hoà âm đơn giản, kể chuyện | |
+| **Rock and roll** | Giữa thập niên 1950 | **Backbeat** (nhấn phách 2 – 4), [[guitar-dien|guitar điện]], khung 12 ô | Chuck [[phan-tich-va-bieu-dien|Berry]], Elvis Presley |
 | **Rock** | Thập niên 1960 | Ban nhạc guitar – bass – trống; album như một tác phẩm | The Beatles, *Sgt. Pepper* (1967) |
 | **Soul / R&B / Motown** | 1959 | Giọng hát kiểu gospel, ban nhạc phòng thu | Motown do Berry Gordy lập ở Detroit 12/1/1959 |
 | **Funk** | Giữa thập niên 1960 | Nhấn mạnh **phách 1**, bass và guitar đảo phách, kèn đồng "chặt" | James Brown |

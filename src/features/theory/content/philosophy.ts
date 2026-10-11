@@ -182,7 +182,7 @@ Hai truyền thống độc lập nhưng cùng đặt âm nhạc vào trung tâm
 ## Cuộc chiến các Bouffons (1752–1754)
 - Ngày **1/8/1752**, đoàn hát Ý của Eustachio Bambini (các "Bouffons") diễn *La serva padrona* của **Pergolesi** ở Paris. Sự kiện châm ngòi cho một cuộc bút chiến, dù gốc rễ là sự bất mãn rộng hơn với opera Pháp và sự kiểm soát của triều đình.
 - Hai phe được gọi là **"góc nhà vua"** (ủng hộ opera Pháp) và **"góc hoàng hậu"** (ủng hộ opera Ý).
-- Cuối năm **1753**, Rousseau công bố *Lettre sur la musique française* — một lời **lên án** nhạc hát Pháp: chê hát nói (recitative) của Rameau thiếu tự nhiên so với Ý; chê hợp xướng, hoà âm và phối khí quá dày, quá nhiều [[doi-am|đối âm]]; thậm chí cho rằng **tiếng Pháp** không hợp để phổ nhạc.
+- Cuối năm **1753**, Rousseau công bố *Lettre sur la musique française* — một lời **lên án** nhạc hát Pháp: chê hát nói (recitative) của Rameau thiếu tự nhiên so với Ý; chê hợp xướng, hoà âm và [[dan-nhac-giao-huong|phối khí]] quá dày, quá nhiều [[doi-am|đối âm]]; thậm chí cho rằng **tiếng Pháp** không hợp để phổ nhạc.
 - Rameau đáp lại bằng *Erreurs sur la musique dans l'Encyclopédie* (1755), phản bác các mục về âm nhạc Rousseau viết cho Bách khoa thư.
 
 ## Câu hỏi triết học: giai điệu hay hoà âm?
@@ -294,7 +294,7 @@ Bối cảnh tư tưởng đầu thế kỷ 19 — vì sao khí nhạc được 
     ],
     body: `
 ## Vì sao khó định nghĩa?
-Một định nghĩa tốt phải bao quát **mọi** thứ ta gọi là âm nhạc — từ thánh ca, nhạc gamelan, rap đến [[nhac-dien-tu|nhạc điện tử]] — và **loại ra** những thứ không phải (tiếng xe cộ, tiếng nói thường). Các tiêu chí quen thuộc đều gặp phản ví dụ:
+Một định nghĩa tốt phải bao quát **mọi** thứ ta gọi là âm nhạc — từ thánh ca, nhạc [[gamelan|gamelan]], rap đến [[nhac-dien-tu|nhạc điện tử]] — và **loại ra** những thứ không phải (tiếng xe cộ, tiếng nói thường). Các tiêu chí quen thuộc đều gặp phản ví dụ:
 | Tiêu chí | Phản ví dụ |
 |---|---|
 | Có **[[cao-do|cao độ]]**, [[giai-dieu|giai điệu]] | Nhạc cho trống; [[am-cum|âm cụm]]; nhạc ồn |
@@ -426,7 +426,7 @@ Khi nói "tôi đang tập **[[hinh-thuc-sonata|Sonata]] [[phan-tich-sonata-k545
 |---|---|---|---|
 | **Goodman** (*Languages of Art*, 1968) | **Lớp các lần biểu diễn tuân theo bản nhạc** | Tiêu chí rõ ràng: đúng bản nhạc thì là tác phẩm | Một nốt sai, nói chặt chẽ, là không còn là tác phẩm ("nghịch lý nốt sai") |
 | **Thuyết Platon** ([[bieu-hien-cam-xuc-am-nhac|Kivy]] và những người khác) | Một **cấu trúc âm thanh trừu tượng**, tồn tại vĩnh viễn; nhà soạn nhạc **khám phá** chứ không tạo ra | Giải thích vì sao tác phẩm có thể có nhiều lần thể hiện | Trái với trực giác rằng nhà soạn nhạc **sáng tạo** |
-| **Levinson** (1980) | **Cấu trúc được chỉ định**: cấu trúc âm thanh **và** phương tiện biểu diễn, được một nhà soạn nhạc chỉ định ở một **thời điểm lịch sử** | Tác phẩm được **tạo ra**; hai người viết cùng nốt ở hai thời điểm là hai tác phẩm | Có ý kiến phản đối việc coi **phối khí** là bắt buộc đối với danh tính tác phẩm |
+| **Levinson** (1980) | **Cấu trúc được chỉ định**: cấu trúc âm thanh **và** phương tiện biểu diễn, được một nhà soạn nhạc chỉ định ở một **thời điểm lịch sử** | Tác phẩm được **tạo ra**; hai người viết cùng nốt ở hai thời điểm là hai tác phẩm | Có ý kiến phản đối việc coi **[[dan-nhac-giao-huong|phối khí]]** là bắt buộc đối với danh tính tác phẩm |
 
 ## Goehr: khái niệm tác phẩm có lịch sử
 **Lydia Goehr** (*The Imaginary Museum of Musical Works*, 1992) đặt câu hỏi khác: không phải "tác phẩm là gì" mà là **khi nào** người ta bắt đầu nghĩ âm nhạc theo cách đó. Theo bà, **khái niệm tác phẩm** — một sản phẩm hoàn chỉnh, cố định của một tác giả, được biểu diễn trung thành theo bản nhạc — **định hình rõ khoảng năm 1800**, rồi quy định chuẩn mực và kỳ vọng của thực hành âm nhạc cổ điển. Nhiều học giả giữ ý chính của Goehr nhưng cho rằng mốc thời gian nên **sớm hơn**.

@@ -70,7 +70,7 @@ Phức điệu Notre-Dame ([[leonin|Léonin]], [[perotin|Pérotin]] — xem [[or
 
 ## 5. Nốt trắng, tablature và cách trình bày trang
 - **Ký âm định lượng trắng**: từ khoảng đầu đến giữa thế kỷ 15, các nốt lớn được vẽ **rỗng** (trắng), nốt đen chỉ còn cho trường độ nhỏ. Lời giải thích hay gặp — giấy thay giấy da, khó giữ nhiều mực — **chỉ là giả thuyết**. Đây là tổ tiên trực tiếp của nốt tròn, nốt trắng ngày nay; vì thế "nốt tròn" (*semibreve*) mang tên "nửa nốt ngắn" ([[truong-do]]).
-- **Tablature** ghi **thế bấm** thay vì cao độ. Nhạc cho phím sớm nhất còn lại, *Codex Robertsbridge* (khoảng 1360, của Anh), được viết bằng tablature. *Buxheim Orgelbuch* (thập niên 1460) dùng tablature organ Đức với chữ cái, không khuông nhạc. Tablature [[nhac-khi-phuc-hung|đàn lute]] được Petrucci in từ năm 1507 ([[lich-su-in-an-am-nhac]]).
+- **Tablature** ghi **thế bấm** thay vì cao độ. Nhạc cho phím sớm nhất còn lại, *Codex Robertsbridge* (khoảng 1360, của Anh), được viết bằng tablature. *Buxheim Orgelbuch* (thập niên 1460) dùng tablature [[organ-ong|organ]] Đức với chữ cái, không khuông nhạc. Tablature [[nhac-khi-phuc-hung|đàn lute]] được Petrucci in từ năm 1507 ([[lich-su-in-an-am-nhac]]).
 - **Cách trình bày**: sách hợp xướng (*choirbook*) đặt mọi bè trên cùng một mặt sách mở; **sách bè** (*partbook*) in mỗi bè một quyển, rẻ hơn. **Tổng phổ** — các bè chồng lên nhau — có từ organum và nhạc phím, nhưng hiếm trong nhạc in thế kỷ 16.
 
 ## 6. Vạch nhịp và ký âm hiện đại
@@ -115,7 +115,7 @@ Trước khi có máy in, mỗi bản nhạc là một **bản chép tay**: đ�
 - **Không phải Petrucci in nhạc đầu tiên:** cuốn *Missale Romanum* của Ulrich Han (Rome, 1476) đã in thánh ca bằng chữ rời.
 - **Ottaviano Petrucci** được Thượng viện Venezia cấp **đặc quyền in nhạc** năm 1498 (thường ghi 25/5/1498). Tuyển tập *Harmonice Musices Odhecaton A* ra ngày **15/5/1501**, gồm 96 bài, phần lớn là chanson 3 – 4 bè ([[ca-khuc-the-tuc-trung-co]]). Kỹ thuật **in nhiều lượt**: in dòng kẻ, rồi in nốt, rồi in lời và chữ hoa. Đẹp, nhưng chậm và khó căn khớp.
 - **Pierre Attaingnant** (Paris, 1528) dùng **in một lượt**: mỗi con chữ gồm một nốt cùng một đoạn [[khuong-nhac|khuông]]. Britannica cho rằng cách này giảm một nửa thời gian và công sức. Một số tài liệu cho rằng John Rastell ở London đã làm vậy sớm hơn, khoảng 1520. In một lượt khiến nhạc in rẻ đi và làm nở rộ thị trường chanson.
-- Cùng thời, Petrucci in **tablature lute** đầu tiên (1507) — xem [[lich-su-ky-am]].
+- Cùng thời, Petrucci in **tablature [[dan-lute|lute]]** đầu tiên (1507) — xem [[lich-su-ky-am]].
 
 ## Khắc bản: đường nét tự do
 - **Simone Verovio** (Rome, 1586), tuyển tập *Diletto spirituale*, là một trong những bản nhạc in sớm nhất từ **bản đồng khắc**. Khắc cho phép in những gì chữ rời khó làm: [[hop-am-ba|hợp âm]] dày, nhiều bè trên một khuông, đường nối dài — rất hợp với nhạc phím.
@@ -568,7 +568,7 @@ Danh sách "bài phải học" ([[lo-trinh-tac-pham]]) cũng là một **kinh đ
     title: 'Âm nhạc cổ đại: từ sáo xương đến Boethius',
     category: 'musicology',
     also: ['modern'],
-    aliases: ['âm nhạc cổ đại', 'ancient music', 'âm nhạc Hy Lạp cổ đại', 'ancient Greek music', 'Seikilos', 'văn bia Seikilos', 'Hurrian hymn', 'thánh ca Hurrian', 'Aristoxenus', 'hydraulis', 'organ nước', 'sáo Hohle Fels', 'sáo Giả Hồ', 'Jiahu'],
+    aliases: ['âm nhạc cổ đại', 'ancient music', 'âm nhạc Hy Lạp cổ đại', 'ancient Greek music', 'Seikilos', 'văn bia Seikilos', 'Hurrian hymn', 'thánh ca Hurrian', 'Aristoxenus', 'sáo Hohle Fels', 'sáo Giả Hồ', 'Jiahu'],
     summary: 'Những bằng chứng về âm nhạc trước thời Trung cổ: sáo xương ở Hohle Fels (hơn 35.000 năm) và Giả Hồ (khoảng 9.000 năm), bài thánh ca Hurrian ở Ugarit (khoảng 1400 TCN), thánh ca Delphi và văn bia Seikilos của Hy Lạp, lý thuyết của Aristoxenus, truyền thuyết Pythagoras, và cuốn sách của Boethius đã truyền lý thuyết Hy Lạp sang Trung cổ.',
     wiki: 'Music_of_ancient_Greece',
     refs: [
@@ -610,7 +610,7 @@ Danh sách "bài phải học" ([[lo-trinh-tac-pham]]) cũng là một **kinh đ
 - Âm nhạc và **đạo đức, giáo dục** trong tư tưởng Hy Lạp: [[thuyet-ethos-hy-lap]].
 
 ## La Mã và cầu nối sang Trung cổ
-- **Organ nước** (*hydraulis*) do Ctesibius ở Alexandria phát minh vào thế kỷ 3 TCN. Di vật ở Aquincum (Budapest) mang bia ghi năm **228 sau Công nguyên**. Đây là tổ tiên xa của đàn organ, và qua đó của [[dan-phim-co|các nhạc cụ phím]] ([[nhac-khi-hoc]]).
+- **[[organ-ong|Organ nước]]** (*hydraulis*) do Ctesibius ở Alexandria phát minh vào thế kỷ 3 TCN. Di vật ở Aquincum (Budapest) mang bia ghi năm **228 sau Công nguyên**. Đây là tổ tiên xa của đàn organ, và qua đó của [[dan-phim-co|các nhạc cụ phím]] ([[nhac-khi-hoc]]).
 - **Boethius**, *De institutione musica* (khoảng năm 500): biên soạn chủ yếu từ sách Hy Lạp (Nicomachus, Ptolemy), chia âm nhạc thành ba tầng: âm nhạc vũ trụ, âm nhạc con người, âm nhạc nhạc cụ. Các bản chép sớm nhất thuộc thế kỷ 9. Sách được chép và trích dẫn suốt khoảng một nghìn năm, là con đường chính đưa lý thuyết Hy Lạp vào Trung cổ — xem [[thoi-ky-trung-co]], [[dieu-thuc]].
 
 ## Với người học
@@ -622,7 +622,7 @@ Danh sách "bài phải học" ([[lo-trinh-tac-pham]]) cũng là một **kinh đ
     title: 'Lịch sử âm nhạc Việt Nam: các mốc và nguồn',
     category: 'musicology',
     also: ['modern'],
-    aliases: ['lịch sử âm nhạc Việt Nam', 'history of Vietnamese music', 'âm nhạc Việt Nam qua các thời kỳ', 'trống đồng', 'trống đồng Ngọc Lũ', 'đàn đá', 'đàn đá Ndut Liêng Krak', 'nhạc cung đình', 'cải lương', 'Trần Văn Khê'],
+    aliases: ['lịch sử âm nhạc Việt Nam', 'history of Vietnamese music', 'âm nhạc Việt Nam qua các thời kỳ', 'trống đồng', 'trống đồng Ngọc Lũ', 'nhạc cung đình', 'cải lương', 'Trần Văn Khê'],
     summary: 'Các mốc của lịch sử âm nhạc Việt Nam theo những gì nguồn ghi nhận được: trống đồng Đông Sơn và đàn đá, nhạc cung đình qua các triều Lý, Lê, Nguyễn, sân khấu chèo, tuồng, cải lương, tân nhạc từ thập niên 1930, các nhạc viện năm 1956, nghiên cứu của Trần Văn Khê, và các di sản được UNESCO ghi danh. Bài ghi rõ chỗ nào còn tranh luận.',
     wiki: 'Music_of_Vietnam',
     refs: [
@@ -649,7 +649,7 @@ Viết lịch sử âm nhạc Việt Nam khó hơn viết lịch sử nhạc ph�
 
 ## 1. Khảo cổ: âm nhạc trước chữ viết
 - **Trống đồng Ngọc Lũ** (văn hoá Đông Sơn): tìm thấy năm 1893 ở Hà Nam; Bảo tàng Lịch sử Quốc gia xác định niên đại khoảng **2.000 – 2.500 năm trước**; là bảo vật quốc gia (2012). Theo bảo tàng, mặt trống có hình người cầm chày dài đánh trống, và trống được dùng làm nhạc cụ trong lễ hội, nghi lễ, đồng thời là biểu tượng quyền lực. Đây là chứng cứ hình ảnh — xem [[phuong-phap-su-hoc-am-nhac|âm nhạc học hình ảnh]].
-- **Đàn đá Ndut Liêng Krak** (Đắk Lắk): 11 thanh đá do công nhân người Mnông Gar tìm thấy tháng 2/1949; nhà dân tộc học Georges Condominas đưa về Paris. Nhà [[am-nhac-hoc|âm nhạc học]] André Schaeffner đo đạc và công bố trên *Revue de Musicologie* (1951). Đây là một nhạc cụ **tự thân vang** theo phân loại Hornbostel – Sachs ([[nhac-khi-hoc]]). Nơi lưu giữ hiện nay (Musée de l'Homme hay Musée du quai Branly) **cần kiểm tra lại**.
+- **[[dan-da|Đàn đá Ndut Liêng Krak]]** (Đắk Lắk): 11 thanh đá do công nhân người Mnông Gar tìm thấy tháng 2/1949; nhà dân tộc học Georges Condominas đưa về Paris. Nhà [[am-nhac-hoc|âm nhạc học]] André Schaeffner đo đạc và công bố trên *Revue de Musicologie* (1951). Đây là một nhạc cụ **tự thân vang** theo phân loại Hornbostel – Sachs ([[nhac-khi-hoc]]). Nơi lưu giữ hiện nay (Musée de l'Homme hay Musée du quai Branly) **cần kiểm tra lại**.
 
 ## 2. Nhạc cung đình qua các triều đại
 - **Thời Lý — giao lưu với Chăm:** năm 1044, Lý Thái Tông đánh Chiêm Thành, bắt về hoàng hậu, phi tần và cung nữ của vua Chăm. Sử sách cũng chép việc một vua Lý cho nhạc công soạn khúc theo **"Chiêm Thành âm"**, nghe buồn thương đến mức người nghe rơi nước mắt, và một nhà sư can rằng đó là âm thanh của nước loạn. Đa số nguồn tiếng Việt xếp chuyện này vào thời **Lý Cao Tông**, một nguồn khác ghi thời Lý Thánh Tông. **Năm cụ thể cần đối chiếu *Đại Việt sử ký toàn thư*.**
@@ -667,7 +667,7 @@ Viết lịch sử âm nhạc Việt Nam khó hơn viết lịch sử nhạc ph�
 - **Nghiên cứu:** **Trần Văn Khê** bảo vệ luận án tiến sĩ về âm nhạc truyền thống Việt Nam tại Đại học Sorbonne năm **1958**; sách *La musique vietnamienne traditionnelle* in ở Paris năm 1962, lâu nay là tài liệu chuẩn về đề tài này. Giáo trình đại học: Thụy Loan, *Lược sử âm nhạc Việt Nam* (1993).
 
 ## 5. Di sản và bảo tồn
-UNESCO đã ghi danh nhiều loại hình âm nhạc Việt Nam: Nhã nhạc (2003/2008), Không gian văn hoá cồng chiêng Tây Nguyên (2005/2008), Quan họ và Ca trù (2009), Hát Xoan (2011, chuyển sang Danh sách đại diện năm 2017), Đờn ca tài tử (2013), Ví, Giặm (2014), Tín ngưỡng thờ Mẫu Tam phủ cùng hát văn (2016), Bài chòi (2017), Thực hành Then (2019). Bảng chi tiết ở [[am-nhac-truyen-thong-viet-nam]].
+UNESCO đã ghi danh nhiều loại hình âm nhạc Việt Nam: Nhã nhạc (2003/2008), [[cong-chieng|Không gian văn hoá cồng chiêng]] Tây Nguyên (2005/2008), Quan họ và Ca trù (2009), Hát Xoan (2011, chuyển sang Danh sách đại diện năm 2017), Đờn ca tài tử (2013), Ví, Giặm (2014), Tín ngưỡng thờ Mẫu Tam phủ cùng hát văn (2016), Bài chòi (2017), Thực hành Then (2019). Bảng chi tiết ở [[am-nhac-truyen-thong-viet-nam]].
 
 ## Khoảng trống cần nghiên cứu
 *(Nhận xét của thư viện.)*

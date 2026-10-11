@@ -482,17 +482,17 @@ Suy nghĩ bằng **số bậc** (I – IV – V, xem [[bac-am-giai]]) thay vì t
 Một số nhạc cụ [[doc-not-nhanh|đọc nốt]] khác với âm thanh thực (cao độ thực = **concert pitch**, cao độ của piano):
 | Nhạc cụ | Viết C, nghe ra |
 |---|---|
-| Clarinet, trumpet, sax tenor (B♭) | B♭ (thấp hơn 2 trưởng; sax tenor thấp thêm 1 quãng 8) |
-| Kèn cor (F) | F (thấp hơn 5 đúng) |
+| [[clarinet|Clarinet]], [[trumpet|trumpet]], sax tenor (B♭) | B♭ (thấp hơn 2 trưởng; sax tenor thấp thêm 1 quãng 8) |
+| [[kenh-horn|Kèn cor]] (F) | F (thấp hơn 5 đúng) |
 | Sax alto (E♭) | E♭ (thấp hơn 6 trưởng) |
-| Guitar, contrabass | C thấp hơn 1 quãng 8 |
-| Piccolo | C cao hơn 1 quãng 8 |
+| Guitar, [[double-bass|contrabass]] | C thấp hơn 1 quãng 8 |
+| [[sao-flute|Piccolo]] | C cao hơn 1 quãng 8 |
 
 Khi [[dem-hat-piano|đệm piano]] cho các nhạc cụ này, cần biết bản của họ đang viết ở giọng nào.
 
 ## Vì sao lại có nhạc cụ chuyển giọng?
 - **Kèn đồng tự nhiên**: kèn cor và trumpet ngày xưa **không có van**, chỉ chơi được các nốt trong [[chuoi-boi-am]] của một giọng. Muốn đổi giọng, người chơi **thay đoạn ống** (crook) — có khi để cả giá ống bên cạnh. Nhạc cho cor luôn được **viết như ở giọng Đô**; đoạn ống quyết định âm thanh thực. Van chỉ phổ biến trong dàn nhạc từ khoảng giữa thế kỷ 19; cor giọng **Fa** thành chuẩn từ đầu thế kỷ 19.
-- **Cùng một hệ ngón cho cả họ nhạc cụ**: clarinet Si♭ và clarinet La dùng **cùng cách bấm**, người chơi đổi nhạc cụ mà không phải học lại; saxophone cũng vậy.
+- **Cùng một hệ ngón cho cả họ nhạc cụ**: clarinet Si♭ và clarinet La dùng **cùng cách bấm**, người chơi đổi nhạc cụ mà không phải học lại; [[saxophone|saxophone]] cũng vậy.
 - **Giữ nốt nằm gọn trong khuông**, hạn chế [[khuong-nhac|dòng kẻ phụ]].
 `,
   },

@@ -384,7 +384,7 @@ Nghiên cứu của **Duke, Simmons và Cash (2009)** với 17 sinh viên piano 
 - Lưu ý: nghiên cứu có tính **tương quan** (không phải thí nghiệm), mẫu nhỏ và chỉ kiểm tra sau một ngày.
 
 ## "Luyện tập có chủ đích" và huyền thoại 10.000 giờ
-- **Ericsson, Krampe và Tesch-Römer (1993)** khảo sát sinh viên violin ở Học viện âm nhạc Tây Berlin. Họ gọi là **luyện tập có chủ đích** (deliberate practice) những hoạt động **có mục tiêu, tốn sức, không hẳn vui**, nhằm sửa điểm yếu. Nhóm "giỏi nhất" ước tính đã tích luỹ trung bình **hơn 10.000 giờ** tập một mình trước 20 tuổi. Số giờ là **ước tính hồi tưởng** của người được hỏi.
+- **Ericsson, Krampe và Tesch-Römer (1993)** khảo sát sinh viên [[violin|violin]] ở Học viện âm nhạc Tây Berlin. Họ gọi là **luyện tập có chủ đích** (deliberate practice) những hoạt động **có mục tiêu, tốn sức, không hẳn vui**, nhằm sửa điểm yếu. Nhóm "giỏi nhất" ước tính đã tích luỹ trung bình **hơn 10.000 giờ** tập một mình trước 20 tuổi. Số giờ là **ước tính hồi tưởng** của người được hỏi.
 - Con số này bị phổ biến thành "**quy tắc 10.000 giờ**" — chính Ericsson cho rằng cách hiểu đó **xuyên tạc** nghiên cứu.
 - **Macnamara, Hambrick và Oswald (2014)** tổng hợp 88 nghiên cứu: trong âm nhạc, luyện tập có chủ đích giải thích khoảng **21%** khác biệt về trình độ — quan trọng, nhưng **không phải tất cả**. Mối liên hệ yếu hơn khi đo chính xác hơn.
 - Một nghiên cứu lặp lại năm 2019 (Macnamara và Maitra) **không tái hiện được** kết quả cốt lõi của nghiên cứu 1993.
@@ -393,7 +393,7 @@ Bài học cho người dạy: chất lượng buổi tập (mục tiêu rõ, t�
 
 ## Luyện xen kẽ (interleaved)
 Luyện **khối** là tập một thứ cho đến khi xong rồi mới chuyển; luyện **xen kẽ** là chuyển qua lại giữa các bài/đoạn.
-- Nghiên cứu của Carter & Grahn (2016): 10 người chơi clarinet tập một bản theo kiểu khối, một bản theo kiểu xen kẽ (đổi bản mỗi 3 phút, tổng thời gian như nhau). Các bản tập xen kẽ được giám khảo **chấm điểm cao hơn rõ rệt**.
+- Nghiên cứu của Carter & Grahn (2016): 10 người chơi [[clarinet|clarinet]] tập một bản theo kiểu khối, một bản theo kiểu xen kẽ (đổi bản mỗi 3 phút, tổng thời gian như nhau). Các bản tập xen kẽ được giám khảo **chấm điểm cao hơn rõ rệt**.
 - Tuy vậy, người chơi vẫn **thích** tập khối hơn — vì xen kẽ đòi hỏi nhiều nỗ lực hơn và cảm giác tiến bộ trước mắt ít hơn.
 - Một số tác giả cho rằng xen kẽ hợp nhất với bài **đã thuộc** và đang trau chuốt; bài mới nên học bằng cách khác trước.
 
@@ -881,7 +881,7 @@ Liên quan: [[dem-hat-piano]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
 **Cách luyện**: đếm to "1-và-a 2-và-a…", tay phải lặp hợp âm nhẹ ở cổ tay; giữ **tay trái chắc** để ca sĩ dựa vào. Tốc độ chậm — khoảng 50 – 70 phách lớn mỗi phút (ước lượng thường gặp, không phải quy định).
 
 ## Rock and roll (thập niên 1950)
-- Tay phải **nện hợp âm móc đơn đều** khớp với trống: hi-hat móc đơn, trống trầm phách 1 – 3, trống lẫy phách 2 – 4 (Yamaha). Jerry Lee Lewis nổi tiếng với chuỗi móc đơn dồn dập.
+- Tay phải **nện hợp âm móc đơn đều** khớp với trống: [[trong-jazz|hi-hat]] móc đơn, trống trầm phách 1 – 3, trống lẫy phách 2 – 4 (Yamaha). Jerry Lee Lewis nổi tiếng với chuỗi móc đơn dồn dập.
 - Tay trái: **bass boogie** chơi móc đơn đều (không [[swing|swing]]) là âm thanh rock and roll; bản đơn giản chỉ giữ các phách chính.
 ::rhythm 4/4 e-e >e-e e-e >e-e // | Tay phải rock and roll: móc đơn đều, nhấn phách 2 và 4
 ::staff bass C3+G3 C3+G3 C3+A3 C3+A3 C3+Bb3 C3+Bb3 C3+A3 C3+A3 | Một mẫu tay trái rock and roll quen thuộc trên C: quãng 5 – quãng 6 – quãng 7 thứ – quãng 6 (minh hoạ)
@@ -1274,7 +1274,7 @@ Một tay có thể vừa giữ nốt dài của bè trên vừa chạy bè dư�
 ## Đổi ngón trên phím
 **Đổi ngón im lặng**: đang giữ một phím, thay ngón này bằng ngón khác **mà không nhả phím**, để giải phóng ngón cho nốt tiếp theo. Việc này không tạo ra âm thanh, nên chọn ngón nào là chuyện **thoải mái và chắc chắn**.
 
-Các giáo viên organ (nhạc cụ dùng kỹ thuật này nhiều nhất) lại cho rằng nhạc [[thoi-ky-baroque|Baroque]] **thường không cần** đổi ngón: Bach thường được chơi với **legato có ngắt** hoặc [[ky-thuat-cham-phim|non-legato]], nên phần lớn đoạn hai bè một tay vẫn chơi được không đổi ngón. Ngoại lệ thường gặp là ở **[[cau-ket|kết]]** có thêm bè. Gợi ý thực tế: bắt đầu không đổi ngón; chỉ thêm khi một bè buộc phải giữ trong lúc bè kia chạy.
+Các giáo viên [[organ-ong|organ]] (nhạc cụ dùng kỹ thuật này nhiều nhất) lại cho rằng nhạc [[thoi-ky-baroque|Baroque]] **thường không cần** đổi ngón: Bach thường được chơi với **legato có ngắt** hoặc [[ky-thuat-cham-phim|non-legato]], nên phần lớn đoạn hai bè một tay vẫn chơi được không đổi ngón. Ngoại lệ thường gặp là ở **[[cau-ket|kết]]** có thêm bè. Gợi ý thực tế: bắt đầu không đổi ngón; chỉ thêm khi một bè buộc phải giữ trong lúc bè kia chạy.
 
 Lộ trình tác phẩm theo trình độ: [[lo-trinh-tac-pham]]. Phân tích một [[the-loai|prelude]] của Bach: [[phan-tich-prelude-do-truong]].
 `,

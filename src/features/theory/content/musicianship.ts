@@ -307,7 +307,7 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
 |---|---|---|
 | **Dalcroze** | Émile Jaques-Dalcroze | Vận động cơ thể theo [[tiet-tau|nhịp điệu]] (eurhythmics), [[xuong-am]], [[ngau-hung-piano|ngẫu hứng]] |
 | **Kodály** | [[Kodály|Zoltán Kodály]] | Hát là nền tảng; dân ca; [[xuong-am|Đô di động]] và ký hiệu tay; [[doc-not-nhanh|đọc nhạc]] |
-| **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết [[hop-am-ba|hợp âm]] nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, glockenspiel); ngẫu hứng nhiều hơn Kodály |
+| **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết [[hop-am-ba|hợp âm]] nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, [[bo-go-phim|glockenspiel]]); ngẫu hứng nhiều hơn Kodály |
 | **Suzuki** | Shinichi Suzuki | Học nhạc như học **tiếng mẹ đẻ**: bắt đầu rất sớm, nghe nhiều, học thuộc trước, **phụ huynh** tham gia |
 
 ## Lịch sử từng phương pháp
@@ -397,7 +397,7 @@ Liên quan: [[not-nhac]], [[khuong-nhac]], [[day-tre-em]].
     ],
     body: `
 ## Quan sát các giáo viên bậc thầy (Duke & Simmons, 2006)
-**Robert Duke** và **Amy Simmons** (Đại học Texas ở Austin) xem khoảng **25 giờ** video các buổi học riêng của ba giáo viên nổi tiếng — nghệ sĩ oboe Richard Killmer, nghệ sĩ viola Donald McInnes và nghệ sĩ piano **Nelita True** — để tìm những điểm **chung** của cả ba. Họ mô tả **19 yếu tố**, xếp vào ba nhóm:
+**Robert Duke** và **Amy Simmons** (Đại học Texas ở Austin) xem khoảng **25 giờ** video các buổi học riêng của ba giáo viên nổi tiếng — nghệ sĩ [[oboe|oboe]] Richard Killmer, nghệ sĩ [[viola|viola]] Donald McInnes và nghệ sĩ piano **Nelita True** — để tìm những điểm **chung** của cả ba. Họ mô tả **19 yếu tố**, xếp vào ba nhóm:
 | Nhóm | Câu hỏi mà nhóm yếu tố trả lời |
 |---|---|
 | **Mục tiêu và kỳ vọng** | Giáo viên đặt chuẩn âm thanh và mục tiêu cho học trò thế nào? |
@@ -427,7 +427,7 @@ Paul Evans (2015) tổng hợp cách áp dụng thuyết này cho giáo dục â
 ## "10.000 giờ"? (Ericsson và các nghiên cứu sau)
 | Nghiên cứu | Kết quả |
 |---|---|
-| Ericsson, Krampe & Tesch-Römer (1993), nghệ sĩ violin ở Berlin | Nhóm "giỏi nhất" trung bình hơn **10.000 giờ** tập đến 20 tuổi; tác giả cho rằng **luyện tập có chủ đích** (deliberate practice) giải thích phần lớn khác biệt |
+| Ericsson, Krampe & Tesch-Römer (1993), nghệ sĩ [[violin|violin]] ở Berlin | Nhóm "giỏi nhất" trung bình hơn **10.000 giờ** tập đến 20 tuổi; tác giả cho rằng **luyện tập có chủ đích** (deliberate practice) giải thích phần lớn khác biệt |
 | Macnamara, Hambrick & Oswald (2014), phân tích tổng hợp | Luyện tập có chủ đích giải thích khoảng **21%** khác biệt thành tích trong âm nhạc (26% trò chơi, 18% thể thao) |
 | Macnamara & Maitra (2019), lặp lại nghiên cứu 1993 với 39 người chơi violin | Luyện tập **không** phân biệt được nhóm "giỏi nhất" với nhóm "giỏi"; hiệu ứng nhỏ hơn nghiên cứu gốc |
 Kết luận thận trọng: tập **nhiều và đúng cách** rất quan trọng, nhưng không phải yếu tố duy nhất; "10.000 giờ" không phải một ngưỡng thần kỳ.

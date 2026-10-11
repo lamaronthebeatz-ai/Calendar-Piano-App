@@ -312,7 +312,7 @@ Ranh giới không cứng: minuet là một thể loại hoàn chỉnh, nhưng c
 | Chủ đề | Dấu hiệu âm nhạc thường được mô tả | Gợi liên tưởng |
 |---|---|---|
 | **Quân hành, hành khúc** | Nhịp chẵn, [[tiet-tau|tiết tấu]] [[cham-doi-dau-noi|chấm dôi]], hình kèn hiệu | Uy nghi, nghi lễ |
-| **Săn bắn** | Nhịp 6/8, hình **tù và** (horn call) | Ngoài trời, quý tộc |
+| **Săn bắn** | Nhịp 6/8, hình **tù và** ([[kenh-horn|horn]] call) | Ngoài trời, quý tộc |
 | **Đồng quê** (pastoral) | [[bass-ngan|Bass ngân]] như kèn túi, nhịp chậm đung đưa | Thanh bình |
 | **Thổ Nhĩ Kỳ** (alla turca) | Bè trầm dồn dập mô phỏng trống, [[ky-hieu-hoa-my|nốt hoa mỹ]] | Ngoại lai, náo nhiệt — xem [[phan-tich-rondo-alla-turca]] |
 | **Phong cách bác học** (learned) | [[doi-am]] mô phỏng, [[fugue|fugato]] | Nhà thờ, truyền thống |
@@ -388,7 +388,7 @@ Lưu ý: nhãn **"Sturm und Drang"** từng được dùng như một chủ đ�
     ],
     body: `
 ## Cấu trúc
-- Viết cho **ba violin và [[bass-so|basso continuo]]**, đi kèm một [[to-khuc-baroque|gigue]].
+- Viết cho **ba [[violin|violin]] và [[bass-so|basso continuo]]**, đi kèm một [[to-khuc-baroque|gigue]].
 - Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một [[giai-dieu|giai điệu]], lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** (basso ostinato / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
 
 ## Bè trầm và vòng hợp âm
@@ -472,7 +472,7 @@ Liên hệ phương pháp: đây là ví dụ kinh điển cho [[phan-tich-schen
 Ô 22 có F♯ ở bè trầm, sang ô 23 nhảy lên A♭ — một [[quang|quãng 3 giảm]]. Một số ấn bản (trong đó có ấn bản Gounod dùng) **chèn thêm một ô** với G ở bè trầm để "làm mượt". Ô này không có trong bản chép tay năm 1725 của học trò Bach, Heinrich Gerber, và đã bị Franz Kroll (1862), August Halm (1905) đặt nghi vấn.
 
 ## Ave Maria của Gounod
-[[charles-gounod|Charles Gounod]] viết một giai điệu **đặt chồng lên** [[the-loai|Prelude]] (hầu như không sửa đổi): bản cho violin năm 1853, và bản cho giọng hát với lời Latin "Ave Maria" năm 1859 — bản trở nên nổi tiếng.
+[[charles-gounod|Charles Gounod]] viết một giai điệu **đặt chồng lên** [[the-loai|Prelude]] (hầu như không sửa đổi): bản cho [[violin|violin]] năm 1853, và bản cho giọng hát với lời Latin "Ave Maria" năm 1859 — bản trở nên nổi tiếng.
 
 ## Gợi ý luyện tập
 - Chơi **hợp âm khối** từng ô trước để nghe hoà âm và tìm [[ngon-bam|ngón bấm]] (xem [[the-dao-hop-am]]).
@@ -494,7 +494,7 @@ Liên hệ phương pháp: đây là ví dụ kinh điển cho [[phan-tich-schen
     ],
     body: `
 ## Tổng quan
-Bộ ba Gymnopédie của [[Satie]] hoàn thành ngày **2/4/1888**; cả ba đều ở nhịp **3/4**. Bài số 1 ở giọng **Rê trưởng**, đoạn giữa nghiêng sang Rê thứ. Chỉ dẫn "**Lent et douloureux**" (chậm và đau buồn) có trong bản in; [[van-ban-hoc-am-nhac|bản viết tay]] ghi "Très lent". [[Debussy]] sau này phối khí cho dàn nhạc bài số 1 và số 3.
+Bộ ba Gymnopédie của [[Satie]] hoàn thành ngày **2/4/1888**; cả ba đều ở nhịp **3/4**. Bài số 1 ở giọng **Rê trưởng**, đoạn giữa nghiêng sang Rê thứ. Chỉ dẫn "**Lent et douloureux**" (chậm và đau buồn) có trong bản in; [[van-ban-hoc-am-nhac|bản viết tay]] ghi "Très lent". [[Debussy]] sau này [[dan-nhac-giao-huong|phối khí]] cho dàn nhạc bài số 1 và số 3.
 
 ## Hai hợp âm xen kẽ
 Phần mở đầu chỉ luân phiên **hai hợp âm 7 trưởng**:
@@ -830,7 +830,7 @@ Liên hệ phương pháp: các nhóm nhịp lệch phách là chỗ tốt để
     ],
     body: `
 ## Tổng quan
-Minuet **Sol trưởng** BWV Anh. 114 và Minuet Sol thứ BWV Anh. 115 nằm trong *Sổ tay cho [[lo-trinh-tac-pham|Anna Magdalena]] Bach* (1725) nên lâu nay được gán cho [[johann-sebastian-bach|Bach]]. Thực ra cả hai đến từ một [[the-loai|tổ khúc]] harpsichord của **Christian Petzold** (1677–1733), nhạc sĩ organ ở Dresden (các nguồn ghi thời điểm xác định lại tác giả là những năm 1970). Bài ở nhịp **3/4**, dài **32 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. Bối cảnh vũ điệu: [[minuet-va-trio]].
+Minuet **Sol trưởng** BWV Anh. 114 và Minuet Sol thứ BWV Anh. 115 nằm trong *Sổ tay cho [[lo-trinh-tac-pham|Anna Magdalena]] Bach* (1725) nên lâu nay được gán cho [[johann-sebastian-bach|Bach]]. Thực ra cả hai đến từ một [[the-loai|tổ khúc]] harpsichord của **Christian Petzold** (1677–1733), nhạc sĩ [[organ-ong|organ]] ở Dresden (các nguồn ghi thời điểm xác định lại tác giả là những năm 1970). Bài ở nhịp **3/4**, dài **32 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. Bối cảnh vũ điệu: [[minuet-va-trio]].
 
 ## Hình thức hai đoạn
 ::form A_(Sol):16 B_(Sol_→_Rê_→_Sol):16 | Hai đoạn ‖: A :‖: B :‖ (số dưới mỗi khối là số ô)
@@ -891,7 +891,7 @@ Bài này áp lý thuyết [[vong-coltrane]] vào chính tác phẩm đã làm n
 | Mục | Chi tiết |
 |---|---|
 | Thu âm | Bản chính (master) thu ngày **5/5/1959** tại Atlantic Studios, New York (album thu 4–5/5/1959) |
-| Nhóm | John Coltrane (saxophone tenor), Tommy Flanagan (piano), Paul Chambers (bass), Art Taylor (trống) |
+| Nhóm | John Coltrane ([[saxophone|saxophone]] tenor), Tommy Flanagan (piano), Paul Chambers (bass), Art Taylor (trống) |
 | Phát hành | Album *Giant Steps*, Atlantic SD 1311, đầu năm 1960 (các nguồn ghi tháng 1 hoặc tháng 2) — album đầu tiên Coltrane làm trưởng nhóm cho Atlantic |
 | Nhịp độ | Khoảng **290 phách/phút** (đo trên bản thu; các nguồn ghi 290–292) |
 | Ghi danh | Năm 2004 được đưa vào Sổ đăng ký bản thu quốc gia của Thư viện Quốc hội Mỹ |
@@ -1195,7 +1195,7 @@ Bước tiếp theo: các Sinfonia ba bè và [[fugue]]. Lý thuyết nền: [[d
 ## Tổng quan
 24 [[the-loai|Prelude]] Op. 28 của [[frederic-chopin|Chopin]] in năm **1839**, phần lớn hoàn thành ở Valldemossa (Majorca) mùa đông 1838–39. Các bài đi theo [[vong-quang-nam|vòng quãng 5]], mỗi [[am-giai-truong|giọng trưởng]] theo sau là [[giong-song-song|giọng thứ song song]] (C, a, G, e…) — một "tập [[prelude-ung-tac|prelude]]" qua đủ 24 giọng như [[luat-binh-quan|Clavier bình quân]] của [[johann-sebastian-bach|Bach]]. Chopin **không đặt tên** cho từng bài; các biệt danh đều do người sau.
 
-Số 4: **Mi thứ**, **[[nhip-do|Largo]]**, dài **25 ô** (cộng một nốt lấy đà). Bài được chơi (trên organ, cùng số 6) trong tang lễ Chopin ở nhà thờ Madeleine, Paris, ngày 30/10/1849.
+Số 4: **Mi thứ**, **[[nhip-do|Largo]]**, dài **25 ô** (cộng một nốt lấy đà). Bài được chơi (trên [[organ-ong|organ]], cùng số 6) trong tang lễ Chopin ở nhà thờ Madeleine, Paris, ngày 30/10/1849.
 
 ## Hình thức: hai nửa song song
 ::form Nửa_đầu:12 Nửa_sau:13 | Hai nửa: ô 1–12 kết nửa trên V7; ô 13 bắt đầu lại như ô 1 (số dưới mỗi khối là số ô)
@@ -1364,7 +1364,7 @@ Chương 2: **Adagio cantabile**, **La giáng trưởng** (giọng [[bac-am-giai
 Đoạn xen C là chỗ hoà âm đi xa nhất — một ví dụ [[trung-am-cromatic|quan hệ trung âm cromatic]] thời Beethoven.
 
 ## Gợi ý khi dạy
-- Nghĩ kết cấu như **[[the-loai|tứ tấu]] đàn dây**: giai điệu là violin 1, móc kép ở giữa là viola (rất nhẹ), bè trầm là cello. Một tay thường phải chơi cả giai điệu lẫn một phần đệm — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] trong cùng một tay.
+- Nghĩ kết cấu như **[[the-loai|tứ tấu]] đàn dây**: giai điệu là [[violin|violin]] 1, móc kép ở giữa là [[viola|viola]] (rất nhẹ), bè trầm là [[cello|cello]]. Một tay thường phải chơi cả giai điệu lẫn một phần đệm — luyện [[lam-noi-giai-dieu|làm nổi giai điệu]] trong cùng một tay.
 - *[[thuat-ngu|Cantabile]]* = như hát: luyện [[ky-thuat-cham-phim|legato]] và [[dien-dat-cau-nhac|câu nhạc]] dài 4 ô.
 - Beethoven không ghi số [[nhip-do|máy đếm nhịp]]; các con số trong [[an-ban-urtext|ấn bản]] là của người biên tập.
 - So sánh: chương 3 cũng là rondo (bảy phần) — xem [[rondo]].

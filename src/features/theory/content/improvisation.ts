@@ -133,7 +133,7 @@ Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng
 - Dù vậy, các nghệ sĩ như [[Liszt]], [[Chopin]], [[clara-schumann|Clara Schumann]] vẫn ứng tác **prelude** và đoạn nối trong buổi hoà nhạc (xem [[prelude-ung-tac]]).
 
 ## Ngẫu hứng sống tiếp trong nhà thờ
-Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **organ Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở [[doi-song-am-nhac-va-thiet-che|Nhạc viện Paris]], coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu [[thanh-ca-gregorian|thánh ca Gregorian]] của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1989) để lại rất nhiều bản thu ứng tác.
+Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **[[organ-ong|organ]] Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở [[doi-song-am-nhac-va-thiet-che|Nhạc viện Paris]], coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu [[thanh-ca-gregorian|thánh ca Gregorian]] của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1989) để lại rất nhiều bản thu ứng tác.
 
 ## Hồi sinh
 - **Robert Levin** ứng tác cadenza khi chơi [[hinh-thuc-concerto|concerto]] Mozart (xem [[cadenza]]).

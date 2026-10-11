@@ -89,7 +89,7 @@ Tên đầy đủ của cây [[dan-piano|đàn piano]] là **[[lich-su-piano|pia
 ## Lịch sử ký hiệu cường độ
 - **[[hinh-thuc-sonata|Sonata]] pian' e forte** (1597) của [[giovanni-gabrieli|Giovanni Gabrieli]] là một trong những tác phẩm **đầu tiên** ghi cường độ vào bản nhạc: hai nhóm nhạc cụ luân phiên chơi *piano* và *forte*. Các nguồn không thống nhất đây có phải là bản **đầu tiên** hay không.
 - **"Cường độ bậc thang"** (đổi đột ngột giữa nhỏ và to, không có to dần) thường được dạy là đặc trưng của [[thoi-ky-baroque|Baroque]], gắn với đàn [[dan-phim-co|harpsichord]] vốn chỉ đổi được to – nhỏ bằng cách đổi [[ban-phim|bàn phím]]. Tuy vậy, có học giả cho rằng quan niệm "chỉ có bậc thang" là một phong cách biểu diễn giữa [[thoi-ky-the-ky-20|thế kỷ 20]], vì các sách lý luận thế kỷ 17–18 vẫn khen ngợi sự **uốn cường độ từng nốt**. Vấn đề còn tranh cãi.
-- Các nhà soạn nhạc về sau **mở rộng thang**: [[Tchaikovsky]] ghi **pppppp** (sáu chữ p) cho một câu bassoon trong [[the-loai|Giao hưởng]] số 6 "Pathétique" — thực tế gần như không thể chơi được, nên nhiều nhạc trưởng (từ Hans Richter) cho clarinet trầm thay thế mấy nốt đó.
+- Các nhà soạn nhạc về sau **mở rộng thang**: [[Tchaikovsky]] ghi **pppppp** (sáu chữ p) cho một câu [[bassoon|bassoon]] trong [[the-loai|Giao hưởng]] số 6 "Pathétique" — thực tế gần như không thể chơi được, nên nhiều nhạc trưởng (từ Hans Richter) cho [[clarinet|clarinet trầm]] thay thế mấy nốt đó.
 
 ## Khi giảng dạy
 Cường độ **tương đối** theo phong cách và nhạc cụ: *f* của [[wolfgang-amadeus-mozart|Mozart]] (viết cho fortepiano tiếng nhẹ) không giống *f* của [[sergei-rachmaninoff|Rachmaninoff]]. Ký hiệu cho biết **tính chất và mối quan hệ** giữa các đoạn hơn là một mức decibel cố định.
@@ -643,7 +643,7 @@ Liên quan: [[nhip-do]], [[ky-vong-am-nhac]], [[phan-tich-nocturne-op9-so2]], [[
 Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một dấu chấm staccato hay một chữ *[[ban-dap|Ped.]]* được hiểu khác nhau ở mỗi thời kỳ. Phong trào **[[dien-tau|diễn tấu]] theo hiểu biết lịch sử** ([[phong-trao-bieu-dien-lich-su|historically informed performance]]) — tranh luận sôi nổi từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]] — tìm hiểu nhạc cụ, sách lý luận và thói quen của từng thời kỳ để đưa ra lựa chọn có cơ sở. Bối cảnh các thời kỳ: [[cac-thoi-ky]].
 
 ## Baroque: Bach trên piano hiện đại
-- [[johann-sebastian-bach|Bach]] **không biết** đến piano hiện đại; nhạc đàn phím của ông viết cho [[dan-phim-co|harpsichord]], clavichord, organ.
+- [[johann-sebastian-bach|Bach]] **không biết** đến piano hiện đại; nhạc đàn phím của ông viết cho [[dan-phim-co|harpsichord]], clavichord, [[organ-ong|organ]].
 - Hai phía tranh luận: phía "nhạc cụ cổ" chơi Bach trên harpsichord hoặc chơi trên piano theo lối "không piano"; phía còn lại cho rằng nếu biết piano hiện đại, Bach hẳn đã thích nó. Một lập luận thêm: chính Bach thường **chuyển soạn** tác phẩm của mình cho nhạc cụ khác, nên [[am-sac|âm sắc]] có lẽ không phải điều cốt yếu với ông.
 - Piano mang lại **sắc thái cường độ**, nhiều màu âm và pedal — người chơi cần quyết định dùng chúng đến đâu.
 - Các câu hỏi thực hành: cường độ (xem [[cuong-do]] — tranh luận "bậc thang"), [[ky-hieu-hoa-my|hoa mỹ]] (láy rền từ nốt trên), [[dau-nhac-lai|trang trí khi lặp lại]], [[choi-phuc-dieu|chơi phức điệu]].

@@ -95,7 +95,7 @@ Từ khi khuông nhạc và hình nốt ổn định, các thay đổi lớn v�
 ## Khi giảng dạy: "Đô giữa là C4 hay C3?"
 - Theo **ký hiệu cao độ khoa học**, Đô giữa luôn là **C4**; số quãng 8 tăng lên mỗi khi đi từ Si sang Đô (nên nốt ngay dưới C4 là **B3**).
 - Ký hiệu Helmholtz (hay gặp trong sách châu Âu) viết Đô giữa là **c′**.
-- Một số hãng đàn điện tử và phần mềm (như Yamaha, Ableton Live) lại gọi Đô giữa là **C3**. Chuẩn MIDI chỉ quy định Đô giữa là **nốt số 60**, không quy định tên. Khi học sinh dùng đàn điện tử, cần nói rõ quy ước để tránh nhầm.
+- Một số hãng đàn điện tử và phần mềm (như Yamaha, Ableton Live) lại gọi Đô giữa là **C3**. Chuẩn [[synthesizer|MIDI]] chỉ quy định Đô giữa là **nốt số 60**, không quy định tên. Khi học sinh dùng đàn điện tử, cần nói rõ quy ước để tránh nhầm.
 `,
   },
   {
@@ -149,9 +149,9 @@ Piano dùng **khuông nhạc đôi**, nối bằng dấu ngoặc ôm: khuông tr
 Khoá nhạc "neo" một nốt vào một dòng cụ thể trên [[khuong-nhac]]; từ đó suy ra tên mọi nốt còn lại.
 | Khoá | Nốt được neo | Dòng | Dùng cho |
 |---|---|---|---|
-| [[khoa-sol]] | Sol (G4) | 2 | Piano tay phải, violin, sáo, giọng nữ |
-| [[khoa-fa]] | Fa (F3) | 4 | Piano tay trái, cello, bass, giọng nam trầm |
-| [[khoa-do]] | Đô (C4) | 3 (khoá Đô dòng 3) | Viola |
+| [[khoa-sol]] | Sol (G4) | 2 | Piano tay phải, [[violin|violin]], sáo, giọng nữ |
+| [[khoa-fa]] | Fa (F3) | 4 | Piano tay trái, [[cello|cello]], bass, giọng nam trầm |
+| [[khoa-do]] | Đô (C4) | 3 (khoá Đô dòng 3) | [[viola|Viola]] |
 
 ::img Middle C in four clefs.svg | Cùng một nốt Đô giữa (C4) được viết trong bốn khoá khác nhau
 
@@ -197,7 +197,7 @@ Khoá Sol là một loại [[khoa-nhac]], dùng cho [[khuong-nhac|khuông]] trê
 ::staff treble F4 A4 C5 E5 | Bốn khe của khoá Sol
 
 ## Nguồn gốc hình dạng
-Khoá Sol là chữ **G** kiểu Gothic được cách điệu; vòng xoắn của nó quấn quanh **dòng 2** — nốt Sol (G4). Vì thế nó còn được gọi là **khoá G**, và trước đây là **khoá violin**.
+Khoá Sol là chữ **G** kiểu Gothic được cách điệu; vòng xoắn của nó quấn quanh **dòng 2** — nốt Sol (G4). Vì thế nó còn được gọi là **khoá G**, và trước đây là **khoá [[violin|violin]]**.
 
 ## Mốc định hướng
 Ba nốt dễ nhận nhất trên khoá Sol: **[[ban-phim|Đô giữa]] (C4)** trên dòng kẻ phụ dưới, **Sol (G4)** ở dòng 2, **Đô cao (C5)** ở khe 3. Từ các mốc này có thể đọc các nốt khác theo [[quang|quãng]] (xem [[doc-not-nhanh]]).
@@ -259,13 +259,13 @@ Cùng một vị trí trên khuông, **[[not-nhac|tên nốt]]** ở khoá Fa ca
 ::img Alto clef.svg | Ký hiệu khoá Đô
 
 Tâm của khoá Đô chỉ vào dòng nào thì dòng đó là **[[ban-phim|Đô giữa]] (C4)**. Hai vị trí còn được dùng ngày nay:
-- **Khoá Đô dòng 3 (alto)** — viola.
-- **Khoá Đô dòng 4 (tenor)** — các nốt cao của cello, kèn bassoon, trombone.
+- **Khoá Đô dòng 3 (alto)** — [[viola|viola]].
+- **Khoá Đô dòng 4 (tenor)** — các nốt cao của [[cello|cello]], kèn [[bassoon|bassoon]], [[trombone|trombone]].
 
 ::staff alto F3 A3 C4 E4 G4 | Năm dòng của khoá Đô dòng 3 (tâm khoá = C4 ở dòng giữa)
 
 ## Vì sao viola cần khoá riêng?
-[[cao-do|Âm vực]] viola nằm **giữa** violin và cello. Viết bằng [[khoa-sol|khoá Sol]] hay [[khoa-fa|khoá Fa]] đều cần rất nhiều [[khuong-nhac|dòng kẻ phụ]]; khoá Đô dòng 3 đặt Đô giữa vào **giữa khuông**, nên phần lớn nốt viola nằm gọn trong 5 dòng.
+[[cao-do|Âm vực]] viola nằm **giữa** [[violin|violin]] và cello. Viết bằng [[khoa-sol|khoá Sol]] hay [[khoa-fa|khoá Fa]] đều cần rất nhiều [[khuong-nhac|dòng kẻ phụ]]; khoá Đô dòng 3 đặt Đô giữa vào **giữa khuông**, nên phần lớn nốt viola nằm gọn trong 5 dòng.
 
 ## Lịch sử
 Khoá Đô bắt nguồn từ chữ **C**, và từng được đặt ở **mọi dòng** trừ dòng trên cùng — nên gọi là khoá Đô "di động". Mỗi vị trí có tên riêng, ví dụ soprano (dòng 1), alto (dòng 3), tenor (dòng 4). Ngày nay chỉ còn alto và tenor được dùng thường xuyên.
@@ -309,7 +309,7 @@ Số phím tăng dần theo lịch sử, vì nhà soạn nhạc luôn muốn th�
 | Giữa thế kỷ 19 ([[frederic-chopin|Chopin]], [[franz-liszt|Liszt]]) | Khoảng **85** phím, 7 quãng 8 |
 | Cuối những năm 1880 | **88** phím — Steinway thêm 3 phím và chuẩn này được các hãng khác theo (có nguồn cho rằng Chickering làm trước) |
 
-Có đàn **nhiều hơn 88 phím**: mẫu **Bösendorfer Imperial** có **97 phím** (xuống đến C0). [[ferruccio-busoni|Busoni]] đặt làm năm 1909 để chuyển soạn một tác phẩm organ có nốt thấp hơn bàn phím thường. Các phím thêm được sơn **đen** để người chơi không nhầm.
+Có đàn **nhiều hơn 88 phím**: mẫu **Bösendorfer Imperial** có **97 phím** (xuống đến C0). [[ferruccio-busoni|Busoni]] đặt làm năm 1909 để chuyển soạn một tác phẩm [[organ-ong|organ]] có nốt thấp hơn bàn phím thường. Các phím thêm được sơn **đen** để người chơi không nhầm.
 
 Lịch sử cây đàn: [[lich-su-piano]].
 
@@ -394,7 +394,7 @@ Hai cách viết cùng nghĩa. Theo chuẩn phông ký hiệu nhạc SMuFL, dạ
 ## Khoá có số 8
 Một số khoá có số **8** nhỏ trên hoặc dưới: chơi cao hơn hoặc thấp hơn một quãng 8 so với viết. Ví dụ [[khoa-sol|khoá Sol]] có số 8 ở dưới dùng cho guitar và giọng tenor.
 
-8vb hay gặp nhất ở [[khoa-fa|khoá Fa]] — đặc biệt **tay trái piano** và contrabass.
+8vb hay gặp nhất ở [[khoa-fa|khoá Fa]] — đặc biệt **tay trái piano** và [[double-bass|contrabass]].
 `,
   },
 ]

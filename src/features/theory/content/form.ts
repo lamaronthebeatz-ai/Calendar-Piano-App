@@ -304,7 +304,7 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
 - Minuet là **vũ điệu Pháp**, phổ biến từ khoảng **1650** ở triều đình **Louis XIV**. **[[jean-baptiste-lully|Lully]]** — nhạc sĩ và vũ công phục vụ nhà vua — viết rất nhiều minuet cho opera và [[ballet|ballet]].
 - Nhịp **3/4**; bước nhảy cơ bản kéo dài **sáu phách**, tức là hai ô 3/4 — một lý do khiến minuet thường đi theo **cặp [[so-chi-nhip|ô nhịp]]** (xem [[sieu-nhip]]).
 - Đây là vũ điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **[[to-khuc-baroque|tổ khúc]] đàn phím** (xem [[the-loai]]).
-- Ví dụ quen thuộc với học trò piano: hai **[[phan-tich-minuet-sol-truong|Minuet Sol trưởng]] và Sol thứ** trong *Sổ tay cho Anna Magdalena [[johann-sebastian-bach|Bach]]* (1725) — được chép thành **một cặp, chơi [[dau-nhac-lai|da capo]]**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ organ ở Dresden.
+- Ví dụ quen thuộc với học trò piano: hai **[[phan-tich-minuet-sol-truong|Minuet Sol trưởng]] và Sol thứ** trong *Sổ tay cho Anna Magdalena [[johann-sebastian-bach|Bach]]* (1725) — được chép thành **một cặp, chơi [[dau-nhac-lai|da capo]]**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ [[organ-ong|organ]] ở Dresden.
 
 ## Hình thức: ba đoạn kép
 | Tầng | Cấu trúc |
@@ -455,7 +455,7 @@ Liên quan: [[hinh-thuc-am-nhac]], [[rondo]], [[giong-song-song]], [[the-loai]].
 Concerto đặt **một nghệ sĩ độc tấu** đối diện **dàn nhạc** (tutti). [[hinh-thuc-am-nhac|Hình thức]] của nó là câu trả lời cho câu hỏi: hai lực lượng này **chia nhau** chất liệu và các giọng như thế nào?
 
 ## Hình thức ritornello (Baroque)
-- **Ritornello** (tiếng Ý: "khúc quay lại") là [[cau-nhac|đoạn nhạc]] của dàn nhạc được **nhắc lại** nhiều lần, xen giữa là các **đoạn độc tấu**. Mô hình này có ở các concerto violin của **Torelli** và được **[[antonio-vivaldi|Vivaldi]]** chuẩn hoá trong hàng trăm concerto.
+- **Ritornello** (tiếng Ý: "khúc quay lại") là [[cau-nhac|đoạn nhạc]] của dàn nhạc được **nhắc lại** nhiều lần, xen giữa là các **đoạn độc tấu**. Mô hình này có ở các concerto [[violin|violin]] của **Torelli** và được **[[antonio-vivaldi|Vivaldi]]** chuẩn hoá trong hàng trăm concerto.
 - Một chương nhanh điển hình của Vivaldi: khoảng **năm ritornello xen với bốn đoạn độc tấu**.
 | Vai trò | Ritornello (dàn nhạc) | Đoạn độc tấu |
 |---|---|---|
@@ -678,7 +678,7 @@ Tên gọi: tiếng Ý *ostinato* nghĩa là **"bướng bỉnh"**, cùng gốc 
 ## Passacaglia và chaconne
 Hai [[the-loai|thể loại]] [[thoi-ky-baroque|Baroque]] dạng [[bien-tau]] trên một bass lặp hoặc một [[vong-hop-am]] lặp, thường ở nhịp 3/4:
 - [[Purcell]] — "Dido's Lament" (bass đi xuống [[am-giai-cromatic|cromatic]]).
-- [[Bach]] — Passacaglia Đô thứ cho organ BWV 582; Chaconne trong [[to-khuc-baroque|Partita]] số 2 Rê thứ cho violin.
+- [[Bach]] — Passacaglia Đô thứ cho [[organ-ong|organ]] BWV 582; Chaconne trong [[to-khuc-baroque|Partita]] số 2 Rê thứ cho [[violin|violin]].
 - [[johann-pachelbel|Pachelbel]] — [[phan-tich-canon-pachelbel|Canon in D]]: [[doi-am|canon]] ba bè trên một bass lặp 8 nốt (xem [[doi-am-kep]]).
 
 ## Ba ví dụ phân tích
@@ -686,7 +686,7 @@ Hai [[the-loai|thể loại]] [[thoi-ky-baroque|Baroque]] dạng [[bien-tau]] tr
 
 **Passacaglia và [[fugue|Fugue]] Đô thứ BWV 582 — Bach.** Không rõ năm sáng tác chính xác; các nguồn chỉ về khoảng **1706–1713**. Nửa đầu chủ đề bass có lẽ lấy từ một tác phẩm ngắn của nhà soạn nhạc Pháp André Raison (có học giả phản đối). Phần fugue sau đó dùng **nửa đầu của bass lặp làm chủ đề thứ nhất**, và một dạng biến đổi của nửa sau làm chủ đề thứ hai.
 
-**"Boléro" — Ravel (1928).** Trống snare chơi một mẫu nhịp **2 [[so-chi-nhip|ô nhịp]], 8 phách**, lặp lại **không đổi 169 lần** cho đến ô nhịp áp chót. Hai giai điệu luân phiên ở phía trên; thứ duy nhất thay đổi là **phối khí** và **âm lượng** — tăng dần từ rất nhỏ đến rất to (xem [[cuong-do]]). Công diễn lần đầu ở Nhà hát Opéra Paris ngày 22/11/1928.
+**"Boléro" — Ravel (1928).** [[bo-go-dan-nhac|Trống snare]] chơi một mẫu nhịp **2 [[so-chi-nhip|ô nhịp]], 8 phách**, lặp lại **không đổi 169 lần** cho đến ô nhịp áp chót. Hai giai điệu luân phiên ở phía trên; thứ duy nhất thay đổi là **[[dan-nhac-giao-huong|phối khí]]** và **âm lượng** — tăng dần từ rất nhỏ đến rất to (xem [[cuong-do]]). Công diễn lần đầu ở Nhà hát Opéra Paris ngày 22/11/1928.
 
 ## Trong nhạc hiện đại
 Riff và vòng lặp (loop) là ostinato; nhạc [[toi-gian]] được xây hoàn toàn từ ostinato. Bè trầm [[phong-cach-jazz|boogie-woogie]] trong [[blues-12-nhip]] cũng là ostinato.
@@ -785,7 +785,7 @@ Viết hai bè sao cho khi đưa bè dưới lên trên một quãng 8, kết qu
 
 ## Lễ vật âm nhạc (1747)
 - Năm 1747 Bach đến Potsdam, được **vua Phổ Frederick Đại đế** đưa cho một chủ đề dài và phức tạp — **"chủ đề hoàng gia"** — để [[ngau-hung-piano|ngẫu hứng]] một fugue 3 bè.
-- Về Leipzig, Bach viết cả một tuyển tập trên chủ đề đó, đề tặng nhà vua và in tháng 9/1747. Tuyển tập gồm hai fugue cho đàn phím (trong đó có *Ricercar* 6 bè), một trio [[hinh-thuc-sonata|sonata]] cho sáo, violin và bè trầm liên tục, cùng **mười canon** phần lớn ở dạng "câu đố".
+- Về Leipzig, Bach viết cả một tuyển tập trên chủ đề đó, đề tặng nhà vua và in tháng 9/1747. Tuyển tập gồm hai fugue cho đàn phím (trong đó có *Ricercar* 6 bè), một trio [[hinh-thuc-sonata|sonata]] cho sáo, [[violin|violin]] và bè trầm liên tục, cùng **mười canon** phần lớn ở dạng "câu đố".
 - **Canon cua** (*Canon a 2 cancrizans*): một bè chơi giai điệu như viết, bè kia chơi **cùng giai điệu đọc ngược từ cuối về đầu** — hai bè khớp nhau hoàn hảo.
 
 Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, nghịch hành).
@@ -1349,7 +1349,7 @@ Tổng quan và lộ trình: [[phuc-dieu-nghiem-khac]].
 |---|---|---|
 | **Sonata** | 1 nhạc cụ (hoặc + piano) | Nhanh ([[hinh-thuc-sonata]]) – Chậm – (Minuet/Scherzo) – Nhanh ([[rondo]]) |
 | **Giao hưởng** | Dàn nhạc | Như sonata, thường 4 chương |
-| **Tứ tấu đàn dây** | 2 violin, viola, cello | Như sonata, 4 chương |
+| **Tứ tấu đàn dây** | 2 [[violin|violin]], [[viola|viola]], [[cello|cello]] | Như sonata, 4 chương |
 | **[[hinh-thuc-concerto|Concerto]]** | Độc tấu + dàn nhạc | Nhanh – Chậm – Nhanh; có **[[cadenza|cadenza]]** (độc tấu [[ngau-hung-piano|ngẫu hứng]], ngay trước [[cau-ket|kết]]) |
 | **Tổ khúc [[thoi-ky-baroque|Baroque]]** | Đàn phím hoặc hoà tấu | Chuỗi vũ khúc cùng giọng: Allemande – Courante – Sarabande – Gigue |
 

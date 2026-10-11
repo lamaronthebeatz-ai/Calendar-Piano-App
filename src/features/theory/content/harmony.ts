@@ -534,7 +534,7 @@ Chứa [[thuan-nghich|tritone]] giữa bậc 3 và bậc 7 (B–F trong G7). [[q
 ## Lịch sử: nốt 7 "không được chuẩn bị"
 - Trong [[doi-am|đối âm]] [[thoi-ky-phuc-hung|Phục hưng]], quãng 7 là **nghịch âm** phải chuẩn bị và giải quyết cẩn thận (xem [[doi-am-5-loai]]).
 - Năm **1600**, nhà lý luận Giovanni Artusi chỉ trích các madrigal của [[Monteverdi]], đặc biệt *Cruda Amarilli*, vì dùng nghịch âm quá tự do — ở đó một bè **nhảy thẳng** vào nốt 7, tức coi âm thanh này là **một hợp âm tự thân** chứ không còn là nốt trễ. Monteverdi đáp lại trong lời tựa tập madrigal thứ năm (1605): quy tắc đối âm có thể bị vượt qua vì **yêu cầu biểu cảm của lời ca** — gọi là *[[madrigal|seconda pratica]]* (thực hành thứ hai).
-- Hợp âm 7 át **không phổ biến ngay**: phải vài thập kỷ sau nó mới thành thông lệ; đến các [[hinh-thuc-sonata|sonata]] violin Op. 5 của [[Corelli]] (1700), hệ thống [[dieu-tinh|điệu tính]] đã hoàn chỉnh.
+- Hợp âm 7 át **không phổ biến ngay**: phải vài thập kỷ sau nó mới thành thông lệ; đến các [[hinh-thuc-sonata|sonata]] [[violin|violin]] Op. 5 của [[Corelli]] (1700), hệ thống [[dieu-tinh|điệu tính]] đã hoàn chỉnh.
 
 ## Hợp âm 7 trong giọng trưởng
 | Imaj7 | ii7 | iii7 | IVmaj7 | V7 | vi7 | [[hop-am-cam-am|viiø7]] |
@@ -1093,7 +1093,7 @@ Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
 - Khác hợp âm add: **add** thêm nốt và **giữ** nốt 3 (Cadd9 = C – E – G – D); **sus** **bỏ** nốt 3 (Csus2 = C – D – G).
 
 ## Power chord (hợp âm 5)
-**C5 = C – G** (thường thêm C ở quãng 8): chỉ có nốt gốc và nốt 5. Vì không có nốt 3, nó cũng không trưởng không thứ. Rất phổ biến trong rock với guitar điện bị biến tiếng (distortion). Trên piano, quãng 5 trống ở tay trái là cách đệm tương tự (xem [[dem-hat-piano]], [[ostinato]]).
+**C5 = C – G** (thường thêm C ở quãng 8): chỉ có nốt gốc và nốt 5. Vì không có nốt 3, nó cũng không trưởng không thứ. Rất phổ biến trong rock với [[guitar-dien|guitar điện]] bị biến tiếng (distortion). Trên piano, quãng 5 trống ở tay trái là cách đệm tương tự (xem [[dem-hat-piano]], [[ostinato]]).
 `,
   },
   {
@@ -1311,7 +1311,7 @@ Mọi loại hợp âm đều có thể trượt song song: hợp âm ba, [[hop-
 - Cuối thế kỷ 19 – đầu [[thoi-ky-the-ky-20|thế kỷ 20]], hợp âm trượt song song trở thành dấu hiệu của **trường phái ấn tượng**; một nguồn cho rằng hoà âm quãng 4 song song đã xuất hiện trong tác phẩm năm 1891 của [[Satie]]. [[Debussy]] dùng trong nhiều tác phẩm: *Prélude à l'après-midi d'un faune*, *Nocturnes*, *La Mer*… (xem [[an-tuong]]).
 
 ## Ví dụ: "La cathédrale engloutie" (Debussy)
-[[the-loai|Prelude]] số 10 tập 1 mô tả nhà thờ chìm dưới biển trong một truyền thuyết. Hợp âm đầu tiên chỉ có **quãng 5 trống** (Sol – Rê); các hợp âm mở đầu vạch ra một **[[am-giai-ngu-cung|âm giai ngũ cung]]** Sol trưởng. Các nguồn liên hệ chất liệu này với nhạc **gamelan** Java mà Debussy nghe ở Triển lãm Thế giới 1889 và với **organum** song song quãng 5. Những khối hợp âm trượt song song gợi tiếng **chuông** ngân vang.
+[[the-loai|Prelude]] số 10 tập 1 mô tả nhà thờ chìm dưới biển trong một truyền thuyết. Hợp âm đầu tiên chỉ có **quãng 5 trống** (Sol – Rê); các hợp âm mở đầu vạch ra một **[[am-giai-ngu-cung|âm giai ngũ cung]]** Sol trưởng. Các nguồn liên hệ chất liệu này với nhạc **[[gamelan|gamelan]]** Java mà Debussy nghe ở Triển lãm Thế giới 1889 và với **organum** song song quãng 5. Những khối hợp âm trượt song song gợi tiếng **chuông** ngân vang.
 
 ## Trên piano
 - Song song cromatic: giữ **nguyên [[tu-the|thế tay]]**, dịch cả bàn tay — kỹ thuật như [[buoc-nhay-xa|di chuyển khối]].

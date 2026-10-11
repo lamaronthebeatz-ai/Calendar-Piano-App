@@ -166,8 +166,11 @@ export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig
     x += n === '/' ? 16 : step
   })
   const width = x - step / 2 + 18
+  // Push the labels below the lowest note head (ledger notes under the staff would otherwise collide with them).
+  const lowest = Math.min(0, ...cols.flatMap((c) => c.notes.map((n) => n.diatonic - CLEFS[clef].base)))
+  const labelY = Math.max(104, 70 - (lowest * GAP) / 2 + 15)
   return (
-    <svg viewBox={`0 0 ${width} 110`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông nhạc: ${notes.join(', ')}`}>
+    <svg viewBox={`0 0 ${width} ${labelY + 6}`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông nhạc: ${notes.join(', ')}`}>
       <StaffLines clef={clef} keySig={keySig} bottom={70} width={width} />
       {cols.map((col, i) => {
         if (notes[i] === '/') return <line key={i} x1={xs[i]} x2={xs[i]} y1={30} y2={70} stroke={INK} />
@@ -175,7 +178,7 @@ export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig
         return (
           <g key={i}>
             <Notes col={col} x={xs[i]} clef={clef} bottom={70} />
-            {text && <Label x={xs[i]} y={104} text={text} />}
+            {text && <Label x={xs[i]} y={labelY} text={text} />}
           </g>
         )
       })}

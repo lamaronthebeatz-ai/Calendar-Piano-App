@@ -201,7 +201,7 @@ Không có búa gõ dây: đàn đo **tốc độ nhấn phím** rồi phát âm
 | **Graded hammer** | Phím trầm nặng hơn phím cao — gần với grand nhất |
 | **Fully weighted** | Nặng đều trên toàn [[ban-phim|bàn phím]] |
 | **Semi-weighted** | Nhẹ hơn, trung gian |
-| **Không trọng lượng** (synth) | Nhẹ, rẻ, hợp chơi giải trí hơn học kỹ thuật cổ điển |
+| **Không trọng lượng** ([[synthesizer|synth]]) | Nhẹ, rẻ, hợp chơi giải trí hơn học kỹ thuật cổ điển |
 
 ## Học trên đàn nào?
 - Phím có trọng lượng và cảm ứng lực giúp phát triển **lực và kiểm soát ngón** cùng [[cuong-do|sắc thái to nhỏ]]; phím không cảm ứng lực luôn phát cùng một âm lượng.

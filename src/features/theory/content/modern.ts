@@ -59,7 +59,7 @@ Lộ trình đầy đủ: [[hoa-am-the-ky-20]].
 ## Nghệ sĩ piano qua các thời kỳ
 [[nghe-si-piano-the-ky-19]] · [[nghe-si-piano-dau-the-ky-20]] · [[nghe-si-piano-hien-dai]] · [[nghe-si-piano-jazz]] — và [[truong-phai-piano|các trường phái piano]].
 
-Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
+Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]] và nhạc cụ Việt Nam ([[nhac-cu-viet-nam]]).
 
 **Góc nhìn nghiên cứu:** khung chung của việc nghiên cứu các thời kỳ là [[am-nhac-hoc-lich-su]]; âm nhạc trước Trung cổ ở [[am-nhac-co-dai]]; lịch sử âm nhạc Việt Nam ở [[lich-su-am-nhac-viet-nam]]; âm nhạc ngoài truyền thống phương Tây, trong văn hoá của nó, là đối tượng của [[dan-toc-nhac-hoc]].
 `,
@@ -69,7 +69,7 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]].
     title: 'Âm nhạc truyền thống Việt Nam và ngũ cung',
     category: 'modern',
     also: ['scales', 'listening', 'genres'],
-    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'music of Vietnam', 'ngũ cung Việt Nam', 'hò xự xang xê cống', 'điệu Bắc', 'điệu Nam', 'hơi Bắc', 'hơi Nam', 'đờn ca tài tử', 'vọng cổ', 'ca trù', 'quan họ', 'nhã nhạc', 'đàn bầu', 'đàn tranh', 'đàn nguyệt', 'đàn nhị', 'đàn đáy'],
+    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'music of Vietnam', 'ngũ cung Việt Nam', 'hò xự xang xê cống', 'điệu Bắc', 'điệu Nam', 'hơi Bắc', 'hơi Nam', 'đờn ca tài tử', 'vọng cổ', 'ca trù', 'quan họ', 'nhã nhạc'],
     summary: 'Nhạc truyền thống Việt Nam dựa trên thang năm âm (Hò – Xự – Xang – Xê – Cống), nhưng cao độ thực không theo luật bình quân và được "nhấn, rung, luyến" theo từng điệu (Bắc, Nam; hơi Xuân, Ai, Oán). Bài này giới thiệu các di sản được UNESCO ghi danh, nhạc cụ chính, đờn ca tài tử và vọng cổ, và cách người dạy piano có thể đưa chất liệu dân tộc vào bài học.',
     refs: [
       ['UNESCO — Nhã nhạc, Vietnamese court music', 'https://ich.unesco.org/en/RL/00074'],
@@ -103,25 +103,27 @@ Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê
 | Di sản | Năm |
 |---|---|
 | Nhã nhạc cung đình Huế | Tuyên bố Kiệt tác 2003; vào Danh sách đại diện 2008 |
-| Không gian văn hoá cồng chiêng Tây Nguyên | Tuyên bố 2005; Danh sách đại diện 2008 |
+| [[cong-chieng|Không gian văn hoá cồng chiêng]] Tây Nguyên | Tuyên bố 2005; Danh sách đại diện 2008 |
 | Ca trù | 2009, Danh sách **cần bảo vệ khẩn cấp** |
 | Quan họ Bắc Ninh | 2009, Danh sách đại diện |
 | Hát Xoan Phú Thọ | 2011 khẩn cấp → **2017** chuyển sang Danh sách đại diện (trường hợp chuyển danh sách đầu tiên của Công ước) |
 | Đờn ca tài tử Nam Bộ | 2013 |
 | Ví, Giặm Nghệ Tĩnh | 2014 |
 | Bài Chòi Trung Bộ | 2017 |
-| Thực hành Then (Tày, Nùng, Thái) | 2019 — đệm bằng đàn tính |
+| Thực hành Then (Tày, Nùng, Thái) | 2019 — đệm bằng [[dan-tinh|đàn tính]] |
 
 ## Nhạc cụ
 | Nhạc cụ | Loại | Điểm đáng chú ý |
 |---|---|---|
-| **Đàn bầu** (độc huyền cầm) | Một dây | Chơi bằng **[[chuoi-boi-am|bồi âm]]**: chạm ở 1/2 dây cho quãng 8, ở 2/3 dây cho quãng 5; tay trái uốn **cần đàn** để đổi độ căng dây, nắn cao độ và rung |
-| **Đàn tranh** | Đàn dây gảy, họ hàng với guzheng | Từ 14, 15 lên **16 dây** (thế kỷ 19) thành chuẩn; lên dây theo tai |
-| **Đàn nguyệt** (đàn kìm) | Hai dây, hộp đàn tròn như mặt trăng | Dây xưa bằng tơ xe, nay bằng nylon |
-| **Đàn nhị** (đàn cò) | Hai dây, kéo vĩ | Một đầu bầu đàn bịt da rắn |
-| **Đàn đáy** | Ba dây, cần dài, hộp hình thang | Đệm cho **ca trù** |
-| **Phách** | Gõ | Đào nương ca trù gõ hai que lên bàn phách bằng tre hoặc gỗ; cùng trống chầu |
+| **[[dan-bau|Đàn bầu]]** (độc huyền cầm) | Một dây | Chơi bằng **[[chuoi-boi-am|bồi âm]]**: chạm ở 1/2 dây cho quãng 8, ở 2/3 dây cho quãng 5; tay trái uốn **cần đàn** để đổi độ căng dây, nắn cao độ và rung |
+| **[[dan-tranh|Đàn tranh]]** | Đàn dây gảy, họ hàng với [[guzheng|guzheng]] | Từ 14, 15 lên **16 dây** (thế kỷ 19) thành chuẩn; lên dây theo tai |
+| **[[dan-nguyet|Đàn nguyệt]]** (đàn kìm) | Hai dây, hộp đàn tròn như mặt trăng | Dây xưa bằng tơ xe, nay bằng nylon |
+| **[[dan-nhi|Đàn nhị]]** (đàn cò) | Hai dây, kéo vĩ | Một đầu bầu đàn bịt da rắn |
+| **[[dan-day|Đàn đáy]]** | Ba dây, cần dài, hộp hình thang | Đệm cho **ca trù** |
+| **[[phach-song-lang-mo|Phách]]** | Gõ | Đào nương ca trù gõ hai que lên bàn phách bằng tre hoặc gỗ; cùng trống chầu |
 ::wiki Đàn_bầu | Đàn bầu: âm thanh chủ yếu là bồi âm — xem [[chuoi-boi-am]]
+
+Toàn bộ nhạc cụ Việt Nam (cồng chiêng, [[dan-da|đàn đá]], [[khen|khèn]], sáo, [[ken-bau|kèn bầu]], đàn tính…), mỗi nhạc cụ một trang: [[nhac-cu-viet-nam]].
 
 ## Đờn ca tài tử và vọng cổ
 - Đờn ca tài tử Nam Bộ có **20 bài bản tổ**: 6 Bắc, 3 Nam, 4 Oán và 7 bài Lễ (dùng trong nghi lễ). Ví dụ: Lưu thủy trường, Phú lục, Xuân tình (Bắc); Nam xuân, Nam ai (Nam); Tứ đại oán (Oán); Xàng xê, Long đăng (Lễ). Danh sách tên khác nhau đôi chút giữa các nguồn.
@@ -250,7 +252,7 @@ Nhà soạn nhạc sắp xếp 12 nốt của [[am-giai-cromatic]] theo một th
 Mỗi dạng có thể dịch lên 12 [[cao-do|cao độ]] → **48 dạng** của một chuỗi, thường được sắp xếp thành **ma trận 12 × 12**. Các phép biến đổi này giống kỹ thuật phát triển [[motif]] truyền thống.
 
 ## Chuỗi có thể nghe "điệu tính": Concerto violin của Berg
-[[Alban Berg]] (1935) xây chuỗi từ các **[[hop-am-ba|hợp âm ba]] chồng nối nhau**: G thứ – D trưởng – A thứ – E trưởng, rồi bốn nốt cuối B – C♯ – E♭ – F đi lên theo **âm giai toàn cung**. Bốn nốt gốc G – D – A – E trùng với **bốn dây buông** của violin — và đó là những nốt đầu tiên nghệ sĩ độc tấu chơi. Ví dụ này cho thấy: 12 âm là **cách tổ chức**, không bắt buộc âm thanh phải phi điệu tính.
+[[Alban Berg]] (1935) xây chuỗi từ các **[[hop-am-ba|hợp âm ba]] chồng nối nhau**: G thứ – D trưởng – A thứ – E trưởng, rồi bốn nốt cuối B – C♯ – E♭ – F đi lên theo **âm giai toàn cung**. Bốn nốt gốc G – D – A – E trùng với **bốn dây buông** của [[violin|violin]] — và đó là những nốt đầu tiên nghệ sĩ độc tấu chơi. Ví dụ này cho thấy: 12 âm là **cách tổ chức**, không bắt buộc âm thanh phải phi điệu tính.
 
 ## Tổ hợp (combinatoriality)
 Thuật ngữ do **Milton Babbitt** dùng từ năm 1950: chọn chuỗi sao cho **nửa đầu (6 nốt)** của một dạng chuỗi và nửa đầu của một dạng khác (ví dụ dạng đảo) **ghép lại đủ 12 nốt**. Nhờ vậy hai bè có thể vang cùng lúc mà vẫn giữ nguyên tắc "đủ 12 nốt mới lặp".
@@ -673,7 +675,7 @@ Công cụ phân tích các âm giai đối xứng: [[tap-hop-cao-do]]. Tổng q
 Mỗi [[not-nhac|nốt nhạc]] là tổng của nhiều [[chuoi-boi-am|bồi âm]]. Nhạc phổ "phóng to" cấu trúc đó: dùng máy phân tích phổ (sonogram) để xem một âm thanh thật gồm những bồi âm nào, mạnh yếu ra sao, thay đổi thế nào theo thời gian — rồi **giao mỗi bồi âm cho một nhạc cụ**.
 
 ## Ví dụ kinh điển: Partiels (Grisey, 1975)
-- Viết cho 18 nhạc cụ; mở đầu bằng **phân tích sonogram [[am-sac|tiếng tấn công]] của một nốt Mi trầm trên kèn trombone** (các nguồn ghi E2 hoặc E1).
+- Viết cho 18 nhạc cụ; mở đầu bằng **phân tích sonogram [[am-sac|tiếng tấn công]] của một nốt Mi trầm trên [[trombone|kèn trombone]]** (các nguồn ghi E2 hoặc E1).
 - Phổ âm đó được "tổng hợp lại bằng dàn nhạc": mỗi nhạc cụ đảm nhận một bồi âm, [[doi-am|mô phỏng]] cả sự **biến đổi theo thời gian** của tiếng kèn.
 - Là phần thứ ba của chu kỳ *Les Espaces acoustiques* (1974–1985); được coi là tác phẩm **định hình** nhạc phổ. Trước đó, *Périodes* (1974) đã thử nghiệm kỹ thuật này.
 

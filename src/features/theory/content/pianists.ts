@@ -218,7 +218,7 @@ Kỹ thuật tay trái của thế hệ đầu: [[stride-piano]].
 |---|---|---|
 | Louise Nguyễn Văn Tỵ | 1915–2007 | *Viet Nam: Album pour piano* |
 | Louise Thái Thị Lang | — | *Fêtes du Têt* (piano) |
-| Nguyễn Văn Quỳ ("Quỳ Sonate") | 1925–2022 | 9 [[hinh-thuc-sonata|sonata]] cho violin và piano |
+| Nguyễn Văn Quỳ ("Quỳ Sonate") | 1925–2022 | 9 [[hinh-thuc-sonata|sonata]] cho [[violin|violin]] và piano |
 | Trần Tất Toại | sinh 1929 | *Dòng nước trong* |
 | Nguyễn Hữu Tuấn | 1942–2008 | Các [[the-loai|prelude]] cho piano |
 | Nguyễn Đình Lượng | 1945–2005 | Các prelude cho piano |

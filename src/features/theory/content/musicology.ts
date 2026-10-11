@@ -505,11 +505,11 @@ Ranh giới với [[dan-toc-nhac-hoc]] mờ: dân tộc nhạc học thiên về
 Erich von Hornbostel và Curt Sachs công bố *Systematik der Musikinstrumente. Ein Versuch* trên *Zeitschrift für Ethnologie* (tập 46, 1914), dựa trên sơ đồ của Victor-Charles Mahillon thế kỷ 19. Tiêu chí phân loại là **vật gì rung để tạo ra âm**:
 | Lớp | Tên gốc | Vật rung | Ví dụ |
 |---|---|---|---|
-| 1 | Idiophone (tự thân vang) | Chính thân nhạc cụ | chiêng, mõ, [[lich-su-am-nhac-viet-nam|đàn đá]], celesta |
-| 2 | Membranophone (màng rung) | Một màng căng | trống |
-| 3 | Chordophone (dây rung) | Dây căng | đàn bầu, guitar, violin, **piano**, [[dan-phim-co|harpsichord]] |
-| 4 | Aerophone (hơi) | Cột không khí | sáo, kèn, organ ống |
-| (5) | Electrophone (điện) | Mạch điện tạo âm — lớp thêm vào sau | [[nhac-dien-tu|synthesizer]] |
+| 1 | Idiophone (tự thân vang) | Chính thân nhạc cụ | [[cong-chieng|chiêng]], [[phach-song-lang-mo|mõ]], [[dan-da|đàn đá]], [[celesta]], [[gamelan]] |
+| 2 | Membranophone (màng rung) | Một màng căng | [[timpani]], [[tabla-mridangam|tabla]], [[djembe]] |
+| 3 | Chordophone (dây rung) | Dây căng | [[dan-bau|đàn bầu]], [[guitar-co-dien|guitar]], [[violin]], **piano**, [[dan-phim-co|harpsichord]], [[sitar]] |
+| 4 | Aerophone (hơi) | Cột không khí | [[sao-truc|sáo]], [[clarinet|kèn]], [[organ-ong|organ ống]], [[khen]] |
+| (5) | Electrophone (điện) | Mạch điện tạo âm — lớp thêm vào sau | [[synthesizer]], [[theremin-ondes|theremin]] |
 
 Bản gốc có bốn lớp; lớp nhạc cụ điện được bổ sung về sau, và năm 2011 nhóm dự án MIMO công bố một bản chỉnh sửa. Bản dịch tiếng Anh đăng trên *Galpin Society Journal* năm 1961.
 
@@ -521,7 +521,7 @@ Piano là nhạc cụ **dây rung** được gõ bằng búa. Các bài trong th
 - **Chỉnh âm và bảo dưỡng:** [[bao-duong-piano]], [[luat-binh-quan]].
 - **Nhạc cụ và lối viết:** [[lich-su-ky-thuat-piano]], [[ban-dap]].
 
-Nhạc cụ truyền thống Việt Nam: xem [[am-nhac-truyen-thong-viet-nam]].
+**Toàn bộ các trang nhạc cụ** (phương Tây và phương Đông, theo năm lớp và theo vùng, kèm bảo tàng và hội chuyên ngành): [[nhac-khi-the-gioi]]. Theo vùng: [[dan-nhac-giao-huong]], [[nhac-cu-viet-nam]], [[nhac-cu-dong-a]], [[nhac-cu-nam-a-tay-a]]. Bối cảnh âm nhạc truyền thống Việt Nam: [[am-nhac-truyen-thong-viet-nam]].
 `,
   },
   {
