@@ -600,3 +600,66 @@ export function Bars({ items }: { items: string[] }) {
     </svg>
   )
 }
+
+/**
+ * Ranges against the 88-key piano (A0–C8): `low-high=Label` per row, e.g. `G3-A7=Violin`. A note
+ * outside the piano is clamped to its edge and marked with an arrow. Underscores become spaces.
+ */
+export function RangeChart({ items }: { items: string[] }) {
+  const rows = items.flatMap((s) => {
+    const m = s.match(/^([A-G](?:##|bb|#|b)?\d)-([A-G](?:##|bb|#|b)?\d)=(.+)$/)
+    const [lo, hi] = m ? [parseNote(m[1]), parseNote(m[2])] : [null, null]
+    return m && lo && hi ? [{ lo: lo.midi, hi: hi.midi, from: m[1], to: m[2], label: m[3].replace(/_/g, ' ') }] : []
+  })
+  // White-key geometry: 52 whites from A0 (midi 21) to C8 (midi 108).
+  const KW = 7
+  const whiteIndex = (midi: number) => {
+    let n = 0
+    for (let k = 21; k < midi; k++) if (![1, 3, 6, 8, 10].includes(k % 12)) n++
+    return n
+  }
+  const isBlack = (midi: number) => [1, 3, 6, 8, 10].includes(midi % 12)
+  const left = (midi: number) => (isBlack(midi) ? whiteIndex(midi) * KW - 2 : whiteIndex(midi) * KW)
+  const right = (midi: number) => (isBlack(midi) ? whiteIndex(midi) * KW + 2 : (whiteIndex(midi) + 1) * KW)
+  const clamp = (m: number) => Math.max(21, Math.min(108, m))
+  const labelW = 64
+  const W = labelW + 52 * KW
+  const rowH = 13
+  const kbY = rows.length * rowH + 4
+  const H = kbY + 30
+  const glyph = (n: string) => n.replace('##', '𝄪').replace('bb', '𝄫').replace('#', '♯').replace(/(?<=[A-G])b/, '♭')
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl" role="img" aria-label={`Âm vực: ${rows.map((r) => `${r.label} ${r.from}–${r.to}`).join(', ')}`}>
+      {rows.map((r, i) => {
+        const [a, b] = [labelW + left(clamp(r.lo)), labelW + right(clamp(r.hi))]
+        const y = i * rowH + 2
+        return (
+          <g key={r.label + i}>
+            <text x={labelW - 4} y={y + 8} textAnchor="end" fontSize={7.5} fill="var(--color-ink)">{r.label}</text>
+            <rect x={a} y={y} width={Math.max(3, b - a)} height={10} rx={3} fill={i % 2 ? 'var(--chart-2)' : 'var(--chart-1)'}>
+              <title>{`${r.label}: ${glyph(r.from)} – ${glyph(r.to)}`}</title>
+            </rect>
+            <text x={a - 2} y={y + 8} textAnchor="end" fontSize={6} fill="var(--color-ink-muted)">{r.lo < 21 ? '◂' : ''}</text>
+            <text x={b + 2} y={y + 8} fontSize={6} fill="var(--color-ink-muted)">{r.hi > 108 ? '▸' : ''}</text>
+          </g>
+        )
+      })}
+      {Array.from({ length: 88 }, (_, i) => 21 + i)
+        .filter((m) => !isBlack(m))
+        .map((m) => (
+          <rect key={m} x={labelW + left(m)} y={kbY} width={KW} height={22} fill="#fff" stroke="#8a8478" strokeWidth={0.5} />
+        ))}
+      {Array.from({ length: 88 }, (_, i) => 21 + i)
+        .filter(isBlack)
+        .map((m) => (
+          <rect key={m} x={labelW + left(m)} y={kbY} width={4} height={13} fill="#222" />
+        ))}
+      {[24, 36, 48, 60, 72, 84, 96, 108].map((m) => (
+        <text key={m} x={labelW + left(m) + KW / 2} y={kbY + 19} textAnchor="middle" fontSize={4.5} fill={m === 60 ? 'var(--color-accent)' : '#8a8478'} fontWeight={m === 60 ? 700 : 400}>
+          C{m / 12 - 1}
+        </text>
+      ))}
+      <text x={labelW - 4} y={kbY + 14} textAnchor="end" fontSize={7.5} fill="var(--color-ink-muted)">Piano</text>
+    </svg>
+  )
+}
