@@ -422,3 +422,89 @@ export function FormChart({ sections }: { sections: string[] }) {
     </svg>
   )
 }
+
+/**
+ * A timeline: `start-end=Label` draws a span (lanes stack when spans overlap), `year=Label` a dated
+ * event (labels stagger onto extra rows so they never collide). Negative years are BCE; underscores
+ * become spaces.
+ */
+export function Timeline({ items }: { items: string[] }) {
+  const parsed = items.flatMap((s) => {
+    const m = s.match(/^(-?\d+)(?:-(-?\d+))?=(.+)$/)
+    return m ? [{ from: +m[1], to: m[2] === undefined ? undefined : +m[2], label: m[3].replace(/_/g, ' ') }] : []
+  })
+  const spans = parsed.filter((p) => p.to !== undefined) as { from: number; to: number; label: string }[]
+  const events = parsed.filter((p) => p.to === undefined)
+  const years = parsed.flatMap((p) => [p.from, p.to ?? p.from])
+  const [lo, hi] = [Math.min(...years), Math.max(...years)]
+  const W = 360
+  const pad = 14
+  const x = (y: number) => pad + ((y - lo) / Math.max(1, hi - lo)) * (W - 2 * pad)
+  const fmt = (y: number) => (y < 0 ? `${-y} TCN` : String(y))
+
+  // Greedy lanes: a span or label goes to the first row where it does not overlap what is there.
+  const place = <T,>(list: T[], range: (t: T) => [number, number]) => {
+    const rows: [number, number][][] = []
+    return list.map((t) => {
+      const [a, b] = range(t)
+      let r = rows.findIndex((row) => row.every(([c, d]) => b + 2 <= c || a >= d + 2))
+      if (r < 0) r = rows.push([]) - 1
+      rows[r].push([a, b])
+      return r
+    })
+  }
+  const spanRow = place(spans, (s) => [x(s.from), x(s.to)])
+  const spanRows = Math.max(0, ...spanRow.map((r) => r + 1))
+  const labelW = (t: string) => t.length * 7.5 * 0.55 + 6
+  const sorted = [...events].sort((a, b) => a.from - b.from)
+  const text = (e: { from: number; label: string }) => `${fmt(e.from)} ${e.label}`
+  const eventRow = place(sorted, (e) => [x(e.from) - labelW(text(e)) / 2, x(e.from) + labelW(text(e)) / 2])
+
+  const spanTop = 4
+  const axisY = spanTop + spanRows * 22 + 6
+  const eventTop = axisY + 22
+  const H = eventTop + Math.max(0, ...eventRow.map((r) => r + 1)) * 13 + 4
+
+  const span = hi - lo
+  const step = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000].find((s) => span / s <= 7) ?? 10000
+  const ticks: number[] = []
+  for (let t = Math.ceil(lo / step) * step; t <= hi; t += step) ticks.push(t)
+
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl" role="img" aria-label={`Trục thời gian: ${parsed.map((p) => p.label).join(', ')}`}>
+      {spans.map((s, i) => {
+        const hue = FORM_HUES[i % FORM_HUES.length]
+        const [a, b] = [x(s.from), x(s.to)]
+        const y = spanTop + spanRow[i] * 22
+        return (
+          <g key={`s${i}`}>
+            <rect x={a + 0.5} y={y} width={Math.max(2, b - a - 1)} height={18} rx={4} fill={`oklch(0.85 0.07 ${hue})`} stroke={`oklch(0.55 0.1 ${hue})`} />
+            <text x={(a + b) / 2} y={y + 12.5} textAnchor="middle" fontSize={labelSize(s.label, b - a)} fontWeight={600} fill="oklch(0.25 0.03 260)">
+              {s.label}
+            </text>
+          </g>
+        )
+      })}
+      <line x1={pad - 4} x2={W - pad + 4} y1={axisY} y2={axisY} stroke="var(--color-ink-muted)" strokeWidth={1} />
+      {ticks.map((t) => (
+        <g key={`t${t}`}>
+          <line x1={x(t)} x2={x(t)} y1={axisY - 3} y2={axisY + 3} stroke="var(--color-ink-muted)" />
+          <text x={x(t)} y={axisY + 12} textAnchor="middle" fontSize={7.5} fill="var(--color-ink-muted)">{fmt(t)}</text>
+        </g>
+      ))}
+      {sorted.map((e, i) => {
+        const ex = x(e.from)
+        const y = eventTop + eventRow[i] * 13
+        return (
+          <g key={`e${i}`}>
+            <line x1={ex} x2={ex} y1={axisY} y2={y + 2} stroke="var(--color-gold)" strokeWidth={0.8} strokeDasharray="1.5 1.5" />
+            <circle cx={ex} cy={axisY} r={2.4} fill="var(--color-gold)" />
+            <text x={ex} y={y + 9} textAnchor="middle" fontSize={7.5} fill="var(--color-ink)">
+              <tspan fontWeight={600}>{fmt(e.from)}</tspan> {e.label}
+            </text>
+          </g>
+        )
+      })}
+    </svg>
+  )
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { findArticle, normalize } from './wiki'
-import { CircleOfFifths, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, type Clef } from './diagrams'
+import { CircleOfFifths, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
 
@@ -117,6 +117,8 @@ function Directive({ line }: { line: string }) {
       return <Figure caption={caption}><Rhythm tokens={args} /></Figure>
     case 'wiki':
       return <WikiImage titles={[args.join('_')]} caption={caption} />
+    case 'timeline':
+      return <Figure caption={caption}><Timeline items={args} /></Figure>
     case 'circle-of-fifths':
       return <Figure caption={caption}><CircleOfFifths /></Figure>
     case 'img':
