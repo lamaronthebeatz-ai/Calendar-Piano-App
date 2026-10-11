@@ -40,7 +40,7 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
 4. **Kết và tiến trình**: [[ii-v-i]] → [[turnaround-jazz]] → [[line-cliche]] → [[vong-hop-am]]; đọc tiến trình: [[phan-tich-tien-trinh-jazz]].
 5. **Âm giai cho hợp âm**: [[he-thong-hop-am-am-giai]] → [[dieu-thuc-thu-giai-dieu]] → [[hop-am-at-bien-hoa]] → [[am-giai-bebop]] → [[am-giai-doi-xung-jazz]] ([[am-giai-bat-cung]]).
 6. **Xếp hợp âm**: [[the-bam-ba-not]] → [[xep-hop-am]] (shell, không gốc, drop 2) → [[the-bam-mo]] → [[quy-tac-xep-hop-am-jazz]] → [[the-bam-bac-thay-jazz]] → [[hop-am-so-what-barron]] → [[hop-am-khoi]] → [[upper-structure]] → [[hoa-am-quang-bon]] → [[am-cum|âm cụm]]; chọn và ghép thế bấm: [[ket-hop-the-bam]], [[chon-the-bam-jazz]].
-7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]].
+7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]]; ngoài jazz: [[dem-bossa-nova]], [[dem-rnb-neo-soul]].
 8. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]], [[hop-am-luot-jazz]].
 9. **Tái hoà âm**: [[tai-hoa-am]] (gồm cách làm bài "jazzy"), [[tai-hoa-am-gospel]], [[doi-nhip-the-loai-jazz|đổi nhịp, đổi thể loại, chơi tự do thời gian]], [[constant-structures]]; **sáng tác**: [[sang-tac-jazz]].
 10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]] (phân tích: [[phan-tich-giant-steps]]).
@@ -2466,7 +2466,7 @@ Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc n�
 |---|---|---|---|---|
 | **Fusion / jazz-rock** | Cuối 1960s–70s | Nền điệu thức, groove funk, solo kiểu rock, móc đơn **thẳng**; nhạc cụ điện | Joe Zawinul (Weather Report), Herbie Hancock (Headhunters), [[chick-corea|Chick Corea]] (Return to Forever) | *Bitches Brew* (thu 8/1969) |
 | **Latin: Afro-Cuban** | Từ 1943 | Mọi người theo **clave** (mẫu nhịp nền của nhạc Afro-Cuba, dựa trên [[dao-phach|đảo phách]]); piano chơi **montuno** (vamp lặp lại nét hợp âm), tay trái **tumbao** (gốc – 5) | | Machito/Mario Bauzá, "Tanga" (1943); Dizzy Gillespie/Chano Pozo, "Manteca" (1947) |
-| **Latin: bossa nova** | Cuối 1950s | Samba cộng hoà âm jazz; móc đơn thẳng, đung đưa nhẹ, **không** dùng clave; đệm thoáng hơn Afro-Cuban — xem [[dieu-dem-pho-bien]] | Antônio Carlos Jobim | *Getz/Gilberto* (thu 3/1963) |
+| **Latin: bossa nova** | Cuối 1950s | Samba cộng hoà âm jazz; móc đơn thẳng, đung đưa nhẹ, **không** dùng clave; đệm thoáng hơn Afro-Cuban — xem [[dieu-dem-pho-bien]] | Antônio Carlos Jobim | *[[dem-bossa-nova|Getz/Gilberto]]* (thu 3/1963) |
 | **Gospel jazz** | Từ 1950s | Quãng 8, [[ky-hieu-nang-cao|tremolo]], [[hop-am-luot-jazz|hợp âm 7 giảm lướt]], [[hop-am-at-phu|át phụ]], giai điệu [[am-giai-ngu-cung|ngũ cung]] trưởng, thế bấm hẹp song song | Xem [[tai-hoa-am-gospel]] | |
 | **Smooth / crossover** | Cuối 1970s–80s | Lớn lên từ fusion nhưng ít phiêu lưu hơn; trọng groove hơn ngẫu hứng; pha pop, funk, R&B | David Benoit | |
 

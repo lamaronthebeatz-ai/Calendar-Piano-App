@@ -31,7 +31,7 @@ export const technique: Article[] = [
 | **Bài tập** | [[bai-tap-ngon]] |
 | **Đọc và học bài** | [[doc-not-nhanh]], [[thi-tau]], [[hoc-thuoc-bai]], [[tap-trong-dau]], [[phuong-phap-luyen-tap]] |
 | **Thời gian và [[cau-nhac|câu nhạc]]** | [[kiem-soat-toc-do]], [[dien-dat-cau-nhac]], [[rubato]] |
-| **Đệm và ngẫu hứng** | [[dem-hat-piano]], [[dieu-dem-pho-bien]], [[ngau-hung-piano]] |
+| **Đệm và ngẫu hứng** | [[dem-hat-piano]] (lộ trình: [[dem-hat-hien-dai]]), [[dieu-dem-pho-bien]], [[ngau-hung-piano]]; theo thể loại: [[hoa-am-pop]], [[dem-pop-ballad]], [[dem-slow-rock-rock]], [[dem-rnb-neo-soul]], [[dem-bossa-nova]], [[dem-dieu-viet-nam]] |
 | **Biểu diễn** | [[hoi-hop-bieu-dien]] |
 
 ## Lộ trình gợi ý
@@ -722,6 +722,8 @@ Các trường phái không hoàn toàn thống nhất: với nốt lặp chậm
       ['MasterClass — Stride piano guide', 'https://www.masterclass.com/articles/stride-piano-guide'],
     ],
     body: `
+Lộ trình đệm hát hiện đại theo cấp độ và thể loại (pop, ballad, R&B, [[dem-rnb-neo-soul|neo soul]], bossa nova, các điệu nhạc Việt): [[dem-hat-hien-dai]].
+
 ## Các kiểu đệm
 | Kiểu | Cách chơi | Hợp với |
 |---|---|---|
@@ -747,7 +749,7 @@ Bản lead sheet chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay 
 
 Ghi nhớ trước vài hợp âm hay gặp trong bài và luyện chuyển qua lại giữa chúng (xem [[vong-hop-am]], [[the-dao-hop-am]]).
 
-Các điệu có [[tiet-tau|tiết tấu]] đặc trưng (slow rock 12/8, bossa nova, cha-cha-cha): [[dieu-dem-pho-bien]].
+Các điệu có [[tiet-tau|tiết tấu]] đặc trưng ([[dem-slow-rock-rock|slow rock 12/8]], bossa nova, cha-cha-cha): [[dieu-dem-pho-bien]].
 
 ## Tay trái theo thể loại
 Trong jazz, [[blues-12-nhip|blues]] và nhạc cổ điển, tay trái thường [[kiem-soat-toc-do|giữ nhịp]] đều bằng hợp âm rải, [[ostinato]] hoặc đường bass. Trong jazz, **walking bass** là đường bass đi liền bậc lên xuống theo hợp âm.
@@ -793,10 +795,330 @@ Các kiểu đệm cơ bản (khối, rải, Alberti, [[tieu-pham-piano|valse]],
 ::rhythm 4/4 rq e-e rq rq // | Tay phải: hai móc đơn ở phách 2
 - Lời khuyên: học **đường bass trước**, rồi thêm hoà âm; luyện trên vòng [[vong-hop-am|ii – V – I]].
 
+Đi sâu từng thể loại: [[dem-slow-rock-rock]], [[dem-bossa-nova]], [[dem-dieu-viet-nam]] (bolero, rumba, slow, valse, boston, tango), [[dem-rnb-neo-soul]].
+
 ## Cách luyện chung
 1. Vỗ tay hoặc đếm to tiết tấu trước (xem [[kiem-soat-toc-do]]).
 2. Chơi tay trái riêng trên một hợp âm, rồi trên cả [[vong-hop-am]].
 3. Thêm tay phải; nghe bản thu mẫu và bắt chước cảm giác nhịp — các nguồn khác nhau ở chi tiết nhỏ (vị trí nhấn của clave, tay nào chơi phách nghịch).
+`,
+  },
+  {
+    slug: 'dem-pop-ballad',
+    title: 'Đệm pop và ballad',
+    category: 'technique',
+    aliases: ['đệm pop', 'đệm ballad', 'pop ballad accompaniment', 'piano ballad', 'đệm ballad piano', '1-5-8', 'tay trái 1-5-8', 'add9 pop'],
+    summary: 'Cách đệm piano cho pop và ballad từ cơ bản đến nâng cao: các mẫu tay trái (1 – 5 – 8, 1 – 5 – 10), tay phải đi thể đảo gần nhất, màu sus2/add9, bè trầm đi xuống, và đặc biệt là cách xây "đường cong năng lượng" từ phiên khúc thưa đến điệp khúc đầy — chừa chỗ cho giọng hát.',
+    refs: [
+      ['Berklee Online — Take Note: piano accompaniment dynamics', 'https://online.berklee.edu/takenote/?p=3246'],
+      ['Pianote — Left-hand patterns', 'https://www.pianote.com/blog/left-hand-patterns/'],
+      ['Dummies — Great left-hand accompaniment patterns', 'https://www.dummies.com/article/academics-the-arts/music/instruments/piano/great-left-hand-accompaniment-patterns-for-the-piano-or-keyboard-153052/'],
+      ['Philip Wesley — Different left-hand accompaniments', 'https://philipwesley.com/blogs/blog/different-left-hand-accompaniments'],
+      ['Piano With Jonny — Piano accompaniment: 6 steps', 'https://pianowithjonny.com/piano-lessons/piano-accompaniment-6-steps-from-beginner-to-pro/'],
+      ['PianoGroove — Accompanying singers', 'https://pianogroove.com/jazz-piano-lessons/accompanying-singers-melody-harmony-bass/'],
+    ],
+    body: `
+## Cấp 1: khung hai tay
+- **Tay trái**: nốt gốc ([[truong-do|nốt tròn]]), rồi **[[quang|quãng 8]]**.
+- **Tay phải**: [[hop-am-ba|hợp âm ba]] đi theo **thể đảo gần nhất** để các nốt chung được giữ lại ([[the-dao-hop-am]], [[dan-giong]]).
+- **Pedal**: thay theo mỗi lần đổi hợp âm ([[ban-dap]]).
+::grand C4+E4+G4/C3 B3+D4+G4/G2 C4+E4+A4/A2 C4+F4+A4/F2 | Vòng I – V – vi – IV: tay phải gần như đứng yên, tay trái đi nốt gốc
+
+## Cấp 2: các mẫu tay trái
+| Mẫu | Nốt (trên C) | Dùng khi |
+|---|---|---|
+| **1 – 5 – 8** (gốc – 5 – quãng 8) | C – G – C | Mẫu ballad "vạn năng" của [[nhac-phim-va-tro-choi|nhạc phim]], pop, ballad |
+| 1 – 5 – 8 – 5 rải móc đơn | C – G – C – G | Ballad có chuyển động |
+| **1 – 5 – 10** | C – G – E (quãng 10) | Tiếng rộng, ấm hơn — đặt thấp và mở |
+| Quãng 8 kéo dài | C + C | Đoạn mạnh, điệp khúc |
+::staff bass C3 G3 C4 G3 / A2 E3 A3 E3 / F2 C3 F3 C3 / G2 D3 G3 D3 | Tay trái 1 – 5 – 8 – 5 trên C – Am – F – G (móc đơn)
+::staff bass C3 G3 E4 G3 / A2 E3 C4 E3 | 1 – 5 – 10: tiếng rộng hơn (cần tay mở; có thể rải)
+Đặt mẫu tay trái **thấp và rộng** cho tiếng đầy, nhưng tránh dày đặc ở vùng quá trầm.
+
+## Cấp 3: màu sắc tay phải
+- **sus2 [[tai-hoa-am|thay hợp âm]] ba**: nốt 2 thay nốt 3 cho tiếng "mở", hiện đại; khi giữ cả nốt 3 thì là **add9** — xem [[hop-am-6-va-add]].
+- **Rải móc đơn** hay **nhịp hợp âm** theo tiết tấu bài.
+- **Bè trầm đi xuống** bằng [[hop-am-gach-cheo|hợp âm gạch chéo]] (C – G/B – Am – Am/G – F…) — xem [[hoa-am-pop]].
+::staff treble C4+E4+G4=C C4+D4+G4=Csus2 C4+E4+G4+D5=Cadd9 | Từ hợp âm ba sang sus2 và add9: một nốt thay đổi làm tiếng đàn "hiện đại" hơn
+
+## Cấp 4: đường cong năng lượng
+Berklee gợi ý: bắt đầu **thưa** (nốt tròn cả hai tay, hoặc tay phải nốt trắng trên tay trái nốt tròn), rồi tay phải sang nốt đen, rồi móc đơn khi năng lượng tăng. Hai tay **gần nhau** nghe thân mật; **xa nhau** nghe mãnh liệt.
+::form Phiên_khúc_(thưa) Pre-chorus_(dày_dần) Điệp_khúc_(đầy) Bridge_(đổi_màu) Điệp_khúc_cuối_(đỉnh) | Đường cong năng lượng của một bài ballad
+::rhythm 4/4 w / h h / q q q q / e-e e-e e-e e-e // | Mật độ tay phải tăng dần: nốt tròn → nốt trắng → nốt đen → móc đơn
+
+## Cấp 5: đệm cho người hát
+- **Không nhân đôi giai điệu** ở nốt trên cùng — để ca sĩ tự do diễn giải.
+- Giữ hợp âm tay phải **dưới** hoặc **tránh** âm vực giọng hát; chơi **fill** (câu đệm ngắn) vào **chỗ ca sĩ lấy hơi**, không chen vào câu hát.
+- Dưới giọng hát, dùng thế bấm **đơn giản**; để dành [[hop-am-mo-rong|nốt căng]] cho đoạn dạo và đoạn nối.
+- [[prelude-ung-tac|Dạo đầu]] thường lấy chất liệu **điệp khúc** hoặc [[vong-hop-am|vòng hợp âm]] chính; kết bằng cách lặp vòng cuối rồi chậm dần.
+Liên quan: [[dem-hat-piano]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
+`,
+  },
+  {
+    slug: 'dem-slow-rock-rock',
+    title: 'Đệm slow rock, rock and roll và rock',
+    category: 'technique',
+    aliases: ['đệm slow rock', 'slow rock 12/8', 'đệm rock', 'rock and roll piano', 'đệm rock and roll', 'triplet ballad', 'doo-wop piano', 'Fats Domino', 'Jerry Lee Lewis'],
+    summary: 'Từ slow rock 12/8 với chuỗi hợp âm chia ba kiểu Fats Domino, đến tay phải móc đơn dồn dập và bass boogie của rock and roll (Jerry Lee Lewis), rồi quãng 8 tay trái và các vòng ♭VII của rock — kèm mẫu tiết tấu và cách luyện.',
+    refs: [
+      ['WWNO — Fats Domino, architect of rock and roll', 'https://www.wwno.org/2017-10-25/fats-domino-architect-of-rock-and-roll-dead-at-89'],
+      ['College of Wooster — Listening guide: Blueberry Hill (1956)', 'https://theartofrockmusic.voices.wooster.edu/wp-content/uploads/sites/180/2015/01/Blueberry-Hill-Fats-Domino-1956.pdf'],
+      ['Ledutu — 6/8 and 12/8 time', 'https://ledutu.com/en/learn/piano/six-eight-and-twelve-eight-time/'],
+      ['Yamaha — Five tips for playing rock and roll piano', 'https://hub.yamaha.com/keyboards/k-how-to/five-tips-for-playing-rock-and-roll-piano/'],
+      ['Tim Napalm Stegall — Jerry Lee Lewis', 'https://timnapalmstegall.substack.com/p/jackhammered-eighth-notes-and-a-lotta'],
+      ['Pianist Magazine — How to play rock & roll piano', 'https://pianistmagazine.com/blogs/how-to-play-rock-roll-piano'],
+      ['Open Music Theory — Modal schemas', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/07%3A_Popular_Music/7.12%3A_Modal_Schemas'],
+    ],
+    body: `
+## Slow rock (12/8)
+- **12/8 = bốn phách lớn**, mỗi phách chia ba; 6/8 chỉ có **hai** phách lớn. Một ô 12/8 bằng hai ô 6/8 — nhưng ở 12/8 có phách nhấn 2 và 4 như pop, còn 6/8 thì mạnh – nhẹ xen kẽ. Cùng cảm giác đó cũng có thể viết 4/4 với liên ba. Xem [[dieu-dem-pho-bien]], [[lien-ba]].
+- **Fats Domino** được ghi nhận là người phổ biến **hợp âm chia ba** trên piano trong rock and roll ("Blueberry Hill", 1956).
+::rhythm 12/8 >e-e-e e-e-e >e-e-e e-e-e // | Tay phải: hợp âm lặp chia ba, nhấn nhẹ phách 1 và 3 (minh hoạ)
+::rhythm 12/8 q. q. q. q. // | Tay trái: nốt gốc ở bốn phách lớn (hoặc rải 1 – 5 – 8 trong mỗi nhóm ba)
+::grand C4+E4+G4/C3 C4+E4+A4/A2 C4+F4+A4/F2 B3+D4+G4/G2 | Vòng doo-wop I – vi – IV – V — nền hoà âm phổ biến của slow rock (mỗi hợp âm một ô 12/8)
+**Cách luyện**: đếm to "1-và-a 2-và-a…", tay phải lặp hợp âm nhẹ ở cổ tay; giữ **tay trái chắc** để ca sĩ dựa vào. Tốc độ chậm — khoảng 50 – 70 phách lớn mỗi phút (ước lượng thường gặp, không phải quy định).
+
+## Rock and roll (thập niên 1950)
+- Tay phải **nện hợp âm móc đơn đều** khớp với trống: hi-hat móc đơn, trống trầm phách 1 – 3, trống lẫy phách 2 – 4 (Yamaha). Jerry Lee Lewis nổi tiếng với chuỗi móc đơn dồn dập.
+- Tay trái: **bass boogie** chơi móc đơn đều (không [[swing|swing]]) là âm thanh rock and roll; bản đơn giản chỉ giữ các phách chính.
+::rhythm 4/4 e-e >e-e e-e >e-e // | Tay phải rock and roll: móc đơn đều, nhấn phách 2 và 4
+::staff bass C3+G3 C3+G3 C3+A3 C3+A3 C3+Bb3 C3+Bb3 C3+A3 C3+A3 | Một mẫu tay trái rock and roll quen thuộc trên C: quãng 5 – quãng 6 – quãng 7 thứ – quãng 6 (minh hoạ)
+- Khung hoà âm: [[blues-12-nhip|blues 12 ô]]; học **bè trầm trước**, rồi dịch sang F và G (Pianist Magazine).
+
+## Rock
+- Tay trái **[[quang|quãng 8]]** hoặc **1 – 5** (kiểu "power chord", xem [[hop-am-6-va-add]]) [[kiem-soat-toc-do|giữ nhịp]] móc đơn.
+- [[hoa-am-dieu-thuc|Hoà âm điệu thức]]: ♭VII – IV – I, I – ♭VII — xem [[hoa-am-pop]].
+- Hợp âm tay phải **ngắn, gọn** ([[cach-dien-tau|staccato]]), ít pedal khi muốn tiếng "rock" sắc.
+Liên quan: [[nhac-pho-thong-the-ky-20]], [[dem-hat-hien-dai]].
+`,
+  },
+  {
+    slug: 'dem-rnb-neo-soul',
+    title: 'Đệm R&B, soul và neo soul',
+    category: 'technique',
+    also: ['jazz'],
+    aliases: ['đệm R&B', 'R&B piano', 'neo soul', 'neo-soul', 'neo soul piano', 'hợp âm neo soul', 'soul piano', 'gospel pop', 'Rhodes', 'Fender Rhodes', 'J Dilla', 'Dilla time', 'new jack swing', '1-6-4-5', '11 chord', 'gospel V'],
+    summary: 'Từ soul (Ray Charles, Sam Cooke) đến contemporary R&B và neo soul (D’Angelo, Erykah Badu, Robert Glasper): hợp âm mở rộng m9, m11, maj9, "hợp âm 11" kiểu F/G, hợp âm lướt kiểu gospel, trượt hợp âm song song, nhịp 16 cảm giác "lùi sau phách" kiểu J Dilla, đàn Rhodes — và nguyên tắc chừa chỗ cho giọng hát.',
+    refs: [
+      ['Wikipedia — Neo soul', 'https://en.wikipedia.org/wiki/Neo_soul'],
+      ['Carnegie Hall Timeline — Neo soul', 'https://timeline.carnegiehall.org/genres/neo-soul'],
+      ['Wikipedia — Baduizm', 'https://en.wikipedia.org/wiki/Baduizm'],
+      ['Encyclopedia.com — Soul music', 'https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/soul-music'],
+      ['Carnegie Hall Timeline — New jack swing', 'https://timeline.carnegiehall.org/genres/new-jack-swing'],
+      ['Ethan Hein — Dilla time (về sách của Dan Charnas)', 'https://ethanhein.substack.com/p/dilla-time'],
+      ['Baker (2019) — A cyclic approach to harmony in Robert Glasper’s music (Theory and Practice 44)', 'https://www.academia.edu/95628265/'],
+      ['Thomas (2017) — The Jazz Gene, luận văn York University', 'https://yorkspace.library.yorku.ca/xmlui/bitstream/handle/10315/34304/Francis_P_Thomas_William_2017_Masters.pdf'],
+      ['PianoGroove — Neo soul chords', 'https://www.pianogroove.com/?p=21017'],
+      ['Piano With Jonny — 4 steps to neo soul chords', 'https://pianowithjonny.com/piano-lessons/4-steps-to-play-neo-soul-chords-on-piano/'],
+      ['Piano With Jonny — Contemporary gospel & R&B piano in 3 steps', 'https://pianowithjonny.com/piano-lessons/play-contemporary-gospel-and-rb-piano-in-3-steps/'],
+      ['PianoGroove — Gospel passing chords', 'https://pianogroove.com/blues-piano-lessons/gospel-passing-chords-substitutions/'],
+      ['Wikipedia — Funk', 'https://en.wikipedia.org/wiki/Funk'],
+      ['Berklee — Accompanying R&B', 'https://college.berklee.edu/node/2343896'],
+      ['Pianoo — Vintage electric pianos', 'https://pianoo.com/electric-vintage-piano-iconic-sounds-of-the-60s-70s-and-80s/'],
+    ],
+    body: `
+## Bối cảnh
+| Dòng | Thời gian | Đặc điểm | Mốc |
+|---|---|---|---|
+| **Soul** | Thập niên 1950 – 60 | Gospel + R&B + [[blues-12-nhip|blues]]: hợp âm, cấu trúc, [[ngau-hung-piano|hỏi – đáp]] của nhà thờ | Ray Charles, "I Got a Woman" (1954); Sam Cooke — xem [[tai-hoa-am-gospel]] |
+| **New jack swing** | Cuối 1980s | Nhịp hip hop có [[swing|swing]] + giọng hát kiểu gospel | Teddy Riley; nhóm Guy (1988) |
+| **Neo soul** | Giữa 1990s | Nhạc cụ thật, chất jazz, funk, gospel, hip hop | D’Angelo *Brown Sugar* (1995), Maxwell *Urban Hang [[to-khuc-baroque|Suite]]* (1996), Erykah Badu *Baduizm* (1997), *The Miseducation of Lauryn Hill* (1998), D’Angelo *Voodoo* (2000) |
+Tên "neo soul" được ghi công cho Kedar Massenburg (người quản lý D’Angelo, Badu). Bối cảnh rộng: [[nhac-pho-thong-the-ky-20]].
+
+## Từ vựng hợp âm
+| Hợp âm | Cách dựng | Ghi chú |
+|---|---|---|
+| **m9, m11** | m7 + 9 (+ 11) | PianoGroove gọi là "nền móng" của neo soul |
+| **maj9** | [[hop-am-bay|maj7]] + 9 | Màu mơ màng |
+| **"Hợp âm 11"** (9sus4) | Hợp âm trưởng một bậc dưới đặt trên bass: **F/G**, **B♭/C** | Át "treo", được gọi là "gospel V" — xem [[hop-am-gach-cheo]] |
+| [[bac-am-giai|Dominant]] 9, 13 | 7 + 9 (+ 13) | Xem [[hop-am-mo-rong]] |
+::grand E4+G4+B4+D5/C3+G3=Cmaj9 F4+A4+C5+E5/D3+A3=Dm9 G4+C5+D5/E3+B3=Em11 F4+A4+C5/G2=F/G | Các thế bấm R&B: tay trái gốc + 5, tay phải các nốt 3 – 5 – 7 – 9 (hoặc 7 – 11 – 9); F/G là "hợp âm 11" (minh hoạ)
+Nhãn "Em11" ở hình trên: nốt 3 (G) có mặt nên đây là Em11 đầy đủ; bỏ G sẽ cho màu "treo" mở hơn.
+
+## Các thủ pháp hoà âm
+- **Vòng 1 – 6 – 4 – 5** và mẹo **"chèn ii – V"**: trước mỗi hợp âm đích, chơi ii – V của nó làm hợp âm lướt (Piano With Jonny) — đúng như [[thay-the-hop-am|ii phụ và át phụ]].
+- **Hợp âm lướt kiểu gospel**: đi lên [[am-giai-cromatic|cromatic]] tới IV, [[hop-am-6-va-add|hợp âm treo]] lướt, 7 giảm lướt — xem [[hop-am-luot-jazz]], [[tai-hoa-am-gospel]].
+- **Trượt nửa cung**: vào một hợp âm từ hợp âm cùng loại **thấp hơn nửa cung** (PianoGroove) — họ hàng của [[choi-ngoai-jazz|side-slipping]].
+- **Trượt song song** (planing): giữ nguyên loại hợp âm và dời cả khối (ví dụ Cm9 → E♭m9) — hoà âm thiên về **[[dieu-thuc|điệu thức]]** hơn chức năng ([[hoa-am-song-song]]).
+- Nghiên cứu về Robert Glasper (Baker, 2019): ưa **maj7/m7** hơn [[ii-v-i|ii – V – I]], nốt gốc và giai điệu đi theo **quãng 3 diatonic**, hầu như tránh hợp âm 7 át.
+::grand C4+E4+G4/C3=C B3+D4+F4/B2=Bm7♭5 B3+D4+G#4/E3=E7 C4+E4+A4/A2=Am Bb3+D4+G4/G2=Gm7 Bb3+E4+G4/C3=C7 A3+C4+F4/F2=F B3+D4+F4/G2=G7 | 1 – 6 – 4 – 5 trong Đô trưởng với ii – V chèn trước Am và F (minh hoạ, thế bấm gọn)
+
+## Nhịp điệu và cảm giác
+- **Móc kép** là đơn vị nhịp; nhiều bài **swing nhẹ móc kép**. Funk (James Brown, giữa thập niên 1960) dồn trọng tâm vào **phách 1** ("the One") để các phách khác tự do đảo phách — xem [[dao-phach]].
+- **[[tiet-tau-ngau-hung-jazz|Nốt ma]]** (ghost notes): nốt rất nhẹ chen giữa các nhấn — trên piano là tương phản [[cuong-do|cường độ]].
+- **Nốt đón** (push): hợp âm vào sớm một móc kép hoặc móc đơn trước phách.
+- **Cảm giác J Dilla**: lệch khỏi lưới nhịp một cách có chủ ý và lặp lại đều mỗi ô (Dan Charnas, *Dilla Time*, 2022); Questlove đổi cách đánh trống trong *Voodoo* cho khớp. Trên piano: đặt hợp âm **hơi sau phách** nhưng giữ bè trầm vững.
+::rhythm 4/4 >e s-s rs s-e e >s-s e-e // | Một mẫu tay phải R&B móc kép có nốt đón và nhấn lệch (minh hoạ — nghe bản thu để bắt cảm giác)
+
+## Âm sắc và kết cấu
+- **Fender Rhodes** là âm thanh cốt lõi của neo soul (ấm, tiếng chuông); **Wurlitzer** gắt và nổi hơn; **Hammond organ** cho màu gospel. Xem [[cac-loai-dan-piano]].
+- Có người chơi bass: **bỏ nốt gốc** ở tay phải, chơi thế bấm không gốc ở âm khu giữa ([[xep-hop-am]]).
+- **Thưa, nối bè mượt**, không nhân đôi giai điệu; thế bấm **đơn giản hơn** dưới giọng hát (nốt căng có thể va với giai điệu); **fill** bằng [[am-giai-ngu-cung|ngũ cung]] hoặc [[am-giai-blues|âm giai blues]] ở chỗ ca sĩ lấy hơi.
+- Berklee lưu ý: đệm R&B khó hơn [[dem-pop-ballad|đệm ballad]] jazz vì phải lo cả đường bass và các hình tiết tấu.
+Liên quan: [[dem-jazz]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
+`,
+  },
+  {
+    slug: 'dem-dieu-viet-nam',
+    title: 'Các điệu đệm nhạc Việt: bolero, rumba, slow, valse, boston, tango…',
+    category: 'technique',
+    aliases: ['điệu bolero', 'bolero Việt Nam', 'đệm bolero', 'điệu rumba', 'đệm rumba', 'điệu slow', 'slow surf', 'điệu valse', 'điệu boston', 'điệu tango', 'điệu disco', 'điệu fox', 'đệm nhạc vàng', 'đệm nhạc trẻ'],
+    summary: 'Ca khúc Việt Nam được đệm theo một bộ "điệu" quen thuộc: bolero, rumba, chachacha (nhạc vàng), slow, slow surf, ballad (nhạc trẻ), slow rock 12/8, valse và boston 3/4, tango, disco. Bài này tổng hợp nhịp, tốc độ ước lượng và cách chuyển mẫu "đánh" guitar sang piano — ghi rõ phần nào có nguồn học thuật, phần nào là kinh nghiệm của giáo viên.',
+    refs: [
+      ['Wikipedia — Bolero Việt Nam', 'https://vi.wikipedia.org/wiki/Bolero_Vi%E1%BB%87t_Nam'],
+      ['Wikipedia — Bolero', 'https://en.wikipedia.org/wiki/Bolero'],
+      ['Britannica — Bolero (dance)', 'https://www.britannica.com/art/bolero-dance'],
+      ['Thanh Niên — Bài bolero đầu tiên trong âm nhạc Việt', 'https://thanhnien.vn/bai-bolero-dau-tien-trong-am-nhac-viet-185536951.htm'],
+      ['Viện Âm nhạc — Vietnamese Boléro? (Nguyễn Thị Mỹ Liêm)', 'https://vienamnhac.vn/publication/books/bulletin/vietnamese-bolero'],
+      ['Nguyen (2024) — Bolero: remaking pre-1975 music (Rising Asia Journal)', 'https://www.rajraf.org/article/bolero-remaking-pre-1975-music-in-post-socialist-vietnam/1167'],
+      ['Vietnamnet — Rock Hà Nội, Bolero Sài Gòn (Jason Gibbs)', 'https://vietnamnet.vn/rock-ha-noi-bolero-sai-gon-cau-chuyen-tan-nhac-viet-nam-586409.html'],
+      ['Yamaha Việt Nam — Học guitar điệu bolero', 'https://vn.yamaha.com/vi/news/2020/hoc-guitar-bolero.html'],
+      ['Bối Ngọc Piano — Phân biệt các kiểu đệm hát piano', 'https://boingocpiano.com/cach-phan-biet-cac-kieu-dem-hat-piano'],
+      ['Bối Ngọc Piano — Đệm slow rock', 'https://boingocpiano.com/phan-biet-dem-hat-piano-dieu-slowrock'],
+      ['Bối Ngọc Piano — Valse và boston', 'https://boingocpiano.com/phan-biet-dem-hat-piano-dieu-valse-boston'],
+      ['Học Đàn — Điệu slow', 'https://hocdan.edu.vn/kien-thuc/cach-danh-dieu-slow-co-ban-voi-dan-guitar/'],
+      ['Guitarshare — Điệu slow surf', 'https://www.guitarshare.vn/guitar-blog/cach-anh-ieu-slow-surf-trong-guitar-em-html/'],
+      ['Âm hình điệu valse, boston và cách đệm piano', 'https://luatsunguyenhuuphuoc.com/am-hinh-dieu-valse-va-dieu-boston-va-cach-dem-piano/'],
+      ['Tiết tấu và phong cách đệm piano cho từng thể loại nhạc nhẹ', 'https://luatsunguyenhuuphuoc.com/nghe-thuat-tiet-tau-va-phong-cach-dem-piano-dac-trung-cho-tung-the-loai-nhac-nhe/'],
+    ],
+    body: `
+## Về nguồn của bài này
+- Lịch sử bolero có nguồn **bách khoa và học thuật** (Wikipedia, các nghiên cứu của Jason Gibbs, Minh X. Nguyen, Viện Âm nhạc).
+- Còn **mẫu tiết tấu và tốc độ** của từng điệu chủ yếu đến từ **các trang dạy đàn** (Yamaha Việt Nam, các trung tâm piano, guitar); chưa tìm thấy tài liệu học thuật mô tả chính xác [[so-chi-nhip|ô nhịp]] bolero Việt. Các mẫu dưới đây nên xem là **mẫu dạy phổ biến**, không phải chuẩn duy nhất — hãy nghe bản thu để điều chỉnh.
+
+## Bolero Việt Nam
+- **Gốc**: bolero là thể loại Cuba (Santiago de Cuba, cuối thế kỷ 19), nhịp chẵn — khác bolero Tây Ban Nha nhịp 3/4. Vào Việt Nam đầu thập niên 1950 và phổ biến ở miền Nam trong dòng nhạc vàng ([[tan-nhac-viet-nam]]).
+- Bài "bolero đầu tiên" còn tranh luận: "Nắng chiều" (Lê Trọng Nguyễn, ghi "rumba – bolero", 1952/53), "Duyên quê" (Hoàng Thi Thơ), "Xóm đêm" (Phạm Đình Chương).
+- Nhạc sĩ Việt **làm chậm** tiết tấu Latin và pha luyến láy dân ca, cải lương.
+- **Nhịp và tốc độ** (theo các trang dạy đàn): 4/4, chậm nhất trong nhóm Latin — khoảng 64 – 78 phách/phút.
+::rhythm 4/4 e:bùm-s:chờ-s:rát q:chách q:bùm q:chách // | Mẫu bolero thường dạy: phách 1 là một móc đơn + hai móc kép ("bùm – chờ rát"), rồi "chách – bùm – chách"
+- **Trên piano**: tay trái nốt gốc ở phách 1 (có nốt lấy đà ngắn trước phách 3), nốt gốc phụ (nốt 5) ở phách 3; tay phải hợp âm ở phách 2 và 4 hoặc rải [[cach-dien-tau|legato]]. [[bien-tau|Biến tấu]] chủ yếu ở phách 3 – 4.
+::grand /C3=1 E4+G4+C5/=2 /G2=3 E4+G4+C5/=4 | Khung bolero trên piano (minh hoạ): trầm phách 1 – hợp âm – trầm phụ phách 3 – hợp âm
+
+## Rumba và chachacha
+| Điệu | Nhịp, tốc độ | Đặc điểm |
+|---|---|---|
+| **Rumba** (nhạc Việt) | 4/4, khoảng 80 – 100 | Nhấn **phách 2 và 4**, nảy hơn bolero; tám móc đơn mỗi ô; có thể đổi qua lại với bolero trong cùng một bài |
+| **Chachacha** | 4/4, nhanh nhất nhóm | Tinh nghịch; "cha-cha-cha" ở phách 4 – và – 1 — chi tiết ở [[dieu-dem-pho-bien]] |
+::rhythm 4/4 e-e >e-e e-e >e-e // | Rumba: móc đơn đều, nhấn phách 2 và 4 (minh hoạ)
+
+## Nhóm "slow" (nhạc trẻ, ballad)
+| Điệu | Mẫu | Trên piano |
+|---|---|---|
+| **Slow** | 4/4 chậm; guitar "chình – chát – chình – chát": trầm phách 1, 3; hợp âm phách 2, 4 | Kiểu "bùm – chách", hoặc tay trái rải 1 – 5 – 8 móc đơn (xem [[dem-pop-ballad]]) |
+| **Slow surf** | 4/4; mẫu guitar "Bass – 3 – 21 – 3 – 21 – 3 – 21 – 3" | Nốt trầm rồi xen kẽ nốt giữa và cặp nốt trên, đủ tám móc đơn |
+| **Slow rock** | Các trang Việt ghi 6/8, 2/4 hay 4/4, nhưng thực chất là **12/8** (bốn nhóm ba) | Tay phải hợp âm [[lien-ba|liên ba]], tay trái nốt gốc mỗi phách lớn — xem [[dem-slow-rock-rock]]. Ví dụ hay được nêu: "Oh Mon Amour", "Ngày tân hôn" (Phạm Duy) |
+::grand /C3=B G4/=3 C5+E5/=21 G4/=3 C5+E5/=21 G4/=3 C5+E5/=21 G4/=3 | Slow surf chuyển sang piano (minh hoạ): B = nốt trầm, 3 = nốt giữa, 21 = cặp nốt trên — tám móc đơn
+
+## Điệu 3/4
+| Điệu | Tốc độ (ước lượng) | Cách đệm |
+|---|---|---|
+| **Valse** | Nhanh — khoảng 120 – 180 | "Bùm – chách – chách": trầm phách 1, hợp âm phách 2 – 3 — xem [[tieu-pham-piano]] |
+| **Boston** | Chậm — khoảng 60 – 65 | "Valse chậm": trầm ngân dài, hợp âm nhẹ; guitar "Bass – 3 – 21 – 3 – 21" |
+::staff bass C3=1 E3+G3=2 E3+G3=3 / G2=1 F3+G3=2 F3+G3=3 | Đệm valse: trầm – hợp âm – hợp âm
+
+## Tango, disco, fox
+- **Tango** (2/4 hoặc 4/4): dứt khoát; tay trái xen kẽ trầm và hợp âm **ngắn, ngắt**; ở 4/4 nhấn nửa phách cuối ô.
+- **Disco**: trầm đều **mọi phách** (four on the floor) — xem [[nhac-pho-thong-the-ky-20]].
+- **Fox**: nhanh, tươi (các nguồn ghi 2/4 hoặc 4/4).
+::rhythm 4/4 q q q >e e // | Tango 4/4: nhấn nửa phách cuối ô (minh hoạ)
+
+## Chọn điệu cho bài hát
+1. Nghe bản thu gốc, [[am-tiet-nhip|đếm nhịp]] (3 hay 4 phách; phách chia đôi hay chia ba).
+2. Xác định tốc độ và tính chất: chậm – buồn (bolero, boston), nảy (rumba), sôi nổi (chachacha, disco).
+3. Thử hai điệu gần nhau (bolero ↔ rumba, slow ↔ slow rock) và chọn cái hợp giọng ca sĩ.
+Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
+`,
+  },
+  {
+    slug: 'dem-bossa-nova',
+    title: 'Đệm bossa nova',
+    category: 'technique',
+    also: ['jazz'],
+    aliases: ['đệm bossa nova', 'bossa nova piano', 'batida', 'João Gilberto', 'Jobim', 'The Girl from Ipanema', 'Chega de Saudade', 'Getz/Gilberto', 'bossa clave'],
+    summary: 'Bossa nova ra đời ở Rio de Janeiro cuối thập niên 1950: guitar "batida" của João Gilberto mô phỏng cả dàn trống samba, hoà âm jazz của Jobim. Bài này trình bày lịch sử ngắn, cảm giác "đung đưa" chứ không swing, tay trái 1 – 5 với nốt đón, tay phải đảo phách, thế bấm và bước hoà âm đặc trưng (II7 trong "The Girl from Ipanema").',
+    refs: [
+      ['Wikipedia — Bossa nova', 'https://en.wikipedia.org/wiki/Bossa_nova'],
+      ['Wikipedia — João Gilberto', 'https://en.wikipedia.org/wiki/Jo%C3%A3o_Gilberto'],
+      ['Wikipedia — Astrud Gilberto', 'https://en.wikipedia.org/wiki/Astrud_Gilberto'],
+      ['The Jazz Piano Site — How to play bossa nova', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/how-to-play-bossa-nova/'],
+      ['PianoGroove — Bossa nova basslines and grooves', 'https://pianogroove.com/bossa-nova-lessons/basslines-rhythm-grooves/'],
+      ['Jazz Piano Blog — Bossa nova bass lines', 'https://jazzpianoblog.com/how-to-play-bossa-nova-bass-lines-at-the-piano/'],
+      ['You’ll Hear It — The real way to play bossa nova', 'https://youllhearit.com/blog-2-minute-jazz-56-the-real-way-to-play-bossa-nova/'],
+      ['Piano With Jonny — The Jobim chord progression', 'https://pianowithjonny.com/piano-lessons/the-jobim-chord-progression/'],
+      ['Jazzadvice — How to play The Girl from Ipanema', 'https://www.jazzadvice.com/lessons/how-to-play-the-girl-from-ipanema/'],
+      ['Art Research Journal (UFRN) — về Chega de Saudade', 'https://periodicos.ufrn.br/artresearchjournal/article/download/10002/8712/37684'],
+    ],
+    body: `
+## Lịch sử ngắn
+| Mốc | Năm |
+|---|---|
+| Rio de Janeiro, giới sinh viên và nhạc sĩ trung lưu | Cuối 1950s – đầu 1960s |
+| "Chega de Saudade" (Jobim – Vinicius de Moraes): João Gilberto chơi guitar trong LP của Elizeth Cardoso — **"nhịp bossa nova" đầu tiên được thu âm**; đĩa đơn của chính Gilberto ra giữa năm 1958 | 1958 |
+| *Getz/Gilberto* (thu 3/1963, phát hành 1964): giải Grammy Album của năm; "The Girl from Ipanema" (Astrud Gilberto hát lời Anh) đoạt Thu âm của năm | 1964 – 65 |
+Bối cảnh: [[phong-cach-jazz]] (mục Latin).
+
+## Cảm giác: đung đưa, không swing
+- Móc đơn **thẳng** nhưng [[dao-phach|đảo phách]] nhiều; tiết chế, ít rung, ít thay đổi [[cuong-do|cường độ]] (TJPS).
+- Ba lớp: **bè trầm lặp**, **hợp âm đệm** đảo phách, **giai điệu**.
+- **Batida** của Gilberto: ngón cái chơi trầm ở phách 1 và 3 (gốc – 5, như trống *surdo* của samba), các ngón kia gảy hợp âm đảo phách — một cây guitar [[doi-am|mô phỏng]] cả dàn trống.
+- Khác samba: samba nhanh hơn, ồn hơn, dàn gõ lễ hội; bossa nova nhỏ nhẹ, thân mật, cho giọng hát và guitar, [[hoa-am-jazz|hoà âm jazz]].
+
+## Tay trái
+::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và phách 1 sau có thể lặp, đón nốt gốc sau, nhảy quãng 8 hay tiếp cận nửa cung (TJPS)
+::staff bass F2=1 F2 C3=5 C3 / G2=1 G2 D3=5 D3 | Khung trầm 1 – 5 trên Fmaj7 – G7 (minh hoạ); **không dùng pedal** để giữ tiếng trầm gọn
+Peter Martin gợi ý có thể giản lược bè trầm thành nốt trắng — phần đảo phách nằm ở tay phải.
+
+## Tay phải
+- [[ngon-bam|Thế bấm]] **ba nốt không có nốt 5** (gốc, 3, 7 hoặc 3, 7, 9) — xem [[the-bam-ba-not]], [[xep-hop-am]].
+- Tay phải **đón trước** sự đổi hợp âm (vào sớm nửa phách). Mẫu đảo phách cụ thể và "clave bossa nova": [[dieu-dem-pho-bien]].
+
+## Hoà âm Jobim
+- Màu sắc ấn tượng trong khung chức năng: [[hop-am-bay|maj7]], m7, 7(9), 7(♭9), m7♭5, bè trong đi xuống [[am-giai-cromatic|cromatic]].
+- Dấu ấn: **II7** ([[hop-am-at-phu|át phụ]] của V) ở ô 3 – 4 của "The Girl from Ipanema", rồi ii – ♭II7 – I.
+::grand A3+C4+E4/F2=Fmaj7 B3+D4+F4/G2=G7 Bb3+D4+F4/G2=Gm7 Bb3+Db4+Fb4/Gb2=G♭7 A3+C4+E4/F2=Fmaj7 | Đoạn A kiểu "Ipanema" trong Fa trưởng: I – II7 – ii – ♭II7 (thay thế tritone của C7) – I (thế bấm gọn, minh hoạ)
+- "The Girl from Ipanema": hình thức AABA **40 ô** (đoạn B dài 16 ô); bản *Getz/Gilberto* ở Rê giáng trưởng, thường chơi ở Fa trưởng. Xem [[hinh-thuc-ca-khuc-32]], [[thay-the-tritone]].
+Liên quan: [[dem-jazz]], [[dem-hat-hien-dai]].
+`,
+  },
+  {
+    slug: 'dem-hat-hien-dai',
+    title: 'Đệm hát hiện đại: hệ thống và lộ trình',
+    category: 'technique',
+    aliases: ['đệm hát hiện đại', 'đệm hát pop', 'modern accompaniment', 'đệm piano hiện đại', 'lộ trình đệm hát', 'đệm theo tông ca sĩ'],
+    summary: 'Lộ trình đệm hát trên piano từ cơ bản đến nâng cao, cho nhạc Việt và nhạc nước ngoài: đọc hợp âm và dịch giọng theo ca sĩ, các mẫu tay trái – tay phải, hoà âm pop, từng thể loại (pop/ballad, slow rock, rock, R&B và neo soul, bossa nova, các điệu nhạc Việt), cùng các kỹ năng dạo đầu, câu nối, kết bài và nghe ca sĩ.',
+    refs: [
+      ['Open Music Theory — Popular music', 'https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-pop-schemas/'],
+      ['Berklee Online — Take Note: piano accompaniment', 'https://online.berklee.edu/takenote/?p=3246'],
+      ['PianoGroove — Accompanying singers', 'https://pianogroove.com/jazz-piano-lessons/accompanying-singers-melody-harmony-bass/'],
+    ],
+    body: `
+## Năm cấp độ
+| Cấp | Mục tiêu | Bài |
+|---|---|---|
+| **1. Đọc và [[kiem-soat-toc-do|giữ nhịp]]** | Đọc [[ky-hieu-hop-am|ký hiệu hợp âm]]; tay trái nốt gốc, tay phải [[hop-am-ba|hợp âm ba]]; không dừng khi chuyển hợp âm | [[dem-hat-piano]], [[vong-hop-am]], [[the-dao-hop-am]] |
+| **2. Các điệu cơ bản** | Bolero, rumba, slow, valse, slow rock; nghe và chọn điệu | [[dem-dieu-viet-nam]], [[dieu-dem-pho-bien]] |
+| **3. Đệm như một bản phối** | Mẫu tay trái 1 – 5 – 8, thể đảo gần nhất, sus2/add9, đường cong năng lượng, chừa chỗ cho giọng hát | [[dem-pop-ballad]], [[hoa-am-pop]], [[dem-slow-rock-rock]] |
+| **4. Thể loại có hoà âm mở rộng** | Bossa nova, R&B, neo soul, gospel: [[hop-am-bay|hợp âm 7]], 9, 11, hợp âm lướt, nhịp móc kép | [[dem-bossa-nova]], [[dem-rnb-neo-soul]], [[tai-hoa-am-gospel]] |
+| **5. Tự do tái hoà âm** | Thay hợp âm, đổi điệu, đổi nhịp, nâng tông, dạo đầu và kết bài riêng | [[tai-hoa-am]], [[doi-nhip-the-loai-jazz]], [[dem-cho-ca-si]] |
+
+## Kỹ năng chung cho mọi thể loại
+| Kỹ năng | Cách làm |
+|---|---|
+| **Theo tông ca sĩ** | Hỏi tông, hoặc nghe ca sĩ hát một câu rồi tìm nốt chủ; luyện [[dich-giong]] các vòng quen ở mọi giọng |
+| **Dạo đầu** | Lấy vòng hợp âm của điệp khúc hoặc 2 – 4 ô cuối bài; kết dạo đầu trên **hợp âm át (V)** để ca sĩ vào đúng giọng |
+| **Câu nối (fill)** | Chỉ chơi ở **chỗ ca sĩ lấy hơi**; dùng [[am-giai-ngu-cung|ngũ cung]], [[am-giai-blues|âm giai blues]] hoặc [[luyen-hop-am-rai|hợp âm rải]] ngắn |
+| **Kết bài** | Lặp vòng cuối, chậm dần; hoặc kết bằng một hợp âm "màu" ([[hop-am-6-va-add|add9]], maj9) |
+| **Nghe ca sĩ** | Không nhân đôi giai điệu; nhỏ lại khi ca sĩ hát nhỏ; giữ nhịp vững nhưng thở theo câu hát |
+| **Nhận ra thể loại** | [[am-tiet-nhip|Đếm nhịp]], xác định chia đôi hay chia ba, nghe tay trống — xem [[the-loai-am-nhac]], [[nhac-pho-thong-the-ky-20]] |
+::form Dạo_đầu Phiên_khúc Điệp_khúc Câu_nối Phiên_khúc Điệp_khúc Kết | Khung một bài đệm hát: dạo đầu và kết là phần người đệm tự quyết định
+
+## Lộ trình luyện tập (gợi ý)
+1. Mỗi tuần một **vòng hợp âm** ([[hoa-am-pop]]) — luyện ở 3 giọng.
+2. Mỗi tuần một **điệu** — chơi vòng đó với điệu mới.
+3. Mỗi tháng một **bài hát hoàn chỉnh**: dạo đầu, đệm, câu nối, kết; thu âm lại và nghe.
+4. Đệm cho **người hát thật** càng sớm càng tốt — đó là cách duy nhất học "nghe ca sĩ".
+Bối cảnh rộng hơn: [[ky-thuat-piano]], [[su-pham-piano]].
 `,
   },
   {

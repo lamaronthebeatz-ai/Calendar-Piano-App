@@ -56,7 +56,7 @@ Một thể loại có thể dùng nhiều hình thức (giao hưởng dùng son
 **V. Thế kỷ 20 – nay**
 17. [[trao-luu-the-ky-20]], [[toi-gian]], [[nhac-pho]], [[nhac-dien-tu]].
 18. [[nhac-phim-va-tro-choi]].
-19. [[phong-cach-jazz]], [[blues-12-nhip]], [[nhac-pho-thong-the-ky-20]].
+19. [[phong-cach-jazz]], [[blues-12-nhip]], [[nhac-pho-thong-the-ky-20]] (hoà âm: [[hoa-am-pop]]; cách đệm: [[dem-hat-hien-dai]]).
 20. Việt Nam: [[am-nhac-truyen-thong-viet-nam]], [[tan-nhac-viet-nam]].
 Bảng tóm tắt các thể loại khí nhạc lớn: [[the-loai]].
 
@@ -1085,8 +1085,8 @@ Liên quan: [[nhac-dien-tu]], [[operetta-va-nhac-kich]], [[giao-huong]].
 ::form Intro Verse Chorus Verse Chorus Bridge Chorus Outro | Khuôn verse – chorus (phiên khúc – điệp khúc) phổ biến của pop và rock
 
 ## Với người học piano
-- Đệm pop trên piano: nhận ra tiết tấu dòng nhạc rồi chuyển nó vào tay trái – tay phải — xem [[dem-hat-piano]], [[dieu-dem-pho-bien]].
-- Hoà âm pop dùng nhiều vòng bốn hợp âm — xem [[vong-hop-am]], [[hop-am-6-va-add]].
+- [[dem-pop-ballad|Đệm pop]] trên piano: nhận ra tiết tấu dòng nhạc rồi chuyển nó vào tay trái – tay phải — xem [[dem-hat-piano]], [[dieu-dem-pho-bien]].
+- [[hoa-am-pop|Hoà âm pop]] dùng nhiều vòng bốn hợp âm — xem [[vong-hop-am]], [[hop-am-6-va-add]].
 Liên quan: [[tan-nhac-viet-nam]], [[nhac-dien-tu]], [[blues-12-nhip]].
 `,
   },
@@ -1094,7 +1094,7 @@ Liên quan: [[tan-nhac-viet-nam]], [[nhac-dien-tu]], [[blues-12-nhip]].
     slug: 'tan-nhac-viet-nam',
     title: 'Tân nhạc Việt Nam',
     category: 'genres',
-    aliases: ['tân nhạc', 'tân nhạc Việt Nam', 'ca khúc Việt Nam', 'nhạc vàng', 'nhạc đỏ', 'bolero Việt Nam', 'V-pop', 'Nguyễn Văn Tuyên', 'Văn Cao', 'Phạm Duy', 'Đoàn Chuẩn'],
+    aliases: ['tân nhạc', 'tân nhạc Việt Nam', 'ca khúc Việt Nam', 'nhạc vàng', 'nhạc đỏ', 'V-pop', 'Nguyễn Văn Tuyên', 'Văn Cao', 'Phạm Duy', 'Đoàn Chuẩn'],
     summary: 'Ca khúc Việt Nam viết theo lối phương Tây (giai điệu có hoà âm, guitar và piano đệm), thường lấy mốc buổi trình diễn của Nguyễn Văn Tuyên ở Hà Nội năm 1938. Bài này giới thiệu các giai đoạn và cách gọi tên các dòng nhạc một cách trung tính.',
     refs: [
       ['ThingsAsian — Tân nhạc', 'https://thingsasian.com/node/3464.html'],

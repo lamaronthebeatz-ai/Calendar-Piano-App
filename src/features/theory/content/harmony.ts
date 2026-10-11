@@ -58,7 +58,7 @@ Tổng quan và bản đồ: [[he-thong-hoa-am-co-dien]].
 18. [[cau-ket|Câu kết]].
 19. [[hop-am-cam-am|Hợp âm cảm âm (vii°)]].
 20. [[nhip-dieu-hoa-am|Nhịp điệu hoà âm]].
-21. [[vong-hop-am|Vòng hợp âm]].
+21. [[vong-hop-am|Vòng hợp âm]] và [[hoa-am-pop|các khuôn hợp âm pop – rock]].
 22. [[mo-tien-hoa-am|Mô tiến]].
 
 ## Chương 5. Viết bè
@@ -712,7 +712,74 @@ Theo [[arnold-schoenberg|Schoenberg]], nốt gốc **lên [[quang|quãng]] 4 (xu
 3. Tay trái chơi nốt gốc, sau đó thử các [[dem-hat-piano|kiểu đệm]] (rải, Alberti, nhịp).
 4. **Dịch giọng**: chơi lại cùng vòng ở G, F, D… — dùng [[vong-quang-nam]] để biết các [[hop-am-ba|hợp âm]] (xem [[dich-giong]]).
 
+Các khuôn hợp âm pop – rock đầy đủ hơn (puff, plagal sigh, ♭VII, Andalusia, bè trầm đi xuống, nâng tông): [[hoa-am-pop]].
+
 Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]], [[mo-tien-hoa-am]]. [[bien-tau|Biến tấu]] vòng hợp âm: [[tai-hoa-am]].
+`,
+  },
+  {
+    slug: 'hoa-am-pop',
+    title: 'Hoà âm pop: các khuôn hợp âm thường gặp',
+    category: 'harmony',
+    also: ['technique', 'genres'],
+    aliases: ['hoà âm pop', 'pop harmony', 'pop schema', 'khuôn hợp âm pop', 'doo-wop progression', '50s progression', 'Axis progression', 'sensitive female chord progression', 'plagal sigh', 'Andalusian cadence', 'vòng Andalusia', 'Creep progression', 'double plagal', 'truck driver’s modulation', 'chuyển giọng nâng tông'],
+    summary: 'Nhạc pop – rock dùng những "khuôn" hợp âm lặp đi lặp lại: doo-wop I – vi – IV – V, vòng "Axis" I – V – vi – IV và các dạng xoay của nó, puff I – iii – IV, plagal sigh IV – iv – I, các khuôn Mixolydian và Aeolian với ♭VII, ♭VI, vòng Andalusia, bè trầm đi xuống và trung âm cromatic. Bài này hệ thống hoá chúng theo Open Music Theory, kèm thống kê của de Clercq & Temperley và cách chuyển giọng "nâng tông" cuối bài.',
+    refs: [
+      ['Open Music Theory — Intro to pop schemas', 'https://viva.pressbooks.pub/openmusictheory/chapter/intro-to-pop-schemas/'],
+      ['Open Music Theory — Four-chord schemas', 'https://viva.pressbooks.pub/openmusictheory/chapter/4-chord-schemas/'],
+      ['Open Music Theory — Puff schemas', 'https://viva.pressbooks.pub/openmusictheory/chapter/puff-schemas/'],
+      ['Open Music Theory — Classical schemas', 'https://viva.pressbooks.pub/openmusictheory/chapter/classical-schemas/'],
+      ['Open Music Theory — Blues-based schemas', 'https://viva.pressbooks.pub/openmusictheory/chapter/blues-based-schemas/'],
+      ['Open Music Theory — Modal schemas', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/07%3A_Popular_Music/7.12%3A_Modal_Schemas'],
+      ['Open Music Theory — Verse-chorus form', 'https://viva.pressbooks.pub/openmusictheory/chapter/verse-chorus-form/'],
+      ['Wikipedia — ’50s progression', 'https://en.wikipedia.org/wiki/%2750s_progression'],
+      ['Wikipedia — I–V–vi–IV progression', 'https://en.wikipedia.org/wiki/I%E2%80%93V%E2%80%93vi%E2%80%93IV_progression'],
+      ['Wikipedia — Andalusian cadence', 'https://en.wikipedia.org/wiki/Andalusian_cadence'],
+      ['Wikipedia — Chromatic mediant', 'https://en.wikipedia.org/wiki/Chromatic_mediant'],
+      ['de Clercq & Temperley (2011) — A corpus analysis of rock harmony', 'https://rockcorpus.midside.com/2011_paper/declercq_temperley_2011.pdf'],
+      ['Portable Philosophy — The truck driver’s gear change', 'https://www.portablephilosophy.com/all/2015/4/26/endings-2-supplement-the-truck-drivers-gear-change'],
+      ['Fresno State — Modulation (direct / truck driver’s)', 'https://zimmer.csufresno.edu/~sasanr/Music/Music-Theory/Modulation.htm'],
+    ],
+    body: `
+Open Music Theory gọi các vòng hợp âm lặp lại trong pop – rock là **"schema"** (khuôn): những tiến trình quen thuộc xuất hiện trong rất nhiều bài, có thể biến đổi mà vẫn nhận ra nguyên mẫu. Bảng cơ bản (I – IV – V, I – V – vi – IV…) ở [[vong-hop-am]]; bài này đi sâu hơn.
+
+## Khuôn bốn hợp âm
+| Tên | La Mã | Trong Đô trưởng / La thứ | Ghi chú |
+|---|---|---|---|
+| **Doo-wop** ("50s", "Blue Moon") | I – vi – IV – V | C – Am – F – G | "Stand by Me", "Earth Angel"; biến thể dùng ii thay IV |
+| **Axis / singer-songwriter** | I – V – vi – IV | C – G – Am – F | Nổi tiếng nhờ màn medley "4 Chords" của Axis of Awesome; [[bac-am-giai|chủ âm]] **nhập nhằng** giữa I và vi |
+| Dạng xoay "sensitive female" | vi – IV – I – V | Am – F – C – G | Tên do Marc Hirsh (Boston Globe, 1998) đặt khi so sánh hai bài hit thời đó |
+| **Hopscotch** | IV – V – vi – I | F – G – Am – C | Ở [[am-giai-thu|giọng thứ]]: VI – VII – i – III |
+::grand C4+E4+G4/C3=I B3+D4+G4/G2=V C4+E4+A4/A2=vi C4+F4+A4/F2=IV | Vòng Axis với tay phải đi thể đảo gần nhất — gần như không di chuyển
+
+## Khuôn ba hợp âm và mượn
+| Tên | La Mã | Ví dụ trong Đô trưởng | Màu sắc |
+|---|---|---|---|
+| **Puff** | I – iii – IV | C – Em – F | Biến thể I – III♯ – IV (C – E – F) |
+| Vòng "Creep" | I – III – IV – iv | C – E – F – Fm | III là [[trung-am-cromatic|trung âm cromatic]] |
+| **Plagal sigh** | IV – iv – I | F – Fm – C | Bè trong đi la – le – sol (A – A♭ – G): hoài niệm, ngậm ngùi |
+| iv mượn | … iv – I | Fm – C | Có lẽ là dạng [[hop-am-muon|mượn giọng]] phổ biến nhất trong pop |
+::grand C4+F4+A4/F2=IV C4+F4+Ab4/F2=iv C4+E4+G4/C3=I | Plagal sigh: chỉ một nốt đổi — A → A♭ → G
+
+## Khuôn điệu thức (rock)
+| Tên | La Mã | Ví dụ |
+|---|---|---|
+| Subtonic shuttle | I – ♭VII | C – B♭ |
+| **Double plagal** (Mixolydian) | ♭VII – IV – I | B♭ – F – C |
+| Aeolian shuttle | i – ♭VII – ♭VI – ♭VII | Am – G – F – G |
+| Aeolian [[cau-ket|cadence]] | ♭VI – ♭VII – i (hoặc I) | F – G – Am (C) |
+| **Vòng Andalusia** (lament) | i – ♭VII – ♭VI – V | Am – G – F – E; "Runaway" (Del Shannon) — thường lặp như [[ostinato]] hơn là một kết thật |
+Theo khảo sát 100 bài trong danh sách 500 bài hay nhất của tạp chí *Rolling Stone* (de Clercq & Temperley, 2011): sau I, **IV** là hợp âm phổ biến nhất, nhất là ngay trước chủ; **♭VII** cũng rất hay đứng trước chủ — rock có "ngữ pháp" riêng, không giống hoà âm chức năng cổ điển ([[chuc-nang-hoa-am]], [[dieu-thuc]]).
+
+## Bè trầm đi xuống
+::grand C4+E4+G4/C3=C D4+G4/B2=G/B C4+E4+A4/A2=Am C4+E4+A4/G2=Am/G C4+F4+A4/F2=F C4+E4+G4/E2=C/E D4+F4+A4/D2=Dm B3+D4+G4/G2=G | Bè trầm đi xuống liền bậc C – B – A – G – F – E – D nhờ [[hop-am-gach-cheo|hợp âm gạch chéo]] (họ hàng của vòng Canon Pachelbel)
+
+## Hình thức và chuyển giọng
+- Khuôn hình thức chính: **verse – (pre-chorus) – chorus – ([[hinh-thuc-ca-khuc-32|bridge]])**. Pre-chorus nhận ra nhờ **năng lượng tăng dần**, dẫn tới điệp khúc — xem [[nhac-pho-thong-the-ky-20]].
+- **"Nâng tông" cuối bài** (*truck driver’s gear change*): chuyển giọng **đột ngột**, thường **lên nửa cung** (đôi khi một cung) trước hoặc giữa các điệp khúc cuối, như "sang số" — hiệu quả nhưng bị coi là sáo mòn nếu lạm dụng. Xem [[chuyen-giong]].
+::grand C4+E4+G4/C3=C B3+D4+G4/G2=G / Db4+F4+Ab4/Db3=D♭ | Nâng tông nửa cung: điệp khúc cuối chuyển từ Đô trưởng lên Rê giáng trưởng (thường có một hợp âm át A♭ hoặc không có gì chuẩn bị)
+
+Ứng dụng khi đệm: [[dem-pop-ballad]], [[dem-hat-hien-dai]].
 `,
   },
   {
