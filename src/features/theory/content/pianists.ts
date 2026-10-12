@@ -230,6 +230,12 @@ Các nhà soạn nhạc Nguyễn Văn Nam, Nguyễn Trọng Bằng, Đoàn Nho (
 Năm 1980, [[dang-thai-son|Đặng Thái Sơn]] trở thành người châu Á đầu tiên giành giải nhất cuộc thi [[frederic-chopin|Chopin]] (xem [[nghe-si-piano-hien-dai]]).
 
 Lưu ý: các nguồn chủ yếu là chương trình hoà nhạc và luận văn ở nước ngoài, nên danh sách trên **chưa đầy đủ**; luận văn *Solo Piano Music by Vietnamese Composers* của Nam Hoàng Nguyễn là tài liệu chuyên sâu nhất được biết đến. Bổ sung từ tư liệu trong nước sẽ giúp danh sách đầy đủ hơn.
+
+## Nghe
+
+::youtube 9DBo0j9xlwc | *Chopin Piano Concerto No.2* · Đặng Thái Sơn
+
+::youtube Crn6SHZEK9M | *1st stage, 1980 Chopin Competition* · Đặng Thái Sơn
 `,
   },
 ]

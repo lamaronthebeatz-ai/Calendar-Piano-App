@@ -1249,6 +1249,12 @@ Người chơi **gảy** dây và cùng lúc **chạm nhẹ cạnh bàn tay** v�
 
 ## Với người học piano và nhạc lý
 Đàn bầu là phòng thí nghiệm sống của [[chuoi-boi-am]]: mỗi nốt là một bồi âm của cùng một dây. Xem thêm [[am-hoc-nhac-cu]], [[am-nhac-truyen-thong-viet-nam]].
+
+## Nghe
+
+::youtube gOHbLHTqrM0 | *Vì miền Nam* · NSND Thái Bảo
+
+::youtube juAzwyICfDg | *Vì miền Nam – Lời ca dâng Bác* · NSND Hoàng Anh Tú
 `,
   },
   {
@@ -1289,6 +1295,10 @@ Theo Viện Âm nhạc, [[lich-su-am-nhac-viet-nam|Trần Văn Khê]] truy ngu�
 Đàn tranh là nhạc cụ gảy cốt lõi của [[nhac-cu-viet-nam|đờn ca tài tử]] và có mặt trong [[ca-hue-nha-nhac|ca Huế]], dàn nhạc kiểu cung đình.
 
 Liên quan: [[guzheng]], [[nhac-cu-dong-a]] (koto, gayageum cùng họ).
+
+## Nghe
+
+::youtube PZzzSjhyL34 | *Độc tấu đàn tranh* · NSƯT Hải Phượng
 `,
   },
   {
@@ -1608,6 +1618,12 @@ Liên quan: [[nhac-cu-viet-nam]], [[sheng]].
 Cồng chiêng thường được chơi theo **dàn**, mỗi người giữ một chiếc với một [[cao-do|cao độ]], các nhịp đan xen tạo thành [[giai-dieu|giai điệu]] và hoà âm — giống nguyên lý của [[gamelan]] và [[kulintang|kulintang]] ở Đông Nam Á hải đảo.
 
 Liên quan: [[nhac-cu-viet-nam]], [[dan-da]], [[trung-klong-put]], [[lich-su-am-nhac-viet-nam]].
+
+## Nghe
+
+::youtube l90_bPVujKc | Không gian văn hoá cồng chiêng Tây Nguyên — phim giới thiệu di sản
+
+::youtube S8QRCprfd5w | Văn hoá cồng chiêng Tây Nguyên
 `,
   },
   {

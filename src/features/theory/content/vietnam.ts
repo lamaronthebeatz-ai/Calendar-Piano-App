@@ -316,6 +316,12 @@ Các quyết định sau của Uỷ ban UNESCO ghi nhận việc đưa ca trù v
 Cả hai là **truyền thuyết dân gian**, không phải sử liệu. Xem thêm [[giai-thoai-am-nhac-viet-nam]].
 
 Liên quan: [[the-loai-am-nhac-viet-nam]], [[dan-day]], [[am-nhac-truyen-thong-viet-nam]].
+
+## Nghe
+
+::youtube OUJId7mBMn4 | *Hồng hồng tuyết tuyết* · NSND Quách Thị Hồ
+
+::youtube Tz35icN-stA | Ca trù — phim giới thiệu di sản *Ca trù singing*
 `,
   },
   {
@@ -350,6 +356,12 @@ Quan điểm phổ biến gắn quan họ với tục **kết chạ** giữa cá
 Quan họ hát hai giọng theo lối đối đáp và có rất nhiều luyến láy: một ví dụ tốt để thấy giai điệu Việt bám theo [[am-nhac-va-ngon-ngu|thanh điệu]] của lời. Nghiên cứu sâu bằng tiếng Anh: [[nghien-cuu-am-nhac-viet-nam|Lauren Meeker]], *Sounding Out Heritage* (2013).
 
 Liên quan: [[the-loai-am-nhac-viet-nam]], [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
+
+## Nghe
+
+::youtube goCQBu896JM | Quan họ Bắc Ninh — phim giới thiệu di sản *Quan Họ Bắc Ninh folk songs*
+
+::youtube Nflsf3SytYc | *Người ơi người ở đừng về* · Lê Ngọc Thúy
 `,
   },
   {
@@ -378,6 +390,12 @@ Liên quan: [[the-loai-am-nhac-viet-nam]], [[ly-thuyet-am-nhac-co-truyen-viet-na
 Bà **Phạm Thị Trân**, người Hồng Châu, được cho là vũ nữ ở triều Đinh (Hoa Lư, thế kỷ 10), được phong "Ưu Bà", dạy binh sĩ hát múa. Truyện dựa vào *Hý phường phả lục*, văn bản được **gán** cho Lương Thế Vinh (1441 – 1496), tức viết sau nhiều thế kỷ. Các nhà nghiên cứu lưu ý chính sử ghi chép về bà **rất ít**. Wikipedia còn chép một thuyết khác (chèo phát triển sau khi bắt được một người lính Mông Cổ, thế kỷ 14), nhưng không có nguồn thứ hai ủng hộ.
 
 Liên quan: [[tuong]], [[cai-luong]], [[the-loai-am-nhac-viet-nam]], [[giai-thoai-am-nhac-viet-nam]].
+
+## Nghe
+
+::youtube 6h_6vxjPp2M | *Thị Mầu lên chùa* · NSƯT An Chinh, NS Hiền Thảo; Dàn nhạc Nhà hát Chèo Việt Nam
+
+::youtube A3fMAoVyfZY | *Thị Mầu lên chùa* · NSƯT Thu Huyền
 `,
   },
   {
@@ -404,6 +422,12 @@ Liên quan: [[tuong]], [[cai-luong]], [[the-loai-am-nhac-viet-nam]], [[giai-thoa
 Có một nghiên cứu khảo thuật ngữ "hát bộ" trong sử liệu Trung Hoa — xem phần nguồn.
 
 Liên quan: [[cheo]], [[cai-luong]], [[the-loai-am-nhac-viet-nam]], [[giai-thoai-am-nhac-viet-nam]].
+
+## Nghe
+
+::youtube uRyQHv6k3TU | *Trích đoạn Hồ Nguyệt Cô hóa cáo* · Nhà hát Tuồng Việt Nam
+
+::youtube k8bxVZ8aW2Y | *Trích đoạn Trần Quốc Toản ra quân* · Nhà hát Tuồng Việt Nam
 `,
   },
   {
@@ -453,6 +477,14 @@ Bài vọng cổ bắt nguồn từ *Dạ cổ hoài lang* của **Cao Văn Lầ
 Câu chuyện Cao Văn Lầu viết bài vì phải xa người vợ không con là **lời kể trong gia đình**, chưa kiểm chứng — xem [[giai-thoai-am-nhac-viet-nam]].
 
 Liên quan: [[don-ca-tai-tu]], [[cheo]], [[tuong]], [[dan-nguyet]], [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
+
+## Nghe
+
+::youtube kbilws5tJIo | *Tình anh bán chiếu* · Út Trà Ôn
+
+::youtube KV_aaZDo0is | *Tô Ánh Nguyệt (trích đoạn, Trần Hữu Trang), ghi hình 1985* · Lệ Thủy & Minh Vương
+
+::youtube SjncC_bLbL8 | *Lan và Điệp* · Thanh Kim Huệ & Chí Tâm
 `,
   },
   {
@@ -492,6 +524,10 @@ Theo UNESCO: đàn hình trăng ([[dan-nguyet|đàn kìm]]), đàn hai dây kéo
 Alexander M. Cannon, *Seeding the Tradition: Musical Creativity in Southern Vietnam* (Wesleyan, 2022) — được giải chuyên khảo xuất sắc RMA/CUP năm 2023.
 
 Liên quan: [[cai-luong]], [[ly-thuyet-am-nhac-co-truyen-viet-nam]], [[the-loai-am-nhac-viet-nam]].
+
+## Nghe
+
+::youtube 5M4h4AGteGU | Đờn ca tài tử Nam Bộ — phim giới thiệu di sản
 `,
   },
   {
@@ -524,6 +560,14 @@ Nghiên cứu đăng trên tạp chí ĐH Sư phạm TP.HCM mô tả **điệu N
 Nhạc cụ: [[dan-tranh]], [[dan-nguyet]], [[dan-nhi]], [[dan-ty-ba-tam-sen|tỳ bà]], [[sao-truc|sáo]], [[ken-bau]] (trong dàn đại nhạc).
 
 Liên quan: [[the-loai-am-nhac-viet-nam]], [[don-ca-tai-tu]].
+
+## Nghe
+
+::youtube G5X7KUtbEkk | Nhã nhạc cung đình Huế — phim giới thiệu di sản *Nha Nhac, Vietnamese Court Music*
+
+::youtube NGns_jrxkh4 | Nhã nhạc cung đình Huế — phóng sự VTC News
+
+::youtube gpIX94R68yc | *Ca Huế: Hò mái nhì, Nam bình* · Dạ Lê
 `,
   },
   {
@@ -557,6 +601,14 @@ Theo UNESCO, việc truyền nghề then là truyền miệng; có thầy then t
 *(Thành phần dàn nhạc hát văn — cung văn, đàn nguyệt, trống, phách… — chưa được xác nhận qua nguồn trong lượt nghiên cứu này.)*
 
 Liên quan: [[dan-tinh]], [[dan-nguyet]], [[the-loai-am-nhac-viet-nam]].
+
+## Nghe
+
+::youtube UNx-V6wLkO4 | Hát xoan Phú Thọ — tiết mục *Bỏ bộ*
+
+::youtube g39Mz1uzSbE | *Hát chầu văn hầu đồng* · NSND Thanh Ngoan & Nghệ nhân Hoàng Điệp
+
+::youtube -d-sEzWDJTk | *Hát then đàn tính* · Nghệ nhân Tày, Nùng Cao Bằng
 `,
   },
   {
@@ -591,6 +643,14 @@ Liên quan: [[dan-tinh]], [[dan-nguyet]], [[the-loai-am-nhac-viet-nam]].
 - **Tổ nghề hát xẩm**: truyền thuyết kể hoàng tử **Trần Quốc Đĩnh**, con vua Trần Thánh Tông, bị anh em làm mù mắt, đã chế ra đàn và lối hát xẩm. Chính sử **không ghi** người con nào tên như vậy của Trần Thánh Tông. Xem [[giai-thoai-am-nhac-viet-nam]].
 
 Liên quan: [[quan-ho]], [[ca-hue-nha-nhac]], [[the-loai-am-nhac-viet-nam]], [[dan-nhi]].
+
+## Nghe
+
+::youtube 40IswaHSZv8 | *Hát xẩm* · NSƯT Hà Thị Cầu
+
+::youtube mcILpWU81GU | Bài chòi Trung Bộ — phim giới thiệu di sản
+
+::youtube GtV8tj-A9ac | Dân ca ví, giặm Nghệ Tĩnh — *Về miền nước biếc non xanh*
 `,
   },
   {
@@ -630,6 +690,12 @@ Liên quan: [[quan-ho]], [[ca-hue-nha-nhac]], [[the-loai-am-nhac-viet-nam]], [[d
 *(Phần này dựa chủ yếu vào báo chí; xem [[dan-toc-nhac-hoc]] về phương pháp nghiên cứu.)*
 
 Liên quan: [[the-loai-am-nhac-viet-nam]], [[nhac-cu-viet-nam]], [[ranat|dàn piphat]] (họ hàng của dàn ngũ âm Khmer).
+
+## Nghe
+
+::youtube VyHr1knC5Ms | *Múa khèn Mông* · Đoàn Văn hóa Nghệ thuật tỉnh Yên Bái
+
+::youtube bCDRWe377d0 | Trống Paranưng của người Chăm — phóng sự về nghệ nhân Hán Quân
 `,
   },
   {
@@ -663,6 +729,12 @@ Xem [[nhac-si-viet-nam]] để biết tiểu sử.
 Phần lớn là ca khúc trữ tình theo [[am-giai-truong|âm giai trưởng – thứ]] phương Tây, nhịp [[tieu-pham-piano|valse]], slow, tango, hoà âm đơn giản (I – IV – V và các [[hop-am-ba|hợp âm]] phụ) — rất hợp để tập [[dem-dieu-viet-nam|đệm điệu Việt]] trên piano.
 
 Liên quan: [[am-nhac-thoi-phap-thuoc]], [[tan-nhac-viet-nam]].
+
+## Nghe
+
+::youtube ZViOnh7Uunk | *Con thuyền không bến (Đặng Thế Phong)* · NSND Mai Hoa
+
+::youtube I2kT_5lnvXk | *Giọt mưa thu (Đặng Thế Phong)* · Lệ Thu
 `,
   },
   {
@@ -697,6 +769,10 @@ Liên quan: [[am-nhac-thoi-phap-thuoc]], [[tan-nhac-viet-nam]].
 Bị cấm sau 1975, băng đĩa bị tịch thu; nới lỏng từ 1986; hồi sinh mạnh những năm gần đây (Wikipedia). Chế độ cấp phép ca khúc trước 1975 được bỏ năm 2021 — xem [[am-nhac-viet-nam-sau-1975]].
 
 Liên quan: [[am-nhac-viet-nam-1945-1975]], [[nhac-hai-ngoai]], [[tan-nhac-viet-nam]].
+
+## Nghe
+
+::youtube fq_Je2rr6rA | *Duyên quê* · Thanh Thúy
 `,
   },
   {
@@ -726,6 +802,12 @@ Liên quan: [[am-nhac-viet-nam-1945-1975]], [[nhac-hai-ngoai]], [[tan-nhac-viet-
 Đa số là hành khúc ([[so-chi-nhip|nhịp 2/4, 4/4]]) và hợp xướng, nhiều bài dùng chất liệu [[am-giai-ngu-cung|ngũ cung]] dân ca. Ca khúc thiếu nhi của Phạm Tuyên (*Tiến lên đoàn viên*, 1954) cũng thuộc dòng này.
 
 Liên quan: [[nhac-si-viet-nam]], [[tan-nhac-viet-nam]].
+
+## Nghe
+
+::youtube pyReQ-KmRqI | Văn Cao — *Tiến quân ca* (Quốc ca Việt Nam)
+
+::youtube SpK4hTcVDqE | Phạm Tuyên — *Như có Bác trong ngày vui đại thắng*, bản thu thanh 14 giờ 30 ngày 30/4/1975
 `,
   },
   {
@@ -763,6 +845,10 @@ Nhiều bài nhạc Trịnh dùng [[am-giai-thu|giọng thứ]], nhịp **[[dieu
 ::youtube R0mpl0Az4Q8 | Trịnh Công Sơn — *Diễm xưa* · Khánh Ly
 
 Liên quan: [[nhac-si-viet-nam]], [[am-nhac-viet-nam-1945-1975]].
+
+## Nghe
+
+::youtube zVzk3Im4qcQ | *Hạ trắng* · Khánh Ly
 `,
   },
   {
@@ -792,6 +878,12 @@ Các tuyển tập [[lich-su-thu-am|đĩa than]] tái bản (*Saigon Rock & Soul
 Nghiên cứu: **[[nghien-cuu-am-nhac-viet-nam|Jason Gibbs]]** (thủ thư âm nhạc Thư viện công cộng San Francisco, tiến sĩ ĐH Pittsburgh) — sách tiếng Việt *Rock Hà Nội & Rumba Cửu Long* (2008, bản bổ sung 2019); danh sách "soundscapes" cho *American Historical Review*.
 
 Liên quan: [[am-nhac-viet-nam-1945-1975]], [[dem-slow-rock-rock]], [[nhac-pho-thong-the-ky-20]].
+
+## Nghe
+
+::youtube ddednFe25dY | *Phượng Hoàng Band – Vietnamese rock pre-1975 vol.1* · Ban nhạc Phượng Hoàng (Lê Hựu Hà)
+
+::youtube WiNPjDHunC0 | *Ban nhạc Phượng Hoàng* · Ban nhạc Phượng Hoàng
 `,
   },
   {
@@ -866,6 +958,12 @@ Liên quan: [[nhac-vang-bolero]], [[tan-nhac-viet-nam]].
 V-pop [[dieu-dem-pho-bien|ballad]] và R&B Việt dùng vòng hợp âm pop quốc tế — xem [[dem-pop-ballad]], [[dem-rnb-neo-soul]], [[vong-hop-am]].
 
 Liên quan: [[am-nhac-viet-nam-sau-1975]].
+
+## Nghe
+
+::youtube 5e7e_KZINA4 | *Đưa nhau đi trốn* · Đen ft. Linh Cáo
+
+::youtube hvDaHMoewII | *Đời* · Suboi
 `,
   },
   {
@@ -903,6 +1001,12 @@ Liên quan: [[am-nhac-viet-nam-sau-1975]].
 - Một chương trình biểu diễn ở ĐH Temple liệt kê *Dòng nước trong* (Trần Tất Toại), *[[to-khuc-baroque|Tổ khúc]] cho piano* (Đặng Hữu Phúc), *Album pour piano* (Nguyễn Văn Tý); [[pham-duy|Phạm Duy]] có tập *Dân ca Việt Nam soạn cho piano*. Gợi ý cách tự hoà âm [[giai-dieu|giai điệu]] dân ca: [[hoa-am-cho-giai-dieu-ngu-cung]].
 
 Liên quan: [[piano-viet-nam]], [[am-nhac-viet-nam-1945-1975]], [[giao-huong]], [[opera]].
+
+## Nghe
+
+::youtube hwSsPu9FVWc | *Trở về đất mẹ* · Dàn nhạc Giao hưởng Việt Nam
+
+::youtube 4Q1sduIcsbI | *Đặng Hữu Phúc – Suite for piano 4 hands* · Quỳnh Trang & Tâm Ngọc
 `,
   },
   {
@@ -976,6 +1080,12 @@ Ngày **15/7/2016**, gia đình ông **hiến tặng** *Tiến quân ca* cho Nh�
 ::youtube lQDntvMjE8E | Văn Cao — *Buồn tàn thu* · Thái Thanh
 
 Liên quan: [[nhac-si-viet-nam]], [[nhac-tien-chien]], [[nhac-cach-mang]].
+
+## Nghe
+
+::youtube ZYqVSSicrfo | *Thiên Thai* · Thái Thanh
+
+::youtube 4H4TxiYD2p8 | *Trương Chi* · Ánh Tuyết
 `,
   },
   {
@@ -1009,6 +1119,10 @@ Nhạc Phạm Duy bị cấm ở miền Bắc rồi trên cả nước **hơn 30
 ::youtube sGTZpjrZleI | Phạm Duy — *Tình ca* · Paris By Night 99
 
 Liên quan: [[nhac-si-viet-nam]], [[nhac-hai-ngoai]], [[am-nhac-viet-nam-sau-1975]].
+
+## Nghe
+
+::youtube cd2E8afc3KU | *Tình ca* · Thái Thanh
 `,
   },
   {
@@ -1034,6 +1148,10 @@ Liên quan: [[nhac-si-viet-nam]], [[nhac-hai-ngoai]], [[am-nhac-viet-nam-sau-197
 **Giải thưởng Hồ Chí Minh** đợt I (1996).
 
 Liên quan: [[nhac-cach-mang]], [[nhac-si-viet-nam]].
+
+## Nghe
+
+::youtube Gf3ILbXVrEI | Lưu Hữu Phước — *Lên đàng*, bản thu thanh sau 1975
 `,
   },
   {
@@ -1080,6 +1198,12 @@ Theo lời kể của chính ông: viết khi đang học ở Trường Thăng L
 Bài khác: *Trên sông Hương*.
 
 Liên quan: [[nhac-tien-chien]], [[nhac-si-viet-nam]].
+
+## Nghe
+
+::youtube b7Q0lcEjua8 | *Đêm đông* · Bạch Yến
+
+::youtube hwSsPu9FVWc | *Trở về đất mẹ* · Dàn nhạc Giao hưởng Việt Nam
 `,
   },
   {
@@ -1108,6 +1232,10 @@ Liên quan: [[nhac-tien-chien]], [[nhac-si-viet-nam]].
 Con trai ông nói **Từ Linh** là biệt danh thời trẻ của chính Đoàn Chuẩn; cách hiểu phổ biến khác coi Từ Linh là một người cùng sáng tác. Báo PLO có bài về những "giai thoại lạ lùng" quanh danh xưng này. **Chưa có kết luận.**
 
 Liên quan: [[nhac-tien-chien]], [[nhac-si-viet-nam]], [[giai-thoai-am-nhac-viet-nam]].
+
+## Nghe
+
+::youtube F6joGbBm8hE | *Lá đổ muôn chiều (Đoàn Chuẩn – Từ Linh)* · Lệ Thu
 `,
   },
   {
@@ -1162,6 +1290,10 @@ Giải thưởng Hồ Chí Minh đợt I (1996, truy tặng).
 *Giai thoại (chưa kiểm chứng): khi* Tình ca *được hát lần đầu ở Hà Nội, có người cho lời quá buồn nên bài bị "cất" một thời gian.*
 
 Liên quan: [[nhac-co-dien-viet-nam]], [[nhac-si-viet-nam]].
+
+## Nghe
+
+::youtube rU4zIU__yds | *Tình ca* · NSND Tạ Minh Tâm
 `,
   },
   {
@@ -1185,6 +1317,10 @@ Liên quan: [[nhac-co-dien-viet-nam]], [[nhac-si-viet-nam]].
 *(Tình trạng hiện tại và Giải thưởng Hồ Chí Minh của ông chưa được xác minh trong lượt này.)*
 
 Liên quan: [[nhac-cach-mang]], [[nhac-si-viet-nam]].
+
+## Nghe
+
+::youtube SpK4hTcVDqE | Phạm Tuyên — *Như có Bác trong ngày vui đại thắng*, bản thu thanh 14 giờ 30 ngày 30/4/1975
 `,
   },
   {
@@ -1206,6 +1342,12 @@ Bài tiêu biểu: *Mặt trời bé con*, *Giấc mơ Chapi*, *Chị tôi*, *Qu
 Nhiều bài của ông lấy chất liệu dân ca (*Tùy hứng lý ngựa ô* dựa trên điệu lý) — một ví dụ hay cho [[hoa-am-cho-giai-dieu-ngu-cung]]. Ông chữa bệnh ung thư nhiều năm nhưng vẫn biểu diễn ("Trần – Nguyễn du ca", 2024).
 
 Liên quan: [[am-nhac-viet-nam-sau-1975]], [[nhac-si-viet-nam]].
+
+## Nghe
+
+::youtube 92tq8ci7eDM | *Ngẫu hứng sông Hồng* · NSƯT Thanh Lam
+
+::youtube gECuVceOHvE | *Ngẫu hứng sông Hồng* · Hồng Nhung
 `,
   },
   {
@@ -1226,6 +1368,12 @@ Liên quan: [[am-nhac-viet-nam-sau-1975]], [[nhac-si-viet-nam]].
 - Phổ thơ nhà thơ Thanh Tùng: *Người về*, *Hà Nội ngày trở về*, *Mùa thu giấu em*. *(Nhà thơ Thanh Tùng — tác giả "Thời hoa đỏ" — khác với nhạc sĩ Thanh Tùng 1948 – 2016.)*
 
 Liên quan: [[am-nhac-viet-nam-sau-1975]], [[nhac-si-viet-nam]].
+
+## Nghe
+
+::youtube Y4BXGqZ2r4E | *Em ơi Hà Nội phố* · Mỹ Linh
+
+::youtube BDAn6viglII | *Em ơi Hà Nội phố* · Tùng Dương
 `,
   },
   {
