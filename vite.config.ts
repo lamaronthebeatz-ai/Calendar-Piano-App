@@ -30,7 +30,7 @@ export default defineConfig({
       manifest: {
         name: 'Lịch Dạy Piano',
         short_name: 'Lịch Dạy Piano',
-        description: 'Ứng dụng quản lý dạy piano cá nhân',
+        description: 'Ứng dụng quản lý dạy piano cá nhân · Bản quyền thuộc về Lamar',
         lang: 'vi',
         theme_color: '#f6f3ed',
         background_color: '#f6f3ed',

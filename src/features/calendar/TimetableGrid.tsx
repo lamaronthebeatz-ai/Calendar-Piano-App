@@ -10,6 +10,7 @@ import { layoutSlotsForDay } from './layoutLessons'
 import { computeDaySummary } from '../../services/statistics'
 import { useIsDesktop } from '../../hooks/useMediaQuery'
 import { PX_PER_MINUTE } from './constants'
+import { Copyright } from '../../components/Copyright'
 
 interface TimetableGridProps {
   slots: TimetableSlot[]
@@ -130,6 +131,7 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
             )
           })}
         </div>
+        <Copyright className="py-4" />
       </div>
       <div className="hidden border-t border-[var(--color-border)] px-4 py-1.5 text-center text-[11px] text-[var(--color-ink-faint)] lg:block">
         Nhấp đúp vào ô trống để thêm buổi học · Kéo để di chuyển · Kéo mép để đổi thời lượng

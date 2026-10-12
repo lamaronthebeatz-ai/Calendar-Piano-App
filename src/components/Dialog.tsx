@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { useIsDesktop } from '../hooks/useMediaQuery'
 import { IconButton } from './Button'
 import { XIcon } from './icons'
+import { Copyright } from './Copyright'
 
 interface DialogProps {
   open: boolean
@@ -47,7 +48,10 @@ export function Dialog({ open, onClose, title, subtitle, children, footer, width
   const body = (
     <>
       {header}
-      <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">{children}</div>
+      <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
+        {children}
+        <Copyright className="pt-5" />
+      </div>
       {footer && <div className="border-t border-[var(--color-border)] px-5 py-4">{footer}</div>}
     </>
   )

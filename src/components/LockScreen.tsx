@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import clsx from 'clsx'
 import { BrandMark } from './icons'
+import { Copyright } from './Copyright'
 
 /**
  * Welcome screen with a passcode, drawn as frosted glass over the live app. A correct code
@@ -154,6 +155,8 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
           )}
         </div>
       </div>
+
+      <Copyright className="lock-content relative mb-3 text-[var(--color-ink-muted)]" />
 
       {/* The handle hints which way the glass goes. */}
       <div aria-hidden className="relative mx-auto mb-[max(0.75rem,env(safe-area-inset-bottom))] h-1.5 w-32 rounded-full bg-[var(--color-ink)]/25" />

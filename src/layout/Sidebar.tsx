@@ -5,6 +5,7 @@ import { navItems } from './navItems'
 import { useUIStore } from '../store/uiStore'
 import { useSettings } from '../hooks/useLiveData'
 import { applyThemeToDocument, updateSettings } from '../services/settingsService'
+import { Copyright } from '../components/Copyright'
 
 export function Sidebar() {
   const settings = useSettings()
@@ -88,6 +89,7 @@ export function Sidebar() {
           {isDark ? <MoonIcon width={16} height={16} /> : <SunIcon width={16} height={16} />}
         </button>
       </div>
+      <Copyright className="mt-3" />
     </aside>
   )
 }

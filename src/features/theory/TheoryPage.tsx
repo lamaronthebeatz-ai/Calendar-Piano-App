@@ -27,6 +27,7 @@ import { markRead, readingPosition, saveReadingPosition, toggleSaved, updateLibr
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useBack } from '../../hooks/useBack'
 import { branchesOf } from '../musicology/taxonomy'
+import { Copyright } from '../../components/Copyright'
 
 type CategoryId = Article['category']
 
@@ -199,6 +200,7 @@ export function TheoryPage() {
           <EmptyState icon={<BookIcon width={30} height={30} />} title="Chưa có bài viết này" description={`“${slug}” chưa được viết.`} />
         </div>
       )}
+      <Copyright className="px-4 pb-2 pt-8" />
 
       {offerResume && (
         <div className="above-nav pointer-events-none fixed inset-x-0 bottom-24 z-30 flex justify-center px-4 lg:bottom-8">
