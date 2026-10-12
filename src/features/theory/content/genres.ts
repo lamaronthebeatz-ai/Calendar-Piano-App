@@ -1240,7 +1240,7 @@ Liên quan: [[tan-nhac-viet-nam]], [[nhac-dien-tu]], [[blues-12-nhip]].
     slug: 'tan-nhac-viet-nam',
     title: 'Tân nhạc Việt Nam',
     category: 'genres',
-    aliases: ['tân nhạc', 'tân nhạc Việt Nam', 'ca khúc Việt Nam', 'nhạc vàng', 'nhạc đỏ', 'V-pop', 'Nguyễn Văn Tuyên', 'Văn Cao', 'Phạm Duy', 'Đoàn Chuẩn'],
+    aliases: ['tân nhạc', 'tân nhạc Việt Nam', 'ca khúc Việt Nam'],
     summary: 'Ca khúc Việt Nam viết theo lối phương Tây (giai điệu có hoà âm, guitar và piano đệm), thường lấy mốc buổi trình diễn của Nguyễn Văn Tuyên ở Hà Nội năm 1938. Bài này giới thiệu các giai đoạn và cách gọi tên các dòng nhạc một cách trung tính.',
     refs: [
       ['ThingsAsian — Tân nhạc', 'https://thingsasian.com/node/3464.html'],
@@ -1251,13 +1251,13 @@ Liên quan: [[tan-nhac-viet-nam]], [[nhac-dien-tu]], [[blues-12-nhip]].
     body: `
 ## Mốc khởi đầu
 - **Tân nhạc** ("nhạc mới") là ca khúc tiếng Việt viết theo **lối phương Tây**: giai điệu theo [[am-giai-truong|giọng trưởng]] – [[am-giai-thu|thứ]] (hoặc pha [[am-giai-ngu-cung|ngũ cung]]), có [[he-thong-hoa-am-co-dien|hoà âm]], đệm guitar hay piano, khuôn phiên khúc – điệp khúc.
-- Mốc quy ước thường được nhắc: buổi trình diễn của **Nguyễn Văn Tuyên** ở Hà Nội ngày **9/6/1938**; sau đó báo *Ngày Nay* đăng các ca khúc mới. (Đã có ca khúc kiểu mới từ trước 1938 — đây chỉ là một mốc quy ước.)
+- Mốc quy ước thường được nhắc: buổi trình diễn của **[[am-nhac-thoi-phap-thuoc|Nguyễn Văn Tuyên]]** ở Hà Nội ngày **9/6/1938**; sau đó báo *Ngày Nay* đăng các ca khúc mới. (Đã có ca khúc kiểu mới từ trước 1938 — đây chỉ là một mốc quy ước.)
 - Các tác giả tiêu biểu thời kỳ đầu: Văn Cao, Phạm Duy, Đoàn Chuẩn.
 
 ## Các dòng nhạc 1954 – 1975 và sau
-- **Nhạc vàng** là tên gọi dòng nhạc phổ thông ở miền Nam (Quốc gia Việt Nam, Việt Nam Cộng hoà), nhiều bài theo điệu **bolero** chậm, tình cảm, về tình yêu và quê hương. Tên gọi được đặt trong thế đối lập với **nhạc đỏ** — nhạc cách mạng ở miền Bắc. Sau 1975 nhạc vàng bị cấm trong nước và tiếp tục ở hải ngoại; về sau được phép trở lại dần.
+- **[[nhac-vang-bolero|Nhạc vàng]]** là tên gọi dòng nhạc phổ thông ở miền Nam (Quốc gia Việt Nam, Việt Nam Cộng hoà), nhiều bài theo điệu **bolero** chậm, tình cảm, về tình yêu và quê hương. Tên gọi được đặt trong thế đối lập với **nhạc đỏ** — [[nhac-cach-mang|nhạc cách mạng]] ở miền Bắc. Sau 1975 nhạc vàng bị cấm trong nước và tiếp tục ở hải ngoại; về sau được phép trở lại dần.
 - Các tên gọi này **chồng lấn và mang màu sắc chính trị**; khi dạy nên tập trung vào đặc điểm âm nhạc: điệu đệm, giai điệu, hoà âm.
-- **V-pop** (từ cuối thập niên 1990 – 2000): chịu ảnh hưởng pop toàn cầu, K-pop, [[nhac-dien-tu|nhạc điện tử]] — xem [[nhac-pho-thong-the-ky-20]].
+- **[[vpop-rap-viet|V-pop]]** (từ cuối thập niên 1990 – 2000): chịu ảnh hưởng pop toàn cầu, K-pop, [[nhac-dien-tu|nhạc điện tử]] — xem [[nhac-pho-thong-the-ky-20]].
 
 ## Điệu đệm thường gặp
 Ca khúc Việt Nam được đệm bằng các điệu quen thuộc: bolero, slow, [[tieu-pham-piano|valse]], tango, rumba, ballad — xem [[dieu-dem-pho-bien]], [[dem-hat-piano]].

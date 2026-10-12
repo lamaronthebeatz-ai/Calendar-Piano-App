@@ -978,7 +978,7 @@ Liên quan: [[dem-jazz]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
     slug: 'dem-dieu-viet-nam',
     title: 'Các điệu đệm nhạc Việt: bolero, rumba, slow, valse, boston, tango…',
     category: 'technique',
-    aliases: ['điệu bolero', 'bolero Việt Nam', 'đệm bolero', 'điệu rumba', 'đệm rumba', 'điệu slow', 'slow surf', 'điệu valse', 'điệu boston', 'điệu tango', 'điệu disco', 'điệu fox', 'đệm nhạc vàng', 'đệm nhạc trẻ'],
+    aliases: ['điệu bolero', 'đệm bolero', 'điệu rumba', 'đệm rumba', 'điệu slow', 'slow surf', 'điệu valse', 'điệu boston', 'điệu tango', 'điệu disco', 'điệu fox', 'đệm nhạc vàng', 'đệm nhạc trẻ'],
     summary: 'Ca khúc Việt Nam được đệm theo một bộ "điệu" quen thuộc: bolero, rumba, chachacha (nhạc vàng), slow, slow surf, ballad (nhạc trẻ), slow rock 12/8, valse và boston 3/4, tango, disco. Bài này tổng hợp nhịp, tốc độ ước lượng và cách chuyển mẫu "đánh" guitar sang piano — ghi rõ phần nào có nguồn học thuật, phần nào là kinh nghiệm của giáo viên.',
     refs: [
       ['Wikipedia — Bolero Việt Nam', 'https://vi.wikipedia.org/wiki/Bolero_Vi%E1%BB%87t_Nam'],
@@ -1003,7 +1003,7 @@ Liên quan: [[dem-jazz]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
 - Còn **mẫu tiết tấu và tốc độ** của từng điệu chủ yếu đến từ **các trang dạy đàn** (Yamaha Việt Nam, các trung tâm piano, guitar); chưa tìm thấy tài liệu học thuật mô tả chính xác [[so-chi-nhip|ô nhịp]] bolero Việt. Các mẫu dưới đây nên xem là **mẫu dạy phổ biến**, không phải chuẩn duy nhất — hãy nghe bản thu để điều chỉnh.
 
 ## Bolero Việt Nam
-- **Gốc**: bolero là thể loại Cuba (Santiago de Cuba, cuối thế kỷ 19), nhịp chẵn — khác bolero Tây Ban Nha nhịp 3/4. Vào Việt Nam đầu thập niên 1950 và phổ biến ở miền Nam trong dòng nhạc vàng ([[tan-nhac-viet-nam]]).
+- **Gốc**: bolero là thể loại Cuba (Santiago de Cuba, cuối thế kỷ 19), nhịp chẵn — khác bolero Tây Ban Nha nhịp 3/4. Vào Việt Nam đầu thập niên 1950 và phổ biến ở miền Nam trong dòng [[nhac-vang-bolero|nhạc vàng]] ([[tan-nhac-viet-nam]]).
 - Bài "bolero đầu tiên" còn tranh luận: "Nắng chiều" (Lê Trọng Nguyễn, ghi "rumba – bolero", 1952/53), "Duyên quê" (Hoàng Thi Thơ), "Xóm đêm" (Phạm Đình Chương).
 - Nhạc sĩ Việt **làm chậm** tiết tấu Latin và pha luyến láy dân ca, [[lich-su-am-nhac-viet-nam|cải lương]].
 - **Nhịp và tốc độ** (theo các trang dạy đàn): 4/4, chậm nhất trong nhóm Latin — khoảng 64 – 78 phách/phút.

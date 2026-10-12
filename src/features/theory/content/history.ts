@@ -622,7 +622,7 @@ Danh sách "bài phải học" ([[lo-trinh-tac-pham]]) cũng là một **kinh đ
     title: 'Lịch sử âm nhạc Việt Nam: các mốc và nguồn',
     category: 'musicology',
     also: ['modern'],
-    aliases: ['lịch sử âm nhạc Việt Nam', 'history of Vietnamese music', 'âm nhạc Việt Nam qua các thời kỳ', 'trống đồng', 'trống đồng Ngọc Lũ', 'nhạc cung đình', 'cải lương', 'Trần Văn Khê'],
+    aliases: ['lịch sử âm nhạc Việt Nam', 'history of Vietnamese music', 'âm nhạc Việt Nam qua các thời kỳ', 'trống đồng', 'trống đồng Ngọc Lũ', 'nhạc cung đình'],
     summary: 'Các mốc của lịch sử âm nhạc Việt Nam theo những gì nguồn ghi nhận được: trống đồng Đông Sơn và đàn đá, nhạc cung đình qua các triều Lý, Lê, Nguyễn, sân khấu chèo, tuồng, cải lương, tân nhạc từ thập niên 1930, các nhạc viện năm 1956, nghiên cứu của Trần Văn Khê, và các di sản được UNESCO ghi danh. Bài ghi rõ chỗ nào còn tranh luận.',
     wiki: 'Music_of_Vietnam',
     refs: [
@@ -652,22 +652,22 @@ Viết lịch sử âm nhạc Việt Nam khó hơn viết lịch sử nhạc ph�
 - **[[dan-da|Đàn đá Ndut Liêng Krak]]** (Đắk Lắk): 11 thanh đá do công nhân người Mnông Gar tìm thấy tháng 2/1949; nhà dân tộc học Georges Condominas đưa về Paris. Nhà [[am-nhac-hoc|âm nhạc học]] André Schaeffner đo đạc và công bố trên *Revue de Musicologie* (1951). Đây là một nhạc cụ **tự thân vang** theo phân loại Hornbostel – Sachs ([[nhac-khi-hoc]]). Nơi lưu giữ hiện nay (Musée de l'Homme hay Musée du quai Branly) **cần kiểm tra lại**.
 
 ## 2. Nhạc cung đình qua các triều đại
-- **Thời Lý — giao lưu với Chăm:** năm 1044, Lý Thái Tông đánh Chiêm Thành, bắt về hoàng hậu, phi tần và cung nữ của vua Chăm. Sử sách cũng chép việc một vua Lý cho nhạc công soạn khúc theo **"Chiêm Thành âm"**, nghe buồn thương đến mức người nghe rơi nước mắt, và một nhà sư can rằng đó là âm thanh của nước loạn. Đa số nguồn tiếng Việt xếp chuyện này vào thời **Lý Cao Tông**, một nguồn khác ghi thời Lý Thánh Tông. **Năm cụ thể cần đối chiếu *Đại Việt sử ký toàn thư*.**
+- **Thời Lý — giao lưu với Chăm:** năm 1044, Lý Thái Tông đánh Chiêm Thành, bắt về hoàng hậu, phi tần và cung nữ của vua Chăm. Sử sách cũng chép việc một vua Lý cho nhạc công soạn khúc theo **"[[am-nhac-co-trung-dai-viet-nam|Chiêm Thành âm]]"**, nghe buồn thương đến mức người nghe rơi nước mắt, và một nhà sư can rằng đó là âm thanh của nước loạn. Đa số nguồn tiếng Việt xếp chuyện này vào thời **Lý Cao Tông**, một nguồn khác ghi thời Lý Thánh Tông. **Năm cụ thể cần đối chiếu *Đại Việt sử ký toàn thư*.**
 - **Thời Lê sơ — tranh luận về nhạc lễ:** *Toàn thư* chép **Nguyễn Trãi** và **Lương Đăng** cùng được giao định nhạc triều đình (thời Lê Thái Tông, 1433 – 1442). Nguyễn Trãi có câu: "Hoà bình là gốc của nhạc, thanh âm là văn của nhạc". Nhà vua theo phương án của Lương Đăng (theo mẫu nhà Minh), Nguyễn Trãi rút lui. Tranh luận này gần với tư tưởng lễ nhạc Nho gia — xem [[nhac-trong-tu-tuong-nho-gia]]. (Năm cụ thể và tên các dàn nhạc thời này chưa được kiểm chứng ở đây.)
-- **Thời Nguyễn — Nhã nhạc Huế:** theo hồ sơ UNESCO, Nhã nhạc là nhạc và múa cung đình phát triển **từ thế kỷ 15 đến giữa [[thoi-ky-the-ky-20|thế kỷ 20]]**, đạt đỉnh cao dưới triều Nguyễn (1802 – 1945). UNESCO tuyên bố Kiệt tác năm 2003, đưa vào Danh sách đại diện năm 2008. Sau năm 1945, Nhã nhạc đứng trước nguy cơ mai một.
+- **Thời Nguyễn — [[ca-hue-nha-nhac|Nhã nhạc]] Huế:** theo hồ sơ UNESCO, Nhã nhạc là nhạc và múa cung đình phát triển **từ thế kỷ 15 đến giữa [[thoi-ky-the-ky-20|thế kỷ 20]]**, đạt đỉnh cao dưới triều Nguyễn (1802 – 1945). UNESCO tuyên bố Kiệt tác năm 2003, đưa vào Danh sách đại diện năm 2008. Sau năm 1945, Nhã nhạc đứng trước nguy cơ mai một.
 
 ## 3. Sân khấu: chèo, tuồng, cải lương
-- **Chèo:** truyền thuyết tôn bà **Phạm Thị Trân** (cung nữ múa hát thời Đinh, thế kỷ 10) làm "bà tổ" của nghề — đây là **truyền thuyết**, không được chính sử ghi nhận.
-- **Tuồng:** có thuyết gắn nguồn gốc với một diễn viên người phương Bắc tên **Lý Nguyên Cát** bị bắt thời Trần, dạy lối hát diễn Trung Hoa. Năm cụ thể chưa được kiểm chứng.
-- **Cải lương (Nam Bộ):** mốc quy ước là vở *Kim Vân Kiều* diễn tại rạp Thầy Năm Tú, Mỹ Tho, năm **1918**. Nhà nghiên cứu Trần Nhật Vy và một số người khác đề xuất các mốc khác (1917, 1919, 1922). Trước đó, lối **ca ra bộ** đã phổ biến khoảng năm 1911. Bài **"Dạ cổ hoài lang"** của Cao Văn Lầu, gốc của **vọng cổ**, ra đời khoảng 1917 – 1920 (các nguồn ghi khác nhau).
+- **Chèo:** truyền thuyết tôn bà **[[cheo|Phạm Thị Trân]]** (cung nữ múa hát thời Đinh, thế kỷ 10) làm "bà tổ" của nghề — đây là **truyền thuyết**, không được chính sử ghi nhận.
+- **Tuồng:** có thuyết gắn nguồn gốc với một diễn viên người phương Bắc tên **[[tuong|Lý Nguyên Cát]]** bị bắt thời Trần, dạy lối hát diễn Trung Hoa. Năm cụ thể chưa được kiểm chứng.
+- **Cải lương (Nam Bộ):** mốc quy ước là vở *Kim Vân Kiều* diễn tại rạp Thầy Năm Tú, Mỹ Tho, năm **1918**. Nhà nghiên cứu Trần Nhật Vy và một số người khác đề xuất các mốc khác (1917, 1919, 1922). Trước đó, lối **ca ra bộ** đã phổ biến khoảng năm 1911. Bài **"[[cai-luong|Dạ cổ hoài lang]]"** của Cao Văn Lầu, gốc của **vọng cổ**, ra đời khoảng 1917 – 1920 (các nguồn ghi khác nhau).
 
 ## 4. Thế kỷ 20: tân nhạc, nhạc viện, nghiên cứu
-- **Tân nhạc:** mốc quy ước thường được nhắc là các buổi trình diễn của **Nguyễn Văn Tuyên** ở Hà Nội năm **1938**; một số nhà nghiên cứu nêu mốc **1934**, khi báo chí giới thiệu phong trào "nhạc cải cách". Xem [[tan-nhac-viet-nam]] và nghiên cứu của Jason Gibbs.
-- **Hai nhạc viện cùng ra đời năm 1956:** Trường Âm nhạc Việt Nam ở Hà Nội (đổi thành Nhạc viện Hà Nội đầu thập niên 1980, thành Học viện Âm nhạc Quốc gia Việt Nam năm 2008) và Trường Quốc gia Âm nhạc ở Sài Gòn (thành lập 12/4/1956, nay là Nhạc viện TP. Hồ Chí Minh). Xem [[piano-viet-nam]].
-- **Nghiên cứu:** **Trần Văn Khê** bảo vệ luận án tiến sĩ về âm nhạc truyền thống Việt Nam tại Đại học Sorbonne năm **1958**; sách *La musique vietnamienne traditionnelle* in ở Paris năm 1962, lâu nay là tài liệu chuẩn về đề tài này. Giáo trình đại học: Thụy Loan, *Lược sử âm nhạc Việt Nam* (1993).
+- **Tân nhạc:** mốc quy ước thường được nhắc là các buổi trình diễn của **[[am-nhac-thoi-phap-thuoc|Nguyễn Văn Tuyên]]** ở Hà Nội năm **1938**; một số nhà nghiên cứu nêu mốc **1934**, khi báo chí giới thiệu phong trào "nhạc cải cách". Xem [[tan-nhac-viet-nam]] và nghiên cứu của [[nghien-cuu-am-nhac-viet-nam|Jason Gibbs]].
+- **Hai nhạc viện cùng ra đời năm 1956:** [[am-nhac-viet-nam-1945-1975|Trường Âm nhạc Việt Nam]] ở Hà Nội (đổi thành Nhạc viện Hà Nội đầu thập niên 1980, thành Học viện Âm nhạc Quốc gia Việt Nam năm 2008) và Trường Quốc gia Âm nhạc ở Sài Gòn (thành lập 12/4/1956, nay là Nhạc viện TP. Hồ Chí Minh). Xem [[piano-viet-nam]].
+- **Nghiên cứu:** **Trần Văn Khê** bảo vệ luận án tiến sĩ về âm nhạc truyền thống Việt Nam tại Đại học Sorbonne năm **1958**; sách *La musique vietnamienne traditionnelle* in ở Paris năm 1962, lâu nay là tài liệu chuẩn về đề tài này. Giáo trình đại học: Thụy Loan, *Lược sử [[am-nhac-viet-nam|âm nhạc Việt Nam]]* (1993).
 
 ## 5. Di sản và bảo tồn
-UNESCO đã ghi danh nhiều loại hình âm nhạc Việt Nam: Nhã nhạc (2003/2008), [[cong-chieng|Không gian văn hoá cồng chiêng]] Tây Nguyên (2005/2008), Quan họ và Ca trù (2009), Hát Xoan (2011, chuyển sang Danh sách đại diện năm 2017), Đờn ca tài tử (2013), Ví, Giặm (2014), Tín ngưỡng thờ Mẫu Tam phủ cùng hát văn (2016), Bài chòi (2017), Thực hành Then (2019). Bảng chi tiết ở [[am-nhac-truyen-thong-viet-nam]].
+UNESCO đã ghi danh nhiều loại hình âm nhạc Việt Nam: Nhã nhạc (2003/2008), [[cong-chieng|Không gian văn hoá cồng chiêng]] Tây Nguyên (2005/2008), [[quan-ho|Quan họ]] và [[ca-tru|Ca trù]] (2009), [[hat-xoan-hat-van-then|Hát Xoan]] (2011, chuyển sang Danh sách đại diện năm 2017), [[don-ca-tai-tu|Đờn ca tài tử]] (2013), Ví, Giặm (2014), Tín ngưỡng thờ Mẫu Tam phủ cùng hát văn (2016), [[dan-ca-viet-nam|Bài chòi]] (2017), Thực hành Then (2019). Bảng chi tiết ở [[am-nhac-truyen-thong-viet-nam]].
 
 ## Khoảng trống cần nghiên cứu
 *(Nhận xét của thư viện.)*

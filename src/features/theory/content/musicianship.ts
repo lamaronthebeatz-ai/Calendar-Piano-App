@@ -776,7 +776,7 @@ Quy trình này khớp với khuyến nghị hiện đại: xem toàn cảnh tr�
 **Lưu ý**: "trường phái Nga" như một khối thống nhất phần lớn là cách nói của báo chí và hãng đĩa. Các nghiên cứu học thuật mô tả **nhiều dòng khác nhau** (Moscow và Leningrad; dòng Liszt – Siloti và dòng Leschetizky). Nên xem các đặc điểm trên là **xu hướng**, không phải một phương pháp cố định. So sánh với trường phái Pháp: [[truong-phai-piano]].
 
 ## Với Việt Nam
-- Trường Âm nhạc Việt Nam thành lập năm **1956** (sau là Nhạc viện Hà Nội, từ 2008 là Học viện Âm nhạc Quốc gia Việt Nam). NSND **Thái Thị Liên**, một trong những người sáng lập và là nữ giảng viên piano đầu tiên, được đào tạo ở **Praha**.
+- [[am-nhac-viet-nam-1945-1975|Trường Âm nhạc Việt Nam]] thành lập năm **1956** (sau là Nhạc viện Hà Nội, từ 2008 là Học viện Âm nhạc Quốc gia Việt Nam). NSND **[[nhac-co-dien-viet-nam|Thái Thị Liên]]**, một trong những người sáng lập và là nữ giảng viên piano đầu tiên, được đào tạo ở **Praha**.
 - **Đặng Thái Sơn** được nghệ sĩ Liên Xô Isaac Katz phát hiện năm 1974, sang học Nhạc viện Moscow (năm vào trường các nguồn ghi 1976 hoặc 1977) với Vladimir Natanson rồi Dmitri Bashkirov, và giành giải nhất cuộc thi Chopin tháng 10/1980 — người châu Á đầu tiên. Xem [[dang-thai-son]], [[piano-viet-nam]].
 - Một số giảng viên piano Việt Nam được đào tạo trực tiếp ở Moscow — ví dụ Trần Thu Hà (con gái NSND Thái Thị Liên) làm tiến sĩ piano ở Nhạc viện Moscow rồi về dạy ở Hà Nội. Mức độ ảnh hưởng của truyền thống Nga lên giáo trình các nhạc viện Việt Nam chưa có nghiên cứu nào được tìm thấy để dẫn.
 `,

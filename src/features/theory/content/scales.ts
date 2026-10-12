@@ -407,7 +407,7 @@ Bắt đầu từ bậc 5 của ngũ cung trưởng: A – C – D – E – G (
 
 ## Trong âm nhạc Việt Nam
 Nhạc dân gian và cổ truyền Việt Nam dựa phần lớn trên hệ ngũ cung. Năm âm gốc Hán **Cung – Thương – Giốc – Chủy – Vũ** được người Việt gọi là **Hò – Xự – Xang – Xê – Cống**; âm **Líu** cao hơn Hò một [[quang|quãng 8]].
-- Một nghiên cứu về Ca Huế ghi chữ **Hò = Đô**; theo đó Xự – Xang – Xê – Cống ứng với **Rê – Fa – Sol – La**. Đây là quy ước ghi chép: các nguồn khác có thể đặt Hò ở [[cao-do|cao độ]] khác (ví dụ Hò = Rê).
+- Một nghiên cứu về [[ca-hue-nha-nhac|Ca Huế]] ghi chữ **Hò = Đô**; theo đó Xự – Xang – Xê – Cống ứng với **Rê – Fa – Sol – La**. Đây là quy ước ghi chép: các nguồn khác có thể đặt Hò ở [[cao-do|cao độ]] khác (ví dụ Hò = Rê).
 - Ca Huế có hai [[dieu-thuc|điệu thức]] chính: **[[am-nhac-truyen-thong-viet-nam|điệu Bắc]]** (tươi vui hoặc trang nghiêm) và **điệu Nam** (như hơi Ai — đặc trưng miền Trung). Ghi trên [[khuong-nhac|khuông nhạc]], điệu Nam trông giống điệu Bắc, nhưng khi [[dien-tau|diễn tấu]] một số âm được chơi **"già"** (cao hơn) hoặc **"non"** (thấp hơn) — điều mà khuông nhạc phương Tây **không ghi được đầy đủ**.
 - Vì vậy dùng piano để chơi nhạc cổ truyền chỉ **gần đúng**. Về các tác phẩm piano Việt Nam dùng chất liệu dân gian: [[piano-viet-nam]].
 

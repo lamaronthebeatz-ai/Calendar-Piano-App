@@ -69,7 +69,7 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]] và nh�
     title: 'Âm nhạc truyền thống Việt Nam và ngũ cung',
     category: 'modern',
     also: ['scales', 'listening', 'genres'],
-    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'music of Vietnam', 'ngũ cung Việt Nam', 'hò xự xang xê cống', 'điệu Bắc', 'điệu Nam', 'hơi Bắc', 'hơi Nam', 'đờn ca tài tử', 'vọng cổ', 'ca trù', 'quan họ', 'nhã nhạc'],
+    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'ngũ cung Việt Nam', 'hơi Bắc', 'hơi Nam'],
     summary: 'Nhạc truyền thống Việt Nam dựa trên thang năm âm (Hò – Xự – Xang – Xê – Cống), nhưng cao độ thực không theo luật bình quân và được "nhấn, rung, luyến" theo từng điệu (Bắc, Nam; hơi Xuân, Ai, Oán). Bài này giới thiệu các di sản được UNESCO ghi danh, nhạc cụ chính, đờn ca tài tử và vọng cổ, và cách người dạy piano có thể đưa chất liệu dân tộc vào bài học.',
     refs: [
       ['UNESCO — Nhã nhạc, Vietnamese court music', 'https://ich.unesco.org/en/RL/00074'],
@@ -91,11 +91,11 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]] và nh�
     ],
     body: `
 ## Thang năm âm và tên gọi
-Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê – Cống** (rồi Liu, Ú… ở quãng 8 trên). Theo Viện Âm nhạc, ở **điệu Bắc** chúng tương ứng **gần đúng** với Đô – Rê – Fa – Sol – La:
+Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê – Cống** (rồi Liu, Ú… ở quãng 8 trên). Theo Viện Âm nhạc, ở **[[ca-hue-nha-nhac|điệu Bắc]]** chúng tương ứng **gần đúng** với Đô – Rê – Fa – Sol – La:
 ::staff treble C4=Hò D4=Xự F4=Xang G4=Xê A4=Cống C5=Liu | Hò – Xự – Xang – Xê – Cống ứng với C – D – F – G – A (điệu Bắc, gần đúng): một [[am-giai-ngu-cung|thang ngũ cung]]
 - Tên phương Tây chỉ là **xấp xỉ**: [[dich-giong|cao độ thực]] **không theo** [[luat-binh-quan|luật bình quân]].
 - [[lich-su-am-nhac-viet-nam|Trần Văn Khê]]: khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ **các bậc cách đều hay không đều**. Theo Viện Âm nhạc, ở **điệu Nam** (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp.
-- Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, hơi Oán gần với hơi vọng cổ, bậc 2 có **[[am-hoc-co-ban|biên độ]]** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
+- Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, [[ly-thuyet-am-nhac-co-truyen-viet-nam|hơi Oán]] gần với hơi [[cai-luong|vọng cổ]], bậc 2 có **[[am-hoc-co-ban|biên độ]]** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
 - Chưa tìm được nguồn đáng tin ghi số cent chính xác cho từng hơi, nên bài này **không** đưa con số.
 **Trên piano**: chỉ chơi được **khung** năm âm (phím đen, hoặc C – D – F – G – A); các nốt "nhấn" nằm **giữa** hai phím. Đây là bài học tốt về giới hạn của [[luat-binh-quan]] và về [[cao-do]].
 
@@ -104,12 +104,12 @@ Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê
 |---|---|
 | Nhã nhạc cung đình Huế | Tuyên bố Kiệt tác 2003; vào Danh sách đại diện 2008 |
 | [[cong-chieng|Không gian văn hoá cồng chiêng]] Tây Nguyên | Tuyên bố 2005; Danh sách đại diện 2008 |
-| Ca trù | 2009, Danh sách **cần bảo vệ khẩn cấp** |
-| Quan họ Bắc Ninh | 2009, Danh sách đại diện |
-| Hát Xoan Phú Thọ | 2011 khẩn cấp → **2017** chuyển sang Danh sách đại diện (trường hợp chuyển danh sách đầu tiên của Công ước) |
-| Đờn ca tài tử Nam Bộ | 2013 |
+| [[ca-tru|Ca trù]] | 2009, Danh sách **cần bảo vệ khẩn cấp** |
+| [[quan-ho|Quan họ Bắc Ninh]] | 2009, Danh sách đại diện |
+| [[hat-xoan-hat-van-then|Hát Xoan]] Phú Thọ | 2011 khẩn cấp → **2017** chuyển sang Danh sách đại diện (trường hợp chuyển danh sách đầu tiên của Công ước) |
+| [[don-ca-tai-tu|Đờn ca tài tử Nam Bộ]] | 2013 |
 | Ví, Giặm Nghệ Tĩnh | 2014 |
-| Bài Chòi Trung Bộ | 2017 |
+| [[dan-ca-viet-nam|Bài Chòi]] Trung Bộ | 2017 |
 | Thực hành Then (Tày, Nùng, Thái) | 2019 — đệm bằng [[dan-tinh|đàn tính]] |
 
 ## Nhạc cụ

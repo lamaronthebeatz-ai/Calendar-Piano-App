@@ -432,7 +432,7 @@ Phần thực hành ở [[ky-thuat-piano]]; bài này cho biết **mỗi kỹ n�
 - **1964:** Alan P. Merriam, *The Anthropology of Music* (Northwestern University Press) — đặt nền cho cách nhìn âm nhạc như một hành vi văn hoá.
 
 ## Dân tộc nhạc học ở Việt Nam
-Thuật ngữ "âm nhạc dân tộc học" xuất hiện trong chương trình [[am-nhac-hoc|Âm nhạc học]] của Nhạc viện TP. Hồ Chí Minh và trong các bài nghiên cứu, ví dụ *Nghiên cứu ca trù dưới góc nhìn âm nhạc dân tộc học* (Tạp chí Giáo dục Nghệ thuật). Trong thư viện:
+Thuật ngữ "âm nhạc dân tộc học" xuất hiện trong chương trình [[am-nhac-hoc|Âm nhạc học]] của Nhạc viện TP. Hồ Chí Minh và trong các bài nghiên cứu, ví dụ *Nghiên cứu [[ca-tru|ca trù]] dưới góc nhìn âm nhạc dân tộc học* (Tạp chí Giáo dục Nghệ thuật). Trong thư viện:
 - [[am-nhac-truyen-thong-viet-nam]] — [[am-giai|thang âm]], [[dieu-thuc|điệu thức]] và nhạc cụ truyền thống.
 - [[am-giai-ngu-cung]] — ngũ cung trong nhiều nền văn hoá.
 - [[tan-nhac-viet-nam]], [[piano-viet-nam]], [[dem-dieu-viet-nam]] — âm nhạc Việt [[thoi-ky-the-ky-20|thế kỷ 20]] và đời sống [[dem-hat-piano|đệm hát]].

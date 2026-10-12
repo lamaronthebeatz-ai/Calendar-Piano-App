@@ -57,6 +57,7 @@ const GLYPHS: Record<CategoryId, string> = {
   genres: '♬',
   musicology: '𝄪',
   organology: '𝄜',
+  vietnam: '𝆕',
 }
 
 /** Where a newcomer should start: the roadmap article of the core groups. */

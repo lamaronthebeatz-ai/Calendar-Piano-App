@@ -210,7 +210,7 @@ Kỹ thuật tay trái của thế hệ đầu: [[stride-piano]].
 
 ## Đặc điểm của nhạc piano Việt Nam
 - Ban đầu nhiều tác phẩm được viết cho mục đích **giảng dạy**; khi các nhạc sĩ được đào tạo bài bản hơn, tác phẩm trở nên phức tạp và độc đáo hơn.
-- Các nhà soạn nhạc đưa **chất liệu dân gian** vào ngôn ngữ piano — giúp thế hệ trẻ vừa tiếp thu âm nhạc phương Tây vừa hiểu bản sắc dân tộc (xem [[am-giai-ngu-cung]] và phần nhạc Việt Nam trong đó).
+- Các nhà soạn nhạc đưa **chất liệu dân gian** vào ngôn ngữ piano — giúp thế hệ trẻ vừa tiếp thu âm nhạc phương Tây vừa hiểu bản sắc dân tộc (xem [[am-giai-ngu-cung]] và phần [[am-nhac-viet-nam|nhạc Việt Nam]] trong đó).
 - Mảng tác phẩm này **ít được biết đến** ngay cả ở Việt Nam, vì ít được biểu diễn và ít tài liệu.
 
 ## Một số nhà soạn nhạc và tác phẩm (theo các nguồn tìm được)

@@ -156,7 +156,7 @@ Song song với thuyết ethos Hy Lạp, tư tưởng Trung Hoa cổ đại — 
 | Âm nhạc "xấu" | Các điệu bị coi là uỷ mị | Nhạc dâm dật làm loạn lòng người |
 Hai truyền thống độc lập nhưng cùng đặt âm nhạc vào trung tâm của **giáo dục con người** (xem [[thuyet-ethos-hy-lap]]).
 
-Ở Việt Nam, nhạc lễ triều đình — **nhã nhạc** cung đình Huế — là di sản gắn với truyền thống nghi lễ này (xem [[am-nhac-truyen-thong-viet-nam]]). Các quan niệm phương Tây về sức mạnh của âm nhạc: [[hoa-am-vu-tru]], [[triet-hoc-am-nhac]]; nghiên cứu hiện đại về cảm xúc: [[cam-xuc-am-nhac]].
+Ở Việt Nam, nhạc lễ triều đình — **[[ca-hue-nha-nhac|nhã nhạc]]** cung đình Huế — là di sản gắn với truyền thống nghi lễ này (xem [[am-nhac-truyen-thong-viet-nam]]). Các quan niệm phương Tây về sức mạnh của âm nhạc: [[hoa-am-vu-tru]], [[triet-hoc-am-nhac]]; nghiên cứu hiện đại về cảm xúc: [[cam-xuc-am-nhac]].
 `,
   },
   {

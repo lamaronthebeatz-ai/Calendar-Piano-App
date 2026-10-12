@@ -1181,16 +1181,16 @@ Viện Âm nhạc (thành lập năm **1950**) mở phòng trưng bày năm 1999
 | **Dây** (chordophone) | [[dan-bau]], [[dan-tranh]], [[dan-nguyet]], [[dan-nhi]], [[dan-day]], [[dan-ty-ba-tam-sen]], [[dan-tinh]] |
 | **Hơi** (aerophone) | [[sao-truc]], [[tieu]], [[ken-bau]], [[khen]], [[trung-klong-put|K'lông pút]] (cách xếp loại còn bàn cãi) |
 | **Tự thân vang** (idiophone) | [[cong-chieng]], [[dan-da]], [[trung-klong-put|T'rưng]], [[phach-song-lang-mo]] |
-| **Màng rung** (membranophone) | Các loại trống (trống chầu trong ca trù, trống trong chèo, nhã nhạc…) — *thư viện chưa có bài riêng* |
+| **Màng rung** (membranophone) | Các loại trống ([[ca-tru|trống chầu]] trong ca trù, trống trong [[cheo|chèo]], [[ca-hue-nha-nhac|nhã nhạc]]…) — *thư viện chưa có bài riêng* |
 
 ## Theo thể loại
 | [[the-loai-am-nhac|Thể loại]] | Nhạc cụ chính |
 |---|---|
-| **Đờn ca tài tử** | Theo hồ sơ UNESCO: đàn nguyệt, đàn nhị (đàn cò), đàn tranh, đàn tỳ bà, nhạc cụ gõ, đàn bầu, sáo trúc. "Ngũ tuyệt" xưa gồm tranh, tỳ bà, kìm (nguyệt), cò, tam; đầu [[thoi-ky-the-ky-20|thế kỷ 20]], đàn bầu thay tỳ bà và tam |
+| **[[don-ca-tai-tu|Đờn ca tài tử]]** | Theo hồ sơ UNESCO: đàn nguyệt, đàn nhị (đàn cò), đàn tranh, đàn tỳ bà, nhạc cụ gõ, đàn bầu, sáo trúc. "Ngũ tuyệt" xưa gồm tranh, tỳ bà, kìm (nguyệt), cò, tam; đầu [[thoi-ky-the-ky-20|thế kỷ 20]], đàn bầu thay tỳ bà và tam |
 | **Ca trù** | Đàn đáy, phách (đào nương gõ), trống chầu |
-| **Hát văn** | Đàn nguyệt là nhạc cụ chính |
+| **[[hat-xoan-hat-van-then|Hát văn]]** | Đàn nguyệt là nhạc cụ chính |
 | **Chèo** | Đàn nhị, sáo trúc (theo Viện Âm nhạc) |
-| **Tuồng (hát bội)** | Kèn bầu không thể thiếu |
+| **[[tuong|Tuồng (hát bội)]]** | Kèn bầu không thể thiếu |
 | **Then** | Đàn tính |
 | **Tây Nguyên** | Cồng chiêng, T'rưng, K'lông pút, đàn đá |
 
@@ -1244,7 +1244,7 @@ Người chơi **gảy** dây và cùng lúc **chạm nhẹ cạnh bàn tay** v�
 
 ## Lịch sử
 - Mốc **văn bản** thường được dẫn là năm **1770**, trong *Đại Nam thực lục*, gắn với tên Tôn Thất Đức (ý kiến của nhà nghiên cứu Đặng Hoành Loan). Các niên đại cổ hơn (thế kỷ 13, hay thế kỷ 9 – 10) chỉ là **giả thuyết**. Viện trưởng Viện Âm nhạc Nguyễn Bình Định cho rằng khó xác định chính xác nguồn gốc, nhưng đàn đã được dùng trước thế kỷ 19.
-- Đầu [[thoi-ky-the-ky-20|thế kỷ 20]], đàn bầu vào dàn **đờn ca tài tử**, thay cho [[dan-ty-ba-tam-sen|tỳ bà]] và tam (Viện Âm nhạc); hồ sơ UNESCO về đờn ca tài tử có nhắc đến đàn một dây.
+- Đầu [[thoi-ky-the-ky-20|thế kỷ 20]], đàn bầu vào dàn **[[don-ca-tai-tu|đờn ca tài tử]]**, thay cho [[dan-ty-ba-tam-sen|tỳ bà]] và tam (Viện Âm nhạc); hồ sơ UNESCO về đờn ca tài tử có nhắc đến đàn một dây.
 - Việt Nam đang chuẩn bị hồ sơ đề nghị UNESCO ghi danh đàn bầu; theo các nguồn tra được, đàn **chưa** được ghi danh.
 
 ## Với người học piano và nhạc lý
@@ -1286,7 +1286,7 @@ Tay phải đeo **móng gảy** ở ngón cái, trỏ, giữa. Tay trái **nhấ
 Theo Viện Âm nhạc, [[lich-su-am-nhac-viet-nam|Trần Văn Khê]] truy nguồn đàn tranh từ đàn tranh Trung Hoa ([[guzheng]]), có ở Việt Nam từ thời Trần hoặc sớm hơn — khoảng bảy, tám thế kỷ. Theo Wikipedia, đàn có 14 dây vào cuối thế kỷ 13 – 14, rồi 15 dây; loại **16 dây** xuất hiện ở thế kỷ 19 và là chuẩn đến cuối thập niên 1970 – 1980, khi các loại nhiều dây hơn ra đời (Viện Âm nhạc có cả đàn tranh 36 dây).
 
 ## Trong các thể loại
-Đàn tranh là nhạc cụ gảy cốt lõi của [[nhac-cu-viet-nam|đờn ca tài tử]] và có mặt trong ca Huế, dàn nhạc kiểu cung đình.
+Đàn tranh là nhạc cụ gảy cốt lõi của [[nhac-cu-viet-nam|đờn ca tài tử]] và có mặt trong [[ca-hue-nha-nhac|ca Huế]], dàn nhạc kiểu cung đình.
 
 Liên quan: [[guzheng]], [[nhac-cu-dong-a]] (koto, gayageum cùng họ).
 `,
@@ -1319,10 +1319,10 @@ Liên quan: [[guzheng]], [[nhac-cu-dong-a]] (koto, gayageum cùng họ).
 | Lên dây | [[quang|Quãng]] 5 (F – C, G – D) hoặc quãng 4 (G – C, D – G); kiểu dây "Tố Lan" cách nhau quãng 7 thứ |
 
 ## Trong các thể loại
-- **Hát văn** (chầu văn): đàn nguyệt là nhạc cụ **chính** — xem [[lich-su-am-nhac-viet-nam]] (tín ngưỡng thờ Mẫu, UNESCO 2016).
-- Ca Huế, [[am-nhac-truyen-thong-viet-nam|đờn ca tài tử]] ("đàn kìm" trong ngũ tuyệt), nhạc [[nhac-cu-dong-a|bát âm]], nhạc lễ, sân khấu truyền thống.
+- **Hát văn** ([[hat-xoan-hat-van-then|chầu văn]]): đàn nguyệt là nhạc cụ **chính** — xem [[lich-su-am-nhac-viet-nam]] (tín ngưỡng thờ Mẫu, UNESCO 2016).
+- [[ca-hue-nha-nhac|Ca Huế]], [[am-nhac-truyen-thong-viet-nam|đờn ca tài tử]] ("đàn kìm" trong ngũ tuyệt), nhạc [[nhac-cu-dong-a|bát âm]], nhạc lễ, sân khấu truyền thống.
 
-**Lưu ý:** ca trù dùng [[dan-day|đàn đáy]], không dùng đàn nguyệt (một số bản tóm tắt trên mạng nhầm điểm này).
+**Lưu ý:** [[ca-tru|ca trù]] dùng [[dan-day|đàn đáy]], không dùng đàn nguyệt (một số bản tóm tắt trên mạng nhầm điểm này).
 
 Liên quan: [[nhac-cu-viet-nam]], [[pipa]] (đàn tỳ bà Trung Hoa), [[dan-ty-ba-tam-sen]].
 `,
@@ -1349,11 +1349,11 @@ Liên quan: [[nhac-cu-viet-nam]], [[pipa]] (đàn tỳ bà Trung Hoa), [[dan-ty-
 | Họ | Dây kéo |
 | Cấu tạo | Hộp cộng hưởng hình ống, mặt bịt **da rắn**; đầu đàn hình đầu chim cò; **cữ đàn** (vòng tơ) chặn dây, rút ngắn phần dây rung để nâng [[cao-do|cao độ]] |
 | Dây | Hai dây, xưa bằng tơ, nay thường bằng kim loại |
-| Lên dây | Thường cách **[[quang|quãng]] 5**: [[am-nhac-truyen-thong-viet-nam|điệu Bắc]] G – D, điệu Nam F – C, chèo C – G (theo ký hiệu của Viện Âm nhạc) |
+| Lên dây | Thường cách **[[quang|quãng]] 5**: [[am-nhac-truyen-thong-viet-nam|điệu Bắc]] G – D, [[ca-hue-nha-nhac|điệu Nam]] F – C, [[cheo|chèo]] C – G (theo ký hiệu của Viện Âm nhạc) |
 
 ## Nguồn gốc và thể loại
 - Viện Âm nhạc cho rằng đàn nhị vào Việt Nam qua người Chăm hoặc qua Trung Hoa, tuỳ thời kỳ và vùng. Người Chăm có đàn **Kanhi** với hộp cộng hưởng bằng mai rùa, dây tơ lên cách quãng 4.
-- Đàn nhị có mặt trong **dàn nhạc chèo**, và (với tên đàn cò) trong **ngũ tuyệt** của đờn ca tài tử; hồ sơ UNESCO về đờn ca tài tử có nhắc đến đàn hai dây kéo.
+- Đàn nhị có mặt trong **dàn nhạc chèo**, và (với tên đàn cò) trong **ngũ tuyệt** của [[don-ca-tai-tu|đờn ca tài tử]]; hồ sơ UNESCO về đờn ca tài tử có nhắc đến đàn hai dây kéo.
 
 Liên quan: [[nhac-cu-viet-nam]], [[erhu]], [[violin]] (so sánh hai truyền thống đàn kéo).
 `,
@@ -1385,7 +1385,7 @@ Liên quan: [[nhac-cu-viet-nam]], [[erhu]], [[violin]] (so sánh hai truyền th
 | Dây | 3 dây (xưa bằng tơ, từ cuối [[thoi-ky-the-ky-20|thế kỷ 20]] bằng nylon) |
 
 ## Trong ca trù
-[[am-nhac-truyen-thong-viet-nam|Ca trù]] gồm ba vai: **kép đàn** (nam) chơi đàn đáy; **đào nương** (nữ) hát và gõ **phách**; **quan viên** đánh **trống chầu**. Ca trù được UNESCO đưa vào Danh sách di sản cần bảo vệ khẩn cấp năm 2009 — xem [[lich-su-am-nhac-viet-nam]].
+[[am-nhac-truyen-thong-viet-nam|Ca trù]] gồm ba vai: **kép đàn** (nam) chơi đàn đáy; **đào nương** (nữ) hát và gõ **phách**; **quan viên** đánh **[[ca-tru|trống chầu]]**. Ca trù được UNESCO đưa vào Danh sách di sản cần bảo vệ khẩn cấp năm 2009 — xem [[lich-su-am-nhac-viet-nam]].
 
 ## Nghiên cứu
 Một bài trên *Yearbook for Traditional Music* (Cambridge) mang tựa *Uniqueness Reexamined: The Vietnamese Lute Đàn Đáy* xem xét lại khẳng định "độc nhất" của đàn đáy — một ví dụ về cách [[nhac-khi-hoc]] so sánh nhạc cụ giữa các nền văn hoá.
@@ -1412,7 +1412,7 @@ Ba cây đàn dây gảy có cần ([[dan-lute|lute]]) của [[am-nhac-truyen-th
 
 ## Đàn tỳ bà
 - **Cấu tạo** (Viện Âm nhạc): thân hình **nửa quả lê**, bốn trục gỗ, dây lên cách nhau [[quang|quãng]] 4 và quãng 2; gảy bằng móng đồi mồi hoặc nhựa.
-- **[[the-loai-am-nhac|Thể loại]]:** dàn [[lich-su-am-nhac-viet-nam|nhạc cung đình]], đờn ca tài tử (trong ngũ tuyệt; hồ sơ UNESCO nhắc đến "đàn hình quả lê").
+- **[[the-loai-am-nhac|Thể loại]]:** dàn [[lich-su-am-nhac-viet-nam|nhạc cung đình]], [[don-ca-tai-tu|đờn ca tài tử]] (trong ngũ tuyệt; hồ sơ UNESCO nhắc đến "đàn hình quả lê").
 - **Họ hàng:** [[pipa]] của Trung Hoa, biwa của Nhật.
 
 ## Đàn tam
@@ -1421,7 +1421,7 @@ Ba cây đàn dây gảy có cần ([[dan-lute|lute]]) của [[am-nhac-truyen-th
 
 ## Đàn sến
 - Hai dây, cần mảnh, có nguồn gốc từ đàn *qinqin* của Trung Hoa; dùng chủ yếu trong nhạc truyền thống **Nam Bộ** (Wikipedia).
-- Mối liên hệ giữa tên đàn và chữ lóng "sến" (nhạc sến) được bàn trên báo chí nhưng **chưa có kết luận** về nguồn gốc từ này.
+- Mối liên hệ giữa tên đàn và chữ lóng "sến" ([[nhac-vang-bolero|nhạc sến]]) được bàn trên báo chí nhưng **chưa có kết luận** về nguồn gốc từ này.
 
 Liên quan: [[nhac-cu-viet-nam]], [[dan-nguyet]].
 `,
@@ -1485,7 +1485,7 @@ Liên quan: [[nhac-cu-viet-nam]], [[lich-su-am-nhac-viet-nam]].
 Cuối thập niên **1970**, hai nghệ sĩ **Đinh Thìn** và **Ngô Nam** mở rộng sáo 6 lỗ thành sáo **10 lỗ**, thêm nốt [[am-giai-cromatic|cromatic]] để chơi được các tác phẩm mới và nhạc có [[chuyen-giong|chuyển giọng]].
 
 ## Trong các thể loại
-Độc tấu; dàn nhạc chèo; hát văn; dàn **tiểu nhạc** cung đình; [[am-nhac-truyen-thong-viet-nam|đờn ca tài tử]] (hồ sơ UNESCO nhắc đến sáo trúc). Viện Âm nhạc còn trưng bày **sáo diều** — sáo buộc vào diều, kêu khi gió thổi.
+Độc tấu; dàn nhạc [[cheo|chèo]]; [[hat-xoan-hat-van-then|hát văn]]; dàn **[[am-nhac-thoi-nguyen|tiểu nhạc]]** cung đình; [[am-nhac-truyen-thong-viet-nam|đờn ca tài tử]] (hồ sơ UNESCO nhắc đến sáo trúc). Viện Âm nhạc còn trưng bày **sáo diều** — sáo buộc vào diều, kêu khi gió thổi.
 
 Liên quan: [[tieu]], [[nhac-cu-viet-nam]], [[sao-flute]].
 `,
@@ -1543,7 +1543,7 @@ Liên quan: [[nhac-cu-viet-nam]], [[recorder]] (sáo dọc phương Tây, có �
 | Loa | Gỗ hình quả bầu (thường bằng gỗ mít), tháo rời được |
 
 ## Trong các thể loại
-- **Tuồng (hát bội):** Viện Âm nhạc gọi kèn bầu là nhạc cụ **không thể thiếu** của dàn nhạc tuồng.
+- **[[tuong|Tuồng (hát bội)]]:** Viện Âm nhạc gọi kèn bầu là nhạc cụ **không thể thiếu** của dàn nhạc tuồng.
 - **Nhạc cung đình Huế:** là một nhạc cụ chính (Wikipedia) — xem [[am-nhac-truyen-thong-viet-nam|Nhã nhạc]] ở [[lich-su-am-nhac-viet-nam]].
 - **Kèn đám ma** ở miền Bắc là biến thể có **loa kim loại**, dùng trong tang lễ.
 
@@ -1692,8 +1692,8 @@ Nhạc cụ gõ **tự thân vang** giữ vai trò **giữ nhịp, đánh dấu 
 
 | Nhạc cụ | Mô tả (theo Viện Âm nhạc, trừ khi ghi khác) | [[the-loai-am-nhac|Thể loại]] |
 |---|---|---|
-| **Phách** | Đào nương gõ que (tre hoặc gỗ) lên một bàn phách nhỏ, vừa hát vừa giữ nhịp | Ca trù |
-| **Song lang** (song loan) | Dụng cụ gõ giữ nhịp; Viện Âm nhạc có trang riêng (cách dùng bằng chân trong tài tử, [[lich-su-am-nhac-viet-nam|cải lương]] là mô tả thông dụng, chưa đối chiếu nguồn) | Đờn ca tài tử, cải lương |
+| **Phách** | [[ca-tru|Đào nương]] gõ que (tre hoặc gỗ) lên một bàn phách nhỏ, vừa hát vừa giữ nhịp | Ca trù |
+| **Song lang** (song loan) | Dụng cụ gõ giữ nhịp; Viện Âm nhạc có trang riêng (cách dùng bằng chân trong tài tử, [[lich-su-am-nhac-viet-nam|cải lương]] là mô tả thông dụng, chưa đối chiếu nguồn) | [[don-ca-tai-tu|Đờn ca tài tử]], [[cai-luong|cải lương]] |
 | **Mõ làng** | Mõ tre khoét rãnh, đặt trên đùi và gõ bằng dùi | Báo hiệu trong làng |
 | **Thanh la**, **tiu cảnh**, **chuông chùa** | Nhạc cụ gõ kim loại | Nhạc lễ, nhạc chùa, sân khấu |
 
@@ -2036,7 +2036,7 @@ Harmonium bơm bằng tay, đặt trên sàn ([[accordion-harmonium]]) được 
 | [[kamancheh]] | Dây kéo | Ba Tư, Azerbaijan |
 | [[trong-darbuka-daf]] | Màng rung | Ả Rập, Thổ Nhĩ Kỳ, Ba Tư, người Kurd |
 
-Điểm chung lớn của các truyền thống này với nhạc Việt Nam: **[[giai-dieu|giai điệu]] đơn tuyến** giàu luyến láy, cao độ **ngoài bình quân luật**, và vai trò quan trọng của **[[ngau-hung-piano|ngẫu hứng]]** theo khuôn (raga, maqam, dastgah — so với các "hơi" của nhạc tài tử, xem [[am-nhac-truyen-thong-viet-nam]] và [[ngau-hung-ung-tac]]).
+Điểm chung lớn của các truyền thống này với [[am-nhac-viet-nam|nhạc Việt Nam]]: **[[giai-dieu|giai điệu]] đơn tuyến** giàu luyến láy, cao độ **ngoài bình quân luật**, và vai trò quan trọng của **[[ngau-hung-piano|ngẫu hứng]]** theo khuôn (raga, maqam, dastgah — so với các "hơi" của nhạc [[don-ca-tai-tu|tài tử]], xem [[am-nhac-truyen-thong-viet-nam]] và [[ngau-hung-ung-tac]]).
 
 Liên quan: [[nhac-khi-the-gioi]].
 `,
@@ -2184,7 +2184,7 @@ Liên quan: [[sitar]], [[nhac-cu-nam-a-tay-a]].
 ## Từ đệm hát đến độc tấu
 **Ram Narayan** đưa sarangi lên sân khấu như nhạc cụ **độc tấu** (Wikipedia ghi [[doi-song-am-nhac-va-thiet-che|buổi độc tấu]] đầu tiên năm 1954 ở Mumbai; một tiểu sử khác ghi 1956). **Sultan Khan** vừa độc tấu vừa đệm hát.
 
-Vai trò "bám giọng" của sarangi rất gần với vai trò của [[dan-nhi|đàn nhị]] trong chèo, hay của người đệm đàn trong [[dem-hat-piano|đệm hát]].
+Vai trò "bám giọng" của sarangi rất gần với vai trò của [[dan-nhi|đàn nhị]] trong [[cheo|chèo]], hay của người đệm đàn trong [[dem-hat-piano|đệm hát]].
 
 Liên quan: [[nhac-cu-nam-a-tay-a]].
 `,
