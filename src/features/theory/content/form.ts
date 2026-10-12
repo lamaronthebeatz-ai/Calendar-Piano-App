@@ -50,6 +50,8 @@ Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép
 - Đánh dấu chỗ **chủ đề mở đầu quay lại**: đó là cột mốc lớn nhất.
 - Để ý các **kết mạnh** và chỗ **đổi giọng**: chúng chia các phần.
 - Hỏi: phần mới **tương phản** (chất liệu mới) hay **phát triển** (chất liệu cũ bị xé nhỏ, chuyển giọng liên tục)?
+
+**Hình thức trong phụng vụ:** [[alternatim-va-thanh-le-organ]] (organ và ca đoàn luân phiên từng câu) và [[viet-binh-ca-cho-tieng-ban-dia]] (đặt lời âm tiết, [[ky-am-binh-ca-gregorian|neume]], melisma).
 `,
   },
   {
@@ -588,7 +590,7 @@ Phức điệu: xem [[doi-am]] và [[fugue]]. Mẫu lặp liên tục: [[ostinat
 Đối âm nhìn âm nhạc theo **chiều ngang** (từng [[giai-dieu|giai điệu]]), trong khi hoà âm nhìn theo **chiều dọc** ([[hop-am-ba|hợp âm]]). Thực tế hai cách nhìn bổ sung cho nhau.
 
 ## Tên gọi
-"Counterpoint" bắt nguồn từ tiếng Latin **punctus contra punctum** — "nốt chống nốt" (*punctus* là tên cũ của [[not-nhac|nốt nhạc]]). Các từ điển ghi niên đại khác nhau cho nghĩa âm nhạc của từ này, từ thế kỷ 14 đến giữa thế kỷ 15. Ban đầu nó chỉ việc **hát một bè kèm theo thánh ca**.
+"Counterpoint" bắt nguồn từ tiếng Latin **punctus contra [[ky-am-binh-ca-gregorian|punctum]]** — "nốt chống nốt" (*punctus* là tên cũ của [[not-nhac|nốt nhạc]]). Các từ điển ghi niên đại khác nhau cho nghĩa âm nhạc của từ này, từ thế kỷ 14 đến giữa thế kỷ 15. Ban đầu nó chỉ việc **hát một bè kèm theo thánh ca**.
 
 ## Lịch sử ngắn
 - **[[organum|Organum]]** thời [[thoi-ky-trung-co|Trung cổ]] là dạng đối âm sớm nhất — xem lịch sử kết cấu ở [[ket-cau]].
@@ -949,7 +951,7 @@ Phân tích: bắt đầu và kết ở **D**; đỉnh duy nhất **A** (nốt 7
 | Mục | Quy tắc |
 |---|---|
 | Độ dài | Khoảng 8 – 16 [[truong-do|nốt tròn]] (các tác giả khác nhau: 8 – 13, 8 – 15) |
-| Mở – kết | Bắt đầu và kết thúc trên **[[bac-am-giai|chủ âm]]** (do / finalis của [[dieu-thuc|điệu thức]]) |
+| Mở – kết | Bắt đầu và kết thúc trên **[[bac-am-giai|chủ âm]]** (do / [[tam-dieu-thuc-va-giong-thanh-vinh|finalis]] của [[dieu-thuc|điệu thức]]) |
 | Vào nốt kết | **Liền bậc**: thường re → do, đôi khi ti → do |
 | [[cao-do|Tầm cữ]] | Không quá **quãng 10**, thường trong một quãng 8 |
 | Đỉnh | **Một** nốt cao nhất, không lặp lại; không nên là cảm âm |
@@ -969,6 +971,8 @@ Phân tích: bắt đầu và kết ở **D**; đỉnh duy nhất **A** (nốt 7
 4. Không quá 2 bước nhảy liền nhau? Không "vẽ" tritone?
 5. Tầm cữ ≤ quãng 10?
 Hát to cantus trước khi viết [[doi-am|đối âm]] — một cantus khó hát sẽ cho đối âm khó viết. Tiếp theo: [[doi-am-loai-1]]. Quy tắc giai điệu chi tiết hơn của thế kỷ 16: [[phong-cach-palestrina]].
+
+**Trong phụng vụ:** verset organ dựng trên bình ca ([[alternatim-va-thanh-le-organ]]) và chorale prelude của Bach ([[tai-lieu-su-pham-cua-bach]]).
 `,
   },
   {

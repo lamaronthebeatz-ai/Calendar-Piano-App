@@ -364,6 +364,8 @@ Trong nhạc [[thoi-ky-baroque|Baroque]] ([[johann-sebastian-bach|Bach]], [[geor
 ## Vì sao học bass số hôm nay?
 - Là cách **nhanh nhất** để luyện nghe và viết [[dan-giong|dẫn giọng]] trên đàn phím: tay trái chơi bè trầm, tay phải tự tìm ba bè trên.
 - Giúp đọc đúng ký hiệu thể đảo trong phân tích ([[ky-hieu-hop-am]], [[hop-am-sau-bon]]).
+
+**Bach và bè trầm số:** bản chép tay *Vorschriften und Grundsätze* (1738) và sách hát Schemelli — [[tai-lieu-su-pham-cua-bach]]; cách Bach dạy bè trầm số trước khi dạy chorale — [[bach-day-hoc-tro]].
 `,
   },
   {

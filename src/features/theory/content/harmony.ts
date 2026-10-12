@@ -145,6 +145,8 @@ Học sau Chương 7 (cần hợp âm 7, chức năng, át phụ, hợp âm mư�
 - **Nghe trước, gọi tên sau**: mỗi khái niệm phải gắn với một âm thanh cụ thể.
 - **Hoà âm là dẫn giọng**: hợp âm nối nhau đẹp khi từng bè đi đẹp (Chương 5).
 - **Hai hệ thống không loại trừ nhau**: hoà âm thế kỷ XX được hiểu rõ nhất **khi so với** chuẩn mực cổ điển mà nó giữ lại, mở rộng hoặc phá bỏ.
+
+**Hoà âm trong nhà thờ:** [[phoi-chorale-kieu-bach]] (phối chorale bốn bè bắt đầu từ kế hoạch kết) và [[dem-organ-cho-binh-ca]] (hoà âm điệu thức, tránh kết át – chủ).
 `,
   },
   {
@@ -769,7 +771,7 @@ Open Music Theory gọi các vòng hợp âm lặp lại trong pop – rock là 
 | Aeolian shuttle | i – ♭VII – ♭VI – ♭VII | Am – G – F – G |
 | Aeolian [[cau-ket|cadence]] | ♭VI – ♭VII – i (hoặc I) | F – G – Am (C) |
 | **Vòng Andalusia** (lament) | i – ♭VII – ♭VI – V | Am – G – F – E; "Runaway" (Del Shannon) — thường lặp như [[ostinato]] hơn là một kết thật |
-Theo khảo sát 100 bài trong danh sách 500 bài hay nhất của tạp chí *Rolling Stone* (de Clercq & Temperley, 2011): sau I, **IV** là hợp âm phổ biến nhất, nhất là ngay trước chủ; **♭VII** cũng rất hay đứng trước chủ — rock có "ngữ pháp" riêng, không giống hoà âm chức năng cổ điển ([[chuc-nang-hoa-am]], [[dieu-thuc]]).
+Theo khảo sát 100 bài trong danh sách 500 bài hay nhất của tạp chí *Rolling Stone* ([[phoi-chorale-kieu-bach|de Clercq]] & Temperley, 2011): sau I, **IV** là hợp âm phổ biến nhất, nhất là ngay trước chủ; **♭VII** cũng rất hay đứng trước chủ — rock có "ngữ pháp" riêng, không giống hoà âm chức năng cổ điển ([[chuc-nang-hoa-am]], [[dieu-thuc]]).
 
 ## Bè trầm đi xuống
 ::grand C4+E4+G4/C3=C D4+G4/B2=G/B C4+E4+A4/A2=Am C4+E4+A4/G2=Am/G C4+F4+A4/F2=F C4+E4+G4/E2=C/E D4+F4+A4/D2=Dm B3+D4+G4/G2=G | Bè trầm đi xuống liền bậc C – B – A – G – F – E – D nhờ [[hop-am-gach-cheo|hợp âm gạch chéo]] (họ hàng của vòng Canon Pachelbel)
@@ -1182,6 +1184,8 @@ Hợp âm [[the-dao-hop-am|đảo 2]] nghe chưa ổn định nên chỉ dùng t
 - [ ] Hợp âm 6/4 thuộc một trong bốn loại trên?
 
 Xem nguyên lý chung ở [[dan-giong]]; áp dụng ở [[phoi-hoa-am-giai-dieu]]. Quy tắc này thuộc **[[he-thong-hoa-am-co-dien|hoà âm cổ điển]]** — nhiều nhà soạn nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] cố ý phá bỏ, ví dụ [[hoa-am-song-song]].
+
+**Áp dụng:** phối chorale theo lối Bach — [[phoi-chorale-kieu-bach]].
 `,
   },
   {

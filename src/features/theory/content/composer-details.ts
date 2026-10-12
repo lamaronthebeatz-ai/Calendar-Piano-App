@@ -28,6 +28,13 @@ export const COMPOSER_DETAILS: Record<string, Pick<Person, 'more' | 'refs'>> = {
 | Trung cấp cao | Sinfonia (Inventions 3 bè), các tổ khúc | |
 | Nâng cao | Clavier bình quân, Goldberg Variations | Xem [[phan-tich-prelude-do-truong]] |
 
+
+## Bach trong nhà thờ: organist và người thầy
+- Năm 1706 hội đồng giáo hội Arnstadt trách ông làm "nhiều biến tấu kỳ lạ" trong chorale khiến cộng đoàn bối rối — xem [[dem-hat-cong-doan-tren-organ]].
+- Các tập nhạc có mục đích dạy (Orgelbüchlein, Inventions, Clavier-Übung III, bản chép *Vorschriften und Grundsätze* 1738, 371 chorale): [[tai-lieu-su-pham-cua-bach]].
+- Ông dạy bè trầm số trước, rồi cho bè trầm để học trò viết alto và tenor: [[bach-day-hoc-tro]]; tự phối chorale: [[phoi-chorale-kieu-bach]].
+- Toàn cảnh: [[am-nhac-nha-tho]].
+
 Số BWV và các phiên bản có thể khác nhau giữa các ấn bản.
 `,
     refs: [

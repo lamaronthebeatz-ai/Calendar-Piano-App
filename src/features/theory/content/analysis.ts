@@ -89,6 +89,8 @@ Một bài phân tích tốt (gợi ý cấu trúc):
 - **Kết luận**: điều đó thay đổi cách nghe và cách chơi thế nào.
 
 Phân tích một solo jazz: [[phan-tich-solo-jazz]].
+
+**Phân tích một kho tác phẩm:** 371 [[tai-lieu-su-pham-cua-bach|chorale của Bach]] qua nghiên cứu thống kê và máy học — [[phoi-chorale-kieu-bach]].
 `,
   },
   {

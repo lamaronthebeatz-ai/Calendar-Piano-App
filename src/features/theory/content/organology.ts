@@ -1016,6 +1016,8 @@ Chơi cùng trống là học **[[swing]]**, **[[dao-phach|đảo phách]]** và
 
 ## Organ và piano
 Organ và [[dan-phim-co|harpsichord]] là hai nhạc cụ phím chính trước piano. Nhiều tác phẩm [[thoi-ky-baroque|Baroque]] cho "phím" ([[toccata-prelude-fugue]], [[chorale-va-chorale-prelude]]) được viết cho organ. Khác biệt lớn nhất: phím organ **không có [[cuong-do|cường độ]]** — đổi âm lượng bằng stop, không bằng lực ngón ([[ky-thuat-cham-phim]]).
+
+**Organ trong phụng vụ:** [[dem-organ-cho-binh-ca]], [[alternatim-va-thanh-le-organ]], [[dem-hat-cong-doan-tren-organ]]; organ Nhà thờ Lớn Hà Nội: [[binh-ca-va-organ-o-viet-nam]].
 `,
   },
   {

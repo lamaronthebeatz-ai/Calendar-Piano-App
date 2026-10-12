@@ -40,6 +40,8 @@ Những gì bản nhạc **không** ghi hết — [[rubato|rubato]], cân bằng
 Nhạc lý chỉ thành kỹ năng khi gắn với **âm thanh**: đọc thì hát hoặc đánh thử, nghe thì gọi tên. Xem [[luyen-tai]], [[xuong-am]], [[am-tiet-nhip]], [[ky-am]], và về phía người dạy: [[cach-day-doc-not]], [[doc-not-nhanh]], [[lo-trinh-luyen-tai-su-pham]].
 
 **Góc nhìn lịch sử:** ký âm ngày nay là điểm cuối của gần một nghìn năm phát triển, từ neume qua khuông nhạc của Guido đến vạch nhịp thế kỷ 17 — xem [[lich-su-ky-am]].
+
+**Ký âm bình ca:** [[ky-am-binh-ca-gregorian]] (khuông 4 dòng, khoá Đô và khoá Fa di động, neume) và [[gregorio-va-gabc]] (soạn nốt vuông trên máy tính).
 `,
   },
   {
@@ -86,7 +88,7 @@ Giữa các phím trắng có phím đen — đó là các nốt mang [[dau-hoa]
 Xem cách dùng các âm tiết này khi hát: [[xuong-am]].
 
 ## Lịch sử hình nốt
-1. **Neume** (thế kỷ 9–12): ký hiệu chỉ hướng lên – xuống của giọng hát, chưa ghi chính xác cao độ hay trường độ.
+1. **[[ky-am-binh-ca-gregorian|Neume]]** (thế kỷ 9–12): ký hiệu chỉ hướng lên – xuống của giọng hát, chưa ghi chính xác cao độ hay trường độ.
 2. Cuối thế kỷ 13, phần lớn neume được đơn giản hoá thành **nốt vuông** — vẫn còn dùng trong sách thánh ca Gregorian ngày nay.
 3. **[[ky-am|Ký âm]] định lượng** (mensural) bổ sung các hình nốt cho trường độ. Đầu nốt **hình bầu dục** hiện đại chỉ là dạng cách điệu của đầu nốt hình thoi trong ký âm vuông.
 

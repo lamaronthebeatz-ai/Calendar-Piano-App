@@ -42,6 +42,8 @@ Hai người chơi cùng một bản nhạc, cùng đúng nốt, vẫn có thể
 5. **Hiểu để diễn**: [[phan-tich-va-bieu-dien]], [[so-sanh-ban-thu]].
 
 **Góc nhìn lịch sử:** người xưa chơi thế nào và ta biết điều đó bằng cách nào — [[phong-trao-bieu-dien-lich-su]]; vì sao các ấn bản khác nhau và nên tin bản nào — [[van-ban-hoc-am-nhac]].
+
+**Đệm trong nhà thờ:** [[dem-organ-cho-binh-ca]] (đăng ký âm sắc, không lấn át lời) và [[dem-hat-cong-doan-tren-organ]] (nhịp độ, dạo đầu, câu cuối).
 `,
   },
   {

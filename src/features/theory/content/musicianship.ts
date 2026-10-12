@@ -44,6 +44,8 @@ Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[doc-not
 - **Phân biệt bằng chứng và kinh nghiệm**: thư viện ghi rõ đâu là kết quả nghiên cứu, đâu là gợi ý của giáo viên — nhiều câu "ai cũng biết" trong dạy nhạc chưa từng được kiểm chứng.
 
 **Nền tảng khoa học:** trẻ nghe và học nhạc thế nào theo từng tuổi — [[tam-ly-hoc-phat-trien-am-nhac]]; học nhạc có làm thông minh hơn không, và nên nói gì với phụ huynh — [[hoc-nhac-va-tri-tue]].
+
+**Sư phạm lịch sử:** các tập nhạc Bach viết để dạy — [[tai-lieu-su-pham-cua-bach]] — và lời kể về cách ông dạy học trò — [[bach-day-hoc-tro]].
 `,
   },
   {

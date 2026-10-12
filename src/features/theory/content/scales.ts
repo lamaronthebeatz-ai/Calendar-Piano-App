@@ -40,6 +40,8 @@ Các âm giai đối xứng khác: [[dieu-thuc-chuyen-vi-gioi-han]].
 Kỹ thuật ngón: [[luyen-am-giai]], [[ngon-bam]]. Âm giai cũng là nội dung chính của các kỳ thi cấp độ (xem [[thi-cap-do]]).
 
 **Góc nhìn nghiên cứu:** thứ bậc của các bậc trong giọng đo được bằng thực nghiệm, và máy tính dùng nó để đoán giọng — [[tim-giong-bang-may]].
+
+**Điệu thức Gregorian:** tám điệu nhà thờ, âm kết và âm đọc — [[tam-dieu-thuc-va-giong-thanh-vinh]].
 `,
   },
   {
@@ -379,6 +381,8 @@ So sánh với [[am-giai|âm giai]] trưởng/thứ cùng âm chủ và chỉ nh
 ## Điệu thức trong jazz
 - Năm **1953**, George Russell tự xuất bản *The Lydian Chromatic Concept of Tonal Organization* — lý thuyết đầu tiên khám phá mối quan hệ **dọc giữa hợp âm và âm giai**, được cho là đã ảnh hưởng đến [[jazz-dieu-thuc|jazz điệu thức]].
 - **"So What"** (Miles Davis, album *Kind of Blue*, 1959): khuôn 32 [[so-chi-nhip|ô nhịp]], 16 ô **Rê Dorian**, 8 ô **Mi♭ Dorian**, rồi trở lại Rê Dorian. Chỉ hai "hợp âm" nên người [[ngau-hung-tu-do|ngẫu hứng tự do]] theo [[giai-dieu|giai điệu]] thay vì chạy theo hợp âm đổi nhanh. Hợp âm mở đầu xếp chồng quãng 4 được gọi là "**[[hop-am-so-what-barron|hợp âm So What]]**" (xem [[hoa-am-quang-bon]]).
+
+**Tám điệu thức Gregorian** chi tiết hơn (bảng âm kết – âm đọc, công thức thánh vịnh): [[tam-dieu-thuc-va-giong-thanh-vinh]]; đệm bình ca bằng hoà âm điệu thức: [[dem-organ-cho-binh-ca]].
 `,
   },
   {

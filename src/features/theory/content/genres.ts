@@ -73,13 +73,15 @@ Bảng tóm tắt các thể loại khí nhạc lớn: [[the-loai]].
 - Mỗi bài trong tiết mục thuộc một thể loại có **quy ước [[dien-tau|diễn tấu]]** riêng: sarabande nặng phách 2, valse nhẹ phách 2 – 3, nocturne "hát", toccata sáng và rõ — xem [[phong-cach-dien-tau]].
 - Thể loại giúp học trò **nghe rộng**: một học trò thích nhạc phim có thể đi ngược về thơ giao hưởng, opera, [[bien-doi-chu-de|leitmotif]].
 - Lộ trình chọn bài theo trình độ: [[lo-trinh-tac-pham]]; nhà soạn nhạc theo thời kỳ: [[thoi-ky-trung-co]] … [[thoi-ky-the-ky-20]].
+
+**Âm nhạc nhà thờ:** lộ trình riêng ở [[am-nhac-nha-tho]]; thánh lễ organ và lối luân phiên ở [[alternatim-va-thanh-le-organ]].
 `,
   },
   {
     slug: 'thanh-ca-gregorian',
     title: 'Thánh ca Gregorian',
     category: 'genres',
-    aliases: ['thánh ca Gregorian', 'Gregorian chant', 'plainchant', 'plainsong', 'bình ca', 'neume', 'nốt neume', 'Solesmes', 'Ut queant laxis', 'ut re mi', 'Dies irae'],
+    aliases: ['thánh ca Gregorian', 'Gregorian chant', 'plainchant', 'plainsong', 'bình ca', 'Solesmes', 'Ut queant laxis', 'ut re mi', 'Dies irae'],
     summary: 'Thể loại cổ nhất còn được hát đến nay: giai điệu đơn âm, không đệm, lời Latin, nhịp tự do theo lời, xếp theo tám điệu thức nhà thờ. Từ ký hiệu neume đến khuông nhạc của Guido d’Arezzo và các nốt ut – re – mi, thánh ca là gốc rễ của ký âm và của các thể loại nhiều bè về sau.',
     refs: [
       ['Wikipedia — Gregorian chant', 'https://en.wikipedia.org/wiki/Gregorian_chant'],
@@ -121,6 +123,8 @@ Thế kỷ 19, các tu sĩ dòng Biển Đức ở **Solesmes** (Pháp) nghiên 
 - Hát một câu thánh ca giúp cảm nhận [[dieu-thuc|điệu thức]] không qua hợp âm; thử đệm bằng một [[bass-ngan|âm ngân]] để nghe màu Dorian, Phrygian.
 - Thánh ca là chất liệu cho mọi thể loại nhiều bè sau đó: [[organum]], [[motet]], [[thanh-le-va-requiem|thánh lễ]].
 Bối cảnh: [[thoi-ky-trung-co]].
+
+**Đi sâu:** lộ trình [[am-nhac-nha-tho]] — [[ky-am-binh-ca-gregorian|ký âm và neume]], [[tam-dieu-thuc-va-giong-thanh-vinh|tám điệu thức và công thức thánh vịnh]], [[sach-hat-va-van-kien-binh-ca|sách hát và văn kiện]], [[viet-binh-ca-cho-tieng-ban-dia|viết bình ca]], [[gregorio-va-gabc|phần mềm Gregorio]], [[dem-organ-cho-binh-ca|đệm organ]].
 
 ## Nghe ví dụ
 
@@ -482,7 +486,7 @@ Liên quan: [[thanh-le-va-requiem]], [[thoi-ky-baroque]].
     slug: 'chorale-va-chorale-prelude',
     title: 'Chorale và chorale prelude',
     category: 'genres',
-    aliases: ['chorale', 'choral', 'thánh ca Luther', 'chorale prelude', 'khúc dạo chorale', 'Orgelbüchlein', 'chorale Bach', 'Bach chorale'],
+    aliases: ['chorale', 'choral', 'thánh ca Luther', 'chorale prelude', 'khúc dạo chorale', 'chorale Bach', 'Bach chorale'],
     summary: 'Chorale là thánh ca giáo đoàn của Giáo hội Luther; Bach hoà âm hàng trăm chorale thành bốn bè — bài mẫu kinh điển của môn hoà âm. Chorale prelude là bản đàn organ xây trên giai điệu chorale, như 46 bản trong Orgelbüchlein.',
     refs: [
       ['Wikipedia — Chorale', 'https://en.wikipedia.org/wiki/Chorale'],
@@ -507,6 +511,8 @@ Bản [[organ-ong|organ]] ngắn dựa trên một giai điệu chorale, chơi t
 ## Với người học piano
 Chơi chorale Bach trên piano (hai bè mỗi tay) là bài tập đọc [[luat-hoa-am-bon-be|bốn bè]] và [[dien-dat-cau-nhac|giữ câu nhạc]] rất tốt; thử [[legato]] bằng ngón thay vì pedal.
 Liên quan: [[oratorio-cantata-passion]], [[toccata-prelude-fugue]].
+
+**Đi sâu:** tài liệu sư phạm (Orgelbüchlein, Schübler, Leipzig, 371 chorale) ở [[tai-lieu-su-pham-cua-bach]]; tự phối chorale ở [[phoi-chorale-kieu-bach]]; đệm cho cộng đoàn hát ở [[dem-hat-cong-doan-tren-organ]].
 
 ## Nghe ví dụ
 

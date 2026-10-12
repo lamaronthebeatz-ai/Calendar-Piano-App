@@ -89,6 +89,8 @@ Một số bài nằm ở nhiều phân ngành: chẳng hạn [[luat-binh-quan]]
 2. Chọn **một** phân ngành gần câu hỏi của mình; đọc bài tổng quan của nó và các bài con.
 3. Với mỗi câu hỏi, đọc ít nhất một bài ở nhánh **lịch sử** và một bài ở nhánh **hệ thống** về cùng chủ đề — ví dụ [[hinh-thuc-sonata]] (lý thuyết) cùng [[sonata-the-loai]] (lịch sử thể loại) và [[phan-tich-sonata-k545]] (phân tích).
 4. Theo nguồn ở cuối mỗi bài để đi tới tài liệu gốc.
+
+**Âm nhạc nhà thờ** có nhánh riêng: [[am-nhac-nha-tho]] — nguồn văn bản ([[ky-am-binh-ca-gregorian]], [[sach-hat-va-van-kien-binh-ca]], [[tai-lieu-su-pham-cua-bach]]) gặp thực hành biểu diễn lịch sử.
 `,
   },
   {
@@ -547,7 +549,7 @@ Piano là nhạc cụ **dây rung** được gõ bằng búa. Các bài trong th
 ## Ba kiểu công việc
 | Kiểu | Làm gì | Ví dụ |
 |---|---|---|
-| **Nghiên cứu kho dữ liệu** (*corpus study*) | Mã hoá hàng trăm tác phẩm rồi đếm, so sánh | de Clercq và Temperley (2011) [[phan-tich-hoa-am|phân tích hoà âm]] của một kho bài rock — dùng ở [[hoa-am-pop]] |
+| **Nghiên cứu kho dữ liệu** (*corpus study*) | Mã hoá hàng trăm tác phẩm rồi đếm, so sánh | [[phoi-chorale-kieu-bach|de Clercq]] và Temperley (2011) [[phan-tich-hoa-am|phân tích hoà âm]] của một kho bài rock — dùng ở [[hoa-am-pop]] |
 | **Mô hình hoá lý thuyết** | Viết một lý thuyết thành quy tắc chính xác, rồi chạy thử | [[tap-hop-cao-do]], [[neo-riemann]] — những lý thuyết vốn đã có dạng toán học |
 | **Truy xuất thông tin âm nhạc** (MIR) | Nhận diện [[giai-dieu|giai điệu]], [[hop-am-ba|hợp âm]], nhịp từ bản thu hay bản nhạc | Hội nghị ISMIR |
 

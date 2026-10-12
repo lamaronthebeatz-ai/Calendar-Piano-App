@@ -38,7 +38,7 @@ export const history: Article[] = [
 ::timeline 850-1000=Neume 1000-1200=Neume_có_cao_độ 1170-1250=Điệu_thức_tiết_tấu 1260-1430=Định_lượng_đen 1430-1600=Định_lượng_trắng 1600-1700=Vạch_nhịp_đều 1026=Micrologus 1240=De_mensurabili 1322=Ars_nova 1501=Odhecaton | Các giai đoạn chính của ký âm (mốc năm là ước lượng; các hệ thống chồng lên nhau)
 
 ## 1. Neume: nhớ giai điệu, không ghi giai điệu
-- Các bản chép tay hoàn chỉnh sớm nhất có **neume** (dấu ghi đặt trên lời ca) thuộc **thế kỷ 9**; mảnh vỡ có thể từ thế kỷ 8.
+- Các bản chép tay hoàn chỉnh sớm nhất có **[[ky-am-binh-ca-gregorian|neume]]** (dấu ghi đặt trên lời ca) thuộc **thế kỷ 9**; mảnh vỡ có thể từ thế kỷ 8.
 - Neume ban đầu **không cho biết [[quang|quãng]] chính xác** (gọi là *không định [[cao-do|cao độ]]* — adiastematic), chỉ gợi hướng đi lên, xuống của một [[giai-dieu|giai điệu]] **người hát đã thuộc**. Ký âm lúc đầu là công cụ nhắc nhớ cho [[thanh-ca-gregorian|thánh ca]] truyền khẩu.
 - Khoảng năm 1000, các bản chép ở Ý đã đặt neume theo độ cao trên trang (*định cao độ* — diastematic). Từ thế kỷ 12 xuất hiện **ký âm vuông** (*square notation*), vẫn dùng trong sách thánh ca Công giáo đến nay.
 - Một nhánh riêng: chuyên luận khuyết danh *Musica enchiriadis* (thế kỷ 9) dùng **ký âm daseia** trên một lưới giống khuông nhạc; các ví dụ trong đó là **[[doi-am|phức điệu]] ghi chép sớm nhất còn biết** ([[organum]]). Hệ ký âm này hầu như không được dùng ngoài các chuyên luận.
@@ -77,7 +77,7 @@ Phức điệu Notre-Dame ([[leonin|Léonin]], [[perotin|Pérotin]] — xem [[or
 Vạch nhịp xuất hiện trước tiên trong nhạc phím và vihuela thế kỷ 15 – 16, chưa đều đặn. Trong nhạc hoà tấu, vạch nhịp có từ cuối thế kỷ 16; đến **giữa thế kỷ 17**, các ô nhịp dài bằng nhau đi cùng số chỉ nhịp mới thành chuẩn. Nhạc [[thoi-ky-phuc-hung|Phục hưng]] trong [[an-ban-urtext|ấn bản]] hiện đại vì thế thường có **vạch nhịp do người biên tập thêm**, đôi khi chỉ kẻ giữa các khuông (*Mensurstrich*) để không chia cắt câu hát.
 
 ## 7. Phục hồi ký âm cũ: Solesmes và ấn bản Vatican
-Thế kỷ 19, các tu sĩ dòng Biển Đức ở Solesmes nghiên cứu bản chép cổ để phục hồi thánh ca. Giáo hoàng Piô X ban *Tra le sollecitudini* (22/11/1903) về thánh nhạc; motu proprio *Col nostro* (25/4/1904) ra lệnh soạn ấn bản Vatican; sách *Graduale Romanum* ra năm 1908 và được sửa năm 1974. Xem [[thanh-ca-gregorian]].
+Thế kỷ 19, các tu sĩ dòng Biển Đức ở Solesmes nghiên cứu bản chép cổ để phục hồi thánh ca. Giáo hoàng Piô X ban *[[sach-hat-va-van-kien-binh-ca|Tra le sollecitudini]]* (22/11/1903) về [[am-nhac-nha-tho|thánh nhạc]]; motu proprio *Col nostro* (25/4/1904) ra lệnh soạn ấn bản Vatican; sách *Graduale Romanum* ra năm 1908 và được sửa năm 1974. Xem [[thanh-ca-gregorian]].
 
 ## Đọc một nguồn cũ: ba câu hỏi
 *(Gợi ý của thư viện.)*

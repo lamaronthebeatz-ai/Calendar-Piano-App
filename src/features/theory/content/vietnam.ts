@@ -40,6 +40,8 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 | Lý thuyết sâu | [[hoi-trong-nhac-tai-tu-cai-luong]], [[long-ban-va-ky-thuat-to-diem]], [[am-nhac-ca-tru]], [[lan-dieu-cheo-va-tuong]], [[hat-ru]] |
 | Nhạc cụ | [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nhac-cu-tay-nguyen-va-mien-nui]], [[nhac-cu-go-nghi-le-viet-nam]] |
 | Nhạc sĩ | [[le-thuong]], [[van-chung]], [[hoang-trong]], [[hoang-thi-tho]], [[y-van]], [[tu-cong-phung]], [[nguyen-anh-9]], [[pho-duc-phuong]], [[hong-dang]], [[nguyen-tai-tue]], [[nguyen-cuong]], [[tran-lap]], [[son-tung-m-tp]] |
+
+**Bình ca và organ ở Việt Nam:** điều đã biết và những khoảng trống — [[binh-ca-va-organ-o-viet-nam]].
 `,
   },
   {
@@ -707,6 +709,8 @@ Hát ru ba miền: [[hat-ru]].
 *(Phần này dựa chủ yếu vào báo chí; xem [[dan-toc-nhac-hoc]] về phương pháp nghiên cứu.)*
 
 Liên quan: [[the-loai-am-nhac-viet-nam]], [[nhac-cu-viet-nam]], [[ranat|dàn piphat]] (họ hàng của dàn ngũ âm Khmer).
+
+**Xem thêm:** [[binh-ca-va-organ-o-viet-nam]] — bình ca Gregorian, organ Nhà thờ Lớn Hà Nội và quy định phép in thánh ca.
 
 ## Nghe
 
