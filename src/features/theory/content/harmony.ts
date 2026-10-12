@@ -149,6 +149,8 @@ Học sau Chương 7 (cần hợp âm 7, chức năng, át phụ, hợp âm mư�
 **Hoà âm trong nhà thờ:** [[phoi-chorale-kieu-bach]] (phối chorale bốn bè bắt đầu từ kế hoạch kết) và [[dem-organ-cho-binh-ca]] (hoà âm điệu thức, tránh kết át – chủ).
 
 **Ghi hợp âm cho ban nhạc:** [[he-so-nashville-va-lead-sheet]]; **hoà âm trên bè trầm lặp:** [[passacaglia-va-chaconne]].
+
+**Hoà âm trên đôi tay:** [[ky-nang-dan-phim-chuc-nang]] (chuỗi kết, phối hoà âm tức thì, dịch giọng, lead sheet).
 `,
   },
   {
@@ -1547,6 +1549,60 @@ Ca sĩ đổi giọng phút chót? Bảng **không đổi** — chỉ cần nói
 - Các "fake book" thập niên 1940 – 1950 (khoảng 2.000 bài) được in **lậu**, không trả tác quyền.
 - **The Real Book**: hai sinh viên Berklee (ẩn danh) làm giữa thập niên 1970, photocopy bán lén, không trả tác quyền; Hal Leonard ra **bản hợp pháp năm 2004**. Ngày nay là "sách giáo khoa" của [[hinh-thuc-ca-khuc-32|tiết mục jazz]].
 Xem thêm [[ban-quyen-am-nhac-viet-nam]] về vấn đề tác quyền ở Việt Nam.
+`,
+  },
+  {
+    slug: "ky-nang-dan-phim-chuc-nang",
+    title: "Kỹ năng đàn phím chức năng: phối hoà âm, dịch giọng, thị tấu và lead sheet",
+    category: 'harmony',
+    also: ['technique', 'musicianship'],
+    aliases: ["kỹ năng đàn phím chức năng", "functional keyboard skills", "functional piano", "piano chức năng", "piano proficiency", "kiểm tra piano cho sinh viên âm nhạc", "harmonization at sight", "phối hoà âm tức thì", "piano nhóm", "group piano"],
+    summary: "Ở các trường âm nhạc Bắc Mỹ, mọi sinh viên phải qua kỳ kiểm tra \"đàn phím chức năng\": âm giai, chuỗi kết I – IV – I – V7 – I ở mọi giọng, phối hoà âm cho giai điệu bằng I, IV, V7 ngay khi đọc, dịch giọng, đọc lead sheet. Bài trình bày lõi chung đó (theo nhiều trường), các giáo trình piano nhóm dạy nó (Lancaster & Renfrow, Lyke, Hilley & Olson), nghiên cứu của Pike về học hợp tác, và một bộ bài tập tương ứng cho người tự học.",
+    refs: [
+      ["NASM — Basic competency index", "https://nasm.arts-accredit.org/accreditation/standards-guidelines/basic-competency-index/"],
+      ["Kutztown University — Piano proficiency", "https://www.kutztown.edu/academics/colleges-and-departments/visual-and-performing-arts/majors-and-minors/music/current-music-students/piano-proficiency.html"],
+      ["Lawrence University — Basic keyboard skills", "https://www.lawrence.edu/admissions-aid/new-students/new-conservatory-students/basic-keyboard-skills/"],
+      ["Pittsburg State — Piano proficiency requirements (PDF)", "https://www.pittstate.edu/humanities/_files/documents/music/departmental/piano-proficiency-examination-requirements1.pdf"],
+      ["UNI — Piano proficiency level 1 (PDF)", "https://music.uni.edu/sites/default/files/inline-uploads/piano_proficiency_requirements_level_1.pdf"],
+      ["Black Hills State — Piano proficiency 2020 (PDF)", "https://bhsu.edu/Academics/Arts/Music/_docs/Piano_Proficiency_Requirements2020.pdf"],
+      ["University of Oklahoma (2020) — luận án về khoá piano chức năng", "https://shareok.org/items/8108786a-dac0-4ddf-8947-323e7d38ab03/full"],
+      ["Pike (2014), JMTE — học hợp tác trong piano nhóm", "https://repository.lsu.edu/music_pubs/36"],
+      ["Stipes — Lyke et al., Keyboard Musicianship Book Two", "https://stipes.com/catalog/music/keyboard-musicianship-piano-adults-book-two/271"],
+      ["Cengage — Hilley & Olson, Piano for the Developing Musician", "https://www.cengage.com/c/piano-for-the-developing-musician-update-6e-hilley-olson/9780495792291/"],
+    ],
+    body: `
+Bài này nối lý thuyết hoà âm với đôi tay. Nền tảng: [[hop-am-ba]], [[chuc-nang-hoa-am]], [[cau-ket]], [[phoi-hoa-am-giai-dieu]].
+
+## Vì sao có kỹ năng này?
+Hiệp hội các trường âm nhạc Hoa Kỳ (NASM) yêu cầu **năng lực đàn phím** với mọi sinh viên ngành âm nhạc. Mỗi trường tự cụ thể hoá thành kỳ kiểm tra; một luận án (Đại học Oklahoma, 2020) cho thấy nội dung các khoá này **khác nhau khá nhiều** giữa các trường. Đại học Lawrence phân biệt: kỹ năng cơ bản cho người không chuyên piano (phối hoà âm, dịch giọng, thị tấu) và kỹ năng chức năng cho người chuyên piano (thêm đọc tổng phổ, [[ngau-hung-ung-tac|ứng tác]]).
+
+## Lõi chung của các kỳ kiểm tra
+*(Tổng hợp từ yêu cầu của nhiều trường: Austin College, Black Hills State, Pittsburg State, Tennessee State, UNI, Kansas State, MSU Denver, Nebraska–Omaha, Central Washington.)*
+| Kỹ năng | Ví dụ yêu cầu |
+|---|---|
+| **[[am-giai|Âm giai]]** | trưởng, thứ, 2 – 4 [[quang|quãng 8]] |
+| **Chuỗi kết** | I – IV – I – V7 – I và i – iv – i – V7 – i ở **mọi giọng** |
+| **Phối hoà âm tức thì** | đệm một [[giai-dieu|giai điệu]] bằng I, IV, V7 ngay khi đọc |
+| **Dịch giọng** | vd. lên/xuống một cung, xuống quãng 6 trưởng, xuống quãng 5 đúng (Pittsburg State) |
+| **Lead sheet** | chơi giai điệu + hợp âm từ ký hiệu (UNI dùng bài *Rising Sun [[blues-12-nhip|Blues]]*) |
+| **Thị tấu** | bài ngắn hai tay |
+::grand E4+G4+C5/C3=I F4+A4+C5/F2=IV E4+G4+C5/C3=I D4+F4+G4+B4/G2=V7 E4+G4+C5/C3=I | Chuỗi kết I – IV – I – V7 – I ở Đô trưởng — tay phải giữ âm chung, tay trái đánh nốt gốc (Đô – Fa – Đô – Sol – Đô)
+
+## Giáo trình dạy kỹ năng này
+| Giáo trình | Cách tổ chức |
+|---|---|
+| Lancaster & Renfrow, *Alfred's Group Piano for Adults* | 26 chương = 26 tuần, **mỗi chương** đều có lý thuyết, kỹ thuật, thị tấu, tiết mục, phối hoà âm, ứng tác, hoà tấu |
+| Lyke và cộng sự, *Keyboard Musicianship* quyển 2 | Đi theo chương trình lý thuyết năm hai đại học; phối hoà âm dân ca và [[nhac-pho-thong-the-ky-20|nhạc phổ thông]], tiến trình cổ điển và jazz, phân tích, đọc tổng phổ, đệm |
+| Hilley & Olson, *Piano for the Developing Musician* | Mỗi chương kết hợp đàn phím, lý thuyết, sáng tạo; phối hợp với môn lý thuyết |
+**Pike (2014)**: với 12 sinh viên piano nhóm học kỳ cuối, chiến lược **học hợp tác** cải thiện điểm thị tấu và phối hoà âm; tác giả nhắc nhiều giáo viên âm nhạc không dùng piano khi dạy vì **tự thấy kém**.
+
+## Bộ bài tập cho người tự học
+*(Đề xuất của [[danh-gia-giao-trinh-piano-va-nhac-ly|giáo trình Lamar]], theo lõi chung ở trên.)*
+1. **Chuỗi kết** I – IV – I – V7 – I ở Đô, Sol, Fa; mỗi tuần thêm một giọng theo [[vong-quang-nam]].
+2. **Phối hoà âm**: chọn một giai điệu dân ca, đánh dấu nốt nào thuộc I, IV hay V7, chơi tay trái nốt gốc rồi [[luyen-hop-am-rai|hợp âm rải]] — xem [[phoi-hoa-am-giai-dieu]], [[dem-hat-piano]].
+3. **Dịch giọng**: chơi lại cùng bài lên một cung — xem [[dich-giong]].
+4. **Lead sheet**: đọc [[ky-hieu-hop-am|ký hiệu hợp âm]] và hệ số Nashville — [[he-so-nashville-va-lead-sheet]].
+5. **Thị tấu** 5 phút mỗi ngày — [[thi-tau]].
 `,
   },
 ]

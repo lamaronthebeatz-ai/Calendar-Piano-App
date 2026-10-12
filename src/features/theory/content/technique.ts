@@ -44,6 +44,10 @@ export const technique: Article[] = [
 Kỹ thuật phục vụ âm nhạc: song song với các bài trên, nên học [[dien-tau]] (ký hiệu và phong [[cach-dien-tau|cách diễn tấu]]) và [[phan-tich-va-bieu-dien]].
 
 **Góc nhìn nghiên cứu:** các kỹ năng trên là đối tượng của ngành [[khoa-hoc-bieu-dien]] (xem bản đồ [[am-nhac-hoc]]).
+
+**Bắt đầu từ đâu:** [[vi-tri-nam-ngon-va-am-giai-nam-not]]; đàn phím ứng dụng — [[ky-nang-dan-phim-chuc-nang]].
+
+**Học theo giáo trình:** [[danh-gia-giao-trinh-piano-va-nhac-ly]]; dành cho phụ huynh — [[tre-hoc-dan-luyen-tap-va-phu-huynh]]; dành cho người lớn — [[nguoi-lon-hoc-piano-dong-luc-va-cach-hoc]].
 `,
   },
   {
@@ -1453,6 +1457,67 @@ Cẳng tay có thể **xoay** quanh trục của nó như khi **vặn tay nắm 
 Trong chương 1 [[hinh-thuc-sonata|Sonata]] Op. 13 của [[Beethoven]], chủ đề thứ nhất có tay trái chơi **quãng 8 tremolo liên tục**. Một cách tập: nảy quãng 8 C2 – C3 lặp lại, thả lỏng; khi mỏi thì **nâng dần rồi hạ cổ tay** để đổi [[tu-the|tư thế]]. Tốc độ cũng cần đủ chậm để tremolo **có chỗ vang** — đừng đẩy tốc độ vượt quá mức tay còn thả lỏng được.
 
 Xoay cẳng tay còn dùng cho [[luyen-hop-am-rai|hợp âm rải]], bass Alberti ([[dem-hat-piano]]) và [[ky-thuat-lay-ren|láy rền]].
+`,
+  },
+  {
+    slug: "vi-tri-nam-ngon-va-am-giai-nam-not",
+    title: "Vị trí năm ngón và âm giai năm nốt",
+    category: 'technique',
+    also: ['basics', 'musicianship'],
+    aliases: ["vị trí năm ngón", "five-finger position", "five finger position", "âm giai năm nốt", "pentascale", "năm nốt", "vị trí Đô", "Middle C position", "C position", "vị trí Sol", "vị trí Fa"],
+    summary: "Phần lớn giáo trình nhập môn đặt năm ngón lên năm phím liền nhau rồi mới mở rộng. Bài giải thích vị trí Đô, vị trí Đô giữa, các vị trí Sol, Fa, Rê, La; âm giai năm nốt trưởng và thứ; cách mỗi giáo trình dùng (Bastien chuyển qua nhiều giọng, Faber dạy tên nốt tách khỏi số ngón, Alfred Premier tránh khoá tay vào một vị trí); và điều nghiên cứu thật sự cho biết về cách đọc \"Đô giữa\".",
+    refs: [
+      ["Kjos — Bastien Piano Basics, Primer", "https://kjos.com/bastien-piano-basics-primer-piano-primer-1615.html"],
+      ["Kjos — Bastien Piano Basics (multi-key)", "https://kjos.com/bastien-piano-basics-primer-piano-primer.html"],
+      ["Five Little Fingers Studio — mô tả Faber Primer", "https://fivelittlefingerspianostudio.mymusicstaff.com/Order-Piano-Books"],
+      ["Rainbow Resource — Alfred's Premier Piano Course 1A", "https://www.rainbowresource.com/041377.html"],
+      ["Alfred — Basic Piano Library, Level 1A (PDF)", "https://content.alfred.com/catpages/00-2104.pdf"],
+      ["Hal Leonard — Piano Lessons Book 1", "https://www.halleonard.com/product/296001/piano-lessons-book-1"],
+      ["Color in My Piano — RCM 2022 technical requirements", "https://colorinmypiano.com/2022/07/19/freebie-technical-requirements-charts-for-rcms-2022-piano-syllabus/"],
+      ["DiCienzo (2019) — Middle C vs Mixed Intervallic (uOttawa)", "https://ruor.uottawa.ca/handle/10393/39944"],
+      ["Emond & Comeau (2013) — mô hình hoá hai cách đọc (PDF)", "https://piano.uottawa.ca/wp-content/uploads/2016/04/Publications/Music Reading  Learning a new skill/20. Bruno_Modélisation méthode 2013.pdf"],
+    ],
+    body: `
+Bài nền của tay đàn, đi cùng [[ngon-bam]], [[ban-phim]] và [[cach-day-doc-not]].
+
+## Vị trí năm ngón là gì?
+Năm ngón tay (1 = ngón cái … 5 = ngón út) đặt lên **năm phím trắng liền nhau**, mỗi ngón một phím, không cần di chuyển bàn tay. Đây là "căn phòng" đầu tiên của người mới học: chơi được [[giai-dieu|giai điệu]] mà chưa phải học luồn ngón.
+
+| Vị trí | Tay phải (ngón 1 → 5) | Tay trái (ngón 5 → 1) |
+|---|---|---|
+| **Đô** | Đô Rê Mi Fa Sol (từ Đô giữa) | Đô Rê Mi Fa Sol ([[quang|quãng 8]] dưới) |
+| **Đô giữa** | Đô giữa → Sol | ngón 1 tay trái **cũng** đặt trên Đô giữa, xuống tới Fa |
+| **Sol** | Sol La Si Đô Rê | Sol La Si Đô Rê |
+| **Fa** | Fa Sol La Si♭ Đô | Fa Sol La Si♭ Đô |
+::staff treble C4=1 D4=2 E4=3 F4=4 G4=5 | Vị trí Đô, tay phải: số dưới nốt là số ngón
+::staff bass F3=5 G3=4 A3=3 B3=2 C4=1 | Vị trí Đô giữa, tay trái: ngón 1 trên Đô giữa
+
+## Âm giai năm nốt
+Năm nốt đầu của một [[am-giai|âm giai]] — **trưởng** (cung – cung – nửa cung – cung) hoặc **thứ** (cung – nửa cung – cung – cung). Đổi từ trưởng sang thứ chỉ cần **hạ nốt giữa** (bậc 3) nửa cung.
+::staff treble C4 D4 E4 F4 G4 F4 E4 D4 C4 | Âm giai năm nốt Đô trưởng — lên và xuống
+::staff treble C4 D4 Eb4 F4 G4 F4 Eb4 D4 C4 | Đô thứ: chỉ đổi Mi thành Mi♭
+Giáo trình thi RCM (bản 2022) đưa âm giai năm nốt vào phần kỹ thuật ngay từ cấp chuẩn bị (Prep B, theo một bảng tổng hợp của giáo viên). Vì sao trưởng và thứ khác nhau: [[am-giai-truong]], [[am-giai-thu]], [[cung-nua-cung]].
+
+## Các giáo trình dùng vị trí năm ngón thế nào
+| Giáo trình | Cách dùng (theo mô tả của nhà xuất bản / nhà bán) |
+|---|---|
+| **[[giao-trinh-piano-nhap-mon|Bastien]] Piano Basics** | Bắt đầu ở vị trí Đô; trình bày các vị trí Đô, Fa, Sol; "nhiều giọng dần dần" — ba giọng mỗi cấp, cấp 1 – 4 |
+| **[[danh-gia-giao-trinh-piano-va-nhac-ly|Faber Piano Adventures]]** | Primer: các thế năm ngón Đô, nhận ra liền bậc và nhảy bậc, và **"[[not-nhac|tên nốt]] tách khỏi số ngón"**; cấp 1 đọc quãng ở nhiều vị trí |
+| **Alfred Basic** | Vị trí Đô, Sol rồi **vị trí Đô giữa** ở cấp 1A – 1B |
+| **Alfred Premier** | Tránh "khoá" tay vào một vị trí (*non-position*): các bài chỉ nhấn nốt mốc |
+| **Hal Leonard** | Đọc lần lượt theo số ngón → tên nốt → quãng; mốc Fa [[khoa-fa|khoá Fa]] và Sol [[khoa-sol|khoá Sol]] |
+
+## Nghiên cứu nói gì về "học theo vị trí"
+- Lời phê phán phổ biến: học trò quen một vị trí sẽ **đọc số ngón** thay vì đọc nốt. Nhưng theo Emond và Comeau (2013), các danh sách ưu – nhược của từng cách đọc trong sách sư phạm đều "dựa trên trực giác và kinh nghiệm giáo viên"; chưa có nghiên cứu đối chứng xác nhận "lệ thuộc số ngón".
+- **DiCienzo (2019, Đại học Ottawa)**, trẻ 7 – 11 tuổi: nhóm học theo cách **Đô giữa** đọc tốt hơn nhóm học theo quãng hỗn hợp ở **mọi bài kiểm tra**, trừ nhận diện phím và mẫu 3 nốt ở vị trí Sol. Mô hình của Emond và Comeau cũng cho thấy cách đọc theo quãng đòi hỏi nhiều kiến thức về nốt và nhiều lập kế hoạch hơn lúc đầu.
+- **Kết luận thực dụng cho giáo trình Lamar:** dùng vị trí năm ngón làm điểm xuất phát, nhưng **đổi vị trí sớm** (Đô → Sol → Fa) và luôn gọi **tên nốt** song song với số ngón — xem [[doc-not-nhanh]].
+
+## Bài tập
+*(Gợi ý của thư viện.)*
+1. Đặt tay vị trí Đô, chơi 1-2-3-4-5-4-3-2-1 từng tay, rồi hai tay cùng lúc (tay trái bắt đầu ngón 5).
+2. Hát tên nốt khi chơi, không hát số ngón.
+3. Dịch cùng giai điệu năm nốt sang vị trí Sol rồi Fa — một bài [[dich-giong]] đầu tiên.
+4. Đổi trưởng ↔ thứ: chơi "Đô – Rê – Mi – Rê – Đô", rồi thay Mi bằng Mi♭ và nghe khác biệt.
 `,
   },
 ]

@@ -1,3 +1,599 @@
 import type { Curriculum } from './types'
 
-export const CURRICULA: Curriculum[] = []
+/**
+ * The two Lamar courses. Every lesson is an article of the theory library; the order follows the
+ * comparison in 'danh-gia-giao-trinh-piano-va-nhac-ly' (Hood 1982, DiCienzo 2019, Kodály sequence,
+ * exam syllabi). Durations are suggestions, not research findings.
+ */
+export const CURRICULA: Curriculum[] = [
+  {
+    id: 'tre-em',
+    title: 'Piano & Nhạc lý cho Trẻ em',
+    subtitle: 'Năm cấp từ tiếng đàn đầu tiên đến bản sonatina — nghe, hát, chơi, đọc và sáng tạo cùng lúc.',
+    author: 'Lamar',
+    audience: 'Trẻ 6 – 12 tuổi · học cùng phụ huynh',
+    hue: 25,
+    glyph: '𝄞',
+    intro:
+      'Giáo trình đi theo trình tự "âm thanh trước ký hiệu": trẻ hát, vỗ, vận động và chơi theo tai trước, rồi mới đọc điều mình đã nghe. Mỗi chương có đủ năm mảng mà khảo sát 66 giáo trình của Hood (1982) chỉ ra là hay bị thiếu — tiết tấu, luyện tai, ứng tác, sáng tác — bên cạnh đọc nốt và kỹ thuật. Vị trí năm ngón được dùng làm điểm xuất phát (nghiên cứu của DiCienzo, 2019, cho thấy cách này không kém), nhưng đổi vị trí sớm và luôn gọi tên nốt. Phụ huynh nên đọc bài về luyện tập ở nhà trước buổi đầu tiên.',
+    principles: [
+      { title: 'Âm thanh trước ký hiệu', text: 'Hát, vỗ tay, vận động theo phách trước khi đọc nốt — theo tinh thần Kodály, Orff, Dalcroze và "sound before sight" của Gordon.' },
+      { title: 'Năm mảng trong mỗi chương', text: 'Đọc – kỹ thuật – nghe – tiết tấu – sáng tạo cùng tiến, để vá những điểm yếu chung của giáo trình nhập môn mà Hood (1982) chỉ ra.' },
+      { title: 'Vị trí năm ngón, nhưng không bị khoá', text: 'Bắt đầu ở vị trí Đô, đổi sang Sol, Fa sớm; luôn hát tên nốt chứ không hát số ngón.' },
+      { title: 'Lý thuyết trên phím đàn', text: 'Mỗi khái niệm nhạc lý đều được chơi và nghe ngay trên đàn, không chỉ viết trên giấy.' },
+      { title: 'Tiết mục hai nền văn hoá', text: 'Dân ca Việt Nam đi cùng tiết mục cổ điển phương Tây — tránh sự thiên lệch văn hoá mà nhiều nghiên cứu chỉ ra ở sách nhập môn phương Tây.' },
+      { title: 'Phụ huynh là bạn tập', text: 'Trẻ 7 – 9 tuổi chưa tự điều chỉnh được việc tập (McPherson & Renwick, 2001); cha mẹ ngồi cùng giai đoạn đầu, rồi trao dần quyền tự quyết.' },
+    ],
+    routine: [
+      'Một buổi học với giáo viên (30 – 45 phút): ôn bài cũ, một khái niệm mới, chơi, nghe, sáng tạo.',
+      'Tập ở nhà nhiều buổi ngắn trong tuần thay vì một buổi dài — mỗi buổi có một mục tiêu cụ thể.',
+      'Mỗi ngày hát lại một câu nhạc đã học bằng tên nốt hoặc âm tiết đô – rê – mi.',
+      'Cuối tuần: chơi cho gia đình nghe một bài và một "bài tự sáng tác" ngắn.',
+      'Thời lượng tập tối ưu cho trẻ chưa có nghiên cứu xác nhận — giáo viên điều chỉnh theo từng trẻ.',
+    ],
+    review: 'danh-gia-giao-trinh-piano-va-nhac-ly',
+    levels: [
+      {
+        title: 'Khám phá âm thanh và bàn phím',
+        subtitle: 'Nghe cao – thấp, dài – ngắn; cảm nhận phách; tìm đường trên bàn phím; chơi phím đen và ngẫu hứng ngũ cung.',
+        duration: 'khoảng 2 – 3 tháng',
+        repertoire: ['Ngẫu hứng trên phím đen (ngũ cung) cùng giáo viên đệm', 'Các câu hát so – mi, so – la – so – mi (bài đồng dao, dân ca thiếu nhi)', 'Bắc kim thang, chơi theo tai trên phím đen', 'Twinkle Twinkle Little Star — mò giai điệu bằng tai'],
+        checkpoint: ['Vỗ tay đều theo nhạc và nhận ra nhịp đi hai hay nhịp đi ba', 'Tìm mọi phím Đô trên đàn nhờ nhóm hai phím đen', 'Ngồi đúng tư thế, chơi một tay với cổ tay thả lỏng', 'Hát lại một câu ngắn giáo viên vừa hát'],
+        units: [
+          {
+            title: 'Nghe và vận động',
+            goal: 'Giữ được phách bằng cơ thể; phân biệt cao – thấp, nhanh – chậm, to – nhỏ.',
+            lessons: [
+              { slug: 'cam-nhan-phach', focus: 'Đi, vỗ, gõ theo phách; nhận ra phách mạnh.' },
+              { slug: 'am-tiet-nhip', focus: 'Đọc tiết tấu bằng "ta" (nốt đen) và "ti-ti" (hai móc đơn) — thứ tự Kodály.' },
+              { slug: 'luyen-tai', focus: 'Trò chơi nghe cao – thấp, hát lại câu ngắn.' },
+              { slug: 'xuong-am', focus: 'Hai âm đầu tiên: so – mi, rồi thêm la.' },
+            ],
+            practice: ['Vỗ tay theo một bài hát quen, nhấn phách đầu ô nhịp.', 'Chơi "tiếng mưa nhỏ, sấm to" ở vùng cao – thấp của đàn.'],
+          },
+          {
+            title: 'Bàn phím và tư thế',
+            goal: 'Định hướng trên 88 phím; ngồi đúng; biết số ngón của hai tay.',
+            lessons: [
+              { slug: 'ban-phim', focus: 'Nhóm 2 và 3 phím đen; tìm Đô, Fa.' },
+              { slug: 'tu-the', focus: 'Chiều cao ghế, bục kê chân cho trẻ nhỏ.' },
+              { slug: 'ngon-bam', focus: 'Số ngón 1 – 5 hai tay.' },
+              { slug: 'ky-thuat-cham-phim', focus: 'Thả nặng cánh tay, đầu ngón tròn.' },
+            ],
+            practice: ['Tìm tất cả phím Đô từ trầm lên cao, gọi tên to.', 'Chơi từng ngón trên nhóm ba phím đen: 2-3-4, rồi tay trái 4-3-2.'],
+          },
+          {
+            title: 'Phím đen và ngũ cung',
+            goal: 'Chơi giai điệu và ngẫu hứng trên năm phím đen — không có nốt "sai".',
+            lessons: [
+              { slug: 'am-giai-ngu-cung', focus: 'Năm phím đen tạo một âm giai ngũ cung — giống thang âm dân ca Việt.' },
+              { slug: 'ngau-hung-piano', focus: 'Hỏi – đáp: giáo viên chơi một câu, trẻ đáp một câu trên phím đen.' },
+            ],
+            practice: ['Giáo viên đệm hai nốt trầm lặp lại, trẻ ngẫu hứng trên phím đen.', 'Mò giai điệu Bắc kim thang bằng tai.'],
+          },
+          {
+            title: 'Trường độ đầu tiên',
+            goal: 'Đọc và vỗ nốt đen, nốt trắng, nốt tròn và dấu lặng đen trong nhịp 4/4 và 3/4.',
+            lessons: [
+              { slug: 'truong-do', focus: 'Nốt tròn, trắng, đen, móc đơn — chỉ phần đầu.' },
+              { slug: 'dau-lang', focus: 'Dấu lặng đen.' },
+              { slug: 'so-chi-nhip', focus: 'Nhịp 2/4, 3/4, 4/4 — đếm và vỗ.' },
+            ],
+            practice: ['Đọc thẻ tiết tấu bằng âm tiết rồi vỗ.', 'Tự viết một ô nhịp 4/4 và vỗ cho giáo viên.'],
+          },
+        ],
+      },
+      {
+        title: 'Đọc nhạc đầu tiên',
+        subtitle: 'Khuông nhạc, khoá Sol – Fa, nốt mốc, liền bậc và nhảy bậc; vị trí năm ngón Đô; hai tay luân phiên.',
+        duration: 'khoảng 3 – 4 tháng',
+        repertoire: ['Lightly Row, Mary Had a Little Lamb, London Bridge (đầu tập 1 Suzuki)', 'Au clair de la lune', 'Beyer Op. 101: vài bài đầu, cùng phần đệm của giáo viên', 'Cò lả (giai điệu đơn, tay phải)'],
+        checkpoint: ['Đọc tên các nốt trong vị trí Đô ở cả khoá Sol và khoá Fa', 'Nhận ra liền bậc, nhảy bậc, nốt lặp trên khuông', 'Chơi một bài 8 ô nhịp hai tay luân phiên, đều phách', 'Hát lại bằng tên nốt bài vừa chơi'],
+        units: [
+          {
+            title: 'Khuông nhạc và hai khoá',
+            goal: 'Đọc vị trí nốt trên khuông lớn bằng nốt mốc.',
+            lessons: [
+              { slug: 'khuong-nhac', focus: 'Dòng, khe, khuông lớn.' },
+              { slug: 'khoa-nhac', focus: 'Vì sao có khoá.' },
+              { slug: 'khoa-sol' },
+              { slug: 'khoa-fa' },
+              { slug: 'not-nhac', focus: 'Tên nốt C – D – E và Đô – Rê – Mi.' },
+            ],
+            practice: ['Thẻ nốt: Đô giữa, Sol khoá Sol, Fa khoá Fa (nốt mốc).', 'Vẽ nốt mốc lên khuông rồi chơi.'],
+          },
+          {
+            title: 'Vị trí năm ngón',
+            goal: 'Chơi giai điệu năm nốt ở vị trí Đô và Đô giữa, gọi tên nốt khi chơi.',
+            lessons: [
+              { slug: 'vi-tri-nam-ngon-va-am-giai-nam-not', focus: 'Vị trí Đô và Đô giữa; âm giai năm nốt trưởng.' },
+              { slug: 'doc-not-nhanh', focus: 'Nốt mốc + đọc theo hướng: liền bậc, nhảy bậc, lặp.' },
+              { slug: 'quang', focus: 'Quãng 2 và quãng 3 trên khuông và trên phím.' },
+            ],
+            practice: ['1-2-3-4-5-4-3-2-1 từng tay, hát tên nốt.', 'Chơi cùng giai điệu ở vị trí Đô rồi Sol.'],
+          },
+          {
+            title: 'Hai tay và cách chơi',
+            goal: 'Phối hợp hai tay luân phiên; chơi legato, staccato, to, nhỏ.',
+            lessons: [
+              { slug: 'phoi-hop-hai-tay', focus: 'Hai tay luân phiên, chưa chơi cùng lúc.' },
+              { slug: 'cach-dien-tau', focus: 'Legato và staccato.' },
+              { slug: 'cuong-do', focus: 'p, f, rồi mp, mf.' },
+            ],
+            practice: ['Chơi một câu legato rồi staccato, so sánh.', 'Chơi bài "hỏi – đáp": câu hỏi tay trái, câu đáp tay phải.'],
+          },
+          {
+            title: 'Tiết tấu nâng dần',
+            goal: 'Đọc nốt móc đơn, nốt trắng chấm dôi, dấu nối, nhịp lấy đà.',
+            lessons: [
+              { slug: 'cham-doi-dau-noi', focus: 'Nốt trắng chấm dôi, dấu nối.' },
+              { slug: 'nhip-lay-da' },
+              { slug: 'nhip-do', focus: 'Nhanh – chậm và các từ Ý thông dụng.' },
+            ],
+            practice: ['Vỗ tay trái phách, tay phải tiết tấu.', 'Sáng tác 4 ô nhịp tiết tấu, đặt lời cho nó.'],
+          },
+        ],
+      },
+      {
+        title: 'Giọng Đô và những hợp âm đầu tiên',
+        subtitle: 'Âm giai Đô trưởng, dấu hoá, hợp âm ba, đệm tay trái I – V; câu hỏi – câu đáp; thị tấu hằng ngày.',
+        duration: 'khoảng 4 – 6 tháng',
+        repertoire: ['Minuet Sol trưởng BWV Anh. 114 (Petzold) — phần đầu, đơn giản hoá nếu cần', 'Ode to Joy (Beethoven), có đệm I – V', 'Bài dân ca Việt có đệm hai hợp âm (I – V)', 'Một bài tự sáng tác 8 ô nhịp ở Đô trưởng'],
+        checkpoint: ['Chơi âm giai Đô trưởng một quãng 8 từng tay với ngón luồn đúng', 'Dựng hợp âm ba trưởng trên Đô, Fa, Sol', 'Đệm một giai điệu quen bằng I và V', 'Thị tấu một bài 4 ô nhịp ở vị trí năm ngón'],
+        units: [
+          {
+            title: 'Cung, nửa cung và dấu hoá',
+            goal: 'Hiểu nửa cung – cung trên phím; đọc thăng, giáng, bình.',
+            lessons: [
+              { slug: 'cung-nua-cung' },
+              { slug: 'dau-hoa', focus: 'Thăng, giáng, bình; dấu hoá bất thường giữ trong ô nhịp.' },
+            ],
+            practice: ['Tìm nửa cung Mi – Fa, Si – Đô trên phím trắng.', 'Đổi âm giai năm nốt trưởng sang thứ bằng cách hạ bậc 3.'],
+          },
+          {
+            title: 'Âm giai Đô trưởng',
+            goal: 'Chơi và nghe âm giai trưởng; biết tên các bậc.',
+            lessons: [
+              { slug: 'am-giai-truong', focus: 'Công thức cung – cung – nửa – cung – cung – cung – nửa.' },
+              { slug: 'bac-am-giai', focus: 'Chủ âm, át âm, cảm âm.' },
+              { slug: 'luyen-am-giai', focus: 'Một quãng 8, ngón 3 qua ngón cái.' },
+            ],
+            practice: ['Âm giai Đô trưởng từng tay, chậm, legato.', 'Hát đô – rê – mi – fa – sol – la – si – đô rồi chơi.'],
+          },
+          {
+            title: 'Hợp âm và đệm',
+            goal: 'Dựng hợp âm ba; đệm giai điệu bằng I và V.',
+            lessons: [
+              { slug: 'hop-am-ba', focus: 'Hợp âm ba trưởng: nốt gốc, quãng 3, quãng 5.' },
+              { slug: 'chuc-nang-hoa-am', focus: 'Cảm giác "ở nhà" (I) và "muốn về" (V).' },
+              { slug: 'dem-hat-piano', focus: 'Đệm tay trái đơn giản nhất: nốt gốc hoặc hợp âm khối.' },
+            ],
+            practice: ['Tay trái: Đô – Sol – Đô, tay phải giai điệu năm nốt.', 'Tự chọn hợp âm I hay V cho mỗi ô của một bài dân ca.'],
+          },
+          {
+            title: 'Câu nhạc và thị tấu',
+            goal: 'Nghe câu hỏi – câu đáp; đọc một bài mới mà không dừng.',
+            lessons: [
+              { slug: 'cau-nhac', focus: 'Câu hỏi kết lửng, câu đáp kết về chủ âm.' },
+              { slug: 'thi-tau', focus: 'Thị tấu mỗi ngày: nhìn trước, không dừng.' },
+              { slug: 'dau-nhac-lai' },
+            ],
+            practice: ['Giáo viên chơi câu hỏi, trẻ ngẫu hứng câu đáp kết ở Đô.', 'Một bài thị tấu ngắn mỗi ngày.'],
+          },
+        ],
+      },
+      {
+        title: 'Nhiều giọng và câu nhạc biểu cảm',
+        subtitle: 'Hoá biểu Sol, Fa, Rê; giọng thứ; đảo hợp âm; hợp âm rải; pedal; hình thức hai đoạn và ba đoạn.',
+        duration: 'khoảng 6 – 9 tháng',
+        repertoire: ['Minuet Sol trưởng BWV Anh. 114 trọn bài', 'Các bài trong Clavierbüchlein / Notebook for Anna Magdalena Bach', 'Schumann — Album cho tuổi trẻ Op. 68: Melodie, Wilder Reiter', 'Pachelbel — vòng hợp âm Canon (bản đơn giản)'],
+        checkpoint: ['Chơi âm giai và hợp âm I – IV – V ở Đô, Sol, Fa', 'Phân biệt bằng tai giọng trưởng và giọng thứ', 'Chơi một bài có pedal và hợp âm rải tay trái', 'Chỉ ra phần A, phần B trong một bài hai đoạn'],
+        units: [
+          {
+            title: 'Giọng mới',
+            goal: 'Đọc hoá biểu một dấu; chơi ở Sol trưởng, Fa trưởng.',
+            lessons: [
+              { slug: 'hoa-bieu', focus: 'Một thăng (Sol), một giáng (Fa).' },
+              { slug: 'vong-quang-nam', focus: 'Thứ tự các giọng — chỉ phần gần Đô.' },
+              { slug: 'dich-giong', focus: 'Chơi cùng bài ở giọng khác.' },
+            ],
+            practice: ['Âm giai Sol trưởng và Fa trưởng từng tay.', 'Dịch bài năm nốt quen sang Sol và Fa.'],
+          },
+          {
+            title: 'Giọng thứ',
+            goal: 'Nghe và chơi âm giai thứ; hiểu giọng song song.',
+            lessons: [
+              { slug: 'am-giai-thu', focus: 'Thứ tự nhiên và thứ hoà âm.' },
+              { slug: 'giong-song-song', focus: 'La thứ – Đô trưởng chung hoá biểu.' },
+            ],
+            practice: ['Chơi một câu ở Đô trưởng rồi La thứ, nói cảm giác khác nhau.', 'Ngẫu hứng trên La thứ, tay trái La – Mi.'],
+          },
+          {
+            title: 'Hợp âm chuyển động',
+            goal: 'Đảo hợp âm để đệm mượt; rải hợp âm; dùng pedal.',
+            lessons: [
+              { slug: 'the-dao-hop-am', focus: 'I – IV6/4 – I – V6/5 – I trên đàn.' },
+              { slug: 'luyen-hop-am-rai', focus: 'Hợp âm rải tay trái kiểu Alberti, đơn giản.' },
+              { slug: 'ban-dap', focus: 'Pedal giữ tiếng: nhấn sau, nhả trước.' },
+              { slug: 'vong-hop-am', focus: 'I – IV – V – I.' },
+            ],
+            practice: ['Chuỗi I – IV – I – V – I bằng thế đảo gần nhất.', 'Đệm một bài dân ca bằng hợp âm rải và pedal.'],
+          },
+          {
+            title: 'Hình thức nhỏ và diễn đạt',
+            goal: 'Nhận ra hai đoạn, ba đoạn; uốn câu nhạc.',
+            lessons: [
+              { slug: 'hinh-thuc-hai-doan', focus: 'Hai nửa có nhắc lại; đi sang V rồi về.' },
+              { slug: 'hinh-thuc-ba-doan', focus: 'A – B – A.' },
+              { slug: 'dien-dat-cau-nhac', focus: 'Thở theo câu, đỉnh câu.' },
+              { slug: 'phan-tich-minuet-sol-truong', focus: 'Phân tích bài đang chơi.' },
+            ],
+            practice: ['Đánh dấu A, B trên bản nhạc bài đang học.', 'Sáng tác một bài hai đoạn 16 ô nhịp ở Sol trưởng.'],
+          },
+        ],
+      },
+      {
+        title: 'Người chơi nhỏ',
+        subtitle: 'Hợp âm bảy át, kết, liên ba, rondo và sonatina; học thuộc, biểu diễn và chuẩn bị thi cấp độ.',
+        duration: 'khoảng 9 – 12 tháng',
+        repertoire: ['Clementi — Sonatina Op. 36 số 1, chương 1', 'Schumann — Wilder Reiter Op. 68 số 8', 'Bach — một Minuet / Musette trong Notebook for Anna Magdalena Bach', 'Một bài dân ca Việt tự phối hoà âm cho hai tay'],
+        checkpoint: ['Chơi I – IV – V7 – I ở ba giọng', 'Nhận ra kết hoàn toàn và nửa kết khi nghe', 'Chơi thuộc lòng một bài trước khán giả nhỏ', 'Giải thích hình thức bài sonatina đang học'],
+        units: [
+          {
+            title: 'Hợp âm bảy và kết',
+            goal: 'Dùng V7; nghe và gọi tên các loại kết.',
+            lessons: [
+              { slug: 'hop-am-bay', focus: 'Chỉ hợp âm bảy át V7.' },
+              { slug: 'cau-ket', focus: 'Kết hoàn toàn, nửa kết.' },
+              { slug: 'ky-nang-dan-phim-chuc-nang', focus: 'Chuỗi kết I – IV – I – V7 – I.' },
+            ],
+            practice: ['Chuỗi kết ở Đô, Sol, Fa.', 'Nghe giáo viên chơi, giơ tay khi nghe nửa kết.'],
+          },
+          {
+            title: 'Tiết tấu và kỹ thuật nâng cao',
+            goal: 'Chơi liên ba, nốt kép đơn giản, âm giai hai tay.',
+            lessons: [
+              { slug: 'lien-ba' },
+              { slug: 'not-kep', focus: 'Quãng 3 và quãng 6 đơn giản.' },
+              { slug: 'bai-tap-ngon', focus: 'Chọn bài tập ngón vừa sức, không tập máy móc.' },
+            ],
+            practice: ['Âm giai hai tay cùng chiều một quãng 8.', 'Đếm "1-trip-let" khi chơi liên ba.'],
+          },
+          {
+            title: 'Hình thức lớn hơn',
+            goal: 'Hiểu rondo và sonatina qua bài đang chơi.',
+            lessons: [
+              { slug: 'rondo', focus: 'A – B – A – C – A.' },
+              { slug: 'hinh-thuc-sonata', focus: 'Trình bày – phát triển – tái hiện, ở mức sonatina.' },
+              { slug: 'phan-tich-sonatina-clementi-op36-1' },
+              { slug: 'phan-tich-wilder-reiter' },
+            ],
+            practice: ['Tô màu từng phần hình thức trên bản nhạc.', 'Sáng tác một rondo nhỏ: A là câu của em, B và C do em ngẫu hứng.'],
+          },
+          {
+            title: 'Luyện tập, biểu diễn và thi',
+            goal: 'Tập có phương pháp; chơi thuộc; tự tin trước khán giả.',
+            lessons: [
+              { slug: 'phuong-phap-luyen-tap', focus: 'Chia nhỏ, tập chậm, tập xen kẽ.' },
+              { slug: 'hoc-thuoc-bai' },
+              { slug: 'hoi-hop-bieu-dien' },
+              { slug: 'thi-cap-do', focus: 'ABRSM, RCM, Trinity — cấp nào phù hợp.' },
+              { slug: 'tre-hoc-dan-luyen-tap-va-phu-huynh', focus: 'Giữ hứng thú qua tuổi 12 – 15.' },
+            ],
+            practice: ['Một buổi "hoà nhạc gia đình" mỗi tháng.', 'Ghi âm bài chơi rồi tự nghe và nhận xét.'],
+          },
+          {
+            title: 'Nghe để hiểu',
+            goal: 'Nghe chủ động; biết các thời kỳ âm nhạc.',
+            lessons: [
+              { slug: 'nghe-nhac-chu-dong' },
+              { slug: 'cac-thoi-ky', focus: 'Baroque, Cổ điển, Lãng mạn qua bài đang chơi.' },
+              { slug: 'am-nhac-truyen-thong-viet-nam', focus: 'Ngũ cung trong dân ca Việt.' },
+            ],
+            practice: ['Mỗi tuần nghe một bản nhạc cùng thời kỳ với bài đang chơi.', 'Chơi một dân ca Việt và một bài cổ điển, so sánh thang âm.'],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'nguoi-lon',
+    title: 'Piano & Nhạc lý cho Người lớn',
+    subtitle: 'Năm cấp cho người bắt đầu muộn: đọc nhạc, đệm hát, hiểu hoà âm, chơi bản cổ điển và tự do với cây đàn.',
+    author: 'Lamar',
+    audience: 'Người lớn mới học hoặc quay lại',
+    hue: 255,
+    glyph: '𝄢',
+    intro:
+      'Người lớn học vì những lý do rất khác nhau — thực hiện ước mơ, thư giãn, đệm hát cho gia đình — và bỏ học chủ yếu vì thiếu thời gian hoặc buổi học nhàm. Giáo trình này vì vậy đi nhanh hơn ở phần nền tảng, đưa hợp âm và đệm hát vào sớm, và từ cấp 2 cho phép hai nhánh (đệm hát / đọc bản nhạc) trên cùng một phần nhạc lý. Mỗi chương học lý thuyết ngay trên phím đàn, theo mô hình các giáo trình piano nhóm đại học: phối hoà âm, dịch giọng, ứng tác, thị tấu đều có mặt từ sớm.',
+    principles: [
+      { title: 'Mục tiêu do người học đặt', text: 'Theo nguyên tắc dạy người lớn (andragogy) của Knowles: cùng lập kế hoạch, giáo viên là người hỗ trợ.' },
+      { title: 'Hợp âm sớm, đọc nhạc vững', text: 'Đệm hát từ cấp 2 để có thành quả nhanh, nhưng vẫn đọc khuông lớn — vì chưa có nghiên cứu nào cho thấy cách nào hơn.' },
+      { title: 'Kỹ năng đàn phím chức năng', text: 'Chuỗi kết, phối hoà âm tức thì, dịch giọng, lead sheet — lõi chung của các kỳ kiểm tra piano đại học.' },
+      { title: 'Lý thuyết để nghe, không chỉ để viết', text: 'Mỗi khái niệm hoà âm đều được chơi và nghe — khắc phục sự tách rời lý thuyết, nghe và đàn phím mà nhiều nhà sư phạm phê phán.' },
+      { title: 'Nhạc phổ thông và nhạc Việt có chỗ đứng', text: 'Hình thức verse – chorus, điệu đệm Việt, ngũ cung đi cùng bản cổ điển.' },
+      { title: 'Nhiều buổi ngắn', text: 'Nghiên cứu vận động cho thấy người lớn tuổi hưởng lợi từ luyện phân bổ hơn luyện dồn.' },
+    ],
+    routine: [
+      'Một buổi học (45 – 60 phút) hoặc một chương tự học mỗi 1 – 2 tuần.',
+      'Tập 15 – 30 phút, 4 – 6 lần một tuần, mỗi buổi chia: khởi động kỹ thuật – bài đang học – đệm hát hoặc thị tấu.',
+      'Mỗi chương có một bài "chơi được ngay" để giữ cảm giác thành tựu.',
+      'Mỗi tháng ghi âm một bài và nghe lại.',
+      'Học nhóm hoặc chơi bốn tay nếu có thể — nhiều người lớn thích hoà tấu.',
+    ],
+    review: 'danh-gia-giao-trinh-piano-va-nhac-ly',
+    levels: [
+      {
+        title: 'Nền tảng nhanh',
+        subtitle: 'Bàn phím, tư thế, khuông lớn, nốt mốc, trường độ và nhịp; vị trí năm ngón; cách tập của người lớn.',
+        duration: 'khoảng 1 – 2 tháng',
+        repertoire: ['Ode to Joy (Beethoven), giai điệu tay phải', 'Bắc kim thang trên phím đen', 'Bài năm nốt hai tay luân phiên', 'Ngẫu hứng ngũ cung trên một nốt trầm ngân'],
+        checkpoint: ['Đọc mọi nốt trong vị trí Đô ở hai khoá', 'Đếm và chơi đúng nốt tròn, trắng, đen, móc đơn', 'Chơi một bài 8 ô nhịp hai tay luân phiên', 'Lập được kế hoạch tập một tuần cho mình'],
+        units: [
+          {
+            title: 'Trước khi bắt đầu',
+            goal: 'Biết mình học để làm gì và tập thế nào.',
+            lessons: [
+              { slug: 'nguoi-lon-hoc-piano-dong-luc-va-cach-hoc', focus: 'Chọn mục tiêu; ba kiểu người học.' },
+              { slug: 'phuong-phap-luyen-tap', focus: 'Luyện phân bổ, có chủ đích.' },
+              { slug: 'suc-khoe-nguoi-choi-dan', focus: 'Tránh căng cơ khi bắt đầu muộn.' },
+            ],
+            practice: ['Viết ra mục tiêu 3 tháng và 1 năm.', 'Lên lịch 4 – 6 buổi tập ngắn trong tuần.'],
+          },
+          {
+            title: 'Bàn phím và tay',
+            goal: 'Định hướng bàn phím; tư thế; vị trí năm ngón.',
+            lessons: [
+              { slug: 'ban-phim' },
+              { slug: 'tu-the' },
+              { slug: 'ngon-bam' },
+              { slug: 'vi-tri-nam-ngon-va-am-giai-nam-not', focus: 'Vị trí Đô, Sol, Fa; âm giai năm nốt.' },
+              { slug: 'ky-thuat-cham-phim' },
+            ],
+            practice: ['1-2-3-4-5-4-3-2-1 ở ba vị trí, hai tay.', 'Ngẫu hứng trên phím đen với một nốt trầm ngân.'],
+          },
+          {
+            title: 'Đọc nhạc',
+            goal: 'Đọc khuông lớn bằng nốt mốc và quãng.',
+            lessons: [
+              { slug: 'nhac-ly-co-ban', focus: 'Bức tranh chung.' },
+              { slug: 'khuong-nhac' },
+              { slug: 'khoa-sol' },
+              { slug: 'khoa-fa' },
+              { slug: 'doc-not-nhanh' },
+              { slug: 'quang', focus: 'Quãng 2 – 5 trên khuông.' },
+            ],
+            practice: ['5 phút thẻ nốt mỗi ngày.', 'Đọc nốt mốc rồi đọc quãng tiếp theo.'],
+          },
+          {
+            title: 'Tiết tấu',
+            goal: 'Đếm, vỗ và chơi các trường độ cơ bản trong 2/4, 3/4, 4/4.',
+            lessons: [
+              { slug: 'truong-do' },
+              { slug: 'dau-lang' },
+              { slug: 'so-chi-nhip' },
+              { slug: 'cham-doi-dau-noi' },
+              { slug: 'cam-nhan-phach' },
+            ],
+            practice: ['Đếm to khi chơi.', 'Chơi cùng máy đếm nhịp ở tốc độ chậm.'],
+          },
+        ],
+      },
+      {
+        title: 'Hợp âm và đệm hát',
+        subtitle: 'Cung – nửa cung, âm giai trưởng, hợp âm ba và ký hiệu hợp âm, chức năng I – IV – V, các điệu đệm phổ biến.',
+        duration: 'khoảng 2 – 3 tháng',
+        repertoire: ['Đệm hát một bài Việt quen thuộc bằng I – IV – V', 'Let It Be hoặc một ballad pop với vòng I – V – vi – IV', 'Pachelbel — vòng hợp âm Canon (bản đơn giản)', 'Một bài tự chọn từ lead sheet'],
+        checkpoint: ['Dựng hợp âm trưởng, thứ trên bất kỳ nốt nào', 'Đọc ký hiệu C, Am, F/A, G7', 'Đệm một bài hát với hai điệu đệm khác nhau', 'Chơi I – IV – V – I ở Đô, Sol, Fa'],
+        units: [
+          {
+            title: 'Nguyên liệu của hợp âm',
+            goal: 'Hiểu cung, nửa cung, dấu hoá và âm giai trưởng.',
+            lessons: [
+              { slug: 'cung-nua-cung' },
+              { slug: 'dau-hoa' },
+              { slug: 'am-giai-truong' },
+              { slug: 'bac-am-giai' },
+            ],
+            practice: ['Âm giai Đô, Sol, Fa trưởng một quãng 8.', 'Hát và chơi các bậc của âm giai.'],
+          },
+          {
+            title: 'Hợp âm',
+            goal: 'Dựng, đảo và gọi tên hợp âm ba.',
+            lessons: [
+              { slug: 'hop-am-ba' },
+              { slug: 'ky-hieu-hop-am' },
+              { slug: 'the-dao-hop-am', focus: 'Dùng thế đảo để chuyển hợp âm mượt.' },
+              { slug: 'chuc-nang-hoa-am', focus: 'Chủ – hạ át – át.' },
+            ],
+            practice: ['Mười hai hợp âm trưởng theo vòng quãng 5.', 'C – F/C – C – G/B – C bằng thế đảo gần nhất.'],
+          },
+          {
+            title: 'Đệm hát',
+            goal: 'Đệm một bài hát từ ký hiệu hợp âm với nhiều điệu.',
+            lessons: [
+              { slug: 'dem-hat-piano' },
+              { slug: 'dieu-dem-pho-bien' },
+              { slug: 'vong-hop-am' },
+              { slug: 'hoa-am-pop', focus: 'I – V – vi – IV và các khuôn quen.' },
+              { slug: 'he-so-nashville-va-lead-sheet', focus: 'Đọc lead sheet, ghi hợp âm bằng số.' },
+            ],
+            practice: ['Chọn một bài hát, ghi hợp âm bằng số rồi đệm ở hai giọng.', 'Đệm cùng một bài theo điệu ballad rồi valse.'],
+          },
+          {
+            title: 'Nhánh đệm hát Việt (tuỳ chọn)',
+            goal: 'Đệm các điệu nhạc Việt thông dụng.',
+            lessons: [
+              { slug: 'dem-dieu-viet-nam', focus: 'Bolero, rumba, slow, valse, boston.' },
+              { slug: 'dem-pop-ballad' },
+              { slug: 'hinh-thuc-ca-khuc-pho-thong', focus: 'Verse – chorus: biết đang ở đâu trong bài.' },
+            ],
+            practice: ['Đệm một bài bolero và một bài ballad.', 'Ghi sơ đồ verse – chorus của bài đang đệm.'],
+          },
+        ],
+      },
+      {
+        title: 'Đọc và chơi bản nhạc',
+        subtitle: 'Hoá biểu, vòng quãng 5, giọng thứ, âm giai và hợp âm rải, pedal, cường độ, câu nhạc, thị tấu — và những bản piano đầu tiên.',
+        duration: 'khoảng 4 – 6 tháng',
+        repertoire: ['Minuet Sol trưởng BWV Anh. 114 (Petzold)', 'Satie — Gymnopédie số 1', 'Bach — Prelude Đô trưởng BWV 846 (Bình quân luật tập 1)', 'Schumann — Träumerei (khi đã vững)'],
+        checkpoint: ['Đọc hoá biểu đến hai dấu', 'Chơi âm giai và hợp âm rải hai tay ở năm giọng', 'Dùng pedal đổi hợp âm sạch tiếng', 'Thị tấu một bài cấp độ 1 – 2'],
+        units: [
+          {
+            title: 'Giọng và hoá biểu',
+            goal: 'Đọc hoá biểu, hiểu vòng quãng 5 và giọng thứ.',
+            lessons: [
+              { slug: 'hoa-bieu' },
+              { slug: 'vong-quang-nam' },
+              { slug: 'am-giai-thu' },
+              { slug: 'giong-song-song' },
+              { slug: 'dieu-tinh' },
+            ],
+            practice: ['Âm giai thứ hoà âm La, Mi, Rê.', 'Chơi một câu ở trưởng rồi ở thứ song song.'],
+          },
+          {
+            title: 'Kỹ thuật',
+            goal: 'Âm giai, hợp âm rải, pedal và cách chạm phím.',
+            lessons: [
+              { slug: 'luyen-am-giai' },
+              { slug: 'luyen-hop-am-rai' },
+              { slug: 'ban-dap' },
+              { slug: 'phoi-hop-hai-tay' },
+            ],
+            practice: ['Âm giai hai tay hai quãng 8.', 'Pedal nối: nhả – nhấn ngay sau phách.'],
+          },
+          {
+            title: 'Biểu cảm và thị tấu',
+            goal: 'Đọc và làm theo ký hiệu biểu cảm; thị tấu mỗi ngày.',
+            lessons: [
+              { slug: 'cuong-do' },
+              { slug: 'cach-dien-tau' },
+              { slug: 'thuat-ngu' },
+              { slug: 'dien-dat-cau-nhac' },
+              { slug: 'thi-tau' },
+            ],
+            practice: ['Thị tấu 5 phút mỗi ngày.', 'Chơi một câu ba lần với ba sắc thái khác nhau.'],
+          },
+          {
+            title: 'Hiểu bản đang chơi',
+            goal: 'Đọc phân tích của bản đang học.',
+            lessons: [
+              { slug: 'phan-tich-minuet-sol-truong' },
+              { slug: 'phan-tich-gymnopedie-so1' },
+              { slug: 'phan-tich-prelude-do-truong' },
+              { slug: 'lo-trinh-tac-pham', focus: 'Chọn bài tiếp theo vừa sức.' },
+            ],
+            practice: ['Ghi tên hợp âm lên bản Prelude Đô trưởng.', 'Chọn bài tiếp theo từ lộ trình tác phẩm.'],
+          },
+        ],
+      },
+      {
+        title: 'Hiểu âm nhạc mình chơi',
+        subtitle: 'Hợp âm bảy, kết, dẫn giọng, nốt ngoài hợp âm, át phụ, chuyển giọng, hình thức — và phân tích các bản quen thuộc.',
+        duration: 'khoảng 6 – 9 tháng',
+        repertoire: ['Beethoven — Für Elise', 'Chopin — Nocturne Op. 9 số 2 hoặc Prelude La trưởng Op. 28 số 7', 'Pachelbel — Canon (bản piano)', 'Một bài Việt tự phối hoà âm cho piano độc tấu'],
+        checkpoint: ['Chơi chuỗi kết I – IV – I – V7 – I ở mọi giọng đến ba dấu', 'Phối hoà âm một giai điệu lạ bằng I, IV, V7', 'Chỉ ra kết, chuyển giọng, hình thức của bản đang chơi', 'Dịch một bài đệm sang giọng khác'],
+        units: [
+          {
+            title: 'Hoà âm sâu hơn',
+            goal: 'Dùng và nghe hợp âm bảy; các loại kết.',
+            lessons: [
+              { slug: 'hop-am-bay' },
+              { slug: 'cau-ket' },
+              { slug: 'dan-giong', focus: 'Nối hợp âm mượt — ít di chuyển nhất.' },
+              { slug: 'not-ngoai-hop-am' },
+            ],
+            practice: ['Chuỗi kết có V7 ở năm giọng.', 'Nghe một bài pop, ghi lại các kết.'],
+          },
+          {
+            title: 'Màu hoà âm',
+            goal: 'Nhận ra át phụ, hợp âm mượn, chuyển giọng.',
+            lessons: [
+              { slug: 'hop-am-at-phu' },
+              { slug: 'hop-am-muon' },
+              { slug: 'chuyen-giong' },
+              { slug: 'phan-tich-hoa-am', focus: 'Ghi số La Mã cho bản đang chơi.' },
+            ],
+            practice: ['Thêm V/V vào một bài đệm.', 'Chơi bài quen với một hợp âm mượn (iv thay IV).'],
+          },
+          {
+            title: 'Kỹ năng đàn phím chức năng',
+            goal: 'Phối hoà âm tức thì, dịch giọng, lead sheet.',
+            lessons: [
+              { slug: 'ky-nang-dan-phim-chuc-nang' },
+              { slug: 'phoi-hoa-am-giai-dieu' },
+              { slug: 'dich-giong' },
+            ],
+            practice: ['Mỗi tuần phối hoà âm một giai điệu dân ca.', 'Dịch bài đệm quen lên và xuống một cung.'],
+          },
+          {
+            title: 'Hình thức',
+            goal: 'Nghe và đọc cấu trúc bài.',
+            lessons: [
+              { slug: 'cau-nhac' },
+              { slug: 'hinh-thuc-hai-doan' },
+              { slug: 'hinh-thuc-ba-doan' },
+              { slug: 'rondo' },
+              { slug: 'phan-tich-fur-elise' },
+              { slug: 'phan-tich-nocturne-op9-so2' },
+            ],
+            practice: ['Vẽ sơ đồ hình thức Für Elise trước khi đọc bài phân tích.', 'Nghe một bản rondo, đếm số lần điệp khúc trở lại.'],
+          },
+        ],
+      },
+      {
+        title: 'Tự do với cây đàn',
+        subtitle: 'Ngẫu hứng, blues và ii – V – I, hoà âm cho giai điệu ngũ cung Việt, hình thức sonata, học thuộc và biểu diễn.',
+        duration: 'liên tục, theo mục tiêu riêng',
+        repertoire: ['Beethoven — Sonata "Ánh trăng" Op. 27 số 2, chương 1', 'Debussy — Clair de lune (khi đã sẵn sàng)', 'Một bài blues 12 ô tự ngẫu hứng', 'Một ca khúc Việt tự soạn phần piano độc tấu'],
+        checkpoint: ['Ngẫu hứng 12 ô blues trên vòng hợp âm của mình', 'Phối hoà âm một giai điệu ngũ cung không dùng kết át – chủ', 'Chơi thuộc lòng một bản trước người khác', 'Tự chọn và lập kế hoạch học bài tiếp theo'],
+        units: [
+          {
+            title: 'Ngẫu hứng',
+            goal: 'Ngẫu hứng có cấu trúc.',
+            lessons: [
+              { slug: 'ngau-hung-piano' },
+              { slug: 'phuong-phap-luyen-ngau-hung' },
+              { slug: 'blues-12-nhip' },
+              { slug: 'am-giai-blues' },
+              { slug: 'ii-v-i' },
+            ],
+            practice: ['Tay trái vòng blues, tay phải âm giai blues.', 'ii – V – I ở Đô, Fa, Si♭.'],
+          },
+          {
+            title: 'Âm nhạc Việt trên piano',
+            goal: 'Phối hoà âm cho giai điệu ngũ cung và dân ca.',
+            lessons: [
+              { slug: 'am-giai-ngu-cung' },
+              { slug: 'hoa-am-cho-giai-dieu-ngu-cung' },
+              { slug: 'ly-thuyet-am-nhac-co-truyen-viet-nam', focus: 'Hò – xự – xang và vì sao piano không chơi được mọi "hơi".' },
+            ],
+            practice: ['Phối hoà âm Cò lả bằng hợp âm chồng quãng 4 – 5.', 'So sánh đệm I – IV – V với đệm ngũ cung cho cùng một dân ca.'],
+          },
+          {
+            title: 'Bản lớn hơn',
+            goal: 'Hiểu hình thức sonata; chơi một chương sonata.',
+            lessons: [
+              { slug: 'hinh-thuc-sonata' },
+              { slug: 'phan-tich-anh-trang-chuong-1' },
+              { slug: 'phan-tich-clair-de-lune' },
+              { slug: 'phong-cach-dien-tau', focus: 'Chơi mỗi thời kỳ một cách.' },
+            ],
+            practice: ['Nghe ba bản thu Sonata Ánh trăng, ghi khác biệt.', 'Học thuộc chương 1 theo từng đoạn.'],
+          },
+          {
+            title: 'Biểu diễn và học suốt đời',
+            goal: 'Chơi trước người khác; tự học tiếp.',
+            lessons: [
+              { slug: 'hoc-thuoc-bai' },
+              { slug: 'hoi-hop-bieu-dien' },
+              { slug: 'so-sanh-ban-thu' },
+              { slug: 'danh-gia-giao-trinh-piano-va-nhac-ly', focus: 'Chọn tài liệu tiếp theo một cách có phê phán.' },
+            ],
+            practice: ['Tổ chức một buổi chơi nhạc tại gia.', 'Lập kế hoạch học 6 tháng tiếp theo.'],
+          },
+        ],
+      },
+    ],
+  },
+]

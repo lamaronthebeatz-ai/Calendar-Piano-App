@@ -394,6 +394,8 @@ Ngón bấm in sẵn không phải bất di bất dịch: nếu không hợp tay
 Thế kỷ 19 ở Anh dùng "**ngón bấm kiểu Anh**": ngón cái ghi bằng **dấu +** (hoặc 0), các ngón còn lại đánh số **1 đến 4**. Cách đánh số **1 – 5** gọi là "kiểu lục địa". Từ đầu [[thoi-ky-the-ky-20|thế kỷ 20]], Anh cũng chuyển sang 1 – 5, nay dùng ở mọi nơi. Khi dạy bằng **bản in cũ** (ví dụ một số bản *Études* của Cramer), cần lưu ý điều này kẻo học sinh đọc sai ngón.
 
 Các nhóm phím đen 2–3 trên [[ban-phim]] quyết định nhiều lựa chọn ngón bấm cho âm giai có [[dau-hoa]]. Kỹ thuật luồn ngón chi tiết: [[luyen-am-giai]], [[luyen-hop-am-rai]]. Bài tập ngón (Hanon, [[carl-czerny|Czerny]]): [[bai-tap-ngon]]. Tư thế tay đúng: [[tu-the]].
+
+**Vị trí đầu tiên của bàn tay:** [[vi-tri-nam-ngon-va-am-giai-nam-not]].
 `,
   },
   {

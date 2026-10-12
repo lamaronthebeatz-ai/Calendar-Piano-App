@@ -44,6 +44,8 @@ Nhạc lý chỉ thành kỹ năng khi gắn với **âm thanh**: đọc thì h�
 **Ký âm bình ca:** [[ky-am-binh-ca-gregorian]] (khuông 4 dòng, khoá Đô và khoá Fa di động, neume) và [[gregorio-va-gabc]] (soạn nốt vuông trên máy tính).
 
 **Cách ghi khác và tên cao độ:** [[gian-pho-ky-am-so]] (ký âm bằng số), [[ky-hieu-cao-do-c4-helmholtz-midi]] (C4, c′, MIDI 60), và mã hoá cho máy tính ở [[am-nhac-hoc-ky-thuat-so]].
+
+**Nhạc lý trong giáo trình piano:** vị trí tay đầu tiên — [[vi-tri-nam-ngon-va-am-giai-nam-not]]; các chương trình nhạc lý ABRSM, RCM, Trinity được so sánh ở [[danh-gia-giao-trinh-piano-va-nhac-ly]].
 `,
   },
   {

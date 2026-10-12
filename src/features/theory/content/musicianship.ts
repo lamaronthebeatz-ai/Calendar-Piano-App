@@ -48,6 +48,10 @@ Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[doc-not
 **Sư phạm lịch sử:** các tập nhạc Bach viết để dạy — [[tai-lieu-su-pham-cua-bach]] — và lời kể về cách ông dạy học trò — [[bach-day-hoc-tro]].
 
 **Đọc và ghi nhạc theo cách khác:** [[gian-pho-ky-am-so]] và [[he-so-nashville-va-lead-sheet]].
+
+**Giáo trình và người học:** [[danh-gia-giao-trinh-piano-va-nhac-ly]], [[tre-hoc-dan-luyen-tap-va-phu-huynh]], [[nguoi-lon-hoc-piano-dong-luc-va-cach-hoc]].
+
+**Kỹ năng trên đàn trong giáo trình:** [[vi-tri-nam-ngon-va-am-giai-nam-not]] và [[ky-nang-dan-phim-chuc-nang]].
 `,
   },
   {
@@ -360,7 +364,7 @@ Hầu hết người mới học piano bắt đầu bằng một **sách phươn
 |---|---|---|---|
 | **Vị trí Đô giữa** | Hai ngón cái đặt trên [[ban-phim|Đô giữa]], các ngón khác trên các phím liền kề; nốt được gắn với ngón tay và vị trí cố định | Mốc định hướng rõ ràng trên khuông và trên đàn | Dễ phụ thuộc "ngón nào bấm nốt nào", khó khi rời vị trí |
 | **Đọc theo quãng / khuôn hình** (intervallic) | Đọc **khoảng cách** và **hướng**: bước ([[quang|quãng]] 2), nhảy (quãng 3), lặp lại; kết hợp vài **nốt mốc** | Gần với cách người đọc thạo nhìn bản nhạc (xem [[doc-not-nhanh]], [[thi-tau]]) | Cần thời gian để nhận ra tên từng nốt |
-| **Đa giọng** (multi-key) | Học sớm các vị trí năm ngón ở nhiều giọng | Quen với nhiều giọng, [[hop-am-ba|hợp âm]], [[dich-giong|dịch giọng]] sớm | Khối lượng khái niệm lớn với người mới |
+| **Đa giọng** (multi-key) | Học sớm các [[vi-tri-nam-ngon-va-am-giai-nam-not|vị trí năm ngón]] ở nhiều giọng | Quen với nhiều giọng, [[hop-am-ba|hợp âm]], [[dich-giong|dịch giọng]] sớm | Khối lượng khái niệm lớn với người mới |
 **Nốt mốc** (landmark): chỉ thuộc lòng vài nốt quan trọng (như Đô giữa, Sol [[khoa-sol|khoá Sol]], Fa [[khoa-fa|khoá Fa]]); các nốt khác được tìm bằng **bước hoặc nhảy** từ nốt mốc. Đây là cầu nối giữa cách thứ nhất và thứ hai.
 
 ## Nghiên cứu: DiCienzo (Đại học Ottawa, 2019)
@@ -556,6 +560,8 @@ Phần này vận dụng các bài khác trong thư viện:
 - Phụ huynh tham gia buổi tập ở nhà (tinh thần Suzuki).
 
 Các con số về thời gian tập trung theo tuổi hay "lợi ích nhận thức" được nhiều trang quảng cáo nêu nhưng **không có nguồn kiểm chứng**, nên không đưa vào đây.
+
+**Giáo trình và phụ huynh:** trình tự đầy đủ cho trẻ ở trang **Giáo trình** (bộ "Piano & Nhạc lý cho Trẻ em"); vai trò của cha mẹ, luyện tập ở nhà và lý do trẻ bỏ học theo nghiên cứu — [[tre-hoc-dan-luyen-tap-va-phu-huynh]]; vị trí tay đầu tiên — [[vi-tri-nam-ngon-va-am-giai-nam-not]].
 `,
   },
   {
@@ -588,6 +594,8 @@ Các con số về thời gian tập trung theo tuổi hay "lợi ích nhận th
 - Xử lý sớm nỗi lo bị đánh giá (xem [[hoi-hop-bieu-dien]]).
 
 Lưu ý: các nghiên cứu về người lớn học piano còn ít và quy mô nhỏ. Một số con số lan truyền trên mạng (như tỉ lệ người lớn bỏ cuộc sau năm đầu) không tìm được nguồn gốc nên không đưa vào.
+
+**Đi sâu:** động lực, lợi ích, lý do bỏ học và nguyên tắc dạy người lớn theo nghiên cứu — [[nguoi-lon-hoc-piano-dong-luc-va-cach-hoc]]; kỹ năng đệm, phối hoà âm, dịch giọng — [[ky-nang-dan-phim-chuc-nang]]. Trình tự đầy đủ ở trang **Giáo trình** (bộ "Piano & Nhạc lý cho Người lớn").
 `,
   },
   {
@@ -640,6 +648,8 @@ Phần **giao bài** là phần hay bị xem nhẹ nhất: ghi rõ **tập đo�
 - **Dạy học trò tự học**: Neuhaus coi mục tiêu của thầy là "sớm trở nên không cần thiết"; nghiên cứu về phản hồi cũng cho thấy buổi học thường quá ít hướng dẫn **cách tự tập**.
 - **Phân biệt truyền thống và bằng chứng**: nhiều lời khuyên quý đến từ kinh nghiệm các bậc thầy; một số đã được nghiên cứu ủng hộ, một số chưa được kiểm chứng.
 Bối cảnh rộng hơn: [[lo-trinh-luyen-tai-su-pham]].
+
+**Giáo trình Lamar:** [[danh-gia-giao-trinh-piano-va-nhac-ly]] (cơ sở biên soạn), [[tre-hoc-dan-luyen-tap-va-phu-huynh]], [[nguoi-lon-hoc-piano-dong-luc-va-cach-hoc]].
 `,
   },
   {
@@ -880,7 +890,7 @@ Tổng quan: [[su-pham-piano]].
 | *Modern Course for the Piano* | 1936 | John **Thompson** | Phổ biến cách **[[ban-phim|Đô giữa]]** |
 | Michael Aaron Piano Course | 1947 – 52 | Michael **Aaron** | Đô giữa |
 | Phương pháp Pace | 1954 | Robert **Pace** | Phương pháp **đa giọng** đầu tiên |
-| Bastien | Từ 1963 (*Piano Basics* 1985) | James và Jane Smisor **Bastien** | **Đa giọng**: vị trí năm ngón ở nhiều giọng |
+| Bastien | Từ 1963 (*Piano Basics* 1985) | James và Jane Smisor **Bastien** | **Đa giọng**: [[vi-tri-nam-ngon-va-am-giai-nam-not|vị trí năm ngón]] ở nhiều giọng |
 | *The Music Tree* | 1958 | Frances **Clark** (cùng Goss, Holland) | **[[doc-not-nhanh|Nốt mốc]] và quãng** |
 | Alfred’s Basic Piano Library | 1981 | Palmer, Manus, Lethco | Bắt đầu bằng phím đen, rồi vị trí Đô giữa, rồi quãng |
 | Piano Adventures | Thập niên 1990 | Randall và Nancy **Faber** | **Hỗn hợp**: Đô giữa + đa giọng, dần chuyển sang đọc quãng |
@@ -901,6 +911,224 @@ Những gợi ý trên là **kinh nghiệm nghề**, không phải kết luận 
 ## Lưu ý về Beyer
 Beyer vẫn rất phổ biến ở châu Á. Nhận xét của người biên soạn (chưa có nghiên cứu đối chứng): sách gồm các bài ngắn tăng dần độ khó nhưng gần như không có phần nghe, sáng tạo hay đọc quãng có hệ thống — nên dùng kèm [[thi-tau]], [[ngau-hung-piano]] và bài hát quen thuộc.
 Tổng quan: [[su-pham-piano]].
+
+**Đánh giá chi tiết** điểm mạnh, điểm yếu của từng bộ (kèm giáo trình người lớn, ứng dụng và chương trình nhạc lý) và những gì nghiên cứu thật sự cho biết về cách đọc Đô giữa: [[danh-gia-giao-trinh-piano-va-nhac-ly]].
+`,
+  },
+  {
+    slug: "tre-hoc-dan-luyen-tap-va-phu-huynh",
+    title: "Trẻ học đàn: luyện tập ở nhà, vai trò phụ huynh và vì sao trẻ bỏ học",
+    category: 'musicianship',
+    also: ['technique'],
+    aliases: ["trẻ luyện tập ở nhà", "phụ huynh học đàn cùng con", "vai trò phụ huynh", "trẻ bỏ học đàn", "động lực học đàn của trẻ", "tự điều chỉnh khi luyện tập"],
+    summary: "Những gì nghiên cứu cho biết về trẻ học nhạc cụ: cam kết lâu dài cộng với luyện tập nhiều dự báo thành tích (McPherson 2005; Evans & McPherson 2015); phụ huynh tham gia nhiều ở giai đoạn đầu đi cùng trẻ thành công nhất (Davidson và cộng sự, 1996); trẻ 7 – 9 tuổi chưa tự điều chỉnh được việc tập (McPherson & Renwick 2001); khoảng một nửa thanh thiếu niên bỏ học nhạc trước 17 tuổi. Bài kèm những gì chưa có bằng chứng — như \"trẻ nên tập bao nhiêu phút\" — và cách áp dụng cho phụ huynh Việt.",
+    refs: [
+      ["McPherson (2005), Psychology of Music 33 — From child to musician", "https://findanexpert.unimelb.edu.au/scholarlywork/1231882-from-child-to-musician--skill-development-during-the-beginning-stages-of-learning-an-instrument"],
+      ["Evans & McPherson (2015), Psychology of Music — Identity and practice", "https://findanexpert.unimelb.edu.au/scholarlywork/976753-identity and practice- the motivational benefits of a long-term musical identity"],
+      ["Davidson, Howe, Moore & Sloboda (1996), Br. J. Dev. Psych.", "https://repository.uel.ac.uk/item/8609w"],
+      ["Sloboda, Davidson, Howe & Moore (1996), Br. J. Psych. — The role of practice", "https://findanexpert.unimelb.edu.au/scholarlywork/1346170-the-role-of-practice-in-the-development-of-performing-musicians"],
+      ["McPherson & Renwick (2001), Music Education Research — self-regulation", "https://findanexpert.unimelb.edu.au/scholarlywork/1369064-a-longitudinal-study-of-self-regulation-in-children%27s-musical-practice"],
+      ["PLoS ONE (2021) — When do young people stop making music?", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8612519/"],
+      ["King (2016), uOttawa — vì sao học trò bỏ piano (PDF)", "https://piano.uottawa.ca/wp-content/uploads/2016/04/Publications/Motivation/King_Karen_2016_thesis.pdf"],
+      ["Gerelus, Comeau & Swirp (2017), Intersections (PDF)", "https://www.erudit.org/en/revue/is/2017/v37/n2/1066616ar.pdf"],
+      ["Comeau et al. (2015), Intersections — trẻ Trung Quốc và Bắc Mỹ học piano (PDF)", "https://www.erudit.org/en/revue/is/2015/v35/n1/1038943ar.pdf"],
+      ["Comeau, Huta, Lu & Swirp (2019) — thang đo động lực (PDF)", "https://piano.uottawa.ca/wp-content/uploads/2020/10/39.-Comeau_Huta_Lu_Swirp_Motivation-2019.pdf"],
+    ],
+    body: `
+Bài này bổ sung cho [[day-tre-em]] và [[phuong-phap-luyen-tap]]; là phần "dành cho phụ huynh" của giáo trình trẻ em.
+
+## Điều nghiên cứu đã cho thấy
+| Nghiên cứu | Kết quả chính |
+|---|---|
+| **[[giang-day-hieu-qua|McPherson]] (2005)**, theo dõi 3 năm 157 trẻ lớp 3 – 4 | Mỗi năm đo chơi bài đã tập, [[thi-tau|thị tấu]], [[hoc-thuoc-bai|chơi thuộc lòng]], [[luyen-tai|chơi theo tai]], [[ngau-hung-ung-tac|ứng tác]]; lượng tập ước tính qua phỏng vấn người mẹ |
+| **Evans & McPherson (2015)**, theo dõi 10 năm | Trẻ có hình dung **lâu dài** về việc chơi nhạc *trước khi* bắt đầu **và** tập nhiều trong 3 năm đầu đạt thành tích cao hơn và theo nhạc lâu hơn |
+| **Davidson, Howe, Moore & Sloboda (1996)** | Trẻ thành công nhất có cha mẹ **tham gia nhiều nhất** vào buổi học và buổi tập **ở giai đoạn đầu** |
+| **Sloboda và cộng sự (1996)**, 257 người 8 – 18 tuổi | Vai trò của lượng luyện tập trong phát triển kỹ năng biểu diễn (94 người ghi nhật ký tập 42 tuần) |
+| **McPherson & Renwick (2001)**, quay phim 7 trẻ 7 – 9 tuổi trong 3 năm | Trẻ rất **ít tự điều chỉnh** (tự theo dõi, sửa lỗi) khi tập một mình |
+| **Comeau và cộng sự (2015)** | Trẻ Trung Quốc gắn bó và thích piano hơn trẻ Bắc Mỹ, nhưng cũng tập nhiều hơn vì muốn **làm vui lòng** thầy và cha mẹ |
+
+## Vì sao trẻ bỏ học?
+- PLoS ONE (2021), học sinh Anh và Đức 10 – 17 tuổi: khoảng **một nửa** bỏ học nhạc trước 17 tuổi, nhiều nhất trong khoảng **15 – 17**; gia đình có không khí âm nhạc đi cùng tỉ lệ bỏ thấp hơn.
+- King (2016, Đại học Ottawa), 55 người đã bỏ piano: lý do chính là **không tập**, **thích nhạc cụ khác**, **mất hứng thú**.
+- Gerelus, Comeau & Swirp (2017): tuổi tiền thiếu niên là giai đoạn bỏ học nhiều; số liệu dẫn lại cho thấy tỉ lệ bé trai học nhạc giảm từ 33,6% lúc 9 tuổi xuống 9,8% lúc 17 tuổi.
+*Các con số kiểu "80% trẻ bỏ trong 3 năm" lan truyền trên mạng không có nguồn kiểm chứng.*
+
+## Chưa có bằng chứng
+- **Trẻ nên tập bao nhiêu phút mỗi ngày?** Không tìm thấy nghiên cứu bình duyệt nào; các con số (5 phút × 2 – 3 lần/ngày, 15 – 20 phút…) chỉ là kinh nghiệm giáo viên.
+- **Độ tuổi "tốt nhất" để bắt đầu** — xem [[day-tre-em]]; các kỳ [[thi-cap-do|thi ABRSM]], RCM, Trinity đều không đưa ra tuổi khuyến nghị chính thức (Trinity ghi "không có điều kiện tiên quyết").
+
+## Áp dụng cho phụ huynh
+*(Đề xuất của [[danh-gia-giao-trinh-piano-va-nhac-ly|giáo trình Lamar]], rút ra từ các kết quả trên.)*
+1. **Ngồi cùng con** trong những tháng đầu — trẻ 7 – 9 tuổi chưa tự sửa lỗi được; vai trò của cha mẹ là nhắc mục tiêu và khen đúng chỗ, rồi **trao dần** quyền tự quyết.
+2. Nói về âm nhạc như **một việc lâu dài** ("con sẽ chơi được bài này vào Tết") chứ không như một khoá học ngắn hạn.
+3. Tập **đều, ngắn, có mục tiêu** hơn là dài — áp dụng [[phuong-phap-luyen-tap|luyện phân bổ]].
+4. Để con chọn một phần bài (bài hát yêu thích, một đoạn tự sáng tác) — giữ hứng thú, nhất là quanh tuổi 12 – 15.
+5. Mở nhạc trong nhà, đi nghe hoà nhạc — "không khí âm nhạc gia đình" đi cùng tỉ lệ bỏ học thấp hơn.
+`,
+  },
+  {
+    slug: "danh-gia-giao-trinh-piano-va-nhac-ly",
+    title: "Đánh giá các giáo trình piano và nhạc lý nổi tiếng: điểm mạnh, điểm yếu và cách khắc phục",
+    category: 'musicianship',
+    also: ['technique', 'basics'],
+    aliases: ["đánh giá giáo trình piano", "điểm yếu giáo trình piano", "so sánh giáo trình piano", "review giáo trình", "Faber Piano Adventures", "Alfred Premier", "Alfred Adult All-in-One", "Adult Piano Adventures", "Hal Leonard Student Piano Library", "Hal Leonard Adult Piano Method", "Bastien Piano for Adults", "Simply Piano", "Playground Sessions", "ABRSM Theory", "RCM Theory", "Tonal Harmony", "Open Music Theory", "giáo trình Lamar"],
+    summary: "Cơ sở biên soạn của Giáo trình Lamar: đối chiếu các bộ giáo trình nổi tiếng cho trẻ em (Faber, Alfred, Bastien, Hal Leonard, Thompson, Music Tree, Suzuki, Beyer, sách nhập môn Nga), cho người lớn (Alfred Adult, Adult Piano Adventures, Hal Leonard Adult, Bastien for Adults, giáo trình piano nhóm đại học, ứng dụng), và các chương trình nhạc lý (ABRSM, RCM, Trinity, Tonal Harmony, Open Music Theory). Mỗi điểm yếu ghi rõ nguồn và mức độ chắc chắn — kèm một phát hiện ngược với định kiến: chưa có bằng chứng rằng cách đọc \"Đô giữa\" kém hơn.",
+    refs: [
+      ["Hood (1982), Western Michigan University — The Teaching of Music Theory in the Piano Lesson", "https://scholarworks.wmich.edu/masters_theses/1687"],
+      ["DiCienzo (2019), uOttawa — Middle C vs Mixed Intervallic", "https://ruor.uottawa.ca/handle/10393/39944"],
+      ["Emond & Comeau (2013) — mô hình hoá các cách đọc (PDF)", "https://piano.uottawa.ca/wp-content/uploads/2020/10/09.-Emond_cognitive-modelling.pdf"],
+      ["Lu (2012), uOttawa — 18 giáo trình Bắc Mỹ", "https://piano.uottawa.ca/?p=548"],
+      ["Wikipedia — Piano pedagogy", "https://en.wikipedia.org/wiki/Piano_pedagogy"],
+      ["Kjos — Bastien Piano Basics", "https://kjos.com/bastien-piano-basics-primer-piano-primer.html"],
+      ["Hal Leonard — Piano Lessons Book 1", "https://www.halleonard.com/product/296001/piano-lessons-book-1"],
+      ["uOttawa — Playing by ear and the Suzuki method (PDF)", "https://piano.uottawa.ca/wp-content/uploads/2016/04/Publications/Methods/Suzuki Method/Playingbyear...Suzukimethod.pdf"],
+      ["SBO Magazine — về các phê phán phương pháp Suzuki", "https://sbomagazine.com/?p=3086"],
+      ["HVL (Na Uy) — luận văn về Suzuki piano", "https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/2573901?show=full"],
+      ["Ewha — Beyer ở Hàn Quốc", "https://dspace.ewha.ac.kr/handle/2015.oak/195450"],
+      ["University of Oklahoma — giáo viên Đài Loan và Beyer", "https://shareok.org/handle/11244/696"],
+      ["Boosey & Hawkes — Nikolaev, Russian School of Piano Playing", "https://www.boosey.com/shop/prod/Nikolaev-Vladimir-Russian-School-of-Piano-Playing-vol-1B/606760"],
+      ["MTNA (2017) — về định kiến văn hoá trong tài liệu sư phạm (PDF)", "https://certification.mtna.org/downloads/DEI/Studio/2017_ON_Chopsticks.pdf"],
+      ["Zhang (2023) — sách học phương Tây ở Trung Quốc", "https://www.czasopisma.nifc.pl/index.php/cr/article/view/7"],
+      ["York University (2024) — báo cáo về chương trình RCM (PDF)", "https://helencarswell.ampd.yorku.ca/wp-content/uploads/sites/1208/2024/08/Bell-Kovacs_finalreport.pdf"],
+      ["Adult Piano Adventures — Book 1", "https://pianoadventures.com/piano-books/adult-piano-adventures/level-1/things-to-know/"],
+      ["Pianodao — Hal Leonard Adult Piano Method", "https://pianodao.com/reviews/hal-leonard-adult-piano-method/"],
+      ["Mizok-Taylor (2008), WVU — tự học trong giáo trình người lớn", "https://researchrepository.wvu.edu/etd/2870"],
+      ["Top Ten Reviews — Simply Piano", "https://www.toptenreviews.com/simply-piano-review"],
+      ["MTO — Snodgrass (2016) về CMS Manifesto", "https://mtosmt.org/issues/mto.16.22.1/mto.16.22.1.snodgrass.html"],
+      ["College Music Symposium — Integration, diversity and creativity", "https://symposium.music.org/volume-56/reflections-on-the-manifesto/integration-diversity-and-creativity-in-current-music-theory-pedagogy-research"],
+      ["MTO — Callahan (2015), Teaching theory at the keyboard", "https://www.mtosmt.org/issues/mto.15.21.3/mto.15.21.3.callahan.php"],
+      ["JMTP — Malawey (2023), điểm Open Music Theory", "https://journals.ou.edu/jmtp/article/view/491"],
+      ["McGraw-Hill — Tonal Harmony, mục lục", "https://highered.mheducation.com/sites/0078025141/information_center_view0/table_of_contents.html"],
+      ["Học viện Âm nhạc Quốc gia VN — Hà Mai Hương, luận án tóm tắt (PDF)", "https://vnam.edu.vn/rs/Document/1603-HaMaiHuong-LATS-Tomtat.pdf"],
+    ],
+    body: `
+Bài này là **cơ sở biên soạn** của trang Giáo trình. Bảng so sánh lịch sử các bộ sách nhập môn: [[giao-trinh-piano-nhap-mon]]; ba cách dạy đọc nốt: [[cach-day-doc-not]].
+
+## Đọc bài này thế nào
+Mỗi nhận xét được xếp theo **độ chắc chắn**:
+- **Nghiên cứu** — luận văn, bài báo có phương pháp.
+- **Nhà xuất bản** — mô tả của chính bộ sách (cho biết sách *làm gì*, không chứng minh sách *tốt*).
+- **Ý kiến** — nhận xét của giáo viên, người dùng (tham khảo, không kết luận).
+
+## Một phát hiện quan trọng trước tiên
+- Lời chê phổ biến nhất trong giới sư phạm — **cách đọc "[[ban-phim|Đô giữa]]"** làm học trò lệ thuộc vào [[ngon-bam|số ngón]] và một thế tay cố định — **chưa có nghiên cứu đối chứng nào xác nhận**. Emond và Comeau (2013): các bảng ưu – nhược của từng cách đọc trong sách sư phạm "dựa trên trực giác và kinh nghiệm giáo viên".
+- Nghiên cứu trực tiếp duy nhất tìm được — **DiCienzo (2019, Đại học Ottawa)**, trẻ 7 – 11 tuổi — cho thấy nhóm Đô giữa đọc **tốt hơn** nhóm đọc [[quang|quãng]] hỗn hợp ở hầu hết bài kiểm tra.
+- **Hood (1982)** khảo sát 66 giáo trình nhập môn và kết luận điểm yếu **chung** của chúng là **sáng tác, [[ngau-hung-ung-tac|ứng tác]], luyện tai và [[tiet-tau|tiết tấu]]** — chứ không phải cách đọc. Ông khuyên kết hợp nhiều giáo trình.
+→ Giáo trình Lamar vì vậy **không loại bỏ** vị trí Đô giữa, mà tập trung vá đúng những chỗ Hood chỉ ra. Xem [[vi-tri-nam-ngon-va-am-giai-nam-not]].
+
+## Giáo trình cho trẻ em
+| Bộ sách | Cách tiếp cận (nguồn) | Điểm mạnh | Điểm yếu / rủi ro | Giáo trình Lamar xử lý |
+|---|---|---|---|---|
+| **Faber Piano Adventures** | Primer: thế năm ngón Đô, [[giai-dieu|liền bậc]] – nhảy bậc, "[[not-nhac|tên nốt]] tách khỏi số ngón"; cấp 1 đọc quãng đến quãng 5; cấp 2B: Đô, Sol, Fa với I – IV – V7 *(nhà XB)* | Cân bằng [[doc-not-nhanh|đọc nốt]] – kỹ thuật – lý thuyết; bốn loại sách song song | Không tìm thấy phê phán có nguồn. Rủi ro thực tế: **chi phí** (4 cuốn mỗi cấp) và tiết mục chủ yếu Âu – Mỹ *(ý kiến chung về sách phương Tây)* | Dùng bài thư viện miễn phí; thêm dân ca Việt |
+| **Alfred Basic / Premier** | Basic: vị trí Đô, Sol rồi Đô giữa (1A – 1B). Premier: bắt đầu bằng tiết tấu, phím đen, "không khoá vị trí", [[khoa-fa|khoá Fa]] trước *(nhà XB)* | Trình tự rõ; Premier lồng luyện tai và [[thi-tau|thị tấu]] | Một người viết đánh giá cho rằng nên bỏ hẳn khái niệm "vị trí" *(ý kiến — trái với kết quả DiCienzo)* | Giữ vị trí nhưng đổi sớm |
+| **Bastien** | "Nhiều giọng dần dần": ba giọng mỗi cấp, cấp 1 – 4 *(nhà XB)* | Học trò quen nhiều giọng sớm | Bài đánh giá sinh viên (Đại học Houston) cho rằng cách theo vị trí hạn chế khám phá — *nguồn yếu, không rõ nói về bộ nào* | Đổi giọng có kế hoạch, kèm nghe |
+| **Hal Leonard Student Piano Library** | Đọc theo số ngón → tên nốt → quãng; mốc Fa khoá Fa, Sol [[khoa-sol|khoá Sol]]; **ứng tác từ bài đầu** ("My Own Song") *(nhà XB)* | Có sáng tạo ngay từ đầu — đúng chỗ Hood chỉ ra là thiếu | Không tìm thấy phê phán có nguồn | Lấy ý "ứng tác từ tuần 1" |
+| **John Thompson (Easiest)** | Phần 1 chỉ năm nốt trên và dưới Đô giữa, không quá [[truong-do|nốt đen]] *(nhà XB)* | Rất chậm, hợp trẻ nhỏ | Phổ biến cách Đô giữa từ 1936 (Wikipedia); thiếu sáng tạo và nghe *(thuộc nhóm Hood mô tả)* | — |
+| **The Music Tree** ([[nha-su-pham-piano-phuong-tay|Frances Clark]]) | Ký hiệu ngoài [[khuong-nhac|khuông]] → đọc theo hướng và quãng → khuông lớn; "nốt mốc" *(nhà XB, Wikipedia)* | Đọc theo mẫu hình | Không tìm thấy phê phán có nguồn | Dạy nốt mốc + quãng song song |
+| **[[phuong-phap-giao-duc-am-nhac|Suzuki]]** | Nghe hằng ngày, bắt chước, đọc nhạc **muộn**; tập 1 mở đầu bằng [[bien-tau|biến tấu]] *Twinkle* | Tai và âm thanh đi trước | Bị phê phán vì **xem nhẹ đọc nhạc**, tiết mục hẹp, ít sáng tạo *(SBO Magazine; luận văn Na Uy)*. Một bài của nhóm Ottawa lại cho rằng lo ngại về đọc nhạc là **không có cơ sở** | Nghe trước, nhưng đọc từ cấp 2 |
+| **Beyer Op. 101** (khoảng 1850) | 106 bài tăng dần; rất phổ biến ở Nhật, Hàn | Ngắn gọn, có hệ thống | Giáo viên Đài Loan coi là **thiên về kỹ thuật**; ở Hàn nhiều "bản Beyer" khác xa bản gốc; luận văn Hàn 2017 chê giáo viên "bám sách cũ" *(nghiên cứu)*; thiếu nghe, sáng tạo *(nhận xét của thư viện)* | Thêm hát, nghe, ứng tác |
+| **[[truong-phai-su-pham-nga|Nikolaev]]** (Nga, in lần đầu 1951) | Tập 1: hát và mò giai điệu, làm quen bàn phím, rồi đọc nhạc; nhiều dân ca *(nhà XB)* | Phát triển đồng thời nhiều kỹ năng "có cân đối" *(luận văn SIU)* | Chưa xem được mục lục chi tiết | Học cách mở đầu bằng hát |
+
+## Giáo trình cho người lớn
+| Bộ sách | Nội dung (nguồn) | Điểm yếu được nêu | Giáo trình Lamar xử lý |
+|---|---|---|---|
+| **Alfred Adult All-in-One** | Đô giữa → Đô → Sol → khuông lớn; "cách tiếp cận [[hop-am-ba|hợp âm]]" *(nhà bán)*; cấp 2 thêm Rê, Si♭, Mi♭ trưởng, Mi, Sol thứ | Nhịp có thể tẻ nhạt, tiết mục dân ca – cổ điển, bài trọn vẹn đến muộn *(ý kiến)* | [[dem-hat-piano|Đệm hát]] bài Việt từ cấp 2 |
+| **Adult Piano Adventures** (Faber) | [[he-so-nashville-va-lead-sheet|Lead sheet]] với hình đệm tay trái, thị tấu, luyện tai *(nhà XB)*; quyển 2: [[the-dao-hop-am|đảo hợp âm]], 6/8, móc kép, [[ban-dap|pedal]], [[am-giai|âm giai]] | Bước nhảy sau quyển 2 sang bộ thường bị chê "rất hụt" *(ý kiến, video đánh giá)* | Cấp 4 – 5 nối thẳng sang [[phuong-phap-phan-tich-tac-pham|phân tích tác phẩm]] |
+| **Hal Leonard Adult** | Đọc trước khuông trên phím đen rồi trắng; khuông từ chương 2; nốt mốc Fa và Sol trước Đô giữa | Chương đầu trông "trẻ con" *(Pianodao)*; cần thêm tiết mục *(ý kiến)* | — |
+| **Bastien Piano for Adults** | Đô giữa → Sol → Fa → [[phoi-hoa-am-giai-dieu|phối hoà âm]] giai điệu → âm giai, hợp âm, đảo | Không tìm thấy phê phán có nguồn | — |
+| **Giáo trình piano nhóm đại học** (Lancaster & Renfrow; Lyke; Hilley & Olson) | Mỗi tuần đều có phối hoà âm, ứng tác, thị tấu, hoà tấu | Viết cho sinh viên âm nhạc, nặng nhịp học kỳ | Mượn mô hình "mỗi chương đủ các mảng" |
+| **Ứng dụng** (Simply Piano, Playground Sessions) | Trò chơi hoá, phản hồi tức thì | Dễ dãi với tiết tấu, gần như không dạy kỹ thuật và [[cuong-do|cường độ]]; luận văn Bồ Đào Nha: bổ trợ tốt, **không thay** giáo viên *(đánh giá báo chí, luận văn)*; **chưa có nghiên cứu hiệu quả bình duyệt** | Dùng như công cụ tập, không như giáo trình |
+Luận án của Mizok-Taylor (2008) xét Faber, Bastien, Alfred dưới góc độ **tự học có định hướng** — thư viện chưa đọc được kết luận từng bộ. Chưa có nghiên cứu nào so sánh "học hợp âm trước" với "đọc nhạc trước" cho người lớn.
+
+## Chương trình nhạc lý
+| Chương trình | Đặc điểm (nguồn) | Điểm yếu được nêu |
+|---|---|---|
+| **[[thi-cap-do|ABRSM]]** cấp 1 – 5 | Từ 2020 thi trực tuyến, gần như toàn trắc nghiệm; các câu viết giai điệu, đặt lời, viết hợp xướng đã bị bỏ *(nguồn thứ cấp)*; phải đỗ cấp 5 lý thuyết mới thi thực hành cấp 6 – 8 | Bỏ phần **sáng tác** — đúng mảng Hood chỉ ra là yếu |
+| **RCM** | Sơ cấp (Chuẩn bị – cấp 4), trung cấp (5 – 8), cao cấp (9 – ARCT) *(văn bản chính thức 2016)* | Báo cáo của Đại học York (2024): xây gần như hoàn toàn trên âm nhạc nghệ thuật Tây Âu |
+| **Trinity** | Cấp 1 – 8, không bắt buộc lý thuyết để thi thực hành *(chính thức)* | — |
+| **Tonal Harmony** (Kostka – Payne) | Nền tảng → hợp âm ba diatonic và [[luat-hoa-am-bon-be|viết bè]] → [[hop-am-bay|hợp âm bảy]] → [[am-giai-cromatic|cromatic]] → [[thoi-ky-the-ky-20|thế kỷ 20]] *(mục lục nhà XB)* | Nhóm CMS (2014) phê phán chương trình lý thuyết **tách rời** nghe, đàn phím và sáng tạo; khảo sát 1969 cho thấy khoảng 75% chương trình bị chia mảnh |
+| **Open Music Theory** (miễn phí) | 11 phần, có cả jazz, pop, [[phoi-khi-nguyen-ly-co-ban|phối khí]] | Malawey (2023): [[hinh-thuc-am-nhac|hình thức]] [[nhac-pho-thong-the-ky-20|nhạc phổ thông]] bị đẩy về sau, hoà âm nặng viết bè bốn phần cổ điển |
+Thêm: Callahan (2015) chỉ ra học lý thuyết **trên đàn phím** giúp học bằng tai và tay, dù khó tổ chức.
+
+## Việt Nam
+- Luận án của **Hà Mai Hương** (Học viện Âm nhạc Quốc gia VN) về piano không chuyên: chương trình, giáo trình, nội dung **thiếu thống nhất**; đề xuất chương trình mở theo từng đối tượng.
+- Chương trình phổ thông 2018 đưa **đọc nhạc vào từ lớp 1** (trước là lớp 3). Xem [[day-tre-em]].
+- **Chưa tìm thấy** nguồn đáng tin về việc các trung tâm ở Việt Nam dùng giáo trình nào (Beyer, Thompson, Faber…) hay về sách "đệm hát" cho người lớn.
+- Định kiến văn hoá trong sách phương Tây: một tiểu luận của MTNA (2017) chỉ ra các tài liệu đầu thế kỷ 20 nhìn từ thế giới quan "phương Tây, da trắng"; Zhang (2023) nêu những bài "phương Đông" giả trong sách học dùng ở Trung Quốc.
+
+## Mười chỗ Giáo trình Lamar sửa
+1. **Sáng tác và ứng tác mỗi chương** (vá điểm yếu số một theo Hood) — [[ngau-hung-piano]].
+2. **Luyện tai mỗi tuần**, hát trước khi chơi — [[luyen-tai]], [[xuong-am]].
+3. **Tiết tấu bằng cơ thể và âm tiết nhịp** trước ký hiệu — [[am-tiet-nhip]], [[cam-nhan-phach]].
+4. **Vị trí năm ngón làm điểm xuất phát, đổi vị trí sớm**, luôn gọi tên nốt — theo bằng chứng của DiCienzo.
+5. **Lý thuyết học trên đàn**, không chỉ trên giấy (Callahan; CMS).
+6. **Dân ca và ca khúc Việt** cùng tiết mục cổ điển — [[dem-dieu-viet-nam]], [[hoa-am-cho-giai-dieu-ngu-cung]].
+7. **Hình thức nhạc phổ thông sớm** cho người lớn — [[hinh-thuc-ca-khuc-pho-thong]].
+8. **Kỹ năng đàn phím chức năng** (phối hoà âm, [[dich-giong|dịch giọng]], lead sheet) như giáo trình nhóm đại học — [[ky-nang-dan-phim-chuc-nang]].
+9. **Miễn phí và nối liền**: một hệ thống bài liên kết, không có "bước hụt" giữa các quyển.
+10. **Ghi rõ chỗ chưa có bằng chứng** (thời lượng tập của trẻ, "hợp âm trước hay đọc trước"), để người dạy tự điều chỉnh.
+`,
+  },
+  {
+    slug: "nguoi-lon-hoc-piano-dong-luc-va-cach-hoc",
+    title: "Người lớn học piano: động lực, lợi ích, khó khăn và cách học",
+    category: 'musicianship',
+    also: ['technique'],
+    aliases: ["người lớn mới học đàn", "người cao tuổi học piano", "andragogy", "Knowles", "Jutras", "Late Bloomer"],
+    summary: "Nghiên cứu về người lớn học piano: 711 học viên trong khảo sát của Jutras (2006) đánh giá cao nhất lợi ích về kỹ năng và \"thực hiện được ước mơ\"; Swenson chia ba kiểu người học (nghiệp dư nghiêm túc, nghiệp dư vui vẻ, \"nở muộn\"); thay đổi trong đời và lời động viên của bạn bè thường là chất xúc tác (Taylor 2011); một thử nghiệm ngẫu nhiên cho thấy học piano cải thiện chức năng điều hành ở người cao tuổi (Bugos 2007). Bài kèm nguyên tắc dạy người lớn (andragogy của Knowles), lý do bỏ học và những gì còn chưa có bằng chứng.",
+    refs: [
+      ["Jutras (2006), Journal of Research in Music Education 54(2)", "https://journals.sagepub.com/doi/10.2307/3345867"],
+      ["Swenson, University of Oklahoma — hồ sơ người lớn học đàn phím", "https://shareok.org/handle/11244/1029"],
+      ["Taylor (2011), Psychology of Music 39(3)", "https://journals.sagepub.com/toc/poma/39/3"],
+      ["Taylor (2011), British Journal of Music Education — \"rivers of musical experience\"", "https://www.cambridge.org/core/journals/british-journal-of-music-education/article/continuity-change-and-mature-musical-identity-construction-using-rivers-of-musical-experience-to-trace-the-musical-lives-of-six-matureage-keyboard-players/BFD9A4D48E831EAEF1791E0C0294FCB7"],
+      ["Bugos et al. (2007) — piano và chức năng điều hành ở người cao tuổi (PubMed)", "https://pubmed.ncbi.nlm.nih.gov/17612811/"],
+      ["Chmiel et al. (2025), PLOS ONE — khoá học đàn phím trực tuyến 12 tháng cho người cao tuổi", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11975106/"],
+      ["Piano Inspires — Pike: tài liệu về học viên người lớn (PDF)", "https://pianoinspires.com/wp-content/uploads/easyblog_articles/1759/Making-Music-Throughout-Adulthood-HO-1.pdf"],
+      ["Piano Inspires — Five things about teaching adults in groups", "https://pianoinspires.com/five-things-you-should-know-about-teaching-adults-in-groups/"],
+      ["ProQuest — nghiên cứu về người lớn bỏ học đàn", "https://www.proquest.com/docview/304275764/abstract/CCED7F500794105PQ/1"],
+      ["Human Movement — luyện phân bổ và người cao tuổi", "https://hummov.awf.wroc.pl/Distribution-of-practice-effects-on-older-and-younger-adults-motor-skill-learning,183358,0,2.html"],
+      ["JRME (2018) — lo âu biểu diễn ở người trên 65 tuổi", "https://journals.sagepub.com/doi/10.1177/0022429418799362"],
+      ["VOV5 — lớp piano miễn phí cho người cao tuổi ở TP.HCM", "https://vov5.vov.gov.vn/index.php/thats-life/free-piano-class-for-the-elderly-in-ho-chi-minh-city-1748821.vov5"],
+    ],
+    body: `
+Bài này mở rộng [[day-nguoi-lon]] và là phần "trước khi bắt đầu" của giáo trình người lớn.
+
+## Người lớn học để làm gì?
+**Jutras (2006)**, 711 học viên piano người lớn ở 24 bang của Mỹ, chấm 31 lợi ích:
+- Nhóm **kỹ năng** được đánh giá cao nhất, nhóm **cá nhân** (tự khẳng định, niềm vui) cũng cao, nhóm **xã hội – văn hoá** thấp nhất.
+- Mười lợi ích hàng đầu: thực hiện được ước mơ, kỹ thuật, cảm giác thành tựu, thoát khỏi nếp thường ngày, tiến bộ kỹ năng, nhạc cảm, hiểu biết âm nhạc, vui chơi, tinh chỉnh kỹ năng, phát triển bản thân.
+
+**Ba kiểu người học** (Swenson, 49 người 30 – 55 tuổi):
+| Kiểu | Đặc điểm |
+|---|---|
+| Nghiệp dư nghiêm túc (đông nhất) | Muốn tiết mục và kỹ năng; thích chơi bốn tay, hoà tấu |
+| Nghiệp dư vui vẻ | Học vì lợi ích tinh thần, thể chất |
+| "Nở muộn" | Ước muốn từ lâu, ít học trước đó, ít muốn chơi cùng người khác |
+Taylor (2011): với người lớn tuổi, **thay đổi lớn trong đời** (nghỉ hưu, con cái lớn) và **lời động viên của bạn bè** là chất xúc tác để bắt đầu hay quay lại.
+
+## Lợi ích cho người cao tuổi
+- **Bugos và cộng sự (2007)**, thử nghiệm ngẫu nhiên: học piano cá nhân cải thiện **chức năng điều hành và trí nhớ làm việc** ở người cao tuổi.
+- **Chmiel và cộng sự (2025)**: 68 người cao tuổi mới học theo khoá đàn phím và [[luyen-tai|luyện tai]] trực tuyến 12 tháng — có bằng chứng khách quan là họ học được.
+- Một tổng quan (*Frontiers in Psychology*, 2019) nhắc rằng phần lớn bằng chứng về lợi ích tâm lý – xã hội vẫn là **tương quan**, chưa phải nhân quả.
+Ở TP.HCM có các lớp piano miễn phí cho người từ 65 tuổi (VOV5).
+
+## Khó khăn và lý do bỏ học
+- Một nghiên cứu về người lớn: bỏ học chủ yếu vì **không có thời gian**, cũng vì bài học nhàm, ghét luyện tập, cảm thấy thiếu khả năng; người tiếp tục thì thấy buổi học **vui và thử thách**, giáo viên **ủng hộ**.
+- Lo âu biểu diễn ở người trên 65 tuổi liên quan rõ với tính hay lo âu nói chung (JRME, 2018). Xem [[hoi-hop-bieu-dien]].
+
+## Dạy người lớn khác dạy trẻ thế nào
+Malcolm Knowles gọi việc dạy người lớn là *andragogy*. Pamela Pike áp dụng vào piano:
+- Giáo viên là **người hỗ trợ**, cùng học viên **lập kế hoạch** và chẩn đoán nhu cầu.
+- Xác định học viên nằm đâu trên dải "học nghiêm túc ↔ chơi nhạc giải trí".
+- Người chưa từng học thích **lớp nhóm** (rẻ, có bạn); người quay lại với mục tiêu cụ thể thích **học riêng**.
+
+## Chưa có bằng chứng
+- **"Học [[hop-am-ba|hợp âm]] trước" hay "[[doc-not-nhanh|đọc nhạc]] trước"** cho người lớn: chưa có nghiên cứu so sánh nào — chỉ có ý kiến trên diễn đàn.
+- **Cấu trúc buổi tập** dành riêng cho người lớn học piano: chỉ có nghiên cứu vận động nói chung, cho thấy người cao tuổi hưởng lợi từ **luyện phân bổ** (nhiều buổi ngắn) hơn luyện dồn — xem [[phuong-phap-luyen-tap]].
+- Hiệu quả của ứng dụng học đàn: chưa có nghiên cứu bình duyệt — xem [[danh-gia-giao-trinh-piano-va-nhac-ly]].
+
+## Áp dụng trong giáo trình Lamar
+*(Đề xuất.)* Hỏi mục tiêu ngay buổi đầu ([[dem-hat-piano|đệm hát]], chơi bản cổ điển, thư giãn) và cho phép **hai nhánh** từ cấp 2: nhánh đệm hát và nhánh đọc bản nhạc — cùng chung phần [[nhac-ly-co-ban|nhạc lý]]. Tập 15 – 30 phút, nhiều lần trong tuần; mỗi chương đều có một bài "chơi được ngay" để giữ cảm giác thành tựu.
 `,
   },
 ]
