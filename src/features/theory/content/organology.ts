@@ -35,7 +35,7 @@ Hệ thống của Hornbostel và Sachs (1914) có bốn lớp; Sachs thêm lớ
 | Lớp | Phương Tây | Việt Nam | Châu Á khác, châu Phi |
 |---|---|---|---|
 | **1. Tự thân vang** | [[bo-go-dan-nhac|Bộ gõ dàn nhạc]], [[bo-go-phim|Bộ gõ có phím]], [[celesta|Celesta]] | [[cong-chieng|Cồng chiêng Tây Nguyên]], [[dan-da|Đàn đá]], [[trung-klong-put|T'rưng và K'lông pút]], [[phach-song-lang-mo|Phách, song lang, mõ và các nhạc cụ gõ Việt]] | [[gamelan|Gamelan]], [[ranat|Ranat và dàn piphat]], [[angklung|Angklung]], [[kulintang|Kulintang]], [[mbira|Đàn mbira]] |
-| **2. Màng rung** | [[timpani|Timpani]], [[trong-jazz|Bộ trống]] | (trống — chưa có bài riêng) | [[tabla-mridangam|Tabla và mridangam]], [[trong-darbuka-daf|Trống darbuka và trống daf]], [[djembe|Trống djembe]] |
+| **2. Màng rung** | [[timpani|Timpani]], [[trong-jazz|Bộ trống]] | [[trong-viet-nam|Trống Việt Nam]] | [[tabla-mridangam|Tabla và mridangam]], [[trong-darbuka-daf|Trống darbuka và trống daf]], [[djembe|Trống djembe]] |
 | **3. Dây** | [[violin|Violin]], [[viola|Viola]], [[cello|Cello]], [[double-bass|Contrabass]], [[viola-da-gamba|Viola da gamba]], [[dan-hac|Đàn hạc]], [[guitar-co-dien|Guitar cổ điển]], [[dan-lute|Đàn lute]], [[mandolin|Mandolin]] | [[dan-bau|Đàn bầu]], [[dan-tranh|Đàn tranh]], [[dan-nguyet|Đàn nguyệt]], [[dan-nhi|Đàn nhị]], [[dan-day|Đàn đáy]], [[dan-ty-ba-tam-sen|Đàn tỳ bà, đàn tam và đàn sến]], [[dan-tinh|Đàn tính]] | [[guqin|Cổ cầm]], [[guzheng|Đàn tranh Trung Hoa]], [[pipa|Tỳ bà Trung Hoa]], [[erhu|Nhị hồ]], [[sitar|Sitar]], [[veena|Veena]], [[sarod|Sarod]], [[sarangi|Sarangi]], [[tanpura|Tanpura]], [[dan-oud|Đàn oud]], [[qanun|Đàn qanun]], [[santur|Đàn santur]], [[tar-setar|Đàn tar và setar]], [[kamancheh|Đàn kamancheh]], [[kora|Đàn kora]] |
 | **4. Hơi** | [[sao-flute|Sáo flute]], [[recorder|Sáo recorder]], [[oboe|Oboe và kèn cor anglais]], [[clarinet|Clarinet]], [[bassoon|Bassoon]], [[saxophone|Saxophone]], [[trumpet|Trumpet]], [[kenh-horn|Kèn horn]], [[trombone|Trombone]], [[tuba|Tuba]], [[organ-ong|Đàn organ ống]], [[accordion-harmonium|Accordion và harmonium]] | [[sao-truc|Sáo trúc]], [[tieu|Tiêu]], [[ken-bau|Kèn bầu]], [[khen|Khèn]] | [[dizi|Sáo dizi]], [[sheng|Sênh]], [[bansuri|Sáo bansuri]], [[shehnai|Kèn shehnai]], [[ney|Sáo ney]] |
 | **5. Điện** | [[guitar-dien|Guitar điện và guitar bass]] (khuếch đại), [[synthesizer|Synthesizer và MIDI]], [[theremin-ondes|Theremin và ondes Martenot]] | — | — |
@@ -69,7 +69,9 @@ Piano là đàn dây gõ — xem [[dan-piano]], [[lich-su-piano]], [[dan-phim-co
 4. So sánh khu vực: [[nhac-cu-dong-a]], [[nhac-cu-nam-a-tay-a]], [[gamelan]].
 5. Câu hỏi nghiên cứu: một nhạc cụ "di cư" thế nào? So [[dan-oud]] → [[dan-lute]] → [[guitar-co-dien]]; [[tar-setar|setar]] → [[sitar]]; [[sheng]] và [[khen]] với [[accordion-harmonium]].
 
-*Chưa có trong thư viện (lượt nghiên cứu này chưa đủ nguồn): nhạc cụ Nhật Bản, Hàn Quốc; các loại trống Việt Nam; đàn đoản, đàn goong.*
+Thêm về nhạc cụ Việt Nam: [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nhac-cu-tay-nguyen-va-mien-nui]], [[nhac-cu-go-nghi-le-viet-nam]].
+
+*Chưa có trong thư viện: nhạc cụ Nhật Bản, Hàn Quốc.*
 `,
   },
   {
@@ -1199,6 +1201,8 @@ Nhiều nhạc cụ Việt có họ hàng trong khu vực: đàn tranh với [[g
 
 ## Với người học piano
 Phần lớn nhạc cụ Việt dùng **nhấn, rung, vuốt** để tạo những [[cao-do|cao độ]] **không có trên phím piano** — xem [[am-nhac-truyen-thong-viet-nam]] (mục thang năm âm) và [[luat-binh-quan]].
+
+Thêm: [[trong-viet-nam]] (các loại trống), [[dan-doan-dan-tu]], [[nhac-cu-tay-nguyen-va-mien-nui]] (đàn goong, k'ni, đing năm, tù và, đàn môi, kèn lá), [[nhac-cu-go-nghi-le-viet-nam]] (sênh tiền, mõ, chuông, thanh la, khánh).
 `,
   },
   {
@@ -1218,6 +1222,14 @@ Phần lớn nhạc cụ Việt dùng **nhấn, rung, vuốt** để tạo nhữ
       ["Vietnam News — Viet Nam's special musical instrument", "https://vietnamnews.vn/english-through-the-news/345865/viet-nam-s-special-musical-instrument.html"],
       ["Wikipedia — Đàn bầu", "https://en.wikipedia.org/wiki/%C4%90%C3%A0n_b%E1%BA%A7u"],
       ["UNESCO — Đờn ca tài tử music and song in southern Viet Nam", "https://ich.unesco.org/en/RL/00733"],
+      ["Viện Âm nhạc — Bau monochord", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/bau-monochord-%E2%80%93-chordophone"],
+      ["Dân Việt — NSND Thanh Tâm, bậc thầy đàn bầu", "https://danviet.vn/nghe-si-nhan-dan-la-bac-thay-ve-dan-bau-me-ruot-cua-nhac-si-ho-hoai-anh-nhan-tin-vui-d1428354.html"],
+      ["Báo Pháp luật — Người lay động hàng triệu tâm hồn yêu độc huyền cầm", "https://baophapluat.vn/nguoi-lay-dong-hang-trieu-tam-hon-yeu-doc-huyen-cam-post92171.html"],
+      ["Tiền Phong — Xuân Ba viết về Xuân Ba", "https://tienphong.vn/xa-hoi/phong-su/607335/Xuan-Ba-viet-ve-Xuan-Ba-tpp.html"],
+      ["SGGP — TS NSƯT Lê Hoài Phương", "https://www.sggp.org.vn/tien-si-nsut-le-hoai-phuong-khat-vong-lan-toa-tieng-dan-bau-khap-the-gioi-post745857.html"],
+      ["Báo Văn hoá — nghệ sĩ Việt Nam ở sân khấu quốc tế với một dây đàn", "https://baovanhoa.vn/nghe-thuat/chi-voi-mot-day-dan-nghe-si-viet-nam-lam-gi-o-san-khau-quoc-te-263014.html"],
+      ["Báo Văn hoá — Đẩy nhanh việc đưa đàn bầu là di sản thế giới", "https://baovanhoa.vn/van-hoa/day-nhanh-viec-dua-dan-bau-la-di-san-the-gioi-47675.html"],
+      ["Bộ Ngoại giao — Danh sách các di sản của Việt Nam được UNESCO ghi danh", "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/danh-sach-cac-di-sandanh-hieu-cua-vn-da-duoc-unesco-cong-nhanghi-danh-57106-153.html"],
     ],
     body: `
 **Đàn bầu** (độc huyền cầm) là đàn **một dây**, thuộc họ dây gảy theo Viện Âm nhạc. Nét độc đáo: gần như toàn bộ âm thanh là **bồi âm**, và [[cao-do|cao độ]] được **nắn** bằng cần đàn mềm.
@@ -1255,6 +1267,13 @@ Người chơi **gảy** dây và cùng lúc **chạm nhẹ cạnh bàn tay** v�
 ::youtube gOHbLHTqrM0 | *Vì miền Nam* · NSND Thái Bảo
 
 ::youtube juAzwyICfDg | *Vì miền Nam – Lời ca dâng Bác* · NSND Hoàng Anh Tú
+
+## Thêm về cấu tạo, nghệ sĩ và hồ sơ di sản
+- **Cấu tạo** (Viện Âm nhạc): kiểu cũ là một ống tre lớn, một dây, cần và một quả bầu khô hoặc nửa gáo dừa; kiểu hiện đại thường có mặt đàn gỗ, cần, bầu, dây và trục. Quả bầu nay nhiều khi chỉ để trang trí. Người chơi gảy bằng que, cạnh bàn tay kia chạm nhẹ vào các điểm nút để lấy bồi âm; tầm âm khoảng ba quãng 8; dùng độc tấu, hoà tấu, trong tài tử và xẩm.
+- **Đàn bầu điện**: chỉ thấy các trang bán hàng nói tới việc gắn pickup; chưa có nguồn về người làm đầu tiên và năm ra đời.
+- **Đưa vào nhạc viện**: theo NSND Thanh Tâm (Học viện Âm nhạc Quốc gia, mẹ nhạc sĩ Hồ Hoài Anh), năm **1956** đàn bầu vào giáo trình của trường nhạc đầu tiên; bà cũng cho rằng không có tài liệu nào xác định được năm ra đời của đàn.
+- **Nhạc sĩ, nghệ sĩ**: Xuân Khải viết nhiều tác phẩm cho đàn bầu (*Cung đàn mùa xuân* giúp một nghệ sĩ đoạt huy chương vàng ở liên hoan nhạc cụ dân tộc 1988 – 1989); NSND Xuân Hoạch phục dựng đàn bầu gỗ năm 1990; NSƯT Lê Hoài Phương; Vân Trung đoạt giải ba cuộc thi âm nhạc truyền thống tại World Nomad Games 2026 (Kyrgyzstan).
+- **Di sản**: chưa thấy hồ sơ UNESCO nào được nộp tính đến 2026; theo Báo Văn hoá, đàn bầu còn chưa là di sản cấp quốc gia — Học viện Âm nhạc Quốc gia dự định làm hồ sơ quốc gia trước, rồi mới đến UNESCO. Danh sách di sản UNESCO của Việt Nam do Bộ Ngoại giao công bố tháng 6/2025 không có đàn bầu.
 `,
   },
   {
@@ -1286,7 +1305,7 @@ Người chơi **gảy** dây và cùng lúc **chạm nhẹ cạnh bàn tay** v�
 | [[cao-do|Âm vực]] | Khoảng ba [[quang|quãng 8]]; tiếng sáng, trong |
 
 ## Cách chơi
-Tay phải đeo **móng gảy** ở ngón cái, trỏ, giữa. Tay trái **nhấn** dây ở phía bên kia con nhạn để nâng cao độ, **rung** để tạo tiếng rung, và **vuốt** (lướt qua nhiều dây). Nhờ nhấn, chỉ năm âm lên dây mà chơi được những cao độ "giữa các phím" của các hơi Bắc, Nam, Oán — xem [[am-nhac-truyen-thong-viet-nam]].
+Tay phải đeo **móng gảy** ở ngón cái, trỏ, giữa. Tay trái **nhấn** dây ở phía bên kia con nhạn để nâng cao độ, **rung** để tạo tiếng rung, và **vuốt** (lướt qua nhiều dây). Nhờ nhấn, chỉ năm âm lên dây mà chơi được những cao độ "giữa các phím" của các [[hoi-trong-nhac-tai-tu-cai-luong|hơi Bắc]], Nam, Oán — xem [[am-nhac-truyen-thong-viet-nam]].
 
 ## Lịch sử
 Theo Viện Âm nhạc, [[lich-su-am-nhac-viet-nam|Trần Văn Khê]] truy nguồn đàn tranh từ đàn tranh Trung Hoa ([[guzheng]]), có ở Việt Nam từ thời Trần hoặc sớm hơn — khoảng bảy, tám thế kỷ. Theo Wikipedia, đàn có 14 dây vào cuối thế kỷ 13 – 14, rồi 15 dây; loại **16 dây** xuất hiện ở thế kỷ 19 và là chuẩn đến cuối thập niên 1970 – 1980, khi các loại nhiều dây hơn ra đời (Viện Âm nhạc có cả đàn tranh 36 dây).
@@ -1693,7 +1712,7 @@ Liên quan: [[cong-chieng]], [[dan-da]], [[nhac-cu-viet-nam]].
     slug: "phach-song-lang-mo",
     title: "Phách, song lang, mõ và các nhạc cụ gõ Việt",
     category: 'organology',
-    aliases: ["phách ca trù", "bàn phách", "song lang", "song loan", "mõ", "mõ làng", "thanh la", "tiu cảnh", "chuông chùa"],
+    aliases: ["phách ca trù", "bàn phách", "song lang", "song loan", "mõ"],
     summary: "Các nhạc cụ gõ tự thân vang giữ nhịp trong nhạc truyền thống Việt: phách (đào nương ca trù gõ que lên bàn phách), song lang (song loan, dụng cụ gõ bằng chân trong tài tử, cải lương), mõ (mõ làng bằng tre), cùng thanh la, tiu cảnh, chuông chùa trong bộ sưu tập của Viện Âm nhạc.",
     refs: [
       ["Viện Âm nhạc — Characteristics of ca trù music", "https://vienamnhac.vn/heritage/ca-tru-singing/articles/characteristics-of-ca-tru-music-brief-introduction-about-six-musical-forms-of-ca-tru"],
@@ -1710,7 +1729,7 @@ Nhạc cụ gõ **tự thân vang** giữ vai trò **giữ nhịp, đánh dấu 
 |---|---|---|
 | **Phách** | [[ca-tru|Đào nương]] gõ que (tre hoặc gỗ) lên một bàn phách nhỏ, vừa hát vừa giữ nhịp | Ca trù |
 | **Song lang** (song loan) | Dụng cụ gõ giữ nhịp; Viện Âm nhạc có trang riêng (cách dùng bằng chân trong tài tử, [[lich-su-am-nhac-viet-nam|cải lương]] là mô tả thông dụng, chưa đối chiếu nguồn) | [[don-ca-tai-tu|Đờn ca tài tử]], [[cai-luong|cải lương]] |
-| **Mõ làng** | Mõ tre khoét rãnh, đặt trên đùi và gõ bằng dùi | Báo hiệu trong làng |
+| **[[nhac-cu-go-nghi-le-viet-nam|Mõ làng]]** | Mõ tre khoét rãnh, đặt trên đùi và gõ bằng dùi | Báo hiệu trong làng |
 | **Thanh la**, **tiu cảnh**, **chuông chùa** | Nhạc cụ gõ kim loại | Nhạc lễ, nhạc chùa, sân khấu |
 
 ## Song lang và "nhịp" trong vọng cổ
@@ -1740,7 +1759,7 @@ Bảo tàng Horniman (London) gọi **bát âm** (*bayin*, "tám âm") của Tru
 | Chất liệu | Ví dụ thường được nêu |
 |---|---|
 | Kim (kim loại) | Chuông, chuông bộ, [[cong-chieng|chiêng]] |
-| Thạch (đá) | Khánh đá |
+| Thạch (đá) | [[nhac-cu-go-nghi-le-viet-nam|Khánh đá]] |
 | Ti (tơ) | [[guqin]], [[guzheng]], [[pipa]], [[erhu]] (dây vốn bằng tơ) |
 | Trúc (tre) | [[dizi]], tiêu |
 | Bào (quả bầu) | [[sheng]] |
@@ -2871,6 +2890,188 @@ Liên quan: [[kora]], [[djembe]], [[bo-go-phim]].
 Theo Bảo tàng Metropolitan, djembe của người Malinke là trống hình chén Mande **phổ biến nhất**, cả trong và ngoài thế giới Mande. Niên đại "khoảng năm 1200" ghi trên Wikipedia **không có tài liệu** chứng minh.
 
 Liên quan: [[kora]], [[mbira]], [[bo-go-dan-nhac]].
+`,
+  },
+  {
+    slug: "trong-viet-nam",
+    title: "Trống Việt Nam: trống cái, trống chầu, trống cơm, trống của người Chăm và Tây Nguyên",
+    category: 'organology',
+    also: ['vietnam'],
+    aliases: ["trống Việt Nam", "trống cái", "trống đại", "trống đế", "trống cơm", "trống mảnh", "bồng bộc", "trống chiến", "trống trận", "Paranưng", "Ghi-năng", "Blong Bong", "Rappana", "hgơr", "trống đồng Lô Lô"],
+    summary: "Bảng các loại trống Việt Nam theo tài liệu của Viện Âm nhạc và các nguồn khác: trống cái, trống chầu (trống đế), trống cơm lên dây bằng cơm nghiền, trống mảnh, trống chiến của tuồng; bộ trống Chăm Paranưng – Ghi-năng – Blong Bong; trống hgơr của người Ê Đê; và trống đồng như một nhạc cụ còn được đánh trong nghi lễ người Lô Lô.",
+    wiki: "Trống_cơm",
+    refs: [
+      ["Viện Âm nhạc — Com drum (Rice drum)", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/com-drum-rice-drum---membranophone"],
+      ["Viện Âm nhạc — Mảnh drum", "https://www.vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/manh-drum---membranophone"],
+      ["Viện Âm nhạc — Paranung drum", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/paranung-drum---membranophone"],
+      ["Viện Âm nhạc — Blong Bong", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/blong-bong--membranophone"],
+      ["Viện Âm nhạc — lịch sử và phòng trưng bày", "https://vienamnhac.vn/introduction/history"],
+      ["Wikipedia — Trống cơm", "https://en.wikipedia.org/wiki/Tr%E1%BB%91ng_c%C6%A1m"],
+      ["Wikipedia — Trống cái", "https://en.wikipedia.org/wiki/Tr%E1%BB%91ng_c%C3%A1i"],
+      ["Wikipedia — Trống chầu", "https://en.wikipedia.org/wiki/Tr%E1%BB%91ng_ch%E1%BA%A7u"],
+      ["Tổng cục Du lịch — Trống cơm", "https://vietnamtourism.vn/en/index.php/about/items/1910"],
+      ["Bảo tàng Lịch sử Canada — trống chầu", "https://historymuseum.ca/cmc/exhibitions/arts/resonance/res2_40e.html"],
+      ["Viện Âm nhạc — Percussion and Đế drum in Chèo (sách)", "https://vienamnhac.vn/publication/books/percussion-and-de-drum-in-vietnamese-traditional-opera-cheo"],
+      ["Tạp chí Giáo dục Nghệ thuật — về trống chiến", "https://vjol.info.vn/tcgiaoducnghethuat/article/download/80260/68310/"],
+      ["VTV — Paranưng, niềm tự hào của người Chăm", "https://english.vtv.vn/news/paranung-drum-pride-of-the-cham-people-20180429232008577.htm"],
+      ["PLO — Để tiếng trống Ghi-năng vang mãi", "https://plo.vn/de-tieng-trong-ghi-nang-vang-mai-post603090.html"],
+      ["Báo Văn hoá — Giữ gìn tiếng trống Rappana", "https://baovanhoa.vn/dan-toc-ton-giao/giu-gin-tieng-trong-rappana-cua-nguoi-cham-124607.html"],
+      ["CREM-CNRS — Jeu de gongs et tambour (Rhade, 1960)", "https://archives.crem-cnrs.fr/archives/items/CNRSMH_I_1967_004_008_01/"],
+      ["VietNamNet — Lễ tang người Lô Lô", "https://vietnamnet.vn/en/funeral-ceremony-of-the-lo-lo-E182866.html"],
+      ["Tạp chí Viện Dân tộc học — trống đồng Lô Lô ở Lũng Cú", "https://vjol.info.vn/tapchiviendantochoc/article/view/126816"],
+      ["Phan Đăng Nhật — về việc \"giã\" trống đồng trong lễ hội (Tạp chí NCPT Huế)", "https://vjol.info.vn/ncpt-hue/article/view/4120"],
+    ],
+    body: `
+Theo Viện Âm nhạc, các trống là họ **màng rung** (membranophone), chia "nhánh" theo cách đánh: đánh bằng dùi, vỗ bằng tay, lắc. *(Không nguồn nào trong lượt này cho số Hornbostel – Sachs cụ thể.)* Xem [[nhac-khi-hoc]].
+
+## Trống của người Việt
+| Trống | Cấu tạo, cách chơi | Dùng trong |
+|---|---|---|
+| **Trống cái** (trống đại) | Thân gỗ hình thùng, tiếng trầm vang, đặt trên giá | Sân khấu truyền thống ("trống đại cổ" giữ cho người hát), đi đầu đoàn múa rồng |
+| **[[ca-tru|Trống chầu]]** (Wikipedia đồng nhất với **trống đế**) | Trống nhỏ hai mặt, đánh một mặt bằng dùi gỗ dài; thân thường gỗ mít, mặt da trâu | [[am-nhac-ca-tru|Ca trù]] (quan viên đánh), [[cheo|chèo]], [[hat-xoan-hat-van-then|hát văn]]; Viện Âm nhạc có sách riêng về trống đế trong chèo |
+| **Trống cơm** | Thân gỗ khoét, hai mặt; người chơi **dán cơm nghiền** lên mặt da để chỉnh [[cao-do|cao độ]]; dây chằng zigzag qua hai mặt để căng; hai mặt thường lên cách nhau [[quang|quãng]] 5; vỗ bằng tay | Vai chính trong dàn [[tuong|hát bội]]; trong chèo chỉ "đánh luồn vào đàn" |
+| **Trống mảnh** (bồng bộc) | Khung gỗ, một mặt da, dùi gỗ cứng; tiếng đục, ít vang | Dàn nhạc nhỏ |
+| **Trống chiến** (trống trận) | Hình dáng giống trống cái | [[lan-dieu-cheo-va-tuong|Tuồng]] |
+*(Chưa tìm được nguồn về trống bồng, trống bản và kích thước trống chầu.)* Tên "trống chầu" và "trống đế" chồng lấn nhau giữa các tài liệu.
+
+## Trống của người Chăm
+| Trống | Mô tả (Viện Âm nhạc và báo chí) |
+|---|---|
+| **Paranưng** | Một mặt, đường kính khoảng **45 – 50 cm**, **vỗ bằng ngón tay**; vật thiêng của thầy Mư Tuôn, người đặt trống lên bụng mà vỗ (VTV); hay đi cùng kèn Saranai |
+| **Ghi-năng** (Ginăng) | Luôn chơi **thành cặp**, do hai người: hai trống tựa chéo vào nhau, một mặt vỗ tay, mặt kia đánh dùi; thân gỗ lim khoảng 0,7 m, mặt da trâu, dê hoặc hươu |
+| **Blong Bong** | **Trống lắc**: hai sợi dây gắn hạt gỗ đập vào hai mặt; cao độ không xác định; chỉ dùng trong một nghi lễ riêng |
+| **Rappana** | Trống của người Chăm theo đạo Hồi ở An Giang, hình dáng giống Paranưng nhưng công dụng khác |
+Bộ ba **kèn Saranai – trống Paranưng – đôi Ghi-năng** được ví là đầu – mình – hai chân; thiếu một thứ là "không có nhạc lễ" — xem [[am-nhac-ton-giao-va-dan-toc-viet-nam]].
+
+## Tây Nguyên và miền núi
+- **Hgơr** (Ê Đê): một bản ghi âm điền dã năm 1960 (lưu trữ CREM-CNRS, Paris) ghi trống hgơr chơi cùng sáu chiêng trong lễ hiến sinh ở buôn Ea Kmat. Xem [[cong-chieng]].
+- **[[lich-su-am-nhac-viet-nam|Trống đồng]]** của người **Lô Lô** (Lũng Cú, Hà Giang): vẫn được đánh trong tang lễ và lễ cúng tổ tiên; một bộ gồm trống đực và trống cái (trống cái to và vang hơn); bình thường chôn dưới đất, đến tang lễ mới đào lên.
+- Nhà nghiên cứu **Phan Đăng Nhật** cảnh báo: việc dàn dựng "giã" trống đồng bằng chày trong lễ hội hiện nay **không có cơ sở** truyền thống và có thể làm hỏng di sản.
+
+Liên quan: [[nhac-cu-viet-nam]], [[timpani]] (trống có cao độ của phương Tây), [[tabla-mridangam]] (lên dây bằng bột nhão — so với trống cơm).
+`,
+  },
+  {
+    slug: "dan-doan-dan-tu",
+    title: "Đàn đoản và đàn tứ: gỡ rối tên gọi",
+    category: 'organology',
+    also: ['vietnam'],
+    aliases: ["đàn đoản", "đàn tứ", "đàn tứ tròn", "đàn tứ thùng", "yueqin"],
+    summary: "Đàn đoản (cần ngắn) chính là \"đàn tứ tròn\", có gốc từ đàn nguyệt cầm (yueqin) của Trung Hoa; đàn tứ thùng là bản thân vuông ra đời khoảng thập niên 1960 trong nhạc viện. Cả hai khác với đàn nguyệt Việt Nam, vốn có cần dài.",
+    wiki: "Đàn_tứ",
+    refs: [
+      ["Wikipedia — Đàn tứ", "https://en.wikipedia.org/wiki/%C4%90%C3%A0n_t%E1%BB%A9"],
+      ["Wikipedia — Yueqin", "https://en.wikipedia.org/wiki/Yueqin"],
+      ["Wikipedia — Đàn nguyệt", "https://en.wikipedia.org/wiki/%C4%90%C3%A0n_nguy%E1%BB%87t"],
+      ["Viện Âm nhạc — Moon-shaped lute Nguyệt", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/moon-shaped-lute-nguyet---chordophone"],
+    ],
+    body: `
+Ba tên gọi hay bị lẫn:
+| Đàn | Cần | Thân | Dây | Ghi chú |
+|---|---|---|---|---|
+| **Đàn đoản** = **đàn tứ tròn** | **Ngắn** ("đoản") | Tròn | Bốn dây (Wikipedia; *cách đếm dây đơn hay dây đôi cần đối chiếu*) | Gốc từ **yueqin** (nguyệt cầm) Trung Hoa; nay ít dùng |
+| **Đàn tứ thùng** | | Hộp vuông, lưng phẳng | 4 dây, dây dài hơn | Ra đời khoảng thập niên 1960 ở nhạc viện, lên theo [[am-giai|thang âm]] phương Tây; tên "thùng" để phân biệt với "tứ tròn" |
+| **[[dan-nguyet|Đàn nguyệt]]** (đàn kìm) | **Dài** | Tròn như mặt trăng | 2 dây (đầu đàn có 4 trục nhưng chỉ mắc 2 dây — Viện Âm nhạc) | Phím cao để luyến láy; [[hat-xoan-hat-van-then|hát văn]], [[ca-hue-nha-nhac|ca Huế]], [[don-ca-tai-tu|tài tử]] |
+
+**Điểm dễ nhầm:** chữ Hán "nguyệt cầm" (yueqin, cần ngắn) ứng với **đàn tứ / đàn đoản** của Việt Nam, **không** phải đàn nguyệt Việt Nam (cần dài).
+
+*Chưa tìm được trang riêng của Viện Âm nhạc về đàn đoản.*
+
+Liên quan: [[nhac-cu-viet-nam]], [[pipa]], [[dan-ty-ba-tam-sen]].
+`,
+  },
+  {
+    slug: "nhac-cu-tay-nguyen-va-mien-nui",
+    title: "Nhạc cụ Tây Nguyên và miền núi phía Bắc: đàn goong, k'ni, đing năm, tù và, đàn môi, kèn lá",
+    category: 'organology',
+    also: ['vietnam'],
+    aliases: ["đàn goong", "đinh goong", "Ding Goong", "B'rang", "đàn k'ni", "k'ni", "đing năm", "Đing Năm", "đing bụh", "tù và", "đàn môi", "kèn lá", "sáo Mông", "púa", "Ư tra"],
+    summary: "Ngoài cồng chiêng, đàn đá và T'rưng, Tây Nguyên có đàn dây gảy Đinh Goong của người Gia Rai, đàn kéo k'ni dùng miệng làm hộp cộng hưởng, các nhạc cụ hơi bằng ống tre và bầu khô; vùng núi phía Bắc có đàn môi, kèn lá và sáo của người Mông. Bài ghi theo trang bảo tàng của Viện Âm nhạc và báo chí.",
+    refs: [
+      ["Viện Âm nhạc — danh mục nhạc cụ (trang có Dinh Goong, K'ny)", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments?page-nc=3"],
+      ["Viện Âm nhạc — Solos and ensembles of Vietnamese folk music instruments (CD)", "https://vienamnhac.vn/publication/cd-and-dvd/solos-and-ensembles-of-vietnamese-folk-music-instruments-3"],
+      ["Viện Âm nhạc — Gong and gong sets in the Highland", "https://vienamnhac.vn/vietnamese-music-space/museum/orchestras/gong-and-gong-sets-in-the-highland"],
+      ["Việt Nam News — Đing năm của người Ê Đê", "https://vietnamnews.vn/gallery/1252518/musician.html"],
+      ["Wikipedia — K'ni", "https://en.wikipedia.com/wiki/K%27ni"],
+      ["Viện Âm nhạc — Đing Năm", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/%C4%91ing-nam---airophone"],
+      ["Viện Âm nhạc — Dinh jong (Dinh tec)", "https://www.vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/dinh-jong-dinh-tec---airophone"],
+      ["Viện Âm nhạc — sưu tầm âm nhạc dân gian người Brâu", "https://www.vienamnhac.vn/news-and-event/institute-s-news/collecting-folk-music-of-the-brau-people-in-ngoc-hoi-district-of-kon-tum-province"],
+      ["Báo Lâm Đồng — Đinh năm", "https://baolamdong.vn/dinh-nam-nhac-cu-doc-dao-cua-nguoi-e-de-387394.html"],
+      ["Báo Công Thương — tù và Tây Nguyên", "https://ven.congthuong.vn/apicenter@/print_article&i=45146"],
+      ["Nhân Dân — kèn sừng trâu của người Xtiêng", "https://nhandan.vn/post-651809.html"],
+      ["Nhân Dân — Đàn môi, một nhạc cụ đặc biệt", "https://nhandan.vn/dan-moi-mot-nhac-cu-dac-biet-post489830.html"],
+      ["Viện Âm nhạc — Món quà quý của một Việt kiều (bộ sưu tập đàn môi)", "https://vienamnhac.vn/articles/traditional-music/a-priceless-gift-from-an-expatriate"],
+      ["Đại Đoàn Kết — Tha thiết tiếng kèn lá gọi bạn", "https://daidoanket.vn/tha-thiet-tieng-ken-la-goi-ban-10209687.html"],
+      ["Viện Âm nhạc — Púa", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/pua---airophone"],
+      ["Nhân Dân — Gen Z đưa sáo H'Mông vươn tầm quốc tế", "https://nhandan.vn/gen-z-dua-sao-hmong-vuon-tam-quoc-te-post818022.html"],
+    ],
+    body: `
+## Tây Nguyên
+| Nhạc cụ | Dân tộc | Mô tả (theo nguồn) |
+|---|---|---|
+| **Đinh Goong** (đàn goong; còn gọi B'rang, Tinh Dinh, Chinh) | **Gia Rai**, nay phổ biến khắp Tây Nguyên | Đàn dây gảy, chơi được nhiều bè (Viện Âm nhạc). *Cấu tạo chi tiết (ống tre, số dây) chưa xác minh.* Việt Nam News so **đing năm** của người Ê Đê với "goong của người Ba Na" |
+| **K'ni** (K'ny) | Gia Rai | Đàn kéo một dây có phím cố định; người chơi **ngậm một sợi chỉ nối với dây đàn**, dùng **khoang miệng làm hộp cộng hưởng** và đổi khẩu hình để đổi [[am-sac|âm sắc]]. *Các nguồn khác nhau về số dây.* |
+| **Đing Năm** | Ê Đê | Nhạc cụ hơi: các ống tre có lưỡi gà gắn vào quả bầu khô — họ hàng của [[khen]] |
+| **Đing bụh** | Brâu | Nhạc cụ của phụ nữ: 1 – 2 ống tre dài khoảng 1,3 m, vỗ tay trước miệng ống — cùng nguyên lý với [[trung-klong-put|K'lông pút]] |
+| **Tù và** (sừng trâu) | Nhiều dân tộc | Sừng trâu dài 30 – 50 cm, khoét một khe dài ở giữa để thổi; dùng làm hiệu lệnh; trong lễ hội mỗi làng cử một già làng thổi. Người Xtiêng coi kèn sừng trâu cùng cồng chiêng là vật gia truyền thiêng |
+Lưu ý: chữ "goong" cũng là tên một loại cồng của người Sêđăng, M'nâm, Stiêng — đừng nhầm. Xem [[cong-chieng]].
+
+## Miền núi phía Bắc
+| Nhạc cụ | Mô tả |
+|---|---|
+| **Đàn môi** | Phổ biến ở nhiều dân tộc; tên địa phương (Viện Âm nhạc): Pangtotinh (Mường), Toong (Mạ), Hun Toong (Thái), **Ư tra** (Mông). Trai gái Mông dùng để tỏ tình. Một nghệ sĩ Việt kiều đã tặng Viện Âm nhạc bộ sưu tập khoảng **300 đàn môi** của nhiều nước |
+| **Kèn lá** | Người Mông ngậm một chiếc lá mềm, dai giữa hai môi; [[cao-do|cao độ]] do hơi và khẩu hình; [[ngau-hung-ung-tac|ứng tác]], dùng trong đêm hát gọi bạn. Cùng [[khen]] và đàn môi được coi là "hồn" của đời sống tinh thần người Mông |
+| **Púa** | Nhạc cụ thổi bằng môi của người Mông: hai ống cuộn từ lá đồng mỏng (Viện Âm nhạc) |
+| **Sáo Mông** | Một nguồn du lịch tả là sáo đơn có lưỡi gà, âm sắc nhiều màu, người Mông gọi "tra pun tu" *(nguồn yếu; cấu tạo chưa xác minh)* |
+
+Liên quan: [[nhac-cu-viet-nam]], [[am-nhac-ton-giao-va-dan-toc-viet-nam]], [[dan-da]].
+`,
+  },
+  {
+    slug: "nhac-cu-go-nghi-le-viet-nam",
+    title: "Sênh tiền, mõ, chuông, thanh la, khánh: nhạc cụ gõ trong nghi lễ",
+    category: 'organology',
+    also: ['vietnam'],
+    aliases: ["sênh tiền", "sinh tiền", "phách sâu tiền", "mõ làng", "mõ chùa", "chuông chùa", "thanh la", "tiu cảnh", "khánh", "khánh đá", "ty chung ty khánh"],
+    summary: "Các nhạc cụ tự thân vang trong nghi lễ và sân khấu Việt: sênh tiền (vừa là phách, vừa là cái nạo, vừa là chuông lắc), mõ chùa và mõ làng, chuông chùa, thanh la, tiu cảnh, khánh. Kèm tranh luận về \"ty chung – ty khánh\" trong nhạc cung đình triều Nguyễn.",
+    wiki: "Sênh_tiền",
+    refs: [
+      ["Wikipedia — Sênh tiền", "https://en.wikipedia.org/wiki/S%C3%AAnh_ti%E1%BB%81n"],
+      ["Viện Âm nhạc — Sênh tiền (coin clappers)", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/senh-tien-coin-clappers---idiophone"],
+      ["Viện Âm nhạc — Mõ (tocsin)", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/mo-tocsin---idiophone"],
+      ["Viện Âm nhạc — Mõ làng", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/mo-lang-tocsin-%E2%80%93-idiophone"],
+      ["Viện Âm nhạc — Chuông chùa", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/chuong-chua--idiophone"],
+      ["Viện Âm nhạc — Thanh la", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/thanh-la---idiophone"],
+      ["Viện Âm nhạc — Tiu cảnh", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/tiu-canh---idiophone"],
+      ["Viện Âm nhạc — Song loan", "https://vienamnhac.vn/vietnamese-music-space/museum/musical-instruments/song-loan--idiophone"],
+      ["Viện Âm nhạc — Định nghĩa lại hệ thống dàn nhạc nhã nhạc triều Nguyễn", "https://vienamnhac.vn/heritage/nha-nhac---hue-s/articles/redefine-the-orchestra-system-in-nha-nhac-of-the-nguyen-dynasty"],
+      ["Viện Âm nhạc — Some exchanges about Ca trù", "https://www.vienamnhac.vn/heritage/ca-tru-singing/articles/some-exchanges-about-ca-tru"],
+      ["Báo Văn hoá — Đàn đá Khánh Sơn", "https://baovanhoa.vn/van-hoa/de-dan-da-khanh-son-ngan-mai-khuc-nhac-vui-xuan-12480.html"],
+    ],
+    body: `
+Tất cả là nhạc cụ **tự thân vang** (idiophone) — xem [[nhac-khi-hoc]].
+
+| Nhạc cụ | Mô tả (Viện Âm nhạc, trừ khi ghi khác) | Dùng trong |
+|---|---|---|
+| **Sênh tiền** (sinh tiền; xưa: phách sâu tiền, phách quán tiền) | Ba thanh gỗ cứng gắn đồng tiền cổ; cùng lúc làm **phách**, **cái nạo** và **chuông lắc** (Wikipedia) | Dùng ở triều Nguyễn từ đầu thế kỷ 19 rồi lan sang các thể loại khác; người Mường cũng chơi |
+| **Mõ chùa** | Gỗ cứng; [[cao-do|cao độ]] không xác định | Tụng kinh |
+| **Mõ làng** | Hình bán nguyệt, làm từ một đoạn tre đực; tiếng trầm ấm | Báo hiệu trong làng |
+| **Mõ trâu** | Đeo cổ trâu, có hai thanh gỗ gõ | |
+| **Chuông chùa** | Đồng, đường kính 15 – 23 cm, đánh bằng dùi bọc vải | Nghi lễ chùa |
+| **Thanh la** | Hợp kim đồng – chì, đường kính 15 – 25 cm, dùi gỗ | [[lich-su-am-nhac-viet-nam|Nhạc cung đình]], nhạc lễ, [[cheo|chèo]], sân khấu truyền thống |
+| **Tiu cảnh** | Đồng | Dàn nhạc lễ |
+| **Song loan** | Giữ nhịp bằng chân | [[don-ca-tai-tu|Tài tử]], [[cai-luong|cải lương]], [[ca-hue-nha-nhac|ca Huế]] — xem [[phach-song-lang-mo]] |
+| **Khánh** | Khánh đá, khánh đồng — có trong dàn nhạc cung đình (theo báo chí, dàn cung đình triều Nguyễn có khoảng 42 loại nhạc cụ) | |
+
+## "Ty chung – ty khánh": dàn nhạc hay chức danh?
+Một bài của Viện Âm nhạc đề nghị xem lại cách hiểu quen thuộc: "ty chung – ty khánh" trong nhạc cung đình triều Nguyễn có thể là **chức danh của người phụ trách**, chứ không phải một dàn chuông đồng và khánh đá — cần đọc lại nguồn Hán văn. Xem [[am-nhac-thoi-nguyen]].
+
+## Chũm choẹ trong ca trù?
+Viện Âm nhạc chưa tìm thấy văn bản chính thức nào thế kỷ 17 – 18 ghi chũm choẹ là nhạc cụ của phường nhạc hay [[ca-tru|ca trù]].
+
+**Đàn đá Khánh Sơn** của người Raglai (Khánh Hoà) — theo lời nghệ nhân, ban đầu dùng để xua thú phá rẫy, sau thành vật thiêng trong lễ hội: xem [[dan-da]].
+
+Liên quan: [[nhac-cu-viet-nam]], [[bo-go-dan-nhac]].
 `,
   },
 ]

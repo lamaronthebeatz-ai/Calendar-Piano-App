@@ -117,7 +117,7 @@ Nghe nhạc 10 phút khác với **học nhạc nhiều năm**. Câu hỏi thứ
     title: 'Tâm lý học phát triển âm nhạc: trẻ nghe và học nhạc theo tuổi',
     category: 'musicology',
     also: ['musicianship'],
-    aliases: ['tâm lý học phát triển âm nhạc', 'developmental music psychology', 'trẻ sơ sinh nghe nhạc', 'phát triển âm nhạc ở trẻ', 'thấm văn hoá âm nhạc', 'enculturation', 'Trehub', 'Trainor', 'hát ru', 'lullaby'],
+    aliases: ['tâm lý học phát triển âm nhạc', 'developmental music psychology', 'trẻ sơ sinh nghe nhạc', 'phát triển âm nhạc ở trẻ', 'thấm văn hoá âm nhạc', 'enculturation', 'Trehub', 'Trainor', 'lullaby'],
     summary: 'Trẻ sơ sinh đã nhận ra đường nét giai điệu và nhớ giai điệu theo cao độ tương đối; 6 tháng tuổi còn nhận được nhịp lẻ kiểu Balkan nhưng đến 12 tháng thì "khớp" vào nhịp của văn hoá mình; khoảng 5 tuổi trẻ biết nốt nào thuộc giọng, khoảng 7 tuổi cảm được hoà âm. Bài tổng hợp các mốc này và hệ quả cho việc dạy trẻ.',
     wiki: 'Music_psychology',
     refs: [
@@ -160,7 +160,7 @@ Trẻ nhỏ coi một giai điệu **dịch giọng** là "cùng một giai đi�
 Người lớn Bắc Mỹ chỉ nhận ra lỗi nhịp trong **nhịp đơn**; người lớn Bulgaria và Macedonia nhận ra lỗi trong cả nhịp đơn lẫn [[nhip-hon-hop|nhịp lẻ]] kiểu Balkan (ví dụ 7/8). Trẻ Bắc Mỹ 6 tháng tuổi làm được **cả hai**, nhưng đến 12 tháng thì giống người lớn Bắc Mỹ. Nghe nhạc Balkan một thời gian ngắn ở nhà khôi phục được khả năng này ở trẻ 12 tháng, **nhưng không ở người lớn** (Hannon và Trehub, 2005). Bài học: **nghe đa dạng từ sớm** mở rộng "bộ lọc" nhịp. Xem [[cam-nhan-phach]].
 
 ## 4. Hát ru: phổ quát
-Mehr và cộng sự (2018) cho 750 người nghe trên mạng ở 60 quốc gia nghe các đoạn 14 giây trích từ bài hát của 86 xã hội, phần lớn là xã hội quy mô nhỏ. Người nghe đoán được **chức năng** của bài (múa, ru con, chữa bệnh, tình yêu) tốt hơn ngẫu nhiên. Hát cho trẻ nhỏ là một hành vi có ở **mọi nền văn hoá** — xem [[am-nhac-hoc-tien-hoa]].
+Mehr và cộng sự (2018) cho 750 người nghe trên mạng ở 60 quốc gia nghe các đoạn 14 giây trích từ bài hát của 86 xã hội, phần lớn là xã hội quy mô nhỏ. Người nghe đoán được **chức năng** của bài (múa, [[hat-ru|ru con]], chữa bệnh, tình yêu) tốt hơn ngẫu nhiên. Hát cho trẻ nhỏ là một hành vi có ở **mọi nền văn hoá** — xem [[am-nhac-hoc-tien-hoa]].
 
 ## 5. Giọng và hoà âm: thấm văn hoá
 Trainor và Trehub (1994): trẻ **5 tuổi** nhận ra nốt **lạc giọng** tốt hơn nốt trong giọng; trẻ **7 tuổi** (và người lớn) còn nhận ra nốt **sai hợp âm ngầm**. Như vậy cảm giác [[dieu-tinh|giọng]] có trước cảm giác [[chuc-nang-hoa-am|hoà âm]]. Ở trẻ 4 tuổi, phản ứng điện não đã có dù hành vi chưa thể hiện (Corrigall và Trainor, 2014).
@@ -208,7 +208,7 @@ McPherson (2005) theo dõi **157 trẻ** 7 – 9 tuổi trong 3 năm đầu họ
 | **Chọn lọc giới tính** | Darwin, *The Descent of Man* (1871) | [[not-nhac|Nốt nhạc]] và [[tiet-tau|nhịp điệu]] xuất hiện ở tổ tiên loài người "để quyến rũ người khác giới", giống tiếng chim hót. Darwin đối lập với quan điểm của Herbert Spencer cho rằng âm nhạc sinh ra từ ngữ điệu xúc cảm của lời nói |
 | **Sản phẩm phụ** ("bánh kem cho tai") | Steven Pinker, *How the Mind Works* (1997) | Âm nhạc không được chọn lọc vì chính nó; nó là một "món ngọt" tận dụng các năng lực có sẵn vì lý do khác (ngôn ngữ, nghe âm thanh môi trường, vận động) |
 | **Gắn kết xã hội** | Savage và cộng sự, *Behavioral and Brain Sciences* (2021) | Âm nhạc giúp con người gắn bó trong những nhóm **lớn hơn** mức mà việc chải lông cho nhau ở các loài linh trưởng cho phép; tiến hoá cùng văn hoá (đồng tiến hoá gen – văn hoá) |
-| **Tín hiệu đáng tin** | Mehr và cộng sự, cùng số tạp chí (2021) | Biểu diễn nhịp nhàng, đồng bộ của một nhóm là tín hiệu **khó giả** về sức mạnh và khả năng phối hợp của nhóm; hát ru là tín hiệu về sự chú ý của cha mẹ với trẻ sơ sinh vốn rất cần chăm sóc |
+| **Tín hiệu đáng tin** | Mehr và cộng sự, cùng số tạp chí (2021) | Biểu diễn nhịp nhàng, đồng bộ của một nhóm là tín hiệu **khó giả** về sức mạnh và khả năng phối hợp của nhóm; [[hat-ru|hát ru]] là tín hiệu về sự chú ý của cha mẹ với trẻ sơ sinh vốn rất cần chăm sóc |
 
 Hai bài năm 2021 được đăng thành một cặp tranh luận, kèm hơn một trăm bình luận của các nhà nghiên cứu khác. **Chưa có kết luận cuối cùng.** Nhóm "tín hiệu đáng tin" cho rằng giả thuyết sản phẩm phụ không giải thích được toàn bộ bằng chứng.
 

@@ -33,6 +33,13 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 3. [[tan-nhac-viet-nam|Tân nhạc]]: [[am-nhac-thoi-phap-thuoc]] → [[nhac-tien-chien]] → [[nhac-vang-bolero]], [[nhac-trinh]].
 4. Thực hành trên piano: [[dem-dieu-viet-nam]] (ca khúc) và [[hoa-am-cho-giai-dieu-ngu-cung]] (dân ca).
 5. Phân biệt sự thật và tin đồn: [[giai-thoai-am-nhac-viet-nam]].
+
+## Đọc sâu hơn
+| Phần | Trang |
+|---|---|
+| Lý thuyết sâu | [[hoi-trong-nhac-tai-tu-cai-luong]], [[long-ban-va-ky-thuat-to-diem]], [[am-nhac-ca-tru]], [[lan-dieu-cheo-va-tuong]], [[hat-ru]] |
+| Nhạc cụ | [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nhac-cu-tay-nguyen-va-mien-nui]], [[nhac-cu-go-nghi-le-viet-nam]] |
+| Nhạc sĩ | [[le-thuong]], [[van-chung]], [[hoang-trong]], [[hoang-thi-tho]], [[y-van]], [[tu-cong-phung]], [[nguyen-anh-9]], [[pho-duc-phuong]], [[hong-dang]], [[nguyen-tai-tue]], [[nguyen-cuong]], [[tran-lap]], [[son-tung-m-tp]] |
 `,
   },
   {
@@ -322,6 +329,8 @@ Liên quan: [[the-loai-am-nhac-viet-nam]], [[dan-day]], [[am-nhac-truyen-thong-v
 ::youtube OUJId7mBMn4 | *Hồng hồng tuyết tuyết* · NSND Quách Thị Hồ
 
 ::youtube Tz35icN-stA | Ca trù — phim giới thiệu di sản *Ca trù singing*
+
+Phần âm nhạc chi tiết — thể cách, khổ phách, trống chầu: [[am-nhac-ca-tru]].
 `,
   },
   {
@@ -396,6 +405,8 @@ Liên quan: [[tuong]], [[cai-luong]], [[the-loai-am-nhac-viet-nam]], [[giai-thoa
 ::youtube 6h_6vxjPp2M | *Thị Mầu lên chùa* · NSƯT An Chinh, NS Hiền Thảo; Dàn nhạc Nhà hát Chèo Việt Nam
 
 ::youtube A3fMAoVyfZY | *Thị Mầu lên chùa* · NSƯT Thu Huyền
+
+Hệ thống làn điệu chèo: [[lan-dieu-cheo-va-tuong]].
 `,
   },
   {
@@ -428,6 +439,8 @@ Liên quan: [[cheo]], [[cai-luong]], [[the-loai-am-nhac-viet-nam]], [[giai-thoai
 ::youtube uRyQHv6k3TU | *Trích đoạn Hồ Nguyệt Cô hóa cáo* · Nhà hát Tuồng Việt Nam
 
 ::youtube k8bxVZ8aW2Y | *Trích đoạn Trần Quốc Toản ra quân* · Nhà hát Tuồng Việt Nam
+
+Nói lối, hát nam, hát khách: [[lan-dieu-cheo-va-tuong]].
 `,
   },
   {
@@ -528,13 +541,15 @@ Liên quan: [[cai-luong]], [[ly-thuyet-am-nhac-co-truyen-viet-nam]], [[the-loai-
 ## Nghe
 
 ::youtube 5M4h4AGteGU | Đờn ca tài tử Nam Bộ — phim giới thiệu di sản
+
+Hơi và kỹ thuật tô điểm: [[hoi-trong-nhac-tai-tu-cai-luong]], [[long-ban-va-ky-thuat-to-diem]].
 `,
   },
   {
     slug: "ca-hue-nha-nhac",
     title: "Nhã nhạc cung đình và ca Huế",
     category: 'vietnam',
-    aliases: ["nhã nhạc", "nhã nhạc cung đình Huế", "ca Huế", "điệu Bắc", "điệu Nam", "hơi Ai", "Nam ai", "Nam bình", "court music of Vietnam"],
+    aliases: ["nhã nhạc", "nhã nhạc cung đình Huế", "ca Huế", "điệu Bắc", "điệu Nam", "Nam ai", "Nam bình", "court music of Vietnam"],
     summary: "Nhã nhạc là nhạc cung đình triều Nguyễn, di sản đầu tiên của Việt Nam được UNESCO công nhận (tuyên bố năm 2003, đưa vào danh sách năm 2008). Ca Huế pha trộn chất dân gian và cung đình, với hai hệ điệu thức: điệu Bắc và điệu Nam (có hơi Ai).",
     wiki: "Nhã_nhạc",
     refs: [
@@ -555,7 +570,7 @@ Liên quan: [[cai-luong]], [[ly-thuyet-am-nhac-co-truyen-viet-nam]], [[the-loai-
 | **Điệu Bắc** (điệu khách) | Tươi sáng, trang trọng | — |
 | **Điệu Nam** | Buồn, ai oán | Nam ai, Nam bình, Quả phụ, Nam xuân, Tương tư khúc |
 | Pha Bắc – Nam | | Tứ đại cảnh |
-Nghiên cứu đăng trên tạp chí ĐH Sư phạm TP.HCM mô tả **điệu Nam hơi Ai** là đặc sản miền Trung. Ghi trên [[khuong-nhac|khuông nhạc]] trông gần giống điệu Bắc, nhưng khi hát một số âm hơi **"già"** (cao) hoặc **"non"** (thấp) hơn: tức **không** khớp [[luat-binh-quan|bình quân luật]]. Xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
+Nghiên cứu đăng trên tạp chí ĐH Sư phạm TP.HCM mô tả **điệu Nam [[hoi-trong-nhac-tai-tu-cai-luong|hơi Ai]]** là đặc sản miền Trung. Ghi trên [[khuong-nhac|khuông nhạc]] trông gần giống điệu Bắc, nhưng khi hát một số âm hơi **"già"** (cao) hoặc **"non"** (thấp) hơn: tức **không** khớp [[luat-binh-quan|bình quân luật]]. Xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
 
 Nhạc cụ: [[dan-tranh]], [[dan-nguyet]], [[dan-nhi]], [[dan-ty-ba-tam-sen|tỳ bà]], [[sao-truc|sáo]], [[ken-bau]] (trong dàn đại nhạc).
 
@@ -651,6 +666,8 @@ Liên quan: [[quan-ho]], [[ca-hue-nha-nhac]], [[the-loai-am-nhac-viet-nam]], [[d
 ::youtube mcILpWU81GU | Bài chòi Trung Bộ — phim giới thiệu di sản
 
 ::youtube GtV8tj-A9ac | Dân ca ví, giặm Nghệ Tĩnh — *Về miền nước biếc non xanh*
+
+Hát ru ba miền: [[hat-ru]].
 `,
   },
   {
@@ -1191,7 +1208,7 @@ Liên quan: [[am-nhac-thoi-phap-thuoc]], [[piano-viet-nam]], [[nhac-si-viet-nam]
 **Sinh** 1919, Huế · **Mất** 2002 · Giải thưởng Hồ Chí Minh (2000).
 
 ## Đêm đông (1939)
-Theo lời kể của chính ông: viết khi đang học ở Trường Thăng Long (Hà Nội), trong cái Tết đầu tiên xa nhà, sau một đêm lang thang đến phố Khâm Thiên. Trong một lá thư ngày 4/11/1997 ông giải thích "tiếng chuông" trong bài là chuông chùa.
+Theo lời kể của chính ông: viết khi đang học ở Trường Thăng Long (Hà Nội), trong cái Tết đầu tiên xa nhà, sau một đêm lang thang đến phố Khâm Thiên. Trong một lá thư ngày 4/11/1997 ông giải thích "tiếng chuông" trong bài là [[nhac-cu-go-nghi-le-viet-nam|chuông chùa]].
 
 **Về "nghi án tác giả":** hai lượt tìm kiếm có chủ đích **không tìm thấy** nguồn nào đặt nghi vấn. Những tranh luận có thật chỉ xoay quanh cách hiểu một câu hát và việc hát sai lời. Xem [[giai-thoai-am-nhac-viet-nam]].
 
@@ -1307,6 +1324,8 @@ Liên quan: [[nhac-co-dien-viet-nam]], [[nhac-si-viet-nam]].
       ["Báo Pháp luật — Phạm Tuyên, người con tài năng của Tứ kiệt Hà thành", "https://baophapluat.vn/nhac-si-pham-tuyen-nguoi-con-tai-nang-cua-tu-kiet-ha-thanh-post226521.html"],
       ["Nhân Dân — Phạm Tuyên với \"Như có Bác Hồ trong ngày vui đại thắng\"", "https://nhandan.vn/nhac-si-pham-tuyen-voi-ca-khuc-nhu-co-bac-ho-trong-ngay-vui-dai-thang-post524944.html"],
       ["Báo Quốc tế — đêm nhạc mừng sinh nhật tuổi 88", "https://baoquocte.vn/nhac-sy-pham-tuyen-lam-dem-nhac-mung-sinh-nhat-tuoi-88-41101.html"],
+      ["Thanh Tra — Quyết định của Chủ tịch nước trao tặng giải thưởng (2012)", "https://thanhtra.com.vn/van-hoa-the-thao-BE2162E3A/quyet-dinh-cua-chu-tich-nuoc-trao-tang-giai-thuong-va-danh-hieu-cho-nghe-si-DB9B63D3.html"],
+      ["PLO — Phạm Tuyên đạt 1.112 phiếu xét Giải Hồ Chí Minh", "https://plo.vn/ns-pham-tuyen-dat-1112-phieu-xet-giai-ho-chi-minh-post75317.html"],
     ],
     body: `
 **Sinh** 12/1/1930, Hải Dương — con học giả **Phạm Quỳnh** · Trong chiến tranh phụ trách ban âm nhạc Đài Tiếng nói Việt Nam.
@@ -1314,7 +1333,7 @@ Liên quan: [[nhac-co-dien-viet-nam]], [[nhac-si-viet-nam]].
 - Khoảng **700 bài** trong hơn 60 năm (tính đến sinh nhật 88 tuổi).
 - *Tiến lên đoàn viên* (1954) và nhiều ca khúc thiếu nhi.
 - ***Như có Bác Hồ trong ngày vui đại thắng***: viết tối **28/4/1975**, phát trên Đài Tiếng nói Việt Nam ngày **30/4/1975**.
-*(Tình trạng hiện tại và Giải thưởng Hồ Chí Minh của ông chưa được xác minh trong lượt này.)*
+- **Giải thưởng Hồ Chí Minh** đợt 2012 (theo quyết định của Chủ tịch nước, Báo Thanh Tra; PLO đưa tin ông đạt 1.112 phiếu).
 
 Liên quan: [[nhac-cach-mang]], [[nhac-si-viet-nam]].
 
@@ -1398,7 +1417,7 @@ Liên quan: [[am-nhac-viet-nam-sau-1975]], [[nhac-si-viet-nam]].
 
 ## Khác
 - Hơn 60 tác phẩm, phần lớn cho phim và sân khấu; giải nhạc phim xuất sắc với *Mùa ổi* (giải Bông sen, 2001) và giải **Kim Tước** cho âm nhạc tại Liên hoan phim quốc tế Thượng Hải lần thứ 8 (2005).
-- Khoảng 20 bài **romance** do Ái Vân thu âm (*Ru con mùa đông*, *Trăng chiều*).
+- Khoảng 20 bài **romance** do Ái Vân thu âm (*[[hat-ru|Ru con]] mùa đông*, *Trăng chiều*).
 
 Liên quan: [[nhac-co-dien-viet-nam]], [[piano-viet-nam]], [[nhac-si-viet-nam]].
 `,
@@ -1487,9 +1506,11 @@ Bảng chỉ ghi những gì có nguồn (xem cuối trang). "—" là chưa xá
 | [[am-nhac-thoi-phap-thuoc|Nguyễn Văn Tuyên]] | — | Hát bài của mình ở Hà Nội 9/6/1938 — mốc tân nhạc |
 | [[nguyen-xuan-khoat|Nguyễn Xuân Khoát]] | 1910 – 1993 | *Bình minh* |
 | Dương Thiệu Tước | 1915 – 1995 | *Tiếng xưa*, *Ơn nghĩa sinh thành* |
-| Lê Thương (Ngô Đình Hộ) | — | Trường ca *Hòn vọng phu* |
+| [[le-thuong|Lê Thương]] (Ngô Đình Hộ) | 1914 – 1996 | Trường ca *Hòn vọng phu*, *Bản đàn xuân* |
+| [[van-chung|Văn Chung]] (Mai Văn Chung) | 1914 – 1984 | *Tiếng sáo chăn trâu* (1935) |
+| [[hoang-trong|Hoàng Trọng]] | 1922 – 1998 | *Phút chia ly* — "vua tango" |
 | Hoàng Quý | — | *Cô láng giềng*; lập nhóm Đồng Vọng (1939) |
-| Đặng Thế Phong | — (mất khi 22 hoặc 24 tuổi) | *Con thuyền không bến*, *Đêm thu*, *Giọt mưa thu* |
+| Đặng Thế Phong | — (Tiền Phong: mất khi 22 tuổi) | *Con thuyền không bến*, *Đêm thu*, *Giọt mưa thu* |
 | [[nguyen-van-thuong|Nguyễn Văn Thương]] | 1919 – 2002 | *Đêm đông* (1939) |
 | [[van-cao|Văn Cao]] | 1923 – 1995 | *Buồn tàn thu*, *Thiên Thai*, *[[am-nhac-viet-nam-1945-1975|Tiến quân ca]]* |
 | [[pham-duy|Phạm Duy]] | 1921 – 2013 | *Tình ca*, hơn 1.000 bài |
@@ -1507,9 +1528,14 @@ Bảng chỉ ghi những gì có nguồn (xem cuối trang). "—" là chưa xá
 | Huy Du | 1926 – 2007 | *Đường chúng ta đi*, *Anh vẫn hành quân* | 2000 (nguồn chưa trích dẫn) |
 | Phan Huỳnh Điểu | 1924 – 2015 | *Đoàn Vệ quốc quân*, *Bóng cây Kơ-nia*, *Anh ở đầu sông em cuối sông* | 2000 |
 | Trần Hoàn | 1928 – 2003 | *Sơn nữ ca*; ba bài về Bác Hồ (được Giải HCM) | có (năm chưa rõ) |
-| [[pham-tuyen|Phạm Tuyên]] | sinh 1930 | *Như có Bác Hồ trong ngày vui đại thắng* | — |
+| [[pham-tuyen|Phạm Tuyên]] | sinh 1930 | *Như có Bác Hồ trong ngày vui đại thắng* | 2012 |
 | Hoàng Hiệp | 1931 – (2013?) | *Câu hò bên bờ Hiền Lương* (với Đằng Giao), *Lá đỏ* | — |
-| Thuận Yến | — 2014 | *Màu hoa đỏ*, *Chia tay hoàng hôn*, *Đi trong hương tràm* | — |
+| Thuận Yến (Đoàn Hữu Công) | 1932 hoặc 1935 – 2014 | *Màu hoa đỏ* (giải Bộ Quốc phòng 1994), *Chia tay hoàng hôn*, *Đi trong hương tràm* | được đề nghị 2017 (kết quả chưa xác minh) |
+| [[nguyen-tai-tue|Nguyễn Tài Tuệ]] | 1936 – 2022 | *Xa khơi*, *Tiếng hát giữa rừng Pác Bó* | — |
+| [[hong-dang|Hồng Đăng]] | 1936 – 2022 | *Hoa sữa*, *Biển hát chiều nay* | Giải thưởng Nhà nước 2001 |
+| Hoàng Hà (Hoàng Phi Hồng) | sinh 1929 – (đã mất) | *Đất nước trọn niềm vui* | — |
+| [[nguyen-cuong|Nguyễn Cường]] | sinh 1943 | *Đôi mắt Pleiku*, *Ly cà phê Ban Mê* | — |
+| [[pho-duc-phuong|Phó Đức Phương]] | 1944 – 2020 | *Chảy đi sông ơi*, *Trên đỉnh Phù Vân* | — |
 | An Thuyên | — 2015 | *Ca dao em và tôi*, *Neo đậu bến quê* | — |
 
 ## Miền Nam 1954 – 1975
@@ -1524,6 +1550,14 @@ Bảng chỉ ghi những gì có nguồn (xem cuối trang). "—" là chưa xá
 | Châu Kỳ | — | *Giọt lệ đài trang*, *Con đường xưa em đi* |
 | Trúc Phương | — | *Mưa nửa đêm*, *Đêm tâm sự* — "ông hoàng bolero" |
 | Trần Thiện Thanh (Nhật Trường) | 1942 – 2005 | *Hoa trinh nữ*, *Hàn Mặc Tử* |
+| [[hoang-thi-tho|Hoàng Thi Thơ]] | 1929 – 2001 | *Duyên quê*; hơn 500 bài |
+| [[tu-cong-phung|Từ Công Phụng]] | — | *Bây giờ tháng mấy*, *Mắt lệ cho người tình* |
+| [[y-van|Y Vân]] (Trần Tấn Hậu) | 1933 – 1992 | *Lòng mẹ* (1952) |
+| Anh Bằng (Trần An Bường) | 1927 – 2015 | *Anh còn nợ em* |
+| Văn Phụng | 1930 – 1999 | *Tiếng dương cầm*, *Trăng sơn cước* |
+| Nhật Ngân và Trần Trịnh ("Trịnh Lâm Ngân") | — | *Xuân này con không về*, *Mùa xuân của mẹ* |
+| [[nguyen-anh-9|Nguyễn Ánh 9]] | 1940 – 2016 | *Không*, *Buồn ơi chào mi* |
+| Lê Hựu Hà | — 2003? | Ban Hải Âu (1966), Phượng Hoàng (1970); *Đồng xanh*, *Tôi muốn* |
 
 ## Sau 1975
 | Nhạc sĩ | Năm | Tác phẩm |
@@ -1534,6 +1568,15 @@ Bảng chỉ ghi những gì có nguồn (xem cuối trang). "—" là chưa xá
 | Trần Quang Lộc | 1949 – 2020 | *Có phải em mùa thu Hà Nội*, *Về đây nghe em* |
 | Bảo Chấn | — | *Bên em là biển rộng*, *Một ngày mùa đông* |
 | Dương Thụ | — | 107 bài được biểu diễn, thu âm từ 1980 |
+| Đức Huy | sinh 1947 | *Và con tim đã vui trở lại*, *Đừng xa em đêm nay* |
+| Võ Thiện Thanh | sinh 1968 (một nguồn) | *Tình 2000*, *Chồng xa*, *Khi ta 20* |
+| Đức Trí | — | Tốt nghiệp Berklee; *Ta chẳng còn ai* (1996, Phương Thanh) |
+| [[tran-lap|Trần Lập]] (Bức Tường) | 1974 – 2016 | Rock |
+| Huy Tuấn | — | *Hãy toả sáng* (SEA Games 31, 2022); dự án *Quê nhà* (2011) |
+| Nguyễn Hải Phong | — | *Bàn tay trắng*, *Góc tối* |
+| Giáng Son | — | *Giấc mơ trưa*, *Hà Nội 12 mùa hoa*; một giao hưởng ba chương |
+| [[son-tung-m-tp|Sơn Tùng M-TP]] | sinh 1994 | *Em của ngày hôm qua*, *Hãy trao cho anh* |
+| Hứa Kim Tuyền | sinh 1995 | *Người gieo mầm xanh*, *Hoa Kỳ* (2020) |
 
 ## Nhạc hàn lâm
 | Nhạc sĩ | Năm | Ghi chú |
@@ -1543,10 +1586,12 @@ Bảng chỉ ghi những gì có nguồn (xem cuối trang). "—" là chưa xá
 | Đỗ Hồng Quân | — | Opera *Lá đỏ* (giải thưởng âm nhạc 2016); dựng lại *Cô Sao* |
 | [[dang-huu-phuc|Đặng Hữu Phúc]] | sinh 1953 | Piano, nhạc phim |
 | Vũ Nhật Tân | — 2020 (50 tuổi) | Nhạc thể nghiệm, điện tử: *Hanoinoise* |
+| Ca Lê Thuần | 1938 – 2017 | Giáo sư, nhạc sĩ |
+| Doãn Nho | — | Giải thưởng Hồ Chí Minh 2017 |
 | [[ton-that-tiet|Tôn Thất Tiết]] | sinh 1933 | Pháp |
 | [[nguyen-thien-dao|Nguyễn Thiện Đạo]] | 1940 – 2015 | Pháp, học trò Messiaen |
 
-*Chưa có dữ liệu đáng tin trong lượt này: Văn Chung, Thẩm Oánh, Hoàng Thi Thơ, Từ Công Phụng, Đức Huy, Huy Tuấn, Ca Lê Thuần, Hoàng Đạm, Phúc Linh, Đàm Linh.*
+*Chưa có dữ liệu đáng tin: Thẩm Oánh (chỉ biết là thành viên nhóm Myosotis), Hoàng Đạm, Phúc Linh, Đàm Linh; năm sinh của Từ Công Phụng, Huy Tuấn, Đức Trí; danh sách đầy đủ giải thưởng âm nhạc các đợt 2005 và 2022.*
 
 Liên quan: [[am-nhac-viet-nam]], [[piano-viet-nam]].
 `,
@@ -1555,7 +1600,7 @@ Liên quan: [[am-nhac-viet-nam]], [[piano-viet-nam]].
     slug: "ly-thuyet-am-nhac-co-truyen-viet-nam",
     title: "Lý thuyết âm nhạc cổ truyền Việt Nam: hò – xự – xang, hơi, điệu, nhịp",
     category: 'vietnam',
-    aliases: ["hò xự xang xê cống", "hơi và điệu", "điệu Bắc điệu Nam", "hơi Oán", "hơi Xuân", "già non (cao độ)", "lòng bản", "giai điệu khung", "nhịp vọng cổ", "lý thuyết nhạc cổ truyền"],
+    aliases: ["hò xự xang xê cống", "hơi và điệu", "điệu Bắc điệu Nam", "già non (cao độ)", "giai điệu khung", "nhịp vọng cổ", "lý thuyết nhạc cổ truyền"],
     summary: "Nhạc cổ truyền Việt dùng tên âm hò – xự – xang – xê – cống, tổ chức theo hơi, điệu và nhịp, truyền miệng. Bài trình bày những gì đã có nguồn (điệu Bắc – Nam, hơi Ai, các âm \"già/non\" không bình quân, giai điệu khung, nhịp vọng cổ, quan hệ thanh điệu – giai điệu) và nói rõ chỗ nào chưa có nguồn đáng tin.",
     refs: [
       ["Tạp chí ĐH Long An — về đờn ca tài tử, hệ thống hơi, điệu, nhịp", "https://tcktcn.daihoclongan.edu.vn/index.php/ktcn/article/download/480/154/1296"],
@@ -1589,12 +1634,12 @@ Thang năm âm của [[don-ca-tai-tu|đờn ca tài tử]] có tên **Hò – X�
 | **Âm "già" và "non"** | Ghi trên khuông trông giống điệu Bắc, nhưng khi hát một số âm cao hơn ("già") hoặc thấp hơn ("non") một chút — tức **không** khớp [[luat-binh-quan|bình quân luật]] |
 | **Nhóm bài tài tử** | Bắc, Nam, Oán và bài lớn — mỗi nhóm gắn với một màu điệu riêng |
 **Hơi khác nhau ở cách nhấn, rung — không ở cách lên dây.** Theo Trần Văn Khê, khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ các bậc **cách đều hay không đều**; theo Viện Âm nhạc, ở điệu Nam (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp. Một luận văn (CUNY) mô tả hơi Oán gần với hơi vọng cổ, bậc 2 rung rộng hơn và rung ở Xang; ghi chú đĩa của Smithsonian Folkways (bộ UNESCO Collection) cho biết đàn lên dây **giống nhau** cho mọi điệu, chỉ cách nhấn – rung thay đổi. Xem thêm [[am-nhac-truyen-thong-viet-nam]].
-*Chưa có nguồn đáng tin ghi số cent cho từng hơi, nên thư viện không đưa con số; định nghĩa riêng của hơi Xuân, hơi Quảng cũng chưa được kiểm chứng.*
+Chi tiết từng hơi (Bắc, Nhạc, Quảng, Xuân, Ai, Đảo, Oán) và quy tắc rung – nhấn – mổ: [[hoi-trong-nhac-tai-tu-cai-luong]].
 
 Vì sao piano khó chơi đúng nhạc cổ truyền: phím đàn cố định theo [[luat-binh-quan]], còn âm "già/non" và các kỹ thuật **nhấn, rung, luyến, vuốt** (đàn tranh nhấn dây; đàn bầu uốn cần — giáo trình *Đàn bầu căn bản* của Bùi Lẫm dạy rung và luyến lên xuống một quãng 2) lại nằm **giữa** các phím. Xem [[dan-tranh]], [[dan-bau]].
 
 ## 3. Giai điệu khung ("lòng bản") và tô điểm
-UNESCO mô tả người chơi tài tử **[[ngau-hung-ung-tac|ứng tác]], tô điểm và biến đổi** trên một **giai điệu khung** (*skeletal melody*) — khớp với khái niệm "lòng bản" trong cách nói của giới tài tử. Mỗi người, mỗi lần chơi lại "hoa lá" khác nhau trên cùng một khung. Đây là tư duy rất gần [[bien-tau|biến tấu]] và [[ngau-hung-piano|ngẫu hứng]] trên [[vong-hop-am|vòng hợp âm]] trong jazz. *(Định nghĩa học thuật của "lòng bản", "chân phương", "hoa lá" chưa được xác minh qua nguồn.)*
+UNESCO mô tả người chơi tài tử **[[ngau-hung-ung-tac|ứng tác]], tô điểm và biến đổi** trên một **giai điệu khung** (*skeletal melody*) — khớp với khái niệm "lòng bản" trong cách nói của giới tài tử. Mỗi người, mỗi lần chơi lại "hoa lá" khác nhau trên cùng một khung. Đây là tư duy rất gần [[bien-tau|biến tấu]] và [[ngau-hung-piano|ngẫu hứng]] trên [[vong-hop-am|vòng hợp âm]] trong jazz. Định nghĩa lòng bản, chân phương, hoa lá và tiếng rao: [[long-ban-va-ky-thuat-to-diem]].
 
 ## 4. Nhịp
 - **Vọng cổ** giãn dần từ nhịp 2 lên 4, 8, 16, 32 — xem bảng ở [[cai-luong]].
@@ -1831,6 +1876,554 @@ Liên quan: [[giai-thoai-am-nhac-viet-nam]], [[am-nhac-viet-nam]].
 | Hàn lâm | [[nhac-co-dien-viet-nam]], [[piano-viet-nam]] |
 
 Nền tảng lý thuyết: [[ly-thuyet-am-nhac-co-truyen-viet-nam]]. Nhạc cụ: [[nhac-cu-viet-nam]].
+`,
+  },
+  {
+    slug: "hoi-trong-nhac-tai-tu-cai-luong",
+    title: "Hơi trong nhạc tài tử – cải lương: Bắc, Nhạc, Quảng, Xuân, Ai, Đảo, Oán",
+    category: 'vietnam',
+    aliases: ["hơi Bắc", "hơi Nhạc", "hơi Quảng", "hơi Xuân", "hơi Ai", "hơi Đảo", "hơi Oán", "điệu Oán", "già và non", "hơi trong nhạc tài tử", "hệ thống hơi"],
+    summary: "Theo Viện Âm nhạc, điệu Bắc gồm ba hơi (Bắc, Nhạc, Quảng), điệu Nam gồm ba hơi (Xuân, Ai, Đảo), còn Oán khi xếp vào điệu Nam, khi tách riêng. Các hơi khác nhau chủ yếu ở cách rung, nhấn, mổ trên từng âm — làm âm \"non\" hay \"già\" — chứ không ở cách lên dây. Bài kèm 20 bài bản tổ theo hơi và những chỗ giới nghiên cứu còn tranh luận.",
+    refs: [
+      ["Viện Âm nhạc — Về thuật ngữ điệu và hơi trong nhạc tài tử – cải lương Nam Bộ", "https://vienamnhac.vn/di-san/don-ca-tai-tu/bai-viet/ve-thuat-ngu-%C4%91ieu-va-hoi-trong-nhac-tai-tu-cai-luong-nam-bo"],
+      ["Viện Âm nhạc — Một số vấn đề về âm điệu 6 bản Bắc nhạc tài tử Nam Bộ", "https://vienamnhac.vn/bai-viet/nhac-co/mot-so-van-%C4%91e-ve-am-%C4%91ieu-6-ban-bac-nhac-tai-tu-nam-bo"],
+      ["Viện Âm nhạc — Thang âm nhạc tài tử", "https://vienamnhac.vn/di-san/don-ca-tai-tu/bai-viet/thang-am-nhac-tai-tu"],
+      ["Viện Âm nhạc — Góp phần sáng tỏ những vấn đề của bài Dạ cổ hoài lang", "https://vienamnhac.vn/di-san/don-ca-tai-tu/bai-viet/gop-phan-sang-to-nhung-van-%C4%91e-cua-bai-da-co-hoai-lang"],
+      ["Tuổi Trẻ — Đờn ca tài tử trong không gian văn hoá Nam Bộ", "https://tuoitre.vn/don-ca-tai-tu-trong-khong-gian-van-hoa-nam-bo-118696.htm"],
+      ["Tạp chí ĐH Đồng Tháp — dẫn Trần Văn Khê về tính chất các hơi", "https://dthujs.vn/index.php/dthujs/article/download/668/599"],
+      ["Smithsonian Folkways — UNESCO Collection, ghi chú đĩa (PDF)", "https://folkways-media.si.edu/docs/folkways/artwork/UNES08049.pdf"],
+      ["Smithsonian Folkways — UNESCO Collection, ghi chú đĩa 2 (PDF)", "https://folkways-media.si.edu/docs/folkways/artwork/UNES08070.pdf"],
+      ["Tạp chí NCPT Huế — về việc hệ thống hoá 20 bài bản tổ", "https://vjol.info.vn/ncpt-hue/article/view/24970"],
+      ["Keefe, Burns & Nguyễn — Vietnamese modal scales of the đàn tranh (Music Perception, 1991), trang mục lục thứ cấp", "https://labs.sonicfield.org/library/vietnamese-modal-scales-of-the-dan-tranh"],
+    ],
+    body: `
+Bài này đi sâu vào phần "điệu và hơi" đã nêu ở [[ly-thuyet-am-nhac-co-truyen-viet-nam]]. Nguồn chính là bài *Về thuật ngữ điệu và hơi trong nhạc tài tử – cải lương Nam Bộ* của Viện Âm nhạc. **Thuật ngữ này đang được tranh luận** — xem mục cuối.
+
+## Điệu và hơi
+| Điệu | Các hơi | Tính chất (Trần Văn Khê, về tiếng rao mở đầu) |
+|---|---|---|
+| **Bắc** | **Bắc**, **Nhạc**, **Quảng** | Bắc: vui tươi; Nhạc: trang nghiêm |
+| **Nam** | **Xuân**, **Ai**, **Đảo** | Xuân: êm ả; Ai: buồn dịu |
+| **Oán** | (thường gọi "hơi Oán") — có tác giả xếp vào [[ca-hue-nha-nhac|điệu Nam]], có tác giả tách thành điệu riêng | Nỗi buồn "thể hiện rõ nét" |
+Ghi chú đĩa của Smithsonian Folkways (bộ UNESCO Collection) mô tả họ điệu Nam có các sắc thái Xuân (thanh thản), Ai (u sầu) và Đảo (mượn nét của điệu Bắc).
+
+## Hơi phân biệt nhau bằng cách tô điểm
+Viện Âm nhạc gọi rung, nhấn, vuốt, **mổ**, luyến láy là "phương pháp trang điểm" [[giai-dieu|giai điệu]]. Rung, vỗ **cạn** làm âm nghe **"non"** (thấp), rung, vỗ **sâu** làm âm **"già"** (cao) — non, già là do kỹ thuật kéo âm lệch khỏi gốc. Theo các bài của Viện Âm nhạc (tóm tắt):
+| Hơi | Quy tắc tô điểm |
+|---|---|
+| **Bắc** | Rung **xự** và **cống**; **mổ** hò, xang, xê. Âm phan (bậc VII) không rung |
+| **Quảng** | Ngược lại với hơi Bắc về chỗ rung và chỗ mổ |
+| **Xuân** | Nhấn riêng chữ **xang**, vuốt lên xê rồi về xang; rung "như không rung"; **cống** là âm mượn, rung nhẹ. Chỉ có trong bài Nam xuân |
+| **Ai** | Rung **xang** trước, rồi nhấn nhẹ lên xê, **không** trở về xang |
+| **Đảo** | Chỉ có trong bài Đảo [[am-giai-ngu-cung|ngũ cung]] |
+| **Oán** | Trong *Dạ cổ hoài lang*: "Fa [xư] nhấn cao lên trong khoảng [[cung-nua-cung|nửa cung]] bình quân, Sol [xang] và Do [phan] cũng như vậy, đồng thời phải rung" |
+Viện Âm nhạc cũng ghi: khác biệt giữa **hơi Ai và hơi Oán** nằm chủ yếu ở **cấu trúc [[tiet-tau|tiết tấu]]** của bài bản; và chuyển từ *Tứ đại cảnh* sang *Tứ đại oán* gần như trên cùng một điệu ("hơi dựng").
+
+**Vì sao piano không chơi được hơi Oán:** âm "nhấn cao lên khoảng nửa cung" nằm **giữa** hai phím. Trên piano chỉ giữ được khung năm âm — xem [[hoa-am-cho-giai-dieu-ngu-cung]].
+
+## 20 bài bản tổ theo nhóm hơi
+| Nhóm | Bài (theo Tuổi Trẻ) |
+|---|---|
+| **6 Bắc** | Tây thi, Cổ bản, Lưu thủy trường, Phú lục chấn, Bình bán chấn, Xuân tình chấn |
+| **3 Nam** | Nam xuân, Nam ai, Nam đảo (Đảo ngũ cung) |
+| **4 Oán** | Tứ đại oán, Phụng cầu, Giang nam, Phụng hoàng |
+| **7 bài lớn** (nhạc lễ) | Xàng xê, Ngũ đối thượng, Ngũ đối hạ, Long đăng, Long ngâm, Tiểu khúc, Vạn giá |
+Việc Nhạc Khị hệ thống hoá 20 bài bản tổ được Trần Phước Thuận nêu, nhưng "chưa được chứng minh rõ ràng". *(Bảng này bổ sung tên bài so với [[don-ca-tai-tu]]; bài lớn có gắn với hơi Nhạc hay không chưa có nguồn khẳng định.)*
+
+## Đo cao độ
+Một nghiên cứu của **Keefe, Burns và Nguyễn Thuyết Phong** (*Music Perception*, 1991) đo dây đàn tranh do một nghệ nhân lên theo tai trong sáu tháng: thang [[dieu-thuc|điệu thức]] chia hai hệ Bắc và Nam, thí nghiệm "âm thăm dò" cho thấy hai hệ có trật tự thứ bậc khác nhau, và báo cáo việc dùng nhiều bước khoảng **166 cent** (5/3 nửa cung). *Thư viện mới thấy bài này qua một trang mục lục thứ cấp — cần đối chiếu bản gốc trên tạp chí.* Chưa thấy số đo cent cho [[dan-bau|đàn bầu]] hay ca Huế.
+
+## Những chỗ còn tranh luận
+- Một nghiên cứu được Viện Âm nhạc dẫn cho rằng cách rung xự – cống theo lối Huế cho hơi Xuân là **sai**, và Nam xuân xoay quanh trục **hò – xang**.
+- Một bài khác của Viện cho rằng tài tử – cải lương **không có** khái niệm "điệu Nam / hơi Nam".
+- Oán là hơi hay điệu — chưa thống nhất.
+- Một nghiên cứu được Da Màu dẫn cho rằng điệu Oán chịu ảnh hưởng điệu "Hý" của nhạc Quảng Đông *(nguồn thứ cấp)*.
+
+Liên quan: [[long-ban-va-ky-thuat-to-diem]], [[don-ca-tai-tu]], [[cai-luong]], [[dan-tranh]].
+`,
+  },
+  {
+    slug: "long-ban-va-ky-thuat-to-diem",
+    title: "Lòng bản, chân phương, hoa lá và các kỹ thuật tô điểm",
+    category: 'vietnam',
+    aliases: ["lòng bản", "chân phương", "hoa lá", "nhấn", "rung", "vỗ", "vuốt", "rao", "tiếng rao", "nhấn rung", "ứng tác tài tử"],
+    summary: "Một bài bản tài tử gồm lời ca và \"lòng bản\" — giai điệu khung có trước, cố định; nét nhạc, chữ nhấn có thể đổi theo trường phái và người đờn, lòng bản thì không. Người học chơi \"chân phương\" (sát bài thầy), người diễn thêm \"hoa lá\". Bài trình bày các kỹ thuật nhấn, rung, mổ, vuốt, tiếng rao, và so với ngẫu hứng jazz.",
+    refs: [
+      ["Tạp chí Văn hoá Nghệ thuật — về lòng bản", "https://vjol.info.vn/tcvanhoanghethuat/article/download/140927/115191/"],
+      ["Tuổi Trẻ — Đờn ca tài tử trong không gian văn hoá Nam Bộ", "https://tuoitre.vn/don-ca-tai-tu-trong-khong-gian-van-hoa-nam-bo-118696.htm"],
+      ["Tạp chí ĐH Sư phạm TP.HCM — về ca Huế (PDF)", "https://journal.hcmue.edu.vn/index.php/hcmuejos/article/download/1841/1830"],
+      ["UNESCO — Đờn ca tài tử", "https://ich.unesco.org/en/RL/art-of-on-ca-tai-tu-music-and-song-in-southern-viet-nam-00733"],
+      ["Viện Âm nhạc — Hội thảo quốc tế \"Nghệ thuật đờn ca tài tử và những lời hoà đàn ngẫu hứng\"", "https://vienamnhac.vn/bai-viet/nhac-co/hoi-thao-quoc-te-%E2%80%9Cnghe-thuat-%C4%91on-ca-tai-tu-va-nhung-loi-hoa-%C4%91an-ngau-hung%E2%80%9D"],
+      ["Viện Âm nhạc — Về thuật ngữ điệu và hơi", "https://vienamnhac.vn/di-san/don-ca-tai-tu/bai-viet/ve-thuat-ngu-%C4%91ieu-va-hoi-trong-nhac-tai-tu-cai-luong-nam-bo"],
+      ["Wikipedia tiếng Việt — Đàn tranh (kỹ thuật)", "https://vi.wikipedia.org/wiki/%C4%90%C3%A0n_th%E1%BA%ADp_l%E1%BB%A5c"],
+    ],
+    body: `
+## Lòng bản
+Theo một bài trên Tạp chí Văn hoá Nghệ thuật, mỗi bài bản gồm hai phần: **ca từ** và **lòng bản**. Lòng bản có **trước**, vốn để đàn; về sau các bậc tiền bối "đặt lời ca trên lòng bản" để phổ biến nhạc tài tử. Tuổi Trẻ viết: "Nét nhạc, chữ nhấn, chữ chuyền của mỗi câu trong bài bản có thể thay đổi tùy trường phái hay người đờn, nhưng **lòng bản thì không thể thay đổi**." UNESCO gọi đó là **giai điệu khung** (*skeletal melody*) mà người chơi ứng tác và tô điểm lên.
+
+## Chân phương và hoa lá
+Theo một nghiên cứu về [[ca-hue-nha-nhac|ca Huế]] (Tạp chí ĐHSP TP.HCM): khi **học**, người học bám sát bản của thầy — **chân phương**; khi **diễn**, nghệ nhân thêm vài nốt cho giai điệu sinh động — **hoa lá**. Ca Huế dùng hoa lá **ít hơn** rõ rệt so với tài tử Nam Bộ.
+
+## Tiếng rao
+Trong tài tử, bài được mở đầu bằng **rao**: một đoạn ứng tác, nhịp tự do, trên [[am-giai|thang âm]] và điệu của bài sắp chơi — để báo cho người nghe (và người cùng chơi) biết hơi của bài. Tính chất tiếng rao theo [[nghien-cuu-am-nhac-viet-nam|Trần Văn Khê]]: xem [[hoi-trong-nhac-tai-tu-cai-luong]].
+
+## Các kỹ thuật tô điểm
+| Kỹ thuật | Mô tả (theo nguồn) |
+|---|---|
+| **Nhấn** | Đàn tranh: tay phải gảy trước, tay trái nhấn sau — không bao giờ cùng lúc. Viện Âm nhạc phân loại nhấn **nửa bậc, một bậc, bậc rưỡi, hai bậc**, nhấn vuốt, nhấn rung |
+| **Rung** | Đàn tranh: 1 – 3 ngón tay trái rung dây ngay bên trái con nhạn, sau khi tay phải gảy |
+| **Nhấn luyến** (hoạt âm) | Trượt sang [[cao-do|cao độ]] khác, lên hoặc xuống |
+| **Mổ** | Nét gảy gọn không rung — trong hơi Bắc dùng cho hò, xang, xê |
+| **Vỗ** | Rung, vỗ cạn làm âm "non", sâu làm âm "già" |
+Trên đàn tranh, bậc 4 và bậc 7 được tạo bằng **lực nhấn** của tay trái: nhấn nhẹ cho cao độ thấp hơn, nhấn mạnh cho cao độ cao hơn. Xem [[dan-tranh]], [[dan-bau]].
+
+## So với ngẫu hứng phương Tây
+| | Tài tử | Jazz |
+|---|---|---|
+| Khung cố định | Lòng bản (giai điệu) | [[vong-hop-am|Vòng hợp âm]] |
+| Phần tự do | Hoa lá, chữ nhấn, chữ chuyền | Giai điệu [[ngau-hung-piano|ngẫu hứng]] |
+| Khởi động | Tiếng rao (nhịp tự do) | Intro / [[rubato|rubato]] |
+| Học | Chân phương theo thầy, truyền miệng | [[ngau-hung-jazz|Chép solo]], học "từ vựng" |
+Xem [[ngau-hung-ung-tac]], [[bien-tau]], [[trang-tri-giai-dieu-jazz]].
+
+Liên quan: [[don-ca-tai-tu]], [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
+`,
+  },
+  {
+    slug: "am-nhac-ca-tru",
+    title: "Âm nhạc ca trù: thể cách, khổ phách và trống chầu",
+    category: 'vietnam',
+    aliases: ["thể cách ca trù", "khổ phách", "khổ đàn", "bắc phản", "mưỡu", "gửi thư", "hát mở", "giáo đầu", "tom và chát", "lạc nhạn", "song châu", "liên châu", "lá đầu", "sòng đàn"],
+    summary: "Ca trù \"chính thống\" dựng trên ngũ cung điệu Vũ, giai điệu chủ yếu đi trên bậc 1, 3, 5 như hợp âm rải và bám theo thanh điệu của lời. Bài trình bày các thể cách chính (bắc phản, mưỡu, hát nói, gửi thư…), cấu trúc khổ phách – khổ đàn, và ngôn ngữ trống chầu (tom, chát) — theo các nghiên cứu của Viện Âm nhạc.",
+    refs: [
+      ["Viện Âm nhạc — Đặc điểm nhạc ca trù và giới thiệu sáu thể cách ca trù", "https://vienamnhac.vn/bai-viet/nhac-co/%C4%91ac-%C4%91iem-nhac-ca-tru-va-gioi-thieu-sau-the-cach-ca-tru"],
+      ["Viện Âm nhạc — Characteristics of Ca trù music", "https://vienamnhac.vn/heritage/ca-tru-singing/articles/characteristics-of-ca-tru-music-brief-introduction-about-six-musical-forms-of-ca-tru"],
+      ["Viện Âm nhạc — Ca trù, một nghệ thuật độc nhất vô nhị", "https://vienamnhac.vn/di-san/ca-tru/bai-viet/ca-tru---mot-nghe-thuat-%C4%91oc-nhat-vo-nhi"],
+      ["Viện Âm nhạc — Nhận diện khổ phách/khổ đàn nhạc ả đào", "https://vienamnhac.vn/di-san/ca-tru/bai-viet/nhan-dien-kho-phach-kho-%C4%91an-nhac-a-%C4%91ao-%E2%80%93-phuong-phap-tiep-can-moi"],
+      ["Viện Âm nhạc — Về khổ phách, khổ đàn trong nhạc ả đào", "https://vienamnhac.vn/bai-viet/nhac-co/ve-kho-phach-kho-%C4%91an-trong-nhac-a-%C4%91ao"],
+      ["Viện Âm nhạc — Nghệ thuật trống chầu nhạc ả đào", "https://vienamnhac.vn/di-san/ca-tru/bai-viet/nghe-thuat-trong-chau-nhac-a-%C4%91ao-phuong-phap-tiep-can-moi"],
+      ["Viện Âm nhạc — Some exchanges about Ca trù", "https://www.vienamnhac.vn/heritage/ca-tru-singing/articles/some-exchanges-about-ca-tru"],
+      ["Nhân Dân — Lãng du trong thế giới ca trù", "https://nhandan.vn/lang-du-trong-the-gioi-ca-tru-post813426.html"],
+      ["UNESCO — Ca trù singing", "https://ich.unesco.org/en/USL/ca-tru-singing-00309"],
+      ["Tuổi Trẻ — Liên hoan ca trù toàn quốc 2018", "https://tuoitre.vn/13-tinh-thanh-tham-du-lien-hoan-ca-tru-toan-quoc-nam-2018-20181025164004034.htm"],
+      ["Phạm Thị Phương Thái — Vần luật và tiết điệu thể hát nói (2018)", "https://vjol.info.vn/pyu/article/download/51363/42202"],
+      ["Báo Văn hoá — Hải Phòng gìn giữ ca trù", "https://baovanhoa.vn/van-hoa/hai-phong-gin-giu-va-phat-huy-gia-tri-di-san-ca-tru-245655.html"],
+    ],
+    body: `
+Bài này là phần âm nhạc của [[ca-tru]].
+
+## Thang âm và giai điệu
+Theo Viện Âm nhạc, ca trù "chính thống" dựng trên **[[am-giai-ngu-cung|ngũ cung]] điệu Vũ**. [[giai-dieu|Giai điệu]] chính đi chủ yếu trên **bậc 1, 3, 5**, hai bậc còn lại làm âm trang trí — tạo thành một kiểu "**giai điệu hợp âm**" (gần như [[luyen-hop-am-rai|hợp âm rải]]); giai điệu bám theo **thanh điệu** của lời thơ. Bốn thành phần: giọng hát, phách, [[dan-day|đàn đáy]], trống chầu.
+
+## Thể cách
+UNESCO ghi **56** thể cách, phục vụ thờ cúng, giải trí, cung đình và thi hát. Liên hoan ca trù toàn quốc 2018 yêu cầu mỗi đoàn hát ít nhất 3 trong 15 thể cách và một tác phẩm của Nguyễn Công Trứ. Vài thể cách chính:
+| Thể cách | Đặc điểm (theo Viện Âm nhạc) |
+|---|---|
+| **Bắc phản** ("hát mở") | Mở đầu một canh hát; khởi thấp rồi lên cao, chuyển từ điệu Nam sang [[ca-hue-nha-nhac|điệu Bắc]]; có thể thay cho mưỡu trước hát nói |
+| **Mưỡu** | Mưỡu đơn (2 câu lục bát), mưỡu kép (4 câu); mưỡu đầu, mưỡu hậu; luôn mở bằng đoạn nhạc **giáo đầu**; hiếm khi đứng riêng — cặp quen thuộc là **mưỡu – hát nói** |
+| **Hát nói** | Thể tiêu biểu nhất, hàng nghìn bài thơ |
+| **Gửi thư** | Nỗi nhớ người yêu ở xa của người phụ nữ; thường hát sau hát nói; bắt buộc trong hát chơi, hát thi, hát thờ |
+| Thét nhạc, chừ khi… | Cùng có phần mở đầu đặc trưng |
+*(Cấu trúc khổ thơ hát nói — số câu, "khổ đủ/dôi/thiếu", "dồn" — chưa xác minh được; xem nghiên cứu của Nguyễn Xuân Diện và Phạm Thị Phương Thái trong phần nguồn.)*
+
+## Phách và khổ phách
+- Bộ phách: một **bàn phách** và hai dùi — một dùi tròn, một dùi dẹt (dùi dẹt là điểm riêng). Tên gọi các dùi chưa thống nhất giữa các tài liệu.
+- Ba âm cơ bản: **"rục"** (dùi tròn), **"phách"** (dùi dẹt), **"chát"** — âm khép một khổ.
+- **Khổ lá đầu**: toàn tiếng "phách" của dùi kép tay phải người hát; tiếng ở [[so-chi-nhip|ô nhịp]] 4 và 6 to hơn — nhờ đó nhận ra khổ.
+- **Khổ sòng đàn**: 5 ô nhịp 1/4, đánh dấu bằng tiếng "dênh" lặp lại của đàn đáy.
+- Các khổ khác: khổ giữa, khổ xiết, khổ sòng giắt, khổ rải.
+- **Số khổ chưa thống nhất**: Đỗ Bằng Đoàn – Đỗ Trọng Huề cho là 4, Ngô Linh Ngọc cho là 5.
+Nghiên cứu dựa trên các nghệ nhân Nguyễn Thị Chúc, Phó Thị Kim Đức, Nguyễn Phú Đẹ, đối chiếu ghi âm từ thập niên 1930.
+
+## Trống chầu
+- **Tom**: đánh vào mặt trống; **chát**: đánh vào tang (thân, vành) trống.
+- Hai vai trò: **khen chê** câu hát, và **đánh dấu** trọng âm, chỗ kết câu, kết bài. Mọi khổ (trừ khổ rải) đều có một tiếng chầu.
+- Tên một số lối đánh (Nhân Dân): **song châu** (2 tom), **liên châu** (3 tom), **xuyên tâm** (tom – chát – tom), **chính diện** (chát – tom – chát). *Lạc nhạn, thượng mã, hạ mã được các nguồn ghi khác nhau; lối nào là khen, lối nào là chê chưa xác minh.*
+- Người cầm chầu không được đánh lấn giọng ca nương.
+
+Liên quan: [[ca-tru]], [[dan-day]], [[phach-song-lang-mo]].
+`,
+  },
+  {
+    slug: "hat-ru",
+    title: "Hát ru Việt Nam",
+    category: 'vietnam',
+    aliases: ["hát ru", "ru con", "à ơi", "ầu ơ", "ví dầu", "lullaby Vietnam", "ru em"],
+    summary: "Hát ru có ở cả ba miền, lời phần lớn lấy từ ca dao lục bát, giai điệu đổi theo từng địa phương: miền Bắc mở bằng \"À ơi…\", miền Nam \"Ầu ơ… ví dầu…\", Huế có \"ru em\". Bài tổng hợp những gì đã có nguồn và những khoảng trống nghiên cứu.",
+    refs: [
+      ["Wikipedia tiếng Việt — Hát ru", "https://vi.wikipedia.org/wiki/H%C3%A1t_ru"],
+      ["Tuổi Trẻ — Lư Nhất Vũ: hát ru có sức sống mãnh liệt", "https://tuoitre.vn/nhac-si-lu-nhat-vu-hat-ru-co-suc-song-manh-liet-119113.htm"],
+      ["Nhân Dân — Hát ru", "https://nhandan.vn/hat-ru-post550226.html"],
+      ["Nhân Dân — Hát ru trong ngôi nhà Nam Bộ", "https://nhandan.vn/van-hoa-gia-dinh/hat-ru-trong-ngoi-nha-nam-bo-193819/"],
+      ["Vietnam Discovery — Lullaby singing", "https://vietnamdiscovery.com/culture-arts/lullaby-singing/"],
+      ["Viện Âm nhạc — Bàn thêm về hát ru và đồng dao", "https://vienamnhac.vn/bai-viet/nhac-co/ban-them-ve-hat-ru-%C4%91ong-dao"],
+      ["Báo Văn hoá — Từ lời ru Mường", "https://baovanhoa.vn/dan-toc-ton-giao/tu-loi-ru-muong-den-kho-tang-tri-thuc-ban-dia-157551.html"],
+    ],
+    body: `
+## Đặc điểm chung
+- Lời ru phần lớn lấy từ **ca dao, đồng dao** thể **lục bát**, nên rất phong phú và đậm màu địa phương (Wikipedia tiếng Việt).
+- Câu lục bát được kéo dài bằng các tiếng đệm: "à ơi", "ù ơ", "à á ơ", "à ơi ơi".
+- Theo nhạc sĩ, nhà nghiên cứu **Lư Nhất Vũ**, hát ru có ở cả ba miền; tài liệu thành văn về hát ru miền Trung **rất ít**.
+
+## Theo vùng
+| Vùng | Câu mở | Ghi chú |
+|---|---|---|
+| Bắc | "À ơi…" | Một trang phổ thông ghi ru Bắc dùng năm âm Đô – Rê – Fa – Sol – La *(nguồn yếu)* |
+| Huế, miền Trung | "Ru em" — được liệt kê trong các thể loại dân [[ca-hue-nha-nhac|ca Huế]] | Cấu trúc âm nhạc chưa có nguồn nghiên cứu |
+| Nam | "Ầu ơ… ví dầu, cầu ván đóng đinh…" | |
+| Mường (Thanh Hoá) | Ba phần: mở bằng tiếng đệm – nội dung – kết bằng tiếng lặp | Báo Văn hoá |
+Viện Âm nhạc có bài *Bàn thêm về hát ru và đồng dao*; phần thư viện xem được chỉ nói về **đồng dao**: câu bốn chữ, hai chữ một phách, nhịp nhanh.
+
+## Với người dạy nhạc
+Hát ru là chất liệu tốt cho học trò nhỏ: [[giai-dieu|giai điệu]] hẹp, chậm, bám thanh điệu — xem [[am-nhac-va-ngon-ngu]]. Có thể đệm bằng âm nền [[quang|quãng]] 5 như gợi ý ở [[hoa-am-cho-giai-dieu-ngu-cung]].
+
+*Chưa có: phân tích cấu trúc âm nhạc ru Huế, và một nghiên cứu học thuật so sánh hát ru ba miền.*
+
+Liên quan: [[dan-ca-viet-nam]], [[the-loai-am-nhac-viet-nam]].
+`,
+  },
+  {
+    slug: "lan-dieu-cheo-va-tuong",
+    title: "Làn điệu chèo và các điệu hát tuồng",
+    category: 'vietnam',
+    aliases: ["làn điệu chèo", "hệ thống làn điệu chèo", "đường trường", "cách cú", "quá giang", "nói lối", "hát nam", "hát khách", "Nam xuân (tuồng)", "Nam ai (tuồng)", "Nam xuân nữ"],
+    summary: "Chèo có trên 200 làn điệu, chia thành các hệ thống (đường trường, đối đáp – trữ tình, hề, ra trò…); dàn chèo truyền thống chỉ có đàn nguyệt, sáo và trống. Tuồng có ba điệu chính — nói lối, hát nam, hát khách — trong đó hát nam lại có Nam xuân, Nam ai, Nam xuân nữ ứng với điệu thức Xuân, Ai, Oán.",
+    refs: [
+      ["Wikipedia tiếng Việt — Hát chèo", "https://vi.wikipedia.org/wiki/H%C3%A1t_ch%C3%A8o"],
+      ["Wikipedia tiếng Việt — Danh sách làn điệu chèo", "https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_l%C3%A0n_%C4%91i%E1%BB%87u_ch%C3%A8o"],
+      ["Thư viện ĐH Hải Phòng — Những làn điệu chèo cổ chọn lọc (2008)", "https://lib.hpu.edu.vn/jspui/handle/123456789/7391"],
+      ["Báo Pháp luật — Nghiệp chèo làng Khuốc", "https://baophapluat.vn/nghiep-cheo-lang-khuoc-post86799.html"],
+      ["Wikipedia — Chèo", "https://en.wikipedia.org/wiki/Ch%C3%A8o"],
+      ["RFA — Chèo miền Bắc", "https://www.rfa.org/vietnamese/in_depth/CheoFromNorthVietnam_NPhuong-20070326.html"],
+      ["Tạp chí Văn hoá Nghệ thuật — Sự nối tiếp từ nói lối qua hát nam trong hát bội Bình Định", "https://vjol.info.vn/tcvanhoanghethuat/article/view/138718"],
+      ["Đà Nẵng Fantasticity — Tuồng ở Đà Nẵng", "https://danangfantasticity.com/vi/art/tuong-in-da-nang"],
+      ["Báo Quốc tế — Bỏ quên báu vật cổ", "https://baoquocte.vn/bo-quen-bau-vat-co-24248.html"],
+    ],
+    body: `
+## Chèo
+- Theo Wikipedia tiếng Việt: **trên 200 làn điệu**. Hệ thống **đường trường** có 17 điệu — cấu trúc lớn nhiều "trổ", kỹ thuật phức tạp; hệ thống **đối đáp – trữ tình** có 22 điệu; hệ thống **hề** 28 điệu; hệ thống **ra trò** 36 điệu (gồm *Quá giang*, *Gió thổi màn loan*, *Con gà rừng*).
+- **Cách cú**: điệu chèo hài hước, câu bốn chữ chia hai vế đối nhau.
+- Tuyển tập *Những làn điệu chèo cổ chọn lọc* (2008) có các mục: hát sắp, hát hề, [[hat-xoan-hat-van-then|hát văn]], hát vỉa ngâm, hát hơi ả đào, hát hơi Huế, hát đường trường.
+- Truyền thống làng **Khuốc** (Thái Bình): ai hát được **12 làn điệu** chèo Khuốc thì hát được mọi làn điệu chèo nơi khác (Báo Pháp Luật).
+- Sách tham khảo được dẫn: Hoàng Kiều, *Tìm hiểu các làn điệu chèo cổ* (2003); Bùi Đức Hạnh, *150 làn điệu chèo cổ* (2006).
+
+**Dàn nhạc chèo**: theo Wikipedia tiếng Anh, dàn truyền thống chỉ có **[[dan-nguyet|đàn nguyệt]], [[sao-truc|sáo]] và trống**; RFA kể thêm đàn kìm, [[dan-nhi|đàn nhị]], tam thập lục, [[dan-ty-ba-tam-sen|đàn tam]], mõ, [[nhac-cu-go-nghi-le-viet-nam|thanh la]], [[trong-viet-nam|trống cơm]] trong dàn hiện đại.
+
+## Tuồng (hát bội)
+| Điệu | Mô tả |
+|---|---|
+| **Nói lối** | Lời nói được cách điệu, có [[giai-dieu|giai điệu]] và [[tiet-tau|tiết tấu]] riêng, thường là câu **biền ngẫu** 3 – 10 chữ; điệu **quan trọng nhất**, thường mở đầu các điệu khác |
+| **Hát nam** | Thuộc cung Nam, do người Việt sáng tạo trên thể **lục bát**, lục bát biến thể hoặc song thất; ba loại: **Nam xuân** (vui, [[dieu-thuc|điệu thức]] Xuân), **[[ca-hue-nha-nhac|Nam ai]]** (buồn, điệu thức Ai), **Nam xuân nữ** (u uất, điệu thức **Oán**) |
+| **Hát khách** | Điệu chính thứ ba; cùng các biến thể xuân, ai, oán, ngâm |
+Nguồn: nghiên cứu về hát bội Bình Định (Tạp chí Văn hoá Nghệ thuật) và trang về tuồng Đà Nẵng. Dàn tuồng gồm **trống chiến**, [[ca-tru|trống chầu]], đàn nhị, **kèn bóp**, chập chõa, phách gỗ, [[cong-chieng|cồng]] — xem [[ken-bau]].
+Báo Quốc tế cảnh báo các điệu hát nam, khách, tẩu, thán, oán, ngâm, vịnh đang bị **rút gọn** thành nói lối trên nền nhạc.
+
+Cùng một bộ ba **Xuân – Ai – Oán** xuất hiện ở tuồng, ca Huế và [[don-ca-tai-tu|tài tử]] — xem [[hoi-trong-nhac-tai-tu-cai-luong]].
+
+Liên quan: [[cheo]], [[tuong]].
+`,
+  },
+  {
+    slug: "le-thuong",
+    title: "Lê Thương (1914 – 1996)",
+    category: 'vietnam',
+    aliases: ["Lê Thương", "Ngô Đình Hộ", "Hòn vọng phu", "Bản đàn xuân"],
+    summary: "Lê Thương (Ngô Đình Hộ) là một trong những người tiên phong của tân nhạc: Bản đàn xuân, Tiếng đàn đêm khuya, Một ngày xanh và trường ca Hòn vọng phu — cảm hứng từ hòn đá vọng phu trên núi Đá Bia mà ông thấy năm 1934.",
+    refs: [
+      ["Báo Văn hoá — Ngựa trong nhạc Việt", "https://baovanhoa.vn/nghe-thuat/ngua-trong-nhac-viet-205301.html"],
+      ["Tuổi Trẻ — Theo dấu trường ca Hòn vọng phu (kỳ 4)", "https://tuoitre.vn/theo-dau-truong-ca-hon-vong-phu-ky-4-thay-tuong-da-vong-phu-tren-nui-da-bia-20201215100445763.htm"],
+      ["VnExpress — Tô Vũ qua đời (về Lê Thương dạy ở Hải Phòng)", "https://vnexpress.net/nhac-si-to-vu-qua-doi-2989994.html"],
+    ],
+    body: `
+**Tên thật** Ngô Đình Hộ · **1914 – 1996** *(ngày tháng chưa xác minh)* · Thời kỳ [[nhac-tien-chien|tiền chiến]].
+
+- Bài đầu tay: *Bản đàn xuân*, *Tiếng đàn đêm khuya*, *Một ngày xanh*, *Trên sông Dương Tử*.
+- **Trường ca *Hòn vọng phu*** (ba phần) được coi là kiệt tác của ông. Theo lời ông kể lại (Tuổi Trẻ), năm **1934** trong một chuyến vào Nam ông thấy tảng đá vọng phu trên núi **Đá Bia** — gốc cảm hứng của trường ca.
+- Khi dạy tiếng Pháp ở một trường tại Hải Phòng, ông khuyến khích **Hoàng Quý** và **Tô Vũ** đến với tân nhạc.
+
+Liên quan: [[nhac-si-viet-nam]], [[am-nhac-thoi-phap-thuoc]].
+`,
+  },
+  {
+    slug: "van-chung",
+    title: "Văn Chung (1914 – 1984)",
+    category: 'vietnam',
+    aliases: ["Văn Chung", "Mai Văn Chung", "Tiếng sáo chăn trâu"],
+    summary: "Văn Chung (Mai Văn Chung) là một trong những người sáng tác tân nhạc thời đầu; bài đầu tay Tiếng sáo chăn trâu (1935). Wikipedia ghi ông được truy tặng Giải thưởng Hồ Chí Minh năm 2007.",
+    refs: [
+      ["Wikipedia — Văn Chung", "https://en.wikipedia.org/wiki/V%C4%83n_Chung"],
+      ["Cổng thông tin Hưng Yên — Mai Văn Chung", "https://en.hungyen.gov.vn/mai-van-chung-van-chung-1914-1984-c271.html"],
+      ["Báo Pháp luật — lễ trao Giải thưởng Hồ Chí Minh", "https://baophapluat.vn/nghe-sy-xuc-dong-voi-le-trao-giai-thuong-ho-chi-minh-post158012.html"],
+    ],
+    body: `
+**Tên thật** Mai Văn Chung · **1914 – 1984** · Sinh ở Hà Nội (theo Cổng thông tin Hưng Yên), quê Cống Văn, Tân Hưng, Tiên Lữ *(các nguồn ghi quê khác nhau: Hải Dương, Phù Tiên – Hưng Yên)*.
+
+- Bài đầu tay: ***Tiếng sáo chăn trâu*** (1935).
+- **Giải thưởng Hồ Chí Minh** (truy tặng) — Wikipedia ghi năm **2007**, nhưng 2007 không nằm trong danh sách các đợt giải của chính Wikipedia (1996, 2000, 2005, 2012) *(chưa thống nhất)*. Báo Pháp Luật đưa tin hai cụm tác phẩm âm nhạc của Mai Văn Chung và Phạm Tuyên trong một đợt giải.
+- *Khác người với nhạc sĩ trẻ Nguyễn Văn Chung (*Viết tiếp câu chuyện hoà bình*).*
+
+Liên quan: [[nhac-si-viet-nam]], [[nhac-tien-chien]].
+`,
+  },
+  {
+    slug: "hoang-thi-tho",
+    title: "Hoàng Thi Thơ (1929 – 2001)",
+    category: 'vietnam',
+    aliases: ["Hoàng Thi Thơ", "Đoàn Văn nghệ Maxim"],
+    summary: "Hoàng Thi Thơ viết hơn 500 bài — tình ca, ca khúc quê hương, trường ca, nhạc kịch — và là đạo diễn, biên đạo, bầu show ở Sài Gòn. Bài Duyên quê (1955 – 1956) thường được coi là điểm khởi đầu của nhạc vàng – bolero.",
+    refs: [
+      ["Wikipedia — Hoàng Thi Thơ", "https://en.wikipedia.org/wiki/Ho%C3%A0ng_Thi_Th%C6%A1"],
+      ["Báo Pháp luật — Giải mã người trinh nữ tên Thi", "https://baophapluat.vn/giai-ma-nguoi-trinh-nu-ten-thi-trong-ban-hit-cua-nhac-si-hoang-thi-tho-post347338.html"],
+      ["Znews — Nhạc vàng qua lửa đỏ", "https://znews.vn/nhac-vang-qua-lua-do-post630662.html"],
+    ],
+    body: `
+**Sinh** 1/7/1929, Triệu Phong (Quảng Trị) · **Mất** 23/9/2001, Glendale (California), 72 tuổi.
+
+- Hơn **500 bài**: tình ca, ca khúc quê hương, dân ca cải biên, trường ca, nhạc kịch.
+- Cũng là **đạo diễn** sân khấu và điện ảnh, **biên đạo**, bầu show, MC: tổ chức đại nhạc hội ở rạp Thống Nhất (Sài Gòn) từ 1957; lập Đoàn Văn nghệ Việt Nam (1961) và Đoàn Văn nghệ **Maxim** (1967). Ca sĩ Sơn Ca, Hoạ Mi là học trò ông (*Đưa em qua cánh đồng vàng*, *Em về thăm lại quê anh*).
+- ***Duyên quê*** (1955 – 1956) thường được nêu là điểm khởi đầu của bolero Việt — xem [[nhac-vang-bolero]].
+
+*Giai thoại: "người trinh nữ tên Thi" trong một bài hát nổi tiếng của ông là ai — lời giải thích của Báo Pháp Luật, chưa có nguồn khác.*
+
+::youtube fq_Je2rr6rA | *Duyên quê* · Thanh Thúy
+
+Liên quan: [[nhac-si-viet-nam]], [[nhac-hai-ngoai]].
+`,
+  },
+  {
+    slug: "tu-cong-phung",
+    title: "Từ Công Phụng",
+    category: 'vietnam',
+    aliases: ["Từ Công Phụng", "Bây giờ tháng mấy", "Mắt lệ cho người tình", "Giọt lệ cho ngàn sau"],
+    summary: "Từ Công Phụng (Ninh Thuận, gốc Chăm theo RFA) nổi tiếng từ năm 17 tuổi với Bây giờ tháng mấy (đài Đà Lạt, 1963), viết khoảng 200 tình ca: Trên ngọn tình sầu, Mắt lệ cho người tình, Giọt lệ cho ngàn sau.",
+    refs: [
+      ["RFA — Từ Công Phụng (kỳ 1)", "https://www.rfa.org/vietnamese/news/programs/MusicForWeekend/Songwriter-tu-cong-phung-Tnga-05312010080245.html"],
+      ["RFA — Từ Công Phụng (kỳ 2)", "https://www.rfa.org/vietnamese/news/programs/MusicForWeekend/Songwriter-tu-cong-phung-2-Tnga-06112010111856.html"],
+      ["RFA — Âm nhạc Chăm mừng năm mới", "https://www.rfa.org/vietnamese/in_depth/ChampaMusicForChamNewYearFestival_TNga-20070415.html"],
+      ["RFA — Nhạc sĩ Từ Công Phụng", "https://www.rfa.org/vietnamese/news/programs/LiteratureAndArts/musician-tu-cong-phung-ml-03102011161921.html"],
+    ],
+    body: `
+**Quê** Ninh Thuận; RFA gọi ông là "người gốc Chàm" · *Năm sinh (thường ghi 1942) chưa xác minh.*
+
+- Nổi tiếng năm **17 tuổi** với ***Bây giờ tháng mấy***, theo RFA được phát lần đầu trên đài Đà Lạt năm 1963. Viết tình ca từ đầu thập niên 1960, hát ở các giảng đường Sài Gòn; khoảng **200 bài**.
+- Bài khác: *Trên ngọn tình sầu*, *Mắt lệ cho người tình*, *Kiếp dã tràng*, *Giọt lệ cho ngàn sau* (theo lời ông, là lời xin lỗi gửi những người tình cũ), *Tuổi xa người*, *Vào mưa*, *Ơn em*.
+
+Liên quan: [[nhac-si-viet-nam]], [[am-nhac-viet-nam-1945-1975]].
+`,
+  },
+  {
+    slug: "y-van",
+    title: "Y Vân (1933 – 1992)",
+    category: 'vietnam',
+    aliases: ["Y Vân", "Trần Tấn Hậu", "Lòng mẹ"],
+    summary: "Y Vân (Trần Tấn Hậu) viết Lòng mẹ (1952) và là người đi đầu viết ca khúc theo nhịp disco, twist, cha-cha-cha ở Sài Gòn. Phim tài liệu \"Y Vân: The Lost Sounds of Saigon\" ra mắt năm 2025.",
+    refs: [
+      ["Việt Nam News — đêm nhạc tưởng nhớ Y Vân", "https://ovietnam.vietnamnews.vn/music-event-to-commemorate-talent-post274228.html"],
+      ["Báo Pháp luật — Cuộc đời xoay vần quanh một chữ tình của Y Vân", "https://baophapluat.vn/cuoc-doi-xoay-van-quanh-mot-chu-tinh-cua-nhac-si-y-van-post536318.html"],
+      ["SLO Review — Y Vân: The Lost Sounds of Saigon", "https://sloreview.org/2026/04/21/sloiff-review-y-van-the-lost-sounds-of-saigon/"],
+    ],
+    body: `
+**Tên thật** Trần Tấn Hậu · **Sinh** 1933, Hà Nội (gốc Thanh Hoá) · **Mất** 1992, TP.HCM.
+
+- ***Lòng mẹ*** viết năm **1952**.
+- Người đi đầu viết ca khúc theo nhịp **disco, twist, cha-cha-cha** — xem [[dem-dieu-viet-nam]].
+- Phim tài liệu *Y Vân: The Lost Sounds of Saigon* (2025, Khoa Hà và Victor Velle).
+
+*Giai thoại chưa kiểm chứng (nguồn diễn đàn): ông viết* Lòng mẹ *cho chính mẹ mình, người một mình nuôi con sau khi chồng mất sớm.*
+
+Liên quan: [[nhac-si-viet-nam]], [[nhac-tre-rock-sai-gon]].
+`,
+  },
+  {
+    slug: "hoang-trong",
+    title: "Hoàng Trọng (1922 – 1998)",
+    category: 'vietnam',
+    aliases: ["Hoàng Trọng", "Vua Tango", "Phút chia ly", "ban Thiên Thai"],
+    summary: "Hoàng Trọng, \"vua tango\" của tân nhạc, lập ban nhạc Thiên Thai ở Nam Định (1945) và viết bản tango nổi tiếng nhất của mình, Phút chia ly, khi chiến tranh bùng nổ cuối năm 1946.",
+    refs: [
+      ["RFA — Nhạc sĩ Hoàng Trọng", "https://www.rfa.org/vietnamese/in_depth/ComposerHoangTrong_TNga-20060521.html"],
+    ],
+    body: `
+**Sinh** 1922, Hải Dương · **Mất** 1998 · Được gọi là **"Vua Tango"**.
+
+- Năm 1945 lập ban nhạc **Thiên Thai**, đặt theo tên phòng trà ông mở ở Nam Định.
+- ***Phút chia ly*** — bản tango nổi tiếng nhất — viết khi chiến tranh bùng nổ cuối 1946, lúc ông tản cư khỏi Nam Định.
+Điệu tango trong nhạc Việt: [[dem-dieu-viet-nam]].
+
+Liên quan: [[nhac-si-viet-nam]], [[nhac-tien-chien]].
+`,
+  },
+  {
+    slug: "nguyen-anh-9",
+    title: "Nguyễn Ánh 9 (1940 – 2016)",
+    category: 'vietnam',
+    aliases: ["Nguyễn Ánh 9", "Nguyễn Đình Ánh", "Không", "Buồn ơi chào mi", "Cô đơn"],
+    summary: "Nguyễn Ánh 9 (Nguyễn Đình Ánh, Phan Rang) viết Không, Buồn ơi chào mi, Tình yêu đến không giã từ, Cô đơn. Mất ngày 14/4/2016 ở TP.HCM.",
+    refs: [
+      ["An ninh Thủ đô — Nguyễn Ánh 9 qua đời ở tuổi 76", "https://anninhthudo.vn/nhac-si-nguyen-anh-9-qua-doi-o-tuoi-76-post273340.antd"],
+      ["VietTimes — Nguyễn Ánh 9 qua đời", "https://viettimes.vn/nhac-si-nguyen-anh-9-qua-doi-post24855.html"],
+      ["Báo Pháp luật — Nhạc sĩ \"Buồn ơi chào mi\" qua đời", "https://baophapluat.vn/nhac-si-buon-oi-chao-mi-qua-doi-o-tuoi-76-post215583.html"],
+      ["PLO — Nguyễn Ánh 9, một mình cô đơn", "https://plo.vn/nhac-si-nguyen-anh-9-mot-minh-co-don-trai-chin-post385701.html"],
+      ["RFA — Nhạc sĩ Nguyễn Ánh 9", "https://www.rfa.org/vietnamese/in_depth/ComposerNguyenAnhChin_TNga-20070708.html"],
+    ],
+    body: `
+**Tên thật** Nguyễn Đình Ánh · **Sinh** 1/1/1940, Phan Rang *(một nguồn ghi 1939)* · **Mất** 14/4/2016, Bệnh viện ĐH Y Dược TP.HCM, 76 tuổi.
+
+- ***Không*** — bài làm nên tên tuổi, gắn với mối tình đầu.
+- *Buồn ơi chào mi*, *Tình yêu đến không giã từ*, *Cô đơn*.
+
+Đệm các ca khúc trữ tình kiểu này trên piano: [[dem-pop-ballad]].
+
+Liên quan: [[nhac-si-viet-nam]].
+`,
+  },
+  {
+    slug: "pho-duc-phuong",
+    title: "Phó Đức Phương (1944 – 2020)",
+    category: 'vietnam',
+    aliases: ["Phó Đức Phương", "Chảy đi sông ơi", "Trên đỉnh Phù Vân", "Khúc hát phiêu ly"],
+    summary: "Phó Đức Phương (Văn Giang, Hưng Yên) viết Chảy đi sông ơi, Trên đỉnh Phù Vân, và là giám đốc đầu tiên của VCPMC (2002). Ông mất ngày 19/9/2020.",
+    refs: [
+      ["Thanh Tra — Người đi, khúc ca còn vang mãi", "https://thanhtra.com.vn/van-hoa-the-thao-BE2162E3A/nguoi-di-khuc-ca-con-vang-mai-0F8B6792.html"],
+      ["SGGP — Nhạc sĩ Phó Đức Phương qua đời", "https://www.sggp.org.vn/nhac-si-pho-duc-phuong-qua-doi-post568878.html"],
+      ["PLO — Vĩnh biệt nhạc sĩ Phó Đức Phương", "https://plo.vn/vinh-biet-nhac-si-pho-duc-phuong-post593838.html"],
+      ["VOV — Trên đỉnh Phù Vân, liveshow duy nhất", "https://vov.vn/van-hoa-giai-tri/tren-dinh-phu-van-liveshow-duy-nhat-trong-cuoc-doi-nhac-si-pho-duc-phuong-779916"],
+      ["Nhân Dân — 20 năm VCPMC", "https://nhandan.vn/20-nam-dau-an-thang-tram-trong-bao-ve-quyen-tac-gia-am-nhac-viet-nam-post715999.html"],
+    ],
+    body: `
+**Sinh** 1944, quê Văn Giang (Hưng Yên) · **Mất** trưa 19/9/2020, 76 tuổi, vì ung thư tuỵ.
+
+- ***Chảy đi sông ơi*** — viết cho vở kịch *Thuyền lá* (Nhà hát Kịch Trung ương).
+- ***Trên đỉnh Phù Vân*** — cũng là tên liveshow duy nhất trong đời ông. Đêm nhạc *Khúc hát phiêu ly* được tổ chức để tiếp sức khi ông chữa bệnh.
+- **Giám đốc đầu tiên của VCPMC** (2002) — xem [[ban-quyen-am-nhac-viet-nam]]. Từng tham gia hội đồng thẩm định vụ *Chắc ai đó sẽ về* ([[vpop-rap-viet]]).
+
+Liên quan: [[nhac-si-viet-nam]].
+`,
+  },
+  {
+    slug: "hong-dang",
+    title: "Hồng Đăng (1936 – 2022)",
+    category: 'vietnam',
+    aliases: ["Hồng Đăng", "Hoa sữa", "Biển hát chiều nay"],
+    summary: "Nhạc sĩ Hồng Đăng (Yên Thành, Nghệ An) viết hơn 700 tác phẩm, trong đó hơn 70 nhạc phim, nổi tiếng với Hoa sữa và Biển hát chiều nay; Giải thưởng Nhà nước 2001.",
+    refs: [
+      ["VnExpress — Nhạc sĩ Hồng Đăng qua đời", "https://vnexpress.net/nhac-si-hong-dang-qua-doi-4439881.html"],
+      ["Báo Văn hoá — Tác giả \"Hoa sữa\" qua đời", "https://baovanhoa.vn/am-nhac/nhac-si-hong-dang-tac-gia-ca-khuc-hoa-sua-qua-doi-9009.html"],
+      ["Đại Đoàn Kết — Nhạc sĩ Hồng Đăng qua đời", "https://daidoanket.vn/nhac-si-hong-dang-qua-doi-10218659.html"],
+    ],
+    body: `
+**Sinh** 1936, Yên Thành (Nghệ An) · **Mất** sáng 21/3/2022, Bệnh viện Hữu nghị Việt Xô, 86 tuổi.
+
+- ***Hoa sữa***, ***Biển hát chiều nay***.
+- Hơn **700 tác phẩm**, hơn **70 nhạc phim** — xem [[nhac-phim-va-tro-choi]].
+- **Giải thưởng Nhà nước** (2001); giải Bùi Xuân Phái (2021).
+*(Khác người với ca sĩ – nhà sản xuất cùng tên Hồng Đăng.)*
+
+Liên quan: [[nhac-si-viet-nam]], [[am-nhac-viet-nam-sau-1975]].
+`,
+  },
+  {
+    slug: "nguyen-tai-tue",
+    title: "Nguyễn Tài Tuệ (1936 – 2022)",
+    category: 'vietnam',
+    aliases: ["Nguyễn Tài Tuệ", "Xa khơi", "Tiếng hát giữa rừng Pác Bó"],
+    summary: "Nguyễn Tài Tuệ (Thanh Chương, Nghệ An), học sáng tác ở Nhạc viện Bình Nhưỡng (1966 – 1972), viết Xa khơi và Tiếng hát giữa rừng Pác Bó; mất ngày 11/2/2022.",
+    refs: [
+      ["Báo Văn hoá — Tác giả \"Tiếng hát giữa rừng Pác Bó\" qua đời", "https://baovanhoa.vn/am-nhac/nhac-si-tieng-hat-giua-rung-pac-bo-qua-doi-40549.html"],
+      ["Báo Quốc tế — Tác giả \"Xa khơi\" qua đời", "https://baoquocte.vn/tac-gia-ca-khuc-xa-khoi-nhac-si-nguyen-tai-tue-qua-doi-o-tuoi-86-173661.html"],
+      ["SGGP — Nguyễn Tài Tuệ", "https://www.sggp.org.vn/nhac-si-nguyen-tai-tue-tac-gia-xa-khoi-da-ve-voi-cao-xanh-post626579.html"],
+      ["Đại biểu Nhân dân — Mạch nguồn ví, giặm", "https://daibieunhandan.vn/mach-nguon-vi-giam-ton-vinh-cac-nhac-si-tai-hoa-cua-nghe-an-10306478.html"],
+    ],
+    body: `
+**Sinh** 15/5/1936, Thanh Văn, Thanh Chương (Nghệ An) · **Mất** 11/2/2022, Hà Nội (86 hoặc 87 tuổi tuỳ nguồn).
+
+- Học sáng tác ở **Nhạc viện Bình Nhưỡng** (1966 – 1972).
+- ***Xa khơi***, ***Tiếng hát giữa rừng Pác Bó***.
+- Giải thưởng Nhà nước 2001 *(theo một nguồn — chưa đối chiếu)*. Một trong những nhạc sĩ xứ Nghệ được tôn vinh qua chất liệu [[dan-ca-viet-nam|ví, giặm]].
+
+Liên quan: [[nhac-si-viet-nam]].
+`,
+  },
+  {
+    slug: "nguyen-cuong",
+    title: "Nguyễn Cường (sinh 1943)",
+    category: 'vietnam',
+    aliases: ["Nguyễn Cường", "Đôi mắt Pleiku", "H'Zen lên rẫy", "Ly cà phê Ban Mê"],
+    summary: "Nguyễn Cường, \"gã cao bồi phố Hàng Bạc\", tốt nghiệp năm 1965 rồi về Đoàn Ca múa Tây Nguyên và gắn bó với Tây Nguyên hơn 40 năm: Đôi mắt Pleiku, H'Zen lên rẫy, Ly cà phê Ban Mê.",
+    refs: [
+      ["VTC News — Nguyễn Cường ở tuổi U80", "https://vtcnews.vn/dieu-dac-biet-hiem-co-cua-nhac-sy-nguyen-cuong-o-tuoi-u80-ar884392.html"],
+      ["VnExpress — Nguyễn Cường mê Thị Mầu", "https://vnexpress.net/nguyen-cuong-me-thi-mau-1907687.html"],
+      ["RFA — Nhạc Nguyễn Cường", "https://www.rfa.org/vietnamese/news/programs/MusicForWeekend/nguyen-cuong-music-vhoang-03202011155104.html"],
+    ],
+    body: `
+**Sinh** 1943, phố Hàng Bạc (Hà Nội) — biệt danh "gã cao bồi phố Hàng Bạc".
+
+- Tốt nghiệp năm 1965, được phân về **Đoàn Ca múa Tây Nguyên**; gắn bó với Tây Nguyên hơn 40 năm.
+- ***Đôi mắt Pleiku***, ***H'Zen lên rẫy***, ***Ly cà phê Ban Mê***.
+- Chất liệu nhạc Tây Nguyên trong ca khúc của ông: xem [[cong-chieng]], [[am-nhac-ton-giao-va-dan-toc-viet-nam]].
+
+Liên quan: [[nhac-si-viet-nam]], [[am-nhac-viet-nam-sau-1975]].
+`,
+  },
+  {
+    slug: "tran-lap",
+    title: "Trần Lập và Bức Tường (1974 – 2016)",
+    category: 'vietnam',
+    aliases: ["Trần Lập", "Bức Tường", "ban nhạc Bức Tường", "Đường đến ngày vinh quang"],
+    summary: "Trần Lập (Trần Quyết Lập), thủ lĩnh và giọng ca ban rock Bức Tường, sinh năm 1974 ở Vụ Bản (Nam Định), mất ngày 17/3/2016 vì ung thư; được tôn vinh ở VTV Awards và Cống hiến 2016.",
+    refs: [
+      ["Wikipedia — Trần Lập", "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_L%E1%BA%ADp"],
+      ["VnExpress — Ca sĩ Trần Lập qua đời", "https://vnexpress.net/ca-si-tran-lap-qua-doi-3371414.html"],
+      ["Báo Pháp luật — Rocker Trần Lập qua đời", "https://baophapluat.vn/rocker-tran-lap-qua-doi-o-tuoi-42-post213902.html"],
+      ["Thanh Tra — VTV Awards 2016 tôn vinh Trần Lập", "https://thanhtra.com.vn/van-hoa-the-thao-BE2162E3A/vtv-awards-2016-ton-vinh-tran-lap-7D02E48B.html"],
+      ["VietTimes — Trần Lập được tri ân tại Cống hiến 2016", "https://viettimes.vn/tran-lap-se-duoc-tri-an-tai-giai-thuong-cong-hien-2016-post23077.html"],
+    ],
+    body: `
+**Tên thật** Trần Quyết Lập · **Sinh** 12/12/1974, Vụ Bản (Nam Định) · **Mất** 17/3/2016 tại nhà ở Hà Nội, vì ung thư; an táng ở xã Kim Thái, Vụ Bản. *(Tuổi khi mất ghi 41 hoặc 42 — cách tính tuổi khác nhau.)*
+
+- Giọng ca chính và thủ lĩnh ban **Bức Tường** — một trong những ban rock tiêu biểu của Việt Nam sau Đổi mới.
+- ***Đường đến ngày vinh quang*** thường được hát để tưởng nhớ ông.
+- Được tôn vinh tại **VTV Awards 2016** và **Cống hiến 2016**.
+
+Rock Việt trước 1975: [[nhac-tre-rock-sai-gon]]; đệm rock: [[dem-slow-rock-rock]].
+
+Liên quan: [[nhac-si-viet-nam]], [[vpop-rap-viet]].
+`,
+  },
+  {
+    slug: "son-tung-m-tp",
+    title: "Sơn Tùng M-TP (sinh 1994)",
+    category: 'vietnam',
+    aliases: ["Sơn Tùng M-TP", "Sơn Tùng", "Nguyễn Thanh Tùng", "Cơn mưa ngang qua", "Em của ngày hôm qua", "Hãy trao cho anh"],
+    summary: "Sơn Tùng M-TP (Nguyễn Thanh Tùng, sinh 5/7/1994 ở Thái Bình) nổi lên với Cơn mưa ngang qua (2011) và Em của ngày hôm qua (2013), là hiện tượng của V-pop; sự nghiệp đi kèm nhiều nghi án đạo nhạc mà phần lớn chưa từng được kết luận.",
+    refs: [
+      ["Wikipedia — Sơn Tùng M-TP", "https://en.wikipedia.org/wiki/S%C6%A1n_T%C3%B9ng_M-TP"],
+      ["Báo Đầu tư — Sơn Tùng M-TP: danh tiếng song hành với thị phi", "https://baodautu.vn/son-tung-m-tp-danh-tieng-song-hanh-voi-thi-phi-d25340.html"],
+      ["VnExpress International — \"Hãy trao cho anh\" trên YouTube", "https://e.vnexpress.net/news/life/arts/vietnamese-pop-star-snoop-dogg-storm-youtube-with-new-music-video-3946535.html"],
+      ["SGGP — Đạo nhạc, ranh giới mong manh", "https://www.sggp.org.vn/dao-nhac-ranh-gioi-mong-manh-post585245.html"],
+      ["Báo Quốc tế — GC lên tiếng về lùm xùm đạo nhạc", "https://baoquocte.vn/gc-chinh-thuc-len-tieng-ve-vu-lum-xum-dao-nhac-cua-son-tung-m-tp-137597.html"],
+    ],
+    body: `
+**Tên thật** Nguyễn Thanh Tùng · **Sinh** 5/7/1994, Thái Bình (nay thuộc Hưng Yên sau sáp nhập tỉnh năm 2025) · Mẹ từng ở đoàn ca múa của tỉnh; em trai là ca sĩ MONO (Nguyễn Việt Hoàng).
+
+| Năm | Mốc |
+|---|---|
+| 8/2011 | ***Cơn mưa ngang qua*** đăng lên Zing MP3; đoạt "Bài hát yêu thích" tháng 10/2012 |
+| 11/2012 | Ký hợp đồng với Văn Production |
+| 2013 | ***Em của ngày hôm qua*** — trở thành hiện tượng V-pop |
+| 1/7/2019 | ***Hãy trao cho anh*** (có Snoop Dogg) — 1 triệu lượt xem trong 8 phút |
+
+## Các nghi án đạo nhạc
+| Bài | Kết quả |
+|---|---|
+| *Chắc ai đó sẽ về* | Hai hội đồng kết luận ngược nhau; kết luận sau: "giống nhưng chưa thể coi là đạo" |
+| *Chúng ta của hiện tại* | Nhà sản xuất GC lên tiếng; sau đó dàn xếp với M-TP Entertainment |
+| *Em đừng đi* | So với *Still* (Flower); anh thừa nhận dùng một beat miễn phí trên mạng |
+| *Making My Way* | So với *Unforgettable* |
+| *Chúng ta không thuộc về nhau* | Chỉ là cáo buộc |
+Giới chuyên môn chia rẽ (Lê Đức Hùng và Phó Đức Phương có ý kiến khác nhau). Xem [[vpop-rap-viet]], [[ban-quyen-am-nhac-viet-nam]], [[giai-thoai-am-nhac-viet-nam]].
+
+Liên quan: [[nhac-si-viet-nam]].
 `,
   },
 ]

@@ -69,7 +69,7 @@ Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]] và nh�
     title: 'Âm nhạc truyền thống Việt Nam và ngũ cung',
     category: 'modern',
     also: ['scales', 'listening', 'genres'],
-    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'ngũ cung Việt Nam', 'hơi Bắc', 'hơi Nam'],
+    aliases: ['âm nhạc truyền thống Việt Nam', 'nhạc truyền thống Việt Nam', 'nhạc dân tộc Việt Nam', 'nhạc cổ truyền Việt Nam', 'Vietnamese traditional music', 'ngũ cung Việt Nam', 'hơi Nam'],
     summary: 'Nhạc truyền thống Việt Nam dựa trên thang năm âm (Hò – Xự – Xang – Xê – Cống), nhưng cao độ thực không theo luật bình quân và được "nhấn, rung, luyến" theo từng điệu (Bắc, Nam; hơi Xuân, Ai, Oán). Bài này giới thiệu các di sản được UNESCO ghi danh, nhạc cụ chính, đờn ca tài tử và vọng cổ, và cách người dạy piano có thể đưa chất liệu dân tộc vào bài học.',
     refs: [
       ['UNESCO — Nhã nhạc, Vietnamese court music', 'https://ich.unesco.org/en/RL/00074'],

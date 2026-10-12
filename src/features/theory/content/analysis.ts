@@ -300,7 +300,7 @@ Siêu nhịp giúp tránh lối chơi "ô nào cũng nặng như nhau": hướng
       ['Koozin — Study scores: semiotics and topics (University of Houston)', 'https://www.uh.edu/~tkoozin/semiotics/StudyScores.html'],
     ],
     body: `
-Người nghe thế kỷ 18 sống giữa nhiều loại âm nhạc mang **ý nghĩa xã hội**: hành khúc của quân đội, tiếng tù và đi săn, vũ khúc trong cung đình, nhạc nhà thờ… Khi một bản [[hinh-thuc-sonata|sonata]] **gợi** đến những âm thanh đó, người nghe thời ấy hiểu ngay ý nghĩa. Lý thuyết **chủ đề biểu đạt** (topic theory) giúp người nghe ngày nay đọc lại các tín hiệu đó.
+Người nghe thế kỷ 18 sống giữa nhiều loại âm nhạc mang **ý nghĩa xã hội**: hành khúc của quân đội, tiếng [[nhac-cu-tay-nguyen-va-mien-nui|tù và]] đi săn, vũ khúc trong cung đình, nhạc nhà thờ… Khi một bản [[hinh-thuc-sonata|sonata]] **gợi** đến những âm thanh đó, người nghe thời ấy hiểu ngay ý nghĩa. Lý thuyết **chủ đề biểu đạt** (topic theory) giúp người nghe ngày nay đọc lại các tín hiệu đó.
 
 ## Ratner và khái niệm "chủ đề"
 **Leonard Ratner**, trong *Classic Music: Expression, Form, and Style* (1980), định nghĩa chủ đề là **"đề tài cho diễn ngôn âm nhạc"** và chia thành hai nhóm:
