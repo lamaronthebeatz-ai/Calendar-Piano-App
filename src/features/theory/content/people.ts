@@ -26,6 +26,8 @@ export interface Person {
   more?: string
   /** Sources for `more`, as [title, url]. */
   refs?: [string, string][]
+  /** Checked YouTube recordings: [video id, caption]. */
+  videos?: [string, string][]
 }
 
 export interface Period {
@@ -47,6 +49,22 @@ export const slugify = (s: string) =>
 /** Living people are written "1958–"; show them as "sinh 1958". */
 const years = (p: Person) => (p.years.endsWith('–') ? `sinh ${p.years.slice(0, -1)}` : p.years)
 const birthYear = (p: Person) => Number(/\d{3,4}/.exec(p.years)?.[0] ?? 0)
+
+/** Search terms for a work: its title without the Vietnamese notes in brackets. */
+const searchTerms = (p: Person, work: string) => `${p.name} ${work.replace(/\s*\([^)]*\)/g, '').replace(/[—–:].*$/, '').trim()}`
+
+/**
+ * "Listen" section: recordings checked to exist (embedded), then YouTube searches for the main
+ * works — a search never points at a video that might not exist or has been taken down.
+ */
+function listening(p: Person) {
+  const videos = (p.videos ?? []).map(([id, caption]) => `::youtube ${id} | ${caption}`)
+  // Treatises and books have nothing to listen to.
+  const searches = p.works.filter((w) => !/khảo luận|sách|giáo trình|treatise/i.test(w)).slice(0, 3).map((w) => `::ytsearch ${searchTerms(p, w)} | ${w}`)
+  if (!videos.length && !searches.length) return ''
+  const searchIntro = searches.length ? [videos.length ? 'Tìm thêm bản thu khác trên YouTube:' : 'Tìm bản thu trên YouTube:'] : []
+  return ['## Nghe', ...videos, ...searchIntro, ...searches].join('\n\n')
+}
 
 export function buildPeople(
   periods: readonly Period[],
@@ -74,6 +92,7 @@ export function buildPeople(
       p.more?.trim() ?? '',
       `## ${cfg.worksTitle}`,
       p.works.map((w) => `- ${w}`).join('\n'),
+      listening(p),
       p.topics ? `Liên quan: ${p.topics.map((t) => `[[${t}]]`).join(', ')}.` : '',
     ].join('\n\n'),
   })

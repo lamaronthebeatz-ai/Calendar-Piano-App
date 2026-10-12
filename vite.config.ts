@@ -60,6 +60,12 @@ export default defineConfig({
             options: { cacheName: 'wiki-images', expiration: { maxEntries: 800, maxAgeSeconds: 60 * 60 * 24 * 180 }, cacheableResponse: { statuses: [0, 200] } },
           },
           {
+            // YouTube thumbnails for the listening examples (the player itself always needs the network).
+            urlPattern: ({ url }) => url.hostname === 'i.ytimg.com',
+            handler: 'CacheFirst',
+            options: { cacheName: 'yt-thumbs', expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 90 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+          {
             urlPattern: ({ url }) => url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com',
             handler: 'CacheFirst',
             options: { cacheName: 'fonts', expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] } },

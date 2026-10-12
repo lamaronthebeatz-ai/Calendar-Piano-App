@@ -6,6 +6,7 @@ import { findArticle, normalize } from './wiki'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
+import { YouTubeSearch, YouTubeVideo } from './YouTube'
 
 /**
  * Inline markup: **bold**, *italic* and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
@@ -179,6 +180,10 @@ function Directive({ line }: { line: string }) {
       return <Figure caption={caption}><CircleOfFifths /></Figure>
     case 'img':
       return <CommonsImage file={args.join(' ')} caption={caption} />
+    case 'youtube':
+      return <YouTubeVideo id={args[0]}>{caption && <Inline text={caption} />}</YouTubeVideo>
+    case 'ytsearch':
+      return <YouTubeSearch query={args.join(' ')}><Inline text={caption || args.join(' ')} /></YouTubeSearch>
     default:
       return null
   }
