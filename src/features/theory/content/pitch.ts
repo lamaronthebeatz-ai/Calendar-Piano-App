@@ -33,6 +33,8 @@ Trong viết bè, mỗi bè có âm vực quen dùng (xem [[luat-hoa-am-bon-be]]
 
 ## Luyện nghe cao độ
 [[luyen-tai]] (cảm âm tương đối), [[cao-do-tuyet-doi]], [[xuong-am]].
+
+**Đi sâu về hệ thống cao độ:** [[cac-he-thong-chinh-am]] (Pythagore, thuần, meantone, chỉnh âm tốt, bằng cent), [[vi-cung-va-am-nhac-vi-cung]] (phần tư cung, 19 và 31 phần, Partch, đàn tranh Việt) và cách gọi tên nốt ở [[ky-hieu-cao-do-c4-helmholtz-midi]].
 `,
   },
   {
@@ -65,7 +67,7 @@ Cung và nửa cung là đơn vị để đo [[quang]] và để xây dựng [[a
 - Nửa cung **đồng** và nửa cung **dị** nghe y như nhau trên piano; khác nhau ở **cách viết** và **chức năng** (xem [[trung-am]]).
 
 ## Nửa cung đo bằng cent
-Trong [[luat-binh-quan]], một nửa cung = **100 cent**, một quãng 8 = **1200 cent**. Cent là đơn vị dùng để so sánh các hệ thống lên dây.
+Trong [[luat-binh-quan]], một nửa cung = **100 [[cac-he-thong-chinh-am|cent]]**, một quãng 8 = **1200 cent**. Cent là đơn vị dùng để so sánh các hệ thống lên dây.
 `,
   },
   {
@@ -228,7 +230,7 @@ Trùng âm còn dùng để **chuyển giọng** bất ngờ (xem [[chuyen-giong
 
 ## Không phải lúc nào C♯ cũng bằng D♭
 - Trùng âm theo nghĩa "cùng một cao độ" chỉ đúng trong [[luat-binh-quan]]. Trước đó, từ "enharmonic" chỉ những nốt **rất gần nhau nhưng không trùng**.
-- Trong **luật trung bình** (meantone) — cách lên dây phổ biến thời [[thoi-ky-phuc-hung|Phục hưng]] và đầu [[thoi-ky-baroque|Baroque]] — **C♯ và D♭ là hai cao độ khác nhau**. Khoảng chênh gọi là *diesis*, đủ lớn để nghe thấy.
+- Trong **luật trung bình** ([[cac-he-thong-chinh-am|meantone]]) — cách lên dây phổ biến thời [[thoi-ky-phuc-hung|Phục hưng]] và đầu [[thoi-ky-baroque|Baroque]] — **C♯ và D♭ là hai cao độ khác nhau**. Khoảng chênh gọi là *diesis*, đủ lớn để nghe thấy.
 - Vì thế một số đàn [[dan-phim-co|harpsichord]] Ý có **phím tách** (split key): một phím đen chia làm hai nửa trước – sau, ví dụ E♭/D♯ và G♯/A♭, để có quãng 3 chuẩn hơn.
 
 ## Chuyển giọng trùng âm
@@ -303,7 +305,7 @@ Các tỉ lệ đơn giản 2:1, 3:2, 4:3 từng được Pythagoras và các nh
     ],
     body: `
 ## Cao độ chuẩn
-Từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]], nốt **A4 = 440 Hz** được dùng làm chuẩn quốc tế (ISO 16). Mỗi [[quang|quãng 8]] lên cao thì [[am-hoc-co-ban|tần số]] **gấp đôi**: A5 = 880 Hz, A3 = 220 Hz.
+Từ giữa [[thoi-ky-the-ky-20|thế kỷ 20]], nốt **A4 = 440 Hz** được dùng làm chuẩn quốc tế ([[ky-hieu-cao-do-c4-helmholtz-midi|ISO 16]]). Mỗi [[quang|quãng 8]] lên cao thì [[am-hoc-co-ban|tần số]] **gấp đôi**: A5 = 880 Hz, A3 = 220 Hz.
 
 ## Bình quân 12 nửa cung
 Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chia thành 12 [[cung-nua-cung|nửa cung]] có tỉ lệ tần số bằng nhau (căn bậc 12 của 2 ≈ 1,0595).
@@ -322,7 +324,7 @@ Piano hiện đại được lên dây theo **luật bình quân**: quãng 8 chi
 Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp hơn khoảng nửa cung) như một quy ước cho nhạc [[thoi-ky-baroque|Baroque]] — không phải một giá trị lịch sử duy nhất. Các thuyết âm mưu cho rằng A = 440 do phát xít áp đặt đã bị kiểm chứng là sai.
 
 ## Lịch sử các hệ thống lên dây
-**Vấn đề gốc — dấu phẩy Pythagore** (về Pythagoras và ý tưởng âm nhạc là con số, xem [[hoa-am-vu-tru]]): chồng **12 quãng 5 thuần** (3:2) không về đúng **7 quãng 8** mà dư khoảng **23,46 cent** (gần một phần tư nửa cung). Mỗi hệ thống lên dây là một cách "giấu" phần dư này:
+**Vấn đề gốc — dấu phẩy Pythagore** (về Pythagoras và ý tưởng âm nhạc là con số, xem [[hoa-am-vu-tru]]): chồng **12 quãng 5 thuần** (3:2) không về đúng **7 quãng 8** mà dư khoảng **23,46 [[cac-he-thong-chinh-am|cent]]** (gần một phần tư nửa cung). Mỗi hệ thống lên dây là một cách "giấu" phần dư này:
 | Hệ thống | Cách xử lý | Hệ quả |
 |---|---|---|
 | **Pythagore** | Mọi quãng 5 thuần, dồn phần dư vào **một quãng 5 "sói"** | Quãng 3 trưởng rộng (81:64, 408 cent), nghe chói |
@@ -334,6 +336,125 @@ Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp h
 Tên gốc là *Das Wohltemperierte Klavier* (xem hai bài phân tích: [[phan-tich-prelude-do-truong|Prelude Đô trưởng]], [[phan-tich-prelude-do-thu-bwv847|Prelude Đô thứ]]) — đàn phím **"được lên dây tốt"**, nghĩa là một hệ thống mà **mọi giọng nghe đều hay**, không nhất thiết là mọi giọng **giống nhau**. Giới nghiên cứu nhìn chung cho rằng [[johann-sebastian-bach|Bach]] **không** dùng bình quân 12, nhưng không biết chính xác hệ thống nào. Năm 2005, Bradley Lehman đề xuất rằng những đường xoắn trên trang bìa bản thảo là "công thức" lên dây của Bach — giả thuyết này bị nhiều người bác bỏ. Bộ tác phẩm gồm 24 [[the-loai|Prelude]] và Fugue ở đủ 24 giọng (xem [[fugue]]).
 
 Piano thực tế còn được lên dây "kéo giãn" một chút so với bình quân 12 lý thuyết — xem [[chuoi-boi-am]]. Bối cảnh lịch sử: [[cac-thoi-ky]]. Lên dây và bảo quản đàn: [[bao-duong-piano]].
+`,
+  },
+  {
+    slug: "cac-he-thong-chinh-am",
+    title: "Các hệ thống chỉnh âm: Pythagore, thuần, meantone, chỉnh âm tốt và bình quân",
+    category: 'pitch',
+    also: ['scales', 'instrument'],
+    aliases: ["hệ thống chỉnh âm", "chỉnh âm", "temperament", "tuning system", "chỉnh âm Pythagore", "Pythagorean tuning", "ngữ điệu thuần", "just intonation", "meantone", "chỉnh âm trung bình", "quarter-comma meantone", "well temperament", "chỉnh âm tốt", "Werckmeister", "Kirnberger III", "Vallotti", "comma Pythagore", "Pythagorean comma", "comma syntonic", "syntonic comma", "quãng 5 sói", "wolf fifth", "cent", "cents", "Alexander Ellis"],
+    summary: "Không thể vừa có quãng 5 thuần (3 : 2) vừa có quãng 3 thuần (5 : 4) vừa khép kín vòng 12 nửa cung: mười hai quãng 5 thuần vượt bảy quãng 8 một \"comma Pythagore\" ≈ 23,46 cent. Mỗi hệ chỉnh âm là một cách chia phần sai số đó. Bài đo mọi thứ bằng cent (Ellis, 1885), so sánh quãng 3 và quãng 5 trong hệ Pythagore, thuần, meantone ¼ comma và bình quân 12, giải thích \"quãng 5 sói\", các chỉnh âm tốt của Werckmeister, Kirnberger, Vallotti, Young, và lịch sử tính ¹²√2 của Chu Tái Dục (1584).",
+    wiki: "Musical_temperament",
+    refs: [
+      ["Wikipedia — Pythagorean comma", "https://en.wikipedia.org/wiki/Pythagorean_comma"],
+      ["John Baez — Tuning and temperament", "https://math.ucr.edu/home/baez/tuning_book/"],
+      ["Wikipedia — Syntonic comma", "https://en.wikipedia.org/wiki/Syntonic_comma"],
+      ["Wikipedia — Quarter-comma meantone", "https://en.wikipedia.org/wiki/Quarter-comma_meantone"],
+      ["Wikipedia — Well temperament", "https://en.wikipedia.org/wiki/Well_temperament"],
+      ["Wikipedia — Vallotti temperament", "https://en.wikipedia.org/wiki/Vallotti_temperament"],
+      ["Ross Duffin (Case Western) — về Vallotti và Young", "https://casfaculty.case.edu/ross-duffin/?p=128"],
+      ["Wikipedia — Twelfth root of two", "https://en.wikipedia.org/wiki/Twelfth_root_of_two"],
+      ["Yaya Liu — Zhu Zaiyu (CMS, PDF)", "https://www2.cms.math.ca/Events/winter13/res/pdf/hpm-yl.pdf"],
+      ["Wikipedia — Cent (music)", "https://en.wikipedia.org/wiki/Cent_(music)"],
+      ["Ellis 1885 — On the Musical Scales of Various Nations (PDF)", "https://soundandscience.net/wp-content/uploads/2023/03/435_Ellis1885_MusicalScales_pdf.pdf"],
+      ["HyperPhysics — Harmonics and temperament", "https://hyperphysics.gsu.edu/hbase/music/harmon.html"],
+    ],
+    body: `
+Bài này đi sâu hơn phần lịch sử trong [[luat-binh-quan]]. Nền vật lý: [[chuoi-boi-am]] và [[thuan-nghich]].
+
+## Đơn vị: cent
+Alexander J. Ellis chia [[quang|quãng 8]] thành **1200 cent** (mỗi [[cung-nua-cung|nửa cung]] bình quân = 100 cent), dùng chính thức trong *On the Musical Scales of Various Nations* (*Journal of the Society of Arts*, 1885). Công thức: **cent = 1200 · log₂(f₂ / f₁)**.
+
+## Vấn đề gốc: hai cái "comma"
+- **Comma Pythagore**: 12 quãng 5 thuần (3 : 2)¹² vượt 7 quãng 8 một tỉ lệ 531441 : 524288 ≈ **23,46 cent** (gần ¼ nửa cung) → vòng quãng 5 [[vong-quang-nam|không khép]].
+- **Comma syntonic** (81 : 80 ≈ **21,51 cent**): quãng 3 "Pythagore" (81 : 64 ≈ 407,82 cent) rộng hơn quãng 3 thuần (5 : 4 ≈ 386,31 cent).
+
+## Bảng so sánh
+| Hệ | Quãng 3 trưởng | Quãng 5 đúng | Đặc điểm |
+|---|---|---|---|
+| **Pythagore** | 407,82 | **701,96** (thuần) | Quãng 5 đẹp, quãng 3 chói; một quãng 5 "sói" ≈ 678,49 |
+| **Thuần** (*just*) | **386,31** (thuần) | 701,96 | Đẹp trong một giọng, không [[chuyen-giong|chuyển giọng]] được |
+| **Meantone ¼ comma** | **386,31** (thuần) | 696,58 | Quãng 3 thuần; sói ≈ 737,6 (thường ở Son♯ – Mi♭) |
+| **Bình quân 12** | 400,00 | 700,00 | Mọi giọng như nhau; quãng 3 rộng hơn thuần ≈ 13,69 cent |
+*(Số liệu theo các nguồn trong bài; thư viện đã tính lại. Quãng 5 sói của meantone là thư viện tính.)*
+**"Quãng 5 sói"**: khi mười một quãng 5 được làm cho đẹp, quãng thứ mười hai gánh toàn bộ sai số và nghe "hú" như sói.
+
+::staff treble C4+E4 C4+G4 G#4+Eb5 | Ba quãng để nghe thử trên đàn được lên dây khác nhau: quãng 3 Đô – Mi, quãng 5 Đô – Sol, và "quãng 5" Son♯ – Mi♭ (chỗ sói trong meantone)
+
+## Meantone
+Mỗi quãng 5 hẹp đi **¼ comma syntonic** để bốn quãng 5 chồng lại cho một quãng 3 **thuần**. Hệ phổ biến nhất thế kỷ 16 – 17; mô tả rõ sớm nhất là *Toscanello in musica* (1523) của **Pietro Aron**, người đòi quãng 3 "vang và đúng".
+
+## Chỉnh âm tốt (well temperament)
+Phân phối sai số **không đều**: các giọng gần Đô trong sáng hơn, giọng xa "gắt" hơn — nhưng **mọi giọng đều dùng được**.
+| Hệ | Cách chia |
+|---|---|
+| **Werckmeister III** (1691) | Bốn quãng 5 C–G, G–D, D–A, B–F♯ hẹp ¼ comma; tám quãng còn lại thuần |
+| **Kirnberger III** | Bốn quãng 5 C–G–D–A–E hẹp ¼ comma syntonic (Đô – Mi thuần), một quãng hẹp một schisma, bảy quãng thuần |
+| **Vallotti** (dạng hiện đại) | Sáu quãng 5 F–C–G–D–A–E–B hẹp ⅙ comma Pythagore, sáu quãng thuần |
+| **Young II** (1799) | Như Vallotti dịch đi: C–G–D–A–E–B–F♯ hẹp ⅙ comma |
+Vì sao điều này quan trọng với người chơi Bach: [[luat-binh-quan|"Clavier bình quân" có phải bình quân 12?]].
+
+## Bình quân 12
+- **Chu Tái Dục** (Zhu Zaiyu, hoàng tử nhà Minh) tính ¹²√2 năm **1584** (khoảng 24 chữ số, bằng bàn tính); **Simon Stevin** tìm ra độc lập (năm ghi khác nhau). Có học giả không coi ai là "người phát minh".
+- Mỗi quãng 5 hẹp **1/12 comma Pythagore** (≈ 1,955 cent) → vòng khép kín, mọi giọng như nhau.
+
+## Nghe thử
+::youtube sjuhzEbOSL8 | So sánh chỉnh âm tốt, Pythagore và meantone trên đàn phím
+*(Gợi ý của thư viện.)* Trên đàn điện có chế độ đổi hệ chỉnh âm, chơi [[hop-am-ba|hợp âm]] Đô trưởng rồi Fa♯ trưởng trong meantone — rồi trong bình quân. Phần "vi cung" thật sự: [[vi-cung-va-am-nhac-vi-cung]].
+`,
+  },
+  {
+    slug: "vi-cung-va-am-nhac-vi-cung",
+    title: "Vi cung và âm nhạc vi cung (microtonality)",
+    category: 'pitch',
+    also: ['modern', 'scales'],
+    aliases: ["vi cung", "microtonality", "microtone", "âm nhạc vi cung", "quãng một phần tư cung", "quarter tone", "phần tư cung", "24-EDO", "19-EDO", "31-EDO", "Harry Partch", "Alois Hába", "Ivan Wyschnegradsky", "Fokker", "Genesis of a Music", "đại hội Cairo 1932"],
+    summary: "Vi cung là những khoảng nhỏ hơn nửa cung bình quân. Bài giới thiệu các hướng chính: phần tư cung (50 cent) của Hába, Wyschnegradsky và Ives; chia quãng 8 thành 19 và 31 phần bằng nhau (Costeley, Huygens 1691, đàn organ Fokker 1950); thang 43 âm theo ngữ điệu thuần của Harry Partch; nhạc phổ của Grisey; cuộc tranh luận về thang 24 phần tư cung ở Đại hội Âm nhạc Ả Rập Cairo 1932; và nghiên cứu đo cao độ đàn tranh Việt Nam (bước khoảng 166 cent).",
+    wiki: "Microtonality",
+    refs: [
+      ["Wikipedia — Ivan Wyschnegradsky", "https://en.wikipedia.org/wiki/Ivan_Wyschnegradsky"],
+      ["Ivan Wyschnegradsky — tiểu sử chính thức", "https://www.ivan-wyschnegradsky.fr/en/biography/"],
+      ["IRCAM Brahms — Ives, Three Quarter-Tone Pieces", "https://brahms-old.ircam.fr/en/works/work/32455"],
+      ["Britannica — Alois Hába", "https://www.britannica.com/biography/Alois-Haba"],
+      ["Music & Letters — về Hába", "https://academic.oup.com/ml/article/93/2/254/1015665"],
+      ["Wikipedia — Harry Partch's 43-tone scale", "https://en.wikipedia.org/wiki/Harry_Partch%27s_43-tone_scale"],
+      ["Hachette — Partch, Genesis of a Music", "https://www.hachettebookgroup.com/titles/harry-partch/genesis-of-a-music/9780306801068/"],
+      ["Wikipedia — 19 equal temperament", "https://en.wikipedia.org/wiki/19_equal_temperament"],
+      ["Wikipedia — 31 equal temperament", "https://en.wikipedia.org/wiki/31_equal_temperament"],
+      ["Muziekgebouw — Fokker organ", "https://www.muziekgebouw.nl/en/fokker-organ-x5l6"],
+      ["King's College London — dự án Cairo Congress 1932", "https://1932muscon.kcl.ac.uk/?p=2133"],
+      ["Wikipedia — Partiels (Grisey)", "https://en.wikipedia.org/wiki/Partiels"],
+      ["Keefe, Burns & Nguyen (1991) — Vietnamese modal scales of the đàn tranh (trang mục lục)", "https://labs.sonicfield.org/library/vietnamese-modal-scales-of-the-dan-tranh"],
+      ["Ngô Thanh Nhàn & Phan Gia Anh Thư (2017) — thang ngũ cung Việt đo bằng cent (PDF)", "https://cs.nyu.edu/~nhan/JoSSH_vol-3_no-5_ver-12_20171215.pdf"],
+    ],
+    body: `
+Bài này nối [[cac-he-thong-chinh-am]] với [[nhac-pho]] và [[hoi-trong-nhac-tai-tu-cai-luong|hơi trong nhạc tài tử]]. Trên piano chuẩn **không** chơi được vi cung — vì vậy chủ đề này giúp người học piano hiểu giới hạn của cây đàn mình.
+
+## Phần tư cung (24 âm một quãng 8)
+- Một phần tư cung = **50 cent**.
+- **Alois Hába**: dạy lớp phần tư cung ở Nhạc viện Praha từ 1924, thành khoa vi cung năm 1934, đóng cửa 1951; [[opera|opera]] phần tư cung *Matka* (Người mẹ), sáng tác 1927 – 1928, công diễn 1931 *(nơi diễn: các nguồn khác nhau)*.
+- **Ivan Wyschnegradsky** gặp Hába ở Berlin đầu thập niên 1920; họ cùng Grotrian-Steinweg làm một piano phần tư cung (khoảng 1924); năm 1929 Wyschnegradsky nhận một piano phần tư cung ba [[ban-phim|bàn phím]] do Förster đóng. *(Chi tiết hơi mâu thuẫn giữa các nguồn.)*
+- [[charles-ives|Charles Ives]], *Three Quarter-Tone Pieces* cho hai piano (chương đầu viết 1923 – 1924), công diễn **8/2/1925** tại Chickering Hall, New York.
+- **Đại hội Âm nhạc Ả Rập Cairo 1932**: một uỷ ban xem xét thang **24 phần tư cung bằng nhau**; một cây [[qanun|qanun]] lên theo thang này bị nhạc công chê là lạc giọng. Các học giả nhấn mạnh 24 phần là sơ đồ lý thuyết — [[cao-do|cao độ]] "nửa giáng" thực tế thay đổi theo maqam. Xem [[nhac-cu-nam-a-tay-a]].
+
+## Chia quãng 8 thành 19 và 31 phần
+| Hệ | Một bước | [[quang|Quãng]] 5 | Quãng 3 trưởng | Lịch sử |
+|---|---|---|---|---|
+| 19 phần | ≈ 63,16 cent | ≈ 694,74 | ≈ 378,95 | [[ca-khuc-the-tuc-trung-co|Chanson]] *Seigneur Dieu ta pitié* của Guillaume Costeley (khoảng 1558) đòi chia 19; luận án tiến sĩ đầu tiên về vi cung (Joel Mandelbaum, 1961) bàn về hệ này |
+| 31 phần | ≈ 38,71 cent | ≈ 696,77 | ≈ 387,10 | **Huygens** mô tả năm 1691; **Adriaan Fokker** phục hồi — [[organ-ong|đàn organ]] Fokker (1950) nay đặt ở Muziekgebouw aan 't IJ, Amsterdam |
+*(Các số cent thư viện tính lại.)* Hệ 31 gần như trùng [[cac-he-thong-chinh-am|meantone ¼ comma]] — cho quãng 3 gần thuần mà vẫn khép vòng.
+
+## Harry Partch: 43 âm theo ngữ điệu thuần
+Harry Partch (1901 – 1974) dựng thang **43 âm một quãng 8** từ các tỉ lệ số nguyên (một "kim cương âm" giới hạn 11), tự đóng nhạc cụ để chơi nó. Sách *Genesis of a Music* in lần đầu năm 1949, bản mở rộng tái bản 1979 ([[dau-nhac-lai|Da Capo]]).
+
+## Nhạc phổ
+*Partiels* của [[gerard-grisey|Gérard Grisey]] mở đầu bằng phổ âm của một nốt Mi trầm trên [[trombone|kèn trombone]]; các âm cục bộ được giao cho từng nhạc cụ và làm tròn về phần tư hoặc phần sáu cung gần nhất. Xem [[nhac-pho]] và [[chuoi-boi-am]].
+
+## Việt Nam: vi cung trong thực hành
+- **Keefe, Burns và [[nghien-cuu-am-nhac-viet-nam|Nguyễn Thuyết Phong]]** (*Music Perception*, 1991) đo dây [[dan-tranh|đàn tranh]] do một nghệ nhân lên theo tai trong sáu tháng: hai hệ Bắc và Nam; thang [[dieu-thuc|điệu thức]] dùng nhiều bước khoảng **166 cent** — giữa một cung bình quân (200) và ba phần tư cung (150). *(Thư viện mới thấy qua trang mục lục.)*
+- Ngô Thanh Nhàn và Phan Gia Anh Thư (2017) đo các thang [[am-giai-ngu-cung|ngũ cung]] Việt bằng cent: một số âm nằm **ngoài** lưới bình quân.
+- Các âm "già", "non" và chữ "nhấn" trong [[hoi-trong-nhac-tai-tu-cai-luong|hơi Oán]] là vi cung trong thực hành — **chưa** có số đo cent riêng cho [[ca-hue-nha-nhac|ca Huế]] hay hơi Oán trong các nguồn tìm được.
 `,
   },
 ]

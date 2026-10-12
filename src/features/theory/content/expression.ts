@@ -646,7 +646,7 @@ Ký hiệu trên bản nhạc **không tự giải thích hết**: cùng một d
 
 ## Baroque: Bach trên piano hiện đại
 - [[johann-sebastian-bach|Bach]] **không biết** đến piano hiện đại; nhạc đàn phím của ông viết cho [[dan-phim-co|harpsichord]], clavichord, [[organ-ong|organ]].
-- Hai phía tranh luận: phía "nhạc cụ cổ" chơi Bach trên harpsichord hoặc chơi trên piano theo lối "không piano"; phía còn lại cho rằng nếu biết piano hiện đại, Bach hẳn đã thích nó. Một lập luận thêm: chính Bach thường **chuyển soạn** tác phẩm của mình cho nhạc cụ khác, nên [[am-sac|âm sắc]] có lẽ không phải điều cốt yếu với ông.
+- Hai phía tranh luận: phía "nhạc cụ cổ" chơi Bach trên harpsichord hoặc chơi trên piano theo lối "không piano"; phía còn lại cho rằng nếu biết piano hiện đại, Bach hẳn đã thích nó. Một lập luận thêm: chính Bach thường **[[phoi-khi-nguyen-ly-co-ban|chuyển soạn]]** tác phẩm của mình cho nhạc cụ khác, nên [[am-sac|âm sắc]] có lẽ không phải điều cốt yếu với ông.
 - Piano mang lại **sắc thái cường độ**, nhiều màu âm và pedal — người chơi cần quyết định dùng chúng đến đâu.
 - Các câu hỏi thực hành: cường độ (xem [[cuong-do]] — tranh luận "bậc thang"), [[ky-hieu-hoa-my|hoa mỹ]] (láy rền từ nốt trên), [[dau-nhac-lai|trang trí khi lặp lại]], [[choi-phuc-dieu|chơi phức điệu]].
 

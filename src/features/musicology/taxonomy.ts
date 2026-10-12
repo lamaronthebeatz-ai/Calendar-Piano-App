@@ -102,6 +102,7 @@ export const BRANCHES: Branch[] = [
     groups: [
       { title: 'Cổ tự học và ký âm', slugs: ['lich-su-ky-am', 'thanh-ca-gregorian', 'ky-am-binh-ca-gregorian', 'gregorio-va-gabc', 'truong-do', 'bass-so'] },
       { title: 'In ấn, văn bản và ấn bản', slugs: ['lich-su-in-an-am-nhac', 'van-ban-hoc-am-nhac', 'an-ban-urtext', 'sach-hat-va-van-kien-binh-ca', 'tai-lieu-su-pham-cua-bach'] },
+      { title: 'Hình ảnh và dữ liệu số', slugs: ['bieu-tuong-hoc-am-nhac', 'am-nhac-hoc-ky-thuat-so', 'gian-pho-ky-am-so', 'ky-hieu-cao-do-c4-helmholtz-midi'] },
       { title: 'Bản thu như một nguồn', slugs: ['lich-su-thu-am', 'so-sanh-ban-thu'] },
     ],
   },
@@ -133,7 +134,7 @@ export const BRANCHES: Branch[] = [
     questions: ['Một thể loại được định nghĩa bằng chức năng, biên chế hay hình thức?', 'Vì sao một thể loại nổi lên ở một nơi, một thời?'],
     groups: [
       { title: 'Trung cổ và Phục hưng', slugs: ['thanh-ca-gregorian', 'organum', 'motet', 'thanh-le-va-requiem', 'ca-khuc-the-tuc-trung-co', 'madrigal', 'nhac-khi-phuc-hung'] },
-      { title: 'Baroque', slugs: ['opera', 'oratorio-cantata-passion', 'chorale-va-chorale-prelude', 'to-khuc-baroque', 'toccata-prelude-fugue', 'sonata-baroque', 'concerto-grosso', 'khuc-mo-man'] },
+      { title: 'Baroque', slugs: ['opera', 'oratorio-cantata-passion', 'chorale-va-chorale-prelude', 'to-khuc-baroque', 'toccata-prelude-fugue', 'sonata-baroque', 'concerto-grosso', 'khuc-mo-man', 'passacaglia-va-chaconne'] },
       { title: 'Cổ điển và Lãng mạn', slugs: ['giao-huong', 'nhac-thinh-phong', 'sonata-the-loai', 'tieu-pham-piano', 'lied', 'tho-giao-huong', 'ballet', 'operetta-va-nhac-kich', 'the-loai'] },
       { title: 'Thế kỷ 20 – 21', cats: ['genres'] },
     ],
@@ -181,7 +182,7 @@ export const BRANCHES: Branch[] = [
     summary: 'Nhạc cụ như một đối tượng nghiên cứu: phân loại Hornbostel – Sachs, lịch sử, cấu tạo, tầm âm — nhạc cụ phương Tây và phương Đông, từ dàn nhạc giao hưởng đến đàn bầu, gamelan, sitar.',
     questions: ['Phân loại nhạc cụ theo tiêu chí nào?', 'Cấu tạo của cây đàn đã định hình lối viết và lối chơi ra sao?', 'Một nhạc cụ di chuyển và biến đổi giữa các nền văn hoá như thế nào?'],
     groups: [
-      { title: 'Hệ thống và bảo tàng', slugs: ['nhac-khi-hoc', 'nhac-khi-the-gioi', 'am-hoc-nhac-cu', 'dan-nhac-giao-huong'] },
+      { title: 'Hệ thống và bảo tàng', slugs: ['nhac-khi-hoc', 'nhac-khi-the-gioi', 'am-hoc-nhac-cu', 'dan-nhac-giao-huong', 'phoi-khi-nguyen-ly-co-ban', 'bieu-tuong-hoc-am-nhac', 'am-nhac-hoc-sinh-thai'] },
       { title: 'Bộ dây phương Tây', slugs: ['violin', 'viola', 'cello', 'double-bass', 'viola-da-gamba', 'dan-hac', 'guitar-co-dien', 'dan-lute', 'mandolin', 'guitar-dien'] },
       { title: 'Kèn gỗ và kèn đồng', slugs: ['sao-flute', 'recorder', 'oboe', 'clarinet', 'bassoon', 'saxophone', 'trumpet', 'kenh-horn', 'trombone', 'tuba'] },
       { title: 'Bộ gõ, đàn phím khác và nhạc cụ điện', slugs: ['timpani', 'bo-go-dan-nhac', 'bo-go-phim', 'celesta', 'trong-jazz', 'organ-ong', 'accordion-harmonium', 'synthesizer', 'theremin-ondes'] },
@@ -203,7 +204,7 @@ export const BRANCHES: Branch[] = [
     summary: 'Người ta đã giải thích âm nhạc thế nào qua các thời đại: từ Pythagoras và thuyết ethos đến Rameau, Schenker và lý thuyết hiện đại.',
     questions: ['Một lý thuyết trả lời câu hỏi của thời nó như thế nào?', 'Vì sao các quy tắc "cổ điển" ra đời sau âm nhạc mà chúng mô tả?'],
     groups: [
-      { title: 'Lý thuyết và phân tích qua các thời đại', slugs: ['lich-su-phan-tich-am-nhac', 'phong-cach-palestrina', 'luoc-do-galant', 'partimento', 'luat-binh-quan', 'tam-dieu-thuc-va-giong-thanh-vinh', 'bach-day-hoc-tro', 'phoi-chorale-kieu-bach'] },
+      { title: 'Lý thuyết và phân tích qua các thời đại', slugs: ['lich-su-phan-tich-am-nhac', 'phong-cach-palestrina', 'luoc-do-galant', 'partimento', 'luat-binh-quan', 'cac-he-thong-chinh-am', 'tam-dieu-thuc-va-giong-thanh-vinh', 'bach-day-hoc-tro', 'phoi-chorale-kieu-bach'] },
       { title: 'Tư tưởng về âm nhạc', slugs: ['am-nhac-co-dai', 'thuyet-ethos-hy-lap', 'hoa-am-vu-tru', 'nhac-trong-tu-tuong-nho-gia', 'tranh-luan-rameau-rousseau', 'triet-hoc-lang-man-ve-am-nhac'] },
     ],
   },
@@ -228,6 +229,22 @@ export const BRANCHES: Branch[] = [
   },
 
   // ---------------------------------------------------------------- systematic
+  {
+    id: 'phe-phan-van-hoa',
+    part: 'systematic',
+    title: 'Âm nhạc học phê phán và văn hoá',
+    en: 'Critical & cultural musicology',
+    glyph: '𝄐',
+    hue: 20,
+    hub: 'am-nhac-hoc-moi',
+    summary: 'Âm nhạc như thực hành văn hoá: âm nhạc học mới, giới và nữ quyền, nhạc đại chúng, nhạc phim, công nghiệp âm nhạc, âm thanh và môi trường, chính trị và kiểm duyệt, di sản phi vật thể.',
+    questions: ['Âm nhạc mang ý thức hệ, giới, quyền lực như thế nào?', 'Ai được nghe, ai được trả tiền, ai được ghi danh — và vì sao?', 'Nghe một nơi chốn khác nghe một tác phẩm ra sao?'],
+    groups: [
+      { title: 'Phê bình và giới', slugs: ['am-nhac-hoc-moi', 'am-nhac-hoc-nu-quyen-va-gioi', 'adorno-va-am-nhac', 'lich-su-tiep-nhan-am-nhac'] },
+      { title: 'Đại chúng, màn ảnh và thị trường', slugs: ['nghien-cuu-am-nhac-dai-chung', 'nghien-cuu-nhac-phim', 'cong-nghiep-am-nhac', 'hinh-thuc-ca-khuc-pho-thong'] },
+      { title: 'Âm thanh, môi trường, chính trị, di sản', slugs: ['nghien-cuu-am-thanh-va-canh-quan-am-thanh', 'am-nhac-hoc-sinh-thai', 'am-nhac-chinh-tri-va-kiem-duyet', 'di-san-phi-vat-the-va-am-nhac'] },
+    ],
+  },
   {
     id: 'am-hoc',
     part: 'systematic',
@@ -358,9 +375,9 @@ export const BRANCHES: Branch[] = [
     summary: 'Âm nhạc trong xã hội và văn hoá: ai làm nhạc, cho ai, để làm gì; âm nhạc truyền thống và đại chúng — đặc biệt là Việt Nam.',
     questions: ['Âm nhạc mang nghĩa gì với cộng đồng làm ra nó?', 'Công nghiệp, công nghệ và thị trường định hình âm nhạc ra sao?'],
     groups: [
-      { title: 'Tổng quan', slugs: ['dan-toc-nhac-hoc', 'xa-hoi-hoc-am-nhac'] },
+      { title: 'Tổng quan', slugs: ['dan-toc-nhac-hoc', 'xa-hoi-hoc-am-nhac', 'di-san-phi-vat-the-va-am-nhac', 'nghien-cuu-am-thanh-va-canh-quan-am-thanh'] },
       { title: 'Âm nhạc Việt Nam', slugs: ['am-nhac-va-ngon-ngu', 'am-nhac-truyen-thong-viet-nam', 'am-giai-ngu-cung', 'tan-nhac-viet-nam', 'piano-viet-nam', 'dem-dieu-viet-nam'] },
-      { title: 'Âm nhạc đại chúng và xã hội', slugs: ['nhac-pho-thong-the-ky-20', 'phong-cach-jazz', 'jam-session', 'adorno-va-am-nhac', 'nhac-trong-tu-tuong-nho-gia'] },
+      { title: 'Âm nhạc đại chúng và xã hội', slugs: ['nhac-pho-thong-the-ky-20', 'phong-cach-jazz', 'jam-session', 'adorno-va-am-nhac', 'nhac-trong-tu-tuong-nho-gia', 'nghien-cuu-am-nhac-dai-chung', 'cong-nghiep-am-nhac', 'am-nhac-chinh-tri-va-kiem-duyet', 'clave-tresillo-va-nhip-cong', 'vi-cung-va-am-nhac-vi-cung'] },
     ],
   },
   {
@@ -391,7 +408,7 @@ export const BRANCHES: Branch[] = [
     hub: 'am-nhac-hoc-tinh-toan',
     summary: 'Máy tính như công cụ nghiên cứu: mô hình hoá, phân tích kho dữ liệu lớn, truy xuất thông tin âm nhạc, âm thanh tổng hợp.',
     questions: ['Một khẳng định về phong cách có đứng vững trên hàng nghìn tác phẩm không?', 'Một lý thuyết có thể viết thành thuật toán không?'],
-    groups: [{ title: 'Các bài liên quan', slugs: ['am-nhac-hoc-tinh-toan', 'tim-giong-bang-may', 'tap-hop-cao-do', 'neo-riemann', 'nhac-dien-tu', 'nhac-pho'] }],
+    groups: [{ title: 'Các bài liên quan', slugs: ['am-nhac-hoc-tinh-toan', 'am-nhac-hoc-ky-thuat-so', 'tim-giong-bang-may', 'tap-hop-cao-do', 'neo-riemann', 'nhac-dien-tu', 'nhac-pho'] }],
   },
 
   // ---------------------------------------------------------------- practice

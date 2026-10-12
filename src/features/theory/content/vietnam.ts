@@ -42,6 +42,8 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 | Nhạc sĩ | [[le-thuong]], [[van-chung]], [[hoang-trong]], [[hoang-thi-tho]], [[y-van]], [[tu-cong-phung]], [[nguyen-anh-9]], [[pho-duc-phuong]], [[hong-dang]], [[nguyen-tai-tue]], [[nguyen-cuong]], [[tran-lap]], [[son-tung-m-tp]] |
 
 **Bình ca và organ ở Việt Nam:** điều đã biết và những khoảng trống — [[binh-ca-va-organ-o-viet-nam]].
+
+**Di sản và thị trường:** [[di-san-phi-vat-the-va-am-nhac]] (các di sản UNESCO và phê phán) và [[cong-nghiep-am-nhac]] (tác quyền, VCPMC, streaming).
 `,
   },
   {
@@ -113,7 +115,7 @@ UNESCO mô tả nhã nhạc được **thể chế hoá và chuẩn hoá** dư�
 Việc bảo tồn nhã nhạc bắt đầu từ **1992**; GS Trần Văn Khê góp phần làm hồ sơ UNESCO. Xem [[ca-hue-nha-nhac]].
 
 ## Ca Huế
-Các nghiên cứu cho rằng ca Huế hình thành khoảng thế kỷ 17 – giữa thế kỷ 18 (thời các chúa Nguyễn) và định hình vào thế kỷ 19, nhiều bài lấy từ nhạc lễ cung đình (Long ngâm, Ngũ đối thượng/hạ, 10 bài liên hoàn). Có điệu Bắc và điệu Nam, hơn 60 bài. Ca Huế là di sản văn hoá phi vật thể **quốc gia** (2015), **chưa** được UNESCO ghi danh.
+Các nghiên cứu cho rằng ca Huế hình thành khoảng thế kỷ 17 – giữa thế kỷ 18 (thời các chúa Nguyễn) và định hình vào thế kỷ 19, nhiều bài lấy từ nhạc lễ cung đình (Long ngâm, Ngũ đối thượng/hạ, 10 bài liên hoàn). Có điệu Bắc và điệu Nam, hơn 60 bài. Ca Huế là [[di-san-phi-vat-the-va-am-nhac|di sản văn hoá phi vật thể]] **quốc gia** (2015), **chưa** được UNESCO ghi danh.
 
 ## Phương Nam
 - **Đờn ca tài tử** thành hình cuối thế kỷ 19 trên nền nhạc lễ, nhã nhạc và dân ca Nam Bộ; UNESCO ghi danh ngày **5/12/2013**. Câu chuyện các quan chức theo **Nguyễn Quang Đại** chạy vào Nam sau khi kinh thành Huế thất thủ (1885) và cải biên nhạc Huế chỉ có một nguồn báo chí — xem [[giai-thoai-am-nhac-viet-nam]].
@@ -298,7 +300,7 @@ Trang tổng quan cũ hơn: [[lich-su-am-nhac-viet-nam]]. Bản đồ cả mục
       ["Cổng thông tin Hưng Yên — A Đào singing", "https://en.hungyen.gov.vn/a-dao-singing-c217.html"],
     ],
     body: `
-**Ca trù** (còn gọi hát ả đào, hát cô đầu) là lối hát thơ có nhạc đệm của người Việt ở miền Bắc, từng được hát ở đình làng, cửa quyền và nhà tư nhân. UNESCO ghi danh "Ca trù singing" vào **Danh sách di sản văn hoá phi vật thể cần bảo vệ khẩn cấp** năm **2009**.
+**Ca trù** (còn gọi hát ả đào, hát cô đầu) là lối hát thơ có nhạc đệm của người Việt ở miền Bắc, từng được hát ở đình làng, cửa quyền và nhà tư nhân. UNESCO ghi danh "Ca trù singing" vào **Danh sách [[di-san-phi-vat-the-va-am-nhac|di sản văn hoá phi vật thể]] cần bảo vệ khẩn cấp** năm **2009**.
 
 ## Ba vai trong một buổi hát
 | Vai | Người | Nhạc cụ, việc làm |
@@ -350,7 +352,7 @@ Phần âm nhạc chi tiết — thể cách, khổ phách, trống chầu: [[am
       ["Lauren Meeker — Sounding Out Heritage (University of Hawaiʻi Press, 2013)", "https://uhpress.hawaii.edu/sounding-out-heritage-cultural-politics-and-the-social-practice-of-quan-ho-folk-song-in-northern-vietnam/"],
     ],
     body: `
-**Quan họ** là lối hát **đối đáp** không nhạc đệm giữa các **liền anh** (nam) và **liền chị** (nữ) của những làng kết nghĩa vùng Kinh Bắc. UNESCO ghi danh vào Danh sách đại diện ngày **30/9/2009**.
+**Quan họ** là lối hát **đối đáp** không nhạc đệm giữa các **liền anh** (nam) và **liền chị** (nữ) của những làng kết nghĩa vùng Kinh Bắc. UNESCO ghi danh vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] ngày **30/9/2009**.
 
 ## Con số
 | Mục | Số liệu | Nguồn |
@@ -394,7 +396,7 @@ Liên quan: [[the-loai-am-nhac-viet-nam]], [[ly-thuyet-am-nhac-co-truyen-viet-na
 **Chèo** là sân khấu kết hợp hát, múa, nhạc và kể chuyện của người Việt vùng **đồng bằng sông Hồng**, xuất phát từ các hội làng và ban đầu diễn ở **sân đình**. Wikipedia viết chèo xuất hiện chính thức từ thời **Lý** (khoảng thế kỷ 11) và phát triển mạnh thời **Trần**.
 
 ## Di sản
-- Chèo Thái Bình được đưa vào danh mục di sản văn hoá phi vật thể quốc gia năm **2023**; sau đó chèo Bắc Ninh cũng được công nhận.
+- Chèo Thái Bình được đưa vào danh mục [[di-san-phi-vat-the-va-am-nhac|di sản văn hoá phi vật thể]] quốc gia năm **2023**; sau đó chèo Bắc Ninh cũng được công nhận.
 - Hồ sơ chèo đang được chuẩn bị để đề cử UNESCO, **chưa** được ghi danh.
 
 ## Truyền thuyết tổ nghề
@@ -518,7 +520,7 @@ Liên quan: [[don-ca-tai-tu]], [[cheo]], [[tuong]], [[dan-nguyet]], [[ly-thuyet-
       ["Alexander M. Cannon — Seeding the Tradition (Wesleyan University Press, 2022)", "https://www.birmingham.ac.uk/staff/profiles/music/cannon-alexander.aspx"],
     ],
     body: `
-**Đờn ca tài tử** là lối hoà đàn và ca của người Nam Bộ, được UNESCO ghi danh vào Danh sách đại diện năm **2013** (phiên họp Baku). Theo hồ sơ UNESCO, nó có cả gốc bác học lẫn dân gian; một nghiên cứu cho rằng nó lớn lên từ nhạc lễ – cung đình Huế được đưa vào Nam.
+**Đờn ca tài tử** là lối hoà đàn và ca của người Nam Bộ, được UNESCO ghi danh vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] năm **2013** (phiên họp Baku). Theo hồ sơ UNESCO, nó có cả gốc bác học lẫn dân gian; một nghiên cứu cho rằng nó lớn lên từ nhạc lễ – cung đình Huế được đưa vào Nam.
 
 ## Ứng tác trên "giai điệu khung"
 UNESCO mô tả người chơi **[[ngau-hung-ung-tac|ứng tác]], tô điểm và biến đổi** trên một **giai điệu khung** (*skeletal melody*) và các hình [[tiet-tau|tiết tấu]] chính — mỗi lần chơi là một lần khác. Kho bài gồm **20 bài chính** và **72 bài cổ**; việc học truyền miệng, ít nhất **ba năm**.
@@ -563,7 +565,7 @@ Hơi và kỹ thuật tô điểm: [[hoi-trong-nhac-tai-tu-cai-luong]], [[long-b
     ],
     body: `
 ## Nhã nhạc
-**Nhã nhạc** ("nhạc tao nhã") là nhạc lễ cung đình. UNESCO tuyên bố nó là Kiệt tác truyền khẩu và phi vật thể của nhân loại ngày **7/11/2003**, rồi đưa vào Danh sách đại diện năm **2008** — **di sản đầu tiên của Việt Nam** trong danh sách này. UNESCO mô tả nó gồm các phong cách nhạc – múa cung đình từ **thế kỷ 15 đến giữa [[thoi-ky-the-ky-20|thế kỷ 20]]**. Các dàn nhạc trong cung được ghi chép trong [[lich-su-am-nhac-viet-nam]].
+**Nhã nhạc** ("nhạc tao nhã") là nhạc lễ cung đình. UNESCO tuyên bố nó là Kiệt tác truyền khẩu và phi vật thể của nhân loại ngày **7/11/2003**, rồi đưa vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] năm **2008** — **di sản đầu tiên của Việt Nam** trong danh sách này. UNESCO mô tả nó gồm các phong cách nhạc – múa cung đình từ **thế kỷ 15 đến giữa [[thoi-ky-the-ky-20|thế kỷ 20]]**. Các dàn nhạc trong cung được ghi chép trong [[lich-su-am-nhac-viet-nam]].
 
 ## Ca Huế
 **Ca Huế** pha trộn dân ca và nhạc cung đình. Nó có hai hệ [[dieu-thuc|điệu thức]] chính:
@@ -605,7 +607,7 @@ Liên quan: [[the-loai-am-nhac-viet-nam]], [[don-ca-tai-tu]].
     body: `
 | Di sản | Cộng đồng, vùng | UNESCO | Âm nhạc |
 |---|---|---|---|
-| **Hát xoan** | Phú Thọ; gắn với thờ **Hùng Vương** | Danh sách cần bảo vệ khẩn cấp **2011** → chuyển sang Danh sách đại diện ngày **8/12/2017** (lần đầu một di sản được chuyển như vậy) | Hát, múa, trống và phách |
+| **Hát xoan** | Phú Thọ; gắn với thờ **Hùng Vương** | Danh sách cần bảo vệ khẩn cấp **2011** → chuyển sang [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] ngày **8/12/2017** (lần đầu một di sản được chuyển như vậy) | Hát, múa, trống và phách |
 | **Hát văn** (chầu văn) | Thực hành **thờ Mẫu Tam phủ** của người Việt; trung tâm ở Nam Định, gốc từ thế kỷ 16 | **2016** | Hát trong nghi lễ **lên đồng** |
 | **Then** | Người **Tày, Nùng, Thái**; có ở 11 tỉnh | **2019** | Thầy then hát và gảy **[[dan-tinh|đàn tính]]**, "dẫn quân âm binh từ mặt đất lên trời" |
 
@@ -653,7 +655,7 @@ Liên quan: [[dan-tinh]], [[dan-nguyet]], [[the-loai-am-nhac-viet-nam]].
 | **Ví, giặm** | Nghệ An, Hà Tĩnh | UNESCO **2014**; hát khi làm ruộng, chèo thuyền, làm nón, ru con — thường không đệm, bằng giọng địa phương |
 | **Bài chòi** | 9 tỉnh, thành miền Trung (Quảng Bình đến Khánh Hoà, cả Đà Nẵng) | UNESCO **2017**; vừa là trò chơi bài ngày Tết trong các chòi tre, vừa là diễn xướng của các "anh Hiệu"; gần 90 đội, câu lạc bộ |
 | **Hát xẩm** | Bắc Bộ | Hát rong của người khiếm thị; Hà Thị Cầu được gọi là "người hát xẩm cuối cùng" (2004); nhạc sĩ Thao Giang khôi phục xẩm Hà Nội |
-| **Hát chèo tàu** | Tổng Gối (Đan Phượng, Hà Nội) | Di sản văn hoá phi vật thể quốc gia (2025) |
+| **Hát chèo tàu** | Tổng Gối (Đan Phượng, Hà Nội) | [[di-san-phi-vat-the-va-am-nhac|Di sản văn hoá phi vật thể]] quốc gia (2025) |
 
 ## Những điều còn tranh cãi
 - **"Mái" trong hò mái nhì** nghĩa là mái chèo, hay là "mái" đối với "trống" (giống cái – giống đực)? Hai cách hiểu cùng tồn tại.
@@ -1094,7 +1096,7 @@ Liên quan: [[am-nhac-viet-nam-sau-1975]].
 Việc góp bài cho *Giai phẩm mùa xuân* (1956) khiến ông bị kỷ luật (tháng 7/1958, theo RFA: học tập chính trị, ra khỏi Ban chấp hành Hội Nhạc sĩ) và gần như ngừng sáng tác. Hầu hết bài hát của ông bị cấm ở miền Bắc, trừ *Tiến quân ca*, *Làng tôi*, *Tiến về Hà Nội*, *Trường ca sông Lô*; sau đó được phép trở lại. *(Mốc phục hồi năm 1987 chỉ có một nguồn yếu.)*
 
 ## Tiến quân ca và bản quyền
-Ngày **15/7/2016**, gia đình ông **hiến tặng** *Tiến quân ca* cho Nhà nước và nhân dân; Bộ Văn hoá yêu cầu VCPMC ngừng thu tiền tác quyền. Năm 2021 BH Media "nhận" quyền trên YouTube với một bản thu âm của bài, gây tranh cãi về quyền tác giả và quyền của bản ghi — xem [[ban-quyen-am-nhac-viet-nam]].
+Ngày **15/7/2016**, gia đình ông **hiến tặng** *Tiến quân ca* cho Nhà nước và nhân dân; Bộ Văn hoá yêu cầu VCPMC ngừng thu [[cong-nghiep-am-nhac|tiền tác quyền]]. Năm 2021 BH Media "nhận" quyền trên YouTube với một bản thu âm của bài, gây tranh cãi về quyền tác giả và quyền của bản ghi — xem [[ban-quyen-am-nhac-viet-nam]].
 
 **Giải thưởng:** Giải thưởng Hồ Chí Minh đợt I (1996, truy tặng).
 
@@ -1935,7 +1937,7 @@ Viện Âm nhạc cũng ghi: khác biệt giữa **hơi Ai và hơi Oán** nằm
 Việc Nhạc Khị hệ thống hoá 20 bài bản tổ được Trần Phước Thuận nêu, nhưng "chưa được chứng minh rõ ràng". *(Bảng này bổ sung tên bài so với [[don-ca-tai-tu]]; bài lớn có gắn với hơi Nhạc hay không chưa có nguồn khẳng định.)*
 
 ## Đo cao độ
-Một nghiên cứu của **Keefe, Burns và Nguyễn Thuyết Phong** (*Music Perception*, 1991) đo dây đàn tranh do một nghệ nhân lên theo tai trong sáu tháng: thang [[dieu-thuc|điệu thức]] chia hai hệ Bắc và Nam, thí nghiệm "âm thăm dò" cho thấy hai hệ có trật tự thứ bậc khác nhau, và báo cáo việc dùng nhiều bước khoảng **166 cent** (5/3 nửa cung). *Thư viện mới thấy bài này qua một trang mục lục thứ cấp — cần đối chiếu bản gốc trên tạp chí.* Chưa thấy số đo cent cho [[dan-bau|đàn bầu]] hay ca Huế.
+Một nghiên cứu của **Keefe, Burns và Nguyễn Thuyết Phong** (*Music Perception*, 1991) đo dây đàn tranh do một nghệ nhân lên theo tai trong sáu tháng: thang [[dieu-thuc|điệu thức]] chia hai hệ Bắc và Nam, thí nghiệm "âm thăm dò" cho thấy hai hệ có trật tự thứ bậc khác nhau, và báo cáo việc dùng nhiều bước khoảng **166 [[cac-he-thong-chinh-am|cent]]** (5/3 nửa cung). *Thư viện mới thấy bài này qua một trang mục lục thứ cấp — cần đối chiếu bản gốc trên tạp chí.* Chưa thấy số đo cent cho [[dan-bau|đàn bầu]] hay ca Huế.
 
 ## Những chỗ còn tranh luận
 - Một nghiên cứu được Viện Âm nhạc dẫn cho rằng cách rung xự – cống theo lối Huế cho hơi Xuân là **sai**, và Nam xuân xoay quanh trục **hò – xang**.

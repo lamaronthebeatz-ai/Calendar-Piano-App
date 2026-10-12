@@ -75,6 +75,8 @@ Bảng tóm tắt các thể loại khí nhạc lớn: [[the-loai]].
 - Lộ trình chọn bài theo trình độ: [[lo-trinh-tac-pham]]; nhà soạn nhạc theo thời kỳ: [[thoi-ky-trung-co]] … [[thoi-ky-the-ky-20]].
 
 **Âm nhạc nhà thờ:** lộ trình riêng ở [[am-nhac-nha-tho]]; thánh lễ organ và lối luân phiên ở [[alternatim-va-thanh-le-organ]].
+
+**Thêm góc nhìn:** [[passacaglia-va-chaconne]], [[hinh-thuc-ca-khuc-pho-thong]]; nghiên cứu về [[nghien-cuu-am-nhac-dai-chung|nhạc đại chúng]], [[nghien-cuu-nhac-phim|nhạc phim]] và [[am-nhac-chinh-tri-va-kiem-duyet|kiểm duyệt]].
 `,
   },
   {
@@ -375,7 +377,7 @@ Liên quan: [[madrigal]], [[thoi-ky-phuc-hung]], [[dan-phim-co]].
     slug: 'opera',
     title: 'Opera',
     category: 'genres',
-    aliases: ['opera', 'nhạc kịch opera', 'Florentine Camerata', 'Camerata', 'L’Orfeo', 'Euridice (Peri)', 'opera seria', 'opera buffa', 'Singspiel', 'bel canto', 'aria', 'aria da capo', 'da capo aria', 'recitative', 'recitativo secco', 'recitativo accompagnato', 'music drama', 'nhạc kịch Wagner', 'Der Freischütz', 'Der Ring des Nibelungen', 'verismo', 'number opera'],
+    aliases: ['opera', 'nhạc kịch opera', 'Florentine Camerata', 'Camerata', 'L’Orfeo', 'Euridice (Peri)', 'opera seria', 'opera buffa', 'Singspiel', 'bel canto', 'aria', 'recitative', 'recitativo secco', 'recitativo accompagnato', 'music drama', 'nhạc kịch Wagner', 'Der Freischütz', 'Der Ring des Nibelungen', 'verismo', 'number opera'],
     summary: 'Kịch hát với dàn nhạc, ra đời ở Ý quanh năm 1600 và vẫn là thể loại sân khấu lớn nhất của nhạc cổ điển: từ L’Orfeo của Monteverdi (1607), opera seria với aria da capo của Handel, cải cách của Gluck, opera buffa và Singspiel của Mozart, bel canto, Verdi, nhạc kịch leitmotif của Wagner đến opera thế kỷ 20.',
     refs: [
       ['Wikipedia — Opera', 'https://en.wikipedia.org/wiki/Opera'],
@@ -426,7 +428,7 @@ Opera nghiêm túc Ý cuối thời [[thoi-ky-baroque|Baroque]] ([[george-frider
 Leitmotif của Wagner về sau thành công cụ chính của [[nhac-phim-va-tro-choi|nhạc phim]].
 
 ## Với người học piano
-Nhiều tiểu phẩm piano "hát" như aria: [[tieu-pham-piano|nocturne]] của [[frederic-chopin|Chopin]] chịu ảnh hưởng bel canto; [[franz-liszt|Liszt]] viết nhiều bản chuyển soạn opera. Thử chơi tay phải như một giọng hát — xem [[dien-dat-cau-nhac]], [[rubato]].
+Nhiều tiểu phẩm piano "hát" như aria: [[tieu-pham-piano|nocturne]] của [[frederic-chopin|Chopin]] chịu ảnh hưởng bel canto; [[franz-liszt|Liszt]] viết nhiều bản [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] opera. Thử chơi tay phải như một giọng hát — xem [[dien-dat-cau-nhac]], [[rubato]].
 Liên quan: [[oratorio-cantata-passion]], [[operetta-va-nhac-kich]], [[khuc-mo-man]].
 
 ## Nghe ví dụ
@@ -757,7 +759,7 @@ Liên quan: [[opera]], [[the-loai]].
 | Gõ | [[timpani|Timpani]] và [[bo-go-dan-nhac|bộ gõ]] |
 
 ## Với người học piano
-Bản chuyển soạn giao hưởng cho piano ([[franz-liszt|Liszt]] chuyển cả 9 giao hưởng Beethoven) và bản bốn tay là cách người thế kỷ 19 "nghe" giao hưởng ở nhà. Nghe chương 1 một giao hưởng Haydn với sơ đồ [[hinh-thuc-sonata]] là bài tập nghe hình thức tốt — xem [[nghe-nhac-chu-dong]].
+Bản [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] giao hưởng cho piano ([[franz-liszt|Liszt]] chuyển cả 9 giao hưởng Beethoven) và bản bốn tay là cách người thế kỷ 19 "nghe" giao hưởng ở nhà. Nghe chương 1 một giao hưởng Haydn với sơ đồ [[hinh-thuc-sonata]] là bài tập nghe hình thức tốt — xem [[nghe-nhac-chu-dong]].
 Liên quan: [[the-loai]], [[nhac-thinh-phong]], [[thoi-ky-co-dien]].
 
 ## Nghe ví dụ
@@ -1180,7 +1182,7 @@ Liên quan: [[trao-luu-the-ky-20]], [[toi-gian]], [[nhac-phim-va-tro-choi]].
 - Ví dụ quen thuộc: nhạc của Koji Kondo cho *Super Mario Bros.* (1985).
 
 ## Với người học piano
-Bản chuyển soạn piano của nhạc phim và nhạc game là động lực rất mạnh với học trò nhỏ tuổi. Dùng chúng để dạy [[ky-hieu-hop-am|đọc hợp âm]], [[hop-am-muon]], [[ostinato]].
+Bản [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] piano của nhạc phim và nhạc game là động lực rất mạnh với học trò nhỏ tuổi. Dùng chúng để dạy [[ky-hieu-hop-am|đọc hợp âm]], [[hop-am-muon]], [[ostinato]].
 Liên quan: [[nhac-dien-tu]], [[operetta-va-nhac-kich]], [[giao-huong]].
 
 ## Nghe ví dụ

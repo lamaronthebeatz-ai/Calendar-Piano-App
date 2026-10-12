@@ -52,6 +52,8 @@ Thêm vào đó là cách nhìn của thế kỷ 18: hình thức được ghép
 - Hỏi: phần mới **tương phản** (chất liệu mới) hay **phát triển** (chất liệu cũ bị xé nhỏ, chuyển giọng liên tục)?
 
 **Hình thức trong phụng vụ:** [[alternatim-va-thanh-le-organ]] (organ và ca đoàn luân phiên từng câu) và [[viet-binh-ca-cho-tieng-ban-dia]] (đặt lời âm tiết, [[ky-am-binh-ca-gregorian|neume]], melisma).
+
+**Các hình thức chi tiết:** [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]], [[passacaglia-va-chaconne]], [[sonata-rondo-va-cac-loai-rondo]], [[hinh-thuc-ca-khuc-pho-thong]]; màu dàn nhạc: [[phoi-khi-nguyen-ly-co-ban]].
 `,
   },
   {
@@ -243,7 +245,7 @@ Lưu ý: cách nhìn này giả định chuẩn 4–8 ô; một số nhà lý th
     title: 'Hình thức âm nhạc',
     category: 'form',
     also: ['analysis'],
-    aliases: ['hình thức', 'cấu trúc bài', 'musical form', 'hai đoạn', 'ba đoạn', 'binary', 'ternary', 'ABA', 'AB', 'verse chorus', 'phiên khúc điệp khúc', 'binary form', 'ternary form', 'hình thức hai đoạn', 'hình thức ba đoạn'],
+    aliases: ['hình thức', 'cấu trúc bài', 'musical form', 'hai đoạn', 'ba đoạn', 'binary', 'ternary', 'ABA', 'AB', 'phiên khúc điệp khúc'],
     summary: 'Cách sắp xếp các phần của một tác phẩm, ký hiệu bằng chữ cái: A, B, A′… Phổ biến: hai đoạn (AB), ba đoạn (ABA).',
     wiki: 'Musical_form',
     refs: [
@@ -267,8 +269,8 @@ Phần giống nhau mang cùng chữ cái; **A′** là A có biến đổi.
 |---|---|---|
 | Hai đoạn **khép** (sectional) | ‖: A :‖: B :‖ | A kết **ở [[bac-am-giai|chủ âm]]** (kết hoàn toàn) |
 | Hai đoạn **mở** (continuous) | ‖: A :‖: B :‖ | A kết **trên V** hoặc đã chuyển giọng, phải đi tiếp sang B |
-| Hai đoạn **có tái hiện** (rounded binary) | ‖: A :‖: B A′ :‖ | Cuối B, **một phần** của A quay lại |
-| Ba đoạn đơn | A B A | Mỗi đoạn **trọn vẹn, đứng riêng được**; A trở lại **đầy đủ** |
+| Hai đoạn **có tái hiện** ([[hinh-thuc-hai-doan|rounded binary]]) | ‖: A :‖: B A′ :‖ | Cuối B, **một phần** của A quay lại |
+| [[hinh-thuc-ba-doan|Ba đoạn đơn]] | A B A | Mỗi đoạn **trọn vẹn, đứng riêng được**; A trở lại **đầy đủ** |
 | Viết liền (through-composed) | A B C… | Mỗi đoạn là nhạc mới, không quay lại |
 ::form A B | Hai đoạn: ‖: A :‖: B :‖
 ::form A B A' | Hai đoạn có tái hiện: cuối B, một phần của A quay lại (A′)
@@ -279,7 +281,7 @@ Chỗ dễ nhầm nhất là **hai đoạn có tái hiện** và **ba đoạn**.
 Hai đoạn có tái hiện được coi là **tổ tiên của [[hinh-thuc-sonata]]**: phần B mang tính phát triển, rồi A trở lại ở giọng chính — giống Phát triển → Tái hiện.
 
 ## Hình thức bài hát pop
-**Intro – Phiên khúc (Verse) – Tiền điệp khúc – Điệp khúc (Chorus) – Phiên khúc – Điệp khúc – Bridge – Điệp khúc – Outro.** Điệp khúc giữ nguyên lời và nhạc; phiên khúc giữ nhạc nhưng đổi lời.
+**Intro – Phiên khúc (Verse) – [[hinh-thuc-ca-khuc-pho-thong|Tiền điệp khúc]] – Điệp khúc (Chorus) – Phiên khúc – Điệp khúc – Bridge – Điệp khúc – Outro.** Điệp khúc giữ nguyên lời và nhạc; phiên khúc giữ nhạc nhưng đổi lời.
 
 Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-va-trio]]. Dấu hiệu hình thức trong bản nhạc: [[dau-nhac-lai]], [[cau-ket]], [[chuyen-giong]]. Hình thức ca khúc jazz: [[hinh-thuc-ca-khuc-32]]. [[the-loai-am-nhac|Các thể loại]] nhiều chương: [[the-loai]]. Biến tấu trên bass lặp: [[ostinato]].
 `,
@@ -312,7 +314,7 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
 | Tầng | Cấu trúc |
 |---|---|
 | **Lớn** | **Minuet** (A) – **Trio** (B) – **Minuet da capo** (A, thường **bỏ** các dấu nhắc lại) |
-| **Nhỏ** (trong minuet) | **Hai đoạn có tái hiện**: ‖: a :‖: b a′ :‖ |
+| **Nhỏ** (trong minuet) | **[[hinh-thuc-hai-doan|Hai đoạn có tái hiện]]**: ‖: a :‖: b a′ :‖ |
 | **Nhỏ** (trong trio) | Cũng là hai đoạn hoặc ba đoạn nhỏ |
 ::form Minuet Trio Minuet | Ba đoạn kép: Minuet (A) – Trio (B) – Minuet da capo (A, chơi lại phần đầu)
 Vì mỗi phần của hình thức lớn lại chứa một hình thức nhỏ, toàn chương được gọi là **ba đoạn kép** (compound ternary). Ba mô-đun a – b – a′ của minuet được gom thành **hai** phần lớn, mỗi phần nhắc lại — đây là [[hinh-thuc-am-nhac|hai đoạn có tái hiện]].
@@ -356,7 +358,7 @@ Chủ đề **A** (refrain) luôn ở giọng chính; các đoạn xen **B, C** 
 |---|---|
 | Rondo 5 phần | A B A C A |
 | Rondo 7 phần | A B A C A B A |
-| Sonata-rondo | A B A – C (phát triển) – A B A |
+| [[sonata-rondo-va-cac-loai-rondo|Sonata-rondo]] | A B A – C (phát triển) – A B A |
 ::form A B A C A | Rondo 5 phần
 ::form A B A C A B A | Rondo 7 phần: A luôn ở giọng chính, B và C sang giọng khác
 
@@ -660,7 +662,7 @@ Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thư�
     title: 'Ostinato',
     category: 'form',
     also: ['genres'],
-    aliases: ['bass lặp', 'ground bass', 'basso ostinato', 'passacaglia', 'chaconne', 'riff', 'mẫu lặp'],
+    aliases: ['bass lặp', 'riff', 'mẫu lặp'],
     summary: 'Một mẫu nhạc ngắn (giai điệu, nhịp điệu hoặc hợp âm) lặp lại liên tục; khi ở bè trầm, nó là nền cho các thể loại passacaglia và chaconne.',
     wiki: 'Ostinato',
     refs: [
@@ -675,7 +677,7 @@ Tên gọi: tiếng Ý *ostinato* nghĩa là **"bướng bỉnh"**, cùng gốc 
 
 ## Các dạng
 - **Ostinato [[giai-dieu|giai điệu]] / [[tiet-tau|nhịp điệu]]**: ví dụ mẫu trống lặp trong "Boléro" ([[Ravel]]), hay riff guitar trong rock.
-- **Bass lặp** (basso ostinato, ground bass): một câu bè trầm lặp lại, phía trên là các [[bien-tau|biến tấu]].
+- **Bass lặp** ([[passacaglia-va-chaconne|basso ostinato]], ground bass): một câu bè trầm lặp lại, phía trên là các [[bien-tau|biến tấu]].
 
 ## Passacaglia và chaconne
 Hai [[the-loai|thể loại]] [[thoi-ky-baroque|Baroque]] dạng [[bien-tau]] trên một bass lặp hoặc một [[vong-hop-am]] lặp, thường ở nhịp 3/4:
@@ -1421,6 +1423,286 @@ Khác với [[bien-tau|biến tấu]] (chủ đề và các biến thể nối t
 
 ## Với người chơi đàn
 Khi một chủ đề quay lại với tính cách mới, người chơi cần làm **rõ cả hai điều**: người nghe phải **nhận ra** chủ đề, và phải **cảm thấy** sự thay đổi. Xem [[dien-dat-cau-nhac]], [[ly-thuyet-chu-de]].
+`,
+  },
+  {
+    slug: "hinh-thuc-hai-doan",
+    title: "Hình thức hai đoạn (binary form)",
+    category: 'form',
+    also: ['analysis'],
+    aliases: ["hình thức hai đoạn", "binary form", "hai đoạn đơn", "hai đoạn có tái hiện", "rounded binary", "hai đoạn cân bằng", "balanced binary", "hai đoạn liền", "hai đoạn tách", "continuous binary", "sectional binary", "AABB"],
+    summary: "Hình thức gồm hai nửa, mỗi nửa thường được nhắc lại (||: A :||: B :||) — khuôn chuẩn của các vũ khúc Baroque. Nửa đầu đi từ giọng chủ sang giọng át (hoặc giọng song song trưởng nếu ở giọng thứ), nửa sau quay về. Bài phân biệt hai đoạn đơn và hai đoạn có tái hiện, tính \"cân bằng\", hai đoạn tách và hai đoạn liền, kèm sơ đồ giọng và ví dụ Bach, Petzold.",
+    refs: [
+      ["Open Music Theory — Binary form", "https://viva.pressbooks.pub/openmusictheory/chapter/binary-form/"],
+      ["Puget Sound — Sectional versus continuous", "https://musictheory.pugetsound.edu/mt21c/SectionalVersusContinuous.html"],
+      ["Wikipedia — Binary form", "https://en.wikipedia.org/wiki/Binary_form"],
+      ["Britannica — Binary form", "https://www.britannica.com/print/article/65532"],
+      ["Milne — Fundamentals, Function, and Form: Binary form", "https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/36-binary-form/"],
+      ["Wikipedia — Minuets in G major and G minor", "https://en.wikipedia.org/wiki/Minuets_in_G_major_and_G_minor"],
+    ],
+    body: `
+Bài này đào sâu phần "hai đoạn" trong [[hinh-thuc-am-nhac]]. Cần biết trước: [[cau-nhac]], [[cau-ket]], [[chuyen-giong]].
+
+## Khuôn chung
+::form A:8 A:8 B:8 B:8 | Hai đoạn: mỗi nửa được nhắc lại — khi chơi nghe thành A A B B (độ dài chỉ minh hoạ)
+| | Nửa đầu (A) | Nửa sau (B) |
+|---|---|---|
+| [[am-giai-truong|Giọng trưởng]] | I → **V** (kết ở giọng át) | bắt đầu ở V, đi xa hơn, rồi **về I** |
+| [[am-giai-thu|Giọng thứ]] | i → **III** ([[giong-song-song|giọng song song]] trưởng), đôi khi → v | bắt đầu ở giọng mới, về i |
+Đây là khuôn thông dụng của các vũ khúc [[thoi-ky-baroque|Baroque]] — allemande, courante, sarabande… ([[to-khuc-baroque|tổ khúc]]) — và của sonata [[domenico-scarlatti|Scarlatti]].
+
+## Đơn hay có tái hiện?
+| Loại | Sơ đồ | Dấu hiệu |
+|---|---|---|
+| **Hai đoạn đơn** (*simple*) | ‖: A :‖: B :‖ | Nửa sau không quay lại chất liệu mở đầu |
+| **Hai đoạn có tái hiện** (*rounded*) | ‖: A :‖: B A′ :‖ | Giữa nửa sau, **chất liệu mở đầu trở lại ở giọng chủ** — đánh dấu việc về nhà |
+Open Music Theory nhấn mạnh: "**cân bằng**" (*balanced*) không phải loại thứ ba mà là một **tính chất** mà cả hai loại đều có thể có — đoạn kết của nửa đầu xuất hiện lại, dịch về giọng chủ, ở cuối nửa sau.
+
+## Tách hay liền?
+Theo giáo trình Puget Sound: nếu nửa đầu kết bằng **kết chính ở giọng chủ** thì đó là hai đoạn **tách** (*sectional*); nếu kết ở giọng khác hoặc bằng kết khác (vd. chuyển sang V) thì là hai đoạn **liền** (*continuous*). Ghi nhãn trước chữ "hai đoạn": "hai đoạn liền có tái hiện"…
+
+## Ví dụ
+- **Minuet Sol trưởng BWV Anh. 114** (sách [[lo-trinh-tac-pham|Anna Magdalena]], 1725; nay được cho là của Christian Petzold): theo giáo trình Milne, ô 1 – 16 là một [[cau-nhac|đoạn nhạc]] song song (nửa kết, rồi kết hoàn toàn ở Sol); từ ô 17 nhạc đi sang Rê với nửa kết ở ô 20 rồi kết hoàn toàn ở Rê. Xem [[phan-tich-minuet-sol-truong]].
+- **Badinerie** trong Tổ khúc dàn nhạc số 2, BWV 1067 ([[johann-sebastian-bach|Bach]]): một bài phân tích ở trường phổ thông đọc nửa đầu (ô 1 – 16) đi từ Si thứ đến kết hoàn toàn ở **Fa♯ thứ** — giọng át thứ. *(Nguồn yếu — nên đối chiếu tổng phổ.)*
+- Các vũ khúc trong **Tổ khúc [[cello|cello]] số 1**, BWV 1007, đều là hai đoạn (hai nửa có nhắc lại).
+
+## Từ hai đoạn đến sonata
+Hai đoạn có tái hiện là tổ tiên trực tiếp của [[hinh-thuc-sonata]]: nửa đầu thành phần trình bày (đi sang V), đầu nửa sau thành phần phát triển, chất liệu mở đầu trở lại thành tái hiện. Nhiều [[minuet-va-trio|minuet và trio]] là hai đoạn có tái hiện bên trong một khung [[hinh-thuc-ba-doan|ba đoạn]].
+
+## Tự kiểm tra
+1. Tìm [[dau-nhac-lai|dấu nhắc lại]] giữa bài — đó thường là ranh giới A | B.
+2. Nửa đầu kết ở giọng nào, bằng loại kết gì? → tách hay liền.
+3. Chất liệu mở đầu có trở lại ở giọng chủ trong nửa sau không? → đơn hay có tái hiện.
+`,
+  },
+  {
+    slug: "hinh-thuc-ba-doan",
+    title: "Hình thức ba đoạn (ternary form) và aria da capo",
+    category: 'form',
+    also: ['analysis'],
+    aliases: ["hình thức ba đoạn", "ternary form", "ba đoạn đơn", "ba đoạn phức", "aria da capo", "da capo aria", "phần giữa tương phản"],
+    summary: "Ba đoạn là A – B – A: một phần, một phần tương phản, rồi phần đầu trở lại (thường được trang trí hoặc rút gọn, ghi A′). Bài phân biệt ba đoạn đơn và ba đoạn phức (mỗi phần tự là một hình thức trọn vẹn, như minuet – trio – minuet), giải thích aria da capo của Handel, và đưa ví dụ từ các nocturne của Chopin và Eine kleine Nachtmusik của Mozart — kèm một lưu ý: Nocturne Op. 9 số 2 không phải ba đoạn.",
+    refs: [
+      ["Open Music Theory (Nebraska) — Ternary form", "https://pressbooks.nebraska.edu/openmusictheory/?p=336"],
+      ["LibreTexts — Open Music Theory 2e: Ternary form", "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/03%3A_Form/3.07%3A_Ternary_Form"],
+      ["Music Theory Online — Aziz, điểm sách Caplin, Analyzing Classical Form", "https://mtosmt.org/issues/mto.14.20.1/mto.14.20.1.aziz.html"],
+      ["Wikipedia — Ternary form", "https://en.wikipedia.org/wiki/Ternary_form"],
+      ["Wikipedia — Da capo", "https://en.wikipedia.org/wiki/Da_capo"],
+      ["Cambridge Companion to Handel — Handel and the aria", "https://www.cambridge.org/core/books/cambridge-companion-to-handel/handel-and-the-aria/060E974E2A9CA41EFD4F77419F6CA6CA"],
+      ["Wikipedia — Nocturnes, Op. 15 (Chopin)", "https://en.wikipedia.org/wiki/Nocturnes,_Op._15_(Chopin)"],
+      ["Wikipedia — Nocturnes, Op. 48 (Chopin)", "https://en.wikipedia.org/wiki/Nocturnes,_Op._48_(Chopin)"],
+      ["Wikipedia — Nocturnes, Op. 9 (Chopin)", "https://en.wikipedia.org/wiki/Nocturnes,_Op._9_(Chopin)"],
+      ["Wikipedia — Eine kleine Nachtmusik", "https://en.wikipedia.org/wiki/Eine_kleine_Nachtmusik"],
+    ],
+    body: `
+Bài này đào sâu phần "ba đoạn" trong [[hinh-thuc-am-nhac]]. So sánh với [[hinh-thuc-hai-doan]].
+
+::form A B A′ | Ba đoạn: phần giữa tương phản, phần đầu trở lại (A′ = trở lại có thay đổi)
+
+## Chức năng ba phần
+Theo khung của William [[chuc-nang-hinh-thuc|Caplin]] (qua bài điểm sách trên *Music Theory Online*): **A = trình bày**, **B = phần giữa tương phản**, **A′ = tái hiện**. Phần B thường khác về giọng, [[giai-dieu|giai điệu]], [[tiet-tau|tiết tấu]], [[ket-cau|kết cấu]].
+
+## Đơn và phức
+| Loại | Đặc điểm | Ví dụ |
+|---|---|---|
+| **Ba đoạn đơn** | Mỗi phần là một câu hoặc một [[cau-nhac|đoạn nhạc]] | Một chủ đề ngắn dạng a – b – a′ |
+| **Ba đoạn phức** (*compound*) | Ít nhất một phần tự là một hình thức trọn vẹn — thường là [[hinh-thuc-hai-doan|hai đoạn có tái hiện]] | **Minuet – trio – minuet**: khi minuet trở lại (*da capo*), theo lệ **bỏ các [[dau-nhac-lai|dấu nhắc lại]]**. Xem [[minuet-va-trio]] |
+Trong thế kỷ 19, phần A trở lại thường được **rút ngắn** (Open Music Theory).
+
+## Aria da capo
+- Aria ba đoạn ABA trong opera, [[oratorio-cantata-passion|oratorio]] [[thoi-ky-baroque|Baroque]]: chỉ viết A và B, cuối B ghi **"Da capo"** (D.C., "từ đầu"). Khi A trở lại, ca sĩ **trang trí** thêm và thường chèn một [[cadenza]].
+- Theo *Cambridge Companion to Handel*, dạng "lớn" thường gặp ở [[george-frideric-handel|Handel]] có năm phần: **A1 A2 B A1 A2**. *"Lascia ch'io pianga"* (*Rinaldo*) thường được dẫn làm ví dụ aria da capo.
+Xem thêm [[opera]] và [[ky-hieu-hoa-my]].
+
+## Ví dụ cho người học piano
+| Tác phẩm | A | B | A′ |
+|---|---|---|---|
+| [[frederic-chopin|Chopin]], [[tieu-pham-piano|Nocturne]] Fa trưởng **Op. 15 số 1** | Fa trưởng, giai điệu đơn giản trên chuỗi [[lien-ba|liên ba]] | **Fa thứ**, *con fuoco*, nhanh và kịch tính | Fa trưởng |
+| Chopin, Nocturne Đô thứ **Op. 48 số 1** | Đô thứ | ô 25, *poco più lento*: một **[[chorale-va-chorale-prelude|chorale]] ở Đô trưởng** | ô 49, *doppio movimento agitato* |
+| [[wolfgang-amadeus-mozart|Mozart]], *[[nhac-thinh-phong|Eine kleine Nachtmusik]]* K. 525, chương III | Minuet ở **Sol** | Trio ở **Rê** (V) | Minuet da capo, không nhắc lại |
+Bách khoa PTNA (Nhật) đọc Op. 15 số 1 là A – B – B′ – A′ — cùng một bản nhạc có thể có nhiều cách chia.
+
+**Lưu ý:** Nocturne **Op. 9 số 2** quen thuộc **không** phải ba đoạn — Wikipedia mô tả là hai đoạn có tái hiện (A A B A B A + coda). Xem [[phan-tich-nocturne-op9-so2]].
+
+## Tự kiểm tra
+Khi nghe một bản ba đoạn, đánh dấu: (1) chỗ B bắt đầu — điều gì đổi trước tiên (giọng? kết cấu? [[nhip-do|nhịp độ]]?), (2) chỗ A trở lại — có được báo trước bằng một đoạn chuyển về [[hop-am-cam-am|át]] không, (3) A′ khác A ở đâu.
+`,
+  },
+  {
+    slug: "passacaglia-va-chaconne",
+    title: "Passacaglia, chaconne và bè trầm lặp (ground bass)",
+    category: 'form',
+    also: ['genres', 'harmony'],
+    aliases: ["passacaglia", "chaconne", "chacony", "ground bass", "bè trầm lặp", "basso ostinato", "lament bass", "bè trầm than", "tứ âm đi xuống", "descending tetrachord", "passus duriusculus", "Dido's Lament", "When I am laid in earth", "Passacaglia BWV 582", "Chaconne BWV 1004"],
+    summary: "Passacaglia và chaconne đều là biến tấu trên một bè trầm (hoặc một vòng hoà âm) lặp đi lặp lại. Các nhà lý thuyết đã cố phân biệt hai từ — và định nghĩa ngược nhau — nên nhiều học giả coi mọi ranh giới cứng là \"tuỳ tiện và không có cơ sở lịch sử\". Bài trình bày bè trầm than (tứ âm đi xuống, dạng diatonic và cromatic), Lời than của Dido (Purcell), Passacaglia BWV 582 và Chaconne BWV 1004 của Bach, và vòng hoà âm Canon Pachelbel.",
+    wiki: "Passacaglia",
+    refs: [
+      ["Wikipedia — Chaconne", "https://en.wikipedia.org/wiki/Chaconne"],
+      ["Wikipedia — Passacaglia", "https://en.wikipedia.org/wiki/Passacaglia"],
+      ["Open Music Theory (Nebraska) — Ground bass", "https://pressbooks.nebraska.edu/openmusictheory/chapter/ground-bass/"],
+      ["Wikipedia — Lament bass", "https://en.wikipedia.org/wiki/Lament_bass"],
+      ["Wikipedia — Descending tetrachord (về Rosand 1979)", "https://en.wikipedia.org/wiki/Descending_tetrachord"],
+      ["Wikipedia — Dido's Lament", "https://en.wikipedia.org/wiki/Dido%27s_Lament"],
+      ["ROH Collections — Dido and Aeneas", "https://rohcollections.org.uk/Work.aspx?work=576"],
+      ["Wikipedia — Passacaglia and Fugue in C minor, BWV 582", "https://en.wikipedia.org/wiki/Passacaglia_and_Fugue_in_C_minor,_BWV_582"],
+      ["Wikipedia — Canon in D", "https://wikipedia.com/wiki/Canon_in_D"],
+    ],
+    body: `
+Đây là một dạng [[bien-tau]] trên [[ostinato]]. Bè trầm có số ([[thoi-ky-baroque|Baroque]]) ở [[bass-so]].
+
+## Hai cái tên, một họ
+- Open Music Theory: chaconne và passacaglia (cả cách viết "chacony") là hai nhánh của **bè trầm lặp** (*ground bass*) Baroque — mọi chaconne, passacaglia đều là bè trầm lặp, nhưng không phải bè trầm lặp nào cũng là chúng.
+- Các định nghĩa **mâu thuẫn**: Percy Goetschius cho rằng chaconne dựa trên một chuỗi [[hop-am-ba|hợp âm]] với giọng trên lặp lại, còn passacaglia dựa trên bè trầm lặp — Clarence Lucas định nghĩa **ngược lại hoàn toàn**. Prout (1879) phân biệt theo phách bắt đầu của bè trầm và [[nhip-do|nhịp độ]] — nhưng có ví dụ bắt đầu ở cả phách 1, 2 và 3. Rinaldo Alessandrini đề xuất phân biệt theo nhịp.
+- Wikipedia dẫn một nhận định: vì nhà soạn nhạc dùng hai từ "không phân biệt", mọi cố gắng hiện đại vạch ranh giới rõ ràng đều "**tuỳ tiện và không có cơ sở lịch sử**".
+**Cách hiểu thực dụng cho người học:** cả hai = một khung bè trầm/hoà âm ngắn, lặp liên tục, mỗi lần lặp là một biến tấu ở các bè trên.
+
+## Bè trầm than (lament bass)
+Khung quen thuộc nhất: **tứ âm đi xuống** từ [[bac-am-giai|chủ âm]] đến át âm trong [[am-giai-thu|giọng thứ]].
+::staff bass A3=La G3=Sol F3=Fa E3=Mi | Dạng diatonic ở La thứ ("tứ âm Phrygian"): La – Sol – Fa – Mi
+::staff bass A3 G#3 G3 F#3 F3 E3 | Dạng cromatic (*passus duriusculus*): lấp mọi nửa cung từ La xuống Mi
+Ellen Rosand (*Musical Quarterly*, 1979) cho rằng ở Venice thập niên 1640 – 1650, ostinato tứ âm đi xuống gắn gần như riêng với [[the-loai-am-nhac|thể loại]] **than khóc** trong [[opera|opera]] (Cavalli) — về sau có học giả điều chỉnh một phần luận điểm này. *(Thư viện chỉ thấy luận điểm qua nguồn thứ cấp.)*
+
+## Ba tác phẩm mẫu
+**1. [[henry-purcell|Purcell]] — "When I am laid in earth" (Lời than của Dido), *Dido and Aeneas***
+Bè trầm đi xuống **[[am-giai-cromatic|cromatic]] qua một [[quang|quãng]] 4 đúng**, lặp **11 lần** — một passacaglia. Có tả lời trên chữ "laid" (nằm xuống). Buổi diễn đầu tiên được ghi nhận ở trường nữ sinh của Josias Priest (Chelsea, London) vào khoảng 1689 — ngày chính xác còn tranh cãi.
+::youtube f00nKLzCRrI | Joyce DiDonato hát "When I am laid in earth" (Purcell, Dido and Aeneas)
+
+**2. [[johann-sebastian-bach|Bach]] — Passacaglia và Fugue Đô thứ, BWV 582 (organ)**
+Chủ đề bè trầm **8 ô**, **20 biến tấu**, rồi một [[fugue]] mà chủ đề là nửa đầu của ostinato. Nửa đầu chủ đề nhiều khả năng lấy từ *Christe: Trio en passacaille* của André Raison (*Premier livre d'orgue*). Năm sáng tác được ghi khác nhau (khoảng 1706 – 1713). Xem [[organ-ong]].
+
+**3. Bach — Chaconne, chương cuối [[to-khuc-baroque|Partita]] số 2 Rê thứ cho [[violin|violin]] độc tấu, BWV 1004**
+Bản thảo bộ *Sei Solo* đề năm **1720**. Dựng trên một khung bè trầm/hoà âm ngắn (thường được mô tả là 4 ô) đi xuống từ chủ âm đến át âm; dài bằng bốn chương trước cộng lại. *Số biến tấu: các nguồn đưa ra từ 30 đến 64 — thư viện không chọn một con số.*
+::youtube OaBPo8FFgww | Hilary Hahn — Chaconne, Partita số 2 BWV 1004
+
+## Canon của Pachelbel: một chaconne ẩn
+Canon Rê trưởng của [[johann-pachelbel|Pachelbel]] là canon ba violin **trên một bè trầm lặp**, có yếu tố chaconne. Vòng hợp âm: **D – A – Bm – F♯m – G – D – G – A** (I – V – vi – iii – IV – I – IV – V).
+::staff bass D3=I A2=V B2=vi F#2=iii G2=IV D2=I G2=IV A2=V | Bè trầm của Canon Pachelbel (nốt gốc mỗi hợp âm)
+Phân tích đầy đủ: [[phan-tich-canon-pachelbel]]; vòng này sống lại trong [[nhac-pho-thong-the-ky-20|nhạc pop]] — [[vong-hop-am]].
+::youtube U5AO5G4VwNA | Voices of Music — Canon Pachelbel trên nhạc cụ cổ
+
+## Thử trên piano
+*(Gợi ý của thư viện.)* Tay trái lặp bè trầm than La – Sol – Fa – Mi (mỗi nốt một ô, 3/4); tay phải [[ngau-hung-ung-tac|ứng tác]] 8 lần lặp, mỗi lần một ý mới: hợp âm, rải, [[giai-dieu|giai điệu]], nốt ngắn dần. Đó chính là cách một passacaglia "phát triển". Xem [[ngau-hung-piano]].
+`,
+  },
+  {
+    slug: "sonata-rondo-va-cac-loai-rondo",
+    title: "Rondo năm phần, rondo bảy phần và sonata-rondo",
+    category: 'form',
+    also: ['analysis'],
+    aliases: ["sonata-rondo", "sonata rondo", "rondo năm phần", "rondo bảy phần", "ABACABA", "Type 4 sonata", "sonata loại 4", "Hepokoski Darcy", "rondo Pathétique"],
+    summary: "Rondo xen điệp khúc (A, luôn ở giọng chủ) với các đoạn chen. Rondo năm phần là ABACA; rondo bảy phần và sonata-rondo là ABACABA — nhưng ở sonata-rondo, C hoạt động như phần phát triển và B trở lại ở giọng chủ như trong tái hiện. Bài giải thích cách nhận ra từng loại, \"sonata loại 4\" của Hepokoski & Darcy, và phân tích chương cuối sonata Pathétique của Beethoven và K. 333 của Mozart.",
+    refs: [
+      ["Open Music Theory — Rondo", "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/"],
+      ["Puget Sound — Rondo form", "https://musictheory.pugetsound.edu/mt21c/RondoForm.html"],
+      ["Wikipedia — Sonata rondo form", "https://en.wikipedia.org/wiki/Sonata_rondo_form"],
+      ["Oxford Academic — Hepokoski & Darcy, Elements of Sonata Theory (2006)", "https://academic.oup.com/book/4770"],
+      ["Taylor (2022), Journal of Music Theory — về sonata loại 4 (PDF)", "https://www.pure.ed.ac.uk/ws/files/301495693/Taylor2022JMTFeinting.pdf"],
+      ["PTNA — Beethoven Sonata Op. 13", "https://enc.piano.or.jp/en/musics/6558"],
+      ["Ithaca College — Mozart K. 333, chương 3", "https://musictech.ithaca.edu/MusicTech/Form/Presentations/MozartK333/mvt3/K333Rondo.html"],
+    ],
+    body: `
+Bài này nối [[rondo]] với [[hinh-thuc-sonata]]. Cần biết trước cả hai.
+
+## Ba khuôn rondo
+::form A B A C A | Rondo năm phần: hai đoạn chen B và C đều là chủ đề ổn định
+::form A B A C A B′ A | Rondo bảy phần / sonata-rondo: B trở lại (B′), lần này ở giọng chủ
+| | Rondo năm phần | Sonata-rondo |
+|---|---|---|
+| Sơ đồ | ABACA | ABACABA (+ coda) |
+| Đoạn C | Thường là một chủ đề ổn định như B | Hoạt động như **phần phát triển** ([[chuyen-giong|chuyển giọng]], [[mo-tien-hoa-am|mô tiến]]) |
+| ABA đầu | — | Như **phần trình bày**, khép lại bằng A ở giọng chủ |
+| ABA cuối | — | Như **tái hiện**: B quay lại **ở giọng chủ** |
+*(Theo Open Music Theory.)*
+Theo các trích dẫn thứ cấp, William Caplin gọi sonata-rondo là "có lẽ phức tạp nhất trong các [[hinh-thuc-am-nhac|hình thức]] cổ điển"; và trong rondo năm phần, [[joseph-haydn|Haydn]] hay đặt đoạn chen thứ hai ở [[am-giai-thu|giọng thứ]], [[wolfgang-amadeus-mozart|Mozart]] ở giọng hạ át.
+
+## "Sonata loại 4"
+Trong *Elements of Sonata Theory* (OUP, 2006), James Hepokoski và Warren Darcy chia sonata thành năm loại; **loại 4** là dạng lai **sonata-rondo**: trình bày, phát triển, tái hiện **đều mở đầu bằng chủ đề chính ở giọng chủ**, và sau tái hiện bắt buộc có một lần điệp khúc nữa trong vùng coda. *(Theo bài của Taylor dẫn lại.)*
+
+## Ví dụ 1: Beethoven, Sonata "Pathétique" Op. 13, chương 3
+Thường được mô tả là sonata-rondo hoặc rondo bảy phần ABACABA + coda.
+| Phần | Giọng |
+|---|---|
+| A (điệp khúc) | **Đô thứ** |
+| B | **Mi♭ trưởng** (III) |
+| A | Đô thứ |
+| C | **La♭ trưởng** (VI) |
+| A | Đô thứ |
+| B′ | trở lại gần giọng chủ (một nguồn ghi Đô trưởng) |
+| A + coda | Đô thứ |
+Các đoạn **chuyển về** dừng trên [[hop-am-ba|hợp âm]] **Sol** (V, nửa kết) trước mỗi lần điệp khúc trở lại. *(Nhãn từng phần khác nhau giữa các nguồn.)* Chương 2 của cùng sonata đã có bài: [[phan-tich-pathetique-chuong-2]].
+::youtube 36XbZUQXLQU | Beethoven, Sonata Pathétique — chương 3, Rondo: Allegro
+
+## Ví dụ 2: Mozart, Sonata Si♭ trưởng K. 333, chương 3
+Sonata-rondo: điệp khúc ô 1 – 16 là một [[cau-nhac|đoạn nhạc]] song song; B ở giọng át (ô 24 – 36), trở lại ở giọng chủ (ô 148 – 164); C (ô 62 – 111) đi qua nhiều giọng; có một [[cadenza]] viết sẵn kiểu [[hinh-thuc-concerto|concerto]]. *(Theo trang giáo trình Ithaca College.)*
+
+## Cách nhận ra khi nghe
+1. Đếm số lần điệp khúc trở lại (3 lần → năm phần; 4 lần → bảy phần).
+2. Đoạn giữa (C) có "đi lang thang" qua nhiều giọng không? → nghiêng về sonata-rondo.
+3. Đoạn B lần thứ hai có ở **giọng chủ** không? → dấu hiệu tái hiện.
+Xem thêm [[phan-tich-rondo-alla-turca]] (một rondo của Mozart) và [[chuc-nang-hinh-thuc]].
+`,
+  },
+  {
+    slug: "hinh-thuc-ca-khuc-pho-thong",
+    title: "Hình thức ca khúc phổ thông: verse – chorus, AABA, pre-chorus, bridge",
+    category: 'form',
+    also: ['jazz', 'genres'],
+    aliases: ["hình thức ca khúc phổ thông", "verse-chorus", "verse chorus", "điệp khúc", "pre-chorus", "tiền điệp khúc", "bridge (ca khúc)", "SRDC", "srdc", "hình thức bài hát pop", "Covach", "hook"],
+    summary: "Phần lớn ca khúc pop, rock, V-pop được xây từ vài khối: verse (kể chuyện), chorus (mang tựa bài và giai điệu dễ nhớ nhất), pre-chorus (đẩy lên chorus) và bridge (tương phản). Bài trình bày phân loại của John Covach (verse đơn, verse – chorus đơn và tương phản, AABA, AABA phức), nguồn gốc pre-chorus theo Jay Summach, cấu trúc câu SRDC của Walter Everett, và một cách phân tích một bài hát Việt.",
+    wiki: "Verse–chorus_form",
+    refs: [
+      ["Wikipedia — Verse–chorus form (dẫn Covach 2005)", "https://en.wikipedia.org/wiki/Verse%E2%80%93chorus_form"],
+      ["Covach, \"Form in Rock Music: A Primer\" (PDF trích)", "https://www.personal.kent.edu/~sbirch/Theory/21341%20CMT/Form%20in%20Rock%20Music.pdf"],
+      ["Summach, \"The Structure, Function, and Genesis of the Prechorus\", MTO 17/3 (2011)", "https://mtosmt.org/issues/mto.11.17.3/mto.11.17.3.summach.html"],
+      ["Open Music Theory — Melody and phrasing (SRDC)", "https://viva.pressbooks.pub/openmusictheory/chapter/melody-and-phrasing/"],
+      ["Open Music Theory — AABA and strophic form", "https://viva.pressbooks.pub/openmusictheory/chapter/aaba-and-strophic-form/"],
+      ["Nobile, \"Form and Voice Leading in Early Beatles Songs\", MTO 17/3 (2011)", "https://mtosmt.org/issues/mto.11.17.3/mto.11.17.3.nobile.html"],
+      ["Spicer — điểm sách Everett, The Beatles as Musicians (MTO 11/4)", "https://mtosmt.org/issues/mto.05.11.4/mto.05.11.4.spicer.html"],
+      ["de Clercq, \"Embracing Ambiguity in the Analysis of Form in Pop/Rock Music, 1982–1991\", MTO 23/3 (2017)", "https://mtosmt.org/ojs/index.php/mto/article/view/117"],
+      ["Oxford Academic — Everett, The Foundations of Rock, ch. 6", "https://academic.oup.com/book/49249/chapter/422354834"],
+    ],
+    body: `
+Bài này nối [[hinh-thuc-am-nhac]] với [[nhac-pho-thong-the-ky-20|nhạc phổ thông]]. Hoà âm đi kèm: [[hoa-am-pop]]; đệm: [[dem-hat-hien-dai]]; nghiên cứu: [[nghien-cuu-am-nhac-dai-chung]].
+
+## Các khối
+| Khối | Vai trò (theo Open Music Theory) |
+|---|---|
+| **Verse** | Mang **câu chuyện**; mỗi lần trở lại có lời mới, cùng [[giai-dieu|giai điệu]] |
+| **Pre-chorus** | Đoạn chuyển, dâng năng lượng dẫn vào chorus |
+| **Chorus** | Mang **tựa bài** và giai điệu dễ nhớ nhất; lời thường giữ nguyên |
+| **Bridge** | Tương phản; trong AABA thường nhấn [[hop-am-ba|hợp âm]] ngoài chủ và kết trên **át** để chuẩn bị trở lại |
+*"Hook" (câu móc) chưa có định nghĩa học thuật trong các nguồn tìm được — các trang dạy sáng tác thường đồng nhất nó với chorus hoặc đặt ở đầu/cuối mỗi đoạn A.*
+
+## Phân loại của Covach
+John Covach, *"Form in Rock Music: A Primer"* (trong *Engaging Music*, OUP, 2005) — theo các bản tóm tắt:
+| Loại | Mô tả |
+|---|---|
+| **Verse đơn** (*simple verse*) | Một đoạn lặp nhiều lần với lời mới |
+| **Verse – chorus đơn** | Verse và chorus **cùng [[vong-hop-am|vòng hợp âm]]** |
+| **Verse – chorus tương phản** | Verse và chorus **khác vòng hợp âm** |
+| **AABA** | verse, verse, bridge ("middle eight"), verse — kiểu [[hinh-thuc-ca-khuc-32|ca khúc 32 ô]] Tin Pan Alley |
+| **AABA phức** | Các cặp verse – chorus đóng vai A, bao quanh một bridge |
+::form Verse Pre-chorus Chorus Verse Pre-chorus Chorus Bridge Chorus | Một sơ đồ verse – chorus thường gặp (minh hoạ)
+::form A:8 A:8 B:8 A:8 | AABA — so sánh
+
+## Pre-chorus ra đời thế nào?
+Jay Summach (*Music Theory Online* 17/3, 2011), dựa trên thống kê Top 20 hằng năm của Billboard: pre-chorus xuất hiện từ **giữa thập niên 1960**, khi hình thức verse – chorus và hình thức [[lied|strophic]] hội tụ vào một thiết kế bốn phần.
+
+## Bên trong một đoạn: SRDC
+Walter Everett (*The Beatles as Musicians*, OUP, 2001) đặt tên cấu trúc bốn câu thường gặp: **S**tatement – **R**estatement – **D**eparture – **C**onclusion (nêu – nhắc – rời – kết), ký hiệu chữ kiểu aaba hoặc aabc. Drew Nobile (*MTO* 2011) cho thấy hình thức phổ biến nhất của Beatles thời đầu là AABA, mỗi đoạn A là một khối SRDC.
+::form S R D C | SRDC: nửa đầu (S + R) giống nhau, nửa sau (D + C) rời đi rồi khép lại
+SRDC rất gần [[cau-nhac|câu nhạc kiểu "sentence"]] trong lý thuyết cổ điển.
+
+## Khi khối không rõ ràng
+Trevor [[phoi-chorale-kieu-bach|de Clercq]] (*MTO* 23/3, 2017) bàn về **tính mơ hồ** khi phân đoạn pop/rock 1982 – 1991: các khối khác nhau ít, vai trò trộn lẫn, bridge có thứ bậc khác nhau. Ví dụ "One" (U2): người đọc là verse/chorus xen kẽ, người đọc là toàn verse.
+
+## Thử phân tích một bài hát Việt
+*(Quy trình gợi ý của thư viện.)*
+1. Nghe và ghi thời điểm mỗi lần **lời đổi mà giai điệu giữ** (verse) và mỗi lần **lời lặp** (chorus).
+2. Đánh dấu chỗ **tựa bài** xuất hiện — thường nằm trong chorus.
+3. Ghi vòng hợp âm từng khối: verse và chorus cùng vòng (đơn) hay khác (tương phản)?
+4. Có đoạn chỉ xuất hiện một lần, khác hẳn phần còn lại không? → bridge.
+Xem thêm [[vpop-rap-viet]] và [[phong-cach-jazz]] cho các hình thức ca khúc khác.
 `,
   },
 ]

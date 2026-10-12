@@ -237,7 +237,7 @@ Ngày **9/6/1840** tại Hanover Square Rooms, London, các buổi chơi của *
 ## Cao độ chuẩn: "La" không phải lúc nào cũng là 440
 | Mức | Nguồn gốc | Ghi chú |
 |---|---|---|
-| **A = 440 Hz** | Hội nghị London tháng 5/1939; ISO khuyến nghị năm 1955, thành tiêu chuẩn ISO 16 năm 1975 | Chuẩn hiện đại |
+| **A = 440 Hz** | Hội nghị London tháng 5/1939; ISO khuyến nghị năm 1955, thành tiêu chuẩn [[ky-hieu-cao-do-c4-helmholtz-midi|ISO 16]] năm 1975 | Chuẩn hiện đại |
 | **A = 430 Hz** | Quy ước thường dùng cho nhạc thời Mozart – [[ludwig-van-beethoven|Beethoven]] trong các dàn nhạc thời kỳ | Quy ước hiện đại |
 | **A = 415 Hz** | Thấp hơn 440 khoảng **một [[cung-nua-cung|nửa cung]]** bình quân; tiện cho đàn phím [[dich-giong|dịch giọng]] | **Quy ước hiện đại**, không phải một [[cao-do|cao độ]] lịch sử duy nhất |
 
@@ -245,7 +245,7 @@ Cao độ thực tế trong lịch sử dao động rất rộng theo nơi và t
 
 ## Hệ thống chỉnh âm
 Trước [[luat-binh-quan|bình quân luật]], nhạc cụ phím thường dùng:
-- **Meantone** (chẳng hạn meantone một phần tư comma, được Pietro Aron mô tả năm 1523): [[quang|quãng]] 3 trưởng rất trong ở các giọng gần, nhưng các giọng xa thì không dùng được.
+- **[[cac-he-thong-chinh-am|Meantone]]** (chẳng hạn meantone một phần tư comma, được Pietro Aron mô tả năm 1523): [[quang|quãng]] 3 trưởng rất trong ở các giọng gần, nhưng các giọng xa thì không dùng được.
 - **Well-temperament** (chẳng hạn các hệ của Werckmeister, 1691): chơi được mọi giọng, nhưng **mỗi giọng một màu**. Đây là bối cảnh của *[[toccata-prelude-fugue|Bình quân luật]]* của Bach — xem [[phan-tich-prelude-do-truong]].
 
 ## Các câu hỏi thực hành của phong trào
@@ -265,7 +265,7 @@ Richard Taruskin (*Text and Act*, 1995) cho rằng lối chơi "xác thực" th�
     slug: 'lich-su-nganh-am-nhac-hoc',
     title: 'Sử học âm nhạc: lịch sử của ngành',
     category: 'musicology',
-    aliases: ['sử học âm nhạc', 'historiography of music', 'lịch sử ngành âm nhạc học', 'Burney', 'Hawkins', 'Forkel', 'Chrysander', 'Spitta', 'Dahlhaus', 'New Musicology', 'âm nhạc học mới', 'American Musicological Society'],
+    aliases: ['sử học âm nhạc', 'historiography of music', 'lịch sử ngành âm nhạc học', 'Burney', 'Hawkins', 'Forkel', 'Chrysander', 'Spitta', 'Dahlhaus', 'American Musicological Society'],
     summary: 'Người ta bắt đầu viết "lịch sử âm nhạc" từ thế kỷ 18 (Martini, Hawkins, Burney, Forkel); thế kỷ 19 có các tiểu sử dựa trên nguồn (Spitta) và các bộ toàn tập; Adler lập khung của ngành năm 1885; thế kỷ 20 ngành sang Mỹ cùng làn sóng di cư, rồi được chất vấn bởi Kerman (1985), Dahlhaus (1977) và "âm nhạc học mới".',
     wiki: 'Musicology',
     refs: [
@@ -317,8 +317,8 @@ Năm 1884 **Guido Adler** cùng Chrysander và Spitta lập tạp chí *Viertelj
 
 ## Chất vấn ngành: từ Kerman đến "âm nhạc học mới"
 - **Carl Dahlhaus**, *Grundlagen der Musikgeschichte* (1977; bản tiếng Anh *Foundations of Music History*, 1983) bênh vực **đa nguyên phương pháp** và đặt **lịch sử tiếp nhận** vào trung tâm — xem [[lich-su-tiep-nhan-am-nhac]].
-- **Joseph Kerman**: bài *How We Got into Analysis, and How to Get Out* (*Critical Inquiry*, 1980) và sách *Contemplating Music* (Harvard, 1985) phê phán một âm nhạc học chỉ lo xác lập dữ kiện, và một ngành phân tích tách khỏi lịch sử. Ông kêu gọi một nền **phê bình** âm nhạc. Xem [[lich-su-phan-tich-am-nhac]].
-- **"Âm nhạc học mới"** (*New Musicology*, cuối thập niên 1980 – 1990): Lawrence Kramer, *Music as Cultural Practice, 1800–1900* (1990); Susan McClary, *Feminine Endings: Music, Gender, and Sexuality* (1991) — đọc âm nhạc qua giới, thân thể, quyền lực, văn hoá.
+- **Joseph Kerman**: bài *How We Got into Analysis, and How to Get Out* (*Critical Inquiry*, 1980) và sách *[[am-nhac-hoc-moi|Contemplating Music]]* (Harvard, 1985) phê phán một âm nhạc học chỉ lo xác lập dữ kiện, và một ngành phân tích tách khỏi lịch sử. Ông kêu gọi một nền **phê bình** âm nhạc. Xem [[lich-su-phan-tich-am-nhac]].
+- **"Âm nhạc học mới"** (*New Musicology*, cuối thập niên 1980 – 1990): Lawrence Kramer, *Music as Cultural Practice, 1800–1900* (1990); Susan McClary, *[[am-nhac-hoc-nu-quyen-va-gioi|Feminine Endings]]: Music, Gender, and Sexuality* (1991) — đọc âm nhạc qua giới, thân thể, quyền lực, văn hoá.
 - **Richard [[tinh-xac-thuc-bieu-dien|Taruskin]]**, *The Oxford History of Western Music* (6 tập, 2005) — bộ lịch sử lớn gần đây, viết lại câu chuyện "nhạc phương Tây" theo hướng xã hội và tiếp nhận.
 
 ## Bài học cho người đọc
@@ -332,7 +332,7 @@ Năm 1884 **Guido Adler** cùng Chrysander và Spitta lập tạp chí *Viertelj
     slug: 'phuong-phap-su-hoc-am-nhac',
     title: 'Phương pháp nghiên cứu lịch sử âm nhạc',
     category: 'musicology',
-    aliases: ['phương pháp sử học âm nhạc', 'phê bình nguồn', 'source criticism', 'xác định niên đại', 'watermark', 'hình mờ giấy', 'rastrology', 'nghiên cứu bản phác thảo', 'sketch studies', 'phân kỳ', 'periodization', 'âm nhạc học hình ảnh', 'music iconography'],
+    aliases: ['phương pháp sử học âm nhạc', 'phê bình nguồn', 'source criticism', 'xác định niên đại', 'watermark', 'hình mờ giấy', 'rastrology', 'nghiên cứu bản phác thảo', 'sketch studies', 'phân kỳ', 'periodization', 'âm nhạc học hình ảnh'],
     summary: 'Nhà sử học âm nhạc làm việc với nguồn: phân biệt nguồn sơ cấp và thứ cấp, xác định niên đại bằng giấy, hình mờ và dòng kẻ khuông, đọc bản phác thảo, dùng tranh ảnh làm chứng cứ, thận trọng với phân kỳ và huyền thoại tiểu sử. Mỗi phương pháp kèm một ví dụ đã làm thay đổi hiểu biết của ngành.',
     wiki: 'Historical_musicology',
     refs: [
@@ -373,7 +373,7 @@ Nhiều bản viết tay **không ghi ngày**. Nhà nghiên cứu xem chính t�
 Beethoven để lại rất nhiều sổ phác thảo, bị phân tán sau cuộc bán đấu giá năm 1827. Công trình *The Beethoven Sketchbooks* (Douglas Johnson, Alan Tyson, Robert Winter, 1985) dựng lại trạng thái ban đầu của từng cuốn và phân biệt sổ để bàn với sổ bỏ túi. Bản phác thảo cho thấy **quá trình** sáng tác, nhưng cần thận trọng: phác thảo không phải là "ý định cuối cùng". Xem [[ludwig-van-beethoven]].
 
 ## 4. Tranh ảnh làm chứng cứ
-**Âm nhạc học hình ảnh** (*music iconography*) dùng tranh, tượng, ảnh để tìm hiểu nhạc cụ, biên chế, [[tu-the|tư thế]] chơi, bối cảnh biểu diễn. Ngành phát triển mạnh từ thập niên 1970; tổ chức quốc tế RIdIM được lập năm 1971 ([[nguon-tra-cuu-am-nhac-hoc]]). Thận trọng: hoạ sĩ có thể **tưởng tượng, tượng trưng hoá** hoặc chép tranh cũ. Ví dụ ở Việt Nam: hình người đánh trống trên mặt [[lich-su-am-nhac-viet-nam|trống đồng]].
+**Âm nhạc học hình ảnh** (*[[bieu-tuong-hoc-am-nhac|music iconography]]*) dùng tranh, tượng, ảnh để tìm hiểu nhạc cụ, biên chế, [[tu-the|tư thế]] chơi, bối cảnh biểu diễn. Ngành phát triển mạnh từ thập niên 1970; tổ chức quốc tế RIdIM được lập năm 1971 ([[nguon-tra-cuu-am-nhac-hoc]]). Thận trọng: hoạ sĩ có thể **tưởng tượng, tượng trưng hoá** hoặc chép tranh cũ. Ví dụ ở Việt Nam: hình người đánh trống trên mặt [[lich-su-am-nhac-viet-nam|trống đồng]].
 
 ## 5. Phân kỳ: nhãn do người đời sau đặt
 Chữ "[[thoi-ky-baroque|Baroque]]" chỉ được dùng cho âm nhạc từ đầu [[thoi-ky-the-ky-20|thế kỷ 20]]: Curt Sachs (1919) mượn các phạm trù của sử học nghệ thuật, và cuốn *Music in the Baroque Era* của Bukofzer (1948) phổ biến thuật ngữ ở Mỹ. Ranh giới các thời kỳ vẫn còn tranh luận. Xem [[cac-thoi-ky]] (mục "Mốc năm chỉ là quy ước").
@@ -399,7 +399,7 @@ Bài học: phân biệt **tài liệu** (có nguồn gốc rõ) với **giai th
     slug: 'nguon-tra-cuu-am-nhac-hoc',
     title: 'Công cụ tra cứu: từ điển, danh mục tác phẩm và cơ sở dữ liệu',
     category: 'musicology',
-    aliases: ['công cụ tra cứu âm nhạc', 'Grove', 'New Grove', 'MGG', 'RISM', 'RILM', 'RIdIM', 'RIPM', 'IMSLP', 'danh mục tác phẩm', 'thematic catalogue', 'số Köchel', 'Köchel', 'BWV', 'Hoboken', 'số Deutsch', 'RV', 'HWV', 'K.', 'opus'],
+    aliases: ['công cụ tra cứu âm nhạc', 'Grove', 'New Grove', 'MGG', 'RISM', 'RILM', 'RIPM', 'IMSLP', 'danh mục tác phẩm', 'thematic catalogue', 'số Köchel', 'Köchel', 'BWV', 'Hoboken', 'số Deutsch', 'RV', 'HWV', 'K.', 'opus'],
     summary: 'Bản đồ các công cụ của nhà nghiên cứu: hai bộ từ điển lớn (Grove, MGG), các dự án quốc tế về nguồn nhạc (RISM), tài liệu nghiên cứu (RILM), tranh ảnh (RIdIM), báo chí (RIPM), thư viện bản nhạc mở (IMSLP), và các danh mục tác phẩm — vì sao sonata của Mozart mang số "K. 545" còn của Bach là "BWV".',
     wiki: 'Thematic_catalogue',
     refs: [
@@ -435,7 +435,7 @@ Trước khi đọc sâu về một tác phẩm hay một nhà soạn nhạc, nh
 |---|---|---|---|
 | **RISM** — Répertoire International des Sources Musicales | 1952 (Paris) | **Nguồn nhạc**: bản viết tay, bản in đầu, nơi lưu giữ | Tìm bản gốc của một tác phẩm đang nằm ở thư viện nào |
 | **RILM** — Répertoire International de Littérature Musicale | 1966 (tập đầu 1967) | **Tài liệu nghiên cứu**: sách, bài báo, luận văn, kèm tóm tắt | Tìm xem ai đã viết gì về một đề tài |
-| **RIdIM** — Répertoire International d'Iconographie Musicale | 1971 (St. Gallen) | **Tranh ảnh** có hình âm nhạc | Âm nhạc học hình ảnh |
+| **[[bieu-tuong-hoc-am-nhac|RIdIM]]** — Répertoire International d'Iconographie Musicale | 1971 (St. Gallen) | **Tranh ảnh** có hình âm nhạc | Âm nhạc học hình ảnh |
 | **RIPM** — Retrospective Index to Music Periodicals | khoảng 1980 | **Báo chí âm nhạc** khoảng 1760 – 1966 | Đọc phê bình đương thời, ví dụ tạp chí *AmZ* ([[doi-song-am-nhac-va-thiet-che]]) |
 
 **IMSLP** (thư viện bản nhạc mở, ra mắt ngày 16/2/2006) chứa bản quét của nhiều bản in cũ, kể cả bản in đầu — rất hữu ích để so sánh các [[an-ban-urtext|ấn bản]] ([[van-ban-hoc-am-nhac]]), nhưng cần kiểm tra nguồn gốc từng bản quét.
@@ -654,7 +654,7 @@ Viết lịch sử âm nhạc Việt Nam khó hơn viết lịch sử nhạc ph�
 ## 2. Nhạc cung đình qua các triều đại
 - **Thời Lý — giao lưu với Chăm:** năm 1044, Lý Thái Tông đánh Chiêm Thành, bắt về hoàng hậu, phi tần và cung nữ của vua Chăm. Sử sách cũng chép việc một vua Lý cho nhạc công soạn khúc theo **"[[am-nhac-co-trung-dai-viet-nam|Chiêm Thành âm]]"**, nghe buồn thương đến mức người nghe rơi nước mắt, và một nhà sư can rằng đó là âm thanh của nước loạn. Đa số nguồn tiếng Việt xếp chuyện này vào thời **Lý Cao Tông**, một nguồn khác ghi thời Lý Thánh Tông. **Năm cụ thể cần đối chiếu *Đại Việt sử ký toàn thư*.**
 - **Thời Lê sơ — tranh luận về nhạc lễ:** *Toàn thư* chép **Nguyễn Trãi** và **Lương Đăng** cùng được giao định nhạc triều đình (thời Lê Thái Tông, 1433 – 1442). Nguyễn Trãi có câu: "Hoà bình là gốc của nhạc, thanh âm là văn của nhạc". Nhà vua theo phương án của Lương Đăng (theo mẫu nhà Minh), Nguyễn Trãi rút lui. Tranh luận này gần với tư tưởng lễ nhạc Nho gia — xem [[nhac-trong-tu-tuong-nho-gia]]. (Năm cụ thể và tên các dàn nhạc thời này chưa được kiểm chứng ở đây.)
-- **Thời Nguyễn — [[ca-hue-nha-nhac|Nhã nhạc]] Huế:** theo hồ sơ UNESCO, Nhã nhạc là nhạc và múa cung đình phát triển **từ thế kỷ 15 đến giữa [[thoi-ky-the-ky-20|thế kỷ 20]]**, đạt đỉnh cao dưới triều Nguyễn (1802 – 1945). UNESCO tuyên bố Kiệt tác năm 2003, đưa vào Danh sách đại diện năm 2008. Sau năm 1945, Nhã nhạc đứng trước nguy cơ mai một.
+- **Thời Nguyễn — [[ca-hue-nha-nhac|Nhã nhạc]] Huế:** theo hồ sơ UNESCO, Nhã nhạc là nhạc và múa cung đình phát triển **từ thế kỷ 15 đến giữa [[thoi-ky-the-ky-20|thế kỷ 20]]**, đạt đỉnh cao dưới triều Nguyễn (1802 – 1945). UNESCO tuyên bố Kiệt tác năm 2003, đưa vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] năm 2008. Sau năm 1945, Nhã nhạc đứng trước nguy cơ mai một.
 
 ## 3. Sân khấu: chèo, tuồng, cải lương
 - **Chèo:** truyền thuyết tôn bà **[[cheo|Phạm Thị Trân]]** (cung nữ múa hát thời Đinh, thế kỷ 10) làm "bà tổ" của nghề — đây là **truyền thuyết**, không được chính sử ghi nhận.

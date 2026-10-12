@@ -744,7 +744,7 @@ Các kiểu này chính là các dạng [[ket-cau|kết cấu chủ điệu]]. �
 Phong cách jazz bắt nguồn từ ragtime. Nốt bass thường là nốt gốc hoặc nốt 5, có thể chơi đơn, [[quang|quãng 8]] hoặc quãng 10; hợp âm ở phách 2 và 4 thường gọn 2–3 nốt (thường gốc, 3, 7 — xem [[xep-hop-am|shell voicing]]). Tay trái nhảy liên tục giúp tay phải tự do chơi [[giai-dieu|giai điệu]] và [[ngau-hung-piano|ngẫu hứng]]. [[james-p-johnson|James P. Johnson]] được coi là "cha đẻ" của stride; học trò ông, [[fats-waller|Fats Waller]], đưa stride đến với công chúng (xem [[nghe-si-piano-jazz]]).
 
 ## Đệm từ bản nhạc hợp âm (lead sheet)
-Bản lead sheet chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay trái được khuyên:
+Bản [[he-so-nashville-va-lead-sheet|lead sheet]] chỉ ghi giai điệu và [[ky-hieu-hop-am]]. Lộ trình tay trái được khuyên:
 1. Chơi **một nốt** — nốt gốc của hợp âm.
 2. Chơi **quãng 8**.
 3. Chơi **cả hợp âm**, rồi chuyển sang các kiểu đệm ở bảng trên.
@@ -765,7 +765,7 @@ Stride chi tiết: [[stride-piano]]; đệm cho ca sĩ trong jazz: [[dem-cho-ca-
     slug: 'dieu-dem-pho-bien',
     title: 'Các điệu đệm thông dụng',
     category: 'technique',
-    aliases: ['điệu đệm', 'tiết điệu', 'slow rock', 'bossa nova', 'cha cha cha', 'chachacha', 'clave', 'nhịp 12/8', 'ballad'],
+    aliases: ['điệu đệm', 'tiết điệu', 'slow rock', 'bossa nova', 'cha cha cha', 'chachacha', 'nhịp 12/8', 'ballad'],
     summary: 'Slow rock (12/8, bốn phách lớn chia ba), bossa nova (dựa trên mẫu clave) và cha-cha-cha (nhấn "cha-cha-cha" ở phách 3 – 4) — cùng cách luyện từng điệu trên piano.',
     refs: [
       ['Soundbrenner — Rhythm library: 12/8', 'https://www.soundbrenner.com/blogs/articles/rhythm-library-12-8'],
@@ -784,7 +784,7 @@ Các kiểu đệm cơ bản (khối, rải, Alberti, [[tieu-pham-piano|valse]],
 - Đừng nhầm với **6/8** — chỉ có **hai** phách lớn. 12/8 chậm (dưới khoảng 100 phách/phút) cũng dùng cho jazz ballad.
 
 ## Bossa nova
-- Xây dựng trên một mẫu **clave**; mẫu clave bossa nova thường được gắn với Antonio Carlos Jobim (dù chính ông chỉ coi đó là một [[motif|motif]] tiết tấu).
+- Xây dựng trên một mẫu **[[clave-tresillo-va-nhip-cong|clave]]**; mẫu clave bossa nova thường được gắn với Antonio Carlos Jobim (dù chính ông chỉ coi đó là một [[motif|motif]] tiết tấu).
 - Một bài học gợi ý tay trái: nốt gốc và nốt 5 của [[hop-am-ba|hợp âm]], nhấn ở các [[truong-do|nốt móc đơn]] thứ 1, 4–5 và 8 của ô nhịp. Tay phải [[dao-phach|đảo phách]]: các móc đơn thứ 1, 4, 7 của ô thứ nhất và 3, 6 của ô thứ hai (giáo viên khác đặt 3 và 5).
 - Yamaha luyện theo thứ tự: clave son 2-3, rồi 3-2, rồi mẫu đệm bossa; dùng [[xep-hop-am|thế bấm hợp âm]] hai tay cho tiếng đầy hơn.
 - [[ky-thuat-cham-phim|Chạm phím]] **nhẹ**, tiết tấu tiết chế, hợp âm nối mượt (thường dùng [[hop-am-bay|hợp âm 7]] và [[hop-am-mo-rong|9]]).
@@ -1082,7 +1082,7 @@ Bối cảnh: [[phong-cach-jazz]] (mục Latin).
 
 ## Cảm giác: đung đưa, không swing
 - Móc đơn **thẳng** nhưng [[dao-phach|đảo phách]] nhiều; tiết chế, ít rung, ít thay đổi [[cuong-do|cường độ]] (TJPS).
-- Ba lớp: **bè trầm lặp**, **hợp âm đệm** đảo phách, **giai điệu**.
+- Ba lớp: **[[passacaglia-va-chaconne|bè trầm lặp]]**, **hợp âm đệm** đảo phách, **giai điệu**.
 - **Batida** của Gilberto: ngón cái chơi trầm ở phách 1 và 3 (gốc – 5, như trống *surdo* của samba), các ngón kia gảy hợp âm đảo phách — một cây guitar [[doi-am|mô phỏng]] cả dàn trống.
 - Khác samba: samba nhanh hơn, ồn hơn, dàn gõ lễ hội; bossa nova nhỏ nhẹ, thân mật, cho giọng hát và guitar, [[hoa-am-jazz|hoà âm jazz]].
 
@@ -1093,7 +1093,7 @@ Peter Martin gợi ý có thể giản lược bè trầm thành nốt trắng �
 
 ## Tay phải
 - [[ngon-bam|Thế bấm]] **ba nốt không có nốt 5** (gốc, 3, 7 hoặc 3, 7, 9) — xem [[the-bam-ba-not]], [[xep-hop-am]].
-- Tay phải **đón trước** sự đổi hợp âm (vào sớm nửa phách). Mẫu đảo phách cụ thể và "clave bossa nova": [[dieu-dem-pho-bien]].
+- Tay phải **đón trước** sự đổi hợp âm (vào sớm nửa phách). Mẫu đảo phách cụ thể và "[[clave-tresillo-va-nhip-cong|clave]] bossa nova": [[dieu-dem-pho-bien]].
 
 ## Hoà âm Jobim
 - Màu sắc ấn tượng trong khung chức năng: [[hop-am-bay|maj7]], m7, 7(9), 7(♭9), m7♭5, bè trong đi xuống [[am-giai-cromatic|cromatic]].

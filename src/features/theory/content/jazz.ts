@@ -56,6 +56,8 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
 - Nhìn mọi tiến trình như **chuỗi các cặp ii – V** dẫn tới những "[[bac-am-giai|chủ âm]] tạm thời".
 - Với mỗi hợp âm, hỏi: **nốt 3 và 7 là gì?** — hai nốt này quyết định tính chất và nối các hợp âm với nhau (nốt dẫn hướng).
 - Mọi hợp âm 7 át đều có thể **thay thế** ([[quang|tritone]], backdoor, [[hop-am-bay-giam|hợp âm 7 giảm]]) — nhưng giai điệu phải hợp với hợp âm mới.
+
+**Công cụ của người chơi ban nhạc:** [[he-so-nashville-va-lead-sheet]] (bảng số, Real Book), [[hinh-thuc-ca-khuc-pho-thong]] (verse – chorus, AABA) và [[clave-tresillo-va-nhip-cong]] (tiết tấu Latin).
 `,
   },  {
     slug: 'hoc-piano-jazz',
@@ -217,8 +219,8 @@ Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng h
 Âm giai blues thường được chơi trên khung [[blues-12-nhip]] với các [[hop-am-bay|hợp âm 7 át]]. Liên quan: [[dieu-thuc|Mixolydian]], [[dao-phach]].
 
 ## Nốt blue thực sự cao bao nhiêu?
-- Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một phần tư cung đến [[cung-nua-cung|nửa cung]]**.
-- Court Cutting (2019) đo [[cao-do|cao độ]] trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 cent** — **giữa** [[quang|quãng]] 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
+- Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một [[vi-cung-va-am-nhac-vi-cung|phần tư cung]] đến [[cung-nua-cung|nửa cung]]**.
+- Court Cutting (2019) đo [[cao-do|cao độ]] trong 15 bản thu blues kinh điển và tìm thấy ba "cụm" nốt blue, trong đó một cụm ở khoảng **319 [[cac-he-thong-chinh-am|cent]]** — **giữa** [[quang|quãng]] 3 thứ (300) và quãng 3 trưởng (400): một quãng 3 "trung tính". Có nhà nghiên cứu phản biện rằng nốt blue thường là **đường trượt** giữa hai cao độ chứ không đứng yên.
 - Vì piano không có cao độ giữa hai phím, người chơi chỉ có thể **gợi** nốt blue — ví dụ [[nghe-si-piano-jazz|Thelonious Monk]] đánh **hai phím liền nhau cùng lúc**, hoặc láy nhanh từ ♭3 lên 3.
 
 ## Âm giai blues là sản phẩm của sách dạy
@@ -363,7 +365,7 @@ TJPS dùng line cliché để làm sống động những chỗ **một hợp â
       ['Medium (Jazz Theory) — Harmonic analysis symbols', 'https://medium.com/jazz-theory/harmonic-analysis-symbols-aa235bfc6ded'],
     ],
     body: `
-Phân tích hoà âm cổ điển dựa trên bản nhạc đầy đủ ([[phan-tich-hoa-am]]); phân tích jazz thường làm trên **lead sheet** — chỉ có giai điệu và ký hiệu hợp âm ([[ky-hieu-hop-am]]). Mục tiêu thực tế: biết **mỗi đoạn đang ở giọng nào** để chọn âm giai, thế bấm và chỗ [[tai-hoa-am|tái hoà âm]].
+Phân tích hoà âm cổ điển dựa trên bản nhạc đầy đủ ([[phan-tich-hoa-am]]); phân tích jazz thường làm trên **[[he-so-nashville-va-lead-sheet|lead sheet]]** — chỉ có giai điệu và ký hiệu hợp âm ([[ky-hieu-hop-am]]). Mục tiêu thực tế: biết **mỗi đoạn đang ở giọng nào** để chọn âm giai, thế bấm và chỗ [[tai-hoa-am|tái hoà âm]].
 
 ## Các bước (theo TJPS)
 1. **Tìm giọng chính**: [[hoa-bieu|hoá biểu]], các [[cau-ket|kết]] ở cuối câu (ii – V – I, V – I), hợp âm cuối bài.
@@ -1570,7 +1572,7 @@ Năm góc nhìn (TJPS): **[[quang|quãng]]** (các bước nhảy), **motif**, *
 
 ## Hai quy trình
 - **"Vẽ nguệch ngoạc"** (doodling): bắt đầu từ một giai điệu nghe hay rồi chỉnh cho hợp phong cách.
-- **"Bông tuyết"** (snowflake): dạo đàn → tìm một câu → phát triển thành motif → hoà âm hoá → có một **lead sheet** ([[ky-hieu-hop-am]]). Bước cuối: **phối** ([[hinh-thuc-am-nhac|hình thức]], [[ngon-bam|thế bấm]], nhạc cụ, [[cuong-do|cường độ]]).
+- **"Bông tuyết"** (snowflake): dạo đàn → tìm một câu → phát triển thành motif → hoà âm hoá → có một **[[he-so-nashville-va-lead-sheet|lead sheet]]** ([[ky-hieu-hop-am]]). Bước cuối: **phối** ([[hinh-thuc-am-nhac|hình thức]], [[ngon-bam|thế bấm]], nhạc cụ, [[cuong-do|cường độ]]).
 ::form Dạo_đàn Một_câu Motif Hoà_âm Ký_âm Phối | Quy trình "bông tuyết" của TJPS: dạo đàn → tìm một câu → motif → hoà âm hoá → ký âm thành lead sheet → phối
 
 ## Contrafact: giai điệu mới trên vòng hợp âm cũ
@@ -2230,7 +2232,7 @@ TJPS không đưa khuôn mẫu cố định cho cả bài solo. Theo kinh nghi�
 | **Giai điệu** | Trang trí giai điệu; [[jazz-dieu-thuc|âm giai điệu thức]]; phát triển motif (Sonny Rollins) |
 | **Hoà âm** | Biến hoá và [[thay-the-hop-am|thay thế hợp âm]]; Coleman Hawkins chuyển [[ngau-hung-piano|ngẫu hứng]] từ dựa trên giai điệu sang **dựa trên hoà âm** ("Body and Soul", 1939) |
 | **Tiết tấu** | [[cam-nhan-phach|Groove]], ví dụ [[dieu-dem-pho-bien|clave]] Latin |
-| **[[am-sac|Âm sắc]]** | Tiếng ồn, vi cung (free jazz — xem [[post-bop-free-jazz]]) |
+| **[[am-sac|Âm sắc]]** | Tiếng ồn, [[vi-cung-va-am-nhac-vi-cung|vi cung]] (free jazz — xem [[post-bop-free-jazz]]) |
 Viết ra thay vì ngẫu hứng — cùng công cụ, có thời gian chọn lọc: [[sang-tac-jazz]].
 `,
   },
@@ -2469,7 +2471,7 @@ Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc n�
 | Phong cách | Thời gian | Đặc điểm | Piano | Mốc |
 |---|---|---|---|---|
 | **Fusion / jazz-rock** | Cuối 1960s–70s | Nền điệu thức, groove funk, solo kiểu rock, móc đơn **thẳng**; nhạc cụ điện | Joe Zawinul (Weather Report), Herbie Hancock (Headhunters), [[chick-corea|Chick Corea]] (Return to Forever) | *Bitches Brew* (thu 8/1969) |
-| **Latin: Afro-Cuban** | Từ 1943 | Mọi người theo **clave** (mẫu nhịp nền của nhạc Afro-Cuba, dựa trên [[dao-phach|đảo phách]]); piano chơi **montuno** (vamp lặp lại nét hợp âm), tay trái **tumbao** (gốc – 5) | | Machito/Mario Bauzá, "Tanga" (1943); Dizzy Gillespie/Chano Pozo, "Manteca" (1947) |
+| **Latin: Afro-Cuban** | Từ 1943 | Mọi người theo **[[clave-tresillo-va-nhip-cong|clave]]** (mẫu nhịp nền của nhạc Afro-Cuba, dựa trên [[dao-phach|đảo phách]]); piano chơi **montuno** (vamp lặp lại nét hợp âm), tay trái **tumbao** (gốc – 5) | | Machito/Mario Bauzá, "Tanga" (1943); Dizzy Gillespie/Chano Pozo, "Manteca" (1947) |
 | **Latin: bossa nova** | Cuối 1950s | Samba cộng hoà âm jazz; móc đơn thẳng, đung đưa nhẹ, **không** dùng clave; đệm thoáng hơn Afro-Cuban — xem [[dieu-dem-pho-bien]] | Antônio Carlos Jobim | *[[dem-bossa-nova|Getz/Gilberto]]* (thu 3/1963) |
 | **Gospel jazz** | Từ 1950s | Quãng 8, [[ky-hieu-nang-cao|tremolo]], [[hop-am-luot-jazz|hợp âm 7 giảm lướt]], [[hop-am-at-phu|át phụ]], giai điệu [[am-giai-ngu-cung|ngũ cung]] trưởng, thế bấm hẹp song song | Xem [[tai-hoa-am-gospel]] | |
 | **Smooth / crossover** | Cuối 1970s–80s | Lớn lên từ fusion nhưng ít phiêu lưu hơn; trọng groove hơn ngẫu hứng; pha pop, funk, R&B | David Benoit | |

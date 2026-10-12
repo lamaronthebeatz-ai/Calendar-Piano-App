@@ -61,7 +61,7 @@ Xếp từ dễ đến khó — cả về bản nhạc lẫn khái niệm phân 
 | # | Bài | Học được gì |
 |---|---|---|
 | 1 | [[phan-tich-minuet-sol-truong]] | Câu nhạc, bốn kết, hai đoạn |
-| 2 | [[phan-tich-canon-pachelbel]] | Bè trầm lặp, biến tấu |
+| 2 | [[phan-tich-canon-pachelbel]] | [[passacaglia-va-chaconne|Bè trầm lặp]], biến tấu |
 | 3 | [[phan-tich-wilder-reiter]] | Ba đoạn, giai điệu ở tay trái |
 | 4 | [[phan-tich-prelude-la-truong-op28-so7]] | Đoạn nhạc 8 + 8, [[hop-am-at-phu|hợp âm át phụ]] |
 | 5 | [[phan-tich-prelude-do-truong]] | Một khuôn hình rải, chỉ đọc hoà âm |
@@ -91,6 +91,8 @@ Một bài phân tích tốt (gợi ý cấu trúc):
 Phân tích một solo jazz: [[phan-tich-solo-jazz]].
 
 **Phân tích một kho tác phẩm:** 371 [[tai-lieu-su-pham-cua-bach|chorale của Bach]] qua nghiên cứu thống kê và máy học — [[phoi-chorale-kieu-bach]].
+
+**Hình thức để phân tích:** [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]], [[sonata-rondo-va-cac-loai-rondo]]; nghe màu dàn nhạc qua [[phoi-khi-nguyen-ly-co-ban]].
 `,
   },
   {
@@ -98,7 +100,7 @@ Phân tích một solo jazz: [[phan-tich-solo-jazz]].
     title: 'Lịch sử phân tích âm nhạc',
     category: 'analysis',
     also: ['philosophy'],
-    aliases: ['lịch sử phân tích', 'history of music analysis', 'Burmeister', 'Koch', 'punctuation form', 'hình thức dấu câu', 'Formenlehre', 'A. B. Marx', 'Réti', 'Kerman', 'phân tích hùng biện'],
+    aliases: ['lịch sử phân tích', 'history of music analysis', 'Burmeister', 'Koch', 'punctuation form', 'hình thức dấu câu', 'Formenlehre', 'A. B. Marx', 'Réti', 'phân tích hùng biện'],
     summary: 'Từ phân tích theo tu từ học của Burmeister (1606), lý thuyết câu nhạc của Koch (1782–1793), Formenlehre của A. B. Marx, đến Schenker, Réti, các lý thuyết thế kỷ 20 và những phê phán đối với phân tích hình thức thuần tuý.',
     wiki: 'Musical_analysis',
     refs: [
@@ -143,7 +145,7 @@ Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|ph
 - **Phân tích biểu diễn và bản thu** (xem [[phan-tich-va-bieu-dien]], [[so-sanh-ban-thu]]).
 
 ## Phê phán: "Ta đã đi vào phân tích thế nào, và làm sao để ra"
-Bài luận nổi tiếng của nhà [[am-nhac-hoc|âm nhạc học]] **Joseph Kerman** (*Critical Inquiry*, **1980**) — *How We Got into Analysis, and How to Get Out* — phê phán việc phân tích tập trung vào cấu trúc kỹ thuật mà tách khỏi lịch sử, bối cảnh và **phê bình** (đánh giá, diễn giải ý nghĩa). Bài luận thường được coi là một khởi điểm của các tranh luận dẫn tới "âm nhạc học mới" ở thập niên 1980–1990. Bài học cho người dạy: phân tích là **phương tiện để hiểu và chơi hay hơn**, không phải mục đích tự thân.
+Bài luận nổi tiếng của nhà [[am-nhac-hoc|âm nhạc học]] **Joseph Kerman** (*Critical Inquiry*, **1980**) — *How We Got into Analysis, and How to Get Out* — phê phán việc phân tích tập trung vào cấu trúc kỹ thuật mà tách khỏi lịch sử, bối cảnh và **phê bình** (đánh giá, diễn giải ý nghĩa). Bài luận thường được coi là một khởi điểm của các tranh luận dẫn tới "[[am-nhac-hoc-moi|âm nhạc học mới]]" ở thập niên 1980–1990. Bài học cho người dạy: phân tích là **phương tiện để hiểu và chơi hay hơn**, không phải mục đích tự thân.
 `,
   },
   {
@@ -391,7 +393,7 @@ Lưu ý: nhãn **"Sturm und Drang"** từng được dùng như một chủ đ�
     body: `
 ## Cấu trúc
 - Viết cho **ba [[violin|violin]] và [[bass-so|basso continuo]]**, đi kèm một [[to-khuc-baroque|gigue]].
-- Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một [[giai-dieu|giai điệu]], lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** (basso ostinato / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
+- Là một **[[doi-am-kep|canon đồng âm]] ba bè**: ba violin chơi cùng một [[giai-dieu|giai điệu]], lần lượt vào sau nhau. Bè thứ tư là **bè trầm lặp** ([[passacaglia-va-chaconne|basso ostinato]] / ground bass) suốt bài — xem [[ostinato]]. Bài cũng mang yếu tố của chaconne.
 
 ## Bè trầm và vòng hợp âm
 Bè trầm 8 [[not-lap-lai|nốt lặp]] lại tạo nên vòng hợp âm nổi tiếng **D – A – Bm – F♯m – G – D – G – A** (trong Đô trưởng: C – G – Am – Em – F – C – F – G), dùng trong vô số bài hát — xem [[vong-hop-am]] và [[mo-tien-hoa-am|mô tiến quãng 3 đi xuống]].
@@ -404,7 +406,7 @@ Bè trầm 8 [[not-lap-lai|nốt lặp]] lại tạo nên vòng hợp âm nổi 
 | 1680–1706? | Thời điểm sáng tác **không rõ** |
 | 1838–1842 | Bản chép tay cổ nhất còn lại |
 | 1919 | Gustav Beckmann công bố bản tổng phổ trong một bài nghiên cứu về [[nhac-thinh-phong|nhạc thính phòng]] của Pachelbel |
-| 1929 | Max Seiffert xuất bản một bản chuyển soạn |
+| 1929 | Max Seiffert xuất bản một bản [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] |
 | 1940 | Bản thu của Boston Pops (Arthur Fiedler) — có thể là bản thu đầu tiên, ít được chú ý |
 | 1968 | Bản thu của dàn nhạc thính phòng **Jean-François Paillard**: chậm hơn, phong cách [[thoi-ky-lang-man|Lãng mạn]], thêm các bè tự viết — thay đổi số phận bài nhạc |
 
@@ -550,7 +552,7 @@ Lưu ý: [[ky-hieu-hop-am|tên hợp âm]] lấy từ một phân tích; các [[
 Chưa có lời giải. Các giả thuyết: **Therese Malfatti** (học trò mà Beethoven được cho là đã cầu hôn năm 1810 — có thể Nohl chép nhầm "Therese" thành "Elise"), ca sĩ **Elisabeth Röckel**, hoặc cô bé **Elise Barensfeld**.
 
 ## Hình thức
-Thường được phân tích là **[[rondo]] A – B – A – C – A** (cũng có ý kiến coi là hai đoạn có tái hiện):
+Thường được phân tích là **[[rondo]] A – B – A – C – A** (cũng có ý kiến coi là [[hinh-thuc-hai-doan|hai đoạn có tái hiện]]):
 | Đoạn | Nội dung |
 |---|---|
 | **A** | Chủ đề La thứ nổi tiếng, nhịp 3/8, mở đầu bằng [[nhip-lay-da|nốt lấy đà]] E – D♯ |
@@ -748,7 +750,7 @@ Cùng thể loại [[tieu-pham-piano|tiểu phẩm]] cho người học: [[phan-
 ::keyboard Eb4 G4 Bb4 | Hợp âm chủ Mi♭ trưởng (E♭ – G – B♭); hoá biểu 3 dấu giáng
 
 ## Hình thức
-Dài **34 ô nhịp**, thường được phân tích là **hai đoạn có tái hiện**: A – A – B – A – B – A, cộng **coda** (một nghiên cứu năm 2025 chia chi tiết hơn: A – B – A′ – coda – coda′ – [[cadenza|cadenza]]).
+Dài **34 ô nhịp**, thường được phân tích là **[[hinh-thuc-hai-doan|hai đoạn có tái hiện]]**: A – A – B – A – B – A, cộng **coda** (một nghiên cứu năm 2025 chia chi tiết hơn: A – B – A′ – coda – coda′ – [[cadenza|cadenza]]).
 - Mỗi lần A và B trở lại, [[giai-dieu|giai điệu]] được **trang trí phong phú hơn**: láy rền kéo dài, chuỗi nốt nhỏ — xem [[ky-hieu-hoa-my]].
 - Đoạn B có hoà âm "lang thang", bè trầm đi xuống [[cung-nua-cung|nửa cung]] rồi về IV – I — mang dấu ấn [[ngau-hung-piano|ngẫu hứng]] của Chopin.
 - Gần cuối, chỉ dẫn **senza [[nhip-do|tempo]]** (không theo nhịp) cho phép một đoạn rất tự do trước khi kết.
@@ -844,7 +846,7 @@ Minuet **Sol trưởng** BWV Anh. 114 và Minuet Sol thứ BWV Anh. 115 nằm tr
 | — | Cuối ô 24, tay trái có **C♮**: Rê trưởng thành V7 của Sol, dẫn về giọng chính | |
 | 25–28 | Về Sol; ô 25 gợi lại đường nét của ô 1 nhưng không nhắc lại nguyên văn | Dừng nhẹ trên V (ô 28) |
 | 29–32 | Chất liệu kết mới | Kết hoàn toàn ở Sol (ô 32) |
-Đây là **hai đoạn đơn**, không phải [[hinh-thuc-am-nhac|hai đoạn có tái hiện]]: ô 25 chỉ "vọng" lại khởi đầu (nốt D rồi G), còn nhịp điệu và nốt khác hẳn ô 1.
+Đây là **[[hinh-thuc-hai-doan|hai đoạn đơn]]**, không phải [[hinh-thuc-am-nhac|hai đoạn có tái hiện]]: ô 25 chỉ "vọng" lại khởi đầu (nốt D rồi G), còn nhịp điệu và nốt khác hẳn ô 1.
 
 ::staff treble D5 G4 A4 B4 C5 | Ô 1 (tay phải): D5 nốt đen rồi bốn móc đơn G – A – B – C
 ::grand C#5/A3=V D5/D3=I | Kết ở Rê trưởng (ô 23–24, rút gọn): giai điệu C♯ → D trên bè trầm A → D — V – I của giọng át

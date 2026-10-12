@@ -51,6 +51,8 @@ Người chơi đàn và giáo viên cần hiểu **ba tầng** của việc ngh
 - **Quay về cây đàn**: mỗi bài đều kết thúc bằng ý nghĩa với việc chơi và dạy piano.
 
 **Góc nhìn nghiên cứu:** ngành đứng sau mục này là [[tam-ly-hoc-am-nhac]]; não khi nghe nhạc ở [[than-kinh-hoc-am-nhac]]; âm nhạc và lời nói ở [[am-nhac-va-ngon-ngu]]; vật lý của nhạc cụ ở [[am-hoc-nhac-cu]]; công cụ máy tính để kiểm tra giả thuyết trên nhiều tác phẩm là [[am-nhac-hoc-tinh-toan]].
+
+**Mở rộng việc nghe:** cảnh quan âm thanh ở [[nghien-cuu-am-thanh-va-canh-quan-am-thanh]], âm thanh – hình ảnh ở [[nghien-cuu-nhac-phim]], gọi tên tần số ở [[ky-hieu-cao-do-c4-helmholtz-midi]].
 `,
   },
   {

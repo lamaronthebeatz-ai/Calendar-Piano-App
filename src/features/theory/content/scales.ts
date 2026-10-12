@@ -42,6 +42,8 @@ Kỹ thuật ngón: [[luyen-am-giai]], [[ngon-bam]]. Âm giai cũng là nội du
 **Góc nhìn nghiên cứu:** thứ bậc của các bậc trong giọng đo được bằng thực nghiệm, và máy tính dùng nó để đoán giọng — [[tim-giong-bang-may]].
 
 **Điệu thức Gregorian:** tám điệu nhà thờ, âm kết và âm đọc — [[tam-dieu-thuc-va-giong-thanh-vinh]].
+
+**Ngoài 12 nửa cung:** [[cac-he-thong-chinh-am]] và [[vi-cung-va-am-nhac-vi-cung]].
 `,
   },
   {

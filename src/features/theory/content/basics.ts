@@ -42,6 +42,8 @@ Nhạc lý chỉ thành kỹ năng khi gắn với **âm thanh**: đọc thì h�
 **Góc nhìn lịch sử:** ký âm ngày nay là điểm cuối của gần một nghìn năm phát triển, từ neume qua khuông nhạc của Guido đến vạch nhịp thế kỷ 17 — xem [[lich-su-ky-am]].
 
 **Ký âm bình ca:** [[ky-am-binh-ca-gregorian]] (khuông 4 dòng, khoá Đô và khoá Fa di động, neume) và [[gregorio-va-gabc]] (soạn nốt vuông trên máy tính).
+
+**Cách ghi khác và tên cao độ:** [[gian-pho-ky-am-so]] (ký âm bằng số), [[ky-hieu-cao-do-c4-helmholtz-midi]] (C4, c′, MIDI 60), và mã hoá cho máy tính ở [[am-nhac-hoc-ky-thuat-so]].
 `,
   },
   {
@@ -95,7 +97,7 @@ Xem cách dùng các âm tiết này khi hát: [[xuong-am]].
 Từ khi khuông nhạc và hình nốt ổn định, các thay đổi lớn về sau của ký âm chủ yếu nằm ở **[[tiet-tau|nhịp điệu]]** (xem [[truong-do]]).
 
 ## Khi giảng dạy: "Đô giữa là C4 hay C3?"
-- Theo **ký hiệu cao độ khoa học**, Đô giữa luôn là **C4**; số quãng 8 tăng lên mỗi khi đi từ Si sang Đô (nên nốt ngay dưới C4 là **B3**).
+- Theo **[[ky-hieu-cao-do-c4-helmholtz-midi|ký hiệu cao độ]] khoa học**, Đô giữa luôn là **C4**; số quãng 8 tăng lên mỗi khi đi từ Si sang Đô (nên nốt ngay dưới C4 là **B3**).
 - Ký hiệu Helmholtz (hay gặp trong sách châu Âu) viết Đô giữa là **c′**.
 - Một số hãng đàn điện tử và phần mềm (như Yamaha, Ableton Live) lại gọi Đô giữa là **C3**. Chuẩn [[synthesizer|MIDI]] chỉ quy định Đô giữa là **nốt số 60**, không quy định tên. Khi học sinh dùng đàn điện tử, cần nói rõ quy ước để tránh nhầm.
 `,
@@ -311,7 +313,7 @@ Số phím tăng dần theo lịch sử, vì nhà soạn nhạc luôn muốn th�
 | Giữa thế kỷ 19 ([[frederic-chopin|Chopin]], [[franz-liszt|Liszt]]) | Khoảng **85** phím, 7 quãng 8 |
 | Cuối những năm 1880 | **88** phím — Steinway thêm 3 phím và chuẩn này được các hãng khác theo (có nguồn cho rằng Chickering làm trước) |
 
-Có đàn **nhiều hơn 88 phím**: mẫu **Bösendorfer Imperial** có **97 phím** (xuống đến C0). [[ferruccio-busoni|Busoni]] đặt làm năm 1909 để chuyển soạn một tác phẩm [[organ-ong|organ]] có nốt thấp hơn bàn phím thường. Các phím thêm được sơn **đen** để người chơi không nhầm.
+Có đàn **nhiều hơn 88 phím**: mẫu **Bösendorfer Imperial** có **97 phím** (xuống đến C0). [[ferruccio-busoni|Busoni]] đặt làm năm 1909 để [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] một tác phẩm [[organ-ong|organ]] có nốt thấp hơn bàn phím thường. Các phím thêm được sơn **đen** để người chơi không nhầm.
 
 Lịch sử cây đàn: [[lich-su-piano]].
 
@@ -397,6 +399,117 @@ Hai cách viết cùng nghĩa. Theo chuẩn phông ký hiệu nhạc SMuFL, dạ
 Một số khoá có số **8** nhỏ trên hoặc dưới: chơi cao hơn hoặc thấp hơn một quãng 8 so với viết. Ví dụ [[khoa-sol|khoá Sol]] có số 8 ở dưới dùng cho guitar và giọng tenor.
 
 8vb hay gặp nhất ở [[khoa-fa|khoá Fa]] — đặc biệt **tay trái piano** và [[double-bass|contrabass]].
+`,
+  },
+  {
+    slug: "gian-pho-ky-am-so",
+    title: "Giản phổ (ký âm bằng số, jianpu)",
+    category: 'basics',
+    also: ['musicianship'],
+    aliases: ["giản phổ", "jianpu", "ký âm bằng số", "ký âm số", "numbered notation", "numbered musical notation", "Ziffersystem", "Galin-Paris-Chevé", "Chevé", "nhạc số"],
+    summary: "Giản phổ ghi bậc âm bằng các số 1 – 7 (Đô di động), chấm trên/dưới để đổi quãng 8, gạch dưới để rút ngắn trường độ, gạch ngang để kéo dài, 0 là dấu lặng. Ý tưởng được Rousseau trình Viện Hàn lâm Khoa học Paris năm 1742, phát triển thành hệ Galin – Paris – Chevé ở Pháp thế kỷ 19, rồi trở thành lối ghi nhạc phổ biến nhất ở Trung Quốc. Bài có bảng quy tắc, ví dụ đổi qua lại với khuông nhạc, và một lưu ý: chưa có nguồn tin cậy về việc dùng giản phổ ở Việt Nam.",
+    wiki: "Numbered_musical_notation",
+    refs: [
+      ["Wikipedia — Numbered musical notation", "https://en.wikipedia.org/wiki/Numbered_musical_notation"],
+      ["Wikipedia — Jianpu", "https://www.Wikipedia.org/wiki/Jianpu"],
+      ["Dictéco — Rousseau, Projet concernant de nouveaux signes pour la musique (1742)", "https://dicteco.huma-num.fr/en/pdffile/32879"],
+      ["Rousseau Online — Projet (PDF)", "https://www.rousseauonline.ch/pdf/rousseauonline-0065.pdf"],
+      ["Wikipedia — Galin-Paris-Chevé system", "https://en.wikipedia.org/wiki/Galin-Paris-Chev%C3%A9_system"],
+      ["Wikipedia — Pierre Galin", "https://en.wikipedia.org/wiki/Pierre_Galin"],
+      ["Guitar Pro — Jianpu (hướng dẫn)", "https://www.guitar-pro.com/docs/gp8/score/note/jianpu"],
+      ["Stanford — Chinese music notation", "https://web.stanford.edu/group/scme/cgi-bin/chinese-music/notation"],
+      ["Wikipedia — Gongche notation", "https://en.wikipedia.org/wiki/Gongche_notation"],
+    ],
+    body: `
+Một cách ghi nhạc khác bên cạnh [[khuong-nhac]] — gần với [[xuong-am|xướng âm Đô di động]]. Lịch sử ký âm nói chung: [[lich-su-ky-am]].
+
+## Quy tắc
+| Ký hiệu | Nghĩa |
+|---|---|
+| **1 2 3 4 5 6 7** | Bảy bậc của [[am-giai-truong|âm giai trưởng]]: Đô Rê Mi Fa Sol La Si (1 = [[bac-am-giai|chủ âm]], **Đô di động**) |
+| Chấm **trên** số (1̇) | Lên một [[quang|quãng 8]]; hai chấm = hai quãng 8 |
+| Chấm **dưới** số (1̣) | Xuống một quãng 8 |
+| Số trơn | [[truong-do|Nốt đen]] |
+| **Một gạch dưới** | Nốt móc đơn; **hai gạch** = móc kép |
+| **Gạch ngang** sau số: 1 – | Thêm một phách đen: "1 –" = nốt trắng, "1 – – –" = nốt tròn |
+| Chấm **sau** số | [[cham-doi-dau-noi|Chấm dôi]] (thêm nửa giá trị) |
+| **0** | [[dau-lang|Dấu lặng]]; lặng dài thì lặp số 0, không dùng gạch ngang |
+*(Theo Wikipedia và hướng dẫn của [[guitar-co-dien|Guitar]] Pro.)*
+Giọng được ghi ở đầu bài, vd. "1 = G": khi đó 1 – 7 là Sol La Si Đô Rê Mi Fa♯. [[am-giai|Âm giai]] [[am-giai-thu|thứ tự nhiên]] bắt đầu từ 6.
+
+::staff treble C4=1 D4=2 E4=3 F4=4 G4=5 A4=6 B4=7 C5=1̇ | "1 = C": giản phổ và khuông nhạc
+::staff treble G4=1 A4=2 B4=3 C5=4 D5=5 E5=6 F#5=7 G5=1̇ | "1 = G": cùng dãy số, đổi giọng — Fa♯ tự xuất hiện ở bậc 7
+
+## Lịch sử
+- **Jean-Jacques Rousseau** trình *Projet concernant de nouveaux signes pour la musique* lên Viện Hàn lâm Khoa học Paris tháng 8/1742 (ngày 12 hay 22 — các nguồn khác nhau): các số 1 – 7 viết trên một dòng thay cho khuông năm dòng mà ông phê phán. Viện không chấp nhận; ông mở rộng ý tưởng trong *Dissertation sur la musique moderne* (1743). Xem thêm [[tranh-luan-rameau-rousseau]].
+- **Pierre Galin** (giáo viên toán ở Bordeaux) in phương pháp dạy nhạc năm 1818; **Aimé Paris** truyền bá; **Nanine Paris** và **Émile Chevé** in *Méthode élémentaire de musique vocale* (1844) → **hệ Galin – Paris – Chevé**, đọc số bằng [[not-nhac|tên nốt]] xướng âm.
+- Ở **Trung Quốc**, giản phổ phần lớn thay thế lối ghi **công xích** (*gongche*) truyền thống; [[thoi-ky-the-ky-20|thế kỷ 20]] có cuộc cạnh tranh giữa công xích, giản phổ và khuông nhạc trong giáo dục âm nhạc.
+
+## Ưu và nhược
+*(Nhận xét của thư viện.)*
+- **Ưu:** dễ in, dễ học, đọc theo bậc nên **dịch giọng** chỉ cần đổi "1 = …" — xem [[dich-giong]]; rất hợp cho hát.
+- **Nhược:** không cho thấy hình dáng [[giai-dieu|giai điệu]] trên dòng kẻ; khó với nhạc nhiều bè, nhiều [[dau-hoa|dấu hoá]] ngoài giọng, hoặc nhạc piano hai tay.
+
+## Còn ở Việt Nam?
+Các lượt tìm kiếm bằng tiếng Việt **không** tìm thấy nguồn tin cậy về việc dùng giản phổ ở Việt Nam (kể cả sách thánh ca). Nhạc cổ truyền Việt có hệ tên nốt riêng — **hò, xự, xang, xê, cống** — xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]]. Thư viện Trường ĐH Văn hoá Hà Nội có một công trình (2022) về "các phương thức [[ky-am|ký âm]] trên thế giới và vấn đề ký [[am-nhac-truyen-thong-viet-nam|âm nhạc truyền thống Việt Nam]]" — chưa đọc được nội dung.
+`,
+  },
+  {
+    slug: "ky-hieu-cao-do-c4-helmholtz-midi",
+    title: "Gọi tên cao độ: C4, Helmholtz, số MIDI và tần số",
+    category: 'basics',
+    also: ['pitch', 'listening'],
+    aliases: ["ký hiệu cao độ", "scientific pitch notation", "C4", "Helmholtz notation", "ký hiệu Helmholtz", "số MIDI", "MIDI note number", "A4", "ISO 16", "công thức tần số"],
+    summary: "\"Đô giữa\" là C4 trong ký hiệu khoa học, c′ trong ký hiệu Helmholtz, nốt số 60 trong MIDI và khoảng 261,63 Hz khi La = 440 Hz. Bài giải thích cách đánh số quãng 8 (đổi số ở giữa Si và Đô), bảng đối chiếu các hệ, công thức f = 440 · 2^((m − 69)/12), tiêu chuẩn ISO 16 (La = 440 Hz), và lý do phần mềm gọi Đô giữa là C3 hay C4 khác nhau.",
+    wiki: "Scientific_pitch_notation",
+    refs: [
+      ["Wikipedia — Scientific pitch notation", "https://en.wikipedia.org/wiki/Scientific_pitch_notation"],
+      ["Open Music Theory — American Standard Pitch Notation", "https://viva.pressbooks.pub/openmusictheory/chapter/aspn/"],
+      ["Wikipedia — Helmholtz pitch notation", "https://en.wikipedia.org/wiki/Helmholtz_pitch_notation"],
+      ["UNSW — Note names, MIDI numbers and frequencies", "https://newt.phys.unsw.edu.au/jw/notes.html"],
+      ["McGill — MIDI và tần số", "https://caml.music.mcgill.ca/~gary/307/week1/node11.html"],
+      ["ISO 16:1975", "https://www.iso.org/standard/3601.html"],
+      ["Wikipedia — A440 (pitch standard)", "https://en.wikipedia.org/wiki/A440_(pitch_standard)"],
+      ["Wikipedia — Scientific pitch (Sauveur)", "https://en.wikipedia.org/wiki/Scientific_pitch"],
+      ["MIDI Association — về đánh số quãng 8", "https://midi.org/community/midi-specifications/midi-octave-and-note-numbering-standard"],
+    ],
+    body: `
+Bài này bổ sung cho [[not-nhac]] và [[ban-phim]]. Lịch sử cao độ chuẩn: [[luat-binh-quan]].
+
+## Ký hiệu khoa học (C4)
+- Chữ cái + **số [[quang|quãng 8]]**: Đô giữa = **C4**, La trên nó = **A4**.
+- Số đổi **giữa Si và Đô**: B3 → C4 (không phải giữa La và Si).
+- Piano 88 phím đi từ A0 đến C8.
+- Thường gắn với Hội [[am-hoc-co-ban|Âm học]] Hoa Kỳ (ASA) — *chưa thấy văn bản gốc của ASA.*
+
+## Ký hiệu Helmholtz
+Dùng chữ hoa/thường và dấu phẩy, dấu phẩy ngược: … C͵ – C – c – **c′** – c″ – c‴ …
+- **c′** (Đô "một gạch") = Đô giữa = C4; quãng 8 từ c′ đến b′ gọi là "quãng tám một gạch".
+- **c** (chữ thường) = "quãng tám nhỏ" = C3; **C** (chữ hoa) = "quãng tám lớn" = C2.
+- Tiếng Anh đôi khi viết C͵ thành CC.
+Ký hiệu này rất hay gặp trong sách cũ, sách nhạc khí và tài liệu Đức.
+
+::staff bass C2=C2_·_C C3=C3_·_c | Bè trầm: quãng tám lớn và quãng tám nhỏ
+::staff treble C4=C4_·_c′ C5=C5_·_c″ C6=C6_·_c‴ | Bè cao: từ Đô giữa trở lên
+
+## Bảng đối chiếu
+| Khoa học | Helmholtz | MIDI | Tần số (La = 440) |
+|---|---|---|---|
+| A0 | A͵͵ | 21 | 27,5 Hz |
+| C4 (Đô giữa) | c′ | **60** | ≈ 261,63 Hz |
+| A4 | a′ | **69** | **440 Hz** |
+| C8 | c′′′′′ | 108 | ≈ 4186 Hz |
+**Công thức** (MIDI m): **f = 440 · 2^((m − 69) / 12)**. Mỗi [[cung-nua-cung|nửa cung]] nhân tần số với ¹²√2 ≈ 1,0595 — chính là [[luat-binh-quan|bình quân 12]].
+*Ví dụ:* m = 60 → 440 · 2^(−9/12) ≈ 261,63 Hz. *(Giá trị A0, C8 thư viện tính bằng công thức.)*
+
+## Vì sao phần mềm gọi Đô giữa là C3?
+Chuẩn MIDI chỉ định **số** (60), không định **tên**. Vì vậy hãng và phần mềm gọi khác nhau: nhiều người dùng cho biết Yamaha và Logic Pro mặc định gọi số 60 là **C3**, có phần mềm còn gọi C5. *(Nguồn diễn đàn; chính diễn đàn của MIDI Association cũng ghi nhận là không có quy định cụ thể.)* Khi đọc tài liệu, hãy kiểm tra "Đô giữa = ?" trước.
+
+## La = 440 Hz
+- **ISO 16:1975**: La trên [[khuong-nhac|khuông]] [[khoa-sol|khoá Sol]] = **440 Hz**, nhạc cụ lên dây chính xác trong khoảng **0,5 Hz**; thay khuyến nghị R 16 năm 1955, được xác nhận lại năm 2022.
+- Hội nghị London **1939** (tại Broadcasting House) đã khuyến nghị 440 Hz.
+- Trước đó, Joseph Sauveur (1713) đề xuất "[[cao-do|cao độ]] khoa học" C4 = 256 Hz (luỹ thừa của 2) — giới nhạc không theo.
+Dàn nhạc thực tế thường lên dây cao hơn 440 một chút — xem [[luat-binh-quan]] và [[cao-do-tuyet-doi]].
 `,
   },
 ]

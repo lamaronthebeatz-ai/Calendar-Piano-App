@@ -72,6 +72,8 @@ Piano là đàn dây gõ — xem [[dan-piano]], [[lich-su-piano]], [[dan-phim-co
 Thêm về nhạc cụ Việt Nam: [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nhac-cu-tay-nguyen-va-mien-nui]], [[nhac-cu-go-nghi-le-viet-nam]].
 
 *Chưa có trong thư viện: nhạc cụ Nhật Bản, Hàn Quốc.*
+
+**Liên quan:** [[phoi-khi-nguyen-ly-co-ban]] (kết hợp nhạc cụ), [[bieu-tuong-hoc-am-nhac]] (nhạc cụ trong tranh), [[am-nhac-hoc-sinh-thai]] (gỗ làm đàn và CITES).
 `,
   },
   {
@@ -349,7 +351,7 @@ Liên quan: [[an-tuong]] (âm thanh đàn hạc trong hoà âm ấn tượng), [
 ## Lịch sử
 - Lute và [[dan-oud|đàn oud]] có **chung tổ tiên** (Wikipedia, mục Oud).
 - Cuối thế kỷ 15, người chơi chuyển từ gảy bằng **móng gảy** sang gảy bằng **ngón tay**, cho phép [[choi-phuc-dieu|chơi nhiều bè]]; số cặp dây tăng từ 6 lên 10 vào cuối thời Phục hưng.
-- Lute là nhạc cụ đệm của lute song và là nguồn của nhiều bản chuyển soạn — xem [[nhac-khi-phuc-hung]], [[thoi-ky-phuc-hung]].
+- Lute là nhạc cụ đệm của lute song và là nguồn của nhiều bản [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] — xem [[nhac-khi-phuc-hung]], [[thoi-ky-phuc-hung]].
 - Petrucci in tablature lute đầu tiên năm 1507 — [[lich-su-in-an-am-nhac]].
 
 ## Liên hệ với piano
@@ -673,7 +675,7 @@ Liên quan: [[sao-flute]], [[nhac-khi-phuc-hung]].
 |---|---|
 | Họ | Hơi — kèn môi có van, 423.233 |
 | [[dich-giong|Dịch giọng]] | Cung **Si giáng**: kêu **thấp hơn một [[quang|quãng]] 2 trưởng** |
-| [[cao-do|Âm vực]] ghi thực hành | Khoảng F♯3 – C6 (theo các cẩm nang phối khí; nhạc công giỏi lên cao hơn) |
+| [[cao-do|Âm vực]] ghi thực hành | Khoảng F♯3 – C6 (theo các cẩm nang [[phoi-khi-nguyen-ly-co-ban|phối khí]]; nhạc công giỏi lên cao hơn) |
 | Van | 3 van piston (van xoay ở Đức, Áo); mỗi van nối thêm một đoạn ống, hạ cao độ |
 
 ::range E3-Bb5=Trumpet_cung_B♭_(âm_thực) | Âm vực thực hành của trumpet cung Si giáng (âm thực), theo các cẩm nang phối khí
@@ -1480,7 +1482,7 @@ Liên quan: [[nhac-cu-viet-nam]], [[dan-nguyet]].
 | Chất liệu dây | Tơ hoặc nylon |
 
 ## Then
-Năm **2019**, UNESCO ghi danh **Thực hành Then của người Tày, Nùng, Thái ở Việt Nam** vào Danh sách đại diện. Theo hồ sơ UNESCO, thầy Then mở đầu hành trình nghi lễ bằng cách **vừa hát vừa gảy đàn tính**. Theo một luận văn, trước năm 1945 đàn tính chỉ được dùng trong nghi lễ Then; về sau nó bước ra đời sống văn nghệ.
+Năm **2019**, UNESCO ghi danh **Thực hành Then của người Tày, Nùng, Thái ở Việt Nam** vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]]. Theo hồ sơ UNESCO, thầy Then mở đầu hành trình nghi lễ bằng cách **vừa hát vừa gảy đàn tính**. Theo một luận văn, trước năm 1945 đàn tính chỉ được dùng trong nghi lễ Then; về sau nó bước ra đời sống văn nghệ.
 
 Liên quan: [[nhac-cu-viet-nam]], [[lich-su-am-nhac-viet-nam]].
 `,
@@ -1632,7 +1634,7 @@ Liên quan: [[nhac-cu-viet-nam]], [[sheng]].
 ::wiki Space_of_gong_culture | Cồng chiêng Tây Nguyên
 
 ## Di sản UNESCO
-- Ngày **25/11/2005**, UNESCO tuyên bố *Không gian văn hoá cồng chiêng Tây Nguyên* là Kiệt tác truyền khẩu và phi vật thể; năm **2008** di sản được đưa vào **Danh sách đại diện**.
+- Ngày **25/11/2005**, UNESCO tuyên bố *Không gian văn hoá cồng chiêng Tây Nguyên* là Kiệt tác truyền khẩu và phi vật thể; năm **2008** di sản được đưa vào **[[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]]**.
 - Theo UNESCO, không gian này gồm **17 cộng đồng** thuộc ngữ hệ Nam Á và Nam Đảo ở Tây Nguyên. **Mỗi gia đình** có ít nhất một chiếc cồng chiêng, như biểu tượng của **của cải, quyền uy và uy tín**; cồng chiêng gắn với nghi lễ vòng đời và nông nghiệp.
 
 ## Cách chơi
@@ -1823,7 +1825,7 @@ Các huy nằm ở những điểm chia dây theo tỉ lệ đơn giản (1/2, 1
 ## Lịch sử và vị trí văn hoá
 - Đàn cầm xuất hiện trong văn bản Trung Hoa gần 3.000 năm; các cây đàn trong mộ có tuổi khoảng 2.500 năm. Các truyền thuyết về Phục Hy, Thần Nông, Hoàng Đế là **truyền thuyết**.
 - Theo UNESCO, đây là nhạc cụ của **văn nhân**, đứng đầu "cầm, kỳ, thi, hoạ"; kho tác phẩm từng có vài nghìn bài, nay khoảng một trăm bài được chơi thường xuyên.
-- UNESCO tuyên bố là Kiệt tác ngày 7/11/2003, đưa vào Danh sách đại diện năm 2008.
+- UNESCO tuyên bố là Kiệt tác ngày 7/11/2003, đưa vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] năm 2008.
 
 ## Đả phổ: dựng lại nhạc từ bản ghi cổ
 Bản ghi cổ cầm (*giảm tự phổ*) ghi **thế bấm và vị trí ngón**, gần như không ghi **[[tiet-tau|tiết tấu]]** — giống [[lich-su-ky-am|tablature]] châu Âu. Nghệ sĩ **Quản Bình Hồ** (Guan Pinghu, 1897 – 1967) đã "đả phổ" — dựng lại — nhiều bài như *Quảng Lăng tán*. Bản *Lưu thủy* do ông chơi được gắn lên **Đĩa Vàng Voyager** năm 1977. Đả phổ là một bài toán của [[van-ban-hoc-am-nhac|văn bản học]] và [[phong-trao-bieu-dien-lich-su|biểu diễn theo lịch sử]].
@@ -2060,7 +2062,7 @@ Mahillon, quản thủ bảo tàng của Nhạc viện Brussels, dùng bốn nh�
 | [[shehnai]] | [[oboe|Dăm kép]] | Bắc Ấn |
 
 ### Harmonium ở Ấn Độ: một nhạc cụ bị cấm
-Harmonium bơm bằng tay, đặt trên sàn ([[accordion-harmonium]]) được cho là do Dwarkanath Ghose (Calcutta) làm khoảng năm 1875 — điều này còn tranh cãi, vì Debain đã có các mẫu nhỏ bơm tay. Đài phát thanh All India Radio **cấm harmonium năm 1940** và chỉ nới lệnh một phần năm 1971 (có nguồn ghi 1970) cho vai trò đệm. Nhà nghiên cứu Matthew Rahaim cho rằng lệnh cấm là một phần nỗ lực định nghĩa một "âm thanh quốc gia" tách khỏi phương Tây — một đề tài của [[xa-hoi-hoc-am-nhac]]. Lý do kỹ thuật thường được nêu: harmonium **cố định [[cao-do|cao độ]] theo [[luat-binh-quan|bình quân luật]]**, không chơi được các vi cung và lối uốn nốt của raga.
+Harmonium bơm bằng tay, đặt trên sàn ([[accordion-harmonium]]) được cho là do Dwarkanath Ghose (Calcutta) làm khoảng năm 1875 — điều này còn tranh cãi, vì Debain đã có các mẫu nhỏ bơm tay. Đài phát thanh All India Radio **cấm harmonium năm 1940** và chỉ nới lệnh một phần năm 1971 (có nguồn ghi 1970) cho vai trò đệm. Nhà nghiên cứu Matthew Rahaim cho rằng lệnh cấm là một phần nỗ lực định nghĩa một "âm thanh quốc gia" tách khỏi phương Tây — một đề tài của [[xa-hoi-hoc-am-nhac]]. Lý do kỹ thuật thường được nêu: harmonium **cố định [[cao-do|cao độ]] theo [[luat-binh-quan|bình quân luật]]**, không chơi được các [[vi-cung-va-am-nhac-vi-cung|vi cung]] và lối uốn nốt của raga.
 
 ## Thế giới Ả Rập, Thổ Nhĩ Kỳ, Ba Tư
 | Nhạc cụ | Họ | Truyền thống |
@@ -2289,7 +2291,7 @@ Liên quan: [[nhac-cu-nam-a-tay-a]], [[sitar]].
 | Biểu tượng | Gắn với thần **Krishna** |
 | Lịch sử | Sáo ngang xuất hiện trên phù điêu Ấn Độ từ thế kỷ 1 |
 
-Cấu tạo của bansuri rất gần với [[sao-truc|sáo trúc]] Việt Nam (6 lỗ). Điểm khác là kỹ thuật: người chơi bansuri dùng **nửa lỗ** và **vuốt ngón** để tạo các vi cung và luyến láy của raga.
+Cấu tạo của bansuri rất gần với [[sao-truc|sáo trúc]] Việt Nam (6 lỗ). Điểm khác là kỹ thuật: người chơi bansuri dùng **nửa lỗ** và **vuốt ngón** để tạo các [[vi-cung-va-am-nhac-vi-cung|vi cung]] và luyến láy của raga.
 
 Liên quan: [[nhac-cu-nam-a-tay-a]], [[dizi]], [[sao-flute]].
 `,
@@ -2363,7 +2365,7 @@ Liên quan: [[nhac-cu-nam-a-tay-a]], [[ken-bau]].
       ["Rachel Beckles Willson — Munir Bashir and the Iraqi oud", "https://om.rachelbeckleswillson.com/2019/02/25/munir-bashir-and-the-iraqi-oud/"],
     ],
     body: `
-**Oud** là đàn dây gảy có cần, thân bát (Hornbostel – Sachs **321.321-6**: gảy bằng móng), **cần ngắn không phím** — người chơi tự do đặt ngón ở các vi cung của maqam.
+**Oud** là đàn dây gảy có cần, thân bát (Hornbostel – Sachs **321.321-6**: gảy bằng móng), **cần ngắn không phím** — người chơi tự do đặt ngón ở các [[vi-cung-va-am-nhac-vi-cung|vi cung]] của maqam.
 
 ::wiki Oud | Đàn oud
 
@@ -2402,7 +2404,7 @@ Liên quan: [[nhac-cu-nam-a-tay-a]], [[qanun]].
 |---|---|
 | Họ | Dây gảy — đàn tranh hộp, 314.122 |
 | Dây | Kanun Thổ Nhĩ Kỳ thường **26 bộ, mỗi bộ 3 dây**; một mẫu ở Horniman có 24 bộ ba dây ruột |
-| Mandal | **Cần gạt kim loại** nhỏ dưới mỗi bộ dây: lật trong lúc chơi để đổi [[cao-do|cao độ]] theo **vi cung** (như một phần tư cung) |
+| Mandal | **Cần gạt kim loại** nhỏ dưới mỗi bộ dây: lật trong lúc chơi để đổi [[cao-do|cao độ]] theo **vi cung** (như một [[vi-cung-va-am-nhac-vi-cung|phần tư cung]]) |
 
 ## Vi cung và maqam
 Hệ thống **maqam** dùng những [[quang|quãng]] không có trong [[luat-binh-quan|bình quân luật]] (ví dụ "ba phần tư cung"). Mandal là lời giải **cơ khí** cho bài toán này — so sánh với [[dan-hac|pedal đàn hạc]] (đổi [[cung-nua-cung|nửa cung]] bằng chân) hay [[dan-tranh|nhấn dây]] của đàn tranh (đổi cao độ bằng tay). Ba nhạc cụ, ba cách giải cùng một vấn đề.
@@ -2585,7 +2587,7 @@ Liên quan: [[nhac-cu-nam-a-tay-a]], [[tabla-mridangam]].
     slug: "dan-nhac-giao-huong",
     title: "Dàn nhạc giao hưởng: biên chế, tổng phổ và nhạc cụ dịch giọng",
     category: 'organology',
-    aliases: ["dàn nhạc giao hưởng", "orchestra", "biên chế dàn nhạc", "thứ tự tổng phổ", "score order", "nhạc cụ dịch giọng", "phối khí", "orchestration", "Mannheim", "Berlioz Treatise"],
+    aliases: ["dàn nhạc giao hưởng", "orchestra", "biên chế dàn nhạc", "thứ tự tổng phổ", "score order", "nhạc cụ dịch giọng", "Mannheim", "Berlioz Treatise"],
     summary: "Dàn nhạc giao hưởng lớn dần từ vài chục nhạc công thời Haydn đến hơn trăm người thời Mahler. Bài trình bày biên chế qua các thời kỳ (theo các ví dụ có tài liệu), thứ tự các bè trong tổng phổ, bảng nhạc cụ dịch giọng, và hai chuyên luận phối khí kinh điển của Berlioz (1844) và Rimsky-Korsakov (1913).",
     wiki: "Orchestra",
     refs: [
@@ -2637,7 +2639,7 @@ Nốt **ghi** khác nốt **kêu** để thế bấm giống nhau giữa các c�
 Muốn chuyển một bè dịch giọng sang âm thực để đánh trên piano, áp dụng [[dich-giong]] theo đúng quãng trong bảng.
 
 ## Chuyên luận phối khí
-- **[[hector-berlioz|Berlioz]]**, *Grand traité d'instrumentation et d'orchestration modernes* — in thành sách năm 1844, thêm chương về chỉ huy năm 1855; [[richard-strauss|Richard Strauss]] soạn lại (bản tiếng Đức năm 1905) với các ví dụ của Wagner.
+- **[[hector-berlioz|Berlioz]]**, *Grand traité d'instrumentation et d'[[phoi-khi-nguyen-ly-co-ban|orchestration]] modernes* — in thành sách năm 1844, thêm chương về chỉ huy năm 1855; [[richard-strauss|Richard Strauss]] soạn lại (bản tiếng Đức năm 1905) với các ví dụ của Wagner.
 - **[[nikolai-rimsky-korsakov|Rimsky-Korsakov]]**, *Nguyên lý phối khí* — viết từ năm 1873, chưa xong khi ông mất (1908), con rể Maximilian Steinberg hoàn thành; bản tiếng Nga in năm **1913**, bản tiếng Anh năm 1922.
 
 ## Với người chơi piano
@@ -2754,7 +2756,7 @@ So sánh: [[bo-go-phim|xylophone, marimba]] phương Tây, [[dan-da|đàn đá]]
 | Phân loại | **Không thống nhất**: Wikipedia ghi 111.232 (bộ ống gõ); bản sửa đổi [[nhac-khi-the-gioi|MIMO]] (theo Bảo tàng Grinnell) ghi **112.122** (lục lạc trượt) |
 | [[am-giai|Thang âm]] truyền thống | [[am-giai-ngu-cung|Ngũ cung]] (pélog, sléndro) |
 | Angklung "phương Tây" | **Daeng Soetigna** làm angklung theo thang bảy âm năm 1938 (có nguồn ghi 1939) |
-| UNESCO | *Angklung Indonesia*, **Danh sách đại diện** năm **2010** (phiên họp Nairobi) |
+| UNESCO | *Angklung Indonesia*, **[[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]]** năm **2010** (phiên họp Nairobi) |
 
 ## Chơi theo kiểu "đan xen"
 Vì **mỗi angklung chỉ cho một nốt** (hoặc một hợp âm), một [[giai-dieu|giai điệu]] cần **nhiều người**, mỗi người lắc đúng lúc nốt của mình — kỹ thuật **đan xen** (*hocket*). Theo các bài viết về hồ sơ UNESCO, angklung được ghi danh vì giá trị **hợp tác, tôn trọng lẫn nhau và hoà hợp xã hội**. Đây là một công cụ tuyệt vời để dạy [[cam-nhan-phach|cảm nhận phách]] và làm việc nhóm.
@@ -3074,6 +3076,50 @@ Viện Âm nhạc chưa tìm thấy văn bản chính thức nào thế kỷ 17 
 **Đàn đá Khánh Sơn** của người Raglai (Khánh Hoà) — theo lời nghệ nhân, ban đầu dùng để xua thú phá rẫy, sau thành vật thiêng trong lễ hội: xem [[dan-da]].
 
 Liên quan: [[nhac-cu-viet-nam]], [[bo-go-dan-nhac]].
+`,
+  },
+  {
+    slug: "phoi-khi-nguyen-ly-co-ban",
+    title: "Phối khí: nguyên lý cơ bản, Ravel và chuyển soạn cho piano",
+    category: 'organology',
+    also: ['form', 'analysis'],
+    aliases: ["phối khí", "orchestration", "nguyên lý phối khí", "chuyển soạn", "soạn lại cho piano", "piano reduction", "Ravel phối Mussorgsky", "Pictures at an Exhibition", "Những bức tranh trong phòng triển lãm", "Liszt chuyển soạn giao hưởng Beethoven", "divisi", "nhân đôi quãng 8"],
+    summary: "Phối khí là chọn nhạc cụ nào chơi nốt nào, ở âm vực nào, nhân đôi ra sao để có màu và độ cân bằng mong muốn. Bài tóm tắt các chuyên luận (Berlioz 1844, Rimsky-Korsakov 1913, Adler), vài nguyên lý về nhân đôi giai điệu, divisi và giãn cách hợp âm, rồi đi qua hai chiều chuyển soạn: Ravel phối \"Những bức tranh trong phòng triển lãm\" của Mussorgsky (1922) từ piano sang dàn nhạc, và Liszt soạn chín giao hưởng Beethoven cho piano (hoàn tất 1865).",
+    refs: [
+      ["Wikipedia — Treatise on Instrumentation (Berlioz)", "https://en.wikipedia.org/wiki/Treatise_on_Instrumentation"],
+      ["IMSLP — Berlioz, Grand traité", "https://imslp.org/wiki/Treatise_on_Instrumentation_(Berlioz,_Hector)"],
+      ["Project Gutenberg — Rimsky-Korsakov, Principles of Orchestration", "https://www.gutenberg.org/ebooks/33900"],
+      ["Juilliard Store — Adler, The Study of Orchestration (4th ed.)", "https://juilliardstore.com/products/study-of-orchestration-4th-pap-9780393600520"],
+      ["Garritan — Principles of Orchestration: melody", "https://www.garritan.com/principles-of-orchestration/melody-lessons-3-10/lesson-5/"],
+      ["Gramophone — Pictures at an Exhibition (Ravel): hướng dẫn bản thu", "https://gramophone.co.uk/articles/mussorgsky-s-pictures-at-an-exhibition-orch-ravel-a-guide-to-the-best-recordings"],
+      ["Boston Symphony Orchestra — Pictures at an Exhibition", "https://www.bso.org/works/pictures-at-an-exhibition"],
+      ["Wikipedia — Beethoven Symphonies (Liszt)", "https://en.wikipedia.org/wiki/Beethoven_Symphonies_(Liszt)"],
+      ["Dorico — nhạc cụ dịch giọng", "https://steinberg.help/dorico/v4/en/dorico/topics/setup_mode/setup_mode_instruments_transposing_c.html"],
+    ],
+    body: `
+Bài này đi sau [[dan-nhac-giao-huong]] (biên chế, thứ tự tổng phổ, nhạc cụ dịch giọng) và [[am-sac]]. Từng nhạc cụ: [[nhac-khi-the-gioi|mục Nhạc khí]].
+
+## Các chuyên luận
+| Năm | Sách | Ghi chú |
+|---|---|---|
+| 1844 | [[hector-berlioz|Berlioz]], *Grand traité d'instrumentation et d'orchestration modernes* | Bản sửa 1855 thêm chương về chỉ huy; [[richard-strauss|Richard Strauss]] cập nhật năm 1905 (thêm ví dụ [[richard-wagner|Wagner]]) |
+| 1913 | [[nikolai-rimsky-korsakov|Rimsky-Korsakov]], *Nguyên lý phối khí* (in sau khi ông mất, Maximilian Steinberg biên tập) | Ví dụ lấy từ chính tác phẩm của ông; bản Anh 1922; **đọc miễn phí** trên Project Gutenberg |
+| 1989 → 2016 | Samuel Adler, *The Study of Orchestration* | Giáo trình đại học phổ biến; bản 4 (2016) kèm âm thanh, video |
+
+## Vài nguyên lý
+*(Theo chương II của Rimsky-Korsakov và các bài giảng phối khí; phần "kinh nghiệm" có nguồn yếu hơn.)*
+- **Nhân đôi [[giai-dieu|giai điệu]]**: cùng âm (unison) cho màu đậm; ở [[quang|quãng 8]], hai quãng 8, ba quãng 8 cho độ sáng và sức nặng tăng dần (Rimsky-Korsakov bàn từng cách).
+- **Divisi** (chia bè trong cùng một bè dây): chia [[violin|violin]] thành hai quãng 8 làm mỗi dòng **ít người hơn** → giai điệu mỏng đi, nhất là ở dàn nhạc nhỏ; bù bằng kèn gỗ nhân đôi hoặc [[cao-do|âm vực]] cao.
+- **Giãn cách [[hop-am-ba|hợp âm]]**: khoảng rộng ở bè trầm, hẹp dần lên trên — giống cách [[chuoi-boi-am|chuỗi bồi âm]] tự xếp. Cùng nguyên tắc như xếp hợp âm trên piano: [[xep-hop-am]].
+- **Nhạc cụ dịch giọng**: [[clarinet|clarinet]] Si♭ viết Đô nghe Si♭ (thấp một quãng 2 trưởng); [[kenh-horn|kèn horn]] Fa viết Đô nghe Fa (thấp một quãng 5 đúng). Xem [[dan-nhac-giao-huong]].
+
+## Từ piano lên dàn nhạc: Ravel – Mussorgsky
+- Bản gốc piano của [[modest-mussorgsky|Mussorgsky]]: 1874.
+- [[maurice-ravel|Ravel]] phối theo đặt hàng của **Serge Koussevitzky**; công diễn ở Nhà hát Opéra Paris tháng **10/1922** (ngày 19 hay 22 — các nguồn khác nhau). Ravel làm từ **bản in năm 1886 của Rimsky-Korsakov** (có sai sót), không phải bản tay; bỏ một đoạn *Promenade*; tổng phổ in năm 1929. Trước Ravel đã có bản phối (rút gọn) của Tushmalov (1891).
+- **Bài tập so sánh** *(gợi ý của thư viện)*: chơi một đoạn trên piano, rồi nghe bản Ravel và ghi lại mỗi giọng giai điệu được giao cho nhạc cụ nào — đó là cách học phối khí nhanh nhất.
+
+## Từ dàn nhạc xuống piano: Liszt – Beethoven
+[[franz-liszt|Liszt]] soạn **cả chín [[giao-huong|giao hưởng]]** của [[ludwig-van-beethoven|Beethoven]] cho piano độc tấu (S. 464): số 5, 6, 7 làm khoảng 1837 – 1838, các bản còn lại 1863 – 1864 theo gợi ý của Breitkopf & Härtel; trọn bộ in năm **1865**. Ông ghi tên nhạc cụ trên bản nhạc để người chơi piano **bắt chước màu dàn nhạc**. Với người học piano, đây là bằng chứng rằng nghĩ "theo dàn nhạc" giúp chơi piano hay hơn — xem [[am-sac]] và [[lam-noi-giai-dieu]].
 `,
   },
 ]

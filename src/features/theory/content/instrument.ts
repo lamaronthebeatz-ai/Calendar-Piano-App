@@ -31,6 +31,8 @@ export const instrument: Article[] = [
 5. **Âm học liên quan**: [[am-hoc-co-ban]], [[chuoi-boi-am]] (vì sao dây đàn được lên hơi lệch), [[luat-binh-quan]].
 
 **Góc nhìn nghiên cứu:** nhạc cụ như một đối tượng khoa học — phân loại Hornbostel – Sachs, lịch sử, âm học — ở [[nhac-khi-hoc]]; vật lý của dây, búa và bảng cộng hưởng ở [[am-hoc-nhac-cu]].
+
+**Đàn được lên dây theo hệ nào?** [[cac-he-thong-chinh-am]].
 `,
   },
   {

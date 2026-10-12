@@ -36,6 +36,8 @@ Nhà [[cam-xuc-am-nhac|tâm lý học âm nhạc]] Justin London (*Hearing in Ti
 - Đọc tiết tấu bằng âm tiết: [[am-tiet-nhip]].
 - Cảm nhận phách bằng cơ thể và máy đếm nhịp: [[cam-nhan-phach]], [[kiem-soat-toc-do]].
 - Ghi lại tiết tấu nghe được: [[ky-am]].
+
+**Tiết tấu bất đối xứng:** tresillo, clave, mẫu chuông Tây Phi và nhịp aksak — [[clave-tresillo-va-nhip-cong]].
 `,
   },
   {
@@ -430,7 +432,7 @@ Khi đếm, hãy đếm cả các phách còn thiếu trước nốt lấy đà 
     slug: 'nhip-hon-hop',
     title: 'Nhịp lẻ và nhịp thay đổi',
     category: 'rhythm',
-    aliases: ['nhịp lẻ', 'nhịp hỗn hợp', 'asymmetric meter', 'odd meter', '5/4', '7/8', 'nhịp thay đổi', 'changing meter', 'nhịp cộng', 'additive meter', 'aksak'],
+    aliases: ['nhịp lẻ', 'nhịp hỗn hợp', 'asymmetric meter', 'odd meter', '5/4', '7/8', 'nhịp thay đổi', 'changing meter', 'additive meter'],
     summary: 'Nhịp có phách không đều (5/8, 7/8 ghép từ nhóm 2 và 3) và nhịp đổi liên tục giữa các ô — đặc trưng của nhạc dân gian Đông Âu và thế kỷ 20.',
     wiki: 'Metre_(music)',
     refs: [
@@ -448,7 +450,7 @@ Khi đếm, hãy đếm cả các phách còn thiếu trước nốt lấy đà 
 | 7/8 | 2 + 2 + 3, 3 + 2 + 2 | Nhạc Balkan, "Money" (Pink Floyd, 7/4) |
 | 9/8 | 2 + 2 + 2 + 3 | "Blue [[rondo|Rondo]] à la Turk" (Brubeck) |
 
-Lưu ý: 9/8 thông thường là [[so-chi-nhip|nhịp kép]] 3 + 3 + 3; cách chia 2 + 2 + 2 + 3 là nhịp lẻ "aksak" (khập khiễng).
+Lưu ý: 9/8 thông thường là [[so-chi-nhip|nhịp kép]] 3 + 3 + 3; cách chia 2 + 2 + 2 + 3 là nhịp lẻ "[[clave-tresillo-va-nhip-cong|aksak]]" (khập khiễng).
 ::rhythm 5/4 >q q q >q q // | 5/4 chia 3 + 2
 ::rhythm 7/8 >e:1-e:2 >e:1-e:2 >e:1-e:2-e:3 // | 7/8 chia 2 + 2 + 3: nhấn đầu mỗi nhóm
 
@@ -578,6 +580,66 @@ Các nghiên cứu gõ nhịp cho thấy người học nhạc **gõ chính xác
 - **Cho cơ thể tham gia**: nhún, bước, vỗ tay theo phách trước khi chơi. Đây cũng là nền tảng của phương pháp **Dalcroze** (xem [[phuong-phap-giao-duc-am-nhac]]).
 - **Đếm to** và dùng một hệ thống đếm nhất quán (xem [[truong-do]]). Tổng hợp nghiên cứu về [[am-tiet-nhip|đọc tiết tấu]] cho thấy các phương pháp dùng **hệ thống đếm** và **vận động cơ thể** có hiệu quả (xem [[thi-tau]]).
 - Dùng [[kiem-soat-toc-do|máy đếm nhịp]] để **kiểm tra**, nhưng mục tiêu là học sinh giữ được **mạch phách bên trong** khi tắt máy.
+`,
+  },
+  {
+    slug: "clave-tresillo-va-nhip-cong",
+    title: "Clave, tresillo và nhịp cộng (aksak): tiết tấu bất đối xứng",
+    category: 'rhythm',
+    also: ['jazz', 'improvisation'],
+    aliases: ["clave", "son clave", "rumba clave", "3-2 clave", "2-3 clave", "tresillo", "habanera (tiết tấu)", "nhịp cộng", "additive rhythm", "aksak", "nhịp Bulgaria", "Bulgarian rhythm", "time line", "timeline", "standard bell pattern", "mẫu chuông chuẩn", "Toussaint"],
+    summary: "Rất nhiều tiết tấu nhảy múa trên thế giới chia một chu kỳ thành các nhóm 2 và 3 không đều: tresillo 3 + 3 + 2, clave của Cuba, mẫu chuông 12 phách của Tây Phi, và nhịp \"khập khiễng\" aksak ở Balkan mà Bartók gọi là \"nhịp Bulgaria\". Bài có ký âm từng mẫu, giải thích khái niệm \"time line\" của Kofi Agawu, nghiên cứu hình học tiết tấu của Godfried Toussaint, và bài tập vỗ tay – đệm piano.",
+    wiki: "Clave_(rhythm)",
+    refs: [
+      ["Wikipedia — Tresillo (rhythm)", "https://en.wikipedia.org/wiki/Tresillo_(rhythm)"],
+      ["Puget Sound — Three-two clave", "https://musictheory.pugetsound.edu/mt21c/ThreeTwoClave.html"],
+      ["Open Music Theory (Nebraska) — rhythm in pop music", "https://pressbooks.nebraska.edu/openmusictheory/?p=517"],
+      ["Berklee PULSE — The Clave (PDF)", "https://pulse.berklee.edu:443/content/public/pub_unit_assets/lessons/lesson5_banded/The Clave_lesson.pdf"],
+      ["Metropolitan Opera — The global habanera", "https://www.metopera.org/learn/education/the-global-habanera/"],
+      ["MTO — Gotham, điểm sách Toussaint, The Geometry of Musical Rhythm", "https://mtosmt.org/issues/mto.13.19.2/mto.13.19.2.gotham.php"],
+      ["Bridges 2002 — Toussaint, A Mathematical Analysis of African, Brazilian, and Cuban Clave Rhythms", "https://archive.bridgesmathart.org/2002/bridges2002-157.html"],
+      ["Wikipedia — Bell pattern", "https://en.wikipedia.org/wiki/Bell_pattern"],
+      ["Agawu, JAMS 59/1 (2006) (PDF)", "https://music.arts.uci.edu/abauer/6.2/readings/Agawu_JAMS_06.pdf"],
+      ["Wikipedia — Aksak", "https://en.wikipedia.org/wiki/Aksak"],
+      ["Goldberg, MTO 30/4 (2024) — về aksak và Bartók (PDF)", "https://www.mtosmt.org/issues/mto.24.30.4/mto.24.30.4.goldberg.pdf"],
+      ["Henle — Six Dances in Bulgarian Rhythm", "https://www.henle.de/Six-Dances-in-Bulgarian-Rhythm-from-Mikrokosmos/HN-1411"],
+    ],
+    body: `
+Bài này mở rộng [[dao-phach]], [[nhip-hon-hop]] và [[da-nhip]]. Ứng dụng đệm: [[dem-bossa-nova]].
+
+## Tresillo: 3 + 3 + 2
+"Tresillo" (tiếng Tây Ban Nha: [[lien-ba|liên ba]]) — trong nhạc nhịp đôi là nhóm **3 + 3 + 2** (tính theo móc đơn hoặc móc kép); là ô [[tiet-tau|tiết tấu]] nhịp đôi phổ biến nhất ở châu Phi hạ Sahara và theo buôn bán nô lệ sang châu Mỹ.
+::rhythm 4/4 >q. >q. >q // | Tresillo: 8 móc đơn chia 3 + 3 + 2
+- **Habanera** là tresillo thêm một nốt ở phách 2. [[opera|Aria]] "Habanera" trong *Carmen* (1875) của [[georges-bizet|Bizet]] phỏng theo *El Arreglito* (1863) của Sebastián Iradier — Bizet tưởng đó là dân ca.
+::rhythm 2/4 e. s e e // | Hình habanera (thư viện suy ra từ định nghĩa: tresillo + phách 2)
+- Gấp đôi: **3 + 3 + 3 + 3 + 2 + 2** (16 phách nhỏ) — "double tresillo" (Open Music Theory).
+
+## Clave
+Mẫu hai ô, một ô "3" (chính là tresillo) và một ô "2":
+::rhythm 4/4 q. q. q / rq q q rq // | Son clave 3-2 (cách ghi thông dụng, thư viện tự chép)
+- **3-2** hay **2-3**: cùng một mẫu, bắt đầu từ ô ba nốt hay ô hai nốt. Ở Mỹ, 3-2 clave còn gọi là "nhịp Bo Diddley" (theo các bản thu thập niên 1950).
+- **Rumba clave** lùi một nốt của ô "3" muộn hơn nửa phách (thường được tả là nốt thứ ba, sang "và" của phách 4) — *các nguồn mô tả hơi khác nhau*. Son clave gắn với nhạc khiêu vũ, rumba clave với rumba dân gian.
+
+## Time line: "xương sống" của một điệu múa
+Kofi [[ly-thuyet-chu-de|Agawu]] (*JAMS* 59/1, 2006, tr. 1 – 46) định nghĩa **time line**: một hình tiết tấu có dáng rõ, dễ nhớ, độ dài vừa phải, đánh lặp suốt một bài múa — phổ biến khắp Tây và Trung Phi và cộng đồng di cư. Mẫu nổi tiếng nhất là **mẫu chuông chuẩn** (12 phách nhỏ, 7 tiếng):
+::rhythm 12/8 q q e q q q e // | Mẫu chuông chuẩn Tây Phi: X . X . X X . X . X . X (gõ trên chuông đôi gankogui của người Ewe)
+Agawu kết hợp phân tích **cấu trúc** (tính chất nhịp, xoay vòng) với phân tích **văn hoá** (điệu múa, lời nói).
+
+## Hình học của tiết tấu
+Godfried Toussaint, *The Geometry of Musical Rhythm* (CRC, 2013; tái bản 2020) và bài ở hội nghị Bridges (2002): xét sáu time line 4/4 cơ bản của clave và chuông bằng các thước đo như **độ đều tối đa** (*maximal evenness*), độ lệch phách, khoảng cách; một chương riêng so 19 thước đo "độ hay" trên son clave. Một ví dụ của [[am-nhac-hoc-tinh-toan]].
+
+## Aksak: nhịp "khập khiễng"
+- Constantin Brăiloiu, *"Le rythme aksak"* (*Revue de Musicologie*, 1951): *aksak* (tiếng Thổ: khập khiễng) là nhịp gồm các đơn vị bằng nhau **gom không đều thành nhóm 2 và 3** (tỉ lệ 3 : 2), vd. 2 + 3 hoặc 3 + 2 + 2 móc đơn.
+- Bartók gọi đó là "**nhịp Bulgaria**", để ghi công hai nhà nghiên cứu Bulgaria Dobri Hristov và Vasil Stoin, và gắn chúng với [[nhip-do|nhịp độ]] nhanh.
+::rhythm 7/8 >e-e-e >e-e >e-e // | Một nhịp aksak 7/8 chia 3 + 2 + 2 (minh hoạ)
+- [[bela-bartok|Bartók]], *Mikrokosmos* số 148 – 153: **Sáu vũ khúc theo nhịp Bulgaria** — kết thúc cả bộ 153 bài. *([[so-chi-nhip|Số chỉ nhịp]] của từng bài chưa xác minh.)*
+::youtube VdsTnH7ps2k | Bartók — Mikrokosmos tập 6: Sáu vũ khúc theo nhịp Bulgaria
+
+## Luyện tập
+*(Gợi ý của thư viện.)*
+1. Đếm to 8 phách nhỏ "1 2 3 4 5 6 7 8", vỗ ở 1, 4, 7 → tresillo. Chân giậm 1 và 5 (phách chính) để cảm thấy độ "lệch".
+2. Tay trái piano chơi tresillo trên nốt gốc, tay phải giữ [[hop-am-ba|hợp âm]] ở phách — bắt đầu với vòng [[vong-hop-am|I – IV – V]].
+3. Đổi sang 7/8 (3 + 2 + 2): đếm "1-2-3 1-2 1-2", nhấn đầu mỗi nhóm. Xem [[cam-nhan-phach]].
 `,
   },
 ]

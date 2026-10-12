@@ -50,6 +50,8 @@ Mỗi khi nói với học trò "chơi đoạn này buồn hơn", "tôn trọng 
 **Góc nhìn lịch sử:** khái niệm "tác phẩm" và "kinh điển" đã hình thành ra sao — [[lich-su-tiep-nhan-am-nhac]].
 
 **Góc nhìn khoa học:** vì sao loài người có âm nhạc, và âm nhạc có phổ quát không — [[am-nhac-hoc-tien-hoa]].
+
+**Từ triết học đến phê bình:** [[am-nhac-hoc-moi]] và [[am-nhac-hoc-nu-quyen-va-gioi]].
 `,
   },
   {

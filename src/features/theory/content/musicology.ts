@@ -68,7 +68,7 @@ Một số bài nằm ở nhiều phân ngành: chẳng hạn [[luat-binh-quan]]
 ## Âm nhạc học ở Việt Nam
 - Học viện Âm nhạc Quốc gia Việt Nam có **Khoa Sáng tác – Chỉ huy – Âm nhạc học**; ngành đại học **Âm nhạc học** mang mã **7210201**.
 - Theo bài của báo Giáo dục Việt Nam, chương trình Âm nhạc học ở Nhạc viện TP. Hồ Chí Minh gồm các hướng **phê bình âm nhạc**, **âm nhạc dân tộc học** và **lịch sử và lý luận âm nhạc**.
-- Trang của Viện Âm nhạc nêu thêm **mỹ học âm nhạc**, **âm luật học** (nghiên cứu hệ thống âm luật, chỉnh âm) và **nhạc khí học** như các lĩnh vực liên quan.
+- Trang của Viện Âm nhạc nêu thêm **mỹ học âm nhạc**, **âm luật học** (nghiên cứu hệ thống âm luật, [[cac-he-thong-chinh-am|chỉnh âm]]) và **nhạc khí học** như các lĩnh vực liên quan.
 
 ## Thuật ngữ
 | Tiếng Việt | Tiếng Anh / Đức | Ghi chú |
@@ -91,6 +91,8 @@ Một số bài nằm ở nhiều phân ngành: chẳng hạn [[luat-binh-quan]]
 4. Theo nguồn ở cuối mỗi bài để đi tới tài liệu gốc.
 
 **Âm nhạc nhà thờ** có nhánh riêng: [[am-nhac-nha-tho]] — nguồn văn bản ([[ky-am-binh-ca-gregorian]], [[sach-hat-va-van-kien-binh-ca]], [[tai-lieu-su-pham-cua-bach]]) gặp thực hành biểu diễn lịch sử.
+
+**Nhánh phê phán – văn hoá và ứng dụng (mới):** [[am-nhac-hoc-moi]], [[am-nhac-hoc-nu-quyen-va-gioi]], [[nghien-cuu-am-nhac-dai-chung]], [[nghien-cuu-am-thanh-va-canh-quan-am-thanh]], [[am-nhac-hoc-sinh-thai]], [[am-nhac-chinh-tri-va-kiem-duyet]], [[bieu-tuong-hoc-am-nhac]], [[am-nhac-hoc-ky-thuat-so]], [[cong-nghiep-am-nhac]], [[nghien-cuu-nhac-phim]], [[di-san-phi-vat-the-va-am-nhac]].
 `,
   },
   {
@@ -520,7 +522,7 @@ Piano là nhạc cụ **dây rung** được gõ bằng búa. Các bài trong th
 - **Lịch sử:** [[lich-su-piano]], [[dan-phim-co]].
 - **Cấu tạo và cơ chế:** [[cau-tao-piano]], [[bo-may-piano]], [[cac-loai-dan-piano]].
 - **Âm học:** [[am-hoc-co-ban]], [[am-sac]], [[chuoi-boi-am]].
-- **Chỉnh âm và bảo dưỡng:** [[bao-duong-piano]], [[luat-binh-quan]].
+- **[[cac-he-thong-chinh-am|Chỉnh âm]] và bảo dưỡng:** [[bao-duong-piano]], [[luat-binh-quan]].
 - **Nhạc cụ và lối viết:** [[lich-su-ky-thuat-piano]], [[ban-dap]].
 
 **Toàn bộ các trang nhạc cụ** (phương Tây và phương Đông, theo năm lớp và theo vùng, kèm bảo tàng và hội chuyên ngành): [[nhac-khi-the-gioi]]. Theo vùng: [[dan-nhac-giao-huong]], [[nhac-cu-viet-nam]], [[nhac-cu-dong-a]], [[nhac-cu-nam-a-tay-a]]. Bối cảnh âm nhạc truyền thống Việt Nam: [[am-nhac-truyen-thong-viet-nam]].
@@ -570,10 +572,561 @@ Hồ sơ giọng của Krumhansl và Kessler, cùng thuật toán so tương qua
 ## Gần gũi với thư viện này
 - Khi biên soạn, các ví dụ [[doi-am-5-loai|đối âm]] mẫu của thư viện được kiểm tra bằng một chương trình nhỏ viết theo các luật ở [[cong-thuc-phuc-dieu]] — một ví dụ thu nhỏ của việc "viết lý thuyết thành thuật toán".
 - Âm nhạc làm ra bằng máy tính là đề tài của [[the-loai-am-nhac|lịch sử thể loại]]: [[nhac-dien-tu]], [[nhac-pho]].
-- [[am-hoc-co-ban|Âm học]] và chỉnh âm có dạng toán học sẵn: [[luat-binh-quan]], [[chuoi-boi-am]].
+- [[am-hoc-co-ban|Âm học]] và [[cac-he-thong-chinh-am|chỉnh âm]] có dạng toán học sẵn: [[luat-binh-quan]], [[chuoi-boi-am]].
 
 ## Một bài tập nhỏ
 *(Gợi ý của thư viện.)* Chọn 20 bài hát Việt quen thuộc, ghi [[vong-hop-am|vòng hợp âm]] của điệp khúc theo [[chuc-nang-hoa-am|số La Mã]] ([[ky-hieu-hop-am]]), rồi đếm: bao nhiêu bài dùng I – V – vi – IV ([[hoa-am-pop]])? bao nhiêu bài kết bằng V – I ([[cau-ket]])? Đó là một nghiên cứu kho dữ liệu đúng nghĩa, chỉ ở quy mô nhỏ.
+`,
+  },
+  {
+    slug: "am-nhac-hoc-moi",
+    title: "Âm nhạc học mới (New Musicology) và âm nhạc học phê phán",
+    category: 'musicology',
+    also: ['philosophy'],
+    aliases: ["âm nhạc học mới", "New Musicology", "new musicology", "âm nhạc học phê phán", "critical musicology", "Joseph Kerman", "Kerman", "Contemplating Music", "Lawrence Kramer", "hermeneutic windows", "Rose Rosengard Subotnik", "Gary Tomlinson", "Music à la Mode"],
+    summary: "Từ cuối thập niên 1970, một nhóm học giả Mỹ cho rằng âm nhạc học đã thu mình vào kiểm chứng tư liệu và phân tích cấu trúc, và đòi một ngành \"phê bình\": đọc âm nhạc như một thực hành văn hoá, gắn với ý thức hệ, giới, quyền lực. Bài trình bày các văn bản mở đầu của Kerman (1980, 1985), Kramer (1990), Subotnik (1991), cuộc tranh luận Tomlinson – Kramer, phản ứng gay gắt của Charles Rosen (1994), và lập trường còn bàn cãi của Taruskin.",
+    refs: [
+      ["Kerman, \"How We Got into Analysis, and How to Get Out\", Critical Inquiry 7(2), 1980 (PDF qua khoá học)", "https://edisciplinas.usp.br/pluginfile.php/4268103/mod_resource/content/0/1343130%20%281%29.pdf"],
+      ["Agawu, \"How We Got out of Analysis, and How to Get Back In Again\" (PDF)", "https://music.arts.uci.edu/abauer/4.3/readings/Agawu_How_We_Got_out_Analysis.pdf"],
+      ["University of California — In memoriam Joseph Kerman", "https://senate.universityofcalifornia.edu/_files/inmemoriam/html/JosephKerman.html"],
+      ["UC Press — Kramer, Music as Cultural Practice, 1800–1900", "https://www.ucpress.edu/books/music-as-cultural-practice-1800-1900/paper"],
+      ["Wikipedia — Rose Rosengard Subotnik", "https://en.wikipedia.org/wiki/Rose_Rosengard_Subotnik"],
+      ["ZGMTH — điểm sách về New Musicology", "https://storage.gmth.de/zgmth/pdf/277"],
+      ["Journal of the Society for Musicology in Ireland — về Taruskin và \"Adornian\"", "https://www.jsmi.musicologyireland.ie/index.php/journal/article/download/30/32"],
+      ["New York Review of Books — Rosen, \"Music à la Mode\" (23/6/1994)", "https://www.nybooks.com/articles/1994/06/23/music-agrave-la-mode/"],
+      ["NYRB — thư phản hồi (22/9/1994)", "https://www.nybooks.com/articles/1994/09/22/music-a-la-mode/"],
+      ["Boston Globe — cáo phó Richard Taruskin (2022)", "https://www.bostonglobe.com/2022/07/02/metro/richard-taruskin-groundbreaking-polemical-musicologist-dies-77"],
+      ["Music Theory Online 23.1 — điểm sách Kramer, The Thought of Music", "https://mtosmt.org/issues/mto.17.23.1/mto.17.23.1.villegas.velez.php"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], thuộc nhánh "Âm nhạc học phê phán và văn hoá". Bối cảnh ngành: [[lich-su-nganh-am-nhac-hoc]].
+
+::timeline 1980=Kerman_"How_We_Got_into_Analysis" 1985=Contemplating_Music 1990=Kramer 1991=McClary,_Subotnik 1994=Rosen_phản_bác 2004=Taruskin_"Poietic_Fallacy" | Các mốc của âm nhạc học mới
+
+## Lời kêu gọi của Kerman
+- **"How We Got into Analysis, and How to Get Out"** (*Critical Inquiry* 7/2, 1980): Kerman cho rằng phân tích âm nhạc vận hành như một **ý thức hệ**, phục vụ niềm tin vào tính **thống nhất hữu cơ** của khí nhạc Đức từ [[johann-sebastian-bach|Bach]] đến [[johannes-brahms|Brahms]]. Kofi [[ly-thuyet-chu-de|Agawu]] sau đó đáp lại bằng bài có tựa nhại *"How We Got out of Analysis, and How to Get Back In Again"*.
+- **Contemplating Music** (Harvard University Press, 1985; ở Anh in với tựa *Musicology*): đòi âm nhạc học chuyển sang hướng **phê bình** thay vì chỉ xác lập dữ kiện. Philip Brett (trong [[nguon-tra-cuu-am-nhac-hoc|Grove]]) gọi cuốn sách là "một khoảnh khắc định hình".
+
+## Những tiếng nói chính
+| Người | Tác phẩm | Ý chính |
+|---|---|---|
+| **Lawrence Kramer** | *Music as Cultural Practice, 1800–1900* (UC Press, 1990) | Âm nhạc **tham dự** vào các thực hành văn hoá; đề xuất "**cửa sổ diễn giải**" (*hermeneutic windows*) — những chỗ trong tác phẩm mở ra nghĩa. Có các chương về Op. 111 của [[ludwig-van-beethoven|Beethoven]], Prelude La thứ của [[frederic-chopin|Chopin]], [[franz-liszt|Liszt]], *Tristan* |
+| **Rose Rosengard Subotnik** | *Developing Variations: Style and Ideology in Western Music* (Univ. of Minnesota Press, 1991) | Đưa [[adorno-va-am-nhac|Adorno]] vào âm nhạc học nói tiếng Anh từ cuối thập niên 1970; Edward Said gọi bà là người diễn giải Adorno hàng đầu bằng tiếng Anh |
+| **Susan McClary** | *Feminine Endings* (1991) | Giới và tính dục trong âm nhạc — xem [[am-nhac-hoc-nu-quyen-va-gioi]] |
+| **Gary Tomlinson** | trao đổi với Kramer (đầu thập niên 1990) | Tranh luận về hậu hiện đại và cách viết [[cac-thoi-ky|lịch sử âm nhạc]] |
+Một bài điểm sách trên ZGMTH tóm tắt: âm nhạc học mới vay từ **hậu cấu trúc luận Pháp**, **nghiên cứu văn hoá Mỹ** và **lý thuyết nữ quyền**; các bài của McClary và Kramer gây tranh cãi nhiều nhất.
+
+## Phản ứng
+- **Charles Rosen**, *"Music à la Mode"* (*New York Review of Books*, 23/6/1994): điểm chín cuốn sách, nhắm chủ yếu vào McClary; cho rằng lối viết này phục vụ "các nhà âm nhạc học trẻ khao khát theo kịp tin mới nhất" hơn là người sáng tác, người biểu diễn, người nghe. Cuộc trao đổi thư tiếp tục trên NYRB (22/9/1994).
+- Có cả một cuốn sách phản biện tu từ của trào lưu: *Dissenting Variations. The Rhetoric of New Musicology* (LIM).
+- **Richard [[tinh-xac-thuc-bieu-dien|Taruskin]]** là trường hợp khó xếp: trong *"The Poietic Fallacy"* (*Musical Times* 145, 2004) ông phê phán lối tập trung vào nhà soạn nhạc và tác phẩm, và (theo một học giả dẫn lại) gọi những người thúc đẩy âm nhạc học mới là "người theo Adorno, cả nam lẫn nữ". Nhưng cáo phó của ông trên *Boston Globe* (2022) lại xếp ông vào chính phong trào này. *Hai cách nhìn mâu thuẫn — thư viện để nguyên.*
+- Về sau, chính Kramer kêu gọi một "âm nhạc học **mới hơn**" (theo điểm sách *The Thought of Music*, 2016).
+
+## Để lại gì?
+- **Ý nghĩa** trở thành câu hỏi chính đáng của âm nhạc học — xem [[y-nghia-am-nhac]].
+- Mở đường cho [[am-nhac-hoc-nu-quyen-va-gioi|nghiên cứu giới]], [[nghien-cuu-am-nhac-dai-chung|nhạc đại chúng]], [[lich-su-tiep-nhan-am-nhac|lịch sử tiếp nhận]] và phê phán **kinh điển**.
+- Với người học: đọc một tác phẩm vừa bằng [[phuong-phap-phan-tich-tac-pham|phân tích]] vừa bằng câu hỏi "nó nói gì, với ai, trong bối cảnh nào" — hai cách bổ sung chứ không loại trừ.
+`,
+  },
+  {
+    slug: "am-nhac-hoc-nu-quyen-va-gioi",
+    title: "Giới, tính dục và âm nhạc học nữ quyền",
+    category: 'musicology',
+    also: ['philosophy'],
+    aliases: ["âm nhạc học nữ quyền", "nữ quyền trong âm nhạc", "giới trong âm nhạc", "feminist musicology", "gender and music", "Feminine Endings", "Susan McClary", "Marcia Citron", "Gender and the Musical Canon", "Musicology and Difference", "Queering the Pitch", "queer musicology", "nhà soạn nhạc nữ", "Easter Sonata"],
+    summary: "Từ cuối thập niên 1980, âm nhạc học bắt đầu hỏi: vì sao âm nhạc của phụ nữ gần như vắng mặt trong kinh điển, và âm nhạc có mang những hình dung về giới hay không? Bài kể các văn bản mốc — Feminine Endings của McClary (1991), Gender and the Musical Canon của Citron (1993), Musicology and Difference (1993), Queering the Pitch (1994) — cuộc tranh cãi quanh đoạn McClary viết về Giao hưởng số 9, và những lần \"tìm lại\" tác giả nữ: tiểu sử Clara Schumann của Nancy Reich (1985), \"Easter Sonata\" trả về cho Fanny Hensel (2010).",
+    refs: [
+      ["Wikipedia — Susan McClary", "https://en.wikipedia.org/wiki/Susan_McClary"],
+      ["Current Musicology — về tranh luận quanh Giao hưởng số 9 (PDF)", "https://journals.library.columbia.edu/index.php/currentmusicology/article/download/7136/4382/18229"],
+      ["University of Illinois Press — Citron, Gender and the Musical Canon", "https://www.press.uillinois.edu/books/?id=p069161"],
+      ["UC Press — Solie (ed.), Musicology and Difference", "https://www.ucpress.edu/books/musicology-and-difference/paper"],
+      ["ECU Library — Brett, Wood, Thomas (eds.), Queering the Pitch", "https://lib.ecu.edu/catalog-preview/catalog/554251"],
+      ["Feminist Theory and Music — lịch sử hội thảo", "https://conferences.hamilton.edu/ftmu/history"],
+      ["Wikipedia — Nancy B. Reich", "https://en.wikipedia.org/wiki/Nancy_B._Reich"],
+      ["Colorado State University — về Easter Sonata của Fanny Hensel", "https://music.colostate.edu/news/famous-composers-sister-recognized-140-years-later"],
+      ["Bärenreiter — Fanny Hensel, Ostersonate (Urtext)", "https://barenreiter.co.uk/ostersonate-easter-sonata-for-piano-ba11853.html"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]]; nảy ra từ [[am-nhac-hoc-moi]].
+
+::timeline 1985=Reich:_Clara_Schumann 1987=McClary_về_Giao_hưởng_9 1989=Nhóm_LGBTQ_của_AMS 1991=Feminine_Endings 1993=Citron;_Solie 1994=Queering_the_Pitch 2010=Easter_Sonata_về_tay_Fanny | Các mốc
+
+## Câu hỏi của ngành
+1. **Kinh điển**: vì sao từ sau 1800 âm nhạc của phụ nữ nằm ở rìa tiết mục, giáo trình và [[lich-su-tiep-nhan-am-nhac|lịch sử tiếp nhận]]?
+2. **Âm nhạc như diễn ngôn có giới**: [[hinh-thuc-am-nhac|hình thức]], giọng, [[the-loai-am-nhac|thể loại]] có mang hình dung về nam – nữ không?
+3. **Tìm lại**: ai đã sáng tác, và vì sao tên họ bị mất?
+
+## Văn bản mốc
+| Năm | Văn bản | Nội dung |
+|---|---|---|
+| 1991 | Susan McClary, **Feminine Endings: Music, Gender, and Sexuality** (Univ. of Minnesota Press) | Đọc giới và tính dục trong âm nhạc, từ [[opera|opera]] đến nhạc đại chúng |
+| 1991 | Hội thảo **Feminist Theory and Music** đầu tiên, Minneapolis, 26 – 30/6 (184 người dự, do Lydia Hamessley và McClary tổ chức) | Nhiều bài của *Queering the Pitch* được trình bày lần đầu ở đây |
+| 1993 | Marcia Citron, **Gender and the Musical Canon** (Cambridge University Press) | Sáng tạo, tính chuyên nghiệp, tiếp nhận, giáo trình; đoạt giải Pauline Alderman |
+| 1993 | Ruth Solie (chủ biên), **Musicology and Difference** (UC Press) | Tuyển tập: Carolyn Abbate, Philip Brett, McClary, Judith Tick, Elizabeth Wood (*"Lesbian [[fugue|Fugue]]"* về Ethel Smyth) |
+| 1994 | Philip Brett, Elizabeth Wood, Gary Thomas (chủ biên), **Queering the Pitch: The New Gay and Lesbian Musicology** (Routledge; tái bản mở rộng 2006) | Âm nhạc học đồng tính: [[benjamin-britten|Britten]], [[franz-schubert|Schubert]], "Sapphonics"… |
+Nhóm nghiên cứu LGBTQ của Hội Âm nhạc học Hoa Kỳ (AMS) hình thành ở hội nghị Austin năm 1989, sau một phiên do Philip Brett tổ chức.
+
+## Tranh cãi: Giao hưởng số 9
+Đoạn McClary viết về cao trào phần tái hiện chương 1 [[ludwig-van-beethoven|Giao hưởng số 9 của Beethoven]] xuất hiện trước tiên trong bản tin của Minnesota Composers' Forum (1/1987), rồi được viết lại mềm hơn trong *Feminine Endings*. Đoạn văn bị nhiều người — trong đó có Paula Higgins và Henry Kingsbury — phê phán, và trở thành biểu tượng cho cả cuộc tranh luận về âm nhạc học mới. *(Thư viện không trích nguyên văn vì chưa thấy văn bản gốc.)*
+
+## Tìm lại tác giả nữ
+- **[[clara-schumann|Clara Schumann]]**: Nancy B. Reich, *Clara Schumann: The Artist and the Woman* (Cornell UP, 1985; bản sửa 2001 có [[nguon-tra-cuu-am-nhac-hoc|danh mục tác phẩm]]) — thường được coi là tiểu sử học thuật đầu tiên về một nhà soạn nhạc nữ; dựa trên nhật ký, thư từ chưa công bố.
+- **[[fanny-mendelssohn|Fanny Hensel]]**: bản *Easter Sonata* (1828) từng được thu âm năm 1972 dưới tên [[felix-mendelssohn|Felix Mendelssohn]]. Năm 2010, Angela Mace Christian (Đại học Duke) chứng minh đó là của Fanny — dựa trên số trang bị thiếu trong một sổ tay ở Berlin và nhật ký năm 1829 của Fanny. Bản nhạc được công diễn dưới tên bà năm 2012 và nay có ấn bản [[an-ban-urtext|Urtext]] của Bärenreiter. Một ví dụ cụ thể cho [[van-ban-hoc-am-nhac|văn bản học]] phục vụ câu hỏi giới.
+
+## Với người dạy piano
+Khi chọn bài cho học trò, có thể đưa vào tác phẩm của Clara Schumann, Fanny Hensel — xem [[lo-trinh-tac-pham]]. Câu hỏi "vì sao ta ít nghe họ" là một bài học [[lich-su-tiep-nhan-am-nhac|lịch sử tiếp nhận]] sống động.
+
+*Chưa xác minh: năm thành lập tạp chí* Women & Music*; chưa tìm nguồn tiếng Việt về âm nhạc học nữ quyền.*
+`,
+  },
+  {
+    slug: "nghien-cuu-am-nhac-dai-chung",
+    title: "Nghiên cứu âm nhạc đại chúng (popular music studies)",
+    category: 'musicology',
+    also: ['genres'],
+    aliases: ["nghiên cứu âm nhạc đại chúng", "nghiên cứu nhạc đại chúng", "popular music studies", "IASPM", "Philip Tagg", "Richard Middleton", "Studying Popular Music", "Simon Frith", "Allan Moore", "Song Means", "musematic", "Kojak"],
+    summary: "Ngành nghiên cứu nhạc đại chúng hình thành quanh năm 1981 với hội thảo Amsterdam (từ đó ra đời IASPM) và tạp chí Popular Music của Cambridge. Bài trình bày nền phê phán của Adorno (1941) và cách Middleton phản biện, phương pháp \"musematic\" của Philip Tagg (Kojak, 1979), xã hội học rock của Simon Frith, phân tích bản thu của Allan Moore, và những công trình về nhạc đại chúng Việt Nam (Dale Olsen 2008, Jason Gibbs).",
+    refs: [
+      ["IASPM — lịch sử hội", "https://iaspm.net/?p=3721"],
+      ["IASPM Journal — Tagg về hội thảo 1981", "https://iaspmjournal.net/index.php/IASPM_Journal/article/download/556/574/2597"],
+      ["Cambridge — Popular Music, vol. 1 (1981)", "https://www.cambridge.org/core/journals/yearbook-for-traditional-music/article/popular-music-i-folk-or-popular-distinctions-influences-continuities-edited-by-richard-middleton-and-david-horn-cambridge-university-press-1981-222-pp-cloth/27DA0C49A8600D4A5964B4401624B001"],
+      ["Érudit — điểm sách Middleton, Studying Popular Music (1991)", "https://www.erudit.org/revue/cumr/1991/v11/n1/1014840ar.pdf"],
+      ["Wikipedia — Philip Tagg", "https://en.wikipedia.org/wiki/Philip_Tagg"],
+      ["Wikipedia — Simon Frith", "https://en.wikipedia.org/wiki/Simon_Frith"],
+      ["University of Stirling — Moore, Song Means (2012)", "https://www.stir.ac.uk/research/hub/file/1851390"],
+      ["New Left Review — về Adorno, \"On Popular Music\"", "https://newleftreview.net/issues/i39/articles/alan-beckett-popular-music"],
+      ["Routledge — Olsen, Popular Music of Vietnam (2008)", "https://www.routledge.com/products/9780203892794"],
+      ["VietNamNet — Rock Hà Nội, Bolero Sài Gòn (Jason Gibbs)", "https://vietnamnet.vn/rock-ha-noi-bolero-sai-gon-cau-chuyen-tan-nhac-viet-nam-586409.html"],
+      ["Journal of Asian Studies — The Trịnh Công Sơn Phenomenon (2007)", "https://resolve.cambridge.org/core/journals/journal-of-asian-studies/article/trinh-cong-son-phenomenon/5CE4148A73BD91F3529E90242907927D"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]]. Về chính âm nhạc: [[Các dòng nhạc phổ thông thế kỷ 20]], [[hoa-am-pop]], [[hinh-thuc-ca-khuc-pho-thong]].
+
+## Khởi đầu: 1981
+- **Hội thảo quốc tế đầu tiên về nghiên cứu nhạc đại chúng**, Đại học Amsterdam, tháng 6/1981, do Gerard Kempers, David [[kenh-horn|Horn]] và Philip Tagg tổ chức; cuối hội thảo, **IASPM** (Hiệp hội Quốc tế Nghiên cứu Âm nhạc Đại chúng) được đề xuất / thành lập. *(Các nguồn nói hơi khác nhau về việc hội được lập chính thức ngay năm đó hay chỉ được đề xuất.)*
+- Tạp chí **Popular Music** (Cambridge University Press): tập 1 năm 1981, do Richard Middleton và David Horn biên tập, ban đầu là niên giám theo chủ đề (Dân gian hay đại chúng?; Lý thuyết và phương pháp; Nhà sản xuất và thị trường…).
+
+## Cái bóng của Adorno
+[[adorno-va-am-nhac|Adorno]], *"On Popular Music"* (1941): nhạc đại chúng bị **chuẩn hoá** và chỉ có vẻ cá nhân giả (*pseudo-individualization*). Richard Middleton, **Studying Popular Music** (Open University Press, 1990), dành hẳn một chương cho lý thuyết Adorno và phản biện tính bi quan của nó một cách xây dựng; sách bao quát kinh tế chính trị, lịch sử, dân tộc học, ký hiệu học, [[triet-hoc-am-nhac|mỹ học]], ý thức hệ.
+
+## Phương pháp tiêu biểu
+| Người | Công trình | Phương pháp |
+|---|---|---|
+| **Philip Tagg** | *Kojak – 50 Seconds of Television Music* (Göteborg, 1979, từ luận án) | Phân tích "**musematic**": tách các đơn vị nghĩa nhỏ nhất (museme), so sánh với "chất liệu đối chiếu liên khách thể" để tìm trường liên tưởng ngoài âm nhạc. Ví dụ ghép [[nhac-phim-va-tro-choi|nhạc phim]] *Kojak* với *Fernando* của ABBA |
+| **Simon Frith** | *The Sociology of Rock* (1978) → *Sound Effects* (1981); *Performing Rites* (Harvard UP, 1996) | Xã hội học: tuổi trẻ, giải trí, chính trị của rock; giá trị và thị hiếu, dùng khái niệm "vốn văn hoá" của Bourdieu |
+| **Allan F. Moore** | *Song Means: Analysing and Interpreting Recorded Popular Song* (Ashgate, 2012) | Phân tích **bản thu** chứ không phải bản nhạc: hình dạng, [[hinh-thuc-am-nhac|hình thức]], cách hát, phong cách, "nhân vật" (persona), sự quy chiếu |
+Điểm chung: đối tượng chính là **bản thu**, không phải tổng phổ — gần với [[so-sanh-ban-thu]] và [[lich-su-thu-am]].
+
+## Nhạc đại chúng Việt Nam trong học thuật
+- **[[nghien-cuu-am-nhac-viet-nam|Dale A. Olsen]]**, *Popular Music of Vietnam: The Politics of Remembering, the Economics of Forgetting* (Routledge, 2008) — giới thiệu mình là chuyên khảo dài đầu tiên về nhạc đại chúng Việt Nam đương thời (khoảng 1990 – 2005): ngôi sao, ban nhạc rock, nhạc sĩ, tụ điểm, liên hoan, thu âm, karaoke.
+- **Jason Gibbs**, *Rock Hà Nội, Bolero Sài Gòn* (Nxb Đà Nẵng, 2019; trước đó là *Rock Hà Nội và Rumba Cửu Long*, 2008): 13 tiểu luận về [[tan-nhac-viet-nam|tân nhạc]] — [[nhac-cach-mang|nhạc đỏ]], rumba Cửu Long, [[nhac-vang-bolero|nhạc vàng]], [[van-cao|Văn Cao]], [[pham-duy|Phạm Duy]], Trịnh Công Sơn, [[tran-tien|Trần Tiến]].
+- *Journal of Asian Studies* (2007) có bài *"The Trịnh Công Sơn Phenomenon"* về các ca khúc phản chiến bị chính quyền Sài Gòn cấm nhưng vẫn lan rộng — xem [[nhac-trinh]]. *(Tác giả chưa xác nhận trong nguồn.)*
+`,
+  },
+  {
+    slug: "nghien-cuu-am-thanh-va-canh-quan-am-thanh",
+    title: "Nghiên cứu âm thanh và cảnh quan âm thanh (sound studies, soundscape)",
+    category: 'musicology',
+    also: ['listening'],
+    aliases: ["nghiên cứu âm thanh", "sound studies", "cảnh quan âm thanh", "soundscape", "sinh thái âm học", "acoustic ecology", "R. Murray Schafer", "Murray Schafer", "The Tuning of the World", "World Soundscape Project", "keynote sound", "soundmark", "acoustemology", "Steven Feld", "Jonathan Sterne", "The Audible Past"],
+    summary: "Nghiên cứu âm thanh mở rộng câu hỏi từ \"âm nhạc\" sang mọi âm thanh và cách con người nghe: R. Murray Schafer và World Soundscape Project (Simon Fraser, khoảng 1969) đặt ra khái niệm cảnh quan âm thanh với các thuật ngữ keynote, signal, soundmark, hi-fi/lo-fi; Steven Feld nghiên cứu cách người Kaluli \"biết qua âm thanh\"; Jonathan Sterne và Emily Thompson viết lịch sử văn hoá của việc nghe và âm học kiến trúc. Bài kèm gợi ý \"đi dạo nghe\" cho lớp học.",
+    wiki: "Soundscape",
+    refs: [
+      ["JSTOR Daily — The soundscape heard round the world", "https://daily.jstor.org/the-soundscape-heard-round-the-world"],
+      ["The Canadian Encyclopedia — World Soundscape Project", "https://prod-front.thecanadianencyclopedia.ca/en/article/world-soundscape-project"],
+      ["SFU Library — World Soundscape Project", "https://digital.lib.sfu.ca/soundscape?page=20"],
+      ["Wikipedia — Soundscape", "https://en.wikipedia.org/wiki/Soundscape"],
+      ["WFAE — About", "https://wfae.net/about/"],
+      ["Duke University Press — Feld, Sound and Sentiment", "https://www.dukeupress.edu/sound-and-sentiment"],
+      ["Wikipedia — Steven Feld", "https://en.wikipedia.org/wiki/Steven_Feld"],
+      ["Duke University Press — Sterne, The Audible Past", "https://www.dukeupress.edu/the-audible-past"],
+      ["Princeton History — Thompson, The Soundscape of Modernity", "https://history.princeton.edu/about/publications/soundscape-modernity-architectural-acoustics-and-culture-listening-america-1900"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], nối với [[cam-nhan-am-thanh]], [[am-hoc-phong]] và [[dan-toc-nhac-hoc]].
+
+## Cảnh quan âm thanh: Schafer
+- **World Soundscape Project** ra đời ở Đại học Simon Fraser (Canada) — Bách khoa thư Canada ghi năm **1969**, trường ghi "cuối thập niên 1960 – đầu 1970"; thành viên có Barry Truax, Hildegard Westerkamp. Dự án đặt nền cho **sinh thái âm học** (*acoustic ecology*).
+- R. Murray Schafer, **The Tuning of the World** (1977; về sau in lại với tựa *The Soundscape*).
+- Năm 1993 (tháng 8, Banff) thành lập **Diễn đàn Thế giới về Sinh thái Âm học** (WFAE).
+
+| Thuật ngữ của Schafer | Nghĩa |
+|---|---|
+| **Keynote** (âm nền) | Âm thanh nền nghe mà không để ý, như "[[bac-am-giai|chủ âm]]" của một nơi |
+| **Signal** (tín hiệu) | Âm thanh ở tiền cảnh, được nghe có chủ ý (chuông, còi) |
+| **Soundmark** (dấu ấn âm thanh) | Âm thanh riêng của một nơi, đáng bảo vệ — mượn từ *landmark* |
+| **Hi-fi / lo-fi** | Môi trường có tỉ lệ tín hiệu – nhiễu cao (nghe rõ từng âm) hoặc thấp (âm thanh lẫn vào nhau) |
+Mượn thuật ngữ [[dieu-tinh|chủ âm]] cho môi trường là một cách nối âm nhạc với [[am-hoc-co-ban|âm học]] đời thường.
+
+## Biết bằng tai: Feld
+**Steven Feld**, *Sound and Sentiment: Birds, Weeping, Poetics, and Song in Kaluli Expression* (1982; tái bản 1990, 2012): nghiên cứu người **Kaluli** ở Bosavi (Papua New Guinea) — tiếng chim, tiếng khóc than, bài ca và lối hát "đan chồng lên nhau" (*lift-up-over sounding*). Feld đặt từ **acoustemology** (âm thanh + nhận thức luận): âm thanh như một cách **hiểu biết** thế giới. *(Năm đặt thuật ngữ: các nguồn ghi khác nhau.)*
+
+## Lịch sử của việc nghe
+- **Jonathan Sterne**, *The Audible Past: Cultural Origins of Sound Reproduction* (Duke UP, 2003): khái niệm "**kỹ thuật nghe**" (*audile technique*) — từ ống nghe y khoa, điện báo đến tái tạo âm thanh 1876 – 1930. Nối với [[lich-su-thu-am]].
+- **Emily Thompson**, *The Soundscape of Modernity* (MIT Press, 2002): âm học kiến trúc và văn hoá nghe ở Mỹ 1900 – 1933; Symphony Hall Boston (1900) là phòng hoà nhạc đầu tiên thiết kế theo công thức vang của Wallace Sabine — xem [[am-hoc-phong]].
+
+## Hoạt động gợi ý cho lớp học
+*(Đề xuất của thư viện.)*
+1. Đi dạo 10 phút, ghi lại mọi âm thanh nghe được và xếp vào keynote / signal / soundmark.
+2. Một "soundmark" của nơi bạn sống là gì (tiếng rao, chuông nhà thờ, tiếng còi xe)?
+3. Nghe lại một bản nhạc có tiếng môi trường ([[nhac-phim-va-tro-choi|nhạc phim]], nhạc điện tử) — xem [[nhac-dien-tu]].
+`,
+  },
+  {
+    slug: "am-nhac-hoc-sinh-thai",
+    title: "Âm nhạc học sinh thái (ecomusicology) và gỗ làm đàn",
+    category: 'musicology',
+    also: ['organology'],
+    aliases: ["âm nhạc học sinh thái", "ecomusicology", "sinh thái âm nhạc", "Aaron Allen", "Jeff Todd Titon", "gỗ pernambuco", "pernambuco", "gỗ hồng sắc Brazil", "Brazilian rosewood", "CITES nhạc cụ", "tonewood"],
+    summary: "Âm nhạc học sinh thái nghiên cứu \"âm nhạc, văn hoá và tự nhiên trong mọi sự phức tạp của các khái niệm đó\" (Aaron Allen). Bài trình bày định nghĩa, các hướng (sinh thái, điền dã, phê phán, văn bản) theo tuyển tập Current Directions in Ecomusicology (2016), quan niệm \"sinh thái âm thanh\" của Jeff Todd Titon, và một ví dụ cụ thể nhất: các quy định CITES về gỗ pernambuco (làm vĩ đàn dây) và gỗ hồng sắc Brazil (làm guitar).",
+    refs: [
+      ["Allen, \"Ecomusicology, Ecocriticism, and Musicology\", JAMS 64(2), 2011 (PDF)", "https://sites.lafayette.edu/ksatmusicalplayground/files/2016/04/Allen.Ecomusicology-Ecocriticism-and-Musicology.JAMS_.2011.pdf"],
+      ["UNCG — Aaron Allen và ecomusicology", "https://research.uncg.edu/?p=6026"],
+      ["Routledge — Allen & Dawe (eds.), Current Directions in Ecomusicology (2016)", "https://www.routledge.com/Current-Directions-in-Ecomusicology-Music-Culture-Nature/Allen-Dawe/p/book/9781138062498"],
+      ["Journal of Folklore Research Reviews — Titon, Toward a Sound Ecology (2020)", "https://scholarworks.iu.edu/journals/index.php/jfrr/article/view/36491"],
+      ["Zotero — Ecomusicology Bibliography", "https://www.zotero.org/ecomusicology"],
+      ["CITES — Notification 2023/033 về pernambuco (PDF)", "https://cites.org/sites/default/files/notifications/E-Notif-2023-033.pdf"],
+      ["CITES — CoP19 Inf. 53 (PDF)", "https://cites.org/sites/default/files/documents/E-CoP19-Inf-53_0.pdf"],
+      ["League of American Orchestras — pernambuco", "https://americanorchestras.org/?p=36304"],
+      ["NAMM — CITES và gỗ hồng sắc", "https://ww1.namm.org/node/50639"],
+      ["boundary 2 — Ochoa Gautier (2016) (PDF)", "https://bpb-us-e1.wpmucdn.com/sites.ucsc.edu/dist/2/485/files/2014/08/boundary-2-2016-Gautier-107-41.pdf"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], nối với [[nhac-khi-hoc]] và [[nghien-cuu-am-thanh-va-canh-quan-am-thanh]].
+
+## Định nghĩa
+- Aaron S. Allen (mục từ trong *[[nguon-tra-cuu-am-nhac-hoc|Grove]] Dictionary of American Music*, bản 2, 2013 — theo nguồn thứ cấp): âm nhạc học sinh thái là "nghiên cứu **âm nhạc, văn hoá và tự nhiên** trong mọi sự phức tạp của các khái niệm đó".
+- Trong chuyên đề trên *JAMS* 64/2 (2011), Allen viết về các vấn đề âm nhạc và âm thanh, cả văn bản lẫn biểu diễn, "trong quan hệ với **sinh thái và môi trường**".
+- Có tranh luận giữa **ecomusicology** (mang tính phê phán, chính trị) và **music ecology** (dùng hình ảnh hệ sinh thái làm ẩn dụ cho [[doi-song-am-nhac-va-thiet-che|đời sống âm nhạc]]); một số học giả còn chất vấn chính ranh giới tự nhiên/văn hoá và nhạc/tạp âm.
+
+## Các hướng nghiên cứu
+Tuyển tập **Current Directions in Ecomusicology: Music, Culture, Nature** (Allen & Kevin Dawe chủ biên, Routledge, 2016; giải Koskoff của SEM năm 2018) chia bốn hướng:
+| Hướng | Ví dụ câu hỏi |
+|---|---|
+| Sinh thái | Âm nhạc gắn với một môi trường cụ thể ra sao? |
+| Điền dã | Người làm nhạc và người làm nhạc cụ sống với tài nguyên thế nào? |
+| Phê phán | Âm nhạc tham gia vào khủng hoảng môi trường, tiêu dùng ra sao? |
+| Văn bản | Thiên nhiên được biểu hiện thế nào trong tác phẩm? |
+**Jeff Todd Titon**, *Toward a Sound Ecology* (Indiana UP, 2020): "sinh thái âm thanh", **tính bền vững** của văn hoá âm nhạc, một "của chung âm thanh cho mọi sinh vật". Thư mục chung do nhóm Ecocriticism của AMS và nhóm Ecomusicology của SEM duy trì.
+
+## Ví dụ cụ thể: gỗ làm đàn và CITES
+| Gỗ | Dùng làm | Tình trạng CITES |
+|---|---|---|
+| **Pernambuco** (*Paubrasilia echinata*, Brazil) | Vĩ (cây kéo) [[violin]], [[viola|viola]], [[cello|cello]] | Phụ lục II từ 13/9/2007; vĩ thành phẩm được miễn giấy phép đến 23/2/2023. Ở CoP19 (2022) đề xuất đưa lên Phụ lục I của Brazil bị bác, nhưng phạm vi được sửa để bao cả thành phẩm (trừ nhạc cụ tái xuất) |
+| **Hồng sắc Brazil** (*Dalbergia nigra*) | Lưng, hông [[guitar-co-dien|guitar]] | Phụ lục I từ 11/6/1992. Năm 2019 (CoP18) nhạc cụ thành phẩm được miễn với các loài *Dalbergia* khác — **trừ** loài này |
+*Quy định sau CoP20 (2025) chỉ thấy trong báo chuyên ngành với ngày tháng mâu thuẫn — chưa đưa vào.*
+
+Với nghệ sĩ đi lưu diễn, một cây vĩ hay một cây đàn có thể cần giấy tờ khi qua biên giới — một chỗ mà âm nhạc học sinh thái chạm vào đời sống nghề nghiệp. Cấu tạo vĩ và đàn: [[am-hoc-nhac-cu]].
+
+*Chưa tìm nguồn tiếng Việt về âm nhạc học sinh thái.*
+`,
+  },
+  {
+    slug: "am-nhac-chinh-tri-va-kiem-duyet",
+    title: "Âm nhạc, chính trị và kiểm duyệt",
+    category: 'musicology',
+    also: ['genres'],
+    aliases: ["kiểm duyệt âm nhạc", "âm nhạc và chính trị", "music censorship", "Freemuse", "Entartete Musik", "âm nhạc suy đồi", "Muddle Instead of Music", "Hỗn loạn thay cho âm nhạc", "Nghị quyết 1948", "Zhdanov", "Martin Cloonan"],
+    summary: "Âm nhạc bị cấm vì lời, vì phong cách, vì người viết. Bài đi qua các trường hợp được nghiên cứu kỹ — xã luận \"Hỗn loạn thay cho âm nhạc\" trên Pravda (1936) đánh vào opera của Shostakovich, triển lãm \"Âm nhạc suy đồi\" của Đức Quốc xã (Düsseldorf, 1938), nghị quyết 1948 về \"chủ nghĩa hình thức\", việc đài SABC thời apartheid cào xước đĩa — cùng khung lý thuyết của Martin Cloonan, báo cáo hằng năm của Freemuse, và những gì đã biết (và chưa được nghiên cứu học thuật) về kiểm duyệt âm nhạc ở Việt Nam.",
+    refs: [
+      ["Freemuse — Hội nghị thế giới lần 1 về âm nhạc và kiểm duyệt (1998, PDF)", "https://freemuse.org/wp-content/uploads/1998/01/Freemuse-1st-World-Conference-on-Music-and-Censorship-November-1998-1.pdf"],
+      ["Columbia Global Freedom of Expression — State of Artistic Freedom", "https://teaching.globalfreedomofexpression.columbia.edu/node/520"],
+      ["Music in Africa — báo cáo Freemuse 2020", "https://musicinafrica.net/node/114999"],
+      ["Mikkonen, \"Muddle Instead of Music\" in 1936 (JYX, PDF)", "https://jyx.jyu.fi/bitstreams/3c55f3fd-3a70-4812-aaa3-91f243cab65c/download"],
+      ["GHDI — Entartete Musik: bìa sách hướng dẫn triển lãm (1938)", "https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/entartete-musik-titelblatt-des-ausstellungsfuehrers-1938"],
+      ["Wikipedia — Reich Music Days", "https://en.wikipedia.org/wiki/Reich_Music_Days"],
+      ["Gresham College — Frolova-Walker về năm 1948", "https://www.gresham.ac.uk/node/13912"],
+      ["Wikipedia — Zhdanov Doctrine", "https://en.wikipedia.org/wiki/Zhdanov_Doctrine"],
+      ["SAHA — Stopping the Music (Drewett)", "https://www.saha.org.za/shiftyrecords/stopping_the_music_a_guide_to_a_story_of_censorship_of_popular_music_during_apartheid.htm"],
+      ["University of Glasgow — Cloonan, \"Call That Censorship?\"", "https://eprints.gla.ac.uk/7147"],
+      ["VnExpress — Đi tù vì nhạc vàng", "https://vnexpress.net/di-tu-vi-nhac-vang-3571264.html"],
+      ["Báo Pháp Luật — Cấm vĩnh viễn lưu hành 5 ca khúc trước 1975", "https://baophapluat.vn/cam-vinh-vien-luu-hanh-5-ca-khuc-truoc-1975-post243365.html"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], nối với [[xa-hoi-hoc-am-nhac]]. Âm nhạc từng bị coi là có sức mạnh đạo đức – chính trị từ thời cổ đại: [[thuyet-ethos-hy-lap|thuyết ethos]], [[nhac-trong-tu-tuong-nho-gia|Nho gia]].
+
+## Thế nào là kiểm duyệt?
+Martin Cloonan, *Banned! Censorship of Popular Music in Britain, 1967–92* (1996), và tuyển tập *Policing Pop* (Cloonan & Reebee Garofalo chủ biên, Temple UP, 2003) — mở đầu bằng chương *"Call That Censorship? Problems of Definition"*: kiểm duyệt không chỉ là lệnh cấm của nhà nước mà còn là đài không phát, cửa hàng không bán, nhà sản xuất tự cắt.
+
+## Các trường hợp được nghiên cứu kỹ
+| Năm | Nơi | Sự kiện |
+|---|---|---|
+| 28/1/1936 | Liên Xô | Xã luận không ký tên **"Hỗn loạn thay cho âm nhạc"** trên *Pravda*, sau khi Stalin xem [[opera|opera]] *Phu nhân Macbeth quận Mtsensk* của [[dmitri-shostakovich|Shostakovich]] (26/1). Vở diễn vắng bóng sân khấu Liên Xô khoảng 30 năm. Ai viết bài báo vẫn chưa được chứng minh |
+| 24/5/1938 | Đức Quốc xã | Triển lãm **"Âm nhạc suy đồi"** (*Entartete Musik*) khai mạc ở Düsseldorf trong Ngày hội Âm nhạc Đế chế, do Hans Severus Ziegler tổ chức, theo mẫu triển lãm "Nghệ thuật suy đồi" (1937). Nhắm vào [[alban-berg|Berg]], [[paul-hindemith|Hindemith]], [[igor-stravinsky|Stravinsky]], nhạc jazz; tấm áp phích vẽ một nghệ sĩ [[saxophone|saxophone]] da đen đeo ngôi sao David |
+| 10/2/1948 | Liên Xô | Nghị quyết của Trung ương về opera *Tình hữu nghị vĩ đại* của Muradeli: kết tội "**chủ nghĩa hình thức**" với Shostakovich, [[sergei-prokofiev|Prokofiev]], [[aram-khachaturian|Khachaturian]], Shebalin, Popov, Myaskovsky. Được bãi bỏ ngày 28/5/1958. *(Wikipedia ghi 20/2.)* |
+| thập niên 1980 | Nam Phi | Uỷ ban duyệt đĩa của đài SABC đánh dấu lời ca, ghi "Tránh" lên đĩa, **cào xước** các bài bị cấm; hầu hết đĩa của hãng Shifty Records (lập năm 1984) bị hạn chế. Michael Drewett ghi lại trong *Stopping the Music* (2005) |
+
+## Theo dõi hôm nay: Freemuse
+Freemuse ra đời từ **Hội nghị Thế giới lần thứ nhất về Âm nhạc và Kiểm duyệt** (Copenhagen, 20 – 22/11/1998); ban thư ký thường trực từ 8/2000. Báo cáo *State of Artistic Freedom* hằng năm: bản 2020 ghi **711** vụ vi phạm ở 93 nước trong năm 2019, âm nhạc là lĩnh vực bị nhắm nhiều nhất; bản 2021 ghi 978 vụ ở 89 nước, khoảng 60% do chính quyền.
+
+## Việt Nam
+- Báo chí trong nước ghi lại việc [[nhac-vang-bolero|nhạc vàng]] bị cấm không rõ ràng cho đến đầu thập niên 1990 (VnExpress, *Đi tù vì nhạc vàng*), và việc 5 ca khúc trước 1975 bị "cấm vĩnh viễn lưu hành" (Báo Pháp Luật). Xem [[am-nhac-viet-nam-sau-1975]].
+- Các ca khúc phản chiến của Trịnh Công Sơn từng bị chính quyền Sài Gòn cấm — xem [[nhac-trinh]].
+- **Chưa tìm thấy** nghiên cứu học thuật có bình duyệt về kiểm duyệt âm nhạc ở Việt Nam; các nguồn trên là báo chí.
+
+## Câu hỏi thảo luận
+*(Gợi ý của thư viện.)* Một bản nhạc không lời có thể bị coi là "nguy hiểm" không? Trường hợp 1936 và 1948 cho thấy câu trả lời là có — chính **phong cách** ([[thuan-nghich|nghịch âm]], "[[hinh-thuc-am-nhac|hình thức]]") đã bị kết tội. Liên hệ với [[phi-dieu-tinh]].
+`,
+  },
+  {
+    slug: "bieu-tuong-hoc-am-nhac",
+    title: "Biểu tượng học âm nhạc: tranh ảnh như nguồn sử liệu",
+    category: 'musicology',
+    also: ['organology'],
+    aliases: ["biểu tượng học âm nhạc", "music iconography", "iconography âm nhạc", "RIdIM", "Barry S. Brook", "tranh vẽ nhạc công", "Cantigas de Santa Maria", "thiên thần chơi nhạc", "Vermeer The Music Lesson"],
+    summary: "Tranh, tượng, tiểu hoạ trong sách chép tay là nguồn quý để biết nhạc cụ trông ra sao và người xưa chơi nhạc thế nào — nhưng một hình ảnh có thể là biểu tượng chứ không phải ghi chép. Bài giới thiệu RIdIM (thành lập 1971), cách phân biệt \"biểu tượng\" với \"tài liệu đời sống\", ba ví dụ — tiểu hoạ Cantigas de Santa Maria (thế kỷ 13), thiên thần chơi nhạc ở Florence, cây virginal trong tranh Vermeer — và phát hiện năm 2023 về hai nhạc cụ dây bằng gạc hươu hơn 2.000 năm tuổi ở Long An.",
+    refs: [
+      ["Association RIdIM — 50 năm (PDF)", "https://ridim.org/wp-content/uploads/2022/04/Past-Present-Future.-50-Years-of-Association-RIdIM.pdf"],
+      ["RILM Bibliolore — RIdIM and music iconography", "https://bibliolore.org/2021/08/29/ridim-and-music-iconography/"],
+      ["R-Projects — RIdIM", "https://r-musicprojects.org/ridim.html"],
+      ["RIdIM Database", "https://ridim.org/ridim-database/"],
+      ["College Music Symposium — Music iconography and medieval performance practice", "https://symposium.music.org/volume-31/articles-1752877059/music-iconography-and-medieval-performance-practice"],
+      ["UNE — Stinson, Angels in Florentine Iconography and Trecento Musical Performance", "https://researchers.une.edu.au/en/publications/angels-in-florentine-iconography-and-trecento-musical-performance/"],
+      ["Wikipedia — Cantigas de Santa Maria", "https://en.wikipedia.org/wiki/Cantigas_de_Santa_Maria"],
+      ["Essential Vermeer — Vermeer and the virginals", "https://www.essentialvermeer.com/music/vermeer_and_virginals.html"],
+      ["Southeast Asian Archaeology — evidence for early chordophones from Vietnam (Antiquity 2023)", "https://southeastasianarchaeology.com/2023/02/22/paper-in-search-of-a-musical-past-evidence-for-early-chordophones-from-vietnam"],
+      ["The Strad — Earliest stringed instruments found in Vietnam", "https://www.thestrad.com/news/earliest-stringed-instruments-found-in-vietnam/16219.article"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], nối [[nhac-khi-hoc]] với [[phong-trao-bieu-dien-lich-su]].
+
+## RIdIM
+- **Répertoire International d'Iconographie Musicale** thành lập năm **1971** theo sáng kiến của **Barry S. Brook**, tại hội nghị IAML ở St. Gallen (Thuỵ Sĩ) — ngày 26 hay 29/8 tuỳ nguồn. Đồng sáng lập có Geneviève Thibault, Harald Heckmann, Howard Mayer Brown, Walter Salmen.
+- Mục tiêu: lập danh mục các nguồn **hình ảnh** về âm nhạc, múa, sân khấu, [[opera|opera]]. Cơ sở dữ liệu trực tuyến miễn phí, phân loại nhạc cụ theo hệ **Hornbostel – Sachs** ([[nhac-khi-hoc]]).
+- Từ 2011 là Hiệp hội RIdIM, trụ sở Zürich.
+
+## Biểu tượng hay ghi chép?
+Một bài trên *College Music Symposium* phân biệt **iconography** (nhận ra chủ đề: ai chơi gì) và **iconology** (hiểu "nghĩa thật" của tác phẩm), và nhắc: phải tách **biểu tượng** khỏi **tài liệu về đời sống đương thời**; độ tin cậy của mỗi hình rất khác nhau; luôn **đối chiếu với nguồn văn bản**.
+
+## Ba ví dụ
+**1. Cantigas de Santa Maria** (vua Alfonso X, thế kỷ 13): bản chép ở Escorial (gọi là "sách của các nhạc công") có khoảng 416 bài ca xếp theo nhóm mười, kèm **40 tiểu hoạ**, mỗi tranh một hai nhạc công — khoảng **40 loại nhạc cụ**, kể cả đàn kéo vĩ rabab. Nguồn quý cho người phục dựng nhạc cụ [[thoi-ky-trung-co|Trung cổ]]. *(Ký hiệu các bản chép khác nhau giữa các nguồn.)*
+
+**2. Thiên thần chơi nhạc ở Florence**: một quan điểm cho rằng đó chỉ là biểu tượng của âm nhạc thiên đàng. John Stinson (*Angels in Florentine Iconography and Trecento Musical Performance*) tìm thấy sổ chi cho thấy nhạc công được trả tiền khi "**làm thiên thần**" (*fecerunt angelos*), và các hội đoàn hát lauda mặc đồ thiên thần — tức là sau một số bức tranh có **một buổi diễn thật**.
+
+**3. Vermeer — *The Music Lesson***: cây virginal trong tranh nhiều khả năng từ xưởng Ruckers ở Antwerp, nắp đàn có câu *MUSICA LETITIAE COMES MEDICINA DOLORUM* ("âm nhạc — bạn của niềm vui, thuốc của nỗi buồn"). Nhạc cụ được vẽ rất thật, nhưng cảnh có thể mang nghĩa biểu tượng về tình yêu, sự hoà hợp — tên "Bài học âm nhạc" chỉ đặt từ thế kỷ 19. Về loại đàn: [[dan-phim-co]].
+
+## Việt Nam
+- Năm 2023, tạp chí *Antiquity* công bố hai **gạc hươu** từ di chỉ **Gò Ô Chùa** (Long An, sơ kỳ Kim khí), hơn 2.000 năm tuổi, được diễn giải là **nhạc cụ dây một dây** và so sánh với đàn K'ny — đây là **khảo cổ học** nhạc cụ hơn là biểu tượng học, nhưng cùng tinh thần dùng hiện vật làm nguồn. Xem [[am-nhac-co-trung-dai-viet-nam]] và [[nhac-cu-tay-nguyen-va-mien-nui]].
+- Hình nhạc công trên [[lich-su-am-nhac-viet-nam|trống đồng]], chạm khắc đình làng là nguồn tiềm năng, nhưng **chưa tìm thấy** nghiên cứu biểu tượng học âm nhạc có bình duyệt về chạm khắc đình.
+
+## Bài tập
+*(Gợi ý của thư viện.)* Chọn một bức tranh có nhạc công. Hỏi: (1) nhạc cụ gì, cầm thế nào? (2) có chi tiết nào phi thực tế (số dây, tư thế)? (3) bức tranh có thể mang nghĩa biểu tượng gì? (4) nguồn văn bản nào xác nhận được?
+`,
+  },
+  {
+    slug: "am-nhac-hoc-ky-thuat-so",
+    title: "Âm nhạc học kỹ thuật số và mã hoá âm nhạc: MIDI, MusicXML, MEI, Humdrum",
+    category: 'musicology',
+    also: ['basics'],
+    aliases: ["âm nhạc học kỹ thuật số", "digital musicology", "mã hoá âm nhạc", "music encoding", "MIDI 1.0", "MusicXML", "MEI", "Music Encoding Initiative", "kern", "nhận dạng nốt nhạc quang học", "OMR", "ấn bản số", "Edirom", "Beethovens Werkstatt"],
+    summary: "Để máy tính \"đọc\" được âm nhạc, phải mã hoá nó. Bài so sánh các cách mã hoá chính — MIDI (1983, ghi sự kiện chơi đàn), MusicXML (2004, trao đổi bản nhạc giữa phần mềm), MEI (từ 1999, mã hoá học thuật theo tinh thần TEI), Humdrum (thập niên 1980 – 90, phân tích kho dữ liệu) — cùng thư viện music21, nhận dạng nốt nhạc quang học (OMR), danh mục RISM và các ấn bản phê bình số như Beethovens Werkstatt.",
+    refs: [
+      ["Mix — 1983: Dave Smith, Sequential Circuits và MIDI", "https://www.mixonline.com/technology/1983-dave-smith-sequential-circuits-midi-specification-383642"],
+      ["Wikipedia — MIDI", "https://en.wikipedia.org/wiki/MIDI"],
+      ["Recording Academy — Technical Grammy: Kakehashi và Smith", "https://cms.grammy.com/technical-grammy-award-ikutaro-kakehashi-and-dave-smith/"],
+      ["Michael Good — MusicXML: the first decade", "https://michaelgood.info/publications/music/musicxml-the-first-decade/"],
+      ["Library of Congress — MusicXML format description", "https://www.loc.gov/preservation/digital/formats/fdd/fdd000358.shtml"],
+      ["Music Encoding Initiative — About", "https://music-encoding.org/about"],
+      ["Music Theory Online — Wild, điểm Humdrum (1996)", "https://mtosmt.org/issues/mto.96.2.7/mto.96.2.7.wild.html"],
+      ["ISMIR 2010 — Cuthbert & Ariza, music21 (PDF)", "https://ismir2010.ismir.net/proceedings/ismir2010-108.pdf"],
+      ["arXiv — Calvo-Zaragoza et al., Understanding Optical Music Recognition", "https://arxiv.org/abs/1908.03608v3"],
+      ["RISM — Annual report 2022", "https://rism.info/new_publications/2023/03/09/annual-report-2022.html"],
+      ["MEI — Edirom", "https://music-encoding.org/projects/edirom.html"],
+      ["Akademie Mainz — Beethovens Werkstatt", "https://www.adwmainz.de/en/projects/beethovens-werkstatt-genetische-textkritik-und-digitale-musikedition/description.html"],
+      ["Edinburgh DataShare — tone–melody trong ca khúc Việt", "https://datashare.ed.ac.uk/handle/10283/2047"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], đi cùng [[am-nhac-hoc-tinh-toan]] và [[van-ban-hoc-am-nhac]]. Phần mềm cho [[thanh-ca-gregorian|bình ca]]: [[gregorio-va-gabc]].
+
+## Bốn cách mã hoá
+| Định dạng | Ra đời | Ghi gì | Dùng để |
+|---|---|---|---|
+| **MIDI** | Trình diễn đầu tiên ở NAMM tháng 1/1983; đặc tả 8/1983; bản chi tiết 1.0 năm 1985 | **Sự kiện chơi**: phím nào, lúc nào, mạnh bao nhiêu (nốt 60 = [[ban-phim|Đô giữa]]) | Nối nhạc cụ điện tử, thu âm, phát lại |
+| **MusicXML** | 1.0 tháng 1/2004 (Michael Good, Recordare); W3C Community Group từ 2015; 4.0 năm 2021 | **Bản nhạc**: [[khuong-nhac|khuông]], nốt, dấu, lời | Chuyển bản nhạc giữa các phần mềm ký âm |
+| **MEI** | Từ 1999 (Perry Roland, Đại học Virginia), theo tinh thần TEI | Bản nhạc **cùng thông tin học thuật**: biến thể, nguồn, chú giải; có module [[ky-am-binh-ca-gregorian|neume]] | Ấn bản phê bình, thư viện số |
+| **Humdrum** (định dạng chính tên là "kern") | Thiết kế thập niên 1980 (David Huron) | Văn bản thuần, mỗi bè một cột | Phân tích kho dữ liệu bằng dòng lệnh |
+Dave Smith (Sequential Circuits) và Ikutaro Kakehashi (Roland) nhận giải Grammy Kỹ thuật năm 2013 cho MIDI. Cách gọi [[not-nhac|tên nốt]] MIDI: [[ky-hieu-cao-do-c4-helmholtz-midi]].
+
+**Vì sao MIDI không phải "bản nhạc"?** MIDI ghi *khi nào* phím được nhấn, không ghi nốt đó là Fa♯ hay Sol♭, không ghi luyến hay [[so-chi-nhip|ô nhịp]]. Nhập một file MIDI vào phần mềm ký âm luôn phải sửa nhiều — một bài học tốt về khác biệt giữa **âm thanh** và **ký hiệu** ([[ky-am]]).
+
+## Công cụ phân tích
+- **music21** (Michael Scott Cuthbert & Christopher Ariza, ISMIR 2010, MIT): thư viện Python để phân tích bản nhạc ký hiệu — kho chorale Bach trong đó được dùng cho nhiều nghiên cứu (xem [[phoi-chorale-kieu-bach]]).
+- **Nhận dạng nốt nhạc quang học** (OMR): biến ảnh bản nhạc thành dữ liệu — ngành đã hơn 50 tuổi, nay chuyển sang học sâu; được định nghĩa như "phép nghịch đảo của mã hoá âm nhạc" (*ACM Computing Surveys*, 2020).
+
+## Danh mục và ấn bản số
+- **RISM**: danh mục nguồn âm nhạc quốc tế — hơn 1,15 triệu bản ghi nguồn (báo cáo 2019); RISM Online mới khai trương chính thức theo báo cáo 2022. Xem [[nguon-tra-cuu-am-nhac-hoc]].
+- **Edirom**: căn chỉnh ảnh bản thảo với báo cáo phê bình bằng MEI ([[an-ban-urtext|ấn bản]] Weber, Reger).
+- **Beethovens Werkstatt** (2014 – 2029/30, Beethoven-Haus Bonn và Detmold/Paderborn): phê bình văn bản "phát sinh" — theo dấu [[ludwig-van-beethoven|Beethoven]] sửa bản thảo — bằng MEI.
+
+## Việt Nam
+- Một bộ dữ liệu ở Đại học Edinburgh mã hoá **20 ca khúc phổ thông Việt** để nghiên cứu tương ứng giữa thanh điệu và giai điệu — xem [[am-nhac-va-ngon-ngu]].
+- **Chưa tìm thấy** dự án mã hoá MEI/MusicXML nào cho ký âm cổ truyền (hò – xự – xang) hay bản [[dan-tranh|đàn tranh]], [[ca-tru|ca trù]] — một khoảng trống đáng làm.
+`,
+  },
+  {
+    slug: "cong-nghiep-am-nhac",
+    title: "Công nghiệp âm nhạc: tác quyền, streaming và những con số",
+    category: 'musicology',
+    also: ['vietnam'],
+    aliases: ["công nghiệp âm nhạc", "music industry", "music industries", "tiền tác quyền", "royalty", "quyền liên quan", "neighbouring rights", "tiền bản quyền cơ học", "mechanical royalties", "streaming", "user-centric", "pro-rata", "IFPI", "CISAC", "RIAV", "Công ước Berne"],
+    summary: "Âm nhạc kiếm tiền từ ba nguồn — thu âm, xuất bản (tác quyền) và biểu diễn trực tiếp — và các nhà nghiên cứu nhấn mạnh đó là nhiều \"ngành công nghiệp\" chứ không phải một. Bài giải thích các loại tiền bản quyền (biểu diễn, cơ học, quyền liên quan), số liệu toàn cầu mới nhất (doanh thu thu âm 31,7 tỉ USD năm 2025, streaming gần 70%), cuộc tranh luận cách chia tiền streaming (pro-rata hay user-centric), và bức tranh Việt Nam: Công ước Berne (2004), VCPMC (2002) thu hơn 424 tỉ đồng năm 2025, thị phần các nền tảng nghe nhạc.",
+    refs: [
+      ["Williamson & Cloonan, \"Rethinking the music industry\", Popular Music 26(2), 2007", "https://eprints.gla.ac.uk/7192"],
+      ["Digital Music News — IFPI Global Music Report 2026", "https://www.digitalmusicnews.com/2026/03/18/global-music-industry-revenue-2025/"],
+      ["CISAC — Global Collections Report 2025", "https://www.cisac.org/cisac-global-collections-report-2025"],
+      ["Yle — về user-centric và nghiên cứu Đại học Aalto", "https://yle.fi/a/3-10086033"],
+      ["Journal of the Academy of Marketing Science (2022) — pro-rata và user-centric", "https://link.springer.com/article/10.1007/s11747-022-00875-6"],
+      ["Music Week — DCMS Committee: Economics of Music Streaming (2021)", "https://www.musicweek.com/labels/read/streaming-needs-a-complete-reset-dcms-committee-report-calls-for-government-to-fix-music-industry/083703"],
+      ["WIPO — Berne Notification No. 241 (Việt Nam)", "https://www.wipo.int/treaties/en/notifications/berne/treaty_berne_241.html"],
+      ["Nhân Dân — 20 năm bảo vệ quyền tác giả âm nhạc Việt Nam", "https://nhandan.vn/20-nam-dau-an-thang-tram-trong-bao-ve-quyen-tac-gia-am-nhac-viet-nam-post715999.html"],
+      ["VOV — VCPMC thu hơn 393 tỷ đồng năm 2024", "https://vov.vn/van-hoa/am-nhac/vcpmc-thu-hon-393-ty-dong-tien-ban-quyen-tac-gia-am-nhac-trong-nam-2024-post1147355.vov"],
+      ["Báo Văn hoá — thu trên 424 tỉ đồng tiền tác quyền năm 2025", "https://baovanhoa.vn/nghe-thuat/thu-tren-424-ti-dong-tien-tac-quyen-am-nhac-trong-nam-2025-196779.html"],
+      ["Tuổi Trẻ News — Spotify vào Việt Nam (2018)", "https://tuoitrenews.vn/news/business/20180313/spotify-challenges-apple-music-in-vietnams-streaming-market/44516.html"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], nối với [[xa-hoi-hoc-am-nhac]], [[ban-quyen-am-nhac-viet-nam]] và [[nghien-cuu-am-nhac-dai-chung]].
+
+## Một hay nhiều ngành?
+Paul Williamson và [[am-nhac-chinh-tri-va-kiem-duyet|Martin Cloonan]] (*Popular Music* 26/2, 2007) đề nghị nói "**các ngành công nghiệp âm nhạc**" (số nhiều): coi âm nhạc là một ngành duy nhất làm méo bức tranh kinh tế thật. Ba mảng thường được nêu: **thu âm**, **xuất bản** (quản lý tác phẩm), **biểu diễn trực tiếp**.
+
+## Các loại tiền bản quyền
+| Loại | Trả cho | Khi nào |
+|---|---|---|
+| **Biểu diễn** (*performance*) | Tác giả, nhà xuất bản | Tác phẩm được phát sóng, biểu diễn công cộng |
+| **Cơ học** (*mechanical*) | Tác giả, nhà xuất bản | Tác phẩm được **sao chép**: đĩa, tải về, phát trực tuyến |
+| **Quyền liên quan** (*neighbouring rights*) | Người biểu diễn, chủ bản ghi | **Bản ghi âm** được phát công cộng |
+*(Ví dụ ở Anh: PRS thu tiền biểu diễn, MCPS thu tiền cơ học — sáp nhập 1997 thành PRS for Music; PPL thu quyền liên quan. Nguồn chủ yếu là hướng dẫn trong ngành.)* Phân biệt **tác phẩm** (bài hát) với **bản ghi** (một lần thu bài hát đó) là chìa khoá.
+
+## Số liệu toàn cầu
+- **IFPI Global Music Report 2026** (số liệu 2025, theo báo chuyên ngành): doanh thu thu âm toàn cầu **31,7 tỉ USD**, tăng 6,4%, năm thứ 11 liên tiếp; streaming chiếm **69,6%**, riêng thuê bao trả phí **52,4%**; 837 triệu tài khoản trả phí; [[lich-su-thu-am|đĩa than]] tăng 13,7%.
+- **CISAC** (2025, số liệu 2024): 228 hội quản lý tập thể ở 111 nước thu tổng cộng 13,97 tỉ euro cho tác giả; riêng âm nhạc 12,59 tỉ (~90%); mảng số lần đầu vượt 5 tỉ euro.
+
+## Chia tiền streaming thế nào cho công bằng?
+| Mô hình | Cách chia |
+|---|---|
+| **Pro-rata** (đang dùng phổ biến) | Gộp toàn bộ doanh thu, chia theo tỉ lệ lượt nghe trên toàn nền tảng |
+| **User-centric** | Tiền của **mỗi người dùng** chỉ chia cho các nghệ sĩ **người đó** nghe |
+- Nghiên cứu của Đại học Aalto trên dữ liệu Spotify: chuyển sang user-centric sẽ dịch tiền từ nhóm đỉnh xuống nhóm giữa và dưới (phần của 0,4% nghệ sĩ hàng đầu giảm từ 10% xuống 5,6%). Một nghiên cứu khác (2022) cho rằng với pro-rata, **người nghe nhiều** quyết định tiền chảy về đâu.
+- SoundCloud áp dụng user-centric cho khoảng 100.000 nghệ sĩ độc lập (2021). Uỷ ban DCMS của Hạ viện Anh (7/2021) kết luận streaming "cần được thiết lập lại hoàn toàn".
+
+## Việt Nam
+- **Công ước Berne**: Việt Nam nộp văn kiện gia nhập 26/7/2004, có hiệu lực **26/10/2004**; **Công ước Rome** (quyền liên quan) có hiệu lực 1/3/2007.
+- **VCPMC** (Trung tâm Bảo vệ Quyền tác giả Âm nhạc Việt Nam): thành lập 19/4/2002 (theo báo chí), trực thuộc Hội [[nhac-si-viet-nam|Nhạc sĩ Việt Nam]]; giám đốc đầu tiên là nhạc sĩ [[pho-duc-phuong|Phó Đức Phương]]; 274 nhạc sĩ thành viên ban đầu.
+| Năm | VCPMC thu (theo báo chí) |
+|---|---|
+| 2018 | hơn 103 tỉ đồng |
+| 2023 | hơn 344 tỉ |
+| 2024 | hơn 393 tỉ — trong đó mảng số (ứng dụng, website) hơn 305 tỉ |
+| 2025 | hơn 424 tỉ |
+- **RIAV** (Hiệp hội Công nghiệp Ghi âm) quản lý quyền của nhà sản xuất bản ghi; từng gây tranh cãi với đề xuất thu 2.000 đồng/bài karaoke.
+- **Nghe nhạc**: Zing MP3 ra đời 2007; Spotify vào Việt Nam tháng 3/2018. Một khảo sát quý I/2024 (dẫn qua blog một nhà phân phối — nguồn yếu): YouTube tiếp cận 77% người nghe, Zing MP3 52%, NhacCuaTui 32%, Spotify 28%.
+Xem thêm [[vpop-rap-viet]] và [[am-nhac-viet-nam-sau-1975]].
+`,
+  },
+  {
+    slug: "nghien-cuu-nhac-phim",
+    title: "Nghiên cứu nhạc phim: diegetic, leitmotif và \"giai điệu không được nghe\"",
+    category: 'musicology',
+    also: ['genres', 'listening'],
+    aliases: ["nghiên cứu nhạc phim", "film music studies", "diegetic", "nondiegetic", "nhạc nội cảnh", "nhạc ngoại cảnh", "Unheard Melodies", "Claudia Gorbman", "Composing for the Films", "Michel Chion", "audio-vision", "synchresis", "temp track", "nhạc tạm", "Mickey-Mousing", "leitmotif trong phim"],
+    summary: "Nhạc phim được nghiên cứu nghiêm túc từ khi Eisler (và Adorno) viết Composing for the Films (1947) và nhất là từ Unheard Melodies của Claudia Gorbman (1987) — đưa vào cặp khái niệm nhạc nội cảnh (diegetic) / ngoại cảnh (nondiegetic) và bảy nguyên tắc của nhạc phim Hollywood cổ điển. Bài trình bày các khái niệm đó, \"audio-vision\" và \"synchresis\" của Michel Chion, leitmotif từ King Kong (1933) đến Star Wars, chuyện \"nhạc tạm\" (temp track), và giải Kim Tước cho nhạc phim Thời xa vắng (Đặng Hữu Phúc, 2005).",
+    refs: [
+      ["Rockefeller Archive Center — Eisler's Film Music Project (PDF)", "https://public.3.basecamp.com/p/TF3uGQ8y7yaNxNgVvTrbfJqh/attachments/ae32b82a-f74f-11ee-8d88-f28505eae2ff/download/composing-the-media-eisler-rockefeller.pdf"],
+      ["WorldCat — Gorbman, Unheard Melodies (1987)", "https://search.worldcat.org/oclc/15053054"],
+      ["Project MUSE — Kalinak, Settling the Score (1992)", "https://muse.jhu.edu/book/8442"],
+      ["Lähikuva — về Chion, Audio-Vision", "https://journal.fi/lahikuva/article/view/116453/68871"],
+      ["LibreTexts — Max Steiner and the leitmotivic score", "https://human.libretexts.org/Courses/Prince_Georges_Community_College/Music_Appreciation%3A_A_Topical_Approach_to_Music_Genre_and_Style/13%3A_Music_in_Film/13.02%3A_Early_Hollywood_Scoring-_Max_Steiner_and_the_Leitmotivic_Score"],
+      ["The Ringer — về các chủ đề trong Star Wars (2020)", "https://www.theringer.com/star-wars/2020/1/9/21058016/rise-of-skywalker-star-wars-score-john-williams-last-soundtrack"],
+      ["Cambridge — Popular Music: the music editor and the temp track", "https://www.cambridge.org/core/journals/popular-music/article/abs/role-of-the-music-editor-and-the-temp-track-as-blueprint-for-the-score-source-music-and-scource-music-of-films/C98ADB70BDE68EE359E7A502DE62E88D"],
+      ["University of Illinois Press — Music and the Moving Image", "https://www.press.uillinois.edu/journals/mmi.html"],
+      ["Tuổi Trẻ — Bao giờ Kim Tước lại gọi tên nhạc phim Việt Nam (2023)", "https://tuoitre.vn/bao-gio-kim-tuoc-lai-goi-ten-nhac-phim-viet-nam-20231019100600012.htm"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]]. [[the-loai-am-nhac|Thể loại]] và lịch sử nhạc phim: [[nhac-phim-va-tro-choi]].
+
+## Các văn bản nền
+| Năm | Văn bản | Ý chính |
+|---|---|---|
+| 1947 | [[hanns-eisler|Hanns Eisler]], ***Composing for the Films*** (Oxford University Press, New York) | Viết xong 1944 từ một dự án nhạc phim do Quỹ Rockefeller tài trợ; [[adorno-va-am-nhac|Adorno]] rút tên đồng tác giả ngay trước khi in (được cho là để tránh Uỷ ban Hoạt động phi Mỹ) — mức đóng góp của ông còn tranh luận |
+| 1987 | Claudia Gorbman, ***Unheard Melodies: Narrative Film Music*** | Đưa cặp **diegetic / nondiegetic** từ lý thuyết tự sự vào nghiên cứu nhạc phim; bảy nguyên tắc của nhạc phim Hollywood cổ điển |
+| 1990 / 1994 | Michel Chion, ***L'Audio-vision*** (bản Anh do Gorbman dịch) | "Giá trị cộng thêm", **synchresis**, "hợp đồng nghe – nhìn" |
+| 1992 | Kathryn Kalinak, ***Settling the Score*** | Nghiên cứu trường hợp: Korngold, Steiner, Herrmann, Raksin; về sau cả [[john-williams|John Williams]] |
+
+## Nội cảnh và ngoại cảnh
+| | Nhạc **nội cảnh** (*diegetic*) | Nhạc **ngoại cảnh** (*nondiegetic*) |
+|---|---|---|
+| Nguồn | Có trong thế giới phim (radio, ban nhạc trong cảnh, nhân vật hát) | Chỉ khán giả nghe (dàn nhạc nền) |
+| Nhân vật nghe được? | Có | Không |
+Nhiều cảnh hay nhất **chuyển** giữa hai lớp — một bài hát từ radio dần thành nhạc nền.
+
+## Bảy nguyên tắc của Gorbman
+Nhạc phim Hollywood cổ điển: (1) **vô hình** (không thấy nguồn), (2) **"không được nghe"** (khán giả không chú ý đến nó), (3) **ký hiệu của cảm xúc**, (4) **dẫn dắt tự sự**, (5) **liên tục**, (6) **thống nhất**, và (7) **linh hoạt**: một bản nhạc có thể phá nguyên tắc nào đó "nếu việc phá ấy phục vụ các nguyên tắc còn lại". Tựa sách — "[[giai-dieu|Giai điệu]] không được nghe" — chính là nguyên tắc (2).
+
+## Chion: synchresis
+**Synchresis** (synchronism + synthesis): khi âm thanh và hình ảnh xảy ra cùng lúc, não **tự hàn** chúng thành một sự kiện. "Giá trị cộng thêm": âm thanh làm ta tưởng thông tin đến từ hình ảnh. Nối với [[phan-luong-thinh-giac]].
+
+## Leitmotif
+- Nhạc *King Kong* (1933) của Max Steiner thường được dẫn là một trong những phim đầu tiên dùng **leitmotif** kiểu [[richard-wagner|Wagner]]; Steiner cũng nổi tiếng với lối "Mickey-Mousing" — nhạc bám sát từng động tác.
+- *Star Wars* của John Williams: Frank Lehman (Đại học Tufts) lập danh mục chủ đề; con số thay đổi theo tiêu chí và thời điểm (55 leitmotif + 43 [[motif|motif]] phụ theo Alex Ross năm 2017; 72 theo The Ringer năm 2020).
+Kỹ thuật [[bien-doi-chu-de|biến đổi chủ đề]] trong nhạc [[thoi-ky-lang-man|Lãng mạn]] chính là gốc của lối viết này.
+
+## Nhạc tạm (temp track)
+Nhạc có sẵn được ghép tạm khi dựng phim; rủi ro là đạo diễn "nghiện" bản tạm. *2001: A Space Odyssey* (Kubrick, 1968) bỏ hẳn bản nhạc đặt viết của Alex North để giữ các bản cổ điển dùng tạm. Tạp chí *Popular Music* có bài về vai trò của biên tập nhạc và bản tạm như "bản thiết kế" cho nhạc phim.
+
+## Tạp chí và Việt Nam
+- *Music and the Moving Image* (University of Illinois Press, từ 2008) và *Journal of Film Music*.
+- Nhạc phim ***Thời xa vắng*** (đạo diễn Hồ Quang Minh, 2004) của [[dang-huu-phuc|Đặng Hữu Phúc]] đoạt giải **Kim Tước cho âm nhạc xuất sắc** tại LHP Quốc tế Thượng Hải 2005; Tuổi Trẻ (2023) ghi nhận từ đó chưa nhạc phim Việt nào đoạt giải quốc tế lớn.
+`,
+  },
+  {
+    slug: "di-san-phi-vat-the-va-am-nhac",
+    title: "Di sản văn hoá phi vật thể và âm nhạc: UNESCO, Việt Nam và những phê phán",
+    category: 'musicology',
+    also: ['vietnam'],
+    aliases: ["di sản văn hoá phi vật thể", "di sản phi vật thể", "intangible cultural heritage", "Công ước 2003", "UNESCO di sản", "danh sách bảo vệ khẩn cấp", "danh sách đại diện", "Kirshenblatt-Gimblett", "di sản hoá", "heritagization", "metacultural"],
+    summary: "Công ước UNESCO 2003 về bảo vệ di sản văn hoá phi vật thể (hiệu lực 2006) đã biến nhiều truyền thống âm nhạc thành \"di sản nhân loại\" — Việt Nam có nhã nhạc, cồng chiêng, quan họ, ca trù, hát xoan, đờn ca tài tử, chầu văn trong thờ Mẫu… Bài trình bày cơ chế (danh sách đại diện, danh sách cần bảo vệ khẩn cấp), bảng các di sản âm nhạc Việt Nam với năm ghi danh đã kiểm chứng, trường hợp hát xoan — di sản đầu tiên trên thế giới được chuyển từ danh sách khẩn cấp sang danh sách đại diện (2017) — và phê phán của Barbara Kirshenblatt-Gimblett về di sản như một \"sản xuất siêu văn hoá\".",
+    refs: [
+      ["UNESCO — Text of the Convention for the Safeguarding of the ICH", "https://ich.unesco.org/en/convention"],
+      ["UN News — Convention enters into force (2006)", "https://news.un.org/en/story/2006/04/175972"],
+      ["UNESCO — Masterpieces (PDF)", "https://ich.unesco.org/doc/src/00036-EN.pdf"],
+      ["Vietnam Investment Review — Vietnam's UNESCO-recognised intangible cultural heritage", "https://vir.com.vn/vietnams-unesco-recognised-intangible-cultural-heritage-91085.html"],
+      ["Cục Hợp tác quốc tế — Hát Xoan ra khỏi danh sách khẩn cấp (2017)", "https://icd.gov.vn/hat-xoan-phu-tho-duoc-dua-ra-khoi-danh-sach-di-san-van-hoa-phi-vat-the-can-bao-ve-khan-cap-va-ghi-danh-tai-danh-sach-di-san-van-hoa-phi-vat-the-dai-dien-cua-nhan-loai"],
+      ["UNESCO — Decision 8.COM 8.31 (Đờn ca tài tử)", "https://ich.unesco.org/en/decisions/8.COM/8.31"],
+      ["VIR — Vietnam's 15 elements on UNESCO list", "https://vir.com.vn/vietnams-15-elements-on-unesco-recognised-intangible-cultural-heritage-list-98775.html"],
+      ["Journal of Ethnology and Folkloristics — về Kirshenblatt-Gimblett (PDF)", "https://ojs.utlib.ee/index.php/JEF/article/download/18886/13570/22283"],
+      ["UC Press — Kirshenblatt-Gimblett, Destination Culture (1998)", "https://ucpress.edu/books/destination-culture/paper"],
+    ],
+    body: `
+Một bài trong khung [[am-nhac-hoc]], nối [[dan-toc-nhac-hoc]] với [[am-nhac-viet-nam]].
+
+## Cơ chế UNESCO
+- **Công ước về Bảo vệ Di sản Văn hoá Phi vật thể** được Đại hội đồng UNESCO thông qua ngày **17/10/2003**, có hiệu lực **20/4/2006**.
+- Trước đó có các đợt công nhận **"Kiệt tác truyền khẩu và phi vật thể của nhân loại"** (2001, 2003, 2005); theo Điều 31, các kiệt tác này được chuyển vào **Danh sách đại diện** (ở Việt Nam: năm 2008).
+- Hai danh sách chính: **Danh sách đại diện** và **Danh sách cần bảo vệ khẩn cấp**.
+
+## Di sản âm nhạc – trình diễn của Việt Nam
+| Di sản | Danh sách | Năm | Bài trong thư viện |
+|---|---|---|---|
+| Nhã nhạc cung đình Huế | Kiệt tác → Đại diện | 2003 → 2008 | [[ca-hue-nha-nhac]] |
+| Không gian văn hoá Cồng chiêng Tây Nguyên | Kiệt tác → Đại diện | 2005 → 2008 | [[cong-chieng]] |
+| Dân ca Quan họ Bắc Ninh | Đại diện | 2009 | [[quan-ho]] |
+| Ca trù | **Khẩn cấp** | 2009 | [[ca-tru]] |
+| Hát Xoan Phú Thọ | Khẩn cấp → **Đại diện** | 2011 → 2017 | [[hat-xoan-hat-van-then]] |
+| Đờn ca tài tử Nam Bộ | Đại diện | quyết định 8.COM 8.31 (kỳ họp thứ 8, 2013) | [[don-ca-tai-tu]] |
+| Thực hành Tín ngưỡng thờ Mẫu Tam phủ (gồm hầu đồng, chầu văn) | Đại diện | 12/2016 | [[hat-xoan-hat-van-then]] |
+| Dân ca Ví, Giặm Nghệ Tĩnh; Nghệ thuật Bài chòi Trung Bộ; Thực hành Then | Đại diện | *năm chưa đối chiếu được với trang UNESCO* | [[dan-ca-viet-nam]] |
+Năm 2026 Việt Nam được báo chí ghi nhận có 17 di sản trong các danh sách (kể cả di sản không phải âm nhạc).
+
+## Hát Xoan: lần đầu tiên trên thế giới
+Hát Xoan vào danh sách khẩn cấp từ 24/11/2011; ngày **8/12/2017** (kỳ họp thứ 12, Jeju) được chuyển sang Danh sách đại diện — **di sản đầu tiên trên thế giới** đi được con đường này.
+
+## Phê phán: di sản như "sản xuất siêu văn hoá"
+- Barbara Kirshenblatt-Gimblett, *"Intangible Heritage as Metacultural Production"* (*Museum International*, 2004; in lại 2014): việc lập danh sách là một thao tác **"siêu văn hoá"** — nó làm thay đổi quan hệ giữa người thực hành và chính thực hành của họ; trọng tâm dịch từ "kiệt tác" sang **người nắm giữ** cùng môi trường sống của họ.
+- Từ đó nảy ra những câu hỏi mà [[dan-toc-nhac-hoc|dân tộc nhạc học]] hay đặt: ai quyết định dạng "chuẩn" của một làn điệu? Biểu diễn cho du khách có làm đổi bản chất? Danh hiệu giúp hay làm đông cứng truyền thống?
+*Thư viện chưa tìm được (trong vòng này) các nghiên cứu phê phán riêng về trường hợp Việt Nam — vd. về quan họ, ca trù sau ghi danh.*
+
+## Câu hỏi thảo luận
+*(Gợi ý của thư viện.)* So sánh [[ca-tru]] trước và sau 2009: số câu lạc bộ, cách truyền dạy, không gian diễn. Điều gì thay đổi nhờ danh hiệu, điều gì có thể đã mất? Xem thêm [[giai-thoai-am-nhac-viet-nam]].
 `,
   },
 ]

@@ -46,6 +46,8 @@ Liên quan: [[phuong-phap-luyen-tap]], [[hoc-thuoc-bai]], [[thi-tau]], [[doc-not
 **Nền tảng khoa học:** trẻ nghe và học nhạc thế nào theo từng tuổi — [[tam-ly-hoc-phat-trien-am-nhac]]; học nhạc có làm thông minh hơn không, và nên nói gì với phụ huynh — [[hoc-nhac-va-tri-tue]].
 
 **Sư phạm lịch sử:** các tập nhạc Bach viết để dạy — [[tai-lieu-su-pham-cua-bach]] — và lời kể về cách ông dạy học trò — [[bach-day-hoc-tro]].
+
+**Đọc và ghi nhạc theo cách khác:** [[gian-pho-ky-am-so]] và [[he-so-nashville-va-lead-sheet]].
 `,
   },
   {
@@ -316,7 +318,7 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
 | Phương pháp | Mốc chính |
 |---|---|
 | **Dalcroze** | Émile Jaques-Dalcroze dạy hoà âm ở Nhạc viện Geneva (khoảng 1892–1910); nhận thấy học trò **không nghe được** hoà âm mình viết, ông phát triển các trò chơi [[luyen-tai|luyện tai]] và vận động, đặt tên **eurhythmics**. Dạy ở Hellerau (gần Dresden) khoảng 1910–1914; thành lập **Institut Jaques-Dalcroze** ở Geneva năm 1915 |
-| **Kodály** | Kodály bắt đầu quan tâm giáo dục âm nhạc cho trẻ từ khoảng **1925**; nhà nước Hungary đưa ý tưởng của ông vào trường phổ thông từ **1945**; trường tiểu học âm nhạc đầu tiên (học nhạc hằng ngày) mở năm **1950**; giới thiệu với quốc tế tại hội nghị ISME ở Vienna năm **1958**; UNESCO ghi danh là di sản văn hoá phi vật thể năm **2016** |
+| **Kodály** | Kodály bắt đầu quan tâm giáo dục âm nhạc cho trẻ từ khoảng **1925**; nhà nước Hungary đưa ý tưởng của ông vào trường phổ thông từ **1945**; trường tiểu học âm nhạc đầu tiên (học nhạc hằng ngày) mở năm **1950**; giới thiệu với quốc tế tại hội nghị ISME ở Vienna năm **1958**; UNESCO ghi danh là [[di-san-phi-vat-the-va-am-nhac|di sản văn hoá phi vật thể]] năm **2016** |
 | **Ký hiệu tay và Đô di động** | Lấy từ hệ **[[bac-am-giai|Tonic]] Sol-fa** của John Curwen (1816–1880) — vốn dựa trên hệ xướng âm di động của **Sarah Glover** — được Kodály tiếp nhận vào nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (xem [[xuong-am]]) |
 | **Orff Schulwerk** | Carl Orff cùng **Gunild Keetman** phát triển từ thập niên **1920** |
 | **Suzuki** | Bắt đầu ở Nhật từ thập niên **1930** dưới tên "Phương pháp tiếng mẹ đẻ" / "Giáo dục tài năng"; gây chú ý ở Mỹ qua một bộ phim năm 1958 và chuyến lưu diễn năm 1964 của học trò nhỏ |

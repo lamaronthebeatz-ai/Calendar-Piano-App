@@ -147,6 +147,8 @@ Học sau Chương 7 (cần hợp âm 7, chức năng, át phụ, hợp âm mư�
 - **Hai hệ thống không loại trừ nhau**: hoà âm thế kỷ XX được hiểu rõ nhất **khi so với** chuẩn mực cổ điển mà nó giữ lại, mở rộng hoặc phá bỏ.
 
 **Hoà âm trong nhà thờ:** [[phoi-chorale-kieu-bach]] (phối chorale bốn bè bắt đầu từ kế hoạch kết) và [[dem-organ-cho-binh-ca]] (hoà âm điệu thức, tránh kết át – chủ).
+
+**Ghi hợp âm cho ban nhạc:** [[he-so-nashville-va-lead-sheet]]; **hoà âm trên bè trầm lặp:** [[passacaglia-va-chaconne]].
 `,
   },
   {
@@ -551,7 +553,7 @@ Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii –
     title: 'Ký hiệu hợp âm',
     category: 'harmony',
     also: ['jazz'],
-    aliases: ['hợp âm ký hiệu', 'chord symbol', 'lead sheet', 'đọc hợp âm', 'tên hợp âm'],
+    aliases: ['hợp âm ký hiệu', 'chord symbol', 'đọc hợp âm', 'tên hợp âm'],
     summary: 'Cách viết tắt hợp âm bằng chữ cái và hậu tố (Cm, G7, Fmaj7, Dsus4…), dùng trong nhạc pop, jazz và đệm hát.',
     wiki: 'Chord_chart',
     refs: [
@@ -591,7 +593,7 @@ Thay nốt bậc 3 bằng bậc 4 (sus4) hoặc bậc 2 (sus2) → không trư�
 Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 thế nào, add9 khác 9 thế nào: [[hop-am-6-va-add]].
 
 ## Lịch sử ký hiệu hợp âm
-- **Lead sheet**: nhạc jazz thường được ghi gọn bằng [[giai-dieu|giai điệu]] kèm ký hiệu hợp âm. Từ những năm 1940, các lead sheet được gom thành sách bán cho nhạc công — gọi là **fake book** (sách để "chơi ứng phó" một bài lạ). Tháng 5/1942, George Goodwin phát hành bộ thẻ **Tune-Dex** đầu tiên ghi lời, giai điệu và hợp âm. Nhiều fake book thời đó in **không có bản quyền**.
+- **[[he-so-nashville-va-lead-sheet|Lead sheet]]**: nhạc jazz thường được ghi gọn bằng [[giai-dieu|giai điệu]] kèm ký hiệu hợp âm. Từ những năm 1940, các lead sheet được gom thành sách bán cho nhạc công — gọi là **fake book** (sách để "chơi ứng phó" một bài lạ). Tháng 5/1942, George Goodwin phát hành bộ thẻ **Tune-Dex** đầu tiên ghi lời, giai điệu và hợp âm. Nhiều fake book thời đó in **không có bản quyền**.
 - **Hệ thống số Nashville**: Neal Matthews Jr. (nhóm Jordanaires) nghĩ ra cuối thập niên 1950, lấy cảm hứng từ cách ghi "nốt hình" của các nhóm hát phúc âm; sau đó Charlie McCoy áp dụng cho hợp âm. Hợp âm được ghi bằng **số bậc** (1, 4, 5, 6m…) nên đổi giọng tức thì — cùng ý tưởng với [[bac-am-giai|số La Mã]].
 - **Chuẩn hoá**: cuốn *Standardized Chord Symbol Notation* của Carl Brandt và Clinton Roemer (1976) là tài liệu tham khảo chính cho ký hiệu jazz: chữ "7" đứng một mình **luôn** là 7 thứ; nốt biến đổi để trong ngoặc. Sách bỏ ký hiệu **tam giác** cho 7 trưởng vì nó bị dùng với hai nghĩa trái ngược. Dù vậy, các nhà xuất bản vẫn khác nhau đôi chút.
 `,
@@ -777,7 +779,7 @@ Theo khảo sát 100 bài trong danh sách 500 bài hay nhất của tạp chí 
 ::grand C4+E4+G4/C3=C D4+G4/B2=G/B C4+E4+A4/A2=Am C4+E4+A4/G2=Am/G C4+F4+A4/F2=F C4+E4+G4/E2=C/E D4+F4+A4/D2=Dm B3+D4+G4/G2=G | Bè trầm đi xuống liền bậc C – B – A – G – F – E – D nhờ [[hop-am-gach-cheo|hợp âm gạch chéo]] (họ hàng của vòng Canon Pachelbel)
 
 ## Hình thức và chuyển giọng
-- Khuôn hình thức chính: **verse – (pre-chorus) – chorus – ([[hinh-thuc-ca-khuc-32|bridge]])**. Pre-chorus nhận ra nhờ **năng lượng tăng dần**, dẫn tới điệp khúc — xem [[nhac-pho-thong-the-ky-20]].
+- Khuôn hình thức chính: **verse – ([[hinh-thuc-ca-khuc-pho-thong|pre-chorus]]) – chorus – ([[hinh-thuc-ca-khuc-32|bridge]])**. Pre-chorus nhận ra nhờ **năng lượng tăng dần**, dẫn tới điệp khúc — xem [[nhac-pho-thong-the-ky-20]].
 - **"Nâng tông" cuối bài** (*truck driver’s gear change*): chuyển giọng **đột ngột**, thường **lên nửa cung** (đôi khi một cung) trước hoặc giữa các điệp khúc cuối, như "sang số" — hiệu quả nhưng bị coi là sáo mòn nếu lạm dụng. Xem [[chuyen-giong]].
 ::grand C4+E4+G4/C3=C B3+D4+G4/G2=G / Db4+F4+Ab4/Db3=D♭ | Nâng tông nửa cung: điệp khúc cuối chuyển từ Đô trưởng lên Rê giáng trưởng (thường có một hợp âm át A♭ hoặc không có gì chuẩn bị)
 
@@ -1490,6 +1492,61 @@ Robert Gjerdingen, trong *Music in the Galant Style* (Oxford, 2007), đặt tên
 - Nghe nhạc cổ điển theo **khối khuôn mẫu** thay vì từng hợp âm rời — gần với cách [[phan-tich-hoa-am|phân tích]] của chính thời đó.
 - Là "từ vựng" có sẵn để **[[ngau-hung-ung-tac|ứng tác]]** và [[phoi-hoa-am-giai-dieu|phối hoà âm]] theo phong cách cổ điển.
 - Liên hệ: [[vong-hop-am|vòng Canon]] của [[johann-pachelbel|Pachelbel]] dùng bè trầm dạng Romanesca nhảy.
+`,
+  },
+  {
+    slug: "he-so-nashville-va-lead-sheet",
+    title: "Hệ số Nashville, lead sheet và Real Book",
+    category: 'harmony',
+    also: ['jazz', 'musicianship'],
+    aliases: ["hệ số Nashville", "Nashville Number System", "Nashville numbers", "NNS", "lead sheet", "fake book", "Real Book", "The Real Book", "Tune-Dex", "chord chart", "bảng hợp âm bằng số", "Neal Matthews", "Jordanaires"],
+    summary: "Lead sheet ghi giai điệu, lời và ký hiệu hợp âm — không ghi cách đệm. Hệ số Nashville đi xa hơn: ghi hợp âm bằng số bậc (1 6- 2- 5) để cả ban nhạc dịch giọng tức thì; do Neal Matthews Jr. (Jordanaires) phát triển cuối thập niên 1950 và Charlie McCoy đưa vào bảng hợp âm đầu thập niên 1960. Bài có bảng ký hiệu (dấu trừ cho hợp âm thứ, hình thoi, push, chia ô), một ví dụ đổi giọng, và lịch sử fake book – Real Book.",
+    wiki: "Nashville_Number_System",
+    refs: [
+      ["Wikipedia — Nashville Number System", "https://en.wikipedia.org/wiki/Nashville_Number_System"],
+      ["Wikipedia — Neal Matthews Jr.", "https://en.wikipedia.org/wiki/Neal_Matthews_Jr."],
+      ["Nashville Number System (Chas Williams)", "https://nashvillenumbersystem.com/"],
+      ["Premier Guitar — The guitarist's guide to writing charts", "https://www.premierguitar.com/the-guitarists-guide-to-writing-charts?page=2"],
+      ["AirGigs — Number charts crash course", "https://blog.airgigs.com/2015/03/number-charts-crash-course-by-lydia-salnikova/"],
+      ["de Clercq — SMT 2015 (PDF)", "https://www.midside.com/presentations/declercq_2015_smt_pmig.pdf"],
+      ["Wikipedia — Lead sheet", "https://en.wikipedia.org/wiki/Lead_sheet"],
+      ["Wikipedia — Real Book", "https://en.wikipedia.org/wiki/Real_Book"],
+      ["99% Invisible — The Real Book", "https://99percentinvisible.org/episode/438-the-real-book/"],
+      ["Hal Leonard — The Real Book vol. I", "https://www.halleonard.com/product/1018191/the-real-book-volume-i-sixth-edition"],
+    ],
+    body: `
+Bài này nối [[ky-hieu-hop-am]] với thực hành đệm. Bậc [[hop-am-ba|hợp âm]] (I, IV, V…) ở [[chuc-nang-hoa-am]]; đệm từ lead sheet ở [[dem-hat-piano]].
+
+## Lead sheet
+[[giai-dieu|Giai điệu]] ghi trên [[khuong-nhac|khuông]], **lời** dưới khuông, **hợp âm** bằng ký hiệu phía trên — **không** ghi [[ngon-bam|thế bấm]] hay cách đệm; người chơi tự "điền". Đó là định dạng chuẩn của jazz và [[nhac-pho-thong-the-ky-20|nhạc phổ thông]].
+
+## Hệ số Nashville
+- Do các nhạc công phòng thu ở Nashville phát triển **cuối thập niên 1950** (thường ghi 1957): **Neal Matthews Jr.** của nhóm Jordanaires cần cách ghi nhanh bè hát cho nhiều buổi thu mỗi ngày; theo lịch sử của Chas Williams (Wikipedia dẫn), ông dựa trên quen thuộc với [[ky-am|ký âm]] "nốt hình" (*shape-note*) của các nhóm gospel.
+- **Đầu thập niên 1960**: người chơi harmonica phòng thu **Charlie McCoy** dùng nó cho bảng hợp âm của cả ban (bass, trống, piano, [[guitar-co-dien|guitar]]).
+| Ký hiệu | Nghĩa |
+|---|---|
+| **1 4 5** | Hợp âm trưởng trên bậc 1, 4, 5 |
+| **6-** (dấu trừ) | Hợp âm thứ trên bậc 6 |
+| **1/3** | Hợp âm bậc 1, nốt bậc 3 ở bè trầm (đảo) |
+| Hình **thoi** quanh số | Đánh rồi để ngân |
+| **>** trên số | "Push": đánh sớm nửa phách |
+| **^** trên số | Dừng/chặn tiếng |
+| Gạch dưới nhiều số | Các hợp âm chia đều trong một ô |
+*(Ký hiệu thực tế khác nhau đôi chút giữa các phòng thu; nguồn chủ yếu là trang hướng dẫn.)*
+
+## Ví dụ: một bảng, mọi giọng
+| Bảng số | Đô trưởng | Sol trưởng | Mi♭ trưởng |
+|---|---|---|---|
+| **1 6- 2- 5** | C – Am – Dm – G | G – Em – Am – D | E♭ – Cm – Fm – B♭ |
+::staff treble C4+E4+G4=1 A3+C4+E4=6- D4+F4+A4=2- G3+B3+D4=5 | "1 6- 2- 5" ở Đô trưởng
+Ca sĩ đổi giọng phút chót? Bảng **không đổi** — chỉ cần nói "chơi ở Sol". Đây là lý do người đệm hát nên tập [[dich-giong]] bằng số. Vòng này chính là một [[vong-hop-am]] kinh điển.
+::youtube NjYEEqqe30E | Hướng dẫn hệ số Nashville (cho guitar)
+
+## Fake book và Real Book
+- Tiền thân: thẻ **Tune-Dex** (từ 5/1942) — mỗi thẻ ghi lời, giai điệu, hợp âm, bản quyền.
+- Các "fake book" thập niên 1940 – 1950 (khoảng 2.000 bài) được in **lậu**, không trả tác quyền.
+- **The Real Book**: hai sinh viên Berklee (ẩn danh) làm giữa thập niên 1970, photocopy bán lén, không trả tác quyền; Hal Leonard ra **bản hợp pháp năm 2004**. Ngày nay là "sách giáo khoa" của [[hinh-thuc-ca-khuc-32|tiết mục jazz]].
+Xem thêm [[ban-quyen-am-nhac-viet-nam]] về vấn đề tác quyền ở Việt Nam.
 `,
   },
 ]

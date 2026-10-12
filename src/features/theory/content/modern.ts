@@ -62,6 +62,8 @@ Lộ trình đầy đủ: [[hoa-am-the-ky-20]].
 Ngoài truyền thống phương Tây: [[am-nhac-truyen-thong-viet-nam]] và nhạc cụ Việt Nam ([[nhac-cu-viet-nam]]).
 
 **Góc nhìn nghiên cứu:** khung chung của việc nghiên cứu các thời kỳ là [[am-nhac-hoc-lich-su]]; âm nhạc trước Trung cổ ở [[am-nhac-co-dai]]; lịch sử âm nhạc Việt Nam ở [[lich-su-am-nhac-viet-nam]]; âm nhạc ngoài truyền thống phương Tây, trong văn hoá của nó, là đối tượng của [[dan-toc-nhac-hoc]].
+
+**Thế kỷ 20 ngoài 12 nửa cung:** [[vi-cung-va-am-nhac-vi-cung]].
 `,
   },
   {
@@ -96,13 +98,13 @@ Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê
 - Tên phương Tây chỉ là **xấp xỉ**: [[dich-giong|cao độ thực]] **không theo** [[luat-binh-quan|luật bình quân]].
 - [[lich-su-am-nhac-viet-nam|Trần Văn Khê]]: khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ **các bậc cách đều hay không đều**. Theo Viện Âm nhạc, ở **điệu Nam** (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp.
 - Sự khác nhau giữa các **hơi** (Xuân, Ai, Oán…) nằm ở **cao độ nắn và cách rung, nhấn** từng bậc. Ví dụ, [[ly-thuyet-am-nhac-co-truyen-viet-nam|hơi Oán]] gần với hơi [[cai-luong|vọng cổ]], bậc 2 có **[[am-hoc-co-ban|biên độ]]** rộng hơn và rung ở Xang (luận văn CUNY). Một ghi chú đĩa của Smithsonian Folkways (UNESCO Collection) mô tả: dây lên **giống nhau** cho mọi điệu, chỉ cách **nhấn – rung** thay đổi.
-- Chưa tìm được nguồn đáng tin ghi số cent chính xác cho từng hơi, nên bài này **không** đưa con số.
+- Chưa tìm được nguồn đáng tin ghi số [[cac-he-thong-chinh-am|cent]] chính xác cho từng hơi, nên bài này **không** đưa con số.
 **Trên piano**: chỉ chơi được **khung** năm âm (phím đen, hoặc C – D – F – G – A); các nốt "nhấn" nằm **giữa** hai phím. Đây là bài học tốt về giới hạn của [[luat-binh-quan]] và về [[cao-do]].
 
 ## Di sản được UNESCO ghi danh
 | Di sản | Năm |
 |---|---|
-| Nhã nhạc cung đình Huế | Tuyên bố Kiệt tác 2003; vào Danh sách đại diện 2008 |
+| Nhã nhạc cung đình Huế | Tuyên bố Kiệt tác 2003; vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] 2008 |
 | [[cong-chieng|Không gian văn hoá cồng chiêng]] Tây Nguyên | Tuyên bố 2005; Danh sách đại diện 2008 |
 | [[ca-tru|Ca trù]] | 2009, Danh sách **cần bảo vệ khẩn cấp** |
 | [[quan-ho|Quan họ Bắc Ninh]] | 2009, Danh sách đại diện |
@@ -682,7 +684,7 @@ Mỗi [[not-nhac|nốt nhạc]] là tổng của nhiều [[chuoi-boi-am|bồi â
 Grisey về sau **không nhận** cái nhãn "nhạc phổ" trong các bài phỏng vấn và bài viết.
 
 ## Liên hệ với hoà âm truyền thống
-Ý tưởng hoà âm bắt nguồn từ chuỗi bồi âm đã có từ [[Rameau]] (xem [[he-thong-hoa-am-co-dien]]). Nhạc phổ đưa ý tưởng này đến tận cùng: hoà âm **là** âm sắc. Các bồi âm cao **không khớp** với 12 nốt bình quân, nên nhạc phổ thường dùng **vi cung** ([[quang|quãng]] nhỏ hơn [[cung-nua-cung|nửa cung]] — xem [[luat-binh-quan]]).
+Ý tưởng hoà âm bắt nguồn từ chuỗi bồi âm đã có từ [[Rameau]] (xem [[he-thong-hoa-am-co-dien]]). Nhạc phổ đưa ý tưởng này đến tận cùng: hoà âm **là** âm sắc. Các bồi âm cao **không khớp** với 12 nốt bình quân, nên nhạc phổ thường dùng **[[vi-cung-va-am-nhac-vi-cung|vi cung]]** ([[quang|quãng]] nhỏ hơn [[cung-nua-cung|nửa cung]] — xem [[luat-binh-quan]]).
 `,
   },
 ]

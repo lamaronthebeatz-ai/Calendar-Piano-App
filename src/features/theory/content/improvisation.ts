@@ -58,6 +58,8 @@ Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — [[toccata
 10. [[khoa-hoc-ngau-hung]].
 
 **Organist nhà thờ:** interlude và dạo đầu trên chorale — [[dem-hat-cong-doan-tren-organ]]; Bach dạy bè trầm số và chorale thế nào — [[bach-day-hoc-tro]].
+
+**Nền tiết tấu cho ngẫu hứng:** [[clave-tresillo-va-nhip-cong]].
 `,
   },
   {
