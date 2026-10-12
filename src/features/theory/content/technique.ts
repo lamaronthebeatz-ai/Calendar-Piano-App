@@ -854,6 +854,10 @@ Berklee gợi ý: bắt đầu **thưa** (nốt tròn cả hai tay, hoặc tay p
 - Dưới giọng hát, dùng thế bấm **đơn giản**; để dành [[hop-am-mo-rong|nốt căng]] cho đoạn dạo và đoạn nối.
 - [[prelude-ung-tac|Dạo đầu]] thường lấy chất liệu **điệp khúc** hoặc [[vong-hop-am|vòng hợp âm]] chính; kết bằng cách lặp vòng cuối rồi chậm dần.
 Liên quan: [[dem-hat-piano]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
+
+## Nghe ví dụ
+
+::youtube hLQl3WQQoQ0 | Adele — *Someone Like You* (pop ballad piano đệm hát)
 `,
   },
   {
@@ -892,6 +896,12 @@ Liên quan: [[dem-hat-piano]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
 - [[hoa-am-dieu-thuc|Hoà âm điệu thức]]: ♭VII – IV – I, I – ♭VII — xem [[hoa-am-pop]].
 - Hợp âm tay phải **ngắn, gọn** ([[cach-dien-tau|staccato]]), ít pedal khi muốn tiếng "rock" sắc.
 Liên quan: [[nhac-pho-thong-the-ky-20]], [[dem-hat-hien-dai]].
+
+## Nghe ví dụ
+
+::youtube 7pOr3dBFAeY | Scorpions — *Still Loving You*
+
+::youtube NvR60Wg9R7Q | Bon Jovi — *Bed of Roses*
 `,
   },
   {
@@ -958,6 +968,10 @@ Nhãn "Em11" ở hình trên: nốt 3 (G) có mặt nên đây là Em11 đầy �
 - **Thưa, nối bè mượt**, không nhân đôi giai điệu; thế bấm **đơn giản hơn** dưới giọng hát (nốt căng có thể va với giai điệu); **fill** bằng [[am-giai-ngu-cung|ngũ cung]] hoặc [[am-giai-blues|âm giai blues]] ở chỗ ca sĩ lấy hơi.
 - Berklee lưu ý: đệm R&B khó hơn [[dem-pop-ballad|đệm ballad]] jazz vì phải lo cả đường bass và các hình tiết tấu.
 Liên quan: [[dem-jazz]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
+
+## Nghe ví dụ
+
+::youtube SxVNOnPyvIU | D'Angelo — *Untitled (How Does It Feel)*
 `,
   },
   {
@@ -1030,6 +1044,12 @@ Liên quan: [[dem-jazz]], [[dem-cho-ca-si]], [[dem-hat-hien-dai]].
 2. Xác định tốc độ và tính chất: chậm – buồn (bolero, boston), nảy (rumba), sôi nổi (chachacha, disco).
 3. Thử hai điệu gần nhau (bolero ↔ rumba, slow ↔ slow rock) và chọn cái hợp giọng ca sĩ.
 Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
+
+## Nghe ví dụ
+
+::youtube RVP5N4QXHeQ | *Sầu tím thiệp hồng* (bolero) · Quang Lê, Lệ Quyên
+
+::youtube Nflsf3SytYc | Dân ca quan họ Bắc Ninh — *Người ơi người ở đừng về* · Lê Ngọc Thúy
 `,
   },
   {
@@ -1081,6 +1101,12 @@ Peter Martin gợi ý có thể giản lược bè trầm thành nốt trắng �
 ::grand A3+C4+E4/F2=Fmaj7 B3+D4+F4/G2=G7 Bb3+D4+F4/G2=Gm7 Bb3+Db4+Fb4/Gb2=G♭7 A3+C4+E4/F2=Fmaj7 | Đoạn A kiểu "Ipanema" trong Fa trưởng: I – II7 – ii – ♭II7 (thay thế tritone của C7) – I (thế bấm gọn, minh hoạ)
 - "The Girl from Ipanema": hình thức AABA **40 ô** (đoạn B dài 16 ô); bản *Getz/Gilberto* ở Rê giáng trưởng, thường chơi ở Fa trưởng. Xem [[hinh-thuc-ca-khuc-32]], [[thay-the-tritone]].
 Liên quan: [[dem-jazz]], [[dem-hat-hien-dai]].
+
+## Nghe ví dụ
+
+::youtube N-TKOh0zsvU | Jobim — *The Girl from Ipanema* · Stan Getz, João Gilberto, Astrud Gilberto (*Getz/Gilberto*)
+
+::youtube s61-e29Vr6Q | Jobim — *The Girl from Ipanema* · Stan Getz, Astrud Gilberto
 `,
   },
   {

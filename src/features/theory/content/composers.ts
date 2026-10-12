@@ -1,6 +1,7 @@
 import type { Article } from '../wiki'
 import { buildPeople, person, type Person } from './people'
 import { COMPOSER_DETAILS } from './composer-details'
+import { COMPOSER_VIDEOS } from './composer-videos'
 
 /**
  * Nhà soạn nhạc phương Tây, Trung cổ → thế kỷ 20. Mỗi người là một dòng dữ liệu; trang thời kỳ
@@ -454,7 +455,7 @@ const COMPOSERS: Person[] = [
   c('Joe Hisaishi', '1950–', 'Nhật Bản', 'm20:film', 'Nhạc phim Studio Ghibli của Hayao Miyazaki, chịu ảnh hưởng tối giản.', ['Spirited Away ("One Summer\'s Day")', 'My Neighbor Totoro', 'Howl\'s Moving Castle'], { topics: ['toi-gian'] }),
 ]
 
-export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...COMPOSER_DETAILS[c.name] })), {
+export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...COMPOSER_DETAILS[c.name], videos: COMPOSER_VIDEOS[c.name] })), {
   category: 'composers',
   noun: 'nhà soạn nhạc',
   groupLabel: 'Trường phái',

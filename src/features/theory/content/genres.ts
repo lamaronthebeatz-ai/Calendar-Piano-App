@@ -121,6 +121,10 @@ Thế kỷ 19, các tu sĩ dòng Biển Đức ở **Solesmes** (Pháp) nghiên 
 - Hát một câu thánh ca giúp cảm nhận [[dieu-thuc|điệu thức]] không qua hợp âm; thử đệm bằng một [[bass-ngan|âm ngân]] để nghe màu Dorian, Phrygian.
 - Thánh ca là chất liệu cho mọi thể loại nhiều bè sau đó: [[organum]], [[motet]], [[thanh-le-va-requiem|thánh lễ]].
 Bối cảnh: [[thoi-ky-trung-co]].
+
+## Nghe ví dụ
+
+::youtube mn9sbcJoJAk | Thánh ca Gregorian — khúc nhập lễ *Puer natus est* (lễ Giáng sinh)
 `,
   },
   {
@@ -153,6 +157,10 @@ Từ *tenor* (giữ) của organum là nguồn gốc tên giọng tenor sau này
 - Đóng góp lớn: các **"điệu tiết tấu"** (rhythmic [[dieu-thuc|modes]]) — mẫu nhịp lặp lại — lần đầu cho phép ghi **trường độ** cho nhiều bè cùng lúc (xem [[truong-do]]).
 - Các đoạn *clausula* trong organum, khi được đặt thêm lời, trở thành [[motet]].
 Liên quan: [[doi-am]], [[thanh-ca-gregorian]], [[thoi-ky-trung-co]].
+
+## Nghe ví dụ
+
+::youtube NnWhThoW8N0 | Pérotin — *Viderunt omnes*, organum bốn bè
 `,
   },
   {
@@ -182,6 +190,12 @@ Liên quan: [[doi-am]], [[thanh-ca-gregorian]], [[thoi-ky-trung-co]].
 - Isorhythm là một trong những ví dụ sớm nhất về **cấu trúc toán học** trong âm nhạc — được so sánh với [[ky-thuat-12-am|kỹ thuật chuỗi]] [[thoi-ky-the-ky-20|thế kỷ 20]].
 - Motet Phục hưng là "phòng thí nghiệm" của [[doi-am|đối âm]] mô phỏng, dẫn đến [[fugue]].
 Liên quan: [[thanh-le-va-requiem]], [[thoi-ky-phuc-hung]].
+
+## Nghe ví dụ
+
+::youtube scQ5YBRpwNg | Josquin des Prez — motet *Ave Maria… virgo serena* · The Tallis Scholars, Peter Phillips
+
+::youtube s-pVbpV4yuk | Josquin des Prez — *Ave Maria… virgo serena* · Stile Antico
 `,
   },
   {
@@ -227,6 +241,14 @@ Requiem thêm các phần riêng của lễ cầu hồn, nổi tiếng nhất l�
 ## Với người học piano
 Nhiều bài hợp xướng thánh lễ có bản giảm âm cho piano (vocal score) — một cách luyện [[thi-tau|đọc nhiều bè]] và hiểu [[doi-am|đối âm]] thanh nhạc.
 Liên quan: [[oratorio-cantata-passion]], [[thoi-ky-phuc-hung]].
+
+## Nghe ví dụ
+
+::youtube pYd4ZjuSEdw | Mozart — Requiem K. 626: *Lacrimosa* · Berliner Philharmoniker, Wiener Singverein, Herbert von Karajan (1975)
+
+::youtube BRfF7W4El60 | Palestrina — *Missa Papae Marcelli* (trọn bộ) · The Tallis Scholars, Peter Phillips
+
+::youtube ZBQxrD3d7MI | Machaut — *Messe de Nostre Dame* · Ensemble Gilles Binchois, Dominique Vellard
 `,
   },
   {
@@ -261,6 +283,10 @@ Chủ đề chính là **tình yêu cung đình**. Bản chép tay ghi cao độ
 ::form A B a A a b A B | Khuôn rondeau (chữ hoa = điệp khúc lặp cả lời; chữ thường = cùng nhạc, lời mới)
 Janequin, *La guerre* (in khoảng 1528 – 29) [[doi-am|mô phỏng]] tiếng trận đánh — một ví dụ sớm của [[am-nhac-tuyet-doi|nhạc tả cảnh]].
 Liên quan: [[madrigal]], [[hinh-thuc-am-nhac]], [[thoi-ky-trung-co]].
+
+## Nghe ví dụ
+
+::youtube QE-pfYJ85U8 | Alfonso X — *Cantigas de Santa Maria*, CSM 181 *Pero que seja a gente*
 `,
   },
   {
@@ -294,6 +320,10 @@ Năm 1605 Monteverdi in Tập madrigal số 5 (có *Cruda Amarilli*), đáp lạ
 ## Madrigal Anh
 Tuyển *Musica transalpina* (Yonge, 1588) in madrigal Ý kèm lời Anh và khơi dậy trào lưu madrigal Anh: Morley, Weelkes, Wilbye.
 Liên quan: [[ca-khuc-the-tuc-trung-co]], [[nhac-khi-phuc-hung]], [[thoi-ky-phuc-hung]].
+
+## Nghe ví dụ
+
+::youtube d2lLoPZkR5k | Monteverdi — *Lamento della ninfa* (Madrigal tập 8) · The Gesualdo Six, Helen Charlston
 `,
   },
   {
@@ -329,6 +359,12 @@ Ghép **chậm – nhanh, chẵn – lẻ** như vậy là hạt giống của [
 - **Consort hỗn hợp**: nhiều loại nhạc cụ.
 - Thể loại: *In nomine*, fantasia (tổ tiên của [[toccata-prelude-fugue|fantasia đàn phím]]).
 Liên quan: [[madrigal]], [[thoi-ky-phuc-hung]], [[dan-phim-co]].
+
+## Nghe ví dụ
+
+::youtube g1oqAwsNvsY | Dowland — *Lachrimae Antiquae Pavan* · Julian Bream, đàn lute (1956)
+
+::youtube dBY-rC6s1bM | Susato — các điệu nhảy trong *Danserye* (1551), soạn cho dàn của David Munrow
 `,
   },
   {
@@ -388,6 +424,12 @@ Leitmotif của Wagner về sau thành công cụ chính của [[nhac-phim-va-tr
 ## Với người học piano
 Nhiều tiểu phẩm piano "hát" như aria: [[tieu-pham-piano|nocturne]] của [[frederic-chopin|Chopin]] chịu ảnh hưởng bel canto; [[franz-liszt|Liszt]] viết nhiều bản chuyển soạn opera. Thử chơi tay phải như một giọng hát — xem [[dien-dat-cau-nhac]], [[rubato]].
 Liên quan: [[oratorio-cantata-passion]], [[operetta-va-nhac-kich]], [[khuc-mo-man]].
+
+## Nghe ví dụ
+
+::youtube dBmDWncasFA | Monteverdi — *L'Orfeo*: Toccata mở đầu · English Baroque Soloists, John Eliot Gardiner
+
+::youtube Th9bXOQmvkI | Mozart — *Cây sáo thần*: aria của Nữ hoàng bóng đêm *Der Hölle Rache* (bản phát hành của Warner Classics)
 `,
   },
   {
@@ -426,6 +468,14 @@ Các thành phần recitative – aria giống [[opera]]; khác ở chỗ **khô
 ## Chorale trong cantata
 Mỗi cantata của Bach thường kết bằng một **chorale bốn bè** — giai điệu thánh ca Luther cả giáo đoàn quen thuộc. Các chorale này là bài mẫu kinh điển của [[luat-hoa-am-bon-be|hoà âm bốn bè]] — xem [[chorale-va-chorale-prelude]].
 Liên quan: [[thanh-le-va-requiem]], [[thoi-ky-baroque]].
+
+## Nghe ví dụ
+
+::youtube w_ccuyPO1W4 | Handel — *Messiah*: hợp xướng *Hallelujah* · Tenebrae, Academy of Ancient Music, Nigel Short
+
+::youtube IUZEtVbJT5c | Handel — *Messiah*: *Hallelujah* · Royal Choral Society
+
+::youtube ZwVW1ttVhuQ | Bach — *Thương khó theo Thánh Matthew* BWV 244 · Netherlands Bach Society, Jos van Veldhoven
 `,
   },
   {
@@ -457,6 +507,10 @@ Bản [[organ-ong|organ]] ngắn dựa trên một giai điệu chorale, chơi t
 ## Với người học piano
 Chơi chorale Bach trên piano (hai bè mỗi tay) là bài tập đọc [[luat-hoa-am-bon-be|bốn bè]] và [[dien-dat-cau-nhac|giữ câu nhạc]] rất tốt; thử [[legato]] bằng ngón thay vì pedal.
 Liên quan: [[oratorio-cantata-passion]], [[toccata-prelude-fugue]].
+
+## Nghe ví dụ
+
+::youtube IiUyz4HG-Kc | Bach — chorale prelude *Wachet auf, ruft uns die Stimme* BWV 645 · Wolfgang Zerer, organ
 `,
   },
   {
@@ -502,6 +556,10 @@ Liên quan: [[oratorio-cantata-passion]], [[toccata-prelude-fugue]].
 - Các minuet trong *Sổ tay Anna Magdalena* là cửa ngõ vào tổ khúc — xem [[phan-tich-minuet-sol-truong]], [[lo-trinh-tac-pham]].
 - Cách nhấn phách và [[cach-dien-tau|cách diễn tấu]] theo phong cách: [[phong-cach-dien-tau]].
 Tổ tiên của tổ khúc: cặp pavane – galliard ([[nhac-khi-phuc-hung]]). Liên quan: [[the-loai]], [[thoi-ky-baroque]].
+
+## Nghe ví dụ
+
+::youtube cGnZHIY_hoQ | Bach — Tổ khúc cello số 1 Sol trưởng BWV 1007 · Lucia Swarts
 `,
   },
   {
@@ -536,6 +594,10 @@ Tổ tiên của tổ khúc: cặp pavane – galliard ([[nhac-khi-phuc-hung]]).
 ## Về sau
 [[frederic-chopin|Chopin]] (24 Préludes Op. 28), [[claude-debussy|Debussy]], [[sergei-rachmaninoff|Rachmaninoff]], [[dmitri-shostakovich|Shostakovich]] (24 prelude và fugue) đều tiếp nối ý tưởng "một bài cho mỗi giọng" — xem [[tieu-pham-piano]].
 Liên quan: [[impromptu]], [[thoi-ky-baroque]], [[dan-phim-co]].
+
+## Nghe ví dụ
+
+::youtube Pi0IuyTS_ic | Bach — Toccata và Fugue Rê thứ BWV 565 · Leo van Doeselaar, organ
 `,
   },
   {
@@ -568,6 +630,10 @@ Ranh giới hai kiểu không tuyệt đối.
 ::form A A B B | Sonata Scarlatti: ‖: A :‖: B :‖ — phần B bắt đầu ở giọng át (hoặc giọng song song) rồi quay về
 Phần cuối của A và của B thường dùng **cùng chất liệu** ở hai giọng khác nhau — một bước nhỏ tới [[hinh-thuc-sonata]].
 Liên quan: [[sonata-the-loai]], [[concerto-grosso]], [[dan-phim-co]].
+
+## Nghe ví dụ
+
+::youtube aBnFaLn8w6o | Domenico Scarlatti — Sonata Mi trưởng K. 380 · Lucas Debargue
 `,
   },
   {
@@ -601,6 +667,14 @@ Sự **tương phản to – nhỏ, ít – nhiều** này cũng là gốc của
 ::form R S R S R S R | Chương nhanh kiểu Vivaldi: R = ritornello (cả dàn, chủ đề quay lại ở các giọng khác nhau), S = đoạn độc tấu
 Chi tiết khuôn ba chương nhanh – chậm – nhanh và sự phát triển sang concerto Cổ điển, Lãng mạn: [[hinh-thuc-concerto]].
 Liên quan: [[sonata-baroque]], [[thoi-ky-baroque]], [[cadenza]].
+
+## Nghe ví dụ
+
+::youtube LHjbRMIIhuM | Bach — Concerto Brandenburg số 5 BWV 1050 · Netherlands Bach Society, Shunske Sato
+
+::youtube e68h3Qwm2OA | Corelli — Concerto grosso Op. 6 số 8 "Giáng sinh" · hr-Sinfonieorchester
+
+::youtube 3LiztfE1X7E | Vivaldi — *Bốn mùa*: Mùa xuân RV 269 · Alana Youssefian, Voices of Music
 `,
   },
   {
@@ -630,6 +704,10 @@ Liên quan: [[sonata-baroque]], [[thoi-ky-baroque]], [[cadenza]].
 - Khúc mở màn opera thường **giới thiệu trước** các giai điệu của vở.
 - **Khúc mở màn hoà nhạc**: một chương dàn nhạc viết **cho buổi hoà nhạc**, không gắn với vở diễn — ví dụ [[felix-mendelssohn|Mendelssohn]], *The Hebrides* ("Hang Fingal", 1830/32). Từ đây đến [[tho-giao-huong|thơ giao hưởng]] chỉ còn một bước.
 Liên quan: [[opera]], [[the-loai]].
+
+## Nghe ví dụ
+
+::youtube aDlEAAe28WQ | Mozart — *Đám cưới Figaro*: khúc mở màn · Dàn nhạc Royal Opera House, Antonio Pappano
 `,
   },
   {
@@ -675,6 +753,12 @@ Liên quan: [[opera]], [[the-loai]].
 ## Với người học piano
 Bản chuyển soạn giao hưởng cho piano ([[franz-liszt|Liszt]] chuyển cả 9 giao hưởng Beethoven) và bản bốn tay là cách người thế kỷ 19 "nghe" giao hưởng ở nhà. Nghe chương 1 một giao hưởng Haydn với sơ đồ [[hinh-thuc-sonata]] là bài tập nghe hình thức tốt — xem [[nghe-nhac-chu-dong]].
 Liên quan: [[the-loai]], [[nhac-thinh-phong]], [[thoi-ky-co-dien]].
+
+## Nghe ví dụ
+
+::youtube fuPrcnpIRx8 | Beethoven — Giao hưởng số 5 Đô thứ Op. 67 · hr-Sinfonieorchester, Andrés Orozco-Estrada
+
+::youtube 9aDEq3u5huA | Beethoven — Giao hưởng số 5 · Berliner Philharmoniker, Herbert von Karajan
 `,
   },
   {
@@ -711,6 +795,10 @@ Liên quan: [[the-loai]], [[nhac-thinh-phong]], [[thoi-ky-co-dien]].
 ## Với người học piano
 Chơi nhạc thính phòng là cách học **nghe người khác** tốt nhất: cân bằng âm lượng, thở cùng nhau, nhìn tín hiệu vào bài. Bắt đầu với sonata song tấu hay các bản bốn tay — xem [[hoi-hop-bieu-dien]], [[dem-hat-piano]].
 Liên quan: [[sonata-the-loai]], [[the-loai]], [[thoi-ky-co-dien]].
+
+## Nghe ví dụ
+
+::youtube HJev8Rzci-s | Haydn — Tứ tấu đàn dây Op. 76 số 3 "Hoàng đế" (trọn bộ)
 `,
   },
   {
@@ -748,6 +836,10 @@ Bè đệm điển hình của sonata Cổ điển là **bass Alberti** — [[lu
 ## Sonatina
 Sonata **ngắn và dễ**, thường ba chương nhỏ — [[muzio-clementi|Clementi]], [[friedrich-kuhlau|Kuhlau]], Diabelli. Là bước đệm hoàn hảo trước sonata thật: [[phan-tich-sonatina-clementi-op36-1]].
 Tổ tiên [[thoi-ky-baroque|Baroque]]: [[sonata-baroque]]. Liên quan: [[the-loai]], [[lo-trinh-tac-pham]].
+
+## Nghe ví dụ
+
+::youtube 9MWgWcCCwEE | Beethoven — Sonata "Pathétique" Op. 13, chương II *Adagio cantabile* · Igor Levit
 `,
   },
   {
@@ -795,6 +887,12 @@ Liên hệ: [[minuet-va-trio|minuet]] cũng ở 3/4 nhưng vừa phải và cân
 ## Với người học piano
 Tiểu phẩm là "giáo trình cảm xúc": mỗi thể loại dạy một kỹ năng — nocturne dạy [[dien-dat-cau-nhac|hát]] và [[ban-dap|pedal]], valse dạy [[buoc-nhay-xa|nhảy tay trái]], mazurka dạy [[rubato]] và nhấn lệch, étude dạy kỹ thuật. Lộ trình bài: [[lo-trinh-tac-pham]].
 Liên quan: [[the-loai]], [[thoi-ky-lang-man]], [[lied]].
+
+## Nghe ví dụ
+
+::youtube vVcI4MMtJgE | Schumann — *Kinderszenen* Op. 15: *Träumerei* · Lang Lang (Carnegie Hall, 2003)
+
+::youtube c2beUDDsgws | Chopin — Nocturne Mi giáng trưởng Op. 9 số 2 · Arthur Rubinstein (1965)
 `,
   },
   {
@@ -830,6 +928,10 @@ Giữa hai cách là **strophic có biến đổi** (A A′ A″…). Xem [[hinh
 ## Piano trong Lied
 Piano **tả cảnh và tâm trạng**: guồng quay sợi trong *Gretchen am Spinnrade*, dòng suối trong *Die schöne Müllerin*, đoạn kết piano sau khi giọng hát dừng trong *Dichterliebe*. Đệm Lied là bài học tuyệt vời về cân bằng và nghe giọng hát — xem [[dem-hat-piano]].
 Liên quan: [[tieu-pham-piano|bài ca không lời]], [[ca-khuc-the-tuc-trung-co]], [[thoi-ky-lang-man]].
+
+## Nghe ví dụ
+
+::youtube a2J9Yn2YjjE | Schubert — *Erlkönig* D. 328 · Dietrich Fischer-Dieskau, Gerald Moore (1958)
 `,
   },
   {
@@ -866,6 +968,12 @@ Thế kỷ 19 tranh luận gay gắt: âm nhạc nên **tự nó** (nhạc tuy�
 ## Với người học piano
 Nhiều [[tieu-pham-piano|tiểu phẩm piano]] cũng có "chương trình": *[[phan-tich-traumerei|Kinderszenen]]*, *Bức tranh triển lãm* của [[modest-mussorgsky|Mussorgsky]], các tiêu đề của Debussy. Đọc tiêu đề trước rồi tự hỏi: âm nhạc tả điều đó **bằng cách nào** (tiết tấu, âm vực, hoà âm)? Xem [[nghe-nhac-chu-dong]].
 Liên quan: [[giao-huong]], [[khuc-mo-man]], [[thoi-ky-lang-man]].
+
+## Nghe ví dụ
+
+::youtube JcDzRjMIDvo | Smetana — *Vltava* (từ *Má vlast*) · Berliner Philharmoniker, Krzysztof Urbański
+
+::youtube IywXC0KsEWQ | Liszt — *Les Préludes* · Berliner Philharmoniker, Christian Thielemann
 `,
   },
   {
@@ -900,6 +1008,12 @@ Liên quan: [[giao-huong]], [[khuc-mo-man]], [[thoi-ky-lang-man]].
 ## Với người học piano
 Người đệm cho lớp múa ballet chơi piano theo từng bài tập (plié, tendu, grand [[nhip-do|allegro]]…): cần nhịp vững, câu 8 phách rõ, và khả năng [[choi-phuc-dieu|chơi theo tai]] hay [[ngau-hung-piano|ngẫu hứng]].
 Liên quan: [[to-khuc-baroque]], [[giao-huong]], [[thoi-ky-the-ky-20]].
+
+## Nghe ví dụ
+
+::youtube ghkljW0ZmJU | Stravinsky — *Lễ bái xuân* (trọn bộ) · London Symphony Orchestra, Simon Rattle (2017)
+
+::youtube mxlTEN_1YCw | Tchaikovsky — *Hồ thiên nga* · The Royal Ballet
 `,
   },
   {
@@ -934,6 +1048,14 @@ Khác [[opera]]: có **thoại nói**, nội dung hài, nhạc dễ nhớ.
 ::form Verse:1 Refrain_A:2 A:2 B:2 A:2 | Ca khúc Broadway kinh điển: đoạn dẫn (verse) rồi điệp khúc 32 ô AABA — xem [[hinh-thuc-ca-khuc-32]]
 Rất nhiều **jazz standard** đến từ nhạc kịch Broadway — xem [[hoc-piano-jazz]].
 Liên quan: [[nhac-pho-thong-the-ky-20]], [[nhac-phim-va-tro-choi]].
+
+## Nghe ví dụ
+
+::youtube rfoakeJeR1Q | Offenbach — *Orphée aux enfers*: *Galop infernal* (can-can) · Orchestre National de France, Cristian Măcelaru
+
+::youtube H2lrKuZKV-Q | Johann Strauss II — *Die Fledermaus*: khúc mở màn · Wiener Philharmoniker, Zubin Mehta (1999)
+
+::youtube h1_wL_5bPIc | Andrew Lloyd Webber — *The Phantom of the Opera*, kỷ niệm 25 năm tại Royal Albert Hall
 `,
   },
   {
@@ -968,6 +1090,14 @@ Người chơi ngồi trước đàn mà **không đánh nốt nào**; "âm nh�
 ## Với người học piano
 Thế kỷ 20 có nhiều bài piano rất hợp để dạy: [[bela-bartok|Bartók]] (*Mikrokosmos*), Kabalevsky, Prokofiev (*Nhạc cho trẻ em*), các bài tối giản lặp mẫu. Chúng mở tai học trò với [[am-giai-bat-cung|âm giai mới]], [[nhip-hon-hop|nhịp lẻ]] và [[am-cum|âm cụm]].
 Liên quan: [[hoa-am-the-ky-20]], [[thoi-ky-the-ky-20]], [[ballet]].
+
+## Nghe ví dụ
+
+::youtube Y9iDOt2WbjY | Debussy — *Prélude à l'après-midi d'un faune* · hr-Sinfonieorchester, Andrés Orozco-Estrada
+
+::youtube wHlgiNgGACU | Steve Reich — *Music for 18 Musicians* · Ensemble Signal
+
+::youtube 41KmFzZeO-s | Schoenberg — *Pierrot lunaire* Op. 21, số 1 *Mondestrunken*
 `,
   },
   {
@@ -1001,6 +1131,12 @@ Liên quan: [[hoa-am-the-ky-20]], [[thoi-ky-the-ky-20]], [[ballet]].
 - **Đàn piano điện** dùng mẫu thu từ đàn thật hoặc [[doi-am|mô phỏng]] âm thanh — xem [[cac-loai-dan-piano]].
 - Hiểu **âm sắc** như tổ hợp bồi âm (xem [[am-sac]], [[chuoi-boi-am]]) là nền tảng để dùng đàn tổng hợp.
 Liên quan: [[trao-luu-the-ky-20]], [[toi-gian]], [[nhac-phim-va-tro-choi]].
+
+## Nghe ví dụ
+
+::youtube WTtzAmZFtds | Stockhausen — *Gesang der Jünglinge* (1955–56), tác phẩm băng từ
+
+::youtube W32OAvOU1wU | Wendy Carlos — *Switched-On Bach* (synthesizer Moog)
 `,
   },
   {
@@ -1040,6 +1176,10 @@ Liên quan: [[trao-luu-the-ky-20]], [[toi-gian]], [[nhac-phim-va-tro-choi]].
 ## Với người học piano
 Bản chuyển soạn piano của nhạc phim và nhạc game là động lực rất mạnh với học trò nhỏ tuổi. Dùng chúng để dạy [[ky-hieu-hop-am|đọc hợp âm]], [[hop-am-muon]], [[ostinato]].
 Liên quan: [[nhac-dien-tu]], [[operetta-va-nhac-kich]], [[giao-huong]].
+
+## Nghe ví dụ
+
+::youtube 5Qtu2-bpo7s | John Williams — *Star Wars*: Main Title · Wiener Philharmoniker, John Williams (Vienna 2020)
 `,
   },
   {
@@ -1088,6 +1228,12 @@ Liên quan: [[nhac-dien-tu]], [[operetta-va-nhac-kich]], [[giao-huong]].
 - [[dem-pop-ballad|Đệm pop]] trên piano: nhận ra tiết tấu dòng nhạc rồi chuyển nó vào tay trái – tay phải — xem [[dem-hat-piano]], [[dieu-dem-pho-bien]].
 - [[hoa-am-pop|Hoà âm pop]] dùng nhiều vòng bốn hợp âm — xem [[vong-hop-am]], [[hop-am-6-va-add]].
 Liên quan: [[tan-nhac-viet-nam]], [[nhac-dien-tu]], [[blues-12-nhip]].
+
+## Nghe ví dụ
+
+::youtube A_MjCqQoLLA | The Beatles — *Hey Jude*
+
+::youtube Zi_XLOBDo_Y | Michael Jackson — *Billie Jean*
 `,
   },
   {
@@ -1120,6 +1266,18 @@ Ca khúc Việt Nam được đệm bằng các điệu quen thuộc: bolero, sl
 - Ca khúc quen thuộc là chất liệu tuyệt vời để dạy [[ky-hieu-hop-am|đọc hợp âm]], [[vong-hop-am|vòng hợp âm]] và [[choi-phuc-dieu|chơi theo tai]].
 - So sánh với [[am-nhac-truyen-thong-viet-nam|nhạc truyền thống]]: tân nhạc dùng cao độ bình quân và hoà âm phương Tây, còn nhạc cổ truyền dùng hơi, nhấn, luyến.
 Liên quan: [[piano-viet-nam]].
+
+## Nghe ví dụ
+
+::youtube R0mpl0Az4Q8 | Trịnh Công Sơn — *Diễm xưa* · Khánh Ly
+
+::youtube uNGsrbcfJb8 | Trịnh Công Sơn — *Một cõi đi về* · Khánh Ly
+
+::youtube lQDntvMjE8E | Văn Cao — *Buồn tàn thu* · Thái Thanh
+
+::youtube CqzwvWAn9wA | Văn Cao — *Buồn tàn thu* · Trường Vũ
+
+::youtube sGTZpjrZleI | Phạm Duy — *Tình ca* · Paris By Night 99
 `,
   },
 ]

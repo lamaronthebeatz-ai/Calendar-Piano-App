@@ -1102,6 +1102,10 @@ Hai hình trên là điểm xuất phát; người đệm giỏi thay đổi li�
 Theo TJPS, lối đệm "comping" thưa xuất hiện khoảng **thập niên 1940**, khi tay bass đảm nhận đường bass đi và tay trái piano không còn phải "bơm" phách như thời [[dem-hat-piano|stride]] (xem [[nghe-si-piano-jazz]], [[the-bam-bac-thay-jazz]]).
 
 Thêm: [[dem-cho-ca-si]], [[jam-session]], [[stride-piano]].
+
+## Nghe ví dụ
+
+::youtube ylXk1LBvIqU | Miles Davis — *So What* (album *Kind of Blue*, 1959)
 `,
   },
   {
@@ -2474,6 +2478,12 @@ Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc n�
 - Mỗi phong cách gắn với một **[[ky-thuat-piano|kỹ năng piano]]** riêng: ragtime/stride luyện tay trái nhảy xa ([[buoc-nhay-xa]]), boogie-woogie luyện [[phoi-hop-hai-tay|độc lập hai tay]], bebop luyện thế bấm shell, modal luyện hợp âm quãng 4 ([[hoa-am-quang-bon]]), Latin luyện [[tiet-tau|tiết tấu]].
 - Nghe theo thứ tự thời gian giúp học trò nghe ra **hoà âm ngày càng phức tạp** — từ hợp âm ba của ragtime đến [[hop-am-mo-rong|nốt căng]] của bebop và [[upper-structure]] của post-bop.
 Nghệ sĩ theo từng thời: [[nghe-si-piano-jazz]]. Lộ trình lý thuyết: [[hoa-am-jazz]].
+
+## Nghe ví dụ
+
+::youtube 89azFhwXzUo | Bill Evans Trio — *Waltz for Debby* (thu trực tiếp 1980)
+
+::youtube ylXk1LBvIqU | Miles Davis — *So What* (album *Kind of Blue*, 1959)
 `,
   },
 
