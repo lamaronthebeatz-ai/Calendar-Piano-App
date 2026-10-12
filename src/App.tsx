@@ -1,17 +1,18 @@
 import { lazy, Suspense, useState } from 'react'
 import clsx from 'clsx'
-import { Route, HashRouter, Routes } from 'react-router-dom'
+import { Navigate, Route, HashRouter, Routes } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
 import { CalendarPage } from './features/calendar/CalendarPage'
 import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
-import { StatisticsPage } from './features/statistics/StatisticsPage'
 import { SettingsPage } from './features/settings/SettingsPage'
 import { PrivateArea } from './components/PrivateArea'
 
 // Theory content is large and independent of the timetable, so it loads on demand.
 const TheoryPage = lazy(() => import('./features/theory/TheoryPage').then((m) => ({ default: m.TheoryPage })))
+
+const CurriculumPage = lazy(() => import('./features/curriculum/CurriculumPage').then((m) => ({ default: m.CurriculumPage })))
 
 const MusicologyPage = lazy(() => import('./features/musicology/MusicologyPage').then((m) => ({ default: m.MusicologyPage })))
 
@@ -47,7 +48,8 @@ function Router() {
           <Route path="/" element={<PrivateArea title="Thời khoá biểu"><CalendarPage /></PrivateArea>} />
           <Route path="/students" element={<PrivateArea title="Học viên"><StudentsListPage /></PrivateArea>} />
           <Route path="/students/:id" element={<PrivateArea title="Học viên"><StudentProfilePage /></PrivateArea>} />
-          <Route path="/statistics" element={<StatisticsPage />} />
+          <Route path="/statistics" element={<Navigate to="/curriculum" replace />} />
+          <Route path="/curriculum/:id?" element={<Suspense><CurriculumPage /></Suspense>} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
           <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />

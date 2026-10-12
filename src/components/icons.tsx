@@ -300,3 +300,10 @@ export const LockIcon = (p: IconProps) => (
     <path d="M8 11V7.5a4 4 0 0 1 8 0V11" />
   </svg>
 )
+export const GraduationIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z" />
+    <path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5" />
+    <path d="M22 9.5v5" />
+  </svg>
+)
