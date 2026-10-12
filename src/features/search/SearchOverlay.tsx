@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Dialog } from '../../components/Dialog'
 import { Avatar, LocationBadge } from '../../components/Badge'
-import { SearchIcon, UsersIcon } from '../../components/icons'
+import { LockIcon, SearchIcon, UsersIcon } from '../../components/icons'
+import { usePrivateUnlocked } from '../../components/privateLock'
 import { useUIStore } from '../../store/uiStore'
 import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
 import { WEEKDAY_NAMES } from '../../utils/date'
@@ -18,19 +19,21 @@ export function SearchOverlay() {
   const students = useStudents() ?? []
   const slots = useTimetableSlots() ?? []
   const [query, setQuery] = useState('')
+  // Students and lessons stay out of search while the private pages are locked.
+  const privateOpen = usePrivateUnlocked()
 
   const studentMap = useMemo(() => new Map(students.map((s) => [s.id, s])), [students])
 
   const matchedStudents = useMemo(() => {
-    if (!query.trim()) return []
+    if (!privateOpen || !query.trim()) return []
     const q = query.toLowerCase()
     return students.filter(
       (s) => s.name.toLowerCase().includes(q) || s.nickname?.toLowerCase().includes(q) || s.phone?.includes(q) || s.notes?.toLowerCase().includes(q),
     )
-  }, [students, query])
+  }, [students, query, privateOpen])
 
   const matchedSlots = useMemo(() => {
-    if (!query.trim()) return []
+    if (!privateOpen || !query.trim()) return []
     const q = query.toLowerCase()
     return slots
       .filter((s) => {
@@ -46,7 +49,7 @@ export function SearchOverlay() {
       })
       .sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
       .slice(0, 20)
-  }, [slots, studentMap, query])
+  }, [slots, studentMap, query, privateOpen])
 
   function close() {
     setOpen(false)
@@ -132,7 +135,13 @@ export function SearchOverlay() {
           </div>
         )}
 
-        {students.length === 0 && (
+        {!privateOpen && (
+          <div className="flex items-center gap-2 text-[12.5px] text-[var(--color-ink-faint)]">
+            <LockIcon width={14} height={14} /> Học viên và buổi học đang khoá — mở Thời khoá biểu hoặc Học viên bằng mã riêng để tìm.
+          </div>
+        )}
+
+        {privateOpen && students.length === 0 && (
           <div className="flex items-center gap-2 text-[12.5px] text-[var(--color-ink-faint)]">
             <UsersIcon width={14} height={14} /> Thêm học viên để bắt đầu tìm kiếm.
           </div>

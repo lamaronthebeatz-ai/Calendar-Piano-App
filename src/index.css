@@ -437,3 +437,39 @@ body {
   .page-enter, .hero-ebony picture img, .text-gold-gradient, .nav-pop { animation: none; }
   .spot-zoom:hover img { scale: 1; }
 }
+
+/* ---------- Private pages: a pane of frosted glass fitted to the page body ---------- */
+.private-veil { transition: filter 800ms cubic-bezier(0.7, 0, 0.2, 1), scale 800ms cubic-bezier(0.7, 0, 0.2, 1); }
+.private-veil.is-veiled { filter: blur(14px) saturate(1.2); scale: 1.03; }
+.private-glass {
+  background: color-mix(in oklch, var(--color-surface) 58%, transparent);
+  backdrop-filter: blur(26px) saturate(1.5);
+  -webkit-backdrop-filter: blur(26px) saturate(1.5);
+  animation: fade-in 260ms ease-out;
+  transition: transform 800ms cubic-bezier(0.7, 0, 0.2, 1), border-radius 800ms ease, box-shadow 800ms ease;
+}
+.private-glass.is-dropping { animation: private-drop 700ms cubic-bezier(0.16, 1, 0.3, 1); }
+@keyframes private-drop {
+  from { transform: translateY(-104%); border-bottom-left-radius: 36px; border-bottom-right-radius: 36px; }
+  to { transform: none; }
+}
+.private-glass.is-leaving {
+  transform: translateY(-104%);
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.3);
+}
+.private-content { animation: float-up 520ms cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+.private-glass.is-leaving .private-content { opacity: 0; transform: translateY(-20px) scale(0.97); transition: opacity 400ms ease, transform 550ms ease; }
+.private-emblem {
+  background: linear-gradient(160deg, color-mix(in oklch, var(--color-surface-raised) 85%, transparent), color-mix(in oklch, var(--color-gold) 12%, var(--color-surface-raised)));
+  border: 1px solid color-mix(in oklch, var(--color-gold) 30%, transparent);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 14px 34px -14px color-mix(in oklch, var(--color-gold) 60%, transparent);
+}
+.private-shackle { transform-box: fill-box; transform-origin: 100% 100%; transition: transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.private-emblem.is-open .private-shackle { transform: translateY(-2.5px) rotate(-28deg); }
+@media (prefers-reduced-motion: reduce) {
+  .private-veil { transition: none; }
+  .private-glass, .private-glass.is-dropping, .private-content { animation: none; transition: opacity 300ms ease; }
+  .private-glass.is-leaving { transform: none; opacity: 0; }
+}

@@ -294,3 +294,9 @@ export const ExpandIcon = (p: IconProps) => (
     <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
   </svg>
 )
+export const LockIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <rect x="5" y="11" width="14" height="10" rx="2.5" />
+    <path d="M8 11V7.5a4 4 0 0 1 8 0V11" />
+  </svg>
+)

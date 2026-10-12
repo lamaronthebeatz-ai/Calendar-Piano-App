@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
 import { Avatar } from '../../components/Badge'
-import { Button } from '../../components/Button'
+import { Button, IconButton } from '../../components/Button'
 import { EmptyState } from '../../components/EmptyState'
 import { SegmentedControl } from '../../components/fields'
-import { PlusIcon, UsersIcon } from '../../components/icons'
+import { LockIcon, PlusIcon, UsersIcon } from '../../components/icons'
+import { lockPrivate } from '../../components/privateLock'
 import { useUIStore } from '../../store/uiStore'
 import type { Student, StudentStatus } from '../../types'
 import { WEEKDAY_SHORT } from '../../utils/date'
@@ -50,9 +51,12 @@ export function StudentsListPage() {
       <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
         <div className="flex items-center justify-between gap-3">
           <h1 className="font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Học viên</h1>
-          <Button variant="primary" size="sm" icon={<PlusIcon width={15} height={15} />} onClick={openCreateStudent} className="hidden sm:inline-flex">
-            Thêm học viên
-          </Button>
+          <div className="flex items-center gap-1.5">
+            <Button variant="primary" size="sm" icon={<PlusIcon width={15} height={15} />} onClick={openCreateStudent} className="hidden sm:inline-flex">
+              Thêm học viên
+            </Button>
+            <IconButton label="Khoá lại" icon={<LockIcon width={16} height={16} />} onClick={lockPrivate} />
+          </div>
         </div>
         <div className="mt-3 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
           <input

@@ -30,6 +30,8 @@ export function useAutoHideNav(root: RefObject<HTMLElement | null>) {
   const onScroll = useCallback((e: Event) => {
     const el = e.target
     if (!(el instanceof HTMLElement)) return
+    // Programmatic scrolls behind a lock (e.g. the timetable jumping to now) must not hide the only way out.
+    if (el.closest('[inert]')) return
     const top = el.scrollTop
     // Containers start at the top, so an unseen one is treated as coming from 0.
     const prev = last.current.get(el) ?? 0

@@ -8,6 +8,7 @@ import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
 import { StatisticsPage } from './features/statistics/StatisticsPage'
 import { SettingsPage } from './features/settings/SettingsPage'
+import { PrivateArea } from './components/PrivateArea'
 
 // Theory content is large and independent of the timetable, so it loads on demand.
 const TheoryPage = lazy(() => import('./features/theory/TheoryPage').then((m) => ({ default: m.TheoryPage })))
@@ -43,9 +44,9 @@ function Router() {
     <HashRouter>
       <Routes>
         <Route element={<AppShell />}>
-          <Route path="/" element={<CalendarPage />} />
-          <Route path="/students" element={<StudentsListPage />} />
-          <Route path="/students/:id" element={<StudentProfilePage />} />
+          <Route path="/" element={<PrivateArea title="Thời khoá biểu"><CalendarPage /></PrivateArea>} />
+          <Route path="/students" element={<PrivateArea title="Học viên"><StudentsListPage /></PrivateArea>} />
+          <Route path="/students/:id" element={<PrivateArea title="Học viên"><StudentProfilePage /></PrivateArea>} />
           <Route path="/statistics" element={<StatisticsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />

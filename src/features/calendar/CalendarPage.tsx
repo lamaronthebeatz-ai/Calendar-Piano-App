@@ -11,6 +11,8 @@ import { minutesToTime, timeToMinutes } from '../../utils/time'
 import { FilterIcon, SearchIcon } from '../../components/icons'
 import { IconButton } from '../../components/Button'
 import clsx from 'clsx'
+import { LockIcon } from '../../components/icons'
+import { lockPrivate } from '../../components/privateLock'
 
 export function CalendarPage() {
   const filters = useUIStore((s) => s.filters)
@@ -72,6 +74,7 @@ export function CalendarPage() {
           <span className="hidden sm:inline">Lọc</span>
         </button>
         <IconButton label="Tìm kiếm" icon={<SearchIcon width={17} height={17} />} onClick={() => setSearchOpen(true)} />
+        <IconButton label="Khoá lại" icon={<LockIcon width={16} height={16} />} onClick={lockPrivate} />
       </div>
 
       <WeeklyStatsBar slots={filteredSlots} students={students} currency={settings.currency} />
