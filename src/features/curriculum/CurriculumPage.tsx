@@ -28,7 +28,7 @@ export function CurriculumPage() {
 
   return (
     <ScrollArea key={id} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
-      <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={curriculum && hueTint(curriculum.hue)}>
+      <div data-scrolled className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={curriculum && hueTint(curriculum.hue)}>
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
           {curriculum && (
             <button
