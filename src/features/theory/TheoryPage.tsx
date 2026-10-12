@@ -330,11 +330,11 @@ function Index() {
               {[
                 [ARTICLES.length, 'trang'],
                 [articlesByCategory.length, 'chủ đề'],
-                [libraryStats.links.toLocaleString('vi-VN'), 'liên kết nội bộ'],
-                [libraryStats.figures.toLocaleString('vi-VN'), 'hình minh hoạ'],
+                [libraryStats.links, 'liên kết nội bộ'],
+                [libraryStats.figures, 'hình minh hoạ'],
               ].map(([n, label]) => (
                 <div key={label} className="flex items-baseline gap-1.5">
-                  <dt className="font-display text-[22px] font-semibold text-[#f0c987]">{n}</dt>
+                  <dt className="font-display text-[22px] font-semibold tabular-nums text-[#f0c987]"><CountUp to={Number(n)} /></dt>
                   <dd className="text-[12.5px] text-[#e9dcc6]/60">{label}</dd>
                 </div>
               ))}
@@ -413,12 +413,12 @@ function Index() {
           <section className="space-y-4">
             <SectionTitle hint={`${articlesByCategory.length} nhóm`}>Mục lục theo chủ đề</SectionTitle>
             <div className="grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 lg:grid-cols-3">
-              {articlesByCategory.map((c, i) => (
+              {articlesByCategory.map((c) => (
                 <button
                   key={c.id}
                   onClick={() => select(c.id)}
-                  style={{ ...tint(c.id), animationDelay: `${Math.min(i, 12) * 30}ms` }}
-                  className="theory-card animate-float-up group flex items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 text-left"
+                  style={tint(c.id)}
+                  className="theory-card reveal group flex items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 text-left"
                 >
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[22px] text-[var(--tint)] ring-1 ring-[color-mix(in_oklch,var(--tint)_22%,transparent)] transition-transform duration-300 group-hover:scale-105">
                     {GLYPHS[c.id]}
@@ -567,7 +567,7 @@ function Spotlight({ wide }: { wide?: boolean }) {
           wide && 'sm:flex-row',
         )}
       >
-        <Link key={article.slug} to={`/theory/${article.slug}`} aria-label={article.title} className={clsx('animate-fade-in relative block min-h-48 flex-1 overflow-hidden', wide && 'sm:min-h-64 sm:w-1/2 sm:flex-none')}>
+        <Link key={article.slug} to={`/theory/${article.slug}`} aria-label={article.title} className={clsx('spot-zoom animate-fade-in relative block min-h-48 flex-1 overflow-hidden', wide && 'sm:min-h-64 sm:w-1/2 sm:flex-none')}>
           <SpotlightPicture article={article} />
         </Link>
         <div key={`${article.slug}-text`} className={clsx('animate-fade-in flex flex-col p-5', wide && 'sm:w-1/2 sm:justify-center sm:p-7')}>
@@ -714,7 +714,7 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
   return (
     <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
       {articles.map((a, i) => (
-        <li key={a.slug} className="animate-float-up" style={{ animationDelay: `${Math.min(i, 12) * 25}ms` }}>
+        <li key={a.slug} className="reveal">
           <Link
             to={`/theory/${a.slug}`}
             style={tint(a.category)}
@@ -1082,4 +1082,22 @@ function RelatedRow({ title, articles }: { title: string; articles: Article[] })
       </div>
     </section>
   )
+}
+
+/** A number that counts up from zero once, easing out; shows the final value straight away when motion is reduced. */
+function CountUp({ to, ms = 1400 }: { to: number; ms?: number }) {
+  const [value, setValue] = useState(() => (matchMedia('(prefers-reduced-motion: reduce)').matches ? to : 0))
+  useEffect(() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let frame = 0
+    const start = performance.now()
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / ms)
+      setValue(Math.round(to * (1 - (1 - t) ** 4)))
+      if (t < 1) frame = requestAnimationFrame(tick)
+    }
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [to, ms])
+  return <>{value.toLocaleString('vi-VN')}</>
 }

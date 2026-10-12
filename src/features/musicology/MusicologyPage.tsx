@@ -198,7 +198,7 @@ function BranchCard({ branch: b, progress, delay }: { branch: ResolvedBranch; pr
     <Link
       to={`/musicology/${b.id}`}
       style={{ ...hueTint(b.hue), animationDelay: `${delay}ms` }}
-      className="theory-card animate-float-up group flex h-full items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4"
+      className="theory-card reveal group flex h-full items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4"
     >
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[22px] text-[var(--tint)] ring-1 ring-[color-mix(in_oklch,var(--tint)_22%,transparent)] transition-transform duration-300 group-hover:scale-105">
         {b.glyph}

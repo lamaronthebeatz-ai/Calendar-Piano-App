@@ -76,7 +76,7 @@ export function StatisticsPage() {
 
 function Tile({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-[var(--color-border)] p-3.5">
+    <div className="reveal rounded-xl border border-[var(--color-border)] p-3.5">
       <p className="text-[11px] font-medium uppercase tracking-wide text-[var(--color-ink-faint)]">{label}</p>
       <p className="mt-0.5 truncate text-[19px] font-semibold text-[var(--color-ink)]">{value}</p>
     </div>
@@ -85,7 +85,7 @@ function Tile({ label, value }: { label: string; value: string }) {
 
 function ChartCard({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-xl border border-[var(--color-border)] p-4">
+    <div className="reveal rounded-xl border border-[var(--color-border)] p-4">
       <p className="mb-4 text-[14px] font-semibold text-[var(--color-ink)]">{title}</p>
       {children}
     </div>

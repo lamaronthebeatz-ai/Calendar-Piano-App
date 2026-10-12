@@ -54,7 +54,7 @@ function NavItem({ item }: { item: (typeof navItems)[number] }) {
       {({ isActive }) => (
         <>
           <span className={clsx('absolute top-0 h-[3px] w-6 rounded-b-full bg-[var(--color-gold)] transition-all duration-300', isActive ? 'opacity-100' : 'scale-x-0 opacity-0')} />
-          <item.icon width={21} height={21} className={clsx('transition-transform duration-200', isActive && '-translate-y-px')} />
+          <item.icon width={21} height={21} className={clsx('transition-transform duration-200', isActive && 'nav-pop -translate-y-px')} />
           {item.label}
         </>
       )}

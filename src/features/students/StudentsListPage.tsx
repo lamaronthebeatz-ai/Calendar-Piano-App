@@ -111,7 +111,7 @@ export function StudentsListPage() {
 
 function StudentRow({ student, schedule, onClick }: { student: Student; schedule?: string; onClick: () => void }) {
   return (
-    <li>
+    <li className="reveal">
       <button onClick={onClick} className="flex w-full items-center gap-3.5 px-4 py-3 text-left transition-colors hover:bg-[var(--color-surface-sunken)] lg:px-6">
         <Avatar name={student.nickname || student.name} />
         <div className="min-w-0 flex-1">

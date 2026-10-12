@@ -343,3 +343,97 @@ body {
   .lock-glass.is-leaving { transform: none; opacity: 0; }
   .lock-shake { animation: none; }
 }
+
+/* ---------- Motion layer: page entrances, scroll reveals, light that follows the pointer ---------- */
+@keyframes page-in {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+.page-enter { animation: page-in 420ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Cards and article blocks rise into place as they scroll into view. Uses individual translate/scale
+   so it never fights the hover transform; browsers without scroll timelines simply show them. */
+@keyframes reveal-up {
+  from { opacity: 0; translate: 0 28px; scale: 0.97; }
+  to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@keyframes heading-rule {
+  from { scale: 0 1; }
+  to { scale: 1 1; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal,
+    .prose-theory > :is(figure, table, blockquote),
+    .prose-theory figure {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+    .prose-theory h2::after {
+      animation: heading-rule linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 40%;
+    }
+  }
+}
+.prose-theory h2 { position: relative; padding-bottom: 0.35em; }
+.prose-theory h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.75rem;
+  height: 2px;
+  border-radius: 2px;
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--tint, var(--color-gold)), var(--color-gold));
+}
+
+/* A soft spot of the card's own colour follows the pointer across library cards. */
+@property --glow {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.theory-card {
+  --mx: 50%;
+  --my: 50%;
+  background-image: radial-gradient(260px circle at var(--mx) var(--my), color-mix(in oklch, var(--tint, var(--color-gold)) calc(var(--glow) * 16%), transparent), transparent 70%);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, --glow 300ms ease;
+}
+@media (hover: hover) {
+  .theory-card:hover { --glow: 1; }
+}
+
+/* Hero: the photograph drifts slowly, the gold title catches the light. */
+@keyframes ken-burns {
+  from { scale: 1; translate: 0 0; }
+  to { scale: 1.08; translate: -1.5% -1%; }
+}
+.hero-ebony picture img { animation: ken-burns 26s ease-in-out infinite alternate; }
+@keyframes gold-shimmer {
+  to { background-position: 200% center; }
+}
+.text-gold-gradient {
+  background-image: linear-gradient(90deg, #f3cf8e, #d9954a 25%, #f7dca6 50%, #d9954a 75%, #f3cf8e);
+  background-size: 200% auto;
+  animation: gold-shimmer 7s linear infinite;
+}
+
+/* Navigation: the icon of a newly chosen tab gives a small spring. */
+@keyframes nav-pop {
+  0% { scale: 1; }
+  40% { scale: 1.18; translate: 0 -2px; }
+  100% { scale: 1; translate: 0 -1px; }
+}
+.nav-pop { animation: nav-pop 420ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* Spotlight picture eases in closer on hover. */
+.spot-zoom img { transition: scale 900ms cubic-bezier(0.16, 1, 0.3, 1), opacity 500ms ease; }
+.spot-zoom:hover img { scale: 1.05; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter, .hero-ebony picture img, .text-gold-gradient, .nav-pop { animation: none; }
+  .spot-zoom:hover img { scale: 1; }
+}

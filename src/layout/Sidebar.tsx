@@ -64,7 +64,7 @@ export function Sidebar() {
                     isActive ? 'opacity-100' : 'scale-y-0 opacity-0',
                   )}
                 />
-                <item.icon width={18} height={18} className={clsx('transition-colors', isActive ? 'text-[var(--color-accent)]' : 'group-hover:text-[var(--color-ink)]')} />
+                <item.icon width={18} height={18} className={clsx('transition-colors', isActive ? 'nav-pop text-[var(--color-accent)]' : 'group-hover:text-[var(--color-ink)]')} />
                 {item.label}
               </>
             )}
