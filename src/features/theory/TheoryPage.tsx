@@ -26,6 +26,7 @@ import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, 
 import { markRead, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useBack } from '../../hooks/useBack'
+import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
 import { Copyright } from '../../components/Copyright'
 
@@ -378,12 +379,12 @@ function Index() {
         <CategoryView id={active.id} onSelect={select} />
       ) : (
         <>
-          {(recent.length > 0 || saved.length > 0) && (
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {recent.length > 0 && <Shelf title="Đọc gần đây" icon={<ClockIcon width={15} height={15} />} articles={lookup(recent).slice(0, 6)} progress />}
-              {saved.length > 0 && <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} />}
-            </div>
-          )}
+          {/* Recent and saved reading side by side; a rotating random article fills whichever slot is free. */}
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {recent.length > 0 && <Shelf title="Đọc gần đây" icon={<ClockIcon width={15} height={15} />} articles={lookup(recent).slice(0, 6)} progress />}
+            {saved.length > 0 && <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} />}
+            {(recent.length === 0 || saved.length === 0) && <Spotlight wide={recent.length === 0 && saved.length === 0} />}
+          </div>
 
           <section className="space-y-4">
             <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Mỗi bài là lộ trình của một nhóm">Bắt đầu từ đây</SectionTitle>
@@ -501,6 +502,134 @@ function Shelf({ title, icon, articles, progress }: { title: string; icon: React
         ))}
       </ul>
     </section>
+  )
+}
+
+type Picture = { wiki: string[]; years?: string } | { src: string; drawing?: boolean }
+
+/** The picture an article already shows: its portrait, its first Wikipedia or Commons image, or a video thumbnail. */
+function pictureOf(a: Article): Picture | null {
+  if (a.portrait) return { wiki: a.portrait.titles, years: a.portrait.years }
+  const wiki = a.body.match(/^::wiki ([^|\n]+?)\s*(?:\||$)/m)
+  if (wiki) return { wiki: [wiki[1].replace(/ /g, '_')] }
+  if (a.wiki) return { wiki: [a.wiki] }
+  const img = a.body.match(/^::img ([^|\n]+?)\s*(?:\||$)/m)
+  if (img) return { src: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(img[1])}?width=640`, drawing: true }
+  const video = a.body.match(/^::youtube ([\w-]{11})/m)
+  if (video) return { src: `https://i.ytimg.com/vi/${video[1]}/hqdefault.jpg` }
+  return null
+}
+
+const SPOTLIGHT_MS = 12000
+const SPOTLIGHT_TICK = 200
+
+/**
+ * A random illustrated article that changes on its own every few seconds. It pauses while the reader
+ * points at it, focuses inside it or the tab is hidden, and can be skipped by hand.
+ */
+function Spotlight({ wide }: { wide?: boolean }) {
+  const [pool] = useState(() => {
+    const withPictures = ARTICLES.filter((a) => !a.unlisted && pictureOf(a))
+    for (let i = withPictures.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[withPictures[i], withPictures[j]] = [withPictures[j], withPictures[i]]
+    }
+    return withPictures
+  })
+  const [{ index, elapsed }, setTurn] = useState({ index: 0, elapsed: 0 })
+  const [held, setHeld] = useState(false)
+  const article = pool[index % pool.length]
+  const next = () => setTurn((s) => ({ index: s.index + 1, elapsed: 0 }))
+
+  useEffect(() => {
+    if (held) return
+    const timer = setInterval(() => {
+      if (document.visibilityState !== 'visible') return
+      setTurn((s) => (s.elapsed + SPOTLIGHT_TICK >= SPOTLIGHT_MS ? { index: s.index + 1, elapsed: 0 } : { ...s, elapsed: s.elapsed + SPOTLIGHT_TICK }))
+    }, SPOTLIGHT_TICK)
+    return () => clearInterval(timer)
+  }, [held])
+
+  if (!article) return null
+  return (
+    <section className={clsx('flex flex-col space-y-3', wide && 'lg:col-span-2')}>
+      <SectionTitle icon={<ShuffleIcon width={15} height={15} />} hint="Tự đổi sau 12 giây">
+        Bài ngẫu nhiên
+      </SectionTitle>
+      <div
+        onMouseEnter={() => setHeld(true)}
+        onMouseLeave={() => setHeld(false)}
+        onFocus={() => setHeld(true)}
+        onBlur={() => setHeld(false)}
+        style={tint(article.category)}
+        className={clsx(
+          'theory-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]',
+          wide && 'sm:flex-row',
+        )}
+      >
+        <Link key={article.slug} to={`/theory/${article.slug}`} aria-label={article.title} className={clsx('animate-fade-in relative block min-h-48 flex-1 overflow-hidden', wide && 'sm:min-h-64 sm:w-1/2 sm:flex-none')}>
+          <SpotlightPicture article={article} />
+        </Link>
+        <div key={`${article.slug}-text`} className={clsx('animate-fade-in flex flex-col p-5', wide && 'sm:w-1/2 sm:justify-center sm:p-7')}>
+          <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--tint)]">{CATEGORIES[article.category].title}</span>
+          <Link to={`/theory/${article.slug}`} className="mt-1.5 font-display text-[20px] font-semibold leading-snug text-[var(--color-ink)] hover:text-[var(--tint)]">
+            {article.title}
+          </Link>
+          <p className="mt-2 line-clamp-3 text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{article.summary}</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Link to={`/theory/${article.slug}`} className="inline-flex items-center gap-1 rounded-xl bg-[var(--color-ink)] px-3.5 py-2 text-[13px] font-medium text-[var(--color-surface)] transition-transform hover:-translate-y-px">
+              Đọc bài <ArrowUpRightIcon width={14} height={14} />
+            </Link>
+            <button type="button" onClick={next} className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-[13px] font-medium text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]">
+              <ShuffleIcon width={14} height={14} /> Bài khác
+            </button>
+          </div>
+        </div>
+        {/* Time until the next article; it stops while the card is held. */}
+        <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-surface-sunken)]">
+          <span className="block h-full origin-left bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)] transition-transform duration-200 ease-linear" style={{ transform: `scaleX(${elapsed / SPOTLIGHT_MS})` }} />
+        </span>
+      </div>
+    </section>
+  )
+}
+
+/** The article's picture over a tinted glyph backdrop, which stays when there is no image or it cannot load. */
+function SpotlightPicture({ article }: { article: Article }) {
+  const pic = pictureOf(article)
+  const wikiKey = pic && 'wiki' in pic ? pic.wiki.join('|') : ''
+  const years = pic && 'wiki' in pic ? pic.years : undefined
+  const [lead, setLead] = useState<{ key: string; src: string | null }>()
+  const [loaded, setLoaded] = useState(false)
+  useEffect(() => {
+    if (!wikiKey) return
+    let live = true
+    leadImage(wikiKey.split('|'), years).then((img) => live && setLead({ key: wikiKey, src: img?.src ?? null }))
+    return () => {
+      live = false
+    }
+  }, [wikiKey, years])
+  const src = pic && 'src' in pic ? pic.src : lead?.key === wikiKey ? lead.src : null
+  const drawing = !!pic && 'drawing' in pic && !!pic.drawing
+  return (
+    <>
+      <span aria-hidden className="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,color-mix(in_oklch,var(--tint)_22%,var(--color-surface-raised)),color-mix(in_oklch,var(--color-gold)_12%,var(--color-surface-raised)))] font-['Noto_Music'] text-[110px] leading-none text-[color-mix(in_oklch,var(--tint)_30%,transparent)]">
+        {GLYPHS[article.category]}
+      </span>
+      {src && (
+        <img
+          src={src}
+          alt=""
+          onLoad={() => setLoaded(true)}
+          onError={() => setLoaded(false)}
+          className={clsx(
+            'absolute inset-0 h-full w-full transition-opacity duration-500',
+            drawing ? 'bg-white object-contain p-4' : article.portrait ? 'object-cover object-[50%_20%]' : 'object-cover',
+            loaded ? 'opacity-100' : 'opacity-0',
+          )}
+        />
+      )}
+    </>
   )
 }
 
