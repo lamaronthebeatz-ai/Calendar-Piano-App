@@ -17,9 +17,12 @@ const allLevels = (c: Curriculum) => [...c.levels, ...(c.tracks ?? []).flatMap((
 const lessonsOf = (c: Curriculum | Level) => ('levels' in c ? allLevels(c).flatMap((l) => l.units) : c.units).flatMap((u) => u.lessons)
 const totalMonths = (levels: Level[]) => levels.reduce(([a, b], l) => [a + l.months[0], b + l.months[1]], [0, 0])
 const fmtMonths = ([a, b]: [number, number]) => (a === b ? `${a} tháng` : `${a} – ${b} tháng`)
-const fmtYears = ([a, b]: number[]) => `khoảng ${Math.round((a / 12) * 2) / 2} – ${Math.round((b / 12) * 2) / 2} năm`
+const halfYears = (m: number) => String(Math.round((m / 12) * 2) / 2).replace('.', ',')
+const fmtYears = ([a, b]: number[]) => `khoảng ${halfYears(a)} – ${halfYears(b)} năm`
+/** Roadmap cells can be narrow: "ABRSM Grade 3" → "G3", "Đệm hát 2" → "Đệm 2". */
+const shortGrade = (g: string) => g.replace('ABRSM ', '').replace('Grade ', 'G').replace('Đệm hát ', 'Đệm ').replace('Initial', 'Init')
 
-/** Share of a set of lessons whose article has been opened at least once. */
+/** Share of a set of lessons the reader has ticked as studied. */
 function useProgress(slugs: string[]) {
   const { done: ticked } = useLibrary()
   const done = slugs.filter((s) => ticked.includes(s)).length
@@ -256,7 +259,7 @@ function Roadmap({ c }: { c: Curriculum }) {
             >
               <span aria-hidden className="absolute inset-y-0 left-0 bg-[var(--tint-soft)] transition-[width] duration-700" style={{ width: `${ratio * 100}%` }} />
               <span className="relative truncate font-display text-[13px] font-semibold text-[var(--tint)]">{i + 1}</span>
-              <span className="relative truncate text-[10.5px] text-[var(--color-ink-muted)]">{l.grade.replace('ABRSM ', '')}</span>
+              <span className="relative truncate text-[10.5px] text-[var(--color-ink-muted)]">{shortGrade(l.grade)}</span>
             </a>
           )
         })}
@@ -282,7 +285,7 @@ function LevelCard({ level, n, start }: { level: Level; n: number; start?: numbe
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[var(--tint)]">
             Cấp {n}
-            <span className="rounded-full bg-[var(--tint)] px-2 py-0.5 text-[10.5px] tracking-[0.08em] text-white">≈ {level.grade}</span>
+            <span className="rounded-full bg-[var(--tint)] px-2 py-0.5 text-[10.5px] tracking-[0.08em] text-white">{level.grade.startsWith('ABRSM') ? '≈ ' : ''}{level.grade}</span>
             <span className="font-medium normal-case tracking-normal text-[var(--color-ink-muted)]">
               {fmtMonths(level.months)}
               {start && ` · tháng ${start[0] + 1} – ${start[1] + level.months[1]}`}

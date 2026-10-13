@@ -469,6 +469,10 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
     refs: [
       ['ABRSM — Piano syllabus 2025 & 2026 (PDF)', 'https://caswells-strings.co.uk/wp-content/uploads/2025/07/ABRSM-Piano-syllabus-2025-2026.pdf'],
       ['ABRSM exams guide (London piano teacher)', 'https://www.piano-composer-teacher-london.co.uk/?p=14642'],
+      ['ABRSM — Piano Practical Grades 2025 & 2026: qualification specification (GLH/TQT)', 'https://www.abrsm.org/sites/default/files/2024-06/Piano%202025%20&%202026%20Prac%20syllabus%2020240524_access.pdf'],
+      ['ABRSM — Regulatory bodies and UCAS points', 'https://www.abrsm.org/en-gb/about-our-exams/regulatory-bodies-and-ucas-points'],
+      ['ABRSM — Piano Grade 5', 'https://tt.abrsm.org/en/our-exams/piano-exams/piano-grade-5/'],
+      ['ABRSM — Piano (thông báo chương trình 2027 & 2028)', 'https://www.abrsm.org/en-gb/instruments/piano'],
     ],
     body: `
 **ABRSM** (Associated Board of the Royal Schools of Music, Anh) là hệ thống thi piano theo cấp độ được dùng ở nhiều nước; các hệ thống khác gồm **Trinity College London** (Anh) và **RCM** (Canada). Phần dưới mô tả ABRSM.
@@ -492,6 +496,26 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
 - **Thị tấu**: chơi một bản ngắn chưa từng thấy sau thời gian xem ngắn — xem [[thi-tau]].
 - **Thi nghe**: vỗ lại [[tiet-tau|tiết tấu]], nhận ra [[giai-dieu|giai điệu]] đi lên hay xuống… — xem [[luyen-tai]].
 - **Bài chuẩn bị**: thường gồm các phong cách khác nhau — xem [[cac-thoi-ky]], [[dien-dat-cau-nhac]] và gợi ý tác phẩm theo cấp độ ở [[lo-trinh-tac-pham]].
+
+## Mỗi grade cần bao nhiêu giờ?
+Đặc tả chứng chỉ của ABRSM ghi hai con số cho từng grade: **GLH** (giờ học có hướng dẫn, tức giờ học với giáo viên) và **TQT** (tổng thời gian, gồm cả tự tập). ABRSM nói đây là ước tính thời gian trung bình, chỉ để tham khảo.
+
+| Grade | GLH | TQT |
+|---|---|---|
+| Initial | 8 | 40 |
+| 1 | 12 | 60 |
+| 2 | 18 | 90 |
+| 3 | 18 | 120 |
+| 4 | 24 | 150 |
+| 5 | 24 | 180 |
+| 6 | 36 | 220 |
+| 7 | 48 | 270 |
+| 8 | 54 | 320 |
+
+Các giáo trình trong mục Giáo trình của ứng dụng đổi TQT ra số tháng theo một nhịp tập giả định — đó là ước tính, không phải quy định.
+
+## Điều kiện trước Grade 6
+Muốn thi Grade 6 – 8 phải đậu trước **nhạc lý Grade 5**, hoặc Practical Musicianship Grade 5, hoặc một grade Jazz Grade 5. Theo đặc tả ABRSM, phần âm giai, thị tấu và thi nghe được sửa từ năm 2021 và giữ nguyên trong chương trình 2027 & 2028; chỉ danh sách bài thi đổi theo từng chu kỳ hai năm.
 
 ## Lưu ý
 Bảng điểm trên lấy từ hướng dẫn của giáo viên, khớp tổng 150 điểm ở nhiều nguồn; yêu cầu chi tiết (đặc biệt Grade 5–8 và các điều kiện kèm theo) cần đối chiếu **syllabus chính thức mới nhất của ABRSM**, vì nội dung thay đổi theo từng chu kỳ.
