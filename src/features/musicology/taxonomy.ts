@@ -57,8 +57,6 @@ export const PARTS: Record<PartId, { title: string; en: string; description: str
   },
 }
 
-const COUNTERPOINT = ['doi-am', 'doi-am-5-loai', 'phuc-dieu-nghiem-khac', 'quang-va-chuyen-dong-doi-am', 'cantus-firmus', 'doi-am-loai-1', 'doi-am-loai-2', 'doi-am-loai-3', 'doi-am-loai-4', 'doi-am-loai-5', 'doi-am-ba-bon-be', 'phong-cach-palestrina', 'cong-thuc-phuc-dieu', 'doi-am-kep', 'fugue']
-
 export const BRANCHES: Branch[] = [
   {
     id: 'nhap-mon',
@@ -328,7 +326,7 @@ export const BRANCHES: Branch[] = [
       { title: 'Cao độ, quãng, âm giai và giọng', cats: ['pitch', 'scales'] },
       { title: 'Hoà âm điệu tính', cats: ['harmony'] },
       { title: 'Hoà âm cromatic', cats: ['chromatic'] },
-      { title: 'Đối âm và phức điệu', slugs: COUNTERPOINT },
+      { title: 'Đối âm và phức điệu', cats: ['polyphony'] },
       { title: 'Giai điệu và hình thức', cats: ['form'] },
       { title: 'Lý thuyết thế kỷ 20', slugs: ['hoa-am-the-ky-20'], cats: ['modern'], except: ['cac-thoi-ky', 'am-nhac-truyen-thong-viet-nam'] },
       { title: 'Jazz và âm nhạc phổ thông', slugs: ['hoa-am-pop'], cats: ['jazz'] },

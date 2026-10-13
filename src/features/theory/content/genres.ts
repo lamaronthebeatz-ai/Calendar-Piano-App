@@ -173,6 +173,7 @@ Liên quan: [[doi-am]], [[thanh-ca-gregorian]], [[thoi-ky-trung-co]].
     slug: 'motet',
     title: 'Motet',
     category: 'genres',
+    also: ['polyphony'],
     aliases: ['motet', 'isorhythm', 'motet isorhythm', 'talea', 'color (isorhythm)', 'Ars nova', 'Roman de Fauvel', 'Nuper rosarum flores'],
     summary: 'Một trong những thể loại sống lâu nhất: sinh ra ở thế kỷ 13 từ organum, mỗi bè một lời khác nhau; thế kỷ 14 có motet isorhythm (mẫu tiết tấu lặp lại) của Vitry và Machaut; thời Phục hưng thành bài thánh ca Latin nhiều bè mô phỏng của Josquin, Palestrina.',
     refs: [
@@ -574,6 +575,7 @@ Tổ tiên của tổ khúc: cặp pavane – galliard ([[nhac-khi-phuc-hung]]).
     slug: 'toccata-prelude-fugue',
     title: 'Toccata, prelude, fantasia và fugue',
     category: 'genres',
+    also: ['polyphony'],
     aliases: ['toccata', 'prelude và fugue', 'prelude and fugue', 'fantasia', 'Clavier bình quân', 'Well-Tempered Clavier', 'Bình quân luật', 'WTC', 'Toccata and Fugue in D minor', 'Chromatic Fantasia and Fugue'],
     summary: 'Các thể loại đàn phím "tự do" của thời Baroque: toccata (khoe ngón, xen đoạn đối âm), prelude và fantasia (như ngẫu hứng), thường đi cặp với một fugue chặt chẽ — đỉnh cao là 48 cặp prelude và fugue trong Clavier bình quân của Bach.',
     refs: [

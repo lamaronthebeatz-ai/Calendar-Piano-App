@@ -1278,7 +1278,7 @@ Xem [[Chopin]], [[the-loai|thể loại étude]].
     slug: 'choi-phuc-dieu',
     title: 'Chơi nhạc phức điệu',
     category: 'technique',
-    also: ['improvisation'],
+    also: ['polyphony', 'improvisation'],
     aliases: ['chơi Bach', 'chơi nhiều bè', 'đổi ngón trên phím', 'finger substitution', 'thay ngón im lặng', 'chơi fugue', 'giữ bè'],
     summary: 'Một tay có thể phải giữ hai bè; người chơi tách từng bè để nghe và tập, dùng ngón bấm và đổi ngón trên phím để giữ các bè đúng độ dài.',
     refs: [

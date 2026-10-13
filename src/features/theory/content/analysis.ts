@@ -1117,6 +1117,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     slug: 'phan-tich-invention-so-1',
     title: 'Phân tích: Invention số 1 Đô trưởng BWV 772',
     category: 'analysis',
+    also: ['polyphony'],
     aliases: ['Invention số 1', 'Invention 1', 'BWV 772', 'Invention in C', 'Invention Đô trưởng', 'Inventionen und Sinfonien'],
     summary: 'Invention hai bè đầu tiên của Bach (bản chép sạch 1723): cả bài được dựng từ một motif bảy nốt, nó đảo ngược và mô tiến; đi qua Sol trưởng và La thứ rồi về Đô — bài học kinh điển về đối âm hai bè.',
     wiki: 'Inventions_and_Sinfonias_(Bach)',

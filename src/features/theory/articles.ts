@@ -5,6 +5,7 @@ import { pitch } from './content/pitch'
 import { scales } from './content/scales'
 import { harmony } from './content/harmony'
 import { form } from './content/form'
+import { polyphony } from './content/polyphony'
 import { expression } from './content/expression'
 import { chromatic } from './content/chromatic'
 import { jazz } from './content/jazz'
@@ -41,7 +42,8 @@ export const CATEGORIES = {
   scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu, vòng quãng 5 và quan hệ giữa các giọng — kèm lịch sử và nghiên cứu về cảm nhận giọng.' },
   harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hai hệ thống: hoà âm cổ điển (hợp âm, chức năng, luật bốn bè, kết, chuyển giọng, phân tích và phối hoà âm) và hoà âm thế kỷ XX.' },
   chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Hoà âm cromatic (giáo trình chương 7–8): Napoli, 6 tăng, 7 giảm, hợp âm nốt chung, hợp âm ba tăng, trung âm cromatic, mô tiến, bass ngân, bass số, Schenker, Neo-Riemann.' },
-  form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Hệ thống hình thức từ motif, câu nhạc đến tác phẩm nhiều chương: hai đoạn, ba đoạn, minuet và trio, biến tấu, rondo, sonata, concerto, đối âm và fugue, biến đổi chủ đề — kèm lộ trình học.' },
+  form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Hệ thống hình thức từ motif, câu nhạc đến tác phẩm nhiều chương: hai đoạn, ba đoạn, minuet và trio, biến tấu, rondo, sonata, concerto, biến đổi chủ đề — kèm lộ trình học. Đối âm và fugue: xem mục Phức điệu.' },
+  polyphony: { title: 'Phức điệu', hue: 70, description: 'Phức điệu nghiêm khắc theo giáo trình Nhạc viện Hà Nội (hệ Taneyev): khái niệm và quy ước, giai điệu, đối vị đơn giản, đối vị phức tạp với chỉ số Iv – Ih, đảo ảnh, ba – bốn bè, mô phỏng, canon, hình thức — song song với phương pháp năm loại của Fux, đối âm kép, fugue, bảng công thức và thuật ngữ.' },
   expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách diễn tấu, hoa mỹ, pedal, ngón bấm, thuật ngữ, phong cách từng thời kỳ và cách chọn ấn bản.' },
   jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Hoà âm jazz đầy đủ (Phần III giáo trình): swing, blues, ii – V – I, hợp âm – âm giai, hợp âm át biến hoá, xếp hợp âm và thế bấm, đệm, ngẫu hứng, thay thế, tái hoà âm (gospel, đổi nhịp, đổi thể loại), sáng tác, rhythm changes, vòng Coltrane, các phong cách jazz — kèm các bài liên quan xếp chéo từ nhóm khác.' },
   improvisation: { title: 'Ngẫu hứng & ứng tác', hue: 95, description: 'Ngẫu hứng trên piano: lịch sử (Bach, Beethoven, Czerny, organ Pháp), cadenza, prelude ứng tác, impromptu, partimento, ngẫu hứng jazz và tự do, khoa học về ngẫu hứng và phương pháp luyện tập.' },
@@ -58,4 +60,4 @@ export const CATEGORIES = {
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...sacred]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...polyphony, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...sacred]
