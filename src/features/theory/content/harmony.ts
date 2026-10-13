@@ -17,6 +17,9 @@ export const harmony: Article[] = [
     body: `
 Bài này là **mục lục** của toàn bộ phần hoà âm trong thư viện, sắp theo thứ tự nên học. Thứ tự dựa trên cấu trúc chung của các giáo trình chuẩn — *Tonal Harmony* (Kostka – Payne – Almén), *Harmony and Voice Leading* (Aldwell – Schachter), *Open Music Theory* — và *Twentieth-Century Harmony* (Persichetti, 1961) cho phần thế kỷ XX.
 
+## Hai trường phái
+Thư viện trình bày hoà âm theo **hai trường phái**: [[hoa-am-truong-phai-nga-xo-viet|Nga – Xô viết]] (sách bốn tác giả Dubovsky – Evseev – Sposobin – Sokolov, ký hiệu chức năng T – S – D) và [[hoa-am-truong-phai-phuong-tay|phương Tây]] (dòng Vienna từ Albrechtsberger, số La Mã). Phần thực hành chung dùng chung bài; chỗ giải thích khác nhau có mục **"Hai trường phái"** trong bài và được gom ở [[so-sanh-hai-truong-phai-hoa-am]]. Tổng quan: [[hai-truong-phai-hoa-am]]. Mẹo và công thức: [[meo-va-cong-thuc-hoa-am]]. Các bài riêng: [[ky-hieu-chuc-nang-truong-phai-nga]], [[noi-hop-am]], [[truong-hoa-am]].
+
 ## Cách dùng
 - Học **theo thứ tự chương**: mỗi chương dùng kiến thức của các chương trước.
 - Mỗi bài: **đọc → nghe ví dụ → chơi trên đàn** → tìm lại trong một bản nhạc thật (xem [[phan-tich-hoa-am]]).
@@ -154,6 +157,215 @@ Học sau Chương 7 (cần hợp âm 7, chức năng, át phụ, hợp âm mư�
 `,
   },
   {
+    slug: "hai-truong-phai-hoa-am",
+    title: "Hai trường phái hoà âm: Nga – Xô viết và phương Tây",
+    category: 'harmony',
+    aliases: ["hai trường phái hoà âm", "trường phái hoà âm", "hoà âm Nga và phương Tây", "so sánh giáo trình hoà âm", "Funktionstheorie", "lý thuyết chức năng", "function theory"],
+    summary: "Tổng quan về hai truyền thống dạy hoà âm mà thư viện trình bày song song: trường phái Nga – Xô viết (giáo trình bốn tác giả Dubovsky – Evseev – Sposobin – Sokolov, 1937–38, theo lý thuyết chức năng Riemann) và trường phái phương Tây theo dòng Vienna (Albrechtsberger, bass số, lý thuyết bậc của Sechter, số La Mã và các sách Mỹ hiện đại). Bài nêu gốc rễ, chỗ giống – khác, và cách thư viện chia bài chung, bài riêng.",
+    refs: [
+      ["Cheong & Ding Hong, \"Sposobin Remains: A Soviet Harmony Textbook’s Twisted Fate in China\" — ZGMTH 15/2 (2018)", "https://www.gmth.de/zeitschrift/artikel/974.aspx"],
+      ["Ewell, \"Harmonic Functionalism in Russian Music Theory: A Primer\" — Theoria 26 (2020), PDF", "http://philipewell.com/wp-content/uploads/2020/12/Ewell-HarFunction-Russia-Primer.pdf"],
+      ["Bakulina, \"The ‘Brigade Textbook’: Disseminating the Riemannian Legacy in the Russian-Soviet Theoretical Tradition\" — Theoria 26 (2020) (trang tác giả)", "https://www.mcgill.ca/music/ellen-bakulina"],
+      ["Wason, Viennese Harmonic Theory from Albrechtsberger to Schenker and Schoenberg", "https://boydellandbrewer.com/?p=17818"],
+      ["Meeùs — Stufentheorie (European Music Theory)", "https://europeanmusictheory.eu/stufentheorie/"],
+      ["Wikibooks (tiếng Đức) — Stufen- und Funktionstheorie", "https://de.wikibooks.org/wiki/Musiklehre:_Stufen-_und_Funktionstheorie"],
+      ["Wikipedia — Function (music)", "https://en.wikipedia.org/wiki/Function_(music)"],
+      ["McQuere (ed.), Russian Theoretical Thought in Music (Boydell & Brewer)", "https://boydellandbrewer.com/?p=15886"],
+    ],
+    body: `
+## Vì sao có hai trường phái
+Hoà âm cổ điển châu Âu chỉ có một "ngôn ngữ", nhưng **cách giải thích và cách dạy** đã tách thành hai truyền thống lớn:
+| | **Trường phái Nga – Xô viết** | **Trường phái phương Tây** (dòng Vienna – Anh Mỹ) |
+|---|---|---|
+| Sách chuẩn | **Dubovsky – Evseev – Sposobin – Sokolov**, *Учебник гармонии* ("sách giáo khoa bốn tác giả", 1937 – 38) | Albrechtsberger, *Gründliche Anweisung zur Composition* (1790) → Sechter (1853 – 54) → Piston (1941), Aldwell – Schachter (1978 – 79), Kostka – Payne (1984) |
+| Lý thuyết nền | **Chức năng** của Riemann (T – S – D), qua G. Catoire | **Bass số** và **lý thuyết bậc** (Stufentheorie): bảy bậc, nốt gốc |
+| Ký hiệu | Chữ chức năng: **T, S, D, K64, SII, TSVI, DVII7, DD…** | **Số La Mã**: I, ii, V7, vii°, V/V… |
+| Câu hỏi đầu tiên về một hợp âm | Nó **thuộc chức năng nào**? | Nó **dựng trên bậc nào**, nốt gốc **đi tới đâu**? |
+| Nơi dùng | Liên Xô và các nước xã hội chủ nghĩa; bản dịch tiếng Trung 1957 – 58 còn là sách chuẩn ở Trung Quốc | Mỹ, Tây Âu; lý thuyết chức năng Riemann vẫn mạnh ở các nước nói tiếng Đức, Bắc Âu |
+Theo Cheong và Ding (2018), sách bốn tác giả là sách hoà âm **đầu tiên được chính thức phê duyệt** ở Liên Xô và là một trong những sách hoà âm dùng rộng rãi nhất ở thế giới xã hội chủ nghĩa. Ewell (2020) gọi đây là sách hoà âm "quan trọng và bền bỉ nhất" của nước Nga Xô viết. Ở Việt Nam, nhiều nhạc sĩ, giảng viên học ở Nhạc viện Moskva và Leningrad (ví dụ nhạc sĩ Trọng Bằng tốt nghiệp Nhạc viện Moskva năm 1963, Giám đốc Nhạc viện Hà Nội 1984 – 96); Lamar chưa tìm thấy bản dịch tiếng Việt in chính thức của sách bốn tác giả.
+
+## Chung nhiều hơn khác
+Hai trường phái **dạy cùng một thực hành**: cùng hợp âm, cùng luật viết bốn bè (cấm quãng 5, quãng 8 song song; không nhân đôi cảm âm; nốt 7 của hợp âm bảy đi xuống…), cùng các loại kết. Chỗ khác nằm ở **cách gọi tên, cách phân loại và cách giải thích**. Vì vậy thư viện chia bài như sau:
+| Loại bài | Nguyên tắc | Ví dụ |
+|---|---|---|
+| **Bài dùng chung** | Nội dung giống nhau ở hai trường phái; nếu có điểm giải thích khác, bài có mục **"Hai trường phái"** ghi cả hai cách | [[hop-am-ba]], [[the-dao-hop-am]], [[hop-am-bay]], [[luat-hoa-am-bon-be]], [[cau-ket]], [[hop-am-sau-bon]], [[chuc-nang-hoa-am]], [[hop-am-at-phu]], [[chuyen-giong]], [[hop-am-cam-am]] |
+| **Bài riêng trường phái Nga** | Khái niệm chỉ (hoặc chủ yếu) có trong sách bốn tác giả | [[ky-hieu-chuc-nang-truong-phai-nga]], [[truong-hoa-am]] |
+| **Bài riêng trường phái phương Tây** | Khái niệm chủ yếu của dòng Vienna – Anh Mỹ | [[bass-so]], [[luoc-do-galant]], [[phan-tich-schenker]] |
+| **Bài đối chiếu** | Một chủ đề, hai cách dạy đặt cạnh nhau | [[noi-hop-am]], [[so-sanh-hai-truong-phai-hoa-am]] |
+| **Mẹo và công thức** | Gom một chỗ, ghi rõ công thức nào thuộc trường phái nào | [[meo-va-cong-thuc-hoa-am]] |
+
+## Lộ trình
+- **Theo sách bốn tác giả**: [[hoa-am-truong-phai-nga-xo-viet]].
+- **Theo dòng phương Tây**: [[hoa-am-truong-phai-phuong-tay]].
+- **Đối chiếu từng điểm**: [[so-sanh-hai-truong-phai-hoa-am]].
+- Lộ trình tổng của thư viện (theo chương): [[giao-trinh-hoa-am]]. Thuật ngữ: [[thuat-ngu-hoa-am]].
+
+## Gợi ý cho người học ở Việt Nam
+Giáo trình ở các nhạc viện Việt Nam chịu ảnh hưởng của đào tạo Xô viết, trong khi sách và phần mềm tiếng Anh dùng số La Mã. Cách học hiệu quả là **nắm thực hành chung trước**, rồi học **cả hai hệ ký hiệu** như hai "ngôn ngữ" cho cùng một hiện tượng — bảng chuyển đổi ở [[ky-hieu-chuc-nang-truong-phai-nga]].
+`,
+  },
+  {
+    slug: "hoa-am-truong-phai-nga-xo-viet",
+    title: "Hoà âm trường phái Nga – Xô viết: giáo trình bốn tác giả",
+    category: 'harmony',
+    aliases: ["trường phái hoà âm Nga", "hoà âm Nga", "hoà âm Liên Xô", "giáo trình bốn tác giả", "sách bốn tác giả", "Учебник гармонии", "бригадный учебник", "Sposobin", "Способин", "Dubovsky", "Дубовский", "Evseev", "Евсеев", "Sokolov", "Соколов", "Xpôxôbin", "Practical course of harmony"],
+    summary: "Giáo trình hoà âm bốn tác giả I. Dubovsky, S. Evseev, I. Sposobin, V. Sokolov (\"sách giáo khoa lữ đoàn\", Moskva 1937–38): lịch sử (Practical course 1934–35; học trò của Catoire; ghi công Riemann bị xoá từ lần in thứ hai), các ấn bản, thứ tự các chủ đề trong sách, hệ ký hiệu chức năng và những điểm đặc trưng — kèm liên kết sang bài của thư viện cho từng chủ đề.",
+    refs: [
+      ["Cheong & Ding Hong, \"Sposobin Remains: A Soviet Harmony Textbook’s Twisted Fate in China\" — ZGMTH 15/2 (2018)", "https://www.gmth.de/zeitschrift/artikel/974.aspx"],
+      ["Ewell, \"Harmonic Functionalism in Russian Music Theory: A Primer\" — Theoria 26 (2020), PDF", "http://philipewell.com/wp-content/uploads/2020/12/Ewell-HarFunction-Russia-Primer.pdf"],
+      ["Bakulina, \"The ‘Brigade Textbook’: Disseminating the Riemannian Legacy in the Russian-Soviet Theoretical Tradition\" — Theoria 26 (2020) (trang tác giả)", "https://www.mcgill.ca/music/ellen-bakulina"],
+      ["Московская консерватория — Способин Игорь Владимирович", "https://www.mosconsv.ru/ru/person/9048"],
+      ["Большая российская энциклопедия — Дубовский Иосиф Игнатьевич", "https://bigenc.ru/c/dubovskii-iosif-ignat-evich-a050d3"],
+      ["National Library of Israel — bản ghi \"Учебник гармонии (Бригадный учебник)\", 1965", "https://nli.org.il/en/authorities/987007412636705171"],
+      ["BnF data — Iosif Ignat’evič Dubovskij (bản ghi các ấn bản)", "https://data.bnf.fr/16343694/iosif_ignat_evic_dubovskij/fr.pdf"],
+      ["Sheba.spb.ru — mục lục \"Учебник гармонии\" (1965)", "https://sheba.spb.ru/za/uchebnik-garmonii-1965.htm"],
+      ["Classica21 — mục lục \"Учебник гармонии\"", "https://www.classica21.ru/posobiya/teoria/14045"],
+      ["Ritmus — \"Учебник гармонии\" (Музыка, bản in lại)", "https://ritmus.ru/catalog/tovary_dlya_muzykantov/muzykalnaya_literatura/uchebnik_garmonii_dubovskiy_i_evseev_s_sposobin_i_sokolov_v/"],
+      ["IMSLP — Rimsky-Korsakov, Практический учебник гармонии (1886)", "https://imslp.org/wiki/Harmony_(Rimsky-Korsakov,_Nikolay)"],
+      ["McQuere (ed.), Russian Theoretical Thought in Music (Boydell & Brewer)", "https://boydellandbrewer.com/?p=15886"],
+    ],
+    body: `
+## Sách và tác giả
+| | |
+|---|---|
+| **Tên** | *Учебник гармонии* (Giáo trình hoà âm), 2 phần; thường gọi là **"sách giáo khoa lữ đoàn"** (*бригадный учебник*) vì do một nhóm giảng viên cùng viết |
+| **Tác giả** | **I. I. Dubovsky** (1892 – 1969), **S. V. Evseev** (1894 – 1956), **I. V. Sposobin** (1900 – 1954), **V. V. Sokolov** — theo thư mục của Thư viện Quốc gia Pháp và Israel, Sokolov chỉ đồng tác giả **phần một** |
+| **Tiền thân** | *Практический курс гармонии* (Giáo trình hoà âm thực hành), Muzgiz, phần 1 năm 1934, phần 2 năm 1935, do một nhóm của khoa Sử – Lý luận Nhạc viện Moskva viết; Sposobin là tác giả chính, tên đứng đầu dù không theo vần chữ cái (Ewell ghi các năm 1934 và 1936) |
+| **Lần đầu in** | Muzgiz, **1937 – 38** (Cheong và Ding, 2018); Ewell (2020) gọi bản 1939 là lần in thứ hai — các nguồn chưa thống nhất |
+| **Các lần in** | Lần thứ 4 năm 1956; NXB Muzyka 1965, 1980, 1986, 2002, 2005, 2012 (480 trang) |
+| **Bản dịch** | Tiếng Trung (Zhu Shimin, 1957 – 58), đến nay vẫn là sách chuẩn ở Trung Quốc. Bản tiếng Việt in chính thức: Lamar chưa tìm thấy |
+
+## Gốc lý thuyết
+- Cả bốn tác giả là học trò của **Georgy Catoire** ở Nhạc viện Moskva. *Giáo trình lý thuyết hoà âm* của Catoire (1924 – 25) là sách tiếng Nga **đầu tiên** dùng các chữ **T, S, D** của Hugo Riemann để phân tích (Ewell, 2020).
+- Bản in đầu tiên của sách bốn tác giả **ghi công Riemann**; dòng ghi công này **bị xoá** từ lần in thứ hai trở đi (Cheong và Ding, 2018). Bakulina (2020) phân tích cách sách truyền bá di sản Riemann trong lý luận Xô viết.
+- Truyền thống Nga trước đó: sách của Tchaikovsky (1872) và *Practical Manual of Harmony* của **Rimsky-Korsakov** (1886) — dạy phối hoà âm và chuyển giọng từ dễ đến khó, đặt ra hệ thống **ba mức họ hàng giọng**.
+- Cheong và Ding lưu ý: dù được gọi là "khoa học" nhờ lý thuyết chức năng, chỉ **một trong mười hai** chương ban đầu bàn trực tiếp về chức năng — phần lớn sách là **luyện tập viết bè**.
+
+## Thứ tự các chủ đề trong sách
+Sách chia thành các **chủ đề** (Тема) đánh số liên tục; số thứ tự **lệch khoảng hai số** giữa bản 1965 và các bản in 2005 – 2012. Bảng dưới theo mục lục các bản in gần đây (ghép từ danh mục của nhà sách và thư viện; vài số thứ tự ở giữa còn mâu thuẫn).
+| Chủ đề | Nội dung (tên Nga) | Bài trong thư viện |
+|---|---|---|
+| Mở đầu | Введение | [[hai-truong-phai-hoa-am]] |
+| 1 | Hợp âm ba trưởng, thứ; **kết cấu bốn bè** | [[hop-am-ba]], [[luat-hoa-am-bon-be]] |
+| 2 | **Hệ chức năng** của các hợp âm ba chính | [[ky-hieu-chuc-nang-truong-phai-nga]], [[chuc-nang-hoa-am]] |
+| 3 | **Nối các hợp âm ba chính** (T, S, D) | [[noi-hop-am]] |
+| 4 | Phối hoà âm giai điệu bằng hợp âm ba chính | [[phoi-hoa-am-giai-dieu]] |
+| 8 | **Nhảy quãng 3** (скачки терций) | [[noi-hop-am]] |
+| 9 | **Kết; câu nhạc** (предложение) | [[cau-ket]], [[cau-nhac]] |
+| 10 | **Hợp âm bốn sáu kết** (K64) | [[hop-am-sau-bon]] |
+| 11 | Hợp âm sáu của các hợp âm chính | [[the-dao-hop-am]] |
+| 13 | Nối hai hợp âm sáu | [[noi-hop-am]] |
+| 14 | Hợp âm bốn sáu **lướt** và **thêu** | [[hop-am-sau-bon]] |
+| 15 – 17 | **D7**, các thể đảo, các bước nhảy khi giải quyết D7 về T | [[hop-am-bay]] |
+| 19 | Hợp âm ba và hợp âm sáu **bậc II** (SII, SII6); **trưởng hoà âm** | [[truong-hoa-am]] |
+| 20 | Hợp âm ba **bậc VI** (TSVI); **kết ngắt** (прерванная каденция); mở rộng câu | [[cau-ket]] |
+| 21 – 23 | **SII7**; hợp âm bảy cảm âm **DVII7**; hợp âm chín át **D9** | [[hop-am-cam-am]], [[hop-am-mo-rong]] |
+| 24 – 26 | Hợp âm ít dùng của nhóm át; thứ tự nhiên trong lối kết Phrygian; **mô tiến diatonic** | [[mo-tien-hoa-am]] |
+| 33 – 34 | Hệ cromatic; **lệch giọng** (отклонение) | [[hop-am-at-phu]] |
+| 36 | Chuyển giọng sang các giọng **họ hàng mức một** | [[chuyen-giong]] |
+| 49 | **Âm ngân** (органный пункт) | [[bass-ngan]] |
+| 52 – 59 | Chuyển giọng xa hơn: qua bậc VI hạ, qua hợp âm Napoli, qua giọng cùng tên, tỉnh lược, chuyển giọng trùng âm | [[hop-am-napoli]], [[hop-am-bay-giam]] |
+Ghi chú tên gọi: thư viện dịch các thể đảo theo cách gọi Nga — **hợp âm sáu** (секстаккорд), **hợp âm bốn sáu** (квартсекстаккорд), **hợp âm năm sáu** (квинтсекстаккорд), **hợp âm ba bốn** (терцквартаккорд), **hợp âm hai** (секундаккорд). Đây là cách dịch sát nghĩa của Lamar; Lamar chưa tìm thấy nguồn tiếng Việt in để đối chiếu.
+
+## Đặc trưng của sách
+- **Phân tích bằng chức năng**, không bằng số La Mã — mọi hợp âm phụ đều được gắn với một trong ba chức năng chính (SII, TSVI, DVII7…). Chi tiết: [[ky-hieu-chuc-nang-truong-phai-nga]].
+- **Hợp âm bốn sáu kết** có ký hiệu riêng **K64** và được xếp vào nhóm **át** ngay từ đầu.
+- Dạy nối hợp âm bằng **ba cách** có tên: **nối hoà thanh**, **nối giai điệu**, **nhảy quãng 3** — xem [[noi-hop-am]].
+- Có khái niệm **trưởng hoà âm** (hạ bậc VI) như một dạng điệu thức chính thức — xem [[truong-hoa-am]].
+- **Họ hàng giọng** chia theo mức; chuyển giọng được dạy theo từng mức họ hàng và từng "cách" (qua hợp âm chung, qua giọng cùng tên, trùng âm…).
+- Rất nhiều bài tập **phối hoà âm cho giai điệu và cho bè trầm** cho sẵn, thay vì phân tích tác phẩm.
+Đối chiếu từng điểm với phương Tây: [[so-sanh-hai-truong-phai-hoa-am]]. Công thức: [[meo-va-cong-thuc-hoa-am]].
+`,
+  },
+  {
+    slug: "hoa-am-truong-phai-phuong-tay",
+    title: "Hoà âm trường phái phương Tây: từ Albrechtsberger đến sách giáo khoa hiện đại",
+    category: 'harmony',
+    aliases: ["trường phái phương Tây", "hoà âm phương Tây", "Albrechtsberger", "Johann Georg Albrechtsberger", "Gründliche Anweisung zur Composition", "Stufentheorie", "lý thuyết bậc", "dòng Vienna", "Viennese harmonic theory", "Sechter", "Simon Sechter", "hoà âm Mỹ", "Piston", "Kostka", "Aldwell Schachter"],
+    summary: "Trường phái hoà âm phương Tây theo dòng Vienna: Albrechtsberger (1736–1809, thầy của Beethoven) và lối dạy dựa trên bass số và đối âm; Sechter và \"lý thuyết bậc\" (Stufentheorie: bảy bậc, nốt gốc đi xuống quãng 5); Weber và ký hiệu số La Mã; đến các sách Mỹ hiện đại (Piston, Aldwell – Schachter, Kostka – Payne). Bài nêu các tác phẩm, đặc trưng tư duy, thứ tự học và chỗ nào thư viện trình bày theo trường phái này.",
+    refs: [
+      ["Britannica — Johann Georg Albrechtsberger", "https://britannica.com/print/article/13091"],
+      ["Deutsche Biographie (NDB) — Albrechtsberger, Johann Georg", "https://www.deutsche-biographie.de/sfz607.html"],
+      ["IMSLP — Albrechtsberger, Gründliche Anweisung zur Composition (1790)", "https://imslp.org/wiki/Gr%C3%BCndliche_Anweisung_zur_Composition_(Albrechtsberger%2C_Johann_Georg)"],
+      ["Archive.org — Gründliche Anweisung zur Composition (bản quét)", "https://archive.org/details/grndlicheanweisu00albr"],
+      ["HathiTrust — Albrechtsberger’s collected writings on thorough-bass, harmony and composition (Novello, 1855)", "https://catalog.hathitrust.org/Record/100780619"],
+      ["HathiTrust — Methods of Harmony, Figured Base, and Composition (Merrick, 1834)", "https://catalog.hathitrust.org/Record/001460379"],
+      ["Dineen, \"Figured Bass and Modulation: The Wiener-Tonschule of Joseph Preindl\" — Music Theory Online 8.3 (ghi chú)", "https://mtosmt.org/issues/mto.02.8.3/mto.02.8.3.dineen_notes.html"],
+      ["Beethoven-Haus Bonn — Auf der Suche nach der Kunst der Fuge (hướng dẫn triển lãm)", "https://internet.beethoven.de/pdf-sonderausstellung/Auf-der-Suche-nach-der-Kunst-der-Fuge-Brief-Guide.pdf"],
+      ["Henle — Beethoven Werke, Kritischer Bericht (bài tập với Albrechtsberger)", "https://www.henle.de/download/KB_ausfuehrlich/2207_2_641-643.pdf"],
+      ["Wason, Viennese Harmonic Theory from Albrechtsberger to Schenker and Schoenberg (Boydell & Brewer)", "https://boydellandbrewer.com/?p=17818"],
+      ["Caplin — review of Wason (PDF)", "https://www.music.mcgill.ca/~caplin/wason-review.pdf"],
+      ["Meeùs — Stufentheorie (European Music Theory)", "https://europeanmusictheory.eu/stufentheorie/"],
+      ["Meeùs, \"Toward a Post-Schoenbergian Grammar of Tonal and Pre-tonal Harmonic Progressions\" — Music Theory Online 6.1", "https://www.mtosmt.org/issues/mto.00.6.1/mto.00.6.1.meeus.php"],
+      ["IMSLP — Sechter, Die Grundsätze der musikalischen Komposition", "https://imslp.org/wiki/Die_Grunds%C3%A4tze_der_musikalischen_Komposition_(Sechter%2C_Simon)"],
+      ["Damschroder, Thinking about Harmony (Cambridge UP, 2008) — chương \"Parallel and Sequential Progressions\"", "https://www.cambridge.org/core/books/abs/thinking-about-harmony/parallel-and-sequential-progressions/475D8314CB6FDFDB6CAE60823AB90764"],
+      ["Wikibooks (tiếng Đức) — Stufen- und Funktionstheorie", "https://de.wikibooks.org/wiki/Musiklehre:_Stufen-_und_Funktionstheorie"],
+      ["Fankhauser — Intégral 37 (về hợp âm 6/4 kết trong các sách)", "https://esm.rochester.edu/integral/wp-content/uploads/2024/07/Integral_Vol37_Fankhauser.pdf"],
+    ],
+    body: `
+Thư viện chia giáo trình hoà âm thành **hai trường phái**: [[hoa-am-truong-phai-nga-xo-viet|trường phái Nga – Xô viết]] (sách bốn tác giả Dubovsky – Evseev – Sposobin – Sokolov, theo lý thuyết **chức năng**) và **trường phái phương Tây** trình bày ở đây. Tổng quan và cách dùng: [[hai-truong-phai-hoa-am]].
+
+## Albrechtsberger — người mở đầu dòng Vienna
+| | |
+|---|---|
+| **Năm sinh – mất** | 1736 (Klosterneuburg) – 1809 (Vienna) |
+| **Chức vụ** | Organ cung đình Vienna (1772); phó nhạc trưởng nhà thờ St. Stephen sau khi [[Mozart]] mất (1791), nhạc trưởng từ 1793 (có nguồn ghi 1792) |
+| **Học trò** | [[Beethoven]] (khoảng đầu 1794 – khoảng tháng 3/1795, theo lời giới thiệu của [[Haydn]]); Hummel. Các danh sách phổ thông còn kể Czerny, Moscheles, Ries — chưa kiểm chứng |
+| **Sách chính** | *Gründliche Anweisung zur Composition* ("Hướng dẫn căn bản về sáng tác"), Leipzig, Breitkopf, **1790**, khoảng 440 trang, có phụ lục về nhạc cụ; bản mở rộng lần 3 năm 1821 |
+| **Sách bass số** | *Kurzgefaßte Methode, den Generalbaß zu erlernen* (Vienna, Artaria, khoảng 1791 – 1792, 36 trang); *Generalbaß-Schule* (khoảng 1804) |
+| **Tuyển tập** | Do học trò **Ignaz von Seyfried** biên soạn: *Sämmtliche Schriften über Generalbaß, Harmonie-Lehre und Tonsetzkunst* (Vienna, 1826, 3 tập) |
+| **Bản dịch** | Tiếng Pháp: Choron (Paris, 1814). Tiếng Anh: Arnold Merrick (London, khoảng 1834, dịch từ bản Pháp); Sabilla và Vincent Novello (London, 1855, 3 tập) |
+Bách khoa Britannica gọi sách năm 1790 là một bản tổng kết sáng sủa về phương pháp của thế kỷ 18; theo Deutsche Biographie, ông dựa trên Fux, C. P. E. Bach, Marpurg và Kirnberger. Beethoven học với ông khoảng ba buổi một tuần; khoảng **160 bài tập** còn giữ lại — đối âm theo loại 2 – 4 bè, đối âm đảo, canon, fugue — có chữ sửa của thầy; về sau Beethoven còn giới thiệu sách của Albrechtsberger cho học trò mình.
+
+### Một điều cần nói rõ
+*Gründliche Anweisung* chủ yếu là sách **đối âm**: quãng (tr. 1), thuận – nghịch (tr. 4), phân biệt lối viết nghiêm khắc và tự do (chương 6), nốt đối nốt, rồi [[mo-phong-don-gian|mô phỏng]] (tr. 161), [[fugue]] (tr. 171), canon (tr. 380). Nhà nghiên cứu Dineen (*Music Theory Online*, 2002) nhận xét sách "gần như không có phần hoà âm học"; phần hoà âm trong tuyển tập 1826 có thể là do **Seyfried** biên soạn thêm. Damschroder (2008) ghi rằng sách bass số của Albrechtsberger **không dùng phân tích theo bậc**. Nghĩa là Albrechtsberger dạy hoà âm **qua bass số và đối âm**, chưa có số La Mã hay chức năng. Vì vậy "trường phái phương Tây theo Albrechtsberger" trong thư viện được hiểu là **cả dòng truyền thống** bắt đầu từ ông — đúng như nhan đề cuốn sách của Robert Wason: *Lý thuyết hoà âm Vienna từ Albrechtsberger đến Schenker và Schoenberg* (1985).
+
+## Dòng phát triển
+| Mốc | Người, sách | Đóng góp cho lối dạy phương Tây |
+|---|---|---|
+| 1722 | [[Rameau]], *Traité de l'harmonie* | **Bè trầm gốc** (basse fondamentale), khái niệm [[the-dao-hop-am|thể đảo]] |
+| 1753 – 62 | C. P. E. Bach, *Versuch* | Đệm [[bass-so|bass số]] — nền của mọi bài tập hoà âm sau này |
+| 1790 | **Albrechtsberger**, *Gründliche Anweisung* | Đối âm Fux, viết bè đúng luật, bass số; dạy Beethoven |
+| 1817 – 21 | Gottfried Weber | **Số La Mã**: chữ hoa – thường chỉ trưởng – thứ |
+| 1853 – 54 | **Simon Sechter**, *Die Grundsätze der musikalischen Komposition* | **Lý thuyết bậc** (Stufentheorie) — xem dưới |
+| 1906, 1911 | Schenker, Schoenberg (*Harmonielehre*) | Phổ biến số La Mã ở châu Âu; [[phan-tich-schenker|Schenker]]: "bậc" là cấu trúc có thể trải qua nhiều hợp âm |
+| 1941 → nay | Piston (*Harmony*, 1941), Aldwell – Schachter (1978 – 79), Kostka – Payne (1984) | Sách giáo khoa Mỹ: số La Mã + ký hiệu thể đảo, viết bè bốn bè, mô hình câu T – PD – D – T |
+Sechter tự học sách của Albrechtsberger (không phải học trò trực tiếp); học trò của Sechter là Bruckner, người truyền hệ thống này đến thế hệ Schenker và Schoenberg.
+
+## Lý thuyết bậc (Stufentheorie)
+- Mỗi hợp âm được gọi theo **bậc của nốt gốc** trong giọng — **bảy bậc**, mỗi bậc có bản sắc riêng (khác lý thuyết chức năng chỉ có ba chức năng T – S – D).
+- Trọng tâm là **chuyển động của nốt gốc**; mẫu gốc là **nốt gốc đi xuống quãng 5** (chuỗi quãng 5).
+- Ở Sechter, các bước nốt gốc **liền bậc** (IV – V, V – VI) được giải thích như có một **nốt gốc trung gian bị lược**: IV – [II] – V, V – [III] – VI (gần với "double emploi" của Rameau).
+- Hợp âm **bậc VII** được coi là **V thiếu nốt gốc** (Meeùs).
+- Sechter ít dùng số La Mã, và chỉ để ghi nốt gốc.
+So sánh với lý thuyết chức năng mà trường phái Nga dùng: [[so-sanh-hai-truong-phai-hoa-am]].
+
+## Đặc trưng của lối dạy phương Tây hiện nay
+| Chủ đề | Cách trình bày (sách Mỹ) | Bài |
+|---|---|---|
+| Ký hiệu | **Số La Mã** (I, ii, V7…) + số thể đảo lấy từ bass số: 6, 6/4, 6/5, 4/3, 4/2 | [[ky-hieu-hop-am]] |
+| Chức năng | Ba nhóm **chủ – tiền át (predominant) – át**; mô hình câu T – PD – D – T | [[chuc-nang-hoa-am]] |
+| Nối hợp âm | Hai "quy tắc kinh nghiệm" của Piston: giữ nốt chung, các bè khác đến nốt gần nhất; không có nốt chung thì ba bè trên đi **ngược chiều** bè trầm (theo trích dẫn thứ cấp) | [[noi-hop-am]] |
+| 6/4 kết | Đa số coi là **trang trí cho V** (ghi V6/4 – 5/3 hoặc "Cad 6/4"); Aldwell – Schachter viết rằng có lẽ "không nên ghi là I6/4"; nhiều giáo viên vẫn ghi I6/4 – V | [[hop-am-sau-bon]] |
+| Quãng 5/8 ẩn | Lỗi chủ yếu giữa **hai bè ngoài**; chấp nhận khi soprano đi **liền bậc** | [[luat-hoa-am-bon-be]] |
+| Kết lừa V – vi | **Nhân đôi nốt 3** của vi | [[cau-ket]] |
+| Hợp âm 6 | Không có luật nhân đôi cố định; không nhân đôi cảm âm; chọn cách cho dẫn bè tốt nhất (Kostka – Payne) | [[the-dao-hop-am]] |
+| Át phụ | **V/x, vii°/x** — "chủ âm hoá" (tonicization); chuyển giọng cần một kết xác nhận | [[hop-am-at-phu]], [[chuyen-giong]] |
+| Giọng gần | Hoá biểu khác nhau **tối đa một dấu** (5 giọng) | [[chuyen-giong]] |
+
+## Thứ tự học theo trường phái phương Tây
+1. Nền: [[quang]], [[thuan-nghich]], [[am-giai-truong]], [[am-giai-thu]].
+2. Đối âm và bass số (lối Albrechtsberger): [[doi-am-5-loai]], [[bass-so]], [[luoc-do-galant]].
+3. Hợp âm và ký hiệu: [[hop-am-ba]], [[the-dao-hop-am]], [[hop-am-bay]], [[ky-hieu-hop-am]].
+4. Cú pháp: [[chuc-nang-hoa-am]], [[cau-ket]], [[hop-am-cam-am]], [[mo-tien-hoa-am]].
+5. Viết bè: [[noi-hop-am]], [[dan-giong]], [[luat-hoa-am-bon-be]], [[hop-am-sau-bon]], [[not-ngoai-hop-am]].
+6. Phân tích và phối: [[phan-tich-hoa-am]], [[phoi-hoa-am-giai-dieu]].
+7. Cromatic: [[hop-am-at-phu]], [[chuyen-giong]], [[hop-am-muon]], [[hop-am-napoli]], [[hop-am-sau-tang]], [[hop-am-bay-giam]].
+8. Phân tích nâng cao: [[phan-tich-schenker]], [[neo-riemann]].
+Mẹo và công thức dùng cho cả hai trường phái: [[meo-va-cong-thuc-hoa-am]].
+`,
+  },
+  {
     slug: 'thuat-ngu-hoa-am',
     title: 'Thuật ngữ hoà âm Việt – Anh',
     category: 'harmony',
@@ -257,6 +469,21 @@ Thuật ngữ hoà âm tiếng Việt chưa thống nhất giữa các giáo tr�
 | Xếp hợp âm | voicing | [[xep-hop-am]] |
 | Thay thế tritone | tritone substitution | [[thay-the-tritone]] |
 | Tái hoà âm | reharmonization | [[tai-hoa-am]] |
+
+## Thuật ngữ trường phái Nga – Xô viết
+Cột tiếng Việt là cách dịch thư viện dùng (dịch sát nghĩa; chưa có nguồn tiếng Việt in để đối chiếu). Bối cảnh: [[hai-truong-phai-hoa-am]].
+| Tiếng Việt (thư viện) | Tiếng Nga | Tương đương phương Tây | Bài |
+|---|---|---|---|
+| Hợp âm sáu · hợp âm bốn sáu | секстаккорд · квартсекстаккорд | first / second inversion (6, 6/4) | [[the-dao-hop-am]] |
+| Hợp âm năm sáu · ba bốn · hai | квинтсекстаккорд · терцквартаккорд · секундаккорд | 6/5, 4/3, 4/2 | [[ky-hieu-chuc-nang-truong-phai-nga]] |
+| Hợp âm bốn sáu kết (K64) | кадансовый квартсекстаккорд | cadential 6/4 | [[hop-am-sau-bon]] |
+| Nối hoà thanh · nối giai điệu · nhảy quãng 3 | гармоническое · мелодическое соединение · скачок терции | (quy tắc nối của Piston) | [[noi-hop-am]] |
+| Kết ngắt | прерванная каденция | deceptive cadence | [[cau-ket]] |
+| Lệch giọng | отклонение | tonicization | [[hop-am-at-phu]] |
+| Át của át (DD) | двойная доминанта | V/V | [[hop-am-at-phu]] |
+| Trưởng hoà âm | гармонический мажор | (mode mixture) | [[truong-hoa-am]] |
+| Họ hàng giọng (mức một) | родство тональностей (первой степени) | closely related keys | [[chuyen-giong]] |
+| Âm ngân | органный пункт | pedal point | [[bass-ngan]] |
 `,
   },
   {
@@ -501,6 +728,16 @@ Thể đảo được xác định bởi **nốt thấp nhất** (bè trầm), k
 | Đảo 3 | Bậc 7 | 4/2 (hoặc 2) |
 
 [[hop-am-bay|Hợp âm 7]] có thêm **đảo 3** (nốt bậc 7 ở bè trầm). Các số "6", "6/4" đến từ cách ghi [[quang]] so với bè trầm — xem [[bass-so]].
+
+## Hai trường phái
+| Thể | Số bass | Tên Nga (dịch sát) | Ký hiệu Nga | Ký hiệu phương Tây |
+|---|---|---|---|---|
+| Đảo 1 hợp âm ba | 6 | Hợp âm sáu (секстаккорд) | T6 | I6 |
+| Đảo 2 hợp âm ba | 6/4 | Hợp âm bốn sáu (квартсекстаккорд) | T64; 6/4 kết: **K64** | I6/4 |
+| Đảo 1 hợp âm bảy | 6/5 | Hợp âm năm sáu | D65 | V6/5 |
+| Đảo 2 hợp âm bảy | 4/3 | Hợp âm ba bốn | D43 | V4/3 |
+| Đảo 3 hợp âm bảy | 4/2 | Hợp âm hai | D2 | V4/2 |
+Nhân đôi trong hợp âm sáu: ngay trong truyền thống Nga, Rimsky-Korsakov và Tchaikovsky đã khuyên khác nhau; sách Mỹ (Kostka – Payne) không đặt luật cố định — xem [[so-sanh-hai-truong-phai-hoa-am]].
 `,
   },
   {
@@ -548,6 +785,11 @@ Chứa [[thuan-nghich|tritone]] giữa bậc 3 và bậc 7 (B–F trong G7). [[q
 | Cmaj7 | Dm7 | Em7 | Fmaj7 | G7 | Am7 | Bø7 |
 
 Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii – V – I]]). Thêm nốt cao hơn: [[hop-am-mo-rong]]. Hợp âm 7 giảm có cấu trúc đối xứng đặc biệt: [[hop-am-bay-giam]]. Thay V7 bằng ♭II7: [[thay-the-tritone]].
+
+## Hai trường phái
+- **Nga – Xô viết**: hợp âm bảy át ghi **D7**, các thể đảo **D65, D43, D2**; sách bốn tác giả dành ba chủ đề liền nhau cho D7, các thể đảo, và các bước nhảy khi giải quyết D7 về T. Hợp âm bảy bậc II ghi **SII7**, hợp âm bảy cảm âm **DVII7**.
+- **Phương Tây**: V7, V6/5, V4/3, V4/2; ii7, vii°7 / viiø7.
+- **Chung**: D7 **đầy đủ** → T **thiếu** (gấp ba nốt gốc); D7 **thiếu** (bỏ nốt 5) → T **đầy đủ**; nốt 7 đi xuống, cảm âm đi lên. Công thức: [[meo-va-cong-thuc-hoa-am]].
 `,
   },
   {
@@ -598,6 +840,9 @@ Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 th
 - **[[he-so-nashville-va-lead-sheet|Lead sheet]]**: nhạc jazz thường được ghi gọn bằng [[giai-dieu|giai điệu]] kèm ký hiệu hợp âm. Từ những năm 1940, các lead sheet được gom thành sách bán cho nhạc công — gọi là **fake book** (sách để "chơi ứng phó" một bài lạ). Tháng 5/1942, George Goodwin phát hành bộ thẻ **Tune-Dex** đầu tiên ghi lời, giai điệu và hợp âm. Nhiều fake book thời đó in **không có bản quyền**.
 - **Hệ thống số Nashville**: Neal Matthews Jr. (nhóm Jordanaires) nghĩ ra cuối thập niên 1950, lấy cảm hứng từ cách ghi "nốt hình" của các nhóm hát phúc âm; sau đó Charlie McCoy áp dụng cho hợp âm. Hợp âm được ghi bằng **số bậc** (1, 4, 5, 6m…) nên đổi giọng tức thì — cùng ý tưởng với [[bac-am-giai|số La Mã]].
 - **Chuẩn hoá**: cuốn *Standardized Chord Symbol Notation* của Carl Brandt và Clinton Roemer (1976) là tài liệu tham khảo chính cho ký hiệu jazz: chữ "7" đứng một mình **luôn** là 7 thứ; nốt biến đổi để trong ngoặc. Sách bỏ ký hiệu **tam giác** cho 7 trưởng vì nó bị dùng với hai nghĩa trái ngược. Dù vậy, các nhà xuất bản vẫn khác nhau đôi chút.
+
+## Hai trường phái
+Ngoài số La Mã và ký hiệu phổ thông, trường phái Nga – Xô viết ghi hợp âm bằng **chữ chức năng**: T, S, D, K64, SII, TSVI, DVII7, DD — bảng đổi qua lại ở [[ky-hieu-chuc-nang-truong-phai-nga]].
 `,
   },
   {
@@ -677,6 +922,11 @@ Một [[cau-nhac|câu nhạc]] điển hình đi **Chủ mở đầu → Hạ á
 Theo [[arnold-schoenberg|Schoenberg]], nốt gốc **lên [[quang|quãng]] 4 (xuống quãng 5)** hoặc **xuống quãng 3** là tiến trình **mạnh**; lên quãng 5 hoặc lên quãng 3 là **yếu**; lên/xuống quãng 2 là **rất mạnh**.
 
 Ứng dụng: [[vong-hop-am]], [[hop-am-at-phu]], [[chuyen-giong]]. Mở rộng nhóm hạ át bằng hợp âm [[am-giai-cromatic|cromatic]]: [[hoa-am-cromatic]]. Phân tích nhiều tầng: [[phan-tich-schenker]].
+
+## Hai trường phái
+- **Nga – Xô viết** (sách bốn tác giả): phân tích **hoàn toàn bằng chức năng** — T, S, D và các hợp âm phụ ghi kèm chức năng: **SII**, **TSVI**, **DTIII**, **DVII7**, át của át **DD**. Xem [[ky-hieu-chuc-nang-truong-phai-nga]].
+- **Phương Tây**: dòng Vienna dùng **lý thuyết bậc** (bảy bậc, nốt gốc đi xuống quãng 5 là mẫu gốc — Sechter); sách Mỹ hiện đại ghi **số La Mã** nhưng dạy ba nhóm chủ – tiền át – át.
+So sánh: [[so-sanh-hai-truong-phai-hoa-am]]; tổng quan: [[hai-truong-phai-hoa-am]].
 `,
   },
   {
@@ -834,6 +1084,14 @@ Trong nhạc cổ điển, trước V thường có **hợp âm I đảo 2** (C/
 Thời [[thoi-ky-phuc-hung|Phục hưng]], kết được hiểu theo **giai điệu từng bè**: một kết bốn bè gồm bốn công thức (*clausula*) vang cùng lúc — của bè soprano, alto, tenor, bass. Kết plagal ít được các nhà lý luận thế kỷ 16 mô tả, và nguồn gốc của nó đến nay vẫn còn tranh luận.
 
 Kết là nền tảng chia [[cau-nhac]] và [[hinh-thuc-am-nhac|hình thức]]. Lý do V → I mạnh: xem [[chuc-nang-hoa-am]]. Hợp âm hạ át [[am-giai-cromatic|cromatic]] trước V trong kết: [[hop-am-napoli]], [[hop-am-sau-tang]].
+
+## Hai trường phái
+| Kết | Nga – Xô viết | Phương Tây |
+|---|---|---|
+| Kết trọn | D – T, thường S – **K64** – D – T | V – I, thường PD – I6/4 (V6/4) – V – I |
+| Kết plagal | S – T | IV – I |
+| Kết ngắt / kết lừa | D – **TSVI** (прерванная каденция), nhân đôi nốt 3 của TSVI | V – vi, nhân đôi nốt 3 của vi |
+Trong sách bốn tác giả, "kết" được học cùng chủ đề **câu nhạc** (предложение), và kết ngắt học cùng **cách mở rộng câu**. Đối chiếu: [[so-sanh-hai-truong-phai-hoa-am]].
 `,
   },
   {
@@ -958,6 +1216,14 @@ Ngoài hợp âm át, có thể dùng **[[hop-am-cam-am|hợp âm cảm âm]]** 
 - Riemann gọi là *Zwischendominante* ("át xen giữa") — vẫn là thuật ngữ tiếng Đức hiện nay.
 - Heinrich [[phan-tich-schenker|Schenker]] đưa ra khái niệm **chủ âm hoá** năm 1906.
 - Walter Piston dùng cách ghi "V7 of IV" năm 1933 và thuật ngữ "**secondary dominant**" (át phụ) trong sách *Harmony* (1941). [[arnold-schoenberg|Schoenberg]] gọi là "át nhân tạo".
+
+## Hai trường phái
+| | Nga – Xô viết | Phương Tây |
+|---|---|---|
+| Tên hiện tượng | **Lệch giọng** (отклонение) — chủ đề lớn ở phần hai sách bốn tác giả | **Chủ âm hoá** (tonicization), hợp âm áp dụng |
+| Át của át | **DD** | V/V |
+| Ranh giới với chuyển giọng | Rời giọng chính trong chốc lát, không có kết ở giọng mới | Không có kết xác nhận; chuyển giọng cần một kết |
+Đối chiếu: [[so-sanh-hai-truong-phai-hoa-am]]. Công thức tìm V của một hợp âm: [[meo-va-cong-thuc-hoa-am]].
 `,
   },
   {
@@ -1042,6 +1308,13 @@ Tiêu chí phân biệt chính: **có kết ở giọng mới** hay không. Ch�
 - **Trùng âm qua hợp âm 6 Đức hoặc 7 giảm**: một [[hop-am-bay|hợp âm 7 át]] có thể được viết lại thành hợp âm [[hop-am-sau-tang|6 Đức]] (và ngược lại) bằng cách đổi [[not-nhac|tên nốt]] 7 thứ ↔ 6 tăng — dịch [[dieu-tinh|trung tâm giọng]] nửa cung. Hợp âm [[hop-am-bay-giam|7 giảm]] đối xứng nên mỗi nốt đều có thể làm [[bac-am-giai|cảm âm]] → bốn giọng đích. Kết hợp hai loại này có thể đi từ **bất kỳ giọng nào sang bất kỳ giọng nào** trong vài hợp âm — đặc trưng của thời **[[thoi-ky-lang-man|Lãng mạn]]**.
 
 **"Truck driver modulation"** trong [[nhac-pho-thong-the-ky-20|nhạc pop]]: đi từ hợp âm chủ cũ sang **hợp âm át của giọng mới** (cao hơn nửa cung hoặc một cung) rồi vào chủ mới.
+
+## Hai trường phái: giọng gần
+| | Nga (hệ Rimsky-Korsakov, 1886) | Phương Tây |
+|---|---|---|
+| Giọng gần | **Họ hàng mức một: 6 giọng** — chủ của chúng là các hợp âm ba trưởng, thứ trên các bậc của giọng chính, tính cả dạng hoà âm (Đô trưởng thêm **Fa thứ**; La thứ thêm **Mi trưởng**) | **5 giọng**: hoá biểu khác **tối đa một dấu** |
+| Cách dạy chuyển giọng | Theo **mức họ hàng** và theo **cách** (qua hợp âm chung, qua giọng cùng tên, qua hợp âm Napoli, trùng âm…) | Theo **kỹ thuật** (hợp âm chung, cromatic, trùng âm, nốt chung) |
+Chi tiết: [[so-sanh-hai-truong-phai-hoa-am]], [[truong-hoa-am]].
 `,
   },
   {
@@ -1190,6 +1463,12 @@ Hợp âm [[the-dao-hop-am|đảo 2]] nghe chưa ổn định nên chỉ dùng t
 Xem nguyên lý chung ở [[dan-giong]]; áp dụng ở [[phoi-hoa-am-giai-dieu]]. Quy tắc này thuộc **[[he-thong-hoa-am-co-dien|hoà âm cổ điển]]** — nhiều nhà soạn nhạc [[thoi-ky-the-ky-20|thế kỷ 20]] cố ý phá bỏ, ví dụ [[hoa-am-song-song]].
 
 **Áp dụng:** phối chorale theo lối Bach — [[phoi-chorale-kieu-bach]].
+
+## Hai trường phái
+Luật viết bốn bè **giống nhau** ở hai trường phái (cấm quãng 5, 8 song song; không nhân đôi cảm âm; nốt 7 đi xuống). Khác ở cách diễn đạt:
+- **Nối hợp âm**: sách Nga dạy ba cách có tên — nối hoà thanh, nối giai điệu, nhảy quãng 3; sách Mỹ dùng hai quy tắc của Piston — xem [[noi-hop-am]].
+- **Quãng 5, 8 ẩn**: tiêu chí phương Tây (College Board) — lỗi ở hai bè ngoài khi soprano nhảy; từ điển Nga Brockhaus – Efron — cấm khi hai hợp âm không họ hàng và khi các bè nhảy.
+Đối chiếu đầy đủ: [[so-sanh-hai-truong-phai-hoa-am]]; danh sách kiểm tra: [[meo-va-cong-thuc-hoa-am]].
 `,
   },
   {
@@ -1397,6 +1676,11 @@ Gần như mọi thể của vii°7 (và vii°6) có thể **thay** cho một th
 - Ở vii°6, nốt thường được **nhân đôi** là **bậc 2** (nốt bass), không nhân đôi cảm âm (xem [[luat-hoa-am-bon-be]]).
 
 Hợp âm 7 giảm như một hợp âm [[am-giai-cromatic|cromatic]] linh hoạt: [[hop-am-bay-giam]]. Dùng làm át phụ (vii°7/V): [[hop-am-at-phu]].
+
+## Hai trường phái
+- **Nga – Xô viết**: ghi **DVII** và **DVII7** — chữ D nói rằng hợp âm thuộc **nhóm át**.
+- **Phương Tây**: vii°, vii°7, viiø7. Trong lý thuyết bậc của Sechter, hợp âm bậc VII được coi là **V thiếu nốt gốc**.
+Hai cách gọi dẫn tới cùng kết luận. Đối chiếu: [[so-sanh-hai-truong-phai-hoa-am]].
 `,
   },
   {
@@ -1441,6 +1725,14 @@ Trong [[the-dao-hop-am|thể đảo 2]], bè trầm là nốt 5 của [[hop-am-b
 - Nhân đôi **bè trầm** (bậc 5 của hợp âm) trong cả bốn loại.
 - Hợp âm 6/4 xuất hiện ngoài bốn khuôn mẫu trên là **lỗi** trong bài tập [[he-thong-hoa-am-co-dien|hoà âm cổ điển]].
 - Phân biệt 6/4 kết với chủ thật: nếu ngay sau là V trên **cùng bè trầm**, đó là 6/4 kết (xem [[cau-ket]]).
+
+## Hai trường phái
+| | Nga – Xô viết | Phương Tây |
+|---|---|---|
+| Ký hiệu 6/4 kết | **K64** — ký hiệu riêng, xếp vào **nhóm át** | V6/4 – 5/3, "Cad 6/4", hoặc I6/4 |
+| Giải thích | Hình dạng T64, chức năng D; về lịch sử là hai nốt treo trên D; thường được chuẩn bị bằng nhóm S | Trang trí cho V (Aldwell – Schachter, Open Music Theory) — hoặc vẫn đọc là I6/4 (nhiều giáo viên) |
+| 6/4 lướt, thêu | Có chủ đề riêng: "hợp âm bốn sáu lướt và thêu" | Passing, neighbor (pedal) 6/4 |
+Một quan điểm thứ ba (Ninov, 2016): 6/4 kết mang **hai chức năng**. Đối chiếu đầy đủ: [[so-sanh-hai-truong-phai-hoa-am]]; ký hiệu: [[ky-hieu-chuc-nang-truong-phai-nga]].
 `,
   },
   {
@@ -1603,6 +1895,381 @@ Hiệp hội các trường âm nhạc Hoa Kỳ (NASM) yêu cầu **năng lực 
 3. **Dịch giọng**: chơi lại cùng bài lên một cung — xem [[dich-giong]].
 4. **Lead sheet**: đọc [[ky-hieu-hop-am|ký hiệu hợp âm]] và hệ số Nashville — [[he-so-nashville-va-lead-sheet]].
 5. **Thị tấu** 5 phút mỗi ngày — [[thi-tau]].
+`,
+  },
+  {
+    slug: "ky-hieu-chuc-nang-truong-phai-nga",
+    title: "Hệ ký hiệu chức năng của trường phái Nga (T, S, D, K64, SII, TSVI, DVII7, DD)",
+    category: 'harmony',
+    aliases: ["ký hiệu chức năng", "ký hiệu T S D", "K64", "SII", "SII6", "SII7", "TSVI", "DVII7", "DVII", "DTIII", "D65", "D43", "D2", "DD", "át kép", "chức năng kép", "hợp âm sáu", "hợp âm bốn sáu", "hợp âm năm sáu", "hợp âm ba bốn", "hợp âm hai", "секстаккорд", "квартсекстаккорд"],
+    summary: "Cách ghi hợp âm bằng chữ chức năng trong giáo trình bốn tác giả: ba hợp âm chính T, S, D; hợp âm phụ ghi cả chức năng lẫn bậc (SII, TSVI, DTIII, DVII7); thể đảo ghi bằng số (T6, T64, D65, D43, D2); K64 cho hợp âm bốn sáu kết; DD cho át kép; bảng đổi sang số La Mã của phương Tây.",
+    refs: [
+      ["Sheba.spb.ru — mục lục \"Учебник гармонии\" (1965)", "https://sheba.spb.ru/za/uchebnik-garmonii-1965.htm"],
+      ["Classica21 — mục lục \"Учебник гармонии\"", "https://www.classica21.ru/posobiya/teoria/14045"],
+      ["Ritmus — \"Учебник гармонии\" (Музыка, bản in lại)", "https://ritmus.ru/catalog/tovary_dlya_muzykantov/muzykalnaya_literatura/uchebnik_garmonii_dubovskiy_i_evseev_s_sposobin_i_sokolov_v/"],
+      ["Ewell, \"Harmonic Functionalism in Russian Music Theory: A Primer\" — Theoria 26 (2020), PDF", "http://philipewell.com/wp-content/uploads/2020/12/Ewell-HarFunction-Russia-Primer.pdf"],
+      ["Wikipedia — Function (music)", "https://en.wikipedia.org/wiki/Function_(music)"],
+      ["Wikibooks (tiếng Đức) — Stufen- und Funktionstheorie", "https://de.wikibooks.org/wiki/Musiklehre:_Stufen-_und_Funktionstheorie"],
+      ["Musnotes — обозначения аккордов", "https://musnotes.com/articles/5014/5020"],
+      ["Wikipedia tiếng Nga — Квартсекстаккорд", "https://ru.wikipedia.org/wiki/Квартсекстаккорд"],
+    ],
+    body: `
+Trong sách bốn tác giả, hợp âm được ghi bằng **chữ chức năng** (theo Riemann) kèm số thể đảo, không dùng số La Mã như sách phương Tây. Các ký hiệu **SII, SII6, SII7, TSVI, DVII7, D9, K64** xuất hiện ngay trong tên các chủ đề của sách — xem [[hoa-am-truong-phai-nga-xo-viet]].
+
+## Ba hợp âm chính
+| Ký hiệu | Tên | Bậc | Đô trưởng | La thứ |
+|---|---|---|---|---|
+| **T** | Chủ (тоника) | I | C – E – G | A – C – E |
+| **S** | Hạ át (субдоминанта) | IV | F – A – C | D – F – A |
+| **D** | Át (доминанта) | V | G – B – D | E – G♯ – B (thứ hoà âm) |
+
+## Hợp âm phụ: chức năng + bậc
+Hợp âm trên các bậc khác được gắn với chức năng mà nó **chung hai nốt**; khi một hợp âm chung hai nốt với **hai** chức năng, ghi cả hai chữ (theo các bài tóm tắt ký hiệu):
+| Ký hiệu Nga | Bậc | Đọc là | Số La Mã (Đô trưởng) |
+|---|---|---|---|
+| **SII** | II | Hạ át bậc II | ii |
+| **DTIII** | III | Át – chủ bậc III | iii |
+| **TSVI** | VI | Chủ – hạ át bậc VI | vi |
+| **DVII** | VII | Át bậc VII | vii° |
+| **DVII7** | VII | Hợp âm bảy cảm âm | vii°7 / viiø7 |
+| **SII7** | II | Hợp âm bảy hạ át bậc II | ii7 |
+| **D9** | V | Hợp âm chín át | V9 |
+| **DD** | II nâng | Át của át (át kép) | V/V |
+Điểm này trùng với lý thuyết chức năng Đức: mọi hợp âm phụ là "đại diện" của một trong ba chức năng — xem [[so-sanh-hai-truong-phai-hoa-am]].
+
+## Thể đảo
+Số thể đảo lấy từ **bass số**, giống phương Tây; chỉ khác là ghi cạnh chữ chức năng:
+| Thể | Ký hiệu Nga | Tên Nga (dịch sát) | Số La Mã |
+|---|---|---|---|
+| Hợp âm ba nguyên vị | T, S, D | трезвучие — hợp âm ba | I, IV, V |
+| Đảo 1 | **T6**, S6, D6 | секстаккорд — **hợp âm sáu** | I6 |
+| Đảo 2 | **T64**, S64, D64 | квартсекстаккорд — **hợp âm bốn sáu** | I6/4 |
+| Hợp âm bốn sáu kết | **K64** | кадансовый квартсекстаккорд | Cad 6/4, V6/4–5/3 hoặc I6/4 |
+| Hợp âm bảy nguyên vị | **D7** | доминантсептаккорд | V7 |
+| Đảo 1 | **D65** | квинтсекстаккорд — **hợp âm năm sáu** | V6/5 |
+| Đảo 2 | **D43** | терцквартаккорд — **hợp âm ba bốn** | V4/3 |
+| Đảo 3 | **D2** | секундаккорд — **hợp âm hai** | V4/2 (V2) |
+Tên tiếng Việt in đậm là cách dịch sát nghĩa thư viện dùng (chưa có nguồn tiếng Việt in để đối chiếu).
+
+## Ví dụ: cùng một tiến trình, hai cách ghi
+::staff treble C4+E4+G4=T C4+F4+A4=S G4+C5+E5=K64 G4+B4+D5+F5=D7 C5+E5=T | Đô trưởng — ghi theo trường phái Nga: T – S – K64 – D7 – T; theo số La Mã: I – IV – I6/4 (hoặc V6/4) – V7 – I
+| Nga | T | S | K64 | D7 | T |
+|---|---|---|---|---|---|
+| Phương Tây | I | IV | I6/4 / V6/4 | V7 | I |
+
+## Mẹo đọc nhanh
+- **Hai chữ = hai chức năng**: TSVI (La – Đô – Mi ở Đô trưởng) chung Đô, Mi với T và chung La, Đô với S, nên dùng được như **chủ** (kết ngắt V – VI) hoặc như **hạ át** (VI – II – V).
+- **K luôn là "kết"**: thấy K64 là biết sắp có D.
+- **Số nhỏ sau chữ = thể đảo**, không phải bậc; bậc ghi bằng số La Mã **lớn** đứng sau chữ (SII, DVII).
+Công thức tổng hợp: [[meo-va-cong-thuc-hoa-am]].
+`,
+  },
+  {
+    slug: "noi-hop-am",
+    title: "Nối hợp âm: nối hoà thanh, nối giai điệu, nhảy quãng 3 — và quy tắc của Piston",
+    category: 'harmony',
+    aliases: ["nối hợp âm", "liên kết hợp âm", "nối hoà thanh", "nối giai điệu", "nhảy quãng 3", "гармоническое соединение", "мелодическое соединение", "скачок терции", "chord connection", "giữ nốt chung", "common tone"],
+    summary: "Cách nối hai hợp âm ở thể nguyên vị theo hai trường phái. Sách bốn tác giả dạy ba cách có tên: nối hoà thanh (giữ nốt chung), nối giai điệu (không giữ nốt chung, ba bè trên đi ngược bè trầm) và nhảy quãng 3; sách phương Tây (Piston) nêu hai \"quy tắc kinh nghiệm\" tương đương. Bài đặt hai cách dạy cạnh nhau, kèm ví dụ và ngoại lệ.",
+    refs: [
+      ["Nsportal — bài giảng \"Соединение главных трезвучий\"", "https://nsportal.ru/npo-spo/kultura-i-iskusstvo/library/2015/11/04/lektsiya-po-garmonii-soedinenie-glavnyh-trezvuchiy"],
+      ["Studfile — tóm tắt giáo trình hoà âm (соединение трезвучий)", "https://studfile.net/preview/11010573/page:2/"],
+      ["Edrawsoft — sơ đồ tóm tắt phương pháp Sposobin (tiếng Trung)", "https://mm.edrawsoft.cn/template/1519032"],
+      ["Soundfly Flypaper — The hidden grammar of music (bảng tiến trình của Piston)", "https://flypaper.soundfly.com/write/the-hidden-grammar-of-music/"],
+      ["Hutchinson, Music Theory for the 21st-Century Classroom — Voice leading root position triads", "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/26%3A_Voice_Leading_Triads/26.07%3A_Voice_Leading_Root_Position_Triads_in_Four_Parts"],
+      ["Aarden & von Hippel, \"Rules for Chord Doubling (and Spacing): Which Ones Do We Need?\" — Music Theory Online 10.2", "https://mtosmt.org/issues/mto.04.10.2/mto.04.10.2.aarden_hippel_2.1.php"],
+    ],
+    body: `
+Hai hợp âm nguyên vị có thể **chung nốt** (gốc cách nhau quãng 4 hoặc 5, như T – S, T – D) hoặc **không chung nốt** (gốc cách nhau quãng 2, như S – D). Cả hai trường phái đều xuất phát từ quan sát ấy; chỉ khác cách đặt tên.
+
+## Trường phái Nga: ba cách nối
+Theo các bài giảng tóm tắt giáo trình bốn tác giả (Lamar chưa đối chiếu được nguyên văn sách):
+| Cách | Làm thế nào | Dùng khi |
+|---|---|---|
+| **Nối hoà thanh** (гармоническое соединение) | **Nốt chung giữ nguyên ở cùng một bè**; hai bè trên còn lại đi **liền bậc** (hoặc gần nhất) tới nốt của hợp âm sau | Hai hợp âm quan hệ quãng 4 – 5 (T – S, T – D); là cách **ưu tiên** |
+| **Nối giai điệu** (мелодическое соединение) | **Không giữ** nốt chung; ba bè trên đi **ngược chiều bè trầm** tới nốt gần nhất | **Bắt buộc** khi hai hợp âm quan hệ quãng 2 (**S – D**); có thể dùng cho T – S, T – D để giai điệu soprano đi được |
+| **Nhảy quãng 3** (скачок терции) | Soprano (cùng một bè khác) **nhảy quãng 3**, đổi vị trí giai điệu | Khi muốn đổi thế (vị trí nốt ở soprano) giữa hai hợp âm quan hệ quãng 4 – 5 |
+::staff treble C4+E4+G4 B3+D4+G4 | Nối hoà thanh T → D (Đô trưởng): nốt chung G giữ ở soprano; C xuống B, E xuống D
+::staff treble F4+A4+C5 D4+G4+B4 | Nối giai điệu S → D (bè trầm Fa → Sol đi lên): ba bè trên cùng đi xuống tới nốt gần nhất (Đô → Si, La → Sol, Fa → Rê)
+
+## Trường phái phương Tây: hai "quy tắc kinh nghiệm" của Piston
+Trong *Harmony* (1941), Walter Piston nêu hai quy tắc để nối hợp âm nguyên vị (theo trích dẫn thứ cấp):
+1. Nếu hai hợp âm có **nốt chung**, thường **giữ nốt chung ở cùng bè**, các bè còn lại đi tới **nốt gần nhất**.
+2. Nếu **không có nốt chung**, ba bè trên đi **ngược chiều bè trầm**, luôn tới vị trí gần nhất.
+Piston nêu ngoại lệ: II – V khi soprano là bậc 4; **V – VI** (cảm âm đi lên, các bè khác đi xuống). Các sách Mỹ khác diễn đạt cùng ý bằng "dẫn bè gần nhất" — xem [[dan-giong]].
+
+## Đối chiếu
+| | Nga | Phương Tây |
+|---|---|---|
+| Có nốt chung | **Nối hoà thanh** | Quy tắc 1 của Piston |
+| Không có nốt chung | **Nối giai điệu** | Quy tắc 2 của Piston |
+| Đổi thế ở soprano | **Nhảy quãng 3** — một kỹ thuật có tên riêng, có chủ đề riêng trong sách | Không có tên riêng; coi là một lựa chọn dẫn bè |
+| V – VI (kết ngắt / kết lừa) | Ngoại lệ: **nhân đôi nốt 3** của TSVI | Ngoại lệ: **nhân đôi nốt 3** của vi |
+Như vậy hai trường phái **dạy cùng một việc**; sách Nga **đặt tên** cho từng cách để học viên luyện thành phản xạ.
+
+## Lỗi cần kiểm sau mỗi lần nối
+- Quãng 5, quãng 8 song song; quãng 5, 8 ẩn ở hai bè ngoài — [[luat-hoa-am-bon-be]].
+- Nhân đôi cảm âm; bè chéo nhau; hai bè trên cách nhau quá quãng 8.
+- Bước nhảy quãng tăng trong một bè (ví dụ bậc 6 – 7 nâng trong thứ hoà âm).
+Mẹo nhớ: [[meo-va-cong-thuc-hoa-am]].
+`,
+  },
+  {
+    slug: "truong-hoa-am",
+    title: "Trưởng hoà âm (hạ bậc VI) và hai cách giải thích",
+    category: 'harmony',
+    aliases: ["trưởng hoà âm", "giọng trưởng hoà âm", "harmonic major", "гармонический мажор", "bậc VI hạ", "hạ át thứ trong giọng trưởng", "S thứ"],
+    summary: "Trưởng hoà âm là âm giai trưởng có bậc VI hạ nửa cung (Đô – Rê – Mi – Fa – Sol – La♭ – Si – Đô). Trường phái Nga coi đó là một dạng điệu thức chính thức, có chủ đề riêng trong sách bốn tác giả, sinh ra hạ át thứ, SII giảm và DVII7 giảm; sách phương Tây giải thích cùng các hợp âm ấy là \"hợp âm mượn\" từ giọng thứ cùng tên.",
+    refs: [
+      ["Sheba.spb.ru — mục lục \"Учебник гармонии\" (1965)", "https://sheba.spb.ru/za/uchebnik-garmonii-1965.htm"],
+      ["Classica21 — mục lục \"Учебник гармонии\"", "https://www.classica21.ru/posobiya/teoria/14045"],
+      ["Chshi.uralschool.ru — tóm tắt ký hiệu hợp âm (gồm trưởng hoà âm)", "https://chshi.uralschool.ru/file/download?id=2069"],
+      ["Cyclowiki — Характерные интервалы", "https://cyclowiki.org/wiki/%D0%A5%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D0%B0%D0%BB%D1%8B"],
+      ["Open Music Theory — Modal mixture", "https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/"],
+    ],
+    body: `
+## Âm giai
+**Trưởng hoà âm** là âm giai trưởng tự nhiên có **bậc VI hạ** nửa cung. Giữa bậc V và VI chỉ còn nửa cung, giữa bậc VI và VII thành **quãng 2 tăng** — giống "dấu ấn" của thứ hoà âm nhưng ở phía dưới.
+::staff treble C4 D4 E4 F4 G4 Ab4 B4 C5 | Đô trưởng hoà âm: La♭ (bậc VI hạ) tạo quãng 2 tăng La♭ – Si
+So sánh: **thứ hoà âm** nâng bậc VII của âm giai thứ; **trưởng hoà âm** hạ bậc VI của âm giai trưởng — xem [[am-giai-thu]].
+
+## Hợp âm sinh ra
+| Hợp âm | Đô trưởng hoà âm | Ký hiệu Nga | Số La Mã phương Tây |
+|---|---|---|---|
+| Hạ át **thứ** | F – A♭ – C | S (thứ) | iv (mượn) |
+| Hợp âm ba bậc II **giảm** | D – F – A♭ | SII (giảm) | ii° (mượn) |
+| Hợp âm ba bậc VI | A♭ – C – E (hợp âm ba **tăng**) | VI hạ (tăng) | ít gặp; hợp âm ♭VI phương Tây là A♭ – C – E♭, mượn từ thứ tự nhiên |
+| Hợp âm bảy cảm âm **giảm** | B – D – F – A♭ | DVII7 (giảm) | vii°7 |
+Hợp âm 7 giảm trên cảm âm của giọng trưởng chính là hợp âm "mượn" bậc VI hạ — xem [[hop-am-bay-giam]].
+
+## Hai cách giải thích
+| | **Trường phái Nga** | **Trường phái phương Tây** |
+|---|---|---|
+| Vị trí lý thuyết | Một **dạng điệu thức** (лад) chính thức, đứng cạnh trưởng tự nhiên; sách bốn tác giả xếp "trưởng hoà âm" ngay sau chủ đề hợp âm bậc II | Không có "điệu thức trưởng hoà âm" trong giáo trình cơ bản; các hợp âm này là **hợp âm mượn** (modal mixture) từ giọng **thứ cùng tên** |
+| Ký hiệu | Giữ chữ chức năng (S, SII, DVII7); một số bài tóm tắt thêm chữ **г.** (гармонический) trước ký hiệu khi cần nói rõ, ví dụ г.SII | Thêm dấu hoá hoặc chữ thường vào số La Mã: iv, ii°, ♭VI |
+| Hệ quả | Hạ át thứ trong giọng trưởng được coi là "họ hàng gần", nên trong hệ họ hàng giọng của Rimsky-Korsakov, giọng **Fa thứ** cũng là giọng họ hàng mức một của **Đô trưởng** | Fa thứ khác Đô trưởng **bốn dấu hoá**, không thuộc năm giọng gần |
+Xem thêm: [[hop-am-muon]], [[chuyen-giong]], [[so-sanh-hai-truong-phai-hoa-am]].
+
+## Mẹo
+- Muốn hạ át "buồn" mà vẫn ở giọng trưởng: **hạ bậc VI** trong S (A → A♭ ở Đô trưởng) — bước **A – A♭ – G** đi xuống liền nửa cung nghe rất "Lãng mạn".
+- Tránh **quãng 2 tăng** A♭ – B trong một bè, trừ khi cố ý.
+`,
+  },
+  {
+    slug: "so-sanh-hai-truong-phai-hoa-am",
+    title: "So sánh hai trường phái hoà âm: cùng hiện tượng, hai cách giải thích",
+    category: 'harmony',
+    aliases: ["so sánh trường phái hoà âm", "Stufentheorie và Funktionstheorie", "lý thuyết bậc và lý thuyết chức năng", "K64 hay I64", "lệch giọng", "отклонение", "họ hàng giọng", "родство тональностей"],
+    summary: "Đặt cạnh nhau cách giải thích của trường phái Nga – Xô viết (sách bốn tác giả, lý thuyết chức năng) và trường phái phương Tây (dòng Vienna, lý thuyết bậc, sách Mỹ) cho từng điểm: hệ ký hiệu, hợp âm phụ, hợp âm 6/4 kết, hợp âm bậc VII, át phụ và lệch giọng, họ hàng giọng, nối hợp âm, quãng 5 ẩn, nhân đôi trong hợp âm sáu và kết ngắt, trưởng hoà âm.",
+    refs: [
+      ["Cheong & Ding Hong, \"Sposobin Remains: A Soviet Harmony Textbook’s Twisted Fate in China\" — ZGMTH 15/2 (2018)", "https://www.gmth.de/zeitschrift/artikel/974.aspx"],
+      ["Ewell, \"Harmonic Functionalism in Russian Music Theory: A Primer\" — Theoria 26 (2020), PDF", "http://philipewell.com/wp-content/uploads/2020/12/Ewell-HarFunction-Russia-Primer.pdf"],
+      ["Meeùs — Stufentheorie (European Music Theory)", "https://europeanmusictheory.eu/stufentheorie/"],
+      ["Wikibooks (tiếng Đức) — Stufen- und Funktionstheorie", "https://de.wikibooks.org/wiki/Musiklehre:_Stufen-_und_Funktionstheorie"],
+      ["Wikipedia — Function (music)", "https://en.wikipedia.org/wiki/Function_(music)"],
+      ["Wikipedia tiếng Nga — Квартсекстаккорд", "https://ru.wikipedia.org/wiki/Квартсекстаккорд"],
+      ["Ninov, \"Functional Nature of the Cadential Six-Four\" — Muzikološki zbornik 52/1 (2016)", "https://journals.uni-lj.si/MuzikoloskiZbornik/article/view/6658"],
+      ["Fankhauser — Intégral 37 (2024), về hợp âm 6/4 kết", "https://esm.rochester.edu/integral/wp-content/uploads/2024/07/Integral_Vol37_Fankhauser.pdf"],
+      ["Open Music Theory — Cadential 6/4", "https://viva.pressbooks.pub/openmusictheory/chapter/cadential-64/"],
+      ["Open Music Theory — Applied chords", "https://viva.pressbooks.pub/openmusictheory/?p=6540"],
+      ["IMSLP — Rimsky-Korsakov, Практический учебник гармонии (1886)", "https://imslp.org/wiki/Harmony_(Rimsky-Korsakov,_Nikolay)"],
+      ["Belcanto.ru — Родство тональностей", "https://www.belcanto.ru/rodstvo.html"],
+      ["Wikipedia — Closely related key", "https://en.wikipedia.org/wiki/Closely_related_key"],
+      ["College Board — AP Music Theory 2007 scoring guidelines (quãng ẩn)", "https://secure-media.collegeboard.org/apc/ap07_musictheory_q5.pdf"],
+      ["Hutchinson, Music Theory for the 21st-Century Classroom — Voice leading root position triads", "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/26%3A_Voice_Leading_Triads/26.07%3A_Voice_Leading_Root_Position_Triads_in_Four_Parts"],
+      ["Aarden & von Hippel, \"Rules for Chord Doubling (and Spacing): Which Ones Do We Need?\" — Music Theory Online 10.2", "https://mtosmt.org/issues/mto.04.10.2/mto.04.10.2.aarden_hippel_2.1.php"],
+      ["Nsportal — bài giảng \"Соединение главных трезвучий\"", "https://nsportal.ru/npo-spo/kultura-i-iskusstvo/library/2015/11/04/lektsiya-po-garmonii-soedinenie-glavnyh-trezvuchiy"],
+    ],
+    body: `
+Hai trường phái **dạy cùng một thực hành** — xem [[hai-truong-phai-hoa-am]]. Bảng dưới chỉ ghi những chỗ **cách giải thích khác nhau**; mỗi dòng nối sang bài chi tiết. Ghi chú nguồn: phần "trường phái Nga" dựa trên mục lục sách bốn tác giả và các bài giảng tóm tắt sách; các quy tắc chi tiết của sách Lamar chưa đối chiếu được nguyên văn.
+
+## 1. Gốc lý thuyết: chức năng hay bậc
+| | **Nga – Xô viết** | **Phương Tây** |
+|---|---|---|
+| Lý thuyết | **Chức năng** (Riemann, 1893): mọi hợp âm quy về **ba** chức năng T – S – D | **Bậc** (Stufentheorie: Weber, Sechter, Schenker): **bảy** bậc, mỗi bậc một bản sắc; trọng tâm là **nốt gốc đi đâu** |
+| Hợp âm phụ | "Đại diện" của chức năng: SII, TSVI, DTIII | Hợp âm độc lập trên bậc của nó: ii, vi, iii |
+| Câu hỏi phân tích | Hợp âm này **làm gì** (vai trò)? | Hợp âm này **là gì**, đi theo chuyển động nốt gốc nào? |
+Sách Mỹ hiện đại **pha trộn** cả hai: ghi số La Mã nhưng dạy ba nhóm chủ – tiền át – át. Chi tiết: [[chuc-nang-hoa-am]], [[ky-hieu-chuc-nang-truong-phai-nga]], [[hoa-am-truong-phai-phuong-tay]].
+
+## 2. Hợp âm 6/4 kết
+| | **Nga** | **Phương Tây** |
+|---|---|---|
+| Ký hiệu | **K64** — ký hiệu riêng | I6/4 – V, hoặc V6/4 – 5/3, hoặc "Cad 6/4" |
+| Giải thích | Có hình dạng của T64 nhưng **chức năng át**; về lịch sử là **hai nốt treo kép** trên D (ba nốt treo nếu đến D7); đứng **phách mạnh hơn** D; nhân đôi bè trầm; thường được chuẩn bị bằng nhóm S | Hai cách đọc cùng tồn tại: **trang trí cho V** (Aldwell – Schachter: "có lẽ không nên ghi là I6/4"; Open Music Theory ghi V6/4–5/3) hoặc **I6/4** (nhiều giáo viên Mỹ). Tranh luận có từ Kirnberger (1773) |
+| Quan điểm thứ ba | Ninov (2016) cho rằng hợp âm này **mang hai chức năng**: cấu trúc chủ, chức năng át chiếm ưu thế | — |
+Chi tiết: [[hop-am-sau-bon]].
+
+## 3. Hợp âm bậc VII
+| | **Nga** | **Phương Tây** |
+|---|---|---|
+| Ký hiệu | **DVII**, **DVII7** — chữ D nói thẳng là nhóm át | vii°, vii°7, viiø7 |
+| Giải thích | Thuộc nhóm **át** | Ở Sechter: **V thiếu nốt gốc**; ở sách Mỹ: hợp âm cảm âm, chức năng át |
+Hai cách nói gặp nhau ở kết luận; chỉ khác tên. Chi tiết: [[hop-am-cam-am]].
+
+## 4. Át phụ: "lệch giọng" và "chủ âm hoá"
+| | **Nga** | **Phương Tây** |
+|---|---|---|
+| Thuật ngữ | **Lệch giọng** (отклонение) — một chủ đề lớn ở phần hai của sách; át của át ghi **DD** | **Chủ âm hoá** (tonicization), **hợp âm áp dụng** (applied chord): V/x, vii°/x |
+| Ranh giới với chuyển giọng | Lệch giọng: rời giọng chính **trong chốc lát**, không có kết ở giọng mới | Chủ âm hoá ngắn, **không có kết xác nhận**; chuyển giọng cần **một kết** ở giọng mới |
+Định nghĩa gần như trùng nhau; Lamar chưa tìm thấy tài liệu đối chiếu trực tiếp hai thuật ngữ. Chi tiết: [[hop-am-at-phu]].
+
+## 5. Họ hàng giọng
+| | **Nga** (theo hệ Rimsky-Korsakov, 1886) | **Phương Tây** |
+|---|---|---|
+| Giọng gần | **Họ hàng mức một: 6 giọng** — các giọng có hợp âm chủ nằm trên các bậc của giọng chính, tính cả **dạng hoà âm**. Đô trưởng: La thứ, Sol trưởng, Mi thứ, Fa trưởng, Rê thứ **và Fa thứ** (hạ át thứ của trưởng hoà âm) | **5 giọng gần**: hoá biểu khác nhau **tối đa một dấu** (giọng song song, giọng át và giọng song song của nó, giọng hạ át và giọng song song của nó); giọng cùng tên thường cũng được coi là gần dù cách ba dấu |
+| Ghi chú | Có nguồn chưa kiểm chứng nói sách bốn tác giả dùng **bốn mức** họ hàng (dòng Moskva) thay vì ba mức của Rimsky-Korsakov | — |
+Chi tiết: [[chuyen-giong]], [[truong-hoa-am]].
+
+## 6. Nối hợp âm
+| | **Nga** | **Phương Tây** |
+|---|---|---|
+| Cách dạy | Ba cách **có tên**: nối hoà thanh, nối giai điệu, nhảy quãng 3 | Hai "quy tắc kinh nghiệm" của Piston: giữ nốt chung; không có nốt chung thì đi ngược chiều bè trầm |
+Nội dung trùng nhau. Chi tiết: [[noi-hop-am]].
+
+## 7. Quãng 5, quãng 8 ẩn
+| | **Nga** | **Phương Tây** |
+|---|---|---|
+| Quy tắc | Từ điển Brockhaus – Efron (Nga, đầu thế kỷ 20): quãng 8 ẩn bị cấm khi hai hợp âm **không họ hàng** và khi các bè tạo quãng ẩn **nhảy** | Lỗi chủ yếu giữa **hai bè ngoài**; chấp nhận khi **soprano đi liền bậc** (tiêu chí chấm của College Board) |
+Lamar chưa tìm được nguyên văn quy tắc của sách bốn tác giả. Chi tiết: [[luat-hoa-am-bon-be]].
+
+## 8. Nhân đôi
+| Trường hợp | **Nga** | **Phương Tây** |
+|---|---|---|
+| Hợp âm ba chính, nguyên vị | Nhân đôi **nốt gốc** | Nhân đôi **nốt gốc** |
+| Kết ngắt / kết lừa V – VI | Nhân đôi **nốt 3** của TSVI | Nhân đôi **nốt 3** của vi (bắt buộc trong giọng thứ để tránh quãng 2 tăng và quãng song song) |
+| Hợp âm sáu | Ý kiến trong truyền thống Nga cũng khác nhau: Rimsky-Korsakov khuyên nhân đôi gốc hoặc nốt 5, không nhân đôi nốt 3; Tchaikovsky hay nhân đôi nốt 3 | Không có luật cố định; không nhân đôi cảm âm; chọn cách cho dẫn bè tốt nhất (Kostka – Payne) |
+Nguồn đối chiếu Rimsky-Korsakov – Tchaikovsky: Aarden và von Hippel, *Music Theory Online* (2004). Chi tiết: [[luat-hoa-am-bon-be]], [[the-dao-hop-am]].
+
+## 9. Trưởng hoà âm
+| | **Nga** | **Phương Tây** |
+|---|---|---|
+| Hạ át thứ trong giọng trưởng | Thuộc **trưởng hoà âm** — một dạng điệu thức | **Hợp âm mượn** từ giọng thứ cùng tên |
+Chi tiết: [[truong-hoa-am]], [[hop-am-muon]].
+
+## Kết luận
+Học một trường phái vẫn đọc được sách của trường phái kia nếu nắm bảng đổi ký hiệu. Chỗ cần cẩn thận nhất khi chuyển qua lại: **K64** (có người gọi là I6/4), **họ hàng giọng** (6 hay 5 giọng), và **lệch giọng / chủ âm hoá**. Bảng tra nhanh: [[meo-va-cong-thuc-hoa-am]].
+`,
+  },
+  {
+    slug: "meo-va-cong-thuc-hoa-am",
+    title: "Mẹo và công thức hoà âm (cho cả hai trường phái)",
+    category: 'harmony',
+    aliases: ["mẹo hoà âm", "công thức hoà âm", "cheat sheet hoà âm", "bảng tra hoà âm", "mẹo viết bè", "công thức giải quyết D7", "checklist hoà âm", "mẹo nhớ hoà âm"],
+    summary: "Toàn bộ công thức và mẹo nhớ của phần hoà âm trên một trang: dựng hợp âm, bảng thể đảo hai hệ ký hiệu, nhân đôi, ba cách nối hợp âm, công thức giải quyết D7 (V7), K64, các loại kết, át phụ, họ hàng giọng, danh sách kiểm tra lỗi và các câu thần chú dễ nhớ — mỗi mục ghi rõ thuộc trường phái nào hay dùng chung.",
+    refs: [
+      ["Open Music Theory — Strengthening endings with V7", "https://viva.pressbooks.pub/openmusictheory/chapter/strengthening-endings-with-v7/"],
+      ["Open Music Theory — Cadential 6/4", "https://viva.pressbooks.pub/openmusictheory/chapter/cadential-64/"],
+      ["Open Music Theory — Applied chords", "https://viva.pressbooks.pub/openmusictheory/?p=6540"],
+      ["Hutchinson, Music Theory for the 21st-Century Classroom — Voice leading root position triads", "https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/26%3A_Voice_Leading_Triads/26.07%3A_Voice_Leading_Root_Position_Triads_in_Four_Parts"],
+      ["College Board — AP Music Theory 2007 scoring guidelines (quãng ẩn)", "https://secure-media.collegeboard.org/apc/ap07_musictheory_q5.pdf"],
+      ["Wikipedia — Closely related key", "https://en.wikipedia.org/wiki/Closely_related_key"],
+      ["Belcanto.ru — Родство тональностей", "https://www.belcanto.ru/rodstvo.html"],
+      ["Музыкальная энциклопедия (booksite.ru) — Доминантсептаккорд", "https://booksite.ru/fulltext/1/001/007/092/92813.htm"],
+      ["Nsportal — bài giảng \"Соединение главных трезвучий\"", "https://nsportal.ru/npo-spo/kultura-i-iskusstvo/library/2015/11/04/lektsiya-po-garmonii-soedinenie-glavnyh-trezvuchiy"],
+    ],
+    body: `
+Ký hiệu: **[Chung]** dùng cho cả hai trường phái · **[Nga]** sách bốn tác giả · **[Tây]** sách phương Tây. Bối cảnh: [[hai-truong-phai-hoa-am]].
+
+## 1. Dựng hợp âm [Chung]
+| Hợp âm | Công thức (từ gốc, đếm quãng 3 chồng lên) | Ví dụ |
+|---|---|---|
+| Ba trưởng | 3 trưởng + 3 thứ | C – E – G |
+| Ba thứ | 3 thứ + 3 trưởng | A – C – E |
+| Ba giảm | 3 thứ + 3 thứ | B – D – F |
+| Ba tăng | 3 trưởng + 3 trưởng | C – E – G♯ |
+| Bảy át (D7 / V7) | Ba trưởng + 3 thứ | G – B – D – F |
+| Bảy cảm âm giảm (DVII7 / vii°7) | 3 thứ ×3 | B – D – F – A♭ |
+| Bảy nửa giảm (viiø7) | Ba giảm + 3 trưởng | B – D – F – A |
+**Mẹo**: hợp âm trên phím trắng — trưởng ở I, IV, V; thứ ở II, III, VI; giảm ở VII ("**1 4 5 trưởng, 2 3 6 thứ, 7 giảm**").
+
+## 2. Thể đảo — hai hệ ký hiệu
+| Thể | Số bass | [Nga] | [Tây] |
+|---|---|---|---|
+| Ba, nguyên vị | 5/3 | T, S, D | I, IV, V |
+| Đảo 1 | 6 | T6 (hợp âm sáu) | I6 |
+| Đảo 2 | 6/4 | T64 (hợp âm bốn sáu) | I6/4 |
+| Bảy, nguyên vị | 7 | D7 | V7 |
+| Đảo 1 | 6/5 | D65 (hợp âm năm sáu) | V6/5 |
+| Đảo 2 | 4/3 | D43 (hợp âm ba bốn) | V4/3 |
+| Đảo 3 | 4/2 | D2 (hợp âm hai) | V4/2 |
+**Mẹo nhớ nốt ở bass**: 6 và 6/5 → bass là **nốt 3**; 6/4 và 4/3 → bass là **nốt 5**; 4/2 (2) → bass là **nốt 7**. Tên Nga đọc theo quãng **giữa bass và nốt gốc / nốt 7**: hợp âm *hai* có quãng 2 giữa bass (nốt 7) và nốt gốc ngay trên nó.
+
+## 3. Nhân đôi [Chung]
+| Trường hợp | Nhân đôi |
+|---|---|
+| Hợp âm ba trưởng, thứ nguyên vị | Nốt **gốc** |
+| Hợp âm 6/4 (mọi loại, gồm K64) | Nốt **bass** |
+| Sau D trong kết ngắt / kết lừa (V – VI) | Nốt **3** của VI |
+| Hợp âm sáu | Không có luật cố định; **không nhân đôi cảm âm** |
+| Bất kỳ đâu | **Không bao giờ nhân đôi cảm âm** và nốt 7 của hợp âm bảy |
+
+## 4. Nối hợp âm
+- [Nga] **Có nốt chung → nối hoà thanh** (giữ nốt chung, hai bè kia đi gần nhất). **Không có nốt chung (S – D) → nối giai điệu** (ba bè trên đi ngược bè trầm). Muốn đổi thế → **nhảy quãng 3**.
+- [Tây] Quy tắc của Piston: giữ nốt chung; không có nốt chung thì đi ngược bè trầm. Ngoại lệ: **V – vi**.
+- **Câu thần chú**: "**Chung thì giữ, không chung thì ngược.**"
+Chi tiết: [[noi-hop-am]].
+
+## 5. Giải quyết D7 (V7) [Chung]
+| Nốt của D7 | Đi đâu | Đô trưởng |
+|---|---|---|
+| Nốt 3 (cảm âm) | **Lên** chủ âm | B → C |
+| Nốt 7 | **Xuống liền bậc** | F → E |
+| Nốt 5 | Xuống chủ âm (hoặc lên nốt 3) | D → C |
+| Nốt gốc ở bass | Lên quãng 4 / xuống quãng 5 về chủ | G → C |
+**Công thức đầy đủ – thiếu**:
+- D7 **đầy đủ** (nguyên vị) → T **thiếu** (gấp ba nốt gốc, có nốt 3, không có nốt 5).
+- D7 **thiếu** (bỏ nốt 5, nhân đôi gốc) → T **đầy đủ**.
+- Muốn T đầy đủ sau D7 đầy đủ: cho cảm âm ở **bè giữa** đi xuống quãng 3 về nốt 5 (Open Music Theory).
+**Thần chú**: "**Bảy xuống, ba lên.**"
+::staff treble B3+D4+F4 C4+C4+E4 | D7 (bè trên B – D – F trên bass G) → T thiếu (C – C – E trên bass C): B lên C, D xuống C, F xuống E
+
+## 6. Hợp âm 6/4 kết (K64)
+- **Chung**: bass là **bậc 5**, giữ nguyên khi sang D; hai bè trên **6 → 5** và **4 → 3** đi xuống liền bậc; đứng **phách mạnh hơn** D; nhân đôi bass.
+- [Nga] Ghi **K64**, xếp vào **nhóm át**; trước nó thường là nhóm **S** (S, S6, SII, SII6, SII7, DD).
+- [Tây] Ghi **V6/4 – 5/3** hoặc "Cad 6/4"; nhiều giáo viên ghi I6/4 – V.
+- **Kiểm nhanh**: hợp âm 6/4 có ngay sau nó D **trên cùng bass** → là K64.
+Chi tiết: [[hop-am-sau-bon]].
+
+## 7. Các loại kết
+| Kết | [Nga] | [Tây] |
+|---|---|---|
+| Kết trọn (kết chính thức) | D – T (thường S – K64 – D – T) | V – I (thường PD – I6/4 – V – I) |
+| Kết nửa | … – D | … – V |
+| Kết plagal | S – T | IV – I |
+| Kết ngắt / kết lừa | D – TSVI | V – vi |
+Chi tiết: [[cau-ket]].
+
+## 8. Át phụ và lệch giọng
+- **Công thức tìm V của x** [Chung]: lấy nốt gốc của x, lên **quãng 5 đúng**, dựng **hợp âm ba trưởng** (hoặc bảy át). Ví dụ V/ii trong Đô trưởng: Rê → La, hợp âm La trưởng (A – C♯ – E).
+- [Nga] Át của át ghi **DD**; đoạn ngắn rời sang giọng khác không có kết gọi là **lệch giọng**.
+- [Tây] Ghi **V/x**, **vii°/x**; gọi là **chủ âm hoá**.
+- **Mẹo nhận ra**: một **dấu hoá lạ** đi lên nửa cung (♯ hoặc ♮ nâng) thường là **cảm âm tạm** của hợp âm tiếp theo.
+
+## 9. Họ hàng giọng
+- [Tây] **5 giọng gần** = các giọng có hoá biểu khác **tối đa một dấu**: (song song) + (át, song song của át) + (hạ át, song song của hạ át).
+- [Nga, theo Rimsky-Korsakov] **6 giọng họ hàng mức một** = giọng có hợp âm chủ nằm trên các bậc của giọng chính, tính cả dạng hoà âm; với giọng trưởng thêm **giọng hạ át thứ** (Đô trưởng → Fa thứ); với giọng thứ thêm **giọng át trưởng** (La thứ → Mi trưởng).
+- **Mẹo**: dựng các hợp âm ba **trưởng và thứ** trên các bậc của giọng — mỗi hợp âm là chủ của một giọng gần.
+Chi tiết: [[chuyen-giong]].
+
+## 10. Danh sách kiểm tra 12 câu [Chung]
+1. Mỗi bè trong âm vực? Hai bè trên liền nhau cách nhau không quá quãng 8?
+2. Không chéo bè?
+3. Nhân đôi đúng (không nhân đôi cảm âm)?
+4. Không có quãng 5, quãng 8 **song song** (kể cả quãng kép, kể cả ngược chiều 5 → 12)?
+5. Không có quãng 5, 8 **ẩn** giữa hai bè ngoài khi soprano nhảy?
+6. Cảm âm ở soprano đi lên chủ âm?
+7. Nốt 7 của hợp âm bảy đi xuống?
+8. Không có quãng 2 tăng trong một bè (bậc 6 – 7 nâng của thứ hoà âm)?
+9. Hợp âm 6/4 chỉ ở các dạng cho phép (kết, lướt, thêu, rải)?
+10. Kết đúng công thức, K64 ở phách mạnh?
+11. Nối hợp âm theo "chung thì giữ, không chung thì ngược"?
+12. Hát lại từng bè: có bè nào khó hát (nhảy xa, đi tới đi lui)?
+
+## 11. Mẹo học
+- **Học hai hệ ký hiệu như hai ngôn ngữ**: mỗi lần phân tích, ghi **cả** số La Mã lẫn chữ chức năng (I/T, ii6/SII6, V7/D7, vi/TSVI).
+- **Tô màu theo chức năng**: chủ một màu, hạ át một màu, át một màu — câu nhạc hiện ra như T → S → D → T.
+- **Viết bass trước, soprano sau, hai bè giữa cuối cùng.**
+- **Chơi trên đàn** từng bài tập trước khi coi là xong: tai bắt lỗi quãng 5 song song nhanh hơn mắt.
+- Bảng tương tự cho đối âm: [[cong-thuc-phuc-dieu]].
 `,
   },
 ]
