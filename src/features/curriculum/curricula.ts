@@ -32,12 +32,14 @@ export const CURRICULA: Curriculum[] = [
       'Thời lượng tập tối ưu cho trẻ chưa có nghiên cứu xác nhận — giáo viên điều chỉnh theo từng trẻ.',
     ],
     review: 'danh-gia-giao-trinh-piano-va-nhac-ly',
+    goal: 'ABRSM Grade 5',
     levels: [
       {
         title: 'Khám phá âm thanh và bàn phím',
         subtitle: 'Nghe cao – thấp, dài – ngắn; cảm nhận phách; tìm đường trên bàn phím; chơi phím đen và ngẫu hứng ngũ cung.',
-        duration: 'khoảng 2 – 3 tháng',
-        repertoire: ['Ngẫu hứng trên phím đen (ngũ cung) cùng giáo viên đệm', 'Các câu hát so – mi, so – la – so – mi (bài đồng dao, dân ca thiếu nhi)', 'Bắc kim thang, chơi theo tai trên phím đen', 'Twinkle Twinkle Little Star — mò giai điệu bằng tai'],
+        grade: 'Trước Initial',
+        months: [2, 3],
+        pieces: [{ title: 'Ngẫu hứng trên phím đen (ngũ cung) cùng giáo viên đệm', composer: '' }, { title: 'Các câu hát so – mi, so – la – so – mi (bài đồng dao, dân ca thiếu nhi)', composer: '' }, { title: 'Bắc kim thang, chơi theo tai trên phím đen', composer: '' }, { title: 'Twinkle Twinkle Little Star — mò giai điệu bằng tai', composer: '' }],
         checkpoint: ['Vỗ tay đều theo nhạc và nhận ra nhịp đi hai hay nhịp đi ba', 'Tìm mọi phím Đô trên đàn nhờ nhóm hai phím đen', 'Ngồi đúng tư thế, chơi một tay với cổ tay thả lỏng', 'Hát lại một câu ngắn giáo viên vừa hát'],
         units: [
           {
@@ -86,8 +88,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Đọc nhạc đầu tiên',
         subtitle: 'Khuông nhạc, khoá Sol – Fa, nốt mốc, liền bậc và nhảy bậc; vị trí năm ngón Đô; hai tay luân phiên.',
-        duration: 'khoảng 3 – 4 tháng',
-        repertoire: ['Lightly Row, Mary Had a Little Lamb, London Bridge (đầu tập 1 Suzuki)', 'Au clair de la lune', 'Beyer Op. 101: vài bài đầu, cùng phần đệm của giáo viên', 'Cò lả (giai điệu đơn, tay phải)'],
+        grade: 'ABRSM Initial',
+        months: [3, 4],
+        pieces: [{ title: 'Lightly Row, Mary Had a Little Lamb, London Bridge (đầu tập 1 Suzuki)', composer: '' }, { title: 'Au clair de la lune', composer: '' }, { title: 'Beyer Op. 101: vài bài đầu, cùng phần đệm của giáo viên', composer: '' }, { title: 'Cò lả (giai điệu đơn, tay phải)', composer: '' }],
         checkpoint: ['Đọc tên các nốt trong vị trí Đô ở cả khoá Sol và khoá Fa', 'Nhận ra liền bậc, nhảy bậc, nốt lặp trên khuông', 'Chơi một bài 8 ô nhịp hai tay luân phiên, đều phách', 'Hát lại bằng tên nốt bài vừa chơi'],
         units: [
           {
@@ -137,8 +140,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Giọng Đô và những hợp âm đầu tiên',
         subtitle: 'Âm giai Đô trưởng, dấu hoá, hợp âm ba, đệm tay trái I – V; câu hỏi – câu đáp; thị tấu hằng ngày.',
-        duration: 'khoảng 4 – 6 tháng',
-        repertoire: ['Minuet Sol trưởng BWV Anh. 114 (Petzold) — phần đầu, đơn giản hoá nếu cần', 'Ode to Joy (Beethoven), có đệm I – V', 'Bài dân ca Việt có đệm hai hợp âm (I – V)', 'Một bài tự sáng tác 8 ô nhịp ở Đô trưởng'],
+        grade: 'ABRSM Grade 1',
+        months: [4, 6],
+        pieces: [{ title: 'Minuet Sol trưởng BWV Anh. 114 (Petzold) — phần đầu, đơn giản hoá nếu cần', composer: '' }, { title: 'Ode to Joy (Beethoven), có đệm I – V', composer: '' }, { title: 'Bài dân ca Việt có đệm hai hợp âm (I – V)', composer: '' }, { title: 'Một bài tự sáng tác 8 ô nhịp ở Đô trưởng', composer: '' }],
         checkpoint: ['Chơi âm giai Đô trưởng một quãng 8 từng tay với ngón luồn đúng', 'Dựng hợp âm ba trưởng trên Đô, Fa, Sol', 'Đệm một giai điệu quen bằng I và V', 'Thị tấu một bài 4 ô nhịp ở vị trí năm ngón'],
         units: [
           {
@@ -185,8 +189,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Nhiều giọng và câu nhạc biểu cảm',
         subtitle: 'Hoá biểu Sol, Fa, Rê; giọng thứ; đảo hợp âm; hợp âm rải; pedal; hình thức hai đoạn và ba đoạn.',
-        duration: 'khoảng 6 – 9 tháng',
-        repertoire: ['Minuet Sol trưởng BWV Anh. 114 trọn bài', 'Các bài trong Clavierbüchlein / Notebook for Anna Magdalena Bach', 'Schumann — Album cho tuổi trẻ Op. 68: Melodie, Wilder Reiter', 'Pachelbel — vòng hợp âm Canon (bản đơn giản)'],
+        grade: 'ABRSM Grade 2',
+        months: [6, 9],
+        pieces: [{ title: 'Minuet Sol trưởng BWV Anh. 114 trọn bài', composer: '' }, { title: 'Các bài trong Clavierbüchlein / Notebook for Anna Magdalena Bach', composer: '' }, { title: 'Schumann — Album cho tuổi trẻ Op. 68: Melodie, Wilder Reiter', composer: '' }, { title: 'Pachelbel — vòng hợp âm Canon (bản đơn giản)', composer: '' }],
         checkpoint: ['Chơi âm giai và hợp âm I – IV – V ở Đô, Sol, Fa', 'Phân biệt bằng tai giọng trưởng và giọng thứ', 'Chơi một bài có pedal và hợp âm rải tay trái', 'Chỉ ra phần A, phần B trong một bài hai đoạn'],
         units: [
           {
@@ -235,8 +240,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Người chơi nhỏ',
         subtitle: 'Hợp âm bảy át, kết, liên ba, rondo và sonatina; học thuộc, biểu diễn và chuẩn bị thi cấp độ.',
-        duration: 'khoảng 9 – 12 tháng',
-        repertoire: ['Clementi — Sonatina Op. 36 số 1, chương 1', 'Schumann — Wilder Reiter Op. 68 số 8', 'Bach — một Minuet / Musette trong Notebook for Anna Magdalena Bach', 'Một bài dân ca Việt tự phối hoà âm cho hai tay'],
+        grade: 'ABRSM Grade 3',
+        months: [9, 12],
+        pieces: [{ title: 'Clementi — Sonatina Op. 36 số 1, chương 1', composer: '' }, { title: 'Schumann — Wilder Reiter Op. 68 số 8', composer: '' }, { title: 'Bach — một Minuet / Musette trong Notebook for Anna Magdalena Bach', composer: '' }, { title: 'Một bài dân ca Việt tự phối hoà âm cho hai tay', composer: '' }],
         checkpoint: ['Chơi I – IV – V7 – I ở ba giọng', 'Nhận ra kết hoàn toàn và nửa kết khi nghe', 'Chơi thuộc lòng một bài trước khán giả nhỏ', 'Giải thích hình thức bài sonatina đang học'],
         units: [
           {
@@ -322,12 +328,14 @@ export const CURRICULA: Curriculum[] = [
       'Học nhóm hoặc chơi bốn tay nếu có thể — nhiều người lớn thích hoà tấu.',
     ],
     review: 'danh-gia-giao-trinh-piano-va-nhac-ly',
+    goal: 'ABRSM Grade 8 + đệm hát',
     levels: [
       {
         title: 'Nền tảng nhanh',
         subtitle: 'Bàn phím, tư thế, khuông lớn, nốt mốc, trường độ và nhịp; vị trí năm ngón; cách tập của người lớn.',
-        duration: 'khoảng 1 – 2 tháng',
-        repertoire: ['Ode to Joy (Beethoven), giai điệu tay phải', 'Bắc kim thang trên phím đen', 'Bài năm nốt hai tay luân phiên', 'Ngẫu hứng ngũ cung trên một nốt trầm ngân'],
+        grade: 'ABRSM Initial',
+        months: [1, 2],
+        pieces: [{ title: 'Ode to Joy (Beethoven), giai điệu tay phải', composer: '' }, { title: 'Bắc kim thang trên phím đen', composer: '' }, { title: 'Bài năm nốt hai tay luân phiên', composer: '' }, { title: 'Ngẫu hứng ngũ cung trên một nốt trầm ngân', composer: '' }],
         checkpoint: ['Đọc mọi nốt trong vị trí Đô ở hai khoá', 'Đếm và chơi đúng nốt tròn, trắng, đen, móc đơn', 'Chơi một bài 8 ô nhịp hai tay luân phiên', 'Lập được kế hoạch tập một tuần cho mình'],
         units: [
           {
@@ -382,8 +390,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Hợp âm và đệm hát',
         subtitle: 'Cung – nửa cung, âm giai trưởng, hợp âm ba và ký hiệu hợp âm, chức năng I – IV – V, các điệu đệm phổ biến.',
-        duration: 'khoảng 2 – 3 tháng',
-        repertoire: ['Đệm hát một bài Việt quen thuộc bằng I – IV – V', 'Let It Be hoặc một ballad pop với vòng I – V – vi – IV', 'Pachelbel — vòng hợp âm Canon (bản đơn giản)', 'Một bài tự chọn từ lead sheet'],
+        grade: 'ABRSM Grade 1',
+        months: [2, 3],
+        pieces: [{ title: 'Đệm hát một bài Việt quen thuộc bằng I – IV – V', composer: '' }, { title: 'Let It Be hoặc một ballad pop với vòng I – V – vi – IV', composer: '' }, { title: 'Pachelbel — vòng hợp âm Canon (bản đơn giản)', composer: '' }, { title: 'Một bài tự chọn từ lead sheet', composer: '' }],
         checkpoint: ['Dựng hợp âm trưởng, thứ trên bất kỳ nốt nào', 'Đọc ký hiệu C, Am, F/A, G7', 'Đệm một bài hát với hai điệu đệm khác nhau', 'Chơi I – IV – V – I ở Đô, Sol, Fa'],
         units: [
           {
@@ -435,8 +444,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Đọc và chơi bản nhạc',
         subtitle: 'Hoá biểu, vòng quãng 5, giọng thứ, âm giai và hợp âm rải, pedal, cường độ, câu nhạc, thị tấu — và những bản piano đầu tiên.',
-        duration: 'khoảng 4 – 6 tháng',
-        repertoire: ['Minuet Sol trưởng BWV Anh. 114 (Petzold)', 'Satie — Gymnopédie số 1', 'Bach — Prelude Đô trưởng BWV 846 (Bình quân luật tập 1)', 'Schumann — Träumerei (khi đã vững)'],
+        grade: 'ABRSM Grade 2',
+        months: [4, 6],
+        pieces: [{ title: 'Minuet Sol trưởng BWV Anh. 114 (Petzold)', composer: '' }, { title: 'Satie — Gymnopédie số 1', composer: '' }, { title: 'Bach — Prelude Đô trưởng BWV 846 (Bình quân luật tập 1)', composer: '' }, { title: 'Schumann — Träumerei (khi đã vững)', composer: '' }],
         checkpoint: ['Đọc hoá biểu đến hai dấu', 'Chơi âm giai và hợp âm rải hai tay ở năm giọng', 'Dùng pedal đổi hợp âm sạch tiếng', 'Thị tấu một bài cấp độ 1 – 2'],
         units: [
           {
@@ -490,8 +500,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Hiểu âm nhạc mình chơi',
         subtitle: 'Hợp âm bảy, kết, dẫn giọng, nốt ngoài hợp âm, át phụ, chuyển giọng, hình thức — và phân tích các bản quen thuộc.',
-        duration: 'khoảng 6 – 9 tháng',
-        repertoire: ['Beethoven — Für Elise', 'Chopin — Nocturne Op. 9 số 2 hoặc Prelude La trưởng Op. 28 số 7', 'Pachelbel — Canon (bản piano)', 'Một bài Việt tự phối hoà âm cho piano độc tấu'],
+        grade: 'ABRSM Grade 3',
+        months: [6, 9],
+        pieces: [{ title: 'Beethoven — Für Elise', composer: '' }, { title: 'Chopin — Nocturne Op. 9 số 2 hoặc Prelude La trưởng Op. 28 số 7', composer: '' }, { title: 'Pachelbel — Canon (bản piano)', composer: '' }, { title: 'Một bài Việt tự phối hoà âm cho piano độc tấu', composer: '' }],
         checkpoint: ['Chơi chuỗi kết I – IV – I – V7 – I ở mọi giọng đến ba dấu', 'Phối hoà âm một giai điệu lạ bằng I, IV, V7', 'Chỉ ra kết, chuyển giọng, hình thức của bản đang chơi', 'Dịch một bài đệm sang giọng khác'],
         units: [
           {
@@ -544,8 +555,9 @@ export const CURRICULA: Curriculum[] = [
       {
         title: 'Tự do với cây đàn',
         subtitle: 'Ngẫu hứng, blues và ii – V – I, hoà âm cho giai điệu ngũ cung Việt, hình thức sonata, học thuộc và biểu diễn.',
-        duration: 'liên tục, theo mục tiêu riêng',
-        repertoire: ['Beethoven — Sonata "Ánh trăng" Op. 27 số 2, chương 1', 'Debussy — Clair de lune (khi đã sẵn sàng)', 'Một bài blues 12 ô tự ngẫu hứng', 'Một ca khúc Việt tự soạn phần piano độc tấu'],
+        grade: 'ABRSM Grade 4',
+        months: [6, 12],
+        pieces: [{ title: 'Beethoven — Sonata "Ánh trăng" Op. 27 số 2, chương 1', composer: '' }, { title: 'Debussy — Clair de lune (khi đã sẵn sàng)', composer: '' }, { title: 'Một bài blues 12 ô tự ngẫu hứng', composer: '' }, { title: 'Một ca khúc Việt tự soạn phần piano độc tấu', composer: '' }],
         checkpoint: ['Ngẫu hứng 12 ô blues trên vòng hợp âm của mình', 'Phối hoà âm một giai điệu ngũ cung không dùng kết át – chủ', 'Chơi thuộc lòng một bản trước người khác', 'Tự chọn và lập kế hoạch học bài tiếp theo'],
         units: [
           {

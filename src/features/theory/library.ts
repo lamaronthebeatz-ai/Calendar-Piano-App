@@ -12,10 +12,12 @@ export interface LibraryState {
   saved: string[]
   recent: string[]
   read: string[]
+  /** Lessons the learner ticked off as studied (curriculum progress); unlike `read`, set and cleared by hand. */
+  done: string[]
 }
 
 const KEY = 'theory:library'
-const DEFAULTS: LibraryState = { size: 16, serif: false, leading: 1.75, saved: [], recent: [], read: [] }
+const DEFAULTS: LibraryState = { size: 16, serif: false, leading: 1.75, saved: [], recent: [], read: [], done: [] }
 
 function load(): LibraryState {
   try {
@@ -47,6 +49,10 @@ export const useLibrary = () => useSyncExternalStore(subscribe, () => state)
 
 export const toggleSaved = (slug: string) =>
   updateLibrary((s) => ({ saved: s.saved.includes(slug) ? s.saved.filter((x) => x !== slug) : [slug, ...s.saved] }))
+
+/** Ticks a lesson off as studied, or clears the tick. */
+export const toggleDone = (slug: string) =>
+  updateLibrary((s) => ({ done: s.done.includes(slug) ? s.done.filter((x) => x !== slug) : [...s.done, slug] }))
 
 export const markRead = (slug: string) =>
   updateLibrary((s) =>

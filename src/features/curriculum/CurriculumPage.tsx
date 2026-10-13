@@ -6,18 +6,23 @@ import { ScrollArea } from '../../components/ScrollArea'
 import { useBack } from '../../hooks/useBack'
 import { CATEGORIES } from '../theory/articles'
 import { findArticle } from '../theory/wiki'
-import { useLibrary } from '../theory/library'
+import { toggleDone, useLibrary } from '../theory/library'
 import { CURRICULA } from './curricula'
-import type { Curriculum, Level } from './types'
+import type { Curriculum, Level, Piece } from './types'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
 
-const lessonsOf = (c: Curriculum | Level) => ('levels' in c ? c.levels.flatMap((l) => l.units) : c.units).flatMap((u) => u.lessons)
+/** Graded levels followed by any extra tracks, in study order. */
+const allLevels = (c: Curriculum) => [...c.levels, ...(c.tracks ?? []).flatMap((t) => t.levels)]
+const lessonsOf = (c: Curriculum | Level) => ('levels' in c ? allLevels(c).flatMap((l) => l.units) : c.units).flatMap((u) => u.lessons)
+const totalMonths = (levels: Level[]) => levels.reduce(([a, b], l) => [a + l.months[0], b + l.months[1]], [0, 0])
+const fmtMonths = ([a, b]: [number, number]) => (a === b ? `${a} tháng` : `${a} – ${b} tháng`)
+const fmtYears = ([a, b]: number[]) => `khoảng ${Math.round((a / 12) * 2) / 2} – ${Math.round((b / 12) * 2) / 2} năm`
 
 /** Share of a set of lessons whose article has been opened at least once. */
 function useProgress(slugs: string[]) {
-  const { read } = useLibrary()
-  const done = slugs.filter((s) => read.includes(s)).length
+  const { done: ticked } = useLibrary()
+  const done = slugs.filter((s) => ticked.includes(s)).length
   return { done, total: slugs.length, ratio: slugs.length ? done / slugs.length : 0 }
 }
 
@@ -93,10 +98,12 @@ function BookCover({ c, delay }: { c: Curriculum; delay: number }) {
       <div className="relative mt-auto pt-8">
         <p className="text-[12px] uppercase tracking-[0.18em] text-white/60">Tác giả</p>
         <p className="font-display text-[20px] font-semibold italic">{c.author}</p>
-        <div className="mt-4 flex items-center gap-4 text-[12.5px] text-white/75">
-          <span>{c.levels.length} cấp độ</span>
+        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-white/75">
+          <span>{c.goal}</span>
           <span className="h-1 w-1 rounded-full bg-white/50" />
-          <span>{c.levels.reduce((n, l) => n + l.units.length, 0)} chương</span>
+          <span>{fmtYears(totalMonths(allLevels(c)))}</span>
+          <span className="h-1 w-1 rounded-full bg-white/50" />
+          <span>{allLevels(c).length} cấp độ</span>
           <span className="h-1 w-1 rounded-full bg-white/50" />
           <span>{new Set(lessons.map((l) => l.slug)).size} bài</span>
         </div>
@@ -104,7 +111,7 @@ function BookCover({ c, delay }: { c: Curriculum; delay: number }) {
           <span className="block h-full rounded-full bg-white/90 transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />
         </div>
         <p className="mt-1.5 text-[11.5px] text-white/65">
-          Đã đọc {progress.done}/{progress.total} bài
+          Đã học {progress.done}/{progress.total} bài
         </p>
       </div>
       <span className="absolute bottom-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:bottom-7 sm:right-7">
@@ -149,12 +156,15 @@ function CurriculumView({ c }: { c: Curriculum }) {
         <p className="relative mt-5 text-[13px] text-white/70">
           Tác giả <span className="font-display text-[17px] font-semibold italic text-white">{c.author}</span>
         </p>
+        <p className="relative mt-1 text-[13px] text-white/80">
+          Lộ trình {fmtMonths(totalMonths(allLevels(c)) as [number, number])} ({fmtYears(totalMonths(allLevels(c)))}) · đích đến <span className="font-semibold text-white">{c.goal}</span>
+        </p>
         <div className="relative mt-4 max-w-sm">
           <div className="h-1.5 overflow-hidden rounded-full bg-white/20">
             <span className="block h-full rounded-full bg-white/90 transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />
           </div>
           <p className="mt-1.5 text-[11.5px] text-white/65">
-            Đã đọc {progress.done}/{progress.total} bài · {Math.round(progress.ratio * 100)}%
+            Đã học {progress.done}/{progress.total} bài · {Math.round(progress.ratio * 100)}%
           </p>
         </div>
       </header>
@@ -188,19 +198,26 @@ function CurriculumView({ c }: { c: Curriculum }) {
         </ol>
       </section>
 
-      <nav aria-label="Các cấp độ" className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 lg:mx-0 lg:flex-wrap lg:px-0">
-        {c.levels.map((l, i) => (
-          <a key={l.title} href={`#cap-${i + 1}`} onClick={(e) => { e.preventDefault(); document.getElementById(`cap-${i + 1}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }) }} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink)] transition-colors hover:border-[var(--tint)]">
-            <span className="font-semibold text-[var(--tint)]">Cấp {i + 1}</span> · {l.title}
-          </a>
-        ))}
-      </nav>
+      <Roadmap c={c} />
 
       <div className="space-y-6">
         {c.levels.map((l, i) => (
-          <LevelCard key={l.title} level={l} n={i + 1} />
+          <LevelCard key={l.title} level={l} n={i + 1} start={totalMonths(c.levels.slice(0, i))} />
         ))}
       </div>
+
+      {c.tracks?.map((track) => (
+        <section key={track.title} className="space-y-4">
+          <div>
+            <SectionHead>{track.title}</SectionHead>
+            <p className="mt-2 max-w-3xl text-[14px] leading-relaxed text-[var(--color-ink-muted)]">{track.subtitle}</p>
+          </div>
+          {track.levels.map((l, i) => {
+            const n = c.levels.length + (c.tracks ?? []).slice(0, c.tracks!.indexOf(track)).reduce((k, t) => k + t.levels.length, 0) + i + 1
+            return <LevelCard key={l.title} level={l} n={n} />
+          })}
+        </section>
+      ))}
 
       <ReviewLink slug={c.review} />
     </div>
@@ -211,7 +228,45 @@ function SectionHead({ children }: { children: string }) {
   return <h3 className="border-b border-[var(--color-border)] pb-2 font-display text-[21px] font-semibold tracking-tight text-[var(--color-ink)]">{children}</h3>
 }
 
-function LevelCard({ level, n }: { level: Level; n: number }) {
+/** The whole course on one bar: each level's width is its average length in months. */
+function Roadmap({ c }: { c: Curriculum }) {
+  const levels = allLevels(c)
+  const avg = (l: Level) => (l.months[0] + l.months[1]) / 2
+  const { done } = useLibrary()
+  return (
+    <nav aria-label="Lộ trình các cấp" className="reveal space-y-2">
+      <div className="flex items-baseline justify-between gap-3">
+        <SectionHead>Lộ trình</SectionHead>
+      </div>
+      <div className="flex h-14 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]">
+        {levels.map((l, i) => {
+          const slugs = [...new Set(lessonsOf(l).map((x) => x.slug))]
+          const ratio = slugs.length ? slugs.filter((s) => done.includes(s)).length / slugs.length : 0
+          return (
+            <a
+              key={l.title}
+              href={`#cap-${i + 1}`}
+              onClick={(e) => {
+                e.preventDefault()
+                document.getElementById(`cap-${i + 1}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
+              title={`${l.grade} · ${fmtMonths(l.months)}`}
+              style={{ flexGrow: avg(l), flexBasis: 0 }}
+              className="group relative flex min-w-0 flex-col justify-center border-r border-[var(--color-border)] px-1.5 text-center last:border-r-0 hover:bg-[var(--tint-soft)]"
+            >
+              <span aria-hidden className="absolute inset-y-0 left-0 bg-[var(--tint-soft)] transition-[width] duration-700" style={{ width: `${ratio * 100}%` }} />
+              <span className="relative truncate font-display text-[13px] font-semibold text-[var(--tint)]">{i + 1}</span>
+              <span className="relative truncate text-[10.5px] text-[var(--color-ink-muted)]">{l.grade.replace('ABRSM ', '')}</span>
+            </a>
+          )
+        })}
+      </div>
+      <p className="text-[12px] text-[var(--color-ink-faint)]">Bề rộng mỗi ô ứng với thời lượng gợi ý. Tổng cộng {fmtMonths(totalMonths(levels) as [number, number])} — {fmtYears(totalMonths(levels))} với nhịp học đều đặn; mỗi người nhanh chậm khác nhau.</p>
+    </nav>
+  )
+}
+
+function LevelCard({ level, n, start }: { level: Level; n: number; start?: number[] }) {
   const progress = useProgress([...new Set(lessonsOf(level).map((l) => l.slug))])
   const [open, setOpen] = useState(n === 1)
   return (
@@ -225,13 +280,18 @@ function LevelCard({ level, n }: { level: Level; n: number }) {
           <span className="font-display text-[20px] font-semibold text-[var(--tint)]">{n}</span>
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[var(--tint)]">
-            Cấp {n} · {level.duration}
+          <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[var(--tint)]">
+            Cấp {n}
+            <span className="rounded-full bg-[var(--tint)] px-2 py-0.5 text-[10.5px] tracking-[0.08em] text-white">≈ {level.grade}</span>
+            <span className="font-medium normal-case tracking-normal text-[var(--color-ink-muted)]">
+              {fmtMonths(level.months)}
+              {start && ` · tháng ${start[0] + 1} – ${start[1] + level.months[1]}`}
+            </span>
           </span>
           <span className="mt-0.5 block font-display text-[21px] font-semibold leading-snug tracking-tight text-[var(--color-ink)]">{level.title}</span>
           <span className="mt-1 block text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{level.subtitle}</span>
           <span className="mt-1.5 block text-[12px] text-[var(--color-ink-faint)]">
-            {level.units.length} chương · đã đọc {progress.done}/{progress.total} bài
+            {level.units.length} chương · {level.pieces.length} tác phẩm · đã học {progress.done}/{progress.total} bài
           </span>
         </span>
         <ChevronDownIcon width={18} height={18} className={clsx('mt-1 shrink-0 text-[var(--color-ink-faint)] transition-transform duration-300', open && 'rotate-180')} />
@@ -244,15 +304,9 @@ function LevelCard({ level, n }: { level: Level; n: number }) {
               <UnitBlock key={u.title} unit={u} label={`${n}.${i + 1}`} />
             ))}
 
+            <Pieces pieces={level.pieces} />
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl bg-[var(--color-surface-sunken)] p-4">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">Bài chơi gợi ý</p>
-                <ul className="mt-2 space-y-1 text-[13px] leading-relaxed text-[var(--color-ink)]">
-                  {level.repertoire.map((r) => (
-                    <li key={r} className="flex gap-2"><span className="text-[var(--tint)]">♪</span>{r}</li>
-                  ))}
-                </ul>
-              </div>
+              {level.exam ? <ExamBox exam={level.exam} grade={level.grade} /> : <div className="hidden sm:block" />}
               <div className="rounded-2xl border border-dashed border-[var(--tint)] p-4">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--tint)]">Kiểm tra cuối cấp</p>
                 <ul className="mt-2 space-y-1 text-[13px] leading-relaxed text-[var(--color-ink)]">
@@ -270,7 +324,7 @@ function LevelCard({ level, n }: { level: Level; n: number }) {
 }
 
 function UnitBlock({ unit, label }: { unit: Level['units'][number]; label: string }) {
-  const { read } = useLibrary()
+  const { done: ticked } = useLibrary()
   return (
     <div>
       <p className="flex items-baseline gap-2">
@@ -284,13 +338,22 @@ function UnitBlock({ unit, label }: { unit: Level['units'][number]; label: strin
         {unit.lessons.map((l) => {
           const a = findArticle(l.slug)
           if (!a) return null
-          const done = read.includes(a.slug)
+          const done = ticked.includes(a.slug)
           return (
-            <li key={l.slug}>
-              <Link to={`/theory/${a.slug}`} className="theory-card group flex items-start gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3.5 py-2.5">
-                <span className={clsx('mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors', done ? 'border-[var(--tint)] bg-[var(--tint)] text-white' : 'border-[var(--color-border-strong)]')}>
-                  {done && <CheckIcon width={12} height={12} />}
+            <li key={l.slug} className="theory-card group flex items-start gap-1 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] py-1 pl-1 pr-3.5">
+              <button
+                type="button"
+                onClick={() => toggleDone(a.slug)}
+                aria-pressed={done}
+                aria-label={done ? `Bỏ đánh dấu đã học: ${a.title}` : `Đánh dấu đã học: ${a.title}`}
+                title={done ? 'Đã học — bấm để bỏ' : 'Đánh dấu đã học'}
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors hover:bg-[var(--tint-soft)]"
+              >
+                <span className={clsx('flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300', done ? 'scale-105 border-[var(--tint)] bg-[var(--tint)] text-white' : 'border-[var(--color-border-strong)]')}>
+                  {done && <CheckIcon width={12} height={12} strokeWidth={3} />}
                 </span>
+              </button>
+              <Link to={`/theory/${a.slug}`} className="flex min-w-0 flex-1 items-start gap-3 py-1.5">
                 <span className="min-w-0 flex-1">
                   <span className="block text-[14px] font-medium leading-snug text-[var(--color-ink)]">{a.title}</span>
                   {l.focus && <span className="mt-0.5 block text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{l.focus}</span>}
@@ -313,6 +376,64 @@ function UnitBlock({ unit, label }: { unit: Level['units'][number]; label: strin
           </ul>
         </div>
       )}
+    </div>
+  )
+}
+
+function Pieces({ pieces }: { pieces: Piece[] }) {
+  if (!pieces.length) return null
+  return (
+    <div className="rounded-2xl bg-[var(--color-surface-sunken)] p-4">
+      <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">Tác phẩm của cấp</p>
+      <ol className="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+        {pieces.map((p, i) => {
+          const a = p.slug ? findArticle(p.slug) : undefined
+          const body = (
+            <>
+              <span className="w-5 shrink-0 font-display text-[13px] font-semibold tabular-nums text-[var(--tint)]">{i + 1}</span>
+              <span className="min-w-0">
+                <span className="block text-[13.5px] font-medium leading-snug text-[var(--color-ink)]">{p.title}</span>
+                <span className="block text-[12px] leading-snug text-[var(--color-ink-muted)]">
+                  {p.composer}
+                  {p.note && <span className="text-[var(--color-ink-faint)]"> · {p.note}</span>}
+                </span>
+                {a && <span className="mt-0.5 inline-flex items-center gap-1 text-[11.5px] font-medium text-[var(--tint)]">Bài phân tích <ArrowUpRightIcon width={11} height={11} /></span>}
+              </span>
+            </>
+          )
+          return (
+            <li key={p.title + p.composer}>
+              {a ? (
+                <Link to={`/theory/${a.slug}`} className="flex gap-2 rounded-lg transition-colors hover:bg-[var(--tint-soft)]">{body}</Link>
+              ) : (
+                <div className="flex gap-2">{body}</div>
+              )}
+            </li>
+          )
+        })}
+      </ol>
+    </div>
+  )
+}
+
+function ExamBox({ exam, grade }: { exam: NonNullable<Level['exam']>; grade: string }) {
+  const rows: [string, string][] = [
+    ['Âm giai & hợp âm rải', exam.scales],
+    ['Thị tấu', exam.sightReading],
+    ['Nghe (aural)', exam.aural],
+    ['Nhạc lý', exam.theory],
+  ]
+  return (
+    <div className="rounded-2xl border border-[var(--color-border)] p-4">
+      <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">Yêu cầu tương đương {grade}</p>
+      <dl className="mt-2 space-y-1.5 text-[13px] leading-snug">
+        {rows.map(([k, v]) => (
+          <div key={k}>
+            <dt className="font-medium text-[var(--color-ink)]">{k}</dt>
+            <dd className="text-[var(--color-ink-muted)]">{v}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import {
   BookIcon,
   BookmarkIcon,
   BranchesIcon,
+  CheckIcon,
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -23,7 +24,7 @@ import { EmptyState } from '../../components/EmptyState'
 import { ARTICLES, CATEGORIES } from './articles'
 import { Markup, WikiImage } from './Markup'
 import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, searchArticles, type Article } from './wiki'
-import { markRead, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
+import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
@@ -746,7 +747,8 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
 const LEADINGS: [number, string][] = [[1.6, 'Gọn'], [1.75, 'Vừa'], [1.95, 'Thoáng']]
 
 function ArticleActions({ article }: { article: Article }) {
-  const { saved, size, serif, leading } = useLibrary()
+  const { saved, done, size, serif, leading } = useLibrary()
+  const isDone = done.includes(article.slug)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   const isSaved = saved.includes(article.slug)
@@ -767,6 +769,11 @@ function ArticleActions({ article }: { article: Article }) {
       </button>
       <button onClick={() => setOpen((o) => !o)} aria-label="Cỡ chữ và phông" aria-expanded={open} className={clsx(btn, open && 'bg-[var(--color-surface-sunken)] text-[var(--color-ink)]')}>
         <TypeIcon width={17} height={17} />
+      </button>
+      <button onClick={() => toggleDone(article.slug)} aria-label={isDone ? 'Bỏ đánh dấu đã học' : 'Đánh dấu đã học'} title={isDone ? 'Đã học — bấm để bỏ' : 'Đánh dấu đã học'} aria-pressed={isDone} className={clsx(btn, isDone && 'text-[var(--color-status-completed)]')}>
+        <span className={clsx('flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1.6px] transition-colors', isDone ? 'border-current bg-current' : 'border-current')}>
+          {isDone && <CheckIcon width={11} height={11} className="text-[var(--color-surface-raised)]" strokeWidth={3} />}
+        </span>
       </button>
       <button onClick={() => toggleSaved(article.slug)} aria-label={isSaved ? 'Bỏ lưu' : 'Lưu bài'} aria-pressed={isSaved} className={clsx(btn, isSaved && 'text-[var(--color-gold)]')}>
         <BookmarkIcon width={17} height={17} fill={isSaved ? 'currentColor' : 'none'} />

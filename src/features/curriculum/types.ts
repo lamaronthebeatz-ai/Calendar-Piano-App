@@ -14,13 +14,32 @@ export interface Unit {
   practice: string[]
 }
 
+/** A piece to learn at a level. `slug` links to an analysis in the library when there is one. */
+export interface Piece {
+  title: string
+  composer: string
+  /** Where the grade or difficulty comes from, or what the piece trains. */
+  note?: string
+  slug?: string
+}
+
+/** What the matching graded exam asks for, so the level can double as exam preparation. */
+export interface ExamSpec {
+  scales: string
+  sightReading: string
+  aural: string
+  theory: string
+}
+
 export interface Level {
   title: string
   subtitle: string
-  /** Rough duration, e.g. "3 – 4 tháng". */
-  duration: string
-  /** Repertoire to play during the level (titles, not links). */
-  repertoire: string[]
+  /** The ABRSM grade (or other benchmark) the level corresponds to, e.g. "ABRSM Grade 3". */
+  grade: string
+  /** Suggested study time in months, as a range. */
+  months: [number, number]
+  pieces: Piece[]
+  exam?: ExamSpec
   units: Unit[]
   /** Self-check before moving on. */
   checkpoint: string[]
@@ -43,4 +62,8 @@ export interface Curriculum {
   levels: Level[]
   /** Article that compares and evaluates the world's method books. */
   review: string
+  /** Where the curriculum ends, e.g. "ABRSM Grade 5". */
+  goal: string
+  /** Optional extra track after the graded levels (e.g. accompaniment). */
+  tracks?: { title: string; subtitle: string; levels: Level[] }[]
 }
