@@ -243,9 +243,16 @@ export function Markup({ source }: { source: string }) {
   for (const line of lines) {
     const num = /^(\d+)\. /.exec(line)
     const kind = line.startsWith('- ') ? 'li' : num ? 'ol' : line.startsWith('|') ? 'tr' : 'p'
-    if (!line || line.startsWith('## ') || line.startsWith('::') || block?.kind !== kind) flush()
+    if (!line || line.startsWith('## ') || line.startsWith('### ') || line.startsWith('::') || block?.kind !== kind) flush()
     if (!line) continue
-    if (line.startsWith('## '))
+    // Sub-headings stay out of the table of contents, so they take no section id.
+    if (line.startsWith('### '))
+      out.push(
+        <h3 key={out.length} className="pt-2 text-[1.15em] font-semibold leading-snug text-[var(--color-ink)]">
+          <Inline text={line.slice(4)} />
+        </h3>,
+      )
+    else if (line.startsWith('## '))
       out.push(
         <h2 key={out.length} id={`sec-${section++}`} className="scroll-mt-24 pt-6 text-[1.4em] font-semibold leading-tight text-[var(--color-ink)]">
           {line.slice(3)}

@@ -897,11 +897,16 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             <h2 className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Nguồn tham khảo</h2>
             <ol className="mt-3 space-y-1.5 text-[13px] text-[var(--color-ink-muted)]">
               {[...(article.wiki ? [[`Wikipedia — ${article.wiki.replace(/_/g, ' ')}`, `https://en.wikipedia.org/wiki/${encodeURIComponent(article.wiki)}`]] : []), ...(article.refs ?? [])].map(([title, url], i) => (
-                <li key={url} className="flex gap-2.5">
+                <li key={url || title} className="flex gap-2.5">
                   <span className="w-5 shrink-0 text-right tabular-nums text-[var(--color-ink-faint)]">{i + 1}.</span>
-                  <a href={url} target="_blank" rel="noreferrer" className="group min-w-0 text-[var(--color-ink)] hover:text-[var(--color-accent)]">
-                    {title} <ArrowUpRightIcon width={11} height={11} className="inline opacity-40 group-hover:opacity-100" />
-                  </a>
+                  {url ? (
+                    <a href={url} target="_blank" rel="noreferrer" className="group min-w-0 text-[var(--color-ink)] hover:text-[var(--color-accent)]">
+                      {title} <ArrowUpRightIcon width={11} height={11} className="inline opacity-40 group-hover:opacity-100" />
+                    </a>
+                  ) : (
+                    // Printed books with no online copy: cite without a link.
+                    <span className="min-w-0 text-[var(--color-ink)]">{title}</span>
+                  )}
                 </li>
               ))}
             </ol>
