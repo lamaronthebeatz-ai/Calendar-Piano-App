@@ -1,10 +1,10 @@
-import { useMemo, type CSSProperties } from 'react'
+import { useMemo, useState, type CSSProperties } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
-import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, BranchesIcon, ChevronLeftIcon, ChevronRightIcon, CompassIcon } from '../../components/icons'
+import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, BranchesIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, CompassIcon, ListIcon, SearchIcon, XIcon } from '../../components/icons'
 import { EmptyState } from '../../components/EmptyState'
 import { ArticleGrid, SectionTitle } from '../theory/TheoryPage'
-import { findArticle, type Article } from '../theory/wiki'
+import { findArticle, normalize, type Article } from '../theory/wiki'
 import { useLibrary } from '../theory/library'
 import { PARTS, RESOLVED, type PartId, type ResolvedBranch } from './taxonomy'
 import { ScrollArea } from '../../components/ScrollArea'
@@ -12,7 +12,7 @@ import { useBack } from '../../hooks/useBack'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.6 0.13 ${hue})` }) as CSSProperties
 
-const NUMERALS: Partial<Record<PartId, string>> = { historical: 'I', systematic: 'II', practice: 'III' }
+const NUMERALS: Partial<Record<PartId, string>> = { historical: 'I', systematic: 'II', applied: 'III', practice: 'IV' }
 
 /** "II.3" for the third systematic branch; the introduction has no number. */
 const numberOf = (b: ResolvedBranch) => {
@@ -86,14 +86,36 @@ export function MusicologyPage() {
 
 /* -------------------------------------------------------------------- map */
 
+type PartFilter = PartId | 'all'
+
+const PART_ORDER: PartId[] = ['historical', 'systematic', 'applied', 'practice']
+
 function MapIndex() {
   const progress = useProgress()
   const intro = RESOLVED.find((b) => b.part === 'intro')!
   const foundations = intro.resolved[0].articles
   const pct = progress.total ? Math.round((progress.read / progress.total) * 100) : 0
+  const [query, setQuery] = useState('')
+  const [part, setPart] = useState<PartFilter>(() => {
+    try {
+      return (sessionStorage.getItem('musicology:part') as PartFilter | null) ?? 'all'
+    } catch {
+      return 'all'
+    }
+  })
+  const choosePart = (p: PartFilter) => {
+    setPart(p)
+    try {
+      sessionStorage.setItem('musicology:part', p)
+    } catch {
+      /* private mode: the filter just isn't remembered */
+    }
+  }
+  const q = normalize(query)
+  const parts = PART_ORDER.filter((p) => part === 'all' || p === part)
 
   return (
-    <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
+    <div className="mx-auto max-w-6xl space-y-8 px-4 py-5 lg:px-8 lg:py-8">
       <section className="hero-ebony animate-float-up relative isolate overflow-hidden rounded-[28px] px-5 pb-6 pt-7 shadow-[var(--shadow-float)] sm:px-9 sm:pb-9 sm:pt-10">
         <BranchesIcon aria-hidden width={300} height={300} strokeWidth={0.6} className="pointer-events-none absolute -right-16 -top-10 -z-10 text-[#e2b66e]/15 sm:right-4" />
         <p className="text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Musikwissenschaft · Musicology</p>
@@ -101,7 +123,7 @@ function MapIndex() {
           Bản đồ nghiên cứu <span className="text-gold-gradient italic">âm nhạc học</span>
         </h2>
         <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
-          Toàn bộ thư viện lý thuyết được xếp lại theo khung của ngành: hai nhánh lịch sử và hệ thống của Guido Adler (1885), mở rộng bằng các phân ngành hiện đại — để nghiên cứu có hệ thống thay vì đọc theo chủ đề.
+          Toàn bộ thư viện lý thuyết được xếp lại theo khung của ngành: hai nhánh lịch sử và hệ thống của Guido Adler (1885), thêm âm nhạc học ứng dụng và thực hành — để nghiên cứu có hệ thống thay vì đọc theo chủ đề.
         </p>
         <dl className="mt-5 flex max-w-lg flex-wrap gap-x-6 gap-y-2">
           {[
@@ -120,51 +142,83 @@ function MapIndex() {
         </div>
       </section>
 
-      <section className="space-y-4">
-        <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Đọc trước khi vào từng ngành">Nhập môn</SectionTitle>
-        <div className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
-          {foundations.slice(0, 4).map((a, i) => (
-            <Link
-              key={a.slug}
-              to={`/theory/${a.slug}`}
-              style={{ ...hueTint(intro.hue), animationDelay: `${i * 50}ms` }}
-              className="theory-card animate-float-up group relative flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 lg:w-auto"
-            >
-              <span className="font-display text-[28px] font-semibold leading-none text-[color-mix(in_oklch,var(--tint)_55%,transparent)]">{String(i + 1).padStart(2, '0')}</span>
-              <span className="mt-3 font-display text-[17px] font-semibold leading-snug text-[var(--color-ink)]">{a.title}</span>
-              <span className="mt-2 line-clamp-3 text-[12.5px] leading-relaxed text-[var(--color-ink-muted)]">{a.summary}</span>
-              <span className="mt-auto flex items-center gap-1 pt-4 text-[12.5px] font-medium text-[var(--color-ink)]">
-                Đọc <ArrowUpRightIcon width={14} height={14} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="space-y-5">
-        <SectionTitle icon={<BranchesIcon width={16} height={16} />} hint="Bấm một ngành để xem các bài">Sơ đồ ngành</SectionTitle>
-
-        {/* The root of the tree, then a fork into the three parts. */}
-        <div className="flex flex-col items-center">
-          <Link to="/theory/am-nhac-hoc" className="rounded-2xl border border-[var(--color-gold)]/50 bg-[var(--color-surface-raised)] px-5 py-2.5 text-center shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-px">
-            <span className="block font-display text-[18px] font-semibold text-[var(--color-ink)]">Âm nhạc học</span>
-            <span className="block text-[11.5px] italic text-[var(--color-ink-faint)]">Adler, 1885 — mở rộng theo Parncutt, 2007</span>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <PartColumn part="historical" progress={progress.of} />
-          <div className="lg:col-span-2">
-            <PartColumn part="systematic" progress={progress.of} wide />
+      {/* One toolbar for the whole map: find a branch or an article, or narrow to one part. */}
+      <div data-scrolled className="glass sticky top-14 z-10 -mx-4 space-y-2.5 border-b border-[var(--color-border)] px-4 py-3 lg:mx-0 lg:rounded-2xl lg:border">
+        <label className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-2 focus-within:border-[var(--color-gold)]">
+          <SearchIcon width={16} height={16} className="shrink-0 text-[var(--color-ink-faint)]" />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Tìm ngành hoặc bài trong âm nhạc học…"
+            className="min-w-0 flex-1 bg-transparent text-[14px] text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-faint)]"
+          />
+          {query && (
+            <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-0.5 text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]">
+              <XIcon width={15} height={15} />
+            </button>
+          )}
+        </label>
+        {!q && (
+          <div className="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 lg:mx-0 lg:px-0" role="tablist" aria-label="Phần">
+            {(['all', ...PART_ORDER] as PartFilter[]).map((p) => {
+              const n = p === 'all' ? RESOLVED.filter((b) => b.part !== 'intro').length : RESOLVED.filter((b) => b.part === p).length
+              return (
+                <button
+                  key={p}
+                  role="tab"
+                  aria-selected={part === p}
+                  onClick={() => choosePart(p)}
+                  className={clsx(
+                    'shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-colors',
+                    part === p
+                      ? 'border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-surface)]'
+                      : 'border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-ink)] hover:border-[var(--color-gold)]',
+                  )}
+                >
+                  {p === 'all' ? 'Tất cả' : `${NUMERALS[p]} · ${PARTS[p].title}`} <span className="tabular-nums opacity-60">{n}</span>
+                </button>
+              )
+            })}
           </div>
-        </div>
-        <PartColumn part="practice" progress={progress.of} wide />
-      </section>
+        )}
+      </div>
+
+      {q ? (
+        <SearchResults q={q} />
+      ) : (
+        <>
+          {part === 'all' && (
+            <section className="space-y-4">
+              <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Đọc trước khi vào từng ngành">Nhập môn</SectionTitle>
+              <div className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
+                {foundations.slice(0, 4).map((a, i) => (
+                  <Link
+                    key={a.slug}
+                    to={`/theory/${a.slug}`}
+                    style={{ ...hueTint(intro.hue), animationDelay: `${i * 50}ms` }}
+                    className="theory-card animate-float-up group relative flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 lg:w-auto"
+                  >
+                    <span className="font-display text-[28px] font-semibold leading-none text-[color-mix(in_oklch,var(--tint)_55%,transparent)]">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="mt-3 font-display text-[17px] font-semibold leading-snug text-[var(--color-ink)]">{a.title}</span>
+                    <span className="mt-2 line-clamp-3 text-[12.5px] leading-relaxed text-[var(--color-ink-muted)]">{a.summary}</span>
+                    <span className="mt-auto flex items-center gap-1 pt-4 text-[12.5px] font-medium text-[var(--color-ink)]">
+                      Đọc <ArrowUpRightIcon width={14} height={14} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+          {parts.map((p) => (
+            <PartSection key={p} part={p} progress={progress.of} />
+          ))}
+        </>
+      )}
 
       <footer className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] leading-relaxed text-[var(--color-ink-muted)] sm:p-6">
         <p className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Cách xếp</p>
         <p className="mt-1">
-          Mỗi bài của thư viện có mặt ít nhất ở một phân ngành; một bài có thể nằm ở nhiều phân ngành vì các phân ngành là góc nhìn, không phải ngăn kéo — ví dụ luật bình quân vừa là âm học, vừa là lý thuyết, vừa là lịch sử lý thuyết. Tên tiếng Việt của một số phân ngành là đề xuất của thư viện; xem bảng thuật ngữ trong{' '}
+          Bốn phần: lịch sử và hệ thống theo sơ đồ của Adler (1885), âm nhạc học ứng dụng (công nghiệp, sức khoẻ, giáo dục, công nghệ) và thực hành sáng tạo. Mỗi bài có mặt ít nhất ở một phân ngành; một bài có thể nằm ở nhiều phân ngành vì các phân ngành là góc nhìn, không phải ngăn kéo. Tên tiếng Việt của một số phân ngành là đề xuất của thư viện; xem bảng thuật ngữ trong{' '}
           <Link to="/theory/am-nhac-hoc" className="font-medium text-[var(--color-ink)] underline decoration-[var(--color-gold)] underline-offset-2">bài tổng quan</Link>.
         </p>
       </footer>
@@ -172,22 +226,67 @@ function MapIndex() {
   )
 }
 
-function PartColumn({ part, progress, wide }: { part: PartId; progress: (b: ResolvedBranch) => { read: number; total: number }; wide?: boolean }) {
+function PartSection({ part, progress }: { part: PartId; progress: (b: ResolvedBranch) => { read: number; total: number } }) {
   const branches = RESOLVED.filter((b) => b.part === part)
   return (
-    <div className="space-y-3">
-      <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+    <section className="space-y-4">
+      <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)]">
           {NUMERALS[part]} · {PARTS[part].en}
         </p>
-        <h3 className="mt-0.5 font-display text-[21px] font-semibold tracking-tight text-[var(--color-ink)]">{PARTS[part].title}</h3>
-        <p className="mt-1 max-w-2xl text-[12.5px] leading-relaxed text-[var(--color-ink-muted)]">{PARTS[part].description}</p>
+        <h3 className="mt-0.5 font-display text-[22px] font-semibold tracking-tight text-[var(--color-ink)]">{PARTS[part].title}</h3>
+        <p className="mt-1 max-w-3xl text-[13px] leading-relaxed text-[var(--color-ink-muted)]">{PARTS[part].description}</p>
       </div>
-      <div className={clsx('grid gap-2.5', wide && 'sm:grid-cols-2', part === 'practice' && 'lg:grid-cols-3')}>
+      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
         {branches.map((b, i) => (
           <BranchCard key={b.id} branch={b} progress={progress(b)} delay={i * 35} />
         ))}
       </div>
+    </section>
+  )
+}
+
+/** Branches and articles of the map matching the query; an article appears once, under its first branch. */
+function SearchResults({ q }: { q: string }) {
+  const branches = RESOLVED.filter((b) => b.part !== 'intro' && normalize(`${b.title} ${b.en} ${b.summary}`).includes(q))
+  const seen = new Set<string>()
+  const hits: { article: Article; branch: ResolvedBranch }[] = []
+  for (const b of RESOLVED)
+    for (const r of b.resolved)
+      for (const a of r.articles)
+        if (!seen.has(a.slug) && normalize([a.title, ...(a.aliases ?? [])].join(' ')).includes(q)) {
+          seen.add(a.slug)
+          hits.push({ article: a, branch: b })
+        }
+  if (!branches.length && !hits.length)
+    return <EmptyState icon={<SearchIcon width={28} height={28} />} title="Không tìm thấy" description="Thử một từ khác, hoặc tìm trong cả thư viện lý thuyết." />
+  return (
+    <div className="space-y-6">
+      {branches.length > 0 && (
+        <section className="space-y-3">
+          <SectionTitle hint={`${branches.length} ngành`}>Phân ngành</SectionTitle>
+          <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            {branches.map((b, i) => (
+              <BranchCard key={b.id} branch={b} progress={{ read: 0, total: b.count }} delay={i * 30} />
+            ))}
+          </div>
+        </section>
+      )}
+      {hits.length > 0 && (
+        <section className="space-y-3">
+          <SectionTitle hint={`${hits.length} bài`}>Bài viết</SectionTitle>
+          <ul className="divide-y divide-[var(--color-border)] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]">
+            {hits.slice(0, 60).map(({ article: a, branch: b }) => (
+              <li key={a.slug} style={hueTint(b.hue)}>
+                <Link to={`/theory/${a.slug}`} className="flex flex-col gap-0.5 px-4 py-2.5 transition-colors hover:bg-[var(--color-surface-sunken)] sm:flex-row sm:items-baseline sm:gap-3">
+                  <span className="min-w-0 flex-1 text-[14px] font-medium leading-snug text-[var(--color-ink)]">{a.title}</span>
+                  <span className="truncate text-[11.5px] text-[var(--tint)] sm:max-w-[45%] sm:shrink-0">{b.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   )
 }
@@ -225,12 +324,39 @@ function BranchCard({ branch: b, progress, delay }: { branch: ResolvedBranch; pr
 
 /* ----------------------------------------------------------------- branch */
 
+const VIEW_KEY = 'musicology:view'
+
+/** Cards read well on first visit; a compact list is quicker to scan once you know the branch. */
+function useViewMode() {
+  const [mode, setMode] = useState<'grid' | 'list'>(() => {
+    try {
+      return localStorage.getItem(VIEW_KEY) === 'list' ? 'list' : 'grid'
+    } catch {
+      return 'grid'
+    }
+  })
+  const choose = (m: 'grid' | 'list') => {
+    setMode(m)
+    try {
+      localStorage.setItem(VIEW_KEY, m)
+    } catch {
+      /* private mode: the choice lasts for this visit only */
+    }
+  }
+  return [mode, choose] as const
+}
+
 function BranchView({ branch: b }: { branch: ResolvedBranch }) {
   const progress = useProgress().of(b)
+  const { read } = useLibrary()
+  const [mode, setMode] = useViewMode()
   const hub = findArticle(b.hub)
   const index = RESOLVED.indexOf(b)
   const [prev, next] = [RESOLVED[index - 1], RESOLVED[index + 1]]
   const groups = b.resolved.filter((r) => r.articles.length > 0)
+  const done = new Set(read)
+  // The next article in the branch's reading order that has not been opened yet.
+  const nextUp = groups.flatMap((r) => r.articles).find((a) => !a.unlisted && !done.has(a.slug))
 
   return (
     <div style={hueTint(b.hue)} className="mx-auto max-w-6xl space-y-8 px-4 py-5 lg:px-8 lg:py-8">
@@ -262,12 +388,34 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
                 <CompassIcon width={15} height={15} /> Tổng quan: {hub.title}
               </Link>
             )}
+            {nextUp && nextUp.slug !== hub?.slug && (
+              <Link to={`/theory/${nextUp.slug}`} className="inline-flex max-w-xs items-center gap-1.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-2 text-[13px] font-medium text-[var(--color-ink)] transition-colors hover:border-[var(--tint)]">
+                <span className="shrink-0 text-[var(--tint)]">Đọc tiếp:</span> <span className="truncate">{nextUp.title}</span>
+              </Link>
+            )}
             <span className="text-[12px] tabular-nums text-[var(--color-ink-faint)]">
               Đã đọc {progress.read}/{progress.total} bài
             </span>
           </div>
         </div>
       </header>
+
+      <div className="flex items-center justify-end gap-1" role="group" aria-label="Cách hiển thị">
+        {(['grid', 'list'] as const).map((m) => (
+          <button
+            key={m}
+            onClick={() => setMode(m)}
+            aria-pressed={mode === m}
+            className={clsx(
+              'flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[12.5px] font-medium transition-colors',
+              mode === m ? 'bg-[var(--color-surface-sunken)] text-[var(--color-ink)]' : 'text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]',
+            )}
+          >
+            {m === 'grid' ? <BranchesIcon width={14} height={14} /> : <ListIcon width={14} height={14} />}
+            {m === 'grid' ? 'Thẻ' : 'Danh sách'}
+          </button>
+        ))}
+      </div>
 
       {groups.length > 2 && (
         <nav aria-label="Các nhóm" className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4">
@@ -290,7 +438,13 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
       {groups.map((r, i) => (
         <section key={r.group.title} id={`g-${i}`} className="scroll-mt-20 space-y-3">
           <SectionTitle hint={`${r.articles.length} ${r.group.people ? 'trang' : 'bài'}`}>{r.group.title}</SectionTitle>
-          {r.group.people ? <People articles={r.articles} /> : <ArticleGrid articles={r.articles} numbered showCategory />}
+          {r.group.people ? (
+            <People articles={r.articles} />
+          ) : mode === 'list' ? (
+            <ArticleList articles={r.articles} done={done} />
+          ) : (
+            <ArticleGrid articles={r.articles} numbered showCategory />
+          )}
         </section>
       ))}
 
@@ -315,6 +469,23 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
         )}
       </nav>
     </div>
+  )
+}
+
+/** Compact rows: number, title, a tick once read. */
+function ArticleList({ articles, done }: { articles: Article[]; done: Set<string> }) {
+  return (
+    <ol className="divide-y divide-[var(--color-border)] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]">
+      {articles.map((a, i) => (
+        <li key={a.slug}>
+          <Link to={`/theory/${a.slug}`} className="group flex items-center gap-3 px-4 py-2.5 transition-colors hover:bg-[var(--color-surface-sunken)]">
+            <span className="w-6 shrink-0 font-display text-[13px] font-semibold tabular-nums text-[var(--tint)]">{String(i + 1).padStart(2, '0')}</span>
+            <span className="min-w-0 flex-1 truncate text-[14px] text-[var(--color-ink)] group-hover:text-[var(--tint)]">{a.title}</span>
+            {done.has(a.slug) && <CheckIcon width={15} height={15} aria-label="Đã đọc" className="shrink-0 text-[var(--tint)]" />}
+          </Link>
+        </li>
+      ))}
+    </ol>
   )
 }
 

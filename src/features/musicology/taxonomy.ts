@@ -32,7 +32,7 @@ export interface Branch {
   groups: Group[]
 }
 
-export type PartId = 'intro' | 'historical' | 'systematic' | 'practice'
+export type PartId = 'intro' | 'historical' | 'systematic' | 'applied' | 'practice'
 
 export const PARTS: Record<PartId, { title: string; en: string; description: string }> = {
   intro: {
@@ -49,6 +49,11 @@ export const PARTS: Record<PartId, { title: string; en: string; description: str
     title: 'Âm nhạc học hệ thống',
     en: 'Systematic musicology',
     description: 'Nửa thứ hai: những quy luật chung của âm nhạc, không gắn với một thời điểm — âm học, tâm lý, biểu diễn, lý thuyết và phân tích, mỹ học, xã hội và văn hoá, sư phạm, tính toán.',
+  },
+  applied: {
+    title: 'Âm nhạc học ứng dụng',
+    en: 'Applied musicology',
+    description: 'Tri thức âm nhạc học khi đi vào đời sống: công nghiệp và luật bản quyền, sức khoẻ và trị liệu, giáo dục, công nghệ và dữ liệu.',
   },
   practice: {
     title: 'Thực hành sáng tạo',
@@ -380,7 +385,7 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: 'su-pham',
-    part: 'systematic',
+    part: 'applied',
     title: 'Sư phạm âm nhạc',
     en: 'Music education',
     glyph: '♪',
@@ -398,7 +403,7 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: 'tinh-toan',
-    part: 'systematic',
+    part: 'applied',
     title: 'Âm nhạc học tính toán và công nghệ',
     en: 'Computational musicology',
     glyph: '𝄁',
