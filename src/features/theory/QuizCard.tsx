@@ -101,7 +101,6 @@ function turn(s: Turn, action: Action): Turn {
 
 function Quiz({ bank }: { bank: QuizQuestion[] }) {
   const [{ index, phase, choice, elapsed, streak }, dispatch] = useReducer(turn, { index: 0, phase: 'ask', choice: null, elapsed: 0, streak: 0 })
-  const [held, setHeld] = useState(false)
   const [paused, setPaused] = useState(false)
   const [stats, setStats] = useState(readStats)
 
@@ -124,7 +123,7 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
   }
 
   const limit = limitOf(phase)
-  const stopped = held || paused
+  const stopped = paused
 
   useEffect(() => {
     if (stopped) return
@@ -153,8 +152,6 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
     <div
       tabIndex={-1}
       onKeyDown={onKey}
-      onMouseEnter={() => setHeld(true)}
-      onMouseLeave={() => setHeld(false)}
       style={tint(category)}
       className="relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] shadow-[0_1px_0_rgba(0,0,0,0.02),0_18px_40px_-28px_rgba(40,30,15,0.35)] outline-none"
     >
@@ -279,7 +276,7 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
         </div>
       </div>
 
-      {/* Countdown: time left to answer, then time until the next question. Stops while hovered or paused. */}
+      {/* Countdown: time left to answer, then time until the next question. Stops only while paused. */}
       <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-surface-sunken)]">
         <span
           className={clsx(
