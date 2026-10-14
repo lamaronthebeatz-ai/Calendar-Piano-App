@@ -492,3 +492,31 @@ a.book-cover:active { transform: scale(0.985); }
   border-radius: 18px;
   pointer-events: none;
 }
+
+/* ---------- Theory quiz: answer feedback ---------- */
+@keyframes quiz-right {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.025); }
+  100% { transform: scale(1); }
+}
+@keyframes quiz-wrong {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+@keyframes quiz-ring {
+  from { box-shadow: 0 0 0 0 color-mix(in oklch, var(--color-status-completed) 45%, transparent); }
+  to { box-shadow: 0 0 0 10px transparent; }
+}
+@keyframes quiz-enter {
+  from { opacity: 0; transform: translateY(8px); filter: blur(2px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+.quiz-right { animation: quiz-right 380ms cubic-bezier(0.16, 1, 0.3, 1), quiz-ring 700ms ease-out; }
+.quiz-wrong { animation: quiz-wrong 380ms ease; }
+.quiz-enter { animation: quiz-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+@media (prefers-reduced-motion: reduce) {
+  .quiz-right, .quiz-wrong, .quiz-enter { animation: none; }
+}

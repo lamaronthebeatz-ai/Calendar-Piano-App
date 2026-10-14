@@ -30,40 +30,11 @@ import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
 import { Copyright } from '../../components/Copyright'
+import { QuizCard } from './QuizCard'
+import { GLYPHS, tint } from './categoryStyle'
 
 type CategoryId = Article['category']
 
-/** Each category's own colour, derived from its hue so it works in light and dark themes. */
-const tint = (id: CategoryId) => ({ '--tint': `oklch(0.6 0.13 ${CATEGORIES[id].hue})` }) as CSSProperties
-
-/** A musical glyph per category (rendered in Noto Music), the library's only iconography. */
-const GLYPHS: Record<CategoryId, string> = {
-  technique: '𝆑',
-  instrument: '𝄆',
-  musicianship: '♪',
-  basics: '𝄞',
-  rhythm: '♩',
-  pitch: '𝄢',
-  scales: '♯',
-  harmony: '𝄋',
-  chromatic: '♭',
-  form: '𝄇',
-  polyphony: '♮',
-  expression: '𝆒',
-  jazz: '𝅘𝅥𝅮',
-  improvisation: '𝄌',
-  modern: '𝄫',
-  listening: '𝄽',
-  philosophy: '𝄐',
-  analysis: '𝄡',
-  pianists: '♫',
-  composers: '𝅗𝅥',
-  genres: '♬',
-  musicology: '𝄪',
-  organology: '𝄜',
-  vietnam: '𝆕',
-  sacred: '𝅜',
-}
 
 /** Where a newcomer should start: the roadmap article of the core groups. */
 const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trinh-hinh-thuc', 'phuc-dieu-nghiem-khac', 'lo-trinh-luyen-tai-su-pham', 'hoa-am-jazz', 'phuong-phap-phan-tich-tac-pham', 'the-loai-am-nhac']
@@ -304,7 +275,7 @@ function Index() {
   const active = articlesByCategory.find((c) => c.id === params.get('c'))
   const select = (id?: CategoryId) => setParams(id ? { c: id } : {}, { replace: true })
   const results = useMemo(() => searchArticles(query), [query])
-  const { recent, saved } = useLibrary()
+  const { saved } = useLibrary()
   const navigate = useNavigate()
   const listed = useMemo(() => ARTICLES.filter((a) => !a.unlisted), [])
   const surprise = () => navigate(`/theory/${listed[Math.floor(Math.random() * listed.length)].slug}`)
@@ -381,11 +352,10 @@ function Index() {
         <CategoryView id={active.id} onSelect={select} />
       ) : (
         <>
-          {/* Recent and saved reading side by side; a rotating random article fills whichever slot is free. */}
+          {/* A rotating quiz on the library, beside saved reading (or a rotating random article when nothing is saved). */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {recent.length > 0 && <Shelf title="Đọc gần đây" icon={<ClockIcon width={15} height={15} />} articles={lookup(recent).slice(0, 6)} progress />}
-            {saved.length > 0 && <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} />}
-            {(recent.length === 0 || saved.length === 0) && <Spotlight wide={recent.length === 0 && saved.length === 0} />}
+            <QuizCard />
+            {saved.length > 0 ? <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} /> : <Spotlight />}
           </div>
 
           <section className="space-y-4">
