@@ -29,7 +29,7 @@ Nhà [[cam-xuc-am-nhac|tâm lý học âm nhạc]] Justin London (*Hearing in Ti
 3. **Chia khác thường**: [[lien-ba]].
 4. **Lệch khỏi phách mạnh**: [[dao-phach]] → [[swing]].
 5. **Nhịp phức tạp**: [[nhip-hon-hop]] → [[hemiola]] → [[da-nhip]].
-6. **Thời gian co giãn**: [[rubato]], [[kiem-soat-toc-do]].
+6. **Thời gian co giãn**: [[rubato]], [[kiem-soat-toc-do]], [[nhip-tu-do-va-ky-hieu-khong-nhip]].
 7. **Tầng lớn hơn ô nhịp**: [[nhip-dieu-hoa-am]] (tốc độ đổi hợp âm), [[sieu-nhip]] (nhóm các ô nhịp).
 
 ## Luyện tiết tấu
@@ -640,6 +640,78 @@ Godfried Toussaint, *The Geometry of Musical Rhythm* (CRC, 2013; tái bản 2020
 1. Đếm to 8 phách nhỏ "1 2 3 4 5 6 7 8", vỗ ở 1, 4, 7 → tresillo. Chân giậm 1 và 5 (phách chính) để cảm thấy độ "lệch".
 2. Tay trái piano chơi tresillo trên nốt gốc, tay phải giữ [[hop-am-ba|hợp âm]] ở phách — bắt đầu với vòng [[vong-hop-am|I – IV – V]].
 3. Đổi sang 7/8 (3 + 2 + 2): đếm "1-2-3 1-2 1-2", nhấn đầu mỗi nhóm. Xem [[cam-nhan-phach]].
+`,
+  },
+  {
+    slug: "nhip-tu-do-va-ky-hieu-khong-nhip",
+    title: "Nhịp tự do và ký hiệu không nhịp",
+    category: 'rhythm',
+    aliases: ["ký hiệu không vạch nhịp", "nhạc không đo nhịp", "senza misura", "unmeasured notation", "prélude non mesuré", "unmeasured prelude", "colla voce", "colla parte", "proportional notation"],
+    summary: "Tổng quan các cách ghi và chỉ dẫn cho phép người diễn tấu thoát khỏi nhịp đều: senza misura, prélude không nhịp của Louis Couperin, cách ghi cadenza, dấu lưu (fermata), ad libitum, colla voce và colla parte, hát nói (recitative), ký hiệu tỷ lệ thế kỷ 20, cùng cách người chơi piano cảm nhận và luyện những đoạn này.",
+    refs: [
+      ["Unmeasured prelude - Wikipedia", "https://en.wikipedia.org/wiki/Unmeasured_prelude"],
+      ["Chung - Louis Couperin unmeasured preludes (Music and Practice, PDF)", "https://www.musicandpractice.org/wp-content/uploads/2019/12/Chung-PDF.pdf"],
+      ["Historical performance practice of the prélude non mesuré (ANU)", "https://openresearch-repository.anu.edu.au/items/17befab1-085f-4544-b238-091918bac69c"],
+      ["Atelier Philidor - Louis Couperin, Préludes non mesurés", "https://atelierphilidor.com/contents/en-uk/p165962_Louis-Couperin-Preludes-non-mesures.html"],
+      ["Couperin Préludes non mesurés, Breitkopf edition (Ficks Music)", "https://www.ficksmusic.com/en-au/products/couperin-preludes-non-mesures-breitkopf"],
+      ["Songtive - Colla Parte", "https://www.songtive.com/vi/glossary/colla-parte"],
+      ["Earle Brown - Wikipedia", "https://en.wikipedia.org/wiki/Earle_Brown"],
+      ["Connecting the Dots - Musical Line in Berio Sequenza I", "https://theinstrumentalist.com/?p=2784"],
+    ],
+    body: `
+## Khái niệm
+Phần lớn bản nhạc piano có [[so-chi-nhip|số chỉ nhịp]] và vạch nhịp chia thời gian thành các ô nhịp đều. **Nhịp tự do** là khi nhà soạn nhạc cố ý bỏ hoặc nới lỏng khung đó: người diễn tấu tự quyết định độ dài, phách và nhịp độ trong một giới hạn do phong cách quy định. Có hai dạng: (1) **ký hiệu không nhịp** — bản nhạc thực sự không có vạch nhịp hoặc trường độ cố định; (2) **chỉ dẫn tạm thời** — bản nhạc vẫn có nhịp nhưng một đoạn được phép tự do. Cần phân biệt với [[rubato]], vốn là co giãn nhẹ bên trong một nhịp vẫn tồn tại.
+
+## Prélude không nhịp (prélude non mesuré)
+Thể loại này xuất hiện ở Pháp thế kỷ 17 cho đàn clavecin. [[louis-couperin|Louis Couperin]] thường được coi là người đầu tiên; ông ghi các prélude bằng **chuỗi dài nốt tròn** nối với nhau bằng những **đường cong dài** (Wikipedia). Không có vạch nhịp, không có trường độ thật; người chơi chọn phách và tiết tấu, dựa vào hình hoà âm của chuỗi nốt và các đường cong (theo một bài phê bình đĩa).
+
+::staff treble D4 F4 A4 D5 C#5 E5 A4 D4+F4+A4 | Mô phỏng cách ghi kiểu Couperin - chỉ có cao độ, các nốt rải dần tạo thành hợp âm
+
+Cần lưu ý về bằng chứng:
+- Theo nghiên cứu của David Chung, hệ thống đường nối có những chỗ mơ hồ và không nhất quán giữa hai nguồn chép tay còn lại (Bauyn và Parville); các nhà biên tập hiện đại bất đồng về việc đường nào cong hay thẳng, bắt đầu và kết thúc ở đâu.
+- Một ấn bản Breitkopf ghi rằng phần lớn các prélude lâu nay gán cho Louis nay được cho là của người em Charles Couperin, và bản viết tay gốc đã mất. Đây là quan điểm chưa được thống nhất.
+- Hướng dẫn biểu diễn đương thời chủ yếu đến từ lời tựa của Lebègue (1677) và chuyên luận năm 1716 của [[francois-couperin|François Couperin]] (nguồn ANU).
+
+## Chỉ dẫn tự do trong nhạc có nhịp
+| Thuật ngữ | Nghĩa | Ai điều khiển thời gian |
+|---|---|---|
+| Senza misura | không theo nhịp | người diễn tấu |
+| Ad libitum (ad lib.) | tuỳ ý — về nhịp độ, hoặc được bỏ/thêm một bè | người diễn tấu |
+| Colla voce | theo giọng hát | người đệm theo ca sĩ |
+| Colla parte | theo bè chính | người đệm theo độc tấu |
+| A tempo | trở lại nhịp độ cũ | kết thúc đoạn tự do |
+
+Theo Songtive, *colla parte* nghĩa là "theo bè", yêu cầu người đệm bám theo nhịp độ và biểu cảm của nghệ sĩ độc tấu, thường gặp trong opera và concerto. Người chơi piano đệm hát gặp chỉ dẫn này rất thường xuyên: lúc đó nhiệm vụ là **nghe hơi thở** của ca sĩ, không phải đếm.
+
+## Dấu lưu và cadenza
+**Dấu lưu** (fermata) kéo dài một nốt hoặc [[dau-lang|dấu lặng]] quá [[truong-do|trường độ]] ghi; độ dài do người diễn tấu và phong cách quyết định. Trong concerto cổ điển, dấu lưu trên hợp âm 6/4 ở cuối chương báo hiệu chỗ **[[cadenza]]**: dàn nhạc dừng, nghệ sĩ độc tấu chơi một đoạn tự do.
+
+Cadenza thường được ghi bằng **nốt nhỏ** (cue-size), nhóm nốt dài không chia ô nhịp, hoặc một ô nhịp "khổng lồ" không có số chỉ nhịp. Chữ *senza tempo* hoặc *ad lib.* có thể được thêm vào. Chopin và Liszt hay viết các chuỗi nốt nhỏ như vậy ngay trong bản nhạc độc tấu.
+
+::rhythm 4/4 q q q h / s-s-s-s s-s-s-s s-s-s-s q // | Trong tổng phổ, nốt có dấu lưu là điểm dừng; đoạn nốt nhỏ sau đó được chơi tự do, không đếm theo phách
+
+## Hát nói (recitative)
+Trong [[opera]] và oratorio, **hát nói** (recitativo) thường được ghi ở 4/4 nhưng hát theo nhịp điệu lời nói. Ở recitativo secco, người đệm (clavecin, sau này piano) chỉ đánh hợp âm ngắn, đi theo ca sĩ — một dạng colla voce. Người chơi piano đệm thi tuyển hoặc đệm lớp thanh nhạc nên luyện kỹ việc **chờ** ca sĩ kết thúc câu rồi mới đặt hợp âm.
+
+::grand F4+A4+C5/F2=I E4+G4+C5/C3=V A3+C4+F4/F2=I | Hợp âm đệm hát nói - chỉ ghi điểm hoà âm, thời gian do ca sĩ quyết định
+
+## Ký hiệu tỷ lệ thế kỷ 20
+Từ những năm 1950, một số nhà soạn nhạc dùng **ký hiệu tỷ lệ** (proportional notation, time-space notation): khoảng cách ngang trên giấy tương ứng với thời gian. [[erik-satie|Erik Satie]] viết các *Gnossiennes* không có vạch nhịp từ trước đó, nhưng đó vẫn là trường độ truyền thống. Earle Brown gọi cách ghi của mình là "time notation", sau gọi là proportional notation (Wikipedia). *Sequenza I* (1958) cho flute của Berio từng được viết lại theo lối tỷ lệ, trong đó đầu nốt chỉ cho biết cao độ (The Instrumentalist); Berio sau này sửa lại bằng ký hiệu chính xác hơn. Xem thêm [[ky-hieu-nang-cao]].
+
+## Luyện tập — cách cảm nhận và đếm
+1. **Tìm khung hoà âm trước:** với prélude không nhịp, khoanh các hợp âm mà chuỗi nốt rải ra; đàn chúng thành hợp âm khối để biết đích đến.
+2. **Đặt "phách hơi thở":** chia đoạn tự do thành các cụm, mỗi cụm một hơi. Hát cụm đó rồi mới đàn.
+3. **Nhịp nền rồi buông:** với cadenza, tập trước theo máy đếm nhịp ở [[nhip-do|nhịp độ]] chậm để đúng nốt, sau đó tắt máy và tạo hình (nhanh dần, chậm ở đỉnh, dừng trước nốt về).
+4. **Đệm colla voce:** giáo viên hát hoặc đàn giai điệu tự do, học sinh đặt hợp âm đúng lúc chỉ bằng tai.
+5. **Ghi âm và nghe lại:** tự do không có nghĩa là ngẫu nhiên; phải nghe được cấu trúc.
+
+## Lỗi thường gặp
+- Chơi đoạn senza misura đều đều như có nhịp, hoặc ngược lại, rời rạc không có hướng.
+- Giữ dấu lưu quá ngắn (chưa tới trường độ ghi) hoặc quá dài làm đứt mạch.
+- Người đệm cố giữ nhịp độ của mình khi gặp colla voce.
+- Coi cadenza nốt nhỏ là "không quan trọng" và đàn mờ.
+
+Xem thêm: [[cadenza]], [[rubato]], [[louis-couperin]], [[ngau-hung-tu-do]].
 `,
   },
 ]

@@ -22,7 +22,7 @@ Khi một âm giai được tổ chức quanh một **chủ âm** — các nốt
 | Số nốt | Ví dụ | Bài |
 |---|---|---|
 | 5 (ngũ cung) | Ngũ cung trưởng, ngũ cung thứ | [[am-giai-ngu-cung]] |
-| 6 | Âm giai blues, toàn cung | [[am-giai-blues]], [[am-giai-cromatic]] |
+| 6 | Âm giai blues, toàn cung | [[am-giai-blues]], [[am-giai-toan-cung]] |
 | 7 (diatonic) | Trưởng, thứ, các điệu thức nhà thờ | [[am-giai-truong]], [[am-giai-thu]], [[dieu-thuc]] |
 | 8 | Bát cung (xen kẽ cung – nửa cung) | [[am-giai-bat-cung]] |
 | 12 | Cromatic | [[am-giai-cromatic]] |
@@ -30,10 +30,10 @@ Các âm giai đối xứng khác: [[dieu-thuc-chuyen-vi-gioi-han]].
 
 ## Lộ trình học
 1. **Âm giai trưởng và bậc**: [[am-giai-truong]] → [[bac-am-giai]].
-2. **Giọng và hoá biểu**: [[dieu-tinh]] → [[hoa-bieu]] → [[vong-quang-nam]].
+2. **Giọng và hoá biểu**: [[dieu-tinh]] → [[hoa-bieu]] → [[vong-quang-nam]] → [[xac-dinh-giong-cua-ban-nhac]].
 3. **Âm giai thứ và giọng họ hàng**: [[am-giai-thu]] → [[giong-song-song]].
 4. **Đổi giọng**: [[dich-giong]] (cả bài) và [[chuyen-giong]] (trong bài).
-5. **Ngoài trưởng – thứ**: [[dieu-thuc]] → [[am-giai-ngu-cung]] ([[am-nhac-truyen-thong-viet-nam|ngũ cung trong nhạc Việt]]) → [[am-giai-blues]] → [[am-giai-cromatic]] → [[am-giai-bat-cung]].
+5. **Ngoài trưởng – thứ**: [[dieu-thuc]] → [[am-giai-ngu-cung]] ([[am-nhac-truyen-thong-viet-nam|ngũ cung trong nhạc Việt]]) → [[am-giai-blues]] → [[am-giai-cromatic]] → [[am-giai-toan-cung]] → [[am-giai-bat-cung]].
 6. **Âm giai trong hoà âm**: [[hoa-am-dieu-thuc]], [[he-thong-hop-am-am-giai]] (jazz).
 
 ## Luyện âm giai trên đàn
@@ -429,7 +429,7 @@ Không có nửa cung và [[thuan-nghich|tritone]] nên mọi nốt chơi cùng 
     slug: 'am-giai-cromatic',
     title: 'Âm giai cromatic và âm giai toàn cung',
     category: 'scales',
-    aliases: ['âm giai nửa cung', 'chromatic scale', 'cromatic', 'chromatic', 'âm giai toàn cung', 'whole tone scale', 'âm giai cung'],
+    aliases: ['âm giai nửa cung', 'chromatic scale', 'cromatic', 'chromatic', 'âm giai cung'],
     summary: 'Âm giai cromatic dùng cả 12 nửa cung; âm giai toàn cung gồm 6 nốt cách nhau đều một cung.',
     wiki: 'Chromatic_scale',
     refs: [
@@ -462,7 +462,7 @@ Claude Debussy dùng âm giai toàn cung rất nhiều (ví dụ [[the-loai|prel
     slug: 'dich-giong',
     title: 'Dịch giọng',
     category: 'scales',
-    aliases: ['transposition', 'chuyển tông', 'dịch tông', 'nhạc cụ chuyển giọng', 'transposing instrument', 'concert pitch', 'cao độ thực'],
+    aliases: ['transposition', 'chuyển tông', 'dịch tông', 'transposing instrument', 'cao độ thực'],
     summary: 'Chuyển toàn bộ bản nhạc lên hoặc xuống một quãng cố định, giữ nguyên mọi quan hệ giữa các nốt.',
     wiki: 'Transposition_(music)',
     refs: [
@@ -500,6 +500,149 @@ Khi [[dem-hat-piano|đệm piano]] cho các nhạc cụ này, cần biết bản
 - **Kèn đồng tự nhiên**: kèn cor và trumpet ngày xưa **không có van**, chỉ chơi được các nốt trong [[chuoi-boi-am]] của một giọng. Muốn đổi giọng, người chơi **thay đoạn ống** (crook) — có khi để cả giá ống bên cạnh. Nhạc cho cor luôn được **viết như ở giọng Đô**; đoạn ống quyết định âm thanh thực. Van chỉ phổ biến trong dàn nhạc từ khoảng giữa thế kỷ 19; cor giọng **Fa** thành chuẩn từ đầu thế kỷ 19.
 - **Cùng một hệ ngón cho cả họ nhạc cụ**: clarinet Si♭ và clarinet La dùng **cùng cách bấm**, người chơi đổi nhạc cụ mà không phải học lại; [[saxophone|saxophone]] cũng vậy.
 - **Giữ nốt nằm gọn trong khuông**, hạn chế [[khuong-nhac|dòng kẻ phụ]].
+`,
+  },
+  {
+    slug: "xac-dinh-giong-cua-ban-nhac",
+    title: "Xác định giọng của bản nhạc",
+    category: 'scales',
+    aliases: ["cách tìm giọng bản nhạc", "nhận biết giọng trưởng hay thứ", "tìm chủ âm", "how to find the key of a piece", "key identification", "identifying the key"],
+    summary: "Quy trình từng bước để xác định giọng (key) của một bản nhạc: đọc hoá biểu, chọn giữa giọng trưởng và giọng thứ song song, kiểm tra âm dẫn được thăng, nốt bè trầm đầu và cuối, các câu kết; đồng thời chỉ ra khi nào phương pháp này không còn đúng (chuyển giọng, nhạc điệu thức, nhạc ngũ cung Việt Nam).",
+    refs: [
+      ["MyMusicTheory - key signatures and keys", "https://mymusictheory.com/?p=31908"],
+      ["Key-Notes - Major and minor keys", "https://www.key-notes.com/blog/major-and-minor-keys"],
+      ["A Complete Guide on Key Signatures", "https://www.piano-composer-teacher-london.co.uk/a-complete-guide-on-key-signatures/"],
+      ["BigComposer - Key signatures (lecture PDF)", "https://www.bigcomposer.com/module/lectures/keysignatures2.pdf"],
+    ],
+    body: `
+## Giọng là gì và vì sao cần xác định
+**Giọng** (key) là tập hợp gồm một **chủ âm** (tonic) và một [[dieu-thuc|điều thức]] (trưởng hoặc thứ) mà bản nhạc xoay quanh. Biết giọng giúp người học đoán trước ngón bấm, đọc nhanh các dấu hoá, hiểu hoà âm và luyện đúng [[am-giai|âm giai]] trước khi tập bài. Trong các kỳ thi nhạc lý kiểu ABRSM, câu hỏi "bản nhạc này ở giọng nào?" xuất hiện từ các cấp thấp.
+
+Điểm mấu chốt: **một [[hoa-bieu|hoá biểu]] (key signature) luôn ứng với hai giọng** — một giọng trưởng và giọng thứ [[giong-song-song|song song]] (relative minor) của nó. Hoá biểu chỉ thu hẹp lựa chọn; phần còn lại phải đọc từ chính các nốt nhạc.
+
+## Bước 1. Đọc hoá biểu để tìm giọng trưởng
+- **Hoá biểu dấu thăng:** dấu thăng cuối cùng là bậc VII (âm dẫn) của giọng trưởng; chủ âm nằm cao hơn nó nửa cung. Ví dụ ba dấu thăng (Fa, Đô, Sol thăng) → Sol thăng là âm dẫn → La trưởng.
+- **Hoá biểu dấu giáng:** dấu giáng áp chót chính là tên giọng trưởng. Ngoại lệ: một dấu giáng là Fa trưởng (phải thuộc lòng).
+- Không có dấu hoá: Đô trưởng hoặc La thứ.
+
+Các nguồn hướng dẫn nhạc lý phổ biến đều trình bày đúng hai mẹo này. Có thể kiểm tra lại bằng [[vong-quang-nam|vòng quãng năm]].
+
+## Bước 2. Tìm giọng thứ song song
+Giọng thứ song song có chủ âm thấp hơn chủ âm giọng trưởng một quãng ba thứ (ba nửa cung), tức là bậc VI của giọng trưởng. Ví dụ: Sol trưởng ↔ Mi thứ; Fa trưởng ↔ Rê thứ; Mi trưởng ↔ Đô thăng thứ.
+
+## Bước 3. Tìm âm dẫn được thăng — dấu hiệu quyết định
+Trong [[am-giai-thu|âm giai thứ]] hoà âm và giai điệu, bậc VII được nâng lên nửa cung để tạo âm dẫn. Dấu nâng này **không ghi trong hoá biểu** mà xuất hiện như dấu hoá bất thường (accidental) trong bài. Vì vậy:
+- Một dấu thăng một hoá biểu, lại thấy Rê thăng lặp lại → gần như chắc chắn là **Mi thứ**.
+- Không dấu hoá, thấy nhiều Sol thăng → **La thứ**.
+- Bốn dấu thăng, thấy Si thăng → **Đô thăng thứ** chứ không phải Mi trưởng.
+
+::staff treble k:1# E4 F#4 G4 A4 B4 C5 D#5 E5 | Âm giai Mi thứ hoà âm - Rê thăng là dấu hoá bất thường, không có trong hoá biểu
+
+::staff treble k:1# G4 A4 B4 C5 D5 E5 F#5 G5 | Cùng hoá biểu nhưng Sol trưởng - không có dấu hoá bất thường nào
+
+Lưu ý: ở giọng có dấu giáng, âm dẫn nâng lên có thể được ghi bằng dấu bình (ví dụ Đô thứ ba dấu giáng: Si bình). Học sinh hay bỏ sót dấu bình vì chỉ đi tìm dấu thăng.
+
+## Bước 4. Kiểm tra nốt bè trầm, hợp âm đầu và cuối, câu kết
+- **Nốt trầm đầu tiên** thường là chủ âm (đôi khi bản nhạc bắt đầu bằng nhịp lấy đà ở bậc V).
+- **Nốt trầm và hợp âm cuối cùng** gần như luôn là chủ âm trong nhạc điệu tính cổ điển — đây là phép thử mạnh nhất.
+- **Câu kết** ([[cau-ket|cadence]]): tìm cặp hợp âm V–I (hoặc V7–i). Hợp âm V của giọng thứ là hợp âm trưởng nhờ âm dẫn được nâng.
+
+::grand B3+D4+F#4/B2=V E4+G4+B4/E2=i | Câu kết hoàn toàn trong Mi thứ - hợp âm V (Si trưởng) chứa Rê thăng, giải quyết về Mi thứ
+
+Ngoại lệ đáng nhớ: bản ở giọng thứ có thể kết bằng hợp âm trưởng cùng chủ âm (quãng ba Picardie); hãy nhìn chủ âm, đừng chỉ nhìn tính chất hợp âm cuối.
+
+## Ví dụ làm từng bước
+1. Hoá biểu hai dấu giáng (Si, Mi giáng) → dấu áp chót là Si giáng → Si giáng trưởng; giọng song song là Sol thứ.
+2. Trong bài thấy nhiều Fa thăng → Fa thăng là âm dẫn của Sol thứ.
+3. Nốt trầm cuối là Sol, hợp âm cuối Sol–Si giáng–Rê → kết luận **Sol thứ**.
+
+::staff treble k:2b G4 A4 Bb4 C5 D5 Eb5 F#5 G5 | Sol thứ hoà âm - Fa thăng xuất hiện như dấu hoá bất thường
+
+## Khi phương pháp không còn đúng
+- **Chuyển giọng** ([[chuyen-giong|modulation]]): dấu hoá bất thường mới xuất hiện đều đặn (ví dụ Đô trưởng mà Fa thăng xuất hiện nhiều cùng câu kết về Sol) cho thấy đoạn nhạc đã sang giọng át. Khi đó hãy xác định giọng cho *từng đoạn*. Đôi khi nhà soạn nhạc đổi hẳn hoá biểu giữa bài, có vạch kép đứng trước.
+- **Nhạc điệu thức** (Dorian, Mixolydian...): hoá biểu có thể "sai" so với chủ âm thật. Ví dụ bài không dấu hoá nhưng xoay quanh Rê và kết ở Rê là Rê Dorian, không phải Đô trưởng hay La thứ.
+- **Nhạc ngũ cung Việt Nam**: nhiều dân ca và ca khúc dùng [[am-giai-ngu-cung|âm giai ngũ cung]], không có âm dẫn nửa cung, nên Bước 3 không áp dụng được. Hoá biểu thường được viết theo giọng trưởng hoặc thứ gần nhất cho tiện đọc, nhưng chủ âm phải xác định bằng nốt kết và các nốt dừng dài. Cách gọi tên các điệu thức ngũ cung (theo hệ Bắc, Nam, hơi Oán...) còn khác nhau giữa các nhà nghiên cứu; ở đây chỉ nên mô tả "ngũ cung trên nốt X, kết ở nốt Y".
+- **Nhạc phi điệu tính** thế kỷ 20: không có giọng để tìm.
+
+## Luyện tập
+1. Thẻ hoá biểu: giáo viên giơ hoá biểu, học sinh nói cả hai giọng trong 3 giây.
+2. Lấy 5 bài trong sách thi cấp độ, che tên bài, học sinh làm đủ 4 bước và ghi lý do.
+3. Đàn câu kết V–I của cả hai giọng dự đoán; tai nghe giọng nào "về nhà" khớp với nốt cuối của bài.
+4. Học sinh khá: đánh dấu các chỗ chuyển giọng trong một bản sonatina.
+
+## Lỗi thường gặp
+- Kết luận ngay từ hoá biểu mà không xem nốt cuối.
+- Nhầm dấu hoá bất thường trang trí (nốt thêu chromatic) với âm dẫn; một dấu hoá đơn lẻ chưa đủ, cần thấy nó lặp lại và đi lên chủ âm.
+- Quên ngoại lệ Fa trưởng và quên dấu bình ở giọng dấu giáng.
+
+Xem thêm: [[hoa-bieu]], [[giong-song-song]], [[cau-ket]], [[am-giai-ngu-cung]].
+`,
+  },
+  {
+    slug: "am-giai-toan-cung",
+    title: "Âm giai toàn cung",
+    category: 'scales',
+    aliases: ["gam toàn cung", "âm giai nguyên cung", "whole-tone scale", "hexatonic whole-tone", "gamme par tons", "mode of limited transposition 1"],
+    summary: "Âm giai toàn cung (whole-tone scale) gồm sáu nốt cách nhau đều một cung, không có nửa cung, không có âm dẫn và chỉ có hai bản khác nhau. Âm giai này gắn với Glinka, Liszt và các nhà soạn nhạc Nga, nổi bật trong nhạc Debussy (Voiles) và được dùng trong jazz trên hợp âm át 7 tăng năm.",
+    refs: [
+      ["Whole-tone scale - Wikipedia", "https://en.wikipedia.org/wiki/Whole-tone_scale"],
+      ["List of pieces that use the whole-tone scale - Wikipedia", "https://en.wikipedia.org/wiki/List_of_pieces_that_use_the_whole-tone_scale"],
+      ["whole-tone scale - Britannica", "https://www.britannica.com/art/whole-tone-scale"],
+      ["MyMusicTheory - the whole tone scale", "https://mymusictheory.com/scales-and-keys/the-whole-tone-scale/"],
+      ["Ethan Hein - The whole tone scale", "https://ethanhein.com/wp/2022/the-whole-tone-scale/"],
+      ["Jazzguitar.be - The Whole Tone Scale For Guitar", "https://www.jazzguitar.be/blog/whole-tone-scale/"],
+    ],
+    body: `
+## Định nghĩa và cấu tạo
+**Âm giai toàn cung** (whole-tone scale) là âm giai sáu nốt (hexatonic) trong đó mọi bậc liền kề đều cách nhau **một cung** (whole tone). Sáu cung cộng lại đúng bằng một quãng tám, nên âm giai tự khép kín. Khác với [[am-giai-truong|âm giai trưởng]], nó **không có nửa cung**, do đó không có âm dẫn và không có quãng năm đúng giữa các nốt của nó.
+
+::staff treble C4 D4 E4 F#4 G#4 A#4 C5 | Âm giai toàn cung trên Đô - sáu nốt, mỗi bước một cung
+
+::staff treble Db4 Eb4 F4 G4 A4 B4 Db5 | Bản thứ hai - bắt đầu từ Rê giáng, gồm các nốt còn lại của 12 nốt
+
+Vì mọi khoảng cách đều bằng nhau, âm giai bắt đầu từ bất kỳ nốt nào trong đó vẫn là cùng một tập hợp nốt. Do đó chỉ có **hai âm giai toàn cung khác nhau**: một chứa Đô (C–D–E–F♯–G♯–A♯) và một chứa Đô thăng (C♯–D♯–F–G–A–B). Hai tập hợp này chia đôi 12 nốt của [[am-giai-cromatic|âm giai chromatic]]. Messiaen gọi đây là **điệu thức chuyển vị giới hạn thứ nhất** (xem [[dieu-thuc-chuyen-vi-gioi-han]]).
+
+Ghi chép: tên nốt có thể viết khác nhau (A♯ hay B♭, G♯ hay A♭); vì có sáu nốt cho bảy tên chữ cái nên luôn phải bỏ qua một chữ cái. Không có quy ước tuyệt đối; người viết thường chọn cách ghi dễ đọc nhất theo ngữ cảnh.
+
+## Hợp âm sinh ra từ âm giai toàn cung
+- **Hợp âm ba tăng** ([[hop-am-ba-tang|augmented triad]]): xếp chồng cách một nốt (C–E–G♯, D–F♯–A♯). Mỗi âm giai toàn cung chứa đúng hai hợp âm ba tăng khác nhau về cao độ.
+- **Hợp âm át 7 tăng năm** (7♯5, C–E–G♯–B♭) và át 9 với quãng năm giảm và tăng: theo Ethan Hein, mỗi âm giai toàn cung chứa sáu hợp âm át loại "9 ♭5 ♯5".
+- Vì không có quãng năm đúng và không có âm dẫn, không thể tạo câu kết V–I bên trong âm giai — đó là lý do âm nhạc toàn cung nghe "lơ lửng", không có điểm về.
+
+::staff treble C4+E4+G#4=C+ D4+F#4+A#4=D+ | Hai hợp âm ba tăng nằm trong âm giai toàn cung trên Đô
+
+## Lịch sử sử dụng
+::timeline 1842=Glinka_Ruslan_và_Lyudmila 1909=Debussy_Voiles 1948=Monk_Four_in_One | Một số mốc dùng âm giai toàn cung
+
+- **Glinka và trường phái Nga:** Wikipedia ghi nhận âm giai này trong opera *Ruslan và Lyudmila* của [[mikhail-glinka|Glinka]] (gắn với phù thuỷ Chernomor, nên ở Nga còn gọi là "gam Chernomor"; tên gọi này lấy từ nguồn ít uy tín hơn, cần kiểm chứng). Các nhà soạn nhạc Nga sau đó như Dargomyzhsky và [[alexander-borodin|Borodin]] dùng nó để gợi không khí đáng sợ, ma quái.
+- **Liszt:** Britannica xếp [[franz-liszt|Liszt]] cùng Glinka, [[modest-mussorgsky|Mussorgsky]], Borodin vào nhóm đầu tiên thử nghiệm các biến âm ngụ ý hoà âm toàn cung trong khuôn khổ điệu tính.
+- **Debussy:** Theo Britannica, lối viết toàn cung, không âm dẫn và không hợp âm át, trở thành nét đặc trưng của [[claude-debussy|Debussy]] và Dukas quanh năm 1900. Ví dụ kinh điển là *Voiles* (Prélude số 2, Tập 1, 1909): gần như toàn bài dùng âm giai toàn cung, trừ một đoạn ngũ cung ngắn ở giữa và một vài nét chromatic. Âm trì ở bè trầm (Si giáng) đóng vai trò "nốt trụ" thay cho chủ âm.
+
+## Trong jazz
+Trong jazz, âm giai toàn cung thường được dùng trên **hợp âm át tăng** (G7♯5, G9♯5): chơi âm giai toàn cung trên Sol trên hợp âm G7♯5 (nguồn Jazzguitar.be). [[thelonious-monk|Thelonious Monk]] và [[art-tatum|Art Tatum]] dùng nhiều; Ethan Hein mô tả Monk chạy thẳng âm giai toàn cung trên hợp âm C7, và nhắc *Four in One* (1948), *Trinkle Tinkle* (1952) như ví dụ. Xem thêm [[am-giai-doi-xung-jazz]].
+
+## Ngón bấm trên piano
+Không có ngón bấm "chuẩn" thống nhất giữa các giáo trình; phương án dưới đây là gợi ý dựa trên nguyên tắc chung: ngón cái đặt trên phím trắng, các ngón dài trên phím đen.
+
+::staff treble C4=1 D4=2 E4=1 F#4=2 G#4=3 A#4=4 C5=1 | Tay phải, âm giai toàn cung trên Đô - nhóm 1-2 và 1-2-3-4
+
+::staff treble Db4=2 Eb4=3 F4=1 G4=2 A4=3 B4=1 Db5=2 | Tay phải, âm giai thứ hai - nhóm 2-3 và 1-2-3
+
+Với tay trái, nguyên tắc tương tự: ngón cái trên phím trắng (Đô, Mi hoặc Fa, Si), ba phím đen liền nhau dùng các ngón 2-3-4 hoặc 2-3. Ví dụ tay trái đi xuống từ Đô trên: Đô 1, Si giáng 2, La giáng 3, Sol giáng 4, Mi 1, Rê 2, Đô 3. Giáo viên nên thử với từng học sinh và chọn phương án ít luồn ngón nhất.
+
+## Luyện tập
+1. Đàn hai âm giai toàn cung một quãng tám, tay riêng, rồi hai quãng tám; nói to tên nốt để nhớ chữ cái bị "bỏ qua".
+2. Nghe so sánh: đàn Đô trưởng rồi toàn cung trên Đô; học sinh mô tả cảm giác (thiếu điểm về, mơ hồ).
+3. Đàn hợp âm ba tăng trên Đô, Rê, Mi... nhận ra chúng chỉ là hai hợp âm lặp lại ở thế đảo khác.
+4. Nghe *Voiles*, đánh dấu chỗ âm nhạc rời khỏi toàn cung sang ngũ cung.
+5. Ứng tấu: trên vòng G7♯5 – Cmaj7, chơi toàn cung trên Sol rồi giải quyết về nốt Mi của Đô trưởng.
+
+## Lỗi thường gặp
+- Đàn bảy nốt (thêm một nửa cung) vì quen âm giai trưởng.
+- Nghĩ có 12 âm giai toàn cung — thực ra chỉ có hai.
+- Gọi mọi âm thanh "mơ màng" của Debussy là toàn cung; nhiều đoạn thực ra là ngũ cung hoặc điệu thức.
+
+Xem thêm: [[am-giai]], [[hop-am-ba-tang]], [[am-giai-bat-cung]], [[claude-debussy]].
 `,
   },
 ]

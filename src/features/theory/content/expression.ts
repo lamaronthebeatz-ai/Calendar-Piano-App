@@ -113,7 +113,7 @@ Cường độ là **tương đối**: f trong nhạc Mozart nhẹ hơn f trong 
     slug: 'cach-dien-tau',
     title: 'Cách diễn tấu',
     category: 'expression',
-    aliases: ['articulation', 'legato', 'staccato', 'tenuto', 'accent', 'dấu nhấn', 'dấu luyến', 'slur', 'fermata', 'dấu ngân', 'marcato', 'portato'],
+    aliases: ['articulation', 'legato', 'staccato', 'tenuto', 'accent', 'dấu nhấn', 'fermata', 'dấu ngân', 'marcato', 'portato'],
     summary: 'Các ký hiệu cho biết cách đánh từng nốt: liền tiếng (legato), nảy (staccato), nhấn (accent), ngân (fermata)…',
     wiki: 'Articulation_(music)',
     refs: [
