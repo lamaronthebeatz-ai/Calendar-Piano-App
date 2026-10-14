@@ -210,4 +210,95 @@ const RHYTHM: QuizQuestion[] = [
   q('Mỗi ô nhịp 4/4 có tổng trường độ bằng nốt nào?', 'Nốt tròn', ['Nốt trắng', 'Nốt trắng chấm dôi', 'Nốt đen chấm dôi'], 'so-chi-nhip'),
 ]
 
-export const GENERATED: QuizQuestion[] = [...intervals(), ...triads(), ...keys(), ...RHYTHM]
+
+/* ------------------------------------------------- sevenths, inversions, diatonic triads */
+
+const SEVENTHS = {
+  maj7: [4, 7, 11],
+  '7': [4, 7, 10],
+  m7: [3, 7, 10],
+  'm7♭5': [3, 6, 10],
+  '°7': [3, 6, 9],
+} as const
+type Seventh = keyof typeof SEVENTHS
+const SEVENTH_NAMES: Record<Seventh, string> = { maj7: '7 trưởng', '7': '7 át', m7: '7 thứ', 'm7♭5': '7 nửa giảm', '°7': '7 giảm' }
+const seventh = (root: Note, kind: Seventh) => [root, ...SEVENTHS[kind].map((semis, i) => above(root, (i + 1) * 2, semis))]
+
+function sevenths(): QuizQuestion[] {
+  const rnd = seeded(31)
+  const out: QuizQuestion[] = []
+  const plan: [string, Seventh[]][] = [
+    ['C', ['maj7', '7', 'm7']], ['D', ['7', 'm7', 'm7♭5']], ['E', ['7', 'm7']], ['F', ['maj7', '7']], ['G', ['7', 'maj7', 'm7']],
+    ['A', ['7', 'm7', 'm7♭5']], ['B', ['m7♭5', '°7', '7']], ['B♭', ['maj7', '7']], ['E♭', ['maj7', '7']], ['F♯', ['m7♭5', '°7']], ['C♯', ['°7']], ['G♯', ['°7']],
+  ]
+  for (const [r, kinds] of plan) {
+    const root = parse(r)
+    for (const kind of kinds) {
+      const right = seventh(root, kind)
+      if (!plain(right)) continue
+      const others = (Object.keys(SEVENTHS) as Seventh[]).filter((k) => k !== kind).map((k) => seventh(root, k)).filter(plain).map(spellChord)
+      if (others.length < 3) continue
+      out.push(q(`Hợp âm ${spell(root)}${kind} (${SEVENTH_NAMES[kind]}) gồm những nốt nào?`, spellChord(right), pick3(others, [], rnd), kind === '°7' ? 'hop-am-bay-giam' : 'hop-am-bay'))
+    }
+  }
+  return out
+}
+
+function inversions(): QuizQuestion[] {
+  const rnd = seeded(37)
+  const out: QuizQuestion[] = []
+  const flip: Record<string, string> = { trưởng: 'thứ', thứ: 'trưởng', tăng: 'giảm', giảm: 'tăng', đúng: 'đúng' }
+  for (let n = 2; n <= 7; n++) {
+    const qualities = PERFECT.has(n) ? ['đúng', 'tăng', 'giảm'] : ['trưởng', 'thứ', 'tăng', 'giảm']
+    for (const quality of qualities) {
+      if (quality === 'giảm' && n === 2) continue
+      const answer = `quãng ${9 - n} ${flip[quality]}`
+      const m = 9 - n
+      const pool = [
+        ...(PERFECT.has(m) ? ['đúng', 'tăng', 'giảm'] : ['trưởng', 'thứ', 'tăng', 'giảm']).map((x) => `quãng ${m} ${x}`),
+        `quãng ${n} ${flip[quality]}`,
+        `quãng ${m === 7 ? 6 : m + 1} ${PERFECT.has(m === 7 ? 6 : m + 1) ? 'đúng' : quality === 'đúng' ? 'trưởng' : quality}`,
+      ]
+      out.push(q(`Đảo quãng ${n} ${quality} ta được quãng gì?`, answer, pick3([...new Set(pool)], [answer], rnd), 'quang-dao'))
+    }
+  }
+  return out
+}
+
+const ROMAN = ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii°']
+const KIND = ['trưởng', 'thứ', 'thứ', 'trưởng', 'trưởng', 'thứ', 'giảm'] as const
+const chordName = (n: Note, kind: string) => `${solfa(n)} ${kind} (${spell(n)}${kind === 'thứ' ? 'm' : kind === 'giảm' ? '°' : ''})`
+
+function diatonic(): QuizQuestion[] {
+  const rnd = seeded(41)
+  const out: QuizQuestion[] = []
+  for (const k of ['C', 'G', 'D', 'A', 'F', 'B♭', 'E♭']) {
+    const key = parse(k)
+    const triadsOfKey = MAJOR_STEPS.map((semis, i) => chordName(above(key, i, semis), KIND[i]))
+    for (const i of [1, 3, 4, 5]) {
+      out.push(q(`Trong giọng ${solfa(key)} trưởng, hợp âm bậc ${ROMAN[i]} là hợp âm nào?`, triadsOfKey[i], pick3(triadsOfKey, [triadsOfKey[i]], rnd), 'chuc-nang-hoa-am'))
+    }
+  }
+  // Quality of each degree's triad in a major key (true in every major key).
+  ROMAN.forEach((r, i) => {
+    const kinds = ['trưởng', 'thứ', 'giảm', 'tăng']
+    const name = `Hợp âm ba ${KIND[i]}`
+    out.push(q(`Trong giọng trưởng, hợp âm ba dựng trên bậc ${r.toUpperCase().replace('°', '')} có tính chất gì?`, name, pick3(kinds.map((x) => `Hợp âm ba ${x}`), [name], rnd), 'hop-am-ba'))
+  })
+  return out
+}
+
+const ENHARMONIC: [string, string, string[]][] = [
+  ['C♯', 'D♭', ['D♯', 'C♭', 'B♯']],
+  ['D♯', 'E♭', ['E♯', 'D♭', 'F♭']],
+  ['F♯', 'G♭', ['G♯', 'F♭', 'E♯']],
+  ['G♯', 'A♭', ['A♯', 'G♭', 'B♭']],
+  ['A♯', 'B♭', ['B♯', 'A♭', 'C♭']],
+  ['E♯', 'F', ['F♯', 'E♭', 'G♭']],
+  ['B♯', 'C', ['C♯', 'B♭', 'D♭']],
+  ['C♭', 'B', ['B♭', 'C♯', 'A♯']],
+  ['F♭', 'E', ['E♭', 'F♯', 'D♯']],
+]
+const enharmonics = () => ENHARMONIC.map(([a, b, w]) => q(`Nốt ${a} trùng âm (cùng phím đàn) với nốt nào?`, b, w, 'trung-am'))
+
+export const GENERATED: QuizQuestion[] = [...intervals(), ...triads(), ...keys(), ...RHYTHM, ...sevenths(), ...inversions(), ...diatonic(), ...enharmonics()]
