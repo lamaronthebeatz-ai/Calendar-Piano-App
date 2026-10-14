@@ -15,29 +15,8 @@ const SHOW_RIGHT_MS = 2_200
 const SHOW_WRONG_MS = 3_800
 const TICK = 100
 const LETTERS = ['A', 'B', 'C', 'D']
-const STATS_KEY = 'theory:quiz'
 
 type Phase = 'ask' | 'right' | 'wrong' | 'timeout'
-interface Stats {
-  answered: number
-  correct: number
-  best: number
-}
-
-const readStats = (): Stats => {
-  try {
-    return { answered: 0, correct: 0, best: 0, ...JSON.parse(localStorage.getItem(STATS_KEY) ?? '{}') }
-  } catch {
-    return { answered: 0, correct: 0, best: 0 }
-  }
-}
-const writeStats = (s: Stats) => {
-  try {
-    localStorage.setItem(STATS_KEY, JSON.stringify(s))
-  } catch {
-    /* private mode: keep the score for this visit only */
-  }
-}
 
 const shuffled = <T,>(xs: T[]): T[] => {
   const out = xs.slice()
@@ -77,7 +56,6 @@ interface Turn {
   phase: Phase
   choice: number | null
   elapsed: number
-  streak: number
 }
 type Action = { type: 'tick' } | { type: 'next' } | { type: 'answer'; choice: number; right: boolean }
 
@@ -90,19 +68,18 @@ function turn(s: Turn, action: Action): Turn {
       return { ...s, index: s.index + 1, phase: 'ask', choice: null, elapsed: 0 }
     case 'answer':
       if (s.phase !== 'ask') return s
-      return { ...s, phase: action.right ? 'right' : 'wrong', choice: action.choice, elapsed: 0, streak: action.right ? s.streak + 1 : 0 }
+      return { ...s, phase: action.right ? 'right' : 'wrong', choice: action.choice, elapsed: 0 }
     case 'tick': {
       const elapsed = s.elapsed + TICK
       if (elapsed < limitOf(s.phase)) return { ...s, elapsed }
-      return s.phase === 'ask' ? { ...s, phase: 'timeout', elapsed: 0, streak: 0 } : turn(s, { type: 'next' })
+      return s.phase === 'ask' ? { ...s, phase: 'timeout', elapsed: 0 } : turn(s, { type: 'next' })
     }
   }
 }
 
 function Quiz({ bank }: { bank: QuizQuestion[] }) {
-  const [{ index, phase, choice, elapsed, streak }, dispatch] = useReducer(turn, { index: 0, phase: 'ask', choice: null, elapsed: 0, streak: 0 })
+  const [{ index, phase, choice, elapsed }, dispatch] = useReducer(turn, { index: 0, phase: 'ask', choice: null, elapsed: 0 })
   const [paused, setPaused] = useState(false)
-  const [stats, setStats] = useState(readStats)
 
   const question = bank[index % bank.length]
   const options = useMemo(() => shuffled([question.a, ...question.w]), [question])
@@ -115,11 +92,6 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
     if (phase !== 'ask') return
     const right = i === answer
     dispatch({ type: 'answer', choice: i, right })
-    setStats((s) => {
-      const updated = { answered: s.answered + 1, correct: s.correct + (right ? 1 : 0), best: Math.max(s.best, right ? streak + 1 : 0) }
-      writeStats(updated)
-      return updated
-    })
   }
 
   const limit = limitOf(phase)
@@ -146,7 +118,6 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
   }
 
   const revealed = phase !== 'ask'
-  const accuracy = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : null
 
   return (
     <div
@@ -166,16 +137,6 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
           <span className="truncate">{CATEGORIES[category].title}</span>
         </span>
         <span className="ml-auto flex shrink-0 items-center gap-2.5 whitespace-nowrap text-[12px] tabular-nums text-[var(--color-ink-faint)]">
-          {streak >= 2 && (
-            <span key={streak} className="animate-pop-in rounded-full bg-[var(--color-gold-soft)] px-2 py-0.5 font-semibold text-[var(--color-gold)]">
-              Chuỗi {streak}
-            </span>
-          )}
-          {accuracy !== null && (
-            <span title={`Đã trả lời ${stats.answered} câu · chuỗi dài nhất ${stats.best}`}>
-              <span className="font-semibold text-[var(--color-ink-muted)]">{stats.correct}</span>/{stats.answered} · {accuracy}%
-            </span>
-          )}
           <button
             type="button"
             onClick={() => setPaused((p) => !p)}
