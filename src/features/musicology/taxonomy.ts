@@ -310,9 +310,10 @@ export const BRANCHES: Branch[] = [
     questions: ['Vì sao người này mê rock, người kia mê nhạc cổ điển?', 'Vì sao nghe nhiều lần lại thấy hay hơn — rồi chán?', 'Nhạc nền giúp hay hại khi làm việc, và cửa hàng dùng nhạc để làm gì?'],
     groups: [
       { title: 'Tổng quan', slugs: ['tam-ly-nguoi-nghe-tong-quan', 'cam-xuc-am-nhac', 'ky-vong-am-nhac'] },
-      { title: 'Sở thích và trải nghiệm', slugs: ['so-thich-am-nhac-va-tinh-cach', 'su-quen-thuoc-va-hieu-ung-tiep-xuc', 'rung-minh-khi-nghe-nhac', 'nhac-ket-trong-dau', 'am-nhac-va-tri-nho-tu-truyen', 'groove-va-cam-giac-muon-chuyen-dong'] },
-      { title: 'Nghe nhạc trong đời sống và xã hội', slugs: ['nhac-nen-va-hieu-suat-lam-viec', 'am-nhac-va-hanh-vi-tieu-dung', 'tam-ly-nghe-nhac-thoi-streaming', 'am-nhac-va-ban-sac-xa-hoi'] },
-      { title: 'Khác biệt cá nhân', slugs: ['mu-am-bam-sinh', 'cam-giac-dong-cam-am-nhac', 'cao-do-tuyet-doi'] },
+      { title: 'Sở thích và trải nghiệm', slugs: ['so-thich-am-nhac-va-tinh-cach', 'su-quen-thuoc-va-hieu-ung-tiep-xuc', 'rung-minh-khi-nghe-nhac', 'nhac-ket-trong-dau', 'am-nhac-va-tri-nho-tu-truyen', 'groove-va-cam-giac-muon-chuyen-dong', 'loi-bai-hat-va-tam-ly-nguoi-nghe'] },
+      { title: 'Cảm xúc và điều hoà tâm trạng', slugs: ['nghich-ly-nhac-buon', 'dieu-hoa-cam-xuc-bang-am-nhac', 'rung-minh-khi-nghe-nhac', 'cam-xuc-am-nhac'] },
+      { title: 'Nghe nhạc trong đời sống và xã hội', slugs: ['nhac-nen-va-hieu-suat-lam-viec', 'am-nhac-va-hanh-vi-tieu-dung', 'tam-ly-nghe-nhac-thoi-streaming', 'am-nhac-va-ban-sac-xa-hoi', 'khau-vi-am-nhac-theo-tuoi-tac', 'trai-nghiem-hoa-nhac-va-nghe-tap-the', 'am-nhac-the-thao-va-van-dong', 'am-nhac-va-giac-ngu'] },
+      { title: 'Khác biệt cá nhân', slugs: ['mu-am-bam-sinh', 'cam-giac-dong-cam-am-nhac', 'cao-do-tuyet-doi', 'tai-nang-am-nhac-va-di-truyen'] },
     ],
   },
   {
@@ -412,9 +413,9 @@ export const BRANCHES: Branch[] = [
     questions: ['Mỗi truyền thống tổ chức cao độ và thời gian theo hệ thống nào?', 'Khái niệm phương Tây (giọng, nhịp, hoà âm) dùng được đến đâu khi mô tả chúng?'],
     groups: [
       { title: 'Phương pháp', slugs: ['dan-toc-nhac-hoc', 'nhac-khi-the-gioi'] },
-      { title: 'Nam Á, Tây Á và Đông Nam Á', slugs: ['am-nhac-co-dien-an-do', 'maqam-a-rap-va-trung-dong', 'ly-thuyet-gamelan-java-va-bali', 'gamelan'] },
-      { title: 'Đông Á', slugs: ['am-nhac-truyen-thong-trung-hoa', 'am-nhac-truyen-thong-nhat-ban', 'mo-hinh-cong-nghiep-k-pop'] },
-      { title: 'Châu Phi và châu Mỹ', slugs: ['am-nhac-chau-phi-ha-sahara', 'clave-tresillo-va-nhip-cong'] },
+      { title: 'Nam Á, Tây Á và Đông Nam Á', slugs: ['am-nhac-co-dien-an-do', 'maqam-a-rap-va-trung-dong', 'ly-thuyet-gamelan-java-va-bali', 'gamelan', 'am-nhac-dong-nam-a-luc-dia'] },
+      { title: 'Đông Á', slugs: ['am-nhac-truyen-thong-trung-hoa', 'am-nhac-truyen-thong-nhat-ban', 'am-nhac-truyen-thong-han-quoc', 'mo-hinh-cong-nghiep-k-pop'] },
+      { title: 'Châu Phi và châu Mỹ', slugs: ['am-nhac-chau-phi-ha-sahara', 'am-nhac-my-latinh-va-caribe', 'clave-tresillo-va-nhip-cong'] },
       { title: 'Việt Nam', slugs: ['am-nhac-truyen-thong-viet-nam', 'ly-thuyet-am-nhac-co-truyen-viet-nam', 'am-giai-ngu-cung'] },
     ],
   },
@@ -430,6 +431,8 @@ export const BRANCHES: Branch[] = [
     questions: ['Một lượt stream sinh ra bao nhiêu tiền, và ai nhận?', 'Bản ghi âm và tác phẩm được bảo hộ như hai quyền riêng ra sao?', 'Vì sao công nghiệp âm nhạc chuyển trọng tâm từ đĩa sang biểu diễn và dữ liệu?'],
     groups: [
       { title: 'Cấu trúc ngành', slugs: ['cong-nghiep-am-nhac', 'hang-dia-va-cac-tap-doan-lon', 'xuat-ban-am-nhac-va-cac-loai-tac-quyen', 'kinh-te-hoc-streaming', 'am-nhac-bieu-dien-truc-tiep-va-luu-dien', 'a-r-va-phat-trien-nghe-si', 'bang-xep-hang-am-nhac', 'lich-su-thu-am'] },
+      { title: 'Nghệ sĩ, nghề nghiệp và marketing', slugs: ['nghe-nghiep-trong-nganh-am-nhac', 'nghe-si-doc-lap-va-tu-phat-hanh', 'marketing-am-nhac-va-mang-xa-hoi'] },
+      { title: 'Công nghệ, dữ liệu và AI', slugs: ['du-lieu-va-thuat-toan-trong-nganh-am-nhac', 'tri-tue-nhan-tao-va-am-nhac', 'am-nhac-trong-quang-cao-phim-va-tro-choi'] },
       { title: 'Bản quyền và luật', slugs: ['ban-quyen-am-nhac-quoc-te', 'to-chuc-quan-ly-tap-the-quyen-tac-gia', 'vi-pham-ban-quyen-va-chia-se-tep', 'ban-quyen-am-nhac-viet-nam'] },
       { title: 'Việt Nam và châu Á', slugs: ['cong-nghiep-am-nhac-viet-nam', 'mo-hinh-cong-nghiep-k-pop', 'vpop-rap-viet'] },
     ],
@@ -445,7 +448,8 @@ export const BRANCHES: Branch[] = [
     summary: 'Âm nhạc trong trị liệu và chăm sóc: âm nhạc trị liệu, sa sút trí tuệ, cuốn theo nhịp trong phục hồi vận động; sức khoẻ của người chơi đàn, thính giác và hồi hộp biểu diễn.',
     questions: ['Bằng chứng nào cho âm nhạc trị liệu, và nó mạnh đến đâu?', 'Vì sao người mắc Alzheimer vẫn nhớ bài hát cũ?', 'Người chơi đàn tự bảo vệ cơ thể và đôi tai thế nào?'],
     groups: [
-      { title: 'Trị liệu và não', slugs: ['am-nhac-tri-lieu', 'am-nhac-va-sa-sut-tri-tue', 'dong-bo-nhip-va-cuon-theo', 'nao-nguoi-choi-nhac-va-tinh-deo-dai'] },
+      { title: 'Trị liệu và não', slugs: ['am-nhac-tri-lieu', 'am-nhac-va-sa-sut-tri-tue', 'dong-bo-nhip-va-cuon-theo', 'nao-nguoi-choi-nhac-va-tinh-deo-dai', 'am-nhac-dau-va-giam-dau', 'am-nhac-va-tu-ky', 'ao-giac-am-nhac-va-u-tai', 'am-nhac-va-giac-ngu'] },
+      { title: 'Vận động và thể thao', slugs: ['am-nhac-the-thao-va-van-dong', 'dong-bo-nhip-va-cuon-theo'] },
       { title: 'Sức khoẻ người biểu diễn', slugs: ['suc-khoe-nguoi-choi-dan', 'bao-ve-thinh-giac', 'hoi-hop-bieu-dien', 'tu-the'] },
     ],
   },
