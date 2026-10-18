@@ -1,6 +1,7 @@
 import { useMemo, useState, type CSSProperties } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
+import { QuoteBanner } from './QuoteBanner'
 import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, BranchesIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, CompassIcon, ListIcon, SearchIcon, XIcon } from '../../components/icons'
 import { EmptyState } from '../../components/EmptyState'
 import { ArticleGrid, SectionTitle } from '../theory/TheoryPage'
@@ -141,6 +142,8 @@ function MapIndex() {
           <div className="h-full rounded-full bg-gradient-to-r from-[#e2b66e] to-[#c9773f] transition-[width] duration-700" style={{ width: `${pct}%` }} />
         </div>
       </section>
+
+      <QuoteBanner />
 
       {/* One toolbar for the whole map: find a branch or an article, or narrow to one part. */}
       <div data-scrolled className="glass sticky top-14 z-10 -mx-4 space-y-2.5 border-b border-[var(--color-border)] px-4 py-3 lg:mx-0 lg:rounded-2xl lg:border">
