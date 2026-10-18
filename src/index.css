@@ -535,3 +535,25 @@ a.book-cover:active { transform: scale(0.985); }
 @media (prefers-reduced-motion: reduce) {
   .quote-word, .quote-fade { animation: none; }
 }
+/* The author's portrait, sepia and faded into the banner from the right. */
+.quote-portrait {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: -1;
+  width: min(62%, 460px);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: grayscale(1) sepia(0.35) contrast(1.05);
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.55) 40%, transparent 100%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.55) 40%, transparent 100%);
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1200ms ease, transform 12s linear;
+  pointer-events: none;
+}
+.quote-portrait.is-loaded { opacity: 0.3; transform: scale(1); }
+:root[data-theme="dark"] .quote-portrait.is-loaded { opacity: 0.26; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .quote-portrait.is-loaded { opacity: 0.26; } }
+@media (max-width: 639px) { .quote-portrait { width: 75%; } .quote-portrait.is-loaded { opacity: 0.2; } }
+@media (prefers-reduced-motion: reduce) { .quote-portrait { transition: opacity 400ms ease; transform: none; } }

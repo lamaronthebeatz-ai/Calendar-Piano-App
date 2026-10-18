@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import clsx from 'clsx'
 import { ChevronLeftIcon, ChevronRightIcon } from '../../components/icons'
 import type { Quote } from './quotes/types'
+import { leadImage } from '../theory/wikiImage'
 
 /** How long each quotation stays before the next one. */
 const SHOW_MS = 12_000
@@ -14,6 +15,45 @@ const shuffled = <T,>(xs: T[]): T[] => {
     ;[out[i], out[j]] = [out[j], out[i]]
   }
   return out
+}
+
+/** English Wikipedia page for an author whose name we write the Vietnamese way, or whose plain name is ambiguous. */
+const WIKI_TITLE: Record<string, string[]> = {
+  'Khổng Tử': ['Confucius'],
+  'Lão Tử': ['Laozi'],
+  'Mạnh Tử': ['Mencius'],
+  'Thánh Augustinô': ['Augustine of Hippo'],
+  'Lev Tolstoy': ['Leo Tolstoy'],
+  'John Williams': ['John Williams (composer)', 'John Williams'],
+  'Bill Evans': ['Bill Evans'],
+  'Phú Quang': ['Phú Quang (musician)', 'Phú Quang (composer)'],
+}
+const titlesFor = (author: string) => WIKI_TITLE[author] ?? [author]
+
+/** The author's portrait (Wikipedia's freely licensed lead image), faded into the banner's background. */
+function Portrait({ author }: { author: string }) {
+  const [img, setImg] = useState<{ author: string; src: string } | null>(null)
+  const [loaded, setLoaded] = useState<string | null>(null)
+  useEffect(() => {
+    let live = true
+    leadImage(titlesFor(author))
+      .then((found) => live && setImg(found ? { author, src: found.src } : null))
+      .catch(() => live && setImg(null))
+    return () => {
+      live = false
+    }
+  }, [author])
+  if (!img || img.author !== author) return null
+  return (
+    <img
+      key={img.src}
+      src={img.src}
+      alt=""
+      aria-hidden
+      onLoad={() => setLoaded(img.src)}
+      className={clsx('quote-portrait', loaded === img.src && 'is-loaded')}
+    />
+  )
 }
 
 /**
@@ -57,6 +97,7 @@ function Banner({ quotes }: { quotes: Quote[] }) {
       aria-roledescription="trích dẫn"
       className="quote-banner relative isolate flex min-h-[200px] flex-col justify-center overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-5 pb-5 pt-5 shadow-[0_1px_0_rgba(0,0,0,0.02),0_22px_44px_-34px_rgba(40,30,15,0.45)] sm:min-h-[168px] sm:px-8 sm:pb-6 sm:pt-6"
     >
+      <Portrait author={quote.author} />
       {/* Large gold quotation mark and a soft wash behind it */}
       <span aria-hidden className="pointer-events-none absolute -left-2 -top-10 -z-10 select-none font-display text-[180px] leading-none text-[color-mix(in_oklch,var(--color-gold)_16%,transparent)] sm:-top-12 sm:left-2 sm:text-[220px]">
         “
