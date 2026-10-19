@@ -49,7 +49,7 @@ Deploy the contents of `dist/` to any static host (Netlify, Vercel, Cloudflare P
 
 ### GitHub Pages
 
-`.github/workflows/deploy-pages.yml` builds and deploys automatically on every push to this branch. One-time setup: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**. After that the app is live at `https://<owner>.github.io/<repo>/` and redeploys on every push — no manual build/upload needed. (The workflow builds with `--base=./` so the exact same `dist/` output works whether it's served from a domain root or a GitHub Pages subpath.)
+`.github/workflows/deploy-pages.yml` builds and deploys automatically on every push to `main`. One-time setup: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**. After that the app is live at `https://<owner>.github.io/<repo>/` and redeploys on every push — no manual build/upload needed. (The workflow builds with `--base=./` so the exact same `dist/` output works whether it's served from a domain root or a GitHub Pages subpath.)
 
 ### Single-file build (Claude Artifact)
 
