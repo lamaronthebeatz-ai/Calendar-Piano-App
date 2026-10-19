@@ -29,6 +29,3 @@ npx tsc -b && npm run lint && npm run check:links && npm run build
 
 ## Mục đã có (tóm tắt)
 Kỹ thuật piano, cây đàn, luyện tai & sư phạm, ký âm, nhịp, cao độ, âm giai, hoà âm (2 trường phái), cromatic, hình thức, phức điệu, diễn tấu, jazz, ngẫu hứng, thời kỳ/thế kỷ 20, nghe & âm học, triết học, phân tích, nghệ sĩ piano, thể loại, âm nhạc học, nhạc khí (organology), âm nhạc Việt Nam, âm nhạc nhà thờ, **organ nhà thờ** (13 bài, hub `ky-thuat-organ-lo-trinh`), nhà soạn nhạc.
-
-## Việc đang dở
-- Nâng bộ trích dẫn Âm nhạc học lên ~1000 câu, lấy từ mục có nguồn của Wikiquote / archive.org, đối chiếu nguyên văn. Cần phiên có quyền truy cập mạng tới các site đó. Tránh trùng: so cột nguyên văn với các dòng đã có.
