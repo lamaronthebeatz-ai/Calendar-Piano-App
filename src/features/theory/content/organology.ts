@@ -994,6 +994,8 @@ Chơi cùng trống là học **[[swing]]**, **[[dao-phach|đảo phách]]** và
       ["Wikipedia — Wanamaker Organ", "https://en.wikipedia.org/wiki/Wanamaker_Organ"],
     ],
     body: `
+Học chơi organ: [[ky-thuat-organ-lo-trinh]]; bàn điều khiển và ký hiệu feet: [[ban-dieu-khien-organ]].
+
 **Đàn organ ống** là nhạc cụ **hơi** có **[[ban-phim|bàn phím]]**: mỗi phím mở van cho hơi vào một hoặc nhiều **ống**. Theo Hornbostel – Sachs, ống thổi cạnh (*flue*) mang số 422.222.11 — thực chất là [[sao-flute|sáo]] — còn ống có lưỡi gà là 422.122 hoặc 422.132.
 
 ::wiki Pipe_organ | Đàn organ ống

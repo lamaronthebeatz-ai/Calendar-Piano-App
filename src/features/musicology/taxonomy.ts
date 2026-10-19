@@ -511,6 +511,7 @@ export const BRANCHES: Branch[] = [
       { title: 'Bình ca Gregorian', slugs: ['thanh-ca-gregorian', 'ky-am-binh-ca-gregorian', 'tam-dieu-thuc-va-giong-thanh-vinh', 'sach-hat-va-van-kien-binh-ca', 'viet-binh-ca-cho-tieng-ban-dia', 'gregorio-va-gabc', 'dieu-thuc'] },
       { title: 'Organ trong phụng vụ', slugs: ['dem-organ-cho-binh-ca', 'alternatim-va-thanh-le-organ', 'dem-hat-cong-doan-tren-organ', 'organ-ong', 'chorale-va-chorale-prelude'] },
       { title: 'Bach: tài liệu, cách dạy, chorale', slugs: ['tai-lieu-su-pham-cua-bach', 'bach-day-hoc-tro', 'phoi-chorale-kieu-bach', 'johann-sebastian-bach', 'bass-so', 'cantus-firmus'] },
+      { title: 'Kỹ thuật organ', cats: ['organ'] },
       { title: 'Tổng quan và Việt Nam', cats: ['sacred'] },
     ],
   },

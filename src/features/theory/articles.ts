@@ -26,6 +26,7 @@ import { systematic } from './content/systematic'
 import { organology } from './content/organology'
 import { vietnam } from './content/vietnam'
 import { sacred } from './content/sacred'
+import { organ } from './content/organ'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -57,7 +58,8 @@ export const CATEGORIES = {
   organology: { title: 'Nhạc khí', hue: 315, description: 'Nhạc cụ phương Tây và phương Đông, mỗi nhạc cụ một trang: bộ dây, kèn gỗ, kèn đồng, bộ gõ, đàn phím, nhạc cụ điện; nhạc cụ Việt Nam, Đông Á, Nam Á – Tây Á, Đông Nam Á và châu Phi — xếp theo năm lớp Hornbostel – Sachs, có tầm âm, ảnh và nghiên cứu.' },
   vietnam: { title: 'Âm nhạc Việt Nam', hue: 15, description: 'Các thời kỳ từ trống đồng đến V-pop, thể loại và di sản UNESCO (ca trù, quan họ, nhã nhạc, đờn ca tài tử, cải lương…), nhạc sĩ, lý thuyết cổ truyền và hoà âm cho dân ca, nghiên cứu, cùng một trang phân định giai thoại và sự thật.' },
   sacred: { title: 'Âm nhạc nhà thờ', hue: 45, description: 'Bình ca Gregorian (ký âm nốt vuông, tám điệu thức, công thức thánh vịnh, sách hát, phần mềm Gregorio, viết cho tiếng bản địa), đệm organ cho bình ca và cho cộng đoàn, alternatim và thánh lễ organ, tài liệu sư phạm và cách dạy của Bach, phối chorale — mỗi bài nối sang lý thuyết và âm nhạc học.' },
+  organ: { title: 'Organ nhà thờ', hue: 125, description: 'Hệ thống kỹ thuật và lộ trình cho organist nhà thờ: bàn điều khiển và ký hiệu feet, cách chạm phím, ngón tay cổ và hiện đại, pedal, phối hợp tay chân, chorale prelude, phối âm sắc, Bach như người chơi và kiểm định organ, organ trong phụng vụ, cách luyện tập và lộ trình tác phẩm — dựa trên các chuyên luận cổ từ Schlick (1511) đến Dupré (1927).' },
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...polyphony, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...sacred]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...polyphony, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...sacred, ...organ]

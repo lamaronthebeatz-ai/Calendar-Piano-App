@@ -35,6 +35,8 @@ Mục này trả lời ba câu hỏi: **bình ca Gregorian được viết và h
 | 12. Phối chorale | [[phoi-chorale-kieu-bach]] — lập kế hoạch kết, bè trầm trước, nghiên cứu kho 371 chorale | [[luat-hoa-am-bon-be]], [[cau-ket]] |
 | 13. Ở Việt Nam | [[binh-ca-va-organ-o-viet-nam]] — điều đã biết và những khoảng trống | [[am-nhac-ton-giao-va-dan-toc-viet-nam]] |
 
+**Học chơi organ:** kỹ thuật tay, pedal, phối âm sắc và lộ trình tác phẩm có mục riêng — bắt đầu ở [[ky-thuat-organ-lo-trinh]].
+
 ## Hai cách đọc cùng một mục
 - **Theo lý thuyết:** bước 2 – 3 là ký âm và điệu thức; bước 7, 11, 12 là hoà âm và [[doi-am|đối âm]] áp dụng. Các bài được xếp chéo vào mục [[dieu-thuc|Âm giai & giọng]], [[luat-hoa-am-bon-be|Hợp âm & hoà âm]] và [[ky-am|Ký âm]].
 - **Theo [[am-nhac-hoc|âm nhạc học]]:** bước 4 và 10 là **nguồn văn bản** (bản thảo, [[an-ban-urtext|ấn bản]], văn kiện); bước 7 – 9 là **thực hành biểu diễn lịch sử**; bước 11 là **lịch sử lý thuyết và sư phạm**. Thẻ Âm nhạc học có nhánh riêng "Âm nhạc nhà thờ" gom các bài này.
@@ -639,7 +641,7 @@ Nếu bạn có tài liệu (sách hướng dẫn của Ủy ban Thánh nhạc, 
       ["Bach-chorales.com — các tuyển tập sớm", "https://bach-chorales.com/EarlyCollectionsKey.htm"],
     ],
     body: `
-Bài này là bước 10 của [[am-nhac-nha-tho]]. Tiểu sử: [[johann-sebastian-bach]]. Cách ông dạy trên lớp: [[bach-day-hoc-tro]].
+Bài này là bước 10 của [[am-nhac-nha-tho]]. Tiểu sử: [[johann-sebastian-bach]]. Cách ông dạy trên lớp: [[bach-day-hoc-tro]]. Bach chơi và kiểm định organ: [[bach-nguoi-choi-organ]].
 
 ::timeline 1708-1716=Orgelbüchlein_(Weimar) 1720=Clavierbüchlein_W._F. 1723=Inventions 1736=Schemelli 1738=Vorschriften 1739=Clavier-Übung_III 1739-1750=Chorale_Leipzig 1746-1750=Schübler 1765-1787=371_chorale_in | Các tập có mục đích sư phạm, theo năm (khoảng)
 

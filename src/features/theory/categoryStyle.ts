@@ -34,4 +34,5 @@ export const GLYPHS: Record<CategoryId, string> = {
   organology: '𝄜',
   vietnam: '𝆕',
   sacred: '𝅜',
+  organ: '𝆮',
 }
