@@ -2090,6 +2090,23 @@ const ROWS: [string, string, string, string, string, string][] = [
   ["Theo Limb & Braun, khi ngẫu hứng vùng nào của não giảm hoạt động rộng?", "Trước trán bên lưng", "Trước trán giữa", "Thuỳ chẩm", "Tiểu não", "khoa-hoc-ngau-hung"],
   ["Mô hình bảy cấp độ phát triển ngẫu hứng (1991) là của ai?", "John Kratus", "Jeff Pressing", "Edwin Gordon", "Paul Berliner", "phuong-phap-luyen-ngau-hung"],
   ["Cấp độ cao nhất trong bảy cấp độ ngẫu hứng của Kratus là gì?", "Cá nhân (tiếng nói riêng)", "Phong cách", "Lưu loát", "Cấu trúc", "phuong-phap-luyen-ngau-hung"],
+  ["Theo Wallas (1926), bốn giai đoạn sáng tạo theo thứ tự là gì?", "Chuẩn bị – ấp ủ – loé sáng – kiểm chứng", "Loé sáng – chuẩn bị – ấp ủ – kiểm chứng", "Ấp ủ – chuẩn bị – kiểm chứng – loé sáng", "Chuẩn bị – loé sáng – ấp ủ – kiểm chứng", "quy-trinh-sang-tac"],
+  ["Lá thư mô tả Mozart “nghe trọn bản nhạc trong đầu”, in năm 1815, được giới nghiên cứu coi là gì?", "Thư giả, do Rochlitz bịa ra", "Thư thật gửi cha ông", "Thư thật gửi Haydn", "Thư do Constanze viết thay", "quy-trinh-sang-tac"],
+  ["Trong thư gửi von Meck năm 1878, Tchaikovsky ví cảm hứng như gì?", "Người khách không thích ghé nhà kẻ lười", "Ngọn lửa tự bùng cháy", "Tia chớp trong đêm", "Dòng sông không ngừng chảy", "quy-trinh-sang-tac"],
+  ["Câu nhạc kiểu sentence 8 ô gồm các phần nào?", "Ý cơ bản – lặp lại – tiếp diễn – kết", "Câu hỏi – câu đáp", "Mở đầu – vận hành – kết", "Verse – chorus", "viet-chu-de"],
+  ["Theo von Hippel và Huron (2000), hiện tượng “nhảy rồi quay lại” trong giai điệu phần lớn được giải thích bằng gì?", "Hồi quy về giữa âm vực", "Luật đối âm của Fux", "Chuỗi bồi âm", "Nhịp điệu hoà âm", "viet-giai-dieu"],
+  ["Trong lược đồ galant, Prinner có bè trầm và giai điệu theo bậc nào?", "Bè trầm 4 – 3 – 2 – 1, giai điệu 6 – 5 – 4 – 3", "Bè trầm 1 – 7 – 1, giai điệu 1 – 2 – 3", "Bè trầm ngân bậc 5", "Bè trầm 1 – 5 – 6 – 3, giai điệu 3 – 2 – 1 – 7", "viet-hoa-am-va-be-tram"],
+  ["Ai chỉ ra rằng chương 1 “Nhạc cho đàn dây, bộ gõ và celesta” có 88 ô chứ không phải 89 như Lendvai đếm?", "Roy Howat", "Ernő Lendvai", "William Caplin", "Robert Gjerdingen", "kien-truc-tac-pham"],
+  ["Nghiên cứu Kirby và Ladd (2016) trên 20 ca khúc Việt thấy kiểu chuyển động nào giữa thanh điệu và giai điệu bị tránh?", "Ngược chiều", "Song song", "Chéo (một bên đứng yên)", "Đi bậc", "viet-cho-loi-ca"],
+  ["Thuật ngữ “isorhythm” (đồng tiết tấu) gồm hai chu kỳ nào?", "Talea (nhịp điệu) và color (cao độ)", "Cantus firmus và discant", "Ritornello và solo", "Dux và comes", "sang-tac-trung-co-phuc-hung"],
+  ["Soggetto cavato là thủ pháp gì?", "Lấy nguyên âm của một cái tên đổi thành âm tiết xướng âm", "Viết hai bè song song quãng 5", "Lặp một bè trầm ngắn", "Đổi chữ cái tên nốt Đức thành nốt", "sang-tac-trung-co-phuc-hung"],
+  ["Ba phần của câu nhạc Baroque theo Wilhelm Fischer (1915) là gì?", "Mở đầu – vận hành (Fortspinnung) – kết", "Ý cơ bản – lặp – tiếp diễn", "Trình bày – phát triển – tái hiện", "Câu hỏi – câu đáp – coda", "sang-tac-baroque"],
+  ["Trò chơi xúc xắc soạn minuet in năm 1792 dưới tên Mozart có tình trạng tác giả thế nào?", "Chưa được xác thực, xếp vào phụ lục đáng ngờ", "Đã xác nhận có bản tay của Mozart", "Là tác phẩm của Haydn", "Do Kirnberger in lại", "sang-tac-co-dien"],
+  ["Motif A-S-C-H trong Carnaval của Schumann lấy từ đâu?", "Tên thị trấn Asch", "Tên vợ ông, Clara", "Chữ ký của Bach", "Phương châm của Joachim", "sang-tac-lang-man"],
+  ["Tác phẩm nào thường được coi là bản nhạc đầu tiên do máy tính điện tử soạn?", "Illiac Suite (1957)", "Music for Airports (1978)", "HPSCHD (1969)", "Metastaseis (1954)", "sang-tac-cong-nghe-va-may-tinh"],
+  ["Theo Bartók (1931), cách dùng dân ca ở mức cao nhất là gì?", "Thấm nhuần ngôn ngữ dân gian thành tiếng mẹ đẻ, không trích giai điệu", "Giữ nguyên giai điệu và viết đệm", "Tự viết giai điệu giả dân ca", "Trích một câu dân ca vào bài mới", "sang-tac-voi-chat-lieu-viet"],
+  ["Trong nhạc trò chơi, kỹ thuật thêm hoặc bớt các lớp nhạc chạy song song theo mức căng gọi là gì?", "Chồng lớp theo chiều dọc", "Ghép đoạn theo chiều ngang", "Stinger", "Mickey-mousing", "sang-tac-nhac-phim"],
+  ["Nghiên cứu Léveillé Gauvin (2018) về các bài top 10 Mỹ 1986–2015 cho thấy điều gì về intro?", "Intro ngắn đi khoảng ba phần tư", "Intro dài gấp đôi", "Intro không đổi", "Intro biến mất hoàn toàn", "sang-tac-ca-khuc"],
 ]
 
 export const LIBRARY: QuizQuestion[] = ROWS.map(([q, a, w1, w2, w3, slug]) => ({ q, a, w: [w1, w2, w3], slug }))

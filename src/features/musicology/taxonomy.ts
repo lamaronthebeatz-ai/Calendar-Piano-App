@@ -494,8 +494,11 @@ export const BRANCHES: Branch[] = [
     hue: 95,
     hub: 'ngau-hung-ung-tac',
     summary: 'Tạo ra âm nhạc tại chỗ hoặc trên giấy — cổ điển, jazz, tự do.',
-    questions: ['Người ngẫu hứng dựa vào những khuôn mẫu nào?', 'Sáng tác học được bằng quy tắc đến mức nào?'],
-    groups: [{ title: 'Ngẫu hứng và sáng tác', slugs: ['sang-tac-jazz'], cats: ['improvisation'] }],
+    questions: ['Người ngẫu hứng dựa vào những khuôn mẫu nào?', 'Sáng tác học được bằng quy tắc đến mức nào?', 'Các nhà soạn nhạc thật sự làm việc ra sao — từ phác thảo đến bản hoàn chỉnh?'],
+    groups: [
+      { title: 'Ngẫu hứng', cats: ['improvisation'] },
+      { title: 'Sáng tác', slugs: ['sang-tac-jazz', 'partimento', 'luoc-do-galant'], cats: ['composition'] },
+    ],
   },
   {
     id: 'am-nhac-nha-tho',

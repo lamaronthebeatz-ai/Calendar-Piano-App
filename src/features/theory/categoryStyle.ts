@@ -27,6 +27,7 @@ export const GLYPHS: Record<CategoryId, string> = {
   listening: '𝄽',
   philosophy: '𝄐',
   analysis: '𝄡',
+  composition: '𝅘𝅥𝅯',
   pianists: '♫',
   composers: '𝅗𝅥',
   genres: '♬',

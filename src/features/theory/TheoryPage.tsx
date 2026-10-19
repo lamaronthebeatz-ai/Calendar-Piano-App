@@ -37,7 +37,7 @@ type CategoryId = Article['category']
 
 
 /** Where a newcomer should start: the roadmap article of the core groups. */
-const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trinh-hinh-thuc', 'phuc-dieu-nghiem-khac', 'lo-trinh-luyen-tai-su-pham', 'hoa-am-jazz', 'phuong-phap-phan-tich-tac-pham', 'the-loai-am-nhac']
+const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trinh-hinh-thuc', 'phuc-dieu-nghiem-khac', 'lo-trinh-luyen-tai-su-pham', 'hoa-am-jazz', 'phuong-phap-phan-tich-tac-pham', 'lo-trinh-sang-tac', 'the-loai-am-nhac']
   .map((s) => findArticle(s))
   .filter((a): a is Article => !!a)
 

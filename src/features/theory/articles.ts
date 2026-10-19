@@ -27,6 +27,7 @@ import { organology } from './content/organology'
 import { vietnam } from './content/vietnam'
 import { sacred } from './content/sacred'
 import { organ } from './content/organ'
+import { composition } from './content/composition'
 
 /**
  * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
@@ -52,6 +53,7 @@ export const CATEGORIES = {
   listening: { title: 'Nghe, cảm thụ & âm học', hue: 210, description: 'Từ vật lý đến cảm xúc: âm học, âm sắc, âm học phòng, tâm lý âm học, phân luồng thính giác, kỳ vọng và cảm xúc âm nhạc, nghe chủ động, lịch sử và so sánh bản thu, bảo vệ thính giác.' },
   philosophy: { title: 'Triết học & thẩm mỹ âm nhạc', hue: 175, description: 'Âm nhạc là gì, vì sao biểu hiện cảm xúc, có ý nghĩa gì, tác phẩm tồn tại thế nào, thế nào là chơi xác thực, cái hay có chuẩn mực không — từ Plato, Nho gia, Rousseau, Hanslick, Schopenhauer đến Adorno và triết học hiện đại.' },
   analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 20 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
+  composition: { title: 'Sáng tác', hue: 235, description: 'Hệ thống và lộ trình học sáng tác: cách sáng tác được dạy qua các thời đại, quy trình và kinh nghiệm của các nhà soạn nhạc, viết chủ đề và giai điệu, hoà âm và bè trầm, kết cấu, kiến trúc tác phẩm, phổ lời, viết cho nhạc cụ; thủ pháp từng thời kỳ từ Trung cổ đến thế kỷ 20; ca khúc, nhạc phim, công nghệ và AI, chất liệu Việt Nam — kèm chương trình bài tập.' },
   pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
   genres: { title: 'Thể loại âm nhạc', hue: 120, description: 'Các thể loại từ Trung cổ đến hôm nay: thánh ca, organum, motet, thánh lễ, madrigal; opera, oratorio, cantata, tổ khúc, concerto; giao hưởng, nhạc thính phòng, sonata, tiểu phẩm piano, Lied, thơ giao hưởng, ballet; nhạc điện tử, nhạc phim, nhạc kịch và các dòng nhạc phổ thông — kèm sơ đồ, nhịp điệu đặc trưng và ví dụ nghe.' },
   musicology: { title: 'Âm nhạc học', hue: 60, description: 'Ngành nghiên cứu âm nhạc: sơ đồ Adler (lịch sử và hệ thống), âm nhạc học hệ thống hiện đại, phương pháp nghiên cứu, tâm lý học âm nhạc, khoa học biểu diễn, dân tộc nhạc học, xã hội học, nhạc khí học, âm nhạc học tính toán — kèm thẻ Âm nhạc học xếp lại toàn bộ thư viện theo khung này.' },
@@ -62,4 +64,4 @@ export const CATEGORIES = {
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...polyphony, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...sacred, ...organ]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...chromatic, ...form, ...polyphony, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...sacred, ...organ]
