@@ -20,7 +20,7 @@ export function StudentProfilePage() {
   const navigate = useNavigate()
   const back = useBack('/students')
   const student = useStudent(id)
-  const slots = useTimetableSlots() ?? []
+  const slots = useTimetableSlots()
   const settings = useSettings()
   const openEditStudent = useUIStore((s) => s.openEditStudent)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)

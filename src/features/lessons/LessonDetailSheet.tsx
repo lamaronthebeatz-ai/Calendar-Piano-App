@@ -20,7 +20,7 @@ export function LessonDetailSheet() {
   const closeDetail = useUIStore((s) => s.closeDetail)
   const openEditLesson = useUIStore((s) => s.openEditLesson)
   const pushToast = useUIStore((s) => s.pushToast)
-  const students = useStudents() ?? []
+  const students = useStudents()
   const student = students.find((s) => s.id === slot?.studentId)
 
   const [note, setNote] = useState(slot?.note ?? '')

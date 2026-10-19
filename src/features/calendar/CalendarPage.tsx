@@ -27,8 +27,8 @@ export function CalendarPage() {
   const [filterSheetOpen, setFilterSheetOpen] = useState(false)
   const [pendingMove, setPendingMove] = useState<{ slot: TimetableSlot; dayOfWeek: DayOfWeek; startTime: string; endTime: string; conflictCount: number } | null>(null)
 
-  const allSlots = useTimetableSlots() ?? []
-  const students = useStudents() ?? []
+  const allSlots = useTimetableSlots()
+  const students = useStudents()
   const settings = useSettings()
 
   const hasActiveFilters = Object.values(filters).some(Boolean)

@@ -16,8 +16,8 @@ export function SearchOverlay() {
   const setOpen = useUIStore((s) => s.setSearchOpen)
   const openDetail = useUIStore((s) => s.openDetail)
   const navigate = useNavigate()
-  const students = useStudents() ?? []
-  const slots = useTimetableSlots() ?? []
+  const students = useStudents()
+  const slots = useTimetableSlots()
   const [query, setQuery] = useState('')
   // Students and lessons stay out of search while the private pages are locked.
   const privateOpen = usePrivateUnlocked()

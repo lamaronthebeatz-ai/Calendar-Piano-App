@@ -19,8 +19,8 @@ import { ScrollArea } from '../../components/ScrollArea'
 type FilterValue = 'all' | StudentStatus
 
 export function StudentsListPage() {
-  const students = useStudents() ?? []
-  const slots = useTimetableSlots() ?? []
+  const students = useStudents()
+  const slots = useTimetableSlots()
   const openCreateStudent = useUIStore((s) => s.openCreateStudent)
   const navigate = useNavigate()
   const [filter, setFilter] = useState<FilterValue>('all')

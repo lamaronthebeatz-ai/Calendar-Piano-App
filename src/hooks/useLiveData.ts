@@ -1,13 +1,17 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../data/db'
-import type { Settings } from '../types'
+import type { Settings, Student, TimetableSlot } from '../types'
+
+// Stable defaults: a fresh [] each render would invalidate every memo built on these lists.
+const NO_STUDENTS: Student[] = []
+const NO_SLOTS: TimetableSlot[] = []
 
 export function useStudents() {
-  return useLiveQuery(() => db.students.toArray(), [], [])
+  return useLiveQuery(() => db.students.toArray(), [], NO_STUDENTS)
 }
 
 export function useTimetableSlots() {
-  return useLiveQuery(() => db.timetableSlots.toArray(), [], [])
+  return useLiveQuery(() => db.timetableSlots.toArray(), [], NO_SLOTS)
 }
 
 const FALLBACK_SETTINGS: Settings = {

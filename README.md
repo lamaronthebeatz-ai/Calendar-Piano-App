@@ -1,6 +1,6 @@
 # Piano Schedule
 
-**Private Piano Teaching Manager** — a fast, local-first weekly timetable for private piano teachers. Build out a fixed Mon–Sun schedule for your students and manage it from one calm, professional interface that works equally well on iPhone and desktop.
+**Lịch Dạy Piano** — a local-first app for a private piano teacher (Vietnamese UI): a fixed weekly timetable and student records behind a passcode, plus a music theory and musicology library, a quiz and graded curricula. Works on iPhone and desktop.
 
 ## Features
 
@@ -10,11 +10,14 @@
 - **Add a lesson to multiple days at once** (e.g. Tue + Thu, 15:00–16:00) in a single step.
 - **Student management** — profiles with contact info, their weekly schedule, estimated weekly/monthly revenue, and per-lesson notes.
 - **Weekly dashboard** — lessons, teaching hours, students, and estimated income, all per week.
-- **Statistics page** with simple charts (lessons by day of week, hours by day of week, students by weekly lesson count).
+- **Curriculum** (Giáo trình) — graded courses for children (to ABRSM Grade 5) and adults (to Grade 8 + accompaniment), with 'studied' ticks.
+- **Theory library** (Lý thuyết) — ~680 illustrated articles (harmony, counterpoint, jazz, technique, genres, organology, Vietnamese music…) with notation, diagrams, YouTube examples and a rotating ~2,400-question quiz.
+- **Musicology** (Âm nhạc học) — a map of the discipline's branches over the library, with a rotating banner of sourced quotes.
+- **Passcode screen** — a privacy curtain, not security: only a SHA-256 hash of a 6-digit code ships in the bundle, which anyone with the page can brute-force. Timetable and students sit behind a second code.
 - **Global search, filters, quick-add menu, and keyboard shortcuts** (`N` new lesson, `E` edit selected, `/` search).
 - **Light & dark themes**, carefully tuned (not simple inversion), persisted per device.
-- **Local-first storage** via IndexedDB (Dexie) — your timetable works fully offline and survives reloads.
-- **Backup & restore** — export/import your entire studio as a JSON file.
+- **Local-first storage** via IndexedDB (Dexie) — works fully offline, but the data lives only in this browser on this device: clearing site data (or Safari evicting an uninstalled site) loses it.
+- **Backup & restore** — export/import your entire studio as a JSON file. Export regularly.
 - **Installable PWA** — add to your iPhone home screen for a native, standalone experience.
 
 ## Tech Stack
@@ -69,7 +72,9 @@ src/
     calendar/     The fixed weekly timetable grid, time axis, drag & resize, stats bar
     lessons/      Lesson form modal (student/day(s)/time/location/type/note), detail sheet
     students/     Student list, profile (weekly schedule + stats), form modal
-    statistics/   Charts and studio-wide metrics
+    curriculum/   Graded courses and progress ticks
+    theory/       Article library, markup renderer, diagrams, quiz
+    musicology/   Branch map and quote banner
     settings/     Preferences, theme, backup/import
     search/       Global search overlay
   layout/         App shell, sidebar (desktop), bottom nav (mobile), quick actions

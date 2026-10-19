@@ -64,23 +64,3 @@ export function computeStudentScheduleStats(studentId: string, allSlots: Timetab
     estimatedMonthlyRevenue: student?.rateType === 'monthly' ? student.rate : Math.round(weeklyRevenue * 52 / 12),
   }
 }
-
-export function lessonsByDayOfWeek(slots: TimetableSlot[], days: DayOfWeek[]): number[] {
-  return days.map((day) => slots.filter((s) => s.dayOfWeek === day).length)
-}
-
-export function hoursByDayOfWeek(slots: TimetableSlot[], days: DayOfWeek[]): number[] {
-  return days.map((day) => Math.round((slots.filter((s) => s.dayOfWeek === day).reduce((sum, s) => sum + s.duration, 0) / 60) * 10) / 10)
-}
-
-export function studentsBySlotCount(slots: TimetableSlot[], students: Student[], limit = 6): Array<{ student: Student; count: number }> {
-  const counts = new Map<string, number>()
-  for (const s of slots) {
-    counts.set(s.studentId, (counts.get(s.studentId) ?? 0) + 1)
-  }
-  return students
-    .map((student) => ({ student, count: counts.get(student.id) ?? 0 }))
-    .filter((entry) => entry.count > 0)
-    .sort((a, b) => b.count - a.count)
-    .slice(0, limit)
-}

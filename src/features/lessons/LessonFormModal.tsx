@@ -20,8 +20,8 @@ export function LessonFormModal() {
   const modal = useUIStore((s) => s.lessonModal)
   const closeLessonModal = useUIStore((s) => s.closeLessonModal)
   const pushToast = useUIStore((s) => s.pushToast)
-  const students = useStudents() ?? []
-  const slots = useTimetableSlots() ?? []
+  const students = useStudents()
+  const slots = useTimetableSlots()
   const settings = useSettings()
 
   const editingSlot = modal.editingSlotId ? slots.find((s) => s.id === modal.editingSlotId) : undefined
