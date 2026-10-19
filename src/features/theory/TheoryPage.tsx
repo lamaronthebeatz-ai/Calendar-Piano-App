@@ -28,9 +28,6 @@ import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
-import { QuoteBanner } from '../musicology/QuoteBanner'
-
-const loadOrganQuotes = () => import('../musicology/quotes/organ').then((m) => m.ORGAN_QUOTES)
 import { branchesOf } from '../musicology/taxonomy'
 import { Copyright } from '../../components/Copyright'
 import { QuizCard } from './QuizCard'
@@ -631,7 +628,6 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
           </Link>
         )}
       </header>
-      {id === 'organ' && <QuoteBanner load={loadOrganQuotes} />}
       <ArticleGrid articles={own} numbered />
       {shared.length > 0 && (
         <section className="space-y-3">

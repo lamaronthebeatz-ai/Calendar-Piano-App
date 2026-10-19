@@ -31,6 +31,11 @@ const WIKI_TITLE: Record<string, string[]> = {
   'Giáo hoàng Piô X': ['Pope Pius X'],
   'Công đồng Vatican II': ['Second Vatican Council'],
   'Hội đồng giáo hội Arnstadt': ['Bachkirche Arnstadt', 'Arnstadt'],
+  'Isidore thành Sevilla': ['Isidore of Seville'],
+  "Guido d'Arezzo": ['Guido of Arezzo'],
+  'Bạch Cư Dị': ['Bai Juyi'],
+  'Tuân Tử': ['Xunzi'],
+  'Christopher Small': ['Christopher Small (musicologist)', 'Christopher Small'],
 }
 const titlesFor = (author: string) => WIKI_TITLE[author] ?? [author]
 
@@ -64,18 +69,15 @@ function Portrait({ author }: { author: string }) {
  * A slim banner of sayings about music by great musicians and thinkers. A new one every 12 seconds; the words of each
  * quotation rise in one after another, and the original wording sits underneath when the quote was translated.
  */
-const loadMusicologyQuotes = () => import('./quotes').then((m) => m.QUOTES)
-
-/** `load` picks the set of sayings (a stable, module-level loader); the musicology set by default. */
-export function QuoteBanner({ load = loadMusicologyQuotes }: { load?: () => Promise<Quote[]> }) {
+export function QuoteBanner() {
   const [quotes, setQuotes] = useState<Quote[] | null>(null)
   useEffect(() => {
     let live = true
-    load().then((qs) => live && setQuotes(shuffled(qs)))
+    import('./quotes').then((m) => live && setQuotes(shuffled(m.QUOTES)))
     return () => {
       live = false
     }
-  }, [load])
+  }, [])
   if (!quotes?.length) return <div aria-hidden className="h-[200px] rounded-[24px] border border-[var(--color-border)] bg-[var(--color-surface-raised)] sm:h-[168px]" />
   return <Banner quotes={quotes} />
 }
