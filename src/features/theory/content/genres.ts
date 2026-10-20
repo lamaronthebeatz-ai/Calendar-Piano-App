@@ -1261,8 +1261,8 @@ Liên quan: [[tan-nhac-viet-nam]], [[nhac-dien-tu]], [[blues-12-nhip]].
     body: `
 ## Mốc khởi đầu
 - **Tân nhạc** ("nhạc mới") là ca khúc tiếng Việt viết theo **lối phương Tây**: giai điệu theo [[am-giai-truong|giọng trưởng]] – [[am-giai-thu|thứ]] (hoặc pha [[am-giai-ngu-cung|ngũ cung]]), có [[he-thong-hoa-am-co-dien|hoà âm]], đệm guitar hay piano, khuôn phiên khúc – điệp khúc.
-- Mốc quy ước thường được nhắc: buổi trình diễn của **[[am-nhac-thoi-phap-thuoc|Nguyễn Văn Tuyên]]** ở Hà Nội ngày **9/6/1938**; sau đó báo *Ngày Nay* đăng các ca khúc mới. (Đã có ca khúc kiểu mới từ trước 1938 — đây chỉ là một mốc quy ước.)
-- Các tác giả tiêu biểu thời kỳ đầu: Văn Cao, Phạm Duy, Đoàn Chuẩn.
+- Mốc quy ước thường được nhắc: buổi trình diễn của **[[nguyen-van-tuyen|Nguyễn Văn Tuyên]]** ở Hà Nội ngày **9/6/1938**; sau đó báo *Ngày Nay* đăng các ca khúc mới. (Đã có ca khúc kiểu mới từ trước 1938 — đây chỉ là một mốc quy ước.)
+- Các tác giả tiêu biểu thời kỳ đầu: Văn Cao, Phạm Duy, Đoàn Chuẩn. Lịch sử chi tiết từng giai đoạn: [[lich-su-tan-nhac-viet-nam]].
 
 ## Các dòng nhạc 1954 – 1975 và sau
 - **[[nhac-vang-bolero|Nhạc vàng]]** là tên gọi dòng nhạc phổ thông ở miền Nam (Quốc gia Việt Nam, Việt Nam Cộng hoà), nhiều bài theo điệu **bolero** chậm, tình cảm, về tình yêu và quê hương. Tên gọi được đặt trong thế đối lập với **nhạc đỏ** — [[nhac-cach-mang|nhạc cách mạng]] ở miền Bắc. Sau 1975 nhạc vàng bị cấm trong nước và tiếp tục ở hải ngoại; về sau được phép trở lại dần.

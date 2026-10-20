@@ -2107,6 +2107,15 @@ const ROWS: [string, string, string, string, string, string][] = [
   ["Theo Bartók (1931), cách dùng dân ca ở mức cao nhất là gì?", "Thấm nhuần ngôn ngữ dân gian thành tiếng mẹ đẻ, không trích giai điệu", "Giữ nguyên giai điệu và viết đệm", "Tự viết giai điệu giả dân ca", "Trích một câu dân ca vào bài mới", "sang-tac-voi-chat-lieu-viet"],
   ["Trong nhạc trò chơi, kỹ thuật thêm hoặc bớt các lớp nhạc chạy song song theo mức căng gọi là gì?", "Chồng lớp theo chiều dọc", "Ghép đoạn theo chiều ngang", "Stinger", "Mickey-mousing", "sang-tac-nhac-phim"],
   ["Nghiên cứu Léveillé Gauvin (2018) về các bài top 10 Mỹ 1986–2015 cho thấy điều gì về intro?", "Intro ngắn đi khoảng ba phần tư", "Intro dài gấp đôi", "Intro không đổi", "Intro biến mất hoàn toàn", "sang-tac-ca-khuc"],
+  ["Nhạc viện Viễn Đông (Conservatoire Français d'Extrême-Orient) ở Hà Nội hoạt động trong những năm nào?", "1927 – 1930", "1919 – 1925", "1935 – 1941", "1945 – 1950", "nhac-vien-vien-dong"],
+  ["Theo Jason Gibbs, bài hát đầu tiên in trên báo Ngày Nay (31/7/1938) là bài nào?", "Bình minh (Nguyễn Xuân Khoát)", "Kiếp hoa (Nguyễn Văn Tuyên)", "Bản đàn xuân (Lê Thương)", "Khúc yêu đương (Thẩm Oánh)", "nhac-cai-cach-1938"],
+  ["Ai tài trợ chuyến đi cổ động nhạc cải cách của Nguyễn Văn Tuyên năm 1938?", "Thống đốc Nam Kỳ Pagès", "Toàn quyền Đông Dương", "Báo Ngày Nay", "Hội Philharmonique", "nhac-cai-cach-1938"],
+  ["Ca khúc nào thường được báo chí trong nước gọi là ca khúc cách mạng đầu tiên (1930 – 1931)?", "Cùng nhau đi hồng binh", "Tiến quân ca", "Lên đàng", "Tiếng gọi thanh niên", "dinh-nhu"],
+  ["Nhóm Myosotis gồm những nhạc sĩ nào?", "Thẩm Oánh, Dương Thiệu Tước, Nguyễn Thiện Tơ", "Văn Chung, Lê Yên, Doãn Mẫn", "Hoàng Quý, Văn Cao, Phạm Ngữ", "Lưu Hữu Phước, Mai Văn Bộ, Huỳnh Văn Tiểng", "nhom-sang-tac-tan-nhac-dau-tien"],
+  ["Nhóm Đồng Vọng hoạt động ở thành phố nào?", "Hải Phòng", "Hà Nội", "Huế", "Nam Định", "nhom-sang-tac-tan-nhac-dau-tien"],
+  ["Hội Nhạc sĩ Việt Nam được thành lập ngày nào?", "30/12/1957", "26/11/1956", "12/4/1956", "19/8/1945", "tan-nhac-mien-bac-1954-1975"],
+  ["Phong trào Du ca ở miền Nam do ai khởi xướng năm 1966?", "Nguyễn Đức Quang và Đinh Gia Lập", "Trịnh Công Sơn và Khánh Ly", "Phạm Duy và Thái Thanh", "Trần Long Ẩn và Tôn Thất Lập", "tan-nhac-mien-nam-1954-1975"],
+  ["Trước khi tự sáng tác, phong trào đặt lời Việt cho giai điệu phương Tây được gọi là gì?", "Bài ta theo điệu Tây", "Nhạc cải cách", "Nhạc tiền chiến", "Du ca", "bai-ta-theo-dieu-tay"],
 ]
 
 export const LIBRARY: QuizQuestion[] = ROWS.map(([q, a, w1, w2, w3, slug]) => ({ q, a, w: [w1, w2, w3], slug }))

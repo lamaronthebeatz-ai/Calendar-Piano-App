@@ -30,7 +30,7 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 *(Đề xuất của thư viện.)*
 1. Toàn cảnh: [[cac-thoi-ky-am-nhac-viet-nam]] → [[am-nhac-truyen-thong-viet-nam]].
 2. Nghe và hiểu [[am-giai|thang âm]]: [[ly-thuyet-am-nhac-co-truyen-viet-nam]] → [[quan-ho]] → [[ca-hue-nha-nhac]] → [[don-ca-tai-tu]].
-3. [[tan-nhac-viet-nam|Tân nhạc]]: [[am-nhac-thoi-phap-thuoc]] → [[nhac-tien-chien]] → [[nhac-vang-bolero]], [[nhac-trinh]].
+3. [[tan-nhac-viet-nam|Tân nhạc]]: bản đồ [[lich-su-tan-nhac-viet-nam]] → [[am-nhac-thoi-phap-thuoc]] → [[nhac-cai-cach-1938]] → [[nhac-tien-chien]] → [[nhac-vang-bolero]], [[nhac-trinh]].
 4. Thực hành trên piano: [[dem-dieu-viet-nam]] (ca khúc) và [[hoa-am-cho-giai-dieu-ngu-cung]] (dân ca).
 5. Phân biệt sự thật và tin đồn: [[giai-thoai-am-nhac-viet-nam]].
 
@@ -39,7 +39,7 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 |---|---|
 | Lý thuyết sâu | [[hoi-trong-nhac-tai-tu-cai-luong]], [[long-ban-va-ky-thuat-to-diem]], [[am-nhac-ca-tru]], [[lan-dieu-cheo-va-tuong]], [[hat-ru]] |
 | Nhạc cụ | [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nhac-cu-tay-nguyen-va-mien-nui]], [[nhac-cu-go-nghi-le-viet-nam]] |
-| Nhạc sĩ | [[le-thuong]], [[van-chung]], [[hoang-trong]], [[hoang-thi-tho]], [[y-van]], [[tu-cong-phung]], [[nguyen-anh-9]], [[pho-duc-phuong]], [[hong-dang]], [[nguyen-tai-tue]], [[nguyen-cuong]], [[tran-lap]], [[son-tung-m-tp]] |
+| Nhạc sĩ | [[dinh-nhu]], [[nguyen-van-tuyen]], [[tham-oanh]], [[duong-thieu-tuoc]], [[dang-the-phong]], [[hoang-quy]], [[le-thuong]], [[van-chung]], [[hoang-trong]], [[hoang-thi-tho]], [[y-van]], [[tu-cong-phung]], [[nguyen-anh-9]], [[pho-duc-phuong]], [[hong-dang]], [[nguyen-tai-tue]], [[nguyen-cuong]], [[tran-lap]], [[son-tung-m-tp]] |
 
 **Bình ca và organ ở Việt Nam:** điều đã biết và những khoảng trống — [[binh-ca-va-organ-o-viet-nam]].
 
@@ -128,7 +128,7 @@ Trước: [[am-nhac-co-trung-dai-viet-nam]] · Tiếp: [[am-nhac-thoi-phap-thuoc
     slug: "am-nhac-thoi-phap-thuoc",
     title: "Âm nhạc thời Pháp thuộc và sự ra đời của tân nhạc",
     category: 'vietnam',
-    aliases: ["âm nhạc thời Pháp thuộc", "phong trào nhạc cải cách", "nhạc cải cách", "Myosotis", "Nguyễn Văn Tuyên", "Beka", "đĩa hát Beka", "Azoulay 1900"],
+    aliases: ["âm nhạc thời Pháp thuộc", "Beka", "đĩa hát Beka", "Azoulay 1900"],
     summary: "Âm nhạc phương Tây vào Việt Nam chủ yếu qua nhà thờ và quân nhạc. Từ 1900 đã có ghi âm nhạc Việt (trụ sáp của Azoulay ở Paris, đĩa Beka). Tân nhạc thường được tính từ buổi Nguyễn Văn Tuyên hát bài của mình ở Hà Nội ngày 9/6/1938.",
     refs: [
       ["Tạp chí Dân tộc học và Tôn giáo học — âm nhạc Công giáo (PDF)", "https://vjol.info.vn/tcdantochocvatongiaohoc/article/download/135319/111131"],
@@ -164,6 +164,8 @@ Trước: [[am-nhac-co-trung-dai-viet-nam]] · Tiếp: [[am-nhac-thoi-phap-thuoc
 - Một nghiên cứu trong nước coi **Nguyễn Văn Tuyên** và **[[nguyen-xuan-khoat|Nguyễn Xuân Khoát]]** là hai người tiên phong của tân nhạc và ca hát chuyên nghiệp.
 - Bài hát thời đầu: *Khúc yêu đương* (Thẩm Oánh), *Bản đàn xuân*, *Hòn vọng phu* (Lê Thương), *Bình minh* (Nguyễn Xuân Khoát), *Cô láng giềng* (Hoàng Quý), *Con thuyền không bến*, *Giọt mưa thu* (Đặng Thế Phong).
 - Theo Gibbs, thanh niên đô thị thập niên 1930 muốn cải cách, trong khi nghề nhạc còn bị coi thấp.
+
+Chi tiết từng bước: [[tien-de-tan-nhac]] → [[nhac-vien-vien-dong]] → [[bai-ta-theo-dieu-tay]] → [[nhac-cai-cach-1938]] → [[nhom-sang-tac-tan-nhac-dau-tien]]; toàn bộ lịch sử tân nhạc: [[lich-su-tan-nhac-viet-nam]].
 
 Xem [[nhac-tien-chien]], [[tan-nhac-viet-nam]], [[nhac-si-viet-nam]].
 
@@ -209,6 +211,8 @@ Trước: [[am-nhac-thoi-nguyen]] · Tiếp: [[am-nhac-viet-nam-1945-1975]].
 - **Trường Quốc gia Âm nhạc Sài Gòn** thành lập ngày **12/4/1956**, ban đầu dạy nhạc truyền thống rồi thêm nhạc cổ điển phương Tây; nay là Nhạc viện TP.HCM.
 - Công nghiệp ca nhạc Sài Gòn: **nhạc vàng – bolero** ([[nhac-vang-bolero]]), **nhạc Trịnh** với các tập ca khúc phản chiến *Ca khúc da vàng* (1967), *Kinh Việt Nam* (1968), *Ta phải thấy mặt trời* (1969), *Phụ khúc da vàng* (1972) — xem [[nhac-trinh]].
 - **Nhạc trẻ – [[nhac-pho-thong-the-ky-20|rock]]**: ban **CBC** (ban nhạc gia đình, chơi cho lính Mỹ; năm thành lập ghi 1963 hoặc 1964), **Phượng Hoàng** — xem [[nhac-tre-rock-sai-gon]].
+
+Chi tiết tân nhạc từng giai đoạn: [[tan-nhac-1945-1954]], [[tan-nhac-mien-bac-1954-1975]], [[tan-nhac-mien-nam-1954-1975]]; bản đồ: [[lich-su-tan-nhac-viet-nam]].
 
 Trước: [[am-nhac-thoi-phap-thuoc]] · Tiếp: [[am-nhac-viet-nam-sau-1975]].
 `,
@@ -276,7 +280,7 @@ Trước: [[am-nhac-viet-nam-1945-1975]] · Toàn cảnh: [[cac-thoi-ky-am-nhac-
 |---|---|---|---|
 | Cổ – trung đại | [[am-nhac-co-trung-dai-viet-nam]] | Trống đồng Đông Sơn; [[dan-da|đàn đá]] phát hiện 1949; Nguyễn Trãi – Lương Đăng (Toàn thư) | Năm 1060 hay 1069 (ảnh hưởng Chăm); năm 1437 |
 | Triều Nguyễn | [[am-nhac-thoi-nguyen]] | [[ca-hue-nha-nhac|Nhã nhạc]] (UNESCO 2003/2008); [[don-ca-tai-tu|đờn ca tài tử]] cuối thế kỷ 19 | Dàn nhạc cung đình 3 hay 7 loại; năm ra đời [[cai-luong|cải lương]] |
-| Pháp thuộc | [[am-nhac-thoi-phap-thuoc]] | Ghi âm 1900; Nguyễn Văn Tuyên 9/6/1938 | Ai là "người đầu tiên" của [[tan-nhac-viet-nam|tân nhạc]] |
+| Pháp thuộc | [[am-nhac-thoi-phap-thuoc]], [[lich-su-tan-nhac-viet-nam|tân nhạc]] | Ghi âm 1900; Nguyễn Văn Tuyên 9/6/1938 | Ai là "người đầu tiên" của [[tan-nhac-viet-nam|tân nhạc]] |
 | 1945 – 1975 | [[am-nhac-viet-nam-1945-1975]] | Tiến quân ca 1944/1945; hai trường nhạc 1956; *[[nhac-co-dien-viet-nam|Cô Sao]]* 1965 | Văn bản cấm [[nhac-vang-bolero|nhạc vàng]] ở miền Bắc (chưa tìm thấy) |
 | Sau 1975 | [[am-nhac-viet-nam-sau-1975]] | [[vpop-rap-viet|Làn Sóng Xanh]] 1997; Nghị định 144/2020 | Quy mô chiến dịch 1975 – 1976 |
 
@@ -751,7 +755,7 @@ Xem [[nhac-si-viet-nam]] để biết tiểu sử.
 ## Âm nhạc
 Phần lớn là ca khúc trữ tình theo [[am-giai-truong|âm giai trưởng – thứ]] phương Tây, nhịp [[tieu-pham-piano|valse]], slow, tango, hoà âm đơn giản (I – IV – V và các [[hop-am-ba|hợp âm]] phụ) — rất hợp để tập [[dem-dieu-viet-nam|đệm điệu Việt]] trên piano.
 
-Liên quan: [[am-nhac-thoi-phap-thuoc]], [[tan-nhac-viet-nam]].
+Liên quan: [[am-nhac-thoi-phap-thuoc]], [[tan-nhac-viet-nam]], [[nhom-sang-tac-tan-nhac-dau-tien]], [[lich-su-tan-nhac-viet-nam]].
 
 ## Nghe
 
