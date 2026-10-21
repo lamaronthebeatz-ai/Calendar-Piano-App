@@ -10,6 +10,13 @@ export function Cover({ book, className, size = 1 }: { book: ReaderBook; classNa
   // "Nhạc Lý Cơ Bản" → "Nhạc Lý" / "Cơ Bản": split the title in half by words.
   const half = Math.ceil(words.length / 2)
   const [line1, line2] = [words.slice(0, half).join(' '), words.slice(half).join(' ')]
+  if (book.coverImage)
+    return (
+      <div className={clsx('cover-photo relative aspect-square overflow-hidden', className)}>
+        <img src={book.coverImage} alt={`Bìa sách ${book.title}${book.volume ? ` — ${book.volume}` : ''}`} className="h-full w-full object-cover" draggable={false} />
+        <span aria-hidden className="cover-cream-spine absolute inset-y-0 left-0 w-[4.5%] opacity-60" />
+      </div>
+    )
   if (book.style === 'cream')
     return (
       <div className={clsx('cover-cream relative flex aspect-square flex-col items-center justify-center overflow-hidden text-center', className)} style={{ fontSize: `${size * 16}px` }}>

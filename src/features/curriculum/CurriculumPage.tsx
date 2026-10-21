@@ -94,11 +94,11 @@ function Shelf() {
           Đọc như một cuốn sách, <span className="text-gold-gradient italic">học như một lộ trình</span>
         </h2>
         <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)]">
-          Sách nhạc lý và giáo trình piano biên soạn từ các bài của thư viện. Mở ra là đọc như sách điện tử: lật trang, mục lục, dấu trang, tìm trong sách, đổi cỡ chữ và nền trang, xuất PDF — mỗi chương vẫn giữ đúng đường dẫn của bài trong thư viện.
+          Sách lý thuyết và giáo trình piano do Lamar biên soạn và tổng hợp từ các bài của thư viện. Mở ra là đọc như sách điện tử: lật trang, mục lục, dấu trang, tìm trong sách, đổi cỡ chữ và nền trang, xuất PDF — mỗi bài vẫn giữ đúng đường dẫn của bài trong thư viện.
         </p>
       </header>
 
-      <ShelfRow title="Sách nhạc lý" hint={`${books.length} quyển`} books={books} />
+      <ShelfRow title="Sách lý thuyết" hint={`${books.length} quyển`} books={books} />
       <ShelfRow title="Giáo trình piano" hint={`${courses.length} giáo trình`} books={courses} />
 
       <ReviewLink slug={CURRICULA[0]?.review} />
@@ -140,7 +140,7 @@ function ShelfBook({ book, delay }: { book: ReaderBook; delay: number }) {
         </Link>
         <p className="mt-1.5 line-clamp-3 text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
         <p className="mt-2 text-[12px] text-[var(--color-ink-faint)]">
-          {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'book' ? 'phần' : 'cấp'} · {chapters.length} chương · đã học {progress.done}/{progress.total}
+          {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'book' ? 'phần' : 'cấp'} · {chapters.length} bài · đã học {progress.done}/{progress.total}
         </p>
         <div className="mt-2 h-1 max-w-xs overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
           <span className="block h-full rounded-full bg-[var(--color-gold)] transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />

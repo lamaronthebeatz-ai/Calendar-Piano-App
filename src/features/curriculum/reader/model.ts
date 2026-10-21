@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import { findArticle } from '../../theory/wiki'
 import { QUESTIONS } from '../../theory/quiz/bank'
-import { BOOKS } from '../books'
+import { ABOUT_AUTHOR, BOOKS, foreword } from '../books'
 import { CURRICULA } from '../curricula'
 import type { Book, Curriculum, Level } from '../types'
 
@@ -12,7 +12,7 @@ import type { Book, Curriculum, Level } from '../types'
  */
 export type ReaderItem =
   | { key: 'bia'; kind: 'cover'; title: string }
-  | { key: string; kind: 'front'; title: string; body: string }
+  | { key: string; kind: 'front'; title: string; body: string; signed?: boolean }
   | { key: 'muc-luc'; kind: 'toc'; title: string }
   | { key: string; kind: 'part'; title: string; label: string; n: number; intro: string; body?: string }
   | { key: string; kind: 'chapter'; title: string; slug: string; n: number; part: number; focus?: string }
@@ -30,6 +30,8 @@ export interface ReaderBook {
   glyph: string
   /** Cream typographic cover (the books) or the coloured course cover. */
   style: 'cream' | 'color'
+  /** Photographic cover, used instead of the typographic one. */
+  coverImage?: string
   kind: 'book' | 'course'
   items: ReaderItem[]
 }
@@ -41,7 +43,8 @@ const clean = (s: string) => s.replace(/\|/g, '/')
 function fromBook(b: Book): ReaderBook {
   const items: ReaderItem[] = [
     { key: 'bia', kind: 'cover', title: 'Bìa' },
-    { key: 'loi-noi-dau', kind: 'front', title: 'Lời nói đầu', body: b.preface },
+    { key: 'loi-noi-dau', kind: 'front', title: 'Lời nói đầu', body: `${foreword(`${b.title}${b.volume ? ` — ${b.volume}` : ''}`)}\n## Về cuốn sách này\n${b.preface}`, signed: true },
+    { key: 've-tac-gia', kind: 'front', title: 'Về tác giả', body: ABOUT_AUTHOR },
     { key: 'muc-luc', kind: 'toc', title: 'Mục lục' },
   ]
   const seen = new Set<string>()
@@ -58,7 +61,7 @@ function fromBook(b: Book): ReaderBook {
       items.push({ key: `on-tap-phan-${i + 1}`, kind: 'review', title: `Ôn tập Phần ${roman(i + 1)}`, label: p.title, part: i + 1, body: `## Bài tập\n${p.exercises.map((e, k) => `${k + 1}. ${e}`).join('\n')}` })
   })
   items.push({ key: 'dap-an', kind: 'answers', title: 'Đáp án câu hỏi ôn tập' })
-  return { id: b.id, title: b.title, volume: b.volume, subtitle: b.subtitle, author: b.author, audience: b.audience, hue: b.hue, glyph: b.glyph, style: 'cream', kind: 'book', items }
+  return { id: b.id, title: b.title, volume: b.volume, subtitle: b.subtitle, author: b.author, audience: b.audience, hue: b.hue, glyph: b.glyph, style: 'cream', coverImage: b.coverImage, kind: 'book', items }
 }
 
 /** A course level's opener: its chapters with goals, practice at the piano, pieces and the end-of-level check. */
@@ -96,7 +99,8 @@ function fromCourse(c: Curriculum): ReaderBook {
   ].join('\n')
   const items: ReaderItem[] = [
     { key: 'bia', kind: 'cover', title: 'Bìa' },
-    { key: 'loi-gioi-thieu', kind: 'front', title: 'Lời giới thiệu', body: front },
+    { key: 'loi-noi-dau', kind: 'front', title: 'Lời nói đầu', body: `${foreword(c.title)}\n## Về giáo trình này\n${front}`, signed: true },
+    { key: 've-tac-gia', kind: 'front', title: 'Về tác giả', body: ABOUT_AUTHOR },
     { key: 'muc-luc', kind: 'toc', title: 'Mục lục' },
   ]
   const levels = [...c.levels, ...(c.tracks ?? []).flatMap((t) => t.levels)]

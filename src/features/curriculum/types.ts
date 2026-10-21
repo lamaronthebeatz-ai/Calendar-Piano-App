@@ -96,5 +96,7 @@ export interface Book {
   glyph: string
   /** Preface: paragraphs separated by blank lines (library markup). */
   preface: string
+  /** Photographic cover (an imported asset URL) used instead of the typographic one. */
+  coverImage?: string
   parts: Part[]
 }

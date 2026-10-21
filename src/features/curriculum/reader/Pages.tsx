@@ -44,7 +44,7 @@ export function BookPage({ book, item, mode = 'screen', onGo }: { book: ReaderBo
           <div className="book-text">
             <Markup source={item.body} />
           </div>
-          <p className="book-signature">{book.author}</p>
+          {item.signed && <p className="book-signature">{book.author}</p>}
         </article>
       )
       break

@@ -1,9 +1,11 @@
+import harmonyCover from '../../assets/covers/hoa-am-co-dien.webp'
 import type { Book } from './types'
 
 /**
  * Nhạc lý cơ bản, hai quyển. Mỗi chương là một bài sẵn có của thư viện (giữ nguyên slug), xếp lại theo
  * thứ tự học; phần mở đầu, lời dẫn từng phần và bài tập cuối phần được viết riêng cho sách.
  * Quyển 1 ứng với nhạc lý khoảng ABRSM Grade 1 – 3, Quyển 2 với Grade 4 – 5 và các nền tảng hoà âm, hình thức.
+ * Hoà Âm Cổ Điển theo thứ tự chủ đề của sách bốn tác giả (trường phái Nga – Xô viết).
  */
 export const BOOKS: Book[] = [
   {
@@ -18,16 +20,16 @@ export const BOOKS: Book[] = [
     preface: `
 Cuốn sách này dành cho người **bắt đầu học nhạc lý**: học sinh piano, người lớn tự học, giáo viên cần một trình tự dạy. Mục tiêu là sau khi đọc xong, người học **đọc được bản nhạc**, hiểu nốt nào, dài bao lâu, thuộc giọng gì, hợp âm nào đang vang lên.
 
-## Sách được biên soạn thế nào
-Mỗi chương là một bài trong thư viện Lý thuyết, được **xếp lại theo thứ tự học** — từ âm thanh và ký hiệu, đến trường độ, quãng, âm giai, rồi hợp âm và ký hiệu diễn tấu. Đường dẫn của từng chương giữ nguyên như trong thư viện, nên một chương đọc ở đây cũng là bài đó ở mục Lý thuyết. Lời dẫn mỗi phần, phần "Trọng tâm" ở đầu chương và bài tập cuối phần được viết riêng cho sách.
+## Cấu trúc sách
+Mỗi bài trong sách là một bài của thư viện Lý thuyết, được **xếp lại theo thứ tự học** — từ âm thanh và ký hiệu, đến trường độ, quãng, âm giai, rồi hợp âm và ký hiệu diễn tấu. Đường dẫn của từng bài giữ nguyên như trong thư viện. Lời dẫn mỗi phần, phần "Mục tiêu bài học" ở đầu bài và bài tập cuối phần được viết riêng cho sách.
 
 Trình tự bám theo chương trình nhạc lý phổ biến (ABRSM Grade 1 – 3), đối chiếu ở bài [[chuong-trinh-nhac-ly-abrsm]]; ai học theo lộ trình piano của thư viện có thể đọc song song với giáo trình ở mục Giáo trình.
 
 ## Cách đọc
 1. Đọc theo thứ tự. Mỗi phần dựa trên phần trước.
-2. Mỗi chương đọc **hai lần**: lần đầu đọc lướt phần "Trọng tâm" và các tiêu đề, lần sau đọc kỹ và **chơi thử trên đàn** mọi ví dụ.
-3. Làm bài tập cuối phần trước khi sang phần mới. Bấm **Đánh dấu đã học** ở cuối chương để theo dõi tiến độ.
-4. Chữ in màu là liên kết: chương có trong sách sẽ mở ngay trong sách, bài khác mở ở thư viện.
+2. Mỗi bài đọc **hai lần**: lần đầu đọc lướt phần "Mục tiêu bài học" và các tiêu đề, lần sau đọc kỹ và **chơi thử trên đàn** mọi ví dụ.
+3. Làm bài tập ôn tập cuối phần trước khi sang phần mới. Đánh dấu "đã học xong" ở cuối bài để theo dõi tiến độ; câu hỏi ôn tập cuối bài có đáp án ở cuối sách.
+4. Chữ gạch chân là liên kết; nếu có ghi "(Bài n)" thì bài đó nằm trong sách và mở ngay trong sách, còn lại mở ở thư viện.
 
 ## Về nguồn
 Các bài trong thư viện đều ghi nguồn ở cuối; chỗ nào nguồn chưa đối chiếu hoặc mâu thuẫn được ghi ngay trong bài. Sách giữ nguyên cách làm đó.
@@ -123,7 +125,7 @@ Quyển 2 tiếp tục với nhịp nâng cao, điệu thức, hợp âm bảy v
       },
       {
         title: 'Hợp âm ba, kết và ký hiệu diễn tấu',
-        intro: 'Phần cuối của Quyển 1 ghép các nốt thành hợp âm, giới thiệu các loại kết — "dấu câu" của âm nhạc — và những ký hiệu cho biết chơi thế nào: cường độ, cách diễn tấu, dấu nhắc lại, dấu luyến, hoa mỹ, thuật ngữ. Chương cuối là bài ôn theo chương trình nhạc lý cấp 1 – 2.',
+        intro: 'Phần cuối của Quyển 1 ghép các nốt thành hợp âm, giới thiệu các loại kết — "dấu câu" của âm nhạc — và những ký hiệu cho biết chơi thế nào: cường độ, cách diễn tấu, dấu nhắc lại, dấu luyến, hoa mỹ, thuật ngữ. Bài cuối là bài ôn theo chương trình nhạc lý cấp 1 – 2.',
         chapters: [
           { slug: 'hop-am-ba', focus: 'Bốn loại hợp âm ba; dựng hợp âm trên mọi bậc.' },
           { slug: 'the-dao-hop-am', focus: 'Thế gốc, đảo 1, đảo 2 và ký hiệu.' },
@@ -158,13 +160,13 @@ Quyển 2 tiếp tục với nhịp nâng cao, điệu thức, hợp âm bảy v
     preface: `
 Quyển 2 dành cho người đã nắm Quyển 1: đọc được nốt, nhịp, quãng, âm giai và hợp âm ba. Ở đây nhạc lý chuyển từ **ký hiệu** sang **cấu trúc**: vì sao các hợp âm nối với nhau như vậy, một giai điệu được xây thế nào, một bản nhạc chia thành những phần nào.
 
-## Sách được biên soạn thế nào
-Như Quyển 1, mỗi chương là một bài của thư viện Lý thuyết, giữ nguyên đường dẫn, được xếp lại theo thứ tự học. Lời dẫn mỗi phần, phần "Trọng tâm" và bài tập cuối phần được viết riêng cho sách. Trình tự bám theo chương trình nhạc lý cấp 3 – 5 (xem [[chuong-trinh-nhac-ly-abrsm]]) và phần đầu của giáo trình hoà âm ([[giao-trinh-hoa-am]]) và hình thức ([[lo-trinh-hinh-thuc]]).
+## Cấu trúc sách
+Như Quyển 1, mỗi bài trong sách là một bài của thư viện Lý thuyết, giữ nguyên đường dẫn, được xếp lại theo thứ tự học. Lời dẫn mỗi phần, phần "Mục tiêu bài học" và bài tập cuối phần được viết riêng cho sách. Trình tự bám theo chương trình nhạc lý cấp 3 – 5 (xem [[chuong-trinh-nhac-ly-abrsm]]) và phần đầu của giáo trình hoà âm ([[giao-trinh-hoa-am]]) và hình thức ([[lo-trinh-hinh-thuc]]).
 
 ## Cách đọc
-1. Ôn lại Quyển 1 nếu một chương nhắc đến khái niệm còn mơ hồ — liên kết sẽ mở đúng chương đó.
+1. Ôn lại Quyển 1 nếu một bài nhắc đến khái niệm còn mơ hồ.
 2. Ở các phần hoà âm và hình thức, **chơi mọi ví dụ trên đàn** và nghe bản thu được gợi ý; nhạc lý ở mức này phải nghe được, không chỉ đọc được.
-3. Làm bài tập cuối phần và đánh dấu đã học từng chương.
+3. Làm bài tập ôn tập cuối mỗi phần và đánh dấu đã học từng bài.
 
 Sau Quyển 2, đường đi tiếp là [[giao-trinh-hoa-am]] (hoà âm bốn bè đầy đủ), [[lo-trinh-hinh-thuc]] và [[phuong-phap-phan-tich-tac-pham]].
 `,
@@ -219,7 +221,7 @@ Sau Quyển 2, đường đi tiếp là [[giao-trinh-hoa-am]] (hoà âm bốn b�
         exercises: [
           'Viết V7 ở mọi giọng trưởng đến 4 dấu, cả ba thế đảo, và giải quyết về I.',
           'Phân tích hợp âm 8 ô đầu một sonatina (ví dụ Clementi op. 36 số 1) bằng số La Mã.',
-          'Đặt hợp âm cho một giai điệu dân ca 8 ô theo quy trình trong chương cuối phần, rồi đệm bằng tay trái.',
+          'Đặt hợp âm cho một giai điệu dân ca 8 ô theo quy trình trong bài cuối phần, rồi đệm bằng tay trái.',
           'Tìm một hợp âm át phụ và một chỗ chuyển giọng trong bài đang tập.',
         ],
       },
@@ -261,4 +263,159 @@ Sau Quyển 2, đường đi tiếp là [[giao-trinh-hoa-am]] (hoà âm bốn b�
       },
     ],
   },
+  {
+    id: 'hoa-am-co-dien',
+    title: 'Hoà Âm Cổ Điển',
+    volume: 'Trường phái Nga – Xô viết',
+    subtitle: 'Hoà âm bốn bè theo hệ thống chức năng của sách giáo khoa bốn tác giả (Dubovsky – Evseev – Sposobin – Sokolov): hợp âm ba chính, kết, thể đảo, nhóm át và hạ át, lệch giọng và chuyển giọng.',
+    author: 'Lamar',
+    audience: 'Đã học xong Nhạc Lý Cơ Bản',
+    hue: 55,
+    glyph: '𝄋',
+    coverImage: harmonyCover,
+    preface: `
+Cuốn này dạy **hoà âm cổ điển** — hoà âm của thời kỳ thông dụng, khoảng 1650 – 1900 — theo cách mà các nhạc viện Nga – Xô viết, và nhiều trường nhạc chịu ảnh hưởng của họ, vẫn dạy: **hệ thống chức năng** T – S – D và **luyện viết bốn bè** từ dễ đến khó.
+
+## Hệ thống của sách
+Trình tự các bài bám theo thứ tự chủ đề của *Учебник гармонии* (Giáo trình hoà âm) của **I. Dubovsky, S. Evseev, I. Sposobin, V. Sokolov** — thường gọi là "sách giáo khoa bốn tác giả", in lần đầu ở Moskva năm 1937 – 38. Mỗi bài ghi rõ chủ đề tương ứng trong sách đó ở phần "Mục tiêu bài học"; số thứ tự chủ đề theo các bản in gần đây (2005 – 2012), lệch khoảng hai số so với bản 1965, và vài số ở giữa còn mâu thuẫn giữa các nguồn. Lịch sử, gốc lý thuyết (Riemann qua Catoire) và đặc trưng của sách được trình bày ở bài đầu tiên của Phần I.
+
+Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị di động của lối viết nghiêm khắc*, 1909) là hệ thống của môn **phức điệu**, không phải của môn hoà âm — xem [[phuc-dieu-nghiem-khac]]. Cuốn sách này theo hệ thống hoà âm của sách bốn tác giả.
+
+## Cách đọc
+1. Cần nắm trước: quãng, âm giai, hoá biểu, hợp âm ba và hợp âm bảy — tức là hai quyển *Nhạc Lý Cơ Bản*.
+2. Mỗi bài: đọc, **chơi mọi ví dụ trên đàn**, rồi làm bài tập viết bốn bè. Hoà âm học bằng tay và tai, không chỉ bằng mắt.
+3. Ở những chỗ hai trường phái giải thích khác nhau, bài có mục **"Hai trường phái"**; bảng đối chiếu đầy đủ ở Phần VI.
+4. Làm bài tập ôn tập cuối mỗi phần trước khi sang phần mới.
+`,
+    parts: [
+      {
+        title: 'Nhập môn: hai trường phái và hệ chức năng',
+        intro: 'Trước khi viết hợp âm đầu tiên, cần biết mình đang học theo truyền thống nào và đọc ký hiệu ra sao. Phần này giới thiệu sách bốn tác giả, so nó với truyền thống phương Tây, và hệ ký hiệu chức năng T – S – D mà cả cuốn sách dùng.',
+        chapters: [
+          { slug: 'hoa-am-truong-phai-nga-xo-viet', focus: 'Sách bốn tác giả: tác giả, lịch sử, gốc Riemann – Catoire, thứ tự các chủ đề.' },
+          { slug: 'hai-truong-phai-hoa-am', focus: 'Hai truyền thống dạy hoà âm và vì sao thư viện trình bày song song.' },
+          { slug: 'ky-hieu-chuc-nang-truong-phai-nga', focus: 'Đọc và viết ký hiệu T, S, D, K64, SII, TSVI, DVII7, DD.' },
+          { slug: 'he-thong-hoa-am-co-dien', focus: 'Bức tranh chung: hoà âm cổ điển hình thành thế nào (Rameau, Weber, Riemann).' },
+        ],
+        exercises: [
+          'Ghi ký hiệu chức năng cho các hợp âm ba trên bảy bậc của Đô trưởng và La thứ hoà âm.',
+          'Viết lại một chuỗi số La Mã (I – IV – V – I, I – ii6 – V7 – I) bằng ký hiệu chức năng kiểu Nga.',
+        ],
+      },
+      {
+        title: 'Hợp âm ba chính và kết cấu bốn bè',
+        intro: 'Tương ứng các chủ đề 1 – 4 và 8 của sách bốn tác giả: hợp âm ba trưởng và thứ trong kết cấu bốn bè, hệ chức năng của ba hợp âm chính, ba cách nối hợp âm (nối hoà thanh, nối giai điệu, nhảy quãng 3) và phối hoà âm giai điệu bằng ba hợp âm chính.',
+        chapters: [
+          { slug: 'hop-am-ba', focus: 'Chủ đề 1: hợp âm ba trưởng, thứ; sắp xếp gần và xa.' },
+          { slug: 'luat-hoa-am-bon-be', focus: 'Chủ đề 1: kết cấu bốn bè — tầm âm, khoảng cách, nhân đôi, chuyển động bị cấm.' },
+          { slug: 'chuc-nang-hoa-am', focus: 'Chủ đề 2: hệ chức năng của các hợp âm ba chính.' },
+          { slug: 'noi-hop-am', focus: 'Chủ đề 3 và 8: nối hoà thanh, nối giai điệu, nhảy quãng 3.' },
+          { slug: 'dan-giong', focus: 'Dẫn giọng: đi gần nhất, giữ nốt chung, tránh song song quãng 5 – 8.' },
+          { slug: 'phoi-hoa-am-giai-dieu', focus: 'Chủ đề 4: phối hoà âm giai điệu bằng T, S, D.' },
+        ],
+        exercises: [
+          'Viết bốn bè chuỗi T – S – D – T ở Đô, Sol, Fa trưởng và La, Mi, Rê thứ, mỗi giọng cả ba cách sắp xếp ban đầu.',
+          'Nối T – S và S – D bằng nối hoà thanh, nối giai điệu, rồi bằng nhảy quãng 3; chơi và nghe sự khác nhau.',
+          'Phối hoà âm bốn bè cho một giai điệu 8 ô chỉ dùng T, S, D.',
+        ],
+      },
+      {
+        title: 'Kết, câu nhạc và các thể đảo',
+        intro: 'Tương ứng các chủ đề 9 – 14: kết và câu nhạc, hợp âm bốn sáu kết (K64), hợp âm sáu của các hợp âm chính, nối hai hợp âm sáu, hợp âm bốn sáu lướt và thêu — những công cụ làm cho bè trầm biết "hát".',
+        chapters: [
+          { slug: 'cau-ket', focus: 'Chủ đề 9 và 20: kết trọn, kết nửa, kết plagal, kết ngắt.' },
+          { slug: 'cau-nhac', focus: 'Chủ đề 9: câu nhạc và đoạn nhạc — nơi đặt kết.' },
+          { slug: 'hop-am-sau-bon', focus: 'Chủ đề 10 và 14: K64, bốn sáu lướt, bốn sáu thêu.' },
+          { slug: 'the-dao-hop-am', focus: 'Chủ đề 11 và 13: hợp âm sáu của T, S, D; nối hai hợp âm sáu.' },
+          { slug: 'nhip-dieu-hoa-am', focus: 'Đổi hợp âm ở đâu trong ô nhịp; nhịp điệu hoà âm dồn về kết.' },
+        ],
+        exercises: [
+          'Viết kết trọn có K64 ở năm giọng trưởng và năm giọng thứ.',
+          'Phối hoà âm cho một bè trầm cho sẵn có T6, S6, D6 và một hợp âm bốn sáu lướt.',
+          'Chia câu và đánh dấu kết trong một chorale bốn bè của Bach.',
+        ],
+      },
+      {
+        title: 'Nhóm át và hạ át mở rộng',
+        intro: 'Tương ứng các chủ đề 15 – 26: hợp âm bảy át D7 và các thể đảo, hợp âm bậc II (SII, SII6) và trưởng hoà âm, hợp âm bậc VI và kết ngắt, SII7, hợp âm bảy cảm âm DVII7, hợp âm chín át, nốt ngoài hợp âm và mô tiến diatonic.',
+        chapters: [
+          { slug: 'hop-am-bay', focus: 'Chủ đề 15 – 17: D7, các thể đảo D65, D43, D2 và cách giải quyết.' },
+          { slug: 'truong-hoa-am', focus: 'Chủ đề 19: trưởng hoà âm (hạ bậc VI) và hai cách giải thích.' },
+          { slug: 'hop-am-cam-am', focus: 'Chủ đề 21 – 22: DVII7 — hợp âm bảy cảm âm, nửa giảm và giảm.' },
+          { slug: 'hop-am-mo-rong', focus: 'Chủ đề 23: hợp âm chín át D9 và các hợp âm mở rộng.' },
+          { slug: 'not-ngoai-hop-am', focus: 'Nốt lướt, nốt thêu, nốt chờ, nốt luyến trong bốn bè.' },
+          { slug: 'mo-tien-hoa-am', focus: 'Chủ đề 26: mô tiến diatonic.' },
+        ],
+        exercises: [
+          'Viết D7 và ba thể đảo ở bốn giọng, giải quyết về T đúng quy tắc nốt 7 và âm dẫn.',
+          'Phối hoà âm một giai điệu có SII6 trước K64 ở kết.',
+          'Viết một mô tiến diatonic bốn khâu theo vòng quãng 5.',
+        ],
+      },
+      {
+        title: 'Hoà âm cromatic: lệch giọng và chuyển giọng',
+        intro: 'Tương ứng các chủ đề 33 trở đi: hệ cromatic, lệch giọng bằng hợp âm át phụ, chuyển giọng sang các giọng họ hàng mức một, âm ngân, rồi chuyển giọng xa qua hợp âm Napoli, qua giọng cùng tên và chuyển giọng trùng âm qua hợp âm bảy giảm.',
+        chapters: [
+          { slug: 'hoa-am-cromatic', focus: 'Bức tranh chung của hoà âm cromatic.' },
+          { slug: 'hop-am-at-phu', focus: 'Chủ đề 33 – 34: lệch giọng (отклонение) bằng át phụ, DD.' },
+          { slug: 'chuyen-giong', focus: 'Chủ đề 36: chuyển giọng sang giọng họ hàng mức một qua hợp âm chung.' },
+          { slug: 'bass-ngan', focus: 'Chủ đề 49: âm ngân (органный пункт).' },
+          { slug: 'hop-am-muon', focus: 'Hợp âm của giọng cùng tên; chuyển giọng qua giọng cùng tên.' },
+          { slug: 'hop-am-napoli', focus: 'Chủ đề 52 – 59: hợp âm Napoli và chuyển giọng qua Napoli.' },
+          { slug: 'hop-am-sau-tang', focus: 'Các hợp âm sáu tăng trước D.' },
+          { slug: 'hop-am-bay-giam', focus: 'Hợp âm bảy giảm và chuyển giọng trùng âm.' },
+          { slug: 'hop-am-not-chung', focus: 'Hợp âm nốt chung.' },
+          { slug: 'hop-am-ba-tang', focus: 'Hợp âm ba tăng.' },
+          { slug: 'trung-am-cromatic', focus: 'Quan hệ trung âm cromatic — cầu sang hoà âm thế kỷ 19.' },
+        ],
+        exercises: [
+          'Viết một câu 8 ô ở Đô trưởng có lệch giọng sang Rê thứ và Sol trưởng bằng át phụ.',
+          'Chuyển giọng từ Đô trưởng sang năm giọng họ hàng mức một, mỗi lần qua một hợp âm chung khác nhau.',
+          'Viết kết có hợp âm Napoli và kết có hợp âm sáu tăng ở La thứ.',
+          'Dùng một hợp âm bảy giảm để chuyển từ Đô thứ sang ba giọng khác nhau.',
+        ],
+      },
+      {
+        title: 'Phân tích, đối chiếu và tổng ôn',
+        intro: 'Phần cuối đưa hoà âm vào tác phẩm thật: cách phân tích hoà âm, bảng đối chiếu hai trường phái cho từng điểm, toàn bộ công thức trên một trang, bảng thuật ngữ, và kỹ năng hoà âm trên đàn phím.',
+        chapters: [
+          { slug: 'phan-tich-hoa-am', focus: 'Quy trình phân tích hoà âm một tác phẩm.' },
+          { slug: 'so-sanh-hai-truong-phai-hoa-am', focus: 'Đối chiếu từng điểm giữa trường phái Nga – Xô viết và phương Tây.' },
+          { slug: 'meo-va-cong-thuc-hoa-am', focus: 'Toàn bộ công thức và mẹo nhớ để ôn thi.' },
+          { slug: 'thuat-ngu-hoa-am', focus: 'Bảng thuật ngữ hoà âm Việt – Anh (và tên Nga ở các bài liên quan).' },
+          { slug: 'ky-nang-dan-phim-chuc-nang', focus: 'Đưa hoà âm lên đàn: chuỗi kết, phối hoà âm, dịch giọng khi đọc.' },
+        ],
+        exercises: [
+          'Phân tích hoà âm bằng ký hiệu chức năng toàn bộ một chorale của Bach và chương 2 một sonatina Cổ điển.',
+          'Chơi trên đàn chuỗi T – S – K64 – D7 – T ở mọi giọng đến 4 dấu.',
+          'Làm một đề thi hoà âm viết (giai điệu và bè trầm cho sẵn) trong 3 giờ.',
+        ],
+      },
+    ],
+  },
 ]
+
+/** "Về tác giả", shared by every book and course. */
+export const ABOUT_AUTHOR = `
+**Lamar** — tên thật là **Trần Lâm**.
+
+- Tốt nghiệp **Piano** hệ trung cấp dài hạn 11 năm tại **Nhạc viện TP. Hồ Chí Minh**.
+- Tốt nghiệp đại học chuyên ngành **Âm nhạc học** tại Nhạc viện TP. Hồ Chí Minh.
+- Cố vấn và quản lý âm nhạc.
+- Nhà sản xuất âm nhạc.
+- Nhà nghiên cứu theo hướng **âm nhạc học hệ thống** (*systematic musicology*) — ngành nối lý thuyết âm nhạc với âm học, tâm lý học âm nhạc, khoa học biểu diễn và âm nhạc học tính toán; xem [[am-nhac-hoc-he-thong]].
+
+Các sách và giáo trình trong tủ sách này do Lamar biên soạn và tổng hợp từ thư viện Lý thuyết của Lịch Dạy Piano.
+`
+
+/** Opening of every foreword: who compiled the book, how, and what it aims for. */
+export const foreword = (title: string) => `
+**${title}** do **Lamar** biên soạn và tổng hợp. Nội dung các bài lấy từ thư viện Lý thuyết của Lịch Dạy Piano — nơi Lamar viết và đối chiếu từng bài với nguồn — rồi được sắp xếp lại thành một trình tự học, có lời dẫn, mục tiêu, câu hỏi và bài tập riêng cho sách.
+
+## Lamar hướng đến
+- **Một bộ giáo trình tiếng Việt có hệ thống**: mỗi cuốn là một con đường học rõ ràng, từ dễ đến khó, nối với các cuốn khác thay vì là những bài rời rạc.
+- **Kiến thức có nguồn**: mỗi bài ghi tài liệu tham khảo; chỗ nào nguồn chưa đối chiếu hoặc mâu thuẫn được ghi rõ ngay trong bài.
+- **Học bằng tai và tay**: mọi khái niệm đều được nghe, chơi trên đàn và tìm lại trong tác phẩm thật.
+- **Nhìn âm nhạc rộng hơn lý thuyết sách vở**: theo tinh thần âm nhạc học hệ thống, nối lý thuyết với âm học, tâm lý nghe, khoa học biểu diễn và lịch sử — để người học hiểu vì sao, không chỉ nhớ luật.
+- **Phục vụ người dạy lẫn người tự học**: giáo viên có trình tự dạy, người học có thể tự đi một mình.
+`
