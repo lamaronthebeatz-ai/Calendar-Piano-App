@@ -49,7 +49,7 @@ function Router() {
           <Route path="/students" element={<PrivateArea title="Học viên"><StudentsListPage /></PrivateArea>} />
           <Route path="/students/:id" element={<PrivateArea title="Học viên"><StudentProfilePage /></PrivateArea>} />
           <Route path="/statistics" element={<Navigate to="/curriculum" replace />} />
-          <Route path="/curriculum/:id?" element={<Suspense><CurriculumPage /></Suspense>} />
+          <Route path="/curriculum/:id?/:item?" element={<Suspense><CurriculumPage /></Suspense>} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
           <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />

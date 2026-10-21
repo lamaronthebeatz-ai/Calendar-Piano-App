@@ -31,6 +31,7 @@ import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
 import { Copyright } from '../../components/Copyright'
 import { QuizCard } from './QuizCard'
+import { booksWithChapter } from '../curriculum/reader/model'
 import { GLYPHS, tint } from './categoryStyle'
 
 type CategoryId = Article['category']
@@ -793,6 +794,26 @@ function ArticleActions({ article }: { article: Article }) {
   )
 }
 
+/** "Read in the book" chips for books and courses that include this article as a chapter. */
+function InBooks({ slug }: { slug: string }) {
+  const hits = booksWithChapter(slug)
+  if (!hits.length) return null
+  return (
+    <div className="flex flex-wrap gap-2">
+      {hits.map(({ book, chapter }) => (
+        <Link
+          key={book.id}
+          to={`/curriculum/${book.id}/${chapter.key}`}
+          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1.5 text-[12.5px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-ink)]"
+        >
+          <BookIcon width={13} height={13} className="text-[var(--color-gold)]" />
+          Đọc trong sách: <span className="font-medium text-[var(--color-ink)]">{book.title}{book.volume ? ` · ${book.volume}` : ''}</span> · chương {chapter.n}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
 function ArticleView({ article, scroller, sections, onJump: jump }: { article: Article; scroller: RefObject<HTMLDivElement | null>; sections: string[]; onJump: (i: number) => void }) {
   const backlinks = getBacklinks(article.slug)
   const siblings = articlesByCategory.find((c) => c.id === article.category)!.articles
@@ -828,6 +849,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
           <p className="relative rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] py-4 pl-6 pr-5 font-serif text-[17px] leading-relaxed text-[var(--color-ink)] shadow-[var(--shadow-soft)] before:absolute before:inset-y-4 before:left-0 before:w-[3px] before:rounded-r-full before:bg-gradient-to-b before:from-[var(--tint)] before:to-[var(--color-gold)]">
             {article.summary}
           </p>
+          <InBooks slug={article.slug} />
           {article.aliases && (
             <details className="group text-[12.5px] text-[var(--color-ink-faint)]">
               <summary className="cursor-pointer list-none hover:text-[var(--color-ink-muted)]">

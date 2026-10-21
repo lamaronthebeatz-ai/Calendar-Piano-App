@@ -67,3 +67,34 @@ export interface Curriculum {
   /** Optional extra track after the graded levels (e.g. accompaniment). */
   tracks?: { title: string; subtitle: string; levels: Level[] }[]
 }
+
+/** A chapter of a book: a library article, with what to focus on when reading it in this book. */
+export interface Chapter {
+  slug: string
+  focus?: string
+}
+
+export interface Part {
+  title: string
+  /** Opening text of the part: what it covers and why it comes here. */
+  intro: string
+  chapters: Chapter[]
+  /** Exercises to do after the part. */
+  exercises: string[]
+}
+
+/** A book compiled from library articles, read in the book reader. */
+export interface Book {
+  id: string
+  title: string
+  /** e.g. "Quyển 1". */
+  volume: string
+  subtitle: string
+  author: string
+  audience: string
+  hue: number
+  glyph: string
+  /** Preface: paragraphs separated by blank lines (library markup). */
+  preface: string
+  parts: Part[]
+}

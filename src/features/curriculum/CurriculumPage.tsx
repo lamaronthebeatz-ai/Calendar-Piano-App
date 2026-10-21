@@ -1,13 +1,18 @@
 import { useState, type CSSProperties } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
-import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, CheckIcon, ChevronDownIcon, GraduationIcon } from '../../components/icons'
+import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, CheckIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
 import { ScrollArea } from '../../components/ScrollArea'
 import { useBack } from '../../hooks/useBack'
 import { CATEGORIES } from '../theory/articles'
 import { findArticle } from '../theory/wiki'
 import { toggleDone, useLibrary } from '../theory/library'
 import { CURRICULA } from './curricula'
+import { Cover } from './reader/Cover'
+import { chaptersOf, findBook, READER_BOOKS, type ReaderBook } from './reader/model'
+import { PrintBook } from './reader/PrintBook'
+import { Reader } from './reader/Reader'
+import { useReader } from './reader/store'
 import type { Curriculum, Level, Piece } from './types'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
@@ -29,98 +34,133 @@ function useProgress(slugs: string[]) {
   return { done, total: slugs.length, ratio: slugs.length ? done / slugs.length : 0 }
 }
 
+/**
+ * /curriculum: the shelf. /curriculum/:id[/:item]: the book reader (items are addressed by their
+ * library slug). /curriculum/:id/in: the print layout for saving a PDF. /curriculum/:id/tong-quan:
+ * a course's overview with level cards and progress.
+ */
 export function CurriculumPage() {
-  const { id } = useParams()
-  const curriculum = CURRICULA.find((c) => c.id === id)
-  const back = useBack('/curriculum')
-
+  const { id, item } = useParams()
+  const book = findBook(id)
+  if (book && item === 'in') return <PrintBook book={book} />
+  const course = CURRICULA.find((c) => c.id === id)
+  if (course && item === 'tong-quan') return <Overview c={course} />
+  if (book) return <Reader key={book.id} book={book} itemKey={item} />
   return (
-    <ScrollArea key={id} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
-      <div data-scrolled className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={curriculum && hueTint(curriculum.hue)}>
-        <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
-          {curriculum && (
-            <button
-              onClick={back}
-              aria-label="Quay lại"
-              className="-ml-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)] active:scale-90"
-            >
-              <ArrowLeftIcon width={18} height={18} />
-            </button>
-          )}
-          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">
-            {curriculum ? curriculum.title : 'Giáo trình'}
-          </h1>
+    <ScrollArea className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
+      <div data-scrolled className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
+        <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
+          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">Giáo trình</h1>
         </div>
       </div>
-      {curriculum ? <CurriculumView c={curriculum} /> : <Shelf />}
+      <Shelf />
     </ScrollArea>
   )
 }
 
-/** The two books side by side, like covers on a shelf. */
-function Shelf() {
+function Overview({ c }: { c: Curriculum }) {
+  const back = useBack(`/curriculum/${c.id}`)
   return (
-    <div className="mx-auto max-w-5xl space-y-8 px-4 py-6 lg:px-8 lg:py-10">
+    <ScrollArea key={c.id} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
+      <div data-scrolled className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={hueTint(c.hue)}>
+        <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
+          <button
+            onClick={back}
+            aria-label="Quay lại"
+            className="-ml-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)] active:scale-90"
+          >
+            <ArrowLeftIcon width={18} height={18} />
+          </button>
+          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{c.title}</h1>
+          <Link to={`/curriculum/${c.id}`} className="flex h-9 items-center gap-1.5 rounded-xl bg-[var(--tint)] px-3 text-[13px] font-medium text-white shadow-sm active:scale-95">
+            <BookIcon width={15} height={15} /> Đọc dạng sách
+          </Link>
+        </div>
+      </div>
+      <CurriculumView c={c} />
+    </ScrollArea>
+  )
+}
+
+/** Books and courses as covers on a shelf, each opening in the reader where it was left. */
+function Shelf() {
+  const books = READER_BOOKS.filter((b) => b.kind === 'book')
+  const courses = READER_BOOKS.filter((b) => b.kind === 'course')
+  return (
+    <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 lg:px-8 lg:py-10">
       <header className="animate-float-up">
-        <p className="text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold)]">Giáo trình Lamar</p>
-        <h2 className="mt-2 max-w-2xl font-display text-[30px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[38px]">
-          Lý thuyết âm nhạc <span className="text-gold-gradient italic">&amp; piano</span>, từ nốt đầu tiên
+        <p className="text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold)]">Tủ sách Lamar</p>
+        <h2 className="mt-2 max-w-2xl font-display text-[30px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[40px]">
+          Đọc như một cuốn sách, <span className="text-gold-gradient italic">học như một lộ trình</span>
         </h2>
         <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)]">
-          Hai giáo trình xếp các bài sẵn có của thư viện theo đúng thứ tự học: mỗi cấp gồm các chương, mỗi chương có mục tiêu, bài đọc, bài tập trên đàn và một bài kiểm tra cuối cấp. Biên soạn dựa trên việc đối chiếu các giáo trình nổi tiếng trên thế giới.
+          Sách nhạc lý và giáo trình piano biên soạn từ các bài của thư viện. Mở ra là đọc như sách điện tử: lật trang, mục lục, dấu trang, tìm trong sách, đổi cỡ chữ và nền trang, xuất PDF — mỗi chương vẫn giữ đúng đường dẫn của bài trong thư viện.
         </p>
       </header>
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        {CURRICULA.map((c, i) => (
-          <BookCover key={c.id} c={c} delay={i * 90} />
-        ))}
-      </div>
+      <ShelfRow title="Sách nhạc lý" hint={`${books.length} quyển`} books={books} />
+      <ShelfRow title="Giáo trình piano" hint={`${courses.length} giáo trình`} books={courses} />
 
       <ReviewLink slug={CURRICULA[0]?.review} />
     </div>
   )
 }
 
-function BookCover({ c, delay }: { c: Curriculum; delay: number }) {
-  const lessons = lessonsOf(c)
-  const progress = useProgress([...new Set(lessons.map((l) => l.slug))])
+function ShelfRow({ title, hint, books }: { title: string; hint: string; books: ReaderBook[] }) {
   return (
-    <Link
-      to={`/curriculum/${c.id}`}
-      style={{ ...hueTint(c.hue), animationDelay: `${delay}ms` }}
-      className="book-cover animate-float-up group relative flex min-h-[320px] flex-col overflow-hidden rounded-[28px] p-6 text-white shadow-[var(--shadow-float)] sm:p-7"
-    >
-      <span aria-hidden className="book-spine absolute inset-y-0 left-0 w-3" />
-      <span aria-hidden className="absolute -right-6 -top-10 font-['Noto_Music'] text-[190px] leading-none text-white/12 transition-transform duration-700 group-hover:-rotate-6 group-hover:scale-105">
-        {c.glyph}
-      </span>
-      <p className="relative text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70">{c.audience}</p>
-      <h3 className="relative mt-3 max-w-[16ch] font-display text-[28px] font-semibold leading-[1.08] tracking-tight sm:text-[32px]">{c.title}</h3>
-      <p className="relative mt-2 max-w-sm text-[13.5px] leading-relaxed text-white/80">{c.subtitle}</p>
-      <div className="relative mt-auto pt-8">
-        <p className="text-[12px] uppercase tracking-[0.18em] text-white/60">Tác giả</p>
-        <p className="font-display text-[20px] font-semibold italic">{c.author}</p>
-        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-white/75">
-          <span>{c.goal}</span>
-          <span className="h-1 w-1 rounded-full bg-white/50" />
-          <span>{fmtYears(totalMonths(allLevels(c)))}</span>
-          <span className="h-1 w-1 rounded-full bg-white/50" />
-          <span>{allLevels(c).length} cấp độ</span>
-          <span className="h-1 w-1 rounded-full bg-white/50" />
-          <span>{new Set(lessons.map((l) => l.slug)).size} bài</span>
-        </div>
-        <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/20">
-          <span className="block h-full rounded-full bg-white/90 transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />
-        </div>
-        <p className="mt-1.5 text-[11.5px] text-white/65">
-          Đã học {progress.done}/{progress.total} bài
-        </p>
+    <section className="space-y-5">
+      <div className="flex items-baseline justify-between gap-3 border-b border-[var(--color-border)] pb-2">
+        <h3 className="font-display text-[22px] font-semibold tracking-tight text-[var(--color-ink)]">{title}</h3>
+        <span className="text-[12.5px] text-[var(--color-ink-faint)]">{hint}</span>
       </div>
-      <span className="absolute bottom-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:bottom-7 sm:right-7">
-        <ArrowUpRightIcon width={18} height={18} />
-      </span>
-    </Link>
+      <div className="shelf-row grid grid-cols-1 gap-x-8 gap-y-10 min-[520px]:grid-cols-2">
+        {books.map((b, i) => (
+          <ShelfBook key={b.id} book={b} delay={i * 90} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function ShelfBook({ book, delay }: { book: ReaderBook; delay: number }) {
+  const chapters = chaptersOf(book)
+  const progress = useProgress(chapters.map((c) => c.slug))
+  const pos = useReader().positions[book.id]
+  const resume = pos && book.items.find((i) => i.key === pos.key)
+  return (
+    <article className="animate-float-up group flex flex-col gap-4 sm:flex-row sm:items-end" style={{ animationDelay: `${delay}ms` }}>
+      <Link to={`/curriculum/${book.id}`} aria-label={`Đọc ${book.title} ${book.volume ?? ''}`} className="shelf-book block w-[min(62vw,240px)] shrink-0 self-center sm:w-[200px] sm:self-auto lg:w-[230px]">
+        <Cover book={book} className="shelf-book-face rounded-[4px]" />
+      </Link>
+      <div className="min-w-0 flex-1 sm:pb-2">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)]">{book.audience}</p>
+        <Link to={`/curriculum/${book.id}`} className="mt-1 block font-display text-[22px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] hover:text-[var(--color-gold)]">
+          {book.title}
+          {book.volume && <span className="font-normal italic text-[var(--color-ink-muted)]"> · {book.volume}</span>}
+        </Link>
+        <p className="mt-1.5 line-clamp-3 text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
+        <p className="mt-2 text-[12px] text-[var(--color-ink-faint)]">
+          {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'book' ? 'phần' : 'cấp'} · {chapters.length} chương · đã học {progress.done}/{progress.total}
+        </p>
+        <div className="mt-2 h-1 max-w-xs overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
+          <span className="block h-full rounded-full bg-[var(--color-gold)] transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />
+        </div>
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <Link to={`/curriculum/${book.id}`} className="flex h-9 items-center gap-1.5 rounded-full bg-[var(--color-ink)] px-4 text-[13px] font-medium text-[var(--color-surface)] shadow-sm transition-transform active:scale-95">
+            <BookIcon width={15} height={15} /> {resume && resume.kind !== 'cover' ? 'Đọc tiếp' : 'Đọc'}
+          </Link>
+          <Link to={`/curriculum/${book.id}/in`} className="flex h-9 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-border-strong)] hover:text-[var(--color-ink)]">
+            <DownloadIcon width={15} height={15} /> PDF
+          </Link>
+          {book.kind === 'course' && (
+            <Link to={`/curriculum/${book.id}/tong-quan`} className="flex h-9 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-border-strong)] hover:text-[var(--color-ink)]">
+              <GraduationIcon width={15} height={15} /> Tổng quan
+            </Link>
+          )}
+        </div>
+        {resume && resume.kind !== 'cover' && <p className="mt-2 truncate text-[12px] text-[var(--color-ink-faint)]">Đang đọc: {resume.title}</p>}
+      </div>
+    </article>
   )
 }
 
