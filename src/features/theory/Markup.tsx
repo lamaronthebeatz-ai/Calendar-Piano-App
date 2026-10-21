@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
+import { LinkRefContext } from './linkRef'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
@@ -14,16 +15,21 @@ import { YouTubeSearch, YouTubeVideo } from './YouTube'
  * one written by title or alias, like [[Bach]], shows that text as written.
  */
 function Inline({ text }: { text: string }) {
+  const ref = useContext(LinkRefContext)
   return text.split(/(\*\*(?:[^*]|\*[^*]+\*)+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
     if (part.startsWith('**')) return <strong key={i} className="font-semibold"><Inline text={part.slice(2, -2)} /></strong>
     if (part.startsWith('*') && part.length > 2) return <em key={i}><Inline text={part.slice(1, -1)} /></em>
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
     const article = findArticle(target)
+    const xref = article && ref?.(article.slug)
     return article ? (
-      <Link key={i} to={`/theory/${article.slug}`} data-slug={article.slug} className="wiki-link">
-        {label ?? (normalize(target) !== article.slug ? target : i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
-      </Link>
+      <span key={i}>
+        <Link to={`/theory/${article.slug}`} data-slug={article.slug} className="wiki-link">
+          {label ?? (normalize(target) !== article.slug ? target : i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
+        </Link>
+        {xref && <span className="xref"> ({xref})</span>}
+      </span>
     ) : (
       <span key={i} title="Chưa có bài viết" className="text-[var(--color-status-cancelled)]">
         {label ?? target}

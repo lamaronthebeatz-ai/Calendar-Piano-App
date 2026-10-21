@@ -3,16 +3,16 @@ import { createPortal } from 'react-dom'
 import { Link, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { ArrowLeftIcon, BookmarkIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, DownloadIcon, ExpandIcon, GraduationIcon, ListIcon, SearchIcon, TypeIcon, XIcon } from '../../../components/icons'
-import { Markup } from '../../theory/Markup'
-import { CATEGORIES } from '../../theory/articles'
 import { findArticle, normalize } from '../../theory/wiki'
-import { markRead, toggleDone, useLibrary } from '../../theory/library'
+import { markRead, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
-import { chaptersOf, hueTint, roman, type ReaderBook, type ReaderItem } from './model'
+import { BookPage } from './Pages'
+import { chaptersOf, hueTint, type ReaderBook, type ReaderItem } from './model'
 import { getPosition, removeBookmark, savePosition, setPrefs, toggleBookmark, useReader, type Bookmark, type ReaderPrefs } from './store'
 
 const GAP = 64
-const MARGINS: Record<ReaderPrefs['margin'], [number, number]> = { narrow: [18, 28], normal: [26, 48], wide: [34, 72] }
+// Vertical margins leave room for the running head and the page number.
+const MARGINS: Record<ReaderPrefs['margin'], [number, number]> = { narrow: [42, 28], normal: [50, 48], wide: [60, 72] }
 const FONTS: Record<ReaderPrefs['font'], string> = { serif: 'var(--font-serif)', sans: 'var(--font-sans)', classic: 'var(--font-display)' }
 
 type Panel = 'toc' | 'settings' | 'search' | null
@@ -83,7 +83,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     const f = flow.current
     const s = sentinel.current
     if (!f || !s || !step) return
-    const n = isCover ? 1 : Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left - 1) / step) + 1)
+    const n = isCover ? 1 : Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + 2) / step) + 1)
     setPages(n)
     const want = pending.current
     pending.current = null
@@ -107,8 +107,31 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     const ro = new ResizeObserver(() => measure())
     ro.observe(f)
     document.fonts?.ready.then(() => measure())
-    return () => ro.disconnect()
-  }, [measure, index])
+    // Content that arrives late (Wikipedia images, lazy figures) adds columns without resizing the
+    // fixed-size flow box, so recount pages on DOM changes and image loads, keeping the current page.
+    let raf = 0
+    const recount = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => {
+        const s = sentinel.current
+        if (!s || !step || isCover) return
+        const n = Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + 2) / step) + 1)
+        setPages((old) => (old === n ? old : n))
+        setPage((p) => Math.min(p, n - 1))
+      })
+    }
+    const mo = new MutationObserver(recount)
+    mo.observe(f, { childList: true, subtree: true })
+    f.addEventListener('load', recount, true)
+    const late = [setTimeout(recount, 600), setTimeout(recount, 2000)]
+    return () => {
+      ro.disconnect()
+      mo.disconnect()
+      f.removeEventListener('load', recount, true)
+      late.forEach(clearTimeout)
+      cancelAnimationFrame(raf)
+    }
+  }, [measure, index, step, isCover])
 
   useEffect(() => {
     ratio.current = pages ? page / pages : 0
@@ -332,13 +355,14 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
                     transition: dragging || instant || turn === 'none' ? 'none' : turn === 'fade' ? 'transform 0ms' : 'transform 520ms cubic-bezier(0.22, 0.8, 0.2, 1)',
                   }}
                 >
-                  <ItemView book={book} item={item} onGo={(k) => go(keyIndex(k))} />
+                  <BookPage book={book} item={item} onGo={(k) => go(keyIndex(k))} />
                   <span ref={sentinel} className="block h-px w-px" />
                 </div>
               </div>
             </div>
           </div>
           {wide && <span aria-hidden className="reader-gutter pointer-events-none absolute inset-y-0 left-1/2 w-16 -translate-x-1/2" />}
+          {!isCover && <RunningHeads book={book} item={item} page={page} wide={wide} padY={padY} padX={px} />}
         </div>
         <button onClick={prev} aria-label="Trang trước" disabled={atStart} className={clsx('reader-turn left-1 lg:left-4', !chrome && 'opacity-0')}>
           <ChevronLeftIcon width={22} height={22} />
@@ -377,6 +401,30 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   )
 }
 
+/** Running head at the top of each page (book title on the left page, lesson on the right) and the page number at the foot. */
+function RunningHeads({ book, item, page, wide, padY, padX }: { book: ReaderBook; item: ReaderItem; page: number; wide: boolean; padY: number; padX: number }) {
+  const lesson = item.kind === 'chapter' ? `Bài ${item.n} · ${item.title}` : item.title
+  const left = `${book.title}${book.volume ? ` · ${book.volume}` : ''}`
+  const prefix = item.kind === 'chapter' ? `${item.n}.` : ''
+  const cols = wide ? [page * 2, page * 2 + 1] : [page]
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 flex" style={{ padding: `0 ${padX}px`, gap: wide ? GAP : 0 }}>
+      {cols.map((c, i) => (
+        <div key={c} className="relative flex-1">
+          {c > 0 && (
+            <p className={clsx('book-running-head', wide && i === 0 ? 'text-left' : wide ? 'text-right' : 'text-center')} style={{ top: Math.max(12, padY / 2 - 8) }}>
+              {wide && i === 0 ? left : lesson}
+            </p>
+          )}
+          <p className={clsx('book-folio', wide ? (i === 0 ? 'left-0' : 'right-0') : 'left-1/2 -translate-x-1/2')} style={{ bottom: Math.max(10, padY / 2 - 10) }}>
+            {prefix}{c + 1}
+          </p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 /** The page of the first text node that contains `q` (accent-insensitive), and briefly highlights it. */
 function findPage(root: HTMLElement, q: string, step: number) {
   const nq = normalize(q)
@@ -403,157 +451,6 @@ function findPage(root: HTMLElement, q: string, step: number) {
 }
 
 /* ------------------------------------------------------------------ items */
-
-function ItemView({ book, item, onGo }: { book: ReaderBook; item: ReaderItem; onGo: (key: string) => void }) {
-  switch (item.kind) {
-    case 'cover':
-      return <CoverPage book={book} onStart={() => onGo(book.items[1].key)} />
-    case 'front':
-      return (
-        <article className="reader-article">
-          <p className="reader-kicker">{book.title}{book.volume ? ` · ${book.volume}` : ''}</p>
-          <h1 className="reader-title">{item.title}</h1>
-          <Markup source={item.body} />
-          <p className="mt-8 text-right font-display text-[1.1em] italic text-[var(--color-ink-muted)]">— {book.author}</p>
-        </article>
-      )
-    case 'toc':
-      return <TocPage book={book} onGo={onGo} />
-    case 'part':
-      return <PartPage book={book} item={item} onGo={onGo} />
-    case 'chapter':
-      return <ChapterPage book={book} item={item} onGo={onGo} />
-  }
-}
-
-function CoverPage({ book, onStart }: { book: ReaderBook; onStart: () => void }) {
-  return (
-    <div className="flex h-full flex-col items-center justify-center gap-6 py-4">
-      <div className="reader-cover-3d w-[min(78%,calc(var(--page-h)*0.72),440px)]">
-        <Cover book={book} size={1.15} className="rounded-[6px] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.45),0_8px_20px_-8px_rgba(0,0,0,0.25)]" />
-      </div>
-      <p className="max-w-md text-center font-sans text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
-      <button onClick={onStart} className="reader-cta">
-        Bắt đầu đọc <ChevronRightIcon width={16} height={16} />
-      </button>
-    </div>
-  )
-}
-
-function TocPage({ book, onGo }: { book: ReaderBook; onGo: (key: string) => void }) {
-  const { done } = useLibrary()
-  return (
-    <article className="reader-article">
-      <p className="reader-kicker">{book.title}{book.volume ? ` · ${book.volume}` : ''}</p>
-      <h1 className="reader-title">Mục lục</h1>
-      <ol className="space-y-1 font-sans">
-        {book.items.map((it) => {
-          if (it.kind === 'cover' || it.kind === 'toc') return null
-          if (it.kind === 'part')
-            return (
-              <li key={it.key} className="break-after-avoid pt-4">
-                <button onClick={() => onGo(it.key)} className="reader-toc-part">
-                  <span className="text-[0.72em] font-semibold uppercase tracking-[0.18em] text-[var(--tint)]">{it.label}</span>
-                  <span className="block font-display text-[1.15em] font-semibold text-[var(--color-ink)]">{it.title}</span>
-                </button>
-              </li>
-            )
-          const isDone = it.kind === 'chapter' && done.includes(it.slug)
-          return (
-            <li key={it.key}>
-              <button onClick={() => onGo(it.key)} className="reader-toc-row">
-                <span className="w-8 shrink-0 text-right font-display tabular-nums text-[var(--color-ink-faint)]">{it.kind === 'chapter' ? it.n : '·'}</span>
-                <span className="min-w-0 flex-1 text-[0.92em] text-[var(--color-ink)]">{it.title}</span>
-                {isDone && <CheckIcon width={13} height={13} strokeWidth={3} className="shrink-0 text-[var(--color-status-completed)]" />}
-              </button>
-            </li>
-          )
-        })}
-      </ol>
-    </article>
-  )
-}
-
-function PartPage({ book, item, onGo }: { book: ReaderBook; item: Extract<ReaderItem, { kind: 'part' }>; onGo: (key: string) => void }) {
-  const chapters = chaptersOf(book).filter((c) => c.part === item.n)
-  return (
-    <article className="reader-article">
-      <div className="reader-part-head">
-        <span aria-hidden className="reader-part-numeral">{roman(item.n)}</span>
-        <p className="reader-kicker">{item.label}</p>
-        <h1 className="reader-title !mt-1">{item.title}</h1>
-        <p className="reader-lead">{item.intro}</p>
-      </div>
-      {chapters.length > 0 && (
-        <ol className="my-6 space-y-1 font-sans">
-          {chapters.map((c) => (
-            <li key={c.key}>
-              <button onClick={() => onGo(c.key)} className="reader-toc-row">
-                <span className="w-8 shrink-0 text-right font-display tabular-nums text-[var(--tint)]">{c.n}</span>
-                <span className="min-w-0 flex-1 text-[0.92em] text-[var(--color-ink)]">{c.title}</span>
-              </button>
-            </li>
-          ))}
-        </ol>
-      )}
-      {item.body && <Markup source={item.body} />}
-    </article>
-  )
-}
-
-function ChapterPage({ book, item, onGo }: { book: ReaderBook; item: Extract<ReaderItem, { kind: 'chapter' }>; onGo: (key: string) => void }) {
-  const a = findArticle(item.slug)!
-  const { done } = useLibrary()
-  const isDone = done.includes(a.slug)
-  const all = chaptersOf(book)
-  const nextChapter = all[all.findIndex((c) => c.key === item.key) + 1]
-  const part = book.items.find((i) => i.kind === 'part' && i.n === item.part)
-  return (
-    <article className="reader-article">
-      <p className="reader-kicker">
-        Chương {item.n}
-        {part && part.kind === 'part' && <span className="text-[var(--color-ink-faint)]"> · {part.label.split(' · ')[0]}</span>}
-      </p>
-      <h1 className="reader-title">{a.title}</h1>
-      <p className="reader-lead">{a.summary}</p>
-      {item.focus && (
-        <p className="reader-focus">
-          <span className="font-sans text-[0.7em] font-semibold uppercase tracking-[0.18em] text-[var(--tint)]">Trọng tâm</span>
-          <span className="block">{item.focus}</span>
-        </p>
-      )}
-      <div className="reader-body">
-        <Markup source={a.body} />
-      </div>
-      {a.refs && a.refs.length > 0 && (
-        <section className="reader-refs">
-          <h2>Nguồn</h2>
-          <ol>
-            {a.refs.map(([t, u]) => (
-              <li key={u}>
-                <a href={u} target="_blank" rel="noreferrer">{t}</a>
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
-      <footer className="reader-end">
-        <button onClick={() => toggleDone(a.slug)} aria-pressed={isDone} className={clsx('reader-cta', isDone && 'is-done')}>
-          {isDone ? <><CheckIcon width={15} height={15} strokeWidth={3} /> Đã học</> : 'Đánh dấu đã học'}
-        </button>
-        <Link to={`/theory/${a.slug}`} className="text-[0.8em] font-medium text-[var(--color-ink-muted)] underline-offset-4 hover:underline">
-          Mở ở thư viện · {CATEGORIES[a.category].title}
-        </Link>
-        {nextChapter && (
-          <button onClick={() => onGo(nextChapter.key)} className="reader-next">
-            <span className="text-[0.7em] font-semibold uppercase tracking-[0.18em] text-[var(--color-ink-faint)]">Chương tiếp · {nextChapter.n}</span>
-            <span className="block font-display text-[1.05em] font-semibold text-[var(--color-ink)]">{nextChapter.title}</span>
-          </button>
-        )}
-      </footer>
-    </article>
-  )
-}
 
 /* ----------------------------------------------------------------- panels */
 
@@ -593,7 +490,7 @@ function Toc({ book, current, marks, onGo, onClose }: { book: ReaderBook; curren
         </div>
         <div className="min-w-0">
           <p className="truncate font-display text-[15px] font-semibold text-[var(--color-ink)]">{book.title}{book.volume ? ` · ${book.volume}` : ''}</p>
-          <p className="text-[12px] text-[var(--color-ink-muted)]">Đã học {doneCount}/{chapters.length} chương</p>
+          <p className="text-[12px] text-[var(--color-ink-muted)]">Đã học {doneCount}/{chapters.length} bài</p>
           <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
             <span className="block h-full rounded-full bg-[var(--tint)]" style={{ width: `${(doneCount / Math.max(1, chapters.length)) * 100}%` }} />
           </div>
@@ -602,7 +499,7 @@ function Toc({ book, current, marks, onGo, onClose }: { book: ReaderBook; curren
       <div className="mb-3 grid grid-cols-2 gap-1 rounded-xl bg-[var(--color-surface-sunken)] p-1 text-[13px]">
         {(['toc', 'marks'] as const).map((t) => (
           <button key={t} onClick={() => setTab(t)} className={clsx('rounded-lg py-1.5 transition-all', tab === t ? 'bg-[var(--color-surface-raised)] font-medium text-[var(--color-ink)] shadow-sm' : 'text-[var(--color-ink-muted)]')}>
-            {t === 'toc' ? 'Chương' : `Dấu trang (${marks.length})`}
+            {t === 'toc' ? 'Mục lục' : `Dấu trang (${marks.length})`}
           </button>
         ))}
       </div>
@@ -648,7 +545,7 @@ function Toc({ book, current, marks, onGo, onClose }: { book: ReaderBook; curren
                 <button onClick={() => onGo(i, m.ratio)} className="min-w-0 flex-1 py-2.5 text-left">
                   <span className="block truncate text-[13.5px] font-medium text-[var(--color-ink)]">{m.label}</span>
                   <span className="block text-[11.5px] text-[var(--color-ink-faint)]">
-                    {Math.round(m.ratio * 100)}% chương · {new Date(m.at).toLocaleDateString('vi-VN')}
+                    {Math.round(m.ratio * 100)}% bài · {new Date(m.at).toLocaleDateString('vi-VN')}
                   </span>
                 </button>
                 <button onClick={() => removeBookmark(book.id, m)} aria-label="Xoá dấu trang" className="reader-btn">
@@ -762,6 +659,7 @@ function textOf(it: ReaderItem) {
   }
   if (it.kind === 'front') return `${it.title}\n${it.body}`
   if (it.kind === 'part') return `${it.title}\n${it.intro}\n${it.body ?? ''}`
+  if (it.kind === 'review') return `${it.title}\n${it.body}`
   return it.title
 }
 const plain = (s: string) => s.replace(/^\s*::.*$/gm, '').replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2').replace(/\[\[([^\]]+)\]\]/g, (_, k: string) => findArticle(k)?.title ?? k).replace(/[*#|]/g, ' ').replace(/\s+/g, ' ')
@@ -791,7 +689,7 @@ function Search({ book, onGo, onClose }: { book: ReaderBook; onGo: (i: number, q
           <li key={it.key}>
             <button onClick={() => onGo(i, q)} className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-2.5 text-left transition-colors hover:border-[var(--tint)]">
               <span className="flex items-baseline justify-between gap-2">
-                <span className="truncate text-[13.5px] font-medium text-[var(--color-ink)]">{it.kind === 'chapter' ? `${it.n}. ` : ''}{it.title}</span>
+                <span className="truncate text-[13.5px] font-medium text-[var(--color-ink)]">{it.kind === 'chapter' ? `Bài ${it.n} · ` : ''}{it.title}</span>
                 <span className="shrink-0 text-[11px] text-[var(--color-ink-faint)]">{count}×</span>
               </span>
               <span className="mt-0.5 line-clamp-2 block text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{snippet}</span>

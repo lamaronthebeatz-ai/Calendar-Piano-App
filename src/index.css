@@ -736,7 +736,7 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
   margin: 0 0 1.4em; padding: 0.8em 1em; border-left: 3px solid var(--tint);
   border-radius: 0 0.8rem 0.8rem 0; background: var(--tint-soft); color: var(--color-ink); break-inside: avoid;
 }
-.reader-body > div > p:first-of-type::first-letter {
+.book-lesson-body > div > p:first-of-type::first-letter {
   float: left; margin: 0.06em 0.12em 0 0; font-family: var(--font-display); font-size: 3.3em; line-height: 0.82; font-weight: 600; color: var(--tint);
 }
 .reader-refs { margin-top: 2em; font-family: var(--font-sans); font-size: 0.78em; color: var(--color-ink-muted); break-inside: avoid; }
@@ -838,3 +838,123 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
   .print-book h2, .print-book h3 { break-after: avoid; }
   .print-book * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ---------- Textbook layout (reader and print): lessons, numbered sections, figures, tables ---------- */
+.book-lesson { counter-reset: sec fig tab; }
+.book-eyebrow { font-family: var(--font-sans); font-size: 0.66em; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-ink-faint); }
+.book-rule { display: block; width: 3.2em; height: 2px; margin-top: 0.9em; background: var(--tint); }
+.book-lesson-head { margin-bottom: 1.5em; break-inside: avoid; }
+.book-lesson-num {
+  display: flex; align-items: baseline; gap: 0.3em; margin-top: 0.5em;
+  font-family: var(--font-display); font-size: 3.4em; font-weight: 600; line-height: 1; color: var(--tint);
+}
+.book-lesson-num span { font-family: var(--font-sans); font-size: 0.24em; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--color-ink-muted); }
+.book-lesson-title { margin-top: 0.25em; font-family: var(--font-display); font-size: 1.75em; font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; color: var(--color-ink); text-wrap: balance; }
+.book-box { margin: 1.2em 0; padding: 0.85em 1.1em; border: 1px solid var(--color-border); break-inside: avoid; }
+.book-box h4, .book-questions h4, .book-refs h4 {
+  margin-bottom: 0.4em; font-family: var(--font-sans); font-size: 0.66em; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tint);
+}
+.book-box.is-goal { border-left: 4px solid var(--tint); }
+.book-box.is-summary { margin-top: 2em; background: color-mix(in oklch, var(--tint) 7%, transparent); border-color: color-mix(in oklch, var(--tint) 28%, transparent); }
+.book-box p { margin: 0; }
+
+/* Lesson text from the library, set as book type instead of web cards. */
+.book-text { color: var(--color-prose); }
+.book-text h2 {
+  margin-top: 0.6em; padding-top: 0.4em; font-family: var(--font-display); font-size: 1.3em; font-weight: 600; line-height: 1.25; color: var(--color-ink);
+  break-after: avoid;
+}
+.book-lesson .book-text h2 { counter-increment: sec; }
+.book-lesson .book-text h2::before { content: var(--lesson) "." counter(sec) "\2002"; color: var(--tint); font-variant-numeric: tabular-nums; }
+.book-text h3 { font-family: var(--font-display); font-style: italic; font-weight: 600; }
+.book-text figure {
+  margin: 1.3em 0; padding: 0.8em 0 0.6em; gap: 0.5em; border: 0; border-radius: 0; box-shadow: none; background: transparent;
+  border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);
+}
+.book-text figure > button { opacity: 0.35; }
+.book-text figcaption { font-family: var(--font-serif); font-size: 0.82em; color: var(--color-ink-muted); text-align: center; }
+.book-lesson .book-text figure:has(figcaption):not(:has(.aspect-video)) { counter-increment: fig; }
+.book-lesson .book-text figure:has(figcaption):not(:has(.aspect-video)) figcaption::before {
+  content: "Hình " var(--lesson) "." counter(fig) ". "; font-weight: 700; color: var(--color-ink);
+}
+.book-text div:has(> table) {
+  margin: 1.3em 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; font-family: var(--font-serif);
+}
+.book-lesson .book-text div:has(> table) { counter-increment: tab; }
+.book-lesson .book-text div:has(> table)::before {
+  content: "Bảng " var(--lesson) "." counter(tab); display: block; margin-bottom: 0.35em;
+  font-family: var(--font-sans); font-size: 0.72em; font-weight: 700; letter-spacing: 0.08em; color: var(--color-ink);
+}
+.book-text table { border-top: 1.5px solid var(--color-ink); border-bottom: 1.5px solid var(--color-ink); font-size: 0.82em; }
+.book-text thead { background: transparent; border-bottom: 1px solid var(--color-ink-muted); }
+.book-text th { text-transform: none; letter-spacing: 0; font-size: 1em; padding: 0.45em 0.6em; }
+.book-text td { padding: 0.4em 0.6em; }
+.book-text tbody tr { border-top-color: color-mix(in oklch, var(--color-border) 70%, transparent); }
+.book-text tbody tr:hover { background: transparent; }
+.book-text a.wiki-link { color: inherit; text-decoration: underline dotted; text-decoration-color: color-mix(in oklch, var(--tint) 60%, transparent); text-underline-offset: 3px; }
+.book-text .xref, .book-box .xref { font-family: var(--font-sans); font-size: 0.78em; font-variant: small-caps; letter-spacing: 0.04em; color: var(--tint); }
+.book-lesson-body > div > p:first-of-type::first-letter { color: var(--tint); }
+
+.book-questions { margin-top: 1.8em; break-inside: auto; }
+.book-questions > ol { list-style: decimal; padding-left: 1.4em; }
+.book-questions > ol > li { margin-top: 0.7em; break-inside: avoid; }
+.book-questions > ol > li::marker { font-weight: 700; color: var(--tint); }
+.book-options { list-style: none; margin-top: 0.25em; padding-left: 0.2em; font-size: 0.92em; color: var(--color-ink-muted); }
+.book-options b { color: var(--color-ink); margin-right: 0.15em; }
+.book-note { font-family: var(--font-sans); font-size: 0.75em; font-style: italic; color: var(--color-ink-faint); }
+.book-questions .book-note { margin-top: 0.6em; }
+.book-refs { margin-top: 1.8em; font-family: var(--font-sans); font-size: 0.74em; color: var(--color-ink-muted); }
+.book-refs ol { list-style: decimal; padding-left: 1.4em; }
+.book-refs li { margin-top: 0.15em; overflow-wrap: anywhere; }
+.book-refs a { color: inherit; text-decoration: underline; text-decoration-color: var(--color-border-strong); }
+.book-url { color: var(--color-ink-faint); }
+.book-lesson-end { margin-top: 1.8em; display: flex; flex-direction: column; align-items: flex-start; gap: 0.6em; break-inside: avoid; }
+.book-check { display: inline-flex; align-items: center; gap: 0.55em; font-family: var(--font-sans); font-size: 0.8em; font-weight: 500; color: var(--color-ink); }
+.book-check > span { display: inline-flex; height: 1.15em; width: 1.15em; align-items: center; justify-content: center; border: 1.5px solid var(--color-ink-muted); border-radius: 3px; }
+.book-check.is-done > span { border-color: var(--color-status-completed); background: var(--color-status-completed); color: #fff; }
+
+.book-front-title { font-family: var(--font-display); font-size: 2.1em; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-ink); }
+.book-front .book-text, .book-review .book-text { margin-top: 1.4em; }
+.book-signature { margin-top: 2em; text-align: right; font-family: var(--font-display); font-style: italic; font-size: 1.1em; color: var(--color-ink-muted); }
+.book-signature::before { content: "— "; }
+
+.book-part { text-align: center; padding-top: 10%; }
+.book-part-unit { font-family: var(--font-sans); font-size: 0.72em; font-weight: 600; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-ink-faint); }
+.book-part-numeral { margin-top: 0.1em; font-family: var(--font-display); font-size: 5em; font-weight: 600; line-height: 1; color: var(--tint); }
+.book-part-title { margin-top: 0.3em; font-family: var(--font-display); font-size: 1.9em; font-weight: 600; line-height: 1.15; color: var(--color-ink); text-wrap: balance; }
+.book-ornament { display: block; margin: 0.8em 0; font-size: 1.2em; color: var(--tint); }
+.book-part-intro { margin: 0 auto; max-width: 32em; font-style: italic; color: var(--color-ink-muted); text-align: center !important; }
+.book-part .book-text { margin-top: 1.4em; text-align: left; }
+.book-part-lessons { margin-top: 2em; text-align: left; break-inside: avoid-column; }
+.book-part-lessons ol, .book-toc ol { list-style: none; padding: 0; margin-top: 0.5em; }
+.book-part-lessons button, .book-toc button { display: flex; width: 100%; align-items: baseline; gap: 0.8em; padding: 0.22em 0; text-align: left; }
+.book-part-lessons button:hover .book-toc-name, .book-toc button:hover .book-toc-name { color: var(--tint); }
+.book-toc-num { width: 4em; flex-shrink: 0; font-family: var(--font-sans); font-size: 0.72em; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink-faint); }
+.book-toc-name { min-width: 0; flex: 1; color: var(--color-ink); transition: color 150ms ease; }
+.book-toc-leader { display: none; }
+.book-toc li { break-inside: avoid; }
+.book-toc li.is-part { margin-top: 1.1em; break-after: avoid; }
+.book-toc li.is-part button { flex-direction: column; gap: 0; }
+.book-toc-label { font-family: var(--font-sans); font-size: 0.66em; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tint); }
+.book-toc-title { font-family: var(--font-display); font-size: 1.1em; font-weight: 600; color: var(--color-ink); }
+.book-toc li.is-extra .book-toc-name { font-style: italic; color: var(--color-ink-muted); }
+.book-answers table { margin-top: 1.4em; width: 100%; font-size: 0.85em; border-top: 1.5px solid var(--color-ink); border-bottom: 1.5px solid var(--color-ink); }
+.book-answers th { width: 5em; padding: 0.3em 0.5em; text-align: left; font-family: var(--font-sans); font-size: 0.85em; color: var(--color-ink-muted); white-space: nowrap; vertical-align: top; }
+.book-answers td { padding: 0.3em 0.5em; font-variant-numeric: tabular-nums; word-spacing: 0.4em; }
+.book-answers tr + tr { border-top: 1px solid var(--color-border); }
+
+.book-running-head {
+  position: absolute; left: 0; right: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  font-family: var(--font-sans); font-size: 10.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-faint);
+}
+.book-folio { position: absolute; font-family: var(--font-display); font-size: 12.5px; font-variant-numeric: tabular-nums; color: var(--color-ink-faint); }
+
+@media print {
+  .print-sheet.is-chapter, .print-sheet.is-part, .print-sheet.is-review, .print-sheet.is-answers, .print-sheet.is-front, .print-sheet.is-toc { break-before: page; }
+  .book-part { padding-top: 30mm; }
+  .book-text figure > button, .book-lesson-end { display: none !important; }
+}
+
+.reader-flow.is-justified .book-part p, .reader-flow .book-part-numeral, .reader-flow .book-part-unit { text-align: center; }
+.reader-flow .book-answers table { break-inside: auto; }
+.book-answers tr { break-inside: avoid; }
