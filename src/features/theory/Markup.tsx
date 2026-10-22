@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRightIcon, ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
 import { LinkRefContext, PrintContext } from './linkRef'
-import { loadScans, parseRange, scanLabel, scanUrl, SCAN_BOOKS, type ScanItem } from './scans'
+import { loadScans, parseRange, scanLabel, scanUrl, selectScans, SCAN_BOOKS, type ScanItem } from './scans'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
@@ -158,50 +158,52 @@ function ScanImages({ book, item }: { book: string; item: ScanItem }) {
   return (
     <>
       {item.files.map((f) => (
-        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} alt={scanLabel(book, item)} loading="lazy" className="scan-img" />
+        // full width up to the scan's own size, height from the ratio — so the layout is right before the image loads
+        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} style={{ maxWidth: f.w }} alt={scanLabel(book, item)} loading="lazy" className="scan-img" />
       ))}
     </>
   )
 }
 
-function useScans(book: string, from: number, to: number) {
+function useScans(book: string, from: number, to: number, byPage = false) {
   const [state, setState] = useState<{ key: string; items: ScanItem[] }>()
-  const key = `${book}:${from}-${to}`
+  const key = `${book}:${byPage ? 'tr' : 'ex'}:${from}-${to}`
   useEffect(() => {
     let live = true
-    const unit = SCAN_BOOKS[book]?.unit
-    loadScans(book).then((all) => live && setState({ key, items: all.filter((it) => { const v = unit === 'ex' ? it.n : it.page; return v >= from && v <= to }) }))
+    loadScans(book).then((all) => live && setState({ key, items: selectScans(book, all, from, to, byPage) }))
     return () => {
       live = false
     }
-  }, [book, from, to, key])
+  }, [book, from, to, byPage, key])
   return state?.key === key ? state.items : null
 }
 
 /** `::scan book n | caption` — one example cut from a scanned book. */
 function ScanFigure({ book, n, caption }: { book: string; n: number; caption: string }) {
   const items = useScans(book, n, n)
-  if (!items?.length) return null
+  const item = items?.find((it) => it.ex?.includes(n)) ?? items?.[0]
+  if (!item) return null
   return (
-    <Figure caption={`${caption ? caption + ' — ' : ''}${scanLabel(book, items[0])}`}>
-      <ScanImages book={book} item={items[0]} />
+    <Figure caption={`${caption ? caption + ' — ' : ''}${scanLabel(book, item)}`}>
+      <ScanImages book={book} item={item} />
     </Figure>
   )
 }
 
 /** `::scans book ex|tr from-to` — every example in a range, as a collapsible gallery (expanded when printing). */
-function ScanGallery({ book, from, to, caption }: { book: string; from: number; to: number; caption: string }) {
-  const items = useScans(book, from, to)
+function ScanGallery({ book, from, to, byPage, caption }: { book: string; from: number; to: number; byPage: boolean; caption: string }) {
+  const items = useScans(book, from, to, byPage)
   const printing = useContext(PrintContext)
   const [open, setOpen] = useState(false)
   const [zoom, setZoom] = useState<ScanItem | null>(null)
   const meta = SCAN_BOOKS[book]
   if (!meta || (items && !items.length)) return null
-  const range = meta.unit === 'ex' ? `ví dụ ${from} – ${to}` : `trang ${from} – ${to}`
+  const range = meta.unit === 'ex' && !byPage ? `ví dụ ${from} – ${to}` : `trang ${from} – ${to}`
   const shown = open || printing
   return (
     <section className="scan-gallery">
-      <button type="button" className="scan-toggle" aria-expanded={shown} onClick={() => setOpen((o) => !o)}>
+      {/* no focus on press: inside the paginated reader, focusing would scroll the page sideways */}
+      <button type="button" className="scan-toggle" aria-expanded={shown} onPointerDown={(e) => e.preventDefault()} onClick={() => setOpen((o) => !o)}>
         <ChevronRightIcon width={15} height={15} className="scan-chevron" />
         <span>
           <b>{caption || 'Ví dụ trong sách gốc'}</b> · {range}
@@ -211,12 +213,12 @@ function ScanGallery({ book, from, to, caption }: { book: string; from: number; 
       {shown && items && (
         <div className="scan-grid">
           {items.map((it) => (
-            <figure key={`${it.page}-${it.n}`} className="scan-item">
-              <button type="button" onClick={() => setZoom(it)} aria-label={`Phóng to ${scanLabel(book, it)}`}>
+            <div key={`${it.page}-${it.n}`} className="scan-item">
+              <button type="button" onPointerDown={(e) => e.preventDefault()} onClick={() => setZoom(it)} aria-label={`Phóng to ${scanLabel(book, it)}`}>
                 <ScanImages book={book} item={it} />
               </button>
-              <figcaption>{scanLabel(book, it)}</figcaption>
-            </figure>
+              <p className="scan-caption">{scanLabel(book, it)}</p>
+            </div>
           ))}
         </div>
       )}
@@ -270,7 +272,7 @@ function Directive({ line }: { line: string }) {
       return <ScanFigure book={args[0]} n={Number(args[1])} caption={caption} />
     case 'scans': {
       const [from, to] = parseRange(args[2])
-      return <ScanGallery book={args[0]} from={from} to={to} caption={caption} />
+      return <ScanGallery book={args[0]} from={from} to={to} byPage={args[1] === 'tr'} caption={caption} />
     }
     case 'youtube':
       return <YouTubeVideo id={args[0]}>{caption && <Inline text={caption} />}</YouTubeVideo>

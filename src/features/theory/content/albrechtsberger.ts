@@ -153,7 +153,7 @@ Việc đặt hợp âm 11 và 13 trên chủ âm khác hẳn cách gọi tên h
 Tiếp theo: [[chuyen-dong-va-nghich-am-albrechtsberger]]. Tổng quan: [[he-thong-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 1-59
 ::scans albrechtsberger ex 255-263
 `,
@@ -220,7 +220,7 @@ Trong lối tự do có **hai trường hợp**:
 Tiếp theo: [[bass-so-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 60-80
 ::scans albrechtsberger ex 240-254
 `,
@@ -310,7 +310,7 @@ Mở đầu Tập I, Seyfried viết: bass liên tục "là nền tảng của m
 Đối chiếu ký hiệu hiện đại: [[ky-hieu-hop-am]]. Tiếp theo: [[dem-bass-so-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 81-148
 ::scans albrechtsberger ex 229-232
 `,
@@ -386,11 +386,12 @@ Sinh viên "sẽ đến đích sớm hơn nếu từ chối trợ giúp của c�
 Tiếp theo: [[sau-tien-hanh-nguy-hiem]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 149-181
 ::scans albrechtsberger ex 233-239
 ::scans albrechtsberger ex 264-319
 ::scans albrechtsberger ex 536-549
+::scans albrechtsberger tr 74-76
 `,
   },
   {
@@ -432,7 +433,7 @@ Những hợp âm này được chuẩn bị bằng chính hợp âm 7 mà chún
 Tiếp theo: [[hoa-am-thuan-khiet-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 182-228
 `,
   },
@@ -477,7 +478,7 @@ Sách nói dùng đúng các quãng nghịch, tăng và giảm cần "sự chắ
 Tiếp theo: [[chuyen-giong-va-ket-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 320-363
 `,
   },
@@ -547,7 +548,7 @@ Chương cuối nhóm này (§CXXIV) là hai bài bass số dài nối liền nh
 Tiếp theo — Tập II: [[nen-tang-sang-tac-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 364-535
 `,
   },
@@ -611,7 +612,7 @@ Từ Tập II, theo lời tựa, là bản thảo của **chính Albrechtsberger
 Tiếp theo: [[nam-loai-hai-be-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 550-581
 `,
   },
@@ -696,8 +697,9 @@ Mọi luật loại 1 vẫn giữ, **trừ luật 4 và 5**.
 Tiếp theo: [[ba-be-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 582-674
+::scans albrechtsberger tr 108-108
 `,
   },
   {
@@ -764,7 +766,7 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 Đối chiếu Fux: [[doi-am-ba-be-fux]]. Tiếp theo: [[bon-va-nam-be-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 675-728
 `,
   },
@@ -811,7 +813,7 @@ Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số c�
 Đối chiếu bốn bè hiện đại: [[luat-hoa-am-bon-be]]; bốn bè của Fux: [[doi-am-bon-be-fux]]. Tiếp theo: [[mo-phong-va-dao-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 729-821
 `,
   },
@@ -855,7 +857,7 @@ Tương ứng trong hệ Taneyev: [[doi-vi-dao-anh]]; trong Fux: [[doi-am-kep-fu
 Tiếp theo: [[fugue-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 822-864
 `,
   },
@@ -940,8 +942,9 @@ Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số c�
 Tiếp theo — Tập III: [[fugue-chorale-va-doi-am-kep-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 865-901
+::scans albrechtsberger tr 181-182
 `,
   },
   {
@@ -999,8 +1002,9 @@ Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số c�
 So sánh: quy tắc của Fux — [[doi-am-kep-fux]]; công thức tổng quát Iv của Taneyev — [[doi-vi-chuyen-dong-chieu-doc]]; đối âm kép trong nhạc Bach — [[doi-am-kep]]. Tiếp theo: [[fugue-kep-va-canon-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 902-983
+::scans albrechtsberger tr 213-213
 `,
   },
   {
@@ -1056,8 +1060,9 @@ Mỗi cách chính có các cách phụ "phải sinh cùng quãng"; chỉ ba cá
 Canon theo hệ Taneyev: [[canon-hai-be]], [[canon-ba-bon-be]]; các loại canon trong nhạc Bach: [[doi-am-kep]]. Tiếp theo: [[phu-luc-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 984-1036
+::scans albrechtsberger tr 237-237
 `,
   },
   {
@@ -1098,7 +1103,7 @@ Ghi chú: phần clarinet in vừa "Si" vừa "Si giáng", chưa rõ ý sách �
 Tra nhanh toàn bộ hệ thống: [[tra-cuu-albrechtsberger]].
 
 ## Ví dụ trong sách gốc
-Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+Các ví dụ nhạc cắt từ bản quét Novello 1855 theo từng khối nhạc. Số ví dụ ghi ở chú thích chỉ khi đọc được chắc chắn; nếu không, chú thích chỉ ghi trang — số "Ex." của sách vẫn in trong hình.
 ::scans albrechtsberger ex 1037-1083
 `,
   },

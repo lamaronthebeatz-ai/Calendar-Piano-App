@@ -3,8 +3,11 @@
  * `public/scans/<book>/`, the list of examples in `scans/<book>.json` (generated, loaded on demand).
  */
 export interface ScanFile { f: string; w: number; h: number }
-/** `n`: the book's example number (Albrechtsberger) or a running number on the page (Fux). */
-export interface ScanItem { n: number; page: number; files: ScanFile[] }
+/**
+ * `n`: running number; `page`: printed page; `ex`: the book's example numbers shown in the image, only when
+ * they were read reliably (Albrechtsberger) — otherwise the caption gives the page alone.
+ */
+export interface ScanItem { n: number; page: number; ex?: number[]; files: ScanFile[] }
 
 export const SCAN_BOOKS: Record<string, { source: string; url: string; unit: 'ex' | 'page' }> = {
   albrechtsberger: { source: 'Albrechtsberger, Collected Writings (Novello, 1855)', url: 'https://archive.org/details/jgalbrechtsberg00albrgoog', unit: 'ex' },
@@ -31,4 +34,17 @@ export function parseRange(s = ''): [number, number] {
 }
 
 export const scanLabel = (book: string, it: ScanItem) =>
-  SCAN_BOOKS[book]?.unit === 'ex' ? `Ví dụ ${it.n} · tr. ${it.page}` : `Tr. ${it.page} · khối ${it.n}`
+  SCAN_BOOKS[book]?.unit === 'ex' ? (it.ex?.length ? `Ví dụ ${it.ex.join(', ')} · tr. ${it.page}` : `Tr. ${it.page}`) : `Tr. ${it.page} · khối ${it.n}`
+
+/**
+ * Items for a range: by page (Fux), or (Albrechtsberger) the items whose example numbers fall in the range
+ * plus the unnumbered ones on the pages those examples occupy.
+ */
+export function selectScans(book: string, all: ScanItem[], from: number, to: number, byPage = false) {
+  if (byPage || SCAN_BOOKS[book]?.unit !== 'ex') return all.filter((it) => it.page >= from && it.page <= to)
+  const inRange = (it: ScanItem) => !!it.ex?.some((e) => e >= from && e <= to)
+  const pages = all.filter(inRange).map((it) => it.page)
+  if (!pages.length) return []
+  const lo = Math.min(...pages), hi = Math.max(...pages)
+  return all.filter((it) => inRange(it) || (!it.ex?.length && it.page >= lo && it.page <= hi))
+}

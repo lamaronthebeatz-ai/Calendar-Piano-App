@@ -327,7 +327,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
 
       {/* The page */}
       <main ref={desk} className="reader-desk relative flex min-h-0 flex-1 items-stretch justify-center px-2 pb-16 pt-14 sm:px-6">
-        <div className={clsx('reader-page relative my-2 w-full overflow-hidden', wide ? 'max-w-[1240px] is-spread' : 'max-w-[780px]')}>
+        <div className={clsx('reader-page relative my-2 w-full overflow-clip', wide ? 'max-w-[1240px] is-spread' : 'max-w-[780px]')}>
           <div
             ref={viewport}
             className="absolute inset-0 touch-pan-y select-text"
