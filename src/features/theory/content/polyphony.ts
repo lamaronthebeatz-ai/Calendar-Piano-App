@@ -66,6 +66,8 @@ Tên "nghiêm khắc" vì lối viết này phải theo những **quy tắc rấ
 5. [[doi-am-kep]] — đối âm đảo ở quãng 8, 10, 12; các loại canon.
 6. [[fugue]] — bước sang phức điệu tự do.
 
+Đọc thẳng từ nguyên văn (bản dịch Anh *Practical Rules for Learning Composition*): loạt 10 bài mở đầu ở [[he-thong-fux-gradus-ad-parnassum]] — [[quy-tac-chung-fux]], [[nam-loai-hai-be-fux]], [[doi-am-ba-be-fux]], [[doi-am-bon-be-fux]], [[mo-phong-va-fugue-hai-be-fux]], [[fugue-ba-bon-be-fux]], [[doi-am-kep-fux]], [[fugue-doi-de-va-nhieu-chu-de-fux]], [[dap-de-va-trang-tri-fux]].
+
 ## Các mốc của môn học
 | Năm | Tác phẩm lý thuyết | Ý nghĩa |
 |---|---|---|
@@ -624,6 +626,7 @@ Trong chuyển chỗ quãng 8 ba bè, có thể viết **một nguyên thể cho
 2. Thêm bè giữa sao cho mỗi phách mạnh thành 5/3 hoặc 6/3; tránh nhân đôi cảm âm.
 3. Kiểm **từng cặp** (3 cặp; bốn bè: 6 cặp). Nếu là đối vị phức tạp, kiểm thêm từng biến thể.
 Trước: [[doi-vi-dao-anh]]. Tiếp: [[mo-phong-don-gian]]. Liên quan: [[luat-hoa-am-bon-be]], [[phong-cach-palestrina]].
+Nguyên văn Fux về ba và bốn bè: [[doi-am-ba-be-fux]], [[doi-am-bon-be-fux]].
 `,
   },
   {
@@ -1052,6 +1055,7 @@ Mỗi loại có một bài riêng với đầy đủ quy tắc, ví dụ đã k
 Năm 1792 Beethoven đến Vienna học với Haydn (đến 1794, khi Haydn sang London). Haydn sắp xếp để ông học tiếp với **Johann Georg Albrechtsberger**, thầy dạy đối âm nổi tiếng nhất Vienna lúc đó và là người theo truyền thống Fux. Lộ trình: đối âm (theo loại), rồi mô phỏng, fugue hợp xướng, đối âm kép và ba bè. Hơn **300 bài tập** có chữ sửa của Albrechtsberger vẫn còn lưu giữ.
 
 Phương pháp này vẫn được dạy ở nhạc viện ngày nay. Bước tiếp theo: [[doi-am-kep]], [[fugue]]. Tổng quan: [[doi-am]].
+Đọc thẳng nguyên văn sách (bản dịch Anh thế kỷ 18): [[he-thong-fux-gradus-ad-parnassum]].
 `,
   },
   {
@@ -1099,7 +1103,7 @@ Phương pháp này vẫn được dạy ở nhạc viện ngày nay. Bước ti
 - Quãng 5/8 **ẩn**: cùng chiều vào quãng hoàn toàn.
 - Dùng **quãng 4** (nghịch trong hai bè).
 - Đồng âm ở giữa bài; quá nhiều quãng 3 liên tiếp; đối âm và cantus cùng đạt đỉnh một lúc.
-Tiếp theo: [[doi-am-loai-2]]. Tổng quan: [[phuc-dieu-nghiem-khac]].
+Tiếp theo: [[doi-am-loai-2]]. Tổng quan: [[phuc-dieu-nghiem-khac]]. Nguyên văn Fux: [[quy-tac-chung-fux]].
 `,
   },
   {
@@ -1139,7 +1143,7 @@ Theo Salzer và Schachter (dẫn trong Open Music Theory): nốt lướt thuận
 1. Viết một **khung loại 1** trên các phách mạnh (nhưng tránh quãng 5/8 liên tiếp giữa phách mạnh).
 2. Điền phách nhẹ: nếu hai phách mạnh cách nhau quãng 3 → dùng **nốt lướt**; nếu cách quãng 2 → dùng nốt thuận nhảy (ví dụ nhảy quãng 3 rồi về); nếu đứng yên → **đổi quãng 8** hoặc nốt thêu thuận.
 3. Kiểm tra song song cả **phách nhẹ → phách mạnh**.
-Tiếp theo: [[doi-am-loai-3]].
+Tiếp theo: [[doi-am-loai-3]]. Fux nói thêm gì về loại này: [[nam-loai-hai-be-fux]].
 `,
   },
   {
@@ -1179,7 +1183,7 @@ Tiếp theo: [[doi-am-loai-3]].
 2. Nối hai phách 1 bằng một **đường liền bậc** (4 nốt lấp đủ quãng 5 hoặc quãng 3 + nốt thêu).
 3. Khi hai nốt khung quá gần: dùng **nốt thêu kép** hoặc **cambiata**.
 4. Kiểm tra quãng song song "lọt khe" (phách 3, 4 → phách 1 của ô sau).
-Tiếp theo: [[doi-am-loai-4]].
+Tiếp theo: [[doi-am-loai-4]]. Fux nói thêm gì về loại này: [[nam-loai-hai-be-fux]].
 `,
   },
   {
@@ -1223,7 +1227,7 @@ Một nốt nối **thuận** (ví dụ 5 – 6, 3 – 3) là **[[dao-phach|đ�
 ## Mẹo
 - Nghĩ ngược: chọn **nốt giải quyết** (quãng 6 hoặc 3) trước, rồi lùi lên một bậc để có nốt treo, rồi kiểm nốt đó có **thuận** ở ô trước không.
 - Nốt treo đi xuống ở hầu hết phong cách — xem cách nó trở lại trong [[not-ngoai-hop-am]] và [[luat-hoa-am-bon-be]].
-Tiếp theo: [[doi-am-loai-5]].
+Tiếp theo: [[doi-am-loai-5]]. Bảng giải quyết nốt treo theo nguyên văn Fux: [[nam-loai-hai-be-fux]].
 `,
   },
   {
@@ -1255,7 +1259,7 @@ Tiếp theo: [[doi-am-loai-5]].
 2. Đặt các **nốt treo** ở những chỗ cantus đi xuống liền bậc (dễ có 7 – 6).
 3. Điền phần còn lại theo luật [[doi-am-loai-2|loại 2]] và 3.
 4. Hát to: đối âm loại 5 tốt phải **nghe như một giai điệu thanh nhạc** — đây chính là cầu nối sang [[phong-cach-palestrina]].
-Tiếp theo: [[doi-am-ba-bon-be]].
+Tiếp theo: [[doi-am-ba-bon-be]]. Fux về loại hoa mỹ: [[nam-loai-hai-be-fux]].
 `,
   },
   {
@@ -1352,7 +1356,7 @@ Viết hai bè sao cho khi đưa bè dưới lên trên một quãng 8, kết qu
 - Về Leipzig, Bach viết cả một tuyển tập trên chủ đề đó, đề tặng nhà vua và in tháng 9/1747. Tuyển tập gồm hai fugue cho đàn phím (trong đó có *Ricercar* 6 bè), một trio [[hinh-thuc-sonata|sonata]] cho sáo, [[violin|violin]] và bè trầm liên tục, cùng **mười canon** phần lớn ở dạng "câu đố".
 - **Canon cua** (*Canon a 2 cancrizans*): một bè chơi giai điệu như viết, bè kia chơi **cùng giai điệu đọc ngược từ cuối về đầu** — hai bè khớp nhau hoàn hảo.
 
-Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, nghịch hành).
+Liên quan: [[doi-am]], [[doi-am-5-loai]], [[motif]] (các kỹ thuật đảo, nghịch hành). Quy tắc của Fux cho từng loại (quãng 8, 10, 12, đảo ngược chiều): [[doi-am-kep-fux]].
 
 ## Công thức đổi quãng khi đảo
 Khi hai bè đổi chỗ (bè dưới chuyển lên trên, hoặc ngược lại) với khoảng dịch là một quãng 8, 10 hay 12, mọi quãng giữa hai bè đổi theo một công thức cố định:
@@ -1419,7 +1423,7 @@ Trình bày đầy đủ theo giáo trình Nhạc viện Hà Nội (giáo trình
 - [[Beethoven]] — **Grosse Fuge** Op. 133 cho [[nhac-thinh-phong|tứ tấu đàn dây]]: một **fugue kép** khổng lồ, ban đầu (1825) là chương cuối của Tứ tấu Op. 130. Nhà xuất bản lo bán không được nên đề nghị thay chương khác; Beethoven đồng ý và fugue được in riêng năm 1827. Giới phê bình đương thời chê bai; ngày nay nó được xếp vào hàng thành tựu lớn nhất của ông.
 - [[Shostakovich]] — **24 Prelude và Fugue** Op. 87 cho piano (1950–51), mỗi bài một giọng, lấy cảm hứng trực tiếp từ Clavier bình quân. Tatiana Nikolayeva, người được đề tặng, công diễn lần đầu ở Leningrad ngày 23/12/1952.
 
-Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Gần cuối fugue thường có [[bass-ngan]] trên át âm.
+Nền tảng: [[doi-am]], [[doi-am-kep]], [[ket-cau]]. Phương pháp viết fugue của Fux: [[mo-phong-va-fugue-hai-be-fux]], [[fugue-ba-bon-be-fux]], [[fugue-doi-de-va-nhieu-chu-de-fux]]. Gần cuối fugue thường có [[bass-ngan]] trên át âm.
 `,
   },
   {
