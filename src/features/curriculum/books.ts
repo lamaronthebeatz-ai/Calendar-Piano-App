@@ -1,4 +1,5 @@
 import harmonyCover from '../../assets/covers/hoa-am-co-dien.webp'
+import polyphonyCover from '../../assets/covers/phuc-dieu-nghiem-khac.webp'
 import type { Book } from './types'
 
 /**
@@ -6,6 +7,7 @@ import type { Book } from './types'
  * thứ tự học; phần mở đầu, lời dẫn từng phần và bài tập cuối phần được viết riêng cho sách.
  * Quyển 1 ứng với nhạc lý khoảng ABRSM Grade 1 – 3, Quyển 2 với Grade 4 – 5 và các nền tảng hoà âm, hình thức.
  * Hoà Âm Cổ Điển theo thứ tự chủ đề của sách bốn tác giả (trường phái Nga – Xô viết).
+ * Phức Điệu Nghiêm Khắc theo hệ thống Taneyev và giáo trình Nhạc viện Hà Nội (Phạm Tú Hương, 1991).
  */
 export const BOOKS: Book[] = [
   {
@@ -279,7 +281,7 @@ Cuốn này dạy **hoà âm cổ điển** — hoà âm của thời kỳ thôn
 ## Hệ thống của sách
 Trình tự các bài bám theo thứ tự chủ đề của *Учебник гармонии* (Giáo trình hoà âm) của **I. Dubovsky, S. Evseev, I. Sposobin, V. Sokolov** — thường gọi là "sách giáo khoa bốn tác giả", in lần đầu ở Moskva năm 1937 – 38. Mỗi bài ghi rõ chủ đề tương ứng trong sách đó ở phần "Mục tiêu bài học"; số thứ tự chủ đề theo các bản in gần đây (2005 – 2012), lệch khoảng hai số so với bản 1965, và vài số ở giữa còn mâu thuẫn giữa các nguồn. Lịch sử, gốc lý thuyết (Riemann qua Catoire) và đặc trưng của sách được trình bày ở bài đầu tiên của Phần I.
 
-Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị di động của lối viết nghiêm khắc*, 1909) là hệ thống của môn **phức điệu**, không phải của môn hoà âm — xem [[phuc-dieu-nghiem-khac]]. Cuốn sách này theo hệ thống hoà âm của sách bốn tác giả.
+Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị di động của lối viết nghiêm khắc*, 1909) là hệ thống của môn **phức điệu**, không phải của môn hoà âm — xem cuốn *Phức Điệu Nghiêm Khắc* trong tủ sách và bài [[phuc-dieu-nghiem-khac]]. Cuốn sách này theo hệ thống hoà âm của sách bốn tác giả.
 
 ## Cách đọc
 1. Cần nắm trước: quãng, âm giai, hoá biểu, hợp âm ba và hợp âm bảy — tức là hai quyển *Nhạc Lý Cơ Bản*.
@@ -389,6 +391,114 @@ Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị d
           'Phân tích hoà âm bằng ký hiệu chức năng toàn bộ một chorale của Bach và chương 2 một sonatina Cổ điển.',
           'Chơi trên đàn chuỗi T – S – K64 – D7 – T ở mọi giọng đến 4 dấu.',
           'Làm một đề thi hoà âm viết (giai điệu và bè trầm cho sẵn) trong 3 giờ.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'phuc-dieu-nghiem-khac',
+    title: 'Phức Điệu Nghiêm Khắc',
+    volume: 'Sergei Taneev',
+    subtitle: 'Phức điệu nghiêm khắc theo hệ thống Taneyev và giáo trình Nhạc viện Hà Nội: giai điệu, đối vị đơn giản và phức tạp (chỉ số Iv, Ih), đảo ảnh, ba – bốn bè, mô phỏng, canon và hình thức.',
+    author: 'Lamar',
+    audience: 'Đã học xong Nhạc Lý Cơ Bản · song song Hoà Âm Cổ Điển',
+    hue: 75,
+    glyph: '♮',
+    coverImage: polyphonyCover,
+    preface: `
+Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè của thanh nhạc nhà thờ thế kỷ 14 – 16 (Palestrina, Lassus, Josquin), được giản lược thành một môn học có quy tắc chặt về giai điệu và về cách kết hợp các giai điệu.
+
+## Hệ thống của sách
+- **Sergei Ivanovich Taneyev** (1856 – 1915; tên còn được phiên là Taneev) toán học hoá việc đổi chỗ các bè trong cuốn *Đối vị di động của lối viết nghiêm khắc* (Leipzig, 1909; bản tiếng Anh 1962): mọi trường hợp đối vị phức tạp được tính bằng các chỉ số **Iv** (chiều dọc) và **Ih** (chiều ngang).
+- Ở Việt Nam, giáo trình *Phức điệu nghiêm khắc* của **Phạm Tú Hương** (Nhạc viện Hà Nội, 1991; hiệu đính Nguyễn Thụy Loan) trình bày theo hệ thống này. Trình tự các phần của sách — giai điệu, phức điệu tương phản, phức điệu mô phỏng, hình thức — bám theo trình tự đó, như ở bài đầu tiên của Phần I.
+- Ở những chỗ quan trọng, các bài đối chiếu với phương pháp năm loại của **Fux** (*Gradus ad Parnassum*, 1725) và với phong cách Palestrina theo **Jeppesen**; Phần VI gom các bảng đối chiếu, công thức và thuật ngữ.
+
+## Cách đọc
+1. Cần nắm trước: quãng, quãng đảo, thuận – nghịch, điệu thức — tức là hai quyển *Nhạc Lý Cơ Bản*. Có thể học song song *Hoà Âm Cổ Điển*.
+2. **Hát một bè, chơi bè kia trên đàn**; phức điệu phải nghe được từng giai điệu riêng.
+3. Với đối vị phức tạp, **nghĩ bằng con số**: đổi quãng sang số, cộng chỉ số Iv, rồi tra xem quãng nào đổi tính chất.
+4. Làm bài tập ôn tập cuối mỗi phần; câu hỏi ôn tập cuối bài có đáp án ở cuối sách.
+`,
+    parts: [
+      {
+        title: 'Nhập môn: khái niệm và quy ước',
+        intro: 'Phần mở đầu của giáo trình: phức điệu và đối vị là gì, ba dạng phức điệu (tương phản, mô phỏng, bè tòng), và hệ ký hiệu dùng suốt cuốn sách — ghi quãng bằng số theo Taneyev, ký hiệu bè bằng số La Mã với dấu ±, các chữ viết tắt NT, BT, Iv, Ih, P, R.',
+        chapters: [
+          { slug: 'phuc-dieu-nghiem-khac', focus: 'Nghiêm khắc và tự do; hai truyền thống giảng dạy; lộ trình theo giáo trình Nhạc viện Hà Nội.' },
+          { slug: 'khai-niem-va-quy-uoc-phuc-dieu', focus: 'Ba dạng phức điệu; ghi quãng bằng số (hệ Taneyev); ký hiệu bè, dấu ± và chữ viết tắt.' },
+          { slug: 'phong-cach-palestrina', focus: 'Phong cách thật của thế kỷ 16 mà môn học giản lược lại.' },
+        ],
+        exercises: [
+          'Đổi 12 quãng (quãng 2 đến quãng 12, cả thuận và nghịch) sang cách ghi bằng số của Taneyev và ngược lại.',
+          'Nghe một đoạn thánh lễ của Palestrina, chỉ ra chỗ phức điệu tương phản và chỗ mô phỏng.',
+        ],
+      },
+      {
+        title: 'Giai điệu',
+        intro: 'Phần 1 của giáo trình: một giai điệu viết theo lối nghiêm khắc phải đúng ba nhóm quy định — điệu thức diatonic cổ, tiến hành cao độ (liền bậc là chính, nhảy xong phải phản hồi) và tiết tấu (nhịp lớn, không đảo phách). Viết đúng giai điệu là nền của mọi phần sau.',
+        chapters: [
+          { slug: 'giai-dieu-phuc-dieu-nghiem-khac', focus: 'Điệu thức, tiến hành cao độ và tiết tấu của giai điệu nghiêm khắc.' },
+        ],
+        exercises: [
+          'Viết 4 giai điệu 8 – 12 nhịp ở điệu thức Dorian, Phrygian, Mixolydian và Aeolian, đúng mọi quy định về bước nhảy và phản hồi.',
+          'Tự kiểm tra từng giai điệu: đánh dấu mọi bước nhảy và nốt phản hồi, tìm âm hưởng ba cung và mô tiến (phải tránh).',
+        ],
+      },
+      {
+        title: 'Phức điệu tương phản: đối vị đơn giản và phức tạp',
+        intro: 'Phần 2 của giáo trình — trung tâm của hệ thống Taneyev: đối vị đơn giản hai bè (quãng thuận, quãng nghịch, nốt lưu), rồi đối vị phức tạp với nguyên thể và biến thể, chuyển động chiều dọc (Iv), chiều ngang (Ih), đảo ảnh, tăng thêm quãng bán thuận, và đối vị ba – bốn bè.',
+        chapters: [
+          { slug: 'doi-vi-don-gian-hai-be', focus: 'Đối tỉ tiết tấu và hướng đi; quãng thuận, quãng nghịch; nốt lưu, lướt, thêu, sớm, thoát.' },
+          { slug: 'doi-vi-phuc-tap', focus: 'Nguyên thể – biến thể; ba loại đối vị phức tạp theo giáo trình Việt Nam.' },
+          { slug: 'doi-vi-chuyen-dong-chieu-doc', focus: 'Chỉ số Iv: chuyển chỗ, chuyển gần, chuyển xa ở quãng 8, 12, 10; Iv tổng hợp.' },
+          { slug: 'doi-vi-chuyen-dong-chieu-ngang', focus: 'Chỉ số Ih; phương pháp bè canon giả; đối vị ngang – dọc.' },
+          { slug: 'doi-vi-dao-anh', focus: 'Đảo ảnh (soi gương) và tăng thêm quãng bán thuận.' },
+          { slug: 'doi-am-ba-bon-be', focus: 'Ba bè là ba cặp hai bè; Iv1 + Iv2 = Iv3; tam trùng và tứ trùng đối vị.' },
+        ],
+        exercises: [
+          'Viết đối vị đơn giản hai bè (8 – 10 nhịp) trên một giai điệu cho sẵn, có ít nhất hai nốt lưu đúng sơ đồ chuẩn bị – giải quyết.',
+          'Viết một nguyên thể dùng được cho biến thể Iv = −7 (chuyển chỗ quãng 8); viết biến thể và kiểm tra mọi quãng đổi tính chất.',
+          'Lặp lại với Iv = −11 (chuyển chỗ quãng 12) và Iv = −9 (chuyển chỗ quãng 10).',
+          'Viết đối vị ba bè từ một khung hai bè; kiểm tra lần lượt cặp trên, cặp dưới, cặp ngoài.',
+        ],
+      },
+      {
+        title: 'Phức điệu mô phỏng: mô phỏng và canon',
+        intro: 'Phần 3 của giáo trình: cùng một giai điệu xuất hiện lần lượt ở các bè. Từ mô phỏng đơn giản (P và R, bảy hình thức mô phỏng) đến canon hai bè (canon vô tận, canon mô tiến — chọn quãng bằng công thức Iv) và canon ba, bốn bè với sáu cách xuất phát.',
+        chapters: [
+          { slug: 'mo-phong-don-gian', focus: 'P và R; bảy hình thức mô phỏng đơn giản; mô phỏng ba – bốn bè và mô phỏng kép.' },
+          { slug: 'canon-hai-be', focus: 'Canon vô tận (Iv = 2x) và canon mô tiến (Iv = x + y), loại I và loại II.' },
+          { slug: 'canon-ba-bon-be', focus: 'Sáu cách xuất phát; loại và kiểu; cặp bè cần đối vị phức tạp.' },
+        ],
+        exercises: [
+          'Viết mô phỏng đơn giản hai bè ở quãng 5 và ở quãng 8, mỗi bài 8 nhịp, có phần tự do sau khi mô phỏng dừng.',
+          'Viết một canon vô tận hai bè ở quãng 8; tính Iv và kiểm tra chỗ nối vòng.',
+          'Viết một canon mô tiến hai bè, chỉ rõ x, y và hướng mô tiến.',
+        ],
+      },
+      {
+        title: 'Hình thức',
+        intro: 'Phần 4 của giáo trình: các kỹ thuật được ghép thành hình thức — đoạn nhạc phức điệu (không chia câu, kết khi mọi bè cùng dừng), thể hai đoạn tương phản và mô phỏng, thể ba đoạn với đoạn giữa tương phản và tái hiện bằng một biến thể; các dạng bốn bè là mầm mống của fugue.',
+        chapters: [
+          { slug: 'hinh-thuc-phuc-dieu-nghiem-khac', focus: 'Đoạn nhạc phức điệu; thể hai đoạn; thể ba đoạn; mầm mống fugue.' },
+        ],
+        exercises: [
+          'Viết một thể hai đoạn tương phản: đoạn 1 là đối vị hai bè, đoạn 2 là biến thể Iv của đoạn 1.',
+          'Viết một thể ba đoạn ngắn ba bè: đoạn 2 chuyển sang giọng át, đoạn 3 tái hiện bằng một biến thể.',
+        ],
+      },
+      {
+        title: 'Tra cứu và đối chiếu',
+        intro: 'Phần cuối gom những gì cần mở lại nhiều lần khi làm bài: bảng công thức và mẹo nhớ, thuật ngữ Việt – Anh – Nga – Ý, và hai bài của truyền thống phương Tây để đối chiếu — phương pháp năm loại của Fux và đối âm kép, canon trong nhạc Bach.',
+        chapters: [
+          { slug: 'cong-thuc-phuc-dieu', focus: 'Toàn bộ quy tắc trên một trang; công thức Taneyev; mười hai câu kiểm tra.' },
+          { slug: 'thuat-ngu-phuc-dieu', focus: 'Đối chiếu thuật ngữ Việt – Anh – Nga – Ý và những chỗ hai truyền thống đặt tên khác nhau.' },
+          { slug: 'doi-am-5-loai', focus: 'Phương pháp năm loại của Fux — truyền thống phương Tây tương ứng.' },
+          { slug: 'doi-am-kep', focus: 'Đối âm kép và canon trong nhạc Bach; hệ thống Taneyev nhìn từ phía phương Tây.' },
+        ],
+        exercises: [
+          'Dùng mười hai câu kiểm tra để rà lại mọi bài tập đã làm trong sách.',
+          'Viết lại một bài đối vị hai bè của Phần III theo đúng các bước của phương pháp năm loại (loại 1 rồi loại 2, 3) và so sánh.',
         ],
       },
     ],
