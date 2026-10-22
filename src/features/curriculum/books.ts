@@ -1,5 +1,6 @@
 import harmonyCover from '../../assets/covers/hoa-am-co-dien.webp'
 import polyphonyCover from '../../assets/covers/phuc-dieu-nghiem-khac.webp'
+import fuxCover from '../../assets/covers/doi-am-fux.webp'
 import type { Book } from './types'
 
 /**
@@ -399,7 +400,7 @@ Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị d
     id: 'phuc-dieu-nghiem-khac',
     title: 'Phức Điệu Nghiêm Khắc',
     volume: 'Sergei Taneev',
-    subtitle: 'Phức điệu nghiêm khắc theo hệ thống Taneyev và giáo trình Nhạc viện Hà Nội — giai điệu, đối vị đơn giản và phức tạp (chỉ số Iv, Ih), đảo ảnh, ba – bốn bè, mô phỏng, canon, hình thức — và theo hệ thống Fux đọc từ nguyên văn Gradus ad Parnassum: năm loại, ba – bốn bè, fugue, đối âm kép.',
+    subtitle: 'Phức điệu nghiêm khắc theo hệ thống Taneyev và giáo trình Nhạc viện Hà Nội: giai điệu, đối vị đơn giản và phức tạp (chỉ số Iv, Ih), đảo ảnh, ba – bốn bè, mô phỏng, canon và hình thức.',
     author: 'Lamar',
     audience: 'Đã học xong Nhạc Lý Cơ Bản · song song Hoà Âm Cổ Điển',
     hue: 75,
@@ -411,8 +412,8 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
 ## Hệ thống của sách
 - **Sergei Ivanovich Taneyev** (1856 – 1915; tên còn được phiên là Taneev) toán học hoá việc đổi chỗ các bè trong cuốn *Đối vị di động của lối viết nghiêm khắc* (Leipzig, 1909; bản tiếng Anh 1962): mọi trường hợp đối vị phức tạp được tính bằng các chỉ số **Iv** (chiều dọc) và **Ih** (chiều ngang).
 - Ở Việt Nam, giáo trình *Phức điệu nghiêm khắc* của **Phạm Tú Hương** (Nhạc viện Hà Nội, 1991; hiệu đính Nguyễn Thụy Loan) trình bày theo hệ thống này. Trình tự các phần của sách — giai điệu, phức điệu tương phản, phức điệu mô phỏng, hình thức — bám theo trình tự đó, như ở bài đầu tiên của Phần I.
-- Phần VI – VIII trình bày **hệ thống Fux** đọc thẳng từ nguyên văn *Gradus ad Parnassum* (1725) qua bản dịch Anh thế kỷ 18 *Practical Rules for Learning Composition*: năm loại hai bè, ba – bốn bè, mô phỏng, fugue, đối âm kép, đáp đề. Hai hệ thống bổ sung nhau: Fux cho quy tắc và ví dụ, Taneyev tổng quát hoá thành công thức.
-- Ở những chỗ quan trọng, các bài đối chiếu với phong cách Palestrina theo **Jeppesen**; Phần IX gom các bảng công thức và thuật ngữ.
+- Cuốn sách chỉ trình bày hệ thống Taneyev. Phương pháp năm loại của **Fux** là một cuốn riêng trong tủ sách: *Những Bước Lên Đỉnh Parnassus*.
+- Phần VI gom bảng công thức và thuật ngữ.
 
 ## Cách đọc
 1. Cần nắm trước: quãng, quãng đảo, thuận – nghịch, điệu thức — tức là hai quyển *Nhạc Lý Cơ Bản*. Có thể học song song *Hoà Âm Cổ Điển*.
@@ -425,9 +426,8 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         title: 'Nhập môn: khái niệm và quy ước',
         intro: 'Phần mở đầu của giáo trình: phức điệu và đối vị là gì, ba dạng phức điệu (tương phản, mô phỏng, bè tòng), và hệ ký hiệu dùng suốt cuốn sách — ghi quãng bằng số theo Taneyev, ký hiệu bè bằng số La Mã với dấu ±, các chữ viết tắt NT, BT, Iv, Ih, P, R.',
         chapters: [
-          { slug: 'phuc-dieu-nghiem-khac', focus: 'Nghiêm khắc và tự do; hai truyền thống giảng dạy; lộ trình theo giáo trình Nhạc viện Hà Nội.' },
+          { slug: 'phuc-dieu-nghiem-khac', focus: 'Nghiêm khắc và tự do; trường phái Nga – Việt Nam; lộ trình theo giáo trình Nhạc viện Hà Nội.' },
           { slug: 'khai-niem-va-quy-uoc-phuc-dieu', focus: 'Ba dạng phức điệu; ghi quãng bằng số (hệ Taneyev); ký hiệu bè, dấu ± và chữ viết tắt.' },
-          { slug: 'phong-cach-palestrina', focus: 'Phong cách thật của thế kỷ 16 mà môn học giản lược lại.' },
         ],
         exercises: [
           'Đổi 12 quãng (quãng 2 đến quãng 12, cả thuận và nghịch) sang cách ghi bằng số của Taneyev và ngược lại.',
@@ -489,11 +489,63 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         ],
       },
       {
-        title: 'Hệ thống Fux I: đối âm hai bè',
-        intro: 'Phần này đọc thẳng nguyên văn Gradus ad Parnassum của Fux (1725) qua bản dịch Anh thế kỷ 18 Practical Rules for Learning Composition: nguồn và cấu trúc sách, sáu quy tắc chung, rồi năm loại đối âm hai bè trên cantus firmus — nốt chọi nốt, hai nốt, bốn nốt, nối lệch phách, hoa mỹ — đúng con đường mà Haydn, Mozart, Beethoven đã đi.',
+        title: 'Tra cứu và đối chiếu',
+        intro: 'Phần cuối gom những gì cần mở lại nhiều lần khi làm bài: bảng công thức của hệ Taneyev và thuật ngữ Việt – Anh – Nga – Ý.',
         chapters: [
-          { slug: 'he-thong-fux-gradus-ad-parnassum', focus: 'Nguồn, ấn bản, cấu trúc năm chương; thuật ngữ cổ – hiện đại; đối chiếu Fux với Taneyev.' },
+          { slug: 'cong-thuc-phuc-dieu', focus: 'Quãng bằng số, nốt lưu, mọi công thức Iv – Ih và câu kiểm tra trên một trang.' },
+          { slug: 'thuat-ngu-phuc-dieu', focus: 'Đối chiếu thuật ngữ Việt – Anh – Nga – Ý của giáo trình.' },
+        ],
+        exercises: [
+          'Dùng mười hai câu kiểm tra để rà lại mọi bài tập đã làm trong sách.',
+          'Lập bảng tra Iv cho cả ba trường hợp chuyển chỗ quãng 8, 10, 12 và đánh dấu những quãng đổi tính chất.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'doi-am-fux',
+    title: 'Những Bước Lên Đỉnh Parnassus',
+    volume: 'Johann Joseph Fux',
+    subtitle: 'Hướng dẫn thực hành nghệ thuật đối âm theo phong cách Palestrina — đọc từ nguyên văn Gradus ad Parnassum (1725): năm loại đối âm, ba – bốn bè, mô phỏng, fugue, đối âm kép và các nguyên tắc sáng tác phức điệu.',
+    author: 'Lamar',
+    audience: 'Đã học xong Nhạc Lý Cơ Bản · song song Hoà Âm Cổ Điển',
+    hue: 25,
+    glyph: '𝄞',
+    coverImage: fuxCover,
+    preface: `
+*Gradus ad Parnassum* — "những bậc thang lên núi Parnassus", nơi ở của các nàng thơ — là sách dạy đối âm của **Johann Joseph Fux** (1660 – 1741), nhạc trưởng triều đình Vienna, in năm 1725. Ba thế kỷ nay nó là con đường học đối âm kinh điển của phương Tây.
+
+## Hệ thống của sách
+- Sách đọc theo **bản dịch Anh thế kỷ 18** *Practical Rules for Learning Composition* — bản rút gọn bỏ hình thức đối thoại, giữ quy tắc và ví dụ. Năm in của bản dịch chưa chắc (thư mục Thư viện Quốc hội Mỹ ghi [1791?]); chi tiết ở bài đầu tiên.
+- Trình tự các phần bám theo trình tự của Fux: đối âm hai bè qua **năm loại** trên cantus firmus, rồi ba bè, bốn bè, mô phỏng, fugue, đối âm kép, fugue nhiều chủ đề, đáp đề và phong cách *a cappella*.
+- Mỗi loại có hai lớp bài: **bài luyện tập** (quy tắc, ví dụ đã kiểm, quy trình viết theo các giáo trình hiện đại) và **bài nguyên văn** (những gì chính Fux nói, kể cả chỗ khác giáo trình hiện đại — ghi rõ trong bài).
+- Phương pháp của trường phái Nga – Việt Nam (Taneyev) là một cuốn riêng: *Phức Điệu Nghiêm Khắc*.
+
+## Cách đọc
+1. Cần nắm trước: quãng, quãng đảo, thuận – nghịch, điệu thức — tức là hai quyển *Nhạc Lý Cơ Bản*.
+2. **Đi đúng thứ tự các loại**; mỗi loại viết ít nhất hai bài: đối âm ở trên và ở dưới cantus.
+3. **Hát một bè, chơi bè kia trên đàn** — Fux luôn đặt giai điệu đẹp lên trên quy tắc.
+4. Làm bài tập ôn tập cuối mỗi phần; câu hỏi ôn tập cuối bài có đáp án ở cuối sách.
+`,
+    parts: [
+      {
+        title: 'Nhập môn: Fux và phong cách Palestrina',
+        intro: 'Cuốn Gradus ad Parnassum (1725), bản dịch Anh thế kỷ 18 mà sách này đọc theo, thuật ngữ cổ – hiện đại; đối âm là gì, phương pháp năm loại ra đời và được truyền lại thế nào; và phong cách Palestrina — mẫu mực mà Fux muốn học trò đạt tới.',
+        chapters: [
+          { slug: 'he-thong-fux-gradus-ad-parnassum', focus: 'Nguồn, ấn bản, cấu trúc năm chương; thuật ngữ cổ – hiện đại; các mốc của truyền thống; lộ trình.' },
+          { slug: 'doi-am', focus: 'Đối âm là gì: tên gọi, lịch sử, các kiểu chuyển động.' },
           { slug: 'doi-am-5-loai', focus: 'Bối cảnh lịch sử của phương pháp năm loại và vì sao nó sống ba thế kỷ.' },
+          { slug: 'phong-cach-palestrina', focus: 'Phong cách thật của thế kỷ 16 mà Fux lấy làm mẫu, theo Jeppesen.' },
+        ],
+        exercises: [
+          'Lập bảng thuật ngữ của bản dịch thế kỷ 18 (concord, discord, minum, crotchet, mi against fa, formal cadence…) với nghĩa hiện nay và tiếng Việt, rồi tự kiểm lại bằng bài mở đầu.',
+          'Nghe một Kyrie của Palestrina, ghi lại năm đặc điểm giai điệu (liền bậc, bước nhảy có bù, đỉnh duy nhất…) mà sách sẽ biến thành quy tắc.',
+        ],
+      },
+      {
+        title: 'Đối âm hai bè: năm loại',
+        intro: 'Chương I của Fux: quãng và chuyển động, cantus firmus, sáu quy tắc chung, rồi năm loại đối âm hai bè trên cantus firmus — nốt chọi nốt, hai nốt, bốn nốt, nối lệch phách, hoa mỹ — đúng con đường mà Haydn, Mozart, Beethoven đã đi.',
+        chapters: [
           { slug: 'quang-va-chuyen-dong-doi-am', focus: 'Phân loại quãng, bốn kiểu chuyển động, quãng 5/8 song song và ẩn.' },
           { slug: 'cantus-firmus', focus: 'Viết và kiểm tra giai điệu cho sẵn.' },
           { slug: 'quy-tac-chung-fux', focus: 'Sáu quy tắc chung của Fux; ba điểm của đối âm nốt chọi nốt; nốt áp chót 6 trưởng – 3 thứ.' },
@@ -511,7 +563,7 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         ],
       },
       {
-        title: 'Hệ thống Fux II: ba và bốn bè',
+        title: 'Ba và bốn bè',
         intro: 'Fux coi ba bè là kết cấu hoàn hảo nhất vì chứa trọn hợp âm ba; bè thứ tư chỉ là bè nhân đôi. Phần này đi qua năm loại ở ba bè (cantus lần lượt ở bè trên, giữa, dưới) và ở bốn bè: chọn nốt nhân đôi, thứ tự quãng 5 dưới – quãng 3 trên, đi kèm nốt treo, những ngoại lệ Fux tự giải thích.',
         chapters: [
           { slug: 'doi-am-ba-be-fux', focus: 'Hợp âm ba ở mỗi ô; chừa chỗ cho chuyển động ngược chiều; từng loại ở ba bè; quãng 5 được che bởi nốt treo chỉ ở bè giữa.' },
@@ -523,7 +575,7 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         ],
       },
       {
-        title: 'Hệ thống Fux III: mô phỏng, fugue, đối âm kép',
+        title: 'Mô phỏng, fugue và đối âm kép',
         intro: 'Nửa sau sách của Fux: mô phỏng và luật giọng của fugue, phương pháp viết fugue hai bè theo từng bước, bè thứ ba – thứ tư và các loại kết, đối âm kép ở quãng 8, 10, 12 cùng hai kiểu đảo ngược chiều, fugue có đối đề và nhiều chủ đề, quy tắc đáp đề, trang trí và phong cách a cappella.',
         chapters: [
           { slug: 'mo-phong-va-fugue-hai-be-fux', focus: 'Mô phỏng và fugue khác nhau thế nào; giọng giới hạn bởi quãng 5 và quãng 4; sáu bước viết fugue hai bè.' },
@@ -542,15 +594,14 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         ],
       },
       {
-        title: 'Tra cứu và đối chiếu',
-        intro: 'Phần cuối gom những gì cần mở lại nhiều lần khi làm bài: bảng công thức và mẹo nhớ của cả hai hệ thống Taneyev và Fux, và thuật ngữ Việt – Anh – Nga – Ý.',
+        title: 'Tra cứu',
+        intro: 'Toàn bộ quy tắc của phương pháp năm loại trên một trang, để mở lại khi làm bài.',
         chapters: [
-          { slug: 'cong-thuc-phuc-dieu', focus: 'Toàn bộ quy tắc trên một trang; công thức Taneyev; mười hai câu kiểm tra.' },
-          { slug: 'thuat-ngu-phuc-dieu', focus: 'Đối chiếu thuật ngữ Việt – Anh – Nga – Ý và những chỗ hai truyền thống đặt tên khác nhau.' },
+          { slug: 'cong-thuc-doi-am-fux', focus: 'Bảng quãng, ma trận chuyển động, từng loại, nốt treo, đảo ở quãng 8 – 10 – 12, mười hai câu kiểm tra.' },
         ],
         exercises: [
           'Dùng mười hai câu kiểm tra để rà lại mọi bài tập đã làm trong sách.',
-          'Viết lại một bài đối vị hai bè của Phần III theo hệ Fux (loại 1 rồi loại 2, 3) và so sánh hai cách tiếp cận.',
+          'Viết từ đầu một bài loại 5 trên cantus mới, chỉ nhìn bảng tra, rồi so với các quy tắc nguyên văn ở Phần II.',
         ],
       },
     ],

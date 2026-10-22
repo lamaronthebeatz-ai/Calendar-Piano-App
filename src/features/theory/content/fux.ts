@@ -16,8 +16,13 @@ export const fux: Article[] = [
     category: 'polyphony',
     also: ['musicology'],
     aliases: ['hệ thống Fux', 'Gradus ad Parnassum', 'Practical Rules for Learning Composition', 'lộ trình Fux', 'phương pháp Fux', 'Fux nguyên văn'],
-    summary: 'Trang mở đầu của loạt bài đọc thẳng từ bản dịch Anh thế kỷ 18 của Gradus ad Parnassum (Practical Rules for Learning Composition): nguồn và những điểm chưa chắc về ấn bản, cấu trúc năm chương của sách, các khái niệm nền (đối âm đơn giản và hoa mỹ, cantus firmus ở trên hay ở dưới), bảng thuật ngữ cổ – hiện đại, đối chiếu với hệ Taneyev và lộ trình học 12 bước trong thư viện.',
-    refs: [SRC, IMSLP, WIKI, ['Wikipedia — Johann Joseph Fux', 'https://en.wikipedia.org/wiki/Johann_Joseph_Fux']],
+    summary: 'Trang mở đầu của hệ thống Fux, đọc thẳng từ bản dịch Anh thế kỷ 18 của Gradus ad Parnassum (Practical Rules for Learning Composition): nguồn và những điểm chưa chắc về ấn bản, cấu trúc năm chương của sách, các khái niệm nền (đối âm đơn giản và hoa mỹ, cantus firmus ở trên hay ở dưới), bảng thuật ngữ cổ – hiện đại, các mốc của truyền thống và lộ trình học trong thư viện.',
+    refs: [
+      SRC, IMSLP, WIKI,
+      ['Wikipedia — Johann Joseph Fux', 'https://en.wikipedia.org/wiki/Johann_Joseph_Fux'],
+      ['Wikipedia — Gioseffo Zarlino', 'https://en.wikipedia.org/wiki/Gioseffo_Zarlino'],
+      ['Jeppesen, Counterpoint: The Polyphonic Vocal Style of the Sixteenth Century (Internet Archive)', 'https://ia801707.us.archive.org/2/items/counterpointpoly00jepp/counterpointpoly00jepp.pdf'],
+    ],
     body: `
 ## Nguồn của loạt bài
 - **Nguyên bản**: [[johann-joseph-fux|Johann Joseph Fux]] (1660 – 1741), *Gradus ad Parnassum* ("Những bậc thang lên núi Parnassus"), tiếng Latin, Vienna 1725, đề tặng hoàng đế Charles VI — người Fux phục vụ làm nhạc trưởng triều đình. Phần thực hành viết dưới dạng đối thoại thầy Aloysius – trò Josephus (xem [[doi-am-5-loai]]).
@@ -58,30 +63,31 @@ export const fux: Article[] = [
 | Contra subject | countersubject | đối đề |
 | Treble, Counter Tenor, Tenor, Bass | soprano, alto, tenor, bass | S, A, T, B |
 
-## Đối chiếu với hệ Taneyev
-| Fux | Giáo trình Nhạc viện Hà Nội (Taneyev) |
-|---|---|
-| Năm loại trên cantus firmus, tăng dần độ khó | Viết thẳng [[doi-vi-don-gian-hai-be|đối vị đơn giản hai bè]] hoàn chỉnh |
-| Đối âm kép ở quãng 8, 10, 12 (ba trường hợp, kèm bảng số) | [[doi-vi-chuyen-dong-chieu-doc|Chỉ số Iv]] tổng quát cho mọi khoảng dịch |
-| Đảo ngược chiều "đơn" và "nghiêm" | [[doi-vi-dao-anh|Đối vị đảo ảnh]] |
-| Mô phỏng tự do và fugue có luật giọng | [[mo-phong-don-gian]], [[canon-hai-be]], [[canon-ba-bon-be]] |
-Hai hệ không mâu thuẫn: Fux đưa ra **quy tắc và ví dụ**, Taneyev **tổng quát hoá** chúng thành công thức — xem [[phuc-dieu-nghiem-khac]].
+## Các mốc của truyền thống
+| Năm | Tác phẩm | Ý nghĩa |
+|---|---|---|
+| 1558 | Zarlino, *Le istitutioni harmoniche* | Giải thích lệnh cấm quãng 5, [[dan-giong|quãng 8 song song]]; coi hợp âm ba là nền |
+| 1725 | Fux, *Gradus ad Parnassum* (tiếng Latin, Vienna) | Phương pháp **năm loại** — đối thoại giữa thầy Aloysius (đại diện [[giovanni-pierluigi-da-palestrina|Palestrina]]) và trò Josephus |
+| Thế kỷ 18 | Bản dịch Anh *Practical Rules for Learning Composition* | Bản rút gọn dùng cho loạt bài này |
+| 1931 | Jeppesen, *Counterpoint* (tiếng Đan Mạch; tiếng Đức 1935, tiếng Anh 1939) | Sửa nhiều chỗ của Fux theo đúng phong cách Palestrina — xem [[phong-cach-palestrina]] |
+Trường phái Nga – Việt Nam (Taneyev) là một hệ thống riêng: [[phuc-dieu-nghiem-khac]].
 
-## Lộ trình 12 bước
-1. [[quang-va-chuyen-dong-doi-am]] — quãng và chuyển động.
-2. [[cantus-firmus]] — giai điệu cho sẵn.
-3. [[quy-tac-chung-fux]] — sáu quy tắc chung và loại 1 theo nguyên văn.
-4. [[doi-am-loai-1]] → [[doi-am-loai-2]] → [[doi-am-loai-3]] → [[doi-am-loai-4]] → [[doi-am-loai-5]] — luyện từng loại.
-5. [[nam-loai-hai-be-fux]] — những chi tiết Fux nói thêm ở từng loại.
-6. [[doi-am-ba-be-fux]].
-7. [[doi-am-bon-be-fux]].
+## Lộ trình
+1. [[doi-am]] — đối âm là gì; [[doi-am-5-loai]] — phương pháp năm loại và số phận cuốn *Gradus*; [[phong-cach-palestrina]] — phong cách mà Fux lấy làm mẫu.
+2. [[quang-va-chuyen-dong-doi-am]] — quãng và chuyển động.
+3. [[cantus-firmus]] — giai điệu cho sẵn.
+4. [[quy-tac-chung-fux]] — sáu quy tắc chung và loại 1 theo nguyên văn.
+5. [[doi-am-loai-1]] → [[doi-am-loai-2]] → [[doi-am-loai-3]] → [[doi-am-loai-4]] → [[doi-am-loai-5]] — luyện từng loại.
+6. [[nam-loai-hai-be-fux]] — những chi tiết Fux nói thêm ở từng loại.
+7. [[doi-am-ba-be-fux]] → [[doi-am-bon-be-fux]].
 8. [[mo-phong-va-fugue-hai-be-fux]] — mô phỏng, luật giọng của fugue, fugue hai bè.
 9. [[fugue-ba-bon-be-fux]] — bè thứ ba, thứ tư và các loại kết.
-10. [[doi-am-kep-fux]] — quãng 8, 10, 12 và đảo ngược chiều.
+10. [[doi-am-kep-fux]] — quãng 8, 10, 12 và đảo ngược chiều; [[doi-am-kep]] — đối âm kép và canon trong nhạc Bach.
 11. [[fugue-doi-de-va-nhieu-chu-de-fux]].
 12. [[dap-de-va-trang-tri-fux]] — quy tắc đáp đề, trang trí, phong cách *a cappella*.
+13. [[fugue]] — bước sang phức điệu tự do.
 
-Bối cảnh lịch sử và lý do sách sống 300 năm: [[doi-am-5-loai]], [[phong-cach-palestrina]]. Ngôn ngữ chung của môn: [[thuat-ngu-phuc-dieu]], [[cong-thuc-phuc-dieu]].
+Bảng tra nhanh: [[cong-thuc-doi-am-fux]].
 `,
   },
   {
@@ -221,7 +227,7 @@ Fux lập luận: **[[hop-am-ba|hợp âm ba]] 1 – 3 – 5** gồm đúng ba n
 - Bè trầm được **mở bằng dấu lặng** ở ô đầu khi không thể nối lệch phách và không loại nào khác lấp được; Fux cũng chỉ cách thay: cho **bè Alto (Counter Tenor) tạm làm bè trầm** ở ô đầu.
 - Một dấu lặng đặt đúng chỗ **chặn được hai quãng 5 ẩn** — ở loại này quãng 5 ẩn đặc biệt không được phép.
 
-Đối chiếu giáo trình Nhạc viện Hà Nội (ba bè là ba cặp hai bè; quãng 4 ở cặp trên coi như thuận): [[doi-am-ba-bon-be]]. Tiếp theo: [[doi-am-bon-be-fux]].
+Tiếp theo: [[doi-am-bon-be-fux]].
 `,
   },
   {
@@ -253,7 +259,7 @@ Fux suy thứ tự tự nhiên từ **phép chia điều hoà quãng 8**: chia q
 Trước khi sang chương Mô phỏng, Fux lưu ý vài nghịch âm có thể giải quyết khác thường (ví dụ quãng 4 vào **quãng 6 và 3**). Đoạn văn này trong bản quét bị mờ một phần; các trường hợp còn lại cần đối chiếu ví dụ nhạc trước khi chép.
 
 ## Liên hệ với hoà âm
-Bốn bè của Fux là cầu nối từ đối âm sang [[luat-hoa-am-bon-be|luật hoà âm bốn bè]]: nhân đôi, trật tự quãng 5 dưới – quãng 3 trên, và nốt treo đi kèm (xem [[not-ngoai-hop-am]]). Đối chiếu giáo trình Nhạc viện Hà Nội: [[doi-am-ba-bon-be]] (sáu cặp bè, tứ trùng đối vị).
+Bốn bè của Fux là cầu nối từ đối âm sang [[luat-hoa-am-bon-be|luật hoà âm bốn bè]]: nhân đôi, trật tự quãng 5 dưới – quãng 3 trên, và nốt treo đi kèm (xem [[not-ngoai-hop-am]]).
 
 Tiếp theo: [[mo-phong-va-fugue-hai-be-fux]].
 `,
@@ -415,7 +421,7 @@ Nhận xét của người biên soạn: ở cả hai bảng, trục đối xứ
 
 Fux dặn: bài nào cũng đảo được, nhưng không phải lần đảo nào cũng cho giai điệu đẹp — phải dùng **thận trọng**, kẻo "khoe nhiều kỹ xảo" mà **giai điệu chịu thiệt**.
 
-Đối chiếu: [[doi-am-kep]] (đối âm kép trong nhạc Bach), [[doi-vi-chuyen-dong-chieu-doc]] (chỉ số Iv của Taneyev tổng quát mọi khoảng dịch), [[doi-vi-dao-anh]] (đảo ảnh). Tiếp theo: [[fugue-doi-de-va-nhieu-chu-de-fux]].
+Đối âm kép trong nhạc Bach: [[doi-am-kep]]. Tiếp theo: [[fugue-doi-de-va-nhieu-chu-de-fux]].
 `,
   },
   {
