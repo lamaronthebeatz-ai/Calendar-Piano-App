@@ -151,6 +151,11 @@ So sánh với cách hiểu hiện đại về hợp âm 9 – 11 – 13 xếp c
 Việc đặt hợp âm 11 và 13 trên chủ âm khác hẳn cách gọi tên hiện nay (các hợp âm đó ngày nay thường được hiểu là nốt treo hay [[bass-ngan|bass ngân]] trên chủ âm).
 
 Tiếp theo: [[chuyen-dong-va-nghich-am-albrechtsberger]]. Tổng quan: [[he-thong-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 1-59
+::scans albrechtsberger ex 255-263
 `,
   },
   {
@@ -213,6 +218,11 @@ Trong lối tự do có **hai trường hợp**:
 - Lưu ý: "anticipation" ở đây là cách giải thích của sách, khác **nốt sớm** theo nghĩa hiện nay (xem [[not-ngoai-hop-am]]).
 
 Tiếp theo: [[bass-so-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 60-80
+::scans albrechtsberger ex 240-254
 `,
   },
   {
@@ -298,6 +308,11 @@ Mở đầu Tập I, Seyfried viết: bass liên tục "là nền tảng của m
 | 9 với quãng 4 | 9/4 |
 
 Đối chiếu ký hiệu hiện đại: [[ky-hieu-hop-am]]. Tiếp theo: [[dem-bass-so-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 81-148
+::scans albrechtsberger ex 229-232
 `,
   },
   {
@@ -369,6 +384,13 @@ Sinh viên "sẽ đến đích sớm hơn nếu từ chối trợ giúp của c�
 Đối chiếu khái niệm hiện đại: [[ky-nang-dan-phim-chuc-nang]].
 
 Tiếp theo: [[sau-tien-hanh-nguy-hiem]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 149-181
+::scans albrechtsberger ex 233-239
+::scans albrechtsberger ex 264-319
+::scans albrechtsberger ex 536-549
 `,
   },
   {
@@ -408,6 +430,10 @@ Sách phân tích một chuỗi hợp âm 7 kết ở Mi thứ:
 Những hợp âm này được chuẩn bị bằng chính hợp âm 7 mà chúng sinh ra, "để các quãng đã có mặt và dùng được làm nốt treo".
 
 Tiếp theo: [[hoa-am-thuan-khiet-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 182-228
 `,
   },
   {
@@ -449,6 +475,10 @@ Sách nói dùng đúng các quãng nghịch, tăng và giảm cần "sự chắ
 Đối chiếu cách gọi ngày nay: [[hop-am-sau-tang]], [[hop-am-bay-giam]], [[hop-am-cam-am]].
 
 Tiếp theo: [[chuyen-giong-va-ket-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 320-363
 `,
   },
   {
@@ -515,6 +545,10 @@ Với người thạo chuyển giọng, "có thể tạo kết đánh lừa muô
 Chương cuối nhóm này (§CXXIV) là hai bài bass số dài nối liền nhiều kết đánh lừa.
 
 Tiếp theo — Tập II: [[nen-tang-sang-tac-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 364-535
 `,
   },
   {
@@ -575,6 +609,10 @@ Từ Tập II, theo lời tựa, là bản thảo của **chính Albrechtsberger
 - Lời khuyên: "Ta tìm được nghìn ví dụ lối tự do dễ hơn hai mươi ví dụ lối nghiêm khắc"; vì không có nguyên lý đối âm thì không đạt được độ trong sáng ở lối nào, "nên bắt đầu bằng sáng tác nghiêm khắc hai bè".
 
 Tiếp theo: [[nam-loai-hai-be-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 550-581
 `,
   },
   {
@@ -656,6 +694,10 @@ Mọi luật loại 1 vẫn giữ, **trừ luật 4 và 5**.
 - **Thiếu trang**: bản quét nhảy từ tr. 105 sang tr. 108; các ví dụ của Fux ở cuối chương (và có thể một phần lời) không có trong bản dùng ở đây.
 
 Tiếp theo: [[ba-be-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 582-674
 `,
   },
   {
@@ -720,6 +762,10 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 - Hai đối âm khác loại cùng lúc trên một chorale "thuộc loại 5, và là **nếm trước lối tự do**". Ghi chú: hợp âm 7 át đi qua "không phải lỗi, các bậc thầy hiện nay dùng nhiều".
 
 Đối chiếu Fux: [[doi-am-ba-be-fux]]. Tiếp theo: [[bon-va-nam-be-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 675-728
 `,
   },
   {
@@ -763,6 +809,10 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 - Sáu, bảy, tám bè, hay hợp xướng đôi, ba, bốn: chỉ cần "cẩn thận hơn trong việc dẫn bè đúng ngữ pháp và nhân đôi tất yếu"; "nghiên cứu sâu các mẫu kinh điển" sẽ dạy phần còn lại. Sách không đưa thêm luật.
 
 Đối chiếu bốn bè hiện đại: [[luat-hoa-am-bon-be]]; bốn bè của Fux: [[doi-am-bon-be-fux]]. Tiếp theo: [[mo-phong-va-dao-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 729-821
 `,
   },
   {
@@ -803,6 +853,10 @@ Hệ thống hoá theo trường phái Nga (P, R, bảy hình thức): [[mo-phon
 Tương ứng trong hệ Taneyev: [[doi-vi-dao-anh]]; trong Fux: [[doi-am-kep-fux]] (đảo ngược chiều đơn và nghiêm).
 
 Tiếp theo: [[fugue-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 822-864
 `,
   },
   {
@@ -884,6 +938,10 @@ Tiếp theo: [[fugue-albrechtsberger]].
 - Bài mẫu của **Fux** (Son thứ, đảo nghiêm ở quãng 5) có dấu lặng trước chủ đề đảo: "**Fux đặt điều này thành luật, nhưng nay không còn theo**, vì sự trở lại của chủ đề, nếu đưa vào đúng, sẽ không lọt khỏi tai người nghe chăm chú." Ricercata cho organ ba bè đảo nghiêm, sách ghi tên một tác giả bị OCR làm hỏng (có lẽ Kirnberger — chưa kiểm).
 
 Tiếp theo — Tập III: [[fugue-chorale-va-doi-am-kep-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 865-901
 `,
   },
   {
@@ -939,6 +997,10 @@ Tiếp theo — Tập III: [[fugue-chorale-va-doi-am-kep-albrechtsberger]].
 - "Các bậc thầy cổ còn nói đến đối âm ở quãng 2 hay 9, 4 hay 11, 6 hay 13, 7 hay 14" — chúng "hiếm khi cho giai điệu trôi chảy", toàn nghịch âm không chuẩn bị; "những mẹo vô ích này đã bị loại khỏi hệ thống của chúng ta".
 
 So sánh: quy tắc của Fux — [[doi-am-kep-fux]]; công thức tổng quát Iv của Taneyev — [[doi-vi-chuyen-dong-chieu-doc]]; đối âm kép trong nhạc Bach — [[doi-am-kep]]. Tiếp theo: [[fugue-kep-va-canon-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 902-983
 `,
   },
   {
@@ -992,6 +1054,10 @@ Mỗi cách chính có các cách phụ "phải sinh cùng quãng"; chỉ ba cá
 - **Phụ chương**: Haydn gửi Albrechtsberger tấm thiếp "*Alt und schwach bin ich*" ("Tôi già và yếu"); Albrechtsberger đáp bằng một *canone perpetuo* bốn bè (ở quãng 5 dưới và quãng 8 dưới; và ở quãng 4 trên).
 
 Canon theo hệ Taneyev: [[canon-hai-be]], [[canon-ba-bon-be]]; các loại canon trong nhạc Bach: [[doi-am-kep]]. Tiếp theo: [[phu-luc-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 984-1036
 `,
   },
   {
@@ -1030,6 +1096,10 @@ Ghi chú: phần clarinet in vừa "Si" vừa "Si giáng", chưa rõ ý sách �
 - Học phối khí: nghiên cứu tổng phổ kinh điển, nghe nhiều lần, so hiệu quả với phương tiện, hỏi nhạc công, và "thử nhiều lần — coi đó là bài tập, không phải kiệt tác". Sách ca ngợi Beethoven nối tiếp Haydn, Mozart. "*Vita brevis, ars longa!*"
 
 Tra nhanh toàn bộ hệ thống: [[tra-cuu-albrechtsberger]].
+
+## Ví dụ trong sách gốc
+Các ví dụ nhạc cắt từ bản quét Novello 1855, đánh đúng số của sách (Ex. n) và số trang.
+::scans albrechtsberger ex 1037-1083
 `,
   },
   {

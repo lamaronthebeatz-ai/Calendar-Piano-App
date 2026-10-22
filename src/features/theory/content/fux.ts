@@ -134,6 +134,10 @@ Kiểm từng bước của ví dụ:
 | 10 → 11 | Ngược chiều | 6 → 8 | Áp chót 6 trưởng mở ra quãng 8 |
 
 Luyện kỹ loại này: [[doi-am-loai-1]]. Các loại sau: [[nam-loai-hai-be-fux]]. Toàn bộ hệ thống: [[he-thong-fux-gradus-ad-parnassum]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 1-2
 `,
   },
   {
@@ -187,6 +191,10 @@ Bài này bổ sung cho năm bài luyện tập [[doi-am-loai-1]] … [[doi-am-l
 - Phần thực hành và các mẫu nhịp điệu: [[doi-am-loai-5]].
 
 Tiếp theo: [[doi-am-ba-be-fux]]. Toàn bộ hệ thống: [[he-thong-fux-gradus-ad-parnassum]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 3-7
 `,
   },
   {
@@ -228,6 +236,10 @@ Fux lập luận: **[[hop-am-ba|hợp âm ba]] 1 – 3 – 5** gồm đúng ba n
 - Một dấu lặng đặt đúng chỗ **chặn được hai quãng 5 ẩn** — ở loại này quãng 5 ẩn đặc biệt không được phép.
 
 Tiếp theo: [[doi-am-bon-be-fux]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 8-13
 `,
   },
   {
@@ -262,6 +274,10 @@ Trước khi sang chương Mô phỏng, Fux lưu ý vài nghịch âm có thể 
 Bốn bè của Fux là cầu nối từ đối âm sang [[luat-hoa-am-bon-be|luật hoà âm bốn bè]]: nhân đôi, trật tự quãng 5 dưới – quãng 3 trên, và nốt treo đi kèm (xem [[not-ngoai-hop-am]]).
 
 Tiếp theo: [[mo-phong-va-fugue-hai-be-fux]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 14-19
 `,
   },
   {
@@ -309,6 +325,10 @@ Fux gọi đây là "phương pháp ngắn nhưng đúng quy củ":
 - Fugue ở giọng La: quãng 2 Mi – Fa ở chủ đề được đáp bằng **quãng 3 La – Đô**, vì không có cách nào khác giữ đúng loại cung – nửa cung; đáp bằng nửa cung La – Si giáng thì sẽ **sai giọng**. (Chữ "H" trong bản dịch là cách gọi nốt Si theo kiểu Đức.)
 
 Tiếp theo: [[fugue-ba-bon-be-fux]]. Quy tắc đáp đề chi tiết ở phụ lục: [[dap-de-va-trang-tri-fux]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 20-22
 `,
   },
   {
@@ -354,6 +374,10 @@ Sau khi bè thứ ba vào, hai bè trên đi kèm bằng hoà âm đúng; **Teno
 - Fugue bốn bè **không cần giữ bốn bè liên tục**: vài bè đi trong khi bè khác nghỉ để lấy lại chủ đề; gần cuối mới cả bốn bè cùng lấp đầy hoà âm.
 
 Tiếp theo: [[doi-am-kep-fux]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 23-25
 `,
   },
   {
@@ -422,6 +446,12 @@ Nhận xét của người biên soạn: ở cả hai bảng, trục đối xứ
 Fux dặn: bài nào cũng đảo được, nhưng không phải lần đảo nào cũng cho giai điệu đẹp — phải dùng **thận trọng**, kẻo "khoe nhiều kỹ xảo" mà **giai điệu chịu thiệt**.
 
 Đối âm kép trong nhạc Bach: [[doi-am-kep]]. Tiếp theo: [[fugue-doi-de-va-nhieu-chu-de-fux]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 26-27
+::scans fux tr 30-31
+::scans fux tr 34-38
 `,
   },
   {
@@ -462,6 +492,12 @@ Một bài có thể "tô điểm bằng nhiều chủ đề", mỗi chủ đề
 5. Bài ba chủ đề **nên có thêm một bè đi kèm**, để có chỗ cho vài bè đi trong khi bè khác nghỉ.
 
 Bức tranh rộng của fugue (cấu trúc, đoạn nối, stretto, tác phẩm của Bach): [[fugue]]. Tiếp theo: [[dap-de-va-trang-tri-fux]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 28-29
+::scans fux tr 32-33
+::scans fux tr 39-43
 `,
   },
   {
@@ -506,6 +542,10 @@ Bản dịch gọi chủ đề là *Guide* (bè dẫn) và đáp đề là *Answ
 Sách kết bằng **một mẫu sáng tác theo phong cách nhà thờ**, "gọi đúng là *stile a cappella* vì chỉ do các bè hát trình diễn": một **Kyrie eleison** nhiều bè mô phỏng. Đây là đích của toàn bộ lộ trình — phong cách mà [[phong-cach-palestrina]] phân tích, dùng trong [[thanh-le-va-requiem|thánh lễ]] và [[motet]].
 
 Toàn bộ hệ thống: [[he-thong-fux-gradus-ad-parnassum]].
+
+## Ví dụ trong sách gốc
+Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
+::scans fux tr 44-49
 `,
   },
 ]

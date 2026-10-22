@@ -1,9 +1,10 @@
 import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import { ExpandIcon, XIcon } from '../../components/icons'
+import { ChevronRightIcon, ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
-import { LinkRefContext } from './linkRef'
+import { LinkRefContext, PrintContext } from './linkRef'
+import { loadScans, parseRange, scanLabel, scanUrl, SCAN_BOOKS, type ScanItem } from './scans'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
@@ -152,6 +153,85 @@ function Lightbox({ caption, width, onClose, children }: { caption?: string; wid
   )
 }
 
+/** The examples of one item, stacked (an example running over several pages has several files). */
+function ScanImages({ book, item }: { book: string; item: ScanItem }) {
+  return (
+    <>
+      {item.files.map((f) => (
+        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} alt={scanLabel(book, item)} loading="lazy" className="scan-img" />
+      ))}
+    </>
+  )
+}
+
+function useScans(book: string, from: number, to: number) {
+  const [state, setState] = useState<{ key: string; items: ScanItem[] }>()
+  const key = `${book}:${from}-${to}`
+  useEffect(() => {
+    let live = true
+    const unit = SCAN_BOOKS[book]?.unit
+    loadScans(book).then((all) => live && setState({ key, items: all.filter((it) => { const v = unit === 'ex' ? it.n : it.page; return v >= from && v <= to }) }))
+    return () => {
+      live = false
+    }
+  }, [book, from, to, key])
+  return state?.key === key ? state.items : null
+}
+
+/** `::scan book n | caption` — one example cut from a scanned book. */
+function ScanFigure({ book, n, caption }: { book: string; n: number; caption: string }) {
+  const items = useScans(book, n, n)
+  if (!items?.length) return null
+  return (
+    <Figure caption={`${caption ? caption + ' — ' : ''}${scanLabel(book, items[0])}`}>
+      <ScanImages book={book} item={items[0]} />
+    </Figure>
+  )
+}
+
+/** `::scans book ex|tr from-to` — every example in a range, as a collapsible gallery (expanded when printing). */
+function ScanGallery({ book, from, to, caption }: { book: string; from: number; to: number; caption: string }) {
+  const items = useScans(book, from, to)
+  const printing = useContext(PrintContext)
+  const [open, setOpen] = useState(false)
+  const [zoom, setZoom] = useState<ScanItem | null>(null)
+  const meta = SCAN_BOOKS[book]
+  if (!meta || (items && !items.length)) return null
+  const range = meta.unit === 'ex' ? `ví dụ ${from} – ${to}` : `trang ${from} – ${to}`
+  const shown = open || printing
+  return (
+    <section className="scan-gallery">
+      <button type="button" className="scan-toggle" aria-expanded={shown} onClick={() => setOpen((o) => !o)}>
+        <ChevronRightIcon width={15} height={15} className="scan-chevron" />
+        <span>
+          <b>{caption || 'Ví dụ trong sách gốc'}</b> · {range}
+          {items && <> · {items.length} hình</>}
+        </span>
+      </button>
+      {shown && items && (
+        <div className="scan-grid">
+          {items.map((it) => (
+            <figure key={`${it.page}-${it.n}`} className="scan-item">
+              <button type="button" onClick={() => setZoom(it)} aria-label={`Phóng to ${scanLabel(book, it)}`}>
+                <ScanImages book={book} item={it} />
+              </button>
+              <figcaption>{scanLabel(book, it)}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
+      <p className="scan-source">
+        Ảnh cắt từ bản quét: <a href={meta.url} target="_blank" rel="noreferrer">{meta.source}</a> — Internet Archive, phạm vi công cộng.
+      </p>
+      {zoom && (
+        <Lightbox caption={scanLabel(book, zoom)} width={0} onClose={() => setZoom(null)}>
+          <ScanImages book={book} item={zoom} />
+        </Lightbox>
+      )}
+    </section>
+  )
+}
+
 /** `::name args | caption` directives that embed a diagram or image. */
 function Directive({ line }: { line: string }) {
   const [spec, ...rest] = line.slice(2).split(PIPE)
@@ -186,6 +266,12 @@ function Directive({ line }: { line: string }) {
       return <Figure caption={caption}><CircleOfFifths /></Figure>
     case 'img':
       return <CommonsImage file={args.join(' ')} caption={caption} />
+    case 'scan':
+      return <ScanFigure book={args[0]} n={Number(args[1])} caption={caption} />
+    case 'scans': {
+      const [from, to] = parseRange(args[2])
+      return <ScanGallery book={args[0]} from={from} to={to} caption={caption} />
+    }
     case 'youtube':
       return <YouTubeVideo id={args[0]}>{caption && <Inline text={caption} />}</YouTubeVideo>
     case 'ytsearch':

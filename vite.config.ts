@@ -46,9 +46,16 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2}'],
+        // Scanned music examples (thousands of small images) load on demand and are cached as they are seen.
+        globIgnores: ['scans/**'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.includes('/scans/'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'book-scans', expiration: { maxEntries: 3000, maxAgeSeconds: 60 * 60 * 24 * 365 } },
+          },
           {
             urlPattern: ({ url }) => url.hostname === 'en.wikipedia.org' && url.pathname === '/w/api.php',
             handler: 'StaleWhileRevalidate',
