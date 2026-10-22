@@ -965,4 +965,4 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .scan-img { filter: invert(0.92); mix-blend-mode: screen; } }
 .reader:not([data-rtheme="night"]) .scan-img, .print-book .scan-img { filter: none; mix-blend-mode: multiply; }
 .reader[data-rtheme="night"] .scan-img { filter: invert(0.9); mix-blend-mode: screen; }
-.reader-flow .scan-img { max-height: calc(var(--page-h) - 140px); }
+.reader-flow figure img.scan-img { width: 100%; height: auto; max-height: calc(var(--page-h) - 140px); }

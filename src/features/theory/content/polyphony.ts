@@ -102,6 +102,9 @@ Bài này gom mọi **khái niệm và quy ước ký hiệu** dùng trong loạ
 | **Phức điệu tương phản** | Kết hợp và phát triển **những giai điệu khác nhau** về đường nét | Orlando di Lasso, một bài hát thế tục |
 | **Phức điệu mô phỏng** | **Cùng một giai điệu** (chủ đề) lần lượt nhắc lại ở các bè | Palestrina, một madrigal |
 | **Phức điệu bè tòng** | Kết hợp đồng thời **những biến thể khác nhau của cùng một giai điệu** — thường gặp trong dân ca nhiều bè | Một dân ca Nga |
+::scan taneev 1 | Phức điệu tương phản: O. Lasso, bài hát "Bạn gái tôi có đôi mắt tuyệt trần" (phần đầu)
+::scan taneev 2 | Phức điệu mô phỏng: Palestrina, madrigal "Từng có những ngọn đồi mùa thu" (tên in trong sách)
+::scan taneev 3 | Phức điệu bè tòng: một dân ca Nga ba bè
 Tiếng Anh gọi dạng thứ ba là *heterophony*. Phần lớn giáo trình dành cho hai dạng đầu: [[doi-vi-don-gian-hai-be|phức điệu tương phản]] và [[mo-phong-don-gian|phức điệu mô phỏng]].
 
 ## Ghi quãng bằng số (hệ Taneyev)
@@ -110,6 +113,7 @@ Cộng tên quãng theo số học sẽ sai: quãng 5 + quãng 4 **không** ph�
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **Số** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 Với các số này, phép cộng luôn đúng: **số 4 (quãng 5) + số 3 (quãng 4) = số 7 (quãng 8)**.
+::scan taneev 4,5 | Cộng theo tên quãng: quãng 5 + quãng 4 ra "quãng 9" là sai (Thí dụ 4); cộng theo số: số 4 + số 3 = số 7, đúng quãng 8 (Thí dụ 5)
 ::staff treble C4+G4=số_4 G4+C5=số_3 C4+C5=số_7 | Quãng 5 (số 4) chồng thêm quãng 4 (số 3) cho quãng 8 (số 7): 4 + 3 = 7
 - **Công thức đổi**: số = tên quãng − 1; tên quãng = số + 1.
 - **Quãng kép**: cộng 7 cho mỗi quãng 8 thêm vào (quãng 10 = số 9 = 2 + 7).
@@ -123,6 +127,7 @@ Với các số này, phép cộng luôn đúng: **số 4 (quãng 5) + số 3 (q
 | **I** (trên) | + (rộng ra) | − (hẹp lại) |
 | **II** (dưới) | − (hẹp lại) | + (rộng ra) |
 Ví dụ: "II = −7" nghĩa là bè II được dời **lên một quãng 8** (hẹp lại 7 bậc); "I = −3" là bè I dời **xuống một quãng 4**. Tổng các độ dời của hai bè là **chỉ số Iv** — xem [[doi-vi-chuyen-dong-chieu-doc]].
+::scan taneev 6,7 | Dấu của độ dời: bè I đi xuống ghi −, đi lên ghi + (Thí dụ 6); bè II đi lên ghi −, đi xuống ghi + (Thí dụ 7)
 
 ## Ký hiệu nốt nghịch có chuẩn bị
 Khi quãng nghịch ở phách mạnh phải được **chuẩn bị** (nốt lưu), giáo trình viết **con số của quãng kèm một vạch ngắn**: vạch **trên** con số = nốt nghịch nằm ở **bè trên**; vạch **dưới** = nốt nghịch ở **bè dưới**. Trong thư viện, để dễ đọc, các sơ đồ ghi rõ bằng chữ: *1 (dưới)*, *6 (trên)*, *3 (trên hoặc dưới)*. Chi tiết: [[doi-vi-don-gian-hai-be]].
@@ -160,6 +165,7 @@ Tác phẩm phức điệu nghiêm khắc phần lớn viết cho **dàn hợp x
 ## 1. Điệu thức
 - Phần lớn giai điệu viết trên các **[[dieu-thuc|điệu thức]] diatonic cổ**: Dorian, Phrygian, Mixolydian…
 - Đây là hệ điệu thức tự nhiên: màu sắc trưởng – thứ và cảm giác **công năng không rõ**; **nốt nào cũng có thể làm chủ âm**, và chỉ khi **kết thúc** điệu thức mới được xác định.
+::scan taneev 8 | Một giai điệu trên điệu thức diatonic cổ
 ::staff treble D4 F4 E4 D4 G4 F4 A4 G4 F4 E4 D4 | Một giai điệu Dorian (điệu thức Rê): chỉ đến nốt kết mới chắc chắn chủ âm là Rê
 
 ## 2. Tiến hành cao độ
@@ -173,6 +179,10 @@ Tác phẩm phức điệu nghiêm khắc phần lớn viết cho **dàn hợp x
 | **Hai bước nhảy** | Tránh hai bước nhảy **liên tiếp cùng hướng** |
 | **Đường nét** | Giai điệu đi **lượn sóng**; xen kẽ liền bậc với bước nhảy |
 | **Không nên** | Nhắc đi nhắc lại một nốt nhiều lần; tiến hành mang tính **[[mo-tien-hoa-am|mô tiến]]** (lặp một hình ở các bậc khác nhau); dùng nhiều dấu nghỉ |
+::scan taneev 9 | Biến âm: a) âm nguyên và âm biến ở xa nhau; b) không nên — đứng sát nhau
+::scan taneev 10 | Bước nhảy và phản hồi: a) được; b), c) không nên
+::scan taneev 11 | Những đoạn liền bậc mang âm hưởng ba cung — không nên dùng
+::scan taneev 12,13,14 | Không nên: nhắc đi nhắc lại một nốt (Thí dụ 12), tiến hành mô tiến (Thí dụ 13), nhiều dấu nghỉ (Thí dụ 14)
 ::staff treble C4 A4 G4 F4 / D4 G4 F4 E4 / C4 E4 G4 C5 | Bước nhảy và phản hồi: nhảy lên quãng 6 rồi đi xuống liền bậc (tốt) · nhảy lên quãng 4 rồi xuống liền bậc (tốt) · ba bước nhảy cùng hướng C – E – G – C (không nên)
 ::staff treble F4 G4 A4 B4 / B4 C5 B4 Bb4 | Không nên: Fa – Sol – La – Si mang âm hưởng ba cung · Si và Si♭ đứng sát nhau (nửa cung cromatic)
 
@@ -180,7 +190,9 @@ Tác phẩm phức điệu nghiêm khắc phần lớn viết cho **dàn hợp x
 - Nhạc thường ở **tốc độ chậm**, dùng **nhịp lớn**: 4/2, 3/2, 2/2. Đơn vị tiết tấu nhỏ nhất thường là **nốt đen**.
 - **Nốt móc đơn** chỉ dùng làm [[not-ngoai-hop-am|nốt lướt, nốt thêu]], thường từng cặp ở phách nhẹ; liên ba và nhịp phân ba rất hiếm.
 - **Không dùng [[dao-phach|đảo phách]], nghịch phách**: không nối một nốt ngắn sang một nốt dài hơn. Nốt trắng nối sang nốt tròn thì được.
+::scan taneev 15 | Không nên: nghịch phách, nối nốt ngắn sang nốt dài hơn; chỗ ghi "Được dùng" là nốt trắng nối sang nốt tròn
 - Tiết tấu **không đổi đột ngột**, nhất là ở phách mạnh. Muốn chuyển từ nốt dài sang nốt ngắn hơn, cần **chuẩn bị ở phách mạnh bằng một nốt lưu** (nốt được nối). Nếu chỗ chuyển bắt đầu ở **phách yếu** thì không cần chuẩn bị.
+::scan taneev 16 | Chuyển từ nốt dài sang nốt ngắn hơn có chuẩn bị bằng nốt lưu ở phách mạnh
 ::rhythm 2/2 h h~ / h q q / q q h | Nốt trắng được nối sang phách mạnh (nốt lưu) rồi mới đi nốt đen — cách chuyển trường độ đúng lối nghiêm khắc
 
 Tiếp theo: [[doi-vi-don-gian-hai-be]].
@@ -201,6 +213,7 @@ Sự **đối tỉ giữa hai giai điệu cùng vang** là cơ sở của phứ
 ## 1. Nét chung
 - **Tiết tấu là yếu tố quan trọng và hiệu quả nhất** để tạo đối tỉ: hai bè (nhất là ở phách mạnh) cần **khác nhau về tiết tấu**; không để tiết tấu giống nhau kéo dài.
 - Dùng được mọi hướng đi, nhưng để tăng đối tỉ nên ưu tiên **ngược hướng** và **chếch hướng**; **song song** và **cùng hướng** nên hạn chế.
+::scan taneev 17 | Các hướng đi giữa hai bè (mũi tên)
 - Phức điệu nghiêm khắc thường chỉ có **một hình tượng âm nhạc**, nên dù đối tỉ mạnh, tác phẩm vẫn thống nhất về tình cảm.
 
 ## 2. Quãng thuận
@@ -208,11 +221,13 @@ Sự **đối tỉ giữa hai giai điệu cùng vang** là cơ sở của phứ
 |---|---|---|
 | **Thuận không hoàn toàn** (bán thuận) | 3, 6 (trưởng, thứ) và quãng kép | Vừa êm vừa gợi chuyển động; **dùng nhiều nhất**; đi được cùng hướng, chếch, ngược, **kể cả song song** |
 | **Thuận hoàn toàn** | Đồng âm, 5 đúng, 8 đúng | Dùng **hạn chế** (xem dưới) |
+::scan taneev 18 | Quãng thuận không hoàn toàn (3, 6) dùng tự do, kể cả song song
 Vì sao hạn chế quãng thuận hoàn toàn:
 - Ở phách mạnh, nhất là **đồng âm**, chúng tạo cảm giác **ngưng đọng**.
 - Chúng làm hai bè **hoà làm một**, xoá nhoà đối tỉ — nên không dùng nhiều quãng hoàn toàn liền nhau.
 - Chủ yếu dùng ở **chỗ mở đầu và chỗ kết**; ở giữa nên đặt ở **phách yếu**, xen với quãng bán thuận và quãng nghịch.
 - **Song song bị cấm**; cùng hướng nên hạn chế; tốt nhất là vào bằng **ngược hướng** hoặc **chếch hướng**.
+::scan taneev 19 | Vào quãng thuận hoàn toàn bằng ngược hướng và chếch hướng
 
 ## 3. Quãng nghịch
 Quãng nghịch gồm **quãng 2, quãng 7, mọi quãng tăng – giảm, và cả quãng 4 đúng** (quãng 4 chỉ thuận khi được chồng lên một quãng khác, tức từ ba bè trở lên). Quãng nghịch **không đứng độc lập** mà phụ thuộc quãng thuận:
@@ -222,6 +237,7 @@ Quãng nghịch gồm **quãng 2, quãng 7, mọi quãng tăng – giảm, và c
 ### a) Ở phách mạnh: nốt lưu
 Ở phách mạnh, quãng nghịch chủ yếu xuất hiện dưới dạng **nốt lưu** (tiếng Anh: *suspension*): **có chuẩn bị** và **giải quyết đi xuống liền bậc**.
 ::form Nốt_chuẩn_bị_(thuận) Nốt_lưu_=_nốt_nghịch_(phách_mạnh) Nốt_giải_quyết_(thuận,_xuống_liền_bậc) | Ba thời của nốt lưu; bè kia giữ "nốt tự do"
+::scan taneev 20 | Nốt chuẩn bị – nốt nghịch – nốt giải quyết; bè kia là nốt tự do (chú thích viết tay trên bản quét)
 - **Trường độ nốt chuẩn bị ≥ trường độ nốt lưu**, và **không** dùng nốt đen làm nốt chuẩn bị.
 - Bè không chứa nốt nghịch gọi là bè có **nốt tự do**.
 Giáo trình chia quãng nghịch phách mạnh làm hai loại:
@@ -231,6 +247,9 @@ Giáo trình chia quãng nghịch phách mạnh làm hai loại:
 | | Quãng 7 (số 6) | **Luôn ở bè trên**, nốt tự do ở dưới | 7 → 6 |
 | **Nốt nghịch không cố định** | Quãng 4 (số 3) | Trên hoặc dưới — **ở trên tốt hơn** vì giải quyết vào quãng bán thuận (4 → 3); ở dưới thì vào quãng hoàn toàn (4 → 5) | 4 → 3 / 4 → 5 |
 | | Quãng 9 (số 8) | Trên hoặc dưới — **ở dưới tốt hơn** vì giải quyết vào quãng bán thuận (9 → 10); ở trên thì 9 → 8 | 9 → 10 / 9 → 8 |
+::scan taneev 21,22 | Quãng 2 (số 1): nốt nghịch luôn ở bè dưới (Thí dụ 21); quãng 7 (số 6): luôn ở bè trên (Thí dụ 22)
+::scan taneev 23 | Quãng 4 (số 3): nốt nghịch ở bè trên hoặc bè dưới
+::scan taneev 24 | Quãng 9 (số 8): nốt nghịch ở bè dưới "tốt hơn" — giải quyết vào quãng 10
 ::staff treble F4+D5=6 / E4+D5=7 E4+C5=6 | Nốt lưu quãng 7 (nốt nghịch ở bè trên): Rê được chuẩn bị (quãng 6 trên Fa), giữ sang phách mạnh thành quãng 7 trên Mi, rồi xuống Đô
 ::staff treble D4+F4=3 / D4+E4=2 C4+E4=3 | Nốt lưu quãng 2 (nốt nghịch ở bè dưới): Rê được chuẩn bị (quãng 3 dưới Fa), giữ sang phách mạnh thành quãng 2 khi bè trên xuống Mi, rồi xuống Đô thành quãng 3
 **Sơ đồ quãng nghịch phải chuẩn bị ở phách mạnh** (đối vị đơn giản; quãng kép tính như quãng đơn tương ứng):
@@ -248,11 +267,15 @@ Giáo trình chia quãng nghịch phách mạnh làm hai loại:
 | **Nốt thêu** | Lối nghiêm khắc thường dùng **thêu dưới** |
 | **Nốt sớm** | Nốt đến trước nốt thuận ở phách sau (tiếng Anh: *anticipation*) |
 | **Nốt thoát** | **Khác hoà âm**: giống một nốt thêu dưới nhưng **giải quyết bằng cách nhảy xuống một quãng 3** |
+::scan taneev 25,26,27,28 | Quãng nghịch ở phách yếu: nốt lướt (Thí dụ 25), nốt thêu dưới (26), nốt sớm (27), nốt thoát (28) — dấu × đánh nốt nghịch
+::scan taneev 29 | Thí dụ mẫu: đối vị đơn giản hai bè dùng các loại quãng nghịch
 
 ### c) Hai cách giải quyết đặc biệt
 Để tiết tấu phong phú hơn, giáo trình cho phép:
 1. Trong lúc nốt nghịch giải quyết, **nốt tự do nhảy sang nốt khác**, miễn là tạo **quãng thuận** với nốt giải quyết.
+::scan taneev 30 | Nốt tự do nhảy sang nốt khác trong lúc nốt nghịch giải quyết
 2. **Trước khi** giải quyết xuống liền bậc, **nốt nghịch được nhảy** sang một nốt khác, miễn là nốt đó tạo **quãng thuận** với nốt tự do (giải quyết "có trang trí").
+::scan taneev 31 | Nốt nghịch nhảy sang một nốt thuận với nốt tự do trước khi giải quyết xuống liền bậc
 
 Tiếp theo: [[doi-vi-phuc-tap]]. Bảng tra: [[cong-thuc-phuc-dieu]].
 `,
@@ -285,6 +308,9 @@ Tiếp theo: [[doi-vi-phuc-tap]]. Bảng tra: [[cong-thuc-phuc-dieu]].
 | — ngang – dọc | Vừa đổi chỗ vừa đổi thời điểm vào | [[doi-vi-chuyen-dong-chieu-ngang]] |
 | **2. Đối vị đảo ảnh** (đối vị phản gương) | Giai điệu được **soi gương** (đảo hướng mọi quãng); hai bè đổi chỗ nhưng quan hệ chiều dọc không đổi | [[doi-vi-dao-anh]] |
 | **3. Đối vị tăng thêm quãng bán thuận** (đối vị tăng đôi) | Một hay cả hai bè được **nhân đôi bằng một bè song song** cách nó một quãng bán thuận (3, 6, 10…) — số bè tăng lên | [[doi-vi-dao-anh]] |
+::scan taneev 33,34 | Cùng nguyên thể của Thí dụ 32: chuyển động chiều ngang, biến thể 1 và 2 (Thí dụ 33); chuyển động ngang – dọc (Thí dụ 34)
+::scan taneev 35 | Đối vị đảo ảnh: NT và BT, hai bè soi gương (I∞, II∞)
+::scan taneev 36 | Tăng thêm quãng bán thuận: BT 1 và BT 2 dựng trên nguyên thể của Thí dụ 32
 ::staff treble C4+E4 D4+F4 / E4+C5 F4+D5 | Cùng hai giai điệu: nguyên thể (trái, các quãng 3) và một biến thể chuyển chỗ quãng 8 (phải, bè dưới được dời lên một quãng 8 — các quãng 3 thành quãng 6)
 
 ## Ba hình thức của chuyển động chiều dọc
@@ -293,6 +319,7 @@ Tiếp theo: [[doi-vi-phuc-tap]]. Bảng tra: [[cong-thuc-phuc-dieu]].
 | **Chuyển chỗ** | Hai bè **đổi vị trí** trên – dưới (hay dùng nhất) | Luôn **âm** |
 | **Chuyển gần** | Hai bè giữ vị trí nhưng **xích lại gần** | Luôn **âm** |
 | **Chuyển xa** | Hai bè giữ vị trí nhưng **giãn xa** | Luôn **dương** |
+::scan taneev 32 | Một nguyên thể và ba biến thể chiều dọc: 1. chuyển chỗ (II = −9), 2. chuyển gần, 3. chuyển xa
 Cách tính và luật từng trường hợp: [[doi-vi-chuyen-dong-chieu-doc]].
 
 ## Đối chiếu với Taneyev và sách Nga
@@ -327,6 +354,7 @@ Giáo trình đưa ra ví dụ: nguyên thể có chuỗi quãng **5 4 3 2 5 4 0
 |---|---|---|---|---|---|---|---|
 | Biến thể | 2 | 3 | 4 | 5 | 2 | 3 | 7 |
 | **Tổng** | 7 | 7 | 7 | 7 | 7 | 7 | 7 |
+::scan taneev 37 | Nguyên thể có chuỗi quãng 5 4 3 2 5 4 0; BT 1 (II = −7) và BT 2 (I = −3, II = −4) — cùng tổng 7
 Số không đổi ấy là **thước đo chiều dọc** — **Iv** (*Index verticalis*, chỉ số chiều dọc; Taneyev và sách tiếng Anh viết **Jv**). Định nghĩa:
 - **Iv = tổng (đại số) các quãng dời của hai bè**, mỗi độ dời mang dấu **−** nếu làm hai bè **gần lại**, **+** nếu làm **xa ra** (bè trên đi lên: +; bè dưới đi lên: −).
 - **Chuyển chỗ** và **chuyển gần**: Iv **âm**. **Chuyển xa**: Iv **dương**.
@@ -357,66 +385,87 @@ Các sơ đồ dưới đây ghi số quãng và vị trí nốt nghịch đư�
 | NT | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|
 | BT (Iv −7) | 7 | 6 | 5 | **4** | **3** | 2 | 1 | 0 |
+::scan taneev sd6 | So sánh quãng ở NT và BT (II = −7): ô khoanh là số 3 và số 4, hai số đổi tính chất
 - Thuận hoàn toàn vẫn hoàn toàn (0 ↔ 7), bán thuận vẫn bán thuận (2 ↔ 5), nghịch vẫn nghịch (1 ↔ 6) — **trừ quãng 5 (số 4) thành quãng 4 (số 3) nghịch**, và ngược lại.
 - Vì vậy **quãng 5 ở NT phải chuẩn bị và giải quyết** như quãng nghịch. Vì quãng 4 chuẩn bị được ở trên hay dưới nên quãng 5 cũng vậy; nhưng nếu nốt nghịch ở **trên**, phải **giải quyết lướt** (không thì rơi vào quãng nghịch).
+::scan taneev 38 | Số 4 (quãng 5) ở NT được chuẩn bị và giải quyết như quãng nghịch
 - Nếu một bè đứng yên và chỉ bè kia dời một quãng 8, **giọng không đổi** — vì thế loại này dùng nhiều nhất, nhất là ở **phần trình bày** của tác phẩm.
 - Khoảng cách xa nhất ở NT: **quãng 8** (Iv −7), quãng 15 (−14).
 | Sơ đồ chuẩn bị (Iv −7) | 1 dưới | 3 trên/dưới | 4 trên/dưới | 6 trên |
 |---|---|---|---|---|
+::scan taneev 39 | Một bài chuyển chỗ quãng 8: nguyên thể và biến thể
 - **Iv −14, −21**: quãng kép chuẩn bị như ở −7; riêng **quãng 9 (số 8)** chỉ chuẩn bị ở **dưới**, vì ở −14 nó thành số 6 (quãng 7) — chỉ được ở trên.
+::scan taneev 40 | Số 8 (quãng 9) ở NT sang BT thành số 6: chỗ ghi "không tốt" và chỗ ghi "tốt"
 - Một NT viết cho **Iv nhỏ** dùng được cho Iv lớn hơn cùng loại (−7 → −14, −21); ngược lại thì không.
+::scan taneev 41 | Một nguyên thể cho hai biến thể: Iv = −7 (II = 0, I = −7) và Iv = −14 (I = −14)
 
 ## 2. Chuyển gần và chuyển xa quãng 8 — Iv = −7 và +7
 Mọi quãng chỉ đổi giữa **quãng đơn và quãng kép** cùng tên, nên cách viết **giống đối vị đơn giản**. Gặp rất nhiều trong tác phẩm, nhất là ở **phần tái hiện**.
+::scan taneev 42 | Chuyển gần – chuyển xa quãng 8: nguyên thể và biến thể
 
 ## 3. Chuyển chỗ quãng 12 — Iv = −11, −18
 Giáo trình gọi là "chuyển chỗ quãng năm" (quãng 5 cộng một quãng 8); sách Nga và phương Tây gọi là **đối vị kép ở quãng 12** (*duodecima*).
 | NT | 0 | 1 | 2 | 3 | 4 | **5** | 6 | 7 | 8 | 9 | 10 | 11 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | BT (Iv −11) | 11 | 10 | 9 | 8 | 7 | **6** | 5 | 4 | 3 | 2 | 1 | 0 |
+::scan taneev sd8 | So sánh quãng ở NT và BT (Iv −11): số 5 và 6 (ô khoanh) đổi tính chất
 - Đồng âm và quãng 8 thành **quãng 5**.
 - **Quãng 6 (số 5) thành quãng 7 (số 6)** — nên quãng 6 ở NT phải **chuẩn bị ở dưới** (để thành quãng 7 chuẩn bị ở trên) và **giải quyết lướt**. Quãng 7 ở NT (chuẩn bị ở trên) cũng giải quyết lướt, trừ khi nốt tự do nhảy đi.
 - Quãng 4 (số 3) chuẩn bị được cả trên lẫn dưới; nhưng **quãng 11 (số 10) chỉ ở trên**, vì nó thành quãng 2 — chỉ được ở dưới.
 | Sơ đồ chuẩn bị (Iv −11) | 1 dưới | 3 trên/dưới | 5 dưới | 6 trên | 8 trên/dưới | 10 trên |
 |---|---|---|---|---|---|---|
+::scan taneev 43 | Chuẩn bị quãng nghịch ở Iv −11: a) II = −4, I = −7; b) chỗ ghi "xấu"
+::scan taneev 44 | Một bài chuyển chỗ quãng 12 (I = −11): nguyên thể và biến thể
 - Khoảng cách xa nhất ở NT: **quãng 12** (−11), quãng 19 (−18).
 - **Màu sắc**: ở −7 giọng không đổi; ở −11, một bè vẫn ở giọng chủ còn bè kia như ở nhóm **át hoặc hạ át**. Do tính **bất ổn định** ấy, −11 hay dùng ở **đoạn nối** và **phần phát triển**, còn −7, −14 hay dùng ở **phần trình bày**.
 - Khi viết, cần **phân đều các loại quãng** để biến thể vẫn hài hoà.
 
 ## 4. Chuyển gần và chuyển xa quãng 5 — Iv = −4 và +4
 Nguyên thể của chuyển gần quãng 5 chính là biến thể của chuyển xa quãng 5, và ngược lại.
+::scan taneev sd10 | So sánh quãng ở NT và BT của chuyển gần quãng 5
 **Chuyển gần (−4)** — khoảng cách gần nhất ở NT là **quãng 5**:
+::scan taneev 45 | Chuyển gần quãng 5: khoảng cách hẹp nhất ở NT là quãng 5
 - Quãng 5 (đơn, kép) thành **đồng âm, quãng 8**.
 - **Quãng 8 (số 7) thành quãng 4** → quãng 8 ở NT phải chuẩn bị như nghịch (trên hoặc dưới).
 - **Quãng 6 (số 5) thành quãng 2** → chỉ chuẩn bị ở **dưới**. Quãng 13 (số 12) thành quãng 9 → trên hoặc dưới.
 - Nhiều quãng nghịch liền nhau phải giải quyết bằng **nốt lướt hoặc thêu**, đúng luật phách yếu.
+::scan taneev 47 | Các quãng nghịch đi liền nhau giải quyết theo dạng nốt lướt, nốt thêu
 | Sơ đồ (Iv −4) | 5 dưới | 6 trên | 7 trên/dưới | 8 trên/dưới | 10 trên | 12 trên/dưới |
 |---|---|---|---|---|---|---|
+::scan taneev 46 | Chuyển gần quãng 5 (II = −4): hai bài NT – BT
 **Chuyển xa (+4)**:
 - **Quãng 3 (số 2) thành quãng 7** → chỉ chuẩn bị ở **trên**. **Quãng 5 (số 4) thành quãng 9** → trên hoặc dưới.
 | Sơ đồ (Iv +4) | 1 dưới | 2 trên | 3 trên/dưới | 4 trên/dưới | 6 trên | 8 trên/dưới |
 |---|---|---|---|---|---|---|
+::scan taneev 49 | Chuyển xa quãng 5 (I = 2, II = 2)
 **Kết hợp −11 với −4** để một NT cho hai BT: quãng nghịch chuẩn bị theo cả hai sơ đồ; khoảng cách ở NT nằm giữa **quãng 5** (gần nhất) và **quãng 12** (xa nhất; quãng 19 nếu −18).
+::scan taneev 48 | Một nguyên thể cho hai biến thể: BT 1 (Iv −11) và BT 2 (Iv −4)
 
 ## 5. Chuyển chỗ quãng 10 — Iv = −9, −16
 Giáo trình gọi là "chuyển chỗ quãng ba".
 | NT | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | BT (Iv −9) | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+::scan taneev sd14 | So sánh quãng ở NT và BT (Iv −9)
 - Nghịch vẫn nghịch; nhưng **thuận hoàn toàn thành bán thuận và ngược lại** — đây là cái khó.
 - Hệ quả: ở NT, hai bè **không được đi song song hay cùng hướng** (quãng 3 song song sẽ thành quãng 8 song song, quãng 6 song song thành quãng 5 song song). Chỉ dùng **chếch hướng** và **ngược hướng**; phân bố đều các quãng.
+::scan taneev 50 | Chuyển chỗ quãng 10: a), c) "xấu"; b), d) "tốt"
 - Quãng 4 (số 3) thành quãng 7 (chỉ ở trên) → quãng 4 ở NT **chỉ chuẩn bị ở dưới**. Quãng 9 (số 8) thành quãng 2 (chỉ ở dưới) → quãng 9 **chỉ chuẩn bị ở trên**.
 | Sơ đồ (Iv −9) | 1 dưới | 3 dưới | 6 trên | 8 trên |
 |---|---|---|---|---|
 - Như −11, Iv −9 **không ổn định về giọng**, nên hay dùng ở đoạn nối và phần phát triển.
+::scan taneev 51,52 | Hai bài chuyển chỗ quãng 10: Thí dụ 51 (II = −4, I = −5; II = −2, I = −7) và Thí dụ 52 (II = −5, I = −4)
 
 ## 6. Chuyển gần và chuyển xa quãng 3 — Iv = −2 và +2
 Như −9: thuận hoàn toàn ↔ bán thuận, nên **không đi song song hay cùng hướng**. Riêng **quãng 6 (số 5)** ở chuyển gần thành **quãng 4** → phải chuẩn bị và giải quyết.
+::scan taneev sd16 | So sánh quãng ở NT và BT của chuyển gần quãng 3
 | Sơ đồ (Iv −2; gần nhất là quãng 3) | 3 dưới | 5 trên/dưới | 6 trên | 8 trên | 10 trên* |
 |---|---|---|---|---|---|
 | **Sơ đồ (Iv +2)** | **1 dưới** | **3 trên/dưới** | **4 trên** | **6 trên** | **8 trên*** |
+::scan taneev 54 | Chuyển xa quãng 3 (I = 2, II = 0)
 *Bản scan của giáo trình mờ ở hai ô này; giá trị ghi ở đây do Lamar suy lại từ nguyên tắc chuẩn bị ở trên (quãng 11 của NT chỉ được ở trên; quãng 9 thành quãng 11 ở +2 nên chỉ được ở trên) và khớp với phần đọc được.
 Hay kết hợp chuyển gần quãng 3 với chuyển chỗ quãng 10: chuẩn bị theo sơ đồ chuyển gần; khoảng cách xa nhất không quá độ lớn Iv của chuyển chỗ, gần nhất bằng độ lớn Iv của chuyển gần; không đi song song, cùng hướng.
+::scan taneev 53 | Một nguyên thể cho BT Iv = −9 và BT Iv = −2
 
 ## 7. Iv tổng hợp
 Để một NT cho **nhiều** biến thể (ví dụ −7, −14, −11, −9), phải gộp mọi điều kiện:
@@ -429,6 +478,7 @@ Hay kết hợp chuyển gần quãng 3 với chuyển chỗ quãng 10: chuẩn 
 - **Quãng 9 (số 8)** không dùng được ở phách mạnh vì điều kiện của các Iv **mâu thuẫn** (−7/−14 đòi ở dưới, −9 đòi ở trên).
 - Khoảng cách xa nhất bằng **độ lớn Iv nhỏ nhất** (ở đây quãng 8); các bè **không đi song song hay cùng hướng**.
 Giáo trình dẫn một ví dụ của chính Taneyev: một nguyên thể cho ba biến thể −7, −11, −9.
+::scan taneev 55 | Thí dụ của Taneyev: một nguyên thể với các biến thể Iv = −7, −11, −9
 
 ## Đối chiếu nguồn quốc tế
 - Taneyev công bố hệ thống này trong *Đối vị di động của lối viết nghiêm khắc* (Leipzig, 1909; bản tiếng Anh 1962). Bách khoa toàn thư Nga định nghĩa Iv là "tổng đại số" các độ dời của các bè.
@@ -460,13 +510,17 @@ Giáo trình dẫn một ví dụ của chính Taneyev: một nguyên thể cho 
 |---|---|
 | **Nhịp chẵn** (4/2, 2/2, 4/4…) | Dời **chẵn nhịp hoặc nửa nhịp**: Ih = 1, ½, −1½… |
 | **Nhịp lẻ** (3/2, 3/4…) | Chỉ dời **chẵn nhịp**: Ih = 1, −2, 3… |
+::scan taneev 56 | Nguyên thể và biến thể Ih = −1
 - **Dấu** (theo sơ đồ của giáo trình): bè **I** vào **sớm hơn** ghi **+**, muộn hơn ghi **−**; bè **II** ngược lại (sớm hơn **−**, muộn hơn **+**).
 
 ## Cách viết: phương pháp bè canon giả
 Đối vị chiều ngang được viết bằng **một bè canon giả** — phần đối vị chỉ cần **đối vị đơn giản**:
 1. **Viết trọn một giai điệu** trước (bè I hay bè II, tuỳ âm vực).
+::scan taneev 57 | Bước 1: viết trọn bè I
 2. **Chép lại** giai điệu ấy ở một dòng khác, **cùng độ cao**, vào sớm hoặc muộn hơn đúng **Ih** nhịp. Bè chép này gọi là **I′** (hoặc II′) — **bè canon giả**: nó chỉ được chép theo kiểu canon; giữa I và I′ **không có quan hệ đối vị**.
+::scan taneev 58 | Bước 2: chép bè I thành bè canon giả I′, vào muộn hơn
 3. **Viết bè II** thành đối vị đơn giản **với cả I và I′ cùng lúc**. Viết xong bè II là đã có cả NT (I + II) lẫn BT (I′ + II).
+::scan taneev 59,60 | Bước 3: viết bè II đối vị với I và I′ cùng lúc (Thí dụ 59); tách ra được NT (I + II) và BT (I′ + II) (Thí dụ 60)
 - Muốn **một NT cho nhiều BT**: chép thêm I″, I‴… theo các Ih khác, viết II đúng với tất cả, rồi tách từng cặp I + II, I′ + II, I″ + II…
 - Khi viết, bè đối vị (II) luôn nằm **phía ngoài** hai bè canon giả: ở **dưới** nếu viết bè I trước, ở **trên** nếu viết bè II trước.
 
@@ -477,6 +531,8 @@ Thực chất là một dạng đặc biệt của chiều ngang: ở biến th�
 | Hai bè canon giả | **Cùng độ cao** ("canon đồng âm") | Cách nhau **đúng quãng Iv** cho trước |
 | Vị trí bè đối vị khi viết | Ở **ngoài** hai bè canon giả | Ở **giữa** hai bè canon giả |
 Ví dụ của giáo trình: Ih = −1 và Iv = −9 — nếu viết bè I trước, bè I′ đặt **thấp hơn một quãng 10** và vào sau một nhịp; Ih = −½ và Iv = −11 — I′ thấp hơn một quãng 12, vào sau nửa nhịp. Lưu ý: **Iv ở đây chỉ để tính vị trí bè canon giả**; bè đối vị vẫn viết theo luật đối vị đơn giản.
+::scan taneev 61,62 | Ih = −1, Iv = −9: vị trí bè I′ khi viết bè I trước (Thí dụ 61), vị trí bè II′ khi viết bè II trước (Thí dụ 62)
+::scan taneev 63,64 | Thí dụ 63: viết NT và BT theo Ih = −½, Iv = −11; Thí dụ 64: kết quả
 
 ## Dùng ở đâu
 Đây là kỹ thuật nền của **[[canon-hai-be|canon]]** (khoảng cách vào bè) và **stretto** trong [[fugue]] (các lần vào chủ đề chồng sát nhau). Canon vô tận loại II và canon mô tiến loại II đều viết bằng bè canon giả.
@@ -507,15 +563,19 @@ Lý do (Lamar giải thích): dãy phím trắng đối xứng quanh Rê (Rê �
 
 ### Nốt nghịch trong đảo ảnh
 Trong lối nghiêm khắc, nốt nghịch chỉ giải quyết **đi xuống**. Soi gương thì giải quyết đi xuống ở NT sẽ thành **đi lên** ở BT — sai luật. Giải pháp của giáo trình: ở phách mạnh dùng **nốt lưu phức tạp** — nốt nghịch **đi lên liền bậc rồi nhảy xuống quãng 3** (dáng giống nốt thoát trong hoà âm).
+::scan taneev 65 | NT và BT (I∞, II∞): nốt nghịch giải quyết lên liền bậc rồi xuống quãng 3
 Vì sao đúng ở cả hai phía (Lamar giải thích): ở NT, nốt cuối của hình này nằm **thấp hơn nốt nghịch một bậc** — tức là sự giải quyết xuống được hoãn lại; ở BT (soi gương), hình trở thành **xuống liền bậc rồi nhảy lên quãng 3** — bước đầu tiên chính là giải quyết xuống đúng luật.
 - Nốt nghịch có chuẩn bị ở NT, sang BT **đổi vị trí** (trên ↔ dưới).
 - Do đó **quãng 2 (số 1)** và **quãng 7 (số 6)** — có nốt nghịch **cố định** — **không được dùng ở phách mạnh**: sang BT chúng vi phạm vị trí bắt buộc.
 - **Quãng 4 (số 3)** và **quãng 9 (số 8)** — nốt nghịch không cố định — dùng **bình thường**.
+::scan taneev 66 | Quãng 2, 7 ở phách mạnh: "không tốt"; quãng 4, 9: "tốt"
 Ngoài điều đó, chỉ cần viết theo [[doi-vi-don-gian-hai-be|đối vị đơn giản]].
 
 ### Hai cách chuyển sang biến thể
 1. **Đảo hai bè trên hai trục cách nhau một quãng 8** (ví dụ Rê 4 và Rê 5), rồi chuyển chỗ hai bè theo **Iv = −14**. Chậm hơn nhưng **chủ động được âm vực**.
+::scan taneev 67,68,69 | Nguyên thể (Thí dụ 67) → đảo hai bè trên hai trục Rê cách nhau quãng 8 (Thí dụ 68) → chuyển chỗ theo Iv = −14 (Thí dụ 69)
 2. **Đảo thẳng cả hai bè quanh cùng một trục** (ví dụ một nốt Rê). Đơn giản hơn nhưng **không chủ động âm vực**.
+::scan taneev 70 | Đảo thẳng cả hai bè quanh một nốt Rê
 
 ## Đối vị tăng thêm quãng bán thuận
 Còn gọi là **đối vị tăng đôi**. Ở biến thể, một bè hoặc cả hai bè của nguyên thể được **tăng cường thêm một bè đi song song** với nó; khoảng cách giữa bè tăng cường và bè gốc là **một quãng bán thuận** (3, 6 hoặc 10). Kết quả: số bè tăng lên (hai bè thành ba hoặc bốn bè).
@@ -553,13 +613,17 @@ So với hai bè, ba bè có khả năng biểu hiện lớn hơn: màu sắc ch
 | Một quãng bán thuận + bè thứ ba nhắc lại một nốt | **Chồng âm bán thuận** — dùng tự do như quãng bán thuận |
 | **Hợp âm ba trưởng, ba thứ** (thể gốc, 5/3) | Dùng **tự do** |
 | **Hợp âm ba đảo 1** (6/3: trưởng, thứ, cả giảm) | Dùng tự do, nhưng **tránh ở kết** |
+::scan taneev 71,72 | Chồng âm thuận hoàn toàn (Thí dụ 71) và chồng âm bán thuận (Thí dụ 72)
 ::staff treble C4+E4+G4=5/3 E4+G4+C5=6/3 G4+C5+E5=6/4✗ | Hợp âm 5/3 và 6/3 dùng được; 6/4 (quãng 4 trên bè trầm) không dùng trong lối nghiêm khắc
 Lối nghiêm khắc **không có khái niệm hợp âm nghịch** (hợp âm bảy át, bảy giảm…): chúng chỉ xuất hiện như **kết quả** của quãng nghịch ở từng cặp bè.
 
 ## Quãng nghịch và quãng 4
 - **Phách mạnh**: như hai bè — dạng **nốt lưu** có chuẩn bị và giải quyết. Khác ở chỗ: có thể chuẩn bị **cùng lúc ở hai cặp bè**, và giải quyết **lần lượt** hoặc **cùng lúc** (giải quyết lần lượt làm ba bè tương phản tiết tấu hơn). Được phép để **nốt giải quyết** của một quãng nghịch đồng thời tạo **quãng nghịch mới** với bè khác — sinh ra **chuỗi móc xích nốt nghịch**.
+::scan taneev 73,74 | Nốt lưu ba bè: a), b), c) — chuẩn bị ở một hay hai cặp bè, giải quyết lần lượt (Thí dụ 73); một bài ba bè có đánh số quãng nghịch (Thí dụ 74)
 - **Phách yếu**: nốt lướt, thêu, thoát, sớm như hai bè; được dùng **cùng lúc hai nốt lướt, hai nốt thêu**, thậm chí một nốt lướt với một nốt thoát — miễn là **hai nốt ấy thuận với nhau**.
+::scan taneev 76 | Hai nốt lướt, nốt thêu cùng lúc (dấu ×)
 - **Quãng 4 (số 3)**: vì hợp âm 6/3 dùng tự do, quãng 4 ở **cặp trên** được **coi như thuận**, dùng tự do, kể cả **song song quãng 4** (không nên kéo dài). Ở **cặp dưới** và **cặp ngoài** quãng 4 **vẫn là nghịch**.
+::scan taneev 75 | Quãng 4 ở cặp trên coi như thuận; ở cặp dưới và cặp ngoài phải chuẩn bị
 
 ## Ba bè khác hai bè ở đâu (tóm tắt)
 - Quãng 4 ở cặp trên coi như thuận, được song song.
@@ -571,25 +635,33 @@ Phải dùng **Iv cho cả ba cặp**: Iv1 (cặp trên), Iv2 (cặp dưới), I
 **Công thức: Iv1 + Iv2 = Iv3.**
 Dấu dời của từng bè: bè **I** lên +, xuống −; bè **III** lên −, xuống +; bè **II** (giữa) đi lên thì **−** với cặp trên nhưng **+** với cặp dưới, đi xuống thì ngược lại.
 Ba bè có **năm biến thể** (năm cách hoán vị thứ tự ba bè). Thường dùng nhất là chuyển động **chiều dọc**; chiều ngang, ngang – dọc và đảo ảnh ít dùng.
+::scan taneev sd30 | Năm biến thể của ba bè (BT1 – BT5)
 | Biến thể | Bè nào đổi chỗ | Iv1 / Iv2 / Iv3 | Cách viết (chuyển chỗ quãng 8) |
 |---|---|---|---|
 | **BT1** | I ↔ II, III giữ | chuyển chỗ / chuyển xa / chuyển gần | Cặp trên viết theo **Iv −7**; bè III viết đối vị đơn giản với hai bè trên. **II và III không được cùng hướng đến quãng thuận hoàn toàn** (sang BT chúng thành cặp ngoài). Quãng 4 và 5 ở cặp trên **không cần chuẩn bị** |
 | **BT2** | II ↔ III, I giữ | chuyển xa / chuyển chỗ / chuyển gần | Cặp dưới viết theo **Iv −7**; quãng 4 ở cặp trên **vẫn phải chuẩn bị** (sang BT nó thành cặp ngoài). I và II không cùng hướng đến quãng hoàn toàn; bè I viết đối vị đơn giản |
 | **BT3, BT4** | Ít nhất hai cặp chuyển chỗ | — | Tốt nhất **mọi cặp** viết chuyển chỗ quãng 8; không cặp nào cùng hướng đến quãng hoàn toàn |
 | **BT5** | Cả ba cặp chuyển chỗ (đảo ngược thứ tự) | ví dụ −7 / −14 / −21 | Đơn giản hơn: quãng 4 ở cặp trên không cần chuẩn bị nhưng **không được song song** (sang BT thành quãng 5 song song); quãng 5 ở cặp dưới không cần chuẩn bị |
+::scan taneev 77 | BT1: Iv1 = −4 + (−3) = −7, Iv2 = 3 + 4 = 7, Iv3 = 0
+::scan taneev 78 | BT2: Iv1 = 7, Iv2 = −7, Iv3 = 0
+::scan taneev 79 | Biến thể có ít nhất hai cặp chuyển chỗ
 Ví dụ kiểm công thức (BT1 trong giáo trình): Iv1 = (I −4) + (II −3) = −7; Iv2 = (II +3) + (III +4) = +7; Iv3 = −7 + 7 = 0.
 
 ### Tam trùng đối vị (quãng 8)
 Trong chuyển chỗ quãng 8 ba bè, có thể viết **một nguyên thể cho cả năm biến thể** — gọi là **tam trùng đối vị**; vì chỉ làm được bằng đối vị quãng 8, gọi đầy đủ là **tam trùng đối vị quãng tám** (tiếng Anh: *triple counterpoint*). Kiểm: (−7) + (−7) = (−14), đúng công thức.
 - Cả **ba cặp** viết theo **Iv = −7**.
 - Không cặp nào đi **cùng hướng đến quãng thuận hoàn toàn**.
+::scan taneev 80 | Tam trùng đối vị: Iv1 = −7, Iv2 = −14, Iv3 = −21 (phần đầu)
 
 ## Bốn bè
 - Từ năm bè trở lên ít dùng vì **càng nhiều bè, tính phức điệu càng giảm**.
 - Bốn bè có **sáu cặp** hai bè: màu hoà âm đầy đặn, nhưng gần với hoà âm hơn — chỉ khác ở chỗ hoà âm ở đây **không có công năng** như trong lối viết hoà âm.
 - Cách dùng quãng như ba bè; nghịch ở phách mạnh dạng nốt lưu; **quãng 4 được coi như thuận** và đi song song được ở **hai cặp trên** (I – II, II – III).
+::scan taneev 81 | Quãng 4 song song ở hai cặp bè trên trong bốn bè
 - Vì có nhiều cặp, quãng nghịch có thể đặt ở các cặp khác nhau; nhu cầu tương phản tiết tấu lớn hơn nên tiết tấu thường **phân nhỏ hơn**.
+::scan taneev 82 | Bốn bè: quãng nghịch ở các cặp khác nhau, tiết tấu phân nhỏ
 - **Đối vị phức tạp bốn bè** ít dùng (hiệu quả biến thể không rõ); thường chỉ dùng **tứ trùng đối vị quãng 8**: cả bốn bè đổi chỗ theo Iv = −7, −14 hoặc −21.
+::scan taneev 83 | Đối vị bốn bè: NT và BT
 
 ## Cách viết ba bè (từ khung hai bè)
 1. Viết **bè trên và bè trầm** như một bài hai bè đúng luật (cặp ngoài là khung chịu lực).
@@ -627,6 +699,7 @@ Sự đa dạng nằm ở **bè mô phỏng**; phần kết hợp giữa các b�
 3. Viết tiếp ở bè P phần **B** làm đối vị với A1.
 4. Viết **đoạn kết**.
 ::form P_hát_A P_hát_B,_R_hát_A1 Đoạn_kết | Trình tự mô phỏng đơn giản: P trình bày A; trong khi R nhắc A (thành A1), P tiếp tục bằng B làm đối vị; rồi đến đoạn kết
+::scan taneev sd35 | P và R: hai cách vào bè — A, B rồi đoạn kết
 
 ## Bảy hình thức mô phỏng đơn giản
 | Hình thức | R làm gì với giai điệu của P |
@@ -638,11 +711,17 @@ Sự đa dạng nằm ở **bè mô phỏng**; phần kết hợp giữa các b�
 | **Ngược hướng** | Lấy **nốt cuối** của P làm nốt đầu của R, rồi đi ngược lại đến nốt đầu (tiếng Anh: *retrograde*) |
 | **Mô phỏng tiết tấu** | R **không nhắc giai điệu**, chỉ nhắc đúng **tiết tấu** của P |
 | **Tổng hợp** | Kết hợp, ví dụ vừa đảo ảnh vừa phóng to hoặc thu nhỏ |
+::scan taneev 84,85 | Mô phỏng cùng hướng (Thí dụ 84) và đảo ảnh, R∞ (Thí dụ 85)
+::scan taneev 86,87 | Thu nhỏ trường độ (Thí dụ 86) và phóng to trường độ (Thí dụ 87)
+::scan taneev 88,89 | Mô phỏng ngược hướng (Thí dụ 88) và mô phỏng tiết tấu (Thí dụ 89)
+::scan taneev 90 | Mô phỏng tổng hợp
 ::staff treble C4 E4 D4 G4 / G4 D4 E4 C4 / E4 C4 D4 A3 | Một mô-típ P (trái), dạng ngược hướng (giữa) và dạng đảo ảnh quanh Rê (phải)
 
 ## Mô phỏng ba bè và bốn bè
 - **Ba bè**: thường chỉ **hai bè** tham gia mô phỏng; bè thứ ba là **bè tự do**, viết đối vị đơn giản với hai bè kia. Hai bè mô phỏng dùng được mọi thủ pháp ở trên.
+::scan taneev 98 | Mô phỏng đơn giản ba bè
 - **Bốn bè**: khả năng rất phong phú, nhất là mô phỏng đơn giản: kết hợp nhiều hình thức và nhiều cách vào bè. Ví dụ của giáo trình: sau khi P kết thúc, R1 vào ở dạng **phản gương**, R2 ở dạng **phóng to trường độ**, R3 **vừa phản gương vừa phóng to**. Đối vị giữa các bè chỉ cần đối vị đơn giản.
+::scan taneev sd50,104 | P, R1 phản gương, R2 phóng to trường độ, R3 vừa phản gương vừa phóng to (Sơ đồ 50, Thí dụ 104)
 - **Mô phỏng kép** (bốn bè): **cùng lúc trình bày hai bè**, sau đó hai bè này được mô phỏng ở **hai bè khác** — mầm mống của fugue hai chủ đề.
 
 ## Ở đâu cũng gặp
@@ -672,6 +751,7 @@ Phần cuối của mỗi bè **quay về phần đầu ở đúng cao độ ban
 |---|---|---|
 | **Loại I** | Khoảng thời gian **P → R bằng** khoảng **R → P′** | **Đối vị phức tạp** (Iv) |
 | **Loại II** | Khoảng **P → R nhỏ hơn** khoảng R → P′ | **Đối vị đơn giản** + bè canon giả |
+::scan taneev sd36,sd37 | Canon vô tận loại I: P + R = R + P′ (Sơ đồ 36); loại II: P + R < R + P′ (Sơ đồ 37)
 Khác biệt với canon mô tiến: ở canon vô tận, **P và P′ luôn cùng cao độ**.
 
 ### Loại I: công thức Iv = 2x
@@ -688,14 +768,17 @@ Cách viết:
 3. Viết **B** đối vị với A1, đúng mọi luật của Iv đã chọn (chuẩn bị quãng nghịch, giới hạn khoảng cách — xem [[doi-vi-chuyen-dong-chieu-doc]]).
 4. Chuyển A1 → A2 và B → B1, cùng theo quãng x.
 5. Đặt dấu nhắc lại trước R và sau P′; cuối cùng viết **đoạn kết**.
+::scan taneev 91 | Canon vô tận loại I (Iv = −18), các mũi tên x, y; bên dưới là các vị trí P – R – P′ với Iv = −16, −14
 
 ### Loại II: bè canon giả
 Không có nguyên thể – biến thể nên chỉ cần **đối vị đơn giản**, nhưng phải dùng **bè giả** như trong [[doi-vi-chuyen-dong-chieu-ngang|đối vị chiều ngang]].
+::scan taneev sd38 | Canon vô tận loại II và đoạn A bè giả
 1. Viết A làm P; chuyển A → A1 theo quãng x.
 2. Viết B đối vị đơn giản với A1; chuyển B → B1 theo x. Tiếp tục C, C1.
 3. Trước khi viết đoạn **D** (đoạn sẽ đưa P về A2), viết **A bè giả**: A đặt trước A2 và **cách A2 một quãng x** (P′ ở trên thì bè giả ở trên A2; P′ ở dưới thì ở dưới).
 4. Viết D đối vị đơn giản **với C1 và với A bè giả**; chuyển A bè giả về A2 (P′), D về D1 theo x.
 5. D phải nối tự nhiên với nốt cuối của C và nốt đầu của A2. Dù chia đoạn để dễ viết, cả tuyến giai điệu phải thành **một làn sóng tự nhiên**.
+::scan taneev 92 | Canon vô tận loại II (x = −7)
 
 ## 2. Canon mô tiến
 Mỗi lần nhắc lại, giai điệu được đặt ở **một độ cao mới**; khoảng cách cao độ giữa hai lần nhắc là **khoảng mô tiến** (bước đi mô tiến). Sách Nga gọi là *каноническая секвенция*. Cách viết giống canon vô tận, chỉ khác **vị trí P′** do bước mô tiến quyết định.
@@ -710,6 +793,7 @@ Mỗi lần nhắc lại, giai điệu được đặt ở **một độ cao m�
 |---|---|---|
 | **P ở bè trên** | Mô tiến **đi lên** | Mô tiến **đi xuống** |
 | **P ở bè dưới** | Mô tiến **đi xuống** | Mô tiến **đi lên** |
+::scan taneev 93,94 | Hướng mô tiến khi P ở bè trên (Thí dụ 93) và khi P ở bè dưới (Thí dụ 94)
 Ví dụ: Iv = −7, P ở trên, x = −3 (R thấp hơn P một quãng 4), y = −4 (P′ cao hơn R một quãng 5) → P′ cao hơn P **một quãng 2**: mô tiến đi lên.
 
 ### Loại I
@@ -718,9 +802,11 @@ Như canon vô tận loại I: dùng Iv; **sau R là P′ ngay**. Chọn Iv, r�
 2. Viết B **đối vị phức tạp** đúng Iv với A1; chuyển B → B1 theo x. Thế là xong **một móc xích** mô tiến.
 3. Từ P′ (A2) lặp lại như móc xích trước; cuối bài viết đoạn kết.
 Ví dụ của giáo trình: Iv = −14, x = −6, y = −8.
+::scan taneev sd39,95 | Canon mô tiến loại I: sơ đồ móc xích (Sơ đồ 39) và bài mẫu Iv = −14, x = −6, y = −8 (Thí dụ 95)
 
 ### Loại II
 Như canon vô tận loại II: đối vị đơn giản và bè canon giả. Thêm một việc: định trước **P′ vào sau R bao nhiêu nhịp** (không nên quá xa để bước mô tiến còn rõ). Hai cách đặt bè giả: lấy **P** làm gốc (bè giả cùng phía với P, vào sau P đúng khoảng thời gian đã định), hoặc lấy **P′** làm gốc (bè giả **cách P′ một quãng x** và vào trước P′). Viết B đối vị đơn giản với A1; viết C đối vị đơn giản với B1 và A bè giả… Ở các móc xích sau chỉ cần dời giai điệu.
+::scan taneev sd40,96,97 | Canon mô tiến loại II: sơ đồ (Sơ đồ 40); bè giả vào trước P′ hai nhịp (Thí dụ 96); bài mẫu (Thí dụ 97)
 
 ## Đối chiếu thuật ngữ quốc tế
 | Giáo trình Việt Nam | Tiếng Anh | Tiếng Nga |
@@ -769,6 +855,7 @@ So với hai bè (chỉ hai cách vào bè), canon ba bè có **sáu cách xuấ
 2. Viết **B** đối vị đơn giản với A1; chuyển B → B1, B2 như trên.
 3. Viết **C** đối vị đơn giản với **B1 và A2**; chuyển C → C1, C2… đến khi muốn kết thì viết đoạn kết.
 ::form P_=_A P_=_B,_R1_=_A1 P_=_C,_R1_=_B1,_R2_=_A2 | Ba tầng đầu của canon loại I kiểu 1: mỗi đoạn mới viết đúng luật với mọi đoạn đang vang cùng lúc, rồi được chép sang các bè sau
+::scan taneev sd44,99 | Canon ba bè loại I kiểu 1: sơ đồ (Sơ đồ 44) và bài mẫu (Thí dụ 99)
 
 ## Loại I kiểu 2 — bắt buộc đối vị phức tạp
 Vì quãng mô phỏng khác nhau, phải dùng **đối vị chuyển động chiều dọc** ([[doi-vi-chuyen-dong-chieu-doc]]): **chọn Iv trước**, rồi chọn hai quãng sao cho **x (P → R1) + y (R1 → R2) = Iv**.
@@ -779,6 +866,7 @@ Vì quãng mô phỏng khác nhau, phải dùng **đối vị chuyển động c
 | 5 | x **lớn hơn** y (x thuộc cặp ngoài) | Cặp **ngoài** | Cặp **trên** | Cặp dưới = biến thể của cặp ngoài |
 | 6 | x lớn hơn y | Cặp **ngoài** | Cặp **dưới** | Cặp trên = biến thể của cặp ngoài |
 Với cách 3: viết A (P); A → A1 quãng x (R1); A1 → A2 quãng y (R2). Viết B **đối vị phức tạp** theo Iv với A1, rồi chuyển đến B1 và B2 (B1 tự động đúng với A2, vì đó là biến thể của cặp A1/B). Viết C đối vị phức tạp với B1 và đối vị đơn giản với A2… Ví dụ của giáo trình (cách 6): Iv = −14, x = −9, y = −5.
+::scan taneev sd45,100 | Loại I kiểu 2: sơ đồ (Sơ đồ 45) và bài mẫu IV = −14, x = −9, y = −5 (Thí dụ 100)
 
 ## Loại II — bè canon giả
 **Kiểu 1** (thời gian khác, quãng bằng nhau; nhóm 1) dùng **đối vị chiều ngang** với bè canon giả:
@@ -786,7 +874,9 @@ Với cách 3: viết A (P); A → A1 quãng x (R1); A1 → A2 quãng y (R2). Vi
 - Đặt **bè giả**: cách R2 đúng bằng quãng P → R1, và **cùng độ cao với R1**: *P − R1 = R1 − R2*, *P − R1 = bè giả − R2*.
 - Thời điểm vào của bè giả: P – R1 cách nhau bao nhiêu nhịp thì bè giả – R2 cũng cách bấy nhiêu.
 - Viết A (P) → A1 (R1); chép **A bè giả** và A2 (R2). Viết B đối vị đơn giản với A1 và A bè giả; đưa B lên B1 (B1 tự đúng với A2 vì quan hệ giống B với A bè giả); chuyển B thành B bè giả và B2. Viết C đối vị đơn giản với B1, B bè giả và A2… Ví dụ của giáo trình: quãng 5, R1 vào sau P một nhịp, R2 vào sau R1 một nhịp rưỡi.
+::scan taneev sd49,101,#117 | Loại II kiểu 1: sơ đồ (Sơ đồ 49), vị trí P, R1, bè giả, R2 (Thí dụ 101) và bài canon
 **Kiểu 2** (thời gian và quãng đều khác; cả sáu cách) viết giống kiểu 1, nhưng **bè giả có độ cao khác R1**: quan hệ giữa bè giả và R2 bằng quan hệ giữa P và R1 (*P − R1 = bè giả − R2*). Ví dụ của giáo trình (cách 6): x = quãng 12 (số 11), y = quãng 3 (số 2), R1 vào sau P hai nhịp, R2 vào sau R1 một nhịp rưỡi.
+::scan taneev 103,#119 | Loại II kiểu 2: vị trí bốn bè với cách xuất phát 6 (Thí dụ 103) và bài canon
 
 ## Canon bốn bè
 Rất khó viết, nên thường chỉ viết **loại I kiểu 1**: các bè vào **lần lượt từ trên xuống hoặc từ dưới lên**, chỉ cần **đối vị đơn giản**. Bốn bè còn cho phép **mô phỏng kép** — xem [[mo-phong-don-gian]].
@@ -821,6 +911,8 @@ Thời kỳ đầu của phức điệu nghiêm khắc, thể hai đoạn giữ 
 | Cao trào | Ở đoạn 2 | Ở đoạn 2 |
 | Giọng | Quan hệ giọng **không quan trọng**; giữa hai đoạn thường có **một câu nối nhỏ** | Đoạn 1 điệu thức **ổn định**, đoạn 2 **bất ổn định** hơn; ranh giới hai đoạn thường **không rõ** |
 | Độ dài | Ngắn gọn, hai đoạn **cân đối** | Hai đoạn chênh lệch |
+::scan taneev 105 | Hai đoạn tương phản
+::scan taneev sd54,106 | Hai đoạn mô phỏng: sơ đồ (Sơ đồ 54) và bài mẫu (Thí dụ 106)
 
 ## Thể ba đoạn
 Phong phú hơn nhiều: thủ pháp đa dạng, nội dung mở rộng. Đoạn 3 như **phần tái hiện** đoạn 1, nên đoạn 2 càng phải **tương phản**.
@@ -829,6 +921,7 @@ Phong phú hơn nhiều: thủ pháp đa dạng, nội dung mở rộng. Đoạn
 | **1** | Một **nguyên thể** viết theo phức điệu **tương phản** |
 | **2** | Dùng **mô phỏng, canon** để phát triển một hai nhân tố của đoạn 1 (đôi khi chất liệu mới). Thủ pháp tương phản quan trọng là **giọng**: đoạn 2 hay chuyển sang **giọng át hoặc hạ át** |
 | **3** | **Tái hiện** — nhưng **không nhắc nguyên xi** đoạn 1 (sẽ rất nghèo nàn) mà dùng **một biến thể** của đoạn 1 để tạo cao trào; có thể dài hay ngắn hơn đoạn 1 và biến dạng nhiều hơn |
+::scan taneev 107 | Thể ba đoạn
 Thể ba đoạn **không phân biệt** tương phản hay mô phỏng — nó kết hợp cả hai.
 
 ## Bốn bè: mầm mống của fugue
