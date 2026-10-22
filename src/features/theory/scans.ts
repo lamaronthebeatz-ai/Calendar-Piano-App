@@ -27,24 +27,19 @@ export function loadScans(book: string): Promise<ScanItem[]> {
 
 export const scanUrl = (book: string, f: string) => `${import.meta.env.BASE_URL}scans/${book}/${f}`
 
-/** "112-127" or "117" → inclusive range. */
-export function parseRange(s = ''): [number, number] {
-  const [a, b] = s.split('-').map(Number)
-  return [a || 0, b || a || 0]
-}
-
 export const scanLabel = (book: string, it: ScanItem) =>
   SCAN_BOOKS[book]?.unit === 'ex' ? (it.ex?.length ? `Ví dụ ${it.ex.join(', ')} · tr. ${it.page}` : `Tr. ${it.page}`) : `Tr. ${it.page} · khối ${it.n}`
 
 /**
- * Items for a range: by page (Fux), or (Albrechtsberger) the items whose example numbers fall in the range
- * plus the unnumbered ones on the pages those examples occupy.
+ * One item by reference: "117" = the book's example 117; "#523" = item 523 (unnumbered crops);
+ * "10.2" = page 10, block 2 (books counted by page, like Fux).
  */
-export function selectScans(book: string, all: ScanItem[], from: number, to: number, byPage = false) {
-  if (byPage || SCAN_BOOKS[book]?.unit !== 'ex') return all.filter((it) => it.page >= from && it.page <= to)
-  const inRange = (it: ScanItem) => !!it.ex?.some((e) => e >= from && e <= to)
-  const pages = all.filter(inRange).map((it) => it.page)
-  if (!pages.length) return []
-  const lo = Math.min(...pages), hi = Math.max(...pages)
-  return all.filter((it) => inRange(it) || (!it.ex?.length && it.page >= lo && it.page <= hi))
+export function findScan(all: ScanItem[], ref: string) {
+  if (ref.startsWith('#')) return all.find((it) => it.n === Number(ref.slice(1)))
+  if (ref.includes('.')) {
+    const [page, n] = ref.split('.').map(Number)
+    return all.find((it) => it.page === page && it.n === n)
+  }
+  const n = Number(ref)
+  return all.find((it) => it.ex?.includes(n))
 }

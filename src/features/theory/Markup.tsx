@@ -1,10 +1,10 @@
 import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import { ChevronRightIcon, ExpandIcon, XIcon } from '../../components/icons'
+import { ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
-import { LinkRefContext, PrintContext } from './linkRef'
-import { loadScans, parseRange, scanLabel, scanUrl, selectScans, SCAN_BOOKS, type ScanItem } from './scans'
+import { LinkRefContext } from './linkRef'
+import { findScan, loadScans, scanLabel, scanUrl, type ScanItem } from './scans'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
@@ -165,72 +165,26 @@ function ScanImages({ book, item }: { book: string; item: ScanItem }) {
   )
 }
 
-function useScans(book: string, from: number, to: number, byPage = false) {
+/** `::scan book ref | caption` — one example cut from a scanned book, placed where the text discusses it. */
+function ScanFigure({ book, refs, caption }: { book: string; refs: string; caption: string }) {
   const [state, setState] = useState<{ key: string; items: ScanItem[] }>()
-  const key = `${book}:${byPage ? 'tr' : 'ex'}:${from}-${to}`
+  const key = `${book}:${refs}`
   useEffect(() => {
     let live = true
-    loadScans(book).then((all) => live && setState({ key, items: selectScans(book, all, from, to, byPage) }))
+    loadScans(book).then((all) => live && setState({ key, items: refs.split(',').map((r) => findScan(all, r)).filter((x): x is ScanItem => !!x) }))
     return () => {
       live = false
     }
-  }, [book, from, to, byPage, key])
-  return state?.key === key ? state.items : null
-}
-
-/** `::scan book n | caption` — one example cut from a scanned book. */
-function ScanFigure({ book, n, caption }: { book: string; n: number; caption: string }) {
-  const items = useScans(book, n, n)
-  const item = items?.find((it) => it.ex?.includes(n)) ?? items?.[0]
-  if (!item) return null
+  }, [book, refs, key])
+  const items = state?.key === key ? state.items : []
+  if (!items.length) return null
+  const label = items.map((it) => scanLabel(book, it)).join('; ')
   return (
-    <Figure caption={`${caption ? caption + ' — ' : ''}${scanLabel(book, item)}`}>
-      <ScanImages book={book} item={item} />
+    <Figure caption={caption ? `${caption} *(${label})*` : label}>
+      {items.map((it) => (
+        <ScanImages key={it.n + '-' + it.page} book={book} item={it} />
+      ))}
     </Figure>
-  )
-}
-
-/** `::scans book ex|tr from-to` — every example in a range, as a collapsible gallery (expanded when printing). */
-function ScanGallery({ book, from, to, byPage, caption }: { book: string; from: number; to: number; byPage: boolean; caption: string }) {
-  const items = useScans(book, from, to, byPage)
-  const printing = useContext(PrintContext)
-  const [open, setOpen] = useState(false)
-  const [zoom, setZoom] = useState<ScanItem | null>(null)
-  const meta = SCAN_BOOKS[book]
-  if (!meta || (items && !items.length)) return null
-  const range = meta.unit === 'ex' && !byPage ? `ví dụ ${from} – ${to}` : `trang ${from} – ${to}`
-  const shown = open || printing
-  return (
-    <section className="scan-gallery">
-      {/* no focus on press: inside the paginated reader, focusing would scroll the page sideways */}
-      <button type="button" className="scan-toggle" aria-expanded={shown} onPointerDown={(e) => e.preventDefault()} onClick={() => setOpen((o) => !o)}>
-        <ChevronRightIcon width={15} height={15} className="scan-chevron" />
-        <span>
-          <b>{caption || 'Ví dụ trong sách gốc'}</b> · {range}
-          {items && <> · {items.length} hình</>}
-        </span>
-      </button>
-      {shown && items && (
-        <div className="scan-grid">
-          {items.map((it) => (
-            <div key={`${it.page}-${it.n}`} className="scan-item">
-              <button type="button" onPointerDown={(e) => e.preventDefault()} onClick={() => setZoom(it)} aria-label={`Phóng to ${scanLabel(book, it)}`}>
-                <ScanImages book={book} item={it} />
-              </button>
-              <p className="scan-caption">{scanLabel(book, it)}</p>
-            </div>
-          ))}
-        </div>
-      )}
-      <p className="scan-source">
-        Ảnh cắt từ bản quét: <a href={meta.url} target="_blank" rel="noreferrer">{meta.source}</a> — Internet Archive, phạm vi công cộng.
-      </p>
-      {zoom && (
-        <Lightbox caption={scanLabel(book, zoom)} width={0} onClose={() => setZoom(null)}>
-          <ScanImages book={book} item={zoom} />
-        </Lightbox>
-      )}
-    </section>
   )
 }
 
@@ -269,11 +223,7 @@ function Directive({ line }: { line: string }) {
     case 'img':
       return <CommonsImage file={args.join(' ')} caption={caption} />
     case 'scan':
-      return <ScanFigure book={args[0]} n={Number(args[1])} caption={caption} />
-    case 'scans': {
-      const [from, to] = parseRange(args[2])
-      return <ScanGallery book={args[0]} from={from} to={to} byPage={args[1] === 'tr'} caption={caption} />
-    }
+      return <ScanFigure book={args[0]} refs={args[1]} caption={caption} />
     case 'youtube':
       return <YouTubeVideo id={args[0]}>{caption && <Inline text={caption} />}</YouTubeVideo>
     case 'ytsearch':

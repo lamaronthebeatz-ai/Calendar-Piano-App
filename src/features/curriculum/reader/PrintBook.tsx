@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { ArrowLeftIcon, DownloadIcon } from '../../../components/icons'
 import { Cover } from './Cover'
 import { BookPage } from './Pages'
-import { PrintContext } from '../../theory/linkRef'
 import { hueTint, type ReaderBook } from './model'
 
 /**
@@ -47,7 +46,6 @@ export function PrintBook({ book }: { book: ReaderBook }) {
         </button>
       </div>
 
-      <PrintContext.Provider value={true}>
       <div className="print-book">
         <section className="print-cover">
           <Cover book={book} size={1.9} />
@@ -64,7 +62,6 @@ export function PrintBook({ book }: { book: ReaderBook }) {
           {book.title}{book.volume ? ` · ${book.volume}` : ''} · {book.author} · biên soạn từ thư viện Lý thuyết của Lịch Dạy Piano · in ngày {new Date().toLocaleDateString('vi-VN')}
         </p>
       </div>
-      </PrintContext.Provider>
     </div>,
     document.body,
   )

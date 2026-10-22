@@ -110,8 +110,10 @@ Bản dịch gọi ba kiểu chuyển động là *regular* (cùng chiều), *co
 | 4 | Các nốt phải hợp với **bản chất của giọng** (điệu thức) | — |
 | 5 | Tránh hết mức có thể **quan hệ "mi chọi fa"** (*inharmonic relation*) | Tức quãng ba cung và đối sai (quan hệ chéo) giữa hai bè |
 | 6 | Luôn giữ **điều độ, đa dạng và giai điệu đẹp** | Quy tắc bao trùm |
+::scan fux 2.2 | Quy tắc 2: đi vào quãng 8 và đồng âm bằng bước nhảy
 
 ::staff treble E4+C5=6 G4+D5=5 | Quãng 5 ẩn: hai bè cùng đi lên từ quãng 6 vào quãng 5. Điền nốt trung gian (bè dưới E – F – G, bè trên C – D) sẽ lộ ra chuỗi quãng song song mà quy tắc 1 muốn tránh
+::scan fux 2.1 | Quãng 5 ẩn (*Hidden Fifths*) và quãng 8 ẩn (*Hidden Eights*) trong sách
 
 Bốn quy tắc chuyển động quen thuộc trong các giáo trình hiện đại (ví dụ Wikibooks) là cách viết gọn của quy tắc 1: từ hoàn toàn sang hoàn toàn chỉ bằng ngược chiều hoặc xiên; từ hoàn toàn sang không hoàn toàn, từ không hoàn toàn sang không hoàn toàn — mọi chuyển động; từ không hoàn toàn sang hoàn toàn — ngược chiều hoặc xiên.
 
@@ -120,6 +122,7 @@ Ba điểm chính, theo đúng thứ tự trong sách:
 1. **Mỗi nốt cantus có thuận âm riêng của nó.** Cantus ở dưới thì tính quãng **lên**, cantus ở trên thì tính quãng **xuống**.
 2. **Mở và kết bằng thuận hoàn toàn.**
 3. **Nốt áp chót**: cantus ở dưới cần **quãng 6 trưởng**; cantus ở trên cần **quãng 3 thứ** (đảo của 6 trưởng). Ví dụ của sách ở giọng Re ("D, la, sol, re").
+::scan fux 3.1 | Hai bài mẫu nốt chọi nốt của sách: đối âm trên cantus và dưới cantus — áp chót 6 → 8 và 3 → 1
 
 ::staff treble D4+A4=5 F4+A4=3 E4+G4=3 D4+A4=5 G4+B4=3 F4+C5=5 A4+C5=3 G4+B4=3 F4+D5=6 E4+C#5=6 D4+D5=8 | Minh hoạ (tự soạn, đã kiểm theo sáu quy tắc): đối âm ở trên cantus Dorian của Fux D – F – E – D – G – F – A – G – F – E – D. Mở 5, kết 8; áp chót 6 trưởng E – C#; mọi lần vào quãng 5, 8 đều bằng ngược chiều hoặc xiên
 
@@ -134,10 +137,6 @@ Kiểm từng bước của ví dụ:
 | 10 → 11 | Ngược chiều | 6 → 8 | Áp chót 6 trưởng mở ra quãng 8 |
 
 Luyện kỹ loại này: [[doi-am-loai-1]]. Các loại sau: [[nam-loai-hai-be-fux]]. Toàn bộ hệ thống: [[he-thong-fux-gradus-ad-parnassum]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 1-2
 `,
   },
   {
@@ -152,22 +151,30 @@ Bài này bổ sung cho năm bài luyện tập [[doi-am-loai-1]] … [[doi-am-l
 
 ## Loại 2: hai nốt chọi một
 - Dùng ở **nhịp hai**: phách đầu mạnh, phách sau nhẹ. **Nốt trắng đầu phải thuận**; nốt thứ hai thuận hoặc nghịch. Nghịch âm chỉ được dùng khi **đi liền bậc** từ thuận sang thuận; **nhảy thì chỉ dùng thuận**.
+::scan fux 3.2 | *Diminutio*: nốt nghịch ở phách nhẹ đi liền bậc giữa hai thuận âm
 - **Quy tắc 1 — ô áp chót**: cantus ở dưới thì hai nốt là **quãng 5 rồi quãng 6 trưởng**; cantus ở trên thì **quãng 5 rồi quãng 3 thứ**.
 - **Quy tắc 2**: tránh **những bước nhảy quãng 3 liên tiếp cùng chiều** — chúng sinh ra quãng 5 / 8 song song bị cấm. Nhảy lớn hơn (quãng 4, 5, 6) thì được, vì "ít chướng tai hơn".
+::scan fux 3.3 | Ex. 1 — hai bước nhảy quãng 3 liền sinh quãng 5, 8 song song ("bad"); Ex. 2 — bước nhảy lớn hơn ("good")
 - **Quy tắc 3**: cantus ở trên thì đối âm **mở bằng lặng nửa ô**.
 - Khi hai bè đi sát đến mức không còn chỗ để đi ngược chiều, được dùng **bước nhảy quãng 6 hoặc quãng 8**.
+::scan fux 3.4 | Bước nhảy quãng 6 hay 8 khi hai bè đi sát nhau
+::scan fux 4.1 | Bài mẫu loại 2: đối âm trên và dưới cantus
 - **Nhịp ba** (ba nốt chọi một): nốt ở giữa có thể là nghịch.
+::scan fux 4.2 | Ba nốt chọi một ở nhịp 3/2
 
 ## Loại 3: bốn nốt chọi một
 - Năm nốt đen đi liền bậc lên hoặc xuống: **nốt 1, 3, 5 thuận; nốt 2, 4 nghịch**.
 - Nhưng có lúc nốt 2 và 4 thuận còn **nốt 3 nghịch** — để **lấp đầy một quãng 3**. Quy về dạng gốc thì đó vẫn là nốt lướt hợp lệ.
 - **Nota cambiata** (*nốt đổi*): đi từ nghịch sang thuận **bằng bước nhảy**. Fux giải thích: bước nhảy quãng 3 từ nốt 2 sang nốt 3 "lẽ ra" nằm ở nốt 1 sang nốt 2, khi đó nốt 2 là quãng 6 (thuận). Lấp quãng 3 đó lại thì cần móc đơn — mà **móc đơn không dùng trong phong cách này**, nên hình cambiata được ưa hơn.
 - Ô áp chót có mẫu riêng cho cantus ở dưới và ở trên (sách chỉ cho bằng ví dụ nhạc).
+::scan fux 4.3,4.4 | Các mẫu bốn nốt đen Ex. 1 – 8 của sách, có cả mẫu với cantus ở trên (Ex. 8)
+::scan fux 5.1 | Bài mẫu loại 3: đối âm trên và dưới cantus
 
 ::staff treble C4+C5=8 B4=7 G4=5 A4=6 / D4+B4=6 | Nota cambiata (8 – 7 – 5 – 6): nốt B nghịch nhảy xuống G thay vì đi liền bậc — Fux coi đây là bước nhảy "dời chỗ" của một nốt lướt
 
 ## Loại 4: nối lệch phách
 - Nối lệch phách (*syncopation*) có hai dạng: **thuận** — cả phách mạnh lẫn nhẹ đều thuận; **nghịch** — nốt ở phách nhẹ thuận, nốt nối sang phách mạnh **thành nghịch**.
+::scan fux 5.2 | Ex. 1 — nối lệch phách thuận (*Concords*); Ex. 2 — nối lệch phách nghịch (*Discords*)
 - Ở các loại trước, nghịch âm chỉ là nốt lướt; ở loại này nó "**giữ vai chính trong hoà âm**" và **phải giải quyết xuống một bậc** vào thuận âm kế tiếp.
 - Fux nói rõ: **nghịch âm thật ra chỉ là sự trì hoãn của thuận âm** — bỏ dấu nối đi thì thấy ngay chuỗi thuận âm đứng sau.
 
@@ -177,24 +184,27 @@ Bài này bổ sung cho năm bài luyện tập [[doi-am-loai-1]] … [[doi-am-l
 | 4 → 3 | 4 → 5 |
 | 7 → 6 | 7 → 8 |
 | 9 → 8 | 9 → 10 |
+::scan fux 5.3 | Các cách giải quyết nghịch âm treo xuống một bậc theo bảng trên
+::scan fux 6.2 | Các nối lệch phách ở bè dưới và "The same inverted"
 
 - Vì nghịch âm chỉ là trì hoãn, **không được treo từ đồng âm sang quãng 2, hay từ quãng 8 sang quãng 9**: bỏ dấu nối sẽ lộ ra hai đồng âm hay hai quãng 8 liền nhau.
+::scan fux 6.1 | "Bad": treo 1 – 2 – 1 và 8 – 9 – 8 — bỏ dấu nối lộ ra đồng âm và quãng 8 liền
 - **Ô áp chót**: cantus ở dưới thì dùng **7 → 6**; cantus ở trên thì dùng **2 → 3**, rồi vào đồng âm.
 - **Nối lệch phách ở mọi ô**, nhiều nhất có thể trong chừng mực tiến hành đúng, đa dạng và giai điệu cho phép.
+::scan fux 6.3 | Bài mẫu loại 4: áp chót 7 → 6 (cantus ở dưới) và 2 → 3 (cantus ở trên)
 - Sách còn chỉ những kiểu nối khác (thay dấu nối bằng **dấu chấm dôi** cho "chuyển động sinh động hơn"; chen móc đơn — **chỉ ở nốt đen thứ hai và thứ tư** của ô) và nói rõ chúng thuộc về loại 5.
+::scan fux 7.1 | Các kiểu nối khác: thay dấu nối bằng dấu chấm dôi, chen móc đơn — "good", "bad"
 
 **Chỗ cần lưu ý**: bảng trên chép đúng bản dịch, gồm cả 4 → 5 và 7 → 8 ở bè dưới. Các giáo trình hiện đại (bảng ở [[doi-am-loai-4]]) chỉ coi **2 – 3** và **9 – 10** là chuẩn, 4 – 5 tuỳ sách, 7 – 8 thường bị cấm. Tao chưa đối chiếu đoạn này với nguyên bản Latin.
 
 ## Loại 5: đối âm hoa mỹ
 - Fux gọi đây là "**phần trang trí và tu từ của âm nhạc**": hỗn hợp mọi loại trước — nốt chấm, nốt nối, thuận xen nghịch, nhiều kiểu trường độ.
 - Một điều sách nhấn mạnh: đặt **hai nốt đen ở đầu ô mà không có nối lệch phách** làm giai điệu nghe như **sắp kết**, cắt đứt dòng chảy. Muốn giữ chuyển động liên tục thì hoặc nối lệch phách, hoặc thêm hai nốt đen nữa cho đủ ô.
+::scan fux 7.2 | "Indifferent" và "Better": hai nốt đen đầu ô, và cách nối cho giai điệu chảy tiếp
 - Phần thực hành và các mẫu nhịp điệu: [[doi-am-loai-5]].
+::scan fux 7.3,7.4 | Hai bài mẫu đối âm hoa mỹ: đối âm trên và dưới cantus
 
 Tiếp theo: [[doi-am-ba-be-fux]]. Toàn bộ hệ thống: [[he-thong-fux-gradus-ad-parnassum]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 3-7
 `,
   },
   {
@@ -210,6 +220,7 @@ Fux lập luận: **[[hop-am-ba|hợp âm ba]] 1 – 3 – 5** gồm đúng ba n
 
 ## Ba nhận xét bổ sung
 1. **Đặt đủ hợp âm ba ở mỗi ô** trừ khi không thể. Đôi khi chọn quãng 6 hay quãng 8 thay cho hợp âm ba — để **giai điệu đẹp hơn** hoặc để **tránh hai quãng 8 / 5 liền nhau**.
+::scan fux 8.1 | Ex. 1 – 5: chọn quãng cho ba bè — "good" và "not so good"
 2. Khi **bè trầm đi lên liền bậc**, phải chừa đủ chỗ giữa các bè để chúng đi **ngược chiều** được.
 3. Quy tắc chuyển động áp dụng cho **cả bè giữa** chứ không riêng hai bè ngoài. Nhưng khi nhiều bè, để tránh lỗi lớn hơn, **không phải lúc nào cũng giữ trọn** được.
 
@@ -217,8 +228,10 @@ Fux lập luận: **[[hop-am-ba|hợp âm ba]] 1 – 3 – 5** gồm đúng ba n
 - Một bước **cùng chiều vào quãng hoàn toàn** ở ví dụ "không tránh được": đổi sang ngược chiều thì lại thành thuận không hoàn toàn đi cùng chiều vào hoàn toàn, và bè giữa sẽ thành **đồng âm** với bè trầm — mà **đồng âm kém hài hoà hơn quãng 8**.
 - **Không vượt quá năm dòng kẻ** của khuông mỗi bè nếu không cần thiết.
 - Bè trên đi từ quãng 10 vào quãng 8 bằng cùng chiều ở hai ô cuối **được chấp nhận**, vì quãng 10 không dùng được ở kết.
+::scan fux 9.3 | Ex. a, b: hai cách viết đoạn kết ba bè sách đưa ra
 - Chuỗi hợp âm 6 đi lên **ở phách mạnh** chướng tai hơn ở phách nhẹ.
 - Ví dụ của mỗi loại đều viết **ba lần**, cantus lần lượt ở bè trên, giữa và dưới.
+::scan fux 9.1,9.2 | Loại 1 ba bè: cantus ở bè trên (Ex. 1), giữa (Ex. 2), dưới (Ex. 3)
 
 ## Từng loại ở ba bè
 | Loại | Điều Fux nói thêm |
@@ -228,18 +241,20 @@ Fux lập luận: **[[hop-am-ba|hợp âm ba]] 1 – 3 – 5** gồm đúng ba n
 | 3 | **Bốn nốt đen chọi hai nốt tròn** (một bè đen, hai bè tròn). Chủ yếu xét **nốt ở phách mạnh**: không đặt được hợp âm ba ở nốt mạnh đầu thì ít nhất ở nốt thứ hai, thứ ba. Có thể cho một bè đen, một bè trắng, một bè tròn |
 | 4 | Bè thứ ba nhận **đúng thuận âm nó sẽ có nếu không có nốt treo** — kể cả khi bè trầm treo. **Quãng 5 liên tiếp được "che" bởi nốt treo chỉ chấp nhận ở bè giữa**; quãng 8 thì không, vì quãng 8 kém hài hoà hơn quãng 5 |
 | 5 | Mọi quy tắc trên trong chừng mực có thể; **dùng ngược chiều ở hầu hết các ô** giúp bài viết dễ |
+::scan fux 10.1,10.2 | Loại 2 ba bè: Ex. 1 – 3, cantus đổi chỗ qua ba bè
+::scan fux 11.1,11.2,11.3,11.4 | Loại 3 ba bè: bốn nốt đen chọi hai nốt tròn, Ex. 1 – 5
+::scan fux 12.2,12.3 | Loại 4 ba bè: Ex. 1 – 4, kể cả khi bè trầm treo (Ex. 4)
+::scan fux 13.2,13.3 | Loại 5 ba bè: Ex. 1 – 3, cantus đổi chỗ qua ba bè
 
 ## Các chi tiết tinh tế ở loại 4
 - Nghịch âm ở **phách nhẹ trên bè trầm đứng yên** không chỉ được phép mà "**được coi là thanh nhã**".
+::scan fux 12.1 | Loại 4: *Sine Ligatura* và *Cum Ligatura* — bỏ dấu nối để thấy thuận âm đứng sau; các chuỗi 8 – 9 – 8, 5 – 6 – 5
 - Quãng 7 có thể đi kèm quãng 8 khi nốt đó **thuộc chính cantus** và nốt treo cần xuất hiện ở đó.
 - Bè trầm được **mở bằng dấu lặng** ở ô đầu khi không thể nối lệch phách và không loại nào khác lấp được; Fux cũng chỉ cách thay: cho **bè Alto (Counter Tenor) tạm làm bè trầm** ở ô đầu.
+::scan fux 13.1 | Ex. 1 – 3: mở bè trầm bằng dấu lặng và các cách thay cho đoạn mở
 - Một dấu lặng đặt đúng chỗ **chặn được hai quãng 5 ẩn** — ở loại này quãng 5 ẩn đặc biệt không được phép.
 
 Tiếp theo: [[doi-am-bon-be-fux]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 8-13
 `,
   },
   {
@@ -253,31 +268,34 @@ Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composit
     body: `
 ## Bè thứ tư là bè nhân đôi
 Bè thêm vào "**không gì hơn là nhân đôi một thuận âm đã có trong hợp âm ba**", trừ vài hợp âm. Mọi quy tắc tiến hành và chuyển động của chương trước phải giữ "nhiều nhất có thể", để có tương quan đúng **không chỉ giữa hai bè ngoài mà giữa mọi bè**.
+::scan fux 14.1 | Loại 1 bốn bè: Ex. 1 – 4, cantus lần lượt ở từng bè
 
 ## Thứ tự xếp các quãng thuận
 Fux suy thứ tự tự nhiên từ **phép chia điều hoà quãng 8**: chia quãng 8 sinh ra quãng 5; chia quãng 5 sinh ra quãng 3. Vì thế **quãng 5 đặt ở dưới, quãng 3 ở trên** — đúng như trật tự của [[chuoi-boi-am|chuỗi bội âm]] (âm 2 – 3 – 4 – 5: quãng 8, 5, 4, 3 trưởng). Trật tự này chỉ bị phá khi có lý do, ví dụ để tiến hành đúng từ ô này sang ô sau.
+::scan fux 15.1 | Loại 2 bốn bè: Ex. 1 – 4
 
 ## Loại 3 ở bốn bè: chọn nốt nhân đôi
 - Ở một ô, Fux **nhân đôi quãng 3** thay vì dùng đồng âm. Dùng đồng âm thì (1) hoà âm **thiếu**, vì đồng âm ở phách mạnh "trống hoà âm"; (2) quãng 3 hay 10 chỉ là nốt lướt ở bè trên sẽ **khó nghe ra** vì quá ngắn.
 - Ở một ô khác, hai bè Tenor đi trái quy tắc chuyển động "nhưng không tránh được" vì bị bó vào bốn nốt đen; có thể sửa bằng cách **chia nốt tròn** ở bè Alto. Fux nói điều này cũng áp dụng cho các loại trước: vài **lỗi nhỏ được bỏ qua** vì cùng lý do.
+::scan fux 15.2,16.1 | Loại 3 bốn bè: bốn nốt đen chọi ba bè nốt tròn, Ex. 1 – 4
 
 ## Loại 4 ở bốn bè: đi kèm nốt treo
 - **Thuận âm đi kèm lúc treo phải còn nguyên lúc giải quyết** — có nối lệch phách hay không thì vẫn là cùng thuận âm đó.
 - Đôi khi phải **chia nốt tròn** để giải quyết đúng, ví dụ khi **7 – 6 được đi kèm bằng quãng 5**: nếu bè đi kèm toàn nốt tròn, hoà âm không xếp đúng luật được.
+::scan fux 17.1,18.1 | Ex. a – e (các cách đi kèm nốt treo), rồi bài mẫu loại 4 bốn bè Ex. 1 – 4
 - Nốt treo 2 và 4 (bè trầm treo) lẽ ra đi kèm quãng 6. Khi phải nhân đôi, **nhân đôi quãng 2 tốt hơn quãng 4**: giải quyết xong quãng 2 thành **quãng 3**, hài hoà hơn quãng 6 do quãng 4 nhân đôi sinh ra.
+::scan fux 18.2 | Bè trầm treo: cách nhân đôi được sách ghi "better"
 - Fux ghi chú một ô thiếu nốt đi kèm "vẫn thuộc về hoà âm đầy đủ" — chấp nhận được trong bốn bè.
+::scan fux 18.3,19.1,19.2 | Loại 5 bốn bè: Ex. 1 – 4
 
 ## Giải quyết nghịch âm theo cách khác
 Trước khi sang chương Mô phỏng, Fux lưu ý vài nghịch âm có thể giải quyết khác thường (ví dụ quãng 4 vào **quãng 6 và 3**). Đoạn văn này trong bản quét bị mờ một phần; các trường hợp còn lại cần đối chiếu ví dụ nhạc trước khi chép.
+::scan fux 19.3,19.4 | Các nghịch âm giải quyết khác thường: 9 – 6, 9 – 10, 7 – 10, 4 – 6…
 
 ## Liên hệ với hoà âm
 Bốn bè của Fux là cầu nối từ đối âm sang [[luat-hoa-am-bon-be|luật hoà âm bốn bè]]: nhân đôi, trật tự quãng 5 dưới – quãng 3 trên, và nốt treo đi kèm (xem [[not-ngoai-hop-am]]).
 
 Tiếp theo: [[mo-phong-va-fugue-hai-be-fux]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 14-19
 `,
   },
   {
@@ -294,6 +312,7 @@ Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composit
 - Không cần mô phỏng **mọi nốt** của bè trước (điều đó chỉ riêng **canon**); mô phỏng một phần chủ đề là đủ.
 - Mô phỏng nên dùng **ở giữa** hơn là ở đầu bài, vì ở giữa không phải giữ giọng nghiêm ngặt.
 - Mô phỏng có thể vào ở **mọi quãng**: đồng âm, 2, 3, 4, 5, 6, 7, 8.
+::scan fux 20.1 | Mô phỏng ở đồng âm, quãng 2, 3, 4, 5, 6, 7 và 8
 Hệ thống hoá đầy đủ (P, R, bảy hình thức mô phỏng): [[mo-phong-don-gian]]; mô phỏng toàn phần: [[canon-hai-be]].
 
 ## Fugue: định nghĩa và luật giọng
@@ -306,6 +325,7 @@ Hệ thống hoá đầy đủ (P, R, bảy hình thức mô phỏng): [[mo-phon
 |---|---|---|
 | Chia quãng 8 Re – Re | Re – La | La – Re |
 | Chủ đề nhảy Re → La (quãng 5, bậc I → V) | | Đáp đề La → Re (quãng 4, bậc V → I) |
+::scan fux 21.1 | Ex. 1 – 4: chia quãng 8 của giọng thành quãng 5 và quãng 4, và các cặp chủ đề – đáp đề tương ứng
 Đây chính là cái các sách sau gọi là **đáp đề giọng** (*tonal answer*), khác **đáp đề thực** (dịch nguyên quãng 5) — xem [[fugue]].
 
 ## Phương pháp viết fugue hai bè
@@ -318,17 +338,15 @@ Fux gọi đây là "phương pháp ngắn nhưng đúng quy củ":
 6. Đưa chủ đề vào lần nữa ở một bè, sắp xếp để bè kia mô phỏng **sớm hơn lúc đầu**, nếu được thì **chỉ sau một ô** — hai bè hợp lại và fugue khép bằng **kết cuối**.
 
 ::form Trình_bày_(I_–_V) Kết_ở_V Chủ_đề_ở_quãng_khác Kết_ở_III Stretto Kết_cuối | Sơ đồ fugue hai bè theo Fux
+::scan fux 22.1 | *Fuga a 2*: kết thứ nhất ở bậc V ("Cad. in 5"), kết thứ hai ở bậc III ("Cad. in 3")
 
 ## Ba lưu ý từ các ví dụ
 - Ví dụ thứ nhất cho đáp đề ở **quãng 5 trên**; ví dụ thứ hai cùng chủ đề cho đáp đề ở **quãng 4 dưới** — đúng luật "quãng 5 thì đáp trong quãng 4 và ngược lại".
+::scan fux 22.2,22.3 | Hai fugue hai bè khác của sách: đáp đề ở quãng 4 dưới, rồi ở các giọng khác
 - Gần cuối, nốt của chủ đề **được đổi bằng nối lệch phách**: Fux nói điều đó không chỉ được phép mà còn "có hiệu quả dễ chịu"; đôi khi phải **chia nốt** để các bè dồn sát nhau.
 - Fugue ở giọng La: quãng 2 Mi – Fa ở chủ đề được đáp bằng **quãng 3 La – Đô**, vì không có cách nào khác giữ đúng loại cung – nửa cung; đáp bằng nửa cung La – Si giáng thì sẽ **sai giọng**. (Chữ "H" trong bản dịch là cách gọi nốt Si theo kiểu Đức.)
 
 Tiếp theo: [[fugue-ba-bon-be-fux]]. Quy tắc đáp đề chi tiết ở phụ lục: [[dap-de-va-trang-tri-fux]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 20-22
 `,
   },
   {
@@ -352,6 +370,7 @@ Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composit
 | **Kết chính thức** (*formal cadence*) | Đóng bằng **quãng 3 thăng** (cảm âm) rồi vào **quãng 8** | Báo hiệu một chỗ kết thật |
 | **Kết giả** (*fictitious cadence*) | Thay quãng 3 thăng bằng **quãng 3 thứ** | Tai chờ kết chính thức thì **bị đánh lừa** |
 | **Tránh kết** | Giữ quãng 3 thăng ở **bè trên**, còn **bè trầm chọn thuận âm khác** thay cho quãng 8 | Như [[cau-ket|kết đánh lừa]] của hoà âm; Fux nói ở nhiều bè thì "càng thanh nhã" |
+::scan fux 23.1 | Ex. a — kết chính thức (*Formal Cadence*); Ex. b — kết giả (*Fictitious Cadences*); Ex. c — tránh kết
 
 - Ở fugue ba bè, **không dùng kết chính thức có quãng 3 thăng**, vì trên đó **chủ đề không vào được** — trừ khi sắp xếp được để chủ đề vào ngay.
 - Khi làm được như vậy, kết chính thức và kết giả có thể đặt **không chỉ ở bậc V hay III** mà ở các bậc khác **không quá xa giọng**.
@@ -363,21 +382,20 @@ Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composit
 
 ## Viết bè trầm cho hai bè đi xuống
 Trước ví dụ fugue ba bè, Fux chỉ cách thêm bè trầm cho hai bè đi xuống bằng chuỗi nốt treo: quãng 7 giải quyết vào 6, quãng 2 vào 3; quãng 4 cũng vậy khi đã có sẵn từ trước.
+::scan fux 25.1 | Thêm bè trầm cho hai bè trên đi xuống bằng chuỗi nốt treo, Ex. 1 – 2
 
 ## Ví dụ fugue ba bè: Fux tự bình
 Sau khi bè thứ ba vào, hai bè trên đi kèm bằng hoà âm đúng; **Tenor lấy lại chủ đề ở quãng khác** lúc đầu; **Soprano nghỉ** để chuẩn bị vào lại ở quãng khác, **báo trước bằng một nghịch âm mạnh**, rồi đóng bằng **quãng 6 thứ**. Tenor nghỉ ba ô — vì bè trên và bè dưới đi sát quá không còn chỗ, và vì Tenor sắp lấy lại chủ đề.
+::scan fux 25.2 | Fugue ba bè của sách
 
 ## Fugue bốn bè
 - Mọi điều về bốn bè đã có ở [[doi-am-bon-be-fux]]; chỉ còn hỏi: **bè thứ tư theo sau bè nào?** Tuỳ người viết, nhưng **theo thói quen**: **Alto theo Soprano, Bass theo Tenor**.
 - Càng nhiều bè càng phải giữ cho chúng **không chen chúc**; nếu lỡ bị chèn, phải **sửa lại ý đồ** hoặc cho một bè **nghỉ** đến khi vào lại được. Tốt nhất là **sắp xếp ngay từ đầu**.
 - Hai quy tắc phòng ngừa: (1) viết một bè thì **luôn để mắt các bè khác**; (2) **chừa đủ chỗ** cho tiến hành tự do và giai điệu đẹp.
 - Fugue bốn bè **không cần giữ bốn bè liên tục**: vài bè đi trong khi bè khác nghỉ để lấy lại chủ đề; gần cuối mới cả bốn bè cùng lấp đầy hoà âm.
+::scan fux 26.1 | Fugue bốn bè của sách: các bè vào lần lượt, có lúc nghỉ, cuối bài mới đủ bốn bè
 
 Tiếp theo: [[doi-am-kep-fux]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 23-25
 `,
   },
   {
@@ -402,7 +420,9 @@ Lối viết "khéo léo" trong đó các bè **đổi chỗ**: bè trên thành
 | Sau khi đảo | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
 - **Tránh quãng 5** — đảo thành quãng 4.
 - **Không nhảy vào quãng 8** — đảo thành đồng âm; vì cùng lý do **quãng 8 không đặt ở phách mạnh**.
+::scan fux 27.1 | Ex. 1 — quãng 8 đảo thành đồng âm; Ex. 2 — một bài đối âm ở quãng 8 và bản đảo (*Inversion*)
 - **Không vượt quá quãng 8** giữa hai bè — vượt thì chỉ ra quãng ghép, "cùng một thứ" với quãng đơn, chẳng sinh hoà âm mới.
+::scan fux 28.1,28.2 | Ex. 1 – 3 và bài đối âm ở quãng 8 với các bản đảo (*Inversio*, *Inversio in Octavam inferior*)
 - Nối lệch phách cũng đảo được (7 – 6 thành 2 – 3).
 - Nếu ở **mọi phách mạnh** hai bè đi **ngược chiều hoặc xiên**, có thể biến hai bè thành **trio** chỉ bằng cách chép bè đối âm và **dịch xuống một quãng 10**.
 
@@ -413,8 +433,11 @@ Lối viết "khéo léo" trong đó các bè **đổi chỗ**: bè trên thành
 - **Không hai quãng 3 hay hai quãng 10 liền nhau** cùng chiều (đảo thành quãng 8 / đồng âm song song); **không hai quãng 6** (thành hai quãng 5).
 - **Quãng 4 không dùng ở bè trên khi treo** — đảo thành quãng 7.
 - **Không vượt quá quãng 10.**
+::scan fux 28.3 | *Transpositio in Decimam inferior*: dịch đối âm xuống quãng 10
 - Kết quả tương đương: **nâng cantus lên một quãng 3 và hạ đối âm một quãng 8** ("hai bậc thêm vào quãng 8 thành quãng 10").
+::scan fux 31.1 | Đối âm ở quãng 10: bài gốc (Ex. 1) và bản đảo (Ex. 2)
 - **Thành trio**: chép cantus nốt-đối-nốt và dịch xuống một quãng 10, hai bè kia giữ nguyên — ba bè vang **song song quãng 3 / 6**. Thêm bè thứ tư thì bè đó nghỉ, kéo dài giai điệu, hoặc vào chủ đề bằng ngược chiều.
+::scan fux 31.2 | *Tricinium*: ba bè dựng từ đối âm ở quãng 10
 - Nếu đảo **ngay từ đầu bài**, phải **mở bằng quãng 3 hoặc đồng âm của giọng** để bè đảo còn trong giọng; tốt hơn là đảo ở giữa bài, sau một chủ đề đúng giọng.
 
 ## Ở quãng 12
@@ -422,9 +445,12 @@ Lối viết "khéo léo" trong đó các bè **đổi chỗ**: bè trên thành
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Sau khi đảo | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
 - Dùng được **mọi quãng trừ quãng 6** (đảo thành 7) **và nốt treo 7 – 6** (thành 6 – 7). Không vượt quá quãng 12.
+::scan fux 34.2 | Một bài đối âm ở quãng 12
 - Đảo bằng cách đặt bè trên xuống **quãng 12 dưới**, cantus giữ nguyên; hoặc hạ đối âm **một quãng 8** và nâng cantus **một quãng 5**.
+::scan fux 35.1,35.2 | Bản đảo ở quãng 12 của bài đối âm
 - Bè đảo có vẻ sang giọng khác, nhưng đó là **giọng họ hàng**; khi nhiều bè, kết chính thức vẫn sắp đúng giọng được.
 - **Muốn thành trio** (thêm đối âm ở quãng 10): **mở và kết bằng quãng 5**; chỉ đi **ngược chiều hoặc xiên**; **cấm nghịch âm treo** — riêng **quãng 6 được dùng khi treo** (ngoại lệ).
+::scan fux 34.1,35.3 | Đối âm ở quãng 12 viết thành ba bè: Ex. a – c và một trio
 - Kết hợp cả ba loại: dùng **quãng 5 và quãng 8 chỉ bằng ngược chiều, quãng 3 bằng xiên**, thì từ đối âm ở quãng 12 rút ra được cả đối âm ở quãng 8 và 10 — một bản hai bè "**duetto**" viết đúng luật dễ dàng thành **trio** hay **quatuor**.
 
 ## Đảo ngược chiều
@@ -433,6 +459,7 @@ Bài không có nghịch âm treo có thể đảo theo **chiều ngược** b�
 |---|---|
 | **Ngược chiều đơn** (*al rovescio*) | Nốt đi lên thành đi xuống, **không giữ loại cung – nửa cung** |
 | **Ngược chiều nghiêm** (*al contrario riverso*) | Đảo sao cho **mi luôn chọi fa**: nửa cung đáp nửa cung, cung đáp cung |
+::scan fux 36.3 | Ví dụ của sách ở phần đảo ngược chiều: Ex. 1 – 2
 
 | Giọng trưởng: quãng 8 đi lên | C | D | E | F | G | A | B | C |
 |---|---|---|---|---|---|---|---|---|
@@ -444,14 +471,9 @@ Bài không có nghịch âm treo có thể đảo theo **chiều ngược** b�
 Nhận xét của người biên soạn: ở cả hai bảng, trục đối xứng là **nốt Re** (D ↔ D), nên nửa cung E – F được đáp bằng C – B và B – C bằng F – E. Sách nói "nếu một bè mở bằng E hoặc C thì bè kia đáp bằng C hoặc E" (giọng thứ), khớp với bảng; câu tương ứng ở giọng trưởng bị lệch chữ trong bản quét.
 
 Fux dặn: bài nào cũng đảo được, nhưng không phải lần đảo nào cũng cho giai điệu đẹp — phải dùng **thận trọng**, kẻo "khoe nhiều kỹ xảo" mà **giai điệu chịu thiệt**.
+::scan fux 39.1,39.2 | Ex. 1 — *Al Roverscio*, Ex. 2 — *Al Contrario Riverso*; tiếp theo là một bài dùng đảo ngược chiều
 
 Đối âm kép trong nhạc Bach: [[doi-am-kep]]. Tiếp theo: [[fugue-doi-de-va-nhieu-chu-de-fux]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 26-27
-::scans fux tr 30-31
-::scans fux tr 34-38
 `,
   },
   {
@@ -466,22 +488,28 @@ Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composit
 ## Fugue có đối đề
 - Fux dùng một fugue để chứng minh "**ích lợi lớn của đối âm kép**": cách chèn một **đối đề** (*contra subject*) và mang nó đi suốt fugue.
 - Đối đề **vào sau một dấu lặng**, và nhờ đổi chỗ các bè nó luôn **đáp chủ đề ở quãng 8** — lúc ở bè ngoài, lúc ở bè giữa; từ sự đa dạng đó sinh ra hoà âm mới.
+::scan fux 29.1 | *A Double Fugue*: các số 1 – 6 đánh dấu chỗ chủ đề và đối đề vào (phần đầu)
 - Một "**mẹo khéo**": ba bè trên cùng **mô phỏng đối đề** để kéo nó dài thêm sau khi chủ đề chính đã ngừng.
 - Có thể làm vậy với cả hai chủ đề rồi kết bằng cách **đổi trường độ** vài nốt.
 - Đối đề **không nhất thiết vào ở ô đầu** của chủ đề; để đa dạng, nó có thể vào ở **ô thứ hai hay thứ ba**, tuỳ chủ đề cho phép.
+::scan fux 33.1 | Ex. 1 – 3: đối đề (*Contra Subject*) vào ở những ô khác nhau của chủ đề
 
 ## Fugue dựa trên đối âm ở quãng 10
 - Một đối đề có thể vừa đảo ở quãng 8 vừa đảo ở quãng 10, nên bài thành **trio** được; nâng đối đề một quãng 8 thì nó bị hạ một quãng 3 tương đối.
+::scan fux 32.1,32.2,32.3 | Đối đề đảo ở quãng 8 và quãng 10: *Transpositio in 3iam superior*, *in 8vam inferior*, rồi bản ba bè
 - Fux tự giải thích vì sao trong fugue mẫu, đối đề đi bằng **quãng 3 và 6** chứ không phải quãng 10: lấy quãng 10 thì bè Alto, rồi bè Tenor **thiếu hoà âm**, nên lấy **quãng 3 dưới** thay; chỗ khác lấy **quãng 6** để **nối các bè sát hơn**. Bản chất vẫn là đối âm ở quãng 10.
 - Sau dấu lặng, chủ đề được đưa vào **bằng đảo** — đúng quy tắc "sau dấu lặng phải là chủ đề".
+::scan fux 33.2 | Fugue của sách, các số đánh dấu lần vào của chủ đề (phần đầu)
 
 ## Fugue trên cantus firmus
 - Fux nói: không có đối âm kép thì **không thể đưa nhiều chủ đề vào một bài**; mà thiếu nhiều chủ đề thì bài viết, **nhất là phong cách nhà thờ**, "nhạt và hời hợt".
 - Trước khi ghi chủ đề sẽ ghép với [[cantus-firmus]], phải xét **từng ô cantus**: chủ đề (ở dạng gốc hay **đảo ngược chiều đơn / nghiêm**) có hợp hoà âm với nó ở mọi ô, hay ít nhất phần lớn các ô không.
 - Cách khác: **rút chủ đề từ chính cantus** bằng cách đổi trường độ các nốt.
+::scan fux 41.1,41.2 | Fugue trên cantus firmus (*Canto fermo* ở bè giữa)
 
 ## Chủ đề chromatic
 Chủ đề chromatic đảo khác chủ đề diatonic: đảo theo luật diatonic sẽ **trái giọng**, nên phải sắp sao cho **nốt đầu và nốt cuối nằm trong giới hạn của giọng**. Sách kèm một fugue viết theo cách đảo này.
+::scan fux 42.1,42.2 | Ex. 1 – 3 của mục chủ đề chromatic, rồi bài fugue kèm theo
 
 ## Fugue ba chủ đề
 Một bài có thể "tô điểm bằng nhiều chủ đề", mỗi chủ đề khác về tính chất và trường độ — nhờ đối âm kép. Fux nhận xét fugue ba chủ đề của mình:
@@ -490,14 +518,9 @@ Một bài có thể "tô điểm bằng nhiều chủ đề", mỗi chủ đề
 3. Sau khi chủ đề vào ở quãng 12, **không để quãng 6 xuất hiện giữa các bè** — nếu không thì không đảo được (quãng 6 thành quãng 7, xem [[doi-am-kep-fux]]).
 4. Không phải lúc nào cũng mang trọn chủ đề — để đưa chủ đề khác vào, hoặc vì giai điệu.
 5. Bài ba chủ đề **nên có thêm một bè đi kèm**, để có chỗ cho vài bè đi trong khi bè khác nghỉ.
+::scan fux 43.1 | Fugue ba chủ đề của Fux
 
 Bức tranh rộng của fugue (cấu trúc, đoạn nối, stretto, tác phẩm của Bach): [[fugue]]. Tiếp theo: [[dap-de-va-trang-tri-fux]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 28-29
-::scans fux tr 32-33
-::scans fux tr 39-43
 `,
   },
   {
@@ -518,15 +541,21 @@ Bản dịch gọi chủ đề là *Guide* (bè dẫn) và đáp đề là *Answ
 
 ## Khi quy tắc va nhau
 - Có chủ đề đáp được **hai cách**: (a) cho **nốt cuối hợp giọng**; (b) theo **quy tắc xướng âm** (*solfaing*), cho giai điệu **giống bè dẫn hơn**. Cả hai đều đúng phần nào, nhưng Fux chọn (b) vì **hay hơn** và **giống bè dẫn hơn** — và kết luận: "**giai điệu đáng được coi trọng hơn giọng**".
+::scan fux 45.1 | Ex. 2 – 3: hai cách đáp cùng một chủ đề (*Answer* … *or*)
 - Ví dụ khác: nếu đáp bước nhảy La – Re bằng Re – La "theo luật" thì trái cả chuyển giọng lẫn giai điệu — hoặc phải dùng nửa cung Re – Mi giáng để đáp La – Si giáng của bè dẫn, hoặc bước nhảy bị đứng trước bởi quãng 3 Re – Fa.
+::scan fux 45.2 | Đáp đề ở giọng có Si giáng — cách a ghi "Bad", cách b
 - Cùng một chủ đề có thể đáp **khác nhau tuỳ giọng mà chủ đề chuyển sang**; cả hai cách đều đúng.
+::scan fux 45.3 | Cùng một chủ đề đáp ở hai giọng khác nhau
 - **Chủ đề chromatic**: quy về diatonic, đáp theo luật, rồi mới thêm các nửa cung chromatic vào đáp đề. Có lúc không thể đáp bằng đúng chuỗi nửa cung vì sẽ cần **nốt ngoài giọng**.
+::scan fux 46.1,46.2,46.3 | Chủ đề chromatic: Ex. 1 – 4, đáp đề "bad" (chỗ đánh dấu sao) và đáp đề đúng, rồi các ví dụ hai bè
 - Để chuyển động sinh động hơn, nốt trắng đầu của bè dẫn có thể **đáp bằng nốt đen**.
 Đối chiếu đáp đề giọng và đáp đề thực: [[mo-phong-va-fugue-hai-be-fux]], [[fugue]].
 
 ## Biến tấu bằng chia nhỏ nốt
 - Khác với biến tấu thường (nốt đi bằng quãng 3 được lấp đầy), **diminution** dùng cho các nốt **đi bằng bước nhảy**.
+::scan fux 44.1 | Mười mẫu chia nhỏ nốt (*diminution*) cho các bước nhảy
 - Có kiểu biến tấu **lệch khỏi luật đối âm**: đi từ thuận sang nghịch hay nghịch sang nghịch **bằng nhảy** — trong đối âm thì cấm, chỉ được trong **sáng tác thông thường**. Sách cho nhiều ví dụ: nốt gốc trước, dạng biến tấu sau.
+::scan fux 44.2 | Ex. 1 – 3 của phần biến tấu
 - Fux nhắc: người viết **đừng dùng trang trí quá tay**, vì người biểu diễn vốn đã "đủ hăng hái thêm vào thật nhiều — tiếc thay thường rất không đúng lúc".
 - **Nốt sớm** (*anticipation*): lấy **một nửa trường độ** của nốt trước giao cho nốt sau. Fux ghi lối này "**rất thịnh hành trong âm nhạc hiện đại của chúng ta**" và dùng hiệu quả tốt. Xem thêm [[not-ngoai-hop-am]].
 
@@ -536,16 +565,15 @@ Bản dịch gọi chủ đề là *Guide* (bè dẫn) và đáp đề là *Answ
 | Nhịp thường, nhịp hai | Chỉ **phách đầu** (phách mạnh) |
 | Nhịp nhanh (*Presto*), ô chia bốn nốt đen | Nốt đen **thứ nhất và thứ ba** |
 | Nhịp chậm (*Adagio*) | **Mọi nốt đen** |
+::scan fux 46.4 | Ex. 1 – 3: vị trí nốt treo trong ô nhịp
 Đây là nguyên lý chung: nốt treo rơi vào **phách mạnh tương đối** của đơn vị đang được cảm nhận — xem [[doi-am-loai-4]], [[dao-phach]].
 
 ## Phong cách a cappella
 Sách kết bằng **một mẫu sáng tác theo phong cách nhà thờ**, "gọi đúng là *stile a cappella* vì chỉ do các bè hát trình diễn": một **Kyrie eleison** nhiều bè mô phỏng. Đây là đích của toàn bộ lộ trình — phong cách mà [[phong-cach-palestrina]] phân tích, dùng trong [[thanh-le-va-requiem|thánh lễ]] và [[motet]].
+::scan fux 47.1,47.2,47.3 | *Kyrie eleison* bốn bè *a cappella*
+::scan fux 48.1,49.1 | Hai đoạn tiếp theo ở cuối sách: *Kyrie* (*Tutti un poco Allegro*) và *Amen* (*Tutti Presto moderato*), có bè trầm số
 
 Toàn bộ hệ thống: [[he-thong-fux-gradus-ad-parnassum]].
-
-## Ví dụ trong sách gốc
-Các khối nhạc cắt từ bản quét *Practical Rules for Learning Composition*, theo thứ tự trang; số ví dụ (Ex. 1, Ex. 2…) in trong hình là số của sách, bắt đầu lại ở mỗi mục.
-::scans fux tr 44-49
 `,
   },
 ]
