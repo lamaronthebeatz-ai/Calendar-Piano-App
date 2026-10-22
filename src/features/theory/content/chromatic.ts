@@ -366,6 +366,7 @@ Trong nhạc [[thoi-ky-baroque|Baroque]] ([[johann-sebastian-bach|Bach]], [[geor
 - Giúp đọc đúng ký hiệu thể đảo trong phân tích ([[ky-hieu-hop-am]], [[hop-am-sau-bon]]).
 
 **Bach và bè trầm số:** bản chép tay *Vorschriften und Grundsätze* (1738) và sách hát Schemelli — [[tai-lieu-su-pham-cua-bach]]; cách Bach dạy bè trầm số trước khi dạy chorale — [[bach-day-hoc-tro]].
+Một hệ thống bass số đầy đủ của thế kỷ 18 – 19, chép theo nguyên văn: [[bass-so-albrechtsberger]], [[dem-bass-so-albrechtsberger]].
 `,
   },
   {

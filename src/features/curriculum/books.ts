@@ -1,6 +1,7 @@
 import harmonyCover from '../../assets/covers/hoa-am-co-dien.webp'
 import polyphonyCover from '../../assets/covers/phuc-dieu-nghiem-khac.webp'
 import fuxCover from '../../assets/covers/doi-am-fux.webp'
+import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
 import type { Book } from './types'
 
 /**
@@ -602,6 +603,159 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         exercises: [
           'Dùng mười hai câu kiểm tra để rà lại mọi bài tập đã làm trong sách.',
           'Viết từ đầu một bài loại 5 trên cantus mới, chỉ nhìn bảng tra, rồi so với các quy tắc nguyên văn ở Phần II.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'albrechtsberger',
+    title: 'Bass Đi Liên Tục, Hoà Âm và Sáng Tác',
+    volume: 'J. G. Albrechtsberger',
+    subtitle: 'Tuyển tập ba tập của Albrechtsberger do học trò Seyfried biên tập, dùng để tự học: bass liên tục và hoà âm, năm loại sáng tác nghiêm khắc từ hai đến năm bè, mô phỏng, fugue, đối âm kép, canon, cùng phụ lục về phong cách, nhạc cụ và đọc tổng phổ.',
+    author: 'Lamar',
+    audience: 'Đã học xong Nhạc Lý Cơ Bản · đọc được khoá Son và khoá Fa',
+    hue: 40,
+    glyph: '𝄢',
+    coverImage: albrechtsbergerCover,
+    preface: `
+**Johann Georg Albrechtsberger** (1736 – 1809), organ cung đình và nhạc trưởng nhà thờ St. Stephen ở Vienna, là thầy dạy đối âm của Beethoven và Hummel. Cuốn sách này đọc theo tuyển tập ba tập các bài viết của ông, do học trò **Ignaz von Seyfried** biên tập, theo bản dịch Anh của Sabilla Novello (London, 1855).
+
+## Hệ thống của sách
+- **Phần I – IV** theo Tập I của bộ sách: bass liên tục và hoà âm — quãng, hợp âm, chuyển động, nghịch âm, quãng ngầm định của từng chữ số, đệm trên bàn phím, sáu tiến hành nguy hiểm, hoà âm thuần khiết, chuyển giọng và kết. Theo lời tựa, Tập I phần lớn do **Seyfried** soạn.
+- **Phần V – VIII** theo Tập II và III, là bản thảo của **chính Albrechtsberger**: năm loại sáng tác nghiêm khắc theo phương pháp của Fux ở hai, ba, bốn, năm bè, lối tự do, mô phỏng, đảo, fugue, đối âm kép ở quãng 8 – 10 – 12, fugue kép và canon.
+- **Phần IX** là phụ lục về phong cách, nhạc cụ và đọc tổng phổ — chủ yếu lời người biên tập. **Phần X** để tra nhanh.
+- Mọi quy tắc ghi theo sách, kèm số trang. Chỗ bản in tự mâu thuẫn, in nhầm, thiếu trang hay OCR chưa đọc chắc đều ghi rõ trong bài.
+- Đây là một hệ riêng: không trộn với *Hoà Âm Cổ Điển* (trường phái Nga – Xô viết) hay *Những Bước Lên Đỉnh Parnassus* (Fux), chỉ có liên kết để đối chiếu.
+
+## Cách đọc
+1. Học Phần I – IV **trên bàn phím**: mỗi bảng chữ số, mỗi luật nhân đôi phải được chơi ở mọi giọng, như sách dặn.
+2. Phần V – VIII học như sách gốc: viết trên một chorale, mỗi loại cả đối âm trên lẫn dưới, tự chấm lỗi theo các danh sách lỗi của Albrechtsberger.
+3. Đừng ngại những chỗ sách khác cách dạy hiện nay (mọi quãng 4 là nghịch, hợp âm 11 – 13 trên chủ âm, "kết ngắt" và "kết đánh lừa"…): bài nào cũng chỉ ra chỗ khác và dẫn sang bài tương ứng của thư viện.
+4. Làm bài tập ôn tập cuối mỗi phần; câu hỏi ôn tập cuối bài có đáp án ở cuối sách.
+`,
+    parts: [
+      {
+        title: 'Nhập môn: bộ sách và người viết',
+        intro: 'Bộ sách ba tập ra đời thế nào, ai viết phần nào, cấu trúc và thuật ngữ cổ của bản dịch 1855, tiểu sử Albrechtsberger theo lời sách, và chỗ đứng của ông trong dòng hoà âm Vienna.',
+        chapters: [
+          { slug: 'he-thong-albrechtsberger', focus: 'Ấn bản, lời tựa của Seyfried, ba tập, thuật ngữ, tiểu sử, lộ trình.' },
+          { slug: 'hoa-am-truong-phai-phuong-tay', focus: 'Albrechtsberger trong dòng Vienna: từ bass số đến lý thuyết bậc và sách giáo khoa Mỹ.' },
+        ],
+        exercises: [
+          'Lập bảng thuật ngữ của bản dịch 1855 (thorough-bass, grade, fundamental note, common chord, changing note, class, Inganni…) với nghĩa trong loạt bài, rồi tự kiểm bằng bài mở đầu.',
+          'Tóm tắt trong năm câu: phần nào của bộ sách là của Albrechtsberger, phần nào của Seyfried, và vì sao điều đó quan trọng khi trích dẫn.',
+        ],
+      },
+      {
+        title: 'Quãng, hợp âm và nghịch âm',
+        intro: 'Tập I, §I – XIII và §LVIII – LXI: quãng và các loại, thuận – nghịch, hợp âm hoàn toàn, không hoàn toàn và nghịch, năm loại hợp âm chính, chỗ ngồi của hợp âm trong giọng; bốn kiểu chuyển động, luật nối hợp âm, ba cách dùng nghịch âm, nốt treo và nghịch âm không chuẩn bị.',
+        chapters: [
+          { slug: 'quang-va-hop-am-albrechtsberger', focus: 'Quãng, thuận – nghịch, quãng 4 thuận và nghịch, hợp âm 7 – 9 – 11 – 13 sinh bằng nốt thêm phía dưới.' },
+          { slug: 'chuyen-dong-va-nghich-am-albrechtsberger', focus: 'Sáu luật nối hợp âm; nốt lướt, nốt đổi, nốt treo; chuẩn bị – đánh – giải quyết; anticipation.' },
+        ],
+        exercises: [
+          'Viết và chơi hợp âm 9, 11, 13 theo đúng cách sách sinh ra chúng (thêm nốt quãng 3, 5, 7 dưới hợp âm 7) ở ba giọng; ghi nốt nào thường bị bỏ khi đệm bốn bè.',
+          'Với mỗi nghịch âm 2, 4, 4 tăng, 5 giảm, 7, 7 trưởng có quãng 4, 9: chỉ ra nốt nào là nốt nghịch và nó giải quyết đi đâu, rồi chơi trên đàn.',
+        ],
+      },
+      {
+        title: 'Bass liên tục trên bàn phím',
+        intro: 'Tập I, phần thực hành: quãng ngầm định của từng chữ số và cách ghi số, hợp âm ba ở ba vị trí, nhân đôi, đệm âm giai, số hợp âm mỗi ô, sáu tiến hành nguy hiểm, hợp âm 7 và các dẫn xuất, bài tập và đệm chia hai tay.',
+        chapters: [
+          { slug: 'bass-so-albrechtsberger', focus: 'Bảng một số và hai số; từng chữ số; dấu ghi; đường cong Telemann.' },
+          { slug: 'dem-bass-so-albrechtsberger', focus: 'Ba vị trí, bốn luật nối hợp âm ba, nhân đôi, đệm âm giai, hợp âm mỗi ô, đệm chia hai tay.' },
+          { slug: 'sau-tien-hanh-nguy-hiem', focus: 'Sáu chỗ dễ phạm quãng 5 – 8 liền và cách sửa; nối hợp âm 7 và các dẫn xuất.' },
+        ],
+        exercises: [
+          'Đệm âm giai Đô trưởng và La thứ đi lên, đi xuống theo bảng số của sách, ở cả ba vị trí, rồi dịch sang Son trưởng, Rê thứ, Fa trưởng.',
+          'Tự viết một bè bass số 12 ô có đủ sáu tiến hành nguy hiểm, đệm sai từng chỗ rồi sửa theo cách sách chỉ.',
+          'Chơi một câu bass số theo kiểu đệm thường rồi theo kiểu đệm chia hai tay ở ba vị trí hoà âm rải.',
+        ],
+      },
+      {
+        title: 'Hoà âm thuần khiết, chuyển giọng và kết',
+        intro: 'Tập I, §LXXXIV – CXXIV: hoà âm thuần khiết không có quãng 4 thuận, chỗ ngồi và cách dùng mọi quãng tăng – giảm; chuyển giọng sang năm giọng họ hàng và mọi giọng qua hợp âm 7 giảm; bốn loại kết và các kết đánh lừa Inganni.',
+        chapters: [
+          { slug: 'hoa-am-thuan-khiet-albrechtsberger', focus: 'Vì sao loại quãng 4 thuận; cách xếp hợp âm; bảng quãng tăng – giảm.' },
+          { slug: 'chuyen-giong-va-ket-albrechtsberger', focus: 'Năm giọng họ hàng; các con đường chuyển giọng; kết hoàn toàn, không hoàn toàn, ngắt, đánh lừa.' },
+        ],
+        exercises: [
+          'Viết một thánh ca bốn bè 8 ô bằng hoà âm thuần khiết: kiểm từng hợp âm để không có quãng 4 nào giữa các bè trên.',
+          'Từ hợp âm Đô trưởng, chuyển sang 6 giọng khác nhau bằng hợp âm 7 giảm và các dạng trùng âm của nó; chơi trên đàn.',
+          'Viết ba kết đánh lừa từ Đô trưởng, mỗi kết qua một loại hợp âm khác nhau theo bảng của sách.',
+        ],
+      },
+      {
+        title: 'Sáng tác nghiêm khắc hai bè',
+        intro: 'Tập II, §CXXVI – CXXXVII — phần chính tay Albrechtsberger viết: điệu thức và giọng, lối nghiêm khắc (stilo alla capella) và lối tự do, rồi năm loại trên chorale với mười luật của loại 1 và các bài mẫu được chấm từng lỗi.',
+        chapters: [
+          { slug: 'nen-tang-sang-tac-albrechtsberger', focus: 'Thuận – nghịch, chuyển động, điệu thức, giọng gần, âm giai bè nền, nghiêm khắc và tự do.' },
+          { slug: 'nam-loai-hai-be-albrechtsberger', focus: 'Mười luật loại 1; loại 2 – 5; nốt đổi của Fux; nốt treo dài – ngắn; những chỗ khác Fux.' },
+        ],
+        exercises: [
+          'Trên một chorale 10 – 12 nốt ở Đô trưởng, viết đủ năm loại, mỗi loại cả đối âm trên và dưới; tự chấm theo mười luật và các danh sách lỗi của sách.',
+          'Viết lại một bài loại 1 ở Mi thứ, đánh dấu mọi chỗ Mi contra Fa có thể xảy ra và cách tránh.',
+        ],
+      },
+      {
+        title: 'Ba, bốn và năm bè',
+        intro: 'Tập II, §CXXXVIII – CXLVII: quãng đi kèm mỗi quãng, năm loại ở ba và bốn bè, bảng đi kèm từng nốt treo, Quarta fundata, chuyển từ lối nghiêm khắc sang lối tự do, và luật nhân đôi khi viết năm bè.',
+        chapters: [
+          { slug: 'ba-be-albrechtsberger', focus: 'Bảng quãng đi kèm; quãng ẩn được phép; loại 1 – 5 ở ba bè; hợp âm 6/4 rải.' },
+          { slug: 'bon-va-nam-be-albrechtsberger', focus: 'Đối âm đều – không đều; Quarta fundata; nốt treo 9, 7, 4, 2 bốn bè; lối tự do; năm bè.' },
+        ],
+        exercises: [
+          'Viết loại 1 và loại 4 ba bè trên cùng chorale, đặt chorale lần lượt ở bè trên, giữa, dưới.',
+          'Viết loại 5 bốn bè, rồi viết lại ở lối tự do với ít nhất một nghịch âm không chuẩn bị và một đoạn chromatic, ghi rõ giấy phép nào được dùng.',
+        ],
+      },
+      {
+        title: 'Mô phỏng, đảo và fugue',
+        intro: 'Tập II, §CXLVIII – CLI: mô phỏng ở mọi quãng và bảy mô phỏng khoa học, bốn loại đảo, rồi fugue — thuật ngữ, đáp đề với bảng đổi quãng, kế hoạch fugue hai bè, luật cho ba bè trở lên, trang trí chủ đề, thứ tự vào bè, ricercata.',
+        chapters: [
+          { slug: 'mo-phong-va-dao-albrechtsberger', focus: 'Tám mô phỏng đơn; bảy mô phỏng khoa học; đảo đơn, nghiêm, ngược dòng, ngược dòng ngược chiều.' },
+          { slug: 'fugue-albrechtsberger', focus: 'Dux – Comes, đáp đề, kế hoạch hai bè, kết đánh lừa trước bè thứ ba, trang trí, thứ tự vào bè.' },
+          { slug: 'fugue', focus: 'Fugue sau Albrechtsberger: cấu trúc và kiệt tác của Bach, Beethoven, Shostakovich.' },
+        ],
+        exercises: [
+          'Lấy một chủ đề 4 ô, viết các dạng đảo đơn, đảo nghiêm (bắt đầu trên quãng 7, 6, 3 trưởng), ngược dòng và ngược dòng ngược chiều; giải thích vì sao chủ đề có nốt chấm dôi không hợp với hai dạng sau.',
+          'Viết một fugue hai bè ở Fa trưởng theo đúng sáu bước của sách: nửa kết ở V, nửa stretto, nửa kết ở III, stretto, kết.',
+          'Lập đáp đề cho ba chủ đề dùng bảng bảy cách đổi quãng.',
+        ],
+      },
+      {
+        title: 'Đối âm kép, fugue kép và canon',
+        intro: 'Tập III, §CLII – CLVII: fugue trên chorale; đối âm kép ở quãng 8, 10, 12 với các luật và cách thêm bè; fugue hai, ba, bốn chủ đề với đối âm ba – bốn lần; canon — "mô phỏng nghiêm nhất" — từ hai bè đến Inventio ba bè và canon câu đố.',
+        chapters: [
+          { slug: 'fugue-chorale-va-doi-am-kep-albrechtsberger', focus: 'Fugue chorale; bảng đảo và luật của đối âm kép ở quãng 8, 10, 12.' },
+          { slug: 'fugue-kep-va-canon-albrechtsberger', focus: 'Bốn luật đối âm ba lần; các cách đổi chỗ; các loại canon; viết Inventio; ghi canon bằng số.' },
+        ],
+        exercises: [
+          'Viết 8 ô đối âm kép ở quãng 8 theo bốn luật, đảo lại và kiểm; rồi thêm quãng 3 song song để thành ba bè và ghi những chỗ hỏng.',
+          'Thử cùng một bài hai bè ở quãng 10 và quãng 12: đánh dấu mọi quãng 3, 6 liền (cấm ở quãng 10) và mọi quãng 6 vào bằng bước nhảy (cấm ở quãng 12).',
+          'Viết một Inventio ba bè cùng khoá rồi chuyển thành canon đồng âm vô hạn, có dấu nhắc đúng chỗ.',
+        ],
+      },
+      {
+        title: 'Phụ lục: phong cách, nhạc cụ, tổng phổ',
+        intro: 'Phụ lục Tập III, phần lớn là lời người biên tập Seyfried: ba phong cách nhà thờ, thính phòng, sân khấu; mô tả nhạc cụ đầu thế kỷ 19; hướng dẫn chơi tổng phổ trên đàn phím và học phối khí.',
+        chapters: [
+          { slug: 'phu-luc-albrechtsberger', focus: 'Ba phong cách và lạm dụng trong nhạc nhà thờ; nhạc cụ, khoá, kèn chuyển giọng; thứ tự tổng phổ.' },
+        ],
+        exercises: [
+          'Chọn một tổng phổ cổ điển ngắn (một chương Mozart hay Haydn), xếp lại thứ tự nhạc cụ theo đề xuất của sách và rút gọn 8 ô cho piano theo các lời dặn.',
+          'So sánh mô tả của sách về viola, trombone, clarinet với sách phối khí hiện đại; ghi ba điểm đã thay đổi.',
+        ],
+      },
+      {
+        title: 'Tra cứu',
+        intro: 'Các luật chính của cả ba tập trên một trang, kèm số trang để mở lại sách gốc.',
+        chapters: [
+          { slug: 'tra-cuu-albrechtsberger', focus: 'Bảng luật hoà âm, bass số, năm loại, fugue, đối âm kép và thuật ngữ.' },
+        ],
+        exercises: [
+          'Dùng bảng tra để chấm lại mọi bài tập đã làm trong sách.',
+          'Tự viết một bảng so sánh: những chỗ Albrechtsberger nói rõ là khác Fux, và những chỗ ông giữ nguyên.',
         ],
       },
     ],

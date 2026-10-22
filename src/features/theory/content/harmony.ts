@@ -20,6 +20,8 @@ Bài này là **mục lục** của toàn bộ phần hoà âm trong thư viện
 ## Hai trường phái
 Thư viện trình bày hoà âm theo **hai trường phái**: [[hoa-am-truong-phai-nga-xo-viet|Nga – Xô viết]] (sách bốn tác giả Dubovsky – Evseev – Sposobin – Sokolov, ký hiệu chức năng T – S – D) và [[hoa-am-truong-phai-phuong-tay|phương Tây]] (dòng Vienna từ Albrechtsberger, số La Mã). Phần thực hành chung dùng chung bài; chỗ giải thích khác nhau có mục **"Hai trường phái"** trong bài và được gom ở [[so-sanh-hai-truong-phai-hoa-am]]. Tổng quan: [[hai-truong-phai-hoa-am]]. Mẹo và công thức: [[meo-va-cong-thuc-hoa-am]]. Các bài riêng: [[ky-hieu-chuc-nang-truong-phai-nga]], [[noi-hop-am]], [[truong-hoa-am]].
 
+Ngoài hai trường phái trên, thư viện có một hệ đọc thẳng từ sách gốc thế kỷ 18 – 19, tách riêng: **hệ thống Albrechtsberger** (bass liên tục, hoà âm và sáng tác, ba tập) — [[he-thong-albrechtsberger]].
+
 ## Cách dùng
 - Học **theo thứ tự chương**: mỗi chương dùng kiến thức của các chương trước.
 - Mỗi bài: **đọc → nghe ví dụ → chơi trên đàn** → tìm lại trong một bản nhạc thật (xem [[phan-tich-hoa-am]]).
@@ -352,6 +354,9 @@ So sánh với lý thuyết chức năng mà trường phái Nga dùng: [[so-san
 | Hợp âm 6 | Không có luật nhân đôi cố định; không nhân đôi cảm âm; chọn cách cho dẫn bè tốt nhất (Kostka – Payne) | [[the-dao-hop-am]] |
 | Át phụ | **V/x, vii°/x** — "chủ âm hoá" (tonicization); chuyển giọng cần một kết xác nhận | [[hop-am-at-phu]], [[chuyen-giong]] |
 | Giọng gần | Hoá biểu khác nhau **tối đa một dấu** (5 giọng) | [[chuyen-giong]] |
+
+## Đọc thẳng sách của Albrechtsberger
+Bộ ba tập *Collected Writings on Thorough-Bass, Harmony, and Composition* (bản dịch Novello 1855) được trình bày đầy đủ, theo đúng nguyên văn và số trang, ở loạt bài riêng: [[he-thong-albrechtsberger]].
 
 ## Thứ tự học theo trường phái phương Tây
 1. Nền: [[quang]], [[thuan-nghich]], [[am-giai-truong]], [[am-giai-thu]].
