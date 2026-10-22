@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { ArrowLeftIcon, DownloadIcon } from '../../../components/icons'
 import { Cover } from './Cover'
 import { BookPage } from './Pages'
+import { PrintContext } from '../../theory/linkRef'
 import { hueTint, type ReaderBook } from './model'
 
 /**
@@ -20,6 +21,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
     let cancelled = false
     const t = setTimeout(async () => {
       await document.fonts?.ready
+      await imagesLoaded(15000)
       if (cancelled) return
       setReady(true)
       window.print()
@@ -46,6 +48,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
         </button>
       </div>
 
+      <PrintContext.Provider value={true}>
       <div className="print-book">
         <section className="print-cover">
           <Cover book={book} size={1.9} />
@@ -62,7 +65,15 @@ export function PrintBook({ book }: { book: ReaderBook }) {
           {book.title}{book.volume ? ` · ${book.volume}` : ''} · {book.author} · biên soạn từ thư viện Lý thuyết của Lịch Dạy Piano · in ngày {new Date().toLocaleDateString('vi-VN')}
         </p>
       </div>
+      </PrintContext.Provider>
     </div>,
     document.body,
   )
+}
+
+/** Waits until every image in the print layout has loaded (or failed), up to `ms`. */
+function imagesLoaded(ms: number) {
+  const pending = [...document.querySelectorAll<HTMLImageElement>('#print-root img')].filter((img) => !img.complete)
+  const all = Promise.all(pending.map((img) => new Promise((done) => { img.addEventListener('load', done, { once: true }); img.addEventListener('error', done, { once: true }) })))
+  return Promise.race([all, new Promise((done) => setTimeout(done, ms))])
 }

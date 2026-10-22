@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
-import { LinkRefContext } from './linkRef'
+import { LinkRefContext, PrintContext } from './linkRef'
 import { findScan, loadScans, scanLabel, scanUrl, type ScanItem } from './scans'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
@@ -155,11 +155,12 @@ function Lightbox({ caption, width, onClose, children }: { caption?: string; wid
 
 /** The examples of one item, stacked (an example running over several pages has several files). */
 function ScanImages({ book, item }: { book: string; item: ScanItem }) {
+  const printing = useContext(PrintContext)
   return (
     <>
       {item.files.map((f) => (
         // full width up to the scan's own size, height from the ratio — so the layout is right before the image loads
-        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} style={{ maxWidth: f.w }} alt={scanLabel(book, item)} loading="lazy" className="scan-img" />
+        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} style={{ maxWidth: f.w }} alt={scanLabel(book, item)} loading={printing ? 'eager' : 'lazy'} className="scan-img" />
       ))}
     </>
   )

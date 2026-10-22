@@ -5,3 +5,6 @@ import { createContext } from 'react'
  * after the link the way a printed book writes "(xem Bài 12)".
  */
 export const LinkRefContext = createContext<((slug: string) => string | undefined) | null>(null)
+
+/** True while a book is laid out for printing: images load eagerly so the PDF has them. */
+export const PrintContext = createContext(false)
