@@ -26,7 +26,7 @@ Môn **Hình thức âm nhạc** và **Phân tích tác phẩm** ở các nhạc
 ${NOTE}
 
 ## Đọc theo thứ tự nào
-1. **Sposobin** trước — nắm từ vựng và các hình thức chuẩn: [[sposobin-hinh-thuc-am-nhac]].
+1. **Sposobin** trước — nắm từ vựng và các hình thức chuẩn: [[sposobin-hinh-thuc-am-nhac]] (loạt 9 bài đọc từ bản 1984, theo từng chương).
 2. **Mazel** — học cách hỏi "vì sao cấu trúc này tạo ra hiệu quả này": [[mazel-cau-truc-tac-pham-am-nhac]] (loạt 8 bài đọc từ bản 1979, theo từng chương).
 3. **Asafyev** — đọc sau cùng, khi đã quen hình thức, để thấy hình thức như một dòng chảy ý nghĩa: [[asafyev-hinh-thuc-nhu-qua-trinh]].
 
@@ -80,48 +80,6 @@ Lấy hình thức sonata ([[hinh-thuc-sonata]]):
 - Nghe hình thức như **một câu chuyện có hướng**, không như một danh sách các phần.
 - Khi tập đàn: biết đoạn nào đang "mở", đoạn nào "đi", đoạn nào "khép" để chọn sắc thái và [[nhip-do|tiến độ]] cho đúng.
 - Lý thuyết ngữ điệu là nền của nhiều công trình âm nhạc học Xô viết về sau (nhận định chung, chưa dẫn nguồn cụ thể).
-
-Tổng quan: [[hinh-thuc-va-phan-tich-truong-phai-nga]].
-`,
-  },
-  {
-    slug: 'sposobin-hinh-thuc-am-nhac',
-    title: 'Sposobin: Hình thức âm nhạc (1947)',
-    category: 'form',
-    aliases: ['Sposobin hình thức', 'Способин Музыкальная форма', 'Музыкальная форма Способин', 'giáo trình hình thức Sposobin', 'các kiểu trình bày', 'суммирование', 'дробление'],
-    summary: 'Igor Sposobin, Hình thức âm nhạc (Muzgiz 1947, tái bản nhiều lần): giáo trình hệ thống của trường phái Nga — từ chủ đề, câu, đoạn nhạc, qua hình thức đơn và phức, biến tấu, rondo, sonata, đến hình thức chu kỳ. Myaskovsky gọi đây là cuốn giáo trình hình thức độc lập đầu tiên đủ toàn diện bằng tiếng Nga.',
-    refs: [WIKI_SPOSOBIN],
-    body: `
-**Igor Vladimirovich Sposobin** (1900 – 1954), giáo sư Nhạc viện Moskva, cũng là một trong bốn tác giả của sách giáo khoa hoà âm "bốn tác giả" ([[hoa-am-truong-phai-nga-xo-viet]]). *Музыкальная форма* in lần đầu năm **1947** (lời tựa ghi tháng 4 – 1945, viết trong chiến tranh), tái bản 1958, 1962, 1967, 1972, 1980, 1984 và nhiều lần sau 2000. N. Myaskovsky gọi đây là "cuốn giáo trình hình thức âm nhạc độc lập đầu tiên bằng tiếng Nga có độ bao quát đầy đủ".
-
-${NOTE}
-
-## Trình tự kiến thức của giáo trình
-| Tầng | Nội dung | Bài trong thư viện |
-|---|---|---|
-| Phương tiện | Giai điệu, hoà âm, tiết tấu như yếu tố tạo hình thức | [[giai-dieu]] |
-| Chủ đề và các đơn vị nhỏ | Motif, ý nhạc, câu, **đoạn nhạc** (период) | [[motif]], [[cau-nhac]] |
-| Hình thức đơn | Hai đoạn đơn, ba đoạn đơn | [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]] |
-| Hình thức phức | Ba đoạn phức (có trio, có đoạn giữa) | [[minuet-va-trio]] |
-| Biến tấu | Biến tấu trên bè trầm cố định, biến tấu tự do | [[bien-tau]], [[passacaglia-va-chaconne]] |
-| Rondo | Rondo cổ, rondo cổ điển | [[rondo]] |
-| Sonata | Sonata, sonata không có phát triển, rondo – sonata | [[hinh-thuc-sonata]], [[sonata-rondo-va-cac-loai-rondo]] |
-| Chu kỳ | Tổ khúc, sonata nhiều chương | [[the-loai]] |
-
-## Những khái niệm hay gặp
-| Thuật ngữ | Tiếng Nga | Nghĩa |
-|---|---|---|
-| **Đoạn nhạc** | период | Cấu trúc nhỏ nhất trình bày trọn một ý; thường hai câu, câu sau kết mạnh hơn câu trước |
-| **Vuông / không vuông** | квадратность | Đoạn nhạc 8, 16 ô (vuông) hay số ô lẻ do mở rộng, rút gọn |
-| **Chia nhỏ** | дробление | Các đơn vị ngắn dần (2 ô → 1 ô → ½ ô), tạo cảm giác dồn tới |
-| **Tổng hợp** | суммирование | Hai đơn vị ngắn rồi một đơn vị dài gộp lại (1 + 1 + 2) |
-| **Kiểu trình bày** | тип изложения | Trình bày (ổn định), phát triển (bất ổn, chuyển giọng, chia nhỏ), kết (khẳng định chủ âm) |
-(Định nghĩa diễn đạt lại theo cách dùng phổ biến trong giáo trình Nga; xem thêm [[mo-rong-cau-nhac]].)
-
-## Cách dùng trong học tập
-- Học từ nhỏ đến lớn: nắm chắc **đoạn nhạc** trước mọi hình thức lớn.
-- Mỗi hình thức: học sơ đồ, rồi phân tích ít nhất hai – ba tác phẩm, ghi rõ số ô, giọng, kết.
-- Các bài phân tích mẫu của thư viện (ví dụ [[phan-tich-sonata-k545]], [[phan-tich-minuet-sol-truong]]) đi theo cùng trình tự này.
 
 Tổng quan: [[hinh-thuc-va-phan-tich-truong-phai-nga]].
 `,
