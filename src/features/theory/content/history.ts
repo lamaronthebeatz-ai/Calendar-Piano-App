@@ -70,7 +70,7 @@ Phức điệu Notre-Dame ([[leonin|Léonin]], [[perotin|Pérotin]] — xem [[or
 
 ## 5. Nốt trắng, tablature và cách trình bày trang
 - **Ký âm định lượng trắng**: từ khoảng đầu đến giữa thế kỷ 15, các nốt lớn được vẽ **rỗng** (trắng), nốt đen chỉ còn cho trường độ nhỏ. Lời giải thích hay gặp — giấy thay giấy da, khó giữ nhiều mực — **chỉ là giả thuyết**. Đây là tổ tiên trực tiếp của nốt tròn, nốt trắng ngày nay; vì thế "nốt tròn" (*semibreve*) mang tên "nửa nốt ngắn" ([[truong-do]]).
-- **Tablature** ghi **thế bấm** thay vì cao độ. Nhạc cho phím sớm nhất còn lại, *Codex Robertsbridge* (khoảng 1360, của Anh), được viết bằng tablature. *Buxheim Orgelbuch* (thập niên 1460) dùng tablature [[organ-ong|organ]] Đức với chữ cái, không khuông nhạc. Tablature [[nhac-khi-phuc-hung|đàn lute]] được Petrucci in từ năm 1507 ([[lich-su-in-an-am-nhac]]).
+- **Tablature** ghi **thế bấm** thay vì cao độ. Nhạc cho phím sớm nhất còn lại, *Codex Robertsbridge* (khoảng 1360, ở Anh), được viết bằng tablature. *Buxheim Orgelbuch* (thập niên 1460) dùng tablature [[organ-ong|organ]] Đức với chữ cái, không khuông nhạc. Tablature [[nhac-khi-phuc-hung|đàn lute]] được Petrucci in từ năm 1507 ([[lich-su-in-an-am-nhac]]).
 - **Cách trình bày**: sách hợp xướng (*choirbook*) đặt mọi bè trên cùng một mặt sách mở; **sách bè** (*partbook*) in mỗi bè một quyển, rẻ hơn. **Tổng phổ** — các bè chồng lên nhau — có từ organum và nhạc phím, nhưng hiếm trong nhạc in thế kỷ 16.
 
 ## 6. Vạch nhịp và ký âm hiện đại
@@ -115,7 +115,7 @@ Trước khi có máy in, mỗi bản nhạc là một **bản chép tay**: đ�
 - **Không phải Petrucci in nhạc đầu tiên:** cuốn *Missale Romanum* của Ulrich Han (Rome, 1476) đã in thánh ca bằng chữ rời.
 - **Ottaviano Petrucci** được Thượng viện Venezia cấp **đặc quyền in nhạc** năm 1498 (thường ghi 25/5/1498). Tuyển tập *Harmonice Musices Odhecaton A* ra ngày **15/5/1501**, gồm 96 bài, phần lớn là chanson 3 – 4 bè ([[ca-khuc-the-tuc-trung-co]]). Kỹ thuật **in nhiều lượt**: in dòng kẻ, rồi in nốt, rồi in lời và chữ hoa. Đẹp, nhưng chậm và khó căn khớp.
 - **Pierre Attaingnant** (Paris, 1528) dùng **in một lượt**: mỗi con chữ gồm một nốt cùng một đoạn [[khuong-nhac|khuông]]. Britannica cho rằng cách này giảm một nửa thời gian và công sức. Một số tài liệu cho rằng John Rastell ở London đã làm vậy sớm hơn, khoảng 1520. In một lượt khiến nhạc in rẻ đi và làm nở rộ thị trường chanson.
-- Cùng thời, Petrucci in **tablature [[dan-lute|lute]]** đầu tiên (1507) — xem [[lich-su-ky-am]].
+- Petrucci còn in **tablature [[dan-lute|lute]]** đầu tiên (1507) — xem [[lich-su-ky-am]].
 
 ## Khắc bản: đường nét tự do
 - **Simone Verovio** (Rome, 1586), tuyển tập *Diletto spirituale*, là một trong những bản nhạc in sớm nhất từ **bản đồng khắc**. Khắc cho phép in những gì chữ rời khó làm: [[hop-am-ba|hợp âm]] dày, nhiều bè trên một khuông, đường nối dài — rất hợp với nhạc phím.
@@ -192,7 +192,7 @@ Ngày **1/5/1761**, Haydn ký hợp đồng với hoàng thân Paul Anton Esterh
 | 1842 | **Wiener Philharmoniker** (buổi hoà nhạc 28/3/1842 do Otto Nicolai chỉ huy) | Dàn nhạc tự quản của các nhạc công nhà hát |
 
 ## Buổi độc tấu piano
-Ngày **9/6/1840** tại Hanover Square Rooms, London, các buổi chơi của **Liszt** được quảng cáo là "*Liszt's Pianoforte Recitals*". Việc gọi đây là "buổi recital đầu tiên" chủ yếu dựa vào **cái tên**; trước đó ở Rome (1839) Liszt đã có những buổi chơi một mình mà ông gọi là "độc thoại âm nhạc". Từ đó [[hinh-thuc-am-nhac|hình thức]] một nghệ sĩ chơi cả chương trình dần thành chuẩn. Xem [[franz-liszt]], [[nghe-si-piano-the-ky-19]].
+Ngày **9/6/1840** tại Hanover Square Rooms, London, các buổi chơi của **Liszt** được quảng cáo là "*Liszt's Pianoforte Recitals*". Việc gọi đây là "buổi recital đầu tiên" chủ yếu dựa vào **cái tên**; trước đó ở Rome (1839) Liszt đã có những buổi chơi một mình mà ông gọi là "độc thoại âm nhạc". Từ đó hình thức một nghệ sĩ chơi cả chương trình dần thành chuẩn. Xem [[franz-liszt]], [[nghe-si-piano-the-ky-19]].
 
 ## Liên hệ
 - Âm nhạc gắn với **in ấn và thị trường bản nhạc**: [[lich-su-in-an-am-nhac]].
@@ -305,14 +305,14 @@ Năm 1802 Forkel in **cuốn tiểu sử Bach đầu tiên**, viết dựa trên
 ## Thế kỷ 19: nguồn, tiểu sử và toàn tập
 - **François-Joseph Fétis**, *Biographie universelle des musiciens* (Brussels, 8 tập, 1835 – 1844; bản 2: 1860 – 1865) — từ điển tiểu sử đồ sộ, nhiều chỗ sai nhưng vẫn có giá trị.
 - **Friedrich Chrysander** ra *Jahrbücher für musikalische Wissenschaft* (chỉ hai tập, 1863 và 1867), đồng sáng lập Hội Händel (1856) để in toàn tập [[george-frideric-handel|Handel]] từ bản gốc. Ông tiếp tục dự án phần lớn bằng tiền riêng.
-- **Philipp Spitta**, *Johann Sebastian Bach* (2 tập, 1873 và 1880) — tiểu sử Bach đầu tiên dựa trên **nghiên cứu nguồn gốc quy mô lớn**.
+- **Philipp Spitta**, *Johann Sebastian Bach* (2 tập, 1873 và 1880) — tiểu sử Bach đầu tiên dựa trên **nghiên cứu nguồn tư liệu quy mô lớn**.
 - Các **bộ toàn tập** được khởi động: Hội Bach (1850) — xem [[van-ban-hoc-am-nhac]].
 
 ## Adler và sự ra đời của ngành đại học
 Năm 1884 **Guido Adler** cùng Chrysander và Spitta lập tạp chí *Vierteljahrsschrift für Musikwissenschaft* (xuất bản 1885 – 1894). Bài mở đầu số 1 vạch sơ đồ của ngành ([[am-nhac-hoc]]). Adler còn khởi xướng bộ *Denkmäler der Tonkunst in Österreich* ("Những công trình âm nhạc Áo"): đề nghị lên bộ năm 1888, hội xuất bản thành lập năm 1893 với [[am-nhac-tuyet-doi|Hanslick]] làm chủ tịch đầu tiên, tập đầu (các bản [[thanh-le-va-requiem|thánh lễ]] của Fux) ra năm 1894. Ông chủ biên *Handbuch der Musikgeschichte* (1924).
 
 ## Thế kỷ 20: sang Mỹ
-- Thập niên 1930 – 1945, khoảng **150 nhà nghiên cứu âm nhạc** chạy khỏi chủ nghĩa phát xít (theo một dự án nghiên cứu của EU), phần lớn sang Mỹ. Ví dụ: **Alfred Einstein** (người hiệu đính danh mục [[nguon-tra-cuu-am-nhac-hoc|Köchel]] năm 1937) và **Manfred Bukofzer** cùng tới Mỹ năm 1939. Họ góp phần đưa âm nhạc học thành một ngành chuyên nghiệp trong các đại học Mỹ.
+- Giai đoạn 1930 – 1945, khoảng **150 nhà nghiên cứu âm nhạc** chạy khỏi chủ nghĩa phát xít (theo một dự án nghiên cứu của EU), phần lớn sang Mỹ. Ví dụ: **Alfred Einstein** (người hiệu đính danh mục [[nguon-tra-cuu-am-nhac-hoc|Köchel]] năm 1937) và **Manfred Bukofzer** cùng tới Mỹ năm 1939. Họ góp phần đưa âm nhạc học thành một ngành chuyên nghiệp trong các đại học Mỹ.
 - **Hội Âm nhạc học Mỹ** (*American Musicological Society*) được lập năm **1934**.
 
 ## Chất vấn ngành: từ Kerman đến "âm nhạc học mới"
@@ -382,7 +382,7 @@ Chữ "[[thoi-ky-baroque|Baroque]]" chỉ được dùng cho âm nhạc từ đ�
 | Trường hợp | Chứng cứ | Kết luận của giới nghiên cứu |
 |---|---|---|
 | **"Salieri đầu độc Mozart"** | Tin đồn từ mùa thu 1823, khi Salieri già yếu, bệnh tâm thần, được cho là đã tự buộc tội; các tin đầu tiên về cái chết của Mozart không nhắc tên Salieri | Bị bác bỏ; huyền thoại lan rộng qua vở kịch của Pushkin (1830), [[opera|opera]] của [[nikolai-rimsky-korsakov|Rimsky-Korsakov]] (1898) và *Amadeus* (kịch 1979, phim 1984) |
-| **Di chúc Heiligenstadt** của Beethoven | Bức thư viết cho hai em trai, đề ngày 6/10/1802; được tìm thấy năm 1827; bản gốc ở Thư viện Đại học Hamburg từ năm 1888 (quà tặng của Jenny Lind) | Tài liệu xác thực về khủng hoảng điếc của Beethoven |
+| **Di chúc Heiligenstadt** của Beethoven | Bức thư viết cho hai em trai, đề ngày 6/10/1802; được tìm thấy năm 1827; bản gốc ở Thư viện Đại học Hamburg từ năm 1888 (quà tặng của Jenny Lind) | Tài liệu xác thực về cuộc khủng hoảng của Beethoven khi biết mình bị điếc |
 
 Bài học: phân biệt **tài liệu** (có nguồn gốc rõ) với **giai thoại** (lặp lại qua nhiều sách mà không có nguồn gốc).
 
@@ -499,7 +499,7 @@ Khi mở một bản nhạc, ta thường coi các nốt trên trang là "tác p
 2. **Xác định quan hệ** giữa các nguồn: bản nào chép từ bản nào, bản nào tác giả đã duyệt.
 3. **Chọn nguồn chính**, rồi so từng nốt, từng dấu với các nguồn khác.
 4. **In văn bản**, và trong phần **báo cáo phê bình** (*critical report*) ghi lại mọi chỗ khác nhau cùng lý do chọn.
-5. **Phân biệt bằng [[hinh-thuc-am-nhac|hình thức]] in** những gì người biên tập thêm vào (ví dụ dấu trong ngoặc, nét đứt).
+5. **Phân biệt bằng hình thức in** những gì người biên tập thêm vào (ví dụ dấu trong ngoặc, nét đứt).
 
 ## Các bộ toàn tập
 Từ giữa thế kỷ 19, các hội và nhà xuất bản lập **toàn tập** (*Gesamtausgabe*) cho những nhà soạn nhạc được coi là kinh điển. Đây vừa là công trình văn bản học, vừa là hành động **tạo ra kinh điển** ([[lich-su-tiep-nhan-am-nhac]]).
@@ -540,7 +540,7 @@ Ba bản in đầu của một tác phẩm Chopin (Paris, Leipzig, London) có t
 **Lịch sử tiếp nhận** (*Rezeptionsgeschichte*) nghiên cứu một tác phẩm **sau khi nó ra đời**: ai chơi, ai in, ai phê bình, vì sao nó bị quên rồi được nhớ lại, và mỗi thời đã hiểu nó khác nhau ra sao. Hướng nghiên cứu này gắn với [[triet-hoc-am-nhac|mỹ học]] tiếp nhận; ở Đức các tên tiêu biểu là Carl Dahlhaus, Friedhelm Krummacher, Hermann Danuser. Dahlhaus đặt nó vào trung tâm cuốn *Grundlagen der Musikgeschichte* (1977) — xem [[lich-su-nganh-am-nhac-hoc]].
 
 ## Ca kinh điển: Bach năm 1829
-- Ngày **11/3/1829**, tại Sing-Akademie Berlin, **[[felix-mendelssohn|Felix Mendelssohn]]** (20 tuổi, học trò của Zelter) chỉ huy *[[oratorio-cantata-passion|Thương khó theo Thánh Matthew]]* của [[johann-sebastian-bach|Bach]] — lần trình diễn đầu tiên kể từ khi Bach mất. Khoảng một nghìn người không mua được vé; các buổi diễn lại tiếp theo. Bản diễn đã được **cắt gọn** đáng kể.
+- Ngày **11/3/1829**, tại Sing-Akademie Berlin, **[[felix-mendelssohn|Felix Mendelssohn]]** (20 tuổi, học trò của Zelter) chỉ huy *[[oratorio-cantata-passion|Thương khó theo Thánh Matthew]]* của [[johann-sebastian-bach|Bach]] — lần trình diễn đầu tiên kể từ khi Bach mất. Khoảng một nghìn người không mua được vé; sau đó có thêm các buổi diễn lại. Bản diễn đã được **cắt gọn** đáng kể.
 - Cần đặt mốc này đúng chỗ: nói "Bach bị lãng quên" là đơn giản hoá. Trước đó, Forkel đã viết tiểu sử Bach (1802) và nhạc phím của Bach vẫn được giới chuyên môn dùng. Điều thay đổi năm 1829 là **các tác phẩm thanh nhạc lớn** đến với **công chúng**, và Bach trở thành biểu tượng của âm nhạc Đức. Nghiên cứu tiêu biểu: Celia Applegate, *Bach in Berlin* (2005).
 - Hệ quả thể chế: Hội Bach lập năm 1850 và in toàn tập Bach (1851 – 1899) — [[van-ban-hoc-am-nhac]].
 
@@ -597,8 +597,8 @@ Danh sách "bài phải học" ([[lo-trinh-tac-pham]]) cũng là một **kinh đ
 | **"Sáo" Divje Babe** (Slovenia) | Tìm thấy năm 1995 | **Còn tranh cãi**: có thể chỉ là vết răng thú gặm |
 
 ## Bản nhạc ghi chép sớm nhất
-- **Thánh ca Hurrian số 6** (Ugarit, bắc Syria, khoảng **1400 TCN**), ghi trên bảng đất sét bằng chữ hình nêm: một bài thánh ca dâng nữ thần Nikkal, kèm chỉ dẫn cho đàn lyre 9 dây. Thường được gọi là bản nhạc có ký hiệu, còn khá đầy đủ, cổ nhất. Các bản dựng lại **khác nhau rất nhiều**, vì cách đọc ký hiệu chưa thống nhất.
-- **Hy Lạp** có hai bộ ký hiệu, cho **giọng hát** và cho **nhạc cụ** (bộ cho nhạc cụ cổ hơn). Hệ thống hoàn chỉnh từ khoảng giữa thế kỷ 3 TCN. Bảng ký hiệu chủ yếu biết được qua cẩm nang của Alypius, viết sau đó khoảng nửa thiên niên kỷ.
+- **Thánh ca Hurrian số 6** (Ugarit, bắc Syria, khoảng **1400 TCN**), ghi trên bảng đất sét bằng chữ hình nêm: một bài thánh ca dâng nữ thần Nikkal, kèm chỉ dẫn cho đàn lyre 9 dây. Bài này thường được gọi là bản nhạc cổ nhất có ký hiệu mà còn khá đầy đủ. Các bản dựng lại **khác nhau rất nhiều**, vì cách đọc ký hiệu chưa thống nhất.
+- **Hy Lạp** có hai bộ ký hiệu, cho **giọng hát** và cho **nhạc cụ** (bộ cho nhạc cụ cổ hơn). Hệ thống này hoàn chỉnh từ khoảng giữa thế kỷ 3 TCN. Bảng ký hiệu chủ yếu biết được qua cẩm nang của Alypius, viết sau đó khoảng nửa thiên niên kỷ.
 - **Thánh ca Delphi** khắc trên tường Kho bạc Athens ở Delphi, tìm thấy năm 1893. Trước đây chúng được ghi niên đại 138 và 128 TCN; nghiên cứu gần đây cho rằng cả hai có lẽ được viết cho lễ rước năm **128 TCN**. Bài 1 dùng ký hiệu giọng hát, bài 2 dùng ký hiệu nhạc cụ.
 - **Văn bia Seikilos** (tìm thấy năm 1883 gần Tralles, nay là Aydın, Thổ Nhĩ Kỳ; thường được xếp vào **thế kỷ 1 – 2 sau Công nguyên**; nay ở Bảo tàng Quốc gia Đan Mạch): một bài hát ngắn **còn nguyên vẹn** với lời và ký hiệu.
 

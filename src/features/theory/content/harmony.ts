@@ -508,7 +508,7 @@ Cột tiếng Việt là cách dịch thư viện dùng (dịch sát nghĩa; ch�
       ['Milne Open Textbooks — Diatonic descending-fifth sequences', 'https://milnepublishing.geneseo.edu/fundamentals-function-form/chapter/25-diatonic-descending-fifth-sequences/'],
     ],
     body: `
-**Hoà âm cổ điển** (hoà âm "thời kỳ thông dụng" — common practice) là ngôn ngữ hoà âm của âm nhạc phương Tây từ khoảng thời [[thoi-ky-baroque|Baroque]] đến cuối thế kỷ 19: [[Bach]], [[Mozart]], [[Beethoven]], [[Chopin]]… Đây là nền tảng để hiểu cả [[nhac-pho|nhạc phổ]] thông, jazz lẫn các thử nghiệm của [[hoa-am-the-ky-20|thế kỷ 20]].
+**Hoà âm cổ điển** (hoà âm "thời kỳ thông dụng" — common practice) là ngôn ngữ hoà âm của âm nhạc phương Tây từ khoảng thời [[thoi-ky-baroque|Baroque]] đến cuối thế kỷ 19: [[Bach]], [[Mozart]], [[Beethoven]], [[Chopin]]… Đây là nền tảng để hiểu cả nhạc phổ thông, jazz lẫn các thử nghiệm của [[hoa-am-the-ky-20|thế kỷ 20]].
 
 ## Lý thuyết hoà âm hình thành thế nào
 | Năm | Người | Đóng góp |
@@ -695,7 +695,7 @@ Hoà âm cổ điển được xây trên nền hợp âm ba — xem bức tranh
     slug: 'the-dao-hop-am',
     title: 'Thể đảo hợp âm',
     category: 'harmony',
-    aliases: ['thể đảo', 'đảo hợp âm', 'inversion', 'thế đảo 1', 'thể đảo 2', 'thể nguyên vị', 'hợp âm 6/4'],
+    aliases: ['thể đảo', 'đảo hợp âm', 'inversion', 'thể đảo 1', 'thể đảo 2', 'thể nguyên vị', 'hợp âm 6/4'],
     summary: 'Cách sắp xếp hợp âm theo nốt nằm ở bè trầm: nguyên vị (nốt gốc), đảo 1 (nốt bậc 3), đảo 2 (nốt bậc 5).',
     wiki: 'Inversion_(music)',
     refs: [
@@ -776,7 +776,7 @@ Chứa [[thuan-nghich|tritone]] giữa bậc 3 và bậc 7 (B–F trong G7). [[q
 ## Quy tắc nốt 7
 - **Giải quyết**: nốt 7 của [[hop-am-ba|hợp âm]] luôn đi **xuống [[giai-dieu|liền bậc]]**. Trong V7 → I, nốt 7 (bậc 4, Fa) xuống bậc 3 (Mi).
 - **Chuẩn bị**: theo phong cách chặt, nốt 7 nên đến bằng **nốt chung** từ hợp âm trước (như nốt trễ) hoặc bằng **bước liền bậc** (như [[not-ngoai-hop-am|nốt lướt]], nốt thêu).
-- V7 nguyên vị → I nguyên vị có hai nốt khuynh hướng kéo ngược nhau; thường để **một hợp âm thiếu nốt 5** — xem [[luat-hoa-am-bon-be]].
+- V7 nguyên vị → I nguyên vị vướng hai nốt khuynh hướng; thường phải để **một trong hai hợp âm thiếu nốt 5** — xem [[luat-hoa-am-bon-be]].
 - Ký hiệu thể đảo của hợp âm 7: 7, 6/5, 4/3, 4/2 — xem [[the-dao-hop-am]].
 
 ## Lịch sử: nốt 7 "không được chuẩn bị"
@@ -939,7 +939,7 @@ So sánh: [[so-sanh-hai-truong-phai-hoa-am]]; tổng quan: [[hai-truong-phai-hoa
     title: 'Vòng hợp âm',
     category: 'harmony',
     also: ['jazz'],
-    aliases: ['tiến trình hợp âm', 'chord progression', 'vòng hòa âm', 'I-V-vi-IV', 'vòng Canon', 'vòng 4 hợp âm'],
+    aliases: ['tiến trình hợp âm', 'chord progression', 'vòng hoà âm', 'I-V-vi-IV', 'vòng Canon', 'vòng 4 hợp âm'],
     summary: 'Chuỗi hợp âm nối tiếp nhau; một số vòng phổ biến xuất hiện trong hàng ngàn bài hát.',
     wiki: 'Chord_progression',
     refs: [
@@ -1038,7 +1038,7 @@ Theo khảo sát 100 bài trong danh sách 500 bài hay nhất của tạp chí 
 ## Hình thức và chuyển giọng
 - Khuôn hình thức chính: **verse – ([[hinh-thuc-ca-khuc-pho-thong|pre-chorus]]) – chorus – ([[hinh-thuc-ca-khuc-32|bridge]])**. Pre-chorus nhận ra nhờ **năng lượng tăng dần**, dẫn tới điệp khúc — xem [[nhac-pho-thong-the-ky-20]].
 - **"Nâng tông" cuối bài** (*truck driver’s gear change*): chuyển giọng **đột ngột**, thường **lên nửa cung** (đôi khi một cung) trước hoặc giữa các điệp khúc cuối, như "sang số" — hiệu quả nhưng bị coi là sáo mòn nếu lạm dụng. Xem [[chuyen-giong]].
-::grand C4+E4+G4/C3=C B3+D4+G4/G2=G / Db4+F4+Ab4/Db3=D♭ | Nâng tông nửa cung: điệp khúc cuối chuyển từ Đô trưởng lên Rê giáng trưởng (thường có một hợp âm át A♭ hoặc không có gì chuẩn bị)
+::grand C4+E4+G4/C3=C B3+D4+G4/G2=G / Db4+F4+Ab4/Db3=D♭ | Nâng tông nửa cung: điệp khúc cuối chuyển từ Đô trưởng lên Rê giáng trưởng (thường chuẩn bị bằng hợp âm át A♭, hoặc không chuẩn bị gì)
 
 Ứng dụng khi đệm: [[dem-pop-ballad]], [[dem-hat-hien-dai]].
 `,
@@ -1073,7 +1073,7 @@ Theo khảo sát 100 bài trong danh sách 500 bài hay nhất của tạp chí 
 ::img Authentic Cadence Trill.svg | Kết chính kiểu Baroque, có láy rền trên hợp âm át
 
 ## Kết với I6/4
-Trong nhạc cổ điển, trước V thường có **hợp âm I đảo 2** (C/G → G7 → C) — gọi là "6/4 kết", thực chất là âm thêu của V (xem [[the-dao-hop-am]]).
+Trong nhạc cổ điển, trước V thường có **hợp âm I đảo 2** (C/G → G7 → C) — gọi là "6/4 kết", thực chất là hai nốt dựa (6–5, 4–3) trang trí cho V (xem [[the-dao-hop-am]], [[hop-am-sau-bon]]).
 
 ## Phân biệt kết chính hoàn toàn và không hoàn toàn
 **Kết chính hoàn toàn** (PAC) cần đủ ba điều kiện: V **nguyên vị**, I **nguyên vị**, và Soprano kết ở **chủ âm**. Thiếu bất kỳ điều kiện nào → **kết chính không hoàn toàn** (IAC). Kết thường được trang trí bằng **[[not-ngoai-hop-am|nốt trễ]] 4–3** trên V — vẫn gọi tên theo hợp âm gốc V – I.
@@ -1369,7 +1369,7 @@ Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
 | Ký hiệu | Nốt (gốc C) | Ghi chú |
 |---|---|---|
 | **Csus4** | C – F – G | Nốt 4 "treo" muốn đi xuống nốt 3 (C – F – G → C – E – G) |
-| **Csus2** | C – D – G | Nốt 2 thay nốt 3; cùng nốt với Gsus4 ở thế đảo |
+| **Csus2** | C – D – G | Nốt 2 thay nốt 3; cùng nốt với Gsus4 ở thể đảo |
 | **G7sus4** | G – C – D – F | Át "treo": trong jazz thường viết **F/G** hay **Dm7/G** — xem [[hop-am-gach-cheo]] |
 ::keyboard C4 F4 G4 | Csus4: nốt 3 (E) được thay bằng nốt 4 (F)
 - Tên gọi đến từ **nốt treo** trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]]: một nốt của hợp âm trước được giữ lại rồi mới giải quyết xuống (xem [[not-ngoai-hop-am]]).
@@ -1521,9 +1521,9 @@ Cuối cùng, ghi **chức năng** (T – PD – D – T) cho cả câu theo [[h
 - **Bắt đầu từ hai bè ngoài** (Soprano và Bass); bè giữa dễ gây nhầm.
 - **Ưu tiên nốt ở [[so-chi-nhip|phách mạnh]]**: ví dụ ba nốt F–A (thiếu một nốt) có thể là Fa trưởng thiếu C, hoặc Rê thứ thiếu D — nốt ở phách mạnh và hợp âm trước/sau giúp quyết định.
 - **Nốt 7 của V7 hay nốt trễ?** Nốt 7 của hợp âm cũng đi xuống [[giai-dieu|liền bậc]] như nốt trễ, nhưng nó **thuộc hợp âm**. Hãy hỏi: nốt này có trong [[ky-hieu-hop-am|ký hiệu hợp âm]] không?
-- **Nốt trễ ở kết**: kết thường có nốt trễ 4–3 trên V. Gọi [[not-nhac|tên nốt]] trễ là nốt ngoài hợp âm, và gọi tên kết theo **hợp âm gốc** (V – I).
+- **Nốt trễ ở kết**: kết thường có nốt trễ 4–3 trên V. Xếp [[not-nhac|nốt]] trễ vào loại nốt ngoài hợp âm, và gọi tên kết theo **hợp âm gốc** (V – I).
 - **Nốt ngoài hợp âm không phải "nốt sai"**: chúng đúng phong cách khi đi theo các mẫu quen thuộc.
-- **Một hợp âm, nhiều nghĩa**: như Weber chỉ ra, Đô trưởng có thể là I, IV hay V tuỳ giọng — vì vậy luôn xác định **giọng của đoạn đó** trước (có thể đã [[chuyen-giong|chuyển giọng]]).
+- **Một hợp âm, nhiều nghĩa**: như Weber chỉ ra, hợp âm Đô trưởng có thể là I, IV hay V tuỳ giọng — vì vậy luôn xác định **giọng của đoạn đó** trước (có thể đã [[chuyen-giong|chuyển giọng]]).
 - Ghi phân tích bằng **bút chì** dưới [[khuong-nhac|khuông]]; đánh dấu nốt ngoài hợp âm trước khi viết [[chuc-nang-hoa-am|số La Mã]].
 
 ## Bài phân tích mẫu trong thư viện
@@ -1584,7 +1584,7 @@ Phối hoà âm là **ngược** với phân tích: có [[giai-dieu|giai điệu
       ['Puget Sound, Music Theory for the 21st Century — Impressionism', 'https://musictheory.pugetsound.edu/mt21c/Impressionism.html'],
     ],
     body: `
-**Hoà âm song song** (planing): mọi nốt của [[hop-am-ba|hợp âm]] cùng đi lên hoặc xuống **một khoảng như nhau** — cả khối hợp âm "trượt" trên [[ban-phim|bàn phím]]. Trong [[luat-hoa-am-bon-be|hoà âm cổ điển]] đây là lỗi ([[quang|quãng]] 5 và 8 song song); ở đây nó là **chủ ý**: các bè không còn là [[giai-dieu|giai điệu]] độc lập mà hoà làm **một dải [[am-sac|màu âm]] thanh**.
+**Hoà âm song song** (planing): mọi nốt của [[hop-am-ba|hợp âm]] cùng đi lên hoặc xuống **một quãng như nhau** — cả khối hợp âm "trượt" trên [[ban-phim|bàn phím]]. Trong [[luat-hoa-am-bon-be|hoà âm cổ điển]] đây là lỗi ([[quang|quãng]] 5 và 8 song song); ở đây nó là **chủ ý**: các bè không còn là [[giai-dieu|giai điệu]] độc lập mà hoà làm **một dải [[am-sac|màu âm]] thanh**.
 
 ## Hai loại
 | Loại | Cách làm | Kết quả |
@@ -1607,7 +1607,7 @@ Mọi loại hợp âm đều có thể trượt song song: hợp âm ba, [[hop-
 
 ## Trên piano
 - Song song cromatic: giữ **nguyên [[tu-the|thế tay]]**, dịch cả bàn tay — kỹ thuật như [[buoc-nhay-xa|di chuyển khối]].
-- Song song diatonic: giữ khoảng cách ngón trên các phím của âm giai, chất lượng hợp âm tự đổi.
+- Song song diatonic: giữ nguyên khoảng cách ngón trên các phím của âm giai, tính chất hợp âm tự đổi.
 - Hãy dùng [[ban-dap|pedal]] theo tai: Debussy gần như không ghi pedal.
 
 Tổng quan các thủ pháp thế kỷ 20: [[hoa-am-the-ky-20]].
@@ -1820,7 +1820,7 @@ Bài này nối [[ky-hieu-hop-am]] với thực hành đệm. Bậc [[hop-am-ba|
 [[giai-dieu|Giai điệu]] ghi trên [[khuong-nhac|khuông]], **lời** dưới khuông, **hợp âm** bằng ký hiệu phía trên — **không** ghi [[ngon-bam|thế bấm]] hay cách đệm; người chơi tự "điền". Đó là định dạng chuẩn của jazz và [[nhac-pho-thong-the-ky-20|nhạc phổ thông]].
 
 ## Hệ số Nashville
-- Do các nhạc công phòng thu ở Nashville phát triển **cuối thập niên 1950** (thường ghi 1957): **Neal Matthews Jr.** của nhóm Jordanaires cần cách ghi nhanh bè hát cho nhiều buổi thu mỗi ngày; theo lịch sử của Chas Williams (Wikipedia dẫn), ông dựa trên quen thuộc với [[ky-am|ký âm]] "nốt hình" (*shape-note*) của các nhóm gospel.
+- Do các nhạc công phòng thu ở Nashville phát triển **cuối thập niên 1950** (thường ghi 1957): **Neal Matthews Jr.** của nhóm Jordanaires cần cách ghi nhanh bè hát cho nhiều buổi thu mỗi ngày; theo lịch sử của Chas Williams (Wikipedia dẫn), ông dựa trên sự quen thuộc của mình với [[ky-am|ký âm]] "nốt hình" (*shape-note*) của các nhóm gospel.
 - **Đầu thập niên 1960**: người chơi harmonica phòng thu **Charlie McCoy** dùng nó cho bảng hợp âm của cả ban (bass, trống, piano, [[guitar-co-dien|guitar]]).
 | Ký hiệu | Nghĩa |
 |---|---|
@@ -2099,7 +2099,7 @@ Sách Mỹ hiện đại **pha trộn** cả hai: ghi số La Mã nhưng dạy b
 | | **Nga** | **Phương Tây** |
 |---|---|---|
 | Ký hiệu | **K64** — ký hiệu riêng | I6/4 – V, hoặc V6/4 – 5/3, hoặc "Cad 6/4" |
-| Giải thích | Có hình dạng của T64 nhưng **chức năng át**; về lịch sử là **hai nốt treo kép** trên D (ba nốt treo nếu đến D7); đứng **phách mạnh hơn** D; nhân đôi bè trầm; thường được chuẩn bị bằng nhóm S | Hai cách đọc cùng tồn tại: **trang trí cho V** (Aldwell – Schachter: "có lẽ không nên ghi là I6/4"; Open Music Theory ghi V6/4–5/3) hoặc **I6/4** (nhiều giáo viên Mỹ). Tranh luận có từ Kirnberger (1773) |
+| Giải thích | Có hình dạng của T64 nhưng **chức năng át**; về lịch sử là **hai nốt treo** trên D (ba nốt treo nếu đến D7); đứng **phách mạnh hơn** D; nhân đôi bè trầm; thường được chuẩn bị bằng nhóm S | Hai cách đọc cùng tồn tại: **trang trí cho V** (Aldwell – Schachter: "có lẽ không nên ghi là I6/4"; Open Music Theory ghi V6/4–5/3) hoặc **I6/4** (nhiều giáo viên Mỹ). Tranh luận có từ Kirnberger (1773) |
 | Quan điểm thứ ba | Ninov (2016) cho rằng hợp âm này **mang hai chức năng**: cấu trúc chủ, chức năng át chiếm ưu thế | — |
 Chi tiết: [[hop-am-sau-bon]].
 

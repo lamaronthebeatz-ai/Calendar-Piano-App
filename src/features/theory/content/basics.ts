@@ -70,7 +70,7 @@ Nhạc lý chỉ thành kỹ năng khi gắn với **âm thanh**: đọc thì h�
 Mỗi nốt nhạc mang hai thông tin: **[[cao-do|cao độ]]** — vị trí của nốt trên [[khuong-nhac]] — và **trường độ** — hình dạng của nốt (xem [[truong-do]]).
 
 ## Bảy tên nốt
-Âm nhạc phương Tây dùng 7 tên [[not-lap-lai|nốt lặp]] lại theo từng [[quang|quãng 8]]:
+Âm nhạc phương Tây dùng 7 tên nốt, [[not-lap-lai|lặp lại]] theo từng [[quang|quãng 8]]:
 | Tên Latin | Đô | Rê | Mi | Fa | Sol | La | Si |
 |---|---|---|---|---|---|---|---|
 | Tên chữ cái | C | D | E | F | G | A | B |
@@ -83,7 +83,7 @@ Giữa các phím trắng có phím đen — đó là các nốt mang [[dau-hoa]
 
 ## Cấu tạo hình nốt
 - **Đầu nốt**: hình bầu dục, rỗng hoặc đặc — vị trí của nó cho biết cao độ.
-- **Đuôi nốt** (thân): vạch thẳng. Nốt **trên dòng 3** → đuôi quay **xuống**, gắn ở **bên trái** đầu nốt; nốt **dưới dòng 3** → đuôi quay **lên**, gắn ở **bên phải**. Nốt **đúng dòng 3**: quy ước phổ biến (và mặc định của phần mềm) là quay xuống, nhưng sách chép nhạc *Behind Bars* của Elaine [[glenn-gould|Gould]] cho phép theo hướng các nốt xung quanh.
+- **Đuôi nốt** (thân): vạch thẳng. Nốt **trên dòng 3** → đuôi quay **xuống**, gắn ở **bên trái** đầu nốt; nốt **dưới dòng 3** → đuôi quay **lên**, gắn ở **bên phải**. Nốt **đúng dòng 3**: quy ước phổ biến (và mặc định của phần mềm) là quay xuống, nhưng sách chép nhạc *Behind Bars* của Elaine Gould cho phép theo hướng các nốt xung quanh.
 - **Móc** hoặc **gạch nối**: cho biết các trường độ ngắn (móc đơn, móc kép…).
 
 ## Lịch sử tên nốt Đô – Rê – Mi
@@ -146,7 +146,7 @@ Piano dùng **khuông nhạc đôi**, nối bằng dấu ngoặc ôm: khuông tr
     slug: 'khoa-nhac',
     title: 'Khoá nhạc',
     category: 'basics',
-    aliases: ['khoá', 'khóa nhạc', 'clef'],
+    aliases: ['khoá', 'khoá nhạc', 'clef'],
     summary: 'Ký hiệu đặt ở đầu khuông nhạc, quy định tên nốt cho từng dòng và khe.',
     wiki: 'Clef',
     refs: [
@@ -177,7 +177,7 @@ Khoá nhạc ban đầu chính là **chữ cái [[not-nhac|tên nốt]]** viết
 ## Khoá "di động" và các khoá đã lỗi thời
 Ngày xưa khoá có thể đặt trên **nhiều dòng khác nhau** để nốt của từng bè nằm gọn trong khuông. Từ đó có nhiều tên khoá:
 - **Khoá Sol dòng 1** (khoá violin kiểu Pháp) và **khoá Đô dòng 1** (khoá soprano): đã thôi dùng.
-- Ngày nay chỉ còn hai khoá [[xuong-am|Đô di động]] phổ biến: **alto** (dòng 3) và **tenor** (dòng 4).
+- Ngày nay chỉ còn hai vị trí khoá Đô phổ biến: **alto** (dòng 3) và **tenor** (dòng 4).
 
 Người học piano chủ yếu cần khoá Sol và khoá Fa. Khoá Đô gặp khi đọc tổng phổ hoặc [[nhac-thinh-phong|nhạc thính phòng]].
 `,
@@ -186,7 +186,7 @@ Người học piano chủ yếu cần khoá Sol và khoá Fa. Khoá Đô gặp 
     slug: 'khoa-sol',
     title: 'Khoá Sol',
     category: 'basics',
-    aliases: ['khóa Sol', 'treble clef', 'G clef'],
+    aliases: ['khoá Sol', 'treble clef', 'G clef'],
     summary: 'Khoá nhạc cho âm vực cao; vòng xoắn của khoá ôm lấy dòng 2 — nốt Sol (G4).',
     wiki: 'Clef',
     refs: [
@@ -220,7 +220,7 @@ So sánh với [[khoa-fa]] ở khuông dưới.
     slug: 'khoa-fa',
     title: 'Khoá Fa',
     category: 'basics',
-    aliases: ['khóa Fa', 'bass clef', 'F clef'],
+    aliases: ['khoá Fa', 'bass clef', 'F clef'],
     summary: 'Khoá nhạc cho âm vực thấp; hai dấu chấm kẹp dòng 4 — nốt Fa (F3).',
     wiki: 'Clef',
     refs: [
@@ -250,14 +250,14 @@ Ba nốt dễ nhận nhất: **Đô trầm (C3)** ở khe 2, **Fa (F3)** ở dò
 ::staff bass C3 F3 C4 | Ba nốt mốc của khoá Fa
 
 ## So với khoá Sol
-Cùng một vị trí trên khuông, **[[not-nhac|tên nốt]]** ở khoá Fa cao hơn khoá Sol **một bậc 3** (dòng 1: Sol thay vì Mi; khe 1: La thay vì Fa), nhưng **[[cao-do|cao độ]]** thì thấp hơn nhiều (dòng 1 khoá Fa là G2, dòng 1 khoá Sol là E4). Vì vậy không thể đọc khoá Fa bằng cách "nhìn như khoá Sol" — cần học mốc riêng của nó.
+Cùng một vị trí trên khuông, **[[not-nhac|tên nốt]]** ở khoá Fa cao hơn khoá Sol **một quãng 3** tính theo tên nốt (dòng 1: Sol thay vì Mi; khe 1: La thay vì Fa), nhưng **[[cao-do|cao độ]]** thì thấp hơn nhiều (dòng 1 khoá Fa là G2, dòng 1 khoá Sol là E4). Vì vậy không thể đọc khoá Fa bằng cách "nhìn như khoá Sol" — cần học mốc riêng của nó.
 `,
   },
   {
     slug: 'khoa-do',
     title: 'Khoá Đô',
     category: 'basics',
-    aliases: ['khóa Đô', 'C clef', 'alto clef', 'tenor clef', 'khoá Đô dòng 3', 'khoá Đô dòng 4'],
+    aliases: ['khoá Đô', 'C clef', 'alto clef', 'tenor clef', 'khoá Đô dòng 3', 'khoá Đô dòng 4'],
     summary: 'Khoá nhạc "di động" có tâm chỉ vào nốt Đô giữa (C4); phổ biến nhất là khoá Đô dòng 3 cho viola.',
     wiki: 'Clef',
     refs: [
@@ -439,7 +439,7 @@ Một cách ghi nhạc khác bên cạnh [[khuong-nhac]] — gần với [[xuong
 | **Gạch ngang** sau số: 1 – | Thêm một phách đen: "1 –" = nốt trắng, "1 – – –" = nốt tròn |
 | Chấm **sau** số | [[cham-doi-dau-noi|Chấm dôi]] (thêm nửa giá trị) |
 | **0** | [[dau-lang|Dấu lặng]]; lặng dài thì lặp số 0, không dùng gạch ngang |
-*(Theo Wikipedia và hướng dẫn của [[guitar-co-dien|Guitar]] Pro.)*
+*(Theo Wikipedia và hướng dẫn của phần mềm Guitar Pro.)*
 Giọng được ghi ở đầu bài, vd. "1 = G": khi đó 1 – 7 là Sol La Si Đô Rê Mi Fa♯. [[am-giai|Âm giai]] [[am-giai-thu|thứ tự nhiên]] bắt đầu từ 6.
 
 ::staff treble C4=1 D4=2 E4=3 F4=4 G4=5 A4=6 B4=7 C5=1̇ | "1 = C": giản phổ và khuông nhạc
@@ -553,7 +553,7 @@ Mỗi [[not-nhac|nốt nhạc]] trên [[khuong-nhac|khuông nhạc]] tương ứ
 | F♯ | Fa thăng | Fis | Ei-he (嬰ヘ) |
 | E♭ | Mi giáng | Es | Hen-ho (変ホ) |
 
-::staff treble C4 D4 E4 F4 G4 A4 B4 C5 | Thang âm Đô trưởng: C D E F G A B C = Đô Rê Mi Pha Son La Si Đô
+::staff treble C4 D4 E4 F4 G4 A4 B4 C5 | Âm giai Đô trưởng: C D E F G A B C = Đô Rê Mi Fa Sol La Si Đô
 
 ### Hệ thống Đức: H, B và các đuôi -is, -es
 
@@ -561,7 +561,7 @@ Trong tiếng Đức, **H** là Si bình (B♮) còn **B** là Si giáng (B♭) 
 
 ### Hệ thống Pháp, Ý và Việt Nam
 
-Tiếng Ý và Pháp dùng do (ut) re mi fa sol la si; thăng/giáng là *diesis/bemolle* (Ý), *dièse/bémol* (Pháp). Tiếng Việt kế thừa trực tiếp truyền thống này: sách giáo khoa và nhạc viện viết Đô, Rê, Mi, Pha, Son, La, Si, kèm "thăng" và "giáng" (xem [[dau-hoa]]). Đây là quy ước phổ biến trong thực tế giảng dạy; tác giả chưa tìm được văn bản chuẩn hoá chính thức nên đây là nhận định dựa trên thực tiễn.
+Tiếng Ý và Pháp dùng do (ut) re mi fa sol la si; thăng/giáng là *diesis/bemolle* (Ý), *dièse/bémol* (Pháp). Tiếng Việt kế thừa trực tiếp truyền thống này: sách giáo khoa và nhạc viện viết Đô, Rê, Mi, Fa (Pha), Sol (Son), La, Si, kèm "thăng" và "giáng" (xem [[dau-hoa]]). Đây là quy ước phổ biến trong thực tế giảng dạy; tác giả chưa tìm được văn bản chuẩn hoá chính thức nên đây là nhận định dựa trên thực tiễn.
 
 ### Hệ thống Nhật
 
@@ -572,11 +572,11 @@ Nhật dùng thứ tự chữ kana *iroha* gán cho A B C D E F G: イ ロ ハ �
 Đây là khác biệt quan trọng nhất về sư phạm (theo Wikipedia – Solfège):
 
 - **Do cố định (fixed do)**: mỗi âm tiết gắn với một cao độ tuyệt đối; Do luôn là C dù bản nhạc ở giọng nào. Phổ biến ở các nước nói tiếng Latinh và Slavơ (Pháp, Ý, Tây Ban Nha, Nga…).
-- **Do di động (movable do)**: âm tiết chỉ bậc trong giọng; Do là chủ âm. Ở giọng Son trưởng, nốt G được hát là "Do". Phổ biến ở Anh, Mỹ và nhiều nước nói tiếng Đức, và là cốt lõi của phương pháp [[zoltan-kodaly|Kodály]] ở Hungary.
+- **Do di động (movable do)**: âm tiết chỉ bậc trong giọng; Do là chủ âm. Ở giọng Sol trưởng, nốt G được hát là "Do". Phổ biến ở Anh, Mỹ và nhiều nước nói tiếng Đức, và là cốt lõi của phương pháp [[zoltan-kodaly|Kodály]] ở Hungary.
 
 **Tonic sol-fa** của Anh (thế kỷ 19) dùng Do di động với chữ viết tắt d r m f s l t; âm bậc bảy được đổi thành *ti* để chữ viết tắt không trùng chữ s của sol. Hệ di động còn có âm tiết biến âm như di, ri, fi (thăng) và ra, me, te (giáng) (theo bảng của FSU – Pitch Solmization Handout). Về giọng thứ, các trường phái khác nhau: có nơi dùng *la-based minor* (chủ âm thứ hát là La), có nơi dùng *do-based minor* (chủ âm vẫn là Do); phương pháp Kodály thường theo La làm chủ âm thứ.
 
-::staff treble k:1# G4 A4 B4 C5 D5 E5 F#5 G5 | Giọng Son trưởng – Do cố định hát Son La Si Đô Rê Mi Pha Son; Do di động hát Do Re Mi Fa Sol La Ti Do
+::staff treble k:1# G4 A4 B4 C5 D5 E5 F#5 G5 | Giọng Sol trưởng – Do cố định hát Sol La Si Đô Rê Mi Fa Sol; Do di động hát Do Re Mi Fa Sol La Ti Do
 
 | Tiêu chí | Do cố định | Do di động |
 |---|---|---|
@@ -603,7 +603,7 @@ Không có hệ thống "đúng" tuyệt đối; nhiều giáo viên kết hợp
 
 1. Viết bảng đối chiếu bảy nốt tự nhiên theo bốn hệ thống, sau đó che một cột và điền lại.
 2. Dịch tên các tác phẩm: "Sonate in Es-Dur", "Messe in h-Moll", "Fantaisie en fa mineur" sang tiếng Việt.
-3. Hát thang âm Son trưởng bằng hai cách: tên cố định (Son La Si…) và tên bậc (Do Re Mi…), cảm nhận khác biệt.
+3. Hát âm giai Sol trưởng bằng hai cách: tên cố định (Sol La Si…) và tên bậc (Do Re Mi…), cảm nhận khác biệt.
 
 Xem thêm: [[nhac-ly-co-ban]], [[khoa-nhac]], [[xuong-am]], [[ky-hieu-quang-tam]].
 `,
@@ -623,7 +623,7 @@ Xem thêm: [[nhac-ly-co-ban]], [[khoa-nhac]], [[xuong-am]], [[ky-hieu-quang-tam]
       ["Elaine Gould – Behind Bars (Faber Music, 2011), giới thiệu sách", "https://symposium.music.org/51/item/479-behind-bars-the-definitive-guide-to-music-notation.html"],
     ],
     body: `
-**Vạch nhịp** (barline) là nét thẳng đứng cắt ngang [[khuong-nhac|khuông nhạc]], chia bản nhạc thành các **ô nhịp** (bar, measure). Mỗi ô nhịp chứa tổng [[truong-do|trường độ]] đúng bằng [[so-chi-nhip|số chỉ nhịp]] quy định, và phách mạnh thứ nhất luôn nằm ngay sau vạch nhịp. Ngoài việc chia nhịp, các loại vạch đặc biệt còn báo hiệu chỗ chuyển đoạn, nhắc lại hay kết thúc.
+**Vạch nhịp** (barline) là nét thẳng đứng cắt ngang [[khuong-nhac|khuông nhạc]], chia bản nhạc thành các **ô nhịp** (bar, measure). Mỗi ô nhịp chứa tổng [[truong-do|trường độ]] đúng bằng [[so-chi-nhip|số chỉ nhịp]] quy định, và phách thứ nhất (phách mạnh) luôn nằm ngay sau vạch nhịp. Ngoài việc chia nhịp, các loại vạch đặc biệt còn báo hiệu chỗ chuyển đoạn, nhắc lại hay kết thúc.
 
 ## Các loại vạch nhịp
 
@@ -717,7 +717,7 @@ Viết nhạc đúng [[truong-do|trường độ]] mới chỉ là một nửa; 
 - Nốt **dưới** dòng giữa: đuôi hướng **lên**, đặt bên phải đầu nốt.
 - Nốt **trên** dòng giữa: đuôi hướng **xuống**, đặt bên trái đầu nốt.
 - Nốt **nằm ngay trên** dòng giữa (Si4 ở [[khoa-sol]], Rê3 ở [[khoa-fa]]): quy ước trong sách giáo khoa là hướng xuống; tài liệu Dorico ghi nhận phần mềm có thể cho đuôi theo các nốt bên cạnh.
-- Đuôi dài khoảng một quãng tám (3,5 khoảng) tính từ đầu nốt.
+- Đuôi dài chừng một quãng tám (3,5 khe) tính từ đầu nốt.
 
 ::staff treble E4 F4 G4 A4 / B4 / C5 D5 E5 F5 | Khoá Sol – Mi4 đến La4 đuôi lên; Si4 (dòng giữa) quy ước đuôi xuống; Đô5 trở lên đuôi xuống
 
@@ -815,7 +815,7 @@ Trên bản nhạc có ba loại đường cong trông gần giống nhau: **d�
 
 Theo tài liệu Notation Composer, dấu nối gộp trường độ của hai nốt cùng cao độ để nốt thứ nhất vang trong tổng thời gian của cả hai; còn dấu luyến gom các nốt thành một nhóm mà người chơi diễn giải, ở mức độ nhất định mang tính chủ quan. Quy tắc viết dấu nối và nốt chấm được trình bày ở [[cham-doi-dau-noi]].
 
-::staff treble G4 G4 / A4 B4 C5 D5 | Hai nốt Son4 cùng cao độ có thể được nối (dấu nối); bốn nốt La–Si–Đô–Rê khác cao độ chỉ có thể được luyến
+::staff treble G4 G4 / A4 B4 C5 D5 | Hai nốt Sol4 cùng cao độ có thể được nối (dấu nối); bốn nốt La–Si–Đô–Rê khác cao độ chỉ có thể được luyến
 
 ### Dấu luyến và dấu câu: một ký hiệu, hai chức năng?
 
@@ -829,7 +829,7 @@ Các nguồn không thống nhất. Một số giáo trình tách bạch: dấu 
 4. **Trường hợp khó**: hai nốt cùng cao độ nằm ở đầu hoặc cuối một dấu luyến dài. Nếu đường cong ngắn nối riêng hai nốt đó thì là dấu nối; nếu đường cong dài chứa các nốt khác thì nốt lặp lại vẫn phải đánh lại. Một số phần mềm và người dùng diễn đàn thừa nhận trường hợp này dễ gây nhầm (theo notat.io).
 5. **Nối trong hợp âm**: mỗi nốt được nối có đường cong riêng; nốt không có dấu nối phải đánh lại.
 
-::staff treble C4+E4+G4 C4+E4+A4 | Hợp âm Đô–Mi–Son sang Đô–Mi–La – nếu Đô và Mi được nối thì chỉ bấm lại La
+::staff treble C4+E4+G4 C4+E4+A4 | Hợp âm Đô–Mi–Sol sang Đô–Mi–La – nếu Đô và Mi được nối thì chỉ bấm lại La
 
 ## Chơi luyến trên piano
 
@@ -863,8 +863,8 @@ Trong nhạc Baroque, nhiều dấu luyến trong ấn bản cũ là do người
 ## Luyện tập
 
 1. Giáo viên đưa năm đoạn nhạc; học sinh tô màu dấu nối và dấu luyến khác nhau trước khi chơi.
-2. Chơi năm nốt Đô–Rê–Mi–Pha–Son liền tiếng tay phải, sau đó tay trái, lắng nghe không có khoảng trống.
-3. Luyến hai nốt: Mi–Rê, Pha–Mi, Son–Pha… mỗi cặp "xuống – lên".
+2. Chơi năm nốt Đô–Rê–Mi–Fa–Sol liền tiếng tay phải, sau đó tay trái, lắng nghe không có khoảng trống.
+3. Luyến hai nốt: Mi–Rê, Fa–Mi, Sol–Fa… mỗi cặp "xuống – lên".
 4. Chơi cùng một âm hình theo ba cách: legato, portato, staccato; so sánh khác biệt.
 5. Đọc một bài trong sách đang học và đánh dấu chỗ kết câu bằng bút chì.
 
@@ -906,7 +906,7 @@ Theo thông báo của ABRSM năm 2018 (được các trang luyện thi trích l
 Do đại dịch, ABRSM thử nghiệm thi **Cấp 5 trực tuyến** vào tháng 8/2020, rồi mở rộng cho Cấp 1–5 (MyMusicTheory). Các đặc điểm được nhiều nguồn mô tả:
 
 - Câu hỏi chủ yếu dạng **trắc nghiệm** và kéo–thả trên màn hình; không còn viết nhạc bằng tay.
-- Tổng điểm là **75** thay vì 100, điểm đỗ là **50** (khoảng 66%).
+- Tổng điểm là **75** thay vì 100, điểm đỗ là **50** (khoảng 67%).
 - Số lượng thuật ngữ nước ngoài phải học thuộc được **cắt giảm đáng kể**, và một số chủ đề được lược bớt ở mỗi cấp.
 
 ABRSM khẳng định đề thi vẫn kiểm tra cùng kiến thức với cùng chuẩn mực (theo Scorestore). Một số giáo viên phản biện rằng bài thi ngắn hơn và ngưỡng điểm giỏi thấp hơn khiến kỳ thi **dễ hơn** (David Barton). Đây là ý kiến cá nhân, chưa có số liệu độc lập.
@@ -1011,7 +1011,7 @@ Một danh sách ngắn thuật ngữ tiếng Ý về nhịp độ, cường đ�
 
 **Ví dụ 1 (nhóm nốt).** Trong 4/4, viết bốn móc đơn liên tiếp ở phách 1–2 thì nối chung một vạch (beam) được, nhưng không nối móc đơn vắt qua giữa ô (từ phách 2 sang 3) vì sẽ che mất điểm giữa ô. Ở 3/4, nối sáu móc đơn chung một vạch là chấp nhận được.
 
-**Ví dụ 2 (quãng theo số).** Trong Rê trưởng, nốt La trên chủ âm Rê là quãng 5 (đếm Rê–Mi–Fa thăng–Sol–La = 5 nốt). Ở Cấp 1–2 chỉ cần trả lời "5", chưa cần "đúng".
+**Ví dụ 2 (quãng theo số).** Trong Rê trưởng, nốt La trên chủ âm Rê là quãng 5 (đếm Rê–Mi–Fa thăng–Sol–La = 5 nốt). Ở Cấp 1–2 chỉ cần trả lời "5", chưa cần gọi tính chất ("quãng 5 đúng").
 
 **Ví dụ 3 (hoá biểu).** Hoá biểu một dấu giáng (Si giáng) là Fa trưởng hoặc Rê thứ. Phân biệt bằng cách xem nốt kết bài và có Đô thăng (bậc 7 nâng của Rê thứ) hay không.
 
@@ -1186,7 +1186,7 @@ Cấp 5 là cấp được thi nhiều nhất trong [[chuong-trinh-nhac-ly-abrsm
 
 ## Khoá Đô dòng 4
 
-Khoá Đô dòng 4 đặt Đô giữa (C4) trên **dòng thứ tư** tính từ dưới lên. Cello, bassoon (kèn fagot) và trombone dùng khoá này cho âm vực cao. Mẹo: một nốt ở khoá Đô dòng 4 đọc thấp hơn **một quãng 2** so với cùng vị trí đó ở khoá Đô dòng 3.
+Khoá Đô dòng 4 đặt Đô giữa (C4) trên **dòng thứ tư** tính từ dưới lên. Cello, bassoon (kèn fagot) và trombone dùng khoá này cho âm vực cao. Mẹo: một nốt ở khoá Đô dòng 4 đọc thấp hơn **một quãng 3** so với cùng vị trí đó ở khoá Đô dòng 3.
 
 ## Hợp âm và cấu kết
 
@@ -1263,7 +1263,7 @@ Xem thêm: [[chuong-trinh-nhac-ly-abrsm]], [[cau-ket]], [[hop-am-ba]], [[thi-cap
 ## Cao độ ghi và cao độ thực
 Với piano, nốt ghi trên khuông là nốt nghe thấy. Nhưng nhiều nhạc cụ hơi được ghi theo cách khác: người chơi đọc **cao độ ghi** (written pitch) và nhạc cụ phát ra **cao độ thực** (concert pitch, sounding pitch) khác đi một quãng cố định. Những nhạc cụ đó gọi là **nhạc cụ dịch giọng** (transposing instruments). Lý do chủ yếu là lịch sử: người chơi cả họ nhạc cụ (ví dụ các cỡ saxophone) dùng cùng một thế bấm cho cùng một nốt ghi, dù nhạc cụ có kích thước khác nhau.
 
-Tên nhạc cụ cho biết điều quan trọng nhất: **"nhạc cụ ở giọng X" nghĩa là khi đọc nốt Đô, nó phát ra nốt X.** Clarinet Si giáng đọc Đô → nghe Si giáng. Đây là phép [[dich-giong|dịch giọng]] được áp dụng thường trực.
+Tên nhạc cụ cho biết điều quan trọng nhất: **"nhạc cụ ở giọng X" nghĩa là khi chơi nốt ghi là Đô, nó phát ra nốt X.** Clarinet Si giáng đọc Đô → nghe Si giáng. Đây là phép [[dich-giong|dịch giọng]] được áp dụng thường trực.
 
 ## Các nhạc cụ dịch giọng thường gặp
 | Nhạc cụ | Ghi Đô thì nghe | Âm thanh so với nốt ghi |
@@ -1276,7 +1276,7 @@ Tên nhạc cụ cho biết điều quan trọng nhất: **"nhạc cụ ở gi�
 | Piccolo, celesta | Đô | cao hơn một quãng tám |
 | Contrabass, contrabassoon, guitar | Đô | thấp hơn một quãng tám |
 
-Các quãng của clarinet, horn Fa và saxophone alto được nhiều nguồn hướng dẫn xác nhận (Stonekick, Soundslice). Theo ConductIt, trong dàn kèn hơi các giọng chính là Si giáng, Mi giáng và Fa, còn trong tổng phổ dàn nhạc thường gặp nhất là Si giáng, Fa và La. Nhạc cụ dịch quãng tám (octave transposers) chỉ để tránh quá nhiều dòng kẻ phụ; tên nốt không đổi nên chúng thường không được gọi là "đổi giọng".
+Các quãng của clarinet, horn Fa và saxophone alto được nhiều nguồn hướng dẫn xác nhận (Stonekick, Soundslice). Theo ConductIt, trong dàn kèn hơi các giọng chính là Si giáng, Mi giáng và Fa, còn trong tổng phổ dàn nhạc thường gặp nhất là Si giáng, Fa và La. Nhạc cụ dịch quãng tám (octave transposers) chỉ để tránh quá nhiều dòng kẻ phụ; tên nốt không đổi nên chúng thường không được coi là "dịch giọng" theo nghĩa hẹp.
 
 ::staff treble k:2# D4 E4 F#4 G4 A4 | Bè clarinet Si giáng ghi ở Rê trưởng (2 dấu thăng)...
 
@@ -1304,7 +1304,7 @@ Ngoài [[khoa-sol|khoá Sol]] và [[khoa-fa|khoá Fa]], tổng phổ dùng [[kho
 ::staff alto C4 D4 E4 F4 G4 | Khoá alto - dòng giữa là Đô giữa (C4), khoá thường trực của viola
 
 ## Mẹo cho người chơi piano
-- **Bản thu gọn (piano reduction):** bản đệm concerto hoặc opera đã quy mọi bè về cao độ thực; khi đối chiếu với tổng phổ, nhớ rằng chữ "Cl." trong tổng phổ không phải nốt bạn nghe.
+- **Bản thu gọn (piano reduction):** bản đệm concerto hoặc opera đã quy mọi bè về cao độ thực; khi đối chiếu với tổng phổ, nhớ rằng nốt ghi ở bè "Cl." (clarinet) trong tổng phổ không phải nốt bạn nghe.
 - Khi đệm cho học sinh chơi clarinet hay saxophone, hãy hỏi "nốt Đô của em là nốt gì trên piano?" thay vì so tên nốt.
 - Đọc tổng phổ theo lớp: trước hết bè trầm (cello, contrabass) và giai điệu, sau đó thêm hoà âm của bộ đồng và bộ gỗ.
 

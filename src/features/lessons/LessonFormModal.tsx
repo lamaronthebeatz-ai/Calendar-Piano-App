@@ -167,7 +167,7 @@ export function LessonFormModal() {
                 Huỷ
               </Button>
               <Button variant="primary" onClick={handleSubmit} disabled={saving}>
-                {isEditing ? 'Lưu thay đổi' : 'Thêm vào thời khóa biểu'}
+                {isEditing ? 'Lưu thay đổi' : 'Thêm vào thời khoá biểu'}
               </Button>
             </div>
           </div>

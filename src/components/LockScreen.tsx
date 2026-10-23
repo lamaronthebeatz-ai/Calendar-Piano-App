@@ -113,7 +113,7 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
 
         <div className="mt-10 flex flex-col items-center" style={{ animationDelay: '80ms' }}>
           <p aria-live="polite" className={clsx('h-5 text-[13.5px] font-medium transition-colors', phase === 'wrong' ? 'text-[var(--color-status-cancelled)]' : 'text-[var(--color-ink-muted)]')}>
-            {phase === 'wrong' ? 'Sai mật mã, thử lại' : phase === 'input' ? 'Nhập mật mã để vào' : 'Chào mừng trở lại'}
+            {phase === 'wrong' ? 'Sai mã, thử lại' : phase === 'input' ? 'Nhập mã để vào' : 'Chào mừng trở lại'}
           </p>
           <div className={clsx('mt-4 flex gap-4', phase === 'wrong' && 'lock-shake')} aria-label={`${code.length} trên ${LENGTH} số`}>
             {Array.from({ length: LENGTH }, (_, i) => (

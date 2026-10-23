@@ -66,7 +66,7 @@ export function SettingsPage() {
           </Field>
         </Section>
 
-        <Section title="Mặc định lịch dạy">
+        <Section title="Lịch dạy">
           <div className="grid grid-cols-2 gap-4">
             <Field label="Thời lượng mặc định" hint="phút">
               <SelectInput
@@ -102,7 +102,7 @@ export function SettingsPage() {
           </Field>
         </Section>
 
-        <Section title="Đơn vị tiền tệ">
+        <Section title="Tiền tệ">
           <Field label="Đơn vị tiền tệ">
             <SelectInput value={settings.currency} onChange={(e) => updateSettings({ currency: e.target.value })}>
               {CURRENCIES.map((c) => (
@@ -140,16 +140,16 @@ export function SettingsPage() {
           </div>
         </Section>
 
-        <Section title="Dữ liệu & Sao lưu">
+        <Section title="Dữ liệu & sao lưu">
           <p className="text-[13px] text-[var(--color-ink-muted)]">
-            Lịch dạy của bạn được lưu ngay trên trình duyệt này. Hãy xuất bản sao lưu thường xuyên để dữ liệu không bị kẹt trên một thiết bị.
+            Lịch dạy của bạn được lưu ngay trên trình duyệt này. Hãy thường xuyên xuất dữ liệu ra tệp sao lưu để dữ liệu không bị kẹt trên một thiết bị.
           </p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button variant="secondary" icon={<DownloadIcon width={15} height={15} />} onClick={handleExport} fullWidth>
-              Xuất bản sao lưu
+              Xuất dữ liệu
             </Button>
             <Button variant="secondary" icon={<UploadIcon width={15} height={15} />} onClick={() => fileInputRef.current?.click()} fullWidth>
-              Nhập bản sao lưu
+              Nhập dữ liệu
             </Button>
             <input ref={fileInputRef} type="file" accept="application/json" hidden onChange={handleFileChosen} />
           </div>
@@ -159,7 +159,7 @@ export function SettingsPage() {
       <Dialog
         open={importMode !== null}
         onClose={closeImport}
-        title="Nhập bản sao lưu"
+        title="Nhập dữ liệu"
         width="sm"
         footer={
           <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">

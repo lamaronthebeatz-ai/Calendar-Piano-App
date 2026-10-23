@@ -322,7 +322,7 @@ export function CircleOfFifths() {
     return { x: 150 + r * Math.cos(a), y: 150 + r * Math.sin(a) }
   }
   return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-xs" role="img" aria-label="Vòng quãng năm">
+    <svg viewBox="0 0 300 300" className="w-full max-w-xs" role="img" aria-label="Vòng quãng 5">
       {[140, 105, 70].map((r) => (
         <circle key={r} cx={150} cy={150} r={r} fill="none" stroke="var(--color-border-strong)" />
       ))}

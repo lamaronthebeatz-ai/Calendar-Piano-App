@@ -94,7 +94,7 @@ Thêm về nhạc cụ Việt Nam: [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nh
       ["The Strad — Stradivari's varnish: a chemical analysis", "https://thestrad.com/lutherie/stradivaris-varnish-a-chemical-analysis/13697.article"],
     ],
     body: `
-**Violin** (vĩ cầm) là nhạc cụ **dây kéo** cao nhất của họ vĩ cầm (violin, [[viola]], [[cello]], và [[double-bass|contrabass]] là họ hàng lai). Theo hệ thống [[nhac-khi-hoc|Hornbostel – Sachs]], nó mang số **321.322-71**: đàn dây phức hợp (cần gắn vào hộp cộng hưởng), làm kêu bằng vĩ.
+**Violin** (vĩ cầm) là nhạc cụ **dây kéo** cao nhất của họ vĩ cầm (gồm violin, [[viola]], [[cello]]; [[double-bass|contrabass]] là họ hàng lai). Theo hệ thống [[nhac-khi-hoc|Hornbostel – Sachs]], nó mang số **321.322-71**: đàn dây phức hợp (cần gắn vào hộp cộng hưởng), làm kêu bằng vĩ.
 
 ::wiki Violin | Violin và vĩ
 
@@ -112,10 +112,10 @@ Thêm về nhạc cụ Việt Nam: [[trong-viet-nam]], [[dan-doan-dan-tu]], [[nh
 ## Lịch sử
 - Những hình vẽ sớm nhất của violin (khoảng 1530) cho thấy đàn **ba dây**.
 - Năm 1560, vua Charles IX nước Pháp đặt **Andrea Amati** (Cremona) làm 24 cây violin. Cây "Charles IX" ở Bảo tàng Ashmolean (Oxford) thường được coi là violin cổ nhất còn lại; nhãn đàn ghi 1564 nhưng niên đại này bị nghi ngờ.
-- **Antonio Stradivari** (khoảng 1644 – 1737) làm ước tính khoảng 1.100 nhạc cụ; khoảng **650** còn lại đến nay, trong đó khoảng 450 – 500 violin (các ước tính khác nhau).
+- **Antonio Stradivari** (khoảng 1644 – 1737) được ước tính đã làm khoảng 1.100 nhạc cụ; khoảng **650** còn lại đến nay, trong đó khoảng 450 – 500 violin (các ước tính khác nhau).
 
 ## Nghiên cứu: đàn Stradivari được khoa học xem xét
-- **Niên đại bằng vòng gỗ.** Cây violin "[[oratorio-cantata-passion|Messiah]]" (ghi năm 1716, Ashmolean) từng bị nghi là đồ giả. Phân tích vòng gỗ mặt đàn (2000; Đại học Arizona, 2004) cho thấy vòng gỗ trẻ nhất thuộc khoảng năm 1680, **phù hợp** với niên đại 1716 và khớp với gỗ của các cây Stradivari chắc chắn. Vẫn còn ý kiến phản đối.
+- **Niên đại bằng vòng gỗ.** Cây violin "Messiah" (ghi năm 1716, Ashmolean) từng bị nghi là đồ giả. Phân tích vòng gỗ mặt đàn (2000; Đại học Arizona, 2004) cho thấy vòng gỗ trẻ nhất thuộc khoảng năm 1680, **phù hợp** với niên đại 1716 và khớp với gỗ của các cây Stradivari chắc chắn. Vẫn còn ý kiến phản đối.
 - **Lớp sơn bóng.** Nhóm của Bảo tàng Âm nhạc Paris và trung tâm synchrotron SOLEIL (công bố trên *Angewandte Chemie*, 2010) tìm thấy hai lớp gốc dầu làm từ vật liệu **thông thường** thời đó — không có "công thức bí mật".
 - Xem [[phuong-phap-su-hoc-am-nhac]] (xác định niên đại bằng vật liệu) và [[am-hoc-nhac-cu]] (dây rung).
 
@@ -346,7 +346,7 @@ Liên quan: [[an-tuong]] (âm thanh đàn hạc trong hoà âm ấn tượng), [
 | Lên dây [[thoi-ky-baroque|Baroque]] | "Rê thứ": A2 – D3 – F3 – A3 – D4 – F4, cộng thêm các cặp dây trầm |
 | Ký âm | **Tablature** — ghi thế bấm thay vì [[cao-do|cao độ]] ([[lich-su-ky-am]]) |
 
-::staff bass G2=G C3=C F3=F A3=A D4=D G4=G | Lên dây lute Phục hưng sáu cặp: quãng 4 – 4 – 3 trưởng – 4 – 4 (giống guitar cổ điển lệch đi một quãng 3)
+::staff bass G2=G C3=C F3=F A3=A D4=D G4=G | Lên dây lute Phục hưng sáu cặp: quãng 4 – 4 – 3 trưởng – 4 – 4 (giống guitar cổ điển nâng lên một quãng 3 thứ)
 
 ## Lịch sử
 - Lute và [[dan-oud|đàn oud]] có **chung tổ tiên** (Wikipedia, mục Oud).
@@ -717,7 +717,7 @@ Liên quan: [[dan-nhac-giao-huong]], [[am-hoc-nhac-cu]], [[phong-cach-jazz]].
 Trước khi có van, horn chỉ chơi các nốt của [[chuoi-boi-am|chuỗi bồi âm]]. Giữa thế kỷ 18, A. J. Hampel (Dresden) phát triển kỹ thuật **chặn bằng bàn tay**: đặt tay sâu hơn vào loa kèn để hạ nốt, bịt kín để nâng khoảng [[cung-nua-cung|nửa cung]]. Học trò của ông, **Giovanni Punto**, là người chơi nổi tiếng đầu tiên của kỹ thuật này — [[ludwig-van-beethoven|Beethoven]] viết [[hinh-thuc-sonata|sonata]] cho horn và piano Op. 17 cho Punto.
 
 ## Phát minh van
-**Heinrich Stölzel** và **Friedrich Blühmel** tạo ra van khoảng năm **1814**; năm 1815 tạp chí *Allgemeine musikalische Zeitung* ([[doi-song-am-nhac-va-thiet-che]]) loan tin chỉ nêu tên Stölzel; hai người nhận bằng sáng chế Phổ năm 1818 (chi tiết này bị đánh dấu "chưa kiểm chứng" trên Wikipedia). Năm 1819, C. F. Sattler ở Leipzig làm hệ ba van. Van mở đường cho [[trumpet]], [[tuba]] hiện đại.
+**Heinrich Stölzel** và **Friedrich Blühmel** tạo ra van khoảng năm **1814**. Năm 1815, tạp chí *Allgemeine musikalische Zeitung* ([[doi-song-am-nhac-va-thiet-che]]) loan tin nhưng chỉ nêu tên Stölzel. Hai người nhận bằng sáng chế Phổ năm 1818 (chi tiết này bị đánh dấu "chưa kiểm chứng" trên Wikipedia). Năm 1819, C. F. Sattler ở Leipzig làm hệ ba van. Van mở đường cho [[trumpet]], [[tuba]] hiện đại.
 
 Liên quan: [[dan-nhac-giao-huong]].
 `,
@@ -827,10 +827,10 @@ Liên quan: [[bo-go-dan-nhac]], [[dan-nhac-giao-huong]].
   },
   {
     slug: "bo-go-dan-nhac",
-    title: "Bộ gõ dàn nhạc: trống, chũm chọe, triangle, tam-tam",
+    title: "Bộ gõ dàn nhạc: trống, chũm choẹ, triangle, tam-tam",
     category: 'organology',
-    aliases: ["bộ gõ", "percussion", "bộ gõ dàn nhạc", "trống snare", "snare drum", "trống lớn", "bass drum", "chũm chọe", "cymbal", "triangle", "kẻng tam giác", "tam-tam", "Zildjian"],
-    summary: "Ngoài timpani, bộ gõ dàn nhạc gồm các nhạc cụ không định âm: trống snare (có dây rè ở mặt dưới), trống lớn, chũm chọe, triangle và tam-tam (cồng mặt phẳng, vào dàn nhạc năm 1790 với Gossec). Theo Hornbostel – Sachs, trống là nhạc cụ màng rung, còn chũm chọe, triangle, tam-tam là nhạc cụ tự thân vang.",
+    aliases: ["bộ gõ", "percussion", "bộ gõ dàn nhạc", "trống snare", "snare drum", "trống lớn", "bass drum", "chũm choẹ", "cymbal", "triangle", "kẻng tam giác", "tam-tam", "Zildjian"],
+    summary: "Ngoài timpani, bộ gõ dàn nhạc gồm các nhạc cụ không định âm: trống snare (có dây rè ở mặt dưới), trống lớn, chũm choẹ, triangle và tam-tam (cồng mặt phẳng, vào dàn nhạc năm 1790 với Gossec). Theo Hornbostel – Sachs, trống là nhạc cụ màng rung, còn chũm choẹ, triangle, tam-tam là nhạc cụ tự thân vang.",
     wiki: "Snare_drum",
     refs: [
       ["Wikipedia — Snare drum", "https://en.wikipedia.org/wiki/Snare_drum"],
@@ -852,14 +852,14 @@ Liên quan: [[bo-go-dan-nhac]], [[dan-nhac-giao-huong]].
 |---|---|---|
 | **Trống snare** | 211.212.11 | Trống trụ hai mặt; mặt trên được gõ, các **dây rè** (kim loại hoặc ruột) chạm mặt dưới tạo tiếng "rè" khô |
 | **Trống lớn** (bass drum) | 211.212.1 | Trống trụ hai mặt cỡ lớn, tiếng trầm không định âm |
-| **Chũm chọe** | 111.142 | Đĩa kim loại gõ vào nhau |
+| **Chũm choẹ** | 111.142 | Đĩa kim loại gõ vào nhau |
 | **Triangle** | 111.211 | Thanh kim loại uốn tam giác, hở một góc, gõ bằng que kim loại; nhiều [[chuoi-boi-am|bồi âm]], không định âm |
 | **Tam-tam** | 111.241 (cồng) | Cồng **mặt phẳng**; trong dàn nhạc phương Tây, "gong" thường chỉ loại có núm |
 
 ## Vài mốc
 - Trống snare: tổ tiên có lẽ là trống **tabor** thời [[thoi-ky-trung-co|Trung cổ]]; đến cuối thế kỷ 16 trống đã được đánh bằng hai dùi và có dây rè ở mặt dưới (Grinnell College).
 - **Tam-tam** được **[[francois-joseph-gossec|François-Joseph Gossec]]** đưa vào dàn nhạc năm **1790**.
-- Hãng chũm chọe **Zildjian** theo truyền thống của công ty được lập ở Constantinople năm 1623 (đây là **truyền thống công ty**, không phải tài liệu lưu trữ), chuyển sang Mỹ năm 1929.
+- Hãng chũm choẹ **Zildjian** theo truyền thống của công ty được lập ở Constantinople năm 1623 (đây là **truyền thống công ty**, không phải tài liệu lưu trữ), chuyển sang Mỹ năm 1929.
 - [[hinh-thuc-concerto|Concerto]] piano số 1 của **[[franz-liszt|Liszt]]** có một đoạn **triangle** độc tấu nổi bật ở chương 3, đến mức được gọi đùa là "concerto triangle".
 
 ## Gốc châu Á của cồng
@@ -948,7 +948,7 @@ Celesta dùng kỹ thuật bàn phím nhưng **tiếng tắt nhanh** và **nhẹ
     title: "Bộ trống (drum kit)",
     category: 'organology',
     aliases: ["bộ trống", "drum kit", "trống jazz", "drum set", "trap kit", "hi-hat", "trống dàn"],
-    summary: "Bộ trống là tập hợp trống và chũm chọe do một người chơi bằng hai tay và hai chân: trống bass có pedal, trống snare, các trống tom, hi-hat, chũm chọe ride và crash. Nó hình thành ở Mỹ đầu thế kỷ 20 — từ \"trap kit\" lấy từ chữ \"contraption\" (đồ lắp ghép).",
+    summary: "Bộ trống là tập hợp trống và chũm choẹ do một người chơi bằng hai tay và hai chân: trống bass có pedal, trống snare, các trống tom, hi-hat, chũm choẹ ride và crash. Nó hình thành ở Mỹ đầu thế kỷ 20 — từ \"trap kit\" lấy từ chữ \"contraption\" (đồ lắp ghép).",
     wiki: "Drum_kit",
     refs: [
       ["Wikipedia — Drum kit", "https://en.wikipedia.org/wiki/Drum_kit"],
@@ -957,7 +957,7 @@ Celesta dùng kỹ thuật bàn phím nhưng **tiếng tắt nhanh** và **nhẹ
       ["Wikipedia — Gene Krupa", "https://en.wikipedia.org/wiki/Gene_Krupa"],
     ],
     body: `
-**Bộ trống** không có một số Hornbostel – Sachs duy nhất: các trống là **màng rung** (nhóm 2), [[bo-go-dan-nhac|chũm chọe]] và các vật gõ khác là **tự thân vang** (nhóm 1), bộ trống điện tử thuộc **nhạc cụ điện** (nhóm 53).
+**Bộ trống** không có một số Hornbostel – Sachs duy nhất: các trống là **màng rung** (nhóm 2), [[bo-go-dan-nhac|chũm choẹ]] và các vật gõ khác là **tự thân vang** (nhóm 1), bộ trống điện tử thuộc **nhạc cụ điện** (nhóm 53).
 
 ::wiki Drum_kit | Bộ trống
 
@@ -967,12 +967,12 @@ Celesta dùng kỹ thuật bàn phím nhưng **tiếng tắt nhanh** và **nhẹ
 | Trống bass (đạp bằng pedal) | Nhấn các [[so-chi-nhip|phách mạnh]] |
 | Trống snare | Phách 2 và 4 trong [[nhac-pho-thong-the-ky-20|rock]], pop ([[dao-phach]]) |
 | Trống tom | Câu chuyển, fill |
-| Hi-hat (hai chũm chọe đóng mở bằng chân) | Giữ nhịp chia nhỏ |
-| Chũm chọe ride, crash | Giữ nhịp (ride), nhấn mạnh (crash) |
+| Hi-hat (hai chũm choẹ đóng mở bằng chân) | Giữ nhịp chia nhỏ |
+| Chũm choẹ ride, crash | Giữ nhịp (ride), nhấn mạnh (crash) |
 
 ## Lịch sử
 - Bộ trống thời đầu gọi là **"trap kit"**, từ chữ *contraption* (đồ lắp ghép).
-- William F. Ludwig làm ra pedal trống bass thực dụng năm 1909 (thường được nhắc; một tay trống New Orleans cũng được ghi công cho một pedal thô sơ sớm hơn). Pedal chũm chọe thấp phát triển thành **hi-hat** khoảng năm 1926.
+- William F. Ludwig làm ra pedal trống bass thực dụng năm 1909 (thường được nhắc; một tay trống New Orleans cũng được ghi công cho một pedal thô sơ sớm hơn). Pedal chũm choẹ thấp phát triển thành **hi-hat** khoảng năm 1926.
 - Đoạn solo trống tom của **Gene Krupa** trong "Sing, Sing, Sing" (1937) được coi là solo trống dài đầu tiên được thu âm thương mại.
 
 ## Với người chơi piano
@@ -1019,7 +1019,7 @@ Học chơi organ: [[ky-thuat-organ-lo-trinh]]; bàn điều khiển và ký hi�
 - **Wanamaker Organ** (Philadelphia): khoảng 28.750 – 28.762 ống (các nguồn khác nhau), là cây đàn lớn nhất **còn hoạt động đầy đủ**.
 
 ## Organ và piano
-Organ và [[dan-phim-co|harpsichord]] là hai nhạc cụ phím chính trước piano. Nhiều tác phẩm [[thoi-ky-baroque|Baroque]] cho "phím" ([[toccata-prelude-fugue]], [[chorale-va-chorale-prelude]]) được viết cho organ. Khác biệt lớn nhất: phím organ **không có [[cuong-do|cường độ]]** — đổi âm lượng bằng stop, không bằng lực ngón ([[ky-thuat-cham-phim]]).
+Organ và [[dan-phim-co|harpsichord]] là hai nhạc cụ phím chính trước piano. Nhiều tác phẩm [[thoi-ky-baroque|Baroque]] cho "phím" ([[toccata-prelude-fugue]], [[chorale-va-chorale-prelude]]) được viết cho organ. Khác biệt lớn nhất: lực bấm phím organ **không đổi được [[cuong-do|cường độ]]** — âm lượng đổi bằng stop, không bằng lực ngón ([[ky-thuat-cham-phim]]).
 
 **Organ trong phụng vụ:** [[dem-organ-cho-binh-ca]], [[alternatim-va-thanh-le-organ]], [[dem-hat-cong-doan-tren-organ]]; organ Nhà thờ Lớn Hà Nội: [[binh-ca-va-organ-o-viet-nam]].
 `,
@@ -1119,6 +1119,7 @@ Khi chơi trong ban nhạc, tay trái piano phải **nhường âm vực trầm*
 | **Bộ dao động** (VCO) | Tạo dạng sóng giàu bồi âm (răng cưa, vuông…) | [[chuoi-boi-am]] |
 | **Bộ lọc** (VCF) | Cắt bớt bồi âm để đổi [[am-sac|âm sắc]] | [[am-sac]] |
 | **Bộ khuếch đại + đường bao** (VCA, ADSR) | Điều khiển âm lượng theo thời gian: bắt đầu, suy giảm, duy trì, tắt | Tiếng piano là một "đường bao" tắt dần — [[am-hoc-nhac-cu]] |
+
 **Điều khiển bằng điện áp** cho phép [[ban-phim|bàn phím]] gửi một điện áp quyết định [[cao-do|cao độ]].
 
 ## Các mốc
@@ -1704,6 +1705,7 @@ Hai nhạc cụ làm bằng **ống tre** của các dân tộc Tây Nguyên, na
 | Cấu tạo | Khoảng **16 ống tre** nhiều cỡ, buộc bằng hai sợi dây, treo nghiêng |
 | Cách chơi | Gõ bằng dùi; một người có thể giữ hình nền lặp lại trong khi người khác chơi [[giai-dieu|giai điệu]] |
 | Tên gọi | Người Jrai gọi *t'rưng*; người Bahnar gọi *klongkloi*. Loại T'rưng Bahnar chỉ do nam giới chơi (Viện Âm nhạc) |
+
 Theo Japan Foundation, T'rưng đã được cải tiến và nay được chơi khắp cả nước.
 
 ## K'lông pút
@@ -1796,8 +1798,8 @@ Liên quan: [[nhac-cu-viet-nam]], [[nhac-khi-the-gioi]].
     slug: "guqin",
     title: "Cổ cầm (guqin)",
     category: 'organology',
-    aliases: ["guqin", "cổ cầm", "đàn cầm", "thất huyền cầm", "qin", "Guan Pinghu", "Lưu thủy"],
-    summary: "Cổ cầm là đàn tranh bảy dây không có con nhạn, mặt đàn có 13 điểm \"huy\" đánh dấu vị trí bồi âm; ba kỹ thuật cơ bản là gảy dây buông, bấm dây và bồi âm. Nhạc cụ của giới văn nhân, được UNESCO tuyên bố là Kiệt tác năm 2003; bản \"Lưu thủy\" do Quản Bình Hồ chơi được gửi vào vũ trụ trên đĩa Voyager năm 1977.",
+    aliases: ["guqin", "cổ cầm", "đàn cầm", "thất huyền cầm", "qin", "Guan Pinghu", "Lưu thuỷ"],
+    summary: "Cổ cầm là đàn tranh bảy dây không có con nhạn, mặt đàn có 13 điểm \"huy\" đánh dấu vị trí bồi âm; ba kỹ thuật cơ bản là gảy dây buông, bấm dây và bồi âm. Nhạc cụ của giới văn nhân, được UNESCO tuyên bố là Kiệt tác năm 2003; bản \"Lưu thuỷ\" do Quản Bình Hồ chơi được gửi vào vũ trụ trên đĩa Voyager năm 1977.",
     wiki: "Guqin",
     refs: [
       ["Wikipedia — Guqin", "https://en.wikipedia.org/wiki/Guqin"],
@@ -1830,7 +1832,7 @@ Các huy nằm ở những điểm chia dây theo tỉ lệ đơn giản (1/2, 1
 - UNESCO tuyên bố là Kiệt tác ngày 7/11/2003, đưa vào [[di-san-phi-vat-the-va-am-nhac|Danh sách đại diện]] năm 2008.
 
 ## Đả phổ: dựng lại nhạc từ bản ghi cổ
-Bản ghi cổ cầm (*giảm tự phổ*) ghi **thế bấm và vị trí ngón**, gần như không ghi **[[tiet-tau|tiết tấu]]** — giống [[lich-su-ky-am|tablature]] châu Âu. Nghệ sĩ **Quản Bình Hồ** (Guan Pinghu, 1897 – 1967) đã "đả phổ" — dựng lại — nhiều bài như *Quảng Lăng tán*. Bản *Lưu thủy* do ông chơi được gắn lên **Đĩa Vàng Voyager** năm 1977. Đả phổ là một bài toán của [[van-ban-hoc-am-nhac|văn bản học]] và [[phong-trao-bieu-dien-lich-su|biểu diễn theo lịch sử]].
+Bản ghi cổ cầm (*giảm tự phổ*) ghi **thế bấm và vị trí ngón**, gần như không ghi **[[tiet-tau|tiết tấu]]** — giống [[lich-su-ky-am|tablature]] châu Âu. Nghệ sĩ **Quản Bình Hồ** (Guan Pinghu, 1897 – 1967) đã "đả phổ" — dựng lại — nhiều bài như *Quảng Lăng tán*. Bản *Lưu thuỷ* do ông chơi được gắn lên **Đĩa Vàng Voyager** năm 1977. Đả phổ là một bài toán của [[van-ban-hoc-am-nhac|văn bản học]] và [[phong-trao-bieu-dien-lich-su|biểu diễn theo lịch sử]].
 
 Liên quan: [[nhac-cu-dong-a]], [[guzheng]].
 `,
@@ -1874,7 +1876,7 @@ Liên quan: [[nhac-cu-dong-a]], [[guzheng]].
 | Yatga | Mông Cổ |
 | [[dan-tranh|Đàn tranh]] | Việt Nam (Hornbostel – Sachs 312.22-6, gảy bằng ba móng) |
 
-Bản nhạc tiêu biểu: *Ngư chu xướng vãn* (Thuyền chài hát chiều), *Cao sơn lưu thủy* (các bản cho tranh).
+Bản nhạc tiêu biểu: *Ngư chu xướng vãn* (Thuyền chài hát chiều), *Cao sơn lưu thuỷ* (các bản cho tranh).
 
 Liên quan: [[guqin]], [[nhac-cu-dong-a]].
 `,
@@ -1976,7 +1978,7 @@ Họ hàng: [[dan-nhi]] của Việt Nam. Xem [[nhac-cu-dong-a]].
 ::wiki Dizi_(instrument) | Dizi
 
 ## Lỗ màng
-Lỗ màng được dán **địch mô** — lớp lụa mỏng lấy từ mặt trong của ống tre hoặc sậy, dán bằng keo da hoặc nước tỏi. Khi thổi, màng rung theo, thêm một tiếng **rè sáng** đặc trưng — một cách "trang trí" [[am-sac|âm sắc]] mà [[am-hoc-nhac-cu]] gọi là thêm [[chuoi-boi-am|bồi âm]]. Các nguồn **không thống nhất** về thời điểm màng xuất hiện (thời Đường hay thế kỷ 12).
+Lỗ màng được dán **địch mô** — lớp lụa mỏng lấy từ mặt trong của ống tre hoặc sậy, dán bằng keo da hoặc nước tỏi. Khi thổi, màng rung theo, thêm một tiếng **rè sáng** đặc trưng — một cách "trang trí" [[am-sac|âm sắc]]; xét theo [[am-hoc-nhac-cu|âm học]], đó là thêm [[chuoi-boi-am|bồi âm]]. Các nguồn **không thống nhất** về thời điểm màng xuất hiện (thời Đường hay thế kỷ 12).
 
 ## Hai loại chính
 | Loại | Đặc điểm | Bối cảnh |
@@ -2109,7 +2111,7 @@ Liên quan: [[nhac-khi-the-gioi]].
 | *Jawari* | Ngựa đàn được mài cong, tạo tiếng rè giàu bồi âm |
 
 ## Dây cộng hưởng và jawari
-Các **dây cộng hưởng** không bị gảy: chúng tự rung khi một nốt cùng [[cao-do|cao độ]] được chơi — giống cách [[ban-dap|pedal vang]] của piano để mọi dây tự do rung theo. **Jawari** khiến dây chạm nhẹ vào mặt ngựa cong mỗi chu kỳ, làm giàu [[chuoi-boi-am|bồi âm]] và tạo [[am-sac|âm sắc]] "rè" đặc trưng của nhạc cụ Ấn Độ (xem thêm [[tanpura]]). Wikipedia ghi Imdad Khan là người đầu tiên thêm dây cộng hưởng; dạng 7 dây hiện đại được gắn với Allauddin Khan.
+Các **dây cộng hưởng** không bị gảy: chúng tự rung khi một nốt cùng [[cao-do|cao độ]] được chơi — giống như khi giữ [[ban-dap|pedal vang]] của piano, mọi dây được thả tự do và rung theo. **Jawari** khiến dây chạm nhẹ vào mặt ngựa cong mỗi chu kỳ, làm giàu [[chuoi-boi-am|bồi âm]] và tạo [[am-sac|âm sắc]] "rè" đặc trưng của nhạc cụ Ấn Độ (xem thêm [[tanpura]]). Wikipedia ghi Imdad Khan là người đầu tiên thêm dây cộng hưởng; dạng 7 dây hiện đại được gắn với Allauddin Khan.
 
 ## Nguồn gốc (còn tranh luận)
 Đa số sử gia cho rằng sitar được **Khusrau Khan** phát triển ở thế kỷ 18 (thời Mughal) từ đàn [[tar-setar|setar]] Ba Tư; một số ít cho rằng nó bắt nguồn từ [[veena]]. Việc gán sitar cho nhà thơ **Amir Khusrau** (thế kỷ 13 – 14) là sự **nhầm lẫn giữa hai người** — chỉ nên coi là truyền thuyết.
@@ -2253,7 +2255,7 @@ Hai trống quan trọng nhất của nhạc cổ điển Ấn Độ.
 ## Tabla (Hindustani)
 | Mục | Nội dung |
 |---|---|
-| Họ | Màng rung — [[trong-jazz|bộ trống]] thân bát, Hornbostel – Sachs **211.12** |
+| Họ | Màng rung — [[trong-jazz|trống]] thân bát, Hornbostel – Sachs **211.12** |
 | Cấu tạo | **Cặp** trống một mặt khác cỡ: *dayan* (nhỏ, cao, tay phải) và *bayan* (lớn, trầm, tay trái) |
 | Syahi | Đốm đen trên mặt trống — ở giữa với dayan, lệch tâm với bayan |
 | Thời gian ra đời | Thế kỷ 18 ở Ấn Độ (Wikipedia); tên có lẽ từ chữ Ả Rập *tabl* (trống) |
@@ -2666,7 +2668,7 @@ Rút gọn dàn nhạc cho piano (*piano reduction*) là việc hằng ngày c�
       ["Wikipedia — Agung", "https://en.wikipedia.org/wiki/Agung"],
     ],
     body: `
-**Gamelan** là dàn nhạc truyền thống của Indonesia (Java, Bali, Sunda…). Theo hồ sơ UNESCO (ghi danh năm **2021**), đó là dàn nhạc gõ thường gồm đàn phiến, cồng, bộ cồng nhỏ, trống, [[bo-go-dan-nhac|chũm chọe]], đàn dây và sáo tre.
+**Gamelan** là dàn nhạc truyền thống của Indonesia (Java, Bali, Sunda…). Theo hồ sơ UNESCO (ghi danh năm **2021**), đó là dàn nhạc gõ thường gồm đàn phiến, cồng, bộ cồng nhỏ, trống, [[bo-go-dan-nhac|chũm choẹ]], đàn dây và sáo tre.
 
 ::wiki Gamelan | Dàn gamelan Java
 
@@ -3020,7 +3022,7 @@ Liên quan: [[nhac-cu-viet-nam]], [[pipa]], [[dan-ty-ba-tam-sen]].
 | **Đing Năm** | Ê Đê | Nhạc cụ hơi: các ống tre có lưỡi gà gắn vào quả bầu khô — họ hàng của [[khen]] |
 | **Đing bụh** | Brâu | Nhạc cụ của phụ nữ: 1 – 2 ống tre dài khoảng 1,3 m, vỗ tay trước miệng ống — cùng nguyên lý với [[trung-klong-put|K'lông pút]] |
 | **Tù và** (sừng trâu) | Nhiều dân tộc | Sừng trâu dài 30 – 50 cm, khoét một khe dài ở giữa để thổi; dùng làm hiệu lệnh; trong lễ hội mỗi làng cử một già làng thổi. Người Xtiêng coi kèn sừng trâu cùng cồng chiêng là vật gia truyền thiêng |
-Lưu ý: chữ "goong" cũng là tên một loại cồng của người Sêđăng, M'nâm, Stiêng — đừng nhầm. Xem [[cong-chieng]].
+Lưu ý: chữ "goong" cũng là tên một loại cồng của người Xơ Đăng, M'nâm, Xtiêng — đừng nhầm. Xem [[cong-chieng]].
 
 ## Miền núi phía Bắc
 | Nhạc cụ | Mô tả |

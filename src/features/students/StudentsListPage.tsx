@@ -83,7 +83,7 @@ export function StudentsListPage() {
           <EmptyState
             icon={<UsersIcon width={30} height={30} />}
             title={students.length === 0 ? 'Chưa có học viên nào' : 'Không tìm thấy học viên'}
-            description={students.length === 0 ? 'Thêm học viên đầu tiên để bắt đầu xây dựng thời khóa biểu.' : 'Thử tìm kiếm hoặc bộ lọc khác.'}
+            description={students.length === 0 ? 'Thêm học viên đầu tiên để bắt đầu xây dựng thời khoá biểu.' : 'Thử tìm kiếm hoặc bộ lọc khác.'}
             action={
               students.length === 0 ? (
                 <Button variant="primary" onClick={openCreateStudent}>

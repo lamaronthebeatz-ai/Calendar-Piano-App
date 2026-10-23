@@ -69,12 +69,12 @@ Mỗi khi nói với học trò "chơi đoạn này buồn hơn", "tôn trọng 
       ['Wikipedia — Musical system of ancient Greece', 'https://en.wikipedia.org/wiki/Musical_system_of_ancient_Greece'],
     ],
     body: `
-::wiki Plato | Platon (ảnh đầu bài Wikipedia *Plato*)
+::wiki Plato | Plato (ảnh đầu bài Wikipedia *Plato*)
 ## Âm nhạc rèn tính cách
 Trong *Cộng hoà* và *Luật pháp*, **Plato** để Socrates trình bày âm nhạc như một **sức mạnh hình thành tính cách**: âm nhạc thấm dần vào tâm hồn, rồi lan sang cách cư xử, luật pháp và cả thể chế. Ông nhắc lời **Damon** (thế kỷ 5 TCN): phong cách âm nhạc **không thể thay đổi mà không làm thay đổi những luật lệ nền tảng của thành bang**.
 
 ## Các "điệu" và tính cách
-- Trong *Cộng hoà* (khoảng 398–399), Socrates gắn các **harmoniai** (thường dịch là "điệu") với các trạng thái tâm hồn: một số điệu bị coi là ủ rũ hoặc uỷ mị và bị loại khỏi giáo dục; điệu **Dorian** được gắn với **lòng dũng cảm**, trong khi Lydian và Ionian bị gắn với sự **buông thả**.
+- Trong *Cộng hoà* (đoạn 398–399), Socrates gắn các **harmoniai** (thường dịch là "điệu") với các trạng thái tâm hồn: một số điệu bị coi là ủ rũ hoặc uỷ mị và bị loại khỏi giáo dục; điệu **Dorian** được gắn với **lòng dũng cảm**, trong khi Lydian và Ionian bị gắn với sự **buông thả**.
 - **Aristotle**, trong quyển VIII của *Chính trị luận*, cũng bàn về vai trò giáo dục của âm nhạc. Các nghiên cứu so sánh cho thấy hai triết gia **khác nhau** về cách âm nhạc tác động lên cảm xúc và tính cách công dân, cũng như về vai trò của âm nhạc trong xã hội.
 - Lưu ý: "Dorian", "Lydian" của Hy Lạp **không phải** là các [[dieu-thuc|điệu thức nhà thờ]] cùng tên của thời [[thoi-ky-trung-co|Trung cổ]]; tên gọi được dùng lại nhưng cấu trúc khác.
 
@@ -351,7 +351,7 @@ Ta nói một [[cau-nhac|đoạn nhạc]] "buồn" một cách rất tự nhiên
 
 ## Chi tiết hơn
 - **Kivy** cho rằng nỗi buồn là **phẩm chất của âm nhạc**, không phải năng lực của âm nhạc làm gì đó với người nghe. Ông liên hệ mô hình của mình với phong cách hát của nhóm [[opera|Camerata]] Florence quanh năm 1600 — âm nhạc như "bản đồ âm thanh" của cơ thể đang mang cảm xúc. *Sound Sentiment* (1989) tái bản toàn văn *The Corded Shell* kèm các chương trả lời phê bình.
-- **Davies**: âm nhạc biểu cảm vì **cấu trúc động** của nó giống những dáng điệu gắn với biểu hiện cảm xúc của con người; tính biểu cảm được **nghe trực tiếp**, không phải suy ra. Khi người nghe cũng buồn theo, đó là một dạng **lây lan** cảm xúc — gần với cơ chế "lây lan cảm xúc" trong mô hình tâm lý học của Juslin (xem [[cam-xuc-am-nhac]]).
+- **Davies**: âm nhạc biểu cảm vì **cấu trúc động** của nó giống những dáng điệu gắn với biểu hiện cảm xúc của con người; tính biểu cảm được **nghe trực tiếp**, không phải suy ra. Khi người nghe cũng buồn theo, đó là một dạng **lây lan** cảm xúc — gần với cơ chế cùng tên trong mô hình tâm lý học của Juslin (xem [[cam-xuc-am-nhac]]).
 - Một số học giả (David Collins) cho rằng lập trường của Davies và của Levinson, hiểu theo một cách nhất định, **không thực sự đối lập**.
 
 ## Ứng dụng khi dạy
@@ -426,7 +426,7 @@ Khi nói "tôi đang tập **[[hinh-thuc-sonata|Sonata]] [[phan-tich-sonata-k545
 ## Các câu trả lời chính
 | Quan điểm | Tác phẩm là | Ưu điểm | Khó khăn |
 |---|---|---|---|
-| **Goodman** (*Languages of Art*, 1968) | **Lớp các lần biểu diễn tuân theo bản nhạc** | Tiêu chí rõ ràng: đúng bản nhạc thì là tác phẩm | Một nốt sai, nói chặt chẽ, là không còn là tác phẩm ("nghịch lý nốt sai") |
+| **Goodman** (*Languages of Art*, 1968) | **Lớp các lần biểu diễn tuân theo bản nhạc** | Tiêu chí rõ ràng: đúng bản nhạc thì là tác phẩm | Nói chặt chẽ, chỉ một nốt sai là bản diễn không còn là tác phẩm ("nghịch lý nốt sai") |
 | **Thuyết Platon** ([[bieu-hien-cam-xuc-am-nhac|Kivy]] và những người khác) | Một **cấu trúc âm thanh trừu tượng**, tồn tại vĩnh viễn; nhà soạn nhạc **khám phá** chứ không tạo ra | Giải thích vì sao tác phẩm có thể có nhiều lần thể hiện | Trái với trực giác rằng nhà soạn nhạc **sáng tạo** |
 | **Levinson** (1980) | **Cấu trúc được chỉ định**: cấu trúc âm thanh **và** phương tiện biểu diễn, được một nhà soạn nhạc chỉ định ở một **thời điểm lịch sử** | Tác phẩm được **tạo ra**; hai người viết cùng nốt ở hai thời điểm là hai tác phẩm | Có ý kiến phản đối việc coi **[[dan-nhac-giao-huong|phối khí]]** là bắt buộc đối với danh tính tác phẩm |
 
@@ -550,7 +550,7 @@ Trong chương "Công nghiệp văn hoá" của *Biện chứng của Khai sáng
 ## Phê phán đối với Adorno
 - Tiểu luận *Über Jazz* (1936–1937, ký bút danh Hektor Rottweiler) thường bị chê là **thiên kiến** và **tinh hoa**; nhiều nhà sử học jazz bác bỏ hoàn toàn. Hiểu biết jazz của ông được cho là giới hạn ở dòng nhạc khiêu vũ kiểu ban nhạc Paul Whiteman phục vụ giới trung lưu thời Weimar.
 - Về sau, chính Adorno **giữ khoảng cách** với các tiểu luận jazz đầu tiên, thừa nhận ông thiếu hiểu biết về những đặc điểm riêng của jazz Mỹ và đã rút ra kết luận tâm lý – xã hội vội vàng.
-- Một số học giả bênh vực rằng các phê phán thường **bỏ qua loại [[nhac-dien-tu|nhạc cụ thể]]** Adorno nói tới (nhạc khiêu vũ thập niên 1920, trước những biến đổi lớn của jazz), và các tiểu luận vẫn có **giá trị lịch sử**.
+- Một số học giả bênh vực rằng các phê phán thường **bỏ qua chính loại nhạc** Adorno nói tới (nhạc khiêu vũ thập niên 1920, trước những biến đổi lớn của jazz), và các tiểu luận vẫn có **giá trị lịch sử**.
 - Quan điểm bi quan về văn hoá đại chúng là phần bị tranh luận nhiều nhất của cả trường phái Frankfurt.
 - Dù vậy, câu hỏi của Adorno — **ai quyết định chúng ta nghe gì**, và **âm nhạc có thể chống lại sự đồng phục hoá không** — vẫn được đặt lại trong thời đại nhạc số và thuật toán gợi ý.
 

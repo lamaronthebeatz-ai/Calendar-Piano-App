@@ -817,7 +817,7 @@ Tuyển tập **Current Directions in Ecomusicology: Music, Culture, Nature** (A
 ## Ví dụ cụ thể: gỗ làm đàn và CITES
 | Gỗ | Dùng làm | Tình trạng CITES |
 |---|---|---|
-| **Pernambuco** (*Paubrasilia echinata*, Brazil) | Vĩ (cây kéo) [[violin]], [[viola|viola]], [[cello|cello]] | Phụ lục II từ 13/9/2007; vĩ thành phẩm được miễn giấy phép đến 23/2/2023. Ở CoP19 (2022) đề xuất đưa lên Phụ lục I của Brazil bị bác, nhưng phạm vi được sửa để bao cả thành phẩm (trừ nhạc cụ tái xuất) |
+| **Pernambuco** (*Paubrasilia echinata*, Brazil) | Vĩ (cây kéo) [[violin]], [[viola|viola]], [[cello|cello]] | Phụ lục II từ 13/9/2007; vĩ thành phẩm được miễn giấy phép đến 23/2/2023. Ở CoP19 (2022), đề xuất của Brazil đưa loài này lên Phụ lục I bị bác, nhưng phạm vi được sửa để bao cả thành phẩm (trừ nhạc cụ tái xuất) |
 | **Hồng sắc Brazil** (*Dalbergia nigra*) | Lưng, hông [[guitar-co-dien|guitar]] | Phụ lục I từ 11/6/1992. Năm 2019 (CoP18) nhạc cụ thành phẩm được miễn với các loài *Dalbergia* khác — **trừ** loài này |
 *Quy định sau CoP20 (2025) chỉ thấy trong báo chuyên ngành với ngày tháng mâu thuẫn — chưa đưa vào.*
 
@@ -904,7 +904,7 @@ Một bài trong khung [[am-nhac-hoc]], nối [[nhac-khi-hoc]] với [[phong-tra
 Một bài trên *College Music Symposium* phân biệt **iconography** (nhận ra chủ đề: ai chơi gì) và **iconology** (hiểu "nghĩa thật" của tác phẩm), và nhắc: phải tách **biểu tượng** khỏi **tài liệu về đời sống đương thời**; độ tin cậy của mỗi hình rất khác nhau; luôn **đối chiếu với nguồn văn bản**.
 
 ## Ba ví dụ
-**1. Cantigas de Santa Maria** (vua Alfonso X, thế kỷ 13): bản chép ở Escorial (gọi là "sách của các nhạc công") có khoảng 416 bài ca xếp theo nhóm mười, kèm **40 tiểu hoạ**, mỗi tranh một hai nhạc công — khoảng **40 loại nhạc cụ**, kể cả đàn kéo vĩ rabab. Nguồn quý cho người phục dựng nhạc cụ [[thoi-ky-trung-co|Trung cổ]]. *(Ký hiệu các bản chép khác nhau giữa các nguồn.)*
+**1. Cantigas de Santa Maria** (vua Alfonso X, thế kỷ 13): bản chép ở Escorial (gọi là "sách của các nhạc công") có khoảng 416 bài ca xếp theo nhóm mười, kèm **40 tiểu hoạ**, mỗi tranh có một hoặc hai nhạc công — khoảng **40 loại nhạc cụ**, kể cả đàn kéo vĩ rabab. Nguồn quý cho người phục dựng nhạc cụ [[thoi-ky-trung-co|Trung cổ]]. *(Ký hiệu các bản chép khác nhau giữa các nguồn.)*
 
 **2. Thiên thần chơi nhạc ở Florence**: một quan điểm cho rằng đó chỉ là biểu tượng của âm nhạc thiên đàng. John Stinson (*Angels in Florentine Iconography and Trecento Musical Performance*) tìm thấy sổ chi cho thấy nhạc công được trả tiền khi "**làm thiên thần**" (*fecerunt angelos*), và các hội đoàn hát lauda mặc đồ thiên thần — tức là sau một số bức tranh có **một buổi diễn thật**.
 
@@ -1159,7 +1159,7 @@ Một hãng đĩa điển hình đảm nhận bốn chức năng: tìm và ký h
 ## Từ máy hát đến tập đoàn đa quốc gia
 Ngành thu âm ra đời cùng máy hát (xem [[lich-su-thu-am]]). **Columbia Phonograph Company** được Edward D. Easton thành lập năm 1889 tại Washington, D.C., và thường được xem là thương hiệu lâu đời nhất còn tồn tại trong lĩnh vực ghi âm; ngày thành lập chính xác được các nguồn ghi khác nhau (15 hoặc 22/1/1889, có nguồn ghi 1888). Ban đầu Columbia bán máy hát Edison rồi mới tự sản xuất bản ghi.
 
-Suốt thế kỷ 20, các hãng lớn liên tục thâu tóm hãng nhỏ và thâu tóm lẫn nhau. Cuối thập niên 1990 thị trường còn "Big Six", rồi "Big Five", "Big Four" sau các thương vụ:
+Suốt thế kỷ 20, các hãng lớn liên tục thâu tóm hãng nhỏ và thâu tóm lẫn nhau. Cuối thập niên 1990, thị trường còn "Big Six", rồi rút xuống "Big Five", "Big Four" sau các thương vụ:
 
 ::timeline 1889=Columbia_thành_lập 1999=Universal_mua_PolyGram 2004=Sony_BMG_liên_doanh 2008=Sony_mua_lại_50%_của_Bertelsmann 2012=EMI_bị_chia_tách | Các mốc hợp nhất dẫn tới "Big Three"
 
@@ -1183,7 +1183,7 @@ Về thị phần, MIDiA ước tính khu vực **ngoài ba major** chiếm 29,7
 | Thị phần độc lập theo sở hữu | 46,7% | MIDiA, 2024 |
 
 ## Hãng đĩa độc lập
-**Hãng độc lập** (indie) là hãng không thuộc sở hữu của ba major. Nhiều hãng nổi tiếng như Beggars Group, Domino, Sub Pop, Epitaph, Merge. Để thương lượng với các nền tảng số, các hãng độc lập lập ra **Merlin** – cơ quan cấp phép quyền số; theo báo cáo kỷ niệm 10 năm (khoảng 2018), thành viên Merlin chiếm hơn 12% thị trường thu âm số toàn cầu, với hơn 20.000 hãng ở 55 quốc gia.
+**Hãng độc lập** (indie) là hãng không thuộc sở hữu của ba major. Một số hãng nổi tiếng: Beggars Group, Domino, Sub Pop, Epitaph, Merge. Để thương lượng với các nền tảng số, các hãng độc lập lập ra **Merlin** – cơ quan cấp phép quyền số; theo báo cáo kỷ niệm 10 năm (khoảng 2018), thành viên Merlin chiếm hơn 12% thị trường thu âm số toàn cầu, với hơn 20.000 hãng ở 55 quốc gia.
 
 Ranh giới "độc lập" ngày càng mờ: nhiều hãng indie phân phối qua các công ty thuộc major, và nghệ sĩ có thể tự phát hành qua dịch vụ phân phối số (xem [[a-r-va-phat-trien-nghe-si]]).
 
@@ -1198,7 +1198,7 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[kinh-te-hoc-streaming]], [[lich-su-thu-am]
     title: "Xuất bản âm nhạc và các loại tiền bản quyền",
     category: 'musicology',
     aliases: ["các loại tác quyền", "music royalties", "quyền biểu diễn", "performance royalties", "sync licensing", "master và composition"],
-    summary: "Giải thích hoạt động xuất bản âm nhạc, sự phân biệt giữa quyền đối với tác phẩm (composition) và bản ghi (master), cùng các dòng tiền bản quyền chính: cơ học, biểu diễn, đồng bộ hóa, in ấn và quyền liên quan; kèm số liệu CISAC và VCPMC.",
+    summary: "Giải thích hoạt động xuất bản âm nhạc, sự phân biệt giữa quyền đối với tác phẩm (composition) và bản ghi (master), cùng các dòng tiền bản quyền chính: cơ học, biểu diễn, đồng bộ hoá, in ấn và quyền liên quan; kèm số liệu CISAC và VCPMC.",
     refs: [
       ["CISAC: The History of Collective Management (PDF)", "https://www.cisac.org/sites/main/files/files/2020-11/CISACUniversity_The_History_of_Collective_Management_FINAL.pdf"],
       ["American Society of Composers, Authors and Publishers – Wikipedia", "https://en.wikipedia.org/wiki/American_Society_of_Composers,_Authors_and_Publishers"],
@@ -1215,19 +1215,19 @@ Mỗi bản thu âm thương mại thường chứa **hai lớp quyền** tách 
 
 | | Tác phẩm (composition) | Bản ghi (master) |
 |---|---|---|
-| Đối tượng | Giai điệu, hòa âm, lời | Bản ghi âm cụ thể |
+| Đối tượng | Giai điệu, hoà âm, lời | Bản ghi âm cụ thể |
 | Chủ sở hữu điển hình | Nhạc sĩ, nhà xuất bản | Hãng đĩa hoặc nghệ sĩ tự phát hành |
 | Dòng tiền chính | Cơ học, biểu diễn, in ấn, phần sync của tác phẩm | Doanh thu bán và stream, quyền liên quan, phần sync của bản ghi |
 
 Một ca khúc của [[nhac-trinh|Trịnh Công Sơn]] do nhiều ca sĩ thu âm có **một** tác phẩm nhưng **nhiều** master. Khâu master được trình bày ở [[hang-dia-va-cac-tap-doan-lon]]; bài này tập trung vào phía tác phẩm. Khung pháp lý tại Việt Nam xem [[ban-quyen-am-nhac-viet-nam]].
 
 ## Nhà xuất bản âm nhạc làm gì
-Nghề **xuất bản âm nhạc** bắt nguồn từ việc in và bán bản nhạc (xem [[lich-su-in-an-am-nhac]]). Ngày nay, nhà xuất bản (publisher) ký hợp đồng với nhạc sĩ, đăng ký tác phẩm với các tổ chức quản lý tập thể trên khắp thế giới, cấp phép sử dụng, thu tiền và chia lại cho tác giả, đồng thời "chào hàng" bài hát cho ca sĩ, phim, quảng cáo. Tỷ lệ chia giữa nhà xuất bản và tác giả tùy loại hợp đồng (xuất bản trọn gói, đồng xuất bản, chỉ quản lý); bài này không đưa con số cụ thể vì các nguồn đã tra không thống nhất.
+Nghề **xuất bản âm nhạc** bắt nguồn từ việc in và bán bản nhạc (xem [[lich-su-in-an-am-nhac]]). Ngày nay, nhà xuất bản (publisher) ký hợp đồng với nhạc sĩ, đăng ký tác phẩm với các tổ chức quản lý tập thể trên khắp thế giới, cấp phép sử dụng, thu tiền và chia lại cho tác giả, đồng thời "chào hàng" bài hát cho ca sĩ, phim, quảng cáo. Tỷ lệ chia giữa nhà xuất bản và tác giả tuỳ loại hợp đồng (xuất bản trọn gói, đồng xuất bản, chỉ quản lý); bài này không đưa con số cụ thể vì các nguồn đã tra không thống nhất.
 
 ## Các dòng tiền bản quyền
-- **Cơ học (mechanical)**: phát sinh khi tác phẩm được *sao chép* — đĩa CD, vinyl, tải về và (ở nhiều nước) stream theo yêu cầu. Tên gọi xuất phát từ thời cuộn piano tự động và đĩa hát. Ở Mỹ, tỷ lệ do **Copyright Royalty Board** ấn định; thỏa thuận *Phonorecords IV* (được duyệt 30/12/2022) nâng mức cho stream từ 15,1% doanh thu dịch vụ năm 2023 lên 15,35% năm 2027. Theo Đạo luật Hiện đại hóa Âm nhạc (Music Modernization Act), từ 1/1/2021 **The MLC** cấp giấy phép trọn gói (blanket license) cho dịch vụ số tại Mỹ, thay cơ chế cấp phép từng bài trước đó.
-- **Biểu diễn công cộng (performance)**: phát sinh khi tác phẩm được trình diễn hoặc phát sóng nơi công cộng — radio, TV, quán, cửa hàng, buổi hòa nhạc, stream. Do các tổ chức quản lý tập thể (PRO/CMO) thu: ASCAP, BMI (Mỹ), PRS (Anh), SACEM (Pháp), GEMA (Đức), VCPMC (Việt Nam).
-- **Đồng bộ hóa (sync)**: phí cho phép ghép nhạc vào hình ảnh — phim, quảng cáo, trò chơi (xem [[nhac-phim-va-tro-choi]]). Thường thương lượng trực tiếp và phải xin **cả hai** giấy phép: tác phẩm (từ nhà xuất bản) và master (từ hãng đĩa).
+- **Cơ học (mechanical)**: phát sinh khi tác phẩm được *sao chép* — đĩa CD, vinyl, tải về và (ở nhiều nước) stream theo yêu cầu. Tên gọi xuất phát từ thời cuộn piano tự động và đĩa hát. Ở Mỹ, tỷ lệ do **Copyright Royalty Board** ấn định; thoả thuận *Phonorecords IV* (được duyệt 30/12/2022) nâng mức cho stream từ 15,1% doanh thu dịch vụ năm 2023 lên 15,35% năm 2027. Theo Đạo luật Hiện đại hoá Âm nhạc (Music Modernization Act), từ 1/1/2021 **The MLC** cấp giấy phép trọn gói (blanket license) cho dịch vụ số tại Mỹ, thay cơ chế cấp phép từng bài trước đó.
+- **Biểu diễn công cộng (performance)**: phát sinh khi tác phẩm được trình diễn hoặc phát sóng nơi công cộng — radio, TV, quán, cửa hàng, buổi hoà nhạc, stream. Do các tổ chức quản lý tập thể (PRO/CMO) thu: ASCAP, BMI (Mỹ), PRS (Anh), SACEM (Pháp), GEMA (Đức), VCPMC (Việt Nam).
+- **Đồng bộ hoá (sync)**: phí cho phép ghép nhạc vào hình ảnh — phim, quảng cáo, trò chơi (xem [[nhac-phim-va-tro-choi]]). Thường thương lượng trực tiếp và phải xin **cả hai** giấy phép: tác phẩm (từ nhà xuất bản) và master (từ hãng đĩa).
 - **In ấn (print)**: từ bán bản nhạc, sách bài hát — nhỏ về tỷ trọng nhưng quan trọng với nhạc cổ điển, giáo dục, piano.
 - **Quyền liên quan (neighbouring rights)**: thuộc về phía *bản ghi* — trả cho chủ master và nghệ sĩ biểu diễn khi bản ghi được phát sóng, phát công cộng (ở Anh do PPL thu). Mỹ là ngoại lệ lớn: radio AM/FM không phải trả quyền biểu diễn cho bản ghi; riêng radio số không tương tác do SoundExchange thu.
 
@@ -1243,7 +1243,7 @@ Tại Việt Nam, **VCPMC** công bố thu hơn **393 tỷ đồng** năm 2024 (
 ::bars Âm_nhạc_CISAC_2024_(tỷ_EUR)=12.59 Tổng_CISAC_2024_(tỷ_EUR)=13.97 max=15 | Thu tiền bản quyền toàn cầu qua các hội thành viên CISAC, 2024 (nguồn: CISAC)
 
 ## Nguồn và độ tin cậy
-Định nghĩa các loại tiền bản quyền khác nhau theo luật từng nước: ví dụ phạm vi quyền liên quan hay việc stream có phát sinh tiền cơ học. Các bài hướng dẫn trên blog ngành thường đơn giản hóa; khi cần chính xác, hãy tra luật quốc gia và quy chế của tổ chức quản lý tập thể. Tỷ lệ chia tiền streaming cụ thể xem [[kinh-te-hoc-streaming]].
+Định nghĩa các loại tiền bản quyền khác nhau theo luật từng nước: ví dụ phạm vi quyền liên quan hay việc stream có phát sinh tiền cơ học. Các bài hướng dẫn trên blog ngành thường đơn giản hoá; khi cần chính xác, hãy tra luật quốc gia và quy chế của tổ chức quản lý tập thể. Tỷ lệ chia tiền streaming cụ thể xem [[kinh-te-hoc-streaming]].
 
 Xem thêm: [[ban-quyen-am-nhac-viet-nam]], [[cong-nghiep-am-nhac]], [[a-r-va-phat-trien-nghe-si]], [[lich-su-in-an-am-nhac]].
 `,
@@ -1293,7 +1293,7 @@ Bằng chứng thực nghiệm còn chưa thống nhất:
 - Nghiên cứu của **Digital Media Finland** (thực hiện 2017, công bố 2018) trên dữ liệu thật của một dịch vụ lớn cho thấy mức phân bổ lại khá khiêm tốn.
 - Nghiên cứu của **CNM** (Trung tâm Âm nhạc Quốc gia Pháp, 2021) kết luận dữ liệu hiện có *không đủ* để rút ra kết luận chắc chắn; chỉ Deezer và Spotify cung cấp dữ liệu và chúng không nhất quán.
 - Một phân tích trên khoảng 50.000 nghệ sĩ độc lập SoundCloud (dữ liệu 2022) lại cho rằng tác động có thể đáng kể: khoảng 1/5 nghệ sĩ có thể tăng gấp đôi thu nhập, nhưng cũng có nhóm giảm mạnh.
-- Các nhà kinh tế học cũng phân tích vấn đề bằng lý thuyết chia sẻ doanh thu (ví dụ bài *Revenue sharing at music streaming platforms*, arXiv 2023), cho thấy mỗi quy tắc thỏa mãn những tiêu chí công bằng khác nhau.
+- Các nhà kinh tế học cũng phân tích vấn đề bằng lý thuyết chia sẻ doanh thu (ví dụ bài *Revenue sharing at music streaming platforms*, arXiv 2023), cho thấy mỗi quy tắc thoả mãn những tiêu chí công bằng khác nhau.
 
 Năm 2023, Deezer cùng Universal Music Group và Warner Music triển khai mô hình **artist-centric**: tăng trọng số cho "nghệ sĩ chuyên nghiệp" vượt ngưỡng lượt nghe và người nghe, và cho lượt nghe do người dùng chủ động tìm.
 
@@ -1314,8 +1314,8 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[bang-xep-hang-am-nhac]], [[am-nhac-hoc-ky-
     slug: "am-nhac-bieu-dien-truc-tiep-va-luu-dien",
     title: "Âm nhạc biểu diễn trực tiếp và lưu diễn",
     category: 'musicology',
-    aliases: ["biểu diễn trực tiếp", "lưu diễn", "live music", "touring", "kinh tế hòa nhạc", "bán vé", "ticketing", "Live Nation", "Ticketmaster", "giá vé động", "dynamic pricing", "lễ hội âm nhạc", "music festivals"],
-    summary: "Phân tích kinh tế của hòa nhạc, lưu diễn và lễ hội: quy mô thị trường, cấu trúc chi phí, vai trò của Live Nation–Ticketmaster và vụ kiện chống độc quyền của Bộ Tư pháp Mỹ (2024–2026), tranh cãi giá vé động và khủng hoảng lễ hội độc lập.",
+    aliases: ["biểu diễn trực tiếp", "lưu diễn", "live music", "touring", "kinh tế hoà nhạc", "bán vé", "ticketing", "Live Nation", "Ticketmaster", "giá vé động", "dynamic pricing", "lễ hội âm nhạc", "music festivals"],
+    summary: "Phân tích kinh tế của hoà nhạc, lưu diễn và lễ hội: quy mô thị trường, cấu trúc chi phí, vai trò của Live Nation–Ticketmaster và vụ kiện chống độc quyền của Bộ Tư pháp Mỹ (2024–2026), tranh cãi giá vé động và khủng hoảng lễ hội độc lập.",
     refs: [
       ["Live Nation saw 151m fans attend its events in 2024 – MBW", "https://www.musicbusinessworldwide.com/live-nation-saw-151m-fans-attend-its-events-in-2024-as-revenue-rose-3-to-23bn"],
       ["Live Nation Entertainment Reports Full Year 2024 Results", "https://newsroom.livenation.com/news/live-nation-entertainment-reports-full-year-and-fourth-quarter-2024-results/"],
@@ -1328,7 +1328,7 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[bang-xep-hang-am-nhac]], [[am-nhac-hoc-ky-
     ],
     body: `
 ## Vì sao biểu diễn trực tiếp quan trọng
-Trong thời đại [[kinh-te-hoc-streaming|streaming]], một lượt nghe thu về chỉ vài phần nghìn USD, còn một tấm vé hòa nhạc có thể vài chục đến vài trăm USD. Vì vậy với phần lớn nghệ sĩ có khán giả, **lưu diễn** là nguồn thu lớn nhất, kéo theo bán hàng lưu niệm (merch). Biểu diễn trực tiếp cũng là trải nghiệm xã hội mà ghi âm không thay thế được — chủ đề được [[xa-hoi-hoc-am-nhac]] và [[tam-ly-hoc-am-nhac]] nghiên cứu. Tổng quan ngành xem [[cong-nghiep-am-nhac]].
+Trong thời đại [[kinh-te-hoc-streaming|streaming]], một lượt nghe thu về chỉ vài phần nghìn USD, còn một tấm vé hoà nhạc có thể có giá vài chục đến vài trăm USD. Vì vậy với phần lớn nghệ sĩ có khán giả, **lưu diễn** là nguồn thu lớn nhất, kéo theo bán hàng lưu niệm (merch). Biểu diễn trực tiếp cũng là trải nghiệm xã hội mà ghi âm không thay thế được — chủ đề được [[xa-hoi-hoc-am-nhac]] và [[tam-ly-hoc-am-nhac]] nghiên cứu. Tổng quan ngành xem [[cong-nghiep-am-nhac]].
 
 Báo cáo *Music in the Air* 2024 của Goldman Sachs ghi nhận doanh thu biểu diễn trực tiếp năm 2023 tăng 25% (so với dự báo 6%), cao hơn mức trước đại dịch 2019 khoảng 20%; một ấn bản sau dự báo doanh thu live toàn cầu 34,6 tỷ USD (2024) và 38,2 tỷ USD (2025). Lưu ý: dự báo tổng thể năm 2024 của chính báo cáo này sau đó tỏ ra quá lạc quan.
 
@@ -1338,7 +1338,7 @@ Báo cáo *Music in the Air* 2024 của Goldman Sachs ghi nhận doanh thu biể
 - **Địa điểm** (club, nhà hát, arena, sân vận động) thu tiền thuê, đồ ăn uống, chỗ đỗ xe.
 - **Đơn vị bán vé** thu phí dịch vụ — phần thường bị khán giả phàn nàn nhất.
 
-Biên lợi nhuận của khâu tổ chức rất mỏng: năm 2024, mảng hòa nhạc của Live Nation có doanh thu khoảng 19 tỷ USD nhưng lợi nhuận hoạt động điều chỉnh chỉ 530 triệu USD (biên 2,8%), trong khi bán vé và tài trợ mới là mảng sinh lời chính.
+Biên lợi nhuận của khâu tổ chức rất mỏng: năm 2024, mảng hoà nhạc của Live Nation có doanh thu khoảng 19 tỷ USD nhưng lợi nhuận hoạt động điều chỉnh chỉ 530 triệu USD (biên 2,8%), trong khi bán vé và tài trợ mới là mảng sinh lời chính.
 
 ### Kỷ lục doanh thu
 Theo ước tính của Pollstar, *The Eras Tour* của Taylor Swift là tour đầu tiên vượt 1 tỷ USD (năm 2023: 1,04 tỷ USD, 4,35 triệu vé, 60 đêm) và khi kết thúc tháng 12/2024 đạt khoảng **2,2 tỷ USD** qua 149 đêm — tour có doanh thu cao nhất lịch sử. Các con số này chưa điều chỉnh lạm phát khi so với tour cũ.
@@ -1346,15 +1346,15 @@ Theo ước tính của Pollstar, *The Eras Tour* của Taylor Swift là tour đ
 ## Live Nation – Ticketmaster
 **Live Nation** sáp nhập với **Ticketmaster** ngày 25/1/2010, dưới một "nghị định đồng thuận" (consent decree) của Bộ Tư pháp Mỹ (DOJ). Năm 2024, tập đoàn công bố doanh thu khoảng **23,2 tỷ USD**, **151 triệu** khán giả tại hơn 50.000 sự kiện, và Ticketmaster bán 637 triệu vé.
 
-Tháng 5/2024, DOJ cùng tổng chưởng lý 29 bang và Đặc khu Columbia (về sau thêm nhiều bang) kiện Live Nation–Ticketmaster tại Tòa Nam New York, cáo buộc độc quyền và đòi tách hai công ty. Trong quá trình xét xử năm 2026, DOJ và một số bang **dàn xếp** với Live Nation; liên minh khoảng 33 bang và D.C. tiếp tục theo kiện (các nguồn ghi số bang khác nhau). Ngày **15/4/2026**, bồi thẩm đoàn liên bang kết luận Live Nation và Ticketmaster đã vận hành độc quyền bất hợp pháp, với khoản thu thừa 1,72 USD mỗi vé tại các địa điểm lớn. Giai đoạn xác định biện pháp khắc phục (có thể gồm tách công ty) và kháng cáo của Live Nation còn đang tiếp diễn tại thời điểm viết bài.
+Tháng 5/2024, DOJ cùng tổng chưởng lý 29 bang và Đặc khu Columbia (về sau thêm nhiều bang) kiện Live Nation–Ticketmaster tại Toà Nam New York, cáo buộc độc quyền và đòi tách hai công ty. Trong quá trình xét xử năm 2026, DOJ và một số bang **dàn xếp** với Live Nation; liên minh khoảng 33 bang và D.C. tiếp tục theo kiện (các nguồn ghi số bang khác nhau). Ngày **15/4/2026**, bồi thẩm đoàn liên bang kết luận Live Nation và Ticketmaster đã vận hành độc quyền bất hợp pháp, với khoản thu thừa 1,72 USD mỗi vé tại các địa điểm lớn. Giai đoạn xác định biện pháp khắc phục (có thể gồm tách công ty) và kháng cáo của Live Nation còn đang tiếp diễn tại thời điểm viết bài.
 
-::timeline 2010=Live_Nation_sáp_nhập_Ticketmaster 2022=Sự_cố_bán_vé_Eras_Tour 2024=DOJ_khởi_kiện 2024=CMA_điều_tra_vé_Oasis 2026=Bồi_thẩm_đoàn_kết_luận_độc_quyền | Các mốc pháp lý của thị trường vé hòa nhạc
+::timeline 2010=Live_Nation_sáp_nhập_Ticketmaster 2022=Sự_cố_bán_vé_Eras_Tour 2024=DOJ_khởi_kiện 2024=CMA_điều_tra_vé_Oasis 2026=Bồi_thẩm_đoàn_kết_luận_độc_quyền | Các mốc pháp lý của thị trường vé hoà nhạc
 
 ## Giá vé động và tranh cãi
 **Giá vé động** (dynamic pricing) điều chỉnh giá theo cầu, như vé máy bay. Người ủng hộ cho rằng nó giúp nghệ sĩ thu phần tiền vốn rơi vào tay phe vé chợ đen; người phản đối cho rằng nó khiến người hâm mộ trung thành bị "móc túi". Khi Oasis tái hợp (bán vé tháng 8/2024), vé đứng tại Anh tăng từ khoảng 148 lên 355 bảng trong lúc người mua chờ trong hàng đợi trực tuyến. Cơ quan Cạnh tranh và Thị trường Anh (**CMA**) mở điều tra tháng 9/2024; theo tường thuật báo chí năm 2025, CMA không tìm thấy bằng chứng thuật toán điều chỉnh giá theo thời gian thực, nhưng chỉ trích việc bán vé "Platinum" giá gấp tới 2,5 lần mà không kèm quyền lợi thêm và việc không thông báo rõ hai hạng vé đứng.
 
 ## Lễ hội âm nhạc
-Lễ hội là mô hình kinh doanh rủi ro cao: chi phí cố định lớn, phụ thuộc thời tiết và nghệ sĩ chính (headliner). Hiệp hội Lễ hội Độc lập Anh (**AIF**) cho biết chi phí tổ chức tăng khoảng 30% sau đại dịch; tính đến giữa năm 2024 khoảng 50 lễ hội độc lập tại Anh đã hủy, hoãn hoặc đóng cửa trong năm. Các nhà tổ chức nêu đồng thời chi phí tăng, cát-xê nghệ sĩ cao và người mua vé thắt chặt chi tiêu.
+Lễ hội là mô hình kinh doanh rủi ro cao: chi phí cố định lớn, phụ thuộc thời tiết và nghệ sĩ chính (headliner). Hiệp hội Lễ hội Độc lập Anh (**AIF**) cho biết chi phí tổ chức tăng khoảng 30% sau đại dịch; tính đến giữa năm 2024 khoảng 50 lễ hội độc lập tại Anh đã huỷ, hoãn hoặc đóng cửa trong năm. Các nhà tổ chức nêu đồng thời chi phí tăng, cát-xê nghệ sĩ cao và người mua vé thắt chặt chi tiêu.
 
 ## Nguồn và độ tin cậy
 Số liệu doanh thu tour là ước tính của Pollstar dựa trên báo cáo tự nguyện. Số liệu tài chính Live Nation lấy từ báo cáo của công ty. Vụ kiện chống độc quyền vẫn chưa kết thúc; các chi tiết về biện pháp khắc phục có thể thay đổi.
@@ -1379,7 +1379,7 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[kinh-te-hoc-streaming]], [[xa-hoi-hoc-am-n
     ],
     body: `
 ## A&R là gì
-**A&R** (artists and repertoire – "nghệ sĩ và tiết mục") là bộ phận của hãng đĩa phụ trách **tìm, ký hợp đồng và phát triển** nghệ sĩ. Người làm A&R nghe bản demo, theo dõi các buổi diễn và số liệu mạng xã hội, rồi sau khi ký thì giúp chọn bài, ghép nhạc sĩ sáng tác và nhà sản xuất, giám sát quá trình thu âm và quyết định thời điểm phát hành. Trước thời ca sĩ - nhạc sĩ, A&R còn có nhiệm vụ đúng như tên gọi: chọn "tiết mục" (bài hát) cho ca sĩ thể hiện. Bối cảnh của hãng đĩa xem [[hang-dia-va-cac-tap-doan-lon]]; tổng quan ngành xem [[cong-nghiep-am-nhac]].
+**A&R** (artists and repertoire – "nghệ sĩ và tiết mục") là bộ phận của hãng đĩa phụ trách **tìm, ký hợp đồng và phát triển** nghệ sĩ. Người làm A&R nghe bản demo, theo dõi các buổi diễn và số liệu mạng xã hội, rồi sau khi ký thì giúp chọn bài, ghép nhạc sĩ sáng tác và nhà sản xuất, giám sát quá trình thu âm và quyết định thời điểm phát hành. Trước thời ca sĩ – nhạc sĩ, A&R còn có nhiệm vụ đúng như tên gọi: chọn "tiết mục" (bài hát) cho ca sĩ thể hiện. Bối cảnh của hãng đĩa xem [[hang-dia-va-cac-tap-doan-lon]]; tổng quan ngành xem [[cong-nghiep-am-nhac]].
 
 ## Quy mô đầu tư
 Theo các báo cáo *Investing in Music* của **IFPI**, hãng đĩa trên toàn cầu chi khoảng **4,3 tỷ USD** (ấn bản 2014) và **4,5 tỷ USD** mỗi năm (ấn bản 2016) cho A&R và marketing, tương đương khoảng **27% doanh thu**; riêng A&R khoảng 16,9% doanh thu. Ấn bản 2014 ước tính chi phí để "đột phá" một nghệ sĩ mới tại một thị trường lớn là **0,5–2 triệu USD** (gồm tiền ứng trước, thu âm, video, hỗ trợ lưu diễn, quảng bá). Đây là số liệu do chính hiệp hội các hãng đĩa công bố nhằm biện minh cho phần doanh thu hãng giữ lại, và đã khá cũ — cần đọc với sự thận trọng.
@@ -1387,12 +1387,12 @@ Theo các báo cáo *Investing in Music* của **IFPI**, hãng đĩa trên toàn
 ## Tiền ứng trước và thu hồi vốn
 **Tiền ứng trước** (advance) là khoản hãng trả trước cho nghệ sĩ, nhưng không phải tiền cho không: nó được **thu hồi** (recoup) từ phần tiền bản quyền của nghệ sĩ. Cho đến khi số tiền nghệ sĩ "đáng được hưởng" vượt tổng khoản ứng trước và các chi phí được tính thu hồi (trong hợp đồng truyền thống có thể gồm cả chi phí thu âm, một phần video, hỗ trợ tour), tài khoản của nghệ sĩ còn ở trạng thái **chưa thu hồi** (unrecouped) và nghệ sĩ không nhận thêm đồng nào.
 
-Ví dụ minh họa (giả định, không phải số liệu thực): nghệ sĩ nhận ứng trước 100.000 USD, tỷ lệ bản quyền 18% doanh thu ròng. Album phải mang về khoảng 555.000 USD doanh thu ròng thì phần 18% mới đủ trả hết 100.000 USD; trong khi đó hãng đã thu về phần còn lại 82%. Vì vậy một nghệ sĩ "chưa thu hồi" vẫn có thể là một khoản đầu tư có lãi với hãng. Nếu sản phẩm thất bại, nghệ sĩ thường không phải hoàn lại tiền ứng — đây là phần rủi ro hãng gánh.
+Ví dụ minh hoạ (giả định, không phải số liệu thực): nghệ sĩ nhận ứng trước 100.000 USD, tỷ lệ bản quyền 18% doanh thu ròng. Album phải mang về khoảng 555.000 USD doanh thu ròng thì phần 18% mới đủ trả hết 100.000 USD; trong khi đó hãng đã thu về phần còn lại 82%. Vì vậy một nghệ sĩ "chưa thu hồi" vẫn có thể là một khoản đầu tư có lãi với hãng. Nếu sản phẩm thất bại, nghệ sĩ thường không phải hoàn lại tiền ứng — đây là phần rủi ro hãng gánh.
 
 ## Các loại hợp đồng
 | Loại hợp đồng | Ai sở hữu master | Phần của nghệ sĩ (ước lượng theo các nguồn hướng dẫn) |
 |---|---|---|
-| Truyền thống (thu âm độc quyền) | Hãng đĩa | khoảng 13–25% tùy nguồn và cách tính |
+| Truyền thống (thu âm độc quyền) | Hãng đĩa | khoảng 13–25% tuỳ nguồn và cách tính |
 | 360 (đa quyền) | Hãng đĩa | như trên, cộng hãng chia thêm thu nhập lưu diễn, merch, tài trợ |
 | Cấp phép (license) | Nghệ sĩ, hãng khai thác trong 3–7 năm | cao hơn truyền thống |
 | Phân phối hoặc dịch vụ hãng (label services) | Nghệ sĩ | khoảng 70–85% doanh thu ròng; nghệ sĩ tự chịu chi phí |
@@ -1405,7 +1405,7 @@ Các tỷ lệ trên đến từ trang hướng dẫn của các công ty dịch
 ::timeline 2002=Robbie_Williams_ký_EMI 2013=Marshall_phân_tích_hợp_đồng_360 2014=IFPI:_4,3_tỷ_USD_cho_A&R_và_marketing 2016=IFPI:_4,5_tỷ_USD | Một số mốc trong lịch sử hợp đồng thu âm và đầu tư A&R
 
 ## Phát triển nghệ sĩ trong thời đại số
-Theo MIDiA, phần thị trường thuộc các hãng ngoài ba major và nghệ sĩ tự phát hành tăng liên tục (khoảng 29,7% năm 2024 theo cách tính phân phối, xem [[hang-dia-va-cac-tap-doan-lon]]). Các hợp đồng phân phối và dịch vụ hãng cho phép nghệ sĩ giữ quyền master và chỉ thuê dịch vụ khi cần, đổi lại phải tự chịu chi phí và rủi ro. Lựa chọn giữa tiền ứng trước, mạng lưới của hãng lớn và quyền sở hữu lâu dài là quyết định trung tâm của sự nghiệp ghi âm hiện nay. Việc nghệ sĩ có lượng người nghe lớn trên streaming có thể vẫn thu nhập khiêm tốn được bàn ở [[kinh-te-hoc-streaming]].
+Theo MIDiA, phần thị trường thuộc các hãng ngoài ba major và nghệ sĩ tự phát hành tăng liên tục (khoảng 29,7% năm 2024 theo cách tính phân phối, xem [[hang-dia-va-cac-tap-doan-lon]]). Các hợp đồng phân phối và dịch vụ hãng cho phép nghệ sĩ giữ quyền master và chỉ thuê dịch vụ khi cần, đổi lại phải tự chịu chi phí và rủi ro. Lựa chọn giữa tiền ứng trước, mạng lưới của hãng lớn và quyền sở hữu lâu dài là quyết định trung tâm của sự nghiệp ghi âm hiện nay. Vì sao nghệ sĩ có lượng người nghe lớn trên streaming vẫn có thể thu nhập khiêm tốn: xem [[kinh-te-hoc-streaming]].
 
 ## Nguồn và độ tin cậy
 Số liệu đầu tư A&R chủ yếu từ IFPI (bên có lợi ích). Tỷ lệ hợp đồng không được công bố công khai; các con số trong bài lấy từ trang hướng dẫn và chỉ là khoảng tham khảo.
@@ -1456,7 +1456,7 @@ Việc phân biệt trả phí và miễn phí phản ánh lập luận kinh t�
 "Payola" là việc hãng đĩa bí mật trả tiền để đài phát bài hát. Trong phiên điều trần của Hạ viện Mỹ cuối 1959, 335 DJ thừa nhận đã nhận tổng cộng hơn 263.000 USD tiền "tư vấn". DJ nổi tiếng **Alan Freed** bị đài WABC sa thải năm 1959 (các nguồn mô tả khác nhau về việc ông từ chối ký cam kết hay thừa nhận tại điều trần), sau đó nhận tội và mất sự nghiệp. Hệ quả là quyền chọn bài chuyển từ DJ sang giám đốc chương trình, và payola trở thành tội nhẹ theo luật liên bang.
 
 ### Gói hàng kèm album (bundling)
-Cuối thập niên 2010, nhiều nghệ sĩ bán album kèm áo phông, vé hòa nhạc để thổi phồng doanh số tuần đầu. Billboard siết quy định từ 3/1/2020, rồi tháng 7/2020 **ngừng tính** album bán kèm hàng lưu niệm hoặc vé; đồng thời bản kỹ thuật số đi kèm đĩa vật lý chỉ được tính khi đĩa đã giao. Về sau Billboard lại cho phép một dạng "fan pack" trên bảng album, cho thấy ranh giới giữa tiêu thụ thực và chiến thuật thương mại vẫn đang được thương lượng.
+Cuối thập niên 2010, nhiều nghệ sĩ bán album kèm áo phông, vé hoà nhạc để thổi phồng doanh số tuần đầu. Billboard siết quy định từ 3/1/2020, rồi tháng 7/2020 **ngừng tính** album bán kèm hàng lưu niệm hoặc vé; đồng thời bản kỹ thuật số đi kèm đĩa vật lý chỉ được tính khi đĩa đã giao. Về sau Billboard lại cho phép một dạng "fan pack" trên bảng album, cho thấy ranh giới giữa tiêu thụ thực và chiến thuật thương mại vẫn đang được thương lượng.
 
 ### Stream có tổ chức
 Khi stream trở thành thước đo chính, các chiến dịch "cày view" của cộng đồng người hâm mộ và các trang trại stream giả mạo trở thành mối lo mới. Các quy tắc giới hạn số lượt tính cho mỗi người dùng (như của OCC) và trọng số thấp hơn cho stream miễn phí một phần nhằm hạn chế điều này; mức độ gian lận thực tế thì chưa có số liệu đáng tin trong nguồn bài này đã tra.
@@ -1485,7 +1485,7 @@ Xem thêm: [[nhac-pho-thong-the-ky-20]], [[kinh-te-hoc-streaming]], [[hang-dia-v
     ],
     body: `
 ## Hai lớp quyền trong một bài hát
-Mỗi bản thu âm nhạc phổ thông thường chứa hai đối tượng bảo hộ khác nhau. Thứ nhất là **tác phẩm âm nhạc** (giai điệu, hòa âm, lời) thuộc về nhạc sĩ và nhà xuất bản – đây là *quyền tác giả*. Thứ hai là **bản ghi âm** cùng phần **biểu diễn** của ca sĩ, nhạc công – đây là *quyền liên quan* (neighbouring rights), thuộc về nhà sản xuất bản ghi và người biểu diễn. Sự tách đôi này giải thích vì sao một ca khúc có thể sinh ra hai dòng tiền bản quyền riêng và vì sao các điều ước quốc tế cũng được xây theo hai nhánh. Bối cảnh trong nước được trình bày ở [[ban-quyen-am-nhac-viet-nam]]; bức tranh thị trường ở [[cong-nghiep-am-nhac]].
+Mỗi bản thu âm nhạc phổ thông thường chứa hai đối tượng bảo hộ khác nhau. Thứ nhất là **tác phẩm âm nhạc** (giai điệu, hoà âm, lời) thuộc về nhạc sĩ và nhà xuất bản – đây là *quyền tác giả*. Thứ hai là **bản ghi âm** cùng phần **biểu diễn** của ca sĩ, nhạc công – đây là *quyền liên quan* (neighbouring rights), thuộc về nhà sản xuất bản ghi và người biểu diễn. Sự tách đôi này giải thích vì sao một ca khúc có thể sinh ra hai dòng tiền bản quyền riêng và vì sao các điều ước quốc tế cũng được xây theo hai nhánh. Bối cảnh trong nước được trình bày ở [[ban-quyen-am-nhac-viet-nam]]; bức tranh thị trường ở [[cong-nghiep-am-nhac]].
 
 ## Các điều ước nền tảng
 ### Công ước Berne (1886)
@@ -1512,18 +1512,18 @@ Chỉ thị 2011/77/EU nâng thời hạn cho bản ghi từ 50 lên 70 năm, c�
 
 ## Ngoại lệ: fair use và danh mục ngoại lệ
 Hai truyền thống pháp lý xử lý việc sử dụng không cần xin phép theo cách khác nhau:
-- **Mỹ – fair use** (học thuyết sử dụng hợp lý): tòa án cân nhắc bốn yếu tố linh hoạt – mục đích và tính chất sử dụng, bản chất tác phẩm, lượng trích dùng, ảnh hưởng tới thị trường. Vụ *Campbell v. Acuff-Rose* (Tối cao Pháp viện Mỹ, 1994) về bản nhại "Pretty Woman" của nhóm 2 Live Crew xác lập rằng tính thương mại chỉ là một yếu tố và nhấn mạnh tiêu chí "chuyển hóa" (transformative).
+- **Mỹ – fair use** (học thuyết sử dụng hợp lý): toà án cân nhắc bốn yếu tố linh hoạt – mục đích và tính chất sử dụng, bản chất tác phẩm, lượng trích dùng, ảnh hưởng tới thị trường. Vụ *Campbell v. Acuff-Rose* (Tối cao Pháp viện Mỹ, 1994) về bản nhại "Pretty Woman" của nhóm 2 Live Crew xác lập rằng tính thương mại chỉ là một yếu tố và nhấn mạnh tiêu chí "chuyển hoá" (transformative).
 - **Châu Âu và phần lớn các nước luật dân sự (kể cả Việt Nam)**: liệt kê *danh mục ngoại lệ đóng* – trích dẫn, giảng dạy, nhại, sao chép cá nhân… – tất cả phải qua phép thử ba bước.
 
 ## Các vụ kiện "đạo nhạc" tiêu biểu
-1. **Blurred Lines (2015–2018)**: bồi thẩm đoàn tại Los Angeles năm 2015 kết luận "Blurred Lines" (Robin Thicke, Pharrell Williams) vi phạm "Got to Give It Up" của Marvin Gaye; mức bồi thường hơn 7 triệu USD được thẩm phán giảm còn 5,3 triệu. Tháng 3/2018 Tòa phúc thẩm Khu vực 9 giữ nguyên với tỷ lệ 2–1; thẩm phán bất đồng Jacqueline Nguyen viết rằng hai bài khác nhau về giai điệu, hòa âm và tiết tấu. Phán quyết cuối (12/2018) gần 5 triệu USD cộng 50% tiền bản quyền tương lai. Nhiều nhạc sĩ lo ngại án này bảo hộ cả "cảm giác" (groove, phong cách) vốn không được bảo hộ.
-2. **Stairway to Heaven (2016–2020)**: bồi thẩm đoàn năm 2016 kết luận Led Zeppelin không vi phạm "Taurus" (Spirit). Ngày 9/3/2020, Tòa Khu vực 9 họp toàn thể (en banc) giữ nguyên, đồng thời bãi bỏ "quy tắc tỷ lệ nghịch" (inverse ratio rule, có từ 1977) – theo đó bằng chứng tiếp cận càng mạnh thì mức tương tự cần chứng minh càng thấp. Tòa cũng xác định với tác phẩm theo Luật 1909, phạm vi bảo hộ giới hạn ở bản nộp lưu chiểu (bản nhạc), không phải bản thu.
+1. **Blurred Lines (2015–2018)**: bồi thẩm đoàn tại Los Angeles năm 2015 kết luận "Blurred Lines" (Robin Thicke, Pharrell Williams) vi phạm "Got to Give It Up" của Marvin Gaye; mức bồi thường hơn 7 triệu USD được thẩm phán giảm còn 5,3 triệu. Tháng 3/2018 Toà phúc thẩm Khu vực 9 giữ nguyên với tỷ lệ 2–1; thẩm phán bất đồng Jacqueline Nguyen viết rằng hai bài khác nhau về giai điệu, hoà âm và tiết tấu. Phán quyết cuối (12/2018) gần 5 triệu USD cộng 50% tiền bản quyền tương lai. Nhiều nhạc sĩ lo ngại án này bảo hộ cả "cảm giác" (groove, phong cách) vốn không được bảo hộ.
+2. **Stairway to Heaven (2016–2020)**: bồi thẩm đoàn năm 2016 kết luận Led Zeppelin không vi phạm "Taurus" (Spirit). Ngày 9/3/2020, Toà Khu vực 9 họp toàn thể (en banc) giữ nguyên, đồng thời bãi bỏ "quy tắc tỷ lệ nghịch" (inverse ratio rule, có từ 1977) – theo đó bằng chứng tiếp cận càng mạnh thì mức tương tự cần chứng minh càng thấp. Toà cũng xác định với tác phẩm theo Luật 1909, phạm vi bảo hộ giới hạn ở bản nộp lưu chiểu (bản nhạc), không phải bản thu.
 3. **Thinking Out Loud (2023)**: bồi thẩm đoàn liên bang tại New York kết luận Ed Sheeran không sao chép "Let's Get It On" (Marvin Gaye và Ed Townsend). Sheeran lập luận rằng các vòng hợp âm và tiết tấu phổ biến là "bảng chữ cái" chung của mọi nhạc sĩ.
 
-Xu hướng sau 2020 được nhiều luật sư nhận định là tòa Mỹ thận trọng hơn với việc bảo hộ các yếu tố âm nhạc phổ biến (vòng hợp âm, tiết tấu cơ bản) – xem thêm cách phân tích [[phan-tich-hoa-am|hòa âm]] và [[giai-dieu|giai điệu]] trong các bản giám định.
+Xu hướng sau 2020 được nhiều luật sư nhận định là toà Mỹ thận trọng hơn với việc bảo hộ các yếu tố âm nhạc phổ biến (vòng hợp âm, tiết tấu cơ bản) – xem thêm cách phân tích [[phan-tich-hoa-am|hoà âm]] và [[giai-dieu|giai điệu]] trong các bản giám định.
 
 ## Nguồn và độ tin cậy
-Nội dung điều ước dựa trên tóm tắt chính thức của WIPO; diễn giải phép thử ba bước còn tranh luận học thuật. Các vụ kiện dẫn theo báo chí và bản tin luật sư; chi tiết số tiền ở vụ Blurred Lines khác nhau đôi chút giữa các nguồn tùy thời điểm (phán quyết bồi thẩm, sau giảm, phán quyết cuối).
+Nội dung điều ước dựa trên tóm tắt chính thức của WIPO; diễn giải phép thử ba bước còn tranh luận học thuật. Các vụ kiện dẫn theo báo chí và bản tin luật sư; chi tiết số tiền ở vụ Blurred Lines khác nhau đôi chút giữa các nguồn tuỳ thời điểm (phán quyết bồi thẩm, sau giảm, phán quyết cuối).
 
 Xem thêm: [[ban-quyen-am-nhac-viet-nam]], [[to-chuc-quan-ly-tap-the-quyen-tac-gia]], [[vi-pham-ban-quyen-va-chia-se-tep]], [[am-nhac-hoc-ky-thuat-so]].
 `,
@@ -1546,18 +1546,18 @@ Xem thêm: [[ban-quyen-am-nhac-viet-nam]], [[to-chuc-quan-ly-tap-the-quyen-tac-g
     ],
     body: `
 ## Vì sao cần quản lý tập thể
-Một bài hát có thể được phát cùng lúc ở hàng nghìn quán cà phê, đài phát thanh, sân khấu và ứng dụng. Nhạc sĩ không thể tự ký hợp đồng với từng người dùng, và người dùng cũng không thể xin phép từng nhạc sĩ. **Tổ chức quản lý tập thể** (collective management organization – CMO; ở Mỹ thường gọi là *performing rights organization* – PRO) giải bài toán này: nhận ủy quyền từ hàng nghìn tác giả, cấp **giấy phép trọn gói** (blanket licence) cho phép người dùng sử dụng toàn bộ kho tác phẩm với một mức phí, rồi phân chia tiền theo dữ liệu sử dụng. Đây là một mắt xích trung tâm của [[cong-nghiep-am-nhac]] và của khung pháp lý mô tả ở [[ban-quyen-am-nhac-quoc-te]].
+Một bài hát có thể được phát cùng lúc ở hàng nghìn quán cà phê, đài phát thanh, sân khấu và ứng dụng. Nhạc sĩ không thể tự ký hợp đồng với từng người dùng, và người dùng cũng không thể xin phép từng nhạc sĩ. **Tổ chức quản lý tập thể** (collective management organization – CMO; ở Mỹ thường gọi là *performing rights organization* – PRO) giải bài toán này: nhận uỷ quyền từ hàng nghìn tác giả, cấp **giấy phép trọn gói** (blanket licence) cho phép người dùng sử dụng toàn bộ kho tác phẩm với một mức phí, rồi phân chia tiền theo dữ liệu sử dụng. Đây là một mắt xích trung tâm của [[cong-nghiep-am-nhac]] và của khung pháp lý mô tả ở [[ban-quyen-am-nhac-quoc-te]].
 
 ## Lịch sử: từ quán cà phê Paris tới Hollywood
 - **SACEM (Pháp)**: theo giai thoại phổ biến, năm 1847 các nhạc sĩ Ernest Bourget, Paul Henrion và Victor Parizot từ chối trả tiền đồ uống tại quán café-concert Les Ambassadeurs vì quán biểu diễn nhạc của họ mà không trả tiền. Họ thắng kiện, và năm 1850–1851 thành lập hội thu phí mà sau thành SACEM – thường được coi là tổ chức quản lý tập thể âm nhạc đầu tiên. Một số nghiên cứu gần đây cho rằng vụ kiện thực tế liên quan đến một quán khác (Café Morel), nên chi tiết giai thoại *chưa thống nhất*.
 - **ASCAP (Mỹ, 1914)**: thành lập tại New York, với nhà soạn nhạc Victor Herbert trong nhóm sáng lập, nhằm thực thi quyền biểu diễn công cộng theo Luật Bản quyền 1909.
-- **BMI (Mỹ, 1939)**: các đài phát thanh thuộc Hiệp hội Phát thanh Quốc gia (NAB), bất bình vì ASCAP liên tục tăng phí, lập ra BMI làm đối thủ. BMI mở cửa cho các nhạc sĩ country, blues… vốn bị ASCAP gạt ra, góp phần đưa các dòng nhạc này lên sóng. Cả hai chịu sự giám sát chống độc quyền của Bộ Tư pháp Mỹ qua các "consent decree" (thỏa thuận dưới sự giám sát của tòa, được sửa đổi nhiều lần).
+- **BMI (Mỹ, 1939)**: các đài phát thanh thuộc Hiệp hội Phát thanh Quốc gia (NAB), bất bình vì ASCAP liên tục tăng phí, lập ra BMI làm đối thủ. BMI mở cửa cho các nhạc sĩ country, blues… vốn bị ASCAP gạt ra, góp phần đưa các dòng nhạc này lên sóng. Cả hai chịu sự giám sát chống độc quyền của Bộ Tư pháp Mỹ qua các "consent decree" (thoả thuận dưới sự giám sát của toà, được sửa đổi nhiều lần).
 - Các tổ chức lớn khác: **PRS for Music** (Anh), **GEMA** (Đức), **JASRAC** (Nhật Bản), **KOMCA** (Hàn Quốc).
 
 ::timeline 1851=SACEM 1914=ASCAP 1926=CISAC 1939=BMI 2002=VCPMC | Một số mốc ra đời của tổ chức quản lý tập thể
 
 ## CISAC và quy mô toàn cầu
-**CISAC** (Liên đoàn quốc tế các hội tác giả và nhà soạn nhạc, thành lập 1926) là mạng lưới của các CMO trên thế giới, giúp tiền bản quyền chảy qua biên giới bằng các thỏa thuận đại diện song phương. Theo *Global Collections Report 2025* (số liệu năm 2024), tổng thu của các hội thành viên đạt **13,97 tỷ euro**, trong đó âm nhạc chiếm khoảng 90% với **12,59 tỷ euro** (+7,2%). Mảng số lần đầu vượt 5 tỷ euro, trở thành nguồn lớn nhất.
+**CISAC** (Liên đoàn quốc tế các hội tác giả và nhà soạn nhạc, thành lập 1926) là mạng lưới của các CMO trên thế giới, giúp tiền bản quyền chảy qua biên giới bằng các thoả thuận đại diện song phương. Theo *Global Collections Report 2025* (số liệu năm 2024), tổng thu của các hội thành viên đạt **13,97 tỷ euro**, trong đó âm nhạc chiếm khoảng 90% với **12,59 tỷ euro** (+7,2%). Mảng số lần đầu vượt 5 tỷ euro, trở thành nguồn lớn nhất.
 
 ::bars Mỹ_và_Canada=27.9 Châu_Á–Thái_Bình_Dương=14.6 Mỹ_Latinh=5.7 Châu_Phi=0.6 max=30 | Tỷ trọng (%) thu bản quyền âm nhạc toàn cầu năm 2024 theo vùng, theo CISAC (phần còn lại chủ yếu là châu Âu)
 
@@ -1569,14 +1569,14 @@ Một bài hát có thể được phát cùng lúc ở hàng nghìn quán cà p
 | Quyền liên quan của bản ghi | Phát bản thu tại nơi công cộng | Hội của nhà sản xuất (PPL ở Anh, RIAV ở Việt Nam) |
 
 ## Tranh cãi tiêu biểu: JASRAC và lớp học nhạc
-Năm 2017, JASRAC thông báo thu phí với các trường dạy nhạc. Khoảng 250 doanh nghiệp, trong đó có Yamaha, khởi kiện. Tòa án Sở hữu trí tuệ cấp cao (2021) phân định: phần **giáo viên** biểu diễn trong lớp phải trả phí, còn phần **học viên** chơi để luyện kỹ năng dưới sự hướng dẫn thì không. Tòa án Tối cao Nhật Bản giữ nguyên phần về giáo viên (7/2022) và bác kháng cáo của JASRAC về học viên (24/10/2022). Vụ này đáng chú ý với giáo viên piano: ranh giới giữa "dạy học" và "biểu diễn công cộng" được xác định qua án lệ chứ không hiển nhiên.
+Năm 2017, JASRAC thông báo thu phí với các trường dạy nhạc. Khoảng 250 doanh nghiệp, trong đó có Yamaha, khởi kiện. Toà án Sở hữu trí tuệ cấp cao (2021) phân định: phần **giáo viên** biểu diễn trong lớp phải trả phí, còn phần **học viên** chơi để luyện kỹ năng dưới sự hướng dẫn thì không. Toà án Tối cao Nhật Bản giữ nguyên phần về giáo viên (7/2022) và bác kháng cáo của JASRAC về học viên (24/10/2022). Vụ này đáng chú ý với giáo viên piano: ranh giới giữa "dạy học" và "biểu diễn công cộng" được xác định qua án lệ chứ không hiển nhiên.
 
 ## Tại Việt Nam: VCPMC và RIAV
 **VCPMC** (Trung tâm Bảo vệ quyền tác giả âm nhạc Việt Nam) thành lập ngày 19/4/2002, do nhạc sĩ Phó Đức Phương làm giám đốc. Theo báo Tiền Phong, năm đầu tiên trung tâm thu khoảng 78 triệu đồng với 274 thành viên; tổng thu 20 năm (2002–2021) khoảng 1.063 tỷ đồng. Năm 2023 VCPMC thu hơn 344 tỷ đồng (chưa VAT), trong đó hơn 260 tỷ từ website và ứng dụng âm nhạc, đã phân phối hơn 305 tỷ và tiến hành 34 vụ kiện xâm phạm; năm 2024 thu hơn 393 tỷ đồng (+14,2%).
 
 ::bars 2023=344 2024=393 max=400 | Tiền bản quyền VCPMC thu (tỷ đồng), theo VOV và VTC News
 
-**RIAV** (Hiệp hội Công nghiệp ghi âm Việt Nam) là tổ chức đại diện quyền liên quan của nhà sản xuất bản ghi âm, ghi hình. Năm 2017 kế hoạch thu 2.000 đồng mỗi bài trên mỗi đầu karaoke gây phản ứng mạnh trên báo chí; cùng năm VCPMC, RIAV và APPA ký thỏa thuận để VCPMC thay mặt đàm phán và thu, còn RIAV phân phối phần bản ghi. Báo chí sau đó phản ánh việc thực hiện thỏa thuận chưa suôn sẻ. Chi tiết luật pháp trong nước xem [[ban-quyen-am-nhac-viet-nam]].
+**RIAV** (Hiệp hội Công nghiệp ghi âm Việt Nam) là tổ chức đại diện quyền liên quan của nhà sản xuất bản ghi âm, ghi hình. Năm 2017 kế hoạch thu 2.000 đồng mỗi bài trên mỗi đầu karaoke gây phản ứng mạnh trên báo chí; cùng năm VCPMC, RIAV và APPA ký thoả thuận để VCPMC thay mặt đàm phán và thu, còn RIAV phân phối phần bản ghi. Báo chí sau đó phản ánh việc thực hiện thoả thuận chưa suôn sẻ. Chi tiết luật pháp trong nước xem [[ban-quyen-am-nhac-viet-nam]].
 
 ## Phê bình và độ tin cậy
 Các CMO thường bị chỉ trích về tính minh bạch phân phối, chi phí quản lý và vị thế độc quyền tự nhiên; ngược lại, không có chúng, người sáng tác nhỏ gần như không thể thu tiền từ sử dụng công cộng. Số liệu CISAC là số do các hội thành viên báo cáo, quy đổi theo euro nên phụ thuộc tỷ giá; số liệu VCPMC là số tự công bố, chưa có kiểm toán độc lập được trích dẫn rộng rãi.
@@ -1630,7 +1630,7 @@ VCPMC (thành lập 2002) là kênh thu chính cho nhạc sĩ. Năm 2023 trung t
 Hiện tượng này cho thấy dòng tiền của ngành dịch chuyển mạnh sang biểu diễn trực tiếp và mô hình "fandom" – một phần học hỏi từ [[mo-hinh-cong-nghiep-k-pop]].
 
 ## Vi phạm và tranh chấp trên nền tảng số
-Ngoài nạn nghe nhạc lậu, vấn đề nổi bật là **lạm dụng Content ID của YouTube**. Báo Sài Gòn Giải Phóng ghi nhận một số đơn vị "đi trước một bước" đăng ký sở hữu tác phẩm không thuộc về mình qua Content ID; cả các tác phẩm dân gian như quan họ "Giã bạn" hay vở cải lương "Tiếng trống Mê Linh" cũng bị báo cáo vi phạm. VnExpress phân tích rằng các mạng đa kênh (MCN) gom ủy quyền của nghệ sĩ khiến nhiều người mất quyền kiểm soát sản phẩm của chính mình, còn khiếu nại phải xử lý thủ công từng video và có thể kéo dài hàng tháng. Năm 2021, MV "Chúng ta của hiện tại" (Sơn Tùng M-TP) từng bị gỡ khỏi YouTube một ngày do khiếu nại bản quyền rồi được khôi phục. Khung pháp lý trong nước xem [[ban-quyen-am-nhac-viet-nam]].
+Ngoài nạn nghe nhạc lậu, vấn đề nổi bật là **lạm dụng Content ID của YouTube**. Báo Sài Gòn Giải Phóng ghi nhận một số đơn vị "đi trước một bước" đăng ký sở hữu tác phẩm không thuộc về mình qua Content ID; cả các tác phẩm dân gian như quan họ "Giã bạn" hay vở cải lương "Tiếng trống Mê Linh" cũng bị báo cáo vi phạm. VnExpress phân tích rằng các mạng đa kênh (MCN) gom uỷ quyền của nghệ sĩ khiến nhiều người mất quyền kiểm soát sản phẩm của chính mình, còn khiếu nại phải xử lý thủ công từng video và có thể kéo dài hàng tháng. Năm 2021, MV "Chúng ta của hiện tại" (Sơn Tùng M-TP) từng bị gỡ khỏi YouTube một ngày do khiếu nại bản quyền rồi được khôi phục. Khung pháp lý trong nước xem [[ban-quyen-am-nhac-viet-nam]].
 
 ::timeline 2002=VCPMC_thành_lập 2007=Zing_MP3_và_NhacCuaTui 2018=Spotify_vào_Việt_Nam 2023=BLACKPINK_ở_Mỹ_Đình 2024=Concert_Anh_trai 2025=Official_Vietnam_Chart | Một số mốc của thị trường âm nhạc Việt Nam
 
@@ -1644,8 +1644,8 @@ Xem thêm: [[vpop-rap-viet]], [[ban-quyen-am-nhac-viet-nam]], [[nghien-cuu-am-nh
     slug: "mo-hinh-cong-nghiep-k-pop",
     title: "Mô hình công nghiệp K-pop",
     category: 'musicology',
-    aliases: ["công nghiệp K-pop", "K-pop industry", "hệ thống thực tập sinh", "idol trainee system", "cultural technology", "công nghệ văn hóa", "kinh tế fandom", "HYBE", "SM Entertainment", "JYP Entertainment", "YG Entertainment", "hợp đồng nô lệ"],
-    summary: "Cách ngành nhạc pop Hàn Quốc sản xuất thần tượng: hệ thống đào tạo thực tập sinh, các công ty lớn (HYBE, SM, JYP, YG), kinh tế fandom và album vật lý, chiến lược toàn cầu hóa, cùng các phê phán về hợp đồng và quy định của Ủy ban Thương mại Công bằng Hàn Quốc.",
+    aliases: ["công nghiệp K-pop", "K-pop industry", "hệ thống thực tập sinh", "idol trainee system", "cultural technology", "công nghệ văn hoá", "kinh tế fandom", "HYBE", "SM Entertainment", "JYP Entertainment", "YG Entertainment", "hợp đồng nô lệ"],
+    summary: "Cách ngành nhạc pop Hàn Quốc sản xuất thần tượng: hệ thống đào tạo thực tập sinh, các công ty lớn (HYBE, SM, JYP, YG), kinh tế fandom và album vật lý, chiến lược toàn cầu hoá, cùng các phê phán về hợp đồng và quy định của Uỷ ban Thương mại Công bằng Hàn Quốc.",
     refs: [
       ["Wikipedia – Korean idol", "https://en.wikipedia.org/wiki/Korean_idol"],
       ["Wikipedia – Cultural technology", "https://en.wikipedia.org/wiki/Cultural_technology"],
@@ -1658,10 +1658,10 @@ Xem thêm: [[vpop-rap-viet]], [[ban-quyen-am-nhac-viet-nam]], [[nghien-cuu-am-nh
     ],
     body: `
 ## Một ngành được thiết kế như dây chuyền
-K-pop không chỉ là một thể loại mà là một **mô hình kinh doanh tích hợp dọc**: công ty quản lý (thường gọi "agency") tuyển chọn thiếu niên, đào tạo nhiều năm, ghép nhóm, sản xuất nhạc, MV, vũ đạo, quản lý hình ảnh, bán album, hàng hóa và vé concert. Mô hình này ảnh hưởng rõ đến thị trường Đông Nam Á, kể cả [[cong-nghiep-am-nhac-viet-nam]], và là chủ đề nghiên cứu của [[nghien-cuu-am-nhac-dai-chung]].
+K-pop không chỉ là một thể loại mà là một **mô hình kinh doanh tích hợp dọc**: công ty quản lý (thường gọi "agency") tuyển chọn thiếu niên, đào tạo nhiều năm, ghép nhóm, sản xuất nhạc, MV, vũ đạo, quản lý hình ảnh, bán album, hàng hoá và vé concert. Mô hình này ảnh hưởng rõ đến thị trường Đông Nam Á, kể cả [[cong-nghiep-am-nhac-viet-nam]], và là chủ đề nghiên cứu của [[nghien-cuu-am-nhac-dai-chung]].
 
-## Nguồn gốc: SM và "công nghệ văn hóa"
-Lee Soo-man thành lập **SM Entertainment** năm 1995, mô phỏng công ty Johnny & Associates của Nhật Bản và hệ thống đào tạo nghệ sĩ có kế hoạch của ngành thần tượng Nhật. Trong một buổi nói chuyện tại Trường Kinh doanh Stanford năm 2011, Lee cho biết ông đặt ra thuật ngữ **"công nghệ văn hóa"** (cultural technology) khoảng mười bốn năm trước đó, khi SM quyết định đưa nghệ sĩ ra khắp châu Á. Theo một bài của tạp chí The New Yorker, nhân viên SM được yêu cầu học một cuốn cẩm nang quy định khi nào mời nhạc sĩ nước ngoài, cách điều chỉnh màn trình diễn theo từng quốc gia… Theo một con số do Wall Street Journal đưa ra (dẫn lại qua Wikipedia), chi phí đào tạo một thần tượng ở SM có thể lên tới khoảng 3 triệu USD – con số nên coi là ước tính.
+## Nguồn gốc: SM và "công nghệ văn hoá"
+Lee Soo-man thành lập **SM Entertainment** năm 1995, mô phỏng công ty Johnny & Associates của Nhật Bản và hệ thống đào tạo nghệ sĩ có kế hoạch của ngành thần tượng Nhật. Trong một buổi nói chuyện tại Trường Kinh doanh Stanford năm 2011, Lee cho biết ông đặt ra thuật ngữ **"công nghệ văn hoá"** (cultural technology) khoảng mười bốn năm trước đó, khi SM quyết định đưa nghệ sĩ ra khắp châu Á. Theo một bài của tạp chí The New Yorker, nhân viên SM được yêu cầu học một cuốn cẩm nang quy định khi nào mời nhạc sĩ nước ngoài, cách điều chỉnh màn trình diễn theo từng quốc gia… Theo một con số do Wall Street Journal đưa ra (dẫn lại qua Wikipedia), chi phí đào tạo một thần tượng ở SM có thể lên tới khoảng 3 triệu USD – con số nên coi là ước tính.
 
 ## Hệ thống thực tập sinh
 Thực tập sinh (trainee) học thanh nhạc, vũ đạo, ngoại ngữ, kỹ năng truyền thông trong nhiều tháng đến nhiều năm, thường xuyên qua các kỳ đánh giá loại trừ. Công ty ứng trước chi phí đào tạo, sau đó khấu trừ vào thu nhập của nghệ sĩ khi ra mắt – nguyên nhân chính của các tranh chấp hợp đồng. Bốn công ty thường được gọi là "big 4":
@@ -1674,24 +1674,24 @@ Thực tập sinh (trainee) học thanh nhạc, vũ đạo, ngoại ngữ, kỹ 
 
 ## Kinh tế fandom
 Doanh thu K-pop dựa nhiều vào người hâm mộ trung thành hơn là người nghe đại trà:
-- **Album vật lý**: theo dữ liệu Circle Chart, năm 2023 Hàn Quốc lần đầu vượt **100 triệu album** bán ra (tháng 10/2023); cả năm khoảng 115–119 triệu tùy nguồn và cách tính. SEVENTEEN dẫn đầu với hơn 16 triệu bản. Năm 2024 giảm còn khoảng 93 triệu (giảm hơn 19%) – nhiều nhà báo gọi là "bong bóng album vỡ". Động lực được nêu là ưu đãi mua hàng (thẻ ảnh ngẫu nhiên, vé fansign) khiến một người mua nhiều bản cùng album.
-- **Concert và hàng hóa**: năm 2024 HYBE đạt doanh thu 2.255 tỷ won (+3,5%), doanh thu concert cao nhất lịch sử công ty, doanh thu hàng hóa và cấp phép kỷ lục 420 tỷ won (+29,1%), dù lợi nhuận hoạt động giảm 37,5% khi BTS tạm dừng hoạt động nhóm do nghĩa vụ quân sự.
+- **Album vật lý**: theo dữ liệu Circle Chart, năm 2023 Hàn Quốc lần đầu vượt **100 triệu album** bán ra (tháng 10/2023); cả năm khoảng 115–119 triệu tuỳ nguồn và cách tính. SEVENTEEN dẫn đầu với hơn 16 triệu bản. Năm 2024 giảm còn khoảng 93 triệu (giảm hơn 19%) – nhiều nhà báo gọi là "bong bóng album vỡ". Động lực được nêu là ưu đãi mua hàng (thẻ ảnh ngẫu nhiên, vé fansign) khiến một người mua nhiều bản cùng album.
+- **Concert và hàng hoá**: năm 2024 HYBE đạt doanh thu 2.255 tỷ won (+3,5%), doanh thu concert cao nhất lịch sử công ty, doanh thu hàng hoá và cấp phép kỷ lục 420 tỷ won (+29,1%), dù lợi nhuận hoạt động giảm 37,5% khi BTS tạm dừng hoạt động nhóm do nghĩa vụ quân sự.
 
 ::bars 2023=115.7 2024=93 max=120 | Số album bán tại Hàn Quốc (triệu bản, top 400 Circle Chart) theo Music Business Worldwide
 
-## Toàn cầu hóa
-Chiến lược quốc tế gồm thành viên người nước ngoài (Nhật, Trung, Thái…), sáng tác chung với nhạc sĩ châu Âu – Mỹ, phát hành phiên bản tiếng Nhật, Anh, và gần đây là lập nhóm "bản địa hóa" ở nước khác (ví dụ HYBE đầu tư vào Mỹ Latinh). Mốc lớn: ngày 31/8/2020, "Dynamite" của BTS ra mắt ở vị trí số 1 Billboard Hot 100 – lần đầu tiên một nghệ sĩ toàn người Hàn Quốc đứng đầu bảng này (PSY từng dừng ở hạng 2 với "Gangnam Style" năm 2012).
+## Toàn cầu hoá
+Chiến lược quốc tế gồm thành viên người nước ngoài (Nhật, Trung, Thái…), sáng tác chung với nhạc sĩ châu Âu – Mỹ, phát hành phiên bản tiếng Nhật, Anh, và gần đây là lập nhóm "bản địa hoá" ở nước khác (ví dụ HYBE đầu tư vào Mỹ Latinh). Mốc lớn: ngày 31/8/2020, "Dynamite" của BTS ra mắt ở vị trí số 1 Billboard Hot 100 – lần đầu tiên một nghệ sĩ toàn người Hàn Quốc đứng đầu bảng này (PSY từng dừng ở hạng 2 với "Gangnam Style" năm 2012).
 
 ::timeline 1995=SM_thành_lập 2009=KFTC_ban_hành_hợp_đồng_mẫu 2012=Gangnam_Style 2017=KFTC_yêu_cầu_sửa_hợp_đồng_thực_tập_sinh 2020=BTS_số_1_Hot_100 2023=Hơn_100_triệu_album 2025=Phán_quyết_NewJeans–ADOR | Các mốc của mô hình K-pop
 
 ## Phê phán và điều chỉnh pháp lý
-- **"Hợp đồng nô lệ"**: năm 2008 các thành viên TVXQ kiện SM về hợp đồng 13 năm. Tháng 7/2009, **Ủy ban Thương mại Công bằng Hàn Quốc (KFTC)** ban hành hợp đồng độc quyền mẫu, giới hạn thời hạn tối đa **7 năm** và bỏ yêu cầu nghệ sĩ báo cáo vị trí cho công ty. Một giáo sư luật được Korea Times dẫn lời chê quy định vẫn quá có lợi cho công ty vì để ngỏ việc chia lợi nhuận. Một số nguồn ghi năm 2010 cho quy tắc 7 năm – *chưa thống nhất*.
+- **"Hợp đồng nô lệ"**: năm 2008 các thành viên TVXQ kiện SM về hợp đồng 13 năm. Tháng 7/2009, **Uỷ ban Thương mại Công bằng Hàn Quốc (KFTC)** ban hành hợp đồng độc quyền mẫu, giới hạn thời hạn tối đa **7 năm** và bỏ yêu cầu nghệ sĩ báo cáo vị trí cho công ty. Một giáo sư luật được Korea Times dẫn lời chê quy định vẫn quá có lợi cho công ty vì để ngỏ việc chia lợi nhuận. Một số nguồn ghi năm 2010 cho quy tắc 7 năm – *chưa thống nhất*.
 - **Thực tập sinh**: năm 2017 KFTC yêu cầu các công ty quản lý sửa điều khoản bất công trong hợp đồng thực tập sinh, trong đó có việc giảm mức phạt khi chấm dứt sớm.
-- **Tranh chấp quyền lực công ty – nghệ sĩ**: năm 2023 các thành viên EXO cáo buộc hợp đồng vượt quá thời hạn khuyến nghị; SM phản bác. Năm 2024–2025, nhóm NewJeans tìm cách chấm dứt hợp đồng với ADOR (công ty con của HYBE) sau khi giám đốc Min Hee-jin bị bãi nhiệm; ngày 30/10/2025 Tòa án Quận Trung tâm Seoul phán quyết hợp đồng vẫn có hiệu lực, và các thành viên sau đó tuyên bố tôn trọng phán quyết.
-- Các phê phán khác (sức khỏe tâm thần, kiểm soát đời tư, chuẩn ngoại hình) được báo chí và giới nghiên cứu nêu nhiều nhưng khó định lượng.
+- **Tranh chấp quyền lực công ty – nghệ sĩ**: năm 2023 các thành viên EXO cáo buộc hợp đồng vượt quá thời hạn khuyến nghị; SM phản bác. Năm 2024–2025, nhóm NewJeans tìm cách chấm dứt hợp đồng với ADOR (công ty con của HYBE) sau khi giám đốc Min Hee-jin bị bãi nhiệm; ngày 30/10/2025 Toà án Quận Trung tâm Seoul phán quyết hợp đồng vẫn có hiệu lực, và các thành viên sau đó tuyên bố tôn trọng phán quyết.
+- Các phê phán khác (sức khoẻ tâm thần, kiểm soát đời tư, chuẩn ngoại hình) được báo chí và giới nghiên cứu nêu nhiều nhưng khó định lượng.
 
 ## Nguồn và độ tin cậy
-Số liệu tài chính lấy từ báo cáo doanh nghiệp qua báo chí; số album khác nhau tùy phạm vi bảng xếp hạng. Phần lịch sử dựa nhiều vào báo chí và bách khoa trực tuyến; nghiên cứu học thuật về K-pop rất phong phú nhưng không được trích trực tiếp ở đây.
+Số liệu tài chính lấy từ báo cáo doanh nghiệp qua báo chí; số album khác nhau tuỳ phạm vi bảng xếp hạng. Phần lịch sử dựa nhiều vào báo chí và bách khoa trực tuyến; nghiên cứu học thuật về K-pop rất phong phú nhưng không được trích trực tiếp ở đây.
 
 Xem thêm: [[cong-nghiep-am-nhac]], [[xa-hoi-hoc-am-nhac]], [[nghien-cuu-am-nhac-dai-chung]].
 `,
@@ -1719,18 +1719,18 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[xa-hoi-hoc-am-nhac]], [[nghien-cuu-am-nhac
 ## Napster (1999–2001)
 Napster ra mắt tháng 6/1999, do Shawn Fanning và Sean Parker sáng lập. Dịch vụ dùng máy chủ trung tâm để lập chỉ mục các tệp MP3 nằm trên máy người dùng, rồi cho các máy kết nối trực tiếp với nhau (ngang hàng – peer-to-peer). Hiệp hội Công nghiệp Ghi âm Mỹ (RIAA) khởi kiện tháng 12/1999. Lúc đỉnh cao, khoảng đầu năm 2001, Napster có khoảng **80 triệu người dùng đăng ký** (các nguồn lệch nhau về tháng).
 
-Trong vụ ***A&M Records v. Napster*** (239 F.3d 1004), tháng 2/2001 Tòa phúc thẩm Khu vực 9 nhất trí rằng Napster có thể chịu trách nhiệm **gián tiếp** (contributory và vicarious infringement) cho hành vi của người dùng, bác lập luận "sử dụng hợp lý", và giữ lệnh buộc Napster lọc nội dung. Lệnh cấm chính thức được ban hành ngày 5/3/2001; ngày 1/7/2001 Napster tắt toàn bộ mạng lưới, nộp đơn phá sản tháng 6/2002. Thương hiệu sau đó được bán lại và dùng cho một dịch vụ trả phí.
+Trong vụ ***A&M Records v. Napster*** (239 F.3d 1004), tháng 2/2001 Toà phúc thẩm Khu vực 9 nhất trí rằng Napster có thể chịu trách nhiệm **gián tiếp** (contributory và vicarious infringement) cho hành vi của người dùng, bác lập luận "sử dụng hợp lý", và giữ lệnh buộc Napster lọc nội dung. Lệnh cấm chính thức được ban hành ngày 5/3/2001; ngày 1/7/2001 Napster tắt toàn bộ mạng lưới, nộp đơn phá sản tháng 6/2002. Thương hiệu sau đó được bán lại và dùng cho một dịch vụ trả phí.
 
 ## Thế hệ sau: phi tập trung và BitTorrent
-Bài học từ Napster là máy chủ trung tâm khiến dịch vụ dễ bị kiện. Các mạng tiếp theo (Gnutella, Kazaa, Grokster, LimeWire) phân tán chỉ mục. Năm 2005, trong vụ ***MGM v. Grokster***, Tối cao Pháp viện Mỹ nhất trí tạo ra trách nhiệm **"xúi giục vi phạm"** (inducement): người phân phối một công cụ với mục đích khuyến khích dùng nó để vi phạm, thể hiện qua phát ngôn hoặc hành động cụ thể, phải chịu trách nhiệm cho vi phạm của người dùng; đồng thời án lệ Sony Betamax (1984) về công nghệ có công dụng hợp pháp đáng kể vẫn được giữ. **BitTorrent** (giao thức do Bram Cohen công bố năm 2001) chia tệp thành mảnh tải song song từ nhiều người, trở thành phương tiện chia sẻ chủ đạo cuối thập niên 2000. Từ 2003 RIAA còn kiện hàng nghìn cá nhân, trong đó vụ Jammie Thomas là phiên tòa bồi thẩm đoàn nổi tiếng nhất – chiến lược gây tranh cãi về hình ảnh.
+Bài học từ Napster là máy chủ trung tâm khiến dịch vụ dễ bị kiện. Các mạng tiếp theo (Gnutella, Kazaa, Grokster, LimeWire) phân tán chỉ mục. Năm 2005, trong vụ ***MGM v. Grokster***, Tối cao Pháp viện Mỹ nhất trí tạo ra trách nhiệm **"xúi giục vi phạm"** (inducement): người phân phối một công cụ với mục đích khuyến khích dùng nó để vi phạm, thể hiện qua phát ngôn hoặc hành động cụ thể, phải chịu trách nhiệm cho vi phạm của người dùng; đồng thời án lệ Sony Betamax (1984) về công nghệ có công dụng hợp pháp đáng kể vẫn được giữ. **BitTorrent** (giao thức do Bram Cohen công bố năm 2001) chia tệp thành mảnh tải song song từ nhiều người, trở thành phương tiện chia sẻ chủ đạo cuối thập niên 2000. Từ 2003 RIAA còn kiện hàng nghìn cá nhân, trong đó vụ Jammie Thomas là phiên toà bồi thẩm đoàn nổi tiếng nhất – chiến lược gây tranh cãi về hình ảnh.
 
 ## Lối thoát hợp pháp: iTunes rồi streaming
-Ngày 28/4/2003 Apple mở **iTunes Music Store** với khoảng 200.000 bài từ năm hãng lớn, giá 99 cent một bài, không thuê bao; theo Apple, tuần đầu bán hơn một triệu bài. iTunes chứng minh người dùng sẵn sàng trả tiền nếu việc mua tiện hơn việc tải lậu, nhưng cũng "tách" album thành đĩa đơn, làm giảm doanh thu trên mỗi người. Giai đoạn sau 2008, streaming (Spotify ra mắt tại Thụy Điển năm 2008) mới thực sự đảo chiều.
+Ngày 28/4/2003 Apple mở **iTunes Music Store** với khoảng 200.000 bài từ năm hãng lớn, giá 99 cent một bài, không thuê bao; theo Apple, tuần đầu bán hơn một triệu bài. iTunes chứng minh người dùng sẵn sàng trả tiền nếu việc mua tiện hơn việc tải lậu, nhưng cũng "tách" album thành đĩa đơn, làm giảm doanh thu trên mỗi người. Giai đoạn sau 2008, streaming (Spotify ra mắt tại Thuỵ Điển năm 2008) mới thực sự đảo chiều.
 
 ::timeline 1999=Napster_ra_mắt 2001=A&M_v._Napster;_Napster_đóng_cửa 2003=iTunes_Store 2005=MGM_v._Grokster 2008=Spotify 2014=Đáy_doanh_thu_toàn_cầu 2024=Doanh_thu_29,6_tỷ_USD | Từ chia sẻ tệp đến streaming
 
 ## Doanh thu: sụp đổ và phục hồi
-Số liệu khác nhau tùy cách đo (giá bán lẻ hay giá bán buôn, có điều chỉnh lạm phát hay không), nên cần đọc kèm nguồn:
+Số liệu khác nhau tuỳ cách đo (giá bán lẻ hay giá bán buôn, có điều chỉnh lạm phát hay không), nên cần đọc kèm nguồn:
 - **Mỹ**: theo dữ liệu RIAA được Digital Music News tổng hợp (nguồn không nói rõ có điều chỉnh lạm phát hay không), doanh thu ghi âm Mỹ vượt 22,4 tỷ USD năm 1999, giảm liên tục tới 2014; năm 2019 chỉ khoảng 11,1 tỷ USD – chưa bằng một nửa đỉnh. Một số nguồn khác ghi đỉnh 1999 khoảng 14,6–15 tỷ USD (giá danh nghĩa).
 - **Toàn cầu (IFPI, giá bán buôn)**: báo cáo IFPI năm 2015 ghi doanh thu 2014 là 14,97 tỷ USD; các báo cáo sau điều chỉnh lại chuỗi số và gọi đây là mức đáy khoảng 13 tỷ USD. Năm 2024 doanh thu đạt **29,6 tỷ USD** (+4,8%), năm tăng thứ 10 liên tiếp, streaming chiếm 69% (20,4 tỷ USD); năm 2025 đạt 31,7 tỷ USD.
 
@@ -1763,24 +1763,24 @@ Xem thêm: [[ban-quyen-am-nhac-quoc-te]], [[nghien-cuu-am-nhac-dai-chung]], [[am
     ],
     body: `
 ## Người nghe như một đối tượng nghiên cứu
-Phần lớn lịch sử lý luận âm nhạc tập trung vào tác phẩm và người sáng tác. **Tâm lý người nghe** đảo trọng tâm: điều gì xảy ra trong đầu và trong đời sống của người nghe khi họ chọn, nghe, nhớ và yêu thích một bản nhạc. Đây là một nhánh của [[tam-ly-hoc-am-nhac]], giao thoa với [[than-kinh-hoc-am-nhac]] (cơ chế não), [[xa-hoi-hoc-am-nhac]] (bối cảnh xã hội) và [[dan-toc-nhac-hoc]] (sự khác biệt văn hóa).
+Phần lớn lịch sử lý luận âm nhạc tập trung vào tác phẩm và người sáng tác. **Tâm lý người nghe** đảo trọng tâm: điều gì xảy ra trong đầu và trong đời sống của người nghe khi họ chọn, nghe, nhớ và yêu thích một bản nhạc. Đây là một nhánh của [[tam-ly-hoc-am-nhac]], giao thoa với [[than-kinh-hoc-am-nhac]] (cơ chế não), [[xa-hoi-hoc-am-nhac]] (bối cảnh xã hội) và [[dan-toc-nhac-hoc]] (sự khác biệt văn hoá).
 
 Một điểm cần nhớ: phần lớn dữ liệu trong lĩnh vực này đến từ mẫu người nghe phương Tây, thường là sinh viên đại học, và dựa nhiều vào tự báo cáo. Khi áp dụng cho người nghe Việt Nam, nên coi các kết luận là giả thuyết cần kiểm chứng hơn là quy luật phổ quát.
 
 ## Chúng ta nghe nhạc để làm gì?
 ### Từ nhân học: mười chức năng của Merriam
-Nhà dân tộc nhạc học Alan P. Merriam, trong *The Anthropology of Music* (1964), phân biệt **cách dùng** (uses – tình huống âm nhạc được sử dụng) với **chức năng** (functions – mục đích sâu hơn mà nó phục vụ). Ông liệt kê mười chức năng kinh điển: biểu hiện cảm xúc, thưởng thức thẩm mỹ, giải trí, giao tiếp, biểu trưng, phản ứng thể chất, củng cố chuẩn mực xã hội, xác nhận thiết chế và nghi lễ, duy trì sự liên tục văn hóa, và gắn kết xã hội.
+Nhà dân tộc nhạc học Alan P. Merriam, trong *The Anthropology of Music* (1964), phân biệt **cách dùng** (uses – tình huống âm nhạc được sử dụng) với **chức năng** (functions – mục đích sâu hơn mà nó phục vụ). Ông liệt kê mười chức năng kinh điển: biểu hiện cảm xúc, thưởng thức thẩm mỹ, giải trí, giao tiếp, biểu trưng, phản ứng thể chất, củng cố chuẩn mực xã hội, xác nhận thiết chế và nghi lễ, duy trì sự liên tục văn hoá, và gắn kết xã hội.
 
 ### Từ tâm lý học: ba chiều của Schäfer và cộng sự
 Nghiên cứu được trích dẫn nhiều nhất về chủ đề này là của Thomas Schäfer, Peter Sedlmeier, Christine Städtler và David Huron, đăng trên *Frontiers in Psychology* năm 2013. Nhóm tổng hợp các tài liệu trước đó thành **129 chức năng không trùng lặp**, rồi cho **834 người** đánh giá mức độ quan trọng. Phân tích thành phần chính rút ra ba chiều:
-1. **Điều hòa mức độ hưng phấn và tâm trạng** (arousal and mood regulation).
+1. **Điều hoà mức độ hưng phấn và tâm trạng** (arousal and mood regulation).
 2. **Tự nhận thức** (self-awareness) – âm nhạc giúp suy ngẫm về bản thân, bản sắc, ý nghĩa.
 3. **Gắn kết xã hội** (social relatedness) – cảm giác thuộc về nhóm, kết nối với người khác.
 
-Phát hiện gây chú ý là hai chiều đầu được đánh giá **quan trọng hơn đáng kể** so với chiều xã hội. Các tác giả lưu ý điều này trái với giả thuyết cho rằng âm nhạc tiến hóa chủ yếu như phương tiện gắn kết cộng đồng (xem [[am-nhac-hoc-tien-hoa]]). Tuy nhiên, đây là đánh giá của người nghe hiện đại về việc nghe cá nhân, không trực tiếp kiểm định nguồn gốc tiến hóa.
+Phát hiện gây chú ý là hai chiều đầu được đánh giá **quan trọng hơn đáng kể** so với chiều xã hội. Các tác giả lưu ý điều này trái với giả thuyết cho rằng âm nhạc tiến hoá chủ yếu như phương tiện gắn kết cộng đồng (xem [[am-nhac-hoc-tien-hoa]]). Tuy nhiên, đây là đánh giá của người nghe hiện đại về việc nghe cá nhân, không trực tiếp kiểm định nguồn gốc tiến hoá.
 
-### Từ lý thuyết truyền thông: "sử dụng và thỏa mãn"
-Adam Lonsdale và Adrian North (2011, *British Journal of Psychology* 102(1)) tiến hành bốn nghiên cứu theo khung "sử dụng và thỏa mãn" (uses and gratifications). Kết quả: người tham gia nghe nhạc **chủ yếu để quản lý và điều hòa tâm trạng**, và việc nghe nhạc nhìn chung được đánh giá tốt hơn các hoạt động giải trí khác trong việc đáp ứng nhiều nhu cầu khác nhau. Lý do nghe nhạc cũng có thể thay đổi theo tuổi. Phê bình đối với cách tiếp cận này: nó giả định người nghe ý thức được và nói ra được lý do của mình.
+### Từ lý thuyết truyền thông: "sử dụng và thoả mãn"
+Adam Lonsdale và Adrian North (2011, *British Journal of Psychology* 102(1)) tiến hành bốn nghiên cứu theo khung "sử dụng và thoả mãn" (uses and gratifications). Kết quả: người tham gia nghe nhạc **chủ yếu để quản lý và điều hoà tâm trạng**, và việc nghe nhạc nhìn chung được đánh giá tốt hơn các hoạt động giải trí khác trong việc đáp ứng nhiều nhu cầu khác nhau. Lý do nghe nhạc cũng có thể thay đổi theo tuổi. Phê bình đối với cách tiếp cận này: nó giả định người nghe ý thức được và nói ra được lý do của mình.
 
 | Khung lý thuyết | Tác giả, năm | Ý chính |
 |---|---|---|
@@ -1815,7 +1815,7 @@ Xem thêm: [[tam-ly-hoc-am-nhac]], [[cam-xuc-am-nhac]], [[xa-hoi-hoc-am-nhac]], 
     title: "Sở thích âm nhạc và tính cách",
     category: 'musicology',
     aliases: ["gu âm nhạc và tính cách", "music preferences and personality", "mô hình STOMP", "mô hình MUSIC", "MUSIC model", "STOMP model", "Big Five và âm nhạc"],
-    summary: "Bài viết trình bày các nghiên cứu về mối liên hệ giữa gu nghe nhạc và tính cách: mô hình STOMP (Rentfrow & Gosling 2003), mô hình năm yếu tố MUSIC (2011), mối liên hệ với Big Five, độ lớn hiệu ứng nhỏ theo phân tích tổng hợp, và dữ liệu xuyên văn hóa từ hơn 50 quốc gia.",
+    summary: "Bài viết trình bày các nghiên cứu về mối liên hệ giữa gu nghe nhạc và tính cách: mô hình STOMP (Rentfrow & Gosling 2003), mô hình năm yếu tố MUSIC (2011), mối liên hệ với Big Five, độ lớn hiệu ứng nhỏ theo phân tích tổng hợp, và dữ liệu xuyên văn hoá từ hơn 50 quốc gia.",
     refs: [
       ["Rentfrow & Gosling (2003) The Do Re Mi's of Everyday Life – hồ sơ bài báo", "https://findanexpert.unimelb.edu.au/scholarlywork/1207891-the-do-re-mi's-of-everyday-life--the-structure-and-personality-correlates-of-music-preferences"],
       ["University of Texas (2003) – thông cáo về nghiên cứu Rentfrow & Gosling", "https://news.utexas.edu/2003/06/18/university-researchers-find-clues-to-personality-traits-in-musical-preferences"],
@@ -1827,7 +1827,7 @@ Xem thêm: [[tam-ly-hoc-am-nhac]], [[cam-xuc-am-nhac]], [[xa-hoi-hoc-am-nhac]], 
     ],
     body: `
 ## Câu hỏi "nghe gì nói lên bạn là ai"
-Người ta thường đoán tính cách của nhau qua gu nhạc: người mê metal "nổi loạn", người nghe nhạc cổ điển "sâu sắc". Tâm lý học tính cách đã kiểm tra trực giác này bằng các khảo sát lớn từ đầu những năm 2000. Kết quả: có mối liên hệ thật, ổn định qua nhiều nền văn hóa, nhưng **yếu hơn nhiều** so với định kiến thông thường. Chủ đề này thuộc cụm [[tam-ly-nguoi-nghe-tong-quan]].
+Người ta thường đoán tính cách của nhau qua gu nhạc: người mê metal "nổi loạn", người nghe nhạc cổ điển "sâu sắc". Tâm lý học tính cách đã kiểm tra trực giác này bằng các khảo sát lớn từ đầu những năm 2000. Kết quả: có mối liên hệ thật, ổn định qua nhiều nền văn hoá, nhưng **yếu hơn nhiều** so với định kiến thông thường. Chủ đề này thuộc cụm [[tam-ly-nguoi-nghe-tong-quan]].
 
 ## Mô hình STOMP (2003)
 Peter J. Rentfrow và Samuel D. Gosling công bố "The Do Re Mi's of Everyday Life" trên *Journal of Personality and Social Psychology* (2003, tập 84, số 6). Phân tích sở thích của hơn **3.500 người** hội tụ thành bốn chiều, gọi tắt là STOMP (Short Test Of Music Preferences là tên bảng hỏi):
@@ -1859,7 +1859,7 @@ Phân tích tổng hợp của Thomas Schäfer và Claudia Mehlhorn (2017, *Pers
 
 Hàm ý thực tế: biết gu nhạc của một người chỉ giúp đoán tính cách của họ tốt hơn ngẫu nhiên một chút. Những định kiến kiểu "fan metal thì hung hăng" không được dữ liệu ủng hộ. Một số nghiên cứu mới dùng dữ liệu streaming hoặc lượt "thích" trên mạng xã hội báo cáo tương quan cao hơn, nhưng chưa phải đồng thuận của các phân tích tổng hợp.
 
-## Dữ liệu xuyên văn hóa
+## Dữ liệu xuyên văn hoá
 Greenberg và cộng sự (2022) phân tích dữ liệu của **356.649 người** ở sáu châu lục: nghiên cứu 1 (284.935 người, 53 quốc gia) dùng bảng đánh giá thể loại, nghiên cứu 2 (71.714 người, 36 quốc gia) dùng trích đoạn âm thanh. Cấu trúc năm yếu tố MUSIC **bất biến giữa các quốc gia**. Hướng liên hệ cũng lặp lại: người hướng ngoại thích nhạc "đương đại", người cởi mở thích nhạc "tinh tế". Lưu ý: các trích đoạn là **nhạc phương Tây**, nên "phổ quát" ở đây là phổ quát trong phản ứng với nhạc phương Tây, không phải với mọi truyền thống âm nhạc (xem [[dan-toc-nhac-hoc]]).
 
 ## Các yếu tố khác ảnh hưởng đến sở thích
@@ -1911,10 +1911,10 @@ Karl Szpunar, E. Glenn Schellenberg và Patricia Pliner (2004, *Journal of Exper
 Các tác giả giải thích bằng lý thuyết của Bornstein: tiếp xúc làm kích thích được xử lý **trôi chảy** hơn (fluency), và cảm giác trôi chảy được diễn giải thành "thích" – trừ khi người nghe nhận ra mình đã nghe quá nhiều.
 
 ## Bằng chứng từ não
-Carlos Silva Pereira, Elvira Brattico và cộng sự (2011, *PLoS ONE* 6(11)) tách riêng ảnh hưởng của **quen thuộc** và **yêu thích** bằng fMRI với các trích đoạn pop/rock cá nhân hóa. Kết quả: nhạc quen thuộc kích hoạt mạnh hơn các vùng hệ viền, cận viền và hệ thống phần thưởng so với nhạc lạ; còn khác biệt giữa nhạc thích và không thích chỉ thể hiện ở các cụm nhỏ hơn. Các tác giả kết luận **sự quen thuộc là yếu tố then chốt** trong sự gắn kết cảm xúc với âm nhạc. Xem thêm [[than-kinh-hoc-am-nhac]].
+Carlos Silva Pereira, Elvira Brattico và cộng sự (2011, *PLoS ONE* 6(11)) tách riêng ảnh hưởng của **quen thuộc** và **yêu thích** bằng fMRI với các trích đoạn pop/rock cá nhân hoá. Kết quả: nhạc quen thuộc kích hoạt mạnh hơn các vùng hệ viền, cận viền và hệ thống phần thưởng so với nhạc lạ; còn khác biệt giữa nhạc thích và không thích chỉ thể hiện ở các cụm nhỏ hơn. Các tác giả kết luận **sự quen thuộc là yếu tố then chốt** trong sự gắn kết cảm xúc với âm nhạc. Xem thêm [[than-kinh-hoc-am-nhac]].
 
 ## Sự lặp lại bên trong âm nhạc
-Sự quen thuộc không chỉ đến từ việc nghe lại cả bài, mà từ chính cấu trúc lặp lại trong bài. Theo một bài điểm sách trên *Music Theory Online*, David Huron và Joy Ollen ước tính khoảng **94%** đoạn nhạc trong một mẫu xuyên văn hóa được lặp lại nguyên văn ở đâu đó về sau. Elizabeth Hellmuth Margulis, trong *On Repeat: How Music Plays the Mind* (Oxford, 2013/2014), lập luận rằng lặp lại là trung tâm của trải nghiệm nghe: nó giúp người nghe định hướng, dự đoán ([[ky-vong-am-nhac]]) và "tham gia" vào bản nhạc. Lặp lại cũng là một điều kiện giúp giai điệu dễ thành [[nhac-ket-trong-dau]].
+Sự quen thuộc không chỉ đến từ việc nghe lại cả bài, mà từ chính cấu trúc lặp lại trong bài. Theo một bài điểm sách trên *Music Theory Online*, David Huron và Joy Ollen ước tính khoảng **94%** đoạn nhạc trong một mẫu xuyên văn hoá được lặp lại nguyên văn ở đâu đó về sau. Elizabeth Hellmuth Margulis, trong *On Repeat: How Music Plays the Mind* (Oxford, 2013/2014), lập luận rằng lặp lại là trung tâm của trải nghiệm nghe: nó giúp người nghe định hướng, dự đoán ([[ky-vong-am-nhac]]) và "tham gia" vào bản nhạc. Lặp lại cũng là một điều kiện giúp giai điệu dễ thành [[nhac-ket-trong-dau]].
 
 ## Nguồn và độ tin cậy
 Hiệu ứng tiếp xúc trong âm nhạc được tái lập nhiều lần, nhưng độ lớn và hình dạng đường cong phụ thuộc vào cách nghe, loại nhạc, số lần lặp và khoảng cách giữa các lần nghe. Chi tiết nghiên cứu Peretz et al. (1998) và Heingartner & Hall (1974) ở đây dựa trên mô tả của các bài báo trích dẫn chúng.
@@ -1947,14 +1947,14 @@ Nhiều người từng trải qua cảm giác **ớn lạnh chạy dọc sống
 ## Những nghiên cứu đầu tiên
 **Avram Goldstein** (1980, *Physiological Psychology* 8) khảo sát và thấy **khoảng một nửa** số người được hỏi từng có cảm giác tê rần đặc trưng ("thrills") trước các kích thích gây xúc động, trong đó âm nhạc đặc biệt hiệu quả. Ông thử tiêm naloxone (chất đối kháng opioid) và thấy cảm giác giảm ở một số người – nhưng chính tác giả gọi kết quả là sơ bộ; các bài sau ghi nhận chỉ 3 trên 10 người báo cáo giảm. Sách phổ biến thường trình bày phát hiện này chắc chắn hơn thực tế.
 
-**Jaak Panksepp** (1995, *Music Perception* 13(2)) cho người nghe giơ tay khi rùng mình và thấy chills tập trung vào một số khoảnh khắc, như đoạn crescendo trong một bản nhạc của Pink Floyd. Chills tương quan với **nỗi buồn được cảm nhận** mạnh hơn nhiều so với niềm vui. Panksepp đề xuất rằng chills có thể chung nền tảng thần kinh hóa học với cảm giác mất mát xã hội (như tiếng khóc chia ly). Giả thuyết này **chưa được thống nhất**: một nghiên cứu sau với 118 đoạn nhạc do người nghe tự chọn thấy điểm đánh giá buồn và hoài niệm rất thấp.
+**Jaak Panksepp** (1995, *Music Perception* 13(2)) cho người nghe giơ tay khi rùng mình và thấy chills tập trung vào một số khoảnh khắc, như đoạn crescendo trong một bản nhạc của Pink Floyd. Chills tương quan với **nỗi buồn được cảm nhận** mạnh hơn nhiều so với niềm vui. Panksepp đề xuất rằng chills có thể chung nền tảng thần kinh hoá học với cảm giác mất mát xã hội (như tiếng khóc chia ly). Giả thuyết này **chưa được thống nhất**: một nghiên cứu sau với 118 đoạn nhạc do người nghe tự chọn thấy điểm đánh giá buồn và hoài niệm rất thấp.
 
 ## Đặc điểm âm nhạc gây rùng mình
 John Sloboda (1991) cho người nghe nhớ lại những khoảnh khắc gây phản ứng cơ thể. Theo các bản tóm tắt:
-- **Rùng mình** gắn mạnh nhất với **hòa âm mới hoặc bất ngờ** và thay đổi đột ngột về cường độ hay kết cấu.
-- **Rơi nước mắt** gắn với **nốt luyến/appoggiatura giai điệu**, chuỗi mô tiến (sequence) và vòng quãng năm.
+- **Rùng mình** gắn mạnh nhất với **hoà âm mới hoặc bất ngờ** và thay đổi đột ngột về cường độ hay kết cấu.
+- **Rơi nước mắt** gắn với **nốt dựa (appoggiatura) trong giai điệu**, chuỗi mô tiến (sequence) và vòng quãng năm.
 
-Grewe và cộng sự (2007) bổ sung: chills thường xảy ra khi **âm lượng tăng**, khi **giọng hoặc nhạc cụ mới xuất hiện**. Những đặc điểm này đều liên quan đến sự vi phạm hoặc thỏa mãn [[ky-vong-am-nhac]]. Lưu ý: khái niệm "appoggiatura" của Sloboda rộng hơn nghĩa thông thường, nên không thể coi nó là điều kiện cần hay đủ để gây xúc động.
+Grewe và cộng sự (2007) bổ sung: chills thường xảy ra khi **âm lượng tăng**, khi **giọng hoặc nhạc cụ mới xuất hiện**. Những đặc điểm này đều liên quan đến sự vi phạm hoặc thoả mãn [[ky-vong-am-nhac]]. Lưu ý: khái niệm "appoggiatura" của Sloboda rộng hơn nghĩa thông thường, nên không thể coi nó là điều kiện cần hay đủ để gây xúc động.
 
 ## Bằng chứng từ não
 ### Blood và Zatorre (2001)
@@ -2024,7 +2024,7 @@ Kelly Jakubowski, Sebastian Finkel, Lauren Stewart và Daniel Müllensiefen (201
 - So sánh 100 bài thường được nhắc với 100 bài không bao giờ được nhắc (khớp về độ phổ biến và phong cách) qua 83 đặc điểm giai điệu: bài "earworm" có **nhịp độ nhanh hơn**, **đường nét giai điệu tổng thể phổ biến** (dạng lên rồi xuống quen thuộc), nhưng lại có **độ dốc trung bình giữa các điểm ngoặt của giai điệu ít phổ biến** so với kho nhạc pop lớn – tức là khung quen thuộc nhưng chi tiết có điểm khác lạ.
 - Theo báo chí đưa tin, "Bad Romance" của Lady Gaga đứng đầu danh sách bài hát hay kẹt nhất.
 
-Với người học piano, điều này gợi ý vì sao một số giai điệu dễ thuộc hơn: đường nét quen + một "móc câu" bất thường là công thức của [[ky-vong-am-nhac]] được thỏa mãn và bị phá vỡ cùng lúc.
+Với người học piano, điều này gợi ý vì sao một số giai điệu dễ thuộc hơn: đường nét quen + một "móc câu" bất thường là công thức của [[ky-vong-am-nhac]] được thoả mãn và bị phá vỡ cùng lúc.
 
 ## Có hại không, và làm sao thoát?
 Phần lớn earworm là **trung tính hoặc dễ chịu**; chỉ một phần nhỏ gây phiền toái. Một số cách đã được thử:
@@ -2032,7 +2032,7 @@ Phần lớn earworm là **trung tính hoặc dễ chịu**; chỉ một phần 
 - **Nghe trọn bài hát** hoặc làm một việc cần tập trung vừa phải – các chiến lược được người tham gia khảo sát tự báo cáo, bằng chứng thực nghiệm hạn chế hơn.
 
 ## Nguồn và độ tin cậy
-Hầu hết dữ liệu là tự báo cáo hồi cố, mẫu thiên về người phương Tây có học vấn – điều mà chính các bài tổng quan về INMI đã lưu ý. Tỷ lệ phổ biến khác nhau tùy cách hỏi. Chưa có nghiên cứu nào về earworm ở người nghe Việt Nam mà chúng tôi tìm thấy.
+Hầu hết dữ liệu là tự báo cáo hồi cố, mẫu thiên về người phương Tây có học vấn – điều mà chính các bài tổng quan về INMI đã lưu ý. Tỷ lệ phổ biến khác nhau tuỳ cách hỏi. Chưa có nghiên cứu nào về earworm ở người nghe Việt Nam mà chúng tôi tìm thấy.
 
 Xem thêm: [[am-nhac-va-tri-nho-tu-truyen]], [[than-kinh-hoc-am-nhac]], [[tam-ly-hoc-am-nhac]].
 `,
@@ -2080,10 +2080,10 @@ Janata (2009, *Cerebral Cortex* 19(11)) dùng fMRI với 13 sinh viên nghe các
 Frederick Barrett, Petr Janata, Constantine Sedikides và cộng sự (2010, *Emotion* 10(3)) cho người tham gia nghe ngẫu nhiên các trích đoạn nhạc phổ thông. Cảm giác hoài niệm tăng theo **mức độ gắn với bản thân, độ hưng phấn, sự quen thuộc** và số lượng cảm xúc – cả vui, buồn lẫn hỗn hợp – mà bài hát gợi ra. Hoài niệm đi cùng **cả niềm vui và nỗi buồn**, điều giúp giải thích một phần vì sao ta thích nghe nhạc gợi buồn (nghịch lý nhạc buồn). Người có thiên hướng hoài niệm cao – đặc điểm mà nghiên cứu thấy liên quan với chiều "Buồn" trong thang tính cách thần kinh cảm xúc ANPS và với tính bất ổn cảm xúc (neuroticism) – trải nghiệm hoài niệm mạnh hơn. Một nghiên cứu tái lập năm 2024 với mẫu lớn và đa dạng hơn cho thấy các kết quả chính phần lớn vẫn đứng vững.
 
 ## Trí nhớ âm nhạc trong bệnh Alzheimer
-Người chăm sóc thường kể rằng bệnh nhân Alzheimer nặng vẫn hát theo bài hát cũ. Jörn-Henrik Jacobsen, Robert Turner và cộng sự (2015, *Brain* 138) dùng fMRI 7 Tesla trên 32 người trẻ và xác định hai vùng mã hóa nhạc **quen thuộc lâu năm**: vỏ đai trước phần đuôi và vùng tiền vận động bổ sung phần bụng. Khi đối chiếu với dữ liệu 20 bệnh nhân Alzheimer, các vùng này **teo ít nhất** và ít rối loạn chuyển hóa glucose so với phần còn lại của não. Đây là gợi ý, chưa phải kết luận: mẫu nhỏ và dựa trên phân tích vùng quan tâm.
+Người chăm sóc thường kể rằng bệnh nhân Alzheimer nặng vẫn hát theo bài hát cũ. Jörn-Henrik Jacobsen, Robert Turner và cộng sự (2015, *Brain* 138) dùng fMRI 7 Tesla trên 32 người trẻ và xác định hai vùng mã hoá nhạc **quen thuộc lâu năm**: vỏ đai trước phần đuôi và vùng tiền vận động bổ sung phần bụng. Khi đối chiếu với dữ liệu 20 bệnh nhân Alzheimer, các vùng này **teo ít nhất** và ít rối loạn chuyển hoá glucose so với phần còn lại của não. Đây là gợi ý, chưa phải kết luận: mẫu nhỏ và dựa trên phân tích vùng quan tâm.
 
 ## Nguồn và độ tin cậy
-Tuổi đỉnh hồi tưởng **chưa thống nhất** giữa các nghiên cứu (14–24 tuổi tùy phương pháp). Hầu hết dữ liệu đến từ nhạc phổ thông Mỹ hoặc châu Âu. Với người nghe Việt Nam, giả thuyết hợp lý là đỉnh hồi tưởng gắn với nhạc phổ biến thời trẻ của mỗi thế hệ (xem [[nhac-pho-thong-the-ky-20]], [[vpop-rap-viet]]), nhưng chúng tôi chưa tìm thấy nghiên cứu kiểm chứng.
+Tuổi đỉnh hồi tưởng **chưa thống nhất** giữa các nghiên cứu (14–24 tuổi tuỳ phương pháp). Hầu hết dữ liệu đến từ nhạc phổ thông Mỹ hoặc châu Âu. Với người nghe Việt Nam, giả thuyết hợp lý là đỉnh hồi tưởng gắn với nhạc phổ biến thời trẻ của mỗi thế hệ (xem [[nhac-pho-thong-the-ky-20]], [[vpop-rap-viet]]), nhưng chúng tôi chưa tìm thấy nghiên cứu kiểm chứng.
 
 Xem thêm: [[am-nhac-tri-lieu]], [[nhac-ket-trong-dau]], [[tam-ly-hoc-phat-trien-am-nhac]].
 `,
@@ -2105,7 +2105,7 @@ Xem thêm: [[am-nhac-tri-lieu]], [[nhac-ket-trong-dau]], [[tam-ly-hoc-phat-trien
     body: `
 ## Câu hỏi quen thuộc: nghe nhạc có giúp làm việc tốt hơn?
 
-Rất nhiều người bật nhạc khi học bài, viết lách, lập trình hay dọn nhà. Tâm lý học đã nghiên cứu câu hỏi này hàng chục năm, và câu trả lời ngắn gọn là: **tùy thuộc vào loại nhạc, loại công việc và loại người nghe**. Không có bằng chứng vững chắc rằng nhạc nền "nói chung" làm người ta thông minh hơn hay kém đi; thay vào đó có những hiệu ứng riêng, đôi khi ngược chiều nhau. Bài này thuộc mảng [[tam-ly-hoc-am-nhac]] và bổ sung cho [[tam-ly-nguoi-nghe-tong-quan]].
+Rất nhiều người bật nhạc khi học bài, viết lách, lập trình hay dọn nhà. Tâm lý học đã nghiên cứu câu hỏi này hàng chục năm, và câu trả lời ngắn gọn là: **tuỳ thuộc vào loại nhạc, loại công việc và loại người nghe**. Không có bằng chứng vững chắc rằng nhạc nền "nói chung" làm người ta thông minh hơn hay kém đi; thay vào đó có những hiệu ứng riêng, đôi khi ngược chiều nhau. Bài này thuộc mảng [[tam-ly-hoc-am-nhac]] và bổ sung cho [[tam-ly-nguoi-nghe-tong-quan]].
 
 ## Phân tích gộp Kämpfe và cộng sự
 
@@ -2121,7 +2121,7 @@ Nghiên cứu tổng hợp được trích dẫn nhiều nhất là phân tích 
 
 Phân tích gộp Bayes của **Vasilev, Kirkby và Angele (2018)** trên tạp chí *Perspectives on Psychological Science* (tập 13, số 5) tổng hợp 65 nghiên cứu về xao nhãng thính giác khi đọc. Kết quả: tiếng ồn, tiếng nói và âm nhạc đều làm giảm hiệu suất đọc ở mức **nhỏ nhưng đáng tin cậy**; người lớn và trẻ em bị ảnh hưởng tương đương; **lời nói nghe hiểu được và nhạc có lời** gây xao nhãng mạnh nhất. Theo một bản tóm lược thứ cấp, ước lượng chung cho tác động của nhạc lên việc đọc là khoảng g = −0,19 — một hiệu ứng nhỏ; các tác giả cũng lưu ý nhiều nghiên cứu gốc có cỡ mẫu thấp.
 
-Một số nghiên cứu khác (chủ yếu với sinh viên Trung Quốc) cho thấy lời bằng tiếng mẹ đẻ gây hại nhiều nhất cho đọc hiểu, và những người quen nghe nhạc khi đọc bị ảnh hưởng ít hơn. Các kết quả này đến từ từng nghiên cứu riêng lẻ, chưa nên khái quát hóa.
+Một số nghiên cứu khác (chủ yếu với sinh viên Trung Quốc) cho thấy lời bằng tiếng mẹ đẻ gây hại nhiều nhất cho đọc hiểu, và những người quen nghe nhạc khi đọc bị ảnh hưởng ít hơn. Các kết quả này đến từ từng nghiên cứu riêng lẻ, chưa nên khái quát hoá.
 
 ## Hiệu ứng âm thanh không liên quan
 
@@ -2196,7 +2196,7 @@ Nghiên cứu nổi tiếng nhất về **sự tương hợp (congruity)** là c
 - Kết quả: ngày nhạc Pháp, vang Pháp bán chạy hơn vang Đức; ngày nhạc Đức thì ngược lại.
 - Nhận thức: qua bảng hỏi, phần lớn khách **không nhận ra** nhạc ảnh hưởng đến lựa chọn của mình; theo bài trên *Nature*, chỉ sáu người trả lời "có".
 
-Các nguồn thứ cấp đưa ra tỷ lệ phần trăm khác nhau (ví dụ "77% vang bán ra là vang Pháp" hoặc "83% người mua"), và cỡ mẫu nhỏ (vài chục chai và 44 người trả lời bảng hỏi). Kết quả nên được hiểu là minh họa cơ chế **mồi (priming)**: âm nhạc gợi lên kiến thức liên quan đến một quốc gia, khiến sản phẩm phù hợp dễ được chọn hơn.
+Các nguồn thứ cấp đưa ra tỷ lệ phần trăm khác nhau (ví dụ "77% vang bán ra là vang Pháp" hoặc "83% người mua"), và cỡ mẫu nhỏ (vài chục chai và 44 người trả lời bảng hỏi). Kết quả nên được hiểu là minh hoạ cơ chế **mồi (priming)**: âm nhạc gợi lên kiến thức liên quan đến một quốc gia, khiến sản phẩm phù hợp dễ được chọn hơn.
 
 Một nghiên cứu khác thường được trích là của **Areni và Kim (1993)** tại một cửa hàng rượu: nhạc cổ điển không làm khách mua **nhiều** chai hơn, nhưng gắn với việc chọn chai **đắt** hơn so với nhạc pop. Nguồn gốc của nghiên cứu này không được kiểm tra trực tiếp khi biên soạn, chỉ dựa trên các bài tóm lược.
 
@@ -2248,7 +2248,7 @@ Nghiên cứu tiêu biểu là **Montecchio, Roy và Pachet (2020)**, ba nhà ng
 
 - Phần lớn lượt bỏ qua tập trung ở **những giây đầu** bài; một phân tích trước đó (được nhóm tác giả dẫn lại và tái xác nhận bằng dữ liệu tháng 8/2018) cho thấy khoảng **một phần tư** số bài bị bỏ qua trong 5 giây đầu. Ngoài ra có xu hướng bỏ qua phần kết.
 - "Hồ sơ bỏ qua" của mỗi bài rất **đặc trưng cho từng bài** và ổn định theo thời gian, theo vùng địa lý; nó gắn với **cấu trúc âm nhạc** — các đỉnh nhỏ xuất hiện quanh những điểm chuyển đoạn (ví dụ vào điệp khúc).
-- Một bài báo tiếp theo của Spotify (Donier, bản tiền ấn phẩm arXiv) mô hình hóa việc bỏ qua như một quá trình ngẫu nhiên: phần mở đầu gây ra phản ứng mạnh rồi giảm dần, còn mỗi "bất ngờ" âm nhạc gây thêm một đợt nhỏ, với dạng thời gian khá giống nhau giữa các bài, thể loại, thiết bị và bối cảnh — gợi ý rằng phản ứng với sự bất ngờ trong âm nhạc mang tính phổ quát (liên hệ [[ky-vong-am-nhac]]).
+- Một bài báo tiếp theo của Spotify (Donier, bản tiền ấn phẩm arXiv) mô hình hoá việc bỏ qua như một quá trình ngẫu nhiên: phần mở đầu gây ra phản ứng mạnh rồi giảm dần, còn mỗi "bất ngờ" âm nhạc gây thêm một đợt nhỏ, với dạng thời gian khá giống nhau giữa các bài, thể loại, thiết bị và bối cảnh — gợi ý rằng phản ứng với sự bất ngờ trong âm nhạc mang tính phổ quát (liên hệ [[ky-vong-am-nhac]]).
 
 Lưu ý: dữ liệu nền tảng không cho biết **lý do** bỏ qua (chán, đã nghe quá nhiều, đổi tâm trạng…); các nghiên cứu ở cấp phiên nghe (Meggetto và cộng sự, 2021) phân loại người nghe thành những kiểu như "nghe hết", "nghe rồi bỏ", "bỏ rồi nghe" và "chuyên bỏ qua".
 
@@ -2266,9 +2266,9 @@ Cần thận trọng: giai đoạn khảo sát bắt đầu từ 1986, phần l�
 
 ## Danh sách phát và chế độ ngẫu nhiên
 
-Streaming đẩy đơn vị nghe từ **album** sang **danh sách phát (playlist)** theo tâm trạng, hoạt động (tập thể dục, học bài, ngủ) hoặc thể loại. Điều này gắn âm nhạc chặt hơn với chức năng điều hòa cảm xúc và hỗ trợ hoạt động (xem [[dieu-hoa-cam-xuc-bang-am-nhac]] và [[nhac-nen-va-hieu-suat-lam-viec]]).
+Streaming đẩy đơn vị nghe từ **album** sang **danh sách phát (playlist)** theo tâm trạng, hoạt động (tập thể dục, học bài, ngủ) hoặc thể loại. Điều này gắn âm nhạc chặt hơn với chức năng điều hoà cảm xúc và hỗ trợ hoạt động (xem [[dieu-hoa-cam-xuc-bang-am-nhac]] và [[nhac-nen-va-hieu-suat-lam-viec]]).
 
-Chế độ **shuffle** minh họa một thiên kiến nhận thức thú vị. Theo các nguồn báo chí công nghệ, Spotify ban đầu dùng thuật toán xáo trộn ngẫu nhiên thực sự (Fisher-Yates), nhưng người dùng phàn nàn rằng các bài của cùng nghệ sĩ hay "dồn cục". Thật ra sự dồn cục là hệ quả tự nhiên của ngẫu nhiên — người ta mắc **ảo giác cụm (clustering illusion)**. Năm 2014 Spotify chuyển sang thuật toán rải đều các nghệ sĩ: điều người nghe muốn không phải ngẫu nhiên thật mà là **cảm giác** ngẫu nhiên.
+Chế độ **shuffle** minh hoạ một thiên kiến nhận thức thú vị. Theo các nguồn báo chí công nghệ, Spotify ban đầu dùng thuật toán xáo trộn ngẫu nhiên thực sự (Fisher-Yates), nhưng người dùng phàn nàn rằng các bài của cùng nghệ sĩ hay "dồn cục". Thật ra sự dồn cục là hệ quả tự nhiên của ngẫu nhiên — người ta mắc **ảo giác cụm (clustering illusion)**. Năm 2014 Spotify chuyển sang thuật toán rải đều các nghệ sĩ: điều người nghe muốn không phải ngẫu nhiên thật mà là **cảm giác** ngẫu nhiên.
 
 ## Thuật toán và khẩu vị
 
@@ -2282,7 +2282,7 @@ Chế độ **shuffle** minh họa một thiên kiến nhận thức thú vị. 
 
 ## Nguồn và độ tin cậy
 
-Phần lớn dữ liệu hành vi đến từ chính các công ty streaming; dữ liệu thô không công khai nên khó kiểm chứng độc lập. Các con số về độ dài bài hát khác nhau tùy cách chọn mẫu (top 10, Hot 100, toàn bộ kho nhạc).
+Phần lớn dữ liệu hành vi đến từ chính các công ty streaming; dữ liệu thô không công khai nên khó kiểm chứng độc lập. Các con số về độ dài bài hát khác nhau tuỳ cách chọn mẫu (top 10, Hot 100, toàn bộ kho nhạc).
 
 Xem thêm: [[cong-nghiep-am-nhac]], [[lich-su-thu-am]], [[tam-ly-nguoi-nghe-tong-quan]].
 `,
@@ -2291,8 +2291,8 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[lich-su-thu-am]], [[tam-ly-nguoi-nghe-tong
     slug: "am-nhac-va-ban-sac-xa-hoi",
     title: "Âm nhạc và bản sắc xã hội",
     category: 'musicology',
-    aliases: ["âm nhạc và bản sắc", "music and identity", "music and social identity", "âm nhạc tuổi vị thành niên", "tiểu văn hóa âm nhạc", "music subculture", "neo-tribe", "gắn kết xã hội qua âm nhạc", "music and social bonding", "ice-breaker effect"],
-    summary: "Âm nhạc như một dấu hiệu bản sắc, đặc biệt ở tuổi vị thành niên; lý thuyết tiểu văn hóa và \"bộ lạc mới\"; và các cơ chế khiến hát, chơi nhạc cùng nhau tạo gắn kết xã hội.",
+    aliases: ["âm nhạc và bản sắc", "music and identity", "music and social identity", "âm nhạc tuổi vị thành niên", "tiểu văn hoá âm nhạc", "music subculture", "neo-tribe", "gắn kết xã hội qua âm nhạc", "music and social bonding", "ice-breaker effect"],
+    summary: "Âm nhạc như một dấu hiệu bản sắc, đặc biệt ở tuổi vị thành niên; lý thuyết tiểu văn hoá và \"bộ lạc mới\"; và các cơ chế khiến hát, chơi nhạc cùng nhau tạo gắn kết xã hội.",
     refs: [
       ["North, Hargreaves & O’Neill (2000) – The importance of music to adolescents (tóm lược thứ cấp)", "https://scholarsarchive.jwu.edu/k12_ed/1"],
       ["Rentfrow & Gosling (2006) – Message in a ballad (PubMed)", "https://pubmed.ncbi.nlm.nih.gov/16507064/"],
@@ -2305,7 +2305,7 @@ Xem thêm: [[cong-nghiep-am-nhac]], [[lich-su-thu-am]], [[tam-ly-nguoi-nghe-tong
     body: `
 ## "Cho tôi biết bạn nghe gì…"
 
-Âm nhạc không chỉ là trải nghiệm riêng tư mà còn là **tấm thẻ căn cước xã hội**: nó cho người khác biết ta là ai, ta thuộc về nhóm nào và khác với nhóm nào. Chủ đề này nằm giữa [[tam-ly-hoc-am-nhac]] (bản sắc cá nhân, cảm xúc) và [[xa-hoi-hoc-am-nhac]] (nhóm, giai tầng, tiểu văn hóa). Bài về mối liên hệ giữa sở thích và tính cách được trình bày riêng ở [[so-thich-am-nhac-va-tinh-cach]].
+Âm nhạc không chỉ là trải nghiệm riêng tư mà còn là **tấm thẻ căn cước xã hội**: nó cho người khác biết ta là ai, ta thuộc về nhóm nào và khác với nhóm nào. Chủ đề này nằm giữa [[tam-ly-hoc-am-nhac]] (bản sắc cá nhân, cảm xúc) và [[xa-hoi-hoc-am-nhac]] (nhóm, giai tầng, tiểu văn hoá). Bài về mối liên hệ giữa sở thích và tính cách được trình bày riêng ở [[so-thich-am-nhac-va-tinh-cach]].
 
 ## Âm nhạc như một tín hiệu
 
@@ -2318,16 +2318,16 @@ Tuổi mới lớn là lúc bản sắc được hình thành mạnh mẽ, và �
 **North, Hargreaves và O'Neill (2000)**, *British Journal of Educational Psychology* 70, khảo sát **2.465 học sinh 13–14 tuổi**. Theo các bản tóm lược thứ cấp:
 
 - Các em nghe nhạc trung bình khoảng **2,45 giờ mỗi ngày**.
-- Lý do nghe nhạc được nêu nhiều nhất gắn với hai nhóm: **nhu cầu cảm xúc** (thư giãn, giảm căng thẳng, giải tỏa) và **hình ảnh bản thân** (tạo ấn tượng với người khác, thể hiện mình).
+- Lý do nghe nhạc được nêu nhiều nhất gắn với hai nhóm: **nhu cầu cảm xúc** (thư giãn, giảm căng thẳng, giải toả) và **hình ảnh bản thân** (tạo ấn tượng với người khác, thể hiện mình).
 - Có khác biệt giới: nữ sinh thiên về chức năng cảm xúc, nam sinh coi trọng hơn chức năng hình ảnh và bản sắc xã hội.
 
 Các con số trên lấy từ tóm lược của nghiên cứu khác, chưa đối chiếu được trực tiếp với toàn văn.
 
 Âm nhạc tuổi mới lớn còn gắn chặt với trí nhớ: những bài nghe ở tuổi thiếu niên và đầu tuổi trưởng thành thường được nhớ đậm hơn về sau (xem [[am-nhac-va-tri-nho-tu-truyen]]).
 
-## Tiểu văn hóa và "bộ lạc mới"
+## Tiểu văn hoá và "bộ lạc mới"
 
-Xã hội học về giới trẻ, đặc biệt trường phái Birmingham thập niên 1970 (với tác phẩm *Subculture: The Meaning of Style* của Dick Hebdige, 1979), mô tả các **tiểu văn hóa** như punk, mod, skinhead — những nhóm có phong cách ăn mặc, ngôn ngữ và âm nhạc riêng, thường được hiểu như hình thức phản kháng gắn với giai cấp.
+Xã hội học về giới trẻ, đặc biệt trường phái Birmingham thập niên 1970 (với tác phẩm *Subculture: The Meaning of Style* của Dick Hebdige, 1979), mô tả các **tiểu văn hoá** như punk, mod, skinhead — những nhóm có phong cách ăn mặc, ngôn ngữ và âm nhạc riêng, thường được hiểu như hình thức phản kháng gắn với giai cấp.
 
 **Andy Bennett (1999)**, *Sociology* 33(3), phê phán khái niệm này là quá cứng nhắc. Mượn ý của nhà xã hội học Michel Maffesoli, ông đề xuất khái niệm **"bộ lạc mới" (neo-tribe)**: những nhóm người tụ họp quanh một gu âm nhạc (ví dụ người hâm mộ nhạc dance tại câu lạc bộ) trong những bối cảnh nhất định, nhưng không tạo thành cấu trúc bền vững bên ngoài. Bản sắc âm nhạc trở nên **lỏng, đa tầng và có thể thay đổi** — một người có thể vừa nghe rap, vừa hát karaoke [[nhac-vang-bolero]] với gia đình. Thời streaming và mạng xã hội càng làm rõ tính lỏng này (xem [[tam-ly-nghe-nhac-thoi-streaming]]); các cộng đồng fan K-pop hay rap Việt (xem [[vpop-rap-viet]]) là ví dụ đương đại thường được bàn đến.
 
@@ -2335,20 +2335,20 @@ Xã hội học về giới trẻ, đặc biệt trường phái Birmingham th�
 
 **Tarr, Launay và Dunbar (2014)**, *Frontiers in Psychology* 5, là bài lý thuyết tổng hợp hai cơ chế:
 
-1. **Hòa nhập "mình và người khác" (self-other merging)**: khi cử động đồng bộ với người khác, ranh giới giữa bản thân và người kia trở nên mờ đi, nhờ các mạng thần kinh mã hóa cả hành động lẫn tri giác.
+1. **Hoà nhập "mình và người khác" (self-other merging)**: khi cử động đồng bộ với người khác, ranh giới giữa bản thân và người kia trở nên mờ đi, nhờ các mạng thần kinh mã hoá cả hành động lẫn tri giác.
 2. **Cơ chế thần kinh nội tiết**: hoạt động nhịp nhàng, gắng sức như hát, nhảy, đánh trống giải phóng **endorphin** (hệ opioid nội sinh); một số tác giả khác nhấn mạnh **oxytocin**.
 
 Các tác giả lưu ý phần lớn thí nghiệm về đồng bộ mới chỉ làm với **cặp đôi**, nên chưa nói được nhiều về hoạt động âm nhạc quy mô lớn.
 
 ### Bằng chứng thực nghiệm
 
-- **Pearce, Launay và Dunbar (2015)**, *Royal Society Open Science*: theo dõi các lớp học buổi tối dành cho người lớn trong bảy tháng. Lớp hát gắn kết **nhanh hơn rõ rệt** ở tháng đầu so với lớp thủ công hay viết sáng tác, nhưng các lớp kia dần bắt kịp. Tác giả gọi đây là **"hiệu ứng phá băng"** và gợi ý ca hát có thể đã tiến hóa để nhanh chóng gắn kết nhóm người xa lạ.
+- **Pearce, Launay và Dunbar (2015)**, *Royal Society Open Science*: theo dõi các lớp học buổi tối dành cho người lớn trong bảy tháng. Lớp hát gắn kết **nhanh hơn rõ rệt** ở tháng đầu so với lớp thủ công hay viết sáng tác, nhưng các lớp kia dần bắt kịp. Tác giả gọi đây là **"hiệu ứng phá băng"** và gợi ý ca hát có thể đã tiến hoá để nhanh chóng gắn kết nhóm người xa lạ.
 - **Kirschner và Tomasello (2010)**, *Evolution and Human Behavior* 31(5): trẻ 4 tuổi sau khi cùng hát và chơi nhạc thì hợp tác và giúp đỡ nhau nhiều hơn so với nhóm chơi trò có mức tương tác tương đương nhưng không có nhạc.
 - Tuy nhiên, **Baier, Wöllner và Wolf (2021)**, *Frontiers in Psychology*, lặp lại thí nghiệm hiện trường ở trường mẫu giáo và **không thấy hiệu ứng**, cho rằng hiệu ứng gốc có thể bị ước lượng quá cao.
 
 ## Nguồn và độ tin cậy
 
-Ý tưởng "âm nhạc gắn kết con người" có cơ sở lý thuyết tốt và nhiều bằng chứng tương quan, nhưng các thí nghiệm nhân quả còn nhỏ và kết quả lặp lại không đều. Giả thuyết tiến hóa (âm nhạc ra đời để gắn kết nhóm) vẫn là **giả thuyết**, xem [[am-nhac-hoc-tien-hoa]].
+Ý tưởng "âm nhạc gắn kết con người" có cơ sở lý thuyết tốt và nhiều bằng chứng tương quan, nhưng các thí nghiệm nhân quả còn nhỏ và kết quả lặp lại không đều. Giả thuyết tiến hoá (âm nhạc ra đời để gắn kết nhóm) vẫn là **giả thuyết**, xem [[am-nhac-hoc-tien-hoa]].
 
 Xem thêm: [[am-nhac-tri-lieu]], [[xa-hoi-hoc-am-nhac]], [[dan-toc-nhac-hoc]].
 `,
@@ -2394,16 +2394,16 @@ Bộ đoạn nhạc và điểm groove của nghiên cứu này về sau đượ
 - Entropy âm thanh dự đoán kém.
 - Năm 2015 bài báo có đính chính về đánh số kích thích; tác giả khẳng định không ảnh hưởng đến kết luận.
 
-**Matthews, Witek, Heggli, Penhune và Vuust (2019)**, *PLOS ONE* 14(1), mở rộng sang hòa âm: độ phức tạp tiết tấu vẫn cho đường chữ U ngược; hợp âm quá phức tạp làm **giảm** tác động của tiết tấu lên khoái cảm. Tiết tấu là động lực chính, còn hòa âm điều chỉnh qua sắc thái cảm xúc; đào tạo âm nhạc làm hiệu ứng chữ U rõ hơn.
+**Matthews, Witek, Heggli, Penhune và Vuust (2019)**, *PLOS ONE* 14(1), mở rộng sang hoà âm: độ phức tạp tiết tấu vẫn cho đường chữ U ngược; hợp âm quá phức tạp làm **giảm** tác động của tiết tấu lên khoái cảm. Tiết tấu là động lực chính, còn hoà âm điều chỉnh qua sắc thái cảm xúc; đào tạo âm nhạc làm hiệu ứng chữ U rõ hơn.
 
-Cách giải thích phổ biến dựa trên **mã hóa dự đoán** (predictive coding): não liên tục dự đoán phách tiếp theo; nghịch phách vừa phải tạo ra "lỗ hổng" dự đoán mà cơ thể muốn lấp đầy bằng chuyển động, trong khi vẫn giữ được khung phách (xem [[ky-vong-am-nhac]]).
+Cách giải thích phổ biến dựa trên **mã hoá dự đoán** (predictive coding): não liên tục dự đoán phách tiếp theo; nghịch phách vừa phải tạo ra "lỗ hổng" dự đoán mà cơ thể muốn lấp đầy bằng chuyển động, trong khi vẫn giữ được khung phách (xem [[ky-vong-am-nhac]]).
 
 ## Vi nhịp: "lệch một chút mới hay"?
 
 Nhiều nhạc công tin rằng những độ lệch thời gian rất nhỏ (*microtiming*) so với lưới nhịp là "linh hồn" của groove. Bằng chứng thực nghiệm **không ủng hộ** niềm tin này một cách đơn giản:
 
 - **Davies, Gouyon, Madison và Silva (2013)**, *Music Perception*: tổng hợp các mẫu tiết tấu jazz, funk, samba với vi nhịp đặc trưng từ 0 đến khoảng gấp đôi mức tự nhiên; vi nhịp có hệ thống **làm giảm** điểm groove, mức thích và độ tự nhiên — trừ mẫu shuffle jazz ngắn–dài đơn giản.
-- Một nghiên cứu năm 2016 trên *Frontiers in Psychology*: phiên bản lượng tử hóa hoàn toàn và phiên bản với vi nhịp như khi biểu diễn gốc được đánh giá groove **cao ngang nhau**; chỉ khi phóng đại vi nhịp thì groove giảm.
+- Một nghiên cứu năm 2016 trên *Frontiers in Psychology*: phiên bản lượng tử hoá hoàn toàn và phiên bản với vi nhịp như khi biểu diễn gốc được đánh giá groove **cao ngang nhau**; chỉ khi phóng đại vi nhịp thì groove giảm.
 
 Kết quả còn phụ thuộc phong cách và trình độ người nghe, nên vấn đề **chưa ngã ngũ**. Với người chơi piano, xem thêm [[tiet-tau-ngau-hung-jazz]] và [[doi-nhip-the-loai-jazz]].
 
@@ -2452,7 +2452,7 @@ Năm 2002, nhóm của **Isabelle Peretz** (Đại học Montréal) công bố t
 | Tổ chức thời gian | Tiết tấu (rhythm), nhịp (meter) |
 | Trí nhớ | Trí nhớ giai điệu |
 
-Nghiên cứu chuẩn hóa năm 2003 có 160 người tham gia; ngưỡng chẩn đoán đặt ở **hai độ lệch chuẩn dưới trung bình**. Tổng quan của Pfeifer & Hamann (2015) chỉ ra rằng các nghiên cứu sau dùng ngưỡng cắt, số bài con, cách làm test và thống kê **rất khác nhau**, khiến kết quả khó so sánh.
+Nghiên cứu chuẩn hoá năm 2003 có 160 người tham gia; ngưỡng chẩn đoán đặt ở **hai độ lệch chuẩn dưới trung bình**. Tổng quan của Pfeifer & Hamann (2015) chỉ ra rằng các nghiên cứu sau dùng ngưỡng cắt, số bài con, cách làm test và thống kê **rất khác nhau**, khiến kết quả khó so sánh.
 
 ## Tỉ lệ mắc: con số còn tranh cãi
 - Con số **khoảng 4%** được trích rộng rãi bắt nguồn từ nghiên cứu của Kalmus & Fry (1980) dùng một bài "Distorted Tune Test" duy nhất. Chính các nhà nghiên cứu sau này nhận xét bài test đó có độ nhạy và độ hiệu lực kém.
@@ -2461,7 +2461,7 @@ Nghiên cứu chuẩn hóa năm 2003 có 160 người tham gia; ngưỡng chẩn
 
 ::bars Kalmus_&_Fry_1980=4 Peretz_&_Vuvan_2017=1.5 max=5 | Hai ước tính tỉ lệ mù âm bẩm sinh (%), khác nhau chủ yếu do phương pháp đo
 
-Vì vậy, nên nói "khoảng 1,5–4% tùy cách đo" thay vì một con số chắc chắn.
+Vì vậy, nên nói "khoảng 1,5–4% tuỳ cách đo" thay vì một con số chắc chắn.
 
 ## Não bộ của người mù âm
 Các nghiên cứu hình ảnh học (tóm tắt theo các bài tổng quan, chưa đối chiếu toàn văn):
@@ -2524,7 +2524,7 @@ Ward, Huckstep & Tsakanikos (2006, *Cortex*) so sánh người có sắc thính 
 Galeyev & Vanechkina (2001, *Leonardo*) lập luận các liên tưởng màu–giọng của [[alexander-scriabin|Scriabin]] mang tính **liên tưởng tâm lý** chứ không phải tri giác. Kallis & Smith (sách *Demystifying Scriabin*) gọi chứng đồng cảm giác của ông là một trong những huyền thoại dai dẳng nhất và kết luận bằng chứng "áp đảo" cho thấy ông **không** phải người đồng cảm giác theo định nghĩa thần kinh học ngày nay. Hệ màu của ông đi theo vòng quãng năm và chịu ảnh hưởng quang học Newton cùng Thông Thiên học — dấu hiệu của một hệ thống được suy nghĩ có chủ ý.
 
 ### Rimsky-Korsakov và Messiaen
-[[nikolai-rimsky-korsakov|Rimsky-Korsakov]] và Scriabin bất đồng về màu của nhiều giọng (theo một giai thoại do Rachmaninoff kể lại, Mi giáng trưởng là đỏ tím với Scriabin nhưng xanh với Rimsky-Korsakov). Điều này không bác bỏ ai, vì người đồng cảm giác thật vẫn khác nhau về màu. [[olivier-messiaen|Messiaen]] coi các điệu thức hạn chế dịch giọng như "màu hòa âm" và mô tả chúng bằng màu rất chi tiết (điệu thức 2: tím xanh, xanh coban, vàng kim…); ông còn đặt tên một tác phẩm là *Couleurs de la Cité céleste*. Trong các cuộc trò chuyện với Claude Samuel, ông lúc đầu phủ nhận rồi lại thừa nhận một dạng trải nghiệm "thiên về tinh thần hơn thể chất".
+[[nikolai-rimsky-korsakov|Rimsky-Korsakov]] và Scriabin bất đồng về màu của nhiều giọng (theo một giai thoại do Rachmaninoff kể lại, Mi giáng trưởng là đỏ tím với Scriabin nhưng xanh với Rimsky-Korsakov). Điều này không bác bỏ ai, vì người đồng cảm giác thật vẫn khác nhau về màu. [[olivier-messiaen|Messiaen]] coi các điệu thức hạn chế dịch giọng như "màu hoà âm" và mô tả chúng bằng màu rất chi tiết (điệu thức 2: tím xanh, xanh coban, vàng kim…); ông còn đặt tên một tác phẩm là *Couleurs de la Cité céleste*. Trong các cuộc trò chuyện với Claude Samuel, ông lúc đầu phủ nhận rồi lại thừa nhận một dạng trải nghiệm "thiên về tinh thần hơn thể chất".
 
 ### Liszt và nghệ sĩ đại chúng
 Câu nói của [[franz-liszt|Liszt]] ở Weimar xuất hiện nhiều dị bản và không có nguồn gốc rõ. Ellington có câu phỏng vấn năm 1958 được ghi chép (theo sách của Don George). Các tuyên bố về ca sĩ nhạc pop hiện đại chủ yếu đến từ báo chí đại chúng.
@@ -2582,7 +2582,7 @@ Trên *Journal of Neuroscience*, Gaser và Schlaug dùng phương pháp hình th
 Nhóm của Fredrik Ullén (Karolinska) cho thấy ở các cặp **song sinh cùng trứng**, người chơi nhạc có vỏ não dày hơn ở vùng thính giác–vận động — gợi ý trải nghiệm có tác động thật. Nhưng cùng nhóm này (Mosing và cộng sự, 2014) cũng lập luận rằng nhiều liên hệ giữa luyện tập và năng lực **không mang tính nhân quả**. Xem thêm [[hoc-nhac-va-tri-tue]].
 
 ## Bức tranh tổng hợp gần đây
-Phân tích gộp ALE của **Criscuolo và cộng sự (2022, *Scientific Reports*)** tổng hợp 84 nghiên cứu (58 đưa vào phân tích tọa độ). Người chơi nhạc có thể tích hoặc hoạt động cao hơn ở vùng thính giác, cảm giác–vận động, cảm nhận nội tạng và hệ viền, nhưng **thấp hơn ở vùng đỉnh**. Một nỗ lực lặp lại sau đó (luận văn tại Đại học Porto) chỉ tái hiện được một phần và cho rằng liên hệ giữa luyện tập và cấu trúc não có thể kém nhất quán hơn ta tưởng, liên quan nhiều hơn đến *năng lực* âm nhạc.
+Phân tích gộp ALE của **Criscuolo và cộng sự (2022, *Scientific Reports*)** tổng hợp 84 nghiên cứu (58 đưa vào phân tích toạ độ). Người chơi nhạc có thể tích hoặc hoạt động cao hơn ở vùng thính giác, cảm giác–vận động, cảm nhận nội tạng và hệ viền, nhưng **thấp hơn ở vùng đỉnh**. Một nỗ lực lặp lại sau đó (luận văn tại Đại học Porto) chỉ tái hiện được một phần và cho rằng liên hệ giữa luyện tập và cấu trúc não có thể kém nhất quán hơn ta tưởng, liên quan nhiều hơn đến *năng lực* âm nhạc.
 
 ## Ý nghĩa thực tiễn và giới hạn
 - Bằng chứng ủng hộ khá vững rằng luyện tập **tạo thay đổi cục bộ** ở vùng phục vụ trực tiếp kỹ năng (ngón tay, nghe cao độ).
@@ -2610,14 +2610,14 @@ Các nghiên cứu nền tảng có mẫu nhỏ; phần lớn là so sánh cắt
     ],
     body: `
 ## "Hòn đảo được bảo tồn"
-Người làm việc trong viện dưỡng lão thường kể: một người bệnh Alzheimer không còn nhận ra con cái vẫn hát trọn một bài hát thời trẻ. Hiện tượng này có thật trong nhiều trường hợp, nhưng Baird & Samson (2015, *Progress in Brain Research*) cảnh báo rằng hình ảnh âm nhạc như một "hòn đảo được bảo tồn" phần nào do truyền thông khuếch đại. Thực tế có **nhiều loại trí nhớ âm nhạc** (nhận ra giai điệu quen, học bài mới, ký ức tự truyện gợi bởi nhạc, kỹ năng chơi đàn) và chúng **suy giảm khác nhau** tùy loại sa sút trí tuệ. Nghiên cứu nghiêm ngặt về chủ đề này còn ít.
+Người làm việc trong viện dưỡng lão thường kể: một người bệnh Alzheimer không còn nhận ra con cái vẫn hát trọn một bài hát thời trẻ. Hiện tượng này có thật trong nhiều trường hợp, nhưng Baird & Samson (2015, *Progress in Brain Research*) cảnh báo rằng hình ảnh âm nhạc như một "hòn đảo được bảo tồn" phần nào do truyền thông khuếch đại. Thực tế có **nhiều loại trí nhớ âm nhạc** (nhận ra giai điệu quen, học bài mới, ký ức tự truyện gợi bởi nhạc, kỹ năng chơi đàn) và chúng **suy giảm khác nhau** tuỳ loại sa sút trí tuệ. Nghiên cứu nghiêm ngặt về chủ đề này còn ít.
 
 ## Jacobsen và cộng sự (2015): vì sao trí nhớ âm nhạc còn lại
 Nhóm của Jörn-Henrik Jacobsen (Viện Max Planck, Leipzig) công bố trên tạp chí *Brain* năm 2015 một nghiên cứu hai bước:
-1. Chụp cộng hưởng từ chức năng ở người khỏe mạnh khi nghe bài hát quen từ lâu, bài mới nghe gần đây và giai điệu lạ. Phân tích mẫu hình xác định các vùng gắn với **trí nhớ âm nhạc dài hạn**: hồi đai trước phần đuôi và **vùng tiền vận động bổ sung** phía bụng — những vùng vốn liên quan đến điều khiển vận động phức tạp, không phải thùy thái dương như từng giả định.
-2. So sánh các vùng này ở **20 bệnh nhân Alzheimer** và 34 người đối chứng về teo não, chuyển hóa và mảng amyloid. Các vùng "âm nhạc" **ít teo và ít giảm chuyển hóa** so với phần còn lại của não, dù vẫn có amyloid.
+1. Chụp cộng hưởng từ chức năng ở người khoẻ mạnh khi nghe bài hát quen từ lâu, bài mới nghe gần đây và giai điệu lạ. Phân tích mẫu hình xác định các vùng gắn với **trí nhớ âm nhạc dài hạn**: hồi đai trước phần đuôi và **vùng tiền vận động bổ sung** phía bụng — những vùng vốn liên quan đến điều khiển vận động phức tạp, không phải thuỳ thái dương như từng giả định.
+2. So sánh các vùng này ở **20 bệnh nhân Alzheimer** và 34 người đối chứng về teo não, chuyển hoá và mảng amyloid. Các vùng "âm nhạc" **ít teo và ít giảm chuyển hoá** so với phần còn lại của não, dù vẫn có amyloid.
 
-Bình luận đi kèm của Clark & Warren trong cùng số tạp chí nhắc rằng niềm tin "âm nhạc mở khóa trí nhớ" là điều được trân trọng trong thần kinh học lâm sàng, nhưng **kiểm chứng khoa học hiếm khi đơn giản**. Mẫu bệnh nhân nhỏ, và nghiên cứu cho thấy tương quan giải phẫu chứ chưa chứng minh trực tiếp các vùng ấy "bảo vệ" chức năng.
+Bình luận đi kèm của Clark & Warren trong cùng số tạp chí nhắc rằng niềm tin "âm nhạc mở khoá trí nhớ" là điều được trân trọng trong thần kinh học lâm sàng, nhưng **kiểm chứng khoa học hiếm khi đơn giản**. Mẫu bệnh nhân nhỏ, và nghiên cứu cho thấy tương quan giải phẫu chứ chưa chứng minh trực tiếp các vùng ấy "bảo vệ" chức năng.
 
 ## Bằng chứng từ tổng quan Cochrane
 Tổng quan Cochrane do **Jenny van der Steen** chủ trì gộp các thử nghiệm ngẫu nhiên có đối chứng về can thiệp âm nhạc (ít nhất năm buổi) cho người sa sút trí tuệ, phần lớn sống ở cơ sở chăm sóc.
@@ -2634,7 +2634,7 @@ Tổng quan Cochrane do **Jenny van der Steen** chủ trì gộp các thử nghi
 Bản cập nhật năm **2025** (CD003477.pub5) gồm **30 nghiên cứu, 1.720 người tham gia**, chủ yếu ở các nước thu nhập cao (Úc, Đài Loan, Mỹ, châu Âu), và giữ kết luận cốt lõi: can thiệp âm nhạc **có lẽ** cải thiện triệu chứng trầm cảm và có thể cải thiện hành vi khi kết thúc điều trị, nhưng **không có bằng chứng về hiệu quả kéo dài**. Lưu ý: số liệu 30 nghiên cứu/1.720 người thuộc bản 2025, không phải bản 2018.
 
 ## Chơi nhạc có phòng ngừa sa sút trí tuệ không?
-Nghiên cứu song sinh Thụy Điển của **Balbag, Pedersen & Gatz (2014)** xét 157 cặp song sinh trong đó chỉ một người mắc sa sút trí tuệ hoặc suy giảm nhận thức; 27 cặp khác nhau về việc chơi nhạc cụ. Sau khi hiệu chỉnh giới, học vấn và vận động thể lực, chơi nhạc cụ gắn với **tỉ số chênh 0,36** (khoảng tin cậy 95%: 0,13–0,99). Khoảng tin cậy rất rộng và sát ngưỡng 1, nên báo chí diễn giải thành "giảm hai phần ba nguy cơ" là quá mức. Ngoài ra còn nguy cơ **nhân quả ngược**: người bắt đầu suy giảm có thể bỏ chơi đàn trước khi được chẩn đoán.
+Nghiên cứu song sinh Thuỵ Điển của **Balbag, Pedersen & Gatz (2014)** xét 157 cặp song sinh trong đó chỉ một người mắc sa sút trí tuệ hoặc suy giảm nhận thức; 27 cặp khác nhau về việc chơi nhạc cụ. Sau khi hiệu chỉnh giới, học vấn và vận động thể lực, chơi nhạc cụ gắn với **tỉ số chênh 0,36** (khoảng tin cậy 95%: 0,13–0,99). Khoảng tin cậy rất rộng và sát ngưỡng 1, nên báo chí diễn giải thành "giảm hai phần ba nguy cơ" là quá mức. Ngoài ra còn nguy cơ **nhân quả ngược**: người bắt đầu suy giảm có thể bỏ chơi đàn trước khi được chẩn đoán.
 
 ## Giới hạn và khuyến nghị thực hành
 - Âm nhạc là **hỗ trợ không dùng thuốc** có chi phí thấp, ít tác dụng phụ — không thay thế điều trị y khoa.
@@ -2672,7 +2672,7 @@ Nhà tâm lý học **Bruno Repp** (Haskins Laboratories) đã tổng hợp lĩn
 - **Độ biến thiên** giảm theo luyện tập; các tổng quan ghi nhận nhạc công thường gõ ổn định hơn người không học nhạc.
 
 ## Não xử lý phách thế nào
-**Grahn & Brett (2007)** dùng cộng hưởng từ chức năng cho người nghe các tiết tấu có phách rõ (nhóm nhịp đều) và tiết tấu không có phách rõ. Tiết tấu có phách rõ kích hoạt mạnh hơn **hạch nền**, **vùng vận động bổ sung (SMA)** và hồi thái dương trên — tức là **hệ vận động tham gia ngay cả khi chỉ nghe**, không cử động. Tiểu não và vỏ tiền vận động phản ứng với tiết tấu nói chung, còn hạch nền và SMA đặc biệt nhạy với phách. Bệnh nhân Parkinson (tổn thương hạch nền) không được hưởng lợi từ tiết tấu có phách khi phân biệt nhịp như người khỏe — một bằng chứng bổ sung. Đây là cơ sở thần kinh cho cảm giác "nghe nhạc là muốn nhún nhảy".
+**Grahn & Brett (2007)** dùng cộng hưởng từ chức năng cho người nghe các tiết tấu có phách rõ (nhóm nhịp đều) và tiết tấu không có phách rõ. Tiết tấu có phách rõ kích hoạt mạnh hơn **hạch nền**, **vùng vận động bổ sung (SMA)** và hồi thái dương trên — tức là **hệ vận động tham gia ngay cả khi chỉ nghe**, không cử động. Tiểu não và vỏ tiền vận động phản ứng với tiết tấu nói chung, còn hạch nền và SMA đặc biệt nhạy với phách. Bệnh nhân Parkinson (tổn thương hạch nền) không được hưởng lợi từ tiết tấu có phách khi phân biệt nhịp như người khoẻ — một bằng chứng bổ sung. Đây là cơ sở thần kinh cho cảm giác "nghe nhạc là muốn nhún nhảy".
 
 ## Động vật có cảm nhận phách không?
 ### Snowball, chú vẹt mào lưu huỳnh
@@ -2691,9 +2691,9 @@ Patel (2006) đề xuất **giả thuyết học tiếng–đồng bộ nhịp**
 | Snowball – vũ đạo | 2019 | Có | 14 động tác tự phát |
 
 ## Ứng dụng cho dạy và học nhạc
-- Gõ sớm hơn phách là bình thường; luyện với máy đếm nhịp giúp giảm độ biến thiên, nhưng cần nghe cả nhóm khi chơi hòa tấu.
+- Gõ sớm hơn phách là bình thường; luyện với máy đếm nhịp giúp giảm độ biến thiên, nhưng cần nghe cả nhóm khi chơi hoà tấu.
 - Cho học sinh **nhún, vỗ, bước** theo phách trước khi đọc tiết tấu tận dụng sự tham gia tự nhiên của hệ vận động.
-- Xem thêm [[nhip-do]], [[am-nhac-hoc-tien-hoa]] (vai trò của đồng bộ nhóm trong tiến hóa) và [[than-kinh-hoc-am-nhac]].
+- Xem thêm [[nhip-do]], [[am-nhac-hoc-tien-hoa]] (vai trò của đồng bộ nhóm trong tiến hoá) và [[than-kinh-hoc-am-nhac]].
 
 ## Nguồn và độ tin cậy
 Các hiện tượng gõ nhịp được lặp lại rộng rãi. Bằng chứng về động vật dựa trên số ít cá thể; một số con số ở đây (±20%, 20% số lần thử) lấy từ bản hội nghị trước khi đăng báo, nên có thể khác bản chính thức. Liên quan: [[cam-nhan-phach]], [[am-nhac-hoc-tien-hoa]], [[da-nhip]].
@@ -2723,8 +2723,8 @@ Theo Britannica, raga là *khung giai điệu* dùng cho ứng tác và sáng t�
 
 - Văn bản lý thuyết quan trọng thời trung đại là *Sangita-ratnakara* của Sarngadeva (đầu thế kỷ 13, vùng Deccan), bàn đến 253 raga.
 - Britannica ghi nhận: ở miền Bắc, raga thường được phân loại theo tâm trạng, mùa và giờ trong ngày; ở miền Nam, theo đặc điểm kỹ thuật của âm giai.
-- Ở miền Bắc, Vishnu Narayan Bhatkhande (1860–1936) hệ thống hóa raga thành 10 *thaat* (âm giai gốc).
-- Ở miền Nam, hệ **72 melakarta** gắn với Venkatamakhin (thế kỷ 17, tác phẩm *Chaturdandiprakashika*): ông hoán vị các dạng của từng bậc âm để thu được 72 *mela*, nhưng theo các nguồn thứ cấp chỉ đặt tên khoảng 19 mela vì phần còn lại khi đó chưa có raga thực tế. Hệ tên gọi chuẩn hóa sau này gắn với Govindacharya.
+- Ở miền Bắc, Vishnu Narayan Bhatkhande (1860–1936) hệ thống hoá raga thành 10 *thaat* (âm giai gốc).
+- Ở miền Nam, hệ **72 melakarta** gắn với Venkatamakhin (thế kỷ 17, tác phẩm *Chaturdandiprakashika*): ông hoán vị các dạng của từng bậc âm để thu được 72 *mela*, nhưng theo các nguồn thứ cấp chỉ đặt tên khoảng 19 mela vì phần còn lại khi đó chưa có raga thực tế. Hệ tên gọi chuẩn hoá sau này gắn với Govindacharya.
 
 Raga không chia quãng tám thành 12 bán cung bình quân; cao độ được hiểu tương đối theo nốt chủ (Sa) do tambura giữ, và nhiều nốt được trang trí bằng luyến (*meend*, *gamaka*). Xem thêm [[vi-cung-va-am-nhac-vi-cung]].
 
@@ -2805,7 +2805,7 @@ Một maqam không chỉ là tập hợp nốt. Nó là một bộ quy tắc cho
 
 ### Taqsim
 
-*Taqsim* (số nhiều *taqasim*) là ứng tác độc tấu **không phách**, trên oud, qanun, ney hoặc bằng giọng hát. Người chơi mở đầu bằng những câu ngắn quanh nốt trọng tâm, mở rộng dần âm vực, có thể chuyển (*điệu chuyển*) sang maqam khác rồi quay về maqam gốc. Bên dưới có thể có âm trì hoặc mẫu trống, nhưng giai điệu vẫn tự do. Một nghiên cứu trên *Frontiers in Psychology* (2021) về các nghệ sĩ oud Syria mô tả taqsim là quá trình sáng tạo nhiều thành phần, phụ thuộc chặt vào maqam.
+*Taqsim* (số nhiều *taqasim*) là ứng tác độc tấu **không phách**, trên oud, qanun, ney hoặc bằng giọng hát. Người chơi mở đầu bằng những câu ngắn quanh nốt trọng tâm, mở rộng dần âm vực, có thể chuyển điệu sang maqam khác rồi quay về maqam gốc. Bên dưới có thể có âm trì hoặc mẫu trống, nhưng giai điệu vẫn tự do. Một nghiên cứu trên *Frontiers in Psychology* (2021) về các nghệ sĩ oud Syria mô tả taqsim là quá trình sáng tạo nhiều thành phần, phụ thuộc chặt vào maqam.
 
 ## "Quãng tư cung" và hệ 24 âm
 
@@ -2822,8 +2822,8 @@ Năm 1932, Cairo tổ chức Hội nghị Âm nhạc Ả Rập lần thứ nhấ
 
 ::timeline 950=al-Farabi_mất 1200-1300=al-Urmawi:_thang_17_âm 1800-1888=Mishaqa:_thang_24_âm 1932=Hội_nghị_Cairo | Một số mốc trong lý thuyết maqam
 
-- Tranh cãi lớn xoay quanh việc **chuẩn hóa thang 24 tư cung** và việc dùng nhạc cụ phương Tây như piano. Rauf Yekta, đại biểu Thổ Nhĩ Kỳ, phản đối thang 24 âm bình quân.
-- Hội nghị cũng làm lộ ra mâu thuẫn giữa phe hiện đại hóa và phe truyền thống trung thành với *tarab* và ứng tác.
+- Tranh cãi lớn xoay quanh việc **chuẩn hoá thang 24 tư cung** và việc dùng nhạc cụ phương Tây như piano. Rauf Yekta, đại biểu Thổ Nhĩ Kỳ, phản đối thang 24 âm bình quân.
+- Hội nghị cũng làm lộ ra mâu thuẫn giữa phe hiện đại hoá và phe truyền thống trung thành với *tarab* và ứng tác.
 - Các đại biểu nhận thấy âm giai ở Mashriq (phía đông) khác hẳn Maghreb (phía tây), nơi các quãng "tư cung" ít gặp hơn nhiều.
 - Theo Qantara, nhóm của Bartók và Lachmann đã thực hiện khoảng 360 bản thu với các đoàn tham dự. Một bộ dữ liệu nghiên cứu mở về hội nghị đã được công bố trên arXiv năm 2025.
 
@@ -2840,7 +2840,7 @@ Lý thuyết chính thức ở Thổ Nhĩ Kỳ là hệ **Arel–Ezgi–Uzdilek 
 | 7 dastgah | Shur, Segah, Chahargah, Mahur, Homayun, Nava, Rast-Panjgah |
 | 5 avaz | Abu Ata, Bayat-e Tork, Afshari, Dashti, Bayat-e Esfahan |
 
-Mỗi dastgah là một chuỗi *gusheh* (giai điệu ngắn). Nghệ sĩ mở đầu bằng gusheh nhập đề (*daramad*) rồi đi qua nhiều gusheh với tâm trạng khác nhau. Hệ 12 phần này được hệ thống hóa vào thế kỷ 19, đặc biệt qua Mirza Abdollah. Bốn avaz đầu thường được coi là phái sinh từ Shur, avaz cuối từ Homayun.
+Mỗi dastgah là một chuỗi *gusheh* (giai điệu ngắn). Nghệ sĩ mở đầu bằng gusheh nhập đề (*daramad*) rồi đi qua nhiều gusheh với tâm trạng khác nhau. Hệ 12 phần này được hệ thống hoá vào thế kỷ 19, đặc biệt qua Mirza Abdollah. Bốn avaz đầu thường được coi là phái sinh từ Shur, avaz cuối từ Homayun.
 
 ## Nguồn và độ tin cậy
 
@@ -2859,7 +2859,7 @@ Xem thêm: [[dan-oud]], [[am-nhac-co-dien-an-do]], [[dieu-thuc]], [[dan-toc-nhac
       ["Irama — Wikipedia", "https://en.wikipedia.org/wiki/Irama"],
       ["Pelog — Wikipedia", "https://en.wikipedia.org/wiki/Pelog"],
       ["Bill Alves, Graphic Representation of Some Gamelan Tunings", "https://pages.hmc.edu/alves/laras.html"],
-      ["Music Perception — mô hình hóa chỉnh âm gamelan (Project MUSE)", "https://muse.jhu.edu/article/585304"],
+      ["Music Perception — mô hình hoá chỉnh âm gamelan (Project MUSE)", "https://muse.jhu.edu/article/585304"],
       ["Kotekan — Wikipedia", "https://en.wikipedia.org/wiki/Kotekan"],
       ["Wayne Vitale, Kotekan: the technique of interlocking parts in Balinese music (Balungan, 1990)", "https://gamelan.org/?p=3652"],
       ["Mueller, Javanese Influence on Debussy", "https://music.arts.uci.edu/abauer/Cross-Cultural/readings/Mueller_Javanese_Influence_on_Debussy.pdf"],
@@ -2884,7 +2884,7 @@ Công trình của Surjodiningrat, Sudarjana và Susanto (1972, tái bản 1993)
 - Một bài trên tạp chí *Music Perception* kết luận cả hai thang Java đều bị **giãn quãng tám** đáng kể so với thang phương Tây.
 - Một tiền ấn phẩm arXiv (2025) nêu chu kỳ thực tế của slendro thường khoảng 1210 cent thay vì 1200.
 
-Như vậy câu "slendro chia quãng tám làm 5 phần bằng nhau" chỉ là lý tưởng hóa. Xem thêm [[am-giai-ngu-cung]] và [[cac-he-thong-chinh-am]].
+Như vậy câu "slendro chia quãng tám làm 5 phần bằng nhau" chỉ là lý tưởng hoá. Xem thêm [[am-giai-ngu-cung]] và [[cac-he-thong-chinh-am]].
 
 ## Cấu trúc colotomic: thời gian hình vòng
 
@@ -2893,7 +2893,7 @@ Như vậy câu "slendro chia quãng tám làm 5 phần bằng nhau" chỉ là l
 | Nhạc cụ | Vai trò |
 |---|---|
 | gong ageng | cồng lớn nhất, đánh dấu điểm kết và khởi đầu của vòng |
-| kenong | cồng nằm cao âm, chia vòng thành các đoạn lớn |
+| kenong | cồng nằm, âm cao hơn, chia vòng thành các đoạn lớn |
 | kempul | cồng treo nhỏ, chia nhỏ hơn |
 | kethuk | đánh dấu các phách phụ |
 
@@ -2948,7 +2948,7 @@ Châu Phi hạ Sahara gồm hàng chục quốc gia và hàng nghìn ngôn ngữ
 
 Trong nhiều điệu múa trống Tây Phi, mỗi người chơi giữ một mẫu ngắn, lặp lại, và các mẫu chồng lên nhau tạo thành kết cấu dày. Quan hệ **3 chống 2** (ba phách chia đều đặt trên hai phách chia đều) là quan hệ nền tảng: Agawu (2006) nhấn mạnh rằng 2 và 3 ở đây được cảm nhận như một chỉnh thể (*Gestalt*) chứ không như hai nhịp "xung đột". Xem [[da-nhip]] và [[sieu-nhip]].
 
-Simha Arom, trong *African Polyphony and Polyrhythm* (Cambridge UP, 1991, lời tựa của György Ligeti), nghiên cứu âm nhạc Cộng hòa Trung Phi: đàn hạc, sanza, xylophone và bộ gõ. Ông xây dựng phương pháp ghi và giải mã từng tầng phức điệu–đa nhịp, coi âm nhạc như một hệ thống ngữ pháp và mượn kỹ thuật của ngôn ngữ học.
+Simha Arom, trong *African Polyphony and Polyrhythm* (Cambridge UP, 1991, lời tựa của György Ligeti), nghiên cứu âm nhạc Cộng hoà Trung Phi: đàn hạc, sanza, xylophone và bộ gõ. Ông xây dựng phương pháp ghi và giải mã từng tầng phức điệu–đa nhịp, coi âm nhạc như một hệ thống ngữ pháp và mượn kỹ thuật của ngôn ngữ học.
 
 ## Time line: mẫu chuông làm trục
 
@@ -2960,11 +2960,11 @@ Mẫu chuẩn gồm **7 tiếng đánh và 5 lặng** trên chu kỳ 12 xung (th
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | x | · | x | · | x | x | · | x | · | x | · | x |
 
-Agawu (2006) gọi mẫu này là một *topos* và chỉ ra rằng phân tích "cấu trúc" theo siêu ngôn ngữ châu Âu dễ đọc nó là nhịp *cộng* (additive), trong khi phân tích "văn hóa", dựa trên vũ đạo và cách nghĩ của nhạc công châu Phi, đặt nó trên nền phách đều do bước chân múa xác định. Một nghiên cứu về điệu kete của người Asante còn lập luận rằng phách 1 không phải điểm khởi đầu mà là **điểm đến** của câu chuông. Họ hàng Mỹ Latinh của mẫu này là clave: xem [[clave-tresillo-va-nhip-cong]].
+Agawu (2006) gọi mẫu này là một *topos* và chỉ ra rằng phân tích "cấu trúc" theo siêu ngôn ngữ châu Âu dễ đọc nó là nhịp *cộng* (additive), trong khi phân tích "văn hoá", dựa trên vũ đạo và cách nghĩ của nhạc công châu Phi, đặt nó trên nền phách đều do bước chân múa xác định. Một nghiên cứu về điệu kete của người Asante còn lập luận rằng phách 1 không phải điểm khởi đầu mà là **điểm đến** của câu chuông. Họ hàng Mỹ Latinh của mẫu này là clave: xem [[clave-tresillo-va-nhip-cong]].
 
 ## Xướng–đáp
 
-Lối **xướng–đáp** (*call and response*), trong đó một người hát lĩnh xướng và tập thể đáp lại bằng một điệp khúc cố định, có mặt rộng khắp trong ca hát nghi lễ, lao động và giải trí. Người lĩnh xướng thường được ứng tác lời và giai điệu, còn câu đáp giữ ổn định như một "time line" bằng giọng hát. Lối này về sau thấm vào gospel, blues, jazz và nhạc Mỹ Latinh. Xem [[am-giai-blues]].
+Lối **xướng–đáp** (*call and response*), trong đó một người hát lĩnh xướng và tập thể đáp lại bằng một điệp khúc cố định, có mặt rộng khắp trong ca hát nghi lễ, lao động và giải trí. Người lĩnh xướng thường ứng tác lời và giai điệu, còn câu đáp giữ ổn định như một "time line" bằng giọng hát. Lối này về sau thấm vào gospel, blues, jazz và nhạc Mỹ Latinh. Xem [[am-giai-blues]].
 
 ## Trống biết nói
 
@@ -3006,7 +3006,7 @@ Xem thêm: [[clave-tresillo-va-nhip-cong]], [[kora]], [[da-nhip]].
     body: `
 Người Nhật gọi âm nhạc truyền thống là *hōgaku* ("nhạc nước nhà") để phân biệt với *yōgaku* (nhạc phương Tây). Đó không phải một hệ thống thống nhất mà là nhiều lớp hình thành qua hơn một thiên niên kỷ: nhạc cung đình du nhập từ lục địa, nhạc Phật giáo, nhạc sân khấu Noh và Kabuki, nhạc thính phòng của tầng lớp đô thị thời Edo, và dân ca (*min'yō*). Nhạc cụ (koto, shamisen, shakuhachi, biwa) được giới thiệu ở trang [[nhac-cu-dong-a]].
 
-::timeline 701=Triều_đình_thiết_lập_nhã_nhạc 1600-1868=Thời_Edo:_koto,_shakuhachi,_Kabuki 1664=Ghi_chép_honkyoku_sớm_nhất 1955=Gagaku_thành_tài_sản_văn_hóa_quan_trọng 2009=UNESCO_ghi_danh_gagaku | Một số mốc của âm nhạc truyền thống Nhật Bản
+::timeline 701=Triều_đình_thiết_lập_nhã_nhạc 1600-1868=Thời_Edo:_koto,_shakuhachi,_Kabuki 1664=Ghi_chép_honkyoku_sớm_nhất 1955=Gagaku_thành_tài_sản_văn_hoá_quan_trọng 2009=UNESCO_ghi_danh_gagaku | Một số mốc của âm nhạc truyền thống Nhật Bản
 
 ## Gagaku: nhã nhạc cung đình
 
@@ -3016,7 +3016,7 @@ Người Nhật gọi âm nhạc truyền thống là *hōgaku* ("nhạc nước
 - **Komagaku**: các bản có gốc Triều Tiên.
 - Ngoài ra có ca vũ bản địa và thơ ngâm có nhạc đệm.
 
-Dàn nhạc gồm kèn dăm kép *hichiriki*, sáo *ryūteki*, khèn *shō*, đàn và trống. Chức năng chủ yếu là nghi lễ, đệm cho nghi thức của Thiên hoàng và hoàng tộc. Năm 1955 Chính phủ Nhật công nhận gagaku là Tài sản văn hóa phi vật thể quan trọng; năm 2009 UNESCO đưa vào Danh sách đại diện di sản phi vật thể của nhân loại. Sứ quán Nhật mô tả đây là truyền thống nhạc dàn nhạc còn sống lâu đời nhất thế giới, một nhận định khó kiểm chứng độc lập. So sánh với [[ca-hue-nha-nhac|Nhã nhạc cung đình Huế]].
+Dàn nhạc gồm kèn dăm kép *hichiriki*, sáo *ryūteki*, khèn *shō*, đàn và trống. Chức năng chủ yếu là nghi lễ, đệm cho nghi thức của Thiên hoàng và hoàng tộc. Năm 1955 Chính phủ Nhật công nhận gagaku là Tài sản văn hoá phi vật thể quan trọng; năm 2009 UNESCO đưa vào Danh sách đại diện di sản phi vật thể của nhân loại. Sứ quán Nhật mô tả đây là truyền thống nhạc dàn nhạc còn sống lâu đời nhất thế giới, một nhận định khó kiểm chứng độc lập. So sánh với [[ca-hue-nha-nhac|Nhã nhạc cung đình Huế]].
 
 ## Shakuhachi và honkyoku
 
@@ -3030,12 +3030,12 @@ Niên đại thành lập phái (có nguồn ghi 1614) và nhiều truyền thuy
 
 ## Sōkyoku: nhạc koto
 
-*Sōkyoku* là âm nhạc cho đàn tranh koto 13 dây. Yatsuhashi Kengyō (thế kỷ 17), một nhạc sĩ mù, thường được coi là người đặt nền cho nhạc koto cận đại, hệ thống hóa lối độc tấu và thể *danmono* (bản không lời gồm nhiều đoạn). Bản *Rokudan no Shirabe* ("Khúc sáu đoạn") gồm sáu đoạn có số phách bằng nhau, nhịp độ tăng dần, và là một trong số ít danmono còn lưu truyền. Xem [[dan-tranh]] để so sánh.
+*Sōkyoku* là âm nhạc cho đàn tranh koto 13 dây. Yatsuhashi Kengyō (thế kỷ 17), một nhạc sĩ mù, thường được coi là người đặt nền cho nhạc koto cận đại, hệ thống hoá lối độc tấu và thể *danmono* (bản không lời gồm nhiều đoạn). Bản *Rokudan no Shirabe* ("Khúc sáu đoạn") gồm sáu đoạn có số phách bằng nhau, nhịp độ tăng dần, và là một trong số ít danmono còn lưu truyền. Xem [[dan-tranh]] để so sánh.
 
 ## Âm nhạc sân khấu: Noh và Kabuki
 
 - **Noh**: dàn *hayashi* gồm bốn nhạc cụ là sáo *nōkan*, trống vai *kotsuzumi*, trống hông *ōtsuzumi* và trống *taiko* có dùi, đệm cho phần hát *yōkyoku*. Người chơi trống phát ra các tiếng hô (*kakegoe*) như một phần của âm nhạc, giúp giữ nhịp và tạo kịch tính.
-- **Kabuki**: ban đầu dùng dàn hayashi của Noh, sau thêm đàn shamisen. Thể **nagauta** ("bài hát dài") lấy shamisen và giọng hát làm trung tâm cùng dàn hayashi; nó được đưa vào Kabuki khoảng năm 1740 và cũng được diễn độc lập trên sân khấu hòa nhạc.
+- **Kabuki**: ban đầu dùng dàn hayashi của Noh, sau thêm đàn shamisen. Thể **nagauta** ("bài hát dài") lấy shamisen và giọng hát làm trung tâm cùng dàn hayashi; nó được đưa vào Kabuki khoảng năm 1740 và cũng được diễn độc lập trên sân khấu hoà nhạc.
 
 ## Thẩm mỹ: ma và âm giai
 
@@ -3056,7 +3056,7 @@ Nhà dân tộc nhạc học **Koizumi Fumio** đề xuất cách nhìn khác: �
 
 ## Nguồn và độ tin cậy
 
-Phần gagaku dựa trên tài liệu của Sứ quán Nhật và EBSCO; phần honkyoku dựa trên Japan House (Đại học Illinois) và các nguồn chuyên ngành shakuhachi vốn có những chỗ lệch nhau về niên đại. Ví dụ cao độ của âm giai in là quy ước minh họa.
+Phần gagaku dựa trên tài liệu của Sứ quán Nhật và EBSCO; phần honkyoku dựa trên Japan House (Đại học Illinois) và các nguồn chuyên ngành shakuhachi vốn có những chỗ lệch nhau về niên đại. Ví dụ cao độ của âm giai in là quy ước minh hoạ.
 
 Xem thêm: [[nhac-cu-dong-a]], [[am-nhac-truyen-thong-trung-hoa]], [[dan-toc-nhac-hoc]].
 `,
@@ -3066,7 +3066,7 @@ Xem thêm: [[nhac-cu-dong-a]], [[am-nhac-truyen-thong-trung-hoa]], [[dan-toc-nha
     title: "Âm nhạc truyền thống Trung Hoa",
     category: 'musicology',
     aliases: ["traditional Chinese music", "âm nhạc cổ truyền Trung Quốc", "lülü", "luật lữ", "thập nhị luật", "gong shang jiao zhi yu", "Kunqu", "Côn khúc", "Peking opera", "Kinh kịch", "jingju", "silk and bamboo", "ti trúc", "Jiangnan sizhu", "Chu Tái Dục", "Zhu Zaiyu"],
-    summary: "Tổng quan âm nhạc truyền thống Trung Hoa qua bốn trục: hệ luật lữ 12 âm và phép tính của Chu Tái Dục, ngũ âm cung–thương–giốc–chủy–vũ, kịch hát (Côn khúc, Kinh kịch), và nhạc thính phòng \"ti trúc\".",
+    summary: "Tổng quan âm nhạc truyền thống Trung Hoa qua bốn trục: hệ luật lữ 12 âm và phép tính của Chu Tái Dục, ngũ âm cung–thương–giốc–chuỷ–vũ, kịch hát (Côn khúc, Kinh kịch), và nhạc thính phòng \"ti trúc\".",
     refs: [
       ["Zhu Zaiyu — Wikipedia", "https://en.wikipedia.org/wiki/Zhu_Zaiyu"],
       ["Equal temperament — Wikipedia", "https://en.wikipedia.org/wiki/Equal_temperament"],
@@ -3091,15 +3091,15 @@ Hoàng thân nhà Minh **Chu Tái Dục** (Zhu Zaiyu) đã giải bài toán nà
 
 Ông thường được coi là người đầu tiên giải bài toán bình quân bằng toán học, gần như cùng thời với Simon Stevin ở châu Âu. Tuy nhiên quyền ưu tiên **còn tranh cãi**: Fritz Kuttner công nhận phương pháp tính của Chu năm 1584 là chính xác và tài tình, nhưng cho rằng cả Chu lẫn Stevin đều không nên được coi là "người phát minh" bình quân. Trước đó nữa, nhà toán học Hà Thừa Thiên (thời Nam–Bắc triều) đã mô tả một phép xấp xỉ. Xem [[cac-he-thong-chinh-am]].
 
-## Ngũ âm: cung, thương, giốc, chủy, vũ
+## Ngũ âm: cung, thương, giốc, chuỷ, vũ
 
-Năm bậc của thang ngũ âm Trung Hoa mang tên **cung, thương, giốc, chủy, vũ** (gong, shang, jiao, zhi, yu), tương ứng với Do–Re–Mi–Sol–La nếu lấy cung là Do. Mỗi bậc có thể làm chủ âm, tạo ra năm điệu thức (điệu cung, điệu thương…). Hai âm phụ *biến chủy* và *biến cung* bổ sung để thành thang bảy âm. Hệ thống này truyền sang Việt Nam, Triều Tiên và Nhật Bản. Xem [[am-giai-ngu-cung]] và [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
+Năm bậc của thang ngũ âm Trung Hoa mang tên **cung, thương, giốc, chuỷ, vũ** (gong, shang, jiao, zhi, yu), tương ứng với Do–Re–Mi–Sol–La nếu lấy cung là Do. Mỗi bậc có thể làm chủ âm, tạo ra năm điệu thức (điệu cung, điệu thương…). Hai âm phụ *biến chuỷ* và *biến cung* bổ sung để thành thang bảy âm. Hệ thống này truyền sang Việt Nam, Triều Tiên và Nhật Bản. Xem [[am-giai-ngu-cung]] và [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
 
 ## Kịch hát: Côn khúc và Kinh kịch
 
 ### Côn khúc
 
-*Kunqu* (Côn khúc), xuất phát từ vùng Côn Sơn (Giang Tô), thường được coi là thể loại hí khúc cổ nhất còn lưu truyền. Làn điệu Côn Sơn thường được ghi công cho **Ngụy Lương Phụ** thời Minh; Guinness đặt cuộc cải cách của ông vào khoảng năm 1530. Lối hát tinh tế của ông được gọi là *thủy ma điệu* ("điệu cối xay nước"). Tuy nhiên một phát hiện gần đây cho rằng làn điệu Côn Sơn đã có từ cuối đời Nguyên, gắn với Cố Kiên. Năm 2001, Côn khúc được UNESCO tuyên bố là Kiệt tác di sản truyền khẩu và phi vật thể của nhân loại (đợt đầu tiên), rồi đưa vào Danh sách đại diện năm 2008.
+*Kunqu* (Côn khúc), xuất phát từ vùng Côn Sơn (Giang Tô), thường được coi là thể loại hí khúc cổ nhất còn lưu truyền. Làn điệu Côn Sơn thường được ghi công cho **Nguỵ Lương Phụ** thời Minh; Guinness đặt cuộc cải cách của ông vào khoảng năm 1530. Lối hát tinh tế của ông được gọi là *thuỷ ma điệu* ("điệu cối xay nước"). Tuy nhiên một phát hiện gần đây cho rằng làn điệu Côn Sơn đã có từ cuối đời Nguyên, gắn với Cố Kiên. Năm 2001, Côn khúc được UNESCO tuyên bố là Kiệt tác di sản truyền khẩu và phi vật thể của nhân loại (đợt đầu tiên), rồi đưa vào Danh sách đại diện năm 2008.
 
 ### Kinh kịch
 
@@ -3203,7 +3203,7 @@ Quản lý **quyền tác giả của bài hát** (khác với bản ghi), thu t
 Chịu trách nhiệm âm thanh của bản thu, từ phối khí, chỉ đạo thu tới mix. Thường nhận một khoản phí trả trước cộng với **"points"** — phần trăm tiền bản quyền bản ghi, lấy từ phần của nghệ sĩ. Các nguồn hướng dẫn đưa ra những khoảng không hoàn toàn trùng nhau: khoảng **3–7 điểm** trong hợp đồng hãng lớn (3 điểm cho người mới), hoặc **2–4 điểm** theo nguồn khác; hợp đồng độc lập có thể chia theo phần trăm thu nhập ròng. Khi nhà sản xuất cũng đồng sáng tác (phổ biến trong pop và hip-hop), họ còn có phần tác quyền bài hát.
 
 ### Nhạc công phòng thu (session musician)
-Người chơi nhạc thuê cho bản thu hoặc tour của nghệ sĩ khác, thường được trả **theo buổi** hoặc theo ngày; ở Mỹ và Anh, công đoàn (AFM, Musicians' Union) có biểu giá tối thiểu cho thành viên. Họ thường không có phần bản quyền bài hát, nhưng ở nhiều nước được hưởng một phần **quyền liên quan** khi bản ghi được phát công cộng — mức độ tùy luật từng nước.
+Người chơi nhạc thuê cho bản thu hoặc tour của nghệ sĩ khác, thường được trả **theo buổi** hoặc theo ngày; ở Mỹ và Anh, công đoàn (AFM, Musicians' Union) có biểu giá tối thiểu cho thành viên. Họ thường không có phần bản quyền bài hát, nhưng ở nhiều nước được hưởng một phần **quyền liên quan** khi bản ghi được phát công cộng — mức độ tuỳ luật từng nước.
 
 ### Giám sát âm nhạc (music supervisor)
 Người chọn nhạc cho phim, truyền hình, quảng cáo, trò chơi điện tử và đàm phán **giấy phép đồng bộ** (sync) với cả chủ bản ghi lẫn nhà xuất bản. Đây là "người gác cổng" quan trọng với nghệ sĩ độc lập vì một lần sync có thể vừa mang tiền vừa mang khán giả.
@@ -3264,16 +3264,16 @@ Spotify, Apple Music hay YouTube Music không nhận bài trực tiếp từ t�
 
 - **CD Baby**: do nhạc sĩ **Derek Sivers** lập ở Woodstock, New York (nguồn ghi 1997 hoặc 1998), ban đầu là cửa hàng bán CD cho nghệ sĩ độc lập. Tháng 8/2008, Disc Makers mua lại với giá khoảng **22 triệu USD**; Sivers cho biết đã chuyển quyền sở hữu cho một quỹ từ thiện trước khi bán. Năm 2019 Downtown mua nhóm AVL Digital (gồm CD Baby) với giá khoảng 200 triệu USD; CD Baby ngừng bán lẻ đĩa ngày 31/3/2020. Mô hình hiện nay: phí một lần cho mỗi bản phát hành cộng với **9%** tiền bản quyền (theo một nguồn hướng dẫn).
 - **TuneCore**: một trong những nhà phân phối "mở cho mọi người" sớm nhất (ra đời giữa thập niên 2000 — năm cụ thể chưa được kiểm chứng trong nguồn của bài này); thu phí theo bản phát hành hoặc thuê bao.
-- **DistroKid**: nổi lên từ thập niên 2010 với mô hình **phí năm cố định, phát hành không giới hạn**; các nguồn ghi mức gói cơ bản khác nhau (khoảng 20–25 USD/năm tùy thời điểm).
+- **DistroKid**: nổi lên từ thập niên 2010 với mô hình **phí năm cố định, phát hành không giới hạn**; các nguồn ghi mức gói cơ bản khác nhau (khoảng 20–25 USD/năm tuỳ thời điểm).
 
 Giá dịch vụ thay đổi thường xuyên; người đọc nên kiểm tra trang giá chính thức.
 
 ## Bán trực tiếp cho người hâm mộ
 ### Bandcamp
-Bandcamp là cửa hàng nơi nghệ sĩ và hãng nhỏ tự đặt giá (kể cả "trả bao nhiêu tùy ý") cho bản tải số, vinyl, băng cassette và hàng lưu niệm. Nền tảng thường giữ **15%** doanh thu số và **10%** hàng vật lý. Từ tháng 3/2020 (đầu đại dịch), **Bandcamp Fridays** — những ngày Bandcamp bỏ phần chia của mình — đã chuyển tổng cộng khoảng **154 triệu USD** cho nghệ sĩ và hãng (số liệu do công ty công bố, trong đó 19 triệu USD năm 2025). Bandcamp được Epic Games mua rồi bán lại cho Songtradr khoảng 18 tháng sau; việc Songtradr cắt giảm nhân sự sau đó gây lo ngại trong cộng đồng.
+Bandcamp là cửa hàng nơi nghệ sĩ và hãng nhỏ tự đặt giá (kể cả "trả bao nhiêu tuỳ ý") cho bản tải số, vinyl, băng cassette và hàng lưu niệm. Nền tảng thường giữ **15%** doanh thu số và **10%** hàng vật lý. Từ tháng 3/2020 (đầu đại dịch), **Bandcamp Fridays** — những ngày Bandcamp bỏ phần chia của mình — đã chuyển tổng cộng khoảng **154 triệu USD** cho nghệ sĩ và hãng (số liệu do công ty công bố, trong đó 19 triệu USD năm 2025). Bandcamp được Epic Games mua rồi bán lại cho Songtradr khoảng 18 tháng sau; việc Songtradr cắt giảm nhân sự sau đó gây lo ngại trong cộng đồng.
 
 ### Patreon và mô hình bảo trợ
-Patreon cho phép người hâm mộ trả phí định kỳ để nhận nội dung riêng. Đầu năm 2019, công ty cho biết dự kiến trả khoảng **500 triệu USD** cho người sáng tạo trong năm, từ khoảng 3 triệu người bảo trợ; con số lũy kế công ty công bố về sau cao hơn nhiều, nhưng các nguồn thứ cấp chênh nhau. Theo ước tính của bên thứ ba (Graphtreon), âm nhạc chỉ là một hạng mục **nhỏ** trên Patreon so với video và podcast. Mô hình này gắn với ý tưởng "1.000 người hâm mộ thật sự" và với chiến lược superfans (xem [[marketing-am-nhac-va-mang-xa-hoi]]).
+Patreon cho phép người hâm mộ trả phí định kỳ để nhận nội dung riêng. Đầu năm 2019, công ty cho biết dự kiến trả khoảng **500 triệu USD** cho người sáng tạo trong năm, từ khoảng 3 triệu người bảo trợ; con số luỹ kế công ty công bố về sau cao hơn nhiều, nhưng các nguồn thứ cấp chênh nhau. Theo ước tính của bên thứ ba (Graphtreon), âm nhạc chỉ là một hạng mục **nhỏ** trên Patreon so với video và podcast. Mô hình này gắn với ý tưởng "1.000 người hâm mộ thật sự" và với chiến lược superfans (xem [[marketing-am-nhac-va-mang-xa-hoi]]).
 
 ## Quy mô của "artists direct"
 Theo MIDiA:
@@ -3307,7 +3307,7 @@ Xem thêm: [[kinh-te-hoc-streaming]], [[cong-nghiep-am-nhac]], [[cong-nghiep-am-
     title: "Trí tuệ nhân tạo và âm nhạc",
     category: 'musicology',
     aliases: ["AI và âm nhạc", "nhạc AI", "AI tạo sinh trong âm nhạc", "generative AI music", "AI music", "Suno", "Udio", "nhân bản giọng hát", "voice cloning"],
-    summary: "Bài viết trình bày sự trỗi dậy của các công cụ tạo nhạc bằng AI (Suno, Udio), các vụ kiện bản quyền do RIAA và ba hãng đĩa lớn khởi xướng từ tháng 6/2024 cùng các thỏa thuận dàn xếp, quan điểm của Cục Bản quyền Hoa Kỳ, vấn đề nhân bản giọng hát và những câu hỏi còn bỏ ngỏ.",
+    summary: "Bài viết trình bày sự trỗi dậy của các công cụ tạo nhạc bằng AI (Suno, Udio), các vụ kiện bản quyền do RIAA và ba hãng đĩa lớn khởi xướng từ tháng 6/2024 cùng các thoả thuận dàn xếp, quan điểm của Cục Bản quyền Hoa Kỳ, vấn đề nhân bản giọng hát và những câu hỏi còn bỏ ngỏ.",
     refs: [
       ["Viral song with AI-generated Drake and The Weeknd vocals removed from streaming – The FADER", "https://thefader.com/2023/04/18/ai-generated-drake-the-weeknd-song-removed-from-streaming-ghostwriter-heart-on-my-sleeve"],
       ["Universal Music settles Udio lawsuit, strikes deal for licensed AI music platform – Music Business Worldwide", "https://www.musicbusinessworldwide.com/universal-music-settles-udio-lawsuit-strikes-deal-for-licensed-ai-music-platform"],
@@ -3320,7 +3320,7 @@ Xem thêm: [[kinh-te-hoc-streaming]], [[cong-nghiep-am-nhac]], [[cong-nghiep-am-
     ],
     body: `
 ## Tổng quan
-Trí tuệ nhân tạo (AI) đã có mặt trong âm nhạc từ lâu: các nghiên cứu sáng tác bằng máy tính, công cụ xử lý âm thanh và nhất là hệ thống gợi ý bài hát trên nền tảng streaming (xem [[du-lieu-va-thuat-toan-trong-nganh-am-nhac]]). Bước ngoặt của thập niên 2020 là **AI tạo sinh** (generative AI): chỉ cần gõ một câu mô tả, các dịch vụ như **Suno** và **Udio** có thể tạo ra một bài hát hoàn chỉnh gồm lời, giai điệu, hòa âm và giọng hát. Điều này đặt ra ba nhóm câu hỏi lớn: dữ liệu huấn luyện có vi phạm bản quyền không, sản phẩm do AI tạo có được bảo hộ không, và giọng nói, hình ảnh của nghệ sĩ được bảo vệ ra sao. Về khung pháp lý chung, xem [[ban-quyen-am-nhac-quoc-te]].
+Trí tuệ nhân tạo (AI) đã có mặt trong âm nhạc từ lâu: các nghiên cứu sáng tác bằng máy tính, công cụ xử lý âm thanh và nhất là hệ thống gợi ý bài hát trên nền tảng streaming (xem [[du-lieu-va-thuat-toan-trong-nganh-am-nhac]]). Bước ngoặt của thập niên 2020 là **AI tạo sinh** (generative AI): chỉ cần gõ một câu mô tả, các dịch vụ như **Suno** và **Udio** có thể tạo ra một bài hát hoàn chỉnh gồm lời, giai điệu, hoà âm và giọng hát. Điều này đặt ra ba nhóm câu hỏi lớn: dữ liệu huấn luyện có vi phạm bản quyền không, sản phẩm do AI tạo có được bảo hộ không, và giọng nói, hình ảnh của nghệ sĩ được bảo vệ ra sao. Về khung pháp lý chung, xem [[ban-quyen-am-nhac-quoc-te]].
 
 ::timeline 2023=Heart_on_My_Sleeve 2024=RIAA_kiện_Suno_và_Udio 2025=UMG_và_WMG_dàn_xếp 2026=Nền_tảng_AI_có_giấy_phép | Các mốc chính của tranh chấp AI tạo sinh trong âm nhạc (theo báo chí ngành)
 
@@ -3330,19 +3330,19 @@ Tháng 4/2023, một người dùng ẩn danh tên **Ghostwriter** (ghostwriter9
 Vụ việc cho thấy một khoảng trống pháp lý: *giọng hát* tự nó thường không phải là tác phẩm được bảo hộ quyền tác giả; việc gỡ bài dựa vào các yếu tố khác (như đoạn tag có bản quyền). Bảo vệ giọng nói và hình ảnh vì thế thường dựa vào quyền nhân thân hoặc quyền công khai (right of publicity), vốn khác nhau giữa các quốc gia và bang.
 
 ## Các vụ kiện Suno và Udio
-Tháng 6/2024, **RIAA** cùng ba tập đoàn lớn Universal, Sony và Warner (xem [[cong-nghiep-am-nhac]]) kiện Suno (tại tòa liên bang Massachusetts) và Udio (tại New York), cáo buộc hai công ty đã sao chép bản ghi âm có bản quyền để huấn luyện mô hình. Diễn biến sau đó theo báo chí ngành:
+Tháng 6/2024, **RIAA** cùng ba tập đoàn lớn Universal, Sony và Warner (xem [[cong-nghiep-am-nhac]]) kiện Suno (tại toà liên bang Massachusetts) và Udio (tại New York), cáo buộc hai công ty đã sao chép bản ghi âm có bản quyền để huấn luyện mô hình. Diễn biến sau đó theo báo chí ngành:
 
 | Thời điểm | Sự kiện | Ghi chú |
 |---|---|---|
-| 6/2025 | Bloomberg đưa tin ba hãng cân nhắc thỏa thuận cấp phép và cổ phần | Đàm phán, chưa dàn xếp |
+| 6/2025 | Bloomberg đưa tin ba hãng cân nhắc thoả thuận cấp phép và cổ phần | Đàm phán, chưa dàn xếp |
 | Cuối 10/2025 | UMG dàn xếp với Udio, ký giấy phép ghi âm và xuất bản | Không công bố số tiền; Udio ngừng cho tải bài về, gây phản ứng từ người dùng |
-| Khoảng 11/2025 | Warner (WMG) dàn xếp với Udio | Khoảng một tuần trước thỏa thuận với Suno |
+| Khoảng 11/2025 | Warner (WMG) dàn xếp với Udio | Khoảng một tuần trước thoả thuận với Suno |
 | 25/11/2025 | WMG dàn xếp với Suno và hợp tác | Suno hứa ra mô hình có giấy phép năm 2026; WMG bán Songkick cho Suno |
 | 2026 | Sony khởi kiện Udio lần hai (khoảng 30.000 bản ghi) | Sony là hãng lớn duy nhất còn kiện Udio |
 
-Theo các nguồn đến giữa 2026, UMG và Sony vẫn tiếp tục kiện Suno; một số trang tổng hợp cho biết đơn kiện sửa đổi bổ sung cáo buộc Suno lấy dữ liệu bằng cách "stream-ripping" từ YouTube. Các chi tiết thủ tục năm 2026 chủ yếu đến từ trang tổng hợp thứ cấp và **chưa được kiểm chứng đầy đủ**. Một trang tóm tắt chất lượng thấp còn nêu con số định giá cho thỏa thuận Warner–Suno nhưng không có nguồn gốc, nên bài viết này không dùng.
+Theo các nguồn đến giữa 2026, UMG và Sony vẫn tiếp tục kiện Suno; một số trang tổng hợp cho biết đơn kiện sửa đổi bổ sung cáo buộc Suno lấy dữ liệu bằng cách "stream-ripping" từ YouTube. Các chi tiết thủ tục năm 2026 chủ yếu đến từ trang tổng hợp thứ cấp và **chưa được kiểm chứng đầy đủ**. Một trang tóm tắt chất lượng thấp còn nêu con số định giá cho thoả thuận Warner–Suno nhưng không có nguồn gốc, nên bài viết này không dùng.
 
-Ở châu Âu, ngày 11/11/2025 Tòa án khu vực Munich xử **GEMA thắng OpenAI** (sơ thẩm, còn có thể kháng cáo) trong vụ ChatGPT tái tạo gần nguyên văn lời của chín bài hát tiếng Đức; tòa chấp nhận rằng dữ liệu huấn luyện có thể được "ghi nhớ" trong trọng số mô hình. GEMA cũng kiện Suno tại Đức; một nguồn đơn lẻ cho biết có phán quyết năm 2026 nhưng chưa được xác nhận.
+Ở châu Âu, ngày 11/11/2025 Toà án khu vực Munich xử **GEMA thắng OpenAI** (sơ thẩm, còn có thể kháng cáo) trong vụ ChatGPT tái tạo gần nguyên văn lời của chín bài hát tiếng Đức; toà chấp nhận rằng dữ liệu huấn luyện có thể được "ghi nhớ" trong trọng số mô hình. GEMA cũng kiện Suno tại Đức; một nguồn đơn lẻ cho biết có phán quyết năm 2026 nhưng chưa được xác nhận.
 
 ## Lập trường của Cục Bản quyền Hoa Kỳ
 Cục Bản quyền Hoa Kỳ (U.S. Copyright Office) công bố báo cáo nhiều phần về AI:
@@ -3356,7 +3356,7 @@ AI cũng được dùng rộng rãi ở khâu sản xuất ít gây tranh cãi h
 
 ## Câu hỏi còn bỏ ngỏ
 - Huấn luyện AI trên bản ghi có bản quyền có được coi là *fair use* ở Mỹ không? Chưa có phán quyết cuối cùng cho âm nhạc.
-- Nghệ sĩ có được quyền từ chối (opt-out) đưa tác phẩm vào dữ liệu huấn luyện trong các thỏa thuận mới không? Báo chí ghi nhận điều này chưa rõ.
+- Nghệ sĩ có được quyền từ chối (opt-out) đưa tác phẩm vào dữ liệu huấn luyện trong các thoả thuận mới không? Báo chí ghi nhận điều này chưa rõ.
 - Tiền bản quyền từ nền tảng AI có giấy phép sẽ được chia cho nhạc sĩ, nghệ sĩ thế nào?
 - Lượng nhạc AI tràn ngập ảnh hưởng ra sao đến thu nhập streaming (xem [[kinh-te-hoc-streaming]])?
 
@@ -3370,7 +3370,7 @@ Xem thêm: [[ban-quyen-am-nhac-quoc-te]], [[cong-nghiep-am-nhac]], [[kinh-te-hoc
     slug: "am-nhac-trong-quang-cao-phim-va-tro-choi",
     title: "Âm nhạc trong quảng cáo, phim và trò chơi: cấp phép đồng bộ",
     category: 'musicology',
-    aliases: ["cấp phép đồng bộ", "synchronization licence", "sync", "giấy phép đồng bộ hóa", "master use licence", "giám sát âm nhạc", "nhạc quảng cáo"],
+    aliases: ["cấp phép đồng bộ", "synchronization licence", "sync", "giấy phép đồng bộ hoá", "master use licence", "giám sát âm nhạc", "nhạc quảng cáo"],
     summary: "Bài viết giải thích cấp phép đồng bộ (sync) — cách bài hát được đưa vào quảng cáo, phim, truyền hình và trò chơi điện tử: hai loại quyền cần xin, vai trò người giám sát âm nhạc, quy mô thị trường theo IFPI và một số trường hợp tiêu biểu.",
     refs: [
       ["Sync Licensing – Soundcharts", "https://soundcharts.com/en/blog/what-is-sync-licensing"],
@@ -3412,9 +3412,9 @@ Theo IFPI (Global Music Report 2025, số liệu năm 2024), tổng doanh thu gh
 Trường hợp nổi tiếng là "Running Up That Hill" (Kate Bush, 1985) trong mùa 4 *Stranger Things* (Netflix, 2022). Spotify cho biết lượt nghe tăng hơn 9.000% (một báo cáo khác ghi khoảng 8.700%, có lẽ do đo ở các khoảng thời gian khác nhau); bài hát quay lại Billboard Hot 100 ở vị trí số 8, trong khi năm 1985 chỉ đạt hạng 30, và theo một số nguồn lên số 1 ở Anh. Theo Variety (qua nguồn thứ cấp), Kate Bush hiếm khi cấp phép nhưng đồng ý vì thích bộ phim, sau khi được xem kịch bản và cảnh quay. Ví dụ cho thấy sync không chỉ là khoản phí, mà còn là kênh quảng bá — cũng như việc nghệ sĩ có quyền từ chối.
 
 ## Âm nhạc trong trò chơi điện tử
-Trò chơi dùng hai loại nhạc: nhạc sáng tác riêng (thường do studio đặt hàng và sở hữu) và nhạc cấp phép. Loạt *Grand Theft Auto* là ví dụ tiêu biểu cho nhạc cấp phép với các đài phát thanh trong game. Theo GameMusic.net, Rockstar phải làm việc với hơn 2.000 người để có quyền ghi âm và xuất bản cho danh sách 214 bài của *GTA IV* — minh họa cho độ phức tạp của việc xin quyền. Một đặc thù của game là tính *tương tác*: nhạc lặp lại, chuyển đoạn theo hành động người chơi, và game có thể phát hành lâu dài, cập nhật liên tục, nên giấy phép phải tính đến thời hạn và nền tảng.
+Trò chơi dùng hai loại nhạc: nhạc sáng tác riêng (thường do studio đặt hàng và sở hữu) và nhạc cấp phép. Loạt *Grand Theft Auto* là ví dụ tiêu biểu cho nhạc cấp phép với các đài phát thanh trong game. Theo GameMusic.net, Rockstar phải làm việc với hơn 2.000 người để có quyền ghi âm và xuất bản cho danh sách 214 bài của *GTA IV* — minh hoạ cho độ phức tạp của việc xin quyền. Một đặc thù của game là tính *tương tác*: nhạc lặp lại, chuyển đoạn theo hành động người chơi, và game có thể phát hành lâu dài, cập nhật liên tục, nên giấy phép phải tính đến thời hạn và nền tảng.
 
-Game còn là sân khấu biểu diễn: buổi hòa nhạc ảo của Travis Scott trong *Fortnite* (2020) được báo chí cho là thu hút hơn 12 triệu người theo dõi đồng thời — con số từ nguồn thứ cấp, chưa đối chiếu với số liệu chính thức của Epic. Bài "The Scotts" ra mắt trong sự kiện được cho là có gần 8 triệu lượt nghe Spotify trong 24 giờ đầu, nhưng khó tách bạch phần đóng góp của game.
+Game còn là sân khấu biểu diễn: buổi hoà nhạc ảo của Travis Scott trong *Fortnite* (2020) được báo chí cho là thu hút hơn 12 triệu người theo dõi đồng thời — con số từ nguồn thứ cấp, chưa đối chiếu với số liệu chính thức của Epic. Bài "The Scotts" ra mắt trong sự kiện được cho là có gần 8 triệu lượt nghe Spotify trong 24 giờ đầu, nhưng khó tách bạch phần đóng góp của game.
 
 ## Nguồn và độ tin cậy
 Cấu trúc hai giấy phép và vai trò người giám sát âm nhạc là kiến thức ngành được nhiều nguồn thống nhất. Số liệu IFPI có sai lệch nhỏ giữa các bản tóm tắt. Mức phí và số liệu về game chủ yếu từ blog và báo chí thứ cấp.
@@ -3448,7 +3448,7 @@ Các mô tả công khai (chủ yếu từ blog kỹ thuật, không phải tài
 2. **Xử lý ngôn ngữ tự nhiên**: phân tích văn bản trên web (bài báo, blog) nói về nghệ sĩ và bài hát.
 3. **Phân tích âm thanh**: trích xuất đặc trưng trực tiếp từ tín hiệu (nhịp độ, âm sắc…), gần với lĩnh vực [[am-nhac-hoc-tinh-toan]].
 
-Playlist cá nhân hóa *Discover Weekly* (30 bài mỗi tuần) là ví dụ tiêu biểu của cách kết hợp này. Ngày ra mắt chính xác của Discover Weekly không được xác nhận trong các nguồn đã tra.
+Playlist cá nhân hoá *Discover Weekly* (30 bài mỗi tuần) là ví dụ tiêu biểu của cách kết hợp này. Ngày ra mắt chính xác của Discover Weekly không được xác nhận trong các nguồn đã tra.
 
 ## Thương vụ The Echo Nest (2014)
 **The Echo Nest** là công ty "trí tuệ âm nhạc" (music intelligence) chuyên phân tích âm thanh và văn bản về âm nhạc. Spotify mua lại công ty này ngày 6/3/2014 (theo Wikipedia). Giá mua từng được TechCrunch đưa tin khoảng 100 triệu USD (phần lớn bằng cổ phiếu, Spotify không bình luận), nhưng hồ sơ Spotify nộp tại Luxembourg, được Music Business Worldwide dẫn lại, cho thấy tổng giá trị khoảng **49,7 triệu euro** (khoảng 66 triệu USD), gồm 5,1 triệu euro tiền mặt cùng cổ phiếu. Con số trong hồ sơ được coi là đáng tin hơn. Thương vụ được xem là bước Spotify nắm công nghệ phân tích âm thanh và văn bản cho hệ thống gợi ý.
@@ -3517,15 +3517,15 @@ David Huron (*Musicae Scientiae*, 2011) đề xuất một thuyết khoái cảm
 
 **Vuoskoski & Eerola (2017, *Frontiers in Psychology* 8:439)** kiểm tra xem cảm giác *được lay động* có phải mắt xích trung gian hay không. Trong thí nghiệm thứ nhất (308 người tham gia), mối liên hệ giữa nỗi buồn cảm thấy và mức độ thích nhạc được giải thích **hoàn toàn** bởi cảm giác được lay động. Thí nghiệm thứ hai với 27 trích đoạn ủng hộ vai trò trung gian của "được lay động" mạnh hơn vai trò của "vẻ đẹp cảm nhận". Kết luận của tác giả: nỗi buồn có thể góp phần vào khoái cảm vì nó làm cảm giác được lay động mạnh thêm. Trạng thái này thường đi kèm nổi da gà và rùng mình, xem [[rung-minh-khi-nghe-nhac]].
 
-### Phần thưởng tưởng tượng và điều hòa cảm xúc
+### Phần thưởng tưởng tượng và điều hoà cảm xúc
 
 Taruffi & Koelsch (2014) rút ra bốn chiều "phần thưởng" của nhạc buồn:
 1. Phần thưởng của trí tưởng tượng.
-2. Điều hòa cảm xúc: giải tỏa cảm xúc tiêu cực, được an ủi.
+2. Điều hoà cảm xúc: giải toả cảm xúc tiêu cực, được an ủi.
 3. Sự đồng cảm.
 4. Không có hệ quả "đời thực".
 
-Tổng quan hệ thống của **Sachs, Damasio & Habibi (2015, *Frontiers in Human Neuroscience*)** đi đến cùng hướng. Theo các tác giả, nhạc buồn đem lại khoái cảm khi người nghe thấy nó **không đe dọa**, thấy nó **đẹp về thẩm mỹ**, và nhận được **lợi ích tâm lý** như điều hòa tâm trạng, cảm giác đồng cảm, hồi tưởng và suy ngẫm về quá khứ. Họ chia các yếu tố ảnh hưởng thành ba nhóm: đặc điểm cá nhân, hoàn cảnh nghe (tâm trạng lúc đó, môi trường) và bản thân bản nhạc. Họ cũng cho rằng hiểu cơ chế này có thể giúp ích cho nghiên cứu trầm cảm, một tình trạng mà khả năng cảm thấy khoái cảm bị suy giảm.
+Tổng quan hệ thống của **Sachs, Damasio & Habibi (2015, *Frontiers in Human Neuroscience*)** đi đến cùng hướng. Theo các tác giả, nhạc buồn đem lại khoái cảm khi người nghe thấy nó **không đe doạ**, thấy nó **đẹp về thẩm mỹ**, và nhận được **lợi ích tâm lý** như điều hoà tâm trạng, cảm giác đồng cảm, hồi tưởng và suy ngẫm về quá khứ. Họ chia các yếu tố ảnh hưởng thành ba nhóm: đặc điểm cá nhân, hoàn cảnh nghe (tâm trạng lúc đó, môi trường) và bản thân bản nhạc. Họ cũng cho rằng hiểu cơ chế này có thể giúp ích cho nghiên cứu trầm cảm, một tình trạng mà khả năng cảm thấy khoái cảm bị suy giảm.
 
 ## Ai thích nhạc buồn?
 
@@ -3540,7 +3540,7 @@ Không phải ai cũng thích. Vuoskoski và cộng sự (2012) thấy hai nét 
 
 ## Mặt trái: khi nhạc buồn không giúp ích
 
-Không phải lúc nào nhạc buồn cũng "chữa lành". **Garrido & Schubert (2015, *Music Perception*)** nghiên cứu 175 sinh viên và thấy nghe nhạc buồn có thể làm cảm giác trầm cảm tăng đáng kể ở những người có xu hướng trầm cảm (đo bằng điểm nghiền ngẫm cao). Nghịch lý là chính nhóm này lại tỏ ra thích loại nhạc đó. Một số nghiên cứu khác của cùng nhóm tác giả cũng ghi nhận tâm trạng đi xuống sau khi nghe nhạc buồn tự chọn. Vì vậy điều quan trọng là *cách* nghe: dùng nhạc buồn để suy ngẫm và giải tỏa khác với dùng nó để xoáy vào một ý nghĩ tiêu cực. Phần này được bàn kỹ hơn ở [[dieu-hoa-cam-xuc-bang-am-nhac]].
+Không phải lúc nào nhạc buồn cũng "chữa lành". **Garrido & Schubert (2015, *Music Perception*)** nghiên cứu 175 sinh viên và thấy nghe nhạc buồn có thể làm cảm giác trầm cảm tăng đáng kể ở những người có xu hướng trầm cảm (đo bằng điểm nghiền ngẫm cao). Nghịch lý là chính nhóm này lại tỏ ra thích loại nhạc đó. Một số nghiên cứu khác của cùng nhóm tác giả cũng ghi nhận tâm trạng đi xuống sau khi nghe nhạc buồn tự chọn. Vì vậy điều quan trọng là *cách* nghe: dùng nhạc buồn để suy ngẫm và giải toả khác với dùng nó để xoáy vào một ý nghĩ tiêu cực. Phần này được bàn kỹ hơn ở [[dieu-hoa-cam-xuc-bang-am-nhac]].
 
 ## Nguồn và độ tin cậy
 
@@ -3553,9 +3553,9 @@ Xem thêm: [[cam-xuc-am-nhac]] · [[rung-minh-khi-nghe-nhac]] · [[dieu-hoa-cam-
   },
   {
     slug: "dieu-hoa-cam-xuc-bang-am-nhac",
-    title: "Điều hòa cảm xúc bằng âm nhạc trong đời sống hằng ngày",
+    title: "Điều hoà cảm xúc bằng âm nhạc trong đời sống hằng ngày",
     category: 'musicology',
-    aliases: ["điều hòa tâm trạng bằng âm nhạc", "mood regulation through music", "music and emotion regulation", "nghe nhạc để thay đổi tâm trạng", "music in everyday life", "musical anhedonia", "mất cảm thụ khoái cảm âm nhạc", "Music in Mood Regulation"],
+    aliases: ["điều hoà tâm trạng bằng âm nhạc", "mood regulation through music", "music and emotion regulation", "nghe nhạc để thay đổi tâm trạng", "music in everyday life", "musical anhedonia", "mất cảm thụ khoái cảm âm nhạc", "Music in Mood Regulation"],
     summary: "Bài viết tóm tắt nghiên cứu về cách người ta dùng âm nhạc hằng ngày để điều chỉnh tâm trạng: âm nhạc như một \"công nghệ của bản thân\" (DeNora 2000), các nghiên cứu lấy mẫu trải nghiệm (Sloboda và cộng sự, Juslin và cộng sự), bảy chiến lược của Saarikallio & Erkkilä (2007), hiện tượng mất khoái cảm âm nhạc và rủi ro nghiền ngẫm.",
     refs: [
       ["Saarikallio & Erkkilä (2007) The role of music in adolescents' mood regulation – Psychology of Music", "https://journals.sagepub.com/doi/10.1177/0305735607068889"],
@@ -3568,7 +3568,7 @@ Xem thêm: [[cam-xuc-am-nhac]] · [[rung-minh-khi-nghe-nhac]] · [[dieu-hoa-cam-
       ["Garrido & Schubert (2015) Music and people with tendencies to depression – Music Perception", "https://remix.berklee.edu/mhi-music-mental-health/467"],
     ],
     body: `
-Bật một bài sôi động để tỉnh ngủ buổi sáng, nghe nhạc nhẹ để bình tĩnh trước kỳ thi, mở lại bài hát cũ để khóc cho xong: phần lớn chúng ta dùng âm nhạc như một công cụ điều chỉnh tâm trạng mà không cần ai dạy. Tâm lý học gọi đây là **điều hòa cảm xúc** (emotion regulation) hoặc **điều hòa tâm trạng** (mood regulation) bằng âm nhạc. Đây là một trong những chức năng của việc nghe nhạc được nêu nhiều nhất trong các khảo sát, xem [[tam-ly-nguoi-nghe-tong-quan]]. Trang này khác với [[am-nhac-tri-lieu]], vốn là can thiệp lâm sàng do chuyên viên thực hiện.
+Bật một bài sôi động để tỉnh ngủ buổi sáng, nghe nhạc nhẹ để bình tĩnh trước kỳ thi, mở lại bài hát cũ để khóc cho xong: phần lớn chúng ta dùng âm nhạc như một công cụ điều chỉnh tâm trạng mà không cần ai dạy. Tâm lý học gọi đây là **điều hoà cảm xúc** (emotion regulation) hoặc **điều hoà tâm trạng** (mood regulation) bằng âm nhạc. Đây là một trong những chức năng của việc nghe nhạc được nêu nhiều nhất trong các khảo sát, xem [[tam-ly-nguoi-nghe-tong-quan]]. Trang này khác với [[am-nhac-tri-lieu]], vốn là can thiệp lâm sàng do chuyên viên thực hiện.
 
 ## Âm nhạc như "công nghệ của bản thân"
 
@@ -3586,7 +3586,7 @@ Phương pháp **lấy mẫu trải nghiệm** (Experience Sampling Method, ESM)
 
 ## Bảy chiến lược của Saarikallio và Erkkilä
 
-**Suvi Saarikallio & Jaakko Erkkilä (2007, *Psychology of Music*)** phỏng vấn nhóm và theo dõi tám thanh thiếu niên Phần Lan, sau đó phân tích bằng lý thuyết nền tảng (grounded theory). Họ mô tả việc điều hòa tâm trạng bằng âm nhạc là quá trình đạt các mục tiêu cảm xúc cá nhân qua nhiều hoạt động âm nhạc khác nhau. Mô hình gồm bảy chiến lược:
+**Suvi Saarikallio & Jaakko Erkkilä (2007, *Psychology of Music*)** phỏng vấn nhóm và theo dõi tám thanh thiếu niên Phần Lan, sau đó phân tích bằng lý thuyết nền tảng (grounded theory). Họ mô tả việc điều hoà tâm trạng bằng âm nhạc là quá trình đạt các mục tiêu cảm xúc cá nhân qua nhiều hoạt động âm nhạc khác nhau. Mô hình gồm bảy chiến lược:
 
 | Chiến lược | Ý nghĩa tóm tắt |
 |---|---|
@@ -3602,18 +3602,18 @@ Theo một bản tóm lược, xả cảm xúc là chiến lược duy nhất kh
 
 ## Khi âm nhạc không mang lại khoái cảm
 
-Không phải ai cũng điều hòa cảm xúc được bằng âm nhạc. **Mas-Herrero, Zatorre, Rodríguez-Fornells & Marco-Pallarés (2014, *Current Biology* 24(6):699–704)** mô tả **mất khoái cảm âm nhạc đặc hiệu** (specific musical anhedonia). Đó là những người khỏe mạnh, không trầm cảm và không mất khoái cảm nói chung, nhưng chấm điểm khoái cảm thấp với nhạc và không có phản ứng thần kinh tự chủ khi nghe nhạc dễ chịu. Trong khi đó, phản ứng của họ với phần thưởng tiền bạc vẫn bình thường. Nhóm này được sàng lọc bằng bảng hỏi **Barcelona Music Reward Questionnaire (BMRQ)**.
+Không phải ai cũng điều hoà cảm xúc được bằng âm nhạc. **Mas-Herrero, Zatorre, Rodríguez-Fornells & Marco-Pallarés (2014, *Current Biology* 24(6):699–704)** mô tả **mất khoái cảm âm nhạc đặc hiệu** (specific musical anhedonia). Đó là những người khoẻ mạnh, không trầm cảm và không mất khoái cảm nói chung, nhưng chấm điểm khoái cảm thấp với nhạc và không có phản ứng thần kinh tự chủ khi nghe nhạc dễ chịu. Trong khi đó, phản ứng của họ với phần thưởng tiền bạc vẫn bình thường. Nhóm này được sàng lọc bằng bảng hỏi **Barcelona Music Reward Questionnaire (BMRQ)**.
 
 Nghiên cứu fMRI tiếp theo của **Martínez-Molina và cộng sự (2016, *PNAS*)** trên 45 người chia thành ba nhóm theo mức nhạy cảm với phần thưởng âm nhạc cho thấy ở nhóm mất khoái cảm âm nhạc, hoạt động của **nhân accumbens** (một cấu trúc then chốt của hệ thống phần thưởng) giảm khi nghe nhạc nhưng vẫn giữ nguyên trong trò chơi cá cược tiền. Tỉ lệ người mất khoái cảm âm nhạc trong dân số được các nguồn nêu khác nhau, nên trang này không đưa ra con số cụ thể. Xem thêm [[than-kinh-hoc-am-nhac]] và [[rung-minh-khi-nghe-nhac]].
 
 ## Rủi ro: nghiền ngẫm và vòng xoáy tiêu cực
 
-Điều hòa bằng âm nhạc không tự động lành mạnh. Chiến lược "xả" hoặc nghe lặp đi lặp lại nhạc buồn có thể giúp người này giải tỏa, nhưng lại kéo người khác vào **nghiền ngẫm** (rumination), tức là xoáy mãi vào một ý nghĩ tiêu cực. **Garrido & Schubert (2015, *Music Perception*)** thấy ở 175 sinh viên, nghe nhạc buồn có thể làm cảm giác trầm cảm tăng đáng kể ở người có điểm nghiền ngẫm cao, dù nhóm này lại thích loại nhạc ấy. Xem [[nghich-ly-nhac-buon]].
+Điều hoà bằng âm nhạc không tự động lành mạnh. Chiến lược "xả" hoặc nghe lặp đi lặp lại nhạc buồn có thể giúp người này giải toả, nhưng lại kéo người khác vào **nghiền ngẫm** (rumination), tức là xoáy mãi vào một ý nghĩ tiêu cực. **Garrido & Schubert (2015, *Music Perception*)** thấy ở 175 sinh viên, nghe nhạc buồn có thể làm cảm giác trầm cảm tăng đáng kể ở người có điểm nghiền ngẫm cao, dù nhóm này lại thích loại nhạc ấy. Xem [[nghich-ly-nhac-buon]].
 
 Gợi ý thực tế rút từ hướng nghiên cứu này, chứ không phải lời khuyên y khoa:
 - Để ý xem sau khi nghe, mình thấy *nhẹ đi* hay *nặng thêm*.
 - Thay đổi chiến lược khi một chiến lược không còn hiệu quả, ví dụ chuyển từ xả sang đánh lạc hướng.
-- Nếu tâm trạng xấu kéo dài, âm nhạc không thay thế được hỗ trợ chuyên môn về sức khỏe tâm thần.
+- Nếu tâm trạng xấu kéo dài, âm nhạc không thay thế được hỗ trợ chuyên môn về sức khoẻ tâm thần.
 
 ## Nguồn và độ tin cậy
 
@@ -3638,7 +3638,7 @@ Xem thêm: [[cam-xuc-am-nhac]] · [[nghich-ly-nhac-buon]] · [[nhac-nen-va-hieu-
       ["Association for Psychological Science – thông cáo về earworm trước giờ ngủ (2021)", "https://www.psychologicalscience.org/news/releases/2021-june-bedtime-earworms.html"],
     ],
     body: `
-Từ lời ru của bà, của mẹ đến các danh sách phát "nhạc ngủ ngon" trên ứng dụng nghe nhạc, việc dùng âm nhạc để dỗ giấc ngủ có lẽ phổ biến ở nhiều nền văn hóa. Nghiên cứu khoa học về chủ đề này có hai mặt. Nghe nhạc có thể cải thiện chất lượng giấc ngủ *tự đánh giá* ở người mất ngủ. Nhưng âm nhạc cũng có thể "bám" vào đầu và làm giấc ngủ kém đi. Trang này thuộc nhóm bài về tâm lý người nghe, xem [[tam-ly-nguoi-nghe-tong-quan]] và [[dieu-hoa-cam-xuc-bang-am-nhac]].
+Từ lời ru của bà, của mẹ đến các danh sách phát "nhạc ngủ ngon" trên ứng dụng nghe nhạc, việc dùng âm nhạc để dỗ giấc ngủ có lẽ phổ biến ở nhiều nền văn hoá. Nghiên cứu khoa học về chủ đề này có hai mặt. Nghe nhạc có thể cải thiện chất lượng giấc ngủ *tự đánh giá* ở người mất ngủ. Nhưng âm nhạc cũng có thể "bám" vào đầu và làm giấc ngủ kém đi. Trang này thuộc nhóm bài về tâm lý người nghe, xem [[tam-ly-nguoi-nghe-tong-quan]] và [[dieu-hoa-cam-xuc-bang-am-nhac]].
 
 ## Ai dùng nhạc để ngủ, và vì sao?
 
@@ -3763,7 +3763,7 @@ Về hành vi thực tế thời streaming, xem [[tam-ly-nghe-nhac-thoi-streamin
 
 Carol Krumhansl và Justin Zupnick (2013) cho sinh viên đại học nghe 110 bài hit Billboard (hai bài mỗi năm, 1955–2009) chia thành 11 giai đoạn năm năm. Ngoài ký ức về nhạc của chính tuổi mình, sinh viên còn nhớ và gắn bó đặc biệt với nhạc giai đoạn 1980–1984 — thời thiếu niên của cha mẹ họ — và có một đỉnh nhỏ hơn với nhạc thập niên 1960, hơn 20 năm trước khi họ sinh ra. Nhóm tác giả gọi đây là "đỉnh hồi tưởng xếp tầng" (cascading reminiscence bump), cho rằng nhạc được truyền lại qua gia đình. Nghiên cứu của Jakubowski (2020) cũng ghi nhận người trẻ thích nhạc thời thiếu niên của cha mẹ. Tuy nhiên, bằng chứng gốc dựa trên mẫu sinh viên nhỏ, nên còn cần lặp lại.
 
-Hiện tượng này giúp giải thích vì sao ở Việt Nam, nhạc [[nhac-vang-bolero|bolero]] hay [[nhac-trinh|nhạc Trịnh]] vẫn có khán giả trẻ: âm nhạc gia đình không chỉ là nhạc "của ông bà" mà còn là một phần ký ức chung, gắn với [[am-nhac-va-ban-sac-xa-hoi|bản sắc xã hội]]. Đây là suy luận minh họa, chưa có nghiên cứu Việt Nam nào được tìm thấy để kiểm chứng.
+Hiện tượng này giúp giải thích vì sao ở Việt Nam, nhạc [[nhac-vang-bolero|bolero]] hay [[nhac-trinh|nhạc Trịnh]] vẫn có khán giả trẻ: âm nhạc gia đình không chỉ là nhạc "của ông bà" mà còn là một phần ký ức chung, gắn với [[am-nhac-va-ban-sac-xa-hoi|bản sắc xã hội]]. Đây là suy luận minh hoạ, chưa có nghiên cứu Việt Nam nào được tìm thấy để kiểm chứng.
 
 ## Nguồn và độ tin cậy
 
@@ -3776,10 +3776,10 @@ Xem thêm: [[am-nhac-va-tri-nho-tu-truyen]], [[so-thich-am-nhac-va-tinh-cach]], 
   },
   {
     slug: "trai-nghiem-hoa-nhac-va-nghe-tap-the",
-    title: "Trải nghiệm hòa nhạc và nghe tập thể",
+    title: "Trải nghiệm hoà nhạc và nghe tập thể",
     category: 'musicology',
     aliases: ["nghe nhạc tập thể", "trải nghiệm nhạc sống", "live music experience", "concert experience", "audience synchrony", "đồng bộ sinh lý khán giả", "physiological synchrony", "LIVELab", "nhạc sống và nhạc thu âm"],
-    summary: "Bài viết tổng hợp nghiên cứu về vì sao nghe nhạc trực tiếp cùng người khác khác với nghe bản thu: đồng bộ nhịp tim và chuyển động của khán giả, phòng thí nghiệm hòa nhạc LIVELab, các thí nghiệm so sánh nhạc sống với bản thu và hiệu ứng gắn kết xã hội.",
+    summary: "Bài viết tổng hợp nghiên cứu về vì sao nghe nhạc trực tiếp cùng người khác khác với nghe bản thu: đồng bộ nhịp tim và chuyển động của khán giả, phòng thí nghiệm hoà nhạc LIVELab, các thí nghiệm so sánh nhạc sống với bản thu và hiệu ứng gắn kết xã hội.",
     refs: [
       ["Tschacher và cộng sự (2023) – Audience synchronies in live concerts illustrate the embodiment of music experience (Scientific Reports, PMC)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10556000"],
       ["Max Planck Institute for Empirical Aesthetics – In sync with the music (2023)", "https://www.aesthetics.mpg.de/en/newsroom/news/news-article/article/in-sync-with-the-music-1.html"],
@@ -3790,21 +3790,21 @@ Xem thêm: [[am-nhac-va-tri-nho-tu-truyen]], [[so-thich-am-nhac-va-tinh-cach]], 
       ["Weinstein và cộng sự (2016) – Group music performance causes elevated pain thresholds and social bonding (PMC)", "https://pmc.ncbi.nlm.nih.gov/articles/PMC4856205"],
     ],
     body: `
-Ai từng đi một buổi hòa nhạc đều biết cảm giác "khác hẳn" so với nghe cùng bài hát qua tai nghe. Trong vài năm gần đây, [[tam-ly-hoc-am-nhac]] và [[than-kinh-hoc-am-nhac]] đã bắt đầu đo cảm giác đó một cách định lượng: gắn cảm biến lên hàng trăm khán giả, so sánh nhạc sống với bản thu được phát trong cùng không gian, thậm chí cho nghệ sĩ chơi nhạc theo hoạt động não của người nghe. Bài này tóm tắt những gì đã được đo và những gì còn là giả thuyết. Về khía cạnh kinh tế, xem [[am-nhac-bieu-dien-truc-tiep-va-luu-dien]].
+Ai từng đi một buổi hoà nhạc đều biết cảm giác "khác hẳn" so với nghe cùng bài hát qua tai nghe. Trong vài năm gần đây, [[tam-ly-hoc-am-nhac]] và [[than-kinh-hoc-am-nhac]] đã bắt đầu đo cảm giác đó một cách định lượng: gắn cảm biến lên hàng trăm khán giả, so sánh nhạc sống với bản thu được phát trong cùng không gian, thậm chí cho nghệ sĩ chơi nhạc theo hoạt động não của người nghe. Bài này tóm tắt những gì đã được đo và những gì còn là giả thuyết. Về khía cạnh kinh tế, xem [[am-nhac-bieu-dien-truc-tiep-va-luu-dien]].
 
-## Phòng hòa nhạc thành phòng thí nghiệm
+## Phòng hoà nhạc thành phòng thí nghiệm
 
 ### LIVELab (McMaster, Canada)
 
-LIVELab của Đại học McMaster (Hamilton, Canada) là một phòng hòa nhạc nghiên cứu 106 chỗ ngồi, trang bị hàng chục micro, loa và cảm biến để đồng thời đo sóng não, nhịp tim, nhịp thở, mồ hôi và chuyển động của nhiều nhạc công và khán giả. Hệ thống âm học có thể mô phỏng các không gian khác nhau, nhờ đó nhà nghiên cứu giữ âm thanh gần như giống hệt giữa điều kiện "nhạc sống" và "bản thu".
+LIVELab của Đại học McMaster (Hamilton, Canada) là một phòng hoà nhạc nghiên cứu 106 chỗ ngồi, trang bị hàng chục micro, loa và cảm biến để đồng thời đo sóng não, nhịp tim, nhịp thở, mồ hôi và chuyển động của nhiều nhạc công và khán giả. Hệ thống âm học có thể mô phỏng các không gian khác nhau, nhờ đó nhà nghiên cứu giữ âm thanh gần như giống hệt giữa điều kiện "nhạc sống" và "bản thu".
 
 ### MusicLab Copenhagen
 
-Tháng 10 năm 2021, nhóm RITMO (Đại học Oslo) cùng tứ tấu đàn dây Danish String Quartet tổ chức một buổi hòa nhạc phát trực tuyến tại Copenhagen, theo dõi biến thiên nhịp tim và nhịp thở của nhạc công; khán giả tại chỗ đặt điện thoại trong túi áo ngực để ghi chuyển động, hơi thở và nhịp tim. Theo các nguồn đã tra, kết quả về khán giả của sự kiện này chưa được công bố đầy đủ; một luận văn thạc sĩ tại Oslo chỉ báo cáo rằng đồng bộ nhịp tim *giữa các nhạc công* tăng khi biểu diễn so với lúc nghỉ.
+Tháng 10 năm 2021, nhóm RITMO (Đại học Oslo) cùng tứ tấu đàn dây Danish String Quartet tổ chức một buổi hoà nhạc phát trực tuyến tại Copenhagen, theo dõi biến thiên nhịp tim và nhịp thở của nhạc công; khán giả tại chỗ đặt điện thoại trong túi áo ngực để ghi chuyển động, hơi thở và nhịp tim. Theo các nguồn đã tra, kết quả về khán giả của sự kiện này chưa được công bố đầy đủ; một luận văn thạc sĩ tại Oslo chỉ báo cáo rằng đồng bộ nhịp tim *giữa các nhạc công* tăng khi biểu diễn so với lúc nghỉ.
 
 ## Khán giả đồng bộ với nhau
 
-Bằng chứng rõ nhất về đồng bộ sinh lý của khán giả đến từ Wolfgang Tschacher và cộng sự (2023, *Scientific Reports* 13: 14843), một nhóm Đức – Thụy Sĩ làm việc với Viện Max Planck về Mỹ học Thực nghiệm. Họ theo dõi **132 khán giả** tại ba buổi hòa nhạc thính phòng công khai ở Berlin với cùng chương trình Beethoven, Brett Dean và Brahms.
+Bằng chứng rõ nhất về đồng bộ sinh lý của khán giả đến từ Wolfgang Tschacher và cộng sự (2023, *Scientific Reports* 13: 14843), một nhóm Đức – Thuỵ Sĩ làm việc với Viện Max Planck về Mỹ học Thực nghiệm. Họ theo dõi **132 khán giả** tại ba buổi hoà nhạc thính phòng công khai ở Berlin với cùng chương trình Beethoven, Brett Dean và Brahms.
 
 - Có đồng bộ rõ rệt về nhịp tim, tần số thở, phản ứng dẫn điện da và chuyển động cơ thể giữa các khán giả.
 - Đồng bộ, đặc biệt là nhịp tim, cao hơn khi người nghe cho biết mình **xúc động, được truyền cảm hứng** và đắm chìm trong tác phẩm.
@@ -3824,11 +3824,11 @@ Một nghiên cứu khác do Jessica Grahn phối hợp với LIVELab cho 24 kh�
 
 ### Phản ứng cảm xúc trong não
 
-Wiebke Trost, Sascha Frühholz và cộng sự (Đại học Zürich, *PNAS* 2024) tạo một vòng phản hồi khép kín: người nghe nằm trong máy fMRI, còn nghệ sĩ piano xem hoạt động hạch hạnh nhân (amygdala) của họ theo thời gian thực và điều chỉnh cách chơi. So với bản thu tương ứng, nhạc piano trực tiếp — cả dễ chịu lẫn khó chịu — gây hoạt động hạch hạnh nhân **mạnh hơn và ổn định hơn**, kích hoạt một mạng lưới xử lý cảm xúc rộng hơn, và chỉ nhạc sống cho thấy liên kết dương mạnh giữa đặc điểm âm nhạc và hoạt động não người nghe. Đây là một nghiên cứu đơn lẻ, trong điều kiện máy quét không giống phòng hòa nhạc. Xem thêm [[cam-xuc-am-nhac]] và [[rung-minh-khi-nghe-nhac]].
+Wiebke Trost, Sascha Frühholz và cộng sự (Đại học Zürich, *PNAS* 2024) tạo một vòng phản hồi khép kín: người nghe nằm trong máy fMRI, còn nghệ sĩ piano xem hoạt động hạch hạnh nhân (amygdala) của họ theo thời gian thực và điều chỉnh cách chơi. So với bản thu tương ứng, nhạc piano trực tiếp — cả dễ chịu lẫn khó chịu — gây hoạt động hạch hạnh nhân **mạnh hơn và ổn định hơn**, kích hoạt một mạng lưới xử lý cảm xúc rộng hơn, và chỉ nhạc sống cho thấy liên kết dương mạnh giữa đặc điểm âm nhạc và hoạt động não người nghe. Đây là một nghiên cứu đơn lẻ, trong điều kiện máy quét không giống phòng hoà nhạc. Xem thêm [[cam-xuc-am-nhac]] và [[rung-minh-khi-nghe-nhac]].
 
 ## Gắn kết xã hội: từ nghe đến cùng hát
 
-Nhiều nhà nghiên cứu theo hướng tiến hóa coi âm nhạc tập thể là công cụ gắn kết nhóm (xem [[am-nhac-hoc-tien-hoa]]). Daniel Weinstein, Robin Dunbar và cộng sự (2016, *Evolution and Human Behavior*) đo một dàn hợp xướng cộng đồng sinh hoạt theo nhóm nhỏ (20–80 người) và nhóm lớn ("megachoir" 232 người), trước và sau 90 phút hát. Cảm giác gắn bó, cảm xúc tích cực và ngưỡng chịu đau (dùng như chỉ dấu gián tiếp cho endorphin) đều tăng; mức tăng ngưỡng đau tương tự ở hai quy mô, còn cảm giác gần gũi tăng nhiều hơn ở nhóm lớn. Cần lưu ý đây là *cùng hát*, không phải chỉ nghe, và endorphin không được đo trực tiếp.
+Nhiều nhà nghiên cứu theo hướng tiến hoá coi âm nhạc tập thể là công cụ gắn kết nhóm (xem [[am-nhac-hoc-tien-hoa]]). Daniel Weinstein, Robin Dunbar và cộng sự (2016, *Evolution and Human Behavior*) đo một dàn hợp xướng cộng đồng sinh hoạt theo nhóm nhỏ (20–80 người) và nhóm lớn ("megachoir" 232 người), trước và sau 90 phút hát. Cảm giác gắn bó, cảm xúc tích cực và ngưỡng chịu đau (dùng như chỉ dấu gián tiếp cho endorphin) đều tăng; mức tăng ngưỡng đau tương tự ở hai quy mô, còn cảm giác gần gũi tăng nhiều hơn ở nhóm lớn. Cần lưu ý đây là *cùng hát*, không phải chỉ nghe, và endorphin không được đo trực tiếp.
 
 ## Vì sao "sống" lại khác?
 
@@ -3836,7 +3836,7 @@ Tổng hợp các nguồn, có vài cách giải thích (phần lớn là giả 
 1. **Tính bất định:** nhạc sống diễn ra theo thời gian thực, không biết trước hoàn toàn, tạo kỳ vọng và cảm giác "đang tham gia" (Swarbrick 2019 nêu ý này; xem [[ky-vong-am-nhac]]).
 2. **Tương tác hai chiều:** nghệ sĩ phản ứng với khán giả, như thí nghiệm của Trost 2024 mô phỏng.
 3. **Đồng bộ giữa người với người:** cảm xúc được khuếch đại qua sự hiện diện và đồng bộ của người xung quanh (Tschacher 2023).
-4. **Ý nghĩa xã hội và bản sắc:** đi xem hòa nhạc là thể hiện [[am-nhac-va-ban-sac-xa-hoi|bản sắc nhóm]], và người hâm mộ phản ứng mạnh hơn.
+4. **Ý nghĩa xã hội và bản sắc:** đi xem hoà nhạc là thể hiện [[am-nhac-va-ban-sac-xa-hoi|bản sắc nhóm]], và người hâm mộ phản ứng mạnh hơn.
 
 ## Nguồn và độ tin cậy
 
@@ -3878,9 +3878,9 @@ Theo quy ước thông thường, g khoảng 0,2 là nhỏ và 0,5 là trung bì
 
 ## Đo "sức tạo động lực" của một bản nhạc: BMRI
 
-Để nghiên cứu được, các nhà khoa học cần một cách chuẩn hóa xem bản nhạc nào "tạo động lực". Nhóm Karageorghis xây dựng **Brunel Music Rating Inventory (BMRI)**, dựa trên khung lý thuyết của nhóm cho rằng sức tạo động lực đến từ các yếu tố bên trong bản nhạc (như nhịp điệu, giai điệu) và yếu tố bên ngoài (ý nghĩa văn hóa, liên tưởng cá nhân). Phiên bản đầu bị phê bình vì cấu trúc nhân tố yếu và chỉ phù hợp với người chọn nhạc chuyên nghiệp (như huấn luyện viên aerobic).
+Để nghiên cứu được, các nhà khoa học cần một cách chuẩn hoá xem bản nhạc nào "tạo động lực". Nhóm Karageorghis xây dựng **Brunel Music Rating Inventory (BMRI)**, dựa trên khung lý thuyết của nhóm cho rằng sức tạo động lực đến từ các yếu tố bên trong bản nhạc (như nhịp điệu, giai điệu) và yếu tố bên ngoài (ý nghĩa văn hoá, liên tưởng cá nhân). Phiên bản đầu bị phê bình vì cấu trúc nhân tố yếu và chỉ phù hợp với người chọn nhạc chuyên nghiệp (như huấn luyện viên aerobic).
 
-Năm 2006, nhóm công bố **BMRI-2** trên *Journal of Sports Sciences* (tập 24, tr. 899–909): bộ câu hỏi được xây dựng từ phỏng vấn sâu tám người, kiểm định bằng phân tích nhân tố khẳng định, cho thấy mô hình một nhân tố phù hợp tốt qua ba bản nhạc có mức tạo động lực khác nhau (CFI 0,95–0,98). BMRI-2 dùng được cho cả huấn luyện viên lẫn người tập và giúp chuẩn hóa nhạc trong thí nghiệm.
+Năm 2006, nhóm công bố **BMRI-2** trên *Journal of Sports Sciences* (tập 24, tr. 899–909): bộ câu hỏi được xây dựng từ phỏng vấn sâu tám người, kiểm định bằng phân tích nhân tố khẳng định, cho thấy mô hình một nhân tố phù hợp tốt qua ba bản nhạc có mức tạo động lực khác nhau (CFI 0,95–0,98). BMRI-2 dùng được cho cả huấn luyện viên lẫn người tập và giúp chuẩn hoá nhạc trong thí nghiệm.
 
 ## Nhịp độ nào hợp với cường độ nào?
 
@@ -3909,7 +3909,7 @@ Bằng chứng nổi bật cho nhạc đồng bộ là nghiên cứu của Terry
 1. Nhạc giúp **cảm giác** tập luyện dễ chịu hơn rõ rệt hơn là giúp **thành tích**.
 2. Với vận động nhịp nhàng (chạy, đạp xe), nhạc có phách rõ và khớp được với nhịp động tác có lợi thế.
 3. Tác dụng lên thành tích yếu hơn ở thi đấu đỉnh cao so với tập luyện thông thường.
-4. Sở thích cá nhân và [[am-nhac-va-ban-sac-xa-hoi|bản sắc]] văn hóa ảnh hưởng mạnh đến việc bản nhạc nào "tạo động lực" — điều mà BMRI cố đo.
+4. Sở thích cá nhân và [[am-nhac-va-ban-sac-xa-hoi|bản sắc]] văn hoá ảnh hưởng mạnh đến việc bản nhạc nào "tạo động lực" — điều mà BMRI cố đo.
 
 Hầu hết nghiên cứu được thực hiện tại Anh, Úc và các nước phương Tây, với nhạc pop–rock–dance phổ biến ở đó. Chưa tìm thấy nghiên cứu tương tự với người tập Việt Nam. Về cơ chế não bộ của cảm giác muốn chuyển động, xem [[than-kinh-hoc-am-nhac]]; về nhạc nền khi làm việc trí óc, xem [[nhac-nen-va-hieu-suat-lam-viec]].
 
@@ -4313,7 +4313,7 @@ Trang thông tin của Cơ quan Di sản Hàn Quốc cho biết nhạc tế này
 
 **Pansori** là hình thức kể chuyện bằng âm nhạc. Một ca sĩ (*sorikkun*) vừa hát (*sori*), vừa nói (*aniri*), vừa diễn tả bằng cử chỉ (*ballim*). Đi kèm chỉ có một người đánh trống **buk**, gọi là *gosu*. Người gosu còn hô những tiếng cổ vũ (*chuimsae*), và khán giả cũng có thể hô theo. UNESCO mô tả một buổi diễn trọn vẹn có thể kéo dài tới tám giờ. Ca sĩ có thể là nam hoặc nữ, ứng tấu trên lời ca pha trộn ngôn ngữ dân dã với văn chương bác học.
 
-- Hàn Quốc chỉ định pansori là Di sản Văn hóa Phi vật thể Quốc gia số 5 từ năm 1964, trong bối cảnh hiện đại hóa nhanh đe dọa truyền thống này.
+- Hàn Quốc chỉ định pansori là Di sản Văn hoá Phi vật thể Quốc gia số 5 từ năm 1964, trong bối cảnh hiện đại hoá nhanh đe doạ truyền thống này.
 - UNESCO công bố pansori là Kiệt tác Di sản Truyền khẩu và Phi vật thể ngày 7/11/2003, rồi đưa vào Danh sách Đại diện năm 2008.
 - Theo các nguồn tổng hợp, chỉ năm *madang* (tác phẩm) còn được truyền dạy đầy đủ: *Chunhyangga*, *Simcheongga*, *Heungbuga*, *Sugungga* và *Jeokbyeokga*.
 
@@ -4342,7 +4342,7 @@ Số phách ở bảng trên lấy theo một nghiên cứu so sánh. Vì cách 
 
 ## Nguồn và độ tin cậy
 
-Các mốc UNESCO (2001, 2003 và việc chuyển danh sách năm 2008) lấy trực tiếp từ trang UNESCO, nên có độ tin cậy cao. Niên đại các bản nhạc Tông miếu có hai nguồn ghi khác nhau, như đã nêu ở trên. Số phách của jangdan và tỉ lệ khác biệt giữa các dòng sanjo phụ thuộc vào quy ước đếm và phiên bản được khảo sát, nên chỉ mang tính minh họa. Bài này chưa đề cập tới nongak, nhạc shaman hay sự giao thoa giữa gugak và nhạc pop hiện đại (xem [[mo-hinh-cong-nghiep-k-pop]]).
+Các mốc UNESCO (2001, 2003 và việc chuyển danh sách năm 2008) lấy trực tiếp từ trang UNESCO, nên có độ tin cậy cao. Niên đại các bản nhạc Tông miếu có hai nguồn ghi khác nhau, như đã nêu ở trên. Số phách của jangdan và tỉ lệ khác biệt giữa các dòng sanjo phụ thuộc vào quy ước đếm và phiên bản được khảo sát, nên chỉ mang tính minh hoạ. Bài này chưa đề cập tới nongak, nhạc shaman hay sự giao thoa giữa gugak và nhạc pop hiện đại (xem [[mo-hinh-cong-nghiep-k-pop]]).
 
 Xem thêm: [[nhac-cu-dong-a]] · [[am-nhac-truyen-thong-nhat-ban]] · [[am-nhac-truyen-thong-trung-hoa]] · [[da-nhip]]
 `,
@@ -4364,13 +4364,13 @@ Xem thêm: [[nhac-cu-dong-a]] · [[am-nhac-truyen-thong-nhat-ban]] · [[am-nhac-
       ["Arsenio Rodríguez modernized Cuban son montuno — New York Latin Culture", "https://www.newyorklatinculture.com/arsenio-rodriguez-modernized-cuban-son-montuno"],
     ],
     body: `
-Ở Mỹ Latinh và vùng Caribe, nhiều truyền thống âm nhạc rất khác nhau đã hình thành từ cùng một bối cảnh lịch sử: thời thuộc địa Tây Ban Nha và Bồ Đào Nha, chế độ buôn bán nô lệ châu Phi, và cư dân bản địa. Các nhà [[dan-toc-nhac-hoc|dân tộc nhạc học]] thường mô tả chúng như một "tam giác" nguồn gốc. Thứ nhất là **châu Phi**, góp phần lớn bộ gõ, cách tổ chức nhịp đa tầng và lối hát xướng–đáp (gọi–đáp). Thứ hai là **châu Âu**, góp hòa âm chức năng, đàn guitar và họ đàn dây, cùng các thể thơ ca của Tây Ban Nha. Thứ ba là **người bản địa**, góp một số nhạc khí hơi và nhạc khí gõ. Mỗi thể loại pha trộn ba nguồn này theo tỉ lệ khác nhau. Bài này điểm qua sáu thể loại tiêu biểu. Về nền tảng nhịp, xem thêm [[clave-tresillo-va-nhip-cong]] và [[am-nhac-chau-phi-ha-sahara]].
+Ở Mỹ Latinh và vùng Caribe, nhiều truyền thống âm nhạc rất khác nhau đã hình thành từ cùng một bối cảnh lịch sử: thời thuộc địa Tây Ban Nha và Bồ Đào Nha, chế độ buôn bán nô lệ châu Phi, và cư dân bản địa. Các nhà [[dan-toc-nhac-hoc|dân tộc nhạc học]] thường mô tả chúng như một "tam giác" nguồn gốc. Thứ nhất là **châu Phi**, góp phần lớn bộ gõ, cách tổ chức nhịp đa tầng và lối hát xướng–đáp (gọi–đáp). Thứ hai là **châu Âu**, góp hoà âm chức năng, đàn guitar và họ đàn dây, cùng các thể thơ ca của Tây Ban Nha. Thứ ba là **người bản địa**, góp một số nhạc khí hơi và nhạc khí gõ. Mỗi thể loại pha trộn ba nguồn này theo tỉ lệ khác nhau. Bài này điểm qua sáu thể loại tiêu biểu. Về nền tảng nhịp, xem thêm [[clave-tresillo-va-nhip-cong]] và [[am-nhac-chau-phi-ha-sahara]].
 
 ## Cuba: son cubano và con đường tới salsa
 
-**Son cubano** thường được mô tả là hình thành ở Cuba vào cuối thế kỷ 19 hoặc đầu thế kỷ 20. Đây là thể loại tiêu biểu nhất cho sự hòa trộn Tây Ban Nha–châu Phi. Đàn **tres** (guitar ba cặp dây) và lời ca theo thể thơ Tây Ban Nha đi cùng bộ gõ (bongo, maracas, clave) và lối hát gọi–đáp ở phần *montuno*. Toàn bộ khung nhịp được neo vào mẫu **clave**.
+**Son cubano** thường được mô tả là hình thành ở Cuba vào cuối thế kỷ 19 hoặc đầu thế kỷ 20. Đây là thể loại tiêu biểu nhất cho sự hoà trộn Tây Ban Nha–châu Phi. Đàn **tres** (guitar ba cặp dây) và lời ca theo thể thơ Tây Ban Nha đi cùng bộ gõ (bongo, maracas, clave) và lối hát gọi–đáp ở phần *montuno*. Toàn bộ khung nhịp được neo vào mẫu **clave**.
 
-Nghệ sĩ chơi tres **Arsenio Rodríguez** được ghi công là người phát triển *son montuno* và mô hình ban nhạc *conjunto*. Ông cũng được ghi nhận là người đưa trống conga và nhiều nhịp điệu Afro-Cuba vào son. Năm mất của ông được ghi là 1970 hoặc 1971 tùy nguồn, nên *chưa thống nhất*.
+Nghệ sĩ chơi tres **Arsenio Rodríguez** được ghi công là người phát triển *son montuno* và mô hình ban nhạc *conjunto*. Ông cũng được ghi nhận là người đưa trống conga và nhiều nhịp điệu Afro-Cuba vào son. Năm mất của ông được ghi là 1970 hoặc 1971 tuỳ nguồn, nên *chưa thống nhất*.
 
 **Salsa** là tên gọi phát triển ở New York cuối thập niên 1960 và trong thập niên 1970. Nó dựa phần lớn vào phong cách son conjunto và nhạc Cuba nói chung, do cộng đồng người Puerto Rico, Cuba và các nhóm Latinh khác ở Mỹ chơi. Hãng đĩa **Fania** do Johnny Pacheco và luật sư Jerry Masucci thành lập năm 1964 là trung tâm của làn sóng này, với các nghệ sĩ Willie Colón, Celia Cruz, Rubén Blades, Héctor Lavoe, Ray Barretto, Larry Harlow.
 
@@ -4380,11 +4380,11 @@ Nghệ sĩ chơi tres **Arsenio Rodríguez** được ghi công là người ph�
 
 Samba đô thị ở Rio de Janeiro thường được tính mốc từ bài **"Pelo Telefone"**, ghi công cho Donga và Mauro de Almeida. Bài hát được sáng tác năm 1916 tại sân nhà Tia Ciata ở khu Praça Onze, và trở thành bài hit của Carnaval năm 1917. Danh hiệu "bản samba đầu tiên được thu âm" thực ra *gây tranh cãi*. Đã có những bản ghi sớm hơn như "Em Casa da Bahiana" (1913), nhưng theo nhà âm nhạc học Carlos Sandroni, chúng không được phổ biến. Quyền tác giả bài hát cũng từng bị nhiều người tranh chấp.
 
-**Bossa nova** ("làn sóng mới") ra đời ở Rio cuối thập niên 1950. Theo Britannica, bản thu "Chega de Saudade" (1958) của ca sĩ–guitarist João Gilberto, sáng tác của Antônio Carlos Jobim và Vinícius de Moraes, được xem rộng rãi là đĩa đơn bossa nova đầu tiên. Ca khúc thật ra đã được Elizeth Cardoso thu từ năm 1957 nhưng ít được chú ý. Vì vậy mốc 1958 phần nào mang tính quy ước. Bossa nova "nén" nhịp samba vào ngón đàn guitar của Gilberto, đi cùng hòa âm chịu ảnh hưởng jazz (xem [[hoa-am-jazz]]). Cách đệm thể loại này trên piano được trình bày ở [[dem-bossa-nova]].
+**Bossa nova** ("làn sóng mới") ra đời ở Rio cuối thập niên 1950. Theo Britannica, bản thu "Chega de Saudade" (1958) của ca sĩ–guitarist João Gilberto, sáng tác của Antônio Carlos Jobim và Vinícius de Moraes, được xem rộng rãi là đĩa đơn bossa nova đầu tiên. Ca khúc thật ra đã được Elizeth Cardoso thu từ năm 1957 nhưng ít được chú ý. Vì vậy mốc 1958 phần nào mang tính quy ước. Bossa nova "nén" nhịp samba vào ngón đàn guitar của Gilberto, đi cùng hoà âm chịu ảnh hưởng jazz (xem [[hoa-am-jazz]]). Cách đệm thể loại này trên piano được trình bày ở [[dem-bossa-nova]].
 
 ## Río de la Plata: tango (UNESCO 2009)
 
-Theo UNESCO, **tango** được tầng lớp bình dân đô thị ở Buenos Aires (Argentina) và Montevideo (Uruguay), quanh lưu vực sông Río de la Plata, phát triển nên. Môi trường hình thành là nơi người châu Âu nhập cư, hậu duệ nô lệ châu Phi và người bản địa (*criollos*) sống chung. Tango gồm cả nhạc, múa và thơ ca. Hồ sơ chung của Argentina và Uruguay được đưa vào Danh sách Đại diện Di sản Văn hóa Phi vật thể năm **2009** (kỳ họp 4.COM). Ngày cụ thể được các nguồn thứ cấp ghi khác nhau: 31/8 hoặc 30/9/2009.
+Theo UNESCO, **tango** được tầng lớp bình dân đô thị ở Buenos Aires (Argentina) và Montevideo (Uruguay), quanh lưu vực sông Río de la Plata, phát triển nên. Môi trường hình thành là nơi người châu Âu nhập cư, hậu duệ nô lệ châu Phi và người bản địa (*criollos*) sống chung. Tango gồm cả nhạc, múa và thơ ca. Hồ sơ chung của Argentina và Uruguay được đưa vào Danh sách Đại diện Di sản Văn hoá Phi vật thể năm **2009** (kỳ họp 4.COM). Ngày cụ thể được các nguồn thứ cấp ghi khác nhau: 31/8 hoặc 30/9/2009.
 
 ## Colombia: cumbia
 
@@ -4403,7 +4403,7 @@ Nơi khai sinh cụ thể (ví dụ Mompox) và từ nguyên "cumbia" (có thuy�
 ## Những đặc điểm chung
 
 - **Clave và nhịp lệch.** Phần lớn nhạc Afro-Cuba được tổ chức quanh mẫu clave 3–2 hoặc 2–3. Hình *tresillo* (3+3+2) cũng xuất hiện rộng rãi ở nhiều thể loại khác.
-- **Đa nhịp và nhiều tầng bộ gõ.** Mỗi nhạc cụ giữ một mẫu riêng, và các mẫu khóa vào nhau. Xem [[da-nhip]].
+- **Đa nhịp và nhiều tầng bộ gõ.** Mỗi nhạc cụ giữ một mẫu riêng, và các mẫu khoá vào nhau. Xem [[da-nhip]].
 - **Gọi–đáp** giữa ca sĩ chính và bè đồng ca (*coro*), đặc biệt rõ ở son và salsa.
 - **Giao lưu với nhạc phổ thông Bắc Mỹ:** salsa ở New York, bossa nova trong jazz Mỹ thập niên 1960. Xem [[nhac-pho-thong-the-ky-20]].
 
@@ -4419,7 +4419,7 @@ Xem thêm: [[clave-tresillo-va-nhip-cong]] · [[dem-bossa-nova]] · [[am-nhac-ch
     title: "Âm nhạc Đông Nam Á lục địa",
     category: 'musicology',
     aliases: ["mainland Southeast Asian music", "âm nhạc Thái Lan Campuchia Lào Myanmar", "pinpeat", "hsaing waing", "saing waing", "khaen music", "lam", "Thai tuning", "thang âm 7 cung đều"],
-    summary: "Tổng quan các truyền thống hòa tấu và hát của Đông Nam Á lục địa: dàn piphat Thái Lan và cuộc tranh luận về thang âm \"7 cung đều\", dàn pinpeat Khmer, âm nhạc khèn và lối hát lam của người Lào (UNESCO 2017), dàn hsaing waing Myanmar. Bài viết chỉ so sánh với Việt Nam ở những chỗ có nguồn.",
+    summary: "Tổng quan các truyền thống hoà tấu và hát của Đông Nam Á lục địa: dàn piphat Thái Lan và cuộc tranh luận về thang âm \"7 cung đều\", dàn pinpeat Khmer, âm nhạc khèn và lối hát lam của người Lào (UNESCO 2017), dàn hsaing waing Myanmar. Bài viết chỉ so sánh với Việt Nam ở những chỗ có nguồn.",
     refs: [
       ["The Myth of Equidistance in Thai Tuning — J. Garzoli, Analytical Approaches to World Music 4/2 (2015)", "https://journal.iftawm.org/previous/vol4no2/garzoli/"],
       ["Cross-cultural data shows musical scales evolved to maximise imperfect fifths — arXiv:1906.06171", "https://arxiv.org/pdf/1906.06171"],
@@ -4431,15 +4431,15 @@ Xem thêm: [[clave-tresillo-va-nhip-cong]] · [[dem-bossa-nova]] · [[am-nhac-ch
       ["Efforts to preserve five-tone musical ensemble of the Khmer in Soc Trang — QDND", "https://en.qdnd.vn/culture-sports/culture/efforts-to-preserve-five-tone-musical-ensemble-of-the-khmer-in-soc-trang-538049"],
     ],
     body: `
-Đông Nam Á lục địa ở đây gồm Thái Lan, Campuchia, Lào và Myanmar. Khu vực này có chung một "họ" dàn nhạc cung đình và nghi lễ được xây dựng quanh đàn gõ phím (xylophone), bộ cồng chiêng xếp vòng, kèn dăm kép và trống. Bên cạnh đó là truyền thống hát–đệm khèn rất mạnh ở vùng văn hóa Lào–Isan. Khác với dàn [[gamelan]] Java–Bali vốn đặt cồng chiêng làm trung tâm, các dàn nhạc lục địa thường để đàn gõ phím dẫn giai điệu. Bài này nói về hệ thống âm nhạc. Về từng nhạc cụ, xem [[ranat]], [[khen]] và [[nhac-khi-the-gioi]].
+Đông Nam Á lục địa ở đây gồm Thái Lan, Campuchia, Lào và Myanmar. Khu vực này có chung một "họ" dàn nhạc cung đình và nghi lễ được xây dựng quanh đàn gõ phím (xylophone), bộ cồng chiêng xếp vòng, kèn dăm kép và trống. Bên cạnh đó là truyền thống hát–đệm khèn rất mạnh ở vùng văn hoá Lào–Isan. Khác với dàn [[gamelan]] Java–Bali vốn đặt cồng chiêng làm trung tâm, các dàn nhạc lục địa thường để đàn gõ phím dẫn giai điệu. Bài này nói về hệ thống âm nhạc. Về từng nhạc cụ, xem [[ranat]], [[khen]] và [[nhac-khi-the-gioi]].
 
 ## Thái Lan: dàn piphat
 
-**Piphat** là dàn nhạc gồm nhạc cụ hơi và nhạc cụ gõ. Nó được xem là hình thức hòa tấu chính để trình diễn những tác phẩm linh thiêng và "cao cấp" nhất trong kho nhạc cổ điển Thái. Dàn có nhiều cỡ, trong đó hai cỡ nhỏ là:
+**Piphat** là dàn nhạc gồm nhạc cụ hơi và nhạc cụ gõ. Nó được xem là hình thức hoà tấu chính để trình diễn những tác phẩm linh thiêng và "cao cấp" nhất trong kho nhạc cổ điển Thái. Dàn có nhiều cỡ, trong đó hai cỡ nhỏ là:
 
 | Cỡ dàn | Thành phần |
 |---|---|
-| Piphat khrueang ha (dàn "năm nhạc cụ") | Kèn pi nai, đàn gõ phím ranat ek, bộ cồng vòng khong wong yai, trống taphon, cặp trống klong that, chũm chọe nhỏ ching (thực tế là sáu nhạc cụ) |
+| Piphat khrueang ha (dàn "năm nhạc cụ") | Kèn pi nai, đàn gõ phím ranat ek, bộ cồng vòng khong wong yai, trống taphon, cặp trống klong that, chũm choẹ nhỏ ching (thực tế là sáu nhạc cụ) |
 | Piphat khrueang khu (dàn "đôi") | Thêm ranat thum (âm trầm hơn) và khong wong lek (cao hơn khong wong yai), tổng cộng tám nhạc cụ |
 
 Về kết cấu, mọi nhạc cụ cùng triển khai một giai điệu khung, mỗi nhạc cụ theo cách riêng: khong wong yai giữ phiên bản thưa, ranat ek tô điểm dày đặc. Kiểu kết cấu này được gọi là **phức điệu dị âm** (*heterophony*), và các tài liệu tham khảo thường lấy nhạc Thái làm ví dụ tiêu biểu.
@@ -4448,19 +4448,19 @@ Về kết cấu, mọi nhạc cụ cùng triển khai một giai điệu khung,
 
 Một quan niệm đã lan truyền suốt hơn một thế kỷ cho rằng nhạc Thái chia quãng tám thành **bảy khoảng bằng nhau**, mỗi khoảng khoảng 171 cent (1200/7). Theo **John Garzoli** (2015, *Analytical Approaches to World Music* 4/2), lý thuyết này do **Alexander J. Ellis** đề xuất năm 1885, dựa trên việc quan sát các nhạc cụ gõ cao độ cố định của dàn piphat. Garzoli lập luận rằng nên từ bỏ thuyết "cách đều" vì hai lý do: thiếu bằng chứng ủng hộ, và phạm vi khảo sát không đầy đủ.
 
-Một nghiên cứu xuyên văn hóa về thang âm (arXiv:1906.06171) cho kết quả trung dung hơn. Nếu gộp số liệu nhiều nhạc cụ lại, phân bố quãng xấp xỉ một đường Gauss có trung bình đúng bằng 1200/7 cent. Nhưng trong từng thang âm riêng lẻ, các quãng có thể lệch rất xa so với lý tưởng đó, với biên độ tới 96 cent. Nói cách khác, "7 cung đều" có thể là một mô hình trung bình hữu ích, nhưng không mô tả chính xác cách lên dây của một bộ nhạc cụ cụ thể. So sánh với [[am-giai-ngu-cung]]. Xem thêm [[cac-he-thong-chinh-am]] và [[vi-cung-va-am-nhac-vi-cung]].
+Một nghiên cứu xuyên văn hoá về thang âm (arXiv:1906.06171) cho kết quả trung dung hơn. Nếu gộp số liệu nhiều nhạc cụ lại, phân bố quãng xấp xỉ một đường Gauss có trung bình đúng bằng 1200/7 cent. Nhưng trong từng thang âm riêng lẻ, các quãng có thể lệch rất xa so với lý tưởng đó, với biên độ tới 96 cent. Nói cách khác, "7 cung đều" có thể là một mô hình trung bình hữu ích, nhưng không mô tả chính xác cách lên dây của một bộ nhạc cụ cụ thể. So sánh với [[am-giai-ngu-cung]]. Xem thêm [[cac-he-thong-chinh-am]] và [[vi-cung-va-am-nhac-vi-cung]].
 
 ## Campuchia: dàn pinpeat
 
-**Pinpeat** thường được mô tả là dàn nhạc truyền thống lớn nhất của người Khmer. Từ lâu dàn này phục vụ nghi lễ cung đình và chùa chiền. Thành phần cốt lõi gồm đàn gõ phím roneat ek và roneat thung, kèn dăm kép sralai, các trống sampho và skor thom, và chũm chọe chhing. Roneat dẫn giai điệu, còn skor thom giữ nhịp cơ bản. Pinpeat được xem là "anh em" của piphat Thái.
+**Pinpeat** thường được mô tả là dàn nhạc truyền thống lớn nhất của người Khmer. Từ lâu dàn này phục vụ nghi lễ cung đình và chùa chiền. Thành phần cốt lõi gồm đàn gõ phím roneat ek và roneat thung, kèn dăm kép sralai, các trống sampho và skor thom, và chũm choẹ chhing. Roneat dẫn giai điệu, còn skor thom giữ nhịp cơ bản. Pinpeat được xem là "anh em" của piphat Thái.
 
-Theo Asia Society, các nhạc cụ của dàn nhạc này đã xuất hiện trên phù điêu Angkor Wat. Truyền thống này từng suýt bị xóa sổ: một nguồn thứ cấp ước tính 80–90% nhạc công chuyên nghiệp Campuchia đã chết trong giai đoạn 1975–1979. Con số này cần được đối chiếu thêm.
+Theo Asia Society, các nhạc cụ của dàn nhạc này đã xuất hiện trên phù điêu Angkor Wat. Truyền thống này từng suýt bị xoá sổ: một nguồn thứ cấp ước tính 80–90% nhạc công chuyên nghiệp Campuchia đã chết trong giai đoạn 1975–1979. Con số này cần được đối chiếu thêm.
 
 **Liên hệ với Việt Nam.** Theo báo Quân đội Nhân dân, người Khmer ở Sóc Trăng còn lưu giữ **dàn nhạc ngũ âm**, một dàn nhạc thuộc cùng họ với pinpeat Campuchia, piphat Thái, sebnai Lào và saing waing Myanmar.
 
 ## Lào: âm nhạc khèn và lối hát lam (UNESCO 2017)
 
-Ngày 7/12/2017, tại kỳ họp 12.COM, UNESCO đưa **âm nhạc khèn của người Lào** (*Khaen music of the Lao people*) vào Danh sách Đại diện Di sản Văn hóa Phi vật thể của Nhân loại. UNESCO mô tả khèn là một loại khẩu cầm (mouth organ) trông giống sáo quạt (panpipe), gồm các ống tre dài ngắn khác nhau, mỗi ống gắn một lưỡi gà kim loại. Người chơi thổi qua một bầu hơi, và cao độ phụ thuộc vào kích thước từng ống. Khèn thường có mặt trong các lễ hội làng. Theo tập quán, người nghe không chỉ đứng xem mà còn trở thành người tham gia, cùng hát và múa.
+Ngày 7/12/2017, tại kỳ họp 12.COM, UNESCO đưa **âm nhạc khèn của người Lào** (*Khaen music of the Lao people*) vào Danh sách Đại diện Di sản Văn hoá Phi vật thể của Nhân loại. UNESCO mô tả khèn là một loại khẩu cầm (mouth organ) trông giống sáo quạt (panpipe), gồm các ống tre dài ngắn khác nhau, mỗi ống gắn một lưỡi gà kim loại. Người chơi thổi qua một bầu hơi, và cao độ phụ thuộc vào kích thước từng ống. Khèn thường có mặt trong các lễ hội làng. Theo tập quán, người nghe không chỉ đứng xem mà còn trở thành người tham gia, cùng hát và múa.
 
 Khèn là nhạc cụ đệm chính cho **lam** (hay *mor lam* ở vùng Isan, Thái Lan), lối hát kể và hát đối đáp của người Lào. Theo các nguồn tổng hợp, khèn được dùng trong cộng đồng người Lào, người Isan và một số nhóm Tai, trong đó có **người Thái Đen ở miền Bắc Việt Nam**. Tài liệu của bài này chưa đủ để mô tả chi tiết các điệu thức (*lai*) của khèn hay các thể loại lam theo vùng.
 

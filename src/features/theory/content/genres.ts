@@ -66,7 +66,7 @@ Bảng tóm tắt các thể loại khí nhạc lớn: [[the-loai]].
 | Có lời không? Ngôn ngữ gì? | Latin → thánh nhạc cổ; Đức + piano → Lied; nhiều giọng + dàn nhạc + sân khấu → opera |
 | Ai chơi? | Một đàn phím → tiểu phẩm, sonata, fugue; 4 đàn dây → tứ tấu; dàn nhạc + một độc tấu → concerto |
 | Có nhịp nhảy múa rõ không? | 3/4 nhẹ → minuet, valse; nhấn lệch → mazurka; nhịp phức nhanh → gigue; [[swing|backbeat]] → rock, pop |
-| Một hay nhiều chương? | Nhiều chương cùng giọng nhịp nhảy → tổ khúc; bốn chương tương phản → giao hưởng, sonata |
+| Một hay nhiều chương? | Nhiều chương cùng giọng, toàn vũ khúc → tổ khúc; bốn chương tương phản → giao hưởng, sonata |
 | Kể chuyện hay "tự nó"? | Tiêu đề, chương trình → thơ giao hưởng; số thứ tự, giọng → nhạc tuyệt đối ([[am-nhac-tuyet-doi]]) |
 
 ## Vì sao người dạy piano cần biết thể loại
@@ -411,7 +411,7 @@ Cuối thế kỷ 16, các nhóm trí thức ở Florence (Camerata của Bardi 
 | Nhạc | Theo nhịp lời nói; *secco*: chỉ bè trầm đệm; *accompagnato*: dàn nhạc đệm ở chỗ kịch tính | Giai điệu đầy đủ, hình thức rõ |
 
 ## Opera seria và aria da capo
-Opera nghiêm túc Ý cuối thời [[thoi-ky-baroque|Baroque]] ([[george-frideric-handel|Handel]]: *Rinaldo* 1711 với "Lascia ch’io pianga"; *Giulio Cesare* 1724). Aria **[[dau-nhac-lai|da capo]]** có ba phần: A – B – A′; khi A trở lại, ca sĩ **tự trang trí** để khoe kỹ thuật.
+Opera seria là opera nghiêm túc kiểu Ý cuối thời [[thoi-ky-baroque|Baroque]] ([[george-frideric-handel|Handel]]: *Rinaldo* 1711 với "Lascia ch’io pianga"; *Giulio Cesare* 1724). Aria **[[dau-nhac-lai|da capo]]** có ba phần: A – B – A′; khi A trở lại, ca sĩ **tự trang trí** để khoe kỹ thuật.
 ::form A B A′ | Aria da capo: A – B – A′ (A′ = A được ca sĩ trang trí thêm); xem [[hinh-thuc-am-nhac|ba đoạn]]
 
 ## Từ Gluck đến Wagner
@@ -636,7 +636,7 @@ Ranh giới hai kiểu không tuyệt đối.
 
 ## Sonata đàn phím của Scarlatti
 - **[[domenico-scarlatti|Domenico Scarlatti]]** viết **555** sonata cho harpsichord (đánh số "K." theo danh mục Kirkpatrick 1953); chỉ 30 bài (*Essercizi*) được in khi ông còn sống.
-- Mỗi bài **một chương**, [[hinh-thuc-am-nhac|hai đoạn]] có nhắc lại, đầy nhảy xa, bắt chéo tay, [[not-lap-lai|nốt lặp]] — kỹ thuật của [[guitar-co-dien|guitar Tây Ban Nha]].
+- Mỗi bài **một chương**, [[hinh-thuc-am-nhac|hai đoạn]] có nhắc lại, đầy những bước nhảy xa, bắt chéo tay, [[not-lap-lai|nốt lặp]] — kỹ thuật của [[guitar-co-dien|guitar Tây Ban Nha]].
 ::form A A B B | Sonata Scarlatti: ‖: A :‖: B :‖ — phần B bắt đầu ở giọng át (hoặc giọng song song) rồi quay về
 Phần cuối của A và của B thường dùng **cùng chất liệu** ở hai giọng khác nhau — một bước nhỏ tới [[hinh-thuc-sonata]].
 Liên quan: [[sonata-the-loai]], [[concerto-grosso]], [[dan-phim-co]].
@@ -671,7 +671,7 @@ Sự **tương phản to – nhỏ, ít – nhiều** này cũng là gốc của
 ## Các mốc
 - **Corelli, Op. 6**: 12 concerto grosso (8 kiểu nhà thờ, 4 kiểu thính phòng), in ở Amsterdam năm 1714, có lẽ viết từ thập niên 1680.
 - **[[johann-sebastian-bach|Bach]], *Brandenburg Concertos***: đề tặng 24/3/1721; mỗi bài một nhóm độc tấu khác nhau.
-- **[[antonio-vivaldi|Vivaldi]], Op. 8** (*Il cimento dell’armonia e dell’inventione*, 1725): 12 concerto violin, bốn bài đầu là ***Bốn mùa*** (cái tên không có trong bản in), kèm các bài thơ sonnet tả cảnh — một sớm của [[am-nhac-tuyet-doi|nhạc chương trình]].
+- **[[antonio-vivaldi|Vivaldi]], Op. 8** (*Il cimento dell’armonia e dell’inventione*, 1725): 12 concerto violin, bốn bài đầu là ***Bốn mùa*** (cái tên không có trong bản in), kèm các bài thơ sonnet tả cảnh — một ví dụ sớm của [[am-nhac-tuyet-doi|nhạc chương trình]].
 
 ## Hình thức ritornello
 ::form R S R S R S R | Chương nhanh kiểu Vivaldi: R = ritornello (cả dàn, chủ đề quay lại ở các giọng khác nhau), S = đoạn độc tấu
@@ -799,7 +799,7 @@ Liên quan: [[the-loai]], [[nhac-thinh-phong]], [[thoi-ky-co-dien]].
 ## Tứ tấu đàn dây
 - Bốn chương như [[giao-huong|giao hưởng]], nhưng mỗi bè là một người — các bè **ngang hàng**, đối đáp nhau.
 - **Haydn, Op. 33** (1781) được quảng cáo là viết theo "một cách hoàn toàn mới và đặc biệt" (có thể một phần là lời chào hàng); minuet được thay bằng **[[minuet-va-trio|scherzo]]** nên tập có biệt danh "Gli Scherzi".
-- Mozart, *Eine kleine Nachtmusik*: xong ở Vienna 10/8/1787; ngày nay bốn chương (một minuet thứ hai đã mất), chỉ in khoảng 1827.
+- Mozart, *Eine kleine Nachtmusik*: xong ở Vienna 10/8/1787; ngày nay còn bốn chương (một minuet thứ hai đã mất); đến khoảng 1827 mới được in.
 ::form Allegro Romanze Menuetto Rondo | *Eine kleine Nachtmusik*: bốn chương còn lại
 
 ## Với người học piano
@@ -892,7 +892,7 @@ Tổ tiên [[thoi-ky-baroque|Baroque]]: [[sonata-baroque]]. Liên quan: [[the-lo
 ::rhythm 3/4 e.-s q >q / e.-s >q q // | Mazurka: nhịp chấm dôi đầu ô, nhấn ở phách 3 rồi phách 2 (minh hoạ)
 **Polonaise** (Ba Lan): vừa phải, trang trọng; ô điển hình bắt đầu bằng **một móc đơn + hai móc kép**, tiếp theo bốn móc đơn.
 ::rhythm 3/4 e-s-s e-e e-e e-e // | Nhịp polonaise điển hình — Chopin dùng nó ở những chỗ then chốt chứ không phải mọi ô
-Liên hệ: [[minuet-va-trio|minuet]] cũng ở 3/4 nhưng vừa phải và cân đối; [[hemiola]] làm nhòe phách trong 3/4.
+Liên hệ: [[minuet-va-trio|minuet]] cũng ở 3/4 nhưng vừa phải và cân đối; [[hemiola]] làm nhoè phách trong 3/4.
 
 ## Với người học piano
 Tiểu phẩm là "giáo trình cảm xúc": mỗi thể loại dạy một kỹ năng — nocturne dạy [[dien-dat-cau-nhac|hát]] và [[ban-dap|pedal]], valse dạy [[buoc-nhay-xa|nhảy tay trái]], mazurka dạy [[rubato]] và nhấn lệch, étude dạy kỹ thuật. Lộ trình bài: [[lo-trinh-tac-pham]].
@@ -931,7 +931,7 @@ Giữa hai cách là **strophic có biến đổi** (A A′ A″…). Xem [[hinh
 |---|---|---|
 | [[franz-schubert|Schubert]], *Erlkönig* | 1815 | Một ca sĩ đóng bốn vai (người kể, cha, con, Vua yêu tinh); piano đóng vai **vó ngựa phi** — nốt lặp liên tục ở tay phải ([[not-lap-lai]]) |
 | Schubert, *Winterreise* | 1827 | **Liên khúc** 24 ca khúc trên thơ Müller |
-| [[robert-schumann|Schumann]], *Dichterliebe* | 1840 | 16 ca khúc trên thơ Heine, trong "Năm ca khúc" của ông (hơn 130 Lieder) |
+| [[robert-schumann|Schumann]], *Dichterliebe* | 1840 | 16 ca khúc trên thơ Heine, viết trong "năm của Lied" — năm ông soạn hơn 130 Lieder |
 | [[johannes-brahms|Brahms]], Wolf, [[gustav-mahler|Mahler]], [[richard-strauss|Richard Strauss]] | Cuối thế kỷ 19 | Strauss: *Vier letzte Lieder* (1948) |
 | [[gabriel-faure|Fauré]], [[claude-debussy|Debussy]] | Pháp | **Mélodie** |
 
@@ -1211,20 +1211,20 @@ Liên quan: [[nhac-dien-tu]], [[operetta-va-nhac-kich]], [[giao-huong]].
     ],
     body: `
 ## Dòng thời gian
-| Dòng nhạc | Khởi đầu | Chữ [[ky-am|ký âm]] nhạc | Mốc |
+| Dòng nhạc | Khởi đầu | Chữ ký âm nhạc | Mốc |
 |---|---|---|---|
 | **Blues** | Thu âm từ 1920 | Khung [[blues-12-nhip|12 ô]] I – IV – V, [[am-giai-blues|nốt blue]] | W. C. Handy, *St. Louis Blues* (in 1914); Mamie Smith, *Crazy Blues* (thu 10/8/1920) |
 | **Jazz** | Đầu [[thoi-ky-the-ky-20|thế kỷ 20]] | [[swing|Swing]], [[ngau-hung-piano|ngẫu hứng]] | Xem [[phong-cach-jazz]] |
 | **Gospel** | Thập niên 1930 | Hỏi – đáp, hoà giọng dày | Thomas A. Dorsey — xem [[tai-hoa-am-gospel]] |
 | **Country** | Thập niên 1920 | [[violin|Fiddle]], guitar steel, hoà âm đơn giản, kể chuyện | |
-| **Rock and roll** | Giữa thập niên 1950 | **Backbeat** (nhấn phách 2 – 4), [[guitar-dien|guitar điện]], khung 12 ô | Chuck [[phan-tich-va-bieu-dien|Berry]], Elvis Presley |
+| **Rock and roll** | Giữa thập niên 1950 | **Backbeat** (nhấn phách 2 – 4), [[guitar-dien|guitar điện]], khung 12 ô | Chuck Berry, Elvis Presley |
 | **Rock** | Thập niên 1960 | Ban nhạc guitar – bass – trống; album như một tác phẩm | The Beatles, *Sgt. Pepper* (1967) |
 | **Soul / R&B / Motown** | 1959 | Giọng hát kiểu gospel, ban nhạc phòng thu | Motown do Berry Gordy lập ở Detroit 12/1/1959 |
 | **Funk** | Giữa thập niên 1960 | Nhấn mạnh **phách 1**, bass và guitar đảo phách, kèn đồng "chặt" | James Brown |
 | **Reggae** | Cuối thập niên 1960, Jamaica | Từ mento → ska (khoảng 1957) → rocksteady (khoảng 1966); guitar/đàn phím "skank" **phách nghịch**, bass nổi | Toots & the Maytals, *Do the Reggay* (1968); Bob Marley |
 | **Disco** | Thập niên 1970 | Trống trầm **mọi phách** ("four on the floor") | |
 | **Hip hop** | 1973, Bronx | DJ lặp đoạn "break" của đĩa funk, MC đọc rap; về sau là **lấy mẫu** | Bữa tiệc của DJ Kool Herc, 1520 Sedgwick Avenue, 11/8/1973 |
-| **House / techno** | Chicago (cuối 1970s – 1980s) / Detroit (1980s) | Máy trống, four on the floor; tên "house" từ câu lạc bộ Warehouse của Frankie Knuckles | Tuyển *Techno! The New Dance Sound of Detroit* (1988) |
+| **House / techno** | Chicago (cuối thập niên 1970 – thập niên 1980) / Detroit (thập niên 1980) | Máy trống, four on the floor; tên "house" từ câu lạc bộ Warehouse của Frankie Knuckles | Tuyển *Techno! The New Dance Sound of Detroit* (1988) |
 | **K-pop, pop toàn cầu** | Thập niên 1990 – nay | Nhóm nhạc thần tượng, pha trộn thể loại, vũ đạo | |
 
 ## Bốn "chữ ký" tiết tấu

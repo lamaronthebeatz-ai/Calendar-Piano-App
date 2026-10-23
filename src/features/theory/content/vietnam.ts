@@ -243,7 +243,7 @@ Trước: [[am-nhac-thoi-phap-thuoc]] · Tiếp: [[am-nhac-viet-nam-sau-1975]].
 - **Nhạc hải ngoại**: *Paris By Night* của Thúy Nga ra số đầu năm **1983** ở Paris; Asia (Trúc Hồ, California) — xem [[nhac-hai-ngoai]].
 
 ## Đổi mới và thị trường
-- Sau **1986** nhạc nhẹ dần phục hồi; thập niên 1990 gọi là "nhạc nhẹ", đầu 2000 là "nhạc trẻ".
+- Sau **1986** nhạc nhẹ dần phục hồi; thập niên 1990 dòng nhạc này được gọi là "nhạc nhẹ", đầu những năm 2000 là "nhạc trẻ".
 - **Làn Sóng Xanh** (Đài TNND TP.HCM — VOH) phát số đầu ngày **7/9/1997**; Lam Trường với *Tình thôi xót xa* (1998) đánh dấu thị trường trong nước.
 - **2019**: *Hãy trao cho anh* (Sơn Tùng M-TP, có Snoop Dogg) công chiếu trên YouTube ngày 1/7/2019, đạt 1 triệu lượt xem trong 8 phút. Năm 2024, theo khảo sát của Decision Lab, YouTube (77%), Zing MP3 (52%), Nhaccuatui (32%), Spotify (28%) là các nền tảng nghe nhạc phổ biến.
 - Xem [[vpop-rap-viet]].
@@ -435,7 +435,7 @@ Hệ thống làn điệu chèo: [[lan-dieu-cheo-va-tuong]].
 ## Nguồn gốc: chưa rõ
 | Thuyết | Nội dung | Đánh giá |
 |---|---|---|
-| **Lý Nguyên Cát** | Một kép hát người phương Bắc bị bắt trong chiến tranh với quân Nguyên (thế kỷ 13), được cho dạy hát cho con em trong cung | Truyền thống được Wikipedia và nhiều bài phổ thông chép lại; chưa thấy công trình học thuật xác nhận |
+| **Lý Nguyên Cát** | Một kép hát người phương Bắc bị bắt trong chiến tranh với quân Nguyên (thế kỷ 13), được giao dạy hát cho con em trong cung | Truyền thống được Wikipedia và nhiều bài phổ thông chép lại; chưa thấy công trình học thuật xác nhận |
 | **Đào Duy Từ** | Được tôn làm một vị tổ của tuồng Đàng Trong (thế kỷ 17) | Truyền thống tôn vinh, không có chứng cứ chặt chẽ |
 | Thời Trần (1226 – 1399) | Các trang du lịch đặt hát bội vào thời Trần | Nguồn yếu |
 Có một nghiên cứu khảo thuật ngữ "hát bộ" trong sử liệu Trung Hoa — xem phần nguồn.
@@ -444,7 +444,7 @@ Liên quan: [[cheo]], [[cai-luong]], [[the-loai-am-nhac-viet-nam]], [[giai-thoai
 
 ## Nghe
 
-::youtube uRyQHv6k3TU | *Trích đoạn Hồ Nguyệt Cô hóa cáo* · Nhà hát Tuồng Việt Nam
+::youtube uRyQHv6k3TU | *Trích đoạn Hồ Nguyệt Cô hoá cáo* · Nhà hát Tuồng Việt Nam
 
 ::youtube k8bxVZ8aW2Y | *Trích đoạn Trần Quốc Toản ra quân* · Nhà hát Tuồng Việt Nam
 
@@ -503,7 +503,7 @@ Liên quan: [[don-ca-tai-tu]], [[cheo]], [[tuong]], [[dan-nguyet]], [[ly-thuyet-
 
 ::youtube kbilws5tJIo | *Tình anh bán chiếu* · Út Trà Ôn
 
-::youtube KV_aaZDo0is | *Tô Ánh Nguyệt (trích đoạn, Trần Hữu Trang), ghi hình 1985* · Lệ Thủy & Minh Vương
+::youtube KV_aaZDo0is | *Tô Ánh Nguyệt (trích đoạn, Trần Hữu Trang), ghi hình 1985* · Lệ Thuỷ & Minh Vương
 
 ::youtube SjncC_bLbL8 | *Lan và Điệp* · Thanh Kim Huệ & Chí Tâm
 `,
@@ -532,7 +532,7 @@ UNESCO mô tả người chơi **[[ngau-hung-ung-tac|ứng tác]], tô điểm v
 ## 20 bài bản tổ
 | Nhóm | Số bài | Ví dụ |
 |---|---|---|
-| Bắc | 6 | Lưu thủy trường, Phú lục chấn, Bình bán chấn, Xuân tình chấn, Tây thi, Cổ bản |
+| Bắc | 6 | Lưu thuỷ trường, Phú lục chấn, Bình bán chấn, Xuân tình chấn, Tây thi, Cổ bản |
 | Nam | 3 | (Nam xuân, [[ca-hue-nha-nhac|Nam ai]], Đảo [[am-giai-ngu-cung|ngũ cung]]) |
 | Oán | 4 | (Tứ đại oán…) |
 | Bài lớn (lễ) | 7 | Xàng xê, Ngũ đối, Long đăng, Long ngâm, Tiểu khúc, Vạn giá… |
@@ -578,7 +578,7 @@ Hơi và kỹ thuật tô điểm: [[hoi-trong-nhac-tai-tu-cai-luong]], [[long-b
 | **Điệu Bắc** (điệu khách) | Tươi sáng, trang trọng | — |
 | **Điệu Nam** | Buồn, ai oán | Nam ai, Nam bình, Quả phụ, Nam xuân, Tương tư khúc |
 | Pha Bắc – Nam | | Tứ đại cảnh |
-Nghiên cứu đăng trên tạp chí ĐH Sư phạm TP.HCM mô tả **điệu Nam [[hoi-trong-nhac-tai-tu-cai-luong|hơi Ai]]** là đặc sản miền Trung. Ghi trên [[khuong-nhac|khuông nhạc]] trông gần giống điệu Bắc, nhưng khi hát một số âm hơi **"già"** (cao) hoặc **"non"** (thấp) hơn: tức **không** khớp [[luat-binh-quan|bình quân luật]]. Xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
+Nghiên cứu đăng trên tạp chí ĐH Sư phạm TP.HCM mô tả **điệu Nam [[hoi-trong-nhac-tai-tu-cai-luong|hơi Ai]]** là nét đặc trưng của miền Trung. Khi ghi trên [[khuong-nhac|khuông nhạc]], hơi Ai trông gần giống điệu Bắc, nhưng khi hát một số âm hơi **"già"** (cao) hoặc **"non"** (thấp) hơn: tức **không** khớp [[luat-binh-quan|bình quân luật]]. Xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
 
 Nhạc cụ: [[dan-tranh]], [[dan-nguyet]], [[dan-nhi]], [[dan-ty-ba-tam-sen|tỳ bà]], [[sao-truc|sáo]], [[ken-bau]] (trong dàn đại nhạc).
 
@@ -720,7 +720,7 @@ Liên quan: [[the-loai-am-nhac-viet-nam]], [[nhac-cu-viet-nam]], [[ranat|dàn pi
 
 ## Nghe
 
-::youtube VyHr1knC5Ms | *Múa khèn Mông* · Đoàn Văn hóa Nghệ thuật tỉnh Yên Bái
+::youtube VyHr1knC5Ms | *Múa khèn Mông* · Đoàn Văn hoá Nghệ thuật tỉnh Yên Bái
 
 ::youtube bCDRWe377d0 | Trống Paranưng của người Chăm — phóng sự về nghệ nhân Hán Quân
 `,
@@ -861,7 +861,7 @@ Liên quan: [[nhac-si-viet-nam]], [[tan-nhac-viet-nam]].
 Hai người lần đầu cùng hát ở Đại học Văn khoa Sài Gòn — đa số nguồn ghi **1967**, Báo Pháp Luật ghi cuối 1965.
 
 ## "Bob Dylan của Việt Nam"?
-Biệt danh này thường được gán cho Joan Baez. Học giả **John C. Schafer** viết cả một cuốn sách để lập luận rằng phép so sánh **không chính xác**.
+Biệt danh này thường được cho là do Joan Baez đặt. Học giả **John C. Schafer** viết cả một cuốn sách để lập luận rằng phép so sánh **không chính xác**.
 
 ## Người trong bài hát
 Ngô Vũ **Bích Diễm** là cảm hứng của *Diễm xưa* — theo nhà nghiên cứu Nguyễn Đắc Xuân, đó là một mối cảm mến không thành lời; người em là Ngô Vũ **Dao Ánh** mới là mối tình sâu đậm, với khoảng 300 lá thư. *Nguồn chủ yếu là hồi ức được báo chí kể lại.* Xem [[giai-thoai-am-nhac-viet-nam]].
@@ -967,7 +967,7 @@ Liên quan: [[nhac-vang-bolero]], [[tan-nhac-viet-nam]].
 | Năm | Sự kiện |
 |---|---|
 | 1997 | **Làn Sóng Xanh** (VOH) ra đời — bảng xếp hạng và giải thưởng; ngôi sao thời đầu: Lam Trường, Phương Thanh |
-| Cuối 1990 – 2000 | **Vinahouse** (nhạc sàn): [[giai-dieu|giai điệu]] pop Việt trên nền house hoặc trance, từ các vũ trường |
+| Cuối thập niên 1990 – 2000 | **Vinahouse** (nhạc sàn): [[giai-dieu|giai điệu]] pop Việt trên nền house hoặc trance, từ các vũ trường |
 | 9/2015 | **Đen Vâu** (Nguyễn Đức Cường, sinh 1989, Hạ Long) ra *Đưa nhau đi trốn* |
 | 25/5/2016 | **Suboi** rap trước Tổng thống Obama tại buổi đối thoại YSEALI ở **TP.HCM** |
 | 2019 | *Hãy trao cho anh* (Sơn Tùng M-TP, có Snoop Dogg) |
@@ -1157,7 +1157,7 @@ Liên quan: [[nhac-si-viet-nam]], [[nhac-hai-ngoai]], [[am-nhac-viet-nam-sau-197
     title: "Lưu Hữu Phước (1921 – 1989)",
     category: 'vietnam',
     aliases: ["Lưu Hữu Phước", "Lên đàng", "Tiếng gọi thanh niên", "Giải phóng miền Nam"],
-    summary: "Lưu Hữu Phước (Ô Môn, Cần Thơ) viết Lên đàng, Tiếng gọi thanh niên và Giải phóng miền Nam (1965), bài sau trở thành quốc ca của Chính phủ Cách mạng lâm thời. Ông là đại biểu Quốc hội, Giải thưởng Hồ Chí Minh đợt I (1996).",
+    summary: "Lưu Hữu Phước (Ô Môn, Cần Thơ) viết Lên đàng, Tiếng gọi thanh niên và Giải phóng miền Nam (1965), bài sau trở thành quốc ca của Chính phủ Cách mạng lâm thời. Ông từng là đại biểu Quốc hội; được Giải thưởng Hồ Chí Minh đợt I (1996).",
     refs: [
       ["Wikipedia — Lưu Hữu Phước", "https://en.wikipedia.org/wiki/L%C6%B0u_H%E1%BB%AFu_Ph%C6%B0%E1%BB%9Bc"],
       ["SGGP — Trăm năm Lưu Hữu Phước", "https://www.sggp.org.vn/tram-nam-luu-huu-phuoc-post584372.html"],
@@ -1356,8 +1356,8 @@ Liên quan: [[nhac-cach-mang]], [[nhac-si-viet-nam]].
     slug: "tran-tien",
     title: "Trần Tiến (sinh 1947)",
     category: 'vietnam',
-    aliases: ["Trần Tiến", "Mặt trời bé con", "Giấc mơ Chapi", "Chị tôi", "Tùy hứng lý ngựa ô", "Ngẫu hứng sông Hồng", "Vết chân tròn trên cát"],
-    summary: "Trần Tiến — em trai NSND Trần Hiếu, chú của ca sĩ Trần Thu Hà, học Nhạc viện Hà Nội 1971 – 1978 — là một trong những giọng sáng tác nổi bật thời Đổi mới: Mặt trời bé con, Giấc mơ Chapi, Chị tôi, Quê nhà, Tùy hứng lý ngựa ô, Ngẫu hứng sông Hồng.",
+    aliases: ["Trần Tiến", "Mặt trời bé con", "Giấc mơ Chapi", "Chị tôi", "Tuỳ hứng lý ngựa ô", "Ngẫu hứng sông Hồng", "Vết chân tròn trên cát"],
+    summary: "Trần Tiến — em trai NSND Trần Hiếu, chú của ca sĩ Trần Thu Hà, học Nhạc viện Hà Nội 1971 – 1978 — là một trong những giọng sáng tác nổi bật thời Đổi mới: Mặt trời bé con, Giấc mơ Chapi, Chị tôi, Quê nhà, Tuỳ hứng lý ngựa ô, Ngẫu hứng sông Hồng.",
     refs: [
       ["VnExpress — Trần Tiến", "https://vnexpress.net/tran-tien-doi-toi-phieu-bat-4588555.html"],
       ["VietNamNet — Trần Tiến 16 năm đương đầu bạo bệnh", "https://vietnamnet.vn/nhac-si-tran-tien-16-nam-o-an-tuoi-xe-chieu-dung-cam-duong-dau-bao-benh-2304267.html"],
@@ -1366,9 +1366,9 @@ Liên quan: [[nhac-cach-mang]], [[nhac-si-viet-nam]].
     body: `
 **Sinh** 1947, Hà Nội *(một nguồn ghi Sơn Tây)* · Em trai NSND **Trần Hiếu**, chú của ca sĩ **Trần Thu Hà** · Học Nhạc viện Hà Nội 1971 – 1978.
 
-Bài tiêu biểu: *Mặt trời bé con*, *Giấc mơ Chapi*, *Chị tôi*, *Quê nhà*, *Tạm biệt chim én*, *Tùy hứng lý ngựa ô*, *Ngẫu hứng sông Hồng*, *Vết chân tròn trên cát* (khoảng 1981).
+Bài tiêu biểu: *Mặt trời bé con*, *Giấc mơ Chapi*, *Chị tôi*, *Quê nhà*, *Tạm biệt chim én*, *Tuỳ hứng lý ngựa ô*, *Ngẫu hứng sông Hồng*, *Vết chân tròn trên cát* (khoảng 1981).
 
-Nhiều bài của ông lấy chất liệu dân ca (*Tùy hứng lý ngựa ô* dựa trên điệu lý) — một ví dụ hay cho [[hoa-am-cho-giai-dieu-ngu-cung]]. Ông chữa bệnh ung thư nhiều năm nhưng vẫn biểu diễn ("Trần – Nguyễn du ca", 2024).
+Nhiều bài của ông lấy chất liệu dân ca (*Tuỳ hứng lý ngựa ô* dựa trên điệu lý) — một ví dụ hay cho [[hoa-am-cho-giai-dieu-ngu-cung]]. Ông chữa bệnh ung thư nhiều năm nhưng vẫn biểu diễn ("Trần – Nguyễn du ca", 2024).
 
 Liên quan: [[am-nhac-viet-nam-sau-1975]], [[nhac-si-viet-nam]].
 
@@ -1543,7 +1543,7 @@ Bảng chỉ ghi những gì có nguồn (xem cuối trang). "—" là chưa xá
 | Thuận Yến (Đoàn Hữu Công) | 1932 hoặc 1935 – 2014 | *Màu hoa đỏ* (giải Bộ Quốc phòng 1994), *Chia tay hoàng hôn*, *Đi trong hương tràm* | được đề nghị 2017 (kết quả chưa xác minh) |
 | [[nguyen-tai-tue|Nguyễn Tài Tuệ]] | 1936 – 2022 | *Xa khơi*, *Tiếng hát giữa rừng Pác Bó* | — |
 | [[hong-dang|Hồng Đăng]] | 1936 – 2022 | *Hoa sữa*, *Biển hát chiều nay* | Giải thưởng Nhà nước 2001 |
-| Hoàng Hà (Hoàng Phi Hồng) | sinh 1929 – (đã mất) | *Đất nước trọn niềm vui* | — |
+| Hoàng Hà (Hoàng Phi Hồng) | 1929 – (đã mất) | *Đất nước trọn niềm vui* | — |
 | [[nguyen-cuong|Nguyễn Cường]] | sinh 1943 | *Đôi mắt Pleiku*, *Ly cà phê Ban Mê* | — |
 | [[pho-duc-phuong|Phó Đức Phương]] | 1944 – 2020 | *Chảy đi sông ơi*, *Trên đỉnh Phù Vân* | — |
 | An Thuyên | — 2015 | *Ca dao em và tôi*, *Neo đậu bến quê* | — |
@@ -1634,13 +1634,13 @@ Thang năm âm của [[don-ca-tai-tu|đờn ca tài tử]] có tên **Hò – X�
 
 **Hò ứng với nốt nào?** Theo Viện Âm nhạc, ở **[[ca-hue-nha-nhac|điệu Bắc]]** năm âm này tương ứng **gần đúng** với **Đô – Rê – Fa – Sol – La**; một nghiên cứu về ca Huế (Tạp chí ĐHSP TP.HCM) cũng ghi chép theo quy ước **Hò = Đô**. Nhưng đây là **quy ước [[ky-am|ký âm]]**, không phải [[cao-do|cao độ]] cố định: các nguồn khác đặt Hò ở cao độ khác (ví dụ Hò = Rê), và [[dich-giong|cao độ thực]] tuỳ giọng hát, cách lên dây, và **không** theo [[luat-binh-quan|bình quân luật]].
 
-::staff treble C4=Hò D4=Xự F4=Xang G4=Xê A4=Cống C5=Líu | Hò – Xự – Xang – Xê – Cống theo quy ước Hò = Đô (điệu Bắc, gần đúng) — khoảng cách 2 – 3 – 2 – 2 – 3 nửa cung
+::staff treble C4=Hò D4=Xự F4=Xang G4=Xê A4=Cống C5=Líu | Hò – Xự – Xang – Xê – Cống theo quy ước Hò = Đô (điệu Bắc, gần đúng) — các bậc cách nhau 2 – 3 – 2 – 2 – 3 nửa cung
 
 ## 2. Điệu và hơi
 | Khái niệm | Điều đã có nguồn |
 |---|---|
 | **Điệu Bắc – điệu Nam** | Hai hệ điệu thức chính của ca Huế; điệu Bắc (còn gọi điệu khách) tươi sáng, điệu Nam buồn (Nam ai, Nam bình, Nam xuân…) |
-| **Hơi Ai** | Thuộc điệu Nam, được mô tả là đặc sản miền Trung |
+| **Hơi Ai** | Thuộc điệu Nam, được mô tả là nét đặc trưng của miền Trung |
 | **Âm "già" và "non"** | Ghi trên khuông trông giống điệu Bắc, nhưng khi hát một số âm cao hơn ("già") hoặc thấp hơn ("non") một chút — tức **không** khớp [[luat-binh-quan|bình quân luật]] |
 | **Nhóm bài tài tử** | Bắc, Nam, Oán và bài lớn — mỗi nhóm gắn với một màu điệu riêng |
 **Hơi khác nhau ở cách nhấn, rung — không ở cách lên dây.** Theo Trần Văn Khê, khác biệt giữa điệu Bắc và điệu Nam nằm ở chỗ các bậc **cách đều hay không đều**; theo Viện Âm nhạc, ở điệu Nam (sắc thái Ai), Hò và Xang được **nắn cao và rung**, Xự hơi thấp. Một luận văn (CUNY) mô tả hơi Oán gần với hơi vọng cổ, bậc 2 rung rộng hơn và rung ở Xang; ghi chú đĩa của Smithsonian Folkways (bộ UNESCO Collection) cho biết đàn lên dây **giống nhau** cho mọi điệu, chỉ cách nhấn – rung thay đổi. Xem thêm [[am-nhac-truyen-thong-viet-nam]].
@@ -1699,7 +1699,7 @@ Trong thang Đô – Rê – Mi – Sol – La, các hợp âm **không chứa �
 Cùng năm âm nhưng đặt chủ ở Đô, Rê, Mi, Sol hay La cho năm màu khác nhau — xem [[am-giai-ngu-cung]], [[dieu-thuc]]. Tìm âm **kết bài** của giai điệu (thường là chủ), rồi cho bè trầm xoay quanh âm đó. Đừng mặc định mọi bài dân ca là "Đô trưởng" hay "La thứ".
 
 ## 4. Đi song song
-Kéo cả khối hợp âm (quãng 4, quãng 5, [[hop-am-chong|hợp âm chồng]] 4) **song song** theo giai điệu thường hợp với ngũ cung hơn việc giải quyết từng bè theo luật bốn bè — xem [[hoa-am-song-song]], [[hoa-am-dieu-thuc]].
+Kéo cả khối hợp âm (quãng 4, quãng 5, [[hop-am-chong|hợp âm chồng quãng 4]]) **song song** theo giai điệu thường hợp với ngũ cung hơn việc giải quyết từng bè theo luật bốn bè — xem [[hoa-am-song-song]], [[hoa-am-dieu-thuc]].
 
 ## 5. Luyến láy không phải âm hợp âm
 Các nốt luyến, nhấn, "già/non" của dân ca là **tô điểm** — đừng đặt hợp âm theo chúng. Trên piano, chơi chúng như [[ky-hieu-hoa-my|nốt hoa mỹ]] nhanh, nhẹ; không cố "bắt chước" [[cao-do|cao độ]] nằm giữa các phím. Xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]].
@@ -1771,7 +1771,7 @@ Nhiều câu chuyện về [[am-nhac-viet-nam|âm nhạc Việt Nam]] được l
 | "Đàn bầu là nhạc cụ một dây duy nhất trên thế giới" | **Sai** (như cách nói) | Nhiều nền văn hoá có đàn một dây; điều đặc biệt là đàn bầu chơi bằng **bồi âm** — xem [[dan-bau]], [[chuoi-boi-am]] |
 | "[[am-giai-ngu-cung|Ngũ cung]] là của riêng Việt Nam" | **Sai** | Thang năm âm có ở khắp thế giới (Britannica); cái riêng là cách dùng [[dieu-thuc|điệu thức]] và luyến láy — xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]] |
 | "Cải lương ra đời năm 1918" | **Tranh cãi** | Có ít nhất năm mốc 1917 – 1922 — xem [[cai-luong]] |
-| "Hò là nốt Đô" | **Chỉ là quy ước, gần đúng** | Viện Âm nhạc: ở [[ca-hue-nha-nhac|điệu Bắc]] Hò – Xự – Xang – Xê – Cống gần đúng Đô – Rê – Fa – Sol – La; nguồn khác đặt Hò = Rê. [[dich-giong|Cao độ thực]] không theo [[toccata-prelude-fugue|bình quân luật]] — xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]] |
+| "Hò là nốt Đô" | **Chỉ là quy ước, gần đúng** | Viện Âm nhạc: ở [[ca-hue-nha-nhac|điệu Bắc]] Hò – Xự – Xang – Xê – Cống gần đúng Đô – Rê – Fa – Sol – La; nguồn khác đặt Hò = Rê. [[dich-giong|Cao độ thực]] không theo [[luat-binh-quan|bình quân luật]] — xem [[ly-thuyet-am-nhac-co-truyen-viet-nam]] |
 | "Nghị định 144 bỏ cấp phép [[nhac-vang-bolero|nhạc trước 1975]] từ 1/1/2021" | **Sai ngày** | Hiệu lực 1/2/2021 — xem [[am-nhac-viet-nam-sau-1975]] |
 | Các nghi án "đạo nhạc" V-pop | Phần lớn **chưa từng được kết luận** | Xem [[vpop-rap-viet]], [[ban-quyen-am-nhac-viet-nam]] |
 
@@ -1934,7 +1934,7 @@ Viện Âm nhạc cũng ghi: khác biệt giữa **hơi Ai và hơi Oán** nằm
 ## 20 bài bản tổ theo nhóm hơi
 | Nhóm | Bài (theo Tuổi Trẻ) |
 |---|---|
-| **6 Bắc** | Tây thi, Cổ bản, Lưu thủy trường, Phú lục chấn, Bình bán chấn, Xuân tình chấn |
+| **6 Bắc** | Tây thi, Cổ bản, Lưu thuỷ trường, Phú lục chấn, Bình bán chấn, Xuân tình chấn |
 | **3 Nam** | Nam xuân, Nam ai, Nam đảo (Đảo ngũ cung) |
 | **4 Oán** | Tứ đại oán, Phụng cầu, Giang nam, Phụng hoàng |
 | **7 bài lớn** (nhạc lễ) | Xàng xê, Ngũ đối thượng, Ngũ đối hạ, Long đăng, Long ngâm, Tiểu khúc, Vạn giá |
@@ -1969,7 +1969,7 @@ Liên quan: [[long-ban-va-ky-thuat-to-diem]], [[don-ca-tai-tu]], [[cai-luong]], 
     ],
     body: `
 ## Lòng bản
-Theo một bài trên Tạp chí Văn hoá Nghệ thuật, mỗi bài bản gồm hai phần: **ca từ** và **lòng bản**. Lòng bản có **trước**, vốn để đàn; về sau các bậc tiền bối "đặt lời ca trên lòng bản" để phổ biến nhạc tài tử. Tuổi Trẻ viết: "Nét nhạc, chữ nhấn, chữ chuyền của mỗi câu trong bài bản có thể thay đổi tùy trường phái hay người đờn, nhưng **lòng bản thì không thể thay đổi**." UNESCO gọi đó là **giai điệu khung** (*skeletal melody*) mà người chơi ứng tác và tô điểm lên.
+Theo một bài trên Tạp chí Văn hoá Nghệ thuật, mỗi bài bản gồm hai phần: **ca từ** và **lòng bản**. Lòng bản có **trước**, vốn để đàn; về sau các bậc tiền bối "đặt lời ca trên lòng bản" để phổ biến nhạc tài tử. Tuổi Trẻ viết: "Nét nhạc, chữ nhấn, chữ chuyền của mỗi câu trong bài bản có thể thay đổi tuỳ trường phái hay người đờn, nhưng **lòng bản thì không thể thay đổi**." UNESCO gọi đó là **giai điệu khung** (*skeletal melody*) mà người chơi ứng tác và tô điểm lên.
 
 ## Chân phương và hoa lá
 Theo một nghiên cứu về [[ca-hue-nha-nhac|ca Huế]] (Tạp chí ĐHSP TP.HCM): khi **học**, người học bám sát bản của thầy — **chân phương**; khi **diễn**, nghệ nhân thêm vài nốt cho giai điệu sinh động — **hoa lá**. Ca Huế dùng hoa lá **ít hơn** rõ rệt so với tài tử Nam Bộ.
@@ -2170,7 +2170,7 @@ Liên quan: [[nhac-si-viet-nam]], [[am-nhac-thoi-phap-thuoc]].
 
 - Bài đầu tay: ***Tiếng sáo chăn trâu*** (1935).
 - **Giải thưởng Hồ Chí Minh** (truy tặng) — Wikipedia ghi năm **2007**, nhưng 2007 không nằm trong danh sách các đợt giải của chính Wikipedia (1996, 2000, 2005, 2012) *(chưa thống nhất)*. Báo Pháp Luật đưa tin hai cụm tác phẩm âm nhạc của Mai Văn Chung và Phạm Tuyên trong một đợt giải.
-- *Khác người với nhạc sĩ trẻ Nguyễn Văn Chung (*Viết tiếp câu chuyện hoà bình*).*
+- *Đây không phải nhạc sĩ trẻ Nguyễn Văn Chung (*Viết tiếp câu chuyện hoà bình*).*
 
 Liên quan: [[nhac-si-viet-nam]], [[nhac-tien-chien]].
 `,
@@ -2327,7 +2327,7 @@ Liên quan: [[nhac-si-viet-nam]].
 - ***Hoa sữa***, ***Biển hát chiều nay***.
 - Hơn **700 tác phẩm**, hơn **70 nhạc phim** — xem [[nhac-phim-va-tro-choi]].
 - **Giải thưởng Nhà nước** (2001); giải Bùi Xuân Phái (2021).
-*(Khác người với ca sĩ – nhà sản xuất cùng tên Hồng Đăng.)*
+*(Không nên nhầm với ca sĩ – nhà sản xuất cùng tên Hồng Đăng.)*
 
 Liên quan: [[nhac-si-viet-nam]], [[am-nhac-viet-nam-sau-1975]].
 `,

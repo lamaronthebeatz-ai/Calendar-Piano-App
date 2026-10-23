@@ -77,7 +77,7 @@ export const CURRICULA: Curriculum[] = [
     hue: 25,
     glyph: '𝄞',
     intro:
-      'Giáo trình đi theo trình tự "âm thanh trước ký hiệu": trẻ hát, vỗ, vận động và chơi theo tai trước, rồi mới đọc điều mình đã nghe. Mỗi chương có đủ năm mảng mà khảo sát 66 giáo trình của Hood (1982) chỉ ra là hay bị thiếu — tiết tấu, luyện tai, ứng tác, sáng tác — bên cạnh đọc nốt và kỹ thuật. Sau cấp Chuẩn bị, mỗi cấp tương đương một grade piano của ABRSM, từ Initial đến Grade 5. Thời lượng lấy từ "tổng thời gian học" (TQT) mà ABRSM công bố cho từng grade — Initial 40 giờ, Grade 1 60, Grade 2 90, Grade 3 120, Grade 4 150, Grade 5 180 — chia cho nhịp học giả định 10 – 14 giờ mỗi tháng (một buổi học và 15 – 25 phút tập mỗi ngày). ABRSM gọi các con số này là ước tính trung bình; Lamar coi mỗi grade là phần học thêm kể từ grade trước — đây là cách hiểu của Lamar, không phải quy định của ABRSM. Tác phẩm trong mỗi cấp ghi rõ căn cứ xếp cấp; khi thi thật, ba bài thi phải chọn từ sách bài thi ABRSM của kỳ hiện hành.',
+      'Giáo trình đi theo trình tự "âm thanh trước ký hiệu": trẻ hát, vỗ, vận động và chơi theo tai trước, rồi mới đọc điều mình đã nghe. Mỗi chương có đủ các mảng: đọc nốt và kỹ thuật, cùng tiết tấu, luyện tai, ứng tác, sáng tác — những mảng mà khảo sát 66 giáo trình của Hood (1982) chỉ ra là hay bị thiếu. Sau cấp Chuẩn bị, mỗi cấp tương đương một grade piano của ABRSM, từ Initial đến Grade 5. Thời lượng lấy từ "tổng thời gian học" (TQT) mà ABRSM công bố cho từng grade — Initial 40 giờ, Grade 1 60, Grade 2 90, Grade 3 120, Grade 4 150, Grade 5 180 — chia cho nhịp học giả định 10 – 14 giờ mỗi tháng (một buổi học và 15 – 25 phút tập mỗi ngày). ABRSM gọi các con số này là ước tính trung bình; Lamar coi mỗi grade là phần học thêm kể từ grade trước — đây là cách hiểu của Lamar, không phải quy định của ABRSM. Tác phẩm trong mỗi cấp ghi rõ căn cứ xếp cấp; khi thi thật, ba bài thi phải chọn từ sách bài thi ABRSM của kỳ hiện hành.',
     principles: [
       { title: 'Âm thanh trước ký hiệu', text: 'Hát, vỗ tay, vận động theo phách trước khi đọc nốt — theo tinh thần Kodály, Orff, Dalcroze và "sound before sight" của Gordon.' },
       { title: 'Năm mảng trong mỗi chương', text: 'Đọc – kỹ thuật – nghe – tiết tấu – sáng tạo cùng tiến, để vá những điểm yếu chung của giáo trình nhập môn mà Hood (1982) chỉ ra.' },
@@ -392,7 +392,7 @@ export const CURRICULA: Curriculum[] = [
             lessons: [
               { slug: 'am-giai-cromatic', focus: 'Mười hai nửa cung; cách viết lên và xuống.' },
               { slug: 'bac-am-giai', focus: 'Đủ bảy tên: chủ, thượng chủ, trung, hạ át, át, hạ trung, cảm âm.' },
-              { slug: 'khoa-do', focus: 'Khoá alto: Đô giữa nằm dòng 3.' },
+              { slug: 'khoa-do', focus: 'Khoá alto: Đô giữa nằm trên dòng 3.' },
               { slug: 'ky-hieu-hoa-my', focus: 'Láy, láy rền, nốt dựa — đọc ký hiệu và chơi.' },
             ],
             practice: ['Viết âm giai cromatic từ Rê lên và xuống.', 'Chép một câu khoá Sol sang khoá alto.'],
@@ -886,7 +886,7 @@ export const CURRICULA: Curriculum[] = [
             lessons: [
               { slug: 'luat-hoa-am-bon-be' },
               { slug: 'dan-giong' },
-              { slug: 'hop-am-sau-bon', focus: 'Kết 6/4 cadential.' },
+              { slug: 'hop-am-sau-bon', focus: 'Hợp âm 6/4 kết (cadential 6/4).' },
               { slug: 'bass-so' },
               { slug: 'phoi-hoa-am-giai-dieu', focus: 'Đặt hợp âm cho giai điệu.' },
             ],
@@ -1034,7 +1034,7 @@ export const CURRICULA: Curriculum[] = [
               { slug: 'nhip-hon-hop', focus: 'Nhịp thay đổi.' },
               { slug: 'da-nhip' },
             ],
-            practice: ['Vỗ 3 chống 2 rồi 4 chống 3.', 'Thị tấu một bài có nhịp thay đổi.'],
+            practice: ['Vỗ 3 chọi 2 rồi 4 chọi 3.', 'Thị tấu một bài có nhịp thay đổi.'],
           },
           {
             title: 'Biểu diễn và học suốt đời',

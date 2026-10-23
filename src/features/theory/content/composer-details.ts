@@ -13,7 +13,7 @@ export const COMPOSER_DETAILS: Record<string, Pick<Person, 'more' | 'refs'>> = {
 |---|---|
 | 1685 | Sinh ở Eisenach (Đức), trong một gia đình nhạc sĩ nhiều đời |
 | 1708–1717 | Nhạc sĩ organ, rồi Konzertmeister (trưởng dàn nhạc) ở triều đình Weimar |
-| 1717–1723 | Nhạc trưởng triều đình Köthen — thời kỳ viết nhiều nhạc khí, trong đó có tập 1 [[luat-binh-quan|Clavier bình quân]] (1722) |
+| 1717–1723 | Nhạc trưởng triều đình Köthen — thời kỳ viết nhiều tác phẩm khí nhạc, trong đó có tập 1 [[luat-binh-quan|Clavier bình quân]] (1722) |
 | 1723–1750 | Cantor nhà thờ Thomaskirche ở Leipzig cho đến khi mất |
 
 Âm nhạc của Bach là đỉnh cao của [[doi-am]] và [[fugue]]. Sau khi ông mất, các tác phẩm lớn ít được biểu diễn rộng rãi; năm 1829 [[Mendelssohn]] dàn dựng lại *Cuộc khổ nạn theo Thánh Matthew*, mở đầu sự phục hưng âm nhạc Bach.
@@ -32,7 +32,7 @@ export const COMPOSER_DETAILS: Record<string, Pick<Person, 'more' | 'refs'>> = {
 ## Bach trong nhà thờ: organist và người thầy
 - Năm 1706 hội đồng giáo hội Arnstadt trách ông làm "nhiều biến tấu kỳ lạ" trong chorale khiến cộng đoàn bối rối — xem [[dem-hat-cong-doan-tren-organ]].
 - Các tập nhạc có mục đích dạy (Orgelbüchlein, Inventions, Clavier-Übung III, bản chép *Vorschriften und Grundsätze* 1738, 371 chorale): [[tai-lieu-su-pham-cua-bach]].
-- Ông dạy bè trầm số trước, rồi cho bè trầm để học trò viết alto và tenor: [[bach-day-hoc-tro]]; tự phối chorale: [[phoi-chorale-kieu-bach]].
+- Ông dạy bè trầm số trước, rồi cho sẵn bè trầm để học trò viết alto và tenor: [[bach-day-hoc-tro]]; tự phối chorale: [[phoi-chorale-kieu-bach]].
 - Toàn cảnh: [[am-nhac-nha-tho]].
 
 Số BWV và các phiên bản có thể khác nhau giữa các ấn bản.
@@ -51,7 +51,7 @@ Số BWV và các phiên bản có thể khác nhau giữa các ấn bản.
 |---|---|
 | 1756 | Sinh ở Salzburg; cha là [[Leopold Mozart]] — nhạc sĩ và thầy dạy |
 | 1761–1764 | Những sáng tác đầu tiên (từ 5 tuổi), được chép trong **sổ nhạc của chị gái Nannerl** |
-| 1760s–1770s | Lưu diễn khắp châu Âu cùng gia đình khi còn nhỏ |
+| Thập niên 1760–1770 | Lưu diễn khắp châu Âu cùng gia đình khi còn nhỏ |
 | 1781 | Rời Salzburg, sống tự do ở Vienna |
 | 1791 | Mất ở Vienna, để lại bản Requiem dang dở |
 
@@ -77,7 +77,7 @@ Số BWV và các phiên bản có thể khác nhau giữa các ấn bản.
 |---|---|
 | 1770 | Sinh ở Bonn (Đức) |
 | 1792 | Chuyển đến Vienna; học với [[Haydn]]; nổi tiếng trước hết là nghệ sĩ piano ứng tác |
-| cuối 1790s | Bắt đầu bị suy giảm thính lực |
+| Cuối thập niên 1790 | Bắt đầu bị suy giảm thính lực |
 | 1802 | Viết "Di chúc Heiligenstadt" — bức thư bày tỏ tuyệt vọng vì bệnh điếc |
 | 1800–1802 | Dạy piano cho [[Czerny]] khi Czerny còn nhỏ |
 | 1827 | Mất ở Vienna |
@@ -134,7 +134,7 @@ Chopin không có bài cho người mới bắt đầu. Các tuyển tập "dễ
     more: `
 ## Tiểu sử ngắn
 - Sinh năm **1791** ở Vienna; học piano đầu tiên với cha (Wenzel Czerny), rồi với **[[Beethoven]]** — các buổi học dừng lại khoảng năm 1802 nhưng hai người vẫn là bạn thân. Ông cũng chịu ảnh hưởng của [[Clementi]] và [[johann-nepomuk-hummel|Hummel]].
-- Bắt đầu dạy đàn ở Vienna từ năm **15 tuổi**; học trò có cháu trai của Beethoven và nổi tiếng nhất là **[[Liszt]]** (từ 1821, Czerny không lấy học phí). Liszt về sau đề tặng thầy bộ *Transcendental Études*.
+- Bắt đầu dạy đàn ở Vienna từ năm **15 tuổi**; trong số học trò có cháu trai của Beethoven, và nổi tiếng nhất là **[[Liszt]]** (từ 1821, Czerny không lấy học phí). Liszt về sau đề tặng thầy bộ *Transcendental Études*.
 - Sáng tác **gần 1.000** tác phẩm (số opus lên tới hơn 800, nhiều số bị dùng lặp, cùng hàng trăm tác phẩm không có số opus).
 - Mất năm **1857** ở Vienna.
 
@@ -219,7 +219,7 @@ Số 1 thường được xếp **trung cấp thấp – trung cấp**; các ch�
 - Học hoà âm với C. F. G. Schwencke ở Hamburg; từ 1804 biểu diễn piano và sáng tác.
 - Năm **1810** chạy sang **Copenhagen** để tránh bị quân Pháp bắt lính; làm nhạc công triều đình (1812), nhập quốc tịch Đan Mạch (1813).
 - Sang Vienna năm 1821 và 1825, kết thân với **[[Beethoven]]** và giới thiệu nhiều tác phẩm của Beethoven với khán giả Copenhagen.
-- Thành công lớn nhất: nhạc cho vở kịch **Elverhøj** (1828), dựa trên ballad Đan Mạch và Thụy Điển. Ông được gọi là "Beethoven của sáo" dù không chơi sáo.
+- Thành công lớn nhất: nhạc cho vở kịch **Elverhøj** (1828), dựa trên ballad Đan Mạch và Thuỵ Điển. Ông được gọi là "Beethoven của sáo" dù không chơi sáo.
 - Nhà cháy làm mất toàn bộ bản thảo chưa xuất bản. Mất ngày **12/3/1832** gần Copenhagen.
 
 ## Sonatina theo cấp độ
@@ -313,7 +313,7 @@ Các tuyển tập "Debussy dễ nhất" (Schott *My First Debussy*, Presto) th�
 | *Arabesque số 1* | Theo Da Capo: nhịp điệu đơn giản (chủ yếu móc đơn) nhưng có **4 dấu thăng** và hai bè giai điệu; Da Capo xếp RCM Level 10 |
 | *Clair de lune* (Suite bergamasque) | Phổ biến; chưa nguồn nào cho cấp độ cụ thể — phân tích ở [[phan-tich-clair-de-lune]] |
 
-Các nguồn **không thống nhất** về thứ tự độ khó. Cái khó chung của Debussy là [[hoa-am-cromatic|hoà âm nửa cung]] và hoá biểu nhiều dấu. *Golliwog's Cakewalk* (bài cuối của *Children's Corner*) chế giễu [[hoa-am-cromatic|hợp âm Tristan]] của [[Wagner]]. Xem [[lo-trinh-tac-pham]].
+Các nguồn **không thống nhất** về thứ tự độ khó. Cái khó chung của Debussy là [[hoa-am-cromatic|hoà âm cromatic]] và hoá biểu nhiều dấu. *Golliwogg's Cakewalk* (bài cuối của *Children's Corner*) chế giễu [[hoa-am-cromatic|hợp âm Tristan]] của [[Wagner]]. Xem [[lo-trinh-tac-pham]].
 `,
     refs: [
       ['Henle — Children\'s Corner', 'https://henle.de/fr/Children-s-Corner-Petite-Suite-pour-piano-seul/HN-382'],

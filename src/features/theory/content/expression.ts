@@ -90,7 +90,7 @@ Tên đầy đủ của cây [[dan-piano|đàn piano]] là **[[lich-su-piano|pia
 
 ## Lịch sử ký hiệu cường độ
 - **[[hinh-thuc-sonata|Sonata]] pian' e forte** (1597) của [[giovanni-gabrieli|Giovanni Gabrieli]] là một trong những tác phẩm **đầu tiên** ghi cường độ vào bản nhạc: hai nhóm nhạc cụ luân phiên chơi *piano* và *forte*. Các nguồn không thống nhất đây có phải là bản **đầu tiên** hay không.
-- **"Cường độ bậc thang"** (đổi đột ngột giữa nhỏ và to, không có to dần) thường được dạy là đặc trưng của [[thoi-ky-baroque|Baroque]], gắn với đàn [[dan-phim-co|harpsichord]] vốn chỉ đổi được to – nhỏ bằng cách đổi [[ban-phim|bàn phím]]. Tuy vậy, có học giả cho rằng quan niệm "chỉ có bậc thang" là một phong cách biểu diễn giữa [[thoi-ky-the-ky-20|thế kỷ 20]], vì các sách lý luận thế kỷ 17–18 vẫn khen ngợi sự **uốn cường độ từng nốt**. Vấn đề còn tranh cãi.
+- **"Cường độ bậc thang"** (đổi đột ngột giữa nhỏ và to, không có to dần) thường được dạy là đặc trưng của [[thoi-ky-baroque|Baroque]], gắn với đàn [[dan-phim-co|harpsichord]] vốn chỉ đổi được to – nhỏ bằng cách đổi [[ban-phim|bàn phím]]. Tuy vậy, có học giả cho rằng quan niệm "chỉ có bậc thang" là sản phẩm của phong cách biểu diễn giữa [[thoi-ky-the-ky-20|thế kỷ 20]], vì các sách lý luận thế kỷ 17–18 vẫn khen ngợi sự **uốn cường độ từng nốt**. Vấn đề còn tranh cãi.
 - Các nhà soạn nhạc về sau **mở rộng thang**: [[Tchaikovsky]] ghi **pppppp** (sáu chữ p) cho một câu [[bassoon|bassoon]] trong [[the-loai|Giao hưởng]] số 6 "Pathétique" — thực tế gần như không thể chơi được, nên nhiều nhạc trưởng (từ Hans Richter) cho [[clarinet|clarinet trầm]] thay thế mấy nốt đó.
 
 ## Khi giảng dạy
@@ -151,7 +151,7 @@ Cường độ là **tương đối**: f trong nhạc Mozart nhẹ hơn f trong 
 | Chấm dưới dấu luyến (portato) | Khoảng **ba phần tư** trường độ; trong chương chậm gần như đủ giá trị |
 
 ## Chấm hay nêm trong nhạc Mozart?
-Trong bản thảo, [[Mozart]] viết staccato khi là **chấm**, khi là **nêm**, nhưng **không nhất quán**. Trước khoảng năm 1850, chấm, gạch và nêm có lẽ được hiểu **gần như cùng nghĩa** (dù vài nhà lý luận thập niên 1750 phân biệt: nêm ngắn và sắc hơn). Nhà xuất bản Henle vì vậy thường **in một loại dấu** cho staccato của Mozart. Ngày nay, quy ước là chấm = staccato, nêm = staccatissimo (mạnh, ngắn hơn).
+Trong bản thảo, [[Mozart]] viết staccato khi thì bằng **chấm**, khi thì bằng **nêm**, nhưng **không nhất quán**. Trước khoảng năm 1850, chấm, gạch và nêm có lẽ được hiểu **gần như cùng nghĩa** (dù vài nhà lý luận thập niên 1750 phân biệt: nêm ngắn và sắc hơn). Nhà xuất bản Henle vì vậy thường **in một loại dấu** cho staccato của Mozart. Ngày nay, quy ước là chấm = staccato, nêm = staccatissimo (mạnh, ngắn hơn).
 
 Bài học cho người dạy: đọc **lời tựa và phần bình chú** của ấn bản để biết biên tập viên xử lý ký hiệu thế nào — xem [[an-ban-urtext]].
 
@@ -193,7 +193,7 @@ Bài học cho người dạy: đọc **lời tựa và phần bình chú** củ
 
 Các dấu này phản ánh [[hinh-thuc-am-nhac]] của bài — ví dụ ABA thường viết bằng D.C. al Fine.
 
-## Lần lặp lại không phải lần "photocopy"
+## Lặp lại không phải là "photocopy"
 - **Vũ khúc [[thoi-ky-baroque|Baroque]]** thường có dạng ‖: A :‖: B :‖. Người chơi được trông đợi **thêm hoa mỹ ở lần lặp thứ hai**; một số nhà soạn nhạc (như [[Byrd]]) còn viết sẵn lần lặp có trang trí. [[Bach]] dùng vạch nhắc lại trong nhiều chương [[the-loai|tổ khúc]] và mong người chơi trang trí khi lặp lại (xem [[ky-hieu-hoa-my]]).
 - **[[opera|Aria da capo]]** (A – B – A): khi A quay lại, ca sĩ thường **[[ngau-hung-piano|ngẫu hứng]] thêm hoa mỹ**.
 
@@ -309,7 +309,7 @@ Mozart **không ghi ký hiệu pedal** nào trong bản nhạc, nên cách ông 
 
 ## Ký hiệu pedal của các nhà soạn nhạc lớn
 - **[[Beethoven]] — "Ánh trăng" [[phan-tich-anh-trang-chuong-1|Op. 27 số 2]], chương 1**: ghi "*Si deve suonare tutto questo pezzo delicatissimamente e senza sordino*" — chơi cả chương thật nhẹ và **không có bộ giảm âm**, tức là **giữ pedal vang suốt chương**. Trên đàn của Beethoven tiếng tắt nhanh; trên đàn grand hiện đại, giữ suốt sẽ thành một khối âm ồn, nên phần lớn người chơi **đổi pedal theo hợp âm** để giữ tính chất mà không bị nhoè.
-- **[[Chopin]]**: ký hiệu *Ped. … ✱* của ông **không nên đọc theo nghĩa đen**. Hệ ký hiệu này thuộc thời mà người ta thường đạp **cùng lúc** với tay, chưa phải pedal trễ. Ở nhiều chỗ Chopin chỉ ghi khi muốn một **pedal dài đặc biệt** (ví dụ giữ nốt bass trong hoà âm), còn pedal thông thường thì không cần ghi.
+- **[[Chopin]]**: ký hiệu *Ped. … ✱* của ông **không nên đọc theo nghĩa đen**. Hệ ký hiệu này thuộc thời mà người ta thường đạp **cùng lúc** với tay, chưa phải pedal trễ. Ở nhiều chỗ Chopin chỉ ghi khi muốn một **pedal dài đặc biệt** (ví dụ giữ nốt trầm của hoà âm), còn pedal thông thường thì không cần ghi.
 - **[[Debussy]]** gần như **không ghi pedal**. Ông được cho là đã nói: "Pedal không thể viết ra được: nó thay đổi theo từng cây đàn, từng căn phòng." Pedal của đàn thời ông cũng rất không đồng đều.
 
 [[anton-rubinstein|Anton Rubinstein]] gọi pedal là "**linh hồn của cây [[dan-piano|đàn piano]]**" (câu này hay bị gán nhầm cho [[arthur-rubinstein|Arthur Rubinstein]]).
@@ -368,7 +368,7 @@ Một bài trình bày tại hội nghị MTNA 2024 tóm tắt:
 - Quay về **thế tay nhỏ, tự nhiên nhất** càng thường càng tốt.
 - **Không** vắt ngón số nhỏ qua ngón số lớn.
 - **Ngón mạnh** (hoặc lực cánh tay) cho **[[so-chi-nhip|phách mạnh]]**.
-- Khoảng cách [[quang]] phải **vừa với độ mở** giữa hai ngón.
+- Độ rộng của [[quang|quãng]] phải **vừa với độ mở** giữa hai ngón.
 - Ngón dài hợp với phím đen. **Cỡ bàn tay** cũng là một yếu tố.
 
 Cố định ngón bấm giúp nhạc trôi và dễ thuộc. Đổi ngón giữa chừng (ví dụ từ 1–2 sang 2–1) trong đoạn nhanh là nguyên nhân hay gây vấp. Chỉ ghi lên bản nhạc **những số ngón cần thiết**: ghi quá nhiều, học sinh sẽ quen bỏ qua tất cả. Đôi khi một ngón bấm "kém hiệu quả" lại **biểu cảm hơn** — nhưng đó phải là lựa chọn có chủ ý.
@@ -451,7 +451,7 @@ Thời [[thoi-ky-baroque|Baroque]] (thế kỷ 17 – giữa thế kỷ 18), nhi
 |---|---|---|
 | **Đức** | *Lebhaft* (sôi nổi), *Langsam* (chậm), *Innig* (sâu lắng), *Mit Ausdruck* (biểu cảm) | [[Beethoven]] dùng tiếng Đức ở một số tác phẩm (như [[giao-huong|Giao hưởng]] "Đồng quê"); [[Mahler]] dùng nhiều, có khi trộn với tiếng Ý |
 | **Pháp** | *Cédez* (chậm lại), *Retenu* (kìm lại), *Doux* (êm), *Très expressif* | [[Debussy]] ghi rất nhiều chỉ dẫn tiếng Pháp, mô tả cả **tính chất cảm xúc** của từng câu |
-| **Anh** | *Slowly*, *With feeling* | Phổ biến trong nhạc hiện đại, [[nhac-pho|nhạc phổ]] thông |
+| **Anh** | *Slowly*, *With feeling* | Phổ biến trong nhạc hiện đại, nhạc phổ thông |
 
 Khi dạy, hãy cho học sinh tra nghĩa **mọi** chỉ dẫn trên bản nhạc trước khi tập — chúng là lời tác giả nói trực tiếp với người chơi.
 
@@ -689,7 +689,7 @@ Tranh luận triết học về "biểu diễn xác thực" ([[bieu-hien-cam-xuc
     ],
     body: `
 ## Urtext là gì?
-**Urtext** (tiếng Đức: "văn bản gốc") là ấn bản cố gắng tái hiện **đúng ý định của nhà soạn nhạc**, không thêm bớt. Biên tập viên đối chiếu mọi nguồn: **bản thảo tay** của tác giả, bản chép của học trò, trợ lý, và các **[[van-ban-hoc-am-nhac|bản in đầu]] tiên**; các quyết định được giải thích trong **chú thích hoặc phần bình chú** cuối sách.
+**Urtext** (tiếng Đức: "văn bản gốc") là ấn bản cố gắng tái hiện **đúng ý định của nhà soạn nhạc**, không thêm bớt. Biên tập viên đối chiếu mọi nguồn: **bản thảo tay** của tác giả, bản chép của học trò, trợ lý, và các **[[van-ban-hoc-am-nhac|bản in đầu tiên]]**; các quyết định được giải thích trong **chú thích hoặc phần bình chú** cuối sách.
 
 Lưu ý: Urtext là một **lý tưởng** hơn là tuyệt đối — hai biên tập viên làm từ cùng nguồn vẫn có thể ra hai bản khác nhau. Urtext hiện đại thường là dạng **lai**: văn bản gốc kèm một ít ngón bấm gợi ý.
 

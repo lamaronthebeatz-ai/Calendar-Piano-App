@@ -138,7 +138,7 @@ export function LessonDetailSheet() {
         onClose={() => setConfirmDelete(false)}
         onConfirm={handleDelete}
         title="Xoá buổi học này?"
-        description={`Thao tác này sẽ xoá buổi học ${WEEKDAY_NAMES[slot.dayOfWeek]} của ${student?.nickname || student?.name} khỏi thời khóa biểu. Không thể hoàn tác.`}
+        description={`Thao tác này sẽ xoá buổi học ${WEEKDAY_NAMES[slot.dayOfWeek]} của ${student?.nickname || student?.name} khỏi thời khoá biểu. Không thể hoàn tác.`}
         confirmLabel="Xoá"
         tone="danger"
       />

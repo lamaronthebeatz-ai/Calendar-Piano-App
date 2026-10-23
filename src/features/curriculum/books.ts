@@ -181,7 +181,7 @@ Sau Quyển 2, đường đi tiếp là [[giao-trinh-hoa-am]] (hoà âm bốn b�
         chapters: [
           { slug: 'nhip-lay-da', focus: 'Ô lấy đà và cách tính ô cuối.' },
           { slug: 'nhip-hon-hop', focus: 'Nhóm 2 + 3 và 3 + 2 + 2; đếm bằng phách không đều.' },
-          { slug: 'hemiola', focus: 'Ba phách 2 trong không gian hai phách 3.' },
+          { slug: 'hemiola', focus: 'Ba nhóm hai phách đặt vào khoảng thời gian của hai nhóm ba phách.' },
           { slug: 'da-nhip', focus: 'Hai nhịp cùng lúc; tập 2 chọi 3 trên đàn.' },
           { slug: 'nhip-tu-do-va-ky-hieu-khong-nhip', focus: 'Đọc nhạc không vạch nhịp.' },
         ],
@@ -412,7 +412,7 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
 
 ## Hệ thống của sách
 - **Sergei Ivanovich Taneyev** (1856 – 1915; tên còn được phiên là Taneev) toán học hoá việc đổi chỗ các bè trong cuốn *Đối vị di động của lối viết nghiêm khắc* (Leipzig, 1909; bản tiếng Anh 1962): mọi trường hợp đối vị phức tạp được tính bằng các chỉ số **Iv** (chiều dọc) và **Ih** (chiều ngang).
-- Ở Việt Nam, giáo trình *Phức điệu nghiêm khắc* của **Phạm Tú Hương** (Nhạc viện Hà Nội, 1991; hiệu đính Nguyễn Thụy Loan) trình bày theo hệ thống này. Trình tự các phần của sách — giai điệu, phức điệu tương phản, phức điệu mô phỏng, hình thức — bám theo trình tự đó, như ở bài đầu tiên của Phần I.
+- Ở Việt Nam, giáo trình *Phức điệu nghiêm khắc* của **Phạm Tú Hương** (Nhạc viện Hà Nội, 1991; hiệu đính Nguyễn Thụy Loan) trình bày theo hệ thống này. Trình tự các phần của sách — giai điệu, phức điệu tương phản, phức điệu mô phỏng, hình thức — bám theo trình tự đó, như trình bày ở bài đầu tiên của Phần I.
 - Cuốn sách chỉ trình bày hệ thống Taneyev. Phương pháp năm loại của **Fux** là một cuốn riêng trong tủ sách: *Những Bước Lên Đỉnh Parnassus*.
 - Phần VI gom bảng công thức và thuật ngữ.
 
@@ -583,15 +583,15 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
           { slug: 'fugue-ba-bon-be-fux', focus: 'Đưa bè thứ ba vào bằng hợp âm ba hay nốt treo; kết chính thức, kết giả, tránh kết; thứ tự vào bè bốn bè.' },
           { slug: 'doi-am-kep-fux', focus: 'Bảng đổi quãng và quy tắc ở quãng 8, 10, 12; biến hai bè thành trio, quatuor; đảo ngược chiều đơn và nghiêm.' },
           { slug: 'doi-am-kep', focus: 'Đối âm kép và canon trong nhạc Bach — nơi các quy tắc của Fux trở thành tác phẩm.' },
-          { slug: 'fugue-doi-de-va-nhieu-chu-de-fux', focus: 'Đối đề đổi chỗ ở quãng 8; fugue trên cantus firmus; chủ đề chromatic; fugue ba chủ đề.' },
+          { slug: 'fugue-doi-de-va-nhieu-chu-de-fux', focus: 'Đối đề đổi chỗ ở quãng 8; fugue trên cantus firmus; chủ đề cromatic; fugue ba chủ đề.' },
           { slug: 'dap-de-va-trang-tri-fux', focus: 'Bốn quy tắc đáp đề; giai điệu trọng hơn giọng; diminution, nốt sớm; nốt treo theo nhịp; stile a cappella.' },
           { slug: 'fugue', focus: 'Fugue sau Fux: cấu trúc trình bày – đoạn nối – stretto và các kiệt tác của Bach, Beethoven, Shostakovich.' },
         ],
         exercises: [
-          'Viết một fugue hai bè ở giọng Re theo đúng sáu bước của Fux: kết thứ nhất ở bậc V, thứ hai ở bậc III, stretto sau một ô rồi kết cuối.',
+          'Viết một fugue hai bè ở giọng Rê theo đúng sáu bước của Fux: kết thứ nhất ở bậc V, thứ hai ở bậc III, stretto sau một ô rồi kết cuối.',
           'Viết 8 ô đối âm kép ở quãng 8 (tránh quãng 5, không nhảy vào quãng 8), đảo lại và kiểm; rồi thử biến thành trio bằng cách thêm bè dịch xuống quãng 10.',
           'Đảo ngược chiều nghiêm một giai điệu Đô trưởng theo bảng C ↔ E, D ↔ D, F ↔ B; so với đảo ngược chiều đơn và nhận xét giai điệu nào hay hơn.',
-          'Lập đáp đề cho ba chủ đề ở giọng Re: một chủ đề mở bằng bước nhảy Re – La, một chủ đề mở La – Re, một chủ đề chromatic — áp dụng bốn quy tắc đáp đề.',
+          'Lập đáp đề cho ba chủ đề ở giọng Rê: một chủ đề mở bằng bước nhảy Rê – La, một chủ đề mở bằng La – Rê, một chủ đề cromatic — áp dụng bốn quy tắc đáp đề.',
         ],
       },
       {
@@ -613,12 +613,12 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
     volume: 'J. G. Albrechtsberger',
     subtitle: 'Tuyển tập ba tập của Albrechtsberger do học trò Seyfried biên tập, dùng để tự học: bass liên tục và hoà âm, năm loại sáng tác nghiêm khắc từ hai đến năm bè, mô phỏng, fugue, đối âm kép, canon, cùng phụ lục về phong cách, nhạc cụ và đọc tổng phổ.',
     author: 'Lamar',
-    audience: 'Đã học xong Nhạc Lý Cơ Bản · đọc được khoá Son và khoá Fa',
+    audience: 'Đã học xong Nhạc Lý Cơ Bản · đọc được khoá Sol và khoá Fa',
     hue: 40,
     glyph: '𝄢',
     coverImage: albrechtsbergerCover,
     preface: `
-**Johann Georg Albrechtsberger** (1736 – 1809), organ cung đình và nhạc trưởng nhà thờ St. Stephen ở Vienna, là thầy dạy đối âm của Beethoven và Hummel. Cuốn sách này đọc theo tuyển tập ba tập các bài viết của ông, do học trò **Ignaz von Seyfried** biên tập, theo bản dịch Anh của Sabilla Novello (London, 1855).
+**Johann Georg Albrechtsberger** (1736 – 1809), nghệ sĩ organ cung đình và nhạc trưởng nhà thờ St. Stephen ở Vienna, là thầy dạy đối âm của Beethoven và Hummel. Cuốn sách này đọc theo tuyển tập ba tập các bài viết của ông, do học trò **Ignaz von Seyfried** biên tập, theo bản dịch Anh của Sabilla Novello (London, 1855).
 
 ## Hệ thống của sách
 - **Phần I – IV** theo Tập I của bộ sách: bass liên tục và hoà âm — quãng, hợp âm, chuyển động, nghịch âm, quãng ngầm định của từng chữ số, đệm trên bàn phím, sáu tiến hành nguy hiểm, hoà âm thuần khiết, chuyển giọng và kết. Theo lời tựa, Tập I phần lớn do **Seyfried** soạn.
@@ -667,7 +667,7 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
           { slug: 'sau-tien-hanh-nguy-hiem', focus: 'Sáu chỗ dễ phạm quãng 5 – 8 liền và cách sửa; nối hợp âm 7 và các dẫn xuất.' },
         ],
         exercises: [
-          'Đệm âm giai Đô trưởng và La thứ đi lên, đi xuống theo bảng số của sách, ở cả ba vị trí, rồi dịch sang Son trưởng, Rê thứ, Fa trưởng.',
+          'Đệm âm giai Đô trưởng và La thứ đi lên, đi xuống theo bảng số của sách, ở cả ba vị trí, rồi dịch sang Sol trưởng, Rê thứ, Fa trưởng.',
           'Tự viết một bè bass số 12 ô có đủ sáu tiến hành nguy hiểm, đệm sai từng chỗ rồi sửa theo cách sách chỉ.',
           'Chơi một câu bass số theo kiểu đệm thường rồi theo kiểu đệm chia hai tay ở ba vị trí hoà âm rải.',
         ],
@@ -706,7 +706,7 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
         ],
         exercises: [
           'Viết loại 1 và loại 4 ba bè trên cùng chorale, đặt chorale lần lượt ở bè trên, giữa, dưới.',
-          'Viết loại 5 bốn bè, rồi viết lại ở lối tự do với ít nhất một nghịch âm không chuẩn bị và một đoạn chromatic, ghi rõ giấy phép nào được dùng.',
+          'Viết loại 5 bốn bè, rồi viết lại ở lối tự do với ít nhất một nghịch âm không chuẩn bị và một đoạn cromatic, ghi rõ giấy phép nào được dùng.',
         ],
       },
       {

@@ -169,7 +169,7 @@ Nếu câu 2 bắt đầu giống câu 1 → **đoạn song song**; nếu khác 
 Hãy "thở" ở cuối mỗi câu — nhấc tay nhẹ, giảm âm lượng — như ca sĩ lấy hơi. Đánh dấu chỗ kết giúp ghi [[hoc-thuoc-bai|nhớ bài]] nhanh hơn.
 
 ## Câu nhạc kiểu "sentence"
-Một cấu trúc 8 ô nhịp khác (theo William [[chuc-nang-hinh-thuc|Caplin]]), rất phổ biến từ [[ludwig-van-beethoven|Beethoven]]:
+Một cấu trúc 8 ô nhịp khác (theo William [[chuc-nang-hinh-thuc|Caplin]]), rất phổ biến ở [[ludwig-van-beethoven|Beethoven]]:
 | Phần | Ô nhịp | Nội dung |
 |---|---|---|
 | Trình bày ý cơ bản | 1–2 | [[motif|Ý nhạc]] 2 ô |
@@ -234,7 +234,7 @@ Theo Rothstein, **chồng câu** giữ sự liên tục, còn **diễn giải l�
 1. Đếm số ô từ đầu câu đến kết. Nếu không phải 4 hay 8, hãy hỏi: **ô nào có thể bỏ** mà câu vẫn trọn vẹn?
 2. Những ô "bỏ được" thường là: lặp lại một ý, kéo dài một hợp âm, mô tiến, nhắc lại kết.
 3. Thử chơi phiên bản **rút gọn** rồi so với bản gốc — sự khác biệt cho thấy nhà soạn nhạc muốn tạo hiệu quả gì.
-Lưu ý: cách nhìn này giả định chuẩn 4–8 ô; một số nhà lý thuyết (như Braunschweig) nhắc rằng đó là **giả định** của phương pháp, và không phải câu dài nào cũng cần được giải thích như một "chuẩn bị mở rộng".
+Lưu ý: cách nhìn này giả định chuẩn 4–8 ô; một số nhà lý thuyết (như Braunschweig) nhắc rằng đó là **giả định** của phương pháp, và không phải câu dài nào cũng cần được giải thích như một "câu chuẩn được mở rộng".
 
 ## Với người chơi đàn
 - Biết chỗ nào là **mở rộng** giúp quyết định cách giữ căng thẳng: không "kết" sớm ở chỗ chỉ là một kết bị trì hoãn.
@@ -308,7 +308,7 @@ Bản đồ toàn bộ mục: [[lo-trinh-hinh-thuc]]. Ba đoạn kép: [[minuet-
 ## Lịch sử: từ phòng khiêu vũ đến phòng hoà nhạc
 - Minuet là **vũ điệu Pháp**, phổ biến từ khoảng **1650** ở triều đình **Louis XIV**. **[[jean-baptiste-lully|Lully]]** — nhạc sĩ và vũ công phục vụ nhà vua — viết rất nhiều minuet cho opera và [[ballet|ballet]].
 - Nhịp **3/4**; bước nhảy cơ bản kéo dài **sáu phách**, tức là hai ô 3/4 — một lý do khiến minuet thường đi theo **cặp [[so-chi-nhip|ô nhịp]]** (xem [[sieu-nhip]]).
-- Đây là vũ điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **[[to-khuc-baroque|tổ khúc]] đàn phím** (xem [[the-loai]]).
+- Đây là điệu khiêu vũ được ưa chuộng nhất ở châu Âu từ nửa sau thế kỷ 17 đến cuối thế kỷ 18; minuet cũng đi vào **[[to-khuc-baroque|tổ khúc]] đàn phím** (xem [[the-loai]]).
 - Ví dụ quen thuộc với học trò piano: hai **[[phan-tich-minuet-sol-truong|Minuet Sol trưởng]] và Sol thứ** trong *Sổ tay cho Anna Magdalena [[johann-sebastian-bach|Bach]]* (1725) — được chép thành **một cặp, chơi [[dau-nhac-lai|da capo]]**. Chúng từng được ghi là của Bach (BWV Anh. 114–115) nhưng nay được xác định là của **Christian Petzold**, nhạc sĩ [[organ-ong|organ]] ở Dresden.
 
 ## Hình thức: ba đoạn kép
@@ -373,7 +373,7 @@ Rondo thường vui tươi, nhanh — rất hay dùng cho **chương cuối** c�
 - **Gốc gác**: những ví dụ sớm nhất của lối viết rondo nằm trong aria và hợp xướng opera Ý đầu thế kỷ 17.
 - **Rondeau Pháp thời [[thoi-ky-baroque|Baroque]]**: [[Lully]] (đôi khi được gọi là "cha đẻ của rondeau"), Chambonnières và [[louis-couperin|Louis Couperin]] phổ biến hình thức này ở Pháp thế kỷ 17. Một **điệp khúc** (refrain) dài 8 hoặc 16 [[so-chi-nhip|ô nhịp]] xen kẽ với các **couplet** (đoạn xen), tạo chuỗi a b a c a d… dài tuỳ ý. [[Rameau]] chuẩn hoá thiết kế này. Ví dụ: *Les baricades mistérieuses* của [[Couperin|François Couperin]] (Pièces de [[dan-phim-co|clavecin]], tập 2, 1716–17).
 - **Đừng nhầm** với *rondeau* thời [[thoi-ky-trung-co|Trung cổ]] (thế kỷ 14–15) — một thể thơ và [[ca-khuc-the-tuc-trung-co|chanson]] có khuôn cố định, không liên quan.
-- **Thời Cổ điển**: rondo Cổ điển phát triển từ rondeau đàn phím Pháp. Rondo **[[am-giai-truong|giọng trưởng]]** trở thành dạng chương cuối mặc định. Rondo kết **[[am-giai-thu|giọng thứ]]** thì rất hiếm: [[Mozart]] chỉ viết ba, [[Haydn]] chỉ một (và còn gây tranh cãi về hình thức). Phải đến [[Beethoven]] dạng này mới thật sự phát triển.
+- **Thời Cổ điển**: rondo Cổ điển phát triển từ rondeau đàn phím Pháp. Rondo **[[am-giai-truong|giọng trưởng]]** trở thành dạng chương cuối mặc định. Rondo chương cuối ở **[[am-giai-thu|giọng thứ]]** thì rất hiếm: [[Mozart]] chỉ viết ba, [[Haydn]] chỉ một (và còn gây tranh cãi về hình thức). Phải đến [[Beethoven]] dạng này mới thật sự phát triển.
 
 ## Ví dụ phân tích
 **Chương 3 Sonata "Pathétique" Op. 13 (Beethoven)** — Rondo: [[nhip-do|Allegro]], dạng **rondo 7 phần**:
@@ -467,7 +467,7 @@ Concerto đặt **một nghệ sĩ độc tấu** đối diện **dàn nhạc** 
 | Giọng | **Ổn định**: mở và đóng chương ở giọng chủ, xác nhận các giọng mới | **[[chuyen-giong|Chuyển giọng]]**, đi tới các vùng giọng xa |
 | Chất liệu | Nhắc lại chủ đề ritornello (đôi khi chỉ vài [[motif|motif]] của nó) | Hình nhạc kỹ thuật, điêu luyện |
 - Các ritornello ở giữa thường **ngắn hơn** và ở **giọng khác**; ritornello cuối trở về đầy đủ ở giọng chủ.
-- Trên piano, [[Bach]] dùng tư duy này trong *Bản concerto Ý* (Italienisches Konzert) cho đàn phím solo — hai [[ban-phim|bàn phím]] của [[dan-phim-co|harpsichord]] luân phiên vai "tutti" và "solo".
+- Với đàn phím, [[Bach]] dùng tư duy này trong *Bản concerto Ý* (Italienisches Konzert) cho một người chơi — hai [[ban-phim|bàn phím]] của [[dan-phim-co|harpsichord]] luân phiên vai "tutti" và "solo".
 
 ## Chương 1 concerto Cổ điển
 Thời Cổ điển, ritornello **kết hợp** với [[hinh-thuc-sonata|hình thức sonata]]. Hepokoski và Darcy (*Elements of Sonata Theory*, 2006) gọi đây là **"sonata loại 5"**, xây dựng chủ yếu từ các concerto của [[Mozart]]:
@@ -487,7 +487,7 @@ Vì có hai lần trình bày (dàn nhạc rồi độc tấu), các sách cũ g
 
 ## Với người học piano
 - Khi học một concerto (kể cả bản rút gọn hai [[dan-piano|đàn piano]]), xác định **R1, S1, phát triển, tái hiện, cadenza** trên bản nhạc — giúp hiểu khi nào mình "dẫn" và khi nào mình "đáp" dàn nhạc.
-- Cadenza là chỗ thể hiện sự tự do — nhưng thường đi theo một [[hop-am-sau-bon|hợp âm 6/4 kết]] và kết bằng [[hop-am-ba|hợp âm]] át có láy rền (xem [[ky-hieu-hoa-my]]).
+- Cadenza là chỗ thể hiện sự tự do — nhưng thường bắt đầu trên một [[hop-am-sau-bon|hợp âm 6/4 kết]] và kết bằng [[hop-am-ba|hợp âm]] át có láy rền (xem [[ky-hieu-hoa-my]]).
 `,
   },
   {
@@ -559,7 +559,7 @@ Một mạch xuyên suốt lịch sử: nhiều nhà soạn nhạc coi **bè tr�
 ## Lịch sử kết cấu trong âm nhạc phương Tây
 1. **Đơn âm** — Thánh ca là phong cách chủ đạo ở phần lớn châu Âu thời [[thoi-ky-trung-co|Trung cổ]]. Nhiều người hát đồng âm hoặc cách [[quang|quãng 8]] vẫn là đơn âm: kết cấu tính theo **số giai điệu**, không theo số người hát.
 2. **[[organum|Organum]]** — ca sĩ thêm một bè vào thánh ca có sẵn. Dạng sớm nhất chạy **song song quãng 8 hoặc 5**, nên thực chất vẫn gần đơn âm. Đến thế kỷ 11, "organum tự do" cho các bè đi độc lập hơn — khởi đầu truyền thống **phức điệu**.
-3. **Phức điệu [[thoi-ky-phuc-hung|Phục hưng]]** — các bè ngang hàng, độc lập trở thành kết cấu phổ biến (xem [[Palestrina]], [[doi-am]]). Nó bị phê phán là làm **lời ca khó nghe rõ**.
+3. **Phức điệu [[thoi-ky-phuc-hung|Phục hưng]]** — các bè ngang hàng, độc lập trở thành kết cấu phổ biến (xem [[Palestrina]], [[doi-am]]). Kết cấu này từng bị phê phán vì làm **lời ca khó nghe rõ**.
 4. **Monody (khoảng 1600)** — nhóm **[[opera|Florentine Camerata]]** ở Ý phản ứng lại đối âm phức tạp: một giọng hát độc tấu, nhịp điệu tự do, trên phần đệm, để âm nhạc **phục vụ lời**. Từ đây ra đời opera, cantata, [[oratorio-cantata-passion|oratorio]].
 5. **Chủ điệu** — từ đầu thế kỷ 17 (thời [[thoi-ky-baroque|Baroque]]), chủ điệu trở thành một trong những kết cấu chủ đạo. Các nhà soạn nhạc nghĩ theo **hoà âm dọc**, và [[bass-so|bè trầm liên tục]] (basso continuo) trở thành đặc trưng. Chủ điệu và phức điệu vẫn cùng tồn tại suốt thế kỷ 17–18.
 
@@ -605,7 +605,7 @@ Hai [[the-loai|thể loại]] [[thoi-ky-baroque|Baroque]] dạng [[bien-tau]] tr
 - [[johann-pachelbel|Pachelbel]] — [[phan-tich-canon-pachelbel|Canon in D]]: [[doi-am|canon]] ba bè trên một bass lặp 8 nốt (xem [[doi-am-kep]]).
 
 ## Ba ví dụ phân tích
-**"Dido's Lament" — Purcell, opera "Dido and Aeneas" (1689).** Aria cuối "When I am laid in earth" được dựng trên một **bass lặp chậm**, đi xuống theo các bước **[[cung-nua-cung|nửa cung]]**: đi xuống một quãng 4 rồi khép lại một [[quang|quãng 8]] thấp hơn chỗ bắt đầu. Các nguồn đếm số lần lặp khác nhau (khoảng 9 đến 12 lần). Giọng hát tự do phía trên, nhiều khi không trùng điểm bắt đầu với bass, nên nghe không bị "đóng khung".
+**"Dido's Lament" — Purcell, opera "Dido and Aeneas" (1689).** Aria cuối "When I am laid in earth" được dựng trên một **bass lặp chậm**, đi xuống theo các bước **[[cung-nua-cung|nửa cung]]**: đi xuống một quãng 4, rồi khép lại ở nốt thấp hơn nốt khởi đầu một [[quang|quãng 8]]. Các nguồn đếm số lần lặp khác nhau (khoảng 9 đến 12 lần). Giọng hát tự do phía trên, nhiều khi không trùng điểm bắt đầu với bass, nên nghe không bị "đóng khung".
 
 **Passacaglia và [[fugue|Fugue]] Đô thứ BWV 582 — Bach.** Không rõ năm sáng tác chính xác; các nguồn chỉ về khoảng **1706–1713**. Nửa đầu chủ đề bass có lẽ lấy từ một tác phẩm ngắn của nhà soạn nhạc Pháp André Raison (có học giả phản đối). Phần fugue sau đó dùng **nửa đầu của bass lặp làm chủ đề thứ nhất**, và một dạng biến đổi của nửa sau làm chủ đề thứ hai.
 
@@ -649,7 +649,7 @@ Minuet (3/4, vừa phải) ở thời Cổ điển được [[ludwig-van-beethov
 - **Giao hưởng** có tổ tiên trực tiếp là **[[khuc-mo-man|khúc mở màn]] opera Ý** (*sinfonia*). [[alessandro-scarlatti|Alessandro Scarlatti]] định hình khúc mở màn theo khuôn **nhanh – chậm – nhanh**. Trước thế kỷ 18, "symphony" và "overture" gần như dùng lẫn cho nhau. Khúc mở màn thường được tách ra chơi riêng ở hoà nhạc — từ đó giao hưởng thành một thể loại độc lập. Đến những năm 1770, khuôn **bốn chương** trở thành chuẩn.
 - **[[Haydn]]** thường được gọi là "cha đẻ" của giao hưởng và tứ tấu đàn dây, với **104 giao hưởng** và **68 tứ tấu**. Ông **không phát minh** ra chúng — Franz Xaver Richter và Ignaz Holzbauer có thể đã viết tứ tấu trước — nhưng đã mở rộng rất nhiều khả năng của hai thể loại này.
 - **Concerto Baroque** dùng **hình thức ritornello**: cả dàn nhạc chơi một chủ đề quay lại nhiều lần (ritornello), xen giữa là các đoạn của người độc tấu. Giuseppe Torelli dùng ý tưởng này trước, [[Vivaldi]] chuẩn hoá nó qua hàng trăm concerto, thường ở hai chương nhanh hai đầu. [[Bach]] và [[georg-philipp-telemann|Telemann]] viết theo mẫu của Vivaldi.
-- **Nocturne** cho piano: từ *notturno* đã được dùng trước đó cho những bản trữ tình ngắn hay serenade, nhưng [[john-field|John Field]] là người biến nó thành một **thể loại piano**. Sau khi thử các tên Pastorale, Serenade, Romance, ông chọn "Nocturne" cho [[van-ban-hoc-am-nhac|bản in đầu]] tiên năm **1812**. **21 nocturne** của [[Chopin]] là những ví dụ nổi tiếng nhất.
+- **Nocturne** cho piano: từ *notturno* đã được dùng trước đó cho những bản trữ tình ngắn hay serenade, nhưng [[john-field|John Field]] là người biến nó thành một **thể loại piano**. Sau khi thử các tên Pastorale, Serenade, Romance, ông chọn "Nocturne" cho [[van-ban-hoc-am-nhac|bản in đầu tiên]] năm **1812**. **21 nocturne** của [[Chopin]] là những ví dụ nổi tiếng nhất.
 
 ## Tiểu phẩm piano (thế kỷ 19)
 | Thể loại | Tính chất | Ví dụ |
@@ -743,7 +743,7 @@ Bài này đào sâu phần "hai đoạn" trong [[hinh-thuc-am-nhac]]. Cần bi�
 Open Music Theory nhấn mạnh: "**cân bằng**" (*balanced*) không phải loại thứ ba mà là một **tính chất** mà cả hai loại đều có thể có — đoạn kết của nửa đầu xuất hiện lại, dịch về giọng chủ, ở cuối nửa sau.
 
 ## Tách hay liền?
-Theo giáo trình Puget Sound: nếu nửa đầu kết bằng **kết chính ở giọng chủ** thì đó là hai đoạn **tách** (*sectional*); nếu kết ở giọng khác hoặc bằng kết khác (vd. chuyển sang V) thì là hai đoạn **liền** (*continuous*). Ghi nhãn trước chữ "hai đoạn": "hai đoạn liền có tái hiện"…
+Theo giáo trình Puget Sound: nếu nửa đầu kết bằng **kết chính ở giọng chủ** thì đó là hai đoạn **tách** (*sectional*); nếu kết ở giọng khác hoặc bằng kết khác (vd. chuyển sang V) thì là hai đoạn **liền** (*continuous*). Hai cặp nhãn có thể ghép với nhau, vd. "hai đoạn liền có tái hiện"…
 
 ## Ví dụ
 - **Minuet Sol trưởng BWV Anh. 114** (sách [[lo-trinh-tac-pham|Anna Magdalena]], 1725; nay được cho là của Christian Petzold): theo giáo trình Milne, ô 1 – 16 là một [[cau-nhac|đoạn nhạc]] song song (nửa kết, rồi kết hoàn toàn ở Sol); từ ô 17 nhạc đi sang Rê với nửa kết ở ô 20 rồi kết hoàn toàn ở Rê. Xem [[phan-tich-minuet-sol-truong]].
@@ -848,7 +848,7 @@ Ellen Rosand (*Musical Quarterly*, 1979) cho rằng ở Venice thập niên 1640
 
 ## Ba tác phẩm mẫu
 **1. [[henry-purcell|Purcell]] — "When I am laid in earth" (Lời than của Dido), *Dido and Aeneas***
-Bè trầm đi xuống **[[am-giai-cromatic|cromatic]] qua một [[quang|quãng]] 4 đúng**, lặp **11 lần** — một passacaglia. Có tả lời trên chữ "laid" (nằm xuống). Buổi diễn đầu tiên được ghi nhận ở trường nữ sinh của Josias Priest (Chelsea, London) vào khoảng 1689 — ngày chính xác còn tranh cãi.
+Bè trầm đi xuống **[[am-giai-cromatic|cromatic]] qua một [[quang|quãng]] 4 đúng**, lặp **11 lần** — một passacaglia. Có tả lời bằng nhạc ở chữ "laid" (nằm xuống). Buổi diễn đầu tiên được ghi nhận ở trường nữ sinh của Josias Priest (Chelsea, London) vào khoảng 1689 — ngày chính xác còn tranh cãi.
 ::youtube f00nKLzCRrI | Joyce DiDonato hát "When I am laid in earth" (Purcell, Dido and Aeneas)
 
 **2. [[johann-sebastian-bach|Bach]] — Passacaglia và Fugue Đô thứ, BWV 582 (organ)**
@@ -978,7 +978,7 @@ Walter Everett (*The Beatles as Musicians*, OUP, 2001) đặt tên cấu trúc b
 SRDC rất gần [[cau-nhac|câu nhạc kiểu "sentence"]] trong lý thuyết cổ điển.
 
 ## Khi khối không rõ ràng
-Trevor [[phoi-chorale-kieu-bach|de Clercq]] (*MTO* 23/3, 2017) bàn về **tính mơ hồ** khi phân đoạn pop/rock 1982 – 1991: các khối khác nhau ít, vai trò trộn lẫn, bridge có thứ bậc khác nhau. Ví dụ "One" (U2): người đọc là verse/chorus xen kẽ, người đọc là toàn verse.
+Trevor [[phoi-chorale-kieu-bach|de Clercq]] (*MTO* 23/3, 2017) bàn về **tính mơ hồ** khi phân đoạn pop/rock 1982 – 1991: các khối khác nhau ít, vai trò trộn lẫn, bridge có thứ bậc khác nhau. Ví dụ "One" (U2): có người đọc là verse/chorus xen kẽ, có người đọc là toàn verse.
 
 ## Thử phân tích một bài hát Việt
 *(Quy trình gợi ý của thư viện.)*

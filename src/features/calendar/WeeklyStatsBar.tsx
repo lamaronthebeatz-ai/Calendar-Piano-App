@@ -13,10 +13,10 @@ export function WeeklyStatsBar({ slots, students, currency }: WeeklyStatsBarProp
   const stats = computeOverallStats(slots, students)
 
   const tiles = [
-    { label: 'Buổi học / Tuần', value: String(stats.lessonCount) },
-    { label: 'Giờ dạy / Tuần', value: `${stats.teachingHoursPerWeek}h` },
+    { label: 'Buổi học / tuần', value: String(stats.lessonCount) },
+    { label: 'Giờ dạy / tuần', value: `${stats.teachingHoursPerWeek}h` },
     { label: 'Học viên', value: String(stats.studentCount) },
-    ...(stats.estimatedWeeklyIncome > 0 ? [{ label: 'Doanh thu ước tính / Tuần', value: formatCurrency(stats.estimatedWeeklyIncome, currency) }] : []),
+    ...(stats.estimatedWeeklyIncome > 0 ? [{ label: 'Doanh thu ước tính / tuần', value: formatCurrency(stats.estimatedWeeklyIncome, currency) }] : []),
   ]
 
   return (

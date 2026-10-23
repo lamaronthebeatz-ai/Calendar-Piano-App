@@ -155,7 +155,7 @@ Bàn phím cho chân chơi **bè trầm**. Organ Bắc Đức thời Bach thư�
 Mỗi **nút âm sắc** (*stop*, *register*) bật một **dãy ống** — mỗi phím một ống. Con số trên nút là **chiều dài ống thấp nhất** tính bằng feet (khoảng 30 cm), và nó cho biết **cao độ thực** so với nốt viết:
 | Nhãn | Nốt Đô viết ra kêu thành | Quan hệ |
 |---|---|---|
-| 16′ | Đô thấp hơn một quãng 8 | dưới quãng 8 |
+| 16′ | Đô thấp hơn một quãng 8 | quãng 8 dưới |
 | **8′** | đúng nốt viết | **cao độ "chuẩn"** (như piano) |
 | 4′ | Đô cao hơn một quãng 8 | quãng 8 trên |
 | 2 2⁄3′ | Sol cao hơn quãng 12 | bồi âm 3 |
@@ -268,7 +268,7 @@ Chặng 2 (tiếp) của [[ky-thuat-organ-lo-trinh]]. Trước đó: [[cach-cham
 Khi legato thành chuẩn (Lemmens 1862, Dupré 1927), người chơi cần nối cả những chỗ tay không thể nối bằng ngón thường:
 - **Thay ngón trên phím** (*substitution*): giữ phím, đổi ngón trong im lặng (vd. 4 → 5) để giải phóng ngón cho nốt sau.
 - **Trượt ngón** (*glissando*): trượt cùng một ngón từ phím đen xuống phím trắng liền kề; ngón cái cũng trượt được.
-- **Bắt chéo** ngón dài qua ngón dài (3 qua 4, 4 qua 5) khi cần nối.
+- **Bắt chéo** ngón dài qua ngón ngắn hơn (3 qua 4, 4 qua 5) khi cần nối.
 - **Chia bè giữa hai tay**: một bè giữa có thể do tay này chơi một đoạn rồi chuyển sang tay kia.
 
 ## Chọn hệ ngón nào
@@ -310,7 +310,7 @@ Chặng 3 của [[ky-thuat-organ-lo-trinh]]. Cấu tạo bàn pedal: [[ban-dieu-
 - **Chiều cao ghế** vừa để mũi chân chạm phím trắng không phải duỗi thẳng, gót chân thả lỏng trên phím mà không đè xuống.
 - **Thân trên tự do.** Khi chân phải với lên cao, thân hơi xoay; tay vẫn chơi bình thường. Nguyên tắc tư thế chung: [[tu-the]].
 - **Tìm phím không nhìn.** Dùng các khe giữa nhóm phím đen (2 và 3 phím) làm mốc, đo khoảng cách bằng cảm giác hai đầu gối và cổ chân.
-- **Giày organ**: đế mỏng, hẹp, gót thấp để vừa với phím; đế mềm cảm nhận được phím.
+- **Giày organ**: đế mỏng, hẹp, gót thấp để vừa với phím; đế mềm để cảm nhận được phím.
 
 ## Ký hiệu
 Quy ước phổ biến: ký hiệu đặt **trên** nốt là **chân phải**, **dưới** nốt là **chân trái**. Dấu "∧" là **mũi chân**, dấu "∪" (hoặc "o") là **gót chân**. Ghi pedal vào bản nhạc trước khi tập, như ghi [[ngon-tay-organ|ngón tay]].
@@ -334,7 +334,7 @@ Quy ước phổ biến: ký hiệu đặt **trên** nốt là **chân phải**,
 - Về tài năng pedal của Bach, Nekrolog và Forkel đều nhấn mạnh — xem [[bach-nguoi-choi-organ]].
 
 ## Bài tập chặng 3
-1. **Âm giai Đô trưởng** một quãng 8: mũi chân luân phiên (P – T – P – T…), rồi mũi – gót một chân cho các bậc liền kề.
+1. **Âm giai Đô trưởng** một quãng 8: mũi chân luân phiên (phải – trái – phải – trái…), rồi mũi – gót một chân cho các bậc liền kề.
 2. **Quãng 3, quãng 5, quãng 8** luân phiên hai chân, không nhìn.
 3. **Bè trầm của chorale** chơi một mình bằng chân, rồi thêm tay phải chơi giai điệu — bước đầu của [[phoi-hop-tay-chan-organ]].
 4. Mỗi ngày 10 phút pedal riêng là đủ; tăng dần lên âm giai trưởng, thứ có dấu hoá.
@@ -671,13 +671,13 @@ Xuyên suốt [[ky-thuat-organ-lo-trinh]]. Lộ trình piano tương ứng nằm
 | **1. Làm quen** | Tay legato – tách; pedal mũi chân; ba khuông | Gleason, *Method of Organ Playing*; hoặc Dupré, *Méthode* phần đầu | Chorale bốn bè (tay + pedal); bài manualiter (chỉ tay) của Pachelbel, Scheidt | Đệm bài hát đơn giản |
 | **2. Ba bè** | Pedal mũi – gót; phối hợp; đổi bàn phím | Dupré, **79 chorales** Op. 28 (chuẩn bị cho chorale Bach) | **Eight Little Preludes and Fugues** BWV 553 – 560; Orgelbüchlein chậm (BWV 599, 614); Pachelbel, Böhm | Dạo đầu ngắn; đệm cộng đoàn có pedal |
 | **3. Bach và Bắc Đức** | Trio; plenum; fugue | Lemmens, *École d'orgue* (chọn bài) | Orgelbüchlein nhanh hơn; prelude – fugue cỡ vừa; Buxtehude (prelude, chorale); **Trio Sonata** (bắt đầu bằng chương chậm) | Kết lễ bằng prelude – fugue; ứng tác dạo đầu |
-| **4. Lãng mạn và hiện đại** | Legato thay ngón; hộp cảm âm; âm sắc giao hưởng | Dupré, *Méthode* đầy đủ | **Mendelssohn, 6 Sonata Op. 65** (1845); Franck (*Six pièces*); prelude – fugue lớn và Leipzig chorale của Bach | Chương trình hoà nhạc ngắn |
+| **4. Lãng mạn và hiện đại** | Legato thay ngón; hộp cảm âm; âm sắc giao hưởng | Dupré, *Méthode* đầy đủ | **Mendelssohn, 6 Sonata Op. 65** (1845); Franck (*Six pièces*); prelude – fugue lớn và chorale Leipzig của Bach | Chương trình hoà nhạc ngắn |
 | **5. Đỉnh cao** | Mọi kỹ thuật; ứng tác lớn | Dupré, *Cours complet d'improvisation* | Widor, Vierne (giao hưởng organ); Reger; Messiaen; Trio Sonata đủ sáu bài | Ứng tác thánh lễ trọn vẹn |
 
 ## Ghi chú về một số tập
 - **Eight Little Preludes and Fugues (BWV 553 – 560)** — từng được gán cho Bach; nghiên cứu nguồn của Alfred Dürr (1987) và phân tích phong cách của Peter Williams nghiêng về một học trò, có thể là **J. L. Krebs** hoặc cha ông J. T. Krebs; nhưng danh mục tác phẩm Krebs lại loại chúng ra vì cũng nghi ngờ. **Chưa có kết luận**. Dù ai viết, đây vẫn là bậc thang sư phạm kinh điển.
 - **Orgelbüchlein** không xếp theo độ khó mà theo năm phụng vụ; giáo viên chọn bài chậm trước — xem [[choi-chorale-tren-organ]].
-- **Mendelssohn Op. 65**: nhà xuất bản Coventry & Hollier (London) đặt năm 1844, ban đầu là các voluntary; Mendelssohn viết thành **sáu sonata**, in năm 1845. "Sonata" ở đây theo nghĩa Bach — một chuỗi chương — hơn là [[hinh-thuc-sonata|hình thức sonata]] cổ điển. Một chặng quan trọng trong việc [[felix-mendelssohn|Mendelssohn]] đưa Bach trở lại.
+- **Mendelssohn Op. 65**: nhà xuất bản Coventry & Hollier (London) đặt viết năm 1844, ban đầu là các voluntary; Mendelssohn viết thành **sáu sonata**, in năm 1845. "Sonata" ở đây theo nghĩa Bach — một chuỗi chương — hơn là [[hinh-thuc-sonata|hình thức sonata]] cổ điển. Một chặng quan trọng trong việc [[felix-mendelssohn|Mendelssohn]] đưa Bach trở lại.
 - **79 chorales** của Dupré: các bài chorale ngắn trên giai điệu mà Bach dùng trong Orgelbüchlein, viết làm bậc chuẩn bị.
 
 ## Nhà soạn nhạc theo truyền thống

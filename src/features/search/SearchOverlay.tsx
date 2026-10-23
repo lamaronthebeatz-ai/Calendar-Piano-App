@@ -71,7 +71,7 @@ export function SearchOverlay() {
         </div>
 
         {!query.trim() && (
-          <EmptyState icon={<SearchIcon width={26} height={26} />} title="Tìm kiếm trong lịch dạy" description="Tìm học viên, buổi học, ghi chú và nhiều hơn nữa." />
+          <EmptyState icon={<SearchIcon width={26} height={26} />} title="Tìm kiếm trong lịch dạy" description="Tìm theo học viên, ngày học, địa điểm hoặc ghi chú." />
         )}
 
         {query.trim() && matchedStudents.length === 0 && matchedSlots.length === 0 && (

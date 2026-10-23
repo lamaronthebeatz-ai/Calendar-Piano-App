@@ -22,7 +22,7 @@ Hoà âm jazz dựa trên nền [[he-thong-hoa-am-co-dien|hoà âm chức năng 
 |---|---|---|
 | Đơn vị cơ bản | [[hop-am-ba|Hợp âm ba]] | [[hop-am-bay|Hợp âm 7]]; hợp âm ba thường được thêm 6 hoặc 9 ([[hop-am-6-va-add]]) |
 | Nốt "lạ" | [[not-ngoai-hop-am|Nốt ngoài hợp âm]] phải giải quyết | **Nốt căng** 9, 11, 13 là một phần của hợp âm ([[hop-am-mo-rong]]) |
-| Ký hiệu | [[chuc-nang-hoa-am|Số La Mã]], [[bass-so|bè trầm có số]] | **Ký hiệu hợp âm** trên lead sheet ([[ky-hieu-hop-am]]) |
+| Ký hiệu | [[chuc-nang-hoa-am|Số La Mã]], [[bass-so|bè trầm có số]] | **Ký hiệu hợp âm** trên lead sheet — bản nhạc chỉ ghi giai điệu và hợp âm ([[ky-hieu-hop-am]]) |
 | Kết điển hình | IV – V – I, ii6 – V – I | **[[ii-v-i|ii – V – I]]** |
 | [[luat-hoa-am-bon-be|Viết bè]] | Bốn bè [[dan-giong|SATB]] theo luật | **Xếp hợp âm** trên đàn ([[xep-hop-am]]) |
 | [[giai-dieu|Giai điệu]] trên hợp âm | Từ [[doi-am|đối âm]] và hoà âm | **Hợp âm – [[am-giai|âm giai]]** cho [[ngau-hung-piano|ngẫu hứng]] ([[he-thong-hop-am-am-giai]]) |
@@ -158,7 +158,7 @@ Các hình đệm Charleston và "đẩy" khi đệm: [[dem-jazz]].
       ['St. Olaf College — W. C. Handy and the blues', 'https://pages.stolaf.edu/americanmusic/author/findle1/'],
     ],
     body: `
-Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, trong giọng Đô:
+Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, ở giọng Đô:
 | Ô 1–4 | Ô 5–8 | Ô 9–12 |
 |---|---|---|
 | C7 · C7 · C7 · C7 | F7 · F7 · C7 · C7 | G7 · F7 · C7 · G7 |
@@ -268,7 +268,7 @@ Nốt **3** và **7** quyết định tính chất hợp âm. Trong ii – V –
 Đây là cùng một nguyên tắc với [[dan-giong|dẫn giọng]] cổ điển: nốt 7 của hợp âm át giải quyết đi xuống.
 
 ## Chuỗi ii – V
-Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng (ii – V phụ, xem [[hop-am-at-phu]]). Nhiều standard là một chuỗi ii – V liên tiếp — ví dụ "Autumn Leaves" xen kẽ ii – V – I ở [[am-giai-truong|giọng trưởng]] và giọng thứ song song; "Tune Up" (Miles Davis) đi qua ba giọng bằng ba ii – V – I hạ dần một cung.
+Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng (ii – V phụ, xem [[hop-am-at-phu]]). Nhiều standard (bài chuẩn trong kho nhạc jazz) là một chuỗi ii – V liên tiếp — ví dụ "Autumn Leaves" xen kẽ ii – V – I ở [[am-giai-truong|giọng trưởng]] và giọng thứ song song; "Tune Up" (Miles Davis) đi qua ba giọng bằng ba ii – V – I hạ dần một cung.
 
 ## Luyện tập
 1. Chơi nốt dẫn hướng (tay trái) qua ii – V – I ở cả 12 giọng, đi theo [[vong-quang-nam]].
@@ -382,7 +382,7 @@ Nhiều giáo trình jazz (thường gắn với Berklee) đánh dấu: **ngoặ
 | Hợp âm | Cm7 | F7 | B♭[[hop-am-bay|maj7]] | E♭maj7 | Am7♭5 | D7 | Gm6 |
 |---|---|---|---|---|---|---|---|
 | Trong Si giáng trưởng | ii | V | **I** | IV | | | |
-| Trong Sol thứ | iv | ♭VII | III | VI | **ii°** | **V** | **i** |
+| Trong Sol thứ | iv | ♭VII | III | VI | **iiø** | **V** | **i** |
 Đoạn đầu là một [[ii-v-i]] **trưởng** về B♭ (giọng [[giong-song-song|song song]]), tiếp ngay một ii – V – i **thứ** về Gm. E♭maj7 là chiếc cầu nối hai giọng — chung cho cả hai. Nốt gốc đi theo [[vong-quang-nam|vòng quãng 5]] suốt chuỗi.
 ::form Cm7 F7 B♭maj7 E♭maj7 Am7♭5 D7 Gm6 | Hai "giọng tạm" nối nhau: ii – V – I về B♭ trưởng, rồi ii – V – i về Sol thứ
 
@@ -445,7 +445,7 @@ Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, bát cu
 Một âm giai cho mỗi hợp âm là **điểm xuất phát**, không phải luật. [[giai-dieu|Giai điệu]] jazz hay vẫn đến từ [[dan-giong|dẫn giọng]] giữa các hợp âm — đặc biệt [[ii-v-i|nốt dẫn hướng]] 3 và 7 — và từ [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]].
 
 ## Nốt tránh
-Nốt cách một nốt hợp âm [[cung-nua-cung|nửa cung]] phía trên (như F trên Cmaj7 vì nghịch với E) — có thể lướt qua nhưng không nên ngân dài.
+Nốt nằm [[cung-nua-cung|nửa cung]] trên một nốt hợp âm (như F trên Cmaj7, nghịch với E) — có thể lướt qua nhưng không nên ngân dài.
 
 Các âm giai này là "bảng màu" cho [[xep-hop-am]] và [[tai-hoa-am]].
 
@@ -553,12 +553,12 @@ Chi tiết lý thuyết: [[am-giai-bat-cung]].
 ::pc-clock 0 1 3 4 6 7 9 10 | Âm giai giảm nửa cung – cung trên C
 
 ## Âm giai toàn cung
-C D E F♯ G♯ B♭ — sáu nốt cách nhau một cung; cho hợp âm **7♯5** (cùng 9 và ♯11); nốt 5 là ♭5/♯5 chứ không đúng. Xem [[am-giai-cromatic]].
+C D E F♯ G♯ B♭ — sáu nốt cách nhau một cung; cho hợp âm **7♯5** (cùng 9 và ♯11); nốt 5 là ♭5/♯5 chứ không phải 5 đúng. Xem [[am-giai-cromatic]].
 
 ## Âm giai tăng
 Sáu nốt xen kẽ **quãng 3 thứ – nửa cung**; là hai [[hop-am-ba-tang|hợp âm ba tăng]] lồng vào nhau (C – E – G♯ và E♭ – G – B):
 ::staff treble C4 Eb4 E4 G4 Ab4 B4 | Âm giai tăng trên C: C – E♭ (D♯) – E – G – A♭ (G♯) – B
-::pc-clock 0 3 4 7 8 11 | Đối xứng: chỉ có 4 phiên bản (C và E♭ cho cùng các nốt)
+::pc-clock 0 3 4 7 8 11 | Đối xứng: chỉ có 4 phiên bản (C, E và A♭ cho cùng các nốt)
 - TJPS: dùng cho **maj7♯5** (C – E – G♯ – B), nhưng cần cẩn thận với [[not-tranh-va-quang-nghich|nốt tránh]] (E♭ trên Cmaj7♯5); với hợp âm này, [[dieu-thuc-thu-giai-dieu|Lydian tăng]] phổ biến hơn.
 - Người dùng nổi tiếng: John Coltrane (solo "One Down, One Up"), Oliver Nelson, Michael Brecker. (Wikipedia gắn Nelson với "Stolen Moments", có nguồn khác cho là đoạn [[hinh-thuc-ca-khuc-32|bridge]] của "Hoe-Down" — chưa thống nhất.)
 
@@ -607,7 +607,7 @@ Nốt **11 tự nhiên** (C trên G7) nghịch [[cung-nua-cung|nửa cung]] vớ
 |---|---|---|---|
 | G7, G9, G13 | Mixolydian | Bậc 5 âm giai trưởng | G A B C D E F |
 | G7♯11 | **Lydian át** | Bậc 4 của [[am-giai-thu|thứ giai điệu]] D | G A B C♯ D E F |
-| G7♭9 (13) | **Bát cung nửa – cung** | [[am-giai-bat-cung]] | G A♭ B♭ B C♯ D E F |
+| G7♭9 (13) | **Bát cung nửa cung – cung** | [[am-giai-bat-cung]] | G A♭ B♭ B C♯ D E F |
 | G7alt | **Âm giai biến đổi** (altered, super Locrian) | Bậc 7 của thứ giai điệu A♭ | G A♭ B♭ B C♯ E♭ F |
 | G7♭9♭13 | Phrygian trưởng (Mixolydian ♭9 ♭13) | Bậc 5 thứ hoà âm C | G A♭ B C D E♭ F |
 
@@ -644,7 +644,7 @@ G7 = G – **B** – D – **F**. D♭7 = D♭ – **F** – A♭ – **C♭ (= 
 [[ii-v-i|ii – V – I]]: Dm7 – G7 – Cmaj7 → ii – ♭II7 – I: **Dm7 – D♭7 – Cmaj7**. Bè trầm đi xuống liền [[cung-nua-cung|nửa cung]] D – D♭ – C, rất mượt.
 
 ## Liên hệ
-- D♭7 có cấu trúc trùng âm với [[hop-am-sau-tang|hợp âm 6 Đức]] của Đô — hai truyền thống cổ điển và jazz gặp nhau.
+- D♭7 trùng âm với một [[hop-am-sau-tang|hợp âm 6 Đức]] giải quyết về Đô (D♭ – F – A♭ – B) — hai truyền thống cổ điển và jazz gặp nhau.
 - Có thể áp dụng cho mọi [[hop-am-at-phu|át phụ]]: E7 – A7 – D7 – G7 – C → E7 – E♭7 – D7 – D♭7 – C (bè trầm [[am-giai-cromatic|cromatic]]).
 - Âm giai biến đổi của G7 chính là Lydian át của D♭7 (xem [[he-thong-hop-am-am-giai]]).
 
@@ -918,7 +918,7 @@ TJPS lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiế
 
 ## Lịch sử
 - Theo Wikipedia, **George Shearing** làm locked hands nổi tiếng; chính ông nói đã nghe từ **Milt Buckner** (pianist của dàn nhạc [[bo-go-phim|Lionel Hampton]]), người thường được xem là cha đẻ lối chơi này. Buckner sau này có các album *Locked Hands* (1968), *Block Chords Parade* (1974).
-- **Red Garland** dùng hợp âm khối theo cách riêng: theo Piano With Jonny, hợp âm tay trái của ông **giữ nguyên** đến khi đổi hợp âm, thường không có nốt gốc, âm thanh sáng hơn của Shearing.
+- **Red Garland** dùng hợp âm khối theo cách riêng: theo Piano With Jonny, hợp âm tay trái của ông **giữ nguyên** đến khi đổi hợp âm, thường không có nốt gốc, âm thanh sáng hơn lối của Shearing.
 Xem thêm: [[nghe-si-piano-jazz]], [[dem-jazz]].
 
 Dùng khi solo: [[ngau-hung-hop-am]].
@@ -1033,7 +1033,7 @@ Liên quan: [[xep-hop-am]], [[ket-hop-the-bam]], [[the-bam-mo]].
     title: 'Chọn thế bấm theo phong cách',
     category: 'jazz',
     aliases: ['when to use voicings', 'chord voicings when to use', 'chọn thế bấm', 'thế bấm theo phong cách', 'secundal voicing'],
-    summary: 'Thế bấm nào cũng dùng được lúc nào cũng được, nhưng mỗi phong cách có thói quen riêng: shell cho bebop, hợp âm khối cho jazz sớm và stride, không gốc cho bossa nova và ballad, quãng 4 cho blues và jazz điệu thức, âm cụm cho ballad, boogie và free jazz (bảng của TJPS).',
+    summary: 'Thế bấm nào cũng có thể dùng bất cứ lúc nào, nhưng mỗi phong cách có thói quen riêng: shell cho bebop, hợp âm khối cho jazz sớm và stride, không gốc cho bossa nova và ballad, quãng 4 cho blues và jazz điệu thức, âm cụm cho ballad, boogie và free jazz (bảng của TJPS).',
     refs: [
       ['The Jazz Piano Site — Chord Voicings & When to Use Them', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicings-use/'],
       ['The Jazz Piano Site — Monk Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/monk-voicings/'],
@@ -1233,7 +1233,7 @@ Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
 ## Trên sân khấu
 - **Âm vực**: tránh vùng trầm khi đã có [[double-bass|contrabass]]; tránh âm vực của ca sĩ ([[dem-cho-ca-si]]).
 - **Lắng nghe người solo**: họ lên cao thì mình xuống thấp, họ nhỏ thì mình nhỏ, đáp lại câu của họ như [[ngau-hung-piano|hỏi – đáp]] (TJPS).
-- **Đổi bốn** (trading fours): các người solo lần lượt chơi 4 ô xen với trống, theo thứ tự solo ban đầu, cho đến hết vòng; báo hiệu quay về giai điệu bằng ánh mắt và bằng chính cách chơi; không muốn solo thì báo trước (theo hướng dẫn của Elon University).
+- **Đổi bốn** (trading fours): những người solo lần lượt chơi 4 ô xen với trống, theo thứ tự solo ban đầu, cho đến hết vòng; báo hiệu quay về giai điệu bằng ánh mắt và bằng chính cách chơi; không muốn solo thì báo trước (theo hướng dẫn của Elon University).
 - Giữ solo **ngắn** trong buổi jam đông người.
 Cấu trúc chung của một lượt chơi ([[hinh-thuc-ca-khuc-32|head]] – solo – head): [[ngau-hung-jazz]].
 
@@ -1271,7 +1271,7 @@ Cấu trúc chung của một lượt chơi ([[hinh-thuc-ca-khuc-32|head]] – s
 ## Hợp âm "So What"
 Ba quãng 4 + một quãng 3 trưởng ở trên: **E – A – D – G – B**. Đặt tên theo bài "So What" (Miles Davis, album *Kind of Blue*, 1959): [[bill-evans|Bill Evans]] dùng nó trong hình đáp "amen" sau mỗi câu [[giai-dieu|giai điệu]]. Còn gọi là "Bill Evans voicing" hoặc "Dorian voicing". Vì là sự pha trộn giữa quãng 4 và quãng 3, hợp âm này **đa nghĩa**: cùng một khối có thể đặt lên nhiều hợp âm khác nhau, và rất hợp để [[hoa-am-song-song|dịch song song]].
 
-::keyboard E4 A4 D5 G5 B5 | Hợp âm So What (Em11 không gốc)
+::keyboard E4 A4 D5 G5 B5 | Hợp âm So What trên E (Em11, thiếu nốt 9)
 
 ## Ứng dụng
 - Jazz modal: **[[mccoy-tyner|McCoy Tyner]]** nổi tiếng với các khối quãng 4 thuần (ví dụ phần đệm của ông trong "Impressions" của John Coltrane); [[herbie-hancock|Herbie Hancock]].
@@ -1308,7 +1308,7 @@ Hợp âm So What chi tiết: [[hop-am-so-what-barron]].
 Hợp âm cùng [[chuc-nang-hoa-am|nhóm chức năng]] chung nhiều nốt nên thay được cho nhau:
 - **Chủ**: Imaj7 ↔ iii7 ↔ vi7 (Cmaj7, Em7, Am7).
 - **Tiền át**: IV ↔ ii7 (Fmaj7, Dm7).
-- **Át**: V7 ↔ vii ø7 (G7, Bø7).
+- **Át**: V7 ↔ viiø7 (G7, Bø7).
 
 ## 2. Át phụ và ii phụ
 - Vì gốc đi theo [[quang|quãng]] 5 rất thường gặp, có thể biến **hợp âm thứ nhất** trong một cặp quãng 5 thành **[[hop-am-bay|hợp âm 7 át]] cùng gốc**: Am7 – Dm7 → **A7** – Dm7 (xem [[hop-am-at-phu]]).
@@ -1542,7 +1542,7 @@ TJPS chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
 ::staff treble C4+E4+G4+Bb4=C7 F4+Ab4+B4+D5=F°7 F4+A4+C5+E5=Fmaj7 / Db4+F4+Ab4+Cb5=D♭7 C4+E4+G4=C | Ô 2: C7 → F°7 → Fmaj7 (hợp âm giảm làm chậm việc về IV); ô 8: D♭7 thay G7 rồi về C
 
 ## Gospel và jazz
-Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60): nhiều kết IV – I, nốt blue, đệm "gõ" theo tiếng đàn [[organ-ong|organ nhà thờ]] (xem [[am-giai-blues]], [[blues-12-nhip]]). Các kỹ thuật trên cũng dùng trực tiếp cho [[dem-hat-piano|đệm hát]] thánh ca và [[nhac-pho|nhạc phổ]] thông.
+Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60): nhiều kết IV – I, nốt blue, đệm "gõ" theo tiếng đàn [[organ-ong|organ nhà thờ]] (xem [[am-giai-blues]], [[blues-12-nhip]]). Các kỹ thuật trên cũng dùng trực tiếp cho [[dem-hat-piano|đệm hát]] thánh ca và [[nhac-pho|nhạc phổ thông]].
 `,
   },
   {
@@ -1661,6 +1661,7 @@ Turnaround ở cuối mỗi đoạn A: [[turnaround-jazz]].
 - Các nhạc công bebop còn **chồng thêm chuỗi ii – V** lên vòng này, biến nó thành "bài kiểm tra tay nghề" ngẫu hứng.
 
 Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]], quy trình "bông tuyết"): [[sang-tac-jazz]].
+
 ## Học rhythm changes thế nào?
 1. Thuộc đoạn A dạng đơn giản nhất (I – vi – ii – V) và đoạn B (bốn hợp âm 7 át).
 2. Chơi [[ii-v-i|nốt dẫn hướng]] qua cả 32 ô.
@@ -1894,7 +1895,7 @@ Liên quan: [[ngau-hung-doc-ngang]], [[dem-jazz]], [[tai-hoa-am]].
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['avoid note', 'avoid notes', 'nốt tránh', 'dissonant intervals', 'quãng nghịch jazz', 'nốt tránh jazz'],
-    summary: 'Nốt tránh là nốt nằm nửa cung trên một nốt hợp âm (F trên Cmaj7, C trên G7, B trên Dm7): dùng làm nốt lướt nhanh, không ngân dài. Quãng nghịch (quãng 2, 7, tritone, quãng 9 thứ) tạo căng; giải quyết về quãng thuận hoặc nốt dẫn hướng — căng và giải toả như những đợt sóng.',
+    summary: 'Nốt tránh là nốt nằm nửa cung trên một nốt hợp âm (F trên Cmaj7, C trên G7; TJPS xếp thêm B trên Dm7): dùng làm nốt lướt nhanh, không ngân dài. Quãng nghịch (quãng 2, 7, tritone, quãng 9 thứ) tạo căng; giải quyết về quãng thuận hoặc nốt dẫn hướng — căng và giải toả như những đợt sóng.',
     refs: [
       ['The Jazz Piano Site — Avoid Notes', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/avoid-notes/'],
       ['The Jazz Piano Site — Dissonant Intervals', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/dissonant-intervals/'],
@@ -1909,7 +1910,7 @@ TJPS định nghĩa: **nốt tránh là bất kỳ nốt nào cao hơn một n�
 |---|---|---|
 | [[hop-am-bay|maj7]] | Bậc 4 | F trên Cmaj7 (nửa cung trên E) |
 | 7 (át) | Bậc 4 | C trên G7 (nửa cung trên B) |
-| m7 | Bậc 6 | B trên Dm7 (nửa cung trên A) |
+| m7 | Bậc 6 | B trên Dm7 (cách A một cung, tạo tritone với F) |
 | m7♭5 | Bậc 2 và 6 | C và G trên Bø7 |
 TJPS lưu ý khái niệm này **có phần chủ quan**: nhiều người không coi bậc 6 [[dieu-thuc|Dorian]] trên m7 là nốt tránh; người chơi hiện đại cũng hay đặt ♯9 ngay trên một nốt hợp âm.
 
@@ -2362,6 +2363,7 @@ Cơ sở lý thuyết của việc chọn hợp âm và tránh lực hút V – 
 ## Đệm và solo trên một điệu thức
 - Đệm: các hợp âm quãng 4 **di chuyển song song trong điệu thức** (lối của [[mccoy-tyner|McCoy Tyner]] thập niên 1960 — TJPS) — xem [[hoa-am-quang-bon]].
 - Solo: để nghe ra điệu thức, nhấn **nốt đặc trưng** (B trong Rê Dorian); dùng [[am-giai-ngu-cung|ngũ cung]], [[choi-ngoai-jazz|side-slipping]] để tạo căng trên nền tĩnh.
+
 ## Biến một bài điệu tính thành bài điệu thức (TJPS)
 - **Bỏ hẳn tiến trình gốc**, thay bằng **một** (hoặc một hai) hợp âm kéo dài — không phải gộp từng ii – V – I.
 - Thêm **vamp / riff / [[ostinato|ostinato]]** dưới giai điệu: tự viết, hoặc mượn một vamp điệu thức quen ("So What", "Maiden Voyage"); [[ky-hieu-hop-am|lead sheet]] thường không ghi vamp.

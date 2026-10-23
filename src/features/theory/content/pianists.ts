@@ -64,17 +64,17 @@ const PIANISTS = [
   p('Ludwig van Beethoven', '1770–1827', 'Đức', 'p19:classical', 'Nổi tiếng ở Vienna trước hết với tư cách nghệ sĩ piano ứng tác.', ['Sonata "Appassionata"'], { existing: true }),
   p('Johann Nepomuk Hummel', '1778–1837', 'Áo', 'p19:classical', 'Học trò Mozart, một trong những nghệ sĩ piano nổi tiếng nhất đầu thế kỷ 19.', ['Concerto piano La thứ'], { existing: true }),
   p('John Field', '1782–1837', 'Ireland', 'p19:classical', 'Học trò Clementi, sống ở Nga; cha đẻ của nocturne.', ['18 Nocturne'], { existing: true }),
-  p('Friedrich Kalkbrenner', '1785–1849', 'Đức – Pháp', 'p19:classical', 'Nghệ sĩ bậc thầy hàng đầu ở Paris thập niên 1820–30; Chopin từng tính theo học ông.', ['Méthode pour apprendre le piano-forte'], { topics: ['ngon-bam'] }),
+  p('Friedrich Kalkbrenner', '1785–1849', 'Đức – Pháp', 'p19:classical', 'Nghệ sĩ bậc thầy hàng đầu ở Paris thập niên 1820–1830; Chopin từng tính theo học ông.', ['Méthode pour apprendre le piano-forte'], { topics: ['ngon-bam'] }),
   p('Ignaz Moscheles', '1794–1870', 'Séc – Đức', 'p19:classical', 'Bạn và thầy của Mendelssohn; về sau dạy tại Nhạc viện Leipzig.', ['24 Études Op. 70']),
   p('Frédéric Chopin', '1810–1849', 'Ba Lan – Pháp', 'p19:virtuoso', 'Ít biểu diễn công khai nhưng lối chơi tinh tế, giàu rubato trở thành huyền thoại.', ['Nocturne, Ballade, Étude'], { existing: true }),
-  p('Franz Liszt', '1811–1886', 'Hungary', 'p19:virtuoso', 'Nghệ sĩ piano vĩ đại nhất thế kỷ 19; người đặt ra hình thức độc tấu (recital).', ['Hungarian Rhapsodies'], { existing: true }),
-  p('Sigismond Thalberg', '1812–1871', 'Thuỵ Sĩ – Áo', 'p19:virtuoso', 'Đối thủ nổi tiếng của Liszt; kỹ thuật đặt giai điệu ở giữa, hai ngón cái, bao quanh bằng hợp âm rải — tạo cảm giác "ba tay".', ['Fantasia trên opera "Moïse"'], { topics: ['lam-noi-giai-dieu', 'luyen-hop-am-rai'] }),
+  p('Franz Liszt', '1811–1886', 'Hungary', 'p19:virtuoso', 'Nghệ sĩ piano vĩ đại nhất thế kỷ 19; người đặt ra hình thức buổi độc tấu (recital).', ['Hungarian Rhapsodies'], { existing: true }),
+  p('Sigismond Thalberg', '1812–1871', 'Thuỵ Sĩ – Áo', 'p19:virtuoso', 'Đối thủ nổi tiếng của Liszt; kỹ thuật đặt giai điệu ở âm vực giữa, chơi bằng hai ngón cái, xung quanh là hợp âm rải — tạo cảm giác "ba tay".', ['Fantasia trên opera "Moïse"'], { topics: ['lam-noi-giai-dieu', 'luyen-hop-am-rai'] }),
   p('Charles-Valentin Alkan', '1813–1888', 'Pháp', 'p19:virtuoso', 'Bạn của Chopin; kỹ thuật đáng kinh ngạc, sống ẩn dật.', ['12 Études Op. 39'], { existing: true }),
   p('Clara Schumann', '1819–1896', 'Đức', 'p19:virtuoso', 'Một trong những nghệ sĩ piano lớn nhất thế kỷ 19; năm 1837 chơi thuộc lòng Sonata Appassionata ở Berlin — có lẽ là người đầu tiên biểu diễn thuộc lòng một cách có hệ thống.', ['Ra mắt nhiều tác phẩm của Robert Schumann và Brahms'], { existing: true }),
   p('Anton Rubinstein', '1829–1894', 'Nga', 'p19:virtuoso', 'Đối thủ ngang tầm Liszt; nổi tiếng với chuỗi "buổi độc tấu lịch sử" đi qua toàn bộ văn học piano.', ['Melody in F'], { existing: true }),
   p('Carl Tausig', '1841–1871', 'Ba Lan – Đức', 'p19:virtuoso', 'Học trò xuất sắc nhất của Liszt, mất năm 29 tuổi.', ['Tägliche Studien (bài tập hằng ngày)'], { topics: ['bai-tap-ngon'] }),
   p('Teresa Carreño', '1853–1917', 'Venezuela', 'p19:virtuoso', 'Nữ nghệ sĩ piano lừng danh, được mệnh danh "Nữ thần Valkyrie của piano".', ['Concerto của Grieg']),
-  p('Ignacy Jan Paderewski', '1860–1941', 'Ba Lan', 'p19:virtuoso', 'Nghệ sĩ piano nổi tiếng nhất thế giới cuối thế kỷ 19; năm 1919 làm Thủ tướng Ba Lan.', ['Minuet cung Sol', 'Biên tập toàn tập Chopin'], { short: 'Paderewski' }),
+  p('Ignacy Jan Paderewski', '1860–1941', 'Ba Lan', 'p19:virtuoso', 'Nghệ sĩ piano nổi tiếng nhất thế giới cuối thế kỷ 19; năm 1919 làm Thủ tướng Ba Lan.', ['Minuet Sol trưởng', 'Biên tập toàn tập Chopin'], { short: 'Paderewski' }),
   p('Carl Czerny', '1791–1857', 'Áo', 'p19:teachers', 'Học trò Beethoven, thầy của Liszt — mắt xích nối hai thế hệ.', ['Op. 299, Op. 740'], { existing: true }),
   p('Hans von Bülow', '1830–1894', 'Đức', 'p19:teachers', 'Học trò Liszt, nghệ sĩ piano và nhạc trưởng; ra mắt Concerto piano số 1 của Tchaikovsky (1875).', ['Ấn bản sonata Beethoven có chú giải'], { topics: ['dien-dat-cau-nhac'] }),
   p('Theodor Leschetizky', '1830–1915', 'Ba Lan – Áo', 'p19:teachers', 'Một trong những người thầy piano nổi tiếng nhất mọi thời đại; học trò có Paderewski và Schnabel.', ['Trường phái Leschetizky ở Vienna'], { topics: ['phuong-phap-luyen-tap'] }),
@@ -135,7 +135,7 @@ const PIANISTS = [
   p('Bud Powell', '1924–1966', 'Mỹ', 'pjz:modern', 'Chuyển ngôn ngữ bebop của kèn sang piano: giai điệu nhanh tay phải, shell voicing tay trái.', ['Un Poco Loco'], { topics: ['xep-hop-am'] }),
   p('Oscar Peterson', '1925–2007', 'Canada', 'pjz:modern', 'Kỹ thuật điêu luyện, swing mạnh mẽ.', ['Hymn to Freedom', 'Night Train'], { topics: ['swing'] }),
   p('Bill Evans', '1929–1980', 'Mỹ', 'pjz:modern', 'Hoà âm ấn tượng và rootless voicing; chơi trong album "Kind of Blue" của Miles Davis.', ['Waltz for Debby', 'Peace Piece'], { short: 'Bill Evans', topics: ['xep-hop-am', 'hoa-am-quang-bon', 'an-tuong'] }),
-  p('McCoy Tyner', '1938–2020', 'Mỹ', 'pjz:modern', 'Pianist của bộ tứ John Coltrane; hoà âm quãng 4 đặc trưng.', ['Passion Dance'], { topics: ['hoa-am-quang-bon', 'dieu-thuc'] }),
+  p('McCoy Tyner', '1938–2020', 'Mỹ', 'pjz:modern', 'Nghệ sĩ piano của bộ tứ John Coltrane; hoà âm quãng 4 đặc trưng.', ['Passion Dance'], { topics: ['hoa-am-quang-bon', 'dieu-thuc'] }),
   p('Herbie Hancock', '1940–', 'Mỹ', 'pjz:modern', 'Từ jazz modal với Miles Davis đến funk và điện tử.', ['Maiden Voyage', 'Cantaloupe Island'], { topics: ['dieu-thuc'] }),
   p('Chick Corea', '1941–2021', 'Mỹ', 'pjz:modern', 'Kết hợp jazz, Latin và cổ điển.', ['Spain', 'Children\'s Songs'], { topics: ['dao-phach'] }),
   p('Keith Jarrett', '1945–', 'Mỹ', 'pjz:modern', 'Nổi tiếng với các buổi độc tấu ngẫu hứng hoàn toàn.', ['The Köln Concert (1975)'], { topics: ['ngau-hung-piano'] }),
@@ -166,7 +166,7 @@ export const pianoSchools: Article[] = [
 ## Trường phái Nga
 Về hệ thống đào tạo và dòng thầy – trò: [[truong-phai-su-pham-nga]].
 - **Ba trụ cột** thường được nhắc tới ở Nhạc viện Moscow: **Alexander Goldenweiser**, **Konstantin Igumnov** và **[[heinrich-neuhaus|Heinrich Neuhaus]]**. [[neuhaus-nghe-thuat-choi-piano|Neuhaus]] dạy tại Nhạc viện Moscow từ 1922 đến 1964; học trò có [[Richter]] và [[Gilels]].
-- **Tiếng đàn hát**: Igumnov là ví dụ được ghi chép kỹ nhất — tiếng đàn đẹp, nhiều màu sắc, "mang tính chất giọng người"; ưa sự tinh tế, kiềm chế, pianissimo rất mỏng. ([[Richter]] nhận xét tiếng đàn của ông sáng và tinh tế nhưng [[cao-do|âm vực]] sắc thái khá hẹp.)
+- **Tiếng đàn hát**: Igumnov là ví dụ được ghi chép kỹ nhất — tiếng đàn đẹp, nhiều màu sắc, "mang tính chất giọng người"; ưa sự tinh tế, kiềm chế, pianissimo rất mỏng. ([[Richter]] nhận xét tiếng đàn của ông sáng và tinh tế nhưng [[cao-do|biên độ]] sắc thái khá hẹp.)
 - Truyền thống gắn với lối chơi rộng, giàu [[giai-dieu|giai điệu]], bắt rễ từ dân ca Nga và dòng [[Anton Rubinstein]] – [[Rachmaninoff]].
 
 Kỹ thuật liên quan: [[lam-noi-giai-dieu]], [[dien-dat-cau-nhac]].

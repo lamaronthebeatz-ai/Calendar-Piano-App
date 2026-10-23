@@ -94,12 +94,12 @@ export function StudentProfilePage() {
 
         {stats && (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <StatTile label="Buổi học / Tuần" value={String(stats.weeklyLessons)} />
-            <StatTile label="Giờ học / Tuần" value={`${stats.weeklyHours}h`} />
+            <StatTile label="Buổi học / tuần" value={String(stats.weeklyLessons)} />
+            <StatTile label="Giờ học / tuần" value={`${stats.weeklyHours}h`} />
             {student.rateType === 'monthly' ? (
-              <StatTile label="Học phí / Tháng" value={formatCurrency(stats.estimatedMonthlyRevenue, settings.currency)} />
+              <StatTile label="Học phí / tháng" value={formatCurrency(stats.estimatedMonthlyRevenue, settings.currency)} />
             ) : (
-              stats.estimatedWeeklyRevenue > 0 && <StatTile label="Doanh thu ước tính / Tuần" value={formatCurrency(stats.estimatedWeeklyRevenue, settings.currency)} />
+              stats.estimatedWeeklyRevenue > 0 && <StatTile label="Doanh thu ước tính / tuần" value={formatCurrency(stats.estimatedWeeklyRevenue, settings.currency)} />
             )}
           </div>
         )}
@@ -114,7 +114,7 @@ export function StudentProfilePage() {
         <div>
           <p className="mb-3 text-[13px] font-semibold text-[var(--color-ink)]">Lịch học hằng tuần</p>
           {!stats || stats.slots.length === 0 ? (
-            <EmptyState icon={<CalendarIcon width={26} height={26} />} title="Chưa có trong thời khóa biểu" description="Thêm buổi học cố định hằng tuần cho học viên này." />
+            <EmptyState icon={<CalendarIcon width={26} height={26} />} title="Chưa có trong thời khoá biểu" description="Thêm buổi học cố định hằng tuần cho học viên này." />
           ) : (
             <ul className="space-y-2">
               {stats.slots.map((slot) => (

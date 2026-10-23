@@ -164,7 +164,7 @@ Tác phẩm phức điệu nghiêm khắc phần lớn viết cho **dàn hợp x
 
 ## 1. Điệu thức
 - Phần lớn giai điệu viết trên các **[[dieu-thuc|điệu thức]] diatonic cổ**: Dorian, Phrygian, Mixolydian…
-- Đây là hệ điệu thức tự nhiên: màu sắc trưởng – thứ và cảm giác **công năng không rõ**; **nốt nào cũng có thể làm chủ âm**, và chỉ khi **kết thúc** điệu thức mới được xác định.
+- Đây là hệ điệu thức tự nhiên: màu sắc trưởng – thứ và cảm giác **công năng** đều **không rõ**; **nốt nào cũng có thể làm chủ âm**, và chỉ khi **kết thúc** điệu thức mới được xác định.
 ::scan taneev 8 | Một giai điệu trên điệu thức diatonic cổ
 ::staff treble D4 F4 E4 D4 G4 F4 A4 G4 F4 E4 D4 | Một giai điệu Dorian (điệu thức Rê): chỉ đến nốt kết mới chắc chắn chủ âm là Rê
 
@@ -178,11 +178,11 @@ Tác phẩm phức điệu nghiêm khắc phần lớn viết cho **dàn hợp x
 | **Phản hồi sau bước nhảy** | Sau bước nhảy quãng thuận phải có **phản hồi**: đi liền bậc **ngược hướng**, hoặc nhảy ngược hướng |
 | **Hai bước nhảy** | Tránh hai bước nhảy **liên tiếp cùng hướng** |
 | **Đường nét** | Giai điệu đi **lượn sóng**; xen kẽ liền bậc với bước nhảy |
-| **Không nên** | Nhắc đi nhắc lại một nốt nhiều lần; tiến hành mang tính **[[mo-tien-hoa-am|mô tiến]]** (lặp một hình ở các bậc khác nhau); dùng nhiều dấu nghỉ |
+| **Không nên** | Nhắc đi nhắc lại một nốt nhiều lần; tiến hành mang tính **[[mo-tien-hoa-am|mô tiến]]** (lặp một hình ở các bậc khác nhau); dùng nhiều dấu lặng |
 ::scan taneev 9 | Biến âm: a) âm nguyên và âm biến ở xa nhau; b) không nên — đứng sát nhau
 ::scan taneev 10 | Bước nhảy và phản hồi: a) được; b), c) không nên
 ::scan taneev 11 | Những đoạn liền bậc mang âm hưởng ba cung — không nên dùng
-::scan taneev 12,13,14 | Không nên: nhắc đi nhắc lại một nốt (Thí dụ 12), tiến hành mô tiến (Thí dụ 13), nhiều dấu nghỉ (Thí dụ 14)
+::scan taneev 12,13,14 | Không nên: nhắc đi nhắc lại một nốt (Thí dụ 12), tiến hành mô tiến (Thí dụ 13), nhiều dấu lặng (Thí dụ 14)
 ::staff treble C4 A4 G4 F4 / D4 G4 F4 E4 / C4 E4 G4 C5 | Bước nhảy và phản hồi: nhảy lên quãng 6 rồi đi xuống liền bậc (tốt) · nhảy lên quãng 4 rồi xuống liền bậc (tốt) · ba bước nhảy cùng hướng C – E – G – C (không nên)
 ::staff treble F4 G4 A4 B4 / B4 C5 B4 Bb4 | Không nên: Fa – Sol – La – Si mang âm hưởng ba cung · Si và Si♭ đứng sát nhau (nửa cung cromatic)
 
@@ -191,7 +191,7 @@ Tác phẩm phức điệu nghiêm khắc phần lớn viết cho **dàn hợp x
 - **Nốt móc đơn** chỉ dùng làm [[not-ngoai-hop-am|nốt lướt, nốt thêu]], thường từng cặp ở phách nhẹ; liên ba và nhịp phân ba rất hiếm.
 - **Không dùng [[dao-phach|đảo phách]], nghịch phách**: không nối một nốt ngắn sang một nốt dài hơn. Nốt trắng nối sang nốt tròn thì được.
 ::scan taneev 15 | Không nên: nghịch phách, nối nốt ngắn sang nốt dài hơn; chỗ ghi "Được dùng" là nốt trắng nối sang nốt tròn
-- Tiết tấu **không đổi đột ngột**, nhất là ở phách mạnh. Muốn chuyển từ nốt dài sang nốt ngắn hơn, cần **chuẩn bị ở phách mạnh bằng một nốt lưu** (nốt được nối). Nếu chỗ chuyển bắt đầu ở **phách yếu** thì không cần chuẩn bị.
+- Tiết tấu **không đổi đột ngột**, nhất là ở phách mạnh. Muốn chuyển từ nốt dài sang nốt ngắn hơn, cần **chuẩn bị ở phách mạnh bằng một nốt lưu** (nốt được nối). Nếu chỗ chuyển bắt đầu ở **phách nhẹ** thì không cần chuẩn bị.
 ::scan taneev 16 | Chuyển từ nốt dài sang nốt ngắn hơn có chuẩn bị bằng nốt lưu ở phách mạnh
 ::rhythm 2/2 h h~ / h q q / q q h | Nốt trắng được nối sang phách mạnh (nốt lưu) rồi mới đi nốt đen — cách chuyển trường độ đúng lối nghiêm khắc
 
@@ -203,7 +203,7 @@ Tiếp theo: [[doi-vi-don-gian-hai-be]].
     title: "Đối vị đơn giản hai bè",
     category: 'polyphony',
     aliases: ["đối vị đơn giản", "đối vị hai bè", "nốt lưu", "quãng nghịch phách mạnh", "nốt nghịch cố định", "nốt nghịch không cố định", "nốt tự do", "nốt chuẩn bị", "nốt giải quyết", "chếch hướng"],
-    summary: "Đối vị đơn giản là sự kết hợp hai bè dùng một lần. Bài gồm: đối tỉ tiết tấu và hướng đi; cách dùng quãng thuận hoàn toàn và không hoàn toàn; quãng nghịch (kể cả quãng 4 đúng); nốt lưu ở phách mạnh với nốt nghịch cố định (quãng 2 ở bè dưới, quãng 7 ở bè trên) và không cố định (quãng 4, quãng 9); sơ đồ chuẩn bị; nốt lướt, thêu, sớm, thoát ở phách yếu; và hai cách giải quyết đặc biệt.",
+    summary: "Đối vị đơn giản là sự kết hợp hai bè dùng một lần. Bài gồm: đối tỉ tiết tấu và hướng đi; cách dùng quãng thuận hoàn toàn và không hoàn toàn; quãng nghịch (kể cả quãng 4 đúng); nốt lưu ở phách mạnh với nốt nghịch cố định (quãng 2 ở bè dưới, quãng 7 ở bè trên) và không cố định (quãng 4, quãng 9); sơ đồ chuẩn bị; nốt lướt, thêu, sớm, thoát ở phách nhẹ; và hai cách giải quyết đặc biệt.",
     refs: [
       ["Phạm Tú Hương, Phức điệu nghiêm khắc (hiệu đính Nguyễn Thụy Loan), Nhạc viện Hà Nội, 1991 — sách in", ""],
     ],
@@ -225,7 +225,7 @@ Sự **đối tỉ giữa hai giai điệu cùng vang** là cơ sở của phứ
 Vì sao hạn chế quãng thuận hoàn toàn:
 - Ở phách mạnh, nhất là **đồng âm**, chúng tạo cảm giác **ngưng đọng**.
 - Chúng làm hai bè **hoà làm một**, xoá nhoà đối tỉ — nên không dùng nhiều quãng hoàn toàn liền nhau.
-- Chủ yếu dùng ở **chỗ mở đầu và chỗ kết**; ở giữa nên đặt ở **phách yếu**, xen với quãng bán thuận và quãng nghịch.
+- Chủ yếu dùng ở **chỗ mở đầu và chỗ kết**; ở giữa nên đặt ở **phách nhẹ**, xen với quãng bán thuận và quãng nghịch.
 - **Song song bị cấm**; cùng hướng nên hạn chế; tốt nhất là vào bằng **ngược hướng** hoặc **chếch hướng**.
 ::scan taneev 19 | Vào quãng thuận hoàn toàn bằng ngược hướng và chếch hướng
 
@@ -259,15 +259,15 @@ Giáo trình chia quãng nghịch phách mạnh làm hai loại:
 | Nốt nghịch ở | dưới | trên (hoặc dưới) | trên | dưới (hoặc trên) | trên | trên |
 (Vạch trên/dưới trong sơ đồ gốc của giáo trình: 1 vạch dưới, 3 vạch trên, 6 trên, 8 dưới, 10 trên, 13 trên — tức các vị trí **ưu tiên**.)
 
-### b) Ở phách yếu
-Ở phách yếu, quãng nghịch dùng dưới dạng **[[not-ngoai-hop-am|nốt lướt, nốt thêu, nốt sớm, nốt thoát]]**, về cơ bản như trong hoà âm:
+### b) Ở phách nhẹ
+Ở phách nhẹ, quãng nghịch dùng dưới dạng **[[not-ngoai-hop-am|nốt lướt, nốt thêu, nốt sớm, nốt thoát]]**, về cơ bản như trong hoà âm:
 | Dạng | Ghi chú của giáo trình |
 |---|---|
 | **Nốt lướt** | Đi liền bậc qua giữa hai nốt thuận |
 | **Nốt thêu** | Lối nghiêm khắc thường dùng **thêu dưới** |
 | **Nốt sớm** | Nốt đến trước nốt thuận ở phách sau (tiếng Anh: *anticipation*) |
 | **Nốt thoát** | **Khác hoà âm**: giống một nốt thêu dưới nhưng **giải quyết bằng cách nhảy xuống một quãng 3** |
-::scan taneev 25,26,27,28 | Quãng nghịch ở phách yếu: nốt lướt (Thí dụ 25), nốt thêu dưới (26), nốt sớm (27), nốt thoát (28) — dấu × đánh nốt nghịch
+::scan taneev 25,26,27,28 | Quãng nghịch ở phách nhẹ: nốt lướt (Thí dụ 25), nốt thêu dưới (26), nốt sớm (27), nốt thoát (28) — dấu × đánh nốt nghịch
 ::scan taneev 29 | Thí dụ mẫu: đối vị đơn giản hai bè dùng các loại quãng nghịch
 
 ### c) Hai cách giải quyết đặc biệt
@@ -428,7 +428,7 @@ Nguyên thể của chuyển gần quãng 5 chính là biến thể của chuy�
 - Quãng 5 (đơn, kép) thành **đồng âm, quãng 8**.
 - **Quãng 8 (số 7) thành quãng 4** → quãng 8 ở NT phải chuẩn bị như nghịch (trên hoặc dưới).
 - **Quãng 6 (số 5) thành quãng 2** → chỉ chuẩn bị ở **dưới**. Quãng 13 (số 12) thành quãng 9 → trên hoặc dưới.
-- Nhiều quãng nghịch liền nhau phải giải quyết bằng **nốt lướt hoặc thêu**, đúng luật phách yếu.
+- Nhiều quãng nghịch liền nhau phải giải quyết bằng **nốt lướt hoặc thêu**, đúng luật phách nhẹ.
 ::scan taneev 47 | Các quãng nghịch đi liền nhau giải quyết theo dạng nốt lướt, nốt thêu
 | Sơ đồ (Iv −4) | 5 dưới | 6 trên | 7 trên/dưới | 8 trên/dưới | 10 trên | 12 trên/dưới |
 |---|---|---|---|---|---|---|
@@ -620,7 +620,7 @@ Lối nghiêm khắc **không có khái niệm hợp âm nghịch** (hợp âm b
 ## Quãng nghịch và quãng 4
 - **Phách mạnh**: như hai bè — dạng **nốt lưu** có chuẩn bị và giải quyết. Khác ở chỗ: có thể chuẩn bị **cùng lúc ở hai cặp bè**, và giải quyết **lần lượt** hoặc **cùng lúc** (giải quyết lần lượt làm ba bè tương phản tiết tấu hơn). Được phép để **nốt giải quyết** của một quãng nghịch đồng thời tạo **quãng nghịch mới** với bè khác — sinh ra **chuỗi móc xích nốt nghịch**.
 ::scan taneev 73,74 | Nốt lưu ba bè: a), b), c) — chuẩn bị ở một hay hai cặp bè, giải quyết lần lượt (Thí dụ 73); một bài ba bè có đánh số quãng nghịch (Thí dụ 74)
-- **Phách yếu**: nốt lướt, thêu, thoát, sớm như hai bè; được dùng **cùng lúc hai nốt lướt, hai nốt thêu**, thậm chí một nốt lướt với một nốt thoát — miễn là **hai nốt ấy thuận với nhau**.
+- **Phách nhẹ**: nốt lướt, thêu, thoát, sớm như hai bè; được dùng **cùng lúc hai nốt lướt, hai nốt thêu**, thậm chí một nốt lướt với một nốt thoát — miễn là **hai nốt ấy thuận với nhau**.
 ::scan taneev 76 | Hai nốt lướt, nốt thêu cùng lúc (dấu ×)
 - **Quãng 4 (số 3)**: vì hợp âm 6/3 dùng tự do, quãng 4 ở **cặp trên** được **coi như thuận**, dùng tự do, kể cả **song song quãng 4** (không nên kéo dài). Ở **cặp dưới** và **cặp ngoài** quãng 4 **vẫn là nghịch**.
 ::scan taneev 75 | Quãng 4 ở cặp trên coi như thuận; ở cặp dưới và cặp ngoài phải chuẩn bị
@@ -634,7 +634,7 @@ Lối nghiêm khắc **không có khái niệm hợp âm nghịch** (hợp âm b
 Phải dùng **Iv cho cả ba cặp**: Iv1 (cặp trên), Iv2 (cặp dưới), Iv3 (cặp ngoài).
 **Công thức: Iv1 + Iv2 = Iv3.**
 Dấu dời của từng bè: bè **I** lên +, xuống −; bè **III** lên −, xuống +; bè **II** (giữa) đi lên thì **−** với cặp trên nhưng **+** với cặp dưới, đi xuống thì ngược lại.
-Ba bè có **năm biến thể** (năm cách hoán vị thứ tự ba bè). Thường dùng nhất là chuyển động **chiều dọc**; chiều ngang, ngang – dọc và đảo ảnh ít dùng.
+Ba bè có **năm biến thể** (năm cách xếp lại thứ tự ba bè, ngoài nguyên thể). Thường dùng nhất là chuyển động **chiều dọc**; chiều ngang, ngang – dọc và đảo ảnh ít dùng.
 ::scan taneev sd30 | Năm biến thể của ba bè (BT1 – BT5)
 | Biến thể | Bè nào đổi chỗ | Iv1 / Iv2 / Iv3 | Cách viết (chuyển chỗ quãng 8) |
 |---|---|---|---|
@@ -648,7 +648,7 @@ Ba bè có **năm biến thể** (năm cách hoán vị thứ tự ba bè). Thư
 Ví dụ kiểm công thức (BT1 trong giáo trình): Iv1 = (I −4) + (II −3) = −7; Iv2 = (II +3) + (III +4) = +7; Iv3 = −7 + 7 = 0.
 
 ### Tam trùng đối vị (quãng 8)
-Trong chuyển chỗ quãng 8 ba bè, có thể viết **một nguyên thể cho cả năm biến thể** — gọi là **tam trùng đối vị**; vì chỉ làm được bằng đối vị quãng 8, gọi đầy đủ là **tam trùng đối vị quãng tám** (tiếng Anh: *triple counterpoint*). Kiểm: (−7) + (−7) = (−14), đúng công thức.
+Trong chuyển chỗ quãng 8 ba bè, có thể viết **một nguyên thể cho cả năm biến thể** — gọi là **tam trùng đối vị**; vì chỉ làm được bằng đối vị quãng 8, gọi đầy đủ là **tam trùng đối vị quãng 8** (tiếng Anh: *triple counterpoint*). Kiểm: (−7) + (−7) = (−14), đúng công thức.
 - Cả **ba cặp** viết theo **Iv = −7**.
 - Không cặp nào đi **cùng hướng đến quãng thuận hoàn toàn**.
 ::scan taneev 80 | Tam trùng đối vị: Iv1 = −7, Iv2 = −14, Iv3 = −21 (phần đầu)
@@ -866,7 +866,7 @@ Vì quãng mô phỏng khác nhau, phải dùng **đối vị chuyển động c
 | 5 | x **lớn hơn** y (x thuộc cặp ngoài) | Cặp **ngoài** | Cặp **trên** | Cặp dưới = biến thể của cặp ngoài |
 | 6 | x lớn hơn y | Cặp **ngoài** | Cặp **dưới** | Cặp trên = biến thể của cặp ngoài |
 Với cách 3: viết A (P); A → A1 quãng x (R1); A1 → A2 quãng y (R2). Viết B **đối vị phức tạp** theo Iv với A1, rồi chuyển đến B1 và B2 (B1 tự động đúng với A2, vì đó là biến thể của cặp A1/B). Viết C đối vị phức tạp với B1 và đối vị đơn giản với A2… Ví dụ của giáo trình (cách 6): Iv = −14, x = −9, y = −5.
-::scan taneev sd45,100 | Loại I kiểu 2: sơ đồ (Sơ đồ 45) và bài mẫu IV = −14, x = −9, y = −5 (Thí dụ 100)
+::scan taneev sd45,100 | Loại I kiểu 2: sơ đồ (Sơ đồ 45) và bài mẫu Iv = −14, x = −9, y = −5 (Thí dụ 100)
 
 ## Loại II — bè canon giả
 **Kiểu 1** (thời gian khác, quãng bằng nhau; nhóm 1) dùng **đối vị chiều ngang** với bè canon giả:
@@ -903,7 +903,7 @@ Tiếp theo: [[hinh-thuc-phuc-dieu-nghiem-khac]].
 Hai hình thức chính: **thể hai đoạn** và **thể ba đoạn**. (So với [[hinh-thuc-hai-doan]] và [[hinh-thuc-ba-doan]] trong nhạc chủ điệu.)
 
 ## Thể hai đoạn
-Thời kỳ đầu của phức điệu nghiêm khắc, thể hai đoạn giữ vai trò rất quan trọng; chỉ khi phức điệu nghiêm khắc xuất hiện **mầm mống hoà âm**, thể ba đoạn mới dùng rộng rãi.
+Ở thời kỳ đầu của phức điệu nghiêm khắc, thể hai đoạn giữ vai trò rất quan trọng; chỉ khi trong phức điệu nghiêm khắc xuất hiện **mầm mống hoà âm**, thể ba đoạn mới được dùng rộng rãi.
 | | **Hai đoạn tương phản** | **Hai đoạn mô phỏng** |
 |---|---|---|
 | Đoạn 1 | Một **nguyên thể** | Ngắn gọn; thường là **một canon ba bè** (vào bằng cách xuất phát nào cũng được) |
@@ -996,7 +996,7 @@ Quy tắc kinh điển ([[Fux]], "Gradus ad Parnassum", 1725): ưu tiên [[quang
 |---|---|---|
 | **Thuận hoàn toàn** | Đồng âm (1), 5 đúng, 8 đúng (12, 15…) | Ổn định, "rỗng" — dùng ở đầu và cuối |
 | **Thuận không hoàn toàn** | 3 và 6 (trưởng, thứ), 10 | Ấm, đầy — là "bánh mì" của phần giữa |
-| **Nghịch** | 2, 7, 9, tritone (4 tăng / 5 giảm), **và quãng 4 đúng** | Chỉ dùng có điều kiện ([[not-ngoai-hop-am|nốt lướt]], nốt thêu, nốt treo) |
+| **Nghịch** | 2, 7, 9, quãng ba cung (*tritone*: 4 tăng / 5 giảm), **và quãng 4 đúng** | Chỉ dùng có điều kiện ([[not-ngoai-hop-am|nốt lướt]], nốt thêu, nốt treo) |
 ::staff treble C4+C5=8 C4+G4=5 / C4+E4=3 C4+A4=6 C4+E5=10 / C4+D4=2 C4+F4=4 C4+F#4=4+ C4+B4=7 C4+D5=9 | Thuận hoàn toàn · thuận không hoàn toàn · nghịch (4 đúng được tính là nghịch khi có bè thấp nhất tham gia)
 - **Quãng 4**: nghịch **mỗi khi có bè thấp nhất** tham gia — nên trong hai bè, quãng 4 luôn là nghịch. Từ ba bè trở lên, quãng 4 **giữa hai bè trên** dùng được nếu cả hai bè đều thuận với bè trầm (xem [[doi-am-ba-bon-be]]).
 - Phân loại này khớp với độ "trong" của tỉ lệ dao động: 2:1, 3:2 đơn giản nhất — xem [[thuan-nghich]], [[chuoi-boi-am]].
@@ -1045,7 +1045,7 @@ Hai bè đi song song ở quãng 8 hay 5 nghe như **một bè được tô dày
     body: `
 ## Ví dụ
 ::staff treble D4=1 F4=2 E4=3 D4=4 G4=5 F4=6 A4=7 G4=8 F4=9 E4=10 D4=11 | Một cantus firmus ở điệu thức Rê (Dorian), 11 nốt — số dưới nốt là thứ tự; được dùng làm cantus cho mọi ví dụ trong loạt bài này
-Phân tích: bắt đầu và kết ở **D**; đỉnh duy nhất **A** (nốt 7); các bước nhảy D – F, D – G, F – A là quãng 3 và 4, mỗi bước được theo sau bằng chuyển động liền bậc; kết bằng **E – D** (re – do) đi xuống liền bậc.
+Phân tích: bắt đầu và kết ở **D**; đỉnh duy nhất **A** (nốt 7); các bước nhảy D – F, D – G, F – A là quãng 3 và 4, mỗi bước được theo sau bằng chuyển động liền bậc; kết bằng **E – D** (bậc 2 → bậc 1, tức re → do) đi xuống liền bậc.
 
 ## Quy tắc (theo Open Music Theory, đối chiếu Fux và Jeppesen)
 | Mục | Quy tắc |
@@ -1095,7 +1095,7 @@ Cho sẵn một **cantus firmus** (giai điệu [[truong-do|nốt tròn]], đi c
 | [[doi-am-loai-1|1]] | 1 : 1 (nốt tròn) | Chỉ dùng [[thuan-nghich|quãng thuận]]; các kiểu chuyển động |
 | [[doi-am-loai-2|2]] | 2 : 1 (nốt trắng) | [[not-ngoai-hop-am|Nốt lướt]] ở [[so-chi-nhip|phách nhẹ]] |
 | [[doi-am-loai-3|3]] | 4 : 1 (nốt đen) | Nốt lướt, nốt thêu, các hình giai điệu |
-| [[doi-am-loai-4|4]] | Nốt nối lệch phách | **Nốt trễ** (suspension): chuẩn bị – nghịch – giải quyết |
+| [[doi-am-loai-4|4]] | Nốt nối lệch phách | **Nốt treo** (suspension): chuẩn bị – nghịch – giải quyết |
 | [[doi-am-loai-5|5]] | [[ky-hieu-hoa-my|Hoa mỹ]] (kết hợp tự do) | Kết hợp tất cả |
 ::rhythm w / h h / q q q q / rh h~ / h h // | Bè đối âm trên một nốt tròn của cantus: loại 1 (1 : 1), loại 2 (2 : 1), loại 3 (4 : 1), loại 4 (nối lệch phách)
 
@@ -1199,7 +1199,7 @@ Theo Salzer và Schachter (dẫn trong Open Music Theory): nốt lướt thuận
 ## Ví dụ
 ::staff treble D4=· D5=8 / F4+C5=5 D5=6 / E4+E5=8 G5=10 / D4+F5=10 D5=8 / G4+E5=6 D5=5 / F4+A4=3 B4=4 | Ô 1 – 6
 ::staff treble A4+C5=3 A4=1 / G4+B4=3 C5=4 / F4+D5=6 A4=3 / E4+B4=5 C#5=6 / D4+D5=8 | Đối âm loại 2 (minh hoạ tự soạn, đã kiểm). Các quãng 4 ở ô 6 (B trên F — tritone) và ô 8 (C trên G) đều là **nốt lướt** liền bậc, cùng chiều — Ô 7 – 11
-Đọc ví dụ: phách mạnh luôn thuận (8, 5, 8, 10, 6, 3, 3, 3, 6, 5); đỉnh G5 duy nhất ở ô 3; không có hai phách mạnh liên tiếp cùng là quãng 5 hay 8.
+Đọc ví dụ: phách mạnh ô 2 – 11 luôn thuận (5, 8, 10, 6, 3, 3, 3, 6, 5, 8); đỉnh G5 duy nhất ở ô 3; không có hai phách mạnh liên tiếp cùng là quãng 5 hay 8.
 
 ## Viết từng bước
 1. Viết một **khung loại 1** trên các phách mạnh (nhưng tránh quãng 5/8 liên tiếp giữa phách mạnh).
@@ -1238,7 +1238,7 @@ Tiếp theo: [[doi-am-loai-3]]. Fux nói thêm gì về loại này: [[nam-loai-
 ::staff treble D4+D5=8 C5=7 B4=6 A4=5 / F4+D5=6 C5=5 B4=4 A4=3 / E4+B4=5 C5=6 D5=7 E5=8 / D4+F5=10 E5=9 D5=8 C5=7 | Ô 1 – 4
 ::staff treble G4+D5=5 E5=6 D5=5 E5=6 / F4+F5=8 E5=7 D5=6 E5=7 / A4+F5=6 E5=5 C5=3 A4=1 / G4+B4=3 C5=4 B4=3 D5=5 | Ô 5 – 8
 ::staff treble F4+F5=8 G5=9 F5=8 D5=6 / E4+G4=3 A4=4 B4=5 C#5=6 / D4+D5=8 | Đối âm loại 3 (minh hoạ tự soạn, đã kiểm). Các quãng nghịch 7, 4, 9 đều là nốt lướt hoặc nốt thêu; phách 1 luôn thuận; đỉnh G5 duy nhất ở ô 9 — Ô 9 – 11
-Đọc ví dụ: ô 1 là chuỗi nốt lướt đi xuống; ô 5 và ô 6 dùng **nốt thêu trên** (D – E – D, E – D – E); ô 10 mở bằng quãng 3 sau bước nhảy quãng 5 xuống (D5 → G4) rồi đi liền bậc ngược chiều lên cảm âm C♯.
+Đọc ví dụ: ô 1 là chuỗi nốt lướt đi xuống; ô 5 và ô 6 dùng **nốt thêu** (thêu trên D – E – D, thêu dưới E – D – E); ô 10 mở bằng quãng 3 sau bước nhảy quãng 5 xuống (D5 → G4) rồi đi liền bậc ngược chiều lên cảm âm C♯.
 
 ## Viết từng bước
 1. Đặt **khung phách 1** như một bài [[doi-am-loai-1|loại 1]] (thưa quãng hoàn toàn).
@@ -1408,7 +1408,7 @@ Viết hai bè sao cho khi đưa bè dưới lên trên một quãng 8, kết qu
 | Canon tăng/giảm [[truong-do|trường độ]] | Chơi chậm/nhanh gấp đôi |
 | Canon cua (nghịch hành) | Đọc ngược từ cuối về đầu |
 
-"Goldberg Variations" của Bach có một canon ở mỗi biến tấu thứ ba, lần lượt ở quãng đồng âm, 2, 3… đến 9 (xem [[bien-tau]]).
+"Goldberg Variations" của Bach có một canon ở mỗi biến tấu thứ ba, lần lượt ở đồng âm, quãng 2, quãng 3… đến quãng 9 (xem [[bien-tau]]).
 
 ## Lễ vật âm nhạc (1747)
 - Năm 1747 Bach đến Potsdam, được **vua Phổ Frederick Đại đế** đưa cho một chủ đề dài và phức tạp — **"chủ đề hoàng gia"** — để [[ngau-hung-piano|ngẫu hứng]] một fugue 3 bè.
@@ -1504,7 +1504,7 @@ Quãng 4 đúng là **nghịch** trong hai bè; chỉ thuận khi được chồ
 | Quãng | Hướng đi |
 |---|---|
 | Bán thuận (3, 6) | Mọi hướng, **kể cả song song**; dùng nhiều nhất |
-| Thuận hoàn toàn (1, 5, 8) | **Song song bị cấm**; cùng hướng hạn chế; tốt nhất vào bằng **ngược hướng** hoặc **chếch hướng**; chủ yếu ở mở đầu, kết và phách yếu |
+| Thuận hoàn toàn (1, 5, 8) | **Song song bị cấm**; cùng hướng hạn chế; tốt nhất vào bằng **ngược hướng** hoặc **chếch hướng**; chủ yếu ở mở đầu, kết và phách nhẹ |
 Chi tiết: [[doi-vi-don-gian-hai-be]].
 
 ## 3. Nốt lưu ở phách mạnh
@@ -1514,7 +1514,7 @@ Chi tiết: [[doi-vi-don-gian-hai-be]].
 | Cố định | 7 | Bè trên | 7 → 6 |
 | Không cố định | 4 | Trên (tốt hơn) hoặc dưới | 4 → 3 / 4 → 5 |
 | Không cố định | 9 | Dưới (tốt hơn) hoặc trên | 9 → 10 / 9 → 8 |
-Ba thời: **chuẩn bị thuận → nốt lưu nghịch (phách mạnh) → giải quyết xuống liền bậc**; nốt chuẩn bị dài bằng hoặc hơn nốt lưu, không là nốt đen. Ở phách yếu: nốt lướt, thêu (thường thêu dưới), sớm, thoát.
+Ba thời: **chuẩn bị thuận → nốt lưu nghịch (phách mạnh) → giải quyết xuống liền bậc**; nốt chuẩn bị dài bằng hoặc hơn nốt lưu, không là nốt đen. Ở phách nhẹ: nốt lướt, thêu (thường thêu dưới), sớm, thoát.
 
 ## 4. Công thức của đối vị phức tạp
 | Công thức | Nghĩa | Bài |
@@ -1644,7 +1644,7 @@ Tổng quan và lộ trình: [[he-thong-fux-gradus-ad-parnassum]]. Nguyên văn 
       ["Nốt Trầm — Phức điệu là gì", "https://nottram.edu.vn/phuc-dieu-la-gi/"],
     ],
     body: `
-Tiếng Việt có hai cặp từ song song: **đối vị** (dùng trong giáo trình nhạc viện, dịch từ *contrepoint*) và **đối âm** (dùng trong nhiều sách phổ thông và trong thư viện này). Cả hai cùng nghĩa *counterpoint*. Cột tiếng Nga: các thuật ngữ về đối vị phức tạp, đối vị di động, canon soi gương, proposta – risposta lấy theo bách khoa âm nhạc Nga (xem nguồn); các từ còn lại là cách gọi thông dụng do Lamar đối chiếu — nên kiểm thêm trước khi trích dẫn.
+Tiếng Việt có hai từ song song: **đối vị** (dùng trong giáo trình nhạc viện, dịch từ *contrepoint*) và **đối âm** (dùng trong nhiều sách phổ thông và trong thư viện này). Cả hai cùng nghĩa *counterpoint*. Cột tiếng Nga: các thuật ngữ về đối vị phức tạp, đối vị di động, canon soi gương, proposta – risposta lấy theo bách khoa âm nhạc Nga (xem nguồn); các từ còn lại là cách gọi thông dụng do Lamar đối chiếu — nên kiểm thêm trước khi trích dẫn.
 
 ## Khái niệm chung
 | Tiếng Việt | Tiếng Anh | Tiếng Nga | Ghi chú |

@@ -118,7 +118,7 @@ Tay trái là hình ảnh đối xứng: đi xuống dùng 5-4-3-2-1 · 3-2-1 (x
 - **Đi xuống**: khi ngón cái đánh F, ngón 3 **vắt qua** để đánh E.
 
 ## Mẹo nhớ: ngón 4 làm mốc
-Mỗi quãng 8 ngón 4 chỉ xuất hiện **một lần** cho mỗi tay. Nhớ ngón 4 rơi vào nốt nào là nhớ được cả ngón bấm của [[am-giai|âm giai]] đó.
+Trong mỗi quãng 8, ngón 4 của mỗi tay chỉ xuất hiện **một lần**. Nhớ ngón 4 rơi vào nốt nào là nhớ được cả ngón bấm của [[am-giai|âm giai]] đó.
 
 ## Âm giai có phím đen
 - Ngón bấm của Đô trưởng dùng chung cho **C, G, D, A, E trưởng** và các giọng [[giong-song-song|thứ song song]] của chúng.
@@ -172,7 +172,7 @@ Chỉ luồn ngón cái thôi chưa đủ để với tới phím kế tiếp. H
 
 ## Cổ tay và cánh tay
 - Cổ tay mềm, linh hoạt; để trọng lượng cánh tay tạo tiếng thay vì chỉ dùng sức ngón.
-- Khi luyện động tác luồn ngón cái, thả lỏng bàn tay và cổ tay dễ hơn giữ chúng cứng.
+- Khi luyện động tác luồn ngón cái, bàn tay và cổ tay thả lỏng giúp luồn dễ hơn là giữ chúng cứng.
 
 ## Lộ trình luyện
 Bắt đầu chậm với [[nhip-do|máy đếm nhịp]] (mỗi phách một nốt), rồi hai, rồi bốn nốt mỗi phách; luyện qua cả 12 giọng theo [[vong-quang-nam]]. Xem thêm [[kiem-soat-toc-do]].
@@ -417,7 +417,7 @@ Tiếp cận cùng một đoạn từ nhiều phía: **tay riêng rồi tay đô
 ## Biến thể tiết tấu
 Một đoạn móc kép đều (ví dụ C–D–E–F–G–A–B–C) được tập theo:
 - **Dài – ngắn** ([[cham-doi-dau-noi|chấm dôi]]): nốt dài cho thời gian chuẩn bị, nốt ngắn buộc động tác nhanh, gọn.
-- **Ngắn – dài** (đảo ngược): luyện tập trung vào những nốt còn lại.
+- **Ngắn – dài** (đảo ngược): dồn việc luyện vào những nốt mà kiểu dài – ngắn chơi lướt.
 - Nhóm 3, 4, 5 nốt hoặc [[lien-ba]].
 
 Giáo viên lưu ý: cách này hiệu quả khi dùng cẩn thận nhưng **không chữa được mọi vấn đề kỹ thuật**, và cần kết hợp thả lỏng để tránh [[suc-khoe-nguoi-choi-dan|căng cơ]].
@@ -539,7 +539,7 @@ Một nghiên cứu định tính với người chơi piano ghi nhận các ngu
 - Tập điểm "bắt đầu lại" ở từng [[cau-nhac|câu nhạc]] để không bị dừng hẳn nếu sai.
 
 ## Lưu ý
-**Thuốc chẹn beta** (như propranolol): khảo sát ICSOM năm 2015 (không bình duyệt) cho biết **70%** nhạc công dàn nhạc lớn ở Mỹ từng thử. Một tổng quan năm 2026 kết luận thuốc chỉ có **vai trò hạn chế**, chủ yếu giảm **triệu chứng cơ thể** ngắn hạn, **không phải** cách điều trị thường quy hay toàn diện; bằng chứng còn yếu. Chỉ dùng khi có **chỉ định của bác sĩ**, và không dành cho trẻ em tự ý dùng.
+**Thuốc chẹn beta** (như propranolol): khảo sát ICSOM năm 2015 (không bình duyệt) cho biết **70%** nhạc công dàn nhạc lớn ở Mỹ từng thử. Một tổng quan năm 2026 kết luận thuốc chỉ có **vai trò hạn chế**, chủ yếu giảm **triệu chứng cơ thể** ngắn hạn, **không phải** cách điều trị thường quy hay toàn diện; bằng chứng còn yếu. Chỉ dùng khi có **chỉ định của bác sĩ**, và trẻ em không được tự ý dùng.
 
 Phần lớn nghiên cứu có quy mô nhỏ hoặc mang tính định tính; bằng chứng cho từng kỹ thuật cụ thể vẫn đang được bổ sung. Với lo âu nghiêm trọng, nên tìm đến chuyên gia tâm lý.
 `,
@@ -624,7 +624,7 @@ Trong nhạc [[doi-am|đối âm]] (ví dụ [[fugue]] của [[johann-sebastian-
 - Luyện hai cách: xoay cổ tay hoàn toàn, và không xoay mà nâng ngón cao.
 - Luyện phần kết: chơi tới trước các nốt cuối, dừng thoải mái rồi chơi tiếp; thu ngắn dần khoảng dừng cho đến khi người nghe không nhận ra.
 
-Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh dễ hơn trên đàn upright.
+Bộ máy [[bo-may-piano|thoát kép]] của đàn grand giúp láy rền nhanh dễ hơn so với đàn upright.
 `,
   },
   {
@@ -741,7 +741,7 @@ Lộ trình đệm hát hiện đại theo cấp độ và thể loại (pop, ba
 | **[[hop-am-ba|Hợp âm]] khối** | Đánh cả hợp âm cùng lúc | Kiểu cơ bản nhất, mọi [[the-loai|thể loại]] |
 | **[[luyen-hop-am-rai|Hợp âm rải]]** | Đánh lần lượt từng nốt của hợp âm | Ballad, nhạc trữ tình |
 | **Bass Alberti** | Thấp – cao – giữa – cao (C–G–E–G) | Nhịp 4/4, móc đơn hoặc [[truong-do|nốt đen]]; đặc trưng thời Cổ điển nhưng dùng được ở nhiều phong cách |
-| **Đệm valse** | Nốt trầm một mình, rồi hai nốt trên hai lần (trầm – hợp âm – hợp âm) | Nhịp 3/4 |
+| **Đệm valse** | Nốt trầm đánh riêng, rồi các nốt trên đánh hai lần (trầm – hợp âm – hợp âm) | Nhịp 3/4 |
 | **Đệm "pop"** | Đung đưa giữa nốt dưới và các nốt trên của hợp âm | Pop, ballad |
 | **Stride** | Nốt bass ở phách 1 và 3, hợp âm ở phách 2 và 4 — tay trái nhảy xa liên tục | [[phong-cach-jazz|Ragtime]], jazz Harlem |
 
@@ -1086,7 +1086,7 @@ Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
 |---|---|
 | Rio de Janeiro, giới sinh viên và nhạc sĩ trung lưu | Cuối 1950s – đầu 1960s |
 | "Chega de Saudade" (Jobim – Vinicius de Moraes): João Gilberto chơi guitar trong LP của Elizeth Cardoso — **"nhịp bossa nova" đầu tiên được thu âm**; đĩa đơn của chính Gilberto ra giữa năm 1958 | 1958 |
-| *Getz/Gilberto* (thu 3/1963, phát hành 1964): giải Grammy Album của năm; "The Girl from Ipanema" (Astrud Gilberto hát lời Anh) đoạt Thu âm của năm | 1964 – 65 |
+| *Getz/Gilberto* (thu 3/1963, phát hành 1964): giải Grammy Album của năm; "The Girl from Ipanema" (Astrud Gilberto hát lời Anh) đoạt giải Thu âm của năm | 1964 – 65 |
 Bối cảnh: [[phong-cach-jazz]] (mục Latin).
 
 ## Cảm giác: đung đưa, không swing
@@ -1096,7 +1096,7 @@ Bối cảnh: [[phong-cach-jazz]] (mục Latin).
 - Khác samba: samba nhanh hơn, ồn hơn, dàn gõ lễ hội; bossa nova nhỏ nhẹ, thân mật, cho giọng hát và guitar, [[hoa-am-jazz|hoà âm jazz]].
 
 ## Tay trái
-::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và phách 1 sau có thể lặp, đón nốt gốc sau, nhảy quãng 8 hay tiếp cận nửa cung (TJPS)
+::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và trước phách 1 ô sau có thể lặp lại nốt trước, đón trước nốt gốc ô sau, nhảy quãng 8 hoặc tiếp cận nửa cung (TJPS)
 ::staff bass F2=1 F2 C3=5 C3 / G2=1 G2 D3=5 D3 | Khung trầm 1 – 5 trên Fmaj7 – G7 (minh hoạ); **không dùng pedal** để giữ tiếng trầm gọn
 Peter Martin gợi ý có thể giản lược bè trầm thành nốt trắng — phần đảo phách nằm ở tay phải.
 
@@ -1267,14 +1267,14 @@ Theo bách khoa piano PTNA: **tay phải** dùng ngón 1 – 2 cho **bè trong**
 ## Cách tập
 1. **Tách bè**: chơi riêng bè trên, rồi riêng bè dưới — **luôn dùng đúng ngón** sẽ dùng khi chơi cả hai.
 2. **Legato trên, staccato dưới**: để bè trên "hát" (thường là [[giai-dieu|giai điệu]]), tập bè trên legato còn bè dưới staccato — lời khuyên của Jeffrey Biegel cho [[tieu-pham-piano|Étude]] quãng 3 của Chopin.
-3. **Bỏ bớt nốt**: chơi bè trên với cách một nốt bè dưới, rồi chơi phần nốt đã bỏ.
+3. **Bỏ bớt nốt**: chơi bè trên kèm bè dưới nhưng bỏ cách một nốt ở bè dưới, rồi chơi lại với những nốt đã bỏ.
 4. **Rất chậm**, đánh **sâu tới đáy phím** khi ghép hai bè; giữ [[nhip-do|máy đếm nhịp]] và tăng **từng nấc** khi đã thật chắc (xem [[kiem-soat-toc-do]]).
 
 Các giáo viên khác nhau về việc có nên tập **âm giai quãng 3** riêng: có người cho là hữu ích, có người khuyên rút bài tập từ chính tác phẩm.
 
 ## Hai Étude kinh điển của Chopin
-- **Op. 25 số 6** (Sol♯ thứ) — Étude **quãng 3**, tay phải chạy quãng 3 liên tục, kể cả quãng 3 **[[am-giai-cromatic|cromatic]]**.
-- **Op. 25 số 8** (Rê♭ trưởng) — Étude **quãng 6**, chuỗi quãng 6 đi lên, đi xuống và cromatic không ngắt, ở **cả hai tay**.
+- **Op. 25 số 6** (Sol thăng thứ) — Étude **quãng 3**, tay phải chạy quãng 3 liên tục, kể cả quãng 3 **[[am-giai-cromatic|cromatic]]**.
+- **Op. 25 số 8** (Rê giáng trưởng) — Étude **quãng 6**, chuỗi quãng 6 đi lên, đi xuống và cromatic không ngắt, ở **cả hai tay**.
 
 Xem [[Chopin]], [[the-loai|thể loại étude]].
 `,
@@ -1403,7 +1403,7 @@ Xu hướng chung: từ "ngón tay làm mọi việc" sang **cả cánh tay và 
     title: 'Bàn tay nhỏ và kích thước bàn phím',
     category: 'technique',
     aliases: ['tay nhỏ', 'small hands', 'độ mở bàn tay', 'hand span', 'bàn phím hẹp', 'ESPK', 'bàn phím 7/8'],
-    summary: 'Bàn phím chuẩn được thiết kế cho bàn tay lớn; nghiên cứu cho thấy người tay nhỏ đau và căng nhiều hơn. Bàn phím phím hẹp (ESPK) là một giải pháp đang được nghiên cứu.',
+    summary: 'Bàn phím chuẩn được thiết kế cho bàn tay lớn; nghiên cứu cho thấy người tay nhỏ đau và căng nhiều hơn. Bàn phím có phím hẹp (ESPK) là một giải pháp đang được nghiên cứu.',
     refs: [
       ['Stanford Engineering (2024) — AI could help reduce injury risk in pianists', 'https://engineering.stanford.edu/news/ai-could-help-reduce-injury-risk-pianists'],
       ['Classic FM — Are piano keys too big?', 'https://www.classicfm.com/discover-music/instruments/piano/keys-hand-span-octave/'],
@@ -1420,7 +1420,7 @@ Xu hướng chung: từ "ngón tay làm mọi việc" sang **cả cánh tay và 
 - Rhonda Boyle (2013) tổng hợp lý do cơ sinh học: bàn tay không khớp bàn phím gây **bất lợi cơ học trực tiếp**, dẫn tới căng cơ và mỏi.
 - **Lưu ý**: bằng chứng có kiểm soát còn ít và mẫu nhỏ; một số con số lan truyền (như "phụ nữ có nguy cơ chấn thương cao hơn 50%") chưa tìm được nghiên cứu gốc. Tổng quan năm 2020 cho rằng chất lượng phương pháp không đồng đều khiến chưa thể rút ra kết luận chắc chắn.
 
-## Bàn phím phím hẹp (ESPK)
+## Bàn phím có phím hẹp (ESPK)
 **ESPK** (bàn phím tỉ lệ công thái học) có phím hẹp hơn, ví dụ bàn phím **"7/8"** của Steinbuhler. Đến năm 2013, đã có bảy trường đại học Mỹ trang bị loại đàn này. Người chơi thường kể là **thích nghi nhanh** khi chuyển qua lại giữa hai cỡ, nhưng chưa có nghiên cứu hệ thống về tốc độ thích nghi.
 
 ## Với người tay nhỏ trên đàn chuẩn
@@ -1700,12 +1700,12 @@ Thế kỷ 19, nhiều trường dạy piano đặt trọng tâm vào sức mạ
 | Tobias Matthay (Anh) | Phân biệt nhiều kiểu chạm, chú ý sức cản của phím, nhả trọng lượng và xoay cẳng tay | Fielden về sau đi đến kết luận khác (theo bài tổng quan Salford) |
 | Rudolf Breithaupt (Đức) | Kỹ thuật trọng lượng đối lập kỹ thuật ngón, xuất phát từ trạng thái cơ nghỉ | Bị hai phía phê bình |
 | Friedrich Steinhausen (Đức) | Tiếp cận sinh lý, khái niệm tải bằng không, liều lượng trọng lượng | Phê bình Breithaupt quay lại kỹ thuật ngón |
-| Otto Ortmann (Mỹ) | Đo đạc thực nghiệm cơ học và sinh lý của động tác chơi đàn | Kế hoạch tập ba về tâm lý chơi đàn chưa bao giờ hoàn thành (Salford) |
+| Otto Ortmann (Mỹ) | Đo đạc thực nghiệm cơ học và sinh lý của động tác chơi đàn | Tập thứ ba (về tâm lý chơi đàn) theo kế hoạch chưa bao giờ hoàn thành (Salford) |
 | Dorothy Taubman (Mỹ) | Ngón, bàn tay, cẳng tay là một khối; thẳng hàng và xoay | Chưa thấy nghiên cứu lâm sàng độc lập; bằng chứng chủ yếu là lời chứng |
 
 Theo Wikipedia, Breithaupt chủ trương dùng quán tính của cả cánh tay bắt đầu từ trạng thái cơ nghỉ, nhưng chính chuyên luận của ông vẫn giữ một tầng kỹ thuật ngón có cố định cơ; ông bị phía Matthay phê bình vì không coi trọng lượng là yếu tố duy nhất, và bị Steinhausen phê bình vì đưa kỹ thuật ngón trở lại. Một luận văn tại Đại học Pretoria nhấn mạnh rằng Matthay không gạt bỏ ngón: ông muốn sức ngón và bàn tay hoạt động độc lập với trọng lượng cánh tay. Steinhausen mô tả trạng thái *tải bằng không*, khi cơ vừa đủ đỡ cánh tay lơ lửng, từ đó người chơi định liều trọng lượng truyền xuống đầu ngón.
 
-**Ortmann** (Peabody Conservatory) xuất bản *The Physiological Mechanics of Piano Technique* năm 1929, được một bài tổng quan của Đại học Salford gọi là có lẽ là cuốn sách piano đầu tiên dùng đúng phương pháp khoa học. Gerig, trong *Famous Pianists and Their Technique*, đặt tên chương về ông là kỹ thuật piano trưởng thành. Cách hiểu phổ biến về đóng góp của Ortmann là: thả lỏng hoàn toàn không tồn tại khi chơi đàn; điều cần là phối hợp đúng lúc giữa co và nghỉ. Các tìm kiếm cho bài này không tìm được đoạn văn gốc của Ortmann về điểm đó, nên nên coi đây là tóm tắt thông dụng.
+**Ortmann** (Peabody Conservatory) xuất bản *The Physiological Mechanics of Piano Technique* năm 1929, được một bài tổng quan của Đại học Salford đánh giá có lẽ là cuốn sách piano đầu tiên dùng đúng phương pháp khoa học. Gerig, trong *Famous Pianists and Their Technique*, đặt tên chương về ông là kỹ thuật piano trưởng thành. Cách hiểu phổ biến về đóng góp của Ortmann là: thả lỏng hoàn toàn không tồn tại khi chơi đàn; điều cần là phối hợp đúng lúc giữa co và nghỉ. Các tìm kiếm cho bài này không tìm được đoạn văn gốc của Ortmann về điểm đó, vì vậy chỉ nên coi đây là tóm tắt thông dụng.
 
 **Trường phái Taubman**, do Edna Golandsky và Viện Golandsky tiếp nối, chú trọng sự thẳng hàng giữa ngón, bàn tay và cẳng tay, cùng những vòng xoay nhỏ để tránh vặn và căng ngón. Theo Pianist Magazine, cổ tay quá cao phá vỡ đường thẳng tay và cẳng tay; khuỷu là điểm tựa, đưa quá xa thân gây mỏi vai và cổ, ép quá sát thì cẳng tay mất tự do.
 
@@ -1800,7 +1800,7 @@ Hợp âm có dấu lượn sóng dọc được **rải cuộn** (rolled, arpeg
 2. **Tách giai điệu.** Pianist Magazine gợi ý chơi nốt trên một mình, rồi các nốt dưới, rồi cả hợp âm.
 3. **Rút ngắn khoảng cách.** Theo Fitch (dựa trên Neuhaus), đánh nốt mạnh nhất trước, nốt còn lại sau, rồi thu hẹp dần khoảng cách cho tới khi vang cùng lúc.
 4. **Đổi bè nổi.** Cùng một hợp âm, lần lượt làm nổi nốt trên, nốt giữa, nốt dưới.
-5. **Chuỗi I–IV–V–I.** Bài trên khuông lớn ở trên, chậm, rồi thêm pedal và bước nhảy quãng tám.
+5. **Chuỗi I–IV–V–I.** Bài trên khuông đôi ở trên, chậm, rồi thêm pedal và bước nhảy quãng tám.
 
 Xem thêm: [[ky-thuat-cham-phim]], [[hop-am-ba]], [[the-dao-hop-am]], [[cach-dien-tau]].
 `,
@@ -1979,7 +1979,7 @@ Trong phần lớn nhạc piano từ thời Cổ điển, tay phải hát giai �
 ### Bè Alberti
 **Bè Alberti** (Alberti bass) là hợp âm rải theo thứ tự thấp – cao – giữa – cao, lặp lại. Tên gọi lấy theo Domenico Alberti (1710 – 1740 hoặc 1746), người dùng nhiều mẫu này dù không phải người phát minh. Ví dụ nổi tiếng nhất là phần mở đầu chương I Sonata giọng Đô trưởng K.545 của Mozart. Hình đệm này tạo cảm giác chuyển động liên tục ngay cả khi hoà âm đứng yên.
 
-::staff bass C3=5 G3=1 E3=3 G3=1 C3=5 G3=1 E3=3 G3=1 / B2=5 G3=1 D3=3 G3=1 C3=5 G3=1 E3=3 G3=1 | Bè Alberti C – G7 – C, ngón bấm 5-1-3-1
+::staff bass C3=5 G3=1 E3=3 G3=1 C3=5 G3=1 E3=3 G3=1 / B2=5 G3=1 D3=3 G3=1 C3=5 G3=1 E3=3 G3=1 | Bè Alberti C – G/B – C, ngón bấm 5-1-3-1
 
 Kỹ thuật: tay gần phím, cổ tay hơi xoay nhẹ (xoay cẳng tay nhỏ, không đánh từng ngón bằng lực), nốt trầm ngón 5 hơi rõ hơn, ngón 1 rất nhẹ vì nó lặp lại nhiều nhất.
 
@@ -2170,7 +2170,7 @@ Trong fugue và invention, điều khó nhất là giữ cho hai đến bốn b�
 
 ## Lãng mạn: tiếng hát và hợp âm rải rộng
 
-Với [[frederic-chopin|Chopin]], Schumann, [[johannes-brahms|Brahms]], mục tiêu là *tiếng đàn hát* (cantabile): dùng trọng lượng cánh tay qua đầu ngón tay và ấn vào phím sâu, chậm. Giai điệu đặt ở ngón 4–5 tay phải phải nổi hơn các nốt đệm cùng tay (voicing). Hợp âm rải rộng (xem [[luyen-hop-am-rai]]) cần xoay cổ tay và di chuyển khuỷu tay liên tục thay vì căng ngón. Pedal đổi theo hòa âm, thường là pedal đổi sau (đạp trễ). [[rubato]] thuộc về phong cách này nhưng cần tiết chế.
+Với [[frederic-chopin|Chopin]], Schumann, [[johannes-brahms|Brahms]], mục tiêu là *tiếng đàn hát* (cantabile): dùng trọng lượng cánh tay qua đầu ngón tay và ấn vào phím sâu, chậm. Giai điệu đặt ở ngón 4–5 tay phải phải nổi hơn các nốt đệm cùng tay (voicing). Hợp âm rải rộng (xem [[luyen-hop-am-rai]]) cần xoay cổ tay và di chuyển khuỷu tay liên tục thay vì căng ngón. Pedal đổi theo hoà âm, thường là pedal đổi sau (đạp trễ). [[rubato]] thuộc về phong cách này nhưng cần tiết chế.
 
 ::staff treble C5+E5 E4 G4 C5 | Voicing, nốt giai điệu E5 (ngón 5) hát, ba nốt đệm cùng tay chơi nhẹ hơn
 
@@ -2188,7 +2188,7 @@ Trong một số tác phẩm của [[sergei-prokofiev|Prokofiev]] (Toccata Op. 1
 |---|---|---|---|
 | Baroque | ngón, non legato, rõ | rất ít hoặc không | tách bè, hoa mỹ đúng |
 | Cổ điển | nhẹ, ngón, rõ | ngắn, nông | câu cân đối, đệm nhẹ |
-| Lãng mạn | trọng lượng tay, cantabile | đổi theo hòa âm | voicing, legato dài |
+| Lãng mạn | trọng lượng tay, cantabile | đổi theo hoà âm | voicing, legato dài |
 | Ấn tượng | phẳng, sát phím | nửa pedal, nhiều lớp | màu sắc, ngân |
 | Thế kỷ 20 (gõ) | vững, thả trọng lượng | khô | nhịp, nhấn |
 
@@ -2241,13 +2241,13 @@ Andrew Eales (Pianodao) nhận xét rằng trong bộ yêu cầu 2021 không có
 
 | Loại | Tiếng Anh | Ghi chú |
 |---|---|---|
-| Gam trưởng, gam thứ | major and minor scales | thứ hòa âm hoặc giai điệu tùy cấp và giọng |
+| Gam trưởng, gam thứ | major and minor scales | thứ hoà âm hoặc giai điệu tuỳ cấp và giọng |
 | Gam chuyển động ngược | contrary motion | hai tay đi ra từ cùng một nốt |
 | Gam cromatic | chromatic scale | xem [[am-giai-cromatic]] |
 | Hợp âm rải trưởng/thứ | arpeggios | thế gốc, thế đảo ở cấp cao |
 | Hợp âm rải bảy át | dominant seventh | xem [[hop-am-bay]] |
 | Hợp âm rải bảy giảm | diminished seventh | xem [[hop-am-bay-giam]] |
-| Gam cách quãng | scales in thirds or sixths, staccato | chỉ ở cấp cao, tùy syllabus |
+| Gam cách quãng | scales in thirds or sixths, staccato | chỉ ở cấp cao, tuỳ syllabus |
 
 ::staff treble C4 D4 E4 F4 G4 A4 B4 C5 | Gam C trưởng một quãng tám, ngón tay phải 1-2-3-1-2-3-4-5
 
@@ -2260,7 +2260,7 @@ Bảng dưới đây mô tả *xu hướng* tăng dần độ khó, không phả
 | Cấp | Xu hướng yêu cầu | Cần kiểm tra trong syllabus |
 |---|---|---|
 | Grade 1–2 | vài giọng ít dấu, phần lớn tay riêng, phạm vi hẹp; hợp âm rải trưởng/thứ tay riêng | giọng nào, mấy quãng tám, có hai tay cùng lúc không |
-| Grade 3–4 | thêm giọng, mở rộng phạm vi, bắt đầu nhiều mục hai tay cùng lúc, gam cromatic và chuyển động ngược | loại thứ (hòa âm hay giai điệu), tốc độ |
+| Grade 3–4 | thêm giọng, mở rộng phạm vi, bắt đầu nhiều mục hai tay cùng lúc, gam cromatic và chuyển động ngược | loại thứ (hoà âm hay giai điệu), tốc độ |
 | Grade 5 | phần lớn giọng trưởng/thứ thường dùng, nhiều mục hai tay cùng lúc | hợp âm rải bảy, staccato |
 | Grade 6–8 | tất cả các giọng; hợp âm rải bảy át và bảy giảm; các mẫu đặc biệt như legato/staccato, cách quãng ba hoặc sáu, gam bắt đầu từ các nốt khác nhau | danh sách mẫu cụ thể, phạm vi bốn quãng tám, tốc độ |
 
@@ -2282,7 +2282,7 @@ Nguyên tắc chung về luyện gam xem [[luyen-am-giai]] và [[luyen-hop-am-ra
 
 - Chỉ tập gam từ quãng tám quen, nên bị lúng túng khi giám khảo yêu cầu phạm vi rộng hơn.
 - Luồn ngón cái gây tiếng gợn hoặc nhấc cả cổ tay.
-- Nhầm gam thứ hòa âm với thứ giai điệu.
+- Nhầm gam thứ hoà âm với thứ giai điệu.
 - Tập nhanh trước khi đúng ngón, tạo thói quen sai khó sửa.
 - Bỏ qua chuyển động ngược và gam cromatic vì nghĩ là "dễ".
 
@@ -2364,17 +2364,17 @@ Giáo viên Việt Nam có thể đặt câu tiếng Việt có cùng nhịp. Đ
 
 ## Khi giảng dạy
 
-Với trẻ em, hãy giới thiệu 2 chống 3 bằng vỗ tay và câu nói trước khi đưa bản nhạc. Có thể bắt đầu ở cuối giai đoạn tiền trung cấp nếu học sinh đã vững [[lien-ba]] và [[phoi-hop-hai-tay]]. 3 chống 4 khó hơn nhiều, nên để dành đến khi học sinh đã chơi 2 chống 3 thoải mái ở tốc độ bài. Thời điểm cụ thể tùy từng học sinh, không có chuẩn chung.
+Với trẻ em, hãy giới thiệu 2 chống 3 bằng vỗ tay và câu nói trước khi đưa bản nhạc. Có thể bắt đầu ở cuối giai đoạn tiền trung cấp nếu học sinh đã vững [[lien-ba]] và [[phoi-hop-hai-tay]]. 3 chống 4 khó hơn nhiều, nên để dành đến khi học sinh đã chơi 2 chống 3 thoải mái ở tốc độ bài. Thời điểm cụ thể tuỳ từng học sinh, không có chuẩn chung.
 
 Xem thêm: [[da-nhip]], [[lien-ba]], [[rubato]], [[phoi-hop-hai-tay]].
 `,
   },
   {
     slug: "choi-bon-tay-va-hoa-tau",
-    title: "Chơi bốn tay và hòa tấu piano",
+    title: "Chơi bốn tay và hoà tấu piano",
     category: 'technique',
     aliases: ["piano bốn tay", "song tấu piano", "hai đàn piano", "piano duet", "four hands", "piano duo", "two pianos", "primo secondo", "collaborative piano", "đệm đàn hợp tác"],
-    summary: "Chơi bốn tay (hai người một đàn), hai đàn piano và đệm cho ca sĩ hay nhạc công là những kỹ năng hòa tấu riêng biệt. Bài này hướng dẫn phân vai primo và secondo, quy ước pedal và lật trang, giới thiệu tiết mục theo trình độ và những nguyên tắc cơ bản của đệm đàn hợp tác.",
+    summary: "Chơi bốn tay (hai người một đàn), hai đàn piano và đệm cho ca sĩ hay nhạc công là những kỹ năng hoà tấu riêng biệt. Bài này hướng dẫn phân vai primo và secondo, quy ước pedal và lật trang, giới thiệu tiết mục theo trình độ và những nguyên tắc cơ bản của đệm đàn hợp tác.",
     refs: [
       ["G. Henle Verlag blog — Who does the pedalling? On the use of the pedal in music for piano duets", "https://blog.henle.de/en/2015/07/20/who-does-the-pedalling-on-the-use-of-the-pedal-in-music-for-piano-duets/"],
       ["No Dead Guys — Plays Well With Others: how to be a great duet player", "https://www.nodeadguys.com/a-piano-blog/plays-well-with-others-how-to-be-a-great-duet-player"],
@@ -2383,7 +2383,7 @@ Xem thêm: [[da-nhip]], [[lien-ba]], [[rubato]], [[phoi-hop-hai-tay]].
       ["Informance — Playing Together: Etiquette and Tips for Duet Playing", "https://dfp.informance.biz/content/pages/142-playing-together-etiquette-and-tips-for-duet-playing"],
     ],
     body: `
-Hòa tấu là cách nhanh nhất để học sinh piano học *nghe người khác*. Kỹ năng này khó luyện khi chỉ chơi một mình. Có ba hình thức chính:
+Hoà tấu là cách nhanh nhất để học sinh piano học *nghe người khác*. Kỹ năng này khó luyện khi chỉ chơi một mình. Có ba hình thức chính:
 
 - **Bốn tay** (piano duet, four hands): hai người cùng ngồi trên một đàn. Người ngồi bên phải chơi phần **primo** (bè trên), người bên trái chơi phần **secondo** (bè dưới).
 - **Hai đàn piano** (piano duo, two pianos): mỗi người một đàn, thường đặt đối đầu nhau. Mỗi người có pedal riêng và phạm vi bàn phím đầy đủ.
@@ -2391,17 +2391,17 @@ Hòa tấu là cách nhanh nhất để học sinh piano học *nghe người kh
 
 ## Phân vai primo và secondo
 
-Theo bài viết trên trang No Dead Guys, trong phần lớn văn học bốn tay, primo mang giai điệu và định hình phần lớn ý nhạc, còn secondo tạo cảm giác nhịp, đỡ hòa âm và điều khiển pedal. Primo thường viết ở khóa Sol cả hai tay, secondo thường ở khóa Fa. Học sinh nên tập đọc phần mình trong cả hai vai.
+Theo bài viết trên trang No Dead Guys, trong phần lớn văn học bốn tay, primo mang giai điệu và định hình phần lớn ý nhạc, còn secondo tạo cảm giác nhịp, đỡ hoà âm và điều khiển pedal. Primo thường viết ở khoá Sol cả hai tay, secondo thường ở khoá Fa. Học sinh nên tập đọc phần mình trong cả hai vai.
 
-::grand C5+E5/C3+G3 D5+F5/G2+G3 E5+G5/C3+G3 | Primo (khuông trên) chơi giai điệu ở âm vực cao, secondo (khuông dưới) đỡ hòa âm và bè trầm
+::grand C5+E5/C3+G3 D5+F5/G2+G3 E5+G5/C3+G3 | Primo (khuông trên) chơi giai điệu ở âm vực cao, secondo (khuông dưới) đỡ hoà âm và bè trầm
 
 ### Ai đạp pedal?
 
-Theo blog của nhà xuất bản G. Henle, thói quen để secondo đạp pedal vẫn phổ biến trong thực hành. Bài viết đưa ra hai lý do: secondo thường giữ khung hòa âm, và primo ngồi xa về bên phải, không với tới pedal giữ tiếng. Henle cũng lưu ý rằng có nhà soạn nhạc như Bizet (*Jeux d'enfants*) ghi pedal cho cả hai phần. Đây là quy ước, không phải luật. Primo vẫn có thể dùng pedal una corda. Secondo phải nghe giai điệu của primo khi đổi pedal, không chỉ nghe hòa âm của mình (xem [[ban-dap]]).
+Theo blog của nhà xuất bản G. Henle, thói quen để secondo đạp pedal vẫn phổ biến trong thực hành. Bài viết đưa ra hai lý do: secondo thường giữ khung hoà âm, và primo ngồi xa về bên phải, không với tới pedal giữ tiếng. Henle cũng lưu ý rằng có nhà soạn nhạc như Bizet (*Jeux d'enfants*) ghi pedal cho cả hai phần. Đây là quy ước, không phải luật. Primo vẫn có thể dùng pedal una corda. Secondo phải nghe giai điệu của primo khi đổi pedal, không chỉ nghe hoà âm của mình (xem [[ban-dap]]).
 
-### Lật trang và các thỏa thuận khác
+### Lật trang và các thoả thuận khác
 
-Theo No Dead Guys, primo thường lật trang, nhưng đôi khi secondo phải lật để không làm đứt câu giai điệu. Interlude khuyên hai người thỏa thuận trước về pedal và lật trang. Ví dụ, ấn bản Urtext của Bärenreiter cho Fantasie cung F thứ D. 940 của [[franz-schubert|Schubert]] in primo và secondo trên hai trang đối diện, với chỗ lật trang thuận tiện, và có phần giới thiệu về thực hành biểu diễn, bao gồm pedal. Những điều khác cần thỏa thuận:
+Theo No Dead Guys, primo thường lật trang, nhưng đôi khi secondo phải lật để không làm đứt câu giai điệu. Interlude khuyên hai người thoả thuận trước về pedal và lật trang. Ví dụ, ấn bản Urtext của Bärenreiter cho Fantasie cung F thứ D. 940 của [[franz-schubert|Schubert]] in primo và secondo trên hai trang đối diện, với chỗ lật trang thuận tiện, và có phần giới thiệu về thực hành biểu diễn, bao gồm pedal. Những điều khác cần thoả thuận:
 
 - Ai ra hiệu bắt đầu (thường là người có nốt đầu tiên hoặc primo) và ra hiệu bằng cách nào: hít thở, gật đầu.
 - Khoảng cách ngồi và độ cao ghế. Khi hai tay ở giữa đàn chồng lên nhau, ai để tay trên, ai để tay dưới.
@@ -2438,7 +2438,7 @@ Khi đệm cho ca sĩ hay nhạc công, người chơi piano là *đối tác*, 
 ## Lỗi thường gặp
 
 - Mỗi người chỉ nghe phần mình, nên nhịp lệch dần.
-- Secondo đạp pedal theo hòa âm của mình làm nhòe giai điệu của primo.
+- Secondo đạp pedal theo hoà âm của mình làm nhoè giai điệu của primo.
 - Không thống nhất trước ngón ở chỗ hai tay chồng nhau.
 - Người đệm chơi to như độc tấu.
 

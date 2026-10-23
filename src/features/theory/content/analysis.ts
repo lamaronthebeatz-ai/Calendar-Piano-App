@@ -122,7 +122,7 @@ Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|ph
 
 ## Thế kỷ 18: câu nhạc như dấu câu
 - **Joseph Riepel** (*Anfangsgründe*, từ 1752) và **Heinrich Christoph Koch** (*Versuch einer Anleitung zur Composition*, 3 tập, **1782–1793**) là hai khảo luận lớn của thế kỷ 18 bàn về [[cau-nhac|câu nhạc]] và [[hinh-thuc-am-nhac|hình thức]].
-- Koch mô tả cách ghép các **đoạn nhỏ, câu, đoạn** có các loại kết khác nhau thành tác phẩm lớn ([[the-loai|giao hưởng]], sonata, [[hinh-thuc-concerto|concerto]]) — giống như **dấu câu** trong một bài văn: các chỗ ngắt và kết chia nhạc thành từng đơn vị. Các học giả gọi đây là **"hình thức dấu câu"**. Koch hay lấy ví dụ từ nhạc [[Haydn]].
+- Koch mô tả cách ghép các **đơn vị nhỏ, câu, đoạn** có các loại kết khác nhau thành tác phẩm lớn ([[the-loai|giao hưởng]], sonata, [[hinh-thuc-concerto|concerto]]) — giống như **dấu câu** trong một bài văn: các chỗ ngắt và kết chia nhạc thành từng đơn vị. Các học giả gọi đây là **"hình thức dấu câu"**. Koch hay lấy ví dụ từ nhạc [[Haydn]].
 - Từ thập niên 1970, các học giả ([[lich-su-nganh-am-nhac-hoc|Dahlhaus]], Ratner, Baker, Sisman…) khôi phục Koch làm cơ sở cho phân tích **"theo đúng lịch sử"** nhạc thế kỷ 18. Cách tiếp cận theo khuôn mẫu của [[luoc-do-galant|lược đồ galant]] cũng đi theo hướng này.
 
 ## Thế kỷ 19: Formenlehre và "hình thức sonata"
@@ -136,7 +136,7 @@ Biết lịch sử giúp hiểu rằng mỗi [[phuong-phap-phan-tich-tac-pham|ph
 - **Rudolph Réti** (*The Thematic Process in Music*, 1951): tìm các **"tế bào" [[cao-do|cao độ]]** ẩn chung giữa các chủ đề tương phản, cho phép cả đảo, nghịch hành và **đổi thứ tự** nốt. Phương pháp bị phê bình nhiều vì **quá lỏng** — tìm "liên hệ" ở đâu cũng được, bỏ qua vai trò hoà âm của các nốt — nhưng sách vẫn được trích dẫn rất thường xuyên.
 
 ## Nửa sau thế kỷ 20 đến nay
-- Lý thuyết **tập hợp cao độ** cho nhạc [[phi-dieu-tinh|phi điệu tính]] ([[cuong-do|Forte]], 1973 — xem [[tap-hop-cao-do]]).
+- Lý thuyết **tập hợp cao độ** cho nhạc [[phi-dieu-tinh|phi điệu tính]] (Allen Forte, 1973 — xem [[tap-hop-cao-do]]).
 - **Phân tích phong cách** của Jan LaRue (1970 — xem [[phan-tich-phong-cach]]).
 - **Lý thuyết chủ đề biểu đạt** của Leonard Ratner (1980 — xem [[ly-thuyet-chu-de]]).
 - Lý thuyết nhịp và nhóm của Lerdahl và Jackendoff (1983 — xem [[sieu-nhip]]).
@@ -720,7 +720,7 @@ Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm y�
 | **[[tiet-tau|Nhịp điệu]]** | Chậm, co giãn theo câu |
 | **Phát triển** | Ba đoạn A – B – A′, 24 ô; A′ ngắn hơn và biến đổi nhẹ |
 
-Liên hệ phương pháp: "Dream Cadence" là một trường hợp **làm trái kỳ vọng** giải quyết đi xuống — xem [[ky-vong-am-nhac]]; khi biểu diễn, chỗ chậm lại trước kết chính là nơi người chơi "dàn dựng" kỳ vọng ấy ([[phan-tich-va-bieu-dien]]).
+Liên hệ phương pháp: "Dream Cadence" là một trường hợp **làm trái kỳ vọng**: nốt 9 không giải quyết đi xuống như thường lệ — xem [[ky-vong-am-nhac]]; khi biểu diễn, chỗ chậm lại trước kết chính là nơi người chơi "dàn dựng" kỳ vọng ấy ([[phan-tich-va-bieu-dien]]).
 
 ## "Kết giấc mơ"
 Bài dài **24 [[so-chi-nhip|ô nhịp]]**. Kết cuối cùng ở **ô 24** đặc biệt đến mức nhà lý thuyết Julien Despois (2025) đặt tên cho cả một kiểu kết theo bài này — **"Dream Cadence"**: một [[hop-am-mo-rong|hợp âm át 9]] trong đó nốt 9 **đi lên** từng bậc (bậc 6 – 7 – 1) để giải quyết, thay vì đi xuống như thường lệ; nốt 9 thường được nhấn biểu cảm hoặc chậm lại (rallentando) trước [[cau-ket|kết trọn]]. Đây là chỗ đáng dừng lại khi dạy.
@@ -801,7 +801,8 @@ Tên bài gắn với bài thơ "Clair de lune" của **Paul Verlaine** — Debu
 Bài viết ở nhịp **9/8**, nhóm **3 + 3 + 3** ([[so-chi-nhip|nhịp kép]]) — cảm giác như một điệu [[tieu-pham-piano|valse]] rất chậm, mỗi phách lại chia ba; các chỗ [[dao-phach|đảo phách]] đến từ những nhóm nhịp kiểu [[hemiola]].
 
 [[hinh-thuc-am-nhac|Hình thức]] **ba đoạn A – B – A′** dài **72 ô nhịp** (theo một phân tích dùng thuật ngữ của Caplin: khoảng 26 – 24 – 22 ô): A là một [[cau-nhac|đoạn nhạc]] kép mở rộng, B gồm ba đoạn nhạc đều đặn, A′ là sự trở lại có biến đổi kèm coda. Cuối A nối liền vào đầu B quanh **ô 27**, nên ranh giới chỉ mang tính gần đúng.
- Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — [[hoa-am-song-song|hợp âm trượt]] song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
+
+Các đặc điểm của [[an-tuong|hoà âm ấn tượng]] — [[hoa-am-song-song|hợp âm trượt]] song song, [[hop-am-mo-rong|hợp âm mở rộng]], màu sắc hơn chức năng — thể hiện rõ, cùng các đoạn [[luyen-hop-am-rai|hợp âm rải]] trải rộng ở phần giữa.
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp lại các phần trên theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -856,7 +857,7 @@ Minuet **Sol trưởng** BWV Anh. 114 và Minuet Sol thứ BWV Anh. 115 nằm tr
 - **Đánh dấu bốn kết** (ô 8, 16, 24, 32) trên bản nhạc trước khi tập: học trò thấy bài gồm bốn câu 8 ô.
 - Nghe sự khác biệt giữa **kết nửa** (ô 8) và **kết hoàn toàn** (ô 16) — bài học đầu tiên về [[cau-nhac|câu hỏi – câu đáp]].
 - Tìm nốt **C♯** (ô 20) và **C♮** (cuối ô 24): hai nốt cho biết giọng đổi rồi đổi lại — [[chuyen-giong]] ở dạng đơn giản nhất.
-- Đây là nhạc khiêu vũ 3/4: phách 1 nhẹ, nhóm hai ô (xem [[minuet-va-trio]], [[sieu-nhip]]).
+- Đây là nhạc khiêu vũ 3/4: nhấn nhẹ phách 1, nhóm hai ô (xem [[minuet-va-trio]], [[sieu-nhip]]).
 
 ## Tóm tắt theo khung phân tích
 Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; quy trình chung ở [[phuong-phap-phan-tich-tac-pham]].
@@ -1076,14 +1077,14 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     ],
     body: `
 ## Tổng quan
-*Six Progressive Sonatinas* Op. 36 của [[muzio-clementi|Clementi]] được in ở London năm **1797** (Longman & Broderip); sáu bài xếp theo độ khó tăng dần. [[an-ban-urtext|Ấn bản]] Henle theo [[van-ban-hoc-am-nhac|bản in đầu]] tiên và giữ [[ngon-bam|ngón bấm]] của chính Clementi. Chương 1 của số 1 ở **Đô trưởng**, nhịp **2/2**, dài **38 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. (Chỉ dẫn nhịp độ khác nhau giữa các ấn bản: G. Schirmer in *Spiritoso*; nên xem ấn bản dựa trên bản in gốc.)
+*Six Progressive Sonatinas* Op. 36 của [[muzio-clementi|Clementi]] được in ở London năm **1797** (Longman & Broderip); sáu bài xếp theo độ khó tăng dần. [[an-ban-urtext|Ấn bản]] Henle theo [[van-ban-hoc-am-nhac|bản in đầu tiên]] và giữ [[ngon-bam|ngón bấm]] của chính Clementi. Chương 1 của số 1 ở **Đô trưởng**, nhịp **2/2**, dài **38 ô**, hai nửa đều có [[dau-nhac-lai|dấu nhắc lại]]. (Chỉ dẫn nhịp độ khác nhau giữa các ấn bản: G. Schirmer in *Spiritoso*; nên xem ấn bản dựa trên bản in gốc.)
 
 ## Hình thức sonata thu nhỏ
 ::form Trình_bày:15 Phát_triển:8 Tái_hiện:15 | Ba phần của [[hinh-thuc-sonata|hình thức sonata]] (số dưới mỗi khối là số ô)
 **Trình bày (ô 1–15)**
 - **Chủ đề 1 (ô 1–4)**: hợp âm Đô trưởng rải, kết nửa trên V ở ô 4 (bè trầm đi xuống G – F – E – D).
 - **Ô 5–7**: chủ đề bắt đầu lại rồi **[[chuyen-giong|chuyển giọng]]** — F♯ xuất hiện ở bè trầm ô 6.
-- **Vùng giọng át (ô 8–15)**: Sol trưởng, gồm âm giai đi lên và [[not-lap-lai|nốt lặp]]; [[cau-ket|kết hoàn toàn]] ở Sol trưởng ở ô 15. Không có "chủ đề 2" trữ tình tương phản — vùng giọng thứ hai được dựng từ hình âm giai và nốt lặp.
+- **Vùng giọng át (ô 8–15)**: Sol trưởng, gồm âm giai đi lên và [[not-lap-lai|nốt lặp]]; [[cau-ket|kết hoàn toàn]] ở Sol trưởng (ô 15). Không có "chủ đề 2" trữ tình tương phản — vùng giọng thứ hai được dựng từ hình âm giai và nốt lặp.
 
 ::staff treble C5 E5 C5 G4 / B4 D5 B4 G4 / C5 Eb5 C5 G4 | Motif mở đầu (ô 1); ở phát triển: trên G với bè trầm F (ô 16), rồi sang Đô thứ (ô 17)
 
@@ -1099,7 +1100,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 
 ## Gợi ý khi dạy
 - Đặt ô 8–15 cạnh ô 31–38: học trò thấy ngay ý nghĩa của "tái hiện chuyển chất liệu giọng át về giọng chủ" — điều Robert Estrin cũng nhấn mạnh khi giảng bài này.
-- Phần phát triển rất ngắn (Estrin: "ngắn gọn hơn của [[ludwig-van-beethoven|Beethoven]]") — dịp tốt để giới thiệu khái niệm [[chuc-nang-hinh-thuc|chức năng hình thức]] trước khi học [[phan-tich-sonata-k545|Sonata K. 545]].
+- Phần phát triển rất ngắn (Estrin: "ngắn gọn hơn so với [[ludwig-van-beethoven|Beethoven]]") — dịp tốt để giới thiệu khái niệm [[chuc-nang-hinh-thuc|chức năng hình thức]] trước khi học [[phan-tich-sonata-k545|Sonata K. 545]].
 - Kỹ thuật: [[luyen-am-giai|âm giai]] và [[luyen-hop-am-rai|hợp âm rải]] trong khuôn khổ một tác phẩm thật.
 
 ## Tóm tắt theo khung phân tích
@@ -1137,7 +1138,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 Trang tiêu đề năm 1723 (văn bản gốc thuộc phạm vi công cộng) nói đây là một "**hướng dẫn chân thành**" giúp người yêu đàn phím, nhất là người ham học:
 - học chơi **sạch sẽ hai bè**, rồi khi tiến bộ hơn thì xử lý đúng **ba bè**;
 - không chỉ có được những **ý nhạc hay** (*inventiones*) mà còn **phát triển** chúng cho tốt;
-- **trên hết là đạt được lối chơi hát** (*cantable Art im Spielen*) và có được "một sự nếm trước mạnh mẽ về sáng tác".
+- **trên hết là đạt được lối chơi hát** (*cantable Art im Spielen*) và "được nếm trước, một cách đậm đà, hương vị của sáng tác".
 Câu cuối giải thích vì sao Invention vừa là bài tập [[choi-phuc-dieu|chơi phức điệu]], vừa là bài học [[doi-am|đối âm]] và sáng tác.
 
 ## Chất liệu: một motif bảy nốt
@@ -1408,7 +1409,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 ::rhythm 2/4 e q e / e-e q // | Hình đảo phách móc đơn – đen – móc đơn, đặc trưng của cakewalk và ragtime (minh hoạ chung, không phải trích bản nhạc)
 
 ## Câu trích Tristan
-- Theo trang Tristan của Đại học Texas (UT Austin), sau khoảng **61 ô**, nhạc ragtime **đột ngột dừng** và vang lên một [[cau-nhac|câu nhạc]] dài, liền tiếng: motif **"Khát khao"** mở đầu *Tristan und Isolde* của [[richard-wagner|Wagner]] — nhưng **không có hợp âm Tristan**, được hoà âm lại bằng các hợp âm khác.
+- Theo trang Tristan của Đại học Texas (UT Austin), sau khoảng **61 ô**, nhạc ragtime **đột ngột dừng** và vang lên một [[cau-nhac|câu nhạc]] dài, liền tiếng: motif **"Khát khao"** mở đầu *Tristan und Isolde* của [[richard-wagner|Wagner]] — nhưng **không có hợp âm Tristan**: câu nhạc được hoà âm lại bằng các hợp âm khác.
 - Debussy ghi *Cédez* (chậm lại) và ***avec une grande émotion*** ("với xúc động lớn") — một lời đùa: câu nhạc lãng mạn nhất của Wagner được đặt giữa điệu nhảy của con búp bê. Motif xuất hiện **bốn lần**, mỗi lần bị "trả lời" bằng các [[truong-do|nốt móc đơn]] [[cach-dien-tau|staccato]] nhại tiếng **banjo**.
 - PTNA cho biết hoà âm ở đầu chủ đề chính đã có quan hệ [[trung-am|trùng âm]] với hợp âm Tristan; Bauer kể Debussy dặn ông "chú ý đến câu trích Wagner", và trong cuộn piano tự thu, Debussy chơi chậm và cường điệu mỗi lần trích.
 - Bối cảnh: thái độ của Debussy với Wagner — từ ngưỡng mộ đến chống đối — là một chủ đề lớn của nhạc Pháp đầu thế kỷ 20 (xem [[an-tuong]], [[hoa-am-cromatic]]).

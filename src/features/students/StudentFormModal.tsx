@@ -232,7 +232,7 @@ export function StudentFormModal() {
         onClose={() => setConfirmDelete(false)}
         onConfirm={handleDelete}
         title="Xoá học viên này?"
-        description="Thao tác này sẽ xoá vĩnh viễn học viên cùng toàn bộ buổi học trong thời khóa biểu của học viên đó. Không thể hoàn tác."
+        description="Thao tác này sẽ xoá vĩnh viễn học viên cùng toàn bộ buổi học trong thời khoá biểu của học viên đó. Không thể hoàn tác."
         confirmLabel="Xoá học viên"
         tone="danger"
       />

@@ -27,7 +27,7 @@ Mục này trả lời ba câu hỏi: **bình ca Gregorian được viết và h
 | 4. Sách hát và văn kiện | [[sach-hat-va-van-kien-binh-ca]] — Liber Usualis, Graduale, Tra le sollecitudini, Musicam Sacram | [[van-ban-hoc-am-nhac|văn bản học]] |
 | 5. Tự viết | [[viet-binh-ca-cho-tieng-ban-dia]] — đặt lời, trọng âm, Simple English Propers | [[am-nhac-va-ngon-ngu|âm nhạc và ngôn ngữ]] |
 | 6. Soạn bản in | [[gregorio-va-gabc]] — phần mềm Gregorio, cú pháp gabc | [[ky-am]] |
-| 7. Đệm bình ca | [[dem-organ-cho-binh-ca]] — Niedermeyer, Solesmes, ictus, đăng ký [[am-sac|âm sắc]] | [[luat-hoa-am-bon-be]], [[dieu-thuc]] |
+| 7. Đệm bình ca | [[dem-organ-cho-binh-ca]] — Niedermeyer, Solesmes, ictus, phối [[am-sac|âm sắc]] | [[luat-hoa-am-bon-be]], [[dieu-thuc]] |
 | 8. Organ thay lời hát | [[alternatim-va-thanh-le-organ]] — Cabezón, Titelouze, [[francois-couperin|Couperin]], Scheidt | [[cantus-firmus]], [[chorale-va-chorale-prelude]] |
 | 9. Đệm cộng đoàn | [[dem-hat-cong-doan-tren-organ]] — Arnstadt 1706, chorale "passaggio", giai đoạn hiện đại | [[dem-hat-piano]] |
 | 10. Tài liệu của Bach | [[tai-lieu-su-pham-cua-bach]] — Orgelbüchlein, Inventions, Vorschriften 1738, Schemelli, 371 chorale | [[bass-so]], [[phan-tich-invention-so-1]] |
@@ -364,7 +364,7 @@ Gõ gabc buộc bạn suy nghĩ như người chép bình ca: **vị trí tươn
     category: 'sacred',
     also: ['harmony', 'expression'],
     aliases: ["đệm bình ca", "đệm organ bình ca", "đệm thánh ca Gregorian", "Gregorian accompaniment", "chant accompaniment", "Niedermeyer", "d'Ortigue", "Traité de l'accompagnement du plain-chant", "Potiron", "Bragers", "Flor Peeters", "Nova Organi Harmonia", "đệm thánh vịnh"],
-    summary: "Bình ca vốn hát không đệm; organ chỉ được Tra le sollecitudini (1903) \"cho phép\" với điều kiện \"chỉ nâng đỡ, không đè nén\". Bài kể lại cách đệm thay đổi từ thế kỷ 19 — Niedermeyer và d'Ortigue (1857) bác bỏ kết át – chủ và dấu hoá, trường phái Solesmes đặt hợp âm vào ictus, Nova Organi Harmonia của Viện Lemmens — rồi tách rõ nguyên tắc nào có nguồn học thuật, nguyên tắc nào chỉ là kinh nghiệm thực hành: điệu thức, chuyển động ngược, đăng ký âm sắc nhẹ, đệm thánh vịnh.",
+    summary: "Bình ca vốn hát không đệm; organ chỉ được Tra le sollecitudini (1903) \"cho phép\" với điều kiện \"chỉ nâng đỡ, không đè nén\". Bài kể lại cách đệm thay đổi từ thế kỷ 19 — Niedermeyer và d'Ortigue (1857) bác bỏ kết át – chủ và dấu hoá, trường phái Solesmes đặt hợp âm vào ictus, Nova Organi Harmonia của Viện Lemmens — rồi tách rõ nguyên tắc nào có nguồn học thuật, nguyên tắc nào chỉ là kinh nghiệm thực hành: điệu thức, chuyển động ngược, phối âm sắc nhẹ, đệm thánh vịnh.",
     refs: [
       ["Journal des Débats, 16/2/1857 — về chuyên luận Niedermeyer – d'Ortigue (PDF)", "https://sas-space.sas.ac.uk/4959/1/Journal_des_Debats_16_fev_1857_proofed_final.pdf"],
       ["CUNY Academic Works — luận án 2021 về Niedermeyer, d'Ortigue và đệm bình ca", "https://academicworks.cuny.edu/gc_etds/4307"],
@@ -422,14 +422,14 @@ Bài này là bước 7 của [[am-nhac-nha-tho]]. Cần biết trước: [[tam-
 
 Thử chơi cả hai sau khi hát một câu điệu 1 (Rê – Fa – Sol – La…): kết đầu kéo tai về giọng Rê thứ, kết sau giữ được màu điệu thức. Xem thêm [[hoa-am-dieu-thuc]].
 
-## Đăng ký âm sắc
+## Phối âm sắc
 Theo tài liệu của Methodist School of Music (Singapore, 2020):
 | Ai hát | [[am-sac|Âm sắc]] gợi ý |
 |---|---|
 | Người xướng (cantor) | sáo hoặc dây nhẹ, principal 8' yếu |
 | Ca đoàn | flute/dây/principal 8' mạnh hơn |
 | Cộng đoàn | thêm 4', có khi 2'; ca đoàn yếu thì cần đỡ nhiều hơn, có thể phải chơi cả giai điệu |
-Về các đường âm 8', 4', 2' xem [[organ-ong]].
+Về các nút âm sắc 8', 4', 2' xem [[organ-ong]].
 
 ## Đệm thánh vịnh
 - Tài liệu chuẩn bị thánh vịnh của **AGO** (2025): organist chơi một hợp âm ở đầu câu, người hát vào khi sẵn sàng; cuối câu có thể ngắt hoặc vào thẳng hợp âm đầu để lặp lại.
@@ -472,7 +472,7 @@ Bài này là bước 8 của [[am-nhac-nha-tho]]. [[hinh-thuc-am-nhac|Hình th�
 ## Nguyên tắc
 - Organ chơi một **verset** thay cho câu văn lẽ ra được hát; câu kế tiếp do ca đoàn hát bình ca (hoặc [[doi-am|phức điệu]]), cứ thế luân phiên. Truyền thống bắt nguồn từ lối hát thánh vịnh **đối đáp** giữa hai bên ca đoàn.
 - Theo Wikipedia (*Alternatim*), các câu chẵn hoặc lẻ còn thiếu có khi được bổ sung bằng bình ca, có khi — có lẽ phổ biến hơn — bằng **ngẫu hứng organ** (so với các thánh lễ organ của Hans Buchner).
-- Nghi thức Paris năm 1662: organ **mở đầu** Kyrie rồi luân phiên với ca đoàn. Thánh lễ organ thường có verset cho các phần chung của [[thanh-le-va-requiem|thánh lễ]], **trừ Kinh Tin Kính**.
+- Nghi thức Paris năm 1662: organ **mở đầu** Kyrie (Kinh Thương xót) rồi luân phiên với ca đoàn. Thánh lễ organ thường có verset cho các phần chung của [[thanh-le-va-requiem|thánh lễ]], **trừ Kinh Tin Kính**.
 ::form Organ Hát Organ Hát Organ Hát Organ Hát Organ | Sơ đồ minh hoạ chín lời kêu của Kyrie khi organ mở đầu và luân phiên (theo nguyên tắc của nghi thức Paris 1662; số verset cụ thể tuỳ tác phẩm)
 
 ## Các mốc
@@ -482,11 +482,11 @@ Bài này là bước 8 của [[am-nhac-nha-tho]]. [[hinh-thuc-am-nhac|Hình th�
 | 1623 / 1626 | **Jean Titelouze** — *Hymnes de l'Église* (3 – 4 câu cho mỗi thánh thi trong 12 thánh thi lớn); *Magnificat* trên cả **tám giọng** | Dành cho alternatim với ca đoàn/người xướng, organ chơi các câu **lẻ** |
 | 1624 | [[samuel-scheidt|Scheidt]] — *Tabulatura nova*, tập III | Các Magnificat cho alternatim với ca đoàn |
 | 1650 | Scheidt — **Görlitzer Tabulaturbuch** | 100 [[chorale-va-chorale-prelude|chorale]] bốn bè xếp theo năm phụng vụ, để organist chơi "cùng" cộng đoàn. Carl Schalk đọc là **luân phiên** với cộng đoàn, người khác đọc là **đệm**; thường được gọi là tập đầu tiên thuộc loại này |
-| cuối thế kỷ 17 | [[francois-couperin|François Couperin]] — *Messe pour les paroisses* | Theo truyền thống, các verset organ luân phiên với các câu của thánh lễ bình ca **"Cunctipotens genitor Deus"** do schola hát; cùng bình ca này được trích ở bè [[ban-dap|pedal]] trong các verset Gloria của Couperin và Grigny |
+| cuối thế kỷ 17 | [[francois-couperin|François Couperin]] — *Messe pour les paroisses* | Theo truyền thống, các verset organ luân phiên với các câu của thánh lễ bình ca **"Cunctipotens genitor Deus"** do schola hát; cùng bình ca này được trích ở bè [[ky-thuat-pedal-organ|pedal]] trong các verset Gloria của Couperin và Grigny |
 ::ytsearch Couperin Messe pour les paroisses alternatim plainchant | Tìm nghe: Couperin với bình ca xen kẽ
 
 ## Alternatim trong Giáo hội Luther và Anh
-- Theo một nghiên cứu ở Đại học Kansas (Paisar), Luther giáo thời đầu **giữ** lối alternatim giữa ca đoàn và organ có từ trước Cải cách; [[michael-praetorius|Praetorius]] bắt đầu kết hợp organ, ca đoàn và cộng đoàn.
+- Theo một nghiên cứu ở Đại học Kansas (Paisar), Giáo hội Luther thời đầu **giữ** lối alternatim giữa ca đoàn và organ có từ trước Cải cách; [[michael-praetorius|Praetorius]] bắt đầu kết hợp organ, ca đoàn và cộng đoàn.
 - Một nghiên cứu về miền nam Hessen (Acta Organologica 34): từ thời Cải cách, ca đoàn hoặc organ luân phiên với cộng đoàn; dần dần trong thế kỷ 18 organ chuyển sang **đệm mọi câu**. Đây là bước chuyển dẫn sang [[dem-hat-cong-doan-tren-organ]].
 - Ở Anh: một đĩa toàn tập [[thomas-tallis|Tallis]] dựng lại các thánh thi với các câu luân phiên giữa bình ca, organ, phức điệu và *faburden*.
 
@@ -556,7 +556,7 @@ Một bài trên Bach-Jahrbuch thuật lại rằng về sau Bach có quan đi�
 | Giữ nhịp | Organist đặt nhịp và giữ suốt bài bằng lối chạm rõ ràng | The Diapason |
 | Dạo đầu | Vd. chơi dòng đầu đúng nhịp sẽ hát; tuyển tập dạo đầu cho mọi bài trong sách hát Luther (CPH) | The Diapason; CPH |
 | Giữa các câu | Nghỉ khoảng hai phách (giữ [[hop-am-ba|hợp âm]] cuối thêm một – hai phách), không thêm chỗ nghỉ giữa các dòng | Church Music Dublin *(yếu)* |
-| Thay [[am-sac|âm sắc]] | Đổi đăng ký theo từng câu; thêm mixture cho câu cuối khi lời phù hợp | Reformed Worship |
+| Thay [[am-sac|âm sắc]] | Đổi phối âm sắc theo từng câu; thêm mixture cho câu cuối khi lời phù hợp | Reformed Worship |
 | Câu cuối | Đổi hoà âm, giữ nguyên giai điệu (*last verse harmonisation*); có **descant** thì dùng hoà âm gốc hoặc hoà âm viết cho descant | Wikipedia |
 | Amen | Giữ một âm chung từ hợp âm cuối sang Amen để báo cho cộng đoàn | AGO |
 | Cẩn thận | Bản đệm tự do xa giai điệu quá sẽ **cản** cộng đoàn hát | Reformed Worship |
@@ -569,8 +569,8 @@ Một bài trên Bach-Jahrbuch thuật lại rằng về sau Bach có quan đi�
     title: "Bình ca và organ ở Việt Nam: điều đã biết và khoảng trống",
     category: 'sacred',
     also: ['vietnam'],
-    aliases: ["bình ca ở Việt Nam", "organ nhà thờ Lớn Hà Nội", "đại phong cầm", "organ Việt Nam", "Ủy ban Thánh nhạc", "imprimatur thánh ca", "thánh nhạc Việt Nam"],
-    summary: "Những gì nguồn đáng tin nói về bình ca Gregorian và đàn organ trong Công giáo Việt Nam: bình ca được hát song song với thánh ca tiếng Việt; đàn organ ống là biểu tượng của âm nhạc nhà thờ (Lê Hải Đăng); cây organ 1.850 ống của Nhà thờ Lớn Hà Nội (2022) đến từ Itami, Nhật Bản; Ủy ban Thánh nhạc chỉ cho dùng bài có phép in (imprimatur). Bài ghi rõ những gì chưa có nguồn: kỹ thuật đệm ở giáo xứ, bình ca lời Việt.",
+    aliases: ["bình ca ở Việt Nam", "organ nhà thờ Lớn Hà Nội", "đại phong cầm", "organ Việt Nam", "Uỷ ban Thánh nhạc", "imprimatur thánh ca", "thánh nhạc Việt Nam"],
+    summary: "Những gì nguồn đáng tin nói về bình ca Gregorian và đàn organ trong Công giáo Việt Nam: bình ca được hát song song với thánh ca tiếng Việt; đàn organ ống là biểu tượng của âm nhạc nhà thờ (Lê Hải Đăng); cây organ 1.850 ống của Nhà thờ Lớn Hà Nội (2022) đến từ Itami, Nhật Bản; Uỷ ban Thánh nhạc chỉ cho dùng bài có phép in (imprimatur). Bài ghi rõ những gì chưa có nguồn: kỹ thuật đệm ở giáo xứ, bình ca lời Việt.",
     refs: [
       ["UCA News — Vietnam's Catholic hymns resonate beyond church walls", "https://www.ucanews.com/news/vietnams-catholic-hymns-resonate-beyond-church-walls/109430"],
       ["UCA News — Grand organ from Japan installed in Hanoi cathedral (2022)", "https://www.ucanews.com/news/grand-organ-from-japan-installed-in-hanoi-cathedral/99548"],
@@ -592,25 +592,25 @@ Bài này là bước 13 của [[am-nhac-nha-tho]] và bổ sung cho [[am-nhac-t
 
 ## Bình ca bên cạnh thánh ca tiếng Việt
 - UCA News: các giáo xứ Việt Nam thường có ít nhất hai ca đoàn (người lớn và giới trẻ); **[[thanh-ca-gregorian|bình ca]] Gregorian được hát cùng** thánh ca chính thức và các sáng tác lấy chất liệu dân ca Việt. Linh mục **Nguyễn Kim Long**, tác giả hơn 3.500 bài thánh ca tiếng Việt, qua đời ngày 17/6/2025, 84 tuổi.
-- Fides: thánh nhạc Công giáo Việt phát triển đều từ thập niên 1940; Ủy ban thánh nhạc Tổng giáo phận Hà Nội từng tổ chức hội thảo cho khoảng 300 đại diện ca đoàn về nguyên tắc âm nhạc và hướng dẫn của Giáo hội.
+- Fides: thánh nhạc Công giáo Việt phát triển đều từ thập niên 1940; Uỷ ban Thánh nhạc Tổng giáo phận Hà Nội từng tổ chức hội thảo cho khoảng 300 đại diện ca đoàn về nguyên tắc âm nhạc và hướng dẫn của Giáo hội.
 - Lm. **Paul Văn Chi**, *Catholic Choral Music in Vietnam 1945 – 1975* (OCP) chia ba giai đoạn: đặt nền 1945 – 1955, phát triển 1955 – 1970, chín muồi 1970 – 1975.
 - Truyền thống bản địa **không phải Gregorian** nhưng cùng tinh thần "đọc trên [[cao-do|cao độ]]": **đọc kinh** — lời kinh ngân nga theo cao độ của thanh điệu — và **Ngắm Mùa Chay**, các bài suy niệm Thương khó được ngâm ở nhiều nhà thờ. Xem [[viet-binh-ca-cho-tieng-ban-dia]].
 
 ## Đàn organ
 - **Lê Hải Đăng** (Viện Âm nhạc): **đại phong cầm** (organ ống) là nhạc cụ biểu tượng của âm nhạc nhà thờ; thánh nhạc ảnh hưởng đến thị hiếu âm nhạc ngoài đời; các nữ tu đóng vai trò truyền bá.
-- **Nhà thờ Lớn Hà Nội** (2022): cây organ do thợ Bỉ **Guido Schumacher** đóng, lắp năm 1993 ở **Itami** (Nhật Bản) theo chương trình kết nghĩa Itami – Hasselt; Itami không đủ kinh phí bảo dưỡng nên tặng miễn phí cho Tổng giáo phận Hà Nội, phía Hà Nội trả chi phí vận chuyển và sửa chữa; cao khoảng 7 m, khoảng **1.850 ống**; buổi hoà nhạc khánh thành có Tổng Giám mục Giuse Vũ Văn Thiên.
+- **Nhà thờ Lớn Hà Nội** (2022): cây organ do thợ đóng đàn người Bỉ **Guido Schumacher** đóng, lắp năm 1993 ở **Itami** (Nhật Bản) theo chương trình kết nghĩa Itami – Hasselt. Itami không đủ kinh phí bảo dưỡng nên tặng miễn phí cho Tổng giáo phận Hà Nội; phía Hà Nội trả chi phí vận chuyển và sửa chữa. Đàn cao khoảng 7 m, khoảng **1.850 ống**; buổi hoà nhạc khánh thành có Tổng Giám mục Giuse Vũ Văn Thiên.
 - Cấu tạo organ ống, ống lưỡi gà và ống sáo: [[organ-ong]].
 
 ## Quy định
-- Ủy ban Thánh nhạc (Hội đồng Giám mục Việt Nam): chỉ bài có **phép in (imprimatur)** mới được dùng trong phụng vụ (*Hướng dẫn Mục vụ Thánh nhạc*, số 114 – 115).
+- Uỷ ban Thánh nhạc (Hội đồng Giám mục Việt Nam): chỉ bài có **phép in (imprimatur)** mới được dùng trong phụng vụ (*Hướng dẫn Mục vụ Thánh nhạc*, số 114 – 115).
 - Hội thảo thánh nhạc lần thứ 54 tổ chức ngày 6/5/2025 tại TP.HCM.
 
 ## Những khoảng trống (chưa có nguồn)
-- **Kỹ thuật đệm đàn** ở các giáo xứ Việt Nam (organ hay đàn phím điện, hoà âm, đăng ký [[am-sac|âm sắc]]).
+- **Kỹ thuật đệm đàn** ở các giáo xứ Việt Nam (organ hay đàn phím điện, hoà âm, phối [[am-sac|âm sắc]]).
 - Lịch sử organ ở Nhà thờ Đức Bà Sài Gòn và Tân Định.
 - [[an-ban-urtext|Ấn bản]] **bình ca lời Việt**, và cách xử lý thanh điệu khi đặt lời Việt vào [[giai-dieu|giai điệu]] Gregorian.
 - Định nghĩa thuật ngữ "bình ca" trong một nguồn tiếng Việt.
-Nếu bạn có tài liệu (sách hướng dẫn của Ủy ban Thánh nhạc, giáo trình chủng viện), đó là nơi thư viện cần đối chiếu tiếp.
+Nếu bạn có tài liệu (sách hướng dẫn của Uỷ ban Thánh nhạc, giáo trình chủng viện), đó là nơi thư viện cần đối chiếu tiếp.
 `,
   },
   {
@@ -649,11 +649,11 @@ Bài này là bước 10 của [[am-nhac-nha-tho]]. Tiểu sử: [[johann-sebast
 | Tập | Năm | Dạy gì | Lời tựa / ghi chú |
 |---|---|---|---|
 | **Clavierbüchlein cho W. F. Bach** | bắt đầu 1720 ([[wilhelm-friedemann-bach|Friedemann]] khoảng 10 tuổi) | khoá, [[ky-hieu-hoa-my|hoa mỹ]], [[ngon-bam|ngón bấm]] | Mở đầu bằng bảng giải thích khoá (*Claves signatae*), bảng hoa mỹ (*Explication*), rồi *Applicatio* BWV 994 có **ngón bấm do Bach ghi**; chứa bản sớm của Inventions ("Praeambula", "Fantasias") và một số prelude của Bình quân luật |
-| **Orgelbüchlein** BWV 599 – 644 | soạn ở Weimar (các nhóm khoảng 1708 – 1716); trang nhan đề thời Köthen | chơi chorale, luyện [[ban-dap|pedal]] | Kế hoạch **164** bài, hoàn thành **46** (có nguồn ghi 45) |
-| **Inventions & Sinfonias** | trang nhan đề 1723 | chơi hai, ba bè; nếm trước sáng tác | "để đạt được **lối chơi hát** (*cantable*)" và "có được **một vị nếm mạnh về sáng tác**" — xem [[phan-tich-invention-so-1]] |
+| **Orgelbüchlein** BWV 599 – 644 | soạn ở Weimar (các nhóm khoảng 1708 – 1716); trang nhan đề thời Köthen | chơi chorale, luyện [[ky-thuat-pedal-organ|pedal]] | Kế hoạch **164** bài, hoàn thành **46** (có nguồn ghi 45) |
+| **Inventions & Sinfonias** | trang nhan đề 1723 | chơi hai, ba bè; làm quen trước với sáng tác | "để đạt được **lối chơi hát** (*cantable*)" và "có được **một vị nếm trước đậm đà về sáng tác**" — xem [[phan-tich-invention-so-1]] |
 | **Musicalisches Gesang-Buch** (Schemelli) | Leipzig, Breitkopf, 1736 | hát chorale với bè trầm số | 954 lời, chỉ **69** bài in kèm [[giai-dieu|giai điệu]] và [[bass-so|bè trầm số]] (BWV 439 – 507); lời tựa nói Bach làm bè trầm số và sáng tác hoặc sửa một số giai điệu. [[lich-su-nganh-am-nhac-hoc|Spitta]] gán 29 giai điệu cho Bach — **còn tranh cãi** |
 | **Vorschriften und Grundsätze** | bản chép 1738 | bè trầm số bốn bè | Xem mục riêng dưới đây |
-| **Clavier-Übung III** | Leipzig, 1739, Bach tự xuất bản | chorale giáo lý cho [[organ-ong|organ]] | Nhan đề: "…gồm nhiều khúc [[prelude-ung-tac|dạo đầu]] trên các bài ca **Giáo lý** và các bài ca khác, cho organ…", dành cho "những người yêu nhạc, **đặc biệt là người sành**" (*Kenner*). Gồm Kyrie/Gloria BWV 669 – 677, chorale giáo lý bản lớn và nhỏ BWV 678 – 689, bốn duetto BWV 802 – 805, đóng khung bởi Prelude và Fugue Mi giáng BWV 552. Biệt danh "German Organ Mass" **không** phải của Bach |
+| **Clavier-Übung III** | Leipzig, 1739, Bach tự xuất bản | chorale giáo lý cho [[organ-ong|organ]] | Nhan đề: "…gồm nhiều khúc [[prelude-ung-tac|dạo đầu]] trên các bài ca **Giáo lý** và các bài ca khác, cho organ…", dành cho "những người yêu nhạc, **đặc biệt là người sành**" (*Kenner*). Gồm Kyrie/Gloria BWV 669 – 677, chorale giáo lý bản lớn và nhỏ BWV 678 – 689, bốn duetto BWV 802 – 805, đóng khung bởi Prelude và Fugue Mi giáng trưởng BWV 552. Biệt danh "German Organ Mass" **không** phải của Bach |
 | **Chorale Schübler** BWV 645 – 650 | khoảng 1746 – 1750, in ở Zella | chép [[oratorio-cantata-passion|cantata]] sang organ | Năm bài [[phoi-khi-nguyen-ly-co-ban|chuyển soạn]] từ aria cantata (vd. BWV 645 ← BWV 140/4); BWV 646 không còn bản gốc |
 | **Chorale Leipzig** ("Great Eighteen") BWV 651 – 668 | sửa ở Leipzig từ bản Weimar; chép 1739 – 1750 | chorale lớn | Bản tay P 271; BWV 666 – 667 do Altnikol chép 1750; BWV 668 là mảnh |
 | **371 chorale bốn bè** | in 1765 – 1769 (Birnstiel) và 1784 – 1787 (Breitkopf) | phối bốn bè | Xem mục riêng |
@@ -727,7 +727,7 @@ Gerber học ở Leipzig 1724 – 1727; con trai ông (E. L. Gerber, trong từ 
 ## Người nối tiếp
 | Học trò | Đóng góp |
 |---|---|
-| **Johann Philipp Kirnberger** | *Die Kunst des reinen Satzes in der Musik* (1774, 1779). Forkel ghi công ông phát triển phương pháp dạy của Bach và rút ra một hệ thống hoà âm từ tác phẩm Bach. Trong *Gedanken über die verschiedenen Lehrarten in der Komposition* (Berlin, 1782) ông đề cao phương pháp Bach và đòi dạy viết **ba và bốn bè thuần khiết**. Ông lo in các chorale của Bach (in sau khi ông mất) |
+| **Johann Philipp Kirnberger** | *Die Kunst des reinen Satzes in der Musik* (1774, 1779). Forkel ghi công ông phát triển phương pháp dạy của Bach và rút ra một hệ thống hoà âm từ tác phẩm Bach. Trong *Gedanken über die verschiedenen Lehrarten in der Komposition* (Berlin, 1782) ông đề cao phương pháp Bach và đòi dạy viết **ba và bốn bè thuần khiết**. Ông lo việc in các chorale của Bach (các tập ra mắt sau khi Kirnberger mất) |
 | **Johann Christian Kittel** (1732 – 1809) | Học Bach từ 1748 (thường gọi là học trò cuối); organist Langensalza (1751), Erfurt (Barfüßerkirche 1756, Predigerkirche 1762). Viết *Der angehende praktische Organist* (Erfurt, 3 tập, 1801 – 1808), xoay quanh **[[dem-hat-cong-doan-tren-organ|đệm chorale]]** và chơi [[organ-ong|organ nhà thờ]]. Học trò: M. G. Fischer, Umbreit, Hässler, Rinck. Sách chorale Schleswig-Holstein (1803) của ông có mỗi bài một bản bốn bè và một khúc dạo ngắn |
 
 **Robin Leaver** lập luận rằng trung tâm sư phạm của Bach là **chorale đàn phím**, không phải chorale hợp xướng, và lần theo truyền thống ấy qua Marpurg, Kirnberger, Kittel và học trò của Kittel. Susan McCormick (Understanding Bach 8, 2013) tìm lại một bản chép tay sách chorale của Kittel.
@@ -768,7 +768,7 @@ Bài này là bước 12 của [[am-nhac-nha-tho]] và là phần áp dụng c�
 ::grand G4+D5/G2+B3=V G4+E5/C3+C4=I G4+D5/Bb2+D4=iv6 A4+E5/A2+C#4=V F#4+D#5/B2+B3=V G4+E5/E3+B3=i | Cùng một nốt soprano Mi ở fermata, ba cách đọc: bậc 3 của Đô trưởng (kết hoàn toàn), bậc 2 của Rê thứ (nửa kết), bậc 1 của Mi thứ (kết hoàn toàn). Ví dụ do thư viện dựng để minh hoạ quy tắc của de Clercq, không trích từ Bach
 
 ## Bước 2 — Viết bè trầm
-Theo lời C. P. E. Bach, chính Bach dạy chorale bằng cách **đưa sẵn bè trầm** cho học trò (xem [[bach-day-hoc-tro]]). Khi tự phối, hãy làm điều ngược lại: viết bè trầm ngay sau khi có kế hoạch kết, kiểm tra **khung hai bè** soprano – bass trước (chuyển động ngược, không [[quang|quãng]] 5 và [[dan-giong|quãng 8 song song]]) rồi mới điền bè giữa. Một bài trên ZGMTH (2019) còn đề xuất rằng Bach có thể hình dung việc phối nhiều bè trầm khác nhau cho cùng một chorale như việc ghép các **module kết chồng lên nhau** (theo các nguồn trong vòng học trò của ông).
+Theo lời C. P. E. Bach, chính Bach dạy chorale bằng cách **đưa sẵn bè trầm** cho học trò (xem [[bach-day-hoc-tro]]). Khi tự phối, hãy làm điều ngược lại: viết bè trầm ngay sau khi có kế hoạch kết, kiểm tra **khung hai bè** soprano – bass trước (chuyển động ngược, không để [[quang|quãng]] 5 và [[dan-giong|quãng 8 song song]]) rồi mới điền bè giữa. Một bài trên ZGMTH (2019) còn đề xuất rằng Bach có thể hình dung việc phối nhiều bè trầm khác nhau cho cùng một chorale như việc ghép các **module kết chồng lên nhau** (theo các nguồn trong vòng học trò của ông).
 
 ## Bước 3 — Điền alto và tenor
 Luật bốn bè (khoảng cách, nhân đôi, giải quyết nốt dẫn) ở [[luat-hoa-am-bon-be]]. Vài "dấu vân tay" được các nghiên cứu nêu:

@@ -44,7 +44,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
           {ready ? 'Trong hộp thoại in, chọn “Lưu dưới dạng PDF” để tải về máy.' : 'Đang dàn trang…'}
         </p>
         <button onClick={() => window.print()} className="print-tool is-primary">
-          <DownloadIcon width={16} height={16} /> Lưu PDF
+          <DownloadIcon width={16} height={16} /> Xuất PDF
         </button>
       </div>
 

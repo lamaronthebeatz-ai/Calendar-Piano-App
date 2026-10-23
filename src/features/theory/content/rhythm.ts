@@ -183,7 +183,7 @@ Dấu nối là đường cong nối **hai nốt cùng [[cao-do|cao độ]]** �
 **Chấm dôi kéo dài thêm** (overdotting — thuật ngữ hiện đại): thói quen thời [[thoi-ky-baroque|Baroque]] chơi một số hình chấm dôi **dài hơn** cách viết. Trong **[[khuc-mo-man|khúc mở màn kiểu Pháp]]** (French [[the-loai|overture]]), nốt chấm dôi đơn thường được chơi như **chấm dôi kép**, nốt ngắn theo sau bị rút ngắn và chơi **muộn nhất có thể**.
 - Tỉ lệ thông thường của "đen chấm dôi + móc đơn" là **3 : 1**; nhiều nguồn cho rằng khúc mở màn kiểu Pháp cần tỉ lệ gắt hơn, khoảng **7 : 1**.
 - Thập niên 1960–70, Frederick Neumann đã **phản bác** cách hiểu cực đoan này, gây tranh luận lớn.
-- Nghiên cứu thực nghiệm ([[franz-schubert|Schubert]] và Fabian) cho thấy **tỉ lệ chấm dôi** ít ảnh hưởng đến cảm nhận tính chất hơn người ta nghĩ; **cách diễn tấu, tốc độ và [[cuong-do|cường độ]]** quan trọng hơn.
+- Nghiên cứu thực nghiệm (Emery Schubert và Fabian) cho thấy **tỉ lệ chấm dôi** ít ảnh hưởng đến cảm nhận tính chất hơn người ta nghĩ; **cách diễn tấu, tốc độ và [[cuong-do|cường độ]]** quan trọng hơn.
 
 ## Notes inégales — nốt "không đều" kiểu Pháp
 Ở Pháp khoảng **1690–1780**, các cặp nốt viết **đều nhau** (thường là móc đơn) được chơi **dài – ngắn**.
@@ -455,7 +455,7 @@ Lưu ý: 9/8 thông thường là [[so-chi-nhip|nhịp kép]] 3 + 3 + 3; cách c
 ::rhythm 7/8 >e:1-e:2 >e:1-e:2 >e:1-e:2-e:3 // | 7/8 chia 2 + 2 + 3: nhấn đầu mỗi nhóm
 
 ## Nhịp thay đổi
-Số chỉ nhịp đổi ở nhiều ô nhịp liên tiếp (3/16 – 2/16 – 3/16 – 5/16…). [[igor-stravinsky|Stravinsky]], "Le Sacre du printemps" (1913), phần "Danse sacrale" là ví dụ kinh điển; Bartók dùng nhiều trong bộ "Mikrokosmos" cho piano.
+Số chỉ nhịp đổi liên tục qua các ô nhịp (3/16 – 2/16 – 3/16 – 5/16…). [[igor-stravinsky|Stravinsky]], "Le Sacre du printemps" (1913), phần "Danse sacrale" là ví dụ kinh điển; Bartók dùng nhiều trong bộ "Mikrokosmos" cho piano.
 
 ## Ba tác phẩm tiêu biểu
 - **"Take Five"** — Paul Desmond sáng tác, Dave Brubeck Quartet thu năm **1959** trong album *Time Out*. Tay trống Joe Morello đề nghị một bài nhịp **5/4**, và tên bài lấy từ chính số chỉ nhịp. Mỗi bài trong album dùng một nhịp khác nhau, lấy cảm hứng từ chuyến lưu diễn Âu – Á năm 1958 của nhóm.
@@ -608,7 +608,7 @@ Các nghiên cứu gõ nhịp cho thấy người học nhạc **gõ chính xác
 Bài này mở rộng [[dao-phach]], [[nhip-hon-hop]] và [[da-nhip]]. Ứng dụng đệm: [[dem-bossa-nova]].
 
 ## Tresillo: 3 + 3 + 2
-"Tresillo" (tiếng Tây Ban Nha: [[lien-ba|liên ba]]) — trong nhạc nhịp đôi là nhóm **3 + 3 + 2** (tính theo móc đơn hoặc móc kép); là ô [[tiet-tau|tiết tấu]] nhịp đôi phổ biến nhất ở châu Phi hạ Sahara và theo buôn bán nô lệ sang châu Mỹ.
+"Tresillo" (tiếng Tây Ban Nha: [[lien-ba|liên ba]]) — trong nhạc nhịp đôi là nhóm **3 + 3 + 2** (tính theo móc đơn hoặc móc kép); là tế bào [[tiet-tau|tiết tấu]] nhịp đôi phổ biến nhất ở châu Phi hạ Sahara và theo buôn bán nô lệ sang châu Mỹ.
 ::rhythm 4/4 >q. >q. >q // | Tresillo: 8 móc đơn chia 3 + 3 + 2
 - **Habanera** là tresillo thêm một nốt ở phách 2. [[opera|Aria]] "Habanera" trong *Carmen* (1875) của [[georges-bizet|Bizet]] phỏng theo *El Arreglito* (1863) của Sebastián Iradier — Bizet tưởng đó là dân ca.
 ::rhythm 2/4 e. s e e // | Hình habanera (thư viện suy ra từ định nghĩa: tresillo + phách 2)
@@ -618,10 +618,10 @@ Bài này mở rộng [[dao-phach]], [[nhip-hon-hop]] và [[da-nhip]]. Ứng d�
 Mẫu hai ô, một ô "3" (chính là tresillo) và một ô "2":
 ::rhythm 4/4 q. q. q / rq q q rq // | Son clave 3-2 (cách ghi thông dụng, thư viện tự chép)
 - **3-2** hay **2-3**: cùng một mẫu, bắt đầu từ ô ba nốt hay ô hai nốt. Ở Mỹ, 3-2 clave còn gọi là "nhịp Bo Diddley" (theo các bản thu thập niên 1950).
-- **Rumba clave** lùi một nốt của ô "3" muộn hơn nửa phách (thường được tả là nốt thứ ba, sang "và" của phách 4) — *các nguồn mô tả hơi khác nhau*. Son clave gắn với nhạc khiêu vũ, rumba clave với rumba dân gian.
+- **Rumba clave** đặt một nốt của ô "3" muộn hơn nửa phách (thường được tả là nốt thứ ba, sang "và" của phách 4) — *các nguồn mô tả hơi khác nhau*. Son clave gắn với nhạc khiêu vũ, rumba clave với rumba dân gian.
 
 ## Time line: "xương sống" của một điệu múa
-Kofi [[ly-thuyet-chu-de|Agawu]] (*JAMS* 59/1, 2006, tr. 1 – 46) định nghĩa **time line**: một hình tiết tấu có dáng rõ, dễ nhớ, độ dài vừa phải, đánh lặp suốt một bài múa — phổ biến khắp Tây và Trung Phi và cộng đồng di cư. Mẫu nổi tiếng nhất là **mẫu chuông chuẩn** (12 phách nhỏ, 7 tiếng):
+Kofi [[ly-thuyet-chu-de|Agawu]] (*JAMS* 59/1, 2006, tr. 1 – 46) định nghĩa **time line**: một hình tiết tấu có dáng rõ, dễ nhớ, độ dài vừa phải, đánh lặp suốt một bài múa — phổ biến khắp Tây Phi, Trung Phi và các cộng đồng di cư. Mẫu nổi tiếng nhất là **mẫu chuông chuẩn** (12 phách nhỏ, 7 tiếng):
 ::rhythm 12/8 q q e q q q e // | Mẫu chuông chuẩn Tây Phi: X . X . X X . X . X . X (gõ trên chuông đôi gankogui của người Ewe)
 Agawu kết hợp phân tích **cấu trúc** (tính chất nhịp, xoay vòng) với phân tích **văn hoá** (điệu múa, lời nói).
 
@@ -665,7 +665,7 @@ Phần lớn bản nhạc piano có [[so-chi-nhip|số chỉ nhịp]] và vạch
 ## Prélude không nhịp (prélude non mesuré)
 Thể loại này xuất hiện ở Pháp thế kỷ 17 cho đàn clavecin. [[louis-couperin|Louis Couperin]] thường được coi là người đầu tiên; ông ghi các prélude bằng **chuỗi dài nốt tròn** nối với nhau bằng những **đường cong dài** (Wikipedia). Không có vạch nhịp, không có trường độ thật; người chơi chọn phách và tiết tấu, dựa vào hình hoà âm của chuỗi nốt và các đường cong (theo một bài phê bình đĩa).
 
-::staff treble D4 F4 A4 D5 C#5 E5 A4 D4+F4+A4 | Mô phỏng cách ghi kiểu Couperin - chỉ có cao độ, các nốt rải dần tạo thành hợp âm
+::staff treble D4 F4 A4 D5 C#5 E5 A4 D4+F4+A4 | Mô phỏng cách ghi kiểu Couperin — chỉ có cao độ, các nốt rải dần tạo thành hợp âm
 
 Cần lưu ý về bằng chứng:
 - Theo nghiên cứu của David Chung, hệ thống đường nối có những chỗ mơ hồ và không nhất quán giữa hai nguồn chép tay còn lại (Bauyn và Parville); các nhà biên tập hiện đại bất đồng về việc đường nào cong hay thẳng, bắt đầu và kết thúc ở đâu.
@@ -693,7 +693,7 @@ Cadenza thường được ghi bằng **nốt nhỏ** (cue-size), nhóm nốt d�
 ## Hát nói (recitative)
 Trong [[opera]] và oratorio, **hát nói** (recitativo) thường được ghi ở 4/4 nhưng hát theo nhịp điệu lời nói. Ở recitativo secco, người đệm (clavecin, sau này piano) chỉ đánh hợp âm ngắn, đi theo ca sĩ — một dạng colla voce. Người chơi piano đệm thi tuyển hoặc đệm lớp thanh nhạc nên luyện kỹ việc **chờ** ca sĩ kết thúc câu rồi mới đặt hợp âm.
 
-::grand F4+A4+C5/F2=I E4+G4+C5/C3=V A3+C4+F4/F2=I | Hợp âm đệm hát nói - chỉ ghi điểm hoà âm, thời gian do ca sĩ quyết định
+::grand F4+A4+C5/F2=I E4+G4+C5/C3=V A3+C4+F4/F2=I | Hợp âm đệm hát nói — chỉ ghi điểm hoà âm, thời gian do ca sĩ quyết định
 
 ## Ký hiệu tỷ lệ thế kỷ 20
 Từ những năm 1950, một số nhà soạn nhạc dùng **ký hiệu tỷ lệ** (proportional notation, time-space notation): khoảng cách ngang trên giấy tương ứng với thời gian. [[erik-satie|Erik Satie]] viết các *Gnossiennes* không có vạch nhịp từ trước đó, nhưng đó vẫn là trường độ truyền thống. Earle Brown gọi cách ghi của mình là "time notation", sau gọi là proportional notation (Wikipedia). *Sequenza I* (1958) cho flute của Berio từng được viết lại theo lối tỷ lệ, trong đó đầu nốt chỉ cho biết cao độ (The Instrumentalist); Berio sau này sửa lại bằng ký hiệu chính xác hơn. Xem thêm [[ky-hieu-nang-cao]].

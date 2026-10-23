@@ -34,7 +34,7 @@ export const systematic: Article[] = [
 Vỏ não thính giác sơ cấp nằm ở **hồi Heschl** (thuỳ thái dương) và được sắp xếp theo **tần số** (*tonotopy*): mỗi dải tần ứng với một vùng, giống như các [[ban-phim|phím đàn]] xếp theo [[cao-do|cao độ]]. Các vùng sơ cấp ưa đặc điểm âm thanh đơn giản; các vùng bao quanh nhạy hơn với âm thanh phức tạp như lời nói và âm nhạc. Cách bố trí chi tiết của bản đồ tần số ở người vẫn còn tranh luận. Xem [[am-hoc-co-ban]], [[cam-nhan-am-thanh]].
 
 ## 2. Vì sao âm nhạc dễ chịu: hệ thống phần thưởng
-- **Blood và Zatorre (2001)** chụp PET khi người nghe nghe bản nhạc **chính họ chọn** vì nó làm họ "rùng mình". [[cuong-do|Cường độ]] rùng mình càng tăng thì hoạt động ở thể vân bụng, não giữa, hạch hạnh nhân, vỏ não ổ mắt trán càng thay đổi — **những vùng cũng phản ứng với thức ăn và các chất gây nghiện**.
+- **Blood và Zatorre (2001)** chụp PET khi người nghe nghe bản nhạc **chính họ chọn** vì nó làm họ "rùng mình". [[cuong-do|Cường độ]] rùng mình càng tăng thì hoạt động ở thể vân bụng, não giữa, hạch hạnh nhân, vỏ não trán ổ mắt càng thay đổi — **những vùng cũng phản ứng với thức ăn và các chất gây nghiện**.
 - **Salimpoor và cộng sự (2011)** đo được **dopamine** được giải phóng ở thể vân. Đáng chú ý là có **hai thời điểm**: nhân đuôi hoạt động mạnh hơn khi **chờ đợi** đoạn cao trào, còn nhân accumbens hoạt động mạnh ở **chính khoảnh khắc** cao trào. Điều này khớp với lý thuyết **kỳ vọng** ([[ky-vong-am-nhac]]). Lưu ý: chỉ có **8 người** tham gia cuối cùng (sàng lọc từ 217 người).
 - Xem thêm [[cam-xuc-am-nhac]] (mục rùng mình — *frisson*).
 
@@ -205,7 +205,7 @@ McPherson (2005) theo dõi **157 trẻ** 7 – 9 tuổi trong 3 năm đầu họ
 ## Bốn giả thuyết lớn
 | Giả thuyết | Người đề xuất | Ý chính |
 |---|---|---|
-| **Chọn lọc giới tính** | Darwin, *The Descent of Man* (1871) | [[not-nhac|Nốt nhạc]] và [[tiet-tau|nhịp điệu]] xuất hiện ở tổ tiên loài người "để quyến rũ người khác giới", giống tiếng chim hót. Darwin đối lập với quan điểm của Herbert Spencer cho rằng âm nhạc sinh ra từ ngữ điệu xúc cảm của lời nói |
+| **Chọn lọc giới tính** | Darwin, *The Descent of Man* (1871) | [[not-nhac|Nốt nhạc]] và [[tiet-tau|nhịp điệu]] xuất hiện ở tổ tiên loài người "để quyến rũ người khác giới", giống tiếng chim hót. Quan điểm này đối lập với Herbert Spencer, người cho rằng âm nhạc sinh ra từ ngữ điệu xúc cảm của lời nói |
 | **Sản phẩm phụ** ("bánh kem cho tai") | Steven Pinker, *How the Mind Works* (1997) | Âm nhạc không được chọn lọc vì chính nó; nó là một "món ngọt" tận dụng các năng lực có sẵn vì lý do khác (ngôn ngữ, nghe âm thanh môi trường, vận động) |
 | **Gắn kết xã hội** | Savage và cộng sự, *Behavioral and Brain Sciences* (2021) | Âm nhạc giúp con người gắn bó trong những nhóm **lớn hơn** mức mà việc chải lông cho nhau ở các loài linh trưởng cho phép; tiến hoá cùng văn hoá (đồng tiến hoá gen – văn hoá) |
 | **Tín hiệu đáng tin** | Mehr và cộng sự, cùng số tạp chí (2021) | Biểu diễn nhịp nhàng, đồng bộ của một nhóm là tín hiệu **khó giả** về sức mạnh và khả năng phối hợp của nhóm; [[hat-ru|hát ru]] là tín hiệu về sự chú ý của cha mẹ với trẻ sơ sinh vốn rất cần chăm sóc |
@@ -392,7 +392,7 @@ Vì bồi âm thứ 2 của một nốt cao hơn [[quang|quãng 8]] lý tưởng
 ## 5. Tắt dần hai giai đoạn và bàn đạp una corda
 Gabriel Weinreich (1977; bài phổ biến trên *Scientific American*, 1979) giải thích vì sao tiếng piano **tắt nhanh rồi kéo dài**:
 - Hai hoặc ba dây của một nốt được lên **hơi lệch nhau** và nối với nhau qua ngựa đàn. Khi chúng rung **cùng pha**, năng lượng truyền nhanh vào bảng cộng hưởng: âm to nhưng tắt nhanh (**âm đầu** — *prompt sound*). Khi lệch pha, năng lượng truyền chậm: phần **âm đuôi** (*aftersound*) kéo dài.
-- Hướng rung cũng quan trọng: búa chủ yếu kích thích rung **dọc** (tắt nhanh), rung **ngang** tắt chậm hơn.
+- Hướng rung cũng quan trọng: búa chủ yếu kích thích rung **dọc** (vuông góc với bảng cộng hưởng, tắt nhanh); rung **ngang** (song song với bảng cộng hưởng) tắt chậm hơn.
 - **Bàn đạp una corda** trên đàn grand dịch cả bộ máy sang ngang, búa chỉ gõ 2 trong 3 dây (hoặc 1 trong 2) và chạm vào phần nỉ ít bị nén. Dây không bị gõ vẫn rung theo; vì các dây không còn đối xứng, nhiều năng lượng hơn đi vào phần âm đuôi — âm sắc mềm và "xa" hơn, không chỉ nhỏ hơn. Xem [[ban-dap]].
 
 Đây là cơ sở vật lý của những gì [[am-sac]] mô tả là "tắt dần hai giai đoạn", và của các lời khuyên về [[ky-thuat-cham-phim|cách chạm phím]].
@@ -437,7 +437,7 @@ Krumhansl và Kessler (*Psychological Review*, 1982) lặp lại thí nghiệm v
 
 ## 3. Thuật toán Krumhansl – Schmuckler
 Mô tả trong *Cognitive Foundations of Musical Pitch* của Krumhansl (1990):
-1. Cộng **tổng [[truong-do|trường độ]]** của từng nốt trong 12 nốt (không kể quãng 8) trong [[cau-nhac|đoạn nhạc]].
+1. Cộng **tổng [[truong-do|trường độ]]** của từng nốt trong 12 nốt (không phân biệt quãng 8) trong [[cau-nhac|đoạn nhạc]].
 2. Tính **hệ số tương quan** giữa vectơ đó với cả **24 hồ sơ giọng** (hồ sơ được dịch cho từng chủ âm).
 3. Giọng có hệ số tương quan **cao nhất** là dự đoán.
 

@@ -220,7 +220,7 @@ export const BRANCHES: Branch[] = [
     hue: 140,
     hub: 'am-nhac-viet-nam',
     summary: 'Từ trống đồng và đàn đá đến nhạc cung đình, sân khấu truyền thống, tân nhạc, nhạc vàng, nhạc cách mạng và V-pop; nhạc sĩ, lý thuyết cổ truyền, nghiên cứu, và phân định giai thoại với sự thật.',
-    questions: ['Ta biết gì về âm nhạc Việt Nam trước khi có ký âm, và bằng chứng cứ nào?', 'Những mốc "khởi đầu" nào là quy ước, mốc nào có chứng cứ?'],
+    questions: ['Ta biết gì về âm nhạc Việt Nam trước khi có ký âm, và dựa trên chứng cứ nào?', 'Những mốc "khởi đầu" nào là quy ước, mốc nào có chứng cứ?'],
     groups: [
       { title: 'Tổng quan và thời kỳ', slugs: ['am-nhac-viet-nam', 'cac-thoi-ky-am-nhac-viet-nam', 'lich-su-am-nhac-viet-nam', 'am-nhac-co-trung-dai-viet-nam', 'am-nhac-thoi-nguyen', 'am-nhac-thoi-phap-thuoc', 'am-nhac-viet-nam-1945-1975', 'am-nhac-viet-nam-sau-1975'] },
       { title: 'Thể loại truyền thống', slugs: ['the-loai-am-nhac-viet-nam', 'am-nhac-truyen-thong-viet-nam', 'ca-tru', 'quan-ho', 'cheo', 'tuong', 'cai-luong', 'don-ca-tai-tu', 'ca-hue-nha-nhac', 'hat-xoan-hat-van-then', 'dan-ca-viet-nam', 'am-nhac-ton-giao-va-dan-toc-viet-nam', 'binh-ca-va-organ-o-viet-nam', 'am-nhac-ca-tru', 'hat-ru', 'lan-dieu-cheo-va-tuong'] },
@@ -241,7 +241,7 @@ export const BRANCHES: Branch[] = [
     hue: 20,
     hub: 'am-nhac-hoc-moi',
     summary: 'Âm nhạc như thực hành văn hoá: âm nhạc học mới, giới và nữ quyền, nhạc đại chúng, nhạc phim, công nghiệp âm nhạc, âm thanh và môi trường, chính trị và kiểm duyệt, di sản phi vật thể.',
-    questions: ['Âm nhạc mang ý thức hệ, giới, quyền lực như thế nào?', 'Ai được nghe, ai được trả tiền, ai được ghi danh — và vì sao?', 'Nghe một nơi chốn khác nghe một tác phẩm ra sao?'],
+    questions: ['Âm nhạc mang ý thức hệ, giới, quyền lực như thế nào?', 'Ai được nghe, ai được trả tiền, ai được ghi danh — và vì sao?', 'Nghe một nơi chốn khác với nghe một tác phẩm ra sao?'],
     groups: [
       { title: 'Phê bình và giới', slugs: ['am-nhac-hoc-moi', 'am-nhac-hoc-nu-quyen-va-gioi', 'adorno-va-am-nhac', 'lich-su-tiep-nhan-am-nhac'] },
       { title: 'Đại chúng, màn ảnh và thị trường', slugs: ['nghien-cuu-am-nhac-dai-chung', 'nghien-cuu-nhac-phim', 'cong-nghiep-am-nhac', 'am-nhac-va-ban-sac-xa-hoi', 'hinh-thuc-ca-khuc-pho-thong'] },
@@ -256,8 +256,8 @@ export const BRANCHES: Branch[] = [
     glyph: '𝄢',
     hue: 210,
     hub: 'am-hoc-co-ban',
-    summary: 'Vật lý của âm thanh nhạc: dao động, chuỗi bồi âm, âm sắc, hệ thống chỉnh âm, âm học của nhạc cụ và phòng hoà nhạc.',
-    questions: ['Vì sao một nốt nhạc có cao độ và âm sắc?', 'Hệ thống chỉnh âm nào, đánh đổi điều gì?', 'Căn phòng biến đổi âm thanh ra sao?'],
+    summary: 'Vật lý của âm thanh trong âm nhạc: dao động, chuỗi bồi âm, âm sắc, hệ thống chỉnh âm, âm học của nhạc cụ và phòng hoà nhạc.',
+    questions: ['Vì sao một nốt nhạc có cao độ và âm sắc?', 'Mỗi hệ thống chỉnh âm đánh đổi điều gì?', 'Căn phòng biến đổi âm thanh ra sao?'],
     groups: [
       { title: 'Âm thanh và cao độ', slugs: ['am-hoc-co-ban', 'chuoi-boi-am', 'am-sac', 'thuan-nghich', 'luat-binh-quan'] },
       { title: 'Nhạc cụ, phòng và tai', slugs: ['am-hoc-nhac-cu', 'cau-tao-piano', 'am-hoc-phong', 'bao-ve-thinh-giac'] },

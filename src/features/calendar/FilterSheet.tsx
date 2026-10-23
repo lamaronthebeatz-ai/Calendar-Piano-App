@@ -19,7 +19,7 @@ interface FilterSheetProps {
 
 export function FilterSheet({ open, onClose, filters, onChange, onClear, students }: FilterSheetProps) {
   return (
-    <Dialog open={open} onClose={onClose} title="Lọc thời khóa biểu" width="sm">
+    <Dialog open={open} onClose={onClose} title="Lọc thời khoá biểu" width="sm">
       <div className="space-y-4">
         <div>
           <p className="mb-1.5 text-[13px] font-medium text-[var(--color-ink-muted)]">Học viên</p>

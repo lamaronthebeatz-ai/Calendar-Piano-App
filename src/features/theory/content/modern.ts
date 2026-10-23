@@ -128,7 +128,7 @@ Nhạc cổ truyền Việt Nam dùng các bậc **Hò – Xự – Xang – Xê
 Toàn bộ nhạc cụ Việt Nam (cồng chiêng, [[dan-da|đàn đá]], [[khen|khèn]], sáo, [[ken-bau|kèn bầu]], đàn tính…), mỗi nhạc cụ một trang: [[nhac-cu-viet-nam]].
 
 ## Đờn ca tài tử và vọng cổ
-- Đờn ca tài tử Nam Bộ có **20 bài bản tổ**: 6 Bắc, 3 Nam, 4 Oán và 7 bài Lễ (dùng trong nghi lễ). Ví dụ: Lưu thủy trường, Phú lục, Xuân tình (Bắc); Nam xuân, Nam ai (Nam); Tứ đại oán (Oán); Xàng xê, Long đăng (Lễ). Danh sách tên khác nhau đôi chút giữa các nguồn.
+- Đờn ca tài tử Nam Bộ có **20 bài bản tổ**: 6 Bắc, 3 Nam, 4 Oán và 7 bài Lễ (dùng trong nghi lễ). Ví dụ: Lưu thuỷ trường, Phú lục, Xuân tình (Bắc); Nam xuân, Nam ai (Nam); Tứ đại oán (Oán); Xàng xê, Long đăng (Lễ). Danh sách tên khác nhau đôi chút giữa các nguồn.
 - **Vọng cổ** bắt nguồn từ "**Dạ cổ hoài lang**" của Cao Văn Lầu (Sáu Lầu, 1892–1976, Bạc Liêu), sáng tác khoảng **1918–1919** (các nguồn không thống nhất năm), rồi phổ biến rộng từ khoảng 1927.
 
 ## Chất liệu dân tộc trong piano
@@ -205,7 +205,7 @@ Hoà âm ấn tượng ảnh hưởng mạnh đến jazz: các tiểu sử về 
 
 ## Vấn đề thuật ngữ
 - Schoenberg **không thích** chữ "atonal" (phi điệu tính): theo ông, nghĩa đen của nó là "không có âm thanh". Ông thích chữ **"pantonal"** (toàn [[dieu-tinh|điệu tính]]) hơn. Các từ thay thế ("pantonal", "non-tonal") đều không phổ biến, nên "phi điệu tính" vẫn là thuật ngữ thông dụng.
-- Một số học giả (Ethan Haimo, Jack Boss) cho rằng cặp đối lập "có điệu tính / phi điệu tính" làm đơn giản hoá quá trình chuyển đổi từ từ trong âm nhạc Schoenberg.
+- Một số học giả (Ethan Haimo, Jack Boss) cho rằng cặp đối lập "có điệu tính / phi điệu tính" làm đơn giản hoá quá mức một quá trình chuyển đổi vốn diễn ra từ từ trong âm nhạc Schoenberg.
 
 ## "Giải phóng nghịch âm" nghĩa là gì?
 Cụm từ của Schoenberg (in trong tuyển tập tiểu luận *Style and Idea*): nghịch âm được hiểu như **thuận âm ở xa hơn** trong [[chuoi-boi-am|chuỗi bồi âm]], nên không có khác biệt bản chất giữa hai loại — nghịch âm **không cần giải quyết**.

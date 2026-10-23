@@ -104,7 +104,7 @@ Bài của Đỗ Hồng Quân ghi năm khác cho Hải Phòng (1893) và Sài G�
 - Phong trào **Hướng đạo** và chương trình thể dục thời Vichy (1940 – 1945) phổ biến bài hát tập thể, hành khúc (Gibbs).
 
 ## 7. Các mốc trong giáo trình chưa đối chiếu được
-Bài giảng Lịch sử âm nhạc Việt Nam (slide "Tân nhạc" mà chủ thư viện được học) có ba mốc sau. Tao **chưa tìm thấy nguồn in hay nguồn trực tuyến** để đối chiếu hai mốc đầu; có thể chúng lấy từ sách *Âm nhạc mới Việt Nam: tiến trình và thành tựu* (Tú Ngọc và cộng sự, 2000) — **chưa kiểm tra được**:
+Bài giảng Lịch sử âm nhạc Việt Nam (slide "Tân nhạc" mà chủ thư viện được học) có ba mốc sau. Thư viện **chưa tìm thấy nguồn in hay nguồn trực tuyến** để đối chiếu hai mốc đầu; có thể chúng lấy từ sách *Âm nhạc mới Việt Nam: tiến trình và thành tựu* (Tú Ngọc và cộng sự, 2000) — **chưa kiểm tra được**:
 | Mốc | Nội dung theo bài giảng | Tình trạng |
 |---|---|---|
 | 1922 | **Trần Đại Thụ** ở Thanh Hoá lập hội **Ca nhạc ái hữu** để truyền bá và sáng tác âm nhạc | Chưa tìm thấy nguồn độc lập |
@@ -184,7 +184,7 @@ Giữa lúc nghe nhạc Tây và lúc tự viết nhạc theo lối Tây có m�
 Cách hiểu hợp lý: việc đặt lời Việt **lẻ tẻ** đã có từ sớm; thành **phong trào** có đĩa hát, có tên gọi vào giữa thập niên 1930.
 
 ## Ai làm, làm gì?
-- **Cải lương** là nơi đầu tiên: Tư Chơi viết *Tiếng nhạn trong sương*, *Hoà duyên* (bài sau nay thuộc nhạc mục cải lương) và đặt lời Việt cho *Marinella*, *La Madelon*; Bảy Nhiêu có *Hoài tình* (Wikipedia tiếng Việt).
+- **Cải lương** là nơi đầu tiên: Tư Chơi viết *Tiếng nhạn trong sương*, *Hoà duyên* (bài sau này thuộc nhạc mục cải lương) và đặt lời Việt cho *Marinella*, *La Madelon*; Bảy Nhiêu có *Hoài tình* (Wikipedia tiếng Việt).
 - **Đĩa hát**: các nghệ sĩ sân khấu **Ái Liên**, **Kim Thoa** thu đĩa Beka và Odéon (Gibbs; Vọc Records).
 - **Giới trẻ đô thị** dịch bài của **Tino Rossi**, **Rina Ketty**, **Vincent Scotto**, cả *Goodbye Hawaii*, *South of the Border*; có cả **hội người hâm mộ Tino Rossi** ở Hà Nội và Hải Phòng; Mai Lâm và nhiều tác giả vô danh đặt lời (Wikipedia tiếng Việt).
 - Các bài Pháp phổ biến 1935 – 1938: *Marinella*, *C'est à Capri*, *Tant qu'il y aura des étoiles*.
@@ -341,7 +341,7 @@ Cách mạng tháng Tám và cuộc kháng chiến chống Pháp chia tân nhạ
 
 ## Ở đô thị
 - Hà Nội, Hải Phòng, Sài Gòn vẫn có **phòng trà, đài phát thanh, nhà xuất bản bài hát**; tình ca nối dòng tiền chiến: [[doan-chuan|Đoàn Chuẩn]] (mùa thu Hà Nội), Văn Phụng, Lâm Tuyền, Phạm Đình Chương (*Ly rượu mừng*), Lê Thương (*Hòn vọng phu*, *Hoà bình 48*).
-- Đĩa 78 vòng thu ở **Paris** (hãng Oria, 1949 – 1951) với ca sĩ Hải Minh — tên hát của **Trần Văn Khê** —, Bích Thuận, Hoàng Lan (Wikipedia tiếng Việt). Về Trần Văn Khê, xem [[nghien-cuu-am-nhac-viet-nam]].
+- Đĩa 78 vòng thu ở **Paris** (hãng Oria, 1949 – 1951) với các ca sĩ Hải Minh (tên hát của **Trần Văn Khê**), Bích Thuận, Hoàng Lan (Wikipedia tiếng Việt). Về Trần Văn Khê, xem [[nghien-cuu-am-nhac-viet-nam]].
 - Nhiều bài trữ tình viết **trong** kháng chiến (*Tiếng đàn tôi*, *Sơn nữ ca* của Trần Hoàn, *Dư âm* của Nguyễn Văn Tý, *Nụ cười sơn cước* của Tô Hải) về sau được hát ở miền Nam như "nhạc tiền chiến" — một ví dụ cho thấy **tên gọi dòng nhạc phụ thuộc vào nơi bài hát được nghe**, không chỉ nơi nó được viết.
 
 Năm 1954, Hiệp định Genève chia đôi đất nước. Tiếp theo: [[tan-nhac-mien-bac-1954-1975]] và [[tan-nhac-mien-nam-1954-1975]].
