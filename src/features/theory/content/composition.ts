@@ -144,7 +144,7 @@ Nửa sau thế kỷ 20, sáng tác vào **đại học** với hình thức **x
 Người mới học sáng tác hay hình dung một khoảnh khắc "cảm hứng" mang đến cả bản nhạc. Tài liệu lịch sử kể một câu chuyện khác: **ý tưởng nhỏ, làm việc nhiều, sửa rất nhiều**. Bài này dựa trên thư từ, bản phác thảo và nghiên cứu tâm lý sáng tạo; chỗ nào nguồn có vấn đề đều ghi rõ. Quay lại [[lo-trinh-sang-tac]].
 
 ## Bốn giai đoạn của Wallas (1926)
-Nhà tâm lý học xã hội Graham Wallas, trong *The Art of Thought* (1926), chia quá trình sáng tạo thành bốn giai đoạn. Mô hình này chưa được thiết kế riêng cho âm nhạc nhưng hay được dùng để mô tả công việc sáng tác:
+Nhà tâm lý học xã hội Graham Wallas, trong *The Art of Thought* (1926), chia quá trình sáng tạo thành bốn giai đoạn. Mô hình này không được thiết kế riêng cho âm nhạc nhưng hay được dùng để mô tả công việc sáng tác:
 | Giai đoạn | Nghĩa | Trong sáng tác |
 |---|---|---|
 | **Chuẩn bị** | Làm việc có ý thức với vấn đề | Chọn thể loại, nhạc cụ, độ dài; thử motif, hợp âm |
@@ -168,7 +168,7 @@ Huyền thoại Mozart "nghe trọn bản nhạc trong đầu rồi chỉ việc
 Thực tế, Mozart **có phác thảo**: nghiên cứu của Ulrich Konrad (*Mozarts Schaffensweise*, 1992) liệt kê hàng trăm phác thảo và đoạn dở dang. Đúng là Mozart có trí nhớ và khả năng làm việc trong đầu rất lớn — trong thư gửi cha khi viết *Idomeneo* (cuối 1780) ông có câu thường được dịch là "mọi thứ đã soạn xong, nhưng chưa viết ra" (**chưa đối chiếu nguyên văn trong ấn bản thư Bauer – Deutsch**). Nhưng "soạn xong trong đầu" ở đây là kết quả của làm việc, không phải phép màu.
 
 ## Haydn: cô lập và "buộc phải độc đáo"
-Theo tiểu sử của Georg August Griesinger (1810), Haydn nói về những năm làm việc cho gia đình Esterházy: ông được tự do thử nghiệm với dàn nhạc riêng, xa thế giới, không ai làm ông hoang mang, "**so musste ich original werden**" — "nên tôi đành phải trở thành độc đáo". Câu này hay được dịch thành "buộc phải độc đáo"; giới nghiên cứu lưu ý tiểu sử Griesinger trộn trích dẫn trực tiếp với giai thoại, nên đây là lời Haydn **qua cách kể của Griesinger**.
+Theo tiểu sử của Georg August Griesinger (1810), Haydn nói về những năm làm việc cho gia đình Esterházy: ông được tự do thử nghiệm với dàn nhạc riêng, xa thế giới, không ai làm ông hoang mang, "**so musste ich original werden**" — "nên tôi đành phải trở nên độc đáo". Câu này hay được dịch thành "buộc phải độc đáo"; giới nghiên cứu lưu ý tiểu sử Griesinger trộn trích dẫn trực tiếp với giai thoại, nên đây là lời Haydn **qua cách kể của Griesinger**.
 
 Bài học: **thử nghiệm đều đặn với nhạc công thật** (Haydn nghe ngay tác phẩm của mình hằng tuần) là một lợi thế lớn hơn mọi lý thuyết.
 
@@ -601,7 +601,7 @@ Giáo trình viết lời ca khúc của Pat Pattison (*Writing Better Lyrics*, 
 | Cách đặt | Mô tả | Hợp với |
 |---|---|---|
 | **Âm tiết đơn** (syllabic) | Mỗi âm tiết một nốt | Lời dày, kể chuyện, ca khúc phổ thông |
-| **Neume** | 2 – 4 nốt cho một âm tiết | Tô điểm nhẹ |
+| **Theo nhóm neume** (neumatic) | 2 – 4 nốt cho một âm tiết | Tô điểm nhẹ |
 | **Luyến nhiều nốt** (melismatic) | Nhiều nốt cho một âm tiết | Từ cảm thán, Alleluia, aria, cao trào |
 
 Thánh ca có cả ba kiểu ([[thanh-ca-gregorian]]); viết lời tiếng Việt cho bình ca có những vấn đề riêng — xem [[viet-binh-ca-cho-tieng-ban-dia]].
@@ -1117,7 +1117,7 @@ Trong *Unheard Melodies* (1987), Claudia Gorbman nêu các nguyên tắc của n
 | Nguyên tắc | Nghĩa |
 |---|---|
 | **Vô hình** | Không thấy nguồn phát của nhạc nền trên màn hình |
-| **"Không nghe thấy"** | Nhạc không được giành chú ý với thoại và hình — người xem không để ý đến nó một cách có ý thức |
+| **"Không nghe thấy"** | Nhạc không tranh sự chú ý với thoại và hình — người xem không để ý đến nó một cách có ý thức |
 | **Biểu đạt cảm xúc** | Nhạc nói điều hình ảnh chưa nói được |
 | **Dẫn dắt câu chuyện** | Báo hiệu nơi chốn, thời đại, nhân vật, góc nhìn |
 | **Liên tục** | Lấp chỗ cắt dựng, nối cảnh |

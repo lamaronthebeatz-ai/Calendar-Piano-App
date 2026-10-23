@@ -19,7 +19,7 @@ export const pitch: Article[] = [
 **Cao độ** là thuộc tính của cảm giác nghe theo đó các âm có thể được **xếp từ thấp đến cao** (định nghĩa của Viện Tiêu chuẩn Quốc gia Mỹ — ANSI). Cao độ phụ thuộc **chủ yếu vào tần số** của âm, nhưng cũng chịu ảnh hưởng của độ to và dạng sóng — tức là cao độ là **cảm nhận**, còn tần số là **đại lượng vật lý** (xem [[am-hoc-co-ban]], [[cam-nhan-am-thanh]]).
 
 ## Âm vực và tầm cữ
-- **Âm vực** (range): khoảng từ nốt **thấp nhất** đến nốt **cao nhất** của một giọng, một nhạc cụ hay một bè nhạc. Âm vực piano: [[ban-phim]].
+- **Âm vực** (range): phạm vi từ nốt **thấp nhất** đến nốt **cao nhất** của một giọng, một nhạc cụ hay một bè nhạc. Âm vực piano: [[ban-phim]].
 - **Vùng âm** (register): một **phần** của âm vực có màu âm riêng — ví dụ "vùng trầm", "vùng cao" của piano, hay giọng ngực – giọng óc của ca sĩ (xem [[am-sac]]).
 - **Tầm cữ** (tessitura): vùng mà một [[giai-dieu|giai điệu]] hay một bè **nằm chủ yếu**, khác với âm vực là hai đầu mút. Các từ điển định nghĩa từ này không hoàn toàn thống nhất.
 Trong viết bè, mỗi bè có âm vực quen dùng (xem [[luat-hoa-am-bon-be]]); trong biểu diễn, vùng âm ảnh hưởng đến cách cân bằng tiếng (xem [[lam-noi-giai-dieu]]).
@@ -57,7 +57,7 @@ Vì không có phím đen giữa E–F và B–C, hai cặp này chỉ cách n�
 
 ## Nửa cung dị và nửa cung đồng
 - **Nửa cung dị** (diatonic): hai nốt khác tên — C–D♭, E–F.
-- **Nửa cung đồng** ([[am-giai-cromatic|chromatic]]): hai nốt cùng tên — C–C♯.
+- **Nửa cung đồng** ([[am-giai-cromatic|cromatic]]): hai nốt cùng tên — C–C♯.
 
 Cung và nửa cung là đơn vị để đo [[quang]] và để xây dựng [[am-giai-truong]]. Một quãng 8 gồm 12 nửa cung bằng nhau (xem [[luat-binh-quan]]).
 
@@ -234,7 +234,7 @@ Trùng âm còn dùng để **chuyển giọng** bất ngờ (xem [[chuyen-giong
 - Vì thế một số đàn [[dan-phim-co|harpsichord]] Ý có **phím tách** (split key): một phím đen chia làm hai nửa trước – sau, ví dụ E♭/D♯ và G♯/A♭, để có quãng 3 chuẩn hơn.
 
 ## Chuyển giọng trùng âm
-**Viết lại** một nốt hoặc [[hop-am-ba|hợp âm]] bằng tên trùng âm để dẫn sang giọng mới. Việc này phổ biến dần từ thế kỷ 18 và được dùng nhiều trong thế kỷ 19, đặc biệt với [[hop-am-bay-giam]] và [[hop-am-bay|hợp âm 7 át]]. Chuyển giọng trùng âm trong các [[hinh-thuc-sonata|sonata]] piano của [[Schubert]] là đề tài của nhiều nghiên cứu.
+**Viết lại** một nốt hoặc [[hop-am-ba|hợp âm]] bằng tên trùng âm để dẫn sang giọng mới. Việc này phổ biến dần từ thế kỷ 18 và được dùng nhiều trong thế kỷ 19, đặc biệt với [[hop-am-bay-giam]] và [[hop-am-bay|hợp âm bảy át]]. Chuyển giọng trùng âm trong các [[hinh-thuc-sonata|sonata]] piano của [[Schubert]] là đề tài của nhiều nghiên cứu.
 
 ## Vì sao không viết tên "dễ đọc" hơn?
 Tên nốt cho biết **chức năng**. Trong La trưởng, viết C♯ để mỗi chữ cái chỉ xuất hiện một lần trong [[am-giai|âm giai]] (xem [[hoa-bieu]]).
@@ -278,7 +278,7 @@ Dây [[dan-piano|đàn piano]] **cứng** (dây thép ngắn, khá dày), nên c
 ## Hệ quả: lên dây "kéo giãn"
 - Thợ lên dây làm các nốt **cao hơi cao lên**, nốt **trầm hơi thấp xuống**, để bồi âm của nốt thấp khớp với âm gốc của nốt cao. Quãng 8 trên piano vì vậy **rộng hơn** tỉ lệ 2:1 một chút.
 - Năm 1938, nhà vật lý O. L. Railsback đo độ kéo giãn này. **Đường cong Railsback** cho thấy độ lệch gần như không đáng kể ở giữa bàn phím nhưng lớn ở hai đầu. Ông kết luận đó là do tính không điều hoà của dây, **không phải** do thợ lên dây thiếu chính xác.
-- Giordano (2015) [[doi-am|mô phỏng]] lại đường cong này từ dữ liệu về độ nghịch tai, cho thấy nó là cách lên dây làm **giảm độ nghịch** tốt nhất.
+- Giordano (2015) mô phỏng lại đường cong này từ dữ liệu về cảm nhận độ nghịch của tai, cho thấy nó là cách lên dây làm **giảm độ nghịch** tốt nhất.
 - Vì mỗi cây đàn lệch một khác, máy lên dây đơn giản khó tính đúng mức kéo giãn — xem [[bao-duong-piano]].
 
 Các tỉ lệ đơn giản 2:1, 3:2, 4:3 từng được Pythagoras và các nhà tư tưởng sau đó xem là chìa khoá của cả vũ trụ: [[hoa-am-vu-tru]].
@@ -327,7 +327,7 @@ Giới chơi nhạc cụ cổ ngày nay thường dùng **A = 415 Hz** (thấp h
 **Vấn đề gốc — dấu phẩy Pythagore** (về Pythagoras và ý tưởng âm nhạc là con số, xem [[hoa-am-vu-tru]]): chồng **12 quãng 5 thuần** (3:2) không về đúng **7 quãng 8** mà dư khoảng **23,46 [[cac-he-thong-chinh-am|cent]]** (gần một phần tư nửa cung). Mỗi hệ thống lên dây là một cách "giấu" phần dư này:
 | Hệ thống | Cách xử lý | Hệ quả |
 |---|---|---|
-| **Pythagore** | Mọi quãng 5 thuần, dồn phần dư vào **một quãng 5 "sói"** | Quãng 3 trưởng rộng (81:64, 408 cent), nghe chói |
+| **Pythagore** | Mười một quãng 5 thuần, dồn phần dư vào **quãng 5 thứ mười hai ("sói")** | Quãng 3 trưởng rộng (81:64, 408 cent), nghe chói |
 | **Trung bình** (meantone, thời [[thoi-ky-phuc-hung|Phục hưng]]) | Thu hẹp các quãng 5 để **quãng 3 trưởng thuần** | Một quãng "sói" rất phô; giọng nhiều [[dau-hoa|dấu hoá]] khó dùng; C♯ ≠ D♭ (xem [[trung-am]]) |
 | **Bình quân bất đều** (well temperament) | Andreas Werckmeister (1691) chia phần dư cho vài quãng 5 | **Mọi giọng dùng được**, nhưng mỗi giọng có **màu riêng** |
 | **Bình quân 12** | Mỗi quãng 5 hẹp đi 1/12 dấu phẩy (khoảng 2 cent) | Mọi giọng như nhau; quãng 3 trưởng **rộng hơn thuần khoảng 14 cent** |
@@ -375,12 +375,12 @@ Alexander J. Ellis chia [[quang|quãng 8]] thành **1200 cent** (mỗi [[cung-nu
 |---|---|---|---|
 | **Pythagore** | 407,82 | **701,96** (thuần) | Quãng 5 đẹp, quãng 3 chói; một quãng 5 "sói" ≈ 678,49 |
 | **Thuần** (*just*) | **386,31** (thuần) | 701,96 | Đẹp trong một giọng, không [[chuyen-giong|chuyển giọng]] được |
-| **Meantone ¼ comma** | **386,31** (thuần) | 696,58 | Quãng 3 thuần; sói ≈ 737,6 (thường ở Son♯ – Mi♭) |
+| **Meantone ¼ comma** | **386,31** (thuần) | 696,58 | Quãng 3 thuần; sói ≈ 737,6 (thường ở Sol♯ – Mi♭) |
 | **Bình quân 12** | 400,00 | 700,00 | Mọi giọng như nhau; quãng 3 rộng hơn thuần ≈ 13,69 cent |
 *(Số liệu theo các nguồn trong bài; thư viện đã tính lại. Quãng 5 sói của meantone là thư viện tính.)*
 **"Quãng 5 sói"**: khi mười một quãng 5 được làm cho đẹp, quãng thứ mười hai gánh toàn bộ sai số và nghe "hú" như sói.
 
-::staff treble C4+E4 C4+G4 G#4+Eb5 | Ba quãng để nghe thử trên đàn được lên dây khác nhau: quãng 3 Đô – Mi, quãng 5 Đô – Sol, và "quãng 5" Son♯ – Mi♭ (chỗ sói trong meantone)
+::staff treble C4+E4 C4+G4 G#4+Eb5 | Ba quãng để nghe thử trên đàn được lên dây khác nhau: quãng 3 Đô – Mi, quãng 5 Đô – Sol, và "quãng 5" Sol♯ – Mi♭ (chỗ sói trong meantone)
 
 ## Meantone
 Mỗi quãng 5 hẹp đi **¼ comma syntonic** để bốn quãng 5 chồng lại cho một quãng 3 **thuần**. Hệ phổ biến nhất thế kỷ 16 – 17; mô tả rõ sớm nhất là *Toscanello in musica* (1523) của **Pietro Aron**, người đòi quãng 3 "vang và đúng".
@@ -410,7 +410,7 @@ Vì sao điều này quan trọng với người chơi Bach: [[luat-binh-quan|"C
     category: 'pitch',
     also: ['modern', 'scales'],
     aliases: ["vi cung", "microtonality", "microtone", "âm nhạc vi cung", "quãng một phần tư cung", "quarter tone", "phần tư cung", "24-EDO", "19-EDO", "31-EDO", "Harry Partch", "Alois Hába", "Ivan Wyschnegradsky", "Fokker", "Genesis of a Music", "đại hội Cairo 1932"],
-    summary: "Vi cung là những khoảng nhỏ hơn nửa cung bình quân. Bài giới thiệu các hướng chính: phần tư cung (50 cent) của Hába, Wyschnegradsky và Ives; chia quãng 8 thành 19 và 31 phần bằng nhau (Costeley, Huygens 1691, đàn organ Fokker 1950); thang 43 âm theo ngữ điệu thuần của Harry Partch; nhạc phổ của Grisey; cuộc tranh luận về thang 24 phần tư cung ở Đại hội Âm nhạc Ả Rập Cairo 1932; và nghiên cứu đo cao độ đàn tranh Việt Nam (bước khoảng 166 cent).",
+    summary: "Vi cung là những quãng nhỏ hơn nửa cung bình quân. Bài giới thiệu các hướng chính: phần tư cung (50 cent) của Hába, Wyschnegradsky và Ives; chia quãng 8 thành 19 và 31 phần bằng nhau (Costeley, Huygens 1691, đàn organ Fokker 1950); thang 43 âm theo ngữ điệu thuần của Harry Partch; nhạc phổ của Grisey; cuộc tranh luận về thang 24 phần tư cung ở Đại hội Âm nhạc Ả Rập Cairo 1932; và nghiên cứu đo cao độ đàn tranh Việt Nam (bước khoảng 166 cent).",
     wiki: "Microtonality",
     refs: [
       ["Wikipedia — Ivan Wyschnegradsky", "https://en.wikipedia.org/wiki/Ivan_Wyschnegradsky"],
@@ -446,10 +446,10 @@ Bài này nối [[cac-he-thong-chinh-am]] với [[nhac-pho]] và [[hoi-trong-nha
 *(Các số cent thư viện tính lại.)* Hệ 31 gần như trùng [[cac-he-thong-chinh-am|meantone ¼ comma]] — cho quãng 3 gần thuần mà vẫn khép vòng.
 
 ## Harry Partch: 43 âm theo ngữ điệu thuần
-Harry Partch (1901 – 1974) dựng thang **43 âm một quãng 8** từ các tỉ lệ số nguyên (một "kim cương âm" giới hạn 11), tự đóng nhạc cụ để chơi nó. Sách *Genesis of a Music* in lần đầu năm 1949, bản mở rộng tái bản 1979 ([[dau-nhac-lai|Da Capo]]).
+Harry Partch (1901 – 1974) dựng thang **43 âm một quãng 8** từ các tỉ lệ số nguyên (một "kim cương âm" giới hạn 11), tự đóng nhạc cụ để chơi nó. Sách *Genesis of a Music* in lần đầu năm 1949, bản mở rộng tái bản 1979 (nhà xuất bản Da Capo).
 
 ## Nhạc phổ
-*Partiels* của [[gerard-grisey|Gérard Grisey]] mở đầu bằng phổ âm của một nốt Mi trầm trên [[trombone|kèn trombone]]; các âm cục bộ được giao cho từng nhạc cụ và làm tròn về phần tư hoặc phần sáu cung gần nhất. Xem [[nhac-pho]] và [[chuoi-boi-am]].
+*Partiels* của [[gerard-grisey|Gérard Grisey]] mở đầu bằng phổ âm của một nốt Mi trầm trên [[trombone|kèn trombone]]; các âm thành phần (partial) được giao cho từng nhạc cụ và làm tròn về phần tư hoặc phần sáu cung gần nhất. Xem [[nhac-pho]] và [[chuoi-boi-am]].
 
 ## Việt Nam: vi cung trong thực hành
 - **Keefe, Burns và [[nghien-cuu-am-nhac-viet-nam|Nguyễn Thuyết Phong]]** (*Music Perception*, 1991) đo dây [[dan-tranh|đàn tranh]] do một nghệ nhân lên theo tai trong sáu tháng: hai hệ Bắc và Nam; thang [[dieu-thuc|điệu thức]] dùng nhiều bước khoảng **166 cent** — giữa một cung bình quân (200) và ba phần tư cung (150). *(Thư viện mới thấy qua trang mục lục.)*

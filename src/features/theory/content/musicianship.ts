@@ -122,7 +122,7 @@ Lưu ý: con số 4% đến từ một tổng quan duy nhất; các con số kh�
     title: 'Xướng âm: Đô cố định và Đô di động',
     category: 'musicianship',
     aliases: ['xướng âm', 'solfège', 'solfege', 'solfeggio', 'Đô cố định', 'Đô di động', 'fixed do', 'movable do', 'Do Re Mi'],
-    summary: 'Hai cách dùng tên Đô–Rê–Mi: Đô cố định (Đô luôn là nốt C) và Đô di động (Đô là âm chủ của giọng đang hát).',
+    summary: 'Hai cách dùng tên Đô–Rê–Mi: Đô cố định (Đô luôn là nốt C) và Đô di động (Đô là chủ âm của giọng đang hát).',
     wiki: 'Solfège',
     refs: [
       ['Local 802 AFM — The solfège war', 'https://local802afm.org/allegro/articles/the-solfege-war'],
@@ -136,7 +136,7 @@ Hệ thống tên Ut–Re–Mi bắt nguồn từ [[Guido d'Arezzo]] (thế kỷ
 ## Hai hệ thống
 | | Đô cố định | Đô di động |
 |---|---|---|
-| "Đô" là | Luôn là nốt **C** | **Âm chủ** của [[am-giai-truong|giọng trưởng]] đang hát |
+| "Đô" là | Luôn là nốt **C** | **Chủ âm** của [[am-giai-truong|giọng trưởng]] đang hát |
 | [[hop-am-ba|Hợp âm trưởng]] trên G | Sol – Si – Rê | Đô – Mi – Sol |
 | Thế mạnh | Gắn tên với [[cao-do|cao độ]] cụ thể; hợp với nhạc [[chuyen-giong|chuyển giọng]] phức tạp, nhạc [[thoi-ky-the-ky-20|thế kỷ 20]]–21 | Giữ nguyên quan hệ [[quang]] và [[bac-am-giai|bậc]] ở mọi giọng → luyện [[luyen-tai|cảm âm tương đối]] |
 
@@ -261,7 +261,7 @@ Trước khi viết, luôn **hát lại** đoạn vừa nghe: nếu chưa hát l
 **Audiation** là khả năng **nghe và hiểu** âm nhạc khi âm thanh **không vang lên thật** — giống như ta "nghe" một bài hát trong đầu, hoặc hiểu câu nói khi đọc thầm. Gordon phân biệt:
 - **Bắt chước**: lặp lại được âm thanh mà **chưa chắc hiểu** nó.
 - **Audiation**: âm thanh mang **ý nghĩa** — biết đâu là [[bac-am-giai|chủ âm]], đâu là [[so-chi-nhip|phách mạnh]], nhận ra mẫu [[giai-dieu|giai điệu]] và [[tiet-tau|tiết tấu]].
-Gordon về sau chia audiation thành nhiều **loại** và **giai đoạn**; các [[an-ban-urtext|ấn bản]] sách của ông đưa ra con số khác nhau (ví dụ sáu giai đoạn, hoặc năm giai đoạn và tám loại), nên khi trích dẫn cần ghi rõ ấn bản.
+Gordon về sau chia audiation thành nhiều **loại** và **giai đoạn**; các ấn bản sách của ông đưa ra con số khác nhau (ví dụ sáu giai đoạn, hoặc năm giai đoạn và tám loại), nên khi trích dẫn cần ghi rõ ấn bản.
 
 ## Các giai đoạn audiation (theo bản tóm tắt sáu giai đoạn)
 1. Giữ lại âm thanh trong khoảnh khắc.
@@ -315,7 +315,7 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
 |---|---|---|
 | **Dalcroze** | Émile Jaques-Dalcroze | Vận động cơ thể theo [[tiet-tau|nhịp điệu]] (eurhythmics), [[xuong-am]], [[ngau-hung-piano|ngẫu hứng]] |
 | **Kodály** | [[Kodály|Zoltán Kodály]] | Hát là nền tảng; dân ca; [[xuong-am|Đô di động]] và ký hiệu tay; [[doc-not-nhanh|đọc nhạc]] |
-| **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết [[hop-am-ba|hợp âm]] nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, [[bo-go-phim|glockenspiel]]); ngẫu hứng nhiều hơn Kodály |
+| **Orff Schulwerk** | [[Orff|Carl Orff]] cùng Gunild Keetman | Kết hợp âm nhạc, vận động, lời nói, kịch; nhạc cụ gõ có thanh (xylophone, metallophone, [[bo-go-phim|glockenspiel]]); ngẫu hứng nhiều hơn Kodály |
 | **Suzuki** | Shinichi Suzuki | Học nhạc như học **tiếng mẹ đẻ**: bắt đầu rất sớm, nghe nhiều, học thuộc trước, **phụ huynh** tham gia |
 
 ## Lịch sử từng phương pháp
@@ -323,7 +323,7 @@ Giống [[phuong-phap-giao-duc-am-nhac|Kodály và Orff]], Gordon đặt **âm t
 |---|---|
 | **Dalcroze** | Émile Jaques-Dalcroze dạy hoà âm ở Nhạc viện Geneva (khoảng 1892–1910); nhận thấy học trò **không nghe được** hoà âm mình viết, ông phát triển các trò chơi [[luyen-tai|luyện tai]] và vận động, đặt tên **eurhythmics**. Dạy ở Hellerau (gần Dresden) khoảng 1910–1914; thành lập **Institut Jaques-Dalcroze** ở Geneva năm 1915 |
 | **Kodály** | Kodály bắt đầu quan tâm giáo dục âm nhạc cho trẻ từ khoảng **1925**; nhà nước Hungary đưa ý tưởng của ông vào trường phổ thông từ **1945**; trường tiểu học âm nhạc đầu tiên (học nhạc hằng ngày) mở năm **1950**; giới thiệu với quốc tế tại hội nghị ISME ở Vienna năm **1958**; UNESCO ghi danh là [[di-san-phi-vat-the-va-am-nhac|di sản văn hoá phi vật thể]] năm **2016** |
-| **Ký hiệu tay và Đô di động** | Lấy từ hệ **[[bac-am-giai|Tonic]] Sol-fa** của John Curwen (1816–1880) — vốn dựa trên hệ xướng âm di động của **Sarah Glover** — được Kodály tiếp nhận vào nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (xem [[xuong-am]]) |
+| **Ký hiệu tay và Đô di động** | Lấy từ hệ **Tonic Sol-fa** của John Curwen (1816–1880) — vốn dựa trên hệ xướng âm di động của **Sarah Glover** — được Kodály tiếp nhận vào nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]] (xem [[xuong-am]]) |
 | **Orff Schulwerk** | Carl Orff cùng **Gunild Keetman** phát triển từ thập niên **1920** |
 | **Suzuki** | Bắt đầu ở Nhật từ thập niên **1930** dưới tên "Phương pháp tiếng mẹ đẻ" / "Giáo dục tài năng"; gây chú ý ở Mỹ qua một bộ phim năm 1958 và chuyến lưu diễn năm 1964 của học trò nhỏ |
 
@@ -515,7 +515,7 @@ Liên quan: [[phuong-phap-luyen-tap]], [[day-tre-em]], [[day-nguoi-lon]], [[hoi-
 Các giáo trình trong mục Giáo trình của ứng dụng đổi TQT ra số tháng theo một nhịp tập giả định — đó là ước tính, không phải quy định.
 
 ## Điều kiện trước Grade 6
-Muốn thi Grade 6 – 8 phải đậu trước **nhạc lý Grade 5**, hoặc Practical Musicianship Grade 5, hoặc một grade Jazz Grade 5. Theo đặc tả ABRSM, phần âm giai, thị tấu và thi nghe được sửa từ năm 2021 và giữ nguyên trong chương trình 2027 & 2028; chỉ danh sách bài thi đổi theo từng chu kỳ hai năm.
+Muốn thi Grade 6 – 8 phải đỗ trước **nhạc lý Grade 5**, hoặc Practical Musicianship Grade 5, hoặc Jazz Grade 5. Theo đặc tả ABRSM, phần âm giai, thị tấu và thi nghe được sửa từ năm 2021 và giữ nguyên trong chương trình 2027 & 2028; chỉ danh sách bài thi đổi theo từng chu kỳ hai năm.
 
 ## Lưu ý
 Bảng điểm trên lấy từ hướng dẫn của giáo viên, khớp tổng 150 điểm ở nhiều nguồn; yêu cầu chi tiết (đặc biệt Grade 5–8 và các điều kiện kèm theo) cần đối chiếu **syllabus chính thức mới nhất của ABRSM**, vì nội dung thay đổi theo từng chu kỳ.
@@ -540,7 +540,7 @@ Mỗi nhà xuất bản và hệ thống thi có thang độ khó riêng (thang 
 |---|---|---|
 | Sơ cấp – trung cấp sớm | **Sách nhỏ cho Anna Magdalena Bach** | Tuyển tập bài sơ cấp và trung cấp |
 | Trung cấp sớm (khoảng Grade 2–5) | [[Burgmüller]] — **25 bài luyện tiến bộ Op. 100** | Khoảng Grade 2–5; các bài 9, 15, 20, 21 hợp Grade 4–5 |
-| Trung cấp sớm → trung cấp cao | [[Schumann]] — **[[phan-tich-wilder-reiter|Album cho tuổi trẻ]] Op. 68** | Tập 1 (số 1–18) cho trẻ nhỏ, tập 2 (19–43) khó hơn; [[an-ban-urtext|ấn bản]] ABRSM ghi Grade 4–7 |
+| Trung cấp sớm → trung cấp cao | [[Schumann]] — **[[phan-tich-wilder-reiter|Album cho tuổi trẻ]] Op. 68** | Tập 1 (số 1–18) cho trẻ nhỏ, tập 2 (19–43) khó hơn; ấn bản ABRSM ghi Grade 4–7 |
 | Trung cấp → trung cấp cao | [[Tchaikovsky]] — **Album cho thiếu nhi Op. 39** | Thường được xếp cao hơn Op. 68 một bậc |
 | Trung cấp | [[Clementi]] — **[[sonata-the-loai|Sonatina]] Op. 36**; [[wolfgang-amadeus-mozart|Mozart]] K. 545 ([[phan-tich-sonata-k545|phân tích]]) | Bước tiếp theo phổ biến sau Burgmüller (xem [[hinh-thuc-sonata]]) |
 | Trung cấp | [[Heller]] — **Études Op. 45, 46** | Op. 46 số 1–5 là điểm bắt đầu hay dùng |
@@ -612,7 +612,7 @@ Các con số về thời gian tập trung theo tuổi hay "lợi ích nhận th
 - Người lớn **hiểu khái niệm nhanh** nhưng **cơ tay theo không kịp** — dễ nản.
 
 ## Gợi ý khi dạy
-- **Cùng học viên chọn bài** họ muốn chơi, không chỉ theo giáo trình; người lớn thích học theo [[nhip-do|nhịp độ]] riêng (xem [[lo-trinh-tac-pham]], [[dem-hat-piano]]).
+- **Cùng học viên chọn bài** họ muốn chơi, không chỉ theo giáo trình; người lớn thích học theo tiến độ riêng (xem [[lo-trinh-tac-pham]], [[dem-hat-piano]]).
 - Tận dụng khả năng **phân tích**: giải thích lý thuyết, cấu trúc ([[hoc-thuoc-bai|trí nhớ phân tích]]).
 - Thực tế với thời gian tập: các buổi ngắn mà đều đặn ([[phuong-phap-luyen-tap|luyện phân bổ]]).
 - Xử lý sớm nỗi lo bị đánh giá (xem [[hoi-hop-bieu-dien]]).
@@ -863,7 +863,7 @@ Quy trình này khớp với khuyến nghị hiện đại: xem toàn cảnh tr�
 ## Thế kỷ 20: Mỹ
 | Người | Nơi dạy / sách | Ý tưởng | Học trò |
 |---|---|---|---|
-| **Josef & Rosina Lhévinne** | Juilliard | [[truong-phai-piano|Trường phái Nga]] ở Mỹ, **[[lam-noi-giai-dieu|tiếng đàn hát]]** | Học trò của Rosina: [[van-cliburn|Van Cliburn]] (giải nhất [[pyotr-ilyich-tchaikovsky|Tchaikovsky]] 1958), John Browning, James Levine |
+| **Josef & Rosina Lhévinne** | Juilliard | [[truong-phai-piano|Trường phái Nga]] ở Mỹ, **[[lam-noi-giai-dieu|tiếng đàn hát]]** | Học trò của Rosina: [[van-cliburn|Van Cliburn]] (giải nhất cuộc thi [[pyotr-ilyich-tchaikovsky|Tchaikovsky]] 1958), John Browning, James Levine |
 | **Isabelle Vengerova** (1877 – 1956) | Viện Curtis (từ 1924) | Hệ thống nghiêm ngặt kiểu Nga (sách *The Vengerova System* của Robert Schick) | [[samuel-barber|Samuel Barber]], [[leonard-bernstein|Leonard Bernstein]], Lukas Foss |
 | **Frances Clark** (1905 – 1998) | *[[giao-trinh-piano-nhap-mon|The Music Tree]]* (1958); New School for Music Study (1960, cùng Louise Goss) | [[doc-not-nhanh|Đọc nhạc]] bằng **nốt mốc và quãng**; đào tạo giáo viên piano | — xem [[cach-day-doc-not]] |
 | **György Sándor** | *On Piano Playing* (1981) | **Năm động tác cơ bản** | — xem [[lich-su-ky-thuat-piano]] |

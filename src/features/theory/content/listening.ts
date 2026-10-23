@@ -169,7 +169,7 @@ Người nghe không chỉ nghe cây đàn mà nghe **cây đàn trong một că
 ## Wallace Sabine và khởi đầu của âm học kiến trúc
 - Cuối thập niên 1890, nhà vật lý **Wallace Sabine** (Đại học Harvard) được nhờ sửa giảng đường ở bảo tàng Fogg, nơi tiếng nói vang tới khoảng **5 giây** khiến không ai nghe rõ bài giảng. Ông thêm vật liệu hút âm (nỉ treo tường, đệm ghế).
 - Từ các đo đạc, ông tìm ra **công thức Sabine**: thời gian vang **tỉ lệ thuận với thể tích phòng** và **tỉ lệ nghịch với tổng lượng hút âm** (dạng mét: T ≈ 0,161 · V / A).
-- Sabine là cố vấn âm học cho **[[the-loai|Symphony]] Hall Boston** (khánh thành năm 1900) — phòng hoà nhạc đầu tiên được thiết kế theo tính toán âm học; thời gian vang khoảng **2,3 giây**, và đến nay vẫn được xếp vào hàng các phòng hoà nhạc tốt nhất.
+- Sabine là cố vấn âm học cho **Symphony Hall Boston** (khánh thành năm 1900) — phòng hoà nhạc đầu tiên được thiết kế theo tính toán âm học; thời gian vang khoảng **2,3 giây**, và đến nay vẫn được xếp vào hàng các phòng hoà nhạc tốt nhất.
 
 ## Thời gian vang phù hợp
 | Không gian | Thời gian vang tham khảo |
@@ -182,7 +182,7 @@ Nhạc cần **độ ấm, độ hoà** thì cần vang lâu hơn; lời nói c�
 ## Ý nghĩa với người chơi piano
 - **Phòng vang** (nhà thờ, phòng lớn): giảm [[ban-dap|pedal]], tách nốt rõ hơn, có thể chậm lại một chút để hoà âm không bị nhoè.
 - **Phòng "khô"** (phòng nhỏ nhiều đồ vải): dùng pedal nhiều hơn, chơi [[cach-dien-tau|legato]] bằng ngón kỹ hơn.
-- Luôn **thử phòng** trước buổi biểu diễn: chơi vài [[hop-am-ba|hợp âm]] mạnh rồi nghe chúng tắt. Phòng có khán giả sẽ vang **ngắn hơn** lúc tổng duyệt khi phòng trống.
+- Luôn **thử phòng** trước buổi biểu diễn: chơi vài [[hop-am-ba|hợp âm]] mạnh rồi nghe chúng tắt. Phòng có khán giả sẽ vang **ngắn hơn** so với lúc tổng duyệt trong phòng trống.
 - **Phòng tập nhỏ, tường cứng** có thể làm tiếng đàn rất to — xem [[bao-ve-thinh-giac]].
 
 Liên quan: [[am-hoc-co-ban]], [[am-sac]].
@@ -217,7 +217,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
 - Khả năng phân biệt hai cao độ gần nhau phụ thuộc tần số, độ to, độ dài âm và việc hai âm vang **liền nhau hay cùng lúc** — không có một con số cố định.
 
 ## 3. Phách, độ nhám và thuận – nghịch
-- Hai âm gần nhau về tần số tạo **phách** (beats) — độ to dao động nhanh chậm. Thợ lên đàn dùng phách để chỉnh (xem [[luat-binh-quan]]).
+- Hai âm gần nhau về tần số tạo **phách** (beats) — độ to dao động nhanh chậm. Thợ lên dây dùng phách để chỉnh (xem [[luat-binh-quan]]).
 - Khi phách quá nhanh để đếm, ta cảm thấy **độ nhám** (roughness).
 - **Plomp và Levelt** (1965): với hai âm thuần, cảm giác thuận – nghịch đi theo **dải tới hạn** (critical band) của tai: hai âm cách nhau **hơn một dải tới hạn** được nghe là thuận; **nghịch nhất** khi cách nhau khoảng **một phần tư** dải tới hạn. Với âm phức (như tiếng đàn), độ nghịch đến từ các **bồi âm gần nhau** của hai nốt — ủng hộ giả thuyết của Helmholtz.
 - Giới hạn: độ nhám **không giải thích toàn bộ** thuận – nghịch; văn hoá và thói quen nghe cũng đóng vai trò lớn (xem [[thuan-nghich]]).
@@ -253,7 +253,7 @@ Liên quan: [[am-hoc-co-ban]], [[am-sac]].
 - **Bắt đầu cùng lúc**.
 - Có quan hệ **bồi âm** với nhau (xem [[chuoi-boi-am]]).
 
-**Theo hiểu biết** ([[luoc-do-galant|schema]]): người nghe đã biết giai điệu thì nhận ra nó dễ hơn ngay cả khi nó bị trộn với nốt nhiễu cùng âm vực (Dowling).
+**Theo hiểu biết** (schema): người nghe đã biết giai điệu thì nhận ra nó dễ hơn ngay cả khi nó bị trộn với nốt nhiễu cùng âm vực (Dowling).
 
 ## Âm nhạc khai thác phân luồng
 - **Giai điệu ẩn trong hình rải**: một chuỗi nốt nhanh nhảy giữa hai âm vực được nghe thành **hai bè** — [[johann-sebastian-bach|Bach]] dùng điều này trong các tác phẩm cho nhạc cụ độc tấu (đa âm ngầm).
@@ -422,7 +422,7 @@ Vận dụng các bài trong thư viện:
 - **Biểu cảm**: [[nhip-do|nhịp độ]] co giãn ở đâu, đỉnh câu ở đâu? ([[dien-dat-cau-nhac]])
 - **[[so-sanh-ban-thu|So sánh bản thu]]**: nghe cùng một bài do hai nghệ sĩ chơi ([[lich-su-thu-am]]).
 
-Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ số gây xao nhãng, gọi tên yếu tố âm nhạc, và nghe tự do — về sự chú ý và cảm xúc; các nghiên cứu về chủ đề này phần lớn còn nhỏ. Cảm xúc khi nghe: [[cam-xuc-am-nhac]].
+Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có yếu tố gây xao nhãng, gọi tên yếu tố âm nhạc, và nghe tự do — về sự chú ý và cảm xúc; các nghiên cứu về chủ đề này phần lớn còn nhỏ. Cảm xúc khi nghe: [[cam-xuc-am-nhac]].
 `,
   },
   {
@@ -445,7 +445,7 @@ Một nghiên cứu năm 2015 (Diaz) đã so sánh ba cách nghe — có chỉ s
 ::wiki Phonograph | Máy hát (ảnh đầu bài Wikipedia *Phonograph*)
 | Thời kỳ | Năm | Mốc chính |
 |---|---|---|
-| **[[am-hoc-co-ban|Âm học]]** | 1877–1925 | 1877: máy phonograph của Edison ghi và phát lại âm thanh trên lá thiếc; Bell và Tainter thay bằng sáp; 1887: Emile [[ngau-hung-jazz|Berliner]] phát minh **gramophone** dùng đĩa |
+| **[[am-hoc-co-ban|Âm học]]** | 1877–1925 | 1877: máy phonograph của Edison ghi và phát lại âm thanh trên lá thiếc; Bell và Tainter thay bằng sáp; 1887: Emile Berliner phát minh **gramophone** dùng đĩa |
 | **Điện** | 1925–1945 | 1925: những đĩa hát **thu bằng điện** đầu tiên, chất lượng tăng vọt |
 | **Từ tính** | 1945–1975 | 21/6/1948: Columbia giới thiệu **đĩa than LP** (33⅓ vòng/phút); trước đó đĩa shellac quay 78 vòng/phút |
 | **Số** | từ 1975 | Thu và phát âm thanh kỹ thuật số |
@@ -550,7 +550,7 @@ Quy tắc **"3 dB"**: cứ tăng 3 dB thì thời gian an toàn giảm một n�
 
 ## Biện pháp thực tế
 - **Phòng tập**: tránh phòng nhỏ, tường cứng, trần thấp; thêm rèm, thảm, giá sách để giảm vang (xem [[am-hoc-phong]]). Với đàn grand, có thể **hạ nắp** khi tập.
-- **Nghỉ giữa giờ**: những [[quang|quãng]] nghỉ yên lặng giúp tai hồi phục; kết hợp với nguyên tắc nghỉ của [[phuong-phap-luyen-tap]].
+- **Nghỉ giữa giờ**: những khoảng nghỉ yên lặng giúp tai hồi phục; kết hợp với nguyên tắc nghỉ của [[phuong-phap-luyen-tap]].
 - **Đàn điện và tai nghe**: giữ âm lượng vừa phải — tai nghe sát tai có thể vượt ngưỡng an toàn mà người chơi không nhận ra.
 - **Nút tai cho nhạc sĩ**: giảm khoảng **15 dB** một cách tương đối **đều** giữa các dải tần (khác nút tai công nghiệp làm tiếng bị đục), nên vẫn nghe cân bằng; giảm 3 dB đã giảm một nửa liều tiếp xúc.
 - **Dấu hiệu cảnh báo**: ù tai hoặc nghe "bí" sau buổi tập là dấu hiệu tiếp xúc quá mức — cần đi khám thính học nếu kéo dài.

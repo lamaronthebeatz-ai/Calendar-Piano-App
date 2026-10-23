@@ -28,7 +28,7 @@ Mọi truyền thống ngẫu hứng đều có **khung**: một [[vong-hop-am|v
 | Lấp một khoảng trống trong tác phẩm | Cadenza, Eingang (đoạn dẫn vào) | [[cadenza]] |
 | Hiện thực một bè trầm cho sẵn | Bè trầm có số, partimento | [[bass-so]], [[partimento]] |
 | Mở đầu, nối các tác phẩm | Prelude ứng tác | [[prelude-ung-tac]] |
-| Ngẫu hứng trên vòng hợp âm | Jazz, [[nhac-pho|nhạc phổ]] thông, đệm hát | [[ngau-hung-jazz]], [[dem-hat-piano]] |
+| Ngẫu hứng trên vòng hợp âm | Jazz, nhạc phổ thông, đệm hát | [[ngau-hung-jazz]], [[dem-hat-piano]] |
 | Ngẫu hứng trên một chủ đề | [[bien-tau|Biến tấu]], fantasia ứng tác | [[lich-su-ngau-hung]] |
 | Ngẫu hứng tự do | Không chủ đề, không vòng hợp âm định trước | [[ngau-hung-tu-do]] |
 Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — [[toccata-prelude-fugue|fantasia]], impromptu, [[the-loai|prelude]] — xem [[impromptu]].
@@ -137,7 +137,7 @@ Mục tiêu ban đầu **không phải là chơi điêu luyện**, mà là sáng
 - Dù vậy, các nghệ sĩ như [[Liszt]], [[Chopin]], [[clara-schumann|Clara Schumann]] vẫn ứng tác **prelude** và đoạn nối trong buổi hoà nhạc (xem [[prelude-ung-tac]]).
 
 ## Ngẫu hứng sống tiếp trong nhà thờ
-Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **[[organ-ong|organ]] Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở [[doi-song-am-nhac-va-thiet-che|Nhạc viện Paris]], coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu [[thanh-ca-gregorian|thánh ca Gregorian]] của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1989) để lại rất nhiều bản thu ứng tác.
+Khi rời phòng hoà nhạc, ngẫu hứng vẫn sống trong **nhà thờ**. Truyền thống **[[organ-ong|organ]] Pháp**, bắt nguồn từ lớp của [[Franck|César Franck]] ở [[doi-song-am-nhac-va-thiet-che|Nhạc viện Paris]], coi ngẫu hứng là phần **không thể thiếu**: Charles Tournemire ứng tác trên các giai điệu [[thanh-ca-gregorian|thánh ca Gregorian]] của từng ngày lễ; Marcel Dupré viết giáo trình ngẫu hứng; Pierre Cochereau (organist Nhà thờ Đức Bà Paris 1955–1984) để lại rất nhiều bản thu ứng tác.
 
 ## Hồi sinh
 - **Robert Levin** ứng tác cadenza khi chơi [[hinh-thuc-concerto|concerto]] Mozart (xem [[cadenza]]).
@@ -209,8 +209,8 @@ Liên quan: [[lich-su-ngau-hung]], [[ngau-hung-ung-tac]].
 ## Lịch sử
 - Tên gọi theo nghĩa này gắn với nhà soạn nhạc Séc **Jan Václav Voříšek**: một nguồn cho rằng nhà xuất bản dùng chữ này cho một bản piano của ông năm 1817; tập **Sáu Impromptu Op. 7** của Voříšek ra đời năm **1822**. Các nguồn chưa thống nhất mốc đầu tiên.
 - Các impromptu của Voříšek có thể đã ảnh hưởng đến [[Schubert]] — tương tự cách nocturne của Field ảnh hưởng đến Chopin. Nhiều impromptu thời này có cấu trúc **A – B – A**.
-- **Schubert** viết hai tập, mỗi tập bốn bài, năm **1827**: tập đầu (D. 899) in khi ông còn sống, tập hai (D. 935) in sau khi ông mất (11/1828). Chúng thường được xếp cạnh tập **Sáu Moments musicaux**.
-- **[[Chopin]]** viết các impromptu rải rác suốt đời (không theo tập): Op. 29, Op. 36, Op. 51 và **Fantaisie-Impromptu** Op. 66. Bài cuối được chính Chopin chép tặng bà d'Este năm 1835 nhưng Chopin **không cho in**; [[van-ban-hoc-am-nhac|bản in đầu]] tiên ra năm **1855**, sau khi ông mất.
+- **Schubert** viết hai tập, mỗi tập bốn bài, năm **1827**: khi ông còn sống, tập đầu (D. 899) mới in được hai bài; tập hai (D. 935) in sau khi ông mất (11/1828). Chúng thường được xếp cạnh tập **Sáu Moments musicaux**.
+- **[[Chopin]]** viết các impromptu rải rác suốt đời (không theo tập): Op. 29, Op. 36, Op. 51 và **Fantaisie-Impromptu** Op. 66. Bài cuối được chính Chopin chép tặng bà d'Este năm 1835 nhưng Chopin **không cho in**; [[van-ban-hoc-am-nhac|bản in đầu tiên]] ra năm **1855**, sau khi ông mất.
 - Thể loại tiếp tục phổ biến suốt thế kỷ 19.
 
 ## Impromptu và ngẫu hứng thật
@@ -467,7 +467,7 @@ Mô tả chi tiết các cấp 3–7 nên đối chiếu bài gốc; khung này 
 ## Các cách luyện đã được các truyền thống dùng
 | Cách luyện | Nguồn gốc / ví dụ | Bài liên quan |
 |---|---|---|
-| **Hỏi – đáp** | Giáo dục [[nhac-pho|âm nhạc phổ]] thông; jazz (trading fours) | [[ngau-hung-piano]], [[ngau-hung-jazz]] |
+| **Hỏi – đáp** | Giáo dục âm nhạc phổ thông; jazz (trading fours) | [[ngau-hung-piano]], [[ngau-hung-jazz]] |
 | **Ràng buộc**: ít nốt (ngũ cung, phím đen), một [[tiet-tau|nhịp điệu]], một [[cao-do|âm vực]] | Chương trình nhập môn | [[am-giai-ngu-cung]] |
 | **Phát triển một motif**: lặp, [[mo-tien-hoa-am|mô tiến]], đảo, đổi nhịp | Kỹ thuật sáng tác cổ điển | [[motif]] |
 | **Học khuôn mẫu** rồi kết hợp | Czerny Op. 200; quy tắc quãng 8; lược đồ galant | [[lich-su-ngau-hung]], [[partimento]], [[luoc-do-galant]] |

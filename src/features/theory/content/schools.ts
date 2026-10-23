@@ -137,7 +137,7 @@ export const SCHOOLS: Record<string, School> = {
     refs: [W('Zhdanov Doctrine', 'Zhdanov_Doctrine'), ['Gresham College — The Year 1948 in Soviet Music', 'https://www.gresham.ac.uk/node/13912']],
   },
   'm20:neoclassical': {
-    intro: `Sau Thế chiến I, nhiều nhà soạn nhạc quay lại **sự rõ ràng của thế kỷ 18** — hình thức cân đối, kết cấu mỏng, giọng điệu trào phúng — gọi là **tân cổ điển** (Stravinsky giai đoạn *Pulcinella* là ví dụ tiêu biểu, xem [[toan-diatonic]]). Năm 1920, nhà phê bình Henri Collet đặt tên **"Nhóm Sáu"** (Les Six) cho [[darius-milhaud|Milhaud]], [[arthur-honegger|Honegger]], [[francis-poulenc|Poulenc]], [[germaine-tailleferre|Tailleferre]], [[georges-auric|Auric]] và Louis Durey. Ở Đức, [[paul-hindemith|Hindemith]] và [[carl-orff|Orff]] (với phương pháp giáo dục âm nhạc riêng — xem [[phuong-phap-giao-duc-am-nhac]]).`,
+    intro: `Sau Thế chiến I, nhiều nhà soạn nhạc quay lại **sự rõ ràng của thế kỷ 18** — hình thức cân đối, kết cấu mỏng, giọng điệu trào phúng — gọi là **tân cổ điển** (Stravinsky giai đoạn *Pulcinella* là ví dụ tiêu biểu, xem [[toan-diatonic]]). Năm 1920, nhà phê bình Henri Collet đặt tên **"Nhóm Sáu"** (Les Six) cho [[darius-milhaud|Milhaud]], [[arthur-honegger|Honegger]], [[francis-poulenc|Poulenc]], [[germaine-tailleferre|Tailleferre]], [[georges-auric|Auric]] và Louis Durey. Ở Đức có [[paul-hindemith|Hindemith]] và [[carl-orff|Orff]] (với phương pháp giáo dục âm nhạc riêng — xem [[phuong-phap-giao-duc-am-nhac]]).`,
     refs: [W('Neoclassicism (music)', 'Neoclassicism_(music)'), W('Les Six', 'Les_Six')],
   },
   'm20:national': {
