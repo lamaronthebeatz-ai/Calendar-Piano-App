@@ -21,13 +21,13 @@ Môn **Hình thức âm nhạc** và **Phân tích tác phẩm** ở các nhạc
 |---|---|---|---|
 | *Музыкальная форма как процесс* — Hình thức âm nhạc như một quá trình | **Boris Asafyev** (1884 – 1949; bút danh Igor Glebov) | 1930; tái bản 1947, 1963, 1971 | Nền triết lý: hình thức là **quá trình** sống, gắn với **ngữ điệu** |
 | *Музыкальная форма* — Hình thức âm nhạc | **Igor Sposobin** (1900 – 1954) | 1947; nhiều lần tái bản (1958 … 1984, 2012) | **Sách giáo khoa** hệ thống: từ motif đến sonata và chu kỳ |
-| *Строение музыкальных произведений* — Cấu trúc tác phẩm âm nhạc | **Lev Mazel** (1907 – 2000) | 1960 | Nối cấu trúc với **ý nghĩa biểu hiện**; nền của "phân tích tổng thể" |
+| *Строение музыкальных произведений* — Cấu trúc tác phẩm âm nhạc | **Lev Mazel** (1907 – 2000) | 1960; bản 2 bổ sung 1979 | Nối cấu trúc với **ý nghĩa biểu hiện**; nền của "phân tích tổng thể" |
 
 ${NOTE}
 
 ## Đọc theo thứ tự nào
 1. **Sposobin** trước — nắm từ vựng và các hình thức chuẩn: [[sposobin-hinh-thuc-am-nhac]].
-2. **Mazel** — học cách hỏi "vì sao cấu trúc này tạo ra hiệu quả này": [[mazel-cau-truc-tac-pham-am-nhac]].
+2. **Mazel** — học cách hỏi "vì sao cấu trúc này tạo ra hiệu quả này": [[mazel-cau-truc-tac-pham-am-nhac]] (loạt 8 bài đọc từ bản 1979, theo từng chương).
 3. **Asafyev** — đọc sau cùng, khi đã quen hình thức, để thấy hình thức như một dòng chảy ý nghĩa: [[asafyev-hinh-thuc-nhu-qua-trinh]].
 
 ## Điểm chung của trường phái
@@ -79,7 +79,7 @@ Lấy hình thức sonata ([[hinh-thuc-sonata]]):
 ## Ý nghĩa cho người học và người chơi
 - Nghe hình thức như **một câu chuyện có hướng**, không như một danh sách các phần.
 - Khi tập đàn: biết đoạn nào đang "mở", đoạn nào "đi", đoạn nào "khép" để chọn sắc thái và [[nhip-do|tiến độ]] cho đúng.
-- Lý thuyết ngữ điệu của Asafyev ảnh hưởng sâu đến âm nhạc học Xô viết; Mazel và Sposobin đều chịu ảnh hưởng của ông.
+- Lý thuyết ngữ điệu là nền của nhiều công trình âm nhạc học Xô viết về sau (nhận định chung, chưa dẫn nguồn cụ thể).
 
 Tổng quan: [[hinh-thuc-va-phan-tich-truong-phai-nga]].
 `,
@@ -124,45 +124,6 @@ ${NOTE}
 - Các bài phân tích mẫu của thư viện (ví dụ [[phan-tich-sonata-k545]], [[phan-tich-minuet-sol-truong]]) đi theo cùng trình tự này.
 
 Tổng quan: [[hinh-thuc-va-phan-tich-truong-phai-nga]].
-`,
-  },
-  {
-    slug: 'mazel-cau-truc-tac-pham-am-nhac',
-    title: 'Mazel: Cấu trúc tác phẩm âm nhạc (1960) và phân tích tổng thể',
-    category: 'form',
-    aliases: ['Mazel', 'Мазель', 'Строение музыкальных произведений', 'cấu trúc tác phẩm âm nhạc', 'phân tích tổng thể', 'целостный анализ', 'Mazel Zukkerman', 'Анализ музыкальных произведений'],
-    summary: 'Lev Mazel (1907 – 2000), Cấu trúc tác phẩm âm nhạc (1960): nối cấu trúc hình thức với khả năng biểu hiện của các phương tiện âm nhạc; nền của phương pháp phân tích tổng thể (целостный анализ), phát triển tiếp trong Phân tích tác phẩm âm nhạc (1967, cùng V. Zukkerman).',
-    refs: [WIKI_MAZEL],
-    body: `
-**Lev Abramovich Mazel** (1907 – 2000), giáo sư Nhạc viện Moskva (dạy 1931 – 1967). Sách chính: *О мелодии* (Về giai điệu, 1952), *Строение музыкальных произведений* (**1960**), *Анализ музыкальных произведений* (1967, cùng **V. Zukkerman**), *Проблемы классической гармонии* (1972).
-
-${NOTE}
-
-## Đóng góp chính
-| Ý tưởng | Tiếng Nga | Nội dung |
-|---|---|---|
-| **Phân tích tổng thể** | целостный анализ | Xét tác phẩm như một chỉnh thể: hình thức, giai điệu, hoà âm, tiết tấu, kết cấu **cùng lúc**, đặt trong bối cảnh phong cách và lịch sử |
-| **Khả năng biểu hiện của phương tiện** | выразительные возможности | Mỗi phương tiện (một quãng, một kiểu tiết tấu, một hợp âm) có một vùng ý nghĩa biểu cảm; nghĩa cụ thể do ngữ cảnh quyết định |
-| **Phát hiện nghệ thuật** | художественное открытие | Điều mới mẻ riêng của một tác phẩm — cái làm nó khác các tác phẩm cùng hình thức |
-| **Chủ đề loại một và loại hai** | темы первого и второго рода | Hai kiểu chủ đề Mazel phân biệt (thư viện chưa đối chiếu định nghĩa nguyên văn) |
-
-## Cách đặt câu hỏi kiểu Mazel
-Không chỉ hỏi "đây là hình thức gì", mà hỏi:
-1. Tác phẩm **gây ấn tượng** gì (tính chất, hình tượng)?
-2. **Phương tiện** nào tạo ra ấn tượng ấy — giai điệu, hoà âm, tiết tấu, âm vực, kết cấu?
-3. Các phương tiện **phối hợp** thế nào (cùng hướng hay đối nhau)?
-4. Hình thức **phân bố** chúng ra sao trong thời gian — đâu là cao trào, đâu là chỗ nghỉ?
-5. Điều gì là **riêng** của tác phẩm này so với khuôn chung?
-
-## Ví dụ áp dụng
-Prelude Mi thứ op. 28 số 4 của Chopin ([[phan-tich-prelude-mi-thu-op28-so4]]): hình thức chỉ là hai câu, nhưng sức nặng của bài đến từ sự **phối hợp** — giai điệu gần như đứng yên trên vài nốt trong khi hoà âm tay trái trượt xuống từng nửa cung. Phân tích tổng thể giải thích được vì sao một hình thức đơn giản lại tạo ấn tượng mạnh.
-
-## So với Sposobin và Asafyev
-- **Sposobin** dạy *hình thức là gì* — từ vựng và các khuôn: [[sposobin-hinh-thuc-am-nhac]].
-- **Mazel** dạy *hình thức làm gì* — nối cấu trúc với ý nghĩa.
-- **Asafyev** cho nền triết lý: hình thức là quá trình ngữ điệu: [[asafyev-hinh-thuc-nhu-qua-trinh]].
-
-Phương pháp phân tích chung của thư viện: [[phuong-phap-phan-tich-tac-pham]]. Tổng quan: [[hinh-thuc-va-phan-tich-truong-phai-nga]].
 `,
   },
 ]
