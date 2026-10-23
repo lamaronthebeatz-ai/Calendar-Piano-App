@@ -17,6 +17,8 @@ export const form: Article[] = [
     body: `
 **Hình thức** là cách các phần của một tác phẩm được sắp xếp theo thời gian: cái gì lặp lại, cái gì tương phản, cái gì quay về. Hiểu hình thức giúp **nghe** có định hướng, **học thuộc** nhanh và **biểu diễn** có đường đi.
 
+Đọc hình thức theo ba cuốn sách nền của trường phái Nga – Xô viết (Asafyev, Sposobin, Mazel): [[hinh-thuc-va-phan-tich-truong-phai-nga]].
+
 ## Âm nhạc được xây theo tầng
 | Tầng | Đơn vị | Bài |
 |---|---|---|

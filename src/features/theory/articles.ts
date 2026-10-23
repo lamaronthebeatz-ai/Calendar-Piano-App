@@ -5,6 +5,7 @@ import { pitch } from './content/pitch'
 import { scales } from './content/scales'
 import { harmony } from './content/harmony'
 import { form } from './content/form'
+import { formRussian } from './content/form-russian'
 import { polyphony } from './content/polyphony'
 import { fux } from './content/fux'
 import { albrechtsberger } from './content/albrechtsberger'
@@ -67,4 +68,4 @@ export const CATEGORIES = {
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...sacred, ...organ]
+export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...formRussian, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...sacred, ...organ]
