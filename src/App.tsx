@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
@@ -9,6 +9,8 @@ import { StudentProfilePage } from './features/students/StudentProfilePage'
 import { SettingsPage } from './features/settings/SettingsPage'
 import { PrivateArea } from './components/PrivateArea'
 import { Onboarding } from './features/onboarding/Onboarding'
+import { tourSeen } from './features/onboarding/tour'
+import { openDonate } from './features/donate/store'
 import { installViewTransitions } from './layout/viewTransitions'
 
 // Theory content is large and independent of the timetable, so it loads on demand.
@@ -32,6 +34,15 @@ export function App() {
   // The app renders behind the welcome glass from the start (so the frosting shows it), but stays inert until the code is right.
   const [unlocked, setUnlocked] = useState(isUnlocked)
   const [glass, setGlass] = useState(!unlocked)
+  // Right after the code is entered (not on a reload of an unlocked session), the support card greets once —
+  // except on the very first visit, which belongs to the guided tour.
+  const justUnlocked = useRef(false)
+  useEffect(() => {
+    if (!unlocked || glass || !justUnlocked.current || !tourSeen()) return
+    justUnlocked.current = false
+    const t = setTimeout(openDonate, 900)
+    return () => clearTimeout(t)
+  }, [unlocked, glass])
   return (
     <>
       {/* Blurred directly as well as through the glass's backdrop filter, which some browsers don't paint. */}
@@ -42,6 +53,7 @@ export function App() {
       {glass && (
         <LockScreen
           onUnlock={() => {
+            justUnlocked.current = true
             setUnlocked(true)
             // Fallback in case the lift's transitionend never fires.
             setTimeout(() => setGlass(false), 1400)
