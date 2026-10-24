@@ -1,7 +1,7 @@
 import { useState, type CSSProperties } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
-import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, CheckIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
+import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, NoteIcon, CheckIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
 import { ScrollArea } from '../../components/ScrollArea'
 import { useBack } from '../../hooks/useBack'
 import { CATEGORIES } from '../theory/articles'
@@ -53,6 +53,9 @@ export function CurriculumPage() {
       <div data-scrolled className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">Giáo trình</h1>
+          <Link to="/notes" className="flex h-9 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3.5 text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
+            <NoteIcon width={15} height={15} /> Sổ nghiên cứu
+          </Link>
         </div>
       </div>
       <Shelf />

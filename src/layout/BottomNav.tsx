@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
 import { PlusIcon } from '../components/icons'
 import { navItems } from './navItems'
+
+const barItems = navItems.filter((i) => !('desktop' in i))
 import { useUIStore } from '../store/uiStore'
 
 export function BottomNav({ hidden = false }: { hidden?: boolean }) {
@@ -17,7 +19,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
       inert={hidden}
       aria-label="Điều hướng chính"
     >
-      {navItems.slice(0, 3).map((item) => (
+      {barItems.slice(0, 3).map((item) => (
         <NavItem key={item.to} item={item} />
       ))}
 
@@ -32,7 +34,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
         </button>
       </div>
 
-      {navItems.slice(3).map((item) => (
+      {barItems.slice(3).map((item) => (
         <NavItem key={item.to} item={item} />
       ))}
     </nav>

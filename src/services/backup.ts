@@ -1,5 +1,6 @@
 import { db } from '../data/db'
 import type { Settings, Student, TimetableSlot } from '../types'
+import { allNotes, importNotes, type Note } from '../features/curriculum/reader/notes'
 
 export interface BackupPayload {
   version: 2
@@ -7,6 +8,8 @@ export interface BackupPayload {
   students: Student[]
   timetableSlots: TimetableSlot[]
   settings: Settings | undefined
+  /** Highlights and notes from the books and the library, per book (optional: older backups have none). */
+  notes?: Record<string, Note[]>
 }
 
 export async function exportBackup(): Promise<BackupPayload> {
@@ -21,6 +24,7 @@ export async function exportBackup(): Promise<BackupPayload> {
     students,
     timetableSlots,
     settings,
+    notes: allNotes(),
   }
 }
 
@@ -161,6 +165,8 @@ export async function importBackup(file: File, mode: 'replace' | 'merge'): Promi
     if (slots.length) await db.timetableSlots.bulkPut(slots)
     if (settings) await db.settings.put(settings)
   })
+
+  if (data.notes && typeof data.notes === 'object') importNotes(data.notes, mode)
 
   return { students: incoming.students.length, timetableSlots: incoming.slots.length }
 }

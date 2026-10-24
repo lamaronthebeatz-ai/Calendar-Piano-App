@@ -9,7 +9,7 @@ import { Cover } from './Cover'
 import { BookPage } from './Pages'
 import { chaptersOf, hueTint, type ReaderBook, type ReaderItem } from './model'
 import { Annotator, NotesPanel } from './Annotator'
-import { useNotes } from './notes'
+import { cite, useNotes } from './notes'
 import { getPosition, removeBookmark, savePosition, setPrefs, toggleBookmark, useReader, type Bookmark, type ReaderPrefs } from './store'
 
 const GAP = 64
@@ -424,7 +424,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
           <NotesPanel book={book} onGo={(i, n) => go(i, i === index ? { find: n.text.slice(0, 40) } : n.ratio)} />
         </Sheet>
       )}
-      <Annotator flow={flow} book={book} item={item} layout={`${item.key}:${page}:${pages}:${colW}:${prefs.size}:${prefs.font}`} ratio={() => (pages ? page / pages : 0)} />
+      <Annotator flow={flow} scope={book.id} itemKey={item.key} cite={(t) => cite(book, item, t)} layout={`${item.key}:${page}:${pages}:${colW}:${prefs.size}:${prefs.font}`} ratio={() => (pages ? page / pages : 0)} />
       {panel === 'search' && <Search book={book} onGo={(i, q) => go(i, { find: q })} onClose={() => setPanel(null)} />}
     </div>,
     document.body,

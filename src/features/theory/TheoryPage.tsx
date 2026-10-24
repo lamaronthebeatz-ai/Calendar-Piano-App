@@ -32,6 +32,8 @@ import { branchesOf } from '../musicology/taxonomy'
 import { Copyright } from '../../components/Copyright'
 import { QuizCard } from './QuizCard'
 import { booksWithChapter } from '../curriculum/reader/model'
+import { Annotator } from '../curriculum/reader/Annotator'
+import { LIBRARY } from '../curriculum/reader/notes'
 import { GLYPHS, tint } from './categoryStyle'
 
 type CategoryId = Article['category']
@@ -816,6 +818,7 @@ function InBooks({ slug }: { slug: string }) {
 
 function ArticleView({ article, scroller, sections, onJump: jump }: { article: Article; scroller: RefObject<HTMLDivElement | null>; sections: string[]; onJump: (i: number) => void }) {
   const backlinks = getBacklinks(article.slug)
+  const prose = useRef<HTMLDivElement>(null)
   const siblings = articlesByCategory.find((c) => c.id === article.category)!.articles
   const index = siblings.indexOf(article)
   const [prev, next] = index < 0 ? [] : [siblings[index - 1], siblings[index + 1]]
@@ -880,10 +883,21 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
         )}
 
         <LinkPreviews>
-          <div className="prose-theory" data-font={serif ? 'serif' : 'sans'} style={{ '--reader-size': `${size}px`, '--reader-leading': leading } as CSSProperties}>
+          <div ref={prose} className="prose-theory" data-font={serif ? 'serif' : 'sans'} style={{ '--reader-size': `${size}px`, '--reader-leading': leading } as CSSProperties}>
             <Markup source={article.body} />
           </div>
         </LinkPreviews>
+        <Annotator
+          flow={prose}
+          scope={LIBRARY}
+          itemKey={article.slug}
+          layout={`${article.slug}:${size}:${serif}:${leading}`}
+          ratio={() => {
+            const el = scroller.current
+            return el ? el.scrollTop / Math.max(1, el.scrollHeight - el.clientHeight) : 0
+          }}
+          cite={(t) => `“${t.trim()}”\n— ${article.title}, thư viện Trung tâm lý thuyết âm nhạc học by Lamar`}
+        />
 
         {(article.wiki || article.refs) && (
           <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5">

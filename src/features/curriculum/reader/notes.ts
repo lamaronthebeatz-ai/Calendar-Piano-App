@@ -18,7 +18,12 @@ export interface Note {
   /** Position through the item when it was made, 0 – 1: a fallback for jumping back to it. */
   ratio: number
   at: number
+  /** Research topics, free text. */
+  tags?: string[]
 }
+
+/** Scope of the library articles (books use their own id). */
+export const LIBRARY = 'thu-vien'
 
 const KEY = 'reader:notes'
 let state: Record<string, Note[]> = load()
@@ -50,6 +55,40 @@ export const useNotes = (book: string) =>
     () => state[book] ?? EMPTY,
   )
 
+const ALL_EMPTY: Record<string, Note[]> = {}
+export const useAllNotes = () =>
+  useSyncExternalStore(
+    (l) => (listeners.add(l), () => listeners.delete(l)),
+    () => state ?? ALL_EMPTY,
+  )
+export const allNotes = () => state
+
+/** Restore from a backup: replace everything, or add notes this device doesn't have yet (matched by id). */
+export function importNotes(data: Record<string, Note[]>, mode: 'replace' | 'merge') {
+  const next: Record<string, Note[]> = mode === 'replace' ? {} : { ...state }
+  for (const [book, list] of Object.entries(data)) {
+    if (!Array.isArray(list)) continue
+    const have = new Map((next[book] ?? []).map((n) => [n.id, n]))
+    for (const n of list) if (n && typeof n.text === 'string' && typeof n.id === 'string') have.set(n.id, n)
+    next[book] = [...have.values()]
+  }
+  state = next
+  try {
+    localStorage.setItem(KEY, JSON.stringify(state))
+  } catch {
+    /* keep for this session */
+  }
+  listeners.forEach((l) => l())
+}
+
+/** Note ids whose quotes overlap [start, end) in the flat text. */
+export function overlapping(flat: Flat, notes: Note[], start: number, end: number) {
+  return notes.filter((n) => {
+    const at = locate(flat, n)
+    return at && at[0] < end && start < at[1]
+  })
+}
+
 export function addNote(book: string, n: Omit<Note, 'id' | 'at'>): Note {
   const note = { ...n, id: Math.random().toString(36).slice(2, 10), at: Date.now() }
   commit(book, [...(state[book] ?? []), note])
@@ -60,7 +99,7 @@ export const removeNote = (book: string, id: string) => commit(book, (state[book
 
 /* ------------------------------------------------------------ anchoring */
 
-interface Flat {
+export interface Flat {
   text: string
   nodes: { node: Text; start: number }[]
 }
@@ -140,6 +179,7 @@ export function toMarkdown(bookTitle: string, notes: Note[], titleOf: (key: stri
     for (const n of list) {
       md += `> ${n.text.replace(/\n+/g, ' ')}\n\n`
       if (n.note) md += `${n.note}\n\n`
+      if (n.tags?.length) md += n.tags.map((t) => `#${t.replace(/\s+/g, '-')}`).join(' ') + '\n\n'
       md += `*${COLOR_LABEL[n.color]} · ${new Date(n.at).toLocaleDateString('vi-VN')}*\n\n`
     }
   }

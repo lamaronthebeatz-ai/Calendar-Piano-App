@@ -143,7 +143,7 @@ export function SettingsPage() {
 
         <Section title="Dữ liệu & sao lưu">
           <p className="text-[13px] text-[var(--color-ink-muted)]">
-            Lịch dạy của bạn được lưu ngay trên trình duyệt này. Hãy thường xuyên xuất dữ liệu ra tệp sao lưu để dữ liệu không bị kẹt trên một thiết bị.
+            Lịch dạy, ghi chú và đánh dấu trong sách, thư viện của bạn được lưu ngay trên trình duyệt này. Hãy thường xuyên xuất dữ liệu ra tệp sao lưu để dữ liệu không bị kẹt trên một thiết bị.
           </p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button variant="secondary" icon={<DownloadIcon width={15} height={15} />} onClick={handleExport} fullWidth>

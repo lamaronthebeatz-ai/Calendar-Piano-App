@@ -15,6 +15,8 @@ const TheoryPage = lazy(() => import('./features/theory/TheoryPage').then((m) =>
 
 const CurriculumPage = lazy(() => import('./features/curriculum/CurriculumPage').then((m) => ({ default: m.CurriculumPage })))
 
+const NotebookPage = lazy(() => import('./features/notebook/NotebookPage').then((m) => ({ default: m.NotebookPage })))
+
 const MusicologyPage = lazy(() => import('./features/musicology/MusicologyPage').then((m) => ({ default: m.MusicologyPage })))
 
 export function App() {
@@ -54,6 +56,7 @@ function Router() {
           <Route path="/curriculum/:id?/:item?" element={<Suspense><CurriculumPage /></Suspense>} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
+          <Route path="/notes" element={<Suspense><NotebookPage /></Suspense>} />
           <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />
         </Route>
       </Routes>
