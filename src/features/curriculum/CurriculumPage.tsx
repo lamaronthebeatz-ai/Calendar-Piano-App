@@ -9,6 +9,7 @@ import { findArticle } from '../theory/wiki'
 import { toggleDone, useLibrary } from '../theory/library'
 import { CURRICULA } from './curricula'
 import { Cover } from './reader/Cover'
+import { CoverFlow } from './CoverFlow'
 import { chaptersOf, findBook, READER_BOOKS, type ReaderBook } from './reader/model'
 import { PrintBook } from './reader/PrintBook'
 import { Reader } from './reader/Reader'
@@ -97,6 +98,8 @@ function Shelf() {
           Sách lý thuyết và giáo trình piano do Lamar biên soạn và tổng hợp từ các bài của thư viện. Mở ra là đọc như sách điện tử: lật trang, mục lục, dấu trang, tìm trong sách, đổi cỡ chữ và nền trang, xuất PDF — mỗi bài vẫn giữ đúng đường dẫn của bài trong thư viện.
         </p>
       </header>
+
+      <CoverFlow books={READER_BOOKS} />
 
       <ShelfRow title="Sách lý thuyết" hint={`${books.length} quyển`} books={books} />
       <ShelfRow title="Giáo trình piano" hint={`${courses.length} giáo trình`} books={courses} />
