@@ -765,20 +765,21 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
     id: 'hinh-thuc-am-nhac',
     title: 'Hình Thức Âm Nhạc',
     volume: 'Trường phái Nga – Xô viết',
-    subtitle: 'Hình thức và phân tích tác phẩm gộp từ ba sách nền: Sposobin, Mazel, Asafyev — từ phương tiện âm nhạc, cấu trúc, chức năng các phần, nguyên tắc phát triển, qua đoạn nhạc, hai – ba phần, biến tấu, rondo, sonata, chu kỳ, thanh nhạc, đến fugue và ngữ điệu.',
+    subtitle: 'Hình thức và phân tích tác phẩm gộp từ bốn sách: Sposobin, Mazel, Asafyev và Sokolov — từ phương tiện âm nhạc, cấu trúc, chức năng các phần, nguyên tắc phát triển, qua đoạn nhạc, hai – ba phần, biến tấu, rondo, sonata, chu kỳ, thanh nhạc, đến fugue, ngữ điệu và hình thức thế kỷ XX.',
     author: 'Lamar',
     audience: 'Đã học Nhạc Lý Cơ Bản và hoà âm cơ bản',
     hue: 18,
     glyph: '𝄐',
     coverImage: formCover,
     preface: `
-Cuốn này dạy **hình thức âm nhạc và phân tích tác phẩm** theo truyền thống các nhạc viện Nga – Xô viết, truyền thống mà các nhạc viện Việt Nam tiếp nhận. Thay vì đọc riêng từng sách, cuốn sách **gộp ba sách nền theo chủ đề**:
+Cuốn này dạy **hình thức âm nhạc và phân tích tác phẩm** theo truyền thống các nhạc viện Nga – Xô viết, truyền thống mà các nhạc viện Việt Nam tiếp nhận. Thay vì đọc riêng từng sách, cuốn sách **gộp ba sách nền theo chủ đề**, thêm một sách về âm nhạc thế kỷ XX:
 
 | Sách | Đóng góp |
 |---|---|
 | **I. Sposobin**, *Музыкальная форма* (1947; bản 1984) | Hệ thống thuật ngữ và định nghĩa; trình tự từ đoạn nhạc tới fugue |
 | **L. Mazel**, *Строение музыкальных произведений* (1960; bản 1979) | Hình thức gắn với ý nghĩa biểu hiện; phương pháp phân tích tổng thể |
 | **B. Asafyev**, *Музыкальная форма как процесс* (1930 / 1947; bản 1971) | Hình thức là quá trình; i:m:t; đồng nhất và tương phản; ngữ điệu |
+| **A. Sokolov**, *Введение в музыкальную композицию XX века* (2004) | Hình thức và sáng tác thế kỷ XX: kỹ thuật, văn bản, chủ đề; phân tích Webern, Ives, Denisov, Riley |
 
 ## Cấu trúc sách
 Mỗi bài là một bài của thư viện Lý thuyết (giữ nguyên đường dẫn), viết như một chương giáo khoa: định nghĩa, giải thích, các dạng, ví dụ tác phẩm mà các sách dẫn, mục **"Ba sách nói gì — đối chiếu"**, **cách phân tích** và **bài tập**. Trích dẫn ghi rõ sách, chương, mục.
@@ -820,8 +821,15 @@ Mỗi bài là một bài của thư viện Lý thuyết (giữ nguyên đườn
       { title: 'Phức điệu và ngữ điệu', intro: 'Các hình thức phức điệu, và học thuyết ngữ điệu của Asafyev như cách nhìn lịch sử hình thức.', chapters: [
         { slug: 'hinh-thuc-nga-phuc-dieu', focus: 'Mô phỏng, canon, đối âm phức, fugue.' },
         { slug: 'hinh-thuc-nga-ngu-dieu', focus: 'Ngữ điệu, từ điển ngữ điệu, khủng hoảng ngữ điệu.' },
-        { slug: 'hinh-thuc-nga-lo-trinh', focus: 'Ôn lại toàn bộ lộ trình.' },
       ], exercises: ['Phân tích phần trình bày một fugue trong Bình quân luật: chủ đề, câu đáp, phản đề, ranh giới.', 'Viết một đoạn ngắn: vì sao một hình thức (ví dụ sonata) "kết tinh" ở một thời kỳ lịch sử, theo Asafyev.'] },
+      { title: 'Hình thức và sáng tác thế kỷ XX', intro: 'Theo Sokolov (2004): truyền thống và cách tân, kỹ thuật sáng tác, vấn đề văn bản, phạm trù hình thức và chủ đề trong âm nhạc thế kỷ XX, và các bài phân tích tác phẩm.', chapters: [
+        { slug: 'hinh-thuc-nga-xx-truyen-thong-va-van-hoa', focus: 'Truyền thống – cách tân; các vectơ văn hoá; loại hình sáng tác.' },
+        { slug: 'hinh-thuc-nga-xx-ly-thuyet-va-ky-thuat', focus: 'Lý thuyết và thực hành; kỹ thuật sáng tác hiện đại.' },
+        { slug: 'hinh-thuc-nga-xx-van-ban', focus: 'Mở rộng khái niệm văn bản; ký âm; đa phong cách.' },
+        { slug: 'hinh-thuc-nga-xx-hinh-thuc-va-chu-de', focus: 'Phạm trù hình thức và chủ đề trong thế kỷ XX.' },
+        { slug: 'hinh-thuc-nga-xx-phan-tich-tac-pham', focus: 'Schnittke, Denisov, Riley, Ives, Webern.' },
+        { slug: 'hinh-thuc-nga-lo-trinh', focus: 'Ôn lại toàn bộ lộ trình.' },
+      ], exercises: ['Nghe Webern op. 7 số 3 và Ives The Unanswered Question; so sánh cách mỗi tác phẩm tạo ra hình thức.', 'Viết một đoạn ngắn: khái niệm chủ đề của Sposobin còn dùng được tới đâu với âm nhạc thế kỷ XX, theo Sokolov.'] },
     ],
   },
 ]
