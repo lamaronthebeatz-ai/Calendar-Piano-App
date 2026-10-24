@@ -129,7 +129,7 @@ Dịch sát: "Chủ đề kết thúc concerto cố ý **không mang tính trìn
 
 ### Đối chiếu của người biên soạn: chủ đề ở Sposobin, Mazel và Sokolov
 
-Mazel định nghĩa chủ đề là "một ý nhạc, có đủ tính định hình, đủ tính tập trung, có tính đặc trưng và tính cá thể hoá của sức biểu hiện, và **thường làm cơ sở cho sự phát triển**" (xem [[hinh-thuc-nga-doan-nhac]]). Ông còn nói chủ đề là **phạm trù lịch sử**, và một chuỗi series vô điệu tính *không* phải chủ đề theo nghĩa ấy. Chủ đề kiểu Shchedrin có đủ định hình, tập trung, đặc trưng, nhưng thiếu đúng vế cuối: nó không làm cơ sở cho phát triển nào cả. Còn Sposobin xếp các phần theo chức năng (trình bày, nối, phần giữa, tái hiện, mở đầu, kết; xem [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]]): ở hình thức "phát triển đảo ngược", chủ đề không nằm ở chức năng **trình bày** mà ở chức năng **kết**, điều mà sơ đồ của Sposobin không dự kiến cho chủ đề chính. Phân biệt chức năng lôgic và chức năng cấu trúc của Mazel giúp gọi tên chính xác: chủ đề mang chức năng lôgic **hoàn tất**.
+Mazel định nghĩa chủ đề là "một ý nhạc, có đủ tính định hình, đủ tính tập trung, có tính đặc trưng và tính cá thể hoá của sức biểu hiện, và **thường làm cơ sở cho sự phát triển**" (xem [[hinh-thuc-nga-doan-nhac]]). Ông còn nói chủ đề là **phạm trù lịch sử**, và một chuỗi series vô điệu tính *không* phải chủ đề theo nghĩa ấy. Chủ đề kiểu Shchedrin có đủ định hình, tập trung, đặc trưng, nhưng thiếu đúng vế cuối: nó không làm cơ sở cho phát triển nào cả. Còn Sposobin xếp các phần theo chức năng (trình bày, nối, đoạn giữa, tái hiện, mở đầu, kết; xem [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]]): ở hình thức "phát triển đảo ngược", chủ đề không nằm ở chức năng **trình bày** mà ở chức năng **kết**, điều mà sơ đồ của Sposobin không dự kiến cho chủ đề chính. Phân biệt chức năng lôgic và chức năng cấu trúc của Mazel giúp gọi tên chính xác: chủ đề mang chức năng lôgic **hoàn tất**.
 
 | Khía cạnh | Chủ đề cổ điển (Sposobin, Mazel) | Chủ đề như kết quả (Sokolov) | Chủ đề trong vi hình thức (Sokolov) |
 |---|---|---|---|
@@ -210,7 +210,7 @@ Bỏ qua quy tắc một tiêu chí, có thể đặt vấn đề **loại hình
 | 1. Chất liệu âm thanh | 1.1 âm nhạc thường (có cao độ, trường độ, âm sắc, cường độ xác định); 1.2 âm loại khác: sonoristic; điện tử (máy phát), biến đổi kỹ thuật (qua băng từ, khuếch đại), cụ thể (âm môi trường, tiếng động) |
 | 2. Thuộc tính ngữ điệu | 2.1 điệu tính – chủ đề (hình thức chủ điệu và phức điệu truyền thống); 2.2 điệu thức (từ công thức thang âm, попевка); 2.3 mười hai âm, serial; 2.4 thông số khác: sonoristic (âm sắc), tiết tấu, động (cường độ); 2.5 cách xử lý chất liệu riêng: đa phong cách, collage, aleatoric |
 | 3. Kiểu quá trình | 3.1 ngắt quãng, ghép (chuỗi phần tương đối độc lập); 3.2 liên tục, phát triển (một ý; chuyển ý; rút ý phụ từ ý chính); 3.3 có giới hạn, khép kín (mỗi khoảnh khắc, nhất là đoạn kết, có lý do kịch tính); 3.4 không giới hạn, mở (không có khởi đầu xác định và điểm kết định trước) |
-| 4. Kiểu bố trí | 4.1 chỉ theo chiều ngang — đơn âm (các dạng bài hát đơn giản nhất); 4.2 ngang (và dọc) — chủ điệu (rondo, sonata, ba phần phức...); 4.3 dọc (và ngang) — phức điệu (fugue, canon, passacaglia); 4.4 ngang, dọc và trong không gian phân lớp — lập thể (chuyển động của âm trong không gian là nhân tố nội dung chính) |
+| 4. Kiểu bố trí | 4.1 chỉ theo chiều ngang — đơn âm (các dạng bài hát đơn giản nhất); 4.2 ngang (và dọc) — chủ điệu (rondo, sonata, ba đoạn phức...); 4.3 dọc (và ngang) — phức điệu (fugue, canon, passacaglia); 4.4 ngang, dọc và trong không gian phân lớp — lập thể (chuyển động của âm trong không gian là nhân tố nội dung chính) |
 | 5. Độ ổn định văn bản | 5.1 ổn định; 5.2 di động — ở tầng kết cấu (nhịp, giai điệu, phức hợp ngữ điệu đổi) hoặc ở tầng cấu trúc chung (thứ tự các phần đổi); 5.3 ngẫu hứng — có cấu trúc và chất liệu cho trước, hoặc không |
 
 Sokolov đồng ý với kết luận của Tsenova: "chỉ một hệ thống hoá nhiều bình diện, dự định bao trùm và phân biệt lôgic mọi hình thức âm nhạc hiện đại với tính đa tạp của chúng, mới có thể phản ánh tình hình thực trong lĩnh vực sáng tạo hình thức hiện đại và thậm chí gợi cho nhà soạn nhạc những con đường mới" *(Sokolov, ch. 7)*.
@@ -312,7 +312,7 @@ Bảng dưới đây là đối chiếu của người biên soạn, chỉ dùng
     body: `
 Bài cuối của **Phần VII — Hình thức và sáng tác thế kỷ XX** trong [[hinh-thuc-nga-lo-trinh|bộ Hình thức âm nhạc — trường phái Nga – Xô viết]]. Sách của A. S. Sokolov (*Введение в музыкальную композицию XX века*, 2004) kết thúc bằng sáu phụ lục (Приложения). Hai phụ lục là văn bản của chính nhà soạn nhạc: bài nói của A. Schnittke và các bài viết của E. Denisov về *Ode* của ông. Một phụ lục là bài của A. Raikhelson về cách chuyển một bài thơ thành âm nhạc. Ba phụ lục còn lại (về Riley, Ives, Webern) không ghi tên tác giả, đọc như phần tiếp của sách; chương 7 dẫn tới Phụ lục VI bằng ngôi thứ nhất ("bài phân tích... đặt ở phụ lục VI"). Sách in kèm bản nhạc *Ode*, *In C*, *The Unanswered Question*, bản số 3 op. 7 của Webern và *Prelude số 2* của Raikhelson; trong văn bản PDF dùng để soạn bài này, các bản nhạc và sơ đồ là hình nên không đọc được, chỉ đọc được lời.
 
-Khái niệm dùng trong bài (vectơ, module, vi hình thức, chủ đề như tổng kết, moment form) đã giải thích ở [[hinh-thuc-nga-xx-hinh-thuc-va-chu-de]]. Mỗi mục dưới đây có ba phần: **thông tin sách cho**, **cấu trúc – hình thức**, **cách nghe**. Chỗ nào ghi "(ngoài sách)" là thông tin người biên soạn thêm; các đối chiếu với Sposobin, Mazel, Asafyev là của người biên soạn.
+Khái niệm dùng trong bài (vectơ, module, vi hình thức, chủ đề như tổng kết, moment form) đã giải thích ở [[hinh-thuc-nga-xx-hinh-thuc-va-chu-de]]. Mỗi mục dưới đây có ba đoạn: **thông tin sách cho**, **cấu trúc – hình thức**, **cách nghe**. Chỗ nào ghi "(ngoài sách)" là thông tin người biên soạn thêm; các đối chiếu với Sposobin, Mazel, Asafyev là của người biên soạn.
 
 ## 1. Phụ lục I — A. Schnittke, "Xu hướng đa phong cách trong âm nhạc hiện đại"
 
@@ -363,20 +363,20 @@ Lời chú giải: tác phẩm xây trên **tương tác của bản nguyên ki�
 ### Cấu trúc hình thức
 Denisov cho ba cách đọc hình thức, càng về sau càng sâu.
 
-**Cách đọc 1 — ba phần A + B + C**, B và C ngăn bởi một dấu lặng chung (3 giây).
+**Cách đọc 1 — ba đoạn A + B + C**, B và C ngăn bởi một dấu lặng chung (3 giây).
 
-- **A (ô nhịp 1–33)** tự nó ba phần, a + b + a1 ("dù không có tái hiện theo đúng nghĩa"). Denisov viết: "Ba phần là một cách xử lý vật chất âm nhạc."
+- **A (ô nhịp 1–33)** tự nó ba đoạn, a + b + a1 ("dù không có tái hiện theo đúng nghĩa"). Denisov viết: "Ba đoạn là một cách xử lý vật chất âm nhạc."
   - a (ô 1–6): cố định chính xác mọi thành phần, **ổn định cấu trúc**;
   - b (ô 7–18, văn bản ghi "Tempo libro"): đưa **tính di động** vào tiết tấu; cấu trúc ghi chính xác cao độ nhưng tiết tấu tự do – ngẫu hứng, ô nhịp chỉ còn là cách phối hợp người chơi; "vật chất âm thanh tự nó trở nên lỏng";
   - a1 (ô 19–33): trả lại tính ổn định; là tái hiện "của trạng thái" và phần nào tái hiện trực tiếp (âm Đô thăng phình ra ở ô 1 tương ứng âm Rê ở ô 19).
 - **B (ô 34–45)**, kể cả trang aleatoric dài khoảng 30 giây: một làn sóng âm thanh liên tục đi lên và phức tạp dần, ở cao trào (ô 45) dẫn tới **gãy cấu trúc**. Sự biến dạng tăng dần của tiết tấu, cả theo chiều ngang lẫn mức độ chồng chéo các cấu trúc tiết tấu (đã tồn tại thật ở những mặt phẳng thời gian khác nhau), dẫn tới một chất mới: thoát khỏi sự cố định, ba người chơi hành động không phối hợp (đúng hơn, chỉ phối hợp bằng ít điều kiện). "Cấu trúc chuyển thành ký hiệu của cấu trúc."
 - **C**: cấu trúc xuất hiện đã được giai điệu hoá rõ; chuyển sang vùng âm sắc khác. Gần như chỉ còn clarinet với một độc tấu lớn; lần đầu chuông và tam-tam vang lên đúng nghĩa (trước đó tam-tam chỉ chơi glissando bằng dùi kim loại); piano chỉ chơi trên dây (trước đó chỉ trên phím); chỉ những tiếng cymbal khẽ, ba lần, làm cầu nối với phần đầu. Tất cả ghi chính xác; đường clarinet nghe tự do chỉ là một "rubato được viết ra". Có thể coi phần này là một coda phát triển — lời bạt của cả tác phẩm.
 
-::form a:6 b:12 a1:15 B:12 C | Ode của Denisov theo cách đọc ba phần: A (a + b + a1, ô 1–33) – B (ô 34–45 và trang đồ hoạ) – dấu lặng chung – C. Độ dài các khối a, b, a1, B theo số ô nhịp; số ô của C sách không ghi
+::form a:6 b:12 a1:15 B:12 C | Ode của Denisov theo cách đọc ba đoạn: A (a + b + a1, ô 1–33) – B (ô 34–45 và trang đồ hoạ) – dấu lặng chung – C. Độ dài các khối a, b, a1, B theo số ô nhịp; số ô của C sách không ghi
 
 **Cách đọc 2 — theo độ di động của vật chất.** Sách in một sơ đồ ở đây (hình, không đọc được trong bản PDF).
 
-**Cách đọc 3 — hai phần.** Có liên hệ rõ giữa b (giữa phần A) và B: b báo trước B, vì nó đã có nguyên tắc trình bày cấu trúc (kết hợp điểm và đường ở mọi nhạc cụ) sẽ trội trong B; quan trọng hơn, ở b nảy sinh tính di động tiết tấu, mà kết quả cuối cùng là tính di động của mọi thành phần trên trang aleatoric. Chú thích của Denisov thêm: b cũng liên hệ rõ với C. Kết luận: "tác phẩm về nguyên tắc là hai phần, dù bên trong tính hai phần ấy có một tính ba phần hoàn toàn thật của cấu trúc chung".
+**Cách đọc 3 — hai đoạn.** Có liên hệ rõ giữa b (giữa phần A) và B: b báo trước B, vì nó đã có nguyên tắc trình bày cấu trúc (kết hợp điểm và đường ở mọi nhạc cụ) sẽ trội trong B; quan trọng hơn, ở b nảy sinh tính di động tiết tấu, mà kết quả cuối cùng là tính di động của mọi thành phần trên trang aleatoric. Chú thích của Denisov thêm: b cũng liên hệ rõ với C. Kết luận: "tác phẩm về nguyên tắc là hai đoạn, dù bên trong tính hai đoạn ấy có một tính ba đoạn hoàn toàn thật của cấu trúc chung".
 
 ### Hai tuyến phát triển
 **Tuyến kiến tạo (giai điệu hoá).** Ode bắt đầu bằng âm Đô thăng của clarinet kéo dài hai ô rưỡi: tĩnh về cao độ nhưng biến dạng liên tục về cường độ. Sự kết hợp ấy cho cú đẩy tâm lý để phá vỡ trạng thái: một chuỗi nốt móc ba ở piano dẫn tới cluster ở âm vực cao, cấu trúc tiết tấu rơi xuống của bộ gõ phá vỡ, gây đứt gãy cấu trúc; cuối ô 3 một âm Sol giáng riêng lẻ của clarinet mở đầu những "âm – điểm". Như vậy ba ô đầu đã chứa hai ý tưởng cơ bản: **xu hướng liên tục** của cấu trúc âm thanh và **xu hướng ngược lại**, đứt gãy và biến dạng. Các chặng tiếp theo:
@@ -409,7 +409,7 @@ Denisov viết: kết quả âm thanh và độ dài được quyết định kh
 4. Ở B, nghe mật độ tăng tới chỗ gãy; trên trang đồ hoạ, chú ý rằng âm hưởng là kết quả của luật chơi, mỗi bản thu sẽ khác.
 5. Sau dấu lặng chung: nghe sự đổi âm sắc (piano trên dây, chuông, tam-tam) và đường clarinet "rubato viết ra".
 
-**Đối chiếu của người biên soạn.** Denisov dùng nguyên các chữ cổ điển (ba phần, tái hiện, coda, ngữ điệu, đảo, mô tiến) nhưng tự định nghĩa lại: "tái hiện của trạng thái" là tái hiện một độ ổn định chứ không phải một chủ đề; "ba phần là một cách xử lý vật chất". Theo Mazel, đây là chức năng lôgic (trình bày, tương phản, trở về) tách khỏi chức năng cấu trúc quen thuộc. Hai tuyến kiến tạo – phá huỷ gần với cặp kết tinh – phá vỡ cái đã kết tinh của Asafyev; khác ở chỗ Denisov cho mỗi xu hướng một nhóm nhạc cụ và một khoảnh khắc hình thức riêng.
+**Đối chiếu của người biên soạn.** Denisov dùng nguyên các chữ cổ điển (ba đoạn, tái hiện, coda, ngữ điệu, đảo, mô tiến) nhưng tự định nghĩa lại: "tái hiện của trạng thái" là tái hiện một độ ổn định chứ không phải một chủ đề; "ba đoạn là một cách xử lý vật chất". Theo Mazel, đây là chức năng lôgic (trình bày, tương phản, trở về) tách khỏi chức năng cấu trúc quen thuộc. Hai tuyến kiến tạo – phá huỷ gần với cặp kết tinh – phá vỡ cái đã kết tinh của Asafyev; khác ở chỗ Denisov cho mỗi xu hướng một nhóm nhạc cụ và một khoảnh khắc hình thức riêng.
 
 ## 3. Phụ lục III — T. Riley, *In C* (1964)
 
@@ -490,7 +490,7 @@ Kết quả: một mặt có xu hướng **hướng tâm** — khung cứng củ
 ### Cách nghe
 1. Đọc to bài thơ (bản tiếng Nga), đếm âm tiết từng dòng, đối chiếu với sơ đồ của Raikhelson.
 2. Nghe hoặc chơi *Prelude số 2*: tìm âm Mi giáng ở hai âm vực; nó có rơi vào đầu và cuối câu như "о" và "и" trong thơ không?
-3. Nghe phần giữa: chỗ chia nhỏ 3 + 3, 2 + 2 + 3 + 3 có thành những motif ngắn dồn dập không?
+3. Nghe đoạn giữa: chỗ chia nhỏ 3 + 3, 2 + 2 + 3 + 3 có thành những motif ngắn dồn dập không?
 
 **Đối chiếu của người biên soạn.** Chuỗi 7 + 7 | 7 + 8, 8 | chia nhỏ | 7 + 7 rất gần bốn chặng hạt nhân – lặp – phát triển chia nhỏ – khép mà Mazel mô tả cho cấu trúc chia nhỏ có khép, và Mazel nói chúng gặp cả ở quy mô lớn (xem [[hinh-thuc-nga-phan-doan-cau-truc]]). Còn "nguyên tắc triển khai" (развёртывание) theo nghĩa Baroque là khái niệm đã có trong [[hinh-thuc-nga-phuc-dieu]]. Phụ lục này cho thấy hướng ngược với chương 7: không phải âm nhạc mượn thủ pháp ngôn từ (phép cộng dần, logogriph), mà ngôn từ được đọc bằng phạm trù âm nhạc.
 
@@ -548,18 +548,18 @@ Sokolov kết: tác phẩm là "một dự báo âm nhạc chính xác cho cả 
 ### Thông tin sách cho
 Sách đặt op. 7 sau hai tập cho dàn nhạc op. 5 và op. 6, những tác phẩm nổi tiếng nhất của thời kỳ trước serial; op. 7 tiếp tục con đường tới tính châm ngôn và mật độ ngữ điệu tối đa, nhưng trong không khí kín của một đối thoại chỉ hai nhạc cụ. Sách gọi op. 7 là "7 bản" (7 пьес). (Ngoài sách: op. 7 là *Vier Stücke* — bốn bản — cho violin và piano, 1910; op. 5 là *Fünf Sätze* cho tứ tấu đàn dây, có bản cho dàn dây về sau; chỗ "7 bản" và "op. 5 cho dàn nhạc" trong sách có thể là nhầm lẫn.) Bản số 3 có 14 ô nhịp.
 
-### Cấu trúc: không phải đoạn nhạc mà ba phần
-Thoạt nhìn, trang nhạc 14 ô gợi tiểu phẩm lãng mạn ở hình thức đoạn nhạc: giai điệu lượn sóng ở piano, những câu đáp của violin, khung mở đầu và kết ngắn; đọc thị tấu thì có thể "vang khá đẹp" như thế. Nhưng đọc kỹ văn bản và các chỉ dẫn chính xác của tác giả thì khác: đây không phải đoạn nhạc, hình thức trình bày một ý nhạc, mà là **hình thức ba phần có tái hiện tổng hợp**, với một vi kịch tính dựng lôgic. Sơ đồ ô nhịp đối xứng: **5 + 4 + 5**.
+### Cấu trúc: không phải đoạn nhạc mà ba đoạn
+Thoạt nhìn, trang nhạc 14 ô gợi tiểu phẩm lãng mạn ở hình thức đoạn nhạc: giai điệu lượn sóng ở piano, những câu đáp của violin, khung mở đầu và kết ngắn; đọc thị tấu thì có thể "vang khá đẹp" như thế. Nhưng đọc kỹ văn bản và các chỉ dẫn chính xác của tác giả thì khác: đây không phải đoạn nhạc, hình thức trình bày một ý nhạc, mà là **hình thức ba đoạn có tái hiện tổng hợp**, với một vi kịch tính dựng lôgic. Sơ đồ ô nhịp đối xứng: **5 + 4 + 5**.
 
-::form A:5 B:4 A':5 | Webern op. 7 số 3 theo Sokolov: ba phần 5 + 4 + 5; phần đầu tĩnh – động (3 + 2), phần cuối động – tĩnh (2 + 3)
+::form A:5 B:4 A':5 | Webern op. 7 số 3 theo Sokolov: ba đoạn 5 + 4 + 5; phần đầu tĩnh – động (3 + 2), phần cuối động – tĩnh (2 + 3)
 
 - **Phần đầu (5 ô)**: đối lập **tĩnh – động** (3 + 2). Ba ô đầu dựng thận trọng, như dò dẫm, một cấu trúc hoà âm nửa cung (**hemitonic**, гемитоника): một hình ảnh đông cứng (tác giả dặn violin tránh crescendo trên âm ngân); hai ô sau là đối thoại sôi động của các bè đã giai điệu hoá.
-- **Phần giữa (4 ô)**: một phát ngôn "triển khai" (ở quy mô vi hình thức), tương phản bên trong cả về kết cấu lẫn hoà âm: hemitonic ở piano, điệu thức "**cung – nửa cung**" ở violin. Sức biểu hiện "huyền bí" của violin được nhấn bằng *col legno* (chơi bằng cán vĩ) và tiết tấu **đều** rất lạ với Webern: những câu thầm thì như lời chú thành nền cho giai điệu nổi của piano.
+- **Đoạn giữa (4 ô)**: một phát ngôn "triển khai" (ở quy mô vi hình thức), tương phản bên trong cả về kết cấu lẫn hoà âm: hemitonic ở piano, điệu thức "**cung – nửa cung**" ở violin. Sức biểu hiện "huyền bí" của violin được nhấn bằng *col legno* (chơi bằng cán vĩ) và tiết tấu **đều** rất lạ với Webern: những câu thầm thì như lời chú thành nền cho giai điệu nổi của piano.
 - **Phần cuối (5 ô)**: đối lập **động – tĩnh** (2 + 3), đối xứng với phần đầu nhưng không đồng nhất chất liệu. Bắt đầu bằng sự xâm nhập động (cluster ở piano, được violin bổ sung bằng những câu "lắc lư" trên cùng nền nửa cung), rồi chuyển đột ngột sang một hợp âm "âm phủ" màu sonoristic: lần đầu trong bài là kết cấu thuần hợp âm, xếp hẹp ở âm vực trầm với pedal, cho một phổ bồi âm rực rỡ từ dây piano cộng hưởng.
 
-**Tái hiện tổng hợp.** Một hồi ức giấu kỹ của chất liệu phần giữa làm tái hiện thành tổng hợp. Mấy ô cuối tưởng như mới hoàn toàn (theo nguyên tắc "thay đổi lần cuối" của Zuckerman), nhưng cấu trúc cao độ lại lấy từ phần giữa: cùng điệu thức cung – nửa cung.
+**Tái hiện tổng hợp.** Một hồi ức giấu kỹ của chất liệu đoạn giữa làm tái hiện thành tổng hợp. Mấy ô cuối tưởng như mới hoàn toàn (theo nguyên tắc "thay đổi lần cuối" của Zuckerman), nhưng cấu trúc cao độ lại lấy từ đoạn giữa: cùng điệu thức cung – nửa cung.
 
-**Các ranh giới.** Ranh giới trước phần giữa ở ô 5 nghe khá tương đối, có lẽ vì thế Webern nhấn nó trên giấy bằng một **dấu phẩy** cắt dòng cantilena đang tràn từ phần đầu sang phần giữa ở piano; chỉ dẫn cường độ cũng quan trọng: âm được "filé" ở cuối phần đầu, rồi *subito ppp* bất ngờ trước cú vút lên đỉnh giai điệu, cùng một âm trầm sâu ở đầu phần giữa. Ranh giới trước tái hiện thì rất rõ: trước cluster là sự kết thúc tự nhiên của một làn sóng giai điệu và cường độ ở piano. Nhưng cả trong chuỗi câu violin tưởng máy móc cũng có một thủ pháp giao tiếp báo trước: lại "thay đổi lần cuối" — tiết tấu đều do ba câu đầu xác lập bị phá bằng một dấu lặng **dài gấp đôi** trước câu thứ tư. "Cơ chế bị trục trặc, sự tiếp nhận được huy động trong vô thức."
+**Các ranh giới.** Ranh giới trước đoạn giữa ở ô 5 nghe khá tương đối, có lẽ vì thế Webern nhấn nó trên giấy bằng một **dấu phẩy** cắt dòng cantilena đang tràn từ phần đầu sang đoạn giữa ở piano; chỉ dẫn cường độ cũng quan trọng: âm được "filé" ở cuối phần đầu, rồi *subito ppp* bất ngờ trước cú vút lên đỉnh giai điệu, cùng một âm trầm sâu ở đầu đoạn giữa. Ranh giới trước tái hiện thì rất rõ: trước cluster là sự kết thúc tự nhiên của một làn sóng giai điệu và cường độ ở piano. Nhưng cả trong chuỗi câu violin tưởng máy móc cũng có một thủ pháp giao tiếp báo trước: lại "thay đổi lần cuối" — tiết tấu đều do ba câu đầu xác lập bị phá bằng một dấu lặng **dài gấp đôi** trước câu thứ tư. "Cơ chế bị trục trặc, sự tiếp nhận được huy động trong vô thức."
 
 ### Vi hình thức: những gì thay đổi
 Sokolov tóm lại hiện tượng vi hình thức *(Sokolov, Phụ lục VI)*:
@@ -567,18 +567,18 @@ Sokolov tóm lại hiện tượng vi hình thức *(Sokolov, Phụ lục VI)*:
 - Quy mô vi hình thức ứng với dung lượng **trí nhớ thao tác**, tức quy mô cú pháp, đòi tiếp nhận và so sánh chi tiết mọi yếu tố. Nhưng lôgic cú pháp quen thuộc được bổ sung, nhiều khi bị thay, bởi lôgic **bố cục**, dựa vào trí nhớ dài hạn, có chọn lọc. Hình mẫu các cấu trúc bố cục (hình thức cổ điển) được chiếu xuống tầng cú pháp. Hiểu được quá trình ấy phụ thuộc vào kinh nghiệm định hướng trong những công trình cùng loại ở quy mô thời gian khác.
 - Sự kiện **âm thanh** (фонический план) mang thêm nghĩa và thành nhân tố tạo hình thức: đổi cách tạo âm có thể rất nặng ký. Ở tái hiện, legato trở lại sau *col legno* là dấu hiệu rõ của sự quay về; cluster ở đó là biểu hiện cô đặc của nguyên tắc hemitonic đã thống trị phần trình bày.
 - **Sắc thái cường độ**, thường để người diễn, nay được quy định chặt. Ở "bậc thầy của im lặng" Webern, mọi crescendo và diminuendo không rời mức chung ppp: vi hình thức ứng với **vi cường độ**, profile của nó khớp với cấu trúc (sách có sơ đồ profile cường độ từng phần).
-- **Tiết tấu**: mỗi phần một tình huống. Ở phần trình bày, nhịp thay đổi nhấn mọi khởi đầu motif vào phách mạnh, trừ motif cuối, kết thúc ở phách mạnh. Phần giữa dựa trên **đa nhịp** của lớp đều và lớp không đều. Ở tái hiện, mọi thứ ghi ở 3/8 nhưng không chỗ nào phách mạnh lộ ra: âm nhạc như trôi ngoài nhịp.
+- **Tiết tấu**: mỗi phần một tình huống. Ở phần trình bày, nhịp thay đổi nhấn mọi khởi đầu motif vào phách mạnh, trừ motif cuối, kết thúc ở phách mạnh. Đoạn giữa dựa trên **đa nhịp** của lớp đều và lớp không đều. Ở tái hiện, mọi thứ ghi ở 3/8 nhưng không chỗ nào phách mạnh lộ ra: âm nhạc như trôi ngoài nhịp.
 
 Câu kết của sách dành cho người diễn: phải đi qua chặng "sống vào" ý đồ tác giả, nhìn lâu và nghe bằng tai trong văn bản Webern, vì chỉ như thế mới thoát khỏi những khuôn sáo tích luỹ; nếu không, "phép màu của sự đồng sáng tạo thật sẽ không xảy ra".
 
 ### Cách nghe
 1. Nghe bản nhạc ba lần liền (chưa tới một phút mỗi lần). Lần đầu cố nghe như một đoạn nhạc lãng mạn; lần hai đếm 5 + 4 + 5.
-2. Nghe ranh giới ô 5: dấu phẩy và *subito ppp* có làm bạn nghe thấy chỗ bắt đầu phần giữa không?
-3. Ở phần giữa, nghe tiếng *col legno* đều của violin như một lớp riêng; đếm các câu của violin và tìm dấu lặng dài gấp đôi trước câu thứ tư.
+2. Nghe ranh giới ô 5: dấu phẩy và *subito ppp* có làm bạn nghe thấy chỗ bắt đầu đoạn giữa không?
+3. Ở đoạn giữa, nghe tiếng *col legno* đều của violin như một lớp riêng; đếm các câu của violin và tìm dấu lặng dài gấp đôi trước câu thứ tư.
 4. Ở tái hiện, nghe cluster, rồi hợp âm trầm có pedal: những bồi âm nào bạn nghe được?
 5. So hai bản thu: người diễn có giữ được mức ppp chung, hay nới rộng cường độ? Điều đó đổi hình thức thế nào?
 
-**Đối chiếu của người biên soạn.** Theo Sposobin và Mazel, đoạn nhạc là hình thức trình bày **một** ý (xem [[hinh-thuc-nga-doan-nhac]]), còn hình thức ba phần đơn đòi phần giữa tương phản và tái hiện (xem [[hinh-thuc-nga-hinh-thuc-don]]). Sokolov dùng chính phân biệt ấy để đọc 14 ô của Webern: đây là ba phần **chiếu xuống** quy mô một đoạn nhạc. "Thay đổi lần cuối" của Zuckerman, khái niệm của truyền thống phân tích Nga, được dùng ba lần trong các phụ lục (Riley, Ives, Webern): đó là cầu nối cụ thể nhất giữa phân tích cổ điển và âm nhạc thế kỷ XX trong sách.
+**Đối chiếu của người biên soạn.** Theo Sposobin và Mazel, đoạn nhạc là hình thức trình bày **một** ý (xem [[hinh-thuc-nga-doan-nhac]]), còn hình thức ba đoạn đơn đòi đoạn giữa tương phản và tái hiện (xem [[hinh-thuc-nga-hinh-thuc-don]]). Sokolov dùng chính phân biệt ấy để đọc 14 ô của Webern: đây là ba đoạn **chiếu xuống** quy mô một đoạn nhạc. "Thay đổi lần cuối" của Zuckerman, khái niệm của truyền thống phân tích Nga, được dùng ba lần trong các phụ lục (Riley, Ives, Webern): đó là cầu nối cụ thể nhất giữa phân tích cổ điển và âm nhạc thế kỷ XX trong sách.
 
 ## Sokolov và ba sách kia — đối chiếu
 
@@ -587,15 +587,15 @@ Bảng của người biên soạn: mỗi tác phẩm trong phụ lục được
 | Tác phẩm | Khái niệm cổ điển còn dùng | Khái niệm mới (Sokolov, ch. 7) | Gần với khái niệm nào ở Sposobin / Mazel / Asafyev |
 |---|---|---|---|
 | Schnittke, đa phong cách | trích dẫn, biến tấu, pastiche | trích dẫn – ám chỉ, thích nghi, chuyển phong cách, phức điệu phong cách | phong cách như hệ thống (Mazel); vốn ngữ điệu (Asafyev) |
-| Denisov, *Ode* | ba phần, tái hiện, coda, ngữ điệu, mô tiến | ổn định – di động; kiến tạo – phá huỷ; ký âm đồ hoạ; aleatoric | chức năng lôgic tách khỏi chức năng cấu trúc (Mazel); kết tinh – phá vỡ (Asafyev) |
+| Denisov, *Ode* | ba đoạn, tái hiện, coda, ngữ điệu, mô tiến | ổn định – di động; kiến tạo – phá huỷ; ký âm đồ hoạ; aleatoric | chức năng lôgic tách khỏi chức năng cấu trúc (Mazel); kết tinh – phá vỡ (Asafyev) |
 | Riley, *In C* | kế hoạch điệu tính T – D – T – S; canon; vòm | metabole; nghe không phê phán; tắt ngoại suy | kế hoạch giọng (Mazel); i : m : t chỉ còn m (Asafyev) |
 | Raikhelson / Khlebnikov | hình thức có tái hiện; hạt nhân và triển khai | ngôn từ đọc như âm nhạc; thuật toán chữ – nốt | bốn chặng chia nhỏ có khép (Mazel) |
 | Ives, *The Unanswered Question* | hợp âm, đoạn nhạc 13 + 13, hoà âm tuyến tính | đa thời; chuỗi lượng; sân khấu khí nhạc; không gian | tương phản trên nền đồng nhất, không tổng hợp (Asafyev) |
-| Webern, op. 7 số 3 | đoạn nhạc, ba phần, tái hiện tổng hợp | vi hình thức; vi cường độ; motif mang quyền chủ đề | đoạn nhạc – hình thức đơn (Sposobin, Mazel); trí nhớ (Asafyev) |
+| Webern, op. 7 số 3 | đoạn nhạc, ba đoạn, tái hiện tổng hợp | vi hình thức; vi cường độ; motif mang quyền chủ đề | đoạn nhạc – hình thức đơn (Sposobin, Mazel); trí nhớ (Asafyev) |
 
-**Chỗ giống:** mọi phụ lục vẫn dùng từ vựng của phân tích cổ điển (ba phần, tái hiện, đoạn nhạc, coda, kế hoạch điệu tính); ngay Denisov cũng tự phân tích theo lối ấy.
+**Chỗ giống:** mọi phụ lục vẫn dùng từ vựng của phân tích cổ điển (ba đoạn, tái hiện, đoạn nhạc, coda, kế hoạch điệu tính); ngay Denisov cũng tự phân tích theo lối ấy.
 
-**Chỗ khác:** những từ ấy chỉ một chức năng, không còn chỉ một chất liệu hay một sơ đồ cố định. Tái hiện là "tái hiện của trạng thái" (Denisov), kế hoạch giọng đi bằng metabole (Riley), ba phần nằm gọn trong 14 ô (Webern).
+**Chỗ khác:** những từ ấy chỉ một chức năng, không còn chỉ một chất liệu hay một sơ đồ cố định. Tái hiện là "tái hiện của trạng thái" (Denisov), kế hoạch giọng đi bằng metabole (Riley), ba đoạn nằm gọn trong 14 ô (Webern).
 
 ## Cách phân tích (rút từ sáu phụ lục)
 
@@ -612,7 +612,7 @@ Bảng của người biên soạn: mỗi tác phẩm trong phụ lục được
 1. Nghe chương III *Sinfonia* của Berio và *Hymnen* của Stockhausen: theo thang của Schnittke, mỗi tác phẩm dùng loại trích dẫn nào?
 2. Nghe *Pulcinella* của Stravinsky và *Carmen-suite* của Shchedrin: chỉ ra ba chỗ "ngôn ngữ của người soạn" lộ ra trên văn bản của người khác (kỹ thuật thích nghi).
 3. Nghe Concerto violin của Berg, đoạn trích hợp xướng: trích dẫn được chuẩn bị bằng ngữ điệu của tác phẩm thế nào?
-4. Nghe *Ode* của Denisov (bản thu bất kỳ): ghi thời gian của a, b, a1, B, trang đồ hoạ, dấu lặng chung, C. Bạn nghe tác phẩm là ba phần hay hai phần? Lập luận theo Denisov.
+4. Nghe *Ode* của Denisov (bản thu bất kỳ): ghi thời gian của a, b, a1, B, trang đồ hoạ, dấu lặng chung, C. Bạn nghe tác phẩm là ba đoạn hay hai đoạn? Lập luận theo Denisov.
 5. Tự làm một "trang đồ hoạ" nhỏ cho ba người theo luật của Denisov (ba nhóm, mỗi nhóm 5 cấu trúc, mũi tên chuyển nhóm, 30–40 giây) và chơi hai lần. Hai lần khác nhau ở đâu, giống nhau ở đâu?
 6. Nghe *In C* với bản nhạc: đánh dấu pattern 14 (Fa thăng), vùng Mi thứ, pattern 29, pattern 35 (Si giáng), vùng Fa trưởng. Vẽ lại vòm của Sokolov.
 7. Nghe *The Unanswered Question*: lập bảng các lần vào của bộ gỗ (nhịp độ, cường độ) và các lần trumpet (âm kết Đô hay Si).

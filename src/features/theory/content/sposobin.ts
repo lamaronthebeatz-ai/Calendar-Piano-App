@@ -22,16 +22,16 @@ ${NOTE}
 |---|---|---|
 | **Dẫn nhập**: những cơ sở chung quan trọng nhất của hình thức (§1 – 20) | — | [[sposobin-dan-nhap-chuc-nang-va-nguyen-tac]] |
 | **Phần một: hình thức chủ điệu** | I – II. Đoạn nhạc; các dạng phức tạp; dân ca Nga | [[sposobin-doan-nhac]] |
-| | III – IV. Hai phần đơn, ba phần đơn | [[sposobin-hinh-thuc-don]] |
-| | V – VI. Ba phần phức; chủ đề và biến tấu | [[sposobin-ba-phan-phuc-va-bien-tau]] |
+| | III – IV. Hai đoạn đơn, ba đoạn đơn | [[sposobin-hinh-thuc-don]] |
+| | V – VI. Ba đoạn phức; chủ đề và biến tấu | [[sposobin-ba-phan-phuc-va-bien-tau]] |
 | | VII – IX. Rondo; sonata; rondo – sonata | [[sposobin-rondo-sonata]] |
-| | X – XII. Hai phần cổ và sonata cổ; hình thức chu kỳ; quan hệ giữa các hình thức và hình thức hỗn hợp | [[sposobin-hinh-thuc-co-chu-ky-va-hon-hop]] |
+| | X – XII. Hai đoạn cổ và sonata cổ; hình thức chu kỳ; quan hệ giữa các hình thức và hình thức hỗn hợp | [[sposobin-hinh-thuc-co-chu-ky-va-hon-hop]] |
 | | XIII. Hình thức thanh nhạc | [[sposobin-hinh-thuc-thanh-nhac]] |
 | **Phần hai: hình thức phức điệu** | XIV – XVII. Cơ sở phức điệu; đối âm phức; mô phỏng và canon; fugue và các thể loại phức điệu khác | [[sposobin-phuc-dieu-va-fugue]] |
 Mỗi chương có mục **"Tư liệu để phân tích"** (danh sách tác phẩm cho học viên tự phân tích).
 
 ## Đặc điểm của giáo trình
-- Đi từ **nhỏ đến lớn**: đoạn nhạc → hai phần → ba phần → ba phần phức → biến tấu → rondo → sonata → rondo – sonata → chu kỳ.
+- Đi từ **nhỏ đến lớn**: đoạn nhạc → hai đoạn → ba đoạn → ba đoạn phức → biến tấu → rondo → sonata → rondo – sonata → chu kỳ.
 - Coi các hình thức lớn là **phát triển logic** của hình thức nhỏ (chương XII), nhưng lưu ý con đường lịch sử thật "phức tạp và quanh co hơn nhiều".
 - Có phần riêng về **dân ca Nga** và **kiểu biến tấu Glinka**, và một mục về **âm nhạc nhà thờ Chính thống giáo**.
 
@@ -64,8 +64,8 @@ Không phụ thuộc số chủ đề, mỗi phần có **chức năng** riêng.
 | | Chức năng | Theo sách |
 |---|---|---|
 | a | **Trình bày chủ đề** | Lần đưa chủ đề đầu tiên |
-| b | **Phần nối** (связка) | Nối hai chủ đề hay hai phần chính |
-| c | **Phần giữa** | Nằm giữa các phần thường giống nhau, độc lập hơn phần nối. Dạng đặc biệt quan trọng: **phát triển** — chủ đề đã trình bày được đưa ra **từng mảnh**, trong ánh sáng mới |
+| b | **Phần nối** (связка) | Nối hai chủ đề hay hai đoạn chính |
+| c | **Đoạn giữa** | Nằm giữa các phần thường giống nhau, độc lập hơn phần nối. Dạng đặc biệt quan trọng: **phát triển** — chủ đề đã trình bày được đưa ra **từng mảnh**, trong ánh sáng mới |
 | d | **Tái hiện** | Chủ đề trở lại sau một phần nhạc khác — trọn vẹn hay chỉ phần đặc trưng. "Hầu hết các hình thức âm nhạc đều dựa trên tái hiện"; tái hiện tạo **khung** cho hình thức |
 | e | **Mở đầu** | Cấu trúc đứng trước một phần, thường tách khỏi nó |
 | f | **Kết** | Cấu trúc theo sau toàn hình thức (gọi là **coda**) hoặc gắn vào một phần |
@@ -75,7 +75,7 @@ Không phụ thuộc số chủ đề, mỗi phần có **chức năng** riêng.
 | Kiểu | Dùng cho | Dấu hiệu theo sách |
 |---|---|---|
 | **Trình bày** (экспозиционный) | Trình bày chủ đề, thường cả tái hiện | Tính chất **ổn định, tiết kiệm phương tiện**: thống nhất chủ đề (một hay ít yếu tố); thống nhất giọng (có thể lệch sang giọng gần rồi về; chuyển giọng nếu có thì ở cuối, thường sang phía át) |
-| **Giữa** (срединный) | Phần giữa, phát triển, phần nối | **Không ổn định, trôi chảy**: đưa những đoạn chủ đề **ngắn**, thường **tách ra** (вычленение) từ chủ đề đã có, hay dùng **mô tiến**; hoà âm không ổn định — tránh chủ âm, đặt chủ âm vào phách nhẹ, ô lẻ; có thể có **nốt pedal** trên át âm; nhiều giọng phụ |
+| **Giữa** (срединный) | Đoạn giữa, phát triển, phần nối | **Không ổn định, trôi chảy**: đưa những đoạn chủ đề **ngắn**, thường **tách ra** (вычленение) từ chủ đề đã có, hay dùng **mô tiến**; hoà âm không ổn định — tránh chủ âm, đặt chủ âm vào phách nhẹ, ô lẻ; có thể có **nốt pedal** trên át âm; nhiều giọng phụ |
 | — nối và **tiền đề** (предыкт) | Dạng riêng của kiểu giữa | Các kiểu phần nối: nét giai điệu trên hợp âm át 7 của giọng sắp tới; một vòng chuyển giọng ngắn kiểu kết; vài kết lặp ở chủ âm cũ rồi chuyển giọng; lặp một phần nhạc trước rồi chuyển sang chuyển giọng… |
 | **Kết** (заключительный) | Các cấu trúc khẳng định chủ âm đã đạt | Gắn sau một phần đã kết ở chủ âm, cùng giọng; **kết lặp lại** (bổ sung kết), giữ hay lặp chủ âm; **nốt pedal trên chủ âm**; lệch sang **phía hạ át**; các cấu trúc **ngắn dần** (chia nhỏ) dẫn về chủ âm |
 | **Mở đầu** | Mở đầu tác phẩm hay một phần | Ít thủ pháp riêng. Hai dạng: **không có chủ đề** (một âm, một hợp âm, hay hình đệm của phần sắp tới — vẫn báo trước tính chất qua tiết tấu, cường độ, tiến độ) và **có chủ đề** hay yếu tố của nó |
@@ -152,33 +152,33 @@ Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
   },
   {
     slug: 'sposobin-hinh-thuc-don',
-    title: 'Sposobin: hình thức hai phần đơn và ba phần đơn (chương III – IV)',
+    title: 'Sposobin: hình thức hai đoạn đơn và ba đoạn đơn (chương III – IV)',
     category: 'form',
-    aliases: ['Sposobin hai phần', 'Sposobin ba phần', 'простая двухчастная форма', 'простая трехчастная форма', 'tái hiện giả', 'мнимая реприза', 'tái hiện tĩnh và động', 'hai phần có tái hiện', 'hai phần không tái hiện'],
-    summary: 'Sposobin: hai phần đơn gồm hai đoạn nhạc thống nhất về chủ đề và giọng (phân biệt với đoạn nhạc phức), có tái hiện hoặc không; ba phần đơn: phần một là đoạn nhạc, phần giữa là đoạn nhạc hay một chuỗi cấu trúc kiểu giữa – phát triển, phần ba thường là tái hiện; ba phần đơn có lẽ hình thành từ hai phần có tái hiện; tái hiện giả, tái hiện tĩnh và động, phần giữa tương phản.',
+    aliases: ['Sposobin hai đoạn', 'Sposobin ba đoạn', 'простая двухчастная форма', 'простая трехчастная форма', 'tái hiện giả', 'мнимая реприза', 'tái hiện tĩnh và động', 'hai đoạn có tái hiện', 'hai đoạn không tái hiện'],
+    summary: 'Sposobin: hai đoạn đơn gồm hai đoạn nhạc thống nhất về chủ đề và giọng (phân biệt với đoạn nhạc phức), có tái hiện hoặc không; ba đoạn đơn: phần một là đoạn nhạc, đoạn giữa là đoạn nhạc hay một chuỗi cấu trúc kiểu giữa – phát triển, phần ba thường là tái hiện; ba đoạn đơn có lẽ hình thành từ hai đoạn có tái hiện; tái hiện giả, tái hiện tĩnh và động, đoạn giữa tương phản.',
     refs: [BOOK],
     body: `
 ${NOTE}
 
-## Chương III. Hình thức hai phần đơn
-- **Định nghĩa (§42)**: "Hình thức hai phần đơn là hình thức **gồm hai đoạn nhạc**." Ví dụ sách dẫn: Lyadov, Schubert.
+## Chương III. Hình thức hai đoạn đơn
+- **Định nghĩa (§42)**: "Hình thức hai đoạn đơn là hình thức **gồm hai đoạn nhạc**." Ví dụ sách dẫn: Lyadov, Schubert.
 - Hai đoạn nhạc **không được nối máy móc**; thống nhất là điều bắt buộc:
   - **Chủ đề**: phần hai lặp hoặc dùng chung yếu tố với phần một.
   - **Hoà âm**: có giọng chính — hiếm khi không rời, thường được khẳng định đầu hình thức và **lấy lại ở cuối**: hình thức **khép kín về giọng**, ở mức độ nào đó là một cơ thể âm nhạc độc lập.
   - **Cấu trúc**: trường hợp đơn giản, hai đoạn nhạc dài và cấu tạo như nhau; thực tế thường phức tạp hơn.
-- **Phân biệt với đoạn nhạc phức** (§31): ở đoạn nhạc phức, hai câu **giống nhau ở đầu**; ở hai phần đơn, đầu hai đoạn nhạc **khác nhau**, nếu giống thì giống ở phần **kết**.
-- Các mục: cách mở rộng; phần một; **hai phần có tái hiện** — phần hai gồm phần giữa và tái hiện; **hai phần không tái hiện**; lặp lại các phần; mở đầu và kết; phạm vi sử dụng.
+- **Phân biệt với đoạn nhạc phức** (§31): ở đoạn nhạc phức, hai câu **giống nhau ở đầu**; ở hai đoạn đơn, đầu hai đoạn nhạc **khác nhau**, nếu giống thì giống ở phần **kết**.
+- Các mục: cách mở rộng; phần một; **hai đoạn có tái hiện** — phần hai gồm đoạn giữa và tái hiện; **hai đoạn không tái hiện**; lặp lại các phần; mở đầu và kết; phạm vi sử dụng.
 
-## Chương IV. Hình thức ba phần đơn
-- **Định nghĩa (§53)**: "Hình thức ba phần đơn là hình thức mà phần một là **một đoạn nhạc**; phần hai (phần giữa) cũng là một đoạn nhạc hoặc **một chuỗi cấu trúc mang tính giữa – phát triển**; phần ba trong đa số trường hợp là **tái hiện** phần một."
-- Sơ đồ: ‖: a :‖: b a :‖ — đoạn nhạc | phần giữa | tái hiện.
-- So với hai phần, ba phần là một bước tiến tới hình thức lớn hơn một đoạn nhạc; nhưng **về lịch sử, có lẽ** ba phần hình thành từ hai phần qua việc phần giữa và phần tái hiện lớn lên, tách riêng, đạt kích thước không kém phần một — "một ví dụ về sự lớn lên bên trong của hình thức".
-- **Thống nhất**: chủ đề — hai phần ngoài giống nhau, phần giữa thường dựa trên chất liệu của chúng; giọng — khép kín, phần trong thường chuyển sang giọng phụ; cấu trúc — trường hợp đơn giản hai phần ngoài dài bằng nhau, nhưng **tái hiện thường được mở rộng**.
+## Chương IV. Hình thức ba đoạn đơn
+- **Định nghĩa (§53)**: "Hình thức ba đoạn đơn là hình thức mà phần một là **một đoạn nhạc**; phần hai (đoạn giữa) cũng là một đoạn nhạc hoặc **một chuỗi cấu trúc mang tính giữa – phát triển**; phần ba trong đa số trường hợp là **tái hiện** phần một."
+- Sơ đồ: ‖: a :‖: b a :‖ — đoạn nhạc | đoạn giữa | tái hiện.
+- So với hai đoạn, ba đoạn là một bước tiến tới hình thức lớn hơn một đoạn nhạc; nhưng **về lịch sử, có lẽ** ba đoạn hình thành từ hai đoạn qua việc đoạn giữa và phần tái hiện lớn lên, tách riêng, đạt kích thước không kém phần một — "một ví dụ về sự lớn lên bên trong của hình thức".
+- **Thống nhất**: chủ đề — hai đoạn ngoài giống nhau, đoạn giữa thường dựa trên chất liệu của chúng; giọng — khép kín, phần trong thường chuyển sang giọng phụ; cấu trúc — trường hợp đơn giản hai đoạn ngoài dài bằng nhau, nhưng **tái hiện thường được mở rộng**.
 - Các mục đáng chú ý:
-  - §55: phần giữa của ba phần **một chủ đề**;
+  - §55: đoạn giữa của ba đoạn **một chủ đề**;
   - §57: **tái hiện giả** (мнимая реприза) — chủ đề trở lại nhưng sai giọng, rồi mới vào tái hiện thật;
-  - §58: **tái hiện tĩnh và tái hiện động** ở hai và ba phần;
-  - §59: ba phần đơn có **phần giữa tương phản** (chủ đề mới);
+  - §58: **tái hiện tĩnh và tái hiện động** ở hai và ba đoạn;
+  - §59: ba đoạn đơn có **đoạn giữa tương phản** (chủ đề mới);
   - §60 – 63: kích thước, lặp các phần, mở đầu và coda, phạm vi sử dụng.
 
 Bài trong thư viện: [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]]. Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
@@ -186,24 +186,24 @@ Bài trong thư viện: [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]]. Tổng qu
   },
   {
     slug: 'sposobin-ba-phan-phuc-va-bien-tau',
-    title: 'Sposobin: ba phần phức và chủ đề với biến tấu (chương V – VI)',
+    title: 'Sposobin: ba đoạn phức và chủ đề với biến tấu (chương V – VI)',
     category: 'form',
-    aliases: ['Sposobin ba phần phức', 'сложная трехчастная форма', 'tương phản bên ngoài', 'tương phản bên trong', 'trio', 'episode', 'ba – năm phần phức', 'biến tấu basso ostinato', 'biến tấu Glinka', 'вариации Глинки', 'soprano ostinato', 'biến tấu nghiêm', 'biến tấu tự do', 'Etudes symphoniques'],
-    summary: 'Sposobin: ba phần phức có hai phần ngoài cùng chủ đề là hai hay ba phần đơn, phần giữa tương phản rõ (trio hoặc episode); tương phản bên ngoài và bên trong. Chủ đề với biến tấu: phương pháp biến tấu thành nền của hình thức; biến tấu trên basso ostinato (thế kỷ 17), biến tấu nghiêm, biến tấu tự do (Symphonic Études của Schumann), kiểu biến tấu do Glinka đưa vào (giai điệu gần như giữ nguyên, "soprano ostinato"), biến tấu kép.',
+    aliases: ['Sposobin ba đoạn phức', 'сложная трехчастная форма', 'tương phản bên ngoài', 'tương phản bên trong', 'trio', 'episode', 'ba – năm đoạn phức', 'biến tấu basso ostinato', 'biến tấu Glinka', 'вариации Глинки', 'soprano ostinato', 'biến tấu nghiêm', 'biến tấu tự do', 'Etudes symphoniques'],
+    summary: 'Sposobin: ba đoạn phức có hai đoạn ngoài cùng chủ đề là hai hay ba đoạn đơn, đoạn giữa tương phản rõ (trio hoặc episode); tương phản bên ngoài và bên trong. Chủ đề với biến tấu: phương pháp biến tấu thành nền của hình thức; biến tấu trên basso ostinato (thế kỷ 17), biến tấu nghiêm, biến tấu tự do (Symphonic Études của Schumann), kiểu biến tấu do Glinka đưa vào (giai điệu gần như giữ nguyên, "soprano ostinato"), biến tấu kép.',
     refs: [BOOK],
     body: `
 ${NOTE}
 
-## Chương V. Hình thức ba phần phức
-- **Định nghĩa (§64)**: "Hình thức ba phần phức là hình thức mà hai phần ngoài, **giống nhau về chủ đề**, là **hai hay ba phần đơn**; còn phần giữa, cấu tạo có thể khác nhau, **tương phản rõ** với hai phần ngoài."
-- Sơ đồ: A (hai hay ba phần đơn) — B (hai hay ba phần đơn, hoặc đoạn nhạc, hoặc một episode không ổn định kiểu giữa) — A (nhắc lại phần một).
-- **Tương phản bên ngoài và bên trong**: tương phản đạt được bằng cách đặt cạnh nhau (bên ngoài) khác với tương phản sinh ra dần, yếu tố này từ yếu tố kia (bên trong — trong đoạn nhạc, trong hai, ba phần đơn một chủ đề). Tương phản bên ngoài có ở ba phần đơn với phần giữa mới, nhưng **ở ba phần phức nó điển hình hơn nhiều** — là **nguyên tắc chính** tạo ra hình thức. Sách nói chữ "bên ngoài" hơi quy ước, vì một sự thống nhất nào đó (không phải lúc nào cũng diễn tả được bằng lời) là điều kiện bắt buộc.
-- Các mục: tính chất tương phản giữa phần ngoài và phần giữa; ba phần phức **có trio** (phần một, trio, tái hiện); ba phần phức có **phần giữa là episode**; mở đầu và coda; **ba – năm phần phức**; hình thức **trung gian** giữa ba phần đơn và phức; phạm vi sử dụng. Phụ lục cho chương III – V: phạm vi dùng của hình thức hai, ba phần.
+## Chương V. Hình thức ba đoạn phức
+- **Định nghĩa (§64)**: "Hình thức ba đoạn phức là hình thức mà hai đoạn ngoài, **giống nhau về chủ đề**, là **hai hay ba đoạn đơn**; còn đoạn giữa, cấu tạo có thể khác nhau, **tương phản rõ** với hai đoạn ngoài."
+- Sơ đồ: A (hai hay ba đoạn đơn) — B (hai hay ba đoạn đơn, hoặc đoạn nhạc, hoặc một episode không ổn định kiểu giữa) — A (nhắc lại phần một).
+- **Tương phản bên ngoài và bên trong**: tương phản đạt được bằng cách đặt cạnh nhau (bên ngoài) khác với tương phản sinh ra dần, yếu tố này từ yếu tố kia (bên trong — trong đoạn nhạc, trong hai, ba đoạn đơn một chủ đề). Tương phản bên ngoài có ở ba đoạn đơn với đoạn giữa mới, nhưng **ở ba đoạn phức nó điển hình hơn nhiều** — là **nguyên tắc chính** tạo ra hình thức. Sách nói chữ "bên ngoài" hơi quy ước, vì một sự thống nhất nào đó (không phải lúc nào cũng diễn tả được bằng lời) là điều kiện bắt buộc.
+- Các mục: tính chất tương phản giữa phần ngoài và đoạn giữa; ba đoạn phức **có trio** (phần một, trio, tái hiện); ba đoạn phức có **đoạn giữa là episode**; mở đầu và coda; **ba – năm đoạn phức**; hình thức **trung gian** giữa ba đoạn đơn và phức; phạm vi sử dụng. Phụ lục cho chương III – V: phạm vi dùng của hình thức hai, ba đoạn.
 Bài trong thư viện: [[minuet-va-trio]].
 
 ## Chương VI. Chủ đề với biến tấu
 - **Định nghĩa (§79)**: "Chủ đề với biến tấu là hình thức gồm **trình bày chủ đề ban đầu** và **một số lần nhắc lại có biến đổi**, gọi là biến tấu." Vì số biến tấu không giới hạn, sơ đồ chỉ có thể rất chung: A A₁ A₂ A₃…
-- Phương pháp lặp có biến đổi đã gặp ở đoạn nhạc, hai, ba phần — ở đó nó **phụ trợ**; trong hình thức biến tấu nó là **nền tảng**, vì thiếu nó chỉ còn lặp chủ đề liền nhau, mà lặp như vậy (nhất là trong nhạc khí) không được cảm nhận là phát triển.
+- Phương pháp lặp có biến đổi đã gặp ở đoạn nhạc, hai, ba đoạn — ở đó nó **phụ trợ**; trong hình thức biến tấu nó là **nền tảng**, vì thiếu nó chỉ còn lặp chủ đề liền nhau, mà lặp như vậy (nhất là trong nhạc khí) không được cảm nhận là phát triển.
 - Nguồn gốc: các mẫu biến tấu xưa nhất gắn trực tiếp với **nhạc múa**, nên rất có thể hình thức này bắt nguồn (dù không trực tiếp) từ **âm nhạc dân gian** — sách nói "có thể giả định".
 
 | Mục | Loại biến tấu |
@@ -227,7 +227,7 @@ Bài trong thư viện: [[bien-tau]]. Tổng quan sách: [[sposobin-hinh-thuc-am
     title: 'Sposobin: rondo, sonata và rondo – sonata (chương VII – IX)',
     category: 'form',
     aliases: ['Sposobin rondo', 'Sposobin sonata', 'Sposobin rondo sonata', 'rondo nhiều lời', 'куплетное рондо', 'rondo cổ điển', 'главная партия Способин', 'phần nối', 'phần phụ', 'phần kết', 'phát triển', 'tái hiện sonata', 'sonata không có phát triển', 'двойные формы'],
-    summary: 'Rondo theo Sposobin: một chủ đề vang ít nhất ba lần, xen các phần khác; rondo nhiều lời (cổ, Pháp), rondo cổ điển năm phần A B A C A, rondo thế kỷ 19, hình thức đôi. Sonata: dựa trên đối lập hai chủ đề, tương phản cả chủ đề lẫn giọng khi trình bày, gần nhau về giọng khi tái hiện; các phần chính, nối, phụ, kết; phát triển; tái hiện; coda; mở đầu; các biến thể. Rondo – sonata: chủ đề chính ít nhất ba lần, episode một và ba cùng chủ đề — một ở giọng phụ, một ở giọng chính.',
+    summary: 'Rondo theo Sposobin: một chủ đề vang ít nhất ba lần, xen các phần khác; rondo nhiều lời (cổ, Pháp), rondo cổ điển năm đoạn A B A C A, rondo thế kỷ 19, hình thức đôi. Sonata: dựa trên đối lập hai chủ đề, tương phản cả chủ đề lẫn giọng khi trình bày, gần nhau về giọng khi tái hiện; các phần chính, nối, phụ, kết; phát triển; tái hiện; coda; mở đầu; các biến thể. Rondo – sonata: chủ đề chính ít nhất ba lần, episode một và ba cùng chủ đề — một ở giọng phụ, một ở giọng chính.',
     refs: [BOOK],
     body: `
 ${NOTE}
@@ -235,18 +235,18 @@ ${NOTE}
 ## Chương VII. Rondo
 - **Định nghĩa (§92)**: "Rondo là hình thức trong đó **một chủ đề được đưa ra ít nhất ba lần**, giữa các lần là những phần có nội dung khác, thường **mỗi lần một mới**." Sơ đồ: A + B + A + C + A + …
 - Ở rondo, **nguyên tắc tái hiện** thể hiện mạnh nhất về số lượng; nó kết hợp với **tương phản đối chiếu** (tương phản bên ngoài).
-- Có thể hình dung rondo như **chuỗi các ba phần đơn móc nối** bằng chủ đề lặp lại, chủ đề này vừa thuộc ba phần trước vừa thuộc ba phần sau. Ví dụ sách dẫn: Gavotte trong Partita Mi trưởng cho violin solo của Bach.
+- Có thể hình dung rondo như **chuỗi các ba đoạn đơn móc nối** bằng chủ đề lặp lại, chủ đề này vừa thuộc ba đoạn trước vừa thuộc ba đoạn sau. Ví dụ sách dẫn: Gavotte trong Partita Mi trưởng cho violin solo của Bach.
 | Mục | Giai đoạn |
 |---|---|
 | §94 – 96 | **Rondo cổ (rondo nhiều lời)**: âm nhạc chủ điệu nửa đầu thế kỷ 18, nhất là nhạc Pháp — không có phát triển dài, các phần khép kín, ngắn, nối khá máy móc; thường **nhiều phần**, nên tổng thể khá lớn; chủ đề gần với ca – vũ |
-| §97 | **Rondo cổ điển trưởng thành** (rondo đơn giản): xu hướng phát triển xuyên suốt; các phần rộng hơn, thường **chỉ năm phần** — A + B + A + C + A thành công thức điển hình; thêm **phần nối** (nhất là từ episode về chủ đề, vì episode tương phản và ở giọng khác); **coda gần như bắt buộc** |
+| §97 | **Rondo cổ điển trưởng thành** (rondo đơn giản): xu hướng phát triển xuyên suốt; các phần rộng hơn, thường **chỉ năm đoạn** — A + B + A + C + A thành công thức điển hình; thêm **phần nối** (nhất là từ episode về chủ đề, vì episode tương phản và ở giọng khác); **coda gần như bắt buộc** |
 | §98 | Rondo thế kỷ 19 |
 | §99 | **Hình thức đôi** |
 Bài trong thư viện: [[rondo]].
 
 ## Chương VIII. Hình thức sonata
 - **Định nghĩa (§101)**: "Hình thức sonata là hình thức dựa trên **sự đối lập hai chủ đề**: khi trình bày lần đầu, chúng **tương phản cả về chủ đề lẫn về giọng** (chủ đề I ở giọng chính, chủ đề II ở giọng phụ); sau phần phát triển, chúng được nhắc lại **cùng ở giọng chính**, tức là **gần nhau về giọng**." Nền của sonata là **"tính hai chủ đề được nhắc lại"**.
-- Đường nét chung: **ba phần**, hoặc **bốn** nếu coda lớn — Trình bày (phần chính, phần nối, phần phụ, phần kết) | Phát triển | Tái hiện (các phần như trên) | Coda. Mẫu cổ có thể nhắc lại như ba phần đơn (‖: trình bày :‖: phát triển – tái hiện :‖); thường chỉ nhắc phần trình bày, nhiều trường hợp không nhắc gì.
+- Đường nét chung: **ba đoạn**, hoặc **bốn** nếu coda lớn — Trình bày (phần chính, phần nối, phần phụ, phần kết) | Phát triển | Tái hiện (các phần như trên) | Coda. Mẫu cổ có thể nhắc lại như ba đoạn đơn (‖: trình bày :‖: phát triển – tái hiện :‖); thường chỉ nhắc phần trình bày, nhiều trường hợp không nhắc gì.
 | Mục | Phần | Theo sách |
 |---|---|---|
 | §102 | **Tính chất tương phản chính** | Mâu thuẫn hai chủ đề là nền và là một động lực chính của sonata |
@@ -272,16 +272,16 @@ Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
   },
   {
     slug: 'sposobin-hinh-thuc-co-chu-ky-va-hon-hop',
-    title: 'Sposobin: hai phần cổ, sonata cổ, hình thức chu kỳ và hình thức hỗn hợp (chương X – XII)',
+    title: 'Sposobin: hai đoạn cổ, sonata cổ, hình thức chu kỳ và hình thức hỗn hợp (chương X – XII)',
     category: 'form',
-    aliases: ['hai phần cổ', 'старинная двухчастная форма', 'sonata cổ', 'старинная сонатная форма', 'tổ khúc cổ', 'partita', 'allemande courante sarabande gigue', 'double', 'chu kỳ sonata', 'tổ khúc mới', 'potpourri', 'hình thức hỗn hợp', 'fantasy', 'rhapsody', 'hình thức đối xứng nhiều phần'],
-    summary: 'Sposobin: hai phần cổ (cuối thế kỷ 17 – nửa đầu 18) — phần hai dài gấp hai, ba lần phần một, mỗi phần nhắc lại; sonata cổ; sự ra đời của tái hiện trọn; các điệu múa cổ. Hình thức chu kỳ: nhiều phần độc lập về hình thức, tương phản (nhất là tiến độ) mà thống nhất; tổ khúc cổ (allemande – courante – sarabande – gigue, double, prelude); chu kỳ sonata ba, hai, bốn chương và nhiều chương; tổ khúc mới, potpourri. Quan hệ logic giữa các hình thức (đoạn nhạc → hai phần…); hình thức đối xứng nhiều phần; hình thức hỗn hợp, fantasy, rhapsody.',
+    aliases: ['hai đoạn cổ', 'старинная двухчастная форма', 'sonata cổ', 'старинная сонатная форма', 'tổ khúc cổ', 'partita', 'allemande courante sarabande gigue', 'double', 'chu kỳ sonata', 'tổ khúc mới', 'potpourri', 'hình thức hỗn hợp', 'fantasy', 'rhapsody', 'hình thức đối xứng nhiều phần'],
+    summary: 'Sposobin: hai đoạn cổ (cuối thế kỷ 17 – nửa đầu 18) — phần hai dài gấp hai, ba lần phần một, mỗi phần nhắc lại; sonata cổ; sự ra đời của tái hiện trọn; các điệu múa cổ. Hình thức chu kỳ: nhiều phần độc lập về hình thức, tương phản (nhất là tiến độ) mà thống nhất; tổ khúc cổ (allemande – courante – sarabande – gigue, double, prelude); chu kỳ sonata ba, hai, bốn chương và nhiều chương; tổ khúc mới, potpourri. Quan hệ logic giữa các hình thức (đoạn nhạc → hai đoạn…); hình thức đối xứng nhiều phần; hình thức hỗn hợp, fantasy, rhapsody.',
     refs: [BOOK],
     body: `
 ${NOTE}
 
-## Chương X. Hai phần cổ và sonata cổ
-- **Hai phần cổ (§126)**: hình thức hai phần **cuối thế kỷ 17 và nửa đầu thế kỷ 18**, khác hẳn hai phần đơn về sau nên cần mô tả riêng. Khác biệt chính là **tỷ lệ**: phần hai thường **dài gấp hai, ba lần** phần một và cấu tạo khá phức tạp. Mỗi phần thường **nhắc lại riêng**: ‖: I :‖: II :‖ (có khi không nhắc). Ví dụ sách dẫn: Sarabande trong Tổ khúc Pháp Mi trưởng của Bach.
+## Chương X. Hai đoạn cổ và sonata cổ
+- **Hai đoạn cổ (§126)**: hình thức hai đoạn **cuối thế kỷ 17 và nửa đầu thế kỷ 18**, khác hẳn hai đoạn đơn về sau nên cần mô tả riêng. Khác biệt chính là **tỷ lệ**: phần hai thường **dài gấp hai, ba lần** phần một và cấu tạo khá phức tạp. Mỗi phần thường **nhắc lại riêng**: ‖: I :‖: II :‖ (có khi không nhắc). Ví dụ sách dẫn: Sarabande trong Tổ khúc Pháp Mi trưởng của Bach.
 - **Phần một (§127)**: đồng nhất về hình nét. Ở các điệu múa mà nhịp múa ảnh hưởng mạnh (như gavotte trong tổ khúc Bach), thường là một đoạn nhạc hai câu giống nhau về chủ đề, có khi ba câu. Ở những bài chịu ảnh hưởng giai điệu và kết cấu phức điệu (nhiều allemande, courante, gigue của Bach), tính chu kỳ đơn giản ít gặp hơn: phần một hay là **đoạn nhạc kiểu "triển khai"** (развертывание), không chia câu hoặc chia thành những cấu trúc không có kết rõ.
 - Các mục tiếp: **sonata cổ** (§130 – 133: phần một — trình bày; phần hai — phần phát triển và tái hiện gộp lại); **sự ra đời của tái hiện trọn** (§134); mô tả ngắn **các điệu múa cổ** quan trọng nhất (§135).
 
@@ -302,7 +302,7 @@ Bài trong thư viện: [[the-loai]].
 
 ## Chương XII. Quan hệ giữa các hình thức và hình thức hỗn hợp
 - **§145**: vì mọi hình thức đều thể hiện các nguyên tắc tạo hình thức cơ bản (Dẫn nhập), nên **có thể suy ra hình thức này từ hình thức khác** — các hình thức phức tạp như là phát triển của hình thức đơn giản nhất. Sách nói rõ: cách so sánh này **mang tính logic**; con đường lịch sử chỉ trùng một phần, thực tế "phức tạp và quanh co hơn nhiều".
-- Ví dụ đầu tiên: **đoạn nhạc hai câu** có kết nửa ở giữa là **nguyên mẫu của hai phần đơn** — cả hai đều có hai phần, phần một kết nửa (hoặc chuyển sang giọng phụ), toàn bộ kết ở giọng chính.
+- Ví dụ đầu tiên: **đoạn nhạc hai câu** có kết nửa ở giữa là **nguyên mẫu của hai đoạn đơn** — cả hai đều có hai đoạn, phần một kết nửa (hoặc chuyển sang giọng phụ), toàn bộ kết ở giọng chính.
 - **§146**: hình thức **đối xứng nhiều phần**. **§147**: **hình thức hỗn hợp**; fantasy; rhapsody.
 
 Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
@@ -351,7 +351,7 @@ Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
     title: 'Sposobin: phức điệu, đối âm phức, mô phỏng, canon và fugue (chương XIV – XVII)',
     category: 'polyphony',
     aliases: ['Sposobin phức điệu', 'Sposobin fugue', 'phức điệu là tính liên tục', 'đối âm đơn và phức', 'đối âm di động', 'đối âm đảo', 'mô phỏng thực và mô phỏng giọng', 'противосложение', 'phản đề giữ', 'интермедия', 'stretta', 'fughetta', 'fugato', 'invention'],
-    summary: 'Phần hai sách Sposobin: phức điệu là lối nhiều bè mà các bè độc lập, bình đẳng; khác chủ điệu ở tính liên tục, không chu kỳ; chủ đề phức điệu; phong cách nghiêm và tự do. Đối âm đơn và phức (di động dọc, ngang, kép; đảo); mô phỏng (quãng mô phỏng, mô phỏng ở át, thực và giọng, đảo, tăng – giảm trường độ, mô phỏng kép); canon (kép, hữu hạn – vô hạn). Fugue: phần trình bày, phản đề giữ, phần nối, thứ tự vào bè, phần giữa, tái hiện và coda, đoạn chen, stretta, fugue kép, ba, bốn chủ đề; fughetta, fugato; invention, chorale prelude, prelude, ricercar, canzona, toccata.',
+    summary: 'Phần hai sách Sposobin: phức điệu là lối nhiều bè mà các bè độc lập, bình đẳng; khác chủ điệu ở tính liên tục, không chu kỳ; chủ đề phức điệu; phong cách nghiêm và tự do. Đối âm đơn và phức (di động dọc, ngang, kép; đảo); mô phỏng (quãng mô phỏng, mô phỏng ở át, thực và giọng, đảo, tăng – giảm trường độ, mô phỏng kép); canon (kép, hữu hạn – vô hạn). Fugue: phần trình bày, phản đề giữ, phần nối, thứ tự vào bè, đoạn giữa, tái hiện và coda, đoạn chen, stretta, fugue kép, ba, bốn chủ đề; fughetta, fugato; invention, chorale prelude, prelude, ricercar, canzona, toccata.',
     refs: [BOOK],
     body: `
 ${NOTE}
@@ -383,7 +383,7 @@ Bài trong thư viện: [[mo-phong-don-gian]], [[canon-hai-be]].
 | §207 | **Phần trình bày** | Phần đầu, các bè vào lần lượt với chủ đề; số lần đưa chủ đề **bằng số bè**. Kế hoạch giọng bình thường: chủ đề luân phiên đều ở **giọng chính và giọng át** |
 | §208 | **Phản đề** (противосложение) | Đối âm với lần đáp đầu tiên; nếu theo chủ đề suốt fugue thì gọi là **phản đề giữ**. Thường tương phản với chủ đề; được viết để **đổi chỗ trong đối âm kép** với chủ đề |
 | §209 – 212 | Phần nối; thứ tự vào bè; ranh giới phần trình bày; các lần đưa thêm | |
-| §213 – 214 | **Phần giữa**; **tái hiện** và **coda** | |
+| §213 – 214 | **Đoạn giữa**; **tái hiện** và **coda** | |
 | §215 | **Đoạn chen** (интермедия) | Cấu trúc giữa các lần đưa chủ đề, **không có chủ đề trọn**. Chính ở đây là **phát triển chủ đề** của fugue, vì các lần đưa chủ đề ít nhiều tĩnh; đoạn chen cũng làm lần vào sau của chủ đề tươi hơn và giữ tính liên tục |
 | §216 | **Stretta** | **Mô phỏng nén**: bè mô phỏng vào với chủ đề **trước khi** chủ đề ở bè kia kết thúc — "chủ đề tự làm đối âm cho mình". Vì stretta là một canon ngắn, có thể viết canon trước rồi lấy giai điệu làm chủ đề fugue; nhưng các bậc thầy thường giữ tính biểu hiện của chủ đề, không chịu ràng buộc ấy |
 | §217 – 219 | **Fugue kép, ba, bốn chủ đề**; cách ghi sơ đồ fugue | |

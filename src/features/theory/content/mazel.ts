@@ -26,7 +26,7 @@ Theo lời tựa bản 2, sách là giáo trình môn Phân tích tác phẩm �
 | I (mở đầu) | Cơ sở thẩm mỹ và phương pháp: phong cách, thể loại, hình thức theo nghĩa rộng – hẹp, khả năng biểu hiện của phương tiện, nguyên tắc tác động nghệ thuật, "phát hiện nghệ thuật", phương pháp phân tích | [[mazel-phuong-phap-phan-tich]] |
 | II – III | Giai điệu; tiết tấu và nhịp (motif, câu, motif iambic – trochaic, ô nặng – nhẹ, cấu trúc vuông – không vuông) | [[mazel-giai-dieu-va-tiet-tau]] |
 | IV – V | Sự phân đoạn; cấu trúc giai điệu – cú pháp (tổng hợp, chia nhỏ có khép); chủ đề, đoạn nhạc, chức năng các phần, kiểu trình bày, nguyên tắc phát triển | [[mazel-cau-truc-cau-doan-va-chuc-nang]] |
-| VI – VII | Hình thức hai, ba phần đơn; ba phần và hai phần phức | [[mazel-hinh-thuc-don-va-phuc]] |
+| VI – VII | Hình thức hai, ba đoạn đơn; ba đoạn và hai đoạn phức | [[mazel-hinh-thuc-don-va-phuc]] |
 | VIII – IX | Rondo; hình thức biến tấu | [[mazel-rondo-va-bien-tau]] |
 | X | Phức điệu và hình thức phức điệu (mô phỏng, canon, đối âm phức, fugue) | [[mazel-phuc-dieu-va-fugue]] |
 | XI – XII | Hình thức sonata; rondo – sonata | [[mazel-sonata-va-rondo-sonata]] |
@@ -60,7 +60,7 @@ ${NOTE}
 ## §4. Hình thức theo nghĩa rộng và nghĩa hẹp
 - Tác phẩm là **thống nhất giữa nội dung và hình thức**.
 - **Nghĩa rộng**: hình thức là toàn bộ hệ thống có tổ chức các phương tiện âm nhạc thể hiện nội dung.
-- **Nghĩa hẹp**: hình thức là **bố cục** — cách tác phẩm chia phần và các phần nối nhau (đoạn nhạc, hai phần, ba phần, rondo, sonata…). Môn học dùng cả hai nghĩa.
+- **Nghĩa hẹp**: hình thức là **bố cục** — cách tác phẩm chia phần và các phần nối nhau (đoạn nhạc, hai đoạn, ba đoạn, rondo, sonata…). Môn học dùng cả hai nghĩa.
 
 ## §5. Khả năng biểu hiện của phương tiện
 - "Một thủ pháp, một phương tiện riêng lẻ **không có ý nghĩa biểu hiện xác định, cho một lần là xong**." Ví dụ của sách: [[dao-phach|đảo phách]] lúc thì góp phần tạo vẻ sắc, năng động, bùng nổ, lúc lại tạo xao động trữ tình.
@@ -95,7 +95,7 @@ Chỉ đi một hướng thì hiếm khi đủ. Ngay việc xác định hình t
 
 ## §11. Ví dụ: "Bài ca người gặp gỡ" của Shostakovich
 Sách phân tích *Песня о встречном* (nhạc phim *Встречный*):
-- **Bố cục**: bài hát nhiều lời; mỗi lời gồm phần hát chính và điệp khúc, làm thành **hình thức hai phần đơn không tái hiện**, từ hai đoạn nhạc vuông, mỗi đoạn hai câu 8 ô.
+- **Bố cục**: bài hát nhiều lời; mỗi lời gồm phần hát chính và điệp khúc, làm thành **hình thức hai đoạn đơn không tái hiện**, từ hai đoạn nhạc vuông, mỗi đoạn hai câu 8 ô.
 - **Thể loại**: Mazel cho thấy bài hát nối nhiều liên hệ thể loại khác nhau, và chính sự phong phú ấy là **phát hiện nghệ thuật** ở cấp thể loại; nó cũng là một nét phong cách của Shostakovich.
 - **Cấu trúc**: câu thứ nhất có đường nét dạng sóng (xuống rồi lên), hai câu nhỏ 4 ô gần như **đối xứng** — đọc ngược câu đầu được gần đúng câu sau.
 
@@ -152,7 +152,7 @@ ${NOTE}
 
 ## Chương IV. Sự phân đoạn
 - Tác phẩm là một chỉnh thể nhưng **chia thành phần** lớn nhỏ; hiểu đúng sự phân chia là điều kiện để hiểu và **diễn đúng**.
-- Chỗ ngăn giữa hai phần gọi là **cezura** (цезура), sâu hay nông tuỳ độ rõ.
+- Chỗ ngăn giữa hai đoạn gọi là **cezura** (цезура), sâu hay nông tuỳ độ rõ.
 - Một phần hữu cơ giới hạn bởi cezura gọi là **cấu trúc** (построение), dài ngắn bao nhiêu cũng được: đoạn 16 ô, mỗi câu 8 ô, mỗi nửa câu 4 ô đều là cấu trúc. Nhưng "ba nửa câu đầu gộp lại" thì không — giống như "một chương rưỡi" không phải là phần hữu cơ của tiểu thuyết.
 - Yếu tố tạo phân đoạn: chất liệu mới, bắt đầu lặp lại, quay về chất liệu cũ, dấu lặng, dừng tiết tấu, [[cau-ket|kết]] hoà âm, hết một sóng giai điệu, đổi giọng, âm sắc, âm vực, cường độ.
 
@@ -185,34 +185,34 @@ Phần khép có thể tự nó là một cấu trúc tổng hợp (ví dụ 1 +
 | 3. **Phát triển motif** | разработка | Tách những phần tử riêng của chủ đề và phát triển độc lập, cho chúng kết hợp mới |
 | 4. **Đối chiếu** (tương phản) | сопоставление | Sau một chủ đề là chủ đề mới, phần mới khác chất liệu |
 - **Hoà âm và giọng** có vai trò tạo hình thức riêng: tương tác **kết từ xa** trong đoạn nhạc; **giọng từ xa** trong sonata (phần trình bày kết ở giọng át — phần tái hiện kết ở giọng chủ); kế hoạch giọng T → D → (vùng S) → T. Hai giọng xa đặt cạnh nhau tạo "xung đột" cần một giọng dung hoà.
-- Mỗi hình thức dựa trên vài nguyên tắc: ba phần có phần giữa mới = **đối chiếu + tái hiện**; rondo = các nguyên tắc ấy **lặp nhiều lần**; sonata = **đối chiếu** (hai chủ đề) + **phát triển** + **tái hiện**.
+- Mỗi hình thức dựa trên vài nguyên tắc: ba đoạn có đoạn giữa mới = **đối chiếu + tái hiện**; rondo = các nguyên tắc ấy **lặp nhiều lần**; sonata = **đối chiếu** (hai chủ đề) + **phát triển** + **tái hiện**.
 
 Liên quan: [[chuc-nang-hinh-thuc]], [[ly-thuyet-chu-de]]. Tổng quan sách: [[mazel-cau-truc-tac-pham-am-nhac]].
 `,
   },
   {
     slug: 'mazel-hinh-thuc-don-va-phuc',
-    title: 'Mazel: hình thức hai, ba phần đơn và phức (chương VI – VII)',
+    title: 'Mazel: hình thức hai, ba đoạn đơn và phức (chương VI – VII)',
     category: 'form',
-    aliases: ['Mazel hình thức đơn', 'hình thức ba phần phức', 'сложная трехчастная форма', 'простая трехчастная форма', 'hình thức ba phần kép', 'двойная трехчастная форма', 'trio và episode'],
-    summary: 'Định nghĩa của Mazel: hình thức hai/ba phần đơn có phần một là đoạn nhạc, các phần khác không phức tạp hơn đoạn nhạc; hình thức ba phần phức có tái hiện, phần một là hình thức hai/ba phần đơn. Ba phần đơn thường có phần giữa phát triển; ba phần phức thường có phần giữa tương phản (trio hoặc episode). Hình thức bài hát nhiều lời, hình thức ba phần kép.',
+    aliases: ['Mazel hình thức đơn', 'hình thức ba đoạn phức', 'сложная трехчастная форма', 'простая трехчастная форма', 'hình thức ba đoạn kép', 'двойная трехчастная форма', 'trio và episode'],
+    summary: 'Định nghĩa của Mazel: hình thức hai/ba đoạn đơn có phần một là đoạn nhạc, các phần khác không phức tạp hơn đoạn nhạc; hình thức ba đoạn phức có tái hiện, phần một là hình thức hai/ba đoạn đơn. Ba đoạn đơn thường có đoạn giữa phát triển; ba đoạn phức thường có đoạn giữa tương phản (trio hoặc episode). Hình thức bài hát nhiều lời, hình thức ba đoạn kép.',
     refs: [BOOK],
     body: `
 ${NOTE}
 
-## Chương VI. Hình thức hai và ba phần đơn
-- **Định nghĩa**: "Hình thức hai hay ba phần đơn là hình thức hai hay ba phần mà **phần thứ nhất là một đoạn nhạc**, các phần còn lại **không chứa cấu trúc phức tạp hơn đoạn nhạc**."
-- Mazel lưu ý một vòng luẩn quẩn bề ngoài: có lúc một cấu trúc được coi là đoạn nhạc không vì cấu trúc bên trong mà vì **chức năng** trong chỉnh thể lớn hơn (một câu 7 ô kết nửa vẫn được coi là đoạn nhạc khi nó là phần một của hình thức ba phần đơn). Vì vậy muốn xác định đúng một hình thức, phải biết cả các hình thức khác, và phải học qua nhiều ví dụ chứ không chỉ học định nghĩa.
-- Các mục của chương: cấu tạo và các kiểu chính; phạm vi sử dụng; **hình thức bài hát nhiều lời** (куплетная), **hình thức khổ** (строфическая); **hình thức ba phần kép** (двойная трехчастная); lịch sử phát triển.
-- **Ba phần kép**: phần giữa và phần đầu cùng lặp lại lần hai, phần giữa lần sau ở giọng khác (A B A B₁ A). Sách so sánh ba romance cùng lời Pushkin *Ночной зефир*: Glinka — ba – năm phần đơn (phần 4 nhắc phần 2); **Medtner** — ba phần kép (phần 4 nhắc phần 2 ở giọng khác, kết cấu khác); **Dargomyzhsky** — rondo (phần 2 và 4 khác chủ đề). Ba phần "ba lần" (A B A B₁ A B₂ A) rất hiếm, ví dụ *Am Bach* của Liszt.
+## Chương VI. Hình thức hai và ba đoạn đơn
+- **Định nghĩa**: "Hình thức hai hay ba đoạn đơn là hình thức hai hay ba đoạn mà **phần thứ nhất là một đoạn nhạc**, các phần còn lại **không chứa cấu trúc phức tạp hơn đoạn nhạc**."
+- Mazel lưu ý một vòng luẩn quẩn bề ngoài: có lúc một cấu trúc được coi là đoạn nhạc không vì cấu trúc bên trong mà vì **chức năng** trong chỉnh thể lớn hơn (một câu 7 ô kết nửa vẫn được coi là đoạn nhạc khi nó là đoạn một của hình thức ba đoạn đơn). Vì vậy muốn xác định đúng một hình thức, phải biết cả các hình thức khác, và phải học qua nhiều ví dụ chứ không chỉ học định nghĩa.
+- Các mục của chương: cấu tạo và các kiểu chính; phạm vi sử dụng; **hình thức bài hát nhiều lời** (куплетная), **hình thức khổ** (строфическая); **hình thức ba đoạn kép** (двойная трехчастная); lịch sử phát triển.
+- **Ba đoạn kép**: đoạn giữa và phần đầu cùng lặp lại lần hai, đoạn giữa lần sau ở giọng khác (A B A B₁ A). Sách so sánh ba romance cùng lời Pushkin *Ночной зефир*: Glinka — ba – năm đoạn đơn (phần 4 nhắc phần 2); **Medtner** — ba đoạn kép (phần 4 nhắc phần 2 ở giọng khác, kết cấu khác); **Dargomyzhsky** — rondo (phần 2 và 4 khác chủ đề). Ba đoạn "ba lần" (A B A B₁ A B₂ A) rất hiếm, ví dụ *Am Bach* của Liszt.
 Bài trong thư viện: [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]].
 
-## Chương VII. Hình thức ba và hai phần phức
-- **Định nghĩa**: "Hình thức ba phần phức là hình thức ba phần **có tái hiện**, trong đó phần một được trình bày theo hình thức hai hay ba phần đơn, các phần còn lại không chứa hình thức phát triển hơn."
-- Khác biệt chính so với ba phần đơn: ở **ba phần đơn**, phần giữa **phát triển** chất liệu phần một thường gặp hơn phần giữa mới; ở **ba phần phức**, phần giữa **thường tương phản** với hai phần ngoài, rất hiếm khi chỉ phát triển chất liệu phần một. Nền của đa số hình thức ba phần phức: **đối chiếu tương phản** hai phần chính + **tái hiện** phần một.
-- Hình thức kết tinh vào **cuối thế kỷ 17 – đầu 18**, gắn với nhu cầu thể hiện tương phản trong tác phẩm lớn mà vẫn liền mạch; tiền thân là lối đặt **hai điệu múa cùng tên** liền nhau trong tổ khúc cổ rồi nhắc lại điệu đầu: Minuet I – Minuet II – Minuet I, Gavotte I – Gavotte II – Gavotte I (sách dẫn các *Tổ khúc Anh* của Bach). Lần nhắc không chép ra mà ghi *da capo*; mỗi điệu múa thường ở hình thức hai phần đơn.
-- Phần giữa được phân biệt thành kiểu **trio** và kiểu **episode** tuỳ cấu trúc (§2); sách lưu ý ranh giới giữa hai kiểu nhiều khi mờ.
-- Hình thức **hai phần phức** ít gặp hơn nhiều; sách trình bày ngắn ở §4.
+## Chương VII. Hình thức ba và hai đoạn phức
+- **Định nghĩa**: "Hình thức ba đoạn phức là hình thức ba đoạn **có tái hiện**, trong đó phần một được trình bày theo hình thức hai hay ba đoạn đơn, các phần còn lại không chứa hình thức phát triển hơn."
+- Khác biệt chính so với ba đoạn đơn: ở **ba đoạn đơn**, đoạn giữa **phát triển** chất liệu phần một thường gặp hơn đoạn giữa mới; ở **ba đoạn phức**, đoạn giữa **thường tương phản** với hai đoạn ngoài, rất hiếm khi chỉ phát triển chất liệu phần một. Nền của đa số hình thức ba đoạn phức: **đối chiếu tương phản** hai đoạn chính + **tái hiện** phần một.
+- Hình thức kết tinh vào **cuối thế kỷ 17 – đầu 18**, gắn với nhu cầu thể hiện tương phản trong tác phẩm lớn mà vẫn liền mạch; tiền thân là lối đặt **hai điệu múa cùng tên** liền nhau trong tổ khúc cổ rồi nhắc lại điệu đầu: Minuet I – Minuet II – Minuet I, Gavotte I – Gavotte II – Gavotte I (sách dẫn các *Tổ khúc Anh* của Bach). Lần nhắc không chép ra mà ghi *da capo*; mỗi điệu múa thường ở hình thức hai đoạn đơn.
+- Đoạn giữa được phân biệt thành kiểu **trio** và kiểu **episode** tuỳ cấu trúc (§2); sách lưu ý ranh giới giữa hai kiểu nhiều khi mờ.
+- Hình thức **hai đoạn phức** ít gặp hơn nhiều; sách trình bày ngắn ở §4.
 Bài trong thư viện: [[minuet-va-trio]].
 
 Tổng quan sách: [[mazel-cau-truc-tac-pham-am-nhac]].
@@ -223,23 +223,23 @@ Tổng quan sách: [[mazel-cau-truc-tac-pham-am-nhac]].
     title: 'Mazel: rondo và hình thức biến tấu (chương VIII – IX)',
     category: 'form',
     aliases: ['Mazel rondo', 'Mazel biến tấu', 'hình thức giống rondo', 'рондообразные формы', 'biến tấu trên giai điệu cố định', 'biến tấu trên bè trầm cố định', 'biến tấu nghiêm', 'biến tấu tự do', 'biến tấu kép', 'двойные вариации'],
-    summary: 'Rondo theo Mazel: luân phiên chủ đề chính trở lại nhiều lần với các episode, ít nhất năm phần ABACA; phân biệt rondo với hình thức có luân phiên nhưng không lấy luân phiên làm nền; các hình thức giống rondo. Biến tấu: phương pháp lặp có biến đổi trở thành nền của bố cục; phân loại: trên giai điệu cố định, trên bè trầm cố định (cổ), biến tấu nghiêm (hình hoá), biến tấu tự do, nhóm biến tấu, biến tấu kép.',
+    summary: 'Rondo theo Mazel: luân phiên chủ đề chính trở lại nhiều lần với các episode, ít nhất năm đoạn ABACA; phân biệt rondo với hình thức có luân phiên nhưng không lấy luân phiên làm nền; các hình thức giống rondo. Biến tấu: phương pháp lặp có biến đổi trở thành nền của bố cục; phân loại: trên giai điệu cố định, trên bè trầm cố định (cổ), biến tấu nghiêm (hình hoá), biến tấu tự do, nhóm biến tấu, biến tấu kép.',
     refs: [BOOK],
     body: `
 ${NOTE}
 
 ## Chương VIII. Rondo
 - **Định nghĩa**: "Hình thức rondo là hình thức mà nền của nó là **sự luân phiên giữa chủ đề chính trở lại nhiều lần với các episode khác nhau**."
-- Suy ra: chủ đề chính vang ít nhất **ba lần**, có ít nhất **hai episode**, nên rondo có ít nhất **năm phần**: A B A C A.
-- Với rondo, mọi chủ đề ngoài chủ đề chính đều gọi là **episode**, bất kể cấu trúc (khác với hình thức ba phần phức, nơi phân biệt trio và episode).
-- **Không xếp vào rondo** những hình thức tuy có luân phiên nhưng luân phiên không phải nền. Ví dụ: hình thức ba phần phức mà phần một là ba phần đơn có phần giữa mới (a b a | c | a b a) — có chủ đề a trở lại nhiều lần, nhưng nền là tương phản giữa cả khối a b a với trio c.
-- Các mục: nguồn gốc lịch sử, vùng biểu hiện, phạm vi dùng; các giai đoạn lịch sử; **hình thức giống rondo** (рондообразные), như ba – năm phần và ba phần kép (xem chương VI).
+- Suy ra: chủ đề chính vang ít nhất **ba lần**, có ít nhất **hai episode**, nên rondo có ít nhất **năm đoạn**: A B A C A.
+- Với rondo, mọi chủ đề ngoài chủ đề chính đều gọi là **episode**, bất kể cấu trúc (khác với hình thức ba đoạn phức, nơi phân biệt trio và episode).
+- **Không xếp vào rondo** những hình thức tuy có luân phiên nhưng luân phiên không phải nền. Ví dụ: hình thức ba đoạn phức mà phần một là ba đoạn đơn có đoạn giữa mới (a b a | c | a b a) — có chủ đề a trở lại nhiều lần, nhưng nền là tương phản giữa cả khối a b a với trio c.
+- Các mục: nguồn gốc lịch sử, vùng biểu hiện, phạm vi dùng; các giai đoạn lịch sử; **hình thức giống rondo** (рондообразные), như ba – năm đoạn và ba đoạn kép (xem chương VI).
 Bài trong thư viện: [[rondo]], [[sonata-rondo-va-cac-loai-rondo]].
 
 ## Chương IX. Hình thức biến tấu
 - **Biến tấu là phương pháp** lặp lại có biến đổi, dùng ở mọi hình thức và mọi cấp (đoạn nhạc lặp lại, tái hiện có biến đổi, phát triển motif). Trong hình thức biến tấu, phương pháp ấy trở thành **nền của bố cục**.
 - Biến tấu kết hợp **thay đổi** với yếu tố **không đổi** nghe thấy ngay. Rondo cũng có cái không đổi và cái thay đổi nhưng **nối tiếp nhau**; biến tấu thì có cả hai **cùng lúc**: mỗi biến tấu vừa mới, vừa gắn với cùng một chủ đề.
-- **Định nghĩa**: "Hình thức biến tấu (chu kỳ biến tấu) là hình thức gồm trình bày chủ đề ban đầu và một loạt lần nhắc lại có biến đổi (gọi là các biến tấu)." Có thể có mở đầu và coda; số biến tấu từ hai, ba đến vài chục; chủ đề dài từ 4 ô đến một hình thức ba phần đơn; chủ đề có thể mượn từ dân gian hay nhà soạn nhạc khác, nếu tự sáng tác thì gọi là **chủ đề nguyên tác**.
+- **Định nghĩa**: "Hình thức biến tấu (chu kỳ biến tấu) là hình thức gồm trình bày chủ đề ban đầu và một loạt lần nhắc lại có biến đổi (gọi là các biến tấu)." Có thể có mở đầu và coda; số biến tấu từ hai, ba đến vài chục; chủ đề dài từ 4 ô đến một hình thức ba đoạn đơn; chủ đề có thể mượn từ dân gian hay nhà soạn nhạc khác, nếu tự sáng tác thì gọi là **chủ đề nguyên tác**.
 - Sách tìm nguồn gốc hình thức biến tấu ở các hình thức ca – vũ dân gian.
 
 | Loại (theo các mục của chương) | Tiếng Nga |
@@ -260,7 +260,7 @@ Bài trong thư viện: [[bien-tau]], [[ostinato]]. Tổng quan sách: [[mazel-c
     title: 'Mazel: phức điệu và hình thức phức điệu (chương X)',
     category: 'polyphony',
     aliases: ['Mazel phức điệu', 'phức điệu mô phỏng và không mô phỏng', 'имитационная полифония', 'неимитационная полифония', 'Mazel fugue', 'phức điệu dân ca Nga', 'подголосочная полифония'],
-    summary: 'Chương X sách Mazel: phức điệu và chủ điệu; hai loại phức điệu (mô phỏng và không mô phỏng — tương phản hoặc bè phụ); yếu tố phức điệu trong hình thức chủ điệu; mô phỏng, canon, đối âm phức; định nghĩa fugue (bè vào lần lượt, chủ đề luân phiên giọng chính – giọng phụ), kế hoạch giọng ba phần có tái hiện, đoạn chen; phức điệu nghiêm và tự do; phức điệu dân ca Nga.',
+    summary: 'Chương X sách Mazel: phức điệu và chủ điệu; hai loại phức điệu (mô phỏng và không mô phỏng — tương phản hoặc bè phụ); yếu tố phức điệu trong hình thức chủ điệu; mô phỏng, canon, đối âm phức; định nghĩa fugue (bè vào lần lượt, chủ đề luân phiên giọng chính – giọng phụ), kế hoạch giọng ba đoạn có tái hiện, đoạn chen; phức điệu nghiêm và tự do; phức điệu dân ca Nga.',
     refs: [BOOK],
     body: `
 ${NOTE}
@@ -280,7 +280,7 @@ Các mục §3 – 4 trình bày mô phỏng, canon và **đối âm phức** (�
 
 ## Fugue
 - **Định nghĩa**: "Fugue là tác phẩm phức điệu mô phỏng, **bắt đầu bằng sự vào lần lượt của tất cả các bè** trình bày chủ đề — **luân phiên ở giọng chính và giọng phụ** (thường là giọng át)." Phần sau thường có thêm một số lần đưa chủ đề, chủ yếu ở các giọng khác, và kết ở giọng chính bằng một hay vài lần đưa chủ đề cuối.
-- Vì vậy, về **kế hoạch giọng**, nền của fugue là **ba phần có tái hiện** — giống nhiều hình thức chủ điệu: **phần trình bày**, **phần giữa**, **phần tái hiện**.
+- Vì vậy, về **kế hoạch giọng**, nền của fugue là **ba đoạn có tái hiện** — giống nhiều hình thức chủ điệu: **phần trình bày**, **đoạn giữa**, **phần tái hiện**.
 - Giữa các phần và giữa các lần đưa chủ đề có **đoạn chen** (интермедия): chủ đề không vang trọn; thường chuyển giọng, dạng mô tiến, dùng từng yếu tố của chủ đề.
 - Các mục: cấu tạo fugue (§6); khái niệm **phức điệu nghiêm và tự do** (§7).
 Bài trong thư viện: [[fugue]], [[phuc-dieu-nghiem-khac]].
@@ -300,10 +300,10 @@ ${NOTE}
 
 ## Chương XI. Hình thức sonata
 ### Định nghĩa
-"Hình thức sonata là hình thức **có tái hiện**, trong phần thứ nhất (**phần trình bày**) có **hai chủ đề nối tiếp ở hai giọng khác nhau** (chủ đề một ở giọng chính, chủ đề hai ở giọng phụ), còn trong **phần tái hiện** hai chủ đề được nhắc lại trong quan hệ khác, thường là **gần nhau về giọng** — điển hình nhất là cả hai ở giọng chính. Phần giữa điển hình là **phần phát triển**: phần không ổn định về giọng, phát triển các chủ đề của phần trình bày."
+"Hình thức sonata là hình thức **có tái hiện**, trong phần thứ nhất (**phần trình bày**) có **hai chủ đề nối tiếp ở hai giọng khác nhau** (chủ đề một ở giọng chính, chủ đề hai ở giọng phụ), còn trong **phần tái hiện** hai chủ đề được nhắc lại trong quan hệ khác, thường là **gần nhau về giọng** — điển hình nhất là cả hai ở giọng chính. Đoạn giữa điển hình là **phần phát triển**: phần không ổn định về giọng, phát triển các chủ đề của phần trình bày."
 | Biến thể | Theo sách |
 |---|---|
-| **Thay phát triển bằng episode** | Phần giữa trình bày và phát triển một chủ đề mới |
+| **Thay phát triển bằng episode** | Đoạn giữa trình bày và phát triển một chủ đề mới |
 | **Sonata không có phát triển** | Sau phần trình bày là ngay phần tái hiện (trực tiếp hoặc qua một đoạn chuyển ngắn) |
 - Có thể có **mở đầu**. Từ Mozart và nhất là Beethoven, **coda** trở nên thường xuyên: sonata phát triển có **bốn phần chính** — trình bày, phát triển, tái hiện, coda.
 - Phần trình bày thường được **nhắc lại nguyên văn** — gần như luôn ở các nhà cổ điển Vienna, ít hơn nhiều sau Beethoven.
@@ -319,7 +319,7 @@ ${NOTE}
 | Phát triển: tính chất chung và cấu tạo | разработка |
 | Tái hiện, coda | реприза, кода |
 - **Phát triển** đã có ngay trong phần trình bày (trong phần chính, nhất là phần nối, nửa sau phần phụ), nhưng trong phần phát triển nó mạnh nhất, vì phần này không phải trình bày hay nhắc lại chủ đề trọn vẹn: các chủ đề và yếu tố của chúng được đặt vào những "tình huống", những kết hợp mới.
-- Sách còn phân tích: sonata trong các thể loại khác nhau; xu hướng thế kỷ 19 – 20 qua chương I **Giao hưởng số 6 của Tchaikovsky** và các chương đầu giao hưởng **Shostakovich**; nguồn gốc lịch sử (hình thức hai phần cổ, sonata cổ, hình thức concerto cổ).
+- Sách còn phân tích: sonata trong các thể loại khác nhau; xu hướng thế kỷ 19 – 20 qua chương I **Giao hưởng số 6 của Tchaikovsky** và các chương đầu giao hưởng **Shostakovich**; nguồn gốc lịch sử (hình thức hai đoạn cổ, sonata cổ, hình thức concerto cổ).
 Bài trong thư viện: [[hinh-thuc-sonata]], [[hinh-thuc-concerto]].
 
 ## Chương XII. Rondo – sonata
@@ -351,7 +351,7 @@ ${NOTE}
 ### Hình thức ghép tương phản
 - Khái niệm **tương đối mới**, do **V. V. Protopopov** đưa ra trong các công trình đầu thập niên 1960.
 - Nằm giữa hình thức một chương và hình thức chu kỳ, nhưng phải xem là **một kiểu độc lập**. Giống chu kỳ: chuỗi nhiều phần tương phản. Giống một chương: **không nghỉ** giữa các phần và các phần **không thể diễn riêng**.
-- Trước đây những tác phẩm này bị xếp lẫn vào chu kỳ, hình thức hỗn hợp, hai phần phức, cảnh opera, hay sonata có mở đầu lớn.
+- Trước đây những tác phẩm này bị xếp lẫn vào chu kỳ, hình thức hỗn hợp, hai đoạn phức, cảnh opera, hay sonata có mở đầu lớn.
 
 ## Chương XIV. Hình thức hỗn hợp (tự do) một chương
 - Từ khoảng **phần tư thứ hai thế kỷ 19**, phổ biến các hình thức **một chương** kết hợp nét của nhiều hình thức điển hình (ví dụ sonata và biến tấu): gọi là **hỗn hợp** hay **tự do**. Thường gặp ở thơ giao hưởng, sonata một chương, concerto, overture, fantasy, rhapsody, ballade.

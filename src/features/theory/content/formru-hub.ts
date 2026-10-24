@@ -35,15 +35,15 @@ Ba sách đọc qua bản scan (OCR); các bài ghi rõ chương, mục khi trí
 
 ### Phần III. Các hình thức chủ điệu nhỏ
 7. [[hinh-thuc-nga-doan-nhac]] — đoạn nhạc và dân ca Nga.
-8. [[hinh-thuc-nga-hinh-thuc-don]] — hai phần và ba phần đơn.
-9. [[hinh-thuc-nga-ba-phan-phuc]] — ba phần phức.
+8. [[hinh-thuc-nga-hinh-thuc-don]] — hai đoạn và ba đoạn đơn.
+9. [[hinh-thuc-nga-ba-phan-phuc]] — ba đoạn phức.
 
 ### Phần IV. Các hình thức chủ điệu lớn
 10. [[hinh-thuc-nga-bien-tau]] — biến tấu.
 11. [[hinh-thuc-nga-rondo]] — rondo.
 12. [[hinh-thuc-nga-sonata]] — sonata.
 13. [[hinh-thuc-nga-rondo-sonata]] — rondo – sonata.
-14. [[hinh-thuc-nga-sonata-co-va-hai-phan-co]] — hai phần cổ, sonata cổ.
+14. [[hinh-thuc-nga-sonata-co-va-hai-phan-co]] — hai đoạn cổ, sonata cổ.
 
 ### Phần V. Chu kỳ, hình thức hỗn hợp, thanh nhạc
 15. [[hinh-thuc-nga-chu-ky]] — tổ khúc, chu kỳ sonata – giao hưởng.

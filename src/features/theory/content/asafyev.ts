@@ -10,7 +10,7 @@ export const asafyev: Article[] = [
     title: 'Asafyev: Hình thức âm nhạc như một quá trình — tổng quan sách',
     category: 'form',
     aliases: ['Asafyev', 'Asafiev', 'Асафьев', 'Igor Glebov', 'Игорь Глебов', 'Музыкальная форма как процесс', 'hình thức như quá trình'],
-    summary: 'Boris Asafyev (1884 – 1949), Hình thức âm nhạc như một quá trình: quyển một (viết xong 1929, in 1930) — ba phần: sự hình thành âm nhạc diễn ra thế nào; các kích thích và yếu tố của sự hình thành (đẩy, kết, i:m:t); nguyên tắc đồng nhất và tương phản trong các hình thức đã kết tinh — cùng hai phụ lục; quyển hai *Ngữ điệu* (viết xong trong vòng vây Leningrad, 24/1/1942, in 1947). Bài này là mục lục dẫn sang các bài chi tiết.',
+    summary: 'Boris Asafyev (1884 – 1949), Hình thức âm nhạc như một quá trình: quyển một (viết xong 1929, in 1930) — ba đoạn: sự hình thành âm nhạc diễn ra thế nào; các kích thích và yếu tố của sự hình thành (đẩy, kết, i:m:t); nguyên tắc đồng nhất và tương phản trong các hình thức đã kết tinh — cùng hai phụ lục; quyển hai *Ngữ điệu* (viết xong trong vòng vây Leningrad, 24/1/1942, in 1947). Bài này là mục lục dẫn sang các bài chi tiết.',
     refs: [BOOK, WIKI],
     body: `
 **Boris Vladimirovich Asafyev** (1884 – 1949), nhà âm nhạc học và nhà soạn nhạc Nga, viện sĩ, nhiều bài ký bút danh **Igor Glebov**. Theo bài dẫn của E. M. Orlova trong bản 1971:

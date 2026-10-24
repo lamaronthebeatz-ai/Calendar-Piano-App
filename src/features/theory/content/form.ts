@@ -330,7 +330,7 @@ Trio thường **tương phản** với minuet — về giọng, kết cấu ho�
 - Thời Cổ điển, minuet (sau là scherzo) thường là **chương ba** của [[hinh-thuc-sonata|sonata]], tứ tấu, giao hưởng.
 
 ## Phân tích một minuet: các bước
-1. Tìm dấu nhắc lại → xác định hai phần lớn.
+1. Tìm dấu nhắc lại → xác định hai đoạn lớn.
 2. Trong phần hai, tìm chỗ **a′ quay lại** (thường ở giọng chủ) → hai đoạn có tái hiện.
 3. Phần một kết ở đâu: giọng chủ hay giọng át? (hai đoạn **khép** hay **mở** — xem [[hinh-thuc-am-nhac]]).
 4. So sánh trio với minuet: giọng, kết cấu, tính cách.
@@ -425,7 +425,7 @@ Trình bày tạo **xung đột** giữa hai giọng; phát triển đẩy xung 
 ## Tên gọi ra đời sau tác phẩm
 Haydn, [[wolfgang-amadeus-mozart|Mozart]] và [[ludwig-van-beethoven|Beethoven]] **không gọi** cấu trúc này là "hình thức sonata". Nhà lý thuyết **Adolf Bernhard Marx** được xem là người đặt tên và hệ thống hoá nó, trong bộ *Die Lehre von der musikalischen Komposition* (các tập in từ 1837 đến 1847).
 - Mô tả của Marx mang tính **quy phạm**: nói tác phẩm hình thức sonata **nên** được viết thế nào.
-- Ông chỉ gọi ba phần là phần thứ nhất, thứ hai, thứ ba — chưa dùng các tên Trình bày, Phát triển, Tái hiện.
+- Ông chỉ gọi ba đoạn là phần thứ nhất, thứ hai, thứ ba — chưa dùng các tên Trình bày, Phát triển, Tái hiện.
 - Tổ tiên trực tiếp của hình thức sonata là [[hinh-thuc-am-nhac|hai đoạn có tái hiện]].
 
 ## Trình bày đơn chủ đề (Haydn)
@@ -766,7 +766,7 @@ Hai đoạn có tái hiện là tổ tiên trực tiếp của [[hinh-thuc-sonat
     title: "Hình thức ba đoạn (ternary form) và aria da capo",
     category: 'form',
     also: ['analysis'],
-    aliases: ["hình thức ba đoạn", "ternary form", "ba đoạn đơn", "ba đoạn phức", "aria da capo", "da capo aria", "phần giữa tương phản"],
+    aliases: ["hình thức ba đoạn", "ternary form", "ba đoạn đơn", "ba đoạn phức", "aria da capo", "da capo aria", "đoạn giữa tương phản"],
     summary: "Ba đoạn là A – B – A: một phần, một phần tương phản, rồi phần đầu trở lại (thường được trang trí hoặc rút gọn, ghi A′). Bài phân biệt ba đoạn đơn và ba đoạn phức (mỗi phần tự là một hình thức trọn vẹn, như minuet – trio – minuet), giải thích aria da capo của Handel, và đưa ví dụ từ các nocturne của Chopin và Eine kleine Nachtmusik của Mozart — kèm một lưu ý: Nocturne Op. 9 số 2 không phải ba đoạn.",
     refs: [
       ["Open Music Theory (Nebraska) — Ternary form", "https://pressbooks.nebraska.edu/openmusictheory/?p=336"],
@@ -783,10 +783,10 @@ Hai đoạn có tái hiện là tổ tiên trực tiếp của [[hinh-thuc-sonat
     body: `
 Bài này đào sâu phần "ba đoạn" trong [[hinh-thuc-am-nhac]]. So sánh với [[hinh-thuc-hai-doan]].
 
-::form A B A′ | Ba đoạn: phần giữa tương phản, phần đầu trở lại (A′ = trở lại có thay đổi)
+::form A B A′ | Ba đoạn: đoạn giữa tương phản, phần đầu trở lại (A′ = trở lại có thay đổi)
 
-## Chức năng ba phần
-Theo khung của William [[chuc-nang-hinh-thuc|Caplin]] (qua bài điểm sách trên *Music Theory Online*): **A = trình bày**, **B = phần giữa tương phản**, **A′ = tái hiện**. Phần B thường khác về giọng, [[giai-dieu|giai điệu]], [[tiet-tau|tiết tấu]], [[ket-cau|kết cấu]].
+## Chức năng ba đoạn
+Theo khung của William [[chuc-nang-hinh-thuc|Caplin]] (qua bài điểm sách trên *Music Theory Online*): **A = trình bày**, **B = đoạn giữa tương phản**, **A′ = tái hiện**. Phần B thường khác về giọng, [[giai-dieu|giai điệu]], [[tiet-tau|tiết tấu]], [[ket-cau|kết cấu]].
 
 ## Đơn và phức
 | Loại | Đặc điểm | Ví dụ |
@@ -797,7 +797,7 @@ Trong thế kỷ 19, phần A trở lại thường được **rút ngắn** (Op
 
 ## Aria da capo
 - Aria ba đoạn ABA trong opera, [[oratorio-cantata-passion|oratorio]] [[thoi-ky-baroque|Baroque]]: chỉ viết A và B, cuối B ghi **"Da capo"** (D.C., "từ đầu"). Khi A trở lại, ca sĩ **trang trí** thêm và thường chèn một [[cadenza]].
-- Theo *Cambridge Companion to Handel*, dạng "lớn" thường gặp ở [[george-frideric-handel|Handel]] có năm phần: **A1 A2 B A1 A2**. *"Lascia ch'io pianga"* (*Rinaldo*) thường được dẫn làm ví dụ aria da capo.
+- Theo *Cambridge Companion to Handel*, dạng "lớn" thường gặp ở [[george-frideric-handel|Handel]] có năm đoạn: **A1 A2 B A1 A2**. *"Lascia ch'io pianga"* (*Rinaldo*) thường được dẫn làm ví dụ aria da capo.
 Xem thêm [[opera]] và [[ky-hieu-hoa-my]].
 
 ## Ví dụ cho người học piano
@@ -872,11 +872,11 @@ Phân tích đầy đủ: [[phan-tich-canon-pachelbel]]; vòng này sống lại
   },
   {
     slug: "sonata-rondo-va-cac-loai-rondo",
-    title: "Rondo năm phần, rondo bảy phần và sonata-rondo",
+    title: "Rondo năm đoạn, rondo bảy phần và sonata-rondo",
     category: 'form',
     also: ['analysis'],
-    aliases: ["sonata-rondo", "sonata rondo", "rondo năm phần", "rondo bảy phần", "ABACABA", "Type 4 sonata", "sonata loại 4", "Hepokoski Darcy", "rondo Pathétique"],
-    summary: "Rondo xen điệp khúc (A, luôn ở giọng chủ) với các đoạn chen. Rondo năm phần là ABACA; rondo bảy phần và sonata-rondo là ABACABA — nhưng ở sonata-rondo, C hoạt động như phần phát triển và B trở lại ở giọng chủ như trong tái hiện. Bài giải thích cách nhận ra từng loại, \"sonata loại 4\" của Hepokoski & Darcy, và phân tích chương cuối sonata Pathétique của Beethoven và K. 333 của Mozart.",
+    aliases: ["sonata-rondo", "sonata rondo", "rondo năm đoạn", "rondo bảy phần", "ABACABA", "Type 4 sonata", "sonata loại 4", "Hepokoski Darcy", "rondo Pathétique"],
+    summary: "Rondo xen điệp khúc (A, luôn ở giọng chủ) với các đoạn chen. Rondo năm đoạn là ABACA; rondo bảy phần và sonata-rondo là ABACABA — nhưng ở sonata-rondo, C hoạt động như phần phát triển và B trở lại ở giọng chủ như trong tái hiện. Bài giải thích cách nhận ra từng loại, \"sonata loại 4\" của Hepokoski & Darcy, và phân tích chương cuối sonata Pathétique của Beethoven và K. 333 của Mozart.",
     refs: [
       ["Open Music Theory — Rondo", "https://viva.pressbooks.pub/openmusictheory/chapter/rondo/"],
       ["Puget Sound — Rondo form", "https://musictheory.pugetsound.edu/mt21c/RondoForm.html"],
@@ -890,16 +890,16 @@ Phân tích đầy đủ: [[phan-tich-canon-pachelbel]]; vòng này sống lại
 Bài này nối [[rondo]] với [[hinh-thuc-sonata]]. Cần biết trước cả hai.
 
 ## Ba khuôn rondo
-::form A B A C A | Rondo năm phần: hai đoạn chen B và C đều là chủ đề ổn định
+::form A B A C A | Rondo năm đoạn: hai đoạn chen B và C đều là chủ đề ổn định
 ::form A B A C A B′ A | Rondo bảy phần / sonata-rondo: B trở lại (B′), lần này ở giọng chủ
-| | Rondo năm phần | Sonata-rondo |
+| | Rondo năm đoạn | Sonata-rondo |
 |---|---|---|
 | Sơ đồ | ABACA | ABACABA (+ coda) |
 | Đoạn C | Thường là một chủ đề ổn định như B | Hoạt động như **phần phát triển** ([[chuyen-giong|chuyển giọng]], [[mo-tien-hoa-am|mô tiến]]) |
 | ABA đầu | — | Như **phần trình bày**, khép lại bằng A ở giọng chủ |
 | ABA cuối | — | Như **tái hiện**: B quay lại **ở giọng chủ** |
 *(Theo Open Music Theory.)*
-Theo các trích dẫn thứ cấp, William Caplin gọi sonata-rondo là "có lẽ phức tạp nhất trong các [[hinh-thuc-am-nhac|hình thức]] cổ điển"; và trong rondo năm phần, [[joseph-haydn|Haydn]] hay đặt đoạn chen thứ hai ở [[am-giai-thu|giọng thứ]], [[wolfgang-amadeus-mozart|Mozart]] ở giọng hạ át.
+Theo các trích dẫn thứ cấp, William Caplin gọi sonata-rondo là "có lẽ phức tạp nhất trong các [[hinh-thuc-am-nhac|hình thức]] cổ điển"; và trong rondo năm đoạn, [[joseph-haydn|Haydn]] hay đặt đoạn chen thứ hai ở [[am-giai-thu|giọng thứ]], [[wolfgang-amadeus-mozart|Mozart]] ở giọng hạ át.
 
 ## "Sonata loại 4"
 Trong *Elements of Sonata Theory* (OUP, 2006), James Hepokoski và Warren Darcy chia sonata thành năm loại; **loại 4** là dạng lai **sonata-rondo**: trình bày, phát triển, tái hiện **đều mở đầu bằng chủ đề chính ở giọng chủ**, và sau tái hiện bắt buộc có một lần điệp khúc nữa trong vùng coda. *(Theo bài của Taylor dẫn lại.)*
@@ -922,7 +922,7 @@ Các đoạn **chuyển về** dừng trên [[hop-am-ba|hợp âm]] **Sol** (V, 
 Sonata-rondo: điệp khúc ô 1 – 16 là một [[cau-nhac|đoạn nhạc]] song song; B ở giọng át (ô 24 – 36), trở lại ở giọng chủ (ô 148 – 164); C (ô 62 – 111) đi qua nhiều giọng; có một [[cadenza]] viết sẵn kiểu [[hinh-thuc-concerto|concerto]]. *(Theo trang giáo trình Ithaca College.)*
 
 ## Cách nhận ra khi nghe
-1. Đếm số lần điệp khúc trở lại (3 lần → năm phần; 4 lần → bảy phần).
+1. Đếm số lần điệp khúc trở lại (3 lần → năm đoạn; 4 lần → bảy phần).
 2. Đoạn giữa (C) có "đi lang thang" qua nhiều giọng không? → nghiêng về sonata-rondo.
 3. Đoạn B lần thứ hai có ở **giọng chủ** không? → dấu hiệu tái hiện.
 Xem thêm [[phan-tich-rondo-alla-turca]] (một rondo của Mozart) và [[chuc-nang-hinh-thuc]].

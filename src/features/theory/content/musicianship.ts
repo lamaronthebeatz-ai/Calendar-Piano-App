@@ -1071,7 +1071,7 @@ Luận án của Mizok-Taylor (2008) xét Faber, Bastien, Alfred dưới góc đ
 | **RCM** | Sơ cấp (Chuẩn bị – cấp 4), trung cấp (5 – 8), cao cấp (9 – ARCT) *(văn bản chính thức 2016)* | Báo cáo của Đại học York (2024): xây gần như hoàn toàn trên âm nhạc nghệ thuật Tây Âu |
 | **Trinity** | Cấp 1 – 8, không bắt buộc lý thuyết để thi thực hành *(chính thức)* | — |
 | **Tonal Harmony** (Kostka – Payne) | Nền tảng → hợp âm ba diatonic và [[luat-hoa-am-bon-be|viết bè]] → [[hop-am-bay|hợp âm bảy]] → [[am-giai-cromatic|cromatic]] → [[thoi-ky-the-ky-20|thế kỷ 20]] *(mục lục nhà XB)* | Nhóm CMS (2014) phê phán chương trình lý thuyết **tách rời** nghe, đàn phím và sáng tạo; khảo sát 1969 cho thấy khoảng 75% chương trình bị chia mảnh |
-| **Open Music Theory** (miễn phí) | 11 phần, có cả jazz, pop, [[phoi-khi-nguyen-ly-co-ban|phối khí]] | Malawey (2023): [[hinh-thuc-am-nhac|hình thức]] [[nhac-pho-thong-the-ky-20|nhạc phổ thông]] bị đẩy về sau, hoà âm nặng viết bè bốn phần cổ điển |
+| **Open Music Theory** (miễn phí) | 11 phần, có cả jazz, pop, [[phoi-khi-nguyen-ly-co-ban|phối khí]] | Malawey (2023): [[hinh-thuc-am-nhac|hình thức]] [[nhac-pho-thong-the-ky-20|nhạc phổ thông]] bị đẩy về sau, hoà âm nặng viết bè bốn đoạn cổ điển |
 Thêm: Callahan (2015) chỉ ra học lý thuyết **trên đàn phím** giúp học bằng tai và tay, dù khó tổ chức.
 
 ## Việt Nam
