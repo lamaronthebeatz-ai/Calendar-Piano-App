@@ -2,6 +2,7 @@ import harmonyCover from '../../assets/covers/hoa-am-co-dien.webp'
 import polyphonyCover from '../../assets/covers/phuc-dieu-nghiem-khac.webp'
 import fuxCover from '../../assets/covers/doi-am-fux.webp'
 import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
+import formCover from '../../assets/covers/hinh-thuc-am-nhac.webp'
 import type { Book } from './types'
 
 /**
@@ -769,6 +770,7 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
     audience: 'Đã học Nhạc Lý Cơ Bản và hoà âm cơ bản',
     hue: 18,
     glyph: '𝄐',
+    coverImage: formCover,
     preface: `
 Cuốn này dạy **hình thức âm nhạc và phân tích tác phẩm** theo truyền thống các nhạc viện Nga – Xô viết, truyền thống mà các nhạc viện Việt Nam tiếp nhận. Thay vì đọc riêng từng sách, cuốn sách **gộp ba sách nền theo chủ đề**:
 
