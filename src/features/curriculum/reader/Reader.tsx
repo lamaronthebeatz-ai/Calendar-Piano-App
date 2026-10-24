@@ -46,7 +46,13 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const [instant, setInstant] = useState(true)
 
   // Where to land once the next item is measured: a ratio through it, its last page, or the page holding a search hit.
-  const pending = useRef<number | 'last' | { find: string } | null>(itemKey && keyIndex(itemKey) >= 0 ? 0 : (getPosition(book.id)?.ratio ?? 0))
+  // A link to the item the reader last stopped in resumes at the same spot, not at its first page.
+  const saved = getPosition(book.id)
+  const pending = useRef<number | 'last' | { find: string } | null>(itemKey && keyIndex(itemKey) >= 0 && saved?.key !== itemKey ? 0 : (saved?.ratio ?? 0))
+  // Nothing is saved until the first real layout, so opening the book can't overwrite the stored spot with page 0.
+  const laidOut = useRef(false)
+  // While late content (images, fonts) is still arriving after a jump, hold the position by ratio rather than page index.
+  const anchor = useRef<{ ratio: number; until: number } | null>(null)
   const ratio = useRef(0)
   const dir = useRef<1 | -1>(1)
   const viewport = useRef<HTMLDivElement>(null)
@@ -82,7 +88,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const measure = useCallback(() => {
     const f = flow.current
     const s = sentinel.current
-    if (!f || !s || !step) return
+    if (!f || !s || !step || pageW <= 0 || pageH <= 0) return
     const n = isCover ? 1 : Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + 2) / step) + 1)
     setPages(n)
     const want = pending.current
@@ -92,10 +98,14 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     else if (typeof want === 'number') target = Math.floor(want * n + 1e-6)
     else if (want && typeof want === 'object') target = findPage(f, want.find, step)
     else target = Math.floor(ratio.current * n + 1e-6)
+    const landed = Math.min(n - 1, Math.max(0, target))
+    if (typeof want === 'number' && want > 0) anchor.current = { ratio: want, until: performance.now() + 3000 }
+    else if (want !== null) anchor.current = null
+    laidOut.current = true
     setInstant(true)
-    setPage(Math.min(n - 1, Math.max(0, target)))
+    setPage(landed)
     requestAnimationFrame(() => requestAnimationFrame(() => setInstant(false)))
-  }, [isCover, step])
+  }, [isCover, step, pageW, pageH])
 
   // Re-measure when the item, the page size or the type changes, and when content (images, fonts) grows.
   useLayoutEffect(() => {
@@ -117,7 +127,9 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
         if (!s || !step || isCover) return
         const n = Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + 2) / step) + 1)
         setPages((old) => (old === n ? old : n))
-        setPage((p) => Math.min(p, n - 1))
+        const a = anchor.current
+        if (a && performance.now() < a.until) setPage(Math.min(n - 1, Math.floor(a.ratio * n + 1e-6)))
+        else setPage((p) => Math.min(p, n - 1))
       })
     }
     const mo = new MutationObserver(recount)
@@ -134,6 +146,10 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   }, [measure, index, step, isCover])
 
   useEffect(() => {
+    if (!laidOut.current) return
+    // A page turned by the reader ends the hold on the restored spot.
+    const a = anchor.current
+    if (a && page !== Math.min(pages - 1, Math.floor(a.ratio * pages + 1e-6))) anchor.current = null
     ratio.current = pages ? page / pages : 0
     savePosition(book.id, { key: item.key, ratio: ratio.current })
   }, [book.id, item.key, page, pages])
