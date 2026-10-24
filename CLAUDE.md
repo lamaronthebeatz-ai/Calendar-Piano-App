@@ -1,4 +1,4 @@
-# Lịch Dạy Piano — ghi chú cho Claude
+# Trung tâm lý thuyết âm nhạc học by Lamar — ghi chú cho Claude
 
 App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên (riêng tư, có mã khoá) và một thư viện âm nhạc lớn (Lý thuyết, Âm nhạc học, Giáo trình, Quiz). Giao diện tiếng Việt. Local-first, không backend.
 

@@ -28,9 +28,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/*.png'],
       manifest: {
-        name: 'Lịch Dạy Piano',
-        short_name: 'Lịch Dạy Piano',
-        description: 'Ứng dụng quản lý dạy piano cá nhân · Bản quyền thuộc về Lamar',
+        name: 'Trung tâm lý thuyết âm nhạc học by Lamar',
+        short_name: 'Lý thuyết Lamar',
+        description: 'Thư viện lý thuyết âm nhạc, tủ sách giáo trình và sổ tay dạy piano · Bản quyền thuộc về Lamar',
         lang: 'vi',
         theme_color: '#f6f3ed',
         background_color: '#f6f3ed',

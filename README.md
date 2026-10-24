@@ -1,6 +1,6 @@
 # Piano Schedule
 
-**Lịch Dạy Piano** — a local-first app for a private piano teacher (Vietnamese UI): a fixed weekly timetable and student records behind a passcode, plus a music theory and musicology library, a quiz and graded curricula. Works on iPhone and desktop.
+**Trung tâm lý thuyết âm nhạc học by Lamar** — a local-first app for a private piano teacher (Vietnamese UI): a fixed weekly timetable and student records behind a passcode, plus a music theory and musicology library, a quiz and graded curricula. Works on iPhone and desktop.
 
 ## Features
 

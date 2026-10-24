@@ -20,7 +20,7 @@ const STEPS: Step[] = [
   {
     icon: <SparkleIcon width={22} height={22} />,
     eyebrow: 'Chào mừng',
-    title: 'Lịch Dạy Piano',
+    title: 'Trung tâm lý thuyết âm nhạc học by Lamar',
     lead: 'Một ứng dụng gồm hai phần: sổ tay dạy học riêng tư — thời khoá biểu và hồ sơ học viên — và một thư viện âm nhạc với hàng nghìn bài viết, tủ sách giáo trình và bản đồ âm nhạc học.',
     points: [
       ['Mất khoảng hai phút', 'Tour đi qua từng khu vực, chỉ đúng nút cần bấm và chuyển trang giúp bạn.'],

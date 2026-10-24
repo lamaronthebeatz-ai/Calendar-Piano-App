@@ -107,7 +107,7 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
             <BrandMark width={44} height={44} />
           </span>
           <p className="mt-6 text-[12px] font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">{greeting(now.getHours())}</p>
-          <h1 className="mt-2 font-display text-[34px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">Lịch Dạy Piano</h1>
+          <h1 className="mt-2 font-display text-[34px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">Trung tâm lý thuyết âm nhạc học<span className="mt-1 block font-sans text-[13px] font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">by Lamar</span></h1>
           <p className="mt-1 text-[13.5px] capitalize text-[var(--color-ink-muted)]">{date}</p>
         </div>
 

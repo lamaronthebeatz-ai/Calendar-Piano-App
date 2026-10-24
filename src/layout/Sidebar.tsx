@@ -27,8 +27,8 @@ export function Sidebar() {
       <div className="relative mb-7 flex items-center gap-3 px-2">
         <BrandMark width={36} height={36} className="shrink-0 drop-shadow-sm" />
         <div className="min-w-0">
-          <p className="font-display text-[18px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">Lịch Dạy Piano</p>
-          <p className="text-[11.5px] uppercase tracking-[0.14em] text-[var(--color-gold)]">Studio & thư viện</p>
+          <p className="font-display text-[16px] font-semibold leading-[1.15] tracking-tight text-balance text-[var(--color-ink)]">Trung tâm lý thuyết âm nhạc học</p>
+          <p className="mt-0.5 text-[11.5px] uppercase tracking-[0.14em] text-[var(--color-gold)]">by Lamar</p>
         </div>
       </div>
 

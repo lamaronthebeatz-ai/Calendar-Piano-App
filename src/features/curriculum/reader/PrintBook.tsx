@@ -62,7 +62,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
           ),
         )}
         <p className="print-colophon">
-          {book.title}{book.volume ? ` · ${book.volume}` : ''} · {book.author} · biên soạn từ thư viện Lý thuyết của Lịch Dạy Piano · in ngày {new Date().toLocaleDateString('vi-VN')}
+          {book.title}{book.volume ? ` · ${book.volume}` : ''} · {book.author} · biên soạn từ thư viện của Trung tâm lý thuyết âm nhạc học by Lamar · in ngày {new Date().toLocaleDateString('vi-VN')}
         </p>
       </div>
       </PrintContext.Provider>

@@ -844,12 +844,12 @@ export const ABOUT_AUTHOR = `
 - Nhà sản xuất âm nhạc.
 - Nhà nghiên cứu theo hướng **âm nhạc học hệ thống** (*systematic musicology*) — ngành nối lý thuyết âm nhạc với âm học, tâm lý học âm nhạc, khoa học biểu diễn và âm nhạc học tính toán; xem [[am-nhac-hoc-he-thong]].
 
-Các sách và giáo trình trong tủ sách này do Lamar biên soạn và tổng hợp từ thư viện Lý thuyết của Lịch Dạy Piano.
+Các sách và giáo trình trong tủ sách này do Lamar biên soạn và tổng hợp từ thư viện của Trung tâm lý thuyết âm nhạc học by Lamar.
 `
 
 /** Opening of every foreword: who compiled the book, how, and what it aims for. */
 export const foreword = (title: string) => `
-**${title}** do **Lamar** biên soạn và tổng hợp. Nội dung các bài lấy từ thư viện Lý thuyết của Lịch Dạy Piano — nơi Lamar viết và đối chiếu từng bài với nguồn — rồi được sắp xếp lại thành một trình tự học, có lời dẫn, mục tiêu, câu hỏi và bài tập riêng cho sách.
+**${title}** do **Lamar** biên soạn và tổng hợp. Nội dung các bài lấy từ thư viện của Trung tâm lý thuyết âm nhạc học by Lamar — nơi Lamar viết và đối chiếu từng bài với nguồn — rồi được sắp xếp lại thành một trình tự học, có lời dẫn, mục tiêu, câu hỏi và bài tập riêng cho sách.
 
 Cuốn sách này không đứng một mình. Nó là một viên gạch trong một công trình lớn hơn nhiều: một **tủ sách âm nhạc tiếng Việt** đi từ nốt nhạc đầu tiên của đứa trẻ ngồi vào đàn cho tới những câu hỏi khó nhất của sáng tác, phân tích và âm nhạc học. Người Việt học nhạc lâu nay phải ghép tri thức từ những mảnh rời: một cuốn dịch chỗ này, một bài giảng chép tay chỗ kia, một video không rõ nguồn. Lamar muốn những mảnh ấy trở thành **một hệ thống liền mạch**, viết bằng tiếng mẹ đẻ, đủ sâu để đứng cạnh các giáo trình của những nền giáo dục âm nhạc lớn nhất thế giới.
 
