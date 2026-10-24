@@ -851,10 +851,19 @@ Các sách và giáo trình trong tủ sách này do Lamar biên soạn và tổ
 export const foreword = (title: string) => `
 **${title}** do **Lamar** biên soạn và tổng hợp. Nội dung các bài lấy từ thư viện Lý thuyết của Lịch Dạy Piano — nơi Lamar viết và đối chiếu từng bài với nguồn — rồi được sắp xếp lại thành một trình tự học, có lời dẫn, mục tiêu, câu hỏi và bài tập riêng cho sách.
 
+Cuốn sách này không đứng một mình. Nó là một viên gạch trong một công trình lớn hơn nhiều: một **tủ sách âm nhạc tiếng Việt** đi từ nốt nhạc đầu tiên của đứa trẻ ngồi vào đàn cho tới những câu hỏi khó nhất của sáng tác, phân tích và âm nhạc học. Người Việt học nhạc lâu nay phải ghép tri thức từ những mảnh rời: một cuốn dịch chỗ này, một bài giảng chép tay chỗ kia, một video không rõ nguồn. Lamar muốn những mảnh ấy trở thành **một hệ thống liền mạch**, viết bằng tiếng mẹ đẻ, đủ sâu để đứng cạnh các giáo trình của những nền giáo dục âm nhạc lớn nhất thế giới.
+
 ## Lamar hướng đến
-- **Một bộ giáo trình tiếng Việt có hệ thống**: mỗi cuốn là một con đường học rõ ràng, từ dễ đến khó, nối với các cuốn khác thay vì là những bài rời rạc.
-- **Kiến thức có nguồn**: mỗi bài ghi tài liệu tham khảo; chỗ nào nguồn chưa đối chiếu hoặc mâu thuẫn được ghi rõ ngay trong bài.
-- **Học bằng tai và tay**: mọi khái niệm đều được nghe, chơi trên đàn và tìm lại trong tác phẩm thật.
-- **Nhìn âm nhạc rộng hơn lý thuyết sách vở**: theo tinh thần âm nhạc học hệ thống, nối lý thuyết với âm học, tâm lý nghe, khoa học biểu diễn và lịch sử — để người học hiểu vì sao, không chỉ nhớ luật.
-- **Phục vụ người dạy lẫn người tự học**: giáo viên có trình tự dạy, người học có thể tự đi một mình.
+- **Một bộ giáo trình tiếng Việt có hệ thống.** Mỗi cuốn là một con đường học rõ ràng, từ dễ đến khó, và mọi cuốn nối vào nhau thành một tấm bản đồ chung: nhạc lý dẫn tới hoà âm, hoà âm dẫn tới phức điệu và hình thức, hình thức dẫn tới phân tích và sáng tác. Không có bài nào là ốc đảo.
+- **Kiến thức có nguồn, trung thực tới từng dòng.** Mỗi bài ghi tài liệu tham khảo; chỗ nào nguồn chưa đối chiếu hoặc mâu thuẫn được ghi rõ ngay trong bài. Lamar tin rằng người học xứng đáng được biết điều gì là chắc chắn, điều gì còn bỏ ngỏ — và rằng một nền học thuật chỉ đứng vững khi nó dám nói "chỗ này chưa rõ".
+- **Đi tới tận nguồn.** Thay vì học qua lời kể lại nhiều lớp, tủ sách đọc thẳng những tác phẩm nền tảng — Fux, Albrechtsberger, Taneev, Sposobin, Mazel, Asafyev và nhiều người khác — rồi đem chúng về tiếng Việt, đặt cạnh nhau, đối chiếu và nối thành một mạch.
+- **Học bằng tai và tay.** Mọi khái niệm đều được nghe, chơi trên đàn và tìm lại trong tác phẩm thật. Lý thuyết không phải để thuộc lòng; lý thuyết là cách để nghe sâu hơn, chơi đúng hơn và viết hay hơn.
+- **Nhìn âm nhạc rộng hơn lý thuyết sách vở.** Theo tinh thần âm nhạc học hệ thống, các bài nối lý thuyết với âm học, tâm lý nghe, khoa học biểu diễn, lịch sử và triết học — để người học hiểu *vì sao*, không chỉ nhớ *luật*.
+- **Phục vụ người dạy lẫn người tự học.** Giáo viên có một trình tự dạy chặt chẽ; người tự học, dù ở bất cứ đâu, có thể tự đi trọn con đường mà không cần ai dắt tay.
+- **Mở cho tất cả.** Tri thức âm nhạc không nên là đặc quyền của số ít người may mắn được vào nhạc viện. Ai có một chiếc điện thoại và lòng ham học đều có thể mở tủ sách này ra và bắt đầu.
+
+## Mục tiêu tối thượng
+Mục tiêu tối thượng của Lamar là **góp phần đặt nền móng cho một nền học thuật âm nhạc Việt Nam viết bằng tiếng Việt** — một nền móng đủ vững để các thế hệ sau đứng lên đó mà đi xa hơn. Lamar mong có một ngày người Việt học nhạc không còn phải cảm thấy tri thức lớn luôn nằm ở một ngôn ngữ khác; một ngày học trò Việt Nam có thể đọc Sposobin, Fux hay Asafyev bằng chính tiếng mình, hiểu chúng đến tận gốc, rồi dùng chúng để nghe, để chơi, để viết nên âm nhạc của chính dân tộc mình và để đối thoại ngang hàng với thế giới.
+
+Mỗi cuốn sách trong tủ sách là một bước trên con đường ấy. Con đường còn dài, và sẽ không bao giờ thật sự kết thúc — vì âm nhạc không bao giờ kết thúc. Nhưng nếu cuốn sách này giúp một người hiểu sâu hơn một bản nhạc, dạy hay hơn một buổi học, hay can đảm viết ra nốt nhạc đầu tiên của riêng mình, thì nó đã làm được điều Lamar mong muốn.
 `
