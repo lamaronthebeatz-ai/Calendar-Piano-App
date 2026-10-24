@@ -17,6 +17,12 @@ import { formRuE } from './content/formru-e'
 import { formRuF } from './content/formru-f'
 import { formRuG } from './content/formru-g'
 import { formRuHub } from './content/formru-hub'
+import { neuhausHub } from './content/neuhaus-hub'
+import { neuhausA } from './content/neuhaus-a'
+import { neuhausB } from './content/neuhaus-b'
+import { neuhausC } from './content/neuhaus-c'
+import { neuhausD } from './content/neuhaus-d'
+import { neuhausE } from './content/neuhaus-e'
 import { formRuXxA } from './content/formru-xx-a'
 import { formRuXxB } from './content/formru-xx-b'
 import { formRuXxC } from './content/formru-xx-c'
@@ -82,4 +88,4 @@ export const CATEGORIES = {
   composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
 }
 
-export const ARTICLES: Article[] = [...technique, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...formRussian, ...mazel, ...sposobin, ...asafyev, ...formRuHub, ...formRuA, ...formRuB, ...formRuC, ...formRuD, ...formRuE, ...formRuF, ...formRuG, ...formRuXxA, ...formRuXxB, ...formRuXxC, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...sacred, ...organ]
+export const ARTICLES: Article[] = [...technique, ...neuhausHub, ...neuhausA, ...neuhausB, ...neuhausC, ...neuhausD, ...neuhausE, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...formRussian, ...mazel, ...sposobin, ...asafyev, ...formRuHub, ...formRuA, ...formRuB, ...formRuC, ...formRuD, ...formRuE, ...formRuF, ...formRuG, ...formRuXxA, ...formRuXxB, ...formRuXxC, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...sacred, ...organ]

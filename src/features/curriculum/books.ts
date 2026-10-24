@@ -832,6 +832,50 @@ Mỗi bài là một bài của thư viện Lý thuyết (giữ nguyên đườn
       ], exercises: ['Nghe Webern op. 7 số 3 và Ives The Unanswered Question; so sánh cách mỗi tác phẩm tạo ra hình thức.', 'Viết một đoạn ngắn: khái niệm chủ đề của Sposobin còn dùng được tới đâu với âm nhạc thế kỷ XX, theo Sokolov.'] },
     ],
   },
+  {
+    id: 'neuhaus',
+    title: 'Nghệ Thuật Chơi Piano',
+    volume: 'Heinrich Neuhaus',
+    subtitle: 'Đọc kỹ cuốn sách sư phạm piano kinh điển của người thầy của Richter và Gilels: hình tượng nghệ thuật, nhịp điệu, âm sắc, kỹ thuật, ngón bấm, pedal, quan hệ thầy – trò và đời sống biểu diễn.',
+    author: 'Lamar',
+    audience: 'Học viên piano từ trung cấp, giáo viên piano',
+    hue: 160,
+    glyph: '𝄞',
+    preface: `
+**Heinrich Neuhaus** (1888 – 1964) dạy piano ở Nhạc viện Moskva gần nửa thế kỷ; học trò của ông có Sviatoslav Richter, Emil Gilels và nhiều thế hệ nghệ sĩ, giáo viên Xô viết. Cuốn *Об искусстве фортепианной игры* (1958) là những ghi chép của ông về nghề dạy và nghề chơi đàn. Sách này đọc theo bản dịch tiếng Anh *The Art of Piano Playing* (K. A. Leibovitch; Kahn & Averill, 1993), giữ đúng trình tự chương mục của Neuhaus.
+
+## Tinh thần của sách
+Neuhaus đặt **âm nhạc lên trước hết**: người chơi phải hiểu và cảm được hình tượng nghệ thuật của tác phẩm, rồi mới tìm phương tiện — nhịp điệu, âm sắc, kỹ thuật — để thể hiện nó. Kỹ thuật, theo ông, là phương tiện tìm ra từ chính yêu cầu của âm nhạc, không phải mục đích tự thân.
+
+## Cách đọc
+1. Đọc theo thứ tự: bốn phần đi từ hình tượng, qua thời gian và âm thanh, tới kỹ thuật, rồi người thầy và người nghệ sĩ.
+2. Mỗi bài có **Cách luyện tập theo Neuhaus** và **Câu hỏi và bài tập**: làm trên đàn, với đúng các tác phẩm sách nhắc tới.
+3. Ví dụ nhạc lấy từ cuốn sách, đặt cạnh đoạn văn nói tới nó.
+`,
+    parts: [
+      { title: 'Mở đầu', intro: 'Neuhaus là ai, vì sao ông viết cuốn sách, và điều quan trọng nhất: hình tượng nghệ thuật.', chapters: [
+        { slug: 'neuhaus-lo-trinh', focus: 'Lộ trình bộ bài.' },
+        { slug: 'neuhaus-loi-tua-va-tieu-su', focus: 'Tiểu sử; lời tựa; "Thay lời tựa".' },
+        { slug: 'neuhaus-hinh-tuong-nghe-thuat', focus: 'Hình tượng nghệ thuật của tác phẩm âm nhạc.' },
+      ], exercises: ['Chọn một bài đang tập, viết một đoạn ngắn về hình tượng của nó trước khi chơi, rồi chơi lại và so sánh.'] },
+      { title: 'Thời gian và âm thanh', intro: 'Nhịp điệu là đời sống của âm nhạc trong thời gian; âm sắc là chất liệu của nó.', chapters: [
+        { slug: 'neuhaus-nhip-dieu', focus: 'Nhịp điệu và nhịp; rubato; các lỗi tiết tấu thường gặp.' },
+        { slug: 'neuhaus-am-sac', focus: 'Âm sắc, nghe chính mình, các tầng âm thanh.' },
+      ], exercises: ['Ghi âm một bài có rubato; đo xem tổng thời gian có giữ được nhịp độ nền không.', 'Chơi một hợp âm với ba tầng cường độ khác nhau giữa các bè.'] },
+      { title: 'Kỹ thuật', intro: 'Sự tự tin, sự tự do, hệ vận động và các yếu tố kỹ thuật; ngón bấm và pedal.', chapters: [
+        { slug: 'neuhaus-ky-thuat-nguyen-ly', focus: 'Nhận xét chung; tự tin; hệ vận động.' },
+        { slug: 'neuhaus-ky-thuat-tu-do', focus: 'Sự tự do, thả lỏng, bài tập âm giai – hợp âm rải.' },
+        { slug: 'neuhaus-cac-yeu-to-ky-thuat', focus: 'Các yếu tố của kỹ thuật piano.' },
+        { slug: 'neuhaus-ngon-bam', focus: 'Nguyên tắc chọn ngón.' },
+        { slug: 'neuhaus-pedal', focus: 'Pedal.' },
+      ], exercises: ['Luyện một đoạn khó theo cách Neuhaus: chậm, đầy đủ âm thanh, rồi tăng dần mà không mất tự do.', 'Viết lại ngón bấm cho một đoạn theo nguyên tắc Neuhaus và giải thích lý do.'] },
+      { title: 'Người thầy và người nghệ sĩ', intro: 'Quan hệ thầy – trò, đời sống biểu diễn và lời kết.', chapters: [
+        { slug: 'neuhaus-thay-va-tro', focus: 'Thầy và trò.' },
+        { slug: 'neuhaus-bieu-dien', focus: 'Hoạt động biểu diễn.' },
+        { slug: 'neuhaus-ket-luan', focus: 'Kết luận.' },
+      ], exercises: ['Viết một trang về điều Neuhaus đòi hỏi ở người thầy và đối chiếu với cách bạn đang dạy hoặc học.'] },
+    ],
+  },
 ]
 
 /** "Về tác giả", shared by every book and course. */

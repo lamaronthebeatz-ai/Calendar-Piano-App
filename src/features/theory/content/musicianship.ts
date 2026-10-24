@@ -695,6 +695,8 @@ Bối cảnh rộng hơn: [[lo-trinh-luyen-tai-su-pham]].
       ['Crothers — Heinrich Neuhaus: life, philosophy and pedagogy (BCU, 2010)', 'https://open-access.bcu.ac.uk/4928/'],
     ],
     body: `
+> **Đọc kỹ từng chương:** bộ 12 bài theo đúng trình tự sách, kèm ví dụ nhạc — [[neuhaus-lo-trinh]]; đóng thành sách *Nghệ Thuật Chơi Piano* trong tủ sách.
+
 ::wiki Heinrich_Neuhaus | Heinrich Neuhaus (ảnh đầu bài Wikipedia)
 
 ## Tiểu sử ngắn

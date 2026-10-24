@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
 import { LinkRefContext, PrintContext } from './linkRef'
-import { findScan, loadScans, scanLabel, scanUrl, type ScanItem } from './scans'
+import { findScan, loadScans, scanLabel, scanUrl, scanWidth, type ScanItem } from './scans'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
@@ -160,7 +160,7 @@ function ScanImages({ book, item }: { book: string; item: ScanItem }) {
     <>
       {item.files.map((f) => (
         // full width up to the scan's own size, height from the ratio — so the layout is right before the image loads
-        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} style={{ maxWidth: f.w }} alt={scanLabel(book, item)} loading={printing ? 'eager' : 'lazy'} className="scan-img" />
+        <img key={f.f} src={scanUrl(book, f.f)} width={f.w} height={f.h} style={{ maxWidth: scanWidth(book, f.w) }} alt={scanLabel(book, item)} loading={printing ? 'eager' : 'lazy'} className="scan-img" />
       ))}
     </>
   )
