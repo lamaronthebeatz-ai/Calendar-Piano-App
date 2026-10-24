@@ -157,7 +157,8 @@ export function SettingsPage() {
             <Button variant="secondary" icon={<UploadIcon width={15} height={15} />} onClick={() => fileInputRef.current?.click()} fullWidth>
               Nhập dữ liệu
             </Button>
-            <input ref={fileInputRef} type="file" accept="application/json" hidden onChange={handleFileChosen} />
+            {/* Not just application/json: phones often label a forwarded .json as text/plain or nothing, which would grey it out. */}
+            <input ref={fileInputRef} type="file" accept=".json,application/json,text/json,text/plain" hidden onChange={handleFileChosen} />
           </div>
         </Section>
 

@@ -62,15 +62,29 @@ export async function downloadBackupFile(payload: BackupPayload): Promise<Downlo
     }
   }
 
-  const blob = new Blob([json], { type: 'application/json' })
-  const url = URL.createObjectURL(blob)
+  // Phones (above all an iPhone running the app from the home screen) open a downloaded blob instead of saving it;
+  // the share sheet lets the file go to Files, Drive, Zalo or another device.
+  const file = new File([json], filename, { type: 'application/json' })
+  const coarse = typeof matchMedia === 'function' && matchMedia('(pointer: coarse)').matches
+  if (coarse && navigator.canShare?.({ files: [file] })) {
+    try {
+      await navigator.share({ files: [file], title: 'Sao lưu Lịch dạy' })
+      return 'saved'
+    } catch (err) {
+      if (err instanceof DOMException && err.name === 'AbortError') return 'declined'
+      // Sharing unavailable after all: fall back to a download.
+    }
+  }
+
+  const url = URL.createObjectURL(file)
   const a = document.createElement('a')
   a.href = url
   a.download = filename
   document.body.appendChild(a)
   a.click()
   a.remove()
-  URL.revokeObjectURL(url)
+  // Revoking at once can leave Safari with an empty file.
+  setTimeout(() => URL.revokeObjectURL(url), 60_000)
   return 'saved'
 }
 
@@ -79,7 +93,24 @@ export class ImportError extends Error {}
 function isValidPayload(data: unknown): data is BackupPayload {
   if (!data || typeof data !== 'object') return false
   const d = data as Record<string, unknown>
-  return d.version === 2 && Array.isArray(d.students) && Array.isArray(d.timetableSlots)
+  // The shape is what matters; a file from an older or newer build still carries the same two lists.
+  return Array.isArray(d.students) && Array.isArray(d.timetableSlots)
+}
+
+/**
+ * Reads a backup that may have travelled through chat apps, notes or mail: drops a byte-order mark and anything
+ * wrapped around the JSON object (a ".json.txt" file, a pasted message).
+ */
+function parseBackup(text: string): unknown {
+  const t = text.replace(/^\uFEFF/, '').trim()
+  try {
+    return JSON.parse(t)
+  } catch {
+    const start = t.indexOf('{')
+    const end = t.lastIndexOf('}')
+    if (start < 0 || end <= start) throw new ImportError('Tệp không phải bản sao lưu JSON (không đọc được nội dung).')
+    return JSON.parse(t.slice(start, end + 1))
+  }
 }
 
 /** Key used to recognise the same student across devices, whose ids differ. */
@@ -122,14 +153,13 @@ function dedupePayload(students: Student[], slots: TimetableSlot[]) {
 export async function importBackup(file: File, mode: 'replace' | 'merge'): Promise<{ students: number; timetableSlots: number }> {
   let data: unknown
   try {
-    const text = await file.text()
-    data = JSON.parse(text)
-  } catch {
-    throw new ImportError('This file could not be read. Please choose a valid Piano Schedule backup (.json) file.')
+    data = parseBackup(await file.text())
+  } catch (err) {
+    throw err instanceof ImportError ? err : new ImportError('Không đọc được tệp. Hãy chọn đúng tệp sao lưu (.json) đã xuất từ ứng dụng — tệp có thể đã bị hỏng khi gửi qua ứng dụng khác.')
   }
 
   if (!isValidPayload(data)) {
-    throw new ImportError('This does not look like a valid Piano Schedule backup file for this version of the app.')
+    throw new ImportError('Tệp này không phải bản sao lưu của ứng dụng (thiếu danh sách học viên hoặc lịch dạy).')
   }
 
   const incoming = dedupePayload(data.students, data.timetableSlots)
