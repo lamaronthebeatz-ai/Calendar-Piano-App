@@ -10,6 +10,7 @@ import { StudentFormModal } from '../features/students/StudentFormModal'
 import { SearchOverlay } from '../features/search/SearchOverlay'
 import { BookOpenLayer } from '../features/curriculum/BookOpen'
 import { Assistant } from '../features/assistant/Assistant'
+import { DonateDialog } from '../features/donate/Donate'
 import { useGlobalShortcuts } from '../hooks/useGlobalShortcuts'
 import { useAutoHideNav } from '../hooks/useAutoHideNav'
 import clsx from 'clsx'
@@ -49,6 +50,7 @@ export function AppShell() {
       <SearchOverlay />
       <BookOpenLayer />
       <Assistant />
+      <DonateDialog />
       <ToastHost />
     </div>
   )

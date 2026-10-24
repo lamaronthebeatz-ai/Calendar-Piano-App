@@ -3,6 +3,7 @@ import { useScrollMemory } from '../hooks/useScrollMemory'
 import { useReveal } from '../hooks/useReveal'
 import { useScrollCollapse } from '../hooks/useScrollCollapse'
 import { Copyright } from './Copyright'
+import { DonateLink } from '../features/donate/Donate'
 
 /**
  * A page's own scroll container that returns to the same place when the user navigates back.
@@ -17,7 +18,10 @@ export function ScrollArea({ children, collapse, ...props }: HTMLAttributes<HTML
   return (
     <div ref={ref} {...props}>
       {children}
-      <Copyright className="px-4 py-6" />
+      <div className="flex flex-col items-center gap-1 px-4 py-6">
+        <Copyright />
+        <DonateLink />
+      </div>
     </div>
   )
 }

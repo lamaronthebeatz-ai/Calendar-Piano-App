@@ -11,6 +11,7 @@ import type { LessonLocation } from '../../types'
 import { LOCATION_PALETTE } from '../../utils/color'
 import { ScrollArea } from '../../components/ScrollArea'
 import { startTour } from '../onboarding/tour'
+import { openDonate } from '../donate/store'
 
 const CURRENCIES = ['VND', 'USD', 'EUR', 'GBP']
 
@@ -164,6 +165,13 @@ export function SettingsPage() {
           <p className="text-[13px] text-[var(--color-ink-muted)]">Xem lại tour giới thiệu từng khu vực của ứng dụng: lịch, học viên, thư viện, âm nhạc học, tủ sách, tìm kiếm và sao lưu.</p>
           <Button variant="secondary" icon={<SparkleIcon width={15} height={15} />} onClick={startTour} fullWidth>
             Xem hướng dẫn
+          </Button>
+        </Section>
+
+        <Section title="Ủng hộ">
+          <p className="text-[13px] text-[var(--color-ink-muted)]">Ứng dụng miễn phí và không quảng cáo. Nếu thấy có ích, mời Lamar một ly cà phê.</p>
+          <Button variant="secondary" onClick={openDonate} fullWidth>
+            ☕ Ủng hộ Lamar
           </Button>
         </Section>
       </div>

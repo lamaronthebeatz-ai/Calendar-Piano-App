@@ -12,6 +12,7 @@ import { applyThemeToDocument, updateSettings } from '../../services/settingsSer
 import { checkConflicts, deleteSlot, moveSlot } from '../../services/timetableService'
 import { downloadBackupFile, exportBackup } from '../../services/backup'
 import { startTour } from '../onboarding/tour'
+import { openDonate } from '../donate/store'
 import { fold, score } from '../search/fold'
 import { WEEKDAY_NAMES } from '../../utils/date'
 import { formatTimeRange } from '../../utils/time'
@@ -257,6 +258,9 @@ function Panel() {
       case 'tour':
         close()
         return setTimeout(startTour, 260)
+      case 'donate':
+        close()
+        return setTimeout(openDonate, 240)
       case 'lock':
         lockPrivate()
         return say({ type: 'text', tone: 'lock', text: 'Đã khoá thời khoá biểu và học viên.' })

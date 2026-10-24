@@ -7,6 +7,7 @@ import { useUIStore } from '../store/uiStore'
 import { useSettings } from '../hooks/useLiveData'
 import { applyThemeToDocument, updateSettings } from '../services/settingsService'
 import { Copyright } from '../components/Copyright'
+import { DonateLink } from '../features/donate/Donate'
 
 export function Sidebar() {
   const settings = useSettings()
@@ -112,6 +113,7 @@ export function Sidebar() {
         </button>
       </div>
       <Copyright className="mt-3" />
+      <DonateLink className="mx-auto mt-1" />
     </aside>
   )
 }

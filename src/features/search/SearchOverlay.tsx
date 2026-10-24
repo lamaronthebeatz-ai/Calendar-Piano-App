@@ -15,6 +15,7 @@ import { LEVEL_LABELS } from '../../utils/labels'
 import { fold, matches, score } from './fold'
 import { pushRecent, recentPaths } from './recent'
 import { openAssistant } from '../assistant/store'
+import { openDonate } from '../donate/store'
 import { canAnimate, useFlip } from '../../components/motion'
 import '../../components/motion-ui.css'
 
@@ -128,6 +129,7 @@ function Palette({ onClose }: { onClose: () => void }) {
           applyThemeToDocument(cycle)
         },
       },
+      { id: 'act-donate', group: 'Thao tác', title: 'Ủng hộ Lamar', hint: 'Mời một ly cà phê ☕', icon: <span className="text-[15px]">☕</span>, run: () => (close(), openDonate()) },
       ...(index ? [{ id: 'act-random', group: 'Thao tác', title: 'Mở một bài ngẫu nhiên', hint: 'Thư viện', icon: <ShuffleIcon width={16} height={16} />, run: () => go(index.randomArticle().path) }] : []),
     ]
 

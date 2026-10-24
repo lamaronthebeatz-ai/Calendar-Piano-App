@@ -18,6 +18,7 @@ export type Command =
   | { kind: 'backup' }
   | { kind: 'tour' }
   | { kind: 'lock' }
+  | { kind: 'donate' }
   | { kind: 'go'; query: string }
 
 /* ------------------------------------------------------------ pieces */
@@ -108,6 +109,7 @@ export function parse(text: string, students: Student[], slots: TimetableSlot[])
   if (/\b(giao dien|che do|theme|nen)\b/.test(f) && /\b(sang|light)\b/.test(f)) return { kind: 'theme', theme: 'light' }
   if (/\b(giao dien|che do|theme)\b/.test(f) && /he thong|tu dong|auto/.test(f)) return { kind: 'theme', theme: 'system' }
   if (/sao luu|xuat du lieu|backup/.test(f)) return { kind: 'backup' }
+  if (/ung ho|donate|ca phe|cafe|coffee/.test(f)) return { kind: 'donate' }
   if (/huong dan|tour|cach dung/.test(f)) return { kind: 'tour' }
   if (/^(khoa|lock)\b|khoa (lai|lich|hoc vien)/.test(f)) return { kind: 'lock' }
 
