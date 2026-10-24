@@ -45,6 +45,7 @@ export function Sidebar() {
         {navItems.map((item) => (
           <NavLink
             key={item.to}
+            data-tour={item.to}
             to={item.to}
             end={item.end}
             className={({ isActive }) =>
@@ -74,6 +75,7 @@ export function Sidebar() {
 
       <div className="flex items-center gap-1 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1">
         <button
+          data-tour="search"
           onClick={() => setSearchOpen(true)}
           className="flex h-9 flex-1 items-center gap-2 rounded-xl px-2.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-raised)] hover:text-[var(--color-ink)]"
         >

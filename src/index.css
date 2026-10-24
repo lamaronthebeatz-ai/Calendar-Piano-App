@@ -1060,3 +1060,29 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
   background: linear-gradient(270deg, #e3dac8, #f6f0e4 8%, #f8f3ea);
   box-shadow: inset -8px 0 14px -10px rgb(0 0 0 / 0.25);
 }
+
+/* Guided tour (Onboarding.tsx) */
+.tour-dim { background: rgb(10 9 8 / 0.55); backdrop-filter: blur(3px); animation: palette-fade 0.3s ease-out both; }
+.tour-spot {
+  border-radius: 14px;
+  box-shadow: 0 0 0 9999px rgb(10 9 8 / 0.58), 0 0 0 2px var(--color-gold), 0 0 24px 4px color-mix(in oklch, var(--color-gold) 45%, transparent);
+  transition: left 0.45s cubic-bezier(0.22, 1, 0.36, 1), top 0.45s cubic-bezier(0.22, 1, 0.36, 1), width 0.45s, height 0.45s;
+  animation: palette-fade 0.3s ease-out both, tour-pulse 2.2s ease-in-out 0.5s infinite;
+}
+.tour-card {
+  box-shadow: var(--shadow-float), 0 30px 80px -30px rgb(0 0 0 / 0.5);
+  animation: tour-in 0.42s cubic-bezier(0.2, 0.9, 0.25, 1.1) both;
+}
+.tour-head { background: radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--color-gold) 13%, transparent), transparent 65%); }
+.tour-icon { color: var(--color-gold); background: var(--color-gold-soft); box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 25%, transparent); }
+.tour-point { animation: tour-point 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.tour-dot { height: 6px; width: 6px; border-radius: 99px; background: var(--color-border-strong); transition: width 0.3s, background-color 0.3s; }
+.tour-dot.is-done { background: color-mix(in oklch, var(--color-gold) 55%, var(--color-border-strong)); }
+.tour-dot.is-active { width: 18px; background: var(--color-gold); }
+.tour.is-leaving { opacity: 0; transition: opacity 0.22s ease-in; }
+@keyframes tour-in { from { opacity: 0; translate: 0 12px; scale: 0.97; } }
+@keyframes tour-point { from { opacity: 0; translate: 0 6px; } }
+@keyframes tour-pulse { 50% { box-shadow: 0 0 0 9999px rgb(10 9 8 / 0.58), 0 0 0 2px var(--color-gold), 0 0 34px 10px color-mix(in oklch, var(--color-gold) 30%, transparent); } }
+@media (prefers-reduced-motion: reduce) {
+  .tour-card, .tour-point, .tour-spot { animation: none; transition: none; }
+}

@@ -5,11 +5,12 @@ import { downloadBackupFile, exportBackup, importBackup } from '../../services/b
 import { Field, SegmentedControl, SelectInput, TextInput } from '../../components/fields'
 import { Button } from '../../components/Button'
 import { Dialog } from '../../components/Dialog'
-import { CloudIcon, DownloadIcon, MoonIcon, SunIcon, UploadIcon } from '../../components/icons'
+import { CloudIcon, DownloadIcon, MoonIcon, SparkleIcon, SunIcon, UploadIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
 import type { LessonLocation } from '../../types'
 import { LOCATION_PALETTE } from '../../utils/color'
 import { ScrollArea } from '../../components/ScrollArea'
+import { startTour } from '../onboarding/tour'
 
 const CURRENCIES = ['VND', 'USD', 'EUR', 'GBP']
 
@@ -153,6 +154,13 @@ export function SettingsPage() {
             </Button>
             <input ref={fileInputRef} type="file" accept="application/json" hidden onChange={handleFileChosen} />
           </div>
+        </Section>
+
+        <Section title="Hướng dẫn sử dụng">
+          <p className="text-[13px] text-[var(--color-ink-muted)]">Xem lại tour giới thiệu từng khu vực của ứng dụng: lịch, học viên, thư viện, âm nhạc học, tủ sách, tìm kiếm và sao lưu.</p>
+          <Button variant="secondary" icon={<SparkleIcon width={15} height={15} />} onClick={startTour} fullWidth>
+            Xem hướng dẫn
+          </Button>
         </Section>
       </div>
 

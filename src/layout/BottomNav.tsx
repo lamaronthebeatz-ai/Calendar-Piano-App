@@ -23,6 +23,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
 
       <div className="relative flex w-14 shrink-0 items-center justify-center">
         <button
+          data-tour="quick"
           onClick={() => setQuickActionsOpen(true)}
           aria-label="Thêm nhanh"
           className="absolute -top-5 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[color-mix(in_oklch,var(--color-accent)_80%,white)] to-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-glow)] ring-4 ring-[var(--color-surface)] transition-transform active:scale-95"
@@ -42,6 +43,7 @@ function NavItem({ item }: { item: (typeof navItems)[number] }) {
   return (
     <NavLink
       to={item.to}
+      data-tour={item.to}
       end={item.end}
       className={({ isActive }) =>
         clsx(

@@ -8,6 +8,7 @@ import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
 import { SettingsPage } from './features/settings/SettingsPage'
 import { PrivateArea } from './components/PrivateArea'
+import { Onboarding } from './features/onboarding/Onboarding'
 
 // Theory content is large and independent of the timetable, so it loads on demand.
 const TheoryPage = lazy(() => import('./features/theory/TheoryPage').then((m) => ({ default: m.TheoryPage })))
@@ -26,6 +27,7 @@ export function App() {
       <div inert={!unlocked} className={clsx('app-veil', !unlocked && 'is-veiled')}>
         <Router />
       </div>
+      {unlocked && !glass && <Onboarding />}
       {glass && (
         <LockScreen
           onUnlock={() => {
