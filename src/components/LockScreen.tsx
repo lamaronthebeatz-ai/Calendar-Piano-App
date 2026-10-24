@@ -66,7 +66,8 @@ const NOTES = [
   { ch: '♪', left: '92%', size: 16, dur: 25, delay: -14 },
 ]
 
-export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone: () => void }) {
+/** `armed` false while the opening intro plays: keys and taps are ignored until it ends. */
+export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () => void; onDone: () => void; armed?: boolean }) {
   const [code, setCode] = useState('')
   const [phase, setPhase] = useState<Phase>('input')
   const [now] = useState(() => new Date())
@@ -113,12 +114,13 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       e.stopPropagation()
+      if (!armed) return
       if (/^\d$/.test(e.key)) press(e.key)
       else if (e.key === 'Backspace') press('del')
     }
     addEventListener('keydown', onKey, true)
     return () => removeEventListener('keydown', onKey, true)
-  }, [press])
+  }, [press, armed])
 
   const date = now.toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })
 
@@ -148,7 +150,7 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
         )}
       >
         <div className="animate-float-up flex flex-col items-center text-center">
-          <span className={clsx('lock-logo relative flex h-[72px] w-[72px] items-center justify-center rounded-[22px] border border-white/40 bg-[var(--color-surface-raised)]/70 shadow-[var(--shadow-float)]', (phase === 'right' || phase === 'leaving') && 'is-open')}>
+          <span data-intro="logo" className={clsx('lock-logo relative flex h-[72px] w-[72px] items-center justify-center rounded-[22px] border border-white/40 bg-[var(--color-surface-raised)]/70 shadow-[var(--shadow-float)]', (phase === 'right' || phase === 'leaving') && 'is-open')}>
             <BrandMark width={62} height={62} />
             {/* A small padlock on the keys; its shackle springs open with the right code. */}
             <span aria-hidden className="lock-logo-badge absolute -bottom-1.5 -right-1.5 flex h-7 w-7 items-center justify-center rounded-full text-[var(--color-gold)]">

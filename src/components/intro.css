@@ -1,0 +1,15 @@
+/* App opening (Intro.tsx) */
+.intro { position: fixed; inset: 0; z-index: 120; display: flex; align-items: center; justify-content: center; }
+.intro-veil { position: absolute; inset: 0; background: radial-gradient(70% 55% at 50% 50%, #17120a, #000 70%); }
+.intro-mark { position: relative; width: min(78vw, 560px); opacity: 0; will-change: transform, opacity; }
+.intro-mark img { display: block; width: 100%; height: auto; filter: drop-shadow(0 0 28px rgb(216 170 80 / 0.35)); }
+/* The shine: a light band masked to the signature's own shape. */
+.intro-mark::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 38%, rgb(255 246 214 / 0.95) 50%, transparent 62%) no-repeat;
+  background-size: 260% 100%; background-position: 130% 0;
+  -webkit-mask: var(--logo) center / 100% 100% no-repeat; mask: var(--logo) center / 100% 100% no-repeat;
+  mix-blend-mode: screen; opacity: 0;
+}
+.intro-mark.is-shining::after { animation: intro-shine 1.1s cubic-bezier(0.45, 0, 0.25, 1) forwards; }
+@keyframes intro-shine { 0% { opacity: 1; background-position: 130% 0; } 85% { opacity: 1; } 100% { opacity: 0; background-position: -30% 0; } }

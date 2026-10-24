@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
+import { Intro } from './components/Intro'
 import { CalendarPage } from './features/calendar/CalendarPage'
 import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
@@ -34,6 +35,8 @@ export function App() {
   // The app renders behind the welcome glass from the start (so the frosting shows it), but stays inert until the code is right.
   const [unlocked, setUnlocked] = useState(isUnlocked)
   const [glass, setGlass] = useState(!unlocked)
+  // The opening intro plays whenever the app opens on the lock screen.
+  const [intro, setIntro] = useState(() => !unlocked && !matchMedia('(prefers-reduced-motion: reduce)').matches)
   // Right after the code is entered (not on a reload of an unlocked session), the support card greets once —
   // except on the very first visit, which belongs to the guided tour.
   const justUnlocked = useRef(false)
@@ -59,8 +62,10 @@ export function App() {
             setTimeout(() => setGlass(false), 1400)
           }}
           onDone={() => setGlass(false)}
+          armed={!intro}
         />
       )}
+      {glass && intro && <Intro onDone={() => setIntro(false)} />}
     </>
   )
 }
