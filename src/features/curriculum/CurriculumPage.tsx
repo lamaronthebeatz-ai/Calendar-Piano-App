@@ -96,7 +96,7 @@ function Shelf() {
           Mỗi cuốn sách, <span className="text-gold-gradient italic">một lộ trình học</span>
         </h2>
         <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)]">
-          Tủ sách gồm các giáo trình lý thuyết âm nhạc và piano do Lamar biên soạn, hệ thống hoá từ thư viện bài viết. Mỗi cuốn được dàn trang như một ấn phẩm hoàn chỉnh — mục lục, dấu trang, tìm kiếm trong sách, tuỳ chỉnh cỡ chữ và nền trang, xuất bản PDF — và mọi chương đều liên kết trực tiếp với bài gốc trong thư viện.
+          Tủ sách gồm các giáo trình lý thuyết âm nhạc và piano do Lamar biên soạn, hệ thống hoá từ thư viện bài viết. Mỗi cuốn được dàn trang như một ấn phẩm hoàn chỉnh — mục lục, dấu trang, tìm kiếm trong sách, tuỳ chỉnh cỡ chữ và nền trang, xuất PDF để in — và mọi chương đều liên kết trực tiếp với bài gốc trong thư viện.
         </p>
       </header>
 
