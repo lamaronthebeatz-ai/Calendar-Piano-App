@@ -3,6 +3,7 @@ import polyphonyCover from '../../assets/covers/phuc-dieu-nghiem-khac.webp'
 import fuxCover from '../../assets/covers/doi-am-fux.webp'
 import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
 import formCover from '../../assets/covers/hinh-thuc-am-nhac.webp'
+import neuhausCover from '../../assets/covers/neuhaus.webp'
 import type { Book } from './types'
 
 /**
@@ -841,6 +842,7 @@ Mỗi bài là một bài của thư viện Lý thuyết (giữ nguyên đườn
     audience: 'Học viên piano từ trung cấp, giáo viên piano',
     hue: 160,
     glyph: '𝄞',
+    coverImage: neuhausCover,
     preface: `
 **Heinrich Neuhaus** (1888 – 1964) dạy piano ở Nhạc viện Moskva gần nửa thế kỷ; học trò của ông có Sviatoslav Richter, Emil Gilels và nhiều thế hệ nghệ sĩ, giáo viên Xô viết. Cuốn *Об искусстве фортепианной игры* (1958) là những ghi chép của ông về nghề dạy và nghề chơi đàn. Sách này đọc theo bản dịch tiếng Anh *The Art of Piano Playing* (K. A. Leibovitch; Kahn & Averill, 1993), giữ đúng trình tự chương mục của Neuhaus.
 
