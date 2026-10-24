@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Dialog } from '../components/Dialog'
-import { CalendarIcon, UsersIcon } from '../components/icons'
+import { CalendarIcon, SearchIcon, UsersIcon } from '../components/icons'
 import { useUIStore } from '../store/uiStore'
 
 export function QuickActionsSheet() {
@@ -8,9 +8,16 @@ export function QuickActionsSheet() {
   const setOpen = useUIStore((s) => s.setQuickActionsOpen)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
   const openCreateStudent = useUIStore((s) => s.openCreateStudent)
+  const setSearchOpen = useUIStore((s) => s.setSearchOpen)
   const navigate = useNavigate()
 
   const actions = [
+    {
+      label: 'Tìm & đi nhanh',
+      description: 'Bài thư viện, sách, chương, trang và thao tác',
+      icon: SearchIcon,
+      onClick: () => setSearchOpen(true),
+    },
     {
       label: 'Thêm buổi học',
       description: 'Thêm một buổi học cố định hằng tuần',
@@ -29,7 +36,7 @@ export function QuickActionsSheet() {
   ]
 
   return (
-    <Dialog open={open} onClose={() => setOpen(false)} title="Thêm nhanh" width="sm">
+    <Dialog open={open} onClose={() => setOpen(false)} title="Thao tác nhanh" width="sm">
       <div className="space-y-1.5">
         {actions.map((action) => (
           <button

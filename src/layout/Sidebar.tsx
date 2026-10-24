@@ -79,7 +79,7 @@ export function Sidebar() {
         >
           <SearchIcon width={16} height={16} />
           Tìm kiếm
-          <kbd className="ml-auto rounded-md border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-1.5 py-0.5 font-sans text-[10px] text-[var(--color-ink-faint)]">/</kbd>
+          <kbd className="ml-auto rounded-md border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-1.5 py-0.5 font-sans text-[10px] text-[var(--color-ink-faint)]">⌘K</kbd>
         </button>
         <button
           onClick={toggleTheme}
