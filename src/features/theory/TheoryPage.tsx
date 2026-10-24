@@ -184,7 +184,13 @@ export function TheoryPage() {
               <h1 className="collapse-in truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">Lý thuyết âm nhạc</h1>
             )}
           </div>
-          {article && <ArticleActions article={article} />}
+          {article ? (
+            <ArticleActions article={article} />
+          ) : (
+            <Link to="/tools" aria-label="Bảng tính nhạc lý" title="Bảng tính: vòng quãng năm, hợp âm, jazz…" className="tools-btn">
+              <span aria-hidden>♫</span>
+            </Link>
+          )}
         </div>
         {article && (
           // Reaching the end lights the bar up and sends a gold spark along it.

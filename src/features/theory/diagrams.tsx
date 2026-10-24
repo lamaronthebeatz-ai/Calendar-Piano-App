@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type KeyboardEvent as ReactKeyboardEvent, type ReactElement, type RefObject } from 'react'
+import { useEffect, useId, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type KeyboardEvent as ReactKeyboardEvent, type ReactElement, type RefObject } from 'react'
 import { LETTERS, NOTE_RE, parseNote, PITCH_CLASS } from './notation'
 import { playNow, type Step } from './audio'
 import { lightStep, reducedMotion, usePlayer, useReveal } from './musicMotion'
@@ -477,7 +477,8 @@ const angleOf = (x: number, y: number) => (Math.atan2(y, x) * 180) / Math.PI
  * Circle of fifths: major keys (outer), relative minors (inner), key signatures (rim). The wheel turns under a
  * finger or the mouse, coasts, and settles with a key at the top; tapping a key brings it up and sounds its tonic triad.
  */
-export function CircleOfFifths() {
+/** `value`/`onSelect`: optional control from outside (the calculators page), as an index into MAJORS (circle order). */
+export function CircleOfFifths({ value, onSelect }: { value?: number; onSelect?: (i: number) => void } = {}) {
   const at = (i: number, r: number) => {
     const a = (i * 30 - 90) * (Math.PI / 180)
     return { x: 150 + r * Math.cos(a), y: 150 + r * Math.sin(a) }
@@ -503,6 +504,7 @@ export function CircleOfFifths() {
       paint(target)
       setMoving(false)
       setSelected(indexAt(target))
+      onSelect?.(indexAt(target))
       then?.()
     }
     if (reducedMotion()) return done()
@@ -518,6 +520,15 @@ export function CircleOfFifths() {
     }
     st.current.raf = requestAnimationFrame(frame)
   }
+  // Follow a key chosen elsewhere, turning the short way round, silently.
+  useEffect(() => {
+    if (value == null || value === indexAt(st.current.rot)) return
+    let target = -value * 30
+    target += Math.round((st.current.rot - target) / 360) * 360
+    settle(target)
+    // settle only reads refs; react to the value alone.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value])
   const nearest = (rot: number) => Math.round(rot / 30) * 30
   const choose = (i: number, minor = false) => {
     // Turn the short way round to bring key i to the top.
