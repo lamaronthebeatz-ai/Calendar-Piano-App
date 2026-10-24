@@ -128,6 +128,20 @@ export function TheoryPage() {
     if (offerResume && el.scrollTop > 400) setDismissed(slug)
   }
   const jump = (i: number) => scroller.current?.querySelector(`#sec-${i}`)?.scrollIntoView({ block: 'start' })
+  // A source opened from the assistant lands on the cited section.
+  useEffect(() => {
+    let j: { slug: string; sec: number } | null = null
+    try {
+      j = JSON.parse(sessionStorage.getItem('assist-jump') ?? 'null')
+    } catch {
+      /* nothing to jump to */
+    }
+    if (!j || j.slug !== slug) return
+    sessionStorage.removeItem('assist-jump')
+    if (j.sec < 0) return
+    const t = setTimeout(() => scroller.current?.querySelector(`#sec-${j.sec}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' }), 450)
+    return () => clearTimeout(t)
+  }, [slug])
   const back = useBack(article ? `/theory?c=${article.category}` : '/theory')
 
   useEffect(() => {
