@@ -935,7 +935,7 @@ Theo luận văn của Hood (1982), hai hướng chính là **Đô giữa** và 
 Những gợi ý trên là **kinh nghiệm nghề**, không phải kết luận nghiên cứu. Nghiên cứu duy nhất trong thư viện so sánh trực tiếp hai cách đọc (DiCienzo, 2019) cho kết quả trái với kỳ vọng — xem [[cach-day-doc-not]].
 
 ## Lưu ý về Beyer
-Beyer vẫn rất phổ biến ở châu Á. Nhận xét của người biên soạn (chưa có nghiên cứu đối chứng): sách gồm các bài ngắn tăng dần độ khó nhưng gần như không có phần nghe, sáng tạo hay đọc quãng có hệ thống — nên dùng kèm [[thi-tau]], [[ngau-hung-piano]] và bài hát quen thuộc.
+Beyer vẫn rất phổ biến ở châu Á. Nhận xét của Lamar (chưa có nghiên cứu đối chứng): sách gồm các bài ngắn tăng dần độ khó nhưng gần như không có phần nghe, sáng tạo hay đọc quãng có hệ thống — nên dùng kèm [[thi-tau]], [[ngau-hung-piano]] và bài hát quen thuộc.
 Tổng quan: [[su-pham-piano]].
 
 **Đánh giá chi tiết** điểm mạnh, điểm yếu của từng bộ (kèm giáo trình người lớn, ứng dụng và chương trình nhạc lý) và những gì nghiên cứu thật sự cho biết về cách đọc Đô giữa: [[danh-gia-giao-trinh-piano-va-nhac-ly]].

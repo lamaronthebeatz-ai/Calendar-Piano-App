@@ -1108,7 +1108,7 @@ So sánh: quy tắc của Fux — [[doi-am-kep-fux]]; công thức tổng quát 
 | Số 3 | bè giữa | bè dưới | bè trên |
 ::scan albrechtsberger 984 | Ba chủ đề và cách đổi chỗ chính thứ nhất
 ::scan albrechtsberger 990 | Fugue kép ba chủ đề (phần đầu)
-Mỗi cách chính có các cách phụ "phải sinh cùng quãng"; chỉ ba cách chính cho quãng và hợp âm khác nhau. (Cách đọc bảng theo cột là cách hiểu của người biên soạn.)
+Mỗi cách chính có các cách phụ "phải sinh cùng quãng"; chỉ ba cách chính cho quãng và hợp âm khác nhau. (Cách đọc bảng theo cột là cách hiểu của Lamar.)
 - Không nhất thiết ba chủ đề vào trong vài ô đầu: mẫu **fugue organ Sol thứ ba chủ đề của Mattheson** — chủ đề 1 làm fugue đơn 34 ô, chủ đề 2 phát triển riêng 74 ô, chủ đề 3 25 ô, rồi ghép dần, cả ba cùng vang ở ô áp chót.
 ::scan albrechtsberger 991 | Một fugue kép ba chủ đề khác — số 1, 2, 3 đánh dấu chỗ vào (phần đầu)
 - Fugue "là trang sức chính cho giao hưởng và tứ tấu, và gây hiệu quả mạnh trên sân khấu"; thay chủ đề khô cứng bằng chủ đề giàu biểu cảm — mẫu là **Handel**.

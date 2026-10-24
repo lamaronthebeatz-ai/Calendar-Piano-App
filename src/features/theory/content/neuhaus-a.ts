@@ -24,7 +24,7 @@ export const neuhausA: Article[] = [
     body: `
 Bài này mở đầu loạt bài đọc cuốn *The Art of Piano Playing* (Nghệ thuật chơi piano) của Heinrich Neuhaus theo bản dịch Anh của K. A. Leibovitch. Trước chương I, sách có ba văn bản ngắn: **lời giới thiệu** của người biên tập bản Anh (một trang tiểu sử), **lời tựa cho lần xuất bản thứ hai** do chính Neuhaus viết, và phần **“Thay lời tựa”** — bốn luận đề mà ông tuyên bố sẽ phát triển trong toàn bộ cuốn sách. Ba văn bản này cho biết ai đang nói, nói trong hoàn cảnh nào, và nói với tinh thần gì; đọc kỹ chúng giúp hiểu đúng giọng điệu của các chương sau.
 
-Bài trình bày lại theo đúng trình tự của sách. Trích dẫn trong ngoặc kép là dịch sát từ bản Anh; phần còn lại là lời diễn giải của người biên soạn. Chú thích nào trong bản Anh ghi “ed.” là của người biên tập, không phải của Neuhaus — bài sẽ nói rõ ở từng chỗ. Lộ trình chung của cả bộ ở [[neuhaus-lo-trinh]].
+Bài trình bày lại theo đúng trình tự của sách. Trích dẫn trong ngoặc kép là dịch sát từ bản Anh; phần còn lại là lời diễn giải của Lamar. Chú thích nào trong bản Anh ghi “ed.” là của người biên tập, không phải của Neuhaus — bài sẽ nói rõ ở từng chỗ. Lộ trình chung của cả bộ ở [[neuhaus-lo-trinh]].
 
 ## Phần I. Tiểu sử Heinrich Neuhaus (theo lời giới thiệu của người biên tập)
 
@@ -249,7 +249,7 @@ Phần “Thay lời tựa” kết bằng việc báo trước các đề tài 
 
 ## Cách luyện tập theo Neuhaus
 
-Các bước dưới đây rút từ lời tựa và bốn luận đề; người biên soạn sắp xếp lại thành quy trình.
+Các bước dưới đây rút từ lời tựa và bốn luận đề; Lamar sắp xếp lại thành quy trình.
 
 1. **Nghe trước khi chơi.** Trước khi học một bản mới, hãy cố mang nó trong đầu: đọc bản nhạc, hát thầm giai điệu chính, nghe vài bản thu nếu cần, cho đến khi hình dung được âm nhạc mà không cần đàn.
 2. **Làm quen sơ bộ, rồi nắm hình tượng càng sớm càng tốt.** Sau một vài lượt đọc thô, hãy tự trả lời: tác phẩm nói gì (tính cách, cảm xúc, chất thơ)? Và gọi tên được về mặt lý thuyết: hình thức, giọng, các mảng chủ đề.
@@ -262,7 +262,7 @@ Các bước dưới đây rút từ lời tựa và bốn luận đề; ngườ
 
 ## Đối chiếu
 
-*(Phần này của người biên soạn, không phải của Neuhaus.)*
+*(Phần này của Lamar, không phải của Neuhaus.)*
 
 - Ý “âm nhạc phải có trong đầu trước” gần với các phương pháp luyện tai trong và tập trong đầu: [[luyen-tai]], [[tap-trong-dau]], [[hoc-thuoc-bai]].
 - Quan niệm “kỹ thuật là nghệ thuật” và tập có mục đích nối với [[phuong-phap-luyen-tap]] và [[ky-thuat-piano]]; bối cảnh lịch sử ở [[lich-su-ky-thuat-piano]].
@@ -311,7 +311,7 @@ Các bước dưới đây rút từ lời tựa và bốn luận đề; ngườ
     body: `
 Chương I là chương nền tảng của cuốn *Nghệ thuật chơi piano*. Ở phần “Thay lời tựa” (xem [[neuhaus-loi-tua-va-tieu-su]]), Neuhaus đã tuyên bố âm nhạc — “hình tượng nghệ thuật” — đứng đầu trong thứ bậc các nguyên tắc của biểu diễn. Chương này giải thích vì sao, làm việc với hình tượng bắt đầu từ lúc nào và diễn ra thế nào, đối với học trò mọi mức tài năng. Chương được viết theo lối trò chuyện: xen giữa các luận điểm là giai thoại về Godowsky, Richter, Liszt, những trang tự truyện về tuổi thơ của chính Neuhaus, và một ví dụ dạy học chi tiết duy nhất của cả cuốn sách — Allegretto trong Sonata “Ánh trăng” của Beethoven.
 
-Bài này đi theo đúng trình tự chương, chia thành các mục có tiêu đề do người biên soạn đặt (bản gốc không chia mục). Trích dẫn trong ngoặc kép dịch sát từ bản Anh; còn lại là diễn giải. Chú thích ghi “ed.” là của người biên tập bản Anh.
+Bài này đi theo đúng trình tự chương, chia thành các mục có tiêu đề do Lamar đặt (bản gốc không chia mục). Trích dẫn trong ngoặc kép dịch sát từ bản Anh; còn lại là diễn giải. Chú thích ghi “ed.” là của người biên tập bản Anh.
 
 ## 1. Nghi ngờ về chính nhan đề
 
@@ -706,7 +706,7 @@ Chương I khép lại bằng một câu như lời hứa: “Ai bị âm nhạc
 
 ## Cách luyện tập theo Neuhaus
 
-Rút từ chương I; người biên soạn sắp lại thành các bước.
+Rút từ chương I; Lamar sắp lại thành các bước.
 
 1. **Nắm toàn thể trước.** Với bản nhạc mới, đọc hoặc chơi lướt trọn bài để có ý niệm đầy đủ về hình tượng trước khi đi vào chi tiết.
 2. **Phân tích như nhạc trưởng.** Tách riêng: đường giai điệu, bè trầm, phần đệm, các bè phức điệu; vẽ sơ đồ hoà âm. Đánh dấu các “khúc quanh” của hình thức (chuyển chủ đề hai, tái hiện, coda) và tập kỹ những chỗ ấy.
@@ -723,7 +723,7 @@ Rút từ chương I; người biên soạn sắp lại thành các bước.
 
 ## Đối chiếu
 
-*(Phần này của người biên soạn, không phải của Neuhaus.)*
+*(Phần này của Lamar, không phải của Neuhaus.)*
 
 - Allegretto trong Sonata “Ánh trăng” là chương giữa; bài phân tích chương 1 của sonata này trong thư viện: [[phan-tich-anh-trang-chuong-1]].
 - Lời khuyên học bản nhạc như tổng phổ, nhận ra các mốc hình thức: [[hinh-thuc-sonata]], [[dien-dat-cau-nhac]], [[lam-noi-giai-dieu]].

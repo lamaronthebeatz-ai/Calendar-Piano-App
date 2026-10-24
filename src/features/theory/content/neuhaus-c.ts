@@ -316,7 +316,7 @@ Mục §3 khép lại bằng một nhận xét: những suy nghĩ dựa trên kh
 
 ## Cách luyện tập theo Neuhaus
 
-Các bước dưới đây rút từ ba mục trên; thứ tự là của người biên soạn.
+Các bước dưới đây rút từ ba mục trên; thứ tự là của Lamar.
 
 1. **Trước khi luyện một đoạn khó, nghe rõ nó trong đầu.** Hỏi: mình muốn tiếng đàn ra sao? Mục tiêu càng rõ thì cách làm càng lộ ra (§1).
 2. **Kiểm kê cơ thể.** Khi gặp đoạn "không ra tiếng", xem mình đang dùng phần nào: chỉ ngón? cả cẳng tay? có dùng lưng và điểm tựa trên ghế không? Tránh cả hai lỗi: "pháo hạng nặng bắn chim sẻ" và "súng đồ chơi chống khẩu đội pháo".
@@ -332,7 +332,7 @@ Các bước dưới đây rút từ ba mục trên; thứ tự là của ngư�
 
 ## Đối chiếu
 
-*Phần này của người biên soạn, không phải của Neuhaus.*
+*Phần này của Lamar, không phải của Neuhaus.*
 
 - Tư thế năm nốt của Chopin và lời khuyên học âm giai Si trưởng trước Đô trưởng có thể đặt cạnh bài [[luyen-am-giai]] và [[tu-the]]; quan niệm dùng toàn bộ cơ thể từ đầu ngón đến điểm tựa trên ghế nối với [[ky-thuat-cham-phim]].
 - Bốn đại lượng F, h, v, m là cách Neuhaus nói lại các ý đã nêu ở chương về âm sắc ([[neuhaus-am-sac]]); về dải động lực xem thêm [[cuong-do]].
@@ -650,13 +650,13 @@ Nguồn gốc của những bàn tay như vậy có hai mặt:
 1. Người ấy sinh ra có tài năng và có đôi tay tuyệt vời — điều này không phụ thuộc vào ta.
 2. Vì có tài — tức là yêu và muốn chơi (tài năng, ông nhắc lại, là một đam mê) — người sở hữu đôi tay ấy chơi nhiều, chơi đúng, chơi hay, và nhờ vậy phát triển theo cách tốt nhất đôi tay Tự nhiên ban cho.
 
-(Ở vế thứ hai, bản Anh — và cả bản dịch tiếng Việt dùng để tham khảo — đều ghi trong ngoặc là điều đó "cũng không phụ thuộc vào ta"; người biên soạn ngờ đây là lỗi dịch hoặc in, vì câu kết ngay sau đó coi chính vế này là cái người khác có thể học theo. Chưa đối chiếu được bản Nga.)
+(Ở vế thứ hai, bản Anh — và cả bản dịch tiếng Việt dùng để tham khảo — đều ghi trong ngoặc là điều đó "cũng không phụ thuộc vào ta"; Lamar ngờ đây là lỗi dịch hoặc in, vì câu kết ngay sau đó coi chính vế này là cái người khác có thể học theo. Chưa đối chiếu được bản Nga.)
 
 Người pianist thật sự trở thành chính mình như thế. Neuhaus kết mục: nếu những người có bàn tay bất tiện không bắt chước được người ấy ở điểm thứ nhất, hãy để họ bắt chước ở điểm thứ hai — kết quả tốt sẽ không phải chờ lâu.
 
 ## Cách luyện tập theo Neuhaus
 
-Các bước dưới đây rút từ §4; thứ tự là của người biên soạn.
+Các bước dưới đây rút từ §4; thứ tự là của Lamar.
 
 1. **Đào đường hầm từ hai đầu.** Mọi bài tập thả lỏng phải đi cùng việc phát triển tai, trí tưởng tượng và sự hiểu tác phẩm; tự do thể chất không đủ nếu thiếu tự do âm nhạc.
 2. **Bài tập cổ tay:** cổ tay cao, bàn tay buông thõng, đánh một nốt, hạ cổ tay xuống thấp nhất bằng động tác nhanh, đều; nâng cổ tay lên cho tới khi ngón tự rời phím. Làm với từng ngón.
@@ -674,7 +674,7 @@ Các bước dưới đây rút từ §4; thứ tự là của người biên so
 
 ## Đối chiếu
 
-*Phần này của người biên soạn, không phải của Neuhaus.*
+*Phần này của Lamar, không phải của Neuhaus.*
 
 - Cách chuyển ngón cái bằng "đưa bàn tay qua ngón cái" nên đọc cùng [[luyen-am-giai]] và [[luyen-hop-am-rai]]; vai trò của xương quay và chuyển động xoay cẳng tay liên quan tới [[tremolo-xoay-cang-tay]].
 - Phương pháp hai cực rồi tổng hợp cho Prelude Sol trưởng là một mẫu cụ thể của [[phuong-phap-luyen-tap]]; ý "nhìn trước" và chú ý gần với [[tap-trong-dau]].

@@ -29,7 +29,7 @@ export const formRuXxA: Article[] = [
     body: `
 Ba sách đã có trong bộ (Sposobin, Mazel, Asafyev) dạy hình thức trên chất liệu chủ yếu từ Bach đến Shostakovich. Cuốn thứ tư — **A. S. Sokolov, *Введение в музыкальную композицию XX века*** (Dẫn nhập vào sáng tác âm nhạc thế kỷ XX; M.: VLADOS, 2004) — viết cho chặng cuối môn Phân tích tác phẩm ở Nhạc viện Moskva, chặng mà theo lời tác giả giáo viên "rất thiếu tài liệu hỗ trợ". Bài này đọc phần mở đầu của sách: Lời nói đầu và ba chương đầu. Đây chưa phải chương về kỹ thuật hay về hình thức. Chính Sokolov gọi các chương này là **"lời dẫn" (преамбула)** cần có trước khi bàn ngôn ngữ, kỹ thuật, văn bản và hình thức ở các chương sau *(Sokolov, Lời nói đầu)*. Bài này đọc chúng với một câu hỏi: **chúng thay đổi cách ta hiểu chữ "hình thức" ra sao.**
 
-Cách ghi nguồn: *(Sokolov, ch. n)* là chương của sách; *(Sokolov, Lời nói đầu)* là lời nói đầu. Câu trong ngoặc kép dịch sát từ lớp chữ của bản PDF. Sơ đồ đối xứng ở chương 2 là hình ảnh, không có trong lớp chữ; phần mô tả sơ đồ dưới đây dựng lại từ lời giảng của Sokolov ngay sau hình. Những chỗ nối với Sposobin, Mazel, Asafyev là **đối chiếu của người biên soạn**, không phải lời Sokolov; Sokolov không dẫn ba sách này ở ba chương đầu.
+Cách ghi nguồn: *(Sokolov, ch. n)* là chương của sách; *(Sokolov, Lời nói đầu)* là lời nói đầu. Câu trong ngoặc kép dịch sát từ lớp chữ của bản PDF. Sơ đồ đối xứng ở chương 2 là hình ảnh, không có trong lớp chữ; phần mô tả sơ đồ dưới đây dựng lại từ lời giảng của Sokolov ngay sau hình. Những chỗ nối với Sposobin, Mazel, Asafyev là **đối chiếu của Lamar**, không phải lời Sokolov; Sokolov không dẫn ba sách này ở ba chương đầu.
 
 ## 1. Sách này nhằm điều gì
 ### Không phải sách giáo khoa, không phải sách tra cứu
@@ -183,7 +183,7 @@ Schnittke mô tả sự phân cực ấy. **Hướng thứ nhất**: tác phẩm
 Vậy Stravinsky của *Le Sacre* đối lập mình với tính phân tích và tổng hợp của trường phái Vienna mới bằng gì? Sokolov đề xuất: **hỗn dung** (синкретизм) như "ghi lại tư duy" (запись мышления). Liên hệ: Kandinsky nói tới tiếng nói của "mệnh lệnh bên trong", chủ nghĩa siêu thực ghi tư duy ngoài sự kiểm soát của lý trí; trong nhạc đương đại: "sáng tác trong lúc biểu diễn" — Boulez gọi là *work in progress*; *Visage* của Berio như quá trình sinh ra một "ngôn ngữ" không có thật, gợi thời âm lời nói và âm nhạc còn hỗn dung. D. Mitchell gọi *Le Sacre* và *Erwartung* của Schoenberg là những cuộc "khám phá vô thức". *(Sokolov, ch. 3)* Chương khép bằng việc mở sang đề tài chương 4: quan hệ mới giữa lý thuyết và thực hành, từ hai chữ Hy Lạp *aisthetikos* (cảm được) và *noetikos* (nghĩ được). Xem [[hinh-thuc-nga-xx-ly-thuyet-va-ky-thuat]].
 
 ## 6. Hệ quả cho cách hiểu hình thức
-Sokolov chưa bàn hình thức trực tiếp ở ba chương này (phạm trù hình thức là chương 7). Các điểm dưới đây là **người biên soạn rút ra** từ ba chương, có chỉ rõ chỗ nào đã là lời Sokolov.
+Sokolov chưa bàn hình thức trực tiếp ở ba chương này (phạm trù hình thức là chương 7). Các điểm dưới đây là **Lamar rút ra** từ ba chương, có chỉ rõ chỗ nào đã là lời Sokolov.
 
 1. **Hình thức điển hình là một canon lịch sử, không phải chân lý ngoài thời gian.** Lời Sokolov: thể loại và hình thức đi qua tiền canon – canon – hậu canon. Hệ quả: các kiểu hình thức học ở Phần I – VI của bộ này (đoạn nhạc, ba đoạn, rondo, sonata…) là "hình thức như nguyên tắc" đã được canon hoá; khi phân tích nhạc thế kỷ XX, câu hỏi không phải "đây là hình thức gì?" mà "tác phẩm đứng ở đâu trên phổ canon – hậu canon – canon mới".
 2. **Phân tích một tác phẩm là đo khoảng cách giữa nguyên tắc và cái cho sẵn.** Lời Sokolov (theo Bobrovsky): văn bản là "tập hợp những chuẩn mực được thực hiện và bị vi phạm". Với opus unicum, nhiều khi không có hình thức – nguyên tắc nào sẵn; nhà phân tích phải tự dựng "mô hình bố cục" hay "cú pháp cá thể" của chính tác phẩm.
@@ -194,7 +194,7 @@ Sokolov chưa bàn hình thức trực tiếp ở ba chương này (phạm trù 
 7. **Các khung hình thức truyền thống vẫn là công cụ tư duy.** Cả Gubaidulina lẫn Sokolov dùng *sonata* để nghĩ về cả một thế kỷ; Sokolov còn dùng "bước ngoặt trong chủ đề phụ" và *confirmatio*. Hiểu kỹ sonata (xem [[hinh-thuc-nga-sonata]]) vì vậy vẫn cần cho nhạc thế kỷ XX, dù không phải để dán nhãn.
 
 ## Sokolov và ba sách kia — đối chiếu
-Bảng do người biên soạn lập; cột Sposobin – Mazel – Asafyev chỉ ghi các khái niệm đã trình bày trong bộ này.
+Bảng do Lamar lập; cột Sposobin – Mazel – Asafyev chỉ ghi các khái niệm đã trình bày trong bộ này.
 
 | Vấn đề | Sokolov (2004, ch. 1 – 3) | Sposobin, Mazel, Asafyev (trong bộ) |
 |---|---|---|
@@ -207,10 +207,10 @@ Bảng do người biên soạn lập; cột Sposobin – Mazel – Asafyev ch�
 | Khung lịch sử | Vectơ văn hoá (ratio – sensus, Apollo – Dionysus, avant-garde – modern), đối xứng quanh 1950 | Không có khung tương tự; Asafyev nhìn tiến hoá hình thức như "nới rộng biên giới chuyển động" |
 | Nguồn dẫn | Ưu tiên lời nhà soạn nhạc, có chỗ từ trò chuyện riêng không ghi nguồn | Sposobin, Mazel: chủ yếu phân tích bản nhạc; Asafyev: tiểu luận lý thuyết |
 
-Điểm khác cốt lõi (nhận định của người biên soạn): ba sách kia coi kiểu hình thức là điểm xuất phát, cá thể hoá là chỗ lệch khỏi nó; Sokolov coi chính quan hệ giữa canon và cái cá thể là đối tượng, vì ở thế kỷ XX cái cá thể (opus unicum) thường là mục đích.
+Điểm khác cốt lõi (nhận định của Lamar): ba sách kia coi kiểu hình thức là điểm xuất phát, cá thể hoá là chỗ lệch khỏi nó; Sokolov coi chính quan hệ giữa canon và cái cá thể là đối tượng, vì ở thế kỷ XX cái cá thể (opus unicum) thường là mục đích.
 
 ## Cách phân tích
-Các bước dưới đây do người biên soạn lập từ ba chương đầu, để chuẩn bị cho các phân tích cụ thể ở [[hinh-thuc-nga-xx-phan-tich-tac-pham]].
+Các bước dưới đây do Lamar lập từ ba chương đầu, để chuẩn bị cho các phân tích cụ thể ở [[hinh-thuc-nga-xx-phan-tich-tac-pham]].
 
 1. **Định vị trên trục văn hoá.** Năm sáng tác, nơi sáng tác; thuộc vùng nào trên "sơ đồ đối xứng" (modern, avant-garde làn sóng 1 hay 2, tân cổ điển, hậu hiện đại)? Nhà soạn nhạc tự nhận mình đứng ở đâu (như Tarnopolsky, Ligeti)?
 2. **Xác định vectơ chủ đạo.** Nghiêng về ratio hay sensus? Apollo hay Dionysus?

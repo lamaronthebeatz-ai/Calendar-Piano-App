@@ -216,7 +216,7 @@ Bấm những hợp âm ấy bằng ngón bình thường (dùng cả năm ngón
 
 ::scan neuhaus #91 | Ví dụ 49: đoạn kết "La Campanella" của Liszt — tay phải nhảy quãng tám ở âm khu rất cao, tay trái nhảy từ nốt trầm lên hợp âm.
 
-*Ghi chú của người biên soạn:* ở chỗ này cả bản Anh lẫn bản dịch tiếng Việt dùng để tham khảo đều **khuyết một đoạn** — phần Neuhaus mô tả cách ông luyện đoạn kết Campanella. Văn bản còn lại chỉ nối vào bằng mấy chữ "… bằng ý chí", nên bài này không dựng lại phần bị mất.
+*Ghi chú của Lamar:* ở chỗ này cả bản Anh lẫn bản dịch tiếng Việt dùng để tham khảo đều **khuyết một đoạn** — phần Neuhaus mô tả cách ông luyện đoạn kết Campanella. Văn bản còn lại chỉ nối vào bằng mấy chữ "… bằng ý chí", nên bài này không dựng lại phần bị mất.
 
 Phần tiếp theo là một lời tự thú. Ông nói, vì sự thật, rằng mình không phải lúc nào cũng làm việc như vậy. Nhiều khi ông uể oải, lười biếng — không muốn tập, bị kéo về "những bờ bến rất khác" — và kết quả đúng như có thể đoán. Có những thời kỳ ông tập một cách ngu ngốc và thiếu ý chí, và than ôi, điều đó xảy ra đúng vào những lúc ông có ý thức quay lưng lại với âm nhạc (may là hiếm) và chỉ đặt cho mình nhiệm vụ kỹ thuật virtuoso trong khi đầu óc bận nghĩ chuyện khác thú vị hơn. Kết luận của ông: cố tình biến mình thành kẻ đần khi bản chất không phải vậy thì không thể không bị trừng phạt. Một chú thích thêm: điều này chứng minh — dù chẳng cần chứng minh — rằng ông không phải virtuoso mà chỉ là một nhạc sĩ hiểu piano và biết diễn đạt mình trên nó.
 
@@ -471,7 +471,7 @@ Các bước dưới đây rút từ chính mục 5, sắp theo thứ tự các 
 
 ## Đối chiếu
 
-*Phần này của người biên soạn.*
+*Phần này của Lamar.*
 
 - Tám yếu tố của Neuhaus trùng khá sát với cách chia các trang kỹ thuật trong thư viện: [[ky-thuat-cham-phim]] (một nốt, âm sắc), [[bai-tap-ngon]] (năm ngón, độc lập ngón), [[luyen-am-giai]], [[luyen-hop-am-rai]], [[not-kep]], [[ky-thuat-quang-tam]], [[buoc-nhay-xa]], [[choi-phuc-dieu]]. Điểm khác là Neuhaus đặt phức điệu vào bảng kỹ thuật như một yếu tố ngang hàng, thậm chí cao nhất.
 - Lời khuyên học kỹ thuật trên văn học thật và thay Etude bằng Prelude của Bach nên đọc cùng [[phuong-phap-luyen-tap]] và [[lich-su-ky-thuat-piano]] (truyền thống Czerny – Clementi mà Neuhaus vừa dùng vừa phê phán).
@@ -786,7 +786,7 @@ Lưu ý: Neuhaus không bảo người mới học bỏ ngón bấm; như ở nh
 
 ## Đối chiếu
 
-*Phần này của người biên soạn.*
+*Phần này của Lamar.*
 
 - Trang [[ngon-bam]] của thư viện trình bày các quy ước ngón bấm cơ bản (âm giai, hợp âm rải, luồn ngón). Neuhaus đặt chúng dưới một nguyên tắc cao hơn: ngón bấm phục vụ phân câu — nên đọc cùng [[dien-dat-cau-nhac]].
 - Quan niệm "ông chủ – người hầu" về hai trí nhớ nối với [[hoc-thuoc-bai]] và [[tap-trong-dau]]: luyện ngón bấm cố định là để giải phóng sự chú ý cho tai, không phải để thay tai.
@@ -1031,7 +1031,7 @@ Trong các lỗi pedal hay gặp nhất ở học trò, Neuhaus kể:
 
 Một số giáo viên đòi hỏi vô lý rằng pedal phải thay trên **mỗi nốt giai điệu**, kể cả khi hoà âm không đổi. Theo Neuhaus, đó là do không hiểu bức tranh âm thanh và không tạo được sự cân bằng cường độ cần thiết. Lối tiếp cận "ngữ pháp" ấy sinh ra một thứ **pedal nấc cụt**, hay pedal "**vệ sinh**" như cố giáo sư **Igumnov** hay nói. Tiếc là một số ấn bản nhạc cổ điển và lãng mạn ở nước ông đầy loại pedal này. Ông bảo đảm không nghệ sĩ giỏi nào dùng nó.
 
-*Ghi chú của người biên soạn:* chú thích của người biên tập bản Anh gắn ở tên Igumnov lại ghi "giáo viên piano nổi tiếng ở Trường Âm nhạc Trung ương Moskva trực thuộc Nhạc viện, thành lập năm 1932" — câu này có vẻ lệch chỗ; Konstantin Igumnov (1873 – 1948) được biết đến chủ yếu là giáo sư Nhạc viện Moskva (ngoài sách).
+*Ghi chú của Lamar:* chú thích của người biên tập bản Anh gắn ở tên Igumnov lại ghi "giáo viên piano nổi tiếng ở Trường Âm nhạc Trung ương Moskva trực thuộc Nhạc viện, thành lập năm 1932" — câu này có vẻ lệch chỗ; Konstantin Igumnov (1873 – 1948) được biết đến chủ yếu là giáo sư Nhạc viện Moskva (ngoài sách).
 
 ## Pedal trong Scriabin
 
@@ -1078,7 +1078,7 @@ Vì phần bổ sung hợp lý duy nhất cho chương này sẽ là một loạ
 
 ## Đối chiếu
 
-*Phần này của người biên soạn.*
+*Phần này của Lamar.*
 
 - Trang [[ban-dap]] của thư viện trình bày cơ chế ba pedal và các kỹ thuật cơ bản (pedal nối, nửa pedal). Neuhaus thêm chiều thẩm mỹ: pedal là một ẩn số trong "phương trình" cùng âm sắc và nhịp điệu — nên đọc cùng [[neuhaus-am-sac]] và [[neuhaus-nhip-dieu]].
 - Lập luận về pedal trong Bach liên quan tới [[choi-phuc-dieu]] và tới phần phức điệu trong [[neuhaus-cac-yeu-to-ky-thuat]].

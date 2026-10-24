@@ -27,7 +27,7 @@ export const formRuXxC: Article[] = [
       'Chương 7 và phần Kết luận của Sokolov (2004): hình thức trong âm nhạc thế kỷ XX được bàn như cặp "hình thức – chất liệu", không còn chỉ là cặp "hình thức – nội dung". Sách mô tả những nguyên tắc tạo hình thức phi cổ điển: chủ đề xuất hiện như kết quả chứ không như luận đề, nguyên tắc vectơ, nguyên tắc module, moment form, hình thức dòng chảy, vi hình thức, và mấy cách phân loại (Stockhausen, Denisov, Xenakis, Tsenova). Bài đặt các khái niệm ấy cạnh "hình thức như quá trình" của Asafyev và các khái niệm chủ đề – chức năng của Sposobin, Mazel đã có trong bộ.',
     refs: [SOKOLOV_REF],
     body: `
-Bài thứ tư của **Phần VII — Hình thức và sáng tác thế kỷ XX** trong [[hinh-thuc-nga-lo-trinh|bộ Hình thức âm nhạc — trường phái Nga – Xô viết]]. Nguồn là chương 7 và phần Kết luận (Заключение) trong sách giáo khoa của A. S. Sokolov, *Введение в музыкальную композицию XX века* (Dẫn nhập vào sáng tác âm nhạc thế kỷ XX, M.: VLADOS, 2004). Ba bài trước của phần này đã trình bày bối cảnh: truyền thống và cách tân ([[hinh-thuc-nga-xx-truyen-thong-va-van-hoa]]), lý thuyết và kỹ thuật ([[hinh-thuc-nga-xx-ly-thuyet-va-ky-thuat]]), vấn đề văn bản ([[hinh-thuc-nga-xx-van-ban]]). Bài này là chỗ nối: Sokolov dùng lại khái niệm của Asafyev, và các khái niệm chủ đề, chức năng phần mà Sposobin và Mazel đã xây cho âm nhạc cổ điển – lãng mạn được đặt vào những hoàn cảnh mà chúng không còn dùng nguyên được nữa. Mọi chỗ đối chiếu với ba sách kia là **của người biên soạn**, không phải của Sokolov; Sokolov chỉ nhắc trực tiếp tới Asafyev hai lần (xem mục 5 và mục 11).
+Bài thứ tư của **Phần VII — Hình thức và sáng tác thế kỷ XX** trong [[hinh-thuc-nga-lo-trinh|bộ Hình thức âm nhạc — trường phái Nga – Xô viết]]. Nguồn là chương 7 và phần Kết luận (Заключение) trong sách giáo khoa của A. S. Sokolov, *Введение в музыкальную композицию XX века* (Dẫn nhập vào sáng tác âm nhạc thế kỷ XX, M.: VLADOS, 2004). Ba bài trước của phần này đã trình bày bối cảnh: truyền thống và cách tân ([[hinh-thuc-nga-xx-truyen-thong-va-van-hoa]]), lý thuyết và kỹ thuật ([[hinh-thuc-nga-xx-ly-thuyet-va-ky-thuat]]), vấn đề văn bản ([[hinh-thuc-nga-xx-van-ban]]). Bài này là chỗ nối: Sokolov dùng lại khái niệm của Asafyev, và các khái niệm chủ đề, chức năng phần mà Sposobin và Mazel đã xây cho âm nhạc cổ điển – lãng mạn được đặt vào những hoàn cảnh mà chúng không còn dùng nguyên được nữa. Mọi chỗ đối chiếu với ba sách kia là **của Lamar**, không phải của Sokolov; Sokolov chỉ nhắc trực tiếp tới Asafyev hai lần (xem mục 5 và mục 11).
 
 Cách ghi nguồn: *(Sokolov, ch. 7)*, *(Sokolov, Kết luận)*. Những câu Sokolov trích từ người khác được ghi theo dạng "X, dẫn theo Sokolov"; chú thích nguồn gốc là chú thích của sách.
 
@@ -54,7 +54,7 @@ Về *Sinfonia* của Berio: không thể trả lại sức sống thật cho nh
 
 Kết luận của Sokolov: trong đa phong cách, **các yếu tố của hình thức cổ điển cũng trở thành ký hiệu**, được kéo vào một ngữ cảnh mới và vì thế mang thêm nghĩa theo ý đồ kịch tính của tác phẩm. Ví dụ của ông là chương III *Sinfonia* của Berio: một "rondo khổng lồ" mà điệp khúc là nhạc trích từ Scherzo Giao hưởng số 2 của Mahler. Điều độc đáo là trong chuỗi lần vào của điệp khúc **không có những lần lặp lại** thường thấy ở rondo. Nhạc Mahler không được dùng thành mảnh: nó là một đối âm liên tục suốt chương, chỉ định kỳ "chìm xuống nước" dưới những đợt phát triển của chất liệu khác rồi lại "nổi lên" ở đúng chỗ của dòng phát triển riêng của nó, như thể chưa từng bị ngắt. Cấu trúc rondo nhận ra được từ bên ngoài, nhưng triển khai trong một không gian "lập thể" (стереофоническое) *(Sokolov, ch. 7)*.
 
-**Đối chiếu của người biên soạn.** Với Sposobin và Mazel, điệp khúc rondo là một **chức năng** (chủ đề chính trở lại sau episode; xem [[hinh-thuc-nga-rondo]]). Ở Berio, chức năng ấy còn được nghe ra, nhưng phương tiện thì khác hẳn: không phải "trở lại" mà là "nổi lên" từ một dòng chảy liên tục. Đây là trường hợp rất rõ của điều Mazel gọi là chức năng lôgic tách khỏi chức năng cấu trúc ([[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]]).
+**Đối chiếu của Lamar.** Với Sposobin và Mazel, điệp khúc rondo là một **chức năng** (chủ đề chính trở lại sau episode; xem [[hinh-thuc-nga-rondo]]). Ở Berio, chức năng ấy còn được nghe ra, nhưng phương tiện thì khác hẳn: không phải "trở lại" mà là "nổi lên" từ một dòng chảy liên tục. Đây là trường hợp rất rõ của điều Mazel gọi là chức năng lôgic tách khỏi chức năng cấu trúc ([[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]]).
 
 ## 3. Cái thấy và cái nghe: trường phái Vienna mới
 
@@ -100,7 +100,7 @@ Ví dụ nổi tiếng nhất là *Partiels* của Grisey, "một bộ bách kho
 
 Đây là câu then chốt của chương. Dịch sát: "Tương tự với câu nói nổi tiếng của B. Asafyev 'hình thức như quá trình', trong những trường hợp như thế có thể bàn về '**quá trình như hình thức**' (процесс как форма), tìm ra trong quá trình này những quy luật có sẵn trong chính tự nhiên. Việc tạo hình thức âm nhạc như vậy đã chuyển sang một nền tảng **phi tu từ** (нериторическая основа), trở thành phản ánh những nguyên tắc tiến hoá của vật chất sống, tính chu kỳ của các hiện tượng tự nhiên v.v. Tương ứng, khái niệm 'phát triển' lấy lại cái nghĩa đã bị học thuyết tu từ đẩy sang bên: chuyển động từ sơ đẳng đến phức tạp, từ vô định hình đến có cấu trúc, từ phôi đến cơ thể có sức sống" *(Sokolov, ch. 7)*.
 
-**Đối chiếu của người biên soạn.** Ở [[hinh-thuc-nga-khai-niem]], Asafyev nói hình thức như quá trình và hình thức như sơ đồ đã kết tinh là "hai mặt của cùng một hiện tượng", và quá trình hình thành luôn có hai xu hướng cùng tồn tại: kết tinh và phá vỡ cái đã kết tinh. Với Asafyev, quá trình là con đường **dẫn tới** kết tinh, và sơ đồ cổ điển là kết quả của "sàng lọc xã hội" những ngữ điệu bền vững. Sokolov đảo trật tự: không phải quá trình được tổ chức để thành hình thức, mà một quá trình có sẵn (đời sống của một âm thanh, sự lớn lên của một cơ thể) **được lấy làm** hình thức. Chữ "phi tu từ" quan trọng: hình thức cổ điển, theo Sokolov, được tổ chức như một bài diễn thuyết (luận đề, phân tích, kết luận); hình thức "quá trình" bỏ khung diễn thuyết ấy. Mazel cũng nói hình thức có hai mặt, "quá trình – động" và "kiến trúc – tinh thể"; trong âm nhạc phổ âm, mặt thứ nhất lấn hẳn mặt thứ hai.
+**Đối chiếu của Lamar.** Ở [[hinh-thuc-nga-khai-niem]], Asafyev nói hình thức như quá trình và hình thức như sơ đồ đã kết tinh là "hai mặt của cùng một hiện tượng", và quá trình hình thành luôn có hai xu hướng cùng tồn tại: kết tinh và phá vỡ cái đã kết tinh. Với Asafyev, quá trình là con đường **dẫn tới** kết tinh, và sơ đồ cổ điển là kết quả của "sàng lọc xã hội" những ngữ điệu bền vững. Sokolov đảo trật tự: không phải quá trình được tổ chức để thành hình thức, mà một quá trình có sẵn (đời sống của một âm thanh, sự lớn lên của một cơ thể) **được lấy làm** hình thức. Chữ "phi tu từ" quan trọng: hình thức cổ điển, theo Sokolov, được tổ chức như một bài diễn thuyết (luận đề, phân tích, kết luận); hình thức "quá trình" bỏ khung diễn thuyết ấy. Mazel cũng nói hình thức có hai mặt, "quá trình – động" và "kiến trúc – tinh thể"; trong âm nhạc phổ âm, mặt thứ nhất lấn hẳn mặt thứ hai.
 
 ## 6. Chủ đề: luận đề hay tổng kết
 
@@ -127,7 +127,7 @@ Concerto piano số 3 của R. Shchedrin có phụ đề *Biến tấu và chủ
 
 Dịch sát: "Chủ đề kết thúc concerto cố ý **không mang tính trình bày**: một chủ đề như thế không thể làm nền cho một vòng phát triển mới — đó không phải luận đề mà là tóm tắt, không phải đề từ mà là lời bạt (nếu không phải văn bia!)" *(Sokolov, ch. 7)*. Chủ đề tách khỏi các biến tấu trước bằng một chỗ ngắt lớn, và tự nó vỡ thành những khổ tách nhau bằng chỗ ngắt; mỗi khổ bắt đầu từ một đỉnh – nguồn và tan dần trong những ngữ điệu quãng hai rũ xuống như một hơi thở sâu. M. E. Tarakanov gọi ý đồ kịch tính của tác phẩm là "đi tìm Hoà điệu đã mất". Shchedrin tự giải thích: biến tấu cuối chứa một mâu thuẫn thính giác — dù âm hưởng nghịch, chủ đề hiện ra không đổi, nhưng nó như chiếc bình vỡ thành nhiều mảnh nhỏ mà người độc tấu sau đó "dán" lại (dẫn theo Tarakanov, dẫn theo Sokolov, ch. 7). Trong sách, chỗ này kèm bản nhạc chủ đề ấy (trang có nhan đề "ТЕМА").
 
-### Đối chiếu của người biên soạn: chủ đề ở Sposobin, Mazel và Sokolov
+### Đối chiếu của Lamar: chủ đề ở Sposobin, Mazel và Sokolov
 
 Mazel định nghĩa chủ đề là "một ý nhạc, có đủ tính định hình, đủ tính tập trung, có tính đặc trưng và tính cá thể hoá của sức biểu hiện, và **thường làm cơ sở cho sự phát triển**" (xem [[hinh-thuc-nga-doan-nhac]]). Ông còn nói chủ đề là **phạm trù lịch sử**, và một chuỗi series vô điệu tính *không* phải chủ đề theo nghĩa ấy. Chủ đề kiểu Shchedrin có đủ định hình, tập trung, đặc trưng, nhưng thiếu đúng vế cuối: nó không làm cơ sở cho phát triển nào cả. Còn Sposobin xếp các phần theo chức năng (trình bày, nối, đoạn giữa, tái hiện, mở đầu, kết; xem [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]]): ở hình thức "phát triển đảo ngược", chủ đề không nằm ở chức năng **trình bày** mà ở chức năng **kết**, điều mà sơ đồ của Sposobin không dự kiến cho chủ đề chính. Phân biệt chức năng lôgic và chức năng cấu trúc của Mazel giúp gọi tên chính xác: chủ đề mang chức năng lôgic **hoàn tất**.
 
@@ -193,7 +193,7 @@ Sokolov phân biệt cẩn thận:
 
 Từ góc độ thể loại, thế kỷ XX có một kiểu tiểu phẩm mới. Thế kỷ lãng mạn để lại tiểu phẩm như "khoảnh khắc bị dừng lại"; thế kỷ XX — tiểu phẩm như "**tiểu vũ trụ**". Sokolov nhắc lại Stravinsky: vi hình thức, với "những yêu cầu mới về sự lắng nghe chú tâm hơn, làm thay đổi viễn cảnh thời gian". Bài phân tích bản số 3 op. 7 của Webern ở Phụ lục VI minh hoạ điều này (xem [[hinh-thuc-nga-xx-phan-tich-tac-pham]]).
 
-**Đối chiếu của người biên soạn.** Asafyev đặt trí nhớ vào trung tâm của hình thức: muốn so sánh, ý thức phải có sẵn "vốn ngữ điệu"; ông còn phân biệt người nghe đón âm nhạc như chuỗi khoảnh khắc dễ chịu và nhạc sĩ chuyên nghiệp nắm được chỉnh thể (xem [[hinh-thuc-nga-khai-niem]]). Sokolov dùng cặp khái niệm tâm lý học tương ứng: trí nhớ thao tác (cú pháp) và trí nhớ dài hạn (bố cục), người nghe – chuyên gia (Adorno) và nghe không phê phán (Stockhausen). Có thể nói vi hình thức đòi một "vốn ngữ điệu" ở cấp cao hơn: không phải vốn ngữ điệu, mà vốn **khuôn mẫu hình thức**. Còn Mazel khi bàn cấu trúc chia nhỏ có khép đã chỉ ra rằng bốn chặng của câu tám ô nhịp (hạt nhân, lặp, phát triển, hoàn tất) cũng gặp ở quy mô allegro sonata (xem [[hinh-thuc-nga-phan-doan-cau-truc]]): cùng một lôgic ở hai tầng. Vi hình thức là trường hợp ngược: lôgic tầng lớn được nén vào tầng nhỏ.
+**Đối chiếu của Lamar.** Asafyev đặt trí nhớ vào trung tâm của hình thức: muốn so sánh, ý thức phải có sẵn "vốn ngữ điệu"; ông còn phân biệt người nghe đón âm nhạc như chuỗi khoảnh khắc dễ chịu và nhạc sĩ chuyên nghiệp nắm được chỉnh thể (xem [[hinh-thuc-nga-khai-niem]]). Sokolov dùng cặp khái niệm tâm lý học tương ứng: trí nhớ thao tác (cú pháp) và trí nhớ dài hạn (bố cục), người nghe – chuyên gia (Adorno) và nghe không phê phán (Stockhausen). Có thể nói vi hình thức đòi một "vốn ngữ điệu" ở cấp cao hơn: không phải vốn ngữ điệu, mà vốn **khuôn mẫu hình thức**. Còn Mazel khi bàn cấu trúc chia nhỏ có khép đã chỉ ra rằng bốn chặng của câu tám ô nhịp (hạt nhân, lặp, phát triển, hoàn tất) cũng gặp ở quy mô allegro sonata (xem [[hinh-thuc-nga-phan-doan-cau-truc]]): cùng một lôgic ở hai tầng. Vi hình thức là trường hợp ngược: lôgic tầng lớn được nén vào tầng nhỏ.
 
 ## 11. Phân loại các hình thức thế kỷ XX
 
@@ -215,7 +215,7 @@ Bỏ qua quy tắc một tiêu chí, có thể đặt vấn đề **loại hình
 
 Sokolov đồng ý với kết luận của Tsenova: "chỉ một hệ thống hoá nhiều bình diện, dự định bao trùm và phân biệt lôgic mọi hình thức âm nhạc hiện đại với tính đa tạp của chúng, mới có thể phản ánh tình hình thực trong lĩnh vực sáng tạo hình thức hiện đại và thậm chí gợi cho nhà soạn nhạc những con đường mới" *(Sokolov, ch. 7)*.
 
-**Đối chiếu của người biên soạn.** Mục 4.2 và 4.3 của Tsenova chính là toàn bộ địa hạt mà Sposobin và Mazel mô tả: các hình thức chủ điệu (từ [[hinh-thuc-nga-doan-nhac]] đến [[hinh-thuc-nga-chu-ky]]) và phức điệu ([[hinh-thuc-nga-phuc-dieu]]). Chuỗi lôgic chín mắt xích của Sposobin (§145, xem [[hinh-thuc-nga-nguyen-tac-phat-trien]]) là một phân loại **một tiêu chí** theo đúng nghĩa mà Sokolov nói là không còn làm được cho thế kỷ XX.
+**Đối chiếu của Lamar.** Mục 4.2 và 4.3 của Tsenova chính là toàn bộ địa hạt mà Sposobin và Mazel mô tả: các hình thức chủ điệu (từ [[hinh-thuc-nga-doan-nhac]] đến [[hinh-thuc-nga-chu-ky]]) và phức điệu ([[hinh-thuc-nga-phuc-dieu]]). Chuỗi lôgic chín mắt xích của Sposobin (§145, xem [[hinh-thuc-nga-nguyen-tac-phat-trien]]) là một phân loại **một tiêu chí** theo đúng nghĩa mà Sokolov nói là không còn làm được cho thế kỷ XX.
 
 ## 12. Kết luận của sách
 
@@ -231,11 +231,11 @@ Phần Kết luận tóm mấy điểm *(Sokolov, Kết luận)*:
 8. **Máy tính và điện tử**: âm nhạc điện tử "thời gian thực" (live electronic) mở rộng phạm vi nghĩa; nhưng triển vọng thật của hình thức âm nhạc điện tử chưa lộ ra, có một khủng hoảng tạm thời trước vực thẳm khả năng mới.
 9. **Rồi sẽ thành lịch sử**: như sáng tác của Gesualdo hay C. Ph. E. Bach từng có vẻ vượt xa thời đại của họ rồi được coi là phần không tách rời của thời ấy, những hiện tượng "cực đoan" hôm nay cũng sẽ được hiểu như mắt xích của một chuỗi liền.
 
-**Đối chiếu của người biên soạn về điểm 6.** Ở [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]], bộ ba của Asafyev được ghi là **i : m : t** với *initium – movere – terminus* (cú đẩy, chuyển động, chỗ khép). Sokolov viết *initio – motus – terminus*: chữ Latin khác nhưng nội dung là một. Với Asafyev, đó là cấu trúc của **mọi** sự hình thành âm nhạc, từ công thức thánh vịnh đến overture Beethoven. Sokolov cho thấy giới hạn lịch sử của nó: nhạc minimalism (xem *In C* ở bài sau) và moment form cố ý không có i và t, chỉ còn một m kéo dài.
+**Đối chiếu của Lamar về điểm 6.** Ở [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]], bộ ba của Asafyev được ghi là **i : m : t** với *initium – movere – terminus* (cú đẩy, chuyển động, chỗ khép). Sokolov viết *initio – motus – terminus*: chữ Latin khác nhưng nội dung là một. Với Asafyev, đó là cấu trúc của **mọi** sự hình thành âm nhạc, từ công thức thánh vịnh đến overture Beethoven. Sokolov cho thấy giới hạn lịch sử của nó: nhạc minimalism (xem *In C* ở bài sau) và moment form cố ý không có i và t, chỉ còn một m kéo dài.
 
 ## Sokolov và ba sách kia — đối chiếu
 
-Bảng dưới đây là đối chiếu của người biên soạn, chỉ dùng những khái niệm đã có trong các bài trước của bộ.
+Bảng dưới đây là đối chiếu của Lamar, chỉ dùng những khái niệm đã có trong các bài trước của bộ.
 
 | Vấn đề | Sposobin | Mazel | Asafyev | Sokolov (2004) |
 |---|---|---|---|---|
@@ -312,7 +312,7 @@ Bảng dưới đây là đối chiếu của người biên soạn, chỉ dùng
     body: `
 Bài cuối của **Phần VII — Hình thức và sáng tác thế kỷ XX** trong [[hinh-thuc-nga-lo-trinh|bộ Hình thức âm nhạc — trường phái Nga – Xô viết]]. Sách của A. S. Sokolov (*Введение в музыкальную композицию XX века*, 2004) kết thúc bằng sáu phụ lục (Приложения). Hai phụ lục là văn bản của chính nhà soạn nhạc: bài nói của A. Schnittke và các bài viết của E. Denisov về *Ode* của ông. Một phụ lục là bài của A. Raikhelson về cách chuyển một bài thơ thành âm nhạc. Ba phụ lục còn lại (về Riley, Ives, Webern) không ghi tên tác giả, đọc như phần tiếp của sách; chương 7 dẫn tới Phụ lục VI bằng ngôi thứ nhất ("bài phân tích... đặt ở phụ lục VI"). Sách in kèm bản nhạc *Ode*, *In C*, *The Unanswered Question*, bản số 3 op. 7 của Webern và *Prelude số 2* của Raikhelson; trong văn bản PDF dùng để soạn bài này, các bản nhạc và sơ đồ là hình nên không đọc được, chỉ đọc được lời.
 
-Khái niệm dùng trong bài (vectơ, module, vi hình thức, chủ đề như tổng kết, moment form) đã giải thích ở [[hinh-thuc-nga-xx-hinh-thuc-va-chu-de]]. Mỗi mục dưới đây có ba đoạn: **thông tin sách cho**, **cấu trúc – hình thức**, **cách nghe**. Chỗ nào ghi "(ngoài sách)" là thông tin người biên soạn thêm; các đối chiếu với Sposobin, Mazel, Asafyev là của người biên soạn.
+Khái niệm dùng trong bài (vectơ, module, vi hình thức, chủ đề như tổng kết, moment form) đã giải thích ở [[hinh-thuc-nga-xx-hinh-thuc-va-chu-de]]. Mỗi mục dưới đây có ba đoạn: **thông tin sách cho**, **cấu trúc – hình thức**, **cách nghe**. Chỗ nào ghi "(ngoài sách)" là thông tin Lamar thêm; các đối chiếu với Sposobin, Mazel, Asafyev là của Lamar.
 
 ## 1. Phụ lục I — A. Schnittke, "Xu hướng đa phong cách trong âm nhạc hiện đại"
 
@@ -346,7 +346,7 @@ Tiền đề: **kỹ thuật** (khủng hoảng của chủ nghĩa tân hàn lâ
 - Đa phong cách đòi người nghe biết nguồn. Trước khi nghe Berio, nghe Scherzo Giao hưởng số 2 của Mahler; trước khi nghe Concerto violin của Berg, nghe hợp xướng Bach mà nó trích (ngoài sách: "Es ist genug").
 - Nghe xem phong cách của người khác làm **trung tâm** hay chỉ là "vùng ngoại vi" làm nổi phong cách riêng, như Schnittke nói.
 
-**Đối chiếu của người biên soạn.** Mazel định nghĩa phong cách là "một hệ thống tư duy âm nhạc... nảy sinh trên một nền xã hội – lịch sử nhất định" (xem [[hinh-thuc-nga-khai-niem]]). Đa phong cách làm chính những hệ thống ấy thành chất liệu. Asafyev gọi kho ngữ điệu chung của một thời đại là "vốn ngữ điệu"; Schnittke đòi người nghe có một vốn ngữ điệu trải qua nhiều thời đại.
+**Đối chiếu của Lamar.** Mazel định nghĩa phong cách là "một hệ thống tư duy âm nhạc... nảy sinh trên một nền xã hội – lịch sử nhất định" (xem [[hinh-thuc-nga-khai-niem]]). Đa phong cách làm chính những hệ thống ấy thành chất liệu. Asafyev gọi kho ngữ điệu chung của một thời đại là "vốn ngữ điệu"; Schnittke đòi người nghe có một vốn ngữ điệu trải qua nhiều thời đại.
 
 ## 2. Phụ lục II — E. Denisov, *Ode* cho clarinet, piano và bộ gõ
 
@@ -400,7 +400,7 @@ Ngoài hai ngữ điệu, quãng **bốn tăng** xuất hiện nhiều lần. Ng
 - Đoạn này phải vang như sự tiếp nối tự nhiên của trang trước, không có dấu lặng. Kết thúc theo hiệu của người đầu tiên chơi hết 5 nhóm; ngắt âm phải dứt khoát, không để dư âm.
 - Mỗi nhóm 5–15 giây; cả đoạn khoảng 30–40 giây.
 
-Denisov viết: kết quả âm thanh và độ dài được quyết định không phải bởi số nhóm mà bởi "trạng thái cảm xúc của người chơi ở khoảnh khắc ấy của hình thức và cảm nhận của họ về hình thức như một chỉnh thể âm thanh" *(Sokolov, Phụ lục II — lời Denisov)*. Theo phân loại của chính Denisov ở chương 7, trang này thuộc loại "cấu trúc ổn định, quan hệ của chúng cho phép nhiều cách hiện thực" ở tầng thứ tự, và cả "cấu trúc di động" ở tầng từng ký hiệu (xếp loại là của người biên soạn).
+Denisov viết: kết quả âm thanh và độ dài được quyết định không phải bởi số nhóm mà bởi "trạng thái cảm xúc của người chơi ở khoảnh khắc ấy của hình thức và cảm nhận của họ về hình thức như một chỉnh thể âm thanh" *(Sokolov, Phụ lục II — lời Denisov)*. Theo phân loại của chính Denisov ở chương 7, trang này thuộc loại "cấu trúc ổn định, quan hệ của chúng cho phép nhiều cách hiện thực" ở tầng thứ tự, và cả "cấu trúc di động" ở tầng từng ký hiệu (xếp loại là của Lamar).
 
 ### Cách nghe
 1. Nghe riêng ba ô đầu nhiều lần: âm Đô thăng phình – xẹp, chuỗi piano vút lên thành cluster, bộ gõ rơi xuống, âm Sol giáng riêng lẻ. Hai ý tưởng của cả tác phẩm nằm ở đây.
@@ -409,7 +409,7 @@ Denisov viết: kết quả âm thanh và độ dài được quyết định kh
 4. Ở B, nghe mật độ tăng tới chỗ gãy; trên trang đồ hoạ, chú ý rằng âm hưởng là kết quả của luật chơi, mỗi bản thu sẽ khác.
 5. Sau dấu lặng chung: nghe sự đổi âm sắc (piano trên dây, chuông, tam-tam) và đường clarinet "rubato viết ra".
 
-**Đối chiếu của người biên soạn.** Denisov dùng nguyên các chữ cổ điển (ba đoạn, tái hiện, coda, ngữ điệu, đảo, mô tiến) nhưng tự định nghĩa lại: "tái hiện của trạng thái" là tái hiện một độ ổn định chứ không phải một chủ đề; "ba đoạn là một cách xử lý vật chất". Theo Mazel, đây là chức năng lôgic (trình bày, tương phản, trở về) tách khỏi chức năng cấu trúc quen thuộc. Hai tuyến kiến tạo – phá huỷ gần với cặp kết tinh – phá vỡ cái đã kết tinh của Asafyev; khác ở chỗ Denisov cho mỗi xu hướng một nhóm nhạc cụ và một khoảnh khắc hình thức riêng.
+**Đối chiếu của Lamar.** Denisov dùng nguyên các chữ cổ điển (ba đoạn, tái hiện, coda, ngữ điệu, đảo, mô tiến) nhưng tự định nghĩa lại: "tái hiện của trạng thái" là tái hiện một độ ổn định chứ không phải một chủ đề; "ba đoạn là một cách xử lý vật chất". Theo Mazel, đây là chức năng lôgic (trình bày, tương phản, trở về) tách khỏi chức năng cấu trúc quen thuộc. Hai tuyến kiến tạo – phá huỷ gần với cặp kết tinh – phá vỡ cái đã kết tinh của Asafyev; khác ở chỗ Denisov cho mỗi xu hướng một nhóm nhạc cụ và một khoảnh khắc hình thức riêng.
 
 ## 3. Phụ lục III — T. Riley, *In C* (1964)
 
@@ -463,7 +463,7 @@ Bóng của hình thức cổ điển ở đây rất mờ: một giờ nhạc k
 4. Nghe đoạn kết: các bè tắt dần, còn âm Đô. Bạn cảm thấy "không kết" hay "vòng đã khép"?
 5. So hai bản thu khác biên chế: điều gì giữ nguyên, điều gì đổi?
 
-**Đối chiếu của người biên soạn.** Bộ ba i : m : t của Asafyev ở đây chỉ còn lại m, nhưng Sokolov chỉ ra một "kế hoạch điệu tính" T – D – T – S rất gần với điều Mazel gọi là kế hoạch giọng của hình thức cổ điển; chỉ có phương tiện là metabole thay cho chuyển giọng. Cặp ngoại suy – tri giác liên hội tương ứng với điều Asafyev nói về sự so sánh trong trí nhớ (xem [[hinh-thuc-nga-khai-niem]]).
+**Đối chiếu của Lamar.** Bộ ba i : m : t của Asafyev ở đây chỉ còn lại m, nhưng Sokolov chỉ ra một "kế hoạch điệu tính" T – D – T – S rất gần với điều Mazel gọi là kế hoạch giọng của hình thức cổ điển; chỉ có phương tiện là metabole thay cho chuyển giọng. Cặp ngoại suy – tri giác liên hội tương ứng với điều Asafyev nói về sự so sánh trong trí nhớ (xem [[hinh-thuc-nga-khai-niem]]).
 
 ## 4. Phụ lục IV — A. Raikhelson, "Lôgic âm nhạc trong cấu trúc thơ V. Khlebnikov" (rút gọn)
 
@@ -492,7 +492,7 @@ Kết quả: một mặt có xu hướng **hướng tâm** — khung cứng củ
 2. Nghe hoặc chơi *Prelude số 2*: tìm âm Mi giáng ở hai âm vực; nó có rơi vào đầu và cuối câu như "о" và "и" trong thơ không?
 3. Nghe đoạn giữa: chỗ chia nhỏ 3 + 3, 2 + 2 + 3 + 3 có thành những motif ngắn dồn dập không?
 
-**Đối chiếu của người biên soạn.** Chuỗi 7 + 7 | 7 + 8, 8 | chia nhỏ | 7 + 7 rất gần bốn chặng hạt nhân – lặp – phát triển chia nhỏ – khép mà Mazel mô tả cho cấu trúc chia nhỏ có khép, và Mazel nói chúng gặp cả ở quy mô lớn (xem [[hinh-thuc-nga-phan-doan-cau-truc]]). Còn "nguyên tắc triển khai" (развёртывание) theo nghĩa Baroque là khái niệm đã có trong [[hinh-thuc-nga-phuc-dieu]]. Phụ lục này cho thấy hướng ngược với chương 7: không phải âm nhạc mượn thủ pháp ngôn từ (phép cộng dần, logogriph), mà ngôn từ được đọc bằng phạm trù âm nhạc.
+**Đối chiếu của Lamar.** Chuỗi 7 + 7 | 7 + 8, 8 | chia nhỏ | 7 + 7 rất gần bốn chặng hạt nhân – lặp – phát triển chia nhỏ – khép mà Mazel mô tả cho cấu trúc chia nhỏ có khép, và Mazel nói chúng gặp cả ở quy mô lớn (xem [[hinh-thuc-nga-phan-doan-cau-truc]]). Còn "nguyên tắc triển khai" (развёртывание) theo nghĩa Baroque là khái niệm đã có trong [[hinh-thuc-nga-phuc-dieu]]. Phụ lục này cho thấy hướng ngược với chương 7: không phải âm nhạc mượn thủ pháp ngôn từ (phép cộng dần, logogriph), mà ngôn từ được đọc bằng phạm trù âm nhạc.
 
 ## 5. Phụ lục V — Ch. Ives, *The Unanswered Question* (1908)
 
@@ -541,7 +541,7 @@ Sokolov kết: tác phẩm là "một dự báo âm nhạc chính xác cho cả 
 3. Lần ba, theo bộ gỗ: ghi nhịp độ và cường độ từng lần vào; tìm cluster pp và đoạn giễu nhại.
 4. Nếu có thể, nghe bản thu đặt dàn dây xa (hoặc nghe buổi diễn trực tiếp): không gian thay đổi ý nghĩa thế nào?
 
-**Đối chiếu của người biên soạn.** Asafyev đặt tương phản trên nền đồng nhất và nói về "luận đề – phản đề" (xem [[hinh-thuc-nga-nguyen-tac-phat-trien]]). Ives giữ nguyên ba lớp không hoà giải: dàn dây là một "đồng nhất" tuyệt đối, bộ gỗ là "tương phản" tăng dần, nhưng không có tổng hợp. Nếu dùng i : m : t, lớp dàn dây có cả i và t (cùng một hợp âm), lớp bộ gỗ chỉ có m, lớp trumpet là một câu hỏi — tức một chỗ "khép" bị treo.
+**Đối chiếu của Lamar.** Asafyev đặt tương phản trên nền đồng nhất và nói về "luận đề – phản đề" (xem [[hinh-thuc-nga-nguyen-tac-phat-trien]]). Ives giữ nguyên ba lớp không hoà giải: dàn dây là một "đồng nhất" tuyệt đối, bộ gỗ là "tương phản" tăng dần, nhưng không có tổng hợp. Nếu dùng i : m : t, lớp dàn dây có cả i và t (cùng một hợp âm), lớp bộ gỗ chỉ có m, lớp trumpet là một câu hỏi — tức một chỗ "khép" bị treo.
 
 ## 6. Phụ lục VI — A. Webern, bản số 3 op. 7 cho violin và piano
 
@@ -578,11 +578,11 @@ Câu kết của sách dành cho người diễn: phải đi qua chặng "sống
 4. Ở tái hiện, nghe cluster, rồi hợp âm trầm có pedal: những bồi âm nào bạn nghe được?
 5. So hai bản thu: người diễn có giữ được mức ppp chung, hay nới rộng cường độ? Điều đó đổi hình thức thế nào?
 
-**Đối chiếu của người biên soạn.** Theo Sposobin và Mazel, đoạn nhạc là hình thức trình bày **một** ý (xem [[hinh-thuc-nga-doan-nhac]]), còn hình thức ba đoạn đơn đòi đoạn giữa tương phản và tái hiện (xem [[hinh-thuc-nga-hinh-thuc-don]]). Sokolov dùng chính phân biệt ấy để đọc 14 ô của Webern: đây là ba đoạn **chiếu xuống** quy mô một đoạn nhạc. "Thay đổi lần cuối" của Zuckerman, khái niệm của truyền thống phân tích Nga, được dùng ba lần trong các phụ lục (Riley, Ives, Webern): đó là cầu nối cụ thể nhất giữa phân tích cổ điển và âm nhạc thế kỷ XX trong sách.
+**Đối chiếu của Lamar.** Theo Sposobin và Mazel, đoạn nhạc là hình thức trình bày **một** ý (xem [[hinh-thuc-nga-doan-nhac]]), còn hình thức ba đoạn đơn đòi đoạn giữa tương phản và tái hiện (xem [[hinh-thuc-nga-hinh-thuc-don]]). Sokolov dùng chính phân biệt ấy để đọc 14 ô của Webern: đây là ba đoạn **chiếu xuống** quy mô một đoạn nhạc. "Thay đổi lần cuối" của Zuckerman, khái niệm của truyền thống phân tích Nga, được dùng ba lần trong các phụ lục (Riley, Ives, Webern): đó là cầu nối cụ thể nhất giữa phân tích cổ điển và âm nhạc thế kỷ XX trong sách.
 
 ## Sokolov và ba sách kia — đối chiếu
 
-Bảng của người biên soạn: mỗi tác phẩm trong phụ lục được đọc bằng khái niệm nào của bộ.
+Bảng của Lamar: mỗi tác phẩm trong phụ lục được đọc bằng khái niệm nào của bộ.
 
 | Tác phẩm | Khái niệm cổ điển còn dùng | Khái niệm mới (Sokolov, ch. 7) | Gần với khái niệm nào ở Sposobin / Mazel / Asafyev |
 |---|---|---|---|

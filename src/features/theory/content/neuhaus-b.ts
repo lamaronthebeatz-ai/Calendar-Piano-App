@@ -353,7 +353,7 @@ Neuhaus kể về một bức thư **ngụy tác** (apocryphal) của một ngư
 
 Với Glebov và với Neuhaus, rõ ràng một lời như thế không thể bịa ra: nó dựa trên sự thật, "sự thật Mozart", phù hợp với hình ảnh Mozart mà người ta dựng lên từ tác phẩm và cuộc đời ông. Ai biết chút ít về tâm lý quá trình sáng tạo đều thấy đây là ví dụ về năng khiếu cao nhất của tinh thần con người, thứ năng khiếu vượt khỏi lời nói.
 
-*Ghi chú của người biên soạn (ngoài sách):* giới nghiên cứu Mozart ngày nay coi bức thư này là ngụy tạo; nó được Friedrich Rochlitz công bố năm 1815. Neuhaus cũng gọi nó là ngụy tác; ông dùng nó như một hình ảnh về cách nắm tác phẩm, không như một tư liệu lịch sử.
+*Ghi chú của Lamar (ngoài sách):* giới nghiên cứu Mozart ngày nay coi bức thư này là ngụy tạo; nó được Friedrich Rochlitz công bố năm 1815. Neuhaus cũng gọi nó là ngụy tác; ông dùng nó như một hình ảnh về cách nắm tác phẩm, không như một tư liệu lịch sử.
 
 Ông nói khi nhắc đến bức thư, ý nghĩ của ông chen nhau, và lẽ ra đây là chỗ viết về thời gian âm nhạc, nhịp điệu, quá trình sáng tạo, nhưng như thế sẽ đi quá xa. Ông nhắc nó vì nó có thể giúp người chơi piano trong vấn đề chính: **nắm tác phẩm như một khối và sắp đặt quá trình thời gian**.
 
@@ -421,7 +421,7 @@ Rút từ chương II, các bước thực hành có thể sắp như sau:
 
 ## Đối chiếu
 
-*(Phần này của người biên soạn, không phải của Neuhaus.)*
+*(Phần này của Lamar, không phải của Neuhaus.)*
 
 - Cặp khái niệm nhịp điệu – nhịp và cách ghi tiết tấu được trình bày có hệ thống ở [[tiet-tau]], [[nhip-do]] và [[dao-phach]]; Neuhaus dùng chúng theo nghĩa của người biểu diễn hơn là của nhà lý thuyết.
 - Quy tắc "rubato phải trả lại thời gian" chỉ là một trong nhiều quan niệm về rubato; bài [[rubato]] trình bày cả loại rubato giai điệu tự do trên nền nhịp giữ nguyên.
@@ -910,7 +910,7 @@ Rút từ chương III, các bước thực hành:
 
 ## Đối chiếu
 
-*(Phần này của người biên soạn, không phải của Neuhaus.)*
+*(Phần này của Lamar, không phải của Neuhaus.)*
 
 - Ý niệm âm sắc theo nghĩa vật lý (phổ bồi âm, đường bao) được trình bày ở [[am-sac]]; Neuhaus dùng chữ "tone" theo nghĩa rộng của người chơi, gồm cả cường độ và tương quan giữa các âm. Về ký hiệu cường độ xem [[cuong-do]].
 - Các kỹ thuật chạm phím cụ thể (sức nặng, tốc độ búa) ở [[ky-thuat-cham-phim]]; cách làm nổi giai điệu trên phần đệm ở [[lam-noi-giai-dieu]]; kết cấu nhiều bè ở [[choi-phuc-dieu]].

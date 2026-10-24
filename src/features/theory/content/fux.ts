@@ -468,7 +468,7 @@ Bài không có nghịch âm treo có thể đảo theo **chiều ngược** b�
 | Giọng thứ: quãng 8 đi lên | A | B | C | D | E | F | G | A |
 |---|---|---|---|---|---|---|---|---|
 | Đáp bằng thang âm đi xuống từ G (bậc VII) | G | F | E | D | C | B | A | G |
-Nhận xét của người biên soạn: ở cả hai bảng, trục đối xứng là **nốt Re** (D ↔ D), nên nửa cung E – F được đáp bằng C – B và B – C bằng F – E. Sách nói "nếu một bè mở bằng E hoặc C thì bè kia đáp bằng C hoặc E" (giọng thứ), khớp với bảng; câu tương ứng ở giọng trưởng bị lệch chữ trong bản quét.
+Nhận xét của Lamar: ở cả hai bảng, trục đối xứng là **nốt Re** (D ↔ D), nên nửa cung E – F được đáp bằng C – B và B – C bằng F – E. Sách nói "nếu một bè mở bằng E hoặc C thì bè kia đáp bằng C hoặc E" (giọng thứ), khớp với bảng; câu tương ứng ở giọng trưởng bị lệch chữ trong bản quét.
 
 Fux dặn: bài nào cũng đảo được, nhưng không phải lần đảo nào cũng cho giai điệu đẹp — phải dùng **thận trọng**, kẻo "khoe nhiều kỹ xảo" mà **giai điệu chịu thiệt**.
 ::scan fux 39.1,39.2 | Ex. 1 — *Al Roverscio*, Ex. 2 — *Al Contrario Riverso*; tiếp theo là một bài dùng đảo ngược chiều

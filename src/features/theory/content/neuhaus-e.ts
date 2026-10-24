@@ -23,7 +23,7 @@ export const neuhausE: Article[] = [
     body: `
 Chương V ("Teacher and Pupil") là chương ngắn nhất xét về tính kỹ thuật nhưng lại riêng tư nhất trong cuốn *Nghệ thuật chơi piano*. Sau bốn chương về hình tượng nghệ thuật, nhịp điệu, âm sắc và kỹ thuật, [[heinrich-neuhaus|Heinrich Neuhaus]] dừng lại để nói thẳng về chính nghề của mình: dạy học. Ông không viết một lý thuyết sư phạm có hệ thống. Ông kể chuyện, tự vấn, tự phê bình, tranh luận với đồng nghiệp và với chính mình. Chương mở đầu bằng lời thú nhận rằng kinh nghiệm quá nhiều và quá mâu thuẫn để gói vào một công thức, và kết thúc bằng lời cảm ơn học trò.
 
-Bài này đi theo đúng trình tự của chương. Các mục đánh số dưới đây là của người biên soạn, đặt theo từng mạch ý liên tiếp của Neuhaus (bản gốc không chia mục). Trích dẫn dịch từ bản Anh của K. A. Leibovitch (1993).
+Bài này đi theo đúng trình tự của chương. Các mục đánh số dưới đây là của Lamar, đặt theo từng mạch ý liên tiếp của Neuhaus (bản gốc không chia mục). Trích dẫn dịch từ bản Anh của K. A. Leibovitch (1993).
 
 Những ý lớn của chương:
 
@@ -492,7 +492,7 @@ Chương V nói về việc dạy, nhưng từ đó rút ra được nhiều bư
 
 ## Đối chiếu
 
-*(Phần của người biên soạn.)*
+*(Phần của Lamar.)*
 
 - Quan niệm "dạy piano là dạy âm nhạc" và "phương pháp tổng hợp" nối thẳng với [[neuhaus-hinh-tuong-nghe-thuat]] (chương I) và với bài [[su-pham-piano]] của thư viện.
 - Phân tích Fugato Ballade số 4 và chỗ về tái hiện ở Barcarolle, Concerto số 2 của Brahms gắn với [[hinh-thuc-sonata]]; ý "tác phẩm là một quá trình liền mạch" gần với Asafyev ([[asafyev-hinh-thuc-nhu-qua-trinh]]) — Neuhaus cũng nhắc Asafyev trong phần Kết luận.
@@ -553,7 +553,7 @@ Chương không có kỹ thuật ngón theo nghĩa hẹp. Nó được dệt b�
 - Nỗi hồi hộp của người mới tập khác hẳn sự căng thẳng tinh thần của nghệ sĩ lớn; loại sau là cần thiết.
 - Sai lầm lớn nhất là tách rời việc tập ở nhà khỏi màn biểu diễn trên sân khấu.
 
-Các mục đánh số dưới đây là của người biên soạn, theo đúng trình tự ý của Neuhaus.
+Các mục đánh số dưới đây là của Lamar, theo đúng trình tự ý của Neuhaus.
 
 ## 1. Người nghệ sĩ hoà nhạc như người truyền bá
 
@@ -589,7 +589,7 @@ Chuẩn bị cho buổi diễn thế nào là câu hỏi nhiều người học 
 
 > "Học một tác phẩm mới ba lần và cất nó đi ba lần trước khi chơi trước công chúng." *(lời khuyên của Hofmann, theo Neuhaus, ch. 6)*
 
-Neuhaus thấy đây là lời khuyên rất hay, nhưng nó đòi hỏi một lối sống được tổ chức cao, luôn hướng tới "phong độ hoà nhạc" tốt nhất. Trong hoàn cảnh của ông, rất ít người làm được, vì bao công việc và môn học chẳng liên quan gì tới phong độ hoà nhạc. Chú thích của ông kể một ví dụ nhỏ: có buổi sáng ông phải chấm một cuộc thi trong nhạc viện, chín nghệ sĩ chơi chín sonata của các nhà soạn nhạc Xô viết, rồi tất nhiên phải bàn kỹ về họ, và buổi tối ông lại chơi… (đoạn cuối chú thích này bị mất trong bản nguồn tiếng Anh mà người biên soạn có).
+Neuhaus thấy đây là lời khuyên rất hay, nhưng nó đòi hỏi một lối sống được tổ chức cao, luôn hướng tới "phong độ hoà nhạc" tốt nhất. Trong hoàn cảnh của ông, rất ít người làm được, vì bao công việc và môn học chẳng liên quan gì tới phong độ hoà nhạc. Chú thích của ông kể một ví dụ nhỏ: có buổi sáng ông phải chấm một cuộc thi trong nhạc viện, chín nghệ sĩ chơi chín sonata của các nhà soạn nhạc Xô viết, rồi tất nhiên phải bàn kỹ về họ, và buổi tối ông lại chơi… (đoạn cuối chú thích này bị mất trong bản nguồn tiếng Anh mà Lamar có).
 
 ### "Phương pháp khẩn cấp" của Richter
 
@@ -761,7 +761,7 @@ Các bước thực hành rút từ chương VI:
 
 ## Đối chiếu
 
-*(Phần của người biên soạn.)*
+*(Phần của Lamar.)*
 
 - Về hồi hộp sân khấu và cách chuẩn bị tâm lý: xem [[hoi-hop-bieu-dien]].
 - Bốn (năm) cách học của Hofmann gắn với [[hoc-thuoc-bai]] và [[tap-trong-dau]]; phương pháp chơi chậm "lạnh" của Tausig và Busoni gắn với [[phuong-phap-luyen-tap]].
@@ -820,7 +820,7 @@ Những ý lớn:
 - Bốn kiểu "phong cách biểu diễn"; phong cách tốt là chân lý; "có một chân lý, không phải cái gì cũng được phép".
 - Âm nhạc học có giá trị khi do người có thẩm quyền viết, bằng ngôn ngữ nghệ thuật chứ không phải kiểu mô tả khô khan.
 
-Các mục dưới đây đi theo đúng trình tự của Neuhaus; tiêu đề mục là của người biên soạn, trừ ba mục "Về âm nhạc", "Về nhà soạn nhạc", "Về âm nhạc học" do chính Neuhaus mở đầu như vậy.
+Các mục dưới đây đi theo đúng trình tự của Neuhaus; tiêu đề mục là của Lamar, trừ ba mục "Về âm nhạc", "Về nhà soạn nhạc", "Về âm nhạc học" do chính Neuhaus mở đầu như vậy.
 
 ## 1. Những điều chưa nói, và "sông Volga đổ vào biển Caspi"
 
@@ -1093,7 +1093,7 @@ Phần Kết luận chủ yếu bàn quan niệm, nhưng có thể rút ra các 
 
 ## Đối chiếu
 
-*(Phần của người biên soạn.)*
+*(Phần của Lamar.)*
 
 - Bốn kiểu phong cách và quan niệm "phong cách là chân lý" nên đọc cùng [[dien-dat-cau-nhac]] và [[rubato]].
 - Ý "thơ ca là nền tảng của nghệ thuật" và "hình tượng" quay về [[neuhaus-hinh-tuong-nghe-thuat]]; ví dụ đảo phách và trọng âm nối với [[dao-phach]] và [[neuhaus-nhip-dieu]].

@@ -255,7 +255,7 @@ Sokolov kết luận: cái phức tạp không nằm ở chính các thủ pháp
 
 ## 6. Sokolov và ba sách kia — đối chiếu
 
-Bảng dưới là đối chiếu của **người biên soạn**, chỉ ở mức các khái niệm đã trình bày trong bộ (xem [[hinh-thuc-nga-khai-niem]], [[hinh-thuc-nga-tac-dong-va-phan-tich]]); Sokolov không bàn trực tiếp ba sách này trong hai chương.
+Bảng dưới là đối chiếu của **Lamar**, chỉ ở mức các khái niệm đã trình bày trong bộ (xem [[hinh-thuc-nga-khai-niem]], [[hinh-thuc-nga-tac-dong-va-phan-tich]]); Sokolov không bàn trực tiếp ba sách này trong hai chương.
 
 | Vấn đề | Sokolov (ch. 4 – 5) | Sposobin | Mazel | Asafyev |
 |---|---|---|---|---|
@@ -266,7 +266,7 @@ Bảng dưới là đối chiếu của **người biên soạn**, chỉ ở m�
 | Ngữ điệu | Denisov: chuỗi là nguồn ngữ điệu; giai điệu hoá | — | — | ngữ điệu là nền của hình thức |
 | Ba đoạn | Denisov: "ba đoạn — cách xử lý chất liệu", ở mọi tầng | ba đoạn đơn và phức là kiểu hình thức | — | — |
 
-Nhận xét của người biên soạn: ba sách kia xây lý thuyết hình thức chủ yếu trên âm nhạc cổ điển – lãng mạn, trong đó sơ đồ được rút ra *sau* tác phẩm. Sokolov mô tả một thời mà sơ đồ (bảng chuỗi, ma trận) có thể đứng *trước* tác phẩm, và chính vì thế cần phân biệt "tổ chức" với "bố cục". Các khái niệm của Mazel và Asafyev về tiếp nhận vẫn dùng được, nhưng Sokolov cho thấy thái độ nghe đúng có thể rất khác nhau tuỳ loại tác phẩm (nghe cấu trúc, "kính hiển vi âm thanh", nghe không phê phán).
+Nhận xét của Lamar: ba sách kia xây lý thuyết hình thức chủ yếu trên âm nhạc cổ điển – lãng mạn, trong đó sơ đồ được rút ra *sau* tác phẩm. Sokolov mô tả một thời mà sơ đồ (bảng chuỗi, ma trận) có thể đứng *trước* tác phẩm, và chính vì thế cần phân biệt "tổ chức" với "bố cục". Các khái niệm của Mazel và Asafyev về tiếp nhận vẫn dùng được, nhưng Sokolov cho thấy thái độ nghe đúng có thể rất khác nhau tuỳ loại tác phẩm (nghe cấu trúc, "kính hiển vi âm thanh", nghe không phê phán).
 
 ## 7. Cách phân tích
 
@@ -336,7 +336,7 @@ Trong lý thuyết hình thức cổ điển, "văn bản" của tác phẩm m�
 - **Bakhtin**: văn bản là "mọi phức hợp ký hiệu có liên kết"; "hành động của con người là một văn bản tiềm năng". *(Sokolov, ch. 6 — dẫn Bakhtin)*
 - **Lotman** (*Культура и взрыв*, 1992): văn bản "không phải một vật ổn định có những dấu hiệu cố định, mà là **một chức năng**: văn bản có thể là một tác phẩm riêng, một phần của nó, một nhóm bố cục, thể loại, rốt cuộc là cả nền văn học". *(Sokolov, ch. 6 — dẫn Lotman)*
 
-Từ đó, theo cách hiểu của bài này (tóm của người biên soạn): **văn bản tác phẩm âm nhạc thế kỷ XX** là toàn bộ các phức hợp ký hiệu mang thông tin về ý tưởng nghệ thuật của tác phẩm — nốt nhạc, nhưng cũng là bảng, sơ đồ, hình vẽ, lời, bản ghi âm, hành động trên sân khấu — và mỗi loại văn bản được xác định bởi **chức năng** của nó.
+Từ đó, theo cách hiểu của bài này (tóm của Lamar): **văn bản tác phẩm âm nhạc thế kỷ XX** là toàn bộ các phức hợp ký hiệu mang thông tin về ý tưởng nghệ thuật của tác phẩm — nốt nhạc, nhưng cũng là bảng, sơ đồ, hình vẽ, lời, bản ghi âm, hành động trên sân khấu — và mỗi loại văn bản được xác định bởi **chức năng** của nó.
 
 ## 2. Các dạng mở rộng của văn bản
 
@@ -373,7 +373,7 @@ Liên minh lời – nhạc có chất lượng mới. Nhạc có lời vẫn gi
 
 ## 3. Các chức năng của văn bản
 
-Từ các ví dụ, Sokolov gọi tên những **chức năng** của văn bản ngoài chức năng ghi cao độ – trường độ thông thường. Bảng tóm (sắp xếp của người biên soạn, tên chức năng và ví dụ theo sách):
+Từ các ví dụ, Sokolov gọi tên những **chức năng** của văn bản ngoài chức năng ghi cao độ – trường độ thông thường. Bảng tóm (sắp xếp của Lamar, tên chức năng và ví dụ theo sách):
 
 | Chức năng | Nghĩa | Ví dụ sách dẫn |
 |---|---|---|
@@ -494,7 +494,7 @@ Cái khó là sự khác nhau về bản chất giữa những gì bề ngoài g
 
 ## 7. Sokolov và ba sách kia — đối chiếu
 
-Đối chiếu của **người biên soạn**, chỉ ở mức các khái niệm đã trình bày trong bộ (xem [[hinh-thuc-nga-khai-niem]], [[hinh-thuc-nga-tac-dong-va-phan-tich]]). Sokolov không bàn ba sách này ở chương 6.
+Đối chiếu của **Lamar**, chỉ ở mức các khái niệm đã trình bày trong bộ (xem [[hinh-thuc-nga-khai-niem]], [[hinh-thuc-nga-tac-dong-va-phan-tich]]). Sokolov không bàn ba sách này ở chương 6.
 
 | Vấn đề | Sokolov (ch. 6) | Sposobin | Mazel | Asafyev |
 |---|---|---|---|---|
@@ -503,7 +503,7 @@ Cái khó là sự khác nhau về bản chất giữa những gì bề ngoài g
 | Liên tưởng, trí nhớ | uy quyền của văn bản; "sổ địa chỉ"; lớp chủ đề "chìm" (Schnittke) | — | quán tính tiếp nhận; chờ đợi được đáp ứng và "đánh lừa có lý do" | vốn ngữ điệu; "thể dục ghi nhớ" |
 | Ghi nhớ và thông tin | văn bản – thư, văn bản – nút buộc nhớ (Lotman) | — | — | tiếp nhận "tổ chức lại lần thứ hai" chuyển động |
 
-Nhận xét của người biên soạn: khái niệm **vốn ngữ điệu** của Asafyev giúp hiểu vì sao đa phong cách cần khán giả có chuẩn bị — trích dẫn chỉ "nói" được với người có sẵn vốn ấy. Còn phân biệt các **kiểu nghệ thuật âm nhạc** của Mazel cho thấy nhiều hiện tượng Sokolov mô tả (ứng tác trong «Balletto», văn bản âm học của jazz – rock) đã ra khỏi khuôn châu Âu "nhà soạn nhạc – văn bản nốt nhạc – người diễn". Sposobin không cần bàn vấn đề văn bản, vì với tác phẩm ông phân tích, văn bản nốt nhạc mặc nhiên đủ.
+Nhận xét của Lamar: khái niệm **vốn ngữ điệu** của Asafyev giúp hiểu vì sao đa phong cách cần khán giả có chuẩn bị — trích dẫn chỉ "nói" được với người có sẵn vốn ấy. Còn phân biệt các **kiểu nghệ thuật âm nhạc** của Mazel cho thấy nhiều hiện tượng Sokolov mô tả (ứng tác trong «Balletto», văn bản âm học của jazz – rock) đã ra khỏi khuôn châu Âu "nhà soạn nhạc – văn bản nốt nhạc – người diễn". Sposobin không cần bàn vấn đề văn bản, vì với tác phẩm ông phân tích, văn bản nốt nhạc mặc nhiên đủ.
 
 ## 8. Cách phân tích
 
