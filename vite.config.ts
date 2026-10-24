@@ -26,7 +26,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icons/*.png'],
+      includeAssets: ['favicon.png', 'icons/*.png'],
       manifest: {
         name: 'Trung tâm lý thuyết âm nhạc học by Lamar',
         short_name: 'Lý thuyết Lamar',

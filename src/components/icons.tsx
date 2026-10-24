@@ -1,4 +1,5 @@
 import type { SVGProps } from 'react'
+import logoMark from '../assets/logo-mark.webp'
 
 export type IconProps = SVGProps<SVGSVGElement>
 
@@ -258,25 +259,9 @@ export const SparkleIcon = (p: IconProps) => (
 )
 
 /** Brand mark: three ivory keys and two ebony keys in a rounded tile. */
-export const BrandMark = (p: IconProps) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={32} height={32} {...p}>
-    <defs>
-      <linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stopColor="#1d2840" />
-        <stop offset="1" stopColor="#3b2f55" />
-      </linearGradient>
-    </defs>
-    <rect width="32" height="32" rx="9" fill="url(#bm-g)" />
-    <g fill="#f6efe2">
-      <rect x="7" y="8" width="5.4" height="16" rx="1.3" />
-      <rect x="13.3" y="8" width="5.4" height="16" rx="1.3" />
-      <rect x="19.6" y="8" width="5.4" height="16" rx="1.3" />
-    </g>
-    <g fill="#d8b77f">
-      <rect x="10.6" y="8" width="3.4" height="9.5" rx="1" />
-      <rect x="17.9" y="8" width="3.4" height="9.5" rx="1" />
-    </g>
-  </svg>
+/** The app's logo: the gold "Lamar" signature on black, as a rounded tile. */
+export const BrandMark = ({ width = 32, height = 32, className = '' }: { width?: number; height?: number; className?: string }) => (
+  <img src={logoMark} width={width} height={height} alt="" draggable={false} className={`rounded-[24%] object-cover ${className}`} />
 )
 
 /** A small tree of nodes: the branches of a discipline (Âm nhạc học). */

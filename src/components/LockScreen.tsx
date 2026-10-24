@@ -149,7 +149,7 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
       >
         <div className="animate-float-up flex flex-col items-center text-center">
           <span className={clsx('lock-logo relative flex h-[72px] w-[72px] items-center justify-center rounded-[22px] border border-white/40 bg-[var(--color-surface-raised)]/70 shadow-[var(--shadow-float)]', (phase === 'right' || phase === 'leaving') && 'is-open')}>
-            <BrandMark width={44} height={44} />
+            <BrandMark width={62} height={62} />
             {/* A small padlock on the keys; its shackle springs open with the right code. */}
             <span aria-hidden className="lock-logo-badge absolute -bottom-1.5 -right-1.5 flex h-7 w-7 items-center justify-center rounded-full text-[var(--color-gold)]">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
