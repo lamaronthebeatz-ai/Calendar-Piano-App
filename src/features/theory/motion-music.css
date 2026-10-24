@@ -85,16 +85,11 @@
 .mm-note.is-on { transform: scale(1.18); filter: drop-shadow(0 0 4px color-mix(in oklch, var(--color-accent) 70%, transparent)); }
 .mm-note.is-on text { fill: var(--color-accent); }
 
-/* Circle of fifths: the rotor turns by --rot; labels counter-rotate to stay upright. */
+/* Circle of fifths: rotation is set as SVG transform attributes in diagrams.tsx. */
 .mm-circle { touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; outline: none; -webkit-tap-highlight-color: transparent; }
 .mm-circle:active { cursor: grabbing; }
 .mm-circle:focus-visible { filter: drop-shadow(0 0 0.35rem color-mix(in oklch, var(--color-accent) 45%, transparent)); }
-.mm-rotor { transform: rotate(var(--rot, 0deg)); transform-origin: 150px 150px; }
-.mm-upright {
-  transform-box: fill-box;
-  transform-origin: center;
-  transform: rotate(calc(-1 * var(--rot, 0deg)));
-}
+
 .mm-circle-sel {
   fill: color-mix(in oklch, var(--color-accent) 14%, transparent);
   stroke: color-mix(in oklch, var(--color-accent) 40%, transparent);

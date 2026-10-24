@@ -488,9 +488,13 @@ export function CircleOfFifths() {
   // Rotation in degrees and the drag/coast state live in a ref: frames write the CSS variable, not React state.
   const st = useRef({ rot: 0, raf: 0, drag: null as null | { start: number; rot: number; last: number; t: number; v: number; moved: number } })
 
+  // SVG transform attributes with explicit pivots: Safari mis-places CSS transforms (transform-box) on SVG text.
   const paint = (rot: number) => {
     st.current.rot = rot
-    svg.current?.style.setProperty('--rot', `${rot}deg`)
+    const el = svg.current
+    if (!el) return
+    el.querySelector('.mm-rotor')?.setAttribute('transform', `rotate(${rot} 150 150)`)
+    el.querySelectorAll<SVGTextElement>('[data-cx]').forEach((t) => t.setAttribute('transform', `rotate(${-rot} ${t.dataset.cx} ${t.dataset.cy})`))
   }
   const indexAt = (rot: number) => (((Math.round(-rot / 30) % 12) + 12) % 12)
   const settle = (target: number, then?: () => void) => {
@@ -627,13 +631,13 @@ export function CircleOfFifths() {
           return (
             <g key={key} className={i === selected ? 'mm-sector is-sel' : 'mm-sector'}>
               <line x1={edge1.x} y1={edge1.y} x2={edge2.x} y2={edge2.y} stroke="var(--color-border-strong)" />
-              <text className="mm-upright mm-major" x={outer.x} y={outer.y + 5} textAnchor="middle" fontSize={key.length > 2 ? 11 : 15} fontWeight={600} fill={INK}>
+              <text className="mm-major" data-cx={outer.x} data-cy={outer.y} x={outer.x} y={outer.y + 5} textAnchor="middle" fontSize={key.length > 2 ? 11 : 15} fontWeight={600} fill={INK}>
                 {key}
               </text>
-              <text className="mm-upright" x={inner.x} y={inner.y + 4} textAnchor="middle" fontSize={11} fill={ACCENT}>
+              <text data-cx={inner.x} data-cy={inner.y} x={inner.x} y={inner.y + 4} textAnchor="middle" fontSize={11} fill={ACCENT}>
                 {MINORS[i]}
               </text>
-              <text className="mm-upright" x={rim.x} y={rim.y + 4} textAnchor="middle" fontSize={9} fill="var(--color-ink-muted)">
+              <text data-cx={rim.x} data-cy={rim.y} x={rim.x} y={rim.y + 4} textAnchor="middle" fontSize={9} fill="var(--color-ink-muted)">
                 {SIGNATURES[i]}
               </text>
             </g>
