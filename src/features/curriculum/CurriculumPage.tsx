@@ -93,10 +93,10 @@ function Shelf() {
       <header className="animate-float-up">
         <p className="text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold)]">Tủ sách Lamar</p>
         <h2 className="mt-2 max-w-2xl font-display text-[30px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[40px]">
-          Đọc như một cuốn sách, <span className="text-gold-gradient italic">học như một lộ trình</span>
+          Mỗi cuốn sách, <span className="text-gold-gradient italic">một lộ trình học</span>
         </h2>
         <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)]">
-          Sách lý thuyết và giáo trình piano do Lamar biên soạn và tổng hợp từ các bài của thư viện. Mở ra là đọc như sách điện tử: lật trang, mục lục, dấu trang, tìm trong sách, đổi cỡ chữ và nền trang, xuất PDF — mỗi bài vẫn giữ đúng đường dẫn của bài trong thư viện.
+          Tủ sách gồm các giáo trình lý thuyết âm nhạc và piano do Lamar biên soạn, hệ thống hoá từ thư viện bài viết. Mỗi cuốn được dàn trang như một ấn phẩm hoàn chỉnh — mục lục, dấu trang, tìm kiếm trong sách, tuỳ chỉnh cỡ chữ và nền trang, xuất bản PDF — và mọi chương đều liên kết trực tiếp với bài gốc trong thư viện.
         </p>
       </header>
 
