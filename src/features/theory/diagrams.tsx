@@ -1,5 +1,7 @@
-import type { ReactElement } from 'react'
+import { useId, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type KeyboardEvent as ReactKeyboardEvent, type ReactElement, type RefObject } from 'react'
 import { LETTERS, NOTE_RE, parseNote, PITCH_CLASS } from './notation'
+import { playNow, type Step } from './audio'
+import { lightStep, reducedMotion, usePlayer, useReveal } from './musicMotion'
 
 /** Theory diagrams drawn in SVG so they stay crisp, offline and theme-aware. */
 
@@ -8,7 +10,21 @@ const ACCENT = 'var(--color-accent)'
 
 const MUSIC_FONT = "'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif"
 
-/** Piano keyboard; highlighted keys are filled with the accent colour. */
+/** Stagger delay for entrance animations, capped so long charts don't keep the reader waiting. */
+const delay = (i: number, step = 60, base = 0) => ({ '--d': `${base + Math.min(i * step, 1400)}ms` }) as CSSProperties
+
+function PlayButton({ playing, onClick, label = 'Nghe' }: { playing: boolean; onClick: () => void; label?: string }) {
+  return (
+    <button type="button" onClick={onClick} className="mm-play print:hidden" aria-pressed={playing} aria-label={playing ? 'Dừng' : `${label} ví dụ`}>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+        {playing ? <rect x="5" y="5" width="14" height="14" rx="2" /> : <path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z" />}
+      </svg>
+      {playing ? 'Dừng' : label}
+    </button>
+  )
+}
+
+/** Piano keyboard; highlighted keys are filled with the accent colour. Keys sound when pressed (or swept across). */
 export function Keyboard({ notes }: { notes: string[] }) {
   const parsed = notes.map(parseNote).filter((n) => n !== null)
   const lit = new Set(parsed.map((n) => n.midi))
@@ -23,21 +39,93 @@ export function Keyboard({ notes }: { notes: string[] }) {
   }))
   // A black key sits after every white key except E and B.
   const blacks = whites.filter((w) => w.letter !== 'E' && w.letter !== 'B').map((w) => ({ x: w.x + W - 7, midi: w.midi + 1 }))
+  const uid = useId().replace(/:/g, '')
+  const svg = useRef<SVGSVGElement>(null)
+  const held = useRef<number | null>(null)
+  const { playing, toggle } = usePlayer()
+
+  const keyAt = (x: number, y: number) => (document.elementFromPoint(x, y)?.closest('[data-midi]') as SVGGElement | null) ?? null
+  const press = (key: SVGGElement | null, e: ReactPointerEvent) => {
+    const midi = Number(key?.dataset.midi)
+    if (!key || !svg.current || midi === held.current) return
+    release()
+    held.current = midi
+    key.classList.add('is-down')
+    playNow([midi])
+    if (reducedMotion()) return
+    // Ripple from the touch point, clipped to the key.
+    const pt = svg.current.createSVGPoint()
+    pt.x = e.clientX
+    pt.y = e.clientY
+    const p = pt.matrixTransform(svg.current.getScreenCTM()?.inverse())
+    const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+    ring.setAttribute('cx', String(p.x))
+    ring.setAttribute('cy', String(p.y))
+    ring.setAttribute('r', '16')
+    ring.setAttribute('class', 'mm-ripple')
+    ring.addEventListener('animationend', () => ring.remove())
+    key.querySelector('.mm-ripples')?.appendChild(ring)
+  }
+  const release = () => {
+    svg.current?.querySelectorAll('.is-down').forEach((k) => k.classList.remove('is-down'))
+    held.current = null
+  }
+  const onDown = (e: ReactPointerEvent<SVGSVGElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId)
+    press(keyAt(e.clientX, e.clientY), e)
+  }
+  const onMove = (e: ReactPointerEvent<SVGSVGElement>) => held.current !== null && press(keyAt(e.clientX, e.clientY), e)
+
+  const play = () => {
+    const sorted = [...lit].sort((a, b) => a - b)
+    const steps: Step[] = sorted.map((m, i) => ({ at: i * 0.32, dur: 0.6, midis: [m] }))
+    if (sorted.length > 1) steps.push({ at: sorted.length * 0.32 + 0.1, dur: 1.6, midis: sorted })
+    toggle(steps, {
+      onStep: (i) => {
+        svg.current?.querySelectorAll('.is-on').forEach((k) => k.classList.remove('is-on'))
+        steps[i]?.midis?.forEach((m) => svg.current?.querySelector(`[data-midi="${m}"]`)?.classList.add('is-on'))
+      },
+    })
+  }
+
+  const key = (k: { x: number; midi: number }, black: boolean, label?: string) => (
+    <g key={k.midi} data-midi={k.midi} className="mm-key">
+      <clipPath id={`${uid}k${k.midi}`}>
+        <rect x={k.x} y={0} width={black ? 14 : W} height={black ? 74 : 120} rx={black ? 2 : 3} />
+      </clipPath>
+      <g className="mm-key-face">
+        <rect x={k.x} y={0} width={black ? 14 : W} height={black ? 74 : 120} rx={black ? 2 : 3} fill={lit.has(k.midi) ? ACCENT : black ? '#222' : '#fff'} stroke={black ? '#222' : '#8a8478'} />
+        <rect className="mm-key-glow" x={k.x} y={0} width={black ? 14 : W} height={black ? 74 : 120} rx={black ? 2 : 3} />
+        <g className="mm-ripples" clipPath={`url(#${uid}k${k.midi})`} />
+        {label && (
+          <text x={k.x + W / 2} y={110} textAnchor="middle" fontSize={10} fill={lit.has(k.midi) ? 'var(--color-accent-ink)' : '#8a8478'} pointerEvents="none">
+            {label}
+          </text>
+        )}
+      </g>
+    </g>
+  )
 
   return (
-    <svg viewBox={`-1 -1 ${count * 7 * W + 2} 122`} className="w-full" style={{ maxWidth: count * 7 * W * 1.4 }} role="img" aria-label={`Bàn phím: ${notes.join(', ')}`}>
-      {whites.map((k) => (
-        <g key={k.midi}>
-          <rect x={k.x} y={0} width={W} height={120} rx={3} fill={lit.has(k.midi) ? ACCENT : '#fff'} stroke="#8a8478" />
-          <text x={k.x + W / 2} y={110} textAnchor="middle" fontSize={10} fill={lit.has(k.midi) ? 'var(--color-accent-ink)' : '#8a8478'}>
-            {k.letter}
-          </text>
-        </g>
-      ))}
-      {blacks.map((k) => (
-        <rect key={k.midi} x={k.x} y={0} width={14} height={74} rx={2} fill={lit.has(k.midi) ? ACCENT : '#222'} stroke="#222" />
-      ))}
-    </svg>
+    <div className="mm-playable">
+      <svg
+        ref={svg}
+        viewBox={`-1 -1 ${count * 7 * W + 2} 122`}
+        className="mm-keyboard w-full"
+        style={{ maxWidth: count * 7 * W * 1.4 }}
+        role="img"
+        aria-label={`Bàn phím: ${notes.join(', ')}`}
+        onPointerDown={onDown}
+        onPointerMove={onMove}
+        onPointerUp={release}
+        onPointerCancel={release}
+        onLostPointerCapture={release}
+      >
+        {whites.map((k) => key(k, false, k.letter))}
+        {blacks.map((k) => key(k, true))}
+      </svg>
+      {lit.size > 0 && <PlayButton playing={playing} onClick={play} />}
+    </div>
   )
 }
 
@@ -149,6 +237,35 @@ const Label = ({ x, y, text }: { x: number; y: number; text: string }) => (
   </text>
 )
 
+const NOTE_GAP = 0.62
+
+/**
+ * Plays whole-note columns one after another (they carry no rhythm, so they are evenly spaced), lighting each
+ * column and sliding a playhead between them.
+ */
+function useColumnPlayer(columns: { x: number; midis: number[] }[]) {
+  const svg = useRef<SVGSVGElement>(null)
+  const head = useRef<SVGLineElement>(null)
+  const { playing, toggle } = usePlayer()
+  const play = () => {
+    const steps: Step[] = columns.map((c, i) => ({ at: i * NOTE_GAP, dur: i === columns.length - 1 ? 1.6 : 0.9, midis: c.midis }))
+    toggle(steps, {
+      onStep: (i) => lightStep(svg.current, i),
+      onFrame: (t) => {
+        const i = Math.min(columns.length - 1, Math.floor(t / NOTE_GAP))
+        const next = columns[i + 1] ?? columns[i]
+        const x = columns[i].x + (next.x - columns[i].x) * Math.min(1, t / NOTE_GAP - i)
+        head.current?.setAttribute('transform', `translate(${x} 0)`)
+      },
+    })
+  }
+  return { svg, head, playing, play }
+}
+
+const Playhead = ({ head, playing, top, bottom }: { head: RefObject<SVGLineElement | null>; playing: boolean; top: number; bottom: number }) => (
+  <line ref={head} className={playing ? 'mm-playhead is-playing' : 'mm-playhead'} x1={0} x2={0} y1={top} y2={bottom} />
+)
+
 /**
  * Five-line staff of whole notes. Columns: "C4", "C4+E4+G4" (chord), optional "=label" shown underneath
  * (e.g. a Roman numeral; underscores become spaces); "/" draws a barline. An optional "k:3#" / "k:2b" adds a key signature.
@@ -169,20 +286,27 @@ export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig
   // Push the labels below the lowest note head (ledger notes under the staff would otherwise collide with them).
   const lowest = Math.min(0, ...cols.flatMap((c) => c.notes.map((n) => n.diatonic - CLEFS[clef].base)))
   const labelY = Math.max(104, 70 - (lowest * GAP) / 2 + 15)
+  const sounding = cols.map((c, i) => ({ x: xs[i], midis: c.notes.map((n) => n.midi) })).filter((c, i) => notes[i] !== '/' && c.midis.length)
+  const { svg, head, playing, play } = useColumnPlayer(sounding)
+  let n = 0
   return (
-    <svg viewBox={`0 0 ${width} ${labelY + 6}`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông nhạc: ${notes.join(', ')}`}>
-      <StaffLines clef={clef} keySig={keySig} bottom={70} width={width} />
-      {cols.map((col, i) => {
-        if (notes[i] === '/') return <line key={i} x1={xs[i]} x2={xs[i]} y1={30} y2={70} stroke={INK} />
-        const text = col.label ?? (col.notes.length === 1 ? prettyNote(notes[i]) : undefined)
-        return (
-          <g key={i}>
-            <Notes col={col} x={xs[i]} clef={clef} bottom={70} />
-            {text && <Label x={xs[i]} y={labelY} text={text} />}
-          </g>
-        )
-      })}
-    </svg>
+    <div className="mm-playable">
+      <svg ref={svg} viewBox={`0 0 ${width} ${labelY + 6}`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông nhạc: ${notes.join(', ')}`}>
+        <StaffLines clef={clef} keySig={keySig} bottom={70} width={width} />
+        <Playhead head={head} playing={playing} top={18} bottom={82} />
+        {cols.map((col, i) => {
+          if (notes[i] === '/') return <line key={i} x1={xs[i]} x2={xs[i]} y1={30} y2={70} stroke={INK} />
+          const text = col.label ?? (col.notes.length === 1 ? prettyNote(notes[i]) : undefined)
+          return (
+            <g key={i} className="mm-col" data-step={col.notes.length ? n++ : undefined}>
+              <Notes col={col} x={xs[i]} clef={clef} bottom={70} />
+              {text && <Label x={xs[i]} y={labelY} text={text} />}
+            </g>
+          )
+        })}
+      </svg>
+      {sounding.length > 0 && <PlayButton playing={playing} onClick={play} />}
+    </div>
   )
 }
 
@@ -202,26 +326,36 @@ export function GrandStaff({ keySig = 0, columns }: { keySig?: number; columns: 
     x += step
   }
   const width = x - step / 2 + 18
+  const midis = cols.map((c) => [...c.upper.notes, ...c.lower.notes].map((n) => n.midi))
+  const sounding = midis.map((m, i) => ({ x: xs[i], midis: m })).filter((c) => c.midis.length)
+  const { svg, head, playing, play } = useColumnPlayer(sounding)
+  let k = 0
   return (
-    <svg viewBox={`0 0 ${width} 200`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông kép: ${columns.join(', ')}`}>
-      <line x1={0.5} x2={0.5} y1={30} y2={160} stroke={INK} strokeWidth={1.5} />
-      <StaffLines clef="treble" keySig={keySig} bottom={70} width={width} />
-      <StaffLines clef="bass" keySig={keySig} bottom={160} width={width} />
-      {cols.map((col, i) => {
-        const x = xs[i]
-        return (
-          <g key={i}>
-            <Notes col={col.upper} x={x} clef="treble" bottom={70} />
-            <Notes col={col.lower} x={x} clef="bass" bottom={160} />
-            {col.label && <Label x={x} y={194} text={col.label} />}
-          </g>
-        )
-      })}
-    </svg>
+    <div className="mm-playable">
+      <svg ref={svg} viewBox={`0 0 ${width} 200`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông kép: ${columns.join(', ')}`}>
+        <line x1={0.5} x2={0.5} y1={30} y2={160} stroke={INK} strokeWidth={1.5} />
+        <StaffLines clef="treble" keySig={keySig} bottom={70} width={width} />
+        <StaffLines clef="bass" keySig={keySig} bottom={160} width={width} />
+        <Playhead head={head} playing={playing} top={18} bottom={172} />
+        {cols.map((col, i) => {
+          const x = xs[i]
+          return (
+            <g key={i} className="mm-col" data-step={midis[i].length ? k++ : undefined}>
+              <Notes col={col.upper} x={x} clef="treble" bottom={70} />
+              <Notes col={col.lower} x={x} clef="bass" bottom={160} />
+              {col.label && <Label x={x} y={194} text={col.label} />}
+            </g>
+          )
+        })}
+      </svg>
+      {sounding.length > 0 && <PlayButton playing={playing} onClick={play} />}
+    </div>
   )
 }
 
 const DURATIONS = { w: 4, h: 2, q: 1, e: 0.5, s: 0.25 } as const
+/** Seconds per quarter note when a rhythm is tapped out (♩ = 92). */
+const SPB = 60 / 92
 const RESTS = { w: '𝄻', h: '𝄼', q: '𝄽', e: '𝄾', s: '𝄿' } as const
 /**
  * Rhythm on a one-line staff: "4/4 q e-e >q. e / h~ q rq". Notes joined by "-" are beamed; "3[e-e-e]" is a triplet;
@@ -233,6 +367,9 @@ export function Rhythm({ tokens }: { tokens: string[] }) {
   let x = 12
   const items: ReactElement[] = []
   const heads: { x: number; tie: boolean }[] = []
+  const steps: Step[] = []
+  let beat = 0
+  let tiedIn = false
   tokens.forEach((tok, ti) => {
     const meter = /^(\d+)\/(\d+)$/.exec(tok)
     if (meter) {
@@ -254,60 +391,77 @@ export function Rhythm({ tokens }: { tokens: string[] }) {
     const triplet = tok.startsWith('3[')
     const group = tok.replace(/^3\[|\]$/g, '').split('-').map((n) => NOTE_RE.exec(n)).filter((m) => m !== null)
     const xs: number[] = []
+    const groupStart = steps.length
     group.forEach(([, accent, rest, d, dot, tie, syl], k) => {
       const dur = d as keyof typeof DURATIONS
       const cx = x + 6
       xs.push(cx)
       const key = `${ti}-${k}`
+      const out: ReactElement[] = []
+      const first = steps.length
+      // Triplets take two thirds of their written value; a note tied from the previous one is not struck again.
+      const beats = DURATIONS[dur] * (dot ? 1.5 : 1) * (triplet ? 2 / 3 : 1)
+      steps.push({ at: beat * SPB, dur: beats * SPB, tick: rest || tiedIn ? undefined : accent ? 'accent' : 'beat' })
+      beat += beats
+      if (!rest) tiedIn = !!tie
       if (rest) {
-        items.push(<text key={key} x={cx} y={Y + (dur === 'w' ? 2 : dur === 'h' ? 6 : 10)} textAnchor="middle" fontSize={dur === 'w' || dur === 'h' ? 26 : 28} fill={INK} fontFamily={MUSIC_FONT}>{RESTS[dur]}</text>)
+        out.push(<text key={key} x={cx} y={Y + (dur === 'w' ? 2 : dur === 'h' ? 6 : 10)} textAnchor="middle" fontSize={dur === 'w' || dur === 'h' ? 26 : 28} fill={INK} fontFamily={MUSIC_FONT}>{RESTS[dur]}</text>)
       } else {
         const hollow = dur === 'w' || dur === 'h'
-        items.push(<ellipse key={key} cx={cx} cy={Y} rx={6} ry={4.4} transform={`rotate(-20 ${cx} ${Y})`} fill={hollow ? 'none' : ACCENT} stroke={ACCENT} strokeWidth={hollow ? 2 : 1} />)
-        if (dur !== 'w') items.push(<line key={key + 's'} x1={cx + 5.4} x2={cx + 5.4} y1={Y - 2} y2={TOP} stroke={ACCENT} strokeWidth={1.3} />)
+        out.push(<ellipse key={key} cx={cx} cy={Y} rx={6} ry={4.4} transform={`rotate(-20 ${cx} ${Y})`} fill={hollow ? 'none' : ACCENT} stroke={ACCENT} strokeWidth={hollow ? 2 : 1} />)
+        if (dur !== 'w') out.push(<line key={key + 's'} x1={cx + 5.4} x2={cx + 5.4} y1={Y - 2} y2={TOP} stroke={ACCENT} strokeWidth={1.3} />)
         const flags = dur === 'e' ? 1 : dur === 's' ? 2 : 0
         if (group.length === 1 || group.some((g) => g[2] || (g[3] !== 'e' && g[3] !== 's')))
           for (let f = 0; f < flags; f++)
-            items.push(<path key={key + 'f' + f} d={`M${cx + 5.4} ${TOP + f * 6} q 7 5 6 14`} fill="none" stroke={ACCENT} strokeWidth={1.6} />)
-        if (accent) items.push(<path key={key + 'a'} d={`M${cx - 5} ${Y + 9} L${cx + 5} ${Y + 12} L${cx - 5} ${Y + 15}`} fill="none" stroke={INK} strokeWidth={1.3} />)
+            out.push(<path key={key + 'f' + f} d={`M${cx + 5.4} ${TOP + f * 6} q 7 5 6 14`} fill="none" stroke={ACCENT} strokeWidth={1.6} />)
+        if (accent) out.push(<path key={key + 'a'} d={`M${cx - 5} ${Y + 9} L${cx + 5} ${Y + 12} L${cx - 5} ${Y + 15}`} fill="none" stroke={INK} strokeWidth={1.3} />)
         heads.push({ x: cx, tie: !!tie })
       }
-      if (dot) items.push(<circle key={key + 'd'} cx={cx + 11} cy={Y - 3} r={1.8} fill={rest ? INK : ACCENT} />)
-      if (syl) items.push(<text key={key + 'l'} x={cx} y={Y + 34} textAnchor="middle" fontSize={12} fill="var(--color-ink-muted)">{syl}</text>)
+      if (dot) out.push(<circle key={key + 'd'} cx={cx + 11} cy={Y - 3} r={1.8} fill={rest ? INK : ACCENT} />)
+      if (syl) out.push(<text key={key + 'l'} x={cx} y={Y + 34} textAnchor="middle" fontSize={12} fill="var(--color-ink-muted)">{syl}</text>)
+      items.push(<g key={key + 'g'} className="mm-note" data-step={first} style={delay(first, 45)}>{out}</g>)
       x += Math.max(18, 26 * Math.sqrt(DURATIONS[dur])) * (dot ? 1.25 : 1) + 6
     })
+    const deco: ReactElement[] = []
     // Beams: the primary beam joins the whole group; a second beam joins neighbouring sixteenths (or a stub).
     const notes = group.map((m, k) => ({ d: m[3], rest: m[2], x: xs[k] + 5.4 }))
     if (group.length > 1 && notes.every((n) => !n.rest && (n.d === 'e' || n.d === 's'))) {
-      items.push(<line key={ti + 'b1'} x1={notes[0].x} x2={notes.at(-1)!.x} y1={TOP} y2={TOP} stroke={ACCENT} strokeWidth={3.5} />)
+      deco.push(<line key={ti + 'b1'} x1={notes[0].x} x2={notes.at(-1)!.x} y1={TOP} y2={TOP} stroke={ACCENT} strokeWidth={3.5} />)
       notes.forEach((n, k) => {
         if (n.d !== 's') return
-        if (notes[k + 1]?.d === 's') items.push(<line key={`${ti}b2${k}`} x1={n.x} x2={notes[k + 1].x} y1={TOP + 6} y2={TOP + 6} stroke={ACCENT} strokeWidth={3.5} />)
-        else if (notes[k - 1]?.d !== 's') items.push(<line key={`${ti}b2${k}`} x1={n.x} x2={k === notes.length - 1 ? n.x - 8 : n.x + 8} y1={TOP + 6} y2={TOP + 6} stroke={ACCENT} strokeWidth={3.5} />)
+        if (notes[k + 1]?.d === 's') deco.push(<line key={`${ti}b2${k}`} x1={n.x} x2={notes[k + 1].x} y1={TOP + 6} y2={TOP + 6} stroke={ACCENT} strokeWidth={3.5} />)
+        else if (notes[k - 1]?.d !== 's') deco.push(<line key={`${ti}b2${k}`} x1={n.x} x2={k === notes.length - 1 ? n.x - 8 : n.x + 8} y1={TOP + 6} y2={TOP + 6} stroke={ACCENT} strokeWidth={3.5} />)
       })
     }
     if (triplet && xs.length) {
       const [a, b] = [xs[0] - 4, xs.at(-1)! + 10]
-      items.push(
+      deco.push(
         <g key={ti + 't'} stroke={INK} fill="none" strokeWidth={1}>
           <path d={`M${a} ${TOP - 4} V${TOP - 9} H${b} V${TOP - 4}`} />
           <text x={(a + b) / 2} y={TOP - 11} textAnchor="middle" fontSize={10} fill={INK} stroke="none">3</text>
         </g>,
       )
     }
+    if (deco.length) items.push(<g key={ti + 'deco'} className="mm-note" style={delay(groupStart, 45)}>{deco}</g>)
     x += 4
   })
   // Ties arc from a note to the next one.
   heads.forEach((h, i) => {
     const next = heads[i + 1]
-    if (h.tie && next) items.push(<path key={'tie' + i} d={`M${h.x + 3} ${Y + 7} Q${(h.x + next.x) / 2} ${Y + 16} ${next.x - 3} ${Y + 7}`} fill="none" stroke={ACCENT} strokeWidth={1.4} />)
+    if (h.tie && next) items.push(<path key={'tie' + i} className="mm-note" style={delay(steps.length, 45)} d={`M${h.x + 3} ${Y + 7} Q${(h.x + next.x) / 2} ${Y + 16} ${next.x - 3} ${Y + 7}`} fill="none" stroke={ACCENT} strokeWidth={1.4} />)
   })
   const width = x + 8
+  const reveal = useReveal<SVGSVGElement>()
+  const { playing, toggle } = usePlayer()
+  const sounding = steps.some((st) => st.tick)
   return (
-    <svg viewBox={`0 0 ${width} 92`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Tiết tấu: ${tokens.join(' ')}`}>
-      <line x1={0} x2={width} y1={Y} y2={Y} stroke={INK} strokeWidth={1} />
-      {items}
-    </svg>
+    <div className="mm-playable">
+      <svg ref={reveal} viewBox={`0 0 ${width} 92`} className="mm-rhythm w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Tiết tấu: ${tokens.join(' ')}`}>
+        <line x1={0} x2={width} y1={Y} y2={Y} stroke={INK} strokeWidth={1} />
+        {items}
+      </svg>
+      {sounding && <PlayButton playing={playing} onClick={() => toggle(steps, { onStep: (i) => lightStep(reveal.current, i) })} label="Gõ nhịp" />}
+    </div>
   )
 }
 
@@ -315,38 +469,182 @@ const MAJORS = ['C', 'G', 'D', 'A', 'E', 'B', 'F♯/G♭', 'D♭', 'A♭', 'E♭
 const MINORS = ['a', 'e', 'b', 'f♯', 'c♯', 'g♯', 'd♯/e♭', 'b♭', 'f', 'c', 'g', 'd']
 const SIGNATURES = ['0', '1♯', '2♯', '3♯', '4♯', '5♯', '6♯/6♭', '5♭', '4♭', '3♭', '2♭', '1♭']
 
-/** Circle of fifths: major keys (outer), relative minors (inner), key signatures (rim). */
+/** Root of the major key at position i of the circle, voiced around middle C (G3–F♯4). */
+const tonicRoot = (i: number) => 55 + ((((i * 7) % 12) - 7 + 12) % 12)
+const angleOf = (x: number, y: number) => (Math.atan2(y, x) * 180) / Math.PI
+
+/**
+ * Circle of fifths: major keys (outer), relative minors (inner), key signatures (rim). The wheel turns under a
+ * finger or the mouse, coasts, and settles with a key at the top; tapping a key brings it up and sounds its tonic triad.
+ */
 export function CircleOfFifths() {
   const at = (i: number, r: number) => {
     const a = (i * 30 - 90) * (Math.PI / 180)
     return { x: 150 + r * Math.cos(a), y: 150 + r * Math.sin(a) }
   }
+  const svg = useRef<SVGSVGElement>(null)
+  const [selected, setSelected] = useState(0)
+  const [moving, setMoving] = useState(false)
+  // Rotation in degrees and the drag/coast state live in a ref: frames write the CSS variable, not React state.
+  const st = useRef({ rot: 0, raf: 0, drag: null as null | { start: number; rot: number; last: number; t: number; v: number; moved: number } })
+
+  const paint = (rot: number) => {
+    st.current.rot = rot
+    svg.current?.style.setProperty('--rot', `${rot}deg`)
+  }
+  const indexAt = (rot: number) => (((Math.round(-rot / 30) % 12) + 12) % 12)
+  const settle = (target: number, then?: () => void) => {
+    cancelAnimationFrame(st.current.raf)
+    const done = () => {
+      paint(target)
+      setMoving(false)
+      setSelected(indexAt(target))
+      then?.()
+    }
+    if (reducedMotion()) return done()
+    const from = st.current.rot
+    const t0 = performance.now()
+    const frame = (now: number) => {
+      const k = Math.min(1, (now - t0) / 420)
+      // easeOutBack: a small overshoot reads as the wheel clicking into place.
+      const e = 1 + 2.2 * (k - 1) ** 3 + 1.2 * (k - 1) ** 2
+      paint(from + (target - from) * e)
+      if (k < 1) st.current.raf = requestAnimationFrame(frame)
+      else done()
+    }
+    st.current.raf = requestAnimationFrame(frame)
+  }
+  const nearest = (rot: number) => Math.round(rot / 30) * 30
+  const choose = (i: number, minor = false) => {
+    // Turn the short way round to bring key i to the top.
+    const cur = st.current.rot
+    let target = -i * 30
+    target += Math.round((cur - target) / 360) * 360
+    setMoving(true)
+    settle(target)
+    const r = tonicRoot(i)
+    playNow(minor ? [r - 3, r, r + 4, r + 9] : [r, r + 4, r + 7, r + 12], 1.8, 0.025)
+  }
+
+  const local = (e: ReactPointerEvent) => {
+    const box = svg.current!.getBoundingClientRect()
+    const k = 300 / box.width
+    return { x: (e.clientX - box.left) * k - 150, y: (e.clientY - box.top) * k - 150 }
+  }
+  const onDown = (e: ReactPointerEvent<SVGSVGElement>) => {
+    const p = local(e)
+    if (Math.hypot(p.x, p.y) > 142) return
+    cancelAnimationFrame(st.current.raf)
+    e.currentTarget.setPointerCapture(e.pointerId)
+    const a = angleOf(p.x, p.y)
+    st.current.drag = { start: a, rot: st.current.rot, last: a, t: performance.now(), v: 0, moved: 0 }
+  }
+  const onMove = (e: ReactPointerEvent<SVGSVGElement>) => {
+    const d = st.current.drag
+    if (!d) return
+    const p = local(e)
+    const a = angleOf(p.x, p.y)
+    let delta = a - d.last
+    if (delta > 180) delta -= 360
+    if (delta < -180) delta += 360
+    const now = performance.now()
+    d.v = 0.7 * d.v + 0.3 * (delta / Math.max(1, now - d.t))
+    d.last = a
+    d.t = now
+    d.moved += Math.abs(delta)
+    if (d.moved > 3 && !moving) setMoving(true)
+    paint(st.current.rot + delta)
+  }
+  const onUp = (e: ReactPointerEvent<SVGSVGElement>) => {
+    const d = st.current.drag
+    st.current.drag = null
+    if (!d) return
+    if (d.moved <= 3) {
+      // A tap: which key, and on which ring?
+      const p = local(e)
+      const dist = Math.hypot(p.x, p.y)
+      if (dist < 34) return choose(indexAt(st.current.rot))
+      const i = (((Math.round((angleOf(p.x, p.y) + 90 - st.current.rot) / 30) % 12) + 12) % 12)
+      return choose(i, dist < 70)
+    }
+    let v = performance.now() - d.t > 80 ? 0 : d.v
+    if (reducedMotion() || Math.abs(v) < 0.05) return settle(nearest(st.current.rot))
+    let t = performance.now()
+    const coast = (now: number) => {
+      const dt = now - t
+      t = now
+      v *= Math.pow(0.994, dt)
+      paint(st.current.rot + v * dt)
+      if (Math.abs(v) > 0.04) st.current.raf = requestAnimationFrame(coast)
+      // Settle on the key the wheel is drifting towards.
+      else settle(nearest(st.current.rot + v * 60))
+    }
+    st.current.raf = requestAnimationFrame(coast)
+  }
+  const onKey = (e: ReactKeyboardEvent) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault()
+      choose((selected + (e.key === 'ArrowRight' ? 1 : 11)) % 12)
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      choose(selected)
+    }
+  }
+
   return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-xs" role="img" aria-label="Vòng quãng 5">
+    <svg
+      ref={svg}
+      viewBox="0 0 300 300"
+      className={moving ? 'mm-circle w-full max-w-xs is-moving' : 'mm-circle w-full max-w-xs'}
+      role="slider"
+      tabIndex={0}
+      aria-label="Vòng quãng 5 — kéo để xoay, chạm một giọng để nghe hợp âm chủ"
+      aria-valuemin={0}
+      aria-valuemax={11}
+      aria-valuenow={selected}
+      aria-valuetext={`${MAJORS[selected]} trưởng / ${MINORS[selected]} thứ, ${SIGNATURES[selected]}`}
+      onPointerDown={onDown}
+      onPointerMove={onMove}
+      onPointerUp={onUp}
+      onPointerCancel={() => {
+        st.current.drag = null
+        settle(nearest(st.current.rot))
+      }}
+      onKeyDown={onKey}
+    >
+      {/* The selected key's wedge stays at the top while the wheel turns beneath it. */}
+      <path className="mm-circle-sel" d={`M${at(-0.5, 36).x} ${at(-0.5, 36).y} L${at(-0.5, 140).x} ${at(-0.5, 140).y} A140 140 0 0 1 ${at(0.5, 140).x} ${at(0.5, 140).y} L${at(0.5, 36).x} ${at(0.5, 36).y} A36 36 0 0 0 ${at(-0.5, 36).x} ${at(-0.5, 36).y}Z`} />
       {[140, 105, 70].map((r) => (
         <circle key={r} cx={150} cy={150} r={r} fill="none" stroke="var(--color-border-strong)" />
       ))}
-      {MAJORS.map((key, i) => {
-        const outer = at(i, 87)
-        const inner = at(i, 52)
-        const rim = at(i, 123)
-        const edge1 = at(i + 0.5, 70)
-        const edge2 = at(i + 0.5, 140)
-        return (
-          <g key={key}>
-            <line x1={edge1.x} y1={edge1.y} x2={edge2.x} y2={edge2.y} stroke="var(--color-border-strong)" />
-            <text x={outer.x} y={outer.y + 5} textAnchor="middle" fontSize={key.length > 2 ? 11 : 15} fontWeight={600} fill={INK}>
-              {key}
-            </text>
-            <text x={inner.x} y={inner.y + 4} textAnchor="middle" fontSize={11} fill={ACCENT}>
-              {MINORS[i]}
-            </text>
-            <text x={rim.x} y={rim.y + 4} textAnchor="middle" fontSize={9} fill="var(--color-ink-muted)">
-              {SIGNATURES[i]}
-            </text>
-          </g>
-        )
-      })}
+      <g className="mm-rotor">
+        {MAJORS.map((key, i) => {
+          const outer = at(i, 87)
+          const inner = at(i, 52)
+          const rim = at(i, 123)
+          const edge1 = at(i + 0.5, 70)
+          const edge2 = at(i + 0.5, 140)
+          return (
+            <g key={key} className={i === selected ? 'mm-sector is-sel' : 'mm-sector'}>
+              <line x1={edge1.x} y1={edge1.y} x2={edge2.x} y2={edge2.y} stroke="var(--color-border-strong)" />
+              <text className="mm-upright mm-major" x={outer.x} y={outer.y + 5} textAnchor="middle" fontSize={key.length > 2 ? 11 : 15} fontWeight={600} fill={INK}>
+                {key}
+              </text>
+              <text className="mm-upright" x={inner.x} y={inner.y + 4} textAnchor="middle" fontSize={11} fill={ACCENT}>
+                {MINORS[i]}
+              </text>
+              <text className="mm-upright" x={rim.x} y={rim.y + 4} textAnchor="middle" fontSize={9} fill="var(--color-ink-muted)">
+                {SIGNATURES[i]}
+              </text>
+            </g>
+          )
+        })}
+      </g>
+      <circle className="mm-circle-hub" cx={150} cy={150} r={22} />
+      <text x={150} y={154} textAnchor="middle" fontSize={11} fontWeight={600} fill={INK} pointerEvents="none">
+        {MAJORS[selected].split('/')[0]}
+      </text>
+      <path d="M150 4 l-5 -4 h10 z" fill="var(--color-gold)" transform="translate(0 2)" />
     </svg>
   )
 }
@@ -404,14 +702,15 @@ export function FormChart({ sections }: { sections: string[] }) {
   const total = parts.reduce((s, p) => s + p.len, 0)
   const W = 320
   const starts = parts.map((_, i) => (parts.slice(0, i).reduce((s, p) => s + p.len, 0) / total) * W)
+  const reveal = useReveal<SVGSVGElement>()
   return (
-    <svg viewBox={`0 0 ${W} 54`} className="w-full max-w-xl" role="img" aria-label={`Sơ đồ hình thức: ${parts.map((p) => p.name).join(' – ')}`}>
+    <svg ref={reveal} viewBox={`0 0 ${W} 54`} className="mm-form w-full max-w-xl" role="img" aria-label={`Sơ đồ hình thức: ${parts.map((p) => p.name).join(' – ')}`}>
       {parts.map((p, i) => {
         const x = starts[i]
         const w = (p.len / total) * W
         const hue = FORM_HUES[keys.indexOf(p.name.replace(/['’\d]+$/, '')) % FORM_HUES.length]
         return (
-          <g key={i}>
+          <g key={i} className="mm-slide" style={delay(i, 90)}>
             <rect x={x + 1} y={4} width={w - 2} height={30} rx={5} fill={`oklch(0.85 0.07 ${hue})`} stroke={`oklch(0.55 0.1 ${hue})`} />
             <text x={x + w / 2} y={23.5} textAnchor="middle" fontSize={labelSize(p.name, w)} fontWeight={600} fill="oklch(0.25 0.03 260)">
               {p.name}
@@ -477,15 +776,19 @@ export function Timeline({ items }: { items: string[] }) {
   const step = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000].find((s) => span / s <= 7) ?? 10000
   const ticks: number[] = []
   for (let t = Math.ceil(lo / step) * step; t <= hi; t += step) ticks.push(t)
+  const reveal = useReveal<SVGSVGElement>()
+  // The axis draws itself left to right in DRAW ms; each span and event appears as the line passes its year.
+  const DRAW = 900
+  const when = (year: number, extra = 0) => ({ '--d': `${Math.round(((year - lo) / Math.max(1, hi - lo)) * DRAW) + extra}ms` }) as CSSProperties
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl" role="img" aria-label={`Trục thời gian: ${parsed.map((p) => p.label).join(', ')}`}>
+    <svg ref={reveal} viewBox={`0 0 ${W} ${H}`} className="mm-timeline w-full max-w-2xl" role="img" aria-label={`Trục thời gian: ${parsed.map((p) => p.label).join(', ')}`}>
       {spans.map((s, i) => {
         const hue = FORM_HUES[i % FORM_HUES.length]
         const [a, b] = [x(s.from), x(s.to)]
         const y = spanTop + spanRow[i] * 22
         return (
-          <g key={`s${i}`}>
+          <g key={`s${i}`} className="mm-tl-span" style={when(s.from, 60)}>
             <rect x={a + 0.5} y={y} width={Math.max(2, b - a - 1)} height={18} rx={4} fill={`oklch(0.85 0.07 ${hue})`} stroke={`oklch(0.55 0.1 ${hue})`} />
             <text x={(a + b) / 2} y={y + 12.5} textAnchor="middle" fontSize={labelSize(s.label, b - a)} fontWeight={600} fill="oklch(0.25 0.03 260)">
               {s.label}
@@ -493,9 +796,9 @@ export function Timeline({ items }: { items: string[] }) {
           </g>
         )
       })}
-      <line x1={pad - 4} x2={W - pad + 4} y1={axisY} y2={axisY} stroke="var(--color-ink-muted)" strokeWidth={1} />
+      <line className="mm-tl-axis" x1={pad - 4} x2={W - pad + 4} y1={axisY} y2={axisY} stroke="var(--color-ink-muted)" strokeWidth={1} />
       {ticks.map((t) => (
-        <g key={`t${t}`}>
+        <g key={`t${t}`} className="mm-tl-tick" style={when(t)}>
           <line x1={x(t)} x2={x(t)} y1={axisY - 3} y2={axisY + 3} stroke="var(--color-ink-muted)" />
           <text x={x(t)} y={axisY + 12} textAnchor="middle" fontSize={7.5} fill="var(--color-ink-muted)">{fmt(t)}</text>
         </g>
@@ -504,10 +807,10 @@ export function Timeline({ items }: { items: string[] }) {
         const ex = x(e.from)
         const y = eventTop + eventRow[i] * 13
         return (
-          <g key={`e${i}`}>
-            <line x1={ex} x2={ex} y1={axisY} y2={y + 2} stroke="var(--color-gold)" strokeWidth={0.8} strokeDasharray="1.5 1.5" />
-            <circle cx={ex} cy={axisY} r={2.4} fill="var(--color-gold)" />
-            <text x={labelX(e)} y={y + 9} textAnchor="middle" fontSize={7.5} fill="var(--color-ink)">
+          <g key={`e${i}`} className="mm-tl-ev" style={when(e.from, 120 + Math.min(i, 12) * 25)}>
+            <line className="mm-tl-stem" x1={ex} x2={ex} y1={axisY} y2={y + 2} stroke="var(--color-gold)" strokeWidth={0.8} strokeDasharray="1.5 1.5" />
+            <circle className="mm-tl-dot" cx={ex} cy={axisY} r={2.4} fill="var(--color-gold)" />
+            <text className="mm-tl-label" x={labelX(e)} y={y + 9} textAnchor="middle" fontSize={7.5} fill="var(--color-ink)">
               <tspan fontWeight={600}>{fmt(e.from)}</tspan> {e.label}
             </text>
           </g>
@@ -567,8 +870,9 @@ export function Bars({ items }: { items: string[] }) {
     const r = Math.min(2.5, barW / 2, y0 - y1)
     return `M${x},${y0}V${y1 + r}Q${x},${y1} ${x + r},${y1}H${x + barW - r}Q${x + barW},${y1} ${x + barW},${y1 + r}V${y0}Z`
   }
+  const reveal = useReveal<SVGSVGElement>()
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl" role="img" aria-label={`Biểu đồ cột: ${data.map((d) => `${d.label} ${d.values.join('/')}`).join(', ')}`}>
+    <svg ref={reveal} viewBox={`0 0 ${W} ${H}`} className="mm-bars w-full max-w-2xl" role="img" aria-label={`Biểu đồ cột: ${data.map((d) => `${d.label} ${d.values.join('/')}`).join(', ')}`}>
       {nSeries > 1 &&
         names.map((n, i) => (
           <g key={n} transform={`translate(${padL + i * 90},4)`}>
@@ -588,7 +892,7 @@ export function Bars({ items }: { items: string[] }) {
         return (
           <g key={d.label + i}>
             {d.values.map((v, j) => (
-              <path key={j} d={bar(x0 + j * (barW + 2), v)} fill={colors[j]}>
+              <path key={j} className="mm-bar" style={delay(i * nSeries + j, 55)} d={bar(x0 + j * (barW + 2), v)} fill={colors[j]}>
                 <title>{`${d.label}${names[j] ? ` — ${names[j]}` : ''}: ${v}`}</title>
               </path>
             ))}
@@ -630,16 +934,17 @@ export function RangeChart({ items }: { items: string[] }) {
   const rowH = 13
   const kbY = rows.length * rowH + 4
   const H = kbY + 30
+  const reveal = useReveal<SVGSVGElement>()
   const glyph = (n: string) => n.replace('##', '𝄪').replace('bb', '𝄫').replace('#', '♯').replace(/(?<=[A-G])b/, '♭')
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl" role="img" aria-label={`Âm vực: ${rows.map((r) => `${r.label} ${r.from}–${r.to}`).join(', ')}`}>
+    <svg ref={reveal} viewBox={`0 0 ${W} ${H}`} className="mm-range w-full max-w-2xl" role="img" aria-label={`Âm vực: ${rows.map((r) => `${r.label} ${r.from}–${r.to}`).join(', ')}`}>
       {rows.map((r, i) => {
         const [a, b] = [labelW + left(clamp(r.lo)), labelW + right(clamp(r.hi))]
         const y = i * rowH + 2
         return (
           <g key={r.label + i}>
             <text x={labelW - 4} y={y + 8} textAnchor="end" fontSize={7.5} fill="var(--color-ink)">{r.label}</text>
-            <rect x={a} y={y} width={Math.max(3, b - a)} height={10} rx={3} fill={i % 2 ? 'var(--chart-2)' : 'var(--chart-1)'}>
+            <rect className="mm-grow-x" style={delay(i, 70)} x={a} y={y} width={Math.max(3, b - a)} height={10} rx={3} fill={i % 2 ? 'var(--chart-2)' : 'var(--chart-1)'}>
               <title>{`${r.label}: ${glyph(r.from)} – ${glyph(r.to)}`}</title>
             </rect>
             <text x={a - 2} y={y + 8} textAnchor="end" fontSize={6} fill="var(--color-ink-muted)">{r.lo < 21 ? '◂' : ''}</text>

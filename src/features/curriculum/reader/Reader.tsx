@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactNode, type WheelEvent as ReactWheelEvent } from 'react'
-import { createPortal } from 'react-dom'
+import { createPortal, flushSync } from 'react-dom'
 import { Link, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { ArrowLeftIcon, BookmarkIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, DownloadIcon, ExpandIcon, GraduationIcon, ListIcon, NoteIcon, SearchIcon, TypeIcon, XIcon } from '../../../components/icons'
@@ -11,6 +11,9 @@ import { chaptersOf, hueTint, type ReaderBook, type ReaderItem } from './model'
 import { Annotator, NotesPanel } from './Annotator'
 import { cite, useNotes } from './notes'
 import { getPosition, removeBookmark, savePosition, setPrefs, toggleBookmark, useReader, type Bookmark, type ReaderPrefs } from './store'
+import { startCurl, type Curl } from './curl'
+import { closeBook } from '../bookOpen'
+import '../motion-books.css'
 
 const GAP = 64
 // Vertical margins leave room for the running head and the page number.
@@ -61,6 +64,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const desk = useRef<HTMLElement>(null)
   const flow = useRef<HTMLDivElement>(null)
   const sentinel = useRef<HTMLSpanElement>(null)
+  const sheetEl = useRef<HTMLDivElement>(null)
 
   const item = items[index]
   const isCover = item.kind === 'cover'
@@ -191,6 +195,44 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     else if (index > 0) go(index - 1, 'last')
   }, [page, index, go])
 
+  // Paper turn: photograph the page, turn the live text underneath, then fold the photograph away.
+  const curlOn = prefs.turn === 'curl' && !matchMedia('(prefers-reduced-motion: reduce)').matches
+  const curl = useRef<Curl | null>(null)
+  const nav = useRef({ next, prev })
+  useEffect(() => {
+    nav.current = { next, prev }
+  })
+  useEffect(() => () => curl.current?.destroy(), [])
+  const atStart = index === 0 && page === 0
+  const atEnd = index === items.length - 1 && page === pages - 1
+  const beginCurl = useCallback(
+    (d: 1 | -1) => {
+      curl.current?.destroy()
+      curl.current = null
+      if (!curlOn || !sheetEl.current || (d > 0 ? atEnd : atStart)) return null
+      const c = startCurl(sheetEl.current, d, wide)
+      curl.current = c
+      // Commit the new page (and the measuring of a new item) now, so the clone of it below is the real thing.
+      flushSync(() => (d > 0 ? next : prev)())
+      c.ready()
+      return c
+    },
+    [curlOn, atEnd, atStart, wide, next, prev],
+  )
+  const endCurl = (c: Curl) => {
+    if (curl.current !== c) return
+    c.destroy()
+    curl.current = null
+  }
+  const turnBy = useCallback(
+    (d: 1 | -1) => {
+      const c = beginCurl(d)
+      if (!c) return (d > 0 ? next : prev)()
+      void c.play(1, 720, (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)).then(() => endCurl(c))
+    },
+    [beginCurl, next, prev],
+  )
+
   // Keyboard.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -199,17 +241,17 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
       if (panel) return
       if (['ArrowRight', 'PageDown', ' '].includes(e.key)) {
         e.preventDefault()
-        next()
+        turnBy(1)
       }
       if (['ArrowLeft', 'PageUp'].includes(e.key)) {
         e.preventDefault()
-        prev()
+        turnBy(-1)
       }
       if (e.key === 'Home') go(0)
     }
     addEventListener('keydown', onKey)
     return () => removeEventListener('keydown', onKey)
-  }, [next, prev, go, panel])
+  }, [turnBy, go, panel])
 
   // Wheel and trackpad: one turn per gesture.
   const wheelLock = useRef(0)
@@ -217,15 +259,13 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY
     if (Math.abs(d) < 24 || Date.now() < wheelLock.current) return
     wheelLock.current = Date.now() + 450
-    if (d > 0) next()
-    else prev()
+    turnBy(d > 0 ? 1 : -1)
   }
 
   // Swipe: follow the finger, then turn if the drag went far or fast enough.
   const start = useRef<{ x: number; y: number; t: number; id: number } | null>(null)
   const moved = useRef(false)
-  const atStart = index === 0 && page === 0
-  const atEnd = index === items.length - 1 && page === pages - 1
+  const dragCurl = useRef<{ c: Curl; d: 1 | -1 } | null>(null)
   const onPointerDown = (e: ReactPointerEvent) => {
     // A mouse drag selects text (for highlighting); pages turn with the arrows, keys, wheel or a click at the edges.
     if (e.button !== 0 || panel || e.pointerType === 'mouse') return
@@ -241,7 +281,13 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
       setDragging(true)
       moved.current = true
       ;(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId)
+      const d = dx < 0 ? 1 : -1
+      const c = beginCurl(d)
+      dragCurl.current = c && { c, d }
     }
+    // The fold follows the finger, written straight to the clones.
+    const dc = dragCurl.current
+    if (dc) return dc.c.set((-dc.d * dx) / (size.w * 0.9))
     // Resist at the two ends of the book.
     setDrag((dx > 0 && atStart) || (dx < 0 && atEnd) ? dx * 0.25 : dx)
   }
@@ -253,7 +299,20 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     const fast = Math.abs(dx) / Math.max(1, Date.now() - s.t) > 0.45
     setDragging(false)
     setDrag(0)
-    if (Math.abs(dx) > size.w * 0.18 || (fast && Math.abs(dx) > 30)) (dx < 0 ? next : prev)()
+    const turn = Math.abs(dx) > size.w * 0.18 || (fast && Math.abs(dx) > 30)
+    const dc = dragCurl.current
+    dragCurl.current = null
+    if (!dc) {
+      if (turn) (dx < 0 ? next : prev)()
+      return
+    }
+    if (turn && Math.sign(-dx) === dc.d) return void dc.c.play(1, 420).then(() => endCurl(dc.c))
+    // Let go too early: fold back, then put the live page back where it was while the clone still covers it.
+    void dc.c.play(0, 320).then(() => {
+      if (curl.current !== dc.c) return
+      flushSync(() => (dc.d > 0 ? nav.current.prev : nav.current.next)())
+      endCurl(dc.c)
+    })
   }
 
   const onClick = (e: ReactMouseEvent) => {
@@ -274,8 +333,8 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     if (t.closest('a, button, input, select, figure, iframe, summary, [role=button], table')) return
     const r = viewport.current!.getBoundingClientRect()
     const x = (e.clientX - r.left) / r.width
-    if (x < 0.28) prev()
-    else if (x > 0.72) next()
+    if (x < 0.28) turnBy(-1)
+    else if (x > 0.72) turnBy(1)
     else setChrome((c) => !c)
   }
 
@@ -291,6 +350,8 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const progress = (index + (page + 1) / pages) / items.length
   const chapter = item.kind === 'cover' ? undefined : item
   const turn = prefs.turn
+  // The ribbon only falls or lifts when the reader sets it here, not when a marked page is turned to.
+  const [ribbonAt, setRibbonAt] = useState('')
 
   const style = {
     ...hueTint(book.hue),
@@ -305,7 +366,15 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     <div className="reader fixed inset-0 z-[70] flex flex-col overflow-hidden" data-rtheme={prefs.theme} style={style}>
       {/* Top bar */}
       <header className={clsx('reader-bar absolute inset-x-0 top-0 z-20 flex h-14 items-center gap-1 px-2 pt-[env(safe-area-inset-top)] transition-all duration-500 sm:px-4', !chrome && '-translate-y-full opacity-0')}>
-        <Link to="/curriculum" aria-label="Về giá sách" className="reader-btn">
+        <Link
+          to="/curriculum"
+          aria-label="Về giá sách"
+          className="reader-btn"
+          onClick={(e) => {
+            e.preventDefault()
+            closeBook(book, '/curriculum', navigate)
+          }}
+        >
           <ArrowLeftIcon width={18} height={18} />
         </Link>
         <button onClick={() => setPanel(panel === 'toc' ? null : 'toc')} aria-label="Mục lục" className={clsx('reader-btn', panel === 'toc' && 'is-on')}>
@@ -329,7 +398,10 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
           <TypeIcon width={18} height={18} />
         </button>
         <button
-          onClick={() => toggleBookmark(book.id, { key: item.key, ratio: here, label: item.title, at: Date.now() }, 1 / pages)}
+          onClick={() => {
+            setRibbonAt(`${item.key}:${page}`)
+            toggleBookmark(book.id, { key: item.key, ratio: here, label: item.title, at: Date.now() }, 1 / pages)
+          }}
           aria-label={marked ? 'Bỏ dấu trang' : 'Đặt dấu trang'}
           aria-pressed={marked}
           className={clsx('reader-btn', marked && 'text-[var(--color-gold)]')}
@@ -351,7 +423,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
 
       {/* The page */}
       <main ref={desk} className="reader-desk relative flex min-h-0 flex-1 items-stretch justify-center px-2 pb-16 pt-14 sm:px-6">
-        <div className={clsx('reader-page relative my-2 w-full overflow-clip', wide ? 'max-w-[1240px] is-spread' : 'max-w-[780px]')}>
+        <div ref={sheetEl} className={clsx('reader-page relative my-2 w-full overflow-clip', wide ? 'max-w-[1240px] is-spread' : 'max-w-[780px]')}>
           <div
             ref={viewport}
             className="absolute inset-0 touch-pan-y select-text"
@@ -365,7 +437,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
             <div style={{ padding: `${padY}px ${px}px` }} className="h-full">
               <div
                 key={item.key}
-                className={clsx('reader-enter h-full', turn !== 'none' && (dir.current > 0 ? 'from-right' : 'from-left'), turn === 'fade' && 'is-fade')}
+                className={clsx('reader-enter h-full', turn !== 'none' && turn !== 'curl' && (dir.current > 0 ? 'from-right' : 'from-left'), turn === 'fade' && 'is-fade')}
               >
                 <div
                   ref={flow}
@@ -376,7 +448,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
                     columnWidth: isCover ? undefined : colW,
                     columnGap: GAP,
                     transform: `translate3d(${-page * step + drag}px,0,0)`,
-                    transition: dragging || instant || turn === 'none' ? 'none' : turn === 'fade' ? 'transform 0ms' : 'transform 520ms cubic-bezier(0.22, 0.8, 0.2, 1)',
+                    transition: dragging || instant || turn === 'none' || turn === 'curl' ? 'none' : turn === 'fade' ? 'transform 0ms' : 'transform 520ms cubic-bezier(0.22, 0.8, 0.2, 1)',
                   }}
                 >
                   <BookPage book={book} item={item} onGo={(k) => go(keyIndex(k))} />
@@ -387,11 +459,17 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
           </div>
           {wide && <span aria-hidden className="reader-gutter pointer-events-none absolute inset-y-0 left-1/2 w-16 -translate-x-1/2" />}
           {!isCover && <RunningHeads book={book} item={item} page={page} wide={wide} padY={padY} padX={px} />}
+          <span
+            aria-hidden
+            data-curl-skip="1"
+            className={clsx('reader-ribbon', marked && 'is-on', ribbonAt === `${item.key}:${page}` && 'is-anim')}
+            style={{ right: wide ? px + 28 : Math.max(18, px) }}
+          />
         </div>
-        <button onClick={prev} aria-label="Trang trước" disabled={atStart} className={clsx('reader-turn left-1 lg:left-4', !chrome && 'opacity-0')}>
+        <button onClick={() => turnBy(-1)} aria-label="Trang trước" disabled={atStart} className={clsx('reader-turn left-1 lg:left-4', !chrome && 'opacity-0')}>
           <ChevronLeftIcon width={22} height={22} />
         </button>
-        <button onClick={next} aria-label="Trang sau" disabled={atEnd} className={clsx('reader-turn right-1 lg:right-4', !chrome && 'opacity-0')}>
+        <button onClick={() => turnBy(1)} aria-label="Trang sau" disabled={atEnd} className={clsx('reader-turn right-1 lg:right-4', !chrome && 'opacity-0')}>
           <ChevronRightIcon width={22} height={22} />
         </button>
       </main>
@@ -654,7 +732,7 @@ function Settings({ book, prefs, onClose }: { book: ReaderBook; prefs: ReaderPre
         <Seg value={prefs.justify} onChange={(justify) => setPrefs({ justify })} options={[[true, 'Đều hai bên'], [false, 'Trái']]} />
 
         <p className={label}>Hiệu ứng lật trang</p>
-        <Seg value={prefs.turn} onChange={(turn) => setPrefs({ turn })} options={[['slide', 'Trượt'], ['fade', 'Mờ dần'], ['none', 'Tắt']]} />
+        <Seg value={prefs.turn} onChange={(turn) => setPrefs({ turn })} options={[['slide', 'Trượt'], ['curl', 'Lật giấy'], ['fade', 'Mờ dần'], ['none', 'Tắt']]} />
 
         <p className="mt-5 rounded-xl border border-[var(--color-border)] px-3 py-3 text-[var(--color-prose)]" style={{ fontFamily: FONTS[prefs.font], fontSize: Math.min(prefs.size, 19), lineHeight: prefs.leading }}>
           Âm nhạc là nghệ thuật của âm thanh trong thời gian.

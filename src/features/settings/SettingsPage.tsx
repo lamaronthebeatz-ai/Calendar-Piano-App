@@ -55,10 +55,14 @@ export function SettingsPage() {
   }
 
   return (
-    <ScrollArea className="h-full overflow-y-auto pb-24 lg:pb-6">
-      <div className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
-        <h1 className="font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Cài đặt</h1>
+    <ScrollArea collapse={[8, 64]} className="h-full overflow-y-auto pb-24 lg:pb-6">
+      <div data-collapse className="glass sticky top-0 z-10 border-b border-[var(--color-border)] px-4 py-3 lg:px-6">
+        {/* The small bar title takes over once the large one below has scrolled under the bar. */}
+        <h1 className="collapse-in font-display text-[20px] font-semibold tracking-tight text-[var(--color-ink)]">Cài đặt</h1>
       </div>
+      <p aria-hidden data-collapse className="collapse-large mx-auto max-w-xl px-4 pt-5 font-display text-[32px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] lg:px-6">
+        Cài đặt
+      </p>
 
       <div className="mx-auto max-w-xl space-y-8 px-4 py-6 lg:px-6">
         <Section title="Hồ sơ">

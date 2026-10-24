@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import clsx from 'clsx'
 import { BookIcon, BranchesIcon, CalendarIcon, GraduationIcon, SearchIcon, SettingsIcon, SparkleIcon, UsersIcon } from '../../components/icons'
 import { endTour, startTour, tourSeen, useTourOpen } from './tour'
+import '../../components/motion-ui.css'
 
 interface Step {
   icon: ReactNode
@@ -154,7 +155,16 @@ function visible(keys?: string[]) {
 }
 
 function Tour() {
-  const [i, setI] = useState(0)
+  const [i, setStep] = useState(0)
+  // Which way the user is travelling, so the next card slides in from that side.
+  const [dir, setDir] = useState(0)
+  const setI = useCallback((next: number | ((n: number) => number)) => {
+    setStep((n) => {
+      const to = typeof next === 'function' ? next(n) : next
+      setDir(Math.sign(to - n))
+      return to
+    })
+  }, [])
   const [rect, setRect] = useState<DOMRect | null>(null)
   const [leaving, setLeaving] = useState(false)
   const step = STEPS[i]
@@ -189,7 +199,7 @@ function Tour() {
     }
     addEventListener('keydown', onKey, true)
     return () => removeEventListener('keydown', onKey, true)
-  }, [last, finish])
+  }, [last, finish, setI])
 
   // Desktop: the card sits beside the lit control. Phones (target in the bottom bar): the card floats above the bar.
   const wide = innerWidth >= 1024
@@ -200,7 +210,7 @@ function Tour() {
     <div className={clsx('tour fixed inset-0 z-[90]', leaving && 'is-leaving')} role="dialog" aria-modal aria-label="Hướng dẫn sử dụng">
       {rect ? (
         <div
-          className="tour-spot pointer-events-none fixed"
+          className="tour-spot tour-spot-glide pointer-events-none fixed"
           style={{ left: rect.left - 6, top: rect.top - 6, width: rect.width + 12, height: rect.height + 12 }}
         />
       ) : (
@@ -210,6 +220,8 @@ function Tour() {
       <div
         key={i}
         className={clsx(
+          dir > 0 && 'tour-go-next',
+          dir < 0 && 'tour-go-prev',
           'tour-card fixed flex max-h-[calc(100dvh-32px)] w-[min(420px,calc(100vw-24px))] flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]',
           !(rect && wide) && 'left-1/2 -translate-x-1/2',
           !(rect && wide) && (rect ? 'bottom-[calc(96px+env(safe-area-inset-bottom))]' : 'top-1/2 -translate-y-1/2'),

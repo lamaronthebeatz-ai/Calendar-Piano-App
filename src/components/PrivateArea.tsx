@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useState, type CSSProperties, type ReactNode } from 'react'
 import clsx from 'clsx'
 import { isUnlocked as welcomePassed } from './LockScreen'
 import { setPrivateUnlocked as set, usePrivateUnlocked } from './privateLock'
+import './lock-motion.css'
 
 /**
  * A second, local lock for the private pages (timetable and students). The frosted pane covers only the
@@ -17,6 +18,9 @@ async function matches(code: string) {
 
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'] as const
 type Phase = 'input' | 'wrong' | 'right' | 'leaving'
+const GLISS_ORDER: Record<string, number> = { '1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '7': 6, '8': 7, '9': 8, '0': 9 }
+const GLISS_STEP = 26
+const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches
 
 export function PrivateArea({ title, children }: { title: string; children: ReactNode }) {
   const unlocked = usePrivateUnlocked()
@@ -49,12 +53,13 @@ function Pane({ title, dropping, onDone }: { title: string; dropping: boolean; o
       matches(next).then((ok) => {
         if (ok) {
           setPhase('right')
-          // The shackle opens, then the pane lifts and the page clears.
+          // The keys sweep and the shackle opens, then the pane lifts and the page clears.
+          const beat = reducedMotion() ? 420 : 10 * GLISS_STEP + 320
           setTimeout(() => {
             setPhase('leaving')
             set(true)
-          }, 420)
-          setTimeout(onDone, 1500)
+          }, beat)
+          setTimeout(onDone, beat + 1080)
         } else {
           setPhase('wrong')
           navigator.vibrate?.(90)
@@ -95,63 +100,66 @@ function Pane({ title, dropping, onDone }: { title: string; dropping: boolean; o
       className={clsx('private-glass absolute inset-0 z-30 flex flex-col overflow-y-auto', dropping && 'is-dropping', phase === 'leaving' && 'is-leaving')}
     >
       <div aria-hidden className="lock-glow pointer-events-none absolute inset-0" />
-      <div className="private-content relative m-auto flex w-full max-w-xs flex-col items-center px-6 py-8 text-center">
-        <span
-          className={clsx(
-            'private-emblem flex h-16 w-16 items-center justify-center rounded-[20px] text-[var(--color-gold)]',
-            (phase === 'right' || phase === 'leaving') && 'is-open',
-            phase === 'wrong' && 'lock-shake',
-          )}
-        >
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-            <path className="private-shackle" d="M8 11V7.5a4 4 0 0 1 8 0V11" />
-            <rect x="5" y="11" width="14" height="10" rx="2.5" />
-            <path d="M12 15v2" />
-          </svg>
-        </span>
-        <p className="mt-5 text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold)]">Khu vực riêng tư</p>
-        <h2 className="mt-1.5 font-display text-[26px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">{title}</h2>
-        <p aria-live="polite" className={clsx('mt-2 h-5 text-[13px] transition-colors', phase === 'wrong' ? 'text-[var(--color-status-cancelled)]' : 'text-[var(--color-ink-muted)]')}>
-          {phase === 'wrong' ? 'Sai mã, thử lại' : phase === 'input' ? 'Nhập mã riêng để xem' : 'Đã mở khoá'}
-        </p>
+      <div className="private-content relative m-auto w-full max-w-xs px-6 py-8">
+        <div className={clsx('flex flex-col items-center text-center', phase === 'wrong' && 'lock-frame-shake')}>
+          <span
+            className={clsx(
+              'private-emblem flex h-16 w-16 items-center justify-center rounded-[20px] text-[var(--color-gold)]',
+              (phase === 'right' || phase === 'leaving') && 'is-open',
+            )}
+          >
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path className="private-shackle" d="M8 11V7.5a4 4 0 0 1 8 0V11" />
+              <rect x="5" y="11" width="14" height="10" rx="2.5" />
+              <path d="M12 15v2" />
+            </svg>
+          </span>
+          <p className="mt-5 text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold)]">Khu vực riêng tư</p>
+          <h2 className="mt-1.5 font-display text-[26px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">{title}</h2>
+          <p aria-live="polite" className={clsx('mt-2 h-5 text-[13px] transition-colors', phase === 'wrong' ? 'text-[var(--color-status-cancelled)]' : 'text-[var(--color-ink-muted)]')}>
+            {phase === 'wrong' ? 'Sai mã, thử lại' : phase === 'input' ? 'Nhập mã riêng để xem' : 'Đã mở khoá'}
+          </p>
 
-        <div className={clsx('mt-5 flex gap-3.5', phase === 'wrong' && 'lock-shake')} aria-label={`${code.length} trên ${LENGTH} số`}>
-          {Array.from({ length: LENGTH }, (_, i) => (
-            <span
-              key={i}
-              className={clsx(
-                'lock-dot h-3 w-3 rounded-full border-[1.5px]',
-                phase === 'wrong'
-                  ? 'border-[var(--color-status-cancelled)] bg-[var(--color-status-cancelled)]'
-                  : phase === 'right' || phase === 'leaving'
-                    ? 'border-[var(--color-gold)] bg-[var(--color-gold)]'
-                    : i < code.length
-                      ? 'is-filled border-[var(--color-ink)] bg-[var(--color-ink)]'
-                      : 'border-[var(--color-ink-muted)]',
-              )}
-            />
-          ))}
-        </div>
-
-        <div className="mt-7 grid grid-cols-3 gap-x-5 gap-y-3">
-          {KEYS.map((key, i) =>
-            key === '' ? (
-              <span key={i} />
-            ) : (
-              <button
+          <div className={clsx('mt-5 flex gap-3.5', phase === 'wrong' && 'lock-dots-wrong')} aria-label={`${code.length} trên ${LENGTH} số`}>
+            {Array.from({ length: LENGTH }, (_, i) => (
+              <span
                 key={i}
-                type="button"
-                onClick={() => press(key)}
-                aria-label={key === 'del' ? 'Xoá' : key}
                 className={clsx(
-                  'lock-key flex h-[58px] w-[58px] items-center justify-center rounded-full text-[var(--color-ink)] select-none',
-                  key === 'del' ? 'text-[13px] font-medium text-[var(--color-ink-muted)]' : 'lock-key-digit font-display text-[24px] font-medium',
+                  'lock-dot h-3 w-3 rounded-full border-[1.5px]',
+                  phase === 'wrong'
+                    ? 'border-[var(--color-status-cancelled)] bg-[var(--color-status-cancelled)]'
+                    : phase === 'right' || phase === 'leaving'
+                      ? 'border-[var(--color-gold)] bg-[var(--color-gold)]'
+                      : i < code.length
+                        ? 'is-filled border-[var(--color-ink)] bg-[var(--color-ink)]'
+                        : 'border-[var(--color-ink-muted)]',
                 )}
-              >
-                {key === 'del' ? (code ? 'Xoá' : '') : key}
-              </button>
-            ),
-          )}
+              />
+            ))}
+          </div>
+
+          <div className="mt-7 grid grid-cols-3 gap-x-5 gap-y-3">
+            {KEYS.map((key, i) =>
+              key === '' ? (
+                <span key={i} />
+              ) : (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => press(key)}
+                  aria-label={key === 'del' ? 'Xoá' : key}
+                  style={key in GLISS_ORDER ? ({ '--gliss-delay': `${GLISS_ORDER[key] * GLISS_STEP}ms` } as CSSProperties) : undefined}
+                  className={clsx(
+                    (phase === 'right' || phase === 'leaving') && key in GLISS_ORDER && 'lock-gliss',
+                    'lock-key flex h-[58px] w-[58px] items-center justify-center rounded-full text-[var(--color-ink)] select-none',
+                    key === 'del' ? 'text-[13px] font-medium text-[var(--color-ink-muted)]' : 'lock-key-digit font-display text-[24px] font-medium',
+                  )}
+                >
+                  {key === 'del' ? (code ? 'Xoá' : '') : key}
+                </button>
+              ),
+            )}
+          </div>
         </div>
       </div>
     </div>

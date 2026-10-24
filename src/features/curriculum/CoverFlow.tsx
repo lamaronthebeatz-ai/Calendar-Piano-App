@@ -2,11 +2,11 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ChevronLeftIcon, ChevronRightIcon } from '../../components/icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
-import { openBook, peek } from './bookOpen'
+import { COVERFLOW_KEY as KEY, openBook, peek } from './bookOpen'
 import { Cover } from './reader/Cover'
 import type { ReaderBook } from './reader/model'
+import './motion-books.css'
 
-const KEY = 'coverflow-index'
 const AUTOPLAY = 5000
 
 /**
@@ -63,6 +63,67 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
     })
     const c = mod(Math.round(p))
     setCenter((old) => (old === c ? old : c))
+    paintTilt()
+  }
+
+  // Tilt of the facing cover, ±1 on each axis, from the mouse or the phone's gyroscope; eased towards `aim`.
+  const tilt = useRef({ x: 0, y: 0 })
+  const aim = useRef({ x: 0, y: 0 })
+  const tiltRaf = useRef(0)
+  const paintTilt = () => {
+    const { x, y } = tilt.current
+    cards.current.forEach((el, i) => {
+      const face = el?.firstElementChild as HTMLElement | null
+      if (!face) return
+      const k = Math.max(0, 1 - Math.abs(wrap(i - pos.current)))
+      face.style.transform = k ? `perspective(900px) rotateX(${(-y * 6 * k).toFixed(2)}deg) rotateY(${(x * 6 * k).toFixed(2)}deg)` : ''
+      const glint = face.lastElementChild as HTMLElement | null
+      if (glint) {
+        glint.style.transform = `translate3d(${(-x * 55).toFixed(1)}%, 0, 0)`
+        glint.style.opacity = String(k * (0.35 + 0.65 * Math.min(1, Math.hypot(x, y))))
+      }
+    })
+  }
+  const steer = (x: number, y: number) => {
+    aim.current = { x: Math.max(-1, Math.min(1, x)), y: Math.max(-1, Math.min(1, y)) }
+    if (tiltRaf.current) return
+    const step = () => {
+      const t = tilt.current
+      const a = aim.current
+      t.x += (a.x - t.x) * 0.12
+      t.y += (a.y - t.y) * 0.12
+      paintTilt()
+      tiltRaf.current = Math.abs(a.x - t.x) + Math.abs(a.y - t.y) > 0.002 ? requestAnimationFrame(step) : 0
+    }
+    tiltRaf.current = requestAnimationFrame(step)
+  }
+
+  // Gyroscope. Android just sends events; iOS asks first, and only after a tap on the shelf (see onUp).
+  const gyro = useRef<'off' | 'asking' | 'on'>('off')
+  const listenGyro = () => {
+    if (gyro.current === 'on') return
+    gyro.current = 'on'
+    let base: { b: number; g: number } | null = null
+    const onTurn = (e: DeviceOrientationEvent) => {
+      if (e.beta == null || e.gamma == null || !onScreen.current) return
+      // Slowly re-centre on however the phone is being held.
+      base = base ? { b: base.b + (e.beta - base.b) * 0.02, g: base.g + (e.gamma - base.g) * 0.02 } : { b: e.beta, g: e.gamma }
+      steer((e.gamma - base.g) / 18, (e.beta - base.b) / 18)
+    }
+    addEventListener('deviceorientation', onTurn)
+    gyroOff.current = () => removeEventListener('deviceorientation', onTurn)
+  }
+  const gyroOff = useRef<() => void>(() => undefined)
+  const askGyro = () => {
+    const D = (globalThis as unknown as { DeviceOrientationEvent?: { requestPermission?: () => Promise<string> } }).DeviceOrientationEvent
+    if (!D?.requestPermission || gyro.current !== 'off' || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    gyro.current = 'asking'
+    D.requestPermission()
+      .then((r) => {
+        gyro.current = 'off'
+        if (r === 'granted') listenGyro()
+      })
+      .catch(() => (gyro.current = 'off'))
   }
 
   // Critically damped-ish spring towards the target cover.
@@ -125,6 +186,17 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  useEffect(() => {
+    const D = (globalThis as unknown as { DeviceOrientationEvent?: { requestPermission?: unknown } }).DeviceOrientationEvent
+    if (D && !D.requestPermission && matchMedia('(pointer: coarse)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) listenGyro()
+    return () => {
+      gyroOff.current()
+      cancelAnimationFrame(tiltRaf.current)
+    }
+    // listenGyro only reads refs.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   // Horizontal wheel / trackpad swipes step through covers.
   useEffect(() => {
     const el = stage.current
@@ -157,6 +229,10 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
   }
   const onMove = (e: React.PointerEvent) => {
     const d = drag.current
+    if (!d && e.pointerType === 'mouse' && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const r = stage.current!.getBoundingClientRect()
+      steer(((e.clientX - r.left) / r.width) * 2 - 1, ((e.clientY - r.top) / r.height) * 2 - 1)
+    }
     if (!d) return
     const dx = e.clientX - d.x
     if (!d.moved && Math.abs(dx) > 6) {
@@ -171,7 +247,8 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
     pos.current = d.p - dx / spacing()
     layout()
   }
-  const onUp = () => {
+  const onUp = (e: React.PointerEvent) => {
+    if (e.pointerType !== 'mouse') askGyro()
     const d = drag.current
     drag.current = null
     if (!d?.moved) return
@@ -194,7 +271,10 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
         onPointerUp={onUp}
         onPointerCancel={onUp}
         onPointerEnter={(e) => e.pointerType === 'mouse' && (hovered.current = true)}
-        onPointerLeave={() => (hovered.current = false)}
+        onPointerLeave={(e) => {
+          hovered.current = false
+          if (e.pointerType === 'mouse') steer(0, 0)
+        }}
         onKeyDown={(e) => {
           touch()
           if (e.key === 'ArrowLeft') goTo(target.current - 1)
@@ -214,6 +294,7 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
             ref={(el) => {
               cards.current[i] = el
             }}
+            data-book-id={b.id}
             tabIndex={-1}
             aria-label={`${b.title} ${b.volume ?? ''}`}
             className="coverflow-card absolute left-1/2 top-6 w-[150px] sm:top-8 sm:w-[230px]"
@@ -224,7 +305,10 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
               else show(i)
             }}
           >
-            <Cover book={b} size={wide ? 1 : 0.66} className="rounded-[4px]" />
+            <div className="coverflow-face">
+              <Cover book={b} size={wide ? 1 : 0.66} className="rounded-[4px]" />
+              <span aria-hidden className="coverflow-glint" />
+            </div>
           </button>
         ))}
         <button aria-label="Sách trước" onClick={() => (touch(), goTo(target.current - 1))} className="coverflow-arrow left-3 sm:left-8">

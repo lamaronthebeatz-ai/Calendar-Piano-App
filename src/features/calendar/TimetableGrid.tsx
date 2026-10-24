@@ -2,10 +2,11 @@ import { useEffect, useMemo, useRef } from 'react'
 import clsx from 'clsx'
 import type { DayOfWeek, Student, TimetableSlot } from '../../types'
 import { getWeekdayOrder, todayDayOfWeek, WEEKDAY_SHORT } from '../../utils/date'
-import { formatDuration } from '../../utils/time'
+import { formatDuration, timeToMinutes } from '../../utils/time'
 import { TimeGutter } from './TimeGrid'
 import { CurrentTimeIndicator, useNowMinutes } from './CurrentTimeIndicator'
-import { LessonBlock, type ColumnRect } from './LessonBlock'
+import { LessonBlock, type ColumnRect, type DropPreview, type SwipeAction } from './LessonBlock'
+import { findConflicts } from '../../services/conflicts'
 import { layoutSlotsForDay } from './layoutLessons'
 import { computeDaySummary } from '../../services/statistics'
 import { useIsDesktop } from '../../hooks/useMediaQuery'
@@ -17,7 +18,9 @@ interface TimetableGridProps {
   students: Student[]
   weekStartsOn: 0 | 1
   onOpenSlot: (slot: TimetableSlot) => void
-  onEditSlot: (slot: TimetableSlot) => void
+  onSwipeAction?: (slot: TimetableSlot, action: SwipeAction) => void
+  /** Every lesson, unfiltered, so the drag preview can flag clashes with hidden ones too. */
+  allSlots?: TimetableSlot[]
   onCommitChange: (slot: TimetableSlot, dayOfWeek: DayOfWeek, startTime: string, endTime: string) => void
   onSlotClick: (dayOfWeek: DayOfWeek, startTime: string) => void
 }
@@ -28,7 +31,7 @@ function minutesToTimeStr(mins: number): string {
   return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`
 }
 
-export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEditSlot, onCommitChange, onSlotClick }: TimetableGridProps) {
+export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onSwipeAction, allSlots, onCommitChange, onSlotClick }: TimetableGridProps) {
   const isDesktop = useIsDesktop()
   const weekdays = useMemo(() => getWeekdayOrder(weekStartsOn), [weekStartsOn])
   const today = todayDayOfWeek()
@@ -37,6 +40,9 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
   const columnRefs = useRef<Map<DayOfWeek, HTMLDivElement>>(new Map())
   const studentMap = useMemo(() => new Map(students.map((s) => [s.id, s])), [students])
   const hasScrolled = useRef(false)
+  const gridRef = useRef<HTMLDivElement>(null)
+  const ghostRef = useRef<HTMLDivElement>(null)
+  const conflictPool = allSlots ?? slots
 
   useEffect(() => {
     if (hasScrolled.current || !scrollRef.current) return
@@ -61,6 +67,35 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
       const rect = el?.getBoundingClientRect()
       return { dayOfWeek: day, left: rect?.left ?? 0, right: rect?.right ?? 0 }
     })
+  }
+
+  // The ghost lives once per grid and is moved with transforms, so dragging never re-renders React.
+  const dropPreview: DropPreview = {
+    show(slotId, day, start, end) {
+      const ghost = ghostRef.current
+      const grid = gridRef.current
+      const col = columnRefs.current.get(day)
+      const conflict = findConflicts({ id: slotId, dayOfWeek: day, startTime: minutesToTimeStr(start), endTime: minutesToTimeStr(end) }, conflictPool).length > 0
+      if (!ghost || !grid || !col) return conflict
+      const x = col.offsetLeft + 2
+      const y = (start - GRID_START_MINUTES) * PX_PER_MINUTE
+      ghost.style.width = `${col.offsetWidth - 4}px`
+      ghost.style.height = `${Math.max((end - start) * PX_PER_MINUTE, 22)}px`
+      ghost.style.transform = `translate3d(${x}px, ${y}px, 0)`
+      ghost.classList.toggle('is-conflict', conflict)
+      ghost.textContent = conflict ? 'Trùng giờ' : `${minutesToTimeStr(start)} – ${minutesToTimeStr(end)}`
+      if (!ghost.classList.contains('is-shown')) {
+        // First frame: jump into place without the snap glide.
+        ghost.style.transition = 'none'
+        void ghost.offsetWidth
+        ghost.style.transition = ''
+        ghost.classList.add('is-shown')
+      }
+      return conflict
+    },
+    hide() {
+      ghostRef.current?.classList.remove('is-shown', 'is-conflict')
+    },
   }
 
   return (
@@ -89,7 +124,8 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
       </div>
 
       <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto">
-        <div className="flex">
+        <div ref={gridRef} className="cal-grid relative flex">
+          <div ref={ghostRef} aria-hidden className="cal-drop-ghost" />
           <TimeGutter />
           {weekdays.map((day) => {
             const daySlots = slotsByDay.get(day) ?? []
@@ -101,7 +137,7 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
                 ref={(el) => {
                   if (el) columnRefs.current.set(day, el)
                 }}
-                className="relative flex-1 border-l border-[var(--color-border)]"
+                className="cal-col relative flex-1 border-l border-[var(--color-border)]"
                 style={gridBackgroundStyle(false)}
                 onDoubleClick={(e) => {
                   if (!isDesktop) return
@@ -112,7 +148,9 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
                 }}
               >
                 {isToday && <CurrentTimeIndicator minutes={nowMinutes} />}
-                {positioned.map(({ slot, columnIndex, columnCount }) => (
+                {positioned.map(({ slot, columnIndex, columnCount }) => {
+                  const lead = timeToMinutes(slot.startTime) - nowMinutes
+                  return (
                   <LessonBlock
                     key={slot.id}
                     slot={slot}
@@ -120,13 +158,16 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
                     columnIndex={columnIndex}
                     columnCount={columnCount}
                     interactive={isDesktop}
+                    upcoming={isToday && lead > 0 && lead <= 30}
                     currentDayOfWeek={day}
                     onOpen={onOpenSlot}
-                    onLongPressEdit={onEditSlot}
+                    onSwipeAction={onSwipeAction}
                     getColumnRects={getColumnRects}
+                    dropPreview={dropPreview}
                     onCommitChange={(s, result) => onCommitChange(s, result.dayOfWeek, minutesToTimeStr(result.startMinutes), minutesToTimeStr(result.endMinutes))}
                   />
-                ))}
+                  )
+                })}
               </div>
             )
           })}
@@ -134,7 +175,7 @@ export function TimetableGrid({ slots, students, weekStartsOn, onOpenSlot, onEdi
         <Copyright className="py-4" />
       </div>
       <div className="hidden border-t border-[var(--color-border)] px-4 py-1.5 text-center text-[11px] text-[var(--color-ink-faint)] lg:block">
-        Nhấp đúp vào ô trống để thêm buổi học · Kéo để di chuyển · Kéo mép để đổi thời lượng
+        Nhấp đúp vào ô trống để thêm buổi học · Kéo để dời buổi (bước 15 phút) · Kéo mép để đổi thời lượng
       </div>
     </div>
   )

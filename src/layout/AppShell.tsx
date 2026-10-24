@@ -12,23 +12,30 @@ import { BookOpenLayer } from '../features/curriculum/BookOpen'
 import { useGlobalShortcuts } from '../hooks/useGlobalShortcuts'
 import { useAutoHideNav } from '../hooks/useAutoHideNav'
 import clsx from 'clsx'
+import { useEdgeSwipeBack } from '../hooks/useEdgeSwipeBack'
+import { useRubberBand } from '../hooks/useRubberBand'
+import { viewTransitionsOn } from './viewTransitions'
+import './motion-nav.css'
 
 export function AppShell() {
   useGlobalShortcuts()
   const mainRef = useRef<HTMLElement>(null)
   const navHidden = useAutoHideNav(mainRef)
   // Each section fades in as a whole; moving within a section (articles, a student's profile) keeps its own transitions.
+  // Where view transitions run (layout/viewTransitions.ts) they animate every page change instead.
   const section = useLocation().pathname.split('/')[1]
   useCardGlow()
+  useEdgeSwipeBack(mainRef)
+  useRubberBand(mainRef)
 
   return (
     <div className="flex h-dvh w-full overflow-hidden bg-[var(--color-surface)] text-[var(--color-ink)]">
       <Sidebar />
       <main
         ref={mainRef}
-        className={clsx('min-w-0 flex-1 overflow-hidden transition-[padding] duration-300 lg:pb-0', navHidden ? 'pb-0' : 'pb-16')}
+        className={clsx('relative min-w-0 flex-1 overflow-hidden transition-[padding] duration-300 lg:pb-0', navHidden ? 'pb-0' : 'pb-16')}
       >
-        <div key={section} className="page-enter h-full">
+        <div key={section} className={clsx('vt-page h-full', !viewTransitionsOn() && 'page-enter')}>
           <Outlet />
         </div>
       </main>

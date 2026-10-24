@@ -9,6 +9,7 @@ import { findArticle, normalize, type Article } from '../theory/wiki'
 import { useLibrary } from '../theory/library'
 import { PARTS, RESOLVED, type PartId, type ResolvedBranch } from './taxonomy'
 import { ScrollArea } from '../../components/ScrollArea'
+import { BranchTree } from './BranchTree'
 import { useBack } from '../../hooks/useBack'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.6 0.13 ${hue})` }) as CSSProperties
@@ -43,8 +44,8 @@ export function MusicologyPage() {
   const back = useBack('/musicology')
 
   return (
-    <ScrollArea key={id} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
-      <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={branch && hueTint(branch.hue)}>
+    <ScrollArea key={id} collapse={id ? [60, 140] : [40, 190]} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
+      <div data-collapse className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={branch && hueTint(branch.hue)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {id && (
             <button
@@ -57,13 +58,17 @@ export function MusicologyPage() {
           )}
           <div className="min-w-0 flex-1">
             {branch ? (
-              <p className="truncate text-[12.5px] text-[var(--color-ink-muted)]">
-                <Link to="/musicology" className="hover:text-[var(--color-ink)]">Âm nhạc học</Link>
-                <span className="mx-1.5 text-[var(--color-ink-faint)]">/</span>
-                <span className="font-medium text-[var(--tint)]">{PARTS[branch.part].title}</span>
-              </p>
+              // The breadcrumb gives way to the branch's name as its large title scrolls under the bar.
+              <div className="grid">
+                <p className="collapse-out truncate text-[12.5px] text-[var(--color-ink-muted)] [grid-area:1/1]">
+                  <Link to="/musicology" className="hover:text-[var(--color-ink)]">Âm nhạc học</Link>
+                  <span className="mx-1.5 text-[var(--color-ink-faint)]">/</span>
+                  <span className="font-medium text-[var(--tint)]">{PARTS[branch.part].title}</span>
+                </p>
+                <p aria-hidden className="collapse-in pointer-events-none truncate font-display text-[15.5px] font-semibold leading-tight text-[var(--color-ink)] [grid-area:1/1]">{branch.title}</p>
+              </div>
             ) : (
-              <h1 className="truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">Âm nhạc học</h1>
+              <h1 className="collapse-in truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">Âm nhạc học</h1>
             )}
           </div>
           <Link to="/theory" className="flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 text-[12.5px] font-medium text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]">
@@ -120,7 +125,7 @@ function MapIndex() {
       <section className="hero-ebony animate-float-up relative isolate overflow-hidden rounded-[28px] px-5 pb-6 pt-7 shadow-[var(--shadow-float)] sm:px-9 sm:pb-9 sm:pt-10">
         <BranchesIcon aria-hidden width={300} height={300} strokeWidth={0.6} className="pointer-events-none absolute -right-16 -top-10 -z-10 text-[#e2b66e]/15 sm:right-4" />
         <p className="text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Musikwissenschaft · Musicology</p>
-        <h2 className="mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
+        <h2 data-collapse className="collapse-large mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
           Bản đồ nghiên cứu <span className="text-gold-gradient italic">âm nhạc học</span>
         </h2>
         <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
@@ -240,11 +245,11 @@ function PartSection({ part, progress }: { part: PartId; progress: (b: ResolvedB
         <h3 className="mt-0.5 font-display text-[22px] font-semibold tracking-tight text-[var(--color-ink)]">{PARTS[part].title}</h3>
         <p className="mt-1 max-w-3xl text-[13px] leading-relaxed text-[var(--color-ink-muted)]">{PARTS[part].description}</p>
       </div>
-      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+      <BranchTree className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
         {branches.map((b, i) => (
           <BranchCard key={b.id} branch={b} progress={progress(b)} delay={i * 35} />
         ))}
-      </div>
+      </BranchTree>
     </section>
   )
 }
@@ -268,11 +273,11 @@ function SearchResults({ q }: { q: string }) {
       {branches.length > 0 && (
         <section className="space-y-3">
           <SectionTitle hint={`${branches.length} ngành`}>Phân ngành</SectionTitle>
-          <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+          <BranchTree className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
             {branches.map((b, i) => (
               <BranchCard key={b.id} branch={b} progress={{ read: 0, total: b.count }} delay={i * 30} />
             ))}
-          </div>
+          </BranchTree>
         </section>
       )}
       {hits.length > 0 && (
@@ -369,7 +374,7 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
           {numberOf(b) && `${numberOf(b)} · `}
           {PARTS[b.part].title}
         </p>
-        <h2 className="relative mt-1 max-w-3xl font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{b.title}</h2>
+        <h2 data-collapse className="collapse-large relative mt-1 max-w-3xl font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{b.title}</h2>
         <p className="relative mt-0.5 text-[13px] italic text-[var(--color-ink-faint)]">{b.en}</p>
         <p className="relative mt-3 max-w-2xl text-[14px] leading-relaxed text-[var(--color-ink-muted)]">{b.summary}</p>
 

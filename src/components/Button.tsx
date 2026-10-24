@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 import clsx from 'clsx'
+import { haptic } from './motion'
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'danger'
 type Size = 'sm' | 'md' | 'lg'
@@ -24,11 +25,16 @@ const sizeClasses: Record<Size, string> = {
   lg: 'h-12 px-5 text-[15px] gap-2 rounded-xl',
 }
 
-export function Button({ variant = 'secondary', size = 'md', icon, fullWidth, className, children, ...rest }: ButtonProps) {
+export function Button({ variant = 'secondary', size = 'md', icon, fullWidth, className, children, onClick, ...rest }: ButtonProps) {
   return (
     <button
+      onClick={(e) => {
+        // A tiny tick confirms the main action (and deletions) on phones that can vibrate.
+        if (variant === 'primary' || variant === 'danger') haptic()
+        onClick?.(e)
+      }}
       className={clsx(
-        'inline-flex items-center justify-center font-medium transition-colors duration-150 disabled:opacity-40 disabled:pointer-events-none whitespace-nowrap',
+        'press inline-flex items-center justify-center font-medium transition-colors duration-150 disabled:opacity-40 disabled:pointer-events-none whitespace-nowrap',
         variantClasses[variant],
         sizeClasses[size],
         fullWidth && 'w-full',

@@ -1,7 +1,7 @@
-import { useState, type CSSProperties } from 'react'
+import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
-import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, NoteIcon, CheckIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
+import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, NoteIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
 import { ScrollArea } from '../../components/ScrollArea'
 import { useBack } from '../../hooks/useBack'
 import { CATEGORIES } from '../theory/articles'
@@ -16,6 +16,7 @@ import { PrintBook } from './reader/PrintBook'
 import { Reader } from './reader/Reader'
 import { useReader } from './reader/store'
 import type { Curriculum, Level, Piece } from './types'
+import './motion-books.css'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
 
@@ -114,29 +115,52 @@ function Shelf() {
 }
 
 function ShelfRow({ title, hint, books }: { title: string; hint: string; books: ReaderBook[] }) {
+  const row = useRef<HTMLDivElement>(null)
+  // Books rise into place as they scroll into view, staggered within each batch that arrives together.
+  useLayoutEffect(() => {
+    const items = [...(row.current?.children ?? [])] as HTMLElement[]
+    if (typeof IntersectionObserver === 'undefined' || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    items.forEach((el) => el.classList.add('shelf-reveal'))
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top || a.boundingClientRect.left - b.boundingClientRect.left)
+          .forEach((e, k) => {
+            const el = e.target as HTMLElement
+            el.style.transitionDelay = `${k * 110}ms`
+            el.classList.add('is-in')
+            io.unobserve(el)
+          })
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.12 },
+    )
+    items.forEach((el) => io.observe(el))
+    return () => io.disconnect()
+  }, [books])
   return (
     <section className="space-y-5">
       <div className="flex items-baseline justify-between gap-3 border-b border-[var(--color-border)] pb-2">
         <h3 className="font-display text-[22px] font-semibold tracking-tight text-[var(--color-ink)]">{title}</h3>
         <span className="text-[12.5px] text-[var(--color-ink-faint)]">{hint}</span>
       </div>
-      <div className="shelf-row grid grid-cols-1 gap-x-8 gap-y-10 min-[520px]:grid-cols-2">
-        {books.map((b, i) => (
-          <ShelfBook key={b.id} book={b} delay={i * 90} />
+      <div ref={row} className="shelf-row grid grid-cols-1 gap-x-8 gap-y-10 min-[520px]:grid-cols-2">
+        {books.map((b) => (
+          <ShelfBook key={b.id} book={b} />
         ))}
       </div>
     </section>
   )
 }
 
-function ShelfBook({ book, delay }: { book: ReaderBook; delay: number }) {
+function ShelfBook({ book }: { book: ReaderBook }) {
   const navigate = useNavigate()
   const chapters = chaptersOf(book)
   const progress = useProgress(chapters.map((c) => c.slug))
   const pos = useReader().positions[book.id]
   const resume = pos && book.items.find((i) => i.key === pos.key)
   return (
-    <article className="animate-float-up group flex flex-col gap-4 sm:flex-row sm:items-end" style={{ animationDelay: `${delay}ms` }}>
+    <article className="group flex flex-col gap-4 sm:flex-row sm:items-end">
       <Link
         to={`/curriculum/${book.id}`}
         onClick={(e) => {
@@ -158,7 +182,7 @@ function ShelfBook({ book, delay }: { book: ReaderBook; delay: number }) {
           {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'book' ? 'phần' : 'cấp'} · {chapters.length} bài · đã học {progress.done}/{progress.total}
         </p>
         <div className="mt-2 h-1 max-w-xs overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
-          <span className="block h-full rounded-full bg-[var(--color-gold)] transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />
+          <span className="book-bar block h-full rounded-full bg-[var(--color-gold)]" style={{ transform: `scaleX(${Math.max(0.02, progress.ratio)})` }} />
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-2">
           <Link to={`/curriculum/${book.id}`} className="flex h-9 items-center gap-1.5 rounded-full bg-[var(--color-ink)] px-4 text-[13px] font-medium text-[var(--color-surface)] shadow-sm transition-transform active:scale-95">
@@ -219,7 +243,7 @@ function CurriculumView({ c }: { c: Curriculum }) {
         </p>
         <div className="relative mt-4 max-w-sm">
           <div className="h-1.5 overflow-hidden rounded-full bg-white/20">
-            <span className="block h-full rounded-full bg-white/90 transition-[width] duration-700" style={{ width: `${Math.max(2, progress.ratio * 100)}%` }} />
+            <span className="book-bar block h-full rounded-full bg-white/90" style={{ transform: `scaleX(${Math.max(0.02, progress.ratio)})` }} />
           </div>
           <p className="mt-1.5 text-[11.5px] text-white/65">
             Đã học {progress.done}/{progress.total} bài · {Math.round(progress.ratio * 100)}%
@@ -399,18 +423,7 @@ function UnitBlock({ unit, label }: { unit: Level['units'][number]; label: strin
           const done = ticked.includes(a.slug)
           return (
             <li key={l.slug} className="theory-card group flex items-start gap-1 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] py-1 pl-1 pr-3.5">
-              <button
-                type="button"
-                onClick={() => toggleDone(a.slug)}
-                aria-pressed={done}
-                aria-label={done ? `Bỏ đánh dấu đã học: ${a.title}` : `Đánh dấu đã học: ${a.title}`}
-                title={done ? 'Đã học — bấm để bỏ' : 'Đánh dấu đã học'}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors hover:bg-[var(--tint-soft)]"
-              >
-                <span className={clsx('flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300', done ? 'scale-105 border-[var(--tint)] bg-[var(--tint)] text-white' : 'border-[var(--color-border-strong)]')}>
-                  {done && <CheckIcon width={12} height={12} strokeWidth={3} />}
-                </span>
-              </button>
+              <DoneTick slug={a.slug} title={a.title} done={done} />
               <Link to={`/theory/${a.slug}`} className="flex min-w-0 flex-1 items-start gap-3 py-1.5">
                 <span className="min-w-0 flex-1">
                   <span className="block text-[14px] font-medium leading-snug text-[var(--color-ink)]">{a.title}</span>
@@ -435,6 +448,39 @@ function UnitBlock({ unit, label }: { unit: Level['units'][number]; label: strin
         </div>
       )}
     </div>
+  )
+}
+
+/** The "studied" tick: the check draws itself and a few gold sparks fly off when a lesson is ticked. */
+function DoneTick({ slug, title, done }: { slug: string; title: string; done: boolean }) {
+  const [burst, setBurst] = useState(0)
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        if (!done) setBurst((b) => b + 1)
+        toggleDone(slug)
+      }}
+      aria-pressed={done}
+      aria-label={done ? `Bỏ đánh dấu đã học: ${title}` : `Đánh dấu đã học: ${title}`}
+      title={done ? 'Đã học — bấm để bỏ' : 'Đánh dấu đã học'}
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors hover:bg-[var(--tint-soft)]"
+    >
+      <span className={clsx('tick relative flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300', done ? 'scale-105 border-[var(--tint)] bg-[var(--tint)] text-white' : 'border-[var(--color-border-strong)]', done && burst > 0 && 'is-anim')}>
+        {done && (
+          <svg width={12} height={12} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path className="tick-path" pathLength={1} d="M5 12.5l4.5 4.5L19 7.5" />
+          </svg>
+        )}
+        {done && burst > 0 && (
+          <span key={burst} aria-hidden className="tick-sparks">
+            {Array.from({ length: 8 }, (_, i) => (
+              <i key={i} style={{ '--a': `${i * 45 + 20}deg` } as CSSProperties} />
+            ))}
+          </span>
+        )}
+      </span>
+    </button>
   )
 }
 

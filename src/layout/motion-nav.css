@@ -1,0 +1,111 @@
+/* ---------- Page transitions (View Transitions API, see viewTransitions.ts) ---------- */
+/* Names exist only while a page transition runs: a permanent name would make the page a stacking context
+   and trap its sheets under the tab bar. */
+html.vt-active .vt-page { view-transition-name: page; }
+html.vt-active .vt-bottom-nav { view-transition-name: bottom-nav; }
+html.vt-active .vt-sidebar { view-transition-name: side-rail; }
+html.vt-active .vt-morph { view-transition-name: article-title; }
+
+/* The navigation stays put and live (its own indicator animates), so it is never cross-faded. */
+::view-transition-group(bottom-nav),
+::view-transition-group(side-rail),
+::view-transition-new(bottom-nav),
+::view-transition-new(side-rail) { animation: none; }
+::view-transition-old(bottom-nav),
+::view-transition-old(side-rail) { display: none; }
+
+::view-transition-old(page),
+::view-transition-new(page) {
+  animation-duration: 420ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+::view-transition-old(page) { animation-name: vt-fade-out; animation-duration: 240ms; }
+::view-transition-new(page) { animation-name: vt-fade-in; }
+html[data-nav-dir="right"]::view-transition-old(page) { animation-name: vt-out-left; }
+html[data-nav-dir="right"]::view-transition-new(page) { animation-name: vt-in-right; }
+html[data-nav-dir="left"]::view-transition-old(page) { animation-name: vt-out-right; }
+html[data-nav-dir="left"]::view-transition-new(page) { animation-name: vt-in-left; }
+html[data-nav-dir="forward"]::view-transition-old(page) { animation-name: vt-sink; }
+html[data-nav-dir="forward"]::view-transition-new(page) { animation-name: vt-in-right-near; }
+html[data-nav-dir="back"]::view-transition-old(page) { animation-name: vt-out-right-near; }
+html[data-nav-dir="back"]::view-transition-new(page) { animation-name: vt-rise; }
+
+/* A card title grows into the article heading. */
+::view-transition-group(article-title) {
+  animation-duration: 460ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+::view-transition-old(article-title),
+::view-transition-new(article-title) {
+  animation-duration: 460ms;
+  height: 100%;
+  object-fit: contain;
+  object-position: left top;
+}
+
+@keyframes vt-fade-out { to { opacity: 0; } }
+@keyframes vt-fade-in { from { opacity: 0; } }
+@keyframes vt-in-right { from { opacity: 0; transform: translateX(64px); } }
+@keyframes vt-in-left { from { opacity: 0; transform: translateX(-64px); } }
+@keyframes vt-out-left { to { opacity: 0; transform: translateX(-64px); } }
+@keyframes vt-out-right { to { opacity: 0; transform: translateX(64px); } }
+@keyframes vt-in-right-near { from { opacity: 0; transform: translateX(36px); } }
+@keyframes vt-out-right-near { to { opacity: 0; transform: translateX(36px); } }
+@keyframes vt-sink { to { opacity: 0; transform: translateX(-18px) scale(0.985); } }
+@keyframes vt-rise { from { opacity: 0; transform: translateX(-18px) scale(0.985); } }
+
+/* ---------- Swipe from the left edge to go back (useEdgeSwipeBack) ---------- */
+.vt-page.is-swiping {
+  will-change: transform;
+  box-shadow: -18px 0 36px -18px rgb(0 0 0 / 0.45);
+  background: var(--color-surface);
+}
+.swipe-scrim {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- Tab bar and side rail indicators ---------- */
+.nav-blob { transform-origin: center; will-change: transform; transition: opacity 200ms ease; }
+.side-pill { will-change: transform; }
+.side-pill.is-ready {
+  transition: transform 420ms cubic-bezier(0.34, 1.32, 0.64, 1), height 300ms ease, opacity 200ms ease;
+}
+
+/* ---------- Large titles that collapse into the bar (useScrollCollapse) ---------- */
+.collapse-large {
+  transform-origin: left bottom;
+  opacity: calc(1 - var(--collapse, 0) * 0.9);
+  transform: translateY(calc(var(--collapse, 0) * 10px)) scale(calc(1 - var(--collapse, 0) * 0.06));
+}
+.collapse-in {
+  opacity: var(--collapse, 0);
+  transform: translateY(calc((1 - var(--collapse, 0)) * 6px));
+}
+.collapse-out {
+  opacity: calc(1 - var(--collapse, 0));
+  transform: translateY(calc(var(--collapse, 0) * -6px));
+}
+
+/* ---------- Reveal on scroll (useReveal) ---------- */
+html.reveal-on [data-reveal] {
+  transition: opacity 560ms ease var(--reveal-delay, 0ms), translate 700ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms), scale 700ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+}
+html.reveal-on [data-reveal]:not([data-shown]) {
+  opacity: 0;
+  translate: 0 22px;
+  scale: 0.985;
+}
+
+/* ---------- Rubber band (useRubberBand) replaces the browser's own overscroll effects ---------- */
+html.rubber-band main .overflow-y-auto { overscroll-behavior-y: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .side-pill.is-ready, .nav-blob { transition: none; }
+  .collapse-large, .collapse-in, .collapse-out { transform: none; }
+  html.reveal-on [data-reveal] { transition: none; }
+}

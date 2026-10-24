@@ -4,7 +4,7 @@ import { useSyncExternalStore } from 'react'
 export type ReaderTheme = 'paper' | 'sepia' | 'night' | 'app'
 export type ReaderFont = 'serif' | 'sans' | 'classic'
 export type ReaderMargin = 'narrow' | 'normal' | 'wide'
-export type ReaderTurn = 'slide' | 'fade' | 'none'
+export type ReaderTurn = 'slide' | 'fade' | 'curl' | 'none'
 
 export interface ReaderPrefs {
   size: number

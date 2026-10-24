@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Dialog } from '../components/Dialog'
 import { CalendarIcon, SearchIcon, UsersIcon } from '../components/icons'
 import { useUIStore } from '../store/uiStore'
+import '../components/motion-ui.css'
 
 export function QuickActionsSheet() {
   const open = useUIStore((s) => s.quickActionsOpen)
@@ -38,14 +39,15 @@ export function QuickActionsSheet() {
   return (
     <Dialog open={open} onClose={() => setOpen(false)} title="Thao tác nhanh" width="sm">
       <div className="space-y-1.5">
-        {actions.map((action) => (
+        {actions.map((action, i) => (
           <button
             key={action.label}
+            style={{ '--i': i } as React.CSSProperties}
             onClick={() => {
               setOpen(false)
               action.onClick()
             }}
-            className="flex w-full items-center gap-3.5 rounded-xl border border-[var(--color-border)] p-3.5 text-left transition-colors hover:bg-[var(--color-surface-sunken)]"
+            className="qa-pop press flex w-full items-center gap-3.5 rounded-xl border border-[var(--color-border)] p-3.5 text-left transition-colors hover:bg-[var(--color-surface-sunken)]"
           >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-surface-sunken)] text-[var(--color-ink)]">
               <action.icon width={19} height={19} />

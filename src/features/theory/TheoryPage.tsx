@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
+import { createPortal } from 'react-dom'
 import { Link, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
 import {
@@ -35,6 +36,14 @@ import { booksWithChapter } from '../curriculum/reader/model'
 import { Annotator } from '../curriculum/reader/Annotator'
 import { LIBRARY } from '../curriculum/reader/notes'
 import { GLYPHS, tint } from './categoryStyle'
+import { useReveal } from '../../hooks/useReveal'
+import { useParallax } from '../../hooks/useParallax'
+import { useScrollCollapse } from '../../hooks/useScrollCollapse'
+import { usePullAction } from '../../hooks/usePullAction'
+import { isTouchUI } from '../../hooks/useEdgeSwipeBack'
+import { morphTarget, setMorphTarget } from '../../layout/viewTransitions'
+import { useUIStore } from '../../store/uiStore'
+import './theory-motion.css'
 
 type CategoryId = Article['category']
 
@@ -46,12 +55,19 @@ const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trin
 
 const SUGGESTIONS = ['Vòng quãng 5', 'ii – V – I', 'Hình thức sonata', 'Hợp âm 7', 'Chopin', 'Đảo phách']
 
+const LISTED = ARTICLES.filter((a) => !a.unlisted)
+const randomArticle = () => LISTED[Math.floor(Math.random() * LISTED.length)]
+
 export function TheoryPage() {
   const { slug } = useParams()
   const article = slug ? findArticle(slug) : undefined
   const navigation = useNavigationType()
   const scroller = useRef<HTMLDivElement>(null)
   const progress = useRef<HTMLDivElement>(null)
+  const progressTrack = useRef<HTMLDivElement>(null)
+  const pullContent = useRef<HTMLDivElement>(null)
+  const pullNote = useRef<HTMLDivElement>(null)
+  const navigate = useNavigate()
   const toTop = useRef<HTMLDivElement>(null)
   const header = useRef<HTMLDivElement>(null)
   const sectionLabel = useRef<HTMLSpanElement>(null)
@@ -65,6 +81,11 @@ export function TheoryPage() {
   const [toc, setToc] = useState<number | null>(null)
 
   useScrollMemory(scroller)
+  useReveal(scroller, slug)
+  useParallax(scroller, slug)
+  useScrollCollapse(scroller, article ? [70, 150] : [40, 190], slug)
+  // On the library home, pulling down past the top opens a random article.
+  usePullAction(scroller, { enabled: !slug, content: pullContent, indicator: pullNote, onTrigger: () => navigate(`/theory/${randomArticle().slug}`) })
 
   // "Continue reading": offered on a fresh visit to an article left part-way, never when coming back.
   const lastRatio = useMemo(() => (article ? readingPosition(article.slug) : 0), [article])
@@ -87,6 +108,7 @@ export function TheoryPage() {
     const r = el.scrollTop / Math.max(1, el.scrollHeight - el.clientHeight)
     ratio.current = r
     if (progress.current) progress.current.style.transform = `scaleX(${r})`
+    progressTrack.current?.toggleAttribute('data-done', r > 0.985)
     toTop.current?.classList.toggle('is-visible', el.scrollTop > 600)
     header.current?.toggleAttribute('data-scrolled', el.scrollTop > 140)
     if (remaining.current) remaining.current.textContent = r > 0.98 ? 'Đã đọc hết' : `còn ${Math.max(1, Math.ceil(minutes * (1 - r)))} phút`
@@ -130,7 +152,7 @@ export function TheoryPage() {
   return (
     // Keyed by slug so following a link remounts the scroller at the top.
     <div key={slug} ref={scroller} onScroll={onScroll} className="relative h-full overflow-x-hidden overflow-y-auto scroll-smooth pb-28 lg:pb-10">
-      <div ref={header} className="glass group/header sticky top-0 z-20 border-b border-[var(--color-border)]" style={article && tint(article.category)}>
+      <div ref={header} data-collapse className="glass group/header sticky top-0 z-20 border-b border-[var(--color-border)]" style={article && tint(article.category)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {slug && (
             <button
@@ -143,14 +165,14 @@ export function TheoryPage() {
           )}
           <div className="min-w-0 flex-1">
             {article ? (
-              <>
-                {/* Breadcrumb at the top of the page; the title takes its place once the heading scrolls away. */}
-                <p className="truncate text-[12.5px] text-[var(--color-ink-muted)] transition-all duration-300 group-data-[scrolled]/header:h-0 group-data-[scrolled]/header:opacity-0">
+              <div className="grid">
+                {/* Breadcrumb at the top of the page; the title takes its place, following the scroll, as the heading goes under the bar. */}
+                <p className="collapse-out truncate self-center text-[12.5px] text-[var(--color-ink-muted)] [grid-area:1/1] group-data-[scrolled]/header:pointer-events-none">
                   <Link to="/theory" className="hover:text-[var(--color-ink)]">Lý thuyết</Link>
                   <span className="mx-1.5 text-[var(--color-ink-faint)]">/</span>
                   <Link to={`/theory?c=${article.category}`} className="font-medium text-[var(--tint)] hover:underline">{CATEGORIES[article.category].title}</Link>
                 </p>
-                <div className="h-0 translate-y-1 overflow-hidden opacity-0 transition-all duration-300 group-data-[scrolled]/header:h-auto group-data-[scrolled]/header:translate-y-0 group-data-[scrolled]/header:opacity-100">
+                <div className="collapse-in min-w-0 [grid-area:1/1] group-[:not([data-scrolled])]/header:pointer-events-none" aria-hidden={false}>
                   <p className="truncate font-display text-[15.5px] font-semibold leading-tight text-[var(--color-ink)]">{article.title}</p>
                   {/* Where the reader is: the current section and the time left, written from the scroll handler. */}
                   <p className="mt-0.5 truncate text-[11.5px] leading-tight text-[var(--color-ink-faint)]">
@@ -158,18 +180,31 @@ export function TheoryPage() {
                     <span ref={remaining} />
                   </p>
                 </div>
-              </>
+              </div>
             ) : (
-              <h1 className="truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">Lý thuyết âm nhạc</h1>
+              <h1 className="collapse-in truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">Lý thuyết âm nhạc</h1>
             )}
           </div>
           {article && <ArticleActions article={article} />}
         </div>
-        {article && <div ref={progress} className="h-[2px] origin-left scale-x-0 bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)] transition-transform duration-75" />}
+        {article && (
+          // Reaching the end lights the bar up and sends a gold spark along it.
+          <div ref={progressTrack} className="read-progress relative h-[2px]">
+            <div ref={progress} className="h-full origin-left scale-x-0 bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)] transition-transform duration-75" />
+            <span aria-hidden className="read-spark" />
+          </div>
+        )}
       </div>
 
+      {!slug && (
+        <div ref={pullNote} aria-hidden className="pull-note">
+          ♪
+        </div>
+      )}
       {!slug ? (
-        <Index />
+        <div ref={pullContent}>
+          <Index />
+        </div>
       ) : article ? (
         <ArticleView article={article} scroller={scroller} sections={sections} onJump={jump} />
       ) : (
@@ -237,7 +272,7 @@ function TocSheet({ sections, active, tint: style, onClose, onJump }: { sections
     return () => removeEventListener('keydown', onKey)
   }, [onClose])
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center" style={style}>
+    <div role="dialog" aria-modal="true" aria-label="Mục lục bài" className="fixed inset-0 z-50 flex items-end justify-center" style={style}>
       <div className="animate-fade-in absolute inset-0 bg-black/35 backdrop-blur-[2px]" onClick={onClose} />
       <nav aria-label="Mục lục bài" className="animate-sheet-up relative max-h-[72dvh] w-full max-w-lg overflow-y-auto rounded-t-[28px] border border-b-0 border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-2 shadow-[var(--shadow-float)]">
         <div className="mx-auto mb-3 mt-1 h-1 w-10 rounded-full bg-[var(--color-border-strong)]" />
@@ -280,15 +315,14 @@ function Index() {
   const results = useMemo(() => searchArticles(query), [query])
   const { saved } = useLibrary()
   const navigate = useNavigate()
-  const listed = useMemo(() => ARTICLES.filter((a) => !a.unlisted), [])
-  const surprise = () => navigate(`/theory/${listed[Math.floor(Math.random() * listed.length)].slug}`)
+  const surprise = () => navigate(`/theory/${randomArticle().slug}`)
   const lookup = (slugs: string[]) => slugs.map((s) => findArticle(s)).filter((a): a is Article => !!a)
 
   return (
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
       <section className={clsx('hero-ebony relative isolate overflow-hidden rounded-[28px] shadow-[var(--shadow-float)]', active || query ? 'p-2.5' : 'animate-float-up px-5 pb-6 pt-7 sm:px-9 sm:pb-9 sm:pt-10')}>
         {/* The pianist photograph sits on the right; a warm-black wash keeps the text side readable. */}
-        <picture aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <picture aria-hidden data-parallax="0.18" data-parallax-max="0.15" className="hero-parallax pointer-events-none absolute inset-x-0 -z-10">
           <source media="(max-width: 640px)" srcSet={`${import.meta.env.BASE_URL}images/hero-piano-sm.webp`} />
           <img src={`${import.meta.env.BASE_URL}images/hero-piano.webp`} alt="" className="h-full w-full object-cover object-[78%_45%] sm:object-[right_42%]" />
         </picture>
@@ -296,7 +330,7 @@ function Index() {
         {!active && !query && (
           <>
             <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Thư viện lý thuyết</p>
-            <h2 className="relative mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
+            <h2 data-collapse className="collapse-large relative mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
               Âm nhạc phương Tây <span className="text-gold-gradient italic">&amp; piano</span>
             </h2>
             <p className="relative mt-3 max-w-md text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
@@ -356,12 +390,12 @@ function Index() {
       ) : (
         <>
           {/* A rotating quiz on the library, beside saved reading (or a rotating random article when nothing is saved). */}
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div data-reveal className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <QuizCard />
             {saved.length > 0 ? <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} /> : <Spotlight />}
           </div>
 
-          <section className="space-y-4">
+          <section data-reveal className="space-y-4">
             <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Mỗi bài là lộ trình của một nhóm">Bắt đầu từ đây</SectionTitle>
             <div className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
               {PATHS.map((a, i) => (
@@ -386,14 +420,17 @@ function Index() {
           </section>
 
           <section className="space-y-4">
-            <SectionTitle hint={`${articlesByCategory.length} nhóm`}>Mục lục theo chủ đề</SectionTitle>
+            <div data-reveal>
+              <SectionTitle hint={`${articlesByCategory.length} nhóm`}>Mục lục theo chủ đề</SectionTitle>
+            </div>
             <div className="grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 lg:grid-cols-3">
               {articlesByCategory.map((c) => (
                 <button
                   key={c.id}
                   onClick={() => select(c.id)}
                   style={tint(c.id)}
-                  className="theory-card reveal group flex items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 text-left"
+                  data-reveal
+                  className="theory-card group flex items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 text-left"
                 >
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[22px] text-[var(--tint)] ring-1 ring-[color-mix(in_oklch,var(--tint)_22%,transparent)] transition-transform duration-300 group-hover:scale-105">
                     {GLYPHS[c.id]}
@@ -410,7 +447,7 @@ function Index() {
             </div>
           </section>
 
-          <footer className="grid gap-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] text-[var(--color-ink-muted)] sm:grid-cols-[1fr_2fr] sm:p-6">
+          <footer data-reveal className="grid gap-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] text-[var(--color-ink-muted)] sm:grid-cols-[1fr_2fr] sm:p-6">
             <div>
               <p className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Nguồn tham khảo mở</p>
               <p className="mt-1 leading-relaxed">Mỗi bài ghi nguồn ở cuối trang. Đây là các nguồn miễn phí dùng nhiều nhất.</p>
@@ -686,33 +723,155 @@ function Highlight({ text, query }: { text: string; query?: string }) {
 }
 
 export function ArticleGrid({ articles, home, query, numbered, showCategory }: { articles: Article[]; home?: CategoryId; query?: string; numbered?: boolean; showCategory?: boolean }) {
+  const [menu, setMenu] = useState<{ article: Article; rect: DOMRect }>()
+  const press = useRef<{ timer: number; x: number; y: number; card: HTMLElement }>(undefined)
+  const swallowClick = useRef(false)
+  const morph = morphTarget()
+  const cancelPress = () => {
+    if (!press.current) return
+    clearTimeout(press.current.timer)
+    press.current.card.classList.remove('is-pressing')
+    press.current = undefined
+  }
+
+  // Touch and hold a card (~450 ms) to lift it and show quick actions instead of opening it.
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (e.pointerType !== 'touch') return
+    const card = (e.target as Element).closest<HTMLElement>('[data-card]')
+    const article = card && articles.find((a) => a.slug === card.dataset.card)
+    if (!card || !article) return
+    cancelPress()
+    card.classList.add('is-pressing')
+    const timer = window.setTimeout(() => {
+      card.classList.remove('is-pressing')
+      press.current = undefined
+      swallowClick.current = true
+      navigator.vibrate?.(12)
+      setMenu({ article, rect: card.getBoundingClientRect() })
+    }, 450)
+    press.current = { timer, x: e.clientX, y: e.clientY, card }
+  }
+  const onPointerMove = (e: React.PointerEvent) => {
+    const p = press.current
+    if (p && Math.hypot(e.clientX - p.x, e.clientY - p.y) > 10) cancelPress()
+  }
+
   return (
-    <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-      {articles.map((a, i) => (
-        <li key={a.slug} className="reveal">
-          <Link
-            to={`/theory/${a.slug}`}
-            style={tint(a.category)}
-            className="theory-card group flex h-full gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3.5"
-          >
-            {numbered ? (
-              <span className="mt-0.5 w-6 shrink-0 font-display text-[15px] font-semibold tabular-nums text-[var(--tint)]">{String(i + 1).padStart(2, '0')}</span>
-            ) : (
-              <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[12px] text-[var(--tint)]">{GLYPHS[a.category]}</span>
-            )}
-            <span className="min-w-0">
-              <span className="block text-[14.5px] font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--tint)]">
-                <Highlight text={a.title} query={query} />
-              </span>
-              <span className="mt-0.5 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{a.summary}</span>
-              {(query || showCategory || (home && a.category !== home)) && (
-                <span className="mt-1.5 block text-[11px] font-medium text-[var(--tint)]">{CATEGORIES[a.category].title}</span>
+    <>
+      <ul
+        className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={cancelPress}
+        onPointerCancel={cancelPress}
+        onClickCapture={(e) => {
+          if (!swallowClick.current) return
+          swallowClick.current = false
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        onContextMenu={(e) => isTouchUI() && e.preventDefault()}
+      >
+        {articles.map((a, i) => (
+          <li key={a.slug} data-reveal>
+            <Link
+              to={`/theory/${a.slug}`}
+              data-card={a.slug}
+              style={tint(a.category)}
+              onClick={(e) => setMorphTarget(a.slug, e.currentTarget.querySelector('.vt-morph-card'))}
+              className="theory-card group flex h-full gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3.5"
+            >
+              {numbered ? (
+                <span className="mt-0.5 w-6 shrink-0 font-display text-[15px] font-semibold tabular-nums text-[var(--tint)]">{String(i + 1).padStart(2, '0')}</span>
+              ) : (
+                <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[12px] text-[var(--tint)]">{GLYPHS[a.category]}</span>
               )}
-            </span>
-          </Link>
-        </li>
-      ))}
-    </ul>
+              <span className="min-w-0">
+                <span className={clsx('vt-morph-card block text-[14.5px] font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--tint)]', morph === a.slug && 'vt-morph')}>
+                  <Highlight text={a.title} query={query} />
+                </span>
+                <span className="mt-0.5 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{a.summary}</span>
+                {(query || showCategory || (home && a.category !== home)) && (
+                  <span className="mt-1.5 block text-[11px] font-medium text-[var(--tint)]">{CATEGORIES[a.category].title}</span>
+                )}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {menu && <CardMenu article={menu.article} rect={menu.rect} onClose={() => setMenu(undefined)} />}
+    </>
+  )
+}
+
+/** Quick actions for a held card: the card floats above a blurred page with the menu beside it. */
+function CardMenu({ article, rect, onClose }: { article: Article; rect: DOMRect; onClose: () => void }) {
+  const { saved, done } = useLibrary()
+  const navigate = useNavigate()
+  const pushToast = useUIStore((s) => s.pushToast)
+  const opened = useRef(0)
+  const isSaved = saved.includes(article.slug)
+  const isDone = done.includes(article.slug)
+  const book = booksWithChapter(article.slug)[0]
+
+  useEffect(() => {
+    opened.current = performance.now()
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    addEventListener('keydown', onKey)
+    return () => removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  const act = (fn: () => void) => () => {
+    fn()
+    onClose()
+  }
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(`${location.origin}${location.pathname}#/theory/${article.slug}`)
+      pushToast('Đã sao chép liên kết', 'success')
+    } catch {
+      pushToast('Không sao chép được liên kết', 'error')
+    }
+  }
+  const below = rect.bottom + 240 < innerHeight
+  const left = Math.max(12, Math.min(rect.left, innerWidth - 236))
+  const item = 'flex w-full items-center gap-3 px-4 py-3 text-left text-[14.5px] text-[var(--color-ink)] transition-colors active:bg-[var(--color-surface-sunken)]'
+
+  return createPortal(
+    <div role="dialog" aria-modal="true" aria-label={article.title} className="card-menu fixed inset-0 z-[70]" style={tint(article.category)}>
+      {/* The finger that opened the menu may lift over the backdrop; that release must not close it at once. */}
+      <div className="card-menu-scrim absolute inset-0" onClick={() => performance.now() - opened.current > 400 && onClose()} />
+      <div
+        className="card-menu-card fixed flex gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3.5"
+        style={{ left: rect.left, top: rect.top, width: rect.width, minHeight: rect.height }}
+      >
+        <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[12px] text-[var(--tint)]">{GLYPHS[article.category]}</span>
+        <span className="min-w-0">
+          <span className="block text-[14.5px] font-semibold leading-snug text-[var(--color-ink)]">{article.title}</span>
+          <span className="mt-0.5 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{article.summary}</span>
+        </span>
+      </div>
+      <div
+        className={clsx('card-menu-list fixed w-56 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] shadow-[var(--shadow-float)]', below ? 'origin-top' : 'origin-bottom')}
+        style={below ? { left, top: rect.bottom + 10 } : { left, bottom: innerHeight - rect.top + 10 }}
+      >
+        <button className={item} onClick={act(() => toggleSaved(article.slug))}>
+          <BookmarkIcon width={17} height={17} fill={isSaved ? 'currentColor' : 'none'} className="text-[var(--color-gold)]" /> {isSaved ? 'Bỏ lưu' : 'Lưu bài'}
+        </button>
+        <button className={clsx(item, 'border-t border-[var(--color-border)]')} onClick={act(() => toggleDone(article.slug))}>
+          <CheckIcon width={17} height={17} className="text-[var(--color-status-completed)]" /> {isDone ? 'Bỏ đánh dấu đã học' : 'Đánh dấu đã học'}
+        </button>
+        {book && (
+          <button className={clsx(item, 'border-t border-[var(--color-border)]')} onClick={act(() => navigate(`/curriculum/${book.book.id}/${book.chapter.key}`))}>
+            <BookIcon width={17} height={17} className="text-[var(--tint)]" /> Mở trong sách
+          </button>
+        )}
+        <button className={clsx(item, 'border-t border-[var(--color-border)]')} onClick={act(copy)}>
+          <LinkIcon width={17} height={17} className="text-[var(--color-ink-muted)]" /> Sao chép liên kết
+        </button>
+      </div>
+    </div>,
+    document.body,
   )
 }
 
@@ -725,6 +884,9 @@ function ArticleActions({ article }: { article: Article }) {
   const isDone = done.includes(article.slug)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
+  // Set by the reader's own taps, so the ink and the tick animate then and not on every visit.
+  const [pour, setPour] = useState(false)
+  const [burst, setBurst] = useState(0)
   const isSaved = saved.includes(article.slug)
   const copy = async () => {
     try {
@@ -744,13 +906,39 @@ function ArticleActions({ article }: { article: Article }) {
       <button onClick={() => setOpen((o) => !o)} aria-label="Cỡ chữ và phông" aria-expanded={open} className={clsx(btn, open && 'bg-[var(--color-surface-sunken)] text-[var(--color-ink)]')}>
         <TypeIcon width={17} height={17} />
       </button>
-      <button onClick={() => toggleDone(article.slug)} aria-label={isDone ? 'Bỏ đánh dấu đã học' : 'Đánh dấu đã học'} title={isDone ? 'Đã học — bấm để bỏ' : 'Đánh dấu đã học'} aria-pressed={isDone} className={clsx(btn, isDone && 'text-[var(--color-status-completed)]')}>
-        <span className={clsx('flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1.6px] transition-colors', isDone ? 'border-current bg-current' : 'border-current')}>
-          {isDone && <CheckIcon width={11} height={11} className="text-[var(--color-surface-raised)]" strokeWidth={3} />}
+      <button
+        onClick={() => {
+          setBurst((b) => (isDone ? 0 : b + 1))
+          toggleDone(article.slug)
+        }}
+        aria-label={isDone ? 'Bỏ đánh dấu đã học' : 'Đánh dấu đã học'} title={isDone ? 'Đã học — bấm để bỏ' : 'Đánh dấu đã học'} aria-pressed={isDone} className={clsx(btn, isDone && 'text-[var(--color-status-completed)]')}>
+        <span className={clsx('relative flex h-[18px] w-[18px] items-center justify-center rounded-full border-[1.6px] transition-colors', isDone ? 'border-current bg-current' : 'border-current')}>
+          {isDone && (
+            <svg viewBox="0 0 24 24" width={11} height={11} fill="none" stroke="currentColor" strokeWidth={3.4} strokeLinecap="round" strokeLinejoin="round" className={clsx('text-[var(--color-surface-raised)]', burst > 0 && 'tick-draw')}>
+              <path d="M20 6L9 17l-5-5" pathLength={1} />
+            </svg>
+          )}
+          {isDone && burst > 0 && (
+            <span key={burst} aria-hidden className="tick-burst">
+              {Array.from({ length: 7 }, (_, i) => <span key={i} style={{ '--a': `${i * (360 / 7) - 90}deg` } as CSSProperties} />)}
+            </span>
+          )}
         </span>
       </button>
-      <button onClick={() => toggleSaved(article.slug)} aria-label={isSaved ? 'Bỏ lưu' : 'Lưu bài'} aria-pressed={isSaved} className={clsx(btn, isSaved && 'text-[var(--color-gold)]')}>
-        <BookmarkIcon width={17} height={17} fill={isSaved ? 'currentColor' : 'none'} />
+      <button
+        onClick={() => {
+          setPour(!isSaved)
+          toggleSaved(article.slug)
+        }}
+        aria-label={isSaved ? 'Bỏ lưu' : 'Lưu bài'}
+        aria-pressed={isSaved}
+        className={clsx(btn, isSaved && 'text-[var(--color-gold)]')}
+      >
+        {/* The filled icon is clipped over the outline, so saving can pour it in like ink. */}
+        <span className={clsx('ink-mark relative block h-[17px] w-[17px]', pour && 'is-pouring')} data-filled={isSaved || undefined}>
+          <BookmarkIcon width={17} height={17} className="absolute inset-0" />
+          <BookmarkIcon width={17} height={17} fill="currentColor" className="ink-fill absolute inset-0" />
+        </span>
       </button>
       {open && (
         <>
@@ -825,9 +1013,14 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
   const branches = branchesOf(article.slug).filter((b) => b.part !== 'intro')
   const { size, serif, leading } = useLibrary()
 
+  // Headings, tables and figures of the body rise in as they are reached (useReveal in TheoryPage).
+  useEffect(() => {
+    prose.current?.querySelectorAll(':scope > :is(h2, figure, blockquote), :scope > div:has(> table)').forEach((n) => n.setAttribute('data-reveal', ''))
+  }, [article.slug, size, serif, leading])
+
   return (
     <div style={tint(article.category)} className="mx-auto grid max-w-6xl gap-10 px-4 py-6 lg:px-8 lg:py-10 xl:grid-cols-[minmax(0,1fr)_240px]">
-      <article className="animate-float-up mx-auto w-full min-w-0 max-w-[720px] space-y-7">
+      <article className="theory-article animate-float-up mx-auto w-full min-w-0 max-w-[720px] space-y-7">
         <header className="space-y-4">
           <Link to={`/theory?c=${article.category}`} className="inline-flex items-center gap-2 rounded-full bg-[color-mix(in_oklch,var(--tint)_12%,transparent)] py-1 pl-1.5 pr-3 text-[12px] font-semibold text-[var(--tint)] transition-colors hover:bg-[color-mix(in_oklch,var(--tint)_20%,transparent)]">
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--tint)] font-['Noto_Music'] text-[11px] text-white">{GLYPHS[article.category]}</span>
@@ -843,7 +1036,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
               ))}
             </p>
           )}
-          <h1 className="font-display text-[32px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[42px]">{article.title}</h1>
+          <h1 className="vt-morph font-display text-[32px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[42px]">{article.title}</h1>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[12.5px] text-[var(--color-ink-faint)]">
             <span className="inline-flex items-center gap-1.5"><ClockIcon width={13} height={13} /> {readingMinutes(article)} phút đọc</span>
             {sections.length > 0 && <span className="inline-flex items-center gap-1.5"><ListIcon width={13} height={13} /> {sections.length} mục</span>}
@@ -866,7 +1059,11 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
           )}
         </header>
 
-        {article.portrait && <WikiImage key={article.slug} titles={article.portrait.titles} years={article.portrait.years} caption={article.title} portrait />}
+        {article.portrait && (
+          <div data-parallax="0.06" data-parallax-child="img" data-parallax-max="12">
+            <WikiImage key={article.slug} titles={article.portrait.titles} years={article.portrait.years} caption={article.title} portrait />
+          </div>
+        )}
 
         {sections.length > 1 && (
           <nav aria-label="Mục lục bài" className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 xl:hidden">

@@ -1,8 +1,11 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { CopyIcon, DownloadIcon, EditIcon, NoteIcon, SearchIcon, TrashIcon } from '../../components/icons'
 import { ScrollArea } from '../../components/ScrollArea'
+import { CountUp } from '../../components/CountUp'
+import { canAnimate, haptic, useFlip } from '../../components/motion'
+import '../../components/motion-ui.css'
 import { findArticle, normalize } from '../theory/wiki'
 import { FOCUS_KEY } from '../curriculum/reader/Annotator'
 import { READER_BOOKS } from '../curriculum/reader/model'
@@ -26,6 +29,8 @@ export function NotebookPage() {
   const [tag, setTag] = useState<string | null>(null)
   const [source, setSource] = useState('all')
   const [editing, setEditing] = useState<string | null>(null)
+  const [removing, setRemoving] = useState<Set<string>>(() => new Set())
+  const listRef = useRef<HTMLDivElement>(null)
 
   const entries = useMemo<Entry[]>(() => {
     const out: Entry[] = []
@@ -81,6 +86,25 @@ export function NotebookPage() {
       (source === 'all' || e.source === source) &&
       (!nq || normalize(`${e.text} ${e.note ?? ''} ${(e.tags ?? []).join(' ')} ${e.where}`).includes(nq)),
   )
+  // Survivors glide up into the gap a removed card leaves.
+  useFlip(listRef, shown.map((e) => e.id).join())
+  const remove = (e: Entry) => {
+    haptic()
+    if (!canAnimate()) return removeNote(e.scope, e.id)
+    setRemoving((s) => new Set(s).add(e.id))
+    setTimeout(() => {
+      removeNote(e.scope, e.id)
+      setRemoving((s) => {
+        const n = new Set(s)
+        n.delete(e.id)
+        return n
+      })
+    }, 240)
+  }
+  // Discrete filters re-run the cascade; typing in the search box does not.
+  const cascade = `${color}|${tag}|${source}`
+  let order = 0
+
   const groups = new Map<string, Entry[]>()
   for (const e of shown) groups.set(e.source, [...(groups.get(e.source) ?? []), e])
 
@@ -119,10 +143,10 @@ export function NotebookPage() {
             Mọi đoạn bạn đã tô và ghi chú trong tủ sách và thư viện, gom về một nơi. Gắn thẻ đề tài để nhóm theo hướng nghiên cứu, lọc, tìm, mở lại đúng chỗ trong nguồn, và xuất ra Markdown.
           </p>
           <div className="mt-4 flex flex-wrap gap-5 text-[13px] text-[var(--color-ink-muted)]">
-            <span><b className="font-display text-[22px] text-[var(--color-ink)]">{entries.length}</b> đánh dấu</span>
-            <span><b className="font-display text-[22px] text-[var(--color-ink)]">{entries.filter((e) => e.note).length}</b> ghi chú</span>
-            <span><b className="font-display text-[22px] text-[var(--color-ink)]">{tags.length}</b> thẻ</span>
-            <span><b className="font-display text-[22px] text-[var(--color-ink)]">{sources.length}</b> nguồn</span>
+            <span><CountUp value={entries.length} className="font-display text-[22px] font-bold text-[var(--color-ink)]" /> đánh dấu</span>
+            <span><CountUp value={entries.filter((e) => e.note).length} className="font-display text-[22px] font-bold text-[var(--color-ink)]" /> ghi chú</span>
+            <span><CountUp value={tags.length} className="font-display text-[22px] font-bold text-[var(--color-ink)]" /> thẻ</span>
+            <span><CountUp value={sources.length} className="font-display text-[22px] font-bold text-[var(--color-ink)]" /> nguồn</span>
           </div>
         </header>
 
@@ -167,6 +191,7 @@ export function NotebookPage() {
         )}
         {entries.length > 0 && shown.length === 0 && <p className="py-10 text-center text-[13.5px] text-[var(--color-ink-muted)]">Không có đánh dấu khớp bộ lọc.</p>}
 
+        <div ref={listRef} key={cascade} className="relative space-y-6">
         {[...groups.entries()].map(([src, list]) => (
           <section key={src} className="space-y-2.5">
             <h2 className="flex items-baseline justify-between gap-3 border-b border-[var(--color-border)] pb-2 font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)]">
@@ -174,7 +199,12 @@ export function NotebookPage() {
               <span className="font-sans text-[12px] font-normal text-[var(--color-ink-faint)]">{list.length}</span>
             </h2>
             {list.map((e) => (
-              <article key={e.id} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4">
+              <article
+                key={e.id}
+                data-flip={e.id}
+                style={{ '--i': order++ } as React.CSSProperties}
+                className={clsx('nb-card rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4', removing.has(e.id) && 'is-removing')}
+              >
                 <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--color-ink-faint)]">{e.where}</p>
                 <button onClick={e.open} className="mt-1.5 block w-full text-left" title="Mở đúng chỗ trong nguồn">
                   <p className={`rn-quote rn-q-${e.color} text-[14px] leading-relaxed`}>{e.text}</p>
@@ -203,7 +233,7 @@ export function NotebookPage() {
                   <button onClick={() => void navigator.clipboard?.writeText(e.cite + (e.note ? `\n\nGhi chú: ${e.note}` : ''))} className="flex h-7 w-7 items-center justify-center rounded-full hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]" aria-label="Sao chép kèm nguồn" title="Sao chép kèm nguồn">
                     <CopyIcon width={14} height={14} />
                   </button>
-                  <button onClick={() => removeNote(e.scope, e.id)} className="flex h-7 w-7 items-center justify-center rounded-full hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-status-cancelled)]" aria-label="Bỏ tô" title="Bỏ tô">
+                  <button onClick={() => remove(e)} className="flex h-7 w-7 items-center justify-center rounded-full hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-status-cancelled)]" aria-label="Bỏ tô" title="Bỏ tô">
                     <TrashIcon width={14} height={14} />
                   </button>
                 </div>
@@ -211,6 +241,7 @@ export function NotebookPage() {
             ))}
           </section>
         ))}
+        </div>
       </div>
     </ScrollArea>
   )

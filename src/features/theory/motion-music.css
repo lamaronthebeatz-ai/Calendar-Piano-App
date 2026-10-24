@@ -1,0 +1,224 @@
+/* ---------- Playable and animated music diagrams (diagrams.tsx, musicMotion.ts) ---------- */
+
+.mm-playable {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.mm-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2rem;
+  padding: 0 0.85rem 0 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink-muted);
+  font: 500 12.5px/1 var(--font-sans, system-ui), sans-serif;
+  box-shadow: var(--shadow-soft);
+  transition: transform 160ms ease, color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.mm-play:hover { color: var(--color-ink); border-color: var(--color-accent); }
+.mm-play:active { transform: scale(0.94); }
+.mm-play[aria-pressed='true'] {
+  color: var(--color-accent-ink);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Staff columns light up as they sound; the playhead slides between them. */
+.mm-col {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1), filter 260ms ease;
+}
+.mm-col.is-on {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 4px color-mix(in oklch, var(--color-accent) 65%, transparent));
+}
+.mm-col.is-on ellipse { fill: var(--color-accent); }
+.mm-col.is-on text { fill: var(--color-accent); font-weight: 600; }
+.mm-playhead {
+  stroke: var(--color-gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+}
+.mm-playhead.is-playing { opacity: 0.75; }
+
+/* Keyboard: keys sink when pressed, ripple, and glow when the example plays them. */
+.mm-keyboard { touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.mm-key-face {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  transition: transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 140ms ease;
+}
+.mm-key.is-down .mm-key-face { transform: scaleY(0.975); filter: brightness(0.9); transition-duration: 40ms; }
+.mm-key-glow { fill: var(--color-gold); opacity: 0; transition: opacity 380ms ease; pointer-events: none; }
+.mm-key.is-on .mm-key-glow { opacity: 0.55; transition-duration: 60ms; }
+.mm-key.is-on .mm-key-face { filter: drop-shadow(0 0 5px color-mix(in oklch, var(--color-gold) 70%, transparent)); }
+.mm-ripple {
+  fill: var(--color-accent);
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mm-ripple 520ms cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+@keyframes mm-ripple {
+  from { transform: scale(0.1); opacity: 0.55; }
+  to { transform: scale(1.6); opacity: 0; }
+}
+
+/* Rhythm: each note lights as it is tapped. */
+.mm-note {
+  transform-box: fill-box;
+  transform-origin: 50% 70%;
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), filter 200ms ease;
+}
+.mm-note.is-on { transform: scale(1.18); filter: drop-shadow(0 0 4px color-mix(in oklch, var(--color-accent) 70%, transparent)); }
+.mm-note.is-on text { fill: var(--color-accent); }
+
+/* Circle of fifths: the rotor turns by --rot; labels counter-rotate to stay upright. */
+.mm-circle { touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; outline: none; -webkit-tap-highlight-color: transparent; }
+.mm-circle:active { cursor: grabbing; }
+.mm-circle:focus-visible { filter: drop-shadow(0 0 0.35rem color-mix(in oklch, var(--color-accent) 45%, transparent)); }
+.mm-rotor { transform: rotate(var(--rot, 0deg)); transform-origin: 150px 150px; }
+.mm-upright {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(calc(-1 * var(--rot, 0deg)));
+}
+.mm-circle-sel {
+  fill: color-mix(in oklch, var(--color-accent) 14%, transparent);
+  stroke: color-mix(in oklch, var(--color-accent) 40%, transparent);
+  transition: opacity 260ms ease;
+}
+.mm-circle.is-moving .mm-circle-sel { opacity: 0.25; }
+.mm-sector text { transition: fill 260ms ease, filter 260ms ease; }
+.mm-sector.is-sel .mm-major {
+  fill: var(--color-accent);
+  filter: drop-shadow(0 0 5px color-mix(in oklch, var(--color-accent) 55%, transparent));
+}
+.mm-circle.is-moving .mm-sector.is-sel .mm-major { fill: var(--color-ink); filter: none; }
+.mm-circle-hub { fill: var(--color-surface); stroke: var(--color-border-strong, var(--color-border)); }
+
+/* Entrance animations: hidden only once JS has armed the chart (screen only, motion allowed). */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .mm-armed .mm-tl-axis,
+  .mm-armed .mm-tl-span,
+  .mm-armed .mm-tl-tick,
+  .mm-armed .mm-tl-dot,
+  .mm-armed .mm-tl-stem,
+  .mm-armed .mm-tl-label,
+  .mm-armed .mm-bar,
+  .mm-armed .mm-grow-x,
+  .mm-armed .mm-slide,
+  .mm-armed .mm-note {
+    transition-delay: var(--d, 0ms);
+  }
+
+  .mm-tl-axis { transform-box: fill-box; transform-origin: 0 50%; }
+  .mm-armed .mm-tl-axis { transition: transform 900ms cubic-bezier(0.45, 0, 0.2, 1); }
+  .mm-armed:not(.is-in) .mm-tl-axis { transform: scaleX(0); }
+
+  .mm-armed .mm-tl-span { transition: clip-path 520ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 300ms ease; }
+  .mm-armed:not(.is-in) .mm-tl-span { clip-path: inset(0 100% 0 0); opacity: 0; }
+
+  .mm-armed .mm-tl-tick,
+  .mm-armed .mm-tl-label { transition: opacity 380ms ease, transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .mm-armed:not(.is-in) .mm-tl-tick { opacity: 0; }
+  .mm-armed:not(.is-in) .mm-tl-label { opacity: 0; transform: translateY(-3px); }
+
+  .mm-tl-dot { transform-box: fill-box; transform-origin: center; }
+  .mm-armed .mm-tl-dot { transition: transform 420ms cubic-bezier(0.34, 1.8, 0.64, 1); }
+  .mm-armed:not(.is-in) .mm-tl-dot { transform: scale(0); }
+
+  .mm-tl-stem { transform-box: fill-box; transform-origin: 50% 0; }
+  .mm-armed .mm-tl-stem { transition: transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .mm-armed:not(.is-in) .mm-tl-stem { transform: scaleY(0); }
+
+  .mm-bar { transform-box: fill-box; transform-origin: 50% 100%; }
+  .mm-armed .mm-bar { transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .mm-armed:not(.is-in) .mm-bar { transform: scaleY(0); }
+
+  .mm-grow-x { transform-box: fill-box; transform-origin: 0 50%; }
+  .mm-armed .mm-grow-x { transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .mm-armed:not(.is-in) .mm-grow-x { transform: scaleX(0); }
+
+  .mm-armed .mm-slide { transition: transform 560ms cubic-bezier(0.22, 1, 0.36, 1), opacity 400ms ease; }
+  .mm-armed:not(.is-in) .mm-slide { transform: translateX(-14px); opacity: 0; }
+
+  .mm-armed .mm-note { transition: transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 300ms ease, filter 200ms ease; }
+  .mm-armed:not(.is-in) .mm-note { transform: translateY(6px); opacity: 0; }
+}
+/* After the entrance, playback highlights respond at once rather than after the stagger delay. */
+.mm-armed.mm-done .mm-note { transition-delay: 0ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-col, .mm-note, .mm-key-face, .mm-key-glow, .mm-circle-sel, .mm-sector text, .mm-play { transition: none; }
+  .mm-col.is-on, .mm-note.is-on { transform: none; }
+  .mm-playhead { display: none; }
+  .mm-ripple { display: none; }
+}
+
+/* ---------- Musicology map: branches grow in, the hovered one stands out ---------- */
+.mm-tree { position: relative; padding-top: 0.75rem; }
+.mm-tree::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-gold), color-mix(in oklch, var(--color-gold) 10%, transparent));
+  transform-origin: 0 50%;
+}
+.mm-tree > * { transition: opacity 260ms ease, filter 260ms ease, transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
+@media (hover: hover) {
+  .mm-tree:has(> :hover) > :not(:hover) { opacity: 0.45; filter: saturate(0.5); }
+}
+.mm-tree.has-focus > :not(.is-focus) { opacity: 0.45; filter: saturate(0.5); }
+.mm-tree > :hover,
+.mm-tree > .is-focus {
+  border-color: var(--tint, var(--color-accent));
+  box-shadow: 0 0 0 1px color-mix(in oklch, var(--tint, var(--color-accent)) 35%, transparent), 0 10px 28px -14px color-mix(in oklch, var(--tint, var(--color-accent)) 70%, transparent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mm-tree::before { animation: mm-trunk 700ms cubic-bezier(0.45, 0, 0.2, 1) both; }
+  /* Overrides the generic scroll reveal for the cards: each grows down from the line, left to right. */
+  .mm-tree > .reveal,
+  .mm-tree > * {
+    animation: mm-branch 620ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: calc(var(--i, 0) * 70ms + 180ms);
+    animation-timeline: auto;
+  }
+}
+@keyframes mm-trunk { from { transform: scaleX(0); } }
+@keyframes mm-branch {
+  from { clip-path: inset(0 0 100% 0 round 16px); opacity: 0; translate: 0 -10px; }
+  60% { opacity: 1; }
+  to { clip-path: inset(0 0 0 0 round 16px); translate: 0 0; }
+}
+
+/* ---------- Quote banner: words written in, the portrait drawn from a pencil sketch ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .quote-word.mm-write { animation: mm-write 520ms cubic-bezier(0.3, 0.7, 0.2, 1) backwards; }
+  .quote-portrait.mm-sketch.is-loaded { animation: mm-sketch 2400ms cubic-bezier(0.3, 0.6, 0.2, 1) both; }
+}
+@keyframes mm-write {
+  from { clip-path: inset(-0.2em 100% -0.3em 0); opacity: 0.2; filter: blur(1.5px); }
+  to { clip-path: inset(-0.2em -0.2em -0.3em 0); opacity: 1; filter: none; }
+}
+@keyframes mm-sketch {
+  from {
+    filter: grayscale(1) contrast(3) brightness(1.35) blur(0.6px);
+  }
+  45% { filter: grayscale(1) contrast(1.6) brightness(1.12); }
+  to { filter: grayscale(1) sepia(0.35) contrast(1.05); }
+}

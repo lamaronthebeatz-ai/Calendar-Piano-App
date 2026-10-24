@@ -1,0 +1,121 @@
+/* ---------- Library home: hero parallax overscan, pull-down for a random article ---------- */
+.hero-parallax { top: -15%; bottom: -15%; will-change: translate; }
+
+.pull-note {
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  z-index: 10;
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-muted);
+  font-family: 'Noto Music', serif;
+  font-size: 20px;
+  opacity: 0;
+  transform: translate3d(-50%, -18px, 0) scale(0.55);
+  pointer-events: none;
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+.pull-note.is-armed { color: var(--color-gold); border-color: var(--color-gold); background: var(--color-gold-soft); }
+.pull-note.is-firing { animation: pull-fire 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards; color: var(--color-gold); }
+@keyframes pull-fire {
+  from { opacity: 1; transform: translate3d(-50%, 22px, 0) rotate(0deg) scale(1); }
+  to { opacity: 0; transform: translate3d(-50%, 22px, 0) rotate(540deg) scale(1.3); }
+}
+
+/* ---------- Article body reveals: replaces index.css's scroll-timeline entrance where useReveal runs ---------- */
+html.reveal-on .theory-article .prose-theory :is(figure, table, blockquote) { animation: none; }
+
+/* ---------- Reading progress: glows at the end, a gold spark runs along it ---------- */
+.read-progress { container-type: inline-size; }
+.read-progress[data-done] > div {
+  box-shadow: 0 0 8px 1px color-mix(in oklch, var(--color-gold) 70%, transparent);
+  animation: read-glow 2.4s ease-in-out infinite;
+}
+.read-spark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #fff3d6;
+  box-shadow: 0 0 6px 2px var(--color-gold), 0 0 14px 4px color-mix(in oklch, var(--color-gold) 50%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+.read-progress[data-done] .read-spark { animation: read-spark 2.4s cubic-bezier(0.45, 0, 0.25, 1) infinite; }
+@keyframes read-spark {
+  0% { opacity: 0; translate: 0 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; translate: calc(100cqw - 6px) 0; }
+}
+@keyframes read-glow { 50% { box-shadow: 0 0 14px 2px color-mix(in oklch, var(--color-gold) 85%, transparent); } }
+
+/* ---------- Save: ink pours into the bookmark ---------- */
+.ink-fill { clip-path: inset(100% 0 0 0); transition: clip-path 220ms ease; }
+.ink-mark[data-filled] .ink-fill { clip-path: inset(0); }
+.ink-mark.is-pouring[data-filled] .ink-fill { animation: ink-pour 760ms cubic-bezier(0.5, 0, 0.3, 1) both; }
+@keyframes ink-pour {
+  0% { clip-path: polygon(0 100%, 25% 100%, 50% 100%, 75% 100%, 100% 100%, 100% 100%, 0 100%); }
+  40% { clip-path: polygon(0 66%, 25% 58%, 50% 63%, 75% 70%, 100% 61%, 100% 100%, 0 100%); }
+  75% { clip-path: polygon(0 20%, 25% 27%, 50% 18%, 75% 11%, 100% 22%, 100% 100%, 0 100%); }
+  100% { clip-path: polygon(0 -10%, 25% -10%, 50% -10%, 75% -10%, 100% -10%, 100% 100%, 0 100%); }
+}
+
+/* ---------- Done: the tick draws itself and a few gold sparks fly off ---------- */
+.tick-draw path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: tick-draw 420ms 80ms cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+@keyframes tick-draw { to { stroke-dashoffset: 0; } }
+.tick-burst { position: absolute; inset: 50% auto auto 50%; pointer-events: none; }
+.tick-burst > span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 9999px;
+  background: var(--color-gold);
+  opacity: 0;
+  animation: tick-spark 620ms cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+}
+@keyframes tick-spark {
+  0% { opacity: 1; translate: 0 0; scale: 1; }
+  100% { opacity: 0; translate: calc(cos(var(--a)) * 17px) calc(sin(var(--a)) * 17px); scale: 0.3; }
+}
+
+/* ---------- Long-press quick actions on library cards ---------- */
+@media (pointer: coarse) {
+  [data-card] { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+}
+[data-card].is-pressing { transform: scale(0.97); transition: transform 450ms cubic-bezier(0.3, 0, 0.3, 1); }
+.card-menu-scrim {
+  background: color-mix(in oklch, var(--color-surface) 35%, rgb(0 0 0 / 0.35));
+  backdrop-filter: blur(6px) saturate(1.2);
+  -webkit-backdrop-filter: blur(6px) saturate(1.2);
+  animation: card-menu-fade 220ms ease both;
+}
+.card-menu-card {
+  box-shadow: var(--shadow-float), 0 0 0 1px color-mix(in oklch, var(--tint, var(--color-gold)) 35%, transparent);
+  animation: card-menu-lift 320ms cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+.card-menu-list { animation: card-menu-pop 260ms 60ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes card-menu-fade { from { opacity: 0; } }
+@keyframes card-menu-lift { from { transform: scale(0.97); box-shadow: none; } to { transform: scale(1.03); } }
+@keyframes card-menu-pop { from { opacity: 0; transform: scale(0.92); } }
+.card-menu-card { transform: scale(1.03); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pull-note.is-firing, .read-progress[data-done] > div, .read-progress[data-done] .read-spark,
+  .ink-mark.is-pouring[data-filled] .ink-fill, .tick-burst > span,
+  .card-menu-scrim, .card-menu-card, .card-menu-list { animation: none; }
+  .tick-draw path { animation: none; stroke-dashoffset: 0; }
+  .tick-burst { display: none; }
+  [data-card].is-pressing { transform: none; }
+}

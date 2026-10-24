@@ -1,0 +1,89 @@
+/* Motion for dialogs, toasts, theme switch, palette, tour, notebook, quick actions. */
+
+/* Bottom sheet: paint below its edge so a springy overshoot or upward pull never shows a gap. */
+.dlg-sheet::after {
+  content: '';
+  position: absolute;
+  inset: calc(100% - 1px) 0 auto;
+  height: 40vh;
+  background: var(--color-surface-raised);
+  pointer-events: none;
+}
+.dlg-grip { cursor: grab; }
+.dlg-grip:active { cursor: grabbing; }
+
+/* Toasts: a drop that lands with a wobble, a countdown bar, swipe to dismiss. */
+.toast-stack { perspective: 600px; }
+.toast {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  transform-origin: 50% 0;
+  animation: toast-drop 620ms both;
+  animation-timing-function: linear(0, 0.114, 0.367, 0.65, 0.891, 1.058, 1.145, 1.166, 1.144, 1.101, 1.054, 1.015, 0.988, 0.975, 0.973, 0.977, 0.984, 0.992, 0.998, 1.002, 1.004, 1.005, 1.004, 1.003, 1);
+}
+.toast.is-leaving {
+  animation: toast-out 220ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  pointer-events: none;
+}
+.toast.is-swiped { animation: none; }
+.toast-bar {
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.35;
+  transform-origin: 0 50%;
+  animation: toast-count linear forwards;
+}
+.toast:hover .toast-bar, .toast.is-held .toast-bar { animation-play-state: paused; }
+@keyframes toast-drop {
+  0% { opacity: 0; transform: translateY(-28px) scale(0.55, 0.7); }
+  30% { opacity: 1; }
+  100% { transform: none; }
+}
+@keyframes toast-out { to { opacity: 0; transform: translateY(10px) scale(0.86); filter: blur(2px); } }
+@keyframes toast-count { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+
+/* Theme switch: the new theme grows as a circle from the pointer (clip-path is driven from JS). */
+:root.theme-vt::view-transition-old(root),
+:root.theme-vt::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+:root.theme-vt::view-transition-new(root) { z-index: 2; }
+
+/* Command palette: new results fade up, group titles slide in. */
+.palette-enter-item { animation: palette-item-in 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.palette-head { animation: palette-head-in 300ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes palette-item-in { from { opacity: 0; transform: translateY(6px); } }
+@keyframes palette-head-in { from { opacity: 0; transform: translateX(-8px); } }
+
+/* Tour: the card slides in from the side you are heading to. */
+.tour-card.tour-go-next, .tour-card.tour-go-prev { animation: tour-step 440ms both; animation-timing-function: linear(0, 0.073, 0.24, 0.44, 0.632, 0.795, 0.918, 1.001, 1.05, 1.072, 1.075, 1.067, 1.053, 1.038, 1.024, 1.013, 1.004, 0.999, 0.996, 0.994, 0.994, 0.995, 0.996, 0.997, 1); }
+.tour-card.tour-go-next { --tour-from: 44px; }
+.tour-card.tour-go-prev { --tour-from: -44px; }
+@keyframes tour-step { from { opacity: 0; transform: translateX(var(--tour-from)) scale(0.98); } 40% { opacity: 1; } }
+.tour-spot.tour-spot-glide { transition: left 0.55s, top 0.55s, width 0.55s, height 0.55s; transition-timing-function: linear(0, 0.073, 0.24, 0.44, 0.632, 0.795, 0.918, 1.001, 1.05, 1.072, 1.075, 1.067, 1.053, 1.038, 1.024, 1.013, 1.004, 0.999, 0.996, 0.994, 0.994, 0.995, 0.996, 0.997, 1); }
+
+/* Notebook: cards cascade in; a removed card shrinks and fades before it goes. */
+.nb-card { animation: nb-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(min(var(--i, 0), 12) * 35ms); }
+.nb-card.is-removing { animation: nb-out 240ms cubic-bezier(0.4, 0, 1, 1) forwards; pointer-events: none; }
+@keyframes nb-in { from { opacity: 0; transform: translateY(12px) scale(0.985); } }
+@keyframes nb-out { to { opacity: 0; transform: scale(0.92); filter: blur(1px); } }
+
+/* Quick actions pop out one after another. */
+.qa-pop {
+  animation: qa-pop 560ms both;
+  animation-delay: calc(60ms + var(--i, 0) * 55ms);
+  animation-timing-function: linear(0, 0.114, 0.367, 0.65, 0.891, 1.058, 1.145, 1.166, 1.144, 1.101, 1.054, 1.015, 0.988, 0.975, 0.973, 0.977, 0.984, 0.992, 0.998, 1.002, 1.004, 1.005, 1.004, 1.003, 1);
+}
+@keyframes qa-pop { from { opacity: 0; transform: translateY(14px) scale(0.88); } 35% { opacity: 1; } }
+
+/* Profile stat tiles rise in turn. */
+.stat-rise { animation: nb-in 480ms cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 60ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .toast, .toast.is-leaving, .palette-enter-item, .palette-head, .tour-card.tour-go-next, .tour-card.tour-go-prev, .nb-card, .nb-card.is-removing, .qa-pop, .stat-rise { animation: none; }
+  .tour-spot.tour-spot-glide { transition: none; }
+}

@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import { CopyIcon, DownloadIcon, NoteIcon, SearchIcon, TrashIcon, XIcon } from '../../../components/icons'
 import { normalize } from '../../theory/wiki'
 import type { ReaderBook } from './model'
+import { dissolveInk, sweepInk } from './inkFx'
+import '../motion-books.css'
 import { addNote, cite, COLOR_LABEL, COLORS, flatten, locate, offsetOf, overlapping, rangeAt, removeNote, toMarkdown, updateNote, useNotes, type Note, type NoteColor } from './notes'
 
 type HighlightCtor = new (...r: Range[]) => unknown
@@ -155,9 +157,32 @@ export function Annotator({ flow, scope, itemKey, layout, ratio, cite: citeText 
     if (!sel) return
     // Re-colouring exactly what is already highlighted changes it rather than stacking a second highlight.
     const same = sel.hits.length === 1 && mine.find((n) => n.id === sel.hits[0] && n.text === sel.text)
-    const n = same ? (updateNote(scope, same.id, { color }), same) : addNote(scope, { key: itemKey, text: sel.text, before: sel.before, color, ratio: ratio() })
+    const at = ratio()
+    const apply = () => (same ? (updateNote(scope, same.id, { color }), same) : addNote(scope, { key: itemKey, text: sel.text, before: sel.before, color, ratio: at }))
+    const root = flow.current
+    if (withNote || !root) {
+      const n = apply()
+      clearSelection()
+      if (withNote) setOpen({ id: n.id, x: sel.x, y: sel.below ? sel.y : sel.y + 24, layout })
+      return
+    }
+    const range = rangeAt(flatten(root), sel.start, sel.end)
     clearSelection()
-    if (withNote) setOpen({ id: n.id, x: sel.x, y: sel.below ? sel.y : sel.y + 24, layout })
+    sweepInk(root, range, color, apply)
+  }
+  /** Fades the ink of highlights that are about to be removed. */
+  const dissolve = (ids: string[]) => {
+    const root = flow.current
+    if (!root) return
+    const flat = flatten(root)
+    dissolveInk(
+      root,
+      ids.flatMap((id) => {
+        const n = mine.find((m) => m.id === id)
+        const at = n && locate(flat, n)
+        return n && at ? [{ range: rangeAt(flat, at[0], at[1]), color: n.color }] : []
+      }),
+    )
   }
 
   const note = open && notes.find((n) => n.id === open.id)
@@ -179,6 +204,7 @@ export function Annotator({ flow, scope, itemKey, layout, ratio, cite: citeText 
           {sel.hits.length > 0 && (
             <button
               onClick={() => {
+                dissolve(sel.hits)
                 sel.hits.forEach((id) => removeNote(scope, id))
                 clearSelection()
               }}
@@ -200,14 +226,14 @@ export function Annotator({ flow, scope, itemKey, layout, ratio, cite: citeText 
           </button>
         </div>
       )}
-      {note && open && <NoteCard scope={scope} cite={citeText} note={note} x={open.x} y={open.y} onClose={() => setOpen(null)} />}
+      {note && open && <NoteCard scope={scope} cite={citeText} note={note} x={open.x} y={open.y} onClose={() => setOpen(null)} onRemove={() => dissolve([note.id])} />}
     </>
   )
 }
 
 const parseTags = (s: string) => [...new Set(s.split(/[,#]/).map((t) => t.trim()).filter(Boolean))]
 
-function NoteCard({ scope, cite: citeText, note, x, y, onClose }: { scope: string; cite: (text: string) => string; note: Note; x: number; y: number; onClose: () => void }) {
+function NoteCard({ scope, cite: citeText, note, x, y, onClose, onRemove }: { scope: string; cite: (text: string) => string; note: Note; x: number; y: number; onClose: () => void; onRemove?: () => void }) {
   const [text, setText] = useState(note.note ?? '')
   const [tags, setTags] = useState((note.tags ?? []).join(', '))
   const save = () => {
@@ -248,6 +274,7 @@ function NoteCard({ scope, cite: citeText, note, x, y, onClose }: { scope: strin
         <div className="mt-2.5 flex items-center gap-2 border-t border-[var(--color-border)] pt-2.5">
           <button
             onClick={() => {
+              onRemove?.()
               removeNote(scope, note.id)
               onClose()
             }}

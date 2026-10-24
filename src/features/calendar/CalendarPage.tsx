@@ -5,7 +5,9 @@ import { WeeklyStatsBar } from './WeeklyStatsBar'
 import { TimetableGrid } from './TimetableGrid'
 import { FilterSheet } from './FilterSheet'
 import type { DayOfWeek, TimetableSlot } from '../../types'
-import { checkConflicts, moveSlot } from '../../services/timetableService'
+import { checkConflicts, deleteSlot, moveSlot } from '../../services/timetableService'
+import type { SwipeAction } from './LessonBlock'
+import { WEEKDAY_NAMES } from '../../utils/date'
 import { ConfirmDialog } from '../../components/Dialog'
 import { minutesToTime, timeToMinutes } from '../../utils/time'
 import { FilterIcon, SearchIcon } from '../../components/icons'
@@ -26,6 +28,8 @@ export function CalendarPage() {
 
   const [filterSheetOpen, setFilterSheetOpen] = useState(false)
   const [pendingMove, setPendingMove] = useState<{ slot: TimetableSlot; dayOfWeek: DayOfWeek; startTime: string; endTime: string; conflictCount: number } | null>(null)
+
+  const [pendingDelete, setPendingDelete] = useState<TimetableSlot | null>(null)
 
   const allSlots = useTimetableSlots()
   const students = useStudents()
@@ -48,8 +52,13 @@ export function CalendarPage() {
       setPendingMove({ slot, dayOfWeek, startTime, endTime, conflictCount: conflicts.length })
     } else {
       await moveSlot(slot.id, dayOfWeek, startTime, endTime)
-      pushToast('Đã chuyển buổi học', 'success')
+      pushToast(slot.duration === timeToMinutes(endTime) - timeToMinutes(startTime) ? 'Đã dời buổi học' : 'Đã cập nhật buổi học', 'success')
     }
+  }
+
+  function handleSwipeAction(slot: TimetableSlot, action: SwipeAction) {
+    if (action === 'edit') openEditLesson(slot.id)
+    else setPendingDelete(slot)
   }
 
   function handleSlotClick(dayOfWeek: DayOfWeek, startTime: string) {
@@ -85,7 +94,8 @@ export function CalendarPage() {
           students={students}
           weekStartsOn={settings.firstDayOfWeek}
           onOpenSlot={openDetail}
-          onEditSlot={(slot) => openEditLesson(slot.id)}
+          allSlots={allSlots}
+          onSwipeAction={handleSwipeAction}
           onCommitChange={handleCommitChange}
           onSlotClick={handleSlotClick}
         />
@@ -98,6 +108,23 @@ export function CalendarPage() {
         onChange={setFilters}
         onClear={clearFilters}
         students={students}
+      />
+
+      <ConfirmDialog
+        open={!!pendingDelete}
+        onClose={() => setPendingDelete(null)}
+        onConfirm={async () => {
+          if (!pendingDelete) return
+          await deleteSlot(pendingDelete.id)
+          pushToast('Đã xoá buổi học', 'success')
+        }}
+        title="Xoá buổi học này?"
+        description={(() => {
+          const st = students.find((x) => x.id === pendingDelete?.studentId)
+          return pendingDelete ? `Thao tác này sẽ xoá buổi học ${WEEKDAY_NAMES[pendingDelete.dayOfWeek]} của ${st?.nickname || st?.name || 'học viên'} khỏi thời khoá biểu. Không thể hoàn tác.` : ''
+        })()}
+        confirmLabel="Xoá"
+        tone="danger"
       />
 
       <ConfirmDialog

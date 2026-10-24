@@ -1,3 +1,6 @@
+import { useCallback, type ReactNode } from 'react'
+import { CountUp } from '../../components/CountUp'
+import '../../components/motion-ui.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSettings, useStudent, useTimetableSlots } from '../../hooks/useLiveData'
 import { Avatar } from '../../components/Badge'
@@ -94,12 +97,12 @@ export function StudentProfilePage() {
 
         {stats && (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <StatTile label="Buổi học / tuần" value={String(stats.weeklyLessons)} />
-            <StatTile label="Giờ học / tuần" value={`${stats.weeklyHours}h`} />
+            <StatTile i={0} label="Buổi học / tuần" value={<CountUp value={stats.weeklyLessons} />} />
+            <StatTile i={1} label="Giờ học / tuần" value={<><CountUp value={stats.weeklyHours} decimals={Number.isInteger(stats.weeklyHours) ? 0 : 1} />h</>} />
             {student.rateType === 'monthly' ? (
-              <StatTile label="Học phí / tháng" value={formatCurrency(stats.estimatedMonthlyRevenue, settings.currency)} />
+              <StatTile i={2} label="Học phí / tháng" value={<Money value={stats.estimatedMonthlyRevenue} currency={settings.currency} />} />
             ) : (
-              stats.estimatedWeeklyRevenue > 0 && <StatTile label="Doanh thu ước tính / tuần" value={formatCurrency(stats.estimatedWeeklyRevenue, settings.currency)} />
+              stats.estimatedWeeklyRevenue > 0 && <StatTile i={2} label="Doanh thu ước tính / tuần" value={<Money value={stats.estimatedWeeklyRevenue} currency={settings.currency} />} />
             )}
           </div>
         )}
@@ -128,9 +131,14 @@ export function StudentProfilePage() {
   )
 }
 
-function StatTile({ label, value }: { label: string; value: string }) {
+function Money({ value, currency }: { value: number; currency: string }) {
+  const format = useCallback((n: number) => formatCurrency(n, currency), [currency])
+  return <CountUp value={value} format={format} duration={1100} />
+}
+
+function StatTile({ label, value, i }: { label: string; value: ReactNode; i: number }) {
   return (
-    <div className="rounded-xl border border-[var(--color-border)] p-3">
+    <div className="stat-rise rounded-xl border border-[var(--color-border)] p-3" style={{ '--i': i } as React.CSSProperties}>
       <p className="text-[11px] font-medium uppercase tracking-wide text-[var(--color-ink-faint)]">{label}</p>
       <p className="mt-0.5 truncate text-[17px] font-semibold text-[var(--color-ink)]">{value}</p>
     </div>

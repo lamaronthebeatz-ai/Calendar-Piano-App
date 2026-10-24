@@ -14,6 +14,19 @@ import { formatTimeRange } from '../../utils/time'
 import { LEVEL_LABELS } from '../../utils/labels'
 import { fold, matches, score } from './fold'
 import { pushRecent, recentPaths } from './recent'
+import { canAnimate, useFlip } from '../../components/motion'
+import '../../components/motion-ui.css'
+
+// Results that were not there a keystroke ago fade up in a quick cascade.
+const enterItem = (el: HTMLElement, n: number) => {
+  if (!canAnimate()) return
+  el.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], {
+    duration: 240,
+    delay: Math.min(n, 10) * 16,
+    easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+    fill: 'backwards',
+  })
+}
 
 type Index = typeof import('./paletteIndex')
 
@@ -173,6 +186,8 @@ function Palette({ onClose }: { onClose: () => void }) {
 
   const tokens = useMemo(() => fold(query).split(/\s+/).filter(Boolean), [query])
   const current = Math.min(active, Math.max(0, items.length - 1))
+  const order = useMemo(() => items.map((it) => it.id).join('\n'), [items])
+  useFlip(list, order, enterItem)
 
   useLayoutEffect(() => {
     list.current?.querySelector(`[data-i="${current}"]`)?.scrollIntoView({ block: 'nearest' })
@@ -214,7 +229,7 @@ function Palette({ onClose }: { onClose: () => void }) {
           <kbd className="hidden rounded-md border border-[var(--color-border)] px-1.5 py-0.5 text-[10.5px] text-[var(--color-ink-faint)] sm:block">Esc</kbd>
         </div>
 
-        <div ref={list} className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
+        <div ref={list} className="relative min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
           {items.length === 0 && (
             <div className="px-4 py-12 text-center">
               <p className="text-[14px] font-medium text-[var(--color-ink)]">Không có kết quả</p>
@@ -224,8 +239,8 @@ function Palette({ onClose }: { onClose: () => void }) {
           {items.map((it, i) => {
             const head = it.group !== lastGroup ? (lastGroup = it.group) : null
             return (
-              <div key={it.id}>
-                {head && <p className="px-3 pb-1 pt-3 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--color-ink-faint)] first:pt-1">{head}</p>}
+              <div key={it.id} data-flip={it.id}>
+                {head && <p className="palette-head px-3 pb-1 pt-3 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--color-ink-faint)] first:pt-1">{head}</p>}
                 <button
                   data-i={i}
                   onMouseMove={() => i !== current && setActive(i)}

@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { ChevronLeftIcon, ChevronRightIcon } from '../../components/icons'
 import type { Quote } from './quotes/types'
 import { leadImage } from '../theory/wikiImage'
+import '../theory/motion-music.css'
 
 /** How long each quotation stays before the next one. */
 const SHOW_MS = 12_000
@@ -60,7 +61,7 @@ function Portrait({ author }: { author: string }) {
       alt=""
       aria-hidden
       onLoad={() => setLoaded(img.src)}
-      className={clsx('quote-portrait', loaded === img.src && 'is-loaded')}
+      className={clsx('quote-portrait mm-sketch', loaded === img.src && 'is-loaded')}
     />
   )
 }
@@ -97,7 +98,17 @@ function Banner({ quotes }: { quotes: Quote[] }) {
     return () => clearInterval(timer)
   }, [paused])
 
-  const words = useMemo(() => quote.vi.split(/\s+/), [quote])
+  // Each word starts when the pen would reach it: delays follow the characters written so far, not the word count.
+  const words = useMemo(() => {
+    const out: { w: string; delay: number; dur: number }[] = []
+    let chars = 0
+    for (const w of quote.vi.split(/\s+/)) {
+      out.push({ w, delay: Math.min(chars * 26, 2600), dur: Math.min(160 + w.length * 45, 520) })
+      chars += w.length + 1
+    }
+    return out
+  }, [quote])
+  const penDone = Math.min(words.at(-1)!.delay + 200, 2200)
   const long = quote.vi.length > 150
   const translated = quote.orig && quote.orig.trim() !== quote.vi.trim()
 
@@ -121,18 +132,18 @@ function Banner({ quotes }: { quotes: Quote[] }) {
               long ? 'text-[16.5px] sm:text-[19px]' : 'text-[19px] sm:text-[23px]',
             )}
           >
-            {words.map((w, i) => (
-              <span key={i} className="quote-word" style={{ animationDelay: `${Math.min(i * 38, 1400)}ms` }}>
+            {words.map(({ w, delay, dur }, i) => (
+              <span key={i} className="quote-word mm-write" style={{ animationDelay: `${delay}ms`, animationDuration: `${dur}ms` }}>
                 {w}{' '}
               </span>
             ))}
           </blockquote>
           {translated && (
-            <p className="quote-fade mt-2 line-clamp-2 text-[12.5px] italic leading-relaxed text-[var(--color-ink-faint)]" style={{ animationDelay: '700ms' }} lang="mul">
+            <p className="quote-fade mt-2 line-clamp-2 text-[12.5px] italic leading-relaxed text-[var(--color-ink-faint)]" style={{ animationDelay: `${penDone + 250}ms` }} lang="mul">
               {quote.orig}
             </p>
           )}
-          <figcaption className="quote-fade mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-0.5" style={{ animationDelay: '500ms' }}>
+          <figcaption className="quote-fade mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-0.5" style={{ animationDelay: `${penDone}ms` }}>
             <span className="h-px w-6 translate-y-[-4px] bg-[var(--color-gold)]" aria-hidden />
             <span className="text-[13.5px] font-semibold tracking-wide text-[var(--color-ink)]">{quote.author}</span>
             <span className="text-[12.5px] text-[var(--color-ink-muted)]">{quote.role}</span>

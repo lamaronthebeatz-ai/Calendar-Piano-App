@@ -31,6 +31,9 @@ export interface Toast {
   id: string
   message: string
   tone: 'default' | 'success' | 'error'
+  /** ms before it goes on its own; ToastHost pauses the clock while hovered or held. */
+  duration: number
+  leaving?: boolean
 }
 
 interface UIState {
@@ -60,7 +63,10 @@ interface UIState {
   setQuickActionsOpen: (open: boolean) => void
 
   pushToast: (message: string, tone?: Toast['tone']) => void
+  /** Plays the exit, then removes. */
   dismissToast: (id: string) => void
+  /** Removes at once (after a swipe has already animated it away). */
+  removeToast: (id: string) => void
 }
 
 export const useUIStore = create<UIState>((set, get) => ({
@@ -91,8 +97,19 @@ export const useUIStore = create<UIState>((set, get) => ({
 
   pushToast: (message, tone = 'default') => {
     const id = Math.random().toString(36).slice(2)
-    set({ toasts: [...get().toasts, { id, message, tone }] })
-    setTimeout(() => get().dismissToast(id), 3200)
+    const duration = 3200
+    const live = get().toasts.filter((t) => !t.leaving)
+    set({ toasts: [...get().toasts, { id, message, tone, duration }] })
+    // Keep the stack short: the oldest steps aside.
+    if (live.length >= 3) get().dismissToast(live[0].id)
+    // Safety net in case no ToastHost is mounted to run the clock.
+    setTimeout(() => get().removeToast(id), duration * 4)
   },
-  dismissToast: (id) => set({ toasts: get().toasts.filter((t) => t.id !== id) }),
+  dismissToast: (id) => {
+    const t = get().toasts.find((x) => x.id === id)
+    if (!t || t.leaving) return
+    set({ toasts: get().toasts.map((x) => (x.id === id ? { ...x, leaving: true } : x)) })
+    setTimeout(() => get().removeToast(id), 220)
+  },
+  removeToast: (id) => set({ toasts: get().toasts.filter((t) => t.id !== id) }),
 }))
