@@ -1043,3 +1043,20 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 .coverflow-dot.is-active { width: 20px; background: var(--color-gold); }
 @keyframes coverflow-cap { from { opacity: 0; transform: translateY(6px); filter: blur(2px); } }
 @media (prefers-reduced-motion: reduce) { .coverflow-caption { animation: none; } }
+
+/* Book opening transition (BookOpen.tsx) */
+.book-open-backdrop { background: radial-gradient(70% 70% at 50% 50%, var(--color-surface-raised), var(--color-surface)); }
+.book-open-book { transform-origin: 0 0; perspective: 1800px; transform-style: preserve-3d; }
+.book-open-page {
+  background: linear-gradient(90deg, #e9e1d1, #fbf7ef 7%, #fdfaf4);
+  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.4), inset 8px 0 14px -10px rgb(0 0 0 / 0.25);
+  transform-origin: 0 50%;
+}
+.book-open-board { transform-origin: 0 50%; transform-style: preserve-3d; }
+.book-open-front, .book-open-inside { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.book-open-front > * { box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.45); }
+.book-open-inside {
+  transform: rotateY(180deg);
+  background: linear-gradient(270deg, #e3dac8, #f6f0e4 8%, #f8f3ea);
+  box-shadow: inset -8px 0 14px -10px rgb(0 0 0 / 0.25);
+}

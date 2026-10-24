@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ChevronLeftIcon, ChevronRightIcon } from '../../components/icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
+import { openBook } from './bookOpen'
 import { Cover } from './reader/Cover'
 import type { ReaderBook } from './reader/model'
 
@@ -160,7 +161,10 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
         onKeyDown={(e) => {
           if (e.key === 'ArrowLeft') goTo(target.current - 1)
           else if (e.key === 'ArrowRight') goTo(target.current + 1)
-          else if (e.key === 'Enter') navigate(`/curriculum/${books[target.current].id}`)
+          else if (e.key === 'Enter') {
+            const el = cards.current[target.current]
+            if (el) openBook(books[target.current], el, `/curriculum/${books[target.current].id}`, navigate)
+          }
           else return
           e.preventDefault()
         }}
@@ -176,7 +180,7 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
             className="coverflow-card absolute left-1/2 top-6 w-[150px] sm:top-8 sm:w-[230px]"
             onClick={(e) => {
               if (dragged.current) return e.preventDefault()
-              if (i === target.current) navigate(`/curriculum/${b.id}`)
+              if (i === target.current) openBook(b, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${b.id}`, navigate)
               else goTo(i)
             }}
           >

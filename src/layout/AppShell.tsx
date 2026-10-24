@@ -8,6 +8,7 @@ import { LessonFormModal } from '../features/lessons/LessonFormModal'
 import { LessonDetailSheet } from '../features/lessons/LessonDetailSheet'
 import { StudentFormModal } from '../features/students/StudentFormModal'
 import { SearchOverlay } from '../features/search/SearchOverlay'
+import { BookOpenLayer } from '../features/curriculum/BookOpen'
 import { useGlobalShortcuts } from '../hooks/useGlobalShortcuts'
 import { useAutoHideNav } from '../hooks/useAutoHideNav'
 import clsx from 'clsx'
@@ -38,6 +39,7 @@ export function AppShell() {
       <LessonDetailSheet />
       <StudentFormModal />
       <SearchOverlay />
+      <BookOpenLayer />
       <ToastHost />
     </div>
   )

@@ -1,5 +1,5 @@
 import { useState, type CSSProperties } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, CheckIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
 import { ScrollArea } from '../../components/ScrollArea'
@@ -10,6 +10,7 @@ import { toggleDone, useLibrary } from '../theory/library'
 import { CURRICULA } from './curricula'
 import { Cover } from './reader/Cover'
 import { CoverFlow } from './CoverFlow'
+import { openBook } from './bookOpen'
 import { chaptersOf, findBook, READER_BOOKS, type ReaderBook } from './reader/model'
 import { PrintBook } from './reader/PrintBook'
 import { Reader } from './reader/Reader'
@@ -126,13 +127,21 @@ function ShelfRow({ title, hint, books }: { title: string; hint: string; books: 
 }
 
 function ShelfBook({ book, delay }: { book: ReaderBook; delay: number }) {
+  const navigate = useNavigate()
   const chapters = chaptersOf(book)
   const progress = useProgress(chapters.map((c) => c.slug))
   const pos = useReader().positions[book.id]
   const resume = pos && book.items.find((i) => i.key === pos.key)
   return (
     <article className="animate-float-up group flex flex-col gap-4 sm:flex-row sm:items-end" style={{ animationDelay: `${delay}ms` }}>
-      <Link to={`/curriculum/${book.id}`} aria-label={`Đọc ${book.title} ${book.volume ?? ''}`} className="shelf-book block w-[min(62vw,240px)] shrink-0 self-center sm:w-[200px] sm:self-auto lg:w-[230px]">
+      <Link
+        to={`/curriculum/${book.id}`}
+        onClick={(e) => {
+          e.preventDefault()
+          openBook(book, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${book.id}`, navigate)
+        }}
+        aria-label={`Đọc ${book.title} ${book.volume ?? ''}`}
+        className="shelf-book block w-[min(62vw,240px)] shrink-0 self-center sm:w-[200px] sm:self-auto lg:w-[230px]">
         <Cover book={book} className="shelf-book-face rounded-[4px]" />
       </Link>
       <div className="min-w-0 flex-1 sm:pb-2">
