@@ -197,7 +197,7 @@ export function TheoryPage() {
 
       {!slug && (
         <div ref={pullNote} aria-hidden className="pull-note">
-          ↻
+          ♪
         </div>
       )}
       {!slug ? (
