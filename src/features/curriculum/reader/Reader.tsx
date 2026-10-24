@@ -2,12 +2,14 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, typ
 import { createPortal } from 'react-dom'
 import { Link, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
-import { ArrowLeftIcon, BookmarkIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, DownloadIcon, ExpandIcon, GraduationIcon, ListIcon, SearchIcon, TypeIcon, XIcon } from '../../../components/icons'
+import { ArrowLeftIcon, BookmarkIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, DownloadIcon, ExpandIcon, GraduationIcon, ListIcon, NoteIcon, SearchIcon, TypeIcon, XIcon } from '../../../components/icons'
 import { findArticle, normalize } from '../../theory/wiki'
 import { markRead, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
 import { BookPage } from './Pages'
 import { chaptersOf, hueTint, type ReaderBook, type ReaderItem } from './model'
+import { Annotator, NotesPanel } from './Annotator'
+import { useNotes } from './notes'
 import { getPosition, removeBookmark, savePosition, setPrefs, toggleBookmark, useReader, type Bookmark, type ReaderPrefs } from './store'
 
 const GAP = 64
@@ -15,7 +17,7 @@ const GAP = 64
 const MARGINS: Record<ReaderPrefs['margin'], [number, number]> = { narrow: [42, 28], normal: [50, 48], wide: [60, 72] }
 const FONTS: Record<ReaderPrefs['font'], string> = { serif: 'var(--font-serif)', sans: 'var(--font-sans)', classic: 'var(--font-display)' }
 
-type Panel = 'toc' | 'settings' | 'search' | null
+type Panel = 'toc' | 'settings' | 'search' | 'notes' | null
 
 /**
  * A paginated book reader. Each item (cover, preface, contents, part opener, chapter) is laid out in
@@ -225,7 +227,8 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const atStart = index === 0 && page === 0
   const atEnd = index === items.length - 1 && page === pages - 1
   const onPointerDown = (e: ReactPointerEvent) => {
-    if (e.button !== 0 || panel) return
+    // A mouse drag selects text (for highlighting); pages turn with the arrows, keys, wheel or a click at the edges.
+    if (e.button !== 0 || panel || e.pointerType === 'mouse') return
     start.current = { x: e.clientX, y: e.clientY, t: Date.now(), id: e.pointerId }
     moved.current = false
   }
@@ -282,6 +285,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   }
 
   const marks = bookmarks[book.id] ?? []
+  const noteCount = useNotes(book.id).length
   const here = pages ? page / pages : 0
   const marked = marks.some((b) => b.key === item.key && Math.abs(b.ratio - here) < 0.5 / pages)
   const progress = (index + (page + 1) / pages) / items.length
@@ -316,6 +320,10 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
         </div>
         <button onClick={() => setPanel(panel === 'search' ? null : 'search')} aria-label="Tìm trong sách" className={clsx('reader-btn', panel === 'search' && 'is-on')}>
           <SearchIcon width={18} height={18} />
+        </button>
+        <button onClick={() => setPanel(panel === 'notes' ? null : 'notes')} aria-label="Ghi chú và đánh dấu" title="Ghi chú và đánh dấu" className={clsx('reader-btn relative', panel === 'notes' && 'is-on')}>
+          <NoteIcon width={18} height={18} />
+          {noteCount > 0 && <span className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-[var(--color-gold)]" />}
         </button>
         <button onClick={() => setPanel(panel === 'settings' ? null : 'settings')} aria-label="Cỡ chữ và giao diện" className={clsx('reader-btn', panel === 'settings' && 'is-on')}>
           <TypeIcon width={18} height={18} />
@@ -411,6 +419,12 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
 
       {panel === 'toc' && <Toc book={book} current={index} marks={marks} onGo={go} onClose={() => setPanel(null)} />}
       {panel === 'settings' && <Settings book={book} prefs={prefs} onClose={() => setPanel(null)} />}
+      {panel === 'notes' && (
+        <Sheet side="right" title="Ghi chú và đánh dấu" onClose={() => setPanel(null)}>
+          <NotesPanel book={book} onGo={(i, n) => go(i, i === index ? { find: n.text.slice(0, 40) } : n.ratio)} />
+        </Sheet>
+      )}
+      <Annotator flow={flow} book={book} item={item} layout={`${item.key}:${page}:${pages}:${colW}:${prefs.size}:${prefs.font}`} ratio={() => (pages ? page / pages : 0)} />
       {panel === 'search' && <Search book={book} onGo={(i, q) => go(i, { find: q })} onClose={() => setPanel(null)} />}
     </div>,
     document.body,
