@@ -67,7 +67,6 @@ export function TheoryPage() {
   const progressTrack = useRef<HTMLDivElement>(null)
   const pullContent = useRef<HTMLDivElement>(null)
   const pullNote = useRef<HTMLDivElement>(null)
-  const navigate = useNavigate()
   const toTop = useRef<HTMLDivElement>(null)
   const header = useRef<HTMLDivElement>(null)
   const sectionLabel = useRef<HTMLSpanElement>(null)
@@ -84,8 +83,8 @@ export function TheoryPage() {
   useReveal(scroller, slug)
   useParallax(scroller, slug)
   useScrollCollapse(scroller, article ? [70, 150] : [40, 190], slug)
-  // On the library home, pulling down past the top opens a random article.
-  usePullAction(scroller, { enabled: !slug, content: pullContent, indicator: pullNote, onTrigger: () => navigate(`/theory/${randomArticle().slug}`) })
+  // On the library home, pulling down past the top reloads the page (the usual pull-to-refresh, which the rubber band replaces).
+  usePullAction(scroller, { enabled: !slug, content: pullContent, indicator: pullNote, onTrigger: () => location.reload() })
 
   // "Continue reading": offered on a fresh visit to an article left part-way, never when coming back.
   const lastRatio = useMemo(() => (article ? readingPosition(article.slug) : 0), [article])
@@ -198,7 +197,7 @@ export function TheoryPage() {
 
       {!slug && (
         <div ref={pullNote} aria-hidden className="pull-note">
-          ♪
+          ↻
         </div>
       )}
       {!slug ? (
