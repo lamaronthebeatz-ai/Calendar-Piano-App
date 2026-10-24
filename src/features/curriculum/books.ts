@@ -760,6 +760,68 @@ Cuốn này dạy **phức điệu nghiêm khắc** — lối viết nhiều bè
       },
     ],
   },
+  {
+    id: 'hinh-thuc-am-nhac',
+    title: 'Hình Thức Âm Nhạc',
+    volume: 'Trường phái Nga – Xô viết',
+    subtitle: 'Hình thức và phân tích tác phẩm gộp từ ba sách nền: Sposobin, Mazel, Asafyev — từ phương tiện âm nhạc, cấu trúc, chức năng các phần, nguyên tắc phát triển, qua đoạn nhạc, hai – ba phần, biến tấu, rondo, sonata, chu kỳ, thanh nhạc, đến fugue và ngữ điệu.',
+    author: 'Lamar',
+    audience: 'Đã học Nhạc Lý Cơ Bản và hoà âm cơ bản',
+    hue: 18,
+    glyph: '𝄐',
+    preface: `
+Cuốn này dạy **hình thức âm nhạc và phân tích tác phẩm** theo truyền thống các nhạc viện Nga – Xô viết, truyền thống mà các nhạc viện Việt Nam tiếp nhận. Thay vì đọc riêng từng sách, cuốn sách **gộp ba sách nền theo chủ đề**:
+
+| Sách | Đóng góp |
+|---|---|
+| **I. Sposobin**, *Музыкальная форма* (1947; bản 1984) | Hệ thống thuật ngữ và định nghĩa; trình tự từ đoạn nhạc tới fugue |
+| **L. Mazel**, *Строение музыкальных произведений* (1960; bản 1979) | Hình thức gắn với ý nghĩa biểu hiện; phương pháp phân tích tổng thể |
+| **B. Asafyev**, *Музыкальная форма как процесс* (1930 / 1947; bản 1971) | Hình thức là quá trình; i:m:t; đồng nhất và tương phản; ngữ điệu |
+
+## Cấu trúc sách
+Mỗi bài là một bài của thư viện Lý thuyết (giữ nguyên đường dẫn), viết như một chương giáo khoa: định nghĩa, giải thích, các dạng, ví dụ tác phẩm mà các sách dẫn, mục **"Ba sách nói gì — đối chiếu"**, **cách phân tích** và **bài tập**. Trích dẫn ghi rõ sách, chương, mục.
+
+## Cách đọc
+1. Phần I – II là **công cụ**: đọc kỹ trước khi sang các hình thức.
+2. Mỗi hình thức: đọc, rồi **phân tích trên bản nhạc thật** các tác phẩm trong bài tập, nghe bản thu.
+3. Đọc lại Phần I sau khi xong cuốn sách.
+`,
+    parts: [
+      { title: 'Nền tảng', intro: 'Hình thức là gì, các phương tiện âm nhạc tạo ra hình thức thế nào, và phân tích một tác phẩm theo phương pháp tổng thể.', chapters: [
+        { slug: 'hinh-thuc-va-phan-tich-truong-phai-nga', focus: 'Ba cuốn sách và vị trí của chúng.' },
+        { slug: 'hinh-thuc-nga-khai-niem', focus: 'Nội dung và hình thức; quá trình và kết tinh.' },
+        { slug: 'hinh-thuc-nga-phuong-tien', focus: 'Giai điệu, hoà âm, tiết tấu và vai trò tạo hình thức.' },
+        { slug: 'hinh-thuc-nga-tac-dong-va-phan-tich', focus: 'Nguyên tắc tác động nghệ thuật; phân tích tổng thể.' },
+      ], exercises: ['Chọn một bài hát quen thuộc, mô tả hình thức theo nghĩa hẹp (bố cục) và theo nghĩa rộng (các phương tiện tạo tính chất).', 'Tìm trong một tác phẩm piano một chỗ minh hoạ nguyên tắc tác động nhiều mặt và tập trung.'] },
+      { title: 'Cấu trúc và các nguyên tắc', intro: 'Công cụ để đọc mọi hình thức: phân đoạn, chức năng các phần, kiểu trình bày, nguyên tắc phát triển.', chapters: [
+        { slug: 'hinh-thuc-nga-phan-doan-cau-truc', focus: 'Cezura, cấu trúc, tổng hợp và chia nhỏ.' },
+        { slug: 'hinh-thuc-nga-chuc-nang-kieu-trinh-bay', focus: 'Sáu chức năng, bốn kiểu trình bày, i:m:t.' },
+        { slug: 'hinh-thuc-nga-nguyen-tac-phat-trien', focus: 'Lặp lại, biến tấu, phát triển, tương phản.' },
+      ], exercises: ['Đánh dấu cezura và các cấu trúc trong 16 ô đầu một sonata của Mozart.', 'Xác định kiểu trình bày (trình bày, giữa, kết) của từng phần trong một hình thức ba phần.'] },
+      { title: 'Các hình thức chủ điệu nhỏ', intro: 'Đoạn nhạc, hai phần và ba phần đơn, ba phần phức — nền của mọi hình thức lớn.', chapters: [
+        { slug: 'hinh-thuc-nga-doan-nhac', focus: 'Đoạn nhạc và các dạng phức tạp; dân ca Nga.' },
+        { slug: 'hinh-thuc-nga-hinh-thuc-don', focus: 'Hai phần, ba phần đơn.' },
+        { slug: 'hinh-thuc-nga-ba-phan-phuc', focus: 'Ba phần phức, trio và episode.' },
+      ], exercises: ['Phân tích ba bài trong Album cho tuổi trẻ của Schumann hoặc Tchaikovsky: đoạn nhạc, hai phần hay ba phần?', 'Vẽ sơ đồ một minuet có trio, ghi số ô và giọng từng phần.'] },
+      { title: 'Các hình thức chủ điệu lớn', intro: 'Biến tấu, rondo, sonata, rondo – sonata và các tiền thân cổ.', chapters: [
+        { slug: 'hinh-thuc-nga-bien-tau', focus: 'Các loại biến tấu; kiểu Glinka.' },
+        { slug: 'hinh-thuc-nga-rondo', focus: 'Rondo cổ, rondo cổ điển, hình thức giống rondo.' },
+        { slug: 'hinh-thuc-nga-sonata', focus: 'Phần trình bày, phát triển, tái hiện, coda; các biến thể.' },
+        { slug: 'hinh-thuc-nga-rondo-sonata', focus: 'Rondo có phần phụ quan hệ như sonata.' },
+        { slug: 'hinh-thuc-nga-sonata-co-va-hai-phan-co', focus: 'Hai phần cổ, sonata cổ, sự ra đời của tái hiện trọn.' },
+      ], exercises: ['Phân tích chương I một sonata của Haydn hoặc Mozart: ghi ranh giới các phần, giọng, chất liệu.', 'So sánh một rondo và một rondo – sonata của Beethoven.'] },
+      { title: 'Chu kỳ, hình thức hỗn hợp, thanh nhạc', intro: 'Tác phẩm nhiều chương, hình thức tự do một chương, hình thức thanh nhạc và opera.', chapters: [
+        { slug: 'hinh-thuc-nga-chu-ky', focus: 'Tổ khúc, chu kỳ sonata – giao hưởng.' },
+        { slug: 'hinh-thuc-nga-hon-hop-va-ghep-tuong-phan', focus: 'Hình thức hỗn hợp; hình thức ghép tương phản.' },
+        { slug: 'hinh-thuc-nga-thanh-nhac', focus: 'Đọc nhạc lời ca; opera; romance.' },
+      ], exercises: ['Lập bảng tiến độ, giọng, hình thức từng chương của một sonata bốn chương.', 'Phân tích một romance: hình thức và quan hệ lời – nhạc.'] },
+      { title: 'Phức điệu và ngữ điệu', intro: 'Các hình thức phức điệu, và học thuyết ngữ điệu của Asafyev như cách nhìn lịch sử hình thức.', chapters: [
+        { slug: 'hinh-thuc-nga-phuc-dieu', focus: 'Mô phỏng, canon, đối âm phức, fugue.' },
+        { slug: 'hinh-thuc-nga-ngu-dieu', focus: 'Ngữ điệu, từ điển ngữ điệu, khủng hoảng ngữ điệu.' },
+        { slug: 'hinh-thuc-nga-lo-trinh', focus: 'Ôn lại toàn bộ lộ trình.' },
+      ], exercises: ['Phân tích phần trình bày một fugue trong Bình quân luật: chủ đề, câu đáp, phản đề, ranh giới.', 'Viết một đoạn ngắn: vì sao một hình thức (ví dụ sonata) "kết tinh" ở một thời kỳ lịch sử, theo Asafyev.'] },
+    ],
+  },
 ]
 
 /** "Về tác giả", shared by every book and course. */
