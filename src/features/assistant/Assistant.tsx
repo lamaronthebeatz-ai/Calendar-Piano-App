@@ -2,137 +2,302 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 import { createPortal } from 'react-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
-import { SparkleIcon, XIcon } from '../../components/icons'
-import type { Answer } from './engine'
+import { LockIcon, SparkleIcon, XIcon } from '../../components/icons'
+import { lockPrivate, usePrivateUnlocked } from '../../components/privateLock'
+import { useSettings, useStudents, useTimetableSlots } from '../../hooks/useLiveData'
+import { useUIStore } from '../../store/uiStore'
+import { navItems } from '../../layout/navItems'
+import { db } from '../../data/db'
+import { applyThemeToDocument, updateSettings } from '../../services/settingsService'
+import { checkConflicts, deleteSlot, moveSlot } from '../../services/timetableService'
+import { downloadBackupFile, exportBackup } from '../../services/backup'
+import { startTour } from '../onboarding/tour'
+import { fold, score } from '../search/fold'
+import { WEEKDAY_NAMES } from '../../utils/date'
+import { formatTimeRange } from '../../utils/time'
+import type { DayOfWeek, Student, TimetableSlot } from '../../types'
+import { addMinutes, needsUnlock, parse, type Command } from './commands'
 import { closeAssistant, openAssistant, takeQuestion, useAssistant } from './store'
 import './assistant.css'
 
+interface Dest {
+  path: string
+  title: string
+  hint: string
+  icon: ReactNode
+}
+type Reply =
+  | { type: 'text'; text: string; tone?: 'ok' | 'warn' | 'lock'; action?: { label: string; run: () => void }; undo?: () => Promise<void> }
+  | { type: 'options'; text: string; items: Dest[] }
+  | { type: 'slots'; text: string; slots: TimetableSlot[]; mode: 'move' | 'delete' | 'edit' | 'view'; day?: DayOfWeek; start?: string }
+  | { type: 'students'; text: string; students: Student[]; then: (s: Student) => void }
 interface Msg {
   id: number
-  role: 'user' | 'bot'
-  text?: string
-  answer?: Answer
+  user?: string
+  reply?: Reply
 }
 
-const STARTERS = ['Tritone sub là gì?', 'ii–V–I của E♭', 'Neuhaus nói gì về rubato?', 'So sánh Fux và Taneev', 'Quãng từ C đến A♭', 'Hình thức sonata gồm những phần nào?', 'Cách luyện quãng tám', 'Hợp âm trong giọng D thứ']
-const HISTORY = 'assistant:history'
-export const JUMP_KEY = 'assist-jump'
+const EXAMPLES: [string, string[]][] = [
+  ['Học viên và lịch', ['Tạo học viên mới Nguyễn Minh Anh', 'Thêm buổi cho Minh Anh thứ 3 lúc 17h30, 60 phút', 'Dời buổi của Minh Anh sang thứ 5 lúc 18h', 'Xoá buổi thứ 7 của Minh Anh', 'Hôm nay dạy ai?', 'Buổi tiếp theo']],
+  ['Dịch chuyển', ['Đi đến hoà âm', 'Mở sách Neuhaus', 'Vòng quãng năm', 'Sổ nghiên cứu', 'Cài đặt']],
+  ['Tiện ích', ['Giao diện tối', 'Sao lưu dữ liệu', 'Hướng dẫn sử dụng', 'Khoá lịch']],
+]
+const PRIVATE_PATHS = new Set(['/', '/students'])
 
-let worker: Worker | null = null
-const getWorker = () => (worker ??= new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' }))
-
-/** Floating button + chat panel: an offline assistant that answers from the library, citing the passages it used. */
+/** Floating button + panel: typed commands for students and lessons, and quick travel anywhere in the app. */
 export function Assistant() {
   const { open } = useAssistant()
   const { pathname } = useLocation()
-  // The reader covers the app; the private pages have nothing to ask about.
-  const hidden = /^\/curriculum\/[^/]+\/(?!tong-quan)/.test(pathname) && pathname.split('/').length > 3
+  // Not over the book reader, which covers the app.
+  const inReader = /^\/curriculum\/[^/]+\/(?!tong-quan$|in$)[^/]+/.test(pathname)
   return (
     <>
-      {!hidden && !open && (
-        <button onClick={() => openAssistant()} className="as-fab" aria-label="Hỏi trợ lý lý thuyết" title="Hỏi trợ lý lý thuyết">
+      {!inReader && !open && (
+        <button onClick={() => openAssistant()} className="as-fab" aria-label="Trợ lý lệnh" title="Trợ lý lệnh: ra lệnh hoặc nói nơi muốn đến">
           <SparkleIcon width={22} height={22} />
         </button>
       )}
-      {open && createPortal(<Panel context={/^\/theory\/([^/]+)/.exec(pathname)?.[1]} />, document.body)}
+      {open && createPortal(<Panel />, document.body)}
     </>
   )
 }
 
-function Panel({ context }: { context?: string }) {
+function Panel() {
   const navigate = useNavigate()
-  const [msgs, setMsgs] = useState<Msg[]>(() => {
-    try {
-      return JSON.parse(sessionStorage.getItem(HISTORY) ?? '[]')
-    } catch {
-      return []
-    }
-  })
+  const students = useStudents()
+  const slots = useTimetableSlots()
+  const settings = useSettings()
+  const unlocked = usePrivateUnlocked()
+  const ui = useUIStore()
+  const [msgs, setMsgs] = useState<Msg[]>([])
   const [q, setQ] = useState('')
-  const [busy, setBusy] = useState(false)
-  const [progress, setProgress] = useState<number | null>(null)
-  const [count, setCount] = useState(0)
   const [closing, setClosing] = useState(false)
   const list = useRef<HTMLDivElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
-  const seq = useRef(Date.now())
+  const seq = useRef(0)
+  const name = (id: string) => {
+    const s = students.find((x) => x.id === id)
+    return s?.nickname || s?.name || '?'
+  }
 
   useEffect(() => {
-    try {
-      sessionStorage.setItem(HISTORY, JSON.stringify(msgs.slice(-30)))
-    } catch {
-      /* history is a convenience */
-    }
     requestAnimationFrame(() => list.current?.scrollTo({ top: list.current.scrollHeight, behavior: 'smooth' }))
   }, [msgs])
-
   useEffect(() => {
-    const w = getWorker()
-    const onMsg = (e: MessageEvent) => {
-      const m = e.data
-      if (m.type === 'progress') setProgress(m.done / m.total)
-      if (m.type === 'ready') {
-        setProgress(null)
-        setCount(m.articles)
-      }
-      if (m.type === 'answer') {
-        setProgress(null)
-        setCount(m.articles)
-        setBusy(false)
-        setMsgs((ms) => [...ms, { id: m.id, role: 'bot', answer: m.answer }])
-      }
-    }
-    w.addEventListener('message', onMsg)
-    w.postMessage({ type: 'warm' })
     const pending = takeQuestion()
-    if (pending) ask(pending)
+    if (pending) run(pending)
     input.current?.focus({ preventScroll: true })
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && close()
     addEventListener('keydown', onKey)
-    return () => {
-      w.removeEventListener('message', onMsg)
-      removeEventListener('keydown', onKey)
-    }
-    // Runs once per opening; ask/close only use refs and setters.
+    return () => removeEventListener('keydown', onKey)
+    // Once per opening.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const ask = (text: string) => {
-    const t = text.trim()
-    if (!t || busy) return
-    const id = ++seq.current
-    setMsgs((ms) => [...ms, { id, role: 'user', text: t }])
-    setQ('')
-    setBusy(true)
-    getWorker().postMessage({ type: 'ask', id: id + 0.5, q: t, context })
-  }
   const close = () => {
     setClosing(true)
     setTimeout(closeAssistant, 220)
   }
-  const open = (slug: string, sec: number) => {
-    sessionStorage.setItem(JUMP_KEY, JSON.stringify({ slug, sec }))
-    navigate(`/theory/${slug}`)
-    if (matchMedia('(max-width: 768px)').matches) close()
+  const say = (reply: Reply) => setMsgs((m) => [...m, { id: ++seq.current, reply }])
+  const go = (path: string) => {
+    navigate(path)
+    close()
   }
+  const lockedReply = () =>
+    say({ type: 'text', tone: 'lock', text: 'Thời khoá biểu và học viên đang khoá. Mở khoá bằng mã riêng rồi ra lệnh lại.', action: { label: 'Mở khoá', run: () => go('/') } })
+
+  /* ----------------------------------------------------- actions */
+
+  const doMove = async (slot: TimetableSlot, day?: DayOfWeek, start?: string, force = false) => {
+    const d = day ?? slot.dayOfWeek
+    const st = start ?? slot.startTime
+    const en = addMinutes(st, slot.duration)
+    if (d === slot.dayOfWeek && st === slot.startTime) return say({ type: 'text', text: 'Buổi này đã ở đúng thời gian đó rồi.' })
+    const clash = (await checkConflicts({ id: slot.id, dayOfWeek: d, startTime: st, endTime: en })).filter((c) => c.id !== slot.id)
+    if (clash.length && !force) {
+      return say({
+        type: 'text',
+        tone: 'warn',
+        text: `Trùng giờ với ${clash.map((c) => `${name(c.studentId)} (${formatTimeRange(c.startTime, c.endTime)})`).join(', ')} vào ${WEEKDAY_NAMES[d]}.`,
+        action: { label: 'Vẫn dời', run: () => void doMove(slot, day, start, true) },
+      })
+    }
+    const before = { day: slot.dayOfWeek, start: slot.startTime, end: slot.endTime }
+    await moveSlot(slot.id, d, st, en)
+    ui.pushToast('Đã dời buổi học', 'success')
+    say({
+      type: 'text',
+      tone: 'ok',
+      text: `Đã dời buổi của ${name(slot.studentId)} sang ${WEEKDAY_NAMES[d]} ${formatTimeRange(st, en)}.`,
+      undo: () => moveSlot(slot.id, before.day, before.start, before.end),
+    })
+  }
+  const doDelete = async (slot: TimetableSlot) => {
+    await deleteSlot(slot.id)
+    ui.pushToast('Đã xoá buổi học', 'success')
+    say({
+      type: 'text',
+      tone: 'ok',
+      text: `Đã xoá buổi ${WEEKDAY_NAMES[slot.dayOfWeek]} ${formatTimeRange(slot.startTime, slot.endTime)} của ${name(slot.studentId)}.`,
+      undo: async () => void (await db.timetableSlots.put(slot)),
+    })
+  }
+
+  /* ----------------------------------------------------- travel */
+
+  const destinations = async (query: string): Promise<Dest[]> => {
+    // "sách …", "bài …", "mục …", "chương …", "trang …" say what kind of place; they are not part of its name.
+    const KINDS: Record<string, string> = { sach: 'book', giao: 'book', bai: 'article', muc: 'category', chuong: 'chapter', trang: 'page', hoc: 'student' }
+    const raw = fold(query).split(/[^a-z0-9#♯♭]+/).filter(Boolean)
+    const want = raw[0] && KINDS[raw[0]] && raw.length > 1 ? KINDS[raw[0]] : null
+    const tokens = (want ? raw.slice(raw[0] === 'giao' && raw[1] === 'trinh' ? 2 : raw[0] === 'hoc' && raw[1] === 'vien' ? 2 : 1) : raw).filter(Boolean)
+    if (!tokens.length) return []
+    const kindBonus = (k: string) => (want === k ? 80 : 0)
+    const hit = (t: string, a = '', s = '') => score(tokens, fold(t), fold(a), fold(s))
+    const out: (Dest & { v: number })[] = []
+    const page = (path: string, title: string, hint: string, icon: ReactNode, extra = '') => {
+      if (PRIVATE_PATHS.has(path) && !unlocked) return
+      const v = hit(title, extra)
+      if (v > 0) out.push({ path, title, hint, icon, v: v + 40 + kindBonus('page') })
+    }
+    for (const n of navItems) page(n.to, n.label, 'Trang', <n.icon width={16} height={16} />, n.to === '/' ? 'thời khoá biểu lịch dạy' : '')
+    page('/tools', 'Bảng tính nhạc lý', 'Trang', <span>♫</span>, 'vòng quãng năm hợp âm jazz âm giai quãng dịch giọng máy đếm nhịp metronome ii-V-I tritone')
+    page('/settings', 'Sao lưu & dữ liệu', 'Cài đặt', <span>⚙︎</span>, 'xuất nhập dữ liệu backup giao diện hồ sơ')
+    if (unlocked)
+      for (const s of students) {
+        const v = hit(s.name, s.nickname ?? '')
+        if (v > 0) out.push({ path: `/students/${s.id}`, title: s.name, hint: 'Hồ sơ học viên', icon: <span>👤</span>, v: v + 30 + kindBonus('student') })
+      }
+    const { INDEX } = await import('../search/paletteIndex')
+    const add = (list: typeof INDEX.articles, hint: string, icon: string, bonus: number, n: number) =>
+      list
+        .map((e) => ({ e, v: score(tokens, e.t, e.a, e.s) }))
+        .filter((x) => x.v > 0)
+        .sort((a, b) => b.v - a.v)
+        .slice(0, n)
+        .forEach(({ e, v }) => out.push({ path: e.path, title: e.title, hint: e.kind === 'chapter' ? `Chương · ${e.hint}` : hint || e.hint, icon: <span>{icon}</span>, v: v + bonus + kindBonus(e.kind) }))
+    add(INDEX.categories, 'Mục thư viện', '▦', 25, 3)
+    add(INDEX.books, '', '📖', 20, 3)
+    add(INDEX.articles, '', '¶', 0, 6)
+    add(INDEX.chapters, '', '§', -10, 3)
+    const seen = new Set<string>()
+    return out
+      .sort((a, b) => b.v - a.v)
+      .filter((d) => !seen.has(d.path) && seen.add(d.path))
+      .slice(0, 8)
+  }
+
+  /* ----------------------------------------------------- run */
+
+  const run = async (text: string) => {
+    const t = text.trim()
+    if (!t) return
+    setMsgs((m) => [...m, { id: ++seq.current, user: t }])
+    setQ('')
+    const cmd: Command = parse(t, unlocked ? students : [], unlocked ? slots : [])
+    if (needsUnlock(cmd) && !unlocked) return lockedReply()
+    switch (cmd.kind) {
+      case 'create-student':
+        ui.openCreateStudent(cmd.name || undefined)
+        navigate('/students')
+        return close()
+      case 'create-lesson': {
+        const pick = (s?: Student) => {
+          const minutes = cmd.minutes ?? s?.defaultDuration ?? settings.defaultLessonDuration
+          ui.openCreateLesson({ studentId: s?.id, dayOfWeek: cmd.day, startTime: cmd.start, endTime: cmd.start ? addMinutes(cmd.start, minutes) : undefined, location: cmd.location ?? s?.defaultLocation, type: cmd.type })
+          navigate('/')
+          close()
+        }
+        if (cmd.candidates.length > 1) return say({ type: 'students', text: 'Buổi học cho học viên nào?', students: cmd.candidates, then: pick })
+        return pick(cmd.student)
+      }
+      case 'move':
+        if (!cmd.slots.length) return say({ type: 'text', tone: 'warn', text: cmd.who ? `Không thấy buổi nào của ${cmd.who.name} khớp lệnh.` : 'Không thấy buổi học nào khớp. Thử ghi rõ tên học viên, ví dụ: "dời buổi của Minh Anh sang thứ 5 lúc 18h".' })
+        if (cmd.day === undefined && !cmd.start) return say({ type: 'text', tone: 'warn', text: 'Dời sang ngày nào, mấy giờ? Ví dụ: "… sang thứ 5 lúc 18h".' })
+        if (cmd.slots.length === 1) return doMove(cmd.slots[0], cmd.day, cmd.start)
+        return say({ type: 'slots', mode: 'move', text: 'Dời buổi nào?', slots: cmd.slots, day: cmd.day, start: cmd.start })
+      case 'delete':
+        if (!cmd.slots.length) return say({ type: 'text', tone: 'warn', text: 'Không thấy buổi học nào khớp lệnh.' })
+        return say({ type: 'slots', mode: 'delete', text: cmd.slots.length === 1 ? 'Xoá buổi này?' : 'Xoá buổi nào?', slots: cmd.slots })
+      case 'edit-lesson':
+        if (cmd.slots.length === 1) {
+          ui.openEditLesson(cmd.slots[0].id)
+          navigate('/')
+          return close()
+        }
+        return say({ type: 'slots', mode: 'edit', text: cmd.slots.length ? 'Sửa buổi nào?' : 'Không thấy buổi học nào khớp lệnh.', slots: cmd.slots })
+      case 'edit-student':
+      case 'profile': {
+        const then = (s: Student) => {
+          if (cmd.kind === 'edit-student') ui.openEditStudent(s.id)
+          go(`/students/${s.id}`)
+        }
+        if (cmd.who) return then(cmd.who)
+        return say(cmd.candidates.length ? { type: 'students', text: 'Học viên nào?', students: cmd.candidates, then } : { type: 'text', tone: 'warn', text: 'Không thấy học viên nào có tên đó.' })
+      }
+      case 'view': {
+        let list = [...slots].sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
+        if (cmd.who) list = list.filter((s) => s.studentId === cmd.who!.id)
+        if (cmd.next) {
+          const now = new Date()
+          const key = (s: TimetableSlot) => ((s.dayOfWeek - now.getDay() + 7) % 7) * 1440 + Number(s.startTime.slice(0, 2)) * 60 + Number(s.startTime.slice(3)) - (now.getHours() * 60 + now.getMinutes())
+          list = list.filter((s) => key(s) >= 0).sort((a, b) => key(a) - key(b)).slice(0, 3)
+        } else if (cmd.day !== undefined) list = list.filter((s) => s.dayOfWeek === cmd.day)
+        const label = cmd.next ? 'Các buổi sắp tới' : cmd.day !== undefined ? `${WEEKDAY_NAMES[cmd.day]}` : cmd.who ? `Lịch của ${cmd.who.name}` : 'Lịch tuần'
+        return say({ type: 'slots', mode: 'view', text: list.length ? `${label}: ${list.length} buổi.` : `${label}: không có buổi nào.`, slots: list })
+      }
+      case 'theme':
+        await updateSettings({ theme: cmd.theme })
+        applyThemeToDocument(cmd.theme)
+        return say({ type: 'text', tone: 'ok', text: `Đã chuyển giao diện ${cmd.theme === 'dark' ? 'tối' : cmd.theme === 'light' ? 'sáng' : 'theo hệ thống'}.` })
+      case 'backup': {
+        const outcome = await downloadBackupFile(await exportBackup())
+        return say({ type: 'text', tone: outcome === 'saved' ? 'ok' : 'warn', text: outcome === 'saved' ? 'Đã xuất tệp sao lưu (lịch, học viên, ghi chú).' : 'Chưa lưu được tệp sao lưu — thử trong Cài đặt.', action: { label: 'Mở Cài đặt', run: () => go('/settings') } })
+      }
+      case 'tour':
+        close()
+        return setTimeout(startTour, 260)
+      case 'lock':
+        lockPrivate()
+        return say({ type: 'text', tone: 'lock', text: 'Đã khoá thời khoá biểu và học viên.' })
+      case 'go': {
+        const items = await destinations(cmd.query)
+        if (!items.length) return say({ type: 'text', tone: 'warn', text: `Không tìm thấy nơi nào khớp "${cmd.query}". Thử tên trang, mục, sách hay bài (ví dụ "hoà âm", "Neuhaus", "cài đặt").` })
+        return say({ type: 'options', text: 'Chọn nơi đến:', items })
+      }
+    }
+  }
+
+  const undo = async (m: Msg) => {
+    if (m.reply?.type !== 'text' || !m.reply.undo) return
+    await m.reply.undo()
+    setMsgs((ms) => ms.map((x) => (x.id === m.id && x.reply?.type === 'text' ? { ...x, reply: { ...x.reply, undo: undefined, text: `${x.reply.text} (đã hoàn tác)` } } : x)))
+    ui.pushToast('Đã hoàn tác', 'success')
+  }
+
+  const slotLine = (s: TimetableSlot) => `${name(s.studentId)} · ${WEEKDAY_NAMES[s.dayOfWeek]} ${formatTimeRange(s.startTime, s.endTime)}`
 
   return (
     <div className={clsx('as-root', closing && 'is-closing')}>
       <div className="as-scrim" onClick={close} />
-      <section className="as-panel" role="dialog" aria-label="Trợ lý lý thuyết">
+      <section className="as-panel" role="dialog" aria-label="Trợ lý lệnh">
         <header className="as-head">
           <span className="as-orb" aria-hidden>
             <SparkleIcon width={18} height={18} />
           </span>
           <div className="min-w-0 flex-1">
-            <p className="font-display text-[17px] font-semibold leading-tight text-[var(--color-ink)]">Trợ lý lý thuyết</p>
-            <p className="truncate text-[11.5px] text-[var(--color-ink-faint)]">
-              {progress !== null ? `Đang lập chỉ mục thư viện… ${Math.round(progress * 100)}%` : `Tìm trong ${count ? count.toLocaleString('vi-VN') : '…'} bài · không cần mạng · luôn ghi nguồn`}
+            <p className="font-display text-[17px] font-semibold leading-tight text-[var(--color-ink)]">Trợ lý lệnh</p>
+            <p className="flex items-center gap-1 truncate text-[11.5px] text-[var(--color-ink-faint)]">
+              {unlocked ? 'Ra lệnh cho lịch, học viên · nói nơi muốn đến' : (
+                <>
+                  <LockIcon width={11} height={11} /> Lịch và học viên đang khoá · vẫn dịch chuyển được
+                </>
+              )}
             </p>
           </div>
           {msgs.length > 0 && (
-            <button onClick={() => setMsgs([])} className="as-ghost" title="Cuộc trò chuyện mới">
-              Mới
+            <button onClick={() => setMsgs([])} className="as-ghost">
+              Xoá
             </button>
           )}
           <button onClick={close} className="as-icon" aria-label="Đóng">
@@ -142,27 +307,95 @@ function Panel({ context }: { context?: string }) {
 
         <div ref={list} className="as-list">
           {msgs.length === 0 && (
-            <div className="as-empty">
-              <p className="font-display text-[22px] font-semibold text-[var(--color-ink)]">Hỏi gì về lý thuyết?</p>
-              <p className="mt-1 text-[13px] leading-relaxed text-[var(--color-ink-muted)]">
-                Trợ lý đọc toàn bộ thư viện, trích đúng đoạn trả lời và dẫn tới bài gốc. Câu hỏi tính toán (hợp âm, ii–V–I, quãng, âm giai…) được tính chính xác.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {STARTERS.map((s, i) => (
-                  <button key={s} onClick={() => ask(s)} className="as-chip" style={{ '--i': i } as CSSProperties}>
-                    {s}
-                  </button>
-                ))}
-              </div>
+            <div className="as-empty space-y-4">
+              {EXAMPLES.map(([group, items], g) => (
+                <div key={group}>
+                  <p className="as-label mb-2 flex items-center gap-1">
+                    {group}
+                    {g === 0 && !unlocked && <LockIcon width={11} height={11} />}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((s, i) => (
+                      <button key={s} onClick={() => run(s)} className={clsx('as-chip', g === 0 && !unlocked && 'is-locked')} style={{ '--i': i + g * 3 } as CSSProperties}>
+                        {s}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
-          {msgs.map((m) => (m.role === 'user' ? <p key={m.id} className="as-user">{m.text}</p> : <Reply key={m.id} a={m.answer!} onOpen={open} onAsk={ask} onTool={() => (navigate('/tools'), close())} />))}
-          {busy && (
-            <div className="as-typing" aria-label="Đang tìm">
-              <span />
-              <span />
-              <span />
-            </div>
+          {msgs.map((m) =>
+            m.user ? (
+              <p key={m.id} className="as-user">{m.user}</p>
+            ) : (
+              <div key={m.id} className={clsx('as-bot', m.reply?.type === 'text' && m.reply.tone && `is-${m.reply.tone}`)}>
+                {m.reply?.type === 'text' && (
+                  <>
+                    <p className="as-lead">
+                      {m.reply.tone === 'lock' && <LockIcon width={14} height={14} className="mr-1 inline" />}
+                      {m.reply.text}
+                    </p>
+                    {(m.reply.action || m.reply.undo) && (
+                      <div className="flex flex-wrap gap-2">
+                        {m.reply.action && <button onClick={m.reply.action.run} className="as-tool">{m.reply.action.label}</button>}
+                        {m.reply.undo && <button onClick={() => void undo(m)} className="as-tool">↶ Hoàn tác</button>}
+                      </div>
+                    )}
+                  </>
+                )}
+                {m.reply?.type === 'options' && (
+                  <>
+                    <p className="as-label">{m.reply.text}</p>
+                    <div className="as-dests">
+                      {m.reply.items.map((d, i) => (
+                        <button key={d.path} onClick={() => go(d.path)} className={clsx('as-dest', i === 0 && 'is-first')} style={{ '--i': i } as CSSProperties}>
+                          <span className="as-dest-icon">{d.icon}</span>
+                          <span className="min-w-0 flex-1">
+                            <span className="block truncate text-[13.5px] font-medium text-[var(--color-ink)]">{d.title}</span>
+                            <span className="block truncate text-[11.5px] text-[var(--color-ink-faint)]">{d.hint}</span>
+                          </span>
+                          <span aria-hidden className="as-warp">↗</span>
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {m.reply?.type === 'slots' && (
+                  <>
+                    <p className="as-lead">{m.reply.text}</p>
+                    <div className="as-dests">
+                      {m.reply.slots.map((s, i) => {
+                        const r = m.reply as Extract<Reply, { type: 'slots' }>
+                        const act =
+                          r.mode === 'move' ? { label: 'Dời', run: () => void doMove(s, r.day, r.start) }
+                          : r.mode === 'delete' ? { label: 'Xoá', run: () => void doDelete(s) }
+                          : r.mode === 'edit' ? { label: 'Sửa', run: () => (ui.openEditLesson(s.id), go('/')) }
+                          : { label: 'Mở', run: () => (ui.openDetail(s), go('/')) }
+                        return (
+                          <div key={s.id} className="as-dest" style={{ '--i': i } as CSSProperties}>
+                            <span className="min-w-0 flex-1 text-[13.5px] text-[var(--color-ink)]">{slotLine(s)}</span>
+                            <button onClick={act.run} className={clsx('as-tool', r.mode === 'delete' && 'is-danger')}>{act.label}</button>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </>
+                )}
+                {m.reply?.type === 'students' && (
+                  <>
+                    <p className="as-lead">{m.reply.text}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {m.reply.students.map((s) => (
+                        <button key={s.id} onClick={() => (m.reply as Extract<Reply, { type: 'students' }>).then(s)} className="as-chip">
+                          {s.name}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            ),
           )}
         </div>
 
@@ -170,7 +403,7 @@ function Panel({ context }: { context?: string }) {
           className="as-form"
           onSubmit={(e) => {
             e.preventDefault()
-            ask(q)
+            void run(q)
           }}
         >
           <textarea
@@ -181,107 +414,17 @@ function Panel({ context }: { context?: string }) {
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault()
-                ask(q)
+                void run(q)
               }
             }}
-            placeholder={context ? 'Hỏi về bài này hoặc bất kỳ chủ đề nào…' : 'Ví dụ: Cadence plagal là gì?'}
+            placeholder="Ví dụ: dời buổi của Minh sang thứ 5 lúc 18h · đi đến hoà âm"
             className="as-input"
           />
-          <button type="submit" disabled={!q.trim() || busy} className="as-send" aria-label="Gửi">
+          <button type="submit" disabled={!q.trim()} className="as-send" aria-label="Gửi">
             ↑
           </button>
         </form>
       </section>
-    </div>
-  )
-}
-
-/** Bold markers in computed leads. */
-const rich = (s: string): ReactNode[] => s.split(/\*\*(.+?)\*\*/g).map((part, i) => (i % 2 ? <b key={i}>{part}</b> : part))
-
-function Reply({ a, onOpen, onAsk, onTool }: { a: Answer; onOpen: (slug: string, sec: number) => void; onAsk: (q: string) => void; onTool: () => void }) {
-  if (a.kind === 'none')
-    return (
-      <div className="as-bot">
-        <p className="text-[14px] text-[var(--color-ink-muted)]">Thư viện chưa có đoạn nào khớp câu hỏi này. Thử diễn đạt khác, dùng thuật ngữ (vd. "cadence", "đối âm kép"), hoặc hỏi ngắn hơn.</p>
-      </div>
-    )
-  // Number the sources in the order the sentences cite them.
-  const cited: string[] = []
-  const ref = (slug: string, sec: number) => {
-    const k = `${slug}#${sec}`
-    if (!cited.includes(k)) cited.push(k)
-    return cited.indexOf(k) + 1
-  }
-  const sentences = a.sentences.map((s) => ({ ...s, n: ref(s.slug, s.sec) }))
-  const sources = [...a.sources].sort((x, y) => {
-    const ix = cited.indexOf(`${x.slug}#${x.sec}`)
-    const iy = cited.indexOf(`${y.slug}#${y.sec}`)
-    return (ix < 0 ? 99 : ix) - (iy < 0 ? 99 : iy)
-  })
-  let step = 0
-  return (
-    <div className="as-bot">
-      {a.lead && (
-        <p className="as-lead" style={{ '--i': step++ } as CSSProperties}>
-          {rich(a.lead)}
-        </p>
-      )}
-      {a.table && a.table.length > 0 && (
-        <div className="as-table" style={{ '--i': step++ } as CSSProperties}>
-          {a.table.map(([k, v], i) => (
-            <div key={i}>
-              <span>{k}</span>
-              <span>{v}</span>
-            </div>
-          ))}
-        </div>
-      )}
-      {a.tool && (
-        <button onClick={onTool} className="as-tool" style={{ '--i': step++ } as CSSProperties}>
-          ♫ Mở trong Bảng tính
-        </button>
-      )}
-      {sentences.length > 0 && (
-        <div className="space-y-1.5">
-          {a.kind === 'compute' && <p className="as-label">Trong thư viện</p>}
-          {sentences.map((s, i) => (
-            <p key={i} className="as-sent" style={{ '--i': step++ } as CSSProperties}>
-              {s.text}
-              <button onClick={() => onOpen(s.slug, s.sec)} className="as-cite" title={s.title}>
-                {s.n}
-              </button>
-            </p>
-          ))}
-        </div>
-      )}
-      {sources.length > 0 && (
-        <div className="as-sources" style={{ '--i': step++ } as CSSProperties}>
-          <p className="as-label">Nguồn</p>
-          {sources.slice(0, 5).map((s) => {
-            const n = cited.indexOf(`${s.slug}#${s.sec}`) + 1
-            return (
-              <button key={`${s.slug}#${s.sec}`} onClick={() => onOpen(s.slug, s.sec)} className="as-source">
-                {n > 0 && <span className="as-num">{n}</span>}
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[13px] font-medium text-[var(--color-ink)]">{s.title}</span>
-                  {s.heading && <span className="block truncate text-[11.5px] text-[var(--color-ink-faint)]">§ {s.heading}</span>}
-                </span>
-                <span aria-hidden className="text-[var(--color-ink-faint)]">→</span>
-              </button>
-            )
-          })}
-        </div>
-      )}
-      {a.suggestions.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 pt-1" style={{ '--i': step++ } as CSSProperties}>
-          {a.suggestions.map((s) => (
-            <button key={s} onClick={() => onAsk(s)} className="as-chip is-small">
-              {s}
-            </button>
-          ))}
-        </div>
-      )}
     </div>
   )
 }

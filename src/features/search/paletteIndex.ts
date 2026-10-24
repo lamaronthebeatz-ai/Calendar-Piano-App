@@ -5,7 +5,7 @@ import { CURRICULA } from '../curriculum/curricula'
 import { fold } from './fold'
 
 export interface Entry {
-  kind: 'article' | 'book' | 'chapter'
+  kind: 'article' | 'book' | 'chapter' | 'category'
   path: string
   title: string
   hint: string
@@ -38,6 +38,8 @@ const chapters: Entry[] = BOOKS.flatMap((b) =>
   ),
 )
 
-export const INDEX = { articles, books, chapters, all: [...books, ...articles, ...chapters] }
+const categories: Entry[] = Object.entries(CATEGORIES).map(([id, c]) => ({ kind: 'category', path: `/theory?c=${id}`, title: c.title, hint: 'Mục thư viện', hue: c.hue, t: fold(c.title), a: '', s: fold(c.description) }))
+
+export const INDEX = { articles, books, chapters, categories, all: [...books, ...articles, ...chapters] }
 export const byPath = new Map(INDEX.all.map((e) => [e.path, e]))
 export const randomArticle = () => articles[Math.floor(Math.random() * articles.length)]

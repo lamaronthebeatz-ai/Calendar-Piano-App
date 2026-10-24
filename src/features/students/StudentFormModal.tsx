@@ -57,7 +57,7 @@ export function StudentFormModal() {
       setStatus(editingStudent.status)
       setNotes(editingStudent.notes ?? '')
     } else if (!isEditing) {
-      setName('')
+      setName(modal.draftName ?? '')
       setNickname('')
       setAge('')
       setPhone('')

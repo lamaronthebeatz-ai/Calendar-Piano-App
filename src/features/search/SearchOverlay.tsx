@@ -41,7 +41,7 @@ interface Item {
   run: () => void
 }
 
-const KIND_LABEL = { article: 'Bài', book: 'Sách', chapter: 'Chương' } as const
+const KIND_LABEL = { article: 'Bài', book: 'Sách', chapter: 'Chương', category: 'Mục' } as const
 
 /** The command palette: one box for pages, actions, the library, the bookshelf and (when unlocked) students and lessons. */
 export function SearchOverlay() {
@@ -142,9 +142,9 @@ function Palette({ onClose }: { onClose: () => void }) {
     }
 
     const hit = (title: string) => score(tokens, fold(title), '', '') > 0
-    // A question (two words or more) can go straight to the assistant.
+    // A phrase of two words or more can go to the command assistant.
     if (tokens.length >= 2 || query.includes('?'))
-      out.push({ id: 'ask', group: 'Trợ lý', title: `Hỏi trợ lý: ${query.trim()}`, hint: 'Trả lời từ thư viện, có trích nguồn', icon: <SparkleIcon width={16} height={16} />, run: () => (close(), openAssistant(query.trim())) })
+      out.push({ id: 'ask', group: 'Trợ lý', title: `Ra lệnh: ${query.trim()}`, hint: 'Trợ lý lệnh — lịch, học viên, dịch chuyển', icon: <SparkleIcon width={16} height={16} />, run: () => (close(), openAssistant(query.trim())) })
     out.push(...pages.filter((p) => hit(p.title)), ...actions.filter((a) => hit(a.title)))
 
     if (privateOpen) {

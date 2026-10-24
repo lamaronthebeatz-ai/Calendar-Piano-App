@@ -19,6 +19,8 @@ export interface SlotModalState {
 export interface StudentModalState {
   open: boolean
   editingStudentId?: string
+  /** Name to start a new student with (from the command assistant). */
+  draftName?: string
 }
 
 export interface SlotFilters {
@@ -49,7 +51,7 @@ interface UIState {
   openEditLesson: (slotId: string, draft?: SlotDraft) => void
   closeLessonModal: () => void
 
-  openCreateStudent: () => void
+  openCreateStudent: (draftName?: unknown) => void
   openEditStudent: (studentId: string) => void
   closeStudentModal: () => void
 
@@ -82,7 +84,8 @@ export const useUIStore = create<UIState>((set, get) => ({
   openEditLesson: (slotId, draft) => set({ lessonModal: { open: true, editingSlotId: slotId, draft } }),
   closeLessonModal: () => set({ lessonModal: { open: false } }),
 
-  openCreateStudent: () => set({ studentModal: { open: true } }),
+  // Also wired straight to onClick, so ignore anything that is not a name.
+  openCreateStudent: (draftName) => set({ studentModal: { open: true, draftName: typeof draftName === 'string' ? draftName : undefined } }),
   openEditStudent: (studentId) => set({ studentModal: { open: true, editingStudentId: studentId } }),
   closeStudentModal: () => set({ studentModal: { open: false } }),
 

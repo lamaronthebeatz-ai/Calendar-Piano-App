@@ -47,16 +47,10 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2}'],
         // Scanned music examples (thousands of small images) load on demand and are cached as they are seen.
-        // The assistant's worker carries the whole library (several MB): fetched when the assistant first opens, then cached.
-        globIgnores: ['scans/**', 'assets/worker-*.js'],
+        globIgnores: ['scans/**'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
-          {
-            urlPattern: ({ url }) => /\/assets\/worker-[^/]+\.js$/.test(url.pathname),
-            handler: 'CacheFirst',
-            options: { cacheName: 'assistant-index', expiration: { maxEntries: 4 } },
-          },
           {
             urlPattern: ({ url }) => url.pathname.includes('/scans/'),
             handler: 'CacheFirst',
