@@ -5,7 +5,8 @@ import { ArrowLeftIcon, DownloadIcon } from '../../../components/icons'
 import { Cover } from './Cover'
 import { BookPage } from './Pages'
 import { PrintContext } from '../../theory/linkRef'
-import { hueTint, type ReaderBook } from './model'
+import { chaptersOf, hueTint, type ReaderBook } from './model'
+import { loadTexts } from '../../theory/body'
 
 /**
  * The whole book laid out for print (A4, one chapter per new page). Saving as PDF uses the browser's
@@ -13,7 +14,20 @@ import { hueTint, type ReaderBook } from './model'
  */
 export function PrintBook({ book }: { book: ReaderBook }) {
   const [ready, setReady] = useState(false)
+  // Every chapter's text, fetched before laying out (the library's text loads on demand).
+  const [texts, setTexts] = useState<'loading' | 'ok' | 'error'>('loading')
   useEffect(() => {
+    let live = true
+    loadTexts(chaptersOf(book).map((c) => c.slug)).then(
+      () => live && setTexts('ok'),
+      () => live && setTexts('error'),
+    )
+    return () => {
+      live = false
+    }
+  }, [book])
+  useEffect(() => {
+    if (texts !== 'ok') return
     document.documentElement.classList.add('is-printing-book')
     const prevTitle = document.title
     document.title = `${book.title}${book.volume ? ` — ${book.volume}` : ''} — ${book.author}`
@@ -32,7 +46,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
       document.title = prevTitle
       document.documentElement.classList.remove('is-printing-book')
     }
-  }, [book])
+  }, [book, texts])
 
   return createPortal(
     <div id="print-root" style={hueTint(book.hue)}>
@@ -41,7 +55,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
           <ArrowLeftIcon width={16} height={16} /> Về trình đọc
         </Link>
         <p className="min-w-0 flex-1 truncate text-center text-[13px] text-[var(--color-ink-muted)]">
-          {ready ? 'Trong hộp thoại in, chọn “Lưu dưới dạng PDF” để tải về máy.' : 'Đang dàn trang…'}
+          {texts === 'error' ? 'Chưa tải được nội dung sách (cần mạng lần đầu). Thử lại sau.' : texts === 'loading' ? 'Đang tải nội dung sách…' : ready ? 'Trong hộp thoại in, chọn “Lưu dưới dạng PDF” để tải về máy.' : 'Đang dàn trang…'}
         </p>
         <button onClick={() => window.print()} className="print-tool is-primary">
           <DownloadIcon width={16} height={16} /> Xuất PDF
@@ -54,7 +68,7 @@ export function PrintBook({ book }: { book: ReaderBook }) {
           <Cover book={book} size={1.9} />
           <p className="print-cover-sub">{book.subtitle}</p>
         </section>
-        {book.items.map((it) =>
+        {texts === 'ok' && book.items.map((it) =>
           it.kind === 'cover' ? null : (
             <section key={it.key} className={`print-sheet is-${it.kind}`}>
               <BookPage book={book} item={it} mode="print" />

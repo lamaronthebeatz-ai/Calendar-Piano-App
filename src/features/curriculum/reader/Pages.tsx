@@ -1,10 +1,11 @@
-import { useCallback, type CSSProperties } from 'react'
+import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { CheckIcon, ChevronRightIcon } from '../../../components/icons'
 import { Markup } from '../../theory/Markup'
 import { LinkRefContext } from '../../theory/linkRef'
 import { findArticle } from '../../theory/wiki'
+import { peekText } from '../../theory/body'
 import { toggleDone, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
 import { chaptersOf, lessonQuestions, roman, type ReaderBook, type ReaderItem } from './model'
@@ -28,7 +29,8 @@ function useXref(book: ReaderBook) {
   }, [book])
 }
 
-export function BookPage({ book, item, mode = 'screen', onGo }: { book: ReaderBook; item: ReaderItem; mode?: Mode; onGo?: (key: string) => void }) {
+/** `progressive`: a chapter shows its first sections at once and adds the rest while the browser is idle (the reader, opening at its first page). */
+export function BookPage({ book, item, mode = 'screen', onGo, progressive }: { book: ReaderBook; item: ReaderItem; mode?: Mode; onGo?: (key: string) => void; progressive?: boolean }) {
   const xref = useXref(book)
   const go = onGo ?? (() => undefined)
   let page
@@ -55,7 +57,7 @@ export function BookPage({ book, item, mode = 'screen', onGo }: { book: ReaderBo
       page = <PartPage book={book} item={item} onGo={go} />
       break
     case 'chapter':
-      page = <LessonPage book={book} item={item} mode={mode} />
+      page = <LessonPage book={book} item={item} mode={mode} progressive={progressive} />
       break
     case 'review':
       page = (
@@ -166,8 +168,19 @@ function PartPage({ book, item, onGo }: { book: ReaderBook; item: Extract<Reader
   )
 }
 
-function LessonPage({ book, item, mode }: { book: ReaderBook; item: Extract<ReaderItem, { kind: 'chapter' }>; mode: Mode }) {
-  const a = findArticle(item.slug)!
+const idle = (cb: () => void) => (window.requestIdleCallback ? window.requestIdleCallback(cb, { timeout: 300 }) : window.setTimeout(cb, 60))
+const cancelIdle = (id: number) => (window.cancelIdleCallback ? window.cancelIdleCallback(id) : window.clearTimeout(id))
+
+function LessonPage({ book, item, mode, progressive }: { book: ReaderBook; item: Extract<ReaderItem, { kind: 'chapter' }>; mode: Mode; progressive?: boolean }) {
+  // The reader and the print view fetch the text before showing a chapter, so it is in the cache here.
+  const a = { ...findArticle(item.slug)!, ...(peekText(item.slug) ?? { body: '', refs: undefined }) }
+  const total = useMemo(() => (a.body.match(/^\s*## /gm)?.length ?? 0), [a.body])
+  const [shown, setShown] = useState(() => (progressive ? 2 : Infinity))
+  useEffect(() => {
+    if (shown >= total) return
+    const id = idle(() => setShown((n) => n + 2))
+    return () => cancelIdle(id)
+  }, [shown, total])
   const { done } = useLibrary()
   const isDone = done.includes(a.slug)
   const questions = lessonQuestions(a.slug)
@@ -196,7 +209,7 @@ function LessonPage({ book, item, mode }: { book: ReaderBook; item: Extract<Read
       )}
 
       <div className="book-text book-lesson-body">
-        <Markup source={a.body} />
+        <Markup source={a.body} sections={shown} />
       </div>
 
       <section className="book-box is-summary">

@@ -1,91 +1,11 @@
-import type { Article } from './wiki'
-import { basics } from './content/basics'
-import { rhythm } from './content/rhythm'
-import { pitch } from './content/pitch'
-import { scales } from './content/scales'
-import { harmony } from './content/harmony'
-import { form } from './content/form'
-import { formRussian } from './content/form-russian'
-import { mazel } from './content/mazel'
-import { sposobin } from './content/sposobin'
-import { asafyev } from './content/asafyev'
-import { formRuA } from './content/formru-a'
-import { formRuB } from './content/formru-b'
-import { formRuC } from './content/formru-c'
-import { formRuD } from './content/formru-d'
-import { formRuE } from './content/formru-e'
-import { formRuF } from './content/formru-f'
-import { formRuG } from './content/formru-g'
-import { formRuHub } from './content/formru-hub'
-import { neuhausHub } from './content/neuhaus-hub'
-import { neuhausA } from './content/neuhaus-a'
-import { neuhausB } from './content/neuhaus-b'
-import { neuhausC } from './content/neuhaus-c'
-import { neuhausD } from './content/neuhaus-d'
-import { neuhausE } from './content/neuhaus-e'
-import { formRuXxA } from './content/formru-xx-a'
-import { formRuXxB } from './content/formru-xx-b'
-import { formRuXxC } from './content/formru-xx-c'
-import { polyphony } from './content/polyphony'
-import { fux } from './content/fux'
-import { albrechtsberger } from './content/albrechtsberger'
-import { expression } from './content/expression'
-import { chromatic } from './content/chromatic'
-import { jazz } from './content/jazz'
-import { modern } from './content/modern'
-import { composers } from './content/composers'
-import { technique } from './content/technique'
-import { instrument } from './content/instrument'
-import { musicianship } from './content/musicianship'
-import { pianists, pianoSchools } from './content/pianists'
-import { analysis } from './content/analysis'
-import { listening } from './content/listening'
-import { philosophy } from './content/philosophy'
-import { improvisation } from './content/improvisation'
-import { genres } from './content/genres'
-import { musicology } from './content/musicology'
-import { history } from './content/history'
-import { systematic } from './content/systematic'
-import { organology } from './content/organology'
-import { vietnam } from './content/vietnam'
-import { sacred } from './content/sacred'
-import { organ } from './content/organ'
-import { composition } from './content/composition'
-import { tanNhac } from './content/tan-nhac'
+import { LINK_COUNT, META, SEARCH_FILE } from 'virtual:theory-index'
+import type { ArticleMeta } from './wiki'
+
+export { CATEGORIES } from './categories'
 
 /**
- * Nội dung lý thuyết, mỗi nhóm một file trong content/. Thêm bài: thêm object vào file của nhóm.
- * Liên kết sang bài khác bằng [[slug]] hoặc [[slug|chữ hiển thị]]; slug, tiêu đề hay alias đều dùng
- * được. Mục "Các bài nhắc đến trang này" tự sinh từ các liên kết đó.
+ * The library's index: every article without its text, which is fetched when it is read (see body.ts).
+ * Built from articles.source.ts by scripts/theory-content.ts.
  */
-export const CATEGORIES = {
-  technique: { title: 'Kỹ thuật & luyện tập piano', hue: 140, description: 'Tư thế, cách chạm phím, âm giai, hợp âm rải, nốt kép, phối hợp hai tay, đọc nốt, thị tấu, phương pháp luyện tập, học thuộc, biểu diễn, sức khoẻ và lịch sử kỹ thuật piano.' },
-  instrument: { title: 'Cây đàn piano', hue: 30, description: 'Lịch sử, harpsichord và clavichord, cấu tạo, bộ máy, các loại đàn, bảo dưỡng và lên dây.' },
-  musicianship: { title: 'Luyện tai & sư phạm', hue: 265, description: 'Kỹ năng nghe (luyện tai, cảm âm, xướng âm, âm tiết nhịp, ký âm, audiation) và sư phạm (các phương pháp giáo dục, dạy đọc nốt, giảng dạy hiệu quả, dạy theo lứa tuổi, chọn bài, thi cấp độ) — kèm lộ trình.' },
-  basics: { title: 'Ký âm cơ bản', hue: 220, description: 'Nốt, khuông nhạc, khoá, bàn phím và dấu hoá — đọc được bản nhạc.' },
-  rhythm: { title: 'Nhịp & tiết tấu', hue: 25, description: 'Trường độ, phách, nhịp và nhịp độ: lịch sử ký âm, cảm nhận phách, đảo phách, nhịp lẻ và đa nhịp.' },
-  pitch: { title: 'Cao độ & quãng', hue: 285, description: 'Quãng giữa các nốt và cơ sở âm học của chúng.' },
-  scales: { title: 'Âm giai & giọng', hue: 160, description: 'Âm giai, điệu thức, hoá biểu, vòng quãng 5 và quan hệ giữa các giọng — kèm lịch sử và nghiên cứu về cảm nhận giọng.' },
-  harmony: { title: 'Hợp âm & hoà âm', hue: 250, description: 'Hai hệ thống: hoà âm cổ điển (hợp âm, chức năng, luật bốn bè, kết, chuyển giọng, phân tích và phối hoà âm) và hoà âm thế kỷ 20.' },
-  chromatic: { title: 'Hoà âm cromatic & phân tích', hue: 330, description: 'Hoà âm cromatic (giáo trình chương 7–8): Napoli, 6 tăng, 7 giảm, hợp âm nốt chung, hợp âm ba tăng, trung âm cromatic, mô tiến, bass ngân, bass số, Schenker, Neo-Riemann.' },
-  form: { title: 'Giai điệu & hình thức', hue: 50, description: 'Hệ thống hình thức từ motif, câu nhạc đến tác phẩm nhiều chương: hai đoạn, ba đoạn, minuet và trio, biến tấu, rondo, sonata, concerto, biến đổi chủ đề — kèm lộ trình học. Đối âm và fugue: xem mục Phức điệu.' },
-  polyphony: { title: 'Phức điệu', hue: 70, description: 'Phức điệu nghiêm khắc theo giáo trình Nhạc viện Hà Nội (hệ Taneyev): khái niệm và quy ước, giai điệu, đối vị đơn giản, đối vị phức tạp với chỉ số Iv – Ih, đảo ảnh, ba – bốn bè, mô phỏng, canon, hình thức — song song với phương pháp năm loại của Fux, đối âm kép, fugue, bảng công thức và thuật ngữ.' },
-  expression: { title: 'Diễn tấu & ký hiệu', hue: 5, description: 'Cường độ, cách diễn tấu, hoa mỹ, pedal, ngón bấm, thuật ngữ, phong cách từng thời kỳ và cách chọn ấn bản.' },
-  jazz: { title: 'Jazz & hoà âm hiện đại', hue: 300, description: 'Hoà âm jazz đầy đủ (Phần III giáo trình): swing, blues, ii – V – I, hợp âm – âm giai, hợp âm át biến hoá, xếp hợp âm và thế bấm, đệm, ngẫu hứng, thay thế, tái hoà âm (gospel, đổi nhịp, đổi thể loại), sáng tác, rhythm changes, vòng Coltrane, các phong cách jazz — kèm các bài liên quan xếp chéo từ nhóm khác.' },
-  improvisation: { title: 'Ngẫu hứng & ứng tác', hue: 95, description: 'Ngẫu hứng trên piano: lịch sử (Bach, Beethoven, Czerny, organ Pháp), cadenza, prelude ứng tác, impromptu, partimento, ngẫu hứng jazz và tự do, khoa học về ngẫu hứng và phương pháp luyện tập.' },
-  modern: { title: 'Thời kỳ & âm nhạc thế kỷ 20', hue: 195, description: 'Các thời kỳ lịch sử, âm nhạc truyền thống Việt Nam và hoà âm thế kỷ 20: ấn tượng, hoà âm điệu thức, toàn diatonic, hợp âm chồng, điệu thức Messiaen, phi điệu tính, 12 âm, tập hợp cao độ, tối giản, nhạc phổ.' },
-  listening: { title: 'Nghe, cảm thụ & âm học', hue: 210, description: 'Từ vật lý đến cảm xúc: âm học, âm sắc, âm học phòng, tâm lý âm học, phân luồng thính giác, kỳ vọng và cảm xúc âm nhạc, nghe chủ động, lịch sử và so sánh bản thu, bảo vệ thính giác.' },
-  philosophy: { title: 'Triết học & thẩm mỹ âm nhạc', hue: 175, description: 'Âm nhạc là gì, vì sao biểu hiện cảm xúc, có ý nghĩa gì, tác phẩm tồn tại thế nào, thế nào là chơi xác thực, cái hay có chuẩn mực không — từ Plato, Nho gia, Rousseau, Hanslick, Schopenhauer đến Adorno và triết học hiện đại.' },
-  analysis: { title: 'Phân tích tác phẩm', hue: 110, description: 'Phương pháp phân tích (quy trình, lịch sử, LaRue, chức năng hình thức, siêu nhịp, chủ đề biểu đạt, phân tích và biểu diễn) và 20 bài phân tích mẫu xếp từ dễ đến khó — kèm các bài lý thuyết hình thức được xếp chéo.' },
-  composition: { title: 'Sáng tác', hue: 235, description: 'Hệ thống và lộ trình học sáng tác: cách sáng tác được dạy qua các thời đại, quy trình và kinh nghiệm của các nhà soạn nhạc, viết chủ đề và giai điệu, hoà âm và bè trầm, kết cấu, kiến trúc tác phẩm, phổ lời, viết cho nhạc cụ; thủ pháp từng thời kỳ từ Trung cổ đến thế kỷ 20; ca khúc, nhạc phim, công nghệ và AI, chất liệu Việt Nam — kèm chương trình bài tập.' },
-  pianists: { title: 'Nghệ sĩ piano', hue: 350, description: 'Từ Clementi, Liszt đến Horowitz, Argerich, Đặng Thái Sơn và các nghệ sĩ jazz — mỗi người một trang.' },
-  genres: { title: 'Thể loại âm nhạc', hue: 120, description: 'Các thể loại từ Trung cổ đến hôm nay: thánh ca, organum, motet, thánh lễ, madrigal; opera, oratorio, cantata, tổ khúc, concerto; giao hưởng, nhạc thính phòng, sonata, tiểu phẩm piano, Lied, thơ giao hưởng, ballet; nhạc điện tử, nhạc phim, nhạc kịch và các dòng nhạc phổ thông — kèm sơ đồ, nhịp điệu đặc trưng và ví dụ nghe.' },
-  musicology: { title: 'Âm nhạc học', hue: 60, description: 'Ngành nghiên cứu âm nhạc: sơ đồ Adler (lịch sử và hệ thống), âm nhạc học hệ thống hiện đại, phương pháp nghiên cứu, tâm lý học âm nhạc, khoa học biểu diễn, dân tộc nhạc học, xã hội học, nhạc khí học, âm nhạc học tính toán — kèm thẻ Âm nhạc học xếp lại toàn bộ thư viện theo khung này.' },
-  organology: { title: 'Nhạc khí', hue: 315, description: 'Nhạc cụ phương Tây và phương Đông, mỗi nhạc cụ một trang: bộ dây, kèn gỗ, kèn đồng, bộ gõ, đàn phím, nhạc cụ điện; nhạc cụ Việt Nam, Đông Á, Nam Á – Tây Á, Đông Nam Á và châu Phi — xếp theo năm lớp Hornbostel – Sachs, có tầm âm, ảnh và nghiên cứu.' },
-  vietnam: { title: 'Âm nhạc Việt Nam', hue: 15, description: 'Các thời kỳ từ trống đồng đến V-pop, thể loại và di sản UNESCO (ca trù, quan họ, nhã nhạc, đờn ca tài tử, cải lương…), nhạc sĩ, lý thuyết cổ truyền và hoà âm cho dân ca, nghiên cứu, cùng một trang phân định giai thoại và sự thật.' },
-  sacred: { title: 'Âm nhạc nhà thờ', hue: 45, description: 'Bình ca Gregorian (ký âm nốt vuông, tám điệu thức, công thức thánh vịnh, sách hát, phần mềm Gregorio, viết cho tiếng bản địa), đệm organ cho bình ca và cho cộng đoàn, alternatim và thánh lễ organ, tài liệu sư phạm và cách dạy của Bach, phối chorale — mỗi bài nối sang lý thuyết và âm nhạc học.' },
-  organ: { title: 'Organ nhà thờ', hue: 125, description: 'Hệ thống kỹ thuật và lộ trình cho organist nhà thờ: bàn điều khiển và ký hiệu feet, cách chạm phím, ngón bấm cổ và hiện đại, pedal, phối hợp tay chân, chorale prelude, phối âm sắc, Bach như người chơi và kiểm định organ, organ trong phụng vụ, cách luyện tập và lộ trình tác phẩm — dựa trên các chuyên luận cổ từ Schlick (1511) đến Dupré (1927).' },
-  composers: { title: 'Nhà soạn nhạc', hue: 75, description: 'Từ Trung cổ đến thế kỷ 20, chia theo thời kỳ và trường phái — mỗi người một trang.' },
-}
-
-export const ARTICLES: Article[] = [...technique, ...neuhausHub, ...neuhausA, ...neuhausB, ...neuhausC, ...neuhausD, ...neuhausE, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...formRussian, ...mazel, ...sposobin, ...asafyev, ...formRuHub, ...formRuA, ...formRuB, ...formRuC, ...formRuD, ...formRuE, ...formRuF, ...formRuG, ...formRuXxA, ...formRuXxB, ...formRuXxC, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...sacred, ...organ]
+export const ARTICLES = META as ArticleMeta[]
+export { LINK_COUNT, SEARCH_FILE }

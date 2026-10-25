@@ -715,6 +715,11 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 }
 .reader-flow.is-justified p, .reader-flow.is-justified li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .reader-flow.is-cover { height: 100%; }
+/* A chapter whose text is still being fetched. */
+.book-loading { display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; text-align: center; font-family: var(--font-display); font-size: 1.3em; color: var(--color-ink-muted); }
+.book-loading > span { width: 2.2rem; height: 2.2rem; border-radius: 9999px; border: 2px solid var(--color-border); border-top-color: var(--tint, var(--color-gold)); animation: spin 0.9s linear infinite; }
+.book-loading > button { font-family: var(--font-sans); font-size: 0.6em; color: var(--tint, var(--color-accent)); text-decoration: underline; }
+@keyframes spin { to { rotate: 360deg; } }
 .reader-flow h1, .reader-flow h2, .reader-flow h3 { break-after: avoid; break-inside: avoid; }
 .reader-flow h2 { font-family: var(--font-display); letter-spacing: -0.01em; }
 .reader-flow figure, .reader-flow iframe, .reader-flow img { break-inside: avoid; }

@@ -1,4 +1,4 @@
-import { ARTICLES, CATEGORIES } from './articles'
+import { ARTICLES, CATEGORIES, LINK_COUNT, SEARCH_FILE } from './articles'
 
 /**
  * A theory article. `body` uses a tiny line-based markup (see Markup.tsx):
@@ -25,13 +25,26 @@ export interface Article {
   also?: (keyof typeof CATEGORIES)[]
 }
 
+/**
+ * An article as the app's index holds it: everything but the text and references, which load on demand
+ * (body.ts), plus what the build counted from the text.
+ */
+export interface ArticleMeta extends Omit<Article, 'body' | 'refs'> {
+  /** Content hash: the text is in content/<slug>.<h>.json as `{ body, refs, backlinks }`. */
+  h: string
+  words: number
+  figures: number
+  /** The first Wikipedia/Commons image or video in the text, for cards. */
+  lead?: { wiki?: string; img?: string; video?: string }
+}
+
 /** Section titles of an article, in order (Markup gives them ids sec-0, sec-1…). */
 export const headings = (body: string) => [...body.matchAll(/^\s*## (.+)$/gm)].map((m) => m[1].trim())
 
 export const normalize = (s: string) =>
   s.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase().trim()
 
-const byKey = new Map<string, Article>()
+const byKey = new Map<string, ArticleMeta>()
 for (const a of ARTICLES) for (const k of [a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a)
 // Slugs win over titles/aliases that normalise to the same key (e.g. "trùng âm" vs "trung âm").
 for (const a of ARTICLES) byKey.set(a.slug, a)
@@ -39,24 +52,17 @@ for (const a of ARTICLES) byKey.set(a.slug, a)
 /** Resolve a slug, title or alias to its article. */
 export const findArticle = (key: string) => byKey.get(normalize(key))
 
-const LINK_RE = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g
-
-/** slug → articles that link to it (Wikipedia's "What links here"). */
-const backlinks = new Map<string, Article[]>()
-for (const a of ARTICLES) {
-  const targets = new Set([...a.body.matchAll(LINK_RE)].map((m) => findArticle(m[1])?.slug))
-  for (const t of targets) if (t && t !== a.slug) backlinks.set(t, [...(backlinks.get(t) ?? []), a])
-}
-export const getBacklinks = (slug: string) => backlinks.get(slug) ?? []
+/** Articles that link to this one (Wikipedia's "What links here"), from the list the build stores with its text. */
+export const getBacklinks = (slugs: string[] | undefined) => (slugs ?? []).flatMap((s) => findArticle(s) ?? [])
 
 /** Library-wide totals shown on the index. */
 export const libraryStats = {
-  links: [...backlinks.values()].reduce((n, list) => n + list.length, 0),
-  figures: ARTICLES.reduce((n, a) => n + (a.body.match(/^\s*::/gm)?.length ?? 0), 0),
+  links: LINK_COUNT,
+  figures: ARTICLES.reduce((n, a) => n + a.figures, 0),
 }
 
 /** Rough reading time in minutes (about 200 words a minute). */
-export const readingMinutes = (a: Article) => Math.max(1, Math.round(a.body.split(/\s+/).length / 200))
+export const readingMinutes = (a: ArticleMeta) => Math.max(1, Math.round(a.words / 200))
 
 export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'][]).map((id) => ({
   id,
@@ -68,24 +74,31 @@ export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'
   ],
 }))
 
-const bodies = new Map<Article, string>()
+let searchLoad: Promise<string[]> | null = null
+/** The library's text for full-text search, one string per article in ARTICLES order; fetched once, on the first search. */
+export function loadSearchText() {
+  return (searchLoad ??= fetch(`${import.meta.env.BASE_URL}content/${SEARCH_FILE}`)
+    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+    .catch((e) => {
+      searchLoad = null
+      throw e
+    }))
+}
 
 /**
  * Ranked search: title matches first, then aliases, the summary, and finally the body text,
  * so a query always surfaces the article *about* it before articles that merely mention it.
+ * `text` (from loadSearchText) adds matches inside articles.
  */
-export function searchArticles(query: string) {
+export function searchArticles(query: string, text?: string[] | null) {
   const q = normalize(query)
   if (!q) return []
-  const scored: [number, Article][] = []
-  for (const a of ARTICLES) {
+  const scored: [number, ArticleMeta][] = []
+  ARTICLES.forEach((a, i) => {
     const title = normalize(a.title)
     let score = title.startsWith(q) ? 0 : title.includes(q) ? 1 : (a.aliases ?? []).some((k) => normalize(k).includes(q)) ? 2 : normalize(a.summary).includes(q) ? 3 : -1
-    if (score < 0 && q.length > 2) {
-      if (!bodies.has(a)) bodies.set(a, normalize(a.body))
-      if (bodies.get(a)!.includes(q)) score = 4
-    }
+    if (score < 0 && q.length > 2 && text?.[i]?.includes(q)) score = 4
     if (score >= 0) scored.push([score + (a.unlisted ? 0.5 : 0), a])
-  }
+  })
   return scored.sort((x, y) => x[0] - y[0]).map(([, a]) => a)
 }

@@ -2,7 +2,7 @@
 import { createServer } from 'vite'
 
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
-const { ARTICLES } = await server.ssrLoadModule('/src/features/theory/articles.ts')
+const { ARTICLES } = await server.ssrLoadModule('/src/features/theory/articles.source.ts')
 const { findArticle } = await server.ssrLoadModule('/src/features/theory/wiki.ts')
 await server.close()
 

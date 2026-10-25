@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { ArrowLeftIcon, BookmarkIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, DownloadIcon, ExpandIcon, GraduationIcon, ListIcon, NoteIcon, SearchIcon, TypeIcon, XIcon } from '../../../components/icons'
 import { findArticle, normalize } from '../../theory/wiki'
+import { loadText, loadTexts, peekText, prefetchText } from '../../theory/body'
 import { markRead, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
 import { BookPage } from './Pages'
@@ -67,6 +68,31 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const sheetEl = useRef<HTMLDivElement>(null)
 
   const item = items[index]
+  // A chapter's text is fetched on demand; nothing is measured until it is here, so the reader still lands on the saved spot.
+  const chapterSlug = item.kind === 'chapter' ? item.slug : undefined
+  const [textTick, setTextTick] = useState(0)
+  const [textError, setTextError] = useState<string | null>(null)
+  const textReady = !chapterSlug || !!peekText(chapterSlug)
+  useEffect(() => {
+    if (!chapterSlug || peekText(chapterSlug)) return
+    let live = true
+    loadText(chapterSlug).then(
+      () => live && (setTextError(null), setTextTick((n) => n + 1)),
+      () => live && setTextError(chapterSlug),
+    )
+    return () => {
+      live = false
+    }
+  }, [chapterSlug, textTick])
+  // The chapters either side are fetched in the background, so turning into them doesn't wait.
+  useEffect(() => {
+    if (!textReady) return
+    const near = [items[index + 1], items[index - 1], items[index + 2]].flatMap((it) => (it?.kind === 'chapter' ? [it.slug] : []))
+    prefetchText(...near)
+  }, [index, textReady, items])
+  // Opening a chapter at its first page shows its start at once and lays out the rest while idle.
+  // (Landing anywhere else — a saved spot, the last page, a search hit — needs the whole chapter laid out first.)
+  const [progressive] = useState(() => new Set<string>(pending.current === 0 && item.kind === 'chapter' ? [item.key] : []))
   const isCover = item.kind === 'cover'
   // Two pages when the desk is wide enough (decided on the desk, not the page, whose width depends on it).
   const wide = deskW >= 1080 && prefs.spread && !isCover
@@ -94,7 +120,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
   const measure = useCallback(() => {
     const f = flow.current
     const s = sentinel.current
-    if (!f || !s || !step || pageW <= 0 || pageH <= 0) return
+    if (!f || !s || !step || pageW <= 0 || pageH <= 0 || !textReady) return
     const n = isCover ? 1 : Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + f.scrollLeft + 2) / step) + 1)
     setPages(n)
     const want = pending.current
@@ -111,7 +137,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     setInstant(true)
     setPage(landed)
     requestAnimationFrame(() => requestAnimationFrame(() => setInstant(false)))
-  }, [isCover, step, pageW, pageH])
+  }, [isCover, step, pageW, pageH, textReady])
 
   // Re-measure when the item, the page size or the type changes, and when content (images, fonts) grows.
   useLayoutEffect(() => {
@@ -225,6 +251,8 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
       if (i < 0 || i >= items.length) return
       dir.current = i >= index ? 1 : -1
       pending.current = where
+      if (where === 0) progressive.add(items[i].key)
+      else progressive.delete(items[i].key)
       if (i === index) measure()
       else {
         setInstant(true)
@@ -232,7 +260,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
       }
       setPanel(null)
     },
-    [index, items.length, measure],
+    [index, items, measure, progressive],
   )
   const next = useCallback(() => {
     if (page < pages - 1) setPage(page + 1)
@@ -497,7 +525,18 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
                     columnGap: GAP,
                   }}
                 >
-                  <BookPage book={book} item={item} onGo={(k) => go(keyIndex(k))} />
+                  {textReady ? (
+                    <BookPage book={book} item={item} onGo={(k) => go(keyIndex(k))} progressive={progressive.has(item.key)} />
+                  ) : (
+                    <div className="book-loading">
+                      <p>{item.title}</p>
+                      {textError === chapterSlug ? (
+                        <button onClick={() => setTextTick((n) => n + 1)}>Chưa tải được chương này — thử lại</button>
+                      ) : (
+                        <span aria-label="Đang tải chương" />
+                      )}
+                    </div>
+                  )}
                   <span ref={sentinel} className="block h-px w-px" />
                 </div>
               </div>
@@ -815,7 +854,7 @@ function Settings({ book, prefs, onClose }: { book: ReaderBook; prefs: ReaderPre
 function textOf(it: ReaderItem) {
   if (it.kind === 'chapter') {
     const a = findArticle(it.slug)!
-    return `${a.title}\n${a.summary}\n${a.body}`
+    return `${a.title}\n${a.summary}\n${peekText(it.slug)?.body ?? ''}`
   }
   if (it.kind === 'front') return `${it.title}\n${it.body}`
   if (it.kind === 'part') return `${it.title}\n${it.intro}\n${it.body ?? ''}`
@@ -826,9 +865,21 @@ const plain = (s: string) => s.replace(/^\s*::.*$/gm, '').replace(/\[\[([^\]|]+)
 
 function Search({ book, onGo, onClose }: { book: ReaderBook; onGo: (i: number, q: string) => void; onClose: () => void }) {
   const [q, setQ] = useState('')
-  const index = useMemo(() => book.items.map((it) => { const t = plain(textOf(it)); return { t, n: normalize(t) } }), [book])
+  // Searching needs every chapter's text: fetch the ones not read yet (once per book; the cache keeps them).
+  const slugs = useMemo(() => chaptersOf(book).map((c) => c.slug), [book])
+  const [loaded, setLoaded] = useState(() => slugs.every((s) => peekText(s)))
+  useEffect(() => {
+    if (loaded) return
+    let live = true
+    const done = () => live && setLoaded(true)
+    loadTexts(slugs).then(done, done)
+    return () => {
+      live = false
+    }
+  }, [loaded, slugs])
+  const index = useMemo(() => (loaded ? book.items : []).map((it) => { const t = plain(textOf(it)); return { t, n: normalize(t) } }), [book, loaded])
   const nq = normalize(q)
-  const results = nq.length < 2 ? [] : book.items.flatMap((it, i) => {
+  const results = nq.length < 2 || !loaded ? [] : book.items.flatMap((it, i) => {
     const at = index[i].n.indexOf(nq)
     if (at < 0) return []
     const count = index[i].n.split(nq).length - 1
@@ -842,7 +893,8 @@ function Search({ book, onGo, onClose }: { book: ReaderBook; onGo: (i: number, q
           <SearchIcon width={16} height={16} className="text-[var(--color-ink-faint)]" />
           <input autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Từ, thuật ngữ, tên…" className="h-10 min-w-0 flex-1 bg-transparent text-[14px] text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-faint)]" />
         </label>
-        {nq.length >= 2 && <p className="mt-2 px-1 text-[12px] text-[var(--color-ink-faint)]">{results.length ? `${results.length} chương có kết quả` : 'Không tìm thấy'}</p>}
+        {!loaded && <p className="mt-2 px-1 text-[12px] text-[var(--color-ink-faint)]">Đang tải nội dung sách để tìm…</p>}
+        {loaded && nq.length >= 2 && <p className="mt-2 px-1 text-[12px] text-[var(--color-ink-faint)]">{results.length ? `${results.length} chương có kết quả` : 'Không tìm thấy'}</p>}
       </div>
       <ul className="space-y-1.5 px-1">
         {results.map(({ i, it, count, snippet }) => (

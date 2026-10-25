@@ -24,9 +24,10 @@ import {
 import { EmptyState } from '../../components/EmptyState'
 import { ARTICLES, CATEGORIES } from './articles'
 import { Markup, WikiImage } from './Markup'
-import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, searchArticles, type Article } from './wiki'
+import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadSearchText, searchArticles, type ArticleMeta as Article } from './wiki'
 import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
+import { useArticle, type ArticleText } from './body'
 import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
@@ -61,6 +62,8 @@ const randomArticle = () => LISTED[Math.floor(Math.random() * LISTED.length)]
 export function TheoryPage() {
   const { slug } = useParams()
   const article = slug ? findArticle(slug) : undefined
+  // The index is in the bundle; the text arrives from content/ (cached after the first read).
+  const { article: full, error: textError, retry } = useArticle(article)
   const navigation = useNavigationType()
   const scroller = useRef<HTMLDivElement>(null)
   const progress = useRef<HTMLDivElement>(null)
@@ -74,7 +77,7 @@ export function TheoryPage() {
   const ratio = useRef(0)
   const active = useRef(-1)
   const sectionNodes = useRef<Element[]>([])
-  const sections = useMemo(() => (article ? headings(article.body) : []), [article])
+  const sections = useMemo(() => (full ? headings(full.body) : []), [full])
   const minutes = article ? readingMinutes(article) : 0
   // The section highlighted in the sheet, captured when it opens (null: closed).
   const [toc, setToc] = useState<number | null>(null)
@@ -224,8 +227,10 @@ export function TheoryPage() {
         <div ref={pullContent}>
           <Index />
         </div>
+      ) : full ? (
+        <ArticleView article={full} scroller={scroller} sections={sections} onJump={jump} />
       ) : article ? (
-        <ArticleView article={article} scroller={scroller} sections={sections} onJump={jump} />
+        <ArticleLoading title={article.title} summary={article.summary} error={textError} onRetry={retry} />
       ) : (
         <div className="mx-auto max-w-3xl px-4 py-10">
           <EmptyState icon={<BookIcon width={30} height={30} />} title="Chưa có bài viết này" description={`“${slug}” chưa được viết.`} />
@@ -331,7 +336,13 @@ function Index() {
   }
   const active = articlesByCategory.find((c) => c.id === params.get('c'))
   const select = (id?: CategoryId) => setParams(id ? { c: id } : {}, { replace: true })
-  const results = useMemo(() => searchArticles(query), [query])
+  // Words inside articles join the results once the full-text file has arrived (fetched on the first real search).
+  const [fullText, setFullText] = useState<string[] | null>(null)
+  const wantsText = query.trim().length > 2
+  useEffect(() => {
+    if (wantsText) loadSearchText().then(setFullText, () => {})
+  }, [wantsText])
+  const results = useMemo(() => searchArticles(query, fullText), [query, fullText])
   const { saved } = useLibrary()
   const navigate = useNavigate()
   const surprise = () => navigate(`/theory/${randomArticle().slug}`)
@@ -540,13 +551,10 @@ type Picture = { wiki: string[]; years?: string } | { src: string; drawing?: boo
 /** The picture an article already shows: its portrait, its first Wikipedia or Commons image, or a video thumbnail. */
 function pictureOf(a: Article): Picture | null {
   if (a.portrait) return { wiki: a.portrait.titles, years: a.portrait.years }
-  const wiki = a.body.match(/^::wiki ([^|\n]+?)\s*(?:\||$)/m)
-  if (wiki) return { wiki: [wiki[1].replace(/ /g, '_')] }
+  if (a.lead?.wiki) return { wiki: [a.lead.wiki.replace(/ /g, '_')] }
   if (a.wiki) return { wiki: [a.wiki] }
-  const img = a.body.match(/^::img ([^|\n]+?)\s*(?:\||$)/m)
-  if (img) return { src: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(img[1])}?width=640`, drawing: true }
-  const video = a.body.match(/^::youtube ([\w-]{11})/m)
-  if (video) return { src: `https://i.ytimg.com/vi/${video[1]}/hqdefault.jpg` }
+  if (a.lead?.img) return { src: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(a.lead.img)}?width=640`, drawing: true }
+  if (a.lead?.video) return { src: `https://i.ytimg.com/vi/${a.lead.video}/hqdefault.jpg` }
   return null
 }
 
@@ -1022,8 +1030,30 @@ function InBooks({ slug }: { slug: string }) {
   )
 }
 
-function ArticleView({ article, scroller, sections, onJump: jump }: { article: Article; scroller: RefObject<HTMLDivElement | null>; sections: string[]; onJump: (i: number) => void }) {
-  const backlinks = getBacklinks(article.slug)
+/** While an article's text is on its way: its title and summary, then a retry if it could not be fetched. */
+function ArticleLoading({ title, summary, error, onRetry }: { title: string; summary: string; error?: boolean; onRetry: () => void }) {
+  return (
+    <div className="mx-auto max-w-3xl space-y-4 px-4 py-8 lg:px-8">
+      <h1 className="font-display text-[30px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">{title}</h1>
+      <p className="text-[15px] leading-relaxed text-[var(--color-ink-muted)]">{summary}</p>
+      {error ? (
+        <div className="flex items-center gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 text-[14px] text-[var(--color-ink-muted)]">
+          <span className="flex-1">Chưa tải được nội dung bài (có thể đang mất mạng và bài chưa được lưu trên máy).</span>
+          <button onClick={onRetry} className="rounded-full bg-[var(--color-ink)] px-4 py-1.5 text-[13px] font-medium text-[var(--color-surface)]">Thử lại</button>
+        </div>
+      ) : (
+        <div aria-label="Đang tải bài" className="space-y-3 pt-4">
+          {[92, 100, 84, 96, 70].map((w, i) => (
+            <div key={i} className="h-3.5 animate-pulse rounded-full bg-[var(--color-surface-sunken)]" style={{ width: `${w}%` }} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function ArticleView({ article, scroller, sections, onJump: jump }: { article: Article & ArticleText; scroller: RefObject<HTMLDivElement | null>; sections: string[]; onJump: (i: number) => void }) {
+  const backlinks = getBacklinks(article.backlinks)
   const prose = useRef<HTMLDivElement>(null)
   const siblings = articlesByCategory.find((c) => c.id === article.category)!.articles
   const index = siblings.indexOf(article)

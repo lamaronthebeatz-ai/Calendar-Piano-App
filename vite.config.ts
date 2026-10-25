@@ -2,28 +2,15 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
+import { theoryContent } from './scripts/theory-content.ts'
 
 // https://vite.dev/config/
 export default defineConfig({
-  build: {
-    rolldownOptions: {
-      output: {
-        // The theory library's text is ~2 MB; one chunk per content file keeps each under the
-        // service worker's precache limit and lets the browser fetch them in parallel.
-        codeSplitting: {
-          groups: [
-            {
-              name: (id: string) => /\/theory\/content\/([\w-]+)\.ts$/.exec(id)?.[1].replace(/^/, 'content-') ?? null,
-              test: /\/theory\/content\//,
-            },
-          ],
-        },
-      },
-    },
-  },
   plugins: [
     react(),
     tailwindcss(),
+    // The library's text ships as one JSON file per article, fetched when read (see the plugin).
+    theoryContent(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.png', 'icons/*.png'],
@@ -45,12 +32,18 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2,json}'],
         // Scanned music examples (thousands of small images) load on demand and are cached as they are seen.
-        globIgnores: ['scans/**'],
+        // The full-text search file (several MB) loads on the first search and is cached then.
+        globIgnores: ['scans/**', 'content/search.*.json'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
+          {
+            urlPattern: ({ url }) => /\/content\/search\.[\w]+\.json$/.test(url.pathname),
+            handler: 'CacheFirst',
+            options: { cacheName: 'library-search', expiration: { maxEntries: 2 } },
+          },
           {
             urlPattern: ({ url }) => url.pathname.includes('/scans/'),
             handler: 'CacheFirst',

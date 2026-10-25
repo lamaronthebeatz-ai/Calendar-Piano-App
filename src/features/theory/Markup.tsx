@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { ExpandIcon, XIcon } from '../../components/icons'
 import { findArticle, normalize } from './wiki'
+import { prefetchText } from './body'
 import { LinkRefContext, PrintContext } from './linkRef'
 import { findScan, loadScans, scanLabel, scanUrl, scanWidth, type ScanItem } from './scans'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
@@ -26,7 +27,7 @@ function Inline({ text }: { text: string }) {
     const xref = article && ref?.(article.slug)
     return article ? (
       <span key={i}>
-        <Link to={`/theory/${article.slug}`} data-slug={article.slug} className="wiki-link">
+        <Link to={`/theory/${article.slug}`} data-slug={article.slug} className="wiki-link" onPointerEnter={() => prefetchText(article.slug)} onTouchStart={() => prefetchText(article.slug)}>
           {label ?? (normalize(target) !== article.slug ? target : i === 1 && !parts[0].trim() ? article.title : article.title[0].toLowerCase() + article.title.slice(1))}
         </Link>
         {xref && <span className="xref"> ({xref})</span>}
@@ -239,7 +240,8 @@ const PIPE = /\|(?![^[]*\]\])/
 const cells = (row: string) => row.split(PIPE).slice(1, -1).map((c) => c.trim())
 
 /** Renders an article body: groups consecutive lines of the same kind into blocks. */
-export function Markup({ source }: { source: string }) {
+/** `sections`: render only the text before the (n+1)-th `##` heading — the reader shows a long chapter's start first and adds the rest while idle. */
+export function Markup({ source, sections = Infinity }: { source: string; sections?: number }) {
   let block = null as { kind: 'p' | 'li' | 'ol' | 'tr'; lines: string[]; start?: number } | null
   const out: ReactNode[] = []
   const lines = source.trim().split('\n').map((l) => l.trim())
@@ -288,6 +290,7 @@ export function Markup({ source }: { source: string }) {
   }
 
   for (const line of lines) {
+    if (line.startsWith('## ') && section >= sections) break
     const num = /^(\d+)\. /.exec(line)
     const kind = line.startsWith('- ') ? 'li' : num ? 'ol' : line.startsWith('|') ? 'tr' : 'p'
     if (!line || line.startsWith('## ') || line.startsWith('### ') || line.startsWith('::') || block?.kind !== kind) flush()

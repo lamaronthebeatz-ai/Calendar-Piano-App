@@ -1,5 +1,5 @@
 import { ARTICLES } from '../theory/articles'
-import { findArticle, type Article } from '../theory/wiki'
+import { findArticle, type ArticleMeta as Article } from '../theory/wiki'
 
 type CategoryId = Article['category']
 
