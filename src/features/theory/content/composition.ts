@@ -313,7 +313,7 @@ Về "nhảy rồi quay lại": von Hippel và Huron (2000) chỉ ra rằng ph�
 
 ## Đỉnh của giai điệu
 - **Một đỉnh cao nhất** cho mỗi câu (hoặc cả bài) — xuất hiện **một lần**. Hai đỉnh bằng nhau làm giảm sức nặng của cả hai.
-- Đỉnh thường ở **nửa sau** câu; giáo trình jazz TJPS gợi ý khoảng 2/3 – 3/4 câu (xem [[sang-tac-jazz]]). Đây là lời khuyên thực hành, không phải định luật.
+- Đỉnh thường ở **nửa sau** câu; giáo trình jazz của Lamar gợi ý khoảng 2/3 – 3/4 câu (xem [[sang-tac-jazz]]). Đây là lời khuyên thực hành, không phải định luật.
 - Đỉnh nên rơi vào **phách mạnh hoặc nốt dài**, và thường đi kèm một hợp âm "căng" (IV, ii, V7, hợp âm mượn).
 - Trong bài dài, các đỉnh từng câu nên **tăng dần** tới cao trào chung — xem [[kien-truc-tac-pham]].
 

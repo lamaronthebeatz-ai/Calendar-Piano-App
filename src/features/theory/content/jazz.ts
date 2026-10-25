@@ -44,7 +44,7 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
 8. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]], [[hop-am-luot-jazz]].
 9. **Tái hoà âm**: [[tai-hoa-am]] (gồm cách làm bài "jazzy"), [[tai-hoa-am-gospel]], [[doi-nhip-the-loai-jazz|đổi nhịp, đổi thể loại, chơi tự do thời gian]], [[constant-structures]]; **sáng tác**: [[sang-tac-jazz]].
 10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]] (phân tích: [[phan-tich-giant-steps]]).
-11. **Ngẫu hứng** (theo các bài của TJPS):
+11. **Ngẫu hứng** (theo các bài của Lamar):
    - Nền tảng: [[ngau-hung-jazz]] → [[not-dan-huong]] → [[trang-tri-giai-dieu-jazz]] → [[not-tiep-can-jazz]] → [[not-tranh-va-quang-nghich]].
    - Phương pháp: [[ngau-hung-doc-ngang]] → [[tiet-tau-ngau-hung-jazz]] → [[lick-va-trich-dan]] → [[mau-lap-chu-ky]] → [[choi-ngoai-jazz]].
    - Nâng cao: [[superimposition-jazz]] → [[sheets-of-sound]] → [[triad-pairs]] → [[ngau-hung-hop-am]].
@@ -64,7 +64,7 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
     title: 'Học piano jazz: bắt đầu từ đâu?',
     category: 'jazz',
     aliases: ['how to play jazz piano', 'học piano jazz', 'bắt đầu học jazz', 'jazz piano roadmap', 'lộ trình piano jazz'],
-    summary: 'Lộ trình thực hành của TJPS cho người bắt đầu chơi jazz: chọn một bài ballad chậm nhiều ii – V – I, học thật đơn giản (giai điệu + hợp âm 7), rồi thêm từng lớp — thế bấm, tay trái, tiết tấu, ngẫu hứng — mỗi lớp tập riêng trước khi ghép.',
+    summary: 'Lộ trình thực hành của Lamar cho người bắt đầu chơi jazz: chọn một bài ballad chậm nhiều ii – V – I, học thật đơn giản (giai điệu + hợp âm 7), rồi thêm từng lớp — thế bấm, tay trái, tiết tấu, ngẫu hứng — mỗi lớp tập riêng trước khi ghép.',
     wiki: 'Jazz_piano',
     refs: [
       ['The Jazz Piano Site — How to Play Jazz Piano: Beginner to Advanced', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/playing-jazz-piano-beginner-advanced/'],
@@ -75,12 +75,12 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
     body: `
 Bài này là **lộ trình thực hành** (tay trên phím); lộ trình lý thuyết đầy đủ nằm ở [[hoa-am-jazz]].
 
-## Kiến thức tối thiểu (theo TJPS)
+## Kiến thức tối thiểu (theo Lamar)
 - Cấu trúc [[am-giai-truong|âm giai trưởng]].
 - Các [[hop-am-bay|hợp âm 7]] diatonic của một giọng và cách dựng từng loại (xem [[ky-hieu-hop-am]]).
 
 ## Chọn bài đầu tiên
-TJPS: một bài **ballad chậm, dễ nhớ, diatonic**, có **nhiều [[ii-v-i]]**. Gợi ý: "Fly Me to the Moon", "Autumn Leaves" (xem [[phan-tich-tien-trinh-jazz]]), "All the Things You Are", "Softly as in a Morning Sunrise".
+Lamar: một bài **ballad chậm, dễ nhớ, diatonic**, có **nhiều [[ii-v-i]]**. Gợi ý: "Fly Me to the Moon", "Autumn Leaves" (xem [[phan-tich-tien-trinh-jazz]]), "All the Things You Are", "Softly as in a Morning Sunrise".
 
 ## Thêm từng lớp
 1. **Học bài thật đơn giản**: giai điệu tay phải + hợp âm 7 tay trái.
@@ -88,10 +88,10 @@ TJPS: một bài **ballad chậm, dễ nhớ, diatonic**, có **nhiều [[ii-v-i
 3. **Tay trái**: [[bass-di-jazz|bass đi]], [[stride-piano|stride]].
 4. **Tiết tấu**: [[swing]], đệm Charleston ([[dem-jazz]]).
 5. **[[ngau-hung-piano|Ngẫu hứng]]** theo thang: rải hợp âm 7 → âm giai → nốt cromatic và [[choi-ngoai-jazz|side-slipping]] → toàn bộ cromatic; kết câu ở [[not-dan-huong|nốt dẫn hướng]] (xem [[xay-dung-bai-solo]]).
-Mỗi lớp **tập riêng** trước khi ghép với các lớp khác. Bản đồ khái niệm một trang của TJPS (*Jazz Piano Roadmap*) tóm tắt: hình thức, tiết tấu, giai điệu, hoà âm và các thế bấm (khối, shell, không gốc, mở, quãng 4, [[jazz-dieu-thuc|So What]], [[upper-structure|upper structure]], [[hop-am-khoi|locked hands]]).
+Mỗi lớp **tập riêng** trước khi ghép với các lớp khác. Bản đồ khái niệm một trang của Lamar (*Jazz Piano Roadmap*) tóm tắt: hình thức, tiết tấu, giai điệu, hoà âm và các thế bấm (khối, shell, không gốc, mở, quãng 4, [[jazz-dieu-thuc|So What]], [[upper-structure|upper structure]], [[hop-am-khoi|locked hands]]).
 
 ## Thói quen luyện tập
-- Dùng [[kiem-soat-toc-do|máy đếm nhịp]], tập chậm; **20 phút mỗi ngày** tốt hơn 60 phút ba ngày một lần (TJPS — xem [[phuong-phap-luyen-tap]]).
+- Dùng [[kiem-soat-toc-do|máy đếm nhịp]], tập chậm; **20 phút mỗi ngày** tốt hơn 60 phút ba ngày một lần (Lamar — xem [[phuong-phap-luyen-tap]]).
 - **[[ngau-hung-jazz|Chép solo]]** từ bản thu ([[phan-tich-solo-jazz]]) và **chơi cùng người khác** ([[jam-session]]).
 `,
   },
@@ -309,7 +309,7 @@ Nốt dẫn hướng chi tiết: [[not-dan-huong]]; lick trên ii – V – I: [
 ::staff treble C4+E4+G4+B4=Cmaj7 A3+C#4+E4+G4=A7 D4+F4+A4+C5=Dm7 G3+B3+D4+F4=G7 | I – VI7 – ii – V7 ở Đô trưởng
 
 ## Turnaround Tadd Dameron
-Theo TJPS và Wikipedia, turnaround mang tên **Tadd Dameron** đi từ I – vi – ii – V qua ba bước:
+Theo Lamar và Wikipedia, turnaround mang tên **Tadd Dameron** đi từ I – vi – ii – V qua ba bước:
 1. Biến các hợp âm thứ thành **át phụ**: C – A7 – D7 – G7.
 2. Thay mỗi hợp âm át bằng **hợp âm thay thế tritone**: C – E♭7 – A♭7 – D♭7.
 3. Tuỳ chọn, biến một số hợp âm át thành **[[hop-am-bay|maj7]]**.
@@ -336,20 +336,20 @@ Hãy để ý **bè trầm**: các nốt E♭ – A♭ – D♭ – C cách nhau
     ],
     body: `
 ## Định nghĩa
-Theo TJPS, **line cliché** là một **đường bè đi liền bậc** — thường từng [[cung-nua-cung|nửa cung]], đôi khi một cung — chuyển động **trên một hợp âm đứng yên**, để thêm chuyển động cho một tiến trình tĩnh. Đường bè có thể nằm ở nốt gốc, nốt 5 hoặc nốt 7; đi lên, đi xuống hoặc đổi hướng. Hay gặp nhất trên **[[hop-am-ba|hợp âm thứ]]**.
+Theo Lamar, **line cliché** là một **đường bè đi liền bậc** — thường từng [[cung-nua-cung|nửa cung]], đôi khi một cung — chuyển động **trên một hợp âm đứng yên**, để thêm chuyển động cho một tiến trình tĩnh. Đường bè có thể nằm ở nốt gốc, nốt 5 hoặc nốt 7; đi lên, đi xuống hoặc đổi hướng. Hay gặp nhất trên **[[hop-am-ba|hợp âm thứ]]**.
 
 ## Hai dạng chuẩn
 ::staff treble C4+Eb4+G4+C5=Cm C4+Eb4+G4+B4=Cm(maj7) C4+Eb4+G4+Bb4=Cm7 C4+Eb4+G4+A4=Cm6 | Dạng thứ: nốt C đi xuống C – B – B♭ – A trong khi C – E♭ – G đứng yên
-::staff treble C4+E4+G4=C C4+E4+G#4=C+ C4+E4+A4=C6 C4+E4+Bb4=C7 | Dạng trưởng: nốt 5 đi lên G – G♯ – A – B♭ (TJPS ghi C, C♯5, C6, C7)
+::staff treble C4+E4+G4=C C4+E4+G#4=C+ C4+E4+A4=C6 C4+E4+Bb4=C7 | Dạng trưởng: nốt 5 đi lên G – G♯ – A – B♭ (Lamar ghi C, C♯5, C6, C7)
 Mỗi "hợp âm" mới thật ra chỉ là **cùng một hợp âm** với một [[not-ngoai-hop-am|nốt lướt]] chậm — vì thế line cliché là cầu nối giữa [[dan-giong|dẫn giọng]] cổ điển và ký hiệu hợp âm jazz ([[ky-hieu-hop-am]]).
 
 ## Ví dụ trong bài hát
 - **"My Funny Valentine"** (Rodgers & Hart): mở đầu bằng Cm – Cm([[hop-am-bay|maj7]]) – Cm7 – Cm6 — ví dụ kinh điển nhất.
-- TJPS liệt kê thêm "In Walked Bud" ([[thelonious-monk|Monk]]) và "Blue Skies" (Irving Berlin).
+- Lamar liệt kê thêm "In Walked Bud" ([[thelonious-monk|Monk]]) và "Blue Skies" (Irving Berlin).
 - Ngoài jazz: "Stairway to Heaven" (Led Zeppelin) dùng đường bè thứ đi xuống tương tự.
 
 ## Dùng để tái hoà âm
-TJPS dùng line cliché để làm sống động những chỗ **một hợp âm kéo dài** (ví dụ "Summertime") hoặc những cặp ii – V lặp lại ("Satin Doll") — xem [[tai-hoa-am]]. Ở bè trầm, chuỗi hợp âm gạch chéo C – C/B – C/B♭ – A7 cũng là một line cliché (xem [[hop-am-gach-cheo]]).
+Lamar dùng line cliché để làm sống động những chỗ **một hợp âm kéo dài** (ví dụ "Summertime") hoặc những cặp ii – V lặp lại ("Satin Doll") — xem [[tai-hoa-am]]. Ở bè trầm, chuỗi hợp âm gạch chéo C – C/B – C/B♭ – A7 cũng là một line cliché (xem [[hop-am-gach-cheo]]).
 `,
   },
   {
@@ -367,7 +367,7 @@ TJPS dùng line cliché để làm sống động những chỗ **một hợp â
     body: `
 Phân tích hoà âm cổ điển dựa trên bản nhạc đầy đủ ([[phan-tich-hoa-am]]); phân tích jazz thường làm trên **[[he-so-nashville-va-lead-sheet|lead sheet]]** — chỉ có giai điệu và ký hiệu hợp âm ([[ky-hieu-hop-am]]). Mục tiêu thực tế: biết **mỗi đoạn đang ở giọng nào** để chọn âm giai, thế bấm và chỗ [[tai-hoa-am|tái hoà âm]].
 
-## Các bước (theo TJPS)
+## Các bước (theo Lamar)
 1. **Tìm giọng chính**: [[hoa-bieu|hoá biểu]], các [[cau-ket|kết]] ở cuối câu (ii – V – I, V – I), hợp âm cuối bài.
 2. **Ghi số La Mã** cho mọi hợp âm so với giọng chính ([[chuc-nang-hoa-am]]).
 3. **Quy về chức năng**: chủ (T), tiền át (PD), át (D) — trật tự thường gặp là PD → D → T.
@@ -387,7 +387,7 @@ Nhiều giáo trình jazz (thường gắn với Berklee) đánh dấu: **ngoặ
 ::form Cm7 F7 B♭maj7 E♭maj7 Am7♭5 D7 Gm6 | Hai "giọng tạm" nối nhau: ii – V – I về B♭ trưởng, rồi ii – V – i về Sol thứ
 
 ## Bản đồ hợp âm (chord mapping)
-Bước tiếp theo cho người [[ngau-hung-piano|ngẫu hứng]] (TJPS): với mỗi giọng tạm, tìm **một âm giai nền** dùng được cho cả nhóm hợp âm (ví dụ B♭ trưởng cho Cm7 – F7 – B♭maj7 – E♭maj7), rồi chỉ đổi âm giai ở chỗ thật sự đổi giọng — xem [[ngau-hung-doc-ngang]].
+Bước tiếp theo cho người [[ngau-hung-piano|ngẫu hứng]] (Lamar): với mỗi giọng tạm, tìm **một âm giai nền** dùng được cho cả nhóm hợp âm (ví dụ B♭ trưởng cho Cm7 – F7 – B♭maj7 – E♭maj7), rồi chỉ đổi âm giai ở chỗ thật sự đổi giọng — xem [[ngau-hung-doc-ngang]].
 `,
   },
 
@@ -506,7 +506,7 @@ Liên quan: [[he-thong-hop-am-am-giai]], [[am-giai-bebop]], [[am-giai-doi-xung-j
     ],
     body: `
 ## Ý tưởng
-Âm giai bảy nốt có **lẻ** nốt; nếu chạy móc đơn liên tục trong ô 4/4 (tám móc đơn), các [[hop-am-bay|nốt hợp âm]] sẽ lúc rơi vào phách, lúc rơi giữa phách. Thêm **một [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]]** thành **tám nốt**: khi chạy **đi xuống** từ một nốt hợp âm ở đầu phách, mọi nốt hợp âm đều rơi vào **phách** (TJPS).
+Âm giai bảy nốt có **lẻ** nốt; nếu chạy móc đơn liên tục trong ô 4/4 (tám móc đơn), các [[hop-am-bay|nốt hợp âm]] sẽ lúc rơi vào phách, lúc rơi giữa phách. Thêm **một [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]]** thành **tám nốt**: khi chạy **đi xuống** từ một nốt hợp âm ở đầu phách, mọi nốt hợp âm đều rơi vào **phách** (Lamar).
 Thuật ngữ "bebop scale" do nhà giáo dục **David Baker** đặt, rút ra từ lối chơi của Charlie Parker và Dizzy Gillespie; **Barry Harris** dạy cùng ý tưởng với tên "major sixth diminished" (C6 + D°7).
 
 ## Bốn dạng
@@ -548,7 +548,7 @@ Thuật ngữ "bebop scale" do nhà giáo dục **David Baker** đặt, rút ra 
 ## Âm giai giảm (bát cung)
 - **Nửa cung – cung** (C D♭ E♭ E F♯ G A B♭): dùng cho **[[hop-am-bay|hợp âm 7 át]] có ♭9** — chứa ♭9, ♯9, ♯11, 13 nhưng **nốt 5 đúng**.
 - **Cung – nửa cung**: dùng cho **[[hop-am-bay-giam|hợp âm 7 giảm]]**.
-- Hợp âm 7 giảm = hợp âm 7♭9 bỏ nốt gốc; chỉ có **ba** hợp âm 7 giảm khác nhau. TJPS còn giới thiệu "hợp âm giảm kép": mỗi tay một hợp âm 7 giảm.
+- Hợp âm 7 giảm = hợp âm 7♭9 bỏ nốt gốc; chỉ có **ba** hợp âm 7 giảm khác nhau. Lamar còn giới thiệu "hợp âm giảm kép": mỗi tay một hợp âm 7 giảm.
 Chi tiết lý thuyết: [[am-giai-bat-cung]].
 ::pc-clock 0 1 3 4 6 7 9 10 | Âm giai giảm nửa cung – cung trên C
 
@@ -559,7 +559,7 @@ C D E F♯ G♯ B♭ — sáu nốt cách nhau một cung; cho hợp âm **7♯5
 Sáu nốt xen kẽ **quãng 3 thứ – nửa cung**; là hai [[hop-am-ba-tang|hợp âm ba tăng]] lồng vào nhau (C – E – G♯ và E♭ – G – B):
 ::staff treble C4 Eb4 E4 G4 Ab4 B4 | Âm giai tăng trên C: C – E♭ (D♯) – E – G – A♭ (G♯) – B
 ::pc-clock 0 3 4 7 8 11 | Đối xứng: chỉ có 4 phiên bản (C, E và A♭ cho cùng các nốt)
-- TJPS: dùng cho **maj7♯5** (C – E – G♯ – B), nhưng cần cẩn thận với [[not-tranh-va-quang-nghich|nốt tránh]] (E♭ trên Cmaj7♯5); với hợp âm này, [[dieu-thuc-thu-giai-dieu|Lydian tăng]] phổ biến hơn.
+- Lamar: dùng cho **maj7♯5** (C – E – G♯ – B), nhưng cần cẩn thận với [[not-tranh-va-quang-nghich|nốt tránh]] (E♭ trên Cmaj7♯5); với hợp âm này, [[dieu-thuc-thu-giai-dieu|Lydian tăng]] phổ biến hơn.
 - Người dùng nổi tiếng: John Coltrane (solo "One Down, One Up"), Oliver Nelson, Michael Brecker. (Wikipedia gắn Nelson với "Stolen Moments", có nguồn khác cho là đoạn [[hinh-thuc-ca-khuc-32|bridge]] của "Hoe-Down" — chưa thống nhất.)
 
 ## Vì sao âm giai đối xứng "nghe jazz"?
@@ -737,13 +737,13 @@ Thêm: [[the-bam-ba-not]], [[the-bam-mo]], [[quy-tac-xep-hop-am-jazz]], [[chon-t
     ],
     body: `
 ## Ý tưởng
-Theo The Jazz Piano Site (TJPS), upper structure "đơn giản là **một hợp âm ba đặt trên một tritone**". Với một [[hop-am-bay|hợp âm 7 át]] như **C7**:
+Theo Lamar, upper structure "đơn giản là **một hợp âm ba đặt trên một tritone**". Với một [[hop-am-bay|hợp âm 7 át]] như **C7**:
 - **Tay trái** giữ **nốt 3 và nốt 7** (E – B♭) — hai [[ii-v-i|nốt dẫn hướng]] xác định tính chất át; chúng tạo thành một [[quang|tritone]]. Có thể thêm nốt gốc C ở bè trầm cho rõ.
 - **Tay phải** chơi một **[[hop-am-ba|hợp âm ba]] trưởng** trên một bậc nào đó của C — các nốt của hợp âm ba này chính là các [[hop-am-mo-rong|nốt căng]].
 Vì tritone E – B♭ cũng là nốt 7 – 3 của **G♭7**, cùng một thế bấm dùng được cho [[thay-the-tritone|hợp âm thay thế tritone]].
 
 ## Bảng upper structure trên C7
-| Hợp âm ba (tay phải) | Các nốt so với C | Kết quả | Tên theo TJPS |
+| Hợp âm ba (tay phải) | Các nốt so với C | Kết quả | Tên theo Lamar |
 |---|---|---|---|
 | **D** (D – F♯ – A) | 9 – ♯11 – 13 | C13♯11 | US II |
 | **E♭** (E♭ – G – B♭) | ♯9 – 5 – ♭7 | C7♯9 | US ♭III |
@@ -778,14 +778,14 @@ Trong giai điệu: [[superimposition-jazz]], [[triad-pairs]].
       ['The Jazz Piano Site — Shell Chords', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/shell-chords/'],
     ],
     body: `
-## Cấu tạo (theo TJPS)
+## Cấu tạo (theo Lamar)
 - **Tay trái**: nốt **gốc** — giúp tiến trình nghe rõ ràng.
 - **Tay phải**: **nốt 3 và nốt 7** — hai [[not-dan-huong|nốt dẫn hướng]] quyết định tính chất hợp âm (shell — xem [[xep-hop-am]]).
 ::grand C4+F4/D3=Dm7 B3+F4/G2=G7 B3+E4/C3=Cmaj7 | ii – V – I ở Đô trưởng bằng thế bấm 3 nốt: tay phải chỉ đổi một nốt mỗi lần (C → B, F → E)
 Tay phải đổi từ "7 – 3" sang "3 – 7" xen kẽ nên di chuyển rất ít — đúng nguyên tắc [[dan-giong|dẫn giọng]] gần.
 
 ## Mở rộng thành 4 nốt
-TJPS: thêm **một nốt** vào tay phải — **nốt giai điệu**, **nốt 5** hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Ví dụ của TJPS: **G7♭9** — tay trái G, tay phải F – B – A♭.
+Lamar: thêm **một nốt** vào tay phải — **nốt giai điệu**, **nốt 5** hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Ví dụ của Lamar: **G7♭9** — tay trái G, tay phải F – B – A♭.
 ::grand C4+E4+F4/D3=Dm9 B3+E4+F4/G2=G13 B3+D4+E4/C3=Cmaj9 | Thêm nốt căng vào tay phải: Dm9 (thêm E = 9), G13 (thêm E = 13), Cmaj9 (thêm D = 9)
 So sánh: [[the-bam-bac-thay-jazz|thế bấm Powell]] cũng dùng nốt gốc + nốt 3 hoặc 7, nhưng tất cả ở tay trái để tay phải tự do solo.
 
@@ -806,15 +806,15 @@ Tiếp theo: [[the-bam-mo]].
       ['The Jazz Piano Site — Jazz Piano Comping', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/how-to-comp/'],
     ],
     body: `
-## Hai cách chia tay (theo TJPS)
+## Hai cách chia tay (theo Lamar)
 | Cách | Tay trái | Tay phải |
 |---|---|---|
 | (a) | Gốc + 7 | 3 + 5 |
 | (b) | Gốc + 10 (nốt 3 cao một quãng 8) | 5 + 7 |
 ::grand F4+A4/D3+C4=Dm7_(a) D4+F4/G2+B3=G7_(b) E4+G4/C3+B3=Cmaj7_(a) | ii – V – I bằng thế bấm mở: Dm7 và Cmaj7 theo cách (a), G7 theo cách (b) với quãng 10 G – B ở tay trái
-(Bảng ví dụ của TJPS dùng các thế bấm này; hàng G7 trong bảng gốc có chỗ không thống nhất giữa hai cách chia, nên ở đây ghi theo đúng định nghĩa cách (b).)
+(Bảng ví dụ của Lamar dùng các thế bấm này; hàng G7 trong bảng nguồn có chỗ không thống nhất giữa hai cách chia, nên ở đây ghi theo đúng định nghĩa cách (b).)
 
-## Nguyên tắc (theo TJPS)
+## Nguyên tắc (theo Lamar)
 - **Giai điệu ở trên cùng**.
 - **Không nhân đôi** nốt nào, trừ nốt trên cùng.
 - **Tránh quãng 5** ở tay trái; dùng **quãng rộng ở bè trầm** để khỏi đục.
@@ -840,15 +840,15 @@ Thế bấm mở là "anh em" của [[hop-am-khoi|drop 2]] (lấy từ xếp h�
     ],
     body: `
 ## Hợp âm So What
-- **Năm nốt**: **ba quãng 4 đúng** chồng lên nhau và **một quãng 3 trưởng** ở trên. Trên D (TJPS): tay trái **D – G**, tay phải **C – F – A**.
+- **Năm nốt**: **ba quãng 4 đúng** chồng lên nhau và **một quãng 3 trưởng** ở trên. Trên D (Lamar): tay trái **D – G**, tay phải **C – F – A**.
 - Gốc tích: thế bấm của [[bill-evans|Bill Evans]] trong "So What" (*Kind of Blue*, 1959) — xem [[jazz-dieu-thuc]].
-- Vì xây bằng quãng 4, nó có màu hơi **treo** (sus): TJPS đọc thế bấm trên D là **Dm11**, **B♭maj13** hoặc **G9sus**.
-- TJPS: hợp âm So What chính là **[[hoa-am-quang-bon|hợp âm quãng 4]] ở [[the-dao-hop-am|thể đảo]] 1**; nó có 5 thể đảo, đều dùng được khi cần đổi nốt bass hay nốt giai điệu.
+- Vì xây bằng quãng 4, nó có màu hơi **treo** (sus): Lamar đọc thế bấm trên D là **Dm11**, **B♭maj13** hoặc **G9sus**.
+- Lamar: hợp âm So What chính là **[[hoa-am-quang-bon|hợp âm quãng 4]] ở [[the-dao-hop-am|thể đảo]] 1**; nó có 5 thể đảo, đều dùng được khi cần đổi nốt bass hay nốt giai điệu.
 - Dùng được cả trong tiến trình có chức năng ([[vong-quang-nam|vòng quãng 5]], [[ii-v-i]]) lẫn trong tiến trình [[dieu-thuc|điệu thức]] đi từng bậc — cách đệm của jazz điệu thức là **trượt song song** thế bấm này trong một điệu thức.
 ::grand C4+F4+A4/D3+G3=So_What_(D) | Hợp âm So What trên D: D – G – C – F – A (ba quãng 4 + một quãng 3 trưởng) — Dm11 / G9sus / B♭maj13
 
 ## Hợp âm Barron
-- **Sáu nốt**, dùng cho hợp âm **m7 khi giai điệu ở nốt 11** (TJPS). Trên Dm11: tay trái **D – A – E** (1 – 5 – 9), tay phải **F – C – G** (♭3 – ♭7 – 11), nốt 11 ở trên cùng.
+- **Sáu nốt**, dùng cho hợp âm **m7 khi giai điệu ở nốt 11** (Lamar). Trên Dm11: tay trái **D – A – E** (1 – 5 – 9), tay phải **F – C – G** (♭3 – ♭7 – 11), nốt 11 ở trên cùng.
 - Mỗi tay là **một chồng quãng 5**; giữa hai tay là quãng 2 thứ E – F.
 - Mang tên pianist **Kenny Barron**.
 ::grand F4+C5+G5/D3+A3+E4=Dm11_(Barron) | Hợp âm Barron trên Dm11: tay trái D – A – E, tay phải F – C – G
@@ -873,11 +873,11 @@ Ký hiệu **Hợp âm/Nốt** cho biết hợp âm ở trên và **nốt bass**
 
 ## Hai ví dụ hay gặp
 ::grand Bb4+D5+F5/C3=B♭/C D4+F#4+A4/C3=D/C | B♭/C: các nốt C – B♭ – D – F = ♭7, 9, 11 trên C, không có nốt 3 → C9sus4 (C11). D/C: D – F♯ – A trên C = 9, ♯11, 13 → màu Lydian
-| Ký hiệu | Nốt (so với bass C) | Đọc là | Âm giai (theo TJPS) |
+| Ký hiệu | Nốt (so với bass C) | Đọc là | Âm giai (theo Lamar) |
 |---|---|---|---|
 | **B♭/C** | ♭7 – 9 – 11 | C9sus4 (hoặc Cm11) | [[dieu-thuc|Mixolydian]] hoặc Dorian trên C |
 | **D/C** | 9 – ♯11 – 13 | Cmaj7♯11 / C Lydian (thiếu [[not-dan-huong|nốt 3 và 7]]) | Lydian |
-TJPS lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiếu nốt 3 hoặc 7 — dựa vào các [[hop-am-mo-rong|nốt căng]] có mặt để đoán hợp âm định viết.
+Lamar lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiếu nốt 3 hoặc 7 — dựa vào các [[hop-am-mo-rong|nốt căng]] có mặt để đoán hợp âm định viết.
 
 ## Vì sao dùng?
 - **Gọn**: B♭/C dễ đọc hơn C9sus4 với đầy đủ các nốt.
@@ -912,7 +912,7 @@ TJPS lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiế
 ::grand C4+E4+G4+A4/=4_nốt_hẹp C4+E4+G4+A4/A3=locked_hands C4+E4+A4/G3=drop_2 | Giai điệu A trên hợp âm C6: xếp hẹp C – E – G – A; locked hands thêm A thấp ở tay trái; drop 2 hạ G (nốt thứ hai từ trên) xuống một quãng 8
 
 ## Dùng khi nào?
-- TJPS: hợp với **giai điệu đi liền bậc**, mỗi nốt giai điệu được hoà âm thành một hợp âm — nghe như cả một **dàn kèn** (section) chơi cùng nhau.
+- Lamar: hợp với **giai điệu đi liền bậc**, mỗi nốt giai điệu được hoà âm thành một hợp âm — nghe như cả một **dàn kèn** (section) chơi cùng nhau.
 - Nốt giai điệu không thuộc hợp âm thường được hoà âm bằng một hợp âm lướt (thường là [[hop-am-bay-giam|hợp âm 7 giảm]]) — xem [[hop-am-luot-jazz]].
 - Drop 2 là dạng **phổ biến nhất** trong các dạng "drop" (cũng có drop 3).
 
@@ -923,11 +923,11 @@ Xem thêm: [[nghe-si-piano-jazz]], [[dem-jazz]].
 
 Dùng khi solo: [[ngau-hung-hop-am]].
 
-## Locked hands nâng cao (theo TJPS)
+## Locked hands nâng cao (theo Lamar)
 - Giữ một khung hoà âm **I – V – I – V** dưới giai điệu; thay V7 bằng **hợp âm 7 giảm cách nốt gốc của V nửa cung** — trong Đô: G7 → **A♭°7** (A♭ – B – D – F), nghe như G7♭9 không gốc (xem [[hop-am-bay-giam]], [[hop-am-luot-jazz]]).
 - Có thể **nâng một nốt** của hợp âm 7 giảm lên một cung (vẫn trong cùng [[am-giai-bat-cung|âm giai giảm]]) để có màu át biến hoá: A♭ – B – D – G, A♭ – C♯ – D – F.
 - Thế bấm V phải có **[[not-dan-huong|nốt 3 và 7]]**, không có nốt 4 và nốt 7 trưởng ([[not-tranh-va-quang-nghich|nốt tránh]]); hợp âm I có thể là C6, Cmaj9…
-- Được phá khuôn I – V – I – V khi giai điệu cần; "miễn là giữ được khung I – V – I – V bên dưới, nó sẽ nghe hay". Ví dụ trong bài của TJPS: "Blue [[thelonious-monk|Monk]]".
+- Được phá khuôn I – V – I – V khi giai điệu cần; "miễn là giữ được khung I – V – I – V bên dưới, nó sẽ nghe hay". Ví dụ trong bài của Lamar: "Blue [[thelonious-monk|Monk]]".
 ::grand G4+A4+C5+E5/E4=C6 Ab4+B4+D5+F5/F4=A♭°7 A4+C5+E5+G5/G4=C6 | Minh hoạ: giai điệu E – F – G, hoà âm I – V – I; V được thay bằng A♭°7; tay trái nhân đôi giai điệu thấp một quãng 8
 `,
   },
@@ -947,17 +947,17 @@ Dùng khi solo: [[ngau-hung-hop-am]].
     ],
     body: `
 ## Bud Powell: shell luôn có nốt gốc
-[[bud-powell|Bud Powell]], pianist [[phong-cach-jazz|bebop]] hàng đầu thập niên 1940, dùng tay trái **thưa**: hai – ba nốt, **luôn có nốt gốc**, cộng nốt 3 **hoặc** nốt 7 (hoặc nốt 10 = nốt 3 cao một quãng 8). TJPS nhận xét: vì bè trầm luôn là nốt gốc, tiến trình hợp âm nghe **rõ ràng**, còn hợp âm thưa thì không cản đường tay phải chạy giai điệu bebop.
+[[bud-powell|Bud Powell]], pianist [[phong-cach-jazz|bebop]] hàng đầu thập niên 1940, dùng tay trái **thưa**: hai – ba nốt, **luôn có nốt gốc**, cộng nốt 3 **hoặc** nốt 7 (hoặc nốt 10 = nốt 3 cao một quãng 8). Lamar nhận xét: vì bè trầm luôn là nốt gốc, tiến trình hợp âm nghe **rõ ràng**, còn hợp âm thưa thì không cản đường tay phải chạy giai điệu bebop.
 ::staff bass D3+C4=Dm7_(1–7) G2+B3=G7_(1–10) C3+B3=Cmaj7_(1–7) | ii – V – I kiểu Powell: nốt gốc + nốt 7, rồi nốt gốc + nốt 10, xen kẽ để tay trái ít di chuyển
 Đây cũng là dạng [[xep-hop-am|shell voicing]] cơ bản nhất cho người mới học jazz.
 
 ## Thelonious Monk: quãng 2 thứ ở dưới
-[[ngon-bam|Thế bấm]] của [[thelonious-monk|Monk]] (theo TJPS): chỉ dùng **tay trái**, cố ý **nghịch**: một **quãng 2 thứ ở dưới** và một **quãng 3 ở trên**; đôi khi không có cả [[not-dan-huong|nốt dẫn hướng]] — chúng cho "màu" của giọng hơn là từng hợp âm. Trong Đô trưởng:
-::staff bass B2+C3+E3=Cmaj7 E3+F3+A3=các_hợp_âm_khác | Hai thế bấm Monk trong Đô trưởng (theo TJPS): B – C – E cho hợp âm chủ, E – F – A cho các hợp âm còn lại
+[[ngon-bam|Thế bấm]] của [[thelonious-monk|Monk]] (theo Lamar): chỉ dùng **tay trái**, cố ý **nghịch**: một **quãng 2 thứ ở dưới** và một **quãng 3 ở trên**; đôi khi không có cả [[not-dan-huong|nốt dẫn hướng]] — chúng cho "màu" của giọng hơn là từng hợp âm. Trong Đô trưởng:
+::staff bass B2+C3+E3=Cmaj7 E3+F3+A3=các_hợp_âm_khác | Hai thế bấm Monk trong Đô trưởng (theo Lamar): B – C – E cho hợp âm chủ, E – F – A cho các hợp âm còn lại
 Vì mỗi giọng chỉ có hai thế bấm, chúng có thể nghe lặp lại — chính tính "góc cạnh" đó là phong cách Monk.
 
 ## Herbie Hancock: hợp âm thứ 7 với nốt 9 ở giai điệu
-Khi giai điệu ở **nốt 9** của một hợp âm m7, TJPS giới thiệu "hợp âm Hancock" sáu nốt. Trên **Dm7**: tay trái **D – A – F** (1 – 5 – ♭3), tay phải **G – C – E** (11 – ♭7 – 9).
+Khi giai điệu ở **nốt 9** của một hợp âm m7, Lamar giới thiệu "hợp âm Hancock" sáu nốt. Trên **Dm7**: tay trái **D – A – F** (1 – 5 – ♭3), tay phải **G – C – E** (11 – ♭7 – 9).
 ::grand G4+C5+E5/D3+A3+F4=Dm11 | Hợp âm Hancock trên Dm7: tay trái D – A – F, tay phải G – C – E (nốt 9 là E ở trên cùng)
 Tay phải là hai [[quang|quãng 4]] chồng lên nhau — gần với [[hoa-am-quang-bon|hợp âm quãng 4]] và hợp âm *So What* (E – A – D – G – B trên Em11) mà [[bill-evans|Bill Evans]] chơi trong "So What" (*[[jazz-dieu-thuc|Kind of Blue]]*, 1959).
 
@@ -970,13 +970,13 @@ Thêm: [[hop-am-so-what-barron]] (Barron, anh em của Hancock), [[ket-hop-the-b
     title: 'Kết hợp các thế bấm',
     category: 'jazz',
     aliases: ['combining chord voicings', 'kết hợp thế bấm', 'chọn thế bấm theo giai điệu', 'thế bấm theo nốt giai điệu'],
-    summary: 'Cách TJPS hướng dẫn chọn thế bấm cho cả một bài: đi từng ô, ghi hợp âm và nốt giai điệu đầu tiên, chọn thế bấm đặt nốt giai điệu lên trên cùng (So What, Barron, Hancock, upper structure…), rồi nối các hợp âm với ít chuyển động nhất.',
+    summary: 'Cách Lamar hướng dẫn chọn thế bấm cho cả một bài: đi từng ô, ghi hợp âm và nốt giai điệu đầu tiên, chọn thế bấm đặt nốt giai điệu lên trên cùng (So What, Barron, Hancock, upper structure…), rồi nối các hợp âm với ít chuyển động nhất.',
     refs: [
       ['The Jazz Piano Site — Combining Chord Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/combining-chord-voicings/'],
       ['The Jazz Piano Site — Chord Voicings & When to Use Them', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicings-use/'],
     ],
     body: `
-## Quy trình (theo TJPS)
+## Quy trình (theo Lamar)
 1. Đi qua bài **từng [[so-chi-nhip|ô nhịp]]**.
 2. Ghi **hợp âm** và **nốt giai điệu đầu tiên** của ô.
 3. Với loại hợp âm đó, chọn một thế bấm **đặt nốt giai điệu lên trên cùng**.
@@ -993,9 +993,9 @@ Thêm: [[hop-am-so-what-barron]] (Barron, anh em của Hancock), [[ket-hop-the-b
 Với hợp âm át: [[upper-structure]] chọn theo [[hop-am-mo-rong|nốt căng]] ở giai điệu; với [[hop-am-bay|maj7]]: thế bấm mở hoặc không gốc.
 
 ## Ví dụ: một nốt đổi
-TJPS minh hoạ Dm11 → G9 chỉ có **một nốt đổi, nửa cung**. Từ thế bấm Barron, hạ C xuống B:
+Lamar minh hoạ Dm11 → G9 chỉ có **một nốt đổi, nửa cung**. Từ thế bấm Barron, hạ C xuống B:
 ::grand F4+C5+G5/D3+A3+E4=Dm11 F4+B4+G5/D3+A3+E4=G9/D | Minh hoạ: từ hợp âm Barron trên Dm11, chỉ đổi C → B là được G9 (trên bass D) — năm nốt kia giữ nguyên
-(Đây là cách dựng lại theo mô tả của TJPS; thế bấm chính xác trong bài gốc có thể khác.)
+(Thế bấm dựng theo mô tả; có thể bấm khác miễn giữ đúng nguyên tắc một nốt đổi nửa cung.)
 Liên quan: [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
 `,
   },
@@ -1004,14 +1004,14 @@ Liên quan: [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
     title: 'Quy tắc xếp hợp âm jazz',
     category: 'jazz',
     aliases: ['chord voicing rules', 'quy tắc xếp hợp âm', 'quy tắc voicing', 'luật xếp hợp âm jazz', 'unavailable tension'],
-    summary: 'Các quy tắc chung TJPS đưa ra để tự xếp một thế bấm: luôn có nốt 3 và 7; các quãng nhỏ hơn quãng 5 trừ quãng dưới cùng; quãng rộng ở dưới để khỏi đục; quãng nghịch ở giữa; không nhân đôi trừ nốt trên cùng; không tạo quãng 9 thứ với nốt 3 hoặc 7.',
+    summary: 'Các quy tắc chung Lamar đưa ra để tự xếp một thế bấm: luôn có nốt 3 và 7; các quãng nhỏ hơn quãng 5 trừ quãng dưới cùng; quãng rộng ở dưới để khỏi đục; quãng nghịch ở giữa; không nhân đôi trừ nốt trên cùng; không tạo quãng 9 thứ với nốt 3 hoặc 7.',
     refs: [
       ['The Jazz Piano Site — Chord Voicing Rules', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicing-rules/'],
       ['The Jazz Piano Site — Available Tensions', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chords/available-tensions/'],
       ['The Jazz Piano Site — Open Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/open-voicings/'],
     ],
     body: `
-## Các quy tắc (theo TJPS)
+## Các quy tắc (theo Lamar)
 1. **Luôn có [[not-dan-huong|nốt 3 và 7]]**; nốt gốc và nốt 5 tuỳ chọn; có thể thêm [[hop-am-mo-rong|nốt căng]] 9, 11, 13.
 2. **Mọi quãng nhỏ hơn quãng 5 đúng**, **trừ** quãng giữa hai nốt thấp nhất — để các nốt nghe như **một hợp âm**.
 3. **Quãng rộng ở dưới** để tránh đục.
@@ -1033,16 +1033,16 @@ Liên quan: [[xep-hop-am]], [[ket-hop-the-bam]], [[the-bam-mo]].
     title: 'Chọn thế bấm theo phong cách',
     category: 'jazz',
     aliases: ['when to use voicings', 'chord voicings when to use', 'chọn thế bấm', 'thế bấm theo phong cách', 'secundal voicing'],
-    summary: 'Thế bấm nào cũng có thể dùng bất cứ lúc nào, nhưng mỗi phong cách có thói quen riêng: shell cho bebop, hợp âm khối cho jazz sớm và stride, không gốc cho bossa nova và ballad, quãng 4 cho blues và jazz điệu thức, âm cụm cho ballad, boogie và free jazz (bảng của TJPS).',
+    summary: 'Thế bấm nào cũng có thể dùng bất cứ lúc nào, nhưng mỗi phong cách có thói quen riêng: shell cho bebop, hợp âm khối cho jazz sớm và stride, không gốc cho bossa nova và ballad, quãng 4 cho blues và jazz điệu thức, âm cụm cho ballad, boogie và free jazz (bảng của Lamar).',
     refs: [
       ['The Jazz Piano Site — Chord Voicings & When to Use Them', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/chord-voicings-use/'],
       ['The Jazz Piano Site — Monk Voicings', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/monk-voicings/'],
       ['The Jazz Piano Site — Four Way Close, Locked Hands and Drop Two', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/four-way-close/'],
     ],
     body: `
-TJPS mở đầu bằng một tiền đề: **thế bấm nào cũng có thể dùng bất cứ lúc nào**; chỉ là mỗi phong cách **ưa** một số thế bấm.
+Lamar mở đầu bằng một tiền đề: **thế bấm nào cũng có thể dùng bất cứ lúc nào**; chỉ là mỗi phong cách **ưa** một số thế bấm.
 
-## Bảng của TJPS
+## Bảng của Lamar
 | Thế bấm | Phong cách hay dùng | Bài |
 |---|---|---|
 | Shell / Powell | [[phong-cach-jazz|Bebop]], ballad | [[the-bam-bac-thay-jazz]], [[xep-hop-am]] |
@@ -1052,7 +1052,7 @@ TJPS mở đầu bằng một tiền đề: **thế bấm nào cũng có thể d
 | Quãng 4 | [[blues-12-nhip|Blues]], [[jazz-dieu-thuc|jazz điệu thức]] | [[hoa-am-quang-bon]], [[hop-am-so-what-barron]] |
 | Quãng 2 (âm cụm) | Ballad, boogie, [[post-bop-free-jazz|free jazz]] | [[am-cum]] |
 
-## Gợi ý thêm từ các bài TJPS
+## Gợi ý thêm từ các bài Lamar
 - **Shell / Powell**: đơn giản, thưa — hợp khi tay phải solo bebop nhanh.
 - **Không gốc**: lối của [[bill-evans|Bill Evans]], nối [[ii-v-i|ii – V – I]] rất mượt.
 - **Quãng 4 sáu nốt** cho hợp âm át: hợp với blues.
@@ -1080,12 +1080,12 @@ TJPS mở đầu bằng một tiền đề: **thế bấm nào cũng có thể d
     body: `
 **Comping** (từ *accompanying* hoặc *complementing*) là việc **đệm hợp âm và tiết tấu** cho người đang solo. Piano, guitar, bass và trống đều "comp". Khác với [[dem-hat-piano|đệm hát]] có kiểu đệm cố định, comping là một **cuộc đối thoại**: người đệm nghe người solo và phản ứng.
 
-## Nguyên tắc (theo TJPS)
+## Nguyên tắc (theo Lamar)
 - Hỗ trợ người solo về hoà âm và tiết tấu, **không chen lấn**: khi solo dày đặc, đệm thưa lại; **im lặng cũng là đệm**.
 - Dùng **hợp âm ngắn**, có khoảng nghỉ giữa các hợp âm.
 - Chơi ở **âm vực khác** người solo.
 - Nối hợp âm với **ít chuyển động nhất** — [[dan-giong|dẫn giọng]] gần, thường bằng [[xep-hop-am|thế bấm không gốc]].
-- TJPS gợi ý nghe **Wynton Kelly** như một mẫu mực.
+- Lamar gợi ý nghe **Wynton Kelly** như một mẫu mực.
 
 ## Phân chia hai tay
 | Cách | Tay trái | Tay phải | Khi nào |
@@ -1093,7 +1093,7 @@ TJPS mở đầu bằng một tiền đề: **thế bấm nào cũng có thể d
 | Đệm cho chính mình | [[bass-di-jazz|Bass đi]] | Hợp âm không gốc | Chơi một mình, không có bass |
 | Đệm hai tay | Một nửa [[ngon-bam|thế bấm]] | Nửa còn lại ([[the-bam-mo|thế bấm mở]]) | Có bass, người khác solo |
 | Solo | Hợp âm không gốc | Giai điệu, [[ngau-hung-jazz|ngẫu hứng]] | Khi chính mình solo |
-Danh sách "kỹ năng tối thiểu" của TJPS: tay trái — bass đi, [[dem-hat-piano|stride]], nốt gốc, hợp âm đệm; tay phải — giai điệu, [[ii-v-i|nốt dẫn hướng]], [[ngau-hung-piano|ngẫu hứng]]; hai tay — thế bấm hai tay, [[hoa-am-quang-bon|hợp âm quãng 4]].
+Danh sách "kỹ năng tối thiểu" của Lamar: tay trái — bass đi, [[dem-hat-piano|stride]], nốt gốc, hợp âm đệm; tay phải — giai điệu, [[ii-v-i|nốt dẫn hướng]], [[ngau-hung-piano|ngẫu hứng]]; hai tay — thế bấm hai tay, [[hoa-am-quang-bon|hợp âm quãng 4]].
 
 ## Hình tiết tấu đệm
 ::rhythm 4/4 q. e rh // | Charleston: phách 1 và "&" của phách 2 — lấy từ bài "Charleston" (1923) của James P. Johnson, có lẽ là hình đệm nổi tiếng nhất
@@ -1101,7 +1101,7 @@ Danh sách "kỹ năng tối thiểu" của TJPS: tay trái — bass đi, [[dem-
 Hai hình trên là điểm xuất phát; người đệm giỏi thay đổi liên tục theo người solo (xem [[swing]], [[dao-phach]]).
 
 ## Lịch sử ngắn
-Theo TJPS, lối đệm "comping" thưa xuất hiện khoảng **thập niên 1940**, khi tay bass đảm nhận đường bass đi và tay trái piano không còn phải "bơm" phách như thời [[dem-hat-piano|stride]] (xem [[nghe-si-piano-jazz]], [[the-bam-bac-thay-jazz]]).
+Theo Lamar, lối đệm "comping" thưa xuất hiện khoảng **thập niên 1940**, khi tay bass đảm nhận đường bass đi và tay trái piano không còn phải "bơm" phách như thời [[dem-hat-piano|stride]] (xem [[nghe-si-piano-jazz]], [[the-bam-bac-thay-jazz]]).
 
 Thêm: [[dem-cho-ca-si]], [[jam-session]], [[stride-piano]].
 
@@ -1141,7 +1141,7 @@ Cùng ý tưởng này dùng cho giai điệu [[ngau-hung-piano|ngẫu hứng]] 
 ::staff bass D3=Dm7 F3 A3 Ab3=tiếp_cận / G2=G7 B2 D3 Db3=tiếp_cận / C3=Cmaj7 | Một đường bass đi minh hoạ trên ii – V – I ở Đô trưởng: gốc ở phách 1, nốt hợp âm ở giữa, nốt tiếp cận cromatic (A♭, D♭) ở phách 4
 
 ## Luyện tập
-- TJPS khuyên tập **tay trái riêng** cho đến khi bass đi thật đều, rồi mới thêm hợp âm hoặc giai điệu ở tay phải (xem [[phoi-hop-hai-tay]]).
+- Lamar khuyên tập **tay trái riêng** cho đến khi bass đi thật đều, rồi mới thêm hợp âm hoặc giai điệu ở tay phải (xem [[phoi-hop-hai-tay]]).
 - Đổi hướng và đổi kiểu tiếp cận thường xuyên, trộn bước liền bậc với cromatic để đường bass "hát".
 - Tập trên [[blues-12-nhip]] và [[ii-v-i]] trước, rồi [[rhythm-changes]].
 Liên quan: [[dem-jazz]], [[dem-hat-piano]] ([[stride-piano|stride]], kiểu đệm cũ hơn).
@@ -1163,24 +1163,24 @@ Liên quan: [[dem-jazz]], [[dem-hat-piano]] ([[stride-piano|stride]], kiểu đ�
     ],
     body: `
 ## Cấu tạo
-TJPS: tay trái **xen kẽ nốt bass (phách 1 và 3) với hợp âm (phách 2 và 4)** — cảm giác "bùm – chát"; "**đơn giản về khái niệm nhưng khó về kỹ thuật**" (xem [[buoc-nhay-xa]]).
+Lamar: tay trái **xen kẽ nốt bass (phách 1 và 3) với hợp âm (phách 2 và 4)** — cảm giác "bùm – chát"; "**đơn giản về khái niệm nhưng khó về kỹ thuật**" (xem [[buoc-nhay-xa]]).
 ::grand /C3=1 /E3+G3+C4=2 /G2=3 /E3+G3+C4=4 | Tay trái stride trên C: nốt gốc (phách 1), hợp âm (phách 2), nốt 5 thấp (phách 3), hợp âm (phách 4)
 ::rhythm 2/4 q:bùm q:chát / q:bùm q:chát // | Nhịp "bùm – chát": bass ở phách mạnh, hợp âm ở phách nhẹ
 Nốt bass có thể là nốt đơn, [[quang|quãng 8]] hoặc **quãng 10** (rải nhanh). Kiểu đệm cơ bản: [[dem-hat-piano]].
 
-## Biến thể (theo TJPS)
+## Biến thể (theo Lamar)
 - **Stride ngược**: hợp âm – bass – hợp âm – bass.
 - Trộn với [[bass-di-jazz|bass đi]].
 - Hai nốt bass hoặc hai hợp âm liền nhau; **đón trước** nốt bass hoặc hợp âm (xem [[dao-phach]]).
 
 ## Cho người mới
-TJPS: giảm bước nhảy và độ phức tạp của hợp âm — dùng **quãng 10 rải** và [[not-dan-huong|nốt dẫn hướng]] (trên G7: G rồi F + B). Bắt đầu với một bài nhiều ii – V như "Satin Doll".
+Lamar: giảm bước nhảy và độ phức tạp của hợp âm — dùng **quãng 10 rải** và [[not-dan-huong|nốt dẫn hướng]] (trên G7: G rồi F + B). Bắt đầu với một bài nhiều ii – V như "Satin Doll".
 
 ## Lịch sử
 - Stride phát triển từ [[dao-phach|ragtime]] ở **Harlem thập niên 1920**; các nghệ sĩ piano độc tấu được thuê chơi ở những "**rent party**" (tiệc góp tiền thuê nhà).
 - **[[james-p-johnson|James P. Johnson]]** (1894–1955) được gọi là "cha đẻ của stride". "**Carolina Shout**" (viết khoảng 1918, thu âm ngày 18/10/1921) là một trong những bản solo piano jazz đầu tiên được ghi âm; [[duke-ellington|Ellington]] học bài này từ cuộn piano.
 - **[[fats-waller|Fats Waller]]** học Johnson; "Handful of Keys" (1929) thành bài thi tài trong các cuộc "đấu đàn" cùng "Carolina Shout".
-- TJPS liệt kê thêm: Willie "The Lion" Smith, Luckey Roberts, Eubie Blake, Teddy Wilson, [[art-tatum|Art Tatum]] (người dần chuyển sang lối tay trái tự do hơn).
+- Lamar liệt kê thêm: Willie "The Lion" Smith, Luckey Roberts, Eubie Blake, Teddy Wilson, [[art-tatum|Art Tatum]] (người dần chuyển sang lối tay trái tự do hơn).
 Xem thêm: [[nghe-si-piano-jazz]], [[chon-the-bam-jazz]].
 `,
   },
@@ -1189,16 +1189,16 @@ Xem thêm: [[nghe-si-piano-jazz]], [[chon-the-bam-jazz]].
     title: 'Đệm cho ca sĩ trong jazz',
     category: 'jazz',
     aliases: ['comp for a vocalist', 'đệm cho ca sĩ', 'comping vocalist', 'đệm hát jazz'],
-    summary: 'Đệm cho ca sĩ khác đệm cho nhạc công: giọng hát không có cao độ cố định nên ca sĩ dựa vào hoà âm để tìm nốt. Theo TJPS: hoà âm đơn giản, đôi khi đặt giai điệu trên cùng, nhịp đều để ca sĩ tự do co giãn, chơi nhỏ hơn và tránh âm vực của ca sĩ, lấp chỗ trống khi ca sĩ nghỉ.',
+    summary: 'Đệm cho ca sĩ khác đệm cho nhạc công: giọng hát không có cao độ cố định nên ca sĩ dựa vào hoà âm để tìm nốt. Theo Lamar: hoà âm đơn giản, đôi khi đặt giai điệu trên cùng, nhịp đều để ca sĩ tự do co giãn, chơi nhỏ hơn và tránh âm vực của ca sĩ, lấp chỗ trống khi ca sĩ nghỉ.',
     refs: [
       ['The Jazz Piano Site — How to Comp for a Vocalist / Singer', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/how-to-comp-for-a-vocalist/'],
       ['The Jazz Piano Site — Jazz Piano Comping', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/how-to-comp/'],
     ],
     body: `
 ## Vai trò
-TJPS: **ca sĩ giữ giai điệu**, người đệm giữ **tiết tấu và hoà âm**. Khác với nhạc cụ có phím, **giọng hát không có cao độ cố định** — ca sĩ dựa vào hoà âm của bạn để tìm nốt.
+Lamar: **ca sĩ giữ giai điệu**, người đệm giữ **tiết tấu và hoà âm**. Khác với nhạc cụ có phím, **giọng hát không có cao độ cố định** — ca sĩ dựa vào hoà âm của bạn để tìm nốt.
 
-## Nguyên tắc (theo TJPS)
+## Nguyên tắc (theo Lamar)
 - **Hoà âm đơn giản**: [[hop-am-bay|hợp âm 7]] xếp chồng quãng 3; tránh những thế bấm dày, mơ hồ như [[hoa-am-quang-bon|quãng 4]] có thể làm ca sĩ lạc giọng.
 - **Điểm tựa**: thỉnh thoảng đặt **nốt giai điệu lên trên cùng** thế bấm; giữ [[bass-di-jazz|bass đi]] đều — [[kiem-soat-toc-do|nhịp đều]] phía sau giúp ca sĩ **tự do co giãn** câu hát (xem [[rubato]]).
 - **Âm lượng và âm vực**: chơi **nhỏ hơn** ca sĩ, **tránh âm vực** của họ — ví dụ với giọng soprano, bass ở thấp, hợp âm ở giữa.
@@ -1206,7 +1206,7 @@ TJPS: **ca sĩ giữ giai điệu**, người đệm giữ **tiết tấu và ho
 - **Thoả thuận trước** với ca sĩ về **giọng**, phong cách và nhịp độ — nhiều khi phải [[dich-giong|dịch giọng]] bài cho hợp tầm cữ của họ ([[cao-do|âm vực, tầm cữ]]).
 
 ## Thường gặp trong thực tế
-TJPS không nói chi tiết về phần [[prelude-ung-tac|dạo đầu]] và kết; cách làm phổ biến (kinh nghiệm chung, không phải quy tắc) là dùng vài ô cuối bài hoặc một [[turnaround-jazz|turnaround]] làm dạo đầu, kết dạo đầu ở hợp âm V7 để ca sĩ dễ bắt nốt đầu tiên.
+Lamar không nói chi tiết về phần [[prelude-ung-tac|dạo đầu]] và kết; cách làm phổ biến (kinh nghiệm chung, không phải quy tắc) là dùng vài ô cuối bài hoặc một [[turnaround-jazz|turnaround]] làm dạo đầu, kết dạo đầu ở hợp âm V7 để ca sĩ dễ bắt nốt đầu tiên.
 Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
 `,
   },
@@ -1215,7 +1215,7 @@ Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
     title: 'Jam session',
     category: 'jazz',
     aliases: ['jam session', 'jam', 'buổi jam', 'chơi jam', "Minton's Playhouse", 'cutting session'],
-    summary: "Jam session là buổi các nhạc công jazz tụ họp chơi ngẫu hứng các bài chuẩn mà không tập trước. Bài nêu những gì pianist cần chuẩn bị và cách cư xử trên sân khấu (theo TJPS), cùng lịch sử: các jam ở Minton's Playhouse đầu thập niên 1940 là nơi bebop ra đời.",
+    summary: "Jam session là buổi các nhạc công jazz tụ họp chơi ngẫu hứng các bài chuẩn mà không tập trước. Bài nêu những gì pianist cần chuẩn bị và cách cư xử trên sân khấu (theo Lamar), cùng lịch sử: các jam ở Minton's Playhouse đầu thập niên 1940 là nơi bebop ra đời.",
     wiki: 'Jam_session',
     refs: [
       ['The Jazz Piano Site — Preparing for a Jam Session', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/preparing-for-a-jam-session/'],
@@ -1225,14 +1225,14 @@ Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
       ['Elon University Jazz Studies — jam session etiquette', 'https://www.elon.edu/u/academics/arts-and-sciences/jazz-studies/?p=1719'],
     ],
     body: `
-## Pianist cần chuẩn bị gì? (theo TJPS)
+## Pianist cần chuẩn bị gì? (theo Lamar)
 - Xin **danh sách bài** của buổi jam trước và học các bài đó.
 - Mọi buổi jam đều nên có ít nhất một bài **[[rhythm-changes]]** — tập nó ở mọi giọng.
 - Vai trò: bạn **đệm hợp âm** ([[dem-jazz]]) và sẽ được **solo**; nếu không có bass, bạn chơi cả [[bass-di-jazz|đường bass]].
 
 ## Trên sân khấu
 - **Âm vực**: tránh vùng trầm khi đã có [[double-bass|contrabass]]; tránh âm vực của ca sĩ ([[dem-cho-ca-si]]).
-- **Lắng nghe người solo**: họ lên cao thì mình xuống thấp, họ nhỏ thì mình nhỏ, đáp lại câu của họ như [[ngau-hung-piano|hỏi – đáp]] (TJPS).
+- **Lắng nghe người solo**: họ lên cao thì mình xuống thấp, họ nhỏ thì mình nhỏ, đáp lại câu của họ như [[ngau-hung-piano|hỏi – đáp]] (Lamar).
 - **Đổi bốn** (trading fours): những người solo lần lượt chơi 4 ô xen với trống, theo thứ tự solo ban đầu, cho đến hết vòng; báo hiệu quay về giai điệu bằng ánh mắt và bằng chính cách chơi; không muốn solo thì báo trước (theo hướng dẫn của Elon University).
 - Giữ solo **ngắn** trong buổi jam đông người.
 Cấu trúc chung của một lượt chơi ([[hinh-thuc-ca-khuc-32|head]] – solo – head): [[ngau-hung-jazz]].
@@ -1333,16 +1333,16 @@ Thay V7 bằng hợp âm 7 át cách nó một tritone (G7 → D♭7) — hai h�
 - **Giảm nốt chung**: Cmaj7 – **C°7** (CT°7) – Cmaj7: nốt chung C giữ nguyên, các bè thêu quanh — Open Music Theory xếp đây là một kỹ thuật thêm hợp âm chính của jazz (xem [[hop-am-not-chung]]).
 
 ## 7. Thay thế bằng ii – V
-TJPS: một [[ii-v-i|ii – V]] tạo cảm giác **kết thúc mạnh dù dẫn về hợp âm nào**, miễn là [[dan-giong|dẫn giọng]] mượt — ii – V – vi hay ii – V – IV vẫn "chắc". Vì vậy có thể chèn ii – V trước gần như mọi hợp âm đích. Bảng thay thế của TJPS cho G7: **Dm7 – G7**, dài hơn là **Em7 – A7 | Dm7 – G7** (ii – V của ii – V).
+Lamar: một [[ii-v-i|ii – V]] tạo cảm giác **kết thúc mạnh dù dẫn về hợp âm nào**, miễn là [[dan-giong|dẫn giọng]] mượt — ii – V – vi hay ii – V – IV vẫn "chắc". Vì vậy có thể chèn ii – V trước gần như mọi hợp âm đích. Bảng thay thế của Lamar cho G7: **Dm7 – G7**, dài hơn là **Em7 – A7 | Dm7 – G7** (ii – V của ii – V).
 Bốn cách đi vào Cmaj7:
 | Tên | Trong Đô trưởng | Giải thích |
 |---|---|---|
 | ii – V thường | Dm7 – G7 → Cmaj7 | |
-| "Cửa trước" (frontdoor — tên TJPS dùng) | Bm7♭5 – E7 → Cmaj7 | ii – V của **Am7**, nhưng giải quyết về Cmaj7 (Am7 là hợp âm thay cùng chức năng của Cmaj7) |
-| Cửa sau (backdoor) | Fm7 – B♭7 → Cmaj7 | TJPS: **thay thế tritone của cửa trước** (E7 → B♭7) — xem mục 5 |
-| ii – V tritone | A♭m7 – D♭7 → Cmaj7 | Cả cặp ii – V dời đi một tritone (cách ghi phổ biến, không thấy TJPS viết riêng) |
+| "Cửa trước" (frontdoor — tên Lamar dùng) | Bm7♭5 – E7 → Cmaj7 | ii – V của **Am7**, nhưng giải quyết về Cmaj7 (Am7 là hợp âm thay cùng chức năng của Cmaj7) |
+| Cửa sau (backdoor) | Fm7 – B♭7 → Cmaj7 | Lamar: **thay thế tritone của cửa trước** (E7 → B♭7) — xem mục 5 |
+| ii – V tritone | A♭m7 – D♭7 → Cmaj7 | Cả cặp ii – V dời đi một tritone (cách ghi phổ biến, không thấy Lamar viết riêng) |
 ::staff treble D4+F4+A4+C5=Dm7 D4+F4+G4+B4=G7 E4+G4+B4+C5=Cmaj7 / D4+F4+A4+B4=Bm7♭5 D4+E4+G#4+B4=E7 E4+G4+B4+C5=Cmaj7 / C4+F4+Ab4+Eb5=Fm7 D4+F4+Ab4+Bb4=B♭7 E4+G4+B4+C5=Cmaj7 / Cb4+Eb4+Gb4+Ab4=A♭m7 Cb4+Db4+F4+Ab4=D♭7 C4+E4+G4+B4=Cmaj7 | Bốn đường ii – V về Cmaj7 (thế bấm hẹp, chỉ để so sánh nốt)
-TJPS tóm lại: các tiến trình này đều là **một ii – V hoặc thay thế tritone của một ii – V**, dẫn về I hoặc về một hợp âm thay cùng chức năng của I. Chuỗi ii – V nối nhau: [[phan-tich-tien-trinh-jazz]].
+Lamar tóm lại: các tiến trình này đều là **một ii – V hoặc thay thế tritone của một ii – V**, dẫn về I hoặc về một hợp âm thay cùng chức năng của I. Chuỗi ii – V nối nhau: [[phan-tich-tien-trinh-jazz]].
 
 ## Điều kiện để thay thế
 Nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng phải là **nốt hợp âm** hoặc **[[hop-am-mo-rong|nốt căng]] hợp lý** của hợp âm mới. Nếu va chạm nửa cung với nốt 3 hoặc 7 của hợp âm mới, hãy chọn phép thay khác.
@@ -1361,7 +1361,7 @@ Thêm: [[hop-am-luot-jazz]], [[constant-structures]].
       ['The Jazz Piano Site — Diminished Scale & Double Diminished Chord', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-scales/diminished-scale/'],
     ],
     body: `
-## Định nghĩa (theo TJPS)
+## Định nghĩa (theo Lamar)
 - **Hợp âm lướt** (passing chord): hợp âm **ngắn** (thường một phách hoặc nửa ô) chen giữa hai hợp âm quan trọng; nó **không** có vai trò hoà âm riêng — giống [[not-ngoai-hop-am|nốt lướt]] nhưng ở cấp hợp âm.
 - **Hợp âm tiếp cận** (approach chord): hợp âm lướt cách hợp âm đích **nửa cung** (cromatic) hoặc **một cung** (diatonic).
 Cùng một hợp âm có thể được phân tích theo nhiều cách — hợp âm lướt, át phụ hay thay thế — tuỳ ngữ cảnh.
@@ -1377,7 +1377,7 @@ Chỉ có **ba** hợp âm 7 giảm khác nhau (C°7 = E♭°7 = G♭°7 = A°7 
 **3. Át phụ làm hợp âm tiếp cận** — chen V7 của hợp âm đích ngay trước nó (A7 → Dm7), xem [[hop-am-at-phu]] và [[thay-the-hop-am]].
 
 ## Trong locked hands và đệm
-Khi hoà âm từng nốt giai điệu bằng [[hop-am-khoi|hợp âm khối]], các nốt không thuộc hợp âm thường được hoà âm bằng hợp âm 7 giảm lướt. Trong gospel – jazz, TJPS minh hoạ các hợp âm giảm lướt như C7 → F°7 → Fmaj7 để **trì hoãn** sự giải quyết.
+Khi hoà âm từng nốt giai điệu bằng [[hop-am-khoi|hợp âm khối]], các nốt không thuộc hợp âm thường được hoà âm bằng hợp âm 7 giảm lướt. Trong gospel – jazz, Lamar minh hoạ các hợp âm giảm lướt như C7 → F°7 → Fmaj7 để **trì hoãn** sự giải quyết.
 Liên quan: [[tai-hoa-am]], [[dem-jazz]].
 `,
   },
@@ -1432,8 +1432,8 @@ Giai điệu 4 ô: **E – F – B – C** (mỗi ô một nốt dài), hoà âm
 ## Tái hoà âm trong biểu diễn
 Nhiều phép thay thế được dùng **ngay khi chơi**, nên người đệm và người độc tấu phải nghe nhau: nếu piano thay G7 bằng D♭7 trong khi bass vẫn chơi G, hai hợp âm sẽ va chạm. [[ky-hieu-hop-am|Lead sheet]] chỉ là **khung**; tái hoà âm là phần sáng tạo của người chơi.
 
-## Làm một bài hát "jazzy" (TJPS)
-TJPS: kết hợp các lớp dưới đây có thể biến **gần như bất kỳ bài nào** — pop, cổ điển, đồng quê — thành một bài nghe "jazz". Xếp từ nhẹ đến mạnh:
+## Làm một bài hát "jazzy" (Lamar)
+Lamar: kết hợp các lớp dưới đây có thể biến **gần như bất kỳ bài nào** — pop, cổ điển, đồng quê — thành một bài nghe "jazz". Xếp từ nhẹ đến mạnh:
 1. Thêm [[hop-am-bay|nốt 7]] cho mọi hợp âm.
 2. Thêm [[hop-am-mo-rong|nốt mở rộng]] (9, 13).
 3. [[hop-am-at-bien-hoa|Hợp âm biến hoá]] (♭9, ♯9, ♭13…).
@@ -1443,14 +1443,14 @@ TJPS: kết hợp các lớp dưới đây có thể biến **gần như bất k
 7. **Tái hoà âm** (bảng ở trên, quy trình ở dưới).
 8. Cách tiếp cận **[[dieu-thuc|điệu thức]]**: chỉ một hai hợp âm, thường là một vamp — xem [[jazz-dieu-thuc]].
 9. **Đổi nhịp** (5/4, 7/8…) — xem [[doi-nhip-the-loai-jazz]].
-Công thức đơn giản nhất của TJPS cho piano: tay trái [[bass-di-jazz|bass đi]], tay phải [[not-dan-huong|nốt dẫn hướng]] (3 và 7) cộng giai điệu — rồi [[ngau-hung-piano|ngẫu hứng]].
+Công thức đơn giản nhất của Lamar cho piano: tay trái [[bass-di-jazz|bass đi]], tay phải [[not-dan-huong|nốt dẫn hướng]] (3 và 7) cộng giai điệu — rồi [[ngau-hung-piano|ngẫu hứng]].
 
-## Quy trình tái hoà âm (TJPS)
+## Quy trình tái hoà âm (Lamar)
 1. Tìm **nốt giai điệu chính** của mỗi ô — nốt duy nhất phải giữ.
 2. Đổi hợp âm (và/hoặc chỉnh giai điệu) sao cho nốt đó là **hoà âm chấp nhận được**: một nốt dẫn hướng (3 hoặc 7) hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Mọi nốt khác của hợp âm — kể cả gốc, 3, 7 — đều có thể đổi, **trừ** nốt giai điệu chính.
 3. Nối các hợp âm theo **nửa cung**, theo **bậc trong giọng** hoặc theo **[[vong-quang-nam|vòng quãng 5]]**.
 4. Điều khiển **căng – giãn**: nốt căng cao và biến hoá (♭13) tạo căng; nốt dẫn hướng và nốt căng thấp (9) tạo giãn.
-Bảng thay thế của TJPS chia các phép thay thành nhóm: cromatic (quãng cố định), [[vong-coltrane|Coltrane]], [[thay-the-hop-am|diatonic]], dựa trên giai điệu, và dựa trên bè trầm ([[bass-ngan|bass ngân]], bass đi liền bậc). Các phép thay bằng ii – V: [[thay-the-hop-am]]. Biến thể gospel: [[tai-hoa-am-gospel]]; tái hoà âm sang [[the-loai|thể loại]] khác: [[doi-nhip-the-loai-jazz]].
+Bảng thay thế của Lamar chia các phép thay thành nhóm: cromatic (quãng cố định), [[vong-coltrane|Coltrane]], [[thay-the-hop-am|diatonic]], dựa trên giai điệu, và dựa trên bè trầm ([[bass-ngan|bass ngân]], bass đi liền bậc). Các phép thay bằng ii – V: [[thay-the-hop-am]]. Biến thể gospel: [[tai-hoa-am-gospel]]; tái hoà âm sang [[the-loai|thể loại]] khác: [[doi-nhip-the-loai-jazz]].
 
 ## Gợi ý luyện tập
 1. Chọn một bài quen (ví dụ "Twinkle Twinkle Little Star") với vòng gốc I – IV – V.
@@ -1480,15 +1480,15 @@ Công cụ khác: [[line-cliche]], [[turnaround-jazz]], [[constant-structures]].
 [[tai-hoa-am|Tái hoà âm]] đổi **hợp âm**; bài này nói về ba cách đổi **những thứ khác** của một bài chuẩn: nhịp, [[the-loai|thể loại]] và cảm giác thời gian.
 
 ## 1. Đổi số chỉ nhịp
-- TJPS: phần lớn bài jazz ở **4/4** — có lẽ từ thời [[swing|Swing]], khi jazz là nhạc khiêu vũ và 4/4 có phách nhấn 2 – 4 dễ nhảy hơn nhiều so với kiểu 13/8.
-- Ví dụ TJPS: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **[[tieu-pham-piano|valse]] 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là [[dan-nhac-giao-huong|phối khí]] của Quincy Jones cho Frank Sinatra (1964).
-- TJPS gợi ý thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
+- Lamar: phần lớn bài jazz ở **4/4** — có lẽ từ thời [[swing|Swing]], khi jazz là nhạc khiêu vũ và 4/4 có phách nhấn 2 – 4 dễ nhảy hơn nhiều so với kiểu 13/8.
+- Ví dụ Lamar: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **[[tieu-pham-piano|valse]] 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là [[dan-nhac-giao-huong|phối khí]] của Quincy Jones cho Frank Sinatra (1964).
+- Lamar gợi ý thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
 - Ở nhịp lẻ, [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] có thể không đối xứng.
 ::rhythm 4/4 h q q / w // | Minh hoạ: hai ô 4/4 của một câu giai điệu…
 ::rhythm 3/4 q q q / h. // | …chuyển sang 3/4 bằng cách rút nốt dài: mỗi ô gốc thành một ô valse (một cách làm, không phải quy tắc)
 
 ## 2. Đổi thể loại bằng hợp âm
-TJPS lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều thể loại; ý chính: **chỉ cần chọn hợp âm** đã có thể chuyển bài sang thể loại khác.
+Lamar lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều thể loại; ý chính: **chỉ cần chọn hợp âm** đã có thể chuyển bài sang thể loại khác.
 | Thể loại | Hợp âm |
 |---|---|
 | Pop (bản gốc) | Phần lớn [[hop-am-ba|hợp âm ba]] trong giọng, [[giai-dieu|giai điệu]] rơi vào nốt gốc |
@@ -1496,16 +1496,16 @@ TJPS lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều th�
 | Jazz điệu thức | Bỏ tiến trình gốc, chỉ dùng **một hai hợp âm** (xem [[jazz-dieu-thuc]]) |
 | Jazz [[phi-dieu-tinh|phi điệu tính]] | Một phiên bản phi điệu tính **khá thuận tai** — không phải [[am-cum|âm cụm]] ngẫu nhiên ([[post-bop-free-jazz]]) |
 | [[blues-12-nhip|Blues]] | Hợp âm blues **chưa đủ**: nếu giai điệu tránh [[am-giai-blues|nốt blue]] thì bài vẫn không "blues" |
-Kết luận của TJPS: thể loại đến từ **cách giai điệu và hoà âm tương tác**. Phần nhịp đệm (bass đi, [[ostinato|bass lặp]] blues, bossa nova) đổi theo — xem [[bass-di-jazz]], [[dieu-dem-pho-bien]], [[dem-jazz]].
+Kết luận của Lamar: thể loại đến từ **cách giai điệu và hoà âm tương tác**. Phần nhịp đệm (bass đi, [[ostinato|bass lặp]] blues, bossa nova) đổi theo — xem [[bass-di-jazz]], [[dieu-dem-pho-bien]], [[dem-jazz]].
 
 ## 3. Chơi tự do thời gian
-TJPS: người học hay bỏ qua kỹ năng này, nhưng nó rất cần cho **dạo đầu**, và pianist chơi một mình không cần [[kiem-soat-toc-do|giữ nhịp]] cứng.
+Lamar: người học hay bỏ qua kỹ năng này, nhưng nó rất cần cho **dạo đầu**, và pianist chơi một mình không cần [[kiem-soat-toc-do|giữ nhịp]] cứng.
 **Cách làm dạo đầu phổ biến**: chơi **cả [[hinh-thuc-am-nhac|hình thức]] một lần ở thời gian tự do**, rồi **vào nhịp đột ngột** khi bài lặp lại.
 | Phần của bài | Kỹ thuật |
 |---|---|
 | **Các [[cau-nhac|câu nhạc]]** | Giữ gần nguyên để giai điệu còn nhận ra; [[trang-tri-giai-dieu-jazz|trang trí]] nhẹ; [[rubato]] có chừng mực; [[ky-thuat-quang-tam|chơi quãng 8]]; chuyển giai điệu sang [[quang|quãng 8]] khác |
 | **Chỗ nghỉ giữa các câu** | [[luyen-hop-am-rai|Hợp âm rải]], chạy [[am-giai|âm giai]], "fill" hay [[ngau-hung-piano|ngẫu hứng]] ngắn, hoặc chơi và giữ một hợp âm — ở đây có thể chậm hẳn lại, gần như không còn nhịp |
-TJPS xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp" — nên cân bằng bằng những yếu tố có cấu trúc (giai điệu rõ, hoà âm quen). Liên hệ cổ điển: [[prelude-ung-tac|prelude ứng tác]], [[cadenza]].
+Lamar xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp" — nên cân bằng bằng những yếu tố có cấu trúc (giai điệu rõ, hoà âm quen). Liên hệ cổ điển: [[prelude-ung-tac|prelude ứng tác]], [[cadenza]].
 `,
   },
   {
@@ -1513,7 +1513,7 @@ TJPS xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp"
     title: 'Tái hoà âm gospel',
     category: 'jazz',
     aliases: ['gospel reharmonization', 'gospel jazz', 'tái hoà âm gospel', 'Amazing Grace', 'backcycling', 'gospel piano'],
-    summary: 'Gospel là hoà âm nhà thờ của người Mỹ gốc Phi, gần gũi với blues và hard bop. TJPS lấy "Amazing Grace" (giai điệu ngũ cung, chỉ ba hợp âm I – IV – V) và biến nó thành gospel – jazz: lùi vòng quãng 5 (C – F – C), hoà âm hoá gần như mọi nốt giai điệu, hợp âm 7 giảm lướt, át phụ và thay thế tritone.',
+    summary: 'Gospel là hoà âm nhà thờ của người Mỹ gốc Phi, gần gũi với blues và hard bop. Lamar lấy "Amazing Grace" (giai điệu ngũ cung, chỉ ba hợp âm I – IV – V) và biến nó thành gospel – jazz: lùi vòng quãng 5 (C – F – C), hoà âm hoá gần như mọi nốt giai điệu, hợp âm 7 giảm lướt, át phụ và thay thế tritone.',
     refs: [
       ['The Jazz Piano Site — Gospel-Jazz Piano Techniques and Reharmonization', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/gospel-jazz-piano-techniques-and-reharmonization/'],
       ['The Jazz Piano Site — Gospel Jazz Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/gospel-jazz-explained/'],
@@ -1522,17 +1522,17 @@ TJPS xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp"
     ],
     body: `
 ## Điểm xuất phát
-TJPS chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
+Lamar chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
 - Bản cơ bản chỉ dùng **I, IV, V** (C, F, G).
 - [[giai-dieu|Giai điệu]] (gần như) chỉ dùng **[[am-giai-ngu-cung|ngũ cung]] trưởng** C – D – E – G – A.
 - Tay trái là đường bass đơn giản, nhấn nốt gốc.
 
-## Các kỹ thuật gospel (theo TJPS)
-- **Lùi vòng quãng 5** (backcycling): chèn [[hop-am-ba|hợp âm]] cách một bước ngược chiều [[vong-quang-nam|vòng quãng 5]] rồi quay lại — C – F – C. Chuyển động IV – I này là màu "**nhà thờ**" ([[cau-ket|kết plagal]]); TJPS cũng gọi nó như vậy khi nói về [[phong-cach-jazz|hard bop]].
+## Các kỹ thuật gospel (theo Lamar)
+- **Lùi vòng quãng 5** (backcycling): chèn [[hop-am-ba|hợp âm]] cách một bước ngược chiều [[vong-quang-nam|vòng quãng 5]] rồi quay lại — C – F – C. Chuyển động IV – I này là màu "**nhà thờ**" ([[cau-ket|kết plagal]]); Lamar cũng gọi nó như vậy khi nói về [[phong-cach-jazz|hard bop]].
 - **Hoà âm hoá gần như từng nốt giai điệu** ở tay phải, xếp hẹp, chủ yếu đi **song song**, nốt giai điệu luôn ở trên cùng — họ hàng của [[hop-am-khoi|block chords]].
 - Thêm [[hop-am-mo-rong|nốt căng]] và nốt biến hoá, [[hop-am-at-phu|át phụ]], [[hop-am-luot-jazz|hợp âm 7 giảm lướt]], [[thay-the-hop-am|thay thế]].
 
-## Từng chỗ trong bài (theo TJPS)
+## Từng chỗ trong bài (theo Lamar)
 | Chỗ | Kỹ thuật |
 |---|---|
 | Ô 2 | C7 hướng về Fmaj7, chèn **F°7** để **trì hoãn** giải quyết |
@@ -1550,17 +1550,17 @@ Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60):
     title: 'Sáng tác jazz và phát triển giai điệu',
     category: 'jazz',
     aliases: ['jazz composition', 'sáng tác jazz', 'composition and melodic development', 'phát triển giai điệu', 'snowflake method', 'doodling method'],
-    summary: 'TJPS xem sáng tác là "ngẫu hứng không có tính tức thời": phân tích giai điệu theo quãng, motif, tiết tấu, âm giai, hoà âm; phát triển motif bằng đảo, ngược, giãn, co, tách mảnh; đặt đỉnh giai điệu ở khoảng 2/3–3/4 câu; hai quy trình "vẽ nguệch ngoạc" và "bông tuyết" để đi từ một câu nhạc đến một lead sheet.',
+    summary: 'Lamar xem sáng tác là "ngẫu hứng không có tính tức thời": phân tích giai điệu theo quãng, motif, tiết tấu, âm giai, hoà âm; phát triển motif bằng đảo, ngược, giãn, co, tách mảnh; đặt đỉnh giai điệu ở khoảng 2/3–3/4 câu; hai quy trình "vẽ nguệch ngoạc" và "bông tuyết" để đi từ một câu nhạc đến một lead sheet.',
     refs: [
       ['The Jazz Piano Site — Composition and Melodic Development', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/composition-and-melodic-development/'],
       ['The Jazz Piano Site — Contrafacts', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/contrafacts/'],
       ['The Jazz Piano Site — Rhythm Changes', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/rhythm-changes/'],
     ],
     body: `
-TJPS: sáng tác là "**[[ngau-hung-piano|ngẫu hứng]] không có tính tức thời**" — cùng những công cụ của [[xay-dung-bai-solo|xây dựng bài solo]], nhưng có thời gian để chọn lọc.
+Lamar: sáng tác là "**[[ngau-hung-piano|ngẫu hứng]] không có tính tức thời**" — cùng những công cụ của [[xay-dung-bai-solo|xây dựng bài solo]], nhưng có thời gian để chọn lọc.
 
 ## Phân tích một giai điệu
-Năm góc nhìn (TJPS): **[[quang|quãng]]** (các bước nhảy), **motif**, **[[tiet-tau|tiết tấu]]**, **[[am-giai|âm giai]]** (giai điệu lấy nốt từ âm giai nào), **hoà âm** (nốt giai điệu so với [[hop-am-ba|hợp âm]] — xem [[not-dan-huong]], [[not-tranh-va-quang-nghich]]). Đây cũng là các yếu tố trong [[phan-tich-phong-cach|khung LaRue]].
+Năm góc nhìn (Lamar): **[[quang|quãng]]** (các bước nhảy), **motif**, **[[tiet-tau|tiết tấu]]**, **[[am-giai|âm giai]]** (giai điệu lấy nốt từ âm giai nào), **hoà âm** (nốt giai điệu so với [[hop-am-ba|hợp âm]] — xem [[not-dan-huong]], [[not-tranh-va-quang-nghich]]). Đây cũng là các yếu tố trong [[phan-tich-phong-cach|khung LaRue]].
 
 ## Phát triển motif
 Đổi [[cao-do|cao độ]] hoặc tiết tấu, **đảo** ([[the-dao-hop-am|inversion]]), **ngược** (retrograde), **giãn** (augmentation), **co** (diminution), **tách mảnh** (fragmentation) — đúng các kỹ thuật cổ điển trong [[motif]], [[bien-doi-chu-de]] và [[doi-am|đối âm]].
@@ -1573,11 +1573,11 @@ Năm góc nhìn (TJPS): **[[quang|quãng]]** (các bước nhảy), **motif**, *
 ## Hai quy trình
 - **"Vẽ nguệch ngoạc"** (doodling): bắt đầu từ một giai điệu nghe hay rồi chỉnh cho hợp phong cách.
 - **"Bông tuyết"** (snowflake): dạo đàn → tìm một câu → phát triển thành motif → hoà âm hoá → có một **[[he-so-nashville-va-lead-sheet|lead sheet]]** ([[ky-hieu-hop-am]]). Bước cuối: **phối** ([[hinh-thuc-am-nhac|hình thức]], [[ngon-bam|thế bấm]], nhạc cụ, [[cuong-do|cường độ]]).
-::form Dạo_đàn Một_câu Motif Hoà_âm Ký_âm Phối | Quy trình "bông tuyết" của TJPS: dạo đàn → tìm một câu → motif → hoà âm hoá → ký âm thành lead sheet → phối
+::form Dạo_đàn Một_câu Motif Hoà_âm Ký_âm Phối | Quy trình "bông tuyết" của Lamar: dạo đàn → tìm một câu → motif → hoà âm hoá → ký âm thành lead sheet → phối
 
 ## Contrafact: giai điệu mới trên vòng hợp âm cũ
 Bản quyền bảo vệ giai điệu và lời, **không** bảo vệ [[vong-hop-am|vòng hợp âm]], nên nhạc công [[phong-cach-jazz|bebop]] viết rất nhiều **contrafact** — chi tiết và ví dụ ở [[rhythm-changes]]. Đó là cách tập sáng tác dễ nhất: giữ hoà âm quen, chỉ viết giai điệu mới.
-Bài TJPS gợi ý để học các kỹ thuật: "E.S.P.", "In Walked Bud", "Satin Doll", "Autumn Leaves", "All the Things You Are". Liên quan: [[hinh-thuc-ca-khuc-32]], [[phoi-hoa-am-giai-dieu]].
+Bài Lamar gợi ý để học các kỹ thuật: "E.S.P.", "In Walked Bud", "Satin Doll", "Autumn Leaves", "All the Things You Are". Liên quan: [[hinh-thuc-ca-khuc-32]], [[phoi-hoa-am-giai-dieu]].
 `,
   },
   {
@@ -1693,12 +1693,12 @@ Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]
 ::staff treble B3+D#4+F#4+A#4=Bmaj7 D4+F#4+A4+C5=D7 G4+B4+D5+F#5=Gmaj7 Bb3+D4+F4+Ab4=B♭7 Eb4+G4+Bb4+D5=E♭maj7 | Bmaj7 – D7 – Gmaj7 – B♭7 – E♭maj7: mỗi giọng mới được dẫn vào bằng hợp âm 7 át của nó
 
 ## Như một phép thay thế cho ii – V – I
-TJPS cho ví dụ trong Đô trưởng, thay một ii – V – I bốn ô:
+Lamar cho ví dụ trong Đô trưởng, thay một ii – V – I bốn ô:
 | | Ô 1 | Ô 2 | Ô 3 | Ô 4 |
 |---|---|---|---|---|
 | Gốc | Dm7 | G7 | Cmaj7 | Cmaj7 |
 | Vòng Coltrane | Dm7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7 |
-Các giọng C – A♭ – E cũng cách nhau quãng 3 trưởng (một hợp âm ba tăng); TJPS áp cách này cho cả iii – vi – ii – V (Em7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7), và lưu ý có thể đổi giọng theo **bất kỳ quãng cố định nào** (quãng 3 thứ, tritone…).
+Các giọng C – A♭ – E cũng cách nhau quãng 3 trưởng (một hợp âm ba tăng); Lamar áp cách này cho cả iii – vi – ii – V (Em7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7), và lưu ý có thể đổi giọng theo **bất kỳ quãng cố định nào** (quãng 3 thứ, tritone…).
 Coltrane cũng dùng hệ thống này để **[[tai-hoa-am|tái hoà âm]]** các tiến trình sẵn có: một [[ii-v-i]] được "lấp đầy" bằng các chặng cách nhau quãng 3 trưởng trước khi về chủ. Ví dụ "Countdown" là bản tái hoà âm của "Tune Up" (Miles Davis): khung lớn vẫn là các giọng của "Tune Up", nhưng từng chặng được chia nhỏ theo vòng Coltrane.
 
 ## Liên hệ với hoà âm cổ điển
@@ -1725,18 +1725,18 @@ Giai đoạn trước đó của Coltrane: [[sheets-of-sound]]. Phân tích chi 
     ],
     body: `
 ## Định nghĩa
-Theo TJPS và Wikipedia, **constant structures** là chuỗi **ba hợp âm cùng loại trở lên** (ví dụ toàn [[hop-am-bay|maj7]]) với **nốt gốc chuyển động không theo [[chuc-nang-hoa-am|chức năng]]** — [[dieu-tinh|trung tâm giọng]] dịch chuyển liên tục. Nốt gốc thường đi theo một quãng cố định (hay gặp là quãng 3) hoặc vẽ một [[luyen-hop-am-rai|hợp âm rải]]. Vì không có lực hút V – I, chuỗi có thể **dừng ở bất kỳ hợp âm nào** mà vẫn nghe trọn vẹn. Wikipedia ghi kỹ thuật này được **[[bill-evans|Bill Evans]]** và **[[herbie-hancock|Herbie Hancock]]** phổ biến.
+Theo Lamar và Wikipedia, **constant structures** là chuỗi **ba hợp âm cùng loại trở lên** (ví dụ toàn [[hop-am-bay|maj7]]) với **nốt gốc chuyển động không theo [[chuc-nang-hoa-am|chức năng]]** — [[dieu-tinh|trung tâm giọng]] dịch chuyển liên tục. Nốt gốc thường đi theo một quãng cố định (hay gặp là quãng 3) hoặc vẽ một [[luyen-hop-am-rai|hợp âm rải]]. Vì không có lực hút V – I, chuỗi có thể **dừng ở bất kỳ hợp âm nào** mà vẫn nghe trọn vẹn. Wikipedia ghi kỹ thuật này được **[[bill-evans|Bill Evans]]** và **[[herbie-hancock|Herbie Hancock]]** phổ biến.
 
 ## Ví dụ
 ::staff treble F4+A4+C5+E5=Fmaj7 Ab4+C5+Eb5+G5=A♭maj7 Db4+F4+Ab4+C5=D♭maj7 Gb4+Bb4+Db5+F5=G♭maj7 | Ví dụ của Wikipedia: Fmaj7 – A♭maj7 – D♭maj7 – G♭maj7 (rồi C13sus4) — chỉ Fmaj7 thuộc giọng Fa
-TJPS đưa ví dụ F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được với toàn m7 hoặc toàn 7): nốt gốc đi xuống từng cung.
+Lamar đưa ví dụ F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được với toàn m7 hoặc toàn 7): nốt gốc đi xuống từng cung.
 
 **"Inner Urge"** (Joe Henderson, thu âm 1964): mở đầu bằng F♯m7♭5, rồi chuỗi **Fmaj7♯11 – E♭maj7♯11 – D♭maj7♯11**, mỗi hợp âm 4 ô, trước khi các hợp âm maj7♯11 đổi nhanh hơn.
 
 ## Nghe và dùng
 - Màu **trôi**, hiện đại, không có cảm giác "về nhà" — gần với [[hoa-am-song-song|hoà âm song song]] của [[claude-debussy|Debussy]] (xem [[an-tuong]]).
 - Khi [[ngau-hung-piano|ngẫu hứng]], mỗi hợp âm là một **giọng tạm** — chuyển âm giai theo từng hợp âm (ví dụ [[dieu-thuc|Lydian]] trên maj7♯11; xem [[he-thong-hop-am-am-giai]]).
-- TJPS xem đây là một công cụ [[tai-hoa-am|tái hoà âm]] mạnh: thay một đoạn [[ii-v-i|ii – V – I]] bằng chuỗi cùng loại có giai điệu phù hợp.
+- Lamar xem đây là một công cụ [[tai-hoa-am|tái hoà âm]] mạnh: thay một đoạn [[ii-v-i|ii – V – I]] bằng chuỗi cùng loại có giai điệu phù hợp.
 `,
   },
   {
@@ -1754,7 +1754,7 @@ TJPS đưa ví dụ F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được
     ],
     body: `
 ## Nốt mục tiêu
-**Nốt mục tiêu** là nốt [[cau-nhac|câu nhạc]] "muốn đến": thường là **nốt [[hop-am-ba|hợp âm]]** (đặc biệt [[not-dan-huong|nốt 3 và 7]] — [[ii-v-i|nốt dẫn hướng]]), một [[hop-am-mo-rong|nốt căng]] dùng được, hoặc nốt [[giai-dieu|giai điệu]]. Nó thường rơi vào **[[so-chi-nhip|phách mạnh]]** hoặc **cuối câu**. Các nốt dẫn tới nó là **nốt lướt** — chơi nhanh, ít quan trọng về hoà âm (TJPS). Đây là phiên bản jazz của [[not-ngoai-hop-am|nốt ngoài hợp âm]] cổ điển.
+**Nốt mục tiêu** là nốt [[cau-nhac|câu nhạc]] "muốn đến": thường là **nốt [[hop-am-ba|hợp âm]]** (đặc biệt [[not-dan-huong|nốt 3 và 7]] — [[ii-v-i|nốt dẫn hướng]]), một [[hop-am-mo-rong|nốt căng]] dùng được, hoặc nốt [[giai-dieu|giai điệu]]. Nó thường rơi vào **[[so-chi-nhip|phách mạnh]]** hoặc **cuối câu**. Các nốt dẫn tới nó là **nốt lướt** — chơi nhanh, ít quan trọng về hoà âm (Lamar). Đây là phiên bản jazz của [[not-ngoai-hop-am|nốt ngoài hợp âm]] cổ điển.
 
 ## Nốt tiếp cận
 - **Cromatic từ dưới**: B → C. **Cromatic từ trên**: D♭ → C.
@@ -1762,7 +1762,7 @@ TJPS đưa ví dụ F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được
 Cùng nguyên tắc dùng cho bè trầm ở [[bass-di-jazz|bass đi]].
 
 ## Bao vây (enclosure)
-TJPS: "chơi các nốt **ở hai phía** nốt mục tiêu trước khi chơi nốt mục tiêu". Hai nốt kẹp có thể liền bậc, cromatic hoặc trộn lẫn, theo thứ tự trên – dưới hoặc dưới – trên. **Charlie Parker** và **Cannonball Adderley** dùng bao vây rất nhiều — đó là một phần cốt lõi của "ngôn ngữ" [[phong-cach-jazz|bebop]].
+Lamar: "chơi các nốt **ở hai phía** nốt mục tiêu trước khi chơi nốt mục tiêu". Hai nốt kẹp có thể liền bậc, cromatic hoặc trộn lẫn, theo thứ tự trên – dưới hoặc dưới – trên. **Charlie Parker** và **Cannonball Adderley** dùng bao vây rất nhiều — đó là một phần cốt lõi của "ngôn ngữ" [[phong-cach-jazz|bebop]].
 ::staff treble F4 D#4 E4=E / D#4 F4 E4=E / F4 D4 D#4 E4=E | Ba cách bao vây nốt E (nốt 3 của C): F (trên, liền bậc) – D♯ (dưới, cromatic) – E; đảo thứ tự; F – D – D♯ (liền bậc trên, rồi hai nốt cromatic từ dưới)
 ::rhythm 4/4 e-e q h // | Đặt nốt mục tiêu vào phách: hai nốt bao vây là hai móc đơn trước phách 2, nốt mục tiêu rơi đúng phách (minh hoạ tiết tấu)
 
@@ -1796,9 +1796,9 @@ Liên quan: [[ngau-hung-jazz]], [[ngau-hung-doc-ngang]], [[phuong-phap-luyen-nga
 | Chất liệu | [[luyen-hop-am-rai|Hợp âm rải]], nốt hợp âm, [[not-ngoai-hop-am|nốt lướt]] cromatic | Âm giai, [[dieu-thuc|điệu thức]], motif |
 | Hợp với | [[phong-cach-jazz|Bebop]], tiến trình đổi hợp âm nhanh | [[jazz-dieu-thuc|Jazz điệu thức]], hợp âm kéo dài |
 | Nguy cơ | Nghe như bài tập hợp âm rải | Không bám hợp âm, mất "đường đi" |
-Phân biệt "dọc" (hợp âm) và "ngang" (giai điệu) là trung tâm trong lý thuyết của George Russell (xem [[he-thong-hop-am-am-giai]]). TJPS cho rằng cần nắm ngẫu hứng dọc **trước** các kỹ thuật phức tạp hơn.
+Phân biệt "dọc" (hợp âm) và "ngang" (giai điệu) là trung tâm trong lý thuyết của George Russell (xem [[he-thong-hop-am-am-giai]]). Lamar cho rằng cần nắm ngẫu hứng dọc **trước** các kỹ thuật phức tạp hơn.
 
-## Làm câu nhạc dọc bớt máy móc (theo TJPS)
+## Làm câu nhạc dọc bớt máy móc (theo Lamar)
 - **[[not-tiep-can-jazz|Bao vây]]** nốt hợp âm.
 - **[[mau-lap-chu-ky|Mẫu lặp theo chu kỳ]]** (cycled patterns) và **[[mo-tien-hoa-am|mô tiến]]**.
 - **Phát triển [[motif]]**.
@@ -1806,7 +1806,7 @@ Phân biệt "dọc" (hợp âm) và "ngang" (giai điệu) là trung tâm trong
 ::staff treble C4 E4 G4 B4 / C4 E4 G4 B3 | Hợp âm rải Cmaj7 đi lên, rồi dịch nốt B xuống một quãng 8: câu nhạc "xoay" hướng và đi tiếp từ chỗ mới
 
 ## Bản đồ hợp âm (chord mapping)
-Cách nối hai lối nghĩ (TJPS): chọn **một âm giai nền** hợp với cả tiến trình (hoặc cả một [[phan-tich-tien-trinh-jazz|giọng tạm]]), đi ra các ý riêng cho từng hợp âm rồi **quay về âm giai nền** để giải quyết căng thẳng.
+Cách nối hai lối nghĩ (Lamar): chọn **một âm giai nền** hợp với cả tiến trình (hoặc cả một [[phan-tich-tien-trinh-jazz|giọng tạm]]), đi ra các ý riêng cho từng hợp âm rồi **quay về âm giai nền** để giải quyết căng thẳng.
 Liên quan: [[ngau-hung-jazz]], [[choi-ngoai-jazz]].
 `,
   },
@@ -1828,19 +1828,19 @@ Liên quan: [[ngau-hung-jazz]], [[choi-ngoai-jazz]].
     ],
     body: `
 ## Căng và giải quyết
-TJPS tóm ý tưởng bao trùm của [[ngau-hung-jazz|ngẫu hứng jazz]] là **căng và giải quyết**: chơi nốt **nghịch** ("ngoài") tạo căng; quay về nốt **thuận** ("trong" — nốt hợp âm, [[hop-am-mo-rong|nốt căng]] dùng được) để giải quyết. Đây cũng là nguyên lý [[thuan-nghich|thuận – nghịch]] của âm nhạc cổ điển, chỉ ở mức táo bạo hơn.
+Lamar tóm ý tưởng bao trùm của [[ngau-hung-jazz|ngẫu hứng jazz]] là **căng và giải quyết**: chơi nốt **nghịch** ("ngoài") tạo căng; quay về nốt **thuận** ("trong" — nốt hợp âm, [[hop-am-mo-rong|nốt căng]] dùng được) để giải quyết. Đây cũng là nguyên lý [[thuan-nghich|thuận – nghịch]] của âm nhạc cổ điển, chỉ ở mức táo bạo hơn.
 
 ## Side-slipping
-Theo TJPS: chơi một câu trong âm giai của hợp âm, **lặp lại nó cao hoặc thấp hơn nửa cung**, rồi **quay về** âm giai gốc. Nhờ sự **lặp lại**, các nốt "sai" nghe như cố ý.
+Theo Lamar: chơi một câu trong âm giai của hợp âm, **lặp lại nó cao hoặc thấp hơn nửa cung**, rồi **quay về** âm giai gốc. Nhờ sự **lặp lại**, các nốt "sai" nghe như cố ý.
 ::staff treble D4 F4 A4 C5 / Eb4 Gb4 Bb4 Db5 / D4 F4 A4 C5 | Trên Dm7: câu nhạc trong âm giai Đô trưởng, lặp lại cao hơn nửa cung (chơi "ngoài"), rồi quay về
 - Pianist **[[mccoy-tyner|McCoy Tyner]]** hay side-slipping trong lối chơi [[am-giai-ngu-cung|ngũ cung]] ở tay phải; **John Coltrane** chuyển một motif qua nhiều giọng rồi quay về (ví dụ trong *A Love Supreme*). Nhà nghiên cứu Sami Linna cho rằng âm thanh "[[dieu-thuc|điệu thức]]" của Tyner thực ra đến nhiều từ hợp âm át và các cặp ii – V ở giọng khác.
 - Wikipedia liệt kê các cách chơi "ngoài" khác: chồng [[vong-coltrane|vòng Coltrane]] lên tiến trình, [[da-dieu-tinh|đa điệu tính]].
-- TJPS cũng mô tả side-slipping trong **đệm**: chơi hợp âm, nhanh chóng chơi hợp âm cùng loại cách nửa cung, rồi về lại (xem [[dem-jazz]]).
+- Lamar cũng mô tả side-slipping trong **đệm**: chơi hợp âm, nhanh chóng chơi hợp âm cùng loại cách nửa cung, rồi về lại (xem [[dem-jazz]]).
 
 ## Đa điệu tính (bitonality)
-TJPS: dùng một âm giai **khác** âm giai của hợp âm. Âm giai càng gần trên [[vong-quang-nam|vòng quãng 5]] càng nghe thuận; âm giai giữ được [[not-dan-huong|nốt 3 và 7]] của hợp âm thì hợp hơn.
+Lamar: dùng một âm giai **khác** âm giai của hợp âm. Âm giai càng gần trên [[vong-quang-nam|vòng quãng 5]] càng nghe thuận; âm giai giữ được [[not-dan-huong|nốt 3 và 7]] của hợp âm thì hợp hơn.
 
-## Bốn giai đoạn của người học ngẫu hứng (TJPS)
+## Bốn giai đoạn của người học ngẫu hứng (Lamar)
 1. **"Mày mò"**: biết âm giai nhưng chơi ngập ngừng, nhỏ, ngẫu nhiên.
 2. **"Coltrane"**: tự tin quá mức, nhồi càng nhiều nốt càng tốt.
 3. **"Basie"**: chậm lại, câu ngắn, có khoảng nghỉ — **đầu óc** chọn nốt chứ không phải ngón tay.
@@ -1865,7 +1865,7 @@ Thêm: [[mau-lap-chu-ky]], [[superimposition-jazz]], [[not-tranh-va-quang-nghich
     ],
     body: `
 ## Vì sao là nốt 3 và 7?
-Theo TJPS, **nốt 3 và nốt 7** quyết định **tính chất** hợp âm (trưởng 7, thứ 7, át 7); chỉ cần hai nốt này là đã nghe ra "cảm giác" của hợp âm. Nốt gốc thường do bass chơi, nốt 5 ít mang thông tin. Vì vậy hai nốt này cũng là tay trái [[toi-gian|tối giản]] — [[xep-hop-am|shell voicing]].
+Theo Lamar, **nốt 3 và nốt 7** quyết định **tính chất** hợp âm (trưởng 7, thứ 7, át 7); chỉ cần hai nốt này là đã nghe ra "cảm giác" của hợp âm. Nốt gốc thường do bass chơi, nốt 5 ít mang thông tin. Vì vậy hai nốt này cũng là tay trái [[toi-gian|tối giản]] — [[xep-hop-am|shell voicing]].
 | Hợp âm | Nốt 3 | Nốt 7 |
 |---|---|---|
 | Dm7 | F | C |
@@ -1873,19 +1873,19 @@ Theo TJPS, **nốt 3 và nốt 7** quyết định **tính chất** hợp âm (t
 | Cmaj7 | E | B |
 
 ## Đường nốt dẫn hướng
-TJPS: tiến trình hợp âm thường tạo ra những **đường nốt dẫn hướng** dễ theo dõi khi [[ngau-hung-piano|ngẫu hứng]] — ở mỗi lần đổi hợp âm, đường ấy **đứng yên hoặc đi xuống một bậc**. Trong [[ii-v-i|ii – V – I]], nốt 7 của hợp âm này đi xuống thành nốt 3 của hợp âm sau.
+Lamar: tiến trình hợp âm thường tạo ra những **đường nốt dẫn hướng** dễ theo dõi khi [[ngau-hung-piano|ngẫu hứng]] — ở mỗi lần đổi hợp âm, đường ấy **đứng yên hoặc đi xuống một bậc**. Trong [[ii-v-i|ii – V – I]], nốt 7 của hợp âm này đi xuống thành nốt 3 của hợp âm sau.
 ::staff treble C5=7 B4=3 B4=7 / F4=3 F4=7 E4=3 | Hai đường nốt dẫn hướng qua Dm7 – G7 – Cmaj7: C → B → B và F → F → E — mỗi bước đứng yên hoặc đi xuống
 Trong V7 → I, tritone B – F của G7 giải quyết vào quãng 3 C – E (xem [[thuan-nghich]], [[dan-giong]]).
 
-## Bài luyện "nhắm nốt dẫn hướng" (TJPS)
+## Bài luyện "nhắm nốt dẫn hướng" (Lamar)
 1. Chơi những **câu ngắn có khoảng nghỉ**.
 2. **Kết mỗi câu bằng nốt 3 hoặc 7** của hợp âm đang vang (ví dụ A hoặc E♭ trên F7).
 3. **Nhìn trước**: [[cau-nhac|câu nhạc]] thường kết ở ô sau, khi hợp âm đã đổi.
 4. Khi đã quen, thử nhắm nốt 9 — nghe "táo bạo" hơn.
-TJPS nói bài luyện này buộc người chơi **bám theo tiến trình** và **kết câu chắc chắn**. Nốt dẫn hướng cũng là nốt mục tiêu tốt nhất cho [[not-tiep-can-jazz|nốt tiếp cận và bao vây]].
+Lamar nói bài luyện này buộc người chơi **bám theo tiến trình** và **kết câu chắc chắn**. Nốt dẫn hướng cũng là nốt mục tiêu tốt nhất cho [[not-tiep-can-jazz|nốt tiếp cận và bao vây]].
 
 ## Một nguyên tắc chung của jazz điệu tính
-TJPS: trong jazz có điệu tính, người solo "nói lại" tiến trình bằng cách **nhắm nốt dẫn hướng** và **tránh [[not-tranh-va-quang-nghich|nốt tránh]]**. Với [[jazz-dieu-thuc|jazz điệu thức]], vai trò này giảm đi vì hợp âm ít đổi.
+Lamar: trong jazz có điệu tính, người solo "nói lại" tiến trình bằng cách **nhắm nốt dẫn hướng** và **tránh [[not-tranh-va-quang-nghich|nốt tránh]]**. Với [[jazz-dieu-thuc|jazz điệu thức]], vai trò này giảm đi vì hợp âm ít đổi.
 Liên quan: [[ngau-hung-doc-ngang]], [[dem-jazz]], [[tai-hoa-am]].
 `,
   },
@@ -1895,7 +1895,7 @@ Liên quan: [[ngau-hung-doc-ngang]], [[dem-jazz]], [[tai-hoa-am]].
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['avoid note', 'avoid notes', 'nốt tránh', 'dissonant intervals', 'quãng nghịch jazz', 'nốt tránh jazz'],
-    summary: 'Nốt tránh là nốt nằm nửa cung trên một nốt hợp âm (F trên Cmaj7, C trên G7; TJPS xếp thêm B trên Dm7): dùng làm nốt lướt nhanh, không ngân dài. Quãng nghịch (quãng 2, 7, tritone, quãng 9 thứ) tạo căng; giải quyết về quãng thuận hoặc nốt dẫn hướng — căng và giải toả như những đợt sóng.',
+    summary: 'Nốt tránh là nốt nằm nửa cung trên một nốt hợp âm (F trên Cmaj7, C trên G7; Lamar xếp thêm B trên Dm7): dùng làm nốt lướt nhanh, không ngân dài. Quãng nghịch (quãng 2, 7, tritone, quãng 9 thứ) tạo căng; giải quyết về quãng thuận hoặc nốt dẫn hướng — căng và giải toả như những đợt sóng.',
     refs: [
       ['The Jazz Piano Site — Avoid Notes', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/avoid-notes/'],
       ['The Jazz Piano Site — Dissonant Intervals', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/dissonant-intervals/'],
@@ -1905,14 +1905,14 @@ Liên quan: [[ngau-hung-doc-ngang]], [[dem-jazz]], [[tai-hoa-am]].
     ],
     body: `
 ## Nốt tránh
-TJPS định nghĩa: **nốt tránh là bất kỳ nốt nào cao hơn một nốt hợp âm nửa cung**. Quy tắc gợi nhớ:
+Lamar định nghĩa: **nốt tránh là bất kỳ nốt nào cao hơn một nốt hợp âm nửa cung**. Quy tắc gợi nhớ:
 | Hợp âm | Nốt tránh | Ví dụ trên Đô / Rê / Si |
 |---|---|---|
 | [[hop-am-bay|maj7]] | Bậc 4 | F trên Cmaj7 (nửa cung trên E) |
 | 7 (át) | Bậc 4 | C trên G7 (nửa cung trên B) |
 | m7 | Bậc 6 | B trên Dm7 (cách A một cung, tạo tritone với F) |
 | m7♭5 | Bậc 2 và 6 | C và G trên Bø7 |
-TJPS lưu ý khái niệm này **có phần chủ quan**: nhiều người không coi bậc 6 [[dieu-thuc|Dorian]] trên m7 là nốt tránh; người chơi hiện đại cũng hay đặt ♯9 ngay trên một nốt hợp âm.
+Lamar lưu ý khái niệm này **có phần chủ quan**: nhiều người không coi bậc 6 [[dieu-thuc|Dorian]] trên m7 là nốt tránh; người chơi hiện đại cũng hay đặt ♯9 ngay trên một nốt hợp âm.
 
 **Dùng thế nào?**
 - Chơi như **[[not-ngoai-hop-am|nốt lướt]] nhanh**, không nhấn, không ngân (xem [[not-tiep-can-jazz]]).
@@ -1921,7 +1921,7 @@ TJPS lưu ý khái niệm này **có phần chủ quan**: nhiều người khôn
 ::staff treble E4 F4=nốt_tránh E4 / E4 G4 F4 | Trên Cmaj7: F chỉ lướt qua rồi về E (dùng tốt); ngân dài F sẽ va chạm với nốt 3 của hợp âm
 
 ## Quãng nghịch
-TJPS xếp: **nghịch** — quãng 2 thứ, quãng 2 trưởng, quãng 7 thứ, quãng 7 trưởng, **tritone**, quãng 9 thứ; **thuận** — đồng âm, quãng 8, quãng 5, quãng 4, quãng 3 và 6. Cách xếp này cũng chủ quan (xem [[thuan-nghich]] để hiểu vì sao quan niệm thay đổi theo lịch sử).
+Lamar xếp: **nghịch** — quãng 2 thứ, quãng 2 trưởng, quãng 7 thứ, quãng 7 trưởng, **tritone**, quãng 9 thứ; **thuận** — đồng âm, quãng 8, quãng 5, quãng 4, quãng 3 và 6. Cách xếp này cũng chủ quan (xem [[thuan-nghich]] để hiểu vì sao quan niệm thay đổi theo lịch sử).
 - "Dùng quãng nghịch để **tạo căng** trong solo, rồi **giải quyết** bằng cách lùi về một quãng thuận (hoặc một [[not-dan-huong|nốt dẫn hướng]])."
 - Căng thẳng nên **lên xuống như sóng**.
 - Hợp âm át vốn nghịch vì có tritone giữa nốt 3 và 7 — nên nó hút về chủ; nốt ♭9 thường được tránh vì quá nghịch (xem [[hop-am-at-bien-hoa]]).
@@ -1943,20 +1943,20 @@ Liên quan: [[choi-ngoai-jazz]], [[am-giai-bebop]] (nốt lướt đặt vào ph
       ['The Jazz Piano Site — Swing Music Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/swing-music-explained/'],
     ],
     body: `
-## Bốn cách (theo TJPS)
+## Bốn cách (theo Lamar)
 1. **Đổi tiết tấu, giữ cao độ** — dồn, giãn, đảo phách các nốt giai điệu (xem [[dao-phach]], [[tiet-tau-ngau-hung-jazz]]).
 2. **Đổi cao độ, giữ tiết tấu** — thay vài nốt bằng nốt hợp âm hoặc [[hop-am-mo-rong|nốt căng]] khác.
 3. **Chèn "fill"** vào chỗ **nốt dài và [[dau-lang|dấu lặng]]** — vài nốt của âm giai rồi quay lại giai điệu.
 4. **Thêm [[ky-hieu-hoa-my|hoa mỹ]]**: láy rền, láy chùm, láy, nốt hoa mỹ.
-TJPS: cách này "**trấn an người nghe** rằng họ vẫn đang nghe cùng một bài hát", nên nó cũng là cách **giải quyết căng thẳng** sau một đoạn "chơi ngoài" (xem [[choi-ngoai-jazz]]).
+Lamar: cách này "**trấn an người nghe** rằng họ vẫn đang nghe cùng một bài hát", nên nó cũng là cách **giải quyết căng thẳng** sau một đoạn "chơi ngoài" (xem [[choi-ngoai-jazz]]).
 
 ::rhythm 4/4 h h / e-e q h // | Một ý minh hoạ cách 1: hai nốt trắng của giai điệu được "dồn" lại thành móc đơn – đen, nốt cuối giữ nguyên
 
-## Bài khởi động cho người mới (TJPS)
+## Bài khởi động cho người mới (Lamar)
 Trên "Autumn Leaves" (xem [[phan-tich-tien-trinh-jazz]]): chơi giai điệu; đến **nốt ngân dài**, chơi vài nốt của **âm giai Si giáng trưởng** rồi **quay về giai điệu**. Mỗi lần chơi lại, tăng dần phần "fill".
 
 ## Lịch sử: từ trang trí đến sáng tạo giai điệu mới
-- Theo TJPS, cho đến **thời đại [[swing|Swing]]**, "[[ngau-hung-piano|ngẫu hứng]]" về cơ bản là **chơi giai điệu có trang trí**.
+- Theo Lamar, cho đến **thời đại [[swing|Swing]]**, "[[ngau-hung-piano|ngẫu hứng]]" về cơ bản là **chơi giai điệu có trang trí**.
 - **Coleman Hawkins** đi xa hơn: thay vì trang trí giai điệu, ông **tạo giai điệu mới từ hoà âm** của bài — mở đường cho [[phong-cach-jazz|bebop]] (xem [[ngau-hung-doc-ngang|ngẫu hứng dọc]]).
 - **Sonny Rollins** quay lại với giai điệu theo cách khác: lấy **mảnh của giai điệu làm [[motif]]** và phát triển dần qua cả bài solo (xem [[bien-tau]], [[xay-dung-bai-solo]]).
 Liên hệ cổ điển: trang trí giai điệu cũng là cốt lõi của hoa mỹ [[thoi-ky-baroque|Baroque]] và [[lich-su-ngau-hung|ngẫu hứng trong nhạc cổ điển]].
@@ -1976,19 +1976,19 @@ Liên hệ cổ điển: trang trí giai điệu cũng là cốt lõi của hoa 
     ],
     body: `
 ## Định nghĩa
-TJPS: "tạo một khuôn mẫu bằng cách **lặp lại một [[cau-nhac|câu nhạc]] và dịch nó lên hoặc xuống theo những quãng cố định**". Đây là họ hàng của [[mo-tien-hoa-am|mô tiến]] trong nhạc cổ điển, nhưng không cần bám âm giai.
+Lamar: "tạo một khuôn mẫu bằng cách **lặp lại một [[cau-nhac|câu nhạc]] và dịch nó lên hoặc xuống theo những quãng cố định**". Đây là họ hàng của [[mo-tien-hoa-am|mô tiến]] trong nhạc cổ điển, nhưng không cần bám âm giai.
 
 ## Vì sao nghe được?
 - Một khuôn đơn giản lặp theo quãng cố định "**nghe hay bất kể bạn chơi nốt nào hay trên hợp âm nào**" — tai nghe theo **logic của khuôn**, không theo giọng.
 - Nhờ vậy có thể **ra ngoài** âm giai để tạo căng rồi **trượt về trong** để giải quyết — cùng nhóm kỹ thuật với chạy cromatic và [[choi-ngoai-jazz|side-slipping]].
-- Nhược điểm (TJPS): dễ nghe **máy móc**; nên xen với những câu nhạc theo giọng.
+- Nhược điểm (Lamar): dễ nghe **máy móc**; nên xen với những câu nhạc theo giọng.
 
 ## Tính toán để về đúng đích
-Vì **12 chia hết cho 1, 2, 3, 4, 6**, dịch đều theo 1, 2, 3, 4 hoặc 6 [[cung-nua-cung|nửa cung]] sẽ quay về nốt xuất phát (xem đồng hồ lớp cao độ trong [[tap-hop-cao-do]]). Mẹo của TJPS: muốn kết ở một [[not-tiep-can-jazz|nốt mục tiêu]], **bắt đầu khuôn trên chính nốt đó cao hơn một quãng 8** rồi đi xuống theo quãng chọn.
+Vì **12 chia hết cho 1, 2, 3, 4, 6**, dịch đều theo 1, 2, 3, 4 hoặc 6 [[cung-nua-cung|nửa cung]] sẽ quay về nốt xuất phát (xem đồng hồ lớp cao độ trong [[tap-hop-cao-do]]). Mẹo của Lamar: muốn kết ở một [[not-tiep-can-jazz|nốt mục tiêu]], **bắt đầu khuôn trên chính nốt đó cao hơn một quãng 8** rồi đi xuống theo quãng chọn.
 ::staff treble E5 G#5 B5 / D5 F#5 A5 / C5 E5 G5 / Bb4 D5 F5 / Ab4 C5 Eb5 / Gb4 Bb4 Db5 / E4=đích | Minh hoạ: hợp âm ba trưởng rải, dịch xuống từng cung từ E — sau sáu lần quay về E (nốt 3 của Cmaj7)
 ::pc-clock 4 2 0 10 8 6 | Các nốt bắt đầu E – D – C – B♭ – A♭ – G♭: một âm giai toàn cung — chu kỳ một cung chia quãng 8 thành 6 phần bằng nhau
 - Dịch theo **quãng 3 thứ** (3 nửa cung) vẽ ra một [[hop-am-bay-giam|hợp âm 7 giảm]]; theo **quãng 3 trưởng** vẽ ra [[hop-am-ba-tang|hợp âm ba tăng]] — chính là trục của [[vong-coltrane|vòng Coltrane]].
-- TJPS còn gợi ý: khi lỡ chơi nốt sai, biến nó thành điểm khởi đầu của một chuỗi cromatic hoặc một [[ostinato|mẫu lặp]] — xem [[meo-ngau-hung-jazz]].
+- Lamar còn gợi ý: khi lỡ chơi nốt sai, biến nó thành điểm khởi đầu của một chuỗi cromatic hoặc một [[ostinato|mẫu lặp]] — xem [[meo-ngau-hung-jazz]].
 Liên quan: [[am-giai-doi-xung-jazz]], [[ngau-hung-doc-ngang]].
 `,
   },
@@ -2008,7 +2008,7 @@ Liên quan: [[am-giai-doi-xung-jazz]], [[ngau-hung-doc-ngang]].
     ],
     body: `
 ## Nốt hay cách chơi nốt?
-TJPS: cảm giác jazz phụ thuộc vào **cách chơi nốt**, không chỉ nốt nào được chơi.
+Lamar: cảm giác jazz phụ thuộc vào **cách chơi nốt**, không chỉ nốt nào được chơi.
 - **[[swing]]** là nhịp nền: móc đơn swing mang cảm giác [[lien-ba|liên ba]], bỏ nốt giữa.
 - **Nhấn** cả [[so-chi-nhip|phách mạnh]] lẫn phách nhẹ; nhấn mỗi 2–5 nốt giúp câu móc đơn dài không đơn điệu, thậm chí tạo [[da-nhip|đa tiết tấu]] chồng lên [[cau-nhac|câu nhạc]].
 - **Cách nhả nốt**: "nảy, gọn, có lực" — không hẳn staccato, cũng không legato (trừ ballad) — xem [[cach-dien-tau]].
@@ -2018,13 +2018,13 @@ TJPS: cảm giác jazz phụ thuộc vào **cách chơi nốt**, không chỉ n�
 ::rhythm 4/4 >e-e e->e e-e >e-e // | Nhấn mỗi 3 nốt trên dòng móc đơn (nốt 1, 4, 7): nhóm 3 chồng lên mạch 4 phách tạo đa tiết tấu (xem [[hemiola]])
 
 ## Dịch chuyển giai điệu (displacement)
-TJPS: chơi giai điệu bài hát **sớm hơn hoặc muộn hơn** so với tiến trình hợp âm.
+Lamar: chơi giai điệu bài hát **sớm hơn hoặc muộn hơn** so với tiến trình hợp âm.
 - **Muộn** → tạo cảm giác chờ đợi; **sớm** → như "chạy trước" rồi đợi hoà âm đuổi kịp.
 - Tạo căng theo hai cách: **bất ngờ**, và giai điệu rơi vào **hợp âm khác** nên va chạm nhẹ; nhưng vì giai điệu quen thuộc, người nghe vẫn có điểm tựa (xem [[trang-tri-giai-dieu-jazz]]).
 
 ## Dịch vạch nhịp (bar-line shift)
-Cùng trang với [[superimposition-jazz|superimposition]], TJPS mô tả **dịch vạch nhịp**: chơi một câu "ám chỉ" hợp âm **sớm** vài phách (đón trước) hoặc **muộn** vài phách (trì hoãn). TJPS gắn kỹ thuật này với Lester Young, Coleman Hawkins và Charlie Parker. Trong cổ điển, cái tương tự là [[not-ngoai-hop-am|nốt đón và nốt trễ]].
-Bài tập đa dạng tiết tấu (TJPS): chơi một câu, rồi lặp lại **chỉ đổi tiết tấu** (xem [[xay-dung-bai-solo]]).
+Cùng trang với [[superimposition-jazz|superimposition]], Lamar mô tả **dịch vạch nhịp**: chơi một câu "ám chỉ" hợp âm **sớm** vài phách (đón trước) hoặc **muộn** vài phách (trì hoãn). Lamar gắn kỹ thuật này với Lester Young, Coleman Hawkins và Charlie Parker. Trong cổ điển, cái tương tự là [[not-ngoai-hop-am|nốt đón và nốt trễ]].
+Bài tập đa dạng tiết tấu (Lamar): chơi một câu, rồi lặp lại **chỉ đổi tiết tấu** (xem [[xay-dung-bai-solo]]).
 `,
   },
   {
@@ -2033,7 +2033,7 @@ Bài tập đa dạng tiết tấu (TJPS): chơi một câu, rồi lặp lại *
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['lick', 'licks', 'cliché jazz', 'câu sáo', 'quoting', 'trích dẫn trong solo', 'The Lick', 'ii-V lick', 'lick ii-V-I'],
-    summary: 'Lick là những câu nhạc quen thuộc của ngôn ngữ jazz; câu sáo (cliché) là lick ai cũng nhận ra; trích dẫn (quoting) là chen giai điệu của một bài khác vào solo. Bài nêu cách TJPS dạy học lick qua ii – V – I và các ví dụ trích dẫn nổi tiếng của Ella Fitzgerald, Duke Ellington, Charlie Parker, Count Basie.',
+    summary: 'Lick là những câu nhạc quen thuộc của ngôn ngữ jazz; câu sáo (cliché) là lick ai cũng nhận ra; trích dẫn (quoting) là chen giai điệu của một bài khác vào solo. Bài nêu cách Lamar dạy học lick qua ii – V – I và các ví dụ trích dẫn nổi tiếng của Ella Fitzgerald, Duke Ellington, Charlie Parker, Count Basie.',
     wiki: 'The_Lick',
     refs: [
       ['The Jazz Piano Site — Clichés & Quoting', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/cliches-quoting/'],
@@ -2044,29 +2044,29 @@ Bài tập đa dạng tiết tấu (TJPS): chơi một câu, rồi lặp lại *
     ],
     body: `
 ## Lick: từ vựng của ngôn ngữ jazz
-Học jazz giống học một ngôn ngữ: **lick** là những "cụm từ" có sẵn. TJPS khuyên học lick vì hai lý do: làm **từ vựng cách nói câu** ([[dien-dat-cau-nhac|phrasing]]) và làm **chỗ dựa** khi bí ý (xem [[meo-ngau-hung-jazz]]). Nhưng một solo cần đủ chất liệu riêng để không chỉ là chuỗi lick ghép lại.
+Học jazz giống học một ngôn ngữ: **lick** là những "cụm từ" có sẵn. Lamar khuyên học lick vì hai lý do: làm **từ vựng cách nói câu** ([[dien-dat-cau-nhac|phrasing]]) và làm **chỗ dựa** khi bí ý (xem [[meo-ngau-hung-jazz]]). Nhưng một solo cần đủ chất liệu riêng để không chỉ là chuỗi lick ghép lại.
 
-## Học lick qua ii – V – I (theo TJPS)
-Bài học TJPS đưa năm lick mẫu ở Si giáng trưởng; cách học quan trọng hơn bản thân lick:
+## Học lick qua ii – V – I (theo Lamar)
+Bài học Lamar đưa năm lick mẫu ở Si giáng trưởng; cách học quan trọng hơn bản thân lick:
 1. Chơi lick nhiều lần và tự hỏi **người solo đang nghĩ gì**.
 2. Tách lick thành **[[luyen-hop-am-rai|hợp âm rải]]**, **đoạn âm giai** và **[[not-ngoai-hop-am|nốt lướt]] cromatic** (xem [[ngau-hung-doc-ngang]], [[not-tiep-can-jazz]]).
 3. Để ý các thủ pháp lặp lại: **dịch một câu theo từng hợp âm**; **bắt đầu hoặc kết câu ở phách nhẹ** (xem [[tiet-tau-ngau-hung-jazz]]).
 4. Chuyển lick sang **cả 12 giọng**, nhất là các giọng yếu; tập chậm — tốc độ đến từ độ chính xác.
 ::staff treble D4=Dm7 F4 A4 C5 / B4=G7 A4 G4 F4 / E4=Cmaj7 | Một câu minh hoạ cách phân tích trên ii – V – I: hợp âm rải Dm7, đoạn âm giai đi xuống từ nốt 3 của G7, kết vào nốt 3 (E) của Cmaj7 — nốt dẫn hướng C → B → E nối các hợp âm
-Với [[ii-v-i|ii – V – i thứ]], TJPS gợi ý: [[dieu-thuc|Locrian]] ([[hop-am-bay|nửa giảm]]) trên ii, altered trên V7, [[am-giai-thu|thứ giai điệu]] trên i (xem [[dieu-thuc-thu-giai-dieu]]).
+Với [[ii-v-i|ii – V – i thứ]], Lamar gợi ý: [[dieu-thuc|Locrian]] ([[hop-am-bay|nửa giảm]]) trên ii, altered trên V7, [[am-giai-thu|thứ giai điệu]] trên i (xem [[dieu-thuc-thu-giai-dieu]]).
 
 ## "The Lick" — câu sáo thành trò đùa
 Câu bảy nốt với các bậc **1 – 2 – ♭3 – 4 – 2 – ♭7 – 1** xuất hiện trong vô số solo; cái tên "The Lick" ra đời trên mạng xã hội những năm 2010 và nổi tiếng nhờ một video tổng hợp năm 2011. Nhạc công ngày nay chèn nó vào solo như **một câu đùa nội bộ**.
 ::staff treble C4 D4 Eb4 F4 D4 Bb3 C4 | "The Lick" trên C (thứ): C – D – E♭ – F – D – B♭ – C
 
 ## Trích dẫn (quoting)
-TJPS: chơi **giai điệu của một bài hoàn toàn khác** trên tiến trình đang chơi — một kỹ thuật vui và kéo khán giả vào. Ví dụ TJPS nêu:
+Lamar: chơi **giai điệu của một bài hoàn toàn khác** trên tiến trình đang chơi — một kỹ thuật vui và kéo khán giả vào. Ví dụ Lamar nêu:
 - **Ella Fitzgerald** — "Blue Skies": trong đoạn hát scat, trích Hành khúc cưới của [[richard-wagner|Wagner]] và *[[tieu-pham-piano|Rhapsody]] in Blue* của [[george-gershwin|Gershwin]].
 - **[[duke-ellington|Duke Ellington]]** — "Black and Tan Fantasy": trích Hành khúc tang lễ của [[frederic-chopin|Chopin]].
 - **Charlie Parker** — "White Christmas": giấu "Jingle Bells".
 - **Count Basie** — "April in Paris": trích "Pop Goes the Weasel".
-- TJPS gợi ý nghe hầu hết các solo của **Dexter [[ly-thuyet-hoc-am-nhac-gordon|Gordon]]** để học cách trích dẫn.
-Trích dẫn thường **ngắn** (một hai ô), kín đáo. TJPS cũng xếp trích dẫn và câu sáo vào các cách **giải toả căng thẳng** — tai người nghe "về nhà" khi nhận ra một giai điệu quen (xem [[choi-ngoai-jazz]]). Trích dẫn để giễu nhại cũng có trong nhạc cổ điển: xem [[phan-tich-golliwogg-cakewalk]].
+- Lamar gợi ý nghe hầu hết các solo của **Dexter [[ly-thuyet-hoc-am-nhac-gordon|Gordon]]** để học cách trích dẫn.
+Trích dẫn thường **ngắn** (một hai ô), kín đáo. Lamar cũng xếp trích dẫn và câu sáo vào các cách **giải toả căng thẳng** — tai người nghe "về nhà" khi nhận ra một giai điệu quen (xem [[choi-ngoai-jazz]]). Trích dẫn để giễu nhại cũng có trong nhạc cổ điển: xem [[phan-tich-golliwogg-cakewalk]].
 `,
   },
   {
@@ -2075,7 +2075,7 @@ Trích dẫn thường **ngắn** (một hai ô), kín đáo. TJPS cũng xếp t
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['superimposition', 'chồng hợp âm', 'chồng tiến trình', 'superimpose', 'hợp âm rải mở rộng'],
-    summary: 'Superimposition là ngẫu hứng theo một hợp âm hay cả một tiến trình khác chồng lên tiến trình đang chơi — từ việc đơn giản như rải Em7 trên Cmaj7 (ra 3 – 5 – 7 – 9), D♭7 trên G7 (thay thế tritone), đến chồng cả chuỗi ii – V lên một hợp âm đứng yên. TJPS gắn kỹ thuật này với Coltrane, Lennie Tristano, Dave Liebman.',
+    summary: 'Superimposition là ngẫu hứng theo một hợp âm hay cả một tiến trình khác chồng lên tiến trình đang chơi — từ việc đơn giản như rải Em7 trên Cmaj7 (ra 3 – 5 – 7 – 9), D♭7 trên G7 (thay thế tritone), đến chồng cả chuỗi ii – V lên một hợp âm đứng yên. Lamar gắn kỹ thuật này với Coltrane, Lennie Tristano, Dave Liebman.',
     refs: [
       ['The Jazz Piano Site — Bar Line Shift & Superimposition', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/bar-line-shift-and-superimposition/'],
       ['The Jazz Piano Site — Sheets of Sound Explained (John Coltrane)', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/sheets-sound-explained-john-coltrane/'],
@@ -2083,19 +2083,19 @@ Trích dẫn thường **ngắn** (một hai ô), kín đáo. TJPS cũng xếp t
     ],
     body: `
 ## Định nghĩa
-TJPS: **superimposition** là chơi **một tiến trình hợp âm hoàn toàn khác** chồng lên tiến trình đang có — một kỹ thuật hiện đại hơn, gắn với **John Coltrane**, **Lennie Tristano**, **Dave Liebman**; nó có thể tạo ra [[da-dieu-tinh|đa điệu tính]].
+Lamar: **superimposition** là chơi **một tiến trình hợp âm hoàn toàn khác** chồng lên tiến trình đang có — một kỹ thuật hiện đại hơn, gắn với **John Coltrane**, **Lennie Tristano**, **Dave Liebman**; nó có thể tạo ra [[da-dieu-tinh|đa điệu tính]].
 
 ## Ba mức độ
 **1. Một [[luyen-hop-am-rai|hợp âm rải]] khác trên một hợp âm** — nốt của hợp âm rải trở thành [[hop-am-mo-rong|nốt căng]] của hợp âm nền:
 ::grand E4+G4+B4+D5/C3=Em7_/_C Db4+F4+Ab4+Cb5/G2=D♭7_/_G | Em7 rải trên Cmaj7 = nốt 3 – 5 – 7 – 9; D♭7 rải trên G7 = ♭5 – ♭7 – ♭9 – 3 (âm thanh của [[thay-the-tritone|thay thế tritone]])
 (Nốt C♭ trong D♭7 chính là B — nốt 3 của G7.) Đây cũng là ý tưởng của [[upper-structure]], chỉ khác là chơi rải trong giai điệu thay vì bấm hợp âm.
 
-**2. Một chuỗi hợp âm trên một hợp âm đứng yên** — ví dụ trên hai ô Cmaj7, chơi [[cau-nhac|câu nhạc]] theo Dm7 – G7 rồi giải quyết về C ở phách đầu ô sau. TJPS khuyên chọn **tiến trình có cấu trúc mạnh** (ii – V – I, V – I) để câu nhạc giữ được logic, và dùng câu **liền bậc + hợp âm rải**, tránh nhảy xa.
+**2. Một chuỗi hợp âm trên một hợp âm đứng yên** — ví dụ trên hai ô Cmaj7, chơi [[cau-nhac|câu nhạc]] theo Dm7 – G7 rồi giải quyết về C ở phách đầu ô sau. Lamar khuyên chọn **tiến trình có cấu trúc mạnh** (ii – V – I, V – I) để câu nhạc giữ được logic, và dùng câu **liền bậc + hợp âm rải**, tránh nhảy xa.
 
 **3. Cả một hệ thống khác** — [[vong-coltrane|vòng Coltrane]] chồng lên một [[ii-v-i]]; các hợp âm chồng nhanh trong [[sheets-of-sound|"sheets of sound"]].
 
 ## Nghe ra superimposition khi phân tích
-TJPS liệt kê superimposition và [[tiet-tau-ngau-hung-jazz|dịch vạch nhịp]] trong số những điều cần tìm khi [[phan-tich-solo-jazz|phân tích một solo]].
+Lamar liệt kê superimposition và [[tiet-tau-ngau-hung-jazz|dịch vạch nhịp]] trong số những điều cần tìm khi [[phan-tich-solo-jazz|phân tích một solo]].
 Liên quan: [[triad-pairs]], [[choi-ngoai-jazz]], [[hop-am-chong]].
 `,
   },
@@ -2117,16 +2117,16 @@ Liên quan: [[triad-pairs]], [[choi-ngoai-jazz]], [[hop-am-chong]].
 - Nhà phê bình **Ira Gitler** (tạp chí *Down Beat*) đặt cụm từ này trong **ghi chú album *Soultrane*** của John Coltrane (Prestige, **1958**), gắn với phần kết của bài "Russian Lullaby". Ông đã mô tả hiện tượng này từ ghi chú album *Traneing In* (1957) và dùng lại cụm từ trong bài "Trane on the Track" (*Down Beat*, 16/10/1958).
 - Gitler nói ông dùng cụm từ như **lời khen**, không phải phê bình.
 
-## Kỹ thuật (theo TJPS)
+## Kỹ thuật (theo Lamar)
 - **Chuỗi nốt rất nhanh**, nhóm **lẻ và bất đối xứng**, không bám vào nhóm 4 hay 8 nốt đều đặn.
-- **Chồng hợp âm mới** lên hợp âm đang vang — đây là [[superimposition-jazz|superimposition]] ở tốc độ cao. TJPS dẫn ý của chính Coltrane về việc chồng các hợp âm lên C7, trong đó có **E♭7** và **F♯7**.
+- **Chồng hợp âm mới** lên hợp âm đang vang — đây là [[superimposition-jazz|superimposition]] ở tốc độ cao. Lamar dẫn ý của chính Coltrane về việc chồng các hợp âm lên C7, trong đó có **E♭7** và **F♯7**.
 | [[hop-am-chong|Hợp âm chồng]] | Trên | Các nốt so với hợp âm nền |
 |---|---|---|
 | D♭7 (D♭ – F – A♭ – C♭) | G7 | ♭5 – ♭7 – ♭9 – 3 |
 | E♭7 (E♭ – G – B♭ – D♭) | C7 | ♯9 – 5 – ♭7 – ♭9 |
 | F♯7 (F♯ – A♯ – C♯ – E) | C7 | ♯11 – ♭7 – ♭9 – 3 |
 ::grand Eb4+G4+Bb4+Db5/C3+E3+Bb3=E♭7_/_C7 F#4+A#4+C#5+E5/C3+E3+Bb3=F♯7_/_C7 | Hai hợp âm Coltrane chồng lên C7: cả hai đều cho các nốt căng biến hoá (♭9, ♯9, ♯11) — gần với âm giai [[am-giai-bat-cung|bát cung]] và [[upper-structure]]
-- Vì đi rất nhanh, nhiều nốt chỉ là **[[not-ngoai-hop-am|nốt lướt]]** — TJPS nhắc không nên dừng lâu trên [[not-tranh-va-quang-nghich|nốt tránh]].
+- Vì đi rất nhanh, nhiều nốt chỉ là **[[not-ngoai-hop-am|nốt lướt]]** — Lamar nhắc không nên dừng lâu trên [[not-tranh-va-quang-nghich|nốt tránh]].
 
 ## Sau "sheets of sound"
 Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thành ba phần bằng nhau trong "[[phan-tich-giant-steps|Giant Steps]]" (1959) — xem [[vong-coltrane]]. Khi phân tích solo Coltrane, các chuỗi nhóm lẻ dày đặc là dấu hiệu nhận ra "sheets of sound" (xem [[phan-tich-solo-jazz]]).
@@ -2138,7 +2138,7 @@ Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thà
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['triad pairs', 'triad pair', 'cặp hợp âm ba', 'âm giai sáu nốt', 'extended arpeggios', 'Bergonzi Hexatonics'],
-    summary: 'Triad pairs là hai hợp âm ba (thường cách nhau một cung) không có nốt chung, chơi xen kẽ để tạo một âm giai sáu nốt: C + D trên Cmaj7 cho 1 – 9 – 3 – ♯11 – 5 – 13. Âm thanh hiện đại, góc cạnh — TJPS gợi ý nghe Chick Corea, McCoy Tyner, Oliver Nelson.',
+    summary: 'Triad pairs là hai hợp âm ba (thường cách nhau một cung) không có nốt chung, chơi xen kẽ để tạo một âm giai sáu nốt: C + D trên Cmaj7 cho 1 – 9 – 3 – ♯11 – 5 – 13. Âm thanh hiện đại, góc cạnh — Lamar gợi ý nghe Chick Corea, McCoy Tyner, Oliver Nelson.',
     refs: [
       ['The Jazz Piano Site — Extended Arpeggios and Triad Pairs', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/extended-arpeggios-and-triad-pairs/'],
       ['Alfred — Gary Campbell, Triad Pairs for Jazz (2001)', 'https://www.alfred.com/products/triad-pairs-for-jazz-00-0482b'],
@@ -2146,17 +2146,17 @@ Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thà
     ],
     body: `
 ## Định nghĩa
-TJPS: **hai [[hop-am-ba|hợp âm ba]] cách nhau một bậc, không có nốt chung**. Ví dụ của TJPS: **C trưởng + D trưởng trên Cmaj7** — mọi nốt đều là nốt hợp âm hoặc [[hop-am-mo-rong|nốt căng]] dùng được.
+Lamar: **hai [[hop-am-ba|hợp âm ba]] cách nhau một bậc, không có nốt chung**. Ví dụ của Lamar: **C trưởng + D trưởng trên Cmaj7** — mọi nốt đều là nốt hợp âm hoặc [[hop-am-mo-rong|nốt căng]] dùng được.
 ::staff treble C4+E4+G4=C D4+F#4+A4=D C4 D4 E4 F#4 G4 A4 | Cặp C + D: sáu nốt C – D – E – F♯ – G – A = nốt 1 – 9 – 3 – ♯11 – 5 – 13 của Cmaj7(♯11) — âm giai Lydian thiếu nốt 7
 Hai hợp âm ba không chung nốt luôn ghép thành một **âm giai sáu nốt** ([[neo-riemann|hexatonic]]) — nhà sư phạm Jerry Bergonzi dành cả một tập sách (*Hexatonics*, 2007) cho cách nhìn này.
 
-## Cách dùng (theo TJPS)
+## Cách dùng (theo Lamar)
 - Gán **một cặp cho mỗi hợp âm**, rồi **xen kẽ hai hợp âm ba** khi [[ngau-hung-piano|ngẫu hứng]] — rải, đảo thứ tự, đổi [[the-dao-hop-am|thể đảo]].
 - Vì hai hợp âm ba đều là những hình quen tay, người chơi có thể chơi nhanh và "góc cạnh" mà vẫn chính xác.
 - Chọn cặp theo [[he-thong-hop-am-am-giai|âm giai của hợp âm]]: ví dụ trên hợp âm át biến hoá, hai hợp âm ba lấy từ âm giai [[dieu-thuc-thu-giai-dieu|altered]].
 
 ## Nghe
-TJPS gợi ý: **[[chick-corea|Chick Corea]]** — *Now He Sings, Now He Sobs* (1968); **[[mccoy-tyner|McCoy Tyner]]** — "Passion Dance" (*The Real McCoy*, 1967); **Oliver Nelson** — "Stolen Moments" (1961). Sách tham khảo: Gary Campbell, *Triad Pairs for Jazz* (Alfred, 2001).
+Lamar gợi ý: **[[chick-corea|Chick Corea]]** — *Now He Sings, Now He Sobs* (1968); **[[mccoy-tyner|McCoy Tyner]]** — "Passion Dance" (*The Real McCoy*, 1967); **Oliver Nelson** — "Stolen Moments" (1961). Sách tham khảo: Gary Campbell, *Triad Pairs for Jazz* (Alfred, 2001).
 Liên quan: [[superimposition-jazz]], [[upper-structure]] (hợp âm ba trên tritone khi đệm), [[am-giai-doi-xung-jazz]] (âm giai tăng cũng là hai [[hop-am-ba-tang|hợp âm ba tăng]] ghép lại).
 `,
   },
@@ -2166,24 +2166,24 @@ Liên quan: [[superimposition-jazz]], [[upper-structure]] (hợp âm ba trên tr
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['chordal improvisation', 'ngẫu hứng bằng hợp âm', 'solo bằng hợp âm', 'chord solo', 'block chord solo'],
-    summary: 'Thay vì solo bằng một dòng giai điệu, người chơi giữ hợp âm ở tay phải và ngẫu hứng bằng các ngón trên cùng hoặc bằng cách rải hợp âm — "nghe phức tạp nhưng thực ra khá đơn giản" (TJPS). Gắn với Gene Harris, Oscar Peterson và lối block chords của Shearing, Red Garland.',
+    summary: 'Thay vì solo bằng một dòng giai điệu, người chơi giữ hợp âm ở tay phải và ngẫu hứng bằng các ngón trên cùng hoặc bằng cách rải hợp âm — "nghe phức tạp nhưng thực ra khá đơn giản" (Lamar). Gắn với Gene Harris, Oscar Peterson và lối block chords của Shearing, Red Garland.',
     refs: [
       ['The Jazz Piano Site — Chordal Improvisation vs Melody Line Improvisation', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/chordal-improvisation/'],
       ['The Jazz Piano Site — Advanced Locked Hands', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-voicings/advanced-locked-hands/'],
       ['Wikipedia — Locked hands style', 'https://en.wikipedia.org/wiki/Locked_hands_style'],
     ],
     body: `
-## Cách làm (theo TJPS)
-TJPS nhận xét ngẫu hứng bằng hợp âm "**nghe rất phức tạp và thú vị, nhưng thực ra khá đơn giản**":
+## Cách làm (theo Lamar)
+Lamar nhận xét ngẫu hứng bằng hợp âm "**nghe rất phức tạp và thú vị, nhưng thực ra khá đơn giản**":
 1. **Giữ một hợp âm** ở tay phải.
 2. **[[ngau-hung-piano|Ngẫu hứng]] quanh nó**: hoặc **rải hợp âm**, hoặc dùng **các ngón trên cùng** chạy giai điệu trong khi **ngón dưới giữ hợp âm**.
 3. Hợp âm không cần là [[hop-am-bay|hợp âm 7]] cơ bản: có thể dựng trên [[xep-hop-am|thế bấm không gốc]] hoặc [[hoa-am-quang-bon|thế bấm quãng 4]] — nhưng hãy học từng thế bấm riêng trước.
 ::grand E4+G4+A4+C5+E5/C3=C6 F4+A4+C5+D5+F5/D3=Dm7 | Minh hoạ: ngón dưới tay phải giữ hợp âm, hai ngón trên chơi giai điệu theo quãng 3 — giai điệu và hoà âm đi cùng nhau
 
-Dạng "khối" nhất là [[hop-am-khoi|locked hands]]: mỗi nốt giai điệu một hợp âm. TJPS (bài locked hands nâng cao) gợi ý có thể [[tai-hoa-am|thay hợp âm]] V bằng hợp âm giảm cách nốt gốc nửa cung — "miễn là giữ được khung I – V – I – V bên dưới".
+Dạng "khối" nhất là [[hop-am-khoi|locked hands]]: mỗi nốt giai điệu một hợp âm. Lamar (bài locked hands nâng cao) gợi ý có thể [[tai-hoa-am|thay hợp âm]] V bằng hợp âm giảm cách nốt gốc nửa cung — "miễn là giữ được khung I – V – I – V bên dưới".
 
 ## Nghe
-TJPS gợi ý: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Peterson]]** — "Night Train" (thu âm 1962); **Gene Harris**, người dùng kỹ thuật này rất nhiều trong các solo với nhóm Three Sounds. Lối hợp âm khối của **George Shearing** và **Red Garland**: xem [[hop-am-khoi]].
+Lamar gợi ý: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Peterson]]** — "Night Train" (thu âm 1962); **Gene Harris**, người dùng kỹ thuật này rất nhiều trong các solo với nhóm Three Sounds. Lối hợp âm khối của **George Shearing** và **Red Garland**: xem [[hop-am-khoi]].
 
 ## So với solo một dòng giai điệu
 | | Một dòng giai điệu | Bằng hợp âm |
@@ -2207,8 +2207,8 @@ TJPS gợi ý: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Pet
       ['The Jazz Piano Site — Approaches to Improvisation', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/approaches-to-improvisation/'],
     ],
     body: `
-## Các tầng chất liệu (theo TJPS)
-Trên "Autumn Leaves", TJPS xếp chất liệu từ dễ đến khó:
+## Các tầng chất liệu (theo Lamar)
+Trên "Autumn Leaves", Lamar xếp chất liệu từ dễ đến khó:
 1. [[trang-tri-giai-dieu-jazz|Trang trí giai điệu]].
 2. **Rải hợp âm** ([[ngau-hung-doc-ngang|ngẫu hứng dọc]]).
 3. **Một âm giai nền** cho cả bài ([[phan-tich-tien-trinh-jazz|bản đồ hợp âm]]).
@@ -2222,12 +2222,12 @@ Lời khuyên: **trộn các tầng**, không ở mãi một tầng — xuất p
 - Một [[cau-nhac|câu nhạc]] **luôn mạnh hơn khi kết vào nốt mạnh về hoà âm** — thường là [[not-dan-huong|nốt dẫn hướng]].
 
 ## Phát triển motif
-Bài luyện "lặp lại với một thay đổi" của TJPS: tạo một [[motif]] ngắn, rồi lặp lại, **mỗi lần đổi một yếu tố** — một nốt, [[tiet-tau-ngau-hung-jazz|tiết tấu]], hay dịch sang hợp âm khác. Đây chính là [[bien-doi-chu-de|phát triển chủ đề]] trong nhạc cổ điển, ở quy mô nhỏ và ngay trong lúc chơi.
+Bài luyện "lặp lại với một thay đổi" của Lamar: tạo một [[motif]] ngắn, rồi lặp lại, **mỗi lần đổi một yếu tố** — một nốt, [[tiet-tau-ngau-hung-jazz|tiết tấu]], hay dịch sang hợp âm khác. Đây chính là [[bien-doi-chu-de|phát triển chủ đề]] trong nhạc cổ điển, ở quy mô nhỏ và ngay trong lúc chơi.
 
 ## Một gợi ý về hình dáng tổng thể
-TJPS không đưa khuôn mẫu cố định cho cả bài solo. Theo kinh nghiệm sư phạm chung (không phải quy tắc), nhiều solo đi từ **thưa, thấp, đơn giản** đến **dày, cao, phức tạp**: thêm dần mật độ nốt, mở rộng [[cao-do|âm vực]], tăng [[cuong-do|cường độ]], có thể chuyển sang [[ngau-hung-hop-am|solo bằng hợp âm]] ở cao trào, rồi lắng lại để nhường người chơi sau. Xem cách nhìn của nghiên cứu ở [[ngau-hung-jazz]] (Berliner).
+Lamar không đưa khuôn mẫu cố định cho cả bài solo. Theo kinh nghiệm sư phạm chung (không phải quy tắc), nhiều solo đi từ **thưa, thấp, đơn giản** đến **dày, cao, phức tạp**: thêm dần mật độ nốt, mở rộng [[cao-do|âm vực]], tăng [[cuong-do|cường độ]], có thể chuyển sang [[ngau-hung-hop-am|solo bằng hợp âm]] ở cao trào, rồi lắng lại để nhường người chơi sau. Xem cách nhìn của nghiên cứu ở [[ngau-hung-jazz]] (Berliner).
 
-## Bốn "trục" ngẫu hứng trong lịch sử (TJPS)
+## Bốn "trục" ngẫu hứng trong lịch sử (Lamar)
 | Trục | Ví dụ |
 |---|---|
 | **Giai điệu** | Trang trí giai điệu; [[jazz-dieu-thuc|âm giai điệu thức]]; phát triển motif (Sonny Rollins) |
@@ -2243,7 +2243,7 @@ Viết ra thay vì ngẫu hứng — cùng công cụ, có thời gian chọn l�
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['phân tích solo jazz', 'analyse a jazz solo', 'phân tích bản chép solo', 'Weimar Jazz Database', 'Jazzomat'],
-    summary: 'Cách TJPS phân tích một solo (ví dụ "Straight, No Chaser" của Miles Davis, 1958): xác định hợp âm từng vòng, tô màu từng nốt là nốt hợp âm, nốt căng hay nốt tránh, xem nốt cuối mỗi câu, rồi tìm motif, mô tiến, trích dẫn, superimposition. Kèm các nguồn nghiên cứu mở như Weimar Jazz Database.',
+    summary: 'Cách Lamar phân tích một solo (ví dụ "Straight, No Chaser" của Miles Davis, 1958): xác định hợp âm từng vòng, tô màu từng nốt là nốt hợp âm, nốt căng hay nốt tránh, xem nốt cuối mỗi câu, rồi tìm motif, mô tiến, trích dẫn, superimposition. Kèm các nguồn nghiên cứu mở như Weimar Jazz Database.',
     refs: [
       ['The Jazz Piano Site — Analysing a Jazz Solo: Straight, No Chaser (Miles Davis)', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/analysing-a-jazz-solo/'],
       ['The Jazz Piano Site — How to Analyse a Chord Progression', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/how-to-analyse-a-chord-progression-harmonic-analysis/'],
@@ -2254,8 +2254,8 @@ Viết ra thay vì ngẫu hứng — cùng công cụ, có thời gian chọn l�
     body: `
 Phân tích solo là cách học jazz truyền thống nhất: các nhạc công **chép lại** (transcribe) solo từ bản thu, chơi theo, rồi hiểu vì sao nó hay (xem [[ngau-hung-jazz]] — nghiên cứu của Paul Berliner). Bài này nối kỹ năng [[phan-tich-tien-trinh-jazz|phân tích tiến trình]] với các kỹ thuật [[ngau-hung-piano|ngẫu hứng]] trong mục.
 
-## Các bước (theo TJPS)
-TJPS phân tích cả năm solo trong "**Straight, No Chaser**" (album *[[jazz-dieu-thuc|Milestones]]* của Miles Davis, 1958):
+## Các bước (theo Lamar)
+Lamar phân tích cả năm solo trong "**Straight, No Chaser**" (album *[[jazz-dieu-thuc|Milestones]]* của Miles Davis, 1958):
 1. **Xác định hợp âm trước** — kể cả các [[thay-the-hop-am|hợp âm thay thế]], vì hoà âm có thể đổi ở mỗi vòng.
 2. **Tô màu từng nốt**: [[hop-am-bay|nốt hợp âm]], [[hop-am-mo-rong|nốt căng]] dùng được, hay [[not-tranh-va-quang-nghich|nốt tránh]]. Nhiều nốt hợp âm → thuận; nốt căng → màu "jazz".
 3. **Xem nốt cuối mỗi câu**: nốt hợp âm → câu được giải quyết; nốt tránh → người solo **cố ý để câu lơ lửng**.
@@ -2283,7 +2283,7 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
     category: 'jazz',
     also: ['improvisation'],
     aliases: ['improvisation tips', 'mẹo ngẫu hứng', 'mistakes', 'making mistakes', 'improvisation exercises', 'bài luyện ngẫu hứng jazz', 'không có nốt sai'],
-    summary: 'Những lời khuyên thực hành của TJPS cho người học ngẫu hứng jazz: có một âm giai nền để quay về, kết câu ở nốt dẫn hướng, chừa khoảng trống, học lick, hát điều mình chơi — và khi lỡ chơi sai: lặp lại cho thành cố ý, sửa nửa cung, biến nó thành một chuỗi cromatic.',
+    summary: 'Những lời khuyên thực hành của Lamar cho người học ngẫu hứng jazz: có một âm giai nền để quay về, kết câu ở nốt dẫn hướng, chừa khoảng trống, học lick, hát điều mình chơi — và khi lỡ chơi sai: lặp lại cho thành cố ý, sửa nửa cung, biến nó thành một chuỗi cromatic.',
     refs: [
       ['The Jazz Piano Site — Improvisation Tips', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/improvisation-tips/'],
       ['The Jazz Piano Site — Making Mistakes', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-improvisation/making-mistakes/'],
@@ -2292,7 +2292,7 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
       ['The Jazz Piano Site — Modal Jazz (bài luyện một nốt)', 'https://www.thejazzpianosite.com/jazz-piano-lessons/modern-jazz-theory/modal-jazz/'],
     ],
     body: `
-## Mẹo (theo TJPS)
+## Mẹo (theo Lamar)
 - **Một âm giai nền** cho cả bài và **quay về đó khi lạc**; [[am-giai-ngu-cung|ngũ cung]] và [[am-giai-blues|âm giai blues]] rất hợp vì 5–6 nốt của chúng nằm trong nhiều âm giai (xem [[ngau-hung-doc-ngang|bản đồ hợp âm]]).
 - **Kết câu ở [[not-dan-huong|nốt dẫn hướng]]** (nốt 3 hoặc 7).
 - Chơi nốt "ngoài" **có cấu trúc**: lướt nhanh tới nốt hợp âm, theo khuôn mẫu ([[mau-lap-chu-ky]]), hoặc bám vào giai điệu (xem [[choi-ngoai-jazz]]).
@@ -2300,7 +2300,7 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
 - **Học lick** làm từ vựng và chỗ dựa; **nghe thật nhiều** (xem [[lick-va-trich-dan]]).
 
 ## Các bài luyện (mô tả phương pháp)
-| Bài luyện | Mục đích | Nguồn TJPS |
+| Bài luyện | Mục đích | Nguồn Lamar |
 |---|---|---|
 | **Không dừng**: chơi liên tục, bí thì dùng âm giai, chạy ngón hoặc lặp câu | Giữ mạch, không "đứng hình" | Top 3 Exercises |
 | **Nhắm nốt dẫn hướng** | Bám tiến trình, kết câu chắc | Top 3 Exercises |
@@ -2311,13 +2311,13 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
 Các bài luyện chung của mục ngẫu hứng: [[phuong-phap-luyen-ngau-hung]].
 
 ## Khi lỡ chơi sai
-TJPS bắt đầu từ một thực tế: đã sáng tác tại chỗ thì **thỉnh thoảng sẽ có nốt sai**. Trang này dẫn một câu thường được gán cho [[bill-evans|Bill Evans]]: "*không có nốt sai, chỉ có cách giải quyết sai*" (câu này cũng hay được gán cho người khác). Các cách cứu:
+Lamar bắt đầu từ một thực tế: đã sáng tác tại chỗ thì **thỉnh thoảng sẽ có nốt sai**. Trang này dẫn một câu thường được gán cho [[bill-evans|Bill Evans]]: "*không có nốt sai, chỉ có cách giải quyết sai*" (câu này cũng hay được gán cho người khác). Các cách cứu:
 1. **Lặp lại câu và nhấn nốt sai** — lặp lại khiến nó nghe như cố ý.
 2. **Lặp lại và sửa** sang nốt "đúng".
 3. **Biến nốt sai thành một chuỗi cromatic** hoặc [[mau-lap-chu-ky|mẫu lặp]], rồi giải quyết.
 4. Bí thì **đi tới nốt dẫn hướng hoặc nốt hợp âm gần nhất** (thường chỉ cách nửa cung — xem [[not-tiep-can-jazz]]).
-TJPS cũng nhắc: căng thẳng không được giải quyết "sẽ nghe như chơi sai nốt" — vấn đề thường là **không giải quyết**, chứ không phải nốt.
-Ví dụ người thật (TJPS kể, kèm chữ "được cho là"): Tommy Flanagan trên "[[vong-coltrane|Giant Steps]]" (1959) đã phải lùi về chỉ chơi hợp âm; Miles Davis vào lại giai điệu sớm một ô trong "Prince of Darkness" (1967).
+Lamar cũng nhắc: căng thẳng không được giải quyết "sẽ nghe như chơi sai nốt" — vấn đề thường là **không giải quyết**, chứ không phải nốt.
+Ví dụ người thật (Lamar kể, kèm chữ "được cho là"): Tommy Flanagan trên "[[vong-coltrane|Giant Steps]]" (1959) đã phải lùi về chỉ chơi hợp âm; Miles Davis vào lại giai điệu sớm một ô trong "Prince of Darkness" (1967).
 Liên quan: [[hoi-hop-bieu-dien]], [[ngau-hung-ung-tac]].
 `,
   },
@@ -2340,7 +2340,7 @@ Liên quan: [[hoi-hop-bieu-dien]], [[ngau-hung-ung-tac]].
       ['The Jazz Piano Site — Reharmonizing a Tonal Jazz Song into a Modal Jazz Song', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-reharmonization/turning-tonal-song-modal-song/'],
     ],
     body: `
-## Đặc điểm (theo TJPS)
+## Đặc điểm (theo Lamar)
 - **Ít hợp âm**, mỗi hợp âm kéo dài nhiều ô; không có tiến trình [[ii-v-i]] cố định.
 - Thường dùng **[[bass-ngan|bass ngân]]** hoặc âm nền.
 - Đệm bằng **[[hoa-am-quang-bon|hợp âm quãng 4]]** để tránh âm thanh "điệu tính"; hợp âm *So What* là một dạng quãng 4.
@@ -2361,14 +2361,14 @@ Cơ sở lý thuyết của việc chọn hợp âm và tránh lực hút V – 
 ::grand D4+G4+B4/E3+A3=Em11_(So_What) | Hợp âm "So What" trên E: ba quãng 4 đúng và một quãng 3 trưởng ở trên — E – A – D – G – B; Bill Evans chơi nó trong câu "đáp" của "So What"
 
 ## Đệm và solo trên một điệu thức
-- Đệm: các hợp âm quãng 4 **di chuyển song song trong điệu thức** (lối của [[mccoy-tyner|McCoy Tyner]] thập niên 1960 — TJPS) — xem [[hoa-am-quang-bon]].
+- Đệm: các hợp âm quãng 4 **di chuyển song song trong điệu thức** (lối của [[mccoy-tyner|McCoy Tyner]] thập niên 1960 — Lamar) — xem [[hoa-am-quang-bon]].
 - Solo: để nghe ra điệu thức, nhấn **nốt đặc trưng** (B trong Rê Dorian); dùng [[am-giai-ngu-cung|ngũ cung]], [[choi-ngoai-jazz|side-slipping]] để tạo căng trên nền tĩnh.
 
-## Biến một bài điệu tính thành bài điệu thức (TJPS)
+## Biến một bài điệu tính thành bài điệu thức (Lamar)
 - **Bỏ hẳn tiến trình gốc**, thay bằng **một** (hoặc một hai) hợp âm kéo dài — không phải gộp từng ii – V – I.
 - Thêm **vamp / riff / [[ostinato|ostinato]]** dưới giai điệu: tự viết, hoặc mượn một vamp điệu thức quen ("So What", "Maiden Voyage"); [[ky-hieu-hop-am|lead sheet]] thường không ghi vamp.
 - Hợp nhất khi giai điệu **phần lớn trong một giọng**, đi liền bậc, **tránh tritone trong giọng** và tránh rải hợp âm.
-- TJPS: thế bấm **xếp chồng quãng 3** nghe điệu tính, thế bấm **quãng 4** nghe điệu thức.
+- Lamar: thế bấm **xếp chồng quãng 3** nghe điệu tính, thế bấm **quãng 4** nghe điệu thức.
 - Ví dụ: John Coltrane biến "My Favorite Things" và "Chim Chim Cher-ee" (hai bài điệu tính) thành bài điệu thức.
 ::grand D4+G4+C5/D3+A3=Dm11_(D_Dorian) | Minh hoạ một vamp tĩnh: tay phải xếp quãng 4 (D – G – C) trên quãng 5 D – A — có thể thay cho cả chuỗi Dm7 – G7 – Cmaj7 nếu giai điệu nằm trong các phím trắng
 Ngược lại, đổi thể loại một bài pop sang điệu thức: [[doi-nhip-the-loai-jazz]].
@@ -2396,19 +2396,19 @@ Hợp âm So What: [[hop-am-so-what-barron]].
     ],
     body: `
 ## Bức tranh chung
-TJPS tóm tắt [[phong-cach-jazz|lịch sử jazz]] hiện đại như một quá trình **giảm dần sự phụ thuộc vào hợp âm**: [[jazz-dieu-thuc|jazz điệu thức]] giảm số hợp âm; free jazz bỏ hẳn hợp âm (ít nhất ở phiên bản của Ornette Coleman); post-bop đứng giữa.
+Lamar tóm tắt [[phong-cach-jazz|lịch sử jazz]] hiện đại như một quá trình **giảm dần sự phụ thuộc vào hợp âm**: [[jazz-dieu-thuc|jazz điệu thức]] giảm số hợp âm; free jazz bỏ hẳn hợp âm (ít nhất ở phiên bản của Ornette Coleman); post-bop đứng giữa.
 
 ## Free jazz — "tự do hoàn toàn"
 - Bỏ **hợp âm cố định, nhịp cố định và hình thức cố định**; thường **[[ngau-hung-piano|ngẫu hứng]] tập thể**.
 - **Ornette Coleman**: album *The Shape of Jazz to Come* (Atlantic, 1959); *Free Jazz: A Collective Improvisation* (thu ngày 21/12/1960, phát hành 1961) — khoảng 37 phút, một lần thu, **hai nhóm [[the-loai|tứ tấu]]** mỗi nhóm một kênh stereo; tên "free jazz" lấy từ album này. Coleman đặt ra khái niệm **"harmolodics"**: hoà âm, giai điệu, tiết tấu… có vai trò ngang nhau.
-- **Cecil Taylor** (piano): tránh giọng và trung tâm điệu tính bằng **[[am-cum|âm cụm]]**; TJPS gợi ý nghe album *Indent*.
+- **Cecil Taylor** (piano): tránh giọng và trung tâm điệu tính bằng **[[am-cum|âm cụm]]**; Lamar gợi ý nghe album *Indent*.
 - Vì không có trung tâm giọng, free jazz là **[[phi-dieu-tinh|phi điệu tính]]** — song song với nhạc tiên phong cổ điển cùng thời (xem [[thoi-ky-the-ky-20]]).
 ::wiki Ornette_Coleman | Ornette Coleman (ảnh đầu bài Wikipedia *Ornette Coleman*)
 
 ## Post-bop — "tự do có kiểm soát"
-TJPS: "Nếu free jazz là *tự do hoàn toàn* thì post-bop là *tự do có kiểm soát*" — trộn bebop, hard bop, [[dieu-thuc|điệu thức]] và free.
+Lamar: "Nếu free jazz là *tự do hoàn toàn* thì post-bop là *tự do có kiểm soát*" — trộn bebop, hard bop, [[dieu-thuc|điệu thức]] và free.
 - **Nhóm [[nhac-thinh-phong|ngũ tấu]] thứ hai của Miles Davis** (1964–68): [[herbie-hancock|Herbie Hancock]] (piano), Wayne Shorter ([[saxophone|saxophone]]), Ron Carter (bass), Tony Williams (trống). Các album: *E.S.P.* (album phòng thu đầu tiên), *Miles Smiles*, *Sorcerer*, *Nefertiti*.
-- Trên sân khấu, nhóm thường bỏ hợp âm và giai điệu của một standard nhưng **giữ hình thức và nhịp** — lối chơi TJPS gọi là "**time, no changes**" (có nhịp, không hợp âm).
+- Trên sân khấu, nhóm thường bỏ hợp âm và giai điệu của một standard nhưng **giữ hình thức và nhịp** — lối chơi Lamar gọi là "**time, no changes**" (có nhịp, không hợp âm).
 - Hợp âm trong post-bop thường không theo chức năng: [[constant-structures]], hợp âm sus, [[hoa-am-quang-bon|quãng 4]].
 Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
 
@@ -2443,13 +2443,13 @@ Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
       ['Wikipedia — Bitches Brew', 'https://en.wikipedia.org/wiki/Bitches_Brew'],
     ],
     body: `
-Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc năm chỉ gần đúng. Cột "piano" tóm tắt cách TJPS mô tả vai trò của piano qua từng thời (bài "Early Jazz vs Modern Jazz Piano").
+Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc năm chỉ gần đúng. Cột "piano" tóm tắt cách Lamar mô tả vai trò của piano qua từng thời (bài "Early Jazz vs Modern Jazz Piano").
 
 ## Jazz sơ kỳ (khoảng 1897 – 1930)
 | Phong cách | Thời gian | Đặc điểm | Piano | Mốc |
 |---|---|---|---|---|
 | **Ragtime** | ~1897–1918 (Britannica) | Tay phải [[dao-phach|đảo phách]] trên tay trái kiểu hành khúc; hình thức nhiều đoạn (strain) như hành khúc | Tay phải chơi các mẫu đảo phách quanh nốt hợp âm | [[scott-joplin|Scott Joplin]], "Maple Leaf Rag" (1899, bản in, bốn đoạn) |
-| **New Orleans / Dixieland** | 1910s–20s | Cả nhóm cùng [[ngau-hung-piano|ngẫu hứng]] | [[kiem-soat-toc-do|Giữ nhịp]] đều trên phách trong nhóm nhịp điệu (theo TJPS) | "Livery Stable Blues" (Original Dixieland Jass Band, 26/2/1917), thường gọi là đĩa jazz đầu tiên |
+| **New Orleans / Dixieland** | 1910s–20s | Cả nhóm cùng [[ngau-hung-piano|ngẫu hứng]] | [[kiem-soat-toc-do|Giữ nhịp]] đều trên phách trong nhóm nhịp điệu (theo Lamar) | "Livery Stable Blues" (Original Dixieland Jass Band, 26/2/1917), thường gọi là đĩa jazz đầu tiên |
 | **Stride** | 1910s–30s | Lớn lên từ ragtime | Tay trái luân phiên bass ở phách 1 – 3 và hợp âm ở phách 2 – 4 — xem [[stride-piano]] | [[james-p-johnson|James P. Johnson]], "Carolina Shout" (thu 1921) |
 | **Boogie-woogie** | Đĩa đầu 1928; thịnh hành ~1938–40s | Bass [[ostinato]] "lăn" ở tay trái trên khung [[blues-12-nhip|blues 12 ô]] | Tay trái gần như là cả một nhóm nhịp điệu | Pinetop Smith, "Pinetop's Boogie Woogie" (thu 29/12/1928) |
 ::staff bass C3 E3 G3 A3 Bb3 A3 G3 E3 | Minh hoạ một mẫu bass boogie-woogie quen thuộc trên hợp âm C (móc đơn, lặp lại mỗi ô; đổi sang F và G theo khung blues)
@@ -2463,7 +2463,7 @@ Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc n�
 ## Sau bebop (1949 – 1970)
 | Phong cách | Thời gian | Đặc điểm | Piano | Mốc |
 |---|---|---|---|---|
-| **Cool** | 1949–50s | Phản ứng với bebop "nóng": chậm, nhẹ, trữ tình, thưa; TJPS: quan trọng là chơi *thế nào* hơn là chơi *gì* | Lennie Tristano | Miles Davis, *Birth of the Cool* (thu 1949–50) |
+| **Cool** | 1949–50s | Phản ứng với bebop "nóng": chậm, nhẹ, trữ tình, thưa; Lamar: quan trọng là chơi *thế nào* hơn là chơi *gì* | Lennie Tristano | Miles Davis, *Birth of the Cool* (thu 1949–50) |
 | **Hard bop / soul jazz** | ~1955–65 | Gốc blues và gospel, [[cam-nhan-phach|groove]] dễ nhảy, giai điệu đơn giản hơn; soul jazz dùng đàn organ Hammond, hoà âm rất đơn giản | Horace Silver ("The Preacher"), Bobby Timmons — xem [[tai-hoa-am-gospel]] | Art Blakey, *Moanin'* (thu 30/10/1958) |
 | **Modal** | Cuối 1950s | [[dieu-thuc|Điệu thức]] thay [[chuc-nang-hoa-am|hoà âm chức năng]]; một hợp âm kéo dài nhiều ô; [[bass-ngan|bass ngân]]; hợp âm quãng 4 | [[bill-evans|Bill Evans]], [[mccoy-tyner|McCoy Tyner]] — xem [[jazz-dieu-thuc]] | *Kind of Blue* (1959) |
 | **Free / avant-garde** | ~1959–60s | Không hợp âm, không giọng cố định, cùng ngẫu hứng | Cecil Taylor với [[am-cum|âm cụm]] — xem [[post-bop-free-jazz]] | Ornette Coleman, *Free Jazz* (thu 21/12/1960) |

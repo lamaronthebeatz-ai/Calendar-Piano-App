@@ -1090,13 +1090,13 @@ Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
 Bối cảnh: [[phong-cach-jazz]] (mục Latin).
 
 ## Cảm giác: đung đưa, không swing
-- Móc đơn **thẳng** nhưng [[dao-phach|đảo phách]] nhiều; tiết chế, ít rung, ít thay đổi [[cuong-do|cường độ]] (TJPS).
+- Móc đơn **thẳng** nhưng [[dao-phach|đảo phách]] nhiều; tiết chế, ít rung, ít thay đổi [[cuong-do|cường độ]] (Lamar).
 - Ba lớp: **[[passacaglia-va-chaconne|bè trầm lặp]]**, **hợp âm đệm** đảo phách, **giai điệu**.
 - **Batida** của Gilberto: ngón cái chơi trầm ở phách 1 và 3 (gốc – 5, như trống *surdo* của samba), các ngón kia gảy hợp âm đảo phách — một cây guitar [[doi-am|mô phỏng]] cả dàn trống.
 - Khác samba: samba nhanh hơn, ồn hơn, dàn gõ lễ hội; bossa nova nhỏ nhẹ, thân mật, cho giọng hát và guitar, [[hoa-am-jazz|hoà âm jazz]].
 
 ## Tay trái
-::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và trước phách 1 ô sau có thể lặp lại nốt trước, đón trước nốt gốc ô sau, nhảy quãng 8 hoặc tiếp cận nửa cung (TJPS)
+::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và trước phách 1 ô sau có thể lặp lại nốt trước, đón trước nốt gốc ô sau, nhảy quãng 8 hoặc tiếp cận nửa cung (Lamar)
 ::staff bass F2=1 F2 C3=5 C3 / G2=1 G2 D3=5 D3 | Khung trầm 1 – 5 trên Fmaj7 – G7 (minh hoạ); **không dùng pedal** để giữ tiếng trầm gọn
 Peter Martin gợi ý có thể giản lược bè trầm thành nốt trắng — phần đảo phách nằm ở tay phải.
 
