@@ -637,7 +637,11 @@ function Toc({ book, current, marks, onGo, onClose }: { book: ReaderBook; curren
   const chapters = chaptersOf(book)
   const doneCount = chapters.filter((c) => done.includes(c.slug)).length
   const active = useRef<HTMLButtonElement>(null)
-  useEffect(() => active.current?.scrollIntoView({ block: 'center' }), [])
+  // Braces, not an expression: newer Chrome returns a promise from scrollIntoView, and React would take a
+  // returned value for the cleanup function and call it on unmount ("… is not a function").
+  useEffect(() => {
+    active.current?.scrollIntoView({ block: 'center' })
+  }, [])
   return (
     <Sheet side="left" title="Mục lục" onClose={onClose}>
       <div className="flex items-center gap-3 px-1 pb-4">

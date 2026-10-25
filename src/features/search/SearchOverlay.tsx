@@ -51,7 +51,9 @@ export function SearchOverlay() {
   const { pathname } = useLocation()
 
   // Remember what was read, from wherever it was opened.
-  useEffect(() => pushRecent(pathname), [pathname])
+  useEffect(() => {
+    pushRecent(pathname)
+  }, [pathname])
 
   // ⌘K / Ctrl+K from anywhere, even inside a text field.
   useEffect(() => {

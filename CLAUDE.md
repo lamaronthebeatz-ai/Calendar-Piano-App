@@ -14,6 +14,8 @@ npx tsc -b && npm run lint && npm run check:links && npm run build
 ```
 `check:links` kiểm mọi liên kết `[[slug]]` trong thư viện và slug trùng. Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận được.
 
+- **Effect không được trả về giá trị** ngoài hàm dọn dẹp: viết `useEffect(() => { x() }, …)`, không viết `useEffect(() => x(), …)` — Chrome mới trả Promise từ `scrollIntoView`/`scrollTo`, React gọi nó như hàm dọn dẹp → "… is not a function" (lỗi từng làm sập trình đọc trên Android). Lỗi route hiện `RouteError` trong `App.tsx`.
+
 ## Cấu trúc
 - `src/features/calendar`, `students`, `lessons`, `settings`, `search` — phần thời khoá biểu (Dexie/IndexedDB, Zustand). Route `/` và `/students` bọc trong `PrivateArea`.
 - `src/features/theory/` — thư viện bài viết:

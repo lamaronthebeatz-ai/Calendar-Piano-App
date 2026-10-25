@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
-import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom'
+import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider, useRouteError } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
 import { Intro } from './components/Intro'
@@ -70,10 +70,27 @@ export function App() {
   )
 }
 
+/** Shown instead of React Router's developer page when a screen throws: says what happened and offers a way back. */
+function RouteError() {
+  const err = useRouteError()
+  const msg = err instanceof Error ? err.message : String(err)
+  return (
+    <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-[var(--color-surface)] px-6 text-center">
+      <p className="font-display text-[24px] font-semibold text-[var(--color-ink)]">Có lỗi khi mở trang này</p>
+      <p className="max-w-md text-[14px] text-[var(--color-ink-muted)]">Dữ liệu của bạn vẫn an toàn. Thử tải lại; nếu lỗi lặp lại, hãy chụp màn hình dòng dưới đây gửi Lamar.</p>
+      <code className="max-w-md break-words rounded-lg bg-[var(--color-surface-sunken)] px-3 py-2 text-[12px] text-[var(--color-ink-muted)]">{msg}</code>
+      <div className="flex gap-2">
+        <button onClick={() => location.reload()} className="rounded-full bg-[var(--color-ink)] px-5 py-2 text-[14px] font-medium text-[var(--color-surface)]">Tải lại</button>
+        <a href="#/curriculum" onClick={() => setTimeout(() => location.reload(), 0)} className="rounded-full border border-[var(--color-border)] px-5 py-2 text-[14px] text-[var(--color-ink)]">Về giá sách</a>
+      </div>
+    </div>
+  )
+}
+
 // A data router, so navigations can run as view transitions (see layout/viewTransitions.ts).
 const router = createHashRouter(
   createRoutesFromElements(
-    <Route element={<AppShell />}>
+    <Route element={<AppShell />} errorElement={<RouteError />}>
       <Route path="/" element={<PrivateArea title="Thời khoá biểu"><CalendarPage /></PrivateArea>} />
       <Route path="/students" element={<PrivateArea title="Học viên"><StudentsListPage /></PrivateArea>} />
       <Route path="/students/:id" element={<PrivateArea title="Học viên"><StudentProfilePage /></PrivateArea>} />
