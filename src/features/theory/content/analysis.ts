@@ -1432,5 +1432,271 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
 | **Phát triển** | Ba đoạn; đoạn giữa xen câu trích và lời "đáp" banjo |
 `,
   },
+  {
+    slug: 'phan-tich-scriabin-sonata-so-2',
+    title: 'Phân tích hoà âm: Scriabin, Sonata số 2 Op. 19 "Sonate-Fantaisie"',
+    category: 'analysis',
+    aliases: ['Scriabin Sonata số 2', 'Sonata-fantaisie', 'Sonata-fantasy', 'Op. 19', 'Sonata Sol thăng thứ Scriabin', 'Scriabin Op. 19', 'Sonata số 2 Scriabin'],
+    summary: 'Phân tích từng ô hai chương của Sonata Sol♯ thứ Op. 19 (Belaieff in năm 1898): công năng và chức năng của từng hợp âm, các thủ pháp hoà âm của Scriabin thời đầu — pedal át, hợp âm 6 tăng viết trùng âm thành át 7, Napoli, hợp âm thêm nốt, chuyển giọng trùng âm Sol♯ thứ → Mi♭ thứ, Si♭ thứ → Si trưởng. Số ô đếm trên bản Belaieff, đối chiếu bảng hình thức của Leikin (qua Wikipedia) và dữ liệu MIDI biểu diễn.',
+    wiki: 'Piano_Sonata_No._2_(Scriabin)',
+    refs: [
+      ['IMSLP — Piano Sonata No. 2, Op. 19 (Scriabin): bản Belaieff, Leipzig 1898 (tệp #111216), dùng để đọc từng ô', 'https://imslp.org/wiki/Piano_Sonata_No.2,_Op.19_(Scriabin,_Aleksandr)'],
+      ['Wikipedia — Piano Sonata No. 2 (Scriabin): bảng hình thức và lịch sử, dẫn Leikin 2011, Ballard & Bengtson 2017, Bowers 1996', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._2_(Scriabin)'],
+      ['Google Magenta — bộ dữ liệu MAESTRO v3 (MIDI các bản biểu diễn piano thật, có bốn bản Sonata số 2), dùng để kiểm cao độ', 'https://magenta.tensorflow.org/datasets/maestro'],
+      ['Yuhe Wang (2025), An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin — luận án DMA, University of Maryland', 'https://drum.lib.umd.edu/bitstreams/dc35a0f3-3c1e-4335-a35f-eefd792b9782/download'],
+      ['Emily Chialin Chiang (2013), Rubato and Climax Projection in Two Piano Sonatas by Scriabin — luận án DMA, University of Toronto', 'https://tspace.library.utoronto.ca/bitstream/1807/35791/1/Chiang_Emily_CL_201306_DMA_thesis.pdf'],
+      ['Bae Su-jin (2000), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Nữ Ewha (Hàn Quốc) — chỉ đọc được tóm tắt', 'https://dspace.ewha.ac.kr/handle/2015.oak/184674'],
+    ],
+    body: `
+::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
+
+## Tổng quan
+[[alexander-scriabin|Scriabin]] bắt đầu Sonata số 2 ở Genova năm 1892 và viết xong ở Crimea năm 1897; Belaieff (Leipzig) in năm 1898 với tên ***Sonate-Fantaisie*** *№ 2, en sol dièse mineur*; đầu bản nhạc ghi "1892–1897". Theo Leikin (2011), chương Presto được viết trước chương đầu khoảng bốn năm. Scriabin chơi lần đầu ở Salle Érard, Paris, ngày 5/5/1896, khi tác phẩm còn chưa hoàn chỉnh. Bowers kể rằng tờ chương trình buổi ấy ghi giọng **"La♭"** thay vì "Sol♯". Đây là một chi tiết nhỏ nhưng hợp với lối nghĩ [[trung-am|trùng âm]] chạy suốt tác phẩm. *(Wikipedia, dẫn Leikin 2011, Ballard & Bengtson 2017, Bowers 1996)*
+
+Tác phẩm có **hai chương**, chậm rồi nhanh, như *Sonata quasi una fantasia* của Beethoven (xem [[phan-tich-anh-trang-chuong-1]]):
+- **I. Andante** (nốt đen = 60), Sol♯ thứ, nhịp 3/4, **136 ô**.
+- **II. Presto**, Sol♯ thứ, nhịp 3/2, Presto (nốt trắng = 96–100), **110 ô**.
+
+Wikipedia dẫn một chương trình về biển, theo Leikin là do người viết tiểu sử Yuri Engel ghi lại. Chương I là đêm phương Nam yên tĩnh bên bờ biển, phần phát triển là biển sâu tối và động. Đoạn Mi trưởng là ánh trăng vuốt ve sau bóng tối. Presto là mặt biển mênh mông nổi sóng. Câu này có ít nhất hai bản dịch tiếng Anh khác nhau, và tao chưa đối chiếu được nguyên văn tiếng Nga.
+
+## Nguồn và cách phân tích
+- **Văn bản**: bản in đầu Belaieff 1898 (IMSLP). Mọi số ô và tên nốt trong bài đều đọc trên bản này. Tao tự đếm và được **136 + 110 ô**. Các mốc hình thức khớp đúng bảng Wikipedia dẫn Leikin.
+- **Kiểm cao độ**: đối chiếu với MIDI một bản biểu diễn trong bộ MAESTRO v3. MIDI là tiếng đàn thật nên có thể lẫn nốt chơi sai và tiếng pedal nhoè; chỗ nào hai nguồn khác nhau thì theo **bản phổ**. Ví dụ ô 41 chương II, MIDI có E♮ nhưng bản in là E♭.
+- **Tài liệu đã tìm**: không tìm thấy bài phân tích hoà âm từng ô nào công bố mở. Luận án của Wang (2025) chỉ tả chung về màu sắc và các giọng xa. Luận án của Chiang (2013) bàn về rubato và cao trào. Tóm tắt luận văn của Bae (2000), tao chỉ đọc được qua kết quả tìm kiếm, cho biết tác giả ghi nhận chương I theo hình thức sonata, chương II ba đoạn có coda, cùng hợp âm ba bỏ quãng 3, hợp âm quãng 4 và nhiều lần chuyển giọng trùng âm; tao **chưa đọc được toàn văn**. Một luận án của ĐH Kentucky (2007) về sonata Scriabin bị chặn truy cập. Vì vậy **phần phân tích từng ô dưới đây là bài đọc của chính bài viết**, dựa trên bản phổ, theo khung [[chuc-nang-hoa-am|chức năng hoà âm]] T – S – D của trường phái Nga (xem [[he-thong-hoa-am-co-dien]]).
+- **Ký hiệu**: số La Mã viết theo giọng đang xét. **Ger+6 / Fr+6 / It+6** là [[hop-am-sau-tang|hợp âm 6 tăng]] Đức / Pháp / Ý. **N** là [[hop-am-napoli|Napoli]]. "6/4 kết" là [[hop-am-sau-bon|hợp âm 6/4 kết]]. V/x là [[hop-am-at-phu|át phụ]]. Hợp âm chồng lên một bè trầm không đổi là [[bass-ngan|pedal]].
+
+## Hình thức
+::form Mở_đầu:12 CĐ1:6 Chuyển:4 CĐ2:14 Chuyển:9 CĐ3:6 Kết:6 Phát_triển:31 CĐ1:6 Chuyển:5 CĐ2:13 Chuyển:9 CĐ3:6 Coda:9 | Chương I — [[hinh-thuc-sonata|hình thức sonata]] (số dưới khối là số ô; mốc theo Leikin qua Wikipedia, khớp bản Belaieff)
+::form A:16 Xen:8 A:8 Kết:8 Mi♭–Si♭:12 F♯:6 Si♭–Rê♭–Đô♯:12 Về_át:8 A′:14 Coda:18 | Chương II — ba đoạn có coda: A (1–40), B (41–78), A′ (79–92), coda (93–110). Các khối con do bài viết chia: ô 17–24 là đoạn xen dolcissimo ở Mi trưởng, ô 53–58 là pedal F♯
+
+## Chương I — Andante (136 ô)
+Đặc điểm chung: chương mở bằng một motif ba nốt có quãng 5 rỗng, dừng ở các dấu lặng ngân (fermata). Trình bày đặt cả ba chủ đề ở **Si trưởng** (III, giọng song song). Tái hiện chuyển cả ba sang **Mi trưởng** (VI), và chương **kết ở Mi trưởng**, không trở về Sol♯ thứ.
+
+### Trình bày (ô 1–57)
+| Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
+|---|---|---|---|
+| Lấy đà–1 | G♯–D♯ quãng 5 rỗng; phách 2 B–D♯–E♯–G♯ (♯viø6/5: bậc VI nâng của thứ giai điệu) | T | Chủ âm **bỏ quãng 3** — màu "rỗng" mở đầu; fermata |
+| 2 | V4/3 (D♯7/A♯) → V7 → V4/2 (bass C♯) | D | Dừng trên V4/2 chưa giải quyết |
+| 3 | E/B → VI – iiø6/5 – i6/4 – iv6; phách mạnh có G♯ ở bè trầm | S trên T | Bè trầm đi liền bậc trên **pedal chủ** G♯ |
+| 4 | iv6/4 trên pedal G♯; iiø4/3 (A♯ø7/E) | S | Fermata |
+| 5 | iiø6/5 – i6/4 – iv6 – **It+6** (E–G♯–C𝄪) | S → DD | 6 tăng Ý trên pedal chủ |
+| 6 | **V7/V** (A♯–C𝄪–G♯), sf → It+6 (p) | DD | Át phụ của át đi lùi về 6 tăng |
+| 7 | V – iv – bass B, A♯ – VI6/4 (E/B) – G♯ | D–S–T | Bè trầm đi xuống liền bậc kiểu "lament" |
+| 8 | V – iv7 (C♯–E–G♯–B) – B – A♯ – VI6/4 – G♯ | D–S–T | Lặp có biến hoá |
+| 9 | iv – B – A♯ – VI6/4 – G♯ – **N6** (La trưởng/C♯, A♮) – G♯ | S | Napoli chạm qua rồi trở lại chủ |
+| 10 | **Fr+6** (E–G♯–A♯–C𝄪, C𝄪 ở bè trầm) – G♯ – V (mf) | DD → D | 6 tăng Pháp **thể đảo** (âm 6 tăng ở bè trầm) |
+| 11 | Motif mở đầu trên **v** (Rê♯ thứ): D♯–A♯ rỗng; F♯–A♯–B♯–D♯ | D (thứ) | Mô tiến motif lên quãng 5 |
+| 12 | A♯7/E♯ (V4/3 của v) – V7 – V4/2 (bass G♯), fermata | DD | Giải quyết lệch sang F♯ ở ô 13 |
+| 13 | **Si trưởng**: I6/4 – nốt dựa C♯/E – I – V – I | T của III | Chủ đề 1 vào thẳng giọng song song |
+| 14 | G♯m thêm E♯ (vi của Si) | T thay | Hợp âm thêm nốt 6 nâng |
+| 15 | Rê♯ thứ (iii của Si): i6/4 – V (A♯–C𝄪–E♯) – i; cuối ô A♮ | D của Si | Ly điệu chạm qua |
+| 16 | B7 (V7/IV) | DS | Át phụ của IV |
+| 17 | IV (Mi trưởng) | S | |
+| 18 | C♯–E–G♮–B = iiø7 **mượn Si thứ** | S thứ | [[hop-am-muon|Hợp âm mượn]] (G♮) |
+| 19 | I6/4 | T (6/4 kết) | |
+| 20 | F♯–A♯–C♮–E = **V7 quãng 5 hạ** | D biến | Âm hình toàn cung, gần Fr+6 |
+| 21 | vi → iii (E♯ lướt) | T thay | |
+| 22 | như ô 20 nhưng viết **B♯** (F♯–A♯–B♯–E) | D biến | Cùng âm thanh, hai cách viết |
+| 23 | Chủ đề 2 (p, rubato): B–E–F♯ (I quãng 4 treo) – IV6 – ii7 | T–S | Nhiều lớp phức điệu |
+| 24 | G♯ quãng 4 treo – C♯m/E – A♯ø7/E – vi | T thay–S | |
+| 25 | như 24 | | |
+| 26 | … F♯7 (V) treo | D | |
+| 27 | B7 quãng 4 treo với **A♮ ở bè trầm** (V4/2 của IV) → E/G♯ (IV6) | DS → S | |
+| 28 | như 27 → C♯m7 rải | S | |
+| 29 | C♯m7 + A♯ (A♯ø7/C♯), cresc. | S | |
+| 30 | ii6/5 – V – I (Si) | S–D–T | [[cau-ket|Kết trọn]] câu đầu chủ đề 2 |
+| 31 | I — câu nhắc lại, móc kép | T | |
+| 32 | G♯ quãng 4 treo → E/G♯, nốt thêu dưới F𝄪 | | [[not-ngoai-hop-am|Nốt thêu]] cromatic |
+| 33 | C♯m7 → F♯7 | S–D | |
+| 34 | B7 treo/A♮ → I → C♯m7/G♯ → E/G♯ (pp) | | |
+| 35 | B7 treo/A♮ → C♯m7/B → chuỗi lướt E–D♯–D–C♯–C–B trên bè trầm G♯ | | Lướt cromatic đi xuống |
+| 36 | C♯m7 → E/B | S | |
+| 37 | Giai điệu đơn G♯–A♯–B–A♯–G♯ (tay trái nghỉ) | — | Đoạn chuyển mở bằng một bè |
+| 38 | F♯7 (B treo → A♯) = V7 của Si | D | |
+| 39 | C♯m/G♯ | S | |
+| 40 | F♯7 | D | |
+| 41 | C♯m/G♯ → C♯m/E | S | |
+| 42 | vi (G♯m) – D♯ – G♯ – C♯m/E | T thay–S | |
+| 43 | G♯m7 rải móc kép, cresc. | | |
+| 44 | C♯m7 – A♯°/C♯ – F♯7 | S–D | |
+| 45 | I (Si) trên B0–B1, mf | T | Mở pedal chủ cho chủ đề 3 |
+| 46–51 | Chủ đề 3 ("ben marcato il canto") trên **pedal B**: I – ii7 – vi7 – I thêm 9 | T kéo dài | Pedal chủ, hợp âm thêm nốt |
+| 52–57 | Đoạn kết trên pedal B; ô 57 hợp âm rải nhấn, đóng ở Si trưởng | T | |
+
+### Phát triển (ô 58–88)
+| Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
+|---|---|---|---|
+| 58–59 | Motif mở đầu trên Si | | |
+| 60–61 | Motif trên **Rê trưởng** (♭III của Si); cuối ô 61 xoá hoá biểu | | Quan hệ [[trung-am-cromatic|trung âm cromatic]] |
+| 62–66 | Vòng quãng 5 đi xuống: Sol thứ → Đô thứ → Fa thứ (viết dấu giáng) | | [[mo-tien-hoa-am|Mô tiến]] |
+| 66–74 | Fø7 → B♭7 → **Mi♭ thứ** (= Rê♯ thứ, giọng át viết trùng âm); đỉnh ff xen các đoạn p rải | S–D của Mi♭ | Viết giọng át bằng dấu giáng |
+| 75–76 | Hoá biểu năm thăng trở lại, ff: A♯ø7 (iiø7) → D♯7♭9 (V7♭9) của Sol♯ thứ | S–D | Mi♭ thứ được hiểu lại là Rê♯ thứ |
+| 77 | **Sol trưởng** bất ngờ (p) | | Trượt nửa cung |
+| 78 | B7 → E; hợp âm ba tăng E–G♯–B♯; rồi Fr+6 | | [[hop-am-ba-tang|Hợp âm ba tăng]] |
+| 79–86 | **Pedal át D♯**: Fr+6 (E–G♯–A♯–C𝄪) ↔ V7♭9/V (A♯) ↔ V; cresc. tới ff | DD–D | Pedal át dài trước tái hiện |
+| 87–88 | Motif mở đầu ff ở Sol♯ thứ: G♯–D♯ rỗng; V4/3 – V7 – V4/2; fermata | D | Như ô 1–2, phóng to |
+
+### Tái hiện và coda (ô 89–136)
+| Ô | Hợp âm | Ghi chú |
+|---|---|---|
+| 89–94 | Chủ đề 1 ở **Mi trưởng** (hoá biểu 4 thăng): I6/4… | = ô 13–18 dịch **xuống quãng 5**. Sau pedal D♯ (V của Sol♯ thứ), nhạc vào VI (Mi) — một dạng [[cau-ket|kết lừa]] ở tầm hình thức |
+| 95–99 | B–D♯–E♯–A = V7 quãng 5 hạ của Mi | tương ứng ô 19–22 (dài hơn một ô) |
+| 100–112 | Chủ đề 2 ở Mi trưởng (A = IV, F♯m7 = ii7, D♯ø7…) | tương ứng ô 23–36 |
+| 113–121 | Đoạn chuyển (B7 … C♯m …) | tương ứng ô 37–45 |
+| 122–127 | Chủ đề 3 ở Mi trưởng trên **pedal E**, 8va | tương ứng ô 46–51 |
+| 128–136 | Coda trên pedal E1: I – vi7 (C♯m7/E) – I thêm 6/9 – màu plagal (A); ô 135–136 motif mở đầu ở Mi trưởng: E–B rỗng → E/G♯ có nốt hoa mỹ C♯; smorz., fermata | Kết ở **Mi trưởng** |
+Phần tái hiện và coda được ghi theo đoạn vì là dịch giọng của phần trình bày; độ chi tiết ở đây thấp hơn bảng ô 1–45.
+
+## Chương II — Presto (110 ô)
+Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay phải chạy móc đơn liên tục. Đoạn B có giai điệu nốt dài ("ben marcato il canto"). Một hình giai điệu **3 – 2 – 1 – 7 – 1** của đoạn B đi qua năm giọng: Mi♭ thứ, Si♭ thứ, Rê♭ trưởng, Đô♯ thứ, rồi về Sol♯ thứ ở coda.
+
+### Đoạn A (ô 1–40), Sol♯ thứ
+| Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
+|---|---|---|---|
+| 1 | Bè trầm D♯ – C♯ luân phiên (V – V4/2); bè giữa vờn G♯ – B quanh F𝄪, A♯ | D (chất liệu T treo trên D) | **Mở chương bằng át**, không bằng chủ |
+| 2 | VI (Mi), bè trầm E – B | T/S | Gam đi xuống G♯–F♯–E–D♯–C♯ |
+| 3 | iv7/B (C♯–E–G♯–B) ↔ iiø6/5 (A♯–C♯–E–G♯); bè trầm B – A♯; B♯ thêu C♯ | S | Hai hợp âm S chung ba nốt, chỉ đổi bè trầm |
+| 4 | iv (Đô♯ thứ), bè trầm C♯ – G♯ | S | |
+| 5 | Mi trưởng thêm 7 trưởng và 9 (E–G♯–B–D♯–F♯), bè trầm B – G♯ | T/S | Hợp âm thêm nốt; nghe được cả VI7 lẫn i7 có ♭6 |
+| 6 | **Ger+6 của giọng át**: B–D♯–F♯–G𝄪; bè trầm B – G𝄪 luân phiên | DD | Quãng 6 tăng viết thành **quãng 3 giảm** B–G𝄪, hai nốt cùng đổ về A♯ |
+| 7 | V7/V (A♯–C𝄪–E♯–G♯) có D♯ treo, B (♭9); bè giữa D♯–E♯–F♯–A♯; cuối ô E♮ báo trước ♭9 của V | DD | |
+| 8 | **V9♭** (D♯–F𝄪–A♯–C♯–E); bè giữa B–A♯–G♯–F𝄪 | D | Kết nửa — hết câu 1 |
+| 9 | V7/iv (G♯–B♯–D♯–F♯), bè trầm G♯ – F♯ | D/S | **Mô tiến** ô 1 lên quãng 4 |
+| 10 | La trưởng (VI của Đô♯ thứ), bè trầm A – E | S/iv | = ô 2 lên quãng 4 |
+| 11 | F♯m7/E ↔ D♯ø7, bè trầm E – D♯ | S của iv | = ô 3 lên quãng 4; E♯ thêu |
+| 12 | F♯m (iv của Đô♯ thứ), bè trầm F♯ – C♯ | | = ô 4 lên quãng 4 |
+| 13 | La thêm 7, 9, bè trầm E – C♯ | | = ô 5 lên quãng 4. La cũng là Napoli của Sol♯ thứ |
+| 14 | **Ger+6 của Sol♯ thứ**: E–G♯–B–C𝄪 (có A♮ lướt); bè trầm E – C𝄪 | DD | Mô tiến được "bẻ" về giọng chính |
+| 15 | V9♭ có G♯ treo (4–3); bè giữa G♯–A♯–B–D♯ | D | |
+| 16 | **i** (Sol♯ thứ), F𝄪 thêu; bè giữa E–D♯–C♯–B | T | Kết trọn — hết đoạn 16 ô (8 + 8) |
+| 17 | B9 (+13) trên bè trầm B (8va bassa) = V9 của Mi, dolcissimo pp | D của VI | |
+| 18 | B7 (V7 của Mi), A♮ | | |
+| 19 | B7 trên bè trầm E (Ped.) | D trên T | Át chồng lên chủ của Mi |
+| 20 | Mi trưởng I6/4 thêm 6 (C♯) | T của VI | Màu sixte ajoutée |
+| 21 | **E7 (D♮)** +9 +13 = V7 của La | | D♮ |
+| 22 | E7 có A treo (4–3) | | |
+| 23 | E7 chồng trên bè trầm A | | Át chồng lên chủ của La |
+| 24 | N6 (A/C♯) – iv6 (C♯m/E, D♮ thêu) – V7 (D♯–F𝄪–A♯–C♯) | S–S–D | La trưởng đổi vai: VI của Mi → **Napoli** của Sol♯ thứ |
+| 25–28 | = ô 1–4 | | Tái hiện rút gọn |
+| 29 | **Mi thứ** thêm 7 trưởng (E–G♮–B–D♯), bè trầm B – G♮; f rit. | T/S thứ hoá | VI chuyển sang thứ (G♮ trùng âm với F𝄪) |
+| 30 | E–G–B → **Ger+6** (E–G♯–B–C𝄪); bè trầm B – E; bè cromatic G♮–G♯, A–A♯ | DD | |
+| 31 | = ô 15 (V9♭ có quãng 4 treo), a tempo dim. | D | |
+| 32 | = ô 16 (i) | T | Câu 25–32 nén 16 ô thành 8 |
+| 33 | G♯ → **N** (La trưởng thế gốc, A♮), f, có dấu nhấn | T–S | |
+| 34 | G♯ → vii°7 (F𝄪–A♯–C♯–E) | T–D | |
+| 35 | i (G♯–B–D♯ + E) ↔ **N6 thêm sixte** (A–C♯–E–F♯, bè trầm C♯); p | T–S | Napoli thêm nốt 6, cũng là F♯m7/C♯ |
+| 36 | i – bè trầm D♯ dưới gam thứ tự nhiên đi xuống (F♯ không nâng) – i | T–D–T | Kết bằng **át thứ** |
+| 37 | Si trưởng (III); bè trầm G𝄪 → B; f | T thay | G𝄪 chuẩn bị A♯ ở ô sau |
+| 38 | D♯m/A♯ (v6/4) với các nốt thêu A♯–C𝄪–E♯ | 6/4 kết của Rê♯ thứ | |
+| 39 | Bè trầm A♯–F♯–G♯–B; ♯viø7 (E♯–G♯–B–D♯); F𝄪, B♯ thêu | D | |
+| 40 | **i** (Sol♯ thứ, hợp âm lớn) → chạy xuống E♯, C𝄪 tới **V7♭9 của Rê♯ thứ** (A♯) trên bè trầm A♯ | T → D/v | **A♯ = B♭**: nốt chung mở cửa sang Mi♭ thứ |
+
+### Đoạn B (ô 41–78)
+| Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
+|---|---|---|---|
+| 41 | **Mi♭ thứ** (hoá biểu sáu giáng): i; giai điệu G♭–F–E♭–D♮–E♭; B♭ ngân ở bè trong | T | **Chuyển giọng trùng âm**: Rê♯ thứ (v) viết thành Mi♭ thứ |
+| 42 | iiø4/3 (Fø7/C♭) → **V có ♭6** (B♭–D–G♭); bè trầm B♭–A♭–G♭ (liên ba có dấu nhấn) | S–D | G♭ = nốt ♭6 trên át |
+| 43 | i6 thêm **6 nâng** (C♮; giai điệu C–D–E♭ theo thứ giai điệu), bè trầm G♭; rồi F–E♭–D♭ | T | |
+| 44 | **Fr+6** (C♭–E♭–F–A♮), sff | DD | Bè trầm đi xuống gam Mi♭ thứ B♭→C♭ suốt ô 41–44; Fr+6 = V7 quãng 5 hạ của B♭ |
+| 45 | **Pedal B♭** (V) dưới hình i6/4 (E♭–G♭–B♭ + F, C♭); p | D | |
+| 46 | Pedal B♭; bè trầm bắt đầu đi lên: C♭ | | |
+| 47 | Bè trầm C♮–D♭–D♮–E♭ dưới hình Mi♭ thứ đứng yên | lướt | Hợp âm lướt sinh ra từ bè trầm cromatic |
+| 48 | Bè trầm E♮ – F: i6/4 của Si♭ thứ → V7♭9 (F–A–C–E♭ + G♭, D♭) | D của Si♭ thứ | |
+| 49 | **Si♭ thứ** (năm giáng): i; giai điệu D♭–C–B♭–A–B♭ | T | = ô 41 dịch lên quãng 5 |
+| 50 | iiø4/3 (Cø7/G♭) → V♭6 (F–A–D♭); bè trầm F–E♭–D♭ | S–D | = ô 42 |
+| 51 | i6 + 6 nâng (G♮; giai điệu G–A–B♭); bè trầm D♭ rồi C–B♭–A♭ | T | = ô 43 |
+| 52 | **G♭7** (G♭–B♭–D♭–F♭), sff | DD | Ger+6 của Si♭ thứ **viết như V7 của C♭** (F♭ thay E) |
+| 53 | **Si trưởng** (= Đô♭) I6/4 thêm 6, trên **pedal F♯** (= G♭); pp; hoá biểu xoá, viết dấu thăng | T trên D | G♭7 hiểu thành F♯7 = V7 của Si; bè trầm giữ nguyên |
+| 54 | **Sol trưởng** (Gmaj7/F♯) = ♭VI của Si, trên pedal F♯ | | Trung âm cromatic trên pedal |
+| 55 | **Đô trưởng thêm 6** (C–E–G–A) = ♭II (Napoli) của Si, trên F♯ | S | Napoli cách bè trầm một tritone |
+| 56 | **F♯7♭9** (F♯–A♯–C♯–E–G♮) = V9 của Si; nhóm chín nốt đi xuống cromatic | D | |
+| 57 | G7, bè trầm G | | ♭II7 so với F♯ |
+| 58 | G°7 (G–A♯–C♯–E) → **F♯7** ở phách cuối (= G♭7, Ger+6 của Si♭ thứ) | DD | |
+| 59 | Si♭ thứ, **pedal F** (V) dưới hình i6/4 (B♭–D♭–F + C, G♭); pp | D | = ô 45 lên quãng 5 |
+| 60 | Pedal F → bè trầm F–C–D♭–F–G♭ | | |
+| 61 | Bè trầm G♮–A♭–A♮–B♭ đi lên cromatic | lướt | |
+| 62 | Bè trầm **B𝄫** (= A, viết theo chiều đi xuống) → A♭: A♭9 (V9 của Rê♭) | D | Cùng một phím viết A♮ khi đi lên, B𝄫 khi đi xuống |
+| 63 | **Rê♭ trưởng**: I; giai điệu F–E♭–D♭–C–D♭; f | T | Hình 3–2–1–7–1 sang giọng trưởng |
+| 64 | I; giai điệu F → A♭ (ten.) | T | |
+| 65 | I → I6/4 có nốt 6 thêu (B♭–A♭ luân phiên trên bè trầm A♭) | T | Sixte ajoutée |
+| 66 | như 65; giai điệu F → A♭ | T | |
+| 67 | **Đô♯ thứ** (hoá biểu năm thăng): i; giai điệu E–D♯–C♯–B♯–C♯; fp | T | Rê♭ trưởng → Đô♯ thứ: cùng chủ âm, trưởng hoá thứ, viết trùng âm |
+| 68 | i; E → G♯ (ten.) | T | |
+| 69 | i → i6/4 có ♭6 thêu (A–G♯ luân phiên trên G♯) | T | |
+| 70 | như 69 | T | |
+| 71 | **E7** (E–G♯–B–D♮), bè trầm G♯ – D luân phiên (V6/5 – V4/2 của La); p, cresc. | DS | E7 = VI7 của Sol♯ thứ, trùng âm với Ger+6 |
+| 72 | Bè trầm **C𝄪** (D♮ viết lại) → E: Ger+6 của Sol♯ thứ (đảo) → iv6 (C♯m/E); f | DD → S | Đổi cách viết D♮ → C𝄪 ngay tại chỗ: E7 hiểu lại thành Ger+6 |
+| 73 | = 71 | | |
+| 74 | = 72 | | |
+| 75 | **Pedal D♯**: i6/4 kết (G♯m/D♯); giai điệu A♯–G♯–G♯–A♯–B; mf | D | |
+| 76 | như 75; giai điệu D♯–C♯–B–C♯–D♯; C♯, B♯ thêu | D | |
+| 77 | V (D♯ quãng 8, sf) – VI6 (E/G♯) – V | D–T/S–D | |
+| 78 | V9♭ (D♯–F𝄪–A♯–C♯–E, thêm B) | D | Đoạn A′ vào ngay trên át — không có kết |
+
+### A′ (ô 79–92) và coda (ô 93–110)
+| Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
+|---|---|---|---|
+| 79–92 | = ô 1–14 (cùng bè trầm và hợp âm; sắc thái mạnh hơn: sf, f, cresc.) | | |
+| 93–94 | **Ger+6** (E–G♯–B trên bè trầm C𝄪) ngân hai ô; mf cresc., hợp âm 8va | DD | Thay cho V ở ô 15: hợp âm 6 tăng được phóng to |
+| 95 | Pedal D♯: i6/4 kết; **giai điệu đoạn B trở về ở giọng chính** (B–A♯–G♯–F𝄪–G♯); p | D | Tổng hợp hai đoạn |
+| 96 | iiø7 (A♯–C♯–E–G♯) → V7 có ♭6, trên pedal D♯ | S–D | = ô 42 ở giọng chính |
+| 97 | i6/4 + 6 nâng (E♯; giai điệu E♯–F𝄪–G♯) trên D♯ | | = ô 43 |
+| 98 | Ger+6 (E–G♯–B–C𝄪) trên pedal D♯; f cresc. | DD | |
+| 99 | i6/4 kết, ff | D | |
+| 100 | Ger+6 (thêm A♯) trên D♯, ff | DD | |
+| 101 | iv/D♯ → **V7** (D♯–F𝄪–A♯–C♯), ff | S–D | |
+| 102 | **i** (bè trầm G♯): giai điệu đoạn B trên chủ âm; p cresc. | T | Kết trọn của cả chương |
+| 103 | i với C𝄪 thêu ở bè trầm (màu Ger+6); giai điệu B → D♯ (ten.) | T | |
+| 104 | i với D♯–E luân phiên (5 – ♭6); mf dim. | T | |
+| 105 | như 103 | T | |
+| 106 | như 104, giai điệu lên một quãng 8; p | T | |
+| 107 | như 105; cuối ô bè trầm D♯ | T | |
+| 108 | Bè trầm D♯ – G♯ luân phiên: V (có G♯, E, B nhưng **không có âm dẫn F𝄪**) – i; pp | D–T | Át không có âm dẫn |
+| 109 | như 108 | D–T | |
+| 110 | **i** (G♯–B–D♯), sf, Ped. | T | Kết ở **Sol♯ thứ** |
+
+::grand D#4+F#4+G##4/B2=Ger+6_của_V C##4+E#4+G#4/A#2=V7/V C#4+E4+F##4+A#4/D#2=V9♭ | Chương II, ô 6–8 (rút gọn): Ger+6 của giọng át → V7/V → V9♭ — kết nửa. Ở bản phổ, B và G𝄪 nằm ở bè trầm luân phiên (quãng 3 giảm) rồi cùng đổ về A♯
+
+::grand G#4+B4+Dn5/E3=E7_(ô_21) G#4+B4+C##5/E3=Ger+6_(ô_14) F##4+A#4+C#5/D#3=V7_(ô_15) | Cùng một âm thanh, hai cách viết: D♮ (E7, át của La) và C𝄪 (6 tăng Đức của Sol♯ thứ, đổ về D♯). Ô 71–74 đổi cách viết ngay tại chỗ
+
+::grand Gb4+Bb4+Db5+Fb5/Gb2=G♭7_(ô_52) F#4+B4+D#5+G#5/F#2=Si:_I6/4_(ô_53) | Chuyển giọng trùng âm ở ô 52–53: G♭7 (Ger+6 của Si♭ thứ) được hiểu thành F♯7 = V7 của Si; bè trầm G♭ = F♯ đứng yên, phía trên vào hợp âm Si trưởng
+
+## Các thủ pháp hoà âm của Scriabin trong Op. 19
+1. **Pedal và chồng chức năng.** Nhiều đoạn dài đứng trên một bè trầm: pedal chủ (chương I ô 3–6, 46–57, 122–136), pedal át (chương I ô 79–86; chương II ô 45–46, 59–60, 75–78, 95–101). Trên pedal là hợp âm của chức năng khác: S trên T, T trên D, Napoli trên D (chương II ô 55). Xem [[bass-ngan]].
+2. **Hợp âm 6 tăng và họ hàng trùng âm của nó.** Có It+6 (I ô 5–6), Fr+6 thể đảo (I ô 10), Ger+6 (II ô 6, 14, 30, 72, 93–100), Fr+6 ở cao trào (II ô 44). Ger+6 thường **viết lại thành át 7**: E7 ↔ E–G♯–B–C𝄪 (II ô 21 ↔ 14, ô 71 ↔ 72), G♭7 ↔ F♯7 (II ô 52–53). Cũng có quãng 6 tăng đảo thành **quãng 3 giảm** ở bè trầm (B–G𝄪, ô 6). Xem [[hop-am-sau-tang]].
+3. **Át quãng 5 hạ và màu toàn cung.** F♯–A♯–C♮–E (I ô 20, 22, 95–99) và Fr+6 cùng một tập âm thanh; Scriabin viết khi C♮, khi B♯ theo hướng giải quyết. Đây là mầm của lối viết muộn hơn.
+4. **Napoli.** Chương I ô 9; chương II ô 24, 33, 35, 55. La trưởng ở chương II đổi vai liên tục: VI của Mi (ô 21–23) → Napoli của Sol♯ thứ (ô 24, 33). Xem [[hop-am-napoli]].
+5. **Hợp âm thêm nốt.** Thêm 6 (sixte ajoutée: II ô 20, 35, 65), thêm 7 trưởng và 9 (II ô 5, 13), quãng 4 treo không giải quyết (I ô 23–27). Ở các hợp âm này, ranh giới giữa nốt hoà âm và [[not-ngoai-hop-am|nốt ngoài hợp âm]] mờ đi. Xem [[hop-am-6-va-add]], [[hop-am-mo-rong]].
+6. **Chuyển giọng trùng âm.** Sol♯ thứ → Rê♯ thứ = **Mi♭ thứ** (II ô 40–41, qua nốt chung A♯ = B♭). Si♭ thứ → **Si trưởng** (II ô 52–53). Rê♭ trưởng → **Đô♯ thứ** (II ô 66–67). Trong phát triển chương I, giọng át viết thành Mi♭ thứ (ô 66–74) rồi hiểu lại là Rê♯ thứ (ô 75). Xem [[chuyen-giong]], [[trung-am]].
+7. **Quan hệ quãng 3 và trung âm cromatic.** Có Si → Rê (I ô 58–61), Si trưởng → Sol trưởng → Đô trưởng trên pedal F♯ (II ô 53–55), Sol♯ thứ → Mi trưởng ở tái hiện chương I. Xem [[trung-am-cromatic]].
+8. **Mở đầu lệch khỏi chủ âm.** Chương I mở bằng quãng 5 rỗng và dừng trên V4/2. Chương II bắt đầu thẳng trên át, và A′ (ô 79) vào ngay sau pedal át mà không có kết.
+9. **Mô tiến có điểm bẻ.** Chương II ô 9–13 mô tiến ô 1–5 lên quãng 4 (sang vùng Đô♯ thứ). Ô 14 bẻ về Ger+6 của giọng chính, nên câu thứ hai kết trọn ở Sol♯ thứ. Xem [[mo-tien-hoa-am]].
+10. **Bè trầm đi liền bậc.** Đi xuống theo gam (II ô 41–44: B♭→C♭; I ô 7–9), đi lên cromatic dưới một hình hợp âm đứng yên (II ô 46–48, 60–62). Chữ viết theo hướng đi: A♮ khi lên, B𝄫 khi xuống.
+11. **Kết không âm dẫn.** Coda chương II luân phiên D♯ – G♯, nhưng tầng trên không có F𝄪: át mang G♯, E, B (quãng 4 treo, ♭9, ♭13) thay vì quãng 3 dẫn âm.
+
+Nhìn chung, Op. 19 vẫn nằm trong [[hoa-am-cromatic|hoà âm chức năng mở rộng]] cuối thế kỷ 19, gần Chopin và Liszt. Chưa có "hợp âm huyền bí" của Scriabin thời muộn. Nhưng các mầm của nó đã có: át quãng 5 hạ, hợp âm 6 tăng đồng nhất với át 7, màu toàn cung, hợp âm thêm nốt và pedal dài.
+
+## Tự kiểm
+- **Chắc chắn** (đọc trực tiếp trên bản phổ và khớp MIDI): số ô; các mốc hình thức; giọng và hoá biểu từng đoạn; bè trầm từng ô chương II; cách viết C𝄪/D♮, G𝄪, B𝄫, F♭ ở các ô đã nêu; hợp âm cuối hai chương.
+- **Là cách đọc của bài viết** (có thể hiểu khác): ô 5/13/83/91 chương II (VI7 thêm 9 hay i7 thêm ♭6); ô 23 (E7 chồng trên A — có thể coi là pedal hạ át); ô 39 và ô 47 (hợp âm lướt, khó gán một tên); ô 57–58 (G7 → G°7 có thể đọc là át phụ lướt).
+- **Độ chi tiết thấp hơn**: chương I ô 46–57 và phần tái hiện – coda (ô 89–136) chỉ ghi theo đoạn và theo tương ứng với phần trình bày. Câu chương trình về biển chưa đối chiếu nguyên văn tiếng Nga.
+
+## Gợi ý khi dạy
+- Cho học trò nghe và chơi riêng **bè trầm** chương II (quãng 8 tay trái). Phần lớn câu chuyện hoà âm nằm ở đó: D♯ – C♯, B – G𝄪, E – C𝄪, rồi các đường cromatic ở đoạn B.
+- So sánh ô 14 với ô 21 và ô 71 với ô 72: cùng một hợp âm trên phím đàn, nhưng mỗi lần mang một chức năng khác.
+- Chương I: giữ các dấu ngân ở ô 1–2 và ô 11–12 thật lâu. Chất "rỗng" của quãng 5 không có quãng 3 là màu chủ đạo của chương.
+- Đọc thêm [[phan-tich-hoa-am]] và [[phuong-phap-phan-tich-tac-pham]] về cách lập bảng phân tích từng ô.
+
+## Tóm tắt theo khung phân tích
+Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]].
+| Yếu tố | Tóm tắt |
+|---|---|
+| **Âm thanh** | Chương I nhiều lớp, pedal dài; chương II móc đơn liên tục trên quãng 8 tay trái |
+| **Hoà âm** | Sol♯ thứ; chương I đặt chủ đề ở Si trưởng, tái hiện ở Mi trưởng; chương II đi qua Mi♭ thứ – Si♭ thứ – Si trưởng – Rê♭ trưởng – Đô♯ thứ; nhiều hợp âm 6 tăng, Napoli, pedal, chuyển giọng trùng âm |
+| **Giai điệu** | Motif quãng 5 rỗng (I); hình 3–2–1–7–1 đi qua năm giọng (II) |
+| **[[tiet-tau|Nhịp điệu]]** | I: 3/4, nhiều dấu ngân; II: 3/2 Presto, móc đơn không dứt |
+| **Phát triển** | I: sonata 57 + 31 + 48 ô; II: A 40 – B 38 – A′ 14 – coda 18 ô |
+`,
+  },
 
 ]
