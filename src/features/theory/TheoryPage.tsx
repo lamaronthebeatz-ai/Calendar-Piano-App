@@ -38,6 +38,7 @@ import { Annotator } from '../curriculum/reader/Annotator'
 import { LIBRARY } from '../curriculum/reader/notes'
 import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { TOPIC_CREDITS } from './topicCredits'
+import { useThumbs } from './thumbs'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
 import { useScrollCollapse } from '../../hooks/useScrollCollapse'
@@ -771,6 +772,7 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
   const press = useRef<{ timer: number; x: number; y: number; card: HTMLElement }>(undefined)
   const swallowClick = useRef(false)
   const morph = morphTarget()
+  const thumbs = useThumbs()
   const cancelPress = () => {
     if (!press.current) return
     clearTimeout(press.current.timer)
@@ -823,14 +825,13 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
               data-card={a.slug}
               style={tint(a.category)}
               onClick={(e) => setMorphTarget(a.slug, e.currentTarget.querySelector('.vt-morph-card'))}
-              className="theory-card group flex h-full gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-3.5"
+              className="theory-card group flex h-full items-start gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-3"
             >
-              {numbered ? (
-                <span className="mt-0.5 w-6 shrink-0 font-display text-[15px] font-semibold tabular-nums text-[var(--tint)]">{String(i + 1).padStart(2, '0')}</span>
-              ) : (
-                <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[12px] text-[var(--tint)]">{GLYPHS[a.category]}</span>
-              )}
-              <span className="min-w-0">
+              <span className="article-thumb font-['Noto_Music']" aria-hidden>
+                {thumbs?.[a.slug] ? <img src={thumbs[a.slug][0]} alt="" loading="lazy" decoding="async" className={clsx(thumbs[a.slug][1] && 'is-drawing')} /> : GLYPHS[a.category]}
+                {numbered && <span className="article-num font-sans">{String(i + 1).padStart(2, '0')}</span>}
+              </span>
+              <span className="min-w-0 pt-0.5">
                 <span className={clsx('vt-morph-card block text-[14.5px] font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--tint)]', morph === a.slug && 'vt-morph')}>
                   <Highlight text={a.title} query={query} />
                 </span>
