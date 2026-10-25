@@ -17,7 +17,7 @@ npx tsc -b && npm run lint && npm run check:links && npm run build
 - **Effect không được trả về giá trị** ngoài hàm dọn dẹp: viết `useEffect(() => { x() }, …)`, không viết `useEffect(() => x(), …)` — Chrome mới trả Promise từ `scrollIntoView`/`scrollTo`, React gọi nó như hàm dọn dẹp → "… is not a function" (lỗi từng làm sập trình đọc trên Android). Lỗi route hiện `RouteError` trong `App.tsx`.
 
 ## Cấu trúc
-- `src/features/calendar`, `students`, `lessons`, `settings`, `search` — phần thời khoá biểu (Dexie/IndexedDB, Zustand). Route `/` và `/students` bọc trong `PrivateArea`.
+- `src/features/calendar`, `students`, `lessons`, `settings`, `search` — phần thời khoá biểu (Dexie/IndexedDB, Zustand). Route `/` và `/students` bọc trong `PrivateArea`. Máy chưa có học viên tự nạp `data/seed-backup.json` (bản sao lưu thật của Lamar, 24/10/2026: 35 học viên, 38 buổi; `data/seed.ts`) — repo công khai nên dữ liệu này công khai, Lamar đã đồng ý; muốn cập nhật thì thay file bằng bản sao lưu mới.
 - `src/features/theory/` — thư viện bài viết:
   - `content/<nhóm>.ts`: mỗi file một mảng `Article` (xem kiểu ở `wiki.ts`: slug, title, category, aliases, summary, body, refs, also…).
   - `articles.ts`: `CATEGORIES` (tiêu đề, hue, mô tả) và mảng `ARTICLES`. Thêm mục mới = import file, thêm vào `CATEGORIES` và `ARTICLES`, thêm glyph ở `categoryStyle.ts`.
