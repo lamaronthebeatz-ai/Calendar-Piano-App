@@ -35,6 +35,8 @@ export function App() {
   // The app renders behind the welcome glass from the start (so the frosting shows it), but stays inert until the code is right.
   const [unlocked, setUnlocked] = useState(isUnlocked)
   const [glass, setGlass] = useState(!unlocked)
+  // The app swirls in once the code is right; the class stays until its own animation ends, after the glass has gone.
+  const [arriving, setArriving] = useState(false)
   // The opening intro plays whenever the app opens on the lock screen.
   const [intro, setIntro] = useState(() => !unlocked && !matchMedia('(prefers-reduced-motion: reduce)').matches)
   // Right after the code is entered (not on a reload of an unlocked session), the support card greets once —
@@ -49,7 +51,7 @@ export function App() {
   return (
     <>
       {/* Blurred directly as well as through the glass's backdrop filter, which some browsers don't paint. */}
-      <div inert={!unlocked} className={clsx('app-veil', !unlocked && 'is-veiled')}>
+      <div inert={!unlocked} className={clsx('app-veil', !unlocked && 'is-veiled', arriving && 'is-arriving')} onAnimationEnd={(e) => e.target === e.currentTarget && setArriving(false)}>
         <Router />
       </div>
       {unlocked && !glass && <Onboarding />}
@@ -58,6 +60,7 @@ export function App() {
           onUnlock={() => {
             justUnlocked.current = true
             setUnlocked(true)
+            setArriving(true)
             // Fallback in case the lift's transitionend never fires.
             setTimeout(() => setGlass(false), 1400)
           }}
