@@ -37,3 +37,9 @@ export const GLYPHS: Record<CategoryId, string> = {
   sacred: '𝅜',
   organ: '𝆮',
 }
+
+/** A picture per category (public-domain or CC0 works from Wikimedia Commons; credits in topicCredits.ts). */
+const topicFiles = import.meta.glob<string>('../../assets/topics/*.webp', { eager: true, import: 'default' })
+export const TOPIC_IMAGES = Object.fromEntries(
+  Object.entries(topicFiles).map(([path, url]) => [path.slice(path.lastIndexOf('/') + 1, -5), url]),
+) as Partial<Record<CategoryId, string>>

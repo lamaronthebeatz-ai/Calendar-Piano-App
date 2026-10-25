@@ -1,0 +1,32 @@
+import type { Article } from './wiki'
+
+/** Where each topic picture comes from: [Commons file, author or source, licence, Commons page]. Only public-domain, CC0 or CC BY-SA works. */
+export const TOPIC_CREDITS: Partial<Record<Article['category'], [string, string, string, string]>> = {
+  technique: ["Auguste Renoir - Young Girls at the Piano - Google Art Project.jpg", "Pierre-Auguste Renoir", "Public domain", "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg"],
+  instrument: ["Grand Piano MET DP300906.jpg", "Bartolomeo Cristofori (ảnh: Bảo tàng Metropolitan)", "CC0", "https://commons.wikimedia.org/wiki/File:Grand_Piano_MET_DP300906.jpg"],
+  musicianship: ["Johannes Vermeer - Lady at the Virginal with a Gentleman, 'The Music Lesson' - Google Art Project.jpg", "Johannes Vermeer", "Public domain", "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Lady_at_the_Virginal_with_a_Gentleman,_%27The_Music_Lesson%27_-_Google_Art_Project.jpg"],
+  basics: ["Clavier-Büchlein vor Anna Magdalena Bach Anno 1722.jpg", "Johann Sebastian Bach", "Public domain", "https://commons.wikimedia.org/wiki/File:Clavier-B%C3%BCchlein_vor_Anna_Magdalena_Bach_Anno_1722.jpg"],
+  rhythm: ["Metronome MET 215848.jpg", "Johann Nepomuk Maelzel (ảnh: Bảo tàng Metropolitan)", "CC0", "https://commons.wikimedia.org/wiki/File:Metronome_MET_215848.jpg"],
+  pitch: ["Tuning fork on resonator.jpg", "Brian0918 (Wikipedia tiếng Anh)", "CC BY-SA 3.0", "https://commons.wikimedia.org/wiki/File:Tuning_fork_on_resonator.jpg"],
+  scales: ["Guidonian hand.jpg", "Không rõ tác giả (bản chép tay)", "Public domain", "https://commons.wikimedia.org/wiki/File:Guidonian_hand.jpg"],
+  harmony: ["Rameau Traite de l’harmonie.jpg", "Jean-Philippe Rameau (1722)", "Public domain", "https://commons.wikimedia.org/wiki/File:Rameau_Traite_de_l%E2%80%99harmonie.jpg"],
+  chromatic: ["Edmund Blair Leighton - Tristram and Isolde (Royal Academy of Arts, 1907).jpg", "Edmund Blair Leighton", "Public domain", "https://commons.wikimedia.org/wiki/File:Edmund_Blair_Leighton_-_Tristram_and_Isolde_(Royal_Academy_of_Arts,_1907).jpg"],
+  form: ["Chopin – Prelude Op. 28 No. 4 (Autograph Manuscript).png", "Fryderyk Chopin", "Public domain", "https://commons.wikimedia.org/wiki/File:Chopin_%E2%80%93_Prelude_Op._28_No._4_(Autograph_Manuscript).png"],
+  polyphony: ["BWV1001 adagio autograph manuscript 1720.jpeg", "J.S. Bach", "Public domain", "https://commons.wikimedia.org/wiki/File:BWV1001_adagio_autograph_manuscript_1720.jpeg"],
+  expression: ["Danhauser, Josef - Franz Liszt am Flügel phantasierend.jpg", "Josef Danhauser", "Public domain", "https://commons.wikimedia.org/wiki/File:Danhauser,_Josef_-_Franz_Liszt_am_Fl%C3%BCgel_phantasierend.jpg"],
+  jazz: ["(Portrait of Duke Ellington, Paramount Theater, New York, N.Y., ca. Sept. 1946) (LOC) (4843126819).jpg", "William P. Gottlieb (Thư viện Quốc hội Mỹ)", "Public domain", "https://commons.wikimedia.org/wiki/File:(Portrait_of_Duke_Ellington,_Paramount_Theater,_New_York,_N.Y.,_ca._Sept._1946)_(LOC)_(4843126819).jpg"],
+  improvisation: ["Thelonious Monk, Minton's Playhouse, New York, N.Y., ca. Sept. 1947 (William P. Gottlieb 06191).jpg", "William P. Gottlieb", "Public domain", "https://commons.wikimedia.org/wiki/File:Thelonious_Monk,_Minton%27s_Playhouse,_New_York,_N.Y.,_ca._Sept._1947_(William_P._Gottlieb_06191).jpg"],
+  modern: ["Vassily Kandinsky, 1913 - Composition 7.jpg", "Wassily Kandinsky", "Public domain", "https://commons.wikimedia.org/wiki/File:Vassily_Kandinsky,_1913_-_Composition_7.jpg"],
+  listening: ["The Edison concert phonograph Have you heard it? LCCN99472463.jpg", "Thư viện Quốc hội Mỹ", "Public domain", "https://commons.wikimedia.org/wiki/File:The_Edison_concert_phonograph_Have_you_heard_it%3F_LCCN99472463.jpg"],
+  philosophy: ["\"The School of Athens\" by Raffaello Sanzio da Urbino.jpg", "Raphael", "Public domain", "https://commons.wikimedia.org/wiki/File:%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg"],
+  analysis: ["Chopin – Sonata Op. 4 (Autograph Manuscript).jpg", "Frédéric Chopin", "Public domain", "https://commons.wikimedia.org/wiki/File:Chopin_%E2%80%93_Sonata_Op._4_(Autograph_Manuscript).jpg"],
+  composition: ["Ludwig van Beethoven in his Study.jpg", "Internet Archive Book Images", "No restrictions", "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_in_his_Study.jpg"],
+  pianists: ["Clara Schumann 1878.jpg", "Franz von Lenbach", "Public domain", "https://commons.wikimedia.org/wiki/File:Franz_von_Lenbach_-_Clara_Schumann_(Pastell_1878).jpg"],
+  composers: ["Beethoven.jpg", "Joseph Karl Stieler", "Public domain", "https://commons.wikimedia.org/wiki/File:Beethoven.jpg"],
+  genres: ["Edgar Degas - The Orchestra at the Opera - Google Art Project.jpg", "Edgar Degas", "Public domain", "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_The_Orchestra_at_the_Opera_-_Google_Art_Project.jpg"],
+  musicology: ["Einsiedeln, MS Codex 358 (610) fol. 106v-107r Boethius De institutione musica.jpg", "Không rõ tác giả", "Public domain", "https://commons.wikimedia.org/wiki/File:Einsiedeln,_MS_Codex_358_(610)_fol._106v-107r_Boethius_De_institutione_musica.jpg"],
+  organology: ["Syntagma08.png", "Michael Praetorius", "Public domain", "https://commons.wikimedia.org/wiki/File:Syntagma08.png"],
+  vietnam: ["Musiciens Annamites, Saïgon, Cochinchine MET DP151638.jpg", "Émile Gsell (ảnh: Bảo tàng Metropolitan)", "CC0", "https://commons.wikimedia.org/wiki/File:Musiciens_Annamites,_Sa%C3%AFgon,_Cochinchine_MET_DP151638.jpg"],
+  organ: ["Décoration extérieure en perspective de l'Orgue de l'Abbaye de Weingarthen dans la Souabe en Allemagne.png", "P.C. Delagardette", "CC0", "https://commons.wikimedia.org/wiki/File:D%C3%A9coration_ext%C3%A9rieure_en_perspective_de_l%27Orgue_de_l%27Abbaye_de_Weingarthen_dans_la_Souabe_en_Allemagne.png"],
+  sacred: ["Interieur van de Sint-Bavokerk in Haarlem Rijksmuseum SK-A-359.jpeg", "Pieter Jansz. Saenredam", "Public domain", "https://commons.wikimedia.org/wiki/File:Interieur_van_de_Sint-Bavokerk_in_Haarlem_Rijksmuseum_SK-A-359.jpeg"],
+}

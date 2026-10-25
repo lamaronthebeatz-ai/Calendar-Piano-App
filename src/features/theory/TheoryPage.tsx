@@ -36,7 +36,8 @@ import { QuizCard } from './QuizCard'
 import { booksWithChapter } from '../curriculum/reader/model'
 import { Annotator } from '../curriculum/reader/Annotator'
 import { LIBRARY } from '../curriculum/reader/notes'
-import { GLYPHS, tint } from './categoryStyle'
+import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
+import { TOPIC_CREDITS } from './topicCredits'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
 import { useScrollCollapse } from '../../hooks/useScrollCollapse'
@@ -460,17 +461,18 @@ function Index() {
                   onClick={() => select(c.id)}
                   style={tint(c.id)}
                   data-reveal
-                  className="theory-card group flex items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 text-left"
+                  className="theory-card topic-card group grid min-h-[108px] grid-cols-[100px_1fr] overflow-hidden rounded-[20px] border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-left"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[22px] text-[var(--tint)] ring-1 ring-[color-mix(in_oklch,var(--tint)_22%,transparent)] transition-transform duration-300 group-hover:scale-105">
-                    {GLYPHS[c.id]}
+                  <span className="topic-media" aria-hidden>
+                    {TOPIC_IMAGES[c.id] && <img src={TOPIC_IMAGES[c.id]} alt="" loading="lazy" decoding="async" />}
+                    <span className="topic-glyph font-['Noto_Music']">{GLYPHS[c.id]}</span>
                   </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="flex items-baseline justify-between gap-2">
+                  <span className="relative min-w-0 py-3.5 pl-3.5 pr-4">
+                    <span className="flex items-start justify-between gap-2">
                       <span className="text-[15px] font-semibold leading-snug text-[var(--color-ink)]">{c.title}</span>
-                      <span className="shrink-0 text-[12px] tabular-nums text-[var(--color-ink-faint)]">{c.articles.length}</span>
+                      <span className="topic-count shrink-0 tabular-nums">{c.articles.length}</span>
                     </span>
-                    <span className="mt-1 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{c.description}</span>
+                    <span className="mt-1.5 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{c.description}</span>
                   </span>
                 </button>
               ))}
@@ -492,6 +494,22 @@ function Index() {
                 </li>
               ))}
             </ul>
+            <details className="sm:col-span-2">
+              <summary className="cursor-pointer select-none font-medium text-[var(--color-ink)]">Nguồn ảnh chủ đề (Wikimedia Commons)</summary>
+              <ul className="mt-2 grid grid-cols-1 gap-1 text-[12px] sm:grid-cols-2">
+                {articlesByCategory.map((c) => {
+                  const credit = TOPIC_CREDITS[c.id]
+                  if (!credit) return null
+                  const [, author, licence, url] = credit
+                  return (
+                    <li key={c.id}>
+                      <span className="text-[var(--color-ink)]">{c.title}</span>:{' '}
+                      <a href={url} target="_blank" rel="noreferrer" className="underline decoration-[var(--color-border-strong)] underline-offset-2 hover:text-[var(--color-accent)]">{author}</a> · {licence}
+                    </li>
+                  )
+                })}
+              </ul>
+            </details>
           </footer>
         </>
       )}
