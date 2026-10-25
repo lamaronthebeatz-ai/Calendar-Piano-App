@@ -43,7 +43,7 @@ const clean = (s: string) => s.replace(/\|/g, '/')
 function fromBook(b: Book): ReaderBook {
   const items: ReaderItem[] = [
     { key: 'bia', kind: 'cover', title: 'Bìa' },
-    { key: 'loi-noi-dau', kind: 'front', title: 'Lời nói đầu', body: `${foreword(`${b.title}${b.volume ? ` — ${b.volume}` : ''}`)}\n## Về cuốn sách này\n${b.preface}`, signed: true },
+    { key: 'loi-noi-dau', kind: 'front', title: 'Lời nói đầu', body: `${foreword(`${b.title}${b.volume && !b.volume.startsWith('by ') ? ` — ${b.volume}` : ''}`)}\n## Về cuốn sách này\n${b.preface}`, signed: true },
     { key: 've-tac-gia', kind: 'front', title: 'Về tác giả', body: ABOUT_AUTHOR },
     { key: 'muc-luc', kind: 'toc', title: 'Mục lục' },
   ]

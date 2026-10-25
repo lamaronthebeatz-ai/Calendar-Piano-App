@@ -47,7 +47,7 @@ Nhiều tác phẩm **viết sẵn** mang tên gợi ngẫu hứng — [[toccata
 **C. Jazz và [[nhac-pho-thong-the-ky-20|nhạc phổ thông]]**
 7. [[ngau-hung-jazz]] (trên nền [[swing]]) cùng các bài hoà âm: [[he-thong-hop-am-am-giai]], [[ii-v-i]], [[xep-hop-am]], [[tai-hoa-am]], [[blues-12-nhip]], [[rhythm-changes]].
 8. [[dem-hat-piano]].
-**Ngẫu hứng jazz chi tiết** (theo The Jazz Piano Site):
+**Ngẫu hứng jazz chi tiết** (Lamar biên soạn):
 - Chọn nốt: [[not-dan-huong]], [[not-tiep-can-jazz]], [[not-tranh-va-quang-nghich]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
 - Phát triển ý: [[trang-tri-giai-dieu-jazz]], [[mau-lap-chu-ky]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]].
 - Nâng cao: [[superimposition-jazz]], [[triad-pairs]], [[sheets-of-sound]], [[ngau-hung-hop-am]].
@@ -359,7 +359,7 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
 
 Kỹ thuật cụ thể: [[not-tiep-can-jazz]], [[am-giai-bebop]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
 
-Các bài kỹ thuật theo The Jazz Piano Site: [[not-dan-huong]], [[trang-tri-giai-dieu-jazz]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]], [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
+Các bài kỹ thuật ngẫu hứng jazz của Lamar: [[not-dan-huong]], [[trang-tri-giai-dieu-jazz]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]], [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
 
 Chơi cùng người khác: [[jam-session]].
 `,

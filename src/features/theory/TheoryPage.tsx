@@ -491,7 +491,6 @@ function Index() {
 const SOURCES = [
   ['Open Music Theory', 'https://viva.pressbooks.pub/openmusictheory/', 'giáo trình đại học mở (CC BY-SA)'],
   ['musictheory.net', 'https://www.musictheory.net/lessons', 'bài học và bài tập tương tác'],
-  ['The Jazz Piano Site', 'https://www.thejazzpianosite.com/jazz-piano-lessons/', 'lý thuyết và piano jazz'],
   ['Wikipedia', 'https://en.wikipedia.org/wiki/Music_theory', 'bách khoa toàn thư mở'],
   ['Wikimedia Commons', 'https://commons.wikimedia.org/wiki/Category:Musical_notation', 'hình ảnh ký hiệu nhạc (public domain / CC)'],
   ['IMSLP', 'https://imslp.org/', 'thư viện bản nhạc cổ điển miễn phí'],

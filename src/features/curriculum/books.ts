@@ -4,6 +4,7 @@ import fuxCover from '../../assets/covers/doi-am-fux.webp'
 import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
 import formCover from '../../assets/covers/hinh-thuc-am-nhac.webp'
 import neuhausCover from '../../assets/covers/neuhaus.webp'
+import jazzCover from '../../assets/covers/jazz-theory-book.webp'
 import type { Book } from './types'
 
 /**
@@ -876,6 +877,137 @@ Neuhaus đặt **âm nhạc lên trước hết**: người chơi phải hiểu 
         { slug: 'neuhaus-bieu-dien', focus: 'Hoạt động biểu diễn.' },
         { slug: 'neuhaus-ket-luan', focus: 'Kết luận.' },
       ], exercises: ['Viết một trang về điều Neuhaus đòi hỏi ở người thầy và đối chiếu với cách bạn đang dạy hoặc học.'] },
+    ],
+  },
+  {
+    id: 'jazz-theory-book',
+    title: 'The Jazz Theory Book',
+    volume: 'by Lamar',
+    subtitle: 'Toàn bộ lý thuyết jazz trong một cuốn: swing và blues, hợp âm jazz, ii – V – I và các tiến trình, hợp âm – âm giai, xếp hợp âm và thế bấm, tay trái và đệm, thay thế và tái hoà âm, hình thức chuẩn, ngẫu hứng từ nền tảng đến nâng cao, sáng tác và jazz hiện đại.',
+    author: 'Lamar',
+    audience: 'Đã học Nhạc Lý Cơ Bản và hợp âm 7; người chơi piano muốn bước vào jazz',
+    hue: 42,
+    glyph: '♭',
+    coverImage: jazzCover,
+    preface: `
+**The Jazz Theory Book** do **Lamar soạn trọn vẹn — 100%**: hệ thống lý thuyết, trình tự bài, cách giải thích, ví dụ, bảng, bài luyện và câu hỏi ôn tập đều là của Lamar. Đây là giáo trình jazz Lamar dùng để dạy, nay đóng thành một cuốn sách để người học đi trọn từ những ô swing đầu tiên tới một bài solo hoàn chỉnh.
+
+## Tinh thần của sách
+Jazz là **một ngôn ngữ**, và cuốn sách dạy nó như dạy một ngôn ngữ: trước hết là cảm giác nhịp (swing) và giọng nói gốc (blues); rồi đến "từ vựng" (hợp âm, âm giai), "ngữ pháp" (ii – V – I, tiến trình, hình thức); rồi cách "phát âm" trên đàn (thế bấm, tay trái, đệm); cuối cùng là **nói tự do** — thay thế, tái hoà âm, ngẫu hứng và sáng tác. Lý thuyết ở đây không phải để thuộc: mỗi khái niệm đều phải được **nghe**, **chơi ở cả 12 giọng** và **tìm lại trong bản thu thật**.
+
+## Cấu trúc sách
+- **Phần I – II**: nhập môn, swing và blues — chất liệu gốc của jazz.
+- **Phần III – V**: hợp âm, tiến trình và hệ thống hợp âm – âm giai — bộ khung lý thuyết.
+- **Phần VI – VII**: thế bấm, tay trái và đệm — lý thuyết thành âm thanh trên phím đàn.
+- **Phần VIII – IX**: thay thế, tái hoà âm và các hình thức chuẩn (AABA, rhythm changes, vòng Coltrane).
+- **Phần X – XII**: ngẫu hứng — nền tảng, phương pháp, nâng cao và xây dựng một bài solo.
+- **Phần XIII**: sáng tác, jazz điệu thức và jazz hiện đại.
+
+## Cách đọc
+1. Đọc theo thứ tự: mỗi phần dùng kiến thức của các phần trước.
+2. Mỗi bài: đọc, **chơi mọi ví dụ trên đàn**, rồi chuyển sang ít nhất ba giọng khác.
+3. Chọn một bài chuẩn (gợi ý "Autumn Leaves" hoặc "Fly Me to the Moon") và mang nó theo suốt cuốn sách: mỗi phần, áp kiến thức mới vào chính bài đó.
+4. Nghe thật nhiều. Tên nghệ sĩ và bản thu nhắc trong bài là bài tập nghe bắt buộc.
+`,
+    parts: [
+      { title: 'Nhập môn jazz', intro: 'Hoà âm jazz khác hoà âm cổ điển ở đâu, chơi bài jazz đầu tiên thế nào, swing là gì, và bức tranh lịch sử các phong cách.', chapters: [
+        { slug: 'hoa-am-jazz', focus: 'Lộ trình cả cuốn; so sánh jazz với hoà âm cổ điển.' },
+        { slug: 'hoc-piano-jazz', focus: 'Kiến thức tối thiểu; chọn bài đầu tiên; các lớp tập riêng.' },
+        { slug: 'swing', focus: 'Móc đơn swing, nhấn phách 2 – 4, cảm giác nhịp.' },
+        { slug: 'phong-cach-jazz', focus: 'Từ New Orleans tới jazz hiện đại: mỗi thời kỳ chơi thế nào.' },
+      ], exercises: ['Chơi một âm giai Đô trưởng bằng móc đơn swing với máy đếm nhịp ở phách 2 và 4.', 'Nghe một bản thu của mỗi phong cách trong bài phong cách jazz; ghi một câu mô tả cách piano chơi.'] },
+      { title: 'Blues', intro: 'Hình thức 12 ô và âm giai blues: giọng nói gốc của jazz, nơi hợp âm 7 át đóng vai chủ.', chapters: [
+        { slug: 'blues-12-nhip', focus: 'Hình thức 12 ô, các biến thể, blues jazz.' },
+        { slug: 'am-giai-blues', focus: 'Âm giai blues thứ – trưởng, nốt blue.' },
+      ], exercises: ['Chơi blues 12 ô ở Fa: tay trái hợp âm 7, tay phải âm giai blues, hai chorus.', 'Chuyển cùng bài sang Si giáng và Đô.'] },
+      { title: 'Hợp âm jazz', intro: 'Đọc và dựng mọi ký hiệu hợp âm trên lead sheet: hợp âm 7, mở rộng, 6 – add – sus, gạch chéo, hợp âm chồng.', chapters: [
+        { slug: 'ky-hieu-hop-am', focus: 'Cách ghi hợp âm trên lead sheet.' },
+        { slug: 'hop-am-mo-rong', focus: 'Nốt 9, 11, 13 và nốt căng biến hoá.' },
+        { slug: 'hop-am-6-va-add', focus: 'Hợp âm 6, add, sus.' },
+        { slug: 'hop-am-gach-cheo', focus: 'Hợp âm gạch chéo, đọc như hợp âm gì.' },
+        { slug: 'hop-am-chong', focus: 'Hợp âm chồng (polychord).' },
+      ], exercises: ['Viết và chơi Cmaj9, Dm11, G13, G7♭9, C6/9, Fsus4 ở hai giọng khác.', 'Đọc lead sheet một bài chuẩn: gọi tên từng nốt của mỗi hợp âm.'] },
+      { title: 'Kết và tiến trình', intro: 'ii – V – I là đơn vị cơ bản của hoà âm jazz; turnaround, line cliché và cách đọc cả một tiến trình.', chapters: [
+        { slug: 'ii-v-i', focus: 'ii – V – I trưởng và thứ; nốt dẫn hướng.' },
+        { slug: 'turnaround-jazz', focus: 'Turnaround và turnaround Tadd Dameron.' },
+        { slug: 'line-cliche', focus: 'Đường bè liền bậc trên một hợp âm đứng yên.' },
+        { slug: 'vong-hop-am', focus: 'Các vòng hợp âm thường gặp.' },
+        { slug: 'phan-tich-tien-trinh-jazz', focus: 'Đọc tiến trình theo giọng tạm và chuỗi ii – V.' },
+      ], exercises: ['Chơi ii – V – I trưởng và thứ ở cả 12 giọng theo vòng quãng 5.', 'Phân tích "Autumn Leaves": đánh dấu mọi cặp ii – V và giọng tạm của chúng.'] },
+      { title: 'Hợp âm và âm giai', intro: 'Mỗi hợp âm ứng với một âm giai: điệu thức, thứ giai điệu, hợp âm át biến hoá, bebop, đối xứng.', chapters: [
+        { slug: 'he-thong-hop-am-am-giai', focus: 'Nguyên lý hợp âm – âm giai.' },
+        { slug: 'dieu-thuc-thu-giai-dieu', focus: 'Các điệu thức của thứ giai điệu.' },
+        { slug: 'hop-am-at-bien-hoa', focus: 'Hợp âm át biến hoá và âm giai altered.' },
+        { slug: 'am-giai-bebop', focus: 'Thêm nốt lướt để nốt hợp âm rơi đúng phách.' },
+        { slug: 'am-giai-doi-xung-jazz', focus: 'Âm giai giảm, toàn cung, tăng.' },
+        { slug: 'am-giai-bat-cung', focus: 'Âm giai bát cung trong jazz.' },
+      ], exercises: ['Với mỗi hợp âm của ii – V – I ở Đô, chơi âm giai tương ứng lên xuống hai quãng tám.', 'Trên G7alt, chơi âm giai altered rồi âm giai giảm nửa cung – cung; nghe sự khác nhau.'] },
+      { title: 'Xếp hợp âm và thế bấm', intro: 'Từ thế bấm 3 nốt tới thế bấm của các bậc thầy: shell, không gốc, mở, drop 2, So What, khối, upper structure, quãng 4, âm cụm — và cách chọn, ghép chúng cho cả một bài.', chapters: [
+        { slug: 'the-bam-ba-not', focus: 'Thế bấm 3 nốt và 4 nốt.' },
+        { slug: 'xep-hop-am', focus: 'Shell, không gốc, drop 2.' },
+        { slug: 'the-bam-mo', focus: 'Thế bấm mở hai tay; hai cách chia.' },
+        { slug: 'quy-tac-xep-hop-am-jazz', focus: 'Quy tắc chung để tự xếp một thế bấm.' },
+        { slug: 'the-bam-bac-thay-jazz', focus: 'Thế bấm Powell, Monk, Hancock.' },
+        { slug: 'hop-am-so-what-barron', focus: 'So What, Barron, quãng 4 sáu nốt.' },
+        { slug: 'hop-am-khoi', focus: 'Four way close, locked hands, drop 2.' },
+        { slug: 'upper-structure', focus: 'Hợp âm ba đặt trên một tritone.' },
+        { slug: 'hoa-am-quang-bon', focus: 'Hoà âm quãng 4.' },
+        { slug: 'am-cum', focus: 'Âm cụm (hoà âm quãng 2).' },
+        { slug: 'ket-hop-the-bam', focus: 'Chọn thế bấm theo nốt giai điệu, nối mượt.' },
+        { slug: 'chon-the-bam-jazz', focus: 'Thế bấm theo từng phong cách.' },
+      ], exercises: ['Chơi ii – V – I ở Đô bằng năm loại thế bấm: shell, không gốc A/B, drop 2, So What, upper structure.', 'Xếp thế bấm cho 8 ô đầu một bài chuẩn sao cho nốt giai điệu luôn ở trên cùng.'] },
+      { title: 'Tay trái và đệm', intro: 'Bass đi, stride, comping, đệm cho ca sĩ, chơi trong jam session — và nhịp bossa nova.', chapters: [
+        { slug: 'bass-di-jazz', focus: 'Đường bass đi bốn phách.' },
+        { slug: 'stride-piano', focus: 'Tay trái stride.' },
+        { slug: 'dem-jazz', focus: 'Comping: tiết tấu và thế bấm.' },
+        { slug: 'dem-cho-ca-si', focus: 'Đệm cho giọng hát: hoà âm, nhịp, dạo đầu, kết.' },
+        { slug: 'jam-session', focus: 'Quy ước và bài thường gặp ở jam session.' },
+        { slug: 'dem-bossa-nova', focus: 'Tay trái và nhịp bossa nova.' },
+      ], exercises: ['Chơi bass đi một chorus blues ở Fa, tay phải comping thưa.', 'Đệm "Blue Bossa" với tay trái bossa nova và thế bấm không gốc.'] },
+      { title: 'Thay thế và tái hoà âm', intro: 'Thay một hợp âm, chèn hợp âm lướt, tái hoà âm cả bài — kể cả gospel, đổi nhịp, đổi thể loại và constant structures.', chapters: [
+        { slug: 'thay-the-hop-am', focus: 'Các phép thay thế hợp âm.' },
+        { slug: 'thay-the-tritone', focus: 'Thay thế tritone, backdoor.' },
+        { slug: 'hop-am-luot-jazz', focus: 'Hợp âm lướt cromatic, giảm, song song.' },
+        { slug: 'tai-hoa-am', focus: 'Quy trình tái hoà âm một bài.' },
+        { slug: 'tai-hoa-am-gospel', focus: 'Tái hoà âm gospel "Amazing Grace".' },
+        { slug: 'doi-nhip-the-loai-jazz', focus: 'Đổi nhịp, đổi thể loại, chơi tự do thời gian.' },
+        { slug: 'constant-structures', focus: 'Chuỗi hợp âm cùng loại, gốc không theo chức năng.' },
+      ], exercises: ['Tái hoà âm 8 ô đầu "Fly Me to the Moon" bằng ít nhất ba phép thay thế khác nhau.', 'Chơi một bài pop quen thuộc theo kiểu gospel, rồi theo kiểu bossa nova.'] },
+      { title: 'Hình thức và tiến trình chuẩn', intro: 'Ca khúc 32 ô AABA, rhythm changes và vòng Coltrane — ba khung mọi người chơi jazz phải thuộc.', chapters: [
+        { slug: 'hinh-thuc-ca-khuc-32', focus: 'Hình thức AABA và ABAC.' },
+        { slug: 'rhythm-changes', focus: 'Tiến trình "I Got Rhythm" và các biến thể.' },
+        { slug: 'vong-coltrane', focus: 'Vòng Coltrane: đổi giọng theo quãng 3 trưởng.' },
+        { slug: 'phan-tich-giant-steps', focus: 'Phân tích hoà âm "Giant Steps".' },
+      ], exercises: ['Chơi rhythm changes ở Si giáng: phần A bằng thế bấm không gốc, phần B (bridge) bằng shell.', 'Chơi vòng Coltrane chậm qua ba chủ âm B – G – E♭.'] },
+      { title: 'Ngẫu hứng — nền tảng', intro: 'Ngẫu hứng là sáng tác tại chỗ trên hoà âm: nốt dẫn hướng, trang trí giai điệu, nốt tiếp cận, nốt tránh.', chapters: [
+        { slug: 'ngau-hung-jazz', focus: 'Tổng quan ngẫu hứng jazz.' },
+        { slug: 'not-dan-huong', focus: 'Nốt 3 và 7 nối các hợp âm.' },
+        { slug: 'trang-tri-giai-dieu-jazz', focus: 'Ngẫu hứng từ chính giai điệu.' },
+        { slug: 'not-tiep-can-jazz', focus: 'Nốt tiếp cận và bao vây.' },
+        { slug: 'not-tranh-va-quang-nghich', focus: 'Nốt tránh; quãng thuận – nghịch.' },
+      ], exercises: ['Chơi một đường nốt dẫn hướng (3 – 7) qua cả "Autumn Leaves", mỗi hợp âm một nốt.', 'Trang trí giai điệu một bài chuẩn: giữ nguyên nốt chính, thêm nốt tiếp cận.'] },
+      { title: 'Ngẫu hứng — phương pháp', intro: 'Dọc và ngang, tiết tấu và câu nhạc, lick và trích dẫn, mẫu lặp chu kỳ, chơi ngoài giọng.', chapters: [
+        { slug: 'ngau-hung-doc-ngang', focus: 'Ngẫu hứng theo hợp âm và theo giọng.' },
+        { slug: 'tiet-tau-ngau-hung-jazz', focus: 'Tiết tấu, câu nhạc, dịch chuyển.' },
+        { slug: 'lick-va-trich-dan', focus: 'Học lick; câu sáo; trích dẫn.' },
+        { slug: 'mau-lap-chu-ky', focus: 'Lặp câu và dịch theo quãng cố định.' },
+        { slug: 'choi-ngoai-jazz', focus: 'Side-slipping và chơi ngoài giọng.' },
+      ], exercises: ['Học một lick ii – V – I và chơi nó ở 12 giọng.', 'Solo hai chorus blues chỉ dùng một motif, mỗi lần đổi một yếu tố.'] },
+      { title: 'Ngẫu hứng nâng cao và bài solo', intro: 'Superimposition, sheets of sound, triad pairs, ngẫu hứng bằng hợp âm — rồi ghép tất cả thành một bài solo có kiến trúc.', chapters: [
+        { slug: 'superimposition-jazz', focus: 'Chồng một tiến trình khác lên tiến trình đang có.' },
+        { slug: 'sheets-of-sound', focus: 'Lối Coltrane: hợp âm dày đặc ở tốc độ cao.' },
+        { slug: 'triad-pairs', focus: 'Hai hợp âm ba không chung nốt.' },
+        { slug: 'ngau-hung-hop-am', focus: 'Ngẫu hứng bằng hợp âm, block chords.' },
+        { slug: 'xay-dung-bai-solo', focus: 'Kiến trúc một bài solo.' },
+        { slug: 'phan-tich-solo-jazz', focus: 'Phân tích năm solo "Straight, No Chaser".' },
+        { slug: 'meo-ngau-hung-jazz', focus: 'Bài luyện và lời khuyên thực hành.' },
+      ], exercises: ['Chép (transcribe) tám ô của một solo trong "Straight, No Chaser" và chơi theo bản thu.', 'Ghi âm một solo ba chorus; nghe lại và đánh dấu chỗ lên cao trào.'] },
+      { title: 'Sáng tác và jazz hiện đại', intro: 'Viết bài jazz của riêng mình; jazz điệu thức, post-bop và free jazz.', chapters: [
+        { slug: 'sang-tac-jazz', focus: 'Sáng tác là ngẫu hứng không có tính tức thời.' },
+        { slug: 'jazz-dieu-thuc', focus: 'Jazz điệu thức: So What, thế bấm quãng 4.' },
+        { slug: 'hoa-am-dieu-thuc', focus: 'Hoà âm điệu thức.' },
+        { slug: 'post-bop-free-jazz', focus: 'Post-bop và free jazz.' },
+      ], exercises: ['Viết một bài 32 ô AABA của riêng bạn, có ít nhất hai cặp ii – V và một phép thay thế.', 'Ngẫu hứng trên một vamp Dorian Rê (như "So What") bằng thế bấm quãng 4.'] },
     ],
   },
 ]

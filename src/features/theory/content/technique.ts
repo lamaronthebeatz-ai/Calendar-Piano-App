@@ -1072,7 +1072,6 @@ Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
       ['Wikipedia — Bossa nova', 'https://en.wikipedia.org/wiki/Bossa_nova'],
       ['Wikipedia — João Gilberto', 'https://en.wikipedia.org/wiki/Jo%C3%A3o_Gilberto'],
       ['Wikipedia — Astrud Gilberto', 'https://en.wikipedia.org/wiki/Astrud_Gilberto'],
-      ['The Jazz Piano Site — How to play bossa nova', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-genres/how-to-play-bossa-nova/'],
       ['PianoGroove — Bossa nova basslines and grooves', 'https://pianogroove.com/bossa-nova-lessons/basslines-rhythm-grooves/'],
       ['Jazz Piano Blog — Bossa nova bass lines', 'https://jazzpianoblog.com/how-to-play-bossa-nova-bass-lines-at-the-piano/'],
       ['You’ll Hear It — The real way to play bossa nova', 'https://youllhearit.com/blog-2-minute-jazz-56-the-real-way-to-play-bossa-nova/'],
@@ -1090,13 +1089,13 @@ Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
 Bối cảnh: [[phong-cach-jazz]] (mục Latin).
 
 ## Cảm giác: đung đưa, không swing
-- Móc đơn **thẳng** nhưng [[dao-phach|đảo phách]] nhiều; tiết chế, ít rung, ít thay đổi [[cuong-do|cường độ]] (Lamar).
+- Móc đơn **thẳng** nhưng [[dao-phach|đảo phách]] nhiều; tiết chế, ít rung, ít thay đổi [[cuong-do|cường độ]].
 - Ba lớp: **[[passacaglia-va-chaconne|bè trầm lặp]]**, **hợp âm đệm** đảo phách, **giai điệu**.
 - **Batida** của Gilberto: ngón cái chơi trầm ở phách 1 và 3 (gốc – 5, như trống *surdo* của samba), các ngón kia gảy hợp âm đảo phách — một cây guitar [[doi-am|mô phỏng]] cả dàn trống.
 - Khác samba: samba nhanh hơn, ồn hơn, dàn gõ lễ hội; bossa nova nhỏ nhẹ, thân mật, cho giọng hát và guitar, [[hoa-am-jazz|hoà âm jazz]].
 
 ## Tay trái
-::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và trước phách 1 ô sau có thể lặp lại nốt trước, đón trước nốt gốc ô sau, nhảy quãng 8 hoặc tiếp cận nửa cung (Lamar)
+::rhythm 4/4 q.:1 e q.:5 e // | Tay trái bossa nova: gốc ở phách 1, nốt 5 ở phách 3; móc đơn ngắn trước phách 3 và trước phách 1 ô sau có thể lặp lại nốt trước, đón trước nốt gốc ô sau, nhảy quãng 8 hoặc tiếp cận nửa cung
 ::staff bass F2=1 F2 C3=5 C3 / G2=1 G2 D3=5 D3 | Khung trầm 1 – 5 trên Fmaj7 – G7 (minh hoạ); **không dùng pedal** để giữ tiếng trầm gọn
 Peter Martin gợi ý có thể giản lược bè trầm thành nốt trắng — phần đảo phách nằm ở tay phải.
 

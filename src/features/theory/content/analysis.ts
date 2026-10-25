@@ -879,8 +879,6 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     summary: '"Giant Steps" (thu 5/5/1959): 16 ô với 26 hợp âm, ba giọng Si – Sol – Mi giáng cách nhau quãng 3 trưởng, nhịp độ khoảng 290 phách/phút. Nửa đầu đi xuống theo quãng 3 trưởng qua các hợp âm át; nửa sau dẫn vào từng giọng bằng ii – V – I. Bài phân tích bảng hợp âm, nguồn gốc ý tưởng, câu chuyện phòng thu và cách luyện trên piano.',
     wiki: 'Giant_Steps_(composition)',
     refs: [
-      ['The Jazz Piano Site — Coltrane Changes Explained', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/coltrane-changes/'],
-      ['The Jazz Piano Site — How to Practice Playing Jazz', 'https://www.thejazzpianosite.com/jazz-piano-lessons/jazz-chord-progressions/how-to-practice-playing-jazz/'],
       ['Wikipedia — Giant Steps (album)', 'https://en.wikipedia.org/wiki/Giant_Steps'],
       ['Wikipedia — Coltrane changes', 'https://en.wikipedia.org/wiki/Coltrane_changes'],
       ['Library of Congress — National Recording Registry essay: Giant Steps', 'https://www.loc.gov/static/programs/national-recording-preservation-board/documents/GiantSteps.pdf'],
@@ -890,7 +888,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
       ['Wikipedia — 26-2', 'https://en.wikipedia.org/wiki/26-2'],
     ],
     body: `
-Bài này áp lý thuyết [[vong-coltrane]] vào chính tác phẩm đã làm nó nổi tiếng. Phần lý thuyết do Lamar biên soạn từ bài "Coltrane Changes"; các chi tiết khác lấy từ Wikipedia, Thư viện Quốc hội Mỹ và các nguồn ghi ở cuối trang. Giai điệu còn bản quyền nên ở đây chỉ phân tích **hoà âm**; hãy nghe bản thu gốc khi đọc.
+Bài này áp lý thuyết [[vong-coltrane]] vào chính tác phẩm đã làm nó nổi tiếng; các chi tiết lịch sử lấy từ Wikipedia, Thư viện Quốc hội Mỹ và các nguồn ghi ở cuối trang. Giai điệu còn bản quyền nên ở đây chỉ phân tích **hoà âm**; hãy nghe bản thu gốc khi đọc.
 
 ## Bối cảnh
 | Mục | Chi tiết |
@@ -926,7 +924,7 @@ Vì sao khó: trong 16 ô có **10 lần đổi giọng** nhưng chỉ giữa **
 |---|---|
 | Đoạn [[hinh-thuc-ca-khuc-32|bridge]] của "Have You Met Miss Jones?" (Rodgers & Hart, 1937) đi qua các giọng cách nhau quãng 3 trưởng (B♭ – G♭ – D) | Wikipedia chỉ nói "Giant Steps" và "Countdown" **có thể** lấy chu trình từ đây — một giả thuyết |
 | Sách *Thesaurus of Scales and Melodic Patterns* (1947) của Nicolas Slonimsky | Bài viết của Thư viện Quốc hội Mỹ cho rằng nửa sau được lấy "trực tiếp từ một đoạn" trong sách; Lewis Porter (nhà nghiên cứu Coltrane) nghiêng về Slonimsky hơn "Miss Jones"; Quincy Jones cũng nói vậy (phỏng vấn 2018). Không rõ chính xác trang nào |
-Lamar: Coltrane **không phát minh** ra ý tưởng đổi giọng theo quãng 3 trưởng, nhưng là người **đầu tiên dùng nó một cách có hệ thống**.
+Coltrane **không phát minh** ra ý tưởng đổi giọng theo quãng 3 trưởng, nhưng là người **đầu tiên dùng nó một cách có hệ thống**.
 
 ## Câu chuyện của người chơi piano
 - Trong bản chính, Tommy Flanagan phải [[ngau-hung-piano|ngẫu hứng]] trên [[vong-hop-am|vòng hợp âm]] này gần như **không có chuẩn bị**. Wikipedia mô tả solo của ông "đứt quãng", và về cuối ông chuyển sang chỉ chơi các hợp âm.
@@ -943,7 +941,7 @@ Bài học cho học trò: ngay cả nghệ sĩ hàng đầu cũng cần **luy�
 1. **Chậm**: tay trái chơi nốt gốc, tay phải chơi [[not-dan-huong|nốt 3 và 7]] của từng hợp âm, ở nhịp độ thật chậm với máy đếm nhịp ([[kiem-soat-toc-do]]).
 2. **Nhìn theo ba giọng**: tô màu bảng hợp âm theo B, G, E♭ để thấy vòng lặp.
 3. **Mẫu 1 – 2 – 3 – 5** cho từng hợp âm, rồi đảo chiều (5 – 3 – 2 – 1).
-4. Lamar: muốn chơi được những bài như "Giant Steps" thì phải **thoải mái ở mọi giọng** — tập một bài chuẩn đơn giản ở cả 12 giọng (kèm [[bass-di-jazz|bass đi]]), rồi ngẫu hứng và tái hoà âm.
+4. Muốn chơi được những bài như "Giant Steps" thì phải **thoải mái ở mọi giọng** — tập một bài chuẩn đơn giản ở cả 12 giọng (kèm [[bass-di-jazz|bass đi]]), rồi ngẫu hứng và tái hoà âm.
 5. Tăng nhịp độ từng chút; chỉ tăng khi chơi sạch.
 
 ## Các bài cùng họ
