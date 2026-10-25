@@ -9,6 +9,7 @@ import { peekText } from '../../theory/body'
 import { toggleDone, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
 import { chaptersOf, lessonQuestions, roman, type ReaderBook, type ReaderItem } from './model'
+import { HeroBackdrop } from '../../theory/HeroBackdrop'
 
 /**
  * The pages of a book, laid out like a printed textbook: lessons ("Bài") with objectives, numbered
@@ -188,6 +189,7 @@ function LessonPage({ book, item, mode, progressive }: { book: ReaderBook; item:
   return (
     <article className="book-lesson" style={{ '--lesson': `"${item.n}"` } as CSSProperties}>
       <header className="book-lesson-head">
+        {mode === 'screen' && <HeroBackdrop slug={a.slug} category={a.category} />}
         {part && part.kind === 'part' && (
           <p className="book-eyebrow">
             {unit(book)} {roman(part.n)} · {part.title}

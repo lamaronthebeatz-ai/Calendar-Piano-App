@@ -39,6 +39,7 @@ import { LIBRARY } from '../curriculum/reader/notes'
 import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { TOPIC_CREDITS } from './topicCredits'
 import { useThumbs } from './thumbs'
+import { HeroBackdrop } from './HeroBackdrop'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
 import { useScrollCollapse } from '../../hooks/useScrollCollapse'
@@ -1096,7 +1097,8 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
   return (
     <div style={tint(article.category)} className="mx-auto grid max-w-6xl gap-10 px-4 py-6 lg:px-8 lg:py-10 xl:grid-cols-[minmax(0,1fr)_240px]">
       <article className="theory-article animate-float-up mx-auto w-full min-w-0 max-w-[720px] space-y-7">
-        <header className="space-y-4">
+        <header className="theory-hero space-y-4">
+          <HeroBackdrop slug={article.slug} category={article.category} />
           <Link to={`/theory?c=${article.category}`} className="inline-flex items-center gap-2 rounded-full bg-[color-mix(in_oklch,var(--tint)_12%,transparent)] py-1 pl-1.5 pr-3 text-[12px] font-semibold text-[var(--tint)] transition-colors hover:bg-[color-mix(in_oklch,var(--tint)_20%,transparent)]">
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--tint)] font-['Noto_Music'] text-[11px] text-white">{GLYPHS[article.category]}</span>
             {CATEGORIES[article.category].title}
