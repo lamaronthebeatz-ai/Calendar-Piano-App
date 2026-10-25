@@ -1446,6 +1446,7 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
       ['Yuhe Wang (2025), An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin — luận án DMA, University of Maryland', 'https://drum.lib.umd.edu/bitstreams/dc35a0f3-3c1e-4335-a35f-eefd792b9782/download'],
       ['Emily Chialin Chiang (2013), Rubato and Climax Projection in Two Piano Sonatas by Scriabin — luận án DMA, University of Toronto', 'https://tspace.library.utoronto.ca/bitstream/1807/35791/1/Chiang_Emily_CL_201306_DMA_thesis.pdf'],
       ['Bae Su-jin (2000), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Nữ Ewha (Hàn Quốc) — chỉ đọc được tóm tắt', 'https://dspace.ewha.ac.kr/handle/2015.oak/184674'],
+      ['Cha Min-hee (차민희) (2015), A. Scriabin Piano Sonata Op. 19 No. 2에 관한 분석 연구 — luận văn thạc sĩ, Đại học Chosun (Hàn Quốc), giấy phép CC BY 2.0 KR', 'https://oak.chosun.ac.kr/bitstream/2020.oak/12374/2/A.%20Scriabin%20Piano%20Sonata%20Op.%2019%20No.%202%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B6%84%EC%84%9D%20%EC%97%B0%EA%B5%AC.pdf'],
     ],
     body: `
 ::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
@@ -1462,7 +1463,7 @@ Wikipedia dẫn một chương trình về biển, theo Leikin là do người v
 ## Nguồn và cách phân tích
 - **Văn bản**: bản in đầu Belaieff 1898 (IMSLP). Mọi số ô và tên nốt trong bài đều đọc trên bản này. Tao tự đếm và được **136 + 110 ô**. Các mốc hình thức khớp đúng bảng Wikipedia dẫn Leikin.
 - **Kiểm cao độ**: đối chiếu với MIDI một bản biểu diễn trong bộ MAESTRO v3. MIDI là tiếng đàn thật nên có thể lẫn nốt chơi sai và tiếng pedal nhoè; chỗ nào hai nguồn khác nhau thì theo **bản phổ**. Ví dụ ô 41 chương II, MIDI có E♮ nhưng bản in là E♭.
-- **Tài liệu đã tìm**: không tìm thấy bài phân tích hoà âm từng ô nào công bố mở. Luận án của Wang (2025) chỉ tả chung về màu sắc và các giọng xa. Luận án của Chiang (2013) bàn về rubato và cao trào. Tóm tắt luận văn của Bae (2000), tao chỉ đọc được qua kết quả tìm kiếm, cho biết tác giả ghi nhận chương I theo hình thức sonata, chương II ba đoạn có coda, cùng hợp âm ba bỏ quãng 3, hợp âm quãng 4 và nhiều lần chuyển giọng trùng âm; tao **chưa đọc được toàn văn**. Một luận án của ĐH Kentucky (2007) về sonata Scriabin bị chặn truy cập. Vì vậy **phần phân tích từng ô dưới đây là bài đọc của chính bài viết**, dựa trên bản phổ, theo khung [[chuc-nang-hoa-am|chức năng hoà âm]] T – S – D của trường phái Nga (xem [[he-thong-hoa-am-co-dien]]).
+- **Tài liệu đã tìm**: không tìm thấy bài phân tích hoà âm từng ô nào công bố mở. Gần nhất là luận văn thạc sĩ của **Cha Min-hee** (ĐH Chosun, 2015), phân tích theo đoạn và theo thủ pháp; phần đối chiếu với luận văn này ở mục riêng bên dưới. Luận án của Wang (2025) chỉ tả chung về màu sắc và các giọng xa. Luận án của Chiang (2013) bàn về rubato và cao trào. Tóm tắt luận văn của Bae (2000), tao chỉ đọc được qua kết quả tìm kiếm, cho biết tác giả ghi nhận chương I theo hình thức sonata, chương II ba đoạn có coda, cùng hợp âm ba bỏ quãng 3, hợp âm quãng 4 và nhiều lần chuyển giọng trùng âm; tao **chưa đọc được toàn văn**. Một luận án của ĐH Kentucky (2007) về sonata Scriabin bị chặn truy cập. Vì vậy **phần phân tích từng ô dưới đây là bài đọc của chính bài viết**, dựa trên bản phổ, theo khung [[chuc-nang-hoa-am|chức năng hoà âm]] T – S – D của trường phái Nga (xem [[he-thong-hoa-am-co-dien]]).
 - **Ký hiệu**: số La Mã viết theo giọng đang xét. **Ger+6 / Fr+6 / It+6** là [[hop-am-sau-tang|hợp âm 6 tăng]] Đức / Pháp / Ý. **N** là [[hop-am-napoli|Napoli]]. "6/4 kết" là [[hop-am-sau-bon|hợp âm 6/4 kết]]. V/x là [[hop-am-at-phu|át phụ]]. Hợp âm chồng lên một bè trầm không đổi là [[bass-ngan|pedal]].
 
 ## Hình thức
@@ -1675,6 +1676,28 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 11. **Kết không âm dẫn.** Coda chương II luân phiên D♯ – G♯, nhưng tầng trên không có F𝄪: át mang G♯, E, B (quãng 4 treo, ♭9, ♭13) thay vì quãng 3 dẫn âm.
 
 Nhìn chung, Op. 19 vẫn nằm trong [[hoa-am-cromatic|hoà âm chức năng mở rộng]] cuối thế kỷ 19, gần Chopin và Liszt. Chưa có "hợp âm huyền bí" của Scriabin thời muộn. Nhưng các mầm của nó đã có: át quãng 5 hạ, hợp âm 6 tăng đồng nhất với át 7, màu toàn cung, hợp âm thêm nốt và pedal dài.
+
+## Đối chiếu với luận văn Cha Min-hee (2015)
+Luận văn thạc sĩ ĐH Chosun (người hướng dẫn: Kim Ji-hyun) dùng bản Peters 1971. Đây là nguồn mở duy nhất bài viết tìm được có phân tích tác phẩm theo từng đoạn. Dưới đây là những điểm **khớp**, **bổ sung** và **khác** so với bài này. Số trang ghi theo số in trong luận văn.
+
+**Khớp với cách đọc của bài:**
+- Chương II là ba đoạn **A (1–40) – B (41–78) – A′**. A′ chỉ nhắc lại ô 1–14 (ô 79–92), coda 93–110 dùng lại giai điệu đoạn B *(tr. 35–39)*.
+- Ô 40–41 chương II: bè trầm A♯ → B♭, **chuyển giọng trùng âm Rê♯ thứ → Mi♭ thứ** *(tr. 37)*.
+- Coda chương II: pedal D♯ từ ô 98, hợp âm tầng cao đi lên cromatic C𝄪 – D♯ – E. Ô 102–107 giai điệu đoạn B lên một quãng 8, tay trái chuyển sang quãng 2 thứ D♯ – E luân phiên như láy *(tr. 39)*. Bảng ô 98–107 của bài này là C𝄪/Ger+6 – D♯/6/4 kết – E, rồi D♯ – E thêu.
+- Chương I ô 9–10: bè trong đi lên cromatic G♯ – A – A♯ (bài này: N6 có A♮). Ô 23: nốt E thay cho D♯ trong hợp âm I (B–D♯–F♯) (bài này: I quãng 4 treo). Ô 46–56: nốt đầu mỗi nhóm bè trầm nhấn B như một **pedal** *(tr. 23, 25, 28)*.
+- Ô 74–75 chương I: nối D♭ sang C♯ trùng âm để trở về Sol♯ thứ. Ô 83–86: nốt D♯ (át của Sol♯ thứ) được thêm vào để nối sang tái hiện *(tr. 31–32)*.
+
+**Bổ sung (bài này chưa nêu):**
+- Chương I: từ cuối ô 6, tay phải theo nhịp 3/4, tay trái thành hình 9/8 (**phức nhịp**), hai bè đi ngược chiều. Đoạn kết thứ nhất (từ ô 37) dùng giai điệu ô 29 thành **canon quãng 8**. Tay trái chia nhịp ngày càng nhỏ, tạo **nghịch nhịp** 3:4, 4:5, 3:6, rồi 2:3, 6:4, 4:3 ở ô 46–56. Trình bày không có dấu nhắc lại *(tr. 23, 27–29)*.
+- Phát triển chương I: giai điệu ô 23–24 được mô tiến cách quãng 4 và quãng 8 từ ô 62. Ô 68–70 bè trầm đi cromatic C – C♭ – B♭, trên đó tay phải chen vào ô 1 của chủ đề 1. Ô 75 rút gọn tiết tấu chủ đề 1. Ô 79–82 tay phải là liên ba quãng 8 đi lên cromatic *(tr. 30–32)*.
+- Chương II: ô 1–2 được mô tiến ở ô 3–4 (tay phải lên quãng 4, quãng 8 tay trái xuống quãng 3 thứ). Ô 17 tay trái rải át 7, ô 18 mô tiến lên một quãng 8. Ô 19–20 có nghịch nhịp 6:4 và nhóm ba nốt ở bè trầm trải quãng 11, Cha gọi là "tiếng tù và" (horn call) và cho rằng nó gợi lại motif chương I *(tr. 36)*.
+
+**Khác hoặc cần dè dặt:**
+- **Hình thức chương I**: Cha coi ô 1–12 là **chủ đề 1** ở Sol♯ thứ và ô 13–22 là đoạn nối ở Si trưởng. Leikin (qua Wikipedia) và bài này coi ô 1–12 là **mở đầu**, chủ đề 1 từ ô 13. Cha đặt tái hiện từ **ô 87** (chủ đề 1 nhắc hai ô có dấu nhấn, ô 87–88), coda từ ô 122. Leikin đặt tái hiện từ ô 89, chủ đề 3 ở 122–127, coda 128–136 *(tr. 22, 33)*. Hai cách chia khác nhau vì cách hiểu vai trò của motif mở đầu.
+- **Giọng đoạn phát triển**: bảng của Cha ghi "f – g♯" cho ô 62–86. Trên bản Belaieff, vùng dấu giáng đi Sol thứ → Đô thứ → Fa thứ, rồi B♭7♭9 → **Mi♭ thứ** trước khi trở về năm thăng ở ô 75. Bài này giữ cách đọc ấy.
+- **Đoạn B chương II**: bảng của Cha ghi c (Mi♭ thứ) 41–52, d (Si♭ thứ – Si) 53–62, c′ (Đô – Si♭ thứ – Đô♯ thứ – Sol♯ thứ) 63–78. Trên bản Belaieff, ô 49–52 đã ở Si♭ thứ (hoá biểu năm giáng), ô 53–58 là Si trưởng trên pedal F♯, ô 59–62 Si♭ thứ, ô 63–66 Rê♭ trưởng (vẫn năm giáng, giai điệu F–E♭–D♭–C–D♭), không phải Đô.
+- **Lỗi in trong luận văn**: các bảng và chú thích ví dụ ghi "Op. 12" thay vì Op. 19. Bảng 2 ghi chương I "86–136", A′ "79–109". Nhịp chương II ghi 3/4, trong khi bản Belaieff ghi 3/2.
+- Kết luận của Cha cho rằng hợp âm quãng 4, quãng 5 dày đặc là "điềm báo của hợp âm huyền bí" *(tr. 25, 42)*. Đây là nhận định của tác giả, không kèm phân tích cấu trúc hợp âm. Bài này không lấy làm căn cứ.
 
 ## Tự kiểm
 - **Chắc chắn** (đọc trực tiếp trên bản phổ và khớp MIDI): số ô; các mốc hình thức; giọng và hoá biểu từng đoạn; bè trầm từng ô chương II; cách viết C𝄪/D♮, G𝄪, B𝄫, F♭ ở các ô đã nêu; hợp âm cuối hai chương.
