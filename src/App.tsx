@@ -91,6 +91,9 @@ function RouteError() {
 }
 
 // A data router, so navigations can run as view transitions (see layout/viewTransitions.ts).
+// A fresh launch (the lock screen shows) opens on the theory library, not the timetable; a link to a page still opens that page.
+if (!isUnlocked() && /^#?\/?$/.test(location.hash)) history.replaceState(null, '', '#/theory')
+
 const router = createHashRouter(
   createRoutesFromElements(
     <Route element={<AppShell />} errorElement={<RouteError />}>
