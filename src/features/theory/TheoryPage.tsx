@@ -825,13 +825,14 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
               data-card={a.slug}
               style={tint(a.category)}
               onClick={(e) => setMorphTarget(a.slug, e.currentTarget.querySelector('.vt-morph-card'))}
-              className="theory-card group flex h-full items-start gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-3"
+              className="theory-card group grid h-full min-h-[92px] grid-cols-[84px_1fr] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]"
             >
               <span className="article-thumb font-['Noto_Music']" aria-hidden>
-                {thumbs?.[a.slug] ? <img src={thumbs[a.slug][0]} alt="" loading="lazy" decoding="async" className={clsx(thumbs[a.slug][1] && 'is-drawing')} /> : GLYPHS[a.category]}
+                <span>{GLYPHS[a.category]}</span>
+                {thumbs?.[a.slug] && <img src={thumbs[a.slug][0]} alt="" loading="lazy" decoding="async" onError={(e) => e.currentTarget.remove()} className={clsx(thumbs[a.slug][1] && 'is-drawing')} />}
                 {numbered && <span className="article-num font-sans">{String(i + 1).padStart(2, '0')}</span>}
               </span>
-              <span className="min-w-0 pt-0.5">
+              <span className="min-w-0 py-3 pl-2 pr-4">
                 <span className={clsx('vt-morph-card block text-[14.5px] font-semibold leading-snug text-[var(--color-ink)] group-hover:text-[var(--tint)]', morph === a.slug && 'vt-morph')}>
                   <Highlight text={a.title} query={query} />
                 </span>
