@@ -275,6 +275,8 @@ Lộ trình cả mục: [[triet-hoc-am-nhac]].
 ## Cuộc tranh luận ngày nay
 - Phần lớn các nhà triết học hiện đại không còn chọn một trong hai cực: nhạc không lời vẫn có thể được nghe là **biểu cảm** (xem [[bieu-hien-cam-xuc-am-nhac]]), và nhạc chương trình vẫn phải **thuyết phục về mặt âm nhạc**.
 - Với người dạy: khi một [[tieu-pham-piano|tiểu phẩm]] có tên gợi hình (như *Cảnh tuổi thơ* của [[robert-schumann|Schumann]] — xem [[phan-tich-traumerei]]), tên gọi có thể là **gợi ý** cho cách chơi; Schumann tự nói các tên chỉ là "gợi ý tinh tế".
+Đọc kỹ từng chương cuốn sách của Hanslick: [[hanslick-lo-trinh]] (sách *Về Cái Đẹp Trong Âm Nhạc* trong tủ sách).
+
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
 
 Bối cảnh tư tưởng đầu thế kỷ 19 — vì sao khí nhạc được xem là nghệ thuật cao nhất: [[triet-hoc-lang-man-ve-am-nhac]].

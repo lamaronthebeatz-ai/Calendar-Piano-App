@@ -2217,6 +2217,20 @@ const ROWS: [string, string, string, string, string, string][] = [
   ["Phụ lục nói gì về lối cho trombone đi đồng âm với giọng hát trong fugue?", "Không nên theo", "Bắt buộc", "Rất hay", "Chỉ dùng ở opera", "phu-luc-albrechtsberger"],
   ["Trong tra cứu, đối âm kép ở quãng 12 đổi quãng n thành gì?", "13 − n", "9 − n", "11 − n", "12 − n", "tra-cuu-albrechtsberger"],
   ["Kết loại 4 khi đối âm ở trên là công thức nào?", "7 – 6", "4 – 3", "2 – 3", "5 – 6", "tra-cuu-albrechtsberger"],
+  ["Vom Musikalisch-Schönen của Hanslick ra đời năm nào?", "1854", "1834", "1876", "1885", "hanslick-tieu-su-va-loi-tua"],
+  ["Luận đề phủ định chính của Hanslick chống lại học thuyết nào?", "Chức năng của âm nhạc là tái hiện cảm xúc", "Âm nhạc phải theo luật hoà âm", "Opera cao hơn khí nhạc", "Âm nhạc là toán học", "hanslick-tieu-su-va-loi-tua"],
+  ["Theo Hanslick, cơ quan tiếp nhận cái đẹp trong nghệ thuật là gì?", "Trí tưởng tượng (sự chiêm ngưỡng thuần tuý)", "Cảm xúc", "Thần kinh thính giác", "Lý trí trừu tượng", "hanslick-my-hoc-cam-xuc"],
+  ["Hanslick ví việc nghiên cứu âm nhạc qua cảm xúc người nghe với việc gì?", "Nghiên cứu rượu bằng cách say rượu", "Đo nhiệt độ bằng tay", "Đọc sách khi nhắm mắt", "Vẽ tranh trong bóng tối", "hanslick-my-hoc-cam-xuc"],
+  ["Theo Hanslick, âm nhạc tái hiện được phần nào của cảm xúc?", "Động thái: nhanh, chậm, mạnh, yếu, tăng, giảm", "Đối tượng của cảm xúc", "Khái niệm gắn với cảm xúc", "Không phần nào cả", "hanslick-am-nhac-co-bieu-hien-cam-xuc"],
+  ["Aria nào của Gluck được Hanslick dẫn vì hát được cả với lời ngược nghĩa?", "J'ai perdu mon Eurydice", "Che gelida manina", "Lascia ch'io pianga", "Casta diva", "hanslick-am-nhac-co-bieu-hien-cam-xuc"],
+  ["Hanslick ví opera với gì vì cuộc giằng co giữa âm nhạc và kịch?", "Một chính thể lập hiến có hai đảng ngang quyền", "Một cuộc hôn nhân hạnh phúc", "Một đội quân có hai tướng", "Một cỗ máy đồng hồ", "hanslick-loi-ca-va-opera"],
+  ["Bản Cohen dịch câu then chốt của Hanslick là gì?", "Bản chất của âm nhạc là âm thanh và chuyển động", "Âm nhạc là ngôn ngữ của cảm xúc", "Âm nhạc là kiến trúc đông cứng", "Âm nhạc là toán học vô thức", "hanslick-cai-dep-trong-am-nhac"],
+  ["Theo Hanslick, khác biệt căn bản giữa lời nói và âm nhạc là gì?", "Trong lời nói âm thanh là ký hiệu, trong âm nhạc âm thanh là mục đích", "Lời nói có nhịp, âm nhạc thì không", "Âm nhạc chính xác hơn lời nói", "Lời nói không có cao độ", "hanslick-cai-dep-trong-am-nhac"],
+  ["Ghi chú của Beethoven trên Sonata Op. 81 (Les Adieux) nói tới ai?", "Đại công tước Rudolf", "Một đôi tình nhân", "Napoléon", "Bettina von Arnim", "hanslick-y-do-va-chuong-trinh"],
+  ["Theo Hanslick, cảm xúc tuôn trực tiếp nhất thành âm thanh ở đâu?", "Ở người biểu diễn, nhất là khi ngẫu hứng", "Ở nhà soạn nhạc khi viết fugue", "Ở nhà phê bình", "Ở người nghe không học nhạc", "hanslick-tac-dong-cua-am-nhac"],
+  ["Theo Hanslick, nhạc sĩ có học hỏi gì về một bản nhạc?", "Nó hay hay dở", "Nó vui hay buồn", "Nó dài hay ngắn", "Nó cổ điển hay lãng mạn", "hanslick-cach-nghe-nhac"],
+  ["Theo Hanslick, con vật âm nhạc mang ơn nhiều nhất là con gì?", "Con cừu", "Chim hoạ mi", "Chim cu", "Con ngựa", "hanslick-am-nhac-va-tu-nhien"],
+  ["Theo Hanslick, nội dung thật của một bản nhạc là gì?", "Chủ đề (các chủ đề)", "Cảm xúc của nhà soạn nhạc", "Tiêu đề do tác giả đặt", "Hoàn cảnh sáng tác", "hanslick-noi-dung-am-nhac"],
 ]
 
 export const LIBRARY: QuizQuestion[] = ROWS.map(([q, a, w1, w2, w3, slug]) => ({ q, a, w: [w1, w2, w3], slug }))

@@ -4,6 +4,7 @@ import fuxCover from '../../assets/covers/doi-am-fux.webp'
 import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
 import formCover from '../../assets/covers/hinh-thuc-am-nhac.webp'
 import neuhausCover from '../../assets/covers/neuhaus.webp'
+import hanslickCover from '../../assets/covers/hanslick.webp'
 import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
@@ -1021,6 +1022,54 @@ Neuhaus đặt **âm nhạc lên trước hết**: người chơi phải hiểu 
         { slug: 'neuhaus-bieu-dien', focus: 'Hoạt động biểu diễn.' },
         { slug: 'neuhaus-ket-luan', focus: 'Kết luận.' },
       ], exercises: ['Viết một trang về điều Neuhaus đòi hỏi ở người thầy và đối chiếu với cách bạn đang dạy hoặc học.'] },
+    ],
+  },
+  {
+    id: 'hanslick',
+    title: 'Về Cái Đẹp Trong Âm Nhạc',
+    volume: 'Eduard Hanslick',
+    subtitle: 'Đọc kỹ cuốn sách nền của mỹ học âm nhạc (Vom Musikalisch-Schönen, 1854): âm nhạc có biểu hiện cảm xúc không, cái đẹp đặc thù âm nhạc, người sáng tác – người diễn – người nghe, âm nhạc và tự nhiên, nội dung và hình thức.',
+    author: 'Lamar',
+    audience: 'Học viên và giáo viên âm nhạc, người quan tâm tới mỹ học – triết học âm nhạc',
+    hue: 60,
+    glyph: '❦',
+    coverImage: hanslickCover,
+    preface: `
+**Eduard Hanslick** (1825 – 1904), nhà phê bình âm nhạc ở Vienna và giáo sư mỹ học – lịch sử âm nhạc đầu tiên của Đại học Vienna, viết *Vom Musikalisch-Schönen* (Về cái đẹp trong âm nhạc) năm 1854. Sách mỏng, viết như một bài luận tranh luận, nhưng đặt ra gần như mọi câu hỏi mà mỹ học âm nhạc còn bàn tới hôm nay. Sách này đọc theo bản dịch tiếng Anh của Gustav Cohen (*The Beautiful in Music*, 1891, từ bản Đức in lần 7 năm 1885), ấn bản có lời giới thiệu của Morris Weitz (1957), giữ đúng trình tự bảy chương của Hanslick.
+
+## Tinh thần của sách
+Hanslick đi từ **phủ định** sang **khẳng định**: cảm xúc của người nghe không phải nội dung cũng không phải tiêu chuẩn của cái đẹp âm nhạc; cái đẹp ấy nằm trong chính các hình thức âm thanh — "bản chất của âm nhạc là âm thanh và chuyển động". Từ đó ông rút ra cách sáng tác, cách biểu diễn, cách nghe và cách phê bình. Sách có vài đoạn định kiến của thời đại; các bài thuật lại đúng văn bản và ghi rõ đó là định kiến.
+
+## Cách đọc
+1. Đọc theo thứ tự: chương I – II phê phán mỹ học cảm xúc, chương III là phần khẳng định, chương IV – VII là các hệ quả.
+2. Trích dẫn dịch sát từ bản tiếng Anh của Cohen và ghi số trang ấn bản Weitz; chỗ chưa đối chiếu nguyên văn tiếng Đức được ghi rõ.
+3. Mỗi bài có **Câu hỏi và bài tập**: phần lớn là nghe một tác phẩm Hanslick nhắc tới rồi tự kiểm luận điểm của ông.
+`,
+    parts: [
+      { title: 'Mở đầu', intro: 'Hanslick là ai, lời giới thiệu của Weitz và hai luận đề của cuốn sách.', chapters: [
+        { slug: 'hanslick-lo-trinh', focus: 'Lộ trình bộ bài.' },
+        { slug: 'hanslick-tieu-su-va-loi-tua', focus: 'Tiểu sử; tự trị và dị trị; lời tựa bản in lần 7.' },
+      ], exercises: ['Viết một đoạn ngắn tóm tắt luận đề phủ định và luận đề khẳng định của Hanslick bằng lời của mày.'] },
+      { title: 'Phê phán mỹ học cảm xúc', intro: 'Cảm xúc không phải mục đích, cũng không phải nội dung của âm nhạc.', chapters: [
+        { slug: 'hanslick-my-hoc-cam-xuc', focus: 'Chương I: cảm giác và cảm xúc; trí tưởng tượng là cơ quan của cái đẹp.' },
+        { slug: 'hanslick-am-nhac-co-bieu-hien-cam-xuc', focus: 'Chương II: âm nhạc chỉ tái hiện được động thái của cảm xúc.' },
+        { slug: 'hanslick-loi-ca-va-opera', focus: 'Chương II: lời ca, hát nói, opera.' },
+      ], exercises: ['Nghe một bản khí nhạc ngắn cùng hai người khác, mỗi người ghi một chữ cho cảm xúc của nó; so sánh kết quả với lập luận "tình yêu – khát khao – sùng đạo" của Hanslick.', 'Hát một aria với lời ngược nghĩa và nhận xét.'] },
+      { title: 'Cái đẹp trong âm nhạc', intro: 'Phần khẳng định: cái đẹp đặc thù âm nhạc và những hệ quả cho phê bình.', chapters: [
+        { slug: 'hanslick-cai-dep-trong-am-nhac', focus: 'Chương III: âm thanh và chuyển động; arabesque, kính vạn hoa; logic âm nhạc.' },
+        { slug: 'hanslick-y-do-va-chuong-trinh', focus: 'Chương III: ý đồ và sáng tạo; Les Adieux; lịch sử và mỹ học.' },
+      ], exercises: ['Viết một bài phê bình 300 chữ về một chương sonata chỉ bằng ngôn ngữ âm nhạc (chủ đề, hoà âm, phát triển), không dùng tiểu sử hay cảm xúc.'] },
+      { title: 'Người sáng tác, người diễn, người nghe', intro: 'Cảm xúc có chỗ thật trong đời sống âm nhạc — nhưng ở đâu, và nghe thế nào cho đúng.', chapters: [
+        { slug: 'hanslick-tac-dong-cua-am-nhac', focus: 'Chương IV: nhà soạn nhạc như nhà điêu khắc; người diễn; âm nhạc và thần kinh.' },
+        { slug: 'hanslick-cach-nghe-nhac', focus: 'Chương V: nghe bệnh lý và nghe thẩm mỹ.' },
+      ], exercises: ['Nghe một chương sonata hai lần: lần đầu thả lỏng, lần sau theo dõi và đoán trước. Ghi lại khác biệt.'] },
+      { title: 'Tự nhiên và nội dung', intro: 'Âm nhạc không có mẫu trong tự nhiên; nội dung của nó là các hình thức âm thanh.', chapters: [
+        { slug: 'hanslick-am-nhac-va-tu-nhien', focus: 'Chương VI: âm nhạc và tự nhiên.' },
+        { slug: 'hanslick-noi-dung-am-nhac', focus: 'Chương VII: nội dung và hình thức; chủ đề là nội dung thật.' },
+      ], exercises: ['Chọn một overture có tiêu đề, nghe không biết tên, đặt cho nó ba tên khác; viết vì sao.'] },
+      { title: 'Di sản', intro: 'Hanslick đọc lại hôm nay.', chapters: [
+        { slug: 'hanslick-di-san-va-tranh-luan', focus: 'Tổng kết; Weitz và IEP; điểm yếu và định kiến của sách.' },
+      ], exercises: ['Viết một trang: mày đồng ý với Hanslick tới đâu?'] },
     ],
   },
   {

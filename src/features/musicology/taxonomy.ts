@@ -382,6 +382,7 @@ export const BRANCHES: Branch[] = [
     questions: ['Âm nhạc không lời có "nói" được gì không?', 'Thế nào là một buổi diễn trung thành với tác phẩm?'],
     groups: [
       { title: 'Các trường phái', slugs: ['am-nhac-tuyet-doi', 'adorno-va-am-nhac'] },
+      { title: 'Hanslick — Về cái đẹp trong âm nhạc', slugs: ['hanslick-lo-trinh', 'hanslick-tieu-su-va-loi-tua', 'hanslick-my-hoc-cam-xuc', 'hanslick-am-nhac-co-bieu-hien-cam-xuc', 'hanslick-loi-ca-va-opera', 'hanslick-cai-dep-trong-am-nhac', 'hanslick-y-do-va-chuong-trinh', 'hanslick-tac-dong-cua-am-nhac', 'hanslick-cach-nghe-nhac', 'hanslick-am-nhac-va-tu-nhien', 'hanslick-noi-dung-am-nhac', 'hanslick-di-san-va-tranh-luan'] },
       { title: 'Các vấn đề', cats: ['philosophy'] },
     ],
   },
