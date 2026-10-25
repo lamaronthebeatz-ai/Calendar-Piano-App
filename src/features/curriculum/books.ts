@@ -112,6 +112,26 @@ const JAZZ_PARTS: Book['parts'] = [
   ], exercises: ['Viết một bài 32 ô AABA của riêng bạn, có ít nhất hai cặp ii – V và một phép thay thế.', 'Ngẫu hứng trên một vamp Dorian Rê (như "So What") bằng thế bấm quãng 4.'] },
 ]
 
+/**
+ * The single Jazz Theory Book (id `jazz-theory-book`) became four volumes. Saved positions, bookmarks, notes
+ * and links under the old id move to the volume holding that item; anything else goes to volume 1.
+ */
+export const OLD_JAZZ_ID = 'jazz-theory-book'
+export function jazzVolumeOf(key?: string) {
+  const ends = [4, 7, 9, 13]
+  const at = JAZZ_PARTS.findIndex((p) => p.chapters.some((c) => c.slug === key))
+  return `jazz-theory-book-${at < 0 ? 1 : ends.findIndex((e) => at < e) + 1}`
+}
+/** Moves per-book lists (notes, bookmarks) saved under the old id to their volumes. */
+export function splitOldJazz<T extends { key: string }>(rec: Record<string, T[]>): Record<string, T[]> {
+  const old = rec[OLD_JAZZ_ID]
+  if (!Array.isArray(old)) return rec
+  const out = { ...rec }
+  delete out[OLD_JAZZ_ID]
+  for (const x of old) (out[jazzVolumeOf(x?.key)] ??= []).push(x)
+  return out
+}
+
 const jazzPreface = (n: number, scope: string) => `
 **The Jazz Theory Book** do **Lamar soạn trọn vẹn — 100%**: hệ thống lý thuyết, trình tự bài, cách giải thích, ví dụ, bảng, bài luyện và câu hỏi ôn tập đều là của Lamar. Đây là giáo trình jazz Lamar dùng để dạy, đóng thành **bốn tập** để người học đi trọn từ những ô swing đầu tiên tới một bài solo hoàn chỉnh. Đây là **Tập ${n}**: ${scope}
 
@@ -1004,7 +1024,7 @@ Neuhaus đặt **âm nhạc lên trước hết**: người chơi phải hiểu 
     ],
   },
   {
-    id: 'jazz-theory-book',
+    id: 'jazz-theory-book-1',
     title: 'The Jazz Theory Book',
     volume: 'Tập 1 · Nền tảng',
     subtitle: 'Nhập môn jazz, swing, blues, hợp âm jazz, ii – V – I, turnaround, line cliché và cách đọc một tiến trình.',

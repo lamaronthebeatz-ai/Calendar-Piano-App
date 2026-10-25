@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react'
+import { jazzVolumeOf, OLD_JAZZ_ID, splitOldJazz } from '../books'
 
 /** Reader preferences, last position and bookmarks per book. Kept in localStorage (every access tolerates it failing). */
 export type ReaderTheme = 'paper' | 'sepia' | 'night' | 'app'
@@ -41,7 +42,11 @@ const DEFAULT_PREFS: ReaderPrefs = { size: 18, font: 'serif', leading: 1.7, marg
 function load(): ReaderState {
   try {
     const raw = JSON.parse(localStorage.getItem(KEY) ?? '{}')
-    return { prefs: { ...DEFAULT_PREFS, ...raw.prefs }, positions: raw.positions ?? {}, bookmarks: raw.bookmarks ?? {} }
+    const positions: Record<string, Position> = { ...raw.positions }
+    const oldPos = positions[OLD_JAZZ_ID]
+    delete positions[OLD_JAZZ_ID]
+    if (oldPos?.key) positions[jazzVolumeOf(oldPos.key)] ??= oldPos
+    return { prefs: { ...DEFAULT_PREFS, ...raw.prefs }, positions, bookmarks: splitOldJazz(raw.bookmarks ?? {}) }
   } catch {
     return { prefs: DEFAULT_PREFS, positions: {}, bookmarks: {} }
   }

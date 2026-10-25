@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react'
 import type { ReaderBook, ReaderItem } from './model'
+import { splitOldJazz } from '../books'
 
 /** Highlights and notes per book, anchored by the quoted text (plus a little of what precedes it) so they survive re-pagination. */
 export const COLORS = ['yellow', 'green', 'blue', 'pink', 'purple'] as const
@@ -32,7 +33,7 @@ const listeners = new Set<() => void>()
 function load(): Record<string, Note[]> {
   try {
     const v = JSON.parse(localStorage.getItem(KEY) ?? '{}')
-    return v && typeof v === 'object' ? v : {}
+    return v && typeof v === 'object' ? splitOldJazz(v) : {}
   } catch {
     return {}
   }
@@ -66,10 +67,10 @@ export const allNotes = () => state
 /** Restore from a backup: replace everything, or add notes this device doesn't have yet (matched by id). */
 export function importNotes(data: Record<string, Note[]>, mode: 'replace' | 'merge') {
   const next: Record<string, Note[]> = mode === 'replace' ? {} : { ...state }
-  for (const [book, list] of Object.entries(data)) {
+  for (const [book, list] of Object.entries(splitOldJazz(data))) {
     if (!Array.isArray(list)) continue
     const have = new Map((next[book] ?? []).map((n) => [n.id, n]))
-    for (const n of list) if (n && typeof n.text === 'string' && typeof n.id === 'string') have.set(n.id, n)
+    for (const n of list) if (n && typeof n.text === 'string' && n.text && typeof n.id === 'string') have.set(n.id, n)
     next[book] = [...have.values()]
   }
   state = next
@@ -154,12 +155,15 @@ export function offsetOf(flat: Flat, node: Node, offset: number): number {
 
 /** Where a note sits in the flat text: the occurrence of its quote whose preceding text matches best. */
 export function locate(flat: Flat, n: Note): [number, number] | null {
+  // An empty quote would match everywhere, and indexOf('', past the end) never moves on: the loop would never stop.
+  if (typeof n.text !== 'string' || !n.text) return null
+  const before = typeof n.before === 'string' ? n.before : ''
   let best = -1
   let bestScore = -1
   for (let i = flat.text.indexOf(n.text); i >= 0; i = flat.text.indexOf(n.text, i + 1)) {
-    const before = flat.text.slice(Math.max(0, i - n.before.length), i)
+    const prev = flat.text.slice(Math.max(0, i - before.length), i)
     let s = 0
-    while (s < before.length && before[before.length - 1 - s] === n.before[n.before.length - 1 - s]) s++
+    while (s < prev.length && prev[prev.length - 1 - s] === before[before.length - 1 - s]) s++
     if (s > bestScore) {
       best = i
       bestScore = s

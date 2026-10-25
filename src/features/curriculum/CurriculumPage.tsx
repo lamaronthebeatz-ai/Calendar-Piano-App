@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { ArrowLeftIcon, ArrowUpRightIcon, BookIcon, NoteIcon, ChevronDownIcon, DownloadIcon, GraduationIcon } from '../../components/icons'
 import { ScrollArea } from '../../components/ScrollArea'
@@ -16,6 +16,7 @@ import { PrintBook } from './reader/PrintBook'
 import { Reader } from './reader/Reader'
 import { useReader } from './reader/store'
 import type { Curriculum, Level, Piece } from './types'
+import { jazzVolumeOf, OLD_JAZZ_ID } from './books'
 import './motion-books.css'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
@@ -44,6 +45,8 @@ function useProgress(slugs: string[]) {
  */
 export function CurriculumPage() {
   const { id, item } = useParams()
+  // Links to the single Jazz Theory Book open the volume that now holds the item.
+  if (id === OLD_JAZZ_ID) return <Navigate replace to={`/curriculum/${jazzVolumeOf(item)}${item ? `/${item}` : ''}`} />
   const book = findBook(id)
   if (book && item === 'in') return <PrintBook book={book} />
   const course = CURRICULA.find((c) => c.id === id)
