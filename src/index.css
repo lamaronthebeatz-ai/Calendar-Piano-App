@@ -712,8 +712,26 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 .reader-flow.is-cover { height: 100%; }
 .reader-flow h1, .reader-flow h2, .reader-flow h3 { break-after: avoid; break-inside: avoid; }
 .reader-flow h2 { font-family: var(--font-display); letter-spacing: -0.01em; }
-.reader-flow figure, .reader-flow table, .reader-flow .overflow-x-auto, .reader-flow iframe, .reader-flow img { break-inside: avoid; }
+.reader-flow figure, .reader-flow iframe, .reader-flow img { break-inside: avoid; }
 .reader-flow figure { max-height: calc(var(--page-h) - 8px); overflow: hidden; }
+/* A scroll box can't split across columns, so a table taller than a page got pushed on and clipped.
+   In the reader the box overflows normally: short tables still keep together, long ones break between rows. */
+.reader-flow div:has(> table) { overflow: visible; }
+.reader-flow div:has(> table), .reader-flow table { break-inside: auto; }
+.reader-flow div:has(> table)::before { break-after: avoid; }
+.reader-flow tr { break-inside: avoid; }
+.reader-flow thead { break-inside: avoid; break-after: avoid; }
+.reader-flow tbody tr:first-child { break-before: avoid; }
+/* A single phone-width page has no room for four or more columns: each row becomes a card with labelled cells. */
+@media (max-width: 639px) {
+  .reader-flow table:not([data-cols="2"]):not([data-cols="3"]) thead { display: none; }
+  .reader-flow table:not([data-cols="2"]):not([data-cols="3"]) tr { display: block; padding: 0.6em 0; }
+  .reader-flow table:not([data-cols="2"]):not([data-cols="3"]) td { display: block; padding: 0.15em 0.9em; }
+  .reader-flow table:not([data-cols="2"]):not([data-cols="3"]) td:first-child { padding-bottom: 0.3em; font-weight: 600; }
+  .reader-flow table:not([data-cols="2"]):not([data-cols="3"]) td:not(:first-child)[data-label]:not([data-label=""])::before {
+    content: attr(data-label) " · "; font-size: 0.82em; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-ink-muted);
+  }
+}
 .reader-flow figure svg { max-height: calc(var(--page-h) - 120px); max-width: 100%; }
 .reader-flow figure img { max-height: min(calc(var(--page-h) - 120px), 16em); width: auto; max-width: 100%; }
 .reader-flow strong { color: var(--color-ink); }

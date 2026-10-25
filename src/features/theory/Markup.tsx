@@ -265,16 +265,18 @@ export function Markup({ source }: { source: string }) {
         )
       if (b.kind === 'tr') {
         const [head, ...rows] = b.lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map(cells)
+        // Plain column names, shown as labels when a narrow reader page stacks each row.
+        const labels = head.map((c) => c.replace(/\[\[[^\]|]*\|([^\]]*)\]\]/g, '$1').replace(/\[\[([^\]]*)\]\]/g, '$1').replace(/[*_`]/g, '').trim())
         out.push(
           <div key={k} className="my-6 overflow-x-auto rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] font-sans shadow-[var(--shadow-soft)]">
-            <table className="w-full text-left text-[13px] leading-snug sm:text-[13.5px]">
+            <table data-cols={head.length} className="w-full text-left text-[13px] leading-snug sm:text-[13.5px]">
               <thead className="bg-[color-mix(in_oklch,var(--tint,var(--color-accent))_9%,var(--color-surface-raised))]">
                 <tr>{head.map((c, i) => <th key={i} className="px-3 py-2.5 text-[12px] font-semibold uppercase tracking-wide text-[var(--color-ink)] sm:px-4"><Inline text={c} /></th>)}</tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
                   <tr key={i} className="border-t border-[var(--color-border)] transition-colors hover:bg-[var(--color-surface-sunken)]/60">
-                    {r.map((c, j) => <td key={j} className={j ? 'px-3 py-2.5 align-top sm:px-4' : 'px-3 py-2.5 align-top font-medium text-[var(--color-ink)] sm:px-4'}><Inline text={c} /></td>)}
+                    {r.map((c, j) => <td key={j} data-label={labels[j]} className={j ? 'px-3 py-2.5 align-top sm:px-4' : 'px-3 py-2.5 align-top font-medium text-[var(--color-ink)] sm:px-4'}><Inline text={c} /></td>)}
                   </tr>
                 ))}
               </tbody>

@@ -2274,7 +2274,7 @@ Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
       ['Wikipedia — Bitches Brew', 'https://en.wikipedia.org/wiki/Bitches_Brew'],
     ],
     body: `
-Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc năm chỉ gần đúng. Cột "piano" tóm tắt cách Lamar mô tả vai trò của piano qua từng thời (bài "Early Jazz vs Modern Jazz Piano").
+Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc năm chỉ gần đúng. Cột "piano" tóm tắt vai trò của piano qua từng thời.
 
 ## Jazz sơ kỳ (khoảng 1897 – 1930)
 | Phong cách | Thời gian | Đặc điểm | Piano | Mốc |
