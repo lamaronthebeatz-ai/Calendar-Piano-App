@@ -95,7 +95,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
     const f = flow.current
     const s = sentinel.current
     if (!f || !s || !step || pageW <= 0 || pageH <= 0) return
-    const n = isCover ? 1 : Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + 2) / step) + 1)
+    const n = isCover ? 1 : Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + f.scrollLeft + 2) / step) + 1)
     setPages(n)
     const want = pending.current
     pending.current = null
@@ -131,7 +131,7 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
       raf = requestAnimationFrame(() => {
         const s = sentinel.current
         if (!s || !step || isCover) return
-        const n = Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + 2) / step) + 1)
+        const n = Math.max(1, Math.floor((s.getBoundingClientRect().left - f.getBoundingClientRect().left + f.scrollLeft + 2) / step) + 1)
         setPages((old) => (old === n ? old : n))
         const a = anchor.current
         if (a && performance.now() < a.until) setPage(Math.min(n - 1, Math.floor(a.ratio * n + 1e-6)))
@@ -150,6 +150,54 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
       cancelAnimationFrame(raf)
     }
   }, [measure, index, step, isCover])
+
+  // Turn by scrolling the strip, not by moving it: a transformed strip is one composited layer the width of
+  // the whole chapter, and on a long chapter building that layer froze phones for seconds. A scrolled box only
+  // paints what is near the visible page.
+  const scrollTo = useRef(0)
+  const scrollAnim = useRef(0)
+  const sliding = useRef(false)
+  useLayoutEffect(() => {
+    const f = flow.current
+    if (!f) return
+    const target = Math.max(0, page * step - drag)
+    scrollTo.current = target
+    cancelAnimationFrame(scrollAnim.current)
+    const from = f.scrollLeft
+    const slide = !dragging && !instant && prefs.turn !== 'none' && prefs.turn !== 'curl' && prefs.turn !== 'fade' && !reducedMotion()
+    sliding.current = false
+    if (!slide || Math.abs(target - from) < 1) {
+      f.scrollLeft = target
+      return
+    }
+    sliding.current = true
+    const t0 = performance.now()
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - t0) / 520)
+      f.scrollLeft = from + (target - from) * (1 - Math.pow(1 - t, 3.2))
+      if (t < 1) scrollAnim.current = requestAnimationFrame(tick)
+      else sliding.current = false
+    }
+    scrollAnim.current = requestAnimationFrame(tick)
+    return () => {
+      cancelAnimationFrame(scrollAnim.current)
+      sliding.current = false
+    }
+  }, [item.key, page, step, drag, dragging, instant, prefs.turn])
+  // The browser can scroll the strip itself (focusing a link on another page, selecting text past the edge):
+  // follow it to that page instead of leaving the reader between pages.
+  useEffect(() => {
+    const f = flow.current
+    if (!f || isCover) return
+    const onScroll = () => {
+      if (!sliding.current && Math.abs(f.scrollLeft - scrollTo.current) > 2) {
+        const p = Math.round(f.scrollLeft / step)
+        if (Number.isFinite(p)) setPage(Math.min(pages - 1, Math.max(0, p)))
+      }
+    }
+    f.addEventListener('scroll', onScroll, { passive: true })
+    return () => f.removeEventListener('scroll', onScroll)
+  }, [item.key, isCover, step, pages])
 
   useEffect(() => {
     if (!laidOut.current) return
@@ -447,8 +495,6 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
                     height: pageH,
                     columnWidth: isCover ? undefined : colW,
                     columnGap: GAP,
-                    transform: `translate3d(${-page * step + drag}px,0,0)`,
-                    transition: dragging || instant || turn === 'none' || turn === 'curl' ? 'none' : turn === 'fade' ? 'transform 0ms' : 'transform 520ms cubic-bezier(0.22, 0.8, 0.2, 1)',
                   }}
                 >
                   <BookPage book={book} item={item} onGo={(k) => go(keyIndex(k))} />
@@ -533,11 +579,13 @@ function RunningHeads({ book, item, page, wide, padY, padX }: { book: ReaderBook
   )
 }
 
+const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches
+
 /** The page of the first text node that contains `q` (accent-insensitive), and briefly highlights it. */
 function findPage(root: HTMLElement, q: string, step: number) {
   const nq = normalize(q)
   const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT)
-  const base = root.getBoundingClientRect().left
+  const base = root.getBoundingClientRect().left - root.scrollLeft
   for (let n = walk.nextNode(); n; n = walk.nextNode()) {
     const text = n.textContent ?? ''
     const at = normalize(text).indexOf(nq)

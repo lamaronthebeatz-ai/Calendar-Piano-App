@@ -26,16 +26,26 @@ export function startCurl(page: HTMLElement, dir: 1 | -1, spread: boolean): Curl
   root.className = 'curl'
   root.setAttribute('aria-hidden', 'true')
 
+  // The text strip pages by scrolling, and a clone doesn't keep its scroll offset: note it on the clone
+  // and scroll the clones once they are in the document.
   const snap = () => {
     const s = document.createElement('div')
     s.className = 'curl-snap'
-    for (const c of page.children) if (c !== root && !(c as HTMLElement).dataset.curlSkip) s.appendChild(c.cloneNode(true))
+    for (const c of page.children) {
+      if (c === root || (c as HTMLElement).dataset.curlSkip) continue
+      const copy = c.cloneNode(true) as HTMLElement
+      const from = c.querySelectorAll('.reader-flow')
+      copy.querySelectorAll<HTMLElement>('.reader-flow').forEach((el, i) => (el.dataset.sx = String(from[i]?.scrollLeft ?? 0)))
+      s.appendChild(copy)
+    }
     return s
   }
+  const rescroll = () => root.querySelectorAll<HTMLElement>('[data-sx]').forEach((el) => (el.scrollLeft = Number(el.dataset.sx)))
   const old = snap()
   // Until the new spread is ready the old one simply covers the page.
   root.appendChild(old)
   page.appendChild(root)
+  rescroll()
 
   let sheet: HTMLElement | null = null
   let flap: HTMLElement | null = null
@@ -91,6 +101,7 @@ export function startCurl(page: HTMLElement, dir: 1 | -1, spread: boolean): Curl
       fold.className = 'curl-fold'
       flap.append(content, fold)
       root.appendChild(flap)
+      rescroll()
       draw()
     },
     set(v) {

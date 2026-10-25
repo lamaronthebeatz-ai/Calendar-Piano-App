@@ -704,7 +704,8 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
   font-size: var(--reader-size);
   line-height: var(--reader-leading);
   color: var(--color-prose);
-  will-change: transform;
+  /* Pages turn by scrolling this box (see Reader.tsx); the reader can't scroll it by hand. */
+  overflow: hidden;
   orphans: 2;
   widows: 2;
 }
