@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
 import { createPortal } from 'react-dom'
-import { Link, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
 import {
   ArrowLeftIcon,
@@ -337,7 +337,15 @@ function Index() {
     setParams(q ? { q } : {}, { replace: true })
   }
   const active = articlesByCategory.find((c) => c.id === params.get('c'))
-  const select = (id?: CategoryId) => setParams(id ? { c: id } : {}, { replace: true })
+  const navigate = useNavigate()
+  const location = useLocation()
+  // Opening a topic from the index is a real step in history, so Back (button, gesture or the "← Tất cả" chip)
+  // returns to the index; switching between topics with the chips replaces the entry instead of piling them up.
+  const select = (id?: CategoryId) => {
+    if (id && !active) setParams({ c: id }, { state: { fromIndex: true } })
+    else if (!id && (location.state as { fromIndex?: boolean } | null)?.fromIndex) navigate(-1)
+    else setParams(id ? { c: id } : {}, { replace: true, state: location.state })
+  }
   // Words inside articles join the results once the full-text file has arrived (fetched on the first real search).
   const [fullText, setFullText] = useState<string[] | null>(null)
   const wantsText = query.trim().length > 2
@@ -346,7 +354,6 @@ function Index() {
   }, [wantsText])
   const results = useMemo(() => searchArticles(query, fullText), [query, fullText])
   const { saved } = useLibrary()
-  const navigate = useNavigate()
   const surprise = () => navigate(`/theory/${randomArticle().slug}`)
   const lookup = (slugs: string[]) => slugs.map((s) => findArticle(s)).filter((a): a is Article => !!a)
 
