@@ -4,6 +4,7 @@ import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProv
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
 import { Intro } from './components/Intro'
+import { startIntroMusic, stopIntroMusic } from './components/introMusic'
 import { CalendarPage } from './features/calendar/CalendarPage'
 import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
@@ -42,6 +43,12 @@ export function App() {
   // Right after the code is entered (not on a reload of an unlocked session), the support card greets once —
   // except on the very first visit, which belongs to the guided tour.
   const justUnlocked = useRef(false)
+  // The finale of Dvořák's "New World" rises with the lock screen and fades once the code is right.
+  useEffect(() => {
+    if (!glass) return
+    startIntroMusic()
+    return () => stopIntroMusic()
+  }, [glass])
   useEffect(() => {
     if (!unlocked || glass || !justUnlocked.current || !tourSeen()) return
     justUnlocked.current = false
@@ -59,6 +66,7 @@ export function App() {
         <LockScreen
           onUnlock={() => {
             justUnlocked.current = true
+            stopIntroMusic(2200)
             setUnlocked(true)
             setArriving(true)
             // Fallback in case the lift's transitionend never fires.

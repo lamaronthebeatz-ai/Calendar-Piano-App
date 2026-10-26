@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState, type CSSProperties } from 'react'
 import clsx from 'clsx'
 import { BrandMark } from './icons'
 import { Copyright } from './Copyright'
+import { introMuted, setIntroMuted } from './introMusic'
 import './lock-motion.css'
 
 /**
@@ -80,6 +81,7 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
   const [code, setCode] = useState('')
   const [phase, setPhase] = useState<Phase>('input')
   const [now] = useState(() => new Date())
+  const [muted, setMuted] = useState(introMuted)
 
   const press = useCallback(
     (key: string) => {
@@ -236,6 +238,22 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
       </div>
 
       <Copyright className="lock-content relative mb-3 text-[var(--color-ink-muted)]" />
+      <button
+        type="button"
+        onClick={() => {
+          setIntroMuted(!muted)
+          setMuted(!muted)
+        }}
+        aria-label={muted ? 'Bật nhạc mở đầu' : 'Tắt nhạc mở đầu'}
+        title="Dvořák — Giao hưởng số 9, chương IV (Musopen, phạm vi công cộng)"
+        className="lock-content lock-sound absolute left-3 top-[max(0.5rem,env(safe-area-inset-top))] flex h-9 items-center gap-1.5 rounded-full px-3 text-[11px] font-medium text-[var(--color-ink-muted)]"
+      >
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M11 5 6 9H3v6h3l5 4V5z" />
+          {muted ? <path d="m16 9 5 6m0-6-5 6" /> : <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />}
+        </svg>
+        Dvořák · Giao hưởng số 9
+      </button>
       <a href={VIDEO_PAGE} target="_blank" rel="noreferrer" title="Midwest Young Artists Symphony Orchestra — Berlioz, Symphonie fantastique, chương V (Wikimedia Commons, CC BY 3.0)" className="lock-content absolute right-3 top-[max(0.5rem,env(safe-area-inset-top))] text-[10px] text-[var(--color-ink-muted)]/70 underline-offset-2 hover:underline">
         Video: MYA Symphony Orchestra · CC BY 3.0
       </a>
