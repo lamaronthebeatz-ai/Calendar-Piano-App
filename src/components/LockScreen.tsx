@@ -139,9 +139,9 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
       aria-modal
       aria-label="Màn hình chào mừng"
       onTransitionEnd={(e) => e.target === e.currentTarget && phase === 'leaving' && onDone()}
-      className={clsx('lock-glass fixed inset-0 z-[100] flex flex-col overflow-hidden', phase === 'leaving' && 'is-leaving')}
+      className={clsx('lock-glass lock-cinema fixed inset-0 z-[100] flex flex-col overflow-hidden', armed && 'is-armed', phase === 'leaving' && 'is-leaving')}
     >
-      {/* An orchestra on stage plays behind the frosting. */}
+      {/* An orchestra on stage: shown clear under the opening signature, then softened behind the passcode. */}
       {stillOnly() ? (
         <img aria-hidden src={`${MEDIA}.webp`} alt="" className="lock-video pointer-events-none absolute inset-0 h-full w-full object-cover" />
       ) : (
@@ -180,11 +180,11 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
             </span>
           </span>
           <p className="mt-6 text-[12px] font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">
-            <Letters text={greeting(now.getHours())} delay={260} />
+            <Letters key={String(armed)} text={greeting(now.getHours())} delay={260} />
           </p>
           <h1 className="mt-2 font-display text-[34px] font-semibold leading-tight tracking-tight text-[var(--color-ink)]">Trung tâm lý thuyết âm nhạc học<span className="mt-1 block font-sans text-[13px] font-semibold uppercase tracking-[0.24em] text-[var(--color-gold)]">by Lamar</span></h1>
           <p className="mt-1 text-[13.5px] capitalize text-[var(--color-ink-muted)]">
-            <Letters text={date} delay={520} step={18} />
+            <Letters key={String(armed)} text={date} delay={520} step={18} />
           </p>
         </div>
 

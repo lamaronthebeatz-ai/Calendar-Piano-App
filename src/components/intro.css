@@ -1,6 +1,8 @@
 /* App opening (Intro.tsx) */
 .intro { position: fixed; inset: 0; z-index: 120; display: flex; align-items: center; justify-content: center; }
-.intro-veil { position: absolute; inset: 0; background: radial-gradient(70% 55% at 50% 50%, #17120a, #000 70%); }
+.intro-black { position: absolute; inset: 0; background: #000; }
+/* Once the black lifts, the concert clip plays clear behind the signature under a light cinematic vignette. */
+.intro-veil { position: absolute; inset: 0; background: radial-gradient(62% 52% at 50% 50%, rgb(0 0 0 / 0.38), rgb(0 0 0 / 0.72) 100%), linear-gradient(to bottom, rgb(0 0 0 / 0.35), transparent 30%, transparent 70%, rgb(0 0 0 / 0.45)); }
 .intro-mark { position: relative; width: min(78vw, 560px); opacity: 0; will-change: transform, opacity; }
 .intro-mark img { display: block; width: 100%; height: auto; filter: drop-shadow(0 0 28px rgb(216 170 80 / 0.35)); }
 /* The shine: a light band masked to the signature's own shape. */

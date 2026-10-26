@@ -3,12 +3,13 @@ import logo from '../assets/logo-full.webp'
 import './intro.css'
 
 /**
- * Opening of the app: the gold signature appears alone on black, holds, then pulls back into the lock screen's logo
- * tile while the black lifts and the lock screen comes into focus. The lock screen stays unarmed until it ends.
+ * Opening of the app: the gold signature rises out of black as the black lifts on the concert clip, holds, then pulls
+ * back into the lock screen's logo tile while the vignette lifts and the lock screen settles in. The lock screen stays unarmed until it ends.
  */
 export function Intro({ onDone }: { onDone: () => void }) {
   const root = useRef<HTMLDivElement>(null)
   const veil = useRef<HTMLDivElement>(null)
+  const black = useRef<HTMLDivElement>(null)
   const mark = useRef<HTMLDivElement>(null)
   const done = useRef(onDone)
   useEffect(() => {
@@ -20,7 +21,9 @@ export function Intro({ onDone }: { onDone: () => void }) {
     let alive = true
     const ease = 'cubic-bezier(0.22, 1, 0.36, 1)'
     const run = async () => {
-      // 1. Appear: out of a soft blur, a little small, then a light runs along the signature.
+      // 1. Appear: out of a soft blur, a little small, then a light runs along the signature. The black lifts with
+      // it, so the orchestra on stage comes up clear behind the signature.
+      black.current!.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 1600, delay: 200, easing: 'ease-in-out', fill: 'forwards' })
       await el.animate(
         [
           { opacity: 0, transform: 'scale(0.9)', filter: 'blur(14px)' },
@@ -30,7 +33,7 @@ export function Intro({ onDone }: { onDone: () => void }) {
       ).finished
       if (!alive) return
       el.classList.add('is-shining')
-      await new Promise((r) => setTimeout(r, 900))
+      await new Promise((r) => setTimeout(r, 1300))
       if (!alive) return
 
       // 2. Pull back: fly into the lock screen's logo tile, shrinking, as the black lifts.
@@ -40,7 +43,7 @@ export function Intro({ onDone }: { onDone: () => void }) {
       const s = (to.width * 0.86) / from.width
       const dx = to.left + to.width / 2 - (from.left + from.width / 2)
       const dy = to.top + to.height / 2 - (from.top + from.height / 2)
-      veil.current!.animate([{ opacity: 1, backdropFilter: 'blur(24px)' }, { opacity: 0, backdropFilter: 'blur(0px)' }], { duration: 1500, delay: 150, easing: 'ease-in-out', fill: 'forwards' })
+      veil.current!.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 1500, delay: 150, easing: 'ease-in-out', fill: 'forwards' })
       await el.animate(
         [
           { transform: 'translate(0, 0) scale(1)', opacity: 1 },
@@ -55,7 +58,7 @@ export function Intro({ onDone }: { onDone: () => void }) {
     }
     run().catch(() => done.current())
     // Never leave the lock screen blocked if something stalls.
-    const safety = setTimeout(() => done.current(), 6000)
+    const safety = setTimeout(() => done.current(), 7000)
     return () => {
       alive = false
       clearTimeout(safety)
@@ -65,6 +68,7 @@ export function Intro({ onDone }: { onDone: () => void }) {
   return (
     <div ref={root} className="intro" aria-hidden onClick={() => done.current()}>
       <div ref={veil} className="intro-veil" />
+      <div ref={black} className="intro-black" />
       <div ref={mark} className="intro-mark" style={{ '--logo': `url(${logo})` } as React.CSSProperties}>
         <img src={logo} alt="" draggable={false} />
       </div>
