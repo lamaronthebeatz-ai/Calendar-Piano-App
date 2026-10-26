@@ -245,7 +245,7 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
           setMuted(!muted)
         }}
         aria-label={muted ? 'Bật nhạc mở đầu' : 'Tắt nhạc mở đầu'}
-        title="Dvořák — Giao hưởng số 9 «Từ Thế giới Mới», chương IV: Allegro con fuoco"
+        title="Dvořák — Giao hưởng số 9 «Từ Thế giới Mới», chương IV: Allegro con fuoco · Antal Doráti chỉ huy"
         className="lock-content lock-sound absolute left-3 top-[max(0.5rem,env(safe-area-inset-top))] flex h-9 items-center gap-1.5 rounded-full px-3 text-[11px] font-medium text-[var(--color-ink-muted)]"
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
