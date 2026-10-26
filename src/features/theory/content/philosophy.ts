@@ -236,6 +236,8 @@ Trong thế kỷ 18, nhạc không lời thường bị coi **kém** nhạc có 
 - Quan niệm "âm nhạc biểu hiện điều không lời nào nói được" chi phối cách nghe và cách viết về nhạc thế kỷ 19.
 - Phản ứng mạnh nhất đến từ **Hanslick** (1854), người cho rằng nội dung của âm nhạc chỉ là **hình thức âm thanh chuyển động** — xem [[am-nhac-tuyet-doi]].
 Lộ trình cả mục: [[triet-hoc-am-nhac]].
+
+Đọc kỹ từng phần cuốn sách của Schopenhauer, nhất là §52 về âm nhạc: [[schopenhauer-lo-trinh]] (sách *Thế Giới Như Là Ý Chí Và Biểu Tượng* trong tủ sách).
 `,
   },
   {

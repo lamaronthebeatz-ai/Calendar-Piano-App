@@ -5,6 +5,7 @@ import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
 import formCover from '../../assets/covers/hinh-thuc-am-nhac.webp'
 import neuhausCover from '../../assets/covers/neuhaus.webp'
 import hanslickCover from '../../assets/covers/hanslick.webp'
+import schopenhauerCover from '../../assets/covers/schopenhauer.webp'
 import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
@@ -1070,6 +1071,55 @@ Hanslick đi từ **phủ định** sang **khẳng định**: cảm xúc của n
       { title: 'Di sản', intro: 'Hanslick đọc lại hôm nay.', chapters: [
         { slug: 'hanslick-di-san-va-tranh-luan', focus: 'Tổng kết; Weitz và IEP; điểm yếu và định kiến của sách.' },
       ], exercises: ['Viết một trang: mày đồng ý với Hanslick tới đâu?'] },
+    ],
+  },
+  {
+    id: 'schopenhauer',
+    title: 'Thế Giới Như Là Ý Chí Và Biểu Tượng',
+    volume: 'Arthur Schopenhauer',
+    subtitle: 'Đọc kỹ tập I tác phẩm chính của Schopenhauer, trọng tâm là mỹ học và âm nhạc: Ý niệm Platon, thiên tài, cái đẹp và cái siêu phàm, hệ thống các nghệ thuật từ kiến trúc tới bi kịch, và §52 — âm nhạc là bản sao trực tiếp của chính ý chí.',
+    author: 'Lamar',
+    audience: 'Học viên và giáo viên âm nhạc, người quan tâm tới mỹ học – triết học âm nhạc; nên đọc sau hoặc song song Về Cái Đẹp Trong Âm Nhạc (Hanslick)',
+    hue: 38,
+    glyph: '❦',
+    coverImage: schopenhauerCover,
+    preface: `
+**Arthur Schopenhauer** (1788 – 1860) viết *Die Welt als Wille und Vorstellung* ở Dresden trong những năm 1814 – 1818; tập I ra đời năm 1818/1819. Cuốn sách truyền đạt "một tư tưởng duy nhất" nhìn từ bốn phía — nhận thức, siêu hình học, mỹ học, đạo đức học — và chứa trang triết học về âm nhạc có ảnh hưởng lớn nhất thế kỷ XIX: âm nhạc không sao chép thế giới hiện tượng mà là bản sao trực tiếp của chính ý chí. Sách này đọc theo bản dịch tiếng Anh của E. F. J. Payne (tập I; Falcon's Wing Press 1958, Dover 1969), giữ trình tự các quyển và các đoạn (§) của tác giả.
+
+## Tinh thần của sách
+Hai quyển đầu được tóm vừa đủ để hiểu "biểu tượng" và "ý chí"; trọng tâm là **Quyển III** — đọc gần như từng đoạn, với trích dẫn dịch sát và số trang ấn bản Payne — và **§52** về âm nhạc, chia làm hai bài. Thuật ngữ âm nhạc của §52 được dịch theo ngữ cảnh nhạc lý, kèm nhận xét từ góc nhìn nhạc lý hôm nay. Những đoạn định kiến trong sách (hai câu bài Do Thái, sự khinh miệt "đám đông") được thuật đúng và ghi rõ là định kiến.
+
+## Cách đọc
+1. Schopenhauer dặn đọc sách **hai lần**; ít nhất hãy đọc lại hai bài về §52 sau khi đã xong Quyển III.
+2. Ai chỉ quan tâm âm nhạc: đọc Bài 1 – 4, rồi Phần IV.
+3. Mỗi bài có **Câu hỏi và bài tập** — phần lớn là chơi hay nghe một ví dụ trên đàn để tự kiểm luận điểm.
+4. Đọc đối chiếu với sách *Về Cái Đẹp Trong Âm Nhạc* của Hanslick: hai cách đối lập để cùng đề cao khí nhạc không lời.
+`,
+    parts: [
+      { title: 'Cuốn sách và nền tảng', intro: 'Schopenhauer là ai, "một tư tưởng duy nhất", và hai phương diện của thế giới: biểu tượng và ý chí.', chapters: [
+        { slug: 'schopenhauer-lo-trinh', focus: 'Lộ trình bộ bài; bảng thuật ngữ.' },
+        { slug: 'schopenhauer-tieu-su-va-loi-tua', focus: 'Tiểu sử; ba lời tựa; ba đòi hỏi với người đọc.' },
+        { slug: 'schopenhauer-the-gioi-la-bieu-tuong', focus: 'Quyển I: thế giới là biểu tượng; nguyên lý lý do đầy đủ.' },
+        { slug: 'schopenhauer-the-gioi-la-y-chi', focus: 'Quyển II: thân thể và ý chí; các bậc khách thể hoá; phấn đấu không mục đích.' },
+      ], exercises: ['Viết một đoạn ngắn giải thích bằng lời của mày: vì sao thân thể là "chìa khoá" để Schopenhauer đi từ biểu tượng tới ý chí.'] },
+      { title: 'Nhận thức thẩm mỹ', intro: 'Quyển III, §30 – 42: Ý niệm, chủ thể nhận thức thuần tuý, thiên tài, cái đẹp và cái siêu phàm.', chapters: [
+        { slug: 'schopenhauer-y-niem-va-chu-the-thuan-tuy', focus: '§30 – 35: Ý niệm Platon; quên mình trong khách thể.' },
+        { slug: 'schopenhauer-thien-tai', focus: '§36 – 37: nghệ thuật, thiên tài, trí tưởng tượng, điên loạn.' },
+        { slug: 'schopenhauer-cai-dep-va-cai-sieu-pham', focus: '§38 – 42: hai mặt của khoái cảm thẩm mỹ; cái siêu phàm; cái quyến rũ.' },
+      ], exercises: ['Nghe một bản nhạc chậm hai lần: lần đầu bình thường, lần sau thử "chỉ hỏi cái gì". Ghi lại khác biệt.', 'Chọn một tác phẩm cho cái đẹp và một tác phẩm cho cái siêu phàm theo định nghĩa của Schopenhauer, giải thích lựa chọn.'] },
+      { title: 'Hệ thống các nghệ thuật', intro: 'Quyển III, §43 – 51: từ kiến trúc (bậc thấp nhất) tới bi kịch (bậc cao nhất).', chapters: [
+        { slug: 'schopenhauer-kien-truc-den-dieu-khac', focus: '§43 – 47: kiến trúc, nước, vườn, phong cảnh, động vật, điêu khắc, Laocoön.' },
+        { slug: 'schopenhauer-hoi-hoa-khai-niem-va-phung-du', focus: '§48 – 50: hội hoạ lịch sử; khái niệm và Ý niệm; phúng dụ.' },
+        { slug: 'schopenhauer-thi-ca-va-bi-kich', focus: '§51: thi ca, ca khúc trữ tình, bi kịch.' },
+      ], exercises: ['Lập bảng các nghệ thuật theo bậc khách thể hoá của ý chí và ghi Ý niệm mà mỗi nghệ thuật làm hiện ra.', 'Phân tích một Lied của Schubert theo mô hình "trạng thái trữ tình" ở §51.'] },
+      { title: 'Âm nhạc — §52', intro: 'Âm nhạc đứng ngoài mọi nghệ thuật: bản sao trực tiếp của chính ý chí.', chapters: [
+        { slug: 'schopenhauer-am-nhac-ban-sao-cua-y-chi', focus: 'Vị trí của âm nhạc; phép tương ứng bè trầm – bè giữa – giai điệu với các bậc của tự nhiên; luật bình quân.' },
+        { slug: 'schopenhauer-giai-dieu-va-cam-xuc', focus: 'Giai điệu rời và trở về âm chủ; trưởng – thứ; cảm xúc tự thân; lời ca, opera; âm nhạc và triết học.' },
+      ], exercises: ['Chơi một tiến trình I – IV – V – I, nghe riêng từng bè và đối chiếu với bảng tương ứng của Schopenhauer.', 'Hát một giai điệu quen, đánh dấu chỗ rời và trở về âm chủ; chơi lại ở giọng thứ cùng tên và mô tả thay đổi.'] },
+      { title: 'Hệ quả và di sản', intro: 'Quyển IV và đời sống của tư tưởng Schopenhauer trong âm nhạc thế kỷ XIX – XX.', chapters: [
+        { slug: 'schopenhauer-y-chi-song-va-giai-thoat', focus: 'Quyển IV: khổ đau và buồn chán; lòng trắc ẩn; phủ định ý chí; vị trí của nghệ thuật.' },
+        { slug: 'schopenhauer-di-san-am-nhac', focus: 'Wagner, Nietzsche, Brahms, Mahler, Schoenberg; so sánh với Hanslick.' },
+      ], exercises: ['Nghe khúc dạo đầu Tristan und Isolde và viết một trang theo ngôn ngữ của §52.', 'Viết một trang so sánh Schopenhauer và Hanslick trên cùng một tác phẩm.'] },
     ],
   },
   {
