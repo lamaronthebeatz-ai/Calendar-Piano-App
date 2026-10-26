@@ -47,25 +47,53 @@ function ramp(to: number, ms: number) {
 
 function unhook() {
   waiting = false
-  for (const g of GESTURES) removeEventListener(g, play, true)
+  for (const g of GESTURES) removeEventListener(g, onGesture, true)
 }
 
-function play() {
+/** Lets the lock screen show "tap for music" while the browser holds the sound back. */
+function announce(state: 'waiting' | 'playing' | 'off') {
+  dispatchEvent(new CustomEvent('intro-music', { detail: state }))
+}
+export const introMusicWaiting = () => waiting
+let startedAt = 0
+/** True right after a tap started the music, so that same tap on the speaker button doesn't mute it again. */
+export const introMusicJustStarted = () => performance.now() - startedAt < 1000
+
+/**
+ * Inside a tap: build the Web Audio route now, while the browser allows it (an AudioContext made earlier
+ * would stay suspended and silent), then play and fade in.
+ */
+function onGesture() {
   if (!audio || stopped) return
   unhook()
+  startedAt = performance.now()
+  if (!ctx) {
+    try {
+      const AC = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+      if (AC) {
+        ctx = new AC()
+        gain = ctx.createGain()
+        gain.gain.value = 0
+        ctx.createMediaElementSource(audio).connect(gain).connect(ctx.destination)
+        audio.volume = 1
+      }
+    } catch {
+      ctx = gain = null
+    }
+  }
   ctx?.resume().catch(() => undefined)
+  audio.currentTime = 0
   audio
     .play()
-    .then(() => ramp(1, 1200))
-    .catch(() => {
-      // Refused without a gesture: try again on the first tap or key.
-      if (stopped || waiting) return
-      waiting = true
-      for (const g of GESTURES) addEventListener(g, play, true)
+    .then(() => {
+      announce('playing')
+      ramp(1, 1200)
     })
+    .catch(() => announce('off'))
 }
 
-/** Starts (or arms) the opening music. Does nothing when muted or on Save-Data. */
+/** Starts the opening music. Where the browser allows sound without a tap it plays at once, straight from the
+ * element (fading with `audio.volume`); otherwise it waits for the first tap or key. Muted or Save-Data: nothing. */
 export function startIntroMusic() {
   if (audio || introMuted() || saveData()) return
   stopped = false
@@ -73,24 +101,25 @@ export function startIntroMusic() {
   // AAC where it plays (Safari, Chrome); Opus otherwise.
   audio.src = audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') ? `${BASE}.m4a` : `${BASE}.ogg`
   audio.preload = 'auto'
+  audio.volume = 0
   // Missing or unplayable file: give up quietly instead of retrying on every tap.
   audio.addEventListener('error', () => {
     stopped = true
     unhook()
+    announce('off')
   })
-  try {
-    const AC = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
-    if (AC) {
-      ctx = new AC()
-      gain = ctx.createGain()
-      gain.gain.value = 0
-      ctx.createMediaElementSource(audio).connect(gain).connect(ctx.destination)
-    } else audio.volume = 0
-  } catch {
-    ctx = gain = null
-    audio.volume = 0
-  }
-  play()
+  audio
+    .play()
+    .then(() => {
+      announce('playing')
+      ramp(1, 1200)
+    })
+    .catch(() => {
+      if (stopped) return
+      waiting = true
+      announce('waiting')
+      for (const g of GESTURES) addEventListener(g, onGesture, true)
+    })
 }
 
 /** Fades the music down and releases it. */
@@ -100,6 +129,7 @@ export function stopIntroMusic(ms = 1800) {
   const el = audio
   const c = ctx
   if (!el) return
+  announce('off')
   ramp(0, ms)
   setTimeout(() => {
     el.pause()
