@@ -95,7 +95,7 @@ function onGesture() {
       // Start the theme from the top, whatever ran silently before.
       el.currentTime = 0
       announce('playing')
-      ramp(1, 1200)
+      ramp(1, 250)
     })
     .catch(() => undefined)
 }
@@ -128,7 +128,7 @@ export function startIntroMusic() {
     .play()
     .then(() => {
       announce('playing')
-      ramp(1, 1200)
+      ramp(1, 250)
     })
     .catch(() => {
       if (stopped) return
