@@ -6,6 +6,7 @@ import formCover from '../../assets/covers/hinh-thuc-am-nhac.webp'
 import neuhausCover from '../../assets/covers/neuhaus.webp'
 import hanslickCover from '../../assets/covers/hanslick.webp'
 import schopenhauerCover from '../../assets/covers/schopenhauer.webp'
+import allenCover from '../../assets/covers/quan-ly-nghe-si.webp'
 import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
@@ -1123,6 +1124,55 @@ Hai quyển đầu được tóm vừa đủ để hiểu "biểu tượng" và 
         { slug: 'schopenhauer-y-chi-song-va-giai-thoat', focus: 'Quyển IV: khổ đau và buồn chán; lòng trắc ẩn; phủ định ý chí; vị trí của nghệ thuật.' },
         { slug: 'schopenhauer-di-san-am-nhac', focus: 'Wagner, Nietzsche, Brahms, Mahler, Schoenberg; so sánh với Hanslick.' },
       ], exercises: ['Nghe khúc dạo đầu Tristan und Isolde và viết một trang theo ngôn ngữ của §52.', 'Viết một trang so sánh Schopenhauer và Hanslick trên cùng một tác phẩm.'] },
+    ],
+  },
+  {
+    id: 'quan-ly-nghe-si',
+    title: 'Quản Lý Nghệ Sĩ Trong Kinh Doanh Âm Nhạc',
+    volume: 'Paul Allen',
+    subtitle: 'Đọc theo Artist Management for the Music Business (bản 5, 2022): nghề quản lý và tự quản lý sự nghiệp âm nhạc — hợp đồng, kế hoạch sự nghiệp, đội ngũ, ba nguồn thu biểu diễn – sáng tác – thu âm, đàm phán và đạo đức.',
+    author: 'Lamar',
+    audience: 'Nghệ sĩ, ban nhạc muốn tự quản lý sự nghiệp; người muốn làm quản lý nghệ sĩ; giáo viên và nhạc sĩ cần hiểu tiền và hợp đồng trong ngành nhạc',
+    hue: 222,
+    glyph: '♪',
+    coverImage: allenCover,
+    preface: `
+**Paul Allen** dạy quản lý nghệ sĩ ở Khoa Công nghiệp Ghi âm, Đại học Middle Tennessee State; *Artist Management for the Music Business* in lần đầu năm 2007, bản 5 (Routledge, 2022) thêm một chương cho nghệ sĩ tự quản lý. Sách viết cho cả người quản lý sự nghiệp người khác lẫn nghệ sĩ tự quản lý — mọi điều chỉ khác quy mô.
+
+## Tinh thần của sách
+Mỗi bài tóm lược và giải thích một chương bằng lời của bộ bài, trích ngắn kèm số trang bản in; sách còn bản quyền nên không dịch nguyên văn. Sách viết cho thị trường Mỹ – Anh: chỗ nào luật, tổ chức, con số ở Việt Nam khác, bài ghi chú ngắn — nhưng **không thay cho tư vấn pháp lý**. Những chỗ sách sai hay đã lỗi thời được ghi rõ trong bài.
+
+## Cách đọc
+1. Nghệ sĩ tự quản lý: Bài 1, 4, 6, 8, rồi Phần IV.
+2. Người muốn làm quản lý: đọc theo thứ tự, dừng lâu ở hợp đồng (Bài 7) và đàm phán (Bài 13).
+3. Mỗi bài có **Câu hỏi và bài tập** — phần lớn là tính một con số hay soạn một văn bản cho chính sự nghiệp của mày.
+`,
+    parts: [
+      { title: 'Nghề quản lý', intro: 'Người quản lý làm gì, cần chuẩn bị gì, và tiền bạc của một công ty quản lý.', chapters: [
+        { slug: 'quan-ly-nghe-si-lo-trinh', focus: 'Lộ trình bộ bài; sách nói gì và đọc thế nào.' },
+        { slug: 'quan-ly-nghe-si-nghe-va-nguyen-tac', focus: 'Thành công; hợp đồng 360; bốn chức năng quản lý; mạng lưới; kỹ năng.' },
+        { slug: 'quan-ly-nghe-si-chuan-bi', focus: 'Hoa hồng; mười thực tế; năm nguồn quyền lực; Bộ quy tắc MMF.' },
+        { slug: 'quan-ly-nghe-si-khoi-nghiep-va-tien', focus: 'Tầm nhìn, kế hoạch kinh doanh; ngân sách, dòng tiền, báo cáo tài chính; vốn.' },
+      ], exercises: ['Viết định nghĩa thành công của mày trong ba câu và lập ngân sách tháng cho công việc quản lý (hoặc tự quản lý).'] },
+      { title: 'Nghệ sĩ và người quản lý', intro: 'Khi nào cần người quản lý, bài học từ người đi trước, tự quản lý, và hợp đồng giữa hai bên.', chapters: [
+        { slug: 'quan-ly-nghe-si-nghe-si-chuan-bi', focus: 'Thương mại không phải bán mình; con số; câu hỏi hai chiều.' },
+        { slug: 'quan-ly-nghe-si-bai-hoc-tu-nguoi-di-truoc', focus: 'Parker, Angélil, Jeffery, Grant, Landau, Doyle, Pearlman, Kesha…' },
+        { slug: 'quan-ly-nghe-si-tu-quan-ly', focus: 'Nghệ sĩ độc lập: người hâm mộ, show diễn, thoả thuận ban nhạc, công cụ.' },
+        { slug: 'quan-ly-nghe-si-hop-dong-quan-ly', focus: 'Thời hạn, hoa hồng, hoa hồng sau hợp đồng, vị thành niên; hợp đồng thật.' },
+      ], exercises: ['Soạn bản tóm tắt thoả thuận quản lý một trang cho một nghệ sĩ mới: thời hạn, cơ sở và mức hoa hồng, chi phí, hoa hồng sau hợp đồng, điều kiện chấm dứt.'] },
+      { title: 'Kế hoạch và kinh doanh', intro: 'Kế hoạch sự nghiệp, thị trường, thương hiệu, đội ngũ và hình thức doanh nghiệp.', chapters: [
+        { slug: 'quan-ly-nghe-si-lap-ke-hoach', focus: 'Mục tiêu – chiến lược – chiến thuật; showcase; kế hoạch sự nghiệp tám phần.' },
+        { slug: 'quan-ly-nghe-si-hinh-thuc-kinh-doanh', focus: 'Thị trường mục tiêu, thương hiệu, đội ngũ, hình thức doanh nghiệp, website.' },
+      ], exercises: ['Lập kế hoạch sự nghiệp 12 tháng theo dàn ý tám phần cho một nghệ sĩ (hoặc chính mày), kèm SWOT.'] },
+      { title: 'Ba nguồn thu', intro: 'Biểu diễn và lưu diễn, sáng tác và xuất bản, thu âm và hãng đĩa.', chapters: [
+        { slug: 'quan-ly-nghe-si-luu-dien-va-hang-luu-niem', focus: 'Đặt show, ngân sách, nhà tổ chức, rider, hàng lưu niệm, lưu diễn quốc tế.' },
+        { slug: 'quan-ly-nghe-si-thu-nhap-sang-tac', focus: 'Quyền tác giả, xuất bản, tiền cơ học và biểu diễn, streaming.' },
+        { slug: 'quan-ly-nghe-si-thu-nhap-thu-am', focus: 'Hợp đồng thu âm, ứng trước, 360, hãng độc lập, đài, tài trợ.' },
+      ], exercises: ['Lập bảng mọi nguồn thu của một nghệ sĩ trong một năm, ghi khi nào tiền về, ai thu, ai được chia phần trăm.'] },
+      { title: 'Làm việc và dẫn dắt', intro: 'Buổi gặp, đàm phán, đạo đức; cố vấn, huấn luyện và lãnh đạo.', chapters: [
+        { slug: 'quan-ly-nghe-si-dieu-hanh-kinh-doanh', focus: 'Buổi gặp 15 phút; đàm phán theo lợi ích; đạo đức; payola.' },
+        { slug: 'quan-ly-nghe-si-co-van-va-lanh-dao', focus: 'Cố vấn, huấn luyện, lãnh đạo; lời kết.' },
+      ], exercises: ['Tập một buổi giới thiệu nghệ sĩ 15 phút với một người bạn đóng vai hãng đĩa; ghi lại lập trường và lợi ích của mỗi bên.'] },
     ],
   },
   {

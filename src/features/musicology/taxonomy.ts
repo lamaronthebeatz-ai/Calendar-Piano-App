@@ -245,6 +245,7 @@ export const BRANCHES: Branch[] = [
     groups: [
       { title: 'Phê bình và giới', slugs: ['am-nhac-hoc-moi', 'am-nhac-hoc-nu-quyen-va-gioi', 'adorno-va-am-nhac', 'lich-su-tiep-nhan-am-nhac'] },
       { title: 'Đại chúng, màn ảnh và thị trường', slugs: ['nghien-cuu-am-nhac-dai-chung', 'nghien-cuu-nhac-phim', 'cong-nghiep-am-nhac', 'am-nhac-va-ban-sac-xa-hoi', 'hinh-thuc-ca-khuc-pho-thong'] },
+      { title: 'Quản lý nghệ sĩ — Paul Allen', slugs: ['quan-ly-nghe-si-lo-trinh', 'quan-ly-nghe-si-nghe-va-nguyen-tac', 'quan-ly-nghe-si-chuan-bi', 'quan-ly-nghe-si-khoi-nghiep-va-tien', 'quan-ly-nghe-si-nghe-si-chuan-bi', 'quan-ly-nghe-si-bai-hoc-tu-nguoi-di-truoc', 'quan-ly-nghe-si-tu-quan-ly', 'quan-ly-nghe-si-hop-dong-quan-ly', 'quan-ly-nghe-si-lap-ke-hoach', 'quan-ly-nghe-si-hinh-thuc-kinh-doanh', 'quan-ly-nghe-si-luu-dien-va-hang-luu-niem', 'quan-ly-nghe-si-thu-nhap-sang-tac', 'quan-ly-nghe-si-thu-nhap-thu-am', 'quan-ly-nghe-si-dieu-hanh-kinh-doanh', 'quan-ly-nghe-si-co-van-va-lanh-dao'] },
       { title: 'Âm thanh, môi trường, chính trị, di sản', slugs: ['nghien-cuu-am-thanh-va-canh-quan-am-thanh', 'am-nhac-hoc-sinh-thai', 'am-nhac-chinh-tri-va-kiem-duyet', 'di-san-phi-vat-the-va-am-nhac'] },
     ],
   },
