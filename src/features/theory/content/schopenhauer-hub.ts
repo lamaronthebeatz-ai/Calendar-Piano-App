@@ -21,7 +21,7 @@ Với người học nhạc, cuốn sách có một vị trí đặc biệt. Ở
 Bộ bài đọc từ **bản dịch tiếng Anh của E. F. J. Payne** (*The World as Will and Representation*, tập I; Falcon's Wing Press 1958, Dover 1969), dịch theo văn bản Hübscher 1946 – 1950. Văn bản được nhận dạng chữ (OCR) từ bản quét Lamar gửi; số trang trong bài là số trang của ấn bản Payne/Dover.
 
 - Trích dẫn được **dịch sát từ bản Anh của Payne**, chưa đối chiếu nguyên văn tiếng Đức. Thuật ngữ âm nhạc trong §52 được dịch theo ngữ cảnh nhạc lý (bè trầm, bè giữa, âm chủ, chuyển giọng, luật bình quân…), kèm chữ gốc ở chỗ cần.
-- Tập I là tập Schopenhauer viết năm 1818; tập II (1844) gồm các chương bổ sung — trong đó có chương 39 *Về siêu hình học của âm nhạc* — **không nằm trong bản quét này**, nên bộ bài chỉ nhắc tới tập II khi chính tập I dẫn sang.
+- Tập I là tập Schopenhauer viết năm 1818; tập II (1844) gồm 50 chương bổ sung, không có trong bản quét Payne. Các chương bổ sung cho Quyển III — trong đó có chương XXXIX *Về siêu hình học của âm nhạc* — được đọc từ **bản dịch cũ của Haldane & Kemp** (*The World as Will and Idea*, 1883 – 1886, phạm vi công cộng, văn bản số trên Project Gutenberg; ở bản này chúng nằm trong tập III). Bản Gutenberg không giữ số trang, nên các bài ấy ghi theo chương. Một số đoạn then chốt của §52 cũng đã được đối chiếu với tập I bản Haldane & Kemp và khớp nghĩa với bản Payne.
 - Tiểu sử lấy từ lời giới thiệu của Payne và mục *Schopenhauer's Aesthetics* của Stanford Encyclopedia of Philosophy (SEP).
 - Sách có những đoạn **định kiến**: hai câu bài Do Thái (§48 và §51), những nhận xét khinh miệt "đám đông". Các bài thuật đúng văn bản và ghi rõ đó là định kiến, không tán thành.
 
@@ -54,17 +54,20 @@ Payne giải thích ông chọn *representation* cho *Vorstellung* vì nghĩa g�
 7. [[schopenhauer-kien-truc-den-dieu-khac]] — §43 – 47: kiến trúc, nghệ thuật nước, vườn, phong cảnh, động vật, điêu khắc, Laocoön.
 8. [[schopenhauer-hoi-hoa-khai-niem-va-phung-du]] — §48 – 50: hội hoạ lịch sử; khái niệm và Ý niệm; phúng dụ và biểu trưng.
 9. [[schopenhauer-thi-ca-va-bi-kich]] — §51: thi ca, ca khúc trữ tình, bi kịch.
+10. [[schopenhauer-bo-sung-quyen-ba]] — tập II, chương XXIX – XXXVIII: nghệ thuật trả lời "đời sống là gì?"; tài năng và thiên tài; vần, nhịp và *Norma*.
 
-### Phần IV. Âm nhạc — §52
-10. [[schopenhauer-am-nhac-ban-sao-cua-y-chi]] — âm nhạc đứng ngoài mọi nghệ thuật; bè trầm, bè giữa, giai điệu và các bậc của tự nhiên.
-11. [[schopenhauer-giai-dieu-va-cam-xuc]] — giai điệu và sự khao khát; trưởng – thứ; chuyển giọng; lời ca, opera; âm nhạc và triết học.
+### Phần IV. Âm nhạc — §52 và chương XXXIX
+11. [[schopenhauer-am-nhac-ban-sao-cua-y-chi]] — âm nhạc đứng ngoài mọi nghệ thuật; bè trầm, bè giữa, giai điệu và các bậc của tự nhiên.
+12. [[schopenhauer-giai-dieu-va-cam-xuc]] — giai điệu và sự khao khát; trưởng – thứ; chuyển giọng; lời ca, opera; âm nhạc và triết học.
+13. [[schopenhauer-sieu-hinh-hoc-am-nhac]] — chương XXXIX (1): bốn bè và bốn giới; hoà âm mở; lời ca và opera; giao hưởng Beethoven.
+14. [[schopenhauer-nhip-giai-dieu-va-nghich-am]] — chương XXXIX (2): thuận – nghịch; nhịp là đối xứng; giai điệu là chia lìa và hoà giải; nốt treo, át bảy, trưởng – thứ.
 
 ### Phần V. Hệ quả và di sản
-12. [[schopenhauer-y-chi-song-va-giai-thoat]] — Quyển IV: con lắc giữa khổ đau và buồn chán; lòng trắc ẩn; phủ định ý chí — và vì sao nghệ thuật chỉ là "niềm an ủi chốc lát".
-13. [[schopenhauer-di-san-am-nhac]] — Wagner, Nietzsche, Brahms, Mahler, Schoenberg; Hanslick và tranh luận về âm nhạc tuyệt đối.
+15. [[schopenhauer-y-chi-song-va-giai-thoat]] — Quyển IV: con lắc giữa khổ đau và buồn chán; lòng trắc ẩn; phủ định ý chí — và vì sao nghệ thuật chỉ là "niềm an ủi chốc lát".
+16. [[schopenhauer-di-san-am-nhac]] — Wagner, Nietzsche, Brahms, Mahler, Schoenberg; Hanslick và tranh luận về âm nhạc tuyệt đối.
 
 ## Cách đọc
-- Schopenhauer dặn **đọc sách hai lần**, lần đầu thật kiên nhẫn, vì "phần đầu giả định phần cuối gần như phần cuối giả định phần đầu" (lời tựa lần 1). Bộ bài giữ trật tự của sách; ai chỉ quan tâm âm nhạc có thể đọc bài 1, 3, 4 rồi nhảy tới bài 10 – 11.
+- Schopenhauer dặn **đọc sách hai lần**, lần đầu thật kiên nhẫn, vì "phần đầu giả định phần cuối gần như phần cuối giả định phần đầu" (lời tựa lần 1). Bộ bài giữ trật tự của sách; ai chỉ quan tâm âm nhạc có thể đọc bài 1, 3, 4 rồi nhảy tới bài 11 – 14.
 - Mỗi bài kết bằng **Câu hỏi và bài tập**, phần lớn là nghe một tác phẩm rồi kiểm luận điểm của Schopenhauer.
 - Đọc đối chiếu với [[hanslick-lo-trinh]]: Hanslick (1854) viết như một câu trả lời cho mỹ học "âm nhạc biểu hiện cảm xúc", trong khi Schopenhauer đặt âm nhạc lên đỉnh siêu hình học.
 `,

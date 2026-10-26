@@ -2250,6 +2250,12 @@ const ROWS: [string, string, string, string, string, string][] = [
   ["Tác phẩm nào bị Schopenhauer nêu là âm nhạc mô phỏng phải bác bỏ?", "Bốn mùa của Haydn", "Giao hưởng số 5 của Beethoven", "Requiem của Mozart", "Thánh ca Bach", "schopenhauer-giai-dieu-va-cam-xuc"],
   ["Theo Schopenhauer, đời sống dao động như con lắc giữa hai cực nào?", "Khổ đau và buồn chán", "Niềm vui và nỗi buồn", "Lý trí và cảm xúc", "Sinh và tử", "schopenhauer-y-chi-song-va-giai-thoat"],
   ["Ai giới thiệu cuốn sách của Schopenhauer cho Wagner năm 1854?", "Georg Herwegh", "Franz Liszt", "Friedrich Nietzsche", "Hans von Bülow", "schopenhauer-di-san-am-nhac"],
+  ["Theo chương XXXIX của Schopenhauer, bốn bè bass – tenor – alto – soprano ứng với gì?", "Bốn giới khoáng vật – thực vật – động vật – con người", "Bốn mùa trong năm", "Bốn nguyên tố đất – nước – lửa – khí", "Bốn khí chất của con người", "schopenhauer-sieu-hinh-hoc-am-nhac"],
+  ["Schopenhauer gọi một bản giao hưởng của Beethoven là gì?", "Rerum concordia discors — sự hoà hợp trong bất hoà", "Âm nhạc đông cứng", "Bản sao của Ý niệm", "Hình thức âm thanh chuyển động", "schopenhauer-sieu-hinh-hoc-am-nhac"],
+  ["Theo chương XXXIX, vì sao soprano có \"quyền tự nhiên\" hát giai điệu?", "Tai luôn theo nốt cao nhất, không phải nốt to nhất", "Soprano luôn to nhất", "Vì luật bình quân", "Vì bè trầm chỉ được đi liền bậc", "schopenhauer-nhip-giai-dieu-va-nghich-am"],
+  ["Theo Schopenhauer, bản chất của giai điệu là gì?", "Sự chia lìa và hoà giải liên tục giữa yếu tố nhịp và yếu tố hoà âm", "Sự lặp lại của một motif", "Sự bắt chước tiếng nói", "Một chuỗi hợp âm thuận", "schopenhauer-nhip-giai-dieu-va-nghich-am"],
+  ["Schopenhauer nói nhịp điệu trong thời gian tương ứng với gì trong không gian?", "Đối xứng", "Màu sắc", "Phối cảnh", "Ánh sáng", "schopenhauer-nhip-giai-dieu-va-nghich-am"],
+  ["Theo chương XXXI của Schopenhauer, người thiên tài giống người bắn cung thế nào?", "Bắn trúng đích mà người khác không nhìn thấy", "Bắn trúng đích người khác không bắn trúng", "Bắn nhanh hơn mọi người", "Không bao giờ bắn trượt", "schopenhauer-bo-sung-quyen-ba"],
 ]
 
 export const LIBRARY: QuizQuestion[] = ROWS.map(([q, a, w1, w2, w3, slug]) => ({ q, a, w: [w1, w2, w3], slug }))

@@ -1111,10 +1111,13 @@ Hai quyển đầu được tóm vừa đủ để hiểu "biểu tượng" và 
         { slug: 'schopenhauer-kien-truc-den-dieu-khac', focus: '§43 – 47: kiến trúc, nước, vườn, phong cảnh, động vật, điêu khắc, Laocoön.' },
         { slug: 'schopenhauer-hoi-hoa-khai-niem-va-phung-du', focus: '§48 – 50: hội hoạ lịch sử; khái niệm và Ý niệm; phúng dụ.' },
         { slug: 'schopenhauer-thi-ca-va-bi-kich', focus: '§51: thi ca, ca khúc trữ tình, bi kịch.' },
+        { slug: 'schopenhauer-bo-sung-quyen-ba', focus: 'Tập II, ch. XXIX – XXXVIII: nghệ thuật trả lời "đời sống là gì?"; tài năng và thiên tài; vần, nhịp và Norma.' },
       ], exercises: ['Lập bảng các nghệ thuật theo bậc khách thể hoá của ý chí và ghi Ý niệm mà mỗi nghệ thuật làm hiện ra.', 'Phân tích một Lied của Schubert theo mô hình "trạng thái trữ tình" ở §51.'] },
-      { title: 'Âm nhạc — §52', intro: 'Âm nhạc đứng ngoài mọi nghệ thuật: bản sao trực tiếp của chính ý chí.', chapters: [
+      { title: 'Âm nhạc — §52 và chương XXXIX', intro: 'Âm nhạc đứng ngoài mọi nghệ thuật: bản sao trực tiếp của chính ý chí. Hai bài cuối đọc chương bổ sung XXXIX (1844) theo bản Haldane & Kemp.', chapters: [
         { slug: 'schopenhauer-am-nhac-ban-sao-cua-y-chi', focus: 'Vị trí của âm nhạc; phép tương ứng bè trầm – bè giữa – giai điệu với các bậc của tự nhiên; luật bình quân.' },
         { slug: 'schopenhauer-giai-dieu-va-cam-xuc', focus: 'Giai điệu rời và trở về âm chủ; trưởng – thứ; cảm xúc tự thân; lời ca, opera; âm nhạc và triết học.' },
+        { slug: 'schopenhauer-sieu-hinh-hoc-am-nhac', focus: 'Tập II, ch. XXXIX (1): bốn bè – bốn giới; hoà âm mở; lời ca và opera; giao hưởng Beethoven.' },
+        { slug: 'schopenhauer-nhip-giai-dieu-va-nghich-am', focus: 'Tập II, ch. XXXIX (2): thuận – nghịch; nhịp là đối xứng; giai điệu là chia lìa và hoà giải; nốt treo, át bảy, trưởng – thứ.' },
       ], exercises: ['Chơi một tiến trình I – IV – V – I, nghe riêng từng bè và đối chiếu với bảng tương ứng của Schopenhauer.', 'Hát một giai điệu quen, đánh dấu chỗ rời và trở về âm chủ; chơi lại ở giọng thứ cùng tên và mô tả thay đổi.'] },
       { title: 'Hệ quả và di sản', intro: 'Quyển IV và đời sống của tư tưởng Schopenhauer trong âm nhạc thế kỷ XIX – XX.', chapters: [
         { slug: 'schopenhauer-y-chi-song-va-giai-thoat', focus: 'Quyển IV: khổ đau và buồn chán; lòng trắc ẩn; phủ định ý chí; vị trí của nghệ thuật.' },
