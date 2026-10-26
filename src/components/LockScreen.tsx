@@ -12,6 +12,15 @@ import './lock-motion.css'
 const LENGTH = 6
 const HASH = 'dab66e8584ed9a873292351037637ac6530b38370739bba605c9fbe42bbb6f1c'
 const KEY = 'app:unlocked'
+const MEDIA = `${import.meta.env.BASE_URL}media/lock-orchestra`
+/** Commons: Midwest Young Artists Symphony Orchestra, Berlioz, Symphonie fantastique V (CC BY 3.0). */
+const VIDEO_PAGE = 'https://commons.wikimedia.org/wiki/File:10_Berlioz_Symphonie_Fantastique_V_Songe_d%27une_nuit_du_sabbat.webm'
+
+/** A still frame instead of the clip when the viewer asks for less motion or less data. */
+function stillOnly() {
+  const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+  return matchMedia('(prefers-reduced-motion: reduce)').matches || !!conn?.saveData
+}
 
 /** Unlocked once per app session: a reload stays in, a fresh launch asks again. */
 export function isUnlocked() {
@@ -132,6 +141,16 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
       onTransitionEnd={(e) => e.target === e.currentTarget && phase === 'leaving' && onDone()}
       className={clsx('lock-glass fixed inset-0 z-[100] flex flex-col overflow-hidden', phase === 'leaving' && 'is-leaving')}
     >
+      {/* An orchestra on stage plays behind the frosting. */}
+      {stillOnly() ? (
+        <img aria-hidden src={`${MEDIA}.webp`} alt="" className="lock-video pointer-events-none absolute inset-0 h-full w-full object-cover" />
+      ) : (
+        <video aria-hidden autoPlay muted loop playsInline poster={`${MEDIA}.webp`} className="lock-video pointer-events-none absolute inset-0 h-full w-full object-cover">
+          <source src={`${MEDIA}.mp4`} type="video/mp4" />
+          <source src={`${MEDIA}.webm`} type="video/webm" />
+        </video>
+      )}
+      <div aria-hidden className="lock-scrim pointer-events-none absolute inset-0" />
       {/* Warm light behind the frosting, like the hero of the library. */}
       <div aria-hidden className="lock-glow pointer-events-none absolute inset-0" />
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -217,6 +236,9 @@ export function LockScreen({ onUnlock, onDone, armed = true }: { onUnlock: () =>
       </div>
 
       <Copyright className="lock-content relative mb-3 text-[var(--color-ink-muted)]" />
+      <a href={VIDEO_PAGE} target="_blank" rel="noreferrer" title="Midwest Young Artists Symphony Orchestra — Berlioz, Symphonie fantastique, chương V (Wikimedia Commons, CC BY 3.0)" className="lock-content absolute right-3 top-[max(0.5rem,env(safe-area-inset-top))] text-[10px] text-[var(--color-ink-muted)]/70 underline-offset-2 hover:underline">
+        Video: MYA Symphony Orchestra · CC BY 3.0
+      </a>
 
       {/* The handle hints which way the glass goes. */}
       <div aria-hidden className="relative mx-auto mb-[max(0.75rem,env(safe-area-inset-bottom))] h-1.5 w-32 rounded-full bg-[var(--color-ink)]/25" />
