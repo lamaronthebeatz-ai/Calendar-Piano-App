@@ -5,7 +5,7 @@
  * Browsers only let sound start after a gesture, so when autoplay is refused the music waits for the first tap or
  * key on the lock screen. The volume goes through Web Audio, because iOS ignores `audio.volume`.
  */
-const SRC = `${import.meta.env.BASE_URL}media/intro-dvorak9.m4a`
+const BASE = `${import.meta.env.BASE_URL}media/intro-dvorak9`
 const MUTED = 'intro:muted'
 const GESTURES = ['pointerdown', 'keydown', 'touchend'] as const
 
@@ -69,7 +69,9 @@ function play() {
 export function startIntroMusic() {
   if (audio || introMuted() || saveData()) return
   stopped = false
-  audio = new Audio(SRC)
+  audio = new Audio()
+  // AAC where it plays (Safari, Chrome); Opus otherwise.
+  audio.src = audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') ? `${BASE}.m4a` : `${BASE}.ogg`
   audio.preload = 'auto'
   // Missing or unplayable file: give up quietly instead of retrying on every tap.
   audio.addEventListener('error', () => {
