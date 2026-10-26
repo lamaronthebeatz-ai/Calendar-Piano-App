@@ -96,19 +96,19 @@ Nghệ sĩ độc lập là người **giữ quyền kiểm soát tác phẩm**,
 
 ## Cộng đồng người hâm mộ
 "Mạng lưới" ở đây là những người theo dõi mà nghệ sĩ thường xuyên liên lạc; người hâm mộ là trái tim của nó (tr. 95).
-- **Website riêng** là kênh mày kiểm soát, không bị ràng buộc bởi điều khoản của một mạng xã hội; thu **email** người hâm mộ qua website để liên lạc bằng tên (tr. 96).
-- **Mạng xã hội** — Allen viết hai lần cho chắc: cần thiết và là **việc nặng**. Nội dung phải tươi: clip mới, ảnh đời thường, câu chuyện cho thấy mày không chỉ là người "đang cố bán đồ". **Thiếu chân thật** thường được coi là lỗi lớn nhất của nghệ sĩ đang lên (tr. 96).
+- **Website riêng** là kênh bạn kiểm soát, không bị ràng buộc bởi điều khoản của một mạng xã hội; thu **email** người hâm mộ qua website để liên lạc bằng tên (tr. 96).
+- **Mạng xã hội** — Allen viết hai lần cho chắc: cần thiết và là **việc nặng**. Nội dung phải tươi: clip mới, ảnh đời thường, câu chuyện cho thấy bạn không chỉ là người "đang cố bán đồ". **Thiếu chân thật** thường được coi là lỗi lớn nhất của nghệ sĩ đang lên (tr. 96).
 - **Đừng đăng quá dày.** Ai cũng lướt qua người đăng sáu lần một ngày. Một buổi diễn: thông báo một hai tuần trước, rồi kể cảm nhận sau buổi diễn cho người không tới được (tr. 96 – 97).
 - **Ít mà kỹ:** có mặt ít nhất ở hai mạng; ba bốn mạng mà không cập nhật nổi thì chọn hai và làm tốt (tr. 97).
 - **Đừng bán ép:** thay vì "đĩa đơn mới đã bán trên website", hãy nói "vừa xong bản nhạc mới mà mình rất hào hứng, nghe thử trên website nhé" (tr. 97).
 - **Email** cá nhân hơn mạng xã hội; gom địa chỉ qua cuộc thi, gặp gỡ, quà tặng; ở quán diễn, phát thẻ ghi mọi kênh liên lạc, đóng dấu tay có địa chỉ website khi khách vào cửa (tr. 97).
 - **"Thiên thần":** ai nói "cần gì cứ bảo" thì xin liên lạc, mời tới các buổi diễn, gửi mọi tin tức — đó là những người có thể bỏ tiền khi sự nghiệp cần lên nấc (tr. 98).
 
-Allen nhắc: mọi công việc khác đều đòi 40 giờ một tuần, có khi 50 – 60; nếu mày không cam kết với phần "làm việc", luôn có người khác cam kết — "và họ đang tới lấy người hâm mộ của mày" (tr. 98). Xem thêm [[marketing-am-nhac-va-mang-xa-hoi]].
+Allen nhắc: mọi công việc khác đều đòi 40 giờ một tuần, có khi 50 – 60; nếu bạn không cam kết với phần "làm việc", luôn có người khác cam kết — "và họ đang tới lấy người hâm mộ của bạn" (tr. 98). Xem thêm [[marketing-am-nhac-va-mang-xa-hoi]].
 
 ## Biểu diễn trực tiếp trả hoá đơn
 Show diễn cho tiền **gần như ngay**; tiền sáng tác và streaming về chậm hơn nhiều (tr. 98).
-- **Quán không quan tâm tới mày, mà tới khách của họ.** Một nhạc sĩ từng nói: "Tôi chơi trong ban nhạc mấy năm, rồi nhận ra mình không ở trong ngành nhạc, mà trong ngành **bán rượu**." Việc của nghệ sĩ là giữ khách ở lại mua đồ ăn thức uống (tr. 99). Người mới thường bắt đầu bằng nhạc **cover**, thỉnh thoảng chen một bài tự viết.
+- **Quán không quan tâm tới bạn, mà tới khách của họ.** Một nhạc sĩ từng nói: "Tôi chơi trong ban nhạc mấy năm, rồi nhận ra mình không ở trong ngành nhạc, mà trong ngành **bán rượu**." Việc của nghệ sĩ là giữ khách ở lại mua đồ ăn thức uống (tr. 99). Người mới thường bắt đầu bằng nhạc **cover**, thỉnh thoảng chen một bài tự viết.
 - **Giữ ban nhạc:** nhạc công không tập lâu nếu không thấy show có tiền, và luôn có thể bị nghệ sĩ khác "câu" mất (tr. 99).
 - **Biết mình kéo được bao nhiêu khán giả** ở từng địa phương — chủ quán chắc chắn sẽ hỏi.
 - **Đừng trông vào quán quảng bá.** Allen kể lần làm quản lý một ban nhạc đêm Giao thừa: thoả thuận miệng bốn set 45 phút, chủ quán tưởng ban nhạc lo khách, ban nhạc tưởng quán lo; quán vắng, chủ quán bắt chơi thêm giờ thứ năm mới trả tiền trong khi ca sĩ chính đã mất giọng. Hai lỗi: **không có hợp đồng viết**, và **không thống nhất kỳ vọng về quảng bá** (tr. 99 – 100). Quán nhỏ không thích hợp đồng thì ít nhất thoả thuận miệng rõ ràng — cả giờ nghỉ — rồi **gửi email tóm tắt** điều đã thống nhất.
@@ -127,21 +127,21 @@ Một ban nhạc **phải** có ít nhất một thoả thuận đơn giản gi�
 ## Công cụ của các nền tảng
 - **Spotify** có chương trình miễn phí (sách gọi là *Game Plan*, mười video hướng dẫn): nhận hồ sơ nghệ sĩ để không ai chiếm, có tiểu sử, ảnh, nhạc, video; xem **người nghe ở đâu** để xếp lịch diễn; bảng xếp hạng stream hằng tuần; công cụ gửi bài mới tới người tuyển chọn playlist; tính năng gây quỹ (tr. 103).
 - **YouTube** là "công cụ tìm kiếm âm nhạc" hàng đầu; có **kênh nghệ sĩ chính thức** và phân tích dữ liệu; theo sách, cần có ba bản phát hành qua nhà phân phối hay hãng đĩa (tr. 103).
-- **Phân tích dữ liệu** (*analytics*) đừng làm mày hoa mắt: nền tảng đã gom dữ liệu, tính toán, rồi trả lại thông tin giúp mày quyết định tốt hơn (tr. 103 – 104).
-- **Nhà phân phối độc lập** như CD Baby, TuneCore, DistroKid đưa nhạc lên các nền tảng streaming và thu tiền cho mày, chi phí thấp. Amazon, Apple, Pandora cũng có công cụ miễn phí — vì mày kéo người nghe tới thì họ có thêm thuê bao, quảng cáo (tr. 104).
+- **Phân tích dữ liệu** (*analytics*) đừng làm bạn hoa mắt: nền tảng đã gom dữ liệu, tính toán, rồi trả lại thông tin giúp bạn quyết định tốt hơn (tr. 103 – 104).
+- **Nhà phân phối độc lập** như CD Baby, TuneCore, DistroKid đưa nhạc lên các nền tảng streaming và thu tiền cho bạn, chi phí thấp. Amazon, Apple, Pandora cũng có công cụ miễn phí — vì bạn kéo người nghe tới thì họ có thêm thuê bao, quảng cáo (tr. 104).
 Tên và tính năng các công cụ này thay đổi rất nhanh; đây là tình trạng năm 2021 theo sách. Xem [[kinh-te-hoc-streaming]].
 
 ## Lời khuyên của Erin Enderlin
 Enderlin, ca sĩ – nhạc sĩ độc lập (Allen ghi rõ cô là cựu sinh viên chương trình ông dạy), viết bài hit đầu tiên năm 19 tuổi — "Monday Morning Church" do Alan Jackson thu, vào top 10 Billboard — và diễn khoảng 100 buổi mỗi năm (tr. 105). Ba lời khuyên (tr. 105 – 106):
-- **Đi ngược từ người gác cổng:** muốn Spotify cho vào playlist, muốn một ngôi sao mời đi tour — hãy hỏi *họ* cần gì ở mày, rồi đặt những mục tiêu nhỏ để tới đó; đỡ nản hơn nhiều.
-- **Là chính mình** vừa dễ nhất vừa khó nhất; nếu quản lý hay hãng đĩa bảo "phải giống thế này" mà không phải là con người mày, rốt cuộc sẽ không thành.
+- **Đi ngược từ người gác cổng:** muốn Spotify cho vào playlist, muốn một ngôi sao mời đi tour — hãy hỏi *họ* cần gì ở bạn, rồi đặt những mục tiêu nhỏ để tới đó; đỡ nản hơn nhiều.
+- **Là chính mình** vừa dễ nhất vừa khó nhất; nếu quản lý hay hãng đĩa bảo "phải giống thế này" mà không phải là con người bạn, rốt cuộc sẽ không thành.
 - **Mỗi ngày một việc nhỏ:** gửi năm email cho các quán, viết một bài hát, học thu âm trên máy tính — những bước nhỏ cộng lại nhanh không ngờ.
 
 ## Câu hỏi và bài tập
-1. Lập "kế hoạch nội dung" bốn tuần cho hai mạng xã hội của mày, mỗi tuần không quá ba bài, không bài nào bán ép.
+1. Lập "kế hoạch nội dung" bốn tuần cho hai mạng xã hội của bạn, mỗi tuần không quá ba bài, không bài nào bán ép.
 2. Tính ngân sách một show cách nhà 100 km cho ban nhạc bốn người; mức cát-xê tối thiểu là bao nhiêu?
 3. Soạn email tóm tắt thoả thuận sau một cuộc gặp chủ quán (ngày, giờ, set, giờ nghỉ, âm thanh, tiền).
-4. Viết bản thoả thuận một trang cho ban nhạc của mày theo sáu điểm của Allen.
+4. Viết bản thoả thuận một trang cho ban nhạc của bạn theo sáu điểm của Allen.
 `,
   },
   {
@@ -229,8 +229,8 @@ Gợi ý đối chiếu với chương này: không có cơ sở hoa hồng chi 
 ## Câu hỏi và bài tập
 1. Nghệ sĩ có năm show 20 triệu đồng, chi phí mỗi show 8 triệu, đại lý 10%. Tính phần của người quản lý 20% theo tổng thu, và 20% theo thu nhập ròng.
 2. Viết điều khoản hoa hồng sau hợp đồng cho một người quản lý nghệ sĩ mới, có lợi vừa phải cho cả hai bên.
-3. Liệt kê năm điều khoản mày sẽ thêm vào hợp đồng Jackson – Tohme, mỗi điều một câu lý do.
-4. Vì sao hợp đồng Taylor Swift và Kesha đều có điều khoản "chưa ký với hãng lớn thì được chấm dứt"? Từ phía người quản lý, mày sẽ đàm phán thời hạn đó bao lâu?
+3. Liệt kê năm điều khoản bạn sẽ thêm vào hợp đồng Jackson – Tohme, mỗi điều một câu lý do.
+4. Vì sao hợp đồng Taylor Swift và Kesha đều có điều khoản "chưa ký với hãng lớn thì được chấm dứt"? Từ phía người quản lý, bạn sẽ đàm phán thời hạn đó bao lâu?
 `,
   },
   {
@@ -264,7 +264,7 @@ Nghệ sĩ nợ ngân hàng, nợ thẻ tín dụng thì người quản lý m�
 - **Thuế:** ngân sách tính trên thu nhập **sau thuế**. Nghệ sĩ thường nhận đủ tiền mà chưa bị khấu trừ, nên phải tự để riêng tiền thuế. Ví dụ của Allen: rapper Young Buck nợ thuế liên bang Mỹ 164.000 USD năm 2010; nhà bị khám, đồ đạc bị tịch thu và năm 2012 đem đấu giá được 53.000 USD (tr. 131 – 132). Ở Việt Nam, thuế thu nhập cá nhân từ cát-xê thường bị khấu trừ tại nguồn một phần; vẫn nên hỏi kế toán về quyết toán cuối năm.
 
 ## Kế hoạch và ngân sách một sự kiện
-Mọi sự kiện — tiệc tại gia, buổi gặp nhà tài trợ, show 40.000 người — đều phải có **kế hoạch viết** (tr. 132 – 133): ngày giờ, địa điểm; mục đích và kết quả mong đợi; mọi cách liên lạc của người quản lý và trợ lý; yêu cầu đặc biệt (đồ ăn, thiết bị, nhân sự, bố trí phòng); liên lạc mọi nhà cung cấp, cả số khẩn cấp ngoài giờ và **nhà cung cấp dự phòng**; đi lại; ai lo **bảo hiểm**; ngân sách và ai trả khoản nào. Viết ra để khi mày ốm, người khác cầm kế hoạch làm tiếp được.
+Mọi sự kiện — tiệc tại gia, buổi gặp nhà tài trợ, show 40.000 người — đều phải có **kế hoạch viết** (tr. 132 – 133): ngày giờ, địa điểm; mục đích và kết quả mong đợi; mọi cách liên lạc của người quản lý và trợ lý; yêu cầu đặc biệt (đồ ăn, thiết bị, nhân sự, bố trí phòng); liên lạc mọi nhà cung cấp, cả số khẩn cấp ngoài giờ và **nhà cung cấp dự phòng**; đi lại; ai lo **bảo hiểm**; ngân sách và ai trả khoản nào. Viết ra để khi bạn ốm, người khác cầm kế hoạch làm tiếp được.
 
 ### Ví dụ: showcase cho hãng đĩa
 *Showcase* là buổi diễn để người trong ngành xem nghệ sĩ có đáng ký quản lý, đặt show, thu âm hay xuất bản không (tr. 133 – 134). Allen dựng một kế hoạch mẫu (tr. 134 – 139):
@@ -308,7 +308,7 @@ Allen nhấn mạnh: kế hoạch sự nghiệp **không khắc trên đá**, ph
 ## Câu hỏi và bài tập
 1. Viết một mục tiêu cụ thể cho 12 tháng tới, ba chiến lược, và chiến thuật của tuần này cho chiến lược đầu tiên.
 2. Lập ngân sách tuần cho một nghệ sĩ thu nhập 15 triệu đồng một tháng không đều; để riêng bao nhiêu cho thuế và tiết kiệm?
-3. Làm SWOT cho chính mày (hoặc ban nhạc mày), mỗi ô ít nhất ba dòng, rồi rút ra ba điểm hành động.
+3. Làm SWOT cho chính bạn (hoặc ban nhạc bạn), mỗi ô ít nhất ba dòng, rồi rút ra ba điểm hành động.
 4. Lập ngân sách showcase 60 khách ở Hà Nội hoặc TP.HCM theo các dòng của bảng 8.1.
 `,
   },

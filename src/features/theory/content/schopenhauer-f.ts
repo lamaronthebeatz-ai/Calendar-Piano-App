@@ -168,7 +168,7 @@ Chương kết bằng một lời tự vấn: có người sẽ phật lòng vì
 1. Chơi ví dụ nhạc của Schopenhauer trên đàn (2/4: Đô–Mi–Son–Đô | Si — | Si–Rê–Son–Si | Đô). Rồi tự viết một biến thể trong đó âm chủ rơi đúng phách mạnh ở ô 1. Cảm giác thay đổi thế nào?
 2. Tìm một nốt treo 4–3 trong một bản hợp xướng của Bach và giải thích theo ngôn ngữ của Schopenhauer.
 3. "Nhịp là đối xứng trong thời gian." Phân tích một câu nhạc 8 ô của Mozart thành hai nửa "đi lên tới âm át" và "trở về âm chủ".
-4. Viết một đoạn ngắn về một aria bass mà mày thích, phản bác (hoặc ủng hộ) nhận xét của Schopenhauer.
+4. Viết một đoạn ngắn về một aria bass mà bạn thích, phản bác (hoặc ủng hộ) nhận xét của Schopenhauer.
 `,
   },
   {
@@ -248,7 +248,7 @@ Hiệu quả bi kịch thật — sự cam chịu và thăng hoa của nhân v�
 
 ## Câu hỏi và bài tập
 1. Nghe song ca "Qual cor tradisti" trong *Norma* (cảnh cuối). Chỗ nào âm nhạc "lặng yên đột ngột"?
-2. Tìm một bản nhạc mà mày có thể "nói rõ bằng lời điều nó định trình bày trước khi viết". Theo chương XXXIV, đó là dấu hiệu gì?
+2. Tìm một bản nhạc mà bạn có thể "nói rõ bằng lời điều nó định trình bày trước khi viết". Theo chương XXXIV, đó là dấu hiệu gì?
 3. Chơi một chuyển giọng từ Đô trưởng sang Fa trưởng bằng hợp âm Đô bảy (C7). Đối chiếu với mô tả trong chương XXXVII.
 4. "Người thiên tài bắn trúng đích người khác không nhìn thấy." Tìm một nhà soạn nhạc được nhận ra muộn và lý giải theo chương XXXI.
 `,

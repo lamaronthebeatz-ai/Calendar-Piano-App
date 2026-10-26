@@ -129,7 +129,7 @@ Câu kết của sách:
 
 ## Câu hỏi và bài tập
 1. Phân biệt "nội dung" và "đối tượng" theo Hanslick. Vì sao phép thử "trả lời được bằng lời" quan trọng với lập luận của ông?
-2. Chơi một chủ đề trên piano, rồi chơi nó ở quãng tám khác, rồi hình dung nó trên kèn oboe. Theo mày, cái gì thay đổi: nội dung hay hình thức? So với hình ảnh "ngôi đình kính màu".
+2. Chơi một chủ đề trên piano, rồi chơi nó ở quãng tám khác, rồi hình dung nó trên kèn oboe. Theo bạn, cái gì thay đổi: nội dung hay hình thức? So với hình ảnh "ngôi đình kính màu".
 3. Chọn chủ đề mở đầu của một bản sonata Beethoven và chỉ ra những yếu tố nào của nó được phát triển trong phần phát triển — kiểm luận điểm "cái gì không chứa trong chủ đề thì không lớn lên hữu cơ".
 4. Hanslick chê chủ đề của Donizetti và Verdi. Đó là phán đoán thẩm mỹ hay định kiến khẩu vị? Tranh luận.
 `,
@@ -191,7 +191,7 @@ Mục *Eduard Hanslick* của Internet Encyclopedia of Philosophy nhấn mạnh 
 
 ## Câu hỏi và bài tập
 1. Chọn một ngộ nhận về Hanslick trong mục "Hanslick không nói gì" và dẫn câu trong sách để bác nó.
-2. Viết một trang: mày đứng về phía Hanslick hay phía thuyết biểu cảm trong câu hỏi "âm nhạc có buồn không?". Dùng ít nhất một ví dụ cụ thể.
+2. Viết một trang: bạn đứng về phía Hanslick hay phía thuyết biểu cảm trong câu hỏi "âm nhạc có buồn không?". Dùng ít nhất một ví dụ cụ thể.
 3. Phân biệt "tái hiện" và "trình hiện" theo cách Weitz đọc Hanslick, bằng một ví dụ âm nhạc.
 `,
   },

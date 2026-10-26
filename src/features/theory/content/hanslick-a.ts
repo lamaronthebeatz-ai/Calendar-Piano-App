@@ -58,7 +58,7 @@ Hình ảnh nổi tiếng của lời tựa: **hoa hồng thơm, nhưng nội du
 ## Câu hỏi và bài tập
 1. Phân biệt luận đề phủ định và luận đề khẳng định của Hanslick. Vì sao ông gọi luận đề phủ định là luận đề "chính"?
 2. Hình ảnh hoa hồng và khu rừng muốn nói gì về chữ "tái hiện"? Tìm một ví dụ tương tự trong âm nhạc.
-3. Weitz xếp Hanslick vào "thuyết dị trị có giới hạn". Đọc xong bộ bài, hãy quay lại câu này và cho biết mày đồng ý hay không.
+3. Weitz xếp Hanslick vào "thuyết dị trị có giới hạn". Đọc xong bộ bài, hãy quay lại câu này và cho biết bạn đồng ý hay không.
 `,
   },
   {
@@ -153,7 +153,7 @@ Một số người lùi một bước: âm nhạc tái hiện cảm xúc **khô
 ## Câu hỏi và bài tập
 1. Vì sao theo Hanslick âm nhạc biểu hiện được "tính từ" mà không biểu hiện được "danh từ" của cảm xúc?
 2. Nghe đoạn mở overture *Prometheus* của Beethoven và tả nó bằng ngôn ngữ cấu trúc như Hanslick: hướng đi, lặp lại, đối xứng, âm sắc.
-3. Hát *J'ai perdu mon Eurydice* với lời "J'ai trouvé…". Mày có thấy giai điệu "sai" không? Điều đó nói gì về luận điểm của Hanslick?
+3. Hát *J'ai perdu mon Eurydice* với lời "J'ai trouvé…". Bạn có thấy giai điệu "sai" không? Điều đó nói gì về luận điểm của Hanslick?
 4. Phân biệt "vẽ hiện tượng" và "vẽ cảm xúc" bằng một ví dụ từ Giao hưởng *Đồng quê* của Beethoven.
 `,
   },

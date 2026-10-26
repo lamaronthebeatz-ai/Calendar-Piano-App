@@ -27,7 +27,7 @@ export const fux: Article[] = [
 ## Nguồn của loạt bài
 - **Nguyên bản**: [[johann-joseph-fux|Johann Joseph Fux]] (1660 – 1741), *Gradus ad Parnassum* ("Những bậc thang lên núi Parnassus"), tiếng Latin, Vienna 1725, đề tặng hoàng đế Charles VI — người Fux phục vụ làm nhạc trưởng triều đình. Phần thực hành viết dưới dạng đối thoại thầy Aloysius – trò Josephus (xem [[doi-am-5-loai]]).
 - **Tài liệu dùng ở đây**: bản tiếng Anh *Practical Rules for Learning Composition, translated from a work intitled Gradus ad Parnassum*, khắc bản J. Caulfield. Đây là bản **rút gọn**: bỏ hình thức đối thoại, giữ quy tắc và ví dụ nhạc.
-- **Chưa chắc về ấn bản**: thư mục Thư viện Quốc hội Mỹ ghi London, J. Preston, năm *[1791?]* (có dấu hỏi); một số thư mục khác ghi năm 1768 và người dịch là J. C. Heck — tao **chưa đối chiếu** được trang tên sách gốc, nên loạt bài chỉ ghi "bản dịch Anh thế kỷ 18".
+- **Chưa chắc về ấn bản**: thư mục Thư viện Quốc hội Mỹ ghi London, J. Preston, năm *[1791?]* (có dấu hỏi); một số thư mục khác ghi năm 1768 và người dịch là J. C. Heck — người biên soạn **chưa đối chiếu** được trang tên sách gốc, nên loạt bài chỉ ghi "bản dịch Anh thế kỷ 18".
 - Bản quét là ảnh khắc đồng thế kỷ 18; chữ được nhận dạng tự động (OCR) nên một vài con số trong ví dụ bị mờ. Chỗ nào chưa đọc chắc, bài ghi rõ.
 
 ## Sách có những gì
@@ -195,7 +195,7 @@ Bài này bổ sung cho năm bài luyện tập [[doi-am-loai-1]] … [[doi-am-l
 - Sách còn chỉ những kiểu nối khác (thay dấu nối bằng **dấu chấm dôi** cho "chuyển động sinh động hơn"; chen móc đơn — **chỉ ở nốt đen thứ hai và thứ tư** của ô) và nói rõ chúng thuộc về loại 5.
 ::scan fux 7.1 | Các kiểu nối khác: thay dấu nối bằng dấu chấm dôi, chen móc đơn — "good", "bad"
 
-**Chỗ cần lưu ý**: bảng trên chép đúng bản dịch, gồm cả 4 → 5 và 7 → 8 ở bè dưới. Các giáo trình hiện đại (bảng ở [[doi-am-loai-4]]) chỉ coi **2 – 3** và **9 – 10** là chuẩn, 4 – 5 tuỳ sách, 7 – 8 thường bị cấm. Tao chưa đối chiếu đoạn này với nguyên bản Latin.
+**Chỗ cần lưu ý**: bảng trên chép đúng bản dịch, gồm cả 4 → 5 và 7 → 8 ở bè dưới. Các giáo trình hiện đại (bảng ở [[doi-am-loai-4]]) chỉ coi **2 – 3** và **9 – 10** là chuẩn, 4 – 5 tuỳ sách, 7 – 8 thường bị cấm. Người biên soạn chưa đối chiếu đoạn này với nguyên bản Latin.
 
 ## Loại 5: đối âm hoa mỹ
 - Fux gọi đây là "**phần trang trí và tu từ của âm nhạc**": hỗn hợp mọi loại trước — nốt chấm, nốt nối, thuận xen nghịch, nhiều kiểu trường độ.

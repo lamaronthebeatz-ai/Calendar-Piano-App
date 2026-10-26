@@ -189,7 +189,7 @@ Schopenhauer cho loại thứ ba **hơn hẳn**: nó cho thấy tai hoạ lớn 
 ## Câu hỏi và bài tập
 1. "Nhịp và vần thuyết phục trước mọi phán đoán." Thử đọc một lời bài hát không có nhạc, rồi hát nó. Điều gì thay đổi?
 2. Phân tích một Lied của Schubert trên thơ Goethe (ví dụ *An den Mond*) theo mô hình "trò chơi luân phiên" giữa ý muốn và sự chiêm ngưỡng cảnh vật.
-3. Xếp ba vở opera mày biết vào ba loại bi kịch của Schopenhauer.
+3. Xếp ba vở opera bạn biết vào ba loại bi kịch của Schopenhauer.
 `,
   },
 ]

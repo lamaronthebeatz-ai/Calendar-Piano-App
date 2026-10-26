@@ -68,7 +68,7 @@ Schopenhauer thường được gọi là triết gia **bi quan**. SEP định n
 
 ## Câu hỏi và bài tập
 1. "Đời sống dao động như con lắc giữa khổ đau và buồn chán." Liên hệ với cách một bản nhạc tạo căng thẳng và giải toả. Bản nhạc nào chỉ có giải toả mà không có căng thẳng?
-2. Vì sao theo Schopenhauer nghệ thuật không miêu tả được hạnh phúc trọn vẹn? Tìm một tác phẩm âm nhạc mà mày cho là phản ví dụ.
+2. Vì sao theo Schopenhauer nghệ thuật không miêu tả được hạnh phúc trọn vẹn? Tìm một tác phẩm âm nhạc mà bạn cho là phản ví dụ.
 3. Đặt nghệ thuật, lòng trắc ẩn và khổ hạnh vào bảng "ba con đường". Âm nhạc của Wagner trong *Parsifal* thuộc con đường nào?
 `,
   },
@@ -147,7 +147,7 @@ Hai người gặp nhau ở chỗ cùng đề cao **khí nhạc không lời** v
 ## Câu hỏi và bài tập
 1. Nghe khúc dạo đầu *Tristan und Isolde* của Wagner. Theo Schopenhauer, vì sao một giai điệu trì hoãn mãi sự trở về âm chủ lại có sức mạnh như vậy?
 2. So sánh Schopenhauer và Hanslick trên một ví dụ cụ thể: chương II Giao hưởng số 7 của Beethoven.
-3. Viết một trang: mày giữ lại được gì từ mỹ học âm nhạc của Schopenhauer mà không cần chấp nhận siêu hình học ý chí?
+3. Viết một trang: bạn giữ lại được gì từ mỹ học âm nhạc của Schopenhauer mà không cần chấp nhận siêu hình học ý chí?
 `,
   },
 ]

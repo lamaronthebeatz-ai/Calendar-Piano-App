@@ -110,10 +110,10 @@ Với nhiều tác phẩm từng vượt xa sự tầm thường của thời ch
 Trong một chú thích dài, Hanslick ghi nhận Giao hưởng số 9 của Beethoven là "đường phân thuỷ" giữa hai phe: những người đề cao "ý đồ" đặt nó lên đỉnh mọi âm nhạc, còn phe nhỏ trung thành với cái đẹp nội tại thì ngưỡng mộ có dè dặt. Ba chương đầu đẹp tuyệt — "dù không hoàn hảo"; còn chương cuối, Hanslick viết: "chúng tôi luôn coi nó chẳng hơn gì **cái bóng khổng lồ của một thân hình khổng lồ**" (tr. 69). Ông kể có người viết trên *Augsburger Allgemeine Zeitung* năm 1853 phê phán việc một bản khí nhạc nhiều chương kết bằng hợp xướng — "như nhà điêu khắc tạc chân, thân, ngực, tay bằng đá cẩm thạch trắng rồi tô màu cái đầu" — và tự nhận là một "trí óc yếu ớt"; gần mười năm sau Hanslick mới biết đó là nhà thần học **David Friedrich Strauss**.
 
 ## Câu hỏi và bài tập
-1. "Trong âm nhạc không có ý đồ nào bù được cho sáng tạo." Áp dụng câu này để phê bình một tác phẩm mày từng nghe được khen vì "thông điệp".
+1. "Trong âm nhạc không có ý đồ nào bù được cho sáng tạo." Áp dụng câu này để phê bình một tác phẩm bạn từng nghe được khen vì "thông điệp".
 2. Chơi chương I *Les Adieux* (Op. 81a). Ba nốt mở đầu ghi chữ "Le-be-wohl" có làm bản nhạc thành nhạc chương trình không? So sánh lập luận của Hanslick với cách Beethoven ghi tiêu đề.
 3. Phân biệt câu hỏi của nhà sử học và câu hỏi của nhà mỹ học khi xét một giao hưởng của Beethoven.
-4. Mày đồng ý hay không với nhận định "cái bóng khổng lồ của một thân hình khổng lồ" về chương cuối Giao hưởng số 9? Lập luận bằng âm nhạc.
+4. Bạn đồng ý hay không với nhận định "cái bóng khổng lồ của một thân hình khổng lồ" về chương cuối Giao hưởng số 9? Lập luận bằng âm nhạc.
 `,
   },
   {
@@ -217,8 +217,8 @@ Hoạt động trí óc khác nhau rất nhiều giữa những người nghe c�
 Cuối chương, Hanslick phân biệt âm nhạc như một **nghệ thuật** với những tính chất chung của nó (êm tai, nhịp điệu, sức gợi cảm xúc). Khi vua Henry IV của Shakespeare gọi nhạc bên giường chết, hay khi nhạc valse của Johann Strauss chỉ dùng để giữ nhịp cho người nhảy, chất lượng âm nhạc chẳng còn quan trọng. Lời ca ngợi âm nhạc nổi tiếng trong *Người lái buôn thành Venice* ("Kẻ không có âm nhạc trong mình… thì đáng làm phản") lẫn âm nhạc với các nguyên tắc êm tai và nhịp điệu: thay chữ "âm nhạc" bằng "thơ" hay "cái đẹp" mà nghĩa không đổi mấy. Ví dụ "dạy được nhiều nhất" là những thư về âm nhạc của **Bettina von Arnim** mà Goethe lịch sự gọi là "những vụ nổ âm nhạc": nàng coi tác phẩm âm nhạc như sản phẩm của tự nhiên, không phải sáng tạo của trí óc con người.
 
 ## Câu hỏi và bài tập
-1. Tả một lần mày nghe nhạc theo lối "bệnh lý" và một lần theo lối thẩm mỹ. Điều gì khác nhau trong sự chú ý?
-2. Nghe phần phát triển của một chương sonata và ghi lại những chỗ mày "đoán đúng" và "đoán sai" điều sắp tới. Đó có phải là niềm vui Hanslick mô tả không?
+1. Tả một lần bạn nghe nhạc theo lối "bệnh lý" và một lần theo lối thẩm mỹ. Điều gì khác nhau trong sự chú ý?
+2. Nghe phần phát triển của một chương sonata và ghi lại những chỗ bạn "đoán đúng" và "đoán sai" điều sắp tới. Đó có phải là niềm vui Hanslick mô tả không?
 3. "Để say thì chỉ cần yếu đuối." Câu này có bất công với người nghe không được đào tạo không?
 4. Chỉ ra hai định kiến trong chương này và giải thích vì sao chúng không ảnh hưởng tới (hay có ảnh hưởng tới) lập luận chính của Hanslick.
 `,

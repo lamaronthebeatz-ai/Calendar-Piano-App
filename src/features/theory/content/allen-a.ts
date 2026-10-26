@@ -12,7 +12,7 @@ export const allenA: Article[] = [
     body: `
 Bài mở đầu bộ [[quan-ly-nghe-si-lo-trinh|Quản lý nghệ sĩ]], đọc theo chương 1 sách *Artist Management for the Music Business* của **Paul Allen** (bản 5, Routledge 2022). Số trang ghi trong ngoặc là số trang bản in. Sách viết cho thị trường Mỹ – Anh; chỗ nào khác ở Việt Nam, bài ghi rõ.
 
-## Thành công là thước đo của riêng mày
+## Thành công là thước đo của riêng bạn
 Allen mở sách bằng một nhận xét: đo thành công bằng tiền là cách **đoán mò nhất** trong một ngành rủi ro cao, nơi phần thưởng lớn chỉ dồn cho số rất ít ở đỉnh (tr. 1). Người đặt show đo thành công bằng số cơ hội diễn họ tạo ra; người làm PR đo bằng sự nghiệp khách hàng lớn lên; nhà sản xuất đo bằng việc giúp nghệ sĩ nói được điều mình muốn; người phụ trách nhạc nhà thờ đo bằng việc âm nhạc có truyền cảm hứng hay không. Điểm chung: họ **tạo giá trị từ sự sáng tạo của nghệ sĩ**, và đời sống người khác tốt lên nhờ âm nhạc ấy.
 
 Ông gọi điều cần có là *smart work* — "làm việc khôn": không chờ thành công tìm đến, mà dùng thời gian một cách có chủ đích để đi tới mục tiêu, và cải thiện âm nhạc cùng cách trình bày nó một cách đều đặn (tr. 2).
@@ -37,20 +37,20 @@ Gần như mọi giáo trình quản trị đều nói tới bốn chức năng:
 | **Lãnh đạo – điều phối** | Hướng năng lượng của cả đội vào mục tiêu của nghệ sĩ; liên lạc liên tục với từng thành viên; theo dõi thu – chi và thời gian |
 | **Kiểm soát** | Theo dõi kế hoạch chạy tới đâu, điều chỉnh để dùng nguồn lực hiệu quả; thực tế về điều mình kiểm soát được và linh hoạt khi gặp thực tế |
 
-**Hoạch định gặp may.** Ví dụ của Allen: năm 1999, nhà sản xuất David Foster gọi Josh Groban, khi ấy còn rất trẻ, hát thay Andrea Bocelli đang ốm trong buổi tập cho lễ trao giải Grammy cùng Celine Dion; màn tập đó mở đường cho sự nghiệp của Groban (tr. 7). May mắn chỉ có ích khi người ta đã chuẩn bị để chộp lấy nó. Allen dẫn định nghĩa hoạch định của Carter McNamara: xác định **mày muốn đi đâu, vì sao, đi bằng cách nào, cần gì để đi, và làm sao biết đã tới hay chưa** (tr. 7).
+**Hoạch định gặp may.** Ví dụ của Allen: năm 1999, nhà sản xuất David Foster gọi Josh Groban, khi ấy còn rất trẻ, hát thay Andrea Bocelli đang ốm trong buổi tập cho lễ trao giải Grammy cùng Celine Dion; màn tập đó mở đường cho sự nghiệp của Groban (tr. 7). May mắn chỉ có ích khi người ta đã chuẩn bị để chộp lấy nó. Allen dẫn định nghĩa hoạch định của Carter McNamara: xác định **bạn muốn đi đâu, vì sao, đi bằng cách nào, cần gì để đi, và làm sao biết đã tới hay chưa** (tr. 7).
 
 **Tiền cho kế hoạch.** Với nghệ sĩ mới, nguồn tiền có thể kết hợp: (1) tăng tốc lịch diễn, (2) tìm nhà tài trợ, (3) gây quỹ từ người hâm mộ qua Patreon, Kickstarter, (4) nhờ bạn bè và gia đình, (5) giúp nghệ sĩ vay vốn (tr. 8).
 
 **Đội ngũ.** Có người trong biên chế, có người chỉ làm "khi cần". Hiếm khi cả đội họp chung (trừ khi đội chính là các thành viên ban nhạc tự quản lý); người quản lý là trung tâm thông tin. Ví dụ: người đặt show gửi đề nghị và ngân sách từ nhà tổ chức cho quản lý, quản lý tài chính, kế toán, rồi chờ phản hồi (tr. 9).
 
 ## Mạng lưới quan hệ là chìa khoá
-"Không có mạng lưới, mày thực sự không có đường nào tới thành công": tin nhắn không ai trả lời, điện thoại không ai gọi lại (tr. 9). Allen dẫn tựa sách của người quản lý kỳ cựu Ken Kragen, *Life Is a Contact Sport* — "đời là môn thể thao va chạm" (tr. 4).
+"Không có mạng lưới, bạn thực sự không có đường nào tới thành công": tin nhắn không ai trả lời, điện thoại không ai gọi lại (tr. 9). Allen dẫn tựa sách của người quản lý kỳ cựu Ken Kragen, *Life Is a Contact Sport* — "đời là môn thể thao va chạm" (tr. 4).
 
 Những lời khuyên cụ thể (tr. 10 – 13):
 - **Gặp mặt thật.** Quan hệ bền xây trên thời gian gặp mặt, không phải trên Facebook hay ô Zoom; mạng xã hội chỉ để giữ liên lạc.
 - **Đi đúng chỗ.** Hội nghị, hội thảo ngành, các trường có ngành kinh doanh âm nhạc; vào làm trợ lý ở một công ty quản lý hoặc trợ lý quản lý tour là cách nhanh để có mạng lưới (tr. 13).
 - **Nhập vai.** Giao tiếp kinh doanh giống đóng một vai — đó là công việc, ai trong phòng cũng đang làm vậy. Allen dẫn Amy Cuddy: đừng giả vờ cho tới khi làm được, mà "giả vờ cho tới khi **trở thành** nó" — từng bước nhỏ cho tới khi việc ấy thành tự nhiên (tr. 11).
-- **Mở lời bằng câu hỏi mở** ("Mày thấy sự kiện thế nào?"), hoặc theo cách "tam giác hoá" của Kio Stark: bình luận về một thứ thứ ba mà cả hai cùng thấy (tr. 12).
+- **Mở lời bằng câu hỏi mở** ("Bạn thấy sự kiện thế nào?"), hoặc theo cách "tam giác hoá" của Kio Stark: bình luận về một thứ thứ ba mà cả hai cùng thấy (tr. 12).
 - **Lắng nghe thật sự:** nhìn vào mắt, đừng liếc qua vai người ta, đừng nghĩ câu tiếp theo khi họ đang nói.
 - **Đừng phát danh thiếp như chia bài.** Chỉ xin danh thiếp khi thật muốn giữ liên lạc; thành công không đo bằng số danh thiếp thu được (tr. 13, dẫn Dave Delaney).
 
@@ -73,9 +73,9 @@ Danh sách của Allen (tr. 18 – 19), gọn lại: tự đánh giá điểm m�
 Ví dụ, hội nghị và tổ chức trong sách đều là của Mỹ, Anh, Canada; bốn chức năng và các kỹ năng thì không phụ thuộc thị trường. Về các nghề quanh nghệ sĩ: [[nghe-nghiep-trong-nganh-am-nhac]].
 
 ## Câu hỏi và bài tập
-1. Viết ba câu định nghĩa "thành công" của riêng mày trong nghề nhạc — không câu nào được dùng con số tiền.
-2. Lấy một ca sĩ mày biết, kẻ bảng bốn chức năng và ghi mỗi ô một việc cụ thể người quản lý của họ phải làm trong tháng tới.
-3. Trả lời năm câu của McNamara cho sự nghiệp của chính mày.
+1. Viết ba câu định nghĩa "thành công" của riêng bạn trong nghề nhạc — không câu nào được dùng con số tiền.
+2. Lấy một ca sĩ bạn biết, kẻ bảng bốn chức năng và ghi mỗi ô một việc cụ thể người quản lý của họ phải làm trong tháng tới.
+3. Trả lời năm câu của McNamara cho sự nghiệp của chính bạn.
 4. Chọn một sự kiện âm nhạc sắp tới; lên kế hoạch gặp ba người và câu mở lời cho từng người.
 `,
   },
@@ -95,7 +95,7 @@ Quản lý nghệ sĩ diễn ra giữa kinh tế, công nghệ, chính trị, v�
 - **Bom tấn** (*Blockbusters*, Anita Elberse 2013): giải trí vẫn do hit chi phối, và có hit lớn là cách duy nhất để một công ty giải trí chắc chắn sống lâu (tr. 22).
 Xem thêm [[kinh-te-hoc-streaming]].
 
-## Tiền: chậm hơn mày nghĩ
+## Tiền: chậm hơn bạn nghĩ
 - Người quản lý thường hưởng **10 – 25%** thu nhập sự nghiệp của nghệ sĩ, **trung bình 15%** (tr. 22). Phần trăm ấy có thể tính trên tổng thu, trên tổng thu sau một số chi phí, hoặc trên thu nhập ròng — xem [[quan-ly-nghe-si-hop-dong-quan-ly]].
 - Tiền bản quyền thu âm từ hãng lớn có thể về sau **hai năm hoặc hơn** kể từ ngày phát hành, và chỉ khi album thu đủ để trả lại tiền ứng trước. Vé diễn lúc đầu ít ỏi nhưng thường là nguồn thu đều nhanh nhất. Tiền tác quyền sáng tác có thể lớn nhưng chậm (tr. 22 – 23).
 - Vì thế người quản lý mới nên chuẩn bị **tự nuôi công việc của mình 3 – 5 năm** (tr. 23).
@@ -116,13 +116,13 @@ Người hâm mộ mua vé, mua nhạc, nghe streaming đứng đầu danh sách
 | # | Thực tế | Lời khuyên |
 |---|---|---|
 | 1 | Nhiều người sẽ nói "không"; người gác cổng có vẻ không lay chuyển | Tìm điều họ cần. Trợ lý, thư ký là người gác cổng hay bị coi thường — ghé thăm họ, ghi nhận họ (theo Ken Kragen). Nhờ người trong mạng lưới mở cửa |
-| 2 | Mày chỉ là "người chơi" khi mày **còn liên quan** | Mọi cuộc gặp không xoay quanh nghệ sĩ của mày mà quanh nhu cầu của người kia |
-| 3 | Giữ tinh thần nghệ sĩ qua tàu lượn sự nghiệp rất mệt | Không ai định nghĩa được mày là ai chỉ bằng một lời từ chối |
-| 4 | Người ta sẽ kéo dài mày | Lần thứ hai nghe "vài hôm nữa tôi báo lại" là lúc đi tiếp |
-| 5 | Người ta sẽ làm mày thất vọng | Chờ đợi điều đó, vui khi họ giữ lời — và **luôn giữ lời của mình** |
+| 2 | Bạn chỉ là "người chơi" khi bạn **còn liên quan** | Mọi cuộc gặp không xoay quanh nghệ sĩ của bạn mà quanh nhu cầu của người kia |
+| 3 | Giữ tinh thần nghệ sĩ qua tàu lượn sự nghiệp rất mệt | Không ai định nghĩa được bạn là ai chỉ bằng một lời từ chối |
+| 4 | Người ta sẽ kéo dài bạn | Lần thứ hai nghe "vài hôm nữa tôi báo lại" là lúc đi tiếp |
+| 5 | Người ta sẽ làm bạn thất vọng | Chờ đợi điều đó, vui khi họ giữ lời — và **luôn giữ lời của mình** |
 | 6 | Làm chăm không bảo đảm thành công, nhưng thiếu nó thì khó thành công | Todd Cassetty: ai cũng tải nhạc lên được, nhưng phải tự dựng "cột thu lôi" để sét đánh trúng mình |
-| 7 | Ôm hận với người gác cổng chẳng giúp gì | Ngành nhỏ; người gác cổng hôm nay mai sang cổng khác — hoặc chính mày thành người gác |
-| 8 | Chương trình nghị sự của người khác quyết định mày có quan trọng với họ không | Đang quản lý một nghệ sĩ sắp thu album thì nhà xuất bản tranh nhau gặp; là cựu quản lý thì nhận một lời chào nhạt |
+| 7 | Ôm hận với người gác cổng chẳng giúp gì | Ngành nhỏ; người gác cổng hôm nay mai sang cổng khác — hoặc chính bạn thành người gác |
+| 8 | Chương trình nghị sự của người khác quyết định bạn có quan trọng với họ không | Đang quản lý một nghệ sĩ sắp thu album thì nhà xuất bản tranh nhau gặp; là cựu quản lý thì nhận một lời chào nhạt |
 | 9 | "Xưa nay vẫn làm thế" không phải cách tốt nhất | Soát lại từng bước của kế hoạch xem có cách hiệu quả hơn không |
 | 10 | Chọn làm nghệ sĩ thương mại thì **luôn là chuyện tiền** | Nhiều nghệ sĩ bắt đầu bằng ban nhạc hát cover, chen dần bài của mình, xây người nghe thành người hâm mộ. Với người quản lý, tài năng là điều mặc định; câu hỏi là thời gian bỏ ra có nuôi được họ không |
 
@@ -155,8 +155,8 @@ Allen giới thiệu thêm International Music Managers Forum (IMMF), có chi h�
 ## Câu hỏi và bài tập
 1. Với một nghệ sĩ mới, xếp ba nguồn thu (vé diễn, bản thu, tác quyền sáng tác) theo thứ tự tiền về nhanh nhất và giải thích.
 2. Tính: nghệ sĩ thu 400 triệu đồng một năm, người quản lý hưởng 15% tổng thu. Nếu thoả thuận đổi sang 20% thu nhập ròng và chi phí là 250 triệu, người quản lý được bao nhiêu? Cách nào có lợi hơn cho ai?
-3. Chọn ba trong mười thực tế; kể một lần mày (hoặc người mày biết) gặp nó và đã phản ứng thế nào.
-4. Đối chiếu Bộ quy tắc MMF với một hợp đồng quản lý mày từng thấy: thiếu điều nào?
+3. Chọn ba trong mười thực tế; kể một lần bạn (hoặc người bạn biết) gặp nó và đã phản ứng thế nào.
+4. Đối chiếu Bộ quy tắc MMF với một hợp đồng quản lý bạn từng thấy: thiếu điều nào?
 `,
   },
   {
@@ -178,9 +178,9 @@ Ba vai đều là nhà khởi nghiệp: **nghệ sĩ tự quản lý**, **thành
 
 ## Kế hoạch kinh doanh
 Kế hoạch kinh doanh trả lời câu hỏi: công ty có sống được trong ngành nhạc hôm nay không (tr. 47). Allen chỉ ra những chỗ dễ tự dối mình nhất:
-- Mày có đủ học vấn, kinh nghiệm và **mạng lưới** để làm việc chưa? Không qua được người gác cổng thì không làm được gì.
+- Bạn có đủ học vấn, kinh nghiệm và **mạng lưới** để làm việc chưa? Không qua được người gác cổng thì không làm được gì.
 - Phân tích kỹ số lượng, loại và địa điểm các công ty quản lý; dự báo ngắn hạn cho mảng ghi âm và lưu diễn — đừng dựa trên vài con số lẻ.
-- Hiểu thể loại nhạc mày nhắm tới: bao nhiêu nhóm, ca sĩ nam, nữ đang thành công; chủ đề bài hát có xu hướng gì; vé, bản thu, lượt stream của thể loại ra sao; **bao nhiêu nghệ sĩ mới lọt top 20** của đài và playlist — "tiền nằm ở đó" (tr. 48).
+- Hiểu thể loại nhạc bạn nhắm tới: bao nhiêu nhóm, ca sĩ nam, nữ đang thành công; chủ đề bài hát có xu hướng gì; vé, bản thu, lượt stream của thể loại ra sao; **bao nhiêu nghệ sĩ mới lọt top 20** của đài và playlist — "tiền nằm ở đó" (tr. 48).
 - Với nghệ sĩ tự quản lý: sau chi phí, có đủ nuôi mình và các thành viên không, hay cần người đặt show, người quản lý?
 - Chọn **hình thức doanh nghiệp** với sự tư vấn của kế toán hay luật sư (xem [[quan-ly-nghe-si-hinh-thuc-kinh-doanh]]).
 - Kế hoạch là chìa khoá để gọi vốn cho những năm đầu: có thể mất **3 – 5 năm** mới có lãi (tr. 49).
@@ -189,27 +189,27 @@ Kế hoạch kinh doanh trả lời câu hỏi: công ty có sống được tro
 - **Đàm phán** — gần như mọi cam kết đều qua đàm phán: "tôi cho anh cái này nếu anh cho tôi cái kia", rồi tìm thoả hiệp; có cái gì đó giống ván poker. Nên học một khoá, và biết lúc nào giao cho luật sư (tr. 49 – 50). Xem thêm [[quan-ly-nghe-si-dieu-hanh-kinh-doanh]].
 - **Xử lý bất đồng trong môi trường sáng tạo** — xung đột trong ban nhạc là thứ khó gỡ nhất, và là lý do nhiều người quản lý không nhận ban nhạc: nhóm tan thì công sức, tiền bạc không thu hồi được (tr. 50).
 - **Chấp nhận rủi ro** đã được đo đếm.
-- **Hướng ngoại hay hướng nội** đều làm được: người thích giao tiếp xây mạng lưới tốt; người hướng nội giỏi chi tiết, kế hoạch, tài chính. "Hãy giao tiếp ở mức mày thấy thoải mái" (tr. 50).
-- **Chủ động** — không ai mang việc tới cửa ngoài mày; khi không có gì xảy ra, mày phải làm cho nó xảy ra.
+- **Hướng ngoại hay hướng nội** đều làm được: người thích giao tiếp xây mạng lưới tốt; người hướng nội giỏi chi tiết, kế hoạch, tài chính. "Hãy giao tiếp ở mức bạn thấy thoải mái" (tr. 50).
+- **Chủ động** — không ai mang việc tới cửa ngoài bạn; khi không có gì xảy ra, bạn phải làm cho nó xảy ra.
 
-## Tiền: của mày và của họ
+## Tiền: của bạn và của họ
 Bất đồng về tiền thường là **chất xúc tác chấm dứt quan hệ** nghệ sĩ – quản lý. Vì thế, cho tới khi nghệ sĩ yên tâm giao việc tài chính, họ nên tham gia vào việc hạch toán, học đọc các báo cáo thu – chi, họp định kỳ với người quản lý; và mọi quyết định ảnh hưởng tới thu nhập của nghệ sĩ phải bàn trước với họ — ví dụ hợp đồng diễn buộc thuê thêm thiết bị, làm giảm tiền cát-xê thực nhận (tr. 51). Nghệ sĩ càng sớm yên tâm thì càng sớm dồn sức cho sáng tạo — thứ thật sự tạo ra giá trị.
 
 ### Lập ngân sách
 Ngân sách chỉ là **đặt thứ tự ưu tiên** (tr. 52):
 1. Chi phí vận hành định kỳ hằng tháng: văn phòng, điện thoại, văn phòng phẩm, điện nước, xe, thuê nhà.
 2. Chi đi lại và tiếp khách hằng tháng.
-3. Chi phí sinh hoạt cá nhân — vì công ty là nguồn trả lương cho chính mày.
+3. Chi phí sinh hoạt cá nhân — vì công ty là nguồn trả lương cho chính bạn.
 Mỗi con số phải có căn cứ. Cộng thu, cộng chi, lấy thu trừ chi. Thâm hụt thì cắt giảm, hoặc tạm bù bằng tiền riêng — chỉ là giải pháp ngắn hạn.
 
 ### Theo dõi dòng tiền
-Thu nhập của người quản lý thất thường vì phụ thuộc thu nhập nghệ sĩ: show này trả nhiều hơn show kia; mùa đông thời tiết có thể làm hỏng buổi diễn, và mày chỉ còn hoa hồng trên khoản **bảo đảm** nếu có (tr. 53). Công ty mới nên theo dõi thu – chi hằng tuần, thậm chí hằng ngày: thêm một cái rơ-moóc chở đồ sau xe là ngân sách tuần tăng vài trăm đô vì tiền thuê và xăng (tr. 53).
+Thu nhập của người quản lý thất thường vì phụ thuộc thu nhập nghệ sĩ: show này trả nhiều hơn show kia; mùa đông thời tiết có thể làm hỏng buổi diễn, và bạn chỉ còn hoa hồng trên khoản **bảo đảm** nếu có (tr. 53). Công ty mới nên theo dõi thu – chi hằng tuần, thậm chí hằng ngày: thêm một cái rơ-moóc chở đồ sau xe là ngân sách tuần tăng vài trăm đô vì tiền thuê và xăng (tr. 53).
 
 | Báo cáo | Cho biết | Kỳ |
 |---|---|---|
 | **Lưu chuyển tiền tệ** (*cash flow statement*) | Tiền vào, tiền ra, tiền mặt còn lại chuyển sang tháng sau — "bắt mạch" doanh nghiệp | Hằng tháng |
 | **Kết quả kinh doanh** (*income statement*) | Tổng doanh thu và chi phí, kể cả khoản không dùng tiền mặt như khấu hao — bức tranh lớn | Hằng quý |
-| **Bảng cân đối kế toán** (*balance sheet*) | Mày sở hữu bao nhiêu, nợ người khác bao nhiêu — công ty đáng giá bao nhiêu | Ít nhất hằng năm |
+| **Bảng cân đối kế toán** (*balance sheet*) | Bạn sở hữu bao nhiêu, nợ người khác bao nhiêu — công ty đáng giá bao nhiêu | Ít nhất hằng năm |
 
 (tr. 53 – 54.) Có thể tự làm bằng phần mềm kế toán, nhưng phải kỷ luật nhập đủ mọi khoản.
 
@@ -228,10 +228,10 @@ Jeff Walker (đã mất), người lập AristoMedia Group — công ty quản l
 - Thuê người bổ sung cho mình; tự điều chỉnh nhịp làm việc; **chọn người mình làm ăn cùng**.
 
 ## Câu hỏi và bài tập
-1. Viết một câu sứ mệnh và một câu tầm nhìn (hai năm) cho sự nghiệp hoặc công ty của mày.
+1. Viết một câu sứ mệnh và một câu tầm nhìn (hai năm) cho sự nghiệp hoặc công ty của bạn.
 2. Lập ngân sách tháng theo ba nhóm chi của Allen; ghi căn cứ cho từng con số.
-3. Lấy danh sách top 20 một bảng xếp hạng hay playlist thể loại mày nhắm tới trong 12 tháng qua: bao nhiêu nghệ sĩ mới? Kết luận gì cho kế hoạch?
-4. Phân biệt ba báo cáo tài chính bằng lời của mày, mỗi báo cáo một câu.
+3. Lấy danh sách top 20 một bảng xếp hạng hay playlist thể loại bạn nhắm tới trong 12 tháng qua: bao nhiêu nghệ sĩ mới? Kết luận gì cho kế hoạch?
+4. Phân biệt ba báo cáo tài chính bằng lời của bạn, mỗi báo cáo một câu.
 `,
   },
   {
@@ -275,21 +275,21 @@ Trước khi nhận, người quản lý thường xem biểu diễn rồi hẹn
 
 | # | Câu hỏi | Người quản lý muốn biết |
 |---|---|---|
-| 1 | Mày muốn gì từ sự nghiệp — điều gì làm mày thật sự mãn nguyện? | Động lực thật, kỳ vọng có thực tế không |
+| 1 | Bạn muốn gì từ sự nghiệp — điều gì làm bạn thật sự mãn nguyện? | Động lực thật, kỳ vọng có thực tế không |
 | 2 | Kinh nghiệm sáng tác, thu âm, diễn hai năm qua? Có thích diễn không? | Mức độ trải nghiệm |
 | 3 | Ban nhạc là đối tác hay nhạc công thuê theo show? | Thu nhập chia năm người cao hơn nhiều so với một nghệ sĩ trả lương nhạc công |
-| 4 | Theo mày, chìa khoá thành công của mày là gì? | Điểm mạnh và tầm nhìn thương mại |
+| 4 | Theo bạn, chìa khoá thành công của bạn là gì? | Điểm mạnh và tầm nhìn thương mại |
 | 5 | Từng ký hợp đồng quản lý với ai chưa? Đã chấm dứt chính thức chưa? | Tránh một người quản lý cũ hiện ra đòi quyền lợi |
 | 6 | Có công ty xuất bản và hãng đĩa riêng chưa? | |
-| 7 | Điều gì làm mày hạnh phúc nhất khi làm nghệ sĩ? | Nguồn để giữ động lực sau này |
+| 7 | Điều gì làm bạn hạnh phúc nhất khi làm nghệ sĩ? | Nguồn để giữ động lực sau này |
 | 8 | Nếu tránh được một việc của nghề, đó là việc gì? | Chỗ cần rèn |
 | 9 | Nợ bao nhiêu, nợ ai? Khai thuế đều không? Trả hoá đơn đúng hạn không? | Dấu hiệu đỏ về tài chính |
-| 10 | Lần gần nhất xung đột với ai, mày giải quyết thế nào? | Độ chín chắn cảm xúc |
-| 11 | Người hâm mộ tả mày trong hai câu thế nào? | Hình ảnh bản thân có thực tế không |
-| 12 | Học gì thì mày diễn, viết tốt hơn? | Cách hỏi điểm yếu "cửa sau" |
-| 13 | Điều gì trong ngành hôm nay có lợi cho mày, điều gì đe doạ nhất? | Hiểu môi trường kinh doanh tới đâu |
-| 14 | Mày biết gì về công ty bọn tao? | Có làm bài tập về nhà không |
-| 15 | Sống bằng gì cho tới khi âm nhạc nuôi được mày? | Đạo đức làm việc, sự cam kết |
+| 10 | Lần gần nhất xung đột với ai, bạn giải quyết thế nào? | Độ chín chắn cảm xúc |
+| 11 | Người hâm mộ tả bạn trong hai câu thế nào? | Hình ảnh bản thân có thực tế không |
+| 12 | Học gì thì bạn diễn, viết tốt hơn? | Cách hỏi điểm yếu "cửa sau" |
+| 13 | Điều gì trong ngành hôm nay có lợi cho bạn, điều gì đe doạ nhất? | Hiểu môi trường kinh doanh tới đâu |
+| 14 | Bạn biết gì về công ty bọn người biên soạn? | Có làm bài tập về nhà không |
+| 15 | Sống bằng gì cho tới khi âm nhạc nuôi được bạn? | Đạo đức làm việc, sự cam kết |
 
 ## 9 câu nghệ sĩ nên hỏi lại
 Cuộc gặp cũng là buổi phỏng vấn **người quản lý** (tr. 66 – 67):
@@ -308,9 +308,9 @@ Những câu khó nói, nhưng phải nói trước khi tính tới hợp đồn
 Một lãnh đạo hãng đĩa kể với Allen về một nghệ sĩ hãng lớn **đổi năm người quản lý trong năm năm**: quan hệ với hãng căng thẳng vì quá nhiều người cùng lái. Quan hệ nghệ sĩ – quản lý cũng hỏng khi có quá nhiều người nhà "thì thầm vào tai" (tr. 67). Lời khuyên: tìm người quản lý cùng tầm nhìn, rồi kiên nhẫn đi theo họ và làm một đối tác tốt.
 
 ## Câu hỏi và bài tập
-1. Viết câu mô tả âm nhạc của mày trong tối đa 20 chữ, theo mẫu của Allen.
-2. Lập "bảng con số" của mày: sức chứa phòng diễn thường chơi, số vé, số bản bán, lượt stream tháng, người theo dõi.
-3. Tự trả lời 15 câu người quản lý sẽ hỏi. Câu nào mày thấy khó nhất?
+1. Viết câu mô tả âm nhạc của bạn trong tối đa 20 chữ, theo mẫu của Allen.
+2. Lập "bảng con số" của bạn: sức chứa phòng diễn thường chơi, số vé, số bản bán, lượt stream tháng, người theo dõi.
+3. Tự trả lời 15 câu người quản lý sẽ hỏi. Câu nào bạn thấy khó nhất?
 4. Soạn 9 câu hỏi lại thành một mẫu ghi chú để mang tới buổi gặp người quản lý.
 `,
   },

@@ -226,7 +226,7 @@ Các câu dưới đây đã đối chiếu với nguyên văn tiếng Đức c�
 ## Câu hỏi và bài tập
 1. Hát một giai điệu quen (ví dụ chủ đề *Ode an die Freude*) và đánh dấu chỗ nó rời âm chủ, chỗ nó trở về. Mô tả theo ngôn ngữ của Schopenhauer.
 2. Chơi cùng một giai điệu ở giọng trưởng rồi ở giọng thứ cùng tên. Kiểm chứng câu về "nửa cung" của Schopenhauer.
-3. "Âm nhạc không biểu hiện nỗi buồn này hay nỗi buồn kia mà nỗi buồn tự thân." So với lập luận của Hanslick ở [[hanslick-am-nhac-co-bieu-hien-cam-xuc]]. Mày đứng về phía ai?
+3. "Âm nhạc không biểu hiện nỗi buồn này hay nỗi buồn kia mà nỗi buồn tự thân." So với lập luận của Hanslick ở [[hanslick-am-nhac-co-bieu-hien-cam-xuc]]. Bạn đứng về phía ai?
 4. Xem một cảnh phim hai lần với hai bản nhạc khác nhau. Kiểm tra "hiệu ứng nhạc phim" của Schopenhauer.
 5. Vì sao Schopenhauer bác *Bốn mùa* của Haydn? Lập luận ấy có áp dụng được cho *Bốn mùa* của Vivaldi không?
 `,

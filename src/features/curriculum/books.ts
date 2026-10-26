@@ -1051,7 +1051,7 @@ Hanslick đi từ **phủ định** sang **khẳng định**: cảm xúc của n
       { title: 'Mở đầu', intro: 'Hanslick là ai, lời giới thiệu của Weitz và hai luận đề của cuốn sách.', chapters: [
         { slug: 'hanslick-lo-trinh', focus: 'Lộ trình bộ bài.' },
         { slug: 'hanslick-tieu-su-va-loi-tua', focus: 'Tiểu sử; tự trị và dị trị; lời tựa bản in lần 7.' },
-      ], exercises: ['Viết một đoạn ngắn tóm tắt luận đề phủ định và luận đề khẳng định của Hanslick bằng lời của mày.'] },
+      ], exercises: ['Viết một đoạn ngắn tóm tắt luận đề phủ định và luận đề khẳng định của Hanslick bằng lời của bạn.'] },
       { title: 'Phê phán mỹ học cảm xúc', intro: 'Cảm xúc không phải mục đích, cũng không phải nội dung của âm nhạc.', chapters: [
         { slug: 'hanslick-my-hoc-cam-xuc', focus: 'Chương I: cảm giác và cảm xúc; trí tưởng tượng là cơ quan của cái đẹp.' },
         { slug: 'hanslick-am-nhac-co-bieu-hien-cam-xuc', focus: 'Chương II: âm nhạc chỉ tái hiện được động thái của cảm xúc.' },
@@ -1071,7 +1071,7 @@ Hanslick đi từ **phủ định** sang **khẳng định**: cảm xúc của n
       ], exercises: ['Chọn một overture có tiêu đề, nghe không biết tên, đặt cho nó ba tên khác; viết vì sao.'] },
       { title: 'Di sản', intro: 'Hanslick đọc lại hôm nay.', chapters: [
         { slug: 'hanslick-di-san-va-tranh-luan', focus: 'Tổng kết; Weitz và IEP; điểm yếu và định kiến của sách.' },
-      ], exercises: ['Viết một trang: mày đồng ý với Hanslick tới đâu?'] },
+      ], exercises: ['Viết một trang: bạn đồng ý với Hanslick tới đâu?'] },
     ],
   },
   {
@@ -1102,7 +1102,7 @@ Hai quyển đầu được tóm vừa đủ để hiểu "biểu tượng" và 
         { slug: 'schopenhauer-tieu-su-va-loi-tua', focus: 'Tiểu sử; ba lời tựa; ba đòi hỏi với người đọc.' },
         { slug: 'schopenhauer-the-gioi-la-bieu-tuong', focus: 'Quyển I: thế giới là biểu tượng; nguyên lý lý do đầy đủ.' },
         { slug: 'schopenhauer-the-gioi-la-y-chi', focus: 'Quyển II: thân thể và ý chí; các bậc khách thể hoá; phấn đấu không mục đích.' },
-      ], exercises: ['Viết một đoạn ngắn giải thích bằng lời của mày: vì sao thân thể là "chìa khoá" để Schopenhauer đi từ biểu tượng tới ý chí.'] },
+      ], exercises: ['Viết một đoạn ngắn giải thích bằng lời của bạn: vì sao thân thể là "chìa khoá" để Schopenhauer đi từ biểu tượng tới ý chí.'] },
       { title: 'Nhận thức thẩm mỹ', intro: 'Quyển III, §30 – 42: Ý niệm, chủ thể nhận thức thuần tuý, thiên tài, cái đẹp và cái siêu phàm.', chapters: [
         { slug: 'schopenhauer-y-niem-va-chu-the-thuan-tuy', focus: '§30 – 35: Ý niệm Platon; quên mình trong khách thể.' },
         { slug: 'schopenhauer-thien-tai', focus: '§36 – 37: nghệ thuật, thiên tài, trí tưởng tượng, điên loạn.' },
@@ -1145,7 +1145,7 @@ Mỗi bài tóm lược và giải thích một chương bằng lời của bộ
 ## Cách đọc
 1. Nghệ sĩ tự quản lý: Bài 1, 4, 6, 8, rồi Phần IV.
 2. Người muốn làm quản lý: đọc theo thứ tự, dừng lâu ở hợp đồng (Bài 7) và đàm phán (Bài 13).
-3. Mỗi bài có **Câu hỏi và bài tập** — phần lớn là tính một con số hay soạn một văn bản cho chính sự nghiệp của mày.
+3. Mỗi bài có **Câu hỏi và bài tập** — phần lớn là tính một con số hay soạn một văn bản cho chính sự nghiệp của bạn.
 `,
     parts: [
       { title: 'Nghề quản lý', intro: 'Người quản lý làm gì, cần chuẩn bị gì, và tiền bạc của một công ty quản lý.', chapters: [
@@ -1153,7 +1153,7 @@ Mỗi bài tóm lược và giải thích một chương bằng lời của bộ
         { slug: 'quan-ly-nghe-si-nghe-va-nguyen-tac', focus: 'Thành công; hợp đồng 360; bốn chức năng quản lý; mạng lưới; kỹ năng.' },
         { slug: 'quan-ly-nghe-si-chuan-bi', focus: 'Hoa hồng; mười thực tế; năm nguồn quyền lực; Bộ quy tắc MMF.' },
         { slug: 'quan-ly-nghe-si-khoi-nghiep-va-tien', focus: 'Tầm nhìn, kế hoạch kinh doanh; ngân sách, dòng tiền, báo cáo tài chính; vốn.' },
-      ], exercises: ['Viết định nghĩa thành công của mày trong ba câu và lập ngân sách tháng cho công việc quản lý (hoặc tự quản lý).'] },
+      ], exercises: ['Viết định nghĩa thành công của bạn trong ba câu và lập ngân sách tháng cho công việc quản lý (hoặc tự quản lý).'] },
       { title: 'Nghệ sĩ và người quản lý', intro: 'Khi nào cần người quản lý, bài học từ người đi trước, tự quản lý, và hợp đồng giữa hai bên.', chapters: [
         { slug: 'quan-ly-nghe-si-nghe-si-chuan-bi', focus: 'Thương mại không phải bán mình; con số; câu hỏi hai chiều.' },
         { slug: 'quan-ly-nghe-si-bai-hoc-tu-nguoi-di-truoc', focus: 'Parker, Angélil, Jeffery, Grant, Landau, Doyle, Pearlman, Kesha…' },
@@ -1163,7 +1163,7 @@ Mỗi bài tóm lược và giải thích một chương bằng lời của bộ
       { title: 'Kế hoạch và kinh doanh', intro: 'Kế hoạch sự nghiệp, thị trường, thương hiệu, đội ngũ và hình thức doanh nghiệp.', chapters: [
         { slug: 'quan-ly-nghe-si-lap-ke-hoach', focus: 'Mục tiêu – chiến lược – chiến thuật; showcase; kế hoạch sự nghiệp tám phần.' },
         { slug: 'quan-ly-nghe-si-hinh-thuc-kinh-doanh', focus: 'Thị trường mục tiêu, thương hiệu, đội ngũ, hình thức doanh nghiệp, website.' },
-      ], exercises: ['Lập kế hoạch sự nghiệp 12 tháng theo dàn ý tám phần cho một nghệ sĩ (hoặc chính mày), kèm SWOT.'] },
+      ], exercises: ['Lập kế hoạch sự nghiệp 12 tháng theo dàn ý tám phần cho một nghệ sĩ (hoặc chính bạn), kèm SWOT.'] },
       { title: 'Ba nguồn thu', intro: 'Biểu diễn và lưu diễn, sáng tác và xuất bản, thu âm và hãng đĩa.', chapters: [
         { slug: 'quan-ly-nghe-si-luu-dien-va-hang-luu-niem', focus: 'Đặt show, ngân sách, nhà tổ chức, rider, hàng lưu niệm, lưu diễn quốc tế.' },
         { slug: 'quan-ly-nghe-si-thu-nhap-sang-tac', focus: 'Quyền tác giả, xuất bản, tiền cơ học và biểu diễn, streaming.' },

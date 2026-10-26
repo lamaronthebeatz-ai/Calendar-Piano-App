@@ -43,7 +43,7 @@ Hãng lớn gộp lại, cắt hỗ trợ, nên đội ngũ người quản lý 
 | **Luật sư giải trí** | Gần như mọi việc thương mại là lời hứa đổi lấy tiền — tức hợp đồng; phải là người làm trong ngành **hằng ngày** | Theo giờ, theo dự án, hoặc phí giữ chỗ trả trước (tr. 149 – 150) |
 | **Người làm PR** | Cầu nối tới đài, truyền hình, báo, blog; biết nhu cầu của biên tập viên | Người làm PR của hãng chia sự chú ý cho mọi nghệ sĩ đang phát hành; có thể thuê theo dự án (tr. 150 – 151) |
 | **Quản lý truyền thông số** | Website, mạng xã hội, ứng dụng; "như con dao đa năng Thụy Sĩ" | Một chủ công ty quản lý lâu năm thú nhận: "Tôi không hiểu nó, nhưng không có lựa chọn" (tr. 151) |
-| **Người quảng bá** (*promotion*) | Vận động đài phát thanh và người tuyển chọn playlist phát nhạc | Đắt; hãng có thể không ưu tiên nghệ sĩ của mày — Allen kể một người quảng bá của Warner Bros. không biết đĩa đơn của nghệ sĩ hãng mình đã phát hành (tr. 151 – 152) |
+| **Người quảng bá** (*promotion*) | Vận động đài phát thanh và người tuyển chọn playlist phát nhạc | Đắt; hãng có thể không ưu tiên nghệ sĩ của bạn — Allen kể một người quảng bá của Warner Bros. không biết đĩa đơn của nghệ sĩ hãng mình đã phát hành (tr. 151 – 152) |
 | **Ngân hàng** | Tài khoản, thẻ cho chi phí trên đường, hạn mức tín dụng, khoản vay | Thu qua phí tài khoản, lãi (tr. 152) |
 | **Bảo hiểm** | Trách nhiệm cho xe đi diễn; trách nhiệm chung khi biểu diễn; nhân thọ; mất cắp, hư hỏng thiết bị | Hoa hồng của người bán bảo hiểm; công đoàn nghệ sĩ ở Mỹ có bảo hiểm giá tốt (tr. 153) |
 | **Kế toán** | Thu tiền, gửi ngân hàng, trả chi phí, thuế ở nhiều bang, nhiều nước | Lúc đầu một người giữ sổ là đủ (tr. 153) |
@@ -66,11 +66,11 @@ Do luật sư và kế toán tư vấn, tuỳ cách tổ chức và thuế (tr. 
 - **Nội dung** (theo danh sách của Tom Hutchison): tiểu sử; ảnh; tin tức, lịch diễn, phát hành; liên kết mạng xã hội; đĩa nhạc và ghi chú album; lời bài hát, có thể kèm hợp âm; nghe nhạc; đăng ký hội người hâm mộ; thông tin tour kể cả sơ đồ sân khấu; cửa hàng; cuộc thi; liên lạc cho người đặt show và báo chí; blog (tr. 159 – 160).
 - **Quan trọng nhất là mẫu đăng ký** thu email người xem — dữ liệu để nhắm đúng người hâm mộ (tr. 160).
 - **Tìm người hâm mộ** trên mạng xã hội theo vị trí và gu nhạc; tốt hơn nữa là để chính người hâm mộ rủ người khác — xây quan tâm "hữu cơ" (tr. 160 – 161).
-- **Đừng mua lượt thích, lượt xem, lượt stream ảo.** Sách dẫn một dịch vụ bán một triệu người theo dõi Twitter giá 600 USD. Bị phát hiện thì bị cấm khỏi nền tảng; dữ liệu giả làm mày không biết người hâm mộ thật ở đâu để lên tour; và stream ảo tạo ra tiền bản quyền giả — có thể bị nền tảng trừng phạt (tr. 161).
+- **Đừng mua lượt thích, lượt xem, lượt stream ảo.** Sách dẫn một dịch vụ bán một triệu người theo dõi Twitter giá 600 USD. Bị phát hiện thì bị cấm khỏi nền tảng; dữ liệu giả làm bạn không biết người hâm mộ thật ở đâu để lên tour; và stream ảo tạo ra tiền bản quyền giả — có thể bị nền tảng trừng phạt (tr. 161).
 
 ## Câu hỏi và bài tập
-1. Mô tả thị trường mục tiêu của một nghệ sĩ mày thích theo cả bốn cách phân khúc.
-2. Kiểm tra: tên mày (hoặc tên ban nhạc) dạng .com và .vn còn trống không? Những cách viết sai nào nên giữ?
+1. Mô tả thị trường mục tiêu của một nghệ sĩ bạn thích theo cả bốn cách phân khúc.
+2. Kiểm tra: tên bạn (hoặc tên ban nhạc) dạng .com và .vn còn trống không? Những cách viết sai nào nên giữ?
 3. Lập sơ đồ đội ngũ cho một nghệ sĩ mới: vai nào cần ngay, vai nào để sau, mỗi vai ước chi phí.
 4. Vì sao Allen khuyên tách người thu tiền với người trả tiền dù công ty chỉ có bốn người? Đề xuất cách làm cho một nhóm nhỏ ba người.
 `,
@@ -218,7 +218,7 @@ Các **tổ chức quản lý quyền biểu diễn** (PRO) cấp phép biểu d
 ## Tiền streaming
 Streaming là mảng trả nhiều nhất của ngành ghi âm, nhưng nhạc sĩ không thấy điều đó trong bảng kê (tr. 197). Theo phân tích của Manatt (2016) mà sách dẫn, mỗi đô la Spotify hay Apple Music thu được, phần lớn về nền tảng và chủ bản ghi; nhạc sĩ chỉ có những mẩu nhỏ, rồi còn chia cho nhà xuất bản, đồng tác giả, phí đơn vị thu hộ (hình 11.1, tr. 198). Sách viết HFA lấy 11% tiền biểu diễn; thật ra HFA làm việc với tiền **cơ học**, nên con số này nên hiểu là phí trên tiền cơ học.
 - Melissa Wald (Copyright Solutions): "Shape of You" của Ed Sheeran có **sáu tác giả và mười nhà xuất bản**; do lỗi hành chính, bài này không thu được 2,5% số tiền đáng được, và một bài của Bruno Mars mất tới **54%** (tr. 197 – 198).
-- Nếu sở hữu cả bản ghi lẫn quyền tác giả, năm 2016 mày nhận khoảng **1 USD cho 75 lượt** trên Apple Music, **588 lượt** trên Spotify bản miễn phí, **978 lượt** trên YouTube (tr. 198). Xem [[kinh-te-hoc-streaming]].
+- Nếu sở hữu cả bản ghi lẫn quyền tác giả, năm 2016 bạn nhận khoảng **1 USD cho 75 lượt** trên Apple Music, **588 lượt** trên Spotify bản miễn phí, **978 lượt** trên YouTube (tr. 198). Xem [[kinh-te-hoc-streaming]].
 - Từ 2021, **The MLC** (Mechanical Licensing Collective) được Cục Bản quyền Mỹ chỉ định thu tiền **cơ học** từ các nền tảng streaming; nhạc sĩ phải đăng ký tác phẩm với MLC, tự làm hoặc qua nhà xuất bản (tr. 199).
 
 ## Bán hay vay trên tiền tác quyền tương lai
@@ -230,10 +230,10 @@ Tháng 12/2020, Bob Dylan bán toàn bộ khoảng 600 bài hát cho Universal M
 - Nhưng: đừng để nghệ sĩ chỉ thu bài của mình. Nếu tìm được bài **hay hơn** của người khác thì phải thu — bài hay nhất mới có nhiều lượt nghe nhất (tr. 200).
 
 ## Câu hỏi và bài tập
-1. Bài của mày được ca sĩ khác thu trong album bán 5.000 bản. Tính tiền cơ học theo 9,1 xu và theo 12 xu; chia 50/50 với nhà xuất bản và chia đôi với một đồng tác giả.
+1. Bài của bạn được ca sĩ khác thu trong album bán 5.000 bản. Tính tiền cơ học theo 9,1 xu và theo 12 xu; chia 50/50 với nhà xuất bản và chia đôi với một đồng tác giả.
 2. Album 12 bài tự viết, hãng trả 75% cho mười bài. Nghệ sĩ mất bao nhiêu so với mức đầy đủ, tính theo mỗi bản bán?
 3. Phân biệt bằng một câu mỗi loại: tiền cơ học, tiền biểu diễn, tiền cho bản ghi âm (SoundExchange). Ở Việt Nam ai thu từng loại?
-4. Mày có nên bán 50% tiền tác quyền tương lai của danh mục bài hát? Lập bảng lợi – hại.
+4. Bạn có nên bán 50% tiền tác quyền tương lai của danh mục bài hát? Lập bảng lợi – hại.
 `,
   },
 ]

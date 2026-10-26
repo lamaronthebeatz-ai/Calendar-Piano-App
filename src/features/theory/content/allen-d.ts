@@ -78,7 +78,7 @@ Theo Richard Barnet (tr. 224 – 225): ca sĩ thuộc **SAG-AFTRA** (chữ R là
 
 ## Câu hỏi và bài tập
 1. Hãng ứng 30.000 USD thu âm và 10.000 USD sinh hoạt; bản quyền 14% trên giá sỉ 8 USD; all-in, nhà sản xuất lấy 4%. Phải bán bao nhiêu album để hoàn ứng?
-2. Lập danh sách năm chi phí mày sẽ đàm phán để hãng chịu, xếp theo mức quan trọng.
+2. Lập danh sách năm chi phí bạn sẽ đàm phán để hãng chịu, xếp theo mức quan trọng.
 3. Hợp đồng 360 có lợi hay hại cho một nghệ sĩ mới chưa có người hâm mộ? Viết hai đoạn, mỗi đoạn một phía.
 4. Soạn một trang đề xuất tài trợ cho một ban nhạc địa phương theo danh sách của Carolyn Ballen.
 `,
@@ -96,12 +96,12 @@ Tiếp [[quan-ly-nghe-si-thu-nhap-thu-am]]. Thời gian và tiền là hai tài 
 ## Buổi gặp hãng đĩa: một khuôn mẫu
 Allen dựng một kế hoạch chi tiết cho buổi gặp quan trọng nhất — **giới thiệu nghệ sĩ với hãng đĩa để xin hợp đồng** — và nói khuôn mẫu này dùng được cho buổi gặp nhà xuất bản, công ty đặt show, đài phát thanh hay người tuyển chọn playlist (tr. 229).
 - **Không gặp ở nhà hàng:** ồn, bị phục vụ ngắt lời, không có cách nào trình bày. Hẹn **sáng thứ năm** ở văn phòng hãng: ba ngày đầu tuần hãng bận xem bảng xếp hạng tuần trước và lập kế hoạch. Xin **15 phút** với những người chủ chốt, cả giám đốc nếu được (tr. 229).
-- **Hồi hộp là bình thường;** cách chữa duy nhất là "lên kế hoạch, lên kế hoạch, lên kế hoạch". Phòng họp lớn của người ta dễ làm mày chột dạ — các bước dưới đây để giành lại thế chủ động (tr. 229 – 230).
+- **Hồi hộp là bình thường;** cách chữa duy nhất là "lên kế hoạch, lên kế hoạch, lên kế hoạch". Phòng họp lớn của người ta dễ làm bạn chột dạ — các bước dưới đây để giành lại thế chủ động (tr. 229 – 230).
 
 ### Mục đích và bài tập về nhà
-Đây là **buổi bán hàng**: mày đang xin hãng mạo hiểm hàng trăm nghìn hay hàng triệu đô. Và nó **không xoay quanh nghệ sĩ, cũng không xoay quanh mày, mà hoàn toàn xoay quanh hãng** và điều hãng cần (tr. 230).
+Đây là **buổi bán hàng**: bạn đang xin hãng mạo hiểm hàng trăm nghìn hay hàng triệu đô. Và nó **không xoay quanh nghệ sĩ, cũng không xoay quanh bạn, mà hoàn toàn xoay quanh hãng** và điều hãng cần (tr. 230).
 
-| Điều hãng xét ở nghệ sĩ | Điều mày cần biết về hãng |
+| Điều hãng xét ở nghệ sĩ | Điều bạn cần biết về hãng |
 |---|---|
 | Quy mô và đà tăng của người hâm mộ; âm nhạc; hình ảnh; sự tự tin; kinh nghiệm; sự khác biệt; **người quản lý mạnh tới đâu**; đã có hợp đồng xuất bản chưa; lịch diễn và thu nhập; tài trợ, hàng lưu niệm; số vé, đĩa, hàng đã bán; lưu lượng mạng xã hội; độ trưởng thành của sự hiện diện trên mạng; lượt stream | Có bao nhiêu nghệ sĩ tương tự; có ngân sách nhận thêm nghệ sĩ không; sẽ đòi người quản lý gánh bao nhiêu phần quảng bá; có đủ nhân sự không; hãng có tiếng ngại rủi ro không; danh sách nghệ sĩ dài bao nhiêu; **vừa cắt bớt** nghệ sĩ không — có thể là cơ hội |
 
@@ -118,13 +118,13 @@ Allen dựng một kế hoạch chi tiết cho buổi gặp quan trọng nhất 
 - **Tập dượt** với một người dám nhận xét thẳng về cử chỉ, dáng điệu; chuẩn bị trước câu trả lời cho những câu hỏi đoán được. **Nhìn vào mắt** người nghe là điều quan trọng nhất (tr. 235 – 236).
 
 ### Buổi gặp
-Bước vào tự tin, mỉm cười, bắt tay từng người, đưa danh thiếp cho tất cả — kể cả người quen; ăn mặc **ngang hàng** với họ (gọi lễ tân hỏi trước). Mở đầu bằng chuyện nhẹ ("chúc mừng album mới") rồi lắng nghe tìm manh mối. Trình bày ý chính hướng về hãng, cho nghe một bài hay xem một video, nhắc lại ý chính. Ai hỏi điều mày chưa có thì **ghi ngay** — vừa để khỏi quên, vừa cho thấy nhu cầu của họ quan trọng (tr. 236 – 237).
+Bước vào tự tin, mỉm cười, bắt tay từng người, đưa danh thiếp cho tất cả — kể cả người quen; ăn mặc **ngang hàng** với họ (gọi lễ tân hỏi trước). Mở đầu bằng chuyện nhẹ ("chúc mừng album mới") rồi lắng nghe tìm manh mối. Trình bày ý chính hướng về hãng, cho nghe một bài hay xem một video, nhắc lại ý chính. Ai hỏi điều bạn chưa có thì **ghi ngay** — vừa để khỏi quên, vừa cho thấy nhu cầu của họ quan trọng (tr. 236 – 237).
 
 ### Có nên đưa nghệ sĩ đi?
 Tuỳ: nghệ sĩ có làm buổi gặp tốt hơn không, có thoải mái không. Có nghệ sĩ thì khó giữ nhịp; một ban nhạc năm người có mặt là một sự xao nhãng liên tục; nhưng một nghệ sĩ duyên dáng truyền được điều người quản lý không nói được (tr. 237). Chuyện kể của chính Ozzy Osbourne (VH1, 2004): Sharon định cho ông thả chim bồ câu trong phòng họp của Epic để "gây ấn tượng"; Ozzy, đã say, cắn đứt đầu một con. Hai người bị mời ra khỏi toà nhà — nhưng hãng vẫn phát hành album, và *Blizzard of Ozz* đạt đĩa vàng (tr. 237 – 238). Kết luận của Allen: "Tuỳ."
 
 ### Kết thúc và theo dõi
-Đừng chỉ nói "cảm ơn" rồi đi. Nhắc lại lý do nên ký, và khi người đứng đầu nói "chúng tôi sẽ liên lạc lại", **đừng chấp nhận**: nói mày sẽ gọi lại vào ngày giờ cụ thể, ghi vào lịch ngay tại chỗ. Bắt tay lần nữa; trên đường ra **cảm ơn người trợ lý** đã xếp lịch; về văn phòng gửi email cảm ơn từng người và nhắc lịch gọi lại (tr. 238 – 239).
+Đừng chỉ nói "cảm ơn" rồi đi. Nhắc lại lý do nên ký, và khi người đứng đầu nói "chúng tôi sẽ liên lạc lại", **đừng chấp nhận**: nói bạn sẽ gọi lại vào ngày giờ cụ thể, ghi vào lịch ngay tại chỗ. Bắt tay lần nữa; trên đường ra **cảm ơn người trợ lý** đã xếp lịch; về văn phòng gửi email cảm ơn từng người và nhắc lịch gọi lại (tr. 238 – 239).
 
 ## Đàm phán
 Ngày nào cũng có đàm phán — từ thuyết phục một thành viên tập lại hai bài mới, tới cát-xê bảo đảm với nhà tổ chức. Với những hợp đồng đổi đời, người quản lý là **huấn luyện viên** cho luật sư — người nói thay nghệ sĩ (tr. 239). Allen dựa vào *Getting to Yes* (Fisher, Ury, Patton; Dự án Đàm phán Harvard) và kể một chuyện của chính ông:
@@ -132,25 +132,25 @@ Ngày nào cũng có đàm phán — từ thuyết phục một thành viên t�
 Ông là nhà sản xuất một buổi showcase lớn cho hơn 1.000 người trong ngành. Ở chân thang cuốn, quản lý sản xuất của ông và một lãnh đạo hãng đĩa lớn cãi nhau to giữa chỗ đông người. Ông đưa họ vào một phòng kín, để mỗi người xả hết cảm xúc. **Lập trường:** hãng muốn kỹ thuật viên của hãng điều khiển bàn âm thanh cho nghệ sĩ mới; quản lý sản xuất không cho ai đụng vào thiết bị của mình. **Lợi ích:** quản lý sản xuất chịu trách nhiệm với Allen về âm thanh; hãng sợ nghệ sĩ mới càng run khi không có kỹ thuật viên của hãng. Giải pháp: **quản lý sản xuất giữ bàn, nhưng làm theo chỉ dẫn của kỹ thuật viên hãng đứng ngay sau** (tr. 239 – 240).
 1. **Tách người khỏi vấn đề** — đàm phán không phải chuyện tính cách hay cảm xúc với nhau.
 2. **Đừng đàm phán trên lập trường;** tìm **lợi ích** phía sau. Kỹ năng quan trọng nhất là **đặt mình vào vị trí người kia**.
-3. Đàm phán không phải tranh luận hay công kích: phần lớn là với người mày đã hoặc sẽ có quan hệ lâu dài (tr. 240 – 241).
+3. Đàm phán không phải tranh luận hay công kích: phần lớn là với người bạn đã hoặc sẽ có quan hệ lâu dài (tr. 240 – 241).
 
 Phần kết của câu chuyện: hãng đã đầu tư hơn 500.000 USD vào nghệ sĩ mới và trả Allen hàng nghìn đô cho sản xuất — hãng là **khách hàng**; quản lý sản xuất, vì cái tôi, đã thiếu tôn trọng khách hàng, nên Allen không bao giờ thuê lại người đó (tr. 240 – 241). Allen kết bằng lời Ken Kragen: công cụ đàm phán quan trọng nhất là **biết đọc người** — quan sát, lắng nghe, nhìn thế giới bằng mắt họ trước khi phán xét (tr. 241).
 
 ## Đạo đức
-Đạo đức không phải luật hay quy định, mà là giá trị cá nhân, nguyên tắc và chuẩn mực ứng xử — "làm điều đúng vì đó là điều đúng". **Danh tiếng** là tài sản quan trọng nhất của người quản lý. Trong đàm phán người ta hay "thổi phồng" — điều đó các triết gia còn tranh cãi — nhưng **với nghệ sĩ thì luôn phải nói thật**: nghệ sĩ là người thuê mày (tr. 241 – 242). Chuyện Backstreet Boys với Lou Pearlman ([[quan-ly-nghe-si-bai-hoc-tu-nguoi-di-truoc]]) là ví dụ về niềm tin bị thử thách.
+Đạo đức không phải luật hay quy định, mà là giá trị cá nhân, nguyên tắc và chuẩn mực ứng xử — "làm điều đúng vì đó là điều đúng". **Danh tiếng** là tài sản quan trọng nhất của người quản lý. Trong đàm phán người ta hay "thổi phồng" — điều đó các triết gia còn tranh cãi — nhưng **với nghệ sĩ thì luôn phải nói thật**: nghệ sĩ là người thuê bạn (tr. 241 – 242). Chuyện Backstreet Boys với Lou Pearlman ([[quan-ly-nghe-si-bai-hoc-tu-nguoi-di-truoc]]) là ví dụ về niềm tin bị thử thách.
 
 ## Payola
 *Payola* là đưa cho đài phát thanh hay nhân viên đài một thứ có giá trị để phát một bài mà **không công bố** trên sóng hay với lãnh đạo đài — phạm luật ở Mỹ. Cuộc điều tra của Tổng chưởng lý bang New York (giữa thập niên 2000; ví dụ: một hãng tặng nhân viên đài máy tính xách tay để đổi lấy việc phát nhạc) dẫn tới các khoản dàn xếp hàng chục triệu USD với các hãng lớn và tập đoàn đài (tr. 242 – 243).
 
-Người quản lý nên quen một chục người lập trình đài chủ chốt — vì hãng không đối xử với mọi nghệ sĩ như nhau — nhưng ranh giới giữa quảng bá và payola rất mờ: **mời người lập trình và bạn đời đi ăn tối là quảng bá; tặng vé máy bay chỉ để họ tới ăn tối với mày ở một thành phố nghỉ dưỡng là phạm luật** (tr. 243). Một người trong ngành ví: họ chạy sát vạch tới mức không biết trong hay ngoài sân, "nhưng giày họ dính đầy phấn". Lời khuyên: giữ giày sạch phấn, và hỏi luật sư (tr. 243).
+Người quản lý nên quen một chục người lập trình đài chủ chốt — vì hãng không đối xử với mọi nghệ sĩ như nhau — nhưng ranh giới giữa quảng bá và payola rất mờ: **mời người lập trình và bạn đời đi ăn tối là quảng bá; tặng vé máy bay chỉ để họ tới ăn tối với bạn ở một thành phố nghỉ dưỡng là phạm luật** (tr. 243). Một người trong ngành ví: họ chạy sát vạch tới mức không biết trong hay ngoài sân, "nhưng giày họ dính đầy phấn". Lời khuyên: giữ giày sạch phấn, và hỏi luật sư (tr. 243).
 
 Với **streaming**: Billboard (2015) đưa tin có người trả tiền để kiểm soát playlist; Spotify có chính sách cấm nhận quà để tác động playlist. Theo Allen, ở Mỹ việc này **không phạm luật** vì nền tảng streaming không dùng sóng công cộng như đài — nhưng "có lẽ là phi đạo đức" (tr. 243 – 244).
 
 ## Câu hỏi và bài tập
 1. Soạn kịch bản 15 phút cho buổi gặp một hãng đĩa hay nhà tổ chức: mở đầu, ba ý chính, bài nhạc, kết, lời đề nghị, ngày gọi lại.
-2. Lập danh sách mười điều cần biết về hãng trước buổi gặp, và nguồn mày sẽ tra.
-3. Chọn một bất đồng gần đây trong ban nhạc của mày: ghi lập trường và lợi ích của mỗi người, rồi đề xuất giải pháp.
-4. Kể ba cách tiếp cận người tuyển chọn playlist mà mày cho là hợp đạo đức, và một cách thì không.
+2. Lập danh sách mười điều cần biết về hãng trước buổi gặp, và nguồn bạn sẽ tra.
+3. Chọn một bất đồng gần đây trong ban nhạc của bạn: ghi lập trường và lợi ích của mỗi người, rồi đề xuất giải pháp.
+4. Kể ba cách tiếp cận người tuyển chọn playlist mà bạn cho là hợp đạo đức, và một cách thì không.
 `,
   },
   {
@@ -166,7 +166,7 @@ Tiếp [[quan-ly-nghe-si-dieu-hanh-kinh-doanh]]. Chương cuối nói về ba va
 ## Người cố vấn
 Allen kể công việc đầu tiên năm 15 tuổi: bơm xăng ở một trạm xăng thị trấn nhỏ miền Trung Tây Mỹ, ông chủ là Allen Cook — "một ông già cộc cằn", hay mắng, khiến cậu muốn bỏ việc không biết bao lần. Nhiều năm sau ông mới hiểu: ông Cook không nói điều mình muốn mà **làm mẫu** ("Đây, xem tôi làm này"), luôn sẵn lòng giúp lắp lại bộ chế hoà khí, lắng nghe, chỉ cách làm vui lòng khách. Ông Cook không biết mình là người cố vấn (tr. 245 – 246).
 
-Người nhận làm cố vấn cho mày là **một món quà**: họ "nắm tay" mày, giữ mày khỏi bãi cát lún của ngành nhạc vì đã từng mắc lỗi và học từ đó. Họ có thể là người nhà, bạn, thầy cô, nhạc sĩ lâu năm, sếp cũ (tr. 246). Xem thêm [[quan-ly-nghe-si-chuan-bi]].
+Người nhận làm cố vấn cho bạn là **một món quà**: họ "nắm tay" bạn, giữ bạn khỏi bãi cát lún của ngành nhạc vì đã từng mắc lỗi và học từ đó. Họ có thể là người nhà, bạn, thầy cô, nhạc sĩ lâu năm, sếp cũ (tr. 246). Xem thêm [[quan-ly-nghe-si-chuan-bi]].
 
 ## Người quản lý như huấn luyện viên
 Theo nghĩa của sách, người quản lý – huấn luyện viên tìm kết quả làm **nghệ thuật của nghệ sĩ tốt lên** và giúp họ tới mục tiêu. Việc huấn luyện đầu tiên thường là **phép tắc** của ngành — cách cư xử trong vô số buổi họp, bữa trưa, hội nghị, showcase; rồi nhận xét sau mỗi buổi diễn (tr. 247). Allen phỏng theo sách *Coaching: Evoking Excellence in Others* của James Flaherty:
@@ -175,7 +175,7 @@ Theo nghĩa của sách, người quản lý – huấn luyện viên tìm kết
 - **Giới hạn:** bản sắc xã hội và thói quen, nhất là **nghiện chất**, vượt quá huấn luyện. Joyce Moore kể đã phải "kiểm soát tiền của anh ấy, thuốc của anh ấy, những người quanh anh ấy — tôi phải chơi rắn, yêu thương mà cứng rắn" với ca sĩ Sam Moore; và đã thành công (tr. 248).
 - **Nền tảng** là niềm tin hai chiều: nghệ sĩ tin người quản lý kín đáo khi cần, thẳng thắn khi phải; người quản lý tin nghệ sĩ sẵn lòng được huấn luyện. Cùng với tôn trọng và **tự do nói** — trong vòng bí mật (tr. 248 – 249).
 - **Ba kiểu trò chuyện:** kiểu I — một lần là xong ("Anh thấy em hát thế nào?"); kiểu II — cần theo dõi nhiều lần, ví dụ nghệ sĩ lộn xộn trên sân khấu, không có danh sách bài cho ban nhạc, chưa thuộc lời bài mới, không biết đứng đâu; kiểu III — thay đổi căn bản, thường không phải việc của người quản lý (tr. 249).
-- **Làm mạnh quan hệ:** hứa gì làm nấy; đưa nghệ sĩ vào quá trình ra quyết định để họ thấy cần bao nhiêu cân nhắc; kể cho họ nghe chính mày đã đổi ý nhờ người khác huấn luyện ra sao (tr. 249).
+- **Làm mạnh quan hệ:** hứa gì làm nấy; đưa nghệ sĩ vào quá trình ra quyết định để họ thấy cần bao nhiêu cân nhắc; kể cho họ nghe chính bạn đã đổi ý nhờ người khác huấn luyện ra sao (tr. 249).
 
 ## Lãnh đạo
 Người lãnh đạo là người bước lên trước thử thách và nói "để tôi lo" — rồi làm. Kỹ năng lãnh đạo rèn được bằng cách nhận những trách nhiệm ngày càng lớn; tốt nhất là học lý thuyết cộng **trải nghiệm thật**, ví dụ bắt đầu làm trợ lý ở một công ty quản lý (tr. 250).
@@ -197,12 +197,12 @@ Người lãnh đạo là người bước lên trước thử thách và nói "
 ## Lời kết của sách
 Allen kết bằng hai lời khuyên (tr. 254 – 255):
 1. **Đòi khoản ứng trước lớn nhất có thể** từ hãng đĩa hay nhà xuất bản: nó bù chi phí khởi đầu và sinh hoạt; lấp khoảng trống hai năm — hoặc mãi mãi — trước khi tiền bản quyền về; cho thấy **cam kết** của công ty (ứng nhiều thì họ phải cố để thu lại — nhớ rằng "nghệ sĩ ở hãng không sinh ra bình đẳng"); và người quản lý được tính hoa hồng ngay để bù những năm bỏ tiền túi. Xem [[quan-ly-nghe-si-thu-nhap-thu-am]].
-2. **Tìm bài hát hay nhất** — luôn tìm "bài hát đinh". Đừng mặc định bộ phận A&R và nhà sản xuất sẽ tìm được bài hay nhất hợp với nghệ sĩ của mày; hãy tham gia lên kế hoạch album và "từ chối cái tạm được". Nhà sản xuất James Stroud kể về một nghệ sĩ chỉ đặt hai bài hit vào album mười bài để dành bài hay cho album sau — Allen không rõ chiến lược ấy hiệu quả đến đâu. Doanh nghiệp thành công luôn **vượt kỳ vọng** của khách hàng.
+2. **Tìm bài hát hay nhất** — luôn tìm "bài hát đinh". Đừng mặc định bộ phận A&R và nhà sản xuất sẽ tìm được bài hay nhất hợp với nghệ sĩ của bạn; hãy tham gia lên kế hoạch album và "từ chối cái tạm được". Nhà sản xuất James Stroud kể về một nghệ sĩ chỉ đặt hai bài hit vào album mười bài để dành bài hay cho album sau — Allen không rõ chiến lược ấy hiệu quả đến đâu. Doanh nghiệp thành công luôn **vượt kỳ vọng** của khách hàng.
 
 Đọc lại toàn bộ lộ trình ở [[quan-ly-nghe-si-lo-trinh]].
 
 ## Câu hỏi và bài tập
-1. Kể về một người đã (hoặc có thể) là người cố vấn của mày. Họ "làm mẫu" cho mày điều gì?
+1. Kể về một người đã (hoặc có thể) là người cố vấn của bạn. Họ "làm mẫu" cho bạn điều gì?
 2. Chọn một vấn đề sân khấu của một nghệ sĩ và lập kế hoạch một cuộc trò chuyện kiểu II: lần một nói gì, lần hai kiểm tra gì.
 3. Tự chấm mình từ 1 tới 5 trên 20 phẩm chất ở bảng 14.1; chọn ba phẩm chất để rèn trong sáu tháng tới.
 4. Viết một đoạn ngắn: vì sao khoản ứng trước lớn vừa là lợi thế vừa là rủi ro cho nghệ sĩ?

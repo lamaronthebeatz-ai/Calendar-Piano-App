@@ -39,7 +39,7 @@ Hình mây trôi, xoáy nước và bọt sóng của con suối, những "cây 
 Lối nghe "chìm hẳn vào" mà Schopenhauer mô tả gần với kinh nghiệm của nhạc công khi chơi hay nghe hết mình: thời gian như ngừng, cái tôi lùi lại. Nhưng ở §52, ông sẽ nói âm nhạc còn đi xa hơn — nó **không** đi qua Ý niệm (xem [[schopenhauer-am-nhac-ban-sao-cua-y-chi]]).
 
 ## Câu hỏi và bài tập
-1. "Không hỏi ở đâu, khi nào, vì sao, để làm gì — chỉ hỏi cái gì." Thử áp dụng khi nghe một hợp âm duy nhất ngân dài. Mày nhận ra điều gì?
+1. "Không hỏi ở đâu, khi nào, vì sao, để làm gì — chỉ hỏi cái gì." Thử áp dụng khi nghe một hợp âm duy nhất ngân dài. Bạn nhận ra điều gì?
 2. Ý niệm khác vật tự thân ở điểm nào?
 3. Phân biệt cái cốt yếu và cái phụ trong hình ảnh con suối. Áp dụng sự phân biệt ấy cho các lần biểu diễn khác nhau của cùng một bản nhạc.
 `,
@@ -96,7 +96,7 @@ Câu này rất đáng nhớ cho người dạy đàn: kỹ thuật là phương
 
 ## Câu hỏi và bài tập
 1. Giải thích hình ảnh cầu vồng trên thác nước. Nó nói gì về quan hệ giữa nghệ thuật và thời gian?
-2. "Có đôi mắt là bẩm sinh, cho mượn đôi mắt là học được." Theo mày, việc học đàn nằm ở vế nào?
+2. "Có đôi mắt là bẩm sinh, cho mượn đôi mắt là học được." Theo bạn, việc học đàn nằm ở vế nào?
 3. Schopenhauer cho rằng thiên tài ghét toán học. Tìm phản ví dụ trong lịch sử âm nhạc (gợi ý: Xenakis, các nhà soạn nhạc dùng tỉ lệ vàng).
 `,
   },
@@ -159,7 +159,7 @@ Vì mọi vật đều có thể được nhìn thuần khách quan, và ý chí
 Cuối cùng (§42), tỉ lệ hai mặt của khoái cảm thay đổi theo bậc của Ý niệm: trước kiến trúc, cảnh vô cơ và thực vật, khoái cảm **chủ quan** (sự bình yên của nhận thức không ý chí) chiếm ưu thế; trước động vật và con người, khoái cảm **khách quan** (nhận ra Ý niệm) chiếm ưu thế. Từ đây ông đi qua từng nghệ thuật — [[schopenhauer-kien-truc-den-dieu-khac]].
 
 ## Câu hỏi và bài tập
-1. Giải thích hình ảnh "bánh xe Ixion đứng yên". Khi nào mày từng có trải nghiệm ấy với âm nhạc?
+1. Giải thích hình ảnh "bánh xe Ixion đứng yên". Khi nào bạn từng có trải nghiệm ấy với âm nhạc?
 2. Phân biệt cái đẹp và cái siêu phàm theo Schopenhauer. Nghe đoạn mở đầu Giao hưởng số 9 của Beethoven hay *Also sprach Zarathustra* của Richard Strauss: đó là cái đẹp hay cái siêu phàm? Vì sao?
 3. Theo Schopenhauer, cái gì trong âm nhạc có thể thành "cái quyến rũ" làm hỏng sự chiêm ngưỡng?
 `,

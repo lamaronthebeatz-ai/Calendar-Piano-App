@@ -48,7 +48,7 @@ Schopenhauer viết rằng ông mới 30 tuổi khi bản đầu ra đời, và 
 Bộ bài không bắt người học nhạc đọc Kant trước. Hai bài tiếp theo ([[schopenhauer-the-gioi-la-bieu-tuong]], [[schopenhauer-the-gioi-la-y-chi]]) tóm phần nhận thức luận và siêu hình học vừa đủ để hiểu Quyển III. Lời khuyên "đọc hai lần" thì nên theo: §52 về âm nhạc chỉ thật sự sáng ra khi đã hiểu "ý chí" là gì.
 
 ## Câu hỏi và bài tập
-1. Vì sao Schopenhauer nói cấu trúc của cuốn sách là "hữu cơ" chứ không phải "kiến trúc"? Tìm một tác phẩm âm nhạc có cấu trúc mà mày thấy giống như vậy.
+1. Vì sao Schopenhauer nói cấu trúc của cuốn sách là "hữu cơ" chứ không phải "kiến trúc"? Tìm một tác phẩm âm nhạc có cấu trúc mà bạn thấy giống như vậy.
 2. Ba đòi hỏi của lời tựa nói gì về cách Schopenhauer coi người đọc?
 3. Đối chiếu năm tháng: Beethoven còn sống khi tập I ra đời không? Tác phẩm nào của Beethoven ra đời cùng thời?
 `,
@@ -134,7 +134,7 @@ Quyển II kết bằng đặc điểm quyết định của ý chí — điều
 Hạnh phúc là chuyển nhanh từ ham muốn tới thoả mãn rồi tới ham muốn mới; chuyển chậm là khổ đau; còn khi trò chơi ấy dừng lại thì là **buồn chán** — "một khát khao không đối tượng". Ý chí luôn biết nó muốn gì *ở đây và lúc này*, nhưng không bao giờ biết nó muốn gì *nói chung* (tr. 164 – 165). Ở §52, Schopenhauer sẽ đọc đúng cấu trúc này vào giai điệu: rời âm chủ, đi lang thang, rồi trở về — xem [[schopenhauer-giai-dieu-va-cam-xuc]].
 
 ## Câu hỏi và bài tập
-1. Vì sao thân thể là "chìa khoá" của Schopenhauer? Liên hệ với cảm giác của mày khi chơi một đoạn khó trên đàn.
+1. Vì sao thân thể là "chìa khoá" của Schopenhauer? Liên hệ với cảm giác của bạn khi chơi một đoạn khó trên đàn.
 2. Kể các bậc khách thể hoá của ý chí từ thấp tới cao. Ở §52, bè nào của hoà âm ứng với bậc nào?
 3. "Mỗi mục đích đạt được lại là khởi đầu của một chặng mới." Tìm một chỗ trong một bản sonata mà sự trở về âm chủ lại mở ra một đoạn mới.
 `,

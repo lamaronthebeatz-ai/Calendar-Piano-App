@@ -3,7 +3,7 @@
 App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên (riêng tư, có mã khoá) và một thư viện âm nhạc lớn (Lý thuyết, Âm nhạc học, Giáo trình, Quiz). Giao diện tiếng Việt. Local-first, không backend.
 
 ## Làm việc với chủ repo
-- Trả lời bằng tiếng Việt, xưng "tao – mày" như chủ repo.
+- Trả lời bằng tiếng Việt, xưng "tao – mày" như chủ repo. **Chỉ trong khung chat** — nội dung app (bài viết, sách, quiz, giao diện) không bao giờ dùng "mày/tao": gọi người đọc là "bạn", ghi chú của người soạn viết "người biên soạn".
 - **Tối ưu token**: không đọc lại cả repo, không code thừa, không tự bịa. Chỉ đọc file cần cho việc đang làm.
 - **Trích dẫn và sự kiện phải có nguồn.** Chỗ nào chưa đối chiếu nguyên văn hoặc nguồn mâu thuẫn thì ghi rõ ngay trong bài. Không đưa câu nổi tiếng nhưng nguồn gốc mập mờ.
 - Làm trên `main`. Push lên `main` là GitHub Actions tự deploy GitHub Pages (`.github/workflows/deploy-pages.yml`).
