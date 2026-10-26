@@ -120,7 +120,7 @@ function fromCourse(c: Curriculum): ReaderBook {
     items.push({ key: `on-tap-cap-${i + 1}`, kind: 'review', title: `Ôn tập và kiểm tra Cấp ${i + 1}`, label: l.title, part: i + 1, body: levelBody(l) })
   })
   items.push({ key: 'dap-an', kind: 'answers', title: 'Đáp án câu hỏi ôn tập' })
-  return { id: c.id, title: c.title, subtitle: c.subtitle, author: c.author, audience: c.audience, hue: c.hue, glyph: c.glyph, style: 'color', kind: 'course', items }
+  return { id: c.id, title: c.title, subtitle: c.subtitle, author: c.author, audience: c.audience, hue: c.hue, glyph: c.glyph, style: 'color', coverImage: c.coverImage, kind: 'course', items }
 }
 
 export function roman(n: number) {

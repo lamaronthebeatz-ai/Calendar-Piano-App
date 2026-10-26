@@ -1,4 +1,6 @@
 import harmonyCover from '../../assets/covers/hoa-am-co-dien.webp'
+import theory1Cover from '../../assets/covers/nhac-ly-co-ban-1.webp'
+import theory2Cover from '../../assets/covers/nhac-ly-co-ban-2.webp'
 import polyphonyCover from '../../assets/covers/phuc-dieu-nghiem-khac.webp'
 import fuxCover from '../../assets/covers/doi-am-fux.webp'
 import albrechtsbergerCover from '../../assets/covers/albrechtsberger.webp'
@@ -171,6 +173,7 @@ export const BOOKS: Book[] = [
     audience: 'Người mới học · mọi lứa tuổi',
     hue: 70,
     glyph: '𝄞',
+    coverImage: theory1Cover,
     preface: `
 Cuốn sách này dành cho người **bắt đầu học nhạc lý**: học sinh piano, người lớn tự học, giáo viên cần một trình tự dạy. Mục tiêu là sau khi đọc xong, người học **đọc được bản nhạc**, hiểu nốt nào, dài bao lâu, thuộc giọng gì, hợp âm nào đang vang lên.
 
@@ -311,6 +314,7 @@ Quyển 2 tiếp tục với nhịp nâng cao, điệu thức, hợp âm bảy v
     audience: 'Đã học xong Quyển 1',
     hue: 32,
     glyph: '𝄢',
+    coverImage: theory2Cover,
     preface: `
 Quyển 2 dành cho người đã nắm Quyển 1: đọc được nốt, nhịp, quãng, âm giai và hợp âm ba. Ở đây nhạc lý chuyển từ **ký hiệu** sang **cấu trúc**: vì sao các hợp âm nối với nhau như vậy, một giai điệu được xây thế nào, một bản nhạc chia thành những phần nào.
 

@@ -54,6 +54,8 @@ export interface Curriculum {
   /** Hue for the cover and accents. */
   hue: number
   glyph: string
+  /** Optional photographic/illustrated cover (square webp). */
+  coverImage?: string
   intro: string
   /** The design principles, each tied to a reason. */
   principles: { title: string; text: string }[]

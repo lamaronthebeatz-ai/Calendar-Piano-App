@@ -1,3 +1,5 @@
+import kidsCover from '../../assets/covers/piano-tre-em.webp'
+import adultsCover from '../../assets/covers/piano-nguoi-lon.webp'
 import type { Curriculum, ExamSpec } from './types'
 
 /**
@@ -76,6 +78,7 @@ export const CURRICULA: Curriculum[] = [
     audience: 'Trẻ 6 – 12 tuổi · học cùng phụ huynh',
     hue: 25,
     glyph: '𝄞',
+    coverImage: kidsCover,
     intro:
       'Giáo trình đi theo trình tự "âm thanh trước ký hiệu": trẻ hát, vỗ, vận động và chơi theo tai trước, rồi mới đọc điều mình đã nghe. Mỗi chương có đủ các mảng: đọc nốt và kỹ thuật, cùng tiết tấu, luyện tai, ứng tác, sáng tác — những mảng mà khảo sát 66 giáo trình của Hood (1982) chỉ ra là hay bị thiếu. Sau cấp Chuẩn bị, mỗi cấp tương đương một grade piano của ABRSM, từ Initial đến Grade 5. Thời lượng lấy từ "tổng thời gian học" (TQT) mà ABRSM công bố cho từng grade — Initial 40 giờ, Grade 1 60, Grade 2 90, Grade 3 120, Grade 4 150, Grade 5 180 — chia cho nhịp học giả định 10 – 14 giờ mỗi tháng (một buổi học và 15 – 25 phút tập mỗi ngày). ABRSM gọi các con số này là ước tính trung bình; Lamar coi mỗi grade là phần học thêm kể từ grade trước — đây là cách hiểu của Lamar, không phải quy định của ABRSM. Tác phẩm trong mỗi cấp ghi rõ căn cứ xếp cấp; khi thi thật, ba bài thi phải chọn từ sách bài thi ABRSM của kỳ hiện hành.',
     principles: [
@@ -491,6 +494,7 @@ export const CURRICULA: Curriculum[] = [
     audience: 'Người lớn mới học hoặc quay lại',
     hue: 255,
     glyph: '𝄢',
+    coverImage: adultsCover,
     intro:
       'Người lớn học vì những lý do rất khác nhau — thực hiện ước mơ, thư giãn, đệm hát cho gia đình — và bỏ học chủ yếu vì thiếu thời gian hoặc buổi học nhàm. Giáo trình vì vậy đưa hợp âm và đệm hát vào sớm, học nhạc lý ngay trên phím đàn, và mỗi cấp tương đương một grade piano ABRSM từ Initial đến Grade 8. Thời lượng lấy từ "tổng thời gian học" (TQT) ABRSM công bố — Initial 40 giờ, Grade 1 60, 2: 90, 3: 120, 4: 150, 5: 180, 6: 220, 7: 270, 8: 320 — chia cho nhịp học giả định 16 – 22 giờ mỗi tháng (một buổi học và 30 – 45 phút tập gần như mỗi ngày). ABRSM gọi đây là ước tính trung bình; việc coi mỗi grade là phần học thêm kể từ grade trước là cách hiểu của Lamar. Muốn thi Grade 6 – 8 phải đậu nhạc lý Grade 5 (hoặc Practical Musicianship, Jazz Grade 5) — vì vậy cấp Grade 5 có chương nhạc lý riêng. ABRSM không có kỳ thi đệm hát; ba cấp đệm hát cuối tham khảo các kỳ thi Rock & Pop của Trinity, Rockschool, bài thi hoà âm đàn phím của LCM và bài lead sheet của RCM, và có thể học song song từ Grade 5.',
     principles: [
