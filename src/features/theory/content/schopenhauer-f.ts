@@ -20,7 +20,7 @@ export const schopenhauerF: Article[] = [
     body: `
 Năm 1844, khi in lại *Thế giới như là ý chí và biểu tượng*, Schopenhauer thêm một tập thứ hai gồm 50 chương bổ sung, xếp theo bốn quyển của tập I. Chương **XXXIX, "Về siêu hình học của âm nhạc"**, bổ sung cho §52 ([[schopenhauer-am-nhac-ban-sao-cua-y-chi]], [[schopenhauer-giai-dieu-va-cam-xuc]]). Trong bản dịch Anh của **Haldane & Kemp**, các chương này nằm ở tập III (Project Gutenberg #40868).
 
-Về nguồn: bản Haldane & Kemp (1883 – 1886) đã thuộc phạm vi công cộng và là văn bản số, không cần OCR. Trích dẫn dưới đây dịch sát từ bản ấy, chưa đối chiếu nguyên văn tiếng Đức. Bản Gutenberg không giữ số trang in, nên bài ghi theo **chương**. Lưu ý Haldane & Kemp dịch *Vorstellung* là "idea" (chữ thường), dễ lẫn với Ý niệm; bộ bài vẫn dùng **biểu tượng** như ở [[schopenhauer-lo-trinh]].
+Về nguồn: bản Haldane & Kemp (1883 – 1886) đã thuộc phạm vi công cộng và là văn bản số, không cần OCR. Trích dẫn dưới đây dịch từ bản ấy rồi **đối chiếu với nguyên văn tiếng Đức** (*Zur Metaphysik der Musik*, Zürcher Ausgabe 1977, Bd. 4, tr. 526 – 539; văn bản số trên zeno.org, phạm vi công cộng); chỗ bản Anh lệch nghĩa thì dịch theo bản Đức, chữ Đức quan trọng ghi trong ngoặc. Bản Gutenberg không giữ số trang in, nên bài ghi theo **chương**. Lưu ý Haldane & Kemp dịch *Vorstellung* là "idea" (chữ thường), dễ lẫn với Ý niệm; bộ bài vẫn dùng **biểu tượng** như ở [[schopenhauer-lo-trinh]].
 
 ## Một sự song song, không phải giống nhau
 Schopenhauer nhắc lại kết luận của §52: giữa các sản phẩm của âm nhạc và thế giới như biểu tượng (tức tự nhiên) **không có sự giống nhau**, nhưng phải có một **sự song song** rõ ràng. Chương này bổ sung chi tiết cho sự song song ấy.
@@ -30,9 +30,9 @@ Schopenhauer nhắc lại kết luận của §52: giữa các sản phẩm củ
 
 Ông thấy một "xác nhận nổi bật" trong một quy tắc hoà âm:
 
-> "Bè trầm phải cách ba bè trên **xa hơn nhiều** so với khoảng cách giữa ba bè ấy với nhau, nên nó không bao giờ được tới gần chúng hơn một quãng tám, và thường còn ở thấp hơn nữa. […] Vì thế hiệu quả của **hoà âm mở**, trong đó bè trầm cách xa các bè khác, mạnh mẽ và đẹp hơn nhiều so với **hoà âm hẹp**, trong đó nó bị đẩy lên gần chúng — thứ chỉ được dùng vì âm vực giới hạn của nhạc cụ." (ch. XXXIX)
+> "Bè trầm phải cách ba bè trên **xa hơn nhiều** so với khoảng cách giữa ba bè ấy với nhau, nên nó không bao giờ được tới gần chúng hơn một quãng tám, và thường còn ở thấp hơn nữa; theo đó hợp âm ba đúng phép nằm ở quãng tám thứ ba tính từ âm gốc. […] Vì thế hiệu quả của **hoà âm mở**, trong đó bè trầm cách xa các bè khác, mạnh mẽ và đẹp hơn nhiều so với **hoà âm hẹp**, trong đó nó bị đẩy lên gần chúng — thứ chỉ được dùng vì âm vực giới hạn của nhạc cụ." (ch. XXXIX)
 
-Quy tắc ấy, theo ông, có gốc trong tự nhiên của hệ thống âm thanh: những quãng thuận gần nhất vang theo âm gốc qua dao động của nó là **quãng tám và quãng năm** của nó (xem [[chuoi-boi-am]]). Và nó tương ứng với "đặc điểm cơ bản của tự nhiên": các sinh vật có tổ chức gần nhau hơn nhiều so với khối vô cơ của giới khoáng vật — giữa hai bên là "ranh giới rõ nhất và vực thẳm rộng nhất trong toàn bộ tự nhiên". Còn việc giọng cao hát giai điệu vẫn là một phần của hoà âm, hợp với cả bè trầm sâu nhất, ứng với việc **cùng một vật chất** mang Ý niệm con người cũng phải mang các Ý niệm của trọng lực và hoá tính.
+Quy tắc ấy, theo ông, có gốc trong tự nhiên của hệ thống âm thanh: những quãng thuận gần nhất vang theo âm gốc qua dao động của nó là **quãng tám, rồi quãng năm của quãng tám ấy** (*die Oktave und deren Quinte*, tức quãng mười hai; xem [[chuoi-boi-am]]). Và nó tương ứng với "đặc điểm cơ bản của tự nhiên": các sinh vật có tổ chức gần nhau hơn nhiều so với khối vô cơ của giới khoáng vật — giữa hai bên là "ranh giới rõ nhất và vực thẳm rộng nhất trong toàn bộ tự nhiên". Còn việc giọng cao hát giai điệu vẫn là một phần của hoà âm, hợp với cả bè trầm sâu nhất, ứng với việc **cùng một vật chất** mang Ý niệm con người cũng phải mang các Ý niệm của trọng lực và hoá tính.
 
 Đọc bằng nhạc lý hôm nay:
 - Gắn bốn bè với "âm gốc – ba – năm – tám" chỉ đúng cho **một** thế bấm của hợp âm ba ở thể nguyên vị; trong hoà âm bốn bè thật, nốt nào cũng có thể nằm ở bè nào (xem [[luat-hoa-am-bon-be]]).
@@ -60,7 +60,7 @@ Vì âm nhạc đứng với libretto như **cái phổ quát với cái riêng,
 ## Âm nhạc opera: "như Thượng đế, chỉ nhìn thấu trái tim"
 Nhạc của một vở opera, trong tổng phổ, có một đời sống **hoàn toàn độc lập**, "trừu tượng", theo những quy luật bất biến của nó, nên có thể tạo đủ hiệu quả mà không cần libretto. Nhưng vì được viết cho vở kịch, nó như **linh hồn** của vở kịch: gắn với biến cố, nhân vật và lời, nó thành biểu hiện của ý nghĩa bên trong và sự tất yếu thầm kín của chúng. Đồng thời nó tỏ ra dửng dưng với toàn bộ chất liệu của câu chuyện:
 
-> "Nó biểu hiện cơn bão đam mê và nỗi bi thương của cảm xúc theo cùng một cách ở mọi nơi, và âm thanh của nó đi kèm vở kịch với cùng sự trang trọng, dù chất liệu là Agamemnon và Achilles hay cuộc cãi cọ của một gia đình tiểu tư sản. Vì với nó chỉ có đam mê, những chuyển động của ý chí, và **như Thượng đế, nó chỉ nhìn thấu trái tim**." (ch. XXXIX)
+> "Nó biểu hiện cơn bão đam mê và nỗi bi thương của cảm xúc theo cùng một cách ở mọi nơi, và âm thanh của nó đi kèm vở kịch với cùng sự trang trọng, dù chất liệu là Agamemnon và Achilles hay cuộc cãi cọ của một gia đình tiểu tư sản. Vì với nó chỉ có đam mê, những chuyển động của ý chí, và **như Thượng đế, nó chỉ nhìn thấu trái tim** (*sie sieht, wie Gott, nur die Herzen*)." (ch. XXXIX)
 
 Vì thế ngay cả khi đi kèm những trò hề lố bịch nhất của **opera hài**, âm nhạc vẫn giữ vẻ đẹp, sự thuần khiết và cao cả của nó — "như ý nghĩa sâu xa và nghiêm trang của sự tồn tại treo trên trò hề và những khốn khổ vô tận của đời người, không rời nó lấy một khoảnh khắc". Liên hệ với nhận xét của Hanslick về Mozart: [[hanslick-loi-ca-va-opera]].
 
@@ -101,7 +101,7 @@ Vì yếu tố hữu tỉ và vô tỉ ấy có vô số bậc, sắc thái, chu
 ## Vì sao nhạc buồn không làm ta buồn thật
 Nghệ thuật đòi hỏi ý chí không xen vào, ta phải là **chủ thể nhận thức thuần tuý** ([[schopenhauer-cai-dep-va-cai-sieu-pham]]). Vì thế âm nhạc không được khơi dậy đau đớn và khoái lạc thật, mà chỉ những **vật thay thế** của chúng: cái dễ chịu với trí tuệ như **hình ảnh** của sự thoả mãn, cái khó chịu như **hình ảnh** của nỗi đau.
 
-> "Chỉ vì thế mà âm nhạc không bao giờ gây cho ta nỗi buồn thật, mà ngay cả trong những giai điệu u sầu nhất vẫn dễ chịu, và ta vui lòng nghe trong ngôn ngữ của nó **lịch sử thầm kín của ý chí ta** […]. Còn khi, trong thực tại và những kinh hoàng của nó, chính ý chí của ta bị khuấy động và hành hạ, thì ta không còn làm việc với các âm và tỉ lệ số của chúng nữa, mà chính ta là **sợi dây run rẩy bị kéo căng và gảy**." (ch. XXXIX)
+> "Chỉ vì thế mà âm nhạc không bao giờ gây cho ta nỗi buồn thật, mà ngay trong những **hợp âm đau đớn nhất** vẫn dễ chịu, và ta vui lòng nghe trong ngôn ngữ của nó **lịch sử thầm kín của ý chí ta** (*die geheime Geschichte unsers Willens*) với mọi trì hoãn, trở ngại và dày vò — kể cả trong những giai điệu u sầu nhất. Còn khi, trong thực tại và những kinh hoàng của nó, chính ý chí của ta bị khuấy động và hành hạ, thì ta không còn làm việc với các âm và tỉ lệ số của chúng nữa, mà chính ta là **sợi dây bị kéo căng, bị gảy và run rẩy** (*die gespannte, gekniffene und zitternde Saite*)." (ch. XXXIX)
 
 ## Vì sao soprano hát giai điệu, còn bè trầm thì không
 Chất "âm nhạc" của nốt tuỳ vào **tốc độ dao động** chứ không vào cường độ, nên trong hoà âm, tai luôn theo **nốt cao nhất**, không phải nốt to nhất. Vì thế ngay trong phần đệm dàn nhạc mạnh nhất, giọng soprano vẫn nổi rõ và có "quyền tự nhiên" hát giai điệu. Nó lại linh hoạt nhất — thấy ở những đoạn hoa mỹ — nên là đại diện của **ý thức phát triển cao nhất**, ở bậc trên cùng của thang tồn tại.
@@ -113,7 +113,7 @@ Chất "âm nhạc" của nốt tuỳ vào **tốc độ dao động** chứ kh�
 - Bè trầm có giai điệu là chuyện thường trong Baroque và jazz (xem [[bass-so]], [[bass-di-jazz]]). Nhận xét về aria bass phản ánh khẩu vị của ông hơn là một quy luật.
 
 ## Nhịp là đối xứng trong thời gian
-Giai điệu có hai yếu tố: **nhịp điệu** (lượng, độ dài) và **hoà âm** (chất, cao độ). Cả hai dựa trên tỉ lệ thuần số học, tức tỉ lệ thời gian. Yếu tố nhịp là **cốt yếu**: tự nó tạo được một kiểu giai điệu, như trên trống.
+Giai điệu có hai yếu tố: **nhịp điệu** (lượng, độ dài) và **hoà âm** (chất, cao độ). Trên bản nhạc, ông nói, yếu tố thứ nhất gắn với các **đường dọc** (vạch nhịp), yếu tố thứ hai với các **đường ngang** (dòng kẻ). Cả hai dựa trên tỉ lệ thuần số học, tức tỉ lệ thời gian. Yếu tố nhịp là **cốt yếu**: tự nó tạo được một kiểu giai điệu, như trên trống.
 
 > "**Nhịp điệu** trong thời gian là điều **đối xứng** trong không gian: sự chia thành những phần bằng nhau tương ứng với nhau." (ch. XXXIX)
 
@@ -124,7 +124,7 @@ Rồi ông tả cấu trúc thứ bậc của một tác phẩm như một ngư�
 - Hai hay nhiều câu làm thành một **phần**, thường được nhân đôi bằng dấu nhắc lại; hai phần làm thành một bản nhỏ hay một chương.
 - Concerto hay sonata thường có ba chương, giao hưởng bốn, thánh lễ năm.
 
-Từ đó câu nói "kiến trúc là âm nhạc đông cứng". Schopenhauer truy nguồn nó về **Goethe**, dẫn *Trò chuyện với Goethe* của Eckermann: Goethe kể đã tìm thấy trong giấy tờ một trang gọi kiến trúc là "một thứ âm nhạc đã cứng lại", vì tâm trạng kiến trúc tạo ra gần với hiệu quả của âm nhạc. Schopenhauer nhấn mạnh sự tương tự ấy **chỉ ở hình thức bên ngoài** (nhịp ↔ đối xứng), không ở bản chất; và đùa thêm: khi âm nhạc, như "trong một cơn thèm độc lập", nhân một chỗ ngừng để thoát khỏi nhịp mà bay vào một **cadenza** tự do, đoạn nhạc không nhịp ấy giống **phế tích** không còn đối xứng — có thể gọi là "một cadenza đông cứng" (ch. XXXIX). (Câu "kiến trúc là âm nhạc đông cứng" thường được gán cho Goethe hay Schelling; ở đây ta có lời của chính Schopenhauer dẫn Eckermann — chưa đối chiếu bản Eckermann.)
+Từ đó câu nói "kiến trúc là âm nhạc đông cứng". Schopenhauer truy nguồn nó về **Goethe**, dẫn *Trò chuyện với Goethe* của Eckermann: Goethe kể đã tìm thấy trong giấy tờ một trang gọi kiến trúc là "một thứ âm nhạc đã cứng lại" (*eine erstarrte Musik*), vì tâm trạng kiến trúc tạo ra gần với hiệu quả của âm nhạc (Eckermann, tập II, tr. 88, theo dẫn của Schopenhauer). Schopenhauer gọi câu "kiến trúc là âm nhạc đông cứng" (*gefrorene Musik*) là một "câu đùa táo bạo" được nhắc đi nhắc lại suốt 30 năm, và đoán Goethe đã buột ra nó trong trò chuyện từ lâu, rồi người khác nhặt lấy để khoe. Schopenhauer nhấn mạnh sự tương tự ấy **chỉ ở hình thức bên ngoài** (nhịp ↔ đối xứng), không ở bản chất — "thật lố bịch nếu muốn đặt nghệ thuật hạn hẹp và yếu nhất ngang hàng về bản chất với nghệ thuật rộng lớn và mạnh nhất"; và đùa thêm: khi âm nhạc, như "trong một cơn thèm độc lập", nhân một chỗ ngừng để thoát khỏi nhịp mà bay vào một **cadenza** tự do, đoạn nhạc không nhịp ấy giống **phế tích** không còn đối xứng — có thể gọi là "một cadenza đông cứng" (ch. XXXIX). (Câu "kiến trúc là âm nhạc đông cứng" thường được gán cho Goethe hay Schelling; ở đây ta có lời của chính Schopenhauer dẫn Eckermann — chưa đối chiếu trực tiếp bản Eckermann.)
 
 ## Giai điệu: chia lìa và hoà giải
 Đây là phân tích hay nhất của chương:
@@ -143,7 +143,7 @@ Schopenhauer đưa ra một ví dụ nhạc rất đơn giản (nhịp 2/4, bố
 
 > "Ở đây chuỗi hoà âm tìm thấy âm chủ đúng ở cuối ô thứ nhất; nhưng nó không nhận được thoả mãn nào từ đó, vì nhịp lại đang ở **phần nhẹ nhất** của ô. Ngay sau đó, ở ô thứ hai, nhịp có **phần mạnh** của ô, nhưng chuỗi nốt lại đang ở **bậc bảy**. Vậy ở đây hai yếu tố của giai điệu hoàn toàn **chia lìa**, và ta thấy bất an. Ở nửa sau của câu, mọi thứ đảo ngược, và ở nốt cuối chúng **hoà giải**." (ch. XXXIX)
 
-Xét về siêu hình học, sự chia lìa và hoà giải không ngừng ấy là bản sao của việc **những ước muốn mới nảy sinh rồi được thoả mãn**. Ông còn thấy trong đó một điều kiện *bên trong* (hoà âm) gặp một điều kiện *bên ngoài* (nhịp) như thể **tình cờ** — do nhà soạn nhạc sắp đặt —, có thể so với **vần** trong thơ; và đó là hình ảnh của việc ước muốn của ta gặp những hoàn cảnh bên ngoài thuận lợi không phụ thuộc vào nó, tức **hình ảnh của hạnh phúc**. "Vì thế, bằng sự tâng bốc, âm nhạc thấm vào trái tim ta."
+Xét về siêu hình học, sự chia lìa và hoà giải không ngừng ấy là bản sao của việc **những ước muốn mới nảy sinh rồi được thoả mãn**. Ông còn thấy trong đó một điều kiện *bên trong* (hoà âm) gặp một điều kiện *bên ngoài* (nhịp) như thể **tình cờ** — do nhà soạn nhạc sắp đặt —, có thể so với **vần** trong thơ; và đó là hình ảnh của việc ước muốn của ta gặp những hoàn cảnh bên ngoài thuận lợi không phụ thuộc vào nó, tức **hình ảnh của hạnh phúc**. Cũng vì thế mà âm nhạc "len vào lòng ta" (*schmeichelt sich in unser Herz*): nó luôn bày ra trước mắt ta **sự thoả mãn trọn vẹn của mọi ước muốn**.
 
 ## Nốt treo, át bảy, hai hợp âm cơ bản
 - **Nốt treo** (suspension): "một nghịch âm trì hoãn thuận âm cuối cùng, vốn được chờ đợi chắc chắn; nên sự khao khát nó được tăng lên, và khi nó đến thì thoả mãn hơn" — tương tự sự thoả mãn của ý chí được nâng cao nhờ trì hoãn (xem [[not-ngoai-hop-am]]).
@@ -152,7 +152,7 @@ Xét về siêu hình học, sự chia lìa và hoà giải không ngừng ấy 
 - "Trong toàn bộ âm nhạc thật ra chỉ có **hai hợp âm cơ bản**: hợp âm bảy nghịch và hợp âm ba thuận, mọi hợp âm đều quy về chúng được" — ứng với việc với ý chí, rốt cuộc chỉ có **không thoả mãn và thoả mãn**. (Một cách nói giản lược theo lý thuyết hoà âm thế kỷ XVIII – XIX.)
 
 ## Trưởng và thứ
-Như có hai tâm trạng cơ bản — thanh thản (hay ít ra là khoẻ mạnh) và buồn (thậm chí nặng nề) —, âm nhạc có hai giọng chung là **trưởng và thứ**, và luôn ở một trong hai.
+Như có hai tâm trạng cơ bản — thanh thản (hay ít ra là khoẻ mạnh) và buồn (hay ít ra là ngột ngạt — *Beklemmung*) —, âm nhạc có hai giọng chung là **trưởng và thứ**, và luôn ở một trong hai.
 
 > "Thật kỳ diệu là có một **dấu hiệu của nỗi đau** không gây đau về thể chất mà cũng không do quy ước, nhưng vẫn thích hợp và không thể nhầm: **giọng thứ**. Từ đó ta đo được âm nhạc bắt rễ sâu đến đâu trong bản chất của sự vật và con người." (ch. XXXIX)
 
@@ -196,7 +196,7 @@ Ngoài chương XXXIX về âm nhạc ([[schopenhauer-sieu-hinh-hoc-am-nhac]], [
 | XXXVIII | Về lịch sử | §51 |
 | XXXIX | Về siêu hình học của âm nhạc | §52 |
 
-Bài này không dịch hết mười chương mà gom những đoạn **nói về âm nhạc** hoặc đáng chú ý nhất cho người học nhạc. Trích dẫn dịch từ bản Haldane & Kemp, ghi theo chương.
+Bài này không dịch hết mười chương mà gom những đoạn **nói về âm nhạc** hoặc đáng chú ý nhất cho người học nhạc. Trích dẫn dịch từ bản Haldane & Kemp, ghi theo chương, và đã đối chiếu với nguyên văn tiếng Đức (Zürcher Ausgabe, Bd. 4, trên zeno.org).
 
 ## Nghệ thuật trả lời "đời sống là gì?" (XXXIV)
 Kết quả của sự nắm bắt thuần khách quan là một câu trả lời cho câu hỏi "**Đời sống là gì?**". Mọi tác phẩm thật đều trả lời theo cách của nó, nhưng bằng "ngôn ngữ ngây thơ, trẻ con của trực quan", nên câu trả lời chỉ là một hình ảnh thoáng qua.
@@ -210,7 +210,7 @@ Các nghệ thuật khác giơ ra một hình ảnh và nói: "Hãy nhìn đây,
 
 Ông nhắc lại lập luận của §49 – 50: tác phẩm sinh ra từ khái niệm rõ ràng luôn **giả**. Ta khó chịu khi, nghe một bản nhạc "nhằm miêu tả một điều xác định", thấy cái khái niệm lạnh lùng, khô khan lộ ra qua mọi chất liệu phong phú. Dấu hiệu nhận ra: tác giả có thể nói rõ bằng lời điều mình định trình bày **trước khi** bắt tay vào làm — vậy thì lời đã đủ.
 
-Ngược lại, những gì làm "một mạch", như bản phác của hoạ sĩ, như **giai điệu đến hoàn toàn không cần suy nghĩ, như thể nhờ cảm hứng**, như bài thơ trữ tình, có ưu thế là thuần tuý sản phẩm của khoảnh khắc. Còn những tác phẩm lớn làm chậm — tranh lịch sử lớn, sử thi dài, **opera lớn** — không tránh khỏi những đoạn nhạt, nơi lý trí, kỹ thuật và thói quen phải lấp chỗ trống mà cảm hứng để lại; chỉ trừ những kiệt tác tuyệt đỉnh như *Hamlet*, *Faust*, **opera *Don Juan*** (*Don Giovanni*). Ông kể *Messiah* của Handel trong số những tác phẩm có chỗ nhạt.
+Ngược lại, những gì làm "một mạch", như bản phác của hoạ sĩ, như **giai điệu đến hoàn toàn không cần suy nghĩ, như thể nhờ cảm hứng**, như bài thơ trữ tình, có ưu thế là thuần tuý sản phẩm của khoảnh khắc. Còn những tác phẩm lớn làm chậm — tranh lịch sử lớn, sử thi dài, **opera lớn** — không tránh khỏi những đoạn nhạt, nơi lý trí, kỹ thuật và thói quen phải lấp chỗ trống mà cảm hứng để lại; chỉ trừ những kiệt tác tuyệt đỉnh như *Hamlet*, *Faust*, **opera *Don Juan*** (*Don Giovanni*). Ông dẫn làm ví dụ những sử thi dài: *Messiade* của Klopstock, *Gerusalemme liberata* của Tasso, cả *Paradise Lost* và *Aeneid* — và câu của Horace: "có khi Homer hiền lành cũng ngủ gật". (Bản dịch Anh ghi "the Messiah", dễ tưởng là oratorio của Handel; nguyên văn Đức *Messiade* là sử thi của Klopstock.)
 
 ## Tài năng và thiên tài (XXXI)
 Thiên tài là năng lực trội về nhận thức **trực quan**; tài năng là sự nhanh nhạy của nhận thức **diễn ngôn**. Câu nổi tiếng nhất của chương — thường bị trích mà không ghi nguồn — có ở đây:
@@ -229,10 +229,10 @@ Nhìn một phong cảnh đẹp, xét như hiện tượng của não, là hiệ
 ## Kiến trúc và âm nhạc không mô phỏng (XXXV)
 Ông bác ý cho rằng thân cây hay hình người (như Vitruvius nói) là nguyên mẫu của cây cột. Nếu hình dạng cột chỉ là thứ tình cờ lấy từ bên ngoài, ta đã không thấy nó hài hoà, cũng không thấy một sai lệch nhỏ về tỉ lệ khó chịu ngay "**như một nốt sai trong âm nhạc**". Điều đó chỉ có thể vì, với mục đích và phương tiện cho trước, mọi thứ còn lại được xác định tiên nghiệm — "như trong âm nhạc, **với giai điệu và giọng cho trước, toàn bộ hoà âm về cơ bản được xác định**. Và như âm nhạc, kiến trúc nói chung **không phải nghệ thuật mô phỏng**, dù cả hai thường bị coi lầm là vậy." (ch. XXXV)
 
-## Giai điệu đi khắp thế giới (XXXVI)
+## Giai điệu đi khắp thế giới (XXXVII)
 Ông kể năm 1823 ở Florence người ta tìm ra một bức Đức Mẹ của Raphael treo nhiều năm trong phòng gia nhân của một cung điện — bằng chứng rằng tranh tượng cần nhiều học vấn mới được trân trọng. Ngược lại:
 
-> "Một **giai điệu đẹp chạm tới trái tim** chắc chắn sẽ đi vòng quanh thế giới, và một bài thơ xuất sắc lang thang từ dân tộc này sang dân tộc khác. […] Các nghệ thuật tạo hình có thể thiếu được: cả những dân tộc — như các dân tộc Hồi giáo — không có chúng; nhưng **không dân tộc nào không có âm nhạc và thơ ca**." (ch. XXXVI)
+> "Một **giai điệu đẹp chạm tới trái tim** chắc chắn sẽ đi vòng quanh thế giới, và một bài thơ xuất sắc lang thang từ dân tộc này sang dân tộc khác. […] Các nghệ thuật tạo hình có thể thiếu được: cả những dân tộc — như các dân tộc Hồi giáo — không có chúng; nhưng **không dân tộc nào không có âm nhạc và thơ ca**." (ch. XXXVII)
 
 (Nhận xét về các dân tộc Hồi giáo là khái quát của thời ông về việc kiêng hình tượng; nghệ thuật Hồi giáo thật ra rất phong phú về trang trí, thư pháp và kiến trúc.)
 

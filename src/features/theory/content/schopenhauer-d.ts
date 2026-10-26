@@ -16,7 +16,7 @@ export const schopenhauerD: Article[] = [
 ## Một nghệ thuật không có chỗ trong hệ thống
 Schopenhauer đã đi hết các nghệ thuật, từ kiến trúc (bậc thấp nhất, xung đột trọng lực – độ cứng) tới bi kịch (bậc cao nhất, xung đột của ý chí với chính nó). Còn lại một nghệ thuật "bị loại ra, và phải bị loại ra, vì trong mạch hệ thống không có chỗ thích hợp cho nó":
 
-> "Nghệ thuật ấy là **âm nhạc**. Nó đứng hoàn toàn tách khỏi mọi nghệ thuật khác. Trong nó, ta không nhận ra bản sao, sự lặp lại, của bất kỳ Ý niệm nào về bản chất bên trong của thế giới. Thế mà nó là một nghệ thuật lớn lao và tinh tế đến thế, tác động của nó lên bản chất sâu nhất của con người mạnh đến thế, và nó được con người hiểu trọn vẹn và sâu xa đến thế trong thâm tâm, như **một ngôn ngữ hoàn toàn phổ quát, mà độ rõ còn vượt cả thế giới trực quan**." (tr. 255 – 256)
+> "Nghệ thuật ấy là **âm nhạc**. Nó đứng hoàn toàn tách khỏi mọi nghệ thuật khác. Trong nó, ta không nhận ra bản sao, sự lặp lại, của bất kỳ Ý niệm nào về các tồn tại trong thế giới. Thế mà nó là một nghệ thuật lớn lao và tuyệt diệu đến thế, tác động của nó lên bản chất sâu nhất của con người mạnh đến thế, và nó được con người hiểu trọn vẹn và sâu xa đến thế trong thâm tâm, như **một ngôn ngữ hoàn toàn phổ quát, mà độ rõ còn vượt cả thế giới trực quan**." (tr. 255 – 256)
 
 ## Leibniz: đúng, nhưng chỉ ở bề ngoài
 Leibniz gọi âm nhạc là "*exercitium arithmeticae occultum nescientis se numerare animi*" — "một bài tập số học vô thức trong đó tâm trí không biết mình đang đếm". Schopenhauer cho rằng Leibniz đúng **chừng nào chỉ xét mặt ngoài** của âm nhạc. Nhưng nếu chỉ có vậy, niềm vui âm nhạc sẽ giống niềm vui khi một phép tính cộng ra đúng, chứ không phải "niềm vui sâu xa khi ta thấy những ngóc ngách thầm kín nhất của bản chất ta được biểu hiện". Các tỉ lệ số mà âm nhạc phân giải được chỉ là **ký hiệu**, không phải **cái được biểu thị** (tr. 256).
@@ -79,6 +79,21 @@ Quyển II đã cho thấy các hiện tượng của cùng một ý chí xung �
 
 Ông dẫn *Akustik* của Chladni. Đây là mô tả đúng về **dấu phẩy** (comma) — vì sao không thể có một hệ thống lên dây thuần mà chuyển giọng tự do; xem [[luat-binh-quan]].
 
+## Đối chiếu nguyên văn
+Các trích dẫn trong bài dịch từ bản Payne, rồi được đối chiếu với nguyên văn tiếng Đức (§52, Zürcher Ausgabe 1977, Bd. 2; văn bản số trên zeno.org, phạm vi công cộng) và với bản Haldane & Kemp tập I; nghĩa khớp nhau. Vài câu then chốt nên biết ở nguyên văn:
+
+| Nguyên văn | Dịch |
+|---|---|
+| *Sie steht ganz abgesondert von allen andern.* | Nó đứng hoàn toàn tách khỏi mọi nghệ thuật khác. |
+| *eine ganz allgemeine Sprache, deren Deutlichkeit sogar die der anschaulichen Welt selbst übertrifft* | một ngôn ngữ hoàn toàn phổ quát, mà độ rõ còn vượt cả thế giới trực quan |
+| *Abbild des Willens selbst* | bản sao của chính ý chí |
+| *denn diese reden nur vom Schatten, sie aber vom Wesen* | vì các nghệ thuật kia chỉ nói về cái bóng, còn nó nói về bản chất |
+| *Grundbaß* · *Ripienstimmen* · *Hauptstimme* | bè trầm nền · các bè đệm ở giữa · bè chính (giai điệu) |
+| *in Terzen, Quarten, Quinten, nie um einen Ton* | bằng quãng ba, bốn, năm, không bao giờ đi một cung |
+| *gleichschwebende Temperatur* (ch. 39) · *Temperatur* (§52) | luật bình quân |
+
+Chữ *Ripienstimmen* (bè *ripieno*, bè "lấp đầy") cho thấy Schopenhauer nghĩ theo thực hành dàn nhạc – hợp xướng thời ông: bè trầm, các bè lấp đầy hoà âm, và bè chính.
+
 ## Câu hỏi và bài tập
 1. Vì sao âm nhạc "không có chỗ" trong hệ thống các nghệ thuật của Schopenhauer?
 2. Giải thích câu "các nghệ thuật kia chỉ nói về cái bóng, còn âm nhạc nói về bản chất" bằng sơ đồ ý chí – Ý niệm – vật cá biệt.
@@ -98,14 +113,14 @@ Quyển II đã cho thấy các hiện tượng của cùng một ý chí xung �
 Tiếp nửa đầu §52 ([[schopenhauer-am-nhac-ban-sao-cua-y-chi]]): giai điệu là bậc cao nhất trong phép tương ứng — đời sống của con người. Bài này đọc phần Schopenhauer phát triển ý ấy.
 
 ## Giai điệu kể lịch sử thầm kín nhất của ý chí
-> "Giai điệu kể câu chuyện của ý chí được lý trí soi sáng, cái mà dấu ấn trong đời thực là chuỗi hành động của nó. Nhưng giai điệu còn nói nhiều hơn: nó kể **lịch sử thầm kín nhất** của ý chí được soi sáng ấy, vẽ ra mọi xao động, mọi nỗ lực, mọi chuyển động của ý chí, tất cả những gì lý trí gom dưới khái niệm rộng và tiêu cực là *cảm xúc*, thứ không thể đưa sâu hơn vào những trừu tượng của lý trí. Vì thế người ta luôn nói âm nhạc là **ngôn ngữ của cảm xúc và đam mê**, như lời nói là ngôn ngữ của lý trí." (tr. 259)
+> "Giai điệu kể câu chuyện của ý chí được sự suy xét (*Besonnenheit*) soi sáng, cái mà dấu ấn trong đời thực là chuỗi hành động của nó. Nhưng giai điệu còn nói nhiều hơn: nó kể **lịch sử thầm kín nhất** của ý chí được soi sáng ấy, vẽ ra mọi xao động, mọi nỗ lực, mọi chuyển động của ý chí, tất cả những gì lý trí gom dưới khái niệm rộng và tiêu cực là *cảm xúc*, thứ không thể đưa sâu hơn vào những trừu tượng của lý trí. Vì thế người ta luôn nói âm nhạc là **ngôn ngữ của cảm xúc và đam mê**, như lời nói là ngôn ngữ của lý trí." (tr. 259)
 
 Ông dẫn Platon (*Luật*, VIII: chuyển động của giai điệu bắt chước linh hồn khi bị đam mê lay động) và Aristotle (*Problemata* 19: "Vì sao nhịp và giai điệu, dù chỉ là âm thanh, lại giống trạng thái của linh hồn?").
 
 ## Rời âm chủ và trở về
 Đây là đoạn nổi tiếng nhất, nơi lý thuyết ý chí của Quyển II ([[schopenhauer-the-gioi-la-y-chi]]) gặp nhạc lý:
 
-> "Bản chất con người là ý chí của nó khao khát, được thoả, lại khao khát, cứ thế mãi; hạnh phúc của nó chỉ là sự chuyển từ ham muốn sang thoả mãn và từ đó sang ham muốn mới, chuyển nhanh. Vì thoả mãn không tới là khổ đau; khao khát trống rỗng một ham muốn mới là mệt mỏi, buồn chán. Tương ứng với điều này, bản chất của giai điệu là **sự đi chệch, rời xa âm chủ không ngừng theo ngàn cách**, không chỉ tới các quãng hài hoà — quãng ba và âm át — mà tới mọi âm, tới quãng bảy nghịch tai và những quãng cực đoan; nhưng **rốt cuộc luôn trở về âm chủ**. Theo mọi cách ấy, giai điệu biểu hiện muôn hình dạng của nỗ lực của ý chí, nhưng cũng biểu hiện sự thoả mãn của nó khi cuối cùng tìm lại được một quãng hài hoà, và hơn nữa, âm chủ." (tr. 260)
+> "Bản chất con người là ý chí của nó khao khát, được thoả, lại khao khát, cứ thế mãi; hạnh phúc của nó chỉ là sự chuyển từ ham muốn sang thoả mãn và từ đó sang ham muốn mới, chuyển nhanh. Vì thoả mãn không tới là khổ đau; khao khát trống rỗng một ham muốn mới là mệt mỏi, buồn chán. Tương ứng với điều này, bản chất của giai điệu là **sự đi chệch, rời xa âm chủ không ngừng theo ngàn cách**, không chỉ tới các quãng hài hoà — quãng ba và âm át — mà tới mọi âm, tới quãng bảy nghịch tai và các bậc tăng; nhưng **rốt cuộc luôn trở về âm chủ**. Theo mọi cách ấy, giai điệu biểu hiện muôn hình dạng của nỗ lực của ý chí, nhưng cũng biểu hiện sự thoả mãn của nó khi cuối cùng tìm lại được một quãng hài hoà, và hơn nữa, âm chủ." (tr. 260)
 
 Thuật ngữ nhạc lý hôm nay: **âm chủ** (keynote, bậc I), **âm át** (dominant, bậc V), quãng bảy nghịch tai (như trong hợp âm át bảy). Ý tưởng "căng – giải" của giai điệu và hoà âm điệu tính là nền của [[dieu-tinh|điệu tính]] và [[cau-ket|câu kết]].
 
@@ -193,6 +208,20 @@ Schopenhauer khép Quyển III:
 > "Thế giới như biểu tượng, nếu xét riêng nó, dứt mình khỏi ý muốn và để nó một mình chiếm lấy ý thức, là **mặt dễ chịu nhất, và là mặt vô tội duy nhất của đời sống**. Ta phải coi nghệ thuật là sự nâng cao, sự phát triển hoàn hảo hơn của tất cả điều này […]; theo nghĩa đầy đủ của từ, nó có thể được gọi là **hoa của đời sống**." (tr. 266)
 
 Nghệ thuật là "buồng tối" (*camera obscura*) cho thấy sự vật thuần khiết hơn, là "vở kịch trong vở kịch, sân khấu trên sân khấu trong *Hamlet*" (tr. 266 – 267). Nhưng với người nghệ sĩ, nhận thức thuần tuý ấy **không** trở thành con đường thoát khỏi đời sống như ở vị thánh; nó chỉ là "**niềm an ủi chốc lát** trong đời", cho tới khi sức mạnh được nâng lên bởi sự chiêm ngưỡng ấy mệt với màn trình diễn và quay sang mặt nghiêm túc của sự vật. Bức *Thánh Cecilia* của Raphael — vị thánh bỏ rơi các nhạc cụ, ngước nhìn lên — được ông coi là biểu tượng của bước chuyển ấy (tr. 267). Quyển IV bắt đầu từ đó: [[schopenhauer-y-chi-song-va-giai-thoat]].
+
+## Đối chiếu nguyên văn
+Các câu dưới đây đã đối chiếu với nguyên văn tiếng Đức của §52 (Zürcher Ausgabe 1977, Bd. 2, trên zeno.org):
+
+| Nguyên văn | Dịch |
+|---|---|
+| *das Wesen der Melodie ein stetes Abweichen, Abirren vom Grundton* | bản chất của giai điệu là sự đi chệch, rời xa âm chủ không ngừng |
+| *der Wechsel eines halben Tones, der Eintritt der kleinen Terz, statt der großen* | sự đổi nửa cung, quãng ba thứ thế chỗ quãng ba trưởng |
+| *ohne die Motive dazu* | không có động cơ của chúng |
+| *Panakeion aller unserer Leiden* | phương thuốc chữa mọi nỗi khổ của ta |
+| *die Begriffe sind die universalia post rem, die Musik aber giebt die universalia ante rem* | khái niệm là cái phổ quát sau sự vật, còn âm nhạc cho cái phổ quát trước sự vật |
+| *verkörperte Musik* | âm nhạc hiện thân (thế giới) |
+| *Musica est exercitium metaphysices occultum nescientis se philosophari animi* | nhại câu của Leibniz: *exercitium arithmeticae occultum nescientis se numerare animi* — "một bài tập số học vô thức của tâm trí không biết mình đang đếm" |
+| *die Blüthe des Lebens* | hoa của đời sống |
 
 ## Câu hỏi và bài tập
 1. Hát một giai điệu quen (ví dụ chủ đề *Ode an die Freude*) và đánh dấu chỗ nó rời âm chủ, chỗ nó trở về. Mô tả theo ngôn ngữ của Schopenhauer.
