@@ -7,7 +7,9 @@
  */
 const BASE = `${import.meta.env.BASE_URL}media/intro-dvorak9`
 const MUTED = 'intro:muted'
-const GESTURES = ['pointerdown', 'keydown', 'touchend'] as const
+// Touch screens only unlock sound when the finger lifts (touchend, pointerup, click), not when it lands;
+// every candidate is tried and the wait ends only once sound is really running.
+const GESTURES = ['pointerdown', 'pointerup', 'touchend', 'click', 'keydown'] as const
 
 let audio: HTMLAudioElement | null = null
 let ctx: AudioContext | null = null
@@ -59,13 +61,16 @@ let startedAt = 0
 /** True right after a tap started the music, so that same tap on the speaker button doesn't mute it again. */
 export const introMusicJustStarted = () => performance.now() - startedAt < 1000
 
+let begun = false
+
 /**
- * Inside a tap: build the Web Audio route now, while the browser allows it (an AudioContext made earlier
- * would stay suspended and silent), then play and fade in.
+ * On a tap or key: build the Web Audio route (needed for fades on iOS, which ignores `audio.volume`), resume it
+ * and play. If the browser didn't count this event as a real activation the context stays suspended and the
+ * music would run silent, so the listeners stay on and the next event tries again.
  */
 function onGesture() {
-  if (!audio || stopped) return
-  unhook()
+  const el = audio
+  if (!el || stopped || begun) return
   startedAt = performance.now()
   if (!ctx) {
     try {
@@ -74,22 +79,25 @@ function onGesture() {
         ctx = new AC()
         gain = ctx.createGain()
         gain.gain.value = 0
-        ctx.createMediaElementSource(audio).connect(gain).connect(ctx.destination)
-        audio.volume = 1
+        ctx.createMediaElementSource(el).connect(gain).connect(ctx.destination)
+        el.volume = 1
       }
     } catch {
       ctx = gain = null
     }
   }
-  ctx?.resume().catch(() => undefined)
-  audio.currentTime = 0
-  audio
-    .play()
+  const c = ctx
+  Promise.all([c ? c.resume() : Promise.resolve(), el.play()])
     .then(() => {
+      if (begun || stopped || el !== audio || (c && c.state !== 'running')) return
+      begun = true
+      unhook()
+      // Start the theme from the top, whatever ran silently before.
+      el.currentTime = 0
       announce('playing')
       ramp(1, 1200)
     })
-    .catch(() => announce('off'))
+    .catch(() => undefined)
 }
 
 /** Starts the opening music. Where the browser allows sound without a tap it plays at once, straight from the
@@ -97,6 +105,7 @@ function onGesture() {
 export function startIntroMusic() {
   if (audio || introMuted() || saveData()) return
   stopped = false
+  begun = false
   audio = new Audio()
   // AAC where it plays (Safari, Chrome); Opus otherwise.
   audio.src = audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') ? `${BASE}.m4a` : `${BASE}.ogg`
@@ -108,6 +117,13 @@ export function startIntroMusic() {
     unhook()
     announce('off')
   })
+  // Started from a tap (the speaker button): take the Web Audio route straight away, so iOS can fade it too.
+  if ((navigator as Navigator & { userActivation?: { isActive: boolean } }).userActivation?.isActive) {
+    waiting = true
+    for (const g of GESTURES) addEventListener(g, onGesture, true)
+    onGesture()
+    return
+  }
   audio
     .play()
     .then(() => {
