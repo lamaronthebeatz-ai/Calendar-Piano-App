@@ -17,6 +17,12 @@ export function overlayOpen() {
   const ui = useUIStore.getState()
   return ui.searchOpen || ui.quickActionsOpen || !!document.querySelector('[role="dialog"]:not([aria-modal="false"]), [aria-modal="true"]')
 }
+/** Safari in a browser tab already swipes back from the edge on its own; a second gesture would step back twice. */
+const nativeSwipeBack = () => {
+  const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  const standalone = matchMedia('(display-mode: standalone)').matches || (navigator as Navigator & { standalone?: boolean }).standalone === true
+  return ios && !standalone
+}
 export const inBookReader = (pathname: string) => /^\/curriculum\/[^/]+\/[^/]+/.test(pathname) && !/\/(in|tong-quan)$/.test(pathname)
 
 /**
@@ -57,6 +63,12 @@ export function useEdgeSwipeBack(root: RefObject<HTMLElement | null>) {
     let page: HTMLElement | null = null
     let scrim: HTMLElement | null = null
     let reduce = false
+    // The browser or the system went back by itself during the gesture (an OS back swipe from the same edge):
+    // the page must not step back a second time.
+    let wentBack = false
+    const onPop = () => {
+      wentBack = true
+    }
 
     const paint = () => {
       frame = 0
@@ -76,9 +88,10 @@ export function useEdgeSwipeBack(root: RefObject<HTMLElement | null>) {
       mode = 'idle'
       if (e.touches.length !== 1 || arriving.current) return
       const t = e.touches[0]
-      if (t.clientX > EDGE || !isTouchUI() || !where.current.canGoBack) return
+      if (t.clientX > EDGE || !isTouchUI() || !where.current.canGoBack || nativeSwipeBack()) return
       if (inBookReader(where.current.pathname) || overlayOpen()) return
       mode = 'pending'
+      wentBack = false
       x0 = lastX = t.clientX
       y0 = t.clientY
       lastT = e.timeStamp
@@ -113,7 +126,7 @@ export function useEdgeSwipeBack(root: RefObject<HTMLElement | null>) {
       lastT = e.timeStamp
       if (!frame) frame = requestAnimationFrame(paint)
     }
-    const onEnd = () => {
+    const onEnd = (e: TouchEvent) => {
       if (mode !== 'drag') {
         mode = 'idle'
         return
@@ -122,7 +135,8 @@ export function useEdgeSwipeBack(root: RefObject<HTMLElement | null>) {
       cancelAnimationFrame(frame)
       frame = 0
       const w = el.clientWidth
-      const commit = x > w * COMMIT || (v > FLICK && x > 30)
+      // A cancelled touch means the system took the gesture over; never turn that into a history step.
+      const commit = e.type === 'touchend' && !wentBack && (x > w * COMMIT || (v > FLICK && x > 30))
       if (reduce || !page) {
         reset()
         if (commit) {
@@ -136,7 +150,7 @@ export function useEdgeSwipeBack(root: RefObject<HTMLElement | null>) {
       const p = page
       const s = scrim
       p.animate([{ transform: `translate3d(${x}px,0,0)` }, { transform: `translate3d(${target}px,0,0)` }], { duration: ms, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }).onfinish = () => {
-        if (commit) {
+        if (commit && !wentBack) {
           p.style.transform = `translate3d(${w}px,0,0)`
           p.style.opacity = '0'
           p.classList.remove('is-swiping')
@@ -160,7 +174,9 @@ export function useEdgeSwipeBack(root: RefObject<HTMLElement | null>) {
     el.addEventListener('touchmove', onMove, { passive: false })
     el.addEventListener('touchend', onEnd)
     el.addEventListener('touchcancel', onEnd)
+    addEventListener('popstate', onPop)
     return () => {
+      removeEventListener('popstate', onPop)
       cancelAnimationFrame(frame)
       el.removeEventListener('touchstart', onStart)
       el.removeEventListener('touchmove', onMove)
