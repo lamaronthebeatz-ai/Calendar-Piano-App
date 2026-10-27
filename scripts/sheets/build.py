@@ -29,12 +29,15 @@ def sources():
         for block in re.split(r'^=== ', f.read_text(), flags=re.M)[1:]:
             head, _, body = block.partition('\n')
             body = body.strip()
-            ragged = '\\paper { ragged-right = ##t }\n\\layout { \\context { \\Score \\omit BarNumber \\override SpacingSpanner.spacing-increment = #0.9 } }\n'
+            # a \\layout reaches only the scores after it, so the example settings go first
+            layout = '\\layout { \\context { \\Score \\omit BarNumber \\override SpacingSpanner.spacing-increment = #0.9 } \\context { \\Staff \\omit KeyCancellation explicitKeySignatureVisibility = #end-of-line-invisible explicitClefVisibility = #end-of-line-invisible } }\n'
             text = body if '\\score' in body else f'\\score {{\n{body}\n\\layout {{}}\n}}'
-            yield 'ex', head.strip(), f'\\version "2.24.0"\n{text}\n{COMMON}\n{ragged}'
+            yield 'ex', head.strip(), f'\\version "2.24.0"\n{layout}{text}\n{COMMON}\n\\paper {{ ragged-right = ##t }}\n'
     for f in sorted((MUSIC / 'tp').glob('*.ly')):
-        # the piece first, then the common settings, so they win over the source's own paper block
-        yield 'tp', f.stem, f'{f.read_text()}\n{COMMON}\n\\paper {{ ragged-last = ##t }}\n'
+        # instrument names ("1.", "Piano") from the sources are dropped: the reader prints the title. A \\layout must come
+        # before the scores to reach them, so it is put first; the paper settings come last to win over the source's own.
+        names = '\\layout { \\context { \\Staff \\remove "Instrument_name_engraver" } \\context { \\PianoStaff \\remove "Instrument_name_engraver" } }\n'
+        yield 'tp', f.stem, f'{names}{f.read_text()}\n{COMMON}\n\\paper {{ ragged-last = ##t }}\n'
 
 
 def crop(svg: Path, png: Path):

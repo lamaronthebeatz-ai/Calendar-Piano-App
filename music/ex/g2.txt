@@ -1,0 +1,114 @@
+% Examples of the Grade 2 book.
+
+=== g2-nhip-hai-hai
+\relative c'' { \time 2/2 c2 d | e1 | d4 e f d | c1 \bar "|." }
+\addlyrics { "1" "2" "1–2" "1" "và" "2" "và" "1–2" }
+
+=== g2-nhip-tren-hai
+{ \time 3/2 \relative c'' { c2 d e | f1 e2 \bar "||" }
+  \time 4/2 \relative c'' { g2 f e d | c\breve \bar "|." } }
+
+=== g2-nhip-ba-tam
+\relative c'' { \time 3/8 c8 d e | f4 e8 | d8 e16 d c8 | c4. \bar "|." }
+\addlyrics { "1" "2" "3" "1–2" "3" "1" "2" "và" "3" "1–2–3" }
+
+=== g2-nhom-hai-hai
+{ \time 2/2 \relative c'' { c8 d e f g a b c | c4 b8 a g2 \bar "||" }
+  \time 3/8 \relative c'' { c8 d e | f16 e d c b8 | c4. \bar "|." } }
+
+=== g2-lien-ba
+\new RhythmicStaff { \time 2/4 c8 c c c | \tuplet 3/2 { c8 c c } \tuplet 3/2 { c c c } | c4 \tuplet 3/2 { c8 c c } | c2 \bar "|." }
+\addlyrics { ti ti ti ti "tri" "o" "la" "tri" "o" "la" ta "tri" "o" "la" "ta-a" }
+
+=== g2-lien-ba-giai-dieu
+\relative c'' { \time 4/4 c4 \tuplet 3/2 { d8 e f } g4 g | \tuplet 3/2 { a8 g f } \tuplet 3/2 { e d c } d2 | \tuplet 3/2 { c8 r e } g4 c,2 \bar "|." }
+
+=== g2-ke-phu-sol
+\relative c''' { \omit Staff.TimeSignature \cadenzaOn a1 b c d \bar "||" c,, b a \bar "|." }
+\addlyrics { "A5" "B5" "C6" "D6" "C4" "B3" "A3" }
+
+=== g2-ke-phu-fa
+\relative c' { \clef bass \omit Staff.TimeSignature \cadenzaOn c1 d e \bar "||" e,, d c \bar "|." }
+\addlyrics { "C4" "D4" "E4" "E2" "D2" "C2" }
+
+=== g2-am-giai-la-truong
+\relative c' { \key a \major \omit Staff.TimeSignature \cadenzaOn a'1 b cis d e fis gis a \bar "|." }
+\addlyrics { A B "C♯" D E "F♯" "G♯" A }
+
+=== g2-am-giai-si-giang
+\relative c' { \key bes \major \omit Staff.TimeSignature \cadenzaOn bes1 c d ees f g a bes \bar "|." }
+\addlyrics { "B♭" C D "E♭" F G A "B♭" }
+
+=== g2-am-giai-mi-giang
+\relative c' { \key ees \major \omit Staff.TimeSignature \cadenzaOn ees1 f g aes bes c d ees \bar "|." }
+\addlyrics { "E♭" F G "A♭" "B♭" C D "E♭" }
+
+=== g2-hoa-bieu-moi
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \set Staff.printKeyCancellation = ##f \cadenzaOn \key a \major s1 \bar "||" \key bes \major s1 \bar "||" \key ees \major s1 \bar "||" }
+  \new Staff \with { \remove "Time_signature_engraver" } { \set Staff.printKeyCancellation = ##f \clef bass \cadenzaOn \key a \major s1 \key bes \major s1 \key ees \major s1 }
+>>
+
+=== g2-thu-tu-dau
+{ \omit Staff.TimeSignature \cadenzaOn \relative c'' { fis1 cis gis' } \bar "||" \relative c'' { bes1 ees aes, } \bar "|." }
+\addlyrics { "Fa♯" "Đô♯" "Sol♯" "Si♭" "Mi♭" "La♭" }
+
+=== g2-song-song
+\relative c' { \omit Staff.TimeSignature \cadenzaOn c1 d e f g a b c \bar "||" a b c d e f g a \bar "|." }
+\addlyrics { "Đô" "" "" "" "" "La" "" "Đô" "La" "" "" "" "" "" "" "La" }
+
+=== g2-thu-hoa-am-la
+\relative c'' { \omit Staff.TimeSignature \cadenzaOn a1 b c d e f gis a \bar "|." }
+\addlyrics { "1" "2" "3" "4" "5" "6" "7♯" "8" }
+
+=== g2-thu-hoa-am-mi
+\relative c' { \key e \minor \omit Staff.TimeSignature \cadenzaOn e1 fis g a b c dis e \bar "|." }
+\addlyrics { E "F♯" G A B C "D♯" E }
+
+=== g2-thu-hoa-am-re
+\relative c' { \key d \minor \omit Staff.TimeSignature \cadenzaOn d1 e f g a bes cis d \bar "|." }
+\addlyrics { D E F G A "B♭" "C♯" D }
+
+=== g2-hop-am-chu-moi
+\relative c' { \set Staff.printKeyCancellation = ##f \omit Staff.TimeSignature \cadenzaOn \key a \major <a cis e>1 \bar "||" \key bes \major <bes d f> \bar "||" \key ees \major <ees g bes> \bar "||" \once \omit Staff.KeySignature \key a \minor <a c e> \bar "||" \key e \minor <e g b> \bar "||" \key d \minor <d f a> \bar "|." }
+\addlyrics { "La trưởng" "Si♭ trưởng" "Mi♭ trưởng" "La thứ" "Mi thứ" "Rê thứ" }
+
+=== g2-quang-tren-chu
+\relative c' { \key ees \major \omit Staff.TimeSignature \cadenzaOn <ees g>1 <ees bes'> <ees c'> <ees d'> <ees ees'> \bar "|." }
+\addlyrics { "3" "5" "6" "7" "8" }
+
+=== g2-thuat-ngu
+\relative c'' { \time 3/4 \tempo "Andante cantabile" e2\mp( d4 | c2.) | e4-. f-. g-. | g2.\fermata | \tempo "più mosso" c4\f b a | g2. \bar "|." }
+
+=== g2-am-giai-hai-tay
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 4/4 \key g \major g8-1 a b c-1 d e fis-4 g-1 | a b c-1 d e fis g4-5 \bar "|." }
+  \new Staff \relative c' { \clef bass \key g \major g8-5 a b c d-1 e-3 fis-2 g-1 | a-4 b c d-1 e-3 fis-2 g4-1 }
+>>
+
+=== g2-cromatic-re
+\relative c' { \time 4/4 d8-1 dis-3 e-1 f-2 fis-3 g-1 gis-3 a-1 | ais-3 b-1 c-2 cis-3 d2-1 \bar "|." }
+
+=== g2-nguoc-chieu-hai-qd
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 c8-1 d e f-1 g a b c-1 | d e f-1 g a b c4-5 \bar "|." }
+  \new Staff \relative c' { \clef bass c8-1 b a g-1 f e d c-1 | b a g-1 f e d c4-5 }
+>>
+
+=== g2-rai-re-truong
+\relative c' { \time 4/4 \key d \major d8-1 fis-2 a-3 d-1 fis-2 a-3 d4-5 | d8-5 a-3 fis-2 d-1 a-3 fis-2 d4-1 \bar "|." }
+
+=== g2-thi-tau-1
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 4/4 \key d \major fis4\mf e d2 | e4. fis8 g2 | fis4 e d e | d1 \bar "|." }
+  \new Staff \relative c { \clef bass \key d \major d1 | a' | d,2 a' | d,1 }
+>>
+
+=== g2-thi-tau-2
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 3/4 \key e \minor b4\p( a g) | fis2 e4 | g4. a8 b4 | e,2. \bar "|." }
+  \new Staff \relative c { \clef bass \key e \minor e2. | dis | e2 g4 | e2. }
+>>
+
+=== g2-doc-hieu
+\relative c { \clef bass \key bes \major \time 2/2 \tempo "Moderato" bes2\mf d4 f | ees2 c | d4 f bes, d | c1 | \tuplet 3/2 { f4 ees d } c2 | bes1 \bar "|." }

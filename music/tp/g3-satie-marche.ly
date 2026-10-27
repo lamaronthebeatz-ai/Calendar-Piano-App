@@ -21,19 +21,19 @@
 
 % --- modifying slur shapes
 
-slurGoinDwOne = { \shape #'((( 0 . 0) (0 . -2) (0 . -2) (0 . 0))) Slur }
+slurGoinDwOne = {  }
 
-slurGoinDwTwo = { \shape #'((( 0 . 0) (0 . -0.5) (0 . -2) (0 . -3))(( 0 . -3) (0 . -2) (0 . -0.5) (0 . 0))) Slur }
+slurGoinDwTwo = {  }
 
-slurGoinDwThr = { \shape #'((( 0 . 0) (0 . -2) (0 . -2) (0 . -2))(( 0 . -3) (0 . -2) (0 . -0.5) (0 . -0.2))) Slur }
+slurGoinDwThr = {  }
 
-slurGoinDwFou = { \shape #'((( 0 . 0) (0 . -2) (0 . -2) (0 . -3))(( 0 . -3) (0 . -2) (0 . -1) (0 . -0.2))) Slur }
+slurGoinDwFou = {  }
 
-slurGoinUpOne = { \shape #'((( 0 . 0) (0 . 2) (0 . 2) (0 . 0))) Slur }
+slurGoinUpOne = {  }
 
-slurGoinUpTwo = { \shape #'((( 0 . 0) (0 . 2) (0 . 2) (0 . 2.5))(( 0 . 3) (0 . 2) (0 . 1) (0 . 0))) Slur }
+slurGoinUpTwo = {  }
 
-slurGoinUpThr = { \shape #'((( 0 . 0) (0 . 1) (0 . 1) (0 . 0))) Slur }
+slurGoinUpThr = {  }
 
 % --- modifying beat strucure to control beaming
 
@@ -70,20 +70,20 @@ trebleNotes = \relative c'' {
   a4 g4) | % 02
   \slurGoinDwOne \beamingOne f8( e8 g8 e8 | % 03
   f8 e8 g4) | % 04
-  \slurGoinDwTwo a4( b4  \break | % 05
+  \slurGoinDwTwo a4( b4   | % 05
 
   a4 g4) | % 06
   \slurGoinDwOne a8( e8 b'8 e,8 | % 07
   a8 e8 b'4)  | % 08
   \slurGoinDwThr g8 ( f8 a8 f8 | % 09
   b8 f8 a8 f8 | % 10
-  g8 f8 a8 f8 \break | % 11
+  g8 f8 a8 f8  | % 11
 
   b8 f8 a4) | % 12
   \beamingTwo <e g>8_\staccato <e g>8_\staccato <e g>8_\accent b'8\rest | % 13
   d2\rest  | % 14
   \autoBeamOn a8_\staccato a8_\staccato <e g>4_\accent | % 15
-  a8_\staccato a8_\staccato <e g>4_\accent \pageBreak | % 16
+  a8_\staccato a8_\staccato <e g>4_\accent  | % 16
 
   % Repeat Part A
 
@@ -91,19 +91,19 @@ trebleNotes = \relative c'' {
   a4 g4) | % 18
   \slurGoinDwOne \beamingOne f8( e8 g8 e8 | % 19
   f8 e8 g4) | % 20
-  \slurGoinDwTwo a4( b4  \break | % 21
+  \slurGoinDwTwo a4( b4   | % 21
 
   a4 g4) | % 22
   \slurGoinDwOne a8( e8 b'8 e,8 | % 23
   a8 e8 b'4)  | % 24
   \slurGoinDwThr g8 ( f8 a8 f8 | % 25
-  b8 f8 a8 f8 \break | % 26
+  b8 f8 a8 f8  | % 26
 
   g8 f8 a8 f8  | % 27
   b8 f8 a4) | % 28
   d2\rest | % 29
   b8\rest \slurGoinDwOne e,8( f8 g8  | % 30
-  <f a>8) <f a>8_\staccato b4\rest \break | % 31
+  <f a>8) <f a>8_\staccato b4\rest  | % 31
   d2\rest | % 32
 
   % Part B
@@ -112,7 +112,7 @@ trebleNotes = \relative c'' {
   <e a>8_\staccato <e a>8_\staccato <e a>4_\staccato  | % 34
   <e g>8_\staccato <e g>8_\staccato <e g>4_\staccato  | % 35
   <e g>8_\staccato <e g>8_\staccato <e g>4_\staccato  | % 36
-  \slurGoinDwFou g4( f8 a8 \break | % 37
+  \slurGoinDwFou g4( f8 a8  | % 37
 
   e8 g8 f8 a8 | % 38
   e4) b4\rest | % 39
@@ -121,13 +121,13 @@ trebleNotes = \relative c'' {
   % Part B repeat
 
   <e, b'>8_\staccato <e b'>8_\staccato <e b'>4_\staccato  | % 41
-  <e a>8_\staccato <e a>8_\staccato <e a>4_\staccato \break  | % 42
+  <e a>8_\staccato <e a>8_\staccato <e a>4_\staccato   | % 42
   <e g>8_\staccato <e g>8_\staccato <e g>4_\staccato  | % 43
   <e g>8_\staccato <e g>8_\staccato <e g>4_\staccato  | % 44
   \slurGoinDwOne e8( b'8 f8 b8 | % 45
   g8 b8 a8 b8 | % 46
   g8 b8 g8 e8)  | % 47
-  d'2\rest \pageBreak | % 48
+  d'2\rest  | % 48
 
   % Part A
 
@@ -135,19 +135,19 @@ trebleNotes = \relative c'' {
   a4 g4) | % 50
   \slurGoinDwOne \beamingOne f8( e8 g8 e8 | % 51
   f8 e8 g4) | % 52
-  \slurGoinDwTwo a4( b4  \break | % 53
+  \slurGoinDwTwo a4( b4   | % 53
 
   a4 g4) | % 54
   \slurGoinDwOne a8( e8 b'8 e,8 | % 55
   a8 e8 b'4)  | % 56
   \slurGoinDwThr g8 ( f8 a8 f8 | % 57
-  b8 f8 a8 f8 \break | % 58
+  b8 f8 a8 f8  | % 58
   g8 f8 a8 f8  | % 59
 
   b8 f8 a4) | % 60
   \beamingTwo <e g>8_\staccato <e g>8_\staccato \autoBeamOff <e g>8_\accent b'8\rest | % 61
   d2\rest  | % 62
-  \autoBeamOn a8_\staccato a8_\staccato <e g>4_\accent \break | % 63
+  \autoBeamOn a8_\staccato a8_\staccato <e g>4_\accent  | % 63
   a8_\staccato a8_\staccato <e g>4_\accent  | % 64
 
   % Repeat Part A
@@ -155,14 +155,14 @@ trebleNotes = \relative c'' {
   \slurDown \stemUp \slurGoinDwOne a4( b4  | % 65
   a4 g4) | % 66
   \slurGoinDwOne \beamingOne f8( e8 g8 e8 | % 67
-  f8 e8 g4) \break | % 68
+  f8 e8 g4)  | % 68
   \slurGoinDwOne a4( b4 | % 69
 
   a4 g4) | % 70
   \slurGoinDwOne a8( e8 b'8 e,8 | % 71
   a8 e8 b'4)  | % 72
   \slurGoinDwThr g8 ( f8 a8 f8 | % 73
-  b8 f8 a8 f8 \break | % 74
+  b8 f8 a8 f8  | % 74
 
   g8 f8 a8 f8  | % 75
   b8 f8 a4) | % 76

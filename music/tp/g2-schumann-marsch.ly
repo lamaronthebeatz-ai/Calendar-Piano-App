@@ -48,14 +48,14 @@
 	<fis a> r g r |
 	<g b>8. <g c>16 <g d'>8 r |
 	<g e'> r <g d'> r |
-\break %mes7
+ %mes7
 	<e' g> r <d fis> r |
 	<cis e> r d r |
 	<g, b>8. <g c>16 <g d'>8 r |
 	<g e'> r <g d'> r |
 	<fis c'> r <g b> r |
 	<fis a> r g r |
-\break %mes13
+ %mes13
 	<g b>8. <g c>16 <g d'>8 r |
 	<g e'> r <g d'> r |
 	<e' g> r <d fis> r |
@@ -63,14 +63,14 @@
 	\repeat volta 2 {
 	d,8. e16 fis4 |
 	e d |
-\break %mes19
+ %mes19
 	<fis e'>8 r <g d'> r |
 	<a c> r <g b> r |
 	<d fis a>8. e16 fis4 |
 	e d |
 	<a' c>8 r <g b> r |
 	<fis a> r <g b> r |
-\break %mes25
+ %mes25
 	<g b>8. <g c>16 <g d'>8 r |
 	<g e'> r <g d'> r |
 	<fis c'> r <g b> r |

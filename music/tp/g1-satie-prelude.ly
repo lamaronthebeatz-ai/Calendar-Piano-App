@@ -33,7 +33,7 @@ trebleNotes = \relative c' {
   \slurDown e8( c8) b'4\rest  | % 01
   f8( d8) b'4\rest | % 02
   g8( d8) b'4\rest | % 03
-  g8( d8) b'4\rest \break  | % 04
+  g8( d8) b'4\rest   | % 04
 
   e,8( c8) b'4\rest  | % 05
   f8( d8) b'4\rest | % 06
@@ -42,13 +42,13 @@ trebleNotes = \relative c' {
 
   % Part B
 
-  b4\rest c,8( e8)  \break | % 09
+  b4\rest c,8( e8)   | % 09
   b'4\rest d,8( f8) | % 10
   b4\rest e,8( g8) | % 11
   b4\rest e,8( g8) | % 12
 
   b4\rest c,8( e8) | % 13
-  b'4\rest d,8( f8) \break  | % 14
+  b'4\rest d,8( f8)   | % 14
   b4\rest e,8( g8) | % 15
   b4\rest e,8( g8) | % 16
 
@@ -57,7 +57,7 @@ trebleNotes = \relative c' {
   b4\rest d,8( c8) | % 17
   b'4\rest d,8( c8)  | % 18
   b'4\rest d,8( c8)  | % 19
-  b'4\rest d,8( c8) \pageBreak | % 20
+  b'4\rest d,8( c8)  | % 20
 
   b'4\rest d,8( c8) | % 21
   b'4\rest d,8( c8)  | % 22
@@ -67,13 +67,13 @@ trebleNotes = \relative c' {
   % Part D
 
   f2(  | % 25
-  e2 \break | % 26
+  e2  | % 26
   d2  | % 27
   g2)  | % 28
   f2( | % 29
   e2  | % 30
   d2  | % 31
-  g2) \break  | % 32
+  g2)   | % 32
 
   % Part A
 
@@ -82,7 +82,7 @@ trebleNotes = \relative c' {
   g8( d8) b'4\rest | % 35
   g8( d8) b'4\rest | % 36
 
-  e,8( c8) b'4\rest \break  | % 37
+  e,8( c8) b'4\rest   | % 37
   f8( d8) b'4\rest | % 38
   g8( d8) b'4\rest | % 39
   g8( d8) b'4\rest  | % 40
@@ -90,13 +90,13 @@ trebleNotes = \relative c' {
   % Part B
 
   b4\rest c,8( e8) | % 41
-  b'4\rest d,8( f8) \break | % 42
+  b'4\rest d,8( f8)  | % 42
   b4\rest e,8( g8) | % 43
   b4\rest e,8( g8) | % 44
 
   b4\rest c,8( e8) | % 45
   b'4\rest d,8( f8) | % 46
-  b4\rest e,8( g8) \break | % 47
+  b4\rest e,8( g8)  | % 47
   b4\rest e,8( g8) | % 48
 
   % Part C

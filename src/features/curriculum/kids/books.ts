@@ -1,5 +1,6 @@
 import initialCover from '../../../assets/covers/piano-tre-em-initial.webp'
 import g1Cover from '../../../assets/covers/piano-tre-em-1.webp'
+import g2Cover from '../../../assets/covers/piano-tre-em-2.webp'
 import type { ExamSpec, KidsBook, Score } from '../types'
 
 /**
@@ -24,6 +25,12 @@ export const KIDS_EXAM: Record<string, ExamSpec> = {
     sightReading: 'Đến 6 ô nhịp; nhịp 2/4, 3/4, 4/4; giọng Đô, Sol, Fa trưởng, Rê, La thứ; bất kỳ vị trí năm ngón nào; có thể có nốt trắng chấm dôi, móc đơn, dấu lặng, dấu luyến, dấu nhấn, mf, mp, to dần – nhỏ dần, dấu hoá bất thường (chỉ trong giọng thứ).',
     aural: 'A: vỗ phách, nhấn phách mạnh, nói nhịp hai hay ba. B: hát lại ba câu hai ô, giọng trưởng, âm chủ – bậc ba. C: nhận ra chỗ đổi cao độ (gần đầu hay gần cuối). D: trả lời về cường độ và cách chơi.',
     theory: 'Nhạc lý ABRSM Grade 1 (thi trực tuyến): năm hình nốt và dấu lặng, chấm dôi, dấu nối; nhịp 2/4, 3/4, 4/4; khoá Sol, Fa; dấu hoá; âm giai và hoá biểu Đô, Sol, Rê, Fa trưởng, bậc, quãng trên âm chủ (bằng số), hợp âm chủ; thuật ngữ; câu hỏi về một giai điệu.',
+  },
+  g2: {
+    scales: `Thuộc lòng, liền tiếng, đều (${SPEC_NOTE}). Sol, Fa trưởng; La, Rê thứ (tự nhiên, hoà âm hoặc giai điệu) 2 quãng tám, hai tay cùng lúc. Rê, La trưởng; Mi, Sol thứ 2 quãng tám, từng tay. Đô trưởng ngược chiều 2 quãng tám. Cromatic bắt đầu từ Rê 1 quãng tám, từng tay. Hợp âm rải Rê, La trưởng; Mi, Sol thứ 2 quãng tám, từng tay.`,
+    sightReading: 'Như Grade 1, thêm: hai tay chơi cùng lúc; giọng Rê trưởng, Mi và Sol thứ; nốt tròn, nhóm nốt đen chấm dôi – móc đơn, dấu nối, pp.',
+    aural: 'A: vỗ phách, nhấn phách mạnh, nói nhịp hai hay ba. B: hát lại ba câu hai ô, giọng trưởng, âm chủ – âm át. C: nhận ra và mô tả chỗ đổi cao độ hoặc tiết tấu. D: trả lời về cường độ hoặc cách chơi, và về tốc độ.',
+    theory: 'Nhạc lý ABRSM Grade 2: nhịp 2/2, 3/2, 4/2, 3/8; liên ba; hai dòng kẻ phụ; giọng song song; thứ hoà âm; âm giai và hoá biểu La, Si♭, Mi♭ trưởng và La, Mi, Rê thứ, hợp âm chủ, bậc và quãng trên âm chủ (bằng số); thêm thuật ngữ.',
   },
 }
 
@@ -278,7 +285,119 @@ Thời gian gợi ý 6 – 9 tháng với 20 – 30 phút tập mỗi ngày; đ�
   ],
 }
 
-export const KIDS_BOOKS: KidsBook[] = [initial, g1]
+const g2: KidsBook = {
+  id: 'tre-em-g2',
+  grade: 'Grade 2',
+  title: 'Piano & Nhạc lý cho Trẻ em',
+  volume: 'Grade 2',
+  subtitle: 'Nhịp 2/2 và 3/8, liên ba, giọng thứ hoà âm, ba giọng trưởng mới, âm giai cromatic — nhạc lý và piano tương đương ABRSM Grade 2.',
+  hue: 150,
+  coverImage: g2Cover,
+  months: [8, 12],
+  preface: `Cuốn Grade 2 theo đề cương **nhạc lý ABRSM Grade 2** (bản từ 2020) và yêu cầu **piano ABRSM Grade 2** của đặc tả 2027 & 2028. Bạn học các nhịp có phách nốt trắng và phách móc đơn, liên ba, đọc đến hai dòng kẻ phụ, giọng song song và âm giai thứ hoà âm, ba giọng trưởng mới La – Si♭ – Mi♭; ở đàn, âm giai hai quãng tám hai tay, âm giai cromatic và hợp âm rải hai quãng tám.
+
+**Phần IV** in đủ tám bản: hai minuet trong *Sổ tay Anna Magdalena Bach* (1725) — trong đó *Minuet Sol thứ* BWV Anh. 115 có trong danh sách bài thi ABRSM Grade 2 năm 2027 & 2028; hai bài trong *Album cho tuổi trẻ* Op. 68 của **Schumann**; *Berceuse* của **Satie** (1913); và ba bài viết mới — ballad, boogie, ngũ cung. Nguồn và giấy phép ở trang cuối.
+
+Thời gian gợi ý 8 – 12 tháng là ước lượng của người biên soạn, không phải số liệu của ABRSM.`,
+  parts: [
+    {
+      title: 'Nhịp và tiết tấu',
+      intro: 'Số dưới của số chỉ nhịp đổi nghĩa: phách nốt trắng (2/2, 3/2, 4/2) và phách móc đơn (3/8); nhóm nốt; liên ba.',
+      chapters: [
+        { slug: 'tre-em-g2-nhip-moi', focus: 'Nhịp 2/2, 3/2, 4/2, 3/8; nốt tròn kép; cách nhóm nốt.' },
+        { slug: 'tre-em-g2-lien-ba', focus: 'Liên ba móc đơn và nốt đen; liên ba có dấu lặng.' },
+      ],
+      exercises: [
+        'Viết lại bốn ô 4/4 bất kỳ sang 2/2 và đếm lại theo phách nốt trắng.',
+        'Vỗ xen kẽ "ti-ti" và "tri-o-la" trong 2/4 đến khi đều.',
+        'Đặt số chỉ nhịp cho: ba móc đơn; nốt trắng + nốt đen + nốt đen (2/2); ba nốt trắng.',
+      ],
+    },
+    {
+      title: 'Cao độ, giọng và hợp âm',
+      intro: 'Đọc đến hai dòng kẻ phụ; ba giọng trưởng mới và thứ tự dấu hoá; giọng thứ song song, âm giai thứ hoà âm; thuật ngữ mới; đọc hiểu một giai điệu khoá Fa.',
+      chapters: [
+        { slug: 'tre-em-g2-dong-ke-phu', focus: 'Hai dòng kẻ phụ trên và dưới mỗi khuông.' },
+        { slug: 'tre-em-g2-giong-truong-moi', focus: 'La, Si♭, Mi♭ trưởng; thứ tự dấu thăng, dấu giáng.' },
+        { slug: 'tre-em-g2-am-giai-thu', focus: 'Giọng song song; thứ hoà âm La, Mi, Rê; hợp âm chủ.' },
+        { slug: 'tre-em-g2-thuat-ngu', focus: 'più, meno, sempre, subito; tính chất; D.S., coda, ngoặc 1 – 2.' },
+        { slug: 'tre-em-g2-doc-hieu', focus: 'Đọc hiểu một giai điệu khoá Fa nhịp 2/2.' },
+      ],
+      exercises: [
+        'Viết hoá biểu bảy giọng trưởng đã học ở hai khoá; dưới mỗi hoá biểu ghi giọng thứ song song.',
+        'Viết âm giai La, Mi, Rê thứ hoà âm đi lên và đi xuống, có hoá biểu, ghi bậc 7 nâng.',
+        'Viết hợp âm chủ của sáu giọng mới ở khoá Fa.',
+        'Đọc tên mười nốt có hai dòng kẻ phụ trong các bài ở Phần IV.',
+      ],
+    },
+    {
+      title: 'Ở đàn: kỹ thuật, thị tấu và nghe',
+      intro: 'Âm giai và hợp âm rải hai quãng tám, cromatic, ngược chiều theo yêu cầu ABRSM Grade 2; đọc bài hai tay; bốn bài nghe.',
+      chapters: [
+        { slug: 'tre-em-g2-ky-thuat', focus: 'Toàn bộ yêu cầu âm giai – hợp âm rải Grade 2.' },
+        { slug: 'tre-em-g2-thi-tau-va-nghe', focus: 'Thị tấu hai tay; bài nghe về tốc độ và chỗ đổi.' },
+      ],
+      exercises: [
+        'Thuộc lòng toàn bộ âm giai, cromatic, hợp âm rải của Grade 2; chơi hết một lượt mỗi ngày.',
+        'Mỗi ngày đọc một bài hai tay mới ở giọng Rê trưởng hoặc Mi thứ.',
+        'Nghe ba bản nhạc, với mỗi bản nói tốc độ có đổi không và cường độ ra sao.',
+      ],
+    },
+  ],
+  scores: [
+    {
+      id: 'g2-petzold-minuet-g', title: 'Minuet Sol trưởng, BWV Anh. 114', composer: 'Christian Petzold (trước đây gán cho J. S. Bach)', dates: '1677 – 1733', style: 'classical',
+      about: 'Một trong những bản nổi tiếng nhất của *Sổ tay Anna Magdalena Bach* (1725). Lâu nay in dưới tên Bach; nay được xác định là của Christian Petzold, nghệ sĩ organ ở Dresden. Hai bè độc lập: tay trái là một giai điệu thứ hai chứ không chỉ đệm. Minuet là điệu nhảy nhịp 3/4 trang nhã — nhấn nhẹ phách 1, chơi móc đơn đều và liền.',
+      source: { name: 'Mutopia Project, bản số 75 (người khắc: Allen Garvin)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=75', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g2-petzold-minuet-g-minor', title: 'Minuet Sol thứ, BWV Anh. 115', composer: 'Christian Petzold', dates: '1677 – 1733', style: 'classical',
+      about: 'Bản "anh em" giọng thứ đi liền sau Minuet Sol trưởng trong sổ tay — có trong danh sách bài thi ABRSM Grade 2 năm 2027 & 2028 (ghi tên "C. Petzold, Minuet No. 2 in G minor"). Chú ý Fa♯ (bậc 7 nâng của Sol thứ hoà âm) và các dấu láy (*tr*) — ở cấp này có thể chơi đơn giản hoặc bỏ qua. Bản in ở đây không có ngón tay; hãy cùng giáo viên ghi ngón.',
+      source: { name: 'Mutopia Project, bản số 76 (người khắc: Allen Garvin)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=76', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g2-schumann-melodie', title: 'Melodie, Op. 68 số 1', composer: 'Robert Schumann', dates: '1810 – 1856', style: 'classical',
+      about: 'Bài mở đầu *Album für die Jugend* (Album cho tuổi trẻ, 1848) — tập nhạc Schumann viết cho các con gái. Tay phải hát một giai điệu dài, tay trái đệm móc đơn liền như dòng nước: giữ tay trái **nhỏ hơn** để giai điệu nổi lên. Chữ *pas vite* (bản in Pháp) nghĩa là "không nhanh".',
+      source: MUTOPIA(647, 'Mutopia Project', 'CC BY-SA 2.5'),
+    },
+    {
+      id: 'g2-schumann-marsch', title: 'Soldatenmarsch, Op. 68 số 2', composer: 'Robert Schumann', dates: '1810 – 1856', style: 'classical',
+      about: 'Hành khúc người lính: hợp âm nảy (staccato) trên nhịp chấm dôi – móc kép, rất đều và "đứng thẳng". Chữ *Gaiement et bien rythmé* nghĩa là "vui vẻ và đúng nhịp". Tập từng tay chậm, giữ dấu lặng thật đủ để nhạc có tiếng "bước chân".',
+      source: MUTOPIA(650, 'Mutopia Project', 'CC BY-SA 2.5'),
+    },
+    {
+      id: 'g2-satie-berceuse', title: 'Berceuse', composer: 'Erik Satie', dates: '1866 – 1925', style: 'c20',
+      about: 'Bài hát ru trong *Enfantillages pittoresques* (1913). Satie viết lời kể dưới khuông: "Ngày đã hết, Pierrot đi ngủ… Cậu bé đã rất ngoan… Mẹ hôn cậu…" — đừng đọc to khi chơi, nhưng để câu chuyện dẫn cách chơi: rất nhỏ (**pp**), chậm (*Lent*), hợp âm tay phải ngân dài trên tay trái đi đều. *Retenir beaucoup* — chậm lại nhiều; *Reprendre le mouvement* — trở lại tốc độ.',
+      source: MUTOPIA(2132, 'Frédéric Dupernay', 'CC BY-SA 4.0'),
+    },
+    {
+      id: 'g2-ballad-mua', title: 'Ballad mưa', composer: 'Lamar', style: 'new',
+      about: 'Ballad kiểu nhạc pop: vòng hợp âm **La thứ – Fa – Đô – Sol** quen thuộc của rất nhiều ca khúc. Tay trái rải hợp âm bằng móc đơn đều, tay phải hát giai điệu nốt dài. Chơi chậm, liền, như hát; đoạn ba lên **mf** rồi lắng lại.',
+      source: own('Phong cách pop ballad'),
+    },
+    {
+      id: 'g2-boogie', title: 'Boogie nhỏ', composer: 'Lamar', style: 'new',
+      about: 'Boogie-woogie dựa trên **tay trái đi bộ** (Đô – Mi – Sol – La – Si♭ – La – Sol – Mi) theo khung 12 ô blues. Tay phải chơi swing (đôi móc đơn dài – ngắn) như ở bài *Mèo đi dạo*. Tập tay trái đến khi tự động rồi mới ghép tay phải.',
+      source: own('Khung 12 ô nhịp blues, phong cách boogie-woogie'),
+    },
+    {
+      id: 'g2-do-chieu', title: 'Đò chiều', composer: 'Lamar', style: 'new',
+      about: 'Viết trên năm nốt **La – Đô – Rê – Mi – Sol** (ngũ cung La) với **liên ba nốt đen** như nhịp mái chèo. Tay trái giữ quãng 5 ngân. Giai điệu mới, gợi màu sông nước, không trích dân ca nào.',
+      source: own('Viết trên âm giai ngũ cung'),
+    },
+  ],
+  exam: KIDS_EXAM.g2,
+  checkpoint: [
+    'Đếm, vỗ và viết đúng nhịp 2/2, 3/2, 4/2, 3/8 và liên ba.',
+    'Đọc nốt đến hai dòng kẻ phụ ở cả hai khoá.',
+    'Viết âm giai, hoá biểu, hợp âm chủ của La, Si♭, Mi♭ trưởng và La, Mi, Rê thứ hoà âm; nói giọng song song.',
+    'Chơi thuộc lòng toàn bộ âm giai, cromatic, hợp âm rải Grade 2.',
+    'Chơi ít nhất ba bản ở Phần IV, trong đó một minuet và một bài thế kỷ XX hoặc mới.',
+    'Hát lại câu hai ô trong khoảng âm chủ – âm át; nhận ra chỗ đổi tiết tấu.',
+  ],
+}
+
+export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2]
 
 /** The volume holding a chapter (old links to the single children's course land there; else the first volume). */
 export const kidsBookOf = (slug?: string) => KIDS_BOOKS.find((b) => b.parts.some((p) => p.chapters.some((c) => c.slug === slug)))?.id ?? KIDS_BOOKS[0].id
