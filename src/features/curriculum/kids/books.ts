@@ -2,6 +2,7 @@ import initialCover from '../../../assets/covers/piano-tre-em-initial.webp'
 import g1Cover from '../../../assets/covers/piano-tre-em-1.webp'
 import g2Cover from '../../../assets/covers/piano-tre-em-2.webp'
 import g3Cover from '../../../assets/covers/piano-tre-em-3.webp'
+import g4Cover from '../../../assets/covers/piano-tre-em-4.webp'
 import type { ExamSpec, KidsBook, Score } from '../types'
 
 /**
@@ -38,6 +39,12 @@ export const KIDS_EXAM: Record<string, ExamSpec> = {
     sightReading: 'Đến 8 ô nhịp; thêm nhịp 3/8; giọng La, Si♭, Mi♭ trưởng, Si thứ; tay ra ngoài vị trí năm ngón; hợp âm hai nốt ở một tay.',
     aural: 'A: vỗ phách, nhấn phách mạnh, nói nhịp hai, ba hay bốn. B: hát lại ba câu hai ô, trưởng hoặc thứ, trong một quãng tám. C: nhận ra và mô tả chỗ đổi cao độ hoặc tiết tấu trong câu đến bốn ô. D: trả lời về cường độ / cách chơi / tốc độ, và giọng trưởng hay thứ.',
     theory: 'Nhạc lý ABRSM Grade 3: nhịp kép 6/8, 9/8, 12/8; nốt móc ba; dòng kẻ phụ xa, dịch một quãng tám giữa khoá Sol và Fa; mọi giọng đến bốn dấu hoá, thứ hoà âm và giai điệu; quãng trên âm chủ theo số và tính chất; thêm thuật ngữ.',
+  },
+  g4: {
+    scales: `Thuộc lòng, liền tiếng, đều (${SPEC_NOTE}); âm giai thứ: hoà âm hoặc giai điệu. Si♭, Mi♭ trưởng; Si, Đô thứ 2 quãng tám, hai tay. Si, Fa♯, La♭ trưởng; Fa♯, Fa thứ 2 quãng tám, từng tay. Ngược chiều: Mi♭ trưởng, Đô thứ hoà âm, 2 quãng tám. Cromatic cùng chiều từ Fa♯, 2 quãng tám, hai tay. Hợp âm rải Si♭, Mi♭ trưởng; Si, Đô thứ 2 quãng tám hai tay; Si, Fa♯, La♭ trưởng; Fa♯, Fa thứ 2 quãng tám từng tay.`,
+    sightReading: 'Khoảng 8 ô nhịp; thêm nhịp 6/8; nhịp lấy đà; nốt cromatic; dấu ngân; tenuto.',
+    aural: 'A: hát hoặc chơi lại từ trí nhớ một giai điệu (trong một quãng tám, giọng đến ba dấu). B: xướng âm năm nốt từ bản nhạc (Đô, Fa hoặc Sol trưởng). C: (i) trả lời về một đặc điểm và tính chất của bản nhạc; (ii) vỗ lại tiết tấu một trích đoạn và nói nhịp hai, ba hay bốn.',
+    theory: 'Nhạc lý ABRSM Grade 4: mọi nhịp đơn và kép; nốt tròn kép, chấm dôi kép, liên hai; khoá alto; thăng kép, giáng kép, trùng âm; giọng đến năm dấu, tên kỹ thuật các bậc, âm giai cromatic; mọi quãng trong một quãng tám; hợp âm I, IV, V; nốt hoa mỹ; nhạc cụ dàn nhạc.',
   },
 }
 
@@ -518,7 +525,124 @@ Thời gian gợi ý 9 – 12 tháng là ước lượng của người biên so
   ],
 }
 
-export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2, g3]
+const g4: KidsBook = {
+  id: 'tre-em-g4',
+  grade: 'Grade 4',
+  title: 'Piano & Nhạc lý cho Trẻ em',
+  volume: 'Grade 4',
+  subtitle: 'Mọi số chỉ nhịp, khoá alto, giọng đến năm dấu, quãng tăng – giảm, hợp âm I – IV – V, nốt hoa mỹ — nhạc lý và piano tương đương ABRSM Grade 4.',
+  hue: 255,
+  coverImage: g4Cover,
+  months: [10, 14],
+  preface: `Cuốn Grade 4 theo đề cương **nhạc lý ABRSM Grade 4** (bản từ 2020) và yêu cầu **piano ABRSM Grade 4** của đặc tả 2027 & 2028. Nhạc lý bước sang nửa sau của chương trình Grade 1 – 5: mọi số chỉ nhịp, khoá alto, dấu hoá kép và trùng âm, tên kỹ thuật các bậc, mọi quãng, ba hợp âm chính, nốt hoa mỹ và nhạc cụ dàn nhạc; ở đàn, âm giai các giọng nhiều dấu giáng, cromatic hai tay, xướng âm.
+
+**Phần IV** in đủ tám bản: chương I *Sonatina Op. 36 số 1* của **Clementi**, *L'Arabesque* của **Burgmüller**, *Fröhlicher Landmann* của **Schumann**, *Hành khúc lính chì* của **Tchaikovsky**, *The Entertainer* của **Scott Joplin** (1902, đoạn A soạn giản lược) và ba bài viết mới — ballad pop, valse jazz, ngũ cung có nốt dựa. Nguồn và giấy phép ở trang cuối.
+
+Thời gian gợi ý 10 – 14 tháng là ước lượng của người biên soạn, không phải số liệu của ABRSM.`,
+  parts: [
+    {
+      title: 'Nhịp và tiết tấu',
+      intro: 'Bảng đủ mọi nhịp đơn và kép; nốt tròn kép, chấm dôi kép, liên hai.',
+      chapters: [
+        { slug: 'tre-em-g4-moi-so-chi-nhip', focus: 'Đơn/kép × đôi/ba/bốn; 6/4, 9/16, 2/8…' },
+        { slug: 'tre-em-g4-not-tron-kep-cham-doi-kep-lien-hai', focus: 'Nốt tròn kép, chấm dôi kép, liên hai.' },
+      ],
+      exercises: [
+        'Phân loại mười số chỉ nhịp: 3/2, 6/4, 12/16, 4/8, 9/8, 2/2, 6/16, 3/8, 12/4, 4/4.',
+        'Vỗ một ô 6/8 có liên hai và một ô 4/4 có nốt đen chấm dôi kép.',
+      ],
+    },
+    {
+      title: 'Cao độ, giọng, quãng và hợp âm',
+      intro: 'Khoá alto; dấu hoá kép, trùng âm; giọng năm dấu và tên bậc; âm giai cromatic; mọi quãng; hợp âm I – IV – V; nốt hoa mỹ; nhạc cụ; đọc hiểu một đoạn piano.',
+      chapters: [
+        { slug: 'tre-em-g4-khoa-alto', focus: 'Đọc và chép sang khoá alto.' },
+        { slug: 'tre-em-g4-thang-kep-trung-am', focus: 'Thăng kép, giáng kép, nốt trùng âm.' },
+        { slug: 'tre-em-g4-giong-nam-dau-ten-bac', focus: 'Si, Rê♭ trưởng; Sol♯, Si♭ thứ; tên kỹ thuật bảy bậc.' },
+        { slug: 'tre-em-g4-am-giai-cromatic', focus: 'Quy ước viết âm giai cromatic.' },
+        { slug: 'tre-em-g4-moi-quang', focus: 'Quãng tăng, giảm; quãng giữa hai nốt bất kỳ.' },
+        { slug: 'tre-em-g4-hop-am-i-iv-v', focus: 'Hợp âm chủ, hạ át, át ở thế gốc.' },
+        { slug: 'tre-em-g4-hoa-my', focus: 'Sáu loại nốt hoa mỹ.' },
+        { slug: 'tre-em-g4-nhac-cu-dan-nhac', focus: 'Bốn bộ nhạc cụ, khoá, cách phát âm.' },
+        { slug: 'tre-em-g4-doc-hieu', focus: 'Đọc hiểu đoạn piano giọng Đô thứ.' },
+      ],
+      exercises: [
+        'Chép tám ô bất kỳ trong Phần IV sang khoá alto.',
+        'Viết âm giai Si trưởng, Sol♯ thứ hoà âm và giai điệu; ghi tên kỹ thuật các bậc.',
+        'Gọi tên mười quãng giữa các nốt trong một ô nhạc bất kỳ của Phần IV.',
+        'Viết I, IV, V của năm giọng mới; đệm câu đầu một bài dân ca bằng ba hợp âm đó.',
+        'Tìm và gọi tên mọi nốt hoa mỹ trong các bài ở Phần IV.',
+      ],
+    },
+    {
+      title: 'Ở đàn: kỹ thuật, thị tấu và nghe',
+      intro: 'Yêu cầu kỹ thuật ABRSM Grade 4; bài đọc 6/8 có nhịp lấy đà; hát lại giai điệu và xướng âm.',
+      chapters: [
+        { slug: 'tre-em-g4-ky-thuat', focus: 'Âm giai giọng giáng, cromatic hai tay, hợp âm rải.' },
+        { slug: 'tre-em-g4-thi-tau-va-nghe', focus: 'Thị tấu Grade 4; hát lại giai điệu, xướng âm năm nốt.' },
+      ],
+      exercises: [
+        'Chơi thuộc lòng toàn bộ yêu cầu kỹ thuật Grade 4.',
+        'Mỗi ngày xướng âm một mẫu năm nốt ở Đô, Fa hoặc Sol trưởng.',
+        'Nghe một giai điệu ngắn hai lần rồi hát lại.',
+      ],
+    },
+  ],
+  scores: [
+    {
+      id: 'g4-clementi-sonatina', title: 'Sonatina Đô trưởng, Op. 36 số 1 — chương I', composer: 'Muzio Clementi', dates: '1752 – 1832', style: 'classical',
+      about: 'Sáu sonatina Op. 36 (1797) là cửa ngõ vào hình thức sonata của bao thế hệ học trò piano. Chương I *Spiritoso*: chủ đề rải hợp âm Đô trưởng, đoạn chuyển, chủ đề hai ở giọng át (Sol trưởng), phần phát triển ngắn và tái hiện. Hãy tìm ba phần ấy trên bản nhạc trước khi tập.',
+      source: { name: 'Mutopia Project, bản số 804 (người khắc: Brian D. Rude)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=804', license: 'Phạm vi công cộng', note: 'chỉ in chương I; khắc lại cho khổ sách' },
+    },
+    {
+      id: 'g4-burgmuller-arabesque', title: "L'Arabesque, Op. 100 số 2", composer: 'Friedrich Burgmüller', dates: '1806 – 1874', style: 'classical',
+      about: 'Trong *25 Études faciles et progressives* Op. 100 (1851) — bộ luyện ngón "có nhạc" quen thuộc nhất của trẻ học piano. Nhóm móc kép La thứ chạy nhanh ở tay phải rồi chuyển xuống tay trái; tay kia nảy hợp âm nhẹ. Tập chậm, đều; chú ý cresc. và các dấu nhấn.',
+      source: { name: 'Mutopia Project, bản số 203 (người khắc: Bas Wassink)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=203', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g4-schumann-landmann', title: 'Fröhlicher Landmann (Bác nông dân vui vẻ), Op. 68 số 10', composer: 'Robert Schumann', dates: '1810 – 1856', style: 'classical',
+      about: 'Giai điệu nằm ở **tay trái** (bè trầm hát), tay phải đệm hợp âm nảy; ở đoạn sau giai điệu lên tay phải. Đây là bài tập cân bằng hai tay: bè giai điệu phải luôn to hơn bè đệm.',
+      source: MUTOPIA(659, 'Philippe Hézaine', 'CC BY-SA 2.5'),
+    },
+    {
+      id: 'g4-tchaikovsky-wooden-soldiers', title: 'Hành khúc lính chì, Op. 39 số 5', composer: 'Pyotr Ilyich Tchaikovsky', dates: '1840 – 1893', style: 'classical',
+      about: 'Trong *Album cho tuổi trẻ* Op. 39 (1878). Hợp âm nảy (staccato) nhịp chấm dôi như bước đều của đội lính đồ chơi; giữ phách thật chính xác, dấu lặng đủ, và đổi rõ cường độ giữa các đoạn.',
+      source: { name: 'Mutopia Project, bản số 1806', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1806', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g4-joplin-entertainer', title: 'The Entertainer — đoạn A (giản lược)', composer: 'Scott Joplin', dates: '1868 – 1917', style: 'c20',
+      about: '*The Entertainer — A Ragtime Two Step* (1902) của "vua ragtime" Scott Joplin. Bản này **soạn giản lược đoạn A**: tay phải giữ nguyên giai điệu của bản in 1902 (bỏ quãng tám), tay trái chơi kiểu **stride** đơn giản — nốt trầm rồi hợp âm. Ragtime cần tay trái thật đều như máy, tay phải nhấn nhá các chỗ nghịch phách (nốt nối qua phách). Joplin ghi *Not fast* — đừng chơi nhanh!',
+      source: { name: 'Bản phối của người biên soạn (Lamar), giai điệu đối chiếu bản Mutopia số 263 (khắc từ bản in 1902)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=263', license: 'Tác phẩm gốc thuộc phạm vi công cộng' },
+    },
+    {
+      id: 'g4-den-pho', title: 'Đèn phố', composer: 'Lamar', style: 'new',
+      about: 'Ballad pop giọng Mi♭ trưởng: giai điệu nhiều **nghịch phách** (nốt móc đơn nối sang phách sau) trên tay trái rải hợp âm. Để nghịch phách "trôi", hãy đếm móc đơn "1 và 2 và" và nghe tay trái làm phách nền.',
+      source: own('Phong cách pop ballad'),
+    },
+    {
+      id: 'g4-valse-jazz', title: 'Valse jazz', composer: 'Lamar', style: 'new',
+      about: 'Valse nhịp 3/4 với hoà âm jazz giọng Rê thứ: tay trái chơi nốt trầm ở phách 1, **hợp âm bảy** ở phách 2 – 3; tiến trình ii – V – i quen thuộc của jazz. Chơi móc đơn hơi swing, phách 1 nhẹ như bước valse.',
+      source: own('Valse jazz, tiến trình ii – V – i'),
+    },
+    {
+      id: 'g4-trang-que', title: 'Trăng quê', composer: 'Lamar', style: 'new',
+      about: 'Viết trên năm nốt **Rê♭ – Mi♭ – Fa – La♭ – Si♭** (ngũ cung trên phím đen) với **nốt dựa ngắn** như tiếng luyến láy của giọng hát. Tốc độ tự do, nhỏ nhẹ; tay trái ngân quãng 5. Giai điệu mới, không trích dân ca nào.',
+      source: own('Viết trên âm giai ngũ cung'),
+    },
+  ],
+  exam: KIDS_EXAM.g4,
+  checkpoint: [
+    'Phân loại mọi số chỉ nhịp; đọc nốt tròn kép, chấm dôi kép, liên hai.',
+    'Đọc và chép sang khoá alto.',
+    'Viết giọng đến năm dấu, tên kỹ thuật các bậc, âm giai cromatic.',
+    'Gọi tên mọi quãng trong một quãng tám; viết I, IV, V.',
+    'Nhận ra sáu loại nốt hoa mỹ; nói về bốn bộ nhạc cụ.',
+    'Chơi thuộc lòng toàn bộ yêu cầu kỹ thuật Grade 4.',
+    'Chơi ít nhất ba bản ở Phần IV, gồm một sonatina hoặc etude và một bản thế kỷ XX hoặc mới.',
+  ],
+}
+
+export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2, g3, g4]
 
 /** The volume holding a chapter (old links to the single children's course land there; else the first volume). */
 export const kidsBookOf = (slug?: string) => KIDS_BOOKS.find((b) => b.parts.some((p) => p.chapters.some((c) => c.slug === slug)))?.id ?? KIDS_BOOKS[0].id

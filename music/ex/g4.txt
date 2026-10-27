@@ -1,0 +1,110 @@
+% Examples of the Grade 4 book.
+
+=== g4-bang-nhip
+{ \time 6/4 \relative c'' { c4. d e f | g2. g \bar "||" }
+  \time 9/16 \relative c'' { c16 d e f g a g f e \bar "||" }
+  \time 2/8 \relative c'' { c8 d | e4 \bar "|." } }
+
+=== g4-not-tron-kep
+\new Staff \with { \remove "Clef_engraver" } { \time 4/2 c''\breve \bar "||" r\breve \bar "|." }
+
+=== g4-cham-doi-kep
+\relative c'' { \time 4/4 c2.. d8 | e4.. f16 g2 | e4.. d16 c2 \bar "|." }
+
+=== g4-lien-hai
+\relative c'' { \time 6/8 c8 d e \tuplet 2/3 { f8 g } | a4. \tuplet 2/3 { g8 e } | c4. r \bar "|." }
+
+=== g4-khoa-alto
+{ \clef alto \omit Staff.TimeSignature \cadenzaOn f1 a c' e' g' \bar "||" g b d' f' \bar "|." }
+\addlyrics { F A "Đô giữa" E G G B D F }
+
+=== g4-ba-khoa
+\new StaffGroup <<
+  \new Staff { \clef treble \omit Staff.TimeSignature \cadenzaOn c'1 \bar "|." }
+  \new Staff { \clef alto \omit Staff.TimeSignature \cadenzaOn c'1 }
+  \new Staff { \clef bass \omit Staff.TimeSignature \cadenzaOn c'1 }
+>>
+
+=== g4-chep-sang-alto
+\new StaffGroup <<
+  \new Staff \relative c'' { \time 3/4 \key g \major d4 b g | a2 b4 | c8 b a4 fis | g2. \bar "|." }
+  \new Staff \relative c' { \clef alto \key g \major d4 b g | a2 b4 | c8 b a4 fis | g2. }
+>>
+
+=== g4-thang-kep
+\relative c'' { \omit Staff.TimeSignature \cadenzaOn fisis1 \bar "|" g \bar "||" beses \bar "|" a \bar "||" fisis fis \bar "|." }
+\addlyrics { "Fa thăng kép" "= Sol" "Si giáng kép" "= La" "Fa thăng kép" "Fa♯" }
+
+=== g4-trung-am
+\relative c'' { \omit Staff.TimeSignature \cadenzaOn cis1 des \bar "||" e fes \bar "||" bis c \bar "|." }
+\addlyrics { "Đô♯" "Rê♭" Mi "Fa♭" "Si♯" Đô }
+
+=== g4-hoa-bieu-nam-dau
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn \key b \major s1 \bar "||" \key des \major s1 \bar "||" }
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef bass \cadenzaOn \key b \major s1 \key des \major s1 }
+>>
+
+=== g4-ten-bac
+\relative c' { \key d \major \omit Staff.TimeSignature \cadenzaOn d1 e fis g a b cis d \bar "|." }
+\addlyrics { "chủ" "trên chủ" "trung" "hạ át" "át" "hạ trung" "cảm" "chủ" }
+
+=== g4-cromatic-viet
+\relative c' { \omit Staff.TimeSignature \cadenzaOn d1 dis e f fis g gis a ais b c cis d \bar "||" d c b bes a aes g fis f e ees d \bar "|." }
+
+=== g4-quang-tang-giam
+\relative c' { \omit Staff.TimeSignature \cadenzaOn <c f>1 <c fis> <c ges'> \bar "||" <c e> <c ees> <c eeses> \bar "||" <c e> <c eis> \bar "|." }
+\addlyrics { "4 đúng" "4 tăng" "5 giảm" "3 trưởng" "3 thứ" "3 giảm" "3 trưởng" "3 tăng" }
+
+=== g4-quang-bat-ky
+\relative c' { \key a \major \omit Staff.TimeSignature \cadenzaOn <cis gis'>1 <d b'> <e d'> <fis cis'> <gis d'> <b d> \bar "|." }
+\addlyrics { "5 đúng" "6 trưởng" "7 thứ" "5 đúng" "5 giảm" "3 thứ" }
+
+=== g4-hop-am-i-iv-v
+\new PianoStaff <<
+  \new Staff \relative c'' { \key g \major \omit Staff.TimeSignature \cadenzaOn <g b d>1 <c e g> <d fis a> \bar "||" \key e \minor <e, g b> <a c e> <b dis fis> \bar "|." }
+  \addlyrics { "I" "IV" "V" "i" "iv" "V" }
+  \new Staff \relative c { \clef bass \key g \major \omit Staff.TimeSignature \cadenzaOn g1 c d \key e \minor e a, b }
+>>
+
+=== g4-hop-am-bon-be
+\new PianoStaff <<
+  \new Staff \relative c'' { \key f \major \time 4/4 <a c>2 <bes d> | <c e>1 \bar "|." }
+  \new Staff \relative c { \clef bass \key f \major <f c'>2 <bes f'> | <c g'>1 }
+>>
+
+=== g4-hoa-my
+\relative c'' { \time 4/4 c2\trill d | e\turn f | g\prall a\mordent | \acciaccatura c8 b2 \appoggiatura b8 a2 \bar "|." }
+
+=== g4-hoa-my-viet-ra
+\relative c'' { \time 2/4 c32 d c d c d c d c4 \bar "||" e16 f e d e4 \bar "||" g16 a g8 ~ g4 \bar "|." }
+
+=== g4-nhom-nhac-cu
+\new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn \clef treble g1^"violin" \bar "||" \clef alto c'^"viola" \bar "||" \clef bass c^"cello" \bar "||" \clef treble c''^"sáo" \bar "||" \clef bass bes,^"kèn fagốt" \bar "|." }
+
+=== g4-am-giai-hai-tay
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 \key ees \major ees8-3 f-1 g-2 aes-3 bes-4 c-1 d-2 ees-3 | f-1 g-2 aes-3 bes-4 c-1 d-2 ees4-3 \bar "|." }
+  \new Staff \relative c { \clef bass \key ees \major ees8-3 f-2 g-1 aes-4 bes-3 c-2 d-1 ees-3 | f-2 g-1 aes-4 bes c d-1 ees4-3 }
+>>
+
+=== g4-cromatic-fa-thang
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 fis8-3 g-1 gis-3 a-1 ais-3 b-1 c-2 cis-3 | d-1 dis-3 e-1 f-2 fis2-3 \bar "|." }
+  \new Staff \relative c { \clef bass fis8-3 g-1 gis-3 a-1 ais-3 b-2 c-1 cis-3 | d-1 dis-3 e-2 f-1 fis2-3 }
+>>
+
+=== g4-thi-tau-1
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 6/8 \key bes \major \partial 8 f8\mf | d4 bes8 c4 d8 | ees4. d4 f8 | g4( f8) ees4 c8 | d4.\fermata r4 f8 | g4 a8 bes4 a8 | g4 e8 f4 ees8 | d4 c8 bes4 a8 | bes4. r4 \bar "|." }
+  \new Staff \relative c { \clef bass \key bes \major \partial 8 r8 | bes4. f' | c f, | ees' f | bes,\fermata r4. | ees4. d | c f | f, f | bes4. r4 }
+>>
+
+=== g4-xuong-am
+\relative c'' { \key g \major \omit Staff.TimeSignature \cadenzaOn g1 a b a g \bar "|." }
+
+=== g4-doc-hieu
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 3/4 \key c \minor \tempo "Andante con moto" g4\p\(( c) d | ees2 d8 c | b4 c d | g,2\) r4 | \acciaccatura bes8 aes4( g) f | ees2 d4 | c ees g | c2. \bar "|." }
+  \new Staff \relative c { \clef bass \key c \minor c2. | aes | g | <g b d> | f | g | <c ees g> | c, }
+>>
