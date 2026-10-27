@@ -3,7 +3,8 @@ import { findArticle } from '../../theory/wiki'
 import { QUESTIONS } from '../../theory/quiz/bank'
 import { ABOUT_AUTHOR, BOOKS, foreword } from '../books'
 import { CURRICULA } from '../curricula'
-import type { Book, Curriculum, Level } from '../types'
+import { KIDS_BOOKS } from '../kids/books'
+import type { Book, Curriculum, KidsBook, Level, Score } from '../types'
 
 /**
  * Every shelf item — the books and the piano courses — flattened into one sequence of reader items:
@@ -18,6 +19,8 @@ export type ReaderItem =
   | { key: string; kind: 'chapter'; title: string; slug: string; n: number; part: number; focus?: string }
   | { key: string; kind: 'review'; title: string; label: string; part: number; body: string }
   | { key: 'dap-an'; kind: 'answers'; title: string }
+  | { key: string; kind: 'score'; title: string; n: number; part: number; score: Score }
+  | { key: 'nguon-ban-nhac'; kind: 'credits'; title: string; scores: Score[] }
 
 export interface ReaderBook {
   id: string
@@ -32,7 +35,8 @@ export interface ReaderBook {
   style: 'cream' | 'color'
   /** Photographic cover, used instead of the typographic one. */
   coverImage?: string
-  kind: 'book' | 'course'
+  /** 'kids': a volume of the children's course (one ABRSM grade), with pieces in full at the back. */
+  kind: 'book' | 'course' | 'kids'
   items: ReaderItem[]
 }
 
@@ -123,11 +127,51 @@ function fromCourse(c: Curriculum): ReaderBook {
   return { id: c.id, title: c.title, subtitle: c.subtitle, author: c.author, audience: c.audience, hue: c.hue, glyph: c.glyph, style: 'color', coverImage: c.coverImage, kind: 'course', items }
 }
 
+const STYLE: Record<Score['style'], string> = { classical: 'Cổ điển', c20: 'Thế kỷ XX', new: 'Sáng tác mới', folk: 'Dân ca thế giới', vietnam: 'Dân ca Việt Nam' }
+export const scoreStyle = (s: Score) => STYLE[s.style]
+
+function fromKids(b: KidsBook): ReaderBook {
+  const items: ReaderItem[] = [
+    { key: 'bia', kind: 'cover', title: 'Bìa' },
+    { key: 'loi-noi-dau', kind: 'front', title: 'Lời nói đầu', body: `${foreword(`Piano & Nhạc lý cho Trẻ em — ${b.volume}`)}\n## Về cuốn sách này\n${b.preface}`, signed: true },
+    { key: 've-tac-gia', kind: 'front', title: 'Về tác giả', body: ABOUT_AUTHOR },
+    { key: 'muc-luc', kind: 'toc', title: 'Mục lục' },
+  ]
+  const seen = new Set<string>()
+  let n = 0
+  b.parts.forEach((p, i) => {
+    items.push({ key: `phan-${i + 1}`, kind: 'part', title: p.title, label: `Phần ${roman(i + 1)}`, n: i + 1, intro: p.intro })
+    for (const c of p.chapters) {
+      const a = findArticle(c.slug)
+      if (!a || seen.has(a.slug)) continue
+      seen.add(a.slug)
+      items.push({ key: a.slug, kind: 'chapter', title: a.title, slug: a.slug, n: ++n, part: i + 1, focus: c.focus })
+    }
+    if (p.exercises.length)
+      items.push({ key: `on-tap-phan-${i + 1}`, kind: 'review', title: `Ôn tập Phần ${roman(i + 1)}`, label: p.title, part: i + 1, body: `## Bài tập\n${p.exercises.map((e, k) => `${k + 1}. ${e}`).join('\n')}` })
+  })
+  const last = b.parts.length + 1
+  const list = b.scores.map((s, k) => `| ${k + 1} | ${clean(s.title)} | ${clean(s.composer)} | ${STYLE[s.style]} |`).join('\n')
+  items.push({
+    key: 'tac-pham', kind: 'part', title: 'Tác phẩm', label: `Phần ${roman(last)}`, n: last,
+    intro: 'Các bản nhạc của cấp, in đầy đủ: tác phẩm cổ điển, tác phẩm thế kỷ XX đã thuộc phạm vi công cộng, bài viết mới cho giáo trình và dân ca Việt Nam soạn cho piano. Nguồn của từng bản ghi ở trang cuối sách.',
+    body: `## Danh sách\n| # | Tác phẩm | Tác giả | Loại |\n|---|---|---|---|\n${list}`,
+  })
+  b.scores.forEach((s, k) => items.push({ key: `tp-${s.id}`, kind: 'score', title: s.title, n: k + 1, part: last, score: s }))
+  const exam = b.exam
+    ? [`## Yêu cầu tương đương ABRSM ${b.grade}`, `- **Âm giai & hợp âm rải:** ${clean(b.exam.scales)}`, `- **Thị tấu:** ${clean(b.exam.sightReading)}`, `- **Nghe:** ${clean(b.exam.aural)}`, `- **Nhạc lý:** ${clean(b.exam.theory)}`]
+    : []
+  items.push({ key: 'kiem-tra-cuoi-cap', kind: 'review', title: 'Kiểm tra cuối cấp', label: b.volume, part: last, body: [...exam, '## Trước khi sang cấp sau', ...b.checkpoint.map((c) => `- ${clean(c)}`)].join('\n') })
+  items.push({ key: 'dap-an', kind: 'answers', title: 'Đáp án câu hỏi ôn tập' })
+  items.push({ key: 'nguon-ban-nhac', kind: 'credits', title: 'Nguồn bản nhạc', scores: b.scores })
+  return { id: b.id, title: 'Piano & Nhạc lý cho Trẻ em', volume: b.volume, subtitle: b.subtitle, author: 'Lamar', audience: `Trẻ em · ABRSM ${b.grade}`, hue: b.hue, glyph: '𝄞', style: 'color', coverImage: b.coverImage, kind: 'kids', items }
+}
+
 export function roman(n: number) {
   return ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'][n] ?? String(n)
 }
 
-export const READER_BOOKS: ReaderBook[] = [...BOOKS.map(fromBook), ...CURRICULA.map(fromCourse)]
+export const READER_BOOKS: ReaderBook[] = [...BOOKS.map(fromBook), ...KIDS_BOOKS.map(fromKids), ...CURRICULA.map(fromCourse)]
 
 export const findBook = (id?: string) => READER_BOOKS.find((b) => b.id === id)
 

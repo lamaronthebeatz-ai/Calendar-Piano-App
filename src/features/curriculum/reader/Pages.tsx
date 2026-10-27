@@ -8,7 +8,7 @@ import { findArticle } from '../../theory/wiki'
 import { peekText } from '../../theory/body'
 import { toggleDone, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
-import { chaptersOf, lessonQuestions, roman, type ReaderBook, type ReaderItem } from './model'
+import { chaptersOf, lessonQuestions, roman, scoreStyle, type ReaderBook, type ReaderItem } from './model'
 import { HeroBackdrop } from '../../theory/HeroBackdrop'
 import './cover-page.css'
 
@@ -20,7 +20,7 @@ import './cover-page.css'
  */
 type Mode = 'screen' | 'print'
 
-const unit = (b: ReaderBook) => (b.kind === 'book' ? 'Phần' : 'Cấp')
+const unit = (b: ReaderBook) => (b.kind === 'course' ? 'Cấp' : 'Phần')
 const LETTERS = ['A', 'B', 'C', 'D']
 
 /** Wiki links to a lesson of this book get "(Bài n)" after them. */
@@ -78,6 +78,12 @@ export function BookPage({ book, item, mode = 'screen', onGo, progressive }: { b
     case 'answers':
       page = <AnswersPage book={book} />
       break
+    case 'score':
+      page = <ScorePage item={item} />
+      break
+    case 'credits':
+      page = <CreditsPage item={item} />
+      break
   }
   return <LinkRefContext.Provider value={xref}>{page}</LinkRefContext.Provider>
 }
@@ -85,7 +91,7 @@ export function BookPage({ book, item, mode = 'screen', onGo, progressive }: { b
 function CoverPage({ book, onStart, onToc }: { book: ReaderBook; onStart: () => void; onToc?: () => void }) {
   const parts = book.items.filter((i) => i.kind === 'part').length
   const lessons = chaptersOf(book).length
-  const eyebrow = book.kind === 'course' ? 'Giáo trình piano' : "Lamar\u2019s Book"
+  const eyebrow = book.kind === 'course' ? 'Giáo trình piano' : book.kind === 'kids' ? 'Giáo trình piano thiếu nhi' : "Lamar\u2019s Book"
   return (
     <div className="rc" style={{ '--rc-hue': book.hue } as CSSProperties}>
       <div aria-hidden className="rc-ambient">
@@ -119,6 +125,65 @@ function CoverPage({ book, onStart, onToc }: { book: ReaderBook; onStart: () => 
   )
 }
 
+/** A piece printed in full: what it is and how to practise it, then the engraved music system by system. */
+function ScorePage({ item }: { item: Extract<ReaderItem, { kind: 'score' }> }) {
+  const s = item.score
+  return (
+    <article className="book-score">
+      <p className="book-eyebrow">Tác phẩm {item.n} · {scoreStyle(s)}</p>
+      <h1 className="book-front-title">{s.title}</h1>
+      <p className="book-score-composer">
+        {s.composer}
+        {s.dates && <span> ({s.dates})</span>}
+      </p>
+      <span aria-hidden className="book-rule" />
+      <div className="book-text">
+        <Markup source={`${s.about}\n::sheet ${s.id} | ${s.title.replace(/\|/g, '/')}`} />
+      </div>
+    </article>
+  )
+}
+
+/** The last page of a children's book: where the notes of every piece come from, and under what licence. */
+function CreditsPage({ item }: { item: Extract<ReaderItem, { kind: 'credits' }> }) {
+  return (
+    <article className="book-front book-credits">
+      <h1 className="book-front-title">{item.title}</h1>
+      <span aria-hidden className="book-rule" />
+      <div className="book-text">
+        <p>
+          Mọi bản nhạc trong sách được khắc lại bằng phần mềm LilyPond. Tác phẩm cổ điển và thế kỷ XX lấy từ bản đã thuộc phạm vi công cộng hoặc bản khắc có giấy phép tự do (ghi rõ dưới đây); bản phối dân ca và bài &ldquo;Sáng tác mới&rdquo; do người biên soạn viết cho giáo trình. Ngón tay, cường độ thêm vào để học được ghi ở phần giới thiệu của từng bài.
+        </p>
+        <ol className="book-credits-list">
+          {item.scores.map((s, i) => (
+            <li key={s.id}>
+              <p>
+                <b>
+                  {i + 1}. {s.title}
+                </b>{' '}
+                — {s.composer}
+              </p>
+              <p>
+                {s.source.url ? (
+                  <a href={s.source.url} target="_blank" rel="noreferrer">
+                    {s.source.name}
+                  </a>
+                ) : (
+                  s.source.name
+                )}
+                {' · '}
+                {s.source.license}
+                {s.source.note && <> · {s.source.note}</>}
+              </p>
+              {s.source.url && <p className="book-credits-url">{s.source.url}</p>}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </article>
+  )
+}
+
 function TocPage({ book, onGo }: { book: ReaderBook; onGo: (key: string) => void }) {
   const { done } = useLibrary()
   return (
@@ -139,9 +204,9 @@ function TocPage({ book, onGo }: { book: ReaderBook; onGo: (key: string) => void
             )
           const isDone = it.kind === 'chapter' && done.includes(it.slug)
           return (
-            <li key={it.key} className={clsx(it.kind !== 'chapter' && 'is-extra')}>
+            <li key={it.key} className={clsx(it.kind !== 'chapter' && it.kind !== 'score' && 'is-extra')}>
               <button onClick={() => onGo(it.key)}>
-                <span className="book-toc-num">{it.kind === 'chapter' ? `Bài ${it.n}` : ''}</span>
+                <span className="book-toc-num">{it.kind === 'chapter' ? `Bài ${it.n}` : it.kind === 'score' ? `TP ${it.n}` : ''}</span>
                 <span className="book-toc-name">{it.title}</span>
                 <span aria-hidden className="book-toc-leader" />
                 {isDone && <CheckIcon width={12} height={12} strokeWidth={3} className="shrink-0 text-[var(--color-status-completed)]" />}

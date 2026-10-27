@@ -6,6 +6,7 @@ import { findArticle, normalize } from './wiki'
 import { prefetchText } from './body'
 import { LinkRefContext, PrintContext } from './linkRef'
 import { findScan, loadScans, scanLabel, scanUrl, scanWidth, type ScanItem } from './scans'
+import { loadSheets, sheetUrl, type SheetSystem } from './sheets'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
 import { parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
@@ -190,6 +191,51 @@ function ScanFigure({ book, refs, caption }: { book: string; refs: string; capti
   )
 }
 
+/** The systems of an engraved example or piece, once the list of sheets has loaded. */
+function useSheet(kind: 'ex' | 'tp', id: string) {
+  const [state, setState] = useState<{ id: string; systems: SheetSystem[] }>()
+  useEffect(() => {
+    let live = true
+    loadSheets().then((m) => live && setState({ id, systems: m[kind][id] ?? [] }))
+    return () => {
+      live = false
+    }
+  }, [kind, id])
+  return state?.id === id ? state.systems : []
+}
+
+function SheetImages({ kind, systems, alt }: { kind: 'ex' | 'tp'; systems: SheetSystem[]; alt: string }) {
+  const printing = useContext(PrintContext)
+  return (
+    <>
+      {systems.map(([f, w, h]) => (
+        <img key={f} src={sheetUrl(kind, f)} width={w} height={h} style={{ maxWidth: '100%', width: w }} alt={alt} loading={printing ? 'eager' : 'lazy'} className="scan-img sheet-img" />
+      ))}
+    </>
+  )
+}
+
+/** `::ex id | caption` — a music example engraved for the children's books. */
+function SheetExample({ id, caption }: { id: string; caption: string }) {
+  const systems = useSheet('ex', id)
+  if (!systems.length) return null
+  return (
+    <Figure caption={caption}>
+      <SheetImages kind="ex" systems={systems} alt={caption || id} />
+    </Figure>
+  )
+}
+
+/** `::sheet id | title` — a whole piece, system after system, so the page breaks fall between systems. */
+function SheetScore({ id, title }: { id: string; title: string }) {
+  const systems = useSheet('tp', id)
+  return (
+    <div className="sheet-score" aria-label={title || id}>
+      <SheetImages kind="tp" systems={systems} alt={title || id} />
+    </div>
+  )
+}
+
 /** `::name args | caption` directives that embed a diagram or image. */
 function Directive({ line }: { line: string }) {
   const [spec, ...rest] = line.slice(2).split(PIPE)
@@ -224,6 +270,10 @@ function Directive({ line }: { line: string }) {
       return <Figure caption={caption}><CircleOfFifths /></Figure>
     case 'img':
       return <CommonsImage file={args.join(' ')} caption={caption} />
+    case 'ex':
+      return <SheetExample id={args[0]} caption={caption} />
+    case 'sheet':
+      return <SheetScore id={args[0]} title={caption} />
     case 'scan':
       return <ScanFigure book={args[0]} refs={args[1]} caption={caption} />
     case 'youtube':

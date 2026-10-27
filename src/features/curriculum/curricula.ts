@@ -12,7 +12,7 @@ import type { Curriculum, ExamSpec } from './types'
  */
 
 /** What each ABRSM practical grade asks for, as far as it could be checked. Low-confidence items say so. */
-const EXAM: Record<string, ExamSpec> = {
+export const EXAM: Record<string, ExamSpec> = {
   initial: {
     scales: 'Đô trưởng và Rê thứ một quãng 8 từng tay, Đô trưởng ngược chiều và hợp âm rải — theo bản tóm tắt đặc tả ABRSM 2025–26; Lamar chưa đối chiếu bản PDF, hãy kiểm tra trong sách Piano Scales & Arpeggios của ABRSM.',
     sightReading: 'Bài rất ngắn trong vị trí năm ngón. Thông số chính thức in ở bìa sau sách ABRSM "More Piano Sight-Reading" — chưa xác minh.',

@@ -33,9 +33,9 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2,json}'],
-        // Scanned music examples (thousands of small images) load on demand and are cached as they are seen.
+        // Scanned music examples and the engraved sheets of the children's books (thousands of small images) load on demand and are cached as they are seen.
         // The full-text search file (several MB) loads on the first search and is cached then.
-        globIgnores: ['scans/**', 'content/search.*.json'],
+        globIgnores: ['scans/**', 'sheets/**', 'content/search.*.json'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
@@ -45,7 +45,7 @@ export default defineConfig({
             options: { cacheName: 'library-search', expiration: { maxEntries: 2 } },
           },
           {
-            urlPattern: ({ url }) => url.pathname.includes('/scans/'),
+            urlPattern: ({ url }) => url.pathname.includes('/scans/') || url.pathname.includes('/sheets/'),
             handler: 'CacheFirst',
             options: { cacheName: 'book-scans', expiration: { maxEntries: 3000, maxAgeSeconds: 60 * 60 * 24 * 365 } },
           },

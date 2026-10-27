@@ -17,6 +17,7 @@ import { Reader } from './reader/Reader'
 import { useReader } from './reader/store'
 import type { Curriculum, Level, Piece } from './types'
 import { jazzVolumeOf, OLD_JAZZ_ID } from './books'
+import { kidsBookOf } from './kids/books'
 import './motion-books.css'
 import logoFull from '../../assets/logo-full.webp'
 
@@ -48,6 +49,8 @@ export function CurriculumPage() {
   const { id, item } = useParams()
   // Links to the single Jazz Theory Book open the volume that now holds the item.
   if (id === OLD_JAZZ_ID) return <Navigate replace to={`/curriculum/${jazzVolumeOf(item)}${item ? `/${item}` : ''}`} />
+  // The single children's course was split into one volume per grade: old links open the volume holding the lesson.
+  if (id === 'tre-em' && !CURRICULA.some((c) => c.id === id)) return <Navigate replace to={`/curriculum/${kidsBookOf(item)}${item && item !== 'tong-quan' && findBook(kidsBookOf(item))?.items.some((i) => i.key === item) ? `/${item}` : ''}`} />
   const book = findBook(id)
   if (book && item === 'in') return <PrintBook book={book} />
   const course = CURRICULA.find((c) => c.id === id)
@@ -96,6 +99,7 @@ function Overview({ c }: { c: Curriculum }) {
 function Shelf() {
   const books = READER_BOOKS.filter((b) => b.kind === 'book')
   const courses = READER_BOOKS.filter((b) => b.kind === 'course')
+  const kids = READER_BOOKS.filter((b) => b.kind === 'kids')
   return (
     <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 lg:px-8 lg:py-10">
       <header className="lamars-head animate-float-up">
@@ -113,7 +117,7 @@ function Shelf() {
         </p>
         <ul className="lamars-facts">
           <li><b>{books.length}</b> sách</li>
-          <li><b>{courses.length}</b> giáo trình piano</li>
+          <li><b>{courses.length + kids.length}</b> giáo trình piano</li>
           <li>Đọc như ấn phẩm · In PDF</li>
         </ul>
       </header>
@@ -121,6 +125,7 @@ function Shelf() {
       <CoverFlow books={READER_BOOKS} />
 
       <ShelfRow title="Sách lý thuyết" hint={`${books.length} quyển`} books={books} />
+      <ShelfRow title="Piano cho Trẻ em" hint={`${kids.length} cuốn · ABRSM Initial – Grade 5`} books={kids} />
       <ShelfRow title="Giáo trình piano" hint={`${courses.length} giáo trình`} books={courses} />
 
       <ReviewLink slug={CURRICULA[0]?.review} />
@@ -193,7 +198,7 @@ function ShelfBook({ book }: { book: ReaderBook }) {
         </Link>
         <p className="mt-1.5 line-clamp-3 text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
         <p className="mt-2 text-[12px] text-[var(--color-ink-faint)]">
-          {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'book' ? 'phần' : 'cấp'} · {chapters.length} bài · đã học {progress.done}/{progress.total}
+          {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'course' ? 'cấp' : 'phần'} · {chapters.length} bài · đã học {progress.done}/{progress.total}
         </p>
         <div className="mt-2 h-1 max-w-xs overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
           <span className="book-bar block h-full rounded-full bg-[var(--color-gold)]" style={{ transform: `scaleX(${Math.max(0.02, progress.ratio)})` }} />

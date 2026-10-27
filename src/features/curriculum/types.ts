@@ -102,3 +102,37 @@ export interface Book {
   coverImage?: string
   parts: Part[]
 }
+
+/** A piece printed in full at the back of a children's book (engraved from music/tp/<id>.ly). */
+export interface Score {
+  id: string
+  title: string
+  composer: string
+  /** The composer's dates, or the year of the piece. */
+  dates?: string
+  /** Classical repertoire, 20th-century public-domain pieces, new pieces written for the book, folk songs (world / Vietnamese). */
+  style: 'classical' | 'c20' | 'new' | 'folk' | 'vietnam'
+  /** What the piece is and how to practise it (library markup). */
+  about: string
+  /** Where the notes come from — listed on the sources page at the end of the book. */
+  source: { name: string; url?: string; license: string; note?: string }
+}
+
+/** One volume of the children's piano course, matched to an ABRSM grade. */
+export interface KidsBook {
+  id: string
+  /** e.g. "Initial", "Grade 1". */
+  grade: string
+  title: string
+  volume: string
+  subtitle: string
+  hue: number
+  coverImage?: string
+  months: [number, number]
+  /** About this volume: paragraphs in library markup. */
+  preface: string
+  parts: Part[]
+  scores: Score[]
+  exam?: ExamSpec
+  checkpoint: string[]
+}

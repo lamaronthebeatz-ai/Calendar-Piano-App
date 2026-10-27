@@ -1,0 +1,161 @@
+% Examples of the Initial book (Piano cho Trẻ em — Initial). One block per example: === id, then the music.
+
+=== i-cao-thap
+\new PianoStaff <<
+  \new Staff { \clef treble \time 4/4 \omit Staff.TimeSignature c'''1 s1 \bar "|." }
+  \new Staff { \clef bass \omit Staff.TimeSignature s1 c,1 }
+>>
+
+=== i-dai-ngan
+\new RhythmicStaff { \time 4/4 c1 | c4 c c c \bar "|." }
+\addlyrics { dài __ ngắn ngắn ngắn ngắn }
+
+=== i-to-nho
+\relative c'' { \time 4/4 g4\f g g g | g\p g g g \bar "|." }
+\addlyrics { To to to to nhỏ nhỏ nhỏ nhỏ }
+
+=== i-phach-deu
+\new RhythmicStaff { \time 4/4 c4 c c c | c c c c | c c c c | c c c c \bar "|." }
+\addlyrics { đi đi đi đi vỗ vỗ vỗ vỗ đi đi đi đi vỗ vỗ vỗ vỗ }
+
+=== i-phach-hai
+\new RhythmicStaff { \time 2/4 c4-> c | c-> c | c-> c | c-> c \bar "|." }
+\addlyrics { MỘT hai MỘT hai MỘT hai MỘT hai }
+
+=== i-phach-ba
+\new RhythmicStaff { \time 3/4 c4-> c c | c-> c c | c-> c c | c-> c c \bar "|." }
+\addlyrics { MỘT hai ba MỘT hai ba MỘT hai ba MỘT hai ba }
+
+=== i-ngon-tay-phai
+\relative c' { \time 4/4 c4-1 d-2 e-3 f-4 | g1-5 \bar "|." }
+\addlyrics { Đô Rê Mi Fa Sol }
+
+=== i-ngon-tay-trai
+\relative c { \clef bass \time 4/4 c4-5 d-4 e-3 f-2 | g1-1 \bar "|." }
+\addlyrics { Đô Rê Mi Fa Sol }
+
+=== i-phim-den-ostinato
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 4/4 \key fis \major
+    cis4 dis cis ais | gis2 ais | cis4 dis fis dis | cis1 |
+    dis4 fis dis cis | ais2 gis | ais4 cis ais gis | fis1 \bar "|." }
+  \new Staff \relative c { \clef bass \key fis \major
+    \repeat unfold 8 { <fis cis'>2 <fis cis'>2 } }
+>>
+
+=== i-not-den-trang
+\new RhythmicStaff { \time 4/4 c4 c c c | c2 c | c2. c4 | c1 \bar "|." }
+\addlyrics { ta ta ta ta "ta-a" "ta-a" "ta-a-a" ta "ta-a-a-a" }
+
+=== i-bang-truong-do
+\new RhythmicStaff \with { \remove "Time_signature_engraver" } { \cadenzaOn c1 \bar "|" c2 c2 \bar "|" c4 c c c \bar "|" c8[ c] c[ c] c[ c] c[ c] \bar "|." }
+\addlyrics { "4 phách" "2" "2" "1" "1" "1" "1" "½" "½" "½" "½" "½" "½" "½" "½" }
+
+=== i-dau-lang
+\new RhythmicStaff { \time 4/4 c4 r c r | c c c r | c2 r2 | c1 \bar "|." }
+\addlyrics { ta ta ta ta ta "ta-a" "ta-a-a-a" }
+
+=== i-lang-cac-loai
+\new Staff \with { \remove "Time_signature_engraver" \remove "Clef_engraver" } { \cadenzaOn r1 \bar "|" r2 \bar "|" r4 \bar "|." }
+
+=== i-o-nhip
+\relative c'' { \time 4/4 c4 c g g | a a g2 | f4 f e e | d d c2 \bar "|." }
+\addlyrics { "1" "2" "3" "4" "1" "2" "3–4" "1" "2" "3" "4" "1" "2" "3–4" }
+
+=== i-nhip-hai-ba-bon
+{
+  \time 2/4 \relative c'' { c4 d | e2 \bar "||" }
+  \time 3/4 \relative c'' { e4 d c | g2. \bar "||" }
+  \time 4/4 \relative c'' { c4 e g e | c1 \bar "|." }
+}
+
+=== i-dong-va-khe
+\new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn e'1 g' b' d'' f'' \bar "||" \break f'1 a' c'' e'' \bar "|." }
+\addlyrics { "dòng 1" "dòng 2" "dòng 3" "dòng 4" "dòng 5" "khe 1" "khe 2" "khe 3" "khe 4" }
+
+=== i-khoa-sol-fa
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef treble \cadenzaOn g'1 \bar "|." }
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef bass \cadenzaOn f1 \bar "|." }
+>>
+
+=== i-khuong-lon-do-giua
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef treble \cadenzaOn c'1 s1 \bar "|." }
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef bass \cadenzaOn s1 c'1 \bar "|." }
+>>
+
+=== i-not-moc
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef treble \cadenzaOn s1 s1 c'1 g'1 c''1 \bar "|." }
+  \addlyrics { "Đô giữa" "Sol" "Đô cao" }
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef bass \cadenzaOn c1 f1 c'1 s1 s1 \bar "|." }
+  \addlyrics { "Đô trầm" "Fa" "Đô giữa" }
+>>
+
+=== i-lien-nhay-lap
+\relative c' { \time 4/4 c4^"liền bậc" d e f | g^"lặp lại" g g g | g^"nhảy bậc" e c e | g1 \bar "|." }
+
+=== i-vi-tri-do-hai-tay
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 c4-1 d-2 e-3 f-4 | g-5 f e d | c1 | R1 | R1 \bar "|." }
+  \new Staff \relative c { \clef bass R1 | R1 | R1 | c4-5 d-4 e-3 f-2 | g1-1 }
+>>
+
+=== i-vi-tri-do-giua
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 c4-1 d-2 e-3 f-4 | g1-5 | R1 | R1 \bar "|." }
+  \new Staff \relative c' { \clef bass R1 | R1 | c4-1 b-2 a-3 g-4 | f1-5 }
+>>
+
+=== i-vi-tri-sol
+\relative c'' { \time 4/4 g4-1 a-2 b-3 c-4 | d2-5 b | c4 a b g | a1 \bar "|." }
+\addlyrics { Sol La Si Đô Rê Si Đô La Si Sol La }
+
+=== i-legato-staccato
+\relative c'' { \time 4/4 g4( a b c) | d1 | g,4-. a-. b-. c-. | d1 \bar "|." }
+
+=== i-cuong-do
+\relative c'' { \time 4/4 c4\p d e f | g1 | g4\mf f e d | c1 \break c4\f e g e | c1 \bar "|." }
+
+=== i-hai-tay-hoi-dap
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 c4 e g e | c1 | R1 | R1 \break c4 d e f | g1 | R1 | R1 \bar "|." }
+  \new Staff \relative c { \clef bass R1 | R1 | g'4 e c e | g1 | R1 | R1 | g4 f e d | c1 }
+>>
+
+=== i-am-giai-nam-not
+\relative c' { \time 4/4 c4-1 d e f | g-5 f e d | c1 \bar "||" \break g'4-1 a b c | d-5 c b a | g1 \bar "|." }
+
+=== i-am-giai-do-truong
+\relative c' { \time 4/4 c4-1 d-2 e-3 f-1 | g-2 a-3 b-4 c-5 | c-5 b-4 a-3 g-2 | f-1 e-3 d-2 c-1 \bar "|." }
+
+=== i-hop-am-rai-do
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 c4-1 e-3 g-5 e | c1 \bar "|." }
+  \new Staff \relative c { \clef bass c4-5 e-3 g-1 e | c1 }
+>>
+
+=== i-thi-tau-1
+\relative c' { \time 4/4 c4\mf d e c | d2 e | f4 e d e | c1 \bar "|." }
+
+=== i-thi-tau-2
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 3/4 g2\p a4 | g2. | R2. | R2. \bar "|." }
+  \new Staff \relative c { \clef bass R2. | R2. | g'4 f e | d2. }
+>>
+
+=== i-am-giai-re-thu
+\relative c' { \time 4/4 \key d \minor d4-1 e-2 f-3 g-1 | a-2 bes-3 c-4 d-5 | d-5 c-4 bes-3 a-2 | g-1 f-3 e-2 d-1 \bar "|." }
+
+=== i-nguoc-chieu-do
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 c4-1 d e f | g-5 f e d | c1 \bar "|." }
+  \new Staff \relative c' { \clef bass c4-1 b a g | f-5 g a b | c1 }
+>>
+
+=== i-hop-am-rai-re-thu
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 \key d \minor d4-1 f-3 a-5 f | d1 \bar "|." }
+  \new Staff \relative c { \clef bass \key d \minor d4-5 f-3 a-1 f | d1 }
+>>

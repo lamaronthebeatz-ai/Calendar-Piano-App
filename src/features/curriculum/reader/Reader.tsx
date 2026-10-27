@@ -859,6 +859,7 @@ function textOf(it: ReaderItem) {
   if (it.kind === 'front') return `${it.title}\n${it.body}`
   if (it.kind === 'part') return `${it.title}\n${it.intro}\n${it.body ?? ''}`
   if (it.kind === 'review') return `${it.title}\n${it.body}`
+  if (it.kind === 'score') return `${it.title}\n${it.score.composer}\n${it.score.about}`
   return it.title
 }
 const plain = (s: string) => s.replace(/^\s*::.*$/gm, '').replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2').replace(/\[\[([^\]]+)\]\]/g, (_, k: string) => findArticle(k)?.title ?? k).replace(/[*#|]/g, ' ').replace(/\s+/g, ' ')
