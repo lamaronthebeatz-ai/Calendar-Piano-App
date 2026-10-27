@@ -850,8 +850,6 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
   position: absolute; right: 0; top: -0.2em; font-family: var(--font-display); font-size: 7em; line-height: 1; font-weight: 600;
   color: color-mix(in oklch, var(--tint) 14%, transparent); pointer-events: none;
 }
-.reader-cover-3d { transform: perspective(1200px) rotateY(-8deg); transition: transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
-.reader-cover-3d:hover { transform: perspective(1200px) rotateY(0deg) translateY(-4px); }
 
 .reader-enter.from-right { animation: reader-in-right 520ms cubic-bezier(0.22, 0.8, 0.2, 1); }
 .reader-enter.from-left { animation: reader-in-left 520ms cubic-bezier(0.22, 0.8, 0.2, 1); }
@@ -862,7 +860,7 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 
 @media (prefers-reduced-motion: reduce) {
   .reader-enter, .reader-sheet { animation: none !important; }
-  .shelf-book, .reader-cover-3d { transition: none; }
+  .shelf-book { transition: none; }
 }
 
 /* ---------- Print layout (save as PDF) ---------- */

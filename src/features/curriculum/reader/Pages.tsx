@@ -10,6 +10,7 @@ import { toggleDone, useLibrary } from '../../theory/library'
 import { Cover } from './Cover'
 import { chaptersOf, lessonQuestions, roman, type ReaderBook, type ReaderItem } from './model'
 import { HeroBackdrop } from '../../theory/HeroBackdrop'
+import './cover-page.css'
 
 /**
  * The pages of a book, laid out like a printed textbook: lessons ("Bài") with objectives, numbered
@@ -36,9 +37,11 @@ export function BookPage({ book, item, mode = 'screen', onGo, progressive }: { b
   const go = onGo ?? (() => undefined)
   let page
   switch (item.kind) {
-    case 'cover':
-      page = <CoverPage book={book} onStart={() => go(book.items[1].key)} />
+    case 'cover': {
+      const toc = book.items.find((i) => i.kind === 'toc')
+      page = <CoverPage book={book} onStart={() => go(book.items[1].key)} onToc={toc ? () => go(toc.key) : undefined} />
       break
+    }
     case 'front':
       page = (
         <article className="book-front">
@@ -79,16 +82,39 @@ export function BookPage({ book, item, mode = 'screen', onGo, progressive }: { b
   return <LinkRefContext.Provider value={xref}>{page}</LinkRefContext.Provider>
 }
 
-function CoverPage({ book, onStart }: { book: ReaderBook; onStart: () => void }) {
+function CoverPage({ book, onStart, onToc }: { book: ReaderBook; onStart: () => void; onToc?: () => void }) {
+  const parts = book.items.filter((i) => i.kind === 'part').length
+  const lessons = chaptersOf(book).length
+  const eyebrow = book.kind === 'course' ? 'Giáo trình piano' : "Lamar\u2019s Book"
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-6 py-4">
-      <div className="reader-cover-3d w-[min(78%,calc(var(--page-h)*0.72),440px)]">
-        <Cover book={book} size={1.15} className="rounded-[6px] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.45),0_8px_20px_-8px_rgba(0,0,0,0.25)]" />
+    <div className="rc" style={{ '--rc-hue': book.hue } as CSSProperties}>
+      <div aria-hidden className="rc-ambient">
+        {book.coverImage && <img src={book.coverImage} alt="" draggable={false} />}
       </div>
-      <p className="max-w-md text-center font-sans text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
-      <button onClick={onStart} className="reader-cta">
-        Mở sách <ChevronRightIcon width={16} height={16} />
-      </button>
+      <div className="rc-stage">
+        <div className="rc-book">
+          <Cover book={book} size={1.15} className="rc-cover" />
+          <span aria-hidden className="rc-pages" />
+          <span aria-hidden className="rc-gloss" />
+        </div>
+        <span aria-hidden className="rc-floor" />
+      </div>
+      <div className="rc-text">
+        <p className="rc-eyebrow"><span aria-hidden />{eyebrow}<span aria-hidden /></p>
+        <h1 className="rc-title">{book.title}</h1>
+        {book.volume && <p className="rc-volume">{book.volume}</p>}
+        <p className="rc-sub">{book.subtitle}</p>
+        <p className="rc-meta">
+          {parts > 0 && <span>{parts} {book.kind === 'course' ? 'cấp' : 'phần'}</span>}
+          <span>{lessons} bài</span>
+        </p>
+        <div className="rc-actions">
+          <button onClick={onStart} className="rc-cta">
+            Bắt đầu đọc <ChevronRightIcon width={15} height={15} />
+          </button>
+          {onToc && <button onClick={onToc} className="rc-ghost">Mục lục</button>}
+        </div>
+      </div>
     </div>
   )
 }
