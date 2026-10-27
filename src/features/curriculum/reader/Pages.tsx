@@ -96,8 +96,8 @@ function CoverPage({ book, onStart, onToc }: { book: ReaderBook; onStart: () => 
           <Cover book={book} size={1.15} className="rc-cover" />
           <span aria-hidden className="rc-pages" />
           <span aria-hidden className="rc-gloss" />
+          <span aria-hidden className="rc-floor" />
         </div>
-        <span aria-hidden className="rc-floor" />
       </div>
       <div className="rc-text">
         <p className="rc-eyebrow"><span aria-hidden />{eyebrow}<span aria-hidden /></p>
