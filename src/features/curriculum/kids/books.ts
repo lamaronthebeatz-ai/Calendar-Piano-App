@@ -1,6 +1,7 @@
 import initialCover from '../../../assets/covers/piano-tre-em-initial.webp'
 import g1Cover from '../../../assets/covers/piano-tre-em-1.webp'
 import g2Cover from '../../../assets/covers/piano-tre-em-2.webp'
+import g3Cover from '../../../assets/covers/piano-tre-em-3.webp'
 import type { ExamSpec, KidsBook, Score } from '../types'
 
 /**
@@ -31,6 +32,12 @@ export const KIDS_EXAM: Record<string, ExamSpec> = {
     sightReading: 'Như Grade 1, thêm: hai tay chơi cùng lúc; giọng Rê trưởng, Mi và Sol thứ; nốt tròn, nhóm nốt đen chấm dôi – móc đơn, dấu nối, pp.',
     aural: 'A: vỗ phách, nhấn phách mạnh, nói nhịp hai hay ba. B: hát lại ba câu hai ô, giọng trưởng, âm chủ – âm át. C: nhận ra và mô tả chỗ đổi cao độ hoặc tiết tấu. D: trả lời về cường độ hoặc cách chơi, và về tốc độ.',
     theory: 'Nhạc lý ABRSM Grade 2: nhịp 2/2, 3/2, 4/2, 3/8; liên ba; hai dòng kẻ phụ; giọng song song; thứ hoà âm; âm giai và hoá biểu La, Si♭, Mi♭ trưởng và La, Mi, Rê thứ, hợp âm chủ, bậc và quãng trên âm chủ (bằng số); thêm thuật ngữ.',
+  },
+  g3: {
+    scales: `Thuộc lòng, liền tiếng, đều (${SPEC_NOTE}); âm giai thứ: hoà âm hoặc giai điệu, tuỳ chọn. Rê, La trưởng; Mi, Sol thứ 2 quãng tám, hai tay. Si♭, Mi♭ trưởng; Si, Đô thứ 2 quãng tám, từng tay. Mi trưởng ngược chiều 2 quãng tám. Cromatic ngược chiều từ Rê 1 quãng tám. Hợp âm rải Rê, La trưởng; Mi, Sol thứ 2 quãng tám hai tay; Si♭, Mi♭ trưởng; Si, Đô thứ 2 quãng tám từng tay.`,
+    sightReading: 'Đến 8 ô nhịp; thêm nhịp 3/8; giọng La, Si♭, Mi♭ trưởng, Si thứ; tay ra ngoài vị trí năm ngón; hợp âm hai nốt ở một tay.',
+    aural: 'A: vỗ phách, nhấn phách mạnh, nói nhịp hai, ba hay bốn. B: hát lại ba câu hai ô, trưởng hoặc thứ, trong một quãng tám. C: nhận ra và mô tả chỗ đổi cao độ hoặc tiết tấu trong câu đến bốn ô. D: trả lời về cường độ / cách chơi / tốc độ, và giọng trưởng hay thứ.',
+    theory: 'Nhạc lý ABRSM Grade 3: nhịp kép 6/8, 9/8, 12/8; nốt móc ba; dòng kẻ phụ xa, dịch một quãng tám giữa khoá Sol và Fa; mọi giọng đến bốn dấu hoá, thứ hoà âm và giai điệu; quãng trên âm chủ theo số và tính chất; thêm thuật ngữ.',
   },
 }
 
@@ -397,7 +404,121 @@ Thời gian gợi ý 8 – 12 tháng là ước lượng của người biên so
   ],
 }
 
-export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2]
+const g3: KidsBook = {
+  id: 'tre-em-g3',
+  grade: 'Grade 3',
+  title: 'Piano & Nhạc lý cho Trẻ em',
+  volume: 'Grade 3',
+  subtitle: 'Nhịp kép 6/8, nốt móc ba, giọng đến bốn dấu, thứ giai điệu, quãng trưởng – thứ – đúng — nhạc lý và piano tương đương ABRSM Grade 3.',
+  hue: 210,
+  coverImage: g3Cover,
+  months: [9, 12],
+  preface: `Cuốn Grade 3 theo đề cương **nhạc lý ABRSM Grade 3** (bản từ 2020) và yêu cầu **piano ABRSM Grade 3** của đặc tả 2027 & 2028. Nhịp kép xuất hiện — phách chia ba; bạn đọc đủ mười tám giọng đến bốn dấu hoá, ba dạng âm giai thứ, gọi quãng bằng cả số lẫn tính chất, chép giai điệu qua khoá khác; ở đàn, âm giai thứ và hợp âm rải hai tay, cromatic ngược chiều, bài đọc ra khỏi vị trí năm ngón.
+
+**Phần IV** in đủ tám bản: *Wilder Reiter* của **Schumann** (có trong danh sách ABRSM Grade 3 năm 2027 & 2028), *Old French Song* của **Tchaikovsky** (1878), *Musette* và *Polonaise Sol thứ* trong *Sổ tay Anna Magdalena Bach*, *Marche du grand escalier* của **Satie** (1913) và ba bài viết mới — jig 6/8, blues giọng Sol, ngũ cung. Nguồn và giấy phép ở trang cuối.
+
+Thời gian gợi ý 9 – 12 tháng là ước lượng của người biên soạn, không phải số liệu của ABRSM.`,
+  parts: [
+    {
+      title: 'Nhịp và tiết tấu',
+      intro: 'Nhịp kép — mỗi phách là nốt đen chấm dôi chia ba móc đơn; nốt móc ba.',
+      chapters: [
+        { slug: 'tre-em-g3-nhip-kep', focus: '6/8, 9/8, 12/8; phân biệt 6/8 và 3/4; nhóm nốt.' },
+        { slug: 'tre-em-g3-moc-ba', focus: 'Nốt và dấu lặng móc ba.' },
+      ],
+      exercises: [
+        'Vỗ bốn ô 6/8: phách chấm dôi | đen + móc đơn ×2 | ba móc đơn + phách chấm dôi | trắng chấm dôi.',
+        'Viết lại một ô 3/4 gồm sáu móc đơn thành ô 6/8 (đổi cách nối gạch).',
+        'Thêm vạch nhịp cho một dòng 9/8 cho sẵn.',
+      ],
+    },
+    {
+      title: 'Cao độ, giọng và quãng',
+      intro: 'Dòng kẻ phụ xa và chép qua khoá khác; mọi giọng đến bốn dấu; thứ giai điệu; tính chất quãng; thuật ngữ; đọc hiểu một giai điệu 6/8.',
+      chapters: [
+        { slug: 'tre-em-g3-ke-phu-va-dich-quang-tam', focus: 'Đọc nốt xa; chép một quãng tám sang khoá kia.' },
+        { slug: 'tre-em-g3-giong-den-bon-dau', focus: 'Mi, La♭ trưởng; sáu giọng thứ mới; bảng giọng song song.' },
+        { slug: 'tre-em-g3-thu-giai-dieu', focus: 'Thứ giai điệu; ba dạng âm giai thứ.' },
+        { slug: 'tre-em-g3-quang-tinh-chat', focus: 'Quãng trưởng, thứ, đúng trên âm chủ.' },
+        { slug: 'tre-em-g3-thuat-ngu', focus: 'con brio, espressivo, sf, rubato…' },
+        { slug: 'tre-em-g3-doc-hieu', focus: 'Đọc hiểu giai điệu 6/8 có nhịp lấy đà.' },
+      ],
+      exercises: [
+        'Viết hoá biểu mười tám giọng đến bốn dấu, mỗi hoá biểu ghi cặp trưởng – thứ.',
+        'Viết Sol thứ và Fa♯ thứ cả hoà âm lẫn giai điệu, lên và xuống.',
+        'Gọi tên quãng trên âm chủ trong Mi trưởng và Đô thứ hoà âm (2 đến 8).',
+        'Chép tay phải ô 1 – 4 của Musette xuống khoá Fa, thấp một quãng tám.',
+      ],
+    },
+    {
+      title: 'Ở đàn: kỹ thuật, thị tấu và nghe',
+      intro: 'Yêu cầu âm giai – hợp âm rải ABRSM Grade 3; thị tấu ra ngoài vị trí năm ngón; nghe trưởng – thứ.',
+      chapters: [
+        { slug: 'tre-em-g3-ky-thuat', focus: 'Âm giai, cromatic ngược chiều, hợp âm rải hai tay.' },
+        { slug: 'tre-em-g3-thi-tau-va-nghe', focus: 'Thông số thị tấu Grade 3; bốn bài nghe.' },
+      ],
+      exercises: [
+        'Chơi thuộc lòng toàn bộ yêu cầu kỹ thuật Grade 3 mỗi ngày.',
+        'Mỗi ngày đọc một bài 8 ô nhịp mới có đổi vị trí tay.',
+        'Nghe mười hợp âm do người lớn chơi, nói trưởng hay thứ.',
+      ],
+    },
+  ],
+  scores: [
+    {
+      id: 'g3-schumann-wilder-reiter', title: 'Wilder Reiter (Người kỵ sĩ hoang dã), Op. 68 số 8', composer: 'Robert Schumann', dates: '1810 – 1856', style: 'classical',
+      about: 'Bài nổi tiếng nhất của *Album für die Jugend* (1848); có trong danh sách bài thi ABRSM Grade 3 năm 2027 & 2028. Nhịp 6/8, giai điệu phi nước đại chuyển qua lại giữa tay phải và tay trái — tay chơi giai điệu nhấn rõ, tay kia đệm hợp âm nảy nhẹ. Đoạn giữa chuyển sang Fa trưởng, giai điệu xuống tay trái.',
+      source: MUTOPIA(655, 'Mutopia Project', 'CC BY-SA 2.5'),
+    },
+    {
+      id: 'g3-tchaikovsky-old-french-song', title: 'Old French Song (Bài ca Pháp cổ), Op. 39 số 16', composer: 'Pyotr Ilyich Tchaikovsky', dates: '1840 – 1893', style: 'classical',
+      about: 'Trong *Album cho tuổi trẻ* Op. 39 (1878) — 24 bản Tchaikovsky viết cho trẻ em. Sol thứ, *Moderato assai*: giai điệu hát dài trên tay trái hai bè (bè trên giai điệu phụ, bè dưới nốt ngân). Giữ legato, thở ở cuối mỗi câu bốn ô.',
+      source: { name: 'Mutopia Project, bản số 2080 (người khắc: David McNamara)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2080', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g3-musette', title: 'Musette Rê trưởng, BWV Anh. 126', composer: 'Không rõ tác giả (Sổ tay Anna Magdalena Bach)', dates: '1725', style: 'classical',
+      about: '*Musette* bắt chước tiếng kèn túi: tay trái nhảy quãng tám đều như tiếng ống trầm, tay phải vui tươi phía trên. Tác giả không được ghi trong sổ tay. Chơi nảy nhẹ tay trái, tay phải móc kép rõ và đều.',
+      source: { name: 'Mutopia Project, bản số 79 (người khắc: Allen Garvin)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=79', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g3-polonaise-g-minor', title: 'Polonaise Sol thứ, BWV Anh. 119', composer: 'Không rõ tác giả (Sổ tay Anna Magdalena Bach)', dates: '1725', style: 'classical',
+      about: '*Polonaise* là điệu múa Ba Lan nhịp 3/4 trang trọng, hay nhấn phách 1 bằng tiết tấu móc đơn chấm dôi. Hai bè độc lập; ở đoạn hai, chú ý các nốt Fa♯ (bậc 7 nâng của Sol thứ) và dấu chấm (staccato) ở tay phải.',
+      source: { name: 'Mutopia Project, bản số 1016', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1016', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g3-satie-marche', title: 'Marche du grand escalier', composer: 'Erik Satie', dates: '1866 – 1925', style: 'c20',
+      about: 'Bài cuối *Enfantillages pittoresques* (1913): "Hành khúc cầu thang lớn" — Satie kể chuyện một cầu thang lớn có nghìn bậc ngà, đẹp đến mức không ai dám dùng. Nhịp 4/4, hợp âm bè giữa đổi liên tục; giữ phách đều như bước chân, nhẹ nhàng hài hước.',
+      source: MUTOPIA(2132, 'Frédéric Dupernay', 'CC BY-SA 4.0'),
+    },
+    {
+      id: 'g3-nhay-day', title: 'Nhảy dây', composer: 'Lamar', style: 'new',
+      about: 'Điệu **jig** nhịp 6/8 — hai phách lớn mỗi ô, như hai cú nhảy. Tay trái giữ quãng hai nốt ở mỗi phách chấm dôi; tay phải nhóm ba móc đơn và cặp "nốt đen – móc đơn" (dài – ngắn). Đoạn ba lên **f**, rồi trở lại **mf**.',
+      source: own('Phong cách jig 6/8'),
+    },
+    {
+      id: 'g3-blues-sol', title: 'Blues giọng Sol', composer: 'Lamar', style: 'new',
+      about: 'Mười hai ô blues ở Sol: tay trái chơi **shuffle** — hai nốt Sol – Rê và Sol – Mi xen kẽ theo móc đơn swing; tay phải dùng **nốt xanh** Si♭ trượt lên Si. Bắt đầu bằng dấu lặng móc đơn — đếm trước một ô cho chắc.',
+      source: own('Khung 12 ô nhịp blues'),
+    },
+    {
+      id: 'g3-hoi-lang', title: 'Hội làng', composer: 'Lamar', style: 'new',
+      about: 'Viết trên năm nốt **Fa – Sol – La – Đô – Rê** với móc kép rộn ràng như trống hội. Tay trái chơi quãng 5 nhấn phách. Đoạn ba nhỏ lại (**p**) rồi bùng lên **f** ở đoạn cuối. Giai điệu mới, không trích dân ca nào.',
+      source: own('Viết trên âm giai ngũ cung'),
+    },
+  ],
+  exam: KIDS_EXAM.g3,
+  checkpoint: [
+    'Đếm, vỗ, viết đúng nhịp kép 6/8, 9/8, 12/8 và nốt móc ba.',
+    'Chép một giai điệu sang khoá kia một quãng tám.',
+    'Viết hoá biểu, âm giai (thứ hoà âm và giai điệu) mọi giọng đến bốn dấu.',
+    'Gọi tên quãng trên âm chủ theo số và tính chất.',
+    'Chơi thuộc lòng toàn bộ yêu cầu kỹ thuật Grade 3.',
+    'Chơi ít nhất ba bản ở Phần IV, trong đó một bản Baroque và một bản thế kỷ XIX.',
+    'Nhận ra trưởng hay thứ; nói nhịp hai, ba hay bốn.',
+  ],
+}
+
+export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2, g3]
 
 /** The volume holding a chapter (old links to the single children's course land there; else the first volume). */
 export const kidsBookOf = (slug?: string) => KIDS_BOOKS.find((b) => b.parts.some((p) => p.chapters.some((c) => c.slug === slug)))?.id ?? KIDS_BOOKS[0].id

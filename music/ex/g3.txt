@@ -1,0 +1,102 @@
+% Examples of the Grade 3 book.
+
+=== g3-don-kep
+{ \time 3/4 \relative c'' { c8 d e f g a | b2. \bar "||" }
+  \time 6/8 \relative c'' { c8 d e f g a | b2. \bar "|." } }
+\addlyrics { "1" "và" "2" "và" "3" "và" "1–2–3" "1" "và" "a" "2" "và" "a" "1––2" }
+
+=== g3-sau-tam
+\new RhythmicStaff { \time 6/8 c4. c | c4 c8 c4 c8 | c8 c c c4. | c2. \bar "|." }
+\addlyrics { "1" "2" "1" "a" "2" "a" "1" "và" "a" "2" "1––2" }
+
+=== g3-chin-muoi-hai
+{ \time 9/8 \relative c'' { c4. d e | f8 e d c4. g \bar "||" }
+  \time 12/8 \relative c'' { c8 d e f4 g8 a4. g | f8 e d c4 b8 c2. \bar "|." } }
+
+=== g3-nhom-kep
+\relative c'' { \time 6/8 c8 d e f g a | g4 e8 c4 r8 | e16 d c d e f g8 e c | c4. r \bar "|." }
+
+=== g3-moc-ba
+\new RhythmicStaff \with { \remove "Time_signature_engraver" } { \cadenzaOn c8 \bar "|" c16[ c] \bar "|" c32[ c c c] \bar "|" r32 \bar "|." }
+
+=== g3-moc-ba-giai-dieu
+\relative c'' { \time 2/4 c8. d32 e f8 e | d16 c32 b a16 g g4 \bar "|." }
+
+=== g3-ke-phu-xa
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn e'''1 f''' g''' \bar "|." }
+  \addlyrics { "E6" "F6" "G6" }
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef bass \cadenzaOn a,,1 g,, f,, \bar "|." }
+  \addlyrics { "A1" "G1" "F1" }
+>>
+
+=== g3-dich-quang-tam
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 3/4 \key g \major g4 b d | c2 b4 | a8 b c4 a | g2. \bar "|." }
+  \new Staff \relative c' { \clef bass \key g \major g4 b d | c2 b4 | a8 b c4 a | g2. }
+>>
+
+=== g3-hoa-bieu-bon-dau
+\new PianoStaff <<
+  \new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn \key e \major s1 \bar "||" \key aes \major s1 \bar "||" }
+  \new Staff \with { \remove "Time_signature_engraver" } { \clef bass \cadenzaOn \key e \major s1 \key aes \major s1 }
+>>
+
+=== g3-am-giai-mi-truong
+\relative c' { \key e \major \omit Staff.TimeSignature \cadenzaOn e1 fis gis a b cis dis e \bar "|." }
+\addlyrics { E "F♯" "G♯" A B "C♯" "D♯" E }
+
+=== g3-am-giai-la-giang
+\relative c' { \key aes \major \omit Staff.TimeSignature \cadenzaOn aes1 bes c des ees f g aes \bar "|." }
+\addlyrics { "A♭" "B♭" C "D♭" "E♭" F G "A♭" }
+
+=== g3-thu-giai-dieu
+\relative c'' { \omit Staff.TimeSignature \cadenzaOn a1 b c d e fis gis a \bar "||" a g! f! e d c b a \bar "|." }
+\addlyrics { A B C D E "F♯" "G♯" A A G F E D C B A }
+
+=== g3-thu-ba-dang
+\relative c' { \key c \minor \omit Staff.TimeSignature \cadenzaOn c1 d ees f g aes b c \bar "||" c, d ees f g a b c c bes! aes! g f ees d c \bar "|." }
+
+=== g3-quang-tinh-chat
+\relative c' { \omit Staff.TimeSignature \cadenzaOn <c d>1 <c e> <c f> <c g'> <c a'> <c b'> <c c'> \bar "|." }
+\addlyrics { "2 trưởng" "3 trưởng" "4 đúng" "5 đúng" "6 trưởng" "7 trưởng" "8 đúng" }
+
+=== g3-quang-thu
+\relative c' { \key c \minor \omit Staff.TimeSignature \cadenzaOn <c d>1 <c ees> <c f> <c g'> <c aes'> <c b'!> <c c'> \bar "|." }
+\addlyrics { "2 trưởng" "3 thứ" "4 đúng" "5 đúng" "6 thứ" "7 trưởng" "8 đúng" }
+
+=== g3-thuat-ngu
+\relative c'' { \time 6/8 \tempo "Allegro con brio" c8\f e g c4 g8 | e4.\sf r | \tempo "Lento e espressivo" g,4.\p(\< c\!) | b2.\fermata \bar "|." }
+
+=== g3-am-giai-thu-hai-tay
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 \key e \minor e8-1 fis g a-1 b c dis-4 e-1 | fis g a-1 b c dis-4 e4-5 \bar "|." }
+  \new Staff \relative c { \clef bass \key e \minor e8-5 fis g a b-1 c-3 dis-2 e-1 | fis-4 g a b-1 c-3 dis-2 e4-1 }
+>>
+
+=== g3-cromatic-nguoc
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 d8-1 dis-3 e-1 f-2 fis-3 g-1 gis-3 a-1 | ais-3 b-1 c-2 cis-3 d2-1 \bar "|." }
+  \new Staff \relative c' { \clef bass d8-1 cis-3 c-1 b-2 bes-3 a-1 aes-3 g-1 | fis-3 f-1 e-2 ees-3 d2-1 }
+>>
+
+=== g3-rai-hai-tay
+\new PianoStaff <<
+  \new Staff \relative c' { \time 4/4 \key d \major d8-1 fis-2 a-3 d-1 fis-2 a-3 d4-5 | d8 a fis d a fis d4 \bar "|." }
+  \new Staff \relative c { \clef bass \key d \major d8-5 fis-3 a-2 d-1 fis-3 a-2 d4-1 | d8 a fis d a fis d4 }
+>>
+
+=== g3-thi-tau-1
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 3/8 \key a \major cis8\mf b a | e'4 cis8 | d16 cis b8 a | b4. \break cis8 b a | a'4 fis8 | e cis b | a4. \bar "|." }
+  \new Staff \relative c { \clef bass \key a \major a4. | <a e'> | d | e | a, | d | e | <a, e'> }
+>>
+
+=== g3-thi-tau-2
+\new PianoStaff <<
+  \new Staff \relative c'' { \time 4/4 \key b \minor fis4\p( e d cis) | b2 ais | b4 cis d e | fis1 \bar "|." }
+  \new Staff \relative c { \clef bass \key b \minor <b fis'>1 | <cis fis> | <b d>2 <g' b> | <fis ais>1 }
+>>
+
+=== g3-doc-hieu
+\relative c'' { \time 6/8 \key ees \major \tempo "Andantino" \partial 8 bes8\p | ees4 g8 f4 ees8 | d4( ees8) f4 bes,8 | c4 aes'8 g4 f8 | ees4. r4 \bar "|." }
