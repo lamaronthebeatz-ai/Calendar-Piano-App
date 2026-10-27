@@ -402,7 +402,7 @@ Minh Châu nêu **ba mức dùng dân ca** trong khí nhạc: trích nguyên gia
 - **1965 – 1975:** chiến tranh lan ra miền Bắc; ưu tiên **tiết mục nhỏ gọn** phục vụ chiến trường, xu hướng **"đại chúng hoá"**, chủ đề chủ nghĩa anh hùng cách mạng.
 
 ## Tác phẩm cho nhạc cụ cổ truyền
-Nhóm thứ tư theo giáo trình: nhạc độc tấu, hoà tấu viết cho đàn bầu, sáo, đàn tranh, nhị… theo lối ký âm và hình thức mới — thường đi cùng việc **cải tiến nhạc cụ** (thêm dây, mở âm vực). Xem [[am-nhac-truyen-thong-viet-nam]].
+Nhóm thứ tư theo giáo trình: nhạc độc tấu, hoà tấu viết cho đàn bầu, sáo, đàn tranh, nhị… theo lối ký âm và hình thức mới — thường đi cùng việc **cải tiến nhạc cụ** (thêm dây, mở âm vực). Xem [[nhac-cu-viet-nam]].
 
 ## Câu hỏi và bài tập
 1. Lập bảng năm điểm khác nhau giữa nhạc thính phòng cổ truyền và nhạc thính phòng mới; mỗi điểm cho một ví dụ.

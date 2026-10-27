@@ -9,6 +9,7 @@ import neuhausCover from '../../assets/covers/neuhaus.webp'
 import hanslickCover from '../../assets/covers/hanslick.webp'
 import schopenhauerCover from '../../assets/covers/schopenhauer.webp'
 import allenCover from '../../assets/covers/quan-ly-nghe-si.webp'
+import vietnamCover from '../../assets/covers/am-nhac-viet-nam.webp'
 import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
@@ -1177,6 +1178,181 @@ Mỗi bài tóm lược và giải thích một chương bằng lời của bộ
         { slug: 'quan-ly-nghe-si-dieu-hanh-kinh-doanh', focus: 'Buổi gặp 15 phút; đàm phán theo lợi ích; đạo đức; payola.' },
         { slug: 'quan-ly-nghe-si-co-van-va-lanh-dao', focus: 'Cố vấn, huấn luyện, lãnh đạo; lời kết.' },
       ], exercises: ['Tập một buổi giới thiệu nghệ sĩ 15 phút với một người bạn đóng vai hãng đĩa; ghi lại lập trường và lợi ích của mỗi bên.'] },
+    ],
+  },
+  {
+    id: 'am-nhac-viet-nam',
+    title: 'Âm Nhạc Việt Nam',
+    volume: 'Lịch sử · Con người · Di sản',
+    subtitle: 'Toàn cảnh âm nhạc Việt Nam từ trống đồng tới V-pop: các thời kỳ, lý thuyết cổ truyền, dân ca và tín ngưỡng, ca trù – tài tử – chèo – tuồng – cải lương, nhạc khí, tân nhạc và hai miền 1945 – 1975, âm nhạc sau 1975, chân dung nhạc sĩ, thực hành và nghiên cứu.',
+    author: 'Lamar',
+    audience: 'Sinh viên nhạc viện học phần Âm nhạc Việt Nam, giáo viên âm nhạc, người chơi đàn muốn hiểu và dùng chất liệu Việt, bạn đọc yêu âm nhạc dân tộc',
+    hue: 15,
+    glyph: '❀',
+    coverImage: vietnamCover,
+    preface: `
+Âm nhạc Việt Nam thường được kể theo hai cách rời nhau: một bên là **nhạc cổ truyền** — dân ca, nhạc cung đình, sân khấu, nhạc khí — thuộc về dân tộc nhạc học; bên kia là **tân nhạc** và âm nhạc hàn lâm từ thập niên 1930, thuộc về lịch sử âm nhạc. Cuốn sách này đặt hai mạch ấy trong cùng một trình tự: đi từ những hiện vật cổ nhất, qua hệ thống âm luật và các thể loại truyền thống, tới cuộc gặp gỡ với âm nhạc phương Tây, hai con đường của hai miền trong chiến tranh, và đời sống âm nhạc hôm nay.
+
+## Tinh thần của sách
+- **Phân biệt chứng cứ và truyền thuyết.** Lịch sử âm nhạc Việt Nam có nhiều mốc "khởi đầu" là quy ước hay giai thoại (tổ nghề chèo, nguồn gốc đàn bầu, năm ra đời cải lương…). Mỗi bài nói rõ điều gì có sử liệu, điều gì còn tranh cãi, điều gì chỉ là truyền thuyết; Phần XII dành riêng một bài để phân định giai thoại.
+- **Ghi nguồn và ghi chỗ lệch.** Mỗi bài có tài liệu tham khảo ở cuối. Khi các nguồn ghi năm, tên, số liệu khác nhau, bài nêu cả hai và nói rõ chưa thống nhất, thay vì chọn một con số cho gọn. Những dữ kiện chỉ có trong giáo trình đại học mà chưa tìm được nguồn công khai được ghi "theo giáo trình".
+- **Hai miền, nhiều cách nhìn.** Âm nhạc 1954 – 1975 được trình bày ở cả miền Bắc và miền Nam; khi một nguồn mang ngôn ngữ đánh giá của thời đại, bài thuật đúng và chỉ ra đó là quan điểm của nguồn.
+- **Nghe được và chơi được.** Lý thuyết cổ truyền đi kèm thực hành: hơi, lòng bản, ngũ cung, cách hoà âm cho dân ca trên piano, cách đưa chất liệu Việt vào sáng tác.
+
+## Cấu trúc
+Mười hai phần đi từ tổng quan tới chuyên sâu:
+1. **Phần I – II:** bản đồ, các thời kỳ, âm nhạc cổ – trung đại và thời Nguyễn.
+2. **Phần III:** lý thuyết âm nhạc cổ truyền — tên âm, hơi, điệu, nhịp, lòng bản, quan hệ với thanh điệu tiếng Việt.
+3. **Phần IV – V:** dân ca, âm nhạc tín ngưỡng – tôn giáo – các dân tộc; nhạc thính phòng truyền thống và sân khấu.
+4. **Phần VI:** nhạc khí, từ đàn bầu, đàn tranh tới cồng chiêng và đàn đá.
+5. **Phần VII – IX:** tân nhạc từ những tiền đề cuối thế kỷ XIX, hai miền 1945 – 1975, âm nhạc sau 1975.
+6. **Phần X – XI:** chân dung nhạc sĩ, xếp theo năm sinh.
+7. **Phần XII:** thực hành, sáng tác, nghiên cứu, và đề cương ôn tập theo giáo trình đại học.
+
+## Cách đọc
+1. **Sinh viên ôn thi học phần Âm nhạc Việt Nam (cuối thế kỷ XIX – 1975):** bắt đầu từ bài đề cương ở cuối Phần XII — bảng tám câu hỏi thi dẫn thẳng tới bài trả lời — rồi đọc Phần V (sân khấu), VII và VIII.
+2. **Người học đàn và sáng tác:** Phần III, chương nhạc khí của nhạc cụ mình quan tâm ở Phần VI, rồi các bài thực hành ở Phần XII.
+3. **Bạn đọc muốn có cái nhìn toàn cảnh:** đọc theo thứ tự; mỗi bài có **Câu hỏi ôn tập**, mỗi phần kết thúc bằng bài tập tổng hợp.
+`,
+    parts: [
+      { title: 'Nhập môn: bản đồ và các thời kỳ', intro: 'Trước khi đi vào từng thể loại, phần này vẽ bản đồ toàn cảnh: âm nhạc Việt Nam gồm những gì, chia thời kỳ thế nào, các mốc nào có sử liệu, và đặc trưng chung của nhạc truyền thống.', chapters: [
+        { slug: 'am-nhac-viet-nam', focus: 'Bản đồ toàn mục: thời kỳ, thể loại, di sản, nhạc sĩ, lý thuyết, nghiên cứu.' },
+        { slug: 'cac-thoi-ky-am-nhac-viet-nam', focus: 'Sáu thời kỳ từ trống đồng tới V-pop; mỗi mốc ghi rõ mức tin cậy.' },
+        { slug: 'lich-su-am-nhac-viet-nam', focus: 'Các mốc lịch sử theo nguồn: cung đình Lý – Lê – Nguyễn, sân khấu, tân nhạc, nhạc viện.' },
+        { slug: 'the-loai-am-nhac-viet-nam', focus: 'Bản đồ thể loại và bảng di sản UNESCO.' },
+        { slug: 'am-nhac-truyen-thong-viet-nam', focus: 'Thang năm âm hò – xự – xang – xê – cống, cao độ không bình quân, nhấn – rung – luyến.' },
+      ], exercises: ['Vẽ một dòng thời gian khổ A4 với sáu thời kỳ; mỗi thời kỳ ghi hai mốc có sử liệu và một mốc chỉ là truyền thuyết.'] },
+      { title: 'Âm nhạc cổ – trung đại và thời Nguyễn', intro: 'Từ hiện vật khảo cổ tới nhạc cung đình: những gì ta thực sự biết về âm nhạc trước thế kỷ XX, và nhã nhạc — di sản đầu tiên của Việt Nam được UNESCO công nhận.', chapters: [
+        { slug: 'am-nhac-co-trung-dai-viet-nam', focus: 'Trống đồng, đàn đá; ảnh hưởng Chăm thời Lý; cuộc tranh luận Nguyễn Trãi – Lương Đăng thời Lê sơ.' },
+        { slug: 'am-nhac-thoi-nguyen', focus: 'Nhã nhạc được thể chế hoá; ca Huế; đờn ca tài tử phương Nam cuối thế kỷ XIX.' },
+        { slug: 'ca-hue-nha-nhac', focus: 'Nhã nhạc (UNESCO 2003/2008), ca Huế với điệu Bắc và điệu Nam.' },
+      ], exercises: ['Viết một trang trả lời: vì sao lịch sử âm nhạc Việt Nam trước thế kỷ XV chủ yếu dựa vào hiện vật và sử liệu gián tiếp? Nêu ba nguồn cụ thể.'] },
+      { title: 'Lý thuyết âm nhạc cổ truyền', intro: 'Ngôn ngữ âm nhạc của nhạc truyền thống: tên âm, hơi, điệu, nhịp; giai điệu khung và nghệ thuật tô điểm; và mối quan hệ giữa giai điệu với thanh điệu tiếng Việt.', chapters: [
+        { slug: 'ly-thuyet-am-nhac-co-truyen-viet-nam', focus: 'Hò – xự – xang, hơi, điệu, nhịp; âm già – non; giai điệu khung.' },
+        { slug: 'am-giai-ngu-cung', focus: 'Âm giai năm âm không nửa cung — nền chung của nhạc dân gian.' },
+        { slug: 'hoi-trong-nhac-tai-tu-cai-luong', focus: 'Điệu Bắc (Bắc, Nhạc, Quảng), điệu Nam (Xuân, Ai, Đảo) và Oán.' },
+        { slug: 'long-ban-va-ky-thuat-to-diem', focus: 'Lòng bản, chân phương, hoa lá; các kỹ thuật nhấn, rung, mổ, vuốt.' },
+        { slug: 'am-nhac-va-ngon-ngu', focus: 'Âm nhạc và ngôn ngữ; thanh điệu tiếng Việt và giai điệu.' },
+      ], exercises: ['Chọn một câu vọng cổ hoặc một bài lý: ghi lòng bản bằng tên hò – xự – xang và bằng nốt, rồi đánh dấu những âm được nhấn, rung.'] },
+      { title: 'Dân ca, tín ngưỡng và âm nhạc các dân tộc', intro: 'Âm nhạc gắn với đời sống: hò, lý, ví, quan họ, hát ru; âm nhạc trong thờ cúng và tôn giáo; tiếng nói của các dân tộc thiểu số.', chapters: [
+        { slug: 'dan-ca-viet-nam', focus: 'Hò, lý, ví giặm, bài chòi, hát xẩm theo vùng.' },
+        { slug: 'quan-ho', focus: 'Hát đối đáp liền anh – liền chị; UNESCO 2009; 49 làng gốc.' },
+        { slug: 'hat-ru', focus: 'Hát ru ba miền trên nền ca dao lục bát.' },
+        { slug: 'hat-xoan-hat-van-then', focus: 'Hát xoan, hát văn thờ Mẫu, then Tày – Nùng – Thái.' },
+        { slug: 'am-nhac-ton-giao-va-dan-toc-viet-nam', focus: 'Nhạc lễ Phật giáo, thánh ca Công giáo, nhạc các dân tộc thiểu số.' },
+        { slug: 'binh-ca-va-organ-o-viet-nam', focus: 'Bình ca Gregorian và đàn organ trong Công giáo Việt Nam.' },
+      ], exercises: ['Lập bảng so sánh ba lối hát dân gian (ví dụ quan họ, ví giặm, hò Huế): hoàn cảnh hát, hình thức đối đáp, điệu thức, nhịp.'] },
+      { title: 'Nhạc thính phòng truyền thống và sân khấu', intro: 'Ca trù và đờn ca tài tử — hai lối thính phòng của hai miền; chèo, tuồng, cải lương — ba dòng sân khấu và cuộc cải cách của chúng đầu thế kỷ XX.', chapters: [
+        { slug: 'ca-tru', focus: 'Đào nương, kép đàn, quan viên; UNESCO khẩn cấp 2009.' },
+        { slug: 'am-nhac-ca-tru', focus: 'Thể cách (bắc phản, mưỡu, hát nói…), khổ phách, trống chầu.' },
+        { slug: 'don-ca-tai-tu', focus: 'Ứng tác trên giai điệu khung; 20 bài chính, 72 bài cổ; UNESCO 2013.' },
+        { slug: 'cheo', focus: 'Sân khấu sân đình đồng bằng Bắc Bộ; truyền thuyết tổ nghề và chứng cứ.' },
+        { slug: 'tuong', focus: 'Sân khấu ước lệ; nguồn gốc chưa rõ.' },
+        { slug: 'lan-dieu-cheo-va-tuong', focus: 'Trên 200 làn điệu chèo; nói lối, hát nam, hát khách của tuồng.' },
+        { slug: 'cai-luong', focus: 'Cải lương trên nền tài tử; vọng cổ từ Dạ cổ hoài lang.' },
+        { slug: 'san-khau-cai-cach-dau-the-ky-xx', focus: 'Chèo văn minh, chèo cải lương (Nguyễn Đình Nghị), tuồng cải cách; tranh luận năm ra đời cải lương.' },
+      ], exercises: ['So sánh chèo, tuồng, cải lương ở năm mặt: vùng, nguồn gốc, dàn nhạc, làn điệu chính, cách diễn — và nêu biến đổi của mỗi dòng khi lên sân khấu thành thị.'] },
+      { title: 'Nhạc khí', intro: 'Nhạc cụ truyền thống theo bốn lớp Hornbostel – Sachs: đàn dây gảy và kéo, nhạc cụ hơi, nhạc cụ gõ, cùng nhạc cụ Tây Nguyên và miền núi. Mỗi bài nói cấu tạo, kỹ thuật, vai trò trong các dàn nhạc và tách truyền thuyết khỏi sử liệu.', chapters: [
+        { slug: 'nhac-cu-viet-nam', focus: 'Bản đồ nhạc cụ theo bốn lớp và theo thể loại.' },
+        { slug: 'dan-bau', focus: 'Đàn một dây, bồi âm, cần nắn cao độ; mốc văn bản 1770.' },
+        { slug: 'dan-tranh', focus: '16 dây, con nhạn, móng gảy; tay trái nhấn – rung – vuốt.' },
+        { slug: 'dan-nguyet', focus: 'Thân tròn, 10 phím cao ngũ cung; nhạc cụ chính của hát văn.' },
+        { slug: 'dan-nhi', focus: 'Đàn hai dây kéo vĩ; cách lên dây theo điệu Bắc, Nam, chèo.' },
+        { slug: 'dan-day', focus: 'Đàn ba dây cần dài gắn với ca trù.' },
+        { slug: 'dan-ty-ba-tam-sen', focus: 'Tỳ bà, đàn tam, đàn sến.' },
+        { slug: 'dan-doan-dan-tu', focus: 'Gỡ rối tên gọi đàn đoản và đàn tứ.' },
+        { slug: 'dan-tinh', focus: 'Đàn bầu khô của người Tày, Nùng trong nghi lễ Then.' },
+        { slug: 'sao-truc', focus: 'Sáo ngang sáu lỗ; sáo 10 lỗ của Đinh Thìn và Ngô Nam.' },
+        { slug: 'ken-bau', focus: 'Kèn dăm kép; dàn nhạc tuồng và nhạc cung đình Huế.' },
+        { slug: 'trong-viet-nam', focus: 'Trống cái, trống chầu, trống cơm, trống tuồng; trống Chăm.' },
+        { slug: 'nhac-cu-go-nghi-le-viet-nam', focus: 'Sênh tiền, mõ, chuông, thanh la, khánh.' },
+        { slug: 'cong-chieng', focus: 'Không gian văn hoá cồng chiêng Tây Nguyên (UNESCO 2005/2008).' },
+        { slug: 'dan-da', focus: 'Bộ đàn đá Ndut Liêng Krak (1949) và cuộc tranh luận.' },
+        { slug: 'nhac-cu-tay-nguyen-va-mien-nui', focus: "Đinh Goong, k'ni, nhạc cụ ống tre; đàn môi, kèn lá miền núi phía Bắc." },
+      ], exercises: ['Chọn một dàn nhạc truyền thống (ca trù, tài tử, chèo, tuồng hoặc nhã nhạc): kể tên các nhạc cụ, xếp chúng theo bốn lớp Hornbostel – Sachs và nêu vai trò của từng cây trong dàn.'] },
+      { title: 'Thời Pháp thuộc và sự ra đời của tân nhạc', intro: 'Kèn Tây, thánh ca, nhà hát, đĩa hát; những bài ta theo điệu Tây; phong trào cải cách năm 1938 và các nhóm sáng tác đầu tiên; ba dòng ca khúc trước 1945.', chapters: [
+        { slug: 'am-nhac-thoi-phap-thuoc', focus: 'Nhà thờ, quân nhạc, ghi âm từ 1900; mốc 1938 của tân nhạc.' },
+        { slug: 'lich-su-tan-nhac-viet-nam', focus: 'Phân kỳ tân nhạc, lộ trình đọc và nguồn.' },
+        { slug: 'tien-de-tan-nhac', focus: 'Tiền đề 1861 – 1937: kèn Tây, thánh ca, nhà hát, đĩa hát.' },
+        { slug: 'nhac-vien-vien-dong', focus: 'Nhạc viện Viễn Đông ở Hà Nội (1927 – 1930).' },
+        { slug: 'bai-ta-theo-dieu-tay', focus: 'Lời Việt cho nhạc Pháp, thập niên 1920 – 1930.' },
+        { slug: 'nhac-cai-cach-1938', focus: 'Nguyễn Văn Tuyên và báo Ngày Nay.' },
+        { slug: 'nhom-sang-tac-tan-nhac-dau-tien', focus: 'Myosotis, Tricéa, Đồng Vọng, Tổng hội Sinh viên.' },
+        { slug: 'tan-nhac-viet-nam', focus: 'Ca khúc theo lối phương Tây; các giai đoạn và cách gọi các dòng nhạc.' },
+        { slug: 'ba-dong-ca-khuc-1930-1945', focus: 'Hùng ca yêu nước, lãng mạn, cách mạng.' },
+        { slug: 'nhac-tien-chien', focus: 'Tên gọi về sau cho ca khúc lãng mạn cuối thập niên 1930 – 1947.' },
+      ], exercises: ['Viết một bài khoảng 800 chữ: "Tân nhạc ra đời năm nào?" — trình bày các mốc 1927, 1934, 1938 và lập luận cho cách xác định của bạn, có dẫn nguồn.'] },
+      { title: 'Âm nhạc 1945 – 1975: hai miền, hai con đường', intro: 'Ca khúc kháng chiến và các thiết chế đầu tiên; ở miền Bắc, trường – hội – viện – đoàn và các thể loại lớn (ca kịch, nhạc kịch, vũ kịch, khí nhạc); ở miền Nam, thị trường ca khúc, nhạc vàng, nhạc Trịnh, du ca, nhạc trẻ.', chapters: [
+        { slug: 'am-nhac-viet-nam-1945-1975', focus: 'Tổng quan hai miền: quốc ca, hai trường âm nhạc, giao hưởng và opera đầu tiên.' },
+        { slug: 'tan-nhac-1945-1954', focus: 'Tân nhạc ở chiến khu và đô thị.' },
+        { slug: 'the-loai-ca-khuc-1945-1954', focus: 'Đề cương văn hoá 1943, hội nghị 1948; bảy thể loại ca khúc.' },
+        { slug: 'nhac-cach-mang', focus: 'Ca khúc cách mạng từ thập niên 1940; khái niệm "nhạc đỏ".' },
+        { slug: 'dao-tao-va-nghien-cuu-am-nhac-1945-1975', focus: 'Trường, hội, viện, đoàn và công tác sưu tầm ở hai miền.' },
+        { slug: 'tan-nhac-mien-bac-1954-1975', focus: 'Thiết chế, ca khúc và nhạc hàn lâm miền Bắc.' },
+        { slug: 'ca-kich-nhac-kich-vu-kich-1954-1975', focus: 'Ca cảnh, ca kịch; Cô Sao; Tấm Cám, Ngọn lửa Nghệ Tĩnh.' },
+        { slug: 'khi-nhac-thinh-phong-giao-huong-1954-1975', focus: 'Năm khác biệt với thính phòng cổ truyền; các tác phẩm mốc.' },
+        { slug: 'tan-nhac-mien-nam-1954-1975', focus: 'Thị trường, các dòng nhạc, du ca, Hát cho đồng bào tôi nghe.' },
+        { slug: 'nhac-vang-bolero', focus: 'Nhạc vàng và bolero Việt hoá.' },
+        { slug: 'nhac-trinh', focus: 'Trịnh Công Sơn: tình ca, ca khúc phản chiến, kiểm duyệt ở hai phía.' },
+        { slug: 'nhac-tre-rock-sai-gon', focus: 'CBC, Phượng Hoàng, đại nhạc hội nhạc trẻ.' },
+      ], exercises: ['Lập bảng song song miền Bắc – miền Nam 1954 – 1975 ở năm mục: thiết chế đào tạo, thể loại chính, nơi biểu diễn, phương tiện phổ biến, tác giả tiêu biểu.'] },
+      { title: 'Âm nhạc sau 1975', intro: 'Cấm đoán và nới lỏng, nhạc hải ngoại, Đổi mới, V-pop và rap; nhạc hàn lâm và piano; bản quyền và di sản phi vật thể.', chapters: [
+        { slug: 'am-nhac-viet-nam-sau-1975', focus: 'Cấm và cấp phép, Paris By Night, Làn Sóng Xanh, V-pop.' },
+        { slug: 'nhac-hai-ngoai', focus: 'Thúy Nga, Asia; nhạc hải ngoại trở về trong nước.' },
+        { slug: 'vpop-rap-viet', focus: 'Vinahouse, rap Việt, Đen Vâu, Suboi.' },
+        { slug: 'nhac-co-dien-viet-nam', focus: 'Giao hưởng, opera, dàn nhạc, piano Việt Nam.' },
+        { slug: 'piano-viet-nam', focus: 'Âm nhạc piano Việt Nam và chất liệu dân gian.' },
+        { slug: 'ban-quyen-am-nhac-viet-nam', focus: 'VCPMC; các vụ tranh chấp đã có phán quyết.' },
+        { slug: 'di-san-phi-vat-the-va-am-nhac', focus: 'Công ước UNESCO 2003 và các di sản âm nhạc Việt Nam.' },
+      ], exercises: ['Chọn một di sản âm nhạc được UNESCO ghi danh: tóm tắt hồ sơ, tình trạng thực hành hôm nay và một phê phán về việc "di sản hoá".'] },
+      { title: 'Chân dung nhạc sĩ (I): thế hệ tiên phong và kháng chiến', intro: 'Những nhạc sĩ sinh trước năm 1930 — người mở đường tân nhạc, người viết hùng ca, tình ca, ca khúc kháng chiến và những tác phẩm hàn lâm đầu tiên. Xếp theo năm sinh.', chapters: [
+        { slug: 'nhac-si-viet-nam', focus: 'Danh mục nhạc sĩ theo thời kỳ, năm sinh – mất, tác phẩm đã kiểm chứng.' },
+        { slug: 'nguyen-van-tuyen', focus: 'Kiếp hoa (1937); người mở đầu phong trào nhạc cải cách.' },
+        { slug: 'dinh-nhu', focus: 'Cùng nhau đi hồng binh (1930 – 1931).' },
+        { slug: 'nguyen-xuan-khoat', focus: 'Xuân Thu nhã tập; Chủ tịch đầu tiên của Hội Nhạc sĩ Việt Nam.' },
+        { slug: 'le-thuong', focus: 'Bản đàn xuân, Tiếng đàn đêm khuya, trường ca Hòn vọng phu.' },
+        { slug: 'van-chung', focus: 'Tiếng sáo chăn trâu (1935); tân nhạc thời đầu.' },
+        { slug: 'duong-thieu-tuoc', focus: 'Nhóm Myosotis; Tâm hồn anh tìm em (1936).' },
+        { slug: 'tham-oanh', focus: 'Nhóm Myosotis; Khúc yêu đương trên Ngày Nay (1938).' },
+        { slug: 'dang-the-phong', focus: 'Ba bài thu: Đêm thu, Con thuyền không bến, Giọt mưa thu.' },
+        { slug: 'nguyen-van-thuong', focus: 'Đêm đông (1939); nhạc vũ kịch Tấm Cám.' },
+        { slug: 'hoang-quy', focus: 'Nhóm Đồng Vọng; Cô láng giềng, Trên sông Bạch Đằng, Cảm tử quân.' },
+        { slug: 'luu-huu-phuoc', focus: 'Lên đàng, Tiếng gọi thanh niên, Giải phóng miền Nam.' },
+        { slug: 'pham-duy', focus: 'Hơn 1.000 bài từ kháng chiến tới hải ngoại; tác giả Musics of Vietnam.' },
+        { slug: 'do-nhuan', focus: 'Du kích sông Thao, Việt Nam quê hương tôi; opera Cô Sao.' },
+        { slug: 'hoang-trong', focus: '"Vua tango": ban Thiên Thai, Phút chia ly.' },
+        { slug: 'van-cao', focus: 'Thiên Thai, Tiến quân ca, Trường ca Sông Lô.' },
+        { slug: 'doan-chuan', focus: '"Nhạc sĩ của mùa thu Hà Nội".' },
+        { slug: 'hoang-viet', focus: 'Nhạc rừng, Lá xanh; giao hưởng Quê hương.' },
+        { slug: 'hoang-thi-tho', focus: 'Hơn 500 bài: tình ca, ca khúc quê hương, trường ca, nhạc kịch.' },
+      ], exercises: ['Chọn hai nhạc sĩ cùng thế hệ nhưng khác con đường (ví dụ Văn Cao và Phạm Duy, hoặc Đỗ Nhuận và Hoàng Thi Thơ): so sánh tiểu sử, thể loại, phong cách trong một trang.'] },
+      { title: 'Chân dung nhạc sĩ (II): từ sau 1930 tới hôm nay', intro: 'Những nhạc sĩ sinh từ năm 1930 — ca khúc thời chiến và thời bình, nhạc hàn lâm trong nước và hải ngoại, rock và V-pop. Xếp theo năm sinh.', chapters: [
+        { slug: 'pham-tuyen', focus: 'Khoảng 700 bài; Như có Bác Hồ trong ngày vui đại thắng; ca khúc thiếu nhi.' },
+        { slug: 'ton-that-tiet', focus: 'Học với Jolivet ở Paris; Kiêm Ái; nhạc phim Trần Anh Hùng.' },
+        { slug: 'y-van', focus: 'Lòng mẹ (1952); ca khúc nhịp disco, twist, cha-cha-cha ở Sài Gòn.' },
+        { slug: 'hong-dang', focus: 'Hoa sữa, Biển hát chiều nay; hơn 70 nhạc phim.' },
+        { slug: 'nguyen-tai-tue', focus: 'Xa khơi, Tiếng hát giữa rừng Pác Bó.' },
+        { slug: 'nguyen-thien-dao', focus: 'Học với Messiaen; nhạc đương đại ở Pháp.' },
+        { slug: 'nguyen-anh-9', focus: 'Không, Buồn ơi chào mi, Tình yêu đến không giã từ.' },
+        { slug: 'tu-cong-phung', focus: 'Bây giờ tháng mấy (1963); khoảng 200 tình ca.' },
+        { slug: 'nguyen-cuong', focus: '"Gã cao bồi phố Hàng Bạc".' },
+        { slug: 'pho-duc-phuong', focus: 'Chảy đi sông ơi, Trên đỉnh Phù Vân; giám đốc đầu tiên của VCPMC.' },
+        { slug: 'tran-tien', focus: 'Giọng sáng tác thời Đổi mới: Mặt trời bé con, Giấc mơ Chapi.' },
+        { slug: 'phu-quang', focus: 'Hơn 600 bài; Em ơi Hà Nội phố.' },
+        { slug: 'dang-huu-phuc', focus: 'Nhạc phim Mùa ổi; tác phẩm piano.' },
+        { slug: 'tran-lap', focus: 'Rock Việt: Bức Tường.' },
+        { slug: 'son-tung-m-tp', focus: 'V-pop thời mạng xã hội.' },
+      ], exercises: ['Chọn một ca khúc sau 1975 dùng chất liệu dân ca: chỉ ra chất liệu gốc (điệu thức, làn điệu, nhạc cụ) và cách nhạc sĩ biến đổi nó.'] },
+      { title: 'Thực hành, sáng tác, nghiên cứu và ôn tập', intro: 'Đưa kiến thức vào đôi tay: hoà âm cho dân ca, các điệu đệm ca khúc Việt, đặt lời tiếng Việt, sáng tác với chất liệu Việt. Rồi các nguồn để đọc tiếp, bảng phân định giai thoại, và đề cương ôn tập theo giáo trình đại học.', chapters: [
+        { slug: 'hoa-am-cho-giai-dieu-ngu-cung', focus: 'Hoà âm giữ màu ngũ cung: âm nền, quãng 5 song song, hợp âm 6 và 7 thứ.' },
+        { slug: 'dem-dieu-viet-nam', focus: 'Bolero, rumba, slow, valse, boston, tango… — nhịp, tốc độ, cách đệm.' },
+        { slug: 'viet-cho-loi-ca', focus: 'Phổ nhạc cho lời: nhấn, nhịp, nguyên âm, thanh điệu tiếng Việt.' },
+        { slug: 'sang-tac-voi-chat-lieu-viet', focus: 'Ba cách dùng dân ca theo Bartók; các lớp chất liệu Việt.' },
+        { slug: 'nghien-cuu-am-nhac-viet-nam', focus: 'Trần Văn Khê, Tô Ngọc Thanh, Tô Vũ, Phạm Duy, Gibbs, Norton…' },
+        { slug: 'tu-lieu-lich-su-tan-nhac', focus: 'Báo chí, hồi ký, sách tổng thuật, đĩa hát và nghiên cứu.' },
+        { slug: 'giai-thoai-am-nhac-viet-nam', focus: 'Truyền thuyết nguồn gốc và chuyện bài hát — phán định từng mục.' },
+        { slug: 'am-nhac-viet-nam-cuoi-the-ky-xix-1975', focus: 'Đề cương học phần và tám câu hỏi thi dẫn tới bài trả lời.' },
+      ], exercises: ['Hoà âm và đệm piano cho một bài dân ca (ví dụ Lý cây đa hoặc Trống cơm) theo hai cách: giữ trọn ngũ cung và hoà âm chức năng; ghi lại khác biệt về màu sắc.', 'Trả lời đầy đủ một câu trong tám câu hỏi thi của bài đề cương, dài khoảng hai trang, có dẫn nguồn.'] },
     ],
   },
   {
