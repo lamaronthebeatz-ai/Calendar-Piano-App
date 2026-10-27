@@ -1,4 +1,5 @@
 import initialCover from '../../../assets/covers/piano-tre-em-initial.webp'
+import g1Cover from '../../../assets/covers/piano-tre-em-1.webp'
 import type { ExamSpec, KidsBook, Score } from '../types'
 
 /**
@@ -17,6 +18,12 @@ export const KIDS_EXAM: Record<string, ExamSpec> = {
     sightReading: 'Bài 4 ô nhịp, nhịp 4/4, giọng Đô trưởng hoặc Rê thứ; mỗi tay chơi riêng trong vị trí năm ngón (từ âm chủ đến âm át); có thể có câu legato, staccato, f và p. Có nửa phút xem và chơi thử.',
     aural: 'A: vỗ theo phách một đoạn nhạc. B: vỗ lại tiết tấu hai câu hai ô (nhịp ba hoặc bốn). C: hát lại hai câu một ô nhịp 4/4, giọng trưởng, trong khoảng âm chủ – bậc ba. D: trả lời về một đặc điểm — to/nhỏ hoặc liền/tách tiếng.',
     theory: 'Chưa có thi nhạc lý ở cấp này. Sách dạy trường độ, ô nhịp, khuông, khoá Sol – Fa — phần đầu của nhạc lý ABRSM Grade 1.',
+  },
+  g1: {
+    scales: `Thuộc lòng, liền tiếng, đều (${SPEC_NOTE}). Đô trưởng 1 quãng tám, hai tay cùng lúc. Sol, Fa trưởng; La, Rê thứ (tự nhiên, hoà âm hoặc giai điệu — tuỳ chọn) 2 quãng tám, từng tay. Đô trưởng ngược chiều 1 quãng tám, hai tay từ âm chủ. Hợp âm rải Sol trưởng, La thứ 1 quãng tám, từng tay.`,
+    sightReading: 'Đến 6 ô nhịp; nhịp 2/4, 3/4, 4/4; giọng Đô, Sol, Fa trưởng, Rê, La thứ; bất kỳ vị trí năm ngón nào; có thể có nốt trắng chấm dôi, móc đơn, dấu lặng, dấu luyến, dấu nhấn, mf, mp, to dần – nhỏ dần, dấu hoá bất thường (chỉ trong giọng thứ).',
+    aural: 'A: vỗ phách, nhấn phách mạnh, nói nhịp hai hay ba. B: hát lại ba câu hai ô, giọng trưởng, âm chủ – bậc ba. C: nhận ra chỗ đổi cao độ (gần đầu hay gần cuối). D: trả lời về cường độ và cách chơi.',
+    theory: 'Nhạc lý ABRSM Grade 1 (thi trực tuyến): năm hình nốt và dấu lặng, chấm dôi, dấu nối; nhịp 2/4, 3/4, 4/4; khoá Sol, Fa; dấu hoá; âm giai và hoá biểu Đô, Sol, Rê, Fa trưởng, bậc, quãng trên âm chủ (bằng số), hợp âm chủ; thuật ngữ; câu hỏi về một giai điệu.',
   },
 }
 
@@ -152,7 +159,126 @@ Yêu cầu kỳ thi ghi ở cuối sách chép theo đặc tả chính thức c�
   ],
 }
 
-export const KIDS_BOOKS: KidsBook[] = [initial]
+const MUTOPIA = (no: number, by: string, license: string): Score['source'] => ({
+  name: `Mutopia Project, bản số ${no} (người khắc: ${by})`,
+  url: `https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=${no}`,
+  license,
+  note: 'khắc lại cho khổ sách (chỉ đổi trình bày)',
+})
+
+const g1: KidsBook = {
+  id: 'tre-em-g1',
+  grade: 'Grade 1',
+  title: 'Piano & Nhạc lý cho Trẻ em',
+  volume: 'Grade 1',
+  subtitle: 'Hai tay cùng lúc, năm hình nốt, bốn giọng trưởng đầu tiên, âm giai thứ — nhạc lý và piano tương đương ABRSM Grade 1.',
+  hue: 45,
+  coverImage: g1Cover,
+  months: [6, 9],
+  preface: `Cuốn Grade 1 đi theo đề cương **nhạc lý ABRSM Grade 1** (bản từ 2020) và yêu cầu **piano ABRSM Grade 1** của đặc tả 2027 & 2028. Bạn học đủ năm hình nốt, chấm dôi và dấu nối, ba nhịp đơn, đọc nốt ở hai khoá, dấu hoá, âm giai trưởng và hoá biểu Đô – Sol – Rê – Fa, bậc, quãng và hợp âm chủ, thuật ngữ tiếng Ý; ở đàn, hai tay bắt đầu chơi cùng lúc và âm giai thứ xuất hiện.
+
+**Phần I – III** là lý thuyết và kỹ thuật, mỗi bài có ví dụ nhạc, luyện tập và câu hỏi ôn tập. **Phần IV** in đủ bảy bản nhạc: hai bài học của **Clementi** (1801), bản *Petit prélude à la journée* của **Erik Satie** (1913), canon *Frère Jacques* cho hai tay, và bốn bài viết mới — rock, swing, ngũ cung. Nguồn và giấy phép của từng bản ở trang cuối.
+
+Thời gian gợi ý 6 – 9 tháng với 20 – 30 phút tập mỗi ngày; đây là ước lượng của người biên soạn, không phải số liệu của ABRSM.`,
+  parts: [
+    {
+      title: 'Nhịp và tiết tấu',
+      intro: 'Năm hình nốt từ nốt tròn đến móc kép, dấu lặng, chấm dôi và dấu nối; ba nhịp đơn và cách nhóm nốt cho dễ đọc.',
+      chapters: [
+        { slug: 'tre-em-g1-truong-do', focus: 'Năm hình nốt, dấu lặng, âm tiết ta – ti-ti – ti-ka-ti-ka.' },
+        { slug: 'tre-em-g1-cham-doi-va-dau-noi', focus: 'Nốt chấm dôi; dấu nối khác dấu luyến.' },
+        { slug: 'tre-em-g1-nhip-va-nhom-not', focus: 'Nhịp 2/4, 3/4, 4/4; nhóm nốt theo phách; nhịp lấy đà.' },
+      ],
+      exercises: [
+        'Vỗ và đọc bằng âm tiết: ta ti-ti | ti-ka-ti-ka ta | ta-i ti ta | ta-a-a.',
+        'Viết một ô 3/4 có nốt đen chấm dôi; một ô 4/4 có dấu nối qua vạch nhịp sang ô sau.',
+        'Nối gạch đúng cho tám móc đơn trong 4/4 và sáu móc đơn trong 3/4.',
+        'Điền dấu lặng cho đủ ô: 4/4 chỉ có một nốt trắng ở phách 1.',
+      ],
+    },
+    {
+      title: 'Cao độ, giọng và hợp âm',
+      intro: 'Đọc mọi nốt ở hai khoá; dấu thăng, giáng, bình; cung và nửa cung; âm giai trưởng và hoá biểu Đô, Sol, Rê, Fa; bậc, quãng và hợp âm chủ; thuật ngữ thường gặp; đọc hiểu một giai điệu.',
+      chapters: [
+        { slug: 'tre-em-g1-doc-not-hai-khoa', focus: 'Tên mọi nốt trên khuông; dòng kẻ phụ quanh Đô giữa.' },
+        { slug: 'tre-em-g1-dau-hoa-cung-nua-cung', focus: 'Dấu hoá và hiệu lực trong ô nhịp; cung, nửa cung.' },
+        { slug: 'tre-em-g1-am-giai-truong', focus: 'Công thức âm giai trưởng; hoá biểu bốn giọng.' },
+        { slug: 'tre-em-g1-bac-quang-va-hop-am-chu', focus: 'Bậc, quãng trên âm chủ (bằng số), hợp âm chủ.' },
+        { slug: 'tre-em-g1-thuat-ngu-va-ky-hieu', focus: 'Tốc độ, cường độ, cách chơi, nhắc lại.' },
+        { slug: 'tre-em-g1-doc-hieu-giai-dieu', focus: 'Trả lời câu hỏi về một giai điệu.' },
+      ],
+      exercises: [
+        'Viết âm giai Sol, Rê, Fa trưởng đi lên ở khoá Fa, có hoá biểu; đánh dấu các nửa cung.',
+        'Gọi tên quãng (bằng số) từ âm chủ: Rê – La, Fa – Rê, Sol – Đô, Đô – Si.',
+        'Viết hợp âm chủ của bốn giọng ở cả hai khoá.',
+        'Dịch nghĩa: Andante, rit., a tempo, cresc., dolce, D.C. al Fine.',
+        'Chọn một bài ở Phần IV, đặt và trả lời tám câu hỏi như bài "Đọc hiểu một giai điệu".',
+      ],
+    },
+    {
+      title: 'Ở đàn: kỹ thuật, thị tấu và nghe',
+      intro: 'Âm giai, ngược chiều và hợp âm rải đúng yêu cầu ABRSM Grade 1; ba dạng âm giai thứ; bài đọc mới và bốn bài nghe.',
+      chapters: [
+        { slug: 'tre-em-g1-am-giai-va-ky-thuat', focus: 'Đô trưởng hai tay; Sol, Fa, La thứ, Rê thứ hai quãng tám; ngược chiều; hợp âm rải.' },
+        { slug: 'tre-em-g1-thi-tau-va-nghe', focus: 'Thông số thị tấu Grade 1; bốn bài nghe.' },
+      ],
+      exercises: [
+        'Thuộc lòng toàn bộ âm giai và hợp âm rải của Grade 1, mỗi ngày chơi hết một lượt.',
+        'Mỗi ngày đọc một bài 6 ô nhịp mới ở giọng Sol hoặc Fa trưởng.',
+        'Vỗ phách theo ba bản nhạc khác nhau và nói nhịp hai hay ba.',
+      ],
+    },
+  ],
+  scores: [
+    {
+      id: 'g1-clementi-aria', title: 'Aria', composer: 'Muzio Clementi', dates: '1752 – 1832', style: 'classical',
+      about: 'Bài học số II trong *Introduction to the Art of Playing on the Piano Forte*, Op. 42 (1801) — cuốn sách dạy đàn Clementi viết cho người mới học; ngón tay theo bản in. Nhịp 2/4, Đô trưởng; tay trái chơi nốt trắng và nốt đen như bè trầm. Đoạn hai có **p** rồi **f**: làm rõ sự tương phản. Mỗi đoạn có dấu nhắc lại.',
+      source: MUTOPIA(1938, 'Javier Ruiz-Alma', 'CC BY-SA 4.0'),
+    },
+    {
+      id: 'g1-clementi-away', title: 'Away with Melancholy (giai điệu Mozart)', composer: 'Muzio Clementi soạn theo Mozart', dates: '1801', style: 'classical',
+      about: 'Bài học số I của Op. 42: Clementi soạn cho người mới học một giai điệu của Mozart (sách ghi "by Mozart"). Tay phải giai điệu có móc đơn và nốt đen chấm dôi; tay trái giữ nốt trắng. Chú ý ngón tay ghi trên nốt, và hai mức **p** – **f** của hai đoạn.',
+      source: MUTOPIA(1938, 'Javier Ruiz-Alma', 'CC BY-SA 4.0'),
+    },
+    {
+      id: 'g1-satie-prelude', title: 'Petit prélude à la journée', composer: 'Erik Satie', dates: '1866 – 1925', style: 'c20',
+      about: 'Bài đầu của *Enfantillages pittoresques* ("Trò trẻ con đầy màu sắc", 1913) — một trong ba tập nhạc Satie viết cho trẻ em, xen những câu chữ hóm hỉnh vào bản nhạc: *Se bien lever* (dậy cho đúng giờ), *se bien tenir* (ngồi cho ngay), *se bien coiffer* (chải tóc cho gọn)… Tay phải chỉ có những đôi móc đơn nhẹ như bước chân; tay trái chơi lệch phách. Giữ **p** suốt bài, đều như đồng hồ.',
+      source: MUTOPIA(2132, 'Frédéric Dupernay', 'CC BY-SA 4.0'),
+    },
+    {
+      id: 'g1-frere-jacques', title: 'Frère Jacques (canon hai tay)', composer: 'Dân ca Pháp', dates: 'giai điệu in khoảng 1780', style: 'folk',
+      about: '**Canon**: tay trái chơi lại đúng giai điệu tay phải nhưng vào muộn hai ô, thấp hơn một quãng tám — hai tay "đuổi nhau". Tập từng tay thật vững trước, rồi ghép; nghe xem hai bè khớp nhau thế nào. Bè tay trái nhỏ hơn (**mp**) để giai điệu tay phải nổi lên.',
+      source: arr('dân ca Pháp "Frère Jacques" (in khoảng 1780)'),
+    },
+    {
+      id: 'g1-rock-nho', title: 'Rock nhỏ', composer: 'Lamar', style: 'new',
+      about: 'Nhạc rock dựa trên **phách đều** và **dấu nhấn**: tay trái giữ quãng 5 đều từng phách như trống, tay phải nhấn ở phách 1 và phách 3. Đoạn ba (ô 9 – 12) chuyển sang **mf**, đoạn cuối trở lại **f**. Đừng chơi nhanh dần!',
+      source: own(),
+    },
+    {
+      id: 'g1-meo-di-dao', title: 'Mèo đi dạo', composer: 'Lamar', style: 'new',
+      about: 'Bài **swing** đầu tiên: mỗi đôi móc đơn chơi **dài – ngắn** ("đuung-đa"), như ký hiệu ở đầu bài. Tay trái đi từng nốt đen như bước chân mèo. Thả lỏng, hơi nhún ở phách 2 và 4; dấu ngân ở ô cuối.',
+      source: own('Phong cách swing'),
+    },
+    {
+      id: 'g1-trong-hoi', title: 'Trống hội', composer: 'Lamar', style: 'new',
+      about: 'Viết trên năm nốt **Sol – La – Si – Rê – Mi** (ngũ cung ở vị trí Sol). Tay trái là "trống" — nhấn nốt đầu mỗi ô; tay phải hát giai điệu. Đoạn ba nhỏ lại (**p**) như tiếng trống xa, rồi trở về **f**. Giai điệu mới, không trích dân ca nào.',
+      source: own('Viết trên âm giai ngũ cung'),
+    },
+  ],
+  exam: KIDS_EXAM.g1,
+  checkpoint: [
+    'Đọc, vỗ và viết đúng năm hình nốt, dấu lặng, chấm dôi, dấu nối trong 2/4, 3/4, 4/4.',
+    'Đọc tên mọi nốt trên khuông ở cả hai khoá, kể cả Đô giữa.',
+    'Viết âm giai và hoá biểu Đô, Sol, Rê, Fa trưởng; gọi tên bậc và quãng (bằng số) trên âm chủ; viết hợp âm chủ.',
+    'Giải nghĩa các thuật ngữ tốc độ, cường độ, cách chơi trong sách.',
+    'Chơi thuộc lòng âm giai, ngược chiều, hợp âm rải của Grade 1 đúng ngón.',
+    'Chơi ít nhất ba bản ở Phần IV, trong đó một bản cổ điển, một bản thế kỷ XX hoặc mới.',
+    'Vỗ phách và nói nhịp hai hay ba; hát lại một câu hai ô nhịp.',
+  ],
+}
+
+export const KIDS_BOOKS: KidsBook[] = [initial, g1]
 
 /** The volume holding a chapter (old links to the single children's course land there; else the first volume). */
 export const kidsBookOf = (slug?: string) => KIDS_BOOKS.find((b) => b.parts.some((p) => p.chapters.some((c) => c.slug === slug)))?.id ?? KIDS_BOOKS[0].id

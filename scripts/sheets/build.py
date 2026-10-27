@@ -102,6 +102,11 @@ def main():
             (OUT / kind / f[0]).unlink(missing_ok=True)
         print('engrave', kind, id_)
         res = engrave(kind, id_, text, h)
+        # a piece ending on a lone short system: engrave again with one system fewer, so the bars spread evenly
+        if kind == 'tp' and 'line-break-permission' not in text and len(res) > 1 and res[-1][1] < 0.5 * max(r[1] for r in res):
+            for f in res:
+                (OUT / kind / f[0]).unlink(missing_ok=True)
+            res = engrave(kind, id_, text + f'\\paper {{ system-count = #{len(res) - 1} }}\n', h)
         manifest[kind][id_] = res
     for kind in ('ex', 'tp'):
         for gone in set(manifest[kind]) - seen[kind]:
@@ -109,6 +114,10 @@ def main():
             for f in val:
                 (OUT / kind / f[0]).unlink(missing_ok=True)
         manifest[kind] = dict(sorted(manifest[kind].items()))
+        used = {f[0] for v in manifest[kind].values() for f in v}
+        for stale in (OUT / kind).glob('*.svg'):
+            if stale.name not in used:
+                stale.unlink()
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, separators=(',', ':')) + '\n')
 
 

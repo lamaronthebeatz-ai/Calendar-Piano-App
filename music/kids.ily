@@ -21,3 +21,5 @@
   evenFooterMarkup = ##f
 }
 \header { tagline = ##f }
+% Pieces keep no instrument name ("1.", "Piano") from their sources: the reader prints the title.
+\layout { \context { \Staff \remove "Instrument_name_engraver" } \context { \PianoStaff \remove "Instrument_name_engraver" } }
