@@ -3,6 +3,7 @@ import g1Cover from '../../../assets/covers/piano-tre-em-1.webp'
 import g2Cover from '../../../assets/covers/piano-tre-em-2.webp'
 import g3Cover from '../../../assets/covers/piano-tre-em-3.webp'
 import g4Cover from '../../../assets/covers/piano-tre-em-4.webp'
+import g5Cover from '../../../assets/covers/piano-tre-em-5.webp'
 import type { ExamSpec, KidsBook, Score } from '../types'
 
 /**
@@ -45,6 +46,12 @@ export const KIDS_EXAM: Record<string, ExamSpec> = {
     sightReading: 'Khoảng 8 ô nhịp; thêm nhịp 6/8; nhịp lấy đà; nốt cromatic; dấu ngân; tenuto.',
     aural: 'A: hát hoặc chơi lại từ trí nhớ một giai điệu (trong một quãng tám, giọng đến ba dấu). B: xướng âm năm nốt từ bản nhạc (Đô, Fa hoặc Sol trưởng). C: (i) trả lời về một đặc điểm và tính chất của bản nhạc; (ii) vỗ lại tiết tấu một trích đoạn và nói nhịp hai, ba hay bốn.',
     theory: 'Nhạc lý ABRSM Grade 4: mọi nhịp đơn và kép; nốt tròn kép, chấm dôi kép, liên hai; khoá alto; thăng kép, giáng kép, trùng âm; giọng đến năm dấu, tên kỹ thuật các bậc, âm giai cromatic; mọi quãng trong một quãng tám; hợp âm I, IV, V; nốt hoa mỹ; nhạc cụ dàn nhạc.',
+  },
+  g5: {
+    scales: `Thuộc lòng, đều (${SPEC_NOTE}); âm giai thứ: hoà âm hoặc giai điệu. Liền tiếng, hai tay, 2 quãng tám: La, Mi, Si, Fa♯, Rê♭ trưởng; Fa♯, Đô♯, Sol♯, Mi♭, Si♭ thứ. Staccato, từng tay: La♭ trưởng, Fa thứ. Ngược chiều: Rê♭ trưởng, Đô♯ thứ hoà âm. Cromatic ngược chiều tay trái từ Fa♯, tay phải từ La♯, 2 quãng tám. Hợp âm rải hai tay, 2 quãng tám: La, Mi, Si, Fa♯, La♭, Rê♭ trưởng; Fa♯, Đô♯, Sol♯, Mi♭, Fa, Si♭ thứ. Hợp âm bảy giảm từ Si, 2 quãng tám, từng tay.`,
+    sightReading: 'Khoảng 8 – 12 ô nhịp; thêm giọng Mi, La♭ trưởng, Fa♯, Đô thứ; hợp âm bốn nốt (tối đa hai nốt mỗi tay); nghịch phách đơn giản; chậm lại ở cuối; ff.',
+    aural: 'A: hát hoặc chơi lại từ trí nhớ một giai điệu. B: xướng âm sáu nốt từ bản nhạc (giọng trưởng đến hai dấu). C: (i) trả lời về một đặc điểm và về phong cách – thời kỳ; (ii) vỗ lại tiết tấu một trích đoạn và nói nhịp hai, ba hay bốn.',
+    theory: 'Nhạc lý ABRSM Grade 5 — điều kiện để thi piano Grade 6 – 8 (hoặc thay bằng Practical Musicianship / Jazz Grade 5): nhịp lẻ 5/4, 7/4, 5/8, 7/8 và chia phách bất thường; khoá tenor, chép qua bốn khoá; nhạc cụ dịch giọng Si♭, La, Fa; giọng đến sáu dấu; mọi quãng đơn và kép; hợp âm I, II, IV, V ba thế; chọn hợp âm ở chỗ kết; kết hoàn toàn, plagal, nửa kết; ký hiệu hoa mỹ; giọng hát và nhạc cụ.',
   },
 }
 
@@ -642,7 +649,123 @@ Thời gian gợi ý 10 – 14 tháng là ước lượng của người biên s
   ],
 }
 
-export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2, g3, g4]
+const g5: KidsBook = {
+  id: 'tre-em-g5',
+  grade: 'Grade 5',
+  title: 'Piano & Nhạc lý cho Trẻ em',
+  volume: 'Grade 5',
+  subtitle: 'Nhịp lẻ, khoá tenor, nhạc cụ dịch giọng, quãng kép, thế đảo và các loại kết — nhạc lý và piano tương đương ABRSM Grade 5, cửa ngõ vào các cấp cao.',
+  hue: 310,
+  coverImage: g5Cover,
+  months: [12, 18],
+  preface: `Cuốn cuối của bộ, theo đề cương **nhạc lý ABRSM Grade 5** (bản từ 2020) và yêu cầu **piano ABRSM Grade 5** của đặc tả 2027 & 2028. Nhạc lý Grade 5 khép lại chương trình Grade 1 – 5 và là điều kiện của ABRSM trước khi thi piano Grade 6 – 8: nhịp lẻ, khoá tenor, nhạc cụ dịch giọng, mọi giọng đến sáu dấu, quãng kép, thế đảo, kết và chọn hợp âm, giọng hát và nhạc cụ, phong cách – thời kỳ.
+
+**Phần IV** in đủ tám bản: *Invention số 8* của **Bach** và *Von fremden Ländern und Menschen* của **Schumann** (cả hai có trong danh sách ABRSM Grade 5 năm 2027 & 2028), *Tempo di Menuetto* trong Sonata Op. 49 số 2 của **Beethoven**, *Ballade* của **Burgmüller**, *Lời cầu nguyện buổi sáng* của **Tchaikovsky**, *Gymnopédie số 1* của **Satie** (1888) và hai bài viết mới — bossa nova, ngũ cung nhịp 5/4. Nguồn ở trang cuối.
+
+Thời gian gợi ý 12 – 18 tháng là ước lượng của người biên soạn, không phải số liệu của ABRSM.`,
+  parts: [
+    {
+      title: 'Nhịp, khoá và dịch giọng',
+      intro: 'Nhịp lẻ và chia phách bất thường; khoá tenor và bốn khoá; nhạc cụ dịch giọng.',
+      chapters: [
+        { slug: 'tre-em-g5-nhip-le', focus: '5/4, 7/4, 5/8, 7/8; liên năm, sáu, bảy.' },
+        { slug: 'tre-em-g5-khoa-tenor', focus: 'Khoá tenor; chép qua bốn khoá.' },
+        { slug: 'tre-em-g5-dich-giong-nhac-cu', focus: 'Nhạc cụ in B♭, A, F: âm thực và bản viết.' },
+      ],
+      exercises: [
+        'Vỗ ba ô 7/8 theo ba cách nhóm khác nhau.',
+        'Chép một giai điệu tám ô từ khoá Sol sang khoá tenor, thấp một quãng tám.',
+        'Chuyển một giai điệu Đô trưởng sang bản viết cho clarinet in B♭ và horn in F.',
+      ],
+    },
+    {
+      title: 'Giọng, quãng, hợp âm và kết',
+      intro: 'Giọng sáu dấu và vòng quãng năm; quãng kép và quãng từ mọi nốt; hợp âm I, II, IV, V ba thế; kết và chọn hợp âm; ký hiệu hoa mỹ; giọng hát và nhạc cụ; đọc hiểu tổng hợp.',
+      chapters: [
+        { slug: 'tre-em-g5-giong-sau-dau', focus: 'Fa♯/Sol♭ trưởng, Rê♯/Mi♭ thứ; vòng quãng năm.' },
+        { slug: 'tre-em-g5-quang-kep-va-bat-ky', focus: 'Quãng kép; quãng từ bất kỳ nốt nào.' },
+        { slug: 'tre-em-g5-hop-am-the-dao', focus: 'Thế gốc, đảo một, đảo hai của I, II, IV, V.' },
+        { slug: 'tre-em-g5-cau-ket', focus: 'Kết hoàn toàn, plagal, nửa kết; chọn hợp âm.' },
+        { slug: 'tre-em-g5-ky-hieu-hoa-my', focus: 'Thay nốt hoa mỹ viết ra bằng ký hiệu.' },
+        { slug: 'tre-em-g5-giong-hat-nhac-cu', focus: 'SATB; khoá của nhạc cụ.' },
+        { slug: 'tre-em-g5-doc-hieu', focus: 'Câu hỏi tổng hợp trên một đoạn piano.' },
+      ],
+      exercises: [
+        'Viết hoá biểu mọi giọng đến sáu dấu ở bốn khoá.',
+        'Gọi tên mười quãng kép và mười quãng tăng/giảm cho sẵn.',
+        'Ghi ký hiệu hợp âm (Ia, Vb, Ic…) cho từng phách của *Lời cầu nguyện buổi sáng* ô 1 – 4.',
+        'Chọn hợp âm cho chỗ kết của ba giai điệu dân ca quen thuộc ở Đô, Sol, Fa trưởng.',
+      ],
+    },
+    {
+      title: 'Ở đàn: kỹ thuật, thị tấu và nghe',
+      intro: 'Yêu cầu kỹ thuật ABRSM Grade 5; thị tấu 8 – 12 ô; xướng âm sáu nốt; phong cách và thời kỳ.',
+      chapters: [
+        { slug: 'tre-em-g5-ky-thuat', focus: 'Âm giai, staccato, cromatic cách quãng 3, hợp âm bảy giảm.' },
+        { slug: 'tre-em-g5-thi-tau-va-nghe', focus: 'Thông số thị tấu; xướng âm; phong cách – thời kỳ.' },
+      ],
+      exercises: [
+        'Chơi thuộc lòng toàn bộ yêu cầu kỹ thuật Grade 5.',
+        'Nghe một bản nhạc lạ và đoán thời kỳ, nói lý do.',
+        'Mỗi ngày xướng âm một mẫu sáu nốt.',
+      ],
+    },
+  ],
+  scores: [
+    {
+      id: 'g5-bach-invention-8', title: 'Invention số 8 Fa trưởng, BWV 779', composer: 'Johann Sebastian Bach', dates: '1685 – 1750', style: 'classical',
+      about: 'Một trong 15 Invention hai bè Bach viết để dạy chơi "rõ ràng hai bè" (1723). Có trong danh sách ABRSM Grade 5 năm 2027 & 2028. Chủ đề rải hợp âm Fa trưởng đi lên, tay trái đuổi theo cách một ô (**canon**). Hai tay phải bình đẳng — mỗi bè là một giọng hát; luyện từng tay, rồi nghe xem chủ đề xuất hiện ở đâu.',
+      source: { name: 'Mutopia Project, bản số 61 (người khắc: Allen Garvin)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=61', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g5-schumann-fremden-laendern', title: 'Von fremden Ländern und Menschen (Về những miền đất và con người xa lạ), Op. 15 số 1', composer: 'Robert Schumann', dates: '1810 – 1856', style: 'classical',
+      about: 'Bài mở đầu *Kinderszenen* (Cảnh trẻ thơ, 1838); có trong danh sách ABRSM Grade 5 năm 2027 & 2028. Ba lớp: giai điệu hát ở bè trên, chuỗi liên ba đều ở giữa, bè trầm đi chậm — cả ba trong hai bàn tay. Giai điệu phải nổi rõ trên lớp liên ba nhẹ; dùng pedal ngắn theo hoà âm.',
+      source: { name: 'Mutopia Project, bản số 354 (người khắc: Ying-Chun Liu)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=354', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g5-beethoven-menuetto', title: 'Tempo di Menuetto — Sonata Sol trưởng, Op. 49 số 2', composer: 'Ludwig van Beethoven', dates: '1770 – 1827', style: 'classical',
+      about: 'Chương II của một trong hai sonata "dễ" Op. 49 (viết khoảng giữa thập niên 1790, in 1805). Hình thức rondo: chủ đề minuet duyên dáng trở lại nhiều lần xen các đoạn tương phản. Nhịp chấm dôi phải nhẹ, phách 1 không nặng; giữ tốc độ minuet thong thả.',
+      source: { name: 'Mutopia Project, bản số 777 (người khắc: Stelios Samelis)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=777', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g5-burgmuller-ballade', title: 'Ballade, Op. 100 số 15', composer: 'Friedrich Burgmüller', dates: '1806 – 1874', style: 'classical',
+      about: 'Bài nổi tiếng nhất trong *25 Études* Op. 100: Đô thứ, *misterioso*, giai điệu ở tay trái dưới những hợp âm nảy của tay phải, rồi đoạn giữa sáng sủa ở Đô trưởng. Kiểm soát cường độ từ **p** bí ẩn đến các điểm nhấn **sf**.',
+      source: { name: 'Mutopia Project, bản số 227 (người khắc: Bas Wassink)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=227', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g5-tchaikovsky-morning-prayer', title: 'Lời cầu nguyện buổi sáng, Op. 39 số 1', composer: 'Pyotr Ilyich Tchaikovsky', dates: '1840 – 1893', style: 'classical',
+      about: 'Bài mở *Album cho tuổi trẻ* (1878): viết như một bài hợp xướng bốn bè (soprano – alto – tenor – bass) chia cho hai tay. Mỗi bè phải liền tiếng; nghe các nốt nghịch (âm treo) được giải quyết. Đây là bài lý tưởng để luyện bài *Hợp âm và thế đảo* và *Giọng hát*.',
+      source: { name: 'Mutopia Project, bản số 2032 (người khắc: Rem Zolotykh)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2032', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g5-satie-gymnopedie-1', title: 'Gymnopédie số 1', composer: 'Erik Satie', dates: '1866 – 1925', style: 'c20',
+      about: 'Bản thứ nhất trong ba *Gymnopédies* (1888) — một trong những bản piano được nghe nhiều nhất của Satie, mở đường cho phong cách giản dị của âm nhạc thế kỷ XX. *Lent et douloureux* (chậm và đau buồn): tay trái nốt trầm rồi hợp âm, đều như con lắc; giai điệu treo lơ lửng phía trên. Pedal đổi theo mỗi ô.',
+      source: { name: 'Mutopia Project, bản số 37 (người khắc: Evin Robertson)', url: 'https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=37', license: 'Phạm vi công cộng', note: 'khắc lại cho khổ sách (chỉ đổi trình bày)' },
+    },
+    {
+      id: 'g5-bossa', title: 'Bossa chiều', composer: 'Lamar', style: 'new',
+      about: '**Bossa nova** giọng La thứ: tay trái chơi nốt trầm ở phách 1, hợp âm lệch phách (nghịch phách) — đặc trưng của bossa Brazil. Tay phải hát giai điệu có nối qua phách. Đếm móc đơn thật chắc, giữ tay trái nhẹ và đều.',
+      source: own('Phong cách bossa nova'),
+    },
+    {
+      id: 'g5-gio-dong', title: 'Gió đồng', composer: 'Lamar', style: 'new',
+      about: 'Nhịp **5/4** chia **3 + 2**, trên ngũ cung Fa (Fa – Sol – La – Đô – Rê); đoạn giữa (ô 7 – 9) chuyển sang ngũ cung Đô. Mỗi ô có hai "nhịp thở" lệch nhau như gió thổi trên cánh đồng. Giai điệu mới, không trích dân ca nào.',
+      source: own('Viết trên âm giai ngũ cung, nhịp 5/4'),
+    },
+  ],
+  exam: KIDS_EXAM.g5,
+  checkpoint: [
+    'Đếm, vỗ, viết đúng nhịp lẻ và các cách chia phách bất thường.',
+    'Đọc bốn khoá; chép giai điệu qua khoá; chuyển nhạc cụ dịch giọng sang âm thực và ngược lại.',
+    'Gọi tên mọi quãng đơn, kép; viết giọng đến sáu dấu.',
+    'Viết và gọi tên I, II, IV, V ở ba thế; nhận ra và viết ba loại kết; chọn hợp âm cho chỗ kết.',
+    'Chơi thuộc lòng toàn bộ yêu cầu kỹ thuật Grade 5.',
+    'Chơi ít nhất ba bản ở Phần IV, gồm một bản Baroque, một bản Cổ điển hoặc Lãng mạn và một bản thế kỷ XX hoặc mới.',
+    'Nghe một bản nhạc và nói thời kỳ, phong cách kèm lý do.',
+  ],
+}
+
+export const KIDS_BOOKS: KidsBook[] = [initial, g1, g2, g3, g4, g5]
 
 /** The volume holding a chapter (old links to the single children's course land there; else the first volume). */
 export const kidsBookOf = (slug?: string) => KIDS_BOOKS.find((b) => b.parts.some((p) => p.chapters.some((c) => c.slug === slug)))?.id ?? KIDS_BOOKS[0].id

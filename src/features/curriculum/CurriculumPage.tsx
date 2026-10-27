@@ -50,7 +50,7 @@ export function CurriculumPage() {
   // Links to the single Jazz Theory Book open the volume that now holds the item.
   if (id === OLD_JAZZ_ID) return <Navigate replace to={`/curriculum/${jazzVolumeOf(item)}${item ? `/${item}` : ''}`} />
   // The single children's course was split into one volume per grade: old links open the volume holding the lesson.
-  if (id === 'tre-em' && !CURRICULA.some((c) => c.id === id)) return <Navigate replace to={`/curriculum/${kidsBookOf(item)}${item && item !== 'tong-quan' && findBook(kidsBookOf(item))?.items.some((i) => i.key === item) ? `/${item}` : ''}`} />
+  if (id === 'tre-em') return <Navigate replace to={`/curriculum/${kidsBookOf(item)}${item && item !== 'tong-quan' && findBook(kidsBookOf(item))?.items.some((i) => i.key === item) ? `/${item}` : ''}`} />
   const book = findBook(id)
   if (book && item === 'in') return <PrintBook book={book} />
   const course = CURRICULA.find((c) => c.id === id)
