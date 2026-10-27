@@ -15,6 +15,7 @@ import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
 import jazzCover4 from '../../assets/covers/jazz-theory-book-4.webp'
+import jazzLicksCover from '../../assets/covers/jazz-licks.webp'
 import type { Book } from './types'
 
 /** The Jazz Theory Book, all thirteen parts in order; the four volumes below are slices of it. */
@@ -1457,6 +1458,53 @@ Mười hai phần đi từ tổng quan tới chuyên sâu:
     coverImage: jazzCover4,
     preface: jazzPreface(4, 'ngẫu hứng — nền tảng, phương pháp, nâng cao, bài solo — rồi sáng tác và jazz hiện đại.'),
     parts: JAZZ_PARTS.slice(9, 13),
+  },
+  {
+    id: 'jazz-licks',
+    title: 'Jazz Licks',
+    volume: '1001 câu nhạc',
+    subtitle: '1001 lick Lamar soạn trên hệ thống lý thuyết của thư viện: lick theo loại hợp âm, lick trên ii – V – I, turnaround, blues và chuỗi át, lick theo phong cách — đủ ký hiệu hợp âm, mỗi lick một dòng phân tích.',
+    author: 'Lamar',
+    audience: 'Đã học hợp âm 7 và ii – V – I; người chơi piano muốn có từ vựng ngẫu hứng',
+    hue: 42,
+    glyph: '♭',
+    coverImage: jazzLicksCover,
+    preface: `
+Học ngẫu hứng jazz giống học một ngôn ngữ: cần lý thuyết để hiểu ngữ pháp, nhưng cũng cần **từ vựng** — những câu nhạc ngắn nghe đúng "giọng" jazz. Cuốn này là kho từ vựng ấy: **1001 lick** viết mới, đi kèm bộ *The Jazz Theory Book* và các bài jazz của thư viện.
+
+## Lick được viết thế nào
+Mỗi lick được soạn từ các thủ pháp của lý thuyết — âm giai cho từng hợp âm, âm giai bebop, rải hợp âm, bao vây, nốt tiếp cận cromatic, nốt dẫn hướng — rồi **kiểm tra bằng chương trình** theo đúng các quy tắc của thư viện: nốt hợp âm ở phách, nốt tránh chỉ lướt qua, nốt cromatic giải quyết nửa cung, đổi hợp âm bằng nốt hợp âm, kết ở nốt hợp âm. Lick sai một quy tắc bị loại; trong các lick đạt, chương trình giữ lick nối hợp âm đẹp nhất. Danh sách quy tắc ở chương đầu. Riêng *The Lick* ở chương cuối là câu sáo nổi tiếng, có ghi nguồn.
+
+## Cách học
+1. Đọc chương đầu để biết cách đọc ký hiệu và chú thích.
+2. Mỗi ngày vài lick: chơi chậm, swing, ở ba giọng; đưa vào một bài thật.
+3. Quy tắc bảo đảm lick đúng ngữ pháp; còn hay hay không thì phải chơi và nghe. Lick nào chưa vừa tai, hãy sửa — đó là bước đầu của câu nhạc riêng của bạn.
+`,
+    parts: [
+      { title: 'Lick theo loại hợp âm', intro: 'Từ vựng trên từng loại hợp âm: maj7 – 6, m7, 7, át biến hoá, nửa giảm, bảy giảm, chủ thứ.', chapters: [
+        { slug: 'jazz-licks-lo-trinh', focus: 'Cách dùng sách, cách đọc chú thích và các quy tắc.' },
+        { slug: 'jazz-licks-maj7', focus: 'Ionian, Lydian, bebop trưởng.' },
+        { slug: 'jazz-licks-m7', focus: 'Dorian, bebop Dorian.' },
+        { slug: 'jazz-licks-at', focus: 'Mixolydian, bebop át.' },
+        { slug: 'jazz-licks-at-bien-hoa', focus: 'Biến đổi, bát cung, Phrygian át, cặp hợp âm ba.' },
+        { slug: 'jazz-licks-nua-giam', focus: 'Locrian, Locrian ♮2.' },
+        { slug: 'jazz-licks-giam', focus: 'Bát cung cung – nửa cung.' },
+        { slug: 'jazz-licks-thu-giai-dieu', focus: 'Thứ giai điệu trên m6 và m(maj7).' },
+      ], exercises: ['Chọn mỗi chương ba lick; chuyển cả ba sang 12 giọng theo vòng quãng 5.', 'Lấy một lick maj7 và đổi thành lick m7 bằng cách hạ nốt 3 và nốt 7; kiểm tra nốt nào thành nốt tránh.', 'Viết một lick của bạn trên G7alt chỉ dùng hai hợp âm ba E♭ và D♭.'] },
+      { title: 'Lick trên tiến trình', intro: 'Câu nhạc đi qua nhiều hợp âm: ii – V – I trưởng và thứ, thay thế tritone, chuỗi át, turnaround, blues.', chapters: [
+        { slug: 'jazz-licks-ii-v-i', focus: 'ii – V – I trưởng, hai đến bốn ô.' },
+        { slug: 'jazz-licks-ii-v-i-thu', focus: 'm7♭5 – 7alt – m6.' },
+        { slug: 'jazz-licks-thay-the-tritone', focus: 'ii – ♭II7 – I.' },
+        { slug: 'jazz-licks-chuoi-at', focus: 'III7 – VI7 – II7 – V7 – I.' },
+        { slug: 'jazz-licks-turnaround', focus: 'I – vi – ii – V và các biến thể.' },
+        { slug: 'jazz-licks-blues', focus: 'Các đoạn của blues 12 ô.' },
+      ], exercises: ['Ghép bốn lick ii – V – I ở bốn giọng khác nhau thành một chorus Autumn Leaves – kiểu (ii – V – I trưởng rồi thứ).', 'Chơi một blues 12 ô chỉ bằng lick của chương blues, nối các lick bằng nốt dẫn hướng.', 'Đánh dấu trong ba lick bất kỳ mọi chỗ nối ♭7 → 3.'] },
+      { title: 'Lick theo phong cách', intro: 'Blues – soul, jazz điệu thức và câu sáo nổi tiếng nhất.', chapters: [
+        { slug: 'jazz-licks-blues-soul', focus: 'Âm giai blues, nốt xanh.' },
+        { slug: 'jazz-licks-dieu-thuc', focus: 'Dorian, ngũ cung, quãng 4.' },
+        { slug: 'jazz-licks-the-lick', focus: '"The Lick" và cách dùng nó.' },
+      ], exercises: ['Ngẫu hứng hai chorus trên một vamp Dm7 (16 ô), dùng xen lick ngũ cung và lick quãng 4.', 'Chèn The Lick vào một solo ii – V – I của bạn ở ba vị trí khác nhau trong ô nhịp.'] },
+    ],
   },
 ]
 

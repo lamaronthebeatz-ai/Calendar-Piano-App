@@ -228,6 +228,38 @@ function SheetExample({ id, caption }: { id: string; caption: string }) {
 }
 
 /**
+ * `::licks id | n=caption ;; n=caption …` — an engraved block of licks (Jazz Licks book), one system per lick, each
+ * headed by its number and a short analysis; a lick never splits across pages.
+ */
+function LickSheet({ id, caption }: { id: string; caption: string }) {
+  const systems = useSheet('ex', id)
+  const printing = useContext(PrintContext)
+  // "n=caption", or "n#k=caption" for a lick engraved on k lines
+  const parts = caption.split(' ;; ').map((c) => {
+    const k = c.indexOf('=')
+    const [n, lines = '1'] = c.slice(0, k).split('#')
+    return { n, text: c.slice(k + 1), lines: +lines }
+  })
+  const starts = parts.map((_, i) => parts.slice(0, i).reduce((s, p) => s + p.lines, 0))
+  const caps = parts.map((p, i) => ({ ...p, sys: systems.slice(starts[i], starts[i] + p.lines) }))
+  return (
+    <div className="licks">
+      {caps.map(({ n, text, sys }) => (
+        <div key={n} id={`lick-${n}`} className="lick">
+          <p className="lick-head">
+            <span className="lick-n">{n}</span>
+            <span className="lick-text">{text}</span>
+          </p>
+          {sys.map(([f, w, h]) => (
+            <img key={f} src={sheetUrl('ex', f)} width={w} height={h} style={{ maxWidth: '100%', width: w }} alt={`Lick ${n}: ${text}`} loading={printing ? 'eager' : 'lazy'} className="scan-img sheet-img lick-img" />
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+/**
  * `::sheet id | title` — a whole piece, system after system, so the page breaks fall between systems. In the
  * reader, a piece that does not fit in the rest of the page it would start on begins on a new page: a marker
  * where the text ends tells how much room is left, and a column break is inserted before the music when the
@@ -307,6 +339,8 @@ function Directive({ line }: { line: string }) {
       return <CommonsImage file={args.join(' ')} caption={caption} />
     case 'ex':
       return <SheetExample id={args[0]} caption={caption} />
+    case 'licks':
+      return <LickSheet id={args[0]} caption={caption} />
     case 'sheet':
       return <SheetScore id={args[0]} title={caption} />
     case 'scan':

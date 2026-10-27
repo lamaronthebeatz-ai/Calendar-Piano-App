@@ -1000,6 +1000,11 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 .sheet-score { margin: 1.4em 0 0.5em; }
 .sheet-score .sheet-img { width: 100%; height: auto; margin: 0 0 1em; break-inside: avoid; }
 .sheet-mark { height: 0; }
+.licks { margin: 1.2em 0; }
+.lick { break-inside: avoid; margin: 0 0 1.15em; }
+.lick-head { display: flex; gap: 0.6em; align-items: baseline; margin: 0 0 0.25em; font-size: 0.8em; line-height: 1.45; color: var(--color-ink-muted); text-align: left; hyphens: none; }
+.lick-n { flex-shrink: 0; min-width: 2.4em; font-family: var(--font-display); font-weight: 600; font-size: 1.15em; color: var(--color-gold); }
+.lick-img { display: block; height: auto; }
 .sheet-page-break { height: 0; break-before: column; }
 .book-credits-list { list-style: none; padding: 0; margin-top: 1.2em; }
 .book-credits-list li { break-inside: avoid; margin-bottom: 0.9em; font-size: 0.92em; }

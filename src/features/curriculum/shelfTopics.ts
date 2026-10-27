@@ -28,8 +28,8 @@ const TOPICS: { id: string; short: string; title: string; blurb: string; ids: st
     id: 'jazz',
     short: 'Jazz',
     title: 'Jazz',
-    blurb: 'Bốn tập theo một lộ trình: từ hợp âm bảy và ii – V – I tới thế bấm, tái hoà âm, ngẫu hứng và sáng tác.',
-    ids: ['jazz-theory-book-1', 'jazz-theory-book-2', 'jazz-theory-book-3', 'jazz-theory-book-4'],
+    blurb: 'The Jazz Theory Book bốn tập theo một lộ trình — từ hợp âm bảy và ii – V – I tới thế bấm, tái hoà âm, ngẫu hứng và sáng tác — và Jazz Licks, 1001 câu nhạc để luyện từ vựng ngẫu hứng.',
+    ids: ['jazz-theory-book-1', 'jazz-theory-book-2', 'jazz-theory-book-3', 'jazz-theory-book-4', 'jazz-licks'],
   },
   {
     id: 'piano',
