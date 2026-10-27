@@ -204,12 +204,13 @@ function useSheet(kind: 'ex' | 'tp', id: string) {
   return state?.id === id ? state.systems : []
 }
 
+/** Examples keep their engraved size; pieces fill the page width so the notes read large. */
 function SheetImages({ kind, systems, alt }: { kind: 'ex' | 'tp'; systems: SheetSystem[]; alt: string }) {
   const printing = useContext(PrintContext)
   return (
     <>
       {systems.map(([f, w, h]) => (
-        <img key={f} src={sheetUrl(kind, f)} width={w} height={h} style={{ maxWidth: '100%', width: w }} alt={alt} loading={printing ? 'eager' : 'lazy'} className="scan-img sheet-img" />
+        <img key={f} src={sheetUrl(kind, f)} width={w} height={h} style={kind === 'ex' ? { maxWidth: '100%', width: w } : undefined} alt={alt} loading={printing ? 'eager' : 'lazy'} className="scan-img sheet-img" />
       ))}
     </>
   )
@@ -226,13 +227,47 @@ function SheetExample({ id, caption }: { id: string; caption: string }) {
   )
 }
 
-/** `::sheet id | title` — a whole piece, system after system, so the page breaks fall between systems. */
+/**
+ * `::sheet id | title` — a whole piece, system after system, so the page breaks fall between systems. In the
+ * reader, a piece that does not fit in the rest of the page it would start on begins on a new page: a marker
+ * where the text ends tells how much room is left, and a column break is inserted before the music when the
+ * systems need more (the reader recounts its pages when that element appears).
+ */
 function SheetScore({ id, title }: { id: string; title: string }) {
   const systems = useSheet('tp', id)
+  const mark = useRef<HTMLDivElement>(null)
+  const [newPage, setNewPage] = useState(false)
+  useEffect(() => {
+    const m = mark.current
+    const flow = m?.closest<HTMLElement>('.reader-flow')
+    const box = m?.parentElement?.querySelector<HTMLElement>('.sheet-score')
+    if (!m || !flow || !box || !systems.length) return
+    let raf = 0
+    const check = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => {
+        const pageH = flow.clientHeight
+        const y = m.getBoundingClientRect().top - flow.getBoundingClientRect().top
+        const music = [...box.querySelectorAll('img')].reduce((sum, img) => sum + img.getBoundingClientRect().height + parseFloat(getComputedStyle(img).marginBottom), 0)
+        setNewPage(y > pageH * 0.08 && music > pageH - y)
+      })
+    }
+    check()
+    const ro = new ResizeObserver(check)
+    if (m.parentElement) ro.observe(m.parentElement)
+    return () => {
+      ro.disconnect()
+      cancelAnimationFrame(raf)
+    }
+  }, [systems])
   return (
-    <div className="sheet-score" aria-label={title || id}>
-      <SheetImages kind="tp" systems={systems} alt={title || id} />
-    </div>
+    <>
+      <div ref={mark} aria-hidden className="sheet-mark" />
+      {newPage && <div aria-hidden className="sheet-page-break" />}
+      <div className="sheet-score" aria-label={title || id}>
+        <SheetImages kind="tp" systems={systems} alt={title || id} />
+      </div>
+    </>
   )
 }
 

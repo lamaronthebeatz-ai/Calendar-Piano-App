@@ -37,7 +37,10 @@ def sources():
         # instrument names ("1.", "Piano") from the sources are dropped: the reader prints the title. A \\layout must come
         # before the scores to reach them, so it is put first; the paper settings come last to win over the source's own.
         names = '\\layout { \\context { \\Staff \\remove "Instrument_name_engraver" } \\context { \\PianoStaff \\remove "Instrument_name_engraver" } }\n'
-        yield 'tp', f.stem, f'{names}{f.read_text()}\n{COMMON}\n\\paper {{ ragged-last = ##t }}\n'
+        # pieces are engraved larger than the examples (staff size 23 on the same 120 mm line), so the notes read
+        # big on a phone; a source's own staff size is dropped
+        piece = re.sub(r'^\s*#\(set-global-staff-size[^)]*\)\s*$', '', f.read_text(), flags=re.M)
+        yield 'tp', f.stem, f'#(set-global-staff-size 23)\n{names}{piece}\n{COMMON}\n\\paper {{ ragged-last = ##t }}\n'
 
 
 def crop(svg: Path, png: Path):

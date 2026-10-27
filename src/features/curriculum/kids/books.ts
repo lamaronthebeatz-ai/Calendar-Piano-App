@@ -131,7 +131,7 @@ Yêu cầu kỳ thi ghi ở cuối sách chép theo đặc tả chính thức c�
   scores: [
     {
       id: 'i-mua-roi', title: 'Mưa rơi', composer: 'Lamar', style: 'new',
-      about: 'Bài mở đầu trên **năm nốt ngũ cung Đô – Rê – Mi – Sol – La**, tay phải ở vị trí Đô (ngón 5 vươn lên La). Tay trái giữ quãng 5 Đô – Sol suốt bài như tiếng mưa đều. Chơi nhẹ (p), liền tiếng; câu thứ ba to dần lên mf rồi lắng lại. Nghe xem bài có "màu" giống những làn điệu Việt quen thuộc không.',
+      about: 'Bài mở đầu trên **năm nốt ngũ cung Đô – Rê – Mi – Sol – La**, tay phải ở vị trí Đô (ngón 5 vươn lên La). Bài có ba đoạn **A – B – A′** (24 ô): đoạn A tay trái giữ quãng 5 Đô – Sol như tiếng mưa đều; đoạn B tay trái đổi sang quãng 5 La – Mi, Fa – Đô, Sol – Rê, to lên **mf** và dừng lửng ở Sol (kết nửa); đoạn A′ trở lại **p** và kết về Đô. Nghe xem bài có "màu" giống những làn điệu Việt quen thuộc không.',
       source: own('Viết trên âm giai ngũ cung'),
     },
     {
@@ -166,12 +166,12 @@ Yêu cầu kỳ thi ghi ở cuối sách chép theo đặc tả chính thức c�
     },
     {
       id: 'i-blues', title: 'Blues năm ngón', composer: 'Lamar', style: 'new',
-      about: 'Mười hai ô nhịp theo **khung blues** (Đô – Fa – Đô – Sol – Fa – Đô). Tay phải ở vị trí Đô, thêm phím đen **Mi♭** — "nốt xanh" của blues — chơi bằng ngón 2, rồi trượt sang Mi bằng ngón 3. Tay trái giữ quãng 5. Chơi chậm, hơi nhún; thử tự đổi tay phải ở ô 9 – 12 thành câu của riêng bạn.',
+      about: 'Hai lượt **khung blues 12 ô** (Đô – Fa – Đô – Sol – Fa – Đô) và hai ô kết. Tay phải ở vị trí Đô, thêm phím đen **Mi♭** — "nốt xanh" của blues — chơi bằng ngón 2, rồi trượt sang Mi bằng ngón 3. Tay trái giữ quãng 5. Chơi chậm, hơi nhún; lượt thứ hai thử tự đổi vài ô tay phải thành câu của riêng bạn.',
       source: own('Khung 12 ô nhịp blues'),
     },
     {
       id: 'i-khuc-ru', title: 'Khúc ru', composer: 'Lamar', style: 'new',
-      about: 'Bài ru nhịp 3/4 trên năm nốt **Rê – Fa – Sol – La – Đô** — một màu ngũ cung gần với điệu ru Việt, nhưng là giai điệu mới, không trích dân ca nào. Tay trái đưa nhẹ hai nốt Rê – La như chiếc võng. Nốt trắng chấm dôi giữ đủ ba phách; dấu nối ở ô 7 – 8 nghĩa là giữ nốt qua vạch nhịp.',
+      about: 'Bài ru nhịp 3/4 (32 ô) trên năm nốt **Rê – Fa – Sol – La – Đô** — một màu ngũ cung gần với điệu ru Việt, nhưng là giai điệu mới, không trích dân ca nào. Tay trái đưa nhẹ hai nốt như chiếc võng; đoạn giữa chuyển sang ngũ cung Fa rồi trở về. Nốt trắng chấm dôi giữ đủ ba phách; dấu nối nghĩa là giữ nốt qua vạch nhịp.',
       source: own('Viết trên âm giai ngũ cung'),
     },
   ],
@@ -280,17 +280,17 @@ Thời gian gợi ý 6 – 9 tháng với 20 – 30 phút tập mỗi ngày; đ�
     },
     {
       id: 'g1-rock-nho', title: 'Rock nhỏ', composer: 'Lamar', style: 'new',
-      about: 'Nhạc rock dựa trên **phách đều** và **dấu nhấn**: tay trái giữ quãng 5 đều từng phách như trống, tay phải nhấn ở phách 1 và phách 3. Đoạn ba (ô 9 – 12) chuyển sang **mf**, đoạn cuối trở lại **f**. Đừng chơi nhanh dần!',
+      about: 'Nhạc rock dựa trên **phách đều** và **dấu nhấn**: tay trái giữ quãng 5 đều từng phách như trống, tay phải nhấn ở phách 1 và phách 3. Hình thức **A A B A** và đoạn kết, hoà âm I – IV – V ở Đô trưởng. Đoạn B chuyển sang **mf**, đoạn A cuối trở lại **f**. Đừng chơi nhanh dần!',
       source: own(),
     },
     {
       id: 'g1-meo-di-dao', title: 'Mèo đi dạo', composer: 'Lamar', style: 'new',
-      about: 'Bài **swing** đầu tiên: mỗi đôi móc đơn chơi **dài – ngắn** ("đuung-đa"), như ký hiệu ở đầu bài. Tay trái đi từng nốt đen như bước chân mèo. Thả lỏng, hơi nhún ở phách 2 và 4; dấu ngân ở ô cuối.',
+      about: 'Bài **swing** đầu tiên, hình thức **A A B A**: mỗi đôi móc đơn chơi **dài – ngắn** ("đuung-đa"), như ký hiệu ở đầu bài. Đoạn A ở Sol trưởng (Sol – Đô – Rê7), đoạn B tay phải dời về vị trí Đô trên Đô – La thứ – Sol – Rê7. Tay trái đi từng nốt đen như bước chân mèo. Thả lỏng, hơi nhún ở phách 2 và 4; dấu ngân ở ô cuối.',
       source: own('Phong cách swing'),
     },
     {
       id: 'g1-trong-hoi', title: 'Trống hội', composer: 'Lamar', style: 'new',
-      about: 'Viết trên năm nốt **Sol – La – Si – Rê – Mi** (ngũ cung ở vị trí Sol). Tay trái là "trống" — nhấn nốt đầu mỗi ô; tay phải hát giai điệu. Đoạn ba nhỏ lại (**p**) như tiếng trống xa, rồi trở về **f**. Giai điệu mới, không trích dân ca nào.',
+      about: 'Viết trên năm nốt **Sol – La – Si – Rê – Mi** (ngũ cung ở vị trí Sol), nhịp 2/4, hình thức **A A′ B A** và đoạn kết. Tay trái là "trống" — nhấn nốt đầu mỗi ô; tay phải hát giai điệu. Đoạn B trên quãng 5 Mi – Si nhỏ lại (**p**) như tiếng trống xa, rồi trở về **f**. Giai điệu mới, không trích dân ca nào.',
       source: own('Viết trên âm giai ngũ cung'),
     },
   ],
@@ -393,17 +393,17 @@ Thời gian gợi ý 8 – 12 tháng là ước lượng của người biên so
     },
     {
       id: 'g2-ballad-mua', title: 'Ballad mưa', composer: 'Lamar', style: 'new',
-      about: 'Ballad kiểu nhạc pop: vòng hợp âm **La thứ – Fa – Đô – Sol** quen thuộc của rất nhiều ca khúc. Tay trái rải hợp âm bằng móc đơn đều, tay phải hát giai điệu nốt dài. Chơi chậm, liền, như hát; đoạn ba lên **mf** rồi lắng lại.',
+      about: 'Ballad kiểu nhạc pop (34 ô): hai đoạn hát trên vòng **La thứ – Fa – Đô – Sol** quen thuộc của rất nhiều ca khúc, hai đoạn điệp khúc bắt đầu từ **Fa – Sol – Đô – La thứ** và dừng ở **Mi** (át của La thứ) trước khi vào đoạn kết. Tay trái rải hợp âm bằng móc đơn đều, tay phải hát giai điệu nốt dài. Chơi chậm, liền, như hát; điệp khúc lên **mf** – **f** rồi lắng lại.',
       source: own('Phong cách pop ballad'),
     },
     {
       id: 'g2-boogie', title: 'Boogie nhỏ', composer: 'Lamar', style: 'new',
-      about: 'Boogie-woogie dựa trên **tay trái đi bộ** (Đô – Mi – Sol – La – Si♭ – La – Sol – Mi) theo khung 12 ô blues. Tay phải chơi swing (đôi móc đơn dài – ngắn) như ở bài *Mèo đi dạo*. Tập tay trái đến khi tự động rồi mới ghép tay phải.',
+      about: 'Boogie-woogie dựa trên **tay trái đi bộ** (Đô – Mi – Sol – La – Si♭ – La – Sol – Mi): mở đầu, hai lượt khung 12 ô blues và đoạn kết. Tay phải chơi swing (đôi móc đơn dài – ngắn) như ở bài *Mèo đi dạo*. Tập tay trái đến khi tự động rồi mới ghép tay phải.',
       source: own('Khung 12 ô nhịp blues, phong cách boogie-woogie'),
     },
     {
       id: 'g2-do-chieu', title: 'Đò chiều', composer: 'Lamar', style: 'new',
-      about: 'Viết trên năm nốt **La – Đô – Rê – Mi – Sol** (ngũ cung La) với **liên ba nốt đen** như nhịp mái chèo. Tay trái giữ quãng 5 ngân. Giai điệu mới, gợi màu sông nước, không trích dân ca nào.',
+      about: 'Viết trên năm nốt **La – Đô – Rê – Mi – Sol** (ngũ cung La) với **liên ba nốt đen** như nhịp mái chèo. Hình thức **A A′ B A″**: đoạn B chuyển sang ngũ cung Đô, sáng hơn, rồi trở về. Tay trái giữ quãng 5 ngân. Giai điệu mới, gợi màu sông nước, không trích dân ca nào.',
       source: own('Viết trên âm giai ngũ cung'),
     },
   ],
@@ -506,17 +506,17 @@ Thời gian gợi ý 9 – 12 tháng là ước lượng của người biên so
     },
     {
       id: 'g3-nhay-day', title: 'Nhảy dây', composer: 'Lamar', style: 'new',
-      about: 'Điệu **jig** nhịp 6/8 — hai phách lớn mỗi ô, như hai cú nhảy. Tay trái giữ quãng hai nốt ở mỗi phách chấm dôi; tay phải nhóm ba móc đơn và cặp "nốt đen – móc đơn" (dài – ngắn). Đoạn ba lên **f**, rồi trở lại **mf**.',
+      about: 'Điệu **jig** nhịp 6/8 (36 ô) — hai phách lớn mỗi ô, như hai cú nhảy. Hình thức **A A′ B A** và đoạn kết: đoạn B sang **Mi thứ** (i – V – iv – i) rồi quay về qua Rê7. Tay trái giữ quãng hai nốt ở mỗi phách chấm dôi; tay phải nhóm ba móc đơn và cặp "nốt đen – móc đơn" (dài – ngắn).',
       source: own('Phong cách jig 6/8'),
     },
     {
       id: 'g3-blues-sol', title: 'Blues giọng Sol', composer: 'Lamar', style: 'new',
-      about: 'Mười hai ô blues ở Sol: tay trái chơi **shuffle** — hai nốt Sol – Rê và Sol – Mi xen kẽ theo móc đơn swing; tay phải dùng **nốt xanh** Si♭ trượt lên Si. Bắt đầu bằng dấu lặng móc đơn — đếm trước một ô cho chắc.',
+      about: 'Ba lượt **blues 12 ô** ở Sol: tay trái chơi **shuffle** — hai nốt Sol – Rê và Sol – Mi xen kẽ theo móc đơn swing; tay phải dùng **nốt xanh** Si♭ trượt lên Si. Lượt hai cao hơn và to hơn (**f**), lượt ba nhắc lại lượt một rồi kết bằng dấu ngân. Bắt đầu bằng dấu lặng móc đơn — đếm trước một ô cho chắc.',
       source: own('Khung 12 ô nhịp blues'),
     },
     {
       id: 'g3-hoi-lang', title: 'Hội làng', composer: 'Lamar', style: 'new',
-      about: 'Viết trên năm nốt **Fa – Sol – La – Đô – Rê** với móc kép rộn ràng như trống hội. Tay trái chơi quãng 5 nhấn phách. Đoạn ba nhỏ lại (**p**) rồi bùng lên **f** ở đoạn cuối. Giai điệu mới, không trích dân ca nào.',
+      about: 'Viết trên năm nốt **Fa – Sol – La – Đô – Rê** với móc kép rộn ràng như trống hội, nhịp 2/4, hình thức **A A′ B A** và đoạn kết (40 ô). Tay trái chơi quãng 5 nhấn phách. Đoạn B trên nền Rê thứ nhỏ lại (**p**), đoạn A trở lại **f** rồi bùng lên **ff** ở đoạn kết. Giai điệu mới, không trích dân ca nào.',
       source: own('Viết trên âm giai ngũ cung'),
     },
   ],
@@ -623,17 +623,17 @@ Thời gian gợi ý 10 – 14 tháng là ước lượng của người biên s
     },
     {
       id: 'g4-den-pho', title: 'Đèn phố', composer: 'Lamar', style: 'new',
-      about: 'Ballad pop giọng Mi♭ trưởng: giai điệu nhiều **nghịch phách** (nốt móc đơn nối sang phách sau) trên tay trái rải hợp âm. Để nghịch phách "trôi", hãy đếm móc đơn "1 và 2 và" và nghe tay trái làm phách nền.',
+      about: 'Ballad pop giọng Mi♭ trưởng (48 ô) theo dàn bài một ca khúc: mở đầu – hai đoạn hát – đoạn chuyển (ii – iii – IV – V7) – hai điệp khúc – đoạn kết. Điệp khúc thứ hai có **kết lửng** (V7 sang vi thay vì I) rồi mới về chủ. Giai điệu nhiều **nghịch phách** (nốt móc đơn nối sang phách sau) trên tay trái rải hợp âm; hãy đếm móc đơn "1 và 2 và" và nghe tay trái làm phách nền.',
       source: own('Phong cách pop ballad'),
     },
     {
       id: 'g4-valse-jazz', title: 'Valse jazz', composer: 'Lamar', style: 'new',
-      about: 'Valse nhịp 3/4 với hoà âm jazz giọng Rê thứ: tay trái chơi nốt trầm ở phách 1, **hợp âm bảy** ở phách 2 – 3; tiến trình ii – V – i quen thuộc của jazz. Chơi móc đơn hơi swing, phách 1 nhẹ như bước valse.',
+      about: 'Valse nhịp 3/4 với hoà âm jazz, hình thức **A B A** (48 ô): đoạn A ở Rê thứ với ii – V – i (Mi7♭5 – La7 – Rê thứ7), đoạn B ở Fa trưởng với ii – V – I và ii – V phụ (Mi7♭5 – La7 sang Rê thứ). Tay trái chơi nốt trầm ở phách 1, **quãng 3 và 7 của hợp âm** ở phách 2 – 3. Chơi móc đơn hơi swing, phách 1 nhẹ như bước valse.',
       source: own('Valse jazz, tiến trình ii – V – i'),
     },
     {
       id: 'g4-trang-que', title: 'Trăng quê', composer: 'Lamar', style: 'new',
-      about: 'Viết trên năm nốt **Rê♭ – Mi♭ – Fa – La♭ – Si♭** (ngũ cung trên phím đen) với **nốt dựa ngắn** như tiếng luyến láy của giọng hát. Tốc độ tự do, nhỏ nhẹ; tay trái ngân quãng 5. Giai điệu mới, không trích dân ca nào.',
+      about: 'Viết trên năm nốt **Rê♭ – Mi♭ – Fa – La♭ – Si♭** (ngũ cung trên phím đen) với **nốt dựa ngắn** như tiếng luyến láy của giọng hát. Hình thức **A A′ B A** và đoạn kết (36 ô): đoạn B sang Si♭ thứ, tay trái chơi nốt trắng, rồi dừng ở La♭ (át) để quay về. Tốc độ tự do, nhỏ nhẹ; tay trái ngân quãng 5. Giai điệu mới, không trích dân ca nào.',
       source: own('Viết trên âm giai ngũ cung'),
     },
   ],
@@ -744,12 +744,12 @@ Thời gian gợi ý 12 – 18 tháng là ước lượng của người biên s
     },
     {
       id: 'g5-bossa', title: 'Bossa chiều', composer: 'Lamar', style: 'new',
-      about: '**Bossa nova** giọng La thứ: tay trái chơi nốt trầm ở phách 1, hợp âm lệch phách (nghịch phách) — đặc trưng của bossa Brazil. Tay phải hát giai điệu có nối qua phách. Đếm móc đơn thật chắc, giữ tay trái nhẹ và đều.',
+      about: '**Bossa nova** (52 ô): mở đầu, đoạn A ở La thứ, đoạn B ở Đô trưởng với ii – V – I và các hợp âm át phụ (La7 → Rê thứ), rồi đoạn A trở lại. Tay trái chơi nốt trầm ở phách 1, hợp âm lệch phách (nghịch phách) — đặc trưng của bossa Brazil. Tay phải hát giai điệu có nối qua phách. Đếm móc đơn thật chắc, giữ tay trái nhẹ và đều.',
       source: own('Phong cách bossa nova'),
     },
     {
       id: 'g5-gio-dong', title: 'Gió đồng', composer: 'Lamar', style: 'new',
-      about: 'Nhịp **5/4** chia **3 + 2**, trên ngũ cung Fa (Fa – Sol – La – Đô – Rê); đoạn giữa (ô 7 – 9) chuyển sang ngũ cung Đô. Mỗi ô có hai "nhịp thở" lệch nhau như gió thổi trên cánh đồng. Giai điệu mới, không trích dân ca nào.',
+      about: 'Nhịp **5/4** chia **3 + 2** (36 ô), hình thức **A B A′**: đoạn A trên ngũ cung Fa (Fa – Sol – La – Đô – Rê); đoạn B chuyển sang ngũ cung Đô, kết ở Đô — chính là át của Fa — để quay về; đoạn A′ lên cao hơn (**f**) rồi lắng xuống. Mỗi ô có hai "nhịp thở" lệch nhau như gió thổi trên cánh đồng. Giai điệu mới, không trích dân ca nào.',
       source: own('Viết trên âm giai ngũ cung, nhịp 5/4'),
     },
   ],
