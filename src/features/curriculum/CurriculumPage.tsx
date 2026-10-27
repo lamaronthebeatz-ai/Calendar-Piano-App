@@ -18,6 +18,7 @@ import { useReader } from './reader/store'
 import type { Curriculum, Level, Piece } from './types'
 import { jazzVolumeOf, OLD_JAZZ_ID } from './books'
 import './motion-books.css'
+import logoFull from '../../assets/logo-full.webp'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
 
@@ -97,14 +98,24 @@ function Shelf() {
   const courses = READER_BOOKS.filter((b) => b.kind === 'course')
   return (
     <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 lg:px-8 lg:py-10">
-      <header className="animate-float-up">
-        <p className="text-[11.5px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold)]">Tủ sách Lamar</p>
-        <h2 className="mt-2 max-w-2xl font-display text-[30px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[40px]">
-          Mỗi cuốn sách, <span className="text-gold-gradient italic">một lộ trình học</span>
+      <header className="lamars-head animate-float-up">
+        <div className="lamars-mark">
+          <img src={logoFull} alt="Lamar" width={960} height={528} draggable={false} />
+          <p className="lamars-label">
+            <span aria-hidden="true" />Lamar&rsquo;s Book<span aria-hidden="true" />
+          </p>
+        </div>
+        <h2 className="mx-auto mt-6 max-w-3xl font-display text-[29px] font-semibold leading-[1.15] tracking-tight text-[var(--color-ink)] sm:text-[40px]">
+          Những cuốn sách nên đọc, <span className="text-gold-gradient italic">bằng tiếng Việt</span>
         </h2>
-        <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)]">
-          Tủ sách gồm các giáo trình lý thuyết âm nhạc và piano do Lamar biên soạn, hệ thống hoá từ thư viện bài viết. Mỗi cuốn được dàn trang như một ấn phẩm hoàn chỉnh — mục lục, dấu trang, tìm kiếm trong sách, tuỳ chỉnh cỡ chữ và nền trang, xuất PDF để in — và mọi chương đều liên kết trực tiếp với bài gốc trong thư viện.
+        <p className="mx-auto mt-4 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)] sm:text-[15px]">
+          Lamar&rsquo;s Book là tủ sách Lamar tuyển chọn cho người học nhạc Việt Nam: các giáo trình Lamar tự soạn — nhạc lý, hoà âm, phức điệu, jazz, piano — và những cuốn kinh điển về âm nhạc học, mỹ học, sư phạm và nghề âm nhạc, được đọc kỹ rồi trình bày lại bằng tiếng Việt, có nguồn và số trang để bạn đối chiếu bản gốc.
         </p>
+        <ul className="lamars-facts">
+          <li><b>{books.length}</b> sách</li>
+          <li><b>{courses.length}</b> giáo trình piano</li>
+          <li>Đọc như ấn phẩm · In PDF</li>
+        </ul>
       </header>
 
       <CoverFlow books={READER_BOOKS} />
