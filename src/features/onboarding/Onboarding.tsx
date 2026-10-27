@@ -83,11 +83,11 @@ const STEPS: Step[] = [
   },
   {
     icon: <GraduationIcon width={22} height={22} />,
-    eyebrow: 'Bước 5 · Giáo trình',
+    eyebrow: 'Bước 5 · Tủ sách',
     title: 'Tủ sách',
     lead: 'Các bài thư viện được đóng thành sách lý thuyết và giáo trình piano theo cấp độ, đọc như sách điện tử.',
     points: [
-      ['Chọn sách', 'Vuốt ngang dãy bìa (hoặc kéo chuột, phím ← →); chạm bìa ở giữa để mở sách.'],
+      ['Chọn sách', 'Vuốt ngang dãy bìa (hoặc kéo chuột, phím ← →); chạm bìa ở giữa để mở sách. Bên dưới, sách xếp theo chủ đề — chạm tên chủ đề trên thanh dính để nhảy tới.'],
       ['Đọc', 'Vuốt hoặc dùng phím mũi tên để lật trang. Thanh trên có mục lục, dấu trang, tìm trong sách và chỉnh cỡ chữ, phông, nền Giấy – Sepia – Đêm.'],
       ['Học có tiến độ', 'Đánh dấu chương đã học; thanh tiến độ trên giá sách cho biết bạn đi được bao xa. Nút PDF dàn trang để in hoặc lưu.'],
     ],

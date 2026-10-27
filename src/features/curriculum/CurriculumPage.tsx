@@ -10,6 +10,7 @@ import { toggleDone, useLibrary } from '../theory/library'
 import { CURRICULA } from './curricula'
 import { Cover } from './reader/Cover'
 import { CoverFlow } from './CoverFlow'
+import { SHELF_BOOKS, SHELF_TOPICS, type ShelfTopic } from './shelfTopics'
 import { openBook } from './bookOpen'
 import { chaptersOf, findBook, READER_BOOKS, type ReaderBook } from './reader/model'
 import { PrintBook } from './reader/PrintBook'
@@ -60,7 +61,7 @@ export function CurriculumPage() {
     <ScrollArea className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
       <div data-scrolled className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
-          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">Giáo trình</h1>
+          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">Tủ sách</h1>
           <Link to="/notes" className="flex h-9 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3.5 text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">
             <NoteIcon width={15} height={15} /> Sổ nghiên cứu
           </Link>
@@ -97,11 +98,10 @@ function Overview({ c }: { c: Curriculum }) {
 
 /** Books and courses as covers on a shelf, each opening in the reader where it was left. */
 function Shelf() {
-  const books = READER_BOOKS.filter((b) => b.kind === 'book')
-  const courses = READER_BOOKS.filter((b) => b.kind === 'course')
-  const kids = READER_BOOKS.filter((b) => b.kind === 'kids')
+  const books = READER_BOOKS.length
+  const lessons = READER_BOOKS.reduce((n, b) => n + chaptersOf(b).length, 0)
   return (
-    <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 lg:px-8 lg:py-10">
+    <div className="mx-auto max-w-6xl px-4 py-6 lg:px-8 lg:py-10">
       <header className="lamars-head animate-float-up">
         <div className="lamars-mark">
           <img src={logoFull} alt="Lamar" width={960} height={528} draggable={false} />
@@ -116,24 +116,78 @@ function Shelf() {
           Lamar&rsquo;s Book là tủ sách Lamar tuyển chọn cho người học nhạc Việt Nam: các giáo trình Lamar tự soạn — nhạc lý, hoà âm, phức điệu, jazz, piano — và những cuốn kinh điển về âm nhạc học, mỹ học, sư phạm và nghề âm nhạc, được đọc kỹ rồi trình bày lại bằng tiếng Việt, có nguồn và số trang để bạn đối chiếu bản gốc.
         </p>
         <ul className="lamars-facts">
-          <li><b>{books.length}</b> sách</li>
-          <li><b>{courses.length + kids.length}</b> giáo trình piano</li>
+          <li><b>{SHELF_TOPICS.length}</b> chủ đề</li>
+          <li><b>{books}</b> cuốn</li>
+          <li><b>{lessons.toLocaleString('vi-VN')}</b> bài</li>
           <li>Đọc như ấn phẩm · In PDF</li>
         </ul>
       </header>
 
-      <CoverFlow books={READER_BOOKS} />
+      <div className="mt-10">
+        <CoverFlow books={SHELF_BOOKS} />
+      </div>
 
-      <ShelfRow title="Sách lý thuyết" hint={`${books.length} quyển`} books={books} />
-      <ShelfRow title="Piano cho Trẻ em" hint={`${kids.length} cuốn · ABRSM Initial – Grade 5`} books={kids} />
-      <ShelfRow title="Giáo trình piano" hint={`${courses.length} giáo trình`} books={courses} />
+      <TopicIndex />
 
-      <ReviewLink slug={CURRICULA[0]?.review} />
+      <div className="mt-6 space-y-20 sm:space-y-24">
+        {SHELF_TOPICS.map((t, k) => (
+          <TopicSection key={t.id} topic={t} n={k + 1} />
+        ))}
+      </div>
+
+      <div className="mt-20">
+        <ReviewLink slug={CURRICULA[0]?.review} />
+      </div>
     </div>
   )
 }
 
-function ShelfRow({ title, hint, books }: { title: string; hint: string; books: ReaderBook[] }) {
+const pad2 = (n: number) => String(n).padStart(2, '0')
+
+/** Sticky index of topics under the cover flow; highlights the topic in view. */
+function TopicIndex() {
+  const [active, setActive] = useState(SHELF_TOPICS[0]?.id)
+  const bar = useRef<HTMLDivElement>(null)
+  useLayoutEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') return
+    const io = new IntersectionObserver(
+      (entries) => {
+        const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]
+        if (hit) setActive(hit.target.id.replace('chu-de-', ''))
+      },
+      { rootMargin: '-35% 0px -55% 0px' },
+    )
+    SHELF_TOPICS.forEach((t) => {
+      const el = document.getElementById(`chu-de-${t.id}`)
+      if (el) io.observe(el)
+    })
+    return () => io.disconnect()
+  }, [])
+  // Keep the active pill visible when the index scrolls sideways on phones.
+  useLayoutEffect(() => {
+    const pill = bar.current?.querySelector<HTMLElement>(`[data-topic="${active}"]`)
+    const box = bar.current
+    if (pill && box) box.scrollTo({ left: pill.offsetLeft - box.clientWidth / 2 + pill.clientWidth / 2, behavior: 'smooth' })
+  }, [active])
+  const go = (id: string) => {
+    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches
+    document.getElementById(`chu-de-${id}`)?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' })
+  }
+  return (
+    <nav aria-label="Chủ đề" className="topic-index sticky top-14 z-10 -mx-4 mt-8 lg:-mx-8">
+      <div ref={bar} className="topic-index-bar no-scrollbar">
+        {SHELF_TOPICS.map((t, k) => (
+          <button key={t.id} data-topic={t.id} onClick={() => go(t.id)} aria-current={active === t.id ? 'true' : undefined} className="topic-pill">
+            <span className="topic-pill-n">{pad2(k + 1)}</span>
+            {t.short}
+          </button>
+        ))}
+      </div>
+    </nav>
+  )
+}
+
+function TopicSection({ topic, n }: { topic: ShelfTopic; n: number }) {
   const row = useRef<HTMLDivElement>(null)
   // Books rise into place as they scroll into view, staggered within each batch that arrives together.
   useLayoutEffect(() => {
@@ -156,15 +210,22 @@ function ShelfRow({ title, hint, books }: { title: string; hint: string; books: 
     )
     items.forEach((el) => io.observe(el))
     return () => io.disconnect()
-  }, [books])
+  }, [topic])
+  const lessons = topic.books.reduce((s, b) => s + chaptersOf(b).length, 0)
   return (
-    <section className="space-y-5">
-      <div className="flex items-baseline justify-between gap-3 border-b border-[var(--color-border)] pb-2">
-        <h3 className="font-display text-[22px] font-semibold tracking-tight text-[var(--color-ink)]">{title}</h3>
-        <span className="text-[12.5px] text-[var(--color-ink-faint)]">{hint}</span>
-      </div>
-      <div ref={row} className="shelf-row grid grid-cols-1 gap-x-8 gap-y-10 min-[520px]:grid-cols-2">
-        {books.map((b) => (
+    <section id={`chu-de-${topic.id}`} aria-labelledby={`chu-de-${topic.id}-t`} className="topic scroll-mt-32">
+      <header className="topic-head">
+        <span aria-hidden className="topic-n">{pad2(n)}</span>
+        <div className="min-w-0">
+          <p className="topic-eyebrow">
+            Chủ đề {pad2(n)} · {topic.books.length} cuốn · {lessons} bài
+          </p>
+          <h3 id={`chu-de-${topic.id}-t`} className="topic-title">{topic.title}</h3>
+          <p className="topic-blurb">{topic.blurb}</p>
+        </div>
+      </header>
+      <div ref={row} className="shelf-row grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+        {topic.books.map((b) => (
           <ShelfBook key={b.id} book={b} />
         ))}
       </div>
@@ -178,8 +239,10 @@ function ShelfBook({ book }: { book: ReaderBook }) {
   const progress = useProgress(chapters.map((c) => c.slug))
   const pos = useReader().positions[book.id]
   const resume = pos && book.items.find((i) => i.key === pos.key)
+  const reading = resume && resume.kind !== 'cover'
+  const parts = book.items.filter((i) => i.kind === 'part').length
   return (
-    <article className="group flex flex-col gap-4 sm:flex-row sm:items-end">
+    <article className="shelf-card group" style={hueTint(book.hue)}>
       <Link
         to={`/curriculum/${book.id}`}
         onClick={(e) => {
@@ -187,36 +250,41 @@ function ShelfBook({ book }: { book: ReaderBook }) {
           openBook(book, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${book.id}`, navigate)
         }}
         aria-label={`Đọc ${book.title} ${book.volume ?? ''}`}
-        className="shelf-book block w-[min(62vw,240px)] shrink-0 self-center sm:w-[200px] sm:self-auto lg:w-[230px]">
-        <Cover book={book} className="shelf-book-face rounded-[4px]" />
+        className="shelf-book shelf-card-cover">
+        <Cover book={book} size={0.6} className="shelf-book-face rounded-[3px]" />
       </Link>
-      <div className="min-w-0 flex-1 sm:pb-2">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)]">{book.audience}</p>
-        <Link to={`/curriculum/${book.id}`} className="mt-1 block font-display text-[22px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] hover:text-[var(--color-gold)]">
+      <div className="flex min-w-0 flex-1 flex-col">
+        <p className="shelf-card-eyebrow" title={book.audience}>{book.audience}</p>
+        <Link to={`/curriculum/${book.id}`} className="shelf-card-title">
           {book.title}
-          {book.volume && <span className="font-normal italic text-[var(--color-ink-muted)]"> · {book.volume}</span>}
+          {book.volume && !book.volume.startsWith('by ') && <span className="shelf-card-vol"> · {book.volume}</span>}
         </Link>
-        <p className="mt-1.5 line-clamp-3 text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
-        <p className="mt-2 text-[12px] text-[var(--color-ink-faint)]">
-          {book.items.filter((i) => i.kind === 'part').length} {book.kind === 'course' ? 'cấp' : 'phần'} · {chapters.length} bài · đã học {progress.done}/{progress.total}
-        </p>
-        <div className="mt-2 h-1 max-w-xs overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
-          <span className="book-bar block h-full rounded-full bg-[var(--color-gold)]" style={{ transform: `scaleX(${Math.max(0.02, progress.ratio)})` }} />
-        </div>
-        <div className="mt-4 flex flex-wrap items-center gap-2">
-          <Link to={`/curriculum/${book.id}`} className="flex h-9 items-center gap-1.5 rounded-full bg-[var(--color-ink)] px-4 text-[13px] font-medium text-[var(--color-surface)] shadow-sm transition-transform active:scale-95">
-            <BookIcon width={15} height={15} /> {resume && resume.kind !== 'cover' ? 'Đọc tiếp' : 'Đọc'}
-          </Link>
-          <Link to={`/curriculum/${book.id}/in`} className="flex h-9 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-border-strong)] hover:text-[var(--color-ink)]">
-            <DownloadIcon width={15} height={15} /> PDF
-          </Link>
-          {book.kind === 'course' && (
-            <Link to={`/curriculum/${book.id}/tong-quan`} className="flex h-9 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-border-strong)] hover:text-[var(--color-ink)]">
-              <GraduationIcon width={15} height={15} /> Tổng quan
+        <p className="mt-1.5 line-clamp-2 text-[13px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
+        <div className="mt-auto pt-4">
+          <div className="flex items-baseline justify-between gap-2 text-[11.5px] text-[var(--color-ink-faint)]">
+            <span>
+              {parts} {book.kind === 'course' ? 'cấp' : 'phần'} · {chapters.length} bài
+            </span>
+            <span className="tabular-nums">{progress.done ? `${Math.round(progress.ratio * 100)}%` : 'Chưa đọc'}</span>
+          </div>
+          <div className="mt-1.5 h-[3px] overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
+            <span className="book-bar block h-full rounded-full bg-[var(--color-gold)]" style={{ transform: `scaleX(${Math.max(0.02, progress.ratio)})` }} />
+          </div>
+          <div className="mt-3.5 flex flex-wrap items-center gap-2">
+            <Link to={`/curriculum/${book.id}`} className="shelf-btn shelf-btn-main">
+              <BookIcon width={14} height={14} /> {reading ? 'Đọc tiếp' : 'Đọc'}
             </Link>
-          )}
+            <Link to={`/curriculum/${book.id}/in`} className="shelf-btn" aria-label={`Tải PDF ${book.title}`}>
+              <DownloadIcon width={14} height={14} /> PDF
+            </Link>
+            {book.kind === 'course' && (
+              <Link to={`/curriculum/${book.id}/tong-quan`} className="shelf-btn">
+                <GraduationIcon width={14} height={14} /> Tổng quan
+              </Link>
+            )}
+          </div>
+          {reading && <p className="mt-2 truncate text-[11.5px] text-[var(--color-ink-faint)]">Đang đọc: {resume.title}</p>}
         </div>
-        {resume && resume.kind !== 'cover' && <p className="mt-2 truncate text-[12px] text-[var(--color-ink-faint)]">Đang đọc: {resume.title}</p>}
       </div>
     </article>
   )

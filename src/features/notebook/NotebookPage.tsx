@@ -186,7 +186,7 @@ export function NotebookPage() {
           <div className="rounded-2xl border border-dashed border-[var(--color-border-strong)] px-6 py-14 text-center">
             <NoteIcon width={28} height={28} className="mx-auto text-[var(--color-gold)]" />
             <p className="mt-3 font-display text-[19px] text-[var(--color-ink)]">Sổ còn trống</p>
-            <p className="mx-auto mt-1 max-w-md text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">Mở một cuốn sách trong Giáo trình hoặc một bài trong Lý thuyết, bôi chọn đoạn văn rồi chọn màu tô hoặc Ghi chú. Mọi đánh dấu sẽ về đây.</p>
+            <p className="mx-auto mt-1 max-w-md text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">Mở một cuốn sách trong Tủ sách hoặc một bài trong Lý thuyết, bôi chọn đoạn văn rồi chọn màu tô hoặc Ghi chú. Mọi đánh dấu sẽ về đây.</p>
           </div>
         )}
         {entries.length > 0 && shown.length === 0 && <p className="py-10 text-center text-[13.5px] text-[var(--color-ink-muted)]">Không có đánh dấu khớp bộ lọc.</p>}
