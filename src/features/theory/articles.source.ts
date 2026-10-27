@@ -39,6 +39,11 @@ import { allenA } from './content/allen-a'
 import { allenB } from './content/allen-b'
 import { allenC } from './content/allen-c'
 import { allenD } from './content/allen-d'
+import { hangDiaHub } from './content/hang-dia-hub'
+import { hangDiaA } from './content/hang-dia-a'
+import { hangDiaB } from './content/hang-dia-b'
+import { hangDiaC } from './content/hang-dia-c'
+import { hangDiaD } from './content/hang-dia-d'
 import { formRuXxA } from './content/formru-xx-a'
 import { formRuXxB } from './content/formru-xx-b'
 import { formRuXxC } from './content/formru-xx-c'
@@ -71,4 +76,4 @@ import { tanNhac } from './content/tan-nhac'
 import { vn1900 } from './content/vn-1900-1975'
 
 /** Every article with its full text. Only the build (scripts/theory-content.ts) and check-links load this; the app imports articles.ts. */
-export const ARTICLES: Article[] = [...technique, ...neuhausHub, ...neuhausA, ...neuhausB, ...neuhausC, ...neuhausD, ...neuhausE, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...formRussian, ...mazel, ...sposobin, ...asafyev, ...formRuHub, ...formRuA, ...formRuB, ...formRuC, ...formRuD, ...formRuE, ...formRuF, ...formRuG, ...formRuXxA, ...formRuXxB, ...formRuXxC, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...hanslickHub, ...hanslickA, ...hanslickB, ...hanslickC, ...schopenhauerHub, ...schopenhauerA, ...schopenhauerB, ...schopenhauerC, ...schopenhauerD, ...schopenhauerE, ...schopenhauerF, ...allenHub, ...allenA, ...allenB, ...allenC, ...allenD, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...vn1900, ...sacred, ...organ]
+export const ARTICLES: Article[] = [...technique, ...neuhausHub, ...neuhausA, ...neuhausB, ...neuhausC, ...neuhausD, ...neuhausE, ...instrument, ...musicianship, ...basics, ...rhythm, ...pitch, ...scales, ...harmony, ...albrechtsberger, ...chromatic, ...form, ...formRussian, ...mazel, ...sposobin, ...asafyev, ...formRuHub, ...formRuA, ...formRuB, ...formRuC, ...formRuD, ...formRuE, ...formRuF, ...formRuG, ...formRuXxA, ...formRuXxB, ...formRuXxC, ...polyphony, ...fux, ...expression, ...jazz, ...improvisation, ...modern, ...composers, ...pianists, ...pianoSchools, ...analysis, ...composition, ...listening, ...philosophy, ...genres, ...musicology, ...hanslickHub, ...hanslickA, ...hanslickB, ...hanslickC, ...schopenhauerHub, ...schopenhauerA, ...schopenhauerB, ...schopenhauerC, ...schopenhauerD, ...schopenhauerE, ...schopenhauerF, ...allenHub, ...allenA, ...allenB, ...allenC, ...allenD, ...hangDiaHub, ...hangDiaA, ...hangDiaB, ...hangDiaC, ...hangDiaD, ...history, ...systematic, ...organology, ...vietnam, ...tanNhac, ...vn1900, ...sacred, ...organ]

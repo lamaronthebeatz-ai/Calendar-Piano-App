@@ -10,6 +10,7 @@ import hanslickCover from '../../assets/covers/hanslick.webp'
 import schopenhauerCover from '../../assets/covers/schopenhauer.webp'
 import allenCover from '../../assets/covers/quan-ly-nghe-si.webp'
 import vietnamCover from '../../assets/covers/am-nhac-viet-nam.webp'
+import labelCover from '../../assets/covers/co-may-hang-dia.webp'
 import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
@@ -1178,6 +1179,56 @@ Mỗi bài tóm lược và giải thích một chương bằng lời của bộ
         { slug: 'quan-ly-nghe-si-dieu-hanh-kinh-doanh', focus: 'Buổi gặp 15 phút; đàm phán theo lợi ích; đạo đức; payola.' },
         { slug: 'quan-ly-nghe-si-co-van-va-lanh-dao', focus: 'Cố vấn, huấn luyện, lãnh đạo; lời kết.' },
       ], exercises: ['Tập một buổi giới thiệu nghệ sĩ 15 phút với một người bạn đóng vai hãng đĩa; ghi lại lập trường và lợi ích của mỗi bên.'] },
+    ],
+  },
+  {
+    id: 'co-may-hang-dia',
+    title: 'Cỗ Máy Hãng Đĩa',
+    volume: 'Nick Sadler',
+    subtitle: 'Đọc theo The Label Machine (bản 2025): dựng sự nghiệp âm nhạc theo mô hình hãng đĩa — các vai trong ngành nhạc, hai loại bản quyền và bốn dòng tiền, dựng hãng, phân phối, ngân sách, hợp đồng, phát hành và tiếp thị, hệ thống 360°, khi hãng trưởng thành.',
+    author: 'Lamar',
+    audience: 'Nghệ sĩ tự phát hành nhạc, người muốn mở hãng đĩa độc lập, người quản lý nghệ sĩ, giáo viên và nhạc sĩ cần hiểu bản quyền và cách đưa nhạc tới người nghe',
+    hue: 34,
+    glyph: '◉',
+    coverImage: labelCover,
+    preface: `
+**Nick Sadler**, người Anh, đồng sáng lập Never Say Die Records và dựng thêm nhiều hãng đĩa nhạc điện tử, viết *The Label Machine* (Velocity Press, in lần đầu 2021, bản này đọc theo ấn bản 2025). Luận điểm của sách: nghệ sĩ ngày nay không cần "được ký", nhưng vẫn cần đủ những việc kinh doanh mà một hãng đĩa làm — phân phối, tiếp thị, PR, thu tiền bản quyền, chăm sóc người hâm mộ. Cách gọn nhất là vận hành sự nghiệp theo khuôn một hãng đĩa.
+
+## Tinh thần của sách
+Mỗi bài tóm lược một nhóm chương bằng lời của bộ bài, trích ngắn kèm số trang bản in; sách còn bản quyền nên không dịch nguyên văn và không in lại các mẫu hợp đồng, email. Sách viết cho Anh – Mỹ và nêu rất nhiều dịch vụ, mức phí "tại thời điểm viết": bộ bài giữ chúng như mốc tham khảo, ghi chú chỗ Việt Nam khác, và ghi rõ chỗ sách đã lỗi thời hoặc thiếu nguồn. Tác giả điều hành một nền tảng trả phí và nhắc tới nó nhiều lần — phần ấy được lược đi. Không phần nào thay cho tư vấn pháp lý.
+
+## Cách đọc
+1. Nghệ sĩ tự phát hành lần đầu: Bài 4 – 6 (bản quyền), rồi Phần III và IV theo thứ tự — chúng chính là một danh sách việc cần làm.
+2. Người muốn mở hãng phát hành nhạc người khác: thêm Bài 10 (ngân sách), Bài 12 (hợp đồng) và Phần V.
+3. Mỗi bài có **Câu hỏi và bài tập** — phần lớn là tính một con số hay soạn một văn bản cho chính dự án của bạn.
+`,
+    parts: [
+      { title: 'Ngành nhạc', intro: 'Ai làm gì quanh một bản thu: nghệ sĩ, A&R, người quản lý, hãng đĩa, nhà phân phối, nhà xuất bản, tổ chức quản lý quyền, DJ, người hâm mộ; tiếp thị, PR, biểu diễn và đội ngũ chuyên môn.', chapters: [
+        { slug: 'hang-dia-lo-trinh', focus: 'Sách nói gì, đọc thế nào, những giới hạn cần biết.' },
+        { slug: 'hang-dia-nganh-nhac', focus: 'Các vai trong ngành; ba kiểu hãng đĩa; ba loại nhà phân phối.' },
+        { slug: 'hang-dia-tiep-thi-va-bieu-dien', focus: 'Tiếp thị là kể chuyện; PR, plugging, pitching; đại lý đặt show, nhà tổ chức; thành công thực tế.' },
+      ], exercises: ['Vẽ sơ đồ các bên quanh một bản phát hành của bạn ở Việt Nam, ghi ai thu tiền gì.'] },
+      { title: 'Bản quyền âm nhạc', intro: 'Hai loại bản quyền, bốn dòng tiền, và những trường hợp đặc biệt: sync, cấp phép, YouTube, cover, sample.', chapters: [
+        { slug: 'hang-dia-hai-loai-ban-quyen', focus: 'Tác phẩm và bản ghi; bốn bên; giấy phép hay sở hữu bản ghi; thời hạn.' },
+        { slug: 'hang-dia-bon-dong-tien-ban-quyen', focus: 'Quyền liên quan, tiền cơ học, tiền biểu diễn; ai đăng ký gì.' },
+        { slug: 'hang-dia-sync-cover-sample', focus: 'Phí sync thật, MFN; Content ID; giấy phép cover; sample và soundalike.' },
+      ], exercises: ['Lập bảng mọi dòng tiền một bài hát bạn viết và tự thu có thể sinh ra, kèm tổ chức thu từng dòng.'] },
+      { title: 'Dựng hãng', intro: 'Từ tư duy và mục tiêu tới tên hãng, kế hoạch kinh doanh, thương hiệu, nhà phân phối, ngân sách, email và công ty.', chapters: [
+        { slug: 'hang-dia-tu-duy-va-muc-tieu', focus: 'Tư duy phát triển; SMART và hệ thống; Pomodoro.' },
+        { slug: 'hang-dia-dung-nen-mong', focus: 'Tên, cây thư mục, kế hoạch kinh doanh, thương hiệu, logo, website.' },
+        { slug: 'hang-dia-phan-phoi', focus: 'Bốn câu hỏi chọn nhà phân phối; kinh nghiệm thật; bảng nhà phân phối.' },
+        { slug: 'hang-dia-ngan-sach-email-cong-ty', focus: 'Chi phí thu hồi và không thu hồi; chia ròng 50/50; chuỗi email; đăng ký công ty.' },
+      ], exercises: ['Viết kế hoạch kinh doanh một trang và ngân sách cho ba bản phát hành đầu của một hãng tưởng tượng.'] },
+      { title: 'Phát hành và tiếp thị', intro: 'Một bản phát hành từ đầu tới cuối: chuẩn bị, hợp đồng, tiếp thị, quảng cáo và playlist, rồi gom lại thành hệ thống 360°.', chapters: [
+        { slug: 'hang-dia-chuan-bi-ban-phat-hanh', focus: 'Single – EP – album; bìa; lịch tám tuần; siêu dữ liệu và các mã.' },
+        { slug: 'hang-dia-hop-dong', focus: 'Hợp đồng thu âm từng điều; bảng chia phần; hợp đồng remix.' },
+        { slug: 'hang-dia-tiep-thi-phat-hanh', focus: 'Phễu người hâm mộ; tư liệu; thông cáo; EPK; DJ promo; blog; pre-save.' },
+        { slug: 'hang-dia-quang-cao-va-spotify', focus: 'Quảng cáo Meta; playlist Spotify; ngày phát hành và sau đó.' },
+        { slug: 'hang-dia-he-thong-360', focus: 'Tám thành phần; thang giá trị; cộng đồng; chỉ số.' },
+      ], exercises: ['Lập trọn lịch tám tuần, thông cáo báo chí và kế hoạch quảng cáo cho một single của bạn.'] },
+      { title: 'Khi hãng trưởng thành', intro: 'Sau mười bản phát hành: kế toán bản quyền, hàng lưu niệm, sample, tuyển tập, xuất bản, quản lý nghệ sĩ, biểu diễn.', chapters: [
+        { slug: 'hang-dia-truong-thanh', focus: 'Kỳ kế toán; đĩa than; công thức ứng trước tuyển tập; giao từng bài; hợp đồng quản lý; đêm của hãng.' },
+      ], exercises: ['Chọn hai nguồn thu mới cho một hãng đã có mười bản phát hành và tính thử chi phí, lợi nhuận.'] },
     ],
   },
   {
