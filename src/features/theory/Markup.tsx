@@ -8,7 +8,7 @@ import { LinkRefContext, PrintContext } from './linkRef'
 import { findScan, loadScans, scanLabel, scanUrl, scanWidth, type ScanItem } from './scans'
 import { loadSheets, sheetUrl, type SheetSystem } from './sheets'
 import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, PitchClock, Rhythm, Staff, Timeline, type Clef } from './diagrams'
-import { parseKey } from './notation'
+import { figureId, parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
 import { YouTubeSearch, YouTubeVideo } from './YouTube'
 
@@ -303,6 +303,24 @@ function SheetScore({ id, title }: { id: string; title: string }) {
   )
 }
 
+/**
+ * A notation directive that has a LilyPond engraving (scripts/staff/figures.mjs) shows the engraving and keeps the
+ * drawn diagram's play button; without one, the diagram is drawn in SVG as before.
+ */
+function Engraved({ spec, caption, children }: { spec: string; caption: string; children: (image?: ReactNode) => ReactNode }) {
+  const id = figureId(spec)
+  const [state, setState] = useState<{ id: string; systems: SheetSystem[] }>()
+  useEffect(() => {
+    let live = true
+    loadSheets().then((m) => live && setState({ id, systems: m.ex[id] ?? [] }))
+    return () => {
+      live = false
+    }
+  }, [id])
+  if (state?.id !== id) return null
+  return <Figure caption={caption}>{children(state.systems.length ? <div className="engraved"><SheetImages kind="ex" systems={state.systems} alt={caption || spec} /></div> : undefined)}</Figure>
+}
+
 /** `::name args | caption` directives that embed a diagram or image. */
 function Directive({ line }: { line: string }) {
   const [spec, ...rest] = line.slice(2).split(PIPE)
@@ -313,18 +331,18 @@ function Directive({ line }: { line: string }) {
       return <Figure caption={caption}><Keyboard notes={args} /></Figure>
     case 'staff': {
       const keySig = parseKey(args[1])
-      return <Figure caption={caption}><Staff clef={args[0] as Clef} keySig={keySig} notes={args.slice(keySig ? 2 : 1)} /></Figure>
+      return <Engraved spec={spec} caption={caption}>{(image) => <Staff clef={args[0] as Clef} keySig={keySig} notes={args.slice(keySig ? 2 : 1)} image={image} />}</Engraved>
     }
     case 'grand': {
       const keySig = parseKey(args[0])
-      return <Figure caption={caption}><GrandStaff keySig={keySig} columns={args.slice(keySig ? 1 : 0)} /></Figure>
+      return <Engraved spec={spec} caption={caption}>{(image) => <GrandStaff keySig={keySig} columns={args.slice(keySig ? 1 : 0)} image={image} />}</Engraved>
     }
     case 'form':
       return <Figure caption={caption}><FormChart sections={args} /></Figure>
     case 'pc-clock':
       return <Figure caption={caption}><PitchClock set={args.map(Number)} /></Figure>
     case 'rhythm':
-      return <Figure caption={caption}><Rhythm tokens={args} /></Figure>
+      return <Engraved spec={spec} caption={caption}>{(image) => <Rhythm tokens={args} image={image} />}</Engraved>
     case 'wiki':
       return <WikiImage titles={[args.join('_')]} caption={caption} />
     case 'range':

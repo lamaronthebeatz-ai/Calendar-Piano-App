@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type KeyboardEvent as ReactKeyboardEvent, type ReactElement, type RefObject } from 'react'
+import { useEffect, useId, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type KeyboardEvent as ReactKeyboardEvent, type ReactElement, type ReactNode, type RefObject } from 'react'
 import { LETTERS, NOTE_RE, parseNote, PITCH_CLASS } from './notation'
 import { playNow, type Step } from './audio'
 import { lightStep, reducedMotion, usePlayer, useReveal } from './musicMotion'
@@ -270,7 +270,7 @@ const Playhead = ({ head, playing, top, bottom }: { head: RefObject<SVGLineEleme
  * Five-line staff of whole notes. Columns: "C4", "C4+E4+G4" (chord), optional "=label" shown underneath
  * (e.g. a Roman numeral; underscores become spaces); "/" draws a barline. An optional "k:3#" / "k:2b" adds a key signature.
  */
-export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig?: number; notes: string[] }) {
+export function Staff({ clef: clefArg, keySig = 0, notes, image }: { clef: Clef; keySig?: number; notes: string[]; image?: ReactNode }) {
   const clef = clefArg in CLEFS ? clefArg : 'treble'
   const cols = notes.map(parseColumn)
   const step = columnStep(cols.map((c) => c.label), 32)
@@ -291,6 +291,7 @@ export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig
   let n = 0
   return (
     <div className="mm-playable">
+      {image ?? (
       <svg ref={svg} viewBox={`0 0 ${width} ${labelY + 6}`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông nhạc: ${notes.join(', ')}`}>
         <StaffLines clef={clef} keySig={keySig} bottom={70} width={width} />
         <Playhead head={head} playing={playing} top={18} bottom={82} />
@@ -304,14 +305,14 @@ export function Staff({ clef: clefArg, keySig = 0, notes }: { clef: Clef; keySig
             </g>
           )
         })}
-      </svg>
+      </svg>)}
       {sounding.length > 0 && <PlayButton playing={playing} onClick={play} />}
     </div>
   )
 }
 
 /** Grand staff (treble over bass) of whole-note columns "upper/lower=label", e.g. "E5+C5/C3+G3=I". */
-export function GrandStaff({ keySig = 0, columns }: { keySig?: number; columns: string[] }) {
+export function GrandStaff({ keySig = 0, columns, image }: { keySig?: number; columns: string[]; image?: ReactNode }) {
   const cols = columns.map((c) => {
     const [body, label] = c.split('=')
     const [upper = '', lower = ''] = body.split('/')
@@ -332,6 +333,7 @@ export function GrandStaff({ keySig = 0, columns }: { keySig?: number; columns: 
   let k = 0
   return (
     <div className="mm-playable">
+      {image ?? (
       <svg ref={svg} viewBox={`0 0 ${width} 200`} className="w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Khuông kép: ${columns.join(', ')}`}>
         <line x1={0.5} x2={0.5} y1={30} y2={160} stroke={INK} strokeWidth={1.5} />
         <StaffLines clef="treble" keySig={keySig} bottom={70} width={width} />
@@ -347,7 +349,7 @@ export function GrandStaff({ keySig = 0, columns }: { keySig?: number; columns: 
             </g>
           )
         })}
-      </svg>
+      </svg>)}
       {sounding.length > 0 && <PlayButton playing={playing} onClick={play} />}
     </div>
   )
@@ -361,7 +363,7 @@ const RESTS = { w: '𝄻', h: '𝄼', q: '𝄽', e: '𝄾', s: '𝄿' } as const
  * Rhythm on a one-line staff: "4/4 q e-e >q. e / h~ q rq". Notes joined by "-" are beamed; "3[e-e-e]" is a triplet;
  * "/" is a barline, "//" a final barline; ":ta" under a note shows a counting syllable.
  */
-export function Rhythm({ tokens }: { tokens: string[] }) {
+export function Rhythm({ tokens, image }: { tokens: string[]; image?: ReactNode }) {
   const Y = 50
   const TOP = 22
   let x = 12
@@ -456,10 +458,11 @@ export function Rhythm({ tokens }: { tokens: string[] }) {
   const sounding = steps.some((st) => st.tick)
   return (
     <div className="mm-playable">
+      {image ?? (
       <svg ref={reveal} viewBox={`0 0 ${width} 92`} className="mm-rhythm w-full" style={{ maxWidth: width * 1.5 }} role="img" aria-label={`Tiết tấu: ${tokens.join(' ')}`}>
         <line x1={0} x2={width} y1={Y} y2={Y} stroke={INK} strokeWidth={1} />
         {items}
-      </svg>
+      </svg>)}
       {sounding && <PlayButton playing={playing} onClick={() => toggle(steps, { onStep: (i) => lightStep(reveal.current, i) })} label="Gõ nhịp" />}
     </div>
   )

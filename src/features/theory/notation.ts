@@ -31,3 +31,16 @@ export const parseKey = (arg?: string) => {
 export const NOTE_RE = /^(>)?(r)?([whqes])(\.)?(~)?(?::(\S+))?$/
 export const isRhythmToken = (t: string) =>
   /^\d+\/\d+$/.test(t) || t === '/' || t === '//' || (/^(3\[)?[^[\]]+\]?$/.test(t) && t.replace(/^3\[|\]$/g, '').split('-').every((n) => NOTE_RE.test(n)))
+
+/**
+ * Id of the LilyPond engraving of a notation directive (`::staff`, `::grand`, `::rhythm`): "fig-" + FNV-1a of its
+ * arguments, so the same directive finds its engraving wherever it appears. Written by scripts/staff/figures.mjs.
+ */
+export const figureId = (spec: string) => {
+  let h = 0x811c9dc5
+  for (const ch of spec.trim().replace(/\s+/g, ' ')) {
+    h ^= ch.codePointAt(0)!
+    h = Math.imul(h, 0x01000193) >>> 0
+  }
+  return 'fig-' + h.toString(16).padStart(8, '0')
+}
