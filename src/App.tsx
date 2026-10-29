@@ -24,6 +24,7 @@ const TheoryPage = lazy(() => loadTheory().then((m) => ({ default: m.TheoryPage 
 const CurriculumPage = lazy(() => loadCurriculum().then((m) => ({ default: m.CurriculumPage })))
 const NotebookPage = lazy(() => loadNotebook().then((m) => ({ default: m.NotebookPage })))
 const ToolsPage = lazy(() => import('./features/tools/ToolsPage').then((m) => ({ default: m.ToolsPage })))
+const SolfegePage = lazy(() => import('./features/solfege/SolfegePage').then((m) => ({ default: m.SolfegePage })))
 const MusicologyPage = lazy(() => loadMusicology().then((m) => ({ default: m.MusicologyPage })))
 
 // Fetched once the app is idle, so the first visit to a page doesn't capture an empty page in its view transition.
@@ -114,6 +115,7 @@ const router = createHashRouter(
       <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
       <Route path="/notes" element={<Suspense><NotebookPage /></Suspense>} />
       <Route path="/tools" element={<Suspense><ToolsPage /></Suspense>} />
+      <Route path="/solfege" element={<Suspense><SolfegePage /></Suspense>} />
       <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />
     </Route>,
   ),

@@ -111,6 +111,7 @@ function Palette({ onClose }: { onClose: () => void }) {
     const out: Item[] = []
     const pages: Item[] = [
       ...navItems.map((n) => ({ id: `nav${n.to}`, group: 'Đi tới', title: n.label, icon: <n.icon width={16} height={16} />, run: () => go(n.to) })),
+      { id: 'nav/solfege', group: 'Đi tới', title: 'Solfège: đoán nốt, đoán quãng', hint: 'Luyện tai và đọc nốt: 12 phím, quãng 2 thứ – quãng 8', icon: <span className="text-[15px]">𝄞</span>, run: () => go('/solfege') },
       { id: 'nav/tools', group: 'Đi tới', title: 'Bảng tính nhạc lý', hint: 'Vòng quãng năm, hợp âm, jazz, âm giai, dịch giọng, nhịp', icon: <span className="text-[15px]">♫</span>, run: () => go('/tools') },
     ]
     const cycle = settings.theme === 'dark' ? 'light' : settings.theme === 'light' ? 'system' : 'dark'

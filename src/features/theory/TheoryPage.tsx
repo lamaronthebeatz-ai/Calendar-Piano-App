@@ -207,9 +207,14 @@ export function TheoryPage() {
           {article ? (
             <ArticleActions article={article} />
           ) : (
-            <Link to="/tools" aria-label="Bảng tính nhạc lý" title="Bảng tính: vòng quãng năm, hợp âm, jazz…" className="tools-btn">
-              <span aria-hidden>♫</span>
-            </Link>
+            <div className="flex flex-none items-center gap-2">
+              <Link to="/solfege" aria-label="Solfège: luyện đoán nốt và quãng" title="Solfège: đoán nốt, đoán quãng" className="tools-btn solfege-btn">
+                <span aria-hidden>𝄞</span>
+              </Link>
+              <Link to="/tools" aria-label="Bảng tính nhạc lý" title="Bảng tính: vòng quãng năm, hợp âm, jazz…" className="tools-btn">
+                <span aria-hidden>♫</span>
+              </Link>
+            </div>
           )}
         </div>
         {article && (

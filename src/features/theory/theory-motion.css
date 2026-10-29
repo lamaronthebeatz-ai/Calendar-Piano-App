@@ -122,6 +122,8 @@ html.reveal-on .theory-article .prose-theory :is(figure, table, blockquote) { an
 
 /* Library header: the calculators button. */
 .tools-btn { position: relative; display: flex; height: 38px; width: 38px; flex: none; align-items: center; justify-content: center; border-radius: 99px; font-size: 20px; color: var(--color-gold); background: var(--color-gold-soft); box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 30%, transparent); transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1); }
+.solfege-btn { font-family: 'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif; font-size: 22px; }
+.solfege-btn span { animation-delay: -1.6s; }
 .tools-btn:hover { transform: scale(1.08) rotate(-8deg); }
 .tools-btn span { animation: tools-bob 3.2s ease-in-out infinite; }
 @keyframes tools-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-2px) rotate(-6deg); } }

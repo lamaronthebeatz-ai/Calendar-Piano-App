@@ -162,6 +162,7 @@ function Panel() {
       if (v > 0) out.push({ path, title, hint, icon, v: v + 40 + kindBonus('page') })
     }
     for (const n of navItems) page(n.to, n.label, 'Trang', <n.icon width={16} height={16} />, n.to === '/' ? 'thời khoá biểu lịch dạy' : '')
+    page('/solfege', 'Solfège', 'Trang', <span>𝄞</span>, 'solfege xướng âm luyện tai đoán nốt đoán quãng nghe nốt đọc nốt ear training')
     page('/tools', 'Bảng tính nhạc lý', 'Trang', <span>♫</span>, 'vòng quãng năm hợp âm jazz âm giai quãng dịch giọng máy đếm nhịp metronome ii-V-I tritone')
     page('/settings', 'Sao lưu & dữ liệu', 'Cài đặt', <span>⚙︎</span>, 'xuất nhập dữ liệu backup giao diện hồ sơ')
     if (unlocked)
