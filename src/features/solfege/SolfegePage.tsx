@@ -227,7 +227,8 @@ type Feedback = { ok: boolean; picked: number } | null
 /* ---------- note trainer ---------- */
 
 type NoteSettings = { mode: 'listen' | 'read' | 'both'; clef: Clef; accidentals: boolean; reference: boolean; auto: boolean }
-const RANGE = { treble: [60, 84], bass: [40, 64] } as const
+/** Sounding range kept to octaves 3 – 5 (C3 – B5): treble C4 – B5, bass C3 – E4. */
+const RANGE = { treble: [60, 83], bass: [48, 64] } as const
 
 /** A random note in the clef's range, not the same pitch class as the last one. */
 function makeNote(s: NoteSettings, prev?: Note): Note {
@@ -279,8 +280,12 @@ function NoteTrainer({ names, stats, setStats }: { names: Names; stats: Stats; s
     if (fb) return
     const ok = pc === q.midi % 12
     // the pressed key sounds in the question's octave
-    const near = q.midi - (q.midi % 12) + pc
-    playNow([near - q.midi > 6 ? near - 12 : q.midi - near > 6 ? near + 12 : near], 0.9)
+    let near = q.midi - (q.midi % 12) + pc
+    if (near - q.midi > 6) near -= 12
+    else if (q.midi - near > 6) near += 12
+    if (near > 83) near -= 12
+    if (near < 48) near += 12
+    playNow([near], 0.9)
     setFb({ ok, picked: pc })
     const key = String(q.midi % 12)
     const nextStreak = ok ? streak + 1 : 0
