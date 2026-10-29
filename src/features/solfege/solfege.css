@@ -112,6 +112,27 @@
 .sf-heat-cell b { font-size: 11.5px; color: var(--color-ink); font-variant-numeric: tabular-nums; }
 .sf-foot { margin-top: 22px; text-align: center; font-size: 12px; line-height: 1.6; color: var(--color-ink-faint); }
 
+/* Sight-singing */
+.sf-level-note { margin-top: 10px; text-align: center; font-size: 12px; color: var(--color-ink-faint); }
+.sf-sing { padding-top: 12px; }
+.sf-sing-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.sf-nav { flex: none; height: 38px; width: 38px; border-radius: 99px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: 16px; color: var(--color-ink); }
+.sf-nav:active { transform: scale(0.94); }
+.sf-sing-title { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.sf-sing-title b { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--color-ink); }
+.sf-sing-title b span { font-size: 14px; font-weight: 400; color: var(--color-ink-faint); }
+.sf-sing-title > span { font-size: 11.5px; color: var(--color-ink-faint); }
+.sf-sheet { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 16px 0 12px; padding: 14px 10px; border-radius: 16px; background: #fffdf8; min-height: 120px; justify-content: center; }
+.sf-sheet-img { display: block; width: 100%; max-width: 640px; height: auto; }
+.sf-sheet-wait { font-size: 13px; color: #8a8173; }
+.sf-sing-actions { flex-wrap: wrap; }
+.sf-btn-done { border-color: var(--sf-ok); color: var(--sf-ok); }
+.sf-howto { margin-top: 22px; padding: 16px 18px; border-radius: 18px; border: 1px solid var(--color-border); background: var(--color-surface-raised); font-size: 13.5px; line-height: 1.65; color: var(--color-ink-muted); }
+.sf-howto h3 { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--color-ink); margin-bottom: 6px; }
+.sf-howto ol { list-style: decimal; padding-left: 1.3em; display: grid; gap: 4px; }
+.sf-howto b { color: var(--color-ink); }
+.sf-howto p { margin-top: 10px; font-size: 12.5px; color: var(--color-ink-faint); }
+
 @keyframes sf-rise { from { opacity: 0; transform: translateY(14px); } }
 @keyframes sf-pop { from { opacity: 0; transform: scale(0.8); } }
 @keyframes sf-note { from { opacity: 0; transform: translateY(-10px) scale(0.85); } }

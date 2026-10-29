@@ -4,6 +4,7 @@ import { ScrollArea } from '../../components/ScrollArea'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { playNow, playSequence } from '../theory/audio'
+import { SightSinging } from './SightSinging'
 import './solfege.css'
 
 /* ---------- names and spelling ---------- */
@@ -519,7 +520,7 @@ function IntervalTrainer({ names, stats, setStats }: { names: Names; stats: Stat
 /** Solfège: guess a note (twelve keys) or the interval between two notes, by ear, by eye, or both. */
 export function SolfegePage() {
   const back = useBack('/theory')
-  const [tab, setTab] = useStored<{ v: 'note' | 'interval' }>('solfege:tab', { v: 'note' })
+  const [tab, setTab] = useStored<{ v: 'note' | 'interval' | 'sing' }>('solfege:tab', { v: 'note' })
   const [names, setNames] = useStored<{ v: Names }>('solfege:names', { v: 'solfa' })
   const [stats, setStatsRaw] = useStored<Stats>('solfege:stats', EMPTY)
   const setStats = useCallback((f: (s: Stats) => Stats) => setStatsRaw((s) => f({ ...EMPTY, ...s })), [setStatsRaw])
@@ -528,7 +529,9 @@ export function SolfegePage() {
     () =>
       tab.v === 'note'
         ? 'Một nốt ngẫu nhiên hiện trên khuông và vang lên — chọn đúng phím trong 12 phím. Phím đen ghi cả hai tên (Đô♯ / Rê♭).'
-        : 'Hai nốt ngẫu nhiên — đi lên, đi xuống hoặc vang cùng lúc. Đoán khoảng cách giữa chúng, từ quãng 2 thứ tới quãng 8.',
+        : tab.v === 'interval'
+          ? 'Hai nốt ngẫu nhiên — đi lên, đi xuống hoặc vang cùng lúc. Đoán khoảng cách giữa chúng, từ quãng 2 thứ tới quãng 8.'
+          : '540 bài đọc cromatic nhảy quãng, không giọng — ngang các bài xướng âm bậc đại học. Đọc, rồi bấm nghe để biết mình đúng chưa.',
     [tab.v],
   )
 
@@ -555,11 +558,14 @@ export function SolfegePage() {
             <button role="tab" aria-selected={tab.v === 'interval'} className={clsx(tab.v === 'interval' && 'is-on')} onClick={() => setTab({ v: 'interval' })}>
               <span aria-hidden>♫</span> Đoán quãng
             </button>
+            <button role="tab" aria-selected={tab.v === 'sing'} className={clsx(tab.v === 'sing' && 'is-on')} onClick={() => setTab({ v: 'sing' })}>
+              <span aria-hidden>𝄞</span> Xướng âm
+            </button>
           </div>
         </header>
-        {tab.v === 'note' ? <NoteTrainer key="note" names={n} stats={stats} setStats={setStats} /> : <IntervalTrainer key="interval" names={n} stats={stats} setStats={setStats} />}
+        {tab.v === 'note' ? <NoteTrainer key="note" names={n} stats={stats} setStats={setStats} /> : tab.v === 'interval' ? <IntervalTrainer key="interval" names={n} stats={stats} setStats={setStats} /> : <SightSinging key="sing" />}
         <p className="sf-foot">
-          Phím tắt: <kbd>Space</kbd> nghe lại · <kbd>Enter</kbd> câu tiếp. Điểm lưu trên máy này. Âm thanh tổng hợp trong trình duyệt — trên điện thoại, tắt chế độ im lặng để nghe.
+          {tab.v !== 'sing' && <>Phím tắt: <kbd>Space</kbd> nghe lại · <kbd>Enter</kbd> câu tiếp. </>}Điểm và tiến độ lưu trên máy này. Âm thanh tổng hợp trong trình duyệt — trên điện thoại, tắt chế độ im lặng để nghe.
         </p>
       </div>
     </ScrollArea>
