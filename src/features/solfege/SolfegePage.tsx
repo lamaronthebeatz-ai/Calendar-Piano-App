@@ -570,7 +570,7 @@ export function SolfegePage() {
         </header>
         {tab.v === 'note' ? <NoteTrainer key="note" names={n} stats={stats} setStats={setStats} /> : tab.v === 'interval' ? <IntervalTrainer key="interval" names={n} stats={stats} setStats={setStats} /> : <SightSinging key="sing" />}
         <p className="sf-foot">
-          {tab.v !== 'sing' && <>Phím tắt: <kbd>Space</kbd> nghe lại · <kbd>Enter</kbd> câu tiếp. </>}Điểm và tiến độ lưu trên máy này. Âm thanh tổng hợp trong trình duyệt — trên điện thoại, tắt chế độ im lặng để nghe.
+          {tab.v !== 'sing' && <>Phím tắt: <kbd>Space</kbd> nghe lại · <kbd>Enter</kbd> câu tiếp. </>}Điểm và tiến độ lưu trên máy này. Tiếng piano: Salamander Grand Piano V3 (Alexander Holm, CC BY 3.0), chỉnh về La 4 = 440 Hz; lần đầu cần mạng để tải mẫu, sau đó dùng được khi offline. Trên điện thoại, tắt chế độ im lặng để nghe.
         </p>
       </div>
     </ScrollArea>
