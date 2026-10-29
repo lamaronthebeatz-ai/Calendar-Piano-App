@@ -251,7 +251,7 @@ function NoteTrainer({ names, stats, setStats }: { names: Names; stats: Stats; s
   const play = useCallback(
     (n: Note) => {
       if (s.mode === 'read') return
-      if (s.reference) playSequence([{ at: 0, dur: 0.7, midis: [60] }, { at: 0.9, dur: 1.4, midis: [n.midi] }], {})
+      if (s.reference) playSequence([{ at: 0, dur: 0.7, midis: [69] }, { at: 0.9, dur: 1.4, midis: [n.midi] }], {})
       else playNow([n.midi], 1.4)
     },
     [s.mode, s.reference],
@@ -314,7 +314,7 @@ function NoteTrainer({ names, stats, setStats }: { names: Names; stats: Stats; s
         <Seg label="Chế độ" value={s.mode} onChange={(mode) => update({ mode })} options={[['both', 'Nghe + nhìn'], ['listen', 'Chỉ nghe'], ['read', 'Chỉ nhìn']]} />
         <Seg label="Khoá" value={s.clef} onChange={(clef) => update({ clef })} options={[['treble', 'Khoá Sol'], ['bass', 'Khoá Fa']]} />
         <label className="sf-check"><input type="checkbox" checked={s.accidentals} onChange={(e) => update({ accidentals: e.target.checked })} /> Có phím đen</label>
-        {s.mode !== 'read' && <label className="sf-check"><input type="checkbox" checked={s.reference} onChange={(e) => setS({ ...s, reference: e.target.checked })} /> Nghe Đô làm mốc</label>}
+        {s.mode !== 'read' && <label className="sf-check"><input type="checkbox" checked={s.reference} onChange={(e) => setS({ ...s, reference: e.target.checked })} /> Nghe La 4 làm mốc</label>}
         <label className="sf-check"><input type="checkbox" checked={s.auto} onChange={(e) => setS({ ...s, auto: e.target.checked })} /> Tự sang câu mới</label>
       </div>
 

@@ -203,8 +203,8 @@ export function SightSinging() {
               {playing === 'back' ? '■ Dừng' : '◀ Nghe ngược'}
             </button>
           )}
-          <button className="sf-btn" onClick={() => playNow([60], 1.4)} title="Nốt Đô 4 làm mốc (bỏ qua nếu luyện cao độ tuyệt đối)">
-            Đô mốc
+          <button className="sf-btn" onClick={() => playNow([69], 1.4)} title="Nốt La 4 (440 Hz) làm mốc (bỏ qua nếu luyện cao độ tuyệt đối)">
+            La mốc
           </button>
         </div>
         <div className="sf-actions">
