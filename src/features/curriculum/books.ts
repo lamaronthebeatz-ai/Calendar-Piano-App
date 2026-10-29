@@ -16,6 +16,7 @@ import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
 import jazzCover4 from '../../assets/covers/jazz-theory-book-4.webp'
 import jazzLicksCover from '../../assets/covers/jazz-licks.webp'
+import xuongAmCover from '../../assets/covers/xuong-am-cromatic.webp'
 import type { Book } from './types'
 
 /** The Jazz Theory Book, all thirteen parts in order; the four volumes below are slices of it. */
@@ -1504,6 +1505,87 @@ Mỗi lick được soạn từ các thủ pháp của lý thuyết — âm giai
         { slug: 'jazz-licks-dieu-thuc', focus: 'Dorian, ngũ cung, quãng 4.' },
         { slug: 'jazz-licks-the-lick', focus: '"The Lick" và cách dùng nó.' },
       ], exercises: ['Ngẫu hứng hai chorus trên một vamp Dm7 (16 ô), dùng xen lick ngũ cung và lick quãng 4.', 'Chèn The Lick vào một solo ii – V – I của bạn ở ba vị trí khác nhau trong ô nhịp.'] },
+    ],
+  },
+  {
+    id: 'xuong-am-cromatic',
+    title: 'Xướng Âm Cromatic và Chuyển Giọng',
+    volume: 'Giáo trình xướng âm một bè',
+    subtitle: 'Các dạng trưởng – thứ, nốt biến âm, nốt cromatic và âm giai cromatic, chuyển giọng sang giọng gần và giọng xa, chuyển giọng trùng âm — 45 bài, 270 giai điệu mới có nút nghe, theo phương pháp giáo trình xướng âm nhạc viện của A. Agazhanov.',
+    author: 'Lamar',
+    audience: 'Sinh viên cao đẳng – đại học nhạc viện; đã đọc vững điều thức diatonic',
+    hue: 222,
+    glyph: '𝄞',
+    coverImage: xuongAmCover,
+    preface: `
+Cuốn này là giáo trình **xướng âm một bè** cho chặng thứ hai của môn học: sau khi đã đọc vững các giọng diatonic, người học bước vào **cromatic** và **chuyển giọng**. Kế hoạch năm chương, thứ tự các bài và phương pháp đi theo giáo trình xướng âm của Artyom Agazhanov ở Nhạc viện Moskva (*Курс сольфеджио*, tập 2: *Хроматизм и модуляция*, 1973) — một trong các giáo trình chuẩn của hệ thống nhạc viện Nga – Xô viết. Sách gốc còn bản quyền nên ở đây **không chép một bài nào**: lời giảng là lời của người biên soạn, mọi bài tập và 270 giai điệu đều soạn mới và được kiểm tra theo luật hoà âm, giai điệu ghi ở bài lộ trình.
+
+## Cách học
+1. Đọc [[xuong-am-cromatic-lo-trinh|bài lộ trình]]: phương pháp, kế hoạch chín bước đọc một giai điệu, cách dùng các nút nghe.
+2. Mỗi bài: làm kỹ các bài tập I – VI trước (âm giai, câu mẫu, bậc, quãng, mô tiến, hợp âm), rồi mới đọc giai điệu.
+3. Luôn đánh nhịp khi hát; hát xong cả bài mới bấm *Nghe* để kiểm tra.
+4. Các giai điệu khoá Fa dành cho giọng nam; giọng nữ có thể đọc chúng cao một quãng 8.
+`,
+    parts: [
+      { title: 'Mở đầu', intro: 'Phương pháp của giáo trình, cách dùng sách và phần chuẩn bị: câu mẫu, cách hát nốt cromatic, cách đổi điểm tựa của tai khi chuyển giọng.', chapters: [
+        { slug: 'xuong-am-cromatic-lo-trinh', focus: 'Phương pháp, kế hoạch đọc một giai điệu, cấu trúc bài.' },
+        { slug: 'xuong-am-cromatic-phan-chuan-bi', focus: 'Câu mẫu, cromatic, chuyển giọng.' },
+      ], exercises: ['Học thuộc các câu mẫu của Đô trưởng và Đô thứ, hát ở hai quãng 8.', 'Hát bất kỳ bậc nào của Đô trưởng mà thầy cô (hay bạn học) chỉ định, chỉ sau khi nghe hợp âm chủ.'] },
+      { title: 'Các dạng trưởng và thứ', intro: 'Ba dạng trưởng (tự nhiên, hoà thanh, giai điệu), ba dạng thứ và hai giọng cùng tên. Sáu bài đầu chỉ dùng Đô trưởng và Đô thứ; sáu bài sau lặp lại cùng nội dung ở nhiều giọng, xếp đồng tâm quanh Đô.', chapters: [
+        { slug: 'xuong-am-cromatic-1-1', focus: 'Trưởng hoà thanh; Bậc VI hạ; 2 tăng và 7 giảm.' },
+        { slug: 'xuong-am-cromatic-1-2', focus: 'Trưởng giai điệu; Bậc VI và VII hạ; 4 tăng và 5 giảm.' },
+        { slug: 'xuong-am-cromatic-1-3', focus: 'Ba dạng trưởng nối tiếp nhau; 5 tăng và 4 giảm; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-1-4', focus: 'Thứ tự nhiên, hoà thanh, giai điệu; Các quãng tăng, giảm của thứ hoà thanh; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-1-5', focus: 'Đặt cạnh nhau hai giọng cùng tên: Đô trưởng – Đô thứ; Giải quyết quãng tăng, giảm trong hai giọng cùng tên; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-1-6', focus: 'Đặt cạnh nhau hai giọng cùng tên: Đô thứ – Đô trưởng; Giải quyết quãng 2 trưởng và 7 thứ; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-1-7', focus: 'Trưởng hoà thanh; Nhiều giọng khác nhau; 2 tăng và 7 giảm.' },
+        { slug: 'xuong-am-cromatic-1-8', focus: 'Trưởng giai điệu; Nhiều giọng khác nhau; 4 tăng và 5 giảm.' },
+        { slug: 'xuong-am-cromatic-1-9', focus: 'Ba dạng trưởng nối tiếp nhau; Nhiều giọng khác nhau; 5 tăng và 4 giảm.' },
+        { slug: 'xuong-am-cromatic-1-10', focus: 'Ba dạng thứ; Nhiều giọng khác nhau; Các quãng tăng, giảm của thứ hoà thanh.' },
+        { slug: 'xuong-am-cromatic-1-11', focus: 'Trưởng và thứ cùng tên; Nhiều giọng khác nhau; Quãng tăng, giảm trong hai giọng cùng tên.' },
+        { slug: 'xuong-am-cromatic-1-12', focus: 'Thứ và trưởng cùng tên; Nhiều giọng khác nhau; Giải quyết 2 trưởng và 7 thứ.' },
+      ], exercises: ['Hát âm giai của ba dạng trưởng và ba dạng thứ ở Đô, rồi ở Mi♭ và La, mỗi âm giai một tiết tấu khác.', 'Hát lần lượt mọi quãng tăng, giảm của trưởng hoà thanh và thứ hoà thanh ở một giọng bất kỳ, kèm giải quyết.', 'Chọn một giai điệu của chương, chuyển sang giọng cùng tên và hát lại.'] },
+      { title: 'Nốt biến âm kề các bậc chính', intro: 'Bậc IV nâng và hạ, bậc II nâng và hạ trong trưởng và thứ: mỗi nốt biến âm được nghe như nốt dẫn tới bậc chính bên cạnh, xuất hiện trong hợp âm át của át, hợp âm Napoli và các hợp âm bảy giảm.', chapters: [
+        { slug: 'xuong-am-cromatic-2-1', focus: 'Bậc IV nâng của trưởng tự nhiên; 4 tăng và 5 giảm; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-2-2', focus: 'Bậc IV nâng trong trưởng hoà thanh và giai điệu; 6 tăng và 3 giảm; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-2-3', focus: 'Bậc IV nâng trong giọng thứ; 2 tăng và 7 giảm; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-2-4', focus: 'Bậc IV nâng trong hai giọng cùng tên; Mô tiến; Chuỗi hợp âm.' },
+        { slug: 'xuong-am-cromatic-2-5', focus: 'Bậc IV hạ trong giọng thứ; Mô tiến; Chuỗi hợp âm.' },
+        { slug: 'xuong-am-cromatic-2-6', focus: 'Bậc II nâng và bậc II hạ trong trưởng tự nhiên; 2 tăng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-2-7', focus: 'Bậc II nâng và bậc II hạ trong trưởng hoà thanh và giai điệu; 4 tăng kép và 5 giảm kép; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-2-8', focus: 'Bậc II hạ trong giọng thứ; 3 giảm và 6 tăng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-2-9', focus: 'Bậc II hạ trong hai giọng cùng tên; Ôn các quãng biến âm; Mô tiến.' },
+      ], exercises: ['Hát âm giai trưởng có bậc IV nâng khi đi lên, bậc II hạ khi đi xuống; làm lại ở giọng thứ.', 'Hát các cặp quãng 6 tăng – 3 giảm, 4 tăng kép – 5 giảm kép ở ba giọng, kèm giải quyết.', 'Viết một câu 4 ô có hợp âm át của át, hát rồi kiểm tra bằng đàn.'] },
+      { title: 'Nốt cromatic, âm giai cromatic', intro: 'Nốt thêu và nốt lướt cromatic quanh mọi bậc; âm giai cromatic trưởng và thứ ghi theo quy tắc; quãng và hợp âm bảy hát từ một nốt cho trước.', chapters: [
+        { slug: 'xuong-am-cromatic-3-1', focus: 'Nốt thêu cromatic quanh bậc I, III, V của trưởng và thứ; 2 thứ và 2 trưởng từ một nốt cho trước; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-3-2', focus: 'Nốt thêu cromatic quanh mọi bậc của trưởng và thứ; 3 thứ và 3 trưởng từ một nốt cho trước; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-3-3', focus: 'Nốt lướt cromatic; bốn nốt dưới của âm giai cromatic trưởng và thứ; 4 đúng và 5 đúng từ một nốt cho trước; Hợp âm bảy bậc II từ một nốt cho trước.' },
+        { slug: 'xuong-am-cromatic-3-4', focus: 'Nốt lướt cromatic; bốn nốt trên của âm giai cromatic trưởng và thứ; 6 thứ và 6 trưởng từ một nốt cho trước; Hợp âm bảy át từ một nốt cho trước.' },
+        { slug: 'xuong-am-cromatic-3-5', focus: 'Âm giai cromatic đầy đủ của trưởng và thứ; 7 thứ và 7 trưởng từ một nốt cho trước; Mô tiến.' },
+      ], exercises: ['Hát âm giai cromatic của Đô trưởng và Đô thứ, đi lên và đi xuống, dừng ở các bậc diatonic.', 'Từ một nốt bất kỳ, hát mọi quãng từ 2 thứ tới 7 trưởng, đi lên và đi xuống.', 'Hát hợp âm bảy át, bảy giảm, bảy nửa giảm và bảy thứ từ cùng một nốt.'] },
+      { title: 'Chuyển giọng sang giọng họ hàng bậc một', intro: 'Từ một giọng trưởng sang năm giọng họ hàng diatonic và giọng hạ át thứ; từ một giọng thứ sang năm giọng họ hàng và giọng át trưởng — qua hợp âm chung, có câu mẫu để đổi điểm tựa của tai.', chapters: [
+        { slug: 'xuong-am-cromatic-4-1', focus: 'Chuyển giọng sang giọng bậc VI (giọng thứ song song); Mô tiến; Chuỗi hợp âm chuyển giọng.' },
+        { slug: 'xuong-am-cromatic-4-2', focus: 'Chuyển giọng sang giọng bậc V (giọng át); Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-3', focus: 'Chuyển giọng sang giọng bậc III; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-4', focus: 'Chuyển giọng sang giọng bậc IV (giọng hạ át); Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-5', focus: 'Chuyển giọng sang giọng bậc II; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-6', focus: 'Chuyển giọng sang giọng bậc IV thứ (hạ át thứ); Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-7', focus: 'Chuyển giọng sang giọng bậc III (giọng trưởng song song); Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-8', focus: 'Chuyển giọng sang giọng bậc V thứ; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-9', focus: 'Chuyển giọng sang giọng bậc VII; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-10', focus: 'Chuyển giọng sang giọng bậc IV; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-11', focus: 'Chuyển giọng sang giọng bậc VI; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-4-12', focus: 'Chuyển giọng sang giọng bậc V trưởng; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+      ], exercises: ['Với Đô trưởng và La thứ: liệt kê các giọng họ hàng bậc một, và cho mỗi giọng một hợp âm chung.', 'Hát chuỗi hợp âm chuyển giọng từ Đô trưởng sang từng giọng họ hàng và trở về.', 'Đọc lại ba giai điệu của chương, mỗi bài ở một giọng mới.'] },
+      { title: 'Chuyển giọng sang các giọng xa', intro: 'Chuyển điều thức, chuyển giọng dần dần qua giọng trung gian (khác hai, ba dấu hoá trở lên), chuyển giọng qua các hợp âm mượn (♭II, ♭VI, hạ át thứ) và chuyển giọng trùng âm qua hợp âm bảy giảm, hợp âm bảy át – sáu tăng và hợp âm ba tăng.', chapters: [
+        { slug: 'xuong-am-cromatic-5-1', focus: 'Chuyển điều thức sang giọng trưởng cùng tên; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-5-2', focus: 'Chuyển điều thức sang giọng thứ cùng tên; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-5-3', focus: 'Chuyển giọng sang giọng khác hai dấu hoá; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-5-4', focus: 'Chuyển giọng sang giọng khác ba dấu hoá trở lên; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-5-5', focus: 'Chuyển giọng qua hợp âm bậc II hạ, bậc VI hạ và giọng thứ cùng tên; Chuỗi hợp âm chuyển giọng; Mô tiến.' },
+        { slug: 'xuong-am-cromatic-5-6', focus: 'Chuyển giọng trùng âm qua hợp âm bảy giảm; Hát hợp âm bảy giảm và giải quyết; Chuỗi hợp âm.' },
+        { slug: 'xuong-am-cromatic-5-7', focus: 'Chuyển giọng trùng âm qua hợp âm bảy át và hợp âm ba tăng; Các cách giải quyết hợp âm bảy át và hợp âm ba tăng; Chuỗi hợp âm.' },
+      ], exercises: ['Viết lại hợp âm bảy giảm Si – Rê – Fa – La♭ theo bốn giọng thứ khác nhau và giải quyết mỗi cách.', 'Hát hợp âm bảy át Sol – Si – Rê – Fa giải quyết về Đô, rồi viết lại thành hợp âm sáu tăng và giải quyết về Si.', 'Tìm một đường đi từ Đô trưởng tới Mi trưởng qua hai giọng trung gian; hát chuỗi hợp âm của đường đi ấy.'] },
     ],
   },
 ]

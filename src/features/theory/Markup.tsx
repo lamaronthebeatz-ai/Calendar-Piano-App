@@ -11,6 +11,8 @@ import { Bars, CircleOfFifths, RangeChart, FormChart, GrandStaff, Keyboard, Pitc
 import { figureId, parseKey } from './notation'
 import { leadImage, type LeadImage } from './wikiImage'
 import { YouTubeSearch, YouTubeVideo } from './YouTube'
+import { playNow, playSequence } from './audio'
+import { PitchKeyboard } from '../solfege/PitchKeyboard'
 
 /**
  * Inline markup: **bold**, *italic* and [[slug|label]] wiki links (unknown targets render as red links, like Wikipedia).
@@ -259,6 +261,81 @@ function LickSheet({ id, caption }: { id: string; caption: string }) {
   )
 }
 
+/** Playback of the sight-singing book's blocks: quarter-note tempo, the tonic triad, and [midis, sixteenths] steps. */
+type SolfPlay = { q: number; k: number[]; n: [number[], number][] }
+let solfData: Promise<Record<string, SolfPlay>> | undefined
+const loadSolf = () => (solfData ??= import('./xuong-am-play.json').then((m) => m.default as unknown as Record<string, SolfPlay>))
+
+/**
+ * `::solf id | caption` — an exercise of the sight-singing book: the engraving, then buttons to tune in (the tonic
+ * chord), hear the first note, hear the whole exercise to check, and open a keyboard to find a pitch.
+ */
+function SolfBlock({ id, caption }: { id: string; caption: string }) {
+  const systems = useSheet('ex', id)
+  const printing = useContext(PrintContext)
+  const [playing, setPlaying] = useState(false)
+  const [keys, setKeys] = useState(false)
+  const stop = useRef<() => void>(() => {})
+  useEffect(() => () => stop.current(), [])
+  const withData = (f: (p: SolfPlay) => void) => {
+    loadSolf().then((d) => d[id] && f(d[id]))
+  }
+  const tune = () =>
+    withData((p) => {
+      stop.current()
+      setPlaying(false)
+      stop.current = playSequence([{ at: 0, dur: 1.4, midis: p.k }, { at: 1.5, dur: 1.2, midis: [p.k[0]] }], {})
+    })
+  const first = () =>
+    withData((p) => {
+      stop.current()
+      setPlaying(false)
+      playNow(p.n[0][0], 1.6)
+    })
+  const play = () => {
+    if (playing) {
+      stop.current()
+      setPlaying(false)
+      return
+    }
+    withData((p) => {
+      const s16 = 15 / p.q
+      let t = 0
+      const steps = p.n.map(([midis, d]) => {
+        const step = { at: t, dur: d * s16 * 0.92, midis }
+        t += d * s16
+        return step
+      })
+      setPlaying(true)
+      stop.current = playSequence(steps, { onEnd: () => setPlaying(false) })
+    })
+  }
+  if (!systems.length) return null
+  const [head, ...rest] = caption.split(' · ')
+  return (
+    <div className="solf">
+      {caption && (
+        <p className="solf-cap">
+          <b>{head}</b>
+          {rest.length > 0 && <span>{rest.join(' · ')}</span>}
+        </p>
+      )}
+      {systems.map(([f, w, h]) => (
+        <img key={f} src={sheetUrl('ex', f)} width={w} height={h} style={{ maxWidth: '100%', width: w }} alt={caption || id} loading={printing ? 'eager' : 'lazy'} className="scan-img sheet-img solf-img" />
+      ))}
+      {!printing && (
+        <div className="solf-bar">
+          <button onClick={tune} title="Hợp âm chủ rồi âm chủ: lên dây giọng trước khi hát">♪ Lên dây</button>
+          <button onClick={first} title="Hát nốt đầu trước, rồi bấm để kiểm tra">Nốt đầu</button>
+          <button onClick={play} className={playing ? 'is-on' : undefined}>{playing ? '■ Dừng' : '▶ Nghe'}</button>
+          <button onClick={() => setKeys((k) => !k)} className={keys ? 'is-on' : undefined} aria-expanded={keys}>Đàn</button>
+        </div>
+      )}
+      {keys && !printing && <PitchKeyboard lo={48} hi={84} />}
+    </div>
+  )
+}
+
 /**
  * `::sheet id | title` — a whole piece, system after system, so the page breaks fall between systems. In the
  * reader, a piece that does not fit in the rest of the page it would start on begins on a new page: a marker
@@ -359,6 +436,8 @@ function Directive({ line }: { line: string }) {
       return <SheetExample id={args[0]} caption={caption} />
     case 'licks':
       return <LickSheet id={args[0]} caption={caption} />
+    case 'solf':
+      return <SolfBlock id={args[0]} caption={caption} />
     case 'sheet':
       return <SheetScore id={args[0]} title={caption} />
     case 'scan':

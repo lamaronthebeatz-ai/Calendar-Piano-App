@@ -1007,6 +1007,20 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 .lick-n { flex-shrink: 0; min-width: 2.4em; font-family: var(--font-display); font-weight: 600; font-size: 1.15em; color: var(--color-gold); }
 .lick-img { display: block; height: auto; }
 .sheet-page-break { height: 0; break-before: column; }
+/* ::solf — exercises of the sight-singing book, with their play buttons */
+.solf { margin: 0.6em 0 1.3em; break-inside: avoid; }
+.solf-cap { display: flex; flex-wrap: wrap; gap: 0.15em 0.6em; align-items: baseline; margin: 0 0 0.3em; font-size: 0.8em; line-height: 1.4; color: var(--color-ink-muted); text-align: left; text-indent: 0; hyphens: none; }
+.solf-cap b { font-family: var(--font-display); font-weight: 600; font-size: 1.12em; color: var(--color-gold); }
+.solf-img { display: block; height: auto; margin: 0 0 0.2em; }
+.solf-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.35em; }
+.solf-bar button {
+  padding: 4px 11px; border-radius: 999px; border: 1px solid var(--color-border); background: transparent;
+  font: 500 12px/1.4 var(--font-sans, inherit); color: var(--color-ink-muted); cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.solf-bar button:hover { border-color: var(--color-gold); color: var(--color-ink); }
+.solf-bar button.is-on { background: var(--color-gold); border-color: var(--color-gold); color: #1a1408; }
+.solf .sf-kb-wrap { margin-top: 10px; padding-top: 10px; }
+@media print { .solf-bar { display: none; } }
 .book-credits-list { list-style: none; padding: 0; margin-top: 1.2em; }
 .book-credits-list li { break-inside: avoid; margin-bottom: 0.9em; font-size: 0.92em; }
 .book-credits-list li p { margin: 0; text-indent: 0; }

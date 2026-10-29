@@ -18,6 +18,13 @@ const TOPICS: { id: string; short: string; title: string; blurb: string; ids: st
     ids: ['nhac-ly-co-ban-1', 'nhac-ly-co-ban-2'],
   },
   {
+    id: 'xuong-am',
+    short: 'Xướng âm',
+    title: 'Xướng âm và luyện tai',
+    blurb: 'Giáo trình xướng âm một bè bậc đại học: cromatic và chuyển giọng, mỗi bài có nút nghe để tự kiểm tra.',
+    ids: ['xuong-am-cromatic'],
+  },
+  {
     id: 'hoa-am',
     short: 'Hoà âm – Đối âm',
     title: 'Hoà âm, đối âm và hình thức',
