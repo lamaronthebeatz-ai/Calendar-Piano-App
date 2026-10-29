@@ -1509,8 +1509,8 @@ Mỗi lick được soạn từ các thủ pháp của lý thuyết — âm giai
   },
   {
     id: 'xuong-am-cromatic',
-    title: 'Xướng Âm Cromatic và Chuyển Giọng',
-    volume: 'Giáo trình xướng âm một bè',
+    title: 'Solfège',
+    volume: 'Xướng âm cromatic và chuyển giọng',
     subtitle: 'Các dạng trưởng – thứ, nốt biến âm, nốt cromatic và âm giai cromatic, chuyển giọng sang giọng gần và giọng xa, chuyển giọng trùng âm — 45 bài, 270 giai điệu mới có nút nghe, theo phương pháp giáo trình xướng âm nhạc viện của A. Agazhanov.',
     author: 'Lamar',
     audience: 'Sinh viên cao đẳng – đại học nhạc viện; đã đọc vững điều thức diatonic',
