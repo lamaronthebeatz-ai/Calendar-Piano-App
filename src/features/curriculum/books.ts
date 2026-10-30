@@ -11,6 +11,7 @@ import schopenhauerCover from '../../assets/covers/schopenhauer.webp'
 import allenCover from '../../assets/covers/quan-ly-nghe-si.webp'
 import vietnamCover from '../../assets/covers/am-nhac-viet-nam.webp'
 import labelCover from '../../assets/covers/co-may-hang-dia.webp'
+import borgCover from '../../assets/covers/marketing-diy.webp'
 import jazzCover1 from '../../assets/covers/jazz-theory-book-1.webp'
 import jazzCover2 from '../../assets/covers/jazz-theory-book-2.webp'
 import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
@@ -1231,6 +1232,63 @@ Mỗi bài tóm lược một nhóm chương bằng lời của bộ bài, tríc
       { title: 'Khi hãng trưởng thành', intro: 'Sau mười bản phát hành: kế toán bản quyền, hàng lưu niệm, sample, tuyển tập, xuất bản, quản lý nghệ sĩ, biểu diễn.', chapters: [
         { slug: 'hang-dia-truong-thanh', focus: 'Kỳ kế toán; đĩa than; công thức ứng trước tuyển tập; giao từng bài; hợp đồng quản lý; đêm của hãng.' },
       ], exercises: ['Chọn hai nguồn thu mới cho một hãng đã có mười bản phát hành và tính thử chi phí, lợi nhuận.'] },
+    ],
+  },
+  {
+    id: 'marketing-diy',
+    title: 'Marketing Âm Nhạc Cho Nghệ Sĩ Tự Lập',
+    volume: 'Bobby Borg',
+    subtitle: 'Đọc theo Music Marketing for the DIY Musician (bản 2, 2020): tự lập một kế hoạch marketing trọn vẹn với ít tiền — tầm nhìn, SWOT, người hâm mộ, đối thủ, thử nghiệm, mục tiêu SMART; thương hiệu, sản phẩm, giá; phân phối; báo chí, mạng xã hội, truyền miệng, radio, tài trợ, bán hàng; đo lường, lập kế hoạch, thực thi, tương lai.',
+    author: 'Lamar',
+    audience: 'Ca sĩ, ban nhạc, nhạc sĩ, nhà sản xuất, nhạc công tự do và giáo viên âm nhạc muốn tự quảng bá công việc của mình một cách có phương pháp',
+    hue: 12,
+    glyph: '✦',
+    coverImage: borgCover,
+    preface: `
+**Bobby Borg**, tay trống từng thu âm và lưu diễn với hãng lớn rồi trở thành giảng viên kinh doanh âm nhạc ở Musicians Institute và UCLA Extension, viết *Music Marketing for the DIY Musician* (Rowman & Littlefield, bản 2 năm 2020). Sách coi nghệ sĩ là một công ty và người hâm mộ là khách hàng, rồi dắt người đọc qua toàn bộ quy trình marketing mà các doanh nghiệp vẫn dùng — nhưng với ngân sách gần như bằng không — để cuối cùng có trong tay một bản kế hoạch marketing một năm.
+
+## Tinh thần của sách
+Mỗi bài tóm lược một chương bằng lời của bộ bài, trích ngắn kèm số trang bản in; sách còn bản quyền nên không dịch nguyên văn và không in lại các mẫu điền, bốn bản kế hoạch mẫu hay danh mục dịch vụ. Sách viết cho nước Mỹ năm 2019 – 2020: bộ bài giữ các ví dụ như mốc tham khảo, ghi chú chỗ Việt Nam khác, ghi rõ dịch vụ đã đóng hay đổi tên, câu trích và số liệu chưa đối chiếu được, và chỗ người được phỏng vấn đang giới thiệu sản phẩm của chính họ. Không phần nào thay cho tư vấn pháp lý hay thuế.
+
+## Cách đọc
+1. Đọc theo thứ tự: mỗi chương là một bước, và mỗi bài kết bằng **Câu hỏi và bài tập** — làm hết là bạn đã có đủ phần của bản kế hoạch.
+2. Nếu đang cần quảng bá gấp một buổi diễn hay một đĩa đơn: đọc Bài 1, rồi Phần IV (quảng bá), rồi quay lại từ đầu.
+3. Giáo viên âm nhạc: các ví dụ về học trò ở Bài 18 (tỷ lệ giữ chân), Bài 16 (tài trợ cho giáo viên đông học trò) và Bài 17 (lời chào 20 giây) dùng được ngay.
+`,
+    parts: [
+      { title: 'Nghiên cứu và mục tiêu', intro: 'Trước khi quảng bá bất cứ thứ gì: biết mình muốn đi đâu, thị trường cần gì, người hâm mộ là ai, đối thủ làm gì, sản phẩm có được đón nhận không, và năm nay phải đạt con số nào.', chapters: [
+        { slug: 'marketing-diy-lo-trinh', focus: 'Sách nói gì, đọc thế nào, những giới hạn cần biết.' },
+        { slug: 'marketing-diy-tong-quan', focus: 'Quy trình mười bước; hỗn hợp marketing; sáu điều cần nhớ.' },
+        { slug: 'marketing-diy-tam-nhin', focus: 'Tầm nhìn bảy – mười năm; loại "công ty"; câu hỏi của Levitt.' },
+        { slug: 'marketing-diy-swot', focus: 'Cơ hội, điểm mạnh, điểm yếu, đe doạ; đoạn kết luận.' },
+        { slug: 'marketing-diy-khach-hang', focus: 'Năm chiều phân khúc; chân dung người hâm mộ; tìm dữ liệu rẻ.' },
+        { slug: 'marketing-diy-doi-thu', focus: 'Năm lực lượng của Porter; ma trận đối thủ; lợi thế cạnh tranh.' },
+        { slug: 'marketing-diy-thu-nghiem', focus: 'Bản mẫu rẻ; khảo sát, quan sát, nhóm tập trung; chất lượng dữ liệu.' },
+        { slug: 'marketing-diy-muc-tieu-smart', focus: 'Cụ thể, đo được, khả thi, có lộ trình, một năm.' },
+      ], exercises: ['Viết đoạn tầm nhìn, bảng SWOT, chân dung người hâm mộ và đoạn mục tiêu SMART cho chính bạn — bốn trang đầu của bản kế hoạch.', 'Lập ma trận cho hai đối thủ địa phương và hai đối thủ toàn quốc.'] },
+      { title: 'Thương hiệu, sản phẩm, giá', intro: 'Biến nghiên cứu thành một thương hiệu nhất quán, những sản phẩm hoàn chỉnh kèm chính sách chăm sóc người hâm mộ, và một chiến lược giá vừa có lãi vừa hợp hình ảnh.', chapters: [
+        { slug: 'marketing-diy-thuong-hieu-cong-ty', focus: 'Tên, logo, khẩu hiệu, cá tính, cách cư xử, định vị.' },
+        { slug: 'marketing-diy-thuong-hieu-san-pham', focus: 'Ba cấu trúc thương hiệu; thiết kế; định dạng phát hành; định vị sản phẩm.' },
+        { slug: 'marketing-diy-san-pham', focus: 'Tự làm hay thuê ngoài; đĩa vật lý; chăm sóc người hâm mộ; tính năng – lợi ích.' },
+        { slug: 'marketing-diy-dinh-gia', focus: 'Mười lăm cách định giá; biên lợi nhuận, ROI, hoà vốn.' },
+      ], exercises: ['Lập bảng tính năng – lợi ích cho ba sản phẩm và tính điểm hoà vốn cho sản phẩm đắt nhất.'] },
+      { title: 'Phân phối', intro: 'Đưa buổi diễn, bản thu, hàng lưu niệm và bài hát tới đúng nơi người hâm mộ — và những người dùng nhạc — tìm thấy.', chapters: [
+        { slug: 'marketing-diy-phan-phoi-bieu-dien-va-ban-thu', focus: 'Đặt show; quầy hàng; nhà phân phối số; mười bước vào playlist.' },
+        { slug: 'marketing-diy-phan-phoi-hang-luu-niem-va-cap-phep', focus: 'Hàng lưu niệm; mười đường cấp phép cho phim, truyền hình, trò chơi.' },
+      ], exercises: ['Lập danh sách mười địa điểm diễn (ba địa điểm "thay thế") và ba cơ hội cấp phép ở nơi bạn sống.'] },
+      { title: 'Quảng bá', intro: 'Bốn chương về cách nói cho người ta biết: báo chí và quảng cáo; internet, truyền miệng, du kích; radio và tài trợ; tiếp thị trực tiếp, bán hàng trực diện, khuyến mãi — phối thành một chương trình tích hợp.', chapters: [
+        { slug: 'marketing-diy-bao-chi-va-quang-cao', focus: 'AIDA; hồ sơ báo chí; thông cáo; khủng hoảng; quảng cáo trả tiền.' },
+        { slug: 'marketing-diy-internet-truyen-mieng-du-kich', focus: 'Website, mạng xã hội, email, video; truyền miệng; du kích.' },
+        { slug: 'marketing-diy-radio-va-tai-tro', focus: 'Sáu loại đài; theo sau; tài trợ, endorsement, bảy bước tiếp cận.' },
+        { slug: 'marketing-diy-ban-hang-truc-tiep-va-khuyen-mai', focus: 'Thư, điện thoại, tin nhắn; lời chào 20 giây; Cialdini; khuyến mãi.' },
+      ], exercises: ['Lập kế hoạch quảng bá sáu tuần cho một buổi diễn, dùng ít nhất bốn hình thức trong bốn chương.'] },
+      { title: 'Đo lường, lập kế hoạch, thực thi', intro: 'Đo xem cái gì có tác dụng, đóng mọi phần thành bản kế hoạch có chi phí và lịch, rồi làm cho xong — và tiếp tục học.', chapters: [
+        { slug: 'marketing-diy-do-luong', focus: 'Mã theo dõi; phiếu hiệu quả quảng bá; bảng chỉ số.' },
+        { slug: 'marketing-diy-lap-ke-hoach', focus: 'Tóm tắt điều hành; bảng phân bổ chi phí; lịch theo quý; bốn kế hoạch mẫu.' },
+        { slug: 'marketing-diy-thuc-thi', focus: 'Có tiền trước; tự làm; chọn người; giao việc; biết ơn.' },
+        { slug: 'marketing-diy-hoc-tiep', focus: 'Hai mươi cách giữ "cơ bắp marketing".' },
+        { slug: 'marketing-diy-tuong-lai', focus: 'Playlist, dữ liệu, AI, cấp phép — dự báo tới 2025 và đối chiếu thực tế.' },
+      ], exercises: ['Ghép mọi phần đã viết thành bản kế hoạch marketing một năm, có tóm tắt điều hành, bảng chi phí và lịch theo quý.'] },
     ],
   },
   {

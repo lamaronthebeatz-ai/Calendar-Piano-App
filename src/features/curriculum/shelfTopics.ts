@@ -70,8 +70,8 @@ const TOPICS: { id: string; short: string; title: string; blurb: string; ids: st
     id: 'nghe-nhac',
     short: 'Nghề âm nhạc',
     title: 'Nghề âm nhạc',
-    blurb: 'Quản lý nghệ sĩ, hợp đồng, bản quyền, phát hành và vận hành một hãng đĩa độc lập.',
-    ids: ['quan-ly-nghe-si', 'co-may-hang-dia'],
+    blurb: 'Quản lý nghệ sĩ, hợp đồng, bản quyền, phát hành, vận hành một hãng đĩa độc lập, và tự lập kế hoạch marketing cho chính mình.',
+    ids: ['quan-ly-nghe-si', 'co-may-hang-dia', 'marketing-diy'],
   },
 ]
 
