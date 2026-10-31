@@ -37,6 +37,7 @@ const JAZZ_PARTS: Book['parts'] = [
     { slug: 'hop-am-mo-rong', focus: 'Nốt 9, 11, 13 và nốt căng biến hoá.' },
     { slug: 'hop-am-6-va-add', focus: 'Hợp âm 6, add, sus.' },
     { slug: 'hop-am-gach-cheo', focus: 'Hợp âm gạch chéo, đọc như hợp âm gì.' },
+    { slug: 'slash-chord-tren-mot-not-bass', focus: 'Mười hai hợp âm ba trưởng trên một nốt bass và âm giai của từng cái.' },
     { slug: 'hop-am-chong', focus: 'Hợp âm chồng (polychord).' },
   ], exercises: ['Viết và chơi Cmaj9, Dm11, G13, G7♭9, C6/9, Fsus4 ở hai giọng khác.', 'Đọc lead sheet một bài chuẩn: gọi tên từng nốt của mỗi hợp âm.'] },
   { title: 'Kết và tiến trình', intro: 'ii – V – I là đơn vị cơ bản của hoà âm jazz; turnaround, line cliché và cách đọc cả một tiến trình.', chapters: [
@@ -46,13 +47,17 @@ const JAZZ_PARTS: Book['parts'] = [
     { slug: 'vong-hop-am', focus: 'Các vòng hợp âm thường gặp.' },
     { slug: 'phan-tich-tien-trinh-jazz', focus: 'Đọc tiến trình theo giọng tạm và chuỗi ii – V.' },
   ], exercises: ['Chơi ii – V – I trưởng và thứ ở cả 12 giọng theo vòng quãng 5.', 'Phân tích "Autumn Leaves": đánh dấu mọi cặp ii – V và giọng tạm của chúng.'] },
-  { title: 'Hợp âm và âm giai', intro: 'Mỗi hợp âm ứng với một âm giai: điệu thức, thứ giai điệu, hợp âm át biến hoá, bebop, đối xứng.', chapters: [
+  { title: 'Hợp âm và âm giai', intro: 'Mỗi hợp âm ứng với một âm giai: điệu thức, thứ giai điệu, hợp âm át biến hoá, sus, bebop, đối xứng, ngũ cung, hoà thanh — và cách tập âm giai cho thành nhạc.', chapters: [
     { slug: 'he-thong-hop-am-am-giai', focus: 'Nguyên lý hợp âm – âm giai.' },
     { slug: 'dieu-thuc-thu-giai-dieu', focus: 'Các điệu thức của thứ giai điệu.' },
     { slug: 'hop-am-at-bien-hoa', focus: 'Hợp âm át biến hoá và âm giai altered.' },
+    { slug: 'hop-am-sus-jazz', focus: 'Hợp âm sus, sus♭9: một ii – V gói trong một hợp âm.' },
     { slug: 'am-giai-bebop', focus: 'Thêm nốt lướt để nốt hợp âm rơi đúng phách.' },
     { slug: 'am-giai-doi-xung-jazz', focus: 'Âm giai giảm, toàn cung, tăng.' },
     { slug: 'am-giai-bat-cung', focus: 'Âm giai bát cung trong jazz.' },
+    { slug: 'luyen-am-giai-jazz', focus: 'Đổi chiều trên mọi nốt, chia nhóm: âm giai thành bể nốt.' },
+    { slug: 'ngu-cung-trong-jazz', focus: 'Ngũ cung I, IV, V trên ii – V – I; ngũ cung II, IV, tritone; In-sen.' },
+    { slug: 'am-giai-hoa-thanh-va-am-giai-bon-not', focus: 'Thứ và trưởng hoà thanh; âm giai bốn nốt thứ sáu.' },
   ], exercises: ['Với mỗi hợp âm của ii – V – I ở Đô, chơi âm giai tương ứng lên xuống hai quãng tám.', 'Trên G7alt, chơi âm giai altered rồi âm giai giảm nửa cung – cung; nghe sự khác nhau.'] },
   { title: 'Xếp hợp âm và thế bấm', intro: 'Từ thế bấm 3 nốt tới thế bấm của các bậc thầy: shell, không gốc, mở, drop 2, So What, khối, upper structure, quãng 4, âm cụm — và cách chọn, ghép chúng cho cả một bài.', chapters: [
     { slug: 'the-bam-ba-not', focus: 'Thế bấm 3 nốt và 4 nốt.' },
@@ -75,19 +80,24 @@ const JAZZ_PARTS: Book['parts'] = [
     { slug: 'dem-cho-ca-si', focus: 'Đệm cho giọng hát: hoà âm, nhịp, dạo đầu, kết.' },
     { slug: 'jam-session', focus: 'Quy ước và bài thường gặp ở jam session.' },
     { slug: 'dem-bossa-nova', focus: 'Tay trái và nhịp bossa nova.' },
+    { slug: 'clave-va-latin-jazz', focus: 'Clave 3 – 2 và 2 – 3, montuno, tumbao.' },
   ], exercises: ['Chơi bass đi một chorus blues ở Fa, tay phải comping thưa.', 'Đệm "Blue Bossa" với tay trái bossa nova và thế bấm không gốc.'] },
   { title: 'Thay thế và tái hoà âm', intro: 'Thay một hợp âm, chèn hợp âm lướt, tái hoà âm cả bài — kể cả gospel, đổi nhịp, đổi thể loại và constant structures.', chapters: [
     { slug: 'thay-the-hop-am', focus: 'Các phép thay thế hợp âm.' },
     { slug: 'thay-the-tritone', focus: 'Thay thế tritone, backdoor.' },
     { slug: 'hop-am-luot-jazz', focus: 'Hợp âm lướt cromatic, giảm, song song.' },
     { slug: 'tai-hoa-am', focus: 'Quy trình tái hoà âm một bài.' },
+    { slug: 'tai-hoa-am-nang-cao', focus: 'Đối hướng, song song, đường bass, hợp âm trên mọi nốt bass, pedal.' },
+    { slug: 'ket-lua-va-tiep-can-hop-am', focus: 'Kết lừa, tiếp cận cromatic, hợp âm giảm bốn hướng.' },
     { slug: 'tai-hoa-am-gospel', focus: 'Tái hoà âm gospel "Amazing Grace".' },
     { slug: 'doi-nhip-the-loai-jazz', focus: 'Đổi nhịp, đổi thể loại, chơi tự do thời gian.' },
     { slug: 'constant-structures', focus: 'Chuỗi hợp âm cùng loại, gốc không theo chức năng.' },
   ], exercises: ['Tái hoà âm 8 ô đầu "Fly Me to the Moon" bằng ít nhất ba phép thay thế khác nhau.', 'Chơi một bài pop quen thuộc theo kiểu gospel, rồi theo kiểu bossa nova.'] },
-  { title: 'Hình thức và tiến trình chuẩn', intro: 'Ca khúc 32 ô AABA, rhythm changes và vòng Coltrane — ba khung mọi người chơi jazz phải thuộc.', chapters: [
+  { title: 'Hình thức và tiến trình chuẩn', intro: 'Ca khúc 32 ô AABA, rhythm changes và vòng Coltrane — ba khung mọi người chơi jazz phải thuộc — cùng cách đọc lead sheet, thuộc bài, và những phần thêm của một bài: head, dạo đầu, đoạn kết.', chapters: [
     { slug: 'hinh-thuc-ca-khuc-32', focus: 'Hình thức AABA và ABAC.' },
+    { slug: 'doc-lead-sheet-va-thuoc-bai', focus: 'Soát ký hiệu hợp âm; thuộc hình thức, giai điệu, hợp âm.' },
     { slug: 'rhythm-changes', focus: 'Tiến trình "I Got Rhythm" và các biến thể.' },
+    { slug: 'head-dao-dau-va-ket', focus: 'Head (contrafact), dạo đầu, đoạn chuyển, đoạn kết, shout chorus.' },
     { slug: 'vong-coltrane', focus: 'Vòng Coltrane: đổi giọng theo quãng 3 trưởng.' },
     { slug: 'phan-tich-giant-steps', focus: 'Phân tích hoà âm "Giant Steps".' },
   ], exercises: ['Chơi rhythm changes ở Si giáng: phần A bằng thế bấm không gốc, phần B (bridge) bằng shell.', 'Chơi vòng Coltrane chậm qua ba chủ âm B – G – E♭.'] },
@@ -100,6 +110,7 @@ const JAZZ_PARTS: Book['parts'] = [
   ], exercises: ['Chơi một đường nốt dẫn hướng (3 – 7) qua cả "Autumn Leaves", mỗi hợp âm một nốt.', 'Trang trí giai điệu một bài chuẩn: giữ nguyên nốt chính, thêm nốt tiếp cận.'] },
   { title: 'Ngẫu hứng — phương pháp', intro: 'Dọc và ngang, tiết tấu và câu nhạc, lick và trích dẫn, mẫu lặp chu kỳ, chơi ngoài giọng.', chapters: [
     { slug: 'ngau-hung-doc-ngang', focus: 'Ngẫu hứng theo hợp âm và theo giọng.' },
+    { slug: 'tu-am-giai-den-am-nhac', focus: 'Mô tiến, bài tập âm giai liên tục, hợp âm ba, nốt chung.' },
     { slug: 'tiet-tau-ngau-hung-jazz', focus: 'Tiết tấu, câu nhạc, dịch chuyển.' },
     { slug: 'lick-va-trich-dan', focus: 'Học lick; câu sáo; trích dẫn.' },
     { slug: 'mau-lap-chu-ky', focus: 'Lặp câu và dịch theo quãng cố định.' },
@@ -119,6 +130,7 @@ const JAZZ_PARTS: Book['parts'] = [
     { slug: 'jazz-dieu-thuc', focus: 'Jazz điệu thức: So What, thế bấm quãng 4.' },
     { slug: 'hoa-am-dieu-thuc', focus: 'Hoà âm điệu thức.' },
     { slug: 'post-bop-free-jazz', focus: 'Post-bop và free jazz.' },
+    { slug: 'nhung-ngo-nhan-trong-ly-thuyet-jazz', focus: 'Bốn ngộ nhận, giới hạn của lý thuyết, nốt sai, phê bình.' },
   ], exercises: ['Viết một bài 32 ô AABA của riêng bạn, có ít nhất hai cặp ii – V và một phép thay thế.', 'Ngẫu hứng trên một vamp Dorian Rê (như "So What") bằng thế bấm quãng 4.'] },
 ]
 
@@ -153,6 +165,8 @@ const jazzPreface = (n: number, scope: string) => `
 
 ## Tinh thần của sách
 Jazz là **một ngôn ngữ**, và bộ sách dạy nó như dạy một ngôn ngữ: trước hết là cảm giác nhịp (swing) và giọng nói gốc (blues); rồi đến "từ vựng" (hợp âm, âm giai), "ngữ pháp" (ii – V – I, tiến trình, hình thức); rồi cách "phát âm" trên đàn (thế bấm, tay trái, đệm); cuối cùng là **nói tự do** — thay thế, tái hoà âm, ngẫu hứng và sáng tác. Mỗi khái niệm đều phải được **nghe**, **chơi ở cả 12 giọng** và **tìm lại trong bản thu thật**.
+
+Bộ sách được bổ sung sau khi đọc *The Jazz Theory Book* của Mark Levine (Sher Music, 1995): những chương ngũ cung, luyện âm giai, slash chord, hợp âm sus, âm giai hoà thanh, tái hoà âm nâng cao, latin jazz, lead sheet, head và những ngộ nhận trong lý thuyết jazz đọc theo các chủ đề của Levine, viết bằng lời của bộ sách, ví dụ nhạc do Lamar soạn và khắc lại; Levine được ghi ở tài liệu tham khảo của từng chương.
 
 ## Cách đọc
 1. Đọc các tập theo thứ tự; trong mỗi tập, mỗi phần dùng kiến thức của các phần trước.
