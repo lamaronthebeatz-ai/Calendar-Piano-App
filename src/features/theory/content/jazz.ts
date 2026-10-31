@@ -15,49 +15,57 @@ export const jazz: Article[] = [
       ['Wikipedia — Chord-scale system', 'https://en.wikipedia.org/wiki/Chord-scale_system'],
     ],
     body: `
-Hoà âm jazz dựa trên nền [[he-thong-hoa-am-co-dien|hoà âm chức năng cổ điển]] — vẫn có chủ, tiền át, át, vẫn có [[hop-am-at-phu|át phụ]] và [[chuyen-giong|chuyển giọng]] — nhưng **cách nghĩ và cách dùng** khác ở nhiều điểm. Đây là Phần III của [[giao-trinh-hoa-am]].
+Nếu bạn đã học hoà âm cổ điển, tin vui là: bạn không phải học lại từ đầu. Hoà âm jazz đứng trên nền [[he-thong-hoa-am-co-dien|hoà âm chức năng]] — vẫn có chủ, tiền át, át, vẫn có [[hop-am-at-phu|át phụ]] và [[chuyen-giong|chuyển giọng]]. Tin không vui lắm là: **cách nghĩ và cách dùng** thì khác ở gần như mọi chỗ. Bài này cho bạn thấy khác ở đâu, rồi đưa bạn tấm bản đồ cho cả bộ sách. (Đây cũng là Phần III của [[giao-trinh-hoa-am]].)
 
-## Khác biệt với hoà âm cổ điển
+## Khác ở đâu
+Chơi một hợp âm Đô trưởng ba nốt, rồi chơi Cmaj9. Cái thứ nhất nghe như một bài thánh ca; cái thứ hai nghe như jazz. Toàn bộ bảng dưới đây là để giải thích vì sao.
+
+::grand E4+G4+C5/C3=C G4+B4+D5+E5/C3=Cmaj9 | Hợp âm ba Đô trưởng, rồi Cmaj9: cùng một chủ âm, hai thế giới
+
 | | Hoà âm cổ điển | Hoà âm jazz |
 |---|---|---|
 | Đơn vị cơ bản | [[hop-am-ba|Hợp âm ba]] | [[hop-am-bay|Hợp âm 7]]; hợp âm ba thường được thêm 6 hoặc 9 ([[hop-am-6-va-add]]) |
 | Nốt "lạ" | [[not-ngoai-hop-am|Nốt ngoài hợp âm]] phải giải quyết | **Nốt căng** 9, 11, 13 là một phần của hợp âm ([[hop-am-mo-rong]]) |
-| Ký hiệu | [[chuc-nang-hoa-am|Số La Mã]], [[bass-so|bè trầm có số]] | **Ký hiệu hợp âm** trên lead sheet — bản nhạc chỉ ghi giai điệu và hợp âm ([[ky-hieu-hop-am]]) |
+| Ký hiệu | [[chuc-nang-hoa-am|Số La Mã]], [[bass-so|bè trầm có số]] | **Ký hiệu hợp âm** trên lead sheet: bản nhạc chỉ ghi giai điệu và hợp âm ([[ky-hieu-hop-am]]) |
 | Kết điển hình | IV – V – I, ii6 – V – I | **[[ii-v-i|ii – V – I]]** |
 | [[luat-hoa-am-bon-be|Viết bè]] | Bốn bè [[dan-giong|SATB]] theo luật | **Xếp hợp âm** trên đàn ([[xep-hop-am]]) |
 | [[giai-dieu|Giai điệu]] trên hợp âm | Từ [[doi-am|đối âm]] và hoà âm | **Hợp âm – [[am-giai|âm giai]]** cho [[ngau-hung-piano|ngẫu hứng]] ([[he-thong-hop-am-am-giai]]) |
-| Thay đổi hợp âm | Do nhà soạn nhạc cố định | Người chơi **thay thế, tái hoà âm** khi biểu diễn ([[thay-the-hop-am]]) |
+| Ai quyết định hợp âm | Nhà soạn nhạc, cố định | Người chơi **thay thế, tái hoà âm** ngay khi biểu diễn ([[thay-the-hop-am]]) |
 | [[tiet-tau|Tiết tấu]] | Chia đều | [[swing]] |
 
-Một khác biệt quan trọng nữa đến từ **blues**: hợp âm 7 át có thể đóng vai **chủ** (I7) và không cần giải quyết (xem [[blues-12-nhip]], [[am-giai-blues]]).
+Còn một khác biệt nữa, đến từ **blues**: hợp âm 7 át có thể làm **chủ** (I7) và đứng yên đó cả buổi, chẳng cần giải quyết đi đâu (xem [[blues-12-nhip]], [[am-giai-blues]]). Giáo viên hoà âm cổ điển nào nghe cũng sẽ nhíu mày. Dân jazz thì gọi đó là nhà.
 
-## Lộ trình học trong mục này
-Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
-Điều kiện: đã học Chương 1–7 của [[giao-trinh-hoa-am]] (đặc biệt hợp âm 7, chức năng, át phụ, [[hop-am-muon|hợp âm mượn]]). Trình tự dưới đây do Lamar sắp xếp (cơ bản → hợp âm → tiến trình → âm giai → ngẫu hứng → thế bấm → tái hoà âm → jazz hiện đại).
+## Ba câu hỏi bạn sẽ hỏi suốt bộ sách
+Trước khi đi vào chi tiết, đây là ba thói quen sẽ giúp bạn hiểu hoà âm jazz có hệ thống. Tập chúng ngay từ bây giờ:
+1. **Đây là ii – V về đâu?** Nhìn mọi tiến trình như một chuỗi cặp ii – V dẫn tới những "[[bac-am-giai|chủ âm]] tạm thời". Một bài 32 ô với 40 hợp âm thường chỉ là năm sáu cặp ii – V nối nhau.
+2. **Nốt 3 và nốt 7 là gì?** Hai nốt này quyết định chất của hợp âm và nối hợp âm này sang hợp âm kia ([[not-dan-huong]]).
+3. **Mình thay được hợp âm này bằng gì?** Mọi hợp âm 7 át đều thay được ([[thay-the-tritone|tritone]], backdoor, [[hop-am-bay-giam|hợp âm 7 giảm]]…) — miễn giai điệu còn hợp với hợp âm mới.
+
+## Đi đường nào
+Muốn đặt tay lên phím chơi một bài jazz ngay hôm nay: đọc [[hoc-piano-jazz]] trước.
+
+Muốn học bài bản: bạn nên đã qua Chương 1 – 7 của [[giao-trinh-hoa-am]] (nhất là hợp âm 7, chức năng, át phụ, [[hop-am-muon|hợp âm mượn]]). Rồi đi theo thứ tự dưới đây, do Lamar sắp xếp: cảm nhận → hợp âm → tiến trình → âm giai → thế bấm → tái hoà âm → ngẫu hứng → jazz hiện đại.
 1. **Cảm nhận**: [[swing]]; bức tranh toàn cảnh: [[phong-cach-jazz]].
 2. **Blues**: [[blues-12-nhip]], [[am-giai-blues]].
-3. **Hợp âm jazz**: [[ky-hieu-hop-am]], [[hop-am-mo-rong]], [[hop-am-6-va-add]] (cả sus), [[hop-am-gach-cheo]], [[hop-am-chong]].
+3. **Hợp âm jazz**: [[ky-hieu-hop-am]], [[hop-am-mo-rong]], [[hop-am-6-va-add]], [[hop-am-gach-cheo]], [[slash-chord-tren-mot-not-bass]], [[hop-am-chong]].
 4. **Kết và tiến trình**: [[ii-v-i]] → [[turnaround-jazz]] → [[line-cliche]] → [[vong-hop-am]]; đọc tiến trình: [[phan-tich-tien-trinh-jazz]].
-5. **Âm giai cho hợp âm**: [[he-thong-hop-am-am-giai]] → [[dieu-thuc-thu-giai-dieu]] → [[hop-am-at-bien-hoa]] → [[am-giai-bebop]] → [[am-giai-doi-xung-jazz]] ([[am-giai-bat-cung]]).
+5. **Âm giai cho hợp âm**: [[he-thong-hop-am-am-giai]] → [[dieu-thuc-thu-giai-dieu]] → [[hop-am-at-bien-hoa]] → [[hop-am-sus-jazz]] → [[am-giai-bebop]] → [[am-giai-doi-xung-jazz]] ([[am-giai-bat-cung]]) → [[luyen-am-giai-jazz]] → [[ngu-cung-trong-jazz]] → [[am-giai-hoa-thanh-va-am-giai-bon-not]].
 6. **Xếp hợp âm**: [[the-bam-ba-not]] → [[xep-hop-am]] (shell, không gốc, drop 2) → [[the-bam-mo]] → [[quy-tac-xep-hop-am-jazz]] → [[the-bam-bac-thay-jazz]] → [[hop-am-so-what-barron]] → [[hop-am-khoi]] → [[upper-structure]] → [[hoa-am-quang-bon]] → [[am-cum|âm cụm]]; chọn và ghép thế bấm: [[ket-hop-the-bam]], [[chon-the-bam-jazz]].
-7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]]; ngoài jazz: [[dem-bossa-nova]], [[dem-rnb-neo-soul]].
+7. **Tay trái và đệm**: [[bass-di-jazz]], [[stride-piano]], [[dem-jazz]], [[dem-cho-ca-si]], [[jam-session]]; nhịp latin: [[dem-bossa-nova]], [[clave-va-latin-jazz]]; ngoài jazz: [[dem-rnb-neo-soul]].
 8. **Thay thế**: [[thay-the-hop-am]], [[thay-the-tritone]], [[hop-am-luot-jazz]].
-9. **Tái hoà âm**: [[tai-hoa-am]] (gồm cách làm bài "jazzy"), [[tai-hoa-am-gospel]], [[doi-nhip-the-loai-jazz|đổi nhịp, đổi thể loại, chơi tự do thời gian]], [[constant-structures]]; **sáng tác**: [[sang-tac-jazz]].
-10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[rhythm-changes]], [[vong-coltrane]] (phân tích: [[phan-tich-giant-steps]]).
+9. **Tái hoà âm**: [[tai-hoa-am]], [[tai-hoa-am-nang-cao]], [[ket-lua-va-tiep-can-hop-am]], [[tai-hoa-am-gospel]], [[doi-nhip-the-loai-jazz|đổi nhịp, đổi thể loại, chơi tự do thời gian]], [[constant-structures]]; **sáng tác**: [[sang-tac-jazz]].
+10. **[[hinh-thuc-am-nhac|Hình thức]] và tiến trình chuẩn**: [[hinh-thuc-ca-khuc-32]], [[doc-lead-sheet-va-thuoc-bai]], [[rhythm-changes]], [[head-dao-dau-va-ket]], [[vong-coltrane]] (phân tích: [[phan-tich-giant-steps]]).
 11. **Ngẫu hứng**:
    - Nền tảng: [[ngau-hung-jazz]] → [[not-dan-huong]] → [[trang-tri-giai-dieu-jazz]] → [[not-tiep-can-jazz]] → [[not-tranh-va-quang-nghich]].
-   - Phương pháp: [[ngau-hung-doc-ngang]] → [[tiet-tau-ngau-hung-jazz]] → [[lick-va-trich-dan]] → [[mau-lap-chu-ky]] → [[choi-ngoai-jazz]].
+   - Phương pháp: [[ngau-hung-doc-ngang]] → [[tu-am-giai-den-am-nhac]] → [[tiet-tau-ngau-hung-jazz]] → [[lick-va-trich-dan]] → [[mau-lap-chu-ky]] → [[choi-ngoai-jazz]].
    - Nâng cao: [[superimposition-jazz]] → [[sheets-of-sound]] → [[triad-pairs]] → [[ngau-hung-hop-am]].
    - Tổng hợp: [[xay-dung-bai-solo]] → [[phan-tich-solo-jazz]] → [[meo-ngau-hung-jazz]] (cả mục [[ngau-hung-ung-tac|ngẫu hứng]]).
-12. **Jazz hiện đại**: [[jazz-dieu-thuc]] ([[hoa-am-dieu-thuc]]) → [[post-bop-free-jazz]].
+12. **Jazz hiện đại**: [[jazz-dieu-thuc]] ([[hoa-am-dieu-thuc]]) → [[post-bop-free-jazz]] → [[nhung-ngo-nhan-trong-ly-thuyet-jazz]].
 13. **Ứng dụng đệm hát**: [[dem-hat-piano]].
 
-## Mẹo hiểu hoà âm jazz có hệ thống
-- Nhìn mọi tiến trình như **chuỗi các cặp ii – V** dẫn tới những "[[bac-am-giai|chủ âm]] tạm thời".
-- Với mỗi hợp âm, hỏi: **nốt 3 và 7 là gì?** — hai nốt này quyết định tính chất và nối các hợp âm với nhau (nốt dẫn hướng).
-- Mọi hợp âm 7 át đều có thể **thay thế** ([[quang|tritone]], backdoor, [[hop-am-bay-giam|hợp âm 7 giảm]]) — nhưng giai điệu phải hợp với hợp âm mới.
+Đừng đọc lướt rồi bỏ đàn đó. Mỗi bài chỉ thật sự thuộc về bạn khi bạn đã **chơi mọi ví dụ**, ở **ít nhất ba giọng**, và **nghe ra** nó trong một bản thu thật.
 
-**Công cụ của người chơi ban nhạc:** [[he-so-nashville-va-lead-sheet]] (bảng số, Real Book), [[hinh-thuc-ca-khuc-pho-thong]] (verse – chorus, AABA) và [[clave-tresillo-va-nhip-cong]] (tiết tấu Latin).
+**Công cụ của người chơi ban nhạc:** [[he-so-nashville-va-lead-sheet]] (bảng số, Real Book), [[hinh-thuc-ca-khuc-pho-thong]] (verse – chorus, AABA) và [[clave-tresillo-va-nhip-cong]] (tiết tấu latin).
 `,
   },  {
     slug: 'hoc-piano-jazz',
@@ -67,26 +75,41 @@ Muốn bắt tay vào chơi ngay một bài jazz: [[hoc-piano-jazz]].
     summary: 'Lộ trình thực hành của Lamar cho người bắt đầu chơi jazz: chọn một bài ballad chậm nhiều ii – V – I, học thật đơn giản (giai điệu + hợp âm 7), rồi thêm từng lớp — thế bấm, tay trái, tiết tấu, ngẫu hứng — mỗi lớp tập riêng trước khi ghép.',
     wiki: 'Jazz_piano',
     body: `
-Bài này là **lộ trình thực hành** (tay trên phím); lộ trình lý thuyết đầy đủ nằm ở [[hoa-am-jazz]].
+Bạn muốn chơi jazz, và muốn bắt đầu **hôm nay**, chứ không phải sau khi đọc xong ba trăm trang lý thuyết. Được thôi. Bài này là lộ trình **tay trên phím**; lộ trình lý thuyết đầy đủ để ở [[hoa-am-jazz]], bạn quay lại đó sau.
 
-## Kiến thức tối thiểu
+## Bạn cần biết tối thiểu gì
+Chỉ hai thứ:
 - Cấu trúc [[am-giai-truong|âm giai trưởng]].
-- Các [[hop-am-bay|hợp âm 7]] diatonic của một giọng và cách dựng từng loại (xem [[ky-hieu-hop-am]]).
+- Các [[hop-am-bay|hợp âm 7]] trong một giọng và cách dựng từng loại (xem [[ky-hieu-hop-am]]).
+
+Thử ngay: ở Đô trưởng, dựng hợp âm 7 trên mỗi bậc. Bạn sẽ được maj7 – m7 – m7 – maj7 – 7 – m7 – ø. Thuộc thứ tự đó ở vài giọng là đủ để bắt đầu.
+
+::staff treble C4+E4+G4+B4=Cmaj7 D4+F4+A4+C5=Dm7 E4+G4+B4+D5=Em7 F4+A4+C5+E5=Fmaj7 G4+B4+D5+F5=G7 A4+C5+E5+G5=Am7 B4+D5+F5+A5=Bø | Bảy hợp âm 7 của Đô trưởng — vốn liếng đủ cho bài jazz đầu tiên
 
 ## Chọn bài đầu tiên
-Một bài **ballad chậm, dễ nhớ, diatonic**, có **nhiều [[ii-v-i]]**. Gợi ý: "Fly Me to the Moon", "Autumn Leaves" (xem [[phan-tich-tien-trinh-jazz]]), "All the Things You Are", "Softly as in a Morning Sunrise".
+Chọn một bài **chậm, dễ nhớ, ít dấu hoá bất thường**, và có **thật nhiều [[ii-v-i]]**. Gợi ý: "Fly Me to the Moon", "Autumn Leaves" (đã phân tích ở [[phan-tich-tien-trinh-jazz]]), "All the Things You Are", "Softly as in a Morning Sunrise". Đừng chọn "Giant Steps" làm bài đầu tiên. Thật đấy.
 
-## Thêm từng lớp
-1. **Học bài thật đơn giản**: giai điệu tay phải + hợp âm 7 tay trái.
-2. **Thế bấm**: shell (nốt 3 + 7) → [[the-bam-ba-not]] → [[xep-hop-am|không gốc]] (3 – 5 – 7 – 9 cho [[hop-am-ba|hợp âm trưởng]] và thứ, 3 – 7 – 9 – 13 cho V7; phát triển trong thập niên 1950 với [[bill-evans|Bill Evans]], Wynton Kelly, Ahmad Jamal) → [[the-bam-mo]].
+## Thêm từng lớp, mỗi lần một lớp
+Sai lầm lớn nhất của người mới là muốn mọi thứ cùng lúc: thế bấm đẹp, bass đi, swing, ngẫu hứng. Kết quả là chẳng thứ gì ra hồn. Hãy chồng từng lớp:
+1. **Bài thật đơn giản**: giai điệu tay phải, hợp âm 7 thế gốc tay trái. Chơi tới khi không phải nghĩ.
+2. **Thế bấm**: shell (gốc + 3 hoặc 7) → [[the-bam-ba-not]] → [[xep-hop-am|không gốc]] (3 – 5 – 7 – 9 cho hợp âm trưởng và thứ, 3 – 7 – 9 – 13 cho V7; lối bấm phát triển trong thập niên 1950 với [[bill-evans|Bill Evans]], Wynton Kelly, Ahmad Jamal) → [[the-bam-mo]].
 3. **Tay trái**: [[bass-di-jazz|bass đi]], [[stride-piano|stride]].
-4. **Tiết tấu**: [[swing]], đệm Charleston ([[dem-jazz]]).
-5. **[[ngau-hung-piano|Ngẫu hứng]]** theo thang: rải hợp âm 7 → âm giai → nốt cromatic và [[choi-ngoai-jazz|side-slipping]] → toàn bộ cromatic; kết câu ở [[not-dan-huong|nốt dẫn hướng]] (xem [[xay-dung-bai-solo]]).
-Mỗi lớp **tập riêng** trước khi ghép với các lớp khác. Bản đồ khái niệm một trang (*Jazz Piano Roadmap*) tóm tắt: hình thức, tiết tấu, giai điệu, hoà âm và các thế bấm (khối, shell, không gốc, mở, quãng 4, [[jazz-dieu-thuc|So What]], [[upper-structure|upper structure]], [[hop-am-khoi|locked hands]]).
+4. **Tiết tấu**: [[swing]], hình đệm Charleston ([[dem-jazz]]).
+5. **[[ngau-hung-piano|Ngẫu hứng]]**, đi từ dễ đến khó: rải hợp âm 7 → âm giai → nốt cromatic và [[choi-ngoai-jazz|side-slipping]] → toàn bộ cromatic; kết câu ở [[not-dan-huong|nốt dẫn hướng]] (xem [[xay-dung-bai-solo]]).
+
+::grand F3+C4/D3=Dm7 F3+B3/G2=G7 E3+B3/C3=Cmaj7 | Lớp đầu tiên của thế bấm: shell gốc + 3 + 7 cho ii – V – I ở Đô. Ba nốt, mà đã nghe ra jazz
+
+Mỗi lớp **tập riêng** cho tới khi chắc, rồi mới ghép với lớp khác. Nghe thì chậm, nhưng đó là đường nhanh nhất.
 
 ## Thói quen luyện tập
-- Dùng [[kiem-soat-toc-do|máy đếm nhịp]], tập chậm; **20 phút mỗi ngày** tốt hơn 60 phút ba ngày một lần.
-- **[[ngau-hung-jazz|Chép solo]]** từ bản thu ([[phan-tich-solo-jazz]]) và **chơi cùng người khác** ([[jam-session]]).
+- Dùng [[kiem-soat-toc-do|máy đếm nhịp]], tập chậm. **Hai mươi phút mỗi ngày** tốt hơn một tiếng ba ngày một lần.
+- **Chép** solo từ bản thu ([[phan-tich-solo-jazz]]): không có cách nào học ngôn ngữ jazz nhanh hơn là bắt chước người nói giỏi nhất.
+- **Chơi với người khác** càng sớm càng tốt ([[jam-session]]). Bạn sẽ học trong một buổi điều mà một tháng tập một mình không dạy được.
+
+## Câu hỏi và bài tập
+1. Dựng bảy hợp âm 7 của Fa trưởng và Si giáng trưởng.
+2. Chọn bài đầu tiên của bạn; chơi lớp 1 (giai điệu + hợp âm thế gốc) trọn bài.
+3. Chuyển tay trái sang shell gốc + 3 + 7 cho cả bài.
 `,
   },
 
@@ -105,37 +128,46 @@ Mỗi lớp **tập riêng** trước khi ghép với các lớp khác. Bản đ
       ['Honing & de Haas (2008) — Swing once more (PDF)', 'https://mcg.uva.nl/mcg-2023/papers/honing-haas-2008.pdf'],
     ],
     body: `
-Trong jazz, hai [[truong-do|nốt móc đơn]] viết bằng nhau thường **không** được chơi bằng nhau: nốt đầu dài hơn, nốt sau ngắn hơn.
+Đây là bài khó nhất của cả bộ sách, và cũng ngắn nhất. Khó, vì swing không học được bằng mắt. Ngắn, vì những gì giấy mực nói được về swing chỉ có chừng này. Phần còn lại là **nghe**.
 
-| Cách viết | Cách chơi ([[nhip-do|nhịp độ]] vừa) |
-|---|---|
-| Hai móc đơn ♫ | Như [[lien-ba]]: nốt đen + móc đơn trong một nhóm liên ba (2 : 1) |
+## Hai móc đơn viết bằng nhau, chơi không bằng nhau
+Trong jazz, hai [[truong-do|nốt móc đơn]] viết bằng nhau thường **không** được chơi bằng nhau: nốt đầu dài hơn, nốt sau ngắn hơn. Đầu bản nhạc hay ghi "**Swing**" hoặc "**Swung 8ths**", đôi khi kèm công thức ♫ = ♩♪ trong một nhóm [[lien-ba]]. Ngược lại, "**Straight 8ths**" nghĩa là chơi đều.
 
-Đầu bản nhạc thường ghi "**Swing**" hoặc "**Swung 8ths**" kèm công thức ♫ = ♩♪ (liên ba). Ngược lại, "**Straight 8ths**" nghĩa là chơi đều.
 ::rhythm 4/4 e-e e-e e-e e-e // | Cách viết: các cặp móc đơn bằng nhau
-::rhythm 4/4 3[q-e] 3[q-e] 3[q-e] 3[q-e] // | Cách chơi swing ở nhịp độ vừa: đen + móc đơn trong nhóm liên ba (2 : 1)
+::rhythm 4/4 3[q-e] 3[q-e] 3[q-e] 3[q-e] // | Cách chơi gần đúng ở nhịp độ vừa: đen + móc đơn trong nhóm liên ba (2 : 1)
 
-## Tỉ lệ thay đổi theo nhịp độ
-- Chậm: swing đậm, gần 2 : 1 hoặc hơn.
+Bấm nghe hai dòng trên vài lần. Dòng thứ hai mới chỉ là **xấp xỉ** của swing, nhưng là chỗ bắt đầu tốt.
+
+## Tỉ lệ không cố định
+Nhiều sách nói swing là tỉ lệ liên ba 2 : 1. Thực tế phức tạp hơn:
+- Chậm: swing đậm, dài – ngắn rõ, có khi hơn 2 : 1.
 - Nhanh: swing nhẹ dần, gần như đều.
 
-Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2002) trên tiếng [[bo-go-dan-nhac|cymbal]] ride của các tay [[trong-jazz|trống jazz]] nổi tiếng (Tony Williams, Jack DeJohnette, Jeff Watts…) cho thấy tỉ lệ swing **thay đổi rất nhiều theo nhịp độ**: ở nhịp độ nhanh gần **1 : 1** (đều), ở nhịp độ chậm tăng dần đến gần **3,5 : 1**. Kết quả này **không khớp** với quan niệm phổ biến rằng swing luôn bằng tỉ lệ liên ba 2 : 1. Ký hiệu liên ba chỉ là **quy ước gần đúng**; swing thật phải học bằng **tai**, qua việc nghe và chơi theo bản thu.
+Nghiên cứu đo đạc của **Friberg và Sundström** (*Music Perception*, 2002) trên tiếng [[bo-go-dan-nhac|cymbal]] ride của các tay [[trong-jazz|trống jazz]] nổi tiếng (Tony Williams, Jack DeJohnette, Jeff Watts…) cho thấy tỉ lệ swing **thay đổi rất nhiều theo nhịp độ**: ở nhịp độ nhanh gần **1 : 1**, ở nhịp độ chậm tăng dần tới gần **3,5 : 1**. Nghĩa là: ký hiệu liên ba chỉ là quy ước. Swing thật phải học bằng **tai**, bằng cách nghe và chơi theo bản thu.
 
-## Trọng âm
-- Trọng âm rơi vào **phách 2 và 4** (backbeat) — ngược với nhạc cổ điển nhấn phách 1 và 3 (xem [[so-chi-nhip]]).
-- Nốt móc đơn rơi vào phần nhẹ của phách ("&") thường được nhấn, tạo [[dao-phach]].
+## Phách 2 và 4
+Nhạc cổ điển nhấn phách 1 và 3 (xem [[so-chi-nhip]]). Jazz nhấn **phách 2 và 4** — tiếng hi-hat của tay trống đóng lại đúng hai phách đó. Nếu bạn vỗ tay theo một bản jazz ở phách 1 và 3, người trong quán sẽ biết ngay bạn mới tới.
 
-**Shuffle** là swing với cảm giác liên ba rõ và nặng, thường gặp trong [[blues-12-nhip]].
+Thêm nữa: nốt móc đơn rơi vào phần nhẹ của phách ("và") thường được **nhấn nhẹ** và hơi tách, tạo cảm giác [[dao-phach|đảo phách]] liên tục. Đó là một nửa bí mật của câu bebop "lướt".
 
-## Luyện swing trên piano
-1. Bật máy đếm nhịp ở **phách 2 và 4** (thay vì 1 và 3) — nghe nó như tiếng hi-hat của tay trống.
-2. Chơi [[am-giai|âm giai]] bằng móc đơn swing, nhấn nhẹ nốt "&" (nốt ngắn).
-3. Chơi theo bản thu ở nhiều nhịp độ khác nhau và để ý tỉ lệ dài – ngắn thay đổi.
-4. Tay trái đệm [[hop-am-ba|hợp âm]] ngắn kiểu "Charleston" (phách 1 và "& của 2") để cảm nhận [[dao-phach]].
-::rhythm 4/4 q. e rh // | Mẫu Charleston: phách 1 và "&" của phách 2
-Lý thuyết hoà âm đi kèm: [[hoa-am-jazz]].
+**Shuffle** là swing với cảm giác liên ba rõ và nặng, hay gặp trong [[blues-12-nhip]].
 
-Các hình đệm Charleston và "đẩy" khi đệm: [[dem-jazz]].
+## Tập swing trên piano
+1. Bật máy đếm nhịp ở **phách 2 và 4** (đặt máy đếm ở nửa nhịp độ, coi mỗi tiếng là phách 2 và 4). Lúc đầu sẽ thấy lạ; một tuần sau bạn sẽ không chịu được tiếng đếm ở phách 1 và 3 nữa.
+2. Chơi [[am-giai|âm giai]] bằng móc đơn swing, nhấn nhẹ nốt "và".
+3. Chơi theo bản thu ở nhiều nhịp độ, để ý tỉ lệ dài – ngắn đổi theo.
+4. Tay trái đệm hợp âm ngắn theo hình **Charleston** (phách 1 và "và" của phách 2) để cảm nhận đảo phách.
+
+::rhythm 4/4 q. e rh // | Hình Charleston: phách 1 và "và" của phách 2
+
+Một mẹo nữa: **hát** câu bạn định chơi trước khi chơi, bằng âm "doo – ba – doo – ba". Câu hát mà swing thì câu đàn sẽ swing theo. Câu hát không swing thì đừng mong ngón tay cứu bạn.
+
+Lý thuyết hoà âm đi kèm: [[hoa-am-jazz]]. Các hình đệm Charleston và "đẩy" khi đệm: [[dem-jazz]].
+
+## Câu hỏi và bài tập
+1. Chơi âm giai Đô trưởng hai quãng tám bằng móc đơn swing với máy đếm ở phách 2 và 4, ở ba nhịp độ: 80, 140, 200.
+2. Nghe một bản thu ballad và một bản thu nhanh; mô tả khác biệt về độ dài – ngắn của móc đơn.
+3. Đệm tay trái hình Charleston qua một chorus blues.
 `,
   },
   {
@@ -147,28 +179,78 @@ Các hình đệm Charleston và "đẩy" khi đệm: [[dem-jazz]].
     summary: 'Khung hoà âm 12 ô nhịp dùng các hợp âm I, IV, V — nền tảng của blues, rock and roll và jazz.',
     wiki: 'Twelve-bar_blues',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — The Memphis Blues', 'https://en.wikipedia.org/wiki/The_Memphis_Blues'],
       ['American Songwriter — Behind the song: "St. Louis Blues"', 'https://americansongwriter.com/behind-the-song-st-louis-blues/'],
       ['St. Olaf College — W. C. Handy and the blues', 'https://pages.stolaf.edu/americanmusic/author/findle1/'],
     ],
     body: `
-Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, ở giọng Đô:
+Lý thuyết cổ điển giải thích blues không giỏi lắm. Thử nghĩ xem: hợp âm chủ của blues là một hợp âm **7 át**. Âm giai blues thì chẳng giống âm giai phương Tây nào: hai quãng 3 thứ, ba nửa cung liền nhau. Vậy mà không nguồn nào quan trọng với jazz bằng blues. Nó có truyền thống riêng, nhưng cũng là **phần lớn nhất** của truyền thống jazz.
+
+Một điều nữa trước khi vào chuyện hợp âm: bài có chữ "blues" trong tên chưa chắc đã là blues ("Limehouse Blues", "Bye Bye Blues" là bài hay nhưng không phải blues). Phần lớn blues dài 12 ô, nhưng có blues dài hơn, ngắn hơn, và có bài 12 ô không phải blues. Vì blues còn là một **âm thanh, một cảm giác, một thái độ** — thứ không chép lên giấy được. Nếu bạn chưa quen blues, nghe một đĩa của B. B. King trước khi đọc tiếp.
+
+## Blues ba hợp âm
+Có cả tỉ bộ "hợp âm blues". Nhưng có **một** bộ ba hợp âm được mọi người công nhận, gần như không đổi từ thuở đầu của jazz tới giờ. Mỗi ô là một [[so-chi-nhip|ô nhịp]] 4/4, ở giọng Đô:
+
 | Ô 1–4 | Ô 5–8 | Ô 9–12 |
 |---|---|---|
 | C7 · C7 · C7 · C7 | F7 · F7 · C7 · C7 | G7 · F7 · C7 · G7 |
+
 ::form C7:4 F7:2 C7:2 G7:1 F7:1 C7:1 G7:1 | Vòng blues 12 ô ở Đô: số dưới mỗi khối là số ô
 
-Ô 12 dùng G7 (**turnaround**) để quay về đầu vòng. Phiên bản "quick change" đổi ô 2 thành F7.
 ::staff treble C4+E4+G4+Bb4=C7 F4+A4+C5+Eb5=F7 G4+B4+D5+F5=G7 | Ba hợp âm 7 át của blues ở Đô: C7 (I7), F7 (IV7), G7 (V7)
 
-## Đặc trưng
-- Cả ba [[hop-am-ba|hợp âm]] đều là [[hop-am-bay|hợp âm 7 át]] — điều "phạm luật" theo [[he-thong-hoa-am-co-dien|hoà âm cổ điển]] nhưng tạo nên màu blues.
-- [[giai-dieu|Giai điệu]] và ngẫu hứng dùng [[am-giai-blues]].
-- Nhịp **swing**: cặp móc đơn được chơi dài – ngắn (gần với [[lien-ba]] 2+1).
-- Lời thường theo cấu trúc **AAB**: câu 1 nêu ý, câu 2 lặp lại, câu 3 đáp.
+Cả ba đều là hợp âm 7 át — "phạm luật" theo [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], nhưng đó chính là màu blues. Ô 12 dùng G7 để quay về đầu vòng (một [[turnaround-jazz|turnaround]] nhỏ). "Blue Monk" và "Misterioso" của Monk là blues ba hợp âm.
+
+Thập niên 1930, khung này đổi chút ít: thêm IV ở **ô 2** (kiểu "quick change": C7 – F7 – C7 – C7) và V ở ô 12.
+
+## Blues bebop
+Thời bebop, dân jazz nhồi thêm hợp âm vào cùng mười hai ô đó. Một phiên bản hay gặp:
+
+| Ô | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| Hợp âm | C7 | F7 | C7 | C♯m7 F♯7 | F7 | Fm7 B♭7 |
+| **Ô** | **7** | **8** | **9** | **10** | **11** | **12** |
+| Hợp âm | Em7 A7 | E♭m7 A♭7 | Dm7 | G7 | C7 A7 | Dm7 G7 |
+
+Để ý:
+- **Ô 4**: C♯m7 – F♯7 là [[thay-the-tritone|thay thế tritone]] của ii – V về F (F♯7 thay cho C7, kèm hợp âm ii của nó).
+- **Ô 6 – 10**: một chuỗi **ii – V đi xuống cromatic**: Fm7 – B♭7, Em7 – A7, E♭m7 – A♭7, Dm7 – G7.
+- **Ô 9 – 11**: ii – V – I (Dm7 – G7 – C7) thay cho V – IV – I.
+- **Ô 11 – 12**: turnaround I – VI – ii – V.
+
+Còn nhiều biến thể nữa: Cmaj7 – Dm7 – Em7 – E♭m7 ở ô 7 – 8, hay turnaround Tadd Dameron (Cmaj7 – E♭7 – A♭maj7 – D♭7) ở hai ô cuối.
+
+## Vậy chơi bản nào?
+Tất cả. Dân jazz ngày nay **trộn tự do** mọi phiên bản, đổi ngay giữa chorus: bốn ô đầu kiểu 1930, bốn ô giữa kiểu ba hợp âm, bốn ô cuối kiểu bebop. Khi solo, cứ làm theo tai, trí và hồn bạn. Khi đệm, việc của bạn là **nghe** người solo và đi theo.
+
+Học thế nào? Bắt đầu đơn giản, với blues ba hợp âm. Thêm từng hợp âm, từng phép thay thế mới **khi bạn đã nghe ra nó** và thấy sẵn sàng chơi nó.
+
+## Các loại blues đặc biệt
+Tất cả đều là con cháu của blues ba hợp âm:
+- **Blues thứ.** Hợp âm i và iv là hợp âm thứ (ghi Cm, Fm thay vì Cm7 để bạn được chọn Cm6, Cm(maj7)…). Chỗ thú vị nhất là ô 9 – 10: thay cho V – IV, blues thứ đi **♭VI7 – V7** về i (A♭7 – G7 – Cm). Ví dụ: "Mr. P.C." và "Equinox" của Coltrane.
+
+| Ô 1–4 | Ô 5–8 | Ô 9–12 |
+|---|---|---|
+| Cm · Cm · Cm · Cm | Fm · Fm · Cm · Cm | A♭7 · G7 · Cm · G7 |
+
+- **Blues valse** dài **24 ô** (gấp đôi), nên có chỗ cho hoà âm lạ hơn: "All Blues" (Miles Davis), "Footprints" (Wayne Shorter), "Bluesette" (Toots Thielemans).
+- **Blues có đoạn giữa**: đặt blues vào khung AABA — mỗi đoạn A là một blues 12 ô, đoạn B tám ô — thành 44 ô. "Locomotion" của Coltrane là ví dụ, với đoạn giữa biến tấu từ đoạn giữa "I Got Rhythm" ([[rhythm-changes]]).
+- **Blues đi xuống** (thường gọi "Bird blues"): "Blues For Alice" của Charlie Parker mở đầu bằng Fmaj7 thay vì F7, rồi gốc hợp âm đi xuống dần qua một chuỗi ii – V:
+
+| Ô 1–4 | Ô 5–8 | Ô 9–12 |
+|---|---|---|
+| Fmaj7 · Eø A7 · Dm7 G7 · Cm7 F7 | B♭7 · B♭m7 E♭7 · Am7 D7 · A♭m7 D♭7 | Gm7 · C7 · F7 D7 · Gm7 C7 |
+
+- **Blues với hợp âm sus**: Coltrane đưa hợp âm sus vào blues với "Mr. Day" (xem [[hop-am-sus-jazz]]).
+
+## Giai điệu, nhịp, lời
+- Giai điệu và ngẫu hứng dùng [[am-giai-blues]] — nhưng mọi âm giai bạn học trong bộ sách đều chơi được trên blues.
+- Nhịp [[swing]]; blues chậm thường **shuffle** (liên ba nặng).
+- Lời thường theo cấu trúc **AAB**: câu 1 nêu ý, câu 2 lặp lại, câu 3 đáp. Ba câu, mỗi câu bốn ô — đúng khung 12 ô.
 
 ## Bass boogie-woogie cho tay trái
-C – E – G – A – B♭ – A – G – E (mỗi nốt một móc đơn), dịch lên F và G theo hợp âm.
+C – E – G – A – B♭ – A – G – E (mỗi nốt một móc đơn), dịch lên F và G theo hợp âm. Chơi nó tới khi tay trái tự chạy, rồi ứng tác tay phải bằng âm giai blues ở trên.
 ::staff bass C3 E3 G3 A3 Bb3 A3 G3 E3 | Bè trầm boogie-woogie trên C7
 
 ## Lịch sử: những bản blues in đầu tiên
@@ -181,9 +263,13 @@ Blues bắt nguồn từ truyền thống dân gian của người Mỹ gốc Ph
 
 Một điểm thú vị: cả *Memphis Blues* lẫn *St. Louis Blues* đều **không hoàn toàn** theo khuôn 12 ô nhịp. Sau đoạn mở đầu ngắn, chúng đặt một đoạn 12 ô nhịp blues cạnh một đoạn **16 ô nhịp** thông thường. *St. Louis Blues* còn [[chuyen-giong|chuyển giọng]] ra ngoài khuôn rồi mới quay về. Vì vậy câu trả lời cho "bản blues đầu tiên" tuỳ vào việc tính bản đầu tiên có chữ "blues" trong tên, bản 12 ô nhịp đầu tiên, hay bản hit đầu tiên.
 
-Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[swing]], [[ngau-hung-piano]]. So sánh với khuôn 32 ô nhịp: [[hinh-thuc-ca-khuc-32]].
+Liên quan: [[vong-hop-am]], [[chuc-nang-hoa-am]], [[dao-phach]], [[ngau-hung-piano]]. So sánh với khuôn 32 ô: [[hinh-thuc-ca-khuc-32]].
 
-Hai ô cuối thường là một [[turnaround-jazz|turnaround]].
+## Câu hỏi và bài tập
+1. Chơi blues ba hợp âm ở Fa với tay trái hợp âm 7, tay phải âm giai blues, hai chorus. Rồi chuyển sang Si giáng.
+2. Chơi blues bebop ở Đô theo bảng, chỉ bằng thế bấm shell (gốc + 3 + 7).
+3. Chơi một chorus blues thứ ở Đô; ô 9 – 10 nghe A♭7 – G7 khác V – IV thế nào?
+4. Trộn: bốn ô đầu ba hợp âm, bốn ô giữa kiểu 1930, bốn ô cuối kiểu bebop.
 `,
   },
   {
@@ -195,6 +281,7 @@ Hai ô cuối thường là một [[turnaround-jazz|turnaround]].
     summary: 'Ngũ cung thứ thêm nốt "blue" (bậc 5 giáng), tạo màu sắc đặc trưng của blues, jazz và rock.',
     wiki: 'Blues_scale',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Blue note', 'https://en.wikipedia.org/wiki/Blue_note'],
       ['Cutting (2019), Empirical Musicology Review — Microtonal analysis of "blue notes" and the blues scale', 'https://www.osu.tests.sfulib4.publicknowledgeproject.org/index.php/EMR/article/view/6316'],
       ['University of Rochester — Unlocking the secrets of blue notes', 'https://www.rochester.edu/newscenter/unlocking-the-secrets-of-blue-notes-230482/'],
@@ -202,15 +289,27 @@ Hai ô cuối thường là một [[turnaround-jazz|turnaround]].
       ['Ethan Iverson / Asher Tobin Chodos — The history of the blues… scale?', 'https://ethaniverson.com/the-history-of-the-blues-scale-guest-post-by-asher-tobin-chodos/'],
     ],
     body: `
-Âm giai blues (dạng 6 nốt) = [[am-giai-ngu-cung|ngũ cung thứ]] + **♭5**:
+Âm giai blues là chất liệu giai điệu **lâu đời nhất, cơ bản nhất** được chơi trên blues. Dạng sáu nốt quen thuộc là [[am-giai-ngu-cung|ngũ cung thứ]] thêm **♭5**:
+
 **1 – ♭3 – 4 – ♭5 – 5 – ♭7**
 
 ::keyboard C4 Eb4 F4 Gb4 G4 Bb4 | Âm giai blues trên C: C – E♭ – F – G♭ – G – B♭
 
-## Nốt blue
-Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng hát, chúng thường được uốn (bend) vào khoảng giữa hai [[ban-phim|phím đàn]]; trên piano, người chơi [[doi-am|mô phỏng]] bằng cách **láy nhanh** từ ♭3 lên 3 (E♭ → E).
+Thuộc nó theo quãng: **quãng 3 thứ – cung – nửa cung – nửa cung – quãng 3 thứ – cung**. Hai quãng 3 thứ, ba nốt liền nhau cách nửa cung (F – F♯ – G): không âm giai phương Tây nào xếp như vậy.
 
-Âm giai blues thường được chơi trên khung [[blues-12-nhip]] với các [[hop-am-bay|hợp âm 7 át]]. Liên quan: [[dieu-thuc|Mixolydian]], [[dao-phach]].
+::staff treble C4 Eb4 F4 F#4 G4 Bb4 C5 | Âm giai blues Đô viết với F♯ (nốt lướt đi lên); khi đi xuống thường viết G♭
+
+## Chơi ở đâu?
+Bạn chơi được âm giai blues không chỉ trên blues mà trên **bất kỳ bài nào**, và trên **bất kỳ hợp âm nào**. Nhưng chỗ nó hay được chơi nhất là trên hợp âm **7 át** và **m7**. Trên khung [[blues-12-nhip]] ở Đô, bạn có thể chơi âm giai blues Đô suốt mười hai ô, qua cả C7, F7 và G7: chỗ chỏi chính là chỗ "blues".
+
+Thử ngay: tay trái C7 rồi F7, tay phải chạy âm giai blues Đô. Trên F7, nốt E♭ thành ♭7 của F7, B♭ thành 4, G♭ thành ♭9 — mọi thứ vẫn nghe "đúng blues".
+
+## Nốt blue
+Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Ca sĩ và tay guitar **uốn** chúng vào khoảng giữa hai [[ban-phim|phím đàn]]. Piano không uốn được, nên người chơi piano **gợi** bằng cách **láy nhanh** từ ♭3 lên 3 (E♭ → E), hoặc đánh hai phím liền nhau cùng lúc.
+
+::staff treble Eb4 E4 G4 / Eb4+E4 C4 | Gợi nốt blue trên piano: láy E♭ lên E, rồi bấm cả hai phím cùng lúc
+
+Âm giai blues và ngũ cung thứ dùng thay cho nhau được: khác nhau chỉ ở nốt ♭5 (xem [[ngu-cung-trong-jazz]]). Liên quan: [[dieu-thuc|Mixolydian]], [[dao-phach]].
 
 ## Nốt blue thực sự cao bao nhiêu?
 - Nốt blue thường được mô tả là bậc 3, 5, 7 **hạ xuống** — nhưng mức hạ **không cố định**, thường từ khoảng **một [[vi-cung-va-am-nhac-vi-cung|phần tư cung]] đến [[cung-nua-cung|nửa cung]]**.
@@ -223,6 +322,11 @@ Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Trên guitar hay giọng h
 - Có người phê phán [[am-giai|âm giai]] này **quá đơn giản**, không nắm được tinh thần của blues.
 
 Ý nghĩa với người dạy: âm giai blues là **điểm khởi đầu** hữu ích để ngẫu hứng (xem [[ngau-hung-piano]]), nhưng nên cho học sinh **[[so-sanh-ban-thu|nghe nhiều bản thu]] blues** để hiểu nốt blue thật sự "uốn" thế nào.
+
+## Câu hỏi và bài tập
+1. Chơi âm giai blues ở 12 giọng theo vòng quãng 5, lên rồi xuống.
+2. Ứng tác hai chorus blues ở Fa chỉ bằng âm giai blues Fa; mỗi câu kết ở một nốt khác.
+3. Thử láy ♭3 → 3 trên mọi hợp âm I7 của một chorus.
 `,
   },
   {
@@ -2274,7 +2378,7 @@ Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
       ['Wikipedia — Bitches Brew', 'https://en.wikipedia.org/wiki/Bitches_Brew'],
     ],
     body: `
-Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc năm chỉ gần đúng. Cột "piano" tóm tắt vai trò của piano qua từng thời.
+Một trăm năm nhạc jazz gói trong vài bảng. Đừng đọc chúng như bài sử để thi: đọc chúng như một **danh sách nghe**. Mỗi dòng là một cánh cửa — mở ra bằng cách tìm bản thu ở cột "Mốc" và nghe ít nhất một lần. Các phong cách **nối tiếp và chồng lấn** nhau; mốc năm chỉ gần đúng. Cột "Piano" cho bạn biết tay piano làm gì trong từng thời, vì đó là điều bạn sẽ bắt chước.
 
 ## Jazz sơ kỳ (khoảng 1897 – 1930)
 | Phong cách | Thời gian | Đặc điểm | Piano | Mốc |
@@ -2309,9 +2413,11 @@ Các phong cách dưới đây **nối tiếp và chồng lấn** nhau; mốc n�
 | **Gospel jazz** | Từ 1950s | Quãng 8, [[ky-hieu-nang-cao|tremolo]], [[hop-am-luot-jazz|hợp âm 7 giảm lướt]], [[hop-am-at-phu|át phụ]], giai điệu [[am-giai-ngu-cung|ngũ cung]] trưởng, thế bấm hẹp song song | Xem [[tai-hoa-am-gospel]] | |
 | **Smooth / crossover** | Cuối 1970s–80s | Lớn lên từ fusion nhưng ít phiêu lưu hơn; trọng groove hơn ngẫu hứng; pha pop, funk, R&B | David Benoit | |
 
-## Dùng bảng này khi dạy
-- Mỗi phong cách gắn với một **[[ky-thuat-piano|kỹ năng piano]]** riêng: ragtime/stride luyện tay trái nhảy xa ([[buoc-nhay-xa]]), boogie-woogie luyện [[phoi-hop-hai-tay|độc lập hai tay]], bebop luyện thế bấm shell, modal luyện hợp âm quãng 4 ([[hoa-am-quang-bon]]), Latin luyện [[tiet-tau|tiết tấu]].
-- Nghe theo thứ tự thời gian giúp học trò nghe ra **hoà âm ngày càng phức tạp** — từ hợp âm ba của ragtime đến [[hop-am-mo-rong|nốt căng]] của bebop và [[upper-structure]] của post-bop.
+## Dùng bảng này thế nào
+- Mỗi phong cách luyện một **[[ky-thuat-piano|kỹ năng piano]]** riêng: ragtime và stride luyện tay trái nhảy xa ([[buoc-nhay-xa]]); boogie-woogie luyện [[phoi-hop-hai-tay|độc lập hai tay]]; bebop luyện thế bấm shell; modal luyện hợp âm quãng 4 ([[hoa-am-quang-bon]]); latin luyện [[tiet-tau|tiết tấu]] ([[clave-va-latin-jazz]]). Muốn biết mình yếu ở đâu, chơi thử một bài của mỗi thời.
+- Nghe theo thứ tự thời gian, bạn sẽ nghe ra **hoà âm ngày càng dày**: từ hợp âm ba của ragtime, tới [[hop-am-mo-rong|nốt căng]] của bebop, tới [[upper-structure]] của post-bop. Lý thuyết trong bộ sách đi đúng con đường đó.
+- Đừng chọn phe. Người chơi hiện đại giỏi nhất đều nói được nhiều "phương ngữ": một tay bebop mà không chơi được stride là thiếu mất ông bà mình.
+
 Nghệ sĩ theo từng thời: [[nghe-si-piano-jazz]]. Lộ trình lý thuyết: [[hoa-am-jazz]].
 
 ## Nghe ví dụ
@@ -2319,6 +2425,11 @@ Nghệ sĩ theo từng thời: [[nghe-si-piano-jazz]]. Lộ trình lý thuyết:
 ::youtube 89azFhwXzUo | Bill Evans Trio — *Waltz for Debby* (thu trực tiếp 1980)
 
 ::youtube ylXk1LBvIqU | Miles Davis — *So What* (album *Kind of Blue*, 1959)
+
+## Câu hỏi và bài tập
+1. Chọn ba dòng trong bảng; nghe bản thu ở cột "Mốc" và ghi một câu về việc tay piano làm.
+2. Chơi mẫu bass boogie-woogie trên C, F, G theo khung blues 12 ô.
+3. Phong cách nào bạn thích nhất? Tìm thêm hai nghệ sĩ của phong cách đó ở [[nghe-si-piano-jazz]].
 `,
   },
 
