@@ -904,54 +904,60 @@ Là một trong những kỹ thuật [[tai-hoa-am]] phổ biến nhất.
     summary: 'Cách chọn và sắp xếp các nốt của hợp âm trên bàn phím: xếp hẹp, xếp rộng, shell, rootless, drop 2…',
     wiki: 'Voicing_(music)',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Piano With Jonny — Rootless voicings', 'https://pianowithjonny.com/piano-lessons/rootless-voicings/'],
       ['Wikipedia — Voicing (music)', 'https://en.wikipedia.org/wiki/Voicing_(music)'],
       ['Wikipedia — So What chord', 'https://en.wikipedia.org/wiki/So_What_chord'],
       ['Open Music Theory 2e — Jazz', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz'],
     ],
     body: `
-Cùng một [[hop-am-ba|hợp âm]], cách xếp nốt khác nhau cho màu sắc rất khác nhau.
+Lấy Cmaj7. Bấm C – E – G – B gọn trong một tay. Giờ bấm C ở tay trái, rồi E – G – B – D cao hơn ở tay phải. Cùng một hợp âm, hai cảm giác. Cách bạn **xếp** nốt quan trọng ngang với việc bạn chọn **nốt nào** — và bài này là bản đồ các cách xếp chính.
 
 ## Xếp hẹp và xếp rộng
-- **Xếp hẹp** (close): các nốt nằm trong một [[quang|quãng 8]] — C – E – G – B.
+- **Xếp hẹp** (close): các nốt nằm gọn trong một [[quang|quãng 8]] — C – E – G – B.
 - **Xếp rộng** (open): trải hơn một quãng 8 — C3 – G3 – E4 – B4, vang và thoáng.
 
-## Shell voicing (tay trái)
-Chỉ chơi **gốc + 3 + 7** (hoặc gốc + 7 + 3) — đủ để xác định tính chất hợp âm. Dm7: D – F – C; G7: G – F – B; Cmaj7: C – E – B.
+## Shell (tay trái)
+Chỉ chơi **gốc + 3 + 7** (hoặc gốc + 7 + 3) — đủ để nói rõ hợp âm. Dm7: D – F – C; G7: G – F – B; Cmaj7: C – E – B. Đây là thế bấm của dân bebop (xem [[the-bam-bac-thay-jazz]]).
 
-## Rootless voicing (xếp không gốc)
-Bỏ nốt gốc (để bass chơi), thêm nốt mở rộng. Lối xếp này được phổ biến vào **giữa – cuối thập niên 1950** bởi các nghệ sĩ như **[[bill-evans|Bill Evans]], Red Garland, Wynton Kelly** (một số nguồn kể thêm Ahmad Jamal); các nguồn không thống nhất ai là người khởi xướng.
+## Thế bấm không gốc
+Bỏ nốt gốc (để tay bass lo), thêm nốt mở rộng. Lối bấm này được phổ biến vào **giữa – cuối thập niên 1950** bởi **[[bill-evans|Bill Evans]], Red Garland, Wynton Kelly** (vài nguồn kể thêm Ahmad Jamal); các nguồn không thống nhất ai khởi xướng.
+
 | Hợp âm | Dạng A (3 – 5 – 7 – 9) | Dạng B (7 – 9 – 3 – 5) |
 |---|---|---|
 | Dm9 | F – A – C – E | C – E – F – A |
 | G13 | B – E – F – A (3 – 13 – 7 – 9) | F – A – B – E (7 – 9 – 3 – 13) |
 | Cmaj9 | E – G – B – D | B – D – E – G |
 
-::keyboard F4 A4 C5 E5 | Dm9 dạng A
-::keyboard F4 A4 B4 E5 | G13 không gốc — chỉ một nốt (C → B) thay đổi so với hợp âm trước
+::grand F4+A4+C5+E5/D3=Dm9_(A) F4+A4+B4+E5/G2=G13_(B) E4+G4+B4+D5/C3=Cmaj9_(A) | ii – V – I không gốc: Dm9 dạng A, G13 dạng B, Cmaj9 dạng A — mỗi lần chỉ một hai nốt đổi
 
-Nối ii – V – I bằng xen kẽ dạng A và B, mỗi bè chỉ di chuyển tối đa một bậc — chính là [[dan-giong]] tốt.
+Nối ii – V – I bằng cách **xen kẽ dạng A và B**: mỗi bè đi tối đa một bậc. Đó là [[dan-giong]] tốt nhất bạn có thể có với bốn nốt.
 
-Lưu ý khi dùng xếp không gốc:
-- Giữ hợp âm **quanh nốt [[ban-phim|Đô giữa]]** trở lên: nốt 9 và các quãng hẹp đặt quá thấp sẽ bị đục.
-- Cần **bass** (nhạc công bass hoặc tay trái) chơi nốt gốc; nếu chơi một mình mà không có gốc, hợp âm nghe lơ lửng, không rõ.
+Hai lưu ý quan trọng:
+- Giữ thế bấm **quanh Đô giữa trở lên**. Quãng hẹp và nốt 9 đặt quá thấp sẽ đục.
+- Thế bấm không gốc **cần bass**. Chơi một mình mà không có gốc, hợp âm nghe lơ lửng — khi đó dùng shell hoặc [[the-bam-mo|thế bấm mở]].
 
-## Thứ tự học xếp hợp âm
+## Thứ tự học
 1. **[[not-dan-huong|Nốt dẫn hướng]]** 3 – 7 ([[ii-v-i]]).
 2. **Shell**: gốc + 3 + 7.
 3. **Không gốc dạng A/B** cho ii – V – I ở 12 giọng.
-4. **Quãng 4 và "[[jazz-dieu-thuc|So What]]"** ([[hoa-am-quang-bon]]).
-5. **Hợp âm ba cấu trúc trên** cho hợp âm át biến hoá ([[hop-am-chong]], [[hop-am-at-bien-hoa]]).
-6. **Drop 2**, xếp **khối** (block chords) cho [[giai-dieu|giai điệu]].
+4. **Quãng 4 và "So What"** ([[hoa-am-quang-bon]], [[hop-am-so-what-barron]]).
+5. **Upper structure** cho hợp âm át biến hoá ([[upper-structure]], [[hop-am-at-bien-hoa]]).
+6. **Drop 2** và xếp **khối** cho giai điệu ([[hop-am-khoi]]).
 
 ## Drop 2
-Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8: C – E – G – B → G – C – E – B. Rất phổ biến trong guitar và piano big band.
+Lấy hợp âm xếp hẹp, hạ **nốt cao thứ hai** xuống một quãng 8: C – E – G – B → G – C – E – B. Rất phổ biến trên guitar và trong phối big band.
 
-[[am-giai|Âm giai]] chọn nốt mở rộng: [[he-thong-hop-am-am-giai]]. Xếp theo quãng 4: [[hoa-am-quang-bon]].
+Một bài tập đẹp (Levine đặt nó ngay sau âm giai bebop): hoà âm âm giai bebop trưởng đi xuống bằng **xen kẽ hai hợp âm** — C6 trên các nốt C, E, G, A và một hợp âm 7 giảm (D – F – A♭ – B) trên các nốt lướt — mỗi nốt giai điệu một hợp âm bốn nốt xếp hẹp, rồi hạ nốt thứ hai xuống quãng 8. Bạn sẽ nghe ra một đoạn "sax soli" của big band.
 
-Đọc tiếp: [[the-bam-bac-thay-jazz]], [[hop-am-khoi]] (drop 2 bắt nguồn từ four-way close), [[upper-structure]], [[dem-jazz]].
+::staff treble E4+G4+A4+C5=C6 D4+F4+Ab4+B4=D°7 C4+E4+G4+A4=C6 B3+D4+F4+Ab4=D°7 A3+C4+E4+G4=C6 | Âm giai bebop trưởng đi xuống, xen kẽ C6 và D°7 (xếp hẹp). Thử hạ nốt thứ hai của mỗi hợp âm xuống một quãng 8: thành drop 2
 
-Thêm: [[the-bam-ba-not]], [[the-bam-mo]], [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
+[[am-giai|Âm giai]] chọn nốt mở rộng: [[he-thong-hop-am-am-giai]]. Đọc tiếp: [[the-bam-bac-thay-jazz]], [[hop-am-khoi]], [[upper-structure]], [[dem-jazz]]. Thêm: [[the-bam-ba-not]], [[the-bam-mo]], [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết dạng A và B cho ii – V – I ở Fa, B♭, E♭.
+2. Chơi ii – V – I không gốc qua 12 giọng theo vòng quãng 5, xen kẽ A – B – A rồi B – A – B.
+3. Hoà âm âm giai bebop trưởng Fa bằng F6 và hợp âm 7 giảm trên G, rồi drop 2.
 `,
   },  {
     slug: 'upper-structure',
@@ -966,6 +972,8 @@ Thêm: [[the-bam-ba-not]], [[the-bam-mo]], [[quy-tac-xep-hop-am-jazz]], [[chon-t
       ['Piano With Jonny — Upper structure triads', 'https://pianowithjonny.com/piano-lessons/upper-structure-triads-the-ultimate-piano-chord-hack/'],
     ],
     body: `
+Đây là thế bấm khiến người mới nghe phải hỏi "cái hợp âm gì mà hay vậy?". Câu trả lời đơn giản tới bất ngờ: **một hợp âm ba bình thường**, đặt lên trên một **tritone**. Bạn đã biết mọi hợp âm ba trưởng; giờ bạn sẽ biết cách biến chúng thành những hợp âm át biến hoá dày đặc mà không phải đếm ♭9, ♯11 trong đầu.
+
 ## Ý tưởng
 Upper structure "đơn giản là **một hợp âm ba đặt trên một tritone**". Với một [[hop-am-bay|hợp âm 7 át]] như **C7**:
 - **Tay trái** giữ **nốt 3 và nốt 7** (E – B♭) — hai [[ii-v-i|nốt dẫn hướng]] xác định tính chất át; chúng tạo thành một [[quang|tritone]]. Có thể thêm nốt gốc C ở bè trầm cho rõ.
@@ -996,6 +1004,16 @@ Upper structure có **tritone** ở dưới; [[hop-am-gach-cheo|hợp âm gạch
 Liên quan: [[xep-hop-am]], [[he-thong-hop-am-am-giai]], [[am-giai-bat-cung]] (US VI và ♭V nằm trong âm giai bát cung nửa cung – cung).
 
 Trong giai điệu: [[superimposition-jazz]], [[triad-pairs]].
+
+## Mẹo luyện tập
+- Chọn **một** upper structure (bắt đầu bằng US II) và chơi nó trên mọi hợp âm át của một bài. Tuần sau đổi sang US ♭VI.
+- Trên ii – V – I, chỉ đổi hợp âm V: Dm9 → C7 với từng upper structure → Fmaj9. Nghe cái nào kéo về mạnh nhất.
+- Tập ở 12 giọng: tay trái tritone đi theo vòng quãng 5, tay phải hợp âm ba.
+
+## Câu hỏi và bài tập
+1. Viết năm upper structure trên G7 và F7.
+2. US nào dùng được khi giai điệu là nốt ♭9 của hợp âm át?
+3. Chơi G7 với US ♭VI giải quyết về Cm9, rồi với US II giải quyết về Cmaj9.
 `,
   },  {
     slug: 'the-bam-ba-not',
@@ -1004,20 +1022,36 @@ Trong giai điệu: [[superimposition-jazz]], [[triad-pairs]].
     aliases: ['three note voicing', 'three-note voicings', 'thế bấm 3 nốt', 'thế bấm ba nốt', 'gốc + 3 + 7'],
     summary: 'Thế bấm jazz đơn giản nhất cho hai tay: tay trái chơi nốt gốc, tay phải chơi nốt 3 và 7 (nốt dẫn hướng). Thêm một nốt ở tay phải (giai điệu, nốt 5 hoặc nốt căng) là có thế bấm 4 nốt.',
     body: `
-## Cấu tạo
-- **Tay trái**: nốt **gốc** — giúp tiến trình nghe rõ ràng.
-- **Tay phải**: **nốt 3 và nốt 7** — hai [[not-dan-huong|nốt dẫn hướng]] quyết định tính chất hợp âm (shell — xem [[xep-hop-am]]).
-::grand C4+F4/D3=Dm7 B3+F4/G2=G7 B3+E4/C3=Cmaj7 | ii – V – I ở Đô trưởng bằng thế bấm 3 nốt: tay phải chỉ đổi một nốt mỗi lần (C → B, F → E)
-Tay phải đổi từ "7 – 3" sang "3 – 7" xen kẽ nên di chuyển rất ít — đúng nguyên tắc [[dan-giong|dẫn giọng]] gần.
+Đây là thế bấm bạn có thể dùng **ngay hôm nay**, với bất kỳ bài nào trong fake book, và nó sẽ nghe ra jazz. Chỉ ba nốt.
 
-## Mở rộng thành 4 nốt
-Thêm **một nốt** vào tay phải — **nốt giai điệu**, **nốt 5** hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Ví dụ của Lamar: **G7♭9** — tay trái G, tay phải F – B – A♭.
+## Cấu tạo
+- **Tay trái**: nốt **gốc**. Nó cho tai biết hợp âm đang đứng ở đâu.
+- **Tay phải**: **nốt 3 và nốt 7**, hai [[not-dan-huong|nốt dẫn hướng]] quyết định chất của hợp âm (shell — xem [[xep-hop-am]]).
+
+::grand C4+F4/D3=Dm7 B3+F4/G2=G7 B3+E4/C3=Cmaj7 | ii – V – I ở Đô trưởng bằng thế bấm 3 nốt: tay phải chỉ đổi một nốt mỗi lần (C → B, F → E)
+
+Chơi ba hợp âm đó vài lần và nhìn tay phải. Nó gần như không di chuyển: từ "7 – 3" sang "3 – 7" rồi lại "7 – 3", mỗi lần chỉ một nốt đi xuống nửa cung. Đó là [[dan-giong|dẫn giọng]] gần, và đó là lý do thế bấm này nghe mượt.
+
+Ai đó có thể bảo bạn "dân piano không nên bấm thế gốc". Đừng lo: Bud Powell và Thelonious Monk bấm hợp âm có nốt gốc gần như mọi lúc (xem [[nhung-ngo-nhan-trong-ly-thuyet-jazz]]).
+
+## Mở rộng thành bốn nốt
+Thêm **một nốt** vào tay phải: **nốt giai điệu**, **nốt 5**, hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Ví dụ G7♭9: tay trái G, tay phải F – B – A♭.
+
 ::grand C4+E4+F4/D3=Dm9 B3+E4+F4/G2=G13 B3+D4+E4/C3=Cmaj9 | Thêm nốt căng vào tay phải: Dm9 (thêm E = 9), G13 (thêm E = 13), Cmaj9 (thêm D = 9)
-So sánh: [[the-bam-bac-thay-jazz|thế bấm Powell]] cũng dùng nốt gốc + nốt 3 hoặc 7, nhưng tất cả ở tay trái để tay phải tự do solo.
+
+Để ý nốt E: nó đứng yên qua cả ba hợp âm — 9 của Dm9, 13 của G13, 3 của Cmaj9. Một nốt, ba vai. Bạn sẽ gặp lại ý này ở [[tu-am-giai-den-am-nhac|nốt chung]].
+
+So sánh: [[the-bam-bac-thay-jazz|thế bấm Powell]] cũng là gốc + 3 hoặc 7, nhưng dồn cả vào tay trái để tay phải tự do solo.
 
 ## Khi nào dùng?
-- Bước đầu tiên khi học chơi jazz từ [[ky-hieu-hop-am|lead sheet]]: tay phải có thể đặt **giai điệu** lên trên cùng (xem [[ket-hop-the-bam]]).
-- Khi có bass, bỏ nốt gốc ở tay trái và chuyển sang [[xep-hop-am|thế bấm không gốc]].
+- Bước đầu khi chơi jazz từ [[ky-hieu-hop-am|lead sheet]]: tay phải đặt **giai điệu** lên trên cùng, ngay trên nốt 3 và 7 (xem [[ket-hop-the-bam]]).
+- Khi có tay bass, bỏ nốt gốc ở tay trái và chuyển sang [[xep-hop-am|thế bấm không gốc]].
+
+## Câu hỏi và bài tập
+1. Chơi ii – V – I bằng thế bấm 3 nốt ở 12 giọng theo vòng quãng 5.
+2. Thêm nốt 9 hoặc 13 cho mỗi hợp âm; để ý nốt nào đứng yên.
+3. Chơi tám ô đầu một bài chuẩn: tay trái gốc, tay phải 3 – 7 và giai điệu ở trên.
+
 Tiếp theo: [[the-bam-mo]].
 `,
   },
@@ -1028,22 +1062,34 @@ Tiếp theo: [[the-bam-mo]].
     aliases: ['open voicing', 'open voicings', 'spread voicing', 'thế bấm mở', 'xếp rộng jazz', 'thế bấm hai tay'],
     summary: 'Thế bấm mở trải hợp âm trên hơn một quãng 8, mỗi tay hai nốt: tay trái nốt gốc + 7 (hoặc gốc + 10), tay phải nốt 3 + 5 (hoặc 5 + 7). Âm thanh đầy và rộng hơn thế bấm hẹp — hay dùng cho ballad.',
     body: `
+Thế bấm ba nốt nghe ổn nhưng hơi gầy. Muốn đầy và vang hơn mà không đục, hãy **mở** hợp âm ra hai tay. Ý tưởng: trải bốn nốt gốc – 3 – 5 – 7 qua hai tay sao cho mỗi tay giữ hai nốt và các quãng rộng nằm ở dưới.
+
 ## Hai cách chia tay
 | Cách | Tay trái | Tay phải |
 |---|---|---|
 | (a) | Gốc + 7 | 3 + 5 |
 | (b) | Gốc + 10 (nốt 3 cao một quãng 8) | 5 + 7 |
+
 ::grand F4+A4/D3+C4=Dm7_(a) D4+F4/G2+B3=G7_(b) E4+G4/C3+B3=Cmaj7_(a) | ii – V – I bằng thế bấm mở: Dm7 và Cmaj7 theo cách (a), G7 theo cách (b) với quãng 10 G – B ở tay trái
-(Bảng ví dụ dùng các thế bấm này; hàng G7 ghi theo đúng định nghĩa cách (b).)
+
+Chơi ví dụ trên, rồi chơi lại cùng ba hợp âm ở thế gốc xếp hẹp trong một tay. Nghe khác chưa? Thế bấm mở **vang**, như một dàn kèn; thế xếp hẹp ở vùng giữa thì **đặc**.
+
+Đổi xen kẽ (a) và (b) giữa các hợp âm là cách giữ cho các bè đi gần: nốt 7 của Dm7 (C) xuống nửa cung thành nốt 3 của G7 (B) — nhưng ở cách (b), nốt 3 ấy nằm ở quãng 10 tay trái.
 
 ## Nguyên tắc
-- **Giai điệu ở trên cùng**.
+- **Giai điệu ở trên cùng.**
 - **Không nhân đôi** nốt nào, trừ nốt trên cùng.
-- **Tránh quãng 5** ở tay trái; dùng **quãng rộng ở bè trầm** để khỏi đục.
-Đây cũng chính là các quy tắc chung trong [[quy-tac-xep-hop-am-jazz]]. Khi đệm cho người khác, các thế bấm rộng (quãng 4 trở lên) để lại chỗ cho người solo ([[dem-jazz]]).
+- **Tránh quãng 5** trống ở tay trái khi muốn có màu; dùng **quãng rộng ở bè trầm** để khỏi đục.
+
+Đây cũng là các quy tắc chung ở [[quy-tac-xep-hop-am-jazz]]. Khi đệm cho người khác, thế bấm rộng (quãng 4 trở lên) chừa chỗ cho người solo ([[dem-jazz]]).
 
 ## Liên hệ
-Thế bấm mở là "anh em" của [[hop-am-khoi|drop 2]] (lấy từ xếp hẹp rồi hạ một nốt) và là bước tiếp theo sau [[the-bam-ba-not]]. Trong nhạc cổ điển, ý tưởng tương tự là [[dan-giong|xếp rộng]] trong hoà âm bốn bè.
+Thế bấm mở là anh em của [[hop-am-khoi|drop 2]] (lấy thế xếp hẹp rồi hạ một nốt) và là bước tiếp sau [[the-bam-ba-not]]. Trong nhạc cổ điển, ý tưởng tương tự là [[dan-giong|xếp rộng]] trong hoà âm bốn bè.
+
+## Câu hỏi và bài tập
+1. Chơi ii – V – I ở Fa và Si giáng, Dm7 – Cmaj7 cách (a), G7 cách (b).
+2. Thêm nốt 9 lên trên tay phải mỗi hợp âm.
+3. Chơi một ballad chậm chỉ bằng thế bấm mở, giai điệu luôn ở trên cùng.
 `,
   },
   {
@@ -1058,10 +1104,12 @@ Thế bấm mở là "anh em" của [[hop-am-khoi|drop 2]] (lấy từ xếp h�
       ['PianoGroove — Kenny Barron voicing', 'https://www.pianogroove.com/?p=114'],
     ],
     body: `
+Hai hợp âm trong bài này là hai trong những âm thanh "hiện đại" dễ nhận ra nhất của jazz. Cái đầu, **So What**, ai đã nghe *Kind of Blue* đều nhớ: hai tiếng "so what" mà đàn piano đáp lại kèn. Cái sau, **Barron**, dày và mở như một dàn dây. Cả hai đều dựng từ những quãng rộng (quãng 4, quãng 5) thay vì quãng 3 — và đó là bí mật của âm thanh "thoáng" của chúng.
+
 ## Hợp âm So What
 - **Năm nốt**: **ba quãng 4 đúng** chồng lên nhau và **một quãng 3 trưởng** ở trên. Trên D: tay trái **D – G**, tay phải **C – F – A**.
 - Gốc tích: thế bấm của [[bill-evans|Bill Evans]] trong "So What" (*Kind of Blue*, 1959) — xem [[jazz-dieu-thuc]].
-- Vì xây bằng quãng 4, nó có màu hơi **treo** (sus): Lamar đọc thế bấm trên D là **Dm11**, **B♭maj13** hoặc **G9sus**.
+- Vì xây bằng quãng 4, nó có màu hơi **treo** (sus): thế bấm trên D đọc được là **Dm11**, **B♭maj13** hoặc **G9sus**.
 - Hợp âm So What chính là **[[hoa-am-quang-bon|hợp âm quãng 4]] ở [[the-dao-hop-am|thể đảo]] 1**; nó có 5 thể đảo, đều dùng được khi cần đổi nốt bass hay nốt giai điệu.
 - Dùng được cả trong tiến trình có chức năng ([[vong-quang-nam|vòng quãng 5]], [[ii-v-i]]) lẫn trong tiến trình [[dieu-thuc|điệu thức]] đi từng bậc — cách đệm của jazz điệu thức là **trượt song song** thế bấm này trong một điệu thức.
 ::grand C4+F4+A4/D3+G3=So_What_(D) | Hợp âm So What trên D: D – G – C – F – A (ba quãng 4 + một quãng 3 trưởng) — Dm11 / G9sus / B♭maj13
@@ -1072,6 +1120,15 @@ Thế bấm mở là "anh em" của [[hop-am-khoi|drop 2]] (lấy từ xếp h�
 - Mang tên pianist **Kenny Barron**.
 ::grand F4+C5+G5/D3+A3+E4=Dm11_(Barron) | Hợp âm Barron trên Dm11: tay trái D – A – E, tay phải F – C – G
 Anh em: [[the-bam-bac-thay-jazz|hợp âm Hancock]] cũng sáu nốt cho m7 nhưng khi giai điệu ở **nốt 9**. Chọn giữa hai hợp âm theo nốt giai điệu — xem [[ket-hop-the-bam]].
+
+## Mẹo luyện tập
+- Trượt hợp âm So What lên xuống **trong Rê Dorian** (chỉ phím trắng): D, E, F, G, A… mỗi bậc một thế bấm cùng hình. Đó chính là cách đệm của jazz điệu thức.
+- Chọn giữa Hancock và Barron **theo nốt giai điệu**: nốt 9 ở trên → Hancock; nốt 11 ở trên → Barron.
+
+## Câu hỏi và bài tập
+1. Dựng hợp âm So What trên E và A; chúng đọc được là những hợp âm gì?
+2. Dựng hợp âm Barron cho Gm11 và Cm11.
+3. Ứng tác trên vamp Rê Dorian; tay trái trượt hợp âm So What theo các bậc.
 `,
   },
 
@@ -1131,6 +1188,8 @@ Có tất cả **mười hai** hợp âm ba trưởng đặt được trên mộ
       ['Piano With Jonny — How to play in the style of Red Garland', 'https://pianowithjonny.com/piano-lessons/how-to-play-in-the-style-of-red-garland/'],
     ],
     body: `
+Nghe một big band chơi một câu giai điệu: cả bộ kèn cùng chuyển động, mỗi nốt giai điệu là một hợp âm. Hợp âm khối là cách đặt cả bộ kèn ấy vào mười ngón tay. Nó cực kỳ hiệu quả cho một chorus "đỉnh" ở cuối bài solo, hay cho một giai điệu chậm cần sức nặng.
+
 ## Ba bước từ hẹp đến rộng
 1. **Four-way close** (bốn nốt xếp hẹp): giai điệu ở trên cùng, ba nốt hợp âm xếp sát ngay bên dưới, tất cả trong một [[quang|quãng 8]].
 2. **Locked hands** ("hai tay khoá"): thêm vào bốn nốt trên — **tay trái nhân đôi giai điệu thấp hơn một quãng 8**. Hai tay di chuyển song song như bị khoá vào nhau.
@@ -1156,6 +1215,16 @@ Dùng khi solo: [[ngau-hung-hop-am]].
 - Thế bấm V phải có **[[not-dan-huong|nốt 3 và 7]]**, không có nốt 4 và nốt 7 trưởng ([[not-tranh-va-quang-nghich|nốt tránh]]); hợp âm I có thể là C6, Cmaj9…
 - Được phá khuôn I – V – I – V khi giai điệu cần; "miễn là giữ được khung I – V – I – V bên dưới, nó sẽ nghe hay". Ví dụ: "Blue [[thelonious-monk|Monk]]".
 ::grand G4+A4+C5+E5/E4=C6 Ab4+B4+D5+F5/F4=A♭°7 A4+C5+E5+G5/G4=C6 | Minh hoạ: giai điệu E – F – G, hoà âm I – V – I; V được thay bằng A♭°7; tay trái nhân đôi giai điệu thấp một quãng 8
+
+## Mẹo luyện tập
+- Bắt đầu với một âm giai: hoà âm từng nốt của Đô trưởng đi xuống bằng four-way close, rồi locked hands, rồi drop 2.
+- Rồi chọn một giai điệu chậm bạn thuộc, hoà âm bốn ô đầu bằng locked hands.
+- Nghe George Shearing và Red Garland chơi hợp âm khối; để ý cách họ **giữ nhịp** dù hai tay khoá vào nhau.
+
+## Câu hỏi và bài tập
+1. Hoà âm giai điệu E – F – G – A trên C6 bằng locked hands (nốt lướt dùng hợp âm 7 giảm).
+2. Chuyển bốn hợp âm vừa hoà âm sang drop 2.
+3. Chơi một chorus blues ở Fa với giai điệu đơn giản bằng locked hands.
 `,
   },
   {
@@ -1170,8 +1239,10 @@ Dùng khi solo: [[ngau-hung-hop-am]].
       ['Wikipedia — So What chord', 'https://en.wikipedia.org/wiki/So_What_chord'],
     ],
     body: `
+Muốn có một thế bấm "riêng", cách nhanh nhất là bắt chước thế bấm của các bậc thầy — rồi dần dần đổi nó thành của mình. Ba người dưới đây đại diện cho ba cách nghĩ rất khác nhau: Bud Powell (thưa, rõ), Thelonious Monk (nghịch, góc cạnh), Herbie Hancock (dày, mở). Chơi từng ví dụ, rồi chơi lại cả một ii – V – I theo lối của từng người.
+
 ## Bud Powell: shell luôn có nốt gốc
-[[bud-powell|Bud Powell]], pianist [[phong-cach-jazz|bebop]] hàng đầu thập niên 1940, dùng tay trái **thưa**: hai – ba nốt, **luôn có nốt gốc**, cộng nốt 3 **hoặc** nốt 7 (hoặc nốt 10 = nốt 3 cao một quãng 8). Lamar nhận xét: vì bè trầm luôn là nốt gốc, tiến trình hợp âm nghe **rõ ràng**, còn hợp âm thưa thì không cản đường tay phải chạy giai điệu bebop.
+[[bud-powell|Bud Powell]], pianist [[phong-cach-jazz|bebop]] hàng đầu thập niên 1940, dùng tay trái **thưa**: hai – ba nốt, **luôn có nốt gốc**, cộng nốt 3 **hoặc** nốt 7 (hoặc nốt 10 = nốt 3 cao một quãng 8). Vì bè trầm luôn là nốt gốc, tiến trình hợp âm nghe **rõ ràng**, còn hợp âm thưa thì không cản đường tay phải chạy giai điệu bebop.
 ::staff bass D3+C4=Dm7_(1–7) G2+B3=G7_(1–10) C3+B3=Cmaj7_(1–7) | ii – V – I kiểu Powell: nốt gốc + nốt 7, rồi nốt gốc + nốt 10, xen kẽ để tay trái ít di chuyển
 Đây cũng là dạng [[xep-hop-am|shell voicing]] cơ bản nhất cho người mới học jazz.
 
@@ -1188,6 +1259,15 @@ Tay phải là hai [[quang|quãng 4]] chồng lên nhau — gần với [[hoa-am
 Liên quan: [[nghe-si-piano-jazz]], [[dem-jazz]], [[hop-am-mo-rong]].
 
 Thêm: [[hop-am-so-what-barron]] (Barron, anh em của Hancock), [[ket-hop-the-bam]].
+
+## Mẹo luyện tập
+- Chơi một chorus blues ở Fa ba lần: lần một tay trái kiểu Powell, lần hai kiểu Monk, lần ba bằng thế bấm Hancock cho các hợp âm thứ. Ghi âm và nghe lại: mỗi lối cho bài một tính cách khác hẳn.
+- Nghe bản thu của chính họ. Không sách nào dạy được cách Monk **đặt** một hợp âm vào đúng chỗ lạ nhất trong ô nhịp.
+
+## Câu hỏi và bài tập
+1. Chơi ii – V – I ở B♭ kiểu Powell (gốc + 7, gốc + 10).
+2. Dựng hai thế bấm Monk cho giọng Fa trưởng.
+3. Dựng hợp âm Hancock cho Gm7 và Cm7.
 `,
   },  {
     slug: 'ket-hop-the-bam',
@@ -1196,6 +1276,8 @@ Thêm: [[hop-am-so-what-barron]] (Barron, anh em của Hancock), [[ket-hop-the-b
     aliases: ['combining chord voicings', 'kết hợp thế bấm', 'chọn thế bấm theo giai điệu', 'thế bấm theo nốt giai điệu'],
     summary: 'Cách Lamar hướng dẫn chọn thế bấm cho cả một bài: đi từng ô, ghi hợp âm và nốt giai điệu đầu tiên, chọn thế bấm đặt nốt giai điệu lên trên cùng (So What, Barron, Hancock, upper structure…), rồi nối các hợp âm với ít chuyển động nhất.',
     body: `
+Bạn đã có cả một hộp đồ nghề: thế bấm ba nốt, không gốc, mở, So What, Hancock, Barron, upper structure, khối. Câu hỏi giờ là: **dùng cái nào, ở đâu?** Câu trả lời ngắn gọn: hãy để **nốt giai điệu** quyết định. Thế bấm phục vụ giai điệu, không phải ngược lại.
+
 ## Quy trình
 1. Đi qua bài **từng [[so-chi-nhip|ô nhịp]]**.
 2. Ghi **hợp âm** và **nốt giai điệu đầu tiên** của ô.
@@ -1213,10 +1295,18 @@ Thêm: [[hop-am-so-what-barron]] (Barron, anh em của Hancock), [[ket-hop-the-b
 Với hợp âm át: [[upper-structure]] chọn theo [[hop-am-mo-rong|nốt căng]] ở giai điệu; với [[hop-am-bay|maj7]]: thế bấm mở hoặc không gốc.
 
 ## Ví dụ: một nốt đổi
-Lamar minh hoạ Dm11 → G9 chỉ có **một nốt đổi, nửa cung**. Từ thế bấm Barron, hạ C xuống B:
+Dm11 → G9 chỉ có **một nốt đổi, nửa cung**. Từ thế bấm Barron, hạ C xuống B:
 ::grand F4+C5+G5/D3+A3+E4=Dm11 F4+B4+G5/D3+A3+E4=G9/D | Minh hoạ: từ hợp âm Barron trên Dm11, chỉ đổi C → B là được G9 (trên bass D) — năm nốt kia giữ nguyên
 (Thế bấm dựng theo mô tả; có thể bấm khác miễn giữ đúng nguyên tắc một nốt đổi nửa cung.)
 Liên quan: [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
+
+## Mẹo luyện tập
+Chọn một bài chuẩn, viết ra cho mỗi ô: hợp âm, nốt giai điệu đầu ô, thế bấm bạn chọn. Tuần đầu làm trên giấy; tuần sau làm tại chỗ, không viết. Khi bạn chọn được thế bấm mà không cần dừng lại nghĩ, bạn đã có "tay" của người chơi jazz.
+
+## Câu hỏi và bài tập
+1. Giai điệu là G trên Dm7: chọn thế bấm nào? Là E thì sao?
+2. Chọn thế bấm cho tám ô đầu một bài chuẩn theo quy trình năm bước.
+3. Từ một thế bấm Barron trên Gm11, tìm thế bấm C9 chỉ đổi một nốt.
 `,
   },
   {
@@ -1226,21 +1316,32 @@ Liên quan: [[quy-tac-xep-hop-am-jazz]], [[chon-the-bam-jazz]].
     aliases: ['chord voicing rules', 'quy tắc xếp hợp âm', 'quy tắc voicing', 'luật xếp hợp âm jazz', 'unavailable tension'],
     summary: 'Các quy tắc chung Lamar đưa ra để tự xếp một thế bấm: luôn có nốt 3 và 7; các quãng nhỏ hơn quãng 5 trừ quãng dưới cùng; quãng rộng ở dưới để khỏi đục; quãng nghịch ở giữa; không nhân đôi trừ nốt trên cùng; không tạo quãng 9 thứ với nốt 3 hoặc 7.',
     body: `
+Sớm muộn gì bạn cũng muốn tự xếp một thế bấm, thay vì chỉ chép thế bấm của người khác. Dưới đây là những quy tắc giúp một chồng nốt nghe như **một hợp âm** chứ không phải một nắm phím. Đừng học thuộc lòng chúng như luật giao thông: chơi các ví dụ, nghe vì sao, và rồi tai bạn sẽ tự giữ luật.
+
 ## Các quy tắc
-1. **Luôn có [[not-dan-huong|nốt 3 và 7]]**; nốt gốc và nốt 5 tuỳ chọn; có thể thêm [[hop-am-mo-rong|nốt căng]] 9, 11, 13.
-2. **Mọi quãng nhỏ hơn quãng 5 đúng**, **trừ** quãng giữa hai nốt thấp nhất — để các nốt nghe như **một hợp âm**.
-3. **Quãng rộng ở dưới** để tránh đục.
-4. **[[thuan-nghich|Quãng nghịch]] đặt ở giữa** thế bấm.
-5. **Đừng dùng quá nhiều quãng 3** — nghe nhạt.
+1. **Luôn có [[not-dan-huong|nốt 3 và 7]]** (với hợp âm không biến hoá); nốt gốc và nốt 5 tuỳ chọn; có thể thêm [[hop-am-mo-rong|nốt căng]] 9, 11, 13.
+2. **Mọi quãng giữa hai nốt liền nhau nhỏ hơn quãng 5 đúng**, **trừ** quãng giữa hai nốt thấp nhất — để các nốt "dính" thành một hợp âm.
+3. **Quãng rộng ở dưới, quãng hẹp ở trên** — giống [[chuoi-boi-am|chuỗi bồi âm]] tự nhiên.
+4. **[[thuan-nghich|Quãng nghịch]] đặt ở giữa** thế bấm, không đặt ở trên cùng hay dưới cùng.
+5. **Đừng chồng quá nhiều quãng 3** — nghe nhạt như sách giáo khoa.
 6. **Không nhân đôi** nốt nào, trừ nốt trên cùng (giai điệu).
-7. Trên **hợp âm át**, được phép tạo quãng **9 thứ** với nốt gốc hoặc nốt 5, **không** được với nốt 3 hoặc 7. Một nốt tạo quãng 9 thứ với nốt hợp âm gọi là **nốt căng không dùng được**.
+7. Trên **hợp âm át**, được tạo quãng **9 thứ** với nốt gốc hoặc nốt 5 (♭9, ♭13), **không** được với nốt 3 hay 7.
+
 Thêm từ các bài khác: **giai điệu ở trên cùng**; nối hợp âm với **ít chuyển động nhất**; bè trên cùng đi chủ yếu **liền bậc** khi đệm.
 
-## Minh hoạ
-::grand B4/C3+E3+G3=đục E4+G4+B4/C3+B3=trong | Cmaj7: quãng 3 dày đặc ở vùng trầm nghe đục (trái); quãng 7 rộng ở dưới, các quãng hẹp ở trên nghe trong (phải) — quy tắc 2 và 3
+## Nghe sự khác nhau
+::grand B4/C3+E3+G3=đục E4+G4+B4/C3+B3=trong | Cmaj7: quãng 3 dày đặc ở vùng trầm nghe đục (trái); quãng 7 rộng ở dưới, quãng hẹp ở trên nghe trong (phải) — quy tắc 2 và 3
 ::grand B3+F4+C5/G2=sai B3+F4+Ab4/G2=đúng | G7: C5 tạo quãng 9 thứ với nốt 3 (B3) — tránh (trái); A♭ tạo quãng 9 thứ với nốt gốc G — được phép trên hợp âm át (phải, G7♭9) — quy tắc 7
-Các quy tắc này là phiên bản "trên phím đàn" của [[luat-hoa-am-bon-be|luật hoà âm bốn bè]] cổ điển (âm vực, khoảng cách, nhân đôi) và của [[chuoi-boi-am|chuỗi bồi âm]] (quãng rộng ở dưới, hẹp ở trên).
-Liên quan: [[xep-hop-am]], [[ket-hop-the-bam]], [[the-bam-mo]].
+
+## Luật để phá
+Mọi quy tắc trên đều có người giỏi phá. Hợp âm át đã biến hoá thì nốt 3 và 7 bớt quan trọng; Bud Powell bấm át chỉ có gốc và 7 (xem [[nhung-ngo-nhan-trong-ly-thuyet-jazz]]); âm cụm phá luật "không quá nhiều quãng 2" một cách có chủ ý ([[am-cum]]). Học luật để biết khi nào mình đang phá nó, và vì sao.
+
+Các quy tắc này là phiên bản "trên phím" của [[luat-hoa-am-bon-be|luật hoà âm bốn bè]] cổ điển (âm vực, khoảng cách, nhân đôi). Liên quan: [[xep-hop-am]], [[ket-hop-the-bam]], [[the-bam-mo]].
+
+## Câu hỏi và bài tập
+1. Xếp Fmaj9 theo đủ bảy quy tắc; rồi xếp một thế "sai" phạm quy tắc 3 và nghe.
+2. Trên C7, nốt nào tạo quãng 9 thứ được phép? Nốt nào không?
+3. Kiểm ba thế bấm bạn hay dùng theo bảng quy tắc.
 `,
   },
   {
@@ -1250,7 +1351,7 @@ Liên quan: [[xep-hop-am]], [[ket-hop-the-bam]], [[the-bam-mo]].
     aliases: ['when to use voicings', 'chord voicings when to use', 'chọn thế bấm', 'thế bấm theo phong cách', 'secundal voicing'],
     summary: 'Thế bấm nào cũng có thể dùng bất cứ lúc nào, nhưng mỗi phong cách có thói quen riêng: shell cho bebop, hợp âm khối cho jazz sớm và stride, không gốc cho bossa nova và ballad, quãng 4 cho blues và jazz điệu thức, âm cụm cho ballad, boogie và free jazz.',
     body: `
-Lamar mở đầu bằng một tiền đề: **thế bấm nào cũng có thể dùng bất cứ lúc nào**; chỉ là mỗi phong cách **ưa** một số thế bấm.
+Tiền đề đầu tiên, và quan trọng nhất: **thế bấm nào cũng dùng được bất cứ lúc nào**. Không có cảnh sát hoà âm nào bắt bạn vì chơi thế bấm quãng 4 trong một bài bebop. Chỉ là mỗi phong cách **ưa** một số thế bấm — và biết điều đó giúp bạn nghe "đúng chất" khi cần.
 
 ## Bảng tổng hợp
 | Thế bấm | Phong cách hay dùng | Bài |
@@ -1270,6 +1371,11 @@ Lamar mở đầu bằng một tiền đề: **thế bấm nào cũng có thể 
 - **Hancock** (m7, giai điệu ở nốt 9) và **Barron** (giai điệu ở nốt 11) — xem [[ket-hop-the-bam]].
 - **[[thelonious-monk|Monk]]**: hợp với những bài đổi giọng liên tục.
 - Khi **đệm**: chơi ở âm vực khác người solo ([[dem-jazz]]).
+
+## Câu hỏi và bài tập
+1. Chơi cùng tám ô của một bài ba lần: kiểu bebop (shell), kiểu Bill Evans (không gốc), kiểu McCoy Tyner (quãng 4).
+2. Bài nào bạn đang tập hợp với hợp âm khối? Thử một chorus.
+3. Khi đệm cho một tay kèn đang solo ở âm vực cao, bạn đặt thế bấm ở đâu?
 `,
   },
 
@@ -1459,13 +1565,15 @@ Cấu trúc chung của một lượt chơi ([[hinh-thuc-ca-khuc-32|head]] – s
       ['PianoGroove — So What chord voicing', 'https://pianogroove.com/jazz-piano-lessons/so-what-chord-voicing/'],
     ],
     body: `
+Mọi hợp âm bạn học tới giờ đều chồng **quãng 3**. Thử bấm D – G – C – F — chồng **quãng 4**. Nghe chưa? Không trưởng, không thứ, không "kéo" về đâu cả; chỉ lơ lửng, thoáng, hơi xa xăm. Đó là âm thanh của jazz đầu thập niên 1960, và bạn sẽ nhận ra nó ngay khi nghe McCoy Tyner.
+
 [[he-thong-hoa-am-co-dien|Hoà âm truyền thống]] chồng [[quang|quãng 3]] ([[hop-am-ba]]). Hoà âm quãng 4 chồng **quãng 4 đúng**: D – G – C – F.
 
 ::keyboard D4 G4 C5 F5 | Hợp âm quãng 4 trên D
 
 ## Đặc điểm
 - Không rõ trưởng hay thứ; không có lực kéo [[chuc-nang-hoa-am|chức năng]] mạnh → hợp với nhạc **điệu thức** ([[dieu-thuc]]).
-- Có thể **dịch song song** theo các nốt của [[am-giai|âm giai]] mà vẫn hợp — trong D Dorian: D–G–C, E–A–D, G–C–F, A–D–G…
+- Có thể **dịch song song** theo các nốt của [[am-giai|âm giai]] mà vẫn hợp — trong D Dorian: D–G–C, E–A–D, G–C–F, A–D–G… Thử ngay: tay phải trượt các khối này lên xuống trên một nốt D giữ ở bass.
 
 ## Hợp âm "So What"
 Ba quãng 4 + một quãng 3 trưởng ở trên: **E – A – D – G – B**. Đặt tên theo bài "So What" (Miles Davis, album *Kind of Blue*, 1959): [[bill-evans|Bill Evans]] dùng nó trong hình đáp "amen" sau mỗi câu [[giai-dieu|giai điệu]]. Còn gọi là "Bill Evans voicing" hoặc "Dorian voicing". Vì là sự pha trộn giữa quãng 4 và quãng 3, hợp âm này **đa nghĩa**: cùng một khối có thể đặt lên nhiều hợp âm khác nhau, và rất hợp để [[hoa-am-song-song|dịch song song]].
@@ -1482,6 +1590,15 @@ Liên quan: [[xep-hop-am]], [[an-tuong]].
 Bối cảnh: [[jazz-dieu-thuc]], [[the-bam-bac-thay-jazz]].
 
 Hợp âm So What chi tiết: [[hop-am-so-what-barron]].
+
+## Mẹo luyện tập
+- Trượt hợp âm ba nốt quãng 4 song song trong Rê Dorian (chỉ phím trắng), tay trái giữ D ở bass. Có vài khối không phải toàn quãng 4 đúng (chỗ có B – F): cứ để nguyên nốt của điệu thức.
+- Ứng tác tay phải bằng chính các quãng 4: nhảy quãng 4 cũng là một màu giai điệu đặc trưng của lối McCoy Tyner.
+
+## Câu hỏi và bài tập
+1. Dựng hợp âm quãng 4 ba nốt trên mọi bậc của Rê Dorian.
+2. Dựng hợp âm So What trên A và gọi tên các nốt so với Am7.
+3. Đệm hai chorus "So What"-kiểu trên vamp Rê Dorian bằng các khối quãng 4.
 `,
   },
   {

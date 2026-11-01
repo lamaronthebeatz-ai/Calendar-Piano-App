@@ -420,6 +420,8 @@ Tay phải chơi [[giai-dieu|giai điệu]] đơn giản trên phím trắng, ta
       ['Wikipedia — Piano Sonata No. 2 (Ives) (Concord)', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._2_(Ives)'],
     ],
     body: `
+Đặt lòng bàn tay lên năm phím trắng liền nhau và ấn xuống. Bạn vừa chơi một **âm cụm**. Nghe có vẻ như trò nghịch của trẻ con — và đúng là trẻ con nào cũng làm vậy — nhưng các nhà soạn nhạc thế kỷ 20 và các pianist jazz đã biến nó thành một màu âm thanh nghiêm túc, từ dữ dội tới êm như nhung.
+
 Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang-bon]]), âm cụm chồng **quãng 2** — âm thanh dày đặc, giống một "khối màu" hơn là hợp âm.
 
 ::keyboard C4 D4 E4 F4 G4 | Âm cụm phím trắng C – G (dùng lòng bàn tay)
@@ -447,12 +449,17 @@ Thay vì chồng [[quang|quãng 3]] ([[hop-am-ba]]) hay quãng 4 ([[hoa-am-quang
 Trong [[nhac-pho-thong-the-ky-20|nhạc pop]] và jazz, "cluster voicing" (các [[hop-am-mo-rong|nốt mở rộng]] xếp sát nhau) là một dạng âm cụm nhẹ — xem [[xep-hop-am]].
 
 ## Âm cụm trong piano jazz
-Lamar gọi đây là **hoà âm quãng 2** (secundal): hợp âm có ít nhất ba nốt **liền bậc** trong một âm giai. Độ nghịch tuỳ âm giai: âm cụm **cromatic** gắt nhất, âm cụm **ngũ cung** êm hơn nhiều.
+Trong piano jazz, đây là **hoà âm quãng 2** (secundal): hợp âm có ít nhất ba nốt **liền bậc** trong một âm giai. Độ nghịch tuỳ âm giai: âm cụm **cromatic** gắt nhất, âm cụm **ngũ cung** êm hơn nhiều.
 ::staff treble C4+Db4+D4=cromatic C4+D4+E4+G4=ngũ_cung A3+B3+D4+E4=đa_nghĩa | C – D♭ – D (gắt); C – D – E – G lấy từ ngũ cung (êm); A – B – D – E có thể là Cmaj13, E7sus4 hoặc D6/9
 - **Hai cách dùng**: dữ dội, gây sốc như trong free jazz — Cecil Taylor dùng âm cụm để tránh mọi giọng (xem [[post-bop-free-jazz]]); hoặc **mềm** trong ballad — lối gắn với [[bill-evans|Bill Evans]].
 - Với ballad: tránh quãng 2 thứ ở trên cùng; đặt âm cụm ở **âm vực giữa** (thấp quá thì đục, cao quá thì mỏng).
-- Lamar liệt kê các pianist dùng âm cụm: Jelly Roll Morton, [[art-tatum|Art Tatum]], Herbie Nichols, Cecil Taylor, [[dave-brubeck|Dave Brubeck]], Horace Silver, [[duke-ellington|Duke Ellington]], [[thelonious-monk|Thelonious Monk]] — Monk có lúc chơi âm cụm bằng cả khuỷu tay, và quãng 2 thứ là "chữ ký" của ông (xem [[the-bam-bac-thay-jazz]]).
+- Những pianist dùng âm cụm: Jelly Roll Morton, [[art-tatum|Art Tatum]], Herbie Nichols, Cecil Taylor, [[dave-brubeck|Dave Brubeck]], Horace Silver, [[duke-ellington|Duke Ellington]], [[thelonious-monk|Thelonious Monk]] — Monk có lúc chơi âm cụm bằng cả khuỷu tay, và quãng 2 thứ là "chữ ký" của ông (xem [[the-bam-bac-thay-jazz]]).
 Bảng chọn thế bấm theo phong cách: [[chon-the-bam-jazz]].
+
+## Câu hỏi và bài tập
+1. Bấm âm cụm phím trắng, phím đen và cromatic ở âm vực trầm, giữa, cao; nghe độ "đục".
+2. Dựng một âm cụm ngũ cung bốn nốt cho Cmaj7 và đặt nó ở âm vực giữa trong một ballad.
+3. Nghe một bản thu của Monk; tìm chỗ ông chơi quãng 2 thứ.
 `,
   },
   {
