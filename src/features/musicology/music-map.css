@@ -1,32 +1,64 @@
-/* Musicology map (MusicMap.tsx): the frame, land, pins and the side panel. */
+/* Musicology atlas (MusicMap.tsx): paper-and-ink map, period-coloured pins, timeline and side panel. */
 .mm-frame {
+  --sea: color-mix(in oklch, var(--color-gold) 9%, var(--color-surface-sunken));
+  --paper: color-mix(in oklch, var(--color-gold) 7%, color-mix(in oklch, var(--color-ink) 11%, var(--color-surface-raised)));
   position: relative;
-  height: min(62vh, 560px);
+  height: min(60vh, 540px);
   min-height: 320px;
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 24px;
   border: 1px solid var(--color-border);
-  background: color-mix(in oklch, var(--color-accent) 10%, var(--color-surface-sunken));
+  background:
+    radial-gradient(120% 90% at 50% 40%, transparent 55%, color-mix(in oklch, var(--color-ink) 9%, transparent)),
+    var(--sea);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 14%, transparent), 0 18px 40px -24px rgb(0 0 0 / 0.45);
   touch-action: none;
   cursor: grab;
   user-select: none;
 }
 .mm-frame:active { cursor: grabbing; }
-.mm-land { fill: color-mix(in oklch, var(--color-ink) 13%, var(--color-surface-raised)); stroke: color-mix(in oklch, var(--color-ink) 22%, transparent); stroke-width: 0.15; vector-effect: non-scaling-stroke; }
-.mm-border { fill: none; stroke: color-mix(in oklch, var(--color-ink) 22%, transparent); stroke-linejoin: round; }
+.mm-graticule { fill: none; stroke: color-mix(in oklch, var(--color-gold) 22%, transparent); stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
+.mm-coast { fill: none; stroke: color-mix(in oklch, var(--color-gold) 16%, transparent); stroke-linejoin: round; }
+.mm-land { fill: var(--paper); stroke: color-mix(in oklch, var(--color-gold) 40%, var(--color-ink-faint)); stroke-width: 0.6; vector-effect: non-scaling-stroke; }
+.mm-border { fill: none; stroke: color-mix(in oklch, var(--color-ink) 20%, transparent); stroke-linejoin: round; }
+.mm-sea {
+  fill: color-mix(in oklch, var(--color-gold) 55%, var(--color-ink-faint));
+  opacity: 0.55;
+  font-family: var(--font-display, serif);
+  font-style: italic;
+  text-anchor: middle;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.mm-ghost { fill: color-mix(in oklch, var(--color-ink) 28%, transparent); }
 .mm-pin { cursor: pointer; outline: none; }
-.mm-pin .mm-hit { fill: transparent; stroke: none; }
-.mm-pin circle:not(.mm-hit) { fill: var(--color-gold); stroke: var(--color-surface); transition: r 0.2s; }
-.mm-pin:hover circle:not(.mm-hit), .mm-pin:focus-visible circle:not(.mm-hit) { fill: var(--color-accent); }
-.mm-pin.is-on circle:not(.mm-hit) { fill: var(--color-accent); }
+.mm-pin .mm-hit { fill: transparent; }
+.mm-pin .mm-halo { fill: var(--c); opacity: 0.12; }
+.mm-pin .mm-dot { fill: var(--c); stroke: var(--color-surface); }
+.mm-pin:hover .mm-halo, .mm-pin:focus-visible .mm-halo { opacity: 0.32; }
+.mm-pin.is-on .mm-halo { opacity: 0.3; }
+.mm-pulse { fill: none; stroke: var(--c); transform-box: fill-box; transform-origin: center; animation: mm-pulse 1.8s ease-out infinite; }
+@keyframes mm-pulse { from { transform: scale(1); opacity: 0.9; } to { transform: scale(3.4); opacity: 0; } }
 .mm-pin text {
   fill: var(--color-ink);
   font-weight: 600;
   paint-order: stroke;
-  stroke: var(--color-surface);
+  stroke: var(--paper);
   stroke-linejoin: round;
   pointer-events: none;
 }
+.mm-year {
+  position: absolute; left: 16px; bottom: 12px;
+  font-family: var(--font-display, serif);
+  font-size: clamp(26px, 5vw, 44px);
+  font-weight: 600;
+  line-height: 1;
+  color: color-mix(in oklch, var(--color-gold) 75%, var(--color-ink));
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.mm-year span { margin: 0 0.15em; opacity: 0.5; }
 .mm-zoom { position: absolute; right: 10px; bottom: 10px; display: grid; gap: 6px; }
 .mm-zoom button {
   width: 36px; height: 36px; border-radius: 12px;
@@ -37,15 +69,74 @@
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.12);
 }
 .mm-zoom button:active { transform: scale(0.92); }
-.mm-panel {
-  border-radius: 22px;
+
+.mm-timeline {
+  display: flex; align-items: center; gap: 12px;
+  border-radius: 20px;
   border: 1px solid var(--color-border);
   background: var(--color-surface-raised);
+  padding: 10px 14px;
+}
+.mm-play {
+  width: 40px; height: 40px; flex-shrink: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e2b66e, #c9773f);
+  color: #1b130b;
+  font-size: 13px;
+  box-shadow: 0 6px 16px -6px #c9773f;
+}
+.mm-play:active { transform: scale(0.94); }
+.mm-range { position: relative; height: 22px; }
+.mm-track {
+  position: absolute; left: 0; right: 0; top: 9px; height: 4px; border-radius: 4px;
+  background: linear-gradient(to right,
+    var(--color-border) var(--a), color-mix(in oklch, var(--color-gold) 80%, transparent) var(--a),
+    color-mix(in oklch, var(--color-gold) 80%, transparent) var(--b), var(--color-border) var(--b));
+}
+.mm-range input {
+  position: absolute; inset: 0; width: 100%; margin: 0;
+  appearance: none; -webkit-appearance: none; background: none; pointer-events: none;
+}
+.mm-range input::-webkit-slider-thumb {
+  -webkit-appearance: none; pointer-events: auto;
+  width: 18px; height: 18px; border-radius: 999px;
+  background: var(--color-surface); border: 2px solid var(--color-gold);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.25); cursor: grab;
+}
+.mm-range input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 14px; height: 14px; border-radius: 999px;
+  background: var(--color-surface); border: 2px solid var(--color-gold); cursor: grab;
+}
+.mm-range input::-moz-range-track { background: none; }
+
+.mm-era {
+  display: inline-flex; align-items: center; gap: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+  padding: 4px 11px 4px 8px;
+  font-size: 12.5px;
+  color: var(--color-ink-muted);
+  transition: opacity 0.15s, color 0.15s;
+}
+.mm-era i { width: 10px; height: 10px; border-radius: 999px; background: var(--c); box-shadow: 0 0 0 3px color-mix(in oklch, var(--c) 22%, transparent); }
+.mm-era:hover { color: var(--color-ink); }
+.mm-era.is-off { opacity: 0.45; }
+.mm-era.is-off i { background: transparent; box-shadow: inset 0 0 0 1.5px var(--c); }
+
+.mm-panel {
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  background:
+    linear-gradient(180deg, color-mix(in oklch, var(--color-gold) 6%, transparent), transparent 140px),
+    var(--color-surface-raised);
   padding: 18px;
   align-self: start;
 }
-@media (min-width: 1024px) { .mm-panel { max-height: min(62vh, 560px); overflow-y: auto; } }
-.mm-event { border-left: 2px solid color-mix(in oklch, var(--color-gold) 55%, transparent); padding-left: 12px; }
+@media (min-width: 1024px) { .mm-panel { position: sticky; top: 72px; max-height: calc(100vh - 96px); overflow-y: auto; } }
+.mm-event { border-left: 2px solid color-mix(in oklch, var(--c) 70%, transparent); padding-left: 12px; transition: opacity 0.2s; }
+.mm-event.is-out { opacity: 0.42; }
 .mm-link {
   display: inline-flex; align-items: center; gap: 3px;
   border-radius: 999px;
@@ -68,3 +159,4 @@
 }
 .mm-chip:hover { color: var(--color-ink); }
 .mm-chip.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-surface); }
+@media (prefers-reduced-motion: reduce) { .mm-pulse { animation: none; opacity: 0; } }

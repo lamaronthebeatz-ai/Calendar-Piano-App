@@ -31,6 +31,7 @@ import { useArticle, type ArticleText } from './body'
 import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
+import { PLACES_BY_SLUG } from '../musicology/places'
 import { Copyright } from '../../components/Copyright'
 import { QuizCard } from './QuizCard'
 import { booksWithChapter } from '../curriculum/reader/model'
@@ -1219,6 +1220,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
           </nav>
         )}
 
+        <OnTheMap slug={article.slug} />
         {backlinks.length > 0 && <Backlinks articles={backlinks} />}
         <RelatedRow title="Cùng chủ đề" articles={siblings.filter((a) => a !== article)} />
       </article>
@@ -1323,6 +1325,36 @@ function LinkPreviews({ children }: { children: ReactNode }) {
         </div>
       )}
     </div>
+  )
+}
+
+/** Places on the musicology atlas whose events link to this article, each opening the map there. */
+function OnTheMap({ slug }: { slug: string }) {
+  const places = PLACES_BY_SLUG.get(slug)
+  if (!places?.length) return null
+  return (
+    <section className="space-y-3 border-t border-[var(--color-border)] pt-6">
+      <h2 className="flex items-baseline justify-between font-display text-[19px] font-semibold text-[var(--color-ink)]">
+        Trên bản đồ âm nhạc
+        <span className="font-sans text-[12px] font-normal text-[var(--color-ink-faint)]">{places.length}</span>
+      </h2>
+      <ul className="flex flex-wrap gap-2">
+        {places.map((pl) => {
+          const ev = pl.events.find((e) => e.slugs.includes(slug))!
+          return (
+            <li key={pl.id}>
+              <Link to={`/musicology/ban-do?p=${pl.id}`} className="theory-card group flex items-center gap-2.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-2.5">
+                <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-gold)] shadow-[0_0_0_3px_color-mix(in_oklch,var(--color-gold)_22%,transparent)]" />
+                <span className="min-w-0">
+                  <span className="block text-[14px] font-medium leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-gold)]">{pl.name}</span>
+                  <span className="block text-[12px] text-[var(--color-ink-faint)]">{ev.year} · {pl.country}</span>
+                </span>
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    </section>
   )
 }
 

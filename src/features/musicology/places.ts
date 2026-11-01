@@ -4,6 +4,9 @@
  * coordinates come from. Every slug is checked by scripts/check-links.mjs.
  */
 export type Region = 'europe' | 'americas' | 'vietnam' | 'asia'
+/** Musical tradition of a place; Western events are further split into periods by year. */
+export type Tradition = 'western' | 'jazz' | 'vietnam' | 'world'
+export type Era = 'medieval' | 'renaissance' | 'baroque' | 'classical' | 'romantic' | 'modern' | 'jazz' | 'vietnam' | 'world'
 
 export interface MapEvent {
   /** Year or span as written ("1723 – 1750", "~1160"). */
@@ -24,6 +27,8 @@ export interface Place {
   /** Title of the English Wikipedia article used as the source. */
   wiki: string
   events: MapEvent[]
+  /** Defaults by region: Europe → western, Americas → jazz, Vietnam → vietnam, Asia → world. */
+  tradition?: Tradition
 }
 
 export const REGIONS: Record<Region, { title: string; /** lon west, lat north, lon east, lat south */ box: [number, number, number, number] }> = {
@@ -33,8 +38,8 @@ export const REGIONS: Record<Region, { title: string; /** lon west, lat north, l
   asia: { title: 'Châu Á', box: [68, 50, 145, -12] },
 }
 
-const p = (id: string, name: string, country: string, lat: number, lon: number, region: Region, wiki: string, events: MapEvent[], local?: string): Place =>
-  ({ id, name, country, lat, lon, region, wiki, events, local })
+const p = (id: string, name: string, country: string, lat: number, lon: number, region: Region, wiki: string, events: MapEvent[], local?: string, tradition?: Tradition): Place =>
+  ({ id, name, country, lat, lon, region, wiki, events, local, tradition })
 const e = (year: string, text: string, ...slugs: string[]): MapEvent => ({ year, text, slugs })
 
 export const PLACES: Place[] = [
@@ -107,7 +112,7 @@ export const PLACES: Place[] = [
     e('1756', 'Wolfgang Amadeus Mozart ra đời', 'wolfgang-amadeus-mozart'),
   ]),
   p('eisenstadt', 'Eisenstadt', 'Áo', 47.846, 16.527, 'europe', 'Joseph Haydn', [
-    e('từ 1761', 'Haydn làm nhạc trưởng cho dòng họ Esterházy', 'joseph-haydn', 'thoi-ky-co-dien'),
+    e('1761 – 1790', 'Haydn làm nhạc trưởng cho dòng họ Esterházy', 'joseph-haydn', 'thoi-ky-co-dien'),
   ]),
   p('raiding', 'Raiding', 'Áo', 47.565, 16.533, 'europe', 'Franz Liszt', [
     e('1811', 'Franz Liszt ra đời (khi đó thuộc Vương quốc Hungary)', 'franz-liszt'),
@@ -168,7 +173,7 @@ export const PLACES: Place[] = [
   ], 'Saint Petersburg'),
   p('moscow', 'Moskva', 'Nga', 55.756, 37.617, 'europe', 'Moscow Conservatory', [
     e('1866', 'Nikolai Rubinstein lập Nhạc viện Moskva; Tchaikovsky dạy ở đây', 'pyotr-ilyich-tchaikovsky', 'truong-phai-su-pham-nga'),
-    e('từ 1922', 'Heinrich Neuhaus dạy piano ở Nhạc viện Moskva', 'neuhaus-lo-trinh'),
+    e('1922 – 1964', 'Heinrich Neuhaus dạy piano ở Nhạc viện Moskva', 'neuhaus-lo-trinh'),
   ], 'Moscow'),
   p('votkinsk', 'Votkinsk', 'Nga', 57.050, 54.000, 'europe', 'Votkinsk', [
     e('1840', 'Pyotr Ilyich Tchaikovsky ra đời', 'pyotr-ilyich-tchaikovsky'),
@@ -201,7 +206,7 @@ export const PLACES: Place[] = [
   ]),
   p('woodstock', 'Woodstock', 'Hoa Kỳ', 42.041, -74.118, 'americas', "4′33″", [
     e('1952', 'David Tudor trình diễn lần đầu *4′33″* của John Cage', 'john-cage', 'thoi-ky-the-ky-20'),
-  ]),
+  ], undefined, 'western'),
   p('havana', 'La Habana', 'Cuba', 23.113, -82.366, 'americas', 'Chano Pozo', [
     e('thế kỷ XIX – XX', 'Nhạc Afro-Cuban: clave, son, rumba — nền của latin jazz', 'clave-va-latin-jazz'),
     e('1947', 'Tay trống Chano Pozo từ Havana cùng Dizzy Gillespie làm "Manteca"', 'clave-va-latin-jazz', 'phong-cach-jazz'),
@@ -251,3 +256,72 @@ export const PLACES: Place[] = [
     e('truyền thống', 'Gamelan Bali: nhịp nhanh, lối đan xen kotekan', 'gamelan', 'ly-thuyet-gamelan-java-va-bali'),
   ]),
 ]
+
+/* ------------------------------------------------------------------ time and periods */
+
+export const YEAR_MIN = 1100
+export const YEAR_MAX = 2025
+
+const ROMAN: Record<string, number> = { I: 1, V: 5, X: 10, L: 50 }
+const roman = (r: string) => [...r].reduce((n, ch, i, a) => (ROMAN[ch] < (ROMAN[a[i + 1]] ?? 0) ? n - ROMAN[ch] : n + ROMAN[ch]), 0)
+
+/**
+ * Numeric span of an event's year text: "1723 – 1750", "~1160 – 1250", "29/5/1913", "từ 1946", "1860s",
+ * "thập niên 1930", "đầu / cuối thập niên 1940", "thế kỷ XIV", "thế kỷ XVII – XVIII", "đầu thế kỷ XX", "2011 / 2017".
+ * Undated texts ("truyền thống") give null and stay visible at every time.
+ */
+export function yearsOf(text: string): [number, number] | null {
+  const t = text.toLowerCase()
+  const cent = /thế kỷ ([ivxl]+)(?:\s*–\s*([ivxl]+))?/.exec(t)
+  if (cent) {
+    const a = (roman(cent[1].toUpperCase()) - 1) * 100, b = (roman((cent[2] ?? cent[1]).toUpperCase()) - 1) * 100 + 99
+    if (t.startsWith('đầu')) return [a, a + 30]
+    if (t.startsWith('cuối')) return [b - 30, b]
+    return [a, b]
+  }
+  const dec = /(?:thập niên )?(\d{4})s?/.exec(t)
+  if (/thập niên|\d{4}s/.test(t) && dec) {
+    const a = Number(dec[1])
+    if (t.startsWith('đầu')) return [a, a + 4]
+    if (t.startsWith('cuối')) return [a + 5, a + 9]
+    return [a, a + 9]
+  }
+  const ys = [...t.matchAll(/\d{4}/g)].map((m) => Number(m[0]))
+  if (!ys.length) return null
+  if (t.startsWith('từ')) return [ys[0], YEAR_MAX]
+  return [Math.min(...ys), Math.max(...ys)]
+}
+
+export const ERAS: Record<Era, { title: string; hue: number }> = {
+  medieval: { title: 'Trung cổ', hue: 300 },
+  renaissance: { title: 'Phục hưng', hue: 150 },
+  baroque: { title: 'Baroque', hue: 55 },
+  classical: { title: 'Cổ điển', hue: 235 },
+  romantic: { title: 'Lãng mạn', hue: 350 },
+  modern: { title: 'Thế kỷ 20', hue: 195 },
+  jazz: { title: 'Jazz & Mỹ Latinh', hue: 85 },
+  vietnam: { title: 'Việt Nam', hue: 25 },
+  world: { title: 'Âm nhạc thế giới', hue: 125 },
+}
+
+const DEFAULT_TRADITION: Record<Region, Tradition> = { europe: 'western', americas: 'jazz', vietnam: 'vietnam', asia: 'world' }
+export const traditionOf = (pl: Place) => pl.tradition ?? DEFAULT_TRADITION[pl.region]
+
+/** Period of an event: its place's tradition, and for Western music the period its first year falls in. */
+export function eraOf(ev: MapEvent, pl: Place): Era {
+  const tr = traditionOf(pl)
+  if (tr !== 'western') return tr
+  const y = yearsOf(ev.year)?.[0] ?? 1900
+  return y < 1400 ? 'medieval' : y < 1600 ? 'renaissance' : y < 1750 ? 'baroque' : y < 1820 ? 'classical' : y < 1900 ? 'romantic' : 'modern'
+}
+
+/** slug → the places whose events link to it (for "on the map" in articles). */
+export const PLACES_BY_SLUG: Map<string, Place[]> = (() => {
+  const m = new Map<string, Place[]>()
+  for (const pl of PLACES) for (const ev of pl.events) for (const s of ev.slugs) {
+    const list = m.get(s) ?? []
+    if (!list.includes(pl)) list.push(pl)
+    m.set(s, list)
+  }
+  return m
+})()

@@ -49,8 +49,18 @@ TOL = 0.06  # map units (the plane is 1000 wide): under half a pixel even at 8x 
 def path(lines, closed):
     """Relative SVG path, coordinates in tenths of a unit."""
     parts = []
+    runs = []
     for pts in lines:
-        xy = simplify([project(*p) for p in pts], TOL)
+        # a ring that crosses the 180° meridian jumps across the whole plane: cut it there into separate runs
+        run = []
+        for p in pts:
+            q = project(*p)
+            if run and abs(q[0] - run[-1][0]) > W / 2:
+                runs.append(run); run = []
+            run.append(q)
+        runs.append(run)
+    for xy in runs:
+        xy = simplify(xy, TOL)
         q = [(round(x * 10), round(y * 10)) for x, y in xy]
         if len(q) < (4 if closed else 2): continue
         steps = [f'{(x-px)/10:g},{(y-py)/10:g}' for (px, py), (x, y) in zip(q, q[1:]) if (x, y) != (px, py)]
