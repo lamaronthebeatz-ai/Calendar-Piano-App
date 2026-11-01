@@ -11,6 +11,11 @@ import { PARTS, RESOLVED, type PartId, type ResolvedBranch } from './taxonomy'
 import { ScrollArea } from '../../components/ScrollArea'
 import { BranchTree } from './BranchTree'
 import { useBack } from '../../hooks/useBack'
+import { MusicMap } from './MusicMap'
+import { PLACES } from './places'
+
+/** The map of places lives at /musicology/ban-do, beside the branches. */
+const MAP_ID = 'ban-do'
 
 const hueTint = (hue: number) => ({ '--tint': `oklch(0.6 0.13 ${hue})` }) as CSSProperties
 
@@ -57,7 +62,9 @@ export function MusicologyPage() {
             </button>
           )}
           <div className="min-w-0 flex-1">
-            {branch ? (
+            {id === MAP_ID ? (
+              <p className="truncate font-display text-[15.5px] font-semibold leading-tight text-[var(--color-ink)]">Bản đồ âm nhạc</p>
+            ) : branch ? (
               // The breadcrumb gives way to the branch's name as its large title scrolls under the bar.
               <div className="grid">
                 <p className="collapse-out truncate text-[12.5px] text-[var(--color-ink-muted)] [grid-area:1/1]">
@@ -79,6 +86,8 @@ export function MusicologyPage() {
 
       {!id ? (
         <MapIndex />
+      ) : id === MAP_ID ? (
+        <MusicMap />
       ) : branch ? (
         <BranchView branch={branch} />
       ) : (
@@ -147,6 +156,15 @@ function MapIndex() {
           <div className="h-full rounded-full bg-gradient-to-r from-[#e2b66e] to-[#c9773f] transition-[width] duration-700" style={{ width: `${pct}%` }} />
         </div>
       </section>
+
+      <Link to={`/musicology/${MAP_ID}`} className="group flex items-center gap-4 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 transition-colors hover:border-[var(--color-gold)] sm:p-5">
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-surface-sunken)] text-[var(--color-gold)]"><CompassIcon width={24} height={24} /></span>
+        <span className="min-w-0 flex-1">
+          <span className="block font-display text-[17px] font-semibold text-[var(--color-ink)]">Bản đồ: nơi âm nhạc đã xảy ra</span>
+          <span className="block text-[13px] text-[var(--color-ink-muted)]">{PLACES.length} địa điểm từ Leipzig, Vienna, New Orleans tới Huế — mỗi sự kiện dẫn sang bài trong thư viện.</span>
+        </span>
+        <ArrowUpRightIcon width={18} height={18} className="shrink-0 text-[var(--color-ink-faint)] transition-colors group-hover:text-[var(--color-gold)]" />
+      </Link>
 
       <QuoteBanner />
 
