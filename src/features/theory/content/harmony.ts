@@ -978,12 +978,15 @@ So sánh: [[so-sanh-hai-truong-phai-hoa-am]]; tổng quan: [[hai-truong-phai-hoa
     summary: 'Chuỗi hợp âm nối tiếp nhau; một số vòng phổ biến xuất hiện trong hàng ngàn bài hát.',
     wiki: 'Chord_progression',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ["Wikipedia — List of variations on Pachelbel's Canon", 'https://en.wikipedia.org/wiki/List_of_variations_on_Pachelbel%27s_Canon'],
       ['Berklee Online — Common chord progressions', 'https://online.berklee.edu/takenote/common-chord-progressions-and-how-to-make-them-your-own/'],
       ['Puget Sound — Shorter progressions from the circle of fifths', 'https://musictheory.pugetsound.edu/mt21c/ShorterProgressionsFromTheCircleOfFifths.html'],
       ["Moreno (EuroMAC 2017) — Root progressions in Bach's chorales", 'https://creaa.unistra.fr/websites/gream/Activites/Euromac_2017_-_Postprint_-_Extended_abstract_-_MORENO_Rodolfo.pdf'],
     ],
     body: `
+Một nửa số bài bạn từng nghe trên radio dùng một trong vài vòng hợp âm dưới đây. Biết chúng, bạn sẽ đệm được hàng trăm bài chỉ sau một buổi chiều — và nghe ra ngay khi một bài jazz "mượn" chúng rồi trang điểm lại.
+
 | Vòng | Trong Đô trưởng | Gặp trong |
 |---|---|---|
 | I – IV – V – I | C – F – G – C | Nhạc thiếu nhi, dân ca, rock 'n' roll |
@@ -996,21 +999,40 @@ So sánh: [[so-sanh-hai-truong-phai-hoa-am]]; tổng quan: [[hai-truong-phai-hoa
 
 ::staff treble C4+E4+G4 B3+D4+G4 C4+E4+A4 C4+F4+A4 | I – V – vi – IV với thể đảo gần nhau
 
+Chơi từng dòng trong bảng, ít nhất bốn lần, cho tới khi tai bạn nhận ra vòng đó trước khi mắt kịp đọc.
+
 ## Câu chuyện của vòng I – V – vi – IV
 - Hoà âm của **[[doi-am|Canon]]** (Pachelbel) là I – V – vi – iii – IV – I – IV – V. Rất ít bài pop dùng đúng nguyên vòng (một ví dụ: "Graduation (Friends Forever)"), nhưng **rất nhiều** bài dùng dạng rút gọn hoặc biến đổi, như "Basket Case" (Green Day).
 - Vòng **I – V – vi – IV** nổi tiếng nhờ màn medley "4 Chords" của nhóm hài Axis of Awesome, ghép hàng chục bài hit dùng cùng vòng này.
 - **[[ii-v-i|ii – V – I]]** được nhiều tài liệu coi là tiến trình phổ biến nhất trong jazz (nhận định định tính, chưa có thống kê); ví dụ "Autumn Leaves", "Tune-Up", "Lady Bird".
 - Trong thánh ca [[johann-sebastian-bach|Bach]], chuyển động nốt gốc **xuống [[quang|quãng]] 5** là phổ biến nhất — gốc rễ của vòng quãng 5 và ii – V – I (xem [[he-thong-hoa-am-co-dien]]).
 
+## Những tiến trình jazz bạn sẽ gặp mỗi ngày
+Ngoài [[ii-v-i]], có vài tiến trình ngắn xuất hiện liên tục trong các bài chuẩn. Ở Đô trưởng:
+| Tiến trình | Hợp âm | Ghi chú |
+|---|---|---|
+| V của V | D7 – G7 – C | hợp âm II thành át (át phụ của V), xem [[hop-am-at-phu]] |
+| I – VI – ii – V | Cmaj7 – A7 – Dm7 – G7 | turnaround quen thuộc nhất, xem [[turnaround-jazz]] |
+| iii – VI – ii – V | Em7 – A7 – Dm7 – G7 | iii thay cho I; bốn hợp âm đi theo quãng 5 |
+| I – ii – iii – IV | Cmaj7 – Dm7 – Em7 – Fmaj7 | gốc đi lên liền bậc; trên IV hay chơi **Lydian** (nâng bậc 4: B thay B♭ trên Fmaj7 là đã có sẵn — F Lydian chính là phím trắng từ F) |
+| I – IV | Cmaj7 – Fmaj7 (hoặc F7) | IV7 mang màu blues |
+
+::staff treble C4+E4+G4+B4=Cmaj7 D4+F4+A4+C5=Dm7 E4+G4+B4+D5=Em7 F4+A4+C5+E5=Fmaj7 | I – ii – iii – IV: các hợp âm 7 đi lên theo âm giai
+
 ## Cách luyện trên piano
 1. Chơi vòng ở **nguyên vị** để hiểu cấu trúc.
 2. Chuyển sang [[the-dao-hop-am|thể đảo]] gần nhất để tay phải gần như không di chuyển ([[dan-giong]]).
-3. Tay trái chơi nốt gốc, sau đó thử các [[dem-hat-piano|kiểu đệm]] (rải, Alberti, nhịp).
-4. **Dịch giọng**: chơi lại cùng vòng ở G, F, D… — dùng [[vong-quang-nam]] để biết các [[hop-am-ba|hợp âm]] (xem [[dich-giong]]).
+3. Tay trái chơi nốt gốc, rồi thử các [[dem-hat-piano|kiểu đệm]] (rải, Alberti, nhịp).
+4. **Dịch giọng**: chơi lại cùng vòng ở G, F, D… — dùng [[vong-quang-nam]] để biết các hợp âm (xem [[dich-giong]]). Vòng nào bạn chỉ chơi được ở Đô thì bạn chưa thật sự biết nó.
 
 Các khuôn hợp âm pop – rock đầy đủ hơn (puff, plagal sigh, ♭VII, Andalusia, bè trầm đi xuống, nâng tông): [[hoa-am-pop]].
 
 Liên quan: [[chuc-nang-hoa-am]], [[blues-12-nhip]], [[hop-am-muon]], [[mo-tien-hoa-am]]. [[bien-tau|Biến tấu]] vòng hợp âm: [[tai-hoa-am]].
+
+## Câu hỏi và bài tập
+1. Chơi I – V – vi – IV và I – vi – IV – V ở G và E♭ bằng thể đảo gần nhất.
+2. Chơi iii – VI – ii – V – I ở Fa trưởng bằng hợp âm 7.
+3. Nghe một bài pop bạn thích; nó dùng vòng nào trong bảng đầu?
 `,
   },
   {

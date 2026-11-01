@@ -338,24 +338,40 @@ Các nốt ♭3, ♭5, ♭7 gọi là **nốt blue**. Ca sĩ và tay guitar **u�
     summary: 'Tiến trình nền tảng của jazz: hợp âm bậc 2 – bậc 5 – bậc 1 nối nhau theo quãng 5; nốt 3 và 7 của mỗi hợp âm tạo nên đường dẫn giọng nửa cung đặc trưng.',
     wiki: 'Ii–V–I_progression',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Open Music Theory 2e — ii–V–I', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz/6.04%3A_iiVI'],
       ['Wikipedia — ii–V–I progression', 'https://en.wikipedia.org/wiki/Ii%E2%80%93V%E2%80%93I_progression'],
       ['Open Music Theory 2e — Substitutions (mode mixture in jazz)', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz/6.06%3A_Substitutions'],
     ],
     body: `
-**ii – V – I** là [[cau-ket|kết chính]] của [[he-thong-hoa-am-co-dien|hoà âm cổ điển]] (tiền át – át – chủ, xem [[chuc-nang-hoa-am]]) dùng **[[hop-am-bay|hợp âm 7]]** ở mọi bậc. Nhận ra nó bằng hai dấu hiệu: **nốt gốc đi theo [[quang|quãng]] 5** và **chuỗi tính chất [[hop-am-ba|hợp âm]]** đặc trưng.
+Nếu chỉ được học một tiến trình trong jazz, hãy học tiến trình này. **ii – V – I** có mặt ở gần như mọi bài chuẩn, nhiều bài thì có ở mọi vài ô. Nó chính là [[cau-ket|kết chính]] của [[he-thong-hoa-am-co-dien|hoà âm cổ điển]] — tiền át, át, chủ (xem [[chuc-nang-hoa-am]]) — nhưng mỗi hợp âm đều là **[[hop-am-bay|hợp âm 7]]**.
+
+::grand F4+A4+C5/D3=Dm7 F4+B4+D5/G2=G7 E4+G4+B4/C3=Cmaj7 | ii – V – I ở Đô trưởng: Dm7 – G7 – Cmaj7
+
+Nhận ra nó bằng hai dấu hiệu: **nốt gốc đi theo quãng 5 xuống** (D → G → C), và **chuỗi loại hợp âm** m7 → 7 → maj7.
+
+## Ba điệu thức, một âm giai
+Dm7 đi với Rê **Dorian**, G7 đi với Sol **Mixolydian**, Cmaj7 đi với Đô **Ionian**. Nghe như ba âm giai phải nhớ? Không: cả ba đều là **phím trắng**, đều là **Đô trưởng**. Một âm giai mẹ phủ trọn ii – V – I.
+
+::staff treble D4 E4 F4 G4 A4 B4 C5 D5 / G4 A4 B4 C5 D5 E5 F5 G5 / C4 D4 E4 F4 G4 A4 B4 C5 | Rê Dorian, Sol Mixolydian, Đô Ionian: cùng bảy nốt của Đô trưởng
+
+Bài học lớn nhất ở đây: **nghĩ theo giọng, đừng nghĩ theo hợp âm**. Khi thấy Dm7 – G7, nghĩ "Đô trưởng", và cả hai ô mở ra trước mắt bạn.
 
 ## Giọng trưởng và giọng thứ
 | Giọng | Tiến trình | Ví dụ |
 |---|---|---|
 | Trưởng | **ii7 – V7 – Imaj7** | Dm7 – G7 – Cmaj7 |
-| Thứ | **iiø7 – V7(♭9) – i7** (hoặc i6, imaj7) | Dø7 – G7♭9 – Cm7 |
-Trong [[am-giai-thu|giọng thứ]], ii là hợp âm **nửa giảm** và V thường thêm **♭9** — cả hai đến từ bậc 6 hạ (♭6) của giọng thứ. Open Music Theory ghi nhận iiø7 thay ii7 và V7♭9 là hai hợp âm **mượn** phổ biến nhất trong jazz, kể cả khi giọng là trưởng (xem [[hop-am-muon]]).
+| Thứ | **iiø7 – V7(♭9) – i** (i7, i6, i(maj7)) | Dø7 – G7♭9 – Cm7 |
 
-## Nốt dẫn hướng (guide tones)
-Nốt **3** và **7** quyết định tính chất hợp âm. Trong ii – V – I chúng nối với nhau theo quy luật:
+Trong [[am-giai-thu|giọng thứ]], ii là hợp âm **nửa giảm** và V thường có **♭9** — cả hai đến từ bậc 6 hạ (A♭ ở Đô thứ). Open Music Theory ghi nhận iiø7 và V7♭9 là hai hợp âm **mượn** phổ biến nhất trong jazz, kể cả khi bài ở giọng trưởng (xem [[hop-am-muon]]). Ở giọng thứ thì không có một âm giai nào phủ trọn ii – V – i: xem [[dieu-thuc-thu-giai-dieu]] và [[am-giai-hoa-thanh-va-am-giai-bon-not]].
+
+::grand F4+Ab4+C5/D3=Dø7 F4+Ab4+B4/G2=G7♭9 Eb4+G4+Bb4/C3=Cm7 | ii – V – i ở Đô thứ
+
+## Nốt dẫn hướng: chỗ hay nhất
+Nốt **3** và **7** quyết định chất của hợp âm. Trong ii – V – I chúng nối với nhau theo một quy luật đẹp tới bất ngờ:
 - Nốt **7** của hợp âm trước đi **xuống [[cung-nua-cung|nửa cung]]** thành nốt **3** của hợp âm sau.
-- Nốt **3** của hợp âm trước **giữ nguyên** thành nốt **7** của hợp âm sau.
+- Nốt **3** của hợp âm trước **đứng yên** thành nốt **7** của hợp âm sau.
+
 | | Dm7 | G7 | Cmaj7 |
 |---|---|---|---|
 | Đường 1 | C (7) | B (3) | B (7) |
@@ -363,19 +379,27 @@ Nốt **3** và **7** quyết định tính chất hợp âm. Trong ii – V –
 
 ::staff treble F4+C5 F4+B4 E4+B4 | Nốt dẫn hướng trong Dm7 – G7 – Cmaj7: mỗi bước chỉ một nốt đi xuống nửa cung
 
-Đây là cùng một nguyên tắc với [[dan-giong|dẫn giọng]] cổ điển: nốt 7 của hợp âm át giải quyết đi xuống.
+Chơi ba cặp nốt đó, không gì khác. Nghe ra cả tiến trình chưa? Hai nốt mà đủ "kể" ii – V – I. Đó là cùng nguyên tắc với [[dan-giong|dẫn giọng]] cổ điển: nốt 7 của hợp âm át giải quyết đi xuống. Chi tiết ở [[not-dan-huong]].
 
-## Chuỗi ii – V
-Mỗi hợp âm đích có thể được "chuẩn bị" bằng ii – V riêng (ii – V phụ, xem [[hop-am-at-phu]]). Nhiều standard (bài chuẩn trong kho nhạc jazz) là một chuỗi ii – V liên tiếp — ví dụ "Autumn Leaves" xen kẽ ii – V – I ở [[am-giai-truong|giọng trưởng]] và giọng thứ song song; "Tune Up" (Miles Davis) đi qua ba giọng bằng ba ii – V – I hạ dần một cung.
+## Chuỗi ii – V và vòng quãng 5
+Mỗi hợp âm đích có thể được "chuẩn bị" bằng một ii – V riêng (xem [[hop-am-at-phu]]). Nhiều bài chuẩn chỉ là một chuỗi ii – V nối nhau: "Autumn Leaves" xen kẽ ii – V – I ở giọng trưởng và giọng thứ song song; "Tune Up" (Miles Davis) đi qua ba giọng bằng ba ii – V – I, mỗi lần hạ một cung.
 
-## Luyện tập
-1. Chơi nốt dẫn hướng (tay trái) qua ii – V – I ở cả 12 giọng, đi theo [[vong-quang-nam]].
-2. Thêm nốt gốc ở bè trầm, rồi chuyển sang [[xep-hop-am|xếp hợp âm không gốc]].
-3. Làm lại với ii – V – i giọng thứ (Dø7 – G7♭9 – Cm7).
+Hai điều Levine nhấn mạnh và bạn nên nhớ:
+- ii – V thường xuất hiện **không có I** theo sau. Hãy coi **ii – V là một khối**, một đơn vị, như một từ hai âm tiết.
+- Vì ii – V – I đi theo quãng 5, **[[vong-quang-nam|vòng quãng 5]]** là đường tập tự nhiên nhất: Dm7 – G7 – Cmaj7, rồi Cm7 – F7 – B♭maj7, rồi B♭m7 – E♭7 – A♭maj7… qua cả 12 giọng.
 
-Mở rộng: [[turnaround-jazz]], [[phan-tich-tien-trinh-jazz]].
+## Mẹo luyện tập
+1. Chơi nốt dẫn hướng (tay trái) qua ii – V – I ở cả 12 giọng, theo vòng quãng 5.
+2. Thêm nốt gốc ở bè trầm, rồi chuyển sang [[xep-hop-am|thế bấm không gốc]].
+3. Làm lại với ii – V – i giọng thứ.
+4. Đừng chỉ tập ở Đô, Fa, Sol. ii – V ở D♭, G♭, B có ở khắp nơi trong các bài chuẩn. **Tập mọi thứ ở mọi giọng.**
 
-Nốt dẫn hướng chi tiết: [[not-dan-huong]]; lick trên ii – V – I: [[lick-va-trich-dan]].
+Mở rộng: [[turnaround-jazz]], [[phan-tich-tien-trinh-jazz]]. Lick trên ii – V – I: [[lick-va-trich-dan]]. Ngũ cung trên ii – V – I: [[ngu-cung-trong-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết ii – V – I ở B♭, E♭, A; tô màu nốt dẫn hướng.
+2. Viết ii – V – i ở Rê thứ và Sol thứ.
+3. Chơi ii – V – I qua 12 giọng theo vòng quãng 5 chỉ bằng hai nốt dẫn hướng, không nhìn giấy.
 `,
   },  {
     slug: 'turnaround-jazz',
@@ -391,7 +415,9 @@ Nốt dẫn hướng chi tiết: [[not-dan-huong]]; lick trên ii – V – I: [
       ['Hutchinson — Music Theory for the 21st-Century Classroom, 31.8 Standard Chord Progressions (LibreTexts)', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/31%3A_Introduction_to_Jazz_Theory/31.08%3A_Standard_Chord_Progressions'],
     ],
     body: `
-**Turnaround** là một [[vong-hop-am|vòng hợp âm]] ngắn — thường 1–2 ô — đặt ở **cuối một đoạn** để "quay" người nghe trở lại đầu bài khi nhắc lại; nó hướng tới hợp âm **V7** (hoặc hợp âm thay thế của V7). Ở lần kết cuối cùng, người chơi bỏ turnaround và dừng ở I. Turnaround xuất hiện ở cuối [[blues-12-nhip|blues 12 ô]] và cuối mỗi đoạn A của [[hinh-thuc-ca-khuc-32|khuôn AABA]].
+Đoạn A của bài sắp hết. Hai ô cuối đáng lẽ là I đứng yên — nhưng nếu bạn sắp nhắc lại đoạn A, đứng yên thì chán, và tay bass cũng chẳng biết nên đi đâu. Đó là chỗ của **turnaround**: một [[vong-hop-am|vòng hợp âm]] ngắn, thường 1 – 2 ô, đặt ở **cuối một đoạn** để "quay" người nghe trở lại đầu bài. Nó luôn hướng tới hợp âm **V7** (hoặc hợp âm thay cho V7) để kéo về I ở đầu đoạn sau. Ở lần kết cuối cùng, bạn bỏ turnaround và dừng ở I.
+
+Turnaround có ở cuối [[blues-12-nhip|blues 12 ô]] và cuối mỗi đoạn A của [[hinh-thuc-ca-khuc-32|khuôn AABA]]. Khi bạn đệm, nó là một trong những chỗ được phép "sáng tạo" nhiều nhất.
 
 ## Từ I – vi – ii – V đến các biến thể
 | Dạng | Ở Đô trưởng | Cách biến đổi |
@@ -401,23 +427,34 @@ Nốt dẫn hướng chi tiết: [[not-dan-huong]]; lick trên ii – V – I: [
 | iii – VI7 – ii – V | Em7 – A7 – Dm7 – G7 | I thay bằng iii ([[thay-the-hop-am|cùng chức năng]]) |
 | I – ♭III°7 – ii – V | Cmaj7 – E♭°7 – Dm7 – G7 | [[hop-am-luot-jazz|Hợp âm 7 giảm lướt]] |
 | I – VI7 – II7 – V7 | Cmaj7 – A7 – D7 – G7 | Mọi hợp âm sau I đều là át |
-| (cả chuỗi át, thay tritone xen kẽ) | E7 – E♭7 – D7 – D♭7 | [[thay-the-tritone|Thay thế tritone]]: bè trầm đi xuống cromatic |
+| (chuỗi át, thay tritone xen kẽ) | E7 – E♭7 – D7 – D♭7 | [[thay-the-tritone|Thay thế tritone]]: bè trầm đi xuống cromatic |
 
 ::staff treble C4+E4+G4+B4=Cmaj7 A3+C#4+E4+G4=A7 D4+F4+A4+C5=Dm7 G3+B3+D4+F4=G7 | I – VI7 – ii – V7 ở Đô trưởng
+
+Đọc bảng từ trên xuống, bạn sẽ thấy một logic: mỗi dòng đổi **một** thứ so với dòng trên. Đó cũng là cách học chúng: tập dòng 1 tới khi chán, rồi đổi một hợp âm.
 
 ## Turnaround Tadd Dameron
 Theo Wikipedia, turnaround mang tên **Tadd Dameron** đi từ I – vi – ii – V qua ba bước:
 1. Biến các hợp âm thứ thành **át phụ**: C – A7 – D7 – G7.
 2. Thay mỗi hợp âm át bằng **hợp âm thay thế tritone**: C – E♭7 – A♭7 – D♭7.
-3. Tuỳ chọn, biến một số hợp âm át thành **[[hop-am-bay|maj7]]**.
-Dạng trong bài **"Lady Bird"** (Dameron; viết khoảng 1939, thu âm 1948) là **Cmaj7 – E♭7 – A♭maj7 – D♭7** rồi về Cmaj7.
-::staff treble C4+E4+G4+B4=Cmaj7 Eb4+G4+Bb4+Db5=E♭7 Ab3+C4+Eb4+G4=A♭maj7 Db4+F4+Ab4+Cb5=D♭7 C4+E4+G4+B4=Cmaj7 | Turnaround Tadd Dameron: bè trầm C – E♭ – A♭ – D♭ – C
-Hãy để ý **bè trầm**: các nốt E♭ – A♭ – D♭ – C cách nhau quãng 5 đi xuống rồi nửa cung — vẫn là "logic" của vòng quãng 5 dù màu sắc rất xa (xem [[vong-quang-nam]]).
+3. Tuỳ chọn, biến một số hợp âm át thành **maj7**.
 
-## Luyện tập
+Dạng trong **"Lady Bird"** (Dameron; viết khoảng 1939, thu âm 1948) là **Cmaj7 – E♭7 – A♭maj7 – D♭7** rồi về Cmaj7.
+
+::staff treble C4+E4+G4+B4=Cmaj7 Eb4+G4+Bb4+Db5=E♭7 Ab3+C4+Eb4+G4=A♭maj7 Db4+F4+Ab4+Cb5=D♭7 C4+E4+G4+B4=Cmaj7 | Turnaround Tadd Dameron: bè trầm C – E♭ – A♭ – D♭ – C
+
+Nghe kỹ **bè trầm**: E♭ – A♭ – D♭ – C là quãng 5 đi xuống rồi nửa cung — vẫn là "logic" của [[vong-quang-nam|vòng quãng 5]] dù màu sắc đã rất xa nhà.
+
+## Mẹo luyện tập
 - Chơi từng dạng trong bảng ở cả 12 giọng, dùng [[xep-hop-am|thế bấm không gốc]] để nối mượt.
-- Khi đệm, thay turnaround tự do ở cuối mỗi đoạn — đó là [[tai-hoa-am|tái hoà âm]] trong lúc chơi.
-- [[ngau-hung-piano|Ngẫu hứng]]: nhắm [[ii-v-i|nốt dẫn hướng]] (3 và 7) của từng hợp âm trong turnaround.
+- Khi đệm, **đổi turnaround tự do** ở cuối mỗi đoạn: lần này I – VI7 – ii – V, lần sau Tadd Dameron. Đó là [[tai-hoa-am|tái hoà âm]] ngay trong lúc chơi. Chỉ cần nhớ: người solo cũng phải nghe được bạn đang đi đâu.
+- [[ngau-hung-piano|Ngẫu hứng]]: nhắm [[not-dan-huong|nốt dẫn hướng]] (3 và 7) của từng hợp âm trong turnaround.
+- Một turnaround cũng là một đoạn dạo đầu và một đoạn kết rất tiện: xem [[head-dao-dau-va-ket]].
+
+## Câu hỏi và bài tập
+1. Viết sáu dạng turnaround trong bảng ở Fa trưởng.
+2. Chơi turnaround Tadd Dameron ở B♭ và E♭.
+3. Đệm một chorus blues ở Đô; hai ô cuối mỗi lần dùng một turnaround khác.
 `,
   },
   {
@@ -431,21 +468,30 @@ Hãy để ý **bè trầm**: các nốt E♭ – A♭ – D♭ – C cách nhau
       ['Songtive — What are line clichés', 'https://www.songtive.com/blog/what-are-line-cliches-in-music-and-how-do-you-use-them/'],
     ],
     body: `
-## Định nghĩa
-**line cliché** là một **đường bè đi liền bậc** — thường từng [[cung-nua-cung|nửa cung]], đôi khi một cung — chuyển động **trên một hợp âm đứng yên**, để thêm chuyển động cho một tiến trình tĩnh. Đường bè có thể nằm ở nốt gốc, nốt 5 hoặc nốt 7; đi lên, đi xuống hoặc đổi hướng. Hay gặp nhất trên **[[hop-am-ba|hợp âm thứ]]**.
+Có những chỗ trong bài mà một hợp âm đứng yên cả hai, bốn ô. Đứng yên thì yên thật, nhưng cũng dễ buồn ngủ. **Line cliché** là cách cho chỗ đó chuyển động mà không đổi hợp âm: một **đường bè đi liền bậc** — thường từng [[cung-nua-cung|nửa cung]], đôi khi một cung — chạy **trên một hợp âm đứng yên**. Đường bè có thể nằm ở nốt gốc, nốt 5 hay nốt 7; đi lên, đi xuống hay đổi hướng. Hay gặp nhất trên **hợp âm thứ**.
 
 ## Hai dạng chuẩn
+Chơi hai dòng dưới đây. Để ý: chỉ **một** nốt chuyển động, mọi nốt còn lại đứng yên.
+
 ::staff treble C4+Eb4+G4+C5=Cm C4+Eb4+G4+B4=Cm(maj7) C4+Eb4+G4+Bb4=Cm7 C4+Eb4+G4+A4=Cm6 | Dạng thứ: nốt C đi xuống C – B – B♭ – A trong khi C – E♭ – G đứng yên
 ::staff treble C4+E4+G4=C C4+E4+G#4=C+ C4+E4+A4=C6 C4+E4+Bb4=C7 | Dạng trưởng: nốt 5 đi lên G – G♯ – A – B♭ (ký hiệu: C, C♯5, C6, C7)
-Mỗi "hợp âm" mới thật ra chỉ là **cùng một hợp âm** với một [[not-ngoai-hop-am|nốt lướt]] chậm — vì thế line cliché là cầu nối giữa [[dan-giong|dẫn giọng]] cổ điển và ký hiệu hợp âm jazz ([[ky-hieu-hop-am]]).
 
-## Ví dụ trong bài hát
-- **"My Funny Valentine"** (Rodgers & Hart): mở đầu bằng Cm – Cm([[hop-am-bay|maj7]]) – Cm7 – Cm6 — ví dụ kinh điển nhất.
-- Lamar liệt kê thêm "In Walked Bud" ([[thelonious-monk|Monk]]) và "Blue Skies" (Irving Berlin).
-- Ngoài jazz: "Stairway to Heaven" (Led Zeppelin) dùng đường bè thứ đi xuống tương tự.
+Trên lead sheet, bạn sẽ thấy bốn tên hợp âm khác nhau. Nhưng thật ra đó chỉ là **cùng một hợp âm** với một [[not-ngoai-hop-am|nốt lướt]] chậm. Hiểu như vậy, bạn sẽ không còn sợ một ô có bốn hợp âm: đó chỉ là một hợp âm và một đường bè. Line cliché là cầu nối giữa [[dan-giong|dẫn giọng]] cổ điển và ký hiệu hợp âm jazz ([[ky-hieu-hop-am]]).
+
+## Nghe ở đâu
+- **"My Funny Valentine"** (Rodgers & Hart): mở đầu bằng Cm – Cm(maj7) – Cm7 – Cm6 — ví dụ kinh điển nhất.
+- "In Walked Bud" ([[thelonious-monk|Monk]]) và "Blue Skies" (Irving Berlin).
+- Ngoài jazz: "Stairway to Heaven" (Led Zeppelin) dùng một đường bè thứ đi xuống tương tự.
 
 ## Dùng để tái hoà âm
-Lamar dùng line cliché để làm sống động những chỗ **một hợp âm kéo dài** (ví dụ "Summertime") hoặc những cặp ii – V lặp lại ("Satin Doll") — xem [[tai-hoa-am]]. Ở bè trầm, chuỗi hợp âm gạch chéo C – C/B – C/B♭ – A7 cũng là một line cliché (xem [[hop-am-gach-cheo]]).
+Khi một hợp âm kéo dài quá lâu (ví dụ những ô Dm6 của "Summertime"), hoặc một cặp ii – V lặp đi lặp lại ("Satin Doll"), hãy thử chèn một line cliché. Bạn có ngay chuyển động mà giai điệu không bị đụng (xem [[tai-hoa-am]]).
+
+Line cliché cũng nằm được ở **bè trầm**: chuỗi C – C/B – C/B♭ – A7 là một line cliché trong bass (xem [[hop-am-gach-cheo]]). Và đường bass đi xuống dưới một giai điệu đứng yên là bước đầu của [[tai-hoa-am-nang-cao|tái hoà âm bằng đường bass]].
+
+## Câu hỏi và bài tập
+1. Chơi dạng thứ trên Dm, Gm, Am; dạng trưởng trên F và B♭.
+2. Chơi line cliché bè trầm C – C/B – C/B♭ – A7 – Dm.
+3. Tìm một chỗ hợp âm đứng yên hai ô trở lên trong một bài bạn biết; chèn một line cliché.
 `,
   },
   {
@@ -458,7 +504,12 @@ Lamar dùng line cliché để làm sống động những chỗ **một hợp �
       ['Medium (Jazz Theory) — Harmonic analysis symbols', 'https://medium.com/jazz-theory/harmonic-analysis-symbols-aa235bfc6ded'],
     ],
     body: `
-Phân tích hoà âm cổ điển dựa trên bản nhạc đầy đủ ([[phan-tich-hoa-am]]); phân tích jazz thường làm trên **[[he-so-nashville-va-lead-sheet|lead sheet]]** — chỉ có giai điệu và ký hiệu hợp âm ([[ky-hieu-hop-am]]). Mục tiêu thực tế: biết **mỗi đoạn đang ở giọng nào** để chọn âm giai, thế bấm và chỗ [[tai-hoa-am|tái hoà âm]].
+Nhìn lead sheet một bài chuẩn lần đầu, bạn thấy ba bốn chục hợp âm. Nhìn lại sau khi phân tích, bạn thấy năm sáu "giọng tạm" và vài cặp ii – V. Đó là toàn bộ mục đích của bài này: biến một rừng ký hiệu thành một tấm bản đồ ít đường.
+
+Phân tích hoà âm cổ điển làm trên bản nhạc đầy đủ ([[phan-tich-hoa-am]]); phân tích jazz thường làm trên **[[he-so-nashville-va-lead-sheet|lead sheet]]** — chỉ có giai điệu và ký hiệu hợp âm ([[ky-hieu-hop-am]]). Mục tiêu rất thực tế: biết **mỗi đoạn đang ở giọng nào** để chọn âm giai, thế bấm và chỗ [[tai-hoa-am|tái hoà âm]].
+
+## Hợp âm đổi nhanh, giọng đổi chậm
+Đây là điều quan trọng nhất của cả bài. Lấy "Giant Steps": 16 ô, 26 hợp âm — nghe đã thấy mệt. Nhưng giọng chỉ đổi 10 lần, và chỉ đi qua **ba** giọng (B, G, E♭). Đếm hợp âm thì sợ; đếm giọng thì thở được (xem [[phan-tich-giant-steps]]). Với mọi bài, hãy hỏi: **những hợp âm này cùng thuộc giọng nào?**
 
 ## Các bước
 1. **Tìm giọng chính**: [[hoa-bieu|hoá biểu]], các [[cau-ket|kết]] ở cuối câu (ii – V – I, V – I), hợp âm cuối bài.
@@ -481,6 +532,11 @@ Nhiều giáo trình jazz (thường gắn với Berklee) đánh dấu: **ngoặ
 
 ## Bản đồ hợp âm (chord mapping)
 Bước tiếp theo cho người [[ngau-hung-piano|ngẫu hứng]]: với mỗi giọng tạm, tìm **một âm giai nền** dùng được cho cả nhóm hợp âm (ví dụ B♭ trưởng cho Cm7 – F7 – B♭maj7 – E♭maj7), rồi chỉ đổi âm giai ở chỗ thật sự đổi giọng — xem [[ngau-hung-doc-ngang]].
+
+## Câu hỏi và bài tập
+1. Phân tích tám ô đầu "Autumn Leaves" như trong bảng, rồi tám ô tiếp theo.
+2. Lấy lead sheet một bài chuẩn; vẽ ngoặc dưới mọi cặp ii – V và ghi giọng tạm của từng cặp.
+3. Đếm số hợp âm và số giọng tạm của bài đó. Tỉ lệ là bao nhiêu?
 `,
   },
 
