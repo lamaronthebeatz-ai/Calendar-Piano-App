@@ -1080,6 +1080,8 @@ Liên quan: [[dem-hat-piano]], [[dem-hat-hien-dai]].
       ['Art Research Journal (UFRN) — về Chega de Saudade', 'https://periodicos.ufrn.br/artresearchjournal/article/download/10002/8712/37684'],
     ],
     body: `
+Bossa nova là nhạc thì thầm: không swing, không ồn, nhưng đầy đảo phách tinh tế. Chơi nó trên piano, bạn phải "bắt chước" một cây guitar của João Gilberto — một tay giữ trầm như trống, một tay gảy hợp âm lệch phách. Khó ở chỗ phải **nhẹ** mà vẫn **đều**.
+
 ## Lịch sử ngắn
 | Mốc | Năm |
 |---|---|
@@ -1115,6 +1117,11 @@ Liên quan: [[dem-jazz]], [[dem-hat-hien-dai]].
 ::youtube N-TKOh0zsvU | Jobim — *The Girl from Ipanema* · Stan Getz, João Gilberto, Astrud Gilberto (*Getz/Gilberto*)
 
 ::youtube s61-e29Vr6Q | Jobim — *The Girl from Ipanema* · Stan Getz, Astrud Gilberto
+
+## Câu hỏi và bài tập
+1. Chơi tay trái bossa nova (1 – 5) trên Dm7 – G7 – Cmaj7 – A7 với móc đơn thẳng.
+2. Thêm tay phải đệm đảo phách bằng thế bấm không gốc.
+3. Đệm "Blue Bossa" hai chorus. Bossa nova (Brazil) khác nhịp Afro-Cuban thế nào? Xem [[clave-va-latin-jazz]].
 `,
   },
   {

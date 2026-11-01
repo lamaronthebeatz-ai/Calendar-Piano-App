@@ -1392,6 +1392,8 @@ Tiền đề đầu tiên, và quan trọng nhất: **thế bấm nào cũng dù
       ['Piano With Jonny — Red Garland style', 'https://pianowithjonny.com/piano-lessons/how-to-play-in-the-style-of-red-garland/'],
     ],
     body: `
+Khi người khác solo, việc của bạn là làm cho họ nghe hay hơn. Đó là toàn bộ nghề đệm. Người solo giỏi cần một người đệm biết **nghe**: biết khi nào đẩy, khi nào lùi, khi nào im. Chơi nhiều hợp âm đẹp mà không nghe thì chỉ là chen lấn.
+
 **Comping** (từ *accompanying* hoặc *complementing*) là việc **đệm hợp âm và tiết tấu** cho người đang solo. Piano, guitar, bass và trống đều "comp". Khác với [[dem-hat-piano|đệm hát]] có kiểu đệm cố định, comping là một **cuộc đối thoại**: người đệm nghe người solo và phản ứng.
 
 ## Nguyên tắc
@@ -1399,7 +1401,7 @@ Tiền đề đầu tiên, và quan trọng nhất: **thế bấm nào cũng dù
 - Dùng **hợp âm ngắn**, có khoảng nghỉ giữa các hợp âm.
 - Chơi ở **âm vực khác** người solo.
 - Nối hợp âm với **ít chuyển động nhất** — [[dan-giong|dẫn giọng]] gần, thường bằng [[xep-hop-am|thế bấm không gốc]].
-- Lamar gợi ý nghe **Wynton Kelly** như một mẫu mực.
+- Nghe **Wynton Kelly**: một mẫu mực về đệm.
 
 ## Phân chia hai tay
 | Cách | Tay trái | Tay phải | Khi nào |
@@ -1407,7 +1409,7 @@ Tiền đề đầu tiên, và quan trọng nhất: **thế bấm nào cũng dù
 | Đệm cho chính mình | [[bass-di-jazz|Bass đi]] | Hợp âm không gốc | Chơi một mình, không có bass |
 | Đệm hai tay | Một nửa [[ngon-bam|thế bấm]] | Nửa còn lại ([[the-bam-mo|thế bấm mở]]) | Có bass, người khác solo |
 | Solo | Hợp âm không gốc | Giai điệu, [[ngau-hung-jazz|ngẫu hứng]] | Khi chính mình solo |
-Danh sách "kỹ năng tối thiểu" của Lamar: tay trái — bass đi, [[dem-hat-piano|stride]], nốt gốc, hợp âm đệm; tay phải — giai điệu, [[ii-v-i|nốt dẫn hướng]], [[ngau-hung-piano|ngẫu hứng]]; hai tay — thế bấm hai tay, [[hoa-am-quang-bon|hợp âm quãng 4]].
+Kỹ năng tối thiểu của người đệm: tay trái — bass đi, [[dem-hat-piano|stride]], nốt gốc, hợp âm đệm; tay phải — giai điệu, [[ii-v-i|nốt dẫn hướng]], [[ngau-hung-piano|ngẫu hứng]]; hai tay — thế bấm hai tay, [[hoa-am-quang-bon|hợp âm quãng 4]].
 
 ## Hình tiết tấu đệm
 ::rhythm 4/4 q. e rh // | Charleston: phách 1 và "&" của phách 2 — lấy từ bài "Charleston" (1923) của James P. Johnson, có lẽ là hình đệm nổi tiếng nhất
@@ -1422,6 +1424,15 @@ Thêm: [[dem-cho-ca-si]], [[jam-session]], [[stride-piano]].
 ## Nghe ví dụ
 
 ::youtube ylXk1LBvIqU | Miles Davis — *So What* (album *Kind of Blue*, 1959)
+
+## Mẹo luyện tập
+- Bật một bản thu, tắt tiếng piano nếu được (hoặc chọn bản không có piano), và đệm theo người solo. Thử phản ứng với câu của họ: họ dừng, bạn chen một hợp âm; họ chạy dày, bạn thưa.
+- Ghi âm mình đệm; nghe lại xem có chỗ nào bạn che mất người solo.
+
+## Câu hỏi và bài tập
+1. Đệm một chorus blues ở B♭ chỉ bằng hình Charleston, thế bấm không gốc.
+2. Đệm lại, lần này dùng hình "đẩy" kiểu Red Garland.
+3. Đệm một chorus mà chỉ chơi tối đa tám hợp âm.
 `,
   },
   {
@@ -1435,6 +1446,8 @@ Thêm: [[dem-cho-ca-si]], [[jam-session]], [[stride-piano]].
       ['Wikipedia — Walking bass', 'https://en.wikipedia.org/wiki/Walking_bass'],
     ],
     body: `
+Khi không có tay bass, bạn là tay bass. Một đường bass đi tốt là nửa cái swing của cả ban — và nghe thì đơn giản (bốn nốt đen mỗi ô), nhưng để nó "đi" chứ không "lê" thì cần biết vài nguyên tắc.
+
 ## Nguyên tắc
 - **[[truong-do|Nốt đen]] đều**, bốn nốt mỗi [[so-chi-nhip|ô 4/4]], [[swing]].
 - **Phách 1**: thường là **nốt gốc** của hợp âm; phách 1 và 3 quan trọng nhất vì hợp âm hay đổi ở đó.
@@ -1453,10 +1466,15 @@ Cùng ý tưởng này dùng cho giai điệu [[ngau-hung-piano|ngẫu hứng]] 
 ::staff bass D3=Dm7 F3 A3 Ab3=tiếp_cận / G2=G7 B2 D3 Db3=tiếp_cận / C3=Cmaj7 | Một đường bass đi minh hoạ trên ii – V – I ở Đô trưởng: gốc ở phách 1, nốt hợp âm ở giữa, nốt tiếp cận cromatic (A♭, D♭) ở phách 4
 
 ## Luyện tập
-- Lamar khuyên tập **tay trái riêng** cho đến khi bass đi thật đều, rồi mới thêm hợp âm hoặc giai điệu ở tay phải (xem [[phoi-hop-hai-tay]]).
+- Tập **tay trái riêng** cho đến khi bass đi thật đều, rồi mới thêm hợp âm hoặc giai điệu ở tay phải (xem [[phoi-hop-hai-tay]]).
 - Đổi hướng và đổi kiểu tiếp cận thường xuyên, trộn bước liền bậc với cromatic để đường bass "hát".
 - Tập trên [[blues-12-nhip]] và [[ii-v-i]] trước, rồi [[rhythm-changes]].
 Liên quan: [[dem-jazz]], [[dem-hat-piano]] ([[stride-piano|stride]], kiểu đệm cũ hơn).
+
+## Câu hỏi và bài tập
+1. Viết một đường bass đi cho ii – V – I ở Fa, mỗi hợp âm dùng một kiểu tiếp cận khác ở phách 4.
+2. Chơi bass đi một chorus blues ở Fa, chỉ tay trái, máy đếm ở phách 2 và 4.
+3. Thêm tay phải đệm thưa (hình Charleston) trên đường bass vừa chơi.
 `,
   },  {
     slug: 'stride-piano',
@@ -1473,6 +1491,8 @@ Liên quan: [[dem-jazz]], [[dem-hat-piano]] ([[stride-piano|stride]], kiểu đ�
       ['Wikipedia — Rent party', 'https://en.wikipedia.org/wiki/Rent_party'],
     ],
     body: `
+Stride là lối chơi cho người muốn làm cả một ban nhạc chỉ với hai tay: tay trái vừa là bass vừa là hợp âm, tay phải lo giai điệu. Nó là ông bà của piano jazz — và cũng là bài tập tay trái tốt nhất bạn có thể tìm được. Cảnh báo trước: tay trái của bạn sẽ mỏi.
+
 ## Cấu tạo
 Tay trái **xen kẽ nốt bass (phách 1 và 3) với hợp âm (phách 2 và 4)** — cảm giác "bùm – chát"; "**đơn giản về khái niệm nhưng khó về kỹ thuật**" (xem [[buoc-nhay-xa]]).
 ::grand /C3=1 /E3+G3+C4=2 /G2=3 /E3+G3+C4=4 | Tay trái stride trên C: nốt gốc (phách 1), hợp âm (phách 2), nốt 5 thấp (phách 3), hợp âm (phách 4)
@@ -1491,8 +1511,17 @@ Giảm bước nhảy và độ phức tạp của hợp âm — dùng **quãng 
 - Stride phát triển từ [[dao-phach|ragtime]] ở **Harlem thập niên 1920**; các nghệ sĩ piano độc tấu được thuê chơi ở những "**rent party**" (tiệc góp tiền thuê nhà).
 - **[[james-p-johnson|James P. Johnson]]** (1894–1955) được gọi là "cha đẻ của stride". "**Carolina Shout**" (viết khoảng 1918, thu âm ngày 18/10/1921) là một trong những bản solo piano jazz đầu tiên được ghi âm; [[duke-ellington|Ellington]] học bài này từ cuộn piano.
 - **[[fats-waller|Fats Waller]]** học Johnson; "Handful of Keys" (1929) thành bài thi tài trong các cuộc "đấu đàn" cùng "Carolina Shout".
-- Lamar liệt kê thêm: Willie "The Lion" Smith, Luckey Roberts, Eubie Blake, Teddy Wilson, [[art-tatum|Art Tatum]] (người dần chuyển sang lối tay trái tự do hơn).
+- Những tên tuổi khác: Willie "The Lion" Smith, Luckey Roberts, Eubie Blake, Teddy Wilson, [[art-tatum|Art Tatum]] (người dần chuyển sang lối tay trái tự do hơn).
 Xem thêm: [[nghe-si-piano-jazz]], [[chon-the-bam-jazz]].
+
+## Mẹo luyện tập
+- Tập tay trái riêng, **chậm**, nhìn ít nhất có thể: mắt nhìn phím, tay sẽ mãi phụ thuộc vào mắt.
+- Bước nhảy xa là điểm khó: tập chỉ hai vị trí (nốt bass, hợp âm), nhảy qua lại trong khi đếm, rồi mới thêm tiết tấu.
+
+## Câu hỏi và bài tập
+1. Chơi tay trái stride trên C – A7 – D7 – G7, mỗi hợp âm một ô.
+2. Chơi "Satin Doll" (tám ô đầu) với tay trái stride giản lược: quãng 10 rải và nốt dẫn hướng.
+3. Nghe "Carolina Shout" của James P. Johnson; đếm phách mà tay trái đánh bass.
 `,
   },
   {
@@ -1502,6 +1531,8 @@ Xem thêm: [[nghe-si-piano-jazz]], [[chon-the-bam-jazz]].
     aliases: ['comp for a vocalist', 'đệm cho ca sĩ', 'comping vocalist', 'đệm hát jazz'],
     summary: 'Đệm cho ca sĩ khác đệm cho nhạc công: giọng hát không có cao độ cố định nên ca sĩ dựa vào hoà âm để tìm nốt. Nguyên tắc: hoà âm đơn giản, đôi khi đặt giai điệu trên cùng, nhịp đều để ca sĩ tự do co giãn, chơi nhỏ hơn và tránh âm vực của ca sĩ, lấp chỗ trống khi ca sĩ nghỉ.',
     body: `
+Đệm cho ca sĩ là một nghề riêng, và nhiều tay piano giỏi lại làm dở. Lý do: họ chơi như khi đệm cho kèn. Ca sĩ thì khác — họ không có phím, không có lỗ bấm; họ tìm nốt bằng tai, dựa vào chính hoà âm của bạn. Nếu bạn làm hoà âm mơ hồ, bạn đang kéo thảm dưới chân họ.
+
 ## Vai trò
 **ca sĩ giữ giai điệu**, người đệm giữ **tiết tấu và hoà âm**. Khác với nhạc cụ có phím, **giọng hát không có cao độ cố định** — ca sĩ dựa vào hoà âm của bạn để tìm nốt.
 
@@ -1515,6 +1546,11 @@ Xem thêm: [[nghe-si-piano-jazz]], [[chon-the-bam-jazz]].
 ## Thường gặp trong thực tế
 Về phần [[prelude-ung-tac|dạo đầu]] và kết, cách làm phổ biến (kinh nghiệm chung, không phải quy tắc) là dùng vài ô cuối bài hoặc một [[turnaround-jazz|turnaround]] làm dạo đầu, kết dạo đầu ở hợp âm V7 để ca sĩ dễ bắt nốt đầu tiên.
 Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
+
+## Câu hỏi và bài tập
+1. Dạo đầu bốn ô cho một bài ở Fa trưởng, kết ở C7 với nốt đầu của giai điệu ở trên cùng.
+2. Đệm một bài hát chậm với một người bạn hát; ghi âm và nghe xem bạn có lấn giọng không.
+3. Dịch một bài từ Fa sang Mi giáng cho giọng thấp hơn.
 `,
   },
   {
@@ -1531,6 +1567,8 @@ Liên quan: [[dem-hat-piano]] (đệm hát nói chung), [[dem-jazz]].
       ['Elon University Jazz Studies — jam session etiquette', 'https://www.elon.edu/u/academics/arts-and-sciences/jazz-studies/?p=1719'],
     ],
     body: `
+Buổi jam đầu tiên của bạn sẽ đáng sợ. Buổi thứ năm thì vui. Và buổi thứ hai mươi, bạn sẽ học được điều mà không sách nào dạy nổi: nghe người khác và phản ứng ngay lập tức. Đây là những gì nên biết để buổi đầu bớt sợ.
+
 ## Pianist cần chuẩn bị gì?
 - Xin **danh sách bài** của buổi jam trước và học các bài đó.
 - Mọi buổi jam đều nên có ít nhất một bài **[[rhythm-changes]]** — tập nó ở mọi giọng.
@@ -1548,6 +1586,11 @@ Cấu trúc chung của một lượt chơi ([[hinh-thuc-ca-khuc-32|head]] – s
 - Các buổi jam nổi tiếng với **nhịp độ nhanh, giọng lạ, hoà âm bất ngờ** để "loại" người chơi yếu (*cutting session*).
 - Album trực tiếp *Midnight at Minton's* (Jerry Newman thu năm 1941) có một trong những bản thu sớm nhất của Monk.
 - Trong nửa đầu [[thoi-ky-the-ky-20|thế kỷ 20]], jam session là **hình thức học jazz chính** — trước khi có trường lớp (xem nghiên cứu của Berliner trong [[ngau-hung-jazz]]).
+
+## Câu hỏi và bài tập
+1. Thuộc năm bài hay gặp ở buổi jam nơi bạn ở; chơi được mỗi bài ở hai giọng.
+2. Tập "đổi bốn" với một bản phát đệm: bốn ô bạn solo, bốn ô để trống.
+3. Thuộc rhythm changes ở B♭ đủ để đệm và solo không cần nhìn.
 `,
   },
 
