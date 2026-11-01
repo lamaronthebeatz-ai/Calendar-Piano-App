@@ -1,7 +1,9 @@
 """World outline for the musicology map: Natural Earth 1:50m land and country borders (public domain), via the
 world-atlas TopoJSON (ISC), in the Equal Earth projection (Šavrič, Patterson & Jenny 2018) scaled to a plane 1000
 wide, written as two SVG path strings to src/features/musicology/world.json. MusicMap.tsx uses the same formulas.
-Usage: python3 scripts/map/world.py land-50m.json countries-50m.json"""
+Usage: python3 scripts/map/world.py land-50m.json countries-50m.json [world.json] [tolerance]
+  The map keeps two levels of detail: world-lo.json from the 1:110m files (tolerance 0.25) for zoomed-out views,
+  world.json from the 1:50m files (default tolerance 0.06) once the user zooms in."""
 import json, math, sys
 from pathlib import Path
 
@@ -51,7 +53,7 @@ def simplify(pts, tol):
             keep[bi] = True; stack += [(a, bi), (bi, b)]
     return [p for p, k in zip(pts, keep) if k]
 
-TOL = 0.06  # map units (the plane is 1000 wide): under half a pixel even at 8x zoom on a phone
+TOL = float(sys.argv[4]) if len(sys.argv) > 4 else 0.06  # map units (the plane is 1000 wide): under half a pixel even at 8x zoom on a phone
 
 def path(lines, closed):
     """Relative SVG path, coordinates in tenths of a unit."""
@@ -100,6 +102,6 @@ for g in ct['objects']['countries']['geometries']:
                 count[k] = count.get(k, 0) + 1
 borders = [ca[k] for k, n in count.items() if n > 1]
 
-out = Path(__file__).resolve().parents[2] / 'src/features/musicology/world.json'
+out = Path(__file__).resolve().parents[2] / 'src/features/musicology' / (sys.argv[3] if len(sys.argv) > 3 else 'world.json')
 out.write_text(json.dumps({'w': W, 'h': H, 'land': path(rings, True), 'borders': path(borders, False)}, separators=(',', ':')))
 print(out, out.stat().st_size, 'bytes; h =', H)

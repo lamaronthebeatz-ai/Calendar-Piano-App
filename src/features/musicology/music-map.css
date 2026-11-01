@@ -14,10 +14,10 @@
 }
 .mm-frame:active { cursor: grabbing; }
 .mm-sphere { fill: var(--sea); }
-.mm-rim { fill: none; stroke: color-mix(in oklch, var(--color-gold) 45%, transparent); vector-effect: non-scaling-stroke; }
-.mm-graticule { fill: none; stroke: color-mix(in oklch, var(--color-gold) 22%, transparent); stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
+.mm-rim { fill: none; stroke: color-mix(in oklch, var(--color-gold) 45%, transparent); }
+.mm-graticule { fill: none; stroke: color-mix(in oklch, var(--color-gold) 13%, transparent); }
 .mm-coast { fill: none; stroke: color-mix(in oklch, var(--color-gold) 16%, transparent); stroke-linejoin: round; }
-.mm-land { fill: var(--paper); stroke: color-mix(in oklch, var(--color-gold) 40%, var(--color-ink-faint)); stroke-width: 0.6; vector-effect: non-scaling-stroke; }
+.mm-land { fill: var(--paper); stroke: color-mix(in oklch, var(--color-gold) 40%, var(--color-ink-faint)); stroke-linejoin: round; }
 .mm-border { fill: none; stroke: color-mix(in oklch, var(--color-ink) 20%, transparent); stroke-linejoin: round; }
 .mm-sea {
   fill: color-mix(in oklch, var(--color-gold) 55%, var(--color-ink-faint));
@@ -150,7 +150,6 @@
   stroke-linecap: round;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  filter: drop-shadow(0 0 3px color-mix(in oklch, var(--color-gold) 60%, transparent));
   animation: mm-draw 0.9s ease-out forwards;
 }
 @keyframes mm-draw { to { stroke-dashoffset: 0; } }
@@ -199,9 +198,7 @@
   border-radius: 16px; padding: 9px 12px;
 }
 .mm-search, .mm-round, .mm-top .mm-chip, .mm-layers, .mm-timebar, .mm-sheet, .mm-zoom button {
-  background: color-mix(in oklch, var(--color-surface-raised) 84%, transparent);
-  backdrop-filter: blur(14px) saturate(1.3);
-  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  background: color-mix(in oklch, var(--color-surface-raised) 94%, transparent);
   border: 1px solid color-mix(in oklch, var(--color-border) 85%, transparent);
   box-shadow: 0 10px 28px -14px rgb(0 0 0 / 0.55);
 }
@@ -270,3 +267,19 @@
 
 .mm-sheet { background: color-mix(in oklch, var(--color-surface-raised) 97%, transparent); }
 @media (max-width: 1023px) { .mm-sheet-body { padding-bottom: 88px; } }
+
+/* motion: the svg is moved as one composited layer while a gesture lasts (see showLive in MusicMap.tsx) */
+.mm-svg { transform-origin: 0 0; }
+.mm-svg.is-moving { will-change: transform; }
+.mm-svg.is-moving * { animation-play-state: paused; }
+.mm-svg.is-moving .mm-label, .mm-svg.is-moving .mm-sea { visibility: hidden; }
+.mm-sheet.is-dragging { transition: none; }
+.mm-sheet { transition: max-height 0.35s cubic-bezier(.2,.8,.2,1), transform 0.25s ease-out; touch-action: pan-y; }
+.mm-handle { touch-action: none; cursor: grab; padding: 10px 0 6px; width: 100%; }
+@media (hover: hover) and (pointer: fine) {
+  .mm-search, .mm-round, .mm-top .mm-chip, .mm-layers, .mm-timebar, .mm-zoom button {
+    background: color-mix(in oklch, var(--color-surface-raised) 84%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

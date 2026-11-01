@@ -22,10 +22,13 @@ import './motion-nav.css'
 export function AppShell() {
   useGlobalShortcuts()
   const mainRef = useRef<HTMLElement>(null)
-  const navHidden = useAutoHideNav(mainRef)
+  const autoHidden = useAutoHideNav(mainRef)
   // Each section fades in as a whole; moving within a section (articles, a student's profile) keeps its own transitions.
   // Where view transitions run (layout/viewTransitions.ts) they animate every page change instead.
-  const section = useLocation().pathname.split('/')[1]
+  const { pathname } = useLocation()
+  const section = pathname.split('/')[1]
+  // the full-screen musicology map needs the whole height: the bottom bar stays out of the way there
+  const navHidden = autoHidden || pathname === '/musicology/ban-do'
   useCardGlow()
   useEdgeSwipeBack(mainRef)
   useRubberBand(mainRef)

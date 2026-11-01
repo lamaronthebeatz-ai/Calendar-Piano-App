@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { findArticle, normalize } from '../theory/wiki'
@@ -110,6 +110,34 @@ export function MusicMap() {
   const [playing, setPlaying] = useState(false)
   const [layers, setLayers] = useState(false)
   const [expanded, setExpanded] = useState(false)
+  // the sheet follows the finger on its handle (direct style, no re-render), then snaps: up = expand, down = shrink or close
+  const sheet = useRef<HTMLElement>(null)
+  const drag = useRef<{ y: number; dy: number } | null>(null)
+  const onSheetDown = (ev: React.PointerEvent) => {
+    ;(ev.currentTarget as Element).setPointerCapture(ev.pointerId)
+    drag.current = { y: ev.clientY, dy: 0 }
+    sheet.current?.classList.add('is-dragging')
+  }
+  const onSheetMove = (ev: React.PointerEvent) => {
+    const d = drag.current
+    if (!d || !sheet.current) return
+    d.dy = ev.clientY - d.y
+    sheet.current.style.transform = `translateY(${Math.max(d.dy, expanded ? 0 : -60)}px)`
+  }
+  const onSheetUp = () => {
+    const d = drag.current
+    drag.current = null
+    const el = sheet.current
+    if (!el || !d) return
+    el.classList.remove('is-dragging')
+    el.style.transform = ''
+    if (Math.abs(d.dy) < 6) setExpanded((v) => !v)
+    else if (d.dy < -40) setExpanded(true)
+    else if (d.dy > 60) {
+      if (expanded) setExpanded(false)
+      else closeSheet()
+    }
+  }
   const anim = useRef(0)
   const yrsNow = useRef(yrs)
   yrsNow.current = yrs
@@ -123,11 +151,19 @@ export function MusicMap() {
   }
   const setSelected = (pl: Place | null) => { setSelectedState(pl); setParam('p', pl?.id ?? null) }
 
+  // two levels of detail: the 1:110m outline (19 KB) at once, the 1:50m one only when the user zooms in
+  const [detail, setDetail] = useState<World | null>(null)
   useEffect(() => {
     let live = true
-    import('./world.json').then((m) => { if (live) setWorld(m.default as World) })
+    import('./world-lo.json').then((m) => { if (live) setWorld(m.default as World) })
     return () => { live = false }
   }, [])
+  useEffect(() => {
+    if (detail || view.w > 260) return
+    let live = true
+    import('./world.json').then((m) => { if (live) setDetail(m.default as World) })
+    return () => { live = false }
+  }, [detail, view.w])
 
   useEffect(() => {
     const el = box.current
@@ -146,17 +182,46 @@ export function MusicMap() {
     return { w, x: Math.min(Math.max(v.x, -w * 0.3), W - w * 0.7), y: Math.min(Math.max(v.y, -h * 0.3), H - h * 0.7) }
   }
 
+  /*
+   * While the map moves (drag, pinch, wheel, fly-to) nothing is re-rendered: the live view is kept in a ref and the
+   * whole <svg> is moved with a CSS transform, which the compositor does without repainting the outlines. When the
+   * motion ends the view is committed once, the viewBox changes, and the transform is cleared in the same frame.
+   */
+  const svg = useRef<SVGSVGElement>(null)
+  const liveView = useRef(view)
+  const settle = useRef(0)
+  const showLive = (L: View) => {
+    liveView.current = L
+    const el = svg.current
+    if (!el) return
+    const a = view.w / L.w, sw = size.w / L.w
+    el.style.transform = `translate(${(view.x - L.x) * sw}px, ${(view.y - L.y) * sw}px) scale(${a})`
+    el.classList.add('is-moving')
+  }
+  const commit = () => {
+    window.clearTimeout(settle.current)
+    const L = liveView.current
+    if (L.x === view.x && L.y === view.y && L.w === view.w) { svg.current?.classList.remove('is-moving'); if (svg.current) svg.current.style.transform = ''; return }
+    setView(L)
+  }
+  useLayoutEffect(() => {
+    liveView.current = view
+    const el = svg.current
+    if (el) { el.style.transform = ''; el.classList.remove('is-moving') }
+  }, [view])
+
   const flyTo = (target: View) => {
     cancelAnimationFrame(anim.current)
     const to = clamp(target)
     if (reduced()) { setView(to); return }
-    const from = view, dur = 750
+    const from = liveView.current, dur = 700
     let t0 = -1
     const step = (t: number) => {
       if (t0 < 0) t0 = t
       const u = Math.min(1, (t - t0) / dur), s = u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2
-      setView({ x: from.x + (to.x - from.x) * s, y: from.y + (to.y - from.y) * s, w: from.w * Math.pow(to.w / from.w, s) })
+      showLive({ x: from.x + (to.x - from.x) * s, y: from.y + (to.y - from.y) * s, w: from.w * Math.pow(to.w / from.w, s) })
       if (u < 1) anim.current = requestAnimationFrame(step)
+      else commit()
     }
     anim.current = requestAnimationFrame(step)
   }
@@ -185,7 +250,7 @@ export function MusicMap() {
     setRegion(r)
     flyTo(r === 'world' ? worldView(aspect) : regionView(r, aspect))
   }
-  const focus = (pl: Place) => { setSelected(pl); flyTo(placeView(pl, Math.min(view.w, 70))) }
+  const focus = (pl: Place) => { setSelected(pl); flyTo(placeView(pl, Math.min(liveView.current.w, 70))) }
   const chooseJourney = (j: Journey | null) => {
     setJourneyState(j)
     setParam('j', j?.id ?? null)
@@ -193,11 +258,13 @@ export function MusicMap() {
   }
 
   const zoomAt = (factor: number, sx: number, sy: number) => {
-    setView((v) => {
-      const w = Math.min(Math.max(v.w * factor, MIN_W), W * 1.1)
-      const f = w / v.w
-      return clamp({ w, x: v.x + sx * k * (1 - f), y: v.y + sy * k * (1 - f) })
-    })
+    const L = liveView.current, kl = L.w / Math.max(size.w, 1)
+    const w = Math.min(Math.max(L.w * factor, MIN_W), W * 1.1), f = w / L.w
+    showLive(clamp({ w, x: L.x + sx * kl * (1 - f), y: L.y + sy * kl * (1 - f) }))
+  }
+  const zoomButton = (factor: number) => {
+    const L = liveView.current, w = Math.min(Math.max(L.w * factor, MIN_W), W * 1.1)
+    flyTo({ w, x: L.x + (L.w - w) / 2, y: L.y + ((L.w - w) * aspect) / 2 })
   }
 
   useEffect(() => {
@@ -208,6 +275,8 @@ export function MusicMap() {
       cancelAnimationFrame(anim.current)
       const r = el.getBoundingClientRect()
       zoomAt(Math.exp(ev.deltaY * 0.0015), ev.clientX - r.left, ev.clientY - r.top)
+      window.clearTimeout(settle.current)
+      settle.current = window.setTimeout(commit, 160)
     }
     el.addEventListener('wheel', onWheel, { passive: false })
     return () => el.removeEventListener('wheel', onWheel)
@@ -234,7 +303,8 @@ export function MusicMap() {
     if (ps.size === 1) {
       const dx = ev.clientX - prev.x, dy = ev.clientY - prev.y
       moved.current += Math.abs(dx) + Math.abs(dy)
-      setView((v) => clamp({ ...v, x: v.x - dx * k, y: v.y - dy * k }))
+      const L = liveView.current, kl = L.w / Math.max(size.w, 1)
+      showLive(clamp({ ...L, x: L.x - dx * kl, y: L.y - dy * kl }))
     } else if (ps.size === 2) {
       const [a, b] = [...ps.entries()].map(([id, p]) => (id === ev.pointerId ? { x: ev.clientX, y: ev.clientY } : p))
       const [pa, pb] = [...ps.values()]
@@ -246,6 +316,7 @@ export function MusicMap() {
   }
   const onUp = (ev: React.PointerEvent) => {
     pointers.current.delete(ev.pointerId)
+    if (!pointers.current.size) commit()
     if (ev.type !== 'pointerup' || pointers.current.size || moved.current >= 6 || !downOn.current) return
     const [kind, id] = downOn.current.split(':')
     if (kind === 'p') {
@@ -336,28 +407,27 @@ export function MusicMap() {
   })
 
   const vh = view.w * aspect
+  const shown = view.w <= 260 && detail ? detail : world
   const fullRange = yrs[0] === YEAR_MIN && yrs[1] === YEAR_MAX
   const sheetOpen = Boolean(selected || journey)
+  function closeSheet() {
+    if (selected) { setSelected(null); if (!journey) setExpanded(false) }
+    else { chooseJourney(null); setExpanded(false) }
+  }
 
   return (
     <div className="mm-full">
       <div ref={box} className="mm-frame" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}>
         {!world && <p className="absolute inset-0 grid place-items-center text-[13px] text-[var(--color-ink-faint)]">Đang tải bản đồ…</p>}
-        <svg viewBox={`${view.x} ${view.y} ${view.w} ${vh}`} className="h-full w-full" role="img" aria-label="Bản đồ các địa điểm âm nhạc">
-          <defs>
-            <clipPath id="mm-globe"><path d={SPHERE} /></clipPath>
-          </defs>
+        <svg ref={svg} viewBox={`${view.x} ${view.y} ${view.w} ${vh}`} className="mm-svg h-full w-full" role="img" aria-label="Bản đồ các địa điểm âm nhạc">
           <path d={SPHERE} className="mm-sphere" />
-          <g clipPath="url(#mm-globe)">
-            <path d={GRATICULE} className="mm-graticule" style={{ strokeWidth: 0.6 * k }} />
-            {world && (
-              <>
-                <path d={world.land} className="mm-coast" style={{ strokeWidth: 5 * k }} />
-                <path d={world.land} className="mm-land" />
-                <path d={world.borders} className="mm-border" style={{ strokeWidth: 0.6 * k }} />
-              </>
-            )}
-          </g>
+          <path d={GRATICULE} className="mm-graticule" style={{ strokeWidth: 0.5 * k }} />
+          {shown && (
+            <>
+              <path d={shown.land} className="mm-land" style={{ strokeWidth: 0.7 * k }} />
+              <path d={shown.borders} className="mm-border" style={{ strokeWidth: 0.5 * k }} />
+            </>
+          )}
           <path d={SPHERE} className="mm-rim" style={{ strokeWidth: 1.2 * k }} />
           {view.w > 60 && view.w < 760 && SEAS.map(([name, lon, lat]) => {
             const [x, y] = proj(lon, lat)
@@ -467,8 +537,8 @@ export function MusicMap() {
       </div>
 
       <div className={clsx('mm-zoom', sheetOpen && 'is-shifted')}>
-        <button aria-label="Phóng to" onClick={() => zoomAt(0.6, size.w / 2, size.h / 2)}>+</button>
-        <button aria-label="Thu nhỏ" onClick={() => zoomAt(1 / 0.6, size.w / 2, size.h / 2)}>−</button>
+        <button aria-label="Phóng to" onClick={() => zoomButton(0.55)}>+</button>
+        <button aria-label="Thu nhỏ" onClick={() => zoomButton(1 / 0.55)}>−</button>
       </div>
 
       {/* bottom: the time bar */}
@@ -489,8 +559,8 @@ export function MusicMap() {
 
       {/* the place (or journey) sheet: a timeline tree of what happened there */}
       {sheetOpen && (
-        <aside className={clsx('mm-sheet', expanded && 'is-expanded')} aria-live="polite">
-          <button className="mm-handle" onClick={() => setExpanded((v) => !v)} aria-label={expanded ? 'Thu ngăn' : 'Mở rộng ngăn'}><span /></button>
+        <aside ref={sheet} className={clsx('mm-sheet', expanded && 'is-expanded')} aria-live="polite">
+          <button className="mm-handle" onPointerDown={onSheetDown} onPointerMove={onSheetMove} onPointerUp={onSheetUp} onPointerCancel={onSheetUp} aria-label={expanded ? 'Thu ngăn' : 'Mở rộng ngăn'}><span /></button>
           <div className="mm-sheet-body">
             {selected ? (
               <PlaceTree
@@ -498,10 +568,10 @@ export function MusicMap() {
                 shows={(ev) => shows(ev, selected)}
                 thumbs={thumbs}
                 back={journey ? { label: journey.name, go: () => setSelected(null) } : undefined}
-                onClose={() => { setSelected(null); if (!journey) setExpanded(false) }}
+                onClose={closeSheet}
               />
             ) : journey ? (
-              <JourneyPanel journey={journey} onClose={() => { chooseJourney(null); setExpanded(false) }} onStop={focus} />
+              <JourneyPanel journey={journey} onClose={closeSheet} onStop={focus} />
             ) : null}
           </div>
         </aside>
