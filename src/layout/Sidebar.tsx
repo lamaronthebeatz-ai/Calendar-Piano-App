@@ -43,7 +43,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="vt-sidebar relative hidden w-[260px] shrink-0 flex-col border-r border-[var(--color-border)] bg-[var(--color-surface-raised)] px-4 py-6 lg:flex">
+    <aside className="vt-sidebar side-rail relative hidden w-[248px] shrink-0 flex-col px-4 py-6 lg:flex">
       {/* A faint wash of gold behind the brand, the only ornament on the rail. */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(120%_80%_at_0%_0%,color-mix(in_oklch,var(--color-gold)_14%,transparent),transparent_70%)]" />
 
@@ -57,16 +57,15 @@ export function Sidebar() {
 
       <button
         onClick={() => openCreateLesson()}
-        className="btn-sheen relative mb-6 flex h-11 items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-b from-[color-mix(in_oklch,var(--color-accent)_88%,white)] to-[var(--color-accent)] text-sm font-medium text-[var(--color-accent-ink)] shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-px active:translate-y-0"
+        className="btn-line relative mb-7 flex h-10 items-center justify-center gap-2 rounded-full text-[13px] font-medium tracking-wide"
       >
-        <PlusIcon width={16} height={16} />
+        <PlusIcon width={15} height={15} className="text-[var(--color-gold)]" />
         Thêm buổi học
       </button>
 
-      <p className="mb-2 px-3 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-faint)]">Điều hướng</p>
       <nav className="relative flex flex-1 flex-col gap-0.5">
-        <span ref={pill} aria-hidden className="side-pill pointer-events-none absolute inset-x-0 top-0 rounded-xl bg-[color-mix(in_oklch,var(--color-accent)_10%,var(--color-surface-raised))] opacity-0">
-          <span className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-[var(--color-gold)]" />
+        <span ref={pill} aria-hidden className="side-pill side-pill-fill pointer-events-none absolute inset-x-0 top-0 rounded-xl opacity-0">
+          <span className="absolute left-0 top-1/2 h-4 w-[2px] -translate-y-1/2 rounded-full bg-[var(--color-gold)] shadow-[0_0_10px_var(--color-gold)]" />
         </span>
         {navItems.map((item, i) => (
           <NavLink
@@ -80,13 +79,13 @@ export function Sidebar() {
                 'group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors duration-200',
                 isActive
                   ? 'text-[var(--color-ink)]'
-                  : 'text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]',
+                  : 'text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]',
               )
             }
           >
             {({ isActive }) => (
               <>
-                <item.icon width={18} height={18} className={clsx('transition-colors', isActive ? 'nav-pop text-[var(--color-accent)]' : 'group-hover:text-[var(--color-ink)]')} />
+                <item.icon width={18} height={18} className={clsx('transition-colors', isActive ? 'nav-pop text-[var(--color-gold)]' : 'group-hover:text-[var(--color-ink)]')} />
                 {item.label}
               </>
             )}

@@ -1,107 +1,118 @@
 @import "tailwindcss";
+@import "./brand.css";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: "Playfair Display", "Literata", Georgia, serif;
   --font-serif: "Literata", Georgia, "Times New Roman", serif;
 
-  --color-surface: #f6f3ed;
-  --color-surface-raised: #fffdf9;
-  --color-surface-sunken: #eeeae1;
-  --color-border: #e4ddd0;
-  --color-border-strong: #d2c9b8;
-  --color-ink: #1a1714;
-  --color-ink-muted: #625b50;
-  --color-ink-faint: #9b9384;
-  --color-prose: #2c2822;
-  --color-accent: #2c4a7c;
-  --color-accent-ink: #ffffff;
-  --color-gold: #a27c43;
+  /* Brand: ivory paper and bronze-gold by day, warm ebony and champagne gold by night. Gold is the only accent. */
+  --color-surface: #f5f1e8;
+  --color-surface-raised: #fffcf5;
+  --color-surface-sunken: #ece6d9;
+  --color-border: #e2d9c6;
+  --color-border-strong: #cdbfa3;
+  --color-ink: #17130d;
+  --color-ink-muted: #5f5646;
+  --color-ink-faint: #998d78;
+  --color-prose: #2a241b;
+  --color-accent: #8a6420;
+  --color-accent-ink: #fffaf0;
+  --color-gold: #9a7330;
   --chart-1: #3a6bb8; /* chart series, validated for CVD and contrast */
   --chart-2: #b5822a;
-  --color-gold-soft: #f3e9d6;
+  --color-gold-soft: #f2e7cf;
 
-  --color-status-confirmed: #4c6fa5;
-  --color-status-confirmed-bg: #e8eef8;
-  --color-status-pending: #b8863a;
-  --color-status-pending-bg: #f7ecdb;
-  --color-status-completed: #4f8a63;
-  --color-status-completed-bg: #e6f2e9;
-  --color-status-cancelled: #b5504f;
-  --color-status-cancelled-bg: #f7e6e5;
+  --color-status-confirmed: #8a6420;
+  --color-status-confirmed-bg: #f2e7cf;
+  --color-status-pending: #a2702a;
+  --color-status-pending-bg: #f6ead6;
+  --color-status-completed: #4f7f5c;
+  --color-status-completed-bg: #e5efe6;
+  --color-status-cancelled: #a84b48;
+  --color-status-cancelled-bg: #f5e4e2;
   --color-status-noshow: #6b6459;
-  --color-status-noshow-bg: #ece9e3;
+  --color-status-noshow-bg: #ece8e0;
 
   --shadow-soft: 0 1px 2px rgba(26, 23, 20, 0.04), 0 6px 20px -4px rgba(26, 23, 20, 0.08);
   --shadow-float: 0 18px 40px -12px rgba(26, 23, 20, 0.22), 0 4px 12px rgba(26, 23, 20, 0.06);
   --shadow-glow: 0 10px 30px -10px color-mix(in oklch, var(--color-accent) 55%, transparent);
 }
 
+:root {
+  --color-gold-bright: #b8893a;
+  --gold-gradient: linear-gradient(135deg, #c99a4a 0%, #8a6420 55%, #b98b3e 100%);
+}
+
 :root[data-theme="dark"] {
-  --color-surface: #0e0e11;
-  --color-surface-raised: #17171c;
-  --color-surface-sunken: #0a0a0d;
-  --color-border: #26252c;
-  --color-border-strong: #36353d;
-  --color-ink: #f2ede4;
-  --color-ink-muted: #a8a297;
-  --color-ink-faint: #6e6960;
-  --color-prose: #dcd6cb;
-  --color-accent: #93b4e8;
-  --color-accent-ink: #0c1220;
-  --color-gold: #d8b77f;
+  --color-surface: #0b0a08;
+  --color-surface-raised: #15130f;
+  --color-surface-sunken: #070605;
+  --color-border: #27231c;
+  --color-border-strong: #3a342a;
+  --color-ink: #f4ecdd;
+  --color-ink-muted: #ada392;
+  --color-ink-faint: #6f675a;
+  --color-prose: #ddd3c2;
+  --color-accent: #e2bd78;
+  --color-accent-ink: #160f05;
+  --color-gold: #d9b26e;
   --chart-1: #5f8fd6;
   --chart-2: #b8862f;
-  --color-gold-soft: #2b2416;
+  --color-gold-soft: #2a2114;
+  --color-gold-bright: #f1cf8c;
+  --gold-gradient: linear-gradient(135deg, #f4d595 0%, #c9974a 50%, #f0cb84 100%);
 
-  --color-status-confirmed: #8fb0e0;
-  --color-status-confirmed-bg: #202a3d;
-  --color-status-pending: #dcb06a;
-  --color-status-pending-bg: #35291a;
-  --color-status-completed: #8bc79f;
-  --color-status-completed-bg: #1c2f20;
+  --color-status-confirmed: #e2bd78;
+  --color-status-confirmed-bg: #2a2114;
+  --color-status-pending: #d49a54;
+  --color-status-pending-bg: #33240f;
+  --color-status-completed: #93c3a0;
+  --color-status-completed-bg: #18291c;
   --color-status-cancelled: #e08e8c;
-  --color-status-cancelled-bg: #35201f;
-  --color-status-noshow: #a19c93;
-  --color-status-noshow-bg: #26242b;
+  --color-status-cancelled-bg: #33201e;
+  --color-status-noshow: #a19a8e;
+  --color-status-noshow-bg: #221f1a;
 
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px -4px rgba(0, 0, 0, 0.4);
   --shadow-float: 0 18px 40px -12px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.35);
-  --shadow-glow: 0 10px 30px -10px color-mix(in oklch, var(--color-accent) 45%, transparent);
+  --shadow-glow: 0 10px 34px -12px color-mix(in oklch, var(--color-accent) 50%, transparent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --color-surface: #0e0e11;
-    --color-surface-raised: #17171c;
-    --color-surface-sunken: #0a0a0d;
-    --color-border: #26252c;
-    --color-border-strong: #36353d;
-    --color-ink: #f2ede4;
-    --color-ink-muted: #a8a297;
-    --color-ink-faint: #6e6960;
-    --color-prose: #dcd6cb;
-    --color-accent: #93b4e8;
-    --color-accent-ink: #0c1220;
-    --color-gold: #d8b77f;
+    --color-surface: #0b0a08;
+    --color-surface-raised: #15130f;
+    --color-surface-sunken: #070605;
+    --color-border: #27231c;
+    --color-border-strong: #3a342a;
+    --color-ink: #f4ecdd;
+    --color-ink-muted: #ada392;
+    --color-ink-faint: #6f675a;
+    --color-prose: #ddd3c2;
+    --color-accent: #e2bd78;
+    --color-accent-ink: #160f05;
+    --color-gold: #d9b26e;
     --chart-1: #5f8fd6;
     --chart-2: #b8862f;
-    --color-gold-soft: #2b2416;
+    --color-gold-soft: #2a2114;
+    --color-gold-bright: #f1cf8c;
+    --gold-gradient: linear-gradient(135deg, #f4d595 0%, #c9974a 50%, #f0cb84 100%);
 
-    --color-status-confirmed: #8fb0e0;
-    --color-status-confirmed-bg: #202a3d;
-    --color-status-pending: #dcb06a;
-    --color-status-pending-bg: #35291a;
-    --color-status-completed: #8bc79f;
-    --color-status-completed-bg: #1c2f20;
+    --color-status-confirmed: #e2bd78;
+    --color-status-confirmed-bg: #2a2114;
+    --color-status-pending: #d49a54;
+    --color-status-pending-bg: #33240f;
+    --color-status-completed: #93c3a0;
+    --color-status-completed-bg: #18291c;
     --color-status-cancelled: #e08e8c;
-    --color-status-cancelled-bg: #35201f;
-    --color-status-noshow: #a19c93;
-    --color-status-noshow-bg: #26242b;
+    --color-status-cancelled-bg: #33201e;
+    --color-status-noshow: #a19a8e;
+    --color-status-noshow-bg: #221f1a;
 
     --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px -4px rgba(0, 0, 0, 0.4);
     --shadow-float: 0 18px 40px -12px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.35);
-    --shadow-glow: 0 10px 30px -10px color-mix(in oklch, var(--color-accent) 45%, transparent);
+    --shadow-glow: 0 10px 34px -12px color-mix(in oklch, var(--color-accent) 50%, transparent);
 }
 }
 

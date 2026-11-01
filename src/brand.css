@@ -1,0 +1,155 @@
+/* ---------- Brand layer: black & gold ----------
+   One accent (gold), hairlines instead of boxes, light that moves slowly. Shared by every page. */
+
+/* Filled gold: the one primary action on a screen. */
+.btn-gold {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--gold-gradient);
+  color: var(--color-accent-ink);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.35),
+    inset 0 -1px 0 rgb(0 0 0 / 0.18),
+    0 10px 28px -14px color-mix(in oklch, var(--color-gold) 80%, transparent);
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 200ms ease, filter 200ms ease;
+}
+.btn-gold::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 38%, rgb(255 255 255 / 0.45) 50%, transparent 62%);
+  transform: translateX(-130%);
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.btn-gold:hover::after { transform: translateX(130%); }
+.btn-gold:active { transform: translateY(0) scale(0.98); }
+
+/* Hairline gold: secondary actions; fills with a soft gold wash on hover. */
+.btn-line {
+  position: relative;
+  color: var(--color-ink);
+  background: linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+    linear-gradient(135deg, color-mix(in oklch, var(--color-gold) 75%, transparent), color-mix(in oklch, var(--color-gold) 18%, transparent) 60%, color-mix(in oklch, var(--color-gold) 55%, transparent)) border-box;
+  border: 1px solid transparent;
+  transition: background 250ms ease, color 200ms ease, transform 200ms ease;
+}
+.btn-line:hover {
+  color: var(--color-gold-bright);
+  background: linear-gradient(color-mix(in oklch, var(--color-gold) 9%, var(--color-surface)), color-mix(in oklch, var(--color-gold) 9%, var(--color-surface))) padding-box,
+    linear-gradient(135deg, var(--color-gold), color-mix(in oklch, var(--color-gold) 40%, transparent) 60%, var(--color-gold)) border-box;
+}
+.btn-line:active { transform: scale(0.98); }
+
+/* A gold hairline that fades out at both ends. */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--color-gold) 70%, transparent) 20%, color-mix(in oklch, var(--color-gold) 70%, transparent) 80%, transparent);
+}
+
+/* Side rail: same black as the page, separated by a gold hairline that brightens around the active item. */
+.side-rail {
+  background: var(--color-surface);
+  border-right: 0 !important;
+}
+.side-rail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--color-gold) 35%, transparent) 18%, color-mix(in oklch, var(--color-border) 100%, transparent) 55%, transparent);
+  pointer-events: none;
+}
+.side-pill-fill {
+  background: linear-gradient(90deg, color-mix(in oklch, var(--color-gold) 16%, transparent), color-mix(in oklch, var(--color-gold) 3%, transparent) 70%, transparent);
+}
+
+/* Page ambience: a faint warm light from the top edge, so black surfaces feel lit rather than flat. */
+.brand-ambient {
+  position: relative;
+}
+.brand-ambient::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 420px;
+  background: radial-gradient(70% 100% at 50% 0%, color-mix(in oklch, var(--color-gold) 7%, transparent), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gold focus ring everywhere. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid color-mix(in oklch, var(--color-gold) 80%, transparent);
+  outline-offset: 2px;
+}
+
+/* Quiet, warm scrollbars. */
+* { scrollbar-color: color-mix(in oklch, var(--color-gold) 28%, var(--color-border)) transparent; scrollbar-width: thin; }
+
+/* Section heading: small caps eyebrow + serif title, separated by a gold hairline (used on home pages). */
+.brand-eyebrow {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-gold, .btn-gold::after, .btn-line { transition: none; }
+  .btn-gold::after { display: none; }
+}
+
+/* Theory hero: stats in one row split by gold hairlines; search as a dark glass capsule with a gold rim. */
+.hero-stats > div + div { border-left: 1px solid rgb(226 182 110 / 0.22); }
+.hero-search {
+  background: rgb(12 9 6 / 0.62);
+  box-shadow: inset 0 0 0 1px rgb(226 182 110 / 0.32), 0 14px 40px -16px rgb(0 0 0 / 0.9);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  transition: box-shadow 250ms ease, background-color 250ms ease;
+}
+.hero-search:focus-within {
+  background: rgb(12 9 6 / 0.78);
+  box-shadow: inset 0 0 0 1px rgb(226 182 110 / 0.8), 0 0 0 4px rgb(226 182 110 / 0.12), 0 14px 40px -16px rgb(0 0 0 / 0.9);
+}
+
+/* Bars: a gold-tinted hairline instead of a grey rule. */
+.glass { border-bottom-color: color-mix(in oklch, var(--color-gold) 16%, var(--color-border)) !important; }
+
+/* Spotlight cards: a soft gold light follows the pointer across the card and its rim (spotlight.ts sets --mx/--my). */
+.spot, .theory-card { position: relative; }
+.spot::before, .theory-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, -40%), color-mix(in oklch, var(--color-gold) 70%, transparent), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.spot::after, .theory-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, -40%), color-mix(in oklch, var(--color-gold) 8%, transparent), transparent 65%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+  z-index: 1;
+}
+@media (hover: hover) {
+  .spot:hover::before, .spot:hover::after, .theory-card:hover::before, .theory-card:hover::after { opacity: 1; }
+}

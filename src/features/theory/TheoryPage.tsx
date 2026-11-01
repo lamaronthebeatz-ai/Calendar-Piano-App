@@ -382,35 +382,35 @@ function Index() {
             <p className="relative mt-3 max-w-md text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
               Từ ký âm cơ bản đến hoà âm jazz và phân tích tác phẩm — mọi trang liên kết với nhau như một bách khoa toàn thư, để học và để dạy.
             </p>
-            <dl className="relative mt-5 flex max-w-md flex-wrap gap-x-6 gap-y-2">
+            <dl className="hero-stats relative mt-6 grid max-w-lg grid-cols-4">
               {[
                 [ARTICLES.length, 'trang'],
                 [articlesByCategory.length, 'chủ đề'],
-                [libraryStats.links, 'liên kết nội bộ'],
-                [libraryStats.figures, 'hình minh hoạ'],
+                [libraryStats.links, 'liên kết'],
+                [libraryStats.figures, 'hình vẽ'],
               ].map(([n, label]) => (
-                <div key={label} className="flex items-baseline gap-1.5">
-                  <dt className="font-display text-[22px] font-semibold tabular-nums text-[#f0c987]"><CountUp to={Number(n)} /></dt>
-                  <dd className="text-[12.5px] text-[#e9dcc6]/60">{label}</dd>
+                <div key={label} className="flex min-w-0 flex-col-reverse gap-0.5 px-3 first:pl-0 sm:px-4">
+                  <dt className="truncate text-[10.5px] uppercase tracking-[0.12em] text-[#e9dcc6]/55 sm:text-[11px]">{label}</dt>
+                  <dd className="font-display text-[19px] font-semibold tabular-nums text-[#f0c987] sm:text-[24px]"><CountUp to={Number(n)} /></dd>
                 </div>
               ))}
             </dl>
           </>
         )}
-        <label className={clsx(!active && !query && 'mt-6', 'relative flex h-12 items-center gap-2.5 rounded-2xl bg-[#f7efe2]/95 px-4 text-[#7a5a3a] shadow-[0_10px_34px_-10px_rgba(0,0,0,0.7)] ring-1 ring-[#e2b66e]/30 backdrop-blur transition-shadow focus-within:ring-2 focus-within:ring-[#e2b66e]')}>
+        <label className={clsx(!active && !query && 'mt-6', 'hero-search relative flex h-12 items-center gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
           <SearchIcon width={18} height={18} className="shrink-0" />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`Tìm trong ${ARTICLES.length} trang: hợp âm, thị tấu, Chopin…`}
-            className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-[#1c140d] outline-none placeholder:text-[#a08a70]"
+            className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-[#f6ecdc] outline-none placeholder:text-[#e9dcc6]/45"
           />
           {query ? (
-            <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-1 hover:bg-black/5">
+            <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-full p-1 text-[#e9dcc6]/70 hover:bg-white/10">
               <XIcon width={16} height={16} />
             </button>
           ) : (
-            <button onClick={surprise} title="Mở một bài ngẫu nhiên" className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-[12.5px] font-medium text-[#a5632a] hover:bg-[#a5632a]/10">
+            <button onClick={surprise} title="Mở một bài ngẫu nhiên" className="flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12.5px] font-medium text-[#e2b66e] hover:bg-[#e2b66e]/12">
               <ShuffleIcon width={14} height={14} /> <span className="hidden sm:inline">Ngẫu nhiên</span>
             </button>
           )}
@@ -723,7 +723,7 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
         <h2 className="relative mt-1 font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{cat.title}</h2>
         <p className="relative mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--color-ink-muted)]">{cat.description}</p>
         {hub && (
-          <Link to={`/theory/${hub.slug}`} className="btn-sheen relative mt-5 inline-flex items-center gap-2 overflow-hidden rounded-xl bg-[var(--color-ink)] px-4 py-2.5 text-[13.5px] font-medium text-[var(--color-surface)] transition-transform hover:-translate-y-px">
+          <Link to={`/theory/${hub.slug}`} className="btn-gold mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13.5px] font-medium">
             <CompassIcon width={15} height={15} /> Bắt đầu: {hub.title}
           </Link>
         )}

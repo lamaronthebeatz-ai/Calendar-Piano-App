@@ -69,7 +69,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
           data-tour="quick"
           onClick={() => setQuickActionsOpen(true)}
           aria-label="Thêm nhanh"
-          className="absolute -top-5 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[color-mix(in_oklch,var(--color-accent)_80%,white)] to-[var(--color-accent)] text-[var(--color-accent-ink)] shadow-[var(--shadow-glow)] ring-4 ring-[var(--color-surface)] transition-transform active:scale-95"
+          className="absolute -top-5 flex h-14 w-14 items-center justify-center btn-gold rounded-full ring-4 ring-[var(--color-surface)]"
         >
           <PlusIcon width={24} height={24} />
         </button>
@@ -93,7 +93,7 @@ function NavItem({ item, ref }: { item: (typeof navItems)[number]; ref: (el: HTM
         clsx(
           // Sized by their labels ("Âm nhạc học" is longer than the rest), sharing the leftover width equally.
           'relative flex flex-auto flex-col items-center justify-center gap-1 whitespace-nowrap px-0.5 py-2.5 text-[10.5px] font-medium tracking-tight transition-colors min-[400px]:text-[11px]',
-          isActive ? 'text-[var(--color-accent)]' : 'text-[var(--color-ink-faint)]',
+          isActive ? 'text-[var(--color-gold)]' : 'text-[var(--color-ink-faint)]',
         )
       }
     >

@@ -1,4 +1,5 @@
-import { useMemo, useState, type CSSProperties } from 'react'
+import { hueTint } from '../../lib/tint'
+import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { QuoteBanner } from './QuoteBanner'
@@ -17,7 +18,6 @@ import { PLACES } from './places'
 /** The map of places lives at /musicology/ban-do, beside the branches. */
 const MAP_ID = 'ban-do'
 
-const hueTint = (hue: number) => ({ '--tint': `oklch(0.6 0.13 ${hue})` }) as CSSProperties
 
 const NUMERALS: Partial<Record<PartId, string>> = { historical: 'I', systematic: 'II', applied: 'III', practice: 'IV' }
 
@@ -410,7 +410,7 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
           </div>
           <div className="flex flex-col items-start gap-2 lg:items-end">
             {hub && (
-              <Link to={`/theory/${hub.slug}`} className="btn-sheen relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-[var(--color-ink)] px-4 py-2.5 text-[13.5px] font-medium text-[var(--color-surface)] transition-transform hover:-translate-y-px">
+              <Link to={`/theory/${hub.slug}`} className="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13.5px] font-medium">
                 <CompassIcon width={15} height={15} /> Tổng quan: {hub.title}
               </Link>
             )}

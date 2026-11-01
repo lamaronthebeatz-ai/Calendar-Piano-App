@@ -1,3 +1,4 @@
+import { hueTint } from '../../lib/tint'
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -22,7 +23,6 @@ import { kidsBookOf } from './kids/books'
 import './motion-books.css'
 import logoFull from '../../assets/logo-full.webp'
 
-const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
 
 /** Graded levels followed by any extra tracks, in study order. */
 const allLevels = (c: Curriculum) => [...c.levels, ...(c.tracks ?? []).flatMap((t) => t.levels)]

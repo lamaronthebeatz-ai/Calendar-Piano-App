@@ -5,6 +5,7 @@ import { App } from './App'
 import { seedDatabaseIfEmpty, ensureSettingsExist } from './data/seed'
 import { db } from './data/db'
 import { applyThemeToDocument } from './services/settingsService'
+import { installSpotlight } from './lib/spotlight'
 
 async function bootstrap() {
   await seedDatabaseIfEmpty()
@@ -26,4 +27,5 @@ if (navigator.serviceWorker?.controller) {
   navigator.serviceWorker.addEventListener('controllerchange', () => window.location.reload())
 }
 
+installSpotlight()
 bootstrap()

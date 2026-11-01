@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react'
 import { findArticle } from '../../theory/wiki'
 import { QUESTIONS } from '../../theory/quiz/bank'
 import { ABOUT_AUTHOR, BOOKS, foreword } from '../books'
@@ -40,7 +39,7 @@ export interface ReaderBook {
   items: ReaderItem[]
 }
 
-export const hueTint = (hue: number) => ({ '--tint': `oklch(0.58 0.13 ${hue})`, '--tint-soft': `oklch(0.58 0.13 ${hue} / 0.12)` }) as CSSProperties
+export { hueTint } from '../../../lib/tint'
 
 const clean = (s: string) => s.replace(/\|/g, '/')
 
