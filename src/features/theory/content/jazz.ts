@@ -1992,11 +1992,14 @@ Bài nên dùng để học các kỹ thuật: "E.S.P.", "In Walked Bud", "Satin
     summary: 'Cấu trúc AABA, mỗi đoạn 8 ô nhịp — khuôn mẫu của ca khúc Broadway, Tin Pan Alley và phần lớn jazz standard.',
     wiki: 'Thirty-two-bar_form',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Thirty-two-bar form', 'https://en.wikipedia.org/wiki/Thirty-two-bar_form'],
       ['Rafferty (2017) — Tin Pan Alley thesis, Newcastle University (PDF)', 'https://theses.ncl.ac.uk/jspui/bitstream/10443/3749/1/Rafferty%2C%20K.F.%202017.pdf'],
       ['Wikipedia — Rhythm changes', 'https://en.wikipedia.org/wiki/Rhythm_changes'],
     ],
     body: `
+Trước khi chơi một bài, hãy biết **hình dáng** của nó. Đa số bài chuẩn dài 32 ô, chia thành bốn đoạn 8 ô — và chỉ cần biết đoạn nào giống đoạn nào, bạn đã giảm một nửa việc phải nhớ. Khi solo, hình thức là tấm bản đồ: lạc nó một lần trên sân khấu là bạn sẽ không bao giờ quên tầm quan trọng của nó.
+
 | Đoạn | Số [[so-chi-nhip|ô nhịp]] | Vai trò |
 |---|---|---|
 | A | 8 | [[chuc-nang-hinh-thuc|Chủ đề chính]], kết ở giọng chính |
@@ -2025,6 +2028,27 @@ Một lượt chơi trọn 32 ô nhịp gọi là một **chorus**. Cấu trúc 
 So sánh: [[blues-12-nhip]] (12 ô), [[hinh-thuc-am-nhac|hình thức phiên khúc – điệp khúc]] của pop, [[hinh-thuc-am-nhac|hình thức ba đoạn]] ABA trong nhạc cổ điển.
 
 Turnaround ở cuối mỗi đoạn A: [[turnaround-jazz]].
+
+## Không chỉ có AABA
+Levine liệt kê nhiều hình thức khác ngoài AABA và ABAC; đây là những cái bạn sẽ gặp:
+| Hình thức | Mô tả |
+|---|---|
+| AABA | hai đoạn A, một đoạn giữa B (bridge), quay về A |
+| ABAC | đoạn thứ ba trở lại A, đoạn cuối mới |
+| ABCD | bốn đoạn khác nhau, "sáng tác suốt" |
+| AABC, AAB, ABA, ABC, AB | các biến thể ngắn hoặc dài hơn |
+| Riêng của một bài | có bài dài 14, 36, 44 ô… không theo khuôn nào |
+
+Và blues 12 ô, rhythm changes, blues có đoạn giữa (44 ô) là những hình thức riêng (xem [[blues-12-nhip]], [[rhythm-changes]]). Ngoài thân bài còn có dạo đầu, đoạn chuyển, đoạn kết: [[head-dao-dau-va-ket]].
+
+## Mẹo luyện tập
+- Khi học một bài mới, việc đầu tiên: viết hình thức lên đầu trang (AABA? ABAC?), và đánh dấu đoạn nào khác chỗ nào (thường chỉ ô cuối đoạn A).
+- Khi solo, **đếm đoạn** chứ đừng đếm ô: "A1, A2, B, A3". Nghe tay bass và trống: họ thường đánh dấu đầu mỗi đoạn.
+
+## Câu hỏi và bài tập
+1. Xác định hình thức của ba bài chuẩn bạn biết.
+2. Solo hai chorus một bài AABA; ở đoạn B đổi hẳn tính chất (âm vực, mật độ).
+3. Viết lại một bài AABA bằng dấu nhắc lại; xem còn bao nhiêu ô phải nhớ (xem [[doc-lead-sheet-va-thuoc-bai]]).
 `,
   },
   {
@@ -2036,12 +2060,15 @@ Turnaround ở cuối mỗi đoạn A: [[turnaround-jazz]].
     summary: 'Vòng hợp âm của "I Got Rhythm" (Gershwin, 1930): hình thức AABA 32 ô, đoạn A xoay quanh I – vi – ii – V, đoạn B là chuỗi hợp âm 7 át theo quãng 5 — nền của hàng trăm bài bebop.',
     wiki: 'Rhythm_changes',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Rhythm changes', 'https://en.wikipedia.org/wiki/Rhythm_changes'],
       ['PianoGroove — Rhythm changes explained', 'https://www.pianogroove.com/jazz-piano-lessons/rhythm-changes-explained/'],
       ['BYU-Idaho — Rhythm changes (PDF)', 'https://content.byui.edu/file/be14498b-aa3f-4b2a-b9e6-4fb3fdbd1d12/1/10%20Rhythm%20Changes.pdf'],
       ['Wikipedia — Thirty-two-bar form', 'https://en.wikipedia.org/wiki/Thirty-two-bar_form'],
     ],
     body: `
+Sau blues, đây là bộ hợp âm được chơi nhiều nhất trong jazz. Nó đến từ "I Got Rhythm" của George Gershwin, và dân bebop đã viết hàng chục giai điệu mới trên nó (xem [[head-dao-dau-va-ket]]). Ở buổi jam nào cũng sẽ có ít nhất một bài rhythm changes — nhanh, ở Si giáng, và không ai đợi bạn.
+
 "I Got Rhythm" của [[george-gershwin|George Gershwin]] ra mắt năm **1930** trong vở [[operetta-va-nhac-kich|nhạc kịch Broadway]] *Girl Crazy*. [[vong-hop-am|Vòng hợp âm]] của nó — gọi là **"rhythm changes"** — trở thành một trong những khung hoà âm được dùng lại nhiều nhất của jazz, sau [[blues-12-nhip|blues]].
 
 ## Cấu trúc (giọng gốc: Si giáng trưởng)
@@ -2069,6 +2096,16 @@ Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]
 1. Thuộc đoạn A dạng đơn giản nhất (I – vi – ii – V) và đoạn B (bốn hợp âm 7 át).
 2. Chơi [[ii-v-i|nốt dẫn hướng]] qua cả 32 ô.
 3. Thử từng phép [[thay-the-hop-am|thay thế]] (I – VI7 – ii – V, [[thay-the-tritone|thay thế tritone]] ở đoạn B…).
+
+## Mẹo luyện tập
+- Học đoạn A như **một khối turnaround lặp lại** (I – vi – ii – V), đoạn B như **một chuỗi át đi theo vòng quãng 5** (III7 – VI7 – II7 – V7, mỗi hợp âm hai ô). Hai khối, không phải 32 hợp âm.
+- Tập đoạn B riêng: nhắm nốt 3 của mỗi hợp âm át ở phách 1 (D, G, C, F ở B♭: các nốt 3 của D7, G7, C7, F7 là F♯, B, E, A).
+- Tập ở nhịp chậm trước. Nhịp nhanh sẽ tới sau, khi tay bạn đã biết đường.
+
+## Câu hỏi và bài tập
+1. Chơi rhythm changes ở B♭: đoạn A bằng thế bấm không gốc, đoạn B bằng shell.
+2. Solo một chorus chỉ bằng nốt dẫn hướng 3 – 7.
+3. Chơi giai điệu một head trên rhythm changes (như "Oleo" hay "Anthropology") từ bản thu.
 `,
   },
   {
@@ -2079,12 +2116,15 @@ Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]
     summary: 'Hệ thống thay thế hợp âm của John Coltrane (Giant Steps, 1959): chia quãng 8 thành ba giọng cách nhau quãng 3 trưởng, mỗi giọng được chuẩn bị bằng hợp âm 7 át của nó.',
     wiki: 'Coltrane_changes',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Coltrane changes', 'https://en.wikipedia.org/wiki/Coltrane_changes'],
       ['Wikipedia — Giant Steps (composition)', 'https://en.wikipedia.org/wiki/Giant_Steps_(composition)'],
       ['Learn Jazz Standards — Understanding Coltrane changes, part 1', 'https://www.learnjazzstandards.com/blog/understanding-coltrane-changes-part-1/'],
       ['Piano With Jonny — Giant Steps: a guide to Coltrane changes', 'https://pianowithjonny.com/piano-lessons/giant-steps-a-guide-to-coltrane-changes/'],
     ],
     body: `
+Năm 1959, John Coltrane thu "Giant Steps", và từ đó mọi người chơi jazz phải học một bài kiểm tra mới. Bí mật của nó không phải là tốc độ, mà là một ý tưởng hoà âm: đổi giọng theo **quãng 3 trưởng** thay vì quãng 5. Nghe thì đáng sợ, nhưng như bạn sẽ thấy, chỉ có ba giọng — và bạn đã biết cả ba.
+
 **Vòng Coltrane** (Coltrane changes) là cách **John Coltrane** thay thế hoà âm, nổi tiếng nhất trong bài **"Giant Steps"** (thu âm tháng 5/1959, album cùng tên phát hành 1960).
 
 ## Ý tưởng: ba giọng cách nhau quãng 3 trưởng
@@ -2095,12 +2135,12 @@ Cách viết một giai điệu mới (phân tích, [[motif|phát triển motif]
 ::staff treble B3+D#4+F#4+A#4=Bmaj7 D4+F#4+A4+C5=D7 G4+B4+D5+F#5=Gmaj7 Bb3+D4+F4+Ab4=B♭7 Eb4+G4+Bb4+D5=E♭maj7 | Bmaj7 – D7 – Gmaj7 – B♭7 – E♭maj7: mỗi giọng mới được dẫn vào bằng hợp âm 7 át của nó
 
 ## Như một phép thay thế cho ii – V – I
-Lamar cho ví dụ trong Đô trưởng, thay một ii – V – I bốn ô:
+Ví dụ trong Đô trưởng, thay một ii – V – I bốn ô:
 | | Ô 1 | Ô 2 | Ô 3 | Ô 4 |
 |---|---|---|---|---|
 | Gốc | Dm7 | G7 | Cmaj7 | Cmaj7 |
 | Vòng Coltrane | Dm7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7 |
-Các giọng C – A♭ – E cũng cách nhau quãng 3 trưởng (một hợp âm ba tăng); Lamar áp cách này cho cả iii – vi – ii – V (Em7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7), và lưu ý có thể đổi giọng theo **bất kỳ quãng cố định nào** (quãng 3 thứ, tritone…).
+Các giọng C – A♭ – E cũng cách nhau quãng 3 trưởng (một hợp âm ba tăng); cách này áp được cho cả iii – vi – ii – V (Em7 E♭7 | A♭maj7 B7 | Emaj7 G7 | Cmaj7), và có thể đổi giọng theo **bất kỳ quãng cố định nào** (quãng 3 thứ, tritone…).
 Coltrane cũng dùng hệ thống này để **[[tai-hoa-am|tái hoà âm]]** các tiến trình sẵn có: một [[ii-v-i]] được "lấp đầy" bằng các chặng cách nhau quãng 3 trưởng trước khi về chủ. Ví dụ "Countdown" là bản tái hoà âm của "Tune Up" (Miles Davis): khung lớn vẫn là các giọng của "Tune Up", nhưng từng chặng được chia nhỏ theo vòng Coltrane.
 
 ## Liên hệ với hoà âm cổ điển
@@ -2112,6 +2152,20 @@ Các giọng cách nhau quãng 3 là chủ đề của [[trung-am-cromatic|quan 
 3. Thử chèn vòng Coltrane vào một ii – V – I quen thuộc.
 
 Giai đoạn trước đó của Coltrane: [[sheets-of-sound]]. Phân tích chi tiết bài "Giant Steps" (bảng hợp âm 16 ô, nguồn gốc, cách luyện): [[phan-tich-giant-steps]].
+
+## Ngoài "Giant Steps"
+- Coltrane còn dùng các bước này trong "Countdown" (viết trên hoà âm "Tune Up" của Miles Davis) và chồng chúng lên các bài chuẩn — chèn vòng Coltrane vào những chỗ vốn là ii – V – I.
+- Theo Levine, giọng tạm đổi theo **quãng 3 thứ** cũng là một hướng khác được dùng; và McCoy Tyner có thói quen chơi hợp âm V như một hợp âm Locrian (ø) — Levine gọi là "Locrian V chord" của McCoy.
+
+## Mẹo luyện tập
+- Tập ba ii – V – I ở B, G, E♭ (ba giọng của "Giant Steps") riêng từng cái trước, rồi mới nối.
+- Chơi ngũ cung V của ba giọng (F♯, D, B♭) trên cả bài: một cách "đi tắt" Levine chỉ ra (xem [[ngu-cung-trong-jazz]]).
+- Tập ở nhịp chậm đến buồn cười. Nghiêm túc đấy: 100 phách/phút là đủ để bắt đầu.
+
+## Câu hỏi và bài tập
+1. Viết vòng Coltrane thay cho ii – V – I bốn ô ở Fa trưởng.
+2. Chơi chuỗi Cmaj7 – E♭7 – A♭maj7 – B7 – Emaj7 – G7 – Cmaj7 với thế bấm shell.
+3. Ứng tác trên "Giant Steps" chỉ bằng ba ngũ cung V.
 `,
   },  {
     slug: 'constant-structures',
@@ -2144,7 +2198,7 @@ Ví dụ: F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được với to�
 ## Câu hỏi và bài tập
 1. Chơi F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 với cùng một thế bấm; rồi làm lại toàn m7.
 2. Thay một ii – V – I trong một bài bằng một chuỗi ba hợp âm maj7 cùng hình có nốt giai điệu ở trên.
-3. Nghe "Inner Urge" của Joe Henderson hoặc "Dolphin Dance" của Herbie Hancock; tìm chỗ có hợp âm cùng loại nối nhau.
+3. Nghe "Inner Urge" của Joe Henderson; tìm chỗ có hợp âm cùng loại nối nhau.
 `,
   },
   {

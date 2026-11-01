@@ -888,6 +888,8 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
       ['Wikipedia — 26-2', 'https://en.wikipedia.org/wiki/26-2'],
     ],
     body: `
+16 ô, 26 hợp âm, gần 290 phách mỗi phút: "Giant Steps" có tiếng là bài khó nhất trong kho bài chuẩn. Nhưng đếm giọng thay vì đếm hợp âm, bạn sẽ thấy chỉ có **ba** giọng, và chúng chỉ đổi mười lần. Bài này mổ xẻ chính tác phẩm đã làm cho [[vong-coltrane|vòng Coltrane]] nổi tiếng — đọc chậm, chơi chậm hơn nữa.
+
 Bài này áp lý thuyết [[vong-coltrane]] vào chính tác phẩm đã làm nó nổi tiếng; các chi tiết lịch sử lấy từ Wikipedia, Thư viện Quốc hội Mỹ và các nguồn ghi ở cuối trang. Giai điệu còn bản quyền nên ở đây chỉ phân tích **hoà âm**; hãy nghe bản thu gốc khi đọc.
 
 ## Bối cảnh
