@@ -1,19 +1,26 @@
 """World outline for the musicology map: Natural Earth 1:50m land and country borders (public domain), via the
-world-atlas TopoJSON (ISC), projected Web Mercator to a 1000-wide plane (latitudes 75°N – 56°S) and written as two
-SVG path strings to src/features/musicology/world.json.
+world-atlas TopoJSON (ISC), in the Equal Earth projection (Šavrič, Patterson & Jenny 2018) scaled to a plane 1000
+wide, written as two SVG path strings to src/features/musicology/world.json. MusicMap.tsx uses the same formulas.
 Usage: python3 scripts/map/world.py land-50m.json countries-50m.json"""
 import json, math, sys
 from pathlib import Path
 
 W = 1000
-TOP, BOTTOM = 75, -56
-def merc(lat): return math.log(math.tan(math.pi / 4 + math.radians(lat) / 2))
-Y0, Y1 = merc(TOP), merc(BOTTOM)
-H = round(W * (Y0 - Y1) / (2 * math.pi), 1)
+A1, A2, A3, A4 = 1.340264, -0.081106, 0.000893, 0.003796
+M = math.sqrt(3) / 2
+def _raw(lon, lat):
+    l, p = math.radians(lon), math.radians(lat)
+    t = math.asin(M * math.sin(p)); t2 = t * t; t6 = t2 * t2 * t2
+    x = l * math.cos(t) / (M * (A1 + 3 * A2 * t2 + t6 * (7 * A3 + 9 * A4 * t2)))
+    y = t * (A1 + A2 * t2 + t6 * (A3 + A4 * t2))
+    return x, y
+XMAX = _raw(180, 0)[0]; YMAX = _raw(0, 90)[1]
+S = W / (2 * XMAX)
+H = round(2 * YMAX * S, 1)
 
 def project(lon, lat):
-    lat = max(min(lat, 85), -85)
-    return (lon + 180) / 360 * W, (Y0 - merc(lat)) / (2 * math.pi) * W
+    x, y = _raw(lon, lat)
+    return W / 2 + x * S, (YMAX - y) * S
 
 def arcs_of(topo):
     sx, sy = topo['transform']['scale']; tx, ty = topo['transform']['translate']
@@ -81,8 +88,6 @@ for g in land_t['objects']['land']['geometries']:
     polys = g['arcs'] if g['type'] == 'MultiPolygon' else [g['arcs']]
     for poly in polys:
         for r in poly: rings.append(ring(land_a, r))
-# skip Antarctica-like rings entirely below the visible band
-rings = [r for r in rings if max(p[1] for p in r) > BOTTOM]
 
 ct = json.load(open(sys.argv[2])); ca = arcs_of(ct)
 count = {}
@@ -96,5 +101,5 @@ for g in ct['objects']['countries']['geometries']:
 borders = [ca[k] for k, n in count.items() if n > 1]
 
 out = Path(__file__).resolve().parents[2] / 'src/features/musicology/world.json'
-out.write_text(json.dumps({'w': W, 'h': H, 'top': TOP, 'bottom': BOTTOM, 'land': path(rings, True), 'borders': path(borders, False)}, separators=(',', ':')))
+out.write_text(json.dumps({'w': W, 'h': H, 'land': path(rings, True), 'borders': path(borders, False)}, separators=(',', ':')))
 print(out, out.stat().st_size, 'bytes; h =', H)

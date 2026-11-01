@@ -9,14 +9,16 @@
   border-radius: 24px;
   border: 1px solid var(--color-border);
   background:
-    radial-gradient(120% 90% at 50% 40%, transparent 55%, color-mix(in oklch, var(--color-ink) 9%, transparent)),
-    var(--sea);
+    radial-gradient(120% 90% at 50% 45%, transparent 50%, color-mix(in oklch, var(--color-ink) 7%, transparent)),
+    var(--color-surface-sunken);
   box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 14%, transparent), 0 18px 40px -24px rgb(0 0 0 / 0.45);
   touch-action: none;
   cursor: grab;
   user-select: none;
 }
 .mm-frame:active { cursor: grabbing; }
+.mm-sphere { fill: var(--sea); }
+.mm-rim { fill: none; stroke: color-mix(in oklch, var(--color-gold) 45%, transparent); vector-effect: non-scaling-stroke; }
 .mm-graticule { fill: none; stroke: color-mix(in oklch, var(--color-gold) 22%, transparent); stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
 .mm-coast { fill: none; stroke: color-mix(in oklch, var(--color-gold) 16%, transparent); stroke-linejoin: round; }
 .mm-land { fill: var(--paper); stroke: color-mix(in oklch, var(--color-gold) 40%, var(--color-ink-faint)); stroke-width: 0.6; vector-effect: non-scaling-stroke; }
@@ -39,7 +41,7 @@
 .mm-pin.is-on .mm-halo { opacity: 0.3; }
 .mm-pulse { fill: none; stroke: var(--c); transform-box: fill-box; transform-origin: center; animation: mm-pulse 1.8s ease-out infinite; }
 @keyframes mm-pulse { from { transform: scale(1); opacity: 0.9; } to { transform: scale(3.4); opacity: 0; } }
-.mm-pin text {
+.mm-pin .mm-label {
   fill: var(--color-ink);
   font-weight: 600;
   paint-order: stroke;
@@ -160,3 +162,46 @@
 .mm-chip:hover { color: var(--color-ink); }
 .mm-chip.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-surface); }
 @media (prefers-reduced-motion: reduce) { .mm-pulse { animation: none; opacity: 0; } }
+
+.mm-stop { fill: var(--color-surface); stroke: var(--color-gold); }
+.mm-stop-n { fill: var(--color-gold); font-weight: 700; text-anchor: middle; pointer-events: none; }
+.mm-route {
+  fill: none;
+  stroke: var(--color-gold);
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  filter: drop-shadow(0 0 3px color-mix(in oklch, var(--color-gold) 60%, transparent));
+  animation: mm-draw 0.9s ease-out forwards;
+}
+@keyframes mm-draw { to { stroke-dashoffset: 0; } }
+.mm-cluster { cursor: zoom-in; }
+.mm-cluster circle:not(.mm-cluster-halo) { fill: color-mix(in oklch, var(--color-gold) 85%, var(--color-surface)); stroke: var(--color-surface); }
+.mm-cluster .mm-cluster-halo { fill: var(--color-gold); opacity: 0.14; }
+.mm-cluster:hover .mm-cluster-halo { opacity: 0.28; }
+.mm-cluster text { fill: #1b130b; font-weight: 700; text-anchor: middle; pointer-events: none; }
+.mm-year-name { font-style: italic; }
+.mm-results {
+  position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 30;
+  display: grid;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+  box-shadow: 0 16px 36px -14px rgb(0 0 0 / 0.45);
+  padding: 4px;
+}
+.mm-results button { border-radius: 10px; padding: 8px 10px; text-align: left; font-size: 13.5px; }
+.mm-results button:hover { background: var(--color-surface-sunken); }
+.mm-thumb { width: 48px; height: 48px; flex-shrink: 0; border-radius: 12px; object-fit: cover; background: var(--color-surface-sunken); }
+.mm-thumb.is-drawing { object-fit: contain; background: #fff; padding: 3px; }
+.mm-journey { position: relative; display: grid; gap: 14px; padding-left: 34px; }
+.mm-journey::before { content: ''; position: absolute; left: 12px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(var(--color-gold), color-mix(in oklch, var(--color-gold) 25%, transparent)); }
+.mm-journey li { position: relative; }
+.mm-journey-n {
+  position: absolute; left: -34px; top: 0;
+  width: 26px; height: 26px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: var(--color-surface); border: 1.5px solid var(--color-gold);
+  color: var(--color-gold); font-size: 12px; font-weight: 700;
+}
+@media (prefers-reduced-motion: reduce) { .mm-route { animation: none; stroke-dashoffset: 0; } }
