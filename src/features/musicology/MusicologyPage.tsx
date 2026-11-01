@@ -49,7 +49,7 @@ export function MusicologyPage() {
   const back = useBack('/musicology')
 
   return (
-    <ScrollArea key={id} collapse={id ? [60, 140] : [40, 190]} className="relative h-full overflow-x-hidden overflow-y-auto pb-28 lg:pb-10">
+    <ScrollArea key={id} collapse={id ? [60, 140] : [40, 190]} className={clsx('relative h-full overflow-x-hidden', id === MAP_ID ? 'overflow-hidden' : 'overflow-y-auto pb-28 lg:pb-10')}>
       <div data-collapse className="glass sticky top-0 z-20 border-b border-[var(--color-border)]" style={branch && hueTint(branch.hue)}>
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
           {id && (
