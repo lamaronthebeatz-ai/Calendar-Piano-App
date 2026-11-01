@@ -1014,7 +1014,7 @@ Ngoài [[ii-v-i]], có vài tiến trình ngắn xuất hiện liên tục trong
 | V của V | D7 – G7 – C | hợp âm II thành át (át phụ của V), xem [[hop-am-at-phu]] |
 | I – VI – ii – V | Cmaj7 – A7 – Dm7 – G7 | turnaround quen thuộc nhất, xem [[turnaround-jazz]] |
 | iii – VI – ii – V | Em7 – A7 – Dm7 – G7 | iii thay cho I; bốn hợp âm đi theo quãng 5 |
-| I – ii – iii – IV | Cmaj7 – Dm7 – Em7 – Fmaj7 | gốc đi lên liền bậc; trên IV hay chơi **Lydian** (nâng bậc 4: B thay B♭ trên Fmaj7 là đã có sẵn — F Lydian chính là phím trắng từ F) |
+| I – ii – iii – IV | Cmaj7 – Dm7 – Em7 – Fmaj7 | gốc đi lên liền bậc; trên IV là **Lydian**: các phím trắng từ F cho F – G – A – B – C – D – E, với B là ♯4 của Fmaj7 |
 | I – IV | Cmaj7 – Fmaj7 (hoặc F7) | IV7 mang màu blues |
 
 ::staff treble C4+E4+G4+B4=Cmaj7 D4+F4+A4+C5=Dm7 E4+G4+B4+D5=Em7 F4+A4+C5+E5=Fmaj7 | I – ii – iii – IV: các hợp âm 7 đi lên theo âm giai

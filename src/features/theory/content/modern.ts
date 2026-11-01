@@ -335,6 +335,8 @@ Allen Forte (*The Structure of Atonal Music*, 1973) hệ thống hoá phương p
       ['Wikipedia — Mode of limited transposition', 'https://en.wikipedia.org/wiki/Mode_of_limited_transposition'],
     ],
     body: `
+Âm giai này có ba cái tên — bát cung (octatonic), âm giai giảm, âm giai Korsakov — và một tính cách: nó xen kẽ đều đặn **nửa cung và cung**, nên tám nốt của nó lặp lại sau mỗi quãng 3 thứ. Người chơi jazz dùng nó mỗi ngày trên hợp âm 7♭9 và °7; người soạn nhạc cổ điển dùng nó từ trước khi jazz ra đời. Bài này là phần lý thuyết; cách chơi trong jazz ở [[am-giai-doi-xung-jazz]].
+
 Hai dạng (bắt đầu từ C):
 - **Nửa cung – cung**: C – D♭ – E♭ – E – F♯ – G – A – B♭.
 - **Cung – nửa cung**: C – D – E♭ – F – F♯ – G♯ – A – B.

@@ -549,41 +549,53 @@ Bước tiếp theo cho người [[ngau-hung-piano|ngẫu hứng]]: với mỗi 
     summary: 'Cách nghĩ của jazz: mỗi hợp âm đi kèm một âm giai (thường là một điệu thức) để ngẫu hứng và chọn nốt mở rộng.',
     wiki: 'Chord-scale_system',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Chord-scale system', 'https://en.wikipedia.org/wiki/Chord-scale_system'],
       ['Wikipedia — Lydian Chromatic Concept of Tonal Organization', 'https://en.wikipedia.org/wiki/Lydian_Chromatic_Concept_of_Tonal_Organization'],
       ['Hilobrow — George Russell', 'https://www.hilobrow.com/2015/06/23/george-russell/'],
       ['University of Colorado thesis — The Lydian Chromatic Concept and chord-scale theory', 'https://scholar.colorado.edu/downloads/bk128c27z'],
     ],
     body: `
-Mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một [[am-giai|âm giai]] 7 nốt chứa các nốt của [[hop-am-ba|hợp âm]] cùng các [[hop-am-mo-rong|nốt mở rộng]] 9, 11, 13.
+## Vì sao lại là âm giai?
+Một hợp âm 7 có bốn nốt. Nếu khi solo bạn chỉ chơi bốn nốt đó, bạn sẽ nghe như đang rải hợp âm mãi — đúng, nhưng chật. Âm giai cho bạn **bảy** nốt cùng lúc: bốn nốt của hợp âm, cộng ba [[hop-am-mo-rong|nốt mở rộng]] 9, 11, 13. Nói cách khác, mỗi [[hop-am-bay|hợp âm 7]] được "phủ" bằng một [[am-giai|âm giai]] bảy nốt, và âm giai đó cho bạn biết **nốt nào nghe hay** trên hợp âm.
 
-## Trong vòng ii – V – I ở Đô trưởng
+Hãy nhớ ngay từ đầu: âm giai không phải là thứ để chạy lên chạy xuống. Nó là một **bể nốt** để bạn nhúng tay vào lấy. Cách biến bể nốt thành nhạc nằm ở [[luyen-am-giai-jazz]] và [[tu-am-giai-den-am-nhac]].
+
+## Trong ii – V – I ở Đô trưởng
 | Hợp âm | Âm giai | Ghi chú |
 |---|---|---|
 | Dm7 | D Dorian | Phím trắng từ D (xem [[dieu-thuc]]) |
 | G7 | G Mixolydian | Phím trắng từ G |
 | Cmaj7 | C Ionian hoặc C Lydian | F là **nốt tránh** trên Cmaj7; Lydian (F♯) tránh được điều đó |
+
 ::staff treble D4 E4 F4 G4 A4 B4 C5 D5 | D Dorian cho Dm7: các phím trắng từ D
 ::staff treble G4 A4 B4 C5 D5 E5 F5 G5 | G Mixolydian cho G7: các phím trắng từ G
 ::staff treble C4 D4 E4 F#4 G4 A4 B4 C5 | C Lydian cho Cmaj7: F♯ thay cho nốt tránh F
 
+Để ý: ba âm giai đầu là **cùng một bảy nốt**. Bạn không phải nhớ ba thứ; bạn nhớ một giọng.
+
+## Piano là cây đàn có mã màu
+Levine có một nhận xét rất hay cho dân piano: bàn phím **có mã màu sẵn**. Mọi hợp âm của Đô trưởng — Cmaj7, Dm7, Em7, Fmaj7, G7, Am7, Bø — đều là **phím trắng**. Nhìn tay mình trên phím, bạn thấy ngay hình dạng của giọng. Ở giọng khác, hình dạng phím trắng – đen đổi, nhưng nguyên tắc vẫn vậy: thuộc **hình dạng của giọng** trên bàn phím, rồi mọi hợp âm trong giọng nằm sẵn trong hình dạng đó.
+
 ## Âm giai cho hợp âm 7 át
-Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, bát cung, âm giai biến đổi…) tuỳ theo nốt căng và hướng giải quyết — xem bảng đầy đủ ở [[hop-am-at-bien-hoa]].
+Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, giảm nửa cung – cung, altered…) tuỳ nốt căng và hướng giải quyết — bảng đầy đủ ở [[hop-am-at-bien-hoa]]. Hợp âm sus có âm giai riêng: [[hop-am-sus-jazz]].
 
-## Các hợp âm còn lại
-- m7♭5 → Locrian (hoặc Locrian ♮2).
-- °7 → bát cung **[[am-giai-bat-cung|cung – nửa cung]]**.
-
-## Bảng tổng hợp: bảy loại hợp âm thường gặp
+## Bảng tổng hợp: những hợp âm thường gặp
 | Hợp âm | Âm giai thường dùng | Nốt căng có sẵn |
 |---|---|---|
 | maj7 | Ionian, Lydian | 9, ♯11, 13 |
 | m7 (ii) | Dorian | 9, 11, 13 |
 | m7 (iii) | Phrygian | 11 |
 | 7 | Mixolydian và các âm giai át khác | 9, 13 (và các biến hoá) |
+| sus | Mixolydian (4 không còn là nốt tránh) | 9, 13 |
 | m7♭5 | Locrian, Locrian ♮2 | 11, ♭13 (và 9 với Locrian ♮2) |
-| °7 | Bát cung cung – nửa cung | Các nốt cách gốc một cung |
-| mMaj7 | [[am-giai-thu|Thứ giai điệu]] | 9, 11, 13 |
+| °7 | Giảm cung – nửa cung ([[am-giai-bat-cung]]) | Các nốt cách mỗi nốt hợp âm một cung |
+| m(maj7) | [[dieu-thuc-thu-giai-dieu|Thứ giai điệu]] | 9, 11, 13 |
+
+Bốn "họ" âm giai sinh ra gần như mọi hợp âm jazz: **trưởng**, **thứ giai điệu**, **giảm** và **toàn cung**. Khi gặp một hợp âm, câu hỏi đầu tiên luôn là: nó thuộc họ nào?
+
+## Nốt tránh
+Nốt nằm [[cung-nua-cung|nửa cung]] trên một nốt hợp âm (F trên Cmaj7, chỏi với E; C trên G7, chỏi với B) gọi là **nốt tránh**. "Tránh" không có nghĩa là "cấm": bạn lướt qua nó thoải mái, chỉ đừng ngân dài lên nó trên hợp âm. Chi tiết ở [[not-tranh-va-quang-nghich]].
 
 ## Lịch sử
 - **George Russell** tự xuất bản *Lydian Chromatic Concept of Tonal Organization* năm **1953** — lý thuyết đầu tiên đặt quan hệ **dọc** giữa hợp âm và âm giai làm trung tâm, thường được gọi là lý thuyết gốc duy nhất sinh ra từ jazz. Russell lấy **Lydian**, chứ không phải Ionian, làm âm giai tham chiếu, vì Lydian được dựng từ các [[quang|quãng]] 5 chồng lên nhau tính từ nốt gốc.
@@ -591,16 +603,14 @@ Hợp âm 7 át có nhiều lựa chọn nhất (Mixolydian, Lydian át, bát cu
 - Hệ thống hợp âm – âm giai sau đó trở thành nền tảng của **giáo dục jazz** ở các trường đại học.
 
 ## Giới hạn của cách nghĩ này
-Một âm giai cho mỗi hợp âm là **điểm xuất phát**, không phải luật. [[giai-dieu|Giai điệu]] jazz hay vẫn đến từ [[dan-giong|dẫn giọng]] giữa các hợp âm — đặc biệt [[ii-v-i|nốt dẫn hướng]] 3 và 7 — và từ [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]].
+Một âm giai cho mỗi hợp âm là **điểm xuất phát**, không phải luật. Giai điệu jazz hay vẫn đến từ [[dan-giong|dẫn giọng]] giữa các hợp âm — đặc biệt [[not-dan-huong|nốt dẫn hướng]] 3 và 7 — và từ [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]]. Lúc mới học, hãy hiểu mỗi ký hiệu theo đúng một âm giai; khi đã thạo, bạn sẽ tự do diễn giải.
 
-## Nốt tránh
-Nốt nằm [[cung-nua-cung|nửa cung]] trên một nốt hợp âm (như F trên Cmaj7, nghịch với E) — có thể lướt qua nhưng không nên ngân dài.
+Các âm giai này cũng là "bảng màu" cho [[xep-hop-am]] và [[tai-hoa-am]]. Âm giai bổ sung: [[dieu-thuc-thu-giai-dieu]], [[am-giai-bebop]], [[am-giai-doi-xung-jazz]], [[ngu-cung-trong-jazz]].
 
-Các âm giai này là "bảng màu" cho [[xep-hop-am]] và [[tai-hoa-am]].
-
-Âm giai bổ sung: [[dieu-thuc-thu-giai-dieu]], [[am-giai-bebop]], [[am-giai-doi-xung-jazz]].
-
-Nốt tránh khi [[ngau-hung-piano|ngẫu hứng]]: [[not-tranh-va-quang-nghich]].
+## Câu hỏi và bài tập
+1. Viết âm giai cho ii – V – I ở B♭ và E♭; kiểm xem ba âm giai có cùng bảy nốt không.
+2. Bấm bảy hợp âm 7 của Rê trưởng; nhìn hình dạng phím trắng – đen của giọng.
+3. Trên Fmaj7, chơi F Ionian rồi F Lydian; ngân nốt B♭ rồi B. Cái nào nghe hợp hơn?
 `,
   },  {
     slug: 'dieu-thuc-thu-giai-dieu',
@@ -610,14 +620,17 @@ Nốt tránh khi [[ngau-hung-piano|ngẫu hứng]]: [[not-tranh-va-quang-nghich]
     summary: 'Trong jazz, âm giai thứ giai điệu dùng một dạng cho cả đi lên lẫn đi xuống ("jazz minor"); bảy điệu thức của nó cho bảy loại hợp âm: mMaj7, sus♭9, maj7♯5, 7♯11, 7♭13, m7♭5 và 7alt.',
     wiki: 'Jazz_minor_scale',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Jazz minor scale', 'https://en.wikipedia.org/wiki/Jazz_minor_scale'],
       ['Wikipedia — Altered scale', 'https://en.wikipedia.org/wiki/Altered_scale'],
       ['jazzguitar.be — Melodic minor modes', 'https://www.jazzguitar.be/blog/melodic-minor-modes/'],
     ],
     body: `
-Trong nhạc cổ điển, [[am-giai-thu|âm giai thứ giai điệu]] đi lên có 6 và 7 nâng, đi xuống trở về thứ tự nhiên. Trong jazz, người ta dùng **dạng đi lên cho cả hai chiều** — gọi là **"jazz minor"**. Giống [[dieu-thuc|điệu thức nhà thờ]] của [[am-giai-truong|âm giai trưởng]], mỗi bậc của nó sinh ra một điệu thức và một loại hợp âm.
+Trong nhạc cổ điển, [[am-giai-thu|âm giai thứ giai điệu]] đi lên có bậc 6 và 7 nâng, đi xuống thì trở về thứ tự nhiên. Jazz thì đơn giản hơn: dùng **dạng đi lên cho cả hai chiều**, và gọi nó là **"jazz minor"**. Dễ nhớ nhất: nó là **âm giai trưởng hạ bậc 3**.
 
-::staff treble C4 D4 Eb4 F4 G4 A4 B4 C5 | Âm giai thứ giai điệu (jazz minor) trên C: giống Đô trưởng nhưng nốt 3 giáng
+::staff treble C4 D4 Eb4 F4 G4 A4 B4 C5 | Đô thứ giai điệu (jazz minor): như Đô trưởng nhưng E♭
+
+Cũng như âm giai trưởng sinh ra bảy [[dieu-thuc|điệu thức]], mỗi bậc của thứ giai điệu sinh ra một điệu thức và một loại hợp âm. Và đây là chỗ hấp dẫn: những hợp âm "lạ" nhất, giàu màu nhất của jazz — alt, ♯11, ø, sus♭9, maj7♯5 — **đều sống trong âm giai này**.
 
 ## Bảy điệu thức (trong Đô thứ giai điệu)
 | Bậc | Nốt bắt đầu | Tên | Hợp âm |
@@ -631,13 +644,30 @@ Trong nhạc cổ điển, [[am-giai-thu|âm giai thứ giai điệu]] đi lên 
 | 7 | B | **Altered** (Super Locrian) | B7alt (♭9, ♯9, ♭5/♯11, ♯5/♭13) |
 Hai điệu thức hay dùng nhất là **Lydian át** (át không giải quyết, [[thay-the-tritone|thay thế tritone]]) và **altered** (át giải quyết về chủ) — chi tiết ở [[hop-am-at-bien-hoa]]. **Locrian ♮2** là lựa chọn phổ biến cho hợp âm nửa giảm (ii trong [[ii-v-i|ii – V – i thứ]]).
 
-::staff treble B3 C4 D4 Eb4 F4 G4 A4 B4 | Điệu thức 7 (altered) trên B: chứa ♭9 (C), ♯9 (D), 3 (E♭ = D♯), ♭5 (F), ♯5 (G), ♭7 (A) — mọi nốt căng của át đều biến hoá
+::staff treble B3 C4 D4 Eb4 F4 G4 A4 B4 | Điệu thức 7 (altered) trên B: ♭9 (C), ♯9 (D), 3 (E♭ = D♯), ♭5 (F), ♯5 (G), ♭7 (A) — mọi nốt căng của át đều biến hoá
+
+## Các hợp âm thứ giai điệu thay nhau được
+Một điều Levine nhấn mạnh, và nó sẽ đổi cách bạn chơi: trong âm giai thứ giai điệu **không có nốt tránh**. Mọi nốt đều nghe ổn trên mọi hợp âm của nó. Hệ quả: **các hợp âm cùng một âm giai thứ giai điệu thay cho nhau được**. Cm(maj7), Dsus♭9, E♭maj7♯5, F7♯11, Aø, B7alt — sáu cái tên, một bể nốt. Một thế bấm, một lick, một câu bạn chơi trên F7♯11 cũng chơi được trên B7alt hay Aø.
+
+::grand Eb4+G4+B4+D5/C3=Cm(maj7) Eb4+G4+B4+D5/F2+A3=F7♯11 Eb4+G4+B4+D5/B2+A3=B7alt | Cùng một thế bấm tay phải (E♭ – G – B – D) trên Cm(maj7), F7♯11 và B7alt: chỉ có bass đổi
+
+Bạn có thể đang nghĩ "B7alt", nhưng ở tầng sâu hơn bạn đang chơi **Đô thứ giai điệu**. Nhớ: **nghĩ theo giọng, đừng nghĩ theo hợp âm.**
 
 ## Mẹo nhớ
-- Altered trên một nốt = thứ giai điệu bắt đầu **nửa cung cao hơn** (B altered = C thứ giai điệu).
-- Lydian át trên một nốt = thứ giai điệu bắt đầu **một quãng 5 cao hơn** (F Lydian át = C thứ giai điệu).
-- Trong **ii – V – i ở Đô thứ**: Dm7♭5 dùng D Locrian ♮2 (= Fa thứ giai điệu), G7alt dùng G altered (= La giáng thứ giai điệu) — hai âm giai mẹ khác nhau, nhưng đều là thứ giai điệu.
-Liên quan: [[he-thong-hop-am-am-giai]], [[am-giai-bebop]], [[am-giai-doi-xung-jazz]].
+- Altered trên một nốt = thứ giai điệu bắt đầu **nửa cung cao hơn** (B altered = Đô thứ giai điệu).
+- Lydian át trên một nốt = thứ giai điệu bắt đầu **một quãng 5 cao hơn** (F Lydian át = Đô thứ giai điệu).
+- Nửa giảm trên một nốt = thứ giai điệu bắt đầu **quãng 3 thứ cao hơn** (Aø = Đô thứ giai điệu).
+- Trong **ii – V – i ở Đô thứ**: Dø dùng Fa thứ giai điệu, G7alt dùng La giáng thứ giai điệu — hai âm giai mẹ khác nhau, cách nhau một quãng 3 thứ. Vì thế câu nào bạn chơi trên Dø, dịch lên quãng 3 thứ là chơi được trên G7alt (xem [[tu-am-giai-den-am-nhac]]).
+
+## Mẹo luyện tập
+Thuộc số điệu thức tới mức phản xạ: m(maj7) là I, sus♭9 là II, maj7♯5 là III, át ♯11 là IV, ø là VI, alt là VII. Rồi tập đọc nhanh: "E7alt thuộc âm giai nào?" — "Fa thứ giai điệu." Lúc đầu mười giây, sau một giây. Tập được cả khi không có đàn.
+
+Liên quan: [[he-thong-hop-am-am-giai]], [[am-giai-bebop]], [[am-giai-doi-xung-jazz]]. Ngũ cung trên hợp âm thứ giai điệu: [[ngu-cung-trong-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết sáu hợp âm dùng được của Fa thứ giai điệu (bỏ bậc 5).
+2. A♭7alt, D7♯11, F♯ø thuộc âm giai thứ giai điệu nào?
+3. Chơi một thế bấm tay phải của Rê thứ giai điệu trên ba nốt bass khác nhau.
 `,
   },
   {
@@ -648,12 +678,18 @@ Liên quan: [[he-thong-hop-am-am-giai]], [[am-giai-bebop]], [[am-giai-doi-xung-j
     summary: 'Âm giai bebop là âm giai bảy nốt thêm một nốt lướt cromatic thành tám nốt, để khi chạy móc đơn trong ô 4/4 các nốt hợp âm rơi vào phách mạnh. Thuật ngữ do David Baker đặt, dựa trên lối chơi của Charlie Parker và Dizzy Gillespie; Barry Harris dạy cùng ý tưởng dưới tên "sixth diminished".',
     wiki: 'Bebop_scale',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Bebop scale', 'https://en.wikipedia.org/wiki/Bebop_scale'],
       ['Learn Jazz Standards — How to use bebop scales', 'https://www.learnjazzstandards.com/blog/learning-jazz/jazz-theory/use-bebop-scales-like-pro/'],
     ],
     body: `
-## Ý tưởng
-Âm giai bảy nốt có **lẻ** nốt; nếu chạy móc đơn liên tục trong ô 4/4 (tám móc đơn), các [[hop-am-bay|nốt hợp âm]] sẽ lúc rơi vào phách, lúc rơi giữa phách. Thêm **một [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]]** thành **tám nốt**: khi chạy **đi xuống** từ một nốt hợp âm ở đầu phách, mọi nốt hợp âm đều rơi vào **phách**.
+## Vấn đề: âm giai "không ra đúng phách"
+Chạy Sol Mixolydian đi xuống bằng móc đơn trên G7, bắt đầu từ G ở phách 1. Đến phách 3 bạn đang ở nốt D — ổn. Nhưng hết ô, bạn đang ở A, và sang ô sau nốt gốc G rơi vào "và" của phách, không phải phách 1. Âm giai bảy nốt có **lẻ** nốt, trong khi một ô 4/4 có **tám** móc đơn. Kết quả: các [[hop-am-bay|nốt hợp âm]] lúc rơi vào phách, lúc rơi giữa phách, và câu nhạc nghe "lệch".
+
+Dân bebop giải quyết rất gọn: thêm **một [[not-ngoai-hop-am|nốt lướt]] [[am-giai-cromatic|cromatic]]** cho đủ **tám nốt**. Chạy **đi xuống** từ một nốt hợp âm ở đầu phách, mọi nốt hợp âm sẽ rơi đúng **phách**, nốt lướt rơi vào "và".
+
+::staff treble C5=1 B4=& Bb4=2 A4=& G4=3 F4=& E4=4 D4=& | Bebop át trên C7, đi xuống từ C: các nốt hợp âm C – B♭ – G – E rơi đúng bốn phách (B là nốt lướt)
+
 Thuật ngữ "bebop scale" do nhà giáo dục **David Baker** đặt, rút ra từ lối chơi của Charlie Parker và Dizzy Gillespie; **Barry Harris** dạy cùng ý tưởng với tên "major sixth diminished" (C6 + D°7).
 
 ## Bốn dạng
@@ -668,10 +704,26 @@ Thuật ngữ "bebop scale" do nhà giáo dục **David Baker** đặt, rút ra 
 ::staff treble C5=1 B4=& Bb4=2 A4=& G4=3 F4=& E4=4 D4=& | Bebop át trên C7, đi xuống từ C: các nốt hợp âm C – B♭ – G – E rơi đúng bốn phách (B là nốt lướt)
 ::staff treble C4 D4 E4 F4 G4 G#4 A4 B4 | Bebop trưởng trên C: nốt lướt G♯ giữa 5 và 6
 
-## Luyện tập
-- Chạy âm giai **đi xuống** từ nốt gốc, 3, 5, 7 của hợp âm, móc đơn [[swing]], kiểm tra nốt hợp âm rơi vào phách.
-- Kết hợp với [[not-tiep-can-jazz|nốt tiếp cận và bao vây]] — đó là "ngôn ngữ" bebop.
-- Liên quan: [[he-thong-hop-am-am-giai]], [[ngau-hung-jazz]], [[bud-powell|Bud Powell]].
+::staff treble C4 D4 E4 F4 G4 G#4 A4 B4 | Bebop trưởng trên C: nốt lướt G♯ giữa 5 và 6
+
+## Dùng bebop át cho cả ii – V
+Vì Dm7 và G7 cùng thuộc Đô trưởng, nhiều người chơi coi **cả hai ô ii – V là một hợp âm G7** và chạy **Sol bebop át** suốt hai ô. Một âm giai, hai hợp âm, và mọi nốt hợp âm của G7 (cũng là 11, 13, 9… của Dm7) rơi đúng phách.
+
+## Khi nốt đầu phách không phải nốt hợp âm
+Luật "nốt hợp âm ở phách" chỉ tự động đúng khi bạn **bắt đầu ở một nốt hợp âm trên phách**. Nếu câu bắt đầu ở nốt không thuộc hợp âm (chẳng hạn A trên C7 ở phách 1), bạn sẽ bị lệch nửa phách. Cách sửa của dân bebop: chèn thêm một nốt lướt cromatic nữa, hoặc nhảy một quãng, để đưa câu trở lại đúng "luật". Tai bạn sẽ học được điều này nhanh hơn mọi quy tắc: nghe một câu Charlie Parker và để ý nốt nào rơi vào phách.
+
+## Mẹo luyện tập
+- Chạy âm giai **đi xuống** từ gốc, 3, 5, 7 của hợp âm, móc đơn [[swing]], kiểm tra nốt hợp âm rơi vào phách.
+- Bắt đầu ở mọi nốt hợp âm, đổi chiều ở mọi chỗ.
+- Kết hợp với [[not-tiep-can-jazz|nốt tiếp cận và bao vây]] — đó chính là "ngôn ngữ" bebop.
+- Đừng biến nó thành bài tập chạy ngón vô tận. Một âm giai bebop chạy từ đầu tới cuối ô nghe như bài tập; chặt nó thành mảnh, xen bước nhảy và nốt lặng, nó mới thành nhạc.
+
+Liên quan: [[he-thong-hop-am-am-giai]], [[ngau-hung-jazz]], [[bud-powell|Bud Powell]].
+
+## Câu hỏi và bài tập
+1. Viết bebop át cho F7, B♭7, E♭7.
+2. Chạy Sol bebop át đi xuống trên Dm7 – G7 – Cmaj7, bắt đầu từ F (nốt 7 của G7) ở phách 1. Nốt nào rơi vào phách?
+3. Viết một câu hai ô trên ii – V ở Fa dùng bebop át và một nhóm bao vây.
 `,
   },
   {
@@ -682,32 +734,52 @@ Thuật ngữ "bebop scale" do nhà giáo dục **David Baker** đặt, rút ra 
     summary: 'Ba âm giai chia quãng 8 thành các phần bằng nhau và được dùng nhiều trong jazz: âm giai giảm (nửa cung – cung cho hợp âm 7♭9, cung – nửa cung cho hợp âm 7 giảm), âm giai toàn cung (cho 7♯5) và âm giai tăng sáu nốt (cho maj7♯5), gắn với Coltrane, Oliver Nelson, Michael Brecker.',
     wiki: 'Hexatonic_scale',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Hexatonic scale', 'https://en.wikipedia.org/wiki/Hexatonic_scale'],
       ['Wikipedia — Octatonic scale', 'https://en.wikipedia.org/wiki/Octatonic_scale'],
       ['Jens Larsen — The augmented scale', 'https://jenslarsen.nl/augmented-scale/'],
     ],
     body: `
-Âm giai **đối xứng** lặp lại cùng một mẫu quãng nên chỉ có **ít phiên bản** (xem [[dieu-thuc-chuyen-vi-gioi-han|điệu thức chuyển vị giới hạn]] của [[olivier-messiaen|Messiaen]]). Trong jazz, chúng được dùng cho các hợp âm cũng đối xứng.
+Hầu hết âm giai có một "nhà" — một chủ âm mà mọi nốt hướng về. Âm giai **đối xứng** thì không: chúng lặp lại cùng một mẫu quãng, nên nốt nào cũng có thể là chủ âm, và chỉ có **vài phiên bản** khác nhau (xem [[dieu-thuc-chuyen-vi-gioi-han|điệu thức chuyển vị giới hạn]] của [[olivier-messiaen|Messiaen]]). Chính vì không có nhà, chúng nghe lơ lửng và căng — đúng thứ mà hợp âm át biến hoá cần.
 
-## Âm giai giảm (bát cung)
-- **Nửa cung – cung** (C D♭ E♭ E F♯ G A B♭): dùng cho **[[hop-am-bay|hợp âm 7 át]] có ♭9** — chứa ♭9, ♯9, ♯11, 13 nhưng **nốt 5 đúng**.
-- **Cung – nửa cung**: dùng cho **[[hop-am-bay-giam|hợp âm 7 giảm]]**.
-- Hợp âm 7 giảm = hợp âm 7♭9 bỏ nốt gốc; chỉ có **ba** hợp âm 7 giảm khác nhau. Lamar còn giới thiệu "hợp âm giảm kép": mỗi tay một hợp âm 7 giảm.
-Chi tiết lý thuyết: [[am-giai-bat-cung]].
+## Âm giai giảm
+Âm giai giảm xen kẽ **nửa cung và cung**: tám nốt. Có hai cách bắt đầu, và mỗi cách đi với một loại hợp âm:
+- **Nửa cung – cung** (C D♭ E♭ E F♯ G A B♭): cho **hợp âm 7 át có ♭9**. Nó chứa ♭9, ♯9, ♯11, 13 nhưng **nốt 5 và 13 thường** — khác âm giai altered (có ♭13).
+- **Cung – nửa cung** (C D E♭ F F♯ G♯ A B): cho **[[hop-am-bay-giam|hợp âm 7 giảm]]**.
+
 ::pc-clock 0 1 3 4 6 7 9 10 | Âm giai giảm nửa cung – cung trên C
 
+::staff treble C4 Db4 Eb4 E4 F#4 G4 A4 Bb4 C5 | Âm giai giảm nửa cung – cung trên C: dùng cho C7♭9 (và E♭7♭9, F♯7♭9, A7♭9)
+
+Mọi thứ trong âm giai giảm **lặp lại sau mỗi quãng 3 thứ**. Hệ quả rất thực tế:
+- Âm giai giảm nửa cung – cung trên C cũng là âm giai của **E♭7♭9, F♯7♭9, A7♭9**. Học một, được bốn.
+- Lick nào chơi trên C7♭9, dịch lên quãng 3 thứ vẫn đúng trên cùng hợp âm.
+- Hợp âm 7 giảm = hợp âm 7♭9 bỏ nốt gốc; vì thế chỉ có **ba** hợp âm 7 giảm khác nhau, và mỗi cái là bốn hợp âm 7♭9 trá hình (xem [[ket-lua-va-tiep-can-hop-am]]).
+- Trong âm giai giảm, mọi nốt cách một đều cách nhau quãng 3 thứ, nên hợp âm ba dựng bằng cách chồng nốt cách một toàn là hợp âm ba giảm. Ngoài ra âm giai (nửa cung – cung trên C) còn chứa hợp âm ba trưởng và thứ trên C, E♭, F♯, A.
+
+**Mẹo tập**: chơi các nhóm bốn nốt rồi dịch lên quãng 3 thứ; chơi quãng 3 thứ liên tiếp; rải hợp âm ba trưởng C – E♭ – F♯ – A trên C7♭9 (nghe như upper structure, xem [[upper-structure]]). Lý thuyết đầy đủ: [[am-giai-bat-cung]].
+
 ## Âm giai toàn cung
-C D E F♯ G♯ B♭ — sáu nốt cách nhau một cung; cho hợp âm **7♯5** (cùng 9 và ♯11); nốt 5 là ♭5/♯5 chứ không phải 5 đúng. Xem [[am-giai-cromatic]].
+C D E F♯ G♯ B♭: sáu nốt, mỗi nốt cách nhau một cung. Chỉ có **hai** âm giai toàn cung khác nhau. Dùng cho hợp âm **7♯5** (C7♯5, C+7), có cả 9 và ♯11; nốt 5 là ♭5 hoặc ♯5, không bao giờ là 5 đúng. Mọi hợp âm ba trong âm giai toàn cung là hợp âm ba tăng.
+
+::staff treble C4 D4 E4 F#4 G#4 Bb4 C5 | Âm giai toàn cung trên C: cho C7♯5 (C7♭5)
+
+Âm giai toàn cung nghe mơ hồ, như cảnh trong mơ. Một chút thì đẹp; nhiều quá thì nghe như nhạc phim hoạt hình. Dùng có chừng (xem [[am-giai-cromatic]]).
 
 ## Âm giai tăng
-Sáu nốt xen kẽ **quãng 3 thứ – nửa cung**; là hai [[hop-am-ba-tang|hợp âm ba tăng]] lồng vào nhau (C – E – G♯ và E♭ – G – B):
+Sáu nốt xen kẽ **quãng 3 thứ – nửa cung**: hai [[hop-am-ba-tang|hợp âm ba tăng]] lồng vào nhau (C – E – G♯ và E♭ – G – B):
 ::staff treble C4 Eb4 E4 G4 Ab4 B4 | Âm giai tăng trên C: C – E♭ (D♯) – E – G – A♭ (G♯) – B
 ::pc-clock 0 3 4 7 8 11 | Đối xứng: chỉ có 4 phiên bản (C, E và A♭ cho cùng các nốt)
-- Dùng cho **maj7♯5** (C – E – G♯ – B), nhưng cần cẩn thận với [[not-tranh-va-quang-nghich|nốt tránh]] (E♭ trên Cmaj7♯5); với hợp âm này, [[dieu-thuc-thu-giai-dieu|Lydian tăng]] phổ biến hơn.
-- Người dùng nổi tiếng: John Coltrane (solo "One Down, One Up"), Oliver Nelson, Michael Brecker. (Wikipedia gắn Nelson với "Stolen Moments", có nguồn khác cho là đoạn [[hinh-thuc-ca-khuc-32|bridge]] của "Hoe-Down" — chưa thống nhất.)
+- Dùng cho **maj7♯5** (C – E – G♯ – B), nhưng cẩn thận [[not-tranh-va-quang-nghich|nốt tránh]] (E♭ trên Cmaj7♯5); với hợp âm này, [[dieu-thuc-thu-giai-dieu|Lydian tăng]] phổ biến hơn.
+- Người dùng nổi tiếng: John Coltrane (solo "One Down, One Up"), Oliver Nelson, Michael Brecker. (Wikipedia gắn Nelson với "Stolen Moments", có nguồn khác cho là đoạn bridge của "Hoe-Down" — chưa thống nhất.)
 
 ## Vì sao âm giai đối xứng "nghe jazz"?
-Chúng không có một [[bac-am-giai|chủ âm]] duy nhất nên tạo cảm giác lơ lửng, căng — hợp với hợp âm át biến hoá và với lối [[choi-ngoai-jazz|chơi "ngoài"]]. Trong âm nhạc cổ điển, chúng xuất hiện ở [[claude-debussy|Debussy]], [[nikolai-rimsky-korsakov|Rimsky-Korsakov]], [[igor-stravinsky|Stravinsky]] ([[an-tuong]], [[hoa-am-the-ky-20]]).
+Không có chủ âm duy nhất nên chúng tạo cảm giác lơ lửng, căng — hợp với hợp âm át biến hoá và với lối [[choi-ngoai-jazz|chơi "ngoài"]]. Trong nhạc cổ điển chúng có ở [[claude-debussy|Debussy]], [[nikolai-rimsky-korsakov|Rimsky-Korsakov]], [[igor-stravinsky|Stravinsky]] ([[an-tuong]], [[hoa-am-the-ky-20]]). Lưu ý: trong âm giai giảm và toàn cung **không có** âm giai ngũ cung nào (xem [[ngu-cung-trong-jazz]]).
+
+## Câu hỏi và bài tập
+1. Âm giai giảm nửa cung – cung trên D dùng được cho những hợp âm 7♭9 nào?
+2. Trên G7♭9, rải bốn hợp âm ba trưởng G – B♭ – D♭ – E (dựng trên các nốt cách quãng 3 thứ).
+3. Chơi âm giai toàn cung trên G7♯5 giải quyết về Cmaj7.
 `,
   },
 
@@ -719,6 +791,7 @@ Chúng không có một [[bac-am-giai|chủ âm]] duy nhất nên tạo cảm gi
     summary: 'Hợp âm 7 át trong jazz thường mang thêm nốt căng — tự nhiên (9, 13) hoặc biến hoá (♭9, ♯9, ♯11, ♭13). Bài này giải thích chọn nốt căng nào, theo hướng giải quyết, và âm giai đi kèm.',
     wiki: 'Altered_chord',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Altered scale', 'https://en.wikipedia.org/wiki/Altered_scale'],
       ['Wikipedia — Altered chord', 'https://en.wikipedia.org/wiki/Altered_chord'],
       ['Open Music Theory 2e — Substitutions (V7♭9 as mixture)', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz/6.06%3A_Substitutions'],
@@ -726,7 +799,7 @@ Chúng không có một [[bac-am-giai|chủ âm]] duy nhất nên tạo cảm gi
       ['PianoGroove — Improvising with the altered mode', 'https://pianogroove.com/jazz-piano-lessons/altered-scale-improv/'],
     ],
     body: `
-[[hop-am-bay|Hợp âm 7 át]] (V7) là [[hop-am-ba|hợp âm]] **căng nhất** và **linh hoạt nhất** trong jazz: ngoài gốc – 3 – 5 – 7 nó có thể mang nhiều [[hop-am-mo-rong|nốt căng]].
+Nếu hợp âm maj7 là phòng khách và hợp âm m7 là phòng làm việc, thì hợp âm **7 át** là cái sân chơi. Nó là hợp âm **căng nhất** và **linh hoạt nhất** của jazz: ngoài gốc – 3 – 5 – 7, nó nhận được gần như mọi [[hop-am-mo-rong|nốt căng]], kể cả những nốt mà hợp âm khác không chịu nổi.
 
 ## Nốt căng tự nhiên và biến hoá
 Trên hợp âm 7 át có ba nốt căng (9, 11, 13) và **bốn khả năng biến hoá**: **♭9, ♯9, ♯11, ♭13** (♭13 còn được viết ♯5).
@@ -739,6 +812,10 @@ Trên hợp âm 7 át có ba nốt căng (9, 11, 13) và **bốn khả năng bi�
 | 13 | E | Sáng |
 | ♭13 | E♭ | Tối |
 Nốt **11 tự nhiên** (C trên G7) nghịch [[cung-nua-cung|nửa cung]] với nốt 3 (B) nên thường bị tránh, trừ khi bỏ nốt 3 (hợp âm **sus**, xem [[ky-hieu-hop-am]]).
+
+Chơi G7 với từng nốt căng trong bảng đặt trên cùng, rồi giải quyết về C. Nghe kỹ: mỗi nốt kéo về chủ âm theo một kiểu khác.
+
+::grand A4/G2+F3+B3=G9 Ab4/G2+F3+B3=G7♭9 Bb4/G2+F3+B3=G7♯9 C#5/G2+F3+B3=G7♯11 E5/G2+F3+B3=G13 Eb5/G2+F3+B3=G7♭13 | G7 (tay trái G – F – B) với từng nốt căng ở trên
 
 ## Chọn theo hướng giải quyết
 - V7 giải quyết về **chủ trưởng**: nốt căng tự nhiên (9, 13) lấy từ [[am-giai-truong|âm giai trưởng]].
@@ -763,6 +840,16 @@ Mẹo nhớ: âm giai biến đổi của G = âm giai **thứ giai điệu A♭
 "G7alt" nghĩa là: chơi gốc, 3, 7 và **bất kỳ** tổ hợp nốt biến hoá nào (♭9, ♯9, ♯11/♭5, ♭13/♯5) — người chơi tự chọn. Cách xếp thực tế: [[xep-hop-am]], [[hop-am-chong|hợp âm ba cấu trúc trên]].
 
 Âm giai nguồn: [[dieu-thuc-thu-giai-dieu]]; thế bấm cho hợp âm át biến hoá: [[upper-structure]].
+
+## Mẹo luyện tập
+1. Chọn một ii – V – I ở Đô. Mỗi lượt, đổi G7 thành một loại: G13, G7♭9, G7alt, G7♯11. Giai điệu tay phải giữ nguyên; nghe xem loại nào hợp.
+2. Đi vòng quãng 5 với hợp âm alt, đọc to âm giai mẹ: "C7alt — Rê giáng thứ giai điệu; F7alt — Fa thăng thứ giai điệu…"
+3. Trên alt, thử chơi ngũ cung cách gốc một tritone (G7alt → ngũ cung Rê giáng); xem [[ngu-cung-trong-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết âm giai altered cho C7, F7, B♭7.
+2. Trên D7 giải quyết về Gm, bạn chọn nốt căng nào? Về Gmaj7 thì sao?
+3. Viết hai thế bấm G7alt khác nhau; bấm và giải quyết về Cmaj7.
 `,
   },
   {

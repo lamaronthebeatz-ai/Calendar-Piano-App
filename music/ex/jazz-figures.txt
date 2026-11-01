@@ -256,6 +256,17 @@
   \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "B" "C" "D" "E♭" "F" "G" "A" "B" }
 >> \layout { } }
 
+=== fig-f35b0965
+#(set-global-staff-size 24)
+\score { <<
+  \new PianoStaff <<
+    \new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn <ees' g' b' d''>1 <ees' g' b' d''>1 <ees' g' b' d''>1 \bar "|." }
+    \new Staff \with { \remove "Time_signature_engraver" } << { \cadenzaOn \clef bass c1 <f, a>1 <b, a>1 \bar "|." }
+      \new NullVoice = "lab" { \cadenzaOn c1 c1 c1 } >>
+  >>
+  \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "Cm(maj7)" "F7♯11" "B7alt" }
+>> \layout { } }
+
 === fig-b0a3bc5e
 #(set-global-staff-size 24)
 \score { <<
@@ -272,12 +283,39 @@
   \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "C" "D" "E" "F" "G" "G♯" "A" "B" }
 >> \layout { } }
 
+=== fig-bd18affb
+#(set-global-staff-size 24)
+\score { <<
+  \new Staff \with { \remove "Time_signature_engraver" } << { \cadenzaOn \clef treble c'1 des'1 ees'1 e'1 fis'1 g'1 a'1 bes'1 c''1 \bar "|." }
+    \new NullVoice = "lab" { \cadenzaOn c1 c1 c1 c1 c1 c1 c1 c1 c1 } >>
+  \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "C" "D♭" "E♭" "E" "F♯" "G" "A" "B♭" "C" }
+>> \layout { } }
+
+=== fig-adc0d522
+#(set-global-staff-size 24)
+\score { <<
+  \new Staff \with { \remove "Time_signature_engraver" } << { \cadenzaOn \clef treble c'1 d'1 e'1 fis'1 gis'1 bes'1 c''1 \bar "|." }
+    \new NullVoice = "lab" { \cadenzaOn c1 c1 c1 c1 c1 c1 c1 } >>
+  \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "C" "D" "E" "F♯" "G♯" "B♭" "C" }
+>> \layout { } }
+
 === fig-ce20f8b6
 #(set-global-staff-size 24)
 \score { <<
   \new Staff \with { \remove "Time_signature_engraver" } << { \cadenzaOn \clef treble c'1 ees'1 e'1 g'1 aes'1 b'1 \bar "|." }
     \new NullVoice = "lab" { \cadenzaOn c1 c1 c1 c1 c1 c1 } >>
   \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "C" "E♭" "E" "G" "A♭" "B" }
+>> \layout { } }
+
+=== fig-a5272e7b
+#(set-global-staff-size 24)
+\score { <<
+  \new PianoStaff <<
+    \new Staff \with { \remove "Time_signature_engraver" } { \cadenzaOn a'1 aes'1 bes'1 cis''1 e''1 ees''1 \bar "|." }
+    \new Staff \with { \remove "Time_signature_engraver" } << { \cadenzaOn \clef bass <g, f b>1 <g, f b>1 <g, f b>1 <g, f b>1 <g, f b>1 <g, f b>1 \bar "|." }
+      \new NullVoice = "lab" { \cadenzaOn c1 c1 c1 c1 c1 c1 } >>
+  >>
+  \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "G9" "G7♭9" "G7♯9" "G7♯11" "G13" "G7♭13" }
 >> \layout { } }
 
 === fig-b95eee13
