@@ -812,7 +812,8 @@ Hợp âm 7 là "ngôn ngữ mặc định" của jazz (xem [[vong-hop-am|ii –
       ['Princeton Library — Brandt & Roemer, Standardized Chord Symbol Notation (1976)', 'https://catalog.princeton.edu/catalog/1473161'],
     ],
     body: `
-Chữ cái in hoa = **nốt gốc**. Hậu tố cho biết loại hợp âm:
+Một lead sheet chỉ cho bạn giai điệu và một hàng chữ phía trên: C7, Fmaj7, Bø, E7♯9… Hàng chữ ấy là **mật mã**, và bạn phải đọc nó nhanh như đọc chữ. Tin tốt: mật mã này chỉ có một quy tắc gốc. Chữ cái in hoa là **nốt gốc**; phần đuôi phía sau cho biết **loại hợp âm**.
+
 | Ký hiệu | Đọc | Thành phần (gốc C) |
 |---|---|---|
 | C | Đô trưởng | C E G |
@@ -833,13 +834,25 @@ Chữ cái in hoa = **nốt gốc**. Hậu tố cho biết loại hợp âm:
 ::staff treble C4+E4+G4=C C4+Eb4+G4=Cm C4+Eb4+Gb4=C° C4+E4+G#4=C+ C4+E4+G4+Bb4=C7 C4+E4+G4+B4=Cmaj7 C4+Eb4+G4+Bb4=Cm7 C4+Eb4+Gb4+Bb4=Cø C4+Eb4+Gb4+Bbb4=C°7 | Các hợp âm ba và hợp âm bảy gốc C trong bảng
 ::staff treble C4+E4+G4+A4=C6 C4+F4+G4=Csus4 C4+D4+G4=Csus2 C4+E4+G4+D5=Cadd9 C4+E4+G4+Bb4+D5=C9 | C6, sus, add9 và 9
 
+## Ba chỗ hay nhầm
+1. **Chữ "7" đứng một mình luôn là 7 thứ.** C7 là C – E – G – B♭, không phải B. Muốn 7 trưởng phải viết maj7 (hoặc Δ, M7). Đây là lỗi số một của người mới.
+2. **Dấu trừ là thứ.** C-7 = Cm7. Nhiều sách jazz (kể cả sách của Mark Levine) dùng dấu trừ vì nó không bị đọc nhầm khi viết tay vội.
+3. **"ø" và "°7" khác nhau.** Cø (C – E♭ – G♭ – B♭) có 7 thứ; C°7 (C – E♭ – G♭ – B𝄫) có 7 giảm. Một nốt khác nhau, hai thế giới khác nhau: ø thường là hợp âm ii trong giọng thứ, °7 thường là hợp âm lướt hay V7♭9 trá hình.
+
+Chơi lần lượt các hợp âm trong bảng, đọc to tên chúng khi bấm. Rồi làm lại ở giọng Fa.
+
 ## Hợp âm treo (sus)
-Thay nốt bậc 3 bằng bậc 4 (sus4) hoặc bậc 2 (sus2) → không trưởng không thứ, nghe lơ lửng; truyền thống thường **giải quyết** sus4 → 3 (Csus4 → C).
+Thay nốt 3 bằng nốt 4 (sus4) hoặc nốt 2 (sus2): không trưởng không thứ, nghe lơ lửng. Hoà âm cổ điển **giải quyết** sus4 về nốt 3 (Csus4 → C). Jazz thì hay để nó lơ lửng luôn — xem [[hop-am-sus-jazz]].
 
 ## Ký hiệu gạch chéo
-**C/E** nghĩa là hợp âm C với **E ở bè trầm** — chính là [[the-dao-hop-am|thể đảo 1]]. Nốt sau gạch có thể không thuộc hợp âm (C/B♭).
+**C/E** nghĩa là hợp âm C với **E ở bè trầm**, tức [[the-dao-hop-am|thể đảo 1]]. Nốt sau gạch có thể **không thuộc** hợp âm (C/B♭, D/C) — khi đó là một hợp âm mới hẳn; xem [[hop-am-gach-cheo]] và [[slash-chord-tren-mot-not-bass]].
 
-Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 thế nào, add9 khác 9 thế nào: [[hop-am-6-va-add]].
+## Đọc thật nhanh
+Ký hiệu chỉ có ích khi bạn đọc nó **không cần nghĩ**. Hai bài tập:
+- Mở một fake book, đọc tên từng nốt của mỗi hợp âm trong một bài, không đánh đàn. Bấm giờ; mỗi tuần đọc nhanh hơn.
+- Chọn một loại (chẳng hạn m7), bấm nó trên cả 12 nốt gốc theo vòng quãng 5. Hết loại này sang loại khác.
+
+Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 thế nào, add9 khác 9 thế nào: [[hop-am-6-va-add]]. Soát ký hiệu trên lead sheet xem đúng hay sai: [[doc-lead-sheet-va-thuoc-bai]].
 
 ## Lịch sử ký hiệu hợp âm
 - **[[he-so-nashville-va-lead-sheet|Lead sheet]]**: nhạc jazz thường được ghi gọn bằng [[giai-dieu|giai điệu]] kèm ký hiệu hợp âm. Từ những năm 1940, các lead sheet được gom thành sách bán cho nhạc công — gọi là **fake book** (sách để "chơi ứng phó" một bài lạ). Tháng 5/1942, George Goodwin phát hành bộ thẻ **Tune-Dex** đầu tiên ghi lời, giai điệu và hợp âm. Nhiều fake book thời đó in **không có bản quyền**.
@@ -848,6 +861,11 @@ Nền tảng: [[hop-am-ba]], [[hop-am-bay]], [[hop-am-mo-rong]]. C6 khác Am7 th
 
 ## Hai trường phái
 Ngoài số La Mã và ký hiệu phổ thông, trường phái Nga – Xô viết ghi hợp âm bằng **chữ chức năng**: T, S, D, K64, SII, TSVI, DVII7, DD — bảng đổi qua lại ở [[ky-hieu-chuc-nang-truong-phai-nga]].
+
+## Câu hỏi và bài tập
+1. Viết thành phần của B♭7, B♭maj7, B♭m7, B♭ø, B♭°7. Bấm từng cái.
+2. Hợp âm nào trong năm hợp âm trên có nốt A? Có nốt A♭? Có nốt G? 
+3. Đọc tên nốt mọi hợp âm trong một bài chuẩn bạn thích, trong dưới hai phút.
 `,
   },
   {
@@ -864,27 +882,44 @@ Ngoài số La Mã và ký hiệu phổ thông, trường phái Nga – Xô vi�
       ['Hutchinson, Music Theory for the 21st-Century Classroom — Impressionism and extended tonality', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Music_Theory_for_the_21st-Century_Classroom_(Hutchinson)/32%3A_Impressionism_and_Extended_Tonality'],
     ],
     body: `
-Tiếp tục chồng [[quang|quãng 3]] lên [[hop-am-bay]]:
+Bấm Cmaj7. Giờ thêm nốt D ở trên. Nghe khác hẳn chưa? Bạn vừa đi từ "hợp âm" tới "màu". Đó là việc của các **nốt mở rộng**: cứ tiếp tục chồng [[quang|quãng 3]] lên [[hop-am-bay|hợp âm 7]] là bạn có nốt 9, 11, 13.
+
 | Nốt mở rộng | Bằng nốt | Ví dụ trên C |
 |---|---|---|
-| 9 | Bậc 2 (cao hơn 1 quãng 8) | D |
+| 9 | Bậc 2 (cao hơn một quãng 8) | D |
 | 11 | Bậc 4 | F |
 | 13 | Bậc 6 | A |
 
-Cmaj9 = C – E – G – B – **D**. G13 = G – B – D – F – (A) – (C) – **E**.
+::staff treble C4+E4+G4+B4=Cmaj7 C4+E4+G4+B4+D5=Cmaj9 D4+F4+A4+C5+E5=Dm9 G3+B3+D4+F4+A4+E5=G13 | Cmaj7, Cmaj9, Dm9 và G13 (bỏ nốt 11 của G13)
 
-## Lược bỏ nốt
-Hợp âm 13 đầy đủ có 7 nốt — quá nhiều cho hai tay. Thứ tự ưu tiên giữ lại: **3 và 7** (quyết định tính chất) → nốt mở rộng → nốt gốc (bè bass có thể chơi) → **5** (bỏ đầu tiên).
+Tại sao gọi 9 mà không gọi 2? Vì nốt đó nằm **trên** hợp âm, trong vai một nốt màu, chứ không phải một nốt đi ngang giữa nốt 1 và 3. Trên đàn thì bạn đặt nó ở đâu cũng được — kể cả sát nốt 3 — nó vẫn tên là 9.
 
-::keyboard E4 G4 B4 D5 | Cmaj9 không nốt gốc: E – G – B – D (tay phải), thường gặp trong jazz piano
+## Bỏ bớt nốt
+Hợp âm 13 đầy đủ có bảy nốt — quá nhiều cho hai tay, và nghe như một nắm bột. Bạn phải chọn. Thứ tự ưu tiên giữ lại:
+1. **Nốt 3 và 7** — chúng quyết định chất trưởng, thứ hay át.
+2. **Nốt mở rộng** — chúng là màu.
+3. **Nốt gốc** — tay bass sẽ lo.
+4. **Nốt 5** — bỏ đầu tiên. Nó gần như không nói gì về hợp âm (trừ khi nó bị biến hoá thành ♭5 hay ♯5).
+
+::keyboard E4 G4 B4 D5 | Cmaj9 không nốt gốc: E – G – B – D ở tay phải, thường gặp trong jazz piano
+
+Đây là mầm của [[xep-hop-am|thế bấm không gốc]], thứ bạn sẽ dùng suốt đời.
 
 ## Nốt căng biến hoá
-Trên hợp âm 7 át còn có ♭9, ♯9, ♯11, ♭13 — tạo sức căng mạnh trước khi giải quyết (xem [[hop-am-at-bien-hoa|âm giai biến đổi]] trong [[he-thong-hop-am-am-giai]]). Nốt 11 tự nhiên thường **tránh** trên [[hop-am-ba|hợp âm trưởng]] vì [[thuan-nghich|nghịch]] với nốt bậc 3.
+Trên hợp âm 7 át còn có **♭9, ♯9, ♯11, ♭13** — các nốt căng biến hoá, tạo sức kéo mạnh về hợp âm sau (xem [[hop-am-at-bien-hoa]]). Hợp âm thứ và trưởng hiếm khi biến hoá như vậy; ngoại lệ đáng nhớ là **maj7♯11** (Lydian).
 
-Xem thêm: [[ky-hieu-hop-am]], [[vong-hop-am]], [[xep-hop-am]] (cách xếp nốt), [[he-thong-hop-am-am-giai]] (chọn nốt căng).
+## Nốt 11 trên hợp âm trưởng
+Nốt 11 thường (F trên Cmaj7) nằm **quãng 9 thứ** trên nốt 3 (E) — chỏi gắt — nên trên hợp âm trưởng và hợp âm át không biến hoá, người ta **tránh** nó hoặc nâng lên thành ♯11. Trên hợp âm thứ thì 11 lại là nốt đẹp: Dm11 nghe rất "jazz". Chi tiết ở [[not-tranh-va-quang-nghich]].
+
+Xem thêm: [[ky-hieu-hop-am]], [[vong-hop-am]], [[xep-hop-am]] (cách xếp nốt), [[he-thong-hop-am-am-giai]] (chọn nốt căng từ âm giai).
 
 ## Hợp âm mở rộng như màu sắc (Debussy)
 Trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], hợp âm 9 át là hợp âm **căng**, phải giải quyết. [[Debussy]] thường để chúng **không giải quyết**, chọn chúng vì **âm thanh giàu có** hơn là vì chức năng — một phần phản ứng của ông với [[richard-wagner|Wagner]]. Ví dụ ô 15 của "Clair de lune" có hợp âm **E♭m9** với nốt 9 ở [[giai-dieu|giai điệu]] (xem [[phan-tich-clair-de-lune]]). Cách dùng này nối thẳng sang [[hoa-am-jazz|hoà âm jazz]]. Tổng quan: [[hoa-am-the-ky-20]].
+
+## Câu hỏi và bài tập
+1. Dựng Fmaj9, Gm9, C13 ở dạng đầy đủ, rồi bỏ nốt cho còn bốn nốt theo thứ tự ưu tiên.
+2. Chơi Cmaj7 với nốt 11 thường (F) ở trên, rồi với ♯11 (F♯). Mô tả sự khác nhau.
+3. Bấm Dm11 bằng hai tay; tay phải giữ C – E – G (7 – 9 – 11).
 `,
   },
   {
@@ -1337,6 +1372,8 @@ Chi tiết: [[so-sanh-hai-truong-phai-hoa-am]], [[truong-hoa-am]].
       ['KVR Audio forum — Why a C6 is not an Am7?', 'https://kvraudio.com/forum/viewtopic.php?p=7191029'],
     ],
     body: `
+Ba loại hợp âm trong bài này có chung một điểm: chúng thêm hoặc đổi **một** nốt của hợp âm ba, và chính một nốt ấy đổi hẳn cảm giác. Học chúng chung với nhau để khỏi lẫn.
+
 ## Hợp âm 6
 [[hop-am-ba|Hợp âm ba]] trưởng thêm nốt [[quang|quãng 6 trưởng]] trên nốt gốc: **C6 = C – E – G – A**. Cm6 = C – E♭ – G – A.
 
@@ -1364,6 +1401,8 @@ Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
 
 Điểm mấu chốt: **có nốt 7 hay không** quyết định hợp âm nghe ổn định hay căng (xem [[thuan-nghich]], [[hop-am-bay]]).
 
+Thử ngay: bấm C6 rồi Cmaj7 rồi C7 ở cuối một câu nhạc ở Đô. C6 nghe "kết bài" kiểu swing cũ; Cmaj7 mơ màng hơn; C7 thì muốn đi tiếp (về F). Một nốt khác nhau, ba cái kết khác nhau.
+
 ## Hợp âm treo (sus)
 **Thay** nốt 3 bằng nốt 4 hoặc nốt 2 — không còn nốt 3 nên hợp âm **không trưởng cũng không thứ**:
 | Ký hiệu | Nốt (gốc C) | Ghi chú |
@@ -1378,6 +1417,13 @@ Hợp âm ba **thêm một nốt** mà không thêm nốt 7:
 
 ## Power chord (hợp âm 5)
 **C5 = C – G** (thường thêm C ở quãng 8): chỉ có nốt gốc và nốt 5. Vì không có nốt 3, nó cũng không trưởng không thứ. Rất phổ biến trong rock với [[guitar-dien|guitar điện]] bị biến tiếng (distortion). Trên piano, quãng 5 trống ở tay trái là cách đệm tương tự (xem [[dem-hat-piano]], [[ostinato]]).
+
+Trong jazz, hợp âm sus còn được dùng thay cho cả một cặp ii – V: xem [[hop-am-sus-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết F6 và Dm7. Cùng bốn nốt không? Khi nào gọi là F6, khi nào là Dm7?
+2. Chơi Cadd9, C9, Cmaj9 liền nhau; cái nào muốn đi tiếp?
+3. Chơi một chuỗi Csus4 – C – Fsus2 – F – Gsus4 – G7 – C.
 `,
   },
   {

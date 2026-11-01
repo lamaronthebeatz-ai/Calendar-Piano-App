@@ -943,24 +943,35 @@ Anh em: [[the-bam-bac-thay-jazz|hợp âm Hancock]] cũng sáu nốt cho m7 như
       ['Wikipedia — Slash chord', 'https://en.wikipedia.org/wiki/Slash_chord'],
     ],
     body: `
-Ký hiệu **Hợp âm/Nốt** cho biết hợp âm ở trên và **nốt bass** ở dưới (cách đọc cơ bản: [[ky-hieu-hop-am]]). Khi nốt bass thuộc hợp âm, đó chỉ là một [[the-dao-hop-am|thể đảo]] (C/E). Bài này nói về trường hợp **bass không thuộc hợp âm** — khi đó hợp âm gạch chéo là một **hợp âm mới**.
+Bạn sẽ gặp ký hiệu **Hợp âm/Nốt** rất thường: hợp âm ở trên gạch chéo, **nốt bass** ở dưới (cách đọc cơ bản: [[ky-hieu-hop-am]]). Có hai trường hợp, và phân biệt được chúng là nửa công việc:
+- **Nốt bass thuộc hợp âm** (C/E, C/G): chỉ là một [[the-dao-hop-am|thể đảo]]. Không có gì mới.
+- **Nốt bass không thuộc hợp âm** (B♭/C, D/C): đây là một **hợp âm mới hẳn**, và là chuyện của bài này.
 
-## Hai ví dụ hay gặp
-::grand Bb4+D5+F5/C3=B♭/C D4+F#4+A4/C3=D/C | B♭/C: các nốt C – B♭ – D – F = ♭7, 9, 11 trên C, không có nốt 3 → C9sus4 (C11). D/C: D – F♯ – A trên C = 9, ♯11, 13 → màu Lydian
+## Hai ví dụ bạn sẽ gặp hằng tuần
+::grand Bb4+D5+F5/C3=B♭/C D4+F#4+A4/C3=D/C | B♭/C: các nốt B♭ – D – F trên C = ♭7, 9, 11, không có nốt 3 → C9sus4. D/C: D – F♯ – A trên C = 9, ♯11, 13 → màu Lydian
+
 | Ký hiệu | Nốt (so với bass C) | Đọc là | Âm giai |
 |---|---|---|---|
-| **B♭/C** | ♭7 – 9 – 11 | C9sus4 (hoặc Cm11) | [[dieu-thuc|Mixolydian]] hoặc Dorian trên C |
-| **D/C** | 9 – ♯11 – 13 | Cmaj7♯11 / C Lydian (thiếu [[not-dan-huong|nốt 3 và 7]]) | Lydian |
-Lamar lưu ý: hợp âm gạch chéo thường **mơ hồ** vì có thể thiếu nốt 3 hoặc 7 — dựa vào các [[hop-am-mo-rong|nốt căng]] có mặt để đoán hợp âm định viết.
+| **B♭/C** | ♭7 – 9 – 11 | C9sus4 | [[dieu-thuc|Mixolydian]] trên C |
+| **D/C** | 9 – ♯11 – 13 | Cmaj7♯11 thiếu [[not-dan-huong|nốt 3 và 7]] | Lydian trên C |
 
-## Vì sao dùng?
-- **Gọn**: B♭/C dễ đọc hơn C9sus4 với đầy đủ các nốt.
-- **Có sẵn thế bấm**: tay phải chơi hợp âm ba quen thuộc, tay trái chơi bass.
-- **Có sẵn đường bass**: một chuỗi hợp âm gạch chéo có bass đi liền bậc (ví dụ C – C/B – C/B♭) là một [[line-cliche|line cliché]] ở bè trầm.
-- Trong [[jazz-dieu-thuc|jazz điệu thức]], các hợp âm **sus** (như B♭/C) rất phổ biến — xem [[hoa-am-dieu-thuc]].
+Cách đọc nhanh: **đếm từ nốt bass lên các nốt của hợp âm ở trên**, rồi hỏi "bộ nốt căng này thuộc hợp âm nào?". Hợp âm gạch chéo thường **mơ hồ** vì hay thiếu nốt 3 hoặc 7 — chính các [[hop-am-mo-rong|nốt căng]] có mặt cho bạn biết người viết muốn gì. Và cái mơ hồ ấy thường là có chủ ý: người viết muốn âm thanh "mở", không ngả hẳn về trưởng hay thứ.
+
+## Vì sao người ta viết như vậy?
+- **Gọn**: B♭/C dễ đọc hơn C9sus4 kèm danh sách nốt. Có hợp âm mà viết kiểu thường thì thành một câu đố (B/C mà viết thành Cmaj7♯4♯9 — ai muốn giải?).
+- **Có sẵn thế bấm**: tay phải bấm một hợp âm ba quen thuộc, tay trái bấm bass. Không cần nghĩ.
+- **Có sẵn đường bass**: một chuỗi hợp âm gạch chéo với bass đi liền bậc (C – C/B – C/B♭) là một [[line-cliche|line cliché]] ở bè trầm.
+- Trong [[jazz-dieu-thuc|jazz điệu thức]], hợp âm **sus** dạng B♭/C có mặt khắp nơi (xem [[hoa-am-dieu-thuc]], [[hop-am-sus-jazz]]).
+
+Có tất cả **mười hai** hợp âm ba trưởng đặt được trên một nốt bass, mỗi cái một màu và một âm giai riêng: bảng đầy đủ ở [[slash-chord-tren-mot-not-bass]].
 
 ## So với upper structure
-[[upper-structure|Upper structure]] đặt hợp âm ba trên một **tritone** (nốt 3 và 7) nên tính chất át rõ ràng; hợp âm gạch chéo chỉ có **một nốt bass**, nên mơ hồ và "mở" hơn.
+[[upper-structure|Upper structure]] đặt hợp âm ba lên trên một **tritone** (nốt 3 và 7 của hợp âm át), nên chất át rất rõ. Hợp âm gạch chéo chỉ có **một nốt bass** bên dưới, nên mơ hồ và "mở" hơn. Cùng một hợp âm ba D trên C: trên tay trái C – E – B♭ thì là C13♯11 (upper structure); trên mỗi nốt C thì là D/C (Lydian, hoặc gợi nhiều thứ khác).
+
+## Câu hỏi và bài tập
+1. Đọc tên A♭/B♭, E♭/F, C/D theo cách đếm từ bass. Cả ba có chung loại không?
+2. Chơi một line cliché C – C/B – C/B♭ – A7 rồi về Dm.
+3. Tìm hai hợp âm gạch chéo trong một bài jazz bạn biết; viết lại chúng bằng ký hiệu thường.
 `,
   },
   {

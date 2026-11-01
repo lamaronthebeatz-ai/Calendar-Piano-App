@@ -42,6 +42,14 @@
   \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "C6" "Csus4" "Csus2" "Cadd9" "C9" }
 >> \layout { } }
 
+=== fig-70b19c6e
+#(set-global-staff-size 24)
+\score { <<
+  \new Staff \with { \remove "Time_signature_engraver" } << { \cadenzaOn \clef treble <c' e' g' b'>1 <c' e' g' b' d''>1 <d' f' a' c'' e''>1 <g b d' f' a' e''>1 \bar "|." }
+    \new NullVoice = "lab" { \cadenzaOn c1 c1 c1 c1 } >>
+  \new Lyrics \with { \override LyricSpace.minimum-distance = #1.6 \override LyricText.font-size = #-1 \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.2 } \lyricsto "lab" { "Cmaj7" "Cmaj9" "Dm9" "G13" }
+>> \layout { } }
+
 === fig-c8270a17
 #(set-global-staff-size 24)
 \score { <<

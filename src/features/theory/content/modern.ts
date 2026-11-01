@@ -594,7 +594,7 @@ Thuật ngữ do nhà [[am-nhac-hoc|âm nhạc học]] **Nicolas Slonimsky** đ�
       ['Harmony and Musicianship with Solfège — 20th-century compositional techniques', 'https://pressbooks.pub/harmonyandmusicianshipwithsolfege/?p=395'],
     ],
     body: `
-**Hợp âm chồng** gồm hai hay nhiều hợp âm đặt chồng lên nhau, thường là **hai [[hop-am-ba|hợp âm ba]]**. Ký hiệu: hợp âm trên viết **trên** một vạch ngang, hợp âm dưới viết **dưới** (ví dụ F trên C).
+Đặt một hợp âm ba lên trên một hợp âm ba khác, và bạn có **hợp âm chồng** (polychord). Ký hiệu: hợp âm trên viết **trên** một vạch ngang, hợp âm dưới viết **dưới** (F trên C). Nghe đơn giản, nhưng có một câu hỏi tinh tế: tai bạn nghe ra **hai** hợp âm, hay chỉ **một** hợp âm to?
 
 ## Ba khái niệm dễ nhầm
 | Khái niệm | Bản chất | Cách nghe |
@@ -605,17 +605,15 @@ Thuật ngữ do nhà [[am-nhac-hoc|âm nhạc học]] **Nicolas Slonimsky** đ�
 
 Một tiêu chí cảm nhận: hai hợp âm **gần nhau** (nhiều nốt chung, gần trên [[vong-quang-nam|vòng quãng 5]]) thường được nghe là **một hợp âm mở rộng**; hai hợp âm **xa nhau** mới được nghe là hợp âm chồng. [[paul-hindemith|Hindemith]] và Milton Babbitt thậm chí cho rằng tai **không thể** cảm nhận hai nốt gốc cùng lúc — vấn đề vẫn còn tranh luận.
 
-## Hợp âm Petrushka
-[[Stravinsky]] (*Petrushka*, 1911): **Đô trưởng + Fa♯ trưởng**, hai hợp âm cách nhau [[quang|tritone]]. Hợp âm thường được giải thích bằng hình ảnh một nghệ sĩ piano rải đồng thời trên **phím trắng** và **phím đen**. Có tài liệu chỉ ra âm thanh tương tự đã xuất hiện trong *Jeux d'eau* (1901) của [[Ravel]] — mười năm trước.
-
-::keyboard C4 E4 G4 F#5 A#5 C#6 | Đô trưởng + Fa♯ trưởng
-
-## Trong jazz: hợp âm ba cấu trúc trên
-Người chơi piano jazz đặt một **hợp âm ba** ở tay phải trên **khung 3 – 7** của [[hop-am-bay|hợp âm 7 át]] ở tay trái — gọi là **upper structure triad**. Ví dụ hợp âm Rê trưởng trên C7 cho ra C13♯11 (ký hiệu "US II"). Cách này chủ yếu dùng cho hợp âm át biến đổi (xem [[xep-hop-am]], [[he-thong-hop-am-am-giai]]).
+## Trong jazz: hợp âm ba trên khung 3 – 7
+Người chơi piano jazz đặt một **hợp âm ba** ở tay phải lên trên **khung 3 – 7** của [[hop-am-bay|hợp âm 7 át]] ở tay trái — gọi là **upper structure**. Ví dụ hợp âm Rê trưởng trên C7 (C – E – B♭) cho ra C13♯11. Lối này dùng chủ yếu cho hợp âm át biến hoá; chi tiết ở [[upper-structure]]. Và một hợp âm ba đặt trên hợp âm ba khác đôi khi "đòi" một âm giai cụ thể — C trên D♭ chứa sáu nốt của Fa thứ hoà thanh (xem [[am-giai-hoa-thanh-va-am-giai-bon-not]]).
 
 Tổng quan: [[hoa-am-the-ky-20]].
 
-Chi tiết về upper structure trong jazz: [[upper-structure]].
+## Câu hỏi và bài tập
+1. Chơi lần lượt mọi hợp âm ba trưởng trên hợp âm ba Đô trưởng. Cái nào bạn nghe ra hai khối, cái nào nghe thành một?
+2. Chơi hợp âm Petrushka bằng hai tay; rải nó lên xuống.
+3. Đặt hợp âm ba A trên C7 (C – E – B♭). Gọi tên các nốt căng.
 `,
   },
   {
