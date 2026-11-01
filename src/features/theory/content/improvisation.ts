@@ -325,6 +325,8 @@ Trước khi chơi một bài trong buổi biểu diễn hay buổi học, chơi
       ['Evan Rogers — Solos and backgrounds (big band arranging)', 'https://evanrogersmusic.com/blog-contents/big-band-arranging/solos-and-backgrounds'],
     ],
     body: `
+Ngẫu hứng không phải là chơi bất cứ thứ gì nảy ra trong đầu. Nó là **sáng tác tại chỗ**, trên một khung hoà âm và hình thức mà cả ban cùng biết. Tin tốt: những người ngẫu hứng giỏi nhất không sinh ra đã biết; họ học, bằng cách nghe, bắt chước, và tập — đúng như bạn sắp làm.
+
 ## Cấu trúc một buổi chơi jazz
 - **Head**: chơi [[giai-dieu|giai điệu]] viết sẵn của bài trong chorus đầu.
 - **Các chorus solo**: mỗi người lần lượt [[ngau-hung-piano|ngẫu hứng]] trên **[[vong-hop-am|vòng hợp âm]]** của bài — một, hai hay nhiều chorus tuỳ ý (một **chorus** là một lượt trọn [[hinh-thuc-am-nhac|hình thức]], ví dụ 32 ô — xem [[hinh-thuc-ca-khuc-32]], hoặc 12 ô — [[blues-12-nhip]]).
@@ -359,9 +361,14 @@ Lộ trình cả mục: [[ngau-hung-ung-tac]].
 
 Kỹ thuật cụ thể: [[not-tiep-can-jazz]], [[am-giai-bebop]], [[ngau-hung-doc-ngang]], [[choi-ngoai-jazz]].
 
-Các bài kỹ thuật ngẫu hứng jazz của Lamar: [[not-dan-huong]], [[trang-tri-giai-dieu-jazz]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]], [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
+Các bài kỹ thuật ngẫu hứng jazz trong bộ sách: [[not-dan-huong]], [[trang-tri-giai-dieu-jazz]], [[tiet-tau-ngau-hung-jazz]], [[lick-va-trich-dan]], [[xay-dung-bai-solo]], [[phan-tich-solo-jazz]], [[meo-ngau-hung-jazz]].
 
 Chơi cùng người khác: [[jam-session]].
+
+## Câu hỏi và bài tập
+1. Chọn một bài chuẩn; chơi giai điệu (head), một chorus solo chỉ bằng nốt hợp âm, rồi giai điệu lần nữa.
+2. Chép (bằng tai) bốn ô đầu một solo bạn thích; chơi theo bản thu.
+3. Ghi âm một chorus; nghe lại và ghi một điều muốn giữ, một điều muốn đổi.
 `,
   },
   {

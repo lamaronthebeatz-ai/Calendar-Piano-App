@@ -2212,6 +2212,8 @@ Ví dụ: F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được với to�
       ['Jazzadvice — How to effectively use enclosure', 'https://www.jazzadvice.com/lessons/how-to-effectively-use-enclosure/'],
     ],
     body: `
+Đây là "ngữ pháp" của bebop: không đi thẳng vào nốt mục tiêu, mà **tiếp cận** nó từ trên, từ dưới, hay bao vây nó từ cả hai phía. Một nốt hợp âm được tiếp cận bằng nốt cromatic nghe "có đích" hơn hẳn — người nghe cảm thấy câu nhạc đang đi tới đâu đó.
+
 ## Nốt mục tiêu
 **Nốt mục tiêu** là nốt [[cau-nhac|câu nhạc]] "muốn đến": thường là **nốt [[hop-am-ba|hợp âm]]** (đặc biệt [[not-dan-huong|nốt 3 và 7]] — [[ii-v-i|nốt dẫn hướng]]), một [[hop-am-mo-rong|nốt căng]] dùng được, hoặc nốt [[giai-dieu|giai điệu]]. Nó thường rơi vào **[[so-chi-nhip|phách mạnh]]** hoặc **cuối câu**. Các nốt dẫn tới nó là **nốt lướt** — chơi nhanh, ít quan trọng về hoà âm. Đây là phiên bản jazz của [[not-ngoai-hop-am|nốt ngoài hợp âm]] cổ điển.
 
@@ -2230,6 +2232,11 @@ Cùng nguyên tắc dùng cho bè trầm ở [[bass-di-jazz|bass đi]].
 2. Thêm bao vây, giữ nốt mục tiêu **luôn ở phách**.
 3. Kết hợp với [[am-giai-bebop]] để câu nhạc chạy liên tục mà nốt hợp âm vẫn rơi đúng phách.
 Liên quan: [[ngau-hung-jazz]], [[ngau-hung-doc-ngang]], [[phuong-phap-luyen-ngau-hung]].
+
+## Câu hỏi và bài tập
+1. Chọn nốt mục tiêu là nốt 3 của mỗi hợp âm trong ii – V – I; tiếp cận mỗi nốt bằng một kiểu khác.
+2. Chơi âm giai Đô trưởng, mỗi nốt được bao vây trước khi chơi.
+3. Viết một câu hai ô trên G7 – Cmaj7 kết ở nốt E bằng một nhóm bao vây.
 `,
   },
   {
@@ -2241,9 +2248,12 @@ Liên quan: [[ngau-hung-jazz]], [[ngau-hung-doc-ngang]], [[phuong-phap-luyen-nga
     summary: 'Hai cách nghĩ khi ngẫu hứng jazz: "dọc" — theo từng hợp âm, bằng hợp âm rải và nốt hợp âm; "ngang" — theo một âm giai hay giọng cho cả một nhóm hợp âm. Bài kèm các kỹ thuật làm câu nhạc dọc bớt máy móc như dịch quãng 8 và hợp âm rải xoay.',
     wiki: 'Chord-scale_system',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Chord-scale system', 'https://en.wikipedia.org/wiki/Chord-scale_system'],
     ],
     body: `
+Có hai cách nghĩ khi solo. Cách thứ nhất: mỗi hợp âm một thế giới — bạn chơi **dọc**, theo từng hợp âm. Cách thứ hai: nhiều hợp âm chung một giọng — bạn chơi **ngang**, theo giọng. Người giỏi chuyển qua lại giữa hai cách mà không cần nghĩ; người mới nên học cả hai, theo thứ tự.
+
 ## Dọc và ngang
 | | [[ngau-hung-piano|Ngẫu hứng]] **dọc** | Ngẫu hứng **ngang** |
 |---|---|---|
@@ -2251,7 +2261,7 @@ Liên quan: [[ngau-hung-jazz]], [[ngau-hung-doc-ngang]], [[phuong-phap-luyen-nga
 | Chất liệu | [[luyen-hop-am-rai|Hợp âm rải]], nốt hợp âm, [[not-ngoai-hop-am|nốt lướt]] cromatic | Âm giai, [[dieu-thuc|điệu thức]], motif |
 | Hợp với | [[phong-cach-jazz|Bebop]], tiến trình đổi hợp âm nhanh | [[jazz-dieu-thuc|Jazz điệu thức]], hợp âm kéo dài |
 | Nguy cơ | Nghe như bài tập hợp âm rải | Không bám hợp âm, mất "đường đi" |
-Phân biệt "dọc" (hợp âm) và "ngang" (giai điệu) là trung tâm trong lý thuyết của George Russell (xem [[he-thong-hop-am-am-giai]]). Lamar cho rằng cần nắm ngẫu hứng dọc **trước** các kỹ thuật phức tạp hơn.
+Phân biệt "dọc" (hợp âm) và "ngang" (giai điệu) là trung tâm trong lý thuyết của George Russell (xem [[he-thong-hop-am-am-giai]]). Nên nắm ngẫu hứng dọc **trước** các kỹ thuật phức tạp hơn.
 
 ## Làm câu nhạc dọc bớt máy móc
 - **[[not-tiep-can-jazz|Bao vây]]** nốt hợp âm.
@@ -2263,6 +2273,11 @@ Phân biệt "dọc" (hợp âm) và "ngang" (giai điệu) là trung tâm trong
 ## Bản đồ hợp âm (chord mapping)
 Cách nối hai lối nghĩ: chọn **một âm giai nền** hợp với cả tiến trình (hoặc cả một [[phan-tich-tien-trinh-jazz|giọng tạm]]), đi ra các ý riêng cho từng hợp âm rồi **quay về âm giai nền** để giải quyết căng thẳng.
 Liên quan: [[ngau-hung-jazz]], [[choi-ngoai-jazz]].
+
+## Câu hỏi và bài tập
+1. Solo một chorus "Autumn Leaves" theo lối dọc (âm giai từng hợp âm), rồi một chorus theo lối ngang (hai âm giai: B♭ trưởng và Sol thứ).
+2. Trên Dm7 – G7, chơi hai ô chỉ bằng Đô trưởng; rồi hai ô theo từng hợp âm.
+3. Làm bài tập âm giai liên tục ở [[tu-am-giai-den-am-nhac]] trên một bài bạn chọn.
 `,
   },
   {
@@ -2274,19 +2289,22 @@ Liên quan: [[ngau-hung-jazz]], [[choi-ngoai-jazz]].
     summary: 'Ngẫu hứng jazz là trò chơi căng – giải quyết: chơi "trong" (nốt hợp âm, nốt căng dùng được) thì yên, chơi "ngoài" (nốt xa hợp âm) thì căng. Side-slipping — lặp một câu nhạc cao hoặc thấp hơn nửa cung rồi quay về — là cách "ra ngoài" có kiểm soát mà McCoy Tyner và John Coltrane hay dùng.',
     wiki: 'Outside_(jazz)',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Wikipedia — Outside (jazz)', 'https://en.wikipedia.org/wiki/Outside_(jazz)'],
       ['Linna — McCoy Tyner, modal jazz and the dominant chord (Uniarts Helsinki)', 'https://taju.uniarts.fi/bitstream/handle/10024/6819/302684_Sami_Linna_McCoyTynerModalJazzandtheDominantChord_verkkoversio.pdf'],
     ],
     body: `
+Một lúc nào đó, chơi "đúng" sẽ làm bạn chán. Đó là lúc học chơi **ngoài** — cố ý rời khỏi hoà âm, tạo căng, rồi quay về. Điều quan trọng nhất cần nhớ: chơi ngoài **chỉ hay khi bạn biết đường về**. Đi lạc mà không về thì chỉ là sai.
+
 ## Căng và giải quyết
-Lamar tóm ý tưởng bao trùm của [[ngau-hung-jazz|ngẫu hứng jazz]] là **căng và giải quyết**: chơi nốt **nghịch** ("ngoài") tạo căng; quay về nốt **thuận** ("trong" — nốt hợp âm, [[hop-am-mo-rong|nốt căng]] dùng được) để giải quyết. Đây cũng là nguyên lý [[thuan-nghich|thuận – nghịch]] của âm nhạc cổ điển, chỉ ở mức táo bạo hơn.
+Ý tưởng bao trùm của [[ngau-hung-jazz|ngẫu hứng jazz]] là **căng và giải quyết**: chơi nốt **nghịch** ("ngoài") tạo căng; quay về nốt **thuận** ("trong" — nốt hợp âm, [[hop-am-mo-rong|nốt căng]] dùng được) để giải quyết. Đây cũng là nguyên lý [[thuan-nghich|thuận – nghịch]] của âm nhạc cổ điển, chỉ ở mức táo bạo hơn.
 
 ## Side-slipping
 Cách làm: chơi một câu trong âm giai của hợp âm, **lặp lại nó cao hoặc thấp hơn nửa cung**, rồi **quay về** âm giai gốc. Nhờ sự **lặp lại**, các nốt "sai" nghe như cố ý.
 ::staff treble D4 F4 A4 C5 / Eb4 Gb4 Bb4 Db5 / D4 F4 A4 C5 | Trên Dm7: câu nhạc trong âm giai Đô trưởng, lặp lại cao hơn nửa cung (chơi "ngoài"), rồi quay về
 - Pianist **[[mccoy-tyner|McCoy Tyner]]** hay side-slipping trong lối chơi [[am-giai-ngu-cung|ngũ cung]] ở tay phải; **John Coltrane** chuyển một motif qua nhiều giọng rồi quay về (ví dụ trong *A Love Supreme*). Nhà nghiên cứu Sami Linna cho rằng âm thanh "[[dieu-thuc|điệu thức]]" của Tyner thực ra đến nhiều từ hợp âm át và các cặp ii – V ở giọng khác.
 - Wikipedia liệt kê các cách chơi "ngoài" khác: chồng [[vong-coltrane|vòng Coltrane]] lên tiến trình, [[da-dieu-tinh|đa điệu tính]].
-- Lamar cũng mô tả side-slipping trong **đệm**: chơi hợp âm, nhanh chóng chơi hợp âm cùng loại cách nửa cung, rồi về lại (xem [[dem-jazz]]).
+- Side-slipping cũng dùng được khi **đệm**: chơi hợp âm, nhanh chóng chơi hợp âm cùng loại cách nửa cung, rồi về lại (xem [[dem-jazz]]).
 
 ## Đa điệu tính (bitonality)
 Dùng một âm giai **khác** âm giai của hợp âm. Âm giai càng gần trên [[vong-quang-nam|vòng quãng 5]] càng nghe thuận; âm giai giữ được [[not-dan-huong|nốt 3 và 7]] của hợp âm thì hợp hơn.
@@ -2299,6 +2317,20 @@ Dùng một âm giai **khác** âm giai của hợp âm. Âm giai càng gần tr
 Chỉ nên "ra ngoài" khi đã chơi "trong" vững vàng — xem [[ngau-hung-doc-ngang]], [[phuong-phap-luyen-ngau-hung]].
 
 Thêm: [[mau-lap-chu-ky]], [[superimposition-jazz]], [[not-tranh-va-quang-nghich]].
+
+## Các cách đi ra ngoài
+Levine liệt kê vài con đường, từ dễ tới khó:
+- **Mô tiến ra ngoài**: đặt một câu ngắn, rồi lặp nó ở cao độ khác lệch khỏi hợp âm (xem [[tu-am-giai-den-am-nhac]], [[mau-lap-chu-ky]]).
+- **Lệch nửa cung**: chơi câu của bạn cách hợp âm đang viết nửa cung (trên Dm7, chơi như trên E♭m7), rồi trượt về.
+- **Lệch một tritone**: chơi trên hợp âm cách một tritone (trên G7, nghĩ D♭7) — đây cũng là [[thay-the-tritone|thay thế tritone]] ở dạng giai điệu.
+- **Chọn âm giai "lạ"**: chơi một âm giai không thuộc hợp âm trong một hai ô.
+- **Âm giai cromatic**: mười hai nốt, không nốt nào "sai" khi đi qua nhanh.
+Và lời khuyên của Levine ở cuối chương: **can đảm lên, cứ chơi ngoài đi.** Thứ tệ nhất xảy ra là một nốt nghe lạ — và nốt tiếp theo là nốt đầu tiên của phần còn lại trong bài solo của bạn.
+
+## Câu hỏi và bài tập
+1. Trên một vamp Dm7, chơi hai ô "trong", một ô lệch nửa cung (E♭m), một ô về lại.
+2. Trên G7 – Cmaj7, chơi một câu trên D♭7 rồi giải quyết về Cmaj7.
+3. Đệm bằng side-slipping: một hợp âm, cùng hợp âm cao nửa cung, rồi về.
 `,
   },  {
     slug: 'not-dan-huong',
@@ -2311,6 +2343,8 @@ Thêm: [[mau-lap-chu-ky]], [[superimposition-jazz]], [[not-tranh-va-quang-nghich
       ['Learn Jazz Standards — Improve jazz solos using guide tones', 'https://www.learnjazzstandards.com/ljs-podcast/learn-jazz-theory/ljs-53-improve-jazz-solos-using-guide-tones/'],
     ],
     body: `
+Nếu bạn bí ý giữa một bài solo, đây là chiếc phao: **nốt 3 và nốt 7**. Hai nốt này nói rõ hợp âm hơn mọi nốt khác, và chúng nối từ hợp âm này sang hợp âm kia gần như không phải di chuyển. Một đường giai điệu chỉ gồm nốt dẫn hướng đã đủ để người nghe "thấy" cả tiến trình.
+
 ## Vì sao là nốt 3 và 7?
 **nốt 3 và nốt 7** quyết định **tính chất** hợp âm (trưởng 7, thứ 7, át 7); chỉ cần hai nốt này là đã nghe ra "cảm giác" của hợp âm. Nốt gốc thường do bass chơi, nốt 5 ít mang thông tin. Vì vậy hai nốt này cũng là tay trái [[toi-gian|tối giản]] — [[xep-hop-am|shell voicing]].
 | Hợp âm | Nốt 3 | Nốt 7 |
@@ -2329,11 +2363,16 @@ Trong V7 → I, tritone B – F của G7 giải quyết vào quãng 3 C – E (x
 2. **Kết mỗi câu bằng nốt 3 hoặc 7** của hợp âm đang vang (ví dụ A hoặc E♭ trên F7).
 3. **Nhìn trước**: [[cau-nhac|câu nhạc]] thường kết ở ô sau, khi hợp âm đã đổi.
 4. Khi đã quen, thử nhắm nốt 9 — nghe "táo bạo" hơn.
-Lamar nói bài luyện này buộc người chơi **bám theo tiến trình** và **kết câu chắc chắn**. Nốt dẫn hướng cũng là nốt mục tiêu tốt nhất cho [[not-tiep-can-jazz|nốt tiếp cận và bao vây]].
+Bài luyện này buộc bạn **bám theo tiến trình** và **kết câu chắc chắn**. Nốt dẫn hướng cũng là nốt mục tiêu tốt nhất cho [[not-tiep-can-jazz|nốt tiếp cận và bao vây]].
 
 ## Một nguyên tắc chung của jazz điệu tính
 Trong jazz có điệu tính, người solo "nói lại" tiến trình bằng cách **nhắm nốt dẫn hướng** và **tránh [[not-tranh-va-quang-nghich|nốt tránh]]**. Với [[jazz-dieu-thuc|jazz điệu thức]], vai trò này giảm đi vì hợp âm ít đổi.
 Liên quan: [[ngau-hung-doc-ngang]], [[dem-jazz]], [[tai-hoa-am]].
+
+## Câu hỏi và bài tập
+1. Chơi một đường nốt dẫn hướng (3 – 7) qua cả "Autumn Leaves", mỗi hợp âm một nốt, rồi hai nốt.
+2. Làm lại, lần này thêm một nốt tiếp cận trước mỗi nốt dẫn hướng.
+3. Solo một chorus blues mà phách 1 của mỗi ô luôn là nốt 3 hoặc 7.
 `,
   },
   {
@@ -2344,15 +2383,17 @@ Liên quan: [[ngau-hung-doc-ngang]], [[dem-jazz]], [[tai-hoa-am]].
     aliases: ['avoid note', 'avoid notes', 'nốt tránh', 'dissonant intervals', 'quãng nghịch jazz', 'nốt tránh jazz'],
     summary: 'Nốt tránh là nốt nằm nửa cung trên một nốt hợp âm (F trên Cmaj7, C trên G7; Lamar xếp thêm B trên Dm7): dùng làm nốt lướt nhanh, không ngân dài. Quãng nghịch (quãng 2, 7, tritone, quãng 9 thứ) tạo căng; giải quyết về quãng thuận hoặc nốt dẫn hướng — căng và giải toả như những đợt sóng.',
     body: `
+Có những nốt mà bạn ngân lên là cả ban nhăn mặt. Không phải vì chúng "sai" — chúng thuộc âm giai cơ mà — mà vì chúng **chỏi** với một nốt của hợp âm. Biết chúng là ai, bạn sẽ biết lướt qua chúng thay vì đứng lại.
+
 ## Nốt tránh
-Lamar định nghĩa: **nốt tránh là bất kỳ nốt nào cao hơn một nốt hợp âm nửa cung**. Quy tắc gợi nhớ:
+Định nghĩa gọn: **nốt tránh là bất kỳ nốt nào cao hơn một nốt hợp âm nửa cung**. Quy tắc gợi nhớ:
 | Hợp âm | Nốt tránh | Ví dụ trên Đô / Rê / Si |
 |---|---|---|
 | [[hop-am-bay|maj7]] | Bậc 4 | F trên Cmaj7 (nửa cung trên E) |
 | 7 (át) | Bậc 4 | C trên G7 (nửa cung trên B) |
 | m7 | Bậc 6 | B trên Dm7 (cách A một cung, tạo tritone với F) |
 | m7♭5 | Bậc 2 và 6 | C và G trên Bø7 |
-Lamar lưu ý khái niệm này **có phần chủ quan**: nhiều người không coi bậc 6 [[dieu-thuc|Dorian]] trên m7 là nốt tránh; người chơi hiện đại cũng hay đặt ♯9 ngay trên một nốt hợp âm.
+Lưu ý: khái niệm này **có phần chủ quan**: nhiều người không coi bậc 6 [[dieu-thuc|Dorian]] trên m7 là nốt tránh; người chơi hiện đại cũng hay đặt ♯9 ngay trên một nốt hợp âm.
 
 **Dùng thế nào?**
 - Chơi như **[[not-ngoai-hop-am|nốt lướt]] nhanh**, không nhấn, không ngân (xem [[not-tiep-can-jazz]]).
@@ -2361,13 +2402,18 @@ Lamar lưu ý khái niệm này **có phần chủ quan**: nhiều người khô
 ::staff treble E4 F4=nốt_tránh E4 / E4 G4 F4 | Trên Cmaj7: F chỉ lướt qua rồi về E (dùng tốt); ngân dài F sẽ va chạm với nốt 3 của hợp âm
 
 ## Quãng nghịch
-Lamar xếp: **nghịch** — quãng 2 thứ, quãng 2 trưởng, quãng 7 thứ, quãng 7 trưởng, **tritone**, quãng 9 thứ; **thuận** — đồng âm, quãng 8, quãng 5, quãng 4, quãng 3 và 6. Cách xếp này cũng chủ quan (xem [[thuan-nghich]] để hiểu vì sao quan niệm thay đổi theo lịch sử).
+Cách xếp hay dùng: **nghịch** — quãng 2 thứ, quãng 2 trưởng, quãng 7 thứ, quãng 7 trưởng, **tritone**, quãng 9 thứ; **thuận** — đồng âm, quãng 8, quãng 5, quãng 4, quãng 3 và 6. Cách xếp này cũng chủ quan (xem [[thuan-nghich]] để hiểu vì sao quan niệm thay đổi theo lịch sử).
 - "Dùng quãng nghịch để **tạo căng** trong solo, rồi **giải quyết** bằng cách lùi về một quãng thuận (hoặc một [[not-dan-huong|nốt dẫn hướng]])."
 - Căng thẳng nên **lên xuống như sóng**.
 - Hợp âm át vốn nghịch vì có tritone giữa nốt 3 và 7 — nên nó hút về chủ; nốt ♭9 thường được tránh vì quá nghịch (xem [[hop-am-at-bien-hoa]]).
 ::staff treble B4+F5=tritone C5+E5=quãng_3 | Tritone B – F (trong G7) giải quyết vào quãng 3 C – E (Cmaj7): B lên C, F xuống E
 
 Liên quan: [[choi-ngoai-jazz]], [[am-giai-bebop]] (nốt lướt đặt vào phách nhẹ).
+
+## Câu hỏi và bài tập
+1. Tìm nốt tránh của Cmaj7, Dm7, G7, Am7.
+2. Trên Fmaj7, ngân B♭ rồi B; trên G7, ngân C rồi C♯. Nghe sự khác nhau.
+3. Viết một câu trên Cmaj7 có nốt F lướt qua nhưng không đứng lại.
 `,
   },
   {
@@ -2378,6 +2424,8 @@ Liên quan: [[choi-ngoai-jazz]], [[am-giai-bebop]] (nốt lướt đặt vào ph
     aliases: ['embellishing the melody', 'biến tấu giai điệu jazz', 'fill', 'ngẫu hứng trên giai điệu', 'melodic paraphrase'],
     summary: 'Cách ngẫu hứng lâu đời nhất của jazz: giữ giai điệu bài hát nhưng đổi tiết tấu, đổi nốt, chèn "fill" vào chỗ nốt dài và thêm hoa mỹ. Người nghe luôn biết mình đang nghe bài nào — vì vậy đây cũng là cách "giải toả" căng thẳng trong một solo.',
     body: `
+Trước khi solo bằng nốt của riêng mình, hãy học cách **chơi giai điệu theo kiểu của mình**. Đó là cách Louis Armstrong, Billie Holiday, Lester Young ngẫu hứng: giữ giai điệu gốc, nhưng đổi nhịp, thêm nốt, nhả sớm nhả muộn. Người nghe vẫn nhận ra bài — và nghe ra bạn.
+
 ## Bốn cách
 1. **Đổi tiết tấu, giữ cao độ** — dồn, giãn, đảo phách các nốt giai điệu (xem [[dao-phach]], [[tiet-tau-ngau-hung-jazz]]).
 2. **Đổi cao độ, giữ tiết tấu** — thay vài nốt bằng nốt hợp âm hoặc [[hop-am-mo-rong|nốt căng]] khác.
@@ -2395,6 +2443,11 @@ Trên "Autumn Leaves" (xem [[phan-tich-tien-trinh-jazz]]): chơi giai điệu; �
 - **Coleman Hawkins** đi xa hơn: thay vì trang trí giai điệu, ông **tạo giai điệu mới từ hoà âm** của bài — mở đường cho [[phong-cach-jazz|bebop]] (xem [[ngau-hung-doc-ngang|ngẫu hứng dọc]]).
 - **Sonny Rollins** quay lại với giai điệu theo cách khác: lấy **mảnh của giai điệu làm [[motif]]** và phát triển dần qua cả bài solo (xem [[bien-tau]], [[xay-dung-bai-solo]]).
 Liên hệ cổ điển: trang trí giai điệu cũng là cốt lõi của hoa mỹ [[thoi-ky-baroque|Baroque]] và [[lich-su-ngau-hung|ngẫu hứng trong nhạc cổ điển]].
+
+## Câu hỏi và bài tập
+1. Chơi giai điệu một bài chuẩn ba lần, mỗi lần đổi tiết tấu một chỗ.
+2. Thêm nốt tiếp cận vào mỗi nốt dài của giai điệu.
+3. Chơi giai điệu ở một quãng tám khác cho đoạn B (xem [[doc-lead-sheet-va-thuoc-bai]]).
 `,
   },
   {
@@ -2405,6 +2458,8 @@ Liên hệ cổ điển: trang trí giai điệu cũng là cốt lõi của hoa 
     aliases: ['cycled patterns', 'cycled pattern', 'mẫu lặp theo chu kỳ', 'mẫu lặp dịch giọng', 'sequence jazz'],
     summary: 'Mẫu lặp theo chu kỳ là một câu nhạc ngắn được lặp lại và dịch lên hoặc xuống theo một quãng cố định. Vì 12 chia hết cho 1, 2, 3, 4, 6, chu kỳ đều nhau sẽ quay về nốt xuất phát — cho phép "đi ra ngoài" rồi trở về đúng nốt mục tiêu.',
     body: `
+Lấy một câu ba bốn nốt. Lặp nó, mỗi lần dịch lên một quãng cố định — một cung, một quãng 3 thứ, một quãng 3 trưởng. Bạn vừa tạo ra một **mẫu lặp chu kỳ**, và sẽ nghe thấy nó kéo người nghe ra khỏi giọng rồi đưa về lại. Đây là họ hàng gần của [[tu-am-giai-den-am-nhac|mô tiến]].
+
 ## Định nghĩa
 "tạo một khuôn mẫu bằng cách **lặp lại một [[cau-nhac|câu nhạc]] và dịch nó lên hoặc xuống theo những quãng cố định**". Đây là họ hàng của [[mo-tien-hoa-am|mô tiến]] trong nhạc cổ điển, nhưng không cần bám âm giai.
 
@@ -2414,12 +2469,17 @@ Liên hệ cổ điển: trang trí giai điệu cũng là cốt lõi của hoa 
 - Nhược điểm: dễ nghe **máy móc**; nên xen với những câu nhạc theo giọng.
 
 ## Tính toán để về đúng đích
-Vì **12 chia hết cho 1, 2, 3, 4, 6**, dịch đều theo 1, 2, 3, 4 hoặc 6 [[cung-nua-cung|nửa cung]] sẽ quay về nốt xuất phát (xem đồng hồ lớp cao độ trong [[tap-hop-cao-do]]). Mẹo của Lamar: muốn kết ở một [[not-tiep-can-jazz|nốt mục tiêu]], **bắt đầu khuôn trên chính nốt đó cao hơn một quãng 8** rồi đi xuống theo quãng chọn.
+Vì **12 chia hết cho 1, 2, 3, 4, 6**, dịch đều theo 1, 2, 3, 4 hoặc 6 [[cung-nua-cung|nửa cung]] sẽ quay về nốt xuất phát (xem đồng hồ lớp cao độ trong [[tap-hop-cao-do]]). Mẹo: muốn kết ở một [[not-tiep-can-jazz|nốt mục tiêu]], **bắt đầu khuôn trên chính nốt đó cao hơn một quãng 8** rồi đi xuống theo quãng chọn.
 ::staff treble E5 G#5 B5 / D5 F#5 A5 / C5 E5 G5 / Bb4 D5 F5 / Ab4 C5 Eb5 / Gb4 Bb4 Db5 / E4=đích | Minh hoạ: hợp âm ba trưởng rải, dịch xuống từng cung từ E — sau sáu lần quay về E (nốt 3 của Cmaj7)
 ::pc-clock 4 2 0 10 8 6 | Các nốt bắt đầu E – D – C – B♭ – A♭ – G♭: một âm giai toàn cung — chu kỳ một cung chia quãng 8 thành 6 phần bằng nhau
 - Dịch theo **quãng 3 thứ** (3 nửa cung) vẽ ra một [[hop-am-bay-giam|hợp âm 7 giảm]]; theo **quãng 3 trưởng** vẽ ra [[hop-am-ba-tang|hợp âm ba tăng]] — chính là trục của [[vong-coltrane|vòng Coltrane]].
-- Lamar còn gợi ý: khi lỡ chơi nốt sai, biến nó thành điểm khởi đầu của một chuỗi cromatic hoặc một [[ostinato|mẫu lặp]] — xem [[meo-ngau-hung-jazz]].
+- Khi lỡ chơi nốt sai, biến nó thành điểm khởi đầu của một chuỗi cromatic hoặc một [[ostinato|mẫu lặp]] — xem [[meo-ngau-hung-jazz]].
 Liên quan: [[am-giai-doi-xung-jazz]], [[ngau-hung-doc-ngang]].
+
+## Câu hỏi và bài tập
+1. Lặp một câu bốn nốt theo quãng 3 thứ qua bốn lần trên C7♭9.
+2. Lặp một câu ba nốt theo quãng 3 trưởng; ba lần là về chỗ cũ.
+3. Dùng mẹo bắt đầu cao một quãng 8 để mẫu lặp kết ở nốt 3 của hợp âm đích.
 `,
   },
   {
@@ -2430,6 +2490,8 @@ Liên quan: [[am-giai-doi-xung-jazz]], [[ngau-hung-doc-ngang]].
     aliases: ['jazz phrasing', 'jazz articulation', 'rhythm and articulation', 'cách nhả nốt jazz', 'displacing the melody', 'dịch chuyển giai điệu', 'bar-line shift', 'dịch vạch nhịp', 'ghost note', 'nốt ma'],
     summary: 'Trong jazz, cảm giác đến từ cách chơi nốt chứ không chỉ chọn nốt: móc đơn swing, nhấn cả phách mạnh lẫn phách nhẹ, nhả nốt nảy và gọn, nốt "ma", câu bắt đầu và kết ở phách nhẹ. Dịch giai điệu sớm hoặc muộn so với hợp âm (displacement, bar-line shift) tạo căng mà người nghe vẫn có điểm tựa.',
     body: `
+Nhiều người học jazz dồn hết sức vào việc chọn nốt — và quên mất nhịp. Nhưng hãy thử điều này: chơi một nốt duy nhất, chỉ đổi tiết tấu, trong một chorus. Nếu bạn làm nó swing được, bạn đã hiểu một nửa bí mật. Một nốt đúng chỗ, đúng lúc thắng mười nốt hay đặt sai nhịp.
+
 ## Nốt hay cách chơi nốt?
 Cảm giác jazz phụ thuộc vào **cách chơi nốt**, không chỉ nốt nào được chơi.
 - **[[swing]]** là nhịp nền: móc đơn swing mang cảm giác [[lien-ba|liên ba]], bỏ nốt giữa.
@@ -2446,8 +2508,13 @@ Chơi giai điệu bài hát **sớm hơn hoặc muộn hơn** so với tiến t
 - Tạo căng theo hai cách: **bất ngờ**, và giai điệu rơi vào **hợp âm khác** nên va chạm nhẹ; nhưng vì giai điệu quen thuộc, người nghe vẫn có điểm tựa (xem [[trang-tri-giai-dieu-jazz]]).
 
 ## Dịch vạch nhịp (bar-line shift)
-Cùng trang với [[superimposition-jazz|superimposition]], Lamar mô tả **dịch vạch nhịp**: chơi một câu "ám chỉ" hợp âm **sớm** vài phách (đón trước) hoặc **muộn** vài phách (trì hoãn). Lamar gắn kỹ thuật này với Lester Young, Coleman Hawkins và Charlie Parker. Trong cổ điển, cái tương tự là [[not-ngoai-hop-am|nốt đón và nốt trễ]].
+Gần với [[superimposition-jazz|superimposition]] là **dịch vạch nhịp**: chơi một câu "ám chỉ" hợp âm **sớm** vài phách (đón trước) hoặc **muộn** vài phách (trì hoãn). Kỹ thuật này gắn với Lester Young, Coleman Hawkins và Charlie Parker. Trong cổ điển, cái tương tự là [[not-ngoai-hop-am|nốt đón và nốt trễ]].
 Bài tập đa dạng tiết tấu: chơi một câu, rồi lặp lại **chỉ đổi tiết tấu** (xem [[xay-dung-bai-solo]]).
+
+## Câu hỏi và bài tập
+1. Solo một chorus blues chỉ bằng một nốt, đổi tiết tấu liên tục.
+2. Chơi một motif bốn nốt, dịch nó sang bắt đầu ở phách 2, rồi ở "và" của phách 3.
+3. Solo một chorus mà mỗi câu dừng ít nhất hai phách trước câu sau.
 `,
   },
   {
@@ -2463,8 +2530,10 @@ Bài tập đa dạng tiết tấu: chơi một câu, rồi lặp lại **chỉ 
       ['USC Digital Folklore Archives — The Lick', 'https://folklore.usc.edu/the-lick-2/'],
     ],
     body: `
+Học jazz giống học tiếng nước ngoài: không ai học nói bằng cách học thuộc từ điển. Bạn học **cụm từ**, nghe người bản ngữ nói, bắt chước, rồi ghép theo cách của mình. Lick là các cụm từ đó.
+
 ## Lick: từ vựng của ngôn ngữ jazz
-Học jazz giống học một ngôn ngữ: **lick** là những "cụm từ" có sẵn. Lamar khuyên học lick vì hai lý do: làm **từ vựng cách nói câu** ([[dien-dat-cau-nhac|phrasing]]) và làm **chỗ dựa** khi bí ý (xem [[meo-ngau-hung-jazz]]). Nhưng một solo cần đủ chất liệu riêng để không chỉ là chuỗi lick ghép lại.
+Học jazz giống học một ngôn ngữ: **lick** là những "cụm từ" có sẵn. Học lick vì hai lý do: làm **từ vựng cách nói câu** ([[dien-dat-cau-nhac|phrasing]]) và làm **chỗ dựa** khi bí ý (xem [[meo-ngau-hung-jazz]]). Nhưng một solo cần đủ chất liệu riêng để không chỉ là chuỗi lick ghép lại.
 
 ## Học lick qua ii – V – I
 Bài học đưa năm lick mẫu ở Si giáng trưởng; cách học quan trọng hơn bản thân lick:
@@ -2473,7 +2542,7 @@ Bài học đưa năm lick mẫu ở Si giáng trưởng; cách học quan trọ
 3. Để ý các thủ pháp lặp lại: **dịch một câu theo từng hợp âm**; **bắt đầu hoặc kết câu ở phách nhẹ** (xem [[tiet-tau-ngau-hung-jazz]]).
 4. Chuyển lick sang **cả 12 giọng**, nhất là các giọng yếu; tập chậm — tốc độ đến từ độ chính xác.
 ::staff treble D4=Dm7 F4 A4 C5 / B4=G7 A4 G4 F4 / E4=Cmaj7 | Một câu minh hoạ cách phân tích trên ii – V – I: hợp âm rải Dm7, đoạn âm giai đi xuống từ nốt 3 của G7, kết vào nốt 3 (E) của Cmaj7 — nốt dẫn hướng C → B → E nối các hợp âm
-Với [[ii-v-i|ii – V – i thứ]], Lamar gợi ý: [[dieu-thuc|Locrian]] ([[hop-am-bay|nửa giảm]]) trên ii, altered trên V7, [[am-giai-thu|thứ giai điệu]] trên i (xem [[dieu-thuc-thu-giai-dieu]]).
+Với [[ii-v-i|ii – V – i thứ]]: [[dieu-thuc|Locrian]] ([[hop-am-bay|nửa giảm]]) trên ii, altered trên V7, [[am-giai-thu|thứ giai điệu]] trên i (xem [[dieu-thuc-thu-giai-dieu]]).
 
 ## "The Lick" — câu sáo thành trò đùa
 Câu bảy nốt với các bậc **1 – 2 – ♭3 – 4 – 2 – ♭7 – 1** xuất hiện trong vô số solo; cái tên "The Lick" ra đời trên mạng xã hội những năm 2010 và nổi tiếng nhờ một video tổng hợp năm 2011. Nhạc công ngày nay chèn nó vào solo như **một câu đùa nội bộ**.
@@ -2485,8 +2554,16 @@ Chơi **giai điệu của một bài hoàn toàn khác** trên tiến trình đ
 - **[[duke-ellington|Duke Ellington]]** — "Black and Tan Fantasy": trích Hành khúc tang lễ của [[frederic-chopin|Chopin]].
 - **Charlie Parker** — "White Christmas": giấu "Jingle Bells".
 - **Count Basie** — "April in Paris": trích "Pop Goes the Weasel".
-- Lamar gợi ý nghe hầu hết các solo của **Dexter [[ly-thuyet-hoc-am-nhac-gordon|Gordon]]** để học cách trích dẫn.
-Trích dẫn thường **ngắn** (một hai ô), kín đáo. Lamar cũng xếp trích dẫn và câu sáo vào các cách **giải toả căng thẳng** — tai người nghe "về nhà" khi nhận ra một giai điệu quen (xem [[choi-ngoai-jazz]]). Trích dẫn để giễu nhại cũng có trong nhạc cổ điển: xem [[phan-tich-golliwogg-cakewalk]].
+- Nghe hầu hết các solo của **Dexter [[ly-thuyet-hoc-am-nhac-gordon|Gordon]]** để học cách trích dẫn.
+Trích dẫn thường **ngắn** (một hai ô), kín đáo. Trích dẫn và câu sáo cũng là vào các cách **giải toả căng thẳng** — tai người nghe "về nhà" khi nhận ra một giai điệu quen (xem [[choi-ngoai-jazz]]). Trích dẫn để giễu nhại cũng có trong nhạc cổ điển: xem [[phan-tich-golliwogg-cakewalk]].
+
+## Mẹo luyện tập
+Một lick chỉ thuộc về bạn khi bạn chơi được nó **ở 12 giọng**, **trên nhiều bài**, và **đổi được nó** (cắt ngắn, kéo dài, đổi tiết tấu). Học ít lick mà sâu tốt hơn nhiều lick mà nông. Muốn thêm chất liệu: [[jazz-licks-lo-trinh|Jazz Licks]] có 1001 lick để tập.
+
+## Câu hỏi và bài tập
+1. Học một lick ii – V – I và chơi nó ở 12 giọng.
+2. Biến lick đó: đổi tiết tấu, cắt ba nốt đầu, bắt đầu ở phách khác.
+3. Nghe một solo của Dexter Gordon; tìm một trích dẫn.
 `,
   },
   {
