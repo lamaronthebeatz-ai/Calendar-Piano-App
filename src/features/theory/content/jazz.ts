@@ -866,6 +866,8 @@ Mẹo nhớ: âm giai biến đổi của G = âm giai **thứ giai điệu A♭
       ['Wikipedia — Coleman Hawkins', 'https://en.wikipedia.org/wiki/Coleman_Hawkins'],
     ],
     body: `
+Nếu chỉ học một phép thay thế, hãy học phép này. Nó đơn giản tới mức buồn cười: thay hợp âm át bằng hợp âm át **cách nó một tritone**. G7 thành D♭7. Kết quả: bè trầm đi xuống nửa cung thay vì nhảy quãng 5, và một màu "hiện đại" ngay lập tức.
+
 G7 = G – **B** – D – **F**. D♭7 = D♭ – **F** – A♭ – **C♭ (= B)**. Cả hai cùng chứa [[thuan-nghich|tritone]] B – F, chỉ đổi vai trò bậc 3 và bậc 7 (xem [[trung-am]]).
 
 ::keyboard G3 B3 D4 F4 | G7
@@ -893,6 +895,15 @@ Có thể thay luôn [[hop-am-ba|hợp âm]] ii đi kèm: Dm7 – G7 – C → *
 ::img Tritone substitutions.png | Thay thế tritone (tương đương hợp âm 6 Ý)
 
 Là một trong những kỹ thuật [[tai-hoa-am]] phổ biến nhất.
+
+## Mẹo luyện tập
+- Chơi ii – V – I ở 12 giọng hai lần: một lần với V gốc, một lần với V thay tritone. Tay trái chỉ chơi nốt gốc để nghe rõ bè trầm D – D♭ – C.
+- Khi solo trên hợp âm thay tritone, thử ngũ cung dựng trên gốc của hợp âm thay (trên D7 thay bằng A♭7: chơi ngũ cung A♭) — xem [[ngu-cung-trong-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết hợp âm thay tritone cho C7, F7, B♭7, E♭7.
+2. Thay mọi V7 trong blues bebop (xem [[blues-12-nhip]]) bằng hợp âm thay tritone.
+3. Kiểm nốt giai điệu trước khi thay: nốt nào của G7 không nằm trong D♭7?
 `,
   },
   {
@@ -1652,6 +1663,7 @@ Hợp âm So What chi tiết: [[hop-am-so-what-barron]].
     summary: 'Các cách thay một hợp âm bằng hợp âm khác mà vẫn giữ (hoặc làm giàu) chức năng: thay cùng chức năng, át phụ và ii phụ, hợp âm mượn, thay thế tritone, backdoor, hợp âm 7 giảm lướt.',
     wiki: 'Chord_substitution',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Open Music Theory 2e — Substitutions', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz/6.06%3A_Substitutions'],
       ['Open Music Theory 2e — Jazz (applied ii chords, CT°7)', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz'],
       ['Wikipedia — Chord substitution', 'https://en.wikipedia.org/wiki/Chord_substitution'],
@@ -1659,6 +1671,8 @@ Hợp âm So What chi tiết: [[hop-am-so-what-barron]].
       ['Anton Schwartz — The backdoor ii-V progression', 'https://antonjazz.com/2012/01/backdoor-ii-v-progression/'],
     ],
     body: `
+Đây là chỗ jazz bắt đầu khác hẳn mọi thứ nhạc khác: hợp âm trên giấy **không phải là luật**. Người chơi jazz đổi chúng ngay khi chơi — thay một hợp âm bằng hợp âm khác cùng chức năng, chèn thêm hợp âm, biến hợp âm thứ thành át. Nghe có vẻ liều, nhưng mọi phép thay đều có lý do, và bài này đưa bạn bảy lý do quen thuộc nhất. Chơi từng ví dụ, rồi tự hỏi: mình thích bản gốc hay bản thay?
+
 **Thay thế** là đổi **một** [[hop-am-ba|hợp âm]]; [[tai-hoa-am|tái hoà âm]] là áp nhiều phép thay thế lên **cả** một tiến trình. Trong jazz, người chơi thay thế ngay khi biểu diễn — nên cần hiểu **vì sao** mỗi phép thay hoạt động.
 
 ## 1. Thay cùng chức năng (diatonic)
@@ -1690,7 +1704,7 @@ Thay V7 bằng hợp âm 7 át cách nó một tritone (G7 → D♭7) — hai h�
 - **Giảm nốt chung**: Cmaj7 – **C°7** (CT°7) – Cmaj7: nốt chung C giữ nguyên, các bè thêu quanh — Open Music Theory xếp đây là một kỹ thuật thêm hợp âm chính của jazz (xem [[hop-am-not-chung]]).
 
 ## 7. Thay thế bằng ii – V
-Một [[ii-v-i|ii – V]] tạo cảm giác **kết thúc mạnh dù dẫn về hợp âm nào**, miễn là [[dan-giong|dẫn giọng]] mượt — ii – V – vi hay ii – V – IV vẫn "chắc". Vì vậy có thể chèn ii – V trước gần như mọi hợp âm đích. Bảng thay thế của Lamar cho G7: **Dm7 – G7**, dài hơn là **Em7 – A7 | Dm7 – G7** (ii – V của ii – V).
+Một [[ii-v-i|ii – V]] tạo cảm giác **kết thúc mạnh dù dẫn về hợp âm nào**, miễn là [[dan-giong|dẫn giọng]] mượt — ii – V – vi hay ii – V – IV vẫn "chắc". Vì vậy có thể chèn ii – V trước gần như mọi hợp âm đích. Các cách thay cho G7: **Dm7 – G7**, dài hơn là **Em7 – A7 | Dm7 – G7** (ii – V của ii – V).
 Bốn cách đi vào Cmaj7:
 | Tên | Trong Đô trưởng | Giải thích |
 |---|---|---|
@@ -1699,12 +1713,21 @@ Bốn cách đi vào Cmaj7:
 | Cửa sau (backdoor) | Fm7 – B♭7 → Cmaj7 | **Thay thế tritone của cửa trước** (E7 → B♭7) — xem mục 5 |
 | ii – V tritone | A♭m7 – D♭7 → Cmaj7 | Cả cặp ii – V dời đi một tritone (cách ghi phổ biến) |
 ::staff treble D4+F4+A4+C5=Dm7 D4+F4+G4+B4=G7 E4+G4+B4+C5=Cmaj7 / D4+F4+A4+B4=Bm7♭5 D4+E4+G#4+B4=E7 E4+G4+B4+C5=Cmaj7 / C4+F4+Ab4+Eb5=Fm7 D4+F4+Ab4+Bb4=B♭7 E4+G4+B4+C5=Cmaj7 / Cb4+Eb4+Gb4+Ab4=A♭m7 Cb4+Db4+F4+Ab4=D♭7 C4+E4+G4+B4=Cmaj7 | Bốn đường ii – V về Cmaj7 (thế bấm hẹp, chỉ để so sánh nốt)
-Lamar tóm lại: các tiến trình này đều là **một ii – V hoặc thay thế tritone của một ii – V**, dẫn về I hoặc về một hợp âm thay cùng chức năng của I. Chuỗi ii – V nối nhau: [[phan-tich-tien-trinh-jazz]].
+Tóm lại: các tiến trình này đều là **một ii – V hoặc thay thế tritone của một ii – V**, dẫn về I hoặc về một hợp âm thay cùng chức năng của I. Chuỗi ii – V nối nhau: [[phan-tich-tien-trinh-jazz]].
 
 ## Điều kiện để thay thế
 Nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng phải là **nốt hợp âm** hoặc **[[hop-am-mo-rong|nốt căng]] hợp lý** của hợp âm mới. Nếu va chạm nửa cung với nốt 3 hoặc 7 của hợp âm mới, hãy chọn phép thay khác.
 
 Thêm: [[hop-am-luot-jazz]], [[constant-structures]].
+
+## Mẹo luyện tập
+- Chọn **một** phép thay mỗi tuần và dùng nó ở **mọi chỗ có thể** trong một bài. Dùng quá đà có chủ ý là cách nhanh nhất để biết phép thay đó nghe hay ở đâu, dở ở đâu.
+- Luôn kiểm **nốt giai điệu**: phép thay hay mấy mà chỏi với giai điệu thì phải đổi (hoặc đổi chính giai điệu — xem [[ket-lua-va-tiep-can-hop-am]]).
+
+## Câu hỏi và bài tập
+1. Viết năm cách thay cho G7 trong ii – V – I ở Đô.
+2. Thay mọi hợp âm V trong tám ô đầu một bài chuẩn bằng ii – V.
+3. Chơi backdoor (Fm7 – B♭7 – Cmaj7) rồi ii – V gốc; nghe khác nhau thế nào?
 `,
   },  {
     slug: 'hop-am-luot-jazz',
@@ -1713,6 +1736,8 @@ Thêm: [[hop-am-luot-jazz]], [[constant-structures]].
     aliases: ['passing chord', 'approach chord', 'hợp âm lướt jazz', 'hợp âm tiếp cận', 'hợp âm 7 giảm lướt', 'diminished passing chord'],
     summary: 'Hợp âm lướt là hợp âm ngắn chen giữa hai hợp âm chính, tự nó không quan trọng về hoà âm; hợp âm tiếp cận là hợp âm lướt cách hợp âm đích nửa cung hoặc một cung. Bài nêu các dạng thường gặp: hợp âm 7 giảm lướt, hợp âm tiếp cận cromatic và át phụ.',
     body: `
+Có những hợp âm không đi đâu cả. Chúng chỉ ghé qua trên đường từ hợp âm này sang hợp âm khác, để con đường bớt phẳng. Đó là **hợp âm lướt** — họ hàng của nốt lướt, nhưng ở cấp hợp âm. Chúng thường ngắn (một phách, hai phách) và thường đi liền bậc hoặc cromatic.
+
 ## Định nghĩa
 - **Hợp âm lướt** (passing chord): hợp âm **ngắn** (thường một phách hoặc nửa ô) chen giữa hai hợp âm quan trọng; nó **không** có vai trò hoà âm riêng — giống [[not-ngoai-hop-am|nốt lướt]] nhưng ở cấp hợp âm.
 - **Hợp âm tiếp cận** (approach chord): hợp âm lướt cách hợp âm đích **nửa cung** (cromatic) hoặc **một cung** (diatonic).
@@ -1729,8 +1754,13 @@ Chỉ có **ba** hợp âm 7 giảm khác nhau (C°7 = E♭°7 = G♭°7 = A°7 
 **3. Át phụ làm hợp âm tiếp cận** — chen V7 của hợp âm đích ngay trước nó (A7 → Dm7), xem [[hop-am-at-phu]] và [[thay-the-hop-am]].
 
 ## Trong locked hands và đệm
-Khi hoà âm từng nốt giai điệu bằng [[hop-am-khoi|hợp âm khối]], các nốt không thuộc hợp âm thường được hoà âm bằng hợp âm 7 giảm lướt. Trong gospel – jazz, Lamar minh hoạ các hợp âm giảm lướt như C7 → F°7 → Fmaj7 để **trì hoãn** sự giải quyết.
+Khi hoà âm từng nốt giai điệu bằng [[hop-am-khoi|hợp âm khối]], các nốt không thuộc hợp âm thường được hoà âm bằng hợp âm 7 giảm lướt. Trong gospel – jazz, các hợp âm giảm lướt như C7 → F°7 → Fmaj7 được dùng để **trì hoãn** sự giải quyết.
 Liên quan: [[tai-hoa-am]], [[dem-jazz]].
+
+## Câu hỏi và bài tập
+1. Chèn hợp âm 7 giảm lướt giữa Cmaj7 và Dm7; giữa Fmaj7 và Gm7.
+2. Chơi Cmaj7 – C♯°7 – Dm7 – D♯°7 – Em7: bè trầm đi lên cromatic.
+3. Thử hợp âm lướt cromatic song song (cùng loại, cách nửa cung) trước một hợp âm đích.
 `,
   },
 
@@ -1743,11 +1773,14 @@ Liên quan: [[tai-hoa-am]], [[dem-jazz]].
     summary: 'Thay đổi hợp âm dưới một giai điệu có sẵn để tạo màu sắc mới, mà giai điệu vẫn giữ nguyên.',
     wiki: 'Reharmonization',
     refs: [
+      ['Mark Levine — The Jazz Theory Book (Sher Music, 1995)', 'https://www.shermusic.com/products/the-jazz-theory-book'],
       ['Open Music Theory 2e — Substitutions', 'https://human.libretexts.org/Bookshelves/Music/Music_Theory/Open_Music_Theory_2e_(Gotham_et_al.)/06%3A_Jazz/6.06%3A_Substitutions'],
       ['Wikipedia — Reharmonization', 'https://en.wikipedia.org/wiki/Reharmonization'],
       ['Learn Jazz Standards — 10 jazz reharmonization techniques', 'https://www.learnjazzstandards.com/blog/jazz-reharmonization-techniques/'],
     ],
     body: `
+Tái hoà âm là lúc bạn ngừng chỉ **chơi** một bài chuẩn và bắt đầu **làm nó thành của mình**. Cùng một giai điệu, đổi hợp âm bên dưới, và bài cũ nghe như mới. Bài này đi từ những phép đổi nhẹ nhất tới những phép làm bài gần như thay da; hai chương [[tai-hoa-am-nang-cao]] và [[ket-lua-va-tiep-can-hop-am]] đi tiếp xa hơn.
+
 Nguyên tắc: nốt [[giai-dieu|giai điệu]] ở chỗ quan trọng ([[so-chi-nhip|phách mạnh]], nốt dài) phải là nốt của [[hop-am-ba|hợp âm]] mới, hoặc một [[hop-am-mo-rong|nốt mở rộng]] hợp lý.
 
 ## Các kỹ thuật (từ nhẹ đến mạnh)
@@ -1791,14 +1824,14 @@ Kết hợp các lớp dưới đây có thể biến **gần như bất kỳ b�
 7. **Tái hoà âm** (bảng ở trên, quy trình ở dưới).
 8. Cách tiếp cận **[[dieu-thuc|điệu thức]]**: chỉ một hai hợp âm, thường là một vamp — xem [[jazz-dieu-thuc]].
 9. **Đổi nhịp** (5/4, 7/8…) — xem [[doi-nhip-the-loai-jazz]].
-Công thức đơn giản nhất của Lamar cho piano: tay trái [[bass-di-jazz|bass đi]], tay phải [[not-dan-huong|nốt dẫn hướng]] (3 và 7) cộng giai điệu — rồi [[ngau-hung-piano|ngẫu hứng]].
+Công thức đơn giản nhất cho piano: tay trái [[bass-di-jazz|bass đi]], tay phải [[not-dan-huong|nốt dẫn hướng]] (3 và 7) cộng giai điệu — rồi [[ngau-hung-piano|ngẫu hứng]].
 
 ## Quy trình tái hoà âm
 1. Tìm **nốt giai điệu chính** của mỗi ô — nốt duy nhất phải giữ.
 2. Đổi hợp âm (và/hoặc chỉnh giai điệu) sao cho nốt đó là **hoà âm chấp nhận được**: một nốt dẫn hướng (3 hoặc 7) hoặc một [[hop-am-mo-rong|nốt căng]] dùng được. Mọi nốt khác của hợp âm — kể cả gốc, 3, 7 — đều có thể đổi, **trừ** nốt giai điệu chính.
 3. Nối các hợp âm theo **nửa cung**, theo **bậc trong giọng** hoặc theo **[[vong-quang-nam|vòng quãng 5]]**.
 4. Điều khiển **căng – giãn**: nốt căng cao và biến hoá (♭13) tạo căng; nốt dẫn hướng và nốt căng thấp (9) tạo giãn.
-Bảng thay thế của Lamar chia các phép thay thành nhóm: cromatic (quãng cố định), [[vong-coltrane|Coltrane]], [[thay-the-hop-am|diatonic]], dựa trên giai điệu, và dựa trên bè trầm ([[bass-ngan|bass ngân]], bass đi liền bậc). Các phép thay bằng ii – V: [[thay-the-hop-am]]. Biến thể gospel: [[tai-hoa-am-gospel]]; tái hoà âm sang [[the-loai|thể loại]] khác: [[doi-nhip-the-loai-jazz]].
+Có thể chia các phép thay thành nhóm: cromatic (quãng cố định), [[vong-coltrane|Coltrane]], [[thay-the-hop-am|diatonic]], dựa trên giai điệu, và dựa trên bè trầm ([[bass-ngan|bass ngân]], bass đi liền bậc). Các phép thay bằng ii – V: [[thay-the-hop-am]]. Biến thể gospel: [[tai-hoa-am-gospel]]; tái hoà âm sang [[the-loai|thể loại]] khác: [[doi-nhip-the-loai-jazz]].
 
 ## Gợi ý luyện tập
 1. Chọn một bài quen (ví dụ "Twinkle Twinkle Little Star") với vòng gốc I – IV – V.
@@ -1808,6 +1841,28 @@ Bảng thay thế của Lamar chia các phép thay thành nhóm: cromatic (quãn
 Liên quan: [[vong-hop-am]], [[he-thong-hop-am-am-giai]].
 
 Công cụ khác: [[line-cliche]], [[turnaround-jazz]], [[constant-structures]].
+
+## Bảng nhanh: đổi gì trên từng loại hợp âm
+Levine gom các phép tái hoà âm cơ bản theo từng loại hợp âm. Ở Đô trưởng:
+| Hợp âm gốc | Thử đổi thành | Ghi chú |
+|---|---|---|
+| V7 (G7) | ii – V (Dm7 – G7) | gần như luôn được |
+| V7 | V thay tritone (D♭7), hoặc ii – V của nó (A♭m7 – D♭7) | bè trầm đi xuống nửa cung |
+| V7 đi xuống quãng 5 | G7♭9, G7alt | ♭9 nghe hay khi V **giải quyết xuống quãng 5** |
+| V7 không đi xuống quãng 5 | G7♯11 | Lydian át |
+| vi (Am7) | VI7 (A7) | biến thành át phụ của ii |
+| ii (Dm7) | D7 (V của V) | ii – V thành V của V – V |
+| ii | slash chord (F/G, Dm7/G) | ii – V gói thành một hợp âm sus, xem [[hop-am-sus-jazz]] |
+| I (Cmaj7) | Cmaj7♯11, Cmaj7♯5 | Lydian, Lydian tăng |
+| I | B/C, D/C | slash chord thay I, xem [[slash-chord-tren-mot-not-bass]] |
+| Hợp âm thứ kéo dài | đường bè đi xuống / đi lên trên nó | [[line-cliche]] |
+
+Một lời nhắn của Levine cho kèn và ca sĩ, áp dụng cho cả người đệm: tái hoà âm phần **giai điệu** thì phải bàn trước với cả ban; tái hoà âm trong lúc **solo** thì thoải mái hơn nhiều, miễn tay bass và người đệm nghe được bạn.
+
+## Câu hỏi và bài tập
+1. Tái hoà âm tám ô đầu "Fly Me to the Moon" bằng ít nhất ba phép trong bảng.
+2. Chọn một ballad; đổi hợp âm cuối thành B/C hoặc Cmaj7♯11.
+3. Ghi âm một chorus đệm với hợp âm gốc và một chorus tái hoà âm; nghe lại cái nào bạn thích.
 `,
   },
   {
@@ -1822,18 +1877,20 @@ Công cụ khác: [[line-cliche]], [[turnaround-jazz]], [[constant-structures]].
       ['Wikipedia — Unsquare Dance', 'https://en.wikipedia.org/wiki/Unsquare_Dance'],
     ],
     body: `
+Muốn biết bạn thật sự hiểu một bài tới đâu? Chơi nó ở nhịp khác, hay ở thể loại khác. Một bài 4/4 swing chơi ở 3/4, ở 5/4, hay thành bossa nova, rock, ballad tự do — mỗi lần là một bài mới, và mỗi lần bạn phải hiểu lại giai điệu và hoà âm của nó.
+
 [[tai-hoa-am|Tái hoà âm]] đổi **hợp âm**; bài này nói về ba cách đổi **những thứ khác** của một bài chuẩn: nhịp, [[the-loai|thể loại]] và cảm giác thời gian.
 
 ## 1. Đổi số chỉ nhịp
 - Phần lớn bài jazz ở **4/4** — có lẽ từ thời [[swing|Swing]], khi jazz là nhạc khiêu vũ và 4/4 có phách nhấn 2 – 4 dễ nhảy hơn nhiều so với kiểu 13/8.
 - Ví dụ: **"Fly Me to the Moon"** (Bart Howard, 1954) ban đầu là một bài **[[tieu-pham-piano|valse]] 3/4** tên "In Other Words"; bản **4/4 swing** nổi tiếng là [[dan-nhac-giao-huong|phối khí]] của Quincy Jones cho Frank Sinatra (1964).
-- Lamar gợi ý thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
+- Thử các bài chuẩn ở **5/4 hoặc 7/8**, và nghe [[dave-brubeck|Dave Brubeck]]: "Take Five" (5/4) và "Blue [[rondo|Rondo]] à la Turk" (9/8) trong *Time Out* (1959), "Unsquare Dance" (7/4, 1961) — xem [[nhip-hon-hop]].
 - Ở nhịp lẻ, [[nhip-dieu-hoa-am|nhịp điệu hoà âm]] có thể không đối xứng.
 ::rhythm 4/4 h q q / w // | Minh hoạ: hai ô 4/4 của một câu giai điệu…
 ::rhythm 3/4 q q q / h. // | …chuyển sang 3/4 bằng cách rút nốt dài: mỗi ô gốc thành một ô valse (một cách làm, không phải quy tắc)
 
 ## 2. Đổi thể loại bằng hợp âm
-Lamar lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều thể loại; ý chính: **chỉ cần chọn hợp âm** đã có thể chuyển bài sang thể loại khác.
+Lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều thể loại; ý chính: **chỉ cần chọn hợp âm** đã có thể chuyển bài sang thể loại khác.
 | Thể loại | Hợp âm |
 |---|---|
 | Pop (bản gốc) | Phần lớn [[hop-am-ba|hợp âm ba]] trong giọng, [[giai-dieu|giai điệu]] rơi vào nốt gốc |
@@ -1841,7 +1898,7 @@ Lamar lấy 8 ô đầu của một bài pop và hoà âm lại theo nhiều th�
 | Jazz điệu thức | Bỏ tiến trình gốc, chỉ dùng **một hai hợp âm** (xem [[jazz-dieu-thuc]]) |
 | Jazz [[phi-dieu-tinh|phi điệu tính]] | Một phiên bản phi điệu tính **khá thuận tai** — không phải [[am-cum|âm cụm]] ngẫu nhiên ([[post-bop-free-jazz]]) |
 | [[blues-12-nhip|Blues]] | Hợp âm blues **chưa đủ**: nếu giai điệu tránh [[am-giai-blues|nốt blue]] thì bài vẫn không "blues" |
-Kết luận của Lamar: thể loại đến từ **cách giai điệu và hoà âm tương tác**. Phần nhịp đệm (bass đi, [[ostinato|bass lặp]] blues, bossa nova) đổi theo — xem [[bass-di-jazz]], [[dieu-dem-pho-bien]], [[dem-jazz]].
+Kết luận: thể loại đến từ **cách giai điệu và hoà âm tương tác**. Phần nhịp đệm (bass đi, [[ostinato|bass lặp]] blues, bossa nova) đổi theo — xem [[bass-di-jazz]], [[dieu-dem-pho-bien]], [[dem-jazz]].
 
 ## 3. Chơi tự do thời gian
 Người học hay bỏ qua kỹ năng này, nhưng nó rất cần cho **dạo đầu**, và pianist chơi một mình không cần [[kiem-soat-toc-do|giữ nhịp]] cứng.
@@ -1850,7 +1907,12 @@ Người học hay bỏ qua kỹ năng này, nhưng nó rất cần cho **dạo 
 |---|---|
 | **Các [[cau-nhac|câu nhạc]]** | Giữ gần nguyên để giai điệu còn nhận ra; [[trang-tri-giai-dieu-jazz|trang trí]] nhẹ; [[rubato]] có chừng mực; [[ky-thuat-quang-tam|chơi quãng 8]]; chuyển giai điệu sang [[quang|quãng 8]] khác |
 | **Chỗ nghỉ giữa các câu** | [[luyen-hop-am-rai|Hợp âm rải]], chạy [[am-giai|âm giai]], "fill" hay [[ngau-hung-piano|ngẫu hứng]] ngắn, hoặc chơi và giữ một hợp âm — ở đây có thể chậm hẳn lại, gần như không còn nhịp |
-Lamar xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp" — nên cân bằng bằng những yếu tố có cấu trúc (giai điệu rõ, hoà âm quen). Liên hệ cổ điển: [[prelude-ung-tac|prelude ứng tác]], [[cadenza]].
+Rubato thuộc nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp" — nên cân bằng bằng những yếu tố có cấu trúc (giai điệu rõ, hoà âm quen). Liên hệ cổ điển: [[prelude-ung-tac|prelude ứng tác]], [[cadenza]].
+
+## Câu hỏi và bài tập
+1. Chơi một bài chuẩn 4/4 ở 3/4 (mỗi ô cũ thành một ô 3/4 hoặc hai ô).
+2. Chơi tám ô đầu một bài pop theo ba thể loại: jazz swing, bossa nova, gospel.
+3. Chơi một ballad tự do nhịp (rubato) từ đầu tới cuối, giữ nguyên hình thức.
 `,
   },
   {
@@ -1860,8 +1922,10 @@ Lamar xếp rubato vào nhóm yếu tố [[tiet-tau|tiết tấu]] "phức tạp
     aliases: ['gospel reharmonization', 'gospel jazz', 'tái hoà âm gospel', 'Amazing Grace', 'backcycling', 'gospel piano'],
     summary: 'Gospel là hoà âm nhà thờ của người Mỹ gốc Phi, gần gũi với blues và hard bop. Lamar lấy "Amazing Grace" (giai điệu ngũ cung, chỉ ba hợp âm I – IV – V) và biến nó thành gospel – jazz: lùi vòng quãng 5 (C – F – C), hoà âm hoá gần như mọi nốt giai điệu, hợp âm 7 giảm lướt, át phụ và thay thế tritone.',
     body: `
+Gospel là nơi nhiều pianist jazz học cách làm một bài thánh ca đơn giản thành một bức tường âm thanh ấm áp. Cách học tốt nhất là lấy một giai điệu ai cũng biết và hoà âm lại nó từng bước. Ta dùng "Amazing Grace" — giai điệu phạm vi công cộng, chỉ vài nốt, và chịu được mọi kiểu "trang điểm".
+
 ## Điểm xuất phát
-Lamar chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
+Ta chép "**Amazing Grace**" ở Đô trưởng cho dễ đọc:
 - Bản cơ bản chỉ dùng **I, IV, V** (C, F, G).
 - [[giai-dieu|Giai điệu]] (gần như) chỉ dùng **[[am-giai-ngu-cung|ngũ cung]] trưởng** C – D – E – G – A.
 - Tay trái là đường bass đơn giản, nhấn nốt gốc.
@@ -1882,6 +1946,11 @@ Lamar chép "**Amazing Grace**" ở Đô trưởng "cho tiện":
 
 ## Gospel và jazz
 Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60): nhiều kết IV – I, nốt blue, đệm "gõ" theo tiếng đàn [[organ-ong|organ nhà thờ]] (xem [[am-giai-blues]], [[blues-12-nhip]]). Các kỹ thuật trên cũng dùng trực tiếp cho [[dem-hat-piano|đệm hát]] thánh ca và [[nhac-pho|nhạc phổ thông]].
+
+## Câu hỏi và bài tập
+1. Chơi "Amazing Grace" ở Fa trưởng với các bước tái hoà âm trong bài.
+2. Chèn một hợp âm 7 giảm lướt vào mỗi chỗ giai điệu đi liền bậc.
+3. Thử cùng cách làm với một bài thánh ca khác bạn biết.
 `,
   },
   {
@@ -2056,19 +2125,26 @@ Giai đoạn trước đó của Coltrane: [[sheets-of-sound]]. Phân tích chi 
       ['Nghiên cứu về "Inner Urge" (luận án DMA, UNCG)', 'https://youthjazz.us/wp-content/uploads/2019/02/umi-uncg-1618.pdf'],
     ],
     body: `
+Chơi Fmaj7, rồi E♭maj7, rồi D♭maj7, cùng một thế bấm, chỉ trượt xuống. Không có ii – V nào, không có chức năng nào, vậy mà nghe vẫn đẹp. Đó là **constant structures**: chuỗi hợp âm cùng loại, cùng hình, gốc đi tự do. Đây cũng là chỗ jazz bắt đầu bước ra khỏi hoà âm chức năng.
+
 ## Định nghĩa
 Theo Wikipedia, **constant structures** là chuỗi **ba hợp âm cùng loại trở lên** (ví dụ toàn [[hop-am-bay|maj7]]) với **nốt gốc chuyển động không theo [[chuc-nang-hoa-am|chức năng]]** — [[dieu-tinh|trung tâm giọng]] dịch chuyển liên tục. Nốt gốc thường đi theo một quãng cố định (hay gặp là quãng 3) hoặc vẽ một [[luyen-hop-am-rai|hợp âm rải]]. Vì không có lực hút V – I, chuỗi có thể **dừng ở bất kỳ hợp âm nào** mà vẫn nghe trọn vẹn. Wikipedia ghi kỹ thuật này được **[[bill-evans|Bill Evans]]** và **[[herbie-hancock|Herbie Hancock]]** phổ biến.
 
 ## Ví dụ
 ::staff treble F4+A4+C5+E5=Fmaj7 Ab4+C5+Eb5+G5=A♭maj7 Db4+F4+Ab4+C5=D♭maj7 Gb4+Bb4+Db5+F5=G♭maj7 | Ví dụ của Wikipedia: Fmaj7 – A♭maj7 – D♭maj7 – G♭maj7 (rồi C13sus4) — chỉ Fmaj7 thuộc giọng Fa
-Lamar đưa ví dụ F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được với toàn m7 hoặc toàn 7): nốt gốc đi xuống từng cung.
+Ví dụ: F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 (cũng chơi được với toàn m7 hoặc toàn 7): nốt gốc đi xuống từng cung.
 
 **"Inner Urge"** (Joe Henderson, thu âm 1964): mở đầu bằng F♯m7♭5, rồi chuỗi **Fmaj7♯11 – E♭maj7♯11 – D♭maj7♯11**, mỗi hợp âm 4 ô, trước khi các hợp âm maj7♯11 đổi nhanh hơn.
 
 ## Nghe và dùng
 - Màu **trôi**, hiện đại, không có cảm giác "về nhà" — gần với [[hoa-am-song-song|hoà âm song song]] của [[claude-debussy|Debussy]] (xem [[an-tuong]]).
 - Khi [[ngau-hung-piano|ngẫu hứng]], mỗi hợp âm là một **giọng tạm** — chuyển âm giai theo từng hợp âm (ví dụ [[dieu-thuc|Lydian]] trên maj7♯11; xem [[he-thong-hop-am-am-giai]]).
-- Lamar xem đây là một công cụ [[tai-hoa-am|tái hoà âm]] mạnh: thay một đoạn [[ii-v-i|ii – V – I]] bằng chuỗi cùng loại có giai điệu phù hợp.
+- Đây là một công cụ [[tai-hoa-am|tái hoà âm]] mạnh: thay một đoạn [[ii-v-i|ii – V – I]] bằng chuỗi cùng loại có giai điệu phù hợp.
+
+## Câu hỏi và bài tập
+1. Chơi F♯maj7 – Emaj7 – Dmaj7 – Cmaj7 với cùng một thế bấm; rồi làm lại toàn m7.
+2. Thay một ii – V – I trong một bài bằng một chuỗi ba hợp âm maj7 cùng hình có nốt giai điệu ở trên.
+3. Nghe "Inner Urge" của Joe Henderson hoặc "Dolphin Dance" của Herbie Hancock; tìm chỗ có hợp âm cùng loại nối nhau.
 `,
   },
   {
