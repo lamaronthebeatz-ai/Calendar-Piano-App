@@ -153,3 +153,14 @@
 @media (hover: hover) {
   .spot:hover::before, .spot:hover::after, .theory-card:hover::before, .theory-card:hover::after { opacity: 1; }
 }
+
+/* Section titles: the rule under them is gold at the start and fades into the page. */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, color-mix(in oklch, var(--color-gold) 60%, transparent), color-mix(in oklch, var(--color-gold) 14%, var(--color-border)) 35%, transparent);
+}

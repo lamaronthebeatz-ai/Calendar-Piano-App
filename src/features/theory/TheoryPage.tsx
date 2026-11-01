@@ -543,7 +543,7 @@ const SOURCES = [
 
 export function SectionTitle({ children, icon, hint }: { children: ReactNode; icon?: ReactNode; hint?: string }) {
   return (
-    <div className="flex items-end justify-between gap-3 border-b border-[var(--color-border)] pb-2">
+    <div className="section-title relative flex items-end justify-between gap-3 pb-2">
       <h2 className="flex items-center gap-2 font-display text-[21px] font-semibold tracking-tight text-[var(--color-ink)]">
         {icon && <span className="text-[var(--color-gold)]">{icon}</span>}
         {children}

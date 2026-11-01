@@ -244,11 +244,19 @@ body {
 }
 
 .text-gold-gradient {
-  background: linear-gradient(90deg, #f3cf8e, #d9954a 55%, #f0c987);
+  background: linear-gradient(100deg, #f3cf8e 0%, #d9954a 30%, #f0c987 45%, #fff1cf 50%, #f0c987 55%, #d9954a 70%, #f3cf8e 100%);
+  background-size: 250% 100%;
+  animation: gold-drift 9s ease-in-out infinite;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+
+@keyframes gold-drift {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: 0% 0; }
+}
+@media (prefers-reduced-motion: reduce) { .text-gold-gradient { animation: none; } }
 
 @keyframes float-up {
   from { transform: translateY(18px); opacity: 0; filter: blur(4px); }
