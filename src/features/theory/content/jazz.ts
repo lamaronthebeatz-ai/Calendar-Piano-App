@@ -1263,7 +1263,7 @@ Muốn có một thế bấm "riêng", cách nhanh nhất là bắt chước th�
 Vì mỗi giọng chỉ có hai thế bấm, chúng có thể nghe lặp lại — chính tính "góc cạnh" đó là phong cách Monk.
 
 ## Herbie Hancock: hợp âm thứ 7 với nốt 9 ở giai điệu
-Khi giai điệu ở **nốt 9** của một hợp âm m7, Lamar giới thiệu "hợp âm Hancock" sáu nốt. Trên **Dm7**: tay trái **D – A – F** (1 – 5 – ♭3), tay phải **G – C – E** (11 – ♭7 – 9).
+Khi giai điệu ở **nốt 9** của một hợp âm m7, thử "hợp âm Hancock" sáu nốt. Trên **Dm7**: tay trái **D – A – F** (1 – 5 – ♭3), tay phải **G – C – E** (11 – ♭7 – 9).
 ::grand G4+C5+E5/D3+A3+F4=Dm11 | Hợp âm Hancock trên Dm7: tay trái D – A – F, tay phải G – C – E (nốt 9 là E ở trên cùng)
 Tay phải là hai [[quang|quãng 4]] chồng lên nhau — gần với [[hoa-am-quang-bon|hợp âm quãng 4]] và hợp âm *So What* (E – A – D – G – B trên Em11) mà [[bill-evans|Bill Evans]] chơi trong "So What" (*[[jazz-dieu-thuc|Kind of Blue]]*, 1959).
 
@@ -1960,6 +1960,8 @@ Gospel thấm vào jazz qua **hard bop và soul jazz** (thập niên 1950–60):
     aliases: ['jazz composition', 'sáng tác jazz', 'composition and melodic development', 'phát triển giai điệu', 'snowflake method', 'doodling method'],
     summary: 'Lamar xem sáng tác là "ngẫu hứng không có tính tức thời": phân tích giai điệu theo quãng, motif, tiết tấu, âm giai, hoà âm; phát triển motif bằng đảo, ngược, giãn, co, tách mảnh; đặt đỉnh giai điệu ở khoảng 2/3–3/4 câu; hai quy trình "vẽ nguệch ngoạc" và "bông tuyết" để đi từ một câu nhạc đến một lead sheet.',
     body: `
+Hầu hết những người chơi jazz vĩ đại cũng là người viết bài vĩ đại: Duke, Monk, Bird, Horace Silver, Wayne Shorter, Herbie Hancock… Và có một lý do: sáng tác chẳng qua là **ngẫu hứng chậm lại**, có thời gian sửa. Mọi thứ bạn đã học trong bộ sách đều là đồ nghề cho việc này.
+
 Sáng tác là "**[[ngau-hung-piano|ngẫu hứng]] không có tính tức thời**" — cùng những công cụ của [[xay-dung-bai-solo|xây dựng bài solo]], nhưng có thời gian để chọn lọc.
 
 ## Phân tích một giai điệu
@@ -1976,11 +1978,19 @@ Năm góc nhìn: **[[quang|quãng]]** (các bước nhảy), **motif**, **[[tiet
 ## Hai quy trình
 - **"Vẽ nguệch ngoạc"** (doodling): bắt đầu từ một giai điệu nghe hay rồi chỉnh cho hợp phong cách.
 - **"Bông tuyết"** (snowflake): dạo đàn → tìm một câu → phát triển thành motif → hoà âm hoá → có một **[[he-so-nashville-va-lead-sheet|lead sheet]]** ([[ky-hieu-hop-am]]). Bước cuối: **phối** ([[hinh-thuc-am-nhac|hình thức]], [[ngon-bam|thế bấm]], nhạc cụ, [[cuong-do|cường độ]]).
-::form Dạo_đàn Một_câu Motif Hoà_âm Ký_âm Phối | Quy trình "bông tuyết" của Lamar: dạo đàn → tìm một câu → motif → hoà âm hoá → ký âm thành lead sheet → phối
+::form Dạo_đàn Một_câu Motif Hoà_âm Ký_âm Phối | Quy trình "bông tuyết": dạo đàn → tìm một câu → motif → hoà âm hoá → ký âm thành lead sheet → phối
 
 ## Contrafact: giai điệu mới trên vòng hợp âm cũ
 Bản quyền bảo vệ giai điệu và lời, **không** bảo vệ [[vong-hop-am|vòng hợp âm]], nên nhạc công [[phong-cach-jazz|bebop]] viết rất nhiều **contrafact** — chi tiết và ví dụ ở [[rhythm-changes]]. Đó là cách tập sáng tác dễ nhất: giữ hoà âm quen, chỉ viết giai điệu mới.
 Bài nên dùng để học các kỹ thuật: "E.S.P.", "In Walked Bud", "Satin Doll", "Autumn Leaves", "All the Things You Are". Liên quan: [[hinh-thuc-ca-khuc-32]], [[phoi-hoa-am-giai-dieu]].
+
+## Bắt đầu thế nào
+Cách dễ nhất, và là cách dân bebop đã làm: viết một **head** mới trên hợp âm của một bài có sẵn (xem [[head-dao-dau-va-ket]]). Bạn không phải lo hoà âm; bạn chỉ lo giai điệu. Khi đã quen, đổi vài hợp âm, rồi viết cả hoà âm lẫn giai điệu.
+
+## Câu hỏi và bài tập
+1. Viết một head 12 ô trên blues ở Fa.
+2. Viết một bài 32 ô AABA của riêng bạn, có ít nhất hai cặp ii – V và một phép thay thế.
+3. Ghi bài thành lead sheet, kèm dạo đầu và đoạn kết.
 `,
   },
   {
@@ -2574,6 +2584,8 @@ Một lick chỉ thuộc về bạn khi bạn chơi được nó **ở 12 giọn
     aliases: ['superimposition', 'chồng hợp âm', 'chồng tiến trình', 'superimpose', 'hợp âm rải mở rộng'],
     summary: 'Superimposition là ngẫu hứng theo một hợp âm hay cả một tiến trình khác chồng lên tiến trình đang chơi — từ việc đơn giản như rải Em7 trên Cmaj7 (ra 3 – 5 – 7 – 9), D♭7 trên G7 (thay thế tritone), đến chồng cả chuỗi ii – V lên một hợp âm đứng yên. Lamar gắn kỹ thuật này với Coltrane, Lennie Tristano, Dave Liebman.',
     body: `
+Đến giờ bạn chơi theo hợp âm đang viết. Superimposition là khi bạn **chồng một hợp âm, hay cả một tiến trình khác**, lên trên tiến trình đang chạy — tay bass vẫn đi đường cũ, còn câu nhạc của bạn kể một câu chuyện hoà âm khác. Khi làm đúng, người nghe cảm thấy một sức căng tuyệt đẹp; khi làm sai, nghe như bạn lạc bài. Khác nhau ở chỗ: câu nhạc của bạn có **logic** riêng và **về đúng chỗ**.
+
 ## Định nghĩa
 **superimposition** là chơi **một tiến trình hợp âm hoàn toàn khác** chồng lên tiến trình đang có — một kỹ thuật hiện đại hơn, gắn với **John Coltrane**, **Lennie Tristano**, **Dave Liebman**; nó có thể tạo ra [[da-dieu-tinh|đa điệu tính]].
 
@@ -2582,13 +2594,18 @@ Một lick chỉ thuộc về bạn khi bạn chơi được nó **ở 12 giọn
 ::grand E4+G4+B4+D5/C3=Em7_/_C Db4+F4+Ab4+Cb5/G2=D♭7_/_G | Em7 rải trên Cmaj7 = nốt 3 – 5 – 7 – 9; D♭7 rải trên G7 = ♭5 – ♭7 – ♭9 – 3 (âm thanh của [[thay-the-tritone|thay thế tritone]])
 (Nốt C♭ trong D♭7 chính là B — nốt 3 của G7.) Đây cũng là ý tưởng của [[upper-structure]], chỉ khác là chơi rải trong giai điệu thay vì bấm hợp âm.
 
-**2. Một chuỗi hợp âm trên một hợp âm đứng yên** — ví dụ trên hai ô Cmaj7, chơi [[cau-nhac|câu nhạc]] theo Dm7 – G7 rồi giải quyết về C ở phách đầu ô sau. Lamar khuyên chọn **tiến trình có cấu trúc mạnh** (ii – V – I, V – I) để câu nhạc giữ được logic, và dùng câu **liền bậc + hợp âm rải**, tránh nhảy xa.
+**2. Một chuỗi hợp âm trên một hợp âm đứng yên** — ví dụ trên hai ô Cmaj7, chơi [[cau-nhac|câu nhạc]] theo Dm7 – G7 rồi giải quyết về C ở phách đầu ô sau. Hãy chọn **tiến trình có cấu trúc mạnh** (ii – V – I, V – I) để câu nhạc giữ được logic, và dùng câu **liền bậc + hợp âm rải**, tránh nhảy xa.
 
 **3. Cả một hệ thống khác** — [[vong-coltrane|vòng Coltrane]] chồng lên một [[ii-v-i]]; các hợp âm chồng nhanh trong [[sheets-of-sound|"sheets of sound"]].
 
 ## Nghe ra superimposition khi phân tích
-Lamar liệt kê superimposition và [[tiet-tau-ngau-hung-jazz|dịch vạch nhịp]] trong số những điều cần tìm khi [[phan-tich-solo-jazz|phân tích một solo]].
+Superimposition và [[tiet-tau-ngau-hung-jazz|dịch vạch nhịp]] là những điều nên tìm khi [[phan-tich-solo-jazz|phân tích một solo]].
 Liên quan: [[triad-pairs]], [[choi-ngoai-jazz]], [[hop-am-chong]].
+
+## Câu hỏi và bài tập
+1. Trên hai ô Cmaj7, chơi một câu theo Dm7 – G7 rồi giải quyết về C ở phách 1 ô sau.
+2. Trên một vamp Dm7, chồng một ii – V – I ở Đô trưởng; rồi một ii – V – I ở Mi giáng (lệch nửa cung).
+3. Nghe một solo bạn thích; tìm chỗ người chơi đi "trước" hoặc "sau" hợp âm.
 `,
   },
   {
@@ -2604,6 +2621,8 @@ Liên quan: [[triad-pairs]], [[choi-ngoai-jazz]], [[hop-am-chong]].
       ['All About Jazz — John Coltrane: Sheets of Sound', 'https://allaboutjazz.com/news/john-coltrane-sheets-of-sound/'],
     ],
     body: `
+Nghe Coltrane cuối thập niên 1950, bạn sẽ thấy những trận mưa nốt: hợp âm rải, âm giai, nhanh tới mức không còn nghe từng nốt mà nghe cả một "tấm" âm thanh. Nhà phê bình Ira Gitler gọi đó là **sheets of sound**. Đây không phải chỗ để bắt đầu học ngẫu hứng — nhưng hiểu nó giúp bạn nghe Coltrane với đôi tai khác.
+
 ## Tên gọi
 - Nhà phê bình **Ira Gitler** (tạp chí *Down Beat*) đặt cụm từ này trong **ghi chú album *Soultrane*** của John Coltrane (Prestige, **1958**), gắn với phần kết của bài "Russian Lullaby". Ông đã mô tả hiện tượng này từ ghi chú album *Traneing In* (1957) và dùng lại cụm từ trong bài "Trane on the Track" (*Down Beat*, 16/10/1958).
 - Gitler nói ông dùng cụm từ như **lời khen**, không phải phê bình.
@@ -2617,10 +2636,15 @@ Liên quan: [[triad-pairs]], [[choi-ngoai-jazz]], [[hop-am-chong]].
 | E♭7 (E♭ – G – B♭ – D♭) | C7 | ♯9 – 5 – ♭7 – ♭9 |
 | F♯7 (F♯ – A♯ – C♯ – E) | C7 | ♯11 – ♭7 – ♭9 – 3 |
 ::grand Eb4+G4+Bb4+Db5/C3+E3+Bb3=E♭7_/_C7 F#4+A#4+C#5+E5/C3+E3+Bb3=F♯7_/_C7 | Hai hợp âm Coltrane chồng lên C7: cả hai đều cho các nốt căng biến hoá (♭9, ♯9, ♯11) — gần với âm giai [[am-giai-bat-cung|bát cung]] và [[upper-structure]]
-- Vì đi rất nhanh, nhiều nốt chỉ là **[[not-ngoai-hop-am|nốt lướt]]** — Lamar nhắc không nên dừng lâu trên [[not-tranh-va-quang-nghich|nốt tránh]].
+- Vì đi rất nhanh, nhiều nốt chỉ là **[[not-ngoai-hop-am|nốt lướt]]** — đừng dừng lâu trên [[not-tranh-va-quang-nghich|nốt tránh]].
 
 ## Sau "sheets of sound"
 Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thành ba phần bằng nhau trong "[[phan-tich-giant-steps|Giant Steps]]" (1959) — xem [[vong-coltrane]]. Khi phân tích solo Coltrane, các chuỗi nhóm lẻ dày đặc là dấu hiệu nhận ra "sheets of sound" (xem [[phan-tich-solo-jazz]]).
+
+## Câu hỏi và bài tập
+1. Rải nhanh bằng liên ba hoặc móc kép các hợp âm 7 của ii – V – I ở Đô, mỗi hợp âm hai phách.
+2. Chồng thêm một hợp âm lướt giữa hai hợp âm (như Coltrane hay làm), vẫn giữ nốt đầu phách là nốt hợp âm.
+3. Nghe một solo của Coltrane trên album *Blue Train* (1957) hoặc *Soultrane* (1958).
 `,
   },
   {
@@ -2635,8 +2659,10 @@ Ngay sau giai đoạn này, Coltrane hệ thống hoá việc chia quãng 8 thà
       ['jazzguitar.be — Hexatonics (thảo luận sách của Jerry Bergonzi)', 'https://www.jazzguitar.be/forum/improvisation/105727-hexatonics.html'],
     ],
     body: `
+Hai hợp âm ba, không chung nốt nào, đặt cạnh nhau: C và D chẳng hạn. Sáu nốt khác nhau, xen kẽ, và bạn có một âm thanh vừa "trong" (mỗi hợp âm ba đều rất rõ ràng) vừa "hiện đại" (cộng lại thì đầy nốt căng). Đây là món tủ của jazz từ thập niên 1960, và là một trong những cách dễ nhất để nghe "khác" mà vẫn đúng.
+
 ## Định nghĩa
-**hai [[hop-am-ba|hợp âm ba]] cách nhau một bậc, không có nốt chung**. Ví dụ của Lamar: **C trưởng + D trưởng trên Cmaj7** — mọi nốt đều là nốt hợp âm hoặc [[hop-am-mo-rong|nốt căng]] dùng được.
+**hai [[hop-am-ba|hợp âm ba]] cách nhau một bậc, không có nốt chung**. Ví dụ: **C trưởng + D trưởng trên Cmaj7** — mọi nốt đều là nốt hợp âm hoặc [[hop-am-mo-rong|nốt căng]] dùng được.
 ::staff treble C4+E4+G4=C D4+F#4+A4=D C4 D4 E4 F#4 G4 A4 | Cặp C + D: sáu nốt C – D – E – F♯ – G – A = nốt 1 – 9 – 3 – ♯11 – 5 – 13 của Cmaj7(♯11) — âm giai Lydian thiếu nốt 7
 Hai hợp âm ba không chung nốt luôn ghép thành một **âm giai sáu nốt** ([[neo-riemann|hexatonic]]) — nhà sư phạm Jerry Bergonzi dành cả một tập sách (*Hexatonics*, 2007) cho cách nhìn này.
 
@@ -2646,8 +2672,13 @@ Hai hợp âm ba không chung nốt luôn ghép thành một **âm giai sáu n�
 - Chọn cặp theo [[he-thong-hop-am-am-giai|âm giai của hợp âm]]: ví dụ trên hợp âm át biến hoá, hai hợp âm ba lấy từ âm giai [[dieu-thuc-thu-giai-dieu|altered]].
 
 ## Nghe
-Lamar gợi ý: **[[chick-corea|Chick Corea]]** — *Now He Sings, Now He Sobs* (1968); **[[mccoy-tyner|McCoy Tyner]]** — "Passion Dance" (*The Real McCoy*, 1967); **Oliver Nelson** — "Stolen Moments" (1961). Sách tham khảo: Gary Campbell, *Triad Pairs for Jazz* (Alfred, 2001).
+Nghe: **[[chick-corea|Chick Corea]]** — *Now He Sings, Now He Sobs* (1968); **[[mccoy-tyner|McCoy Tyner]]** — "Passion Dance" (*The Real McCoy*, 1967); **Oliver Nelson** — "Stolen Moments" (1961). Sách tham khảo: Gary Campbell, *Triad Pairs for Jazz* (Alfred, 2001).
 Liên quan: [[superimposition-jazz]], [[upper-structure]] (hợp âm ba trên tritone khi đệm), [[am-giai-doi-xung-jazz]] (âm giai tăng cũng là hai [[hop-am-ba-tang|hợp âm ba tăng]] ghép lại).
+
+## Câu hỏi và bài tập
+1. Chơi cặp C – D trên Cmaj7 (Lydian) theo mẫu: ba nốt C, ba nốt D, lên rồi xuống.
+2. Tìm cặp hợp âm ba cho Dm7 (Dorian) và cho G7alt (từ La giáng thứ giai điệu).
+3. Ứng tác một chorus trên vamp Cmaj7♯11 chỉ bằng cặp C – D.
 `,
   },
   {
@@ -2661,8 +2692,10 @@ Liên quan: [[superimposition-jazz]], [[upper-structure]] (hợp âm ba trên tr
       ['Wikipedia — Locked hands style', 'https://en.wikipedia.org/wiki/Locked_hands_style'],
     ],
     body: `
+Cuối một bài solo, khi bạn muốn lên đỉnh, có một chiêu mà dân piano dùng mãi không cũ: thôi chạy nốt đơn, chuyển sang **chơi bằng hợp âm**. Cả hai tay đánh những khối hợp âm theo nhịp — và bỗng nhiên cây đàn piano nghe như cả một big band.
+
 ## Cách làm
-Lamar nhận xét ngẫu hứng bằng hợp âm "**nghe rất phức tạp và thú vị, nhưng thực ra khá đơn giản**":
+Ngẫu hứng bằng hợp âm "**nghe rất phức tạp và thú vị, nhưng thực ra khá đơn giản**":
 1. **Giữ một hợp âm** ở tay phải.
 2. **[[ngau-hung-piano|Ngẫu hứng]] quanh nó**: hoặc **rải hợp âm**, hoặc dùng **các ngón trên cùng** chạy giai điệu trong khi **ngón dưới giữ hợp âm**.
 3. Hợp âm không cần là [[hop-am-bay|hợp âm 7]] cơ bản: có thể dựng trên [[xep-hop-am|thế bấm không gốc]] hoặc [[hoa-am-quang-bon|thế bấm quãng 4]] — nhưng hãy học từng thế bấm riêng trước.
@@ -2671,7 +2704,7 @@ Lamar nhận xét ngẫu hứng bằng hợp âm "**nghe rất phức tạp và 
 Dạng "khối" nhất là [[hop-am-khoi|locked hands]]: mỗi nốt giai điệu một hợp âm. Ở mức nâng cao, có thể [[tai-hoa-am|thay hợp âm]] V bằng hợp âm giảm cách nốt gốc nửa cung — "miễn là giữ được khung I – V – I – V bên dưới".
 
 ## Nghe
-Lamar gợi ý: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Peterson]]** — "Night Train" (thu âm 1962); **Gene Harris**, người dùng kỹ thuật này rất nhiều trong các solo với nhóm Three Sounds. Lối hợp âm khối của **George Shearing** và **Red Garland**: xem [[hop-am-khoi]].
+Nghe: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Peterson]]** — "Night Train" (thu âm 1962); **Gene Harris**, người dùng kỹ thuật này rất nhiều trong các solo với nhóm Three Sounds. Lối hợp âm khối của **George Shearing** và **Red Garland**: xem [[hop-am-khoi]].
 
 ## So với solo một dòng giai điệu
 | | Một dòng giai điệu | Bằng hợp âm |
@@ -2679,6 +2712,11 @@ Lamar gợi ý: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Pe
 | Âm thanh | Linh hoạt, như kèn | Dày, như cả dàn kèn |
 | Tốc độ | Nhanh được | Chậm hơn, nặng hơn |
 | Vai trò trong solo | Phần lớn thời lượng | Thường để **lên cao trào** (xem [[xay-dung-bai-solo]]) |
+
+## Câu hỏi và bài tập
+1. Solo một chorus blues ở Fa: hai chorus đầu nốt đơn, chorus thứ ba bằng hợp âm.
+2. Chơi một riff blues bằng hợp âm khối, lặp lại qua 12 ô.
+3. Nghe "Moanin'" (Art Blakey) và tìm chỗ piano chuyển sang hợp âm.
 `,
   },
   {
@@ -2689,8 +2727,10 @@ Lamar gợi ý: **Art Blakey** — "Moanin'" (1958); **[[oscar-peterson|Oscar Pe
     aliases: ['build an improvisation', 'xây dựng solo', 'cấu trúc bài solo', 'improvisational approaches', 'cách tiếp cận ngẫu hứng', 'motivic development jazz'],
     summary: 'Một bài solo hay có hướng đi: bắt đầu từ giai điệu và âm giai nền, phát triển một motif bằng cách đổi từng yếu tố, để căng thẳng lên xuống như sóng, kết câu vào nốt mạnh. Bài cũng tóm bốn "trục" mà các thế hệ jazz lần lượt nhấn mạnh: giai điệu, hoà âm, tiết tấu, âm sắc.',
     body: `
+Một bài solo hay giống một câu chuyện: có mở đầu, có phát triển, có cao trào, có kết. Một bài solo dở thì giống một người nói liên tục không biết dừng. Bài này nói về cách **dựng** một solo: chọn chất liệu, phát triển ý, và để lại khoảng lặng cho người nghe thở.
+
 ## Các tầng chất liệu
-Trên "Autumn Leaves", Lamar xếp chất liệu từ dễ đến khó:
+Trên "Autumn Leaves", chất liệu xếp từ dễ đến khó:
 1. [[trang-tri-giai-dieu-jazz|Trang trí giai điệu]].
 2. **Rải hợp âm** ([[ngau-hung-doc-ngang|ngẫu hứng dọc]]).
 3. **Một âm giai nền** cho cả bài ([[phan-tich-tien-trinh-jazz|bản đồ hợp âm]]).
@@ -2704,7 +2744,7 @@ Lời khuyên: **trộn các tầng**, không ở mãi một tầng — xuất p
 - Một [[cau-nhac|câu nhạc]] **luôn mạnh hơn khi kết vào nốt mạnh về hoà âm** — thường là [[not-dan-huong|nốt dẫn hướng]].
 
 ## Phát triển motif
-Bài luyện "lặp lại với một thay đổi" của Lamar: tạo một [[motif]] ngắn, rồi lặp lại, **mỗi lần đổi một yếu tố** — một nốt, [[tiet-tau-ngau-hung-jazz|tiết tấu]], hay dịch sang hợp âm khác. Đây chính là [[bien-doi-chu-de|phát triển chủ đề]] trong nhạc cổ điển, ở quy mô nhỏ và ngay trong lúc chơi.
+Bài luyện "lặp lại với một thay đổi": tạo một [[motif]] ngắn, rồi lặp lại, **mỗi lần đổi một yếu tố** — một nốt, [[tiet-tau-ngau-hung-jazz|tiết tấu]], hay dịch sang hợp âm khác. Đây chính là [[bien-doi-chu-de|phát triển chủ đề]] trong nhạc cổ điển, ở quy mô nhỏ và ngay trong lúc chơi.
 
 ## Một gợi ý về hình dáng tổng thể
 Không có khuôn mẫu cố định cho cả bài solo. Theo kinh nghiệm sư phạm chung (không phải quy tắc), nhiều solo đi từ **thưa, thấp, đơn giản** đến **dày, cao, phức tạp**: thêm dần mật độ nốt, mở rộng [[cao-do|âm vực]], tăng [[cuong-do|cường độ]], có thể chuyển sang [[ngau-hung-hop-am|solo bằng hợp âm]] ở cao trào, rồi lắng lại để nhường người chơi sau. Xem cách nhìn của nghiên cứu ở [[ngau-hung-jazz]] (Berliner).
@@ -2717,6 +2757,11 @@ Không có khuôn mẫu cố định cho cả bài solo. Theo kinh nghiệm sư 
 | **Tiết tấu** | [[cam-nhan-phach|Groove]], ví dụ [[dieu-dem-pho-bien|clave]] Latin |
 | **[[am-sac|Âm sắc]]** | Tiếng ồn, [[vi-cung-va-am-nhac-vi-cung|vi cung]] (free jazz — xem [[post-bop-free-jazz]]) |
 Viết ra thay vì ngẫu hứng — cùng công cụ, có thời gian chọn lọc: [[sang-tac-jazz]].
+
+## Câu hỏi và bài tập
+1. Solo ba chorus "Autumn Leaves": chorus 1 chỉ nốt hợp âm, chorus 2 thêm âm giai và nốt tiếp cận, chorus 3 thêm hợp âm khối.
+2. Bắt đầu một chorus bằng một motif hai ô; phát triển nó suốt chorus.
+3. Ghi âm và đánh dấu chỗ lên cao trào; nó có ở đúng chỗ bạn muốn không?
 `,
   },
   {
@@ -2732,10 +2777,12 @@ Viết ra thay vì ngẫu hứng — cùng công cụ, có thời gian chọn l�
       ['Duke University — Berliner, Thinking in Jazz (1994)', 'https://music.duke.edu/books/thinking-jazz-infinite-art-improvisation'],
     ],
     body: `
+Chép và phân tích solo là cách học ngẫu hứng **hiệu quả nhất** — không có ngoại lệ. Bạn nghe những người giỏi nhất nói ngôn ngữ jazz, rồi mổ xẻ xem họ làm gì: nốt nào rơi vào phách, câu bắt đầu ở đâu, họ về giọng thế nào. Bài này lấy năm solo trong một bản blues làm ví dụ.
+
 Phân tích solo là cách học jazz truyền thống nhất: các nhạc công **chép lại** (transcribe) solo từ bản thu, chơi theo, rồi hiểu vì sao nó hay (xem [[ngau-hung-jazz]] — nghiên cứu của Paul Berliner). Bài này nối kỹ năng [[phan-tich-tien-trinh-jazz|phân tích tiến trình]] với các kỹ thuật [[ngau-hung-piano|ngẫu hứng]] trong mục.
 
 ## Các bước
-Lamar phân tích cả năm solo trong "**Straight, No Chaser**" (album *[[jazz-dieu-thuc|Milestones]]* của Miles Davis, 1958):
+Bài này đi qua cả năm solo trong "**Straight, No Chaser**" (album *[[jazz-dieu-thuc|Milestones]]* của Miles Davis, 1958):
 1. **Xác định hợp âm trước** — kể cả các [[thay-the-hop-am|hợp âm thay thế]], vì hoà âm có thể đổi ở mỗi vòng.
 2. **Tô màu từng nốt**: [[hop-am-bay|nốt hợp âm]], [[hop-am-mo-rong|nốt căng]] dùng được, hay [[not-tranh-va-quang-nghich|nốt tránh]]. Nhiều nốt hợp âm → thuận; nốt căng → màu "jazz".
 3. **Xem nốt cuối mỗi câu**: nốt hợp âm → câu được giải quyết; nốt tránh → người solo **cố ý để câu lơ lửng**.
@@ -2755,6 +2802,11 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
 ## Nguồn nghiên cứu mở
 - **Weimar Jazz Database** (dự án Jazzomat, Học viện Âm nhạc [[franz-liszt|Franz Liszt]] Weimar, 2012–2017): kho các solo jazz được chép và chú thích hợp âm, phách; dữ liệu mở ([[synthesizer|MIDI]], thư viện Python MeloSpyLib) — 456 solo tính đến 2017.
 - **Paul Berliner**, *Thinking in Jazz* (1994): nghiên cứu cách nhạc công học ngẫu hứng, kèm nhiều bản chép.
+
+## Câu hỏi và bài tập
+1. Chép tám ô của một solo trong "Straight, No Chaser" và chơi theo bản thu.
+2. Đánh dấu trong đoạn vừa chép: nốt hợp âm ở phách, nốt tiếp cận, chỗ đi ra ngoài.
+3. Viết một chorus của riêng bạn dùng một ý rút ra từ đoạn đó.
 `,
   },
   {
@@ -2765,6 +2817,8 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
     aliases: ['improvisation tips', 'mẹo ngẫu hứng', 'mistakes', 'making mistakes', 'improvisation exercises', 'bài luyện ngẫu hứng jazz', 'không có nốt sai'],
     summary: 'Những lời khuyên thực hành của Lamar cho người học ngẫu hứng jazz: có một âm giai nền để quay về, kết câu ở nốt dẫn hướng, chừa khoảng trống, học lick, hát điều mình chơi — và khi lỡ chơi sai: lặp lại cho thành cố ý, sửa nửa cung, biến nó thành một chuỗi cromatic.',
     body: `
+Một nhóm lời khuyên thực tế, gom lại một chỗ — những điều người học jazz nào cũng phải nghe ít nhất một lần, thường là từ chính sai lầm của mình. Đọc lại chương này mỗi khi bạn thấy mình "giậm chân tại chỗ".
+
 ## Mẹo
 - **Một âm giai nền** cho cả bài và **quay về đó khi lạc**; [[am-giai-ngu-cung|ngũ cung]] và [[am-giai-blues|âm giai blues]] rất hợp vì 5–6 nốt của chúng nằm trong nhiều âm giai (xem [[ngau-hung-doc-ngang|bản đồ hợp âm]]).
 - **Kết câu ở [[not-dan-huong|nốt dẫn hướng]]** (nốt 3 hoặc 7).
@@ -2784,14 +2838,28 @@ Các bước trên tương ứng với [[phuong-phap-phan-tich-tac-pham|phân t�
 Các bài luyện chung của mục ngẫu hứng: [[phuong-phap-luyen-ngau-hung]].
 
 ## Khi lỡ chơi sai
-Lamar bắt đầu từ một thực tế: đã sáng tác tại chỗ thì **thỉnh thoảng sẽ có nốt sai**. Trang này dẫn một câu thường được gán cho [[bill-evans|Bill Evans]]: "*không có nốt sai, chỉ có cách giải quyết sai*" (câu này cũng hay được gán cho người khác). Các cách cứu:
+Bắt đầu từ một thực tế: đã sáng tác tại chỗ thì **thỉnh thoảng sẽ có nốt sai**. Trang này dẫn một câu thường được gán cho [[bill-evans|Bill Evans]]: "*không có nốt sai, chỉ có cách giải quyết sai*" (câu này cũng hay được gán cho người khác). Các cách cứu:
 1. **Lặp lại câu và nhấn nốt sai** — lặp lại khiến nó nghe như cố ý.
 2. **Lặp lại và sửa** sang nốt "đúng".
 3. **Biến nốt sai thành một chuỗi cromatic** hoặc [[mau-lap-chu-ky|mẫu lặp]], rồi giải quyết.
 4. Bí thì **đi tới nốt dẫn hướng hoặc nốt hợp âm gần nhất** (thường chỉ cách nửa cung — xem [[not-tiep-can-jazz]]).
-Lamar cũng nhắc: căng thẳng không được giải quyết "sẽ nghe như chơi sai nốt" — vấn đề thường là **không giải quyết**, chứ không phải nốt.
+Và nhớ: căng thẳng không được giải quyết "sẽ nghe như chơi sai nốt" — vấn đề thường là **không giải quyết**, chứ không phải nốt.
 Ví dụ người thật (theo lời kể, "được cho là"): Tommy Flanagan trên "[[vong-coltrane|Giant Steps]]" (1959) đã phải lùi về chỉ chơi hợp âm; Miles Davis vào lại giai điệu sớm một ô trong "Prince of Darkness" (1967).
 Liên quan: [[hoi-hop-bieu-dien]], [[ngau-hung-ung-tac]].
+
+## Những thói quen Levine khuyên
+- **Tập cho ra nhạc**: ngay cả khi tập âm giai, hãy chơi nó như nhạc (swing, sắc thái, câu).
+- **Tập mọi thứ ở mọi giọng.**
+- **Tập vào chỗ yếu**: thứ bạn ngại nhất là thứ cần tập nhất.
+- **Tốc độ đến từ chính xác**: chơi chậm mà đúng, nhanh sẽ tự tới.
+- **Chép bài và solo** từ bản thu; chơi cùng bản thu thật, không chỉ cùng bản phát đệm.
+- **Giữ một cuốn sổ**: ghi bài đã học, lick, câu hỏi.
+- **Thả lỏng, giậm chân theo nhịp**, và tạo cho mình một môi trường âm nhạc: nghe nhiều, chơi với người khác.
+
+## Câu hỏi và bài tập
+1. Viết danh sách ba "chỗ yếu" của bạn; tuần này tập mỗi ngày mười phút cho một chỗ.
+2. Chọn một bài; chơi nó ở bốn giọng trong một tuần.
+3. Bắt đầu một cuốn sổ jazz: ghi bài, lick, và một câu hỏi mỗi ngày.
 `,
   },
 
@@ -2809,6 +2877,8 @@ Liên quan: [[hoi-hop-bieu-dien]], [[ngau-hung-ung-tac]].
       ['Wikipedia — Impressions (John Coltrane album)', 'https://en.wikipedia.org/wiki/Impressions_(John_Coltrane_album)'],
     ],
     body: `
+Năm 1959, *Kind of Blue* của Miles Davis đổi cách cả một thế hệ nghĩ về hoà âm: thay vì một hợp âm mỗi hai phách, giờ là **một điệu thức** cho cả tám, mười sáu ô. Ít hợp âm hơn nghĩa là nhiều tự do hơn — và cũng nhiều trách nhiệm hơn: không còn hợp âm nào "dắt" bạn đi; bạn phải tự tạo hướng cho câu nhạc.
+
 ## Đặc điểm
 - **Ít hợp âm**, mỗi hợp âm kéo dài nhiều ô; không có tiến trình [[ii-v-i]] cố định.
 - Thường dùng **[[bass-ngan|bass ngân]]** hoặc âm nền.
@@ -2845,6 +2915,11 @@ Ngược lại, đổi thể loại một bài pop sang điệu thức: [[doi-nh
 Bước tiếp theo trong lịch sử: [[post-bop-free-jazz]].
 
 Hợp âm So What: [[hop-am-so-what-barron]].
+
+## Câu hỏi và bài tập
+1. Ứng tác trên một vamp Rê Dorian (như "So What") bằng thế bấm quãng 4.
+2. Đổi sang Mi giáng Dorian (đoạn B của "So What") rồi về; giữ một ý giai điệu qua chỗ đổi.
+3. Ứng tác trên vamp Esus♭9 bằng âm giai In-sen Mi (xem [[ngu-cung-trong-jazz]]).
 `,
   },
   {
@@ -2861,26 +2936,33 @@ Hợp âm So What: [[hop-am-so-what-barron]].
       ['Wikipedia — Ornette Coleman', 'https://en.wikipedia.org/wiki/Ornette_Coleman'],
     ],
     body: `
+Từ thập niên 1960, jazz đi theo hai hướng: một nhánh giữ khung bài và hợp âm nhưng làm chúng phức tạp, mơ hồ hơn (post-bop); một nhánh bỏ hẳn hợp âm, thậm chí bỏ nhịp đều (free jazz). Cả hai đều đòi hỏi một điều giống nhau: **nghe** người cùng chơi nhiều hơn bao giờ hết.
+
 ## Bức tranh chung
-Lamar tóm tắt [[phong-cach-jazz|lịch sử jazz]] hiện đại như một quá trình **giảm dần sự phụ thuộc vào hợp âm**: [[jazz-dieu-thuc|jazz điệu thức]] giảm số hợp âm; free jazz bỏ hẳn hợp âm (ít nhất ở phiên bản của Ornette Coleman); post-bop đứng giữa.
+[[phong-cach-jazz|Lịch sử jazz]] hiện đại có thể nhìn như một quá trình **giảm dần sự phụ thuộc vào hợp âm**: [[jazz-dieu-thuc|jazz điệu thức]] giảm số hợp âm; free jazz bỏ hẳn hợp âm (ít nhất ở phiên bản của Ornette Coleman); post-bop đứng giữa.
 
 ## Free jazz — "tự do hoàn toàn"
 - Bỏ **hợp âm cố định, nhịp cố định và hình thức cố định**; thường **[[ngau-hung-piano|ngẫu hứng]] tập thể**.
 - **Ornette Coleman**: album *The Shape of Jazz to Come* (Atlantic, 1959); *Free Jazz: A Collective Improvisation* (thu ngày 21/12/1960, phát hành 1961) — khoảng 37 phút, một lần thu, **hai nhóm [[the-loai|tứ tấu]]** mỗi nhóm một kênh stereo; tên "free jazz" lấy từ album này. Coleman đặt ra khái niệm **"harmolodics"**: hoà âm, giai điệu, tiết tấu… có vai trò ngang nhau.
-- **Cecil Taylor** (piano): tránh giọng và trung tâm điệu tính bằng **[[am-cum|âm cụm]]**; Lamar gợi ý nghe album *Indent*.
+- **Cecil Taylor** (piano): tránh giọng và trung tâm điệu tính bằng **[[am-cum|âm cụm]]**; nghe album *Indent*.
 - Vì không có trung tâm giọng, free jazz là **[[phi-dieu-tinh|phi điệu tính]]** — song song với nhạc tiên phong cổ điển cùng thời (xem [[thoi-ky-the-ky-20]]).
 ::wiki Ornette_Coleman | Ornette Coleman (ảnh đầu bài Wikipedia *Ornette Coleman*)
 
 ## Post-bop — "tự do có kiểm soát"
 "Nếu free jazz là *tự do hoàn toàn* thì post-bop là *tự do có kiểm soát*" — trộn bebop, hard bop, [[dieu-thuc|điệu thức]] và free.
 - **Nhóm [[nhac-thinh-phong|ngũ tấu]] thứ hai của Miles Davis** (1964–68): [[herbie-hancock|Herbie Hancock]] (piano), Wayne Shorter ([[saxophone|saxophone]]), Ron Carter (bass), Tony Williams (trống). Các album: *E.S.P.* (album phòng thu đầu tiên), *Miles Smiles*, *Sorcerer*, *Nefertiti*.
-- Trên sân khấu, nhóm thường bỏ hợp âm và giai điệu của một standard nhưng **giữ hình thức và nhịp** — lối chơi Lamar gọi là "**time, no changes**" (có nhịp, không hợp âm).
+- Trên sân khấu, nhóm thường bỏ hợp âm và giai điệu của một standard nhưng **giữ hình thức và nhịp** — lối chơi gọi là "**time, no changes**" (có nhịp, không hợp âm).
 - Hợp âm trong post-bop thường không theo chức năng: [[constant-structures]], hợp âm sus, [[hoa-am-quang-bon|quãng 4]].
 Sau đó Davis chuyển sang fusion (*In a Silent Way*, *Bitches Brew*).
 
 ## Với người học piano
 - Nghe trước khi phân tích: free jazz không có "đáp án" hợp âm; hãy nghe sự tương tác giữa các nhạc công.
 - Chuẩn bị bằng [[ngau-hung-tu-do|ngẫu hứng tự do]] và [[choi-ngoai-jazz|chơi "ngoài"]]; xem thêm [[keith-jarrett|Keith Jarrett]] và lối "chơi từ không có gì" (*The Köln Concert*, 1975).
+
+## Câu hỏi và bài tập
+1. Chơi một bài chuẩn theo lối "time, no changes": giữ nhịp và hình thức, bỏ hợp âm.
+2. Ứng tác tự do hai phút với một người bạn, chỉ dựa trên một motif chung.
+3. Nghe *Maiden Voyage* (Herbie Hancock) rồi *Free Jazz* (Ornette Coleman); ghi ba điểm khác nhau.
 `,
   },
   {

@@ -888,6 +888,8 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
       ['Wikipedia — 26-2', 'https://en.wikipedia.org/wiki/26-2'],
     ],
     body: `
+
+
 16 ô, 26 hợp âm, gần 290 phách mỗi phút: "Giant Steps" có tiếng là bài khó nhất trong kho bài chuẩn. Nhưng đếm giọng thay vì đếm hợp âm, bạn sẽ thấy chỉ có **ba** giọng, và chúng chỉ đổi mười lần. Bài này mổ xẻ chính tác phẩm đã làm cho [[vong-coltrane|vòng Coltrane]] nổi tiếng — đọc chậm, chơi chậm hơn nữa.
 
 Bài này áp lý thuyết [[vong-coltrane]] vào chính tác phẩm đã làm nó nổi tiếng; các chi tiết lịch sử lấy từ Wikipedia, Thư viện Quốc hội Mỹ và các nguồn ghi ở cuối trang. Giai điệu còn bản quyền nên ở đây chỉ phân tích **hoà âm**; hãy nghe bản thu gốc khi đọc.
@@ -948,6 +950,11 @@ Bài học cho học trò: ngay cả nghệ sĩ hàng đầu cũng cần **luy�
 
 ## Các bài cùng họ
 Coltrane dùng cùng chu trình để [[tai-hoa-am|tái hoà âm]] các bài có sẵn: "**Countdown**" (trên "Tune Up"), "**26-2**" (trên "Confirmation" của Charlie Parker), "**Satellite**" (trên "How High the Moon") — các contrafact (xem [[rhythm-changes]], [[sang-tac-jazz]]). Lý thuyết đầy đủ: [[vong-coltrane]]; quan hệ với [[he-thong-hoa-am-co-dien|hoà âm cổ điển]]: [[trung-am-cromatic]], [[neo-riemann]].
+
+## Câu hỏi và bài tập
+1. Viết hợp âm của 16 ô "Giant Steps" và tô màu ba giọng B, G, E♭.
+2. Chơi bass (nốt gốc) cả bài ở nhịp 100; rồi chơi nốt dẫn hướng 3 – 7.
+3. Ứng tác một chorus chậm chỉ bằng ba ngũ cung V (F♯, Rê, B♭).
 `,
   },
   {

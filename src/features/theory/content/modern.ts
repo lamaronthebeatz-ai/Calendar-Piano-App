@@ -335,6 +335,8 @@ Allen Forte (*The Structure of Atonal Music*, 1973) hệ thống hoá phương p
       ['Wikipedia — Mode of limited transposition', 'https://en.wikipedia.org/wiki/Mode_of_limited_transposition'],
     ],
     body: `
+
+
 Âm giai này có ba cái tên — bát cung (octatonic), âm giai giảm, âm giai Korsakov — và một tính cách: nó xen kẽ đều đặn **nửa cung và cung**, nên tám nốt của nó lặp lại sau mỗi quãng 3 thứ. Người chơi jazz dùng nó mỗi ngày trên hợp âm 7♭9 và °7; người soạn nhạc cổ điển dùng nó từ trước khi jazz ra đời. Bài này là phần lý thuyết; cách chơi trong jazz ở [[am-giai-doi-xung-jazz]].
 
 Hai dạng (bắt đầu từ C):
@@ -364,6 +366,11 @@ Hai dạng (bắt đầu từ C):
 Phân tích bằng [[tap-hop-cao-do]]: {0, 1, 3, 4, 6, 7, 9, 10}.
 
 Cách dùng trong jazz cùng âm giai toàn cung và âm giai tăng: [[am-giai-doi-xung-jazz]].
+
+## Câu hỏi và bài tập
+1. Viết ba âm giai bát cung (trên C, C♯, D) và chỉ ra hai hợp âm 7 giảm tạo nên mỗi cái.
+2. Tìm bốn hợp âm 7 át nằm trong âm giai bát cung nửa cung – cung trên D.
+3. Nghe đoạn mở đầu *Petrushka* và tìm hợp âm C + F♯.
 `,
   },
   {
@@ -521,6 +528,8 @@ Bảng chọn thế bấm theo phong cách: [[chon-the-bam-jazz]].
       ['Wikipedia — So What (Miles Davis composition)', 'https://en.wikipedia.org/wiki/So_What_(Miles_Davis_composition)'],
     ],
     body: `
+Hoà âm điệu thức là cách viết và đệm khi không còn ii – V – I dắt đường: một điệu thức (Dorian, Lydian, Phrygian…) kéo dài, và hợp âm phải làm nổi **màu** của điệu thức thay vì kéo về chủ âm. Bài này là phần lý thuyết; cách chơi trong jazz ở [[jazz-dieu-thuc]].
+
 Trong [[he-thong-hoa-am-co-dien|hoà âm cổ điển]], giọng được xác lập bằng **V – I** và [[bac-am-giai|cảm âm]]. Trong **hoà âm điệu thức**, mục tiêu khác: làm nghe rõ **màu riêng** của một [[dieu-thuc|điệu thức]]. Thủ pháp này phổ biến trong nhạc ấn tượng, jazz điệu thức, [[nhac-phim-va-tro-choi|nhạc phim]] và rất nhiều [[nhac-pho-thong-the-ky-20|nhạc pop]] – rock.
 
 ## Nguyên tắc 1: làm nổi nốt đặc trưng
@@ -549,6 +558,11 @@ Các hợp âm điệu thức nhìn chung vẫn **tương ứng chức năng** v
 Hệ thống hợp âm – âm giai trong jazz: [[he-thong-hop-am-am-giai]].
 
 Trong jazz: [[jazz-dieu-thuc]].
+
+## Câu hỏi và bài tập
+1. Viết bốn hợp âm làm nổi màu Rê Dorian (có nốt B, bậc 6 đặc trưng).
+2. Viết bốn hợp âm cho Fa Lydian (có nốt B, ♯4).
+3. Đệm một vamp Phrygian (E) bằng hợp âm F/E và Dm/E.
 `,
   },
   {
