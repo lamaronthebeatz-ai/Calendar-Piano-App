@@ -67,7 +67,9 @@ export function installViewTransitions(router: Router) {
     if (!armed) return start(arg as ViewTransitionUpdateCallback)
     armed = false
     // The book open/close flight is its own transition; a page snapshot on top of it would double the cover.
-    if (skip || reduced?.matches || peekBook()) {
+    // Leaving a page from the open glass drawer: no page transition. Its snapshot would freeze the drawer's glass on
+    // screen for the length of the transition; the drawer fades out on its own over the new page instead.
+    if (skip || reduced?.matches || peekBook() || document.querySelector('.rail-drawer.is-open')) {
       skip = false
       // Run the update straight away and hand back an already-finished transition.
       const update = typeof arg === 'function' ? arg : arg?.update

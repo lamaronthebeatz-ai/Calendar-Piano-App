@@ -45,7 +45,7 @@ export function Sidebar({ open, onClose, everywhere }: { open: boolean; onClose:
 
   return (
     <aside
-      className={clsx('vt-sidebar side-rail rail-drawer w-[272px] flex-col px-4 py-6', everywhere ? 'flex' : 'hidden lg:flex', open && 'is-open')}
+      className={clsx('side-rail rail-drawer w-[272px] flex-col px-4 py-6', everywhere ? 'flex' : 'hidden lg:flex', open && 'is-open')}
       inert={!open}
       aria-hidden={!open}
       aria-label="Menu"
