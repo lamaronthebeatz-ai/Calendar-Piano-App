@@ -107,6 +107,7 @@
   border-top: 1px solid rgb(226 189 120 / 0.16);
   /* a soft shadow on the leading edge darkens the panel it slides over: depth without animating anything */
   box-shadow: 0 -40px 80px -20px rgb(0 0 0 / 0.85);
+  clip-path: inset(-140px 0 0 0); /* the shadow falls only upward, onto the panel being covered (static, never animated) */
 }
 .hm-chapter::after {
   content: ""; position: absolute; inset: 0; background: #000; pointer-events: none; opacity: 0;
@@ -126,16 +127,57 @@
 .hm-chapter-body { margin-top: 20px; font-size: clamp(15px, 1.25vw, 17px); line-height: 1.75; color: var(--muted); }
 .hm-caption { margin-top: 34px; font-size: 11px; color: var(--faint); }
 
-/* 4 · shelf marquee */
-.hm-shelf { padding: clamp(88px, 14vh, 150px) 0 clamp(64px, 10vh, 110px); overflow: hidden; }
+/* hero light, dust and grain */
+.hm-hero-light {
+  position: absolute; left: -320px; top: -320px; width: 640px; height: 640px; z-index: -1; pointer-events: none;
+  background: radial-gradient(circle, rgb(240 196 120 / 0.2), rgb(240 196 120 / 0.06) 35%, transparent 62%);
+  opacity: 0; transition: opacity 700ms ease;
+}
+.hm-dust { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.hm-dust span {
+  position: absolute; border-radius: 50%; background: #f3d18f;
+  box-shadow: 0 0 6px 1px rgb(243 209 143 / 0.6);
+  opacity: 0; animation: hm-dust linear infinite;
+}
+@keyframes hm-dust {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  15% { opacity: 0.85; }
+  70% { opacity: 0.5; }
+  100% { transform: translate3d(28px, -170px, 0); opacity: 0; }
+}
+.hm-hero-veil::after {
+  content: ""; position: absolute; inset: 0; opacity: 0.09; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* 4 · the big outlined word */
+.hm-bigword { overflow: hidden; padding: clamp(40px, 8vh, 90px) 0; border-top: 1px solid rgb(226 189 120 / 0.1); }
+.hm-bigword span {
+  display: inline-block; white-space: nowrap; font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: clamp(72px, 15vw, 220px); line-height: 1; color: transparent;
+  -webkit-text-stroke: 1px rgb(226 189 120 / 0.45);
+  transform: translateX(-20%);
+}
+
+/* 5 · shelf gallery */
+.hm-hshelf { position: relative; }
+.hm-hshelf-pin { padding: clamp(80px, 12vh, 130px) 0 clamp(40px, 8vh, 80px); overflow: hidden; }
 .hm-shelf-head { padding: 0 clamp(20px, 7vw, 112px); }
 .hm-shelf-title { margin-top: 12px; font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.015em; }
-.hm-marquee { margin-top: 44px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-.hm-marquee-track { display: flex; gap: 28px; width: max-content; animation: hm-marquee 90s linear infinite; padding: 18px 0 28px; }
-.hm-marquee:hover .hm-marquee-track { animation-play-state: paused; }
-@keyframes hm-marquee { to { transform: translateX(calc(-50% - 14px)); } }
-.hm-book { display: block; flex-shrink: 0; width: clamp(140px, 16vw, 210px); transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 30px 50px -24px rgb(0 0 0 / 0.9); }
-.hm-book:hover { transform: translateY(-10px) rotate(-1.5deg); }
+.hm-shelf-sub { margin-top: 8px; font-size: 13px; color: var(--faint); }
+.hm-hshelf-view { container-type: inline-size; margin-top: clamp(28px, 5vh, 52px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.hm-hshelf-view::-webkit-scrollbar { display: none; }
+.hm-hshelf-track { display: flex; gap: clamp(22px, 3vw, 44px); width: max-content; padding: 20px clamp(20px, 7vw, 112px) 36px; }
+.hm-book {
+  display: block; flex-shrink: 0; width: clamp(150px, 19vw, 250px); scroll-snap-align: start;
+  transform: perspective(1000px) rotateY(-14deg); transform-origin: 0 50%;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hm-book > :first-child { box-shadow: 18px 30px 50px -22px rgb(0 0 0 / 0.95), 0 0 0 1px rgb(226 189 120 / 0.12); }
+.hm-book:hover, .hm-book:focus-visible { transform: perspective(1000px) rotateY(0deg) translateY(-8px); }
+.hm-book-title { display: block; margin-top: 14px; font-size: 12.5px; line-height: 1.35; color: var(--muted); }
+.hm-hshelf-progress { display: none; margin: 8px clamp(20px, 7vw, 112px) 0; height: 1px; background: rgb(226 189 120 / 0.16); }
+.hm-hshelf-progress span { display: block; height: 100%; background: var(--gold); transform-origin: 0 50%; transform: scaleX(0); }
 
 /* 5 · foot */
 .hm-foot { padding: 40px 20px 72px; text-align: center; border-top: 1px solid rgb(226 189 120 / 0.12); }
@@ -185,7 +227,17 @@
     .hm-chapter:nth-child(2)::after { animation: hm-sink linear both; animation-timeline: --c3; animation-range: entry 0% entry 100%; }
     .hm-chapter:nth-child(3)::after { animation: hm-sink linear both; animation-timeline: --c4; animation-range: entry 0% entry 100%; }
 
-    .hm-shelf-head { animation: hm-text-in linear both; animation-timeline: view(); animation-range: entry 10% cover 30%; }
+    /* the giant word drifts across while it is on screen */
+    .hm-bigword span { animation: hm-bigword linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+
+    /* shelf: the section is tall, its inner room is pinned, and the track slides sideways as you scroll through it */
+    .hm-hshelf { height: calc(var(--vh) + var(--n) * 140px); view-timeline-name: --shelf; }
+    .hm-hshelf-pin { position: sticky; top: 0; height: var(--vh); display: flex; flex-direction: column; justify-content: center; padding: 0; }
+    .hm-hshelf-view { overflow: visible; scroll-snap-type: none; }
+    .hm-hshelf-track { animation: hm-track linear both; animation-timeline: --shelf; animation-range: contain 0% contain 100%; }
+    .hm-hshelf-progress { display: block; }
+    .hm-hshelf-progress span { animation: hm-progress linear both; animation-timeline: --shelf; animation-range: contain 0% contain 100%; }
+    .hm-shelf-head { animation: hm-text-in linear both; animation-timeline: --shelf; animation-range: entry 30% entry 100%; }
   }
 }
 @keyframes hm-hero-drift { to { transform: translateY(18%); opacity: 0.35; } }
@@ -194,6 +246,9 @@
 @keyframes hm-media-in { from { transform: scale(1.14); opacity: 0.35; } to { transform: none; opacity: 1; } }
 @keyframes hm-text-in { from { transform: translateY(56px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes hm-sink { to { opacity: 0.6; } }
+@keyframes hm-bigword { from { transform: translateX(5%); } to { transform: translateX(-55%); } }
+@keyframes hm-track { to { transform: translateX(calc(-100% + 100cqw)); } }
+@keyframes hm-progress { to { transform: scaleX(1); } }
 
 /* without scroll timelines: blocks fade up once, on a timer the compositor runs */
 @supports not (animation-timeline: view()) {
@@ -205,5 +260,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hm-hero-img, .hm-hero-logo, .hm-hero-eyebrow, .hm-hero-lead, .hm-hero-cta, .hm-line > span { animation: none; opacity: 1; transform: none; }
-  .hm-marquee-track, .hm-scroll-cue span { animation: none; }
+  .hm-scroll-cue span, .hm-dust span { animation: none; }
+  .hm-dust { display: none; }
 }

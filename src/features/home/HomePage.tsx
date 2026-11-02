@@ -49,6 +49,46 @@ function useRevealFallback(root: React.RefObject<HTMLDivElement | null>) {
   }, [root])
 }
 
+/** Desktop only: a soft gold light follows the pointer over the hero, moved with a transform (no repaint). */
+function useHeroLight(root: React.RefObject<HTMLDivElement | null>) {
+  useEffect(() => {
+    const hero = root.current?.querySelector<HTMLElement>('.hm-hero')
+    const light = hero?.querySelector<HTMLElement>('.hm-hero-light')
+    if (!hero || !light || !matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let raf = 0
+    let x = 0
+    let y = 0
+    const paint = () => {
+      raf = 0
+      light.style.transform = `translate3d(${x}px, ${y}px, 0)`
+    }
+    const move = (e: PointerEvent) => {
+      const r = hero.getBoundingClientRect()
+      x = e.clientX - r.left
+      y = e.clientY - r.top
+      light.style.opacity = '1'
+      if (!raf) raf = requestAnimationFrame(paint)
+    }
+    const leave = () => (light.style.opacity = '0')
+    hero.addEventListener('pointermove', move, { passive: true })
+    hero.addEventListener('pointerleave', leave)
+    return () => {
+      hero.removeEventListener('pointermove', move)
+      hero.removeEventListener('pointerleave', leave)
+      cancelAnimationFrame(raf)
+    }
+  }, [root])
+}
+
+/** Gold dust drifting up through the candlelight: fixed positions and timings, so it is the same on every visit. */
+const DUST = Array.from({ length: 18 }, (_, i) => ({
+  left: `${(i * 37 + 11) % 100}%`,
+  top: `${30 + ((i * 53) % 65)}%`,
+  size: 1.5 + ((i * 7) % 4) * 0.8,
+  dur: `${9 + ((i * 5) % 9)}s`,
+  delay: `${-((i * 13) % 17)}s`,
+}))
+
 function Picture({ art, className, eager }: { art: Art; className?: string; eager?: boolean }) {
   return (
     <picture>
@@ -112,6 +152,7 @@ export function HomePage() {
   const root = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
   useRevealFallback(root)
+  useHeroLight(root)
   const books = SHELF_BOOKS.filter((b) => b.coverImage)
 
   return (
@@ -122,6 +163,12 @@ export function HomePage() {
           <Picture art={ART.duet} className="hm-hero-img" eager />
         </div>
         <div className="hm-hero-veil" />
+        <div className="hm-hero-light" aria-hidden />
+        <div className="hm-dust" aria-hidden>
+          {DUST.map((d, i) => (
+            <span key={i} style={{ left: d.left, top: d.top, width: d.size, height: d.size, animationDuration: d.dur, animationDelay: d.delay }} />
+          ))}
+        </div>
         <div className="hm-hero-content">
           <img src={logoFull} alt="Lamar" className="hm-hero-logo" />
           <p className="hm-hero-eyebrow">Trung tâm lý thuyết âm nhạc học</p>
@@ -193,35 +240,43 @@ export function HomePage() {
       </Chapter>
       </div>
 
-      {/* 4 · the shelf, drifting by */}
-      <section className="hm-shelf">
-        <div className="hm-shelf-head hm-reveal">
-          <p className="brand-eyebrow">Tủ sách</p>
-          <h2 className="hm-shelf-title">Đọc như ấn phẩm, in thành PDF</h2>
-        </div>
-        <div className="hm-marquee">
-          <div className="hm-marquee-track">
-            {[...books, ...books].map((b, i) => (
-              <Link
-                key={`${b.id}-${i}`}
-                to={`/curriculum/${b.id}`}
-                aria-hidden={i >= books.length}
-                tabIndex={i >= books.length ? -1 : undefined}
-                onClick={(e) => {
-                  e.preventDefault()
-                  openBook(b, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${b.id}`, navigate)
-                }}
-                className="hm-book"
-                title={b.title}
-              >
-                <Cover book={b} size={0.62} className="rounded-[3px]" />
-              </Link>
-            ))}
+      {/* 4 · a word the size of the screen slides across as you scroll */}
+      <div className="hm-bigword" aria-hidden>
+        <span>Lamar's Book · Đọc kỹ · Lamar's Book · Đọc kỹ ·</span>
+      </div>
+
+      {/* 5 · the shelf as a gallery: scrolling down carries the covers sideways while the room stays pinned */}
+      <section className="hm-hshelf" style={{ '--n': books.length } as CSSProperties}>
+        <div className="hm-hshelf-pin">
+          <div className="hm-shelf-head hm-reveal">
+            <p className="brand-eyebrow">Tủ sách</p>
+            <h2 className="hm-shelf-title">Đọc như ấn phẩm, <em>in thành PDF</em></h2>
+            <p className="hm-shelf-sub">{fmt(books.length)} cuốn · bấm một bìa để mở</p>
           </div>
+          <div className="hm-hshelf-view">
+            <div className="hm-hshelf-track">
+              {books.map((b) => (
+                <Link
+                  key={b.id}
+                  to={`/curriculum/${b.id}`}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    openBook(b, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${b.id}`, navigate)
+                  }}
+                  className="hm-book"
+                  title={b.title}
+                >
+                  <Cover book={b} size={0.7} className="rounded-[3px]" />
+                  <span className="hm-book-title">{b.title}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="hm-hshelf-progress" aria-hidden><span /></div>
         </div>
       </section>
 
-      {/* 5 · sign-off and picture credits */}
+      {/* 6 · sign-off and picture credits */}
       <footer className="hm-foot">
         <img src={logoFull} alt="Lamar" className="hm-foot-logo" />
         <div className="gold-rule mx-auto my-8 w-40" />

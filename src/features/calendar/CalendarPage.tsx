@@ -10,7 +10,8 @@ import type { SwipeAction } from './LessonBlock'
 import { WEEKDAY_NAMES } from '../../utils/date'
 import { ConfirmDialog } from '../../components/Dialog'
 import { minutesToTime, timeToMinutes } from '../../utils/time'
-import { FilterIcon, SearchIcon } from '../../components/icons'
+import { FilterIcon, SearchIcon, UsersIcon } from '../../components/icons'
+import { Link } from 'react-router-dom'
 import { IconButton } from '../../components/Button'
 import clsx from 'clsx'
 import { LockIcon } from '../../components/icons'
@@ -82,6 +83,14 @@ export function CalendarPage() {
           <FilterIcon width={15} height={15} />
           <span className="hidden sm:inline">Lọc</span>
         </button>
+        <Link
+          to="/students"
+          data-tour="/students"
+          className="btn-line flex h-9 items-center gap-1.5 rounded-full px-3 text-[13px] font-medium"
+        >
+          <UsersIcon width={15} height={15} className="text-[var(--color-gold)]" />
+          Học viên
+        </Link>
         <IconButton label="Tìm kiếm" icon={<SearchIcon width={17} height={17} />} onClick={() => setSearchOpen(true)} />
         <IconButton label="Khoá lại" icon={<LockIcon width={16} height={16} />} onClick={lockPrivate} />
       </div>

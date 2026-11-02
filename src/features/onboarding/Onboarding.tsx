@@ -46,14 +46,14 @@ const STEPS: Step[] = [
     icon: <UsersIcon width={22} height={22} />,
     eyebrow: 'Bước 2 · Học viên',
     title: 'Hồ sơ học viên',
-    lead: 'Mỗi học viên có một hồ sơ: tên, biệt danh, cấp độ, liên hệ, học phí, ghi chú và toàn bộ các buổi học của họ.',
+    lead: 'Mỗi học viên có một hồ sơ: tên, biệt danh, cấp độ, liên hệ, học phí, ghi chú và toàn bộ các buổi học của họ. Danh sách học viên mở từ nút "Học viên" trên thanh của Thời khoá biểu.',
     points: [
       ['Tạo hồ sơ', 'Bấm "Thêm học viên" trong trang, hoặc nút "+" → Thêm học viên.'],
       ['Theo dõi', 'Mở hồ sơ để xem lịch học, cấp độ và ghi chú tiến độ của từng em.'],
       ['Tìm nhanh', 'Gõ tên, số điện thoại hoặc ghi chú vào ô tìm kiếm để nhảy thẳng tới hồ sơ.'],
     ],
     target: ['/students'],
-    page: '/students',
+    page: '/',
   },
   {
     icon: <BookIcon width={22} height={22} />,
