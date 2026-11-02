@@ -88,6 +88,25 @@ function sourceOf(ev: MapEvent, pl: Place) {
 /** Text a search matches against: names, country, event text and the titles of linked articles. */
 const HAYSTACK = new Map(PLACES.map((pl) => [pl.id, normalize([pl.name, pl.local, pl.country, ...pl.events.flatMap((ev) => [ev.text, ...ev.slugs.map((s) => findArticle(s)?.title ?? '')])].join(' '))]))
 
+/** Search index of events: their year and text, the place, and the linked articles' titles and aliases. */
+const EVENT_INDEX = PLACES.flatMap((pl) => pl.events.map((ev) => ({
+  pl, ev,
+  hay: normalize([ev.year, ev.text.replace(/\*/g, ''), ...ev.slugs.flatMap((s) => { const a = findArticle(s); return a ? [a.title, ...(a.aliases ?? [])] : [] })].join(' ')),
+})))
+
+/** People and works on the map: every linked article, with the places it appears at (and its journey, if any). */
+const SUBJECTS = (() => {
+  const by = new Map<string, { slug: string; title: string; hay: string; places: Place[] }>()
+  for (const pl of PLACES) for (const ev of pl.events) for (const slug of ev.slugs) {
+    const a = findArticle(slug)
+    if (!a) continue
+    let e = by.get(slug)
+    if (!e) by.set(slug, (e = { slug, title: a.title, hay: normalize([a.title, ...(a.aliases ?? [])].join(' ')), places: [] }))
+    if (!e.places.includes(pl)) e.places.push(pl)
+  }
+  return [...by.values()].sort((a, b) => b.places.length - a.places.length)
+})()
+
 /** Quadratic arc from a to b, bowed to the left of the direction of travel. */
 function arc([x0, y0]: [number, number], [x1, y1]: [number, number]) {
   const dx = x1 - x0, dy = y1 - y0, len = Math.hypot(dx, dy)
@@ -333,6 +352,19 @@ export function MusicMap() {
   const q = normalize(query.trim())
   const matches = useMemo(() => (q ? PLACES.filter((pl) => HAYSTACK.get(pl.id)!.includes(q)) : []), [q])
   const matchIds = useMemo(() => new Set(matches.map((pl) => pl.id)), [matches])
+  // results match from the start of a word: "bach" finds Bach, not Offenbach
+  const wq = ` ${q}`
+  const placeHits = useMemo(() => (q ? PLACES.filter((pl) => ` ${normalize([pl.name, pl.local, pl.country].join(' '))}`.includes(wq)).slice(0, 4) : []), [q, wq])
+  const subjectHits = useMemo(() => (q ? SUBJECTS.filter((x) => ` ${x.hay}`.includes(wq)).slice(0, 4) : []), [q, wq])
+  const eventHits = useMemo(() => (q ? EVENT_INDEX.filter((x) => ` ${x.hay}`.includes(wq)).slice(0, 8) : []), [q, wq])
+  const [focusEv, setFocusEv] = useState<{ ev: MapEvent; n: number } | null>(null)
+  const pickEvent = (pl: Place, ev: MapEvent) => { focus(pl); setFocusEv({ ev, n: Date.now() }); setQuery('') }
+  const pickSubject = (x: (typeof SUBJECTS)[number]) => {
+    const j = JOURNEYS.find((jj) => jj.slug === x.slug)
+    if (j) chooseJourney(j)
+    else focus(x.places[0])
+    setQuery('')
+  }
   const shows = (ev: MapEvent, pl: Place) => {
     if (!eras.has(eraOf(ev, pl))) return false
     const y = yearsOf(ev.year)
@@ -488,17 +520,41 @@ export function MusicMap() {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter' && matches[0]) { focus(matches[0]); setQuery('') } }}
+              onKeyDown={(e) => {
+                if (e.key !== 'Enter') return
+                if (placeHits[0]) { focus(placeHits[0]); setQuery('') }
+                else if (subjectHits[0]) pickSubject(subjectHits[0])
+                else if (eventHits[0]) pickEvent(eventHits[0].pl, eventHits[0].ev)
+              }}
               placeholder="Tìm nơi, nhạc sĩ, tác phẩm…"
             />
             {query && <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-0.5 text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]"><XIcon width={15} height={15} /></button>}
             {q && (
               <div className="mm-results">
-                {matches.length ? matches.slice(0, 8).map((pl) => (
+                {placeHits.length > 0 && <p className="mm-results-h">Địa điểm</p>}
+                {placeHits.map((pl) => (
                   <button key={pl.id} onClick={() => { focus(pl); setQuery('') }}>
                     <span className="font-medium text-[var(--color-ink)]">{pl.name}</span> <span className="text-[var(--color-ink-faint)]">· {pl.country} · {pl.events.length} sự kiện</span>
                   </button>
-                )) : <p className="px-3 py-2 text-[13px] text-[var(--color-ink-faint)]">Không có nơi nào khớp.</p>}
+                ))}
+                {subjectHits.length > 0 && <p className="mm-results-h">Nhạc sĩ · tác phẩm · chủ đề</p>}
+                {subjectHits.map((x) => {
+                  const j = JOURNEYS.some((jj) => jj.slug === x.slug)
+                  return (
+                    <button key={x.slug} onClick={() => pickSubject(x)}>
+                      <span className="font-medium text-[var(--color-ink)]">{x.title}</span>{' '}
+                      <span className="text-[var(--color-ink-faint)]">· {j ? 'xem hành trình · ' : ''}{x.places.length} nơi: {x.places.slice(0, 3).map((pl) => pl.name).join(', ')}{x.places.length > 3 ? '…' : ''}</span>
+                    </button>
+                  )
+                })}
+                {eventHits.length > 0 && <p className="mm-results-h">Sự kiện</p>}
+                {eventHits.map(({ pl, ev }, i) => (
+                  <button key={`${pl.id}-${i}`} onClick={() => pickEvent(pl, ev)} className="mm-result-ev">
+                    <span className="mm-result-year">{ev.year}</span>
+                    <span className="min-w-0"><span className="line-clamp-2 text-[var(--color-ink)]">{rich(ev.text)}</span><span className="text-[12px] text-[var(--color-ink-faint)]">{pl.name}</span></span>
+                  </button>
+                ))}
+                {!placeHits.length && !subjectHits.length && !eventHits.length && <p className="px-3 py-2 text-[13px] text-[var(--color-ink-faint)]">Không có nơi, người hay sự kiện nào khớp.</p>}
               </div>
             )}
           </label>
@@ -567,6 +623,7 @@ export function MusicMap() {
                 place={selected}
                 shows={(ev) => shows(ev, selected)}
                 thumbs={thumbs}
+                focusEv={focusEv}
                 back={journey ? { label: journey.name, go: () => setSelected(null) } : undefined}
                 onClose={closeSheet}
               />
@@ -583,7 +640,8 @@ export function MusicMap() {
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI']
 
 /** A place's events as a timeline tree: an axis of dots on top, then the events grouped by century. */
-function PlaceTree({ place, shows, thumbs, back, onClose }: {
+function PlaceTree({ place, shows, thumbs, focusEv, back, onClose }: {
+  focusEv?: { ev: MapEvent; n: number } | null
   place: Place
   shows: (ev: MapEvent) => boolean
   thumbs: ReturnType<typeof useThumbs>
@@ -611,6 +669,14 @@ function PlaceTree({ place, shows, thumbs, back, onClose }: {
     setFlash(i)
     window.setTimeout(() => setFlash(-1), 1200)
   }
+  // an event picked in the search: scroll the sheet to it once the sheet has opened
+  useEffect(() => {
+    const i = focusEv ? events.findIndex((x) => x.ev === focusEv.ev) : -1
+    if (i < 0) return
+    const t = window.setTimeout(() => jump(i), 380)
+    return () => window.clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusEv, place])
 
   return (
     <div className="space-y-4">

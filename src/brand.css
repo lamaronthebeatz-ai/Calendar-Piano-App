@@ -82,10 +82,14 @@
   z-index: 0;
 }
 
-/* Gold focus ring everywhere. */
-:where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid color-mix(in oklch, var(--color-gold) 80%, transparent);
-  outline-offset: 2px;
+/* Gold focus ring, only while navigating with the keyboard (spotlight.ts sets html[data-kbd] on Tab and clears it on
+   any pointer). Kept in the base layer so `outline-none` utilities still win; text fields show focus on their container. */
+@layer base {
+  html[data-kbd] :where(a, button, select, [tabindex]):focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--color-gold) 80%, transparent);
+    outline-offset: 2px;
+  }
+  html:not([data-kbd]) :where(a, button, select, [tabindex]):focus { outline: none; }
 }
 
 /* Quiet, warm scrollbars. */

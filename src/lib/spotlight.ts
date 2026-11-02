@@ -1,6 +1,11 @@
-/** One delegated listener feeds the pointer position to the card under it (CSS `.spot` / `.theory-card` in brand.css). */
+/** Keyboard-focus flag + one delegated listener feeds the pointer position to the card under it (CSS `.spot` / `.theory-card` in brand.css). */
 export function installSpotlight() {
-  if (typeof window === 'undefined' || !matchMedia('(hover: hover)').matches) return
+  if (typeof window === 'undefined') return
+  // keyboard-only focus ring (brand.css): on with Tab, off with any touch, pen or mouse
+  const root = document.documentElement
+  document.addEventListener('keydown', (e) => { if (e.key === 'Tab') root.dataset.kbd = '' }, true)
+  document.addEventListener('pointerdown', () => { delete root.dataset.kbd }, true)
+  if (!matchMedia('(hover: hover)').matches) return
   let el: HTMLElement | null = null
   let x = 0
   let y = 0
