@@ -1,0 +1,151 @@
+/* Musicology as a sky (Sky.tsx, MusicologyPage): stars = branches, constellations = parts, threads = shared
+   articles. Scroll-driven CSS only; the SVG is small, so its stars may repaint. No masks, no filters. */
+
+/* ---------- the sky ---------- */
+.mc-sky { position: relative; width: 100%; }
+.mc-sky svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.mc-dust circle { fill: #f3e2bd; opacity: 0.35; }
+.mc-dust .is-tw { animation: mc-twinkle 5s ease-in-out infinite; }
+@keyframes mc-twinkle { 50% { opacity: 0.9; } }
+.mc-edge { stroke: #e2b66e; opacity: 0.34; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; transition: opacity 0.4s, stroke 0.4s; }
+.mc-edge.is-cross { opacity: 0.2; }
+.mc-edge.is-off { opacity: 0.06; }
+.has-sel .mc-edge { opacity: 0.07; }
+.has-sel .mc-edge.is-on { opacity: 0.95; stroke: #f6dca2; }
+.mc-star { transform-box: fill-box; transform-origin: center; }
+.mc-star[role="button"] { cursor: pointer; outline: none; }
+.mc-core { fill: var(--c, #f3d18f); opacity: var(--lit, 0.8); transition: opacity 0.4s, fill 0.4s; }
+.mc-halo { opacity: calc(var(--lit, 0.8) * 0.95); transition: opacity 0.4s; }
+.mc-hit { fill: transparent; }
+.mc-star.is-off .mc-core, .mc-star.is-off .mc-halo { opacity: 0.22; }
+.has-sel .mc-star:not(.is-sel):not(.is-near) .mc-core { opacity: 0.22; }
+.has-sel .mc-star:not(.is-sel):not(.is-near) .mc-halo { opacity: 0.1; }
+.mc-star.is-sel .mc-core { fill: #fff3d6; opacity: 1; }
+.mc-star.is-sel .mc-halo { opacity: 1; transform-box: fill-box; transform-origin: center; animation: mc-pulse 2.4s ease-in-out infinite; }
+.mc-star:focus-visible .mc-core { fill: #fff3d6; opacity: 1; }
+@keyframes mc-pulse { 50% { transform: scale(1.35); opacity: 0.55; } }
+.mc-plabel {
+  position: absolute; transform: translate(-50%, -100%); white-space: nowrap; pointer-events: none;
+  font-family: var(--font-display); font-size: clamp(12px, 1.35vw, 16px); color: rgb(246 236 220 / 0.82); letter-spacing: 0.01em;
+}
+.mc-plabel b { font-style: italic; font-weight: 600; color: #e2b66e; margin-right: 4px; }
+.has-sel .mc-plabel { opacity: 0.35; }
+
+/* ---------- 1 · stage ---------- */
+.mc-stage { position: relative; color: #f6ecdc; }
+.mc-stage-pin {
+  position: relative; display: flex; flex-direction: column; gap: 24px; overflow: hidden; isolation: isolate;
+  padding: 40px clamp(16px, 5vw, 64px) 28px;
+  background: radial-gradient(110% 80% at 50% 45%, #17130c, #0b0a08 72%);
+}
+.mc-stage-head { position: relative; z-index: 2; max-width: 38rem; pointer-events: none; }
+.mc-gold { display: inline-block; filter: drop-shadow(0 2px 14px rgb(0 0 0 / 0.5)); }
+.mc-gold > span { display: inline-block; padding: 0.04em 0.12em 0.06em 0; }
+.mc-stage-sky { position: relative; z-index: 1; display: flex; justify-content: center; }
+.mc-stage-sky .mc-sky { width: min(100%, calc((100svh - 120px) * var(--ar))); }
+.mc-hint { position: relative; z-index: 2; text-align: center; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(226 182 110 / 0.7); }
+.mc-card {
+  position: absolute; z-index: 4; left: 50%; bottom: max(18px, env(safe-area-inset-bottom)); width: min(440px, calc(100% - 24px)); transform: translateX(-50%);
+  padding: 16px 16px 16px; border-radius: 22px; border: 1px solid rgb(226 182 110 / 0.3);
+  background: rgb(18 15 10 / 0.94); box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.9);
+  animation: mc-card-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (hover: hover) { .mc-card { background: rgb(18 15 10 / 0.72); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); } }
+@media (max-width: 1023px) { .mc-card { bottom: 88px; } }
+@keyframes mc-card-in { from { opacity: 0; transform: translate(-50%, 18px); } }
+.mc-card-x { position: absolute; right: 10px; top: 10px; padding: 6px; border-radius: 10px; color: rgb(246 236 220 / 0.6); }
+.mc-card-x:hover { color: #f6ecdc; }
+.mc-card-glyph { display: flex; height: 44px; width: 44px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 14px; font-family: 'Noto Music'; font-size: 22px; color: var(--tint); background: color-mix(in oklch, var(--tint) 16%, transparent); }
+.mc-chip { flex-shrink: 0; display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 10px; border-radius: 999px; font-size: 12px; color: rgb(246 236 220 / 0.85); border: 1px solid rgb(226 182 110 / 0.25); transition: border-color 0.2s; }
+.mc-chip:hover { border-color: var(--tint); }
+.mc-chip b { font-weight: 600; color: #e2b66e; font-variant-numeric: tabular-nums; }
+
+/* ---------- 2 · parts ---------- */
+.mc-part { position: relative; timeline-scope: --mcb; color: #f6ecdc; }
+.mc-part-pin {
+  position: relative; display: grid; gap: 20px; align-items: center; overflow: hidden; isolation: isolate;
+  padding: 72px clamp(16px, 5vw, 64px) 36px;
+  background: radial-gradient(90% 70% at 70% 50%, #15110b, #0b0a08 70%);
+  border-top: 1px solid rgb(226 182 110 / 0.1);
+}
+.mc-part-pin::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: #0b0a08; opacity: 0; }
+.mc-part-sky { display: flex; justify-content: center; }
+.mc-part-sky .mc-sky { width: min(100%, calc(44svh * var(--ar))); }
+.mc-part-head { position: relative; z-index: 1; }
+.mc-part-num { position: absolute; z-index: -1; left: -0.04em; top: -0.5em; font-family: var(--font-display); font-style: italic; font-weight: 600; line-height: 1; font-size: clamp(120px, 22vw, 260px); color: rgb(226 182 110 / 0.09); pointer-events: none; }
+.mc-part-facts { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: rgb(233 220 198 / 0.7); }
+.mc-part-facts span { border: 1px solid rgb(226 182 110 / 0.25); border-radius: 999px; padding: 5px 12px; }
+.mc-part-facts b { color: #f0c987; font-family: var(--font-display); font-size: 14.5px; font-weight: 600; }
+.mc-part-body { position: relative; z-index: 1; padding: 40px 0 72px; background: linear-gradient(180deg, rgb(11 10 8 / 0), #0b0a08 40px); }
+@media (min-width: 900px) {
+  .mc-part-pin { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; }
+  .mc-part-sky { order: 2; }
+  .mc-part-sky .mc-sky { width: min(100%, calc((100svh - 150px) * var(--ar))); }
+}
+
+/* ---------- map door ---------- */
+.mc-globe { display: flex; height: 48px; width: 48px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 16px; background: var(--color-surface-sunken); }
+.mc-globe svg { width: 40px; height: 40px; }
+.mc-globe-sea { fill: rgb(226 182 110 / 0.08); }
+.mc-globe-line, .mc-globe-rim { fill: none; stroke: #e2b66e; stroke-width: 1; }
+.mc-globe-line { opacity: 0.5; }
+.mc-globe-spin ellipse { transform-box: fill-box; transform-origin: center; animation: mc-spin 6s linear infinite; }
+.mc-globe-spin ellipse + ellipse { animation-delay: -3s; }
+@keyframes mc-spin { 0% { transform: scaleX(1); } 50% { transform: scaleX(0.04); } 100% { transform: scaleX(1); } }
+html.vt-active .mc-globe, html.vt-active .mm-full { view-transition-name: music-map; }
+html.vt-active .vt-bt { view-transition-name: branch-title; }
+html.vt-active .vt-bg { view-transition-name: branch-glyph; }
+::view-transition-group(music-map), ::view-transition-group(branch-title), ::view-transition-group(branch-glyph) { animation-duration: 0.55s; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* ---------- branch page ---------- */
+.mc-grow { position: relative; }
+.mc-near { view-timeline-name: --near; }
+.mc-near-grid { display: grid; gap: 16px; align-items: center; }
+@media (min-width: 1024px) { .mc-near-grid { grid-template-columns: 340px 1fr; gap: 28px; } }
+.mc-near-sky { width: 100%; max-width: min(360px, 80vw); margin: 0 auto; display: block; }
+.mc-near-edge { stroke: #e2b66e; opacity: 0.45; stroke-linecap: round; stroke-dasharray: 1; }
+.mc-near-halo { fill: rgb(226 182 110 / 0.12); }
+.mc-near-core { fill: var(--tint, #f3d18f); }
+.mc-near-star { transform-box: fill-box; transform-origin: center; }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* the stage: the title rises away while the stars light up from the centre outward and the threads draw */
+    .mc-stage { height: 250svh; view-timeline-name: --sky; }
+    .mc-stage-pin { position: sticky; top: 0; height: 100svh; min-height: 520px; padding-top: 72px; }
+    .mc-stage-head { position: absolute; left: clamp(16px, 5vw, 64px); right: 16px; top: 18svh; animation: mc-head-away linear both; animation-timeline: --sky; animation-range: contain 0% contain 22%; }
+    .mc-stage-sky { position: absolute; inset: 64px clamp(8px, 3vw, 40px) 48px; align-items: center; }
+    .mc-stage-sky .mc-sky { width: min(100%, calc((100svh - 130px) * var(--ar))); }
+    .mc-hint { position: absolute; left: 0; right: 0; bottom: 18px; animation: mc-fade-in linear both; animation-timeline: --sky; animation-range: contain 50% contain 62%; }
+    .mc-stage .mc-dust { animation: mc-dust-in linear both; animation-timeline: --sky; animation-range: contain 0% contain 30%; }
+    .mc-stage .mc-star { animation: mc-ignite linear both; animation-timeline: --sky; animation-range: contain calc(8% + var(--d) * 26%) contain calc(16% + var(--d) * 26%); }
+    .mc-stage .mc-edge { animation: mc-draw linear both; animation-timeline: --sky; animation-range: contain calc(20% + var(--d) * 26%) contain calc(34% + var(--d) * 26%); }
+    .mc-stage .mc-plabel { animation: mc-label-in linear both; animation-timeline: --sky; animation-range: contain 46% contain 58%; }
+    .has-sel .mc-plabel { animation: none; }
+
+    /* each part: the constellation flies in, then the camera pushes in as the branch cards rise over it */
+    .mc-part-pin { position: sticky; top: 0; height: 100svh; min-height: 560px; }
+    .mc-part-sky .mc-sky { animation: mc-arrive linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+    .mc-part-head { animation: mc-head-in linear both; animation-timeline: view(); animation-range: entry 25% entry 100%; }
+    .mc-part-sky { animation: mc-push linear both; animation-timeline: --mcb; animation-range: entry 0% entry 100%; }
+    .mc-part-pin::after { animation: mc-dim linear both; animation-timeline: --mcb; animation-range: entry 0% entry 45%; }
+    .mc-part-body { view-timeline-name: --mcb; }
+    @media (max-width: 899px) { .mc-part-pin { align-content: center; } }
+
+    .mc-grow > :first-child { animation: mc-head-in linear both; animation-timeline: view(); animation-range: entry 0% entry 70%; }
+    .mc-near-edge { animation: mc-draw linear both; animation-timeline: --near; animation-range: entry calc(20% + var(--i) * 8%) entry calc(60% + var(--i) * 8%); }
+    .mc-near-star { animation: mc-ignite linear both; animation-timeline: --near; animation-range: entry calc(40% + var(--i) * 8%) entry calc(70% + var(--i) * 8%); }
+    .mc-near-item { animation: mc-head-in linear both; animation-timeline: --near; animation-range: entry calc(30% + var(--i) * 6%) entry calc(80% + var(--i) * 6%); }
+  }
+}
+@keyframes mc-head-away { to { transform: translateY(-10vh); opacity: 0; } }
+@keyframes mc-fade-in { from { opacity: 0; } }
+@keyframes mc-dust-in { from { opacity: 0.25; } }
+@keyframes mc-ignite { from { opacity: 0; transform: scale(0.2); } }
+@keyframes mc-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes mc-label-in { from { opacity: 0; transform: translate(-50%, -60%); } to { opacity: 1; transform: translate(-50%, -100%); } }
+@keyframes mc-arrive { from { opacity: 0.15; transform: scale(0.72) translateY(8vh); } }
+@keyframes mc-head-in { from { opacity: 0; transform: translateY(8vh); } }
+@keyframes mc-push { to { transform: scale(1.14); } }
+@keyframes mc-dim { to { opacity: 0.9; } }
+@media (prefers-reduced-motion: reduce) { .mc-dust .is-tw, .mc-globe-spin ellipse, .mc-star.is-sel .mc-halo, .mc-card { animation: none; } }

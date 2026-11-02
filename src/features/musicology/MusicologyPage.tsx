@@ -1,5 +1,5 @@
-import { hueTint } from '../../lib/tint'
-import { useMemo, useState } from 'react'
+import { hueTint, tintColor } from '../../lib/tint'
+import { useMemo, useState, type CSSProperties } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { QuoteBanner } from './QuoteBanner'
@@ -14,6 +14,9 @@ import { BranchTree } from './BranchTree'
 import { useBack } from '../../hooks/useBack'
 import { MusicMap } from './MusicMap'
 import { PLACES } from './places'
+import { Sky } from './Sky'
+import { neighbours, partView, skyOf, type Layout } from './constellation'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 /** The map of places lives at /musicology/ban-do, beside the branches. */
 const MAP_ID = 'ban-do'
@@ -101,173 +104,238 @@ export function MusicologyPage() {
 
 /* -------------------------------------------------------------------- map */
 
-type PartFilter = PartId | 'all'
-
 const PART_ORDER: PartId[] = ['historical', 'systematic', 'applied', 'practice']
+
+/** The branch whose name flies into the branch page's heading (and back): one element per page carries the name. */
+let morphBranch: string | undefined
+function markMorph(id: string, from: Element | null) {
+  morphBranch = id
+  document.querySelectorAll('.vt-bt, .vt-bg').forEach((el) => el.classList.remove('vt-bt', 'vt-bg'))
+  from?.querySelector('[data-bt]')?.classList.add('vt-bt')
+  from?.querySelector('[data-bg]')?.classList.add('vt-bg')
+}
+
+const BY_ID = new Map(RESOLVED.map((b) => [b.id, b]))
+
+function useLayout(): Layout {
+  return useMediaQuery('(orientation: portrait) and (max-width: 900px)') ? 'tall' : 'wide'
+}
 
 function MapIndex() {
   const progress = useProgress()
+  const layout = useLayout()
+  const lit = (id: string) => {
+    const p = progress.of(BY_ID.get(id)!)
+    return p.total ? p.read / p.total : 0
+  }
   const intro = RESOLVED.find((b) => b.part === 'intro')!
   const foundations = intro.resolved[0].articles
   const pct = progress.total ? Math.round((progress.read / progress.total) * 100) : 0
   const [query, setQuery] = useState('')
-  const [part, setPart] = useState<PartFilter>(() => {
-    try {
-      return (sessionStorage.getItem('musicology:part') as PartFilter | null) ?? 'all'
-    } catch {
-      return 'all'
-    }
-  })
-  const choosePart = (p: PartFilter) => {
-    setPart(p)
-    try {
-      sessionStorage.setItem('musicology:part', p)
-    } catch {
-      /* private mode: the filter just isn't remembered */
-    }
-  }
+  const [sel, setSel] = useState<string | null>(null)
   const q = normalize(query)
-  const parts = PART_ORDER.filter((p) => part === 'all' || p === part)
+  const jump = (p: PartId) => document.getElementById(`phan-${p}`)?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 px-4 py-5 lg:px-8 lg:py-8">
-      <section className="hero-ebony animate-float-up relative isolate overflow-hidden rounded-[28px] px-5 pb-6 pt-7 shadow-[var(--shadow-float)] sm:px-9 sm:pb-9 sm:pt-10">
-        <BranchesIcon aria-hidden width={300} height={300} strokeWidth={0.6} className="pointer-events-none absolute -right-16 -top-10 -z-10 text-[#e2b66e]/15 sm:right-4" />
-        <p className="text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Musikwissenschaft · Musicology</p>
-        <h2 data-collapse className="collapse-large mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
-          Bản đồ nghiên cứu <span className="text-gold-gradient italic">âm nhạc học</span>
-        </h2>
-        <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
-          Toàn bộ thư viện lý thuyết được xếp lại theo khung của ngành: hai nhánh lịch sử và hệ thống của Guido Adler (1885), thêm âm nhạc học ứng dụng và thực hành — để nghiên cứu có hệ thống thay vì đọc theo chủ đề.
-        </p>
-        <dl className="mt-5 flex max-w-lg flex-wrap gap-x-6 gap-y-2">
-          {[
-            [RESOLVED.filter((b) => b.part !== 'intro').length, 'phân ngành'],
-            [progress.total, 'bài được xếp'],
-            [`${pct}%`, `đã đọc (${progress.read})`],
-          ].map(([n, label]) => (
-            <div key={label} className="flex items-baseline gap-1.5">
-              <dt className="font-display text-[22px] font-semibold text-[#f0c987]">{n}</dt>
-              <dd className="text-[12.5px] text-[#e9dcc6]/60">{label}</dd>
-            </div>
-          ))}
-        </dl>
-        <div className="mt-4 h-1 max-w-lg overflow-hidden rounded-full bg-white/10">
-          <div className="h-full rounded-full bg-gradient-to-r from-[#e2b66e] to-[#c9773f] transition-[width] duration-700" style={{ width: `${pct}%` }} />
+    <>
+      {/* 1 · the sky: every branch a star, every part a constellation, every shared article a thread between stars */}
+      <section className="mc-stage" aria-label="Bầu trời âm nhạc học">
+        <div className="mc-stage-pin">
+          <div className="mc-stage-head">
+            <p className="text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Musikwissenschaft · Musicology</p>
+            <h2 data-collapse className="collapse-large mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[46px]">
+              Bản đồ nghiên cứu <span className="mc-gold"><span className="text-gold-gradient italic">âm nhạc học</span></span>
+            </h2>
+            <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
+              Mỗi ngôi sao là một phân ngành, mỗi chòm là một phần của ngành theo khung Guido Adler (1885) mở rộng; đường nối hai sao là những bài hai ngành cùng đọc.
+            </p>
+            <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-1">
+              {[
+                [RESOLVED.filter((b) => b.part !== 'intro').length, 'phân ngành'],
+                [progress.total, 'bài được xếp'],
+                [`${pct}%`, `đã đọc (${progress.read})`],
+              ].map(([n, label]) => (
+                <div key={label} className="flex items-baseline gap-1.5">
+                  <dt className="font-display text-[22px] font-semibold text-[#f0c987]">{n}</dt>
+                  <dd className="text-[12.5px] text-[#e9dcc6]/60">{label}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div className="mc-stage-sky">
+            <Sky layout={layout} labels selected={sel} onSelect={(id) => setSel((s) => (s === id ? null : id))} lit={lit} />
+          </div>
+          {!sel && <p className="mc-hint">Chạm một ngôi sao để xem phân ngành và những ngành cùng chung bài</p>}
+          {sel && <StarCard id={sel} lit={lit} onPick={setSel} onClose={() => setSel(null)} />}
         </div>
       </section>
 
-      <Link to={`/musicology/${MAP_ID}`} className="group flex items-center gap-4 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 transition-colors hover:border-[var(--color-gold)] sm:p-5">
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-surface-sunken)] text-[var(--color-gold)]"><CompassIcon width={24} height={24} /></span>
-        <span className="min-w-0 flex-1">
-          <span className="block font-display text-[17px] font-semibold text-[var(--color-ink)]">Bản đồ: nơi âm nhạc đã xảy ra</span>
-          <span className="block text-[13px] text-[var(--color-ink-muted)]">{PLACES.length} địa điểm từ Leipzig, Vienna, New Orleans tới Huế — mỗi sự kiện dẫn sang bài trong thư viện.</span>
-        </span>
-        <ArrowUpRightIcon width={18} height={18} className="shrink-0 text-[var(--color-ink-faint)] transition-colors group-hover:text-[var(--color-gold)]" />
-      </Link>
+      <div className="mx-auto max-w-6xl space-y-8 px-4 py-8 lg:px-8">
+        <Link to={`/musicology/${MAP_ID}`} className="group flex items-center gap-4 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4 transition-colors hover:border-[var(--color-gold)] sm:p-5">
+          <Globe />
+          <span className="min-w-0 flex-1">
+            <span className="block font-display text-[17px] font-semibold text-[var(--color-ink)]">Bản đồ: nơi âm nhạc đã xảy ra</span>
+            <span className="block text-[13px] text-[var(--color-ink-muted)]">{PLACES.length} địa điểm từ Leipzig, Vienna, New Orleans tới Huế — mỗi sự kiện dẫn sang bài trong thư viện.</span>
+          </span>
+          <ArrowUpRightIcon width={18} height={18} className="shrink-0 text-[var(--color-ink-faint)] transition-colors group-hover:text-[var(--color-gold)]" />
+        </Link>
 
-      <QuoteBanner />
+        <QuoteBanner />
 
-      {/* One toolbar for the whole map: find a branch or an article, or narrow to one part. */}
-      <div data-scrolled className="glass sticky top-14 z-10 -mx-4 space-y-2.5 border-b border-[var(--color-border)] px-4 py-3 lg:mx-0 lg:rounded-2xl lg:border">
-        <label className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-2 focus-within:border-[var(--color-gold)]">
-          <SearchIcon width={16} height={16} className="shrink-0 text-[var(--color-ink-faint)]" />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Tìm ngành hoặc bài trong âm nhạc học…"
-            className="min-w-0 flex-1 bg-transparent text-[14px] text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-faint)]"
-          />
-          {query && (
-            <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-0.5 text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]">
-              <XIcon width={15} height={15} />
-            </button>
-          )}
-        </label>
-        {!q && (
-          <div className="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 lg:mx-0 lg:px-0" role="tablist" aria-label="Phần">
-            {(['all', ...PART_ORDER] as PartFilter[]).map((p) => {
-              const n = p === 'all' ? RESOLVED.filter((b) => b.part !== 'intro').length : RESOLVED.filter((b) => b.part === p).length
-              return (
-                <button
-                  key={p}
-                  role="tab"
-                  aria-selected={part === p}
-                  onClick={() => choosePart(p)}
-                  className={clsx(
-                    'shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-colors',
-                    part === p
-                      ? 'border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-surface)]'
-                      : 'border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-ink)] hover:border-[var(--color-gold)]',
-                  )}
-                >
-                  {p === 'all' ? 'Tất cả' : `${NUMERALS[p]} · ${PARTS[p].title}`} <span className="tabular-nums opacity-60">{n}</span>
+        <div className="space-y-2.5">
+          <label className="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-2 focus-within:border-[var(--color-gold)]">
+            <SearchIcon width={16} height={16} className="shrink-0 text-[var(--color-ink-faint)]" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Tìm ngành hoặc bài trong âm nhạc học…"
+              className="min-w-0 flex-1 bg-transparent text-[14px] text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-faint)]"
+            />
+            {query && (
+              <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-0.5 text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]">
+                <XIcon width={15} height={15} />
+              </button>
+            )}
+          </label>
+          {!q && (
+            <nav className="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 lg:mx-0 lg:px-0" aria-label="Đi tới phần">
+              {PART_ORDER.map((p) => (
+                <button key={p} onClick={() => jump(p)} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1.5 text-[12.5px] font-medium text-[var(--color-ink)] transition-colors hover:border-[var(--color-gold)]">
+                  {NUMERALS[p]} · {PARTS[p].title} <span className="tabular-nums opacity-60">{RESOLVED.filter((b) => b.part === p).length}</span>
                 </button>
-              )
-            })}
-          </div>
+              ))}
+            </nav>
+          )}
+        </div>
+
+        {q ? (
+          <SearchResults q={q} />
+        ) : (
+          <section className="space-y-4">
+            <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Ngôi sao giữa trời">Nhập môn</SectionTitle>
+            <div className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
+              {foundations.slice(0, 4).map((a, i) => (
+                <Link
+                  key={a.slug}
+                  to={`/theory/${a.slug}`}
+                  style={{ ...hueTint(intro.hue), animationDelay: `${i * 50}ms` }}
+                  className="theory-card animate-float-up group relative flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 lg:w-auto"
+                >
+                  <span className="font-display text-[28px] font-semibold leading-none text-[color-mix(in_oklch,var(--tint)_55%,transparent)]">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="mt-3 font-display text-[17px] font-semibold leading-snug text-[var(--color-ink)]">{a.title}</span>
+                  <span className="mt-2 line-clamp-3 text-[12.5px] leading-relaxed text-[var(--color-ink-muted)]">{a.summary}</span>
+                  <span className="mt-auto flex items-center gap-1 pt-4 text-[12.5px] font-medium text-[var(--color-ink)]">
+                    Đọc <ArrowUpRightIcon width={14} height={14} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
         )}
       </div>
 
-      {q ? (
-        <SearchResults q={q} />
-      ) : (
-        <>
-          {part === 'all' && (
-            <section className="space-y-4">
-              <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Đọc trước khi vào từng ngành">Nhập môn</SectionTitle>
-              <div className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
-                {foundations.slice(0, 4).map((a, i) => (
-                  <Link
-                    key={a.slug}
-                    to={`/theory/${a.slug}`}
-                    style={{ ...hueTint(intro.hue), animationDelay: `${i * 50}ms` }}
-                    className="theory-card animate-float-up group relative flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 lg:w-auto"
-                  >
-                    <span className="font-display text-[28px] font-semibold leading-none text-[color-mix(in_oklch,var(--tint)_55%,transparent)]">{String(i + 1).padStart(2, '0')}</span>
-                    <span className="mt-3 font-display text-[17px] font-semibold leading-snug text-[var(--color-ink)]">{a.title}</span>
-                    <span className="mt-2 line-clamp-3 text-[12.5px] leading-relaxed text-[var(--color-ink-muted)]">{a.summary}</span>
-                    <span className="mt-auto flex items-center gap-1 pt-4 text-[12.5px] font-medium text-[var(--color-ink)]">
-                      Đọc <ArrowUpRightIcon width={14} height={14} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
-          {parts.map((p) => (
-            <PartSection key={p} part={p} progress={progress.of} />
-          ))}
-        </>
-      )}
+      {/* 2 · the parts: the camera flies to each constellation in turn, then its branches slide up over it */}
+      {!q && PART_ORDER.map((p) => <PartChapter key={p} part={p} layout={layout} lit={lit} progress={progress.of} />)}
 
-      <footer className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] leading-relaxed text-[var(--color-ink-muted)] sm:p-6">
-        <p className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Cách xếp</p>
-        <p className="mt-1">
-          Bốn phần: lịch sử và hệ thống theo sơ đồ của Adler (1885), âm nhạc học ứng dụng (công nghiệp, sức khoẻ, giáo dục, công nghệ) và thực hành sáng tạo. Mỗi bài có mặt ít nhất ở một phân ngành; một bài có thể nằm ở nhiều phân ngành vì các phân ngành là góc nhìn, không phải ngăn kéo. Tên tiếng Việt của một số phân ngành là đề xuất của thư viện; xem bảng thuật ngữ trong{' '}
-          <Link to="/theory/am-nhac-hoc" className="font-medium text-[var(--color-ink)] underline decoration-[var(--color-gold)] underline-offset-2">bài tổng quan</Link>.
-        </p>
-      </footer>
+      <div className="mx-auto max-w-6xl px-4 py-8 lg:px-8">
+        <footer className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] leading-relaxed text-[var(--color-ink-muted)] sm:p-6">
+          <p className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Cách xếp</p>
+          <p className="mt-1">
+            Bốn phần: lịch sử và hệ thống theo sơ đồ của Adler (1885), âm nhạc học ứng dụng (công nghiệp, sức khoẻ, giáo dục, công nghệ) và thực hành sáng tạo. Mỗi bài có mặt ít nhất ở một phân ngành; một bài có thể nằm ở nhiều phân ngành vì các phân ngành là góc nhìn, không phải ngăn kéo — đường nối giữa các ngôi sao chính là những bài ấy (mỗi sao giữ bốn mối nối mạnh nhất). Tên tiếng Việt của một số phân ngành là đề xuất của thư viện; xem bảng thuật ngữ trong{' '}
+            <Link to="/theory/am-nhac-hoc" className="font-medium text-[var(--color-ink)] underline decoration-[var(--color-gold)] underline-offset-2">bài tổng quan</Link>.
+          </p>
+        </footer>
+      </div>
+    </>
+  )
+}
+
+/** A slowly turning globe: the door to the map of places (it grows into the map on the way in). */
+function Globe() {
+  return (
+    <span className="mc-globe" aria-hidden>
+      <svg viewBox="-24 -24 48 48">
+        <circle r="21" className="mc-globe-sea" />
+        <ellipse rx="21" ry="7.5" className="mc-globe-line" />
+        <line x1="-21" x2="21" className="mc-globe-line" />
+        <g className="mc-globe-spin">
+          <ellipse rx="7" ry="21" className="mc-globe-line" />
+          <ellipse rx="15" ry="21" className="mc-globe-line" />
+        </g>
+        <circle r="21" className="mc-globe-rim" />
+      </svg>
+    </span>
+  )
+}
+
+/** The chosen star: its branch, how far it has been read, and the branches it shares articles with (tap to travel). */
+function StarCard({ id, lit, onPick, onClose }: { id: string; lit: (id: string) => number; onPick: (id: string) => void; onClose: () => void }) {
+  const b = BY_ID.get(id)!
+  const near = neighbours(id, 5)
+  return (
+    <div key={id} className="mc-card" style={hueTint(b.hue)} role="dialog" aria-label={b.title}>
+      <button onClick={onClose} aria-label="Đóng" className="mc-card-x"><XIcon width={15} height={15} /></button>
+      <div className="flex items-start gap-3">
+        <span data-bg className="mc-card-glyph">{b.glyph}</span>
+        <div className="min-w-0 flex-1">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--tint)]">{numberOf(b) ? `${numberOf(b)} · ` : ''}{PARTS[b.part].title}</p>
+          <p data-bt className="mt-0.5 font-display text-[18px] font-semibold leading-snug text-[#f6ecdc]">{b.title}</p>
+          <p className="text-[12px] italic text-[#e9dcc6]/55">{b.en} · {b.count} bài · đã đọc {Math.round(lit(id) * 100)}%</p>
+        </div>
+      </div>
+      {near.length > 0 && (
+        <div className="mt-3">
+          <p className="text-[11px] uppercase tracking-[0.14em] text-[#e9dcc6]/50">Chung bài với</p>
+          <div className="no-scrollbar mt-1.5 flex gap-1.5 overflow-x-auto">
+            {near.map(({ branch: o, n }) => (
+              <button key={o.id} onClick={() => onPick(o.id)} className="mc-chip" style={hueTint(o.hue)}>
+                {o.title.split(':')[0]} <b>{n}</b>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+      <Link to={`/musicology/${b.id}`} onClick={(e) => markMorph(b.id, e.currentTarget.closest('.mc-card'))} className="btn-gold mt-3.5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] font-medium">
+        Mở phân ngành <ArrowUpRightIcon width={14} height={14} />
+      </Link>
     </div>
   )
 }
 
-function PartSection({ part, progress }: { part: PartId; progress: (b: ResolvedBranch) => { read: number; total: number } }) {
+function PartChapter({ part, layout, lit, progress }: { part: PartId; layout: Layout; lit: (id: string) => number; progress: (b: ResolvedBranch) => { read: number; total: number } }) {
   const branches = RESOLVED.filter((b) => b.part === part)
+  const { stars, edges } = skyOf(layout)
+  const view = partView(stars, part, layout === 'tall' ? 1.15 : 1.3)
+  const inPart = new Set(branches.map((b) => b.id))
+  const outward = edges.filter((e) => inPart.has(e.a) !== inPart.has(e.b)).length
+  const articles = new Set(branches.flatMap((b) => [...branchSlugs(b)])).size
   return (
-    <section className="space-y-4">
-      <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)]">
-          {NUMERALS[part]} · {PARTS[part].en}
-        </p>
-        <h3 className="mt-0.5 font-display text-[22px] font-semibold tracking-tight text-[var(--color-ink)]">{PARTS[part].title}</h3>
-        <p className="mt-1 max-w-3xl text-[13px] leading-relaxed text-[var(--color-ink-muted)]">{PARTS[part].description}</p>
+    <section id={`phan-${part}`} className="mc-part" aria-labelledby={`phan-${part}-t`}>
+      <div className="mc-part-pin">
+        <div className="mc-part-sky">
+          <Sky layout={layout} view={view} focus={part} lit={lit} />
+        </div>
+        <div className="mc-part-head">
+          <span aria-hidden className="mc-part-num">{NUMERALS[part]}</span>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e2b66e]">{PARTS[part].en}</p>
+          <h3 id={`phan-${part}-t`} className="mt-1 font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">{PARTS[part].title}</h3>
+          <p className="mt-3 max-w-md text-[13.5px] leading-relaxed text-[#e9dcc6]/72 sm:text-[14.5px]">{PARTS[part].description}</p>
+          <p className="mc-part-facts">
+            <span><b>{branches.length}</b> phân ngành</span>
+            <span><b>{articles}</b> bài</span>
+            <span><b>{outward}</b> mối nối sang phần khác</span>
+          </p>
+        </div>
       </div>
-      <BranchTree className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-        {branches.map((b, i) => (
-          <BranchCard key={b.id} branch={b} progress={progress(b)} delay={i * 35} />
-        ))}
-      </BranchTree>
+      <div className="mc-part-body">
+        <div className="mx-auto max-w-6xl px-4 lg:px-8">
+          <BranchTree className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            {branches.map((b, i) => (
+              <BranchCard key={b.id} branch={b} progress={progress(b)} delay={i * 35} />
+            ))}
+          </BranchTree>
+        </div>
+      </div>
     </section>
   )
 }
@@ -322,16 +390,17 @@ function BranchCard({ branch: b, progress, delay }: { branch: ResolvedBranch; pr
   return (
     <Link
       to={`/musicology/${b.id}`}
+      onClick={(e) => markMorph(b.id, e.currentTarget)}
       style={{ ...hueTint(b.hue), animationDelay: `${delay}ms` }}
       className="theory-card reveal group flex h-full items-start gap-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4"
     >
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[22px] text-[var(--tint)] ring-1 ring-[color-mix(in_oklch,var(--tint)_22%,transparent)] transition-transform duration-300 group-hover:scale-105">
+      <span data-bg className={clsx(morphBranch === b.id && 'vt-bg', `flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[22px] text-[var(--tint)] ring-1 ring-[color-mix(in_oklch,var(--tint)_22%,transparent)] transition-transform duration-300 group-hover:scale-105`)}>
         {b.glyph}
       </span>
       <span className="min-w-0 flex-1">
         <span className="flex items-baseline gap-2">
           <span className="shrink-0 font-display text-[13px] font-semibold tabular-nums text-[var(--tint)]">{numberOf(b)}</span>
-          <span className="text-[15px] font-semibold leading-snug text-[var(--color-ink)]">{b.title}</span>
+          <span data-bt className={clsx(morphBranch === b.id && 'vt-bt', 'text-[15px] font-semibold leading-snug text-[var(--color-ink)]')}>{b.title}</span>
         </span>
         <span className="mt-0.5 block text-[11.5px] italic text-[var(--color-ink-faint)]">{b.en}</span>
         <span className="mt-1 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{b.summary}</span>
@@ -387,12 +456,12 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
   return (
     <div style={hueTint(b.hue)} className="mx-auto max-w-6xl space-y-8 px-4 py-5 lg:px-8 lg:py-8">
       <header className="animate-float-up relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[linear-gradient(135deg,color-mix(in_oklch,var(--tint)_14%,var(--color-surface-raised)),var(--color-surface-raised)_70%)] p-6 sm:p-8">
-        <span aria-hidden className="absolute -right-2 -top-6 font-['Noto_Music'] text-[150px] leading-none text-[color-mix(in_oklch,var(--tint)_14%,transparent)]">{b.glyph}</span>
+        <span aria-hidden className="vt-bg absolute -right-2 -top-6 font-['Noto_Music'] text-[150px] leading-none text-[color-mix(in_oklch,var(--tint)_14%,transparent)]">{b.glyph}</span>
         <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.18em] text-[var(--tint)]">
           {numberOf(b) && `${numberOf(b)} · `}
           {PARTS[b.part].title}
         </p>
-        <h2 data-collapse className="collapse-large relative mt-1 max-w-3xl font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{b.title}</h2>
+        <h2 data-collapse className="vt-bt collapse-large relative mt-1 max-w-3xl font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{b.title}</h2>
         <p className="relative mt-0.5 text-[13px] italic text-[var(--color-ink-faint)]">{b.en}</p>
         <p className="relative mt-3 max-w-2xl text-[14px] leading-relaxed text-[var(--color-ink-muted)]">{b.summary}</p>
 
@@ -462,7 +531,7 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
       )}
 
       {groups.map((r, i) => (
-        <section key={r.group.title} id={`g-${i}`} className="scroll-mt-20 space-y-3">
+        <section key={r.group.title} id={`g-${i}`} className="mc-grow scroll-mt-20 space-y-3">
           <SectionTitle hint={`${r.articles.length} ${r.group.people ? 'trang' : 'bài'}`}>{r.group.title}</SectionTitle>
           {r.group.people ? (
             <People articles={r.articles} />
@@ -473,6 +542,8 @@ function BranchView({ branch: b }: { branch: ResolvedBranch }) {
           )}
         </section>
       ))}
+
+      <Neighbours branch={b} />
 
       <nav className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {[prev, next].map((o, i) =>
@@ -531,5 +602,53 @@ function People({ articles }: { articles: Article[] }) {
         ))}
       </div>
     </details>
+  )
+}
+
+/**
+ * The branches this one shares articles with, as a small constellation: this star in the middle, its neighbours round
+ * it at a distance that shrinks as the number of shared articles grows, the threads as thick as the overlap.
+ */
+function Neighbours({ branch: b }: { branch: ResolvedBranch }) {
+  const near = neighbours(b.id, 6)
+  if (!near.length) return null
+  const max = near[0].n
+  const pts = near.map(({ n }, i) => {
+    const t = -Math.PI / 2 + (i / near.length) * Math.PI * 2
+    const d = 118 - (n / max) * 46
+    return [Math.cos(t) * d, Math.sin(t) * d * 0.78]
+  })
+  return (
+    <section className="mc-near space-y-4">
+      <SectionTitle icon={<BranchesIcon width={16} height={16} />} hint="Cùng đọc chung bài">Ngành láng giềng</SectionTitle>
+      <div className="mc-near-grid">
+        <svg viewBox="-160 -120 320 240" className="mc-near-sky" aria-hidden>
+          {pts.map(([x, y], i) => (
+            <line key={i} x1={0} y1={0} x2={x} y2={y} pathLength={1} className="mc-near-edge" style={{ strokeWidth: 0.8 + (near[i].n / max) * 2.4, '--i': i } as CSSProperties} />
+          ))}
+          <circle r={26} className="mc-near-halo" />
+          <circle r={7} className="mc-near-core" />
+          {pts.map(([x, y], i) => (
+            <g key={near[i].branch.id} transform={`translate(${x} ${y})`}>
+              <circle r={3.2 + (near[i].n / max) * 2.6} className="mc-near-star" style={{ '--i': i, fill: tintColor(near[i].branch.hue, 0.84, 0.06) } as CSSProperties} />
+            </g>
+          ))}
+        </svg>
+        <ul className="grid gap-2 sm:grid-cols-2">
+          {near.map(({ branch: o, n }, i) => (
+            <li key={o.id} style={{ ...hueTint(o.hue), '--i': i } as CSSProperties} className="mc-near-item">
+              <Link to={`/musicology/${o.id}`} className="theory-card group flex items-center gap-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[18px] text-[var(--tint)]">{o.glyph}</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-[14px] font-semibold text-[var(--color-ink)] group-hover:text-[var(--tint)]">{o.title}</span>
+                  <span className="block text-[11.5px] text-[var(--color-ink-faint)]">{PARTS[o.part].title}</span>
+                </span>
+                <span className="shrink-0 rounded-full border border-[var(--color-border)] px-2 py-0.5 text-[11.5px] tabular-nums text-[var(--color-ink-muted)]">{n} bài chung</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   )
 }
