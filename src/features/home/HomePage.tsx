@@ -19,7 +19,7 @@ const ART = {
   trompe: { fg: true, file: 'trompe', artist: 'Cornelius Norbertus Gijsbrechts', title: 'Tranh đánh lừa thị giác với vĩ cầm, sách nhạc và sáo dọc', year: '1672', id: 'KMS1908' },
   party: { fg: true, file: 'music-party', artist: 'Pieter de Hooch', title: 'Buổi hoà nhạc gia đình', year: 'khoảng 1644 – 1683', id: 'KMSsp613' },
   reading: { fg: false, file: 'reading', artist: 'Constantin Hansen', title: 'Hai em gái hoạ sĩ, Signe và Henriette, đọc sách', year: '1826', id: 'KMS3004' },
-  singing: { fg: true, file: 'singing', artist: 'Michael Ancher', title: 'Trẻ em hát', year: '1899', id: 'KMS1626' },
+  singing: { fg: true, file: 'concert', artist: 'Otto Haslund', title: 'Buổi hoà nhạc: các con của hoạ sĩ và bạn chơi', year: '1887', id: 'KMS1306' },
 }
 type Art = (typeof ART)[keyof typeof ART]
 
