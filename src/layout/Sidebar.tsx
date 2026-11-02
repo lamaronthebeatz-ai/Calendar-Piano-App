@@ -33,7 +33,8 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
     el.style.opacity = '1'
     // Enable the glide only after the first placement, so it doesn't fly in from the top on load.
     requestAnimationFrame(() => el.classList.add('is-ready'))
-  }, [active])
+    // measured again on every opening: while the drawer is closed its items sit offset for the entrance animation
+  }, [active, open])
 
   const isDark = settings.theme === 'dark'
   const toggleTheme = async () => {
@@ -104,7 +105,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
         ))}
       </nav>
 
-      <div className="flex items-center gap-1 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1">
+      <div className="rail-tools flex items-center gap-1 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1">
         <button
           data-tour="search"
           onClick={() => {

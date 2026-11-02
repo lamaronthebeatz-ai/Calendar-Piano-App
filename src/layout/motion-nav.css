@@ -129,24 +129,59 @@ html.rubber-band main .overflow-y-auto { overscroll-behavior-y: none; }
 .rail-mark-bars i + i { width: 9px; }
 .rail-mark:hover .rail-mark-bars i + i { width: 14px; }
 
+/* The drawer is a floating sheet of smoked glass, inset from the screen edges: the page stays visible behind it.
+   Opening: the sheet glides and fades in (560 ms, expo-out), then each item comes into focus in turn (opacity +
+   a few px of rise + blur to sharp). Closing is quicker (300 ms) and all at once, so it never feels in the way.
+   Only transform, opacity and filter on small items animate; the page behind is dimmed, never blurred (a full-page
+   blur stutters on tablets). */
 .rail-drawer {
-  position: fixed; left: 0; top: 0; bottom: 0; z-index: 50;
-  box-shadow: 30px 0 80px -30px rgb(0 0 0 / 0.75);
-  transform: translateX(-105%);
-  transition: transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+  position: fixed; left: 10px; top: 10px; bottom: 10px; z-index: 50;
+  width: 280px !important;
+  border-radius: 24px;
+  background: color-mix(in oklch, var(--color-surface) 66%, transparent) !important;
+  backdrop-filter: blur(28px) saturate(1.5);
+  -webkit-backdrop-filter: blur(28px) saturate(1.5);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 22%, transparent),
+    inset 0 1px 0 rgb(255 255 255 / 0.06),
+    0 30px 80px -30px rgb(0 0 0 / 0.7);
+  opacity: 0;
+  transform: translateX(-18px) scale(0.985);
+  transform-origin: 0 50%;
+  visibility: hidden;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 1, 1), transform 300ms cubic-bezier(0.4, 0, 1, 1), visibility 0s linear 300ms;
 }
-.rail-drawer.is-open { transform: none; }
-.rail-drawer .rail-item { opacity: 0; transform: translateX(-14px); transition: opacity 300ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms ease; }
-.rail-drawer.is-open .rail-item { opacity: 1; transform: none; transition-delay: calc(120ms + var(--k, 0) * 35ms), calc(120ms + var(--k, 0) * 35ms), 0ms; }
+.rail-drawer::after { display: none; }
+.rail-drawer.is-open {
+  opacity: 1; transform: none; visibility: visible;
+  transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1), transform 620ms cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
+}
+.rail-drawer .rail-item, .rail-drawer .btn-line, .rail-drawer .rail-tools {
+  opacity: 0; transform: translateY(6px); filter: blur(3px);
+  transition: opacity 200ms ease, transform 200ms ease, filter 200ms ease, color 200ms ease;
+}
+.rail-drawer.is-open .rail-item, .rail-drawer.is-open .btn-line, .rail-drawer.is-open .rail-tools {
+  opacity: 1; transform: none; filter: none;
+  transition: opacity 500ms ease, transform 700ms cubic-bezier(0.16, 1, 0.3, 1), filter 500ms ease, color 200ms ease;
+}
+.rail-drawer.is-open .btn-line { transition-delay: 90ms; }
+.rail-drawer.is-open .rail-item { transition-delay: calc(140ms + var(--k, 0) * 38ms), calc(140ms + var(--k, 0) * 38ms), calc(140ms + var(--k, 0) * 38ms), 0ms; }
+.rail-drawer.is-open .rail-tools { transition-delay: 460ms; }
+/* glass-friendly controls inside the sheet */
+.rail-drawer .btn-line { background: transparent; border: 1px solid color-mix(in oklch, var(--color-gold) 45%, transparent); }
+.rail-drawer .btn-line:hover { background: color-mix(in oklch, var(--color-gold) 12%, transparent); }
+.rail-drawer .rail-tools { background: color-mix(in oklch, var(--color-surface) 35%, transparent); border-color: color-mix(in oklch, var(--color-gold) 16%, transparent); }
+.rail-drawer .rail-item:not([aria-current]):hover { background: color-mix(in oklch, var(--color-ink) 6%, transparent); }
 .rail-scrim {
   position: fixed; inset: 0; z-index: 49;
-  background: rgb(5 4 3 / 0.5);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: radial-gradient(120% 100% at 0% 50%, rgb(5 4 3 / 0.55), rgb(5 4 3 / 0.25) 60%);
   opacity: 0; pointer-events: none;
-  transition: opacity 450ms ease;
+  transition: opacity 300ms ease;
 }
-.rail-scrim.is-open { opacity: 1; pointer-events: auto; }
+.rail-scrim.is-open { opacity: 1; pointer-events: auto; transition-duration: 500ms; }
+@media (prefers-reduced-motion: reduce) {
+  .rail-drawer, .rail-drawer.is-open, .rail-drawer .rail-item, .rail-drawer .btn-line, .rail-drawer .rail-tools, .rail-mark, .rail-scrim { transition: none !important; filter: none; }
+}
 
 /* page bars make room for the mark */
 @media (min-width: 1024px) {
