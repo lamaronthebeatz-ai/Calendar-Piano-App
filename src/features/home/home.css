@@ -139,8 +139,27 @@
 .hm-chapter.is-flip .hm-chapter-media { order: 2; }
 .hm-chapter-media { position: relative; height: 100%; overflow: hidden; }
 .hm-chapter-media .hm-layer { transform: scale(1.08); }
-.hm-chapter-media .hm-layer-bg { z-index: 1; } .hm-chapter-media .hm-layer-mid { z-index: 2; } .hm-chapter-media .hm-layer-fg { z-index: 3; }
-.hm-chapter-media::after { z-index: 4; }
+.hm-chapter-media .hm-layer-bg { z-index: 1; } .hm-chapter-media .hm-layer-mid { z-index: 4; } .hm-chapter-media .hm-layer-fg { z-index: 5; }
+/* stacking inside a panel (the media box has no stacking context of its own, so its layers interleave with the text):
+   bg 1 · edge fade 2 · heading 3 · figures 4 · foreground 5 · body text 6 */
+.hm-chapter-media::after { z-index: 2; }
+.hm-chapter-media .hm-layer-mid, .hm-chapter-media .hm-layer-fg {
+  -webkit-mask-image: linear-gradient(var(--fade-dir, 90deg), #000 var(--fade-from, 72%), transparent 98%);
+  mask-image: linear-gradient(var(--fade-dir, 90deg), #000 var(--fade-from, 72%), transparent 98%);
+}
+.hm-chapter.is-flip { --fade-dir: 270deg; }
+.hm-chapter-mark {
+  position: absolute; z-index: 3; top: var(--mark-top, 16%); left: var(--mark-left, 34%); right: 5vw; pointer-events: none;
+}
+.hm-chapter.is-flip .hm-chapter-mark { left: clamp(24px, 6vw, 96px); right: 31%; }
+/* where each heading sits so the figures cover only part of it */
+.hm-chapter:nth-child(1) { --mark-top: 16%; --mark-left: 38%; }
+.hm-chapter:nth-child(2) { --mark-top: 30%; }
+.hm-chapter:nth-child(3) { --mark-top: 20%; --mark-left: 41%; }
+.hm-chapter:nth-child(4) { --mark-top: 24%; }
+.hm-chapter-mark .hm-tilt { --depth: 8px; }
+.hm-chapter-mark .hm-chapter-title { font-size: clamp(44px, 6.6vw, 108px); line-height: 1.04; text-shadow: 0 1px 2px rgb(0 0 0 / 0.55), 0 4px 22px rgb(0 0 0 / 0.65), 0 10px 60px rgb(0 0 0 / 0.5); }
+.hm-chapter-text { position: relative; z-index: 6; align-self: end; padding-bottom: clamp(48px, 11vh, 120px) !important; }
 .hm-chapter-media .hm-layer img { object-position: 50% 42%; }
 .hm-chapter-media::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -221,8 +240,16 @@
 @media (max-width: 860px) {
   .hm-chapter, .hm-chapter.is-flip { grid-template-columns: 1fr; grid-template-rows: 54% 46%; align-items: start; }
   .hm-chapter.is-flip .hm-chapter-media { order: 0; }
-  .hm-chapter-media::after, .hm-chapter.is-flip .hm-chapter-media::after { background: linear-gradient(0deg, #0b0a08 2%, transparent 45%); }
-  .hm-chapter-text { padding: 4px 22px 0; margin-top: -40px; position: relative; }
+  .hm-chapter-media::after, .hm-chapter.is-flip .hm-chapter-media::after { background: linear-gradient(0deg, #0b0a08 2%, transparent 40%), linear-gradient(180deg, rgb(11 10 8 / 0.82) 0%, rgb(11 10 8 / 0.5) 22%, transparent 42%); }
+  .hm-chapter, .hm-chapter.is-flip { --fade-dir: 180deg; --fade-from: 92%; }
+  /* phones: the heading sits in the darkened top of the picture, where only heads, a scroll or a bow cross it */
+  .hm-chapter-mark, .hm-chapter.is-flip .hm-chapter-mark { top: max(64px, 7svh); left: 22px; right: 22px; }
+  /* in a tall frame the figures fill the middle: the heading steps in front of them and only the foreground passes over it */
+  .hm-chapter-mark { z-index: 5; }
+  .hm-chapter-media .hm-layer-fg { z-index: 6; }
+  .hm-chapter-text { z-index: 7; }
+  .hm-chapter-mark .hm-chapter-title { font-size: clamp(40px, 11vw, 64px); }
+  .hm-chapter-text { padding: 0 22px 0; align-self: start; margin-top: -2svh; }
   .hm-num { font-size: 46px; margin-bottom: 6px; }
   .hm-chapter-body { margin-top: 12px; font-size: 14.5px; line-height: 1.65; }
   .hm-caption { display: none; }
@@ -274,6 +301,12 @@
     .hm-chapter:nth-child(2) .hm-chapter-text { animation-timeline: view(), --c3; }
     .hm-chapter:nth-child(3) .hm-chapter-text { animation-timeline: view(), --c4; }
     .hm-chapter-text { animation: hm-text-in linear both; animation-timeline: view(); animation-range: entry 45% entry 100%; }
+    /* the heading rises more slowly than the figures in front of it, so they sweep across the words as the panel arrives */
+    .hm-chapter-mark { animation: hm-mark-in linear both; animation-timeline: view(); animation-range: entry 20% entry 100%; }
+    .hm-chapter:not(:last-child) .hm-chapter-mark { animation-name: hm-mark-in, hm-mark-out; animation-timing-function: linear; animation-fill-mode: both; animation-range: entry 20% entry 100%, entry 0% entry 80%; }
+    .hm-chapter:nth-child(1) .hm-chapter-mark { animation-timeline: view(), --c2; }
+    .hm-chapter:nth-child(2) .hm-chapter-mark { animation-timeline: view(), --c3; }
+    .hm-chapter:nth-child(3) .hm-chapter-mark { animation-timeline: view(), --c4; }
     .hm-chapter:nth-child(1)::after { animation: hm-sink linear both; animation-timeline: --c2; animation-range: entry 0% entry 100%; }
     .hm-chapter:nth-child(2)::after { animation: hm-sink linear both; animation-timeline: --c3; animation-range: entry 0% entry 100%; }
     .hm-chapter:nth-child(3)::after { animation: hm-sink linear both; animation-timeline: --c4; animation-range: entry 0% entry 100%; }
@@ -305,6 +338,8 @@
 @keyframes hm-push-mid { to { transform: scale(1.12) translateY(2%); } }
 @keyframes hm-push-fg { to { transform: scale(1.32) translateY(-10%); opacity: 0.15; } }
 @keyframes hm-text-out { to { transform: translateY(-40px); opacity: 0; } }
+@keyframes hm-mark-in { from { transform: translateY(28vh); opacity: 0; } 35% { opacity: 1; } to { transform: none; opacity: 1; } }
+@keyframes hm-mark-out { to { transform: translateY(-14vh) scale(1.06); opacity: 0; } }
 @keyframes hm-text-in { from { transform: translateY(56px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes hm-sink { to { opacity: 0.6; } }
 @keyframes hm-track { to { transform: translateX(calc(-100% + 100cqw)); } }

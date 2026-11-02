@@ -15,11 +15,11 @@ const fmt = (n: number) => n.toLocaleString('vi-VN')
 
 /** Paintings on the page: all public domain, from the open collection of Statens Museum for Kunst (SMK), Copenhagen. */
 const ART = {
-  duet: { fg: true, file: 'duet', artist: 'P. S. Krøyer', title: 'Song tấu', year: '1887', id: 'KMS1304' },
-  trompe: { fg: true, file: 'trompe', artist: 'Cornelius Norbertus Gijsbrechts', title: 'Tranh đánh lừa thị giác với vĩ cầm, sách nhạc và sáo dọc', year: '1672', id: 'KMS1908' },
-  party: { fg: true, file: 'music-party', artist: 'Pieter de Hooch', title: 'Buổi hoà nhạc gia đình', year: 'khoảng 1644 – 1683', id: 'KMSsp613' },
-  reading: { fg: false, file: 'reading', artist: 'Constantin Hansen', title: 'Hai em gái hoạ sĩ, Signe và Henriette, đọc sách', year: '1826', id: 'KMS3004' },
-  singing: { fg: true, file: 'concert', artist: 'Otto Haslund', title: 'Buổi hoà nhạc: các con của hoạ sĩ và bạn chơi', year: '1887', id: 'KMS1306' },
+  duet: { ar: 0.8696, fg: true, file: 'duet', artist: 'P. S. Krøyer', title: 'Song tấu', year: '1887', id: 'KMS1304' },
+  trompe: { ar: 0.6739, fg: true, file: 'trompe', artist: 'Cornelius Norbertus Gijsbrechts', title: 'Tranh đánh lừa thị giác với vĩ cầm, sách nhạc và sáo dọc', year: '1672', id: 'KMS1908' },
+  party: { ar: 1.1429, fg: true, file: 'music-party', artist: 'Pieter de Hooch', title: 'Buổi hoà nhạc gia đình', year: 'khoảng 1644 – 1683', id: 'KMSsp613' },
+  reading: { ar: 0.8722, fg: false, file: 'reading', artist: 'Constantin Hansen', title: 'Hai em gái hoạ sĩ, Signe và Henriette, đọc sách', year: '1826', id: 'KMS3004' },
+  singing: { ar: 1.1952, fg: true, file: 'concert', artist: 'Otto Haslund', title: 'Buổi hoà nhạc: các con của hoạ sĩ và bạn chơi', year: '1887', id: 'KMS1306' },
 }
 type Art = (typeof ART)[keyof typeof ART]
 
@@ -224,15 +224,20 @@ function Chapter({ n, art, eyebrow, title, children, to, cta, extra, flip }: {
 }) {
   return (
       <section className={`hm-chapter${flip ? ' is-flip' : ''}`}>
-        <div className="hm-chapter-media" role="img" aria-label={`${art.artist}, ${art.title} (${art.year})`}>
+        <div className="hm-chapter-media" style={{ '--ar': art.ar } as CSSProperties} role="img" aria-label={`${art.artist}, ${art.title} (${art.year})`}>
           <Layer name="bg" src={art.file} />
           <Layer name="mid" src={art.file} />
           {art.fg && <Layer name="fg" src={art.file} />}
         </div>
+        {/* the heading lives inside the picture: in front of the room, behind the figures, who pass over it */}
+        <div className="hm-chapter-mark">
+          <div className="hm-tilt">
+            <p className="hm-num">{n}</p>
+            <p className="brand-eyebrow">{eyebrow}</p>
+            <h2 className="hm-chapter-title">{title}</h2>
+          </div>
+        </div>
         <div className="hm-chapter-text hm-reveal">
-          <p className="hm-num">{n}</p>
-          <p className="brand-eyebrow">{eyebrow}</p>
-          <h2 className="hm-chapter-title">{title}</h2>
           <div className="hm-chapter-body">{children}</div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <Link to={to} className="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-medium">
