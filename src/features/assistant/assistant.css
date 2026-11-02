@@ -10,7 +10,9 @@
 .as-fab::after { content: ''; position: absolute; inset: -4px; border-radius: inherit; border: 2px solid color-mix(in oklch, var(--color-gold) 50%, transparent); animation: as-halo 2.8s ease-out infinite; }
 .as-fab:hover { transform: scale(1.08) rotate(8deg); }
 .as-fab svg { animation: as-twinkle 3.6s ease-in-out infinite; }
-@media (min-width: 1024px) { .as-fab { left: 284px; bottom: 28px; } }
+@media (min-width: 1024px) { .as-fab { left: 24px; bottom: 28px; } }
+/* the home page is a picture gallery: no floating buttons on it (the assistant stays in ⌘K and the menu's search) */
+html[data-route="home"] .as-fab { display: none; }
 
 .as-root { position: fixed; inset: 0; z-index: 72; }
 .as-scrim { position: absolute; inset: 0; background: rgb(10 9 8 / 0.35); backdrop-filter: blur(3px); animation: as-fade 0.25s ease-out both; }

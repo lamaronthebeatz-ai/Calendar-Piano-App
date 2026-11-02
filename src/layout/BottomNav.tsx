@@ -52,7 +52,7 @@ export function BottomNav({ hidden = false }: { hidden?: boolean }) {
   return (
     <nav
       className={clsx(
-        'vt-bottom-nav glass fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] pb-[env(safe-area-inset-bottom)] transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden',
+        'vt-bottom-nav glass nav-glass fixed inset-x-0 bottom-0 z-40 flex items-stretch justify-around border-t border-[var(--color-border)] pb-[env(safe-area-inset-bottom)] transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden',
         // Slide fully off-screen, including the raised "+" button above the bar.
         hidden && 'translate-y-[calc(100%+1.75rem)]',
       )}

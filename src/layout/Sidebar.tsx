@@ -9,7 +9,7 @@ import { applyThemeToDocument, updateSettings } from '../services/settingsServic
 import { Copyright } from '../components/Copyright'
 import { DonateLink } from '../features/donate/Donate'
 
-export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function Sidebar({ open, onClose, everywhere }: { open: boolean; onClose: () => void; everywhere?: boolean }) {
   const settings = useSettings()
   const setSearchOpen = useUIStore((s) => s.setSearchOpen)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
@@ -45,7 +45,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
 
   return (
     <aside
-      className={clsx('vt-sidebar side-rail rail-drawer hidden w-[272px] flex-col px-4 py-6 lg:flex', open && 'is-open')}
+      className={clsx('vt-sidebar side-rail rail-drawer w-[272px] flex-col px-4 py-6', everywhere ? 'flex' : 'hidden lg:flex', open && 'is-open')}
       inert={!open}
       aria-hidden={!open}
       aria-label="Menu"

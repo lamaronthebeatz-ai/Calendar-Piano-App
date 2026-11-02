@@ -47,6 +47,11 @@ export function AppShell() {
     addEventListener('keydown', onKey)
     return () => removeEventListener('keydown', onKey)
   }, [railOpen])
+  // on the home page the mark is the only way in on every screen: the tab bar stays out of the gallery
+  useEffect(() => {
+    if (fullBleed) document.documentElement.dataset.route = 'home'
+    else delete document.documentElement.dataset.route
+  }, [fullBleed])
   // the reader has its own top bar; there the mark would sit on its buttons
   const reading = /^\/curriculum\/[^/]+/.test(pathname)
   useEdgeSwipeBack(mainRef)
@@ -59,14 +64,14 @@ export function AppShell() {
           onClick={() => setRailOpen(true)}
           aria-label="Mở menu"
           aria-expanded={railOpen}
-          className={clsx('rail-mark hidden lg:flex', railOpen && 'is-hidden')}
+          className={clsx('rail-mark', fullBleed ? 'flex' : 'hidden lg:flex', railOpen && 'is-hidden')}
         >
           <BrandMark width={30} height={30} />
           <span className="rail-mark-bars" aria-hidden><i /><i /></span>
         </button>
       )}
-      <div className={clsx('rail-scrim hidden lg:block', railOpen && 'is-open')} onClick={() => setRailOpen(false)} aria-hidden />
-      <Sidebar open={railOpen} onClose={() => setRailOpen(false)} />
+      <div className={clsx('rail-scrim', fullBleed ? 'block' : 'hidden lg:block', railOpen && 'is-open')} onClick={() => setRailOpen(false)} aria-hidden />
+      <Sidebar open={railOpen} onClose={() => setRailOpen(false)} everywhere={fullBleed} />
       <main
         ref={mainRef}
         className={clsx('app-main relative min-w-0 flex-1 overflow-hidden lg:pb-0', fullBleed ? 'pb-0' : clsx('transition-[padding] duration-300', navHidden ? 'pb-0' : 'pb-16'))}
@@ -75,7 +80,7 @@ export function AppShell() {
           <Outlet />
         </div>
       </main>
-      <BottomNav hidden={navHidden} />
+      <BottomNav hidden={navHidden || fullBleed} />
 
       <QuickActionsSheet />
       <LessonFormModal />

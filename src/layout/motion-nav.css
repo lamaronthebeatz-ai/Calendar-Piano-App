@@ -191,3 +191,24 @@ html.rubber-band main .overflow-y-auto { overscroll-behavior-y: none; }
 @media (prefers-reduced-motion: reduce) {
   .rail-drawer, .rail-drawer .rail-item, .rail-mark, .rail-scrim { transition: none; }
 }
+
+/* phones: the mark clears the notch, the glass sheet leaves a strip of the page visible */
+.rail-mark { top: max(12px, calc(env(safe-area-inset-top) + 8px)); }
+@media (max-width: 1023.98px) {
+  .rail-mark { left: 14px; }
+  .rail-drawer {
+    width: min(300px, calc(100vw - 56px)) !important;
+    top: max(10px, calc(env(safe-area-inset-top) + 6px));
+    bottom: max(10px, calc(env(safe-area-inset-bottom) + 6px));
+    overflow-y: auto;
+  }
+}
+
+/* The tab bar is the same smoked glass as the drawer and the map's panels: one material for every menu. */
+.nav-glass {
+  background: color-mix(in oklch, var(--color-surface) 62%, transparent) !important;
+  backdrop-filter: blur(28px) saturate(1.5);
+  -webkit-backdrop-filter: blur(28px) saturate(1.5);
+  border-top-color: color-mix(in oklch, var(--color-gold) 20%, transparent) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05), 0 -18px 40px -24px rgb(0 0 0 / 0.6);
+}
