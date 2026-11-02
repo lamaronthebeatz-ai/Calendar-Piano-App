@@ -1,11 +1,11 @@
 import { useRef, useState, type ChangeEvent, type ReactNode } from 'react'
 import { useSettings } from '../../hooks/useLiveData'
-import { applyThemeToDocument, updateSettings } from '../../services/settingsService'
+import { updateSettings } from '../../services/settingsService'
 import { downloadBackupFile, exportBackup, importBackup } from '../../services/backup'
 import { Field, SegmentedControl, SelectInput, TextInput } from '../../components/fields'
 import { Button } from '../../components/Button'
 import { Dialog } from '../../components/Dialog'
-import { CloudIcon, DownloadIcon, MoonIcon, SparkleIcon, SunIcon, UploadIcon } from '../../components/icons'
+import { DownloadIcon, SparkleIcon, UploadIcon } from '../../components/icons'
 import { useUIStore } from '../../store/uiStore'
 import type { LessonLocation } from '../../types'
 import { LOCATION_PALETTE } from '../../utils/color'
@@ -118,32 +118,6 @@ export function SettingsPage() {
               ))}
             </SelectInput>
           </Field>
-        </Section>
-
-        <Section title="Giao diện">
-          <div className="flex gap-2">
-            {(
-              [
-                { value: 'light', label: 'Sáng', icon: SunIcon },
-                { value: 'dark', label: 'Tối', icon: MoonIcon },
-                { value: 'system', label: 'Hệ thống', icon: CloudIcon },
-              ] as const
-            ).map((opt) => (
-              <button
-                key={opt.value}
-                onClick={() => {
-                  updateSettings({ theme: opt.value })
-                  applyThemeToDocument(opt.value)
-                }}
-                className={`flex flex-1 flex-col items-center gap-1.5 rounded-xl border py-3 text-[12.5px] font-medium transition-colors ${
-                  settings.theme === opt.value ? 'border-[var(--color-accent)] bg-[var(--color-status-confirmed-bg)] text-[var(--color-accent)]' : 'border-[var(--color-border)] text-[var(--color-ink-muted)]'
-                }`}
-              >
-                <opt.icon width={18} height={18} />
-                {opt.label}
-              </button>
-            ))}
-          </div>
         </Section>
 
         <Section title="Dữ liệu & sao lưu">

@@ -1,16 +1,13 @@
 import { useLayoutEffect, useRef, type CSSProperties } from 'react'
 import { matchPath, NavLink, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
-import { BrandMark, MoonIcon, PlusIcon, SearchIcon, SunIcon } from '../components/icons'
+import { BrandMark, PlusIcon, SearchIcon } from '../components/icons'
 import { navItems } from './navItems'
 import { useUIStore } from '../store/uiStore'
-import { useSettings } from '../hooks/useLiveData'
-import { applyThemeToDocument, updateSettings } from '../services/settingsService'
 import { Copyright } from '../components/Copyright'
 import { DonateLink } from '../features/donate/Donate'
 
 export function Sidebar({ open, onClose, everywhere }: { open: boolean; onClose: () => void; everywhere?: boolean }) {
-  const settings = useSettings()
   const setSearchOpen = useUIStore((s) => s.setSearchOpen)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
 
@@ -36,12 +33,6 @@ export function Sidebar({ open, onClose, everywhere }: { open: boolean; onClose:
     // measured again on every opening: while the drawer is closed its items sit offset for the entrance animation
   }, [active, open])
 
-  const isDark = settings.theme === 'dark'
-  const toggleTheme = async () => {
-    const next = settings.theme === 'dark' ? 'light' : settings.theme === 'light' ? 'system' : 'dark'
-    await updateSettings({ theme: next })
-    applyThemeToDocument(next)
-  }
 
   return (
     <aside
@@ -117,13 +108,6 @@ export function Sidebar({ open, onClose, everywhere }: { open: boolean; onClose:
           <SearchIcon width={16} height={16} />
           Tìm kiếm
           <kbd className="ml-auto rounded-md border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-1.5 py-0.5 font-sans text-[10px] text-[var(--color-ink-faint)]">⌘K</kbd>
-        </button>
-        <button
-          onClick={toggleTheme}
-          aria-label="Đổi giao diện sáng/tối"
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-raised)] hover:text-[var(--color-gold)]"
-        >
-          {isDark ? <MoonIcon width={16} height={16} /> : <SunIcon width={16} height={16} />}
         </button>
       </div>
       <Copyright className="mt-3" />

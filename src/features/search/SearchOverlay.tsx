@@ -3,11 +3,10 @@ import { createPortal } from 'react-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { Avatar } from '../../components/Badge'
-import { BookIcon, ClockIcon, GraduationIcon, LockIcon, MoonIcon, PlusIcon, SearchIcon, ShuffleIcon, SparkleIcon, UsersIcon } from '../../components/icons'
+import { BookIcon, ClockIcon, GraduationIcon, LockIcon, PlusIcon, SearchIcon, ShuffleIcon, SparkleIcon, UsersIcon } from '../../components/icons'
 import { usePrivateUnlocked } from '../../components/privateLock'
 import { useUIStore } from '../../store/uiStore'
-import { useSettings, useStudents, useTimetableSlots } from '../../hooks/useLiveData'
-import { applyThemeToDocument, updateSettings } from '../../services/settingsService'
+import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
 import { navItems } from '../../layout/navItems'
 import { WEEKDAY_NAMES } from '../../utils/date'
 import { formatTimeRange } from '../../utils/time'
@@ -75,7 +74,6 @@ function Palette({ onClose }: { onClose: () => void }) {
   const openDetail = useUIStore((s) => s.openDetail)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
   const openCreateStudent = useUIStore((s) => s.openCreateStudent)
-  const settings = useSettings()
   const students = useStudents()
   const slots = useTimetableSlots()
   const privateOpen = usePrivateUnlocked()
@@ -114,7 +112,6 @@ function Palette({ onClose }: { onClose: () => void }) {
       { id: 'nav/solfege', group: 'Đi tới', title: 'Solfège: đoán nốt, đoán quãng', hint: 'Luyện tai và đọc nốt: 12 phím, quãng 2 thứ – quãng 8', icon: <span className="text-[15px]">𝄞</span>, run: () => go('/solfege') },
       { id: 'nav/tools', group: 'Đi tới', title: 'Bảng tính nhạc lý', hint: 'Vòng quãng năm, hợp âm, jazz, âm giai, dịch giọng, nhịp', icon: <span className="text-[15px]">♫</span>, run: () => go('/tools') },
     ]
-    const cycle = settings.theme === 'dark' ? 'light' : settings.theme === 'light' ? 'system' : 'dark'
     const actions: Item[] = [
       ...(privateOpen
         ? [
@@ -122,16 +119,6 @@ function Palette({ onClose }: { onClose: () => void }) {
             { id: 'act-student', group: 'Thao tác', title: 'Thêm học viên', icon: <UsersIcon width={16} height={16} />, run: () => (close(), navigate('/students'), openCreateStudent()) },
           ]
         : []),
-      {
-        id: 'act-theme',
-        group: 'Thao tác',
-        title: `Giao diện: ${cycle === 'dark' ? 'tối' : cycle === 'light' ? 'sáng' : 'theo hệ thống'}`,
-        icon: <MoonIcon width={16} height={16} />,
-        run: () => {
-          void updateSettings({ theme: cycle })
-          applyThemeToDocument(cycle)
-        },
-      },
       { id: 'act-donate', group: 'Thao tác', title: 'Ủng hộ Lamar', hint: 'Mời một ly cà phê ☕', icon: <span className="text-[15px]">☕</span>, run: () => (close(), openDonate()) },
       ...(index ? [{ id: 'act-random', group: 'Thao tác', title: 'Mở một bài ngẫu nhiên', hint: 'Thư viện', icon: <ShuffleIcon width={16} height={16} />, run: () => go(index.randomArticle().path) }] : []),
     ]
@@ -194,7 +181,7 @@ function Palette({ onClose }: { onClose: () => void }) {
     return out
     // go/close are recreated each render but only read state that the listed deps cover.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, index, students, slots, privateOpen, settings.theme])
+  }, [query, index, students, slots, privateOpen])
 
   const tokens = useMemo(() => fold(query).split(/\s+/).filter(Boolean), [query])
   const current = Math.min(active, Math.max(0, items.length - 1))

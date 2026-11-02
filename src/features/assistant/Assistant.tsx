@@ -8,7 +8,6 @@ import { useSettings, useStudents, useTimetableSlots } from '../../hooks/useLive
 import { useUIStore } from '../../store/uiStore'
 import { navItems } from '../../layout/navItems'
 import { db } from '../../data/db'
-import { applyThemeToDocument, updateSettings } from '../../services/settingsService'
 import { checkConflicts, deleteSlot, moveSlot } from '../../services/timetableService'
 import { downloadBackupFile, exportBackup } from '../../services/backup'
 import { startTour } from '../onboarding/tour'
@@ -41,7 +40,7 @@ interface Msg {
 const EXAMPLES: [string, string[]][] = [
   ['Học viên và lịch', ['Tạo học viên mới Nguyễn Minh Anh', 'Thêm buổi cho Minh Anh thứ 3 lúc 17h30, 60 phút', 'Dời buổi của Minh Anh sang thứ 5 lúc 18h', 'Xoá buổi thứ 7 của Minh Anh', 'Hôm nay dạy ai?', 'Buổi tiếp theo']],
   ['Dịch chuyển', ['Đi đến hoà âm', 'Mở sách Neuhaus', 'Vòng quãng năm', 'Sổ nghiên cứu', 'Cài đặt']],
-  ['Tiện ích', ['Giao diện tối', 'Sao lưu dữ liệu', 'Hướng dẫn sử dụng', 'Khoá lịch']],
+  ['Tiện ích', ['Sao lưu dữ liệu', 'Hướng dẫn sử dụng', 'Khoá lịch']],
 ]
 const PRIVATE_PATHS = new Set(['/', '/students'])
 
@@ -248,10 +247,6 @@ function Panel() {
         const label = cmd.next ? 'Các buổi sắp tới' : cmd.day !== undefined ? `${WEEKDAY_NAMES[cmd.day]}` : cmd.who ? `Lịch của ${cmd.who.name}` : 'Lịch tuần'
         return say({ type: 'slots', mode: 'view', text: list.length ? `${label}: ${list.length} buổi.` : `${label}: không có buổi nào.`, slots: list })
       }
-      case 'theme':
-        await updateSettings({ theme: cmd.theme })
-        applyThemeToDocument(cmd.theme)
-        return say({ type: 'text', tone: 'ok', text: `Đã chuyển giao diện ${cmd.theme === 'dark' ? 'tối' : cmd.theme === 'light' ? 'sáng' : 'theo hệ thống'}.` })
       case 'backup': {
         const outcome = await downloadBackupFile(await exportBackup())
         return say({ type: 'text', tone: outcome === 'saved' ? 'ok' : 'warn', text: outcome === 'saved' ? 'Đã xuất tệp sao lưu (lịch, học viên, ghi chú).' : 'Chưa lưu được tệp sao lưu — thử trong Cài đặt.', action: { label: 'Mở Cài đặt', run: () => go('/settings') } })

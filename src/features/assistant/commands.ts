@@ -14,7 +14,6 @@ export type Command =
   | { kind: 'edit-student'; who?: Student; candidates: Student[] }
   | { kind: 'profile'; who?: Student; candidates: Student[] }
   | { kind: 'view'; day?: DayOfWeek; next?: boolean; who?: Student }
-  | { kind: 'theme'; theme: 'light' | 'dark' | 'system' }
   | { kind: 'backup' }
   | { kind: 'tour' }
   | { kind: 'lock' }
@@ -105,9 +104,6 @@ export function parse(text: string, students: Student[], slots: TimetableSlot[])
   const slotsOf = (s?: Student, day?: DayOfWeek) => slots.filter((x) => (!s || x.studentId === s.id) && (day === undefined || x.dayOfWeek === day)).sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
 
   // Utilities first: they are short and unambiguous.
-  if (/\b(giao dien|che do|theme|nen)\b/.test(f) && /\b(toi|dem|dark)\b/.test(f)) return { kind: 'theme', theme: 'dark' }
-  if (/\b(giao dien|che do|theme|nen)\b/.test(f) && /\b(sang|light)\b/.test(f)) return { kind: 'theme', theme: 'light' }
-  if (/\b(giao dien|che do|theme)\b/.test(f) && /he thong|tu dong|auto/.test(f)) return { kind: 'theme', theme: 'system' }
   if (/sao luu|xuat du lieu|backup/.test(f)) return { kind: 'backup' }
   if (/ung ho|donate|ca phe|cafe|coffee/.test(f)) return { kind: 'donate' }
   if (/huong dan|tour|cach dung/.test(f)) return { kind: 'tour' }
