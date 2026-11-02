@@ -79,12 +79,6 @@ const reduced = () => typeof window !== 'undefined' && window.matchMedia?.('(pre
 /** "*Title*" in event text becomes italics. */
 const rich = (s: string) => s.split(/\*([^*]+)\*/g).map((t, i) => (i % 2 ? <em key={i}>{t}</em> : t))
 
-/** Wikipedia page backing an event: the place's own page for a one-event place, else the linked article's page. */
-function sourceOf(ev: MapEvent, pl: Place) {
-  const wiki = pl.events.length > 1 ? findArticle(ev.slugs[0])?.wiki ?? pl.wiki : pl.wiki
-  return { title: wiki.replace(/_/g, ' '), url: `https://en.wikipedia.org/wiki/${encodeURIComponent(wiki.replace(/ /g, '_'))}` }
-}
-
 /** Text a search matches against: names, country, event text and the titles of linked articles. */
 const HAYSTACK = new Map(PLACES.map((pl) => [pl.id, normalize([pl.name, pl.local, pl.country, ...pl.events.flatMap((ev) => [ev.text, ...ev.slugs.map((s) => findArticle(s)?.title ?? '')])].join(' '))]))
 
@@ -514,7 +508,7 @@ export function MusicMap() {
 
       {/* top: search, regions, layers */}
       <div className="mm-top">
-        <div className="flex items-center gap-2">
+        <div className="relative flex items-center gap-2">
           <label className="mm-search">
             <SearchIcon width={16} height={16} className="shrink-0 text-[var(--color-ink-faint)]" />
             <input
@@ -529,6 +523,10 @@ export function MusicMap() {
               placeholder="Tìm nơi, nhạc sĩ, tác phẩm…"
             />
             {query && <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-0.5 text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]"><XIcon width={15} height={15} /></button>}
+          </label>
+          <button onClick={() => setLayers((v) => !v)} aria-expanded={layers} className={clsx('mm-round', layers && 'is-on')} aria-label="Thời kỳ và hành trình">
+            <FilterIcon width={17} height={17} />
+          </button>
             {q && (
               <div className="mm-results">
                 {placeHits.length > 0 && <p className="mm-results-h">Địa điểm</p>}
@@ -557,12 +555,8 @@ export function MusicMap() {
                 {!placeHits.length && !subjectHits.length && !eventHits.length && <p className="px-3 py-2 text-[13px] text-[var(--color-ink-faint)]">Không có nơi, người hay sự kiện nào khớp.</p>}
               </div>
             )}
-          </label>
-          <button onClick={() => setLayers((v) => !v)} aria-expanded={layers} className={clsx('mm-round', layers && 'is-on')} aria-label="Thời kỳ và hành trình">
-            <FilterIcon width={17} height={17} />
-          </button>
         </div>
-        <div className="no-scrollbar mt-2 flex gap-1.5 overflow-x-auto" role="tablist" aria-label="Vùng">
+        <div className={clsx('no-scrollbar mt-2 flex gap-1.5 overflow-x-auto transition-opacity', q && 'pointer-events-none opacity-0')} role="tablist" aria-label="Vùng">
           {(['world', ...Object.keys(REGIONS)] as (Region | 'world')[]).map((r) => (
             <button key={r} role="tab" aria-selected={region === r} onClick={() => chooseRegion(r)} className={clsx('mm-chip', region === r && 'is-on')}>
               {r === 'world' ? 'Thế giới' : REGIONS[r].title}
@@ -712,7 +706,7 @@ function PlaceTree({ place, shows, thumbs, focusEv, back, onClose }: {
             <h4><span>{g.label}</span>{g.span && <small>{g.span}</small>}</h4>
             <ol>
               {g.items.map(({ ev, i }) => {
-                const era = eraOf(ev, place), kind = KINDS[kindOf(ev)], src = sourceOf(ev, place), thumb = thumbs?.[ev.slugs[0]]
+                const era = eraOf(ev, place), kind = KINDS[kindOf(ev)], thumb = thumbs?.[ev.slugs[0]]
                 return (
                   <li key={i} id={`mm-ev-${place.id}-${i}`} className={clsx('mm-leaf', !shows(ev) && 'is-out', flash === i && 'is-flash')} style={{ '--c': eraColor(era) } as CSSProperties}>
                     <div className="flex gap-3">
@@ -727,7 +721,6 @@ function PlaceTree({ place, shows, thumbs, focusEv, back, onClose }: {
                         <Link key={s} to={`/theory/${s}`} className="mm-link">{findArticle(s)?.title ?? s} <ArrowUpRightIcon width={12} height={12} /></Link>
                       ))}
                     </div>
-                    <a href={src.url} target="_blank" rel="noreferrer" className="mt-1 inline-block text-[11px] text-[var(--color-ink-faint)] underline hover:text-[var(--color-ink)]">Nguồn: Wikipedia — {src.title}</a>
                   </li>
                 )
               })}

@@ -160,16 +160,19 @@
 .mm-cluster text { fill: #1b130b; font-weight: 700; text-anchor: middle; pointer-events: none; }
 .mm-year-name { font-style: italic; }
 .mm-results {
-  position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 30;
+  position: absolute; left: 0; right: 50px; top: calc(100% + 6px); z-index: 30;
   display: grid;
   border-radius: 14px;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface-raised);
+  border: 1px solid color-mix(in oklch, var(--color-gold) 22%, transparent);
+  background: color-mix(in oklch, var(--color-surface) 64%, transparent);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
   box-shadow: 0 16px 36px -14px rgb(0 0 0 / 0.45);
   padding: 4px;
 }
+.mm-results button { text-shadow: 0 1px 6px rgb(0 0 0 / 0.55); }
 .mm-results button { border-radius: 10px; padding: 8px 10px; text-align: left; font-size: 13.5px; }
-.mm-results button:hover { background: var(--color-surface-sunken); }
+.mm-results button:hover { background: color-mix(in oklch, var(--color-gold) 12%, transparent); }
 .mm-thumb { width: 48px; height: 48px; flex-shrink: 0; border-radius: 12px; object-fit: cover; background: var(--color-surface-sunken); }
 .mm-thumb.is-drawing { object-fit: contain; background: #fff; padding: 3px; }
 .mm-journey { position: relative; display: grid; gap: 14px; padding-left: 34px; }
