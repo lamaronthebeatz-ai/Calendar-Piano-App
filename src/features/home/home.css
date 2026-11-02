@@ -76,7 +76,7 @@
 /* each line is a mask for the rise-in: padded so Vietnamese stacked accents above and descenders below stay inside it,
    and the gradient span padded too, since background-clip: text only paints inside its own box */
 .hm-line { display: block; overflow: hidden; padding: 0.2em 0.1em 0.16em 0; margin: -0.2em 0 -0.16em; }
-.hm-line > span { display: inline-block; padding: 0.04em 0.12em 0.06em 0; transform: translateY(115%); animation: hm-line-up 1300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.hm-line > span { display: inline-block; padding: 0.04em 0.12em 0.06em 0; background-origin: border-box; -webkit-background-clip: text; background-clip: text; transform: translateY(115%); animation: hm-line-up 1300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .hm-line:nth-child(1) > span { animation-delay: 480ms; }
 .hm-line:nth-child(2) > span { animation-delay: 640ms; }
 @keyframes hm-line-up { to { transform: none; } }
@@ -225,7 +225,11 @@
 @media (orientation: portrait) {
   .hm-title-block { z-index: 3; top: max(88px, 12svh); bottom: auto; }
   .hm-stage-veil { background: linear-gradient(0deg, #0b0a08 6%, rgb(11 10 8 / 0.5) 32%, rgb(11 10 8 / 0) 58%), linear-gradient(180deg, rgb(11 10 8 / 0.7), rgb(11 10 8 / 0) 30%); }
-  .hm-title-block .hm-hero-title { text-shadow: 0 2px 30px rgb(0 0 0 / 0.6); }
+  /* a soft shadow on the plain line only: under background-clip:text a text-shadow (and Safari's edge of the clipped
+     gradient box) draws a dark rule beneath the gold words, so the gold line gets a drop-shadow filter instead */
+  .hm-title-block .hm-line:first-child { text-shadow: 0 2px 30px rgb(0 0 0 / 0.6); }
+  .hm-title-block .hm-line .text-gold-gradient { text-shadow: none; }
+  .hm-title-block .hm-line:last-child { filter: drop-shadow(0 2px 18px rgb(0 0 0 / 0.55)); }
 }
 
 /* phones and portrait tablets: picture on top, words beneath, same sliding stack */
