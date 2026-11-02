@@ -218,3 +218,6 @@ html.rubber-band main .overflow-y-auto { overscroll-behavior-y: none; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) :is(.rail-drawer, .nav-glass) { backdrop-filter: blur(32px) saturate(1.7) brightness(0.8); -webkit-backdrop-filter: blur(32px) saturate(1.7) brightness(0.8); }
 }
+
+/* home page: the mark steps aside while scrolling down (HomePage useMarkAutoHide) */
+html[data-hm-down] .rail-mark:not(.is-hidden) { opacity: 0; transform: translateY(-14px) scale(0.92); pointer-events: none; }

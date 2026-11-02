@@ -80,6 +80,34 @@ function useHeroLight(root: React.RefObject<HTMLDivElement | null>) {
   }, [root])
 }
 
+/**
+ * The floating Lamar mark steps aside while you scroll down through the gallery and comes back as soon as you scroll
+ * up (or reach the top). One passive listener that only flips an attribute when the direction changes.
+ */
+function useMarkAutoHide(root: React.RefObject<HTMLDivElement | null>) {
+  useEffect(() => {
+    const el = root.current
+    if (!el) return
+    const html = document.documentElement
+    let last = el.scrollTop
+    const onScroll = () => {
+      const y = el.scrollTop
+      if (Math.abs(y - last) < 12) return
+      const down = y > last && y > 80
+      if (down !== (html.dataset.hmDown === '1')) {
+        if (down) html.dataset.hmDown = '1'
+        else delete html.dataset.hmDown
+      }
+      last = y
+    }
+    el.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      el.removeEventListener('scroll', onScroll)
+      delete html.dataset.hmDown
+    }
+  }, [root])
+}
+
 /** Gold dust drifting up through the candlelight: fixed positions and timings, so it is the same on every visit. */
 const DUST = Array.from({ length: 18 }, (_, i) => ({
   left: `${(i * 37 + 11) % 100}%`,
@@ -153,6 +181,7 @@ export function HomePage() {
   const navigate = useNavigate()
   useRevealFallback(root)
   useHeroLight(root)
+  useMarkAutoHide(root)
   const books = SHELF_BOOKS.filter((b) => b.coverImage)
 
   return (
@@ -240,18 +269,14 @@ export function HomePage() {
       </Chapter>
       </div>
 
-      {/* 4 · a word the size of the screen slides across as you scroll */}
-      <div className="hm-bigword" aria-hidden>
-        <span>Lamar's Book · Đọc kỹ · Lamar's Book · Đọc kỹ ·</span>
-      </div>
-
-      {/* 5 · the shelf as a gallery: scrolling down carries the covers sideways while the room stays pinned */}
+      {/* 4 · the shelf as a gallery: scrolling down carries the covers sideways while the room stays pinned */}
       <section className="hm-hshelf" style={{ '--n': books.length } as CSSProperties}>
         <div className="hm-hshelf-pin">
           <div className="hm-shelf-head hm-reveal">
             <p className="brand-eyebrow">Tủ sách</p>
             <h2 className="hm-shelf-title">Đọc như ấn phẩm, <em>in thành PDF</em></h2>
             <p className="hm-shelf-sub">{fmt(books.length)} cuốn · bấm một bìa để mở</p>
+            <p className="hm-shelf-hint" aria-hidden>Cuộn xuống để lướt qua tủ sách <span>→</span></p>
           </div>
           <div className="hm-hshelf-view">
             <div className="hm-hshelf-track">
@@ -276,7 +301,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 6 · sign-off and picture credits */}
+      {/* 5 · sign-off and picture credits */}
       <footer className="hm-foot">
         <img src={logoFull} alt="Lamar" className="hm-foot-logo" />
         <div className="gold-rule mx-auto my-8 w-40" />

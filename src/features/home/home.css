@@ -150,21 +150,15 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* 4 · the big outlined word */
-.hm-bigword { overflow: hidden; padding: clamp(40px, 8vh, 90px) 0; border-top: 1px solid rgb(226 189 120 / 0.1); }
-.hm-bigword span {
-  display: inline-block; white-space: nowrap; font-family: var(--font-display); font-style: italic; font-weight: 500;
-  font-size: clamp(72px, 15vw, 220px); line-height: 1; color: transparent;
-  -webkit-text-stroke: 1px rgb(226 189 120 / 0.45);
-  transform: translateX(-20%);
-}
-
 /* 5 · shelf gallery */
-.hm-hshelf { position: relative; }
+.hm-hshelf { position: relative; border-top: 1px solid rgb(226 189 120 / 0.12); }
 .hm-hshelf-pin { padding: clamp(80px, 12vh, 130px) 0 clamp(40px, 8vh, 80px); overflow: hidden; }
 .hm-shelf-head { padding: 0 clamp(20px, 7vw, 112px); }
 .hm-shelf-title { margin-top: 12px; font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.015em; }
 .hm-shelf-sub { margin-top: 8px; font-size: 13px; color: var(--faint); }
+.hm-shelf-hint { display: none; margin-top: 14px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.hm-shelf-hint span { display: inline-block; animation: hm-nudge 1.8s ease-in-out infinite; }
+@keyframes hm-nudge { 50% { transform: translateX(6px); } }
 .hm-hshelf-view { container-type: inline-size; margin-top: clamp(28px, 5vh, 52px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .hm-hshelf-view::-webkit-scrollbar { display: none; }
 .hm-hshelf-track { display: flex; gap: clamp(22px, 3vw, 44px); width: max-content; padding: 20px clamp(20px, 7vw, 112px) 36px; }
@@ -227,17 +221,14 @@
     .hm-chapter:nth-child(2)::after { animation: hm-sink linear both; animation-timeline: --c3; animation-range: entry 0% entry 100%; }
     .hm-chapter:nth-child(3)::after { animation: hm-sink linear both; animation-timeline: --c4; animation-range: entry 0% entry 100%; }
 
-    /* the giant word drifts across while it is on screen */
-    .hm-bigword span { animation: hm-bigword linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
-
     /* shelf: the section is tall, its inner room is pinned, and the track slides sideways as you scroll through it */
-    .hm-hshelf { height: calc(var(--vh) + var(--n) * 140px); view-timeline-name: --shelf; }
+    .hm-hshelf { height: calc(var(--vh) + var(--n) * 110px); view-timeline-name: --shelf; }
     .hm-hshelf-pin { position: sticky; top: 0; height: var(--vh); display: flex; flex-direction: column; justify-content: center; padding: 0; }
     .hm-hshelf-view { overflow: visible; scroll-snap-type: none; }
     .hm-hshelf-track { animation: hm-track linear both; animation-timeline: --shelf; animation-range: contain 0% contain 100%; }
     .hm-hshelf-progress { display: block; }
     .hm-hshelf-progress span { animation: hm-progress linear both; animation-timeline: --shelf; animation-range: contain 0% contain 100%; }
-    .hm-shelf-head { animation: hm-text-in linear both; animation-timeline: --shelf; animation-range: entry 30% entry 100%; }
+    .hm-shelf-hint { display: block; }
   }
 }
 @keyframes hm-hero-drift { to { transform: translateY(18%); opacity: 0.35; } }
@@ -246,7 +237,6 @@
 @keyframes hm-media-in { from { transform: scale(1.14); opacity: 0.35; } to { transform: none; opacity: 1; } }
 @keyframes hm-text-in { from { transform: translateY(56px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes hm-sink { to { opacity: 0.6; } }
-@keyframes hm-bigword { from { transform: translateX(5%); } to { transform: translateX(-55%); } }
 @keyframes hm-track { to { transform: translateX(calc(-100% + 100cqw)); } }
 @keyframes hm-progress { to { transform: scaleX(1); } }
 
