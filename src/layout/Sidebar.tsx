@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, type CSSProperties } from 'react'
 import { matchPath, NavLink, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
 import { BrandMark, MoonIcon, PlusIcon, SearchIcon, SunIcon } from '../components/icons'
@@ -9,7 +9,7 @@ import { applyThemeToDocument, updateSettings } from '../services/settingsServic
 import { Copyright } from '../components/Copyright'
 import { DonateLink } from '../features/donate/Donate'
 
-export function Sidebar() {
+export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   const settings = useSettings()
   const setSearchOpen = useUIStore((s) => s.setSearchOpen)
   const openCreateLesson = useUIStore((s) => s.openCreateLesson)
@@ -43,12 +43,19 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="vt-sidebar side-rail relative hidden w-[248px] shrink-0 flex-col px-4 py-6 lg:flex">
+    <aside
+      className={clsx('vt-sidebar side-rail rail-drawer hidden w-[272px] flex-col px-4 py-6 lg:flex', open && 'is-open')}
+      inert={!open}
+      aria-hidden={!open}
+      aria-label="Menu"
+    >
       {/* A faint wash of gold behind the brand, the only ornament on the rail. */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(120%_80%_at_0%_0%,color-mix(in_oklch,var(--color-gold)_14%,transparent),transparent_70%)]" />
 
       <div className="relative mb-7 flex items-center gap-3 px-2">
-        <BrandMark width={36} height={36} className="shrink-0 drop-shadow-sm" />
+        <button onClick={onClose} aria-label="Đóng menu" className="shrink-0 rounded-xl transition-transform hover:scale-105">
+          <BrandMark width={36} height={36} className="drop-shadow-sm" />
+        </button>
         <div className="min-w-0">
           <p className="font-display text-[16px] font-semibold leading-[1.15] tracking-tight text-balance text-[var(--color-ink)]">Trung tâm lý thuyết âm nhạc học</p>
           <p className="mt-0.5 text-[11.5px] uppercase tracking-[0.14em] text-[var(--color-gold)]">by Lamar</p>
@@ -56,7 +63,10 @@ export function Sidebar() {
       </div>
 
       <button
-        onClick={() => openCreateLesson()}
+        onClick={() => {
+          onClose()
+          openCreateLesson()
+        }}
         className="btn-line relative mb-7 flex h-10 items-center justify-center gap-2 rounded-full text-[13px] font-medium tracking-wide"
       >
         <PlusIcon width={15} height={15} className="text-[var(--color-gold)]" />
@@ -71,12 +81,13 @@ export function Sidebar() {
           <NavLink
             key={item.to}
             ref={(el) => void (links.current[i] = el)}
+            style={{ '--k': i } as CSSProperties}
             data-tour={item.to}
             to={item.to}
             end={item.end}
             className={({ isActive }) =>
               clsx(
-                'group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors duration-200',
+                'rail-item group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors duration-200',
                 isActive
                   ? 'text-[var(--color-ink)]'
                   : 'text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]',
@@ -96,7 +107,10 @@ export function Sidebar() {
       <div className="flex items-center gap-1 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1">
         <button
           data-tour="search"
-          onClick={() => setSearchOpen(true)}
+          onClick={() => {
+            onClose()
+            setSearchOpen(true)
+          }}
           className="flex h-9 flex-1 items-center gap-2 rounded-xl px-2.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-raised)] hover:text-[var(--color-ink)]"
         >
           <SearchIcon width={16} height={16} />

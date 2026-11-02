@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
+import { BrandMark } from '../components/icons'
 import { Sidebar } from './Sidebar'
 import { BottomNav } from './BottomNav'
 import { QuickActionsSheet } from './QuickActionsSheet'
@@ -30,15 +31,43 @@ export function AppShell() {
   // the full-screen musicology map needs the whole height: the bottom bar stays out of the way there
   const navHidden = autoHidden || pathname === '/musicology/ban-do'
   useCardGlow()
+  // Desktop navigation is a drawer behind the Lamar mark in the top-left corner, so every page gets the full width.
+  const [railOpen, setRailOpen] = useState(false)
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- close the drawer whenever the page changes
+    setRailOpen(false)
+  }, [pathname])
+  useEffect(() => {
+    if (!railOpen) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setRailOpen(false)
+    }
+    addEventListener('keydown', onKey)
+    return () => removeEventListener('keydown', onKey)
+  }, [railOpen])
+  // the reader has its own top bar; there the mark would sit on its buttons
+  const reading = /^\/curriculum\/[^/]+/.test(pathname)
   useEdgeSwipeBack(mainRef)
   useRubberBand(mainRef)
 
   return (
     <div className="flex h-dvh w-full overflow-hidden bg-[var(--color-surface)] text-[var(--color-ink)]">
-      <Sidebar />
+      {!reading && (
+        <button
+          onClick={() => setRailOpen(true)}
+          aria-label="Mở menu"
+          aria-expanded={railOpen}
+          className={clsx('rail-mark hidden lg:flex', railOpen && 'is-hidden')}
+        >
+          <BrandMark width={30} height={30} />
+          <span className="rail-mark-bars" aria-hidden><i /><i /></span>
+        </button>
+      )}
+      <div className={clsx('rail-scrim hidden lg:block', railOpen && 'is-open')} onClick={() => setRailOpen(false)} aria-hidden />
+      <Sidebar open={railOpen} onClose={() => setRailOpen(false)} />
       <main
         ref={mainRef}
-        className={clsx('relative min-w-0 flex-1 overflow-hidden transition-[padding] duration-300 lg:pb-0', navHidden ? 'pb-0' : 'pb-16')}
+        className={clsx('app-main relative min-w-0 flex-1 overflow-hidden transition-[padding] duration-300 lg:pb-0', navHidden ? 'pb-0' : 'pb-16')}
       >
         <div key={section} className={clsx('vt-page h-full', !viewTransitionsOn() && 'page-enter')}>
           <Outlet />

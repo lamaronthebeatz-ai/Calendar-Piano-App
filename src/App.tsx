@@ -26,6 +26,7 @@ const NotebookPage = lazy(() => loadNotebook().then((m) => ({ default: m.Noteboo
 const ToolsPage = lazy(() => import('./features/tools/ToolsPage').then((m) => ({ default: m.ToolsPage })))
 const SolfegePage = lazy(() => import('./features/solfege/SolfegePage').then((m) => ({ default: m.SolfegePage })))
 const MusicologyPage = lazy(() => loadMusicology().then((m) => ({ default: m.MusicologyPage })))
+const HomePage = lazy(() => import('./features/home/HomePage').then((m) => ({ default: m.HomePage })))
 
 // Fetched once the app is idle, so the first visit to a page doesn't capture an empty page in its view transition.
 if (typeof window !== 'undefined') {
@@ -100,8 +101,8 @@ function RouteError() {
 }
 
 // A data router, so navigations can run as view transitions (see layout/viewTransitions.ts).
-// A fresh launch (the lock screen shows) opens on the theory library, not the timetable; a link to a page still opens that page.
-if (!isUnlocked() && /^#?\/?$/.test(location.hash)) history.replaceState(null, '', '#/theory')
+// A fresh launch (the lock screen shows) opens on the home page, not the timetable; a link to a page still opens that page.
+if (!isUnlocked() && /^#?\/?$/.test(location.hash)) history.replaceState(null, '', '#/home')
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -117,6 +118,7 @@ const router = createHashRouter(
       <Route path="/tools" element={<Suspense><ToolsPage /></Suspense>} />
       <Route path="/solfege" element={<Suspense><SolfegePage /></Suspense>} />
       <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />
+      <Route path="/home" element={<Suspense><HomePage /></Suspense>} />
     </Route>,
   ),
 )

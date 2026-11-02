@@ -109,3 +109,50 @@ html.rubber-band main .overflow-y-auto { overscroll-behavior-y: none; }
   .collapse-large, .collapse-in, .collapse-out { transform: none; }
   html.reveal-on [data-reveal] { transition: none; }
 }
+
+/* ---------- Desktop drawer behind the Lamar mark (AppShell + Sidebar) ---------- */
+.rail-mark {
+  position: fixed; left: 16px; top: 12px; z-index: 45;
+  height: 44px; padding: 0 12px 0 7px; gap: 9px; align-items: center;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--color-surface) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 30%, transparent), 0 10px 30px -14px rgb(0 0 0 / 0.6);
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms ease, box-shadow 300ms ease;
+}
+.rail-mark:hover { box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 70%, transparent), 0 0 0 4px color-mix(in oklch, var(--color-gold) 10%, transparent), 0 10px 30px -14px rgb(0 0 0 / 0.6); }
+.rail-mark:active { transform: scale(0.96); }
+.rail-mark.is-hidden { opacity: 0; transform: translateX(-12px) scale(0.9); pointer-events: none; }
+.rail-mark-bars { display: grid; gap: 4px; }
+.rail-mark-bars i { display: block; width: 14px; height: 1.5px; border-radius: 2px; background: var(--color-gold); transition: width 300ms cubic-bezier(0.22, 1, 0.36, 1); }
+.rail-mark-bars i + i { width: 9px; }
+.rail-mark:hover .rail-mark-bars i + i { width: 14px; }
+
+.rail-drawer {
+  position: fixed; left: 0; top: 0; bottom: 0; z-index: 50;
+  box-shadow: 30px 0 80px -30px rgb(0 0 0 / 0.75);
+  transform: translateX(-105%);
+  transition: transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.rail-drawer.is-open { transform: none; }
+.rail-drawer .rail-item { opacity: 0; transform: translateX(-14px); transition: opacity 300ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms ease; }
+.rail-drawer.is-open .rail-item { opacity: 1; transform: none; transition-delay: calc(120ms + var(--k, 0) * 35ms), calc(120ms + var(--k, 0) * 35ms), 0ms; }
+.rail-scrim {
+  position: fixed; inset: 0; z-index: 49;
+  background: rgb(5 4 3 / 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0; pointer-events: none;
+  transition: opacity 450ms ease;
+}
+.rail-scrim.is-open { opacity: 1; pointer-events: auto; }
+
+/* page bars make room for the mark */
+@media (min-width: 1024px) {
+  .app-main :is(.glass.sticky.top-0, .glass.relative.border-b) { padding-left: 76px !important; }
+  .app-main .mm-top { left: 76px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rail-drawer, .rail-drawer .rail-item, .rail-mark, .rail-scrim { transition: none; }
+}
