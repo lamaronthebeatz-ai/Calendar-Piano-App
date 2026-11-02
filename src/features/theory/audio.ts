@@ -186,7 +186,7 @@ function tick(a: Ctx, at: number, accent: boolean): Voice {
     const src = a.ctx.createBufferSource()
     const g = a.ctx.createGain()
     src.buffer = buf
-    g.gain.value = accent && !clicks.accent ? 1.25 : 1
+    g.gain.value = accent ? 1 : 0.72
     src.connect(g).connect(a.out)
     src.start(at)
     return {

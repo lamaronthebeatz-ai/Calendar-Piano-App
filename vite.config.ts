@@ -45,8 +45,8 @@ export default defineConfig({
             options: { cacheName: 'library-search', expiration: { maxEntries: 2 } },
           },
           {
-            // piano samples (theory/audio.ts): fetched on the first played note, then kept for offline use
-            urlPattern: ({ url }) => url.pathname.includes('/media/piano/'),
+            // piano samples and metronome ticks (theory/audio.ts): fetched on the first played note, then kept for offline use
+            urlPattern: ({ url }) => url.pathname.includes('/media/piano/') || url.pathname.includes('/media/metronome/'),
             handler: 'CacheFirst',
             options: { cacheName: 'piano-samples', expiration: { maxEntries: 120, maxAgeSeconds: 60 * 60 * 24 * 365 } },
           },

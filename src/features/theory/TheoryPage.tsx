@@ -539,6 +539,7 @@ const SOURCES = [
   ['Wikimedia Commons', 'https://commons.wikimedia.org/wiki/Category:Musical_notation', 'hình ảnh ký hiệu nhạc (public domain / CC)'],
   ['IMSLP', 'https://imslp.org/', 'thư viện bản nhạc cổ điển miễn phí'],
   ['Salamander Grand Piano V3', 'https://archive.org/details/SalamanderGrandPianoV3', 'tiếng piano của các nút Nghe — mẫu thu từ đàn Yamaha C5 của Alexander Holm (CC BY 3.0)'],
+  ['Sound Classic Metronome 96', 'https://commons.wikimedia.org/wiki/File:Sound_Classic_Metronome_96.ogg', 'tiếng máy đánh nhịp (Bảng tính và nút Gõ nhịp) — hai tiếng tích cắt từ bản thu máy đánh nhịp cơ học của Olga Ernst (CC BY-SA 4.0)'],
 ]
 
 export function SectionTitle({ children, icon, hint }: { children: ReactNode; icon?: ReactNode; hint?: string }) {
