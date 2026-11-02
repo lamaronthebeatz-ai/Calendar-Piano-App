@@ -11,6 +11,7 @@ import { toggleDone, useLibrary } from '../theory/library'
 import { CURRICULA } from './curricula'
 import { Cover } from './reader/Cover'
 import { CoverFlow } from './CoverFlow'
+import { ShelfStage } from './ShelfStage'
 import { SHELF_BOOKS, SHELF_TOPICS, type ShelfTopic } from './shelfTopics'
 import { openBook } from './bookOpen'
 import { chaptersOf, findBook, READER_BOOKS, type ReaderBook } from './reader/model'
@@ -21,7 +22,6 @@ import type { Curriculum, Level, Piece } from './types'
 import { jazzVolumeOf, OLD_JAZZ_ID } from './books'
 import { kidsBookOf } from './kids/books'
 import './motion-books.css'
-import logoFull from '../../assets/logo-full.webp'
 
 
 /** Graded levels followed by any extra tracks, in study order. */
@@ -96,49 +96,77 @@ function Overview({ c }: { c: Curriculum }) {
   )
 }
 
-/** Books and courses as covers on a shelf, each opening in the reader where it was left. */
+/** The shelf: the opening stage, the book being read, the cover flow, then one lit shelf per topic. */
 function Shelf() {
-  const books = READER_BOOKS.length
-  const lessons = READER_BOOKS.reduce((n, b) => n + chaptersOf(b).length, 0)
   return (
-    <div className="mx-auto max-w-6xl px-4 py-6 lg:px-8 lg:py-10">
-      <header className="lamars-head animate-float-up">
-        <div className="lamars-mark">
-          <img src={logoFull} alt="Lamar" width={960} height={528} draggable={false} />
-          <p className="lamars-label">
-            <span aria-hidden="true" />Lamar&rsquo;s Book<span aria-hidden="true" />
-          </p>
+    <>
+      <ShelfStage />
+      <div className="mx-auto max-w-6xl px-4 pt-10 lg:px-8 lg:pt-14">
+        <ContinueReading />
+        <div className="sh-table mt-8">
+          <CoverFlow books={SHELF_BOOKS} />
         </div>
-        <h2 className="mx-auto mt-6 max-w-3xl font-display text-[29px] font-semibold leading-[1.15] tracking-tight text-[var(--color-ink)] sm:text-[40px]">
-          Những cuốn sách nên đọc, <span className="text-gold-gradient italic">bằng tiếng Việt</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-[14.5px] leading-relaxed text-[var(--color-ink-muted)] sm:text-[15px]">
-          Lamar&rsquo;s Book là tủ sách Lamar tuyển chọn cho người học nhạc Việt Nam: các giáo trình Lamar tự soạn — nhạc lý, hoà âm, phức điệu, jazz, piano — và những cuốn kinh điển về âm nhạc học, mỹ học, sư phạm và nghề âm nhạc, được đọc kỹ rồi trình bày lại bằng tiếng Việt, có nguồn và số trang để bạn đối chiếu bản gốc.
+
+        <TopicIndex />
+
+        <div className="mt-6 space-y-20 sm:space-y-24">
+          {SHELF_TOPICS.map((t, k) => (
+            <TopicSection key={t.id} topic={t} n={k + 1} />
+          ))}
+        </div>
+
+        <div className="mt-20">
+          <ReviewLink slug={CURRICULA[0]?.review} />
+        </div>
+      </div>
+    </>
+  )
+}
+
+/** The book read most recently (by the time its place was saved), offered first; hidden until a book is opened. */
+function ContinueReading() {
+  const navigate = useNavigate()
+  const { positions } = useReader()
+  const last = Object.entries(positions)
+    .map(([id, pos], i) => ({ book: READER_BOOKS.find((b) => b.id === id), pos, order: pos.at ?? i }))
+    .filter((x) => x.book)
+    .sort((a, b) => b.order - a.order)
+    .map(({ book, pos }) => ({ book: book!, pos, idx: book!.items.findIndex((i) => i.key === pos.key) }))
+    .find(({ book, idx }) => idx >= 0 && book.items[idx].kind !== 'cover')
+  if (!last) return null
+  const { book, pos, idx } = last
+  const ratio = Math.min(1, (idx + pos.ratio) / book.items.length)
+  const href = `/curriculum/${book.id}`
+  return (
+    <section aria-label="Đang đọc dở" className="sh-continue animate-float-up">
+      <Link
+        to={href}
+        onClick={(e) => {
+          e.preventDefault()
+          openBook(book, e.currentTarget.firstElementChild ?? e.currentTarget, href, navigate)
+        }}
+        aria-label={`Đọc tiếp ${book.title}`}
+        className="sh-continue-cover shelf-book">
+        <Cover book={book} size={0.4} className="shelf-book-face" />
+      </Link>
+      <div className="min-w-0 flex-1">
+        <p className="topic-eyebrow">Đang đọc dở</p>
+        <p className="sh-continue-title truncate">
+          {book.title}
+          {book.volume && !book.volume.startsWith('by ') && <span className="shelf-card-vol"> · {book.volume}</span>}
         </p>
-        <ul className="lamars-facts">
-          <li><b>{SHELF_TOPICS.length}</b> chủ đề</li>
-          <li><b>{books}</b> cuốn</li>
-          <li><b>{lessons.toLocaleString('vi-VN')}</b> bài</li>
-          <li>Đọc như ấn phẩm · In PDF</li>
-        </ul>
-      </header>
-
-      <div className="mt-10">
-        <CoverFlow books={SHELF_BOOKS} />
+        <p className="sh-continue-at truncate">{book.items[idx].title}</p>
+        <div className="mt-2.5 flex items-center gap-3">
+          <div className="h-[3px] flex-1 overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
+            <span className="book-bar block h-full rounded-full bg-[var(--color-gold)]" style={{ transform: `scaleX(${Math.max(0.02, ratio)})` }} />
+          </div>
+          <span className="text-[11.5px] tabular-nums text-[var(--color-ink-faint)]">{Math.round(ratio * 100)}%</span>
+        </div>
       </div>
-
-      <TopicIndex />
-
-      <div className="mt-6 space-y-20 sm:space-y-24">
-        {SHELF_TOPICS.map((t, k) => (
-          <TopicSection key={t.id} topic={t} n={k + 1} />
-        ))}
-      </div>
-
-      <div className="mt-20">
-        <ReviewLink slug={CURRICULA[0]?.review} />
-      </div>
-    </div>
+      <Link to={href} className="btn-gold hidden shrink-0 items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-medium sm:inline-flex">
+        Đọc tiếp <ArrowUpRightIcon width={15} height={15} />
+      </Link>
+    </section>
   )
 }
 
@@ -224,7 +252,7 @@ function TopicSection({ topic, n }: { topic: ShelfTopic; n: number }) {
           <p className="topic-blurb">{topic.blurb}</p>
         </div>
       </header>
-      <div ref={row} className="shelf-row grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+      <div ref={row} className="sh-row no-scrollbar">
         {topic.books.map((b) => (
           <ShelfBook key={b.id} book={b} />
         ))}
@@ -242,25 +270,27 @@ function ShelfBook({ book }: { book: ReaderBook }) {
   const reading = resume && resume.kind !== 'cover'
   const parts = book.items.filter((i) => i.kind === 'part').length
   return (
-    <article className="shelf-card group" style={hueTint(book.hue)}>
-      <Link
-        to={`/curriculum/${book.id}`}
-        onClick={(e) => {
-          e.preventDefault()
-          openBook(book, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${book.id}`, navigate)
-        }}
-        aria-label={`Đọc ${book.title} ${book.volume ?? ''}`}
-        className="shelf-book shelf-card-cover">
-        <Cover book={book} size={0.6} className="shelf-book-face rounded-[3px]" />
-      </Link>
-      <div className="flex min-w-0 flex-1 flex-col">
+    <article className="sh-book" style={hueTint(book.hue)}>
+      <div className="sh-book-stand">
+        <Link
+          to={`/curriculum/${book.id}`}
+          onClick={(e) => {
+            e.preventDefault()
+            openBook(book, e.currentTarget.firstElementChild ?? e.currentTarget, `/curriculum/${book.id}`, navigate)
+          }}
+          aria-label={`Đọc ${book.title} ${book.volume ?? ''}`}
+          className="sh-book-cover shelf-book">
+          <Cover book={book} size={0.6} className="shelf-book-face rounded-[3px]" />
+        </Link>
+      </div>
+      <div className="sh-book-meta">
         <p className="shelf-card-eyebrow" title={book.audience}>{book.audience}</p>
         <Link to={`/curriculum/${book.id}`} className="shelf-card-title">
           {book.title}
           {book.volume && !book.volume.startsWith('by ') && <span className="shelf-card-vol"> · {book.volume}</span>}
         </Link>
-        <p className="mt-1.5 line-clamp-2 text-[13px] leading-relaxed text-[var(--color-ink-muted)]">{book.subtitle}</p>
-        <div className="mt-auto pt-4">
+        <p className="sh-book-sub">{book.subtitle}</p>
+        <div className="mt-auto pt-3.5">
           <div className="flex items-baseline justify-between gap-2 text-[11.5px] text-[var(--color-ink-faint)]">
             <span>
               {parts} {book.kind === 'course' ? 'cấp' : 'phần'} · {chapters.length} bài
@@ -270,7 +300,7 @@ function ShelfBook({ book }: { book: ReaderBook }) {
           <div className="mt-1.5 h-[3px] overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
             <span className="book-bar block h-full rounded-full bg-[var(--color-gold)]" style={{ transform: `scaleX(${Math.max(0.02, progress.ratio)})` }} />
           </div>
-          <div className="mt-3.5 flex flex-wrap items-center gap-2">
+          <div className="mt-3 flex flex-wrap items-center gap-1.5">
             <Link to={`/curriculum/${book.id}`} className="shelf-btn shelf-btn-main">
               <BookIcon width={14} height={14} /> {reading ? 'Đọc tiếp' : 'Đọc'}
             </Link>
@@ -278,12 +308,11 @@ function ShelfBook({ book }: { book: ReaderBook }) {
               <DownloadIcon width={14} height={14} /> PDF
             </Link>
             {book.kind === 'course' && (
-              <Link to={`/curriculum/${book.id}/tong-quan`} className="shelf-btn">
-                <GraduationIcon width={14} height={14} /> Tổng quan
+              <Link to={`/curriculum/${book.id}/tong-quan`} className="shelf-btn" aria-label="Tổng quan giáo trình">
+                <GraduationIcon width={14} height={14} />
               </Link>
             )}
           </div>
-          {reading && <p className="mt-2 truncate text-[11.5px] text-[var(--color-ink-faint)]">Đang đọc: {resume.title}</p>}
         </div>
       </div>
     </article>

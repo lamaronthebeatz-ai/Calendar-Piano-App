@@ -35,7 +35,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2,json}'],
         // Scanned music examples and the engraved sheets of the children's books (thousands of small images) load on demand and are cached as they are seen.
         // The full-text search file (several MB) loads on the first search and is cached then.
-        globIgnores: ['scans/**', 'sheets/**', 'content/search.*.json', 'images/home/!(duet*)'],
+        globIgnores: ['scans/**', 'sheets/**', 'content/search.*.json', 'images/home/!(duet*)', 'images/shelf/**'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
@@ -52,7 +52,7 @@ export default defineConfig({
           },
           {
             // home-page paintings: large, so cached on first view rather than precached
-            urlPattern: ({ url }) => url.pathname.includes('/images/home/'),
+            urlPattern: ({ url }) => url.pathname.includes('/images/home/') || url.pathname.includes('/images/shelf/'),
             handler: 'CacheFirst',
             options: { cacheName: 'home-images', expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 } },
           },

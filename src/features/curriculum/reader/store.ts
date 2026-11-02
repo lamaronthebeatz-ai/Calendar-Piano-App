@@ -23,6 +23,8 @@ export interface Position {
   key: string
   /** How far through the item, 0 – 1. */
   ratio: number
+  /** When it was saved (ms), so the shelf can offer the book read most recently. */
+  at?: number
 }
 
 export interface Bookmark extends Position {
@@ -74,7 +76,7 @@ export const useReader = () => useSyncExternalStore(subscribe, () => state)
 
 export const setPrefs = (p: Partial<ReaderPrefs>) => update((s) => ({ prefs: { ...s.prefs, ...p } }))
 
-export const savePosition = (book: string, pos: Position) => update((s) => ({ positions: { ...s.positions, [book]: pos } }))
+export const savePosition = (book: string, pos: Position) => update((s) => ({ positions: { ...s.positions, [book]: { ...pos, at: Date.now() } } }))
 
 export const getPosition = (book: string): Position | undefined => state.positions[book]
 
