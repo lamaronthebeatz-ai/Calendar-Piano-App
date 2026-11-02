@@ -23,6 +23,7 @@ function audio(): Ctx | null {
     out.connect(comp).connect(ctx.destination)
     shared = { ctx, out }
     loadPiano(ctx)
+    loadClicks(ctx)
   }
   if (shared.ctx.state === 'suspended') void shared.ctx.resume()
   return shared
@@ -162,8 +163,82 @@ function synth({ ctx, out }: Ctx, midi: number, at: number, dur: number, vel: nu
   }
 }
 
+/* ---------- mechanical metronome ---------- */
+
+/** The tick of a real clockwork metronome (public/media/metronome, see README there); the bell marks the downbeat. */
+const clicks: { beat?: AudioBuffer; accent?: AudioBuffer } = {}
+function loadClicks(ctx: AudioContext) {
+  const ext = typeof Audio !== 'undefined' && new Audio().canPlayType('audio/ogg; codecs=opus') ? 'ogg' : 'm4a'
+  for (const k of ['beat', 'accent'] as const)
+    fetch(`${import.meta.env.BASE_URL}media/metronome/${k}.${ext}`)
+      .then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(r.status)))
+      .then((b) => ctx.decodeAudioData(b))
+      .then((buf) => (clicks[k] = buf))
+      .catch(() => {
+        /* keeps the synthesised tick */
+      })
+}
+
+/** A metronome tick: the recorded clockwork tick (and bell on the downbeat) once loaded, a wood-block synth before. */
+function tick(a: Ctx, at: number, accent: boolean): Voice {
+  const buf = (accent && clicks.accent) || clicks.beat
+  if (buf) {
+    const src = a.ctx.createBufferSource()
+    const g = a.ctx.createGain()
+    src.buffer = buf
+    g.gain.value = accent && !clicks.accent ? 1.25 : 1
+    src.connect(g).connect(a.out)
+    src.start(at)
+    return {
+      stop: (t) => {
+        try {
+          src.stop(t)
+        } catch {
+          /* already stopped */
+        }
+      },
+    }
+  }
+  return synthTick(a, at, accent)
+}
+
+/**
+ * A running metronome scheduled on the audio clock (a short look-ahead loop, so the beat never drifts the way a
+ * plain timer does). `onBeat` fires on screen at the moment each beat sounds. Returns a stop function.
+ */
+export function startMetronome(bpm: number, beats: number, onBeat: (beat: number) => void) {
+  const a = audio()
+  if (!a) return () => {}
+  const period = 60 / bpm
+  let next = a.ctx.currentTime + 0.06
+  let n = 0
+  const timers = new Set<number>()
+  const voices: Voice[] = []
+  const pump = () => {
+    while (next < a.ctx.currentTime + 0.12) {
+      const b = n % beats
+      voices.push(tick(a, next, b === 0))
+      if (voices.length > 16) voices.shift()
+      const id = window.setTimeout(() => {
+        timers.delete(id)
+        onBeat(b)
+      }, Math.max(0, (next - a.ctx.currentTime) * 1000))
+      timers.add(id)
+      next += period
+      n++
+    }
+  }
+  pump()
+  const loop = window.setInterval(pump, 25)
+  return () => {
+    window.clearInterval(loop)
+    timers.forEach((id) => window.clearTimeout(id))
+    voices.forEach((v) => v.stop(a.ctx.currentTime))
+  }
+}
+
 /** A wood-block tick: short, pitched higher when accented. */
-function tick({ ctx, out }: Ctx, at: number, accent: boolean): Voice {
+function synthTick({ ctx, out }: Ctx, at: number, accent: boolean): Voice {
   const o = ctx.createOscillator()
   const env = ctx.createGain()
   o.type = 'square'

@@ -4,7 +4,7 @@ import { ScrollArea } from '../../components/ScrollArea'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { CircleOfFifths } from '../theory/diagrams'
-import { playNow, playSequence } from '../theory/audio'
+import { playNow, playSequence, startMetronome } from '../theory/audio'
 import {
   borrowed, chordMidis, chordNotes, diatonic, identify, interval, jazz, KEYS, midis, name, parse, pc, QUALITIES, SCALES, scaleNotes, secondary, symbol, tempoName, transpose, up,
   type Chord, type Note,
@@ -536,17 +536,9 @@ function Metronome() {
   const taps = useRef<number[]>([])
   useEffect(() => {
     if (!run) return
-    let i = 0
-    const tick = () => {
-      const b = i % beats
-      playSequence([{ at: 0, dur: 0.05, tick: b === 0 ? 'accent' : 'beat' }], {})
-      setBeat(b)
-      i++
-    }
-    tick()
-    const id = setInterval(tick, 60000 / bpm)
+    const stop = startMetronome(bpm, beats, setBeat)
     return () => {
-      clearInterval(id)
+      stop()
       setBeat(-1)
     }
   }, [run, bpm, beats])
