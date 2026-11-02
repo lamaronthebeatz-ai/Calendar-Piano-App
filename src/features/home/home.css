@@ -1,12 +1,15 @@
 /* ---------- Home: a dark gallery in black and gold, the same in both themes ----------
-   Scroll progress arrives as CSS variables from useScrollFx (HomePage.tsx); everything here animates only
-   transform, opacity and clip-path, so it stays on the compositor. */
+   Scroll effects are CSS scroll-driven animations (animation-timeline: view()), run by the browser on the compositor
+   in step with the finger; only transform and opacity ever animate. No JavaScript per frame: on iOS a script that
+   follows scrolling always trails a fling by a frame or two, which read as judder and flicker. Heights use svh, which
+   never changes while scrolling (dvh does as the browser bars move). Without scroll timelines: a one-shot fade-up
+   (.hm-reveal → .is-in, HomePage.tsx). */
 .hm {
   --ink: #f4ecdd;
   --muted: rgb(244 236 221 / 0.66);
   --faint: rgb(244 236 221 / 0.4);
   --gold: #e2bd78;
-  --vh: 100%;
+  --vh: 100svh;
   --color-gold: #d9b26e;
   --color-gold-bright: #f1cf8c;
   --color-surface: #0b0a08;
@@ -16,7 +19,6 @@
   background: #0b0a08;
   color: var(--ink);
   color-scheme: dark;
-  scroll-behavior: smooth;
 }
 .hm em { font-style: italic; color: var(--gold); }
 
@@ -25,11 +27,10 @@
 .hm-hero-media { position: absolute; inset: 0; z-index: -2; }
 .hm-hero-img {
   width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%;
-  transform: translateY(calc(var(--hp, 0) * 22%)) scale(calc(1.06 + var(--hp, 0) * 0.1));
+  transform: scale(1.06);
   animation: hm-hero-in 2600ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform;
 }
-@keyframes hm-hero-in { from { opacity: 0; filter: blur(14px) brightness(0.4); scale: 1.12; } }
+@keyframes hm-hero-in { from { opacity: 0; scale: 1.12; } }
 .hm-hero-veil {
   position: absolute; inset: 0; z-index: -1;
   background:
@@ -40,8 +41,6 @@
 .hm-hero-content {
   position: absolute; left: clamp(20px, 7vw, 112px); right: 20px; bottom: clamp(72px, 14vh, 150px);
   max-width: 680px;
-  opacity: calc(1 - var(--hp, 0) * 1.7);
-  transform: translateY(calc(var(--hp, 0) * -60px));
 }
 .hm-hero-logo { width: 132px; height: auto; margin-bottom: 26px; opacity: 0; animation: hm-rise 1100ms 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .hm-hero-eyebrow {
@@ -76,11 +75,10 @@
 @keyframes hm-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 .hm-hero-credit {
   position: absolute; right: clamp(16px, 4vw, 48px); bottom: 26px; font-size: 11px; color: var(--faint); letter-spacing: 0.04em;
-  opacity: calc(1 - var(--hp, 0) * 3);
 }
 .hm-scroll-cue {
   position: absolute; left: 50%; bottom: 22px; width: 1px; height: 46px; overflow: hidden;
-  background: rgb(244 236 221 / 0.14); opacity: calc(1 - var(--hp, 0) * 4);
+  background: rgb(244 236 221 / 0.14);
 }
 .hm-scroll-cue span { position: absolute; inset: 0; background: linear-gradient(transparent, var(--gold)); animation: hm-cue 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
 @keyframes hm-cue { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
@@ -91,7 +89,7 @@
   margin-top: 22px; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em;
   font-size: clamp(28px, 4.3vw, 58px); line-height: 1.18;
 }
-.hm-word { opacity: clamp(0.14, calc((var(--p, 0) * 1.7 - var(--i)) * 6), 1); transition: opacity 120ms linear; }
+.hm-word { opacity: 1; }
 .hm-figures { margin-top: clamp(48px, 9vh, 96px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgb(226 189 120 / 0.22); }
 .hm-figures > div { padding: 22px 16px 0 0; }
 .hm-figures > div + div { padding-left: clamp(12px, 2.5vw, 32px); border-left: 1px solid rgb(226 189 120 / 0.14); }
@@ -105,34 +103,22 @@
   display: grid; grid-template-columns: 1.08fr 1fr; align-items: center;
   background: #0b0a08;
   border-top: 1px solid rgb(226 189 120 / 0.16);
-  transform-origin: 50% 0;
-  transform: scale(calc(1 - var(--cover, 0) * 0.06));
-  border-radius: calc(var(--cover, 0) * 28px);
-  will-change: transform;
+  /* a soft shadow on the leading edge darkens the panel it slides over: depth without animating anything */
+  box-shadow: 0 -40px 80px -20px rgb(0 0 0 / 0.85);
 }
 .hm-chapter::after {
-  content: ""; position: absolute; inset: 0; background: #000; pointer-events: none;
-  opacity: calc(var(--cover, 0) * 0.65);
+  content: ""; position: absolute; inset: 0; background: #000; pointer-events: none; opacity: 0;
 }
 .hm-chapter.is-flip { grid-template-columns: 1fr 1.08fr; }
 .hm-chapter.is-flip .hm-chapter-media { order: 2; }
 .hm-chapter-media { position: relative; height: 100%; overflow: hidden; }
-.hm-chapter-img {
-  width: 100%; height: 100%; object-fit: cover;
-  clip-path: inset(calc((1 - var(--in, 0)) * 14%) calc((1 - var(--in, 0)) * 10%) round calc((1 - var(--in, 0)) * 40px));
-  transform: scale(calc(1.18 - var(--in, 0) * 0.14 + var(--cover, 0) * 0.04));
-  will-change: transform, clip-path;
-}
+.hm-chapter-img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); }
 .hm-chapter-media::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, transparent 55%, #0b0a08);
 }
 .hm-chapter.is-flip .hm-chapter-media::after { background: linear-gradient(270deg, transparent 55%, #0b0a08); }
-.hm-chapter-text {
-  padding: 0 clamp(24px, 6vw, 96px); max-width: 620px;
-  opacity: clamp(0, calc((var(--in, 0) - 0.45) * 3), 1);
-  transform: translateY(calc((1 - var(--in, 0)) * 60px));
-}
+.hm-chapter-text { padding: 0 clamp(24px, 6vw, 96px); max-width: 620px; }
 .hm-num { font-family: var(--font-display); font-style: italic; font-size: clamp(56px, 8vw, 112px); line-height: 1; color: transparent; -webkit-text-stroke: 1px rgb(226 189 120 / 0.55); margin-bottom: 18px; }
 .hm-chapter-title { margin-top: 12px; font-family: var(--font-display); font-weight: 600; letter-spacing: -0.015em; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.04; }
 .hm-chapter-body { margin-top: 20px; font-size: clamp(15px, 1.25vw, 17px); line-height: 1.75; color: var(--muted); }
@@ -140,7 +126,7 @@
 
 /* 4 · shelf marquee */
 .hm-shelf { padding: clamp(88px, 14vh, 150px) 0 clamp(64px, 10vh, 110px); overflow: hidden; }
-.hm-shelf-head { padding: 0 clamp(20px, 7vw, 112px); opacity: clamp(0, calc(var(--p, 0) * 3), 1); transform: translateY(calc((1 - clamp(0, var(--p, 0) * 3, 1)) * 40px)); }
+.hm-shelf-head { padding: 0 clamp(20px, 7vw, 112px); }
 .hm-shelf-title { margin-top: 12px; font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.015em; }
 .hm-marquee { margin-top: 44px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .hm-marquee-track { display: flex; gap: 28px; width: max-content; animation: hm-marquee 90s linear infinite; padding: 18px 0 28px; }
@@ -173,13 +159,49 @@
   .hm-figures > div:nth-child(3) { border-left: 0; padding-left: 0; }
 }
 
+/* ---------- scroll-driven effects (compositor only) ---------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* hero: the painting drifts and deepens, the words lift away */
+    .hm-hero { view-timeline-name: --hero; }
+    .hm-hero-media { animation: hm-hero-drift linear both; animation-timeline: --hero; animation-range: exit 0% exit 100%; }
+    .hm-hero-content, .hm-hero-credit, .hm-scroll-cue { animation: hm-hero-away linear both; animation-timeline: --hero; animation-range: exit 0% exit 60%; }
+
+    /* manifesto: lit word by word */
+    .hm-manifesto-text { view-timeline-name: --mf; }
+    .hm-word { animation: hm-word linear both; animation-timeline: --mf; animation-range: cover calc(14% + var(--i) * 36%) cover calc(20% + var(--i) * 36%); }
+
+    /* chapters: the picture settles from a slight zoom, the words rise in, the panel underneath sinks back */
+    .hm-chapters { timeline-scope: --c1, --c2, --c3, --c4; }
+    .hm-chapter:nth-child(1) { view-timeline-name: --c1; }
+    .hm-chapter:nth-child(2) { view-timeline-name: --c2; }
+    .hm-chapter:nth-child(3) { view-timeline-name: --c3; }
+    .hm-chapter:nth-child(4) { view-timeline-name: --c4; }
+    .hm-chapter-media { animation: hm-media-in linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+    .hm-chapter-text { animation: hm-text-in linear both; animation-timeline: view(); animation-range: entry 45% entry 100%; }
+    .hm-chapter:nth-child(1)::after { animation: hm-sink linear both; animation-timeline: --c2; animation-range: entry 0% entry 100%; }
+    .hm-chapter:nth-child(2)::after { animation: hm-sink linear both; animation-timeline: --c3; animation-range: entry 0% entry 100%; }
+    .hm-chapter:nth-child(3)::after { animation: hm-sink linear both; animation-timeline: --c4; animation-range: entry 0% entry 100%; }
+
+    .hm-shelf-head { animation: hm-text-in linear both; animation-timeline: view(); animation-range: entry 10% cover 30%; }
+  }
+}
+@keyframes hm-hero-drift { to { transform: translateY(18%); opacity: 0.35; } }
+@keyframes hm-hero-away { to { transform: translateY(-50px); opacity: 0; } }
+@keyframes hm-word { from { opacity: 0.14; } to { opacity: 1; } }
+@keyframes hm-media-in { from { transform: scale(1.14); opacity: 0.35; } to { transform: none; opacity: 1; } }
+@keyframes hm-text-in { from { transform: translateY(56px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes hm-sink { to { opacity: 0.6; } }
+
+/* without scroll timelines: blocks fade up once, on a timer the compositor runs */
+@supports not (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hm-reveal { opacity: 0; transform: translateY(40px); transition: opacity 900ms ease, transform 1100ms cubic-bezier(0.16, 1, 0.3, 1); }
+    .hm-reveal.is-in { opacity: 1; transform: none; }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hm { scroll-behavior: auto; }
   .hm-hero-img, .hm-hero-logo, .hm-hero-eyebrow, .hm-hero-lead, .hm-hero-cta, .hm-line > span { animation: none; opacity: 1; transform: none; }
-  .hm-hero-img { transform: scale(1.04); }
-  .hm-chapter, .hm-chapter-img, .hm-chapter-text { transform: none; clip-path: none; opacity: 1; }
-  .hm-chapter::after { opacity: 0; }
-  .hm-word { opacity: 1; }
-  .hm-marquee-track { animation: none; }
-  .hm-scroll-cue span { animation: none; }
+  .hm-marquee-track, .hm-scroll-cue span { animation: none; }
 }

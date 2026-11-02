@@ -25,54 +25,27 @@ type Art = (typeof ART)[keyof typeof ART]
 
 const EVENTS = PLACES.reduce((n, p) => n + p.events.length, 0)
 
-const clamp = (v: number) => (v < 0 ? 0 : v > 1 ? 1 : v)
-
 /**
- * The scroll engine: one passive listener writes progress values as CSS variables and every effect is pure CSS
- * (transform, opacity, clip-path), so scrolling never re-renders React.
- *   [data-p]      --p   0 → 1 while the element crosses the viewport
- *   .hm-hero      --hp  0 → 1 while the hero scrolls away
- *   .hm-chapter   --in  0 → 1 as the panel slides in, --cover 0 → 1 as the next panel slides over it
+ * Scroll effects are CSS scroll-driven animations (home.css), run by the browser on the compositor in step with the
+ * finger — no per-frame JavaScript, which always lags a touch fling on iOS and made the page jitter. Browsers without
+ * scroll timelines get a one-shot fade-up instead: an observer adds `.is-in` as each block first comes into view.
  */
-function useScrollFx(root: React.RefObject<HTMLDivElement | null>) {
+function useRevealFallback(root: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const el = root.current
-    if (!el) return
-    let raf = 0
-    const paint = () => {
-      raf = 0
-      const vh = el.clientHeight
-      el.style.setProperty('--vh', `${vh}px`)
-      el.querySelectorAll<HTMLElement>('[data-p]').forEach((n) => {
-        const r = n.getBoundingClientRect()
-        n.style.setProperty('--p', clamp((vh - r.top) / (vh + r.height * 0.6)).toFixed(4))
-      })
-      const hero = el.querySelector<HTMLElement>('.hm-hero')
-      if (hero) hero.style.setProperty('--hp', clamp(el.scrollTop / vh).toFixed(4))
-      // chapters are sticky siblings: chapter i would sit at wrapperTop + i·vh if it did not stick
-      const wrap = el.querySelector<HTMLElement>('.hm-chapters')
-      if (wrap) {
-        const top = wrap.getBoundingClientRect().top
-        const chapters = [...wrap.querySelectorAll<HTMLElement>('.hm-chapter')]
-        const inOf = (i: number) => clamp(1 - (top + i * vh) / vh)
-        chapters.forEach((c, i) => {
-          c.style.setProperty('--in', inOf(i).toFixed(4))
-          c.style.setProperty('--cover', i < chapters.length - 1 ? inOf(i + 1).toFixed(4) : '0')
-        })
-      }
-    }
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(paint)
-    }
-    paint()
-    el.addEventListener('scroll', onScroll, { passive: true })
-    const ro = new ResizeObserver(onScroll)
-    ro.observe(el)
-    return () => {
-      el.removeEventListener('scroll', onScroll)
-      ro.disconnect()
-      cancelAnimationFrame(raf)
-    }
+    if (!el || CSS.supports('animation-timeline: view()')) return
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries)
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in')
+            io.unobserve(e.target)
+          }
+      },
+      { root: el, threshold: 0.18 },
+    )
+    el.querySelectorAll('.hm-reveal').forEach((n) => io.observe(n))
+    return () => io.disconnect()
   }, [root])
 }
 
@@ -114,7 +87,7 @@ function Chapter({ n, art, eyebrow, title, children, to, cta, extra, flip }: {
         <div className="hm-chapter-media">
           <Picture art={art} className="hm-chapter-img" />
         </div>
-        <div className="hm-chapter-text">
+        <div className="hm-chapter-text hm-reveal">
           <p className="hm-num">{n}</p>
           <p className="brand-eyebrow">{eyebrow}</p>
           <h2 className="hm-chapter-title">{title}</h2>
@@ -138,11 +111,11 @@ function Chapter({ n, art, eyebrow, title, children, to, cta, extra, flip }: {
 export function HomePage() {
   const root = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
-  useScrollFx(root)
+  useRevealFallback(root)
   const books = SHELF_BOOKS.filter((b) => b.coverImage)
 
   return (
-    <div ref={root} className="hm h-full overflow-y-auto overflow-x-hidden">
+    <div ref={root} data-no-rubber className="hm h-full overflow-y-auto overflow-x-hidden overscroll-y-contain">
       {/* 1 · hero: one painting, one sentence */}
       <header className="hm-hero">
         <div className="hm-hero-media">
@@ -172,7 +145,7 @@ export function HomePage() {
       </header>
 
       {/* 2 · manifesto, lit word by word as it scrolls past */}
-      <section className="hm-manifesto" data-p>
+      <section className="hm-manifesto hm-reveal">
         <p className="brand-eyebrow">Tinh thần</p>
         <p className="hm-manifesto-text">
           <Words text="Mỗi khái niệm một trang. Mỗi trang dẫn tới trang khác. Mỗi điều khẳng định đều chỉ ra được nguồn — từ Fux và Rameau đến Sposobin, Levine và Hanslick." />
@@ -221,8 +194,8 @@ export function HomePage() {
       </div>
 
       {/* 4 · the shelf, drifting by */}
-      <section className="hm-shelf" data-p>
-        <div className="hm-shelf-head">
+      <section className="hm-shelf">
+        <div className="hm-shelf-head hm-reveal">
           <p className="brand-eyebrow">Tủ sách</p>
           <h2 className="hm-shelf-title">Đọc như ấn phẩm, in thành PDF</h2>
         </div>

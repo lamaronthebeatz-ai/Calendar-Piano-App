@@ -30,6 +30,8 @@ export function AppShell() {
   const section = pathname.split('/')[1]
   // the full-screen musicology map needs the whole height: the bottom bar stays out of the way there
   const navHidden = autoHidden || pathname === '/musicology/ban-do'
+  // the home page runs edge to edge under the tab bar, so the bar hiding never resizes it mid-scroll
+  const fullBleed = pathname === '/home'
   useCardGlow()
   // Desktop navigation is a drawer behind the Lamar mark in the top-left corner, so every page gets the full width.
   const [railOpen, setRailOpen] = useState(false)
@@ -67,7 +69,7 @@ export function AppShell() {
       <Sidebar open={railOpen} onClose={() => setRailOpen(false)} />
       <main
         ref={mainRef}
-        className={clsx('app-main relative min-w-0 flex-1 overflow-hidden transition-[padding] duration-300 lg:pb-0', navHidden ? 'pb-0' : 'pb-16')}
+        className={clsx('app-main relative min-w-0 flex-1 overflow-hidden lg:pb-0', fullBleed ? 'pb-0' : clsx('transition-[padding] duration-300', navHidden ? 'pb-0' : 'pb-16'))}
       >
         <div key={section} className={clsx('vt-page h-full', !viewTransitionsOn() && 'page-enter')}>
           <Outlet />
