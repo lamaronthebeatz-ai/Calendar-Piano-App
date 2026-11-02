@@ -7,6 +7,7 @@ import { SHELF_BOOKS } from '../curriculum/shelfTopics'
 import { Cover } from '../curriculum/reader/Cover'
 import { openBook } from '../curriculum/bookOpen'
 import { ArrowUpRightIcon } from '../../components/icons'
+import { openDonate } from '../donate/store'
 import logoFull from '../../assets/logo-full.webp'
 import './home.css'
 
@@ -323,6 +324,12 @@ export function HomePage() {
           ))}
         </ul>
         <p className="hm-foot-note">Statens Museum for Kunst, Copenhagen — phạm vi công cộng (open.smk.dk).</p>
+        <div className="hm-support">
+          <p>Thư viện miễn phí, không quảng cáo — viết và duy trì bởi một người.</p>
+          <button type="button" onClick={openDonate} className="btn-line mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13.5px] font-medium">
+            <span aria-hidden>☕</span> Mời Lamar một ly cà phê
+          </button>
+        </div>
         <p className="hm-foot-copy">© {new Date().getFullYear()} · Bản quyền nội dung thuộc về Lamar</p>
       </footer>
     </div>

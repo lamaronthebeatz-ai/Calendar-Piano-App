@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider, useRouteError } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
@@ -8,8 +8,6 @@ import { StudentProfilePage } from './features/students/StudentProfilePage'
 import { SettingsPage } from './features/settings/SettingsPage'
 import { PrivateArea } from './components/PrivateArea'
 import { Onboarding } from './features/onboarding/Onboarding'
-import { tourSeen } from './features/onboarding/tour'
-import { openDonate } from './features/donate/store'
 import { installViewTransitions } from './layout/viewTransitions'
 
 // Theory content is large and independent of the timetable, so it loads on demand.
@@ -35,16 +33,6 @@ export function App() {
   // The app renders behind the welcome glass from the start (so the frosting shows it), but stays inert until the code is right.
   const [unlocked, setUnlocked] = useState(isUnlocked)
   const [glass, setGlass] = useState(!unlocked)
-  // Right after the code is entered (not on a reload of an unlocked session), the support card greets once —
-  // except on the very first visit, which belongs to the guided tour.
-  const justUnlocked = useRef(false)
-  useEffect(() => {
-    if (!unlocked || glass || !justUnlocked.current || !tourSeen()) return
-    justUnlocked.current = false
-    // well after the lock has dissolved into the home page, so the first impression stays the painting
-    const t = setTimeout(openDonate, 7000)
-    return () => clearTimeout(t)
-  }, [unlocked, glass])
   return (
     <>
       {/* The app waits, inert, under the opaque lock screen; the lock dissolves straight into it. */}
@@ -55,7 +43,6 @@ export function App() {
       {glass && (
         <LockScreen
           onUnlock={() => {
-            justUnlocked.current = true
             setUnlocked(true)
             // the home page replays its title as the lock dissolves over it
             dispatchEvent(new Event('app-unlocked'))
