@@ -232,8 +232,9 @@ export function HomePage() {
       <section className="hm-manifesto hm-reveal">
         <p className="brand-eyebrow">Tinh thần</p>
         <p className="hm-manifesto-text">
-          <Words text="Mỗi khái niệm một trang. Mỗi trang dẫn tới trang khác. Mỗi điều khẳng định đều chỉ ra được nguồn — từ Fux và Rameau đến Sposobin, Levine và Hanslick." />
+          <Words text="Học để hiểu, hiểu để phân tích, phân tích để vận dụng, vận dụng để sáng tạo và không ngừng khám phá âm nhạc." />
         </p>
+        <p className="hm-manifesto-sign">— Lamar</p>
         <dl className="hm-figures">
           {[
             [ARTICLES.length, 'trang thư viện'],
