@@ -1065,6 +1065,8 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 }
 
 /* Cover Flow (CoverFlow.tsx) */
+/* Off screen the ring of 3D covers is skipped entirely: kept rendered, it cost every scroll frame on the shelf. */
+.coverflow { content-visibility: auto; contain-intrinsic-size: auto 470px; }
 .coverflow-stage {
   perspective: 900px;
   perspective-origin: 50% 40%;

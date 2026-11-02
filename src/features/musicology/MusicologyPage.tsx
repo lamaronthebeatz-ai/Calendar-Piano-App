@@ -163,7 +163,7 @@ function MapIndex() {
             </dl>
           </div>
           <div className="mc-stage-sky">
-            <Sky layout={layout} labels selected={sel} onSelect={(id) => setSel((s) => (s === id ? null : id))} lit={lit} />
+            <Sky layout={layout} labels layered selected={sel} onSelect={(id) => setSel((s) => (s === id ? null : id))} lit={lit} />
           </div>
           {!sel && <p className="mc-hint">Chạm một ngôi sao để xem phân ngành và những ngành cùng chung bài</p>}
           {sel && <StarCard id={sel} lit={lit} onPick={setSel} onClose={() => setSel(null)} />}
@@ -624,13 +624,13 @@ function Neighbours({ branch: b }: { branch: ResolvedBranch }) {
       <div className="mc-near-grid">
         <svg viewBox="-160 -120 320 240" className="mc-near-sky" aria-hidden>
           {pts.map(([x, y], i) => (
-            <line key={i} x1={0} y1={0} x2={x} y2={y} pathLength={1} className="mc-near-edge" style={{ strokeWidth: 0.8 + (near[i].n / max) * 2.4, '--i': i } as CSSProperties} />
+            <line key={i} x1={0} y1={0} x2={x} y2={y} className="mc-near-edge" style={{ strokeWidth: 0.8 + (near[i].n / max) * 2.4 }} />
           ))}
           <circle r={26} className="mc-near-halo" />
           <circle r={7} className="mc-near-core" />
           {pts.map(([x, y], i) => (
             <g key={near[i].branch.id} transform={`translate(${x} ${y})`}>
-              <circle r={3.2 + (near[i].n / max) * 2.6} className="mc-near-star" style={{ '--i': i, fill: tintColor(near[i].branch.hue, 0.84, 0.06) } as CSSProperties} />
+              <circle r={3.2 + (near[i].n / max) * 2.6} className="mc-near-star" style={{ fill: tintColor(near[i].branch.hue, 0.84, 0.06) }} />
             </g>
           ))}
         </svg>
