@@ -22,26 +22,44 @@
 }
 .hm em { font-style: italic; color: var(--gold); }
 
-/* 1 · hero */
-.hm-hero { position: relative; height: var(--vh); min-height: 520px; overflow: hidden; isolation: isolate; }
-.hm-hero-media { position: absolute; inset: 0; z-index: -2; }
-.hm-hero-img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%;
-  transform: scale(1.06);
-  animation: hm-hero-in 2600ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-@keyframes hm-hero-in { from { opacity: 0; scale: 1.12; } }
-.hm-hero-veil {
-  position: absolute; inset: 0; z-index: -1;
+/* 1 · the stage: three depth layers of the painting + text between and in front of them.
+   z order: bg 1 · mid 2 · title 3 (portrait) · fg 4 · veil/darkness/dust 5 · foot, words, credit 6.
+   Each layer is two boxes: .hm-layer (scroll animation) > .hm-tilt (pointer / gyro shift by its own depth). */
+.hm-stage { position: relative; height: var(--vh); }
+.hm-stage-pin { position: relative; height: var(--vh); min-height: 520px; overflow: hidden; isolation: isolate; --tx: 0; --ty: 0; background: #0b0a08; }
+.hm-layer { position: absolute; inset: 0; transform: scale(1.06); }
+.hm-layer-bg { z-index: 1; }
+.hm-layer-mid { z-index: 2; transform-origin: 42% 42%; }
+.hm-layer-fg { z-index: 4; transform-origin: 62% 100%; }
+.hm-layer .hm-tilt, .hm-layer picture { position: absolute; inset: 0; }
+.hm-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+.hm-tilt { --depth: 0px; transform: translate3d(calc(var(--tx) * var(--depth) * -1), calc(var(--ty) * var(--depth) * -0.6), 0); }
+.hm-layer-bg .hm-tilt { --depth: 7px; }
+.hm-layer-mid .hm-tilt { --depth: 16px; }
+.hm-layer-fg .hm-tilt { --depth: 30px; }
+.hm-title-block .hm-tilt { --depth: 22px; }
+/* entrance: the room rises out of black, the listeners in front settle last */
+.hm-layer-bg img { animation: hm-layer-in 2400ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hm-layer-mid img { animation: hm-layer-in 2400ms 150ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hm-layer-fg img { animation: hm-fg-in 2600ms 250ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hm-layer-in { from { opacity: 0; transform: scale(1.08); } }
+@keyframes hm-fg-in { from { opacity: 0; transform: scale(1.16) translateY(3%); } }
+.hm-stage-veil {
+  position: absolute; inset: 0; z-index: 5; pointer-events: none;
   background:
-    linear-gradient(90deg, rgb(11 10 8 / 0.92) 0%, rgb(11 10 8 / 0.62) 38%, rgb(11 10 8 / 0.1) 70%),
-    linear-gradient(0deg, #0b0a08 0%, rgb(11 10 8 / 0) 42%),
-    radial-gradient(60% 50% at 70% 40%, rgb(226 160 80 / 0.12), transparent 70%);
+    linear-gradient(90deg, rgb(11 10 8 / 0.86) 0%, rgb(11 10 8 / 0.5) 36%, rgb(11 10 8 / 0.06) 68%),
+    linear-gradient(0deg, #0b0a08 0%, rgb(11 10 8 / 0) 40%),
+    radial-gradient(60% 50% at 70% 40%, rgb(226 160 80 / 0.1), transparent 70%);
 }
-.hm-hero-content {
-  position: absolute; left: clamp(20px, 7vw, 112px); right: 20px; bottom: clamp(72px, 14vh, 150px);
-  max-width: 680px;
+.hm-stage-dark { position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0; background: radial-gradient(80% 70% at 45% 45%, rgb(11 10 8 / 0.78), #0b0a08 85%); }
+.hm-title-block { position: absolute; z-index: 6; left: clamp(20px, 7vw, 112px); right: 20px; bottom: calc(clamp(72px, 14vh, 150px) + 200px); max-width: 720px; }
+.hm-hero-foot { position: absolute; z-index: 6; left: clamp(20px, 7vw, 112px); right: 20px; bottom: clamp(72px, 14vh, 150px); max-width: 560px; }
+.hm-stage-words {
+  position: absolute; z-index: 6; inset: 0; display: flex; flex-direction: column; justify-content: center;
+  padding: 0 clamp(20px, 7vw, 112px); max-width: 1240px; margin: 0 auto; opacity: 0; pointer-events: none;
 }
+.hm-hero-credit, .hm-scroll-cue { z-index: 6; }
+.hm-dust, .hm-hero-light { z-index: 5; }
 .hm-hero-logo { width: 132px; height: auto; margin-bottom: 26px; opacity: 0; animation: hm-rise 1100ms 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .hm-hero-eyebrow {
   font-size: 11px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold);
@@ -86,14 +104,14 @@
 @keyframes hm-cue { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
 
 /* 2 · manifesto */
-.hm-manifesto { padding: clamp(96px, 18vh, 180px) clamp(20px, 7vw, 112px); max-width: 1240px; margin: 0 auto; }
+.hm-manifesto { padding: clamp(40px, 8vh, 90px) clamp(20px, 7vw, 112px) clamp(80px, 14vh, 140px); max-width: 1240px; margin: 0 auto; }
 .hm-manifesto-text {
   margin-top: 22px; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em;
   font-size: clamp(28px, 4.3vw, 58px); line-height: 1.18;
 }
 .hm-word { opacity: 1; }
 .hm-manifesto-sign { margin-top: 18px; font-family: var(--font-display); font-style: italic; font-size: clamp(18px, 2vw, 24px); color: var(--gold); }
-.hm-figures { margin-top: clamp(48px, 9vh, 96px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgb(226 189 120 / 0.22); }
+.hm-figures { margin-top: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgb(226 189 120 / 0.22); }
 .hm-figures > div { padding: 22px 16px 0 0; }
 .hm-figures > div + div { padding-left: clamp(12px, 2.5vw, 32px); border-left: 1px solid rgb(226 189 120 / 0.14); }
 .hm-figures dd { font-family: var(--font-display); font-size: clamp(26px, 3.6vw, 46px); font-weight: 600; color: var(--gold); font-variant-numeric: tabular-nums; }
@@ -146,7 +164,7 @@
   70% { opacity: 0.5; }
   100% { transform: translate3d(28px, -170px, 0); opacity: 0; }
 }
-.hm-hero-veil::after {
+.hm-stage-veil::after {
   content: ""; position: absolute; inset: 0; opacity: 0.09; pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -184,6 +202,14 @@
 .hm-support { margin-top: 40px; font-size: 13px; color: var(--muted); }
 .hm-foot-copy { margin-top: 26px; font-size: 11.5px; color: var(--faint); }
 
+/* portrait screens: the title moves up into the dark wall and slips between the singers (behind) and the listeners
+   (in front), who sweep over it as the camera moves in */
+@media (orientation: portrait) {
+  .hm-title-block { z-index: 3; top: max(88px, 12svh); bottom: auto; }
+  .hm-stage-veil { background: linear-gradient(0deg, #0b0a08 6%, rgb(11 10 8 / 0.5) 32%, rgb(11 10 8 / 0) 58%), linear-gradient(180deg, rgb(11 10 8 / 0.7), rgb(11 10 8 / 0) 30%); }
+  .hm-title-block .hm-hero-title { text-shadow: 0 2px 30px rgb(0 0 0 / 0.6); }
+}
+
 /* phones and portrait tablets: picture on top, words beneath, same sliding stack */
 @media (max-width: 860px) {
   .hm-chapter, .hm-chapter.is-flip { grid-template-columns: 1fr; grid-template-rows: 54% 46%; align-items: start; }
@@ -193,8 +219,6 @@
   .hm-num { font-size: 46px; margin-bottom: 6px; }
   .hm-chapter-body { margin-top: 12px; font-size: 14.5px; line-height: 1.65; }
   .hm-caption { display: none; }
-  .hm-hero-veil { background: linear-gradient(0deg, #0b0a08 8%, rgb(11 10 8 / 0.55) 55%, rgb(11 10 8 / 0.25)); }
-  .hm-hero-content { bottom: 64px; }
   .hm-figures { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
   .hm-figures > div:nth-child(3) { border-left: 0; padding-left: 0; }
 }
@@ -202,14 +226,23 @@
 /* ---------- scroll-driven effects (compositor only) ---------- */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    /* hero: the painting drifts and deepens, the words lift away */
-    .hm-hero { view-timeline-name: --hero; }
-    .hm-hero-media { animation: hm-hero-drift linear both; animation-timeline: --hero; animation-range: exit 0% exit 100%; }
-    .hm-hero-content, .hm-hero-credit, .hm-scroll-cue { animation: hm-hero-away linear both; animation-timeline: --hero; animation-range: exit 0% exit 60%; }
-
-    /* manifesto: lit word by word */
-    .hm-manifesto-text { view-timeline-name: --mf; }
-    .hm-word { animation: hm-word linear both; animation-timeline: --mf; animation-range: cover calc(14% + var(--i) * 36%) cover calc(20% + var(--i) * 36%); }
+    /* THE STAGE — one tall section, its room pinned, everything keyed to how far you are through it (--stage):
+         0 – 30 %   the title and the lines beneath lift away; the camera starts to move in
+         10 – 55 %  the listeners in front pass the camera (grow, sink, fade); the singers come closer
+         35 – 62 %  the room darkens
+         50 – 92 %  the motto lights up word by word over the dark room, then its signature */
+    .hm-stage { height: calc(var(--vh) * 3.4); view-timeline-name: --stage; }
+    .hm-stage-pin { position: sticky; top: 0; }
+    .hm-layer-bg { animation: hm-cam-bg linear both; animation-timeline: --stage; animation-range: contain 0% contain 100%; }
+    .hm-layer-mid { animation: hm-cam-mid linear both; animation-timeline: --stage; animation-range: contain 0% contain 100%; }
+    .hm-layer-fg { animation: hm-cam-fg linear both; animation-timeline: --stage; animation-range: contain 0% contain 58%; }
+    .hm-title-block { animation: hm-title-away linear both; animation-timeline: --stage; animation-range: contain 2% contain 30%; }
+    .hm-hero-foot, .hm-hero-credit, .hm-scroll-cue { animation: hm-foot-away linear both; animation-timeline: --stage; animation-range: contain 0% contain 14%; }
+    .hm-stage-dark { animation: hm-dark linear both; animation-timeline: --stage; animation-range: contain 28% contain 50%; }
+    .hm-dust { animation: hm-dust-fade linear both; animation-timeline: --stage; animation-range: contain 40% contain 100%; }
+    .hm-stage-words { animation: hm-words-in linear both; animation-timeline: --stage; animation-range: contain 48% contain 60%; }
+    .hm-word { animation: hm-word linear both; animation-timeline: --stage; animation-range: contain calc(54% + var(--i) * 30%) contain calc(59% + var(--i) * 30%); }
+    .hm-manifesto-sign { animation: hm-sign linear both; animation-timeline: --stage; animation-range: contain 86% contain 93%; }
 
     /* chapters: the picture settles from a slight zoom, the words rise in, the panel underneath sinks back */
     .hm-chapters { timeline-scope: --c1, --c2, --c3, --c4; }
@@ -233,9 +266,16 @@
     .hm-shelf-hint { display: block; }
   }
 }
-@keyframes hm-hero-drift { to { transform: translateY(18%); opacity: 0.35; } }
-@keyframes hm-hero-away { to { transform: translateY(-50px); opacity: 0; } }
-@keyframes hm-word { from { opacity: 0.14; } to { opacity: 1; } }
+@keyframes hm-cam-bg { from { transform: scale(1.06); } to { transform: scale(1.16) translateY(-1.5%); } }
+@keyframes hm-cam-mid { from { transform: scale(1.06); } to { transform: scale(1.22) translateY(-1.5%); } }
+@keyframes hm-cam-fg { 0% { transform: scale(1.06); opacity: 1; } 70% { opacity: 1; } 100% { transform: scale(1.75) translateY(14%); opacity: 0; } }
+@keyframes hm-title-away { to { transform: translateY(-12vh) scale(0.96); opacity: 0; } }
+@keyframes hm-foot-away { to { transform: translateY(24px); opacity: 0; } }
+@keyframes hm-dark { to { opacity: 1; } }
+@keyframes hm-dust-fade { 0% { opacity: 1; } 40% { opacity: 1; } 100% { opacity: 0.4; } }
+@keyframes hm-words-in { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+@keyframes hm-sign { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes hm-word { from { opacity: 0.12; } to { opacity: 1; } }
 @keyframes hm-media-in { from { transform: scale(1.14); opacity: 0.35; } to { transform: none; opacity: 1; } }
 @keyframes hm-text-in { from { transform: translateY(56px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes hm-sink { to { opacity: 0.6; } }
@@ -244,6 +284,8 @@
 
 /* without scroll timelines: blocks fade up once, on a timer the compositor runs */
 @supports not (animation-timeline: view()) {
+  .hm-stage-words { position: relative; inset: auto; opacity: 1; padding-top: 90px; padding-bottom: 40px; background: #0b0a08; }
+  .hm-stage-pin { overflow: visible; }
   @media (prefers-reduced-motion: no-preference) {
     .hm-reveal { opacity: 0; transform: translateY(40px); transition: opacity 900ms ease, transform 1100ms cubic-bezier(0.16, 1, 0.3, 1); }
     .hm-reveal.is-in { opacity: 1; transform: none; }
@@ -251,7 +293,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hm-hero-img, .hm-hero-logo, .hm-hero-eyebrow, .hm-hero-lead, .hm-hero-cta, .hm-line > span { animation: none; opacity: 1; transform: none; }
+  .hm-layer img, .hm-hero-logo, .hm-hero-eyebrow, .hm-hero-lead, .hm-hero-cta, .hm-line > span { animation: none; opacity: 1; transform: none; }
   .hm-scroll-cue span, .hm-dust span { animation: none; }
   .hm-dust { display: none; }
 }

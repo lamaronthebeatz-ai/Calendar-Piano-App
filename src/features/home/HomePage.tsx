@@ -53,7 +53,7 @@ function useRevealFallback(root: React.RefObject<HTMLDivElement | null>) {
 /** Desktop only: a soft gold light follows the pointer over the hero, moved with a transform (no repaint). */
 function useHeroLight(root: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
-    const hero = root.current?.querySelector<HTMLElement>('.hm-hero')
+    const hero = root.current?.querySelector<HTMLElement>('.hm-stage-pin')
     const light = hero?.querySelector<HTMLElement>('.hm-hero-light')
     if (!hero || !light || !matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return
     let raf = 0
@@ -117,6 +117,83 @@ const DUST = Array.from({ length: 18 }, (_, i) => ({
   dur: `${9 + ((i * 5) % 9)}s`,
   delay: `${-((i * 13) % 17)}s`,
 }))
+
+/**
+ * Tilt: the three layers of the painting (and the title between them) shift by different amounts as the pointer moves
+ * (desktop) or the device tilts (phones, tablets), like looking into the room through a window. Input only sets a
+ * target; one rAF loop eases towards it and stops once settled, writing --tx / --ty (−1 … 1) on the stage. On iOS the
+ * motion sensor needs the viewer's permission, asked once on the first touch.
+ */
+function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
+  useEffect(() => {
+    const scroller = root.current
+    const pin = scroller?.querySelector<HTMLElement>('.hm-stage-pin')
+    if (!scroller || !pin || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0, visible = true
+    const loop = () => {
+      cx += (tx - cx) * 0.07
+      cy += (ty - cy) * 0.07
+      pin.style.setProperty('--tx', cx.toFixed(4))
+      pin.style.setProperty('--ty', cy.toFixed(4))
+      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.002 && visible ? requestAnimationFrame(loop) : 0
+    }
+    const aim = (x: number, y: number) => {
+      tx = Math.max(-1, Math.min(1, x))
+      ty = Math.max(-1, Math.min(1, y))
+      if (!raf && visible) raf = requestAnimationFrame(loop)
+    }
+    const io = new IntersectionObserver(([e]) => (visible = e.isIntersecting), { root: scroller })
+    io.observe(pin)
+    const fine = matchMedia('(hover: hover) and (pointer: fine)').matches
+    const onPointer = (e: PointerEvent) => {
+      const r = pin.getBoundingClientRect()
+      aim(((e.clientX - r.left) / r.width - 0.5) * 2, ((e.clientY - r.top) / r.height - 0.5) * 2)
+    }
+    const onLeave = () => aim(0, 0)
+    let base: number | null = null
+    const onTilt = (e: DeviceOrientationEvent) => {
+      if (e.gamma == null || e.beta == null) return
+      if (base == null) base = e.beta
+      aim(e.gamma / 22, (e.beta - base) / 22)
+    }
+    type Perm = { requestPermission?: () => Promise<'granted' | 'denied'> }
+    const DOE = (window as unknown as { DeviceOrientationEvent?: Perm }).DeviceOrientationEvent
+    const startTilt = () => addEventListener('deviceorientation', onTilt)
+    const askOnce = () => {
+      scroller.removeEventListener('touchend', askOnce)
+      DOE?.requestPermission?.().then((r) => r === 'granted' && startTilt()).catch(() => {})
+    }
+    if (fine) {
+      pin.addEventListener('pointermove', onPointer, { passive: true })
+      pin.addEventListener('pointerleave', onLeave)
+    } else if (DOE?.requestPermission) scroller.addEventListener('touchend', askOnce, { once: true })
+    else startTilt()
+    return () => {
+      io.disconnect()
+      cancelAnimationFrame(raf)
+      pin.removeEventListener('pointermove', onPointer)
+      pin.removeEventListener('pointerleave', onLeave)
+      scroller.removeEventListener('touchend', askOnce)
+      removeEventListener('deviceorientation', onTilt)
+    }
+  }, [root])
+}
+
+const LAYER = (n: string) => `${import.meta.env.BASE_URL}images/home/duet3d/${n}`
+
+/** One depth layer of the painting: the scroll animation moves the outer box, the tilt moves the inner one. */
+function Layer({ name }: { name: 'bg' | 'mid' | 'fg' }) {
+  return (
+    <div className={`hm-layer hm-layer-${name}`} aria-hidden>
+      <div className="hm-tilt">
+        <picture>
+          <source media="(max-width: 760px)" srcSet={LAYER(`${name}-sm.webp`)} />
+          <img src={LAYER(`${name}.webp`)} alt="" decoding="async" />
+        </picture>
+      </div>
+    </div>
+  )
+}
 
 function Picture({ art, className, eager }: { art: Art; className?: string; eager?: boolean }) {
   return (
@@ -182,6 +259,7 @@ export function HomePage() {
   const navigate = useNavigate()
   useRevealFallback(root)
   useHeroLight(root)
+  useStageTilt(root)
   useMarkAutoHide(root)
   // The lock screen dissolves over this hero (same painting): the title rises again as the curtain goes.
   const [heroRun, setHeroRun] = useState(0)
@@ -194,47 +272,57 @@ export function HomePage() {
 
   return (
     <div ref={root} data-no-rubber className="hm h-full overflow-y-auto overflow-x-hidden overscroll-y-contain">
-      {/* 1 · hero: one painting, one sentence */}
-      <header className="hm-hero">
-        <div className="hm-hero-media">
-          <Picture art={ART.duet} className="hm-hero-img" eager />
-        </div>
-        <div className="hm-hero-veil" />
-        <div className="hm-hero-light" aria-hidden />
-        <div className="hm-dust" aria-hidden>
-          {DUST.map((d, i) => (
-            <span key={i} style={{ left: d.left, top: d.top, width: d.size, height: d.size, animationDuration: d.dur, animationDelay: d.delay }} />
-          ))}
-        </div>
-        <div key={heroRun} className="hm-hero-content">
-          <img src={logoFull} alt="Lamar" className="hm-hero-logo" />
-          <p className="hm-hero-eyebrow">Trung tâm lý thuyết âm nhạc học</p>
-          <h1 className="hm-hero-title">
-            <span className="hm-line"><span>Hiểu âm nhạc</span></span>
-            <span className="hm-line"><span className="text-gold-gradient italic">từ bên trong.</span></span>
-          </h1>
-          <p className="hm-hero-lead">
-            Một thư viện âm nhạc học viết bằng tiếng Việt: lý thuyết, lịch sử và mỹ học được đọc từ nguồn gốc, trích dẫn có trang,
-            nối với nhau thành một mạng tri thức.
-          </p>
-          <div className="hm-hero-cta">
-            <Link to="/theory" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-[14.5px] font-medium">
-              Vào thư viện <ArrowUpRightIcon width={15} height={15} />
-            </Link>
-            <Link to="/curriculum" className="hm-ghost">Mở tủ sách</Link>
+      {/* 1 · the stage: Krøyer's Duet in three depth layers. Scrolling moves a camera into the room: the listeners in
+          front pass by and fade, the singers come closer, the room darkens, and the motto lights up word by word. */}
+      <section className="hm-stage">
+        <div className="hm-stage-pin">
+          <Layer name="bg" />
+          <Layer name="mid" />
+          <div key={heroRun} className="hm-title-block">
+            <div className="hm-tilt">
+              <img src={logoFull} alt="Lamar" className="hm-hero-logo" />
+              <p className="hm-hero-eyebrow">Trung tâm lý thuyết âm nhạc học</p>
+              <h1 className="hm-hero-title">
+                <span className="hm-line"><span>Hiểu âm nhạc</span></span>
+                <span className="hm-line"><span className="text-gold-gradient italic">từ bên trong.</span></span>
+              </h1>
+            </div>
           </div>
+          <Layer name="fg" />
+          <div className="hm-stage-veil" aria-hidden />
+          <div className="hm-stage-dark" aria-hidden />
+          <div className="hm-hero-light" aria-hidden />
+          <div className="hm-dust" aria-hidden>
+            {DUST.map((d, i) => (
+              <span key={i} style={{ left: d.left, top: d.top, width: d.size, height: d.size, animationDuration: d.dur, animationDelay: d.delay }} />
+            ))}
+          </div>
+          <div key={`f${heroRun}`} className="hm-hero-foot">
+            <p className="hm-hero-lead">
+              Một thư viện âm nhạc học viết bằng tiếng Việt: lý thuyết, lịch sử và mỹ học được đọc từ nguồn gốc, trích dẫn có trang,
+              nối với nhau thành một mạng tri thức.
+            </p>
+            <div className="hm-hero-cta">
+              <Link to="/theory" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-[14.5px] font-medium">
+                Vào thư viện <ArrowUpRightIcon width={15} height={15} />
+              </Link>
+              <Link to="/curriculum" className="hm-ghost">Mở tủ sách</Link>
+            </div>
+          </div>
+          <div className="hm-stage-words">
+            <p className="brand-eyebrow">Tinh thần</p>
+            <p className="hm-manifesto-text">
+              <Words text="Học để hiểu, hiểu để phân tích, phân tích để vận dụng, vận dụng để sáng tạo và không ngừng khám phá âm nhạc." />
+            </p>
+            <p className="hm-manifesto-sign">— Lamar</p>
+          </div>
+          <p className="hm-hero-credit">{ART.duet.artist}, <i>{ART.duet.title}</i>, {ART.duet.year}</p>
+          <div className="hm-scroll-cue" aria-hidden><span /></div>
         </div>
-        <p className="hm-hero-credit">{ART.duet.artist}, <i>{ART.duet.title}</i>, {ART.duet.year}</p>
-        <div className="hm-scroll-cue" aria-hidden><span /></div>
-      </header>
+      </section>
 
-      {/* 2 · manifesto, lit word by word as it scrolls past */}
+      {/* 2 · the library in four figures, on the black the stage ends in */}
       <section className="hm-manifesto hm-reveal">
-        <p className="brand-eyebrow">Tinh thần</p>
-        <p className="hm-manifesto-text">
-          <Words text="Học để hiểu, hiểu để phân tích, phân tích để vận dụng, vận dụng để sáng tạo và không ngừng khám phá âm nhạc." />
-        </p>
-        <p className="hm-manifesto-sign">— Lamar</p>
         <dl className="hm-figures">
           {[
             [ARTICLES.length, 'trang thư viện'],
