@@ -92,8 +92,9 @@
   html:not([data-kbd]) :where(a, button, select, [tabindex]):focus { outline: none; }
 }
 
-/* Quiet, warm scrollbars. */
-* { scrollbar-color: color-mix(in oklch, var(--color-gold) 28%, var(--color-border)) transparent; scrollbar-width: thin; }
+/* No scrollbars anywhere: every area still scrolls (finger, wheel, trackpad, keys), the bar itself is never drawn. */
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
 /* Section heading: small caps eyebrow + serif title, separated by a gold hairline (used on home pages). */
 .brand-eyebrow {
