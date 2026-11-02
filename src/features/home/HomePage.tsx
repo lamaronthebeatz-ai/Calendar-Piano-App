@@ -126,19 +126,39 @@ const DUST = Array.from({ length: 18 }, (_, i) => ({
 function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const scroller = root.current
-    const pin = scroller?.querySelector<HTMLElement>('.hm-stage-pin')
-    if (!scroller || !pin || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (!scroller || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    // Only the tilt boxes of panels on screen are moved, each by its own transform: no custom property on the page
+    // root (that restyled every node of the page on every frame and made the iPad drop frames).
+    const panels = [...scroller.querySelectorAll<HTMLElement>('.hm-stage-pin, .hm-chapter')]
+    const boxes = new Map<HTMLElement, { el: HTMLElement; depth: number }[]>()
+    for (const p of panels)
+      boxes.set(p, [...p.querySelectorAll<HTMLElement>('.hm-tilt')].map((el) => ({ el, depth: parseFloat(getComputedStyle(el).getPropertyValue('--depth')) || 0 })))
+    const live = new Set<HTMLElement>()
+    const io = new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? live.add(e.target as HTMLElement) : live.delete(e.target as HTMLElement))), { root: scroller })
+    panels.forEach((p) => io.observe(p))
     let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0
+    const paint = () => {
+      for (const p of live)
+        for (const b of boxes.get(p) ?? []) b.el.style.transform = `translate3d(${(-cx * b.depth).toFixed(2)}px, ${(-cy * b.depth * 0.6).toFixed(2)}px, 0)`
+    }
     const loop = () => {
-      cx += (tx - cx) * 0.07
-      cy += (ty - cy) * 0.07
-      scroller.style.setProperty('--tx', cx.toFixed(4))
-      scroller.style.setProperty('--ty', cy.toFixed(4))
-      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.002 ? requestAnimationFrame(loop) : 0
+      cx += (tx - cx) * 0.08
+      cy += (ty - cy) * 0.08
+      const moving = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.004
+      if (!moving) {
+        cx = tx
+        cy = ty
+      }
+      paint()
+      raf = moving ? requestAnimationFrame(loop) : 0
     }
     const aim = (x: number, y: number) => {
-      tx = Math.max(-1, Math.min(1, x))
-      ty = Math.max(-1, Math.min(1, y))
+      x = Math.max(-1, Math.min(1, x))
+      y = Math.max(-1, Math.min(1, y))
+      // ignore sensor noise: a device resting on a table still reports tiny changes many times a second
+      if (Math.abs(x - tx) + Math.abs(y - ty) < 0.03) return
+      tx = x
+      ty = y
       if (!raf) raf = requestAnimationFrame(loop)
     }
     const fine = matchMedia('(hover: hover) and (pointer: fine)').matches
@@ -151,7 +171,7 @@ function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
     const onTilt = (e: DeviceOrientationEvent) => {
       if (e.gamma == null || e.beta == null) return
       if (base == null) base = e.beta
-      aim(e.gamma / 22, (e.beta - base) / 22)
+      aim(Math.round(e.gamma) / 22, Math.round(e.beta - base) / 22)
     }
     type Perm = { requestPermission?: () => Promise<'granted' | 'denied'> }
     const DOE = (window as unknown as { DeviceOrientationEvent?: Perm }).DeviceOrientationEvent
@@ -166,6 +186,7 @@ function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
     } else if (DOE?.requestPermission) scroller.addEventListener('touchend', askOnce, { once: true })
     else startTilt()
     return () => {
+      io.disconnect()
       cancelAnimationFrame(raf)
       scroller.removeEventListener('pointermove', onPointer)
       scroller.removeEventListener('pointerleave', onLeave)
@@ -190,7 +211,7 @@ function Layer({ name, src }: { name: 'bg' | 'mid' | 'fg'; src?: string }) {
         <div className="hm-tilt">
           <picture>
             <source media="(max-width: 760px)" srcSet={url('-sm')} />
-            <img src={url('')} alt="" decoding="async" loading={src ? 'lazy' : 'eager'} />
+            <img src={url('')} alt="" decoding="async" />
           </picture>
         </div>
       </div>

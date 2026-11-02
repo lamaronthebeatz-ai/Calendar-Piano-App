@@ -34,14 +34,14 @@
 .hm-stage-pin .hm-layer-fg { z-index: 4; transform-origin: 62% 100%; }
 .hm-layer .hm-push, .hm-layer .hm-tilt, .hm-layer picture { position: absolute; inset: 0; }
 .hm-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
-.hm-tilt { --depth: 0px; transform: translate3d(calc(var(--tx) * var(--depth) * -1), calc(var(--ty) * var(--depth) * -0.6), 0); }
-.hm-layer-bg .hm-tilt { --depth: 7px; }
-.hm-layer-mid .hm-tilt { --depth: 16px; }
-.hm-layer-fg .hm-tilt { --depth: 30px; }
-.hm-chapter-media .hm-layer-bg .hm-tilt { --depth: 5px; }
-.hm-chapter-media .hm-layer-mid .hm-tilt { --depth: 12px; }
-.hm-chapter-media .hm-layer-fg .hm-tilt { --depth: 22px; }
-.hm-title-block .hm-tilt { --depth: 22px; }
+.hm-tilt { --depth: 0; }
+.hm-layer-bg .hm-tilt { --depth: 7; }
+.hm-layer-mid .hm-tilt { --depth: 16; }
+.hm-layer-fg .hm-tilt { --depth: 30; }
+.hm-chapter-media .hm-layer-bg .hm-tilt { --depth: 5; }
+.hm-chapter-media .hm-layer-mid .hm-tilt { --depth: 12; }
+.hm-chapter-media .hm-layer-fg .hm-tilt { --depth: 22; }
+.hm-title-block .hm-tilt { --depth: 22; }
 /* entrance: the room rises out of black, the listeners in front settle last */
 .hm-stage-pin .hm-layer-bg img { animation: hm-layer-in 2400ms cubic-bezier(0.16, 1, 0.3, 1) both; }
 .hm-stage-pin .hm-layer-mid img { animation: hm-layer-in 2400ms 150ms cubic-bezier(0.16, 1, 0.3, 1) both; }
@@ -138,14 +138,14 @@
 .hm-chapter.is-flip { grid-template-columns: 1fr 1.08fr; }
 .hm-chapter.is-flip .hm-chapter-media { order: 2; }
 .hm-chapter-media { position: relative; height: 100%; overflow: hidden; }
-.hm-chapter-media .hm-layer { transform: scale(1.08); }
+.hm-chapter-media .hm-layer { transform: scale(1.08); will-change: transform; }
+.hm-tilt { will-change: transform; }
 .hm-chapter-media .hm-layer-bg { z-index: 1; } .hm-chapter-media .hm-layer-mid { z-index: 4; } .hm-chapter-media .hm-layer-fg { z-index: 5; }
 /* stacking inside a panel (the media box has no stacking context of its own, so its layers interleave with the text):
    bg 1 · edge fade 2 · heading 3 · figures 4 · foreground 5 · body text 6 */
 .hm-chapter-media::after { z-index: 2; }
 .hm-chapter-media .hm-layer-mid, .hm-chapter-media .hm-layer-fg {
-  -webkit-mask-image: linear-gradient(var(--fade-dir, 90deg), #000 var(--fade-from, 72%), transparent 98%);
-  mask-image: linear-gradient(var(--fade-dir, 90deg), #000 var(--fade-from, 72%), transparent 98%);
+  /* edge fades are baked into the images' alpha (split2.py): a CSS mask on moving layers stalls Safari */
 }
 .hm-chapter.is-flip { --fade-dir: 270deg; }
 .hm-chapter-mark {
@@ -157,8 +157,8 @@
 .hm-chapter:nth-child(2) { --mark-top: 30%; }
 .hm-chapter:nth-child(3) { --mark-top: 20%; --mark-left: 41%; }
 .hm-chapter:nth-child(4) { --mark-top: 24%; }
-.hm-chapter-mark .hm-tilt { --depth: 8px; }
-.hm-chapter-mark .hm-chapter-title { font-size: clamp(44px, 6.6vw, 108px); line-height: 1.04; text-shadow: 0 1px 2px rgb(0 0 0 / 0.55), 0 4px 22px rgb(0 0 0 / 0.65), 0 10px 60px rgb(0 0 0 / 0.5); }
+.hm-chapter-mark .hm-tilt { --depth: 8; }
+.hm-chapter-mark .hm-chapter-title { font-size: clamp(44px, 6.6vw, 108px); line-height: 1.04; text-shadow: 0 1px 2px rgb(0 0 0 / 0.6), 0 4px 24px rgb(0 0 0 / 0.6); }
 .hm-chapter-text { position: relative; z-index: 6; align-self: end; padding-bottom: clamp(48px, 11vh, 120px) !important; }
 .hm-chapter-media .hm-layer img { object-position: 50% 42%; }
 .hm-chapter-media::after {
