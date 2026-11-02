@@ -11,16 +11,15 @@ import { openDonate } from '../donate/store'
 import logoFull from '../../assets/logo-full.webp'
 import './home.css'
 
-const img = (name: string) => `${import.meta.env.BASE_URL}images/home/${name}`
 const fmt = (n: number) => n.toLocaleString('vi-VN')
 
 /** Paintings on the page: all public domain, from the open collection of Statens Museum for Kunst (SMK), Copenhagen. */
 const ART = {
-  duet: { file: 'duet', artist: 'P. S. Krøyer', title: 'Song tấu', year: '1887', id: 'KMS1304' },
-  trompe: { file: 'trompe', artist: 'Cornelius Norbertus Gijsbrechts', title: 'Tranh đánh lừa thị giác với vĩ cầm, sách nhạc và sáo dọc', year: '1672', id: 'KMS1908' },
-  party: { file: 'music-party', artist: 'Pieter de Hooch', title: 'Buổi hoà nhạc gia đình', year: 'khoảng 1644 – 1683', id: 'KMSsp613' },
-  reading: { file: 'reading', artist: 'Constantin Hansen', title: 'Hai em gái hoạ sĩ, Signe và Henriette, đọc sách', year: '1826', id: 'KMS3004' },
-  singing: { file: 'singing', artist: 'Michael Ancher', title: 'Trẻ em hát', year: '1899', id: 'KMS1626' },
+  duet: { fg: true, file: 'duet', artist: 'P. S. Krøyer', title: 'Song tấu', year: '1887', id: 'KMS1304' },
+  trompe: { fg: true, file: 'trompe', artist: 'Cornelius Norbertus Gijsbrechts', title: 'Tranh đánh lừa thị giác với vĩ cầm, sách nhạc và sáo dọc', year: '1672', id: 'KMS1908' },
+  party: { fg: true, file: 'music-party', artist: 'Pieter de Hooch', title: 'Buổi hoà nhạc gia đình', year: 'khoảng 1644 – 1683', id: 'KMSsp613' },
+  reading: { fg: false, file: 'reading', artist: 'Constantin Hansen', title: 'Hai em gái hoạ sĩ, Signe và Henriette, đọc sách', year: '1826', id: 'KMS3004' },
+  singing: { fg: true, file: 'singing', artist: 'Michael Ancher', title: 'Trẻ em hát', year: '1899', id: 'KMS1626' },
 }
 type Art = (typeof ART)[keyof typeof ART]
 
@@ -129,24 +128,22 @@ function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
     const scroller = root.current
     const pin = scroller?.querySelector<HTMLElement>('.hm-stage-pin')
     if (!scroller || !pin || matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0, visible = true
+    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0
     const loop = () => {
       cx += (tx - cx) * 0.07
       cy += (ty - cy) * 0.07
-      pin.style.setProperty('--tx', cx.toFixed(4))
-      pin.style.setProperty('--ty', cy.toFixed(4))
-      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.002 && visible ? requestAnimationFrame(loop) : 0
+      scroller.style.setProperty('--tx', cx.toFixed(4))
+      scroller.style.setProperty('--ty', cy.toFixed(4))
+      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.002 ? requestAnimationFrame(loop) : 0
     }
     const aim = (x: number, y: number) => {
       tx = Math.max(-1, Math.min(1, x))
       ty = Math.max(-1, Math.min(1, y))
-      if (!raf && visible) raf = requestAnimationFrame(loop)
+      if (!raf) raf = requestAnimationFrame(loop)
     }
-    const io = new IntersectionObserver(([e]) => (visible = e.isIntersecting), { root: scroller })
-    io.observe(pin)
     const fine = matchMedia('(hover: hover) and (pointer: fine)').matches
     const onPointer = (e: PointerEvent) => {
-      const r = pin.getBoundingClientRect()
+      const r = scroller.getBoundingClientRect()
       aim(((e.clientX - r.left) / r.width - 0.5) * 2, ((e.clientY - r.top) / r.height - 0.5) * 2)
     }
     const onLeave = () => aim(0, 0)
@@ -164,15 +161,14 @@ function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
       DOE?.requestPermission?.().then((r) => r === 'granted' && startTilt()).catch(() => {})
     }
     if (fine) {
-      pin.addEventListener('pointermove', onPointer, { passive: true })
-      pin.addEventListener('pointerleave', onLeave)
+      scroller.addEventListener('pointermove', onPointer, { passive: true })
+      scroller.addEventListener('pointerleave', onLeave)
     } else if (DOE?.requestPermission) scroller.addEventListener('touchend', askOnce, { once: true })
     else startTilt()
     return () => {
-      io.disconnect()
       cancelAnimationFrame(raf)
-      pin.removeEventListener('pointermove', onPointer)
-      pin.removeEventListener('pointerleave', onLeave)
+      scroller.removeEventListener('pointermove', onPointer)
+      scroller.removeEventListener('pointerleave', onLeave)
       scroller.removeEventListener('touchend', askOnce)
       removeEventListener('deviceorientation', onTilt)
     }
@@ -180,27 +176,25 @@ function useStageTilt(root: React.RefObject<HTMLDivElement | null>) {
 }
 
 const LAYER = (n: string) => `${import.meta.env.BASE_URL}images/home/duet3d/${n}`
+const CH_LAYER = (n: string) => `${import.meta.env.BASE_URL}images/home/layers/${n}`
 
-/** One depth layer of the painting: the scroll animation moves the outer box, the tilt moves the inner one. */
-function Layer({ name }: { name: 'bg' | 'mid' | 'fg' }) {
+/**
+ * One depth layer of a painting, three nested boxes so three motions never fight over one transform:
+ * .hm-layer (scroll: the panel arriving) > .hm-push (scroll: the next panel covering it) > .hm-tilt (pointer / gyro).
+ */
+function Layer({ name, src }: { name: 'bg' | 'mid' | 'fg'; src?: string }) {
+  const url = (suf: string) => (src ? CH_LAYER(`${src}-${name}${suf}.webp`) : LAYER(`${name}${suf}.webp`))
   return (
     <div className={`hm-layer hm-layer-${name}`} aria-hidden>
-      <div className="hm-tilt">
-        <picture>
-          <source media="(max-width: 760px)" srcSet={LAYER(`${name}-sm.webp`)} />
-          <img src={LAYER(`${name}.webp`)} alt="" decoding="async" />
-        </picture>
+      <div className="hm-push">
+        <div className="hm-tilt">
+          <picture>
+            <source media="(max-width: 760px)" srcSet={url('-sm')} />
+            <img src={url('')} alt="" decoding="async" loading={src ? 'lazy' : 'eager'} />
+          </picture>
+        </div>
       </div>
     </div>
-  )
-}
-
-function Picture({ art, className, eager }: { art: Art; className?: string; eager?: boolean }) {
-  return (
-    <picture>
-      <source media="(max-width: 760px)" srcSet={img(`${art.file}-sm.webp`)} />
-      <img src={img(`${art.file}.webp`)} alt={`${art.artist}, ${art.title} (${art.year})`} className={className} loading={eager ? 'eager' : 'lazy'} decoding="async" />
-    </picture>
   )
 }
 
@@ -230,8 +224,10 @@ function Chapter({ n, art, eyebrow, title, children, to, cta, extra, flip }: {
 }) {
   return (
       <section className={`hm-chapter${flip ? ' is-flip' : ''}`}>
-        <div className="hm-chapter-media">
-          <Picture art={art} className="hm-chapter-img" />
+        <div className="hm-chapter-media" role="img" aria-label={`${art.artist}, ${art.title} (${art.year})`}>
+          <Layer name="bg" src={art.file} />
+          <Layer name="mid" src={art.file} />
+          {art.fg && <Layer name="fg" src={art.file} />}
         </div>
         <div className="hm-chapter-text hm-reveal">
           <p className="hm-num">{n}</p>

@@ -27,21 +27,25 @@
    Each layer is two boxes: .hm-layer (scroll animation) > .hm-tilt (pointer / gyro shift by its own depth). */
 .hm-stage { position: relative; height: var(--vh); }
 .hm-stage-pin { position: relative; height: var(--vh); min-height: 520px; overflow: hidden; isolation: isolate; --tx: 0; --ty: 0; background: #0b0a08; }
-.hm-layer { position: absolute; inset: 0; transform: scale(1.06); }
-.hm-layer-bg { z-index: 1; }
-.hm-layer-mid { z-index: 2; transform-origin: 42% 42%; }
-.hm-layer-fg { z-index: 4; transform-origin: 62% 100%; }
-.hm-layer .hm-tilt, .hm-layer picture { position: absolute; inset: 0; }
+.hm-layer { position: absolute; inset: 0; }
+.hm-stage-pin .hm-layer { transform: scale(1.06); }
+.hm-stage-pin .hm-layer-bg { z-index: 1; }
+.hm-stage-pin .hm-layer-mid { z-index: 2; transform-origin: 42% 42%; }
+.hm-stage-pin .hm-layer-fg { z-index: 4; transform-origin: 62% 100%; }
+.hm-layer .hm-push, .hm-layer .hm-tilt, .hm-layer picture { position: absolute; inset: 0; }
 .hm-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
 .hm-tilt { --depth: 0px; transform: translate3d(calc(var(--tx) * var(--depth) * -1), calc(var(--ty) * var(--depth) * -0.6), 0); }
 .hm-layer-bg .hm-tilt { --depth: 7px; }
 .hm-layer-mid .hm-tilt { --depth: 16px; }
 .hm-layer-fg .hm-tilt { --depth: 30px; }
+.hm-chapter-media .hm-layer-bg .hm-tilt { --depth: 5px; }
+.hm-chapter-media .hm-layer-mid .hm-tilt { --depth: 12px; }
+.hm-chapter-media .hm-layer-fg .hm-tilt { --depth: 22px; }
 .hm-title-block .hm-tilt { --depth: 22px; }
 /* entrance: the room rises out of black, the listeners in front settle last */
-.hm-layer-bg img { animation: hm-layer-in 2400ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-.hm-layer-mid img { animation: hm-layer-in 2400ms 150ms cubic-bezier(0.16, 1, 0.3, 1) both; }
-.hm-layer-fg img { animation: hm-fg-in 2600ms 250ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hm-stage-pin .hm-layer-bg img { animation: hm-layer-in 2400ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hm-stage-pin .hm-layer-mid img { animation: hm-layer-in 2400ms 150ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hm-stage-pin .hm-layer-fg img { animation: hm-fg-in 2600ms 250ms cubic-bezier(0.16, 1, 0.3, 1) both; }
 @keyframes hm-layer-in { from { opacity: 0; transform: scale(1.08); } }
 @keyframes hm-fg-in { from { opacity: 0; transform: scale(1.16) translateY(3%); } }
 .hm-stage-veil {
@@ -134,7 +138,10 @@
 .hm-chapter.is-flip { grid-template-columns: 1fr 1.08fr; }
 .hm-chapter.is-flip .hm-chapter-media { order: 2; }
 .hm-chapter-media { position: relative; height: 100%; overflow: hidden; }
-.hm-chapter-img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); }
+.hm-chapter-media .hm-layer { transform: scale(1.08); }
+.hm-chapter-media .hm-layer-bg { z-index: 1; } .hm-chapter-media .hm-layer-mid { z-index: 2; } .hm-chapter-media .hm-layer-fg { z-index: 3; }
+.hm-chapter-media::after { z-index: 4; }
+.hm-chapter-media .hm-layer img { object-position: 50% 42%; }
 .hm-chapter-media::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, transparent 55%, #0b0a08);
@@ -233,9 +240,9 @@
          50 – 92 %  the motto lights up word by word over the dark room, then its signature */
     .hm-stage { height: calc(var(--vh) * 3.4); view-timeline-name: --stage; }
     .hm-stage-pin { position: sticky; top: 0; }
-    .hm-layer-bg { animation: hm-cam-bg linear both; animation-timeline: --stage; animation-range: contain 0% contain 100%; }
-    .hm-layer-mid { animation: hm-cam-mid linear both; animation-timeline: --stage; animation-range: contain 0% contain 100%; }
-    .hm-layer-fg { animation: hm-cam-fg linear both; animation-timeline: --stage; animation-range: contain 0% contain 58%; }
+    .hm-stage-pin .hm-layer-bg { animation: hm-cam-bg linear both; animation-timeline: --stage; animation-range: contain 0% contain 100%; }
+    .hm-stage-pin .hm-layer-mid { animation: hm-cam-mid linear both; animation-timeline: --stage; animation-range: contain 0% contain 100%; }
+    .hm-stage-pin .hm-layer-fg { animation: hm-cam-fg linear both; animation-timeline: --stage; animation-range: contain 0% contain 58%; }
     .hm-title-block { animation: hm-title-away linear both; animation-timeline: --stage; animation-range: contain 2% contain 30%; }
     .hm-hero-foot, .hm-hero-credit, .hm-scroll-cue { animation: hm-foot-away linear both; animation-timeline: --stage; animation-range: contain 0% contain 14%; }
     .hm-stage-dark { animation: hm-dark linear both; animation-timeline: --stage; animation-range: contain 28% contain 50%; }
@@ -250,7 +257,22 @@
     .hm-chapter:nth-child(2) { view-timeline-name: --c2; }
     .hm-chapter:nth-child(3) { view-timeline-name: --c3; }
     .hm-chapter:nth-child(4) { view-timeline-name: --c4; }
-    .hm-chapter-media { animation: hm-media-in linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+    /* a panel arriving: as it slides up, its layers travel at their own speeds (wall slowest, objects in front fastest)
+       and settle together — a camera crane rising into the scene */
+    .hm-chapter-media .hm-layer-bg { animation: hm-arrive-bg linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+    .hm-chapter-media .hm-layer-mid { animation: hm-arrive-mid linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+    .hm-chapter-media .hm-layer-fg { animation: hm-arrive-fg linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+    /* a panel being covered: the camera pushes in past its foreground while the next panel slides over */
+    .hm-chapter:nth-child(1) .hm-push { animation-timeline: --c2; }
+    .hm-chapter:nth-child(2) .hm-push { animation-timeline: --c3; }
+    .hm-chapter:nth-child(3) .hm-push { animation-timeline: --c4; }
+    .hm-chapter:not(:last-child) .hm-layer-bg .hm-push { animation-name: hm-push-bg; animation-timing-function: linear; animation-fill-mode: both; animation-range: entry 0% entry 100%; }
+    .hm-chapter:not(:last-child) .hm-layer-mid .hm-push { animation-name: hm-push-mid; animation-timing-function: linear; animation-fill-mode: both; animation-range: entry 0% entry 100%; }
+    .hm-chapter:not(:last-child) .hm-layer-fg .hm-push { animation-name: hm-push-fg; animation-timing-function: linear; animation-fill-mode: both; animation-range: entry 0% entry 100%; }
+    .hm-chapter:not(:last-child) .hm-chapter-text { animation-name: hm-text-in, hm-text-out; animation-timing-function: linear; animation-fill-mode: both; animation-range: entry 45% entry 100%, entry 0% entry 70%; }
+    .hm-chapter:nth-child(1) .hm-chapter-text { animation-timeline: view(), --c2; }
+    .hm-chapter:nth-child(2) .hm-chapter-text { animation-timeline: view(), --c3; }
+    .hm-chapter:nth-child(3) .hm-chapter-text { animation-timeline: view(), --c4; }
     .hm-chapter-text { animation: hm-text-in linear both; animation-timeline: view(); animation-range: entry 45% entry 100%; }
     .hm-chapter:nth-child(1)::after { animation: hm-sink linear both; animation-timeline: --c2; animation-range: entry 0% entry 100%; }
     .hm-chapter:nth-child(2)::after { animation: hm-sink linear both; animation-timeline: --c3; animation-range: entry 0% entry 100%; }
@@ -276,7 +298,13 @@
 @keyframes hm-words-in { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
 @keyframes hm-sign { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes hm-word { from { opacity: 0.12; } to { opacity: 1; } }
-@keyframes hm-media-in { from { transform: scale(1.14); opacity: 0.35; } to { transform: none; opacity: 1; } }
+@keyframes hm-arrive-bg { from { transform: scale(1.08) translateY(-38%); } to { transform: scale(1.08); } }
+@keyframes hm-arrive-mid { from { transform: scale(1.14) translateY(-16%); opacity: 0.6; } to { transform: scale(1.08); opacity: 1; } }
+@keyframes hm-arrive-fg { from { transform: scale(1.22) translateY(14%); opacity: 0; } 40% { opacity: 1; } to { transform: scale(1.08); opacity: 1; } }
+@keyframes hm-push-bg { to { transform: scale(1.04) translateY(4%); } }
+@keyframes hm-push-mid { to { transform: scale(1.12) translateY(2%); } }
+@keyframes hm-push-fg { to { transform: scale(1.32) translateY(-10%); opacity: 0.15; } }
+@keyframes hm-text-out { to { transform: translateY(-40px); opacity: 0; } }
 @keyframes hm-text-in { from { transform: translateY(56px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes hm-sink { to { opacity: 0.6; } }
 @keyframes hm-track { to { transform: translateX(calc(-100% + 100cqw)); } }
