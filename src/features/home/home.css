@@ -148,18 +148,10 @@
   /* edge fades are baked into the images' alpha (split2.py): a CSS mask on moving layers stalls Safari */
 }
 .hm-chapter.is-flip { --fade-dir: 270deg; }
-.hm-chapter-mark {
-  position: absolute; z-index: 3; top: var(--mark-top, 16%); left: var(--mark-left, 34%); right: 5vw; pointer-events: none;
-}
-.hm-chapter.is-flip .hm-chapter-mark { left: clamp(24px, 6vw, 96px); right: 31%; }
-/* where each heading sits so the figures cover only part of it */
-.hm-chapter:nth-child(1) { --mark-top: 16%; --mark-left: 38%; }
-.hm-chapter:nth-child(2) { --mark-top: 30%; }
-.hm-chapter:nth-child(3) { --mark-top: 20%; --mark-left: 41%; }
-.hm-chapter:nth-child(4) { --mark-top: 24%; }
+.hm-chapter-mark { position: relative; }
 .hm-chapter-mark .hm-tilt { --depth: 8; }
-.hm-chapter-mark .hm-chapter-title { font-size: clamp(44px, 6.6vw, 108px); line-height: 1.04; text-shadow: 0 1px 2px rgb(0 0 0 / 0.6), 0 4px 24px rgb(0 0 0 / 0.6); }
-.hm-chapter-text { position: relative; z-index: 6; align-self: end; padding-bottom: clamp(48px, 11vh, 120px) !important; }
+.hm-chapter-mark .hm-chapter-title { font-size: clamp(36px, 4.6vw, 68px); line-height: 1.1; text-shadow: 0 1px 2px rgb(0 0 0 / 0.6), 0 4px 24px rgb(0 0 0 / 0.6); }
+.hm-chapter-text { position: relative; z-index: 6; }
 .hm-chapter-media .hm-layer img { object-position: 50% 42%; }
 .hm-chapter-media::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -242,14 +234,8 @@
   .hm-chapter.is-flip .hm-chapter-media { order: 0; }
   .hm-chapter-media::after, .hm-chapter.is-flip .hm-chapter-media::after { background: linear-gradient(0deg, #0b0a08 2%, transparent 40%), linear-gradient(180deg, rgb(11 10 8 / 0.82) 0%, rgb(11 10 8 / 0.5) 22%, transparent 42%); }
   .hm-chapter, .hm-chapter.is-flip { --fade-dir: 180deg; --fade-from: 92%; }
-  /* phones: the heading sits in the darkened top of the picture, where only heads, a scroll or a bow cross it */
-  .hm-chapter-mark, .hm-chapter.is-flip .hm-chapter-mark { top: max(64px, 7svh); left: 22px; right: 22px; }
-  /* in a tall frame the figures fill the middle: the heading steps in front of them and only the foreground passes over it */
-  .hm-chapter-mark { z-index: 5; }
-  .hm-chapter-media .hm-layer-fg { z-index: 6; }
-  .hm-chapter-text { z-index: 7; }
-  .hm-chapter-mark .hm-chapter-title { font-size: clamp(40px, 11vw, 64px); }
-  .hm-chapter-text { padding: 0 22px 0; align-self: start; margin-top: -2svh; }
+  .hm-chapter-mark .hm-chapter-title { font-size: clamp(30px, 8.4vw, 44px); }
+  .hm-chapter-text { padding: 0 22px 0; align-self: start; margin-top: -40px; }
   .hm-num { font-size: 46px; margin-bottom: 6px; }
   .hm-chapter-body { margin-top: 12px; font-size: 14.5px; line-height: 1.65; }
   .hm-caption { display: none; }

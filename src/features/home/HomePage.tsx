@@ -250,15 +250,15 @@ function Chapter({ n, art, eyebrow, title, children, to, cta, extra, flip }: {
           <Layer name="mid" src={art.file} />
           {art.fg && <Layer name="fg" src={art.file} />}
         </div>
-        {/* the heading lives inside the picture: in front of the room, behind the figures, who pass over it */}
-        <div className="hm-chapter-mark">
-          <div className="hm-tilt">
-            <p className="hm-num">{n}</p>
-            <p className="brand-eyebrow">{eyebrow}</p>
-            <h2 className="hm-chapter-title">{title}</h2>
-          </div>
-        </div>
         <div className="hm-chapter-text hm-reveal">
+          {/* the heading moves on its own, slower than the picture, so it floats at a depth between room and figures */}
+          <div className="hm-chapter-mark">
+            <div className="hm-tilt">
+              <p className="hm-num">{n}</p>
+              <p className="brand-eyebrow">{eyebrow}</p>
+              <h2 className="hm-chapter-title">{title}</h2>
+            </div>
+          </div>
           <div className="hm-chapter-body">{children}</div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <Link to={to} className="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-medium">
