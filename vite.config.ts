@@ -35,7 +35,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2,json}'],
         // Scanned music examples and the engraved sheets of the children's books (thousands of small images) load on demand and are cached as they are seen.
         // The full-text search file (several MB) loads on the first search and is cached then.
-        globIgnores: ['scans/**', 'sheets/**', 'content/search.*.json', 'images/home/**'],
+        globIgnores: ['scans/**', 'sheets/**', 'content/search.*.json', 'images/home/!(duet*)'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [

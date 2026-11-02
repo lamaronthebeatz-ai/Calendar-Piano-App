@@ -1,4 +1,4 @@
-import { useEffect, useRef, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ARTICLES, CATEGORIES } from '../theory/articles'
 import { libraryStats } from '../theory/wiki'
@@ -182,6 +182,13 @@ export function HomePage() {
   useRevealFallback(root)
   useHeroLight(root)
   useMarkAutoHide(root)
+  // The lock screen dissolves over this hero (same painting): the title rises again as the curtain goes.
+  const [heroRun, setHeroRun] = useState(0)
+  useEffect(() => {
+    const replay = () => setHeroRun((n) => n + 1)
+    addEventListener('app-unlocked', replay)
+    return () => removeEventListener('app-unlocked', replay)
+  }, [])
   const books = SHELF_BOOKS.filter((b) => b.coverImage)
 
   return (
@@ -198,7 +205,7 @@ export function HomePage() {
             <span key={i} style={{ left: d.left, top: d.top, width: d.size, height: d.size, animationDuration: d.dur, animationDelay: d.delay }} />
           ))}
         </div>
-        <div className="hm-hero-content">
+        <div key={heroRun} className="hm-hero-content">
           <img src={logoFull} alt="Lamar" className="hm-hero-logo" />
           <p className="hm-hero-eyebrow">Trung tâm lý thuyết âm nhạc học</p>
           <h1 className="hm-hero-title">

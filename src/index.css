@@ -309,80 +309,7 @@ body {
   .btn-sheen::after { display: none; }
 }
 
-/* ---------- Welcome / passcode glass ---------- */
-.app-veil { transition: filter 900ms cubic-bezier(0.7, 0, 0.2, 1), transform 900ms cubic-bezier(0.7, 0, 0.2, 1); }
-.app-veil.is-veiled { filter: blur(16px) saturate(1.25); transform: scale(1.04); }
-.app-veil.is-arriving { animation: app-swirl-in 1100ms cubic-bezier(0.33, 0.6, 0.2, 1); }
-@keyframes app-swirl-in {
-  from { filter: blur(16px) saturate(1.25); transform: scale(0.78) rotate(9deg); }
-}
-.lock-glass {
-  background: color-mix(in oklch, var(--color-surface) 52%, transparent);
-  backdrop-filter: blur(30px) saturate(1.5);
-  -webkit-backdrop-filter: blur(30px) saturate(1.5);
-  transition: transform 900ms cubic-bezier(0.55, 0, 0.15, 1), opacity 560ms ease-in 120ms;
-}
-/* Unlocking dives through the glass: it swells and swirls past the viewer while the app spins in underneath. */
-.lock-glass.is-leaving {
-  transform: scale(2.6) rotate(-28deg);
-  opacity: 0;
-}
-.lock-glass.is-leaving .lock-content {
-  opacity: 0;
-  transform: scale(1.35) rotate(-10deg);
-  transition: opacity 380ms ease-in, transform 700ms cubic-bezier(0.55, 0, 0.15, 1);
-}
-/* Cinema lock screen: one dark look over the concert clip in both themes. */
-.lock-cinema {
-  --color-ink: #f7f2e8;
-  --color-ink-muted: rgb(247 242 232 / 0.74);
-  --color-surface-raised: rgb(18 14 9 / 0.55);
-  background: #0a0806;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  color-scheme: dark;
-}
-/* During the opening the clip plays clear; once armed it softens a little and the scrim settles in. */
-.lock-video {
-  filter: brightness(0.96) saturate(1.05);
-  transform: scale(1.0);
-  transition: filter 1800ms ease, transform 2600ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-.lock-cinema.is-armed .lock-video {
-  filter: blur(2.5px) brightness(0.82) saturate(1.08);
-  transform: scale(1.035);
-}
-.lock-scrim {
-  opacity: 0;
-  transition: opacity 1600ms ease;
-  background:
-    radial-gradient(42% 50% at 50% 54%, rgb(8 6 3 / 0.5), transparent 78%),
-    linear-gradient(to bottom, rgb(8 6 3 / 0.55), rgb(8 6 3 / 0.18) 32%, rgb(8 6 3 / 0.32) 62%, rgb(8 6 3 / 0.82));
-}
-.lock-cinema.is-armed .lock-scrim { opacity: 1; }
-/* The passcode UI waits for the signature to land in its tile, then rises in. */
-.lock-cinema .lock-content {
-  opacity: 0;
-  translate: 0 10px;
-  transition: opacity 900ms ease 150ms, translate 1100ms cubic-bezier(0.22, 1, 0.36, 1) 150ms;
-}
-.lock-cinema.is-armed:not(.is-leaving) .lock-content { opacity: 1; translate: 0 0; }
-.lock-cinema .lock-key {
-  background: rgb(255 255 255 / 0.07);
-  border-color: rgb(255 255 255 / 0.16);
-  box-shadow: 0 1px 0 rgb(255 255 255 / 0.14) inset, 0 10px 24px -14px rgb(0 0 0 / 0.6);
-  backdrop-filter: blur(12px) saturate(1.3);
-  -webkit-backdrop-filter: blur(12px) saturate(1.3);
-}
-.lock-cinema .lock-key:active { background: rgb(216 170 80 / 0.32); }
-.lock-cinema .lock-key:not(.lock-key-digit) { background: transparent; border-color: transparent; box-shadow: none; backdrop-filter: none; }
-.lock-cinema .lock-logo { border-color: rgb(216 170 80 / 0.45); background: #000; box-shadow: 0 18px 40px -16px rgb(0 0 0 / 0.8), 0 0 0 1px rgb(255 255 255 / 0.06); }
-.lock-cinema .lock-dot:not(.is-filled) { background: rgb(255 255 255 / 0.1); box-shadow: 0 0 0 4px rgb(0 0 0 / 0.12); }
-.lock-cinema .lock-sound { background: rgb(255 255 255 / 0.06); border: 1px solid rgb(255 255 255 / 0.12); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: background-color 160ms ease, color 160ms ease; }
-.lock-cinema .lock-sound.is-waiting { color: var(--color-gold); border-color: rgb(216 170 80 / 0.45); animation: lock-sound-pulse 1.8s ease-in-out infinite; }
-@keyframes lock-sound-pulse { 50% { box-shadow: 0 0 0 6px rgb(216 170 80 / 0.12); } }
-.lock-cinema .lock-sound:hover { color: var(--color-ink); background: rgb(255 255 255 / 0.12); }
-.lock-cinema h1 { text-shadow: 0 2px 24px rgb(0 0 0 / 0.55); }
+/* ---------- Passcode keypad of the private area (PrivateArea.tsx); the app's lock screen has its own lock.css ---------- */
 .lock-glow {
   background:
     radial-gradient(60% 45% at 20% 10%, color-mix(in oklch, var(--color-gold) 22%, transparent), transparent 70%),
@@ -411,14 +338,7 @@ body {
 }
 .lock-shake { animation: lock-shake 420ms ease; }
 @media (prefers-reduced-motion: reduce) {
-  .lock-glass { transition: opacity 400ms ease; }
-  .lock-glass.is-leaving { transform: none; opacity: 0; }
-  .lock-glass.is-leaving .lock-content { transform: none; }
-  .lock-video { transition: none; }
-  .lock-cinema .lock-content { transition: opacity 300ms ease; translate: none; }
-  .app-veil.is-arriving { animation: none; }
   .lock-shake { animation: none; }
-  .lock-sound.is-waiting { animation: none; }
 }
 
 /* ---------- Motion layer: page entrances, scroll reveals, light that follows the pointer ---------- */
