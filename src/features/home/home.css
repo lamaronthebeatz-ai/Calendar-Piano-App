@@ -49,10 +49,12 @@
 }
 .hm-hero-title {
   margin-top: 14px; font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em;
-  font-size: clamp(44px, 8.2vw, 112px); line-height: 0.98;
+  font-size: clamp(44px, 8.2vw, 112px); line-height: 1.04;
 }
-.hm-line { display: block; overflow: hidden; padding-bottom: 0.08em; }
-.hm-line > span { display: inline-block; transform: translateY(105%); animation: hm-line-up 1300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+/* each line is a mask for the rise-in: padded so Vietnamese stacked accents above and descenders below stay inside it,
+   and the gradient span padded too, since background-clip: text only paints inside its own box */
+.hm-line { display: block; overflow: hidden; padding: 0.2em 0.1em 0.16em 0; margin: -0.2em 0 -0.16em; }
+.hm-line > span { display: inline-block; padding: 0.04em 0.12em 0.06em 0; transform: translateY(115%); animation: hm-line-up 1300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .hm-line:nth-child(1) > span { animation-delay: 480ms; }
 .hm-line:nth-child(2) > span { animation-delay: 640ms; }
 @keyframes hm-line-up { to { transform: none; } }
@@ -120,7 +122,7 @@
 .hm-chapter.is-flip .hm-chapter-media::after { background: linear-gradient(270deg, transparent 55%, #0b0a08); }
 .hm-chapter-text { padding: 0 clamp(24px, 6vw, 96px); max-width: 620px; }
 .hm-num { font-family: var(--font-display); font-style: italic; font-size: clamp(56px, 8vw, 112px); line-height: 1; color: transparent; -webkit-text-stroke: 1px rgb(226 189 120 / 0.55); margin-bottom: 18px; }
-.hm-chapter-title { margin-top: 12px; font-family: var(--font-display); font-weight: 600; letter-spacing: -0.015em; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.04; }
+.hm-chapter-title { margin-top: 12px; font-family: var(--font-display); font-weight: 600; letter-spacing: -0.015em; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.14; }
 .hm-chapter-body { margin-top: 20px; font-size: clamp(15px, 1.25vw, 17px); line-height: 1.75; color: var(--muted); }
 .hm-caption { margin-top: 34px; font-size: 11px; color: var(--faint); }
 
