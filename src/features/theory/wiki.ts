@@ -34,6 +34,8 @@ export interface ArticleMeta extends Omit<Article, 'body' | 'refs'> {
   h: string
   words: number
   figures: number
+  /** The concept's name in other languages, from the glossary: "en:fugue|ru:фуга|de:Fuge" */
+  xl?: string
   /** The first Wikipedia/Commons image or video in the text, for cards. */
   lead?: { wiki?: string; img?: string; video?: string }
 }
@@ -121,7 +123,9 @@ export function searchArticles(query: string, body?: Set<number> | null) {
   const scored: [number, ArticleMeta][] = []
   ARTICLES.forEach((a, i) => {
     const title = normalize(a.title)
-    let score = title.startsWith(q) ? 0 : title.includes(q) ? 1 : (a.aliases ?? []).some((k) => normalize(k).includes(q)) ? 2 : normalize(a.summary).includes(q) ? 3 : -1
+    // the concept's own name in another language ("фуга", "Kontrapunkt") finds its article first
+    const named = a.xl?.split('|').some((p) => normalize(p.slice(3)) === q)
+    let score = named ? 0.5 : title.startsWith(q) ? 0 : title.includes(q) ? 1 : (a.aliases ?? []).some((k) => normalize(k).includes(q)) || (a.xl && normalize(a.xl).includes(q)) ? 2 : normalize(a.summary).includes(q) ? 3 : -1
     if (score < 0 && q.length > 2 && body?.has(i)) score = 4
     if (score >= 0) scored.push([score + (a.unlisted ? 0.5 : 0), a])
   })

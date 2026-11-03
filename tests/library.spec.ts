@@ -45,3 +45,11 @@ test('bài viết dẫn sang thư mục và có cách trích dẫn bài', async 
   await expect(page.locator('a[href^="#/sources/wp-"]').first()).toBeVisible()
   await expect(page.locator('.src-cite-text')).toContainText('Passacaglia')
 })
+
+test('tìm bằng tên tiếng Nga / Đức ra đúng bài, đầu bài hiện tên năm thứ tiếng', async ({ page }) => {
+  await page.goto('/#/theory')
+  await page.locator('#theory-search').fill('фуга')
+  await expect(page.locator('main a[href^="#/theory/"]').first()).toHaveAttribute('href', '#/theory/fugue')
+  await page.goto('/#/theory/fugue')
+  await expect(page.locator('.term-names')).toContainText('Fuge')
+})

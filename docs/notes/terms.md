@@ -1,0 +1,11 @@
+# Thuật ngữ đa ngữ (`src/features/terms/`, giai đoạn 3, 11/2026)
+
+- **Không dùng TCVN 14301:2024** (văn bản bán, không công bố miễn phí — Lamar không có). Thay bằng:
+  - tên tiếng Việt = **tên bài** của khái niệm trong thư viện (cách thư viện đang dùng);
+  - tên Anh / Nga / Đức / Pháp / Ý = **nhãn Wikidata** (CC0) của mục ứng với trang Wikipedia tiếng Anh mà bài ghi ở trường `wiki`; không có nhãn thì lấy tiêu đề bài Wikipedia ngôn ngữ đó; có cả tiêu đề bài Wikipedia tiếng Việt nếu có;
+  - định nghĩa ngắn = `summary` của bài; số lần mỗi tên/từ khoá xuất hiện trong toàn thư viện (đếm **giữ dấu**, NFC, chữ thường — đếm bỏ dấu từng lẫn "hoà âm" với "hoạ âm").
+- **Sinh bằng** `python3 scripts/terms/build.py` (chạy **sau** `npm run build`, đọc `dist/content`): truy vấn SPARQL `query.wikidata.org` theo lô 60 tên (API Wikipedia trả 429 từ máy cloud; SPARQL thì được), cache ở `scripts/terms/wikidata.json` (xoá một mục để hỏi lại). Ra `src/features/terms/terms.json` (~160 KB, 258 mục) — commit cả hai file.
+- **Lọc:** bỏ nhà soạn nhạc, nghệ sĩ, mục Wikidata là người (P31 = Q5), bài phân tích tác phẩm (`phan-tich-*`) và danh sách `EXCLUDE` (66 bài mà trang Wikipedia là chủ đề lân cận, không cùng khái niệm — soát bằng mắt: "Khoá Sol" → *clef*, "Nhạc cụ Nam Á và Tây Á" → *sitar*, các bài tổng quan/lịch sử). Bài mới có `wiki` tự vào lần chạy sau — soát cặp tên Việt ↔ nhãn Anh rồi thêm vào `EXCLUDE` nếu lệch.
+- `aliases` của bài là **từ khoá tìm kiếm** (từ liên quan), không phải đồng nghĩa → trang chỉ ghi "số lần trong thư viện", không gắn cờ "tên chưa thống nhất" (bản đầu có cờ này, bắt 126 mục, đa số sai).
+- **Dùng ở đâu:** plugin `theory-content.ts` (`foreignNames`) ghi `xl: "en:fugue|ru:фуга|…"` vào chỉ mục (~10 KB nén) → tìm thư viện bằng tên ngoại ngữ (khớp đúng tên = xếp ngay sau khớp tiêu đề), đầu mỗi bài có dòng **EN · RU · DE · FR · IT** (`.term-names`) + link "Thuật ngữ". Trang `/terms` (ngăn kéo máy tính: "Thuật ngữ"): tìm mọi thứ tiếng, lọc chủ đề, mỗi mục link bài + Wikidata; `?q=` mở sẵn câu tìm. `terms.json` nạp bằng `?url` + `fetch` (import JSON làm `tsc` chậm và lỗi kiểu).
+- Test: `/terms` trong `smoke.spec.ts`; `library.spec.ts` tìm "фуга" ra `fugue`, đầu bài có "Fuge".

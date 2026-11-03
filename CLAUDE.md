@@ -49,6 +49,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `features.md` | Bảng tính `/tools`, trang Solfège, trợ lý lệnh, Ủng hộ, tour hướng dẫn |
 | `testing.md` | Test Playwright (Chromium + WebKit, chế độ không hiệu ứng), ngân sách dung lượng, CI chặn deploy |
 | `sources.md` | Thư mục học: nguồn dựng lúc build, `curated.ts`, `[^id, tr. n]`, `::verify`, trang `/sources`, trích dẫn Chicago/APA/BibTeX |
+| `terms.md` | Thuật ngữ đa ngữ: tên bài + nhãn Wikidata (không có TCVN), `scripts/terms/build.py`, `xl` trong chỉ mục, trang `/terms` |
 | `library-content.md` | Danh sách các mục nội dung đã có |
 | `../roadmap.md` | Lộ trình nâng cấp thành trung tâm tri thức cho nhà âm nhạc học (giai đoạn 0 – 6) |
 

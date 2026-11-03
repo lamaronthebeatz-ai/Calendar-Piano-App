@@ -19,6 +19,7 @@ const PAGES: [string, string, string?][] = [
   ['Thư mục học', '/#/sources'],
   ['Một nguồn', '/#/sources/sposobin-1984'],
   ['Việc còn treo', '/#/sources/treo'],
+  ['Thuật ngữ', '/#/terms'],
   ['Cài đặt', '/#/settings'],
 ]
 

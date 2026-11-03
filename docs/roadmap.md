@@ -57,6 +57,10 @@ interface Source {
 - Dữ liệu tải lười (`content/sources.<h>.json`), không vào gói JS.
 
 ## Giai đoạn 3 — Thuật ngữ đa ngữ, đối chiếu trường phái (3–4 phiên)
+**Đợt 1 ✅ (11/2026, chi tiết `notes/terms.md`) — không có TCVN 14301:2024 (văn bản phải mua), nên:** tên Việt = tên bài thư viện, tên Anh/Nga/Đức/Pháp/Ý = nhãn Wikidata (CC0, kiểm được từng mục). 258 thuật ngữ (soát bằng mắt, bỏ 66 cặp lệch khái niệm), tìm thư viện bằng 5 thứ tiếng, dòng tên ngoại ngữ ở đầu bài, trang `/terms`.
+**Còn lại:** bảng "mỗi trường phái hiểu thế nào" cho các khái niệm tranh cãi (chức năng, điệu thức, hình thức sonata…) — viết tay, có nguồn từng dòng, từ các bài sẵn có (Sposobin, Riemann qua Ewell/Bakulina, jazz); thuật ngữ cho bài chưa có `wiki` (thêm `wiki` vào bài rồi chạy lại script); khi nào có văn bản TCVN thì thêm cột đối chiếu.
+
+Kế hoạch ban đầu:
 **Cần Lamar cung cấp:** bản đầy đủ TCVN 14301:2024 "Âm nhạc – Thuật ngữ và định nghĩa" (trang thuvienphapluat chỉ hiện một phần) để làm chuẩn đối chiếu; quyết định khi TCVN khác cách dùng của nhạc viện.
 **Dữ liệu** `src/features/terms/`:
 ```ts

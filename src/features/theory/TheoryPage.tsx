@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
+import '../terms/terms.css'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -1085,6 +1086,19 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             </p>
           )}
           <h1 className="vt-morph font-display text-[32px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[42px]">{article.title}</h1>
+          {article.xl && (
+            <p className="term-names">
+              {article.xl.split('|').map((pair) => {
+                const [lang, name] = pair.split(/:(.*)/)
+                return (
+                  <span key={lang} lang={lang}>
+                    <b>{lang.toUpperCase()}</b> {name}
+                  </span>
+                )
+              })}
+              <Link to={`/terms?q=${encodeURIComponent(article.slug)}`} className="term-names-link">Thuật ngữ</Link>
+            </p>
+          )}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[12.5px] text-[var(--color-ink-faint)]">
             <span className="inline-flex items-center gap-1.5"><ClockIcon width={13} height={13} /> {readingMinutes(article)} phút đọc</span>
             {sections.length > 0 && <span className="inline-flex items-center gap-1.5"><ListIcon width={13} height={13} /> {sections.length} mục</span>}
