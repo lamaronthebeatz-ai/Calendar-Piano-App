@@ -16,7 +16,7 @@ Nguyên tắc cho mọi giai đoạn:
 - Service worker chỉ precache chỉ mục (precache còn 9,2 MB); bài cache khi đọc; nút "Lưu để đọc offline" theo mục và theo sách.
 - Chưa làm (chưa cần): chuyển nội dung từ `.ts` sang Markdown. Bước dựng nội dung hiện ~5 s; làm khi > 10 s hoặc > 4.000 bài (xem Giai đoạn 6).
 
-## Giai đoạn 1 — Lưới an toàn (1 phiên)
+## Giai đoạn 1 — Lưới an toàn ✅ (11/2026, chi tiết ở `notes/testing.md`)
 Để các giai đoạn sau không làm vỡ app trên máy thật.
 - `tests/smoke.spec.ts` (Playwright Test, cấu hình trong repo): mỗi trang chính (home, theory, một bài, một mục, musicology, bản đồ, tủ sách, trình đọc, tools, solfege, lịch khi đã mở khoá bằng mã giả) — mở không lỗi console, có nội dung; chạy ở **393×852 và 1280×820**, trên **Chromium + WebKit**.
 - Kiểm "nội dung không phụ thuộc hiệu ứng": chạy lại cùng bộ test với `prefers-reduced-motion: reduce` và với `animation-timeline` bị tắt (thêm CSS ép `animation: none`), nội dung chính vẫn hiện.

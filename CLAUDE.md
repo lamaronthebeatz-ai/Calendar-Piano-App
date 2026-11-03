@@ -20,8 +20,10 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 
 ## Trước khi push
 ```bash
-npx tsc -b && npm run lint && npm run check:links && npm run build
+npx tsc -b && npm run lint && npm run check:links && npm run build && npm run budget
+npx playwright test --project='chromium-*'   # khi đổi giao diện; WebKit chạy trên CI
 ```
+CI chạy đủ các bước + WebKit, hỏng là không deploy (`docs/notes/testing.md`).
 Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận được. `check:links` kiểm mọi `[[slug]]`, slug trùng, slug và chặng trên bản đồ.
 
 ## Luật code đã trả giá mới có
@@ -45,6 +47,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `home.md` | Trang chủ `/home` (sân khấu tranh tách lớp, chương dính) và màn khoá |
 | `ui.md` | Theme, thương hiệu đen – vàng, điều hướng, ngăn kéo, View Transitions, hook hiệu ứng, âm thanh piano/máy nhịp, logo |
 | `features.md` | Bảng tính `/tools`, trang Solfège, trợ lý lệnh, Ủng hộ, tour hướng dẫn |
+| `testing.md` | Test Playwright (Chromium + WebKit, chế độ không hiệu ứng), ngân sách dung lượng, CI chặn deploy |
 | `library-content.md` | Danh sách các mục nội dung đã có |
 | `../roadmap.md` | Lộ trình nâng cấp thành trung tâm tri thức cho nhà âm nhạc học (giai đoạn 0 – 6) |
 
