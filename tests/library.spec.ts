@@ -63,3 +63,12 @@ test('mạng tri thức: hồ sơ Bach nối nơi chốn, hành trình, khái ni
   await page.locator('select').first().selectOption('bar')
   await expect(page.locator('.src-row').first()).toContainText('Baroque')
 })
+
+test('tác phẩm: sonata cho phím đàn trước 1800 có bài phân tích K. 545', async ({ page }) => {
+  await page.goto('/#/explore?tab=tac-pham')
+  await page.locator('select').first().selectOption('sonata')
+  await page.locator('input[placeholder="đến năm"]').fill('1800')
+  await page.getByText('Cho phím đàn').click()
+  await page.getByText('Có bài trong thư viện').click()
+  await expect(page.locator('a[href="#/theory/phan-tich-sonata-k545"]')).toBeVisible()
+})

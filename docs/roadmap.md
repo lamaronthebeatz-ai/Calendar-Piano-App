@@ -85,7 +85,8 @@ interface Term {
 
 ## Giai đoạn 4 — Mạng tri thức (4–5 phiên)
 **Đợt 1 ✅ (11/2026, chi tiết `notes/explore.md`):** trang `/explore` ghép người (398) + tác phẩm tiêu biểu (785) + nơi chốn / sự kiện / hành trình của bản đồ + phân ngành + khái niệm: lọc thời kỳ – quốc gia – năm, hồ sơ quan hệ từng người, dòng thời gian chung theo thế kỷ.
-**Còn lại:** tác phẩm thành thực thể có thể loại, hình thức, giọng, năm sáng tác (cần nhập dữ liệu có nguồn — chưa có); quan hệ "học với / ảnh hưởng tới" (bắt buộc có nguồn, viết tay); tra cứu khái niệm theo trường phái (sau bảng so sánh của giai đoạn 3); bầu trời 3D và bản đồ đọc chung một đồ thị.
+**Đợt 2 ✅:** 4.899 tác phẩm từ Wikidata (thể loại, giọng, năm, số hiệu; nhóm thể loại suy từ tên), lọc nhiều chiều — "sonata cho phím đàn trước 1800 có phân tích" trả lời được.
+**Còn lại:** hình thức (sonata, rondo…) của từng tác phẩm chưa có nguồn máy đọc được; quan hệ "học với / ảnh hưởng tới" (bắt buộc có nguồn, viết tay); tra cứu khái niệm theo trường phái (sau bảng so sánh của giai đoạn 3); bầu trời 3D và bản đồ đọc chung một đồ thị.
 
 Kế hoạch ban đầu:
 Nối các "hòn đảo" đang có (bài, nhà soạn nhạc, nơi chốn, phân ngành, sách, nguồn, thuật ngữ) thành một đồ thị tra hỏi được.
