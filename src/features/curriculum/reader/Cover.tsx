@@ -1,6 +1,12 @@
 import clsx from 'clsx'
 import { hueTint, type ReaderBook } from './model'
 
+// Shelf-sized covers use a 480 px copy (assets/covers/thumb): the 960 px originals, decoded, came to ~100 MB of
+// textures for one shelf page and made mid-range Android tablets stutter. Large covers (reader, print) keep the original.
+const FULL = import.meta.glob('../../../assets/covers/*.webp', { eager: true, import: 'default' }) as Record<string, string>
+const THUMB = import.meta.glob('../../../assets/covers/thumb/*.webp', { eager: true, import: 'default' }) as Record<string, string>
+const SMALL = new Map(Object.entries(FULL).map(([k, url]) => [url, THUMB[k.replace('/covers/', '/covers/thumb/')]] as const).filter(([, t]) => t))
+
 /**
  * The front of a book. The theory books have a cream typographic cover (two-line title, the second
  * line in warm bronze); the piano courses keep their coloured cloth cover. `size` scales everything.
@@ -13,7 +19,7 @@ export function Cover({ book, className, size = 1 }: { book: ReaderBook; classNa
   if (book.coverImage)
     return (
       <div className={clsx('cover-photo relative aspect-square overflow-hidden', className)}>
-        <img src={book.coverImage} alt={`Bìa sách ${book.title}${book.volume ? ` — ${book.volume}` : ''}`} className="h-full w-full object-cover" draggable={false} />
+        <img src={(size <= 1 && SMALL.get(book.coverImage)) || book.coverImage} alt={`Bìa sách ${book.title}${book.volume ? ` — ${book.volume}` : ''}`} className="h-full w-full object-cover" draggable={false} />
         <span aria-hidden className="cover-cream-spine absolute inset-y-0 left-0 w-[4.5%] opacity-60" />
       </div>
     )

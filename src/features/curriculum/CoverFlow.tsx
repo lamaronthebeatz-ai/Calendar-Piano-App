@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { ChevronLeftIcon, ChevronRightIcon } from '../../components/icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { COVERFLOW_KEY as KEY, openBook, peek } from './bookOpen'
+import { IS_ANDROID } from '../../lib/device'
 import { Cover } from './reader/Cover'
 import type { ReaderBook } from './reader/model'
 import './motion-books.css'
@@ -188,7 +189,7 @@ export function CoverFlow({ books }: { books: ReaderBook[] }) {
 
   useEffect(() => {
     const D = (globalThis as unknown as { DeviceOrientationEvent?: { requestPermission?: unknown } }).DeviceOrientationEvent
-    if (D && !D.requestPermission && matchMedia('(pointer: coarse)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) listenGyro()
+    if (D && !D.requestPermission && !IS_ANDROID && matchMedia('(pointer: coarse)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) listenGyro()
     return () => {
       gyroOff.current()
       cancelAnimationFrame(tiltRaf.current)

@@ -4,12 +4,14 @@ import './index.css'
 import { App } from './App'
 import { seedDatabaseIfEmpty, ensureSettingsExist } from './data/seed'
 import { applyDarkTheme } from './services/settingsService'
+import { IS_ANDROID } from './lib/device'
 import { installSpotlight } from './lib/spotlight'
 
 async function bootstrap() {
   await seedDatabaseIfEmpty()
   await ensureSettingsExist()
   applyDarkTheme()
+  if (IS_ANDROID) document.documentElement.classList.add('is-android')
 
   createRoot(document.getElementById('root')!).render(
     <StrictMode>

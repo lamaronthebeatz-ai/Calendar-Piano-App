@@ -1065,6 +1065,10 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 }
 
 /* Cover Flow (CoverFlow.tsx) */
+/* Android (html.is-android, lib/device.ts): no reflection or per-cover brightness filter on the 3D ring, and the sticky
+   page headers drop their live blur (it re-blurred the moving shelf painting every frame on mid-range tablets). */
+.is-android .coverflow-card { -webkit-box-reflect: none; filter: none !important; }
+.is-android .glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: color-mix(in oklch, var(--color-surface-raised) 94%, transparent); }
 /* Off screen the ring of 3D covers is skipped entirely: kept rendered, it cost every scroll frame on the shelf. */
 .coverflow { content-visibility: auto; contain-intrinsic-size: auto 470px; }
 .coverflow-stage {

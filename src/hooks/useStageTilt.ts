@@ -1,4 +1,5 @@
 import { useEffect, type RefObject } from 'react'
+import { IS_ANDROID } from '../lib/device'
 
 /**
  * Tilt: the three layers of the painting (and the title between them) shift by different amounts as the pointer moves
@@ -67,7 +68,7 @@ export function useStageTilt(root: RefObject<HTMLElement | null>, panelSelector:
       scroller.addEventListener('pointermove', onPointer, { passive: true })
       scroller.addEventListener('pointerleave', onLeave)
     } else if (DOE?.requestPermission) scroller.addEventListener('touchend', askOnce, { once: true })
-    else startTilt()
+    else if (!IS_ANDROID) startTilt()
     return () => {
       io.disconnect()
       cancelAnimationFrame(raf)
