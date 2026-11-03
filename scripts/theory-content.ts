@@ -107,6 +107,16 @@ const hash = (s: string) => createHash('sha256').update(s).digest('hex').slice(0
 /** Text for full-text search: directives dropped, link labels kept. */
 const plain = (body: string) => normalize(body.replace(/^\s*::.*$/gm, '').replace(/\[\^[^\]]+\]/g, '').replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/[*#|]/g, ' ').replace(/\s+/g, ' '))
 
+/** Names in other languages (glossary, scripts/terms/build.py): "en:fugue|ru:фуга|…", for search and the article head. */
+function foreignNames(): Map<string, string> {
+  try {
+    const terms = JSON.parse(readFileSync('src/features/terms/terms.json', 'utf8')) as Record<string, string>[]
+    return new Map(terms.map((t) => [t.id, ['en', 'ru', 'de', 'fr', 'it'].filter((l) => t[l]).map((l) => `${l}:${t[l]}`).join('|')]))
+  } catch {
+    return new Map()
+  }
+}
+
 function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
   const byKey = new Map<string, string>()
   for (const a of articles) for (const k of [a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a.slug)
@@ -160,6 +170,7 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
     return ids
   }
 
+  const xl = foreignNames()
   const files = new Map<string, string>()
   const index = articles.map((a) => {
     const { body, refs, ...meta } = a
@@ -171,7 +182,7 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
       img: /^::img ([^|\n]+?)\s*(?:\||$)/m.exec(body)?.[1],
       video: /^::youtube ([\w-]{11})/m.exec(body)?.[1],
     }
-    return { ...meta, h, words: body.split(/\s+/).length, figures: body.match(/^\s*::/gm)?.length ?? 0, ...(lead.wiki || lead.img || lead.video ? { lead } : {}) }
+    return { ...meta, ...(xl.get(a.slug) ? { xl: xl.get(a.slug) } : {}), h, words: body.split(/\s+/).length, figures: body.match(/^\s*::/gm)?.length ?? 0, ...(lead.wiki || lead.img || lead.video ? { lead } : {}) }
   })
   // Inverted index: word → ids (positions in the index) as hex gaps, "3,1,a" = 3, 4, 14.
   const postings = new Map<string, number[]>()
@@ -237,7 +248,7 @@ export function theoryContent(): Plugin {
     },
     // Editing an article rebuilds the index and reloads the page.
     handleHotUpdate({ file, server }) {
-      if (!/\/features\/(theory\/(content\/|articles\.source\.ts)|sources\/curated\.ts)/.test(file)) return
+      if (!/\/features\/(theory\/(content\/|articles\.source\.ts)|sources\/curated\.ts|terms\/terms\.json)/.test(file)) return
       built = undefined
       const mod = server.moduleGraph.getModuleById(RESOLVED)
       if (mod) server.moduleGraph.invalidateModule(mod)
