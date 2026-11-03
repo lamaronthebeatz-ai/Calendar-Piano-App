@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react'
+import { OfflineSave } from '../../theory/OfflineSave'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import { CheckIcon, ChevronRightIcon } from '../../../components/icons'
@@ -120,6 +121,7 @@ function CoverPage({ book, onStart, onToc }: { book: ReaderBook; onStart: () => 
           </button>
           {onToc && <button onClick={onToc} className="rc-ghost">Mục lục</button>}
         </div>
+        <OfflineSave slugs={book.items.flatMap((i) => (i.kind === 'chapter' ? [i.slug] : []))} className="mt-3" />
       </div>
     </div>
   )

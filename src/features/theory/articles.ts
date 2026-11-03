@@ -1,4 +1,4 @@
-import { LINK_COUNT, META, SEARCH_FILE } from 'virtual:theory-index'
+import { LINK_COUNT, META, SEARCH } from 'virtual:theory-index'
 import type { ArticleMeta } from './wiki'
 
 export { CATEGORIES } from './categories'
@@ -8,4 +8,4 @@ export { CATEGORIES } from './categories'
  * Built from articles.source.ts by scripts/theory-content.ts.
  */
 export const ARTICLES = META as ArticleMeta[]
-export { LINK_COUNT, SEARCH_FILE }
+export { LINK_COUNT, SEARCH }

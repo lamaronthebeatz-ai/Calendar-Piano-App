@@ -1,6 +1,7 @@
 /** The theory library's index, generated at build time by scripts/theory-content.ts. */
 declare module 'virtual:theory-index' {
   export const META: unknown[]
-  export const SEARCH_FILE: string
+  /** first two letters of a word → hash of its full-text shard (content/search/<xx>.<hash>.json) */
+  export const SEARCH: Record<string, string>
   export const LINK_COUNT: number
 }

@@ -1,8 +1,13 @@
 /**
- * Takes the theory library's text out of the JavaScript bundle. The content modules (src/features/theory/content)
- * are run at build time; the app imports only a light index (`virtual:theory-index`: titles, summaries, links,
- * counts), and each article's body and references become a JSON file fetched when the article is opened, plus one
- * full-text search file fetched on the first search. In `vite dev` the same files are served from memory.
+ * Takes the theory library out of the JavaScript bundle. The content modules (src/features/theory/content) are run at
+ * build time and become data files under content/, all named by hash (immutable, cached for good):
+ * - `index.<h>.json`: every article without its text (titles, summaries, links, counts) and the search shard table.
+ *   `virtual:theory-index` fetches it with a top-level await (preloaded from index.html), so code and library cache
+ *   separately and a new deploy of either does not re-download the other.
+ * - `<slug>.<h>.json`: one article's body, references and backlinks, fetched when it is read.
+ * - `search/<xx>.<h>.json`: the full-text index split by the first two letters of each word (word → articles),
+ *   so a search downloads a few small shards whatever the size of the library.
+ * In `vite dev` the same files are served from memory.
  */
 import { createHash } from 'node:crypto'
 import { createServer, type Plugin, type ViteDevServer } from 'vite'
@@ -22,7 +27,8 @@ interface SourceArticle {
 }
 
 interface Built {
-  index: string
+  /** content/ path of the index file */
+  indexFile: string
   files: Map<string, string>
 }
 
@@ -61,10 +67,27 @@ function build(articles: SourceArticle[]): Built {
     }
     return { ...meta, h, words: body.split(/\s+/).length, figures: body.match(/^\s*::/gm)?.length ?? 0, ...(lead.wiki || lead.img || lead.video ? { lead } : {}) }
   })
-  const search = JSON.stringify(articles.map((a) => plain(`${a.summary} ${a.body}`)))
-  const searchFile = `search.${hash(search)}.json`
-  files.set(searchFile, search)
-  return { index: `export const META = ${JSON.stringify(index)}\nexport const SEARCH_FILE = ${JSON.stringify(searchFile)}\nexport const LINK_COUNT = ${linkCount}\n`, files }
+  // Inverted index: word → ids (positions in the index) as hex gaps, "3,1,a" = 3, 4, 14.
+  const postings = new Map<string, number[]>()
+  articles.forEach((a, i) => {
+    for (const w of new Set(plain(`${a.summary} ${a.body}`).match(/[a-z0-9]+/g))) postings.set(w, [...(postings.get(w) ?? []), i])
+  })
+  const shards = new Map<string, Record<string, string>>()
+  for (const [w, ids] of [...postings].sort(([x], [y]) => (x < y ? -1 : 1))) {
+    const key = w.slice(0, 2)
+    if (!shards.has(key)) shards.set(key, {})
+    shards.get(key)![w] = ids.map((id, k) => (id - (k ? ids[k - 1] : -1)).toString(16)).join(',')
+  }
+  const search: Record<string, string> = {}
+  for (const [key, words] of shards) {
+    const json = JSON.stringify(words)
+    search[key] = hash(json)
+    files.set(`search/${key}.${search[key]}.json`, json)
+  }
+  const json = JSON.stringify({ meta: index, search, linkCount })
+  const indexFile = `index.${hash(json)}.json`
+  files.set(indexFile, json)
+  return { indexFile, files }
 }
 
 async function load(server: ViteDevServer) {
@@ -119,7 +142,23 @@ export function theoryContent(): Plugin {
     async load(id) {
       if (id !== RESOLVED) return
       if (dev) built ??= load(dev)
-      return (await built!).index
+      const { indexFile } = await built!
+      // Fails loudly rather than rendering an empty library; the file is precached, so this only happens offline
+      // before the first visit.
+      return `const r = await fetch(import.meta.env.BASE_URL + 'content/${indexFile}')
+if (!r.ok) throw new Error('Không tải được chỉ mục thư viện (' + r.status + ')')
+const d = await r.json()
+export const META = d.meta
+export const SEARCH = d.search
+export const LINK_COUNT = d.linkCount
+`
+    },
+    // Start downloading the index together with the scripts instead of after them.
+    async transformIndexHtml() {
+      if (dev) built ??= load(dev)
+      if (!built) return
+      const { indexFile } = await built
+      return [{ tag: 'link', attrs: { rel: 'preload', href: `${base}content/${indexFile}`, as: 'fetch', crossorigin: '' }, injectTo: 'head' }]
     },
     async generateBundle() {
       if (dev || !built) return

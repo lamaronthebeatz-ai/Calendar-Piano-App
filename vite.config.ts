@@ -34,15 +34,17 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2,json}'],
         // Scanned music examples and the engraved sheets of the children's books (thousands of small images) load on demand and are cached as they are seen.
-        // The full-text search file (several MB) loads on the first search and is cached then.
-        globIgnores: ['scans/**', 'sheets/**', 'content/search.*.json', 'images/home/!(duet*)', 'images/shelf/**'],
+        // Library: only the index is precached; articles and search shards are cached as they are read (and a topic or
+        // book can be saved for offline reading in one go, see theory/offline.ts), so installing does not grow with it.
+        globIgnores: ['scans/**', 'sheets/**', 'content/!(index.*).json', 'content/search/**', 'images/home/!(duet*)', 'images/shelf/**'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
           {
-            urlPattern: ({ url }) => /\/content\/search\.[\w]+\.json$/.test(url.pathname),
+            // file names carry a content hash, so a cached copy never goes stale; edited articles get new names
+            urlPattern: ({ url }) => /\/content\/(?!index\.).+\.json$/.test(url.pathname),
             handler: 'CacheFirst',
-            options: { cacheName: 'library-search', expiration: { maxEntries: 2 } },
+            options: { cacheName: 'library', expiration: { maxEntries: 12000, purgeOnQuotaError: true } },
           },
           {
             // piano samples and metronome ticks (theory/audio.ts): fetched on the first played note, then kept for offline use

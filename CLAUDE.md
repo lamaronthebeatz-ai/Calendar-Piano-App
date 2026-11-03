@@ -46,5 +46,6 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `ui.md` | Theme, thương hiệu đen – vàng, điều hướng, ngăn kéo, View Transitions, hook hiệu ứng, âm thanh piano/máy nhịp, logo |
 | `features.md` | Bảng tính `/tools`, trang Solfège, trợ lý lệnh, Ủng hộ, tour hướng dẫn |
 | `library-content.md` | Danh sách các mục nội dung đã có |
+| `../roadmap.md` | Lộ trình nâng cấp thành trung tâm tri thức cho nhà âm nhạc học (giai đoạn 0 – 6) |
 
 Thời khoá biểu: `src/features/calendar`, `students`, `lessons`, `settings`, `search` (Dexie/IndexedDB, Zustand); route `/` và `/students` bọc `PrivateArea`; máy chưa có học viên tự nạp `data/seed-backup.json` (bản sao lưu thật, Lamar đồng ý công khai). Học viên mở từ nút "Học viên" trên thanh Thời khoá biểu.

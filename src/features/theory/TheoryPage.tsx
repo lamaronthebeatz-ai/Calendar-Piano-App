@@ -24,7 +24,8 @@ import {
 import { EmptyState } from '../../components/EmptyState'
 import { ARTICLES, CATEGORIES } from './articles'
 import { Markup, WikiImage } from './Markup'
-import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadSearchText, searchArticles, type ArticleMeta as Article } from './wiki'
+import { OfflineSave } from './OfflineSave'
+import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadBodyMatches, searchArticles, type ArticleMeta as Article } from './wiki'
 import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useArticle, type ArticleText } from './body'
@@ -368,13 +369,20 @@ function Index() {
     else if (!id && (location.state as { fromIndex?: boolean } | null)?.fromIndex) navigate(-1)
     else setParams(id ? { c: id } : {}, { replace: true, state: location.state })
   }
-  // Words inside articles join the results once the full-text file has arrived (fetched on the first real search).
-  const [fullText, setFullText] = useState<string[] | null>(null)
-  const wantsText = query.trim().length > 2
+  // Words inside articles join the results once the shards for the query's words have arrived.
+  const [body, setBody] = useState<{ q: string; ids: Set<number> } | null>(null)
+  const q = query.trim()
   useEffect(() => {
-    if (wantsText) loadSearchText().then(setFullText, () => {})
-  }, [wantsText])
-  const results = useMemo(() => searchArticles(query, fullText), [query, fullText])
+    if (q.length <= 2) return
+    let live = true
+    const t = setTimeout(() => loadBodyMatches(q).then((ids) => live && setBody({ q, ids }), () => {}), 150)
+    return () => {
+      live = false
+      clearTimeout(t)
+    }
+  }, [q])
+  const bodyIds = body?.q === q ? body.ids : null
+  const results = useMemo(() => searchArticles(query, bodyIds), [query, bodyIds])
   const surprise = () => navigate(`/theory/${randomArticle().slug}`)
 
   return (
@@ -668,6 +676,7 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
             <CompassIcon width={15} height={15} /> Bắt đầu: {hub.title}
           </Link>
         )}
+        <OfflineSave slugs={cat.articles.map((a) => a.slug)} className="relative mt-3 block" />
       </header>
       <ArticleGrid articles={own} numbered />
       {shared.length > 0 && (

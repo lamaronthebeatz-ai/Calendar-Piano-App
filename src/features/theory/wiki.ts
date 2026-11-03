@@ -1,4 +1,4 @@
-import { ARTICLES, CATEGORIES, LINK_COUNT, SEARCH_FILE } from './articles'
+import { ARTICLES, CATEGORIES, LINK_COUNT, SEARCH } from './articles'
 
 /**
  * A theory article. `body` uses a tiny line-based markup (see Markup.tsx):
@@ -74,30 +74,55 @@ export const articlesByCategory = (Object.keys(CATEGORIES) as Article['category'
   ],
 }))
 
-let searchLoad: Promise<string[]> | null = null
-/** The library's text for full-text search, one string per article in ARTICLES order; fetched once, on the first search. */
-export function loadSearchText() {
-  return (searchLoad ??= fetch(`${import.meta.env.BASE_URL}content/${SEARCH_FILE}`)
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-    .catch((e) => {
-      searchLoad = null
-      throw e
-    }))
+const shards = new Map<string, Promise<Record<string, string>>>()
+function shard(key: string) {
+  let p = shards.get(key)
+  if (!p) {
+    const h = SEARCH[key]
+    p = !h
+      ? Promise.resolve({})
+      : fetch(`${import.meta.env.BASE_URL}content/search/${key}.${h}.json`).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+    p.catch(() => shards.delete(key))
+    shards.set(key, p)
+  }
+  return p
+}
+const ids = (gaps: string) => {
+  let id = -1
+  return gaps.split(',').map((g) => (id += parseInt(g, 16)))
+}
+
+/**
+ * Articles whose text contains every word of the query (each as the start of a word: "fug" finds "fuga", "fugue"),
+ * as positions in ARTICLES. Only the shards of the query's words are fetched, so the cost does not grow with the
+ * library. Words shorter than two letters are ignored; a query with none resolves to an empty set.
+ */
+export async function loadBodyMatches(query: string): Promise<Set<number>> {
+  const words = [...new Set(normalize(query).match(/[a-z0-9]+/g) ?? [])].filter((w) => w.length > 1)
+  let hit: Set<number> | null = null
+  for (const w of words) {
+    const table = await shard(w.slice(0, 2))
+    const found = new Set<number>()
+    for (const [term, gaps] of Object.entries(table)) if (term.startsWith(w)) for (const id of ids(gaps)) found.add(id)
+    hit = hit ? new Set([...hit].filter((id: number) => found.has(id))) : found
+    if (!hit.size) break
+  }
+  return hit ?? new Set()
 }
 
 /**
  * Ranked search: title matches first, then aliases, the summary, and finally the body text,
  * so a query always surfaces the article *about* it before articles that merely mention it.
- * `text` (from loadSearchText) adds matches inside articles.
+ * `body` (from loadBodyMatches) adds matches inside articles.
  */
-export function searchArticles(query: string, text?: string[] | null) {
+export function searchArticles(query: string, body?: Set<number> | null) {
   const q = normalize(query)
   if (!q) return []
   const scored: [number, ArticleMeta][] = []
   ARTICLES.forEach((a, i) => {
     const title = normalize(a.title)
     let score = title.startsWith(q) ? 0 : title.includes(q) ? 1 : (a.aliases ?? []).some((k) => normalize(k).includes(q)) ? 2 : normalize(a.summary).includes(q) ? 3 : -1
-    if (score < 0 && q.length > 2 && text?.[i]?.includes(q)) score = 4
+    if (score < 0 && q.length > 2 && body?.has(i)) score = 4
     if (score >= 0) scored.push([score + (a.unlisted ? 0.5 : 0), a])
   })
   return scored.sort((x, y) => x[0] - y[0]).map(([, a]) => a)
