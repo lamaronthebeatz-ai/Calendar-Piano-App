@@ -75,6 +75,13 @@ let positions: Record<string, number> = (() => {
 })()
 
 export const readingPosition = (slug: string) => positions[slug] ?? 0
+/** Articles left part-way, most recent first. */
+export const unfinished = (limit = 8) =>
+  Object.entries(positions)
+    .filter(([, r]) => r > 0.04 && r < 0.95)
+    .reverse()
+    .slice(0, limit)
+    .map(([slug, r]) => ({ slug, ratio: r }))
 
 export function saveReadingPosition(slug: string, ratio: number) {
   // Keep the 300 most recent so the store stays small.

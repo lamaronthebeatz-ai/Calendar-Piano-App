@@ -87,7 +87,16 @@ export function installViewTransitions(router: Router) {
 let morphSlug: string | undefined
 export const morphTarget = () => morphSlug
 export function setMorphTarget(slug: string, title: Element | null) {
+  for (const el of document.querySelectorAll('.vt-morph')) if (!el.closest('.theory-hero')) el.classList.remove('vt-morph')
+  for (const el of document.querySelectorAll('.vt-morph-img')) if (!el.closest('.theory-hero')) el.classList.remove('vt-morph-img')
+  // From one article to another the heading and picture of the page being left already carry the names: marking the
+  // card too would give two elements one name, and the browser would drop the whole transition.
+  if (document.querySelector('.theory-hero')) {
+    morphSlug = undefined
+    return
+  }
   morphSlug = slug
-  for (const el of document.querySelectorAll('.vt-morph-card')) el.classList.remove('vt-morph')
   title?.classList.add('vt-morph')
+  // The card's picture grows into the picture behind the article's title.
+  title?.closest('[data-card]')?.querySelector('.article-thumb')?.classList.add('vt-morph-img')
 }

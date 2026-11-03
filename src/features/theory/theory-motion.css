@@ -231,3 +231,18 @@ html.reveal-on .theory-article .prose-theory :is(figure, table, blockquote) { an
 @media (prefers-reduced-motion: reduce) {
   .article-thumb img { transition: none; }
 }
+
+/* Reading bar filled by the scroll itself (scroll-driven animation; the scroll handler stops writing it). */
+@supports (animation-timeline: scroll()) {
+  .read-progress > div { transition: none; animation: read-fill linear both; animation-timeline: scroll(nearest); }
+}
+@keyframes read-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Table of contents: one gold bar slides to the section being read. */
+.toc-bar {
+  position: absolute; left: -1.5px; top: 0; width: 2px; height: 100px; transform-origin: 0 0; border-radius: 2px; pointer-events: none;
+  background: linear-gradient(var(--tint, var(--color-gold)), var(--color-gold));
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.toc-link[data-active="true"] { border-color: transparent; }
+@media (prefers-reduced-motion: reduce) { .toc-bar { transition: none; } }

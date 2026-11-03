@@ -221,3 +221,8 @@ html.rubber-band main .overflow-y-auto { overscroll-behavior-y: none; }
 
 /* home page: the mark steps aside while scrolling down (HomePage useMarkAutoHide) */
 html[data-hm-down] .rail-mark:not(.is-hidden) { opacity: 0; transform: translateY(-14px) scale(0.92); pointer-events: none; }
+
+/* A library card's picture grows into the picture behind the article's title (and back). */
+html.vt-active .vt-morph-img { view-transition-name: article-image; }
+::view-transition-group(article-image) { animation-duration: 520ms; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+::view-transition-old(article-image), ::view-transition-new(article-image) { height: 100%; object-fit: cover; }

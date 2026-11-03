@@ -97,7 +97,25 @@ function Overview({ c }: { c: Curriculum }) {
 }
 
 /** The shelf: the opening stage, the book being read, the cover flow, then one lit shelf per topic. */
+const TOPIC_KEY = 'shelf:topic'
+
 function Shelf() {
+  const [topicId, setTopicId] = useState(() => {
+    try {
+      return sessionStorage.getItem(TOPIC_KEY) ?? SHELF_TOPICS[0]?.id
+    } catch {
+      return SHELF_TOPICS[0]?.id
+    }
+  })
+  const topic = SHELF_TOPICS.find((t) => t.id === topicId) ?? SHELF_TOPICS[0]
+  const chooseTopic = (id: string) => {
+    setTopicId(id)
+    try {
+      sessionStorage.setItem(TOPIC_KEY, id)
+    } catch {
+      /* not remembered */
+    }
+  }
   return (
     <>
       <ShelfStage />
@@ -107,12 +125,11 @@ function Shelf() {
           <CoverFlow books={SHELF_BOOKS} />
         </div>
 
-        <TopicIndex />
+        <TopicIndex active={topic.id} onChoose={chooseTopic} />
 
-        <div className="mt-6 space-y-20 sm:space-y-24">
-          {SHELF_TOPICS.map((t, k) => (
-            <TopicSection key={t.id} topic={t} n={k + 1} />
-          ))}
+        {/* One shelf at a time: the topic bar switches between them instead of one long scroll. */}
+        <div className="mt-6">
+          <TopicSection key={topic.id} topic={topic} n={SHELF_TOPICS.indexOf(topic) + 1} />
         </div>
 
         <div className="mt-20">
@@ -172,40 +189,26 @@ function ContinueReading() {
 
 const pad2 = (n: number) => String(n).padStart(2, '0')
 
-/** Sticky index of topics under the cover flow; highlights the topic in view. */
-function TopicIndex() {
-  const [active, setActive] = useState(SHELF_TOPICS[0]?.id)
+/** Sticky topic bar under the cover flow: picks the shelf shown below. */
+function TopicIndex({ active, onChoose }: { active: string; onChoose: (id: string) => void }) {
   const bar = useRef<HTMLDivElement>(null)
-  useLayoutEffect(() => {
-    if (typeof IntersectionObserver === 'undefined') return
-    const io = new IntersectionObserver(
-      (entries) => {
-        const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]
-        if (hit) setActive(hit.target.id.replace('chu-de-', ''))
-      },
-      { rootMargin: '-35% 0px -55% 0px' },
-    )
-    SHELF_TOPICS.forEach((t) => {
-      const el = document.getElementById(`chu-de-${t.id}`)
-      if (el) io.observe(el)
-    })
-    return () => io.disconnect()
-  }, [])
-  // Keep the active pill visible when the index scrolls sideways on phones.
+  // Keep the active pill visible when the bar scrolls sideways on phones.
   useLayoutEffect(() => {
     const pill = bar.current?.querySelector<HTMLElement>(`[data-topic="${active}"]`)
     const box = bar.current
     if (pill && box) box.scrollTo({ left: pill.offsetLeft - box.clientWidth / 2 + pill.clientWidth / 2, behavior: 'smooth' })
   }, [active])
-  const go = (id: string) => {
-    const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches
-    document.getElementById(`chu-de-${id}`)?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' })
+  const choose = (id: string) => {
+    onChoose(id)
+    // bring the shelf's heading under the bar when the reader is further down
+    const nav = bar.current?.closest('nav')
+    if (nav && nav.getBoundingClientRect().top <= 64) nav.scrollIntoView({ block: 'start' })
   }
   return (
     <nav aria-label="Chủ đề" className="topic-index sticky top-14 z-10 -mx-4 mt-8 lg:-mx-8">
       <div ref={bar} className="topic-index-bar no-scrollbar">
         {SHELF_TOPICS.map((t, k) => (
-          <button key={t.id} data-topic={t.id} onClick={() => go(t.id)} aria-current={active === t.id ? 'true' : undefined} className="topic-pill">
+          <button key={t.id} data-topic={t.id} onClick={() => choose(t.id)} aria-current={active === t.id ? 'true' : undefined} className="topic-pill">
             <span className="topic-pill-n">{pad2(k + 1)}</span>
             {t.short}
           </button>

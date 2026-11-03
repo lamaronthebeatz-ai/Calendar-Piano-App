@@ -108,7 +108,7 @@ html.vt-active .vt-bg { view-transition-name: branch-glyph; }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     /* the stage: the title rises away while the stars light up from the centre outward and the threads draw */
-    .mc-stage { height: 250svh; view-timeline-name: --sky; }
+    .mc-stage { height: 200svh; view-timeline-name: --sky; }
     .mc-stage-pin { position: sticky; top: 0; height: 100svh; min-height: 520px; padding-top: 72px; }
     .mc-stage-head { position: absolute; left: clamp(16px, 5vw, 64px); right: 16px; top: 18svh; animation: mc-head-away linear both; animation-timeline: --sky; animation-range: contain 0% contain 22%; }
     .mc-stage-sky { position: absolute; inset: 64px clamp(8px, 3vw, 40px) 48px; align-items: center; }

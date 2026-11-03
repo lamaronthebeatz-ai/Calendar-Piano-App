@@ -134,7 +134,22 @@ function MapIndex() {
   const [query, setQuery] = useState('')
   const [sel, setSel] = useState<string | null>(null)
   const q = normalize(query)
-  const jump = (p: PartId) => document.getElementById(`phan-${p}`)?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
+  // One part at a time: the chips switch the chapter shown below instead of jumping down a long page.
+  const [part, setPart] = useState<PartId>(() => {
+    try {
+      return (sessionStorage.getItem('musicology:part') as PartId | null) ?? PART_ORDER[0]
+    } catch {
+      return PART_ORDER[0]
+    }
+  })
+  const jump = (p: PartId) => {
+    setPart(p)
+    try {
+      sessionStorage.setItem('musicology:part', p)
+    } catch {
+      /* not remembered */
+    }
+  }
 
   return (
     <>
@@ -197,15 +212,6 @@ function MapIndex() {
               </button>
             )}
           </label>
-          {!q && (
-            <nav className="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 lg:mx-0 lg:px-0" aria-label="Đi tới phần">
-              {PART_ORDER.map((p) => (
-                <button key={p} onClick={() => jump(p)} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1.5 text-[12.5px] font-medium text-[var(--color-ink)] transition-colors hover:border-[var(--color-gold)]">
-                  {NUMERALS[p]} · {PARTS[p].title} <span className="tabular-nums opacity-60">{RESOLVED.filter((b) => b.part === p).length}</span>
-                </button>
-              ))}
-            </nav>
-          )}
         </div>
 
         {q ? (
@@ -232,10 +238,27 @@ function MapIndex() {
             </div>
           </section>
         )}
+        {!q && (
+          <nav className="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 lg:mx-0 lg:px-0" aria-label="Chọn phần">
+            {PART_ORDER.map((p) => (
+              <button
+                key={p}
+                onClick={() => jump(p)}
+                aria-pressed={part === p}
+                className={clsx(
+                  'shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-colors',
+                  part === p ? 'border-[color-mix(in_oklch,var(--color-gold)_55%,transparent)] bg-[color-mix(in_oklch,var(--color-gold)_14%,var(--color-surface-raised))] text-[var(--color-ink)]' : 'border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]',
+                )}
+              >
+                {NUMERALS[p]} · {PARTS[p].title} <span className="tabular-nums opacity-60">{RESOLVED.filter((b) => b.part === p).length}</span>
+              </button>
+            ))}
+          </nav>
+        )}
       </div>
 
       {/* 2 · the parts: the camera flies to each constellation in turn, then its branches slide up over it */}
-      {!q && PART_ORDER.map((p) => <PartChapter key={p} part={p} layout={layout} lit={lit} progress={progress.of} />)}
+      {!q && <PartChapter key={part} part={part} layout={layout} lit={lit} progress={progress.of} />}
 
       <div className="mx-auto max-w-6xl px-4 py-8 lg:px-8">
         <footer className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] leading-relaxed text-[var(--color-ink-muted)] sm:p-6">
@@ -402,8 +425,8 @@ function BranchCard({ branch: b, progress, delay }: { branch: ResolvedBranch; pr
           <span className="shrink-0 font-display text-[13px] font-semibold tabular-nums text-[var(--tint)]">{numberOf(b)}</span>
           <span data-bt className={clsx(morphBranch === b.id && 'vt-bt', 'text-[15px] font-semibold leading-snug text-[var(--color-ink)]')}>{b.title}</span>
         </span>
-        <span className="mt-0.5 block text-[11.5px] italic text-[var(--color-ink-faint)]">{b.en}</span>
-        <span className="mt-1 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{b.summary}</span>
+        <span className="mt-0.5 block text-[11.5px] italic text-[var(--color-ink-faint)] max-sm:hidden">{b.en}</span>
+        <span className="mt-1 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)] max-sm:hidden">{b.summary}</span>
         <span className="mt-2.5 flex items-center gap-2.5">
           <span className="h-1 flex-1 overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
             <span className="block h-full rounded-full bg-[var(--tint)] transition-[width] duration-700" style={{ width: `${pct}%` }} />

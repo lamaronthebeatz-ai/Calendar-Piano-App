@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -37,10 +37,12 @@ import { QuizCard } from './QuizCard'
 import { booksWithChapter } from '../curriculum/reader/model'
 import { Annotator } from '../curriculum/reader/Annotator'
 import { LIBRARY } from '../curriculum/reader/notes'
-import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
+import { GLYPHS, tint } from './categoryStyle'
 import { TOPIC_CREDITS } from './topicCredits'
 import { useThumbs } from './thumbs'
 import { HeroBackdrop } from './HeroBackdrop'
+import { ArticleQuiz, ContinueRow, HeroStaff, TopicBrowser } from './TheoryHome'
+import { TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
 import { useScrollCollapse } from '../../hooks/useScrollCollapse'
@@ -53,15 +55,14 @@ import './theory-motion.css'
 type CategoryId = Article['category']
 
 
-/** Where a newcomer should start: the roadmap article of the core groups. */
-const PATHS = ['nhac-ly-co-ban', 'ky-thuat-piano', 'giao-trinh-hoa-am', 'lo-trinh-hinh-thuc', 'phuc-dieu-nghiem-khac', 'lo-trinh-luyen-tai-su-pham', 'hoa-am-jazz', 'phuong-phap-phan-tich-tac-pham', 'lo-trinh-sang-tac', 'the-loai-am-nhac']
-  .map((s) => findArticle(s))
-  .filter((a): a is Article => !!a)
 
 const SUGGESTIONS = ['Vòng quãng 5', 'ii – V – I', 'Hình thức sonata', 'Hợp âm 7', 'Chopin', 'Đảo phách']
 
 const LISTED = ARTICLES.filter((a) => !a.unlisted)
 const randomArticle = () => LISTED[Math.floor(Math.random() * LISTED.length)]
+
+/** Browsers with scroll-driven animations fill the reading bar in CSS (theory-motion.css), off the main thread. */
+const SCROLL_TL = typeof CSS !== 'undefined' && CSS.supports('animation-timeline: scroll()')
 
 export function TheoryPage() {
   const { slug } = useParams()
@@ -113,7 +114,7 @@ export function TheoryPage() {
     const el = scroller.current!
     const r = el.scrollTop / Math.max(1, el.scrollHeight - el.clientHeight)
     ratio.current = r
-    if (progress.current) progress.current.style.transform = `scaleX(${r})`
+    if (progress.current && !SCROLL_TL) progress.current.style.transform = `scaleX(${r})`
     progressTrack.current?.toggleAttribute('data-done', r > 0.985)
     toTop.current?.classList.toggle('is-visible', el.scrollTop > 600)
     header.current?.toggleAttribute('data-scrolled', el.scrollTop > 140)
@@ -209,6 +210,17 @@ export function TheoryPage() {
             <ArticleActions article={article} />
           ) : (
             <div className="flex flex-none items-center gap-2">
+              <button
+                onClick={() => {
+                  scroller.current?.scrollTo({ top: 0 })
+                  document.getElementById('theory-search')?.focus({ preventScroll: true })
+                }}
+                aria-label="Tìm bài"
+                title="Tìm bài"
+                className="tools-btn"
+              >
+                <SearchIcon width={16} height={16} />
+              </button>
               <Link to="/solfege" aria-label="Solfège: luyện đoán nốt và quãng" title="Solfège: đoán nốt, đoán quãng" className="tools-btn solfege-btn">
                 <span aria-hidden>𝄞</span>
               </Link>
@@ -360,9 +372,7 @@ function Index() {
     if (wantsText) loadSearchText().then(setFullText, () => {})
   }, [wantsText])
   const results = useMemo(() => searchArticles(query, fullText), [query, fullText])
-  const { saved } = useLibrary()
   const surprise = () => navigate(`/theory/${randomArticle().slug}`)
-  const lookup = (slugs: string[]) => slugs.map((s) => findArticle(s)).filter((a): a is Article => !!a)
 
   return (
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
@@ -373,6 +383,7 @@ function Index() {
           <img src={`${import.meta.env.BASE_URL}images/hero-piano.webp`} alt="" className="h-full w-full object-cover object-[78%_45%] sm:object-[right_42%]" />
         </picture>
         <div aria-hidden className="hero-wash pointer-events-none absolute inset-0 -z-10" />
+        {!active && !query && <HeroStaff />}
         {!active && !query && (
           <>
             <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Thư viện lý thuyết</p>
@@ -402,6 +413,7 @@ function Index() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            id="theory-search"
             placeholder={`Tìm trong ${ARTICLES.length} trang: hợp âm, thị tấu, Chopin…`}
             className="h-full min-w-0 flex-1 bg-transparent text-[15px] text-[#f6ecdc] outline-none placeholder:text-[#e9dcc6]/45"
           />
@@ -435,64 +447,16 @@ function Index() {
         <CategoryView id={active.id} onSelect={select} />
       ) : (
         <>
-          {/* A rotating quiz on the library, beside saved reading (or a rotating random article when nothing is saved). */}
+          <ContinueRow />
+          <section className="space-y-3">
+            <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>
+            <TopicBrowser onSelect={select} />
+          </section>
+          {/* A rotating quiz on the library, beside a rotating random article. */}
           <div data-reveal className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <QuizCard />
-            {saved.length > 0 ? <Shelf title="Đã lưu" icon={<BookmarkIcon width={15} height={15} />} articles={lookup(saved).slice(0, 6)} /> : <Spotlight />}
+            <Spotlight />
           </div>
-
-          <section data-reveal className="space-y-4">
-            <SectionTitle icon={<CompassIcon width={16} height={16} />} hint="Mỗi bài là lộ trình của một nhóm">Bắt đầu từ đây</SectionTitle>
-            <div className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0">
-              {PATHS.map((a, i) => (
-                <Link
-                  key={a.slug}
-                  to={`/theory/${a.slug}`}
-                  style={{ ...tint(a.category), animationDelay: `${i * 50}ms` }}
-                  className="theory-card animate-float-up group relative flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 lg:w-auto"
-                >
-                  <span aria-hidden className="absolute -right-3 -top-4 font-['Noto_Music'] text-[84px] leading-none text-[color-mix(in_oklch,var(--tint)_16%,transparent)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
-                    {GLYPHS[a.category]}
-                  </span>
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--tint)]">{CATEGORIES[a.category].title}</span>
-                  <span className="mt-2 font-display text-[18px] font-semibold leading-snug text-[var(--color-ink)]">{a.title}</span>
-                  <span className="mt-2 line-clamp-3 text-[13px] leading-relaxed text-[var(--color-ink-muted)]">{a.summary}</span>
-                  <span className="mt-auto flex items-center gap-1 pt-4 text-[12.5px] font-medium text-[var(--color-ink)]">
-                    Bắt đầu <ArrowUpRightIcon width={14} height={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="space-y-4">
-            <div data-reveal>
-              <SectionTitle hint={`${articlesByCategory.length} nhóm`}>Mục lục theo chủ đề</SectionTitle>
-            </div>
-            <div className="grid grid-cols-1 gap-3 min-[460px]:grid-cols-2 lg:grid-cols-3">
-              {articlesByCategory.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => select(c.id)}
-                  style={tint(c.id)}
-                  data-reveal
-                  className="theory-card topic-card group grid min-h-[108px] grid-cols-[100px_1fr] overflow-hidden rounded-[20px] border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-left"
-                >
-                  <span className="topic-media" aria-hidden>
-                    {TOPIC_IMAGES[c.id] && <img src={TOPIC_IMAGES[c.id]} alt="" loading="lazy" decoding="async" />}
-                    <span className="topic-glyph font-['Noto_Music']">{GLYPHS[c.id]}</span>
-                  </span>
-                  <span className="relative min-w-0 py-3.5 pl-3.5 pr-4">
-                    <span className="flex items-start justify-between gap-2">
-                      <span className="text-[15px] font-semibold leading-snug text-[var(--color-ink)]">{c.title}</span>
-                      <span className="topic-count shrink-0 tabular-nums">{c.articles.length}</span>
-                    </span>
-                    <span className="mt-1.5 line-clamp-2 text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{c.description}</span>
-                  </span>
-                </button>
-              ))}
-            </div>
-          </section>
 
           <footer data-reveal className="grid gap-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] text-[var(--color-ink-muted)] sm:grid-cols-[1fr_2fr] sm:p-6">
             <div>
@@ -551,33 +515,6 @@ export function SectionTitle({ children, icon, hint }: { children: ReactNode; ic
       </h2>
       {hint && <span className="pb-0.5 text-[12px] text-[var(--color-ink-faint)]">{hint}</span>}
     </div>
-  )
-}
-
-function Shelf({ title, icon, articles, progress }: { title: string; icon: ReactNode; articles: Article[]; progress?: boolean }) {
-  return (
-    <section className="space-y-3">
-      <SectionTitle icon={icon}>{title}</SectionTitle>
-      <ul className="space-y-1">
-        {articles.map((a) => (
-          <li key={a.slug}>
-            <Link to={`/theory/${a.slug}`} style={tint(a.category)} className="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-[var(--color-surface-raised)]">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[color-mix(in_oklch,var(--tint)_14%,transparent)] font-['Noto_Music'] text-[15px] text-[var(--tint)]">{GLYPHS[a.category]}</span>
-              <span className="min-w-0 flex-1">
-                <span className="block truncate text-[14px] font-medium text-[var(--color-ink)]">{a.title}</span>
-                <span className="block truncate text-[12px] text-[var(--color-ink-faint)]">{CATEGORIES[a.category].title}</span>
-                {progress && (
-                  <span className="mt-1.5 block h-[3px] overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
-                    <span className="block h-full rounded-full bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)]" style={{ width: `${Math.max(4, readingPosition(a.slug) * 100)}%` }} />
-                  </span>
-                )}
-              </span>
-              <ChevronRightIcon width={15} height={15} className="text-[var(--color-ink-faint)] transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
   )
 }
 
@@ -843,7 +780,7 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
               onClick={(e) => setMorphTarget(a.slug, e.currentTarget.querySelector('.vt-morph-card'))}
               className="theory-card group grid h-full min-h-[92px] grid-cols-[84px_1fr] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]"
             >
-              <span className="article-thumb font-['Noto_Music']" aria-hidden>
+              <span className={clsx("article-thumb font-['Noto_Music']", morph === a.slug && 'vt-morph-img')} aria-hidden>
                 <span>{GLYPHS[a.category]}</span>
                 {thumbs?.[a.slug] && <img src={thumbs[a.slug][0]} alt="" loading="lazy" decoding="async" onError={(e) => e.currentTarget.remove()} className={clsx(thumbs[a.slug][1] && 'is-drawing')} />}
                 {numbered && <span className="article-num font-sans">{String(i + 1).padStart(2, '0')}</span>}
@@ -1096,6 +1033,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
   const [prev, next] = index < 0 ? [] : [siblings[index - 1], siblings[index + 1]]
   const branches = branchesOf(article.slug).filter((b) => b.part !== 'intro')
   const { size, serif, leading } = useLibrary()
+  const thumbs = useThumbs()
 
   // Headings, tables and figures of the body rise in as they are reached (useReveal in TheoryPage).
   useEffect(() => {
@@ -1202,6 +1140,8 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
           </section>
         )}
 
+        <ArticleQuiz slug={article.slug} />
+
         {(prev || next) && (
           <nav className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[prev, next].map((a, i) =>
@@ -1214,7 +1154,10 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
                   <span className={clsx('flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-faint)]', i && 'sm:justify-end')}>
                     {i ? <>Bài sau <ChevronRightIcon width={12} height={12} /></> : <><ChevronLeftIcon width={12} height={12} /> Bài trước</>}
                   </span>
-                  <span className="mt-1 line-clamp-2 font-display text-[16px] font-semibold text-[var(--color-ink)] group-hover:text-[var(--tint)]">{a.title}</span>
+                  <span className={clsx('mt-2 flex items-center gap-3', i && 'sm:flex-row-reverse')}>
+                    {thumbs?.[a.slug] && <img src={thumbs[a.slug][0]} alt="" loading="lazy" decoding="async" className={clsx('h-12 w-12 shrink-0 rounded-xl object-cover', thumbs[a.slug][1] && 'bg-white object-contain p-1')} onError={(e) => e.currentTarget.remove()} />}
+                    <span className="line-clamp-2 font-display text-[16px] font-semibold text-[var(--color-ink)] group-hover:text-[var(--tint)]">{a.title}</span>
+                  </span>
                 </Link>
               ) : null,
             )}
@@ -1238,6 +1181,15 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
 /** Sticky table of contents that highlights the section being read. */
 function Toc({ sections, scroller, onJump }: { sections: string[]; scroller: RefObject<HTMLDivElement | null>; onJump: (i: number) => void }) {
   const [active, setActive] = useState(0)
+  const list = useRef<HTMLOListElement>(null)
+  // A gold bar slides to the section being read (transform only).
+  useLayoutEffect(() => {
+    const ol = list.current
+    const item = ol?.querySelectorAll<HTMLElement>('.toc-link')[active]
+    const bar = ol?.querySelector<HTMLElement>('.toc-bar')
+    if (!item || !bar) return
+    bar.style.transform = `translateY(${item.offsetTop}px) scaleY(${item.offsetHeight / 100})`
+  }, [active, sections])
   useEffect(() => {
     const root = scroller.current
     if (!root) return
@@ -1263,7 +1215,8 @@ function Toc({ sections, scroller, onJump }: { sections: string[]; scroller: Ref
       <p className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-faint)]">
         <ListIcon width={13} height={13} /> Trong bài này
       </p>
-      <ol className="space-y-0.5 border-l border-[var(--color-border)]">
+      <ol ref={list} className="relative space-y-0.5 border-l border-[var(--color-border)]">
+        <span aria-hidden className="toc-bar" />
         {sections.map((title, i) => (
           <li key={title + i}>
             <button

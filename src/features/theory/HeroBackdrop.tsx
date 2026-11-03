@@ -18,7 +18,7 @@ export function HeroBackdrop({ slug, category, className }: { slug: string; cate
   const [failed, setFailed] = useState<string>()
   if (!src || failed === src) return null
   return (
-    <span aria-hidden className={`hero-backdrop${className ? ' ' + className : ''}`}>
+    <span aria-hidden className={`hero-backdrop vt-morph-img${className ? ' ' + className : ''}`}>
       <img key={src} src={src} alt="" decoding="async" onError={() => setFailed(src)} onLoad={(e) => e.currentTarget.classList.add('is-in')} />
     </span>
   )
