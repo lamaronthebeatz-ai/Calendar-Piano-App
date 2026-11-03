@@ -9,6 +9,7 @@ const server = await createServer({ server: { middlewareMode: true }, appType: '
 const { ARTICLES } = await server.ssrLoadModule('/src/features/theory/articles.source.ts')
 const { findArticle } = await server.ssrLoadModule('/src/features/theory/wiki.ts')
 const { PLACES, JOURNEYS } = await server.ssrLoadModule('/src/features/musicology/places.ts')
+const { SCHOOLS } = await server.ssrLoadModule('/src/features/terms/schools.ts')
 await server.close()
 
 const broken = []
@@ -24,6 +25,9 @@ for (const j of JOURNEYS) {
 const slugs = ARTICLES.map((a) => a.slug)
 const dupes = slugs.filter((s, i) => slugs.indexOf(s) !== i)
 
+// "Mỗi trường phái hiểu thế nào": every concept and every view must point to an article
+for (const [slug, e] of Object.entries(SCHOOLS))
+  for (const s of [slug, e.compare, ...e.views.map((v) => v.from)]) if (s && !known.has(s)) broken.push(`schools:${slug} → ${s}`)
 console.log(`${ARTICLES.length} articles, ${PLACES.length} map places, ${broken.length} broken links, ${dupes.length} duplicate slugs`)
 for (const b of broken) console.log('  broken:', b)
 for (const d of dupes) console.log('  duplicate:', d)

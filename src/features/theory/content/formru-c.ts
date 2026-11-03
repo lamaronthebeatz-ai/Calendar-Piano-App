@@ -46,15 +46,15 @@ Từ định nghĩa này Mazel rút ra mấy điểm cần nhớ:
 - **Chủ đề không đồng nhất với hình tượng** (образ): hình tượng là khái niệm mỹ học, chủ đề là khái niệm có hai mặt — biểu hiện và kỹ thuật. Một chủ đề có thể sinh nhiều hình tượng (biến tấu tự do), một hình tượng có thể do nhiều chủ đề tạo nên (vai trong opera). Mazel dẫn lời Rimsky-Korsakov trong *Biên niên* về *Scheherazade*: các chủ đề ở đó là "chất liệu thuần âm nhạc hay các motif cho sự phát triển giao hưởng".
 - **Chủ đề cũng không đồng nhất với cú pháp trình bày nó** — như luận đề của diễn giả không đồng nhất với ngữ pháp của câu nói ra luận đề ấy. Hình thức trình bày chủ đề điển hình nhất là đoạn nhạc.
 
-Sposobin cũng nói tới sự trùng khớp này: định nghĩa đoạn nhạc của ông "giống định nghĩa chủ đề" ở mục §3, vì "chủ đề rất thường được trình bày dưới dạng đoạn nhạc và khi ấy ranh giới của chúng trùng nhau" *(Sposobin, §21)*. Xem thêm [[ly-thuyet-chu-de]].
+Sposobin cũng nói tới sự trùng khớp này: định nghĩa đoạn nhạc của ông "giống định nghĩa chủ đề" ở mục §3, vì "chủ đề rất thường được trình bày dưới dạng đoạn nhạc và khi ấy ranh giới của chúng trùng nhau" [^sposobin-1984, §21, tr. 56]. Xem thêm [[ly-thuyet-chu-de]].
 
 ## Định nghĩa đoạn nhạc
 
 ### Sposobin: một ý nhạc tương đối trọn vẹn
 
-"Đoạn nhạc là một ý nhạc tương đối trọn vẹn, được kết thúc bằng kết (каденция) ở giọng ban đầu hoặc ở giọng khác." Các phần lớn của đoạn nhạc, "thường có hai", gọi là **câu** (предложение). *(Sposobin, §21)*
+"Đoạn nhạc là một ý nhạc tương đối trọn vẹn, được kết thúc bằng kết (каденция) ở giọng ban đầu hoặc ở giọng khác." Các phần lớn của đoạn nhạc, "thường có hai", gọi là **câu** (предложение). [^sposobin-1984, §21, tr. 56]
 
-Sposobin nhấn mạnh rằng trong phần lớn đoạn nhạc kiểu **trình bày** (экспозиционный тип изложения) thể hiện rõ, vì đoạn nhạc chứa sự trình bày lần đầu hoặc nhắc lại chủ đề; do đó đoạn nhạc có **tính thống nhất giai điệu – chủ đề**. Thống nhất ấy có thể là: hai câu gần như giống hệt trừ phần kết (Beethoven, *Septet* op. 20, chương III); nhắc lại một phần chất liệu câu đầu (Beethoven, Sonata op. 2 số 1, chương II); nhắc lại có biến đổi — hoa mỹ hoá, dời độ cao, đổi hoà âm; hoặc, khi không có nhắc lại, giữ nguyên tính chất nét giai điệu – tiết tấu và kết cấu, không tạo tương phản lớn *(Sposobin, §22)*.
+Sposobin nhấn mạnh rằng trong phần lớn đoạn nhạc kiểu **trình bày** (экспозиционный тип изложения) thể hiện rõ, vì đoạn nhạc chứa sự trình bày lần đầu hoặc nhắc lại chủ đề; do đó đoạn nhạc có **tính thống nhất giai điệu – chủ đề**. Thống nhất ấy có thể là: hai câu gần như giống hệt trừ phần kết (Beethoven, *Septet* op. 20, chương III); nhắc lại một phần chất liệu câu đầu (Beethoven, Sonata op. 2 số 1, chương II); nhắc lại có biến đổi — hoa mỹ hoá, dời độ cao, đổi hoà âm; hoặc, khi không có nhắc lại, giữ nguyên tính chất nét giai điệu – tiết tấu và kết cấu, không tạo tương phản lớn [^sposobin-1984, §22, tr. 56].
 
 ### Mazel: định nghĩa ba vế
 
@@ -84,11 +84,11 @@ Câu là phần lớn nhất của đoạn nhạc, kết bằng một kết. Maz
 
 ### Câu nhỏ (фраза)
 
-Sposobin: nhiều câu bốn hoặc sáu ô chia tiếp thành các cấu trúc hai ô (đôi khi ba ô) gọi là **câu nhỏ**. Câu nhỏ "hoàn toàn tách được về nghĩa" khỏi cấu trúc bên cạnh, tức là tách biệt về tiết tấu. Khác với kết của câu, kết của các câu nhỏ (trừ câu nhỏ cuối, trùng với kết câu) "không bị hạn chế": có thể dừng ở bất kỳ hợp âm nào với bất kỳ bè trầm nào *(Sposobin, §26)*. Bên cạnh câu chia được thành câu nhỏ còn có câu không chia.
+Sposobin: nhiều câu bốn hoặc sáu ô chia tiếp thành các cấu trúc hai ô (đôi khi ba ô) gọi là **câu nhỏ**. Câu nhỏ "hoàn toàn tách được về nghĩa" khỏi cấu trúc bên cạnh, tức là tách biệt về tiết tấu. Khác với kết của câu, kết của các câu nhỏ (trừ câu nhỏ cuối, trùng với kết câu) "không bị hạn chế": có thể dừng ở bất kỳ hợp âm nào với bất kỳ bè trầm nào [^sposobin-1984, §26, tr. 64]. Bên cạnh câu chia được thành câu nhỏ còn có câu không chia.
 
 ### Motif và motif con
 
-"Motif là một nhóm âm có tính nhịp điệu, hợp nhất bởi một trọng âm chính, và là đơn vị ý nghĩa nhỏ nhất." *(Sposobin, §27)* Vì có một trọng âm chính, motif thường xấp xỉ một ô nhịp, nhưng đầu và cuối motif thường không trùng vạch nhịp; motif kết thúc bằng một âm thuộc hợp âm, không phải âm treo hay âm lướt. Sposobin phân bốn kiểu, mượn từ thi luật (có ghi chú rằng đây là phân loại chung nhất, anapest coi như biến thể của iamb, dactyl như biến thể của trochee):
+"Motif là một nhóm âm có tính nhịp điệu, hợp nhất bởi một trọng âm chính, và là đơn vị ý nghĩa nhỏ nhất." [^sposobin-1984, §27, tr. 66] Vì có một trọng âm chính, motif thường xấp xỉ một ô nhịp, nhưng đầu và cuối motif thường không trùng vạch nhịp; motif kết thúc bằng một âm thuộc hợp âm, không phải âm treo hay âm lướt. Sposobin phân bốn kiểu, mượn từ thi luật (có ghi chú rằng đây là phân loại chung nhất, anapest coi như biến thể của iamb, dactyl như biến thể của trochee):
 
 | Kiểu | Sơ đồ | Ghi chú của Sposobin |
 |---|---|---|
@@ -97,17 +97,17 @@ Sposobin: nhiều câu bốn hoặc sáu ô chia tiếp thành các cấu trúc 
 | Trochee | mạnh – nhẹ | ít hơn một chút |
 | Motif không đủ | chỉ một âm mạnh | hiếm khi độc lập, thường mở đầu câu nhỏ hay câu |
 
-Phách mạnh của motif gọi là "икт", phách nhẹ đứng trước là "предыкт" (phách lấy đà). Từ phách lấy đà sang phách mạnh hoà âm thường đổi — phách lấy đà là "lấy đà, chuẩn bị hành động", phách mạnh là "chính hành động". Motif và câu nhỏ đôi khi chia tiếp thành **motif con** (субмотив) dài một phần ô nhịp *(Sposobin, §27)*. Mazel bổ sung rằng motif là khái niệm lịch sử: một "попевка" trong dân ca cổ hay thánh ca không nên gọi là motif, vì motif "nhất thiết giả định hệ thống tiết tấu có trọng âm và nhịp, và sự gom âm quanh phách mạnh" *(Mazel, ch. V §1)*. Bài [[motif]] trong thư viện bàn chi tiết hơn.
+Phách mạnh của motif gọi là "икт", phách nhẹ đứng trước là "предыкт" (phách lấy đà). Từ phách lấy đà sang phách mạnh hoà âm thường đổi — phách lấy đà là "lấy đà, chuẩn bị hành động", phách mạnh là "chính hành động". Motif và câu nhỏ đôi khi chia tiếp thành **motif con** (субмотив) dài một phần ô nhịp [^sposobin-1984, §27, tr. 66]. Mazel bổ sung rằng motif là khái niệm lịch sử: một "попевка" trong dân ca cổ hay thánh ca không nên gọi là motif, vì motif "nhất thiết giả định hệ thống tiết tấu có trọng âm và nhịp, và sự gom âm quanh phách mạnh" *(Mazel, ch. V §1)*. Bài [[motif]] trong thư viện bàn chi tiết hơn.
 
 ### "Giống thì tách, khác thì nhập"
 
-Sposobin rút ra một nguyên tắc ngắn gọn: nếu sau một cấu trúc là cấu trúc giống nó, thì chính việc nhắc lại **tách** chúng ra; ngược lại sự khác nhau (không đến mức tương phản cực độ) giúp chúng **nhập** lại. Ông khuyên: các cấu trúc không chia được một cách hiển nhiên thì nên coi là liền và không chia, khỏi cần chia "có điều kiện" *(Sposobin, §28)*. Nguyên tắc này còn được ông áp vào cấu trúc lớn (xem phần tổng hợp – chia nhỏ dưới đây).
+Sposobin rút ra một nguyên tắc ngắn gọn: nếu sau một cấu trúc là cấu trúc giống nó, thì chính việc nhắc lại **tách** chúng ra; ngược lại sự khác nhau (không đến mức tương phản cực độ) giúp chúng **nhập** lại. Ông khuyên: các cấu trúc không chia được một cách hiển nhiên thì nên coi là liền và không chia, khỏi cần chia "có điều kiện" [^sposobin-1984, §28, tr. 69]. Nguyên tắc này còn được ông áp vào cấu trúc lớn (xem phần tổng hợp – chia nhỏ dưới đây).
 
 ## Hoà âm và kết
 
 ### Đoạn nhạc một giọng
 
-Đoạn nhạc bắt đầu và kết ở giọng chính gọi là **một giọng** (однотональный) hay **khép kín**. Bên trong vẫn có thể ly giọng, điển hình là *giữa* câu để kết mỗi câu lại về giọng chính; đôi khi câu đầu kết ở giọng phụ (Beethoven, Giao hưởng số 5, chương II) hoặc ly giọng cuối câu mang tính chuyển (Prokofiev, *Gavotte* op. 32 số 3). Câu thứ hai có khi bắt đầu ở giọng phụ, thường là nhắc lại đầu câu một ở độ cao mới ("mô tiến cách quãng"). Ly giọng về phía hạ át âm hay rơi vào câu hai, gần cuối; Sposobin nhận thấy ngay trong khuôn khổ đoạn nhạc đã có thứ tự giọng **T – D – S – T** *(Sposobin, §23)*.
+Đoạn nhạc bắt đầu và kết ở giọng chính gọi là **một giọng** (однотональный) hay **khép kín**. Bên trong vẫn có thể ly giọng, điển hình là *giữa* câu để kết mỗi câu lại về giọng chính; đôi khi câu đầu kết ở giọng phụ (Beethoven, Giao hưởng số 5, chương II) hoặc ly giọng cuối câu mang tính chuyển (Prokofiev, *Gavotte* op. 32 số 3). Câu thứ hai có khi bắt đầu ở giọng phụ, thường là nhắc lại đầu câu một ở độ cao mới ("mô tiến cách quãng"). Ly giọng về phía hạ át âm hay rơi vào câu hai, gần cuối; Sposobin nhận thấy ngay trong khuôn khổ đoạn nhạc đã có thứ tự giọng **T – D – S – T** [^sposobin-1984, §23, tr. 58].
 
 Bảng kết điển hình của đoạn nhạc khép kín hai câu theo Sposobin:
 
@@ -116,7 +116,7 @@ Bảng kết điển hình của đoạn nhạc khép kín hai câu theo Sposobi
 | Giọng chính | kết nửa ở át âm; kết trọn không hoàn toàn ở chủ âm (ít hơn); kết trọn hoàn toàn ở chủ âm (hiếm, và thường trong đoạn chuyển giọng) | kết trọn hoàn toàn ở chủ âm |
 | Giọng phụ (câu một) | kết trọn hoàn toàn hoặc không hoàn toàn ở chủ âm; kết nửa ở át âm (ít hơn) | — |
 
-Các kết thường dừng ở hợp âm thể gốc chứ không ở thể đảo (ghi chú: trong âm nhạc mấy thập kỷ gần đây việc chọn bè trầm cho kết giữa tự do hơn nhiều). Quan trọng hơn: kết của hai câu **khác nhau**. Một cấu trúc nhắc lại với cùng kết "không tạo thành đoạn nhạc", dù đủ dài; đổi kiểu kết mới khiến cấu trúc nhắc lại mang chức năng mới. Ngoại lệ là hai câu giống nhau mà dòng chảy không ngắt *(Sposobin, §23)*.
+Các kết thường dừng ở hợp âm thể gốc chứ không ở thể đảo (ghi chú: trong âm nhạc mấy thập kỷ gần đây việc chọn bè trầm cho kết giữa tự do hơn nhiều). Quan trọng hơn: kết của hai câu **khác nhau**. Một cấu trúc nhắc lại với cùng kết "không tạo thành đoạn nhạc", dù đủ dài; đổi kiểu kết mới khiến cấu trúc nhắc lại mang chức năng mới. Ngoại lệ là hai câu giống nhau mà dòng chảy không ngắt [^sposobin-1984, §23, tr. 58].
 
 Mazel ghi nhận các ngoại lệ thực tế: hai câu có thể kết giống nhau — Chopin, Prelude op. 28 số 15; Glinka, *Hợp xướng Ba Tư* trong *Ruslan và Lyudmila* (giai điệu dân gian phương Đông có thật); Glinka, *Я здесь, Инезилья* (cả hai kết đều không hoàn toàn). Theo ông, những ví dụ ấy "thực chất là một câu được nhắc lại" và hiện tượng này hay gặp trong dân ca và nhạc gần dân ca *(Mazel, ch. V §2)*.
 
@@ -124,9 +124,9 @@ Mazel còn mô tả hai "mặt bằng hoà âm" của đoạn nhạc lặp: nế
 
 ### Đoạn nhạc chuyển giọng
 
-"Đoạn nhạc kết không ở giọng mà nó bắt đầu gọi là đoạn nhạc chuyển giọng." *(Sposobin, §24)* Trong tuyệt đại đa số trường hợp nó bắt đầu ở giọng chính và kết ở giọng phụ; nó "động hơn" đoạn một giọng vì hở về điệu tính. Sự chuyển giọng thường diễn ra ở câu hai, thậm chí gần cuối, nên tính thống nhất kiểu trình bày vẫn trội. Hướng điển hình nhất là **hướng át âm** (giọng bậc V và bậc III), quen đến mức "không phá ấn tượng trình bày". Rất hiếm đoạn nhạc kết ở giọng hạ át âm; Sposobin và Mazel cùng nêu scherzo Sonata Si giáng trưởng của Schubert, và Mazel giải thích lý do: khi đó giọng chính dễ bị nghe như át âm, giọng bậc IV như chủ âm, vì quan hệ chủ – át mạnh hơn chủ – hạ át trong nhạc cổ điển *(Mazel, ch. VI §1, chú thích)*.
+"Đoạn nhạc kết không ở giọng mà nó bắt đầu gọi là đoạn nhạc chuyển giọng." [^sposobin-1984, §24, tr. 60] Trong tuyệt đại đa số trường hợp nó bắt đầu ở giọng chính và kết ở giọng phụ; nó "động hơn" đoạn một giọng vì hở về điệu tính. Sự chuyển giọng thường diễn ra ở câu hai, thậm chí gần cuối, nên tính thống nhất kiểu trình bày vẫn trội. Hướng điển hình nhất là **hướng át âm** (giọng bậc V và bậc III), quen đến mức "không phá ấn tượng trình bày". Rất hiếm đoạn nhạc kết ở giọng hạ át âm; Sposobin và Mazel cùng nêu scherzo Sonata Si giáng trưởng của Schubert, và Mazel giải thích lý do: khi đó giọng chính dễ bị nghe như át âm, giọng bậc IV như chủ âm, vì quan hệ chủ – át mạnh hơn chủ – hạ át trong nhạc cổ điển *(Mazel, ch. VI §1, chú thích)*.
 
-Sposobin cho rằng phần lớn khả năng chuyển giọng xa xuất hiện "như cái mới trên nền hệ thống trưởng – thứ"; bản OCR in "thế kỷ XX", nhưng theo ngữ cảnh (sách viết trước 1958, ví dụ là Schubert, Tchaikovsky) nhiều khả năng là thế kỷ XIX — **chỗ này chưa đối chiếu được bản in**. Ông vẫn kết luận: các quan hệ gần tìm được từ trước "đến nay vẫn chiếm ưu thế", còn quan hệ xa dành cho phần sau của hình thức — "tiết kiệm phương tiện" *(Sposobin, §24)*. Khi chuyển giọng bắt đầu ngay từ câu một và chiếm phần lớn đoạn, cấu trúc hoà âm có thể mang **tính đoạn giữa**; tính trình bày khi ấy thể hiện qua mặt khác — thống nhất chủ đề, cấu trúc, kết trọn cuối, sự nhắc lại cả đoạn và vị trí mở đầu.
+Sposobin cho rằng phần lớn khả năng chuyển giọng xa xuất hiện "như cái mới trên nền hệ thống trưởng – thứ"; bản OCR in "thế kỷ XX", nhưng theo ngữ cảnh (sách viết trước 1958, ví dụ là Schubert, Tchaikovsky) nhiều khả năng là thế kỷ XIX — **chỗ này chưa đối chiếu được bản in**. Ông vẫn kết luận: các quan hệ gần tìm được từ trước "đến nay vẫn chiếm ưu thế", còn quan hệ xa dành cho phần sau của hình thức — "tiết kiệm phương tiện" [^sposobin-1984, §24, tr. 60]. Khi chuyển giọng bắt đầu ngay từ câu một và chiếm phần lớn đoạn, cấu trúc hoà âm có thể mang **tính đoạn giữa**; tính trình bày khi ấy thể hiện qua mặt khác — thống nhất chủ đề, cấu trúc, kết trọn cuối, sự nhắc lại cả đoạn và vị trí mở đầu.
 
 Mazel bổ sung các trường hợp không khép: đoạn nhạc kết bằng kết trọn không hoàn toàn (Rachmaninov, *Сирень*), thậm chí kết nửa, và đoạn nhạc **mở** — phát triển như đoạn nhạc điển hình nhưng tránh mọi kết và chảy vào phần sau (Beethoven, Sonata số 20, Tempo di Menuetto), "hay gặp ở chủ đề các đoạn giữa, episode rondo" *(Mazel, ch. V §2)*.
 
@@ -134,18 +134,18 @@ Mazel bổ sung các trường hợp không khép: đoạn nhạc kết bằng k
 
 ### Tính vuông
 
-Sposobin: trong rất nhiều đoạn nhạc, tính trình bày thể hiện qua **tính vuông** (квадратность) — các phần dài bốn ô, "bắt nguồn từ loại nhạc ca – vũ". Biến thể cơ bản: 4 + 4 (hai câu bốn ô), 8 + 8 (Beethoven, Sonata op. 26, chương I, ô 1–16); hiếm hơn là đoạn nhạc 32 (hay 64) ô. Vậy "về mặt bên ngoài đoạn nhạc không dưới tám ô"; đoạn nhạc bốn ô hiếm, thường ở nhịp ghép nên mỗi ô có thể tính là hai *(Sposobin, §25)*.
+Sposobin: trong rất nhiều đoạn nhạc, tính trình bày thể hiện qua **tính vuông** (квадратность) — các phần dài bốn ô, "bắt nguồn từ loại nhạc ca – vũ". Biến thể cơ bản: 4 + 4 (hai câu bốn ô), 8 + 8 (Beethoven, Sonata op. 26, chương I, ô 1–16); hiếm hơn là đoạn nhạc 32 (hay 64) ô. Vậy "về mặt bên ngoài đoạn nhạc không dưới tám ô"; đoạn nhạc bốn ô hiếm, thường ở nhịp ghép nên mỗi ô có thể tính là hai [^sposobin-1984, §25, tr. 62].
 
 ### Tuần hoàn cấu trúc, tổng hợp và chia nhỏ
 
-Sự nối tiếp các phần có cùng độ dài (tính bằng ô) gọi là **tuần hoàn cấu trúc** (структурная периодичность): 8 = 4 + 4; 8 = 2+2+2+2; 8 = 1+1+1+1+1+1+1+1 (Beethoven, Quartet op. 59 số 2, chương II). Tuần hoàn thuần tuý phổ biến trong thanh nhạc vì gắn với nhịp thơ; với nhạc khí sự đơn điệu ấy "ít đặc trưng hơn" *(Sposobin, §29)*.
+Sự nối tiếp các phần có cùng độ dài (tính bằng ô) gọi là **tuần hoàn cấu trúc** (структурная периодичность): 8 = 4 + 4; 8 = 2+2+2+2; 8 = 1+1+1+1+1+1+1+1 (Beethoven, Quartet op. 59 số 2, chương II). Tuần hoàn thuần tuý phổ biến trong thanh nhạc vì gắn với nhịp thơ; với nhạc khí sự đơn điệu ấy "ít đặc trưng hơn" [^sposobin-1984, §29, tr. 70].
 
 Để tạo **tương phản cấu trúc** có hai thủ pháp ngược nhau:
 
 - **Tổng hợp** (суммирование): đặt hai hay vài cấu trúc cạnh một cấu trúc lớn hơn, thường bằng tổng của chúng — 8 = 2 + 2 + 4; 4 = 1 + 1 + 2.
 - **Chia nhỏ** (дробление): đặt một cấu trúc cạnh các cấu trúc ngắn hơn, thường cộng lại bằng nó — 8 = 4 + 2 + 2 (Beethoven, Sonata op. 14 số 1, chương III). Có dạng chia nhỏ "ngược với nhịp" — nhóm hai phách trong nhịp ba (Beethoven, Giao hưởng số 8, chương IV; Tchaikovsky, *Scherzo hài hước* op. 19 số 2; *Tháng Năm* op. 37bis).
 
-Hai thủ pháp đôi khi xích lại: khi các phần được chia nhỏ (rút ngắn) đồng thời các chỗ ngắt cũng ngắn lại (liền hơn). Sposobin nói nguyên tắc "giống thì tách, khác thì nhập" áp dụng cả cho mặt cấu trúc, tạo ra một kiểu thống nhất "phức tạp hơn, và theo nghĩa nào đó cao hơn" sự giống nhau sơ đẳng của độ dài *(Sposobin, §29)*.
+Hai thủ pháp đôi khi xích lại: khi các phần được chia nhỏ (rút ngắn) đồng thời các chỗ ngắt cũng ngắn lại (liền hơn). Sposobin nói nguyên tắc "giống thì tách, khác thì nhập" áp dụng cả cho mặt cấu trúc, tạo ra một kiểu thống nhất "phức tạp hơn, và theo nghĩa nào đó cao hơn" sự giống nhau sơ đẳng của độ dài [^sposobin-1984, §29, tr. 70].
 
 Trên quy mô cả đoạn nhạc ông phân biệt: (a) hai câu có cùng sơ đồ (tuần hoàn của tổng hợp hay chia nhỏ); (b) sau câu một tuần hoàn hoặc tổng hợp, đầu câu hai **chia nhỏ** rồi **tổng hợp kết**, tức chia nhỏ rơi vào **phần tư thứ ba** của đoạn — "quy luật này gặp thường xuyên không chỉ ở phần tư thứ ba của đoạn nhạc mà cả ở các hình thức lớn hơn", và thường đi cùng hoà âm đổi nhanh hơn, tăng căng thẳng, dẫn tới cao trào; (c) **tổng hợp kép** — câu hai tổng hợp ở quy mô lớn hơn (Mozart, Sonata số 12, chương III). Ghi chú của ông: tương phản cấu trúc giống thủ pháp xen câu dài – câu ngắn trong văn chương.
 
@@ -153,7 +153,7 @@ Asafyev nói về cùng hiện tượng bằng ngôn ngữ "lực": các "cú đ
 
 ### Đoạn nhạc không vuông
 
-Song song với đoạn 4, 8, 16 ô có những đoạn mà các câu có số ô khác nhưng **bằng nhau**, nên vẫn tuần hoàn. Sposobin có ghi chú quan trọng: "trái với truyền thống phổ biến, mọi cấu trúc không vuông ở đây được coi là tự thân, chứ không phải dẫn xuất từ bốn ô và tám ô" *(Sposobin, §30)*. Các trường hợp:
+Song song với đoạn 4, 8, 16 ô có những đoạn mà các câu có số ô khác nhưng **bằng nhau**, nên vẫn tuần hoàn. Sposobin có ghi chú quan trọng: "trái với truyền thống phổ biến, mọi cấu trúc không vuông ở đây được coi là tự thân, chứ không phải dẫn xuất từ bốn ô và tám ô" [^sposobin-1984, §30, tr. 74]. Các trường hợp:
 
 - **Câu sáu ô** — phổ biến nhất, thường 2 + 2 + 2 hoặc 3 + 3 (một sonata của Haydn; Glinka, *Ivan Susanin*, khúc của Sobinin).
 - **Câu năm ô** — 2 + 3, 3 + 2, 1 + 1 + 3, 2 + 1 + 1 + 1… (Schubert, Sonata op. 122, chương III; Glinka, *Ivan Susanin*, khúc mở màn).
@@ -166,7 +166,7 @@ Mazel gọi đây là "tính không vuông hữu cơ": hai câu bảy ô (Glinka
 Bên cạnh kiểu thường gặp nhất (hai câu), Sposobin nêu:
 
 - **Đoạn ba câu giống nhau về chủ đề** (Borodin, *Knyaz Igor*, đoạn "Ах ты, ветер, ветер буйный") hoặc **có tương phản** (Grieg, *Vũ khúc Na Uy* op. 35 số 2) — thường cả ba kết đều khác nhau.
-- **Đoạn không chia rõ thành câu** — nhận ra nhờ tính trọn tương đối của chủ đề, tính chất trình bày, kết trọn cuối, số ô, thường là việc nhắc lại cả đoạn và vị trí mở đầu (Beethoven, Sonata op. 10 số 2, chương II). *(Sposobin, §25)*
+- **Đoạn không chia rõ thành câu** — nhận ra nhờ tính trọn tương đối của chủ đề, tính chất trình bày, kết trọn cuối, số ô, thường là việc nhắc lại cả đoạn và vị trí mở đầu (Beethoven, Sonata op. 10 số 2, chương II). [^sposobin-1984, §25, tr. 62]
 
 Mazel hệ thống hoá thành hai loại lớn:
 
@@ -179,22 +179,22 @@ Mazel hệ thống hoá thành hai loại lớn:
 
 ### Đoạn nhạc lớn và đoạn nhạc phức
 
-Sposobin: có đoạn hai câu bằng nhau nhưng rất dài — 32 ô (một polonaise của Chopin; bản OCR không đọc rõ giọng), 40 ô (Schubert, Sonata op. 53, scherzo). Với đoạn lớn, tương phản vừa phải có thể không đủ, nên đôi khi đưa vào những cấu trúc khác hẳn đầu câu *(Sposobin, §31)*. Mazel nêu ví dụ cực đoan: đoạn nhạc đầu Scherzo Si giáng thứ của Chopin gồm hai câu mỗi câu sáu mươi ô; lấy mười sáu ô đầu làm đoạn nhạc là sai, vì mỗi tám ô chỉ có một hoà âm (tám ô chủ âm, tám ô hạ át âm), và vì đoạn lớn ấy là đoạn một của ba đoạn đơn — đến lượt nó là đoạn một của ba đoạn phức. Tương tự, tám ô đầu phần chính overture *Leonore* số 3 của Beethoven không phải đoạn nhạc mà chỉ là phần của câu 32 ô *(Mazel, ch. V §2)*.
+Sposobin: có đoạn hai câu bằng nhau nhưng rất dài — 32 ô (một polonaise của Chopin; bản OCR không đọc rõ giọng), 40 ô (Schubert, Sonata op. 53, scherzo). Với đoạn lớn, tương phản vừa phải có thể không đủ, nên đôi khi đưa vào những cấu trúc khác hẳn đầu câu [^sposobin-1984, §31, tr. 79]. Mazel nêu ví dụ cực đoan: đoạn nhạc đầu Scherzo Si giáng thứ của Chopin gồm hai câu mỗi câu sáu mươi ô; lấy mười sáu ô đầu làm đoạn nhạc là sai, vì mỗi tám ô chỉ có một hoà âm (tám ô chủ âm, tám ô hạ át âm), và vì đoạn lớn ấy là đoạn một của ba đoạn đơn — đến lượt nó là đoạn một của ba đoạn phức. Tương tự, tám ô đầu phần chính overture *Leonore* số 3 của Beethoven không phải đoạn nhạc mà chỉ là phần của câu 32 ô *(Mazel, ch. V §2)*.
 
-**Đoạn nhạc phức** (сложный период): Sposobin định nghĩa là đoạn mà mỗi câu "đủ khả năng tồn tại như một đoạn nhạc độc lập"; nó giống đoạn đơn ở chỗ đầu hai câu giống nhau (Beethoven, Sonata op. 22, chương IV — một câu có thể kết bằng chuyển giọng). Cũng tính là phức những đoạn lớn mà mỗi câu chia thành các phần giống nhau ở đầu, tạo thành bốn phần liền nhau (Grieg, Sonata violin op. 8, chương IV; Schubert, Valse op. 9a số 14) *(Sposobin, §31)*. Mazel định nghĩa: "đoạn nhạc gồm hai câu giống nhau về giai điệu (với các kết khác nhau), mà mỗi câu về cấu trúc bên trong tự nó là một đoạn nhạc điển hình" *(Mazel, ch. V §2)*.
+**Đoạn nhạc phức** (сложный период): Sposobin định nghĩa là đoạn mà mỗi câu "đủ khả năng tồn tại như một đoạn nhạc độc lập"; nó giống đoạn đơn ở chỗ đầu hai câu giống nhau (Beethoven, Sonata op. 22, chương IV — một câu có thể kết bằng chuyển giọng). Cũng tính là phức những đoạn lớn mà mỗi câu chia thành các phần giống nhau ở đầu, tạo thành bốn phần liền nhau (Grieg, Sonata violin op. 8, chương IV; Schubert, Valse op. 9a số 14) [^sposobin-1984, §31, tr. 79]. Mazel định nghĩa: "đoạn nhạc gồm hai câu giống nhau về giai điệu (với các kết khác nhau), mà mỗi câu về cấu trúc bên trong tự nó là một đoạn nhạc điển hình" *(Mazel, ch. V §2)*.
 
 Mazel phân biệt rõ **đoạn phức** với **đoạn được nhắc lại**: nếu khi nhắc lại ý nghĩa hoà âm của kết không đổi (kể cả khi biến tấu, chuyển giai điệu sang bè khác hay nhạc cụ khác) thì đó là nhắc lại; nếu đổi (tám ô đầu chuyển sang giọng át, tám ô sau kết ở giọng chính) thì là một đoạn phức. Ví dụ đoạn phức của ông: etude op. 10 số 2 và số 10, *Fantaisie* Fa thứ của Chopin; đoạn đầu chương chậm Concerto số 2 của Rachmaninov.
 
 ### Mở rộng bên trong (расширение)
 
-Sposobin dùng thuật ngữ hẹp: "mở rộng là sự trình bày lại một cấu trúc với độ dài tăng lên"; nó là **mở rộng bên trong** vì cấu trúc lớn lên nhưng vẫn là một cấu trúc với một kết chính; thuật ngữ chỉ dùng cho cấu trúc giống nhau về chủ đề, đặc biệt các câu của đoạn nhạc. Mở rộng phá tính tuần hoàn và thường giúp tạo cao trào ở câu hai *(Sposobin, §32)*. Các thủ pháp:
+Sposobin dùng thuật ngữ hẹp: "mở rộng là sự trình bày lại một cấu trúc với độ dài tăng lên"; nó là **mở rộng bên trong** vì cấu trúc lớn lên nhưng vẫn là một cấu trúc với một kết chính; thuật ngữ chỉ dùng cho cấu trúc giống nhau về chủ đề, đặc biệt các câu của đoạn nhạc. Mở rộng phá tính tuần hoàn và thường giúp tạo cao trào ở câu hai [^sposobin-1984, §32, tr. 82]. Các thủ pháp:
 
 1. **Nhắc lại một yếu tố**, thường là mô tiến hoặc gần mô tiến, đôi khi nhắc lại đơn, biến tấu hay mô phỏng (Tchaikovsky, *Tháng Giêng*, *Tháng Sáu* op. 37bis) — có thể khiến một phần câu mang tính đoạn giữa – phát triển.
 2. **Phát triển phức tạp hơn** các yếu tố câu một hoặc câu hai, đôi khi đưa vào giọng mới (Debussy, Prelude *Bruyères*; Myaskovsky, một quartet).
 3. **Kéo dài hoà âm kết** — tương đối hiếm.
 4. **Kết ngắt** (прерванная, diatonic hay cromatic) hoặc **kết không hoàn toàn**, sau đó thường nhắc lại câu nhỏ hay câu với kết hoàn toàn (Glinka, *Я помню чудное мгновенье*; Beethoven, Giao hưởng số 8, chương I).
 
-Sposobin có nhận xét lịch sử: thời cổ điển Vienne đoạn nhạc hầu như luôn kết hoàn toàn, kết không hoàn toàn bị coi là chưa đủ vững nên là cớ để mở rộng; về sau, từ Beethoven và Schubert, kết không hoàn toàn đôi khi đã được coi là kết trọn chính *(Sposobin, §32)*.
+Sposobin có nhận xét lịch sử: thời cổ điển Vienne đoạn nhạc hầu như luôn kết hoàn toàn, kết không hoàn toàn bị coi là chưa đủ vững nên là cớ để mở rộng; về sau, từ Beethoven và Schubert, kết không hoàn toàn đôi khi đã được coi là kết trọn chính [^sposobin-1984, §32, tr. 82].
 
 Mazel thêm các ví dụ: mở rộng câu đáp bằng mô tiến (Beethoven, Quartet op. 18 số 1); bằng kết ngắt rồi nhắc lại (Schumann, *Tháng Năm, tháng Năm thân yêu* op. 68 số 13; Chopin, Concerto Mi thứ; Mendelssohn, *Bài ca thuyền Venezia*, *Lời ca không lời* số 6). Trường hợp mở rộng lớn nhất ông dẫn là chương II Giao hưởng số 5 của Tchaikovsky: câu một bốn ô, câu hai **hai mươi lăm ô**, trong đó "chủ đề định mệnh" xông vào lần thứ hai sau một dạng kết ngắt — "tương phản hình tượng trong một đoạn nhạc ở đây là hiển nhiên" *(Mazel, ch. V §2)*. Cũng có đoạn mở rộng **cả hai câu** (hai câu chín ô; hai câu sáu ô mỗi câu mở rộng hai ô bằng kết ngắt). Bài [[mo-rong-cau-nhac]] trình bày thêm.
 
@@ -202,13 +202,13 @@ Asafyev đặt kết ngắt vào học thuyết của ông về kết như "kíc
 
 ### Bổ sung (дополнение)
 
-Mọi cấu trúc, kể cả đoạn nhạc, có thể được thêm một cấu trúc phụ. Cấu trúc đưa về **đúng hoà âm của kết chính** gọi là **bổ sung kết** (каденционное дополнение), ý nghĩa chính là khẳng định kết; vì không nằm trong cấu trúc chính mà gắn từ ngoài, nó tạo **mở rộng bên ngoài** (Beethoven, Sonata op. 2 số 1, chương III). Có thể có nhiều bổ sung liền nhau, thường ngắn dần — chia nhỏ (Beethoven, Sonata op. 22, chương II). Bổ sung dùng chất liệu cấu trúc chính hoặc chất liệu mới; đôi khi trong bổ sung có một tái hiện chủ đề ngắn (Scriabin, một prelude op. 11) *(Sposobin, §33)*.
+Mọi cấu trúc, kể cả đoạn nhạc, có thể được thêm một cấu trúc phụ. Cấu trúc đưa về **đúng hoà âm của kết chính** gọi là **bổ sung kết** (каденционное дополнение), ý nghĩa chính là khẳng định kết; vì không nằm trong cấu trúc chính mà gắn từ ngoài, nó tạo **mở rộng bên ngoài** (Beethoven, Sonata op. 2 số 1, chương III). Có thể có nhiều bổ sung liền nhau, thường ngắn dần — chia nhỏ (Beethoven, Sonata op. 22, chương II). Bổ sung dùng chất liệu cấu trúc chính hoặc chất liệu mới; đôi khi trong bổ sung có một tái hiện chủ đề ngắn (Scriabin, một prelude op. 11) [^sposobin-1984, §33, tr. 88].
 
 Mazel nhấn mạnh phải phân biệt: mở rộng nằm **trong** đoạn nhạc, bổ sung chỉ có **sau** khi đoạn kết và nhắc lại kết đã đạt. Nhưng bổ sung "thường cần thiết một cách hữu cơ": ở Sonata số 11 của Beethoven (Adagio), kết trọn đến quá sớm sau cao trào ở ô 7 — đỉnh lấy bằng bước nhảy hai quãng tám chưa được lấp — nên bổ sung là bắt buộc. Ông còn ghi nhận dạng hiếm **bổ sung chuyển giọng** (модулирующее дополнение, thuật ngữ của P. S. Rybakova): đoạn nhạc kết ở giọng song song trưởng, bổ sung đưa về giọng chính — Glinka, *Бедный певец* *(Mazel, ch. V §2)*.
 
 ### Rút gọn (сокращение)
 
-"Sự trình bày lại một cấu trúc với độ dài giảm đi" gọi là rút gọn. Ví dụ của Sposobin: Grieg, *Bức tranh thơ* op. 3 số 3 — câu một vuông tám ô, câu hai rút còn bảy ô. Rút gọn hiếm hơn mở rộng nhiều vì phần sau có "trọng lượng lô-gích" lớn hơn, là phần hoàn tất, nên với nó mở rộng tự nhiên hơn. Mở rộng và rút gọn có thể được tạo bằng cách chen một nhịp khác (Prokofiev, Quartet số 2 op. 92, chương I) *(Sposobin, §34)*. Mazel dẫn *Lời ca không lời* số 30 của Mendelssohn: câu tám ô được đáp bằng câu bảy ô.
+"Sự trình bày lại một cấu trúc với độ dài giảm đi" gọi là rút gọn. Ví dụ của Sposobin: Grieg, *Bức tranh thơ* op. 3 số 3 — câu một vuông tám ô, câu hai rút còn bảy ô. Rút gọn hiếm hơn mở rộng nhiều vì phần sau có "trọng lượng lô-gích" lớn hơn, là phần hoàn tất, nên với nó mở rộng tự nhiên hơn. Mở rộng và rút gọn có thể được tạo bằng cách chen một nhịp khác (Prokofiev, Quartet số 2 op. 92, chương I) [^sposobin-1984, §34, tr. 89]. Mazel dẫn *Lời ca không lời* số 30 của Mendelssohn: câu tám ô được đáp bằng câu bảy ô.
 
 ### Chồng ghép (наложение) và kết xen
 
@@ -216,11 +216,11 @@ Khi ô cuối của cấu trúc này trùng ô đầu của cấu trúc sau, ta 
 
 ### Tái hiện trong đoạn nhạc
 
-Tái hiện có thể xuất hiện trong bổ sung (§33) hoặc ngay cuối đoạn nhạc, đem lại "sự tròn trịa đặc biệt" (Tchaikovsky, *Con đầm pích*, arioso của Liza "Ах, истомилась я горем") *(Sposobin, §36)*. Mazel thêm: cấu trúc chia nhỏ có khép mà phần khép là tái hiện câu nhỏ đầu tương đối hiếm ở cấp đoạn nhạc; ông liệt kê các đoạn nhạc có tái hiện bên trong ở chương cuối Sonata *Pathétique* của Beethoven, Mazurka Fa thăng thứ op. 33 số 1 của Chopin, *Warum?* của Schumann, *Скaзка* Fa thứ op. 26 số 3 của Medtner, aria của Liza cảnh sáu *Con đầm pích* *(Mazel, ch. VI §1, chú thích)*.
+Tái hiện có thể xuất hiện trong bổ sung (§33) hoặc ngay cuối đoạn nhạc, đem lại "sự tròn trịa đặc biệt" (Tchaikovsky, *Con đầm pích*, arioso của Liza "Ах, истомилась я горем") [^sposobin-1984, §36, tr. 92]. Mazel thêm: cấu trúc chia nhỏ có khép mà phần khép là tái hiện câu nhỏ đầu tương đối hiếm ở cấp đoạn nhạc; ông liệt kê các đoạn nhạc có tái hiện bên trong ở chương cuối Sonata *Pathétique* của Beethoven, Mazurka Fa thăng thứ op. 33 số 1 của Chopin, *Warum?* của Schumann, *Скaзка* Fa thứ op. 26 số 3 của Medtner, aria của Liza cảnh sáu *Con đầm pích* *(Mazel, ch. VI §1, chú thích)*.
 
 ## Đoạn nhạc như hình thức độc lập
 
-Sposobin: "Dưới hình thức đoạn nhạc rất thường trình bày chủ đề của tác phẩm… Đồng thời có vô số tác phẩm ngắn là một đoạn nhạc. Như vậy đoạn nhạc có thể là một hình thức độc lập." *(Sposobin, §37)*
+Sposobin: "Dưới hình thức đoạn nhạc rất thường trình bày chủ đề của tác phẩm… Đồng thời có vô số tác phẩm ngắn là một đoạn nhạc. Như vậy đoạn nhạc có thể là một hình thức độc lập." [^sposobin-1984, §37, tr. 93]
 
 - **Nhạc khí**: gần như chỉ có prelude — tác phẩm nhỏ, độc lập, phát triển một tâm trạng (một hình tượng). Kiểu prelude này lần đầu được Chopin vun đắp; trước ông prelude viết ở hình thức khác (Bach). Ghi chú của Sposobin: trong nhạc khí, đoạn nhạc như hình thức độc lập vào thực hành từ các nhà lãng mạn, "trước Chopin hầu như không gặp". Hiếm khi tuần hoàn thuần (Prelude La trưởng — tính ca – vũ); điển hình hơn là tương phản cấu trúc; phổ biến nhất là hai câu, mở rộng ở câu hai gắn với cao trào (Prelude Đô trưởng); có đoạn ba câu (Prelude Mi trưởng) và đoạn phức (Prelude Đô thăng thứ).
 - **Thanh nhạc**: gần như chỉ trong **bài hát nhiều lời** (куплетная, строфическая песня) — nhạc nhắc lại nguyên hay hơi biến tấu, lời mỗi lần mới; nhạc mang tính khái quát, hợp với mọi lời. Trong đoạn nhạc ngắn đôi khi câu hai được nhắc lại thay cho điệp khúc (bài *Партизанская*).
@@ -241,25 +241,25 @@ Mazel chọn tác phẩm này vì nó là trường hợp hiếm: một đoạn 
 
 ## Dân ca Nga
 
-Sposobin dành nửa sau chương II cho dân ca Nga, coi nó là hình thức thanh nhạc nhỏ mà kích thước "hiếm khi vượt khung đoạn nhạc", và theo lệ có cấu trúc nhiều lời *(Sposobin, §39)*.
+Sposobin dành nửa sau chương II cho dân ca Nga, coi nó là hình thức thanh nhạc nhỏ mà kích thước "hiếm khi vượt khung đoạn nhạc", và theo lệ có cấu trúc nhiều lời [^sposobin-1984, §39, tr. 95].
 
 ### Giai điệu
 
 - Sự nhắc lại các yếu tố giai điệu – chủ đề có vai trò lớn, thường là nguyên tắc tạo hình chính, nhưng cũng thường xuyên lùi xuống hàng thứ yếu.
 - Yếu tố nhắc lại hay được **biến tấu bằng hoa mỹ** riêng, thay âm, thường phức tạp thêm (*Вдоль по улице*), đôi khi đơn giản đi (*Отдавали молоду*); biến tấu cũng có giữa các lời.
 - Nhiều bài một bè, nhưng cũng có nhiều bè. Các bè đi kèm gọi là **подголоски** (bè phụ hoạ), bất kể cao hơn hay thấp hơn giai điệu chính. Chúng lúc hoà vào đồng âm hay quãng tám, lúc tách ra; vì thế giống "sự rẽ nhánh của giai điệu chính" (kể cả "bè hai" cách quãng ba), không phải các bè phức điệu độc lập kiểu châu Âu chung (ví dụ từ tập *Песни Пинежья*, số 43). Khi lặp lời, bè phụ hoạ thường được biến tấu, vì tính ngẫu hứng vốn có trong lối hát dân gian.
-- Đường nét: nhiều bài, nhất là khi âm vực hẹp, đi trên một bình diện, không có cao trào chính — cùng một đỉnh được chạm nhiều lần; nhưng cũng có đỉnh gần cuối và rất thường ở đầu. *(Sposobin, §39)*
+- Đường nét: nhiều bài, nhất là khi âm vực hẹp, đi trên một bình diện, không có cao trào chính — cùng một đỉnh được chạm nhiều lần; nhưng cũng có đỉnh gần cuối và rất thường ở đầu. [^sposobin-1984, §39, tr. 95]
 
 ### Điều thức
 
 - Ảnh hưởng **ngũ cung** rõ: các câu (обороты) gồm quãng ba thứ và quãng hai trưởng kề nó (**trichord**); có bài hoàn toàn ngũ cung (tập của Lyadov, *Свадебная*). Ngay trong bài nhiều âm hơn, công thức ngũ cung vẫn nổi bật.
 - Ngoài ra có trưởng đầy đủ và **thứ tự nhiên** (trong bài hát nông dân), các điều thức cổ (Dorian, Phrygian, Mixolydian) hoặc từng công thức của chúng; rất thường các điều thức ấy xuất hiện **không đủ** (sáu bậc hoặc ít hơn).
 - Ngũ cung và điều thức cổ có chung tính chất: **tương phản giữa ổn định chủ âm và phần không chủ âm được làm mềm**. Vì vậy trọng tâm dễ dời khỏi điểm tựa ban đầu (vốn nhiều khi không lộ ngay từ đầu) sang điểm khác — do đó có ly sang điều thức hay giọng khác trong bài. Kết giữa có thể dừng "thực chất ở bất kỳ bậc nào".
-- Đặc sắc hơn cả: **bài kết ở giọng khác giọng mở đầu**. Trường hợp này "rất thường trong dân ca Nga", trong nghệ thuật châu Âu chung là ngoại lệ, nên là đặc điểm riêng của dân ca Nga. Phổ biến nhất là kết ở giọng **song song** (thường trưởng → thứ song song); cũng có quan hệ khác (tập của Lyadov, *Колядная*). Chuyển giọng cuối bài thường không có dấu hoá bất thường nào, nhưng có thể giả định tai dân gian hiểu âm kết là ổn định, tức là chủ âm. *(Sposobin, §40)*
+- Đặc sắc hơn cả: **bài kết ở giọng khác giọng mở đầu**. Trường hợp này "rất thường trong dân ca Nga", trong nghệ thuật châu Âu chung là ngoại lệ, nên là đặc điểm riêng của dân ca Nga. Phổ biến nhất là kết ở giọng **song song** (thường trưởng → thứ song song); cũng có quan hệ khác (tập của Lyadov, *Колядная*). Chuyển giọng cuối bài thường không có dấu hoá bất thường nào, nhưng có thể giả định tai dân gian hiểu âm kết là ổn định, tức là chủ âm. [^sposobin-1984, §40, tr. 96]
 
 ### Cấu trúc
 
-Sposobin mô tả một thang từ đơn đến phức *(Sposobin, §41)*:
+Sposobin mô tả một thang từ đơn đến phức [^sposobin-1984, §41, tr. 98]:
 
 1. **Một câu nhỏ hai – ba ô nhắc lại nhiều lần với lời khác** — trùng khít tuần hoàn giai điệu và tuần hoàn cấu trúc; giai điệu thường giữ nguyên (chỉ tách hay gộp âm theo số âm tiết) hoặc hơi biến tấu. Kiểu này ở hát ru (байки), câu đồng dao trẻ em, bylina, thơ tôn giáo (духовные стихи), khóc than (плачи), một số bài nghi lễ (đặc biệt колядки), ít hơn ở bài hát vòng tròn (хороводные).
 2. **Tuần hoàn kép**: mỗi yếu tố được hát hai lần liền — a + a, và thường hơn **a + a, b + b**, các phần chủ yếu bằng nhau. Điển hình cho bài nhảy (плясовые) và nhiều bài vòng tròn, nhưng cũng có ở bài trữ tình kéo dài (протяжные).
@@ -286,7 +286,7 @@ Mazel phân tích bài hành khúc *Партизанская* (*По долин�
 
 ## Mở đầu và coda
 
-Trong đoạn nhạc độc lập (khí nhạc và nhất là thanh nhạc) có **mở đầu** các kiểu và **phần kết**, phần lớn ngắn: phần kết của Prelude Đô trưởng của Chopin; mở đầu và kết của romance *Скрой меня, бурная ночь* của Dargomyzhsky. Có khi mở đầu đứng trước **mỗi câu** (Chopin, Prelude La thứ). Phần kết của cả tác phẩm (không phải của một phần) gọi là **coda**; ở tác phẩm nhỏ, đầu coda thường không ghi trong bản nhạc và nhận ra qua dấu hiệu kiểu trình bày kết. Trong coda có thể có tái hiện chủ đề; đôi khi coda rất lớn (Tchaikovsky, *Mùa thu* op. 54 số 14) *(Sposobin, §38)*.
+Trong đoạn nhạc độc lập (khí nhạc và nhất là thanh nhạc) có **mở đầu** các kiểu và **phần kết**, phần lớn ngắn: phần kết của Prelude Đô trưởng của Chopin; mở đầu và kết của romance *Скрой меня, бурная ночь* của Dargomyzhsky. Có khi mở đầu đứng trước **mỗi câu** (Chopin, Prelude La thứ). Phần kết của cả tác phẩm (không phải của một phần) gọi là **coda**; ở tác phẩm nhỏ, đầu coda thường không ghi trong bản nhạc và nhận ra qua dấu hiệu kiểu trình bày kết. Trong coda có thể có tái hiện chủ đề; đôi khi coda rất lớn (Tchaikovsky, *Mùa thu* op. 54 số 14) [^sposobin-1984, §38, tr. 94].
 
 Asafyev đưa ra một khung chung cho mọi quá trình này: mọi "trở thành" âm nhạc đều là cú đẩy – chuyển động – khép, tức tỷ lệ **i : m : t** (initium — khởi đầu, motus — chuyển động, terminus — kết thúc); công thức kết hoàn toàn T–S–D–T chính là hình ảnh thu nhỏ của nó *(Asafyev, Q1 ch. IV)*. Mở đầu và coda của đoạn nhạc độc lập vì thế có thể đọc như sự kéo dài của i và t.
 
@@ -364,7 +364,7 @@ Lấy từ "Tư liệu để phân tích" (Материал для анализ�
     body: `
 ## Từ đoạn nhạc đến hình thức đơn
 
-Sposobin mở chương III bằng nhận xét: phạm vi của đoạn nhạc chủ yếu là bài hát và tiểu phẩm khí nhạc, nhất là prelude; còn trong âm nhạc nói chung chiếm ưu thế là những hình thức "lớn hơn một đoạn nhạc". Ông phân biệt **hai con đường mở rộng hình thức**: (1) **lớn lên từ bên trong**, không tăng số phần chính — đoạn nhạc mở rộng vẫn chỉ có hai câu; (2) **tăng "bên ngoài"**, bằng cách gắn thêm một phần mới tương đối ngang giá. Con đường thứ hai, vốn đã thấy trong đoạn nhạc (câu một cộng câu hai), "thể hiện rõ hơn trong sự hình thành hình thức hai đoạn" *(Sposobin, §43)*.
+Sposobin mở chương III bằng nhận xét: phạm vi của đoạn nhạc chủ yếu là bài hát và tiểu phẩm khí nhạc, nhất là prelude; còn trong âm nhạc nói chung chiếm ưu thế là những hình thức "lớn hơn một đoạn nhạc". Ông phân biệt **hai con đường mở rộng hình thức**: (1) **lớn lên từ bên trong**, không tăng số phần chính — đoạn nhạc mở rộng vẫn chỉ có hai câu; (2) **tăng "bên ngoài"**, bằng cách gắn thêm một phần mới tương đối ngang giá. Con đường thứ hai, vốn đã thấy trong đoạn nhạc (câu một cộng câu hai), "thể hiện rõ hơn trong sự hình thành hình thức hai đoạn" [^sposobin-1984, §43, tr. 106].
 
 Mazel nêu lý do âm nhạc: đoạn nhạc lặp đơn giản nhất của nhạc ca – vũ không cho chỗ phát triển hay đối chiếu: ý nhạc đã trình bày gần trọn trong câu bốn ô đầu, câu hai chỉ nói nốt và củng cố. Vì thế hình thức của *cả tác phẩm*, thậm chí hình thức của *chủ đề* (chủ đề biến tấu, chủ đề rondo) hay của *lời ca*, rất thường không phải đoạn nhạc mà là hai đoạn đơn *(Mazel, ch. VI §1)*.
 
@@ -372,8 +372,8 @@ Mazel nêu lý do âm nhạc: đoạn nhạc lặp đơn giản nhất của nh�
 
 **Sposobin** định nghĩa riêng từng hình thức:
 
-- "Hình thức hai đoạn đơn là hình thức gồm hai đoạn nhạc." *(Sposobin, §42)*
-- "Hình thức ba đoạn đơn là hình thức mà phần một là một đoạn nhạc; phần hai, tức đoạn giữa, cũng là một đoạn nhạc hoặc một chuỗi cấu trúc có tính đoạn giữa – phát triển; phần ba trong đa số trường hợp là tái hiện của phần một." *(Sposobin, §53)*
+- "Hình thức hai đoạn đơn là hình thức gồm hai đoạn nhạc." [^sposobin-1984, §42, tr. 104]
+- "Hình thức ba đoạn đơn là hình thức mà phần một là một đoạn nhạc; phần hai, tức đoạn giữa, cũng là một đoạn nhạc hoặc một chuỗi cấu trúc có tính đoạn giữa – phát triển; phần ba trong đa số trường hợp là tái hiện của phần một." [^sposobin-1984, §53, tr. 120]
 
 **Mazel** gộp chung: "Hình thức hai hoặc ba đoạn đơn là hình thức hai hoặc ba đoạn mà đoạn một là một đoạn nhạc, còn các phần còn lại không chứa cấu trúc phức tạp hơn đoạn nhạc." Ghi chú: định nghĩa ngầm loại trừ đoạn nhạc nhắc lại (nguyên hay biến tấu) và đoạn nhạc phức *(Mazel, ch. VI §1)*.
 
@@ -385,19 +385,19 @@ Mazel còn sửa định nghĩa phổ biến: câu "hai đoạn đơn gồm hai 
 
 ### Tính thống nhất
 
-Sposobin yêu cầu hai đoạn nhạc phải liên hệ không cơ học, thống nhất là "điều kiện bắt buộc". Về chủ đề, thống nhất đạt bằng nhắc lại yếu tố của phần một ở cuối phần hai hoặc bằng tính đồng nhất chung của nét giai điệu – tiết tấu. Về hoà âm: có giọng chính, hoặc không rời nó (khá hiếm), hoặc khẳng định ở đầu và khôi phục ở cuối — hình thức khép về điệu tính, "ở một mức độ nào đó là một cơ thể âm nhạc độc lập". Về cấu trúc: đơn giản nhất là hai đoạn bằng nhau, nhưng thường đoạn hai dài hơn và thống nhất thể hiện qua cách phân bố hợp lý các cấu trúc tách và liền (chia nhỏ và tổng hợp) *(Sposobin, §42)*.
+Sposobin yêu cầu hai đoạn nhạc phải liên hệ không cơ học, thống nhất là "điều kiện bắt buộc". Về chủ đề, thống nhất đạt bằng nhắc lại yếu tố của phần một ở cuối phần hai hoặc bằng tính đồng nhất chung của nét giai điệu – tiết tấu. Về hoà âm: có giọng chính, hoặc không rời nó (khá hiếm), hoặc khẳng định ở đầu và khôi phục ở cuối — hình thức khép về điệu tính, "ở một mức độ nào đó là một cơ thể âm nhạc độc lập". Về cấu trúc: đơn giản nhất là hai đoạn bằng nhau, nhưng thường đoạn hai dài hơn và thống nhất thể hiện qua cách phân bố hợp lý các cấu trúc tách và liền (chia nhỏ và tổng hợp) [^sposobin-1984, §42, tr. 104].
 
 Ông phân biệt hai đoạn đơn với **đoạn nhạc phức**: cả hai đều có thống nhất chủ đề, nhưng đoạn phức có **đầu** hai câu giống nhau, còn trong hai đoạn đơn đầu hai đoạn **khác nhau** và nếu có giống thì là **phần cuối**.
 
 ### Phần một
 
-Phần một là một đoạn nhạc, hầu như luôn có kiểu trình bày rõ; điển hình là hai câu giống nhau; nếu giai điệu khác thì tiết tấu thường vẫn thống nhất. Đặc trưng là sự **cân bằng** đáng kể của đường giai điệu giữa lên và xuống: thiếu cân bằng sẽ đòi phát triển dài, điều mà quy mô hạn chế của hình thức không cho phép — "những ý nhạc có tầm vóc hơn, trong lần trình bày đầu, theo lệ không đạt sự cân bằng lớn trong đoạn nhạc, vì thế sự phát triển của chúng đòi vượt khung đoạn nhạc" *(Sposobin, §44)*.
+Phần một là một đoạn nhạc, hầu như luôn có kiểu trình bày rõ; điển hình là hai câu giống nhau; nếu giai điệu khác thì tiết tấu thường vẫn thống nhất. Đặc trưng là sự **cân bằng** đáng kể của đường giai điệu giữa lên và xuống: thiếu cân bằng sẽ đòi phát triển dài, điều mà quy mô hạn chế của hình thức không cho phép — "những ý nhạc có tầm vóc hơn, trong lần trình bày đầu, theo lệ không đạt sự cân bằng lớn trong đoạn nhạc, vì thế sự phát triển của chúng đòi vượt khung đoạn nhạc" [^sposobin-1984, §44, tr. 106].
 
-Đoạn một có thể một giọng hoặc chuyển giọng, thường sang giọng bậc V hoặc III; chuyển giọng xa "rất ít hợp" với hình thức ngắn này. Có trường hợp phần một kết nửa: không phải đoạn nhạc theo nghĩa giáo trình nhưng mang chức năng của nó, nếu có thống nhất chủ đề và điều tính bên trong; tính "hở" do kết nửa giống tác dụng của việc chuyển sang giọng phụ (Beethoven, Sonata op. 31 số 3, menuet, ô 1–16). Hai câu bằng nhau, chủ yếu vuông (4 + 4, ít hơn 8 + 8, hiếm 16 + 16); 6 + 6 hay 5 + 5, 7 + 7 "hiếm hơn nhiều" *(Sposobin, §44)*.
+Đoạn một có thể một giọng hoặc chuyển giọng, thường sang giọng bậc V hoặc III; chuyển giọng xa "rất ít hợp" với hình thức ngắn này. Có trường hợp phần một kết nửa: không phải đoạn nhạc theo nghĩa giáo trình nhưng mang chức năng của nó, nếu có thống nhất chủ đề và điều tính bên trong; tính "hở" do kết nửa giống tác dụng của việc chuyển sang giọng phụ (Beethoven, Sonata op. 31 số 3, menuet, ô 1–16). Hai câu bằng nhau, chủ yếu vuông (4 + 4, ít hơn 8 + 8, hiếm 16 + 16); 6 + 6 hay 5 + 5, 7 + 7 "hiếm hơn nhiều" [^sposobin-1984, §44, tr. 106].
 
 ### Phần hai khi có tái hiện: đoạn giữa
 
-"Nét quan trọng nhất của phần hai là sự nhắc lại, gần cuối, chất liệu chủ đề của phần một. Do đó phần hai chia thành hai câu." Câu thứ nhất của phần hai gọi là **đoạn giữa** (середина), đem lại một tương phản với đoạn một *(Sposobin, §45)*.
+"Nét quan trọng nhất của phần hai là sự nhắc lại, gần cuối, chất liệu chủ đề của phần một. Do đó phần hai chia thành hai câu." Câu thứ nhất của phần hai gọi là **đoạn giữa** (середина), đem lại một tương phản với đoạn một [^sposobin-1984, §45, tr. 108].
 
 - **Về chủ đề**, tương phản đến từ (1) chất liệu giai điệu – tiết tấu tương đối mới (Beethoven, Sonata op. 2 số 2, chương cuối, ô 1–16) hoặc (2) **phát triển** chất liệu tách ra từ đoạn một, đặt dưới ánh sáng mới.
 - **Về hoà âm**, đặc trưng là **không ổn định** (kiểu trình bày đoạn giữa). Đơn giản nhất: suốt đoạn giữa giữ một hoà âm không ổn định, thường là át âm (Beethoven, Giao hưởng số 1, scherzo, trio) hoặc hợp âm khác như át âm song song (Beethoven, Sonata violin op. 24, scherzo). Phức tạp hơn: cả đoạn giữa trên **âm nền át** (Beethoven, Sonata op. 2 số 1, Adagio; op. 2 số 2, Rondo). Nếu ở giọng chính, không ổn định thể hiện ở việc tránh chủ âm trên phách mạnh, nhất là ở ô chẵn. Phức tạp hơn nữa là đổi giọng: cả đoạn giữa ở một giọng phụ, hoặc đổi qua nhiều giọng phụ, điển hình là **mô tiến chuyển giọng** các yếu tố đoạn một. Quy mô nhỏ buộc dùng giọng gần; trường hợp như *Papillons* số 1 của Schumann (ly sang giọng xa) là hiếm.
@@ -407,14 +407,14 @@ Phần một là một đoạn nhạc, hầu như luôn có kiểu trình bày r
 
 ### Tái hiện trong hai đoạn
 
-"Câu thứ hai của phần hai, khép lại cả hình thức, chứa sự nhắc lại nguyên văn hay có thay đổi một phần của đoạn một và gọi là tái hiện (реприза)." Sau tương phản của đoạn giữa, nhiệm vụ chính của tái hiện là thống nhất chủ đề, "làm tròn" hình thức *(Sposobin, §46)*.
+"Câu thứ hai của phần hai, khép lại cả hình thức, chứa sự nhắc lại nguyên văn hay có thay đổi một phần của đoạn một và gọi là tái hiện (реприза)." Sau tương phản của đoạn giữa, nhiệm vụ chính của tái hiện là thống nhất chủ đề, "làm tròn" hình thức [^sposobin-1984, §46, tr. 109].
 
 - Thường nhắc lại **câu hai** của đoạn một, đôi khi câu một; có khi đoạn một bị viết lại đến mức chỉ còn giống gần đúng.
 - Viết lại thường để đặt **cao trào chính** của hình thức vào tái hiện.
 - Hoà âm thường bắt buộc viết lại: chỉ khi đoạn một là một giọng mới có thể nhắc nguyên câu hai; nếu đoạn một chuyển giọng thì phải sửa để kết ở giọng chính; câu một thường kết nửa nên nếu đưa vào tái hiện phải sửa phần kết. Khi hướng át âm ở đoạn một (và đoạn giữa) quá mạnh, tái hiện có thể chứa một ly giọng rõ về phía hạ át âm để đối trọng.
 - Cấu trúc: đơn giản nhất là bằng một câu của đoạn một; cấu trúc bên trong có thể liền hơn để tương phản với sự chia nhỏ của đoạn giữa (tổng hợp sau chia nhỏ). Tái hiện rất hay **mở rộng** — nhất là bằng mô tiến (Brahms, Sonata op. 2, scherzo) hoặc bằng kết ngắt. Nhưng hiếm khi tái hiện dài bằng đoạn một và quan trọng nhất là nó **không chia thành hai câu** như một đoạn nhạc điển hình.
 
-Sposobin kết luận: phần hai, gồm đoạn giữa và tái hiện, "là một đoạn nhạc thuộc loại riêng, kết hợp trong mình nét đoạn giữa và nét ổn định" *(Sposobin, §47)*.
+Sposobin kết luận: phần hai, gồm đoạn giữa và tái hiện, "là một đoạn nhạc thuộc loại riêng, kết hợp trong mình nét đoạn giữa và nét ổn định" [^sposobin-1984, §47, tr. 114].
 
 Mazel mô tả cùng hiện tượng: nửa sau phần hai hay nhận chức năng tái hiện, nửa đầu làm chức năng phát triển, không ổn định, chia nhỏ (thường mô tiến, đôi khi mô phỏng), nên cả hình thức thành cấu trúc **chia nhỏ có khép** — sơ đồ không phải (a + a1) + (b + b1) mà (a + a1) + (b + a1). Phần b "thường được gọi là đoạn giữa" dù không thật ở giữa (nó là phần tư thứ ba). Ông nhấn mạnh hình thức này "hoàn toàn không phải ba đoạn" vì đoạn giữa và tái hiện hợp thành **một** tám ô đáp lại tám ô đầu *(Mazel, ch. VI §1)*.
 
@@ -422,7 +422,7 @@ Mazel mô tả cùng hiện tượng: nửa sau phần hai hay nhận chức nă
 
 ### Hai đoạn không tái hiện
 
-"Hình thức hai đoạn mà đoạn hai không chứa sự nhắc lại rõ các yếu tố của đoạn một gọi là hai đoạn không tái hiện." *(Sposobin, §48)* Thống nhất đạt bằng sự đồng loại chung của nét giai điệu – tiết tấu và kết cấu; nếu dùng yếu tố phần một thì chúng biến đổi đến mức không gây ấn tượng tái hiện. Về hoà âm không có gì mới; giọng chính khôi phục cuối hình thức nên có thể nói **tái hiện điệu tính không kèm tái hiện chủ đề**. Ví dụ của Sposobin: Beethoven, Sonata violin op. 12 số 1, chương II.
+"Hình thức hai đoạn mà đoạn hai không chứa sự nhắc lại rõ các yếu tố của đoạn một gọi là hai đoạn không tái hiện." [^sposobin-1984, §48, tr. 114] Thống nhất đạt bằng sự đồng loại chung của nét giai điệu – tiết tấu và kết cấu; nếu dùng yếu tố phần một thì chúng biến đổi đến mức không gây ấn tượng tái hiện. Về hoà âm không có gì mới; giọng chính khôi phục cuối hình thức nên có thể nói **tái hiện điệu tính không kèm tái hiện chủ đề**. Ví dụ của Sposobin: Beethoven, Sonata violin op. 12 số 1, chương II.
 
 Hình thức này đặc biệt điển hình cho **thanh nhạc**, vì (1) lời có tác dụng hợp nhất nên nhắc lại chủ đề ít cần; (2) lời thường không cho cớ tái hiện. Khi ấy tái hiện thật đôi khi xuất hiện trong phần kết (coda).
 
@@ -432,7 +432,7 @@ Theo Mazel phần hai có thể mang ba chức năng, tách rời hay kết hợ
 
 ### Sơ đồ chung và quan hệ hỏi – đáp
 
-Sposobin tổng hợp các sơ đồ *(Sposobin, §49)*:
+Sposobin tổng hợp các sơ đồ [^sposobin-1984, §49, tr. 117]:
 
 | Loại | Đoạn I | Đoạn II |
 |---|---|---|
@@ -448,7 +448,7 @@ Mazel thêm các tỷ lệ bất thường: đoạn hai ngắn hơn (Kabalevsky,
 
 ### Định nghĩa và nguồn gốc
 
-Ba đoạn đơn là "bước tiếp theo" sau hai đoạn; nhưng về lịch sử, Sposobin cho rằng nó hình thành **từ hai đoạn**, khi đoạn giữa và tái hiện lớn lên và tách ra, đạt kích thước không nhỏ hơn phần một — "ví dụ của sự lớn lên bên trong của hình thức, kết quả là tăng số phần chính và hình thành hình thức mới" *(Sposobin, §53)*. Thống nhất chủ đề được bảo đảm bằng sự giống nhau của hai đoạn ngoài; đoạn giữa thường cũng dựa trên chất liệu ấy. Hình thức khép về điệu tính; phần trong thường chuyển sang giọng phụ. Cấu trúc linh hoạt: tái hiện hay mở rộng, đoạn giữa (nhất là kiểu phát triển) thường rất phát triển — tỷ lệ chung kém xác định hơn hai đoạn; ba đoạn "đặc biệt linh hoạt và dễ thích ứng".
+Ba đoạn đơn là "bước tiếp theo" sau hai đoạn; nhưng về lịch sử, Sposobin cho rằng nó hình thành **từ hai đoạn**, khi đoạn giữa và tái hiện lớn lên và tách ra, đạt kích thước không nhỏ hơn phần một — "ví dụ của sự lớn lên bên trong của hình thức, kết quả là tăng số phần chính và hình thành hình thức mới" [^sposobin-1984, §53, tr. 120]. Thống nhất chủ đề được bảo đảm bằng sự giống nhau của hai đoạn ngoài; đoạn giữa thường cũng dựa trên chất liệu ấy. Hình thức khép về điệu tính; phần trong thường chuyển sang giọng phụ. Cấu trúc linh hoạt: tái hiện hay mở rộng, đoạn giữa (nhất là kiểu phát triển) thường rất phát triển — tỷ lệ chung kém xác định hơn hai đoạn; ba đoạn "đặc biệt linh hoạt và dễ thích ứng".
 
 ::form A:8 B:8 A:8 | Ba đoạn đơn cơ bản: đoạn nhạc – đoạn giữa – tái hiện (kích thước có thể rất khác nhau)
 
@@ -462,13 +462,13 @@ Mazel cũng phản bác cách của giáo trình do Yu. N. Tyulin chủ biên (1
 
 ### Phần một
 
-Phần một là đoạn nhạc một giọng hay chuyển giọng, chủ yếu hai câu như đoạn một của hai đoạn. Sposobin thừa nhận các dấu hiệu phân biệt đoạn một của hai đoạn và ba đoạn "còn chưa được nghiên cứu đủ"; nhưng ông thấy một dấu hiệu: **sự mất cân bằng** gắn với nội dung có tầm vóc, tự nhiên dẫn tới phát triển rộng hơn. Ví dụ: Beethoven, Giao hưởng số 1, menuet — đường giai điệu lao nhanh, đi lên không ngừng khiến không thể có một phần tiếp nối ngắn gọn bằng độ dài đoạn một *(Sposobin, §54)*.
+Phần một là đoạn nhạc một giọng hay chuyển giọng, chủ yếu hai câu như đoạn một của hai đoạn. Sposobin thừa nhận các dấu hiệu phân biệt đoạn một của hai đoạn và ba đoạn "còn chưa được nghiên cứu đủ"; nhưng ông thấy một dấu hiệu: **sự mất cân bằng** gắn với nội dung có tầm vóc, tự nhiên dẫn tới phát triển rộng hơn. Ví dụ: Beethoven, Giao hưởng số 1, menuet — đường giai điệu lao nhanh, đi lên không ngừng khiến không thể có một phần tiếp nối ngắn gọn bằng độ dài đoạn một [^sposobin-1984, §54, tr. 124].
 
 Hoà âm: có tự do lớn hơn trong việc chọn giọng phụ kết đoạn một, vì hai đoạn sau đủ thời gian quay về (Tchaikovsky, *Evgeny Onegin*, hợp xướng *Девицы, красавицы*, đoạn một từ La tới Si). Sposobin còn ghi rằng "khoảng từ giữa thế kỷ XX" (bản OCR; theo ngữ cảnh nhiều khả năng là XIX — **chưa đối chiếu bản in**) thường gặp phần một hở, kết nửa. Cấu trúc: tự do hơn hai đoạn — có đoạn ba câu (Beethoven, Sonata op. 2 số 1, menuet), câu năm, bảy ô.
 
 ### Đoạn giữa kiểu phát triển (ba đoạn một chủ đề)
 
-Ba đoạn **một chủ đề** rất phổ biến; đoạn giữa không đem tương phản chủ đề. Sơ đẳng nhất là đoạn giữa nhắc lại cả đoạn một ở giọng phụ (Weber, *Freischütz*, valse; Chopin, Mazurka op. 33 số 2, phần một) — khá hiếm. Quan trọng hơn nhiều là đoạn giữa **phát triển** các yếu tố đoạn một; kiểu này "hình thành trọn vẹn ở nửa sau thế kỷ XVIII" và là kiểu cơ bản *(Sposobin, §55)*.
+Ba đoạn **một chủ đề** rất phổ biến; đoạn giữa không đem tương phản chủ đề. Sơ đẳng nhất là đoạn giữa nhắc lại cả đoạn một ở giọng phụ (Weber, *Freischütz*, valse; Chopin, Mazurka op. 33 số 2, phần một) — khá hiếm. Quan trọng hơn nhiều là đoạn giữa **phát triển** các yếu tố đoạn một; kiểu này "hình thành trọn vẹn ở nửa sau thế kỷ XVIII" và là kiểu cơ bản [^sposobin-1984, §55, tr. 125].
 
 - Dù một chủ đề, vẫn có tương phản giai điệu – tiết tấu: các yếu tố tách ra thường ngắn (một – hai ô), vào điều kiện hoà âm khác nên đổi quãng, đổi tiết tấu — "ánh sáng mới".
 - Trong đoạn giữa phát triển đôi khi có một chủ đề **episode** (xuất hiện một lần, không nhắc lại) — Chopin, Mazurka Sol thăng thứ op. 33 số 1.
@@ -481,7 +481,7 @@ Mazel xác nhận: trong các đoạn giữa phát triển, "theo lệ không h�
 
 ### Đoạn giữa tương phản
 
-Đoạn giữa có thể dựa trên **chủ đề mới riêng**, tạo tương phản lớn hơn. Sposobin nhận xét mức tương phản gắn với quy mô: hình thức càng nhỏ, tương phản càng nhỏ (tương phản lớn dễ gây "loè loẹt"); quy mô lớn thuận cho tương phản lớn và có khi sinh ra từ nó. Tương phản chủ đề hay được nhấn bằng hoà âm — đưa giọng mới ngay đầu đoạn giữa bằng một **bước nhảy điệu tính hay điều thức**, rồi về giọng chính qua chuyển tiếp mềm, "như giai điệu đi liền bậc sau bước nhảy". Cấu trúc đoạn giữa có chủ đề mới có thể mang tính trình bày toàn phần hay một phần, hoặc không ổn định kiểu đoạn giữa (Chopin, Mazurka op. 33 số 3) *(Sposobin, §59)*.
+Đoạn giữa có thể dựa trên **chủ đề mới riêng**, tạo tương phản lớn hơn. Sposobin nhận xét mức tương phản gắn với quy mô: hình thức càng nhỏ, tương phản càng nhỏ (tương phản lớn dễ gây "loè loẹt"); quy mô lớn thuận cho tương phản lớn và có khi sinh ra từ nó. Tương phản chủ đề hay được nhấn bằng hoà âm — đưa giọng mới ngay đầu đoạn giữa bằng một **bước nhảy điệu tính hay điều thức**, rồi về giọng chính qua chuyển tiếp mềm, "như giai điệu đi liền bậc sau bước nhảy". Cấu trúc đoạn giữa có chủ đề mới có thể mang tính trình bày toàn phần hay một phần, hoặc không ổn định kiểu đoạn giữa (Chopin, Mazurka op. 33 số 3) [^sposobin-1984, §59, tr. 134].
 
 Mazel: đoạn giữa tương phản có thể là một đoạn nhạc, thậm chí đoạn nhắc lại (Chopin, Mazurka op. 33 số 3); ví dụ khác: Tchaikovsky, *Mélodie* op. 42 số 3 và chương II Concerto violin. Hiếm khi có phần nối nhỏ từ đoạn giữa tương phản về tái hiện (Chopin, Mazurka Sol thứ op. 67 số 2), cá biệt có phần nối giữa đoạn một và đoạn giữa (Grieg, *Nocturne*). Ba đoạn với đoạn giữa tương phản **hiếm hơn** kiểu phát triển; có đoạn giữa nửa tương phản nửa phát triển (Borodin, Quartet số 2, *Nocturne*); và có đoạn giữa chất liệu mới nhưng trình bày không ổn định như đoạn giữa phát triển (Grieg, *Nocturne*; đoạn giữa chương I *Sérénade mélancolique* của Tchaikovsky). Mazel giải thích: đoạn giữa, như một phần "trung gian", dựa vào hai đoạn ngoài nên không cần độ ổn định và định hình như chúng — và loại đoạn giữa ấy sẽ gặp lại trong ba đoạn phức với **episode** *(Mazel, ch. VI §1)*. Xem [[hinh-thuc-nga-ba-phan-phuc]].
 
@@ -489,7 +489,7 @@ Mazel xếp đoạn giữa thành dãy theo **mức độc lập**: đoạn gi�
 
 ### Tái hiện trong ba đoạn
 
-Trong hai đoạn, tái hiện tương đối ngắn và ít độc lập, cùng đoạn giữa tạo một đoạn nhạc. Trong ba đoạn, "nguyên tắc tái hiện thể hiện đầy đủ, vì tái hiện ở đây là một phần độc lập và đủ phát triển" *(Sposobin, §56)*.
+Trong hai đoạn, tái hiện tương đối ngắn và ít độc lập, cùng đoạn giữa tạo một đoạn nhạc. Trong ba đoạn, "nguyên tắc tái hiện thể hiện đầy đủ, vì tái hiện ở đây là một phần độc lập và đủ phát triển" [^sposobin-1984, §56, tr. 127].
 
 - Về chủ đề, thường lặp chất liệu đoạn một gần như không sửa, không đưa chủ đề mới; khi mở rộng có thể chứa tính phát triển, thường là mô tiến (Beethoven, Giao hưởng số 2, scherzo, phần một).
 - Có ba đoạn **không có tái hiện chủ đề** nhưng có tái hiện điệu tính, chủ yếu trong thanh nhạc (Tchaikovsky, *Evgeny Onegin*, aria của Onegin cảnh ba).
@@ -499,11 +499,11 @@ Trong hai đoạn, tái hiện tương đối ngắn và ít độc lập, cùng
 
 ### Tái hiện giả
 
-Cần phân biệt sự lệch giữa tái hiện chủ đề và tái hiện điệu tính với **tái hiện giả** (мнимая, ложная реприза). Dấu hiệu: đoạn đầu của đoạn một được trình bày ở **giọng phụ**, sau đó mới là tái hiện thật, đầy đủ, ở giọng chính, của chính đoạn đầu ấy và phần tiếp theo. Ví dụ của Sposobin: Schumann, *Scherzino* op. 26 số 3; Grieg, *Scherzo-Impromptu* op. 73 số 2 — ở cả hai, tái hiện giả ở La trưởng khi giọng chính là Si giáng trưởng làm tăng tính hài hước "như một 'trượt' nửa cung rồi 'sửa lại'". Khác với tái hiện lệch giọng (đoạn ở giọng phụ *không* nhắc lại mà chảy tiếp), ở tái hiện giả đoạn ấy được nhắc lại. Ba đoạn đơn là hình thức nhỏ nhất có tái hiện giả *(Sposobin, §57)*. Mazel phân tích một tái hiện giả trong đoạn giữa scherzo Giao hưởng số 7 của Beethoven (ở giọng hạ át âm), coi nó là một trong các phương tiện tạo ấn tượng hài hước — "một sự lừa đặc biệt" *(Mazel, ch. VII §3)*.
+Cần phân biệt sự lệch giữa tái hiện chủ đề và tái hiện điệu tính với **tái hiện giả** (мнимая, ложная реприза). Dấu hiệu: đoạn đầu của đoạn một được trình bày ở **giọng phụ**, sau đó mới là tái hiện thật, đầy đủ, ở giọng chính, của chính đoạn đầu ấy và phần tiếp theo. Ví dụ của Sposobin: Schumann, *Scherzino* op. 26 số 3; Grieg, *Scherzo-Impromptu* op. 73 số 2 — ở cả hai, tái hiện giả ở La trưởng khi giọng chính là Si giáng trưởng làm tăng tính hài hước "như một 'trượt' nửa cung rồi 'sửa lại'". Khác với tái hiện lệch giọng (đoạn ở giọng phụ *không* nhắc lại mà chảy tiếp), ở tái hiện giả đoạn ấy được nhắc lại. Ba đoạn đơn là hình thức nhỏ nhất có tái hiện giả [^sposobin-1984, §57, tr. 129]. Mazel phân tích một tái hiện giả trong đoạn giữa scherzo Giao hưởng số 7 của Beethoven (ở giọng hạ át âm), coi nó là một trong các phương tiện tạo ấn tượng hài hước — "một sự lừa đặc biệt" *(Mazel, ch. VII §3)*.
 
 ### Tái hiện tĩnh và tái hiện động
 
-Sposobin: nhắc lại một cấu trúc sau âm nhạc khác, kể cả không thay đổi gì, gây "ấn tượng hoàn tất phát triển" khác hẳn lần đầu; tái hiện được cảm như "kết quả cần thiết của phát triển", nên cảm thụ nó "luôn động ở mức nào đó". Trong hình thức một chủ đề, sự xuất hiện trọn chủ đề sau khi phát triển từng mảnh đặc biệt quan trọng. Nhắc lại nguyên văn đôi khi gọi là **tái hiện tĩnh** vì tính máy móc, nhưng thuật ngữ "khá quy ước". Đối lại là **tái hiện động** — nhắc lại có biến đổi, với mức độ tuỳ chiều sâu thay đổi *(Sposobin, §58)*. Các thủ pháp:
+Sposobin: nhắc lại một cấu trúc sau âm nhạc khác, kể cả không thay đổi gì, gây "ấn tượng hoàn tất phát triển" khác hẳn lần đầu; tái hiện được cảm như "kết quả cần thiết của phát triển", nên cảm thụ nó "luôn động ở mức nào đó". Trong hình thức một chủ đề, sự xuất hiện trọn chủ đề sau khi phát triển từng mảnh đặc biệt quan trọng. Nhắc lại nguyên văn đôi khi gọi là **tái hiện tĩnh** vì tính máy móc, nhưng thuật ngữ "khá quy ước". Đối lại là **tái hiện động** — nhắc lại có biến đổi, với mức độ tuỳ chiều sâu thay đổi [^sposobin-1984, §58, tr. 129]. Các thủ pháp:
 
 | Nhóm | Thủ pháp | Ví dụ Sposobin dẫn |
 |---|---|---|
@@ -513,7 +513,7 @@ Sposobin: nhắc lại một cấu trúc sau âm nhạc khác, kể cả không 
 | Kết cấu, âm sắc | thêm/bỏ quãng tám kép, dời quãng tám, đổi phối khí | — |
 | Cấu trúc | mở rộng (điển hình bằng mô tiến đi lên), rút gọn | — |
 
-Các thủ pháp thường kết hợp và đi cùng tăng cường độ. Trong ví dụ Sposobin phân tích, mở rộng tái hiện bằng mô tiến đi lên tích tụ căng thẳng tới cao trào chính ở cuối tái hiện; trong mô tiến lần đầu xuất hiện ly giọng hạ át âm, đối với giọng át của đoạn giữa. Tái hiện động **điển hình cho ba đoạn hơn hai đoạn**, vì hai đoạn bị hạn chế bởi độ dài chung và tỷ lệ chặt hơn (Scriabin, Prelude Sol thăng thứ op. 16 số 2 — hai đoạn với tái hiện động) *(Sposobin, §58)*. Sposobin nhận xét đoạn giữa có ý nghĩa với "sự phát triển xuyên suốt" của hình thức, "trái với sự chia hình thức thành các phần ranh giới rõ".
+Các thủ pháp thường kết hợp và đi cùng tăng cường độ. Trong ví dụ Sposobin phân tích, mở rộng tái hiện bằng mô tiến đi lên tích tụ căng thẳng tới cao trào chính ở cuối tái hiện; trong mô tiến lần đầu xuất hiện ly giọng hạ át âm, đối với giọng át của đoạn giữa. Tái hiện động **điển hình cho ba đoạn hơn hai đoạn**, vì hai đoạn bị hạn chế bởi độ dài chung và tỷ lệ chặt hơn (Scriabin, Prelude Sol thăng thứ op. 16 số 2 — hai đoạn với tái hiện động) [^sposobin-1984, §58, tr. 129]. Sposobin nhận xét đoạn giữa có ý nghĩa với "sự phát triển xuyên suốt" của hình thức, "trái với sự chia hình thức thành các phần ranh giới rõ".
 
 Mazel đặt thuật ngữ chặt hơn: khi tái hiện được nâng lên một mức căng thẳng mới, tạo đường phát triển xuyên suốt, thì **cả hình thức** gọi là động ("ba đoạn đơn động", "hai đoạn tái hiện động"), còn tái hiện gọi là **được động hoá** (динамизированная). Ông giải thích vì sao tránh nói "tái hiện động": các cụm "tái hiện chủ đề", "tái hiện điệu tính", "tái hiện âm sắc" hàm ý trở lại chủ đề, giọng, âm sắc cũ, trong khi "tái hiện động" hoàn toàn không hàm ý trở lại cường độ cũ — dễ gây hiểu lầm *(Mazel, ch. VI §1, chú thích)*. Mazel cũng đòi người phân tích tự hỏi: thay đổi để làm đa dạng việc nhắc lại (mục đích giao tiếp) hay để biến đổi tận gốc hình tượng?
 
@@ -529,9 +529,9 @@ Mazel còn mô tả **tái hiện tổng hợp không động hoá**: chủ đ�
 
 ## Lặp các phần
 
-**Hai đoạn**: thường gặp nhất là lặp từng phần riêng (‖: A :‖: B :‖); khá thường chỉ lặp đoạn hai; chỉ lặp đoạn một là ngoại lệ. Lặp thường nguyên văn, ghi bằng dấu lặp; khi biến tấu thì phải viết ra (Mozart, Sonata Đô trưởng số 8, Andante quasi un poco Adagio) *(Sposobin, §50)*. Mazel nhấn mạnh việc lặp không đổi kiểu hình thức: Prelude op. 16 số 5 của Scriabin có ba đoạn tám ô kết giống nhau, nhưng là **hai đoạn** vì đoạn ba chỉ nhắc lại đoạn hai (đoạn giữa + tái hiện) liền ngay sau. Với Andante của Mozart nói trên, ông chỉ ra một "hình thức bình diện thứ hai" — năm lần trình bày biến đổi "chủ đề" xen hai lần đoạn giữa, gần với biến tấu (thuật ngữ ông ghi là của V. Bobrovsky) — nhưng kiểu hình thức vẫn là hai đoạn tái hiện có lặp biến tấu: một ví dụ về sự **không trùng khớp giữa phương pháp phát triển ưu thế và kiểu hình thức** *(Mazel, ch. VI §1)*.
+**Hai đoạn**: thường gặp nhất là lặp từng phần riêng (‖: A :‖: B :‖); khá thường chỉ lặp đoạn hai; chỉ lặp đoạn một là ngoại lệ. Lặp thường nguyên văn, ghi bằng dấu lặp; khi biến tấu thì phải viết ra (Mozart, Sonata Đô trưởng số 8, Andante quasi un poco Adagio) [^sposobin-1984, §50, tr. 118]. Mazel nhấn mạnh việc lặp không đổi kiểu hình thức: Prelude op. 16 số 5 của Scriabin có ba đoạn tám ô kết giống nhau, nhưng là **hai đoạn** vì đoạn ba chỉ nhắc lại đoạn hai (đoạn giữa + tái hiện) liền ngay sau. Với Andante của Mozart nói trên, ông chỉ ra một "hình thức bình diện thứ hai" — năm lần trình bày biến đổi "chủ đề" xen hai lần đoạn giữa, gần với biến tấu (thuật ngữ ông ghi là của V. Bobrovsky) — nhưng kiểu hình thức vẫn là hai đoạn tái hiện có lặp biến tấu: một ví dụ về sự **không trùng khớp giữa phương pháp phát triển ưu thế và kiểu hình thức** *(Mazel, ch. VI §1)*.
 
-**Ba đoạn** *(Sposobin, §61)*:
+**Ba đoạn** [^sposobin-1984, §61, tr. 137]:
 
 - Thường nhất: lặp phần một riêng, rồi phần hai và ba cùng nhau — ‖: a :‖: b a :‖. Truyền thống này hình thành lịch sử từ cách lặp của hai đoạn: khi đoạn giữa và tái hiện lớn thành phần hai và ba, người ta vẫn lặp chúng cùng nhau. Hình thức một chủ đề kiểu này đôi khi gọi là "ba đoạn mang dấu hiệu hai đoạn".
 - Đôi khi không lặp đoạn một, chỉ lặp đoạn giữa và tái hiện: a ‖: b a :‖, tức **a b a b a** — gọi là **ba – năm đoạn** (ba đoạn theo nguồn gốc trực tiếp, năm đoạn theo số phần thực tế).
@@ -567,7 +567,7 @@ Mazel: "Hình thức nhiều lời là hình thức của tác phẩm thanh nh�
 
 **Ưu và nhược** *(Mazel, ch. VI §2)*: ưu là đơn giản, rõ, dễ nhớ; cấu trúc âm nhạc hợp mọi lời và cho phép diễn tấu khác nhau — Mazel dẫn hồi ức của A. Serov rằng Glinka hát hai lời romance *В крови горит огонь желанья* khác đến mức người nghe không nhận ra nhạc giống nhau. Nhược là đơn điệu, các phần khép kín và tách rời, không có phát triển xuyên suốt hữu cơ, khớp nối có phần máy móc. Trong nhạc chuyên nghiệp có cách khắc phục: mọi lời trừ lời cuối không khép (kết ở giọng át), lời cuối mới khép — Glinka, *Кто она и где она* (ba lời đầu kết ở giọng át, lời bốn mở rộng hai ô, kết ở giọng chính); Quốc ca Liên Xô (hai lần đầu điệp khúc kết ở giọng át, lần ba ở giọng chính, mở rộng một ô như một "ritardando viết ra"). Khi biến đổi giữa các lời mang tính biến tấu hay tự do hơn nữa, Mazel gọi là **hình thức nhiều lời – biến tấu** và **hình thức nhiều lời tự do**; trên nền hình thức nhiều lời đã phát triển nhiều hình thức biến tấu chuyên nghiệp (xem [[hinh-thuc-nga-bien-tau]]).
 
-Sposobin nói ngắn hơn: trong thanh nhạc, đoạn nhạc độc lập gần như chỉ có trong bài hát nhiều lời (строфическая, куплетная песня), "nhạc nhắc lại không đổi hoặc hơi biến tấu, còn lời mỗi lần mới" *(Sposobin, §37)* — tức ông dùng "строфическая" và "куплетная" như đồng nghĩa.
+Sposobin nói ngắn hơn: trong thanh nhạc, đoạn nhạc độc lập gần như chỉ có trong bài hát nhiều lời (строфическая, куплетная песня), "nhạc nhắc lại không đổi hoặc hơi biến tấu, còn lời mỗi lần mới" [^sposobin-1984, §37, tr. 93] — tức ông dùng "строфическая" và "куплетная" như đồng nghĩa.
 
 ### Hình thức khổ (строфическая форма)
 
@@ -581,9 +581,9 @@ Mazel dẫn *Valse* op. 70 số 2 của Chopin (hai đoạn không tái hiện, 
 
 ## Mở đầu và coda
 
-**Hai đoạn**: mở đầu thường ngắn, liên hệ chủ đề hay kết cấu với hình thức chính; điển hình khi hai đoạn là tác phẩm độc lập. Coda ngắn tương xứng quy mô; hiếm khi rất phát triển, gần bằng phần chính; nhận ra coda qua dấu hiệu kiểu trình bày kết, nhất là kết nhắc lại trên chủ âm hay **âm nền chủ** (Bach, Prelude Rê thứ, *Bình quân luật* tập I) *(Sposobin, §51)*.
+**Hai đoạn**: mở đầu thường ngắn, liên hệ chủ đề hay kết cấu với hình thức chính; điển hình khi hai đoạn là tác phẩm độc lập. Coda ngắn tương xứng quy mô; hiếm khi rất phát triển, gần bằng phần chính; nhận ra coda qua dấu hiệu kiểu trình bày kết, nhất là kết nhắc lại trên chủ âm hay **âm nền chủ** (Bach, Prelude Rê thứ, *Bình quân luật* tập I) [^sposobin-1984, §51, tr. 118].
 
-**Ba đoạn**: mở đầu thường ngắn, "không có gì mới" so với hai đoạn; trong coda đôi khi có trình bày có hệ thống chất liệu đoạn giữa, xử lý cho hợp tính kết (Tchaikovsky, *Bài ca mùa thu*) *(Sposobin, §62)*.
+**Ba đoạn**: mở đầu thường ngắn, "không có gì mới" so với hai đoạn; trong coda đôi khi có trình bày có hệ thống chất liệu đoạn giữa, xử lý cho hợp tính kết (Tchaikovsky, *Bài ca mùa thu*) [^sposobin-1984, §62, tr. 138].
 
 Mazel nhấn mạnh **quy mô coda** có thể lớn: Lyadov, Prelude op. 57 số 1 — đoạn một 12 ô, phần hai 9 ô, coda 12 ô; Scriabin, Prelude Si trưởng op. 37 số 3 — coda bằng cả hình thức hai đoạn trước nó. Ông cảnh báo **tỷ lệ cá nhân của tác phẩm có thể không khớp nghĩa đen của tên kiểu hình thức**: Prelude của Lyadov có tỷ lệ "ba đoạn" (12 + 9 + 12) nhưng thuộc kiểu hai đoạn vì phần ba là coda. Phân tích phải tính cả tỷ lệ cá nhân lẫn kiểu hình thức, vì kiểu hình thức cho biết chức năng cấu trúc (trình bày, phát triển, tái hiện, coda). Mở đầu đôi khi chứa chủ đề riêng tham gia phát triển: chương II Concerto violin của Tchaikovsky — chất liệu dạo đầu dàn nhạc trở lại trước tái hiện và trong coda, nên các cụm "một chủ đề", "hai chủ đề" không hoàn toàn hợp *(Mazel, ch. VI §1)*.
 
@@ -600,7 +600,7 @@ Mazel tóm các giai đoạn *(Mazel, ch. VI §3)*:
 5. **Ba đoạn đơn quy mô lớn** trong chương chậm của tác phẩm chu kỳ: canzonetta Concerto violin của Tchaikovsky, *Nocturne* Quartet số 2 của Borodin, chương chậm Concerto số 2 của Rachmaninov — Mazel gọi nó là "một trong những đỉnh cao của tính ca xướng trữ tình rộng rãi Nga trong khí nhạc" và lưu ý phải coi là ba đoạn (dù tái hiện chỉ một câu của đoạn phức đầu) vì mỗi phần đều triển khai rộng. Chương cuối Giao hưởng số 6 của Tchaikovsky là ba đoạn đơn động với đoạn giữa tương phản, chủ đề đoạn giữa trở lại trong coda — một yếu tố sonata.
 6. Ở một số etude và prelude của Chopin, kết đoạn một không kèm dừng hay lặng, chuyển động liền chảy vào đoạn giữa, còn ranh giới phần hai – phần ba rõ nhờ tái hiện; khi tái hiện mở rộng và có bổ sung, các đường nét lớn gợi một cấu trúc hai đoạn lớn (Etude op. 25 số 9). Mazel coi đây chỉ là cách xử lý đặc biệt của hình thức ba đoạn cổ điển, không phải kiểu mới.
 
-Sposobin ghi vai trò của **aria da capo** cổ (cuối XVII – nửa đầu XVIII) "trong sự hình thành ba đoạn đơn và phức" *(Sposobin, §77)*.
+Sposobin ghi vai trò của **aria da capo** cổ (cuối XVII – nửa đầu XVIII) "trong sự hình thành ba đoạn đơn và phức" [^sposobin-1984, §77, tr. 156].
 
 Asafyev đặt hai đoạn, ba đoạn vào bảng phân loại các **cấu trúc khép kín có "chỗ cắt" rõ**: (a) một phần — nhắc lại đồng nhất một tổ hợp (lời ca, bài hát khổ không điệp khúc, không khúc đàn); (b) hai đoạn — đối chiếu hai tổ hợp ít nhiều tương phản (bài hát có điệp khúc, khúc dạo, khúc đáp); (c) ba đoạn — "kiểu đối chiếu thông dụng nhất và đa dạng nhất theo công thức a + b + a" *(Asafyev, Q1, Phụ lục 1)*. Ông viết về "hình thức ba đoạn tuần hoàn gọi là ca khúc, đúng hơn là vũ khúc": "cấu trúc càng nguyên sơ và trừu tượng thì các biến thể phong cách trong nó càng đa dạng, tức sơ đồ cấu trúc càng 'chứa được nhiều'" *(Asafyev, Q2 ch. I, chú thích)*.
 
@@ -691,11 +691,11 @@ Từ "Tư liệu để phân tích" của Sposobin (cuối ch. III, IV, phụ l�
 
 Mazel mở chương VII bằng một quan sát thống kê: trong các hình thức đơn, hai đoạn và ba đoạn đều rất thường; nhưng trong các hình thức phức, **ba đoạn phổ biến hơn hẳn** hai đoạn. Lý do (bàn ở cuối bài): hình thức phức đặt hai phần tương phản cạnh nhau, và sự đối chiếu ấy đòi một kết luận — mà kết luận tự nhiên nhất là trở lại phần một *(Mazel, ch. VII §1, §4)*.
 
-Sposobin nhìn từ góc "lớn lên của hình thức": ba đoạn phức là ví dụ mới của sự **lớn lên bên ngoài**, gắn thêm phần mới vào một phần; điều này chỉ có thể trong giới hạn nhất định nếu phát triển chỉ dựa vào tương phản bên trong. Vì thế khi hình thức lớn lên, cần **tương phản bên ngoài** "như một động lực, khi khả năng của tương phản bên trong cạn" *(Sposobin, §64)*.
+Sposobin nhìn từ góc "lớn lên của hình thức": ba đoạn phức là ví dụ mới của sự **lớn lên bên ngoài**, gắn thêm phần mới vào một phần; điều này chỉ có thể trong giới hạn nhất định nếu phát triển chỉ dựa vào tương phản bên trong. Vì thế khi hình thức lớn lên, cần **tương phản bên ngoài** "như một động lực, khi khả năng của tương phản bên trong cạn" [^sposobin-1984, §64, tr. 140].
 
 ## Định nghĩa
 
-**Sposobin**: "Hình thức ba đoạn phức là hình thức mà hai đoạn ngoài, giống nhau về chủ đề, là hai đoạn đơn hoặc ba đoạn đơn; còn đoạn giữa, có cấu trúc khác nhau, tương phản rõ với hai đoạn ngoài." *(Sposobin, §64)*
+**Sposobin**: "Hình thức ba đoạn phức là hình thức mà hai đoạn ngoài, giống nhau về chủ đề, là hai đoạn đơn hoặc ba đoạn đơn; còn đoạn giữa, có cấu trúc khác nhau, tương phản rõ với hai đoạn ngoài." [^sposobin-1984, §64, tr. 140]
 
 | Phần I | Phần II (giữa) | Phần III (tái hiện) |
 |---|---|---|
@@ -711,7 +711,7 @@ Ví dụ mẫu trong phụ lục sách Sposobin: **Myaskovsky, *Пожелтев
 
 ## Tương phản bên ngoài và tương phản bên trong
 
-Sposobin phân biệt hai loại tương phản *(Sposobin, §64)*:
+Sposobin phân biệt hai loại tương phản [^sposobin-1984, §64, tr. 140]:
 
 - **Tương phản bên ngoài** (внешний контраст): đối chiếu các phần độc lập, ranh giới rõ.
 - **Tương phản bên trong** (внутренний контраст): đạt bằng biến đổi dần, "một yếu tố chảy ra từ yếu tố kia" — thấy ở đoạn nhạc và ở hai, ba đoạn đơn một chủ đề (công việc chủ đề trong đoạn giữa).
@@ -720,7 +720,7 @@ Tương phản bên ngoài có trong ba đoạn đơn với đoạn giữa chủ
 
 ### Tính chất của tương phản
 
-Sposobin cho rằng ba đoạn phức có lẽ hợp nhất để biểu hiện **tương phản tâm trạng, ấn tượng, trạng thái**; ông chỉ nêu vài cặp tiêu biểu *(Sposobin, §65)*:
+Sposobin cho rằng ba đoạn phức có lẽ hợp nhất để biểu hiện **tương phản tâm trạng, ấn tượng, trạng thái**; ông chỉ nêu vài cặp tiêu biểu [^sposobin-1984, §65, tr. 141]:
 
 | Phần ngoài | Đoạn giữa | Ví dụ Sposobin dẫn |
 |---|---|---|
@@ -748,7 +748,7 @@ Mazel trình bày nguồn gốc kỹ nhất *(Mazel, ch. VII §1–2)*:
 - Nguồn thứ hai là **aria da capo** cổ, sau đoạn giữa nhắc lại phần đầu — "một tiền thân lịch sử của ba đoạn phức, bên cạnh tổ khúc cổ".
 - Ba đoạn phức với **episode** có lẽ bắt nguồn từ các thể loại hát – múa cổ — múa vòng có hát — và từ các hình thức biến tấu. Ghi chú: trong sách giáo khoa cũ, ba đoạn phức với episode được xếp vào các hình thức rondo. Không ngẫu nhiên mà trong ba đoạn phức với episode tái hiện rất hay được biến tấu, và hay có nhắc lại biến tấu các phần nhỏ (chương chậm Sonata số 16 của Beethoven).
 
-Sposobin ghi gọn hơn: tên trio "còn lại từ thời (thế kỷ XVII) khi những phần như thế được viết cho ba bè" *(Sposobin, §67)*, và aria da capo cổ (cuối XVII – nửa đầu XVIII) có vai trò quan trọng nhất trong sự hình thành ba đoạn đơn và phức *(Sposobin, §77)*. Hai sách thống nhất về hai nguồn (tổ khúc, aria da capo); chỉ Mazel nêu thêm nguồn hát – múa và biến tấu cho kiểu episode.
+Sposobin ghi gọn hơn: tên trio "còn lại từ thời (thế kỷ XVII) khi những phần như thế được viết cho ba bè" [^sposobin-1984, §67, tr. 145], và aria da capo cổ (cuối XVII – nửa đầu XVIII) có vai trò quan trọng nhất trong sự hình thành ba đoạn đơn và phức [^sposobin-1984, §77, tr. 156]. Hai sách thống nhất về hai nguồn (tổ khúc, aria da capo); chỉ Mazel nêu thêm nguồn hát – múa và biến tấu cho kiểu episode.
 
 ## Phần một
 
@@ -765,13 +765,13 @@ Mazel chia đoạn giữa ba đoạn phức làm hai loại *(Mazel, ch. VII §2
 1. **Trio** — đoạn giữa có **hình thức độc lập**: đoạn nhạc, hai đoạn đơn hoặc ba đoạn đơn, "bất kể tên ấy có ghi trong bản nhạc hay không"; cũng tính là trio những đoạn giữa có hình thức độc lập nhưng không khép.
 2. **Episode** — đoạn giữa **không có hình thức độc lập**, gồm một chuỗi cấu trúc và thường không ổn định về điệu tính.
 
-Sposobin dùng cùng thuật ngữ và cũng tuyên bố sẽ gọi đoạn giữa có cấu trúc ấy là trio dù bản nhạc không ghi gì; ông nêu các tên khác: **Alternativo**, **Maggiore**, **Minore** *(Sposobin, §67)*. Ông cảnh báo không nhầm **trio** với **đoạn giữa** (середина) của hình thức đơn: trio có tính định hình chung, phần rõ ràng, tuần hoàn cấu trúc như một hình thức đơn hay đoạn nhạc — "các thuật ngữ này không nên lẫn lộn".
+Sposobin dùng cùng thuật ngữ và cũng tuyên bố sẽ gọi đoạn giữa có cấu trúc ấy là trio dù bản nhạc không ghi gì; ông nêu các tên khác: **Alternativo**, **Maggiore**, **Minore** [^sposobin-1984, §67, tr. 145]. Ông cảnh báo không nhầm **trio** với **đoạn giữa** (середина) của hình thức đơn: trio có tính định hình chung, phần rõ ràng, tuần hoàn cấu trúc như một hình thức đơn hay đoạn nhạc — "các thuật ngữ này không nên lẫn lộn".
 
 Điểm chung của trio và episode: cả hai xây trên **chất liệu mới**, thường ở **giọng mới**, nên tương phản điệu tính tăng cường tương phản chủ đề. Mazel xếp các loại đoạn giữa thành dãy theo mức độc lập: **đoạn giữa phát triển** (không có hình thức riêng, không có chủ đề riêng) → **episode** (không có hình thức riêng, có chủ đề riêng) → **trio** (có cả hai) *(Mazel, ch. VII §2)*.
 
 ### Trio
 
-**Chủ đề**: tương phản không chỉ ở hạt nhân chủ đề mà cả ở cách phát triển giai điệu: nếu giai điệu phần ngoài có tầm rộng thì giai điệu trio thường đi trên một bình diện, giữ một âm vực, và ngược lại; sự sôi nổi của phần ngoài và sự kìm nén của trio (hay ngược lại) thường gắn với thể loại *(Sposobin, §67)*.
+**Chủ đề**: tương phản không chỉ ở hạt nhân chủ đề mà cả ở cách phát triển giai điệu: nếu giai điệu phần ngoài có tầm rộng thì giai điệu trio thường đi trên một bình diện, giữ một âm vực, và ngược lại; sự sôi nổi của phần ngoài và sự kìm nén của trio (hay ngược lại) thường gắn với thể loại [^sposobin-1984, §67, tr. 145].
 
 **Điệu tính**: tương phản chủ đề rất thường được nhấn bằng tương phản điệu tính — trio ở giọng phụ, thường vào **không có phần nối**, ngay sau phần một; vậy tương phản chủ đề được tăng cường bằng **bước nhảy điệu tính hay điều thức**. Sposobin lập bảng các giọng điển hình; bảng trong bản OCR bị vỡ dòng, phần đọc được cho thấy:
 
@@ -784,7 +784,7 @@ Sposobin dùng cùng thuật ngữ và cũng tuyên bố sẽ gọi đoạn gi�
 
 Mazel nói cùng điều bằng chức năng: các giọng thường gặp nhất ở đoạn giữa ba đoạn phức (ngoài giọng chính) là **giọng phía hạ át âm** và **giọng cùng tên**; trong ba đoạn đơn một chủ đề, đoạn giữa thường ở giọng át hay không ổn định, hoặc dựa chủ yếu trên chức năng át. Ông giải thích: vùng át âm dùng khi các chủ đề tương phản nhưng "họ hàng, gắn với nhau bằng một đường phát triển"; vùng hạ át âm dùng khi cần nhấn tương phản bên ngoài hơn, sự độc lập hoàn toàn của chất liệu mới — vì át âm hút về chủ âm mạnh hơn nhiều, còn hạ át âm độc lập hơn. Ví dụ: Schubert, *Impromptu* Sol giáng trưởng op. 90 số 3 (đoạn giữa ở thứ song song); Beethoven, Sonata số 4, chương chậm (bậc VI thấp); Chopin, Sonata Si giáng thứ, Hành khúc tang (trio ở trưởng song song, không mang chức năng hạ át âm). Ngoại lệ ở giọng át: Tchaikovsky, Giao hưởng số 4, chương II (đoạn giữa Fa trưởng, giọng chính Si giáng thứ). Đoạn giữa ở **giọng chính** gắn với nguồn gốc lịch sử: menuet Giao hưởng số 1 và Sonata số 18 của Beethoven, scherzo *Eroica*, Valse op. 64 số 1 của Chopin — khi ấy vai trò các phương tiện khác trong tạo tương phản đặc biệt lớn *(Mazel, ch. VII §2)*.
 
-Ngoài giọng, hoà âm trio có thể khác ở **màu hợp âm** và **mức căng thẳng**, ví dụ đổi hợp âm thưa hơn hay dày hơn: trong trio menuet Giao hưởng số 1 của Beethoven, cơ sở chính của tương phản là hoà âm đổi **thưa hơn**; trio này không tương phản về giọng hay nhịp độ (nhưng có tương phản phối khí) *(Sposobin, §67)*.
+Ngoài giọng, hoà âm trio có thể khác ở **màu hợp âm** và **mức căng thẳng**, ví dụ đổi hợp âm thưa hơn hay dày hơn: trong trio menuet Giao hưởng số 1 của Beethoven, cơ sở chính của tương phản là hoà âm đổi **thưa hơn**; trio này không tương phản về giọng hay nhịp độ (nhưng có tương phản phối khí) [^sposobin-1984, §67, tr. 145].
 
 **Cấu trúc**: trio có định hình chung, phần rõ, tuần hoàn như một hình thức đơn; nhưng bên trong thường tương phản với phần ngoài — nếu phần ngoài (nhất là đoạn giữa của chúng) có nét chia nhỏ thì trio có cấu trúc lớn hơn, và ngược lại.
 
@@ -800,7 +800,7 @@ Episode khác đoạn giữa phát triển ở chỗ có **chủ đề độc l�
 
 Mazel xác nhận phạm vi bằng một quan sát về Haydn, Mozart, Beethoven: trong các chương giữa sonata và giao hưởng viết ở ba đoạn phức, mọi chương nhanh (menuet, scherzo) có **trio**, còn chương chậm, với vài ngoại lệ, có **episode**. Lý do: sự phân chia rõ các phần của trio gắn với các thể loại nhảy nơi nó ra đời, nên hợp tác phẩm sôi nổi, mô-tơ; còn episode đặc trưng cho tiểu phẩm trữ tình, thường chậm. Về sau ranh giới này mờ đi — trio cũng dùng nhiều trong tiểu phẩm trữ tình chậm *(Mazel, ch. VII §2)*. Ông ghi các ngoại lệ ở nhà cổ điển: chương chậm Sonata số 15 của Beethoven; Andante Mi trưởng trong Sonata Đô trưởng số 10 của Mozart — "thêm một trường hợp nhà cổ điển Vienne dùng ba đoạn phức với trio trong chương chậm" *(Mazel, ch. VII §2–3, chú thích)*.
 
-Sposobin ghi rằng khoảng từ giữa thế kỷ XIX (OCR in "XX"; theo ngữ cảnh — **chưa đối chiếu bản in**) nét trio và episode đôi khi trộn lẫn, khác biệt gần như xoá *(Sposobin, §69)*. Mazel nói cùng ý cho giai đoạn sau Beethoven *(Mazel, ch. VII §3)*.
+Sposobin ghi rằng khoảng từ giữa thế kỷ XIX (OCR in "XX"; theo ngữ cảnh — **chưa đối chiếu bản in**) nét trio và episode đôi khi trộn lẫn, khác biệt gần như xoá [^sposobin-1984, §69, tr. 148]. Mazel nói cùng ý cho giai đoạn sau Beethoven *(Mazel, ch. VII §3)*.
 
 ## Chuyển tiếp giữa các phần
 
@@ -811,7 +811,7 @@ Mazel nêu một nguyên tắc cấu tạo đẹp *(Mazel, ch. VII §2)*: đoạ
 
 Episode, vốn không khép, dùng cách hai. Trio có thể dùng cả hai. Ví dụ cách một: Beethoven, Sonata số 6, chương II; cách hai: menuet Sonata số 7, chương II Sonata số 9 của Beethoven. Theo Mazel, cấu tạo "vào đột ngột – về có chuẩn bị" làm hình thức "đặc biệt cân đối, trọn vẹn": sự thay đổi gắt bù bằng sự êm của đường về, giống nguyên tắc "nhảy rồi lấp" của giai điệu, hay chuyển giọng xa đột ngột rồi về dần của hoà âm. Ông ghi chú nguyên tắc này có cả ở hình thức lớn: chương I và II *Appassionata* ngăn bằng kết trọn và nghỉ, còn chương II chảy thẳng vào chương cuối (cũng thế trong Concerto violin của Tchaikovsky).
 
-Sposobin mô tả thêm một kiểu nối "cao hơn, theo nghĩa hữu cơ": tận dụng **lần lặp truyền thống** trong hình thức đơn của trio — phần được lặp (ở hai đoạn: đoạn hai; ở ba đoạn: đoạn giữa và tái hiện) được viết lại thành cấu trúc chuyển về tái hiện chung. Ví dụ: Beethoven, Sonata op. 2 số 3, scherzo; trio là một đoạn nhạc cũng có thể dùng lần lặp như thế (op. 10 số 3, menuet). Khi trio khép, có thể chen cấu trúc mới giữa trio và tái hiện (Beethoven, Sonata op. 10 số 2) *(Sposobin, §67)*. Mazel dẫn trio scherzo *Eroica*: trio chỉ hở khi lặp đoạn giữa + tái hiện của nó *(Mazel, ch. VII §2)*.
+Sposobin mô tả thêm một kiểu nối "cao hơn, theo nghĩa hữu cơ": tận dụng **lần lặp truyền thống** trong hình thức đơn của trio — phần được lặp (ở hai đoạn: đoạn hai; ở ba đoạn: đoạn giữa và tái hiện) được viết lại thành cấu trúc chuyển về tái hiện chung. Ví dụ: Beethoven, Sonata op. 2 số 3, scherzo; trio là một đoạn nhạc cũng có thể dùng lần lặp như thế (op. 10 số 3, menuet). Khi trio khép, có thể chen cấu trúc mới giữa trio và tái hiện (Beethoven, Sonata op. 10 số 2) [^sposobin-1984, §67, tr. 145]. Mazel dẫn trio scherzo *Eroica*: trio chỉ hở khi lặp đoạn giữa + tái hiện của nó *(Mazel, ch. VII §2)*.
 
 Một trường hợp ngược của Mazel: chương II Giao hưởng số 4 của Tchaikovsky có phần nối **từ phần một sang trio** — phần một là ba đoạn đơn, sau đó dường như bắt đầu nhắc lại đoạn giữa + tái hiện như thường lệ, nhưng thực ra đó là phần nối sang trio; "các phần nối thường bắt đầu như sự nhắc lại một phần nào đó" *(Mazel, ch. VII §2)*.
 
@@ -821,7 +821,7 @@ Sposobin: tái hiện của ba đoạn phức đầy đủ "rất thường là 
 
 Nhìn chung tái hiện ba đoạn phức **chủ yếu tĩnh**. Thủ pháp động hoá chính "ít đổi bản chất, chỉ đẩy nhanh quá trình" là **rút gọn**; điển hình nhất là bỏ đoạn giữa và tái hiện của phần một, chỉ giữ đoạn nhạc đầu — gọi là **ba đoạn phức với tái hiện không đầy đủ** (Chopin, Polonaise Đô thứ; Mazel thêm nhiều mazurka của Chopin, ví dụ op. 7 số 2). Rút gọn không đổi việc định loại cả hình thức là ba đoạn phức *(Sposobin, §68; Mazel, ch. VII §2)*.
 
-Thủ pháp động hoá mạnh hơn hiếm hơn *(Sposobin, §68)*:
+Thủ pháp động hoá mạnh hơn hiếm hơn [^sposobin-1984, §68, tr. 147]:
 
 - Biến đổi kết cấu do ảnh hưởng của trio: Chopin, *Nocturne* Đô thứ — chuyển động dữ dội nảy sinh trong trio phản ánh trong phần đệm tái hiện, mang tính xao động.
 - Đổi quan hệ điệu tính: Chopin, Mazurka La thứ op. 59 số 1 — tái hiện chủ đề bắt đầu ở Sol thăng thứ, trước tái hiện điệu tính.
@@ -836,15 +836,15 @@ Mazel phân tích kỹ *Nocturne* Đô thứ (op. 48 số 1) của Chopin như v
 
 ## Mở đầu và coda
 
-**Mở đầu**: khá thường; từ 1–2 ô đến cấu trúc phát triển đáng kể (Chopin, Polonaise La giáng trưởng). Về chủ đề, mở đầu thường liên hệ với phần ngoài, đôi khi với trio; nhưng (trừ vài trường hợp thanh nhạc) không bao giờ là trình bày trọn một đoạn dài của phần chính. Có mở đầu độc lập về chủ đề; mở đầu đôi khi được nhắc lại trước tái hiện *(Sposobin, §70)*. Mazel: mở đầu nhỏ chứa chuẩn bị điệu tính và xác lập nhịp độ, nhịp — như ở hành khúc; có mở đầu dựa trên chất liệu riêng đóng vai lớn trong tác phẩm (Tchaikovsky, Quartet số 2, Andante) *(Mazel, ch. VII §2)*.
+**Mở đầu**: khá thường; từ 1–2 ô đến cấu trúc phát triển đáng kể (Chopin, Polonaise La giáng trưởng). Về chủ đề, mở đầu thường liên hệ với phần ngoài, đôi khi với trio; nhưng (trừ vài trường hợp thanh nhạc) không bao giờ là trình bày trọn một đoạn dài của phần chính. Có mở đầu độc lập về chủ đề; mở đầu đôi khi được nhắc lại trước tái hiện [^sposobin-1984, §70, tr. 149]. Mazel: mở đầu nhỏ chứa chuẩn bị điệu tính và xác lập nhịp độ, nhịp — như ở hành khúc; có mở đầu dựa trên chất liệu riêng đóng vai lớn trong tác phẩm (Tchaikovsky, Quartet số 2, Andante) *(Mazel, ch. VII §2)*.
 
-**Coda**: rất hay có, đôi khi rất phát triển. Ghi chú bản nhạc: khi tái hiện chỉ ghi Da Capo thì thêm "e poi la coda", và chữ *Coda* ghi trên đầu cấu trúc kết mới. Nhiệm vụ của coda: khẳng định giọng chính và — không kém quan trọng — **khái quát** chất liệu chủ đề tương phản của cả hình thức *(Sposobin, §70)*. Sposobin phân ba loại theo chất liệu:
+**Coda**: rất hay có, đôi khi rất phát triển. Ghi chú bản nhạc: khi tái hiện chỉ ghi Da Capo thì thêm "e poi la coda", và chữ *Coda* ghi trên đầu cấu trúc kết mới. Nhiệm vụ của coda: khẳng định giọng chính và — không kém quan trọng — **khái quát** chất liệu chủ đề tương phản của cả hình thức [^sposobin-1984, §70, tr. 149]. Sposobin phân ba loại theo chất liệu:
 
 1. **Chất liệu phần ngoài** — không khái quát cả hình thức mà chỉ cho thấy chủ đề chính dưới ánh sáng khác (Beethoven, Sonata op. 31 số 3, menuet).
 2. **Chất liệu đoạn giữa** — thường làm xích lại chủ đề của nó với chủ đề phần ngoài bằng **thống nhất điệu tính**, vì chất liệu ấy được chuyển về giọng chính (Tchaikovsky, *Bên lò sưởi*, *Bốn mùa* op. 37bis số 1).
 3. **Chất liệu cả hai** — thường lần lượt, đôi khi kết hợp đối âm; Sposobin gọi là **coda tổng hợp** (синтетическая), vì nó "đem lại sự xích lại lớn nhất của các chủ đề trước đó tương phản" (Tchaikovsky, Quartet op. 11, *Andante cantabile*; Beethoven, Sonata op. 7, Largo con gran espressione; Sonata op. 28, Andante).
 
-Hoà âm coda: ly giọng về phía hạ át âm, kết nhắc lại trên chủ âm, âm nền át rồi âm nền chủ (Beethoven, op. 2 số 3, scherzo) hoặc chỉ âm nền chủ (op. 31 số 3, menuet); coda phát triển rộng có thể rời kiểu trình bày kết ở đầu hay giữa. Cấu trúc coda, nhất là coda ngắn, thường là **chia nhỏ dần** (4 + 2 + 2, 2 + 1 + 1); kiểu ngược (2 + 2 + 4) ít điển hình hơn *(Sposobin, §70)*.
+Hoà âm coda: ly giọng về phía hạ át âm, kết nhắc lại trên chủ âm, âm nền át rồi âm nền chủ (Beethoven, op. 2 số 3, scherzo) hoặc chỉ âm nền chủ (op. 31 số 3, menuet); coda phát triển rộng có thể rời kiểu trình bày kết ở đầu hay giữa. Cấu trúc coda, nhất là coda ngắn, thường là **chia nhỏ dần** (4 + 2 + 2, 2 + 1 + 1); kiểu ngược (2 + 2 + 4) ít điển hình hơn [^sposobin-1984, §70, tr. 149].
 
 Mazel thêm các ví dụ coda tổng hợp *(Mazel, ch. VII §2)*:
 
@@ -856,7 +856,7 @@ Mazel giải thích lợi thế coda dùng chất liệu đoạn giữa: chất 
 
 ## Ba – năm đoạn phức
 
-Như ở ba đoạn đơn, trình bày phần một một lần rồi lặp đoạn giữa cùng tái hiện tạo năm đoạn; nếu điều ấy xảy ra ở hình thức phức, ta có **ba – năm đoạn phức**: phần I – trio – tái hiện – trio – tái hiện. Ví dụ Sposobin dẫn: Beethoven, scherzo Giao hưởng số 4 và số 7; Glinka, *Hành khúc Chernomor* trong *Ruslan và Lyudmila* *(Sposobin, §71)*. Mazel dẫn đúng hai ví dụ *Hành khúc Chernomor* và scherzo Giao hưởng số 7, gọi đây là trường hợp lặp "không chỉ các phần trong hình thức đơn mà cả các phần chính của hình thức phức" *(Mazel, ch. VII §2)*.
+Như ở ba đoạn đơn, trình bày phần một một lần rồi lặp đoạn giữa cùng tái hiện tạo năm đoạn; nếu điều ấy xảy ra ở hình thức phức, ta có **ba – năm đoạn phức**: phần I – trio – tái hiện – trio – tái hiện. Ví dụ Sposobin dẫn: Beethoven, scherzo Giao hưởng số 4 và số 7; Glinka, *Hành khúc Chernomor* trong *Ruslan và Lyudmila* [^sposobin-1984, §71, tr. 150]. Mazel dẫn đúng hai ví dụ *Hành khúc Chernomor* và scherzo Giao hưởng số 7, gọi đây là trường hợp lặp "không chỉ các phần trong hình thức đơn mà cả các phần chính của hình thức phức" *(Mazel, ch. VII §2)*.
 
 ::form A B A B A | Ba – năm đoạn phức (Sposobin §71): trio và tái hiện được nhắc lại
 
@@ -876,7 +876,7 @@ Mazel dùng scherzo này làm mẫu cho sự biến đổi của ba đoạn ph�
 
 ## Hình thức trung gian giữa ba đoạn đơn và ba đoạn phức
 
-**Sposobin**: khi hai đoạn ngoài là **đoạn nhạc** còn đoạn giữa tương phản (trio) là **hai hoặc ba đoạn đơn**, hình thức được coi là ba đoạn **trung gian**. Nó giống ba đoạn đơn ở hai đoạn ngoài (một đoạn nhạc) và khác ở đoạn giữa (trong ba đoạn đơn, đoạn giữa không ổn định, phát triển, hay nếu tương phản thì là một đoạn nhạc; ở đây đoạn giữa *nhất thiết* là hai hay ba đoạn đơn). Nó giống ba đoạn phức ở trio, khác ở phần ngoài — nhất là phần một (vì tái hiện ba đoạn phức có thể rút gọn). Ví dụ: Beethoven, Bagatelle op. 119 số 1; Schumann, *Davidsbündlertänze* op. 6 số 15; Mussorgsky, *Vũ khúc của những chú gà con chưa nở* (*Hình ảnh ở một cuộc triển lãm*); Chopin, Mazurka Mi thứ op. 41 số 2 *(Sposobin, §72)*.
+**Sposobin**: khi hai đoạn ngoài là **đoạn nhạc** còn đoạn giữa tương phản (trio) là **hai hoặc ba đoạn đơn**, hình thức được coi là ba đoạn **trung gian**. Nó giống ba đoạn đơn ở hai đoạn ngoài (một đoạn nhạc) và khác ở đoạn giữa (trong ba đoạn đơn, đoạn giữa không ổn định, phát triển, hay nếu tương phản thì là một đoạn nhạc; ở đây đoạn giữa *nhất thiết* là hai hay ba đoạn đơn). Nó giống ba đoạn phức ở trio, khác ở phần ngoài — nhất là phần một (vì tái hiện ba đoạn phức có thể rút gọn). Ví dụ: Beethoven, Bagatelle op. 119 số 1; Schumann, *Davidsbündlertänze* op. 6 số 15; Mussorgsky, *Vũ khúc của những chú gà con chưa nở* (*Hình ảnh ở một cuộc triển lãm*); Chopin, Mazurka Mi thứ op. 41 số 2 [^sposobin-1984, §72, tr. 150].
 
 **Mazel** đi xa hơn *(Mazel, ch. VII §2)*:
 
@@ -935,7 +935,7 @@ Mazel kết chương bằng một lưu ý thuật ngữ: "hình thức ba đoạ
 | Hành khúc | nhịp hai, tiết tấu dứt khoát, cấu trúc vuông | thường ba đoạn phức với trio |
 | Hành khúc tang | chậm, nhịp bốn | ba đoạn phức: phần ngoài thứ, trio trưởng |
 
-Ông mô tả cả "phối khí hình thức" của hành khúc quân đội cho kèn đồng: đoạn đầu giai điệu ở bè cao (linh hoạt, có khi duyên dáng), phần tiếp giao giai điệu cho bè trầm (yếu tố "nam tính" hơn), trio là solo ca xướng của nhạc cụ âm vực giữa, rồi cả "dàn hợp xướng" nhạc cụ đón lấy. Trong nocturne, phần ngoài hầu như luôn chậm hay vừa, đoạn giữa có khi sôi nổi, thậm chí dữ dội; Sposobin phân tích *Nocturne* Fa thăng trưởng của Chopin như một hình thức hai đoạn có đoạn hai "bị xé" bởi một episode chen vào: đoạn nhạc 16 ô – đoạn giữa 8 ô – episode xông vào bài hát 24 ô – tái hiện 10 ô – coda 5 ô *(Sposobin, §78)*.
+Ông mô tả cả "phối khí hình thức" của hành khúc quân đội cho kèn đồng: đoạn đầu giai điệu ở bè cao (linh hoạt, có khi duyên dáng), phần tiếp giao giai điệu cho bè trầm (yếu tố "nam tính" hơn), trio là solo ca xướng của nhạc cụ âm vực giữa, rồi cả "dàn hợp xướng" nhạc cụ đón lấy. Trong nocturne, phần ngoài hầu như luôn chậm hay vừa, đoạn giữa có khi sôi nổi, thậm chí dữ dội; Sposobin phân tích *Nocturne* Fa thăng trưởng của Chopin như một hình thức hai đoạn có đoạn hai "bị xé" bởi một episode chen vào: đoạn nhạc 16 ô – đoạn giữa 8 ô – episode xông vào bài hát 24 ô – tái hiện 10 ô – coda 5 ô [^sposobin-1984, §78, tr. 156].
 
 **Mazel** *(ch. VII §1)*: phần lớn hành khúc; rất thường trong điệu nhảy (valse, mazurka, polonaise…); chương giữa của nhiều giao hưởng, sonata, cả chậm (Andante, Adagio) lẫn nhanh (scherzo, menuet); tiểu phẩm độc lập (nocturne, impromptu, barcarolle…); thanh nhạc (romance, aria, hợp xướng). "Dù dùng trong thể loại nào, nó hợp nhất cho một sự đối chiếu triển khai, **một lần**, các hình tượng âm nhạc tương phản (với sự khẳng định tiếp theo hình tượng đầu)."
 

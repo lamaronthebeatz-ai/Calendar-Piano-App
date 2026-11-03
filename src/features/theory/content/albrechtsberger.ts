@@ -83,7 +83,7 @@ Bối cảnh: dòng hoà âm Vienna từ Albrechtsberger đến Sechter và sác
     body: `
 Bài này chép hệ thống quãng và hợp âm của **Tập I** (phần Seyfried biên soạn — xem [[he-thong-albrechtsberger]]). Nhiều chỗ khác cách dạy hiện nay; bài ghi đúng như sách và đánh dấu chỗ bản in tự mâu thuẫn.
 
-## 1. Quãng (§I – II, tr. 9 – 11)
+## 1. Quãng [^albrechtsberger-1855, §I – II, tr. 9 – 11]
 - "Khoảng cách từ âm này đến âm khác gọi là **quãng**." Quãng nhỏ nhất là **nửa cung**.
 - Sách viết "**chỉ có tám quãng**" rồi kể ra **mười**: đồng âm, 2, 3, 4, 5, 6, 7, 8, 9, 10 (lỗi nằm trong bản in). "Đồng âm là một con số nhưng không thật là quãng"; quãng 10 có thể coi là quãng 3 trên quãng 8.
 ::scan albrechtsberger 2 | Phần đầu bảng tên quãng: đồng âm, quãng 2, 3, 4, 5…
@@ -104,7 +104,7 @@ Bài này chép hệ thống quãng và hợp âm của **Tập I** (phần Seyf
 | 10 | giảm, thứ, trưởng |
 Bảng chuẩn hiện nay: [[quang]].
 
-## 2. Thuận và nghịch (§III, tr. 11)
+## 2. Thuận và nghịch [^albrechtsberger-1855, §III, tr. 11]
 - **Thuận**: đồng âm đúng, quãng 3 thứ và trưởng, quãng 5 đúng, quãng 6 thứ và trưởng, quãng 8 đúng, quãng 10. **Nghịch**: đồng âm tăng, quãng 2 thứ, và **mọi quãng còn lại** — tức là mọi quãng 4 đều nằm trong nhóm nghịch.
 ::scan albrechtsberger 24,25 | Ex. 24 — các quãng thuận; Ex. 25 — các quãng nghịch, trong đó có cả quãng 4
 - Một quãng thuận **trở thành nghịch theo ngữ cảnh**: "quãng 5 đúng đi cùng quãng 6, quãng 6 đi cùng quãng 7, quãng 8 đúng đi cùng quãng 9".
@@ -118,7 +118,7 @@ Bảng chuẩn hiện nay: [[quang]].
 | **Hợp âm nghịch** | có một hay nhiều quãng nghịch: 6/5/3, 8/6/5, 6/4/2, 7/5/3, 8/5/4, 9/5/3… | Một vài hợp âm 6 có quãng hoá biến cũng bị xếp vào đây; danh sách này (ví dụ 29) chưa giải thích được hết |
 ::scan albrechtsberger 27,28 | Ex. 27 — hợp âm thuận hoàn toàn và các cách xếp; Ex. 28 — hợp âm thuận không hoàn toàn (hợp âm 6)
 
-## 3. Bốn loại hợp âm ba, thể đảo, vị trí (§IV – V, tr. 12 – 13)
+## 3. Bốn loại hợp âm ba, thể đảo, vị trí [^albrechtsberger-1855, §IV – V, tr. 12 – 13]
 - "Hợp âm ba có bốn loại": **trưởng, thứ, giảm, tăng**. Hai loại đầu thuận, hai loại sau **nghịch**.
 ::scan albrechtsberger 43 | Bốn loại hợp âm ba: trưởng, thứ (thuận); giảm, tăng (nghịch)
 - Mỗi hợp âm ba có **hai thể đảo**: lấy quãng 3 làm bè trầm sinh ra **hợp âm 6**; lấy quãng 5 làm bè trầm sinh ra **hợp âm 6/4**. Sách vẫn gọi nốt trầm của thể đảo là **nốt nền**. Chi tiết hiện đại: [[hop-am-ba]], [[the-dao-hop-am]].
@@ -129,7 +129,7 @@ Bảng chuẩn hiện nay: [[quang]].
 ::scan albrechtsberger 44 | Ba vị trí của hợp âm ba: quãng 8, quãng 5, quãng 3 nằm trên cùng
 - Lời khuyên: với giọng quá xa, dùng giọng **trùng âm** dễ đọc hơn — Rê giáng trưởng thay Đô thăng trưởng, La giáng trưởng thay Sol thăng trưởng (xem [[trung-am]]).
 
-## 4. Năm loại hợp âm chính (§III, VI – X, tr. 11 – 15)
+## 4. Năm loại hợp âm chính [^albrechtsberger-1855, §III, VI – X, tr. 11 – 15]
 "Hợp âm có năm loại chính: hợp âm ba, hợp âm 7, hợp âm 9, hợp âm 11 và hợp âm 13." Mọi hợp âm chứa quãng 2, 4, 7, 9 là nghịch; khi các quãng đó được **nối** (nốt đã vang không đánh lại) thì gọi là **có chuẩn bị**.
 
 | Hợp âm | Cách sinh ra theo sách | Khi đệm |
@@ -145,7 +145,7 @@ Bảng chuẩn hiện nay: [[quang]].
 - **Quãng 11 khác quãng 4**, **quãng 13 khác quãng 6**: giống nhau về âm thanh nhưng khác quãng ngầm định và cách giải quyết.
 So sánh với cách hiểu hiện đại về hợp âm 9 – 11 – 13 xếp chồng quãng 3 lên trên: [[hop-am-mo-rong]].
 
-## 5. "Chỗ ngồi" của hợp âm trong giọng (§LXI, tr. 41 – 42)
+## 5. "Chỗ ngồi" của hợp âm trong giọng [^albrechtsberger-1855, §LXI, tr. 41 – 42]
 "Nhiều hợp âm có chỗ thích hợp, hay vị trí tự nhiên, luôn tính từ nốt chủ của giọng trưởng hay thứ."
 | Hợp âm | Bậc | Ví dụ |
 |---|---|---|
@@ -171,7 +171,7 @@ Tiếp theo: [[chuyen-dong-va-nghich-am-albrechtsberger]]. Tổng quan: [[he-tho
     summary: 'Tập I, §XI – XIII và §LVIII – LX: bốn kiểu chuyển động (cả "song song" theo nghĩa nốt lặp), sáu luật đi từ hợp âm này sang hợp âm khác, ba cách dùng nghịch âm (nốt lướt, nốt đổi, nốt treo), ba thời chuẩn bị – đánh – giải quyết, nốt nào của quãng nghịch phải đi và đi về đâu, ngoại lệ quãng 7 trưởng đi lên, nghịch âm kéo dài, nghịch âm không chuẩn bị trong lối tự do và cách giải thích bằng "anticipation".',
     refs: [SRC],
     body: `
-## Bốn kiểu chuyển động (§XI, tr. 15)
+## Bốn kiểu chuyển động [^albrechtsberger-1855, §XI, tr. 15]
 | Tên trong sách | Nghĩa |
 |---|---|
 | **Thuận chiều** (direct) | mọi bè cùng đi lên hoặc cùng đi xuống |
@@ -193,7 +193,7 @@ Ba kiểu đầu tương ứng [[quang-va-chuyen-dong-doi-am|cách gọi trong �
 6. Ngoại lệ: trong bài nhiều bè, chuỗi quãng 8 rải qua các nhạc cụ cao thấp khác nhau "không bị coi là quãng 8 liền nhau mà là đồng âm nhân đôi, nhân ba, nhân bốn".
 Đối chiếu luật hiện nay: [[dan-giong]], [[luat-hoa-am-bon-be]].
 
-## Ba cách dùng nghịch âm (§XII – XIII, tr. 15 – 16)
+## Ba cách dùng nghịch âm [^albrechtsberger-1855, §XII – XIII, tr. 15 – 16]
 | Cách | Định nghĩa theo sách |
 |---|---|
 | **Nốt lướt** (passing note) | Hai nốt trên một hợp âm, **nốt đầu** (ở phách mạnh) thuộc hợp âm, **nốt sau** là nốt lướt |
@@ -218,11 +218,11 @@ Ba kiểu đầu tương ứng [[quang-va-chuyen-dong-doi-am|cách gọi trong �
 
 - Trong **lối tự do**, quãng 7 thứ trên át âm, quãng 5 giảm (và đảo của nó), quãng 4 tăng được dùng **không chuẩn bị**, "nhưng luôn phải giải quyết đúng luật". Cũng trong lối tự do, nghịch âm này có thể giải quyết vào nghịch âm khác.
 
-## Nghịch âm kéo dài (§LVIII, tr. 39)
+## Nghịch âm kéo dài [^albrechtsberger-1855, §LVIII, tr. 39]
 - Mọi nghịch âm phải giải quyết vào thuận âm, "nhưng không nhất thiết ngay lập tức": nó có thể **đứng nguyên bậc** và đổi thành quãng khác trước khi giải quyết (ví dụ quãng 4 trên G thành quãng 5 trên F khi bè trầm đi xuống).
 - Cách thứ hai: **đổi vị trí hoà âm** — một hợp âm nghịch gốc chuyển sang thể đảo, hay ngược lại, rồi mới giải quyết.
 
-## Nghịch âm không chuẩn bị (§LIX – LX, tr. 39 – 41)
+## Nghịch âm không chuẩn bị [^albrechtsberger-1855, §LIX – LX, tr. 39 – 41]
 Trong lối tự do có **hai trường hợp**:
 1. **Nghịch âm giải quyết vào nghịch âm khác**: quãng 9 → quãng 7 → quãng 5 giảm. Để hiểu, "phải tưởng tượng một thuận âm đi qua giữa hai nghịch âm" — một quãng 8 tưởng tượng nối quãng 9 với quãng 7.
 ::scan albrechtsberger 242,243 | Ex. 242 — chuỗi 9 → 7 → 5 giảm ở nhiều giọng; Ex. 243 — quãng 8 "tưởng tượng" nối quãng 9 với quãng 7
@@ -250,7 +250,7 @@ Mở đầu Tập I, Seyfried viết: bass liên tục "là nền tảng của m
 - Nốt trầm **không có số** → luôn đánh **hợp âm ba hoàn toàn** (trừ khi ghi "unisoni" hay **"tasto solo"** — tay trái đánh một mình, không đệm).
 - Dấu ♭, ♯ hay ♮ đứng riêng chỉ quãng 3 giảm, thứ hay trưởng.
 
-## Bảng một chữ số (§XXII, tr. 20)
+## Bảng một chữ số [^albrechtsberger-1855, §XXII, tr. 20]
 | Số | Kéo theo |
 |---|---|
 | (không số) | hợp âm ba |
@@ -267,7 +267,7 @@ Mở đầu Tập I, Seyfried viết: bass liên tục "là nền tảng của m
 | 10 | quãng 5 và 8 |
 ::scan albrechtsberger 112,113,116,117 | Bốn dòng của bảng: không số (hợp âm ba), số 2 (thêm 4, 6), số 4 tăng (thêm 2, 6), số 5 giảm (thêm 3 thứ, 6 thứ)
 
-## Bảng hai chữ số (§XXIII, tr. 20 – 22)
+## Bảng hai chữ số [^albrechtsberger-1855, §XXIII, tr. 20 – 22]
 | Hai số | Thêm | Hai số | Thêm |
 |---|---|---|---|
 | 2 thứ + 3 trưởng | 5 | 4 + 6 | 8 hoặc nhân đôi 6 |
@@ -304,7 +304,7 @@ Mở đầu Tập I, Seyfried viết: bass liên tục "là nền tảng của m
 - **9**: chuẩn bị ở bè trên, giải quyết xuống; kéo theo 3 và 5. Khi bè trầm đi lên thì bỏ quãng 5, nhân đôi quãng 3 để tránh hai quãng 5. Quãng 9 đi với 3 và 5; quãng 2 đi với 4 và 6 — và quãng 2 là nốt treo **ở bè trầm**, quãng 9 thì do các bè trên chuẩn bị.
 ::scan albrechtsberger 111 | Chuỗi quãng 9 – 8: khi bè trầm đi lên thì bỏ quãng 5, nhân đôi quãng 3
 
-## Các dấu và cách ghi (§XL – XLVII, tr. 36 – 37)
+## Các dấu và cách ghi [^albrechtsberger-1855, §XL – XLVII, tr. 36 – 37]
 1. Các số **1 – 9**; quãng 11 và 13 ghi thấp một quãng 8 "cho dễ đọc nhanh". (Sách viết "như quãng 4 và quãng 5"; nhưng bảng ở §XLVII lại ghi hợp âm 13 bằng số 6 — nên coi chữ "quãng 5" là điểm chưa rõ.)
 2. Các dấu ♯, ×, ♭, ♭♭, ♮.
 3. Chuỗi gạch ngắn: lặp lại cùng một quãng.
@@ -341,14 +341,14 @@ Mở đầu Tập I, Seyfried viết: bass liên tục "là nền tảng của m
     summary: 'Tập I, phần thực hành trên bàn phím: hợp âm ba ở ba vị trí trong mọi giọng, bốn luật nối chuỗi hợp âm ba, hợp âm ba giảm, nhân đôi và bước nhảy cấm, đệm âm giai đi lên – đi xuống (kiểu quy tắc quãng 8), chuỗi hợp âm 6, các luật chung khi đệm, mỗi ô nhịp đánh mấy hợp âm, bè trầm chạy nốt nhanh, bài tập và cách đệm chia hai tay với sáu vị trí khép – rải.',
     refs: [SRC],
     body: `
-## Hợp âm ba ở mọi vị trí (§XXIV – XXXI, tr. 22 – 25)
+## Hợp âm ba ở mọi vị trí [^albrechtsberger-1855, §XXIV – XXXI, tr. 22 – 25]
 - Phải thuộc hợp âm ba và hai thể đảo (hợp âm 6, 6/4) **ở mọi vị trí và mọi giọng**. Ba vị trí ở phần bài tập: **vị trí 1** — quãng 8 trên cùng, quãng 5 giữa, quãng 3 dưới; **vị trí 2** — quãng 3 trên, 8 giữa, 5 dưới; **vị trí 3** — quãng 5 trên, 3 giữa, 8 dưới.
 ::scan albrechtsberger 149,150 | Hai dòng đầu của bài tập vị trí: hợp âm ba Đô trưởng với quãng 8 rồi quãng 10 nằm trên cùng
 - **Bốn luật** khi nhiều hợp âm ba nối nhau: (1) cho quãng 3, 5, 8 **luân phiên** nằm trên cùng; (2) dùng chuyển động **xiên và ngược chiều** để tránh quãng 5, 8 liền nhau; (3) giữ các hợp âm **gần nhau nhất**, tránh nhảy xa; (4) khi hai tay sát nhau thì thay quãng 8 bằng **đồng âm**.
 ::scan albrechtsberger 159 | Ví dụ sách dùng cho các luật nối chuỗi hợp âm ba (thuận chiều sinh quãng 5, 8 liền; nhảy xa là lỗi)
 - **Hợp âm ba giảm** ("minor diminished triad") nằm trên bậc VII của giọng trưởng, bậc II của giọng thứ, và — theo sách — trên bậc VI và VII trưởng của giọng thứ (F♯ và G♯ ở La thứ). Quãng 5 giảm, "như một nghịch âm thật", luôn giải quyết đi xuống.
 
-## Nhân đôi (§XXXII, LIII, tr. 25 – 26, 37)
+## Nhân đôi [^albrechtsberger-1855, §XXXII, LIII, tr. 25 – 26, 37]
 | Được nhân đôi | Điều kiện |
 |---|---|
 | Quãng 3 thứ và trưởng | Quãng 3 trưởng **không** được nhân đôi khi là cảm âm: nó "đã gây ấn tượng mạnh hơn các âm khác" |
@@ -363,7 +363,7 @@ Nhưng §LIII lại viết: "**Mọi thuận âm đều nhân đôi được; ng
 "Mọi bước nhảy đến một quãng **tăng** đều không hay": quãng 2 tăng (F – G♯), quãng 4 tăng (C – F♯), quãng 5 tăng (C – G♯). Dùng **đảo** của chúng thì hơn hẳn: quãng 7 giảm thay quãng 2 tăng, quãng 5 giảm thay quãng 4 tăng, quãng 4 giảm thay quãng 5 tăng.
 ::scan albrechtsberger 169,170 | Ex. 169 — nhảy quãng 2 tăng, 4 tăng, 5 tăng (không hay); Ex. 170 — thay bằng quãng 7 giảm, 5 giảm, 4 giảm
 
-## Đệm âm giai (§XXXV – XXXVI, tr. 26 – 29)
+## Đệm âm giai [^albrechtsberger-1855, §XXXV – XXXVI, tr. 26 – 29]
 - Khi bè trầm đi lên hoặc xuống trọn tám bậc, nó thường ghi ít số hoặc không số; vì bè trầm đi thẳng một chiều nên phải đệm **ngược chiều**. Sinh viên phải tập công thức này "ở mọi giọng trưởng thứ và cả ba vị trí, vì nó rất cần cho việc dạo đầu".
 - Số đọc từ bản quét (ví dụ 172):
 
@@ -382,7 +382,7 @@ Dấu "6 có gạch" chưa đọc chắc. Đây là cùng ý với **quy tắc q
 ::scan albrechtsberger 177,178 | Ex. 177 — chuỗi hợp âm 6 đệm ba bè chỉ với quãng 3; Ex. 178 — bốn bè, nhân đôi xen kẽ quãng 3, 6, 8
 ::scan albrechtsberger 179,180,181 | Ex. 179 — violin đi quãng 6; Ex. 180 — người chơi organ chọn vị trí gần nhất; Ex. 181 — và quãng 5, quãng 8 liền "xé tai" bật ra
 
-## Luật chung khi đệm (§XLVIII – LVII, tr. 37 – 39)
+## Luật chung khi đệm [^albrechtsberger-1855, §XLVIII – LVII, tr. 37 – 39]
 - Mọi bè đi đồng âm thì chỉ đánh bè trầm, hoặc nhân đôi ở tay phải để có *forte*. *Tasto solo*: giữ nốt, chỉ đánh lại khi nó yếu đi.
 - Tay phải quá cao hay quá thấp thì chỉ đổi vị trí **ở hợp âm thuận**.
 - Luật chung là đệm **bốn bè**; nhiều khi ba hay hai bè hay hơn, nhưng điều đó "chỉ có được nhờ kinh nghiệm chín chắn" — sinh viên cứ giữ bốn bè.
@@ -390,11 +390,11 @@ Dấu "6 có gạch" chưa đọc chắc. Đây là cùng ý với **quy tắc q
 - **Mỗi phần chính của ô nhịp đánh một hợp âm**: bốn hợp âm trong nhịp 4/4; hai trong ô hai phần (alla breve, 2/4, 6/4, 6/8 nhanh); ba trong ô ba phần (3/8, 3/4, 3/2, 9/8 chậm). Nhịp ba nhanh: hai hợp âm (phách đầu và phách cuối); chùm ba: một hợp âm ở nốt đầu. Luật này giữ nguyên khi bè trầm chia nhỏ hay có nốt lướt — hợp âm luôn đánh vào **phần thật của ô**. Xem [[nhip-dieu-hoa-am]].
 ::scan albrechtsberger 233,236,239 | Ex. 233 — bốn hợp âm mỗi ô nhịp 4/4 ở nhiều giọng; Ex. 236 — bè trầm chia nhỏ, hợp âm vẫn đánh ở phần thật của ô; Ex. 239 — chùm ba: một hợp âm ở nốt đầu
 
-## Bè trầm chạy nốt nhanh (§LXII, tr. 48)
+## Bè trầm chạy nốt nhanh [^albrechtsberger-1855, §LXII, tr. 48]
 - Bè trầm chạy đều trong ô nhịp chẵn: **một hợp âm** cho cả chuỗi; chạy không đều: một hợp âm **mỗi phần ô**, vì hoà âm nền đổi ở từng phần. Ô nhịp lẻ: một hợp âm cho cả chuỗi.
 - Nhưng khi bè trầm **chuyển giọng**, mỗi nốt không phải nốt lướt đều phải ghi số và có hợp âm riêng.
 
-## Bài tập (§LXII – LXXXIII, tr. 42 – 52)
+## Bài tập [^albrechtsberger-1855, §LXII – LXXXIII, tr. 42 – 52]
 Sách cho bài tập mọi hợp âm ở mọi vị trí, rồi hai mươi bài bass số: quãng 2 chuẩn bị, quãng 3 (thường không ghi số), quãng 4 chuẩn bị (ba bè và bốn bè), 4 – 6, 5 – 6, quãng 6, quãng 7 chuẩn bị, quãng 2 đi qua, 2 – 5, 2 – 4 – 5, quãng 7 đi qua, quãng 9, 4 – 9, 6 – 9, 7 – 9, rồi các hợp âm hỗn hợp ở ba và bốn bè. Vài lời dặn đi kèm:
 ::scan albrechtsberger 300 | Bài tập §LXIV — hợp âm quãng 2 chuẩn bị
 - Nối hợp âm thuận khi bè nền đi lên quãng 5: đệm **ngược chiều**; khi đã ngược chiều thì **vị trí quãng 8** tốt hơn, vì vị trí quãng 3 hay sinh quãng 5 ẩn.
@@ -404,7 +404,7 @@ Sách cho bài tập mọi hợp âm ở mọi vị trí, rồi hai mươi bài 
 - Số không đặt ngay trên nốt thì hợp âm phải đánh **giữa nốt đó và nốt sau**.
 Sinh viên "sẽ đến đích sớm hơn nếu từ chối trợ giúp của các hợp âm viết sẵn và chỉ theo bè bass số".
 
-## Đệm chia hai tay (§CXXV, tr. 72 – 76)
+## Đệm chia hai tay [^albrechtsberger-1855, §CXXV, tr. 72 – 76]
 - Không nhất thiết tay trái chỉ đánh nốt nền còn tay phải đánh hết các quãng; chia các quãng cho **cả hai tay**, vẫn giữ khoảng cách đúng luật, gọi là **đệm chia hai tay** (*divided accompaniment*).
 - Mỗi hợp âm ba có quãng 8 nhân đôi có **sáu vị trí** so với bè trầm: ba vị trí đầu (quãng 5, 8 hoặc 3 trên cùng) dùng trong **hoà âm khép**; ba vị trí kia dùng trong **hoà âm rải**. Hợp âm 6, 6/4, 7, 4/3, 6/5, 2 cũng có sáu vị trí như vậy.
 ::scan albrechtsberger 536,537 | Ex. 536 — ba vị trí khép (quãng 5, 8, 3 trên cùng); Ex. 537 — các vị trí rải
@@ -423,7 +423,7 @@ Tiếp theo: [[sau-tien-hanh-nguy-hiem]].
     summary: 'Tập I, §XXXVII – XXXIX: sáu chỗ người đệm bass số dễ phạm quãng 5 – 8 liền nhất (quãng 2 sát bè trầm; quãng 4 tăng ở bè trong cùng; hợp âm 6 sau hợp âm ba trên bè trầm đi bậc; nhiều hợp âm 6 đi thuận chiều; hợp âm 7 giải quyết vào hợp âm ba hoàn toàn; quãng 9 rồi hợp âm 5 – 6 khi bè trầm lên quãng 3) cùng cách sửa từng chỗ, rồi cách nối hợp âm 7 và các hợp âm dẫn xuất: 5 – 6, 3 – 4 – 6, 2, 9, 11 (hợp âm 4 – 5), 13.',
     refs: [SRC],
     body: `
-## Sáu tiến hành nguy hiểm (§XXXVII, tr. 29 – 32)
+## Sáu tiến hành nguy hiểm [^albrechtsberger-1855, §XXXVII, tr. 29 – 32]
 "Trường hợp vừa nói dẫn ta đến **sáu tiến hành nguy hiểm**, phải hết sức tránh."
 | # | Tiến hành | Cách sửa theo sách |
 |---|---|---|
@@ -441,13 +441,13 @@ Tiếp theo: [[sau-tien-hanh-nguy-hiem]].
 ::scan albrechtsberger 200,202 | Tiến hành 6: Ex. 200 — quãng 9 rồi hợp âm 5 – 6 sinh hai quãng 5; Ex. 202 — chuỗi quãng 9 đánh ba bè
 Bài hiện đại về cùng vấn đề: [[dan-giong]], [[luat-hoa-am-bon-be]].
 
-## Nối hợp âm 7 (§XXXVIII, tr. 32)
+## Nối hợp âm 7 [^albrechtsberger-1855, §XXXVIII, tr. 32]
 Sách phân tích một chuỗi hợp âm 7 kết ở Mi thứ:
 - Ở hợp âm thứ hai, **bỏ quãng 5** và thay bằng quãng 8 của nốt nền, để tránh quãng 5 liền.
 - Quãng 7 của hợp âm thứ hai đã **được chuẩn bị** bằng quãng 8 ở hợp âm trước, rồi **giải quyết** vào quãng 3 ở hợp âm sau; còn quãng 3 cũ trở thành quãng 7 của nốt trầm mới — cơ chế chuỗi hợp âm 7 (xem [[mo-tien-hoa-am]]).
 - Ở hợp âm Mi thứ cuối, nhân đôi quãng 3 và bỏ quãng 8 để quãng 5 giảm không đi thuận chiều vào quãng 5 đúng.
 
-## Các hợp âm dẫn xuất (§XXXIX, tr. 32 – 36)
+## Các hợp âm dẫn xuất [^albrechtsberger-1855, §XXXIX, tr. 32 – 36]
 "Ai đã nắm đủ cách nối hợp âm 7 thì cũng biết cách xử lý các dẫn xuất của nó": quãng 5 trong hợp âm **5 – 6**, quãng 3 trong hợp âm **3 – 4 – 6**, quãng 2 trong hợp âm **2 – 4 – 6** (khi nằm sát bè trầm) đều xử lý như quãng 7.
 | Hợp âm | Theo sách |
 |---|---|
@@ -469,7 +469,7 @@ Tiếp theo: [[hoa-am-thuan-khiet-albrechtsberger]].
     summary: 'Tập I, §LXXXIV – XCVIII: "hoà âm thuần khiết" — viết ba, bốn bè chỉ bằng thuận âm và không có quãng 4 thuận giữa các bè trên — vì sao quãng 4 đó bị loại, cách xếp hợp âm thay thế, các hợp âm 6 phải tránh, ba bài mẫu của Albrechtsberger; rồi bảng chỗ ngồi, quãng đi kèm và cách chuẩn bị – giải quyết của từng quãng giảm và tăng, đến quãng 6 tăng có "hợp âm gốc là hợp âm ba giảm kép".',
     refs: [SRC],
     body: `
-## Hoà âm thuần khiết (§LXXXIV, tr. 52 – 55)
+## Hoà âm thuần khiết [^albrechtsberger-1855, §LXXXIV, tr. 52 – 55]
 - **Định nghĩa**: "Khi một bài ba hay bốn bè chỉ gồm thuận âm hoàn toàn và không hoàn toàn, và **không có quãng 4 thuận**, thì nói nó viết bằng **hoà âm thuần khiết**."
 - **Quãng 4 thuận** nằm "từ quãng 5 đến quãng 8" trong hợp âm hoàn toàn, và "từ quãng 3 đến quãng 6" trong hợp âm không hoàn toàn. Ví dụ trên bè trầm C, nốt G (quãng 5) và nốt C trên (quãng 8) cách nhau một quãng 4.
 ::scan albrechtsberger 321,323 | Các chỗ có "consonant fourth" (quãng 4 thuận) giữa các bè trên — Ex. 321 trong hợp âm hoàn toàn, Ex. 323 trong hợp âm 6
@@ -484,7 +484,7 @@ Tiếp theo: [[hoa-am-thuan-khiet-albrechtsberger]].
 ::scan albrechtsberger 337,339 | Ex. 337 — *Miserere* "By Albrechtsberger", toàn hợp âm hoàn toàn; Ex. 339 — thánh ca *Lauda Sion* bốn bè "không có quãng 4 thuận" (trích phần đầu)
 Cùng mối quan tâm có mặt trong đối âm nghiêm khắc, nơi quãng 4 là nghịch giữa hai bè: [[quang-va-chuyen-dong-doi-am]].
 
-## Các quãng tăng – giảm (§LXXXV – XCVIII, tr. 55 – 58)
+## Các quãng tăng – giảm [^albrechtsberger-1855, §LXXXV – XCVIII, tr. 55 – 58]
 Sách nói dùng đúng các quãng nghịch, tăng và giảm cần "sự chắc chắn chỉ có được nhờ thực hành và kinh nghiệm".
 | Quãng | Chỗ ngồi | Đi kèm | Chuẩn bị – giải quyết |
 |---|---|---|---|
@@ -518,7 +518,7 @@ Tiếp theo: [[chuyen-giong-va-ket-albrechtsberger]].
     summary: 'Tập I, §XCIX – CXXIV: định nghĩa chuyển giọng, năm giọng họ hàng của Đô trưởng và La thứ, chuyển giọng qua hợp âm 7 thứ của giọng mới, qua hợp âm 6/5 có quãng 5 giảm, qua hợp âm 7 giảm và bốn dạng "trùng âm" của nó, từ một hợp âm ba sang cả 24 giọng; bốn loại kết (hoàn toàn, không hoàn toàn, ngắt, đánh lừa) và mười lăm nhóm kết đánh lừa "Inganni" xếp theo hợp âm.',
     refs: [SRC],
     body: `
-## Chuyển giọng là gì (§XCIX, tr. 58)
+## Chuyển giọng là gì [^albrechtsberger-1855, §XCIX, tr. 58]
 - Mỗi bài có một **giọng chính**, "mở đầu và phải kết đúng luật" ở đó. Đứng mãi một giọng thì "nhàm chán, đơn điệu" — "*Đa dạng thì dễ chịu!*". Khi một câu đã ở giọng chính đủ lâu để tai nhận chắc chủ âm, "luật đa dạng đòi hỏi sang giọng khác, và gọi là **chuyển giọng**".
 - **Định nghĩa**: "Chuyển giọng là nghệ thuật nối các giọng gần hay xa bằng một chuỗi hợp âm khéo, dễ, trôi chảy tự nhiên, hoặc đôi khi bất ngờ, gây ngạc nhiên."
 
@@ -533,7 +533,7 @@ Tiếp theo: [[chuyen-giong-va-ket-albrechtsberger]].
 Hai câu bass số mẫu đi qua đủ năm giọng rồi về nhà. Đối chiếu: [[chuyen-giong]].
 ::scan albrechtsberger 364 | Câu bass số từ Đô trưởng qua Sol trưởng, Mi thứ, La thứ, Rê thứ, Fa trưởng rồi về Đô trưởng
 
-## Các con đường chuyển giọng (§C – CVII, tr. 58 – 63)
+## Các con đường chuyển giọng [^albrechtsberger-1855, §C – CVII, tr. 58 – 63]
 | Cách | Theo sách |
 |---|---|
 | **Hợp âm 7 thứ của giọng mới** (hay thể đảo) | "Cách tự nhiên nhất". Đô → Sol: qua hợp âm 4/2 trên C (thể đảo của D – F♯ – A – C) |
@@ -550,7 +550,7 @@ Hai câu bass số mẫu đi qua đủ năm giọng rồi về nhà. Đối chi�
 ::scan albrechtsberger 391 | Từ hợp âm ba Đô trưởng sang Rê giáng trưởng — ví dụ đầu của loạt 23 đường chuyển giọng
 Xem thêm [[hop-am-bay-giam]], [[trung-am]].
 
-## Bốn loại kết (§CVIII, tr. 64)
+## Bốn loại kết [^albrechtsberger-1855, §CVIII, tr. 64]
 | Kết | Theo sách | Gần với |
 |---|---|---|
 | **Hoàn toàn** | Bè nền đi từ át về chủ, "kết bài với sự thoả mãn trọn vẹn" | kết chính thức |
@@ -562,7 +562,7 @@ Xem thêm [[hop-am-bay-giam]], [[trung-am]].
 ::scan albrechtsberger 440 | Kết ngắt — ba biến thể
 Lưu ý thuật ngữ: "kết ngắt" của sách là cái ngày nay thường gọi là kết lừa; "kết đánh lừa" của sách rộng hơn — kết hẳn sang giọng khác. Đối chiếu: [[cau-ket]]. Theo danh mục tác phẩm trong sách, Albrechtsberger có in riêng một tập *Inganni (Trugschlüsse)*.
 
-## Mười lăm nhóm kết đánh lừa (§CIX – CXXIII, tr. 64 – 71)
+## Mười lăm nhóm kết đánh lừa [^albrechtsberger-1855, §CIX – CXXIII, tr. 64 – 71]
 Với người thạo chuyển giọng, "có thể tạo kết đánh lừa muôn hình vạn trạng, vì từ mọi quãng có thể chuyển, như qua một mê cung, sang mọi giọng". Sách xếp ví dụ theo hợp âm dùng để đánh lừa:
 | Qua hợp âm | Một vài ví dụ (từ → đến) |
 |---|---|
@@ -600,7 +600,7 @@ Tiếp theo — Tập II: [[nen-tang-sang-tac-albrechtsberger]].
     body: `
 Từ Tập II, theo lời tựa, là bản thảo của **chính Albrechtsberger**, "gần như đúng lời ông giảng" (xem [[he-thong-albrechtsberger]]). Câu mở đầu: "Mọi tác phẩm âm nhạc đều gồm những hợp âm, được luật của chân và mỹ sắp đặt, thành một chỉnh thể trọn vẹn"; nghệ thuật sáng tác là nắm những luật để "nối các ý một cách tự nhiên, làm vừa tai và thành một chỉnh thể hoàn toàn đúng".
 
-## Quãng, thuận – nghịch, chuyển động (§CXXVI – CXXVIII, tr. 81 – 83)
+## Quãng, thuận – nghịch, chuyển động [^albrechtsberger-1855, §CXXVI – CXXVIII, tr. 81 – 83]
 - Khi ghi số: số nhỏ viết **dưới** số lớn; **không ghi số** hợp âm hoàn toàn ở nốt trầm đầu và cuối (hầu hết bài mở bằng hợp âm ba — trừ khi mở bằng hợp âm 6 trên bậc III — và kết bằng hợp âm ba ở giọng chính); đa số hợp âm, nhất là thuận (trừ 6/4), chỉ cần một số.
 ::scan albrechtsberger 550 | Hợp âm hai bè: các quãng tự nhiên trên một nốt nền
 - **Thuận hoàn toàn**: đồng âm, quãng 5, quãng 8. **Thuận không hoàn toàn**: quãng 3, 6, 10 thứ và trưởng. **Nghịch**: đồng âm tăng, quãng 2 thứ, trưởng, tăng, quãng 3 giảm, "**cả ba quãng 4**", quãng 5 giảm và tăng, quãng 6 tăng, ba quãng 7, quãng 8 giảm, hai quãng 9.
@@ -608,7 +608,7 @@ Từ Tập II, theo lời tựa, là bản thảo của **chính Albrechtsberger
 - **Ba kiểu chuyển động**: thuận chiều, xiên, ngược chiều. Kiểu "song song" (nốt lặp) bị bỏ, vì trong đối âm nghiêm khắc **không được đánh lặp một nốt**. Thuận chiều là "nguy hiểm nhất, nhất là trong sáng tác nghiêm khắc hai bè, nơi không chấp nhận quãng 5, 8 hay đồng âm ẩn".
 ::scan albrechtsberger 555,556,557 | Chuyển động thuận chiều (Ex. 555), xiên (Ex. 556), ngược chiều (Ex. 557) — ở hai, ba và bốn bè
 
-## Điệu thức và giọng (§CXXIX, tr. 83 – 84)
+## Điệu thức và giọng [^albrechtsberger-1855, §CXXIX, tr. 83 – 84]
 - "Tiền nhân chúng ta, nhiều trăm năm trước, bằng lòng với sáu giọng sau, có lẽ gốc từ Hy Lạp": **Dorius** (D), **Phrygius** (E), **Lydius** (F), **Mixolydius** (G), **Aeolius** (A), **Jonicus** (C) — không có điệu trên B. Xem [[dieu-thuc]].
 - **Chính thức** (authentic): kết bằng bè nền đi xuống quãng 5 (G – C); **phụ** (plagal): sáu giọng tương ứng, kết bằng bè nền đi xuống quãng 4 (C – G). Chú thích: ngày nay kết kiểu phụ thì thường treo quãng 8 ở hợp âm áp chót bằng quãng 9.
 - Các **giống** (genus): *diatonic* (chủ yếu nguyên cung), *chromatic* (nửa cung lạ), *enharmonic* (phần tư cung), *mixtum* (cả ba) — sách dẫn Marpurg.
@@ -618,7 +618,7 @@ Từ Tập II, theo lời tựa, là bản thảo của **chính Albrechtsberger
 - "Thứ tự trên không phải là luật; khiếu thẩm mỹ tinh và cảm nhận đúng — trên hết là nghiên cứu kỹ những mẫu hay — mới là người dẫn đường chắc nhất." Chú thích: luật năm giọng gần "có lẽ đã trói buộc thiên tài quá mức nửa thế kỷ trước", nhưng nay người ta lại tưởng chuyển qua mọi giọng là đỉnh cao; "cực đoan thì luôn phải tránh, đường giữa luôn là tốt nhất".
 - **Chuyển trùng âm** (G♯ – A♭): đặt dấu luyến ở bè đổi tên, nhất là kèn và dây, để dàn nhạc không vênh với organ, "vốn không có phần tư cung vì luật bình quân cố định" (xem [[luat-binh-quan]]).
 
-## Âm giai của bè nền (§CXXX, tr. 84 – 88)
+## Âm giai của bè nền [^albrechtsberger-1855, §CXXX, tr. 84 – 88]
 - **Âm giai bè trầm lối cổ**: chỉ hợp âm hoàn toàn hay hợp âm 6 — dùng cho mọi giọng trong **lối nghiêm khắc**. **Lối mới**: "ba hợp âm hoàn toàn, hai không hoàn toàn và ba nghịch" — dùng trong **lối tự do**. Đối chiếu quy tắc quãng 8: [[dem-bass-so-albrechtsberger]].
 ::scan albrechtsberger 564,565 | Âm giai bè trầm lối cổ — La thứ (Ex. 564, NB ở bậc 6, 7 nâng); âm giai lối mới ở Đô trưởng, vị trí quãng 5 (Ex. 565)
 - Bè trầm đi chậm có thể đặt hai hợp âm trên mỗi nốt; cảnh báo một ví dụ có "năm quãng 5 ẩn phải luôn tránh ở phần mạnh của ô". Ở Đô thứ, "bè trầm đi xuống quãng 7 giảm còn hơn đi lên quãng 2 tăng".
@@ -640,7 +640,7 @@ Từ Tập II, theo lời tựa, là bản thảo của **chính Albrechtsberger
 ::scan albrechtsberger 579 | Bè trên nhảy quãng: hoà âm đặt dưới
 - Dưới một bè trên, nốt nền có thể là quãng 3, 6, 5 hoặc 8 dưới — "là những thuận âm duy nhất dùng xen kẽ dưới một bè trên trong bốn loại đầu".
 
-## Nghiêm khắc và tự do (§CXXXI, tr. 88 – 89)
+## Nghiêm khắc và tự do [^albrechtsberger-1855, §CXXXI, tr. 88 – 89]
 **Sáng tác nghiêm khắc**
 - "Là lối chỉ dùng **giọng hát**, không có nhạc cụ đệm", nên luật chặt hơn, "vì ca sĩ không phát âm dễ như nhạc công". Dùng chủ yếu ở nhà thờ, nên gọi là ***Stilo alla Capella***; có thể đệm organ, hoặc violin – oboe theo bè cao, trombone theo alto – tenor, contrebass – cello – bassoon theo bè trầm.
 - Khi không đệm: không được nhảy quãng nghịch, trừ quãng 4 và 5 giảm có giải quyết sớm; cấm nhảy **đến hay từ** một nghịch âm.
@@ -671,7 +671,7 @@ Tiếp theo: [[nam-loai-hai-be-albrechtsberger]].
     body: `
 Albrechtsberger gọi năm cấp của Fux là năm **loại** (*class*) và dạy trên một **chorale** (*canto fermo*), với đối âm ở trên hay ở dưới. Sách dặn: dạy loại 1 đủ ở nhiều giọng trưởng thứ rồi mới sang loại 2 "với cùng những chorale". Đối chiếu năm loại theo nguyên văn Fux: [[nam-loai-hai-be-fux]].
 
-## Loại 1: nốt chọi nốt — mười luật (§CXXXII, tr. 89 – 91)
+## Loại 1: nốt chọi nốt — mười luật [^albrechtsberger-1855, §CXXXII, tr. 89 – 91]
 1. Khi hai nốt của hợp âm sau tạo **thuận hoàn toàn**, tránh chuyển động thuận chiều; dùng xiên hoặc ngược chiều. **Quãng ẩn**: một quãng 8 đến bằng bước nhảy "chứa quãng 5, dù không đánh mà tai tự điền". Với organ có pedal, quãng 5, 8 liền phải tránh **cả khi ngược chiều**, vì người chơi hay đổi quãng 4 đi lên thành quãng 5 đi xuống.
 ::scan albrechtsberger 582,583,584 | Luật 1: vào thuận hoàn toàn bằng chuyển động ngược chiều (Ex. 582) hoặc xiên (Ex. 583); Ex. 584 — quãng 5 liền, sai
 2. Khi hợp âm sau là **thuận không hoàn toàn**, dùng được cả ba chuyển động. (Từ loại 2, nghịch âm "xếp chung với thuận không hoàn toàn".)
@@ -686,7 +686,7 @@ Albrechtsberger gọi năm cấp của Fux là năm **loại** (*class*) và d�
 9. **Cấm** nhảy mọi quãng tăng, phần lớn quãng giảm và cả ba quãng 7 — "những quãng khó hát". Bài hát không đệm phải tránh mọi thứ làm lung lay việc hát dễ và chắc. Không nhảy quá quãng 8.
 10. Không dùng **quá ba** quãng 3 hay 6 liền thuận chiều — chúng "phá vẻ trang nghiêm" và chỉ hợp với bài hát vui hay opera. Đối âm hai bè không đứng yên quá ba ô. Các bước nhảy qua ba, bốn nốt **phác ra quãng 7 trưởng hay quãng 9** là sai; quãng 7 thứ thì được; quãng 4 tăng qua hai, ba nốt cũng cấm.
 
-## Luật giai điệu và Ottava battuta (§CXXXIII, tr. 91 – 94)
+## Luật giai điệu và Ottava battuta [^albrechtsberger-1855, §CXXXIII, tr. 91 – 94]
 - Trước khi viết, xét **những giọng mà chorale đi qua**; giọng gốc được nhận ra ở nốt cuối.
 - Sau bước nhảy quãng 6 hay 8 thì đi ngược lại; **cảm âm** đi lên nửa cung, **bậc 4** (nhất là giọng trưởng) đi xuống bậc 3.
 - ***Ottava battuta*** — quãng 8 đánh ở phần mạnh khi bè trên **nhảy xuống** quãng 4, 5, 6 vào quãng 8 còn bè dưới đi lên một bậc ngược chiều. "Các bậc thầy cổ cấm nó ở bài hai bè trở lên; tôi không dùng nó ở bài hai bè, dù nghiêm khắc hay tự do; nó chấp nhận được ở ba bè, càng được ở bốn bè" — có lẽ vì "hiệu quả mơ hồ, giống đồng âm".
@@ -695,7 +695,7 @@ Albrechtsberger gọi năm cấp của Fux là năm **loại** (*class*) và d�
 ::scan albrechtsberger 608,609 | Bài mẫu loại 1 kèm NB (Ex. 608) và bài có bảy lỗi (Ex. 609, chorale hạ quãng 8 ở bè tenor, đối âm ở trên)
 - **Fux và điệu Phrygian**: "Lạ là Fux, trong ví dụ của ông, mở điệu này bằng quãng 3 thứ và kết bằng quãng 3 trưởng như các giọng thứ khác. Nhưng danh tiếng ông vẫn bất tử… Tôi sẽ giữ 24 giọng đã định của các bậc thầy hiện đại trong suốt năm loại." Với giọng xa, chọn giọng dễ hơn — Sol giáng trưởng thay Fa thăng trưởng.
 
-## Loại 2: hai hay ba nốt chọi một (§CXXXIV, tr. 94 – 97)
+## Loại 2: hai hay ba nốt chọi một [^albrechtsberger-1855, §CXXXIV, tr. 94 – 97]
 Mọi luật loại 1 vẫn giữ, **trừ luật 4 và 5**.
 - **Thứ nhất**: có thể mở bằng dấu lặng, nhưng nốt đầu luôn thuận hoàn toàn. **Phần mạnh** luôn thuận; **phần nhẹ** thuận hoặc nghịch — kể cả đồng âm. Nghịch âm phải vào **bằng bậc** (giữa ba nốt đi lên hay xuống), hoặc nằm giữa hai nốt giống nhau (thêu).
 ::scan albrechtsberger 617 | Loại 2: nốt nghịch ở phần nhẹ đi bằng bậc giữa hai thuận âm
@@ -707,7 +707,7 @@ Mọi luật loại 1 vẫn giữ, **trừ luật 4 và 5**.
 - **Thứ năm**: cấm nhảy quá quãng 8, nhảy ba quãng 7, mọi quãng tăng và phần lớn quãng giảm.
 - Hai bài mẫu được chấm: đối âm trên **tám lỗi**, đối âm dưới **mười hai lỗi** (quãng 6 mở bài, nhảy quãng 4 tăng, đi thuận chiều từ nghịch âm sang thuận hoàn toàn, quãng 5 giảm vào bằng bước nhảy, quan hệ chéo, quãng 5 ẩn…). Ghi chú: trong bè hát cấm nhảy quãng 10.
 
-## Loại 3: bốn, sáu hay tám nốt chọi một (§CXXXV, tr. 97 – 102)
+## Loại 3: bốn, sáu hay tám nốt chọi một [^albrechtsberger-1855, §CXXXV, tr. 97 – 102]
 - **Nốt đầu luôn thuận**; các nốt khác có thể nghịch nếu vào bằng bậc và nằm giữa hai thuận âm. Sau ba, bốn nốt đi bậc mà **nhảy quãng 3 sang ô mới** thì rất "không hay".
 ::scan albrechtsberger 627 | Loại 3: nốt đầu ô thuận, nghịch âm chỉ khi đi bằng bậc giữa hai thuận âm
 - **Phần mạnh – nhẹ của ô**:
@@ -728,7 +728,7 @@ Mọi luật loại 1 vẫn giữ, **trừ luật 4 và 5**.
 ::scan albrechtsberger 643 | Bài mẫu loại 3 ở Đô trưởng, đối âm trên và dưới
 - Hai bài mẫu ở Mi thứ được chấm **mười một** và **mười ba** lỗi. Câu then chốt: "Không sách dạy nào cho phép **nhảy đến hay từ một nghịch âm** trong lối nghiêm khắc — trừ hai nốt đổi của Fux và dạng đảo của chúng." Quãng 7 thứ nhảy thì "luôn tốt"; bốn nốt đi bậc rồi nhảy tiếp cùng chiều là "lỗi giai điệu".
 
-## Loại 4: nối và nốt treo (§CXXXVI, tr. 102 – 105)
+## Loại 4: nối và nốt treo [^albrechtsberger-1855, §CXXXVI, tr. 102 – 105]
 - Nốt treo có hai loại: **nghịch** (quãng 2, 4, 7, 9, 5 giảm hay tăng được nối) và **thuận** (đồng âm — loại này cho phép ở phần mạnh — quãng 3, 5, 6, 8, 10).
 ::scan albrechtsberger 649 | Nốt treo thuận và cách giải quyết — bằng bước nhảy hay bằng bậc
 
@@ -748,7 +748,7 @@ Mọi luật loại 1 vẫn giữ, **trừ luật 4 và 5**.
 - Lối tự do: quãng 7 được nhảy sang quãng 3 nếu giai điệu đẹp hơn; khi chuỗi nốt treo không hay, được chen một hai thuận âm không nối. "Những ràng buộc quá chặt của loại này đôi khi cần ngoại lệ."
 ::scan albrechtsberger 653 | Lối tự do: quãng 7 nhảy sang quãng 3
 
-## Loại 5: đối âm hoa mỹ (§CXXXVII, tr. 105 – 108)
+## Loại 5: đối âm hoa mỹ [^albrechtsberger-1855, §CXXXVII, tr. 105 – 108]
 - *Contrapunctum floridum* trộn mọi loại nốt, giữ luật bốn loại trước, thêm: một phần ô **không chứa bốn nốt nhanh**, chỉ thỉnh thoảng hai, và không ở đầu phần ô; loại 2 không kéo dài quá **bốn phần ô**; loại 3 không quá **năm phần ô**; loại 1 chỉ cho ô cuối; nốt dài ở phần nhẹ phải nối sang ô sau.
 ::scan albrechtsberger 657,658 | Loại 5: bốn nốt nhanh trong một phần ô — "Bad" và bản sửa (Ex. 657); dùng loại 2 quá lâu (Ex. 658)
 - **Bốn độ dài nốt treo** — thuật ngữ của Albrechtsberger: **dài** (một phần ô), **dài hơn** (hai phần), **ngắn** (nửa phần), **ngắn hơn** (một phần tư); loại này chỉ dùng **dài** và **ngắn**. Nốt treo dài có thể trang trí ("nốt treo bị chia", *ligatura rupta*); sau hợp âm quãng 8 thì hai cách trang trí "dễ bị chê là quãng 8 liền", dù Fux dùng chúng.
@@ -766,7 +766,7 @@ Tiếp theo: [[ba-be-albrechtsberger]].
     summary: 'Tập II, §CXXXVIII – CXLII: bảng "quãng thứ ba" đi kèm mỗi quãng, hợp âm được phép ở loại 1, khi nào được quãng 5 – 8 ẩn, quan hệ chéo, ô cuối và ô áp chót; loại 2, 3, 4, 5 ở ba bè với các luật kết, nốt treo không dài hơn nốt chuẩn bị, hợp âm 6/4 rải trên bè trầm, hai đối âm cùng lúc như "nếm trước lối tự do", và danh sách mười lỗi của một bài mẫu.',
     refs: [SRC],
     body: `
-## Quãng đi kèm (§CXXXVIII, tr. 109 – 111)
+## Quãng đi kèm [^albrechtsberger-1855, §CXXXVIII, tr. 109 – 111]
 Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 | Quãng trên bè trầm | Đi kèm |
 |---|---|
@@ -803,7 +803,7 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 - Handel, Bach "thường dùng" ba lối có quãng 5 ẩn; các lối khác khi cả ba bè đi thuận chiều, hay hai bè trên nhảy cùng lúc, "hầu hết bị cấm".
 ::scan albrechtsberger 686 | Các lối có quãng 5 ẩn: Good / Bad / Tolerable
 
-## Loại 2 và 3 ba bè (§CXXXIX – CXL, tr. 113 – 116)
+## Loại 2 và 3 ba bè [^albrechtsberger-1855, §CXXXIX – CXL, tr. 113 – 116]
 - Loại 2: quãng 5, 8 có bước nhảy quãng 3 ở giữa nay **chấp nhận ở bè giữa**, nhưng vẫn lỗi ở bè trên và bè dưới. Tránh dùng quá thường các tiến hành 6/3 – 5/3, 8/6 – 8/6.
 ::scan albrechtsberger 687 | Loại 2 ba bè: chuỗi 6/3 – 5/3, 8/6 – 8/5 — "Bad when frequent", "Bad above", "Bad below", "Good"
 - Loại 2 và 3 chấp nhận **quan hệ chéo khi không chướng tai**, và hợp âm thiếu ở phần nhẹ. Ô cuối nên có quãng 3: "chỉ ở ô cuối ta mới nhận ra giọng thật", không có quãng 3 thì không biết trưởng hay thứ — dù nhiều bài sám hối, requiem cổ kết chỉ với 5 và 8, "có lẽ cố ý để lại cảm giác chưa trọn"; bài giọng thứ hay kết bằng quãng 3 trưởng.
@@ -811,13 +811,13 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 - Loại 3: mở bằng dấu lặng nửa phần ô, và — khác hai bè — **mở bằng quãng 3** cũng được nếu bè bổ sung có quãng 5 hay 8. Kết khi đối âm ở dưới: hoặc lướt qua quãng 3 thứ dưới chorale, hoặc lấy át âm "tạo **kết bè trầm lăn** quen thuộc".
 ::scan albrechtsberger 696,697 | Kết loại 3 với chorale ở từng bè — Good / Bad (Ex. 696); bài mẫu (Ex. 697)
 
-## Loại 4 ba bè (§CXLI, tr. 116 – 119)
+## Loại 4 ba bè [^albrechtsberger-1855, §CXLI, tr. 116 – 119]
 - Quãng 7 thứ (hiếm khi 7 trưởng không phải cảm âm) có thể đi kèm quãng 8 thay quãng 3. Hợp âm 6/4 chỉ ở phần nhẹ, làm giải quyết của 5/6 treo trên bè trầm đứng yên.
 - Nghịch âm **treo ở phần mạnh, chuẩn bị ở phần nhẹ, giải quyết vào thuận âm gần nhất ở phần nhẹ sau**. Bắt đầu bằng dấu lặng nốt trắng. Khi cần, phần mạnh được dùng dấu lặng hay nốt không nối.
 - Bài mẫu bị chấm **mười lỗi**: thay quãng 3 bằng quãng 5; nhảy quãng 6 trưởng có cảm âm ("khó hát không có nhạc cụ"; nhảy quãng 6 trưởng thường "nay được phép"); quãng 5 trơ ở phần mạnh ("nghe mỏng"); Mi contra Fa; hợp âm 6/5 không giải quyết vào hợp âm ba; quan hệ chéo F – F♯; đồng âm chuẩn bị ở ô áp chót thay vì 4 – 3…
 ::scan albrechtsberger 708 | Bài mẫu loại 4 ba bè ("Second transposition") — bài sách chấm mười lỗi, chú mi – fa ở các chỗ quan hệ chéo
 
-## Loại 5 ba bè (§CXLII, tr. 119 – 123)
+## Loại 5 ba bè [^albrechtsberger-1855, §CXLII, tr. 119 – 123]
 - Xen kẽ ba loại trước với nốt ngắn hơn; mở và kết bằng hợp âm hoàn toàn, **vẫn cấm kết bằng quãng 5**. Kết khi đối âm ở trên: 4 – 3 hay 7 – 6; ở dưới: quãng 2 treo rồi quãng 3 thứ.
 - "Nốt treo **dài hơn nốt chuẩn bị** là sai và không hay; ngắn hơn hay bằng thì luôn dùng được."
 - Hướng tới "hoà âm ba bè đầy đủ cùng phong cách trong sáng"; không ở lâu một loại; loại 1 dành cho ô cuối; loại 4 chủ yếu với nốt treo ngắn.
@@ -837,7 +837,7 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
     summary: 'Tập II, §CXLIII – CXLVII: đối âm "đều" và "không đều", hợp âm được phép ở loại 1 bốn bè và lệnh cấm Quarta fundata, quãng ẩn và giới hạn bước nhảy, bảng quãng đi kèm từng nốt treo (9, 7, 4, 2), ô áp chót và ô cuối; loại 5 bốn bè, chuyển sang lối tự do (nhảy đến nghịch âm, cromatic, Mi contra Fa "diabolus in musica" không còn cấm), luật nhân đôi khi viết năm bè, và lời khuyên cho sáu bè trở lên.',
     refs: [SRC],
     body: `
-## Loại 1 bốn bè (§CXLIII, tr. 123 – 125)
+## Loại 1 bốn bè [^albrechtsberger-1855, §CXLIII, tr. 123 – 125]
 - Bài nhiều bè mà các nốt cùng trường độ thuộc loại 1, viết bằng **đối âm đều**; các loại khác là **đối âm không đều**.
 - Chỉ dùng **hợp âm hoàn toàn** và **hợp âm 6** có quãng 3 theo giọng và quãng 8 — không bao giờ xếp sao cho quãng 6 thứ đi với quãng 3 trưởng ("hợp âm sai"). Cấm hai hợp âm 6/4, mọi hợp âm nghịch, và ***Quarta fundata*** — "quãng 4 trong thể đảo thứ hai của hợp âm 7 át, dùng trên bậc II của âm giai bè trầm với quãng 6 trưởng và 3 thứ" (lối tự do thì cho).
 - Ô cuối chỉ đủ hợp âm ba khi chorale ở bè trầm; chorale ở bè trên hay giữa thì ô cuối không có quãng 5 (8/8/3 hoặc 8/3/1). Ô áp chót khi chorale ở dưới: hợp âm 6 với quãng 3 thứ nhân đôi, hoặc với quãng 8.
@@ -847,7 +847,7 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 - Những kết mà cảm âm không đi lên "trái với luật cổ".
 ::scan albrechtsberger 735 | Kết mà cảm âm không đi lên: Bad, NB, Good, "Worse above"
 
-## Loại 2 – 4 bốn bè (§CXLIV – CXLVI, tr. 125 – 130)
+## Loại 2 – 4 bốn bè [^albrechtsberger-1855, §CXLIV – CXLVI, tr. 125 – 130]
 - Loại 2: tránh hai bước nhảy quãng 3 nhất là ở hai bè ngoài, sinh tiến hành "giống quãng 5", "giống quãng 8".
 - Loại 3: tránh quãng 5, 8 lộ từ phần nhẹ sang phần mạnh; vì đối âm "lăn hay nhảy", được chạm và nhân đôi nốt của bè khác, dùng đồng âm thay quãng 8.
 - Loại 4: "nghịch âm treo chỉ là thuận âm bị chậm lại" và trong lối nghiêm khắc luôn **giải quyết xuống một bậc**.
@@ -863,14 +863,14 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 - Quãng 3 hay 6 không phải cảm âm thường được nhân đôi cho giai điệu dễ; nhưng quãng 6 nhân đôi không được giải quyết vào quãng 5 đúng. Lối tự do mới cho "chuẩn bị một nghịch âm bằng nghịch âm khác và giải quyết đánh lừa vào nghịch âm khác".
 - Ô áp chót: bè trầm có át âm → **4 – 3** với 5 và 8; chorale ở bè nền → **7 – 6** với quãng 3 thứ nhân đôi; bè dưới mang nốt treo → hợp âm 5/2 → 5/3.
 
-## Loại 5 bốn bè và sang lối tự do (§CXLVII, tr. 130 – 142)
+## Loại 5 bốn bè và sang lối tự do [^albrechtsberger-1855, §CXLVII, tr. 130 – 142]
 - Đối âm hoa mỹ có thể ở bè trên, dưới hay giữa; các bè kia đi đều với chorale. Bè thứ tư lần lượt có quãng 8, quãng 3 nhân đôi, quãng 6 nhân đôi, quãng 5 nhân đôi.
 ::scan albrechtsberger 756 | Loại 5 bốn bè: "Bad melody" và các chỗ "Bad"
 - Một nốt cromatic (F – F♯) "không hề chướng tai, vì đoạn cromatic và diatonic có thể xen nhau cho sinh động" — nhưng dùng nhiều giống cromatic là xấu, trừ chủ đề fugue cromatic chọn vì tính chất bi thương. Hợp âm 6/4 cấm ở đầu bài.
 - **Sang lối tự do** khi đã chắc tay lối nghiêm khắc kể cả đổi chỗ các bè: lối tự do "cho phép nhảy từ hay đến một nghịch âm"; bè trên được mở và kết bằng quãng 3, bè dưới được mở nhưng không kết bằng quãng 3; được đoạn cromatic; và "**Mi contra Fa, 'diabolus in musica' như các thầy cổ gọi, không còn bị cấm trong lối tự do**, miễn là không chướng tai". Sinh viên phải viết lại mọi ví dụ "trong cả hai lần đổi chỗ bè".
 ::scan albrechtsberger 766,779 | Lối tự do: chorale và đối âm loại 1 hai bè (Ex. 766); Mi contra Fa — "diabolus in musica" — nay không còn cấm (Ex. 779)
 
-## Năm bè trở lên (tr. 142 – 149)
+## Năm bè trở lên [^albrechtsberger-1855, tr. 142 – 149]
 - Năm bè "chủ yếu đòi **nhân đôi quãng khéo léo**", tập được năm cách đổi chỗ bè; ở loại 5 mỗi bè có thể mang một loại khác nhau cùng lúc.
 - **Luật nhân đôi**: ưu tiên nhân đôi **thuận hoàn toàn** hơn không hoàn toàn; trong hợp âm 6/4 không chuẩn bị thì nhân đôi quãng 4 đúng thay quãng 8; quãng 2 (đi qua hay treo) có thể nhân đôi thay quãng 6 trong hợp âm 6/4/2 hoặc thay quãng 5 trong 5/2. Nghịch âm chỉ nhân đôi khi là nốt đi qua; **cảm âm** cũng vậy — kể cả khi là quãng 3 hay 6, cấm ở phần mạnh trong bài năm bè trở lên; chấp nhận ở bè trong như nốt nền nhân đôi.
 ::scan albrechtsberger 816 | Loại 1 năm bè trên chorale
@@ -889,7 +889,7 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
     summary: 'Tập II, §CXLVIII – CXLIX: mô phỏng là gì, khác fugue và canon ở đâu, tám mô phỏng đơn ở mọi quãng, mô phỏng thuận và ngược chiều, bảy "mô phỏng khoa học" (đảo nghiêm, đảo tự do, ngược dòng, ngược dòng đảo, tăng, giảm trường độ, per arsin et thesin); rồi bốn loại đảo — đơn, nghiêm (chỉ bắt đầu được trên quãng 7, 6, 3 trưởng), ngược dòng, ngược dòng ngược chiều — cùng điều kiện dùng.',
     refs: [SRC],
     body: `
-## Mô phỏng (§CXLVIII, tr. 149 – 156)
+## Mô phỏng [^albrechtsberger-1855, §CXLVIII, tr. 149 – 156]
 - "Một giai điệu ngắn được một hay nhiều bè lặp lại — khi sau một phần ô, khi sau hai ba phần, khi sau cả ô. Có thể ở mọi quãng kể cả quãng 8, ở bè trên hay dưới."
 - "Trong mô phỏng, câu đáp **không buộc phải khớp** giọng, bước nhảy, nửa cung và nguyên cung chính xác như trong fugue hay canon." Ở ba bè trở lên chỉ cần hai bè mô phỏng nhau; nhưng "bài sẽ đẹp và khoa học hơn nếu mọi bè đều mô phỏng". Mẫu: các tác phẩm nhà thờ và madrigal của **Caldara**.
 - Vì không còn viết trên chorale, các nốt treo 2, 4, 7, 9 khi **cả hai bè cùng đi** có thể giải quyết vào thuận âm khác (bè kia nhảy thay vì chờ). Câu mở chương về cách giải quyết này đọc nghĩa chưa rõ trong bản dịch Anh — nên đối chiếu bản Đức.
@@ -913,7 +913,7 @@ Ba bè đòi biết bass số: hai quãng đã có thì quãng thứ ba là gì.
 ::scan albrechtsberger 857,858 | Mô phỏng giảm trường độ (Ex. 857) và *per arsin et thesin* (Ex. 858)
 Hệ thống hoá theo trường phái Nga (P, R, bảy hình thức): [[mo-phong-don-gian]].
 
-## Đảo (§CXLIX, tr. 156 – 157)
+## Đảo [^albrechtsberger-1855, §CXLIX, tr. 156 – 157]
 "Có bốn loại đảo":
 1. **Đơn**: nốt đi lên thành đi xuống và ngược lại, "quãng không tái hiện thật chính xác"; làm ở quãng 8, 5, 4, 2 và đồng âm.
 ::scan albrechtsberger 859 | Đảo đơn: ở quãng 8, 5, 4, 2 và đồng âm
@@ -940,7 +940,7 @@ Tiếp theo: [[fugue-albrechtsberger]].
     summary: 'Tập II, §CL – CLI: định nghĩa và thuật ngữ (Dux, Comes, đối đề, chủ đề xen, stretto, nửa stretto), luật đáp đề với bảng bảy cách đổi quãng, kế hoạch fugue hai bè từng bước, fugue ba bè trở lên — kết đánh lừa trước khi bè thứ ba vào, nốt đổi của Fux và "nốt đánh tự do", năm cách trang trí chủ đề, giọng gần và giới hạn chuyển giọng, bảng thứ tự vào bè, các giấy phép trong bài mẫu, ricercata và fugue per contrarium simplex / reversum.',
     refs: [SRC, ['Wikipedia — Fugue', 'https://en.wikipedia.org/wiki/Fugue']],
     body: `
-## Thuật ngữ (§CL, tr. 157 – 160)
+## Thuật ngữ [^albrechtsberger-1855, §CL, tr. 157 – 160]
 "Nhánh này cần nhất cho âm nhạc nhà thờ, và là trang sức lớn nhất của nó."
 | Thuật ngữ | Theo sách |
 |---|---|
@@ -983,7 +983,7 @@ Tiếp theo: [[fugue-albrechtsberger]].
 - Một fugue ở "**Mi phụ**" (Mi thứ không F♯): kết thứ nhất ở bậc VI; câu đáp trên quãng 4 thay quãng 5 "được phép giữa fugue"; nốt cuối chủ đề thấp một bậc trong stretto — được, miễn bè vào sau cùng có đủ chủ đề.
 - Fugue cho violin và kèn "rộng đất hơn": không cần giữ trong năm dòng kẻ, nhảy quá quãng 8 được — "là lỗi khi viết cho giọng hát".
 
-## Fugue ba bè trở lên (§CLI, tr. 160 – 182)
+## Fugue ba bè trở lên [^albrechtsberger-1855, §CLI, tr. 160 – 182]
 - **Không được** sau khi hết chủ đề dẫn lên quãng 5 ở bè trên hay từ quãng 5 lên chủ ở bè khác — "người nghe được báo trước, mọi bất ngờ bị phá". Bè thứ hai nên bắt đầu trên hay dưới nốt cuối của bè thứ nhất.
 - Thường đặt **kết đánh lừa trước khi bè thứ ba vào**. Fugue ba bè trở lên không dùng kết trọn (4 – 3 với 5) trừ trước stretto cuối. Kết đánh lừa "cần thiết, đẹp và khéo như việc đưa chủ đề vào dưới một nghịch âm hay nốt lướt".
 ::scan albrechtsberger 871 | "Regular cadence" và "Deception": kết đánh lừa ở hai, ba bè, chủ đề vào trên nốt nghịch
@@ -1032,12 +1032,12 @@ Tiếp theo — Tập III: [[fugue-chorale-va-doi-am-kep-albrechtsberger]].
     summary: 'Tập III, §CLII – CLV: fugue trên chorale; đối âm kép ở quãng 8 (hay 15) với bảng đảo, bốn luật và cách thêm bè song song quãng 3 – 6; ở quãng 10 (hay 3) với nhận xét từng quãng, khi nào thành trio, quatuor; ở quãng 12 (hay 5) với bảy luật — và lý do sách gạt bỏ đối âm kép ở quãng 2, 4, 6, 7.',
     refs: [SRC],
     body: `
-## Fugue trên chorale (§CLII, tr. 187 – 191)
+## Fugue trên chorale [^albrechtsberger-1855, §CLII, tr. 187 – 191]
 - Chủ đề thường là vài nốt **của chính chorale, ở dạng giảm trường độ**, vào lần lượt ở ba bè "như fugue thường" cho đến khi bè thứ tư mang giai điệu chorale vào; mỗi khi chorale vào, các bè khác **làm mô phỏng**.
 - Có bài chỉ một bè mang chorale, các bè khác là mô phỏng hoa mỹ — mẫu: *Ave Maria* của Fux. Không muốn viết fugue thì thêm các bè hát, violin, organ bằng mô phỏng đúng luật.
 - "Fugue chorale hiệu quả nhất là khi giai điệu chorale đi bằng nốt tròn hay dài hơn các bè fugue đi kèm" — nếu mọi bè cùng trường độ thì tai không nhận ra chorale, vốn "phải nổi trội ở mỗi lần trở lại". Một fugue đơn có thể "bất ngờ đan với chorale, đem sức sống mới cho cả bài".
 
-## Đối âm kép ở quãng 8 (§CLIII, tr. 191 – 197)
+## Đối âm kép ở quãng 8 [^albrechtsberger-1855, §CLIII, tr. 191 – 197]
 - Đối âm đơn thêm quãng mới vào một bè có sẵn; đối âm kép thì **hai bè giữ nguyên**, hoà âm đổi nhờ **chuyển vị**. Bè trầm lên một quãng 8 thành bè trên — *octava acuta*; hạ quãng 8 — *octava gravis*.
 
 | Quãng | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
@@ -1057,7 +1057,7 @@ Tiếp theo — Tập III: [[fugue-chorale-va-doi-am-kep-albrechtsberger]].
 - **Thêm bè quãng 3**: nếu bài hai bè chỉ có 3, 6, 8 ở phần mạnh, không hai thuận âm giống nhau liền nhau, nghịch âm chỉ là nốt đi qua, chỉ có chuyển động xiên và ngược chiều — thì thêm quãng 3 trên cho một bè thành **ba bè**, cho cả hai thành **bốn bè**. Nhưng "không phải lúc nào cũng được": có thể sinh quan hệ chéo, cảm âm nhân đôi, giải quyết sai; quãng 3 thêm "cho hoà âm đầy hơn nhưng **không bao giờ sinh giai điệu mới**".
 - "Một số bậc thầy đòi loại nốt treo khỏi fugue sẽ đảo; họ đúng nếu cả đối đề cũng phải đảo — điều không bao giờ làm được." Lời bình: "Dùng kiến thức một cách sáng suốt là ranh giới giữa **Nghệ thuật và Sách vở**."
 
-## Đối âm kép ở quãng 10 (§CLIV, tr. 197 – 206)
+## Đối âm kép ở quãng 10 [^albrechtsberger-1855, §CLIV, tr. 197 – 206]
 | Quãng | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Đảo thành | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
@@ -1069,7 +1069,7 @@ Tiếp theo — Tập III: [[fugue-chorale-va-doi-am-kep-albrechtsberger]].
 ::scan albrechtsberger 943,948 | Chủ đề giữ một giọng: bè trên mở – kết ở quãng 3 hay 5 (Ex. 943); ba bè có bè tự do, chỗ "Licence" (Ex. 948)
 ::scan albrechtsberger 957 | *Fugue alla Decima* Sol trưởng: *Decima acuta*, *Octava gravis* (phần đầu)
 
-## Đối âm kép ở quãng 12 (§CLV, tr. 206 – 213)
+## Đối âm kép ở quãng 12 [^albrechtsberger-1855, §CLV, tr. 206 – 213]
 | Quãng | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Đảo thành | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
@@ -1095,7 +1095,7 @@ So sánh: quy tắc của Fux — [[doi-am-kep-fux]]; công thức tổng quát 
     summary: 'Tập III, §CLVI – CLVII: fugue kép hai chủ đề và ba, bốn chủ đề — bốn điều kiện, bốn luật đối âm ba – bốn lần ở quãng 8, bảng ba cách đổi chỗ chính và các cách phụ, mẫu fugue ba chủ đề của Mattheson; canon — định nghĩa "mô phỏng nghiêm nhất", các loại (hữu hạn, vô hạn, mở, đóng, đôi, câu đố…), canon ở đồng âm và quãng 8, cách viết một Inventio ba bè, cách ghi canon bằng số, canon "của Mozart" và canon câu đố Kuhlau, cùng canon Albrechtsberger gửi Haydn.',
     refs: [SRC, ['Wikipedia — Canon (music)', 'https://en.wikipedia.org/wiki/Canon_(music)']],
     body: `
-## Fugue kép (§CLVI, tr. 213 – 219)
+## Fugue kép [^albrechtsberger-1855, §CLVI, tr. 213 – 219]
 - Hai chủ đề: "khó phân biệt với fugue có đối âm kép ở quãng 8"; đối đề có thể vào cùng lúc với chủ đề hay sau. Phải theo luật fugue đơn và đối âm ở quãng 8, "nếu không các chủ đề không đổi chỗ được".
 - **Ba chủ đề trở lên** — cần: (1) thêm một hai bè hơn số chủ đề, để có bè nghỉ; (2) dùng đối âm ở quãng 8; (3) các chủ đề **khác trường độ**, không mở cùng lúc nhưng **phải kết cùng lúc**; (4) dùng **đối âm ba lần** (ba chủ đề), **bốn lần** (bốn chủ đề) ở quãng 8.
 - **Bốn luật đối âm ba – bốn lần**: không nốt treo quãng 9; hai bè không đi hai quãng 4 đúng liền (đảo ra quãng 5 liền) — trừ khi quãng 4 sau là tăng; quãng 5 chỉ đi xiên hoặc treo bởi quãng 6 (nếu không, đảo ra hợp âm 6/4 không chuẩn bị); quãng 6 chỉ đi xiên, kèm quãng 8 hay đồng âm thay quãng 3 (bè tự do bổ sung quãng 3). Các ký hiệu số ở trang này in rất nhỏ, vài chỗ đọc chưa chắc.
@@ -1113,7 +1113,7 @@ Mỗi cách chính có các cách phụ "phải sinh cùng quãng"; chỉ ba cá
 ::scan albrechtsberger 991 | Một fugue kép ba chủ đề khác — số 1, 2, 3 đánh dấu chỗ vào (phần đầu)
 - Fugue "là trang sức chính cho giao hưởng và tứ tấu, và gây hiệu quả mạnh trên sân khấu"; thay chủ đề khô cứng bằng chủ đề giàu biểu cảm — mẫu là **Handel**.
 
-## Canon (§CLVII, tr. 219 – 237)
+## Canon [^albrechtsberger-1855, §CLVII, tr. 219 – 237]
 - "Canon là một loại fugue giữ **mô phỏng nghiêm nhất**." Chủ đề "phải lặp đúng từ đầu đến cuối": trường độ (ở đồng âm và quãng 8 cả tên nốt), dấu lặng (trừ lần vào đầu), chấm dôi, nốt nối, bước nhảy, nửa cung – nguyên cung, nốt hoa mỹ — "tóm lại, mọi chi tiết".
 
 | Loại | Theo sách |
@@ -1161,13 +1161,13 @@ Canon theo hệ Taneyev: [[canon-hai-be]], [[canon-ba-bon-be]]; các loại cano
     body: `
 **Ai viết**: phụ lục nhắc đến những nhạc sĩ thuộc thế hệ sau Albrechtsberger (ông mất năm 1809) — Chopin, Liszt, Mendelssohn — và có câu tự xưng của người biên tập. Vậy phần lớn phụ lục là lời **Seyfried**, phản ánh thực tiễn khoảng 1820 – 1850 chứ không phải của Albrechtsberger.
 
-## Ba phong cách (tr. 238 – 240)
+## Ba phong cách [^albrechtsberger-1855, tr. 238 – 240]
 - Nhà thờ, thính phòng, sân khấu "phải phân biệt rõ, theo bản chất và theo đích của chúng"; sách chê "sự pha trộn không thể biện minh" thời đó. Mỗi người nên chọn một nhánh hợp thiên hướng: "Một bậc thầy toàn năng hiếm hơn phượng hoàng — Mozart của chúng ta là một ngôi sao băng rực rỡ như thế."
 - **Nhà thờ**: thánh lễ, graduale, offertorium, thánh vịnh, thánh ca, cantata, oratorio; viết đối âm nghiêm khắc hay tự do, bốn năm bè, *stilo alla capella*, có hay không organ. **Thính phòng**: mọi bài cho phòng khách hay hoà nhạc — giao hưởng, độc tấu đến ngũ tấu, sonata, biến tấu, concerto, aria, ouverture, fantasia. **Sân khấu**: opera nghiêm, opera hài, operetta, melodrama, ballet — nhánh "chịu thay đổi thời trang nhiều nhất"; người viết cần kinh nghiệm hiệu quả kịch, trí tưởng tượng "vẽ bằng nhạc", hiểu thực tế giọng và nhạc cụ.
 - **Lịch sử nhạc nhà thờ theo sách**: ban đầu chỉ có giọng hát, hoà âm chậm và trang nghiêm hợp với nhà thờ vang của Ý; vì ca sĩ chỉ dựa vào chính mình nên mọi thứ nguy cho việc hát đúng bị loại khỏi *stilo alla capella* — "vì thế các luật chính của sáng tác nghiêm khắc vẫn giữ nguyên". Sau đó thêm organ, bass số, contrebass, violin, rồi oboe, trumpet, trống, trombone, cornetto (*Zinke*), bassoon; organ thường thấp hơn cao độ dàn nhạc "ít nhất một phần tư cung" nên phải dùng kèn bù.
 - "Mục đích chính của một tác phẩm tôn giáo là diễn tả bằng nốt nhạc đúng ý nghĩa của lời." Bị chê: đoạn violin ồn ào, bè trầm nhảy nhót "quá trần tục", trombone đi đồng âm với bè hát, solo đầy hoa mỹ, aria khoe kỹ thuật có cadenza, đoạn nhạc cụ kiểu concerto. Xem [[thanh-le-va-requiem]].
 
-## Nhạc cụ (tr. 240 – 254)
+## Nhạc cụ [^albrechtsberger-1855, tr. 240 – 254]
 Tầm âm chủ yếu in bằng ví dụ nhạc; bảng dưới chỉ ghi điều sách nói bằng lời (tầm âm đọc từ hình là gần đúng).
 | Nhóm | Nhạc cụ và điều sách nói |
 |---|---|
@@ -1183,7 +1183,7 @@ Tầm âm chủ yếu in bằng ví dụ nhạc; bảng dưới chỉ ghi điề
 ::scan albrechtsberger 1077,1081 | Kèn đồng: các âm tự nhiên của horn (Ex. 1077); trombone alto theo từng vị trí kéo (Ex. 1081)
 Ghi chú: phần clarinet in vừa "Si" vừa "Si giáng", chưa rõ ý sách ở vài chỗ. Đối chiếu nhạc cụ học: [[phoi-khi-va-viet-cho-nhac-cu]], [[dan-nhac-giao-huong]].
 
-## Chơi tổng phổ (tr. 254 – 256)
+## Chơi tổng phổ [^albrechtsberger-1855, tr. 254 – 256]
 - Tổng phổ là "bản kế hoạch viết từng ô, mọi bè chồng lên nhau". Trước kia bè trầm tổng phổ có ghi số; nay đã bỏ.
 - Cần: quen **cả năm khoá**; đọc ngay các nhạc cụ chuyển giọng (horn, trumpet, trống ghi ở Đô; clarinet ở La hay Si giáng; corno di bassetto, cor anglais); xem trước thứ tự nhạc cụ, vì chưa có quy ước chung.
 - Thứ tự sách đề xuất: flute trên cùng, rồi oboe, clarinet, horn, bassoon, trombone, trumpet, trống — nửa trên là toàn bộ kèn; rồi violin, viola, các giọng hát, cello, contrebass.

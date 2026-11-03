@@ -539,7 +539,7 @@ export function Markup({ source, sections = Infinity }: { source: string; sectio
     else if (line.startsWith('## '))
       out.push(
         <h2 key={out.length} id={`sec-${section++}`} className="scroll-mt-24 pt-6 text-[1.4em] font-semibold leading-tight text-[var(--color-ink)]">
-          {line.slice(3)}
+          <Inline text={line.slice(3)} />
         </h2>,
       )
     else if (line.startsWith('::')) out.push(<Directive key={out.length} line={line} />)

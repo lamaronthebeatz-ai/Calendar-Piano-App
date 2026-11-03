@@ -125,3 +125,11 @@ Kích hoạt khi bước dựng nội dung > 10 s hoặc > 4.000 bài.
 - Giai đoạn 2: kiểu trích dẫn mặc định (đề xuất **Chicago ghi chú cuối trang**, phổ biến trong âm nhạc học); có hiện mức đối chiếu cho người đọc không (đề xuất: có).
 - Giai đoạn 3: văn bản TCVN 14301:2024; nguyên tắc khi TCVN lệch thói quen nhạc viện (đề xuất: tên chuẩn theo TCVN, ghi tên nhạc viện là biến thể).
 - Giai đoạn 4: danh sách quan hệ ưu tiên; có mở rộng sang âm nhạc ngoài phương Tây/Việt Nam ngay không.
+
+---
+
+## Việc tồn đọng (cập nhật 11/2026)
+- ✅ Số trang Sposobin (401 chỗ, dò § trong OCR), Albrechtsberger (59 tiêu đề; trang liên tục ba tập).
+- ✅ Thầy – trò – ảnh hưởng (Wikidata P1066 / P802 / P737) trong hồ sơ người.
+- ✅ Bảng "Mỗi trường phái hiểu thế nào" cho 4 khái niệm, mỗi dòng dẫn về bài nguồn.
+- ⏳ Còn lại, cần sách hoặc bản quét tốt hơn: Mazel (bản quét 2 trang in / trang PDF — cần tách trang rồi dò § theo chương), Asafyev (dẫn theo chương — cần trang mở đầu từng chương), Neuhaus (chỉ có epub, không có số trang in), Fux (bài dẫn theo khối ví dụ quét, không theo trang), Levine (không có bản sách trong máy). 43 § Sposobin OCR không đọc được.

@@ -95,7 +95,7 @@ Sposobin nối khái niệm này với cú pháp: chia một ý tương đối t
 
 ### Câu nhỏ (фраза)
 
-Theo Sposobin, rất nhiều câu (предложение) của đoạn nhạc, và nói chung các cấu trúc bốn hoặc sáu ô nhịp, chia thành những cấu trúc nhỏ hơn, hai ô nhịp, đôi khi ba ô nhịp, gọi là **câu nhỏ** (фраза). Câu nhỏ "hoàn toàn tách được về nghĩa khỏi các cấu trúc bên cạnh", tức là có độc lập về tiết tấu *(Sposobin, §26)*.
+Theo Sposobin, rất nhiều câu (предложение) của đoạn nhạc, và nói chung các cấu trúc bốn hoặc sáu ô nhịp, chia thành những cấu trúc nhỏ hơn, hai ô nhịp, đôi khi ba ô nhịp, gọi là **câu nhỏ** (фраза). Câu nhỏ "hoàn toàn tách được về nghĩa khỏi các cấu trúc bên cạnh", tức là có độc lập về tiết tấu [^sposobin-1984, §26, tr. 64].
 
 Một điểm kỹ thuật đáng nhớ: hoà âm kết thúc các câu nhỏ (trừ câu nhỏ cuối, nơi cả câu dừng lại) **không bị giới hạn** như ở các kết chính của đoạn nhạc. Câu nhỏ có thể dừng trên bất kỳ hợp âm nào, với bất kỳ âm trầm nào. Bên cạnh những câu chia thành câu nhỏ, cũng có câu không chia được.
 
@@ -103,7 +103,7 @@ Mazel định nghĩa câu nhỏ từ phía nhịp: muốn nhận ra nhịp (số
 
 ### Motif (мотив)
 
-Định nghĩa của Sposobin: "Motif là một nhóm âm thanh theo tiết tấu, gắn với nhau bằng một trọng âm chính, và là đơn vị nghĩa nhỏ nhất" *(Sposobin, §27)*. Dù ngắn, nhóm này thường có tính cách rõ rệt và tách bạch về tiết tấu, nên "thật sự là một hạt nhỏ có nghĩa của chỉnh thể". Vì thế motif, khi được lặp lại và biến đổi, có thể làm **hạt giống chủ đề**: từ đó mọc ra một chủ đề trọn vẹn, thậm chí cả một tác phẩm. Bài [[motif]] trong thư viện trình bày khái niệm này theo cách chung.
+Định nghĩa của Sposobin: "Motif là một nhóm âm thanh theo tiết tấu, gắn với nhau bằng một trọng âm chính, và là đơn vị nghĩa nhỏ nhất" [^sposobin-1984, §27, tr. 66]. Dù ngắn, nhóm này thường có tính cách rõ rệt và tách bạch về tiết tấu, nên "thật sự là một hạt nhỏ có nghĩa của chỉnh thể". Vì thế motif, khi được lặp lại và biến đổi, có thể làm **hạt giống chủ đề**: từ đó mọc ra một chủ đề trọn vẹn, thậm chí cả một tác phẩm. Bài [[motif]] trong thư viện trình bày khái niệm này theo cách chung.
 
 Vì có một trọng âm chính, motif thường dài xấp xỉ một ô nhịp. Mọi điều đã nói ở §2 cũng đúng với motif: đầu và cuối thường không trùng vạch nhịp, và motif nhất thiết kết thúc bằng âm hợp âm.
 
@@ -111,7 +111,7 @@ Mazel định nghĩa gọn hơn: motif tiết tấu là "một hình tiết tấ
 
 ### Các kiểu motif theo vị trí phách mạnh
 
-Sposobin gọi thời mạnh của motif là "ictus" (икт); trong sơ đồ của ông nó chỉ có một âm. Thời yếu có thể có một hoặc nhiều âm, đứng trước thời mạnh như nhịp lấy đà (затакт, mà ông ghi là cũng được gọi là "предыкт") hoặc theo sau như kết yếu. Bốn kiểu chính *(Sposobin, §27)*:
+Sposobin gọi thời mạnh của motif là "ictus" (икт); trong sơ đồ của ông nó chỉ có một âm. Thời yếu có thể có một hoặc nhiều âm, đứng trước thời mạnh như nhịp lấy đà (затакт, mà ông ghi là cũng được gọi là "предыкт") hoặc theo sau như kết yếu. Bốn kiểu chính [^sposobin-1984, §27, tr. 66]:
 
 | Kiểu | Sơ đồ (∪ = thời yếu, — = thời mạnh) | Nhận xét của Sposobin |
 |---|---|---|
@@ -137,11 +137,11 @@ Mazel còn nêu một xu hướng (ông nhấn mạnh: chỉ là xu hướng, kh
 
 ### Submotif (субмотив)
 
-Motif hay câu nhỏ đôi khi chia thành những nhóm giai điệu – tiết tấu còn nhỏ hơn, dài một phần ô nhịp, gọi là **submotif** *(Sposobin, §27)*.
+Motif hay câu nhỏ đôi khi chia thành những nhóm giai điệu – tiết tấu còn nhỏ hơn, dài một phần ô nhịp, gọi là **submotif** [^sposobin-1984, §27, tr. 66].
 
 ### Hoà âm trong motif
 
-Sposobin có một nhận xét ngắn mà rất hữu ích cho người chơi: từ nhịp lấy đà sang phách mạnh, hoà âm thường **đổi**, làm nổi sự khác nhau giữa nhịp lấy đà ("đà vung, chuẩn bị cho hành động") và phách mạnh ("chính hành động"). Kết yếu thường nằm trên hoà âm đã vào ở phách mạnh, "một kiểu chuyển động theo quán tính", nhưng cũng có thể đổi hoà âm. Motif có thể kết trên bất kỳ hợp âm nào với bất kỳ âm trầm nào *(Sposobin, §27)*.
+Sposobin có một nhận xét ngắn mà rất hữu ích cho người chơi: từ nhịp lấy đà sang phách mạnh, hoà âm thường **đổi**, làm nổi sự khác nhau giữa nhịp lấy đà ("đà vung, chuẩn bị cho hành động") và phách mạnh ("chính hành động"). Kết yếu thường nằm trên hoà âm đã vào ở phách mạnh, "một kiểu chuyển động theo quán tính", nhưng cũng có thể đổi hoà âm. Motif có thể kết trên bất kỳ hợp âm nào với bất kỳ âm trầm nào [^sposobin-1984, §27, tr. 66].
 
 ### Ô nhịp nặng và ô nhịp nhẹ
 
@@ -151,7 +151,7 @@ Mazel ghi: sự phân biệt này chủ yếu có trong nhạc có tính vận �
 
 ## 4. Tính chu kỳ cấu trúc
 
-Sposobin: sự thống nhất cấu trúc kiểu trình bày được thể hiện sơ đẳng nhất ở chỗ mọi phần có cùng độ dài. "Sự nối tiếp các phần tử có độ dài như nhau (tính theo số ô nhịp) gọi là tính chu kỳ cấu trúc (структурная периодичность)" *(Sposobin, §29)*. Nó có thể ở nhiều tầng:
+Sposobin: sự thống nhất cấu trúc kiểu trình bày được thể hiện sơ đẳng nhất ở chỗ mọi phần có cùng độ dài. "Sự nối tiếp các phần tử có độ dài như nhau (tính theo số ô nhịp) gọi là tính chu kỳ cấu trúc (структурная периодичность)" [^sposobin-1984, §29, tr. 70]. Nó có thể ở nhiều tầng:
 
 - 8 = 4 + 4 (Beethoven, Quartet op. 18 №4, finale);
 - 8 = 2 + 2 + 2 + 2;
@@ -183,11 +183,11 @@ Họ hàng với nó là cấu trúc a + b + b (chỉ lặp câu nhỏ thứ hai
 
 ## 5. Tương phản cấu trúc: tổng hợp và chia nhỏ
 
-Thống nhất hoàn toàn bằng tính chu kỳ dễ thành đơn điệu. Sposobin viết: để đưa vào **tương phản cấu trúc**, người ta tận dụng khả năng xây dựng khác nhau những phần tử cùng độ dài (và cả khác độ dài). Có câu chia được (2 + 2) và không chia được (4) thành câu nhỏ; có câu nhỏ chia được (1 + 1) và không chia được (2) thành motif *(Sposobin, §29)*.
+Thống nhất hoàn toàn bằng tính chu kỳ dễ thành đơn điệu. Sposobin viết: để đưa vào **tương phản cấu trúc**, người ta tận dụng khả năng xây dựng khác nhau những phần tử cùng độ dài (và cả khác độ dài). Có câu chia được (2 + 2) và không chia được (4) thành câu nhỏ; có câu nhỏ chia được (1 + 1) và không chia được (2) thành motif [^sposobin-1984, §29, tr. 70].
 
 ### Tổng hợp (суммирование)
 
-"Đặt cạnh nhau hai hay nhiều cấu trúc với một cấu trúc lớn hơn theo sau, thường bằng tổng của chúng, gọi là tổng hợp" *(Sposobin, §29)*. Các dạng:
+"Đặt cạnh nhau hai hay nhiều cấu trúc với một cấu trúc lớn hơn theo sau, thường bằng tổng của chúng, gọi là tổng hợp" [^sposobin-1984, §29, tr. 70]. Các dạng:
 
 - 8 = 2 + 2 + 4;
 - 4 = 1 + 1 + 2;
@@ -209,7 +209,7 @@ Ví dụ của chính ông: trong 1 + 1 + 2, tính chu kỳ ban đầu (1 + 1) b
 
 ### Chia nhỏ (дробление)
 
-Sposobin: "Đặt một cấu trúc cạnh những cấu trúc ngắn hơn theo sau, thường bằng nó về tổng, gọi là chia nhỏ" *(Sposobin, §29)*. Ví dụ: 8 = 4 + 2 + 2 (Beethoven, Sonata op. 14 №1, chương III, Allegro comodo); 4 = 2 + 1 + 1; và cả chia nhỏ ở cấp nhỏ hơn. Ông nêu một biến thể: chia nhỏ **đi ngược cấu trúc ô nhịp**, thường là những nhóm hai phách trong nhịp ba (Beethoven, Giao hưởng số 8, chương IV; Tchaikovsky, *Scherzo humoristique* op. 19 №2). Đôi khi cấu trúc như thế có ngay từ đầu (Tchaikovsky, "Tháng Năm" trong *Bốn mùa* op. 37bis).
+Sposobin: "Đặt một cấu trúc cạnh những cấu trúc ngắn hơn theo sau, thường bằng nó về tổng, gọi là chia nhỏ" [^sposobin-1984, §29, tr. 70]. Ví dụ: 8 = 4 + 2 + 2 (Beethoven, Sonata op. 14 №1, chương III, Allegro comodo); 4 = 2 + 1 + 1; và cả chia nhỏ ở cấp nhỏ hơn. Ông nêu một biến thể: chia nhỏ **đi ngược cấu trúc ô nhịp**, thường là những nhóm hai phách trong nhịp ba (Beethoven, Giao hưởng số 8, chương IV; Tchaikovsky, *Scherzo humoristique* op. 19 №2). Đôi khi cấu trúc như thế có ngay từ đầu (Tchaikovsky, "Tháng Năm" trong *Bốn mùa* op. 37bis).
 
 Mazel nhìn chia nhỏ (2 + 1 + 1, 4 + 2 + 2...) như cấu trúc **ngược** của tổng hợp *(Mazel, ch. IV §2)*:
 
@@ -232,12 +232,12 @@ Chú thích của Mazel đáng chép lại: bốn chặng ấy cũng thường g
 
 Ví dụ Mazel dẫn: Tchaikovsky, Giao hưởng số 6; Beethoven, Sonata số 1; một fugue của Shostakovich; câu đầu aria của Lyudmila ở hồi IV *Ruslan và Lyudmila* của Glinka, với cấu trúc không vuông 3 + 3 + 2 + 2 + 5. Nửa sau của cấu trúc, chứa chỗ căng nhất và chỗ kết của giai điệu, thường được lặp lại như một điệp khúc (Tchaikovsky, Giao hưởng số 6).
 
-Sposobin mô tả cùng hiện tượng mà không đặt tên riêng. Khi tổng hợp và chia nhỏ phân bố trên cả đoạn nhạc, một dạng hay gặp là: sau câu đầu có cấu trúc chu kỳ hoặc tổng hợp, đầu câu thứ hai có chia nhỏ rồi đến tổng hợp khép lại *(Sposobin, §29)*. Ông nhấn mạnh: chia nhỏ như thế rơi vào **phần tư thứ ba** của đoạn nhạc, và quy luật này "gặp thường xuyên không chỉ ở phần tư thứ ba của đoạn nhạc mà cả ở những hình thức lớn hơn". Tiết tấu sinh động hơn đi kèm chia nhỏ đôi khi kéo theo đổi hoà âm thường xuyên hơn; tất cả cùng tạo ra tăng độ căng và hay gắn với việc tiến tới cao trào hoặc chính cao trào.
+Sposobin mô tả cùng hiện tượng mà không đặt tên riêng. Khi tổng hợp và chia nhỏ phân bố trên cả đoạn nhạc, một dạng hay gặp là: sau câu đầu có cấu trúc chu kỳ hoặc tổng hợp, đầu câu thứ hai có chia nhỏ rồi đến tổng hợp khép lại [^sposobin-1984, §29, tr. 70]. Ông nhấn mạnh: chia nhỏ như thế rơi vào **phần tư thứ ba** của đoạn nhạc, và quy luật này "gặp thường xuyên không chỉ ở phần tư thứ ba của đoạn nhạc mà cả ở những hình thức lớn hơn". Tiết tấu sinh động hơn đi kèm chia nhỏ đôi khi kéo theo đổi hoà âm thường xuyên hơn; tất cả cùng tạo ra tăng độ căng và hay gắn với việc tiến tới cao trào hoặc chính cao trào.
 
 ### Các dạng phức tạp hơn
 
 - **Chia nhỏ kép có khép**: 4 + 4 + 2 + 2 + 1 + 1 + 2 (ví dụ của Mazel: Saint-Saëns, *Samson et Dalila*). Mazel coi nó "ít khác" chia nhỏ có khép thường, chỉ đẩy nguyên tắc ấy thêm một bậc *(Mazel, ch. IV §2)*.
-- **Tổng hợp kép** (двойное объединение / двойное суммирование): sau tổng hợp thường (1 + 1 + 2) là một cấu trúc liền đáp lại cả ba phần tử trước, tức 1 + 1 + 2 + 4. Mazel nhận xét: phát triển ở đây chỉ hướng **ra rộng**, đến những câu nhỏ ngày càng dài và liền, không có việc tách và nhấn các ngữ điệu của motif đầu, cũng không có việc củng cố các chặng đã qua; phát triển "hơi quảng tính". Ví dụ: dân ca Ukraina; Dargomyzhsky, "Шестнадцать лет"; Kabalevsky, overture *Colas Breugnon*; Dunaevsky, "Песенка о капитане". Sposobin cũng nêu "tổng hợp kép" ở câu thứ hai của đoạn nhạc (ví dụ: Mozart, Sonata số 12, chương III) *(Sposobin, §29)*.
+- **Tổng hợp kép** (двойное объединение / двойное суммирование): sau tổng hợp thường (1 + 1 + 2) là một cấu trúc liền đáp lại cả ba phần tử trước, tức 1 + 1 + 2 + 4. Mazel nhận xét: phát triển ở đây chỉ hướng **ra rộng**, đến những câu nhỏ ngày càng dài và liền, không có việc tách và nhấn các ngữ điệu của motif đầu, cũng không có việc củng cố các chặng đã qua; phát triển "hơi quảng tính". Ví dụ: dân ca Ukraina; Dargomyzhsky, "Шестнадцать лет"; Kabalevsky, overture *Colas Breugnon*; Dunaevsky, "Песенка о капитане". Sposobin cũng nêu "tổng hợp kép" ở câu thứ hai của đoạn nhạc (ví dụ: Mozart, Sonata số 12, chương III) [^sposobin-1984, §29, tr. 70].
 - **Bán đối xứng và đối xứng**: một cấu trúc mà nửa sau bắt đầu bằng hình vừa kết nửa trước rồi chuyển sang hình khép, công thức a b b c, Mazel gọi là **bán đối xứng** (полусимметрия). Nếu hình khép giống hình đầu, ta có **đối xứng** a b b a. Đối xứng khép kín hơn bán đối xứng, bán đối xứng khép kín hơn chia nhỏ. Ví dụ trong sách: một rondo của Mozart, câu đầu là bán đối xứng (kết nửa), câu sau là đối xứng (kết trọn) *(Mazel, ch. IV §2)*.
 
 ### "Giống thì chia, khác thì nối"
@@ -248,7 +248,7 @@ Sposobin rút ra một nguyên tắc đơn giản mà sâu: "giống nhau thì t
 
 ### Khi nào coi là "không chia được"
 
-Sposobin dặn: ở những chỗ các hạt nhỏ móc vào nhau chặt (ví dụ một âm dừng dài mà thật ra là âm treo, chỗ giải quyết trùng với nhịp lấy đà của motif sau), việc chia chỉ là quy ước. Trong phân tích không cần chia quy ước như vậy: "mọi cấu trúc không chịu chia một cách hiển nhiên đều nên coi là liền và không chia" *(Sposobin, §28)*. Ở §29 ông định nghĩa thêm: "không chia được" nghĩa là hoặc liền hoàn toàn, hoặc chỉ liền hơn cấu trúc đặt đối diện với nó.
+Sposobin dặn: ở những chỗ các hạt nhỏ móc vào nhau chặt (ví dụ một âm dừng dài mà thật ra là âm treo, chỗ giải quyết trùng với nhịp lấy đà của motif sau), việc chia chỉ là quy ước. Trong phân tích không cần chia quy ước như vậy: "mọi cấu trúc không chịu chia một cách hiển nhiên đều nên coi là liền và không chia" [^sposobin-1984, §28, tr. 69]. Ở §29 ông định nghĩa thêm: "không chia được" nghĩa là hoặc liền hoàn toàn, hoặc chỉ liền hơn cấu trúc đặt đối diện với nó.
 
 ## 6. Cấu trúc vuông và không vuông
 
@@ -258,7 +258,7 @@ Sposobin gọi **tính vuông** (квадратность) là việc các phầ
 - câu năm ô nhịp với các dạng 2 + 3, 3 + 2, 1 + 1 + 3, 2 + 1 + 1 + 1 (Schubert, Sonata op. 122, chương III; Glinka, overture *Ivan Susanin*);
 - câu 9, 10, 11 ô nhịp; và đoạn nhạc không chia câu dài mười ô nhịp (Mozart, Quartet Rê thứ, Menuetto).
 
-Chú thích then chốt của Sposobin: "Trái với truyền thống phổ biến, mọi cấu trúc kiểu không vuông ở đây đều được xem là độc lập, chứ không phải dẫn xuất từ cụm bốn và tám ô nhịp" *(Sposobin, §30)*. Mở rộng và rút gọn được bàn riêng ở chương sau (xem [[mo-rong-cau-nhac]] và [[hinh-thuc-nga-doan-nhac]]).
+Chú thích then chốt của Sposobin: "Trái với truyền thống phổ biến, mọi cấu trúc kiểu không vuông ở đây đều được xem là độc lập, chứ không phải dẫn xuất từ cụm bốn và tám ô nhịp" [^sposobin-1984, §30, tr. 74]. Mở rộng và rút gọn được bàn riêng ở chương sau (xem [[mo-rong-cau-nhac]] và [[hinh-thuc-nga-doan-nhac]]).
 
 Mazel chọn đường giữa. Ông thừa nhận nhiều cấu trúc không vuông "được nghe như biến dạng của cấu trúc vuông", tức là mở rộng hay nén lại. Ví dụ: ở ô nhịp thứ tám, thay cho kết trọn là kết ngắt hay kết không trọn, và kết trọn đến sau hai hoặc bốn ô nhịp, thì mười (hay mười hai) ô nhịp nghe như mở rộng của tám (ví dụ trong sách: Glinka, romance "Не искушай меня без нужды") *(Mazel, ch. III §2)*. Cảm nhận này chắc nhất khi trước cấu trúc không vuông có một cấu trúc vuông bắt đầu giống nó.
 
@@ -373,7 +373,7 @@ Sposobin trình bày hai khái niệm này thành hệ thống ở §6–11 ph�
 
 ## 1. Sáu chức năng theo Sposobin
 
-Sposobin bắt đầu bằng một lưu ý: chức năng **không phụ thuộc bắt buộc** vào số chủ đề. Cả hình thức có thể xây trên một chủ đề, và ngược lại, ngay ở phần phụ cũng có thể có yếu tố chủ đề mới. Dù vậy, "mỗi phần có một nhiệm vụ, hay chức năng, trong hình thức". Các chức năng chính có **sáu** *(Sposobin, §6)*:
+Sposobin bắt đầu bằng một lưu ý: chức năng **không phụ thuộc bắt buộc** vào số chủ đề. Cả hình thức có thể xây trên một chủ đề, và ngược lại, ngay ở phần phụ cũng có thể có yếu tố chủ đề mới. Dù vậy, "mỗi phần có một nhiệm vụ, hay chức năng, trong hình thức". Các chức năng chính có **sáu** [^sposobin-1984, §6, tr. 29]:
 
 1. **Trình bày chủ đề** (изложение темы): lần đầu chủ đề (hay các chủ đề) được đưa ra.
 2. **Phần nối** (связующая часть, gọi tắt là связка): giữa các lần trình bày những chủ đề khác nhau, hay nói chung giữa các phần chính của hình thức.
@@ -384,17 +384,17 @@ Sposobin bắt đầu bằng một lưu ý: chức năng **không phụ thuộc 
 
 ### Tính tái hiện: một nguyên tắc tạo hình thức
 
-Ngay trong §6, Sposobin đưa ra một nhận định có tầm bao quát: "Nói chung, hầu như mọi hình thức âm nhạc đều dựa trên việc dùng tái hiện. Vì vậy **tính tái hiện** là một trong những nguyên tắc tạo hình thức quan trọng nhất, giúp chỉnh thể thống nhất" *(Sposobin, §6)*.
+Ngay trong §6, Sposobin đưa ra một nhận định có tầm bao quát: "Nói chung, hầu như mọi hình thức âm nhạc đều dựa trên việc dùng tái hiện. Vì vậy **tính tái hiện** là một trong những nguyên tắc tạo hình thức quan trọng nhất, giúp chỉnh thể thống nhất" [^sposobin-1984, §6, tr. 29].
 
 Tái hiện tạo ra **khung** cho hình thức. Khi cấu trúc được lặp ở đầu và cuối quá nhỏ so với các phần khác, người ta nói về **khung** (обрамление) chứ không nhấn mạnh tính tái hiện.
 
 ## 2. Bốn kiểu trình bày theo Sposobin
 
-Chức năng của một cấu trúc thường gắn với những nét đặc trưng trong giai điệu, hoà âm và cách xây dựng. "Chính những nét đặc trưng ấy tạo thành **kiểu trình bày** chất liệu âm nhạc" *(Sposobin, §7)*; trong chú thích, ông thêm: đôi khi cả trong kết cấu. Ông lưu ý ngay: các nét đặc trưng của mỗi chức năng có thể hiện ra cùng lúc tất cả, hoặc chỉ một phần, kết hợp với nhau.
+Chức năng của một cấu trúc thường gắn với những nét đặc trưng trong giai điệu, hoà âm và cách xây dựng. "Chính những nét đặc trưng ấy tạo thành **kiểu trình bày** chất liệu âm nhạc" [^sposobin-1984, §7, tr. 30]; trong chú thích, ông thêm: đôi khi cả trong kết cấu. Ông lưu ý ngay: các nét đặc trưng của mỗi chức năng có thể hiện ra cùng lúc tất cả, hoặc chỉ một phần, kết hợp với nhau.
 
 ### Kiểu trình bày chủ đề (экспозиционный тип изложения)
 
-Đây là kiểu ứng với việc trình bày chủ đề và thường cả với việc lặp lại nó khi tái hiện. Dấu hiệu chung: **ổn định về tính chất** và **tiết kiệm phương tiện**. Cụ thể *(Sposobin, §7)*:
+Đây là kiểu ứng với việc trình bày chủ đề và thường cả với việc lặp lại nó khi tái hiện. Dấu hiệu chung: **ổn định về tính chất** và **tiết kiệm phương tiện**. Cụ thể [^sposobin-1984, §7, tr. 30]:
 
 - **Thống nhất chủ đề**: chỉ một hoặc vài yếu tố giai điệu – chủ đề.
 - **Thống nhất giọng**: liền một giọng, có thể chuyển hướng (thường sang giọng gần) rồi quay về giọng chính; đôi khi chuyển hướng xa nhưng cũng quay về (ví dụ trong sách: Prokofiev, *Romeo và Juliet*). Cũng có thể **chuyển giọng về cuối** cấu trúc, thường theo hướng truyền thống sang phía át (giọng bậc V hay bậc III). Chuyển giọng gần đầu cấu trúc hiếm hơn nhiều (Beethoven, Quartet op. 18 №1). Âm nền chủ âm (органный пункт trên chủ âm) thường gặp như một yếu tố mạnh của thống nhất giọng.
@@ -404,7 +404,7 @@ Sposobin dặn: dấu hiệu cấu trúc "kém tin cậy hơn" hai dấu hiệu 
 
 ### Kiểu trình bày đoạn giữa (срединный тип изложения)
 
-"Kiểu trình bày đoạn giữa là kiểu trong đó, cách này hay cách khác, thể hiện những nét không ổn định, trôi chảy" *(Sposobin, §8)*. Dấu hiệu quan trọng nhất:
+"Kiểu trình bày đoạn giữa là kiểu trong đó, cách này hay cách khác, thể hiện những nét không ổn định, trôi chảy" [^sposobin-1984, §8, tr. 32]. Dấu hiệu quan trọng nhất:
 
 - **Đưa ra những đoạn chủ đề tương đối ngắn**, thường mượn từ chủ đề đã trình bày. Việc mượn ấy gọi là **tách đoạn** (вычленение). Rất thường gặp là đưa các yếu tố mượn theo kiểu mô tiến hay gần mô tiến (ví dụ trong sách: Beethoven, Sonata op. 22, chương II).
 - **Không ổn định về hoà âm, không khép kín.** Nếu không rời giọng chính, sự không ổn định có thể thể hiện ở việc vắng chủ âm, đẩy chủ âm vào phách yếu hay ô nhịp lẻ (không kết), dùng chủ âm ở dạng không có tính kết. Có thể thêm âm nền trên **át âm** của giọng chính cho cả đoạn giữa hay một đoạn của nó (thường về cuối). Điển hình không kém là đưa vào một hay nhiều giọng phụ (trong hình thức lớn thường rất nhiều). Giọng chính được tránh và chỉ được khôi phục gần cuối đoạn giữa. Gắn với việc mô tiến các yếu tố ngắn, thường gặp mô tiến hoà âm, đặc biệt mô tiến chuyển giọng.
@@ -414,7 +414,7 @@ Nếu phần ấy (điều gặp thường xuyên) dành cho việc phát triể
 
 ### Biến thể của kiểu đoạn giữa: phần nối và đoạn chuẩn bị
 
-Kiểu đoạn giữa là kiểu của nhiều phần nối chuyển giọng, có lẽ là của đa số. Sposobin kê năm biến thể chính của phần nối *(Sposobin, §9)*:
+Kiểu đoạn giữa là kiểu của nhiều phần nối chuyển giọng, có lẽ là của đa số. Sposobin kê năm biến thể chính của phần nối [^sposobin-1984, §9, tr. 34]:
 
 1. một nét giai điệu trên nền hoà âm ngân giữ hoặc ngầm hiểu (thường là hợp âm bảy át của giọng phần sắp tới), hoặc thêm quãng bảy vào hợp âm ba đã đạt để biến nó thành hợp âm bảy át;
 2. một bước chuyển giọng ngắn có dạng kết (ví dụ trong sách: Schumann, Giao hưởng số 1, Scherzo);
@@ -424,7 +424,7 @@ Kiểu đoạn giữa là kiểu của nhiều phần nối chuyển giọng, c�
 
 Chọn biến thể nào phụ thuộc phần nào vào ý muốn nhấn mạnh sự chuyển sang phần mới, hay ngược lại, "che giấu" ý định ấy, làm chỗ chuyển khó nhận ra hơn.
 
-Để chuẩn bị bất kỳ phần nào của hình thức, người ta hay dùng sự **tích luỹ độ căng át** trong giọng được chờ đợi, gọi là **đoạn chuẩn bị** hay **predikt** (предикт, trong sách viết предыкт). Ba cách *(Sposobin, §9)*:
+Để chuẩn bị bất kỳ phần nào của hình thức, người ta hay dùng sự **tích luỹ độ căng át** trong giọng được chờ đợi, gọi là **đoạn chuẩn bị** hay **predikt** (предикт, trong sách viết предыкт). Ba cách [^sposobin-1984, §9, tr. 34]:
 
 1. một hợp âm thuộc nhóm át của giọng sắp tới được đánh một lần, ngân giữ hoặc lặp lại (Borodin, Giao hưởng số 2, cuối trio); hợp âm ấy có thể được hình hoạ, kể cả bằng chất liệu chủ đề quan trọng;
 2. hoà âm át đặt ở phách mạnh, ô nhịp chẵn, xen với hợp âm khác (Mozart, Sonata số 5, chương I);
@@ -434,7 +434,7 @@ Mọi cách ấy tạo căng thẳng hoà âm, rồi được giải quyết b�
 
 ### Kiểu trình bày kết (заключительный тип изложения)
 
-"Kiểu trình bày kết là kiểu tạo ra sự **khẳng định chủ âm đã đạt được**, trong giọng chính hay giọng phụ" *(Sposobin, §10)*. Đó là một hay nhiều cấu trúc bổ sung cho phần trình bày chính của một ý trọn vẹn, của một phần, một đoạn lớn hay cả hình thức. Dấu hiệu chính:
+"Kiểu trình bày kết là kiểu tạo ra sự **khẳng định chủ âm đã đạt được**, trong giọng chính hay giọng phụ" [^sposobin-1984, §10, tr. 38]. Đó là một hay nhiều cấu trúc bổ sung cho phần trình bày chính của một ý trọn vẹn, của một phần, một đoạn lớn hay cả hình thức. Dấu hiệu chính:
 
 1. gắn thêm cấu trúc (hay nhóm cấu trúc) vào phần trước đã kết thúc bằng chủ âm, và chủ yếu trong cùng giọng ấy;
 2. các kết lặp lại trên chủ âm của cùng giọng, gọi là **bổ sung kết** (каденционные дополнения), hoặc đơn giản là ngân giữ hay lặp lại chủ âm;
@@ -455,7 +455,7 @@ Cuối phần mở đầu thường có (nhưng không bắt buộc) át chuẩn
 
 ## 3. Khi chức năng và kiểu trình bày không khớp (§18)
 
-Sposobin thừa nhận: mô tả trên là những trường hợp "thuần" và hiển nhiên nhất. Chúng nhiều thật, nên cho phép rút ra quy luật chung. Nhưng sự tương ứng kém đơn giản và sự đan xen các quy luật khác nhau "cũng không quá hiếm" *(Sposobin, §18)*. Ông đưa một loạt ví dụ, xếp theo chức năng:
+Sposobin thừa nhận: mô tả trên là những trường hợp "thuần" và hiển nhiên nhất. Chúng nhiều thật, nên cho phép rút ra quy luật chung. Nhưng sự tương ứng kém đơn giản và sự đan xen các quy luật khác nhau "cũng không quá hiếm" [^sposobin-1984, §18, tr. 49]. Ông đưa một loạt ví dụ, xếp theo chức năng:
 
 | Chức năng | Kiểu trình bày có thể gặp | Ví dụ trong sách |
 |---|---|---|
@@ -650,7 +650,7 @@ Cả ba đều thấy mỗi đoạn nhạc **làm một việc** trong chỉnh t
     body: `
 ## Dẫn nhập
 
-Sposobin mở §12 bằng một câu ngắn mà ba cuốn sách đều chia sẻ: "Hình thức âm nhạc, vì triển khai trong thời gian, là một **quá trình**, tức là sự **phát triển**. Do đó các nguyên tắc cơ bản của việc phát triển chất liệu âm nhạc có tầm quan trọng đặc biệt" *(Sposobin, §12)*. Mazel nói gần như thế: hình thức của mọi tác phẩm "một là một quá trình phát triển nào đó, hai là kết quả trọn vẹn của quá trình ấy", và cả hai mặt đều quan trọng *(Mazel, ch. V §3)*. Asafyev đặt chính ý ấy làm tên sách: *Hình thức âm nhạc như một quá trình*.
+Sposobin mở §12 bằng một câu ngắn mà ba cuốn sách đều chia sẻ: "Hình thức âm nhạc, vì triển khai trong thời gian, là một **quá trình**, tức là sự **phát triển**. Do đó các nguyên tắc cơ bản của việc phát triển chất liệu âm nhạc có tầm quan trọng đặc biệt" [^sposobin-1984, §12, tr. 42]. Mazel nói gần như thế: hình thức của mọi tác phẩm "một là một quá trình phát triển nào đó, hai là kết quả trọn vẹn của quá trình ấy", và cả hai mặt đều quan trọng *(Mazel, ch. V §3)*. Asafyev đặt chính ý ấy làm tên sách: *Hình thức âm nhạc như một quá trình*.
 
 Bài trước bàn **mỗi phần làm gì** (chức năng). Bài này bàn **chất liệu được đưa đi tiếp bằng cách nào**: lặp lại nguyên dạng, biến đổi, tách ra từng mảnh, sinh ra cái mới, hay đặt cái mới hẳn bên cạnh. Ba sách có ba hệ thống nguyên tắc khác nhau về số lượng nhưng gần nhau về thực chất. Cuối bài là chuỗi "suy ra" các hình thức từ nhau mà Sposobin dựng ở §145, một tấm bản đồ cho cả bộ bài.
 
@@ -658,7 +658,7 @@ Bài trước bàn **mỗi phần làm gì** (chức năng). Bài này bàn **ch
 
 ### Hệ thống chung
 
-Sposobin nêu **năm** nguyên tắc phát triển và xếp chúng thành một hệ thống (trong sách là một sơ đồ; bản OCR chỉ đọc được hai tên đầu, thứ tự đầy đủ lấy theo các mục §13–17) *(Sposobin, §12)*:
+Sposobin nêu **năm** nguyên tắc phát triển và xếp chúng thành một hệ thống (trong sách là một sơ đồ; bản OCR chỉ đọc được hai tên đầu, thứ tự đầy đủ lấy theo các mục §13–17) [^sposobin-1984, §12, tr. 42]:
 
 1. lặp lại (повторение);
 2. lặp lại biến đổi (измененное повторение);
@@ -672,7 +672,7 @@ Thứ tự đi từ giống nhất đến khác nhất. Ông ghi ngay: hệ th�
 
 ### Nguyên tắc thứ nhất: lặp lại
 
-"Lặp lại đơn giản là nguyên tắc phát triển sơ đẳng nhất" *(Sposobin, §13)*. Ở đây hiểu là lặp **nguyên văn**, và điều đặc biệt quan trọng, **với cùng một kết**.
+"Lặp lại đơn giản là nguyên tắc phát triển sơ đẳng nhất" [^sposobin-1984, §13, tr. 43]. Ở đây hiểu là lặp **nguyên văn**, và điều đặc biệt quan trọng, **với cùng một kết**.
 
 Trong khí nhạc, lặp lại đơn giản liền nhau nhanh chóng thôi được cảm nhận là phát triển, nên phần lớn chỉ dùng **một lần** (ví dụ trong sách: Beethoven, Sonata op. 31 №3). Sposobin đưa ra quy tắc tính phần khi phân tích, minh hoạ bằng Scherzo Giao hưởng số 3 của Schumann:
 
@@ -684,7 +684,7 @@ Mazel nêu cùng quy tắc: khi xác định kiểu hình thức, việc lặp m
 
 ### Nguyên tắc thứ hai: lặp lại biến đổi (biến tấu)
 
-Lặp lại biến đổi, thường gọi là **biến tấu** (варьирование), phức tạp hơn; mức phức tạp tuỳ độ sâu của thay đổi *(Sposobin, §14)*. Các quy tắc tính phần:
+Lặp lại biến đổi, thường gọi là **biến tấu** (варьирование), phức tạp hơn; mức phức tạp tuỳ độ sâu của thay đổi [^sposobin-1984, §14, tr. 45]. Các quy tắc tính phần:
 
 - biến tấu có thể **thay** lặp lại đơn giản mà giữ độ dài và kết; khi ấy biến tấu một yếu tố ngắn (khoảng đến ba ô nhịp) được tính là phần riêng (a + a₁, 1 + 1 = 2 ô nhịp...);
 - lặp biến đổi **một lần** một cấu trúc lớn hơn mà không đổi độ dài và kết thì khi phân tích không tính;
@@ -696,29 +696,29 @@ Sposobin thêm một quy tắc quan trọng: lặp liền **trên hoà âm khác
 
 ### Nguyên tắc thứ ba: phát triển
 
-"Phát triển là việc đưa ra những hạt nhỏ của chủ đề (hay các chủ đề) đã được trình bày trọn trước đó, hoặc thay đổi đáng kể bộ khung hoà âm, hoặc cả hai" *(Sposobin, §15)*. Thay đổi do phát triển sâu hơn biến tấu, vì **cấu trúc** của chủ đề bị thay đổi: thay vì một chủ đề tương đối trọn và dài, chỉ những phần của nó được trình bày.
+"Phát triển là việc đưa ra những hạt nhỏ của chủ đề (hay các chủ đề) đã được trình bày trọn trước đó, hoặc thay đổi đáng kể bộ khung hoà âm, hoặc cả hai" [^sposobin-1984, §15, tr. 46]. Thay đổi do phát triển sâu hơn biến tấu, vì **cấu trúc** của chủ đề bị thay đổi: thay vì một chủ đề tương đối trọn và dài, chỉ những phần của nó được trình bày.
 
 Trong phát triển có thể dùng lặp các phần chủ đề ở cùng cao độ (đơn giản hay biến đổi), ở cao độ mới (trên hoà âm khác, giọng khác), ở các bè khác nhau. Những yếu tố trước vang riêng có thể **kết hợp**, nối tiếp hay đồng thời; ví dụ trong sách là các chủ đề chương I Quartet số 2 của Borodin. Vào các phần chủ đề cũ có thể **gắn thêm yếu tố mới**, nối tiếp (Beethoven, Sonata op. 14 №1, chương I) hay đồng thời (Beethoven, Giao hưởng số 2, chương I, kèm phép tăng trường độ).
 
 ### Nguyên tắc thứ tư: tương phản dẫn xuất
 
-Thay đổi đưa vào chủ đề khi chế biến có thể lớn đến mức dẫn tới **tương phản dẫn xuất**, tức là biến chủ đề gốc thành **chủ đề mới** *(Sposobin, §16)*. Tương phản giữa nguồn và chủ đề mới có thể vừa phải (ví dụ trong sách: một sonata op. 2 của Beethoven, OCR ghi số không rõ; Giao hưởng số 3 *Eroica*, chương I), cũng có thể rất lớn.
+Thay đổi đưa vào chủ đề khi chế biến có thể lớn đến mức dẫn tới **tương phản dẫn xuất**, tức là biến chủ đề gốc thành **chủ đề mới** [^sposobin-1984, §16, tr. 48]. Tương phản giữa nguồn và chủ đề mới có thể vừa phải (ví dụ trong sách: một sonata op. 2 của Beethoven, OCR ghi số không rõ; Giao hưởng số 3 *Eroica*, chương I), cũng có thể rất lớn.
 
 Chú thích của Sposobin cho thấy ông tự ý thức về tính quy ước của hệ thống: khái niệm tương phản dẫn xuất có thể hiểu rộng hơn và áp dụng cả cho biến tấu và phát triển, vì chúng cũng ít nhiều soi sáng chất liệu gốc dưới ánh sáng mới. "Phân loại các hiện tượng nghệ thuật thường quy ước ở một mức nào đó."
 
 ### Nguyên tắc thứ năm: tương phản đối chiếu
 
-"Tương phản đối chiếu hình thành khi đưa vào một chủ đề mới, đặt đối diện với chủ đề (các chủ đề) đã trình bày, và cùng nó tạo nên một thống nhất nghệ thuật, dù khác nhau, đôi khi rất nhiều" *(Sposobin, §17)*. Mâu thuẫn giữa các chủ đề có thể được nhấn bằng việc **không có** chỗ nối chuyển tiếp (như một bước nhảy), hoặc làm dịu bằng chuyển tiếp dần (sự liền mạch).
+"Tương phản đối chiếu hình thành khi đưa vào một chủ đề mới, đặt đối diện với chủ đề (các chủ đề) đã trình bày, và cùng nó tạo nên một thống nhất nghệ thuật, dù khác nhau, đôi khi rất nhiều" [^sposobin-1984, §17, tr. 49]. Mâu thuẫn giữa các chủ đề có thể được nhấn bằng việc **không có** chỗ nối chuyển tiếp (như một bước nhảy), hoặc làm dịu bằng chuyển tiếp dần (sự liền mạch).
 
 Ông đề nghị hai thuật ngữ: khi các chủ đề không khác nhau nhiều (đặc biệt khi cùng tempo), tương phản là **một bình diện** (одноплановый); khi khác nhau nhiều (đặc biệt khi đổi tempo), là **nhiều bình diện** (разноплановый).
 
 ### Nguyên tắc và chức năng
 
-Như đã nói ở bài trước, Sposobin nhấn mạnh rằng các nguyên tắc phát triển "có ý nghĩa phổ quát và được dùng ngoài sự phụ thuộc trực tiếp vào chức năng của cấu trúc". Chỉ phát triển là thường gắn nhất với vị trí ở giữa và kiểu trình bày đoạn giữa *(Sposobin, §18)*. Tức là có thể có biến tấu trong trình bày, tương phản dẫn xuất trong phần nối, phát triển trong tái hiện hay coda.
+Như đã nói ở bài trước, Sposobin nhấn mạnh rằng các nguyên tắc phát triển "có ý nghĩa phổ quát và được dùng ngoài sự phụ thuộc trực tiếp vào chức năng của cấu trúc". Chỉ phát triển là thường gắn nhất với vị trí ở giữa và kiểu trình bày đoạn giữa [^sposobin-1984, §18, tr. 49]. Tức là có thể có biến tấu trong trình bày, tương phản dẫn xuất trong phần nối, phát triển trong tái hiện hay coda.
 
 ## 2. Các thủ pháp biến đổi chủ đề (công việc chủ đề)
 
-Để phát triển chủ đề ngay trong lần trình bày đầu, để lặp nó có biến đổi, để phát triển, và cuối cùng để rút ra chủ đề mới, có một loạt thủ pháp biến đổi. Sposobin gọi tổng thể chúng là **công việc chủ đề** (тематическая работа), vì chúng nhằm phát triển và chế biến những yếu tố có ý nghĩa chủ đề *(Sposobin, §19)*. Phần lớn thủ pháp áp dụng cho những cấu trúc giai điệu – chủ đề tương đối ngắn và đặc trưng, vì chúng dễ được tai nhận ra hơn khi bị biến đổi. Bất kỳ yếu tố nào cũng có thể bị biến đổi, ngay sau lần trình bày đầu hay muộn hơn.
+Để phát triển chủ đề ngay trong lần trình bày đầu, để lặp nó có biến đổi, để phát triển, và cuối cùng để rút ra chủ đề mới, có một loạt thủ pháp biến đổi. Sposobin gọi tổng thể chúng là **công việc chủ đề** (тематическая работа), vì chúng nhằm phát triển và chế biến những yếu tố có ý nghĩa chủ đề [^sposobin-1984, §19, tr. 51]. Phần lớn thủ pháp áp dụng cho những cấu trúc giai điệu – chủ đề tương đối ngắn và đặc trưng, vì chúng dễ được tai nhận ra hơn khi bị biến đổi. Bất kỳ yếu tố nào cũng có thể bị biến đổi, ngay sau lần trình bày đầu hay muộn hơn.
 
 Bảy thủ pháp:
 
@@ -732,7 +732,7 @@ Bảy thủ pháp:
 | f) Chuyển động ngược (возвратное, ракоходное, "kiểu cua") | đưa cấu trúc từ cuối về đầu; dùng hiếm vì khó nhận ra bằng tai | Schumann, Biến tấu *Abegg* op. 1; Borodin, *Hoàng tử Igor* |
 | g) Per arsin et thesin | dịch cấu trúc sang các phách khác của ô nhịp | — |
 
-Có thể kết hợp các thủ pháp: tăng trường độ với đảo, giảm trường độ với đảo... nhưng các kết hợp này tương đối hiếm. Sposobin cho rằng **quan trọng hơn** là áp dụng một thủ pháp chính chỉ cho **một phần** của cấu trúc: chẳng hạn giãn, nén hay đảo một hai quãng *(Sposobin, §19)*. Về các thủ pháp này trong nhạc nói chung, xem thêm [[bien-doi-chu-de]] và [[ly-thuyet-chu-de]].
+Có thể kết hợp các thủ pháp: tăng trường độ với đảo, giảm trường độ với đảo... nhưng các kết hợp này tương đối hiếm. Sposobin cho rằng **quan trọng hơn** là áp dụng một thủ pháp chính chỉ cho **một phần** của cấu trúc: chẳng hạn giãn, nén hay đảo một hai quãng [^sposobin-1984, §19, tr. 51]. Về các thủ pháp này trong nhạc nói chung, xem thêm [[bien-doi-chu-de]] và [[ly-thuyet-chu-de]].
 
 ## 3. Sáu nguyên tắc của Mazel
 
@@ -872,7 +872,7 @@ Asafyev phân biệt chuyển động **tuần tự** (đi từ tổ hợp ngữ
 
 ## 5. Quan hệ lôgic giữa các hình thức (Sposobin §145)
 
-Ở chương XII, Sposobin dựng một chuỗi "suy ra" các hình thức từ nhau. Ông dặn kỹ: vì mọi hình thức đều thể hiện các nguyên tắc tạo hình thức cơ bản, những hình thức phức tạp hơn có thể hình dung như sự phát triển của những hình thức đơn giản nhất. Nhưng cái nhìn so sánh này "có tính **lôgic**, và con đường **lịch sử** của chúng chỉ trùng một phần với nó, thực tế phức tạp và quanh co hơn nhiều" *(Sposobin, §145)*. Chín mắt xích:
+Ở chương XII, Sposobin dựng một chuỗi "suy ra" các hình thức từ nhau. Ông dặn kỹ: vì mọi hình thức đều thể hiện các nguyên tắc tạo hình thức cơ bản, những hình thức phức tạp hơn có thể hình dung như sự phát triển của những hình thức đơn giản nhất. Nhưng cái nhìn so sánh này "có tính **lôgic**, và con đường **lịch sử** của chúng chỉ trùng một phần với nó, thực tế phức tạp và quanh co hơn nhiều" [^sposobin-1984, §145, tr. 253]. Chín mắt xích:
 
 1. **Đoạn nhạc hai câu có kết nửa ở giữa** là nguyên mẫu của **hình thức hai đoạn đơn**. Lý do: cả hai đều có hai đoạn, có kết nửa (hay chuyển sang giọng phụ) ở cuối phần một và kết ở giọng chính. Về chủ đề, Sposobin nhắc rằng việc phần hai lặp chất liệu phần một hoàn toàn không bắt buộc với đoạn nhạc, càng không bắt buộc với hình thức hai đoạn ở dạng cổ của chúng (thế kỷ 17 – nửa đầu thế kỷ 18; OCR ghi số thế kỷ nhoè). Chỉ muộn hơn, ở các nhà cổ điển Vienna, sự giống nhau giữa đầu hai câu trong đoạn nhạc và giữa cuối hai đoạn trong hình thức hai đoạn mới thành điển hình.
 2. **Hai đoạn đơn có tái hiện** là cơ sở cho **ba đoạn đơn có tái hiện**, nơi đoạn giữa và tái hiện phát triển rộng hơn và tách bạch hơn.

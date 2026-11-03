@@ -9,6 +9,7 @@ import '../sources/sources.css'
 import '../musicology/musicology-sky.css'
 import './explore.css'
 import { updateProject, useProjects } from '../research/store'
+import { loadRelations, type Link as Rel, type Relations } from './data'
 import { keyVi, loadPeople, useWorks, workYear, type People, type Person } from './data'
 
 /**
@@ -379,6 +380,7 @@ function PersonView({ data, id, onOpen }: { data: People; id: string; onOpen: (i
         </section>
       )}
       <PersonWorks id={p.id} />
+      <Lineage id={p.id} onOpen={onOpen} nameOf={(x) => data.people.find((o) => o.id === x)?.name ?? x} />
       {places.length > 0 && (
         <section className="ex-block">
           <h3>Nơi chốn trên bản đồ {journey && <Link to={`/musicology/ban-do?j=${journey.id}`} className="ex-more">Xem hành trình →</Link>}</h3>
@@ -480,6 +482,61 @@ function AddToProject({ person }: { person: string }) {
       {holding.map((x) => (
         <Link key={x.id} to={`/research/${x.id}`} className="text-[var(--color-gold)] hover:underline">✓ {x.title}</Link>
       ))}
+    </span>
+  )
+}
+
+/** Teachers, students and influences (Wikidata), both ways; people in the library open their own profile. */
+function Lineage({ id, onOpen, nameOf }: { id: string; onOpen: (id: string) => void; nameOf: (id: string) => string }) {
+  const [rel, setRel] = useState<Relations | null>(null)
+  useEffect(() => {
+    let live = true
+    loadRelations().then((r) => live && setRel(r), () => {})
+    return () => {
+      live = false
+    }
+  }, [])
+  if (!rel) return null
+  const mine = rel[id] ?? {}
+  // "influenced by X" stated on others, read backwards: whom this person influenced, within the library
+  const influenced: Rel[] = Object.entries(rel)
+    .filter(([, r]) => r.influences?.some((x) => x[0] === id))
+    .map(([other]) => [other, nameOf(other), ''])
+  const rows: [string, Rel[] | undefined][] = [
+    ['Học với', mine.teachers],
+    ['Học trò', mine.students],
+    ['Chịu ảnh hưởng của', mine.influences],
+    ['Ảnh hưởng tới (trong thư viện)', influenced],
+  ]
+  if (!rows.some(([, l]) => l?.length)) return null
+  return (
+    <section className="ex-block">
+      <h3>Thầy, trò và ảnh hưởng <span className="ex-more">theo Wikidata</span></h3>
+      <dl className="ex-lineage">
+        {rows.filter(([, l]) => l?.length).map(([label, list]) => (
+          <div key={label}>
+            <dt>{label}</dt>
+            <dd><LinkList list={list!} onOpen={onOpen} /></dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )
+}
+
+function LinkList({ list, onOpen }: { list: Rel[]; onOpen: (id: string) => void }) {
+  const [all, setAll] = useState(false)
+  const shown = all ? list : list.slice(0, 16)
+  return (
+    <span className="flex flex-wrap gap-1.5">
+      {shown.map(([pid, name, qid]) =>
+        pid ? (
+          <button key={pid + qid} onClick={() => onOpen(pid)} className="mc-chip">{name}</button>
+        ) : (
+          <a key={qid} href={`https://www.wikidata.org/wiki/${qid}`} target="_blank" rel="noreferrer" className="ex-ext">{name}</a>
+        ),
+      )}
+      {list.length > shown.length && <button onClick={() => setAll(true)} className="ex-more">+{list.length - shown.length}</button>}
     </span>
   )
 }

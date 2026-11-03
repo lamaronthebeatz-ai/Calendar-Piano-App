@@ -43,7 +43,7 @@ export interface ArticleMeta extends Omit<Article, 'body' | 'refs'> {
 }
 
 /** Section titles of an article, in order (Markup gives them ids sec-0, sec-1…). */
-export const headings = (body: string) => [...body.matchAll(/^\s*## (.+)$/gm)].map((m) => m[1].trim())
+export const headings = (body: string) => [...body.matchAll(/^\s*## (.+)$/gm)].map((m) => m[1].replace(/\s*\[\^[^\]]+\]/g, '').trim())
 
 export const normalize = (s: string) =>
   s.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase().trim()

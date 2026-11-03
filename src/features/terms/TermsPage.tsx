@@ -7,6 +7,7 @@ import { normalize } from '../theory/wiki'
 import '../sources/sources.css'
 import './terms.css'
 import termsUrl from './terms.json?url'
+import { SchoolViews } from './SchoolViews'
 
 /** One glossary entry (scripts/terms/build.py). */
 interface Term {
@@ -108,6 +109,7 @@ export function TermsPage() {
                   ))}
                 </p>
               )}
+              <SchoolViews slug={t.id} />
               <a href={`https://www.wikidata.org/wiki/${t.qid}`} target="_blank" rel="noreferrer" className="term-src">
                 Wikidata {t.qid} <ArrowUpRightIcon width={11} height={11} />
               </a>

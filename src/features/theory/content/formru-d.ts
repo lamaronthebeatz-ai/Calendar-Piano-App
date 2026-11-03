@@ -13,22 +13,22 @@ export const formRuD: Article[] = [
 Bài thứ mười trong [[hinh-thuc-nga-lo-trinh|bộ hình thức âm nhạc trường phái Nga]]. Phương pháp biến tấu như một **nguyên tắc phát triển** đã gặp ở [[hinh-thuc-nga-nguyen-tac-phat-trien]]; ở đây nó trở thành **nền tảng của cả một hình thức**. Bài dựa trên Sposobin *Музыкальная форма*, chương VI (§79–91); Mazel *Строение музыкальных произведений*, chương IX (§1–7); Asafyev *Музыкальная форма как процесс*, quyển 1, chương II và VII. Ba sách đều đọc qua OCR; chỗ nào không đọc được thì bỏ, chỗ nghi vấn có ghi chú.
 
 ## 1. Định nghĩa
-Sposobin mở chương bằng định nghĩa ngắn gọn: "**Chủ đề với các biến tấu** (тема с вариациями) là hình thức gồm phần trình bày ban đầu của chủ đề và một số lần nhắc lại nó dưới dạng đã biến đổi, gọi là các biến tấu" *(Sposobin, §79)*. Vì số biến tấu không hạn định, sơ đồ chỉ có thể rất chung:
+Sposobin mở chương bằng định nghĩa ngắn gọn: "**Chủ đề với các biến tấu** (тема с вариациями) là hình thức gồm phần trình bày ban đầu của chủ đề và một số lần nhắc lại nó dưới dạng đã biến đổi, gọi là các biến tấu" [^sposobin-1984, §79, tr. 159]. Vì số biến tấu không hạn định, sơ đồ chỉ có thể rất chung:
 
-::form Chủ_đề_A A1 A2 A3 … | Sơ đồ chung của hình thức biến tấu (Sposobin, §79): A + A1 + A2 + A3…
+::form Chủ_đề_A A1 A2 A3 … | Sơ đồ chung của hình thức biến tấu [^sposobin-1984, §79, tr. 159]: A + A1 + A2 + A3…
 
 Mazel định nghĩa gần như cùng lời: "**Hình thức biến tấu** hay **chu kỳ biến tấu** (вариационный цикл) là hình thức gồm phần trình bày ban đầu của chủ đề và một loạt lần nhắc lại đã biến đổi của nó (gọi là các biến tấu)" *(Mazel, ch. IX §1)*. Ông nói thêm vài thông số thực tế: trước chủ đề đôi khi có phần mở đầu; nhiều chu kỳ kết bằng coda; số biến tấu từ hai – ba tới vài chục; độ dài chủ đề từ một cấu trúc bốn ô tới hình thức ba đoạn đơn. Chủ đề hay được mượn từ dân ca hoặc từ tác phẩm của người khác; nếu do chính tác giả viết thì gọi là **chủ đề nguyên tác** (оригинальная тема).
 
 ### Biến tấu như phương pháp và như hình thức
-Cả hai sách nhấn mạnh sự khác nhau giữa *phương pháp* biến tấu và *hình thức* biến tấu. Sposobin: phép nhắc lại có biến đổi đã gặp ở đoạn nhạc, ở hình thức hai và ba đoạn, nhưng ở đó nó chỉ giữ "vai trò phụ trợ, phục vụ"; còn trong hình thức biến tấu, biến tấu "đóng vai trò nền tảng của sự tạo hình", vì không có nó thì chỉ còn việc nhắc chủ đề liên tiếp, "điều không được cảm nhận như sự phát triển, nhất là trong âm nhạc khí nhạc" *(Sposobin, §79)*.
+Cả hai sách nhấn mạnh sự khác nhau giữa *phương pháp* biến tấu và *hình thức* biến tấu. Sposobin: phép nhắc lại có biến đổi đã gặp ở đoạn nhạc, ở hình thức hai và ba đoạn, nhưng ở đó nó chỉ giữ "vai trò phụ trợ, phục vụ"; còn trong hình thức biến tấu, biến tấu "đóng vai trò nền tảng của sự tạo hình", vì không có nó thì chỉ còn việc nhắc chủ đề liên tiếp, "điều không được cảm nhận như sự phát triển, nhất là trong âm nhạc khí nhạc" [^sposobin-1984, §79, tr. 159].
 
 Mazel đặt biến tấu cạnh rondo để làm rõ bản chất: cả hai đều kết hợp yếu tố **không đổi** và yếu tố **thay đổi**. "Ở rondo, sự kết hợp ấy diễn ra như thể theo thời điểm khác nhau, còn ở hình thức biến tấu nó được thực hiện **đồng thời**: trong mỗi biến tấu vừa có cái mới, vừa có mối liên hệ thường trực với cùng một chủ đề" *(Mazel, ch. IX §1)*. Xem đối chiếu với [[hinh-thuc-nga-rondo]].
 
 ### Biến tấu như một thể loại
-Mazel lưu ý: biến tấu không chỉ là hình thức mà còn có thể xem là **thể loại** — điều làm nó khác đoạn nhạc, hai đoạn, ba đoạn và gần với rondo. Tên gọi thường gặp: "Chủ đề với biến tấu", "Biến tấu trên chủ đề…", đôi khi ghi số lượng hoặc tính chất ("biến tấu rực rỡ", "biến tấu nghiêm trang"). Khi tên tác phẩm đã nói là biến tấu thì các biến tấu thường được đánh số và chủ đề ghi chữ *Thema*; nếu không thì thường không có số *(Mazel, ch. IX §1)*. Sposobin kể thêm các tên "Passacaglia", "Chaconne", hiếm hơn "Partita", hoặc tên riêng như "Symphonic Études"; có khi tên không nói gì và biến tấu cũng không đánh số — ví dụ chương hai các sonata op. 10 số 2 và op. 57 của Beethoven *(Sposobin, §91)*.
+Mazel lưu ý: biến tấu không chỉ là hình thức mà còn có thể xem là **thể loại** — điều làm nó khác đoạn nhạc, hai đoạn, ba đoạn và gần với rondo. Tên gọi thường gặp: "Chủ đề với biến tấu", "Biến tấu trên chủ đề…", đôi khi ghi số lượng hoặc tính chất ("biến tấu rực rỡ", "biến tấu nghiêm trang"). Khi tên tác phẩm đã nói là biến tấu thì các biến tấu thường được đánh số và chủ đề ghi chữ *Thema*; nếu không thì thường không có số *(Mazel, ch. IX §1)*. Sposobin kể thêm các tên "Passacaglia", "Chaconne", hiếm hơn "Partita", hoặc tên riêng như "Symphonic Études"; có khi tên không nói gì và biến tấu cũng không đánh số — ví dụ chương hai các sonata op. 10 số 2 và op. 57 của Beethoven [^sposobin-1984, §91, tr. 176].
 
 ## 2. Nguồn gốc
-Sposobin dè dặt: vì những mẫu biến tấu cổ nhất gắn trực tiếp với âm nhạc vũ khúc, có thể đoán rằng chính vũ khúc là nguồn và cớ trực tiếp sinh ra hình thức này; từ đó "khá có thể" hình thức có nguồn gốc, dù có lẽ không trực tiếp, từ âm nhạc dân gian *(Sposobin, §79)*.
+Sposobin dè dặt: vì những mẫu biến tấu cổ nhất gắn trực tiếp với âm nhạc vũ khúc, có thể đoán rằng chính vũ khúc là nguồn và cớ trực tiếp sinh ra hình thức này; từ đó "khá có thể" hình thức có nguồn gốc, dù có lẽ không trực tiếp, từ âm nhạc dân gian [^sposobin-1984, §79, tr. 159].
 
 Mazel nói mạnh hơn và cụ thể hơn: hình thức biến tấu "có gốc rễ sâu trong âm nhạc dân gian ca hát và vũ khúc"; ở nhiều chu kỳ biến tấu của các nhà kinh điển Nga thấy rõ mối liên hệ với **tính biến thể theo lời ca** (куплетная вариантность) của dân ca Nga *(Mazel, ch. IX §1)*. Ông phân biệt **hình thức lời ca – biến thể** (куплетно-вариантная форма) của dân ca với hình thức biến tấu chuyên nghiệp ở ba điểm:
 
@@ -89,14 +89,14 @@ Mazel phân tích kỹ hơn về ý nghĩa:
 
 ## 5. Biến tấu nghiêm (trang trí, hình hoá)
 ### Hình thành
-Thế kỷ 18, một phần song song với basso ostinato nhưng nhất là về cuối thế kỷ, hình thành kiểu mới — **biến tấu nghiêm (cổ điển)**, đôi khi gọi là **trang trí** (орнаментальные). Nguyên mẫu của nó là việc sau một vũ khúc trong tổ khúc cổ có biến tấu của chính vũ khúc ấy với nhiều trang sức nhỏ mà không đổi các yếu tố chính — gọi là **double** *(Sposobin, §81)*. Mazel gọi kiểu này là **hình hoá** (фигурационные) theo thủ pháp chủ đạo và giải thích tên "nghiêm": biến tấu không vượt khỏi những khuôn khổ nghiêm ngặt nhất định *(Mazel, ch. IX §4)*.
+Thế kỷ 18, một phần song song với basso ostinato nhưng nhất là về cuối thế kỷ, hình thành kiểu mới — **biến tấu nghiêm (cổ điển)**, đôi khi gọi là **trang trí** (орнаментальные). Nguyên mẫu của nó là việc sau một vũ khúc trong tổ khúc cổ có biến tấu của chính vũ khúc ấy với nhiều trang sức nhỏ mà không đổi các yếu tố chính — gọi là **double** [^sposobin-1984, §81, tr. 161]. Mazel gọi kiểu này là **hình hoá** (фигурационные) theo thủ pháp chủ đạo và giải thích tên "nghiêm": biến tấu không vượt khỏi những khuôn khổ nghiêm ngặt nhất định *(Mazel, ch. IX §4)*.
 
 ### Chủ đề
 Hai sách mô tả chủ đề rất giống nhau:
-- **Giai điệu** đơn giản, dễ nhận, chứa những nét điển hình; tránh những nét quá cá tính vì khó biến tấu, mà nhắc lại thì "gây khó chịu". Tương phản bên trong nhỏ, nhưng có những yếu tố có thể phát triển riêng *(Sposobin, §81)*.
+- **Giai điệu** đơn giản, dễ nhận, chứa những nét điển hình; tránh những nét quá cá tính vì khó biến tấu, mà nhắc lại thì "gây khó chịu". Tương phản bên trong nhỏ, nhưng có những yếu tố có thể phát triển riêng [^sposobin-1984, §81, tr. 161].
 - **Tempo** vừa phải — vừa dễ nhớ, vừa để chừa chỗ tăng hay giảm tốc ở các biến tấu.
 - **Hoà âm** khép kín về điệu tính, cấu trúc điển hình và đơn giản; **kết cấu** không có hình hoá phức tạp. Mazel thêm: âm lượng vừa, thường ở âm vực giữa, kết cấu nhiều khi là hoà âm ba – bốn bè; chính sự giản dị ấy để lại nhiều khả năng: tăng chuyển động hình hoá, cromatic hoá, tăng hay giảm âm lượng, đối chiếu âm vực, đổi kết cấu *(Mazel, ch. IX §4)*.
-- **Cấu trúc**: thời Bach đã có chủ đề ở hình thức hai đoạn đơn bên cạnh chủ đề ngắn. Với biến tấu cổ điển, điển hình nhất là **hai đoạn có tái hiện**; ba đoạn hiếm hơn. Sposobin giải thích vì sao ba đoạn kém thuận: ở ranh giới hai biến tấu sẽ có hai đoạn cùng độ dài, cùng nội dung đứng cạnh nhau (a b a | a b a). Chủ đề chỉ là một đoạn nhạc rất hiếm — ví dụ *32 biến tấu* của Beethoven, vốn gần với biến tấu ostinato. Ở chủ đề hai đoạn hay có lệch nhỏ khỏi tính vuông: Mozart, biến tấu trong Sonata La trưởng (mở rộng đoạn II); Beethoven, Sonata op. 26 chương I (mở rộng đoạn giữa) *(Sposobin, §81)*.
+- **Cấu trúc**: thời Bach đã có chủ đề ở hình thức hai đoạn đơn bên cạnh chủ đề ngắn. Với biến tấu cổ điển, điển hình nhất là **hai đoạn có tái hiện**; ba đoạn hiếm hơn. Sposobin giải thích vì sao ba đoạn kém thuận: ở ranh giới hai biến tấu sẽ có hai đoạn cùng độ dài, cùng nội dung đứng cạnh nhau (a b a | a b a). Chủ đề chỉ là một đoạn nhạc rất hiếm — ví dụ *32 biến tấu* của Beethoven, vốn gần với biến tấu ostinato. Ở chủ đề hai đoạn hay có lệch nhỏ khỏi tính vuông: Mozart, biến tấu trong Sonata La trưởng (mở rộng đoạn II); Beethoven, Sonata op. 26 chương I (mở rộng đoạn giữa) [^sposobin-1984, §81, tr. 161].
 
 ### Các cách biến tấu
 Sposobin coi biến tấu trang trí là cách tiếp cận "**khách quan**": nó "như mở ra các mặt khác nhau của chủ đề mà không đổi cá tính của nó" *(Sposobin, §82)*. Các cách chính:
@@ -130,7 +130,7 @@ Mazel thêm các phương tiện liên kết khác:
 - Các yếu tố **phát triển xuyên suốt**: biến tấu này chuyển thẳng sang biến tấu kia, đoạn phát triển, khâu nối — thường dồn về nửa sau chu kỳ, còn các biến tấu đầu khép kín hơn, tạo yếu tố **tổng hợp** (суммирование) cho cả hình thức (Mazel dẫn fantasy *Kazachok* của Dargomyzhsky). Độ tương phản giữa các biến tấu cũng thường tăng về cuối *(Mazel, ch. IX §6)*.
 
 ## 7. Ví dụ phân tích: Beethoven, Sonata op. 26, chương I
-Sposobin chọn chương này làm mẫu biến tấu trang trí "có giá trị nghệ thuật rất cao" và phân tích từng biến tấu *(Sposobin, §84)*:
+Sposobin chọn chương này làm mẫu biến tấu trang trí "có giá trị nghệ thuật rất cao" và phân tích từng biến tấu [^sposobin-1984, §84, tr. 164]:
 
 | Phần | Những gì thay đổi | Tính chất |
 |---|---|---|
@@ -145,7 +145,7 @@ Sposobin chọn chương này làm mẫu biến tấu trang trí "có giá trị
 Mazel nhìn cùng bản ở tầm chu kỳ: logic tương phản giữa các biến tấu gợi logic của **chu kỳ sonata cổ điển**, và biến tấu ba (minore, bi thương) rõ ràng tương ứng với hành khúc tang lễ trong chính sonata ấy *(Mazel, ch. IX §4)*. Ông cũng phân tích chương I Sonata La trưởng của Mozart (chủ đề gần siciliana, hai đoạn có tái hiện): biến tấu I làm lộ tương phản nhẹ – nặng giữa hai câu; II gần phong cách "galant"; III là trữ tình thứ xao động; IV trở lại trưởng, gợi trio của minuet; V (Adagio) gần aria và nhắc biến tấu II (nên III – IV thành "tâm đối xứng"); VI (Allegro, đổi nhịp — "ngoại lệ" với biến tấu nghiêm) mang tính vũ khúc như finale.
 
 ## 8. Phát triển xuyên suốt: chương cuối Giao hưởng số 3 của Beethoven
-Sposobin: vì mỗi biến tấu khép kín và điệu tính chính chiếm ưu thế, hình thức nhìn chung "hơi tĩnh". Beethoven lần đầu, trong một hình thức biến tấu rất lớn, đưa vào **những đoạn dài không ổn định kiểu phát triển**, khâu nối, tận dụng tính **không khép kín** của biến tấu và đặt **cả loạt biến tấu ở điệu tính phụ**. Nhờ đó mới dựng được chương cuối *Eroica* *(Sposobin, §85)*. Sơ đồ theo số ô (Sposobin):
+Sposobin: vì mỗi biến tấu khép kín và điệu tính chính chiếm ưu thế, hình thức nhìn chung "hơi tĩnh". Beethoven lần đầu, trong một hình thức biến tấu rất lớn, đưa vào **những đoạn dài không ổn định kiểu phát triển**, khâu nối, tận dụng tính **không khép kín** của biến tấu và đặt **cả loạt biến tấu ở điệu tính phụ**. Nhờ đó mới dựng được chương cuối *Eroica* [^sposobin-1984, §85, tr. 168]. Sơ đồ theo số ô (Sposobin):
 
 | Ô | Phần | Điệu tính |
 |---|---|---|
@@ -182,7 +182,7 @@ Nếu gộp nhóm III và IV, hình thức lộ ra **đối xứng**: ba nhóm m
 
 ## 10. Biến tấu tự do
 ### Đặc điểm
-Thế kỷ 19, cạnh những mẫu nối tiếp các phương pháp cũ, xuất hiện kiểu mới *(Sposobin, §86)*. Ngay *Biến tấu op. 34* của Beethoven đã có nhiều cách tân: chỉ chủ đề và biến tấu cuối ở điệu tính chính, các biến tấu khác ở các điệu tính phụ theo chuỗi **quãng ba đi xuống**; đường nét hoà âm và nét giai điệu chính còn ít đổi, nhưng tiết tấu, nhịp, tempo đổi sao cho mỗi biến tấu có tính chất riêng (Mazel thêm: vài biến tấu có ghi thể loại — *Tempo di minuetto*, *Marcia*). Các nét chính của hướng mới theo Sposobin:
+Thế kỷ 19, cạnh những mẫu nối tiếp các phương pháp cũ, xuất hiện kiểu mới [^sposobin-1984, §86, tr. 169]. Ngay *Biến tấu op. 34* của Beethoven đã có nhiều cách tân: chỉ chủ đề và biến tấu cuối ở điệu tính chính, các biến tấu khác ở các điệu tính phụ theo chuỗi **quãng ba đi xuống**; đường nét hoà âm và nét giai điệu chính còn ít đổi, nhưng tiết tấu, nhịp, tempo đổi sao cho mỗi biến tấu có tính chất riêng (Mazel thêm: vài biến tấu có ghi thể loại — *Tempo di minuetto*, *Marcia*). Các nét chính của hướng mới theo Sposobin:
 
 1. Mỗi biến tấu có tính chất cá nhân, rất độc lập — một cách tiếp cận "**chủ quan hơn**" so với các nhà cổ điển; biến tấu bắt đầu mang ý nghĩa **chương trình**.
 2. Cả chu kỳ thành ra **giống tổ khúc**; đôi khi có khâu nối giữa các biến tấu.
@@ -216,7 +216,7 @@ Sposobin tóm: đi từ chủ đề tang lễ qua những biến tấu khác tí
 
 ## 11. Biến tấu kiểu Glinka (giai điệu giữ nguyên)
 ### Ba nguồn
-Sposobin: cấu trúc theo lời của dân ca Nga là nguồn của một kiểu biến tấu mới do **M. I. Glinka** đưa vào, phổ biến trong văn học âm nhạc Nga, chủ yếu ở các số opera tính chất bài ca *(Sposobin, §88)*. Ông chỉ ra ba thành tố:
+Sposobin: cấu trúc theo lời của dân ca Nga là nguồn của một kiểu biến tấu mới do **M. I. Glinka** đưa vào, phổ biến trong văn học âm nhạc Nga, chủ yếu ở các số opera tính chất bài ca [^sposobin-1984, §88, tr. 171]. Ông chỉ ra ba thành tố:
 1. Như giai điệu dân ca lặp gần như không đổi ở mỗi lời, ở đây giai điệu chủ đề **gần như không đổi** — thủ pháp hay gọi là **soprano ostinato**, vì "giữa nó và bè trầm kiên trì cổ quả thực có điểm chung".
 2. Việc biến tấu **bè đỡ** (подголоски) trong âm nhạc dân gian, hơi giống trang trí của biến tấu cổ điển, thúc đẩy việc thêm các bè đối âm vào giai điệu ostinato.
 3. Thành tựu biến tấu hoà âm của thời lãng mạn đặc biệt hợp với một hình thức có giai điệu không đổi.
@@ -244,7 +244,7 @@ Tổng thể tạo ấn tượng "xa hoa và bất động của phương Đông
 Sposobin dẫn một mẫu phức tạp hơn: Ballade của Finn trong *Ruslan và Lyudmila* — có biến tấu rời khỏi tính ostinato và hai biến tấu mang yếu tố phát triển. Đưa các episode ở điệu tính phụ, rời ostinato, "ở mức nào đó làm hình thức họ hàng với rondo", dù yếu tố biến tấu vẫn trội. Kiểu này, nhờ năng động hơn, tỏ ra **bền vững về lịch sử** (các opera của Rimsky-Korsakov) *(Sposobin, §89)*. (Bảng độ dài từng biến tấu trong sách bị OCR làm vỡ, không dẫn lại ở đây.)
 
 ## 12. Biến tấu kép
-Sposobin: "Thỉnh thoảng gặp biến tấu trên hai chủ đề, gọi là **biến tấu kép** (двойные). Trong đó trình bày cả hai chủ đề trước, rồi luân phiên biến tấu chủ đề thứ nhất và thứ hai" *(Sposobin, §90)*. Mazel nói rõ đó là cách của các nhà cổ điển Vienna và dẫn chương II (Đô thứ) Giao hưởng London Mi giáng trưởng của Haydn (chủ đề hai ở Đô trưởng, họ hàng với chủ đề một, sau đó tổng cộng bốn biến tấu) và *Biến tấu Fa thứ* cho piano của Haydn *(Mazel, ch. IX §7)*.
+Sposobin: "Thỉnh thoảng gặp biến tấu trên hai chủ đề, gọi là **biến tấu kép** (двойные). Trong đó trình bày cả hai chủ đề trước, rồi luân phiên biến tấu chủ đề thứ nhất và thứ hai" [^sposobin-1984, §90, tr. 175]. Mazel nói rõ đó là cách của các nhà cổ điển Vienna và dẫn chương II (Đô thứ) Giao hưởng London Mi giáng trưởng của Haydn (chủ đề hai ở Đô trưởng, họ hàng với chủ đề một, sau đó tổng cộng bốn biến tấu) và *Biến tấu Fa thứ* cho piano của Haydn *(Mazel, ch. IX §7)*.
 
 Cách sắp tự do hơn: **Andante Giao hưởng số 5 của Beethoven**. Sơ đồ theo Sposobin (số ô):
 
@@ -273,9 +273,9 @@ Asafyev nêu ý quan trọng nhất về bản chất: trong lịch sử biến 
 Vì thế cái kết của một chu kỳ biến tấu không đến "tự nhiên" từ hình thức mà phải **được tạo ra**: hai sách kia liệt kê đúng những phương tiện ấy — biến tấu chậm trước kết, biến tấu cuối mang tính finale, coda có kết bổ sung, chủ đề trở lại nguyên dạng, hình thành chủ đề mới mang tính tổng kết, tắt dần (Hợp xướng Ba Tư), chuyển hướng hạ át ở biến tấu cuối (bài ca Marfa, Hợp xướng Ba Tư, finale *Eroica*). Asafyev cũng lưu ý một tương phản sơ đẳng nhưng hiệu quả: **biến tấu thứ ở giữa các biến tấu trưởng** — sau một loạt trình bày trưởng, minore tạo "cảm giác gãy của chuyển động", nên được ưa hơn việc đưa chủ đề sang điệu tính khác cùng điệu thức *(Asafyev, Q1 ch. II)*.
 
 ## 14. Phạm vi dùng
-- Tác phẩm độc lập (rất thường); phần của tác phẩm lớn: hợp xướng hay bài ca trong opera; đặc biệt điển hình là **một chương độc lập** trong chu kỳ nhiều chương *(Sposobin, §91)*.
+- Tác phẩm độc lập (rất thường); phần của tác phẩm lớn: hợp xướng hay bài ca trong opera; đặc biệt điển hình là **một chương độc lập** trong chu kỳ nhiều chương [^sposobin-1984, §91, tr. 176].
 - Hiếm: biến tấu như một phần không độc lập của hình thức lớn. Allegretto Giao hưởng số 7 của Beethoven: trio đặt giữa các biến tấu, toàn bộ thành ba đoạn phức; Mazel thêm chương II *Scheherazade* (phần đầu là chu kỳ biến tấu).
-- "Càng ngoại lệ": chủ đề với biến tấu đúng nghĩa làm episode trong đoạn giữa hình thức sonata — chương I Giao hưởng số 7 của Shostakovich; thủ pháp tương tự ở Concerto piano số 1 của Medtner *(Sposobin, §91)*.
+- "Càng ngoại lệ": chủ đề với biến tấu đúng nghĩa làm episode trong đoạn giữa hình thức sonata — chương I Giao hưởng số 7 của Shostakovich; thủ pháp tương tự ở Concerto piano số 1 của Medtner [^sposobin-1984, §91, tr. 176].
 
 ## Ba sách nói gì — đối chiếu
 | Vấn đề | Sposobin (ch. VI) | Mazel (ch. IX) | Asafyev (Q1 ch. II, VII) |
@@ -334,14 +334,14 @@ Tư liệu phân tích chọn từ danh sách "Материал для анал�
 Bài thứ mười một trong [[hinh-thuc-nga-lo-trinh|bộ hình thức âm nhạc trường phái Nga]]. Rondo đứng sau [[hinh-thuc-nga-ba-phan-phuc|ba đoạn phức]] và [[hinh-thuc-nga-bien-tau|biến tấu]] và là bước chuẩn bị cho [[hinh-thuc-nga-rondo-sonata|rondo – sonata]]. Nguồn: Sposobin *Музыкальная форма*, chương VII (§92–100); Mazel *Строение музыкальных произведений*, chương VIII (§1–3); Asafyev *Музыкальная форма как процесс*, quyển 1, chương VII. Ba sách đọc qua OCR. Riêng §93 của Sposobin (nguồn gốc rondo, tính chất nội dung) nằm trên một trang in xoay ngang và **không đọc được** — chỉ còn vài mảnh câu; phần nguồn gốc dưới đây chủ yếu theo Mazel.
 
 ## 1. Định nghĩa
-Sposobin: "**Rondo** là hình thức trong đó cùng một chủ đề được trình bày **không ít hơn ba lần**, còn giữa các lần trình bày đặt những phần có nội dung khác và, thường nhất, mỗi lần một nội dung mới" *(Sposobin, §92)*. Sơ đồ chung:
+Sposobin: "**Rondo** là hình thức trong đó cùng một chủ đề được trình bày **không ít hơn ba lần**, còn giữa các lần trình bày đặt những phần có nội dung khác và, thường nhất, mỗi lần một nội dung mới" [^sposobin-1984, §92, tr. 178]. Sơ đồ chung:
 
-::form A B A C A … | Sơ đồ chung của rondo (Sposobin, §92): A + B + A + C + A…
+::form A B A C A … | Sơ đồ chung của rondo [^sposobin-1984, §92, tr. 178]: A + B + A + C + A…
 
 Mazel: "Hình thức rondo là hình thức mà **nền tảng** của nó là sự **luân phiên** một chủ đề chính trở lại nhiều lần với các episode khác nhau" *(Mazel, ch. VIII §1)*. Ông rút hệ quả: chủ đề trở lại "nhiều lần" (tức ít nhất hai lần) nên vang ít nhất ba lần; episode ít nhất hai; do đó rondo có **ít nhất năm đoạn**: A B A C A. Số phần có thể là bảy, chín, mười một; sơ đồ chung là A B A C A … A.
 
 ### Hai nguyên tắc gặp nhau
-Sposobin: trong rondo, **nguyên tắc tái hiện** (принцип репризности) thể hiện mạnh nhất — "về mặt số lượng, không hình thức nào khác thể hiện nó mạnh bằng"; đồng thời nó kết hợp với **nguyên tắc đối chiếu tương phản** (tương phản bên ngoài) *(Sposobin, §92)*. Mazel diễn đạt: rondo điển hình dựa trên **đối chiếu tương phản nhiều lần** và **tái hiện nhiều lần** — khác ba đoạn phức điển hình vốn dựa trên một lần đối chiếu (phần đầu – trio) và một lần tái hiện *(Mazel, ch. VIII §1)*.
+Sposobin: trong rondo, **nguyên tắc tái hiện** (принцип репризности) thể hiện mạnh nhất — "về mặt số lượng, không hình thức nào khác thể hiện nó mạnh bằng"; đồng thời nó kết hợp với **nguyên tắc đối chiếu tương phản** (tương phản bên ngoài) [^sposobin-1984, §92, tr. 178]. Mazel diễn đạt: rondo điển hình dựa trên **đối chiếu tương phản nhiều lần** và **tái hiện nhiều lần** — khác ba đoạn phức điển hình vốn dựa trên một lần đối chiếu (phần đầu – trio) và một lần tái hiện *(Mazel, ch. VIII §1)*.
 
 ### Rondo như chuỗi hình thức ba đoạn
 Cả hai sách đưa ra cùng một cách nhìn: rondo là **chuỗi các hình thức ba đoạn** móc vào nhau, trong đó tái hiện của hình thức ba đoạn trước đồng thời là phần đầu của hình thức sau. Sposobin nói chủ đề lặp lại "được tính cả sang trái lẫn sang phải" *(Sposobin, §92; Mazel, ch. VIII §1)*.
@@ -351,7 +351,7 @@ Cả hai sách đưa ra cùng một cách nhìn: rondo là **chuỗi các hình 
 | ba phần I (A B A) | | ← chung → | | |
 | | | ba phần II (A C A) | | |
 
-So với hình thức hai và ba đoạn, rondo là thêm một bước **mở rộng hình thức bằng cách ghép nhiều phần** *(Sposobin, §92)*.
+So với hình thức hai và ba đoạn, rondo là thêm một bước **mở rộng hình thức bằng cách ghép nhiều phần** [^sposobin-1984, §92, tr. 178].
 
 ### Thuật ngữ
 - Chủ đề lặp lại gọi là **phần chính** (главная партия). Theo thuật ngữ cũ, nó gọi là *rondeau* hay **refrain** (рефрен), tức điệp khúc *(Sposobin, §93)*. Sposobin đánh số: lần trình bày thứ nhất, thứ hai… của phần chính.
@@ -373,11 +373,11 @@ Mazel: chữ "rondo" có thể chỉ không chỉ hình thức mà cả **tên g
 
 ## 3. Rondo cổ (rondo nhiều lời)
 ### Mô tả của Sposobin
-Sposobin gọi là **rondo cổ (theo lời)** (старинное, куплетное рондо) và mô tả qua nét chung của âm nhạc chủ điệu nửa đầu thế kỷ 18, nhất là Pháp: không có phát triển xuyên suốt dài, các phần tương đối khép kín và ngắn, nối với nhau khá máy móc *(Sposobin, §94)*:
+Sposobin gọi là **rondo cổ (theo lời)** (старинное, куплетное рондо) và mô tả qua nét chung của âm nhạc chủ điệu nửa đầu thế kỷ 18, nhất là Pháp: không có phát triển xuyên suốt dài, các phần tương đối khép kín và ngắn, nối với nhau khá máy móc [^sposobin-1984, §94, tr. 181]:
 - **Mọi phần đều ngắn** và thường nhiều, nên tổng thể khá lớn.
 - **Chủ đề** mang tính gần ca – vũ (tính chất này còn giữ ở rondo về sau, dù không bắt buộc).
-- **Phần chính** khép bằng **kết trọn** ở điệu tính chính; thường là **đoạn nhạc 8 ô**, hiếm khi 16 ô, gồm hai câu giống nhau. Số lần trình bày từ ba tới năm – sáu, có khi tám – chín. Các lần nhắc thường nguyên dạng hoặc biến tấu nhẹ bằng trang sức (Rondo trong Partita Đô thứ của Bach) — rondo gần biến tấu *(Sposobin, §95)*.
-- **Episode** chỉ tương phản chủ đề chút ít; có khi xen yếu tố chủ đề — phân biệt được với tái hiện thật nhờ dấu hiệu điệu tính: trong rondo, **tái hiện chủ đề và tái hiện điệu tính thường trùng nhau** *(Sposobin, §96)*.
+- **Phần chính** khép bằng **kết trọn** ở điệu tính chính; thường là **đoạn nhạc 8 ô**, hiếm khi 16 ô, gồm hai câu giống nhau. Số lần trình bày từ ba tới năm – sáu, có khi tám – chín. Các lần nhắc thường nguyên dạng hoặc biến tấu nhẹ bằng trang sức (Rondo trong Partita Đô thứ của Bach) — rondo gần biến tấu [^sposobin-1984, §95, tr. 181].
+- **Episode** chỉ tương phản chủ đề chút ít; có khi xen yếu tố chủ đề — phân biệt được với tái hiện thật nhờ dấu hiệu điệu tính: trong rondo, **tái hiện chủ đề và tái hiện điệu tính thường trùng nhau** [^sposobin-1984, §96, tr. 182].
 - Về hoà âm, episode đa dạng hơn: có khi vào thẳng điệu tính mới; nhưng thường tương phản nhỏ đi kèm chuyển điệu mềm — episode mở ở chủ âm điệu tính chính rồi chuyển sang điệu tính phụ, thành một **đoạn nhạc chuyển giọng**.
 - Thứ tự điệu tính các episode "khá tuỳ tiện"; nét chung: chỉ dùng điệu tính **họ hàng gần**; hay có episode (nhất là episode cuối) ở điệu tính chính. Có xu hướng tiến tới công thức **T – D – S – T**: điệu tính phía át cho episode đầu, phía hạ át cho một episode sau.
 - **Không có khâu nối**; **coda** nói chung không có.
@@ -402,7 +402,7 @@ Mazel tách vài rondo của Bach thành một kiểu cổ "gần nhưng khác" 
 
 ## 4. Rondo cổ điển (rondo năm đoạn)
 ### Sposobin: "rondo đơn" của thời cổ điển chín muồi
-Một trong những nét quan trọng nhất của thời cổ điển chín muồi là khát vọng **phát triển xuyên suốt rộng hơn** và vượt qua sự rời rạc của các phần. Trong rondo *(Sposobin, §97)*:
+Một trong những nét quan trọng nhất của thời cổ điển chín muồi là khát vọng **phát triển xuyên suốt rộng hơn** và vượt qua sự rời rạc của các phần. Trong rondo [^sposobin-1984, §97, tr. 183]:
 - Các phần **rộng hơn**, nhưng số phần thường chỉ còn **năm**: A + B + A + C + A thành điển hình.
 - Có **khâu nối**, nhất là từ episode về tái hiện phần chính — vì episode tương phản và ở điệu tính khác.
 - **Coda** "gần như bắt buộc".
@@ -411,13 +411,13 @@ Một trong những nét quan trọng nhất của thời cổ điển chín mu�
 - Tương phản chủ đề giữa episode và phần chính rõ hơn nhiều. Episode một thường gần phần chính; **episode hai tương phản mạnh hơn**, hình thức tròn trịa hơn — vai trò gần với **trio**.
 
 ### Tương đồng với ba đoạn phức và cách phân biệt
-Vì episode hai giống trio, sơ đồ có thể đọc như "phần I (A B A) – trio (C) – tái hiện (A)". Sposobin cảnh báo rằng vì thế người ta đôi khi nhầm hai hình thức, và chỉ ra ba khác biệt *(Sposobin, §97)*:
+Vì episode hai giống trio, sơ đồ có thể đọc như "phần I (A B A) – trio (C) – tái hiện (A)". Sposobin cảnh báo rằng vì thế người ta đôi khi nhầm hai hình thức, và chỉ ra ba khác biệt [^sposobin-1984, §97, tr. 183]:
 1. Phần chính rondo thường là hai hay ba đoạn;
 2. Phần đầu của ba đoạn phức thường **một chủ đề**, còn ở đây episode B mang chút tương phản chủ đề;
 3. Trọng lượng của trio nói chung lớn hơn episode rondo.
 
 ### Điệu tính các episode
-Tương phản chủ đề luôn được tô bằng tương phản điệu tính; episode thường ở **điệu tính phụ**. Lựa chọn điển hình *(Sposobin, §97)*:
+Tương phản chủ đề luôn được tô bằng tương phản điệu tính; episode thường ở **điệu tính phụ**. Lựa chọn điển hình [^sposobin-1984, §97, tr. 183]:
 
 | Điệu tính chính | Không đổi điệu thức | Đổi điệu thức |
 |---|---|---|
@@ -427,7 +427,7 @@ Tương phản chủ đề luôn được tô bằng tương phản điệu tín
 Episode một hay ở điệu tính át hoặc hạ át "yếu" (VI); episode hai ở điệu tính cùng tên hoặc hạ át "mạnh" (IV). Nếu episode một ở phía át thì episode hai "nhiều khả năng" ở hạ át: ý nghĩa của công thức **T – D – S – T** ở các nhà cổ điển tăng rõ. Có khi gặp điệu tính xa hơn (Beethoven, Rondo op. 129). Mazel cũng nêu kế hoạch chung **T D T S T**, và các phương án khác (episode một ở song song thứ, episode hai ở cùng tên thứ; hoặc episode một ở át, episode hai ở cùng tên hay song song thứ) — nhưng điệu tính episode hai **thường tương phản mạnh hơn** với điệu tính chính *(Mazel, ch. VIII §2)*.
 
 ### Khâu nối
-Episode thường tròn trịa (hợp tính ca – vũ của rondo), nên nhu cầu liền mạch sinh ra **khâu nối chuyển giọng**, điển hình giữa episode và tái hiện, có khi cả trong episode (Beethoven op. 49 số 2, chương II). Có episode mang tính phát triển. Sposobin liệt kê bốn kiểu khâu nối gặp trong rondo *(Sposobin, §97)*:
+Episode thường tròn trịa (hợp tính ca – vũ của rondo), nên nhu cầu liền mạch sinh ra **khâu nối chuyển giọng**, điển hình giữa episode và tái hiện, có khi cả trong episode (Beethoven op. 49 số 2, chương II). Có episode mang tính phát triển. Sposobin liệt kê bốn kiểu khâu nối gặp trong rondo [^sposobin-1984, §97, tr. 183]:
 1. Khâu nối giai điệu một bè, trên nền hợp âm át đã đạt và được ngầm hiểu tiếp.
 2. Chuyển giọng ngắn vài hợp âm.
 3. Phần bổ sung cho kết chính, tiếp theo là chuyển giọng ("chuyển tiếp đích thực").
@@ -436,7 +436,7 @@ Episode thường tròn trịa (hợp tính ca – vũ của rondo), nên nhu c�
 Có những khâu nối khá dài kiểu phát triển, trên chủ đề trước đó hay — đặc biệt điển hình — trên chất liệu chủ đề sắp vào (**chuẩn bị chủ đề**): finale sonata op. 14 số 2 và op. 53 của Beethoven; op. 53 có khâu nối rất lớn tương xứng với tỉ lệ hoành tráng của cả rondo.
 
 ### Coda
-Coda là nét mới của rondo cổ điển. Về chủ đề, coda gần như luôn dùng chất liệu của chính rondo. Đơn giản nhất là biến chất liệu thành chuỗi kết bổ sung; chủ đề càng gần ca – vũ thì coda càng đơn giản. Vì tính vũ khúc trội, coda rondo chủ yếu đơn giản, ít phát triển — điều "ít đặc trưng cho hình thức này nói chung" *(Sposobin, §97)*.
+Coda là nét mới của rondo cổ điển. Về chủ đề, coda gần như luôn dùng chất liệu của chính rondo. Đơn giản nhất là biến chất liệu thành chuỗi kết bổ sung; chủ đề càng gần ca – vũ thì coda càng đơn giản. Vì tính vũ khúc trội, coda rondo chủ yếu đơn giản, ít phát triển — điều "ít đặc trưng cho hình thức này nói chung" [^sposobin-1984, §97, tr. 183].
 
 ### Mazel: cách vận hành của rondo năm đoạn
 Mazel bổ sung nhiều chi tiết về cách phân bố *(Mazel, ch. VIII §2)*:
@@ -484,9 +484,9 @@ Sơ đồ Rondo của Farlaf theo Sposobin (trích phần đọc được): A B 
 
 ## 6. Hình thức kép và hình thức giống rondo
 ### Ba đoạn kép (Sposobin)
-Hình thức ba đoạn đơn mà đoạn đầu không nhắc, còn phần hai và ba nhắc cùng nhau, thành **năm đoạn**: a b a b a. Nó hơi gần rondo nhưng chưa phải, vì hai đoạn giữa giống hệt. Nếu hai đoạn giữa cùng chất liệu nhưng được **biến đổi đáng kể** hoặc **dời sang điệu tính mới**, nó gần rondo hơn; vẫn khác vì rondo cần tương phản giữa các episode. Hình thức chủ đề chính vang ba lần, hai đoạn giữa giống mà không giống hệt, gọi là **ba đoạn đơn kép** (двойная простая трехчастная форма). Tính giống rondo rõ đến mức đôi khi chính tác giả gọi là rondo: cavatina và rondo của Antonida trong *Ivan Susanin* của Glinka *(Sposobin, §99)*.
+Hình thức ba đoạn đơn mà đoạn đầu không nhắc, còn phần hai và ba nhắc cùng nhau, thành **năm đoạn**: a b a b a. Nó hơi gần rondo nhưng chưa phải, vì hai đoạn giữa giống hệt. Nếu hai đoạn giữa cùng chất liệu nhưng được **biến đổi đáng kể** hoặc **dời sang điệu tính mới**, nó gần rondo hơn; vẫn khác vì rondo cần tương phản giữa các episode. Hình thức chủ đề chính vang ba lần, hai đoạn giữa giống mà không giống hệt, gọi là **ba đoạn đơn kép** (двойная простая трехчастная форма). Tính giống rondo rõ đến mức đôi khi chính tác giả gọi là rondo: cavatina và rondo của Antonida trong *Ivan Susanin* của Glinka [^sposobin-1984, §99, tr. 186].
 
-**Ba đoạn phức kép**: ba đoạn phức với hai trio (A B A C A) cũng giống rondo. Năm đoạn có khi chỉ do nhắc trio và tái hiện (A B A B A); nhắc trio ở điệu tính mới không điển hình; thường hơn là thêm trio thứ hai. Khác rondo điển hình ở tính chất chủ đề và ở **ranh giới sắc nét** giữa các phần, vốn của ba đoạn phức. Schumann hay dùng (scherzo các giao hưởng số 1, số 2, các tứ tấu, ngũ tấu piano). **Hình thức ba** (A B A C A D A) đơn hay phức là "hiếm có" *(Sposobin, §99)*. Mazel ví dụ "Hành khúc đám cưới" (nhạc của Mendelssohn cho *Giấc mộng đêm hè*) — xếp được vào rondo theo sơ đồ, nhưng theo dấu hiệu thể loại thường gọi là ba đoạn phức với hai trio *(Mazel, ch. VIII §1, §3)*.
+**Ba đoạn phức kép**: ba đoạn phức với hai trio (A B A C A) cũng giống rondo. Năm đoạn có khi chỉ do nhắc trio và tái hiện (A B A B A); nhắc trio ở điệu tính mới không điển hình; thường hơn là thêm trio thứ hai. Khác rondo điển hình ở tính chất chủ đề và ở **ranh giới sắc nét** giữa các phần, vốn của ba đoạn phức. Schumann hay dùng (scherzo các giao hưởng số 1, số 2, các tứ tấu, ngũ tấu piano). **Hình thức ba** (A B A C A D A) đơn hay phức là "hiếm có" [^sposobin-1984, §99, tr. 186]. Mazel ví dụ "Hành khúc đám cưới" (nhạc của Mendelssohn cho *Giấc mộng đêm hè*) — xếp được vào rondo theo sơ đồ, nhưng theo dấu hiệu thể loại thường gọi là ba đoạn phức với hai trio *(Mazel, ch. VIII §1, §3)*.
 
 ### "Thang hình thức" qua ba romance (Mazel)
 Mazel minh hoạ bằng ba romance cùng lời Pushkin *(Mazel, ch. VIII §3)*:
@@ -530,8 +530,8 @@ Nguồn gốc ca – vũ dân gian quy định tính chất *(Mazel, ch. VIII §
 ### Phạm vi (Sposobin, Mazel)
 - **Tác phẩm độc lập** rất thường; tên khi là "Rondo", khi là tên khác, nhất là tên chương trình — điển hình cho nhạc clavecin cổ và cho các nhà lãng mạn.
 - **Chương của chu kỳ**, chủ yếu chương kết (finale), có khi chương giữa.
-- Rất hiếm: một phần của ba đoạn phức có hình thức giống rondo — scherzo Giao hưởng số 5 của Beethoven *(Sposobin, §100)*.
-- Trong âm nhạc Nga, rondo hay gặp ở **thanh nhạc**, trực tiếp vì cấu trúc lời đòi hỏi sự lặp nhiều lần. Với cấu trúc giống rondo của cả phần lớn trong opera, Sposobin nhắc rằng mối liên hệ với nguồn gốc "hoàn toàn bên ngoài", chỉ ở kế hoạch chung, không nhất thiết ảnh hưởng tính chất âm nhạc *(Sposobin, §100)*.
+- Rất hiếm: một phần của ba đoạn phức có hình thức giống rondo — scherzo Giao hưởng số 5 của Beethoven [^sposobin-1984, §100, tr. 187].
+- Trong âm nhạc Nga, rondo hay gặp ở **thanh nhạc**, trực tiếp vì cấu trúc lời đòi hỏi sự lặp nhiều lần. Với cấu trúc giống rondo của cả phần lớn trong opera, Sposobin nhắc rằng mối liên hệ với nguồn gốc "hoàn toàn bên ngoài", chỉ ở kế hoạch chung, không nhất thiết ảnh hưởng tính chất âm nhạc [^sposobin-1984, §100, tr. 187].
 
 ### Rondo và phong cách nhà soạn nhạc
 Mazel kết chương bằng một so sánh: Schumann dùng rondo nhiều và đóng góp lớn, vì đặc trưng của ông là đối chiếu nhiều episode, bức tranh **tương đối độc lập và ngang quyền**. Chopin (cũng như Tchaikovsky) dùng ít hơn và ít làm giàu nó, vì trong tác phẩm của họ các chủ đề **không ngang quyền** mà ở trong quan hệ phụ thuộc phức tạp (chủ đề này làm mở đầu, chủ đề kia làm khâu nối, đoạn giữa không ổn định, coda…) nên gom thành phần lớn — họ phát triển ba đoạn phức nhiều hơn. Rondo nhiều phần của Schumann có nét tổ khúc, còn Chopin dùng hình thức giống rondo trong Valse op. 42 để **vượt qua** tính tổ khúc *(Mazel, ch. VIII §3)*.
@@ -602,16 +602,16 @@ Bài thứ mười ba trong [[hinh-thuc-nga-lo-trinh|bộ hình thức âm nhạ
 
 ## 1. Định nghĩa
 ### Sposobin: hai điều kiện
-"**Rondo – sonata** là hình thức trong đó: 1) có dấu hiệu cơ bản của rondo — phần chính trình bày không ít hơn ba lần; 2) trong các episode đặt giữa các lần ấy, **episode một và episode ba** giống nhau về chủ đề; cái đặt trước ở **điệu tính phụ**, cái kia ở **điệu tính chính**" *(Sposobin, §117)*. Chú thích của ông: "hiếm khi — episode bốn". Sơ đồ gốc, coi là cơ bản, có **bốn lần** phần chính:
+"**Rondo – sonata** là hình thức trong đó: 1) có dấu hiệu cơ bản của rondo — phần chính trình bày không ít hơn ba lần; 2) trong các episode đặt giữa các lần ấy, **episode một và episode ba** giống nhau về chủ đề; cái đặt trước ở **điệu tính phụ**, cái kia ở **điệu tính chính**" [^sposobin-1984, §117, tr. 223]. Chú thích của ông: "hiếm khi — episode bốn". Sơ đồ gốc, coi là cơ bản, có **bốn lần** phần chính:
 
-::form Phần_chính_A nối Phần_phụ_B nối A Episode_giữa_C A nối B1 nối A Coda | Rondo – sonata (Sposobin, §117): trình bày – episode giữa – tái hiện – coda; trình bày và tái hiện không nhắc lại
+::form Phần_chính_A nối Phần_phụ_B nối A Episode_giữa_C A nối B1 nối A Coda | Rondo – sonata [^sposobin-1984, §117, tr. 223]: trình bày – episode giữa – tái hiện – coda; trình bày và tái hiện không nhắc lại
 
 | Trình bày | | | | | Episode giữa | Tái hiện | | | | | |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | A | nối | B | nối | A | C | A | nối | B1 | nối | A | Coda |
 | phần chính | | phần phụ (episode 1) | | phần chính | episode 2 | phần chính | | phần phụ (episode 3) | | phần chính | |
 
-Vì B và B1 giống nhau về chủ đề, người ta không gọi chúng là episode mà là **phần phụ** — tên "episode" gần như luôn dành cho yếu tố **không lặp**. Có khâu nối hay không không phải dấu hiệu chắc chắn, vì ở các loại rondo khác cũng có *(Sposobin, §117)*.
+Vì B và B1 giống nhau về chủ đề, người ta không gọi chúng là episode mà là **phần phụ** — tên "episode" gần như luôn dành cho yếu tố **không lặp**. Có khâu nối hay không không phải dấu hiệu chắc chắn, vì ở các loại rondo khác cũng có [^sposobin-1984, §117, tr. 223].
 
 ### Mazel: định nghĩa từ hai phía
 Mazel mở bằng việc tách rondo – sonata khỏi **hình thức hỗn hợp**: tuy kết hợp nét rondo và sonata, nó không thuộc hình thức hỗn hợp (xem [[hinh-thuc-nga-hon-hop-va-ghep-tuong-phan]]), vì ở hình thức hỗn hợp sự kết hợp diễn ra tự do và cá biệt mỗi lần, còn rondo – sonata "khác hẳn, rất nghiêm, sơ đồ gần như được quy định hoàn toàn, lặp lại không đổi ở nhiều tác phẩm". Vì vậy nó được xem là một hình thức độc lập *(Mazel, ch. XII §1)*.
@@ -626,11 +626,11 @@ Mazel đưa thêm **định nghĩa thứ hai**: có thể xem cùng hình thức
 Mazel ghi: trong vài sách giáo khoa cũ, rondo – sonata gọi là "**dạng rondo thứ tư**". Rondo năm đoạn thường là dạng thứ ba; dạng thứ nhất và thứ hai là các loại ba đoạn phức tempo chậm (chủ yếu với episode chứ không với trio); sonata có episode thay phát triển là dạng thứ năm. Ba dạng đầu gọi là "thấp", dạng bốn và năm (gắn với sonata) là "cao" *(Mazel, ch. XII §1, chú thích)*. (Ngoài ba sách: hệ thống năm dạng rondo này thường gắn với lý thuyết của A. B. Marx thế kỷ 19.) Mazel cũng chú thích: nhiều finale cổ điển viết theo rondo – sonata có ghi tên *Rondo*.
 
 ## 2. Dấu hiệu quyết định: lần hai của phần chính
-Cả hai sách cùng chỉ ra chỗ phân biệt rondo – sonata với sonata. Sposobin: giống sonata trước hết ở **phần phụ**, lần đầu ở điệu tính phụ, lần hai ở điệu tính chính; ở **phần nối** giữa phần chính và phần phụ, thường phát triển hơn rondo đơn và rất giống phần nối sonata. Khác căn bản là **phần chính trở lại sau phần phụ**, nhờ đó trình bày có đường nét của **ba đoạn khép kín có tái hiện**, kết ở điệu tính chính. Khác thứ hai là đoạn giữa là **episode** chứ không phải phát triển — nhưng dấu hiệu này kém chắc chắn hơn, vì ở sonata đôi khi phát triển được thay bằng episode và ngược lại, rondo có khi đưa phát triển vào thay episode *(Sposobin, §117)*.
+Cả hai sách cùng chỉ ra chỗ phân biệt rondo – sonata với sonata. Sposobin: giống sonata trước hết ở **phần phụ**, lần đầu ở điệu tính phụ, lần hai ở điệu tính chính; ở **phần nối** giữa phần chính và phần phụ, thường phát triển hơn rondo đơn và rất giống phần nối sonata. Khác căn bản là **phần chính trở lại sau phần phụ**, nhờ đó trình bày có đường nét của **ba đoạn khép kín có tái hiện**, kết ở điệu tính chính. Khác thứ hai là đoạn giữa là **episode** chứ không phải phát triển — nhưng dấu hiệu này kém chắc chắn hơn, vì ở sonata đôi khi phát triển được thay bằng episode và ngược lại, rondo có khi đưa phát triển vào thay episode [^sposobin-1984, §117, tr. 223].
 
 Mazel nói rõ hơn: dấu hiệu quyết định là **lần hai** của chủ đề chính — lần trước đoạn giữa (dù đoạn giữa là episode hay phát triển). Lần một và lần ngay sau đoạn giữa đều có cả trong sonata; lần thứ tư không quyết định, vì một mặt lần ấy có thể không có trong rondo – sonata, mặt khác trong coda sonata chủ đề chính vang lại "không hiếm". Lần hai của rondo – sonata vang, như quy luật, ở **điệu tính chính** (không ở điệu tính phần phụ), trong khi lần trình bày chủ đề chính ở đầu phát triển sonata (đầy đủ hay không) thường ở điệu tính khác. Mazel cũng thừa nhận có tác phẩm đọc được theo cả hai cách — ví dụ phần nhanh aria của Ruslan trong opera của Glinka *(Mazel, ch. XII §1; đoạn này OCR vỡ nhiều, chỉ dẫn các ý đọc được)*. Một chú thích khác của ông: để giống sonata hơn, có thể không tính lần hai của chủ đề vào trình bày mà coi nó vang **sau** trình bày.
 
-Hai sách cùng ghi: phổ biến chung cho cả hai hình thức là **tempo tương đối nhanh** *(Sposobin, §117)*.
+Hai sách cùng ghi: phổ biến chung cho cả hai hình thức là **tempo tương đối nhanh** [^sposobin-1984, §117, tr. 223].
 
 ## 3. Trình bày
 ### Phần chính
@@ -693,7 +693,7 @@ Sposobin *(§123)*: dù có hay bỏ lần thứ tư của phần chính, coda l
 Mazel *(§3)*: coda đa số không có đoạn không ổn định – phát triển (như hay thấy ở coda sonata), mà kết (kiểu kết lặp) từ đầu; dùng thường nhất chất liệu chủ đề chính và **episode giữa**. Coda "gần như bắt buộc" vì quy mô hình thức và vai trò kết thúc cả chu kỳ sonata; ngược lại, **mở đầu thường không có**. Trong chú thích, ông chỉ ra khi coda dùng episode giữa thì có thể hình thành một quan hệ sonata cấp lớn hơn: episode giữa (ở điệu tính phụ) như "phần phụ của trình bày", sự trở lại của nó trong coda (ở điệu tính chính) như "phần phụ của tái hiện" — gặp ở thế kỷ 20, ví dụ scherzo Tứ tấu số 6 của Shebalin.
 
 ## 6. Đưa phát triển vào rondo – sonata
-Sposobin: ảnh hưởng của sonata lên rondo còn sâu hơn việc đưa phần phụ lặp và các khâu nối vào. Episode giữa "đã ở Mozart, nhất là ở Beethoven và về sau" có khi được thay bằng **phát triển** *(Sposobin, §124)*:
+Sposobin: ảnh hưởng của sonata lên rondo còn sâu hơn việc đưa phần phụ lặp và các khâu nối vào. Episode giữa "đã ở Mozart, nhất là ở Beethoven và về sau" có khi được thay bằng **phát triển** [^sposobin-1984, §124, tr. 228]:
 
 ::form Phần_chính nối Phần_phụ Phần_chính Phát_triển Phần_chính nối Phần_phụ Phần_chính | Rondo – sonata có phát triển (Sposobin, §124; ví dụ finale Concerto piano op. 20 của Scriabin)
 

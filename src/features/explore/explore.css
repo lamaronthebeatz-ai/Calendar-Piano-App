@@ -18,3 +18,9 @@
 .ex-more { font-family: inherit; font-size: 12.5px; font-weight: 400; color: var(--color-gold); }
 .ex-work { cursor: default; }
 .ex-work .src-sub button { font: inherit; }
+.ex-lineage { display: grid; gap: 10px; }
+.ex-lineage div { display: grid; gap: 4px; }
+@media (min-width: 640px) { .ex-lineage div { grid-template-columns: 170px 1fr; gap: 12px; } }
+.ex-lineage dt { font-size: 12.5px; color: var(--color-ink-faint); padding-top: 4px; }
+.ex-ext { font-size: 12.5px; color: var(--color-ink-muted); padding: 4px 2px; }
+.ex-ext:hover { color: var(--color-gold); }

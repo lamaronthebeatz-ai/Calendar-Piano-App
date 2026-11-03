@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
 import '../terms/terms.css'
+import { SchoolViews } from '../terms/SchoolViews'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -1107,6 +1108,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             {sections.length > 0 && <span className="inline-flex items-center gap-1.5"><ListIcon width={13} height={13} /> {sections.length} mục</span>}
             {backlinks.length > 0 && <span className="inline-flex items-center gap-1.5"><LinkIcon width={13} height={13} /> {backlinks.length} bài dẫn đến</span>}
           </div>
+          <SchoolViews slug={article.slug} here />
           <p className="relative rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] py-4 pl-6 pr-5 font-serif text-[17px] leading-relaxed text-[var(--color-ink)] shadow-[var(--shadow-soft)] before:absolute before:inset-y-4 before:left-0 before:w-[3px] before:rounded-r-full before:bg-gradient-to-b before:from-[var(--tint)] before:to-[var(--color-gold)]">
             {article.summary}
           </p>

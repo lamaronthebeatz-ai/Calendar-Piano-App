@@ -79,7 +79,7 @@ Không phụ thuộc số chủ đề, mỗi phần có **chức năng** riêng.
 | — nối và **tiền đề** (предыкт) | Dạng riêng của kiểu giữa | Các kiểu phần nối: nét giai điệu trên hợp âm át 7 của giọng sắp tới; một vòng chuyển giọng ngắn kiểu kết; vài kết lặp ở chủ âm cũ rồi chuyển giọng; lặp một phần nhạc trước rồi chuyển sang chuyển giọng… |
 | **Kết** (заключительный) | Các cấu trúc khẳng định chủ âm đã đạt | Gắn sau một phần đã kết ở chủ âm, cùng giọng; **kết lặp lại** (bổ sung kết), giữ hay lặp chủ âm; **nốt pedal trên chủ âm**; lệch sang **phía hạ át**; các cấu trúc **ngắn dần** (chia nhỏ) dẫn về chủ âm |
 | **Mở đầu** | Mở đầu tác phẩm hay một phần | Ít thủ pháp riêng. Hai dạng: **không có chủ đề** (một âm, một hợp âm, hay hình đệm của phần sắp tới — vẫn báo trước tính chất qua tiết tấu, cường độ, tiến độ) và **có chủ đề** hay yếu tố của nó |
-Sách nhấn mạnh (§18): đó là các trường hợp "thuần"; thực tế hay **đan xen** — ví dụ phần trình bày một chủ đề dài có thể là "trình bày + giữa + trình bày".
+Sách nhấn mạnh [^sposobin-1984, §18, tr. 49]: đó là các trường hợp "thuần"; thực tế hay **đan xen** — ví dụ phần trình bày một chủ đề dài có thể là "trình bày + giữa + trình bày".
 
 ## §12 – 17. Năm nguyên tắc phát triển
 "Hình thức âm nhạc, diễn ra trong thời gian, là **một quá trình**, tức là sự phát triển." Sách nêu **năm nguyên tắc** (và nói rõ hệ thống "hơi quy ước"):
@@ -117,15 +117,15 @@ Liên quan: [[chuc-nang-hinh-thuc]], [[ly-thuyet-chu-de]], [[bien-doi-chu-de]]. 
 ${NOTE}
 
 ## Chương I. Đoạn nhạc cấu tạo đơn giản nhất
-- **Định nghĩa (§21)**: "Đoạn nhạc là một **ý nhạc tương đối trọn vẹn**, kết bằng một [[cau-ket|kết]] ở giọng ban đầu hoặc giọng khác." Định nghĩa gần với định nghĩa **chủ đề** (§3) vì chủ đề rất hay được trình bày dưới dạng đoạn nhạc, khi đó ranh giới hai cái trùng nhau.
+- **Định nghĩa [^sposobin-1984, §21, tr. 56]**: "Đoạn nhạc là một **ý nhạc tương đối trọn vẹn**, kết bằng một [[cau-ket|kết]] ở giọng ban đầu hoặc giọng khác." Định nghĩa gần với định nghĩa **chủ đề** [^sposobin-1984, §3, tr. 12] vì chủ đề rất hay được trình bày dưới dạng đoạn nhạc, khi đó ranh giới hai cái trùng nhau.
 - Các phần lớn của đoạn nhạc, thường là hai, gọi là **câu** (предложение).
 - **§22**: phần lớn đoạn nhạc mang **kiểu trình bày trình bày** (xem [[sposobin-dan-nhap-chuc-nang-va-nguyen-tac]]), nên đặc trưng là **thống nhất giai điệu – chủ đề**: hai câu gần như giống nhau trừ phần kết; hoặc câu sau lặp một phần câu trước; hoặc lặp có trang trí, đổi cao độ, đổi hoà âm; hoặc không lặp nhưng giữ tính chất hình giai điệu – tiết tấu, không có tương phản lớn.
-- Các mục tiếp: hoà âm của đoạn nhạc **một giọng** (§23), đoạn nhạc **chuyển giọng** (§24); đoạn nhạc **hai câu**, **ba câu**, và **không chia được thành câu** (§25); những yếu tố nhỏ hơn: **câu nhỏ** (фраза, §26), **motif** và **submotif** (§27).
+- Các mục tiếp: hoà âm của đoạn nhạc **một giọng** [^sposobin-1984, §23, tr. 58], đoạn nhạc **chuyển giọng** [^sposobin-1984, §24, tr. 60]; đoạn nhạc **hai câu**, **ba câu**, và **không chia được thành câu** [^sposobin-1984, §25, tr. 62]; những yếu tố nhỏ hơn: **câu nhỏ** (фраза, §26), **motif** và **submotif** [^sposobin-1984, §27, tr. 66].
 
 ### §29. Tính chu kỳ cấu trúc; tổng hợp và chia nhỏ
 - Chuỗi các yếu tố **dài bằng nhau** (về số ô) gọi là **tính chu kỳ cấu trúc**. Có ở nhiều cấp: 8 = 4 + 4; 8 = 2 + 2 + 2 + 2; 8 = 1 + 1 + … + 1.
 - Tính chu kỳ thuần **thường gặp trong thanh nhạc** (gắn với nhịp thơ đều); trong nhạc khí, sự đơn điệu cấu trúc ấy ít đặc trưng hơn, hay gặp ở nhạc múa.
-- Phá tính chu kỳ tạo **tương phản cấu trúc**: **tổng hợp** (đơn vị ngắn rồi đơn vị dài gộp lại) và **chia nhỏ** (đơn vị ngắn dần). Sau đó: **đoạn nhạc không vuông** (§30).
+- Phá tính chu kỳ tạo **tương phản cấu trúc**: **tổng hợp** (đơn vị ngắn rồi đơn vị dài gộp lại) và **chia nhỏ** (đơn vị ngắn dần). Sau đó: **đoạn nhạc không vuông** [^sposobin-1984, §30, tr. 74].
 
 ## Chương II. A. Các dạng phức tạp của đoạn nhạc
 | Mục | Hiện tượng |
@@ -161,16 +161,16 @@ Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
 ${NOTE}
 
 ## Chương III. Hình thức hai đoạn đơn
-- **Định nghĩa (§42)**: "Hình thức hai đoạn đơn là hình thức **gồm hai đoạn nhạc**." Ví dụ sách dẫn: Lyadov, Schubert.
+- **Định nghĩa [^sposobin-1984, §42, tr. 104]**: "Hình thức hai đoạn đơn là hình thức **gồm hai đoạn nhạc**." Ví dụ sách dẫn: Lyadov, Schubert.
 - Hai đoạn nhạc **không được nối máy móc**; thống nhất là điều bắt buộc:
   - **Chủ đề**: phần hai lặp hoặc dùng chung yếu tố với phần một.
   - **Hoà âm**: có giọng chính — hiếm khi không rời, thường được khẳng định đầu hình thức và **lấy lại ở cuối**: hình thức **khép kín về giọng**, ở mức độ nào đó là một cơ thể âm nhạc độc lập.
   - **Cấu trúc**: trường hợp đơn giản, hai đoạn nhạc dài và cấu tạo như nhau; thực tế thường phức tạp hơn.
-- **Phân biệt với đoạn nhạc phức** (§31): ở đoạn nhạc phức, hai câu **giống nhau ở đầu**; ở hai đoạn đơn, đầu hai đoạn nhạc **khác nhau**, nếu giống thì giống ở phần **kết**.
+- **Phân biệt với đoạn nhạc phức** [^sposobin-1984, §31, tr. 79]: ở đoạn nhạc phức, hai câu **giống nhau ở đầu**; ở hai đoạn đơn, đầu hai đoạn nhạc **khác nhau**, nếu giống thì giống ở phần **kết**.
 - Các mục: cách mở rộng; phần một; **hai đoạn có tái hiện** — phần hai gồm đoạn giữa và tái hiện; **hai đoạn không tái hiện**; lặp lại các phần; mở đầu và kết; phạm vi sử dụng.
 
 ## Chương IV. Hình thức ba đoạn đơn
-- **Định nghĩa (§53)**: "Hình thức ba đoạn đơn là hình thức mà phần một là **một đoạn nhạc**; phần hai (đoạn giữa) cũng là một đoạn nhạc hoặc **một chuỗi cấu trúc mang tính giữa – phát triển**; phần ba trong đa số trường hợp là **tái hiện** phần một."
+- **Định nghĩa [^sposobin-1984, §53, tr. 120]**: "Hình thức ba đoạn đơn là hình thức mà phần một là **một đoạn nhạc**; phần hai (đoạn giữa) cũng là một đoạn nhạc hoặc **một chuỗi cấu trúc mang tính giữa – phát triển**; phần ba trong đa số trường hợp là **tái hiện** phần một."
 - Sơ đồ: ‖: a :‖: b a :‖ — đoạn nhạc | đoạn giữa | tái hiện.
 - So với hai đoạn, ba đoạn là một bước tiến tới hình thức lớn hơn một đoạn nhạc; nhưng **về lịch sử, có lẽ** ba đoạn hình thành từ hai đoạn qua việc đoạn giữa và phần tái hiện lớn lên, tách riêng, đạt kích thước không kém phần một — "một ví dụ về sự lớn lên bên trong của hình thức".
 - **Thống nhất**: chủ đề — hai đoạn ngoài giống nhau, đoạn giữa thường dựa trên chất liệu của chúng; giọng — khép kín, phần trong thường chuyển sang giọng phụ; cấu trúc — trường hợp đơn giản hai đoạn ngoài dài bằng nhau, nhưng **tái hiện thường được mở rộng**.
@@ -195,14 +195,14 @@ Bài trong thư viện: [[hinh-thuc-hai-doan]], [[hinh-thuc-ba-doan]]. Tổng qu
 ${NOTE}
 
 ## Chương V. Hình thức ba đoạn phức
-- **Định nghĩa (§64)**: "Hình thức ba đoạn phức là hình thức mà hai đoạn ngoài, **giống nhau về chủ đề**, là **hai hay ba đoạn đơn**; còn đoạn giữa, cấu tạo có thể khác nhau, **tương phản rõ** với hai đoạn ngoài."
+- **Định nghĩa [^sposobin-1984, §64, tr. 140]**: "Hình thức ba đoạn phức là hình thức mà hai đoạn ngoài, **giống nhau về chủ đề**, là **hai hay ba đoạn đơn**; còn đoạn giữa, cấu tạo có thể khác nhau, **tương phản rõ** với hai đoạn ngoài."
 - Sơ đồ: A (hai hay ba đoạn đơn) — B (hai hay ba đoạn đơn, hoặc đoạn nhạc, hoặc một episode không ổn định kiểu giữa) — A (nhắc lại phần một).
 - **Tương phản bên ngoài và bên trong**: tương phản đạt được bằng cách đặt cạnh nhau (bên ngoài) khác với tương phản sinh ra dần, yếu tố này từ yếu tố kia (bên trong — trong đoạn nhạc, trong hai, ba đoạn đơn một chủ đề). Tương phản bên ngoài có ở ba đoạn đơn với đoạn giữa mới, nhưng **ở ba đoạn phức nó điển hình hơn nhiều** — là **nguyên tắc chính** tạo ra hình thức. Sách nói chữ "bên ngoài" hơi quy ước, vì một sự thống nhất nào đó (không phải lúc nào cũng diễn tả được bằng lời) là điều kiện bắt buộc.
 - Các mục: tính chất tương phản giữa phần ngoài và đoạn giữa; ba đoạn phức **có trio** (phần một, trio, tái hiện); ba đoạn phức có **đoạn giữa là episode**; mở đầu và coda; **ba – năm đoạn phức**; hình thức **trung gian** giữa ba đoạn đơn và phức; phạm vi sử dụng. Phụ lục cho chương III – V: phạm vi dùng của hình thức hai, ba đoạn.
 Bài trong thư viện: [[minuet-va-trio]].
 
 ## Chương VI. Chủ đề với biến tấu
-- **Định nghĩa (§79)**: "Chủ đề với biến tấu là hình thức gồm **trình bày chủ đề ban đầu** và **một số lần nhắc lại có biến đổi**, gọi là biến tấu." Vì số biến tấu không giới hạn, sơ đồ chỉ có thể rất chung: A A₁ A₂ A₃…
+- **Định nghĩa [^sposobin-1984, §79, tr. 159]**: "Chủ đề với biến tấu là hình thức gồm **trình bày chủ đề ban đầu** và **một số lần nhắc lại có biến đổi**, gọi là biến tấu." Vì số biến tấu không giới hạn, sơ đồ chỉ có thể rất chung: A A₁ A₂ A₃…
 - Phương pháp lặp có biến đổi đã gặp ở đoạn nhạc, hai, ba đoạn — ở đó nó **phụ trợ**; trong hình thức biến tấu nó là **nền tảng**, vì thiếu nó chỉ còn lặp chủ đề liền nhau, mà lặp như vậy (nhất là trong nhạc khí) không được cảm nhận là phát triển.
 - Nguồn gốc: các mẫu biến tấu xưa nhất gắn trực tiếp với **nhạc múa**, nên rất có thể hình thức này bắt nguồn (dù không trực tiếp) từ **âm nhạc dân gian** — sách nói "có thể giả định".
 
@@ -233,7 +233,7 @@ Bài trong thư viện: [[bien-tau]]. Tổng quan sách: [[sposobin-hinh-thuc-am
 ${NOTE}
 
 ## Chương VII. Rondo
-- **Định nghĩa (§92)**: "Rondo là hình thức trong đó **một chủ đề được đưa ra ít nhất ba lần**, giữa các lần là những phần có nội dung khác, thường **mỗi lần một mới**." Sơ đồ: A + B + A + C + A + …
+- **Định nghĩa [^sposobin-1984, §92, tr. 178]**: "Rondo là hình thức trong đó **một chủ đề được đưa ra ít nhất ba lần**, giữa các lần là những phần có nội dung khác, thường **mỗi lần một mới**." Sơ đồ: A + B + A + C + A + …
 - Ở rondo, **nguyên tắc tái hiện** thể hiện mạnh nhất về số lượng; nó kết hợp với **tương phản đối chiếu** (tương phản bên ngoài).
 - Có thể hình dung rondo như **chuỗi các ba đoạn đơn móc nối** bằng chủ đề lặp lại, chủ đề này vừa thuộc ba đoạn trước vừa thuộc ba đoạn sau. Ví dụ sách dẫn: Gavotte trong Partita Mi trưởng cho violin solo của Bach.
 | Mục | Giai đoạn |
@@ -245,7 +245,7 @@ ${NOTE}
 Bài trong thư viện: [[rondo]].
 
 ## Chương VIII. Hình thức sonata
-- **Định nghĩa (§101)**: "Hình thức sonata là hình thức dựa trên **sự đối lập hai chủ đề**: khi trình bày lần đầu, chúng **tương phản cả về chủ đề lẫn về giọng** (chủ đề I ở giọng chính, chủ đề II ở giọng phụ); sau phần phát triển, chúng được nhắc lại **cùng ở giọng chính**, tức là **gần nhau về giọng**." Nền của sonata là **"tính hai chủ đề được nhắc lại"**.
+- **Định nghĩa [^sposobin-1984, §101, tr. 189]**: "Hình thức sonata là hình thức dựa trên **sự đối lập hai chủ đề**: khi trình bày lần đầu, chúng **tương phản cả về chủ đề lẫn về giọng** (chủ đề I ở giọng chính, chủ đề II ở giọng phụ); sau phần phát triển, chúng được nhắc lại **cùng ở giọng chính**, tức là **gần nhau về giọng**." Nền của sonata là **"tính hai chủ đề được nhắc lại"**.
 - Đường nét chung: **ba đoạn**, hoặc **bốn** nếu coda lớn — Trình bày (phần chính, phần nối, phần phụ, phần kết) | Phát triển | Tái hiện (các phần như trên) | Coda. Mẫu cổ có thể nhắc lại như ba đoạn đơn (‖: trình bày :‖: phát triển – tái hiện :‖); thường chỉ nhắc phần trình bày, nhiều trường hợp không nhắc gì.
 | Mục | Phần | Theo sách |
 |---|---|---|
@@ -261,7 +261,7 @@ Bài trong thư viện: [[rondo]].
 Bài trong thư viện: [[hinh-thuc-sonata]], [[hinh-thuc-concerto]].
 
 ## Chương IX. Rondo – sonata
-- **Định nghĩa (§117)**: Rondo – sonata là hình thức mà: (1) có dấu hiệu chính của rondo — **phần chính vang ít nhất ba lần**; (2) trong các episode giữa các lần ấy, **episode một và ba** (hiếm khi bốn) **giống nhau về chủ đề**; episode trước ở **giọng phụ**, episode sau ở **giọng chính**.
+- **Định nghĩa [^sposobin-1984, §117, tr. 223]**: Rondo – sonata là hình thức mà: (1) có dấu hiệu chính của rondo — **phần chính vang ít nhất ba lần**; (2) trong các episode giữa các lần ấy, **episode một và ba** (hiếm khi bốn) **giống nhau về chủ đề**; episode trước ở **giọng phụ**, episode sau ở **giọng chính**.
 - Sơ đồ ban đầu (cơ bản) có **bốn lần** phần chính: A – nối – B – nối – A | C | A – nối – B₁ – nối – A | coda. Trình bày và tái hiện không nhắc lại.
 - Vì episode một và ba giống nhau nên chúng được gọi là **phần phụ**, không gọi là episode; chữ "episode" hầu như chỉ dùng cho phần **không lặp lại**.
 - Các mục: phần nối; phần phụ và lần nhắc phần chính; **episode giữa**; **đưa phần phát triển vào** rondo – sonata; phạm vi sử dụng.
@@ -281,13 +281,13 @@ Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
 ${NOTE}
 
 ## Chương X. Hai đoạn cổ và sonata cổ
-- **Hai đoạn cổ (§126)**: hình thức hai đoạn **cuối thế kỷ 17 và nửa đầu thế kỷ 18**, khác hẳn hai đoạn đơn về sau nên cần mô tả riêng. Khác biệt chính là **tỷ lệ**: phần hai thường **dài gấp hai, ba lần** phần một và cấu tạo khá phức tạp. Mỗi phần thường **nhắc lại riêng**: ‖: I :‖: II :‖ (có khi không nhắc). Ví dụ sách dẫn: Sarabande trong Tổ khúc Pháp Mi trưởng của Bach.
-- **Phần một (§127)**: đồng nhất về hình nét. Ở các điệu múa mà nhịp múa ảnh hưởng mạnh (như gavotte trong tổ khúc Bach), thường là một đoạn nhạc hai câu giống nhau về chủ đề, có khi ba câu. Ở những bài chịu ảnh hưởng giai điệu và kết cấu phức điệu (nhiều allemande, courante, gigue của Bach), tính chu kỳ đơn giản ít gặp hơn: phần một hay là **đoạn nhạc kiểu "triển khai"** (развертывание), không chia câu hoặc chia thành những cấu trúc không có kết rõ.
-- Các mục tiếp: **sonata cổ** (§130 – 133: phần một — trình bày; phần hai — phần phát triển và tái hiện gộp lại); **sự ra đời của tái hiện trọn** (§134); mô tả ngắn **các điệu múa cổ** quan trọng nhất (§135).
+- **Hai đoạn cổ [^sposobin-1984, §126, tr. 230]**: hình thức hai đoạn **cuối thế kỷ 17 và nửa đầu thế kỷ 18**, khác hẳn hai đoạn đơn về sau nên cần mô tả riêng. Khác biệt chính là **tỷ lệ**: phần hai thường **dài gấp hai, ba lần** phần một và cấu tạo khá phức tạp. Mỗi phần thường **nhắc lại riêng**: ‖: I :‖: II :‖ (có khi không nhắc). Ví dụ sách dẫn: Sarabande trong Tổ khúc Pháp Mi trưởng của Bach.
+- **Phần một [^sposobin-1984, §127, tr. 231]**: đồng nhất về hình nét. Ở các điệu múa mà nhịp múa ảnh hưởng mạnh (như gavotte trong tổ khúc Bach), thường là một đoạn nhạc hai câu giống nhau về chủ đề, có khi ba câu. Ở những bài chịu ảnh hưởng giai điệu và kết cấu phức điệu (nhiều allemande, courante, gigue của Bach), tính chu kỳ đơn giản ít gặp hơn: phần một hay là **đoạn nhạc kiểu "triển khai"** (развертывание), không chia câu hoặc chia thành những cấu trúc không có kết rõ.
+- Các mục tiếp: **sonata cổ** (§130 – 133: phần một — trình bày; phần hai — phần phát triển và tái hiện gộp lại); **sự ra đời của tái hiện trọn** [^sposobin-1984, §134, tr. 239]; mô tả ngắn **các điệu múa cổ** quan trọng nhất [^sposobin-1984, §135, tr. 239].
 
 ## Chương XI. Hình thức chu kỳ
 - **Định nghĩa (§136)**: "Hình thức chu kỳ là hình thức gồm **hai hay nhiều phần riêng**, mỗi phần **độc lập về hình thức**. Nền tạo nên hình thức chu kỳ là **sự tương phản giữa các phần** (nhất là về tiến độ), với sự thống nhất chung thể hiện cách này hay cách khác."
-- **Tổ khúc cổ, partita (§137)**: chuỗi nhiều điệu múa; yếu tố thống nhất là **giọng chung**; các phần tương phản ở mặt khác, nhất là tiến độ. Tổ khúc đầy đủ gồm **bốn điệu múa bắt buộc** theo thứ tự:
+- **Tổ khúc cổ, partita [^sposobin-1984, §137, tr. 241]**: chuỗi nhiều điệu múa; yếu tố thống nhất là **giọng chung**; các phần tương phản ở mặt khác, nhất là tiến độ. Tổ khúc đầy đủ gồm **bốn điệu múa bắt buộc** theo thứ tự:
 | Điệu múa | Nhịp | Tiến độ |
 |---|---|---|
 | **Allemande** | 4/4 | Vừa phải |
@@ -297,7 +297,7 @@ ${NOTE}
 (Bảng nhịp – tiến độ trong bản quét mờ một phần; số trong ngoặc là nhịp thay thế thường gặp.)
   Thêm vào có thể có: **double** — một biến tấu trang trí theo sau một điệu múa (điển hình cho sarabande); **prelude** trước allemande (Prélude, Ouverture, Sinfonia, Toccata, Fantasia)…
 - **Chu kỳ sonata (§138 – 143)**: sonata, trio, quartet… và giao hưởng; chu kỳ **ba chương**, **hai chương**, **bốn chương**; **quan hệ chủ đề giữa các chương**; chu kỳ nhiều chương.
-- **Tổ khúc mới, potpourri (§144)**.
+- **Tổ khúc mới, potpourri [^sposobin-1984, §144, tr. 251]**.
 Bài trong thư viện: [[the-loai]].
 
 ## Chương XII. Quan hệ giữa các hình thức và hình thức hỗn hợp
@@ -357,7 +357,7 @@ Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].
 ${NOTE}
 
 ## Chương XIV. Cơ sở chung của phức điệu
-- **Định nghĩa (§185)**: "Phức điệu, hay đối âm, là lối nhiều bè trong đó **các bè độc lập và bình đẳng** về ý nghĩa." Phát triển độc lập về giai điệu, nhưng khi vang cùng lúc các bè được **hoà âm** thống nhất.
+- **Định nghĩa [^sposobin-1984, §185, tr. 293]**: "Phức điệu, hay đối âm, là lối nhiều bè trong đó **các bè độc lập và bình đẳng** về ý nghĩa." Phát triển độc lập về giai điệu, nhưng khi vang cùng lúc các bè được **hoà âm** thống nhất.
 - **Tính liên tục là nét cơ bản**: lối chủ điệu chia thành những đoạn đều (2, 4 ô…) bằng cezura và kết; ngược lại, phức điệu có **tính liên tục** lớn cả trong toàn kết cấu lẫn từng bè, nhờ **cấu tạo không chu kỳ**. Vì vậy "khác biệt chính của giai điệu phức điệu nằm ở **tiết tấu**, không phải ở quãng và điệu thức". Nhưng giai điệu phức điệu không phải hoàn toàn không phân đoạn, không lặp — nếu vậy nó sẽ khó nhớ.
 - **§186. Chủ đề phức điệu**: thường **tương đối ngắn** để dễ nhớ; chủ đề dài thường đồng nhất về hình nét.
 - §187 – 188: nguyên tắc chung viết đối âm; khái niệm **phong cách nghiêm và tự do**; hai loại phức điệu — mô phỏng và **không mô phỏng**.
@@ -370,13 +370,13 @@ ${NOTE}
 Hệ thống chi tiết theo Taneyev: [[doi-vi-phuc-tap]], [[doi-vi-chuyen-dong-chieu-doc]].
 
 ## Chương XVI. Mô phỏng và canon
-- **Định nghĩa (§197)**: "Mô phỏng là việc một bè **nhắc lại giai điệu vừa trình bày ở bè khác**." Thường bè trước không im lặng mà **viết đối âm** với lần mô phỏng; bè đối âm hầu như luôn tương phản với giai điệu được mô phỏng, nhất là về tiết tấu, để mô phỏng nổi rõ.
+- **Định nghĩa [^sposobin-1984, §197, tr. 323]**: "Mô phỏng là việc một bè **nhắc lại giai điệu vừa trình bày ở bè khác**." Thường bè trước không im lặng mà **viết đối âm** với lần mô phỏng; bè đối âm hầu như luôn tương phản với giai điệu được mô phỏng, nhất là về tiết tấu, để mô phỏng nổi rõ.
 - **Quãng mô phỏng** xác định theo âm đầu: lên hay xuống quãng 2, 3, 4…; mô phỏng nhiều hơn hai bè thường gặp.
 - Các mục: mô phỏng ở át — **thực** và **giọng**; mô phỏng **đảo**, **tăng – giảm trường độ** và các loại đặc biệt; **mô phỏng kép**; **canon**: định nghĩa và cách viết, **canon kép**, canon **hữu hạn và vô hạn**; phạm vi sử dụng.
 Bài trong thư viện: [[mo-phong-don-gian]], [[canon-hai-be]].
 
 ## Chương XVII. Fugue
-- **Định nghĩa (§206)**: "Fugue là tác phẩm phức điệu **bắt đầu bằng sự vào dần của các bè**, trình bày chủ đề theo lối mô phỏng; sau đó chủ đề **thỉnh thoảng được nhắc lại** trong quá trình phát triển." Fugue dựa trên phức điệu mô phỏng và là một trong những hình thức phát triển nhất của nó. Dấu hiệu bắt buộc: **đưa chủ đề có hệ thống qua các bè**.
+- **Định nghĩa [^sposobin-1984, §206, tr. 340]**: "Fugue là tác phẩm phức điệu **bắt đầu bằng sự vào dần của các bè**, trình bày chủ đề theo lối mô phỏng; sau đó chủ đề **thỉnh thoảng được nhắc lại** trong quá trình phát triển." Fugue dựa trên phức điệu mô phỏng và là một trong những hình thức phát triển nhất của nó. Dấu hiệu bắt buộc: **đưa chủ đề có hệ thống qua các bè**.
 - Số bè: thường **bốn hoặc ba**, ít hơn là năm; nhiều hơn, hoặc hai bè, rất hiếm. Fugue cho đàn dây solo không đệm vẫn có nhiều bè, có lúc ẩn (giọng ẩn).
 | Mục | Thuật ngữ | Theo sách |
 |---|---|---|
@@ -388,7 +388,7 @@ Bài trong thư viện: [[mo-phong-don-gian]], [[canon-hai-be]].
 | §216 | **Stretta** | **Mô phỏng nén**: bè mô phỏng vào với chủ đề **trước khi** chủ đề ở bè kia kết thúc — "chủ đề tự làm đối âm cho mình". Vì stretta là một canon ngắn, có thể viết canon trước rồi lấy giai điệu làm chủ đề fugue; nhưng các bậc thầy thường giữ tính biểu hiện của chủ đề, không chịu ràng buộc ấy |
 | §217 – 219 | **Fugue kép, ba, bốn chủ đề**; cách ghi sơ đồ fugue | |
 | §220 | **Fughetta** và **fugato** | |
-- Các thể loại phức điệu khác (§222 – 227): **invention**, **chorale prelude** (обработка хорала), prelude, biến tấu, **ricercar**, **canzona**, **toccata**; phức điệu trong các hình thức khác.
+- Các thể loại phức điệu khác [^sposobin-1984, §222 – 227, tr. 353 – 355]: **invention**, **chorale prelude** (обработка хорала), prelude, biến tấu, **ricercar**, **canzona**, **toccata**; phức điệu trong các hình thức khác.
 Bài trong thư viện: [[fugue]], [[doi-am-kep]].
 
 Tổng quan sách: [[sposobin-hinh-thuc-am-nhac]].

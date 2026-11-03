@@ -84,3 +84,17 @@ export const loadPeople = () =>
       load = null
       throw e
     }))
+
+/** [id when in the library, name, Wikidata id] (scripts/relations/build.py). */
+export type Link = [string | null, string, string]
+export type Relations = Record<string, { teachers?: Link[]; students?: Link[]; influences?: Link[] }>
+
+let relLoad: Promise<Relations> | null = null
+export const loadRelations = () =>
+  (relLoad ??= import('./relations.json?url')
+    .then((m) => fetch(m.default))
+    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+    .catch((e) => {
+      relLoad = null
+      throw e
+    }))

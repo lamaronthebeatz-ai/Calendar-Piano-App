@@ -103,3 +103,14 @@ test('bàn làm việc: đề tài gom ghi chú theo thẻ, trích dẫn, xuất
   const [apa] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Xuất Markdown' }).click()])
   expect(readFileSync(await apa.path(), 'utf8')).toContain('(Способин, 1984, tr. 45)')
 })
+
+test('đối chiếu trường phái, thầy – trò, số trang Sposobin và Albrechtsberger', async ({ page }) => {
+  await page.goto('/#/theory/chuc-nang-hoa-am')
+  await expect(page.locator('.term-schools')).toContainText('Nga – Xô viết')
+  await page.goto('/#/explore?p=franz-liszt')
+  await expect(page.locator('.ex-lineage')).toContainText('Học trò')
+  await page.goto('/#/sources/sposobin-1984')
+  await expect(page.locator('.src-pages').first()).toContainText('tr.')
+  await page.goto('/#/theory/quang-va-hop-am-albrechtsberger')
+  await expect(page.locator('h2').filter({ hasText: 'Quãng' }).first().locator('.cite-inline')).toContainText('tr. 9')
+})
