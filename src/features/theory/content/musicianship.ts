@@ -806,7 +806,7 @@ Quy trình này khớp với khuyến nghị hiện đại: xem toàn cảnh tr�
 | A. D. Alekseev, *Phương pháp dạy chơi piano* | Giáo trình phương pháp cho sinh viên sư phạm |
 | G. Tsypin, *Dạy chơi piano* | Giáo trình phương pháp, tái bản đến nay |
 | *Trường phái chơi piano* (*Школа игры на фортепиано*), A. Nikolaev chủ biên cùng V. Natanson, L. Roshchina | Sách cho người mới, in nhiều thập kỷ — xem [[giao-trinh-piano-nhap-mon]] |
-(Năm in lần đầu của các sách Kogan, Alekseev, Tsypin chưa được kiểm chứng trong nguồn đã tra.)
+::verify Năm in lần đầu của các sách Kogan, Alekseev, Tsypin chưa được kiểm chứng trong nguồn đã tra.
 
 ## Những đặc điểm thường được nêu
 - **Tiếng đàn hát** (*пение на рояле*): giai điệu như giọng người, đòi cánh tay và cổ tay tự do — từ Field, anh em Rubinstein đến Josef Lhévinne, Igumnov. Một luận án ở Đại học Geneva (2021) cho thấy cách dạy tạo tiếng đàn trong truyền thống này có tính **liên tục** qua các thế hệ. Xem [[lam-noi-giai-dieu]].
