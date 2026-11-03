@@ -29,6 +29,12 @@ export function citeSource(s: Source, style: Style): string {
     if (style === 'apa') return `${label}.${url ? ` ${url}` : ''}`
     return `“${label}.”${url ? ` ${url}.` : ''} Truy cập ${today()}.`
   }
+  if (s.kind === 'article' && s.container) {
+    if (style === 'bibtex')
+      return [`@article{${s.id},`, `  author = {${s.authors.join(' and ')}},`, `  title = {${s.title}},`, `  journal = {${s.container}},`, s.volume && `  volume = {${s.volume}},`, s.year && `  year = {${s.year}},`, url && `  url = {${url}},`, '}'].filter(Boolean).join('\n')
+    if (style === 'apa') return `${andJoin(s.authors.map(initials))} (${s.year || 'k.n.'}). ${s.title}. ${s.container}${s.volume ? `, ${s.volume}` : ''}.${url ? ` ${url}` : ''}`
+    return `${andJoin(s.authors)}. “${s.title}.” ${s.container}${s.volume ? ` ${s.volume}` : ''}${s.year ? ` (${s.year})` : ''}.`
+  }
   const place = [s.place, s.publisher].filter(Boolean).join(': ')
   const extra = [s.translator && `Dịch: ${s.translator}`, s.editor && `Biên tập: ${s.editor}`, s.edition].filter(Boolean).join('. ')
   if (style === 'bibtex')

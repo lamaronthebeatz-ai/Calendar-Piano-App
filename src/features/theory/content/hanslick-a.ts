@@ -84,7 +84,7 @@ Hanslick phân biệt:
 - **Cảm giác** (*Empfindung*): sự tri giác một phẩm chất cảm tính — một âm thanh, một màu sắc.
 - **Cảm xúc** (*Gefühl*): ý thức về một trạng thái tâm lý — hài lòng hay khó chịu, vui hay buồn.
 
-Những người nói "âm nhạc nhằm tới cảm xúc" thực ra muốn nói nó nhằm làm lòng ta đầy "lòng mộ đạo, tình yêu, niềm vui hay nỗi buồn". Hanslick trả lời: **đó không phải mục đích của âm nhạc, cũng không phải của bất cứ nghệ thuật nào**. "Một nghệ thuật trước hết nhằm tạo ra cái đẹp, thứ tác động không phải lên cảm xúc mà lên cơ quan của sự chiêm ngưỡng thuần tuý, tức trí tưởng tượng của ta" (tr. 11).
+Những người nói "âm nhạc nhằm tới cảm xúc" thực ra muốn nói nó nhằm làm lòng ta đầy "lòng mộ đạo, tình yêu, niềm vui hay nỗi buồn". Hanslick trả lời: **đó không phải mục đích của âm nhạc, cũng không phải của bất cứ nghệ thuật nào**. "Một nghệ thuật trước hết nhằm tạo ra cái đẹp, thứ tác động không phải lên cảm xúc mà lên cơ quan của sự chiêm ngưỡng thuần tuý, tức trí tưởng tượng của ta" [^hanslick-1957, tr. 11].
 
 Trí tưởng tượng ở đây không đối lập với lý trí: nó chiêm ngưỡng cái đẹp **có suy xét** — ta "xem xét và phán đoán" vật ấy, chỉ là phán đoán diễn ra nhanh tới mức ta không nhận ra. Một tác phẩm âm nhạc "sinh ra trong trí tưởng tượng của nhà soạn nhạc và dành cho trí tưởng tượng của người nghe". Ở chương cuối của sách, chữ Đức cho khái niệm này là *die reine Anschauung* — sự chiêm ngưỡng (trực quan) thuần tuý.
 
@@ -93,7 +93,7 @@ Hanslick không phủ nhận rằng âm nhạc làm ta xúc động. Nhưng mọ
 
 Kết luận của ông: mọi tác phẩm thật đều chạm tới khả năng cảm xúc của ta, nhưng **không có tác phẩm nào chỉ chạm tới nó**; từ mối liên hệ giữa âm nhạc và cảm xúc không rút ra được quy tắc nào riêng của mỹ học âm nhạc. Câu nổi tiếng:
 
-> "Làm thế chẳng khác gì nghiên cứu tính chất của rượu bằng cách say rượu." (tr. 11)
+> "Làm thế chẳng khác gì nghiên cứu tính chất của rượu bằng cách say rượu." [^hanslick-1957, tr. 11]
 
 Điều cần hỏi là **cách riêng** mà âm nhạc tác động lên cảm xúc; muốn trả lời, phải đi sâu vào chính tác phẩm và giải thích tác động của nó bằng các quy luật nội tại. Một nhà thơ hay hoạ sĩ không tin rằng biết bức tranh gợi "cảm xúc" gì là đã giải thích được vẻ đẹp của nó.
 
@@ -118,12 +118,12 @@ Luận điểm "cảm xúc của người nghe không phải là tiêu chuẩn c
     summary: 'Phần chính của chương II: một cảm xúc xác định (tình yêu, hy vọng) cần khái niệm và đối tượng, thứ âm nhạc không có; âm nhạc chỉ tái hiện được động thái của cảm xúc — nhanh, chậm, mạnh, yếu — và biểu tượng của âm thanh. Thí nghiệm với overture Prometheus, aria của Gluck hát được với lời ngược nghĩa, vẽ cảnh bằng âm thanh, và thuyết "cảm xúc không xác định".',
     refs: HANSLICK_REFS,
     body: `
-Chương II (tr. 20 – 46) là chương dài nhất và là lõi của phần "phủ định". Bài này đọc nửa đầu: lập luận chung. Nửa sau, về lời ca và opera, ở [[hanslick-loi-ca-va-opera]].
+Chương II [^hanslick-1957, tr. 20 – 46] là chương dài nhất và là lõi của phần "phủ định". Bài này đọc nửa đầu: lập luận chung. Nửa sau, về lời ca và opera, ở [[hanslick-loi-ca-va-opera]].
 
 ## Điều gì làm cho một cảm xúc thành "xác định"?
 Hanslick hỏi: cái gì biến một cảm xúc mơ hồ thành **hy vọng**, **nỗi buồn** hay **tình yêu**? Câu trả lời của ông: **khái niệm và phán đoán**. Hy vọng không tách khỏi ý niệm về một trạng thái hạnh phúc hơn sẽ tới, được so với hiện tại; nỗi buồn chứa ý niệm về một hạnh phúc đã qua. Bỏ các ý niệm ấy đi thì chỉ còn "một cảm giác chuyển động mơ hồ", cùng lắm là thoải mái hay khó chịu.
 
-> "Cảm xúc tình yêu không thể hình dung được nếu không có hình ảnh người được yêu, hay không có ước muốn và khát khao chiếm hữu đối tượng của tình cảm ta. […] Xét về động thái, tình yêu có thể dịu dàng hay mãnh liệt, phơi phới hay chán nản, mà vẫn là tình yêu. Chỉ điều đó cũng đủ cho thấy âm nhạc chỉ biểu hiện được những **tính từ** đi kèm, chứ không biểu hiện được **danh từ** — tình yêu — tự nó." (tr. 22)
+> "Cảm xúc tình yêu không thể hình dung được nếu không có hình ảnh người được yêu, hay không có ước muốn và khát khao chiếm hữu đối tượng của tình cảm ta. […] Xét về động thái, tình yêu có thể dịu dàng hay mãnh liệt, phơi phới hay chán nản, mà vẫn là tình yêu. Chỉ điều đó cũng đủ cho thấy âm nhạc chỉ biểu hiện được những **tính từ** đi kèm, chứ không biểu hiện được **danh từ** — tình yêu — tự nó." [^hanslick-1957, tr. 22]
 
 Âm nhạc không có phương tiện để mang khái niệm, nên nó không tái hiện được cảm xúc xác định.
 
@@ -132,7 +132,7 @@ Hai thứ:
 1. **Động thái** (yếu tố chuyển động) của các quá trình tâm lý: nhanh, chậm, mạnh, yếu, tăng dần, giảm dần. Nhưng chuyển động chỉ là **một thứ đi kèm** cảm xúc, không phải bản thân cảm xúc; cùng một chuyển động có thể thuộc về tình yêu hay về giận dữ.
 2. **Biểu tượng** của âm thanh: âm sắc, giọng, hợp âm được gắn với ý nghĩa qua thói quen liên tưởng (ông dẫn bảng "tính cách của các giọng" của Schubart như một ví dụ cực đoan).
 
-Vì thế ta có thể dùng những chữ như *duyên dáng, dịu dàng, mãnh liệt, mạnh mẽ, thanh lịch, tươi tắn* để tả **chính hiện tượng âm nhạc** — chúng diễn tả được bằng những biến đổi tương ứng của âm thanh — mà không cần nghĩ tới ý nghĩa tâm lý của chúng (tr. 23).
+Vì thế ta có thể dùng những chữ như *duyên dáng, dịu dàng, mãnh liệt, mạnh mẽ, thanh lịch, tươi tắn* để tả **chính hiện tượng âm nhạc** — chúng diễn tả được bằng những biến đổi tương ứng của âm thanh — mà không cần nghĩ tới ý nghĩa tâm lý của chúng [^hanslick-1957, tr. 23].
 
 ## Thí nghiệm: overture Prometheus
 Hanslick đề nghị một thí nghiệm "không thể thiếu": ai cho rằng dây đàn đang rung lên vì cảm xúc thì hãy chỉ ra cảm xúc nào là nội dung của bản nhạc. Ông tả phần mở đầu overture *Những sinh vật của Prometheus* của [[ludwig-van-beethoven|Beethoven]] như một người nghe chăm chú sẽ nghe: các nốt ô nhịp đầu rơi xuống quãng bốn rồi đi lên nhanh và nhẹ; ô nhịp hai lặp lại; ô ba – bốn tiếp tục trong phạm vi rộng hơn; "tia nước phun lên rơi xuống từng giọt rồi lại vọt lên"; bốn ô tiếp theo lặp lại hình của bốn ô trước… Người nghe nhận ra **cấu trúc** — đối xứng mà khác nhau, sáng tối, âm sắc — chứ không tìm thấy một cảm xúc xác định nào.
@@ -169,7 +169,7 @@ Một số người lùi một bước: âm nhạc tái hiện cảm xúc **khô
 Phần cuối chương II (khoảng tr. 38 – 46) bàn tới thanh nhạc — lĩnh vực mà người ta hay viện dẫn để chứng minh âm nhạc biểu hiện cảm xúc. Hanslick thừa nhận lời ca **có thể** làm cho âm nhạc mang một tính cá biệt khá rõ, bằng cách tận dụng chuyển động và biểu tượng của âm thanh; khi đó còn có thể nảy ra ảo tưởng rằng chính âm nhạc biểu hiện cảm xúc vốn đã có trong lời.
 
 ## Quy luật nghịch
-> "Mức độ âm nhạc bị buộc phải phục tùng lời ca thường **tỉ lệ nghịch** với vẻ đẹp độc lập của nó; nói cách khác, sự chính xác về tu từ – kịch và sự hoàn hảo âm nhạc chỉ đi cùng nhau nửa đường, rồi rẽ hai ngả." (tr. 40)
+> "Mức độ âm nhạc bị buộc phải phục tùng lời ca thường **tỉ lệ nghịch** với vẻ đẹp độc lập của nó; nói cách khác, sự chính xác về tu từ – kịch và sự hoàn hảo âm nhạc chỉ đi cùng nhau nửa đường, rồi rẽ hai ngả." [^hanslick-1957, tr. 40]
 
 **Hát nói** ([[opera|recitative]]) là ví dụ rõ nhất: nó bám lời tới từng trọng âm, không hề muốn là gì hơn bản sao trung thành của những trạng thái tâm lý đổi nhanh. Theo lý thuyết "âm nhạc biểu hiện cảm xúc", đáng lẽ đó phải là âm nhạc cao nhất. Nhưng trong hát nói, âm nhạc "thoái hoá thành một cái bóng". Hanslick đề nghị: hãy chơi một đoạn hát nói dài, bỏ lời đi, rồi hỏi giá trị âm nhạc và nội dung của nó là gì.
 
@@ -178,7 +178,7 @@ Phần cuối chương II (khoảng tr. 38 – 46) bàn tới thanh nhạc — l
 ## Opera: một chính thể lập hiến
 Trong opera của [[wolfgang-amadeus-mozart|Mozart]], Hanslick thấy âm nhạc và lời hoà hợp hoàn toàn: ngay cả các đoạn finale phức tạp nhất vẫn đẹp nếu xét như một tổng thể, không cần lời. Đáp ứng ngang nhau cả yêu cầu kịch lẫn yêu cầu âm nhạc là lý tưởng của opera. Nhưng hai nguyên tắc ấy, đẩy tới cùng, sẽ triệt tiêu nhau; sự ràng buộc lên cả nhạc lẫn lời biến opera thành
 
-> "một chính thể lập hiến mà sự tồn tại tuỳ thuộc vào cuộc giằng co không ngừng giữa hai đảng có quyền ngang nhau." (tr. 41)
+> "một chính thể lập hiến mà sự tồn tại tuỳ thuộc vào cuộc giằng co không ngừng giữa hai đảng có quyền ngang nhau." [^hanslick-1957, tr. 41]
 
 Mọi khiếm khuyết của opera, và mọi quy tắc quan trọng của nó, đều sinh ra từ cuộc giằng co này. Một nhà soạn opera giỏi sẽ luôn tìm cách dung hoà hai yếu tố; nhưng **khi phân vân, ông ta sẽ để âm nhạc thắng**, vì yếu tố chính của opera "không phải cái đẹp kịch mà là cái đẹp âm nhạc". Bằng chứng: xem một vở kịch nói và một vở opera cùng đề tài, ta luôn thấy việc bỏ bê phần âm nhạc khó chịu hơn nhiều.
 

@@ -21,6 +21,12 @@ const KIND_LABEL: Record<string, string> = {
   article: 'Bài báo',
   law: 'Văn bản pháp luật',
 }
+/** ['tr. 12', 'tr. 3', 'tr. 5 – 6'] → "tr. 3, 5 – 6, 12" */
+const pageList = (pages: string[]) => {
+  const bare = pages.map((p) => p.replace(/^tr\.\s*/, ''))
+  const first = (p: string) => parseInt(p, 10) || 0
+  return `tr. ${[...new Set(bare)].sort((x, y) => first(x) - first(y) || x.length - y.length).join(', ')}`
+}
 type Tab = 'chinh' | 'tat-ca' | 'treo'
 const PAGE = 60
 
@@ -80,10 +86,45 @@ function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
           ),
         )}
       </nav>
-      {t === 'chinh' && <SourceList sources={CURATED.map((c) => data.byId.get(c.id)!).filter(Boolean)} />}
+      {t === 'chinh' && <CuratedList data={data} />}
       {t === 'tat-ca' && <AllSources data={data} />}
       {t === 'treo' && <OpenItems data={data} />}
     </>
+  )
+}
+
+function CuratedList({ data }: { data: Bibliography }) {
+  const list = CURATED.map((c) => data.byId.get(c.id)).filter((s): s is Source => !!s)
+  return (
+    <section className="space-y-3">
+      <ExportList sources={list} name="cong-trinh-chinh" />
+      <SourceList sources={list} />
+    </section>
+  )
+}
+
+/** The list as shown: BibTeX file to download, or a Chicago bibliography to paste (sorted by author). */
+function ExportList({ sources, name }: { sources: Source[]; name: string }) {
+  const [copied, setCopied] = useState(false)
+  const bibtex = () => {
+    const blob = new Blob([sources.map((s) => citeSource(s, 'bibtex')).join('\n\n')], { type: 'application/x-bibtex' })
+    const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: `thu-muc-${name}.bib` })
+    a.click()
+    URL.revokeObjectURL(a.href)
+  }
+  const chicago = () =>
+    navigator.clipboard
+      ?.writeText(sources.map((s) => citeSource(s, 'chicago')).sort((a, b) => a.localeCompare(b, 'vi')).join('\n'))
+      .then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 1600)
+      })
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-[12.5px]">
+      <span className="text-[var(--color-ink-faint)]">Xuất {sources.length.toLocaleString('vi')} mục:</span>
+      <button onClick={bibtex} className="btn-line rounded-full px-3 py-1">Tải BibTeX</button>
+      <button onClick={chicago} className="btn-line rounded-full px-3 py-1">{copied ? '✓ Đã chép' : 'Chép thư mục Chicago'}</button>
+    </div>
   )
 }
 
@@ -110,6 +151,7 @@ function AllSources({ data }: { data: Bibliography }) {
         </select>
       </div>
       <p className="text-[12.5px] text-[var(--color-ink-faint)]">{list.length.toLocaleString('vi')} nguồn · xếp theo số bài dùng</p>
+      <ExportList sources={list} name={kind || 'tat-ca'} />
       <SourceList sources={list.slice(0, shown)} />
       {shown < list.length && (
         <button onClick={() => setShown((n) => n + PAGE)} className="btn-line rounded-full px-4 py-2 text-[13px]">Xem thêm {Math.min(PAGE, list.length - shown)}</button>
@@ -147,6 +189,7 @@ function SourceDetail({ data, id }: { data: Bibliography; id: string }) {
     ['Dịch', s.translator],
     ['Biên tập', s.editor],
     ['Lần in', s.edition],
+    ['Tạp chí', [s.container, s.volume].filter(Boolean).join(', ') || undefined],
     ['Xuất bản', [s.place, s.publisher, s.year].filter(Boolean).join(', ') || undefined],
     ['Ngôn ngữ', s.lang],
     ['Bản quyền', s.rights && (s.rights === 'public-domain' ? 'Phạm vi công cộng' : 'Còn bản quyền — thư viện chỉ tóm lược, trích ngắn có trang')],
@@ -181,11 +224,14 @@ function SourceDetail({ data, id }: { data: Bibliography; id: string }) {
       <CiteBox title="Trích dẫn nguồn này" cite={(style) => citeSource(s, style)} />
       <section>
         <h3 className="font-display text-[18px] font-semibold text-[var(--color-ink)]">Được dùng trong {s.uses.length} bài</h3>
-        <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
+        <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {s.uses.map((slug) => {
             const a = findArticle(slug)
             return a ? (
-              <li key={slug}><Link to={`/theory/${slug}`} className="wiki-link text-[14px]">{a.title}</Link></li>
+              <li key={slug}>
+                <Link to={`/theory/${slug}`} className="wiki-link text-[14px]">{a.title}</Link>
+                {s.pages?.[slug] && <span className="src-pages">{pageList(s.pages[slug])}</span>}
+              </li>
             ) : null
           })}
         </ul>

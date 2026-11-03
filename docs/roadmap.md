@@ -27,7 +27,8 @@ Nguyên tắc cho mọi giai đoạn:
 
 ## Giai đoạn 2 — Thư mục học — xương sống uy tín (đợt 1 ✅ 11/2026, chi tiết `notes/sources.md`)
 **Đã có:** 4.042 nguồn dựng tự động từ mọi tài liệu tham khảo, 22 công trình chính đủ thông tin + mức đối chiếu, trang `/sources` (danh sách, chi tiết, việc còn treo), cú pháp `[^id, tr. n]` và `::verify` (sai mã thì build lỗi), trích dẫn Chicago/APA/BibTeX cho nguồn và cho từng bài (ngày cập nhật từ git).
-**Còn lại (đợt 2):** mở rộng `curated.ts` (Grove/Riemann, sách Việt, bài báo hay dẫn); script đề xuất đổi 126 câu "chưa đối chiếu" thành `::verify`; dần thay nhãn `refs` bằng trích dẫn có số trang ở các bài theo sách; trang nguồn hiện chỗ trích cụ thể (trang nào, bài nào); xuất cả danh sách đang lọc.
+**Đợt 2 ✅:** 1.248 số trang trong 5 bộ sách thành trích dẫn có liên kết, trang nguồn hiện trang được trích theo bài, +8 nghiên cứu vào danh mục chính (30), xuất BibTeX/Chicago cả danh sách.
+**Còn lại:** thêm Grove/Riemann/sách Việt khi bài thật sự dẫn tới; số trang cho các bộ sách khác (Neuhaus, Sposobin, Mazel… hiện ghi trang kiểu khác hoặc không ghi); chuyển dần câu "chưa đối chiếu" quan trọng thành `::verify`.
 
 Kế hoạch ban đầu:
 **Dữ liệu** `src/features/sources/sources.ts` (+ tách file theo nhóm khi lớn):

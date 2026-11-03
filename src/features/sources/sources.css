@@ -30,6 +30,7 @@
 .src-facts div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; font-size: 14px; }
 .src-facts dt { color: var(--color-ink-faint); }
 .src-facts dd { color: var(--color-ink); }
+.src-pages { display: block; margin-top: 1px; font-size: 11.5px; line-height: 1.4; color: var(--color-ink-faint); }
 .src-note { font-size: 13.5px; font-style: italic; color: var(--color-ink-muted); }
 
 .src-cite { display: grid; gap: 10px; padding: 16px; border-radius: 18px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }

@@ -13,14 +13,14 @@ export const borgHub: Article[] = [
 **Bobby Borg** là tay trống từng thu âm và lưu diễn với hãng lớn (ban Beggars & Thieves, hãng Atlantic), hãng độc lập và tự phát hành; tốt nghiệp Berklee, học thêm marketing ở UCLA Extension và lấy bằng thạc sĩ Quản trị truyền thông ở Đại học Nam California; dạy môn marketing cho nghệ sĩ tự lập ở Musicians Institute và UCLA Extension; tác giả *The Musician's Handbook* và *Business Basics for Musicians* (tr. xxi – xxii). Bộ bài này đọc **bản 2** của *Music Marketing for the DIY Musician* (Rowman & Littlefield, 2020), có thêm chương về tương lai, các phỏng vấn mới, ba bản kế hoạch mẫu mới và 60 câu hỏi kiểm tra (tr. xix). Lời tựa do Tony van Veen viết — người từng phụ trách CD Baby mười năm — với một câu thẳng thừng: tạo ra nhu cầu cho âm nhạc của bạn là **việc của bạn**, không phải của nhà phân phối (tr. xvii).
 
 ## Ý chính
-Sách coi nghệ sĩ là một **công ty**, người hâm mộ là **khách hàng**, âm nhạc – buổi diễn – hàng lưu niệm là **sản phẩm**, và dạy viết một bản **kế hoạch marketing** trọn vẹn với ít tiền — tác giả gọi là "Marketing Plan of Attack™" — bằng chính những công cụ các công ty lớn dùng: SWOT, SMART, AIDA, bảng tính năng – lợi ích. Borg muốn cân bằng "não trái và não phải": vẫn giữ tầm nhìn nghệ thuật, nhưng làm kinh doanh có phương pháp (tr. xxi). Chiến lược bao trùm: **thu hút người có thể giúp mình bằng cách tự giúp mình trước** (tr. 7).
+Sách coi nghệ sĩ là một **công ty**, người hâm mộ là **khách hàng**, âm nhạc – buổi diễn – hàng lưu niệm là **sản phẩm**, và dạy viết một bản **kế hoạch marketing** trọn vẹn với ít tiền — tác giả gọi là "Marketing Plan of Attack™" — bằng chính những công cụ các công ty lớn dùng: SWOT, SMART, AIDA, bảng tính năng – lợi ích. Borg muốn cân bằng "não trái và não phải": vẫn giữ tầm nhìn nghệ thuật, nhưng làm kinh doanh có phương pháp (tr. xxi). Chiến lược bao trùm: **thu hút người có thể giúp mình bằng cách tự giúp mình trước** [^borg-2020, tr. 7].
 
 Sách có một trang "tự làm là gì và không là gì" (tr. xxiii): tự làm là chủ động, tận dụng nguồn lực rẻ, giữ tầm nhìn sáng tạo, giữ nhiều phần lợi hơn; tự làm **không phải** là cái cớ để tự hành nghề luật, tự vẽ logo kém, nghĩ mọi thứ "sửa được khi mix", hay từ chối buông bớt quyền kiểm soát để có hợp đồng tốt.
 
 ## Cách sách dạy
 - Mỗi chương kết bằng một **mẫu điền** và **ví dụ** của ban nhạc giả định **Rally the Tribes (RTT)** — ban rock/rave ở Los Angeles với thông điệp chính trị –xã hội. Điền đủ các mẫu là có bản kế hoạch.
 - Nhiều chương có phỏng vấn chuyên gia (Ira Kalb, Nance Rosen, Robert Liljenwall, Jeff Hinkle, Michael Laskow…) và các hộp chuyện nghệ sĩ.
-- Cuối sách: bốn bản kế hoạch mẫu (ban nhạc, nữ rapper, xưởng làm nhạc cho phim – quảng cáo, tay trống tự do), bảng thuật ngữ, danh mục hơn 300 dịch vụ, và 60 câu hỏi kiểm tra theo chương (tr. 281 – 380).
+- Cuối sách: bốn bản kế hoạch mẫu (ban nhạc, nữ rapper, xưởng làm nhạc cho phim – quảng cáo, tay trống tự do), bảng thuật ngữ, danh mục hơn 300 dịch vụ, và 60 câu hỏi kiểm tra theo chương [^borg-2020, tr. 281 – 380].
 
 ## Nguồn và cách đọc bộ bài
 - Đọc từ bản epub bản 2 mà Lamar gửi; số trang trong ngoặc theo **bản in**. Sách còn bản quyền: các bài **tóm lược bằng lời của bộ bài**, chỉ trích rất ngắn — muốn có đủ mẫu điền, bốn bản kế hoạch mẫu và danh mục dịch vụ, hãy mua sách.

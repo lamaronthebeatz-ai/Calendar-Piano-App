@@ -11,7 +11,7 @@ export const hanslickC: Article[] = [
     summary: 'Chương VI: tự nhiên chỉ cho âm nhạc chất liệu thô (gỗ, kim loại, ruột cừu); giai điệu và hoà âm, quãng, âm giai, luật bình quân là thành tựu dần dần của trí óc con người; chỉ có nhịp điệu là có sẵn trong tự nhiên. Tiếng chim không phải âm nhạc vì không đo được. Âm nhạc là nghệ thuật duy nhất (cùng kiến trúc) không có mẫu trong tự nhiên: Egmont của Beethoven cũng có thể mang tên William Tell.',
     refs: HANSLICK_REFS,
     body: `
-Chương VI (tr. 104 – 116) — theo IEP, chương này dựa trên bài *Âm nhạc trong quan hệ với tự nhiên* Hanslick đã in năm 1854, vốn từ một buổi giảng công khai năm 1851; một số nhà nghiên cứu cho rằng các chương IV – VI được viết trước ba chương đầu. Hanslick mở đầu: xét một vật trong quan hệ với tự nhiên là bước "có tầm quan trọng hàng đầu", và mỹ học, nếu không muốn sống một đời giả, phải biết cả cái rễ sần sùi lẫn sợi tơ mảnh nối mỗi nghệ thuật với trật tự tự nhiên.
+Chương VI [^hanslick-1957, tr. 104 – 116] — theo IEP, chương này dựa trên bài *Âm nhạc trong quan hệ với tự nhiên* Hanslick đã in năm 1854, vốn từ một buổi giảng công khai năm 1851; một số nhà nghiên cứu cho rằng các chương IV – VI được viết trước ba chương đầu. Hanslick mở đầu: xét một vật trong quan hệ với tự nhiên là bước "có tầm quan trọng hàng đầu", và mỹ học, nếu không muốn sống một đời giả, phải biết cả cái rễ sần sùi lẫn sợi tơ mảnh nối mỗi nghệ thuật với trật tự tự nhiên.
 
 Nghệ thuật liên hệ với tự nhiên theo **hai** cách: tự nhiên cho nó **chất liệu thô**, và cho nó **những hình mẫu đẹp** để tái tạo.
 
@@ -38,21 +38,21 @@ Suối reo, sóng biển, tuyết lở, gió hú — tất cả chỉ là **ti�
 
 Tiêu chuẩn duy nhất là **tính đo được** của âm. Hand đề cao "cảm hứng", "sự bộc lộ con người bên trong"; theo đó tiếng chim phải gọi là âm nhạc còn tiếng hộp nhạc thì không — "nhưng sự thật lại ngược hẳn". Câu kết của phần này:
 
-> "Không phải tiếng của loài vật mà ruột của chúng mới quan trọng với ta; và con vật mà âm nhạc mang ơn nhiều nhất không phải chim hoạ mi, mà là **con cừu**." (tr. 109 – 110)
+> "Không phải tiếng của loài vật mà ruột của chúng mới quan trọng với ta; và con vật mà âm nhạc mang ơn nhiều nhất không phải chim hoạ mi, mà là **con cừu**." [^hanslick-1957, tr. 109 – 110]
 
 ## Âm nhạc không có mẫu trong tự nhiên
 Bước sang "tầng cao hơn": âm đo được và hệ thống âm chỉ là **phương tiện** để nhà soạn nhạc sáng tạo, không phải **cái** ông sáng tạo. Thi ca, hội hoạ, điêu khắc có trong tự nhiên một kho đề tài vô tận: hoạ sĩ không vẽ được cái cây nếu cây không có thật; ngay cả "phong cảnh lý tưởng" cũng ghép từ đá, cây, nước, mây có thật; nhà thơ không viết được người nông dân, người lính, kẻ hà tiện nếu chưa quan sát nguyên mẫu. Còn âm nhạc:
 
-> "Đối với âm nhạc, trong tự nhiên không có gì đẹp cả." (tr. 112)
+> "Đối với âm nhạc, trong tự nhiên không có gì đẹp cả." [^hanslick-1957, tr. 112]
 
-Khác biệt này giữa âm nhạc và các nghệ thuật khác — chỉ trừ **kiến trúc**, cũng không có mẫu trong tự nhiên — "sâu sắc và hệ trọng". Tự nhiên không biết sonata, overture hay rondo. Mệnh đề của Aristotle "nghệ thuật bắt chước tự nhiên" đã được sửa thành "nghệ thuật tái tạo tự nhiên"; nhưng nhà soạn nhạc **không có gì để tái tạo**, phải sáng tạo tất cả từ đầu, từ chính trí tưởng tượng của mình; ông "phải chờ khoảnh khắc thuận lợi khi nó bắt đầu vang lên và hát trong lòng mình", rồi tạo ra từ bên trong cái không có gì giống trong tự nhiên, cái mà "khác với các nghệ thuật khác, thật sự không thuộc về thế gian này" (tr. 113).
+Khác biệt này giữa âm nhạc và các nghệ thuật khác — chỉ trừ **kiến trúc**, cũng không có mẫu trong tự nhiên — "sâu sắc và hệ trọng". Tự nhiên không biết sonata, overture hay rondo. Mệnh đề của Aristotle "nghệ thuật bắt chước tự nhiên" đã được sửa thành "nghệ thuật tái tạo tự nhiên"; nhưng nhà soạn nhạc **không có gì để tái tạo**, phải sáng tạo tất cả từ đầu, từ chính trí tưởng tượng của mình; ông "phải chờ khoảnh khắc thuận lợi khi nó bắt đầu vang lên và hát trong lòng mình", rồi tạo ra từ bên trong cái không có gì giống trong tự nhiên, cái mà "khác với các nghệ thuật khác, thật sự không thuộc về thế gian này" [^hanslick-1957, tr. 113].
 
 Dân ca cũng không phải "vật đẹp tự nhiên": người chăn cừu đang hát là **chủ thể**, không phải đối tượng của nghệ thuật; bài hát của anh ta, nếu gồm những chuỗi âm đo được và được sắp xếp có hệ thống, là sáng tạo của trí óc con người, "dù do một cậu bé chăn bò hay một Beethoven nghĩ ra". Dân ca là "giai đoạn đầu của nghệ thuật thật", không phải mẫu tự nhiên của âm nhạc.
 
 ## Egmont, Vua Lear, Melusina
 Người ta phản bác: Beethoven đã viết *Egmont*, Berlioz *Vua Lear*, Mendelssohn *Melusina* — các câu chuyện ấy chẳng phải là đề tài như với nhà thơ sao? Hanslick: không hề. Với nhà thơ, nhân vật là mẫu thật để tái tạo; với nhà soạn nhạc, chúng chỉ là **gợi ý thơ**. Nội dung của overture *Egmont* là những chuỗi âm mà nhà soạn nhạc rút từ kho tưởng tượng của mình; mối liên hệ với ý niệm "Egmont" lỏng tới mức
 
-> "hoàn toàn có thể hình dung overture *Egmont* của Beethoven mang tên *William Tell* hay *Jeanne d'Arc*." (tr. 115)
+> "hoàn toàn có thể hình dung overture *Egmont* của Beethoven mang tên *William Tell* hay *Jeanne d'Arc*." [^hanslick-1957, tr. 115]
 
 Overture *Vua Lear* tuyệt vời của [[hector-berlioz|Berlioz]] "không có quan hệ nhân quả với ý niệm 'Vua Lear' hơn gì một bản valse của Strauss"; chỉ cái tên buộc ta so sánh. Overture *Prometheus* của Beethoven có thể bị chê "chưa đủ hùng vĩ cho đề tài", nhưng tự thân nó hoàn hảo, không ai chỉ ra được một khiếm khuyết âm nhạc nào.
 
@@ -75,7 +75,7 @@ Tiếng gà gáy trong *Bốn mùa* của [[joseph-haydn|Haydn]], tiếng chim c
     summary: 'Chương VII: âm nhạc có nội dung không? Hanslick phân biệt "nội dung" (cái mà vật chứa bên trong) với "đối tượng" (đề tài bên ngoài). Âm nhạc không có đối tượng; nội dung của nó là các chuỗi và hình thức âm thanh — "âm nhạc không chỉ nói bằng âm thanh, nó chỉ nói âm thanh". Trong chủ đề, nội dung và hình thức hoà làm một không tách được; chủ đề là nội dung thật của bản nhạc. Âm nhạc vẫn có cá tính và "tia lửa thần thánh" riêng.',
     refs: HANSLICK_REFS,
     body: `
-Chương VII (tr. 117 – 127) gom các sợi chỉ của cả cuốn sách vào câu hỏi gây tranh cãi nhất: **âm nhạc có nội dung không?**
+Chương VII [^hanslick-1957, tr. 117 – 127] gom các sợi chỉ của cả cuốn sách vào câu hỏi gây tranh cãi nhất: **âm nhạc có nội dung không?**
 
 ## Hai phe
 Hanslick liệt kê: nhiều người nổi tiếng, gần như toàn là triết gia — Rousseau, Kant, Hegel, Herbart, Kahlert — cho rằng âm nhạc không có nội dung; các nhà sinh lý học như Lotze và Helmholtz, với hiểu biết âm nhạc, cũng đồng ý. Phe cho rằng âm nhạc có nội dung đông hơn nhiều: phần lớn nhạc sĩ viết sách báo và đa số công chúng.
@@ -87,7 +87,7 @@ Sự mơ hồ đến từ việc dùng lẫn các chữ "nội dung", "đề tà
 
 Kahlert đúng khi nói âm nhạc, khác với hội hoạ, không cho phép "mô tả bằng lời". Từ đó Hanslick đưa ra một phép thử: nếu âm nhạc thật sự có một "nội dung" theo nghĩa đối tượng, thì câu hỏi "nội dung của bản nhạc là gì?" phải **trả lời được bằng lời**; một "nội dung không xác định" mà mỗi người hiểu một kiểu, chỉ cảm được mà không dịch ra lời được, thì không phải nội dung theo nghĩa ấy.
 
-> "Âm nhạc gồm những chuỗi và hình thức âm thanh, và chỉ chúng là nội dung. […] Nó không có nội dung nào ngoài những tổ hợp nốt mà ta nghe, vì âm nhạc không chỉ nói **bằng** âm thanh, nó **chỉ nói âm thanh**." (tr. 119)
+> "Âm nhạc gồm những chuỗi và hình thức âm thanh, và chỉ chúng là nội dung. […] Nó không có nội dung nào ngoài những tổ hợp nốt mà ta nghe, vì âm nhạc không chỉ nói **bằng** âm thanh, nó **chỉ nói âm thanh**." [^hanslick-1957, tr. 119]
 
 Ở điểm này âm nhạc lại gần với kiến trúc và múa: cũng nhắm tới vẻ đẹp của hình thức và chuyển động, cũng không có đối tượng xác định.
 
@@ -101,18 +101,18 @@ Orestes trong *Iphigénie* của Gluck không phải bằng chứng, vì đó l�
 ## Trong chủ đề, nội dung và hình thức là một
 Chữ "nội dung" chỉ dùng được cho tác phẩm nghệ thuật khi đặt cạnh "hình thức"; hai khái niệm bổ sung cho nhau. Ở các nghệ thuật khác, cùng một nội dung có thể mang nhiều hình thức: chuyện **William Tell** là đề tài tiểu thuyết lịch sử cho Florian, kịch cho Schiller, và Goethe từng định viết thành sử thi — nội dung ở đâu cũng là một, kể lại được bằng văn xuôi, nhưng hình thức mỗi nơi một khác. Thần Vệ Nữ từ biển hiện lên là đề tài của vô số tranh tượng không thể lẫn lộn. Còn trong âm nhạc:
 
-> "Không thể phân biệt nội dung và hình thức, vì âm nhạc không có hình thức nào độc lập với nội dung." (tr. 122)
+> "Không thể phân biệt nội dung và hình thức, vì âm nhạc không có hình thức nào độc lập với nội dung." [^hanslick-1957, tr. 122]
 
-Phép thử của Hanslick: lấy chủ đề chính của Giao hưởng giọng Si giáng trưởng của Beethoven. Nội dung là gì? Các nhóm âm. Hình thức là gì? Lại các nhóm âm. Mọi cố gắng tách một chủ đề thành nội dung và hình thức đều thành tuỳ tiện và mâu thuẫn. Một chủ đề được nhạc cụ khác nhắc lại hay đưa lên quãng tám: nội dung đổi hay hình thức đổi? Nếu nói hình thức đổi, thì cái còn lại làm "nội dung" chỉ là chuỗi quãng trừu tượng, "bộ khung" của bản phổ — không phải tính xác định của âm nhạc. Hanslick ví việc đổi âm sắc với một **ngôi đình có kính màu**: cảnh vật bên ngoài lúc đỏ, lúc xanh, lúc vàng, nhưng không đổi nội dung hay hình thức, chỉ đổi màu — và khả năng hiện cùng một hình thức trong vô số sắc độ là đặc điểm riêng và là nguồn sức mạnh lớn của âm nhạc (tr. 123). Một chủ đề viết cho piano rồi phối cho dàn nhạc có được một hình thức **mới**, nhưng không phải lần đầu có hình thức.
+Phép thử của Hanslick: lấy chủ đề chính của Giao hưởng giọng Si giáng trưởng của Beethoven. Nội dung là gì? Các nhóm âm. Hình thức là gì? Lại các nhóm âm. Mọi cố gắng tách một chủ đề thành nội dung và hình thức đều thành tuỳ tiện và mâu thuẫn. Một chủ đề được nhạc cụ khác nhắc lại hay đưa lên quãng tám: nội dung đổi hay hình thức đổi? Nếu nói hình thức đổi, thì cái còn lại làm "nội dung" chỉ là chuỗi quãng trừu tượng, "bộ khung" của bản phổ — không phải tính xác định của âm nhạc. Hanslick ví việc đổi âm sắc với một **ngôi đình có kính màu**: cảnh vật bên ngoài lúc đỏ, lúc xanh, lúc vàng, nhưng không đổi nội dung hay hình thức, chỉ đổi màu — và khả năng hiện cùng một hình thức trong vô số sắc độ là đặc điểm riêng và là nguồn sức mạnh lớn của âm nhạc [^hanslick-1957, tr. 123]. Một chủ đề viết cho piano rồi phối cho dàn nhạc có được một hình thức **mới**, nhưng không phải lần đầu có hình thức.
 
 ## Chủ đề là nội dung thật
 Khi nói về "hình thức" của một bản giao hưởng, overture, sonata, aria, ta dùng chữ theo nghĩa **âm nhạc**: sự kết hợp kiến trúc của các đơn vị và nhóm đơn vị — tính cân đối của chuỗi, tương phản, nhắc lại, phát triển (xem [[hinh-thuc-am-nhac]]). Hiểu như thế, "nội dung" chính là các chủ đề dùng để xây cấu trúc ấy.
 
-> "Ta không thể cho ai biết 'nội dung' của một chủ đề trừ khi chơi nó lên." (tr. 124)
+> "Ta không thể cho ai biết 'nội dung' của một chủ đề trừ khi chơi nó lên." [^hanslick-1957, tr. 124]
 
 Một tác phẩm phải phát triển dần, hữu cơ và dễ hiểu, "như nụ nở thành hoa". Chủ đề chính là đề tài thật của cả tác phẩm; mọi thứ trong đó, dù do trí tưởng tượng tự do tạo ra, là kết quả tự nhiên của chủ đề. Hanslick so sánh phần phát triển với **chuỗi lập luận lôgic**, và chủ đề với **nhân vật chính của một cuốn tiểu thuyết**, được đưa qua mọi hoàn cảnh, mọi tâm trạng. Kết luận:
 
-> "Vậy chủ đề, hay các chủ đề, là nội dung thật của một bản nhạc." (tr. 125)
+> "Vậy chủ đề, hay các chủ đề, là nội dung thật của một bản nhạc." [^hanslick-1957, tr. 125]
 
 Ông trách phê bình đương thời coi nhẹ chủ đề: nghe vài ô nhịp đầu overture *Leonore* của Beethoven hay *Hebrides* của Mendelssohn, mọi nhạc sĩ đều nhận ra kho báu; còn chủ đề của các overture của Donizetti (*Fausta*) hay Verdi (*Luisa Miller*) thì — Hanslick viết khá khinh bạc — "chỉ hợp với quán nhạc rẻ tiền". Lý thuyết gia Đức coi trọng phát triển hơn giá trị tự thân của chủ đề; nhưng cái gì không chứa trong chủ đề (công khai hay ẩn) thì không thể lớn lên hữu cơ. Chỉ lối ngẫu hứng tự do nhất — rải hợp âm, chạy ngón cho đỡ trống — mới có thể gọi là "không có nội dung", vì không có chủ đề. Xem [[ly-thuyet-chu-de]], [[hinh-thuc-nga-nguyen-tac-phat-trien]].
 
@@ -125,7 +125,7 @@ Hanslick cũng nhắc rằng, dù đã loại thanh nhạc khỏi cuộc tranh l
 
 Câu kết của sách:
 
-> "Âm nhạc có nội dung — một nội dung âm nhạc, không kém phần là tia lửa sống của ngọn lửa thần thánh so với cái đẹp của bất cứ nghệ thuật nào. Nhưng chỉ bằng cách kiên quyết phủ nhận mọi 'nội dung' khác trong âm nhạc thì mới cứu được 'nội dung thật' của nó. […] Sức mạnh tinh thần ấy chỉ có thể quy cho cái đẹp xác định của hình thức âm nhạc, kết quả của trí óc con người làm việc không bị trói buộc trên một chất liệu có thể nhào nặn bằng trí tuệ." (tr. 127)
+> "Âm nhạc có nội dung — một nội dung âm nhạc, không kém phần là tia lửa sống của ngọn lửa thần thánh so với cái đẹp của bất cứ nghệ thuật nào. Nhưng chỉ bằng cách kiên quyết phủ nhận mọi 'nội dung' khác trong âm nhạc thì mới cứu được 'nội dung thật' của nó. […] Sức mạnh tinh thần ấy chỉ có thể quy cho cái đẹp xác định của hình thức âm nhạc, kết quả của trí óc con người làm việc không bị trói buộc trên một chất liệu có thể nhào nặn bằng trí tuệ." [^hanslick-1957, tr. 127]
 
 ## Câu hỏi và bài tập
 1. Phân biệt "nội dung" và "đối tượng" theo Hanslick. Vì sao phép thử "trả lời được bằng lời" quan trọng với lập luận của ông?

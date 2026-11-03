@@ -39,6 +39,8 @@ interface BuiltSource extends Partial<Omit<CuratedSource, "kind">> {
   urls: string[]
   /** articles citing it, in library order */
   uses: string[]
+  /** pages cited inline, by article: { slug: ['tr. 45', 'tr. 171 – 172'] } */
+  pages?: Record<string, string[]>
 }
 
 /** Something still to check: a `::verify` line, or a sentence saying a point is unverified. */
@@ -50,7 +52,7 @@ interface OpenItem {
 
 const bare = (u: string) => u.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[#?].*$/, '').replace(/\/$/, '')
 const slugify = (s: string) => normalize(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60)
-const CITE_RE = /\[\^([a-z0-9-]+)(?:,\s*[^\]]+)?\]/g
+const CITE_RE = /\[\^([a-z0-9-]+)(?:,\s*([^\]]+))?\]/g
 const UNVERIFIED_RE = /chưa (?:được )?đối chiếu|chưa có nguồn|nguồn mâu thuẫn|chưa (?:được )?kiểm chứng|chưa xác minh|chưa đọc trực tiếp/i
 const ENCYCLOPEDIAS = /^(?:[a-z]+\.)?(wikipedia\.org|plato\.stanford\.edu|iep\.utm\.edu|britannica\.com|bigenc\.ru|dic\.academic\.ru)/
 
@@ -103,7 +105,7 @@ const normalize = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').repla
 const LINK_RE = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g
 const hash = (s: string) => createHash('sha256').update(s).digest('hex').slice(0, 8)
 /** Text for full-text search: directives dropped, link labels kept. */
-const plain = (body: string) => normalize(body.replace(/^\s*::.*$/gm, '').replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/[*#|]/g, ' ').replace(/\s+/g, ' '))
+const plain = (body: string) => normalize(body.replace(/^\s*::.*$/gm, '').replace(/\[\^[^\]]+\]/g, '').replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/[*#|]/g, ' ').replace(/\s+/g, ' '))
 
 function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
   const byKey = new Map<string, string>()
@@ -139,8 +141,15 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
     const ids = list.map(([label, url]) => cite(a.slug, label, url))
     for (const m of a.body.matchAll(CITE_RE)) {
       const s = sources.get(m[1])
-      if (!s) badCites.push(`${a.slug}: ${m[1]}`)
-      else if (s.uses.at(-1) !== a.slug && !s.uses.includes(a.slug)) s.uses.push(a.slug)
+      if (!s) {
+        badCites.push(`${a.slug}: ${m[1]}`)
+        continue
+      }
+      if (!s.uses.includes(a.slug)) s.uses.push(a.slug)
+      if (m[2]) {
+        const list = ((s.pages ??= {})[a.slug] ??= [])
+        if (!list.includes(m[2].trim())) list.push(m[2].trim())
+      }
     }
     for (const line of a.body.split('\n')) {
       const v = /^\s*::verify\s+(.+)$/.exec(line)

@@ -4,6 +4,7 @@
  * links. Only what the references themselves state is entered — nothing filled in from memory.
  *
  * `match`: link prefixes (without protocol / www) or label prefixes that point to this work.
+ * Articles name the journal (`container`) and volume as the references give them.
  * `access`: how the compiler worked with it — read in the original, through a translation, through another work
  * that cites it, or not yet checked.
  */
@@ -24,8 +25,13 @@ export interface CuratedSource {
   year: string
   publisher?: string
   place?: string
+  /** journal (articles) */
+  container?: string
+  /** volume / issue / pages of an article, as written: "26", "15/2", "1(1): 1–32" */
+  volume?: string
   lang: string
-  access: Access
+  /** left out when the references do not say how the work was read */
+  access?: Access
   rights: 'public-domain' | 'copyrighted'
   /** what the compiler should know: which copy was read, known errors… */
   note?: string
@@ -48,7 +54,7 @@ export const CURATED: CuratedSource[] = [
   { id: 'sokolov-2004', kind: 'book', authors: ['Соколов, А. С.'], title: 'Введение в музыкальную композицию XX века', year: '2004', publisher: 'ВЛАДОС', place: 'М.', lang: 'ru', access: 'nguyen-van', rights: 'copyrighted', note: 'Không phải cuốn "Диалектика творчества" (1992) — chưa có bản đọc.', match: ['amtap.md/assets/pdf/'] },
   { id: 'pham-tu-huong-1991', kind: 'book', authors: ['Phạm Tú Hương'], title: 'Phức điệu nghiêm khắc', editor: 'Nguyễn Thụy Loan (hiệu đính)', year: '1991', publisher: 'Nhạc viện Hà Nội', place: 'Hà Nội', lang: 'vi', access: 'nguyen-van', rights: 'copyrighted', note: 'Sách in; bản scan do Lamar gửi (ví dụ nhạc cắt ở scans/taneev).', match: ['Phạm Tú Hương, Phức điệu nghiêm khắc'] },
   { id: 'fux-1791', kind: 'book', authors: ['Fux, Johann Joseph'], title: 'Practical Rules for Learning Composition', original: 'Gradus ad Parnassum', year: '[1791?]', publisher: 'J. Preston', place: 'London', lang: 'en', access: 'ban-dich', rights: 'public-domain', note: 'Năm ấn bản chưa chắc (Library of Congress ghi [1791?]); bản quét Internet Archive.', url: 'https://archive.org/details/practicalrulesfo00fuxj', match: ['archive.org/details/practicalrulesfo00fuxj'] },
-  { id: 'albrechtsberger-1855', kind: 'book', authors: ['Albrechtsberger, Johann Georg'], title: 'Collected Writings on Thorough-Bass, Harmony, and Composition', editor: 'I. von Seyfried', translator: 'S. Novello', year: '1855', publisher: 'Novello', place: 'London', lang: 'en', access: 'ban-dich', rights: 'public-domain', note: '3 tập trong 1; Tập I phần lớn do Seyfried soạn. Bản quét Internet Archive.', url: 'https://archive.org/details/jgalbrechtsberg00albrgoog', match: ['archive.org/details/jgalbrechtsberg00albrgoog'] },
+  { id: 'albrechtsberger-1855', kind: 'book', authors: ['Albrechtsberger, Johann Georg'], title: 'Collected Writings on Thorough-Bass, Harmony, and Composition', editor: 'I. von Seyfried', translator: 'S. Novello', year: '1855', publisher: 'Novello', place: 'London', lang: 'en', access: 'ban-dich', rights: 'public-domain', note: '3 tập trong 1; Tập I phần lớn do Seyfried soạn. Bản quét Internet Archive.', url: 'https://archive.org/details/jgalbrechtsberg00albrgoog', match: ['archive.org/details/jgalbrechtsberg00albrgoog', 'catalog.hathitrust.org/Record/100780619'] },
   { id: 'taneyev-imslp', kind: 'book', authors: ['Taneyev, Sergey'], title: 'Convertible Counterpoint in the Strict Style', lang: 'en', year: '', access: 'thu-cap', rights: 'public-domain', note: 'Trang IMSLP của sách; hệ Taneyev trong thư viện đọc theo giáo trình Phạm Tú Hương.', url: 'https://imslp.org/wiki/Convertible_Counterpoint_in_the_Strict_Style_(Taneyev,_Sergey)', match: ['imslp.org/wiki/Convertible_Counterpoint_in_the_Strict_Style'] },
   // ---- jazz, piano
   { id: 'levine-1995', kind: 'book', authors: ['Levine, Mark'], title: 'The Jazz Theory Book', year: '1995', publisher: 'Sher Music', lang: 'en', access: 'nguyen-van', rights: 'copyrighted', note: 'Chỉ đọc; ví dụ nhạc trong thư viện là của người biên soạn, không chép từ sách.', url: 'https://www.shermusic.com/products/the-jazz-theory-book', match: ['shermusic.com/products/the-jazz-theory-book'] },
@@ -67,5 +73,14 @@ export const CURATED: CuratedSource[] = [
   // ---- syllabuses, Vietnamese works
   { id: 'abrsm-theory-2020', kind: 'syllabus', authors: ['ABRSM'], title: 'The ABRSM Music Theory Syllabus from 2020: Grades 1 to 5', year: '2020', lang: 'en', access: 'nguyen-van', rights: 'copyrighted', url: 'https://www.abrsm.org/sites/default/files/2023-09/music-theory-syllabus-outline-grades-1-5-from-2020.pdf', match: ['abrsm.org/sites/default/files/2023-09/music-theory-syllabus'] },
   { id: 'abrsm-piano-2027', kind: 'syllabus', authors: ['ABRSM'], title: 'Piano Practical Grades Qualification Specification 2027 & 2028', year: '2026', lang: 'en', access: 'nguyen-van', rights: 'copyrighted', url: 'https://www.abrsm.org/sites/default/files/2026-06/Piano%20Practical%20Grades%20Qualification%20Specification%202027%20&%202028.pdf', match: ['abrsm.org/sites/default/files/2026-06/Piano'] },
+  // ---- studies (articles and monographs the library cites in several places)
+  { id: 'ewell-2020', kind: 'article', authors: ['Ewell, Philip'], title: 'Harmonic Functionalism in Russian Music Theory: A Primer', container: 'Theoria', volume: '26', year: '2020', lang: 'en', rights: 'copyrighted', url: 'http://philipewell.com/wp-content/uploads/2020/12/Ewell-HarFunction-Russia-Primer.pdf', match: ['philipewell.com/wp-content/uploads/2020/12/Ewell-HarFunction'] },
+  { id: 'bakulina-2020', kind: 'article', authors: ['Bakulina, Ellen'], title: 'The ‘Brigade Textbook’: Disseminating the Riemannian Legacy in the Russian-Soviet Theoretical Tradition', container: 'Theoria', volume: '26', year: '2020', lang: 'en', rights: 'copyrighted', note: 'Liên kết là trang tác giả, không phải toàn văn.', match: ['mcgill.ca/music/ellen-bakulina'] },
+  { id: 'cheong-ding-2018', kind: 'article', authors: ['Cheong', 'Ding Hong'], title: 'Sposobin Remains: A Soviet Harmony Textbook’s Twisted Fate in China', container: 'Zeitschrift der Gesellschaft für Musiktheorie (ZGMTH)', volume: '15/2', year: '2018', lang: 'en', rights: 'copyrighted', url: 'https://www.gmth.de/zeitschrift/artikel/974.aspx', match: ['gmth.de/zeitschrift/artikel/974'] },
+  { id: 'parncutt-2007', kind: 'article', authors: ['Parncutt, Richard'], title: 'Systematic musicology and the history and future of Western musical scholarship', container: 'Journal of Interdisciplinary Music Studies', volume: '1(1): 1–32', year: '2007', lang: 'en', rights: 'copyrighted', url: 'https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/parncutt_richard/Pdfs/Pa07_JIMS.pdf', match: ['static.uni-graz.at/fileadmin/_Persoenliche_Webseite/parncutt_richard/Pdfs/Pa07_JIMS'] },
+  { id: 'hepokoski-darcy-2006', kind: 'book', authors: ['Hepokoski', 'Darcy'], title: 'Elements of Sonata Theory', year: '2006', lang: 'en', rights: 'copyrighted', note: 'Liên kết là trang sách trên Oxford Academic.', url: 'https://academic.oup.com/book/4770', match: ['academic.oup.com/book/4770'] },
+  { id: 'gould-2011', kind: 'book', authors: ['Gould, Elaine'], title: 'Behind Bars', year: '2011', publisher: 'Faber Music', lang: 'en', access: 'thu-cap', rights: 'copyrighted', note: 'Các bài dẫn qua trang giới thiệu sách.', match: ['symposium.music.org/51/item/479-behind-bars'] },
+  { id: 'keefe-burns-nguyen-1991', kind: 'article', authors: ['Keefe', 'Burns', 'Nguyen'], title: 'Vietnamese modal scales of the đàn tranh', year: '1991', lang: 'en', rights: 'copyrighted', note: 'Liên kết là trang mục lục.', match: ['labs.sonicfield.org/library/vietnamese-modal-scales-of-the-dan-tranh'] },
+  { id: 'minh-chau-2014', kind: 'book', authors: ['Nguyễn Thị Minh Châu'], title: 'Những vấn đề lí luận âm nhạc Việt Nam giai đoạn 1954 – 1975', year: '2014', publisher: 'Hội Nhạc sĩ Việt Nam', lang: 'vi', rights: 'copyrighted', note: 'Đọc bản đăng lại trên redsvn.net.', match: ['redsvn.net/nhung-van-de-li-luan-am-nhac-viet-nam-giai-doan-1954-1975'] },
   { id: 'vien-am-nhac-2000', kind: 'book', authors: ['Viện Âm nhạc'], title: 'Âm nhạc mới Việt Nam: tiến trình và thành tựu', year: '2000', place: 'Hà Nội', lang: 'vi', access: 'chua-doi-chieu', rights: 'copyrighted', note: 'Công trình tổng kết thường được các bài khác dẫn; người biên soạn chưa đọc trực tiếp.', match: ['Viện Âm nhạc — Âm nhạc mới Việt Nam'] },
 ]

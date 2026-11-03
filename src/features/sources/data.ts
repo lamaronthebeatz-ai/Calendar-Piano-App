@@ -11,6 +11,8 @@ export interface Source extends Partial<Omit<CuratedSource, 'kind'>> {
   urls: string[]
   /** articles citing it */
   uses: string[]
+  /** pages cited inline ([^id, tr. n]), by article */
+  pages?: Record<string, string[]>
 }
 
 export interface OpenItem {

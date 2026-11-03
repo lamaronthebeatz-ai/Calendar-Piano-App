@@ -59,7 +59,7 @@ Bộ bài không bắt người học nhạc đọc Kant trước. Hai bài ti�
     category: 'musicology',
     also: ['philosophy'],
     aliases: ['thế giới là biểu tượng của tôi', 'the world is my representation', 'Die Welt ist meine Vorstellung', 'nguyên lý lý do đầy đủ', 'chủ thể và khách thể', 'nhận thức trực quan', 'nhận thức trừu tượng'],
-    summary: 'Quyển I (tr. 1 – 91): thế giới mà ta biết chỉ là biểu tượng — khách thể cho một chủ thể. Không gian, thời gian, nhân quả là những dạng của nguyên lý lý do đầy đủ, hình thức của nhận thức cá thể. Cách nhìn này phiến diện và sẽ được bổ sung bằng chân lý thứ hai: "thế giới là ý chí của tôi".',
+    summary: 'Quyển I [^schopenhauer-payne-1969, tr. 1 – 91]: thế giới mà ta biết chỉ là biểu tượng — khách thể cho một chủ thể. Không gian, thời gian, nhân quả là những dạng của nguyên lý lý do đầy đủ, hình thức của nhận thức cá thể. Cách nhìn này phiến diện và sẽ được bổ sung bằng chân lý thứ hai: "thế giới là ý chí của tôi".',
     refs: SCHOPENHAUER_REFS,
     body: `
 Quyển I mang tên **"Thế giới như là biểu tượng — phương diện thứ nhất: biểu tượng tuân theo nguyên lý lý do đầy đủ; khách thể của kinh nghiệm và khoa học"**. Đề từ là câu của Rousseau: "Hãy ra khỏi tuổi thơ, bạn ơi, hãy thức dậy!"
@@ -79,9 +79,9 @@ Quyển I còn phân biệt kỹ **nhận thức trực quan** (của giác tín
 ## Một cách nhìn phiến diện
 Ngay ở §1, Schopenhauer báo trước rằng ai cũng thấy **khó chịu** khi phải coi thế giới chỉ là biểu tượng của mình — cảm giác ấy báo rằng cách nhìn này, dù đúng, vẫn phiến diện. Nó sẽ được bổ sung bằng một chân lý "nghiêm trọng, nếu không nói là khủng khiếp":
 
-> "con người cũng có thể và phải nói: '**Thế giới là ý chí của tôi**.'" (tr. 4)
+> "con người cũng có thể và phải nói: '**Thế giới là ý chí của tôi**.'" [^schopenhauer-payne-1969, tr. 4]
 
-Thế giới, một mặt, hoàn toàn là biểu tượng; mặt kia, hoàn toàn là ý chí. Còn một "khách thể tự thân" không phải cả hai — thứ mà "vật tự thân" của Kant đã bị biến thành — chỉ là "bóng ma của giấc mơ" (tr. 4). Xem tiếp [[schopenhauer-the-gioi-la-y-chi]].
+Thế giới, một mặt, hoàn toàn là biểu tượng; mặt kia, hoàn toàn là ý chí. Còn một "khách thể tự thân" không phải cả hai — thứ mà "vật tự thân" của Kant đã bị biến thành — chỉ là "bóng ma của giấc mơ" [^schopenhauer-payne-1969, tr. 4]. Xem tiếp [[schopenhauer-the-gioi-la-y-chi]].
 
 ## Vì sao người học nhạc cần Quyển I
 - Khi Schopenhauer nói âm nhạc "bỏ qua thế giới hiện tượng", ông dựa vào Quyển I: thế giới hiện tượng là thế giới của không gian, thời gian, nhân quả.
@@ -99,7 +99,7 @@ Thế giới, một mặt, hoàn toàn là biểu tượng; mặt kia, hoàn to�
     category: 'musicology',
     also: ['philosophy'],
     aliases: ['thế giới là ý chí', 'ý chí là vật tự thân', 'thân thể và ý chí', 'các bậc khách thể hoá ý chí', 'objectification of the will', 'lực tự nhiên', 'phấn đấu không mục đích'],
-    summary: 'Quyển II (tr. 93 – 165): từ bên ngoài, ta không bao giờ vào được bản chất sự vật; chìa khoá là thân thể của chính ta, thứ ta biết theo hai cách — như biểu tượng và như ý chí. Ý chí là vật tự thân của Kant; nó khách thể hoá thành các bậc, từ trọng lực tới con người, và các bậc ấy là Ý niệm của Platon. Bản chất của ý chí là phấn đấu không ngừng, không mục đích.',
+    summary: 'Quyển II [^schopenhauer-payne-1969, tr. 93 – 165]: từ bên ngoài, ta không bao giờ vào được bản chất sự vật; chìa khoá là thân thể của chính ta, thứ ta biết theo hai cách — như biểu tượng và như ý chí. Ý chí là vật tự thân của Kant; nó khách thể hoá thành các bậc, từ trọng lực tới con người, và các bậc ấy là Ý niệm của Platon. Bản chất của ý chí là phấn đấu không ngừng, không mục đích.',
     refs: SCHOPENHAUER_REFS,
     body: `
 Quyển II: **"Thế giới như là ý chí — phương diện thứ nhất: sự khách thể hoá của ý chí"**.
@@ -112,26 +112,26 @@ Từ bên ngoài, khoa học chỉ cho ta "hình ảnh và tên gọi":
 ## Chìa khoá: thân thể
 Nếu người tìm hiểu chỉ là chủ thể nhận thức thuần tuý — "một thiên thần có cánh không thân thể" — thì không bao giờ tìm ra nghĩa của thế giới. Nhưng anh ta có **thân thể**, và thân thể được cho anh ta **theo hai cách hoàn toàn khác nhau**: như một biểu tượng giữa các biểu tượng; và như cái mà ai cũng biết trực tiếp, gọi bằng chữ **ý chí** (§18, tr. 100).
 
-> "Hành vi của ý chí và cử động của thân thể không phải hai trạng thái khác nhau nối với nhau bằng quan hệ nhân quả; chúng là **một và cùng một thứ**, chỉ được cho theo hai cách khác nhau." (tr. 100)
+> "Hành vi của ý chí và cử động của thân thể không phải hai trạng thái khác nhau nối với nhau bằng quan hệ nhân quả; chúng là **một và cùng một thứ**, chỉ được cho theo hai cách khác nhau." [^schopenhauer-payne-1969, tr. 100]
 
-Vì thế ông viết: ý chí là nhận thức tiên nghiệm về thân thể, và thân thể là nhận thức hậu nghiệm về ý chí. Đau đớn và khoái lạc không phải biểu tượng mà là những tác động trực tiếp lên ý chí qua thân thể (tr. 101). Ông ghi chú một ngoại lệ đáng nhớ cho người học nhạc: những giác quan "khách quan" — thị giác, thính giác, xúc giác — khi được kích thích ở mức bình thường thì không đánh động ý chí; nhưng kích thích quá mạnh thì thành đau đớn (tr. 101). Ở §38 ông nói thêm: âm thanh, khác ánh sáng, có thể gây đau hay dễ chịu trực tiếp (tr. 199 – 200).
+Vì thế ông viết: ý chí là nhận thức tiên nghiệm về thân thể, và thân thể là nhận thức hậu nghiệm về ý chí. Đau đớn và khoái lạc không phải biểu tượng mà là những tác động trực tiếp lên ý chí qua thân thể [^schopenhauer-payne-1969, tr. 101]. Ông ghi chú một ngoại lệ đáng nhớ cho người học nhạc: những giác quan "khách quan" — thị giác, thính giác, xúc giác — khi được kích thích ở mức bình thường thì không đánh động ý chí; nhưng kích thích quá mạnh thì thành đau đớn [^schopenhauer-payne-1969, tr. 101]. Ở §38 ông nói thêm: âm thanh, khác ánh sáng, có thể gây đau hay dễ chịu trực tiếp [^schopenhauer-payne-1969, tr. 199 – 200].
 
 ## Ý chí là vật tự thân
 Từ thân thể mình, ta suy rộng ra mọi hiện tượng: lực trong hòn đá, sự lớn lên của cái cây, bản năng của con vật — tất cả là cùng một **ý chí**, chỉ ở những bậc hiển hiện khác nhau. Ý chí ấy chính là **vật tự thân** của Kant. Nó đứng ngoài không gian và thời gian, nên **không có số nhiều**: "không có phần ý chí nhỏ hơn trong hòn đá và phần lớn hơn trong con người"; ý chí hiện ra "trọn vẹn trong một cây sồi cũng như trong hàng triệu cây" (§25, tr. 128).
 
 ## Các bậc khách thể hoá — và Ý niệm
-Sự khách thể hoá của ý chí có những **bậc**, "vô tận như giữa ánh hoàng hôn mờ nhất và ánh nắng chói nhất, giữa âm vang to nhất và tiếng vọng khẽ nhất" (tr. 128):
+Sự khách thể hoá của ý chí có những **bậc**, "vô tận như giữa ánh hoàng hôn mờ nhất và ánh nắng chói nhất, giữa âm vang to nhất và tiếng vọng khẽ nhất" [^schopenhauer-payne-1969, tr. 128]:
 - bậc thấp nhất: các **lực tự nhiên phổ quát** — trọng lực, tính không xuyên thấu, độ cứng, tính lỏng, điện, từ, hoá tính (§26, tr. 130);
 - rồi thực vật, động vật, và cao nhất là **con người**, nơi mỗi cá thể có tính cách riêng.
 
-Schopenhauer gọi mỗi bậc cố định ấy là **Ý niệm** theo nghĩa của Platon: "mỗi bậc xác định và cố định của sự khách thể hoá ý chí, chừng nào nó là vật tự thân và vì thế xa lạ với số nhiều" (tr. 130). Đây là chiếc cầu sang Quyển III: nghệ thuật là sự nhận thức các Ý niệm.
+Schopenhauer gọi mỗi bậc cố định ấy là **Ý niệm** theo nghĩa của Platon: "mỗi bậc xác định và cố định của sự khách thể hoá ý chí, chừng nào nó là vật tự thân và vì thế xa lạ với số nhiều" [^schopenhauer-payne-1969, tr. 130]. Đây là chiếc cầu sang Quyển III: nghệ thuật là sự nhận thức các Ý niệm.
 
 ## Phấn đấu không mục đích
 Quyển II kết bằng đặc điểm quyết định của ý chí — điều sẽ trở lại trong lý thuyết về giai điệu:
 
 > "Vắng mọi mục đích, mọi giới hạn thuộc về bản chất của ý chí tự thân, vốn là một sự **phấn đấu không cùng**. […] Mỗi mục đích đạt được lại là khởi đầu của một chặng mới, cứ thế mãi mãi." (§29, tr. 164)
 
-Hạnh phúc là chuyển nhanh từ ham muốn tới thoả mãn rồi tới ham muốn mới; chuyển chậm là khổ đau; còn khi trò chơi ấy dừng lại thì là **buồn chán** — "một khát khao không đối tượng". Ý chí luôn biết nó muốn gì *ở đây và lúc này*, nhưng không bao giờ biết nó muốn gì *nói chung* (tr. 164 – 165). Ở §52, Schopenhauer sẽ đọc đúng cấu trúc này vào giai điệu: rời âm chủ, đi lang thang, rồi trở về — xem [[schopenhauer-giai-dieu-va-cam-xuc]].
+Hạnh phúc là chuyển nhanh từ ham muốn tới thoả mãn rồi tới ham muốn mới; chuyển chậm là khổ đau; còn khi trò chơi ấy dừng lại thì là **buồn chán** — "một khát khao không đối tượng". Ý chí luôn biết nó muốn gì *ở đây và lúc này*, nhưng không bao giờ biết nó muốn gì *nói chung* [^schopenhauer-payne-1969, tr. 164 – 165]. Ở §52, Schopenhauer sẽ đọc đúng cấu trúc này vào giai điệu: rời âm chủ, đi lang thang, rồi trở về — xem [[schopenhauer-giai-dieu-va-cam-xuc]].
 
 ## Câu hỏi và bài tập
 1. Vì sao thân thể là "chìa khoá" của Schopenhauer? Liên hệ với cảm giác của bạn khi chơi một đoạn khó trên đàn.
