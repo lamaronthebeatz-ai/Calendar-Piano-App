@@ -20,26 +20,9 @@ export const lastTopic = () => last
  * Runs a topic change as a view transition: the tile's picture and title grow into the topic header, or the header
  * shrinks back into its tile. The topic lives in the URL's ?c=, so the router does not start a transition itself.
  */
-export function morphTopic(id: string | undefined, from: Element | null, update: () => void, ready: () => boolean, after?: () => void) {
+export function morphTopic(id: string | undefined, _from: Element | null, update: () => void, _ready: () => boolean, after?: () => void) {
+  // A plain switch: the view transition started by hand left the page blank on iPhone Safari (11/2026).
   if (id) last = id
-  const reduced = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches
-  if (typeof document === 'undefined' || typeof document.startViewTransition !== 'function' || reduced) {
-    update()
-    setTimeout(() => after?.(), 30)
-    return
-  }
-  from?.querySelector('[data-vt-img]')?.classList.add('vt-ti')
-  from?.querySelector('[data-vt-title]')?.classList.add('vt-tt')
-  const root = document.documentElement
-  root.classList.add('vt-topic')
-  const t = document.startViewTransition(async () => {
-    update()
-    // rendering is paused during the update, so wait with timers (requestAnimationFrame would never fire)
-    for (let i = 0; i < 25 && !ready(); i++) await new Promise((r) => setTimeout(r, 12))
-    after?.()
-  })
-  t.finished.finally(() => {
-    root.classList.remove('vt-topic')
-    document.querySelectorAll('.vt-ti, .vt-tt').forEach((el) => el.classList.remove('vt-ti', 'vt-tt'))
-  })
+  update()
+  setTimeout(() => after?.(), 30)
 }

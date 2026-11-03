@@ -42,7 +42,7 @@ import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { TOPIC_CREDITS } from './topicCredits'
 import { useThumbs } from './thumbs'
 import { HeroBackdrop } from './HeroBackdrop'
-import { TheoryStage } from './TheoryStage'
+import { HeroArt } from './TheoryStage'
 import { LinkStaff, PathStrip } from './ArticleLinks'
 import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicsView } from './TheoryHome'
 import { morphTopic, TOPIC_GROUPS } from './topicGroups'
@@ -69,7 +69,6 @@ const SCROLL_TL = typeof CSS !== 'undefined' && CSS.supports('animation-timeline
 
 export function TheoryPage() {
   const { slug } = useParams()
-  const { search } = useLocation()
   const article = slug ? findArticle(slug) : undefined
   // The index is in the bundle; the text arrives from content/ (cached after the first read).
   const { article: full, error: textError, retry } = useArticle(article)
@@ -250,7 +249,6 @@ export function TheoryPage() {
       )}
       {!slug ? (
         <div ref={pullContent}>
-          {!search && <TheoryStage />}
           <Index />
         </div>
       ) : full ? (
@@ -382,11 +380,8 @@ function Index() {
   return (
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
       <section className={clsx('hero-ebony relative isolate overflow-hidden rounded-[28px] shadow-[var(--shadow-float)]', active || query ? 'p-2.5' : 'animate-float-up px-5 pb-6 pt-7 sm:px-9 sm:pb-9 sm:pt-10')}>
-        {/* The pianist photograph sits on the right; a warm-black wash keeps the text side readable. */}
-        <picture aria-hidden data-parallax="0.18" data-parallax-max="0.15" className="hero-parallax pointer-events-none absolute inset-x-0 -z-10">
-          <source media="(max-width: 640px)" srcSet={`${import.meta.env.BASE_URL}images/hero-piano-sm.webp`} />
-          <img src={`${import.meta.env.BASE_URL}images/hero-piano.webp`} alt="" className="h-full w-full object-cover object-[78%_45%] sm:object-[right_42%]" />
-        </picture>
+        {/* The Lý thuyết painting of the home page, the camera drifting towards its music book. */}
+        {active || query ? null : <HeroArt />}
         <div aria-hidden className="hero-wash pointer-events-none absolute inset-0 -z-10" />
         {!active && !query && (
           <>
@@ -780,7 +775,7 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
         onContextMenu={(e) => isTouchUI() && e.preventDefault()}
       >
         {articles.map((a, i) => (
-          <li key={a.slug} data-reveal className="ag-li" style={{ '--i': i } as CSSProperties}>
+          <li key={a.slug} data-reveal style={{ '--i': i } as CSSProperties}>
             <Link
               to={`/theory/${a.slug}`}
               data-card={a.slug}
