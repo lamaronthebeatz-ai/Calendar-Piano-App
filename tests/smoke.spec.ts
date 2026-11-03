@@ -16,6 +16,9 @@ const PAGES: [string, string, string?][] = [
   ['Bảng tính', '/#/tools'],
   ['Solfège', '/#/solfege'],
   ['Sổ nghiên cứu', '/#/notes'],
+  ['Thư mục học', '/#/sources'],
+  ['Một nguồn', '/#/sources/sposobin-1984'],
+  ['Việc còn treo', '/#/sources/treo'],
   ['Cài đặt', '/#/settings'],
 ]
 

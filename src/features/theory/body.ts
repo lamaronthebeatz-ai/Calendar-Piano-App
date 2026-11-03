@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { findArticle, type Article, type ArticleMeta } from './wiki'
 
 /** An article's text, fetched on demand: the JSON files under content/ that scripts/theory-content.ts writes. */
-export type ArticleText = Pick<Article, 'body' | 'refs'> & { backlinks?: string[] }
+/** `sources`: bibliography id of each reference, in the order shown (Wikipedia lead first); `updated`: last edit (git). */
+export type ArticleText = Pick<Article, 'body' | 'refs'> & { backlinks?: string[]; sources?: string[]; updated?: string }
 
 const cache = new Map<string, ArticleText>()
 const pending = new Map<string, Promise<ArticleText>>()

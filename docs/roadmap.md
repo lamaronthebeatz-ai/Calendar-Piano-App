@@ -25,7 +25,11 @@ Nguyên tắc cho mọi giai đoạn:
 - GitHub Actions: workflow deploy chạy `tsc`, lint, `check:links`, build, budget, Playwright (cài WebKit); đỏ thì không deploy.
 - Xong khi: một PR cố ý làm hỏng (ẩn nội dung sau animation) bị CI chặn.
 
-## Giai đoạn 2 — Thư mục học (3–4 phiên) — xương sống uy tín
+## Giai đoạn 2 — Thư mục học — xương sống uy tín (đợt 1 ✅ 11/2026, chi tiết `notes/sources.md`)
+**Đã có:** 4.042 nguồn dựng tự động từ mọi tài liệu tham khảo, 22 công trình chính đủ thông tin + mức đối chiếu, trang `/sources` (danh sách, chi tiết, việc còn treo), cú pháp `[^id, tr. n]` và `::verify` (sai mã thì build lỗi), trích dẫn Chicago/APA/BibTeX cho nguồn và cho từng bài (ngày cập nhật từ git).
+**Còn lại (đợt 2):** mở rộng `curated.ts` (Grove/Riemann, sách Việt, bài báo hay dẫn); script đề xuất đổi 126 câu "chưa đối chiếu" thành `::verify`; dần thay nhãn `refs` bằng trích dẫn có số trang ở các bài theo sách; trang nguồn hiện chỗ trích cụ thể (trang nào, bài nào); xuất cả danh sách đang lọc.
+
+Kế hoạch ban đầu:
 **Dữ liệu** `src/features/sources/sources.ts` (+ tách file theo nhóm khi lớn):
 ```ts
 interface Source {

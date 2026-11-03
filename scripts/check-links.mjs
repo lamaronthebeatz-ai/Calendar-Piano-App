@@ -2,6 +2,9 @@
 // musicology map (places.ts) is an article.
 import { createServer } from 'vite'
 
+// citations [^id] to a missing source fail here too (scripts/theory-content.ts)
+process.env.THEORY_STRICT = '1'
+
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 const { ARTICLES } = await server.ssrLoadModule('/src/features/theory/articles.source.ts')
 const { findArticle } = await server.ssrLoadModule('/src/features/theory/wiki.ts')

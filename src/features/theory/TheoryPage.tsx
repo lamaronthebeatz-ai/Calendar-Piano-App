@@ -25,6 +25,8 @@ import { EmptyState } from '../../components/EmptyState'
 import { ARTICLES, CATEGORIES } from './articles'
 import { Markup, WikiImage } from './Markup'
 import { OfflineSave } from './OfflineSave'
+import { CiteBox } from '../sources/CiteBox'
+import { citeArticle } from '../sources/cite'
 import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadBodyMatches, searchArticles, type ArticleMeta as Article } from './wiki'
 import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
@@ -1150,6 +1152,11 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
               {[...(article.wiki ? [[`Wikipedia — ${article.wiki.replace(/_/g, ' ')}`, `https://en.wikipedia.org/wiki/${encodeURIComponent(article.wiki)}`]] : []), ...(article.refs ?? [])].map(([title, url], i) => (
                 <li key={url || title} className="flex gap-2.5">
                   <span className="w-5 shrink-0 text-right tabular-nums text-[var(--color-ink-faint)]">{i + 1}.</span>
+                  {article.sources?.[i] && (
+                    <Link to={`/sources/${article.sources[i]}`} title="Mục trong thư mục" className="shrink-0 text-[11px] uppercase tracking-[0.1em] text-[var(--color-gold)] hover:underline">
+                      Thư mục
+                    </Link>
+                  )}
                   {url ? (
                     <a href={url} target="_blank" rel="noreferrer" className="group min-w-0 text-[var(--color-ink)] hover:text-[var(--color-accent)]">
                       {title} <ArrowUpRightIcon width={11} height={11} className="inline opacity-40 group-hover:opacity-100" />
@@ -1163,6 +1170,8 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             </ol>
           </section>
         )}
+
+        <CiteBox title="Cách trích dẫn bài này" cite={(style) => citeArticle(article, style)} />
 
         <ArticleQuiz slug={article.slug} />
 

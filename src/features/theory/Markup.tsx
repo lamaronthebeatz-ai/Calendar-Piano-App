@@ -1,4 +1,6 @@
 import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
+import { CURATED_BY_ID, shortCite } from '../sources/data'
+import '../sources/sources.css'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { ExpandIcon, XIcon } from '../../components/icons'
@@ -21,9 +23,10 @@ import { PitchKeyboard } from '../solfege/PitchKeyboard'
  */
 function Inline({ text }: { text: string }) {
   const ref = useContext(LinkRefContext)
-  return text.split(/(\*\*(?:[^*]|\*[^*]+\*)+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\])/g).map((part, i, parts) => {
+  return text.split(/(\*\*(?:[^*]|\*[^*]+\*)+\*\*|\*[^*\s][^*]*\*|\[\[[^\]]+\]\]|\[\^[a-z0-9-]+(?:,[^\]]+)?\])/g).map((part, i, parts) => {
     if (part.startsWith('**')) return <strong key={i} className="font-semibold"><Inline text={part.slice(2, -2)} /></strong>
     if (part.startsWith('*') && part.length > 2) return <em key={i}><Inline text={part.slice(1, -1)} /></em>
+    if (part.startsWith('[^')) return <InlineCite key={i} spec={part.slice(2, -1)} />
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
     const article = findArticle(target)
@@ -41,6 +44,18 @@ function Inline({ text }: { text: string }) {
       </span>
     )
   })
+}
+
+/** [^sposobin-1984, tr. 45] → "(Sposobin 1984, tr. 45)" linking to the work in the bibliography. */
+function InlineCite({ spec }: { spec: string }) {
+  const [id, ...where] = spec.split(',')
+  const c = CURATED_BY_ID.get(id.trim())
+  const page = where.join(',').trim()
+  return (
+    <span className="cite-inline">
+      (<Link to={`/sources/${id.trim()}`}>{c ? shortCite(c) : id}</Link>{page ? `, ${page}` : ''})
+    </span>
+  )
 }
 
 /** Image from Wikimedia Commons by file name; hides itself if it cannot load (e.g. offline). */
@@ -404,6 +419,9 @@ function Directive({ line }: { line: string }) {
   const caption = rest.join('|').trim()
   const [name, ...args] = spec.trim().split(/\s+/)
   switch (name) {
+    case 'verify':
+      // a point the compiler has not been able to check; listed under /sources/treo
+      return <p className="verify-note"><b>Chưa đối chiếu</b><Inline text={line.slice(2).replace(/^verify\s+/, '')} /></p>
     case 'keyboard':
       return <Figure caption={caption}><Keyboard notes={args} /></Figure>
     case 'staff': {

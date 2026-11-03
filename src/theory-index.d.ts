@@ -4,4 +4,7 @@ declare module 'virtual:theory-index' {
   /** first two letters of a word → hash of its full-text shard (content/search/<xx>.<hash>.json) */
   export const SEARCH: Record<string, string>
   export const LINK_COUNT: number
+  /** content/ name of the bibliography file */
+  export const SOURCES_FILE: string
+  export const SOURCE_COUNT: number
 }

@@ -32,3 +32,16 @@ test('lưu một mục rồi đọc khi mất mạng', async ({ page, context, b
   await expect(page.locator('h1').first()).toBeVisible()
   expect((await page.locator('main').innerText()).length).toBeGreaterThan(500)
 })
+
+test('thư mục: một công trình gom mọi bài dùng nó, có trích dẫn', async ({ page }) => {
+  await page.goto('/#/sources/sposobin-1984')
+  await expect(page.locator('h2').first()).toHaveText('Музыкальная форма')
+  await expect(page.locator('.src-cite-text')).toContainText('Способин')
+  expect(await page.locator('article ul a[href^="#/theory/"]').count()).toBeGreaterThan(20)
+})
+
+test('bài viết dẫn sang thư mục và có cách trích dẫn bài', async ({ page }) => {
+  await page.goto('/#/theory/passacaglia-va-chaconne')
+  await expect(page.locator('a[href^="#/sources/wp-"]').first()).toBeVisible()
+  await expect(page.locator('.src-cite-text')).toContainText('Passacaglia')
+})

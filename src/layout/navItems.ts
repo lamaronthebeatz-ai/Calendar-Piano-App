@@ -1,4 +1,4 @@
-import { BookIcon, BranchesIcon, CalendarIcon, GraduationIcon, HomeIconGlyph, NoteIcon, SettingsIcon } from '../components/icons'
+import { BookIcon, BookmarkIcon, BranchesIcon, CalendarIcon, GraduationIcon, HomeIconGlyph, NoteIcon, SettingsIcon } from '../components/icons'
 
 export const navItems = [
   { to: '/home', label: 'Trang chủ', icon: HomeIconGlyph, end: true },
@@ -8,5 +8,6 @@ export const navItems = [
   { to: '/curriculum', label: 'Tủ sách', icon: GraduationIcon, end: false },
   // Desktop side bar only; on phones it is reached from search, the reader and the bookshelf.
   { to: '/notes', label: 'Sổ nghiên cứu', icon: NoteIcon, end: false, desktop: true },
+  { to: '/sources', label: 'Thư mục học', icon: BookmarkIcon, end: false, desktop: true },
   { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
 ]
