@@ -146,30 +146,6 @@ html.vt-topic .vt-tt, html.vt-topic .vt-cat-title { view-transition-name: topic-
 @keyframes ha-push { from { transform: scale(1.04); } to { transform: scale(var(--to)); } }
 @keyframes ha-in { from { opacity: 0; } }
 
-/* ============ the topics as a full score (ScoreMap.tsx) ============ */
-.tv-switch { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
-.tv-opt { padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 12.5px; font-weight: 500; color: var(--color-ink-muted); transition: background-color 0.25s, color 0.25s; }
-.tv-opt[aria-pressed="true"] { color: var(--color-ink); background: color-mix(in oklch, var(--color-gold) 16%, transparent); }
-.sm-score { position: relative; display: grid; gap: 1.1rem; padding: 0.4rem 0 0.4rem 0.9rem; border-left: 3px solid color-mix(in oklch, var(--color-gold) 55%, transparent); border-radius: 2px; }
-.sm-name { font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--color-gold); margin-bottom: 0.3rem; }
-.sm-staff { display: flex; flex-wrap: wrap; row-gap: 0.6rem; }
-.sm-bar { position: relative; min-width: 7.5rem; flex-basis: 0; display: flex; flex-direction: column; text-align: left; padding: 0 0.35rem; border-right: 1px solid color-mix(in oklch, var(--color-gold) 40%, transparent); transition: background-color 0.25s; border-radius: 4px; }
-.sm-bar:hover { background: color-mix(in oklch, var(--color-gold) 7%, transparent); }
-.sm-notes {
-  display: block; width: 100%; height: 44px; overflow: visible;
-  background: repeating-linear-gradient(180deg, transparent 0 5px, color-mix(in oklch, #e2b66e 32%, transparent) 5px 6px, transparent 6px 8px) 0 0 / 100% 40px no-repeat;
-}
-.sm-notes ellipse { fill: color-mix(in oklch, var(--color-ink) 22%, transparent); }
-.sm-notes ellipse.is-read { fill: #f3d18f; }
-.sm-label { margin-top: 0.3rem; display: flex; align-items: baseline; gap: 0.35rem; min-width: 0; font-size: 12.5px; color: var(--color-ink); }
-.sm-glyph { color: var(--tint, var(--color-gold)); font-size: 13px; }
-.sm-title { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
-.sm-count { font-size: 11px; color: var(--color-ink-faint); }
-@media (max-width: 639px) { .sm-bar { min-width: calc(50% - 2px); } }
-@media (prefers-reduced-motion: no-preference) {
-  .sm-system { animation: tb-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: calc(var(--g) * 70ms); }
-}
-
 /* ============ roadmap strip (article header) ============ */
 .ps { display: grid; gap: 0.35rem; }
 .ps-label { font-size: 12px; color: var(--color-ink-faint); }

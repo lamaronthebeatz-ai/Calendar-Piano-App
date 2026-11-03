@@ -9,7 +9,6 @@ import { useThumbs } from './thumbs'
 import { lastTopic, morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { CountUp } from '../../components/CountUp'
 import { playNow } from './audio'
-import { ScoreMap } from './ScoreMap'
 import './theory-home.css'
 
 type CategoryId = Article['category']
@@ -213,35 +212,3 @@ export function StaffRule() {
   return <div aria-hidden className="staff-rule" />
 }
 
-const VIEW_KEY = 'theory:topicsView'
-
-/** The topics as a full score (default) or as picture tiles, remembered per device. */
-export function TopicsView({ onSelect }: { onSelect: (id: CategoryId) => void }) {
-  const [view, setView] = useState<'score' | 'tiles'>(() => {
-    try {
-      return localStorage.getItem(VIEW_KEY) === 'tiles' ? 'tiles' : 'score'
-    } catch {
-      return 'score'
-    }
-  })
-  const choose = (v: 'score' | 'tiles') => {
-    setView(v)
-    try {
-      localStorage.setItem(VIEW_KEY, v)
-    } catch {
-      /* not remembered */
-    }
-  }
-  return (
-    <div className="space-y-3">
-      <div className="tv-switch" role="group" aria-label="Cách xem chủ đề">
-        {(['score', 'tiles'] as const).map((v) => (
-          <button key={v} onClick={() => choose(v)} aria-pressed={view === v} className="tv-opt">
-            {v === 'score' ? 'Tổng phổ' : 'Ô ảnh'}
-          </button>
-        ))}
-      </div>
-      {view === 'score' ? <ScoreMap onSelect={onSelect} /> : <TopicBrowser onSelect={onSelect} />}
-    </div>
-  )
-}

@@ -15,6 +15,7 @@ import { useBack } from '../../hooks/useBack'
 import { MusicMap } from './MusicMap'
 import { PLACES } from './places'
 import { Sky } from './Sky'
+import { Sky3D } from './Sky3D'
 import { neighbours, partView, skyOf, type Layout } from './constellation'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 
@@ -155,7 +156,7 @@ function MapIndex() {
     <>
       {/* 1 · the sky: every branch a star, every part a constellation, every shared article a thread between stars */}
       <section className="mc-stage" aria-label="Bầu trời âm nhạc học">
-        <div className="mc-stage-pin">
+        <div className={`mc-stage-pin${sel ? ' has-sel' : ''}`}>
           <div className="mc-stage-head">
             <p className="text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Musikwissenschaft · Musicology</p>
             <h2 data-collapse className="collapse-large mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[46px]">
@@ -177,11 +178,11 @@ function MapIndex() {
               ))}
             </dl>
           </div>
-          <div className="mc-stage-sky">
-            <Sky layout={layout} labels layered selected={sel} onSelect={(id) => setSel((s) => (s === id ? null : id))} lit={lit} />
+          <div className="mc3">
+            <Sky3D selected={sel} onSelect={setSel} lit={lit} />
+            {!sel && <p className="mc-hint">Kéo để xoay bầu trời · chạm một ngôi sao để bay tới</p>}
+            {sel && <StarCard id={sel} lit={lit} onPick={setSel} onClose={() => setSel(null)} />}
           </div>
-          {!sel && <p className="mc-hint">Chạm một ngôi sao để xem phân ngành và những ngành cùng chung bài</p>}
-          {sel && <StarCard id={sel} lit={lit} onPick={setSel} onClose={() => setSel(null)} />}
         </div>
       </section>
 

@@ -44,7 +44,7 @@ import { useThumbs } from './thumbs'
 import { HeroBackdrop } from './HeroBackdrop'
 import { HeroArt } from './TheoryStage'
 import { LinkStaff, PathStrip } from './ArticleLinks'
-import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicsView } from './TheoryHome'
+import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicBrowser } from './TheoryHome'
 import { morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
@@ -451,7 +451,7 @@ function Index() {
           <StaffRule />
           <section className="space-y-3">
             <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>
-            <TopicsView onSelect={select} />
+            <TopicBrowser onSelect={select} />
           </section>
           <StaffRule />
           {/* A rotating quiz on the library, beside a rotating random article. */}
@@ -684,7 +684,7 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
 function CategoryChips({ active, onSelect }: { active: CategoryId; onSelect: (id?: CategoryId) => void }) {
   return (
     <nav className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 lg:mx-0 lg:flex-wrap lg:px-0">
-      <button onClick={() => morphTopic(undefined, null, () => onSelect(), () => !!document.querySelector('.sm-score, .tb-grid'), () => document.querySelector('.sm-score .vt-ti, .tb-grid .vt-ti')?.scrollIntoView({ block: 'center' }))} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]">
+      <button onClick={() => morphTopic(undefined, null, () => onSelect(), () => !!document.querySelector('.tb-grid'), () => document.querySelector('.tb-grid .vt-ti')?.scrollIntoView({ block: 'center' }))} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]">
         ← Tất cả
       </button>
       {articlesByCategory.map((c) => (

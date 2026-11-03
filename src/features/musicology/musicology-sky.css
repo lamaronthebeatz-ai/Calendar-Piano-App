@@ -40,8 +40,18 @@ svg.mc-l { pointer-events: none; }
 .mc-stage-head { position: relative; z-index: 2; max-width: 38rem; pointer-events: none; }
 .mc-gold { display: inline-block; filter: drop-shadow(0 2px 14px rgb(0 0 0 / 0.5)); }
 .mc-gold > span { display: inline-block; padding: 0.04em 0.12em 0.06em 0; }
-.mc-stage-sky { position: relative; z-index: 1; display: flex; justify-content: center; }
-.mc-stage-sky .mc-sky { width: min(100%, calc((100svh - 120px) * var(--ar))); }
+/* the 3D sky (Sky3D): the canvas fills the stage behind the heading; the card floats inside it */
+.mc-stage-pin { position: relative; height: min(100svh, 940px); min-height: 560px; padding-top: 72px; }
+.mc3 { position: absolute; inset: 0; z-index: 1; }
+.mc-stage-head { transition: opacity 0.5s, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.mc-stage-pin.has-sel .mc-stage-head { opacity: 0; transform: translateY(-24px); }
+.s3, .s3-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.s3-canvas { display: block; cursor: grab; touch-action: pan-y; }
+.s3-canvas:active { cursor: grabbing; }
+.s3-zoom { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 6px; }
+.s3-zoom button { width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgb(226 182 110 / 0.3); background: rgb(18 15 10 / 0.7); color: #f0c987; font-size: 18px; line-height: 1; }
+.mc3 .mc-hint { position: absolute; left: 0; right: 0; bottom: 20px; pointer-events: none; }
+@media (max-width: 1023px) { .mc3 .mc-card { bottom: 88px; } .mc3 .mc-hint { bottom: 92px; } }
 .mc-hint { position: relative; z-index: 2; text-align: center; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(226 182 110 / 0.7); }
 .mc-card {
   position: absolute; z-index: 4; left: 50%; bottom: max(18px, env(safe-area-inset-bottom)); width: min(440px, calc(100% - 24px)); transform: translateX(-50%);
@@ -50,7 +60,6 @@ svg.mc-l { pointer-events: none; }
   animation: mc-card-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @media (hover: hover) { .mc-card { background: rgb(18 15 10 / 0.72); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); } }
-@media (max-width: 1023px) { .mc-card { bottom: 88px; } }
 @keyframes mc-card-in { from { opacity: 0; transform: translate(-50%, 18px); } }
 .mc-card-x { position: absolute; right: 10px; top: 10px; padding: 6px; border-radius: 10px; color: rgb(246 236 220 / 0.6); }
 .mc-card-x:hover { color: #f6ecdc; }
@@ -107,25 +116,6 @@ html.vt-active .vt-bg { view-transition-name: branch-glyph; }
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    /* the stage: the title rises away while the stars light up from the centre outward and the threads draw */
-    .mc-stage { height: 200svh; view-timeline-name: --sky; }
-    .mc-stage-pin { position: sticky; top: 0; height: 100svh; min-height: 520px; padding-top: 72px; }
-    .mc-stage-head { position: absolute; left: clamp(16px, 5vw, 64px); right: 16px; top: 18svh; animation: mc-head-away linear both; animation-timeline: --sky; animation-range: contain 0% contain 22%; }
-    .mc-stage-sky { position: absolute; inset: 64px clamp(8px, 3vw, 40px) 48px; align-items: center; }
-    .mc-stage-sky .mc-sky { width: min(100%, calc((100svh - 130px) * var(--ar))); }
-    .mc-hint { position: absolute; left: 0; right: 0; bottom: 18px; animation: mc-fade-in linear both; animation-timeline: --sky; animation-range: contain 50% contain 62%; }
-    /* whole layers only: three rings of stars, then three rings of threads, centre first */
-    .mc-stage .mc-l-dust { animation: mc-dust-in linear both; animation-timeline: --sky; animation-range: contain 0% contain 30%; }
-    .mc-stage .mc-l-stars { animation: mc-ring-in linear both; animation-timeline: --sky; }
-    .mc-stage .mc-l-stars.mc-k0 { animation-range: contain 6% contain 18%; }
-    .mc-stage .mc-l-stars.mc-k1 { animation-range: contain 14% contain 26%; }
-    .mc-stage .mc-l-stars.mc-k2 { animation-range: contain 22% contain 34%; }
-    .mc-stage .mc-l-edges { animation: mc-fade-in linear both; animation-timeline: --sky; }
-    .mc-stage .mc-l-edges.mc-k0 { animation-range: contain 24% contain 36%; }
-    .mc-stage .mc-l-edges.mc-k1 { animation-range: contain 32% contain 44%; }
-    .mc-stage .mc-l-edges.mc-k2 { animation-range: contain 40% contain 52%; }
-    .mc-stage .mc-plabel { animation: mc-label-in linear both; animation-timeline: --sky; animation-range: contain 46% contain 58%; }
-    .has-sel .mc-plabel { animation: none; }
 
     /* each part: the constellation flies in and the heading rises as the chapter scrolls into view (no sticky
        panel: pinning each part and pushing the camera cost a repaint of the whole panel every frame) */
