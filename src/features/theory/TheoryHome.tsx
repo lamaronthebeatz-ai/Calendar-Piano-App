@@ -6,7 +6,9 @@ import { articlesByCategory, findArticle, type ArticleMeta as Article } from './
 import { unfinished, useLibrary } from './library'
 import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { useThumbs } from './thumbs'
-import { TOPIC_GROUPS } from './topicGroups'
+import { lastTopic, morphTopic, TOPIC_GROUPS } from './topicGroups'
+import { CountUp } from '../../components/CountUp'
+import { playNow } from './audio'
 import './theory-home.css'
 
 type CategoryId = Article['category']
@@ -47,13 +49,21 @@ export function TopicBrowser({ onSelect }: { onSelect: (id: CategoryId) => void 
           const hub = c.articles[0]
           return (
             <div key={c.id} className="tb-tile theory-card" style={{ ...tint(c.id), '--i': i } as CSSProperties}>
-              <button onClick={() => onSelect(c.id)} className="tb-main" aria-label={`Mở chủ đề ${c.title}`}>
-                <span className="tb-media" aria-hidden>
+              <button
+                onClick={(e) =>
+                  morphTopic(c.id, e.currentTarget, () => onSelect(c.id), () => !!document.querySelector('.cat-head'), () =>
+                    document.querySelector('.cat-head')?.closest('.overflow-y-auto')?.scrollTo({ top: 0 }),
+                  )
+                }
+                className="tb-main"
+                aria-label={`Mở chủ đề ${c.title}`}
+              >
+                <span className={clsx('tb-media', lastTopic() === c.id && 'vt-ti')} aria-hidden>
                   {TOPIC_IMAGES[c.id] && <img src={TOPIC_IMAGES[c.id]} alt="" loading="lazy" decoding="async" />}
                   <span className="tb-glyph font-['Noto_Music']">{GLYPHS[c.id]}</span>
-                  <span className="tb-count tabular-nums">{c.articles.length}</span>
+                  <CountUp value={c.articles.length} duration={1100} className="tb-count tabular-nums" />
                 </span>
-                <span className="tb-title">{c.title}</span>
+                <span className={clsx('tb-title', lastTopic() === c.id && 'vt-tt')}>{c.title}</span>
                 <span className="tb-desc">{c.description}</span>
               </button>
               {hub && (
@@ -152,21 +162,52 @@ export function ArticleQuiz({ slug }: { slug: string }) {
 }
 
 
-/** Five gold staff lines drawn across the hero, then a few notes landing on them (decoration; runs once). */
+const CHORDS: { label: string; ys: number[]; midis: number[] }[] = [
+  { label: 'I', ys: [50, 40, 25], midis: [64, 67, 72] },
+  { label: 'IV', ys: [45, 35, 25], midis: [65, 69, 72] },
+  { label: 'V', ys: [40, 30, 20], midis: [67, 71, 74] },
+  { label: 'I', ys: [50, 40, 25], midis: [64, 67, 72] },
+]
+
+/**
+ * Five gold staff lines drawn across the hero, then the progression I – IV – V – I in C lands on them chord by chord
+ * (runs once). Tapping the chords plays them softly, each lighting up as it sounds.
+ */
 export function HeroStaff() {
-  const notes: [number, number][] = [[40, 25], [78, 35], [116, 30], [154, 25], [192, 20]]
+  const [on, setOn] = useState(-1)
+  useEffect(() => {
+    if (on < 0) return
+    const t = setTimeout(() => setOn(on + 1 < CHORDS.length ? on + 1 : -1), 700)
+    if (on < CHORDS.length) playNow(CHORDS[on].midis, 1.6, 0.025)
+    return () => clearTimeout(t)
+  }, [on])
   return (
-    <span aria-hidden className="hero-staff">
-      <svg viewBox="0 0 100 60" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
+    <span className="hero-staff">
+      <svg aria-hidden viewBox="0 0 100 60" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
         {[10, 20, 30, 40, 50].map((y, k) => (
-          <line key={y} x1={0} x2={100} y1={y} y2={y} pathLength={1} vectorEffect="non-scaling-stroke" style={{ '--k': k } as CSSProperties} />
+          <line key={y} x1={0} x2={100} y1={y} y2={y} vectorEffect="non-scaling-stroke" style={{ '--k': k } as CSSProperties} />
         ))}
       </svg>
-      <svg viewBox="0 0 230 60" preserveAspectRatio="xMaxYMid meet" className="absolute inset-y-0 right-[6%] h-full w-[46%]">
-        {notes.map(([x, y], k) => (
-          <ellipse key={x} cx={x} cy={y} rx={6.2} ry={4.4} transform={`rotate(-20 ${x} ${y})`} className="hs-note" style={{ '--k': k } as CSSProperties} />
-        ))}
-      </svg>
+      <button type="button" onClick={() => setOn(0)} aria-label="Nghe tiến trình I – IV – V – I (Đô trưởng)" title="Nghe I – IV – V – I" className="hs-play">
+        <svg viewBox="0 0 230 72" preserveAspectRatio="xMaxYMid meet" className="h-full w-full">
+          {CHORDS.map((c, k) => {
+            const x = 45 + k * 50
+            return (
+              <g key={k} className={clsx('hs-chord', on === k && 'is-on')} style={{ '--k': k } as CSSProperties}>
+                {c.ys.map((y) => (
+                  <ellipse key={y} cx={x} cy={y} rx={6.2} ry={4.4} transform={`rotate(-20 ${x} ${y})`} className="hs-note" />
+                ))}
+                <text x={x} y={68} textAnchor="middle" className="hs-label">{c.label}</text>
+              </g>
+            )
+          })}
+        </svg>
+      </button>
     </span>
   )
+}
+
+/** A compressed gold staff (five hairlines) between blocks of the library home; it draws itself as it scrolls in. */
+export function StaffRule() {
+  return <div aria-hidden className="staff-rule" />
 }

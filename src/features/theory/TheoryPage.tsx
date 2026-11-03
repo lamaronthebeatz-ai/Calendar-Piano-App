@@ -37,18 +37,18 @@ import { QuizCard } from './QuizCard'
 import { booksWithChapter } from '../curriculum/reader/model'
 import { Annotator } from '../curriculum/reader/Annotator'
 import { LIBRARY } from '../curriculum/reader/notes'
-import { GLYPHS, tint } from './categoryStyle'
+import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { TOPIC_CREDITS } from './topicCredits'
 import { useThumbs } from './thumbs'
 import { HeroBackdrop } from './HeroBackdrop'
-import { ArticleQuiz, ContinueRow, HeroStaff, TopicBrowser } from './TheoryHome'
-import { TOPIC_GROUPS } from './topicGroups'
+import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicBrowser } from './TheoryHome'
+import { morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
 import { useScrollCollapse } from '../../hooks/useScrollCollapse'
 import { usePullAction } from '../../hooks/usePullAction'
 import { isTouchUI } from '../../hooks/useEdgeSwipeBack'
-import { morphTarget, setMorphTarget } from '../../layout/viewTransitions'
+import { morphTarget, setMorphTarget, setNextDirection } from '../../layout/viewTransitions'
 import { useUIStore } from '../../store/uiStore'
 import './theory-motion.css'
 
@@ -383,7 +383,6 @@ function Index() {
           <img src={`${import.meta.env.BASE_URL}images/hero-piano.webp`} alt="" className="h-full w-full object-cover object-[78%_45%] sm:object-[right_42%]" />
         </picture>
         <div aria-hidden className="hero-wash pointer-events-none absolute inset-0 -z-10" />
-        {!active && !query && <HeroStaff />}
         {!active && !query && (
           <>
             <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Thư viện lý thuyết</p>
@@ -406,6 +405,7 @@ function Index() {
                 </div>
               ))}
             </dl>
+            <HeroStaff />
           </>
         )}
         <label className={clsx(!active && !query && 'mt-6', 'hero-search relative flex h-12 items-center gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
@@ -448,10 +448,12 @@ function Index() {
       ) : (
         <>
           <ContinueRow />
+          <StaffRule />
           <section className="space-y-3">
             <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>
             <TopicBrowser onSelect={select} />
           </section>
+          <StaffRule />
           {/* A rotating quiz on the library, beside a rotating random article. */}
           <div data-reveal className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <QuizCard />
@@ -633,7 +635,7 @@ function SpotlightPicture({ article }: { article: Article }) {
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(false)}
           className={clsx(
-            'absolute inset-0 h-full w-full transition-opacity duration-500',
+            'kb-img absolute inset-0 h-full w-full transition-opacity duration-500',
             drawing ? 'bg-white object-contain p-4' : article.portrait ? 'object-cover object-[50%_20%]' : 'object-cover',
             loaded ? 'opacity-100' : 'opacity-0',
           )}
@@ -654,11 +656,12 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
       <header
         key={id}
         style={tint(id)}
-        className="animate-float-up relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[linear-gradient(135deg,color-mix(in_oklch,var(--tint)_14%,var(--color-surface-raised)),var(--color-surface-raised)_70%)] p-6 sm:p-8"
+        className="cat-head animate-float-up relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[linear-gradient(135deg,color-mix(in_oklch,var(--tint)_14%,var(--color-surface-raised)),var(--color-surface-raised)_70%)] p-6 sm:p-8"
       >
+        {TOPIC_IMAGES[id] && <img src={TOPIC_IMAGES[id]} alt="" aria-hidden className="cat-img vt-cat-img" />}
         <span aria-hidden className="absolute -right-2 -top-6 font-['Noto_Music'] text-[150px] leading-none text-[color-mix(in_oklch,var(--tint)_14%,transparent)]">{GLYPHS[id]}</span>
         <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.18em] text-[var(--tint)]">{cat.articles.length} bài</p>
-        <h2 className="relative mt-1 font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{cat.title}</h2>
+        <h2 className="vt-cat-title relative mt-1 font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{cat.title}</h2>
         <p className="relative mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--color-ink-muted)]">{cat.description}</p>
         {hub && (
           <Link to={`/theory/${hub.slug}`} className="btn-gold mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13.5px] font-medium">
@@ -681,7 +684,7 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
 function CategoryChips({ active, onSelect }: { active: CategoryId; onSelect: (id?: CategoryId) => void }) {
   return (
     <nav className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 lg:mx-0 lg:flex-wrap lg:px-0">
-      <button onClick={() => onSelect()} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]">
+      <button onClick={() => morphTopic(undefined, null, () => onSelect(), () => !!document.querySelector('.tb-grid'), () => document.querySelector('.tb-grid .vt-ti')?.scrollIntoView({ block: 'center' }))} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]">
         ← Tất cả
       </button>
       {articlesByCategory.map((c) => (
@@ -758,7 +761,7 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
   return (
     <>
       <ul
-        className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3"
+        className={clsx('grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3', query && 'ag-stagger')}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={cancelPress}
@@ -772,7 +775,7 @@ export function ArticleGrid({ articles, home, query, numbered, showCategory }: {
         onContextMenu={(e) => isTouchUI() && e.preventDefault()}
       >
         {articles.map((a, i) => (
-          <li key={a.slug} data-reveal>
+          <li key={a.slug} data-reveal className="ag-li" style={{ '--i': i } as CSSProperties}>
             <Link
               to={`/theory/${a.slug}`}
               data-card={a.slug}
@@ -1149,6 +1152,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
                 <Link
                   key={a.slug}
                   to={`/theory/${a.slug}`}
+                  onClick={() => setNextDirection(i ? 'right' : 'left')}
                   className={clsx('theory-card group rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-4', i ? 'sm:col-start-2 sm:text-right' : '')}
                 >
                   <span className={clsx('flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-faint)]', i && 'sm:justify-end')}>
@@ -1239,6 +1243,7 @@ function Toc({ sections, scroller, onJump }: { sections: string[]; scroller: Ref
  */
 function LinkPreviews({ children }: { children: ReactNode }) {
   const [preview, setPreview] = useState<{ article: Article; x: number; y: number; below: boolean }>()
+  const thumbs = useThumbs()
   const timer = useRef<number>(undefined)
   const canHover = typeof matchMedia !== 'undefined' && matchMedia('(hover: hover) and (pointer: fine)').matches
 
@@ -1270,6 +1275,7 @@ function LinkPreviews({ children }: { children: ReactNode }) {
         >
           <div className="animate-popover overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] shadow-[var(--shadow-float)]">
             <div className="h-1 bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)]" />
+            {thumbs?.[preview.article.slug] && !thumbs[preview.article.slug][1] && <img src={thumbs[preview.article.slug][0]} alt="" className="lp-img h-28 w-full object-cover" />}
             <div className="p-4">
               <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-[var(--tint)]">{CATEGORIES[preview.article.category].title}</p>
               <p className="mt-1 font-display text-[17px] font-semibold leading-snug text-[var(--color-ink)]">{preview.article.title}</p>

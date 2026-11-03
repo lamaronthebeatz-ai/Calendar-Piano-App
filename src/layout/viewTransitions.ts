@@ -13,6 +13,13 @@ export const viewTransitionsOn = () => supported && !reduced?.matches
 
 let armed = false
 let skip = false
+let forced: Dir | null = null
+
+/** The next page change slides sideways in this direction (previous / next article). */
+export function setNextDirection(d: 'left' | 'right') {
+  forced = d
+  setTimeout(() => (forced = null), 1000)
+}
 
 /** The next page change happens without a transition, because a gesture (swipe back) has already moved the page away. */
 export function skipNextTransition() {
@@ -56,7 +63,8 @@ export function installViewTransitions(router: Router) {
   let last = router.state.location
   router.subscribe((state, { viewTransitionOpts }) => {
     if (state.location.key === last.key) return
-    root.dataset.navDir = direction(last.pathname, state.location.pathname, state.historyAction === 'POP')
+    root.dataset.navDir = forced ?? direction(last.pathname, state.location.pathname, state.historyAction === 'POP')
+    forced = null
     last = state.location
     // Only transitions react-router starts for a page change get the page styling; others (the theme switch) pass through.
     armed = !!viewTransitionOpts

@@ -74,12 +74,61 @@
 .aq-opt[data-state="wrong"] { border-color: color-mix(in oklch, #c0533f 55%, transparent); color: var(--color-ink-muted); }
 
 /* ---------- the gold staff of the hero ---------- */
-.hero-staff { position: absolute; inset: auto 0 0 0; height: 38%; z-index: -1; pointer-events: none; opacity: 0.55; }
-.hero-staff line { stroke: #e2b66e; stroke-width: 1; opacity: 0.4; }
+.hero-staff { position: relative; display: block; height: 64px; margin-top: 18px; max-width: 34rem; }
+.hero-staff line { stroke: #e2b66e; stroke-width: 1; opacity: 0.45; }
 .hero-staff .hs-note { fill: #e2b66e; opacity: 0.8; }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-staff line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: hs-draw 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards; animation-delay: calc(var(--k) * 90ms + 200ms); }
-  .hero-staff .hs-note { opacity: 0; animation: hs-note 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: calc(var(--k) * 160ms + 1000ms); transform-box: fill-box; transform-origin: center; }
+  .hero-staff line { transform-box: fill-box; transform-origin: 0 50%; transform: scaleX(0); animation: hs-draw 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards; animation-delay: calc(var(--k) * 90ms + 200ms); }
+  .hero-staff .hs-note { opacity: 0; transform-box: fill-box; transform-origin: center; }
 }
-@keyframes hs-draw { to { stroke-dashoffset: 0; } }
+@keyframes hs-draw { to { transform: scaleX(1); } }
 @keyframes hs-note { from { opacity: 0; transform: translateY(6px) scale(0.6); } to { opacity: 0.8; transform: none; } }
+
+/* ---------- hero: chord labels, playing chord, the staff leaving as the page scrolls ---------- */
+.hs-play { position: absolute; inset: -4px 4% -4px auto; width: 58%; cursor: pointer; border-radius: 12px; }
+.hs-play:focus-visible { outline: 1px solid #e2b66e; }
+.hs-label { fill: #e2b66e; font-family: var(--font-display); font-style: italic; font-size: 9px; opacity: 0; }
+.hs-chord.is-on .hs-note { fill: #fff3d6; }
+.hs-chord.is-on .hs-label { fill: #fff3d6; }
+@media (prefers-reduced-motion: no-preference) {
+  .hs-chord .hs-note, .hs-chord .hs-label { animation: hs-note 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: calc(var(--k) * 180ms + 1000ms); }
+  .hs-chord .hs-label { animation-name: hs-label; }
+  @supports (animation-timeline: view()) {
+    .hero-staff { animation: hs-away linear both; animation-timeline: view(); animation-range: exit 0% exit 100%; transform-origin: 50% 100%; }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .hs-label { opacity: 0.6; } .hero-staff .hs-note { opacity: 0.8; } }
+@keyframes hs-label { from { opacity: 0; } to { opacity: 0.6; } }
+@keyframes hs-away { to { opacity: 0; transform: scaleY(0.3); } }
+
+/* ---------- the staff, compressed into a divider between blocks ---------- */
+.staff-rule {
+  height: 13px; transform-origin: 0 50%; opacity: 0.5;
+  background:
+    linear-gradient(90deg, var(--color-surface), transparent 22%, transparent 78%, var(--color-surface)),
+    repeating-linear-gradient(180deg, color-mix(in oklch, #e2b66e 55%, transparent) 0 1px, transparent 1px 3px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .staff-rule { animation: staff-rule linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
+  }
+}
+@keyframes staff-rule { from { transform: scaleX(0); opacity: 0; } }
+
+/* ---------- topic header picture + the tile ↔ header morph ---------- */
+.cat-img { position: absolute; inset: 0 0 0 auto; width: min(46%, 22rem); height: 100%; object-fit: cover; opacity: 0.55;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%); mask-image: linear-gradient(90deg, transparent, #000 60%); }
+html.vt-topic .vt-ti, html.vt-topic .vt-cat-img { view-transition-name: topic-image; }
+html.vt-topic .vt-tt, html.vt-topic .vt-cat-title { view-transition-name: topic-title; }
+::view-transition-group(topic-image), ::view-transition-group(topic-title) { animation-duration: 520ms; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+::view-transition-old(topic-image), ::view-transition-new(topic-image) { height: 100%; object-fit: cover; }
+
+/* ---------- search results arrive in a quick cascade; long lists skip cards off screen ---------- */
+.ag-li { content-visibility: auto; contain-intrinsic-size: auto 92px; }
+@media (prefers-reduced-motion: no-preference) {
+  .ag-stagger > li { animation: tb-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: calc(min(var(--i), 12) * 28ms); }
+  /* the featured picture zooms very slowly */
+  .kb-img { animation: kb 26s ease-in-out infinite alternate; }
+  .is-android .kb-img { animation: none; }
+}
+@keyframes kb { from { transform: scale(1); } to { transform: scale(1.09) translate(-1.5%, -1%); } }
