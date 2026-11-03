@@ -13,6 +13,8 @@ export interface Source extends Partial<Omit<CuratedSource, 'kind'>> {
   uses: string[]
   /** pages cited inline ([^id, tr. n]), by article */
   pages?: Record<string, string[]>
+  /** links that failed the last check, with an archived copy when one exists */
+  dead?: { url: string; code: number | string; archive?: string }[]
 }
 
 export interface OpenItem {
@@ -26,6 +28,8 @@ export interface Bibliography {
   sources: Source[]
   byId: Map<string, Source>
   open: OpenItem[]
+  /** last link check (scripts/sources/linkcheck.py) */
+  linkcheck?: { checked?: string; total?: number; blocked?: number; unknown?: number }
 }
 
 let load: Promise<Bibliography> | null = null
@@ -33,7 +37,7 @@ let load: Promise<Bibliography> | null = null
 export function loadBibliography() {
   return (load ??= fetch(`${import.meta.env.BASE_URL}content/${SOURCES_FILE}`)
     .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-    .then((d: { sources: Source[]; open: OpenItem[] }) => ({ ...d, byId: new Map(d.sources.map((s) => [s.id, s])) }))
+    .then((d: Omit<Bibliography, 'byId'>) => ({ ...d, byId: new Map(d.sources.map((s) => [s.id, s])) }))
     .catch((e) => {
       load = null
       throw e

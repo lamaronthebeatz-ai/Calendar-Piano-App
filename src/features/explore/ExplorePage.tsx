@@ -10,6 +10,8 @@ import '../musicology/musicology-sky.css'
 import './explore.css'
 import { updateProject, useProjects } from '../research/store'
 import { loadRelations, type Link as Rel, type Relations } from './data'
+import { ChainTimeline, LineageTree } from './Lineage'
+import { chains } from './data'
 import { keyVi, loadPeople, useWorks, workYear, type People, type Person } from './data'
 
 /**
@@ -38,7 +40,7 @@ const KIND_LABEL: Record<string, string> = {
   'symphonic poem': 'Thơ giao hưởng, overture', song: 'Ca khúc, lied', choral: 'Hợp xướng tôn giáo',
 }
 
-type Tab = 'nguoi' | 'tac-pham' | 'thoi-gian'
+type Tab = 'nguoi' | 'tac-pham' | 'thoi-gian' | 'pha-he'
 const PAGE = 80
 const REGION_LABEL: Record<Region, string> = { europe: 'Châu Âu', americas: 'Châu Mỹ', vietnam: 'Việt Nam', asia: 'Châu Á', other: 'Trung Đông – châu Phi' }
 
@@ -110,6 +112,7 @@ export function ExplorePage() {
                   ['nguoi', `Người · ${data.people.length}`],
                   ['tac-pham', 'Tác phẩm'],
                   ['thoi-gian', 'Dòng thời gian'],
+                  ['pha-he', 'Dòng truyền'],
                 ] as [Tab, string][]
               ).map(([k, label]) => (
                 <button key={k} onClick={() => set({ tab: k === 'nguoi' ? undefined : k })} className={clsx(tab === k && 'is-on')}>{label}</button>
@@ -118,6 +121,7 @@ export function ExplorePage() {
             {tab === 'nguoi' && <PeopleList data={data} onOpen={(id) => set({ p: id })} />}
             {tab === 'tac-pham' && <WorksList data={data} onOpen={(id) => set({ p: id })} />}
             {tab === 'thoi-gian' && <Timeline data={data} onOpen={(id) => set({ p: id })} />}
+            {tab === 'pha-he' && <Lines data={data} onOpen={(id) => set({ p: id })} />}
           </>
         )}
       </div>
@@ -512,6 +516,7 @@ function Lineage({ id, onOpen, nameOf }: { id: string; onOpen: (id: string) => v
   return (
     <section className="ex-block">
       <h3>Thầy, trò và ảnh hưởng <span className="ex-more">theo Wikidata</span></h3>
+      <LineageTree rel={rel} id={id} name={nameOf} onOpen={onOpen} />
       <dl className="ex-lineage">
         {rows.filter(([, l]) => l?.length).map(([label, list]) => (
           <div key={label}>
@@ -538,5 +543,27 @@ function LinkList({ list, onOpen }: { list: Rel[]; onOpen: (id: string) => void 
       )}
       {list.length > shown.length && <button onClick={() => setAll(true)} className="ex-more">+{list.length - shown.length}</button>}
     </span>
+  )
+}
+
+/** "Dòng truyền": the longest teacher → student chains in the library, each on its own time axis. */
+function Lines({ data, onOpen }: { data: People; onOpen: (id: string) => void }) {
+  const [rel, setRel] = useState<Relations | null>(null)
+  useEffect(() => {
+    let live = true
+    loadRelations().then((r) => live && setRel(r), () => {})
+    return () => {
+      live = false
+    }
+  }, [])
+  const list = useMemo(() => (rel ? chains(rel, data.people, 12) : []), [rel, data])
+  if (!rel) return <p className="text-[14px] text-[var(--color-ink-faint)]">Đang tải…</p>
+  return (
+    <section className="space-y-5">
+      <p className="max-w-2xl text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">
+        Những chuỗi thầy – trò dài nhất giữa các nhạc sĩ có trong thư viện, theo quan hệ "học với / học trò" của Wikidata. Mỗi thanh là một đời người trên cùng trục năm, nên thấy được các thế hệ sống chồng lên nhau. Bấm một tên để mở hồ sơ và cây thầy – trò của người đó.
+      </p>
+      {list.map((c) => <ChainTimeline key={c.map((p) => p.id).join('>')} chain={c} onOpen={onOpen} />)}
+    </section>
   )
 }

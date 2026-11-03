@@ -24,6 +24,8 @@ const PAGES: [string, string, string?][] = [
   ['Tra cứu', '/#/explore'],
   ['Hồ sơ một người', '/#/explore?p=johann-sebastian-bach'],
   ['Dòng thời gian', '/#/explore?tab=thoi-gian'],
+  ['Dòng truyền', '/#/explore?tab=pha-he'],
+  ['Sức khoẻ thư viện', '/#/sources/suc-khoe'],
   ['Cài đặt', '/#/settings'],
 ]
 

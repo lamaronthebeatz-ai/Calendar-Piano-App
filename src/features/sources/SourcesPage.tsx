@@ -9,6 +9,8 @@ import { ACCESS_LABEL, CURATED } from './curated'
 import { sourceTitle, useBibliography, type Bibliography, type Source } from './data'
 import { CiteBox } from './CiteBox'
 import { citeSource } from './cite'
+import { KIND_LABELS, kindOf, type KindId } from './kind'
+import { ARTICLES, CATEGORIES } from '../theory/articles'
 import './sources.css'
 
 const KIND_LABEL: Record<string, string> = {
@@ -27,22 +29,22 @@ const pageList = (pages: string[]) => {
   const first = (p: string) => parseInt(p, 10) || 0
   return `tr. ${[...new Set(bare)].sort((x, y) => first(x) - first(y) || x.length - y.length).join(', ')}`
 }
-type Tab = 'chinh' | 'tat-ca' | 'treo'
+type Tab = 'chinh' | 'tat-ca' | 'treo' | 'suc-khoe'
 const PAGE = 60
 
 /** The library's bibliography: /sources (list), /sources/:id (one work), /sources/treo (what is still unverified). */
 export function SourcesPage() {
   const { id } = useParams()
   const { data, error } = useBibliography()
-  const tab: Tab | null = id === 'treo' ? 'treo' : id ? null : 'chinh'
+  const tab: Tab | null = id === 'treo' || id === 'suc-khoe' ? id : id ? null : 'chinh'
   return (
     <ScrollArea className="relative h-full overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
-          {id && id !== 'treo' && (
+          {id && id !== 'treo' && id !== 'suc-khoe' && (
             <Link to="/sources" className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Thư mục</Link>
           )}
-          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id && id !== 'treo' ? '' : 'Thư mục học'}</h1>
+          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id && id !== 'treo' && id !== 'suc-khoe' ? '' : 'Thư mục học'}</h1>
         </div>
       </div>
       <div className="mx-auto max-w-5xl space-y-6 px-4 py-6 lg:px-8">
@@ -56,7 +58,7 @@ export function SourcesPage() {
 
 function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
   const [current, setTab] = useState<Tab>(tab)
-  const t = tab === 'treo' ? 'treo' : current
+  const t = tab === 'treo' || tab === 'suc-khoe' ? tab : current
   return (
     <>
       <header className="animate-float-up">
@@ -77,10 +79,11 @@ function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
             ['chinh', 'Công trình chính'],
             ['tat-ca', 'Tất cả nguồn'],
             ['treo', 'Việc còn treo'],
+            ['suc-khoe', 'Sức khoẻ thư viện'],
           ] as [Tab, string][]
         ).map(([k, label]) =>
-          k === 'treo' ? (
-            <Link key={k} to="/sources/treo" className={clsx(t === k && 'is-on')}>{label}</Link>
+          k === 'treo' || k === 'suc-khoe' ? (
+            <Link key={k} to={`/sources/${k}`} className={clsx(t === k && 'is-on')}>{label}</Link>
           ) : (
             <Link key={k} to="/sources" onClick={() => setTab(k)} className={clsx(t === k && 'is-on')}>{label}</Link>
           ),
@@ -89,6 +92,7 @@ function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
       {t === 'chinh' && <CuratedList data={data} />}
       {t === 'tat-ca' && <AllSources data={data} />}
       {t === 'treo' && <OpenItems data={data} />}
+      {t === 'suc-khoe' && <Health data={data} />}
     </>
   )
 }
@@ -221,6 +225,11 @@ function SourceDetail({ data, id }: { data: Bibliography; id: string }) {
           {u} <ArrowUpRightIcon width={12} height={12} className="shrink-0" />
         </a>
       ))}
+      {s.dead?.map((d) => (
+        <p key={d.url} className="text-[12.5px] text-[var(--color-ink-muted)]">
+          Liên kết {d.url} không còn trả lời ({String(d.code)}){d.archive ? <> — <a href={d.archive} target="_blank" rel="noreferrer" className="text-[var(--color-gold)] hover:underline">bản lưu trên Wayback Machine</a></> : ', chưa tìm thấy bản lưu'}.
+        </p>
+      ))}
       <CiteBox title="Trích dẫn nguồn này" cite={(style) => citeSource(s, style)} />
       <section>
         <h3 className="font-display text-[18px] font-semibold text-[var(--color-ink)]">Được dùng trong {s.uses.length} bài</h3>
@@ -271,6 +280,78 @@ function OpenItems({ data }: { data: Bibliography }) {
           </div>
         ))}
       </div>
+    </section>
+  )
+}
+
+/** Library health: what kind of sourcing each article has, and the links that no longer answer. */
+function Health({ data }: { data: Bibliography }) {
+  const { kinds, bySlug } = useMemo(() => {
+    const ids = new Map<string, string[]>()
+    for (const s of data.sources) for (const slug of s.uses) ids.set(slug, [...(ids.get(slug) ?? []), s.id])
+    const bySlug = new Map<string, KindId>()
+    for (const a of ARTICLES) bySlug.set(a.slug, kindOf(a, ids.get(a.slug)))
+    const kinds = new Map<KindId, number>()
+    for (const k of bySlug.values()) kinds.set(k, (kinds.get(k) ?? 0) + 1)
+    return { kinds, bySlug }
+  }, [data])
+  const dead = useMemo(() => data.sources.flatMap((s) => (s.dead ?? []).map((d) => ({ s, ...d }))), [data])
+  const unsourced = ARTICLES.filter((a) => bySlug.get(a.slug) === 'chua-nguon')
+  const lc = data.linkcheck
+  return (
+    <section className="space-y-6">
+      <dl className="hl-grid">
+        {(Object.keys(KIND_LABELS) as KindId[]).map((k) => (
+          <div key={k}>
+            <dt>{(kinds.get(k) ?? 0).toLocaleString('vi')}</dt>
+            <dd><span className={`kind-badge is-${k}`}>{KIND_LABELS[k]}</span></dd>
+          </div>
+        ))}
+      </dl>
+      <p className="max-w-2xl text-[13px] leading-relaxed text-[var(--color-ink-muted)]">
+        Mỗi bài trong thư viện mang một nhãn ở dưới tiêu đề. "Tổng hợp có nguồn" có ít nhất một nguồn ngoài Wikipedia; "Trang sinh từ dữ liệu" là trang nhà soạn nhạc, nghệ sĩ dựng từ bảng dữ liệu; "Bài tập do người biên soạn soạn" là licks, bài xướng âm, bài cho trẻ em — không cần nguồn ngoài.
+      </p>
+
+      <div>
+        <h3 className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Liên kết nguồn</h3>
+        {lc?.checked ? (
+          <p className="mt-1 text-[13px] text-[var(--color-ink-muted)]">
+            Kiểm ngày {lc.checked}: {lc.total?.toLocaleString('vi')} liên kết · <b className="text-[var(--color-ink)]">{dead.length}</b> không còn trả lời ({dead.filter((d) => d.archive).length} có bản lưu trên Wayback Machine) · {lc.blocked} trang chặn máy kiểm · {lc.unknown ?? 0} chưa kiểm được (lỗi mạng, hết giờ, lỗi máy chủ tạm thời — không tính là hỏng). Chỉ trang trả 404 / 410 mới tính là hỏng.
+          </p>
+        ) : (
+          <p className="mt-1 text-[13px] text-[var(--color-ink-faint)]">Chưa kiểm liên kết lần nào.</p>
+        )}
+        {dead.length > 0 && (
+          <ul className="mt-3 src-list">
+            {dead.map(({ s, url, code, archive }) => (
+              <li key={url} className="src-row">
+                <span className="min-w-0 flex-1">
+                  <Link to={`/sources/${s.id}`} className="src-title hover:text-[var(--color-gold)]">{sourceTitle(s)}</Link>
+                  <span className="src-sub break-all">{url} · {String(code)}</span>
+                </span>
+                <span className="flex shrink-0 flex-col items-end gap-0.5 text-[12px]">
+                  {archive ? <a href={archive} target="_blank" rel="noreferrer" className="text-[var(--color-gold)] hover:underline">Bản lưu</a> : <span className="text-[var(--color-ink-faint)]">chưa có bản lưu</span>}
+                  <span className="text-[var(--color-ink-faint)]">{s.uses.length} bài</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {unsourced.length > 0 && (
+        <div>
+          <h3 className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Bài chưa có nguồn · {unsourced.length}</h3>
+          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
+            {unsourced.map((a) => (
+              <li key={a.slug} className="text-[13.5px]">
+                <Link to={`/theory/${a.slug}`} className="wiki-link">{a.title}</Link>
+                <span className="text-[var(--color-ink-faint)]"> · {CATEGORIES[a.category].title}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   )
 }

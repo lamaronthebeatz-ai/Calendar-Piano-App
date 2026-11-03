@@ -42,6 +42,8 @@ interface BuiltSource extends Partial<Omit<CuratedSource, "kind">> {
   uses: string[]
   /** pages cited inline, by article: { slug: ['tr. 45', 'tr. 171 – 172'] } */
   pages?: Record<string, string[]>
+  /** links that failed the last check (scripts/sources/linkcheck.py), with an archived copy when found */
+  dead?: { url: string; code: number | string; archive?: string }[]
 }
 
 /** Something still to check: a `::verify` line, or a sentence saying a point is unverified. */
@@ -150,6 +152,15 @@ const hash = (s: string) => createHash('sha256').update(s).digest('hex').slice(0
 /** Text for full-text search: directives dropped, link labels kept. */
 const plain = (body: string) => normalize(body.replace(/^\s*::.*$/gm, '').replace(/\[\^[^\]]+\]/g, '').replace(/\[\[[^\]|]+\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/[*#|]/g, ' ').replace(/\s+/g, ' '))
 
+/** Result of the last link check (scripts/sources/linkcheck.py); none yet → nothing marked. */
+function linkStatus(): { dead: Record<string, { code: number | string; archive?: string }>; checked?: string; total?: number; blocked?: number; unknown?: number } {
+  try {
+    return JSON.parse(readFileSync('src/features/sources/linkstatus.json', 'utf8'))
+  } catch {
+    return { dead: {} }
+  }
+}
+
 /** Names in other languages (glossary, scripts/terms/build.py): "en:fugue|ru:фуга|…", for search and the article head. */
 function foreignNames(): Map<string, string> {
   try {
@@ -180,11 +191,14 @@ function build(articles: SourceArticle[], curated: CuratedSource[], rows: People
   const open: OpenItem[] = []
   const badCites: string[] = []
   const updated = updatedDates()
+  const linkcheck = linkStatus()
+  const deadLinks = linkcheck.dead ?? {}
   const cite = (slug: string, label: string, url: string) => {
     const { id, kind } = sourceOf(label, url, curated)
     const s = sources.get(id) ?? sources.set(id, { id, kind, labels: [], urls: [], uses: [] }).get(id)!
     if (!s.labels.includes(label) && s.labels.length < 3) s.labels.push(label)
     if (url && !s.urls.includes(url) && s.urls.length < 3) s.urls.push(url)
+    if (url && deadLinks[url] && !s.dead?.some((d) => d.url === url)) (s.dead ??= []).push({ url, ...deadLinks[url] })
     if (s.uses.at(-1) !== slug) s.uses.push(slug)
     return id
   }
@@ -219,7 +233,10 @@ function build(articles: SourceArticle[], curated: CuratedSource[], rows: People
   const files = new Map<string, string>()
   const index = articles.map((a) => {
     const { body, refs, ...meta } = a
-    const json = JSON.stringify({ body, refs, backlinks: backlinks.get(a.slug) ?? [], sources: articleSources(a), updated: updated.get(a.slug) })
+    const sourceIds = articleSources(a)
+    // dead links of this article's references → archived copy ('' when none was found)
+    const dead = Object.fromEntries((refs ?? []).filter(([, u]) => u && deadLinks[u]).map(([, u]) => [u, deadLinks[u].archive ?? '']))
+    const json = JSON.stringify({ body, refs, backlinks: backlinks.get(a.slug) ?? [], sources: sourceIds, updated: updated.get(a.slug), ...(Object.keys(dead).length ? { dead } : {}) })
     const h = hash(json)
     files.set(`${a.slug}.${h}.json`, json)
     const lead = {
@@ -246,7 +263,7 @@ function build(articles: SourceArticle[], curated: CuratedSource[], rows: People
     search[key] = hash(json)
     files.set(`search/${key}.${search[key]}.json`, json)
   }
-  const bib = JSON.stringify({ sources: [...sources.values()].filter((s) => s.uses.length || 'match' in s), open })
+  const bib = JSON.stringify({ sources: [...sources.values()].filter((s) => s.uses.length || 'match' in s), open, linkcheck: { checked: linkcheck.checked, total: linkcheck.total, blocked: linkcheck.blocked, unknown: linkcheck.unknown } })
   const sourcesFile = `sources.${hash(bib)}.json`
   files.set(sourcesFile, bib)
 
@@ -298,7 +315,7 @@ export function theoryContent(): Plugin {
     },
     // Editing an article rebuilds the index and reloads the page.
     handleHotUpdate({ file, server }) {
-      if (!/\/features\/(theory\/(content\/|articles\.source\.ts)|sources\/curated\.ts|terms\/terms\.json)/.test(file)) return
+      if (!/\/features\/(theory\/(content\/|articles\.source\.ts)|sources\/(curated\.ts|linkstatus\.json)|terms\/terms\.json)/.test(file)) return
       built = undefined
       const mod = server.moduleGraph.getModuleById(RESOLVED)
       if (mod) server.moduleGraph.invalidateModule(mod)

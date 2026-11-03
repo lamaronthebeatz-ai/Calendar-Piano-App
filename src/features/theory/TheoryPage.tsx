@@ -29,6 +29,7 @@ import { Markup, WikiImage } from './Markup'
 import { OfflineSave } from './OfflineSave'
 import { CiteBox } from '../sources/CiteBox'
 import { citeArticle } from '../sources/cite'
+import { articleKind } from '../sources/kind'
 import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadBodyMatches, searchArticles, type ArticleMeta as Article } from './wiki'
 import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
@@ -1107,6 +1108,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             <span className="inline-flex items-center gap-1.5"><ClockIcon width={13} height={13} /> {readingMinutes(article)} phút đọc</span>
             {sections.length > 0 && <span className="inline-flex items-center gap-1.5"><ListIcon width={13} height={13} /> {sections.length} mục</span>}
             {backlinks.length > 0 && <span className="inline-flex items-center gap-1.5"><LinkIcon width={13} height={13} /> {backlinks.length} bài dẫn đến</span>}
+            <Link to="/sources/suc-khoe" className={`kind-badge is-${articleKind(article).id}`} title="Loại bài và mức nguồn — xem Sức khoẻ thư viện">{articleKind(article).label}</Link>
           </div>
           <SchoolViews slug={article.slug} here />
           <p className="relative rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] py-4 pl-6 pr-5 font-serif text-[17px] leading-relaxed text-[var(--color-ink)] shadow-[var(--shadow-soft)] before:absolute before:inset-y-4 before:left-0 before:w-[3px] before:rounded-r-full before:bg-gradient-to-b before:from-[var(--tint)] before:to-[var(--color-gold)]">
@@ -1180,10 +1182,14 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
                     <a href={url} target="_blank" rel="noreferrer" className="group min-w-0 text-[var(--color-ink)] hover:text-[var(--color-accent)]">
                       {title} <ArrowUpRightIcon width={11} height={11} className="inline opacity-40 group-hover:opacity-100" />
                     </a>
-                  ) : (
-                    // Printed books with no online copy: cite without a link.
-                    <span className="min-w-0 text-[var(--color-ink)]">{title}</span>
+                  ) : null}
+                  {url && article.dead?.[url] !== undefined && (
+                    <span className="shrink-0 text-[11.5px] text-[var(--color-ink-faint)]">
+                      link hỏng{article.dead[url] ? <> · <a href={article.dead[url]} target="_blank" rel="noreferrer" className="text-[var(--color-gold)] hover:underline">bản lưu</a></> : ''}
+                    </span>
                   )}
+                  {/* Printed books with no online copy: cite without a link. */}
+                  {!url && <span className="min-w-0 text-[var(--color-ink)]">{title}</span>}
                 </li>
               ))}
             </ol>

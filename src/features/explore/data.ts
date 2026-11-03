@@ -98,3 +98,33 @@ export const loadRelations = () =>
       relLoad = null
       throw e
     }))
+
+/** The longest teacher → student chains among people of the library, one per head, longest first. */
+export function chains(rel: Relations, people: Person[], limit = 10): Person[][] {
+  const byId = new Map(people.map((p) => [p.id, p]))
+  const next = new Map<string, Set<string>>()
+  const add = (t: string, s: string) => byId.has(t) && byId.has(s) && t !== s && (next.get(t) ?? next.set(t, new Set()).get(t)!).add(s)
+  for (const [pid, r] of Object.entries(rel)) {
+    for (const [t] of r.teachers ?? []) if (t) add(t, pid)
+    for (const [s] of r.students ?? []) if (s) add(pid, s)
+  }
+  const memo = new Map<string, string[]>()
+  const longest = (id: string, seen: Set<string>): string[] => {
+    if (memo.has(id)) return memo.get(id)!
+    let best: string[] = []
+    for (const s of next.get(id) ?? []) {
+      if (seen.has(s)) continue // a cycle in the data: stop there
+      const c = longest(s, new Set([...seen, s]))
+      if (c.length > best.length) best = c
+    }
+    const out = [id, ...best]
+    memo.set(id, out)
+    return out
+  }
+  const all = [...next.keys()].map((id) => longest(id, new Set([id]))).filter((c) => c.length >= 3)
+  // keep maximal chains: drop one that is the tail of a longer one already kept
+  all.sort((a, b) => b.length - a.length)
+  const kept: string[][] = []
+  for (const c of all) if (!kept.some((k) => k.join('>').endsWith(c.join('>')) || k.join('>').includes(c.join('>')))) kept.push(c)
+  return kept.slice(0, limit).map((c) => c.map((id) => byId.get(id)!))
+}

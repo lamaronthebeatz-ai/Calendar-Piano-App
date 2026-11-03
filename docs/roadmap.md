@@ -133,3 +133,8 @@ Kích hoạt khi bước dựng nội dung > 10 s hoặc > 4.000 bài.
 - ✅ Thầy – trò – ảnh hưởng (Wikidata P1066 / P802 / P737) trong hồ sơ người.
 - ✅ Bảng "Mỗi trường phái hiểu thế nào" cho 4 khái niệm, mỗi dòng dẫn về bài nguồn.
 - ⏳ Còn lại, cần sách hoặc bản quét tốt hơn: Mazel (bản quét 2 trang in / trang PDF — cần tách trang rồi dò § theo chương), Asafyev (dẫn theo chương — cần trang mở đầu từng chương), Neuhaus (chỉ có epub, không có số trang in), Fux (bài dẫn theo khối ví dụ quét, không theo trang), Levine (không có bản sách trong máy). 43 § Sposobin OCR không đọc được.
+
+## Bản cập nhật A + B (11/2026)
+- ✅ **A. Phả hệ**: cây thầy – trò trong hồ sơ người, tab Dòng truyền (chuỗi dài nhất trên trục thời gian).
+- ✅ **B. Độ tin cậy**: kiểm 4.073 link (66 hỏng thật, 37 có bản lưu Wayback), "link hỏng · bản lưu" trong bài, nhãn loại bài, trang Sức khoẻ thư viện.
+- Tiếp theo theo đề xuất: **C. Nghe kèm phân tích** (bản nhạc + tiếng piano mẫu, ô nhịp sáng theo tiếng đàn, dải hình thức), **D. Tìm kiếm nghiên cứu**.

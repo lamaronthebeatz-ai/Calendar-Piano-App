@@ -3,7 +3,7 @@ import { findArticle, type Article, type ArticleMeta } from './wiki'
 
 /** An article's text, fetched on demand: the JSON files under content/ that scripts/theory-content.ts writes. */
 /** `sources`: bibliography id of each reference, in the order shown (Wikipedia lead first); `updated`: last edit (git). */
-export type ArticleText = Pick<Article, 'body' | 'refs'> & { backlinks?: string[]; sources?: string[]; updated?: string }
+export type ArticleText = Pick<Article, 'body' | 'refs'> & { backlinks?: string[]; sources?: string[]; updated?: string; /** dead reference links → archived copy ('' if none) */ dead?: Record<string, string> }
 
 const cache = new Map<string, ArticleText>()
 const pending = new Map<string, Promise<ArticleText>>()

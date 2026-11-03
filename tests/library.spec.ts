@@ -114,3 +114,15 @@ test('đối chiếu trường phái, thầy – trò, số trang Sposobin và A
   await page.goto('/#/theory/quang-va-hop-am-albrechtsberger')
   await expect(page.locator('h2').filter({ hasText: 'Quãng' }).first().locator('.cite-inline')).toContainText('tr. 9')
 })
+
+test('phả hệ và độ tin cậy: cây thầy – trò, dòng truyền, nhãn loại bài, sức khoẻ thư viện', async ({ page }) => {
+  await page.goto('/#/explore?p=ludwig-van-beethoven')
+  await expect(page.locator('.lg-tree .lg-node.is-me')).toContainText('Beethoven')
+  await page.goto('/#/explore?tab=pha-he')
+  expect(await page.locator('.lg-chain').count()).toBeGreaterThan(3)
+  await page.goto('/#/theory/passacaglia-va-chaconne')
+  await expect(page.locator('.kind-badge')).toHaveText('Tổng hợp có nguồn')
+  await page.goto('/#/sources/suc-khoe')
+  await expect(page.getByText('Liên kết nguồn')).toBeVisible()
+  await expect(page.locator('.hl-grid > div')).toHaveCount(5)
+})

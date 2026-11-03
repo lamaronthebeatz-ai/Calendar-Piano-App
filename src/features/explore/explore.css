@@ -24,3 +24,29 @@
 .ex-lineage dt { font-size: 12.5px; color: var(--color-ink-faint); padding-top: 4px; }
 .ex-ext { font-size: 12.5px; color: var(--color-ink-muted); padding: 4px 2px; }
 .ex-ext:hover { color: var(--color-gold); }
+
+/* lineage: tree (Lineage.tsx) */
+.lg-tree { margin: 4px 0 14px; overflow-x: auto; padding: 4px 2px 8px; }
+.lg-tree svg { display: block; margin: 0 auto; }
+.lg-edge { fill: none; stroke: color-mix(in oklch, var(--color-gold) 45%, transparent); stroke-width: 1.2; }
+.lg-node rect { fill: var(--color-surface-raised); stroke: var(--color-border); }
+.lg-node text { fill: var(--color-ink-muted); font-size: 12px; }
+.lg-node.is-in { cursor: pointer; }
+.lg-node.is-in rect { stroke: color-mix(in oklch, var(--color-gold) 55%, transparent); }
+.lg-node.is-in text { fill: var(--color-ink); }
+.lg-node[role='link']:not(.is-in) { cursor: pointer; }
+.lg-node.is-me rect { fill: color-mix(in oklch, var(--color-gold) 22%, var(--color-surface-raised)); stroke: var(--color-gold); }
+.lg-node.is-me text { fill: var(--color-gold-bright); font-weight: 600; }
+.lg-node[role='link']:hover rect { stroke: var(--color-gold-bright); }
+
+/* lineage: chains on a time axis */
+.lg-chain { padding: 14px 16px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.lg-chain-names { font-size: 14px; line-height: 1.7; }
+.lg-chain-names button { color: var(--color-ink); }
+.lg-chain-names button:hover, .lg-chain-names button.is-hot { color: var(--color-gold-bright); }
+.lg-arrow { color: var(--color-gold); }
+.lg-bars { margin-top: 10px; display: grid; gap: 4px; }
+.lg-bar { height: 20px; border-radius: 6px; background: color-mix(in oklch, var(--color-gold) 22%, transparent); border: 1px solid color-mix(in oklch, var(--color-gold) 40%, transparent); overflow: hidden; white-space: nowrap; transition: background 0.2s; }
+.lg-bar.is-hot { background: color-mix(in oklch, var(--color-gold) 45%, transparent); }
+.lg-bar span { display: block; padding: 2px 6px; font-size: 11px; color: var(--color-ink); }
+.lg-axis { margin-top: 4px; display: flex; justify-content: space-between; font-size: 11px; color: var(--color-ink-faint); font-variant-numeric: tabular-nums; }
