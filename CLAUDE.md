@@ -14,7 +14,7 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 2. **Đề xuất ngắn, làm ngay khi đã rõ.** Chỉ hỏi khi quyết định thật sự thuộc về Lamar. Không kể lể phương án sẽ không làm.
 3. **Sửa nhỏ bằng Edit / script thay thế có `assert`**, không viết lại cả file. Không code thừa, không comment kể lể; comment chỉ giải thích *vì sao*.
 4. **Theo mẫu có sẵn** của repo (hook, lớp CSS, `tint.ts`, `useStageTilt`, `audio.ts`…) thay vì viết cái mới. CSS hiệu ứng để file riêng cạnh component.
-5. **Kiểm tra trước khi báo xong:** chạy bộ lệnh dưới; thay đổi giao diện thì chụp ảnh Playwright (điện thoại 393×852 + màn rộng) và đo khung hình khi có hiệu ứng. File thử nghiệm chỉ ghi vào scratchpad, không vào repo. Tắt server bằng PID, không `pkill -f`.
+5. **Kiểm tra trước khi báo xong:** chạy bộ lệnh dưới; thay đổi giao diện thì chụp ảnh Playwright (điện thoại 393×852 + màn rộng) và đo khung hình khi có hiệu ứng. Không đưa lệnh kiểm qua `| tail` mà không có `set -o pipefail` (từng nuốt mất lỗi `check:links`). File thử nghiệm chỉ ghi vào scratchpad, không vào repo. Tắt server bằng PID, không `pkill -f`.
 6. **Cập nhật ghi chú** của phần vừa đổi trong `docs/notes/` (ngắn, ghi điều Claude sau cần biết: file, quyết định, lỗi đã gặp). Thêm phần mới thì thêm một dòng vào bảng dưới. Không phình CLAUDE.md.
 7. Báo cáo cuối: vài gạch đầu dòng — đã làm gì, chưa kiểm được gì (vd. Safari thật).
 

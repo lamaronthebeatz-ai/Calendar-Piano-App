@@ -139,10 +139,15 @@ export function theoryContent(): Plugin {
     resolveId(id) {
       return id === VIRTUAL ? RESOLVED : undefined
     },
-    async load(id) {
+    async load(id, options) {
       if (id !== RESOLVED) return
       if (dev) built ??= load(dev)
-      const { indexFile } = await built!
+      const { indexFile, files } = await built!
+      // Node scripts (check-links) load the app modules through Vite's SSR: no fetch there, the index goes inline.
+      if (options?.ssr) {
+        const d = files.get(indexFile)!
+        return `const d = ${d}\nexport const META = d.meta\nexport const SEARCH = d.search\nexport const LINK_COUNT = d.linkCount\n`
+      }
       // Fails loudly rather than rendering an empty library; the file is precached, so this only happens offline
       // before the first visit.
       return `const r = await fetch(import.meta.env.BASE_URL + 'content/${indexFile}')
