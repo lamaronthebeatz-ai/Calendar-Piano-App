@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { expect, test } from '@playwright/test'
 
 test.beforeEach(async ({ page }) => {
@@ -71,4 +72,23 @@ test('tác phẩm: sonata cho phím đàn trước 1800 có bài phân tích K. 
   await page.getByText('Cho phím đàn').click()
   await page.getByText('Có bài trong thư viện').click()
   await expect(page.locator('a[href="#/theory/phan-tich-sonata-k545"]')).toBeVisible()
+})
+
+test('bàn làm việc: đề tài gom ghi chú theo thẻ, trích dẫn, xuất Markdown có chú thích và thư mục', async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem('reader:notes', JSON.stringify({ 'thu-vien': [{ id: 'n1', key: 'fugue', text: 'Một chủ đề được các bè lần lượt mô phỏng.', before: '', color: 'yellow', ratio: 0, at: 1, tags: ['fugue-o-bach'] }] }))
+  })
+  await page.goto('/#/research')
+  await page.locator('input[placeholder^="Tên đề tài"]').fill('Fugue ở Bach')
+  await page.getByRole('button', { name: 'Tạo' }).click()
+  await page.getByRole('button', { name: /Ghi chú · 1/ }).click()
+  await page.getByText('Chèn vào bản nháp').click()
+  await page.locator('textarea.rs-draft').press('End')
+  await page.locator('textarea.rs-draft').pressSequentially(' [^sposobin-1984, tr. 45]')
+  const [file] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Xuất Markdown' }).click()])
+  const md = readFileSync(await file.path(), 'utf8')
+  expect(md).toContain('mô phỏng')
+  expect(md).toContain('[^1]: Способин, И. В. Музыкальная форма')
+  expect(md).toContain('tr. 45')
+  expect(md).toContain('## Thư mục')
 })

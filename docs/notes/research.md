@@ -1,0 +1,7 @@
+# Bàn làm việc nghiên cứu `/research` (`src/features/research/`, giai đoạn 5, 11/2026)
+
+- **Đề tài** (`store.ts`): `{ id, title, question, tag, draft, sources[], articles[], created, updated }`, lưu localStorage `research:projects` (cùng kiểu `reader:notes`, `useSyncExternalStore`), **nằm trong bản sao lưu** (`services/backup.ts`: `projects`, khôi phục `importProjects` thay thế / gộp).
+- **Ghi chú vào đề tài bằng thẻ**, không chép: mọi đánh dấu (`reader/notes.ts`) có `tags` chứa `project.tag` (mặc định = tên đề tài viết không dấu, `tagOf`) hiện ở tab Ghi chú; gắn thẻ ở Annotator hoặc Sổ nghiên cứu. "Chèn vào bản nháp" đặt `*“trích”* (xem [[slug]])` + lời ghi (không dùng `>`: `Markup` không có trích khối).
+- **Bản nháp**: Markdown của thư viện (`##`, `**`, `*`, `[[slug]]`, `[^mã-nguồn, tr. n]`), xem trước bằng `Markup` trong `.prose-theory`. Tab Nguồn: tìm trong thư mục (`useBibliography`), thêm vào đề tài, "Trích" chèn `[^id, tr. ]` và đặt con trỏ trước `]`.
+- **Xuất** (`exportDraft.ts`): trích dẫn thành chú thích đánh số kiểu **Chicago** (lần đầu đủ, sau đó rút gọn "Tác giả, Tên"; "tr." không số bị bỏ), `[[slug]]` thành chữ, **thư mục** = nguồn được trích + nguồn giữ trong đề tài, xếp theo chữ cái. Markdown (chú thích `[^n]:`) hoặc **Word**: HTML lưu đuôi `.doc` (Word mở được; không thêm thư viện docx). `cite.ts` có `dot()` để tên tác giả viết tắt không ra hai dấu chấm.
+- Mục "Bàn làm việc" ở ngăn kéo máy tính. Test: trang trong `smoke.spec.ts`; `library.spec.ts` tạo đề tài, gom ghi chú theo thẻ, trích Sposobin tr. 45, kiểm file Markdown xuất ra.

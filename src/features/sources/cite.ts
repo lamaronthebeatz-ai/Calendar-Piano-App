@@ -12,6 +12,8 @@ export const STYLES: [Style, string][] = [
   ['bibtex', 'BibTeX'],
 ]
 
+/** Ends a part with one full stop ("Способин, И. В." already has it). */
+const dot = (t: string) => (t.endsWith('.') ? t : `${t}.`)
 const today = () => new Date().toISOString().slice(0, 10)
 const andJoin = (names: string[]) => (names.length < 2 ? names.join('') : `${names.slice(0, -1).join(', ')} và ${names.at(-1)}`)
 /** "Levine, Mark" → "Levine, M." */
@@ -33,7 +35,7 @@ export function citeSource(s: Source, style: Style): string {
     if (style === 'bibtex')
       return [`@article{${s.id},`, `  author = {${s.authors.join(' and ')}},`, `  title = {${s.title}},`, `  journal = {${s.container}},`, s.volume && `  volume = {${s.volume}},`, s.year && `  year = {${s.year}},`, url && `  url = {${url}},`, '}'].filter(Boolean).join('\n')
     if (style === 'apa') return `${andJoin(s.authors.map(initials))} (${s.year || 'k.n.'}). ${s.title}. ${s.container}${s.volume ? `, ${s.volume}` : ''}.${url ? ` ${url}` : ''}`
-    return `${andJoin(s.authors)}. “${s.title}.” ${s.container}${s.volume ? ` ${s.volume}` : ''}${s.year ? ` (${s.year})` : ''}.`
+    return `${dot(andJoin(s.authors))} “${s.title}.” ${s.container}${s.volume ? ` ${s.volume}` : ''}${s.year ? ` (${s.year})` : ''}.`
   }
   const place = [s.place, s.publisher].filter(Boolean).join(': ')
   const extra = [s.translator && `Dịch: ${s.translator}`, s.editor && `Biên tập: ${s.editor}`, s.edition].filter(Boolean).join('. ')
@@ -54,7 +56,7 @@ export function citeSource(s: Source, style: Style): string {
       .filter(Boolean)
       .join('\n')
   if (style === 'apa') return `${andJoin(s.authors.map(initials))} (${s.year || 'k.n.'}). ${s.title}${s.edition ? ` (${s.edition})` : ''}.${s.translator ? ` (${s.translator}, Dịch).` : ''}${s.publisher ? ` ${s.publisher}.` : ''}${url ? ` ${url}` : ''}`
-  return `${andJoin(s.authors)}. ${s.title}.${extra ? ` ${extra}.` : ''}${place ? ` ${place}` : ''}${s.year ? `${place ? ', ' : ' '}${s.year}` : ''}.`
+  return `${dot(andJoin(s.authors))} ${s.title}.${extra ? ` ${extra}.` : ''}${place ? ` ${place}` : ''}${s.year ? `${place ? ', ' : ' '}${s.year}` : ''}.`
 }
 
 /** Citing an article of this library: author, title, last update, permanent address. */

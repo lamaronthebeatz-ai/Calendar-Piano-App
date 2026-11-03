@@ -20,6 +20,7 @@ const PAGES: [string, string, string?][] = [
   ['Một nguồn', '/#/sources/sposobin-1984'],
   ['Việc còn treo', '/#/sources/treo'],
   ['Thuật ngữ', '/#/terms'],
+  ['Bàn làm việc', '/#/research'],
   ['Tra cứu', '/#/explore'],
   ['Hồ sơ một người', '/#/explore?p=johann-sebastian-bach'],
   ['Dòng thời gian', '/#/explore?tab=thoi-gian'],

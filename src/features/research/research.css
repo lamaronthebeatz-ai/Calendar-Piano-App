@@ -1,0 +1,10 @@
+/* Research desk (/research). Lists and tabs reuse sources.css / explore.css. */
+.rs-title { width: 100%; background: transparent; font-family: var(--font-display); font-size: 28px; font-weight: 600; line-height: 1.2; color: var(--color-ink); outline: none; }
+.rs-question { width: 100%; resize: vertical; background: transparent; font-size: 15px; line-height: 1.55; color: var(--color-ink-muted); outline: none; border-left: 2px solid var(--color-gold); padding-left: 12px; }
+.rs-seg { padding: 4px 12px; border-radius: 999px; border: 1px solid var(--color-border); color: var(--color-ink-muted); }
+.rs-seg.is-on { color: var(--color-ink); border-color: var(--color-gold); }
+.rs-draft { width: 100%; min-height: 55svh; resize: vertical; padding: 16px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); font-family: var(--font-serif, Georgia, serif); font-size: 16px; line-height: 1.7; color: var(--color-ink); outline: none; }
+.rs-draft:focus { border-color: color-mix(in oklch, var(--color-gold) 50%, transparent); }
+.rs-preview { min-height: 30svh; padding: 16px 20px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.rs-note { padding: 12px 14px; border-radius: 14px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.rs-note blockquote { font-family: var(--font-serif, Georgia, serif); font-size: 15px; line-height: 1.6; color: var(--color-ink); border-left: 2px solid var(--color-gold); padding-left: 10px; }
