@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { ScrollArea } from '../../components/ScrollArea'
@@ -9,7 +9,8 @@ import { READER_BOOKS } from '../curriculum/reader/model'
 import { LIBRARY, useAllNotes, type Note } from '../curriculum/reader/notes'
 import { sourceTitle, useBibliography, type Source } from '../sources/data'
 import { createProject, removeProject, updateProject, useProjects, type Project } from './store'
-import { download, toMarkdown, toWord } from './exportDraft'
+import { download, toDocx, toMarkdown, type ExportStyle } from './exportDraft'
+import { loadPeople, useWorks, workYear, type Person } from '../explore/data'
 import '../sources/sources.css'
 import '../explore/explore.css'
 import './research.css'
@@ -85,7 +86,7 @@ interface Entry extends Note {
   link: string
 }
 
-type Pane = 'nhap' | 'ghi-chu' | 'nguon'
+type Pane = 'nhap' | 'ghi-chu' | 'nguon' | 'lien-quan'
 
 function ProjectView({ p }: { p: Project }) {
   const navigate = useNavigate()
@@ -126,12 +127,13 @@ function ProjectView({ p }: { p: Project }) {
     })
   }
   const cited = useMemo(() => [...p.draft.matchAll(/\[\^([a-z0-9-]+)/g)].length, [p.draft])
+  const [style, setStyle] = useState<ExportStyle>('chicago')
   const exportAs = async (kind: 'md' | 'doc') => {
     setBusy(true)
     try {
       const name = p.tag || 'de-tai'
-      if (kind === 'md') download(`${name}.md`, await toMarkdown(p), 'text/markdown')
-      else download(`${name}.doc`, await toWord(p), 'application/msword')
+      if (kind === 'md') download(`${name}.md`, await toMarkdown(p, style), 'text/markdown')
+      else download(`${name}.docx`, await toDocx(p, style))
     } finally {
       setBusy(false)
     }
@@ -146,9 +148,13 @@ function ProjectView({ p }: { p: Project }) {
           Thẻ của đề tài: <b className="text-[var(--color-gold)]">{p.tag}</b> — gắn thẻ này cho một đánh dấu (trong bài, trong sách, hoặc ở <Link to="/notes" className="wiki-link">Sổ nghiên cứu</Link>) là nó vào đề tài.
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          <button disabled={busy} onClick={() => exportAs('doc')} className="btn-gold rounded-full px-4 py-2 text-[13px] font-medium">Xuất Word</button>
+          <button disabled={busy} onClick={() => exportAs('doc')} className="btn-gold rounded-full px-4 py-2 text-[13px] font-medium">Xuất Word (.docx)</button>
           <button disabled={busy} onClick={() => exportAs('md')} className="btn-line rounded-full px-4 py-2 text-[13px]">Xuất Markdown</button>
-          <span className="text-[12px] text-[var(--color-ink-faint)]">{cited} chú thích · chú thích và thư mục theo Chicago</span>
+          <select value={style} onChange={(e) => setStyle(e.target.value as ExportStyle)} aria-label="Kiểu trích dẫn" className="src-select h-9 rounded-full px-3 text-[12.5px]">
+            <option value="chicago">Chicago (chú thích cuối trang)</option>
+            <option value="apa">APA (tác giả, năm)</option>
+          </select>
+          <span className="text-[12px] text-[var(--color-ink-faint)]">{cited} trích dẫn</span>
           <span className="flex-1" />
           <button
             onClick={() => {
@@ -170,6 +176,7 @@ function ProjectView({ p }: { p: Project }) {
             ['nhap', 'Bản nháp'],
             ['ghi-chu', `Ghi chú · ${notes.length}`],
             ['nguon', `Nguồn · ${p.sources.length}`],
+            ['lien-quan', `Người & tác phẩm · ${(p.people?.length ?? 0) + (p.works?.length ?? 0)}`],
           ] as [Pane, string][]
         ).map(([k, label]) => (
           <button key={k} onClick={() => setPane(k)} className={clsx(pane === k && 'is-on')}>{label}</button>
@@ -207,6 +214,7 @@ function ProjectView({ p }: { p: Project }) {
         </section>
       )}
 
+      {pane === 'lien-quan' && <Related p={p} onInsert={insert} />}
       {pane === 'nguon' && <Sources p={p} bib={bib?.byId} sources={bib?.sources} onCite={(id) => insert(`[^${id}, tr. ]`, 1)} />}
     </article>
   )
@@ -250,6 +258,100 @@ function Sources({ p, bib, sources, onCite }: { p: Project; bib?: Map<string, So
               <span className="flex shrink-0 items-center gap-3 text-[12px]">
                 <button onClick={() => onCite(id)} className="text-[var(--color-gold)] hover:underline">Trích</button>
                 <button onClick={() => updateProject(p.id, { sources: p.sources.filter((x) => x !== id) })} className="text-[var(--color-ink-faint)] hover:text-[var(--color-status-cancelled)]">Bỏ</button>
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+    </section>
+  )
+}
+
+/** People and works of the knowledge graph the project is about: search, keep, open, mention in the draft. */
+function Related({ p, onInsert }: { p: Project; onInsert: (text: string) => void }) {
+  const [people, setPeople] = useState<Person[] | null>(null)
+  const works = useWorks()
+  const [q, setQ] = useState('')
+  useEffect(() => {
+    let live = true
+    loadPeople().then((d) => live && setPeople(d.people), () => {})
+    return () => {
+      live = false
+    }
+  }, [])
+  const byId = useMemo(() => new Map(people?.map((x) => [x.id, x])), [people])
+  const workById = useMemo(() => new Map(works?.map((w) => [w.id, w])), [works])
+  const kept = { people: p.people ?? [], works: p.works ?? [] }
+  const found = useMemo(() => {
+    const n = normalize(q)
+    if (n.length < 2) return { people: [], works: [] }
+    return {
+      people: (people ?? []).filter((x) => !kept.people.includes(x.id) && normalize(x.name).includes(n)).slice(0, 5),
+      works: (works ?? []).filter((w) => !kept.works.includes(w.id) && normalize(`${w.en} ${w.vi ?? ''} ${w.cat?.join(' ') ?? ''}`).includes(n)).slice(0, 6),
+    }
+  }, [q, people, works, kept.people, kept.works])
+  if (!people || !works) return <p className="text-[14px] text-[var(--color-ink-faint)]">Đang tải mạng tri thức…</p>
+  const workLabel = (id: string) => {
+    const w = workById.get(id)
+    return w ? `${w.vi ?? w.en}${w.year ? ` (${workYear(w)})` : ''}` : id
+  }
+  return (
+    <section className="space-y-4">
+      <div>
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Thêm người hoặc tác phẩm: Bach, BWV 846, Nocturne…" className="hero-search h-10 w-full rounded-full px-4 text-[14px] outline-none" />
+        {(found.people.length > 0 || found.works.length > 0) && (
+          <ul className="mt-2 src-list">
+            {found.people.map((x) => (
+              <li key={x.id}>
+                <button onClick={() => (updateProject(p.id, { people: [...kept.people, x.id] }), setQ(''))} className="src-row w-full text-left">
+                  <span className="src-kind">Người</span>
+                  <span className="min-w-0 flex-1"><span className="src-title">{x.name}</span><span className="src-sub">{x.years} · {x.country}</span></span>
+                  <span className="src-uses">+ Thêm</span>
+                </button>
+              </li>
+            ))}
+            {found.works.map((w) => (
+              <li key={w.id}>
+                <button onClick={() => (updateProject(p.id, { works: [...kept.works, w.id] }), setQ(''))} className="src-row w-full text-left">
+                  <span className="src-kind">Tác phẩm</span>
+                  <span className="min-w-0 flex-1"><span className="src-title">{w.vi ?? w.en}</span><span className="src-sub">{byId.get(w.by)?.name ?? w.by}{w.year ? ` · ${workYear(w)}` : ''}</span></span>
+                  <span className="src-uses">+ Thêm</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      {kept.people.length + kept.works.length === 0 && <p className="text-[14px] text-[var(--color-ink-faint)]">Chưa gắn người hay tác phẩm nào.</p>}
+      <ul className="src-list">
+        {kept.people.map((id) => {
+          const x = byId.get(id)
+          return (
+            <li key={id} className="src-row">
+              <span className="src-kind">Người</span>
+              <span className="min-w-0 flex-1">
+                <Link to={`/explore?p=${id}`} className="src-title hover:text-[var(--color-gold)]">{x?.name ?? id}</Link>
+                {x && <span className="src-sub">{x.years} · {x.country}</span>}
+              </span>
+              <span className="flex shrink-0 items-center gap-3 text-[12px]">
+                {x && <button onClick={() => onInsert(x.page ? `[[${id}|${x.name}]] (${x.years})` : `${x.name} (${x.years})`)} className="text-[var(--color-gold)] hover:underline">Chèn</button>}
+                <button onClick={() => updateProject(p.id, { people: kept.people.filter((v) => v !== id) })} className="text-[var(--color-ink-faint)] hover:text-[var(--color-status-cancelled)]">Bỏ</button>
+              </span>
+            </li>
+          )
+        })}
+        {kept.works.map((id) => {
+          const w = workById.get(id)
+          return (
+            <li key={id} className="src-row">
+              <span className="src-kind">Tác phẩm</span>
+              <span className="min-w-0 flex-1">
+                {w?.article ? <Link to={`/theory/${w.article}`} className="src-title hover:text-[var(--color-gold)]">{workLabel(id)}</Link> : <a href={`https://www.wikidata.org/wiki/${id}`} target="_blank" rel="noreferrer" className="src-title hover:text-[var(--color-gold)]">{workLabel(id)}</a>}
+                {w && <span className="src-sub">{byId.get(w.by)?.name ?? w.by}{w.cat?.[0] ? ` · ${w.cat[0]}` : ''}</span>}
+              </span>
+              <span className="flex shrink-0 items-center gap-3 text-[12px]">
+                {w && <button onClick={() => onInsert(`*${w.vi ?? w.en}*${w.year ? ` (${workYear(w)})` : ''}`)} className="text-[var(--color-gold)] hover:underline">Chèn</button>}
+                <button onClick={() => updateProject(p.id, { works: kept.works.filter((v) => v !== id) })} className="text-[var(--color-ink-faint)] hover:text-[var(--color-status-cancelled)]">Bỏ</button>
               </span>
             </li>
           )

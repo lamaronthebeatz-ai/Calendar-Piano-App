@@ -91,4 +91,15 @@ test('bàn làm việc: đề tài gom ghi chú theo thẻ, trích dẫn, xuất
   expect(md).toContain('[^1]: Способин, И. В. Музыкальная форма')
   expect(md).toContain('tr. 45')
   expect(md).toContain('## Thư mục')
+  // the same draft as a real .docx: stored zip, so the XML is readable as is; Word footnotes carry the citation
+  const [docx] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: /Xuất Word/ }).click()])
+  expect(docx.suggestedFilename()).toMatch(/\.docx$/)
+  const raw = readFileSync(await docx.path(), 'utf8')
+  expect(raw).toContain('word/footnotes.xml')
+  expect(raw).toContain('<w:footnoteReference w:id="1"/>')
+  expect(raw).toContain('tr. 45')
+  // APA: in the text, no footnotes
+  await page.locator('select[aria-label="Kiểu trích dẫn"]').selectOption('apa')
+  const [apa] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Xuất Markdown' }).click()])
+  expect(readFileSync(await apa.path(), 'utf8')).toContain('(Способин, 1984, tr. 45)')
 })

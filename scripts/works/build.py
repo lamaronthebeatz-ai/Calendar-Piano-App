@@ -49,6 +49,22 @@ KINDS = [
 ]
 
 
+# Catalogue names as musicians write them: "Bach-Werke-Verzeichnis 846" → "BWV 846" (searchable, shorter).
+CATALOGUES = [
+    (r'^Bach-Werke-Verzeichnis\s*', 'BWV '), (r'^Hoboken-Verzeichnis\s*', 'Hob. '), (r'^Deutsch catalogue\s*', 'D. '),
+    (r'^Köchel catalogue(?: \(1st edition\))?\s*(?:K\.\s*)?', 'K. '), (r'^Ryom-Verzeichnis\s*', ''), (r'^Händel-Werke-Verzeichnis\s*(?:HWV\s*)?', 'HWV '),
+    (r'^Wagner-Werk-Verzeichnis\s*', 'WWV '), (r'^The Music of Liszt\s*', ''), (r'^Telemann-Werke-Verzeichnis\s*', 'TWV '), (r'^Lesure catalog of Debussy compositions\s*', 'L. '),
+    (r'^Brown catalog\s*', ''), (r'^Chomiński catalog\s*', ''), (r'^Richard-Strauss-Werkverzeichnis\s*', ''), (r'^Stattkus-Verzeichnis\s*', ''),
+]
+
+
+def short_cat(c):
+    for rx, to in CATALOGUES:
+        if re.match(rx, c):
+            return re.sub(rx, to, c).strip()
+    return c
+
+
 def kind(en, types):
     text = ' '.join([en, *types])
     return next((k for k, rx in KINDS if re.search(rx, text, re.I)), None)
@@ -93,7 +109,7 @@ def main():
             for k, f in (('typeL', 'types'), ('genreL', 'types'), ('keyL', 'keys')):
                 if k in b and b[k]['value'] not in w[f] and b[k]['value'] not in NOISE: w[f].append(b[k]['value'])
             if 'cat' in b:
-                c = (b.get('catL', {}).get('value', '') + ' ' + b['cat']['value']).strip()
+                c = short_cat((b.get('catL', {}).get('value', '') + ' ' + b['cat']['value']).strip())
                 if c not in w['cats']: w['cats'].append(c)
             for k in ('inc', 'pub'):
                 y = year(b.get(k, {}).get('value'))
@@ -125,7 +141,7 @@ def main():
                 row['year'] = min(ys)
                 if max(ys) != min(ys): row['to'] = max(ys)
                 if not w.get('inc'): row['pub'] = True
-            if w['cats']: row['cat'] = w['cats'][:2]
+            if w['cats']: row['cat'] = [short_cat(c) for c in w['cats'][:2]]
             if w['en'] in about: row['article'] = about[w['en']]
             out.append(row)
     json.dump(out, open(OUT, 'w'), ensure_ascii=False, separators=(',', ':'))

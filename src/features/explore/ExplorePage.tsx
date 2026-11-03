@@ -2,14 +2,14 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
 import { ScrollArea } from '../../components/ScrollArea'
-import { PEOPLE_FILE } from '../theory/articles'
 import { findArticle, normalize } from '../theory/wiki'
 import { JOURNEYS, PLACES, PLACES_BY_SLUG, kindOf, KINDS, yearsOf, type Region } from '../musicology/places'
 import { branchesOf } from '../musicology/taxonomy'
 import '../sources/sources.css'
 import '../musicology/musicology-sky.css'
 import './explore.css'
-import worksUrl from './works.json?url'
+import { updateProject, useProjects } from '../research/store'
+import { keyVi, loadPeople, useWorks, workYear, type People, type Person } from './data'
 
 /**
  * The knowledge graph, read three ways: people, works, and one timeline. People and works come from the build
@@ -17,30 +17,6 @@ import worksUrl from './works.json?url'
  * (places.ts); branches from the musicology taxonomy; concepts are library articles. Everything links back to its
  * page, so each relation can be checked where it was written.
  */
-interface Person {
-  id: string
-  name: string
-  years: string
-  born?: number
-  died?: number
-  country: string
-  role: 'composer' | 'pianist'
-  period: string
-  group?: string
-  works: string[]
-  topics: string[]
-  page: boolean
-}
-interface Period {
-  id: string
-  title: string
-  years: string
-  role: string
-}
-interface People {
-  people: Person[]
-  periods: Period[]
-}
 interface Moment {
   from: number
   to: number
@@ -53,24 +29,6 @@ interface Moment {
 }
 
 /** A work from Wikidata (scripts/works/build.py). */
-interface Work {
-  id: string
-  by: string
-  en: string
-  vi?: string
-  types?: string[]
-  /** genre group read from the title / types (KINDS in the script) */
-  kind?: string
-  piano?: boolean
-  key?: string
-  year?: number
-  to?: number
-  /** year of publication (no composition date on Wikidata) */
-  pub?: boolean
-  cat?: string[]
-  /** library article about this work */
-  article?: string
-}
 
 const KIND_LABEL: Record<string, string> = {
   opera: 'Opera', ballet: 'Ballet', oratorio: 'Oratorio, Thương khó', mass: 'Thánh lễ, Requiem', cantata: 'Cantata', symphony: 'Giao hưởng',
@@ -78,47 +36,11 @@ const KIND_LABEL: Record<string, string> = {
   etude: 'Etude', nocturne: 'Nocturne', prelude: 'Prelude', dance: 'Vũ khúc (waltz, mazurka, minuet…)', character: 'Tiểu phẩm (ballade, scherzo, impromptu…)',
   'symphonic poem': 'Thơ giao hưởng, overture', song: 'Ca khúc, lied', choral: 'Hợp xướng tôn giáo',
 }
-const NOTE: Record<string, string> = { C: 'Đô', D: 'Rê', E: 'Mi', F: 'Fa', G: 'Sol', A: 'La', B: 'Si' }
-/** "C-sharp minor" → "Đô thăng thứ" */
-const keyVi = (k: string) => {
-  const m = /^([A-G])(?:-(sharp|flat))? (major|minor)$/.exec(k)
-  return m ? `${NOTE[m[1]]}${m[2] ? (m[2] === 'sharp' ? ' thăng' : ' giáng') : ''} ${m[3] === 'major' ? 'trưởng' : 'thứ'}` : k
-}
-
-let worksLoad: Promise<Work[]> | null = null
-const loadWorks = () =>
-  (worksLoad ??= fetch(worksUrl)
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-    .catch((e) => {
-      worksLoad = null
-      throw e
-    }))
-function useWorks() {
-  const [works, setWorks] = useState<Work[] | null>(null)
-  useEffect(() => {
-    let live = true
-    loadWorks().then((w) => live && setWorks(w), () => {})
-    return () => {
-      live = false
-    }
-  }, [])
-  return works
-}
-
-const workYear = (w: Work) => (w.year ? `${w.pub ? 'xb. ' : ''}${w.year}${w.to ? ` – ${w.to}` : ''}` : '')
 
 type Tab = 'nguoi' | 'tac-pham' | 'thoi-gian'
 const PAGE = 80
 const REGION_LABEL: Record<Region, string> = { europe: 'Châu Âu', americas: 'Châu Mỹ', vietnam: 'Việt Nam', asia: 'Châu Á', other: 'Trung Đông – châu Phi' }
 
-let load: Promise<People> | null = null
-const loadPeople = () =>
-  (load ??= fetch(`${import.meta.env.BASE_URL}content/${PEOPLE_FILE}`)
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-    .catch((e) => {
-      load = null
-      throw e
-    }))
 
 /** Every dated event: those of the map's places, and each person's birth and death. */
 function moments(data: People): Moment[] {
@@ -441,7 +363,10 @@ function PersonView({ data, id, onOpen }: { data: People; id: string; onOpen: (i
         <p className="brand-eyebrow">{p.role === 'pianist' ? 'Nghệ sĩ piano' : 'Nhà soạn nhạc'}</p>
         <h2 className="mt-1 font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">{p.name}</h2>
         <p className="mt-1 text-[14px] text-[var(--color-ink-muted)]">{p.years} · {p.country}</p>
-        {p.page && <Link to={`/theory/${p.id}`} className="btn-gold mt-4 inline-flex rounded-full px-4 py-2 text-[13px] font-medium">Đọc trang {p.name.split(' ').at(-1)}</Link>}
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {p.page && <Link to={`/theory/${p.id}`} className="btn-gold inline-flex rounded-full px-4 py-2 text-[13px] font-medium">Đọc trang {p.name.split(' ').at(-1)}</Link>}
+          <AddToProject person={p.id} />
+        </div>
       </header>
       <dl className="src-facts">
         <div><dt>Thời kỳ</dt><dd>{periodTitle(data, p.period)}{p.group ? ` · ${p.group}` : ''}</dd></div>
@@ -518,5 +443,43 @@ function PersonWorks({ id }: { id: string }) {
       </ul>
       {mine.length > 15 && !all && <button onClick={() => setAll(true)} className="ex-more mt-2">Xem cả {mine.length} →</button>}
     </section>
+  )
+}
+
+/** Keeps this person in a research project (the project's "Người & tác phẩm" tab). */
+function AddToProject({ person }: { person: string }) {
+  const projects = useProjects()
+  const [pick, setPick] = useState('')
+  if (!projects.length) return null
+  const holding = projects.filter((x) => x.people?.includes(person))
+  const free = projects.filter((x) => !x.people?.includes(person))
+  return (
+    <span className="flex flex-wrap items-center gap-2 text-[12.5px]">
+      {free.length > 0 && (
+        <>
+          <select value={pick} onChange={(e) => setPick(e.target.value)} aria-label="Đề tài" className="src-select h-9 rounded-full px-3 text-[12.5px]">
+            <option value="">Gắn vào đề tài…</option>
+            {free.map((x) => (
+              <option key={x.id} value={x.id}>{x.title}</option>
+            ))}
+          </select>
+          {pick && (
+            <button
+              onClick={() => {
+                const x = projects.find((y) => y.id === pick)!
+                updateProject(pick, { people: [...(x.people ?? []), person] })
+                setPick('')
+              }}
+              className="btn-line rounded-full px-3 py-1.5"
+            >
+              Gắn
+            </button>
+          )}
+        </>
+      )}
+      {holding.map((x) => (
+        <Link key={x.id} to={`/research/${x.id}`} className="text-[var(--color-gold)] hover:underline">✓ {x.title}</Link>
+      ))}
+    </span>
   )
 }

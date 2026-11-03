@@ -56,7 +56,7 @@ export function citeSource(s: Source, style: Style): string {
       .filter(Boolean)
       .join('\n')
   if (style === 'apa') return `${andJoin(s.authors.map(initials))} (${s.year || 'k.n.'}). ${s.title}${s.edition ? ` (${s.edition})` : ''}.${s.translator ? ` (${s.translator}, Dịch).` : ''}${s.publisher ? ` ${s.publisher}.` : ''}${url ? ` ${url}` : ''}`
-  return `${dot(andJoin(s.authors))} ${s.title}.${extra ? ` ${extra}.` : ''}${place ? ` ${place}` : ''}${s.year ? `${place ? ', ' : ' '}${s.year}` : ''}.`
+  return `${dot(andJoin(s.authors))} ${s.title}.${extra ? ` ${dot(extra)}` : ''}${place ? ` ${place}` : ''}${s.year ? `${place ? ', ' : ' '}${s.year}` : ''}.`
 }
 
 /** Citing an article of this library: author, title, last update, permanent address. */

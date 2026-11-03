@@ -17,6 +17,9 @@ export interface Project {
   sources: string[]
   /** library articles kept at hand */
   articles: string[]
+  /** people (knowledge-graph ids = page slugs) and works (Wikidata ids) the project is about; absent in old projects */
+  people?: string[]
+  works?: string[]
   created: number
   updated: number
 }

@@ -100,7 +100,7 @@ Nối các "hòn đảo" đang có (bài, nhà soạn nhạc, nơi chốn, phân
 
 ## Giai đoạn 5 — Bàn làm việc nghiên cứu (2–3 phiên)
 **Đợt 1 ✅ (11/2026, chi tiết `notes/research.md`):** đề tài (câu hỏi, thẻ gom ghi chú từ bài và sách, nguồn từ thư mục, bản nháp có trích dẫn), xuất Markdown / Word với chú thích và thư mục Chicago, có trong bản sao lưu.
-**Còn lại:** DOCX thật (hiện là HTML mở bằng Word); gắn người / tác phẩm của mạng tri thức vào đề tài; chọn kiểu trích dẫn khi xuất (APA).
+**Đợt 2 ✅ — giai đoạn 5 khép lại:** .docx thật (footnote Word, tự đóng gói ZIP), chọn Chicago / APA khi xuất, gắn người và tác phẩm của mạng tri thức vào đề tài (cả từ hồ sơ người ở `/explore`).
 
 Kế hoạch ban đầu:
 Nâng Sổ nghiên cứu (`features/notebook/`) thành nơi làm đề tài.
