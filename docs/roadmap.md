@@ -84,6 +84,10 @@ interface Term {
 - Tìm kiếm thư viện hiểu thuật ngữ: gõ "perfect fifth" hoặc "чистая квинта" ra bài tiếng Việt (gộp mọi tên vào chỉ mục tìm kiếm).
 
 ## Giai đoạn 4 — Mạng tri thức (4–5 phiên)
+**Đợt 1 ✅ (11/2026, chi tiết `notes/explore.md`):** trang `/explore` ghép người (398) + tác phẩm tiêu biểu (785) + nơi chốn / sự kiện / hành trình của bản đồ + phân ngành + khái niệm: lọc thời kỳ – quốc gia – năm, hồ sơ quan hệ từng người, dòng thời gian chung theo thế kỷ.
+**Còn lại:** tác phẩm thành thực thể có thể loại, hình thức, giọng, năm sáng tác (cần nhập dữ liệu có nguồn — chưa có); quan hệ "học với / ảnh hưởng tới" (bắt buộc có nguồn, viết tay); tra cứu khái niệm theo trường phái (sau bảng so sánh của giai đoạn 3); bầu trời 3D và bản đồ đọc chung một đồ thị.
+
+Kế hoạch ban đầu:
 Nối các "hòn đảo" đang có (bài, nhà soạn nhạc, nơi chốn, phân ngành, sách, nguồn, thuật ngữ) thành một đồ thị tra hỏi được.
 - **Thực thể**: người, tác phẩm, khái niệm (= thuật ngữ), nơi, thời kỳ, trường phái, thể loại, nguồn, bài. Phần lớn sinh tự động từ dữ liệu sẵn có (`composers.ts`, `pianists.ts`, `people.ts`, `places.ts`, `taxonomy.ts`, sách, `sources`, `terms`).
 - **Quan hệ** dạng bộ ba `[chủ thể, quan hệ, đối tượng, nguồn]`: sinh tại, sống ở, sáng tác, thuộc thể loại, thuộc trường phái, định nghĩa bởi, phân tích trong, ảnh hưởng tới, học với… Quan hệ "ảnh hưởng tới" **bắt buộc có nguồn**.

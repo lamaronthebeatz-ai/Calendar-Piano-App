@@ -17,6 +17,7 @@ import { createServer, type Plugin, type ViteDevServer } from 'vite'
 
 const SOURCE = '/src/features/theory/articles.source.ts'
 const CURATED_SOURCES = '/src/features/sources/curated.ts'
+const PEOPLE = ['/src/features/theory/content/composers.ts', '/src/features/theory/content/pianists.ts']
 const CONTENT_DIR = 'src/features/theory/content'
 const VIRTUAL = 'virtual:theory-index'
 const RESOLVED = '\0' + VIRTUAL
@@ -92,6 +93,48 @@ function updatedDates(): Map<string, string> {
   return dates
 }
 
+/** Rows of composers.ts / pianists.ts as they come (see people.ts). */
+interface PeopleRows {
+  role: 'composer' | 'pianist'
+  periods: { id: string; title: string; years: string; groups: readonly (readonly [string, string])[] }[]
+  people: { name: string; years: string; country: string; group: string; works: string[]; topics?: string[]; existing?: boolean }[]
+}
+
+/**
+ * The people of the library for the knowledge graph (content/people.<h>.json): years read as numbers, period and
+ * group titles resolved. Places, events, journeys and branches are joined in the app, which already has them.
+ */
+function peopleData(rows: PeopleRows[], slugs: Set<string>) {
+  // same as slugify in people.ts, so the id is the person's page slug
+  const slug = (s: string) => normalize(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+  const periods: { id: string; title: string; years: string; role: string }[] = []
+  const people: Record<string, unknown>[] = []
+  for (const r of rows) {
+    for (const p of r.periods) periods.push({ id: p.id, title: p.title, years: p.years, role: r.role })
+    for (const p of r.people) {
+      const [period, group] = p.group.split(':')
+      const nums = [...p.years.matchAll(/\d{3,4}/g)].map((m) => Number(m[0]))
+      const id = slug(p.name)
+      people.push({
+        id,
+        name: p.name,
+        years: p.years,
+        born: nums[0],
+        // "1958–" is a living person; "k. 991–sau 1033" still has two years
+        died: /–\s*$/.test(p.years) ? undefined : nums[1],
+        country: p.country,
+        role: r.role,
+        period,
+        group: r.periods.find((x) => x.id === period)?.groups.find(([g]) => g === group)?.[1],
+        works: p.works,
+        topics: p.topics ?? [],
+        page: slugs.has(id),
+      })
+    }
+  }
+  return { periods, people }
+}
+
 interface Built {
   /** content/ path of the index file */
   indexFile: string
@@ -117,7 +160,7 @@ function foreignNames(): Map<string, string> {
   }
 }
 
-function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
+function build(articles: SourceArticle[], curated: CuratedSource[], rows: PeopleRows[]): Built {
   const byKey = new Map<string, string>()
   for (const a of articles) for (const k of [a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a.slug)
   for (const a of articles) byKey.set(a.slug, a.slug)
@@ -171,6 +214,8 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
   }
 
   const xl = foreignNames()
+  const people = peopleData(rows, new Set(articles.map((a) => a.slug)))
+  const personIds = new Set(people.people.map((p) => p.id as string))
   const files = new Map<string, string>()
   const index = articles.map((a) => {
     const { body, refs, ...meta } = a
@@ -182,7 +227,7 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
       img: /^::img ([^|\n]+?)\s*(?:\||$)/m.exec(body)?.[1],
       video: /^::youtube ([\w-]{11})/m.exec(body)?.[1],
     }
-    return { ...meta, ...(xl.get(a.slug) ? { xl: xl.get(a.slug) } : {}), h, words: body.split(/\s+/).length, figures: body.match(/^\s*::/gm)?.length ?? 0, ...(lead.wiki || lead.img || lead.video ? { lead } : {}) }
+    return { ...meta, ...(xl.get(a.slug) ? { xl: xl.get(a.slug) } : {}), ...(personIds.has(a.slug) ? { person: true } : {}), h, words: body.split(/\s+/).length, figures: body.match(/^\s*::/gm)?.length ?? 0, ...(lead.wiki || lead.img || lead.video ? { lead } : {}) }
   })
   // Inverted index: word → ids (positions in the index) as hex gaps, "3,1,a" = 3, 4, 14.
   const postings = new Map<string, number[]>()
@@ -205,7 +250,11 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
   const sourcesFile = `sources.${hash(bib)}.json`
   files.set(sourcesFile, bib)
 
-  const json = JSON.stringify({ meta: index, search, linkCount, sourcesFile, sourceCount: sources.size })
+  const peopleJson = JSON.stringify(people)
+  const peopleFile = `people.${hash(peopleJson)}.json`
+  files.set(peopleFile, peopleJson)
+
+  const json = JSON.stringify({ meta: index, search, linkCount, sourcesFile, sourceCount: sources.size, peopleFile })
   const indexFile = `index.${hash(json)}.json`
   files.set(indexFile, json)
   return { indexFile, files, badCites }
@@ -215,7 +264,8 @@ function build(articles: SourceArticle[], curated: CuratedSource[]): Built {
 async function load(server: ViteDevServer, strict = false) {
   const { ARTICLES } = (await server.ssrLoadModule(SOURCE)) as { ARTICLES: SourceArticle[] }
   const { CURATED } = (await server.ssrLoadModule(CURATED_SOURCES)) as { CURATED: CuratedSource[] }
-  const built = build(ARTICLES, CURATED)
+  const rows = await Promise.all(PEOPLE.map(async (m) => Object.values(await server.ssrLoadModule(m)).find((v) => (v as PeopleRows)?.role) as PeopleRows))
+  const built = build(ARTICLES, CURATED, rows)
   if (built.badCites.length) {
     const msg = `Trích dẫn [^…] trỏ tới nguồn không có:\n  ${built.badCites.join('\n  ')}`
     if (strict) throw new Error(msg)
@@ -275,7 +325,7 @@ export function theoryContent(): Plugin {
       // Node scripts (check-links) load the app modules through Vite's SSR: no fetch there, the index goes inline.
       if (options?.ssr) {
         const d = files.get(indexFile)!
-        return `const d = ${d}\nexport const META = d.meta\nexport const SEARCH = d.search\nexport const LINK_COUNT = d.linkCount\nexport const SOURCES_FILE = d.sourcesFile\nexport const SOURCE_COUNT = d.sourceCount\n`
+        return `const d = ${d}\nexport const META = d.meta\nexport const SEARCH = d.search\nexport const LINK_COUNT = d.linkCount\nexport const SOURCES_FILE = d.sourcesFile\nexport const SOURCE_COUNT = d.sourceCount\nexport const PEOPLE_FILE = d.peopleFile\n`
       }
       // Fails loudly rather than rendering an empty library; the file is precached, so this only happens offline
       // before the first visit.
@@ -287,6 +337,7 @@ export const SEARCH = d.search
 export const LINK_COUNT = d.linkCount
 export const SOURCES_FILE = d.sourcesFile
 export const SOURCE_COUNT = d.sourceCount
+export const PEOPLE_FILE = d.peopleFile
 `
     },
     // Start downloading the index together with the scripts instead of after them.

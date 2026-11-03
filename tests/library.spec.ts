@@ -53,3 +53,13 @@ test('tìm bằng tên tiếng Nga / Đức ra đúng bài, đầu bài hiện t
   await page.goto('/#/theory/fugue')
   await expect(page.locator('.term-names')).toContainText('Fuge')
 })
+
+test('mạng tri thức: hồ sơ Bach nối nơi chốn, hành trình, khái niệm; lọc theo thời kỳ', async ({ page }) => {
+  await page.goto('/#/explore?p=johann-sebastian-bach')
+  await expect(page.getByText('Leipzig').first()).toBeVisible()
+  await expect(page.locator('a[href^="#/musicology/ban-do?j="]')).toBeVisible()
+  await expect(page.locator('a[href="#/theory/fugue"]')).toBeVisible()
+  await page.goto('/#/explore')
+  await page.locator('select').first().selectOption('bar')
+  await expect(page.locator('.src-row').first()).toContainText('Baroque')
+})

@@ -141,6 +141,9 @@ const PIANISTS = [
   p('Keith Jarrett', '1945–', 'Mỹ', 'pjz:modern', 'Nổi tiếng với các buổi độc tấu ngẫu hứng hoàn toàn.', ['The Köln Concert (1975)'], { topics: ['ngau-hung-piano'] }),
 ]
 
+/** The raw rows, for the knowledge graph (see COMPOSER_ROWS). */
+export const PIANIST_ROWS = { periods: PERIODS, people: PIANISTS, role: 'pianist' as const }
+
 export const pianists: Article[] = buildPeople(PERIODS, PIANISTS, {
   category: 'pianists',
   noun: 'nghệ sĩ piano',

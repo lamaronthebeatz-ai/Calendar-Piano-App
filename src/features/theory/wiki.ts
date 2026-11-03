@@ -36,6 +36,8 @@ export interface ArticleMeta extends Omit<Article, 'body' | 'refs'> {
   figures: number
   /** The concept's name in other languages, from the glossary: "en:fugue|ru:фуга|de:Fuge" */
   xl?: string
+  /** a composer's or pianist's page: has a record in the knowledge graph (/explore?p=slug) */
+  person?: boolean
   /** The first Wikipedia/Commons image or video in the text, for cards. */
   lead?: { wiki?: string; img?: string; video?: string }
 }

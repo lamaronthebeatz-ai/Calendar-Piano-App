@@ -455,6 +455,9 @@ const COMPOSERS: Person[] = [
   c('Joe Hisaishi', '1950–', 'Nhật Bản', 'm20:film', 'Nhạc phim Studio Ghibli của Hayao Miyazaki, chịu ảnh hưởng tối giản.', ['Spirited Away ("One Summer\'s Day")', 'My Neighbor Totoro', 'Howl\'s Moving Castle'], { topics: ['toi-gian'] }),
 ]
 
+/** The raw rows, for the knowledge graph built at build time (scripts/theory-content.ts → content/people.json). */
+export const COMPOSER_ROWS = { periods: PERIODS, people: COMPOSERS, role: 'composer' as const }
+
 export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...COMPOSER_DETAILS[c.name], videos: COMPOSER_VIDEOS[c.name] })), {
   category: 'composers',
   noun: 'nhà soạn nhạc',

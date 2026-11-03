@@ -18,6 +18,7 @@ const loadMusicology = () => import('./features/musicology/MusicologyPage')
 const TheoryPage = lazy(() => loadTheory().then((m) => ({ default: m.TheoryPage })))
 const CurriculumPage = lazy(() => loadCurriculum().then((m) => ({ default: m.CurriculumPage })))
 const NotebookPage = lazy(() => loadNotebook().then((m) => ({ default: m.NotebookPage })))
+const ExplorePage = lazy(() => import('./features/explore/ExplorePage').then((m) => ({ default: m.ExplorePage })))
 const TermsPage = lazy(() => import('./features/terms/TermsPage').then((m) => ({ default: m.TermsPage })))
 const SourcesPage = lazy(() => import('./features/sources/SourcesPage').then((m) => ({ default: m.SourcesPage })))
 const ToolsPage = lazy(() => import('./features/tools/ToolsPage').then((m) => ({ default: m.ToolsPage })))
@@ -90,6 +91,7 @@ const router = createHashRouter(
       <Route path="/settings" element={<SettingsPage />} />
       <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
       <Route path="/notes" element={<Suspense><NotebookPage /></Suspense>} />
+      <Route path="/explore" element={<Suspense><ExplorePage /></Suspense>} />
       <Route path="/terms" element={<Suspense><TermsPage /></Suspense>} />
       <Route path="/sources/:id?" element={<Suspense><SourcesPage /></Suspense>} />
       <Route path="/tools" element={<Suspense><ToolsPage /></Suspense>} />

@@ -527,7 +527,8 @@ export function yearsOf(text: string): [number, number] | null {
     if (t.startsWith('cuối')) return [a + 5, a + 9]
     return [a, a + 9]
   }
-  const ys = [...t.matchAll(/\d{4}/g)].map((m) => Number(m[0]))
+  // three-digit years too ("794 – 1185"): reading only four digits put that span at 1185
+  const ys = [...t.matchAll(/\b\d{3,4}\b/g)].map((m) => Number(m[0]))
   if (!ys.length) return null
   if (t.startsWith('từ')) return [ys[0], YEAR_MAX]
   return [Math.min(...ys), Math.max(...ys)]

@@ -1,0 +1,18 @@
+/* Knowledge graph (/explore). Rows and tabs reuse sources.css (src-*). */
+.src-tabs button { flex-shrink: 0; padding: 8px 12px; font-size: 13.5px; color: var(--color-ink-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.src-tabs button:hover { color: var(--color-ink); }
+.src-tabs button.is-on { color: var(--color-ink); border-color: var(--color-gold); }
+
+.ex-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.ex-filters > .hero-search { width: 100%; }
+@media (min-width: 640px) { .ex-filters > .hero-search { width: auto; flex: 1; min-width: 200px; } }
+.ex-years { display: inline-flex; gap: 6px; }
+
+.ex-timeline { display: grid; gap: 2px; }
+.ex-century { margin: 18px 0 6px; font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--color-gold-bright); }
+.ex-moment { display: flex; gap: 14px; padding: 8px 0; border-bottom: 1px solid color-mix(in oklch, var(--color-border) 60%, transparent); }
+.ex-when { flex-shrink: 0; width: 92px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--color-ink-muted); }
+@media (max-width: 640px) { .ex-when { width: 64px; font-size: 12px; } }
+
+.ex-block h3 { margin-bottom: 8px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--color-ink); }
+.ex-more { font-family: inherit; font-size: 12.5px; font-weight: 400; color: var(--color-gold); }

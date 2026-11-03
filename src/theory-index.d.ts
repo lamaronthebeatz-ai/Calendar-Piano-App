@@ -7,4 +7,6 @@ declare module 'virtual:theory-index' {
   /** content/ name of the bibliography file */
   export const SOURCES_FILE: string
   export const SOURCE_COUNT: number
+  /** content/ name of the people file (knowledge graph) */
+  export const PEOPLE_FILE: string
 }
