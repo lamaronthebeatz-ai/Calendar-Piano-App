@@ -28,8 +28,8 @@ export function morphTopic(id: string | undefined, from: Element | null, update:
     setTimeout(() => after?.(), 30)
     return
   }
-  from?.querySelector('.tb-media')?.classList.add('vt-ti')
-  from?.querySelector('.tb-title')?.classList.add('vt-tt')
+  from?.querySelector('[data-vt-img]')?.classList.add('vt-ti')
+  from?.querySelector('[data-vt-title]')?.classList.add('vt-tt')
   const root = document.documentElement
   root.classList.add('vt-topic')
   const t = document.startViewTransition(async () => {

@@ -132,3 +132,100 @@ html.vt-topic .vt-tt, html.vt-topic .vt-cat-title { view-transition-name: topic-
   .is-android .kb-img { animation: none; }
 }
 @keyframes kb { from { transform: scale(1); } to { transform: scale(1.09) translate(-1.5%, -1%); } }
+
+/* ============ the library's opening (TheoryStage.tsx): into the music book on the wall ============ */
+.ts-stage { position: relative; height: 230svh; view-timeline-name: --tstage; color: #f6ecdc; }
+.ts-pin { position: sticky; top: 0; height: 100svh; min-height: 520px; overflow: hidden; isolation: isolate; background: #0b0a08; --ox: 42%; --oy: 84%; }
+@media (orientation: portrait) { .ts-pin { --oy: 80%; } }
+.ts-camera, .ts-layer, .ts-layer picture { position: absolute; inset: 0; }
+.ts-layer img { width: 100%; height: 100%; object-fit: cover; object-position: 42% 80%; }
+.ts-layer { transform-origin: var(--ox) var(--oy); }
+.ts-bg { animation: ts-zoom-bg linear both; } .ts-mid { animation: ts-zoom-mid linear both; } .ts-fg { animation: ts-zoom-fg linear both; }
+.ts-layer, .ts-title, .ts-dark, .ts-staff, .ts-end, .ts-skip, .ts-credit { animation-timeline: --tstage; }
+.ts-layer { animation-range: contain 0% contain 72%; }
+@keyframes ts-zoom-bg { from { transform: scale(1.04); } to { transform: scale(2.8); } }
+@keyframes ts-zoom-mid { from { transform: scale(1.04); } to { transform: scale(3.3) translateY(-4%); } }
+@keyframes ts-zoom-fg { from { transform: scale(1.04); } to { transform: scale(3.8) translateY(2%); } }
+.ts-veil { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgb(11 10 8 / 0.75), rgb(11 10 8 / 0.1) 38%, rgb(11 10 8 / 0) 60%, rgb(11 10 8 / 0.6)); }
+.ts-title { position: absolute; left: clamp(20px, 6vw, 96px); right: 20px; top: clamp(84px, 14svh, 150px); max-width: 640px; animation: ts-away linear both; animation-range: contain 0% contain 22%; }
+.ts-h { margin-top: 12px; font-family: var(--font-display); font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(36px, 6vw, 76px); text-shadow: 0 2px 26px rgb(0 0 0 / 0.65); }
+.ts-gold { display: inline-block; text-shadow: none; filter: drop-shadow(0 2px 16px rgb(0 0 0 / 0.6)); }
+.ts-gold > span { display: inline-block; padding: 0.04em 0.12em 0.06em 0; }
+.ts-dark { position: absolute; inset: 0; background: #0b0a08; opacity: 0; animation: ts-fade-in linear both; animation-range: contain 50% contain 70%; }
+.ts-staff { position: absolute; left: 12%; right: 12%; top: 50%; height: 64px; margin-top: -32px; display: flex; flex-direction: column; justify-content: space-between; opacity: 0; animation: ts-staff linear both; animation-range: contain 52% contain 86%; }
+.ts-staff span { display: block; height: 1px; background: linear-gradient(90deg, transparent, #e2b66e 18%, #f3d18f 50%, #e2b66e 82%, transparent); }
+@keyframes ts-staff { from { opacity: 0; transform: scaleY(6); } 40% { opacity: 1; } to { opacity: 1; transform: none; } }
+.ts-end { position: absolute; left: 20px; right: 20px; top: calc(50% + 60px); text-align: center; font-size: clamp(14px, 1.6vw, 17px); color: rgb(244 236 220 / 0.8); opacity: 0; animation: ts-fade-in linear both; animation-range: contain 72% contain 90%; }
+.ts-end b { color: #f3d18f; font-family: var(--font-display); font-size: 1.2em; }
+.ts-credit { position: absolute; left: 16px; bottom: 12px; font-size: 11px; color: rgb(244 236 220 / 0.45); animation: ts-away linear both; animation-range: contain 30% contain 50%; }
+.ts-skip { position: absolute; right: 16px; bottom: 12px; padding: 6px 12px; border-radius: 999px; font-size: 12px; color: #e2b66e; border: 1px solid rgb(226 182 110 / 0.35); background: rgb(11 10 8 / 0.5); animation: ts-away linear both; animation-range: contain 80% contain 95%; }
+@keyframes ts-away { to { opacity: 0; transform: translateY(-6vh); } }
+@keyframes ts-fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ============ the topics as a full score (ScoreMap.tsx) ============ */
+.tv-switch { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.tv-opt { padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 12.5px; font-weight: 500; color: var(--color-ink-muted); transition: background-color 0.25s, color 0.25s; }
+.tv-opt[aria-pressed="true"] { color: var(--color-ink); background: color-mix(in oklch, var(--color-gold) 16%, transparent); }
+.sm-score { position: relative; display: grid; gap: 1.1rem; padding: 0.4rem 0 0.4rem 0.9rem; border-left: 3px solid color-mix(in oklch, var(--color-gold) 55%, transparent); border-radius: 2px; }
+.sm-name { font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--color-gold); margin-bottom: 0.3rem; }
+.sm-staff { display: flex; flex-wrap: wrap; row-gap: 0.6rem; }
+.sm-bar { position: relative; min-width: 7.5rem; flex-basis: 0; display: flex; flex-direction: column; text-align: left; padding: 0 0.35rem; border-right: 1px solid color-mix(in oklch, var(--color-gold) 40%, transparent); transition: background-color 0.25s; border-radius: 4px; }
+.sm-bar:hover { background: color-mix(in oklch, var(--color-gold) 7%, transparent); }
+.sm-notes {
+  display: block; width: 100%; height: 44px; overflow: visible;
+  background: repeating-linear-gradient(180deg, transparent 0 5px, color-mix(in oklch, #e2b66e 32%, transparent) 5px 6px, transparent 6px 8px) 0 0 / 100% 40px no-repeat;
+}
+.sm-notes ellipse { fill: color-mix(in oklch, var(--color-ink) 22%, transparent); }
+.sm-notes ellipse.is-read { fill: #f3d18f; }
+.sm-label { margin-top: 0.3rem; display: flex; align-items: baseline; gap: 0.35rem; min-width: 0; font-size: 12.5px; color: var(--color-ink); }
+.sm-glyph { color: var(--tint, var(--color-gold)); font-size: 13px; }
+.sm-title { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.sm-count { font-size: 11px; color: var(--color-ink-faint); }
+@media (max-width: 639px) { .sm-bar { min-width: calc(50% - 2px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .sm-system { animation: tb-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: calc(var(--g) * 70ms); }
+}
+
+/* ============ roadmap strip (article header) ============ */
+.ps { display: grid; gap: 0.35rem; }
+.ps-label { font-size: 12px; color: var(--color-ink-faint); }
+.ps-label b { color: var(--color-gold); font-variant-numeric: tabular-nums; }
+.ps-cat { color: var(--tint, var(--color-gold)); font-weight: 600; }
+.ps-staff {
+  display: flex; align-items: center; gap: 3px; height: 22px; padding: 0 2px; overflow: hidden;
+  background: repeating-linear-gradient(180deg, transparent 0 3px, color-mix(in oklch, #e2b66e 28%, transparent) 3px 4px, transparent 4px 5px) 0 50% / 100% 21px no-repeat;
+}
+.ps-note { flex: 0 0 auto; width: 8px; height: 6px; border-radius: 50%; transform: rotate(-20deg); background: color-mix(in oklch, var(--color-ink) 26%, transparent); transition: background-color 0.2s, transform 0.2s; }
+.ps-note:hover { transform: rotate(-20deg) scale(1.35); background: var(--color-gold); }
+.ps-note.is-read { background: color-mix(in oklch, #f3d18f 85%, transparent); }
+.ps-note.is-here { width: 12px; height: 9px; background: #fff3d6; box-shadow: 0 0 0 2px color-mix(in oklch, var(--color-gold) 60%, transparent); }
+.ps-more { font-size: 11px; color: var(--color-ink-faint); }
+
+/* ============ the link staff (article end) ============ */
+.ls { display: grid; gap: 0.8rem; border-top: 1px solid var(--color-border); padding-top: 1.5rem; }
+.ls-system { position: relative; display: grid; gap: 0.7rem; padding-left: 0.9rem; border-left: 3px solid color-mix(in oklch, var(--color-gold) 55%, transparent); }
+.ls-lane { display: grid; gap: 0.3rem; min-width: 0; }
+.ls-name { font-family: var(--font-display); font-style: italic; font-size: 12.5px; color: var(--color-gold); }
+.ls-row {
+  display: flex; gap: 0.4rem; overflow-x: auto; padding: 6px 0;
+  background: repeating-linear-gradient(180deg, transparent 0 6px, color-mix(in oklch, #e2b66e 18%, transparent) 6px 7px, transparent 7px 9px) 0 50% / 100% 33px no-repeat;
+}
+.ls-chip {
+  flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.4rem; max-width: 16rem; padding: 0.35rem 0.75rem 0.35rem 0.5rem; border-radius: 999px;
+  font-size: 12.5px; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  border: 1px solid var(--color-border); background: var(--color-surface-raised); transition: border-color 0.2s, transform 0.2s;
+}
+.ls-chip:hover { border-color: color-mix(in oklch, var(--color-gold) 55%, transparent); transform: translateY(-1px); }
+.ls-dot { flex-shrink: 0; width: 8px; height: 6px; border-radius: 50%; transform: rotate(-20deg); background: var(--tint, var(--color-gold)); }
+.ls-chip.is-other .ls-dot { background: var(--color-gold); }
+.ls-kind { font-size: 10.5px; color: var(--color-ink-faint); }
+.ls-here { display: flex; align-items: center; gap: 0.55rem; min-width: 0; padding: 0.4rem 0; font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--color-ink); }
+.ls-head { flex-shrink: 0; width: 14px; height: 10px; border-radius: 50%; transform: rotate(-20deg); background: #f3d18f; box-shadow: 0 0 12px 2px color-mix(in oklch, var(--color-gold) 40%, transparent); }
+/* the `animation` shorthand resets the timeline: bind every part of the opening to the stage's scroll here, last */
+.ts-layer { animation-timeline: --tstage; animation-range: contain 0% contain 72%; }
+.ts-title { animation-timeline: --tstage; animation-range: contain 0% contain 22%; }
+.ts-dark { animation-timeline: --tstage; animation-range: contain 50% contain 70%; }
+.ts-staff { animation-timeline: --tstage; animation-range: contain 52% contain 86%; }
+.ts-end { animation-timeline: --tstage; animation-range: contain 72% contain 90%; }
+.ts-credit { animation-timeline: --tstage; animation-range: contain 30% contain 50%; }
+.ts-skip { animation-timeline: --tstage; animation-range: contain 80% contain 95%; }

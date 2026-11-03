@@ -31,17 +31,20 @@ import { useArticle, type ArticleText } from './body'
 import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
-import { PLACES_BY_SLUG } from '../musicology/places'
 import { Copyright } from '../../components/Copyright'
 import { QuizCard } from './QuizCard'
 import { booksWithChapter } from '../curriculum/reader/model'
+import { Cover } from '../curriculum/reader/Cover'
+import { openBook } from '../curriculum/bookOpen'
 import { Annotator } from '../curriculum/reader/Annotator'
 import { LIBRARY } from '../curriculum/reader/notes'
 import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { TOPIC_CREDITS } from './topicCredits'
 import { useThumbs } from './thumbs'
 import { HeroBackdrop } from './HeroBackdrop'
-import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicBrowser } from './TheoryHome'
+import { TheoryStage } from './TheoryStage'
+import { LinkStaff, PathStrip } from './ArticleLinks'
+import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicsView } from './TheoryHome'
 import { morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
@@ -66,6 +69,7 @@ const SCROLL_TL = typeof CSS !== 'undefined' && CSS.supports('animation-timeline
 
 export function TheoryPage() {
   const { slug } = useParams()
+  const { search } = useLocation()
   const article = slug ? findArticle(slug) : undefined
   // The index is in the bundle; the text arrives from content/ (cached after the first read).
   const { article: full, error: textError, retry } = useArticle(article)
@@ -246,6 +250,7 @@ export function TheoryPage() {
       )}
       {!slug ? (
         <div ref={pullContent}>
+          {!search && <TheoryStage />}
           <Index />
         </div>
       ) : full ? (
@@ -451,7 +456,7 @@ function Index() {
           <StaffRule />
           <section className="space-y-3">
             <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>
-            <TopicBrowser onSelect={select} />
+            <TopicsView onSelect={select} />
           </section>
           <StaffRule />
           {/* A rotating quiz on the library, beside a rotating random article. */}
@@ -684,7 +689,7 @@ function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: Catego
 function CategoryChips({ active, onSelect }: { active: CategoryId; onSelect: (id?: CategoryId) => void }) {
   return (
     <nav className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 lg:mx-0 lg:flex-wrap lg:px-0">
-      <button onClick={() => morphTopic(undefined, null, () => onSelect(), () => !!document.querySelector('.tb-grid'), () => document.querySelector('.tb-grid .vt-ti')?.scrollIntoView({ block: 'center' }))} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]">
+      <button onClick={() => morphTopic(undefined, null, () => onSelect(), () => !!document.querySelector('.sm-score, .tb-grid'), () => document.querySelector('.sm-score .vt-ti, .tb-grid .vt-ti')?.scrollIntoView({ block: 'center' }))} className="shrink-0 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-[13px] text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-ink)]">
         ← Tất cả
       </button>
       {articlesByCategory.map((c) => (
@@ -988,20 +993,31 @@ function ArticleActions({ article }: { article: Article }) {
 
 /** "Read in the book" chips for books and courses that include this article as a chapter. */
 function InBooks({ slug }: { slug: string }) {
+  const navigate = useNavigate()
   const hits = booksWithChapter(slug)
   if (!hits.length) return null
   return (
     <div className="flex flex-wrap gap-2">
-      {hits.map(({ book, chapter }) => (
-        <Link
-          key={book.id}
-          to={`/curriculum/${book.id}/${chapter.key}`}
-          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1.5 text-[12.5px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-ink)]"
-        >
-          <BookIcon width={13} height={13} className="text-[var(--color-gold)]" />
-          Đọc trong sách: <span className="font-medium text-[var(--color-ink)]">{book.title}{book.volume ? ` · ${book.volume}` : ''}</span> · chương {chapter.n}
-        </Link>
-      ))}
+      {hits.map(({ book, chapter }) => {
+        const to = `/curriculum/${book.id}/${chapter.key}`
+        return (
+          <Link
+            key={book.id}
+            to={to}
+            // the little cover opens like the books on the shelf
+            onClick={(e) => {
+              const cover = e.currentTarget.querySelector('.ib-cover')
+              if (!cover) return
+              e.preventDefault()
+              openBook(book, cover, to, navigate)
+            }}
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] py-1 pl-1 pr-3 text-[12.5px] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-ink)]"
+          >
+            <span className="ib-cover block h-7 w-7 shrink-0 overflow-hidden rounded-[4px]"><Cover book={book} size={0.13} className="h-full w-full" /></span>
+            Đọc trong sách: <span className="font-medium text-[var(--color-ink)]">{book.title}{book.volume ? ` · ${book.volume}` : ''}</span> · chương {chapter.n}
+          </Link>
+        )
+      })}
     </div>
   )
 }
@@ -1032,7 +1048,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
   const backlinks = getBacklinks(article.backlinks)
   const prose = useRef<HTMLDivElement>(null)
   const siblings = articlesByCategory.find((c) => c.id === article.category)!.articles
-  const index = siblings.indexOf(article)
+  const index = siblings.findIndex((a) => a.slug === article.slug)
   const [prev, next] = index < 0 ? [] : [siblings[index - 1], siblings[index + 1]]
   const branches = branchesOf(article.slug).filter((b) => b.part !== 'intro')
   const { size, serif, leading } = useLibrary()
@@ -1056,7 +1072,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             <p className="flex flex-wrap items-center gap-1.5 text-[12px] text-[var(--color-ink-faint)]">
               <BranchesIcon width={13} height={13} className="text-[var(--color-gold)]" /> Âm nhạc học:
               {branches.map((b) => (
-                <Link key={b.id} to={`/musicology/${b.id}`} className="rounded-full border border-[var(--color-border)] px-2 py-0.5 font-medium text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-ink)]">
+                <Link key={b.id} to={`/musicology/${b.id}`} onClick={(e) => e.currentTarget.classList.add('vt-bt')} className="rounded-full border border-[var(--color-border)] px-2 py-0.5 font-medium text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-ink)]">
                   {b.title}
                 </Link>
               ))}
@@ -1072,6 +1088,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             {article.summary}
           </p>
           <InBooks slug={article.slug} />
+          <PathStrip article={article} />
           {article.aliases && (
             <details className="group text-[12.5px] text-[var(--color-ink-faint)]">
               <summary className="cursor-pointer list-none hover:text-[var(--color-ink-muted)]">
@@ -1168,9 +1185,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
           </nav>
         )}
 
-        <OnTheMap slug={article.slug} />
-        {backlinks.length > 0 && <Backlinks articles={backlinks} />}
-        <RelatedRow title="Cùng chủ đề" articles={siblings.filter((a) => a !== article)} />
+        <LinkStaff article={article} body={article.body} backlinks={backlinks} />
       </article>
 
       {sections.length > 1 && (
@@ -1285,93 +1300,6 @@ function LinkPreviews({ children }: { children: ReactNode }) {
         </div>
       )}
     </div>
-  )
-}
-
-/** Places on the musicology atlas whose events link to this article, each opening the map there. */
-function OnTheMap({ slug }: { slug: string }) {
-  const places = PLACES_BY_SLUG.get(slug)
-  if (!places?.length) return null
-  return (
-    <section className="space-y-3 border-t border-[var(--color-border)] pt-6">
-      <h2 className="flex items-baseline justify-between font-display text-[19px] font-semibold text-[var(--color-ink)]">
-        Trên bản đồ âm nhạc
-        <span className="font-sans text-[12px] font-normal text-[var(--color-ink-faint)]">{places.length}</span>
-      </h2>
-      <ul className="flex flex-wrap gap-2">
-        {places.map((pl) => {
-          const ev = pl.events.find((e) => e.slugs.includes(slug))!
-          return (
-            <li key={pl.id}>
-              <Link to={`/musicology/ban-do?p=${pl.id}`} className="theory-card group flex items-center gap-2.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-2.5">
-                <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-gold)] shadow-[0_0_0_3px_color-mix(in_oklch,var(--color-gold)_22%,transparent)]" />
-                <span className="min-w-0">
-                  <span className="block text-[14px] font-medium leading-snug text-[var(--color-ink)] group-hover:text-[var(--color-gold)]">{pl.name}</span>
-                  <span className="block text-[12px] text-[var(--color-ink-faint)]">{ev.year} · {pl.country}</span>
-                </span>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </section>
-  )
-}
-
-function Backlinks({ articles }: { articles: Article[] }) {
-  const [all, setAll] = useState(false)
-  const shown = all ? articles : articles.slice(0, 6)
-  return (
-    <section className="space-y-3 border-t border-[var(--color-border)] pt-6">
-      <h2 className="flex items-baseline justify-between font-display text-[19px] font-semibold text-[var(--color-ink)]">
-        Các bài nhắc đến trang này
-        <span className="font-sans text-[12px] font-normal text-[var(--color-ink-faint)]">{articles.length}</span>
-      </h2>
-      <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        {shown.map((a) => (
-          <li key={a.slug}>
-            <Link to={`/theory/${a.slug}`} style={tint(a.category)} className="theory-card group flex h-full items-start gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3.5 py-3">
-              <span className="mt-0.5 font-['Noto_Music'] text-[14px] text-[var(--tint)]">{GLYPHS[a.category]}</span>
-              <span className="min-w-0">
-                <span className="block text-[14px] font-medium leading-snug text-[var(--color-ink)] group-hover:text-[var(--tint)]">{a.title}</span>
-                <span className="line-clamp-1 text-[12px] text-[var(--color-ink-faint)]">{a.summary}</span>
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      {articles.length > 6 && (
-        <button onClick={() => setAll((v) => !v)} className="text-[13px] font-medium text-[var(--color-accent)] hover:underline">
-          {all ? 'Thu gọn' : `Xem cả ${articles.length} bài`}
-        </button>
-      )}
-    </section>
-  )
-}
-
-/** One horizontally scrolling row of article chips — keeps long related lists from growing the page. */
-function RelatedRow({ title, articles }: { title: string; articles: Article[] }) {
-  if (!articles.length) return null
-  return (
-    <section className="space-y-3 border-t border-[var(--color-border)] pt-6">
-      <h2 className="flex items-baseline justify-between font-display text-[19px] font-semibold text-[var(--color-ink)]">
-        {title}
-        <span className="font-sans text-[12px] font-normal text-[var(--color-ink-faint)]">{articles.length}</span>
-      </h2>
-      <div className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:mx-0 lg:flex-wrap lg:px-0">
-        {articles.map((a) => (
-          <Link
-            key={a.slug}
-            to={`/theory/${a.slug}`}
-            style={tint(a.category)}
-            className="flex shrink-0 items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1 text-[13px] text-[var(--color-ink)] transition-colors hover:border-[var(--tint)] hover:text-[var(--tint)]"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--tint)]" />
-            {a.title}
-          </Link>
-        ))}
-      </div>
-    </section>
   )
 }
 

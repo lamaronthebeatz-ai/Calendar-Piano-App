@@ -183,7 +183,12 @@ function Chapter({ n, art, eyebrow, title, children, to, cta, extra, flip }: {
           </div>
           <div className="hm-chapter-body">{children}</div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
-            <Link to={to} className="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-medium">
+            <Link
+              to={to}
+              // the library's opening is this same painting: it grows into it
+              onClick={(e) => to === '/theory' && e.currentTarget.closest('.hm-chapter')?.querySelector('.hm-chapter-media')?.classList.add('vt-art')}
+              className="btn-gold inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-medium"
+            >
               {cta} <ArrowUpRightIcon width={15} height={15} />
             </Link>
             {extra && (

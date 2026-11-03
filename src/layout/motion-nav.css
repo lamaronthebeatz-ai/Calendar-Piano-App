@@ -226,3 +226,8 @@ html[data-hm-down] .rail-mark:not(.is-hidden) { opacity: 0; transform: translate
 html.vt-active .vt-morph-img { view-transition-name: article-image; }
 ::view-transition-group(article-image) { animation-duration: 520ms; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
 ::view-transition-old(article-image), ::view-transition-new(article-image) { height: 100%; object-fit: cover; }
+
+/* The home page's Lý thuyết painting grows into the library's opening (TheoryStage), which is the same painting. */
+html.vt-active .vt-art { view-transition-name: theory-art; }
+::view-transition-group(theory-art) { animation-duration: 600ms; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+::view-transition-old(theory-art), ::view-transition-new(theory-art) { height: 100%; object-fit: cover; }
