@@ -140,3 +140,17 @@ test('tab Dòng truyền nằm trọn trong màn hình điện thoại', async (
   const width = page.viewportSize()!.width
   expect(box!.x + box!.width).toBeLessThanOrEqual(width)
 })
+
+test('các trang nghiên cứu không tràn ngang trên điện thoại', async ({ page }) => {
+  for (const url of ['/#/terms', '/#/sources', '/#/sources/suc-khoe', '/#/explore', '/#/explore?tab=tac-pham', '/#/explore?tab=pha-he', '/#/explore?p=franz-liszt', '/#/research']) {
+    await page.goto(url)
+    await page.waitForTimeout(1200)
+    const over = await page.evaluate(() => {
+      const w = document.documentElement.clientWidth
+      return [...document.querySelectorAll('.term-card, .src-row, .rt-card, .lg-chain, .ex-block, .src-cite, header, .src-tabs')]
+        .filter((e) => e.getBoundingClientRect().right > w + 1)
+        .map((e) => e.className)
+    })
+    expect(over, url).toEqual([])
+  }
+})
