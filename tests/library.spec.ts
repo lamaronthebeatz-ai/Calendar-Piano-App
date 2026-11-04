@@ -83,8 +83,10 @@ test('bàn làm việc: đề tài gom ghi chú theo thẻ, trích dẫn, xuất
   await page.getByRole('button', { name: 'Tạo' }).click()
   await page.getByRole('button', { name: /Ghi chú · 1/ }).click()
   await page.getByText('Chèn vào bản nháp').click()
-  await page.locator('textarea.rs-draft').press('End')
-  await page.locator('textarea.rs-draft').pressSequentially(' [^sposobin-1984, tr. 45]')
+  // fill, not per-key typing: WebKit moved the caret mid-typing in the controlled textarea and scrambled the citation
+  const draft = page.locator('textarea.rs-draft')
+  await expect(draft).toHaveValue(/mô phỏng/)
+  await draft.fill((await draft.inputValue()) + ' [^sposobin-1984, tr. 45]')
   const [file] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Xuất Markdown' }).click()])
   const md = readFileSync(await file.path(), 'utf8')
   expect(md).toContain('mô phỏng')
