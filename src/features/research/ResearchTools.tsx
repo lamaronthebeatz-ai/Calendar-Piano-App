@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BookmarkIcon, CompassIcon, EditIcon, NoteIcon, TypeIcon } from '../../components/icons'
+import { BookmarkIcon, BranchesIcon, CompassIcon, EditIcon, NoteIcon, TypeIcon } from '../../components/icons'
 import './research.css'
 
 /**
@@ -8,6 +8,7 @@ import './research.css'
  */
 const TOOLS = [
   { to: '/explore', icon: CompassIcon, title: 'Tra cứu', text: 'Người, tác phẩm, dòng thời gian, thầy – trò' },
+  { to: '/explore?tab=pha-he', icon: BranchesIcon, title: 'Dòng truyền', text: 'Chuỗi thầy – trò trên trục thời gian' },
   { to: '/sources', icon: BookmarkIcon, title: 'Thư mục học', text: 'Nguồn, trích dẫn, sức khoẻ thư viện' },
   { to: '/terms', icon: TypeIcon, title: 'Thuật ngữ', text: 'Năm thứ tiếng, đối chiếu trường phái' },
   { to: '/research', icon: EditIcon, title: 'Bàn làm việc', text: 'Đề tài, bản nháp, xuất Word' },

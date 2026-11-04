@@ -130,6 +130,13 @@ test('phả hệ và độ tin cậy: cây thầy – trò, dòng truyền, nhã
 test('công cụ nghiên cứu vào được từ trang chủ Lý thuyết và Âm nhạc học (điện thoại không có ngăn kéo)', async ({ page }) => {
   for (const url of ['/#/theory', '/#/musicology']) {
     await page.goto(url)
-    for (const to of ['/explore', '/sources', '/terms', '/research', '/notes']) await expect(page.locator(`.rt a[href="#${to}"]`)).toBeVisible()
+    for (const to of ['/explore', '/explore?tab=pha-he', '/sources', '/terms', '/research', '/notes']) await expect(page.locator(`.rt a[href="#${to}"]`)).toBeVisible()
   }
+})
+
+test('tab Dòng truyền nằm trọn trong màn hình điện thoại', async ({ page }) => {
+  await page.goto('/#/explore')
+  const box = await page.locator('.src-tabs button', { hasText: 'Dòng truyền' }).boundingBox()
+  const width = page.viewportSize()!.width
+  expect(box!.x + box!.width).toBeLessThanOrEqual(width)
 })

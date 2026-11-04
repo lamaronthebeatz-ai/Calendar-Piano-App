@@ -4,7 +4,8 @@
 .src-stats dt { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--color-gold-bright); }
 .src-stats dd { font-size: 12.5px; color: var(--color-ink-muted); }
 
-.src-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--color-border); overflow-x: auto; }
+/* wraps rather than scrolls: a tab past the right edge of a phone went unnoticed ("Dòng truyền") */
+.src-tabs { display: flex; flex-wrap: wrap; gap: 0 4px; border-bottom: 1px solid var(--color-border); }
 .src-tabs a { flex-shrink: 0; padding: 8px 12px; font-size: 13.5px; color: var(--color-ink-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
 .src-tabs a:hover { color: var(--color-ink); }
 .src-tabs a.is-on { color: var(--color-ink); border-color: var(--color-gold); }
