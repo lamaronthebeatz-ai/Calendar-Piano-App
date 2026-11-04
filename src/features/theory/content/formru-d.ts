@@ -191,7 +191,8 @@ Thế kỷ 19, cạnh những mẫu nối tiếp các phương pháp cũ, xuất
 
 Mazel nói thêm: các biến tấu tự do hay mang rõ dấu hiệu **thể loại** (hành khúc, valse, mazurka, nocturne, scherzo…), thực chất là những bản tương đối độc lập — xu hướng biến chu kỳ thành tổ khúc; mẫu hoàn toàn là *Tổ khúc số 3* của Arensky, đúng như tên "Tổ khúc theo hình thức biến tấu". Đôi khi gọi là **biến tấu tính cách** (характерные), dù tính cách cao cũng có ở biến tấu nghiêm. Nhìn chung biến tấu tự do "dựa ít hơn vào việc mở ra những khả năng nằm sẵn khách quan trong chủ đề". Phương pháp biến tấu tự do — biến hình thể loại, hình tượng của chủ đề — được dùng rộng rãi trong nhiều hình thức khác *(Mazel, ch. IX §5)*; xem [[bien-doi-chu-de]].
 
-Các nhà kinh điển Nga thường **kết hợp** nghiêm và tự do: vài biến tấu đầu nghiêm, rồi tự do, mà các motif chính vẫn luôn nhận ra được. Mazel dẫn biến tấu trong Tam tấu "Tưởng nhớ một nghệ sĩ vĩ đại" và trong Tổ khúc số 3 cho dàn nhạc của Tchaikovsky; chương cuối Tứ tấu số 2 của Shostakovich; *Biến tấu cho dàn nhạc giao hưởng* của Shebalin trên dân ca "Уж ты, поле мое, поле чистое"; và một mẫu đặc biệt của hình thức lời ca – biến thể tự do trong khí nhạc: *Bình minh trên sông Moskva*, mở đầu opera *Khovanshchina* của Mussorgsky (các lời ở nhiều điệu tính).
+### Biến tấu hỗn hợp: nghiêm rồi tự do
+Các nhà kinh điển Nga thường **kết hợp** nghiêm và tự do: vài biến tấu đầu nghiêm, rồi tự do, mà các motif chính vẫn luôn nhận ra được. Mazel dẫn biến tấu trong Tam tấu "Tưởng nhớ một nghệ sĩ vĩ đại" và trong Tổ khúc số 3 cho dàn nhạc của Tchaikovsky; chương cuối Tứ tấu số 2 của Shostakovich; *Biến tấu cho dàn nhạc giao hưởng* của Shebalin trên dân ca "Уж ты, поле мое, поле чистое"; và một mẫu đặc biệt của hình thức lời ca – biến thể tự do trong khí nhạc: *Bình minh trên sông Moskva*, mở đầu opera *Khovanshchina* của Mussorgsky (các lời ở nhiều điệu tính) [^mazel-1979, ch. IX §5, tr. 307].
 
 ### Symphonic Études của Schumann (Sposobin, §87)
 Sposobin chọn op. 13 làm mẫu biến tấu tự do, trong đó một số biến tấu giữ gần chủ đề, số khác đi xa:
@@ -316,6 +317,12 @@ Tư liệu phân tích chọn từ danh sách "Материал для анал�
 9. **Phát triển xuyên suốt**: finale Giao hưởng số 3 của Beethoven — đặt bảng Sposobin cạnh sơ đồ đối xứng của Mazel; chỉ ra hai chỗ ngắt sâu nhất.
 10. Các chu kỳ Nga khác trong danh sách Sposobin: Lyadov (Biến tấu trên chủ đề Glinka, trên chủ đề Ba Lan); Tchaikovsky (Biến tấu Fa trưởng op. 19 số 6, biến tấu trong Tam tấu op. 50, *Rococo* op. 33); Glazunov (biến tấu trong Giao hưởng số 6); Scriabin (biến tấu trong Concerto piano op. 20).
 11. Viết: lấy một chủ đề dân ca tám ô, viết bốn biến tấu nghiêm và một biến tấu tự do; rồi viết ba biến tấu kiểu Glinka (giai điệu giữ nguyên, đổi đệm, một biến tấu phối lại ở song song thứ mà không dịch giọng giai điệu).
+
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-canon-pachelbel]] — Pachelbel, *Canon*: canon ba bè trên một bè trầm lặp — loại biến tấu trên basso ostinato (mục 4).
+- Thư viện chưa có bài phân tích riêng một bộ biến tấu cổ điển; bài tập ở trên dùng Beethoven op. 26 và Schumann op. 13 như Sposobin.
 
 ## Liên kết
 - Trong bộ: [[hinh-thuc-nga-nguyen-tac-phat-trien]] (phương pháp biến tấu), [[hinh-thuc-nga-doan-nhac]] (dân ca Nga, cấu trúc lời ca), [[hinh-thuc-nga-rondo]], [[hinh-thuc-nga-sonata]], [[hinh-thuc-nga-chu-ky]] (tổ khúc), [[hinh-thuc-nga-hon-hop-va-ghep-tuong-phan]] (Kamarinskaya và hình thức hỗn hợp), [[hinh-thuc-nga-phuc-dieu]] (passacaglia, canon, fugue).
@@ -584,6 +591,13 @@ Tư liệu phân tích chọn từ danh sách "Материал для анал�
 9. **Hình thức có refrain thêm vào**: Hành khúc Thổ Nhĩ Kỳ (Mozart); Valse op. 34 số 1 và op. 42 (Chopin); *Écossaises* (Beethoven).
 10. Viết: một rondo năm đoạn nhỏ (chủ đề đoạn tám ô) theo kế hoạch T – D – T – S – T, có một khâu nối kiểu 1 và một khâu nối kiểu 3 của Sposobin, và coda gồm kết bổ sung.
 
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-fur-elise]] — Beethoven, *Für Elise*: rondo A – B – A – C – A.
+- [[phan-tich-pathetique-chuong-2]] — Beethoven, Sonata *Pathétique*, chương II: rondo A – B – A – C – A + coda.
+- [[phan-tich-rondo-alla-turca]] — Mozart, Sonata K. 331, chương III: rondo kiểu "Thổ Nhĩ Kỳ".
+
 ## Liên kết
 - Trong bộ: [[hinh-thuc-nga-hinh-thuc-don]], [[hinh-thuc-nga-ba-phan-phuc]] (trio, episode, tái hiện không trọn), [[hinh-thuc-nga-bien-tau]], [[hinh-thuc-nga-rondo-sonata]], [[hinh-thuc-nga-chu-ky]] (tổ khúc, finale), [[hinh-thuc-nga-thanh-nhac]] (rondo trong romance và opera).
 - Thư viện: [[rondo]], [[sonata-rondo-va-cac-loai-rondo]], [[hinh-thuc-ba-doan]], [[minuet-va-trio]], [[phuong-phap-phan-tich-tac-pham]].
@@ -787,6 +801,11 @@ Tư liệu phân tích chọn từ danh sách "Материал для анал�
 6. **Xô viết**: Prokofiev — finale Sonata số 4 op. 29 (lần hai đoạn chính không trọn), Sonata số 6 (kiểm sơ đồ A B A C A D A C1 B1 A của Mazel); Shostakovich — finale Giao hưởng số 6.
 7. So sánh: chọn một finale rondo – sonata và một finale sonata của Beethoven; liệt kê những gì làm finale thứ nhất "nhẹ" và "tròn" hơn (theo §2 của Mazel).
 8. Viết: biến một rondo năm đoạn nhỏ đã viết ở bài [[hinh-thuc-nga-rondo]] thành rondo – sonata bảy phần — thêm phần nối có đoạn chuẩn bị, cho episode một vang lại ở điệu tính chính trong tái hiện, và viết coda kết từ đầu.
+
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- Thư viện chưa có bài phân tích riêng một rondo – sonata. So sánh sơ đồ rondo đơn ở [[phan-tich-rondo-alla-turca]] với các finale Beethoven trong bài tập ở trên.
 
 ## Liên kết
 - Trong bộ: [[hinh-thuc-nga-rondo]], [[hinh-thuc-nga-sonata]] (phần chính, phần nối, phần phụ, tái hiện gương, coda), [[hinh-thuc-nga-ba-phan-phuc]] (trio), [[hinh-thuc-nga-bien-tau]], [[hinh-thuc-nga-chu-ky]] (vai trò finale), [[hinh-thuc-nga-hon-hop-va-ghep-tuong-phan]].

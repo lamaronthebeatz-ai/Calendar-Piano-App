@@ -649,6 +649,8 @@ Cả ba đều thấy mỗi đoạn nhạc **làm một việc** trong chỉnh t
     refs: RU_FORM_REFS,
     body: `
 ## Dẫn nhập
+*Phát triển cái gì? — trước hết là chủ đề và chất liệu chủ đề: xem [[chu-de-am-nhac-truong-phai-nga]].*
+
 
 Sposobin mở §12 bằng một câu ngắn mà ba cuốn sách đều chia sẻ: "Hình thức âm nhạc, vì triển khai trong thời gian, là một **quá trình**, tức là sự **phát triển**. Do đó các nguyên tắc cơ bản của việc phát triển chất liệu âm nhạc có tầm quan trọng đặc biệt" [^sposobin-1984, §12, tr. 42]. Mazel nói gần như thế: hình thức của mọi tác phẩm "một là một quá trình phát triển nào đó, hai là kết quả trọn vẹn của quá trình ấy", và cả hai mặt đều quan trọng *(Mazel, ch. V §3)*. Asafyev đặt chính ý ấy làm tên sách: *Hình thức âm nhạc như một quá trình*.
 

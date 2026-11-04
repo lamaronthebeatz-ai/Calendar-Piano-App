@@ -467,6 +467,14 @@ Tư liệu lấy từ mục "Tư liệu để phân tích" của Sposobin (ch. V
 12. **Theo Asafyev.** Nghe 13 ô đầu Sonata op. 2 số 3 và viết lại phân tích "cú đẩy – vận động – khép" cho từng nhóm ô; rồi tìm câu kết của phần trình bày được dùng làm cú đẩy cho phát triển.
 13. **Danh sách tự luyện (Sposobin).** Chương I sonata piano Haydn (tuyển); chương I sonata Mozart (trừ số 9 và 12), chương cuối số 3, 6, 11, 14, 16, chương chậm số 1, 3, 4, 6, 7, 11, 14, 16, 17; chương I sonata Beethoven (trừ op. 26, 27, 54, 101, 109); chương I giao hưởng Schubert h-moll, C-dur; Schumann Sonata g-moll, Toccata C-dur; Chopin Sonata b-moll và h-moll; Grieg Sonata, các sonata violin; Glinka overture *Ivan Susanin*, *Ruslan*, *Jota Aragon*; Borodin chương I cả ba giao hưởng; Rimsky-Korsakov overture *Pskovityanka*, *Cô dâu của Sa hoàng*, *Scheherazade* chương I; Tchaikovsky chương I cả sáu giao hưởng, *Romeo và Juliet*, overture *Kẹp hạt dẻ*; Glazunov chương I các giao hưởng; Rachmaninov chương I concerto 1 – 3; Medtner các sonata; Scriabin sonata 1, 3; Prokofiev các sonata, Giao hưởng Cổ điển; Shostakovich chương I giao hưởng 1, 5, 7; Myaskovsky Giao hưởng số 6 chương I *(Sposobin, ch. VIII "Tư liệu để phân tích")*.
 
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-sonata-k545]] — Mozart, Sonata K. 545, chương I: sonata mẫu mực, tái hiện bắt đầu ở Fa trưởng.
+- [[phan-tich-sonatina-clementi-op36-1]] — Clementi, Sonatina Op. 36 số 1, chương I: sonata thu nhỏ 38 ô.
+- [[phan-tich-anh-trang-chuong-1]] — Beethoven, Sonata *Ánh trăng*, chương I: chương chậm mở đầu, bài chia mở đầu – A – đoạn bass ngân trên át – A′ – coda; đặt cạnh sơ đồ sonata để bàn chỗ giống và khác (mục 9).
+- [[phan-tich-scriabin-sonata-so-2]] — Scriabin, Sonata số 2: hoà âm từng ô và các mốc hình thức hai chương — sonata cuối thế kỷ XIX.
+
 ## Liên kết
 - Nguồn gốc lịch sử: [[hinh-thuc-nga-sonata-co-va-hai-phan-co]]; rondo – sonata: [[hinh-thuc-nga-rondo-sonata]]; chu kỳ sonata – giao hưởng: [[hinh-thuc-nga-chu-ky]].
 - Nền tảng: [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]], [[hinh-thuc-nga-nguyen-tac-phat-trien]], [[hinh-thuc-nga-ba-phan-phuc]], [[hinh-thuc-nga-bien-tau]], [[hinh-thuc-nga-rondo]].
@@ -674,6 +682,12 @@ Tư liệu theo "Tư liệu để phân tích" của Sposobin (ch. X) và ví d�
 9. Bach, Concerto violin a-moll, chương I: đánh dấu sáu lần chủ đề; tìm "phần phụ" C-dur (ô 52) và lần tương ứng ở a-moll (ô 144).
 10. Mozart, Sonata C-dur (số 7 theo Mazel), chương I: tìm trong phát triển kết hoàn toàn ở song song thứ và phần bổ sung — nét "cổ" Mazel chỉ ra.
 11. Danh sách tự luyện (Sposobin): các chương tổ khúc Pháp, Anh và partita của Bach (trừ các prelude và ouverture lớn); prelude nhỏ; prelude trong *Bình quân luật* (trừ một số, vd. số 1, 7); các chương tổ khúc của Handel (trừ fugue và biến tấu); sonata clavier của D. Scarlatti; Mozart, Sonata Es-dur, chương I *(Sposobin, ch. X "Tư liệu để phân tích")*.
+
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-minuet-sol-truong]] — Minuet Sol trưởng (Petzold): hai đoạn có nhắc lại, gần kiểu hai đoạn cổ (đoạn I chuyển sang át, đoạn II về chủ).
+- [[phan-tich-invention-so-1]] — Bach, Invention số 1: hình thức và đường đi của giọng trong một tác phẩm phức điệu cổ.
 
 ## Liên kết
 - Hình thức sonata chín muồi: [[hinh-thuc-nga-sonata]]; rondo: [[hinh-thuc-nga-rondo]]; chu kỳ, tổ khúc cổ: [[hinh-thuc-nga-chu-ky]].

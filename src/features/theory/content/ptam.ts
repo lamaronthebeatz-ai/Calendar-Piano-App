@@ -43,6 +43,38 @@ Cuốn sách của tủ sách giữ **đúng trình tự chương** của giáo 
 
 Cuối mỗi phần của cuốn sách có trang **Tư liệu phân tích**: các bài phân tích tác phẩm sẵn có trong thư viện, xếp theo hình thức.
 
+## Đối chiếu từng mục
+Mỗi mục (§) của giáo trình nằm ở đâu trong bài. Các bài theo cách chia của Sposobin và Mazel nên tên mục có khi khác; mục "Ứng dụng" của giáo trình tương ứng với mục **Phạm vi dùng** trong bài, mục "Tư liệu" với **Tư liệu phân tích trong thư viện** và **Bài tập**.
+
+| Giáo trình | Mục trong bài |
+|---|---|
+| I. Tính chất đặc biệt của âm nhạc | [[hinh-thuc-nga-khai-niem]] mục 2 (đặc thù của âm nhạc), 6 – 7 (quá trình, trí nhớ) |
+| I. Phương pháp phân tích | [[hinh-thuc-nga-tac-dong-va-phan-tich]] mục 6 – 7; [[mazel-phuong-phap-phan-tich]] |
+| II §1 – §3. Giai điệu; hoà âm; tiết tấu và tiết luật | [[hinh-thuc-nga-phuong-tien]] mục 4, 5, 6 |
+| II §4 – §8. Âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo | [[am-sac-nhip-do-cuong-do-am-vuc-va-cach-cau-tao]] |
+| III §1. Chủ đề | [[chu-de-am-nhac-truong-phai-nga]]; [[hinh-thuc-nga-doan-nhac]] mục "Chủ đề" |
+| III §2. Nguyên tắc phát triển | [[hinh-thuc-nga-nguyen-tac-phat-trien]] mục 1 – 4 |
+| IV §1 – §6. Mở đầu, trình bày, nối, giữa, tái hiện, kết | [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]] mục 1 – 2 |
+| V §1. Ngắt, cơ cấu, phần | [[hinh-thuc-nga-phan-doan-cau-truc]] mục 1 – 2 |
+| V §2. Motif, tiết nhạc, câu nhạc | [[hinh-thuc-nga-phan-doan-cau-truc]] mục 3 |
+| V §3. Cấu trúc câu giai điệu | [[hinh-thuc-nga-phan-doan-cau-truc]] mục 4 – 7 |
+| Đoạn nhạc §1 – §2. Định nghĩa, các dạng | [[hinh-thuc-nga-doan-nhac]] mục "Định nghĩa" tới "Số câu" |
+| Đoạn nhạc §3 – §4. Ứng dụng, hiện tượng đặc biệt | [[hinh-thuc-nga-doan-nhac]] "Đoạn nhạc như hình thức độc lập", "Các dạng phức tạp" |
+| Hai đoạn đơn, ba đoạn đơn | [[hinh-thuc-nga-hinh-thuc-don]] mục "Hai đoạn đơn", "Ba đoạn đơn", "Phạm vi dùng" |
+| Hai đoạn phức | [[hinh-thuc-nga-ba-phan-phuc]] mục "Hai đoạn phức" |
+| Ba đoạn phức §1 – §4. Định nghĩa, từng phần, phần phụ, những thay đổi | [[hinh-thuc-nga-ba-phan-phuc]] "Định nghĩa" tới "Mở đầu và coda" |
+| Ba đoạn phức §5 – §7. Ba – năm đoạn; trung gian; ứng dụng | [[hinh-thuc-nga-ba-phan-phuc]] các mục cùng tên, "Phạm vi dùng" |
+| Rondo §1 – §3. Định nghĩa, rondo cổ Pháp, rondo cổ điển | [[hinh-thuc-nga-rondo]] mục 1 – 4 |
+| Rondo §4. Thế kỷ XIX – đầu XX | [[hinh-thuc-nga-rondo]] mục 5 (cả rondo Nga và Xô viết) |
+| Rondo §5 – §6. Trường hợp đặc biệt, ứng dụng | [[hinh-thuc-nga-rondo]] mục 6 – 7 |
+| Biến tấu §1 – §3. Định nghĩa, nghiêm khắc, tự do | [[hinh-thuc-nga-bien-tau]] mục 1 – 10 |
+| Biến tấu §4. Hỗn hợp, kép | [[hinh-thuc-nga-bien-tau]] mục 10 "Biến tấu hỗn hợp", 11 – 12 |
+| Sonata §1 – §5. Định nghĩa, trình bày, phát triển, tái hiện, coda | [[hinh-thuc-nga-sonata]] mục 1 – 8 |
+| Sonata §6. Lãng mạn và cận đại | [[hinh-thuc-nga-sonata]] mục 10 |
+| Sonata §7. Trường hợp đặc biệt | [[hinh-thuc-nga-sonata]] mục 9 |
+| Rondo – sonata §1 – §4 | [[hinh-thuc-nga-rondo-sonata]] mục 1 – 8 |
+| Hai đoạn cổ, sonata cổ | [[hinh-thuc-nga-sonata-co-va-hai-phan-co]] mục 1 – 3 |
+
 ## Các giáo trình Nga – Xô viết
 Nội dung các chương được tổng hợp từ bốn cuốn người biên soạn **đã đọc trên bản quét** (OCR) và ghi số trang:
 

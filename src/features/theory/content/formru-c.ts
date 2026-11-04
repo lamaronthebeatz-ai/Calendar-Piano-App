@@ -35,6 +35,8 @@ Bài này đi theo trình tự: chủ đề → định nghĩa đoạn nhạc �
 
 ## Chủ đề (тема) — điều đoạn nhạc trình bày
 
+*Bài riêng về chủ đề — độ dài, độ khép kín, chủ đề tương phản, chất liệu chủ đề: [[chu-de-am-nhac-truong-phai-nga]].*
+
 Mazel mở chương V bằng nhận xét rằng trong tác phẩm có những thành phần quan trọng hơn và kém quan trọng hơn không chỉ *đồng thời* (giai điệu và đệm) mà cả *nối tiếp*: thường ở đầu tác phẩm hay đầu các phần lớn có những cấu trúc như "nhan đề", cá thể hoá rõ, định hình chặt, độc lập — người ta gọi chúng là chủ đề. Định nghĩa của ông:
 
 "Chủ đề là một ý nhạc (được trình bày trong một cấu trúc nào đó), có đủ tính định hình, đủ tính tập trung, có tính đặc trưng và tính cá thể hoá của sức biểu hiện âm nhạc, và thường làm cơ sở cho sự phát triển." *(Mazel, ch. V §1)*
@@ -328,6 +330,13 @@ Lấy từ "Tư liệu để phân tích" (Материал для анализ�
 5. **Mở rộng lớn**: Tchaikovsky, Giao hưởng số 5, chương II (đoạn đầu) — đếm ô câu một và câu hai, đánh dấu chỗ kết ngắt và chỗ "chủ đề định mệnh" xông vào.
 6. **Dân ca** (Sposobin, ch. II): chọn năm bài trong các tập của Balakirev, Rimsky-Korsakov, Lyadov, Prokunin – Lopatin; với mỗi bài xác định điều thức, âm kết, kiểu cấu trúc (một câu nhỏ nhắc lại, tuần hoàn kép, tự do, lĩnh xướng – điệp khúc).
 7. **Viết**: soạn một đoạn nhạc 8 ô kiểu lặp (T–D–D–T), rồi viết lại thành đoạn chuyển giọng sang giọng át, rồi mở rộng câu hai bằng kết ngắt thành 10 ô.
+
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-prelude-la-truong-op28-so7]] — Chopin, Prelude La trưởng Op. 28 số 7: đoạn nhạc 8 + 8 ô, cả tác phẩm là một đoạn nhạc.
+- [[phan-tich-prelude-mi-thu-op28-so4]] — Chopin, Prelude Mi thứ Op. 28 số 4: hai nửa song song, cao trào ở ô 16 – 17, kết trì hoãn tới ô cuối.
+- [[phan-tich-prelude-do-truong]] — Bach, Prelude Đô trưởng (*Clavier bình quân* I): một khuôn hợp âm rải suốt 35 ô — so sánh để thấy một tác phẩm **không** chia thành đoạn nhạc chủ điệu.
 
 ## Liên kết
 
@@ -655,6 +664,15 @@ Từ "Tư liệu để phân tích" của Sposobin (cuối ch. III, IV, phụ l�
 6. **Lặp và ba đoạn kép**: Glinka, *Сомнение*; Liszt, *Nocturne* số 3; Tchaikovsky, *Lời ca không lời* op. 40 số 6 — viết sơ đồ và chỉ ra chỗ đổi giọng.
 7. **Nhiều lời**: Glinka, *Не искушай меня без нужды*, *Кто она и где она*; phân tích một ca khúc quen thuộc: lời ca là đoạn nhạc hay hai đoạn? lĩnh xướng – điệp khúc quan hệ thế nào?
 
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-minuet-sol-truong]] — Minuet Sol trưởng (Petzold): hai đoạn đơn có nhắc lại, Sol trưởng → Rê trưởng → Sol trưởng.
+- [[phan-tich-nocturne-op9-so2]] — Chopin, Nocturne Op. 9 số 2: hai đoạn có tái hiện, mỗi lần giai điệu trở lại được trang trí thêm.
+- [[phan-tich-traumerei]] — Schumann, *Träumerei*: ba đoạn đơn.
+- [[phan-tich-wilder-reiter]] — Schumann, *Kỵ sĩ hoang dã*: ba đoạn La thứ – Fa trưởng – La thứ, đoạn giữa giai điệu xuống tay trái.
+- [[phan-tich-clair-de-lune]] — Debussy, *Clair de lune*: ba đoạn ở phong cách cuối thế kỷ XIX.
+
 ## Liên kết
 
 - Lộ trình: [[hinh-thuc-nga-lo-trinh]] · trước: [[hinh-thuc-nga-doan-nhac]] · sau: [[hinh-thuc-nga-ba-phan-phuc]]
@@ -979,6 +997,12 @@ Từ "Tư liệu để phân tích" của Sposobin (cuối ch. V và phụ lục
 6. **Ba – năm đoạn và trung gian**: Beethoven, scherzo Giao hưởng số 4 và 7; Glinka, *Hành khúc Chernomor*; Beethoven, Bagatelle op. 119 số 1; Mussorgsky, *Vũ khúc của những chú gà con chưa nở*; Schubert, *Moment musical* op. 94 số 3. Lý giải vì sao từng bài thuộc loại ấy.
 7. **Tiểu phẩm Nga** (Sposobin): Tchaikovsky op. 37bis số 1, 2, 5, 6, 8, 11, 12; op. 40 số 3, 5, 8, 9, 11; polonaise và écossaise trong *Evgeny Onegin*; Rimsky-Korsakov, *Hợp xướng những người mù đàn gusli* và *Đoàn diễu hành của Berendey* (*Snegurochka*); Borodin, *Hành khúc Polovets* (*Knyaz Igor*).
 8. **Hai đoạn phức** (Mazel): Tchaikovsky, arioso của Liza (*Con đầm pích*, cảnh 2), *Мы сидели с тобой*; Glinka, *Давно ли роскошно ты розой цвела*. Chỉ ra vì sao không thể có tái hiện.
+
+## Tư liệu phân tích trong thư viện
+Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
+
+- [[phan-tich-golliwogg-cakewalk]] — Debussy, *Golliwogg's Cakewalk*: ba đoạn, đoạn giữa xen câu trích nhại — tự xác định đó là ba đoạn đơn hay ba đoạn phức theo tiêu chí ở trên.
+- Thư viện chưa có bài phân tích riêng một minuet có trio cổ điển; bài tập ở trên dùng tác phẩm của Sposobin và Mazel.
 
 ## Liên kết
 
