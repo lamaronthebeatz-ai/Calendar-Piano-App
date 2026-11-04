@@ -1,5 +1,6 @@
 import type { Article } from '../wiki'
 import { RU_FORM_REFS } from './formru-refs'
+import { NHUNG_REF } from './ptam-nhung-a'
 
 /**
  * Cuốn "Phân tích tác phẩm âm nhạc" của tủ sách: khung chương theo mục lục giáo trình của PGS. TS Nguyễn Thị Nhung
@@ -7,76 +8,50 @@ import { RU_FORM_REFS } from './formru-refs'
  * được (Sposobin 1984, Mazel 1979, Asafyev 1971, Sokolov 2004). Phần lớn chương là bài sẵn có của bộ "Hình thức âm
  * nhạc — trường phái Nga" (formru-*); file này thêm bài mở đầu và hai chương còn thiếu.
  */
-const NHUNG: [string, string] = ['Nguyễn Thị Nhung, Phân tích tác phẩm âm nhạc — Hà Nội, 2005 (mục lục dùng làm khung chương)', '']
+const NHUNG = NHUNG_REF
 
 export const ptam: Article[] = [
   {
     slug: 'phan-tich-tac-pham-am-nhac-lo-trinh',
-    title: 'Phân tích tác phẩm âm nhạc: khung giáo trình và các sách Liên Xô',
+    title: 'Phân tích tác phẩm âm nhạc: giáo trình Nguyễn Thị Nhung và các sách Liên Xô',
     category: 'analysis',
-    aliases: ['phân tích tác phẩm âm nhạc', 'giáo trình phân tích tác phẩm', 'анализ музыкальных произведений'],
-    summary: 'Bài mở đầu cuốn "Phân tích tác phẩm âm nhạc" của tủ sách: khung hai phần — nguyên tắc phân tích và các hình thức âm nhạc — theo giáo trình nhạc viện Việt Nam, nội dung tổng hợp từ các giáo trình Nga – Xô viết; bảng đối chiếu chương với bài, và danh mục các sách Liên Xô về hình thức và phân tích.',
+    aliases: ['phân tích tác phẩm âm nhạc', 'giáo trình phân tích tác phẩm', 'Nguyễn Thị Nhung', 'анализ музыкальных произведений'],
+    summary: 'Bài mở đầu cuốn "Phân tích tác phẩm âm nhạc" của tủ sách, viết lại theo giáo trình của PGS. TS Nguyễn Thị Nhung dùng ở Nhạc viện Hà Nội (Quyển 1 – bậc đại học, 2006): hai phần, mười lăm chương; mỗi chương tóm lược giáo trình bằng lời người biên soạn, có số trang; phần đọc thêm theo các giáo trình Nga – Xô viết.',
     body: `## Cuốn sách này là gì
-Ở các nhạc viện Việt Nam, môn **Phân tích tác phẩm âm nhạc** đi theo truyền thống Nga – Xô viết: trước hết học các **nguyên tắc** (âm nhạc có gì đặc biệt, các phương tiện diễn tả, chủ đề và cách phát triển, chức năng từng phần, sự phân chia), rồi học **các hình thức** từ nhỏ đến lớn — đoạn nhạc, hai đoạn, ba đoạn, rondo, biến tấu, sonata, rondo – sonata, hai đoạn cổ và sonata cổ.
+Cuốn sách đi theo giáo trình **Phân tích tác phẩm âm nhạc** (Quyển 1 – bậc đại học) của PGS. TS **Nguyễn Thị Nhung**, Trung tâm Thông tin – Thư viện Âm nhạc, Nhạc viện Hà Nội, 2006 — giáo trình đang dùng ở nhạc viện. Mỗi chương của cuốn sách **tương ứng một chương giáo trình**: trình bày lại các định nghĩa, phân loại, ví dụ và phân tích mẫu bằng lời của người biên soạn, ghi số trang để bạn mở sách gốc đối chiếu. Giáo trình còn bản quyền nên cuốn sách **không chép nguyên văn**; trích dẫn chỉ ngắn và có trang.
 
-Cuốn sách của tủ sách giữ **đúng trình tự chương** của giáo trình *Phân tích tác phẩm âm nhạc* của PGS. TS **Nguyễn Thị Nhung** (Hà Nội, 2005), để bạn học song song với giáo trình nhạc viện. Người biên soạn **chỉ dùng mục lục của sách làm khung**; nội dung mỗi chương là bài của thư viện, đọc và tổng hợp từ các giáo trình Nga – Xô viết, có ghi chương, mục và số trang.
+Điều quý của giáo trình là đặt các hình thức châu Âu cạnh **tác phẩm Việt Nam**: Giao hưởng *Quê hương* của Hoàng Việt, *Ngàn tượng Phật* của Nguyễn Văn Nam, *Dòng nước trong* của Trần Tất Toại, *Miền Nam quê hương ta ơi* của Huy Du, *Tháng Tám lịch sử* của Doãn Nho… Cuốn sách giữ đủ các ví dụ ấy.
+
+Cuối mỗi chương có thêm hai mục của người biên soạn: **Tư liệu trong thư viện** (bài phân tích tác phẩm sẵn có) và **Đọc thêm (trường phái Nga)** — chương tương ứng trong bộ bài theo Sposobin, Mazel, Asafyev.
 
 ## Hai phần, mười lăm chương
-| Giáo trình | Chương trong cuốn sách |
-|---|---|
-| **Phần thứ nhất — Nguyên tắc phân tích** | |
-| I. Tính chất đặc biệt của nghệ thuật âm nhạc, phương pháp phân tích | [[hinh-thuc-nga-khai-niem]], [[hinh-thuc-nga-tac-dong-va-phan-tich]] |
-| II. Những phương pháp diễn tả cơ bản (§1 – §3: giai điệu, hoà âm, tiết tấu và tiết luật) | [[hinh-thuc-nga-phuong-tien]] |
-| II. (§4 – §8: âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo) | [[am-sac-nhip-do-cuong-do-am-vuc-va-cach-cau-tao]] |
-| III. Chủ đề âm nhạc — nguyên tắc phát triển | [[chu-de-am-nhac-truong-phai-nga]], [[hinh-thuc-nga-nguyen-tac-phat-trien]] |
-| IV. Chức năng từng phần của hình thức | [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]] |
-| V. Sự phân chia: ngắt, cơ cấu, phần, motif, tiết nhạc, câu nhạc | [[hinh-thuc-nga-phan-doan-cau-truc]] |
-| **Phần thứ hai — Hình thức âm nhạc** | |
-| I. Đoạn nhạc | [[hinh-thuc-nga-doan-nhac]] |
-| II – III. Hai đoạn đơn, ba đoạn đơn | [[hinh-thuc-nga-hinh-thuc-don]] |
-| IV – V. Hai đoạn phức, ba đoạn phức | [[hinh-thuc-nga-ba-phan-phuc]] |
-| VI. Rondo | [[hinh-thuc-nga-rondo]] |
-| VII. Biến tấu | [[hinh-thuc-nga-bien-tau]] |
-| VIII. Sonata | [[hinh-thuc-nga-sonata]] |
-| IX. Rondo – sonata | [[hinh-thuc-nga-rondo-sonata]] |
-| X. Hai đoạn cổ và sonata cổ | [[hinh-thuc-nga-sonata-co-va-hai-phan-co]] |
+| Giáo trình | Chương | Đọc thêm (trường phái Nga) |
+|---|---|---|
+| **Phần thứ nhất — Nguyên tắc phân tích** | | |
+| I. Tính chất đặc biệt của âm nhạc, phương pháp phân tích | [[ptam-am-nhac-va-phuong-phap-phan-tich]] | [[hinh-thuc-nga-khai-niem]], [[hinh-thuc-nga-tac-dong-va-phan-tich]] |
+| II. Những phương pháp diễn tả cơ bản | [[ptam-phuong-phap-dien-ta-co-ban]] | [[hinh-thuc-nga-phuong-tien]], [[am-sac-nhip-do-cuong-do-am-vuc-va-cach-cau-tao]] |
+| III. Chủ đề âm nhạc, nguyên tắc phát triển | [[ptam-chu-de-va-nguyen-tac-phat-trien]] | [[chu-de-am-nhac-truong-phai-nga]], [[hinh-thuc-nga-nguyen-tac-phat-trien]] |
+| IV. Chức năng từng phần | [[ptam-chuc-nang-tung-phan]] | [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]] |
+| V. Sự phân chia | [[ptam-su-phan-chia]] | [[hinh-thuc-nga-phan-doan-cau-truc]] |
+| **Phần thứ hai — Hình thức âm nhạc** | | |
+| I. Đoạn nhạc | [[ptam-doan-nhac]] | [[hinh-thuc-nga-doan-nhac]] |
+| II. Hai đoạn đơn | [[ptam-hai-doan-don]] | [[hinh-thuc-nga-hinh-thuc-don]] |
+| III. Ba đoạn đơn | [[ptam-ba-doan-don]] | [[hinh-thuc-nga-hinh-thuc-don]] |
+| IV. Hai đoạn phức | [[ptam-hai-doan-phuc]] | [[hinh-thuc-nga-ba-phan-phuc]] |
+| V. Ba đoạn phức | [[ptam-ba-doan-phuc]] | [[hinh-thuc-nga-ba-phan-phuc]] |
+| VI. Rondo | [[ptam-rondo]] | [[hinh-thuc-nga-rondo]] |
+| VII. Biến tấu | [[ptam-bien-tau]] | [[hinh-thuc-nga-bien-tau]] |
+| VIII. Sonata | [[ptam-sonata]] | [[hinh-thuc-nga-sonata]] |
+| IX. Rondo – sonata | [[ptam-rondo-sonata]] | [[hinh-thuc-nga-rondo-sonata]] |
+| X. Hai đoạn cổ và sonata cổ | [[ptam-hai-doan-co-va-sonata-co]] | [[hinh-thuc-nga-sonata-co-va-hai-phan-co]] |
 
-Cuối mỗi phần của cuốn sách có trang **Tư liệu phân tích**: các bài phân tích tác phẩm sẵn có trong thư viện, xếp theo hình thức.
-
-## Đối chiếu từng mục
-Mỗi mục (§) của giáo trình nằm ở đâu trong bài. Các bài theo cách chia của Sposobin và Mazel nên tên mục có khi khác; mục "Ứng dụng" của giáo trình tương ứng với mục **Phạm vi dùng** trong bài, mục "Tư liệu" với **Tư liệu phân tích trong thư viện** và **Bài tập**.
-
-| Giáo trình | Mục trong bài |
-|---|---|
-| I. Tính chất đặc biệt của âm nhạc | [[hinh-thuc-nga-khai-niem]] mục 2 (đặc thù của âm nhạc), 6 – 7 (quá trình, trí nhớ) |
-| I. Phương pháp phân tích | [[hinh-thuc-nga-tac-dong-va-phan-tich]] mục 6 – 7; [[mazel-phuong-phap-phan-tich]] |
-| II §1 – §3. Giai điệu; hoà âm; tiết tấu và tiết luật | [[hinh-thuc-nga-phuong-tien]] mục 4, 5, 6 |
-| II §4 – §8. Âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo | [[am-sac-nhip-do-cuong-do-am-vuc-va-cach-cau-tao]] |
-| III §1. Chủ đề | [[chu-de-am-nhac-truong-phai-nga]]; [[hinh-thuc-nga-doan-nhac]] mục "Chủ đề" |
-| III §2. Nguyên tắc phát triển | [[hinh-thuc-nga-nguyen-tac-phat-trien]] mục 1 – 4 |
-| IV §1 – §6. Mở đầu, trình bày, nối, giữa, tái hiện, kết | [[hinh-thuc-nga-chuc-nang-kieu-trinh-bay]] mục 1 – 2 |
-| V §1. Ngắt, cơ cấu, phần | [[hinh-thuc-nga-phan-doan-cau-truc]] mục 1 – 2 |
-| V §2. Motif, tiết nhạc, câu nhạc | [[hinh-thuc-nga-phan-doan-cau-truc]] mục 3 |
-| V §3. Cấu trúc câu giai điệu | [[hinh-thuc-nga-phan-doan-cau-truc]] mục 4 – 7 |
-| Đoạn nhạc §1 – §2. Định nghĩa, các dạng | [[hinh-thuc-nga-doan-nhac]] mục "Định nghĩa" tới "Số câu" |
-| Đoạn nhạc §3 – §4. Ứng dụng, hiện tượng đặc biệt | [[hinh-thuc-nga-doan-nhac]] "Đoạn nhạc như hình thức độc lập", "Các dạng phức tạp" |
-| Hai đoạn đơn, ba đoạn đơn | [[hinh-thuc-nga-hinh-thuc-don]] mục "Hai đoạn đơn", "Ba đoạn đơn", "Phạm vi dùng" |
-| Hai đoạn phức | [[hinh-thuc-nga-ba-phan-phuc]] mục "Hai đoạn phức" |
-| Ba đoạn phức §1 – §4. Định nghĩa, từng phần, phần phụ, những thay đổi | [[hinh-thuc-nga-ba-phan-phuc]] "Định nghĩa" tới "Mở đầu và coda" |
-| Ba đoạn phức §5 – §7. Ba – năm đoạn; trung gian; ứng dụng | [[hinh-thuc-nga-ba-phan-phuc]] các mục cùng tên, "Phạm vi dùng" |
-| Rondo §1 – §3. Định nghĩa, rondo cổ Pháp, rondo cổ điển | [[hinh-thuc-nga-rondo]] mục 1 – 4 |
-| Rondo §4. Thế kỷ XIX – đầu XX | [[hinh-thuc-nga-rondo]] mục 5 (cả rondo Nga và Xô viết) |
-| Rondo §5 – §6. Trường hợp đặc biệt, ứng dụng | [[hinh-thuc-nga-rondo]] mục 6 – 7 |
-| Biến tấu §1 – §3. Định nghĩa, nghiêm khắc, tự do | [[hinh-thuc-nga-bien-tau]] mục 1 – 10 |
-| Biến tấu §4. Hỗn hợp, kép | [[hinh-thuc-nga-bien-tau]] mục 10 "Biến tấu hỗn hợp", 11 – 12 |
-| Sonata §1 – §5. Định nghĩa, trình bày, phát triển, tái hiện, coda | [[hinh-thuc-nga-sonata]] mục 1 – 8 |
-| Sonata §6. Lãng mạn và cận đại | [[hinh-thuc-nga-sonata]] mục 10 |
-| Sonata §7. Trường hợp đặc biệt | [[hinh-thuc-nga-sonata]] mục 9 |
-| Rondo – sonata §1 – §4 | [[hinh-thuc-nga-rondo-sonata]] mục 1 – 8 |
-| Hai đoạn cổ, sonata cổ | [[hinh-thuc-nga-sonata-co-va-hai-phan-co]] mục 1 – 3 |
+## Về bản giáo trình người biên soạn dùng
+- Bản scan 275 trang Lamar gửi, đọc qua OCR; trang tên sách ghi **2006**, trang cuối ghi **Hà Nội – 2005**.
+- Số trang trong cuốn sách là **trang in**. Ở vài chỗ bản scan có trang hình nhạc chèn thêm nên số trang lệch một trang so với mục lục in; người biên soạn theo số trang in trên chính trang sách.
+- Theo lời giới thiệu, giáo trình gồm hai quyển: Quyển một cho bậc đại học (cuốn này), Quyển hai cho chuyên ngành Lý luận – Sáng tác – Chỉ huy và cao học biểu diễn.
 
 ## Các giáo trình Nga – Xô viết
-Nội dung các chương được tổng hợp từ bốn cuốn người biên soạn **đã đọc trên bản quét** (OCR) và ghi số trang:
+Giáo trình đứng trong truyền thống nhạc viện Nga – Xô viết. Phần **Đọc thêm** của mỗi chương dựa trên bốn cuốn người biên soạn **đã đọc trên bản quét** (OCR), có ghi số trang:
 
 | Sách | Ghi chú |
 |---|---|
@@ -99,8 +74,8 @@ Sau thời Xô viết, truyền thống này tiếp tục trong sách của **E.
 
 ## Cách học
 1. Đọc Phần thứ nhất trước: đó là **công cụ** để đọc mọi hình thức.
-2. Mỗi hình thức: đọc chương, rồi phân tích **trên bản nhạc thật** các tác phẩm ở trang Tư liệu phân tích, vừa nghe bản thu.
-3. Mỗi chương có mục **"Ba sách nói gì — đối chiếu"**: chỗ Sposobin, Mazel, Asafyev nói khác nhau là chỗ đáng suy nghĩ nhất.`,
+2. Mỗi hình thức: đọc chương, rồi phân tích **trên bản nhạc thật** các tác phẩm ở mục Tư liệu, vừa nghe bản thu; nhiều tác phẩm Việt Nam trong giáo trình cần tìm tổng phổ ở thư viện nhạc viện.
+3. Khi muốn đào sâu một hình thức, đọc chương tương ứng ở cột Đọc thêm: mục **"Ba sách nói gì — đối chiếu"** ở đó cho thấy chỗ Sposobin, Mazel, Asafyev nói khác nhau.`,
     refs: [NHUNG, ...RU_FORM_REFS, ['Mazel L. A., Zukkerman V. A., Анализ музыкальных произведений — М.: Музыка, 1967 (danh mục; người biên soạn chưa đọc)', ''], ['Тюлин Ю. и др., Музыкальная форма, 2-е изд. — М.: Музыка, 1974 (danh mục; người biên soạn chưa đọc)', '']],
   },
   {

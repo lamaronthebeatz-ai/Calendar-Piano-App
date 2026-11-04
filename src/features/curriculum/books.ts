@@ -1008,69 +1008,57 @@ Mỗi bài là một bài của thư viện Lý thuyết (giữ nguyên đườn
   {
     id: 'phan-tich-tac-pham',
     title: 'Phân Tích Tác Phẩm Âm Nhạc',
-    volume: 'Theo khung giáo trình nhạc viện',
-    subtitle: 'Hai phần như giáo trình nhạc viện Việt Nam — nguyên tắc phân tích (phương tiện diễn tả, chủ đề, chức năng các phần, sự phân chia) và các hình thức từ đoạn nhạc tới sonata cổ — nội dung tổng hợp từ các giáo trình Nga – Xô viết, mỗi phần có tư liệu phân tích.',
+    volume: 'Theo giáo trình Nguyễn Thị Nhung',
+    subtitle: 'Viết lại theo giáo trình Phân tích tác phẩm âm nhạc (Quyển 1 – bậc đại học) của PGS. TS Nguyễn Thị Nhung, Nhạc viện Hà Nội: nguyên tắc phân tích và mười hình thức, từ đoạn nhạc tới sonata cổ, với phân tích mẫu và nhiều tác phẩm Việt Nam; mỗi chương có đọc thêm theo trường phái Nga – Xô viết.',
     author: 'Lamar',
     audience: 'Đã học Nhạc Lý Cơ Bản và hoà âm cơ bản',
     hue: 32,
     glyph: '𝄋',
     coverImage: analysisCover,
     preface: `
-Cuốn này đi theo **trình tự chương** của giáo trình *Phân tích tác phẩm âm nhạc* của PGS. TS **Nguyễn Thị Nhung** (Hà Nội, 2005) để bạn học song song với môn Phân tích ở nhạc viện. Người biên soạn chỉ dùng **mục lục** của giáo trình làm khung; nội dung từng chương là bài của thư viện, tổng hợp từ các giáo trình Nga – Xô viết đã đọc được: **Sposobin** (1984), **Mazel** (1979), **Asafyev** (1971), **Sokolov** (2004), có ghi số trang.
+Cuốn này viết lại giáo trình **Phân tích tác phẩm âm nhạc** (Quyển 1 – bậc đại học) của PGS. TS **Nguyễn Thị Nhung** — giáo trình đang dùng ở Nhạc viện Hà Nội (Trung tâm Thông tin – Thư viện Âm nhạc, 2006). Mỗi chương tương ứng một chương giáo trình: định nghĩa, phân loại, ví dụ và phân tích mẫu được trình bày lại bằng lời người biên soạn, có **số trang** để mở sách gốc đối chiếu. Giáo trình còn bản quyền nên cuốn sách không chép nguyên văn; muốn đọc trọn văn bản, bạn tìm sách in ở thư viện nhạc viện.
 
-So với cuốn *Hình Thức Âm Nhạc* (trường phái Nga – Xô viết), cuốn này gọn hơn, theo đúng chương trình môn học, và thêm hai chương còn thiếu: **âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo** và **chủ đề âm nhạc**. Cuối mỗi phần có **tư liệu phân tích**: các bài phân tích tác phẩm sẵn có trong thư viện.
+Giữ đúng tinh thần giáo trình, các hình thức châu Âu được đặt cạnh **tác phẩm Việt Nam** — của Hoàng Việt, Nguyễn Văn Nam, Huy Du, Vĩnh Cát, Trần Tất Toại, Doãn Nho, Nguyễn Xinh và nhiều tác giả khác.
 
-Bảng đối chiếu chương với giáo trình, và danh mục các sách Liên Xô (đã đọc / chưa đọc), ở chương mở đầu.
+Cuối mỗi chương, người biên soạn thêm **Tư liệu trong thư viện** (bài phân tích tác phẩm sẵn có) và **Đọc thêm** theo các giáo trình Nga – Xô viết đã đọc được (Sposobin, Mazel, Asafyev, Sokolov). Bảng đối chiếu ở chương mở đầu.
 `,
     parts: [
-      { title: 'Phần thứ nhất — I. Âm nhạc và phương pháp phân tích', intro: 'Tính chất đặc biệt của nghệ thuật âm nhạc; nội dung và hình thức; phương pháp phân tích tổng thể.', chapters: [
-        { slug: 'phan-tich-tac-pham-am-nhac-lo-trinh', focus: 'Khung giáo trình, bảng đối chiếu, các sách Liên Xô.' },
-        { slug: 'hinh-thuc-nga-khai-niem', focus: 'Âm nhạc là nghệ thuật thời gian; nội dung và hình thức.' },
-        { slug: 'hinh-thuc-nga-tac-dong-va-phan-tich', focus: 'Nguyên tắc tác động nghệ thuật; các bước phân tích.' },
-        { slug: 'mazel-phuong-phap-phan-tich', focus: 'Phân tích tổng thể theo Mazel.' },
-      ], exercises: ['Nghe một tác phẩm ngắn hai lần: lần đầu ghi cảm nhận, lần sau ghi những phương tiện tạo ra cảm nhận ấy.'] },
-      { title: 'II. Những phương tiện diễn tả cơ bản', intro: 'Giai điệu, hoà âm, tiết tấu và tiết luật; âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo.', chapters: [
-        { slug: 'hinh-thuc-nga-phuong-tien', focus: '§1 – §3: giai điệu, hoà âm, tiết tấu và tiết luật.' },
-        { slug: 'am-sac-nhip-do-cuong-do-am-vuc-va-cach-cau-tao', focus: '§4 – §8: âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo.' },
-        { slug: 'mazel-giai-dieu-va-tiet-tau', focus: 'Giai điệu và tiết tấu theo Mazel — đọc thêm.' },
-      ], exercises: ['Lập bảng năm cột (âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo) cho một chương chậm sonata của Mozart.', 'Đánh dấu mọi chỗ đổi cách cấu tạo trong một nocturne của Chopin; chỗ nào trùng đầu một cấu trúc mới?'] },
-      { title: 'III – V. Chủ đề, chức năng và sự phân chia', intro: 'Chủ đề và nguyên tắc phát triển; chức năng mở đầu, trình bày, nối, giữa, tái hiện, kết; ngắt, cơ cấu, motif, tiết nhạc, câu nhạc.', chapters: [
-        { slug: 'chu-de-am-nhac-truong-phai-nga', focus: 'III §1: chủ đề, chất liệu chủ đề.' },
-        { slug: 'hinh-thuc-nga-nguyen-tac-phat-trien', focus: 'III §2: lặp lại, biến tấu, phát triển, tương phản.' },
-        { slug: 'hinh-thuc-nga-chuc-nang-kieu-trinh-bay', focus: 'IV: chức năng từng phần.' },
-        { slug: 'hinh-thuc-nga-phan-doan-cau-truc', focus: 'V: ngắt, cơ cấu, phần; motif, tiết nhạc, câu nhạc.' },
-      ], exercises: ['Chia 16 ô đầu một sonata của Mozart thành motif, tiết, câu; đánh dấu các chỗ ngắt.', 'Ghi chức năng (trình bày, nối, giữa, tái hiện, kết) của từng phần trong một bài của Album cho tuổi trẻ (Schumann).'], },
-      { title: 'Phần thứ hai — I – V. Các hình thức nhỏ và ba đoạn phức', intro: 'Đoạn nhạc, hai đoạn đơn, ba đoạn đơn, hai đoạn phức, ba đoạn phức. Tư liệu phân tích: Prelude Op. 28 số 4 và số 7 của Chopin (đoạn nhạc); Minuet Sol trưởng, Nocturne Op. 9 số 2 (hai đoạn); Träumerei, Kỵ sĩ hoang dã, Clair de lune (ba đoạn); Menuetto Op. 2 số 1 của Beethoven (ba đoạn phức có trio).', chapters: [
-        { slug: 'hinh-thuc-nga-doan-nhac', focus: 'I. Đoạn nhạc: định nghĩa, các dạng, hiện tượng đặc biệt.' },
-        { slug: 'hinh-thuc-nga-hinh-thuc-don', focus: 'II – III. Hai đoạn đơn, ba đoạn đơn.' },
-        { slug: 'hinh-thuc-nga-ba-phan-phuc', focus: 'IV – V. Hai đoạn phức, ba đoạn phức, ba – năm đoạn, hình thức trung gian.' },
+      { title: 'Mở đầu', intro: 'Giáo trình, cách dùng cuốn sách, các sách Liên Xô.', chapters: [
+        { slug: 'phan-tich-tac-pham-am-nhac-lo-trinh', focus: 'Bảng chương ↔ giáo trình ↔ đọc thêm.' },
+      ], exercises: [] },
+      { title: 'Phần thứ nhất — Nguyên tắc phân tích tác phẩm âm nhạc', intro: 'Âm nhạc và phương pháp phân tích; tám phương pháp diễn tả; chủ đề và nguyên tắc phát triển; chức năng từng phần; sự phân chia.', chapters: [
+        { slug: 'ptam-am-nhac-va-phuong-phap-phan-tich', focus: 'I. Tính chất đặc biệt của âm nhạc, phương pháp phân tích.' },
+        { slug: 'ptam-phuong-phap-dien-ta-co-ban', focus: 'II. Giai điệu, hoà âm, tiết tấu – tiết luật, âm sắc, nhịp độ, cường độ, âm vực, cách cấu tạo.' },
+        { slug: 'ptam-chu-de-va-nguyen-tac-phat-trien', focus: 'III. Chủ đề âm nhạc; nhắc lại, đổi mới âm điệu, tái hiện.' },
+        { slug: 'ptam-chuc-nang-tung-phan', focus: 'IV. Mở đầu, trình bày, nối tiếp, giữa, tái hiện, kết.' },
+        { slug: 'ptam-su-phan-chia', focus: 'V. Ngắt, cơ cấu, phần; motif, tiết, câu; cấu trúc câu giai điệu.' },
+      ], exercises: ['Lập bảng tám phương pháp diễn tả cho 8 ô đầu chương I Appassionata.', 'Tìm ba hạt nhân trong chủ đề 1 chương I Giao hưởng số 4 của Brahms.', 'Ghi cấu trúc câu giai điệu (chu kỳ, tổng hợp, chia nhỏ) cho ba bài trong Album cho tuổi trẻ của Schumann.'] },
+      { title: 'Phần thứ hai — I – V. Đoạn nhạc và các hình thức đơn, phức', intro: 'Đoạn nhạc; hai đoạn đơn; ba đoạn đơn; hai đoạn phức; ba đoạn phức.', chapters: [
+        { slug: 'ptam-doan-nhac', focus: 'I. Đoạn nhạc.' },
+        { slug: 'ptam-hai-doan-don', focus: 'II. Hai đoạn đơn.' },
+        { slug: 'ptam-ba-doan-don', focus: 'III. Ba đoạn đơn.' },
+        { slug: 'ptam-hai-doan-phuc', focus: 'IV. Hai đoạn phức.' },
+        { slug: 'ptam-ba-doan-phuc', focus: 'V. Ba đoạn phức.' },
         { slug: 'phan-tich-prelude-la-truong-op28-so7', focus: 'Tư liệu: đoạn nhạc.' },
-        { slug: 'phan-tich-prelude-mi-thu-op28-so4', focus: 'Tư liệu: đoạn nhạc.' },
         { slug: 'phan-tich-minuet-sol-truong', focus: 'Tư liệu: hai đoạn.' },
-        { slug: 'phan-tich-nocturne-op9-so2', focus: 'Tư liệu: hai đoạn có tái hiện.' },
-        { slug: 'phan-tich-traumerei', focus: 'Tư liệu: ba đoạn đơn.' },
         { slug: 'phan-tich-wilder-reiter', focus: 'Tư liệu: ba đoạn đơn.' },
-        { slug: 'phan-tich-clair-de-lune', focus: 'Tư liệu: ba đoạn.' },
         { slug: 'phan-tich-menuetto-op2-so1', focus: 'Tư liệu: ba đoạn phức có trio.' },
-      ], exercises: ['Phân tích ba bài trong Album cho tuổi trẻ của Tchaikovsky: đoạn nhạc, hai đoạn hay ba đoạn?', 'Vẽ sơ đồ một minuet có trio, ghi số ô và giọng từng phần.'] },
-      { title: 'VI – VII. Rondo và biến tấu', intro: 'Rondo cổ Pháp, rondo cổ điển, rondo thế kỷ XIX – XX; biến tấu nghiêm khắc, tự do, hỗn hợp và kép. Tư liệu: Für Elise, chương II Pathétique, Rondo alla turca; Canon Pachelbel, chương I Sonata Op. 26 của Beethoven (biến tấu nghiêm).', chapters: [
-        { slug: 'hinh-thuc-nga-rondo', focus: 'VI. Rondo.' },
-        { slug: 'hinh-thuc-nga-bien-tau', focus: 'VII. Biến tấu.' },
-        { slug: 'phan-tich-fur-elise', focus: 'Tư liệu: rondo.' },
+      ], exercises: ['Phân tích Ngàn tượng Phật của Nguyễn Văn Nam theo sơ đồ a – a1 – a2 – coda.', 'Phân tích Hạnh phúc tuổi xuân của Vĩnh Cát (hai đoạn đơn tái hiện).', 'Phân tích Dòng nước trong của Trần Tất Toại: điệu thức năm âm từng phần.', 'Vẽ sơ đồ Miền Nam quê hương ta ơi của Huy Du (ba đoạn phức).'] },
+      { title: 'Phần thứ hai — VI – VII. Rondo và biến tấu', intro: 'Rondo cổ Pháp, cổ điển, thế kỷ XIX – XX, trường hợp đặc biệt; biến tấu nghiêm khắc, tự do, hỗn hợp, kép.', chapters: [
+        { slug: 'ptam-rondo', focus: 'VI. Rondo.' },
+        { slug: 'ptam-bien-tau', focus: 'VII. Biến tấu.' },
         { slug: 'phan-tich-pathetique-chuong-2', focus: 'Tư liệu: rondo.' },
-        { slug: 'phan-tich-rondo-alla-turca', focus: 'Tư liệu: rondo.' },
-        { slug: 'phan-tich-canon-pachelbel', focus: 'Tư liệu: biến tấu trên bè trầm lặp lại.' },
-        { slug: 'phan-tich-bien-tau-op26', focus: 'Tư liệu: biến tấu nghiêm.' },
-      ], exercises: ['Vẽ sơ đồ Rondo alla turca: điệp khúc, các đoạn chen, giọng.', 'Chọn một bộ biến tấu của Mozart: ghi cái gì giữ nguyên, cái gì đổi trong từng biến tấu.'] },
-      { title: 'VIII – X. Sonata, rondo – sonata, hai đoạn cổ và sonata cổ', intro: 'Sonata: trình bày, phát triển, tái hiện, coda, sonata lãng mạn và cận đại, các trường hợp đặc biệt; rondo – sonata; hai đoạn đơn cổ và sonata cổ. Tư liệu: Sonata K. 545, Sonatina Op. 36 số 1 của Clementi, chương I Ánh trăng; chương III Pathétique (rondo – sonata).', chapters: [
-        { slug: 'hinh-thuc-nga-sonata', focus: 'VIII. Sonata.' },
-        { slug: 'hinh-thuc-nga-rondo-sonata', focus: 'IX. Rondo – sonata.' },
-        { slug: 'hinh-thuc-nga-sonata-co-va-hai-phan-co', focus: 'X. Hai đoạn cổ và sonata cổ.' },
+        { slug: 'phan-tich-fur-elise', focus: 'Tư liệu: rondo.' },
+        { slug: 'phan-tich-bien-tau-op26', focus: 'Tư liệu: biến tấu trang sức.' },
+      ], exercises: ['Vẽ sơ đồ điệu tính chương kết Concerto violin Mi trưởng của Bach.', 'So sánh chủ đề và biến khúc VI chương III Sonata số 30 của Beethoven.', 'Lập sơ đồ chương kết Giao hưởng số 3 của Beethoven, đánh dấu chỗ chuyển từ nghiêm khắc sang tự do.'] },
+      { title: 'Phần thứ hai — VIII – X. Sonata, rondo – sonata, hai đoạn cổ và sonata cổ', intro: 'Sonata cổ điển, lãng mạn, cận đại, trường hợp đặc biệt và sonata Việt Nam; rondo – sonata; hai đoạn cổ và sonata cổ.', chapters: [
+        { slug: 'ptam-sonata', focus: 'VIII. Sonata.' },
+        { slug: 'ptam-rondo-sonata', focus: 'IX. Rondo – sonata.' },
+        { slug: 'ptam-hai-doan-co-va-sonata-co', focus: 'X. Hai đoạn cổ và sonata cổ.' },
         { slug: 'phan-tich-sonata-k545', focus: 'Tư liệu: sonata.' },
-        { slug: 'phan-tich-sonatina-clementi-op36-1', focus: 'Tư liệu: sonatina.' },
-        { slug: 'phan-tich-anh-trang-chuong-1', focus: 'Tư liệu: trường hợp đặc biệt.' },
+        { slug: 'phan-tich-anh-trang-chuong-1', focus: 'Tư liệu: chương chậm mở đầu.' },
         { slug: 'phan-tich-pathetique-chuong-3', focus: 'Tư liệu: rondo – sonata.' },
-      ], exercises: ['Phân tích chương I một sonata của Haydn: ranh giới các phần, giọng, chất liệu chủ đề.', 'So sánh một sonata cổ của D. Scarlatti với chương I K. 545: tái hiện bắt đầu từ đâu?'] },
+      ], exercises: ['Phân tích phần trình bày chương I Waldstein: ba giai đoạn nối tiếp, chủ đề hai, kết phần trình bày 38 ô.', 'Lập dàn ý điệu tính phần phát triển chương I Appassionata.', 'So sánh một sonata của Scarlatti với chương I K. 545: tái hiện bắt đầu từ đâu?'] },
     ],
   },
   {
