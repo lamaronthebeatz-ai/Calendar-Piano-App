@@ -8,3 +8,13 @@
 .rs-preview { min-height: 30svh; padding: 16px 20px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
 .rs-note { padding: 12px 14px; border-radius: 14px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
 .rs-note blockquote { font-family: var(--font-serif, Georgia, serif); font-size: 15px; line-height: 1.6; color: var(--color-ink); border-left: 2px solid var(--color-gold); padding-left: 10px; }
+
+/* research tools row (ResearchTools.tsx) on the Theory and Musicology home pages */
+.rt { display: grid; gap: 10px; }
+.rt-list { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+@media (max-width: 640px) { .rt-list { grid-template-columns: 1fr 1fr; } }
+.rt-card { display: flex; align-items: flex-start; gap: 10px; height: 100%; padding: 12px 14px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); transition: border-color 0.2s; }
+.rt-card:hover { border-color: color-mix(in oklch, var(--color-gold) 55%, transparent); }
+.rt-icon { flex-shrink: 0; margin-top: 2px; color: var(--color-gold); }
+.rt-title { display: block; font-size: 14px; font-weight: 600; color: var(--color-ink); }
+.rt-text { display: block; margin-top: 2px; font-size: 12px; line-height: 1.4; color: var(--color-ink-faint); }

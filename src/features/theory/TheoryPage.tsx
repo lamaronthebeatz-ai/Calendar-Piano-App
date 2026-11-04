@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
 import '../terms/terms.css'
 import { SchoolViews } from '../terms/SchoolViews'
+import { ResearchTools } from '../research/ResearchTools'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate, useNavigationType, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -461,6 +462,7 @@ function Index() {
       ) : (
         <>
           <ContinueRow />
+          <ResearchTools />
           <StaffRule />
           <section className="space-y-3">
             <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>

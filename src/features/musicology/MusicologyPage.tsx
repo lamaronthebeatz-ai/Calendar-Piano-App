@@ -16,6 +16,7 @@ import { MusicMap } from './MusicMap'
 import { PLACES } from './places'
 import { Sky } from './Sky'
 import { Sky3D } from './Sky3D'
+import { ResearchTools } from '../research/ResearchTools'
 import { neighbours, partView, skyOf, type Layout } from './constellation'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 
@@ -195,6 +196,8 @@ function MapIndex() {
           </span>
           <ArrowUpRightIcon width={18} height={18} className="shrink-0 text-[var(--color-ink-faint)] transition-colors group-hover:text-[var(--color-gold)]" />
         </Link>
+
+        <ResearchTools />
 
         <QuoteBanner />
 

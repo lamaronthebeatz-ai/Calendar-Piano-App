@@ -126,3 +126,10 @@ test('phả hệ và độ tin cậy: cây thầy – trò, dòng truyền, nhã
   await expect(page.getByText('Liên kết nguồn')).toBeVisible()
   await expect(page.locator('.hl-grid > div')).toHaveCount(5)
 })
+
+test('công cụ nghiên cứu vào được từ trang chủ Lý thuyết và Âm nhạc học (điện thoại không có ngăn kéo)', async ({ page }) => {
+  for (const url of ['/#/theory', '/#/musicology']) {
+    await page.goto(url)
+    for (const to of ['/explore', '/sources', '/terms', '/research', '/notes']) await expect(page.locator(`.rt a[href="#${to}"]`)).toBeVisible()
+  }
+})
