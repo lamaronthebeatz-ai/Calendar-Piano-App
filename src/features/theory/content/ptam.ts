@@ -48,6 +48,7 @@ Cuối mỗi chương có thêm hai mục của người biên soạn: **Tư li�
 ## Về bản giáo trình người biên soạn dùng
 - Bản scan 275 trang Lamar gửi, đọc qua OCR; trang tên sách ghi **2006**, trang cuối ghi **Hà Nội – 2005**.
 - Số trang trong cuốn sách là **trang in**. Ở vài chỗ bản scan có trang hình nhạc chèn thêm nên số trang lệch một trang so với mục lục in; người biên soạn theo số trang in trên chính trang sách.
+- **Ví dụ nhạc**: các thí dụ trích tác phẩm phạm vi công cộng (Beethoven, Chopin) được **khắc lại bằng LilyPond** từ dữ liệu Humdrum (ấn bản Durand 1915 cho sonata Beethoven), đúng tác phẩm và đúng các ô nhịp như thí dụ của giáo trình — không chép từ bản scan. Thí dụ trích tác phẩm Việt Nam còn bản quyền nên không in lại; bạn xem trong sách gốc.
 - Theo lời giới thiệu, giáo trình gồm hai quyển: Quyển một cho bậc đại học (cuốn này), Quyển hai cho chuyên ngành Lý luận – Sáng tác – Chỉ huy và cao học biểu diễn.
 
 ## Các giáo trình Nga – Xô viết

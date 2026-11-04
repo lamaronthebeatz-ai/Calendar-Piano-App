@@ -269,6 +269,10 @@ Dẫn sự phát triển ra khỏi vùng chủ đề chính, chuẩn bị điệ
 
 Ví dụ: nối tiếp chương I Sonata số 21 (*Waldstein*) gồm **21 ô**: 4 ô nhắc lại thay đổi 4 ô đầu chủ đề chính; 5 ô chuyển điệu căng thẳng; 12 ô trên âm trì tục bậc át của điệu tính chủ đề hai — dần giảm tích cực tiết tấu và đưa vào những chi tiết sẽ tham gia chủ đề hai [^nguyen-thi-nhung-2005, tr. 206].
 
+::ex ptam-waldstein-chu-de-chinh | Beethoven, Sonata số 21 *Waldstein*, chương I, ô 1 – 13 — chủ đề chính, kết "mở" (bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
+::ex ptam-waldstein-noi-tiep | *Waldstein*, chương I, ô 14 – 34 — nối tiếp ba giai đoạn: 4 + 5 + 12 ô, cuối trên âm trì tục bậc át của Mi trưởng (giáo trình, thí dụ 112; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 Nối tiếp thường dùng chất liệu chủ đề chính, ít khi chủ đề hai; có khi chất liệu tương đối mới (chương I Sonata số 3, ô 13 – 26: passage và âm điệu *fanfare*, thiếu giai đoạn chuyển điệu) [^nguyen-thi-nhung-2005, tr. 209]. Các biến thể [^nguyen-thi-nhung-2005, tr. 209 – 210]:
 - **Nhấn chuyển sang át** — chương I Sonata số 10 Sol trưởng (ô 9 – 25): giai đoạn đầu ô 9 – 14, chuyển sang Rê trưởng ô 15 – 18, giai đoạn ba ô 19 – 25 còn đẩy tới **La trưởng (át kép)**; vì vậy chủ đề hai ở Rê trưởng giải quyết được sự bất ổn tích tụ.
 - **Rút ngắn giai đoạn chuyển điệu** — chương I Sonata số 23: chỉ hai hợp âm trong một ô (ô 23).
@@ -280,6 +284,8 @@ Nối tiếp thường dùng chất liệu chủ đề chính, ít khi chủ đ�
 Thời điểm trung tâm của phần trình bày: xuất hiện **tương phản hình tượng – chủ đề cơ bản**, trở thành nhân tố hành động chính; là **bước nhảy chất lượng**, không chỉ đổi cách cấu tạo hay điệu tính. Tính sinh động của chủ đề chính và sự bất ổn của nối tiếp tìm được điểm tựa ở chủ đề hai; nó đem lại cân bằng cho phần trình bày [^nguyen-thi-nhung-2005, tr. 210 – 211].
 
 Ví dụ: chủ đề hai chương I *Waldstein* — đồng quê, sáng, trần thuật **kiểu hợp xướng**, tiết tấu cân bằng, cấu trúc cân phương — đối lập chủ đề chính; nhưng đồng thời phát triển bước đi xuống ở ô 4 và ô 8 của chủ đề chính trong dàn ý mới, giảm tính tích cực [^nguyen-thi-nhung-2005, tr. 211].
+
+::ex ptam-waldstein-chu-de-hai | *Waldstein*, chương I, ô 35 – 42 — chủ đề hai kiểu hợp xướng, Mi trưởng (giáo trình, thí dụ 113; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
 
 Cấu trúc: luôn ở **điệu tính phụ** tới hết, rất ít chuyển điệu [^nguyen-thi-nhung-2005, tr. 212]:
 - đoạn nhạc (chương I Sonata số 1, 2, 5, 14, 18, 21, 23 của Beethoven); hai đoạn đơn (chương I Sonata số 10); ba đoạn đơn (hiếm ở cổ điển, phổ biến ở lãng mạn — chương I Giao hưởng số 6 của Tchaikovsky);

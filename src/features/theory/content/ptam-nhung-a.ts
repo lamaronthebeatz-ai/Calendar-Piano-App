@@ -70,6 +70,8 @@ Ví dụ của giáo trình: nhiều bài ca cách mạng, hành khúc trang ngh
 
 Tám ô đầu chương I *Appassionata* (Beethoven, Op. 57) là ví dụ cả hệ thống cùng làm việc: giai điệu đi từ âm vực trầm, tối lên âm vực cao, sáng trên hợp âm rải Fa thứ; hoà âm đi từ ổn định (chủ) sang không ổn định (ô 3 – 4); cường độ tăng dần; cách cấu tạo từ hai tay cách nhau hai quãng tám (u ám) chuyển sang nhiều bè chủ điệu ở cuối ô 4; tiết tấu từ nốt ngắn, bất ổn chuyển tới nốt dài sau đỉnh căng thẳng [^nguyen-thi-nhung-2005, tr. 15 – 16].
 
+::ex ptam-appassionata-1-8 | Beethoven, Sonata Op. 57 *Appassionata*, chương I, ô 1 – 8 (giáo trình, thí dụ 1; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 ## §1. Giai điệu
 Những mặt quan trọng nhất của giai điệu: tương quan **cao – thấp**, **dài – ngắn** của âm thanh, và quan hệ **hoà âm – điệu tính**; có khi giai điệu còn mang dấu hiệu **thể loại** [^nguyen-thi-nhung-2005, tr. 16].
 
@@ -82,6 +84,10 @@ Những mặt quan trọng nhất của giai điệu: tương quan **cao – th�
 - Giữa các **chương** của liên khúc sonata, giao hưởng: tương phản giữa chương I và II là bước nhảy; nối liền chương (*attacca*) là một cách điền đầy (Sonata piano số 23, Giao hưởng số 5 của Beethoven).
 
 **Làn sóng giai điệu và cao trào.** Lên – xuống chia giai điệu thành những **làn sóng**, ngắn vài âm hay dài nhiều ô [^nguyen-thi-nhung-2005, tr. 19]. Điểm cao nhất của làn sóng là **cao điểm**; giai điệu có thể có nhiều cao điểm, cao điểm quan trọng nhất là **cao trào chính**, thường rơi vào khoảng **3/4 tác phẩm** [^nguyen-thi-nhung-2005, tr. 19]. Ví dụ: Prelude số 1 của Chopin (32 ô) có cao trào chính ở ô 21 — câu một 8 ô, câu hai nhắc 4 ô đầu rồi mở rộng thành 17 ô và chứa cao trào, 10 ô cuối là kết bổ sung củng cố Đô trưởng [^nguyen-thi-nhung-2005, tr. 19 – 20]. Prelude số 4 có những cao trào phụ sát cao trào chính [^nguyen-thi-nhung-2005, tr. 20].
+
+::ex ptam-chopin-prelude-1-cao-trao | Chopin, Prelude Op. 28 số 1, ô 17 – 24 — cao trào chính ở ô 21 (bản khắc từ dữ liệu Humdrum)
+
+::ex ptam-chopin-prelude-4-cao-trao | Chopin, Prelude Op. 28 số 4, ô 15 – 18 — cao trào phụ rồi cao trào chính (giáo trình, thí dụ 7; bản khắc từ dữ liệu Humdrum)
 
 **Âm điệu dân gian trong tác phẩm Việt Nam.** Giáo trình kể nhiều tác phẩm nhạc đàn lấy chủ đề từ âm điệu dân gian: *Giai điệu quê hương* của Hoàng Dương (Lý chiều chiều, Lý con sáo sang sông), *Capriccio* của Hoàng Dương (Lới lơ — Chèo), *Scherzo* cho hai đàn piano của Trần Ngọc Xương (Con gà rừng — Chèo), *Fantaisie* của Quang Hải (Lý tầm quân), *Núi* cho clarinet và piano của Phúc Linh (dân ca H'Mông), *Capriccio* của Vĩnh Bảo (âm hưởng Tây Nguyên và Con gà rừng) [^nguyen-thi-nhung-2005, tr. 20].
 
@@ -182,6 +188,8 @@ Chủ đề dài từ vài ô đến nhiều ô, tuỳ chức năng trong tác p
 
 **Ví dụ phân tích của giáo trình:** chủ đề 1 chương I Sonata piano số 10 (Sol trưởng) của Beethoven. Hạt nhân mở bằng bước nhảy quãng 8, rồi quãng 4 đi xuống và quãng 2 thứ ngược hướng "điền đầy"; dấu lặng ở phách nhẹ trước bước nhảy làm nét mềm mại. Ô 2 nhắc nguyên hạt nhân; ô 3 – 4 hoạ lại cao một quãng 2 trên hoà âm bậc II, tạo tương phản màu sắc và căng thẳng dẫn tới cao trào cuối ô 4 — quãng rộng nhất, "tiếng vọng" mở rộng của bước nhảy quãng 8; sau đó giai điệu đi xuống, kết trọn ở Sol trưởng [^nguyen-thi-nhung-2005, tr. 43 – 44].
 
+::ex ptam-sonata10-1-chu-de | Beethoven, Sonata số 10 Op. 14 số 2, chương I, chủ đề 1 (giáo trình, thí dụ 27; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 ### Chủ đề đồng nhất và chủ đề tương phản
 - **Chủ đề đồng nhất**: xây từ một hay vài hạt nhân giống hoặc gần nhau về tính chất; thường trữ tình, đồng quê, ít xáo động (chương chậm giao hưởng Beethoven, Tchaikovsky). Nhưng cũng có chủ đề đồng nhất mang ý nghĩa tương phản — chủ đề chính chương I Sonata Si giáng thứ Op. 35 của Chopin. Vì vậy phải xét toàn bộ phương tiện, kể cả thể loại, chứ không chỉ thành phần hạt nhân [^nguyen-thi-nhung-2005, tr. 44].
 - **Chủ đề tương phản**: gồm vài hạt nhân tương phản; chứa khả năng phát triển mạnh, xung đột kịch tính; hay gặp ở chương I sonata, giao hưởng, overture. Có khi tính xung đột của nó dẫn dắt cả chương, cả tác phẩm — chủ đề chương I *Appassionata* dẫn dắt dàn ý điệu tính của chương I, chương III và toàn tác phẩm [^nguyen-thi-nhung-2005, tr. 44].
@@ -226,6 +234,8 @@ Nguyên tắc tạo dạng hình thức, dùng ở cả hình thức đơn và p
 | **Tương phản đối chiếu (so sánh)** | Đặt trực tiếp hai phần hoàn thiện cạnh nhau | 10 ô đầu chương I Sonata số 30 của Beethoven [^nguyen-thi-nhung-2005, tr. 57] |
 | **Tương phản bổ sung** | Hai chủ đề, hai phần bổ sung nhau như hai mặt của một tâm trạng | Chủ đề 1 và 2 chương I Giao hưởng "Bỏ dở" của Schubert [^nguyen-thi-nhung-2005, tr. 58] |
 | **Tương phản cùng nguồn** | Chủ đề này sinh ra từ chủ đề kia | Chủ đề 2 chương I Sonata số 1 của Beethoven sinh từ hạt nhân thứ hai của chủ đề 1, trên lối giai điệu đi xuống [^nguyen-thi-nhung-2005, tr. 58] |
+
+::ex ptam-sonata30-1-doi-chieu | Beethoven, Sonata số 30 Op. 109, chương I, ô 1 – 12 — tương phản đối chiếu giữa ô 8 và ô 9 (bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
 
 **c. Tổng hợp** chất liệu mới với phát triển chất liệu cũ — ví dụ tái hiện chương III Concerto violin của Mendelssohn: chủ đề chính trở lại cùng lúc với chất liệu mới [^nguyen-thi-nhung-2005, tr. 58].
 
@@ -351,12 +361,16 @@ Giáo trình liệt kê [^nguyen-thi-nhung-2005, tr. 67 – 71]:
 - chuyển động tiết tấu mới (hay gặp trong tác phẩm phức điệu);
 - đổi nhịp độ, điệu tính, âm sắc, âm vực, cường độ, cách cấu tạo.
 
+::ex ptam-chopin-prelude-7 | Chopin, Prelude Op. 28 số 7 — phân chia nhờ đổi hoà âm và nốt trầm ở phách mạnh (giáo trình, thí dụ 40; bản khắc từ dữ liệu Humdrum)
+
 Các dấu hiệu **không ngang nhau**: nốt dài và đổi hoà âm chia rõ hơn đổi cường độ hay cách cấu tạo; thực tế thường nhiều dấu hiệu cùng lúc [^nguyen-thi-nhung-2005, tr. 71]. **Tính chu kỳ** của giai điệu và tiết tấu — nhắc lại các cơ cấu — là nhân tố chính xác nhất cho phân chia rõ ràng [^nguyen-thi-nhung-2005, tr. 71].
 
 ## §2. Motif, tiết nhạc, câu nhạc
 Chia tới cơ cấu nhỏ nhất mà còn giữ ý nghĩa tư duy độc lập thì đó là chất liệu cấu trúc cơ bản [^nguyen-thi-nhung-2005, tr. 72].
 
 **Motif** là cơ cấu nhỏ nhất có tính hoàn thiện của tư duy, một nhóm âm **bao quanh một phách mạnh**; có nét giai điệu, nhịp điệu hay hoà âm điển hình; là **hạt nhân cơ bản** của chủ đề và dẫn dắt sự phát triển [^nguyen-thi-nhung-2005, tr. 72 – 73] (ví dụ chương I Sonata piano số 6 của Beethoven).
+
+::ex ptam-sonata06-1-motif | Beethoven, Sonata số 6 Op. 10 số 2, chương I, ô 1 – 4 (giáo trình, thí dụ 42; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
 - Giới hạn của motif **không theo vạch nhịp**: có motif chiếm trọn ô nhịp, có motif vắt qua vạch nhịp [^nguyen-thi-nhung-2005, tr. 73].
 - Vì âm nhạc luôn hướng tới điểm tựa **phía sau** (như át giải quyết về chủ), các âm ngắn ở phách yếu thuộc về âm dài ở phách mạnh sau chúng, cùng một motif [^nguyen-thi-nhung-2005, tr. 73].
 
@@ -371,11 +385,17 @@ Các loại motif theo quan hệ với phách mạnh [^nguyen-thi-nhung-2005, tr
 | | **Amphibrach** (nhẹ – mạnh – nhẹ) | | Chương II Sonata violin – piano số 1 của Grieg |
 | 4 phách | Bốn dạng tương ứng | | — |
 
+::ex ptam-chopin-prelude-1-mo-dau | Chopin, Prelude Op. 28 số 1, ô 1 – 8 — motif Khôrê (giáo trình, thí dụ 43; bản khắc từ dữ liệu Humdrum)
+
+::ex ptam-sonata10-3-motif | Beethoven, Sonata số 10, chương III, ô 1 – 4 — motif trong nhịp ba (giáo trình, thí dụ 46; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 Chủ đề chính chương I Giao hưởng số 3 của Brahms mở bằng motif Khôrê rồi sang Iambơ, nâng ý nghĩa biểu hiện; chuyển từ dạng motif này sang dạng khác là cách tránh sự đều đặn của nhịp điệu [^nguyen-thi-nhung-2005, tr. 74]. Khi một motif chia được nhỏ hơn nữa, phần nhỏ ấy gọi là **motif phụ** (chương I Sonata Op. 35 của Chopin) [^nguyen-thi-nhung-2005, tr. 77].
 
 **Tiết nhạc** gồm vài motif (ít nhất hai), độc lập và hoàn thiện hơn motif, âm điệu phong phú hơn; có tiết gồm các motif giống nhau, có tiết gồm motif khác nhau, có tiết không chia thành motif được [^nguyen-thi-nhung-2005, tr. 77] (bài số 9 *Album cho tuổi trẻ* của Schumann).
 
 **Câu nhạc** gồm vài tiết (ít nhất hai), biểu hiện tư duy **tương đối hoàn thiện**, tạo điểm chia cắt trong đoạn nhạc. Như ngữ điệu câu nói, câu nhạc có dấu hiệu hoàn thiện là **tiến hành kết câu** [^nguyen-thi-nhung-2005, tr. 78]. Câu một của đoạn nhạc cổ điển điển hình đi từ chủ tới át (chương II Sonata số 7 của Beethoven); câu có thể kết hoàn toàn, không hoàn toàn, hay ở điệu tính phụ [^nguyen-thi-nhung-2005, tr. 78]. Cũng có câu không chia thành tiết [^nguyen-thi-nhung-2005, tr. 79].
+
+::ex ptam-sonata07-2-cau | Beethoven, Sonata số 7 Op. 10 số 3, chương II (Largo e mesto), ô 1 – 8 — câu một đi từ chủ tới át (giáo trình, thí dụ 51; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
 
 ## §3. Cấu trúc câu giai điệu
 Quan hệ điển hình giữa các motif, tiết trong câu và đoạn — số lượng, sự nhắc lại có chu kỳ, khuôn khổ — gọi là **cấu trúc câu giai điệu** [^nguyen-thi-nhung-2005, tr. 79]. Ba dạng:
@@ -386,7 +406,11 @@ Quan hệ điển hình giữa các motif, tiết trong câu và đoạn — s�
 
 **c. Chia nhỏ** — ngược lại: một cơ cấu lớn không chia được, tiếp theo là hai hay nhiều cơ cấu nhỏ hơn giống hoặc gần giống nhau (chương III Sonata piano số 9 của Beethoven; Prelude Op. 11 số 2 của Scriabin) [^nguyen-thi-nhung-2005, tr. 83].
 
+::ex ptam-sonata09-3-chia-nho | Beethoven, Sonata số 9 Op. 14 số 1, chương III, ô 1 – 8 — 4 + 2 + 2 (giáo trình, thí dụ 57a; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 Còn gặp trình tự **tổng hợp – chia nhỏ – tổng hợp** (chương I Sonata piano số 1 của Beethoven) [^nguyen-thi-nhung-2005, tr. 84].
+
+::ex ptam-sonata01-1-tong-hop | Beethoven, Sonata số 1 Op. 2 số 1, chương I, ô 1 – 8 (giáo trình, thí dụ 58; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
 
 ::form x:2 x:2 y:4 | Tổng hợp 2 + 2 + 4: hai cơ cấu chu kỳ rồi một cơ cấu gộp
 

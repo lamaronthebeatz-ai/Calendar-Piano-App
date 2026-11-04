@@ -36,6 +36,8 @@ Các kiểu kết câu [^nguyen-thi-nhung-2005, tr. 87 – 88]:
 | Câu 1 kết ở hạ át — rất hiếm | Chủ đề 1 chương II Sonata số 17 của Beethoven |
 | Hai câu kết giống nhau | — |
 
+::ex ptam-anh-trang-1-9 | Beethoven, Sonata số 14 *Ánh trăng*, chương I, ô 1 – 9 — câu một kết ở điệu tính át (bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 Câu hai có thể nhắc nguyên câu một, chỉ đổi phần cuối để kết trọn; nhắc lại có trang sức giai điệu (8 ô đầu chương II Sonata piano số 1 của Beethoven); hoặc nhắc phần đầu câu một rồi phát triển tới cao trào của đoạn (Intermezzo Op. 116 số 2 của Brahms) [^nguyen-thi-nhung-2005, tr. 88].
 
 ### b. Đoạn nhạc cấu trúc không nhắc lại
@@ -193,6 +195,8 @@ Phần giữa **phát triển chất liệu** phần một. Dạng này dùng r�
 
 Ví dụ phân tích: Scherzo chương III Sonata piano số 3 của Beethoven — phần giữa xé lẻ chất liệu, bè dưới đi xuống khớp với motif đầu ở bè trên đi lên; hai yếu tố mô phỏng ở các âm vực khác nhau làm tăng căng thẳng và nhấn tính phức điệu sẵn có của chủ đề; ở ô 29, 31, 33 motif chính được tô màu điệu thức Phrygian [^nguyen-thi-nhung-2005, tr. 122].
 
+::ex ptam-sonata03-3-scherzo | Beethoven, Sonata số 3 Op. 2 số 3, chương III (Scherzo), ô 1 – 16 — phần một; phần giữa giáo trình phân tích theo ngay sau (bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
+
 Tác phẩm Việt Nam [^nguyen-thi-nhung-2005, tr. 122 – 124]:
 - Nhạc đàn: *Hoa thơm bướm lượn* (Phạm Văn Chừng), *Câu chuyện nhỏ* (Hoàng Đạm), một bài trong tuyển tập piano của Nguyễn Văn Thương, *Trò chơi trẻ em* (Nguyễn Văn Nam), *Dòng suối vắng* (Hoàng Cương).
 - ***Dòng suối vắng*** cho piano của Hoàng Cương, dựa ý bài hát *Suối mơ* của Văn Cao: phần a và a′ có hình móc nhanh ở tay phải như tiếng suối, giai điệu nốt trắng chấm dôi nổi lên; ở a′ đổi nhịp nên đổi trường độ nhưng cao độ gần như giữ nguyên; phần b phát triển chủ đề, luân chuyển nhịp 2/4 và 3/4.
@@ -283,7 +287,9 @@ Hình thức ba đoạn phức là **hình thức ba phần có tái hiện**: h
 
 Theo sơ đồ, ba đoạn phức gần ba đoạn đơn tương phản; mở rộng tương phản và phức tạp hoá các phần là hiện tượng của một giai đoạn lịch sử muộn hơn [^nguyen-thi-nhung-2005, tr. 135].
 
-**Lịch sử.** Hình mẫu sớm nhất ở **tổ khúc cổ**: hai điệu nhảy liền kề được gộp lại và điệu thứ nhất trở lại — Gavotte I – Gavotte II – Gavotte I, Menuet I – Menuet II – Menuet I (tổ khúc Anh Sol thứ và Rê thứ của Bach); và trong opera là **aria da capo** [^nguyen-thi-nhung-2005, tr. 135]. Ở những mẫu sớm ấy, quan hệ giữa các phần còn bề ngoài; phải đợi các **nhà cổ điển Vienna** hình thức mới hoàn thiện [^nguyen-thi-nhung-2005, tr. 136] (ví dụ: chương III Sonata piano số 9 của Beethoven).
+**Lịch sử.** Hình mẫu sớm nhất ở **tổ khúc cổ**: hai điệu nhảy liền kề được gộp lại và điệu thứ nhất trở lại — Gavotte I – Gavotte II – Gavotte I, Menuet I – Menuet II – Menuet I (tổ khúc Anh Sol thứ và Rê thứ của Bach); và trong opera là **aria da capo** [^nguyen-thi-nhung-2005, tr. 135]. Ở những mẫu sớm ấy, quan hệ giữa các phần còn bề ngoài; phải đợi các **nhà cổ điển Vienna** hình thức mới hoàn thiện [^nguyen-thi-nhung-2005, tr. 136] (ví dụ: chương III Sonata piano số 9 của Beethoven).[^nguyen-thi-nhung-2005, tr. 136] (thí dụ 90 của giáo trình: Allegretto Mi thứ, Sonata piano số 9 của Beethoven — giáo trình ghi "chương III", thực ra là chương II của Op. 14 số 1).
+
+::ex ptam-sonata09-2-menuetto | Beethoven, Sonata số 9 Op. 14 số 1, chương II (Allegretto), ô 1 – 16 (giáo trình, thí dụ 90; bản khắc từ dữ liệu Humdrum, ấn bản Durand 1915)
 
 ## §2. Cấu trúc từng phần
 **Phần thứ nhất** thống nhất chủ đề, điển hình là hai hay ba đoạn đơn phát triển; kết hoàn toàn ở điệu tính chính, tạo ngưng nghỉ sâu trước phần giữa [^nguyen-thi-nhung-2005, tr. 140]. Đôi khi là ba đoạn đơn tương phản (chương II Sonata piano số 7 của Beethoven; Nocturne *Fêtes* của Debussy; chương II một giao hưởng của Shostakovich); có khi kết ở điệu tính phụ (*Fêtes*) [^nguyen-thi-nhung-2005, tr. 140].
