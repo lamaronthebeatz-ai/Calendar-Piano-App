@@ -322,7 +322,7 @@ Tư liệu phân tích chọn từ danh sách "Материал для анал�
 Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
 
 - [[phan-tich-canon-pachelbel]] — Pachelbel, *Canon*: canon ba bè trên một bè trầm lặp — loại biến tấu trên basso ostinato (mục 4).
-- Thư viện chưa có bài phân tích riêng một bộ biến tấu cổ điển; bài tập ở trên dùng Beethoven op. 26 và Schumann op. 13 như Sposobin.
+- [[phan-tich-bien-tau-op26]] — Beethoven, Sonata Op. 26, chương 1: chủ đề và năm biến tấu nghiêm cùng 34 ô, biến tấu III minore, coda 15 ô — đọc cùng mục 7 ở trên.
 
 ## Liên kết
 - Trong bộ: [[hinh-thuc-nga-nguyen-tac-phat-trien]] (phương pháp biến tấu), [[hinh-thuc-nga-doan-nhac]] (dân ca Nga, cấu trúc lời ca), [[hinh-thuc-nga-rondo]], [[hinh-thuc-nga-sonata]], [[hinh-thuc-nga-chu-ky]] (tổ khúc), [[hinh-thuc-nga-hon-hop-va-ghep-tuong-phan]] (Kamarinskaya và hình thức hỗn hợp), [[hinh-thuc-nga-phuc-dieu]] (passacaglia, canon, fugue).
@@ -805,7 +805,8 @@ Tư liệu phân tích chọn từ danh sách "Материал для анал�
 ## Tư liệu phân tích trong thư viện
 Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
 
-- Thư viện chưa có bài phân tích riêng một rondo – sonata. So sánh sơ đồ rondo đơn ở [[phan-tich-rondo-alla-turca]] với các finale Beethoven trong bài tập ở trên.
+- [[phan-tich-pathetique-chuong-3]] — Beethoven, Sonata *Pathétique*, chương 3: A B A – C – A B A + coda; B ở Mi giáng trưởng rồi Đô trưởng, episode giữa ở La giáng trưởng.
+- So sánh với rondo đơn ở chương 2 của cùng sonata: [[phan-tich-pathetique-chuong-2]].
 
 ## Liên kết
 - Trong bộ: [[hinh-thuc-nga-rondo]], [[hinh-thuc-nga-sonata]] (phần chính, phần nối, phần phụ, tái hiện gương, coda), [[hinh-thuc-nga-ba-phan-phuc]] (trio), [[hinh-thuc-nga-bien-tau]], [[hinh-thuc-nga-chu-ky]] (vai trò finale), [[hinh-thuc-nga-hon-hop-va-ghep-tuong-phan]].

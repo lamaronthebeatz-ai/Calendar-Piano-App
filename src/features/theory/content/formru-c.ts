@@ -1002,7 +1002,7 @@ Từ "Tư liệu để phân tích" của Sposobin (cuối ch. V và phụ lục
 Các bài phân tích tác phẩm của thư viện dùng hình thức này (xem cả cuốn [[phan-tich-tac-pham-am-nhac-lo-trinh|Phân tích tác phẩm âm nhạc]]):
 
 - [[phan-tich-golliwogg-cakewalk]] — Debussy, *Golliwogg's Cakewalk*: ba đoạn, đoạn giữa xen câu trích nhại — tự xác định đó là ba đoạn đơn hay ba đoạn phức theo tiêu chí ở trên.
-- Thư viện chưa có bài phân tích riêng một minuet có trio cổ điển; bài tập ở trên dùng tác phẩm của Sposobin và Mazel.
+- [[phan-tich-menuetto-op2-so1]] — Beethoven, Sonata Op. 2 số 1, chương 3: minuet Fa thứ – trio Fa trưởng – minuet da capo; minuet và trio đều ba đoạn đơn có nhắc lại.
 
 ## Liên kết
 

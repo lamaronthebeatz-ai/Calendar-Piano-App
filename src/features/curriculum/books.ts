@@ -1040,7 +1040,7 @@ Bảng đối chiếu chương với giáo trình, và danh mục các sách Li�
         { slug: 'hinh-thuc-nga-chuc-nang-kieu-trinh-bay', focus: 'IV: chức năng từng phần.' },
         { slug: 'hinh-thuc-nga-phan-doan-cau-truc', focus: 'V: ngắt, cơ cấu, phần; motif, tiết nhạc, câu nhạc.' },
       ], exercises: ['Chia 16 ô đầu một sonata của Mozart thành motif, tiết, câu; đánh dấu các chỗ ngắt.', 'Ghi chức năng (trình bày, nối, giữa, tái hiện, kết) của từng phần trong một bài của Album cho tuổi trẻ (Schumann).'], },
-      { title: 'Phần thứ hai — I – V. Các hình thức nhỏ và ba đoạn phức', intro: 'Đoạn nhạc, hai đoạn đơn, ba đoạn đơn, hai đoạn phức, ba đoạn phức. Tư liệu phân tích: Prelude Op. 28 số 4 và số 7 của Chopin (đoạn nhạc); Minuet Sol trưởng, Nocturne Op. 9 số 2 (hai đoạn); Träumerei, Kỵ sĩ hoang dã, Clair de lune (ba đoạn).', chapters: [
+      { title: 'Phần thứ hai — I – V. Các hình thức nhỏ và ba đoạn phức', intro: 'Đoạn nhạc, hai đoạn đơn, ba đoạn đơn, hai đoạn phức, ba đoạn phức. Tư liệu phân tích: Prelude Op. 28 số 4 và số 7 của Chopin (đoạn nhạc); Minuet Sol trưởng, Nocturne Op. 9 số 2 (hai đoạn); Träumerei, Kỵ sĩ hoang dã, Clair de lune (ba đoạn); Menuetto Op. 2 số 1 của Beethoven (ba đoạn phức có trio).', chapters: [
         { slug: 'hinh-thuc-nga-doan-nhac', focus: 'I. Đoạn nhạc: định nghĩa, các dạng, hiện tượng đặc biệt.' },
         { slug: 'hinh-thuc-nga-hinh-thuc-don', focus: 'II – III. Hai đoạn đơn, ba đoạn đơn.' },
         { slug: 'hinh-thuc-nga-ba-phan-phuc', focus: 'IV – V. Hai đoạn phức, ba đoạn phức, ba – năm đoạn, hình thức trung gian.' },
@@ -1051,22 +1051,25 @@ Bảng đối chiếu chương với giáo trình, và danh mục các sách Li�
         { slug: 'phan-tich-traumerei', focus: 'Tư liệu: ba đoạn đơn.' },
         { slug: 'phan-tich-wilder-reiter', focus: 'Tư liệu: ba đoạn đơn.' },
         { slug: 'phan-tich-clair-de-lune', focus: 'Tư liệu: ba đoạn.' },
+        { slug: 'phan-tich-menuetto-op2-so1', focus: 'Tư liệu: ba đoạn phức có trio.' },
       ], exercises: ['Phân tích ba bài trong Album cho tuổi trẻ của Tchaikovsky: đoạn nhạc, hai đoạn hay ba đoạn?', 'Vẽ sơ đồ một minuet có trio, ghi số ô và giọng từng phần.'] },
-      { title: 'VI – VII. Rondo và biến tấu', intro: 'Rondo cổ Pháp, rondo cổ điển, rondo thế kỷ XIX – XX; biến tấu nghiêm khắc, tự do, hỗn hợp và kép. Tư liệu: Für Elise, chương II Pathétique, Rondo alla turca; Canon Pachelbel.', chapters: [
+      { title: 'VI – VII. Rondo và biến tấu', intro: 'Rondo cổ Pháp, rondo cổ điển, rondo thế kỷ XIX – XX; biến tấu nghiêm khắc, tự do, hỗn hợp và kép. Tư liệu: Für Elise, chương II Pathétique, Rondo alla turca; Canon Pachelbel, chương I Sonata Op. 26 của Beethoven (biến tấu nghiêm).', chapters: [
         { slug: 'hinh-thuc-nga-rondo', focus: 'VI. Rondo.' },
         { slug: 'hinh-thuc-nga-bien-tau', focus: 'VII. Biến tấu.' },
         { slug: 'phan-tich-fur-elise', focus: 'Tư liệu: rondo.' },
         { slug: 'phan-tich-pathetique-chuong-2', focus: 'Tư liệu: rondo.' },
         { slug: 'phan-tich-rondo-alla-turca', focus: 'Tư liệu: rondo.' },
         { slug: 'phan-tich-canon-pachelbel', focus: 'Tư liệu: biến tấu trên bè trầm lặp lại.' },
+        { slug: 'phan-tich-bien-tau-op26', focus: 'Tư liệu: biến tấu nghiêm.' },
       ], exercises: ['Vẽ sơ đồ Rondo alla turca: điệp khúc, các đoạn chen, giọng.', 'Chọn một bộ biến tấu của Mozart: ghi cái gì giữ nguyên, cái gì đổi trong từng biến tấu.'] },
-      { title: 'VIII – X. Sonata, rondo – sonata, hai đoạn cổ và sonata cổ', intro: 'Sonata: trình bày, phát triển, tái hiện, coda, sonata lãng mạn và cận đại, các trường hợp đặc biệt; rondo – sonata; hai đoạn đơn cổ và sonata cổ. Tư liệu: Sonata K. 545, Sonatina Op. 36 số 1 của Clementi, chương I Ánh trăng.', chapters: [
+      { title: 'VIII – X. Sonata, rondo – sonata, hai đoạn cổ và sonata cổ', intro: 'Sonata: trình bày, phát triển, tái hiện, coda, sonata lãng mạn và cận đại, các trường hợp đặc biệt; rondo – sonata; hai đoạn đơn cổ và sonata cổ. Tư liệu: Sonata K. 545, Sonatina Op. 36 số 1 của Clementi, chương I Ánh trăng; chương III Pathétique (rondo – sonata).', chapters: [
         { slug: 'hinh-thuc-nga-sonata', focus: 'VIII. Sonata.' },
         { slug: 'hinh-thuc-nga-rondo-sonata', focus: 'IX. Rondo – sonata.' },
         { slug: 'hinh-thuc-nga-sonata-co-va-hai-phan-co', focus: 'X. Hai đoạn cổ và sonata cổ.' },
         { slug: 'phan-tich-sonata-k545', focus: 'Tư liệu: sonata.' },
         { slug: 'phan-tich-sonatina-clementi-op36-1', focus: 'Tư liệu: sonatina.' },
         { slug: 'phan-tich-anh-trang-chuong-1', focus: 'Tư liệu: trường hợp đặc biệt.' },
+        { slug: 'phan-tich-pathetique-chuong-3', focus: 'Tư liệu: rondo – sonata.' },
       ], exercises: ['Phân tích chương I một sonata của Haydn: ranh giới các phần, giọng, chất liệu chủ đề.', 'So sánh một sonata cổ của D. Scarlatti với chương I K. 545: tái hiện bắt đầu từ đâu?'] },
     ],
   },
