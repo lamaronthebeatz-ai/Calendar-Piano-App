@@ -29,7 +29,7 @@ const TOPICS: { id: string; short: string; title: string; blurb: string; ids: st
     short: 'Hoà âm – Đối âm',
     title: 'Hoà âm, đối âm và hình thức',
     blurb: 'Viết và phân tích theo truyền thống cổ điển: hoà âm trường phái Nga – Xô viết, bass đi liên tục của Albrechtsberger, phức điệu Taneyev, đối âm Fux và hình thức âm nhạc.',
-    ids: ['hoa-am-co-dien', 'albrechtsberger', 'phuc-dieu-nghiem-khac', 'doi-am-fux', 'hinh-thuc-am-nhac'],
+    ids: ['hoa-am-co-dien', 'albrechtsberger', 'phuc-dieu-nghiem-khac', 'doi-am-fux', 'hinh-thuc-am-nhac', 'phan-tich-tac-pham'],
   },
   {
     id: 'jazz',
