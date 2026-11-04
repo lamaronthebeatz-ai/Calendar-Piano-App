@@ -206,7 +206,7 @@ Xuất hiện ở **thời kỳ giữa của Beethoven**. Chủ đề biến đ�
 | 381 – 403 | Biến khúc IX: tiếp tục phát triển |
 | 404 – 419 | Biến khúc X: B ở bè trên, La giáng trưởng → Sol thứ |
 | 420 – 430 | Biến khúc XI: B ở bè trên, Sol thứ |
-| 431 – 471 | Coda trên yếu tố phần mở đầu |
+| khoảng 430 – 471 | Coda trên yếu tố phần mở đầu |
 
 Ba biến khúc đầu nghiêm khắc (giữ điệu tính và cấu trúc chủ đề); giai điệu B xuất hiện ở biến khúc III và phát triển dần tới mức một **chủ đề thứ hai**; từ trung tâm chu kỳ chuyển sang biến tấu tự do [^nguyen-thi-nhung-2005, tr. 197]. Các nhà lãng mạn dùng nhiều biến tấu hỗn hợp: Ballade Sol thứ của Grieg — chủ đề và 12 biến khúc, 8 biến khúc đầu nghiêm khắc, từ biến khúc 9 tự do, có nét leitmotiv [^nguyen-thi-nhung-2005, tr. 198].
 
@@ -234,5 +234,282 @@ Trong thư viện: [[phan-tich-bien-tau-op26]] (chương I Sonata số 12 — c�
 3. Biến tấu trang sức giữ gì và thay gì? Kiểm trên chương I Sonata số 12 của Beethoven.
 4. Biến khúc III *Biến tấu giao hưởng* của Franck mang yếu tố gì mới?
 5. Vẽ sơ đồ chương kết *Eroica* và chỉ chỗ chuyển từ nghiêm khắc sang tự do.`,
+  },
+  {
+    slug: 'ptam-sonata',
+    title: 'Phân tích tác phẩm âm nhạc — Phần II, VIII. Hình thức sonata',
+    category: 'analysis',
+    aliases: ['hình thức sonata', 'chủ đề chính', 'chủ đề phụ', 'chủ đề hai', 'nối tiếp sonata', 'kết phần trình bày', 'bước ngoặt', 'phần phát triển', 'phần tái hiện sonata', 'coda sonata'],
+    summary: 'Chương VIII Phần thứ hai giáo trình Nguyễn Thị Nhung, §1 – §5: hình thức sonata cổ điển — trình bày (chủ đề chính, nối tiếp ba giai đoạn, chủ đề hai, bước ngoặt, kết phần trình bày), phát triển (ba yếu tố quyết định, xé lẻ chất liệu, dàn ý điệu tính, ba giai đoạn, đoạn chen, tái hiện giả), tái hiện (dịu xung đột, ngả về hạ át, tái hiện có động lực), coda (ba giai đoạn). Phân tích mẫu chương I Sonata số 21 Waldstein, số 10, số 23 Appassionata của Beethoven.',
+    refs: [NHUNG_REF],
+    body: `## §1. Định nghĩa. Sơ đồ chung
+Hình thức sonata dựa trên **trần thuật, phát triển, tái hiện những chủ đề tương phản** với quan hệ có quy luật về chủ đề và điệu tính. Đây là một trong những hình thức phức tạp và hoàn thiện nhất, có khả năng biểu hiện lớn nhất — từ tình cảm nội tâm tới tư tưởng triết lý, xung đột [^nguyen-thi-nhung-2005, tr. 201]. Chưa hình thức nào chứa tương phản mạnh như sonata, và tương phản ở đây là **quá trình nội dung**, không chỉ bề ngoài [^nguyen-thi-nhung-2005, tr. 201].
+
+Sonata hoàn chỉnh nhất ở **Haydn, Mozart và nhất là Beethoven**, nên nên học từ các mẫu cổ điển thành thục; ở sonata cổ (thế kỷ XVII – đầu XVIII) các quy luật chưa phân định rõ [^nguyen-thi-nhung-2005, tr. 201]. Sonata cổ điển có **ba phần chính: trình bày – phát triển – tái hiện**; từ thời kỳ giữa của Beethoven, ở các sonata kịch tính, **coda** được bổ sung như một phần chính (chương I Sonata số 23, Giao hưởng số 3, số 5) [^nguyen-thi-nhung-2005, tr. 201 – 202]. Trình bày có ít nhất hai chủ đề tương phản; phát triển làm xung đột sâu hơn, có khi có chủ đề mới; tái hiện hoạ lại các chủ đề trong quan hệ mới, gần nhau hơn, giảm xung đột [^nguyen-thi-nhung-2005, tr. 202].
+
+::form Trình_bày:4 Phát_triển:3 Tái_hiện:4 Coda:1 | Sơ đồ khái quát: trình bày (chủ đề I – chủ đề II) – phát triển – tái hiện (chủ đề I – chủ đề II) – coda
+
+Có thể có **phần mở đầu** (chương I Sonata số 32, Giao hưởng số 2 của Beethoven), vai trò tuỳ tác phẩm [^nguyen-thi-nhung-2005, tr. 202].
+
+## §2. Phần trình bày
+Chứa lần trần thuật đầu tiên của chất liệu cơ bản, nơi sinh ra những yếu tố hành động dẫn dắt phát triển. Bốn giai đoạn: **chủ đề chính – nối tiếp – chủ đề hai (phụ) – kết phần trình bày** [^nguyen-thi-nhung-2005, tr. 202].
+
+### a. Chủ đề chính
+Hiệu quả hình tượng – âm điệu cơ bản thứ nhất; gọi là "chính" vì ở nhiều mẫu cổ điển nó tích cực, nghị lực, chiếm ưu thế trong phát triển [^nguyen-thi-nhung-2005, tr. 202]. Cấu trúc [^nguyen-thi-nhung-2005, tr. 203 – 204]:
+- **đoạn nhạc**, nhắc lại hay không nhắc lại, thường **kết đóng** ở điệu tính chính (chương I Sonata số 10, số 17);
+- đoạn nhạc nhắc lại nhưng câu hai mở rộng, phát triển và **kết "mở"** trên hoà âm không ổn định (chương I Sonata số 21, 23) — biểu hiện tính liên tục của phát triển;
+- **hai đoạn đơn** (chương kết Giao hưởng số 40 của Mozart; chương I Sonata số 15, chương kết Giao hưởng số 7 của Beethoven); **ba đoạn đơn** (chương I Giao hưởng số 7 của Beethoven; chương I Giao hưởng số 4, số 2 của Tchaikovsky); rất ít khi dạng rondo.
+Chủ đề chính là yếu tố động, chứa xung đột chính (chương I Sonata số 5, 21, 23); ở overture *Coriolan* và chương I Giao hưởng số 6 của Tchaikovsky âm điệu cơ bản hình thành dần ngay trong vùng chủ đề chính [^nguyen-thi-nhung-2005, tr. 204].
+
+### b. Nối tiếp đến chủ đề hai
+Dẫn sự phát triển ra khỏi vùng chủ đề chính, chuẩn bị điệu tính và chất liệu cho chủ đề hai [^nguyen-thi-nhung-2005, tr. 205]. Trường hợp điển hình có **ba giai đoạn** [^nguyen-thi-nhung-2005, tr. 205]:
+1. **Giai đoạn đầu** — còn trong ảnh hưởng chủ đề chính; nếu chủ đề chính kết mở, thường hoạ lại phần lớn chủ đề rồi phát triển không ổn định.
+2. **Giai đoạn chuyển điệu** — phá ổn định, khắc phục ảnh hưởng chủ đề chính; căng thẳng hoà âm.
+3. **Giai đoạn chuẩn bị chủ đề hai** — thường có **âm trì tục trên bậc át của điệu tính chủ đề hai**; có khi nhấn điệu thứ để chủ đề hai trưởng nổi bật (chương I Sonata số 23; chương I Giao hưởng số 4, số 5).
+
+Ví dụ: nối tiếp chương I Sonata số 21 (*Waldstein*) gồm **21 ô**: 4 ô nhắc lại thay đổi 4 ô đầu chủ đề chính; 5 ô chuyển điệu căng thẳng; 12 ô trên âm trì tục bậc át của điệu tính chủ đề hai — dần giảm tích cực tiết tấu và đưa vào những chi tiết sẽ tham gia chủ đề hai [^nguyen-thi-nhung-2005, tr. 206].
+
+Nối tiếp thường dùng chất liệu chủ đề chính, ít khi chủ đề hai; có khi chất liệu tương đối mới (chương I Sonata số 3, ô 13 – 26: passage và âm điệu *fanfare*, thiếu giai đoạn chuyển điệu) [^nguyen-thi-nhung-2005, tr. 209]. Các biến thể [^nguyen-thi-nhung-2005, tr. 209 – 210]:
+- **Nhấn chuyển sang át** — chương I Sonata số 10 Sol trưởng (ô 9 – 25): giai đoạn đầu ô 9 – 14, chuyển sang Rê trưởng ô 15 – 18, giai đoạn ba ô 19 – 25 còn đẩy tới **La trưởng (át kép)**; vì vậy chủ đề hai ở Rê trưởng giải quyết được sự bất ổn tích tụ.
+- **Rút ngắn giai đoạn chuyển điệu** — chương I Sonata số 23: chỉ hai hợp âm trong một ô (ô 23).
+- **Bỏ giai đoạn đầu** — chương I Sonata số 8 (*Pathétique*): vào thẳng giai đoạn chuyển điệu (ô 32 – 47) đi qua các điệu tính phía hạ át (La giáng trưởng – Fa thứ – Rê giáng trưởng), rồi chuẩn bị (ô 48 – 55) cho chủ đề hai Mi giáng thứ; dàn ý phức tạp kiểu này hay gặp ở thế kỷ XIX (Sonata Si thứ của Liszt).
+- **Không chia giai đoạn** — chương I Giao hưởng "Bỏ dở" của Schubert: 4 ô chỉ để báo trước chủ đề hai; chương I Giao hưởng số 3, Sonata số 32 của Beethoven đi thẳng tới chủ đề hai.
+- Khi chủ đề chính **kết đóng**, có thể **không có nối tiếp** [^nguyen-thi-nhung-2005, tr. 210].
+
+### c. Chủ đề hai (chủ đề phụ)
+Thời điểm trung tâm của phần trình bày: xuất hiện **tương phản hình tượng – chủ đề cơ bản**, trở thành nhân tố hành động chính; là **bước nhảy chất lượng**, không chỉ đổi cách cấu tạo hay điệu tính. Tính sinh động của chủ đề chính và sự bất ổn của nối tiếp tìm được điểm tựa ở chủ đề hai; nó đem lại cân bằng cho phần trình bày [^nguyen-thi-nhung-2005, tr. 210 – 211].
+
+Ví dụ: chủ đề hai chương I *Waldstein* — đồng quê, sáng, trần thuật **kiểu hợp xướng**, tiết tấu cân bằng, cấu trúc cân phương — đối lập chủ đề chính; nhưng đồng thời phát triển bước đi xuống ở ô 4 và ô 8 của chủ đề chính trong dàn ý mới, giảm tính tích cực [^nguyen-thi-nhung-2005, tr. 211].
+
+Cấu trúc: luôn ở **điệu tính phụ** tới hết, rất ít chuyển điệu [^nguyen-thi-nhung-2005, tr. 212]:
+- đoạn nhạc (chương I Sonata số 1, 2, 5, 14, 18, 21, 23 của Beethoven); hai đoạn đơn (chương I Sonata số 10); ba đoạn đơn (hiếm ở cổ điển, phổ biến ở lãng mạn — chương I Giao hưởng số 6 của Tchaikovsky);
+- **một nhóm cơ cấu** (chương I Sonata số 4, 6, 7, 15 của Beethoven; chương I Giao hưởng số 4 của Brahms) — điển hình cho Beethoven thời đầu, bù cho tương phản chưa đủ; ở Mozart, Haydn chủ đề hai có khi bắt đầu bằng chất liệu chủ đề chính. Chương I Sonata số 1: chủ đề hai là nhóm cơ cấu, mở bằng hạt nhân chủ đề chính đảo hướng, rồi tới cơ cấu ổn định nhất (8 ô cuối có đảo phách) [^nguyen-thi-nhung-2005, tr. 213];
+- rất hiếm: dạng rondo (chương III Giao hưởng số 9 của Bruckner).
+
+**Tương phản điệu tính** giữa hai chủ đề là quy luật cơ bản, giữ vai trò hàng đầu trong cấu trúc toàn bộ; ở Haydn, Mozart còn ảnh hưởng sonata cổ, chủ đề hai có khi chỉ là chủ đề chính dời sang át (chương I Giao hưởng số 104 của Haydn) [^nguyen-thi-nhung-2005, tr. 213]. Quan hệ điệu tính [^nguyen-thi-nhung-2005, tr. 213 – 214]:
+
+| Chủ đề chính | Chủ đề hai | Ví dụ |
+|---|---|---|
+| Trưởng | Át | Chương I Sonata số 2, 4, 6, 9, 10, 18, 20, 31 của Beethoven |
+| Thứ | Trưởng song song | Chương I Giao hưởng số 5 của Beethoven |
+| Thứ | Thứ át | Chương I Sonata Đô thứ, Giao hưởng số 40 của Mozart |
+| Trưởng | Trưởng bậc III | Chương I Sonata số 16, 21 của Beethoven; Giao hưởng số 3 của Brahms |
+| Thứ | Trưởng bậc VI | Chương I Sonata số 32, Giao hưởng số 9 của Beethoven; Giao hưởng số 8 của Schubert |
+
+(Hai dòng cuối là quan hệ thời giữa và cuối của Beethoven, thời lãng mạn và nửa đầu thế kỷ XX; giáo trình còn dẫn overture *Romeo và Juliet* của Tchaikovsky và chương kết một concerto của Rachmaninov.)
+
+Điển hình nhất là chủ đề hai **kết trọn ở điệu tính mới** — dấu hiệu chắc chắn nhất cho giới hạn của nó; có khi chủ đề hai chảy liền vào kết phần trình bày [^nguyen-thi-nhung-2005, tr. 214].
+
+**Bước ngoặt**: thời điểm cắt đứt đột ngột sự phát triển của chủ đề hai bằng chất liệu đã có (thường là chủ đề chính — chương I Sonata số 3, 6) hoặc chất liệu mới (chương I Sonata số 10, ô 41 – 46: các nốt móc ba, sẽ tham gia phần phát triển) — đứng giữa xung đột âm điệu của hai chủ đề [^nguyen-thi-nhung-2005, tr. 214 – 215].
+
+### d. Kết phần trình bày
+Khái quát, tóm tắt những nét chính trong một khối tổng hợp, "cân bằng" và tạo ổn định [^nguyen-thi-nhung-2005, tr. 215]. Ví dụ [^nguyen-thi-nhung-2005, tr. 215 – 216]:
+- chương I Sonata số 5 Đô thứ: 12 ô, chuỗi cơ cấu ngắn ổn định hoà âm;
+- chương I Sonata số 10: tổng hợp chuyển động chủ đề chính và âm điệu điển hình nhất của chủ đề hai (chuyển động biến âm đi lên);
+- chương I *Waldstein*: **38 ô**, khái quát hầu hết chất liệu — liên ba từ chủ đề hai, móc kép từ chủ đề chính và nối tiếp, cuối cùng là sự đổi liên tục hợp âm trưởng – thứ của chủ đề chính;
+- chương I Sonata số 32: đoạn nhạc nhắc lại với phần bổ sung trên chất liệu chủ đề chính nhưng ở điệu tính chủ đề hai;
+- dựa chất liệu nối tiếp (chương I Sonata số 2); rất hiếm dựa chất liệu mới (chương I Giao hưởng số 3, Concerto violin của Brahms); một nhóm cơ cấu (chương I Sonata số 7).
+Ở thời kỳ đầu của sonata, khi hai chủ đề chưa tương phản mạnh (Giao hưởng số 104 của Haydn), kết phần trình bày không tóm tắt mà thường dùng chất liệu mới để bù tương phản [^nguyen-thi-nhung-2005, tr. 216].
+
+## §3. Phần phát triển
+Phần trung tâm, **"vũ đài thực sự của xung đột"** các nhân tố hành động chính; tự do trong cấu trúc và phương pháp, nhiều khi không có cấu trúc ổn định [^nguyen-thi-nhung-2005, tr. 216 – 217]. Phụ thuộc ba yếu tố [^nguyen-thi-nhung-2005, tr. 217]:
+1. **Mức phát triển đã có trong trình bày** — trình bày phát triển nhiều thì phần phát triển ngắn (chương I Sonata số 7, số 8).
+2. **Chất lượng chất liệu** — không phải chủ đề nào cũng hợp phát triển: phần phát triển *Waldstein* dùng chủ đề chính và kết phần trình bày, còn chủ đề hai kiểu hợp xướng không tham gia.
+3. **Điều kiện lịch sử, phong cách** — ở sonata sớm và một số tác phẩm Haydn, Mozart phần phát triển ngắn, ít phát triển; phải tới thời kỳ giữa của Beethoven nó mới chiếm ưu thế về xung đột kịch tính. Giáo trình kể Beethoven, Brahms, Tchaikovsky, Shostakovich là những tài năng đặc biệt về phát triển chủ đề [^nguyen-thi-nhung-2005, tr. 217 – 218].
+
+Hai khuynh hướng: **tăng căng thẳng** (phổ biến nhất) và **làm dịu** (ít gặp — overture *Egmont*: trình bày kịch tính, phát triển đem lại nét trữ tình, sáng) [^nguyen-thi-nhung-2005, tr. 218].
+
+Phương pháp phổ biến nhất là **xé lẻ chất liệu**: đầu phần phát triển *Waldstein* dùng tích cực nhất hai ô thứ hai của chủ đề chính, rồi gộp hai nhân tố thành cơ cấu hỗn hợp mới, tới ô thứ bảy chỉ còn hình dạng nhân tố hai [^nguyen-thi-nhung-2005, tr. 218]. Thay đổi tính chất bằng hoà âm, nhịp điệu, cách cấu tạo: ở chương I *Appassionata*, chủ đề chính (hai nhân tố bi thương kiểu ngâm ngợi và nhân tố thứ ba "đột phá" ở ô 13 – 14) đạt kịch tính cao hơn nhờ tremolo rất nhanh, chuyển điệu liên tục khắp các âm khu, cường độ mạnh; chủ đề hai thì **sáng hơn** vì dời lên quãng 4 [^nguyen-thi-nhung-2005, tr. 220].
+
+**Hoà âm** giữ vai trò quyết định: chuyển điệu tích cực là bản chất của phần phát triển, đi tới điệu tính xa, tránh dừng lâu ở một điệu tính [^nguyen-thi-nhung-2005, tr. 221]. Giáo trình lập dàn ý điệu tính phần phát triển chương I Sonata số 6 của Mozart; chương I Sonata số 1, số 5 (Đô thứ – Mi giáng trưởng → Đô – Fa – Si giáng – Rê giáng – Si giáng – Fa – Đô) của Beethoven; chương I *Appassionata* (Fa thứ – La giáng trưởng … → Mi – Mi thứ – Đô – La giáng – Rê giáng – Si giáng – Fa); chương I Giao hưởng số 4 của Tchaikovsky [^nguyen-thi-nhung-2005, tr. 221 – 222]. **Phức điệu** cũng thúc đẩy phát triển (chương I Giao hưởng số 3 của Beethoven, số 2 của Brahms, số 6 của Tchaikovsky) [^nguyen-thi-nhung-2005, tr. 222].
+
+Ba giai đoạn (nhất là ở mẫu cổ điển) [^nguyen-thi-nhung-2005, tr. 222]:
+1. **Giai đoạn đầu** — ít phát triển, bắc cầu, ngắn.
+2. **Giai đoạn phát triển chính** — biến đổi phức tạp, sâu sắc, căng thẳng nhất.
+3. **Giai đoạn chuẩn bị tái hiện** — thường **âm trì tục trên bậc át**, chuẩn bị điệu tính chính trùng với tái hiện.
+
+Không phải phần phát triển nào cũng đủ ba giai đoạn. Chương I *Eroica*: chín làn sóng sắp xếp cân xứng, làn sóng V ở trung tâm chứa cao trào chính. Chương I Giao hưởng số 3 của Brahms thiếu giai đoạn trì tục; chương I Sonata violin số 3 của Brahms gộp tất cả vào giai đoạn chính trên **âm trì tục bậc át không đổi** ở tầng thấp nhất — hai tầng cấu tạo đối lập [^nguyen-thi-nhung-2005, tr. 222 – 223]. Phát triển căng thẳng thường dẫn tới **cao trào chính trùng đầu tái hiện** (chương I Sonata số 23, 32; Giao hưởng số 1 của Brahms; số 6 của Tchaikovsky; Concerto piano số 2 của Rachmaninov) [^nguyen-thi-nhung-2005, tr. 223].
+
+**Đoạn chen** trong phần phát triển — chất liệu mới [^nguyen-thi-nhung-2005, tr. 223 – 224]: chương I Sonata số 5 (sau khi hoạ lại chủ đề chính, chất liệu mới ở phía hạ át: Fa thứ → Si giáng thứ → Rê giáng trưởng rồi ngược lại); chương kết Sonata Fa thứ (đoạn chen đầu phần phát triển, ba đoạn đơn a a b a b a); chương I Giao hưởng số 4 của Mendelssohn; chương I Giao hưởng số 7 của Shostakovich — cả phần phát triển là một chu kỳ biến tấu lớn. Có thể có **tái hiện giả** [^nguyen-thi-nhung-2005, tr. 224].
+
+## §4. Phần tái hiện
+Khác về bản chất với tái hiện của mọi hình thức khác: khuynh hướng căn bản là **làm dịu xung đột** giữa các hình tượng chính bằng cách hoạ lại chúng **trong điệu tính chính**, đem lại cân bằng sau phần phát triển [^nguyen-thi-nhung-2005, tr. 224]. Thứ tự giống trình bày; chủ đề hai về điệu tính chính kéo theo thay đổi nối tiếp; có khi đổi trưởng – thứ (chương I Sonata số 1, số 5) [^nguyen-thi-nhung-2005, tr. 224]. Khoảng cách hai chủ đề **rút ngắn**: nối tiếp ngắn lại (chương I Sonata số 6; chương III Sonata số 14) [^nguyen-thi-nhung-2005, tr. 224].
+
+- Chủ đề chính đã dùng nhiều ở phần phát triển thì **rút gọn** (overture *Romeo và Juliet* của Tchaikovsky: trình bày ba đoạn đơn, tái hiện chỉ còn ngắn hơn); chủ đề chính kết đóng ở trình bày có thể kết mở ở tái hiện (chương I Sonata số 6) [^nguyen-thi-nhung-2005, tr. 225]. Thường vùng chủ đề chính và nối tiếp đổi nhiều, chủ đề hai giữ cân bằng; nhưng có khi chủ đề hai được phát triển thêm (chương I Sonata số 32) [^nguyen-thi-nhung-2005, tr. 225].
+- **Ngả về hạ át**: trình bày hướng về át, tái hiện ngả về hạ át để trung hoà sức hút của át — như ở phần kết nhiều fugue và hình thức hai đoạn cổ. Có thể đặt ở nối tiếp (chương I Sonata số 10), ở chủ đề chính — tái hiện bắt đầu ở hạ át (Sonata số 15 của Mozart, overture *Coriolan*), hay ở chủ đề hai (chương I Sonata số 3: chủ đề hai bắt đầu ở trưởng hạ át; chương I Sonata số 32: cả hai chủ đề) [^nguyen-thi-nhung-2005, tr. 225 – 226].
+- Dàn ý phức tạp: tái hiện *Waldstein* — chủ đề hai bắt đầu ở **La trưởng** rồi mới về Đô trưởng [^nguyen-thi-nhung-2005, tr. 226]. Rất hiếm: phần lớn tái hiện ở điệu tính phụ — chương kết Sonata số 18: chủ đề hai và phần sau ở một điệu tính phụ (bản OCR đọc như "Ges-dur" — Sol giáng trưởng), rồi chủ đề chính trở lại cùng lúc với Mi giáng trưởng [^nguyen-thi-nhung-2005, tr. 226].
+- **Tái hiện có động lực**: căng thẳng cao hơn, mãnh liệt hơn, thường là kết quả của phần phát triển; mẫu đầy đủ — chương I Giao hưởng số 9 của Beethoven [^nguyen-thi-nhung-2005, tr. 226].
+
+## §5. Coda
+Ở nhiều sonata Haydn, Mozart và Beethoven thời đầu, quan hệ hình tượng chưa phức tạp nên **không có coda**; coda thành phần không thể thiếu ở Beethoven thời thành thục, và khi xung đột mở rộng thì lớn tới mức **một phần chính** (chương I Sonata số 21, 23; Giao hưởng số 5 của Beethoven; Giao hưởng số 4 của Brahms; Giao hưởng số 9 của Bruckner) [^nguyen-thi-nhung-2005, tr. 227]. Coda không chỉ tổng hợp mà còn biến đổi chất liệu; coda lớn có ba giai đoạn: **đầu** (liên quan cuối tái hiện) – **phát triển** (không ổn định điệu tính) – **cuối** (coda thực sự, ổn định, kết hoàn toàn) [^nguyen-thi-nhung-2005, tr. 227].
+
+- Coda là nơi khẳng định tư tưởng chính và có thể chứa **cao trào chính** (chương I Giao hưởng số 4 của Brahms). Ở chương I Giao hưởng số 5 của Beethoven, chủ đề hai trữ tình được bổ sung nét bi thương [^nguyen-thi-nhung-2005, tr. 228].
+- **Coda chương I *Appassionata***: dài bằng phần trình bày; giai đoạn đầu chỉ 1 ô, giai đoạn phát triển chiếm 33/38 ô, lần lượt phát triển chủ đề chính, chủ đề hai, kết phần trình bày; nhắc **Rê giáng trưởng** — điệu tính trung tâm phần phát triển; tương phản hai chủ đề còn sâu hơn ở phần phát triển; giai đoạn cuối, chủ đề hai trở lại ở thứ, rất nhanh, mang tính bi hùng — vốn là bản chất của chủ đề chính [^nguyen-thi-nhung-2005, tr. 227 – 228].
+
+**Tư liệu phân tích** (giáo trình) [^nguyen-thi-nhung-2005, tr. 228 – 229]: Haydn — chương I các sonata piano; Mozart — chương I Sonata piano số 5, 6, 12, 14, 17, 19; chương I Giao hưởng số 35, 36, 39, 40, 41; Beethoven — overture *Egmont*, *Coriolan*; chương I Giao hưởng số 1, 5, 6, 7; chương kết Sonata số 14, 23; chương I Sonata violin số 2, 8, 9; chương I Tứ tấu Op. 18, Op. 59 số 1.
+
+## §6. Hình thức sonata trong âm nhạc lãng mạn và cận đại
+Những thay đổi bắt đầu từ Beethoven thời cuối được các thế hệ sau phát triển [^nguyen-thi-nhung-2005, tr. 229]:
+- Các phần và yếu tố có **ý nghĩa biểu hiện độc lập hơn**, quan hệ chức năng giữa chúng yếu đi; motif riêng ngự trị trong chủ đề làm cấu trúc kém rõ, ranh giới trình bày – phát triển mờ đi (chương I Sonata violin số 3 của Grieg; Giao hưởng số 8 của Bruckner).
+- Beethoven thời cuối (Sonata số 28, 31; Tứ tấu số 12, 13) tăng **biến tấu chất liệu**; và **phức điệu** thành đường nét cơ bản của chủ đề sonata (chương I và chương kết Sonata số 29, 32; chương I Giao hưởng số 9). Khuynh hướng thứ nhất dẫn tới sonata lãng mạn; khuynh hướng thứ hai tiếp tục ở Brahms và nhất là thế kỷ XX (Hindemith…) [^nguyen-thi-nhung-2005, tr. 229 – 230].
+
+**Sonata lãng mạn** [^nguyen-thi-nhung-2005, tr. 230 – 232]:
+- **Chủ đề ca xướng** là đặc trưng — ở Schubert chủ đề lớn tới mức một bài ca hoàn chỉnh. Chương I Giao hưởng "Bỏ dở": nối tiếp và kết phần trình bày giảm hẳn, trình bày chia hai khối lớn (chủ đề chính – chủ đề hai) gần nhau về hình tượng, thiếu tương phản; bù lại, phần mở đầu là chất liệu độc lập kịch tính. Từ đó dàn ý ba yếu tố: **dẫn tự (épigraphe) – chủ đề chính – chủ đề hai**.
+- Tchaikovsky (chương I Giao hưởng số 4, 5): chủ đề chính ba đoạn đơn có tái hiện động; nối tiếp và kết phần trình bày phát triển thành **chủ đề độc lập**.
+- Brahms: kết phần trình bày thành **nhân tố hành động** mạnh (chương I Giao hưởng số 3, Concerto piano số 2); chủ đề hai phức tạp kéo theo dàn ý điệu tính phức tạp (chương I Giao hưởng số 4).
+- **Dẫn tự** có khi thành chủ đề hoàn chỉnh (Giao hưởng số 8 của Schubert), khi là cơ cấu ngắn (chương I Sonata Si giáng thứ của Chopin), khi là khối hợp âm (Giao hưởng số 3 của Brahms), và được phát triển cả trong phần phát triển.
+- **Đổi mới tái hiện**: tái hiện tiếp tục phát triển chất liệu, gánh cả chức năng phát triển (chương I Giao hưởng số 6 của Tchaikovsky; Giao hưởng số 8, 9 của Bruckner) [^nguyen-thi-nhung-2005, tr. 232].
+
+**Thế kỷ XX — Shostakovich** (chương I Giao hưởng số 1, 5, 7, 8, 10) [^nguyen-thi-nhung-2005, tr. 232 – 236]:
+- Trình bày giữ **một kết cấu tình cảm chung**, chủ đề hai không tạo bước nhảy chất lượng; nhịp độ chậm, ít tương phản trưởng – thứ (điệu tính hai chủ đề: Giao hưởng số 5 Rê thứ – Mi giáng; số 8 Đô thứ – Mi giáng…). Trình bày gồm **dẫn tự, chủ đề chính, chủ đề hai**; dẫn tự là động cơ tích cực của cả hình thức.
+- Chủ đề chính phát triển rộng, **phức điệu** sâu, giao cho âm sắc cùng loại; không cần nối tiếp (ở Giao hưởng số 8, sự nhắc lại chủ đề chính đóng vai nối tiếp).
+- **Tương phản cơ bản dời ra giữa phần trình bày và phần phát triển**, không còn giữa hai chủ đề — "hiện tượng mới". Phần phát triển đến sau một **bước ngoặt đột ngột**: ở Giao hưởng số 7 là chủ đề mới (chủ đề "xâm lược"), ở số 5, 8, 10 là sự biến đổi tận gốc chất liệu. Phần phát triển gồm nhiều làn sóng, nhịp độ có vai trò kịch tính; ghép các yếu tố của hai chủ đề thành chủ đề hỗn hợp (Giao hưởng số 5).
+- **Cao trào tái hiện động** (Giao hưởng số 5, 7, 8, 10) dẫn sang giai đoạn phát triển mới; ở Giao hưởng số 8, sau cao trào là độc thoại cor anglais — biến tấu mới của chủ đề chính tổng hợp dẫn tự; coda không khép mà để ngỏ sang các chương sau.
+- Khuynh hướng khác: phát triển và tái hiện **gộp thành một phần**, như sonata cổ — chương I Concerto cho dàn nhạc của Bartók, một chương giao hưởng của Shostakovich, chương I giao hưởng *Mathis der Maler* của Hindemith [^nguyen-thi-nhung-2005, tr. 236 – 237].
+
+**Sonata trong âm nhạc Việt Nam** [^nguyen-thi-nhung-2005, tr. 237 – 239]:
+- Chủ đề xây từ âm điệu dân gian hay ca khúc quen thuộc: chương I Giao hưởng số 1 *Quê hương* (Hoàng Việt) dùng âm điệu *Hội nghị Diên Hồng*, *Lên đàng*, *Nam bộ kháng chiến* và nhạc dạo *Chiến thắng Điện Biên Phủ* cho chủ đề mở đầu, chủ đề chính, chủ đề hai và coda; tương tự thơ giao hưởng *Lửa cách mạng* (Trần Ngọc Xương), *Tháng Tám lịch sử* (Doãn Nho), *Người về đem tới ngày vui* (Trọng Bằng), *Khát vọng* cho cello và dàn nhạc (Hoàng Dương), tổ khúc *Non sông một dải* (Nguyễn Xinh), các giao hưởng của Nguyễn Văn Nam.
+- Quan hệ điệu tính ngoài kiểu kinh điển: một sonata của Nguyễn Đức Toàn — chủ đề chính Si giáng thứ, chủ đề hai Fa trưởng.
+- Trình bày thành hai khối đối lập, yếu nối tiếp và kết (*Tháng Tám lịch sử*, *Thánh Gióng* của Doãn Nho; *Khát vọng* của Nguyễn Thị Nhung); phần phát triển sinh chủ đề mới (*Người về đem tới ngày vui*; chương *Huyền thoại máu* trong giao hưởng *Tượng đài vô danh* của Đức Trịnh; *Concerto – Fantaisie* cho violin của Nguyễn Phúc Linh).
+- Phức điệu kế thừa lối **lòng bản** của hoà tấu cổ truyền — các bè phát triển theo chiều ngang, gặp nhau theo chiều dọc "ngẫu nhiên", tạo nhiều tầng giai điệu (giao hưởng của Nguyễn Văn Nam; Đàm Linh, Trần Trọng Hùng, Vĩnh Cát, Doãn Nho, Đỗ Hồng Quân, Ca Lê Thuần, Nguyễn Xinh); fugato trong phần phát triển (chương I Giao hưởng số 1 của Vĩnh Cát; *Người về đem tới ngày vui*; *Khát vọng*).
+- Hoà âm: ngũ cung, đa điệu ngũ cung (Concerto violin của Đỗ Hồng Quân), quãng 4 làm động lực (*Non sông một dải*), hợp âm chồng quãng 4 (*Tổ quốc tôi* của Nguyễn Đình Lượng); tiết tấu (*Đồng khởi* của Nguyễn Văn Thương). Tái hiện thường tiếp tục phát triển (*Đồng khởi*); có tác phẩm sonata cấu trúc tự do (chương I tổ khúc *Miền Nam tuyến đầu* của Chu Minh; chương I giao hưởng *Trở về Điện Biên* của Trần Trọng Hùng) [^nguyen-thi-nhung-2005, tr. 239].
+
+**Tư liệu** [^nguyen-thi-nhung-2005, tr. 240]: Grieg — chương I Sonata piano; Schubert — chương I Sonata Op. 42, Op. 53, Giao hưởng Si thứ và Đô trưởng; Schumann — chương I Sonata Sol thứ, Concerto piano; Chopin — chương I Sonata Si giáng thứ, Si thứ; Concerto Mi thứ, Fa thứ; Mendelssohn — Concerto violin; Tchaikovsky — chương I Giao hưởng số 4, 5, 6, Concerto piano Si giáng thứ, Serenade cho dàn dây; Prokofiev — chương I Giao hưởng số 6, 7; Shostakovich — chương I Giao hưởng số 1, 5, 7, 8, 10; Hoàng Việt — *Quê hương*; Chu Minh — *Miền Nam tuyến đầu*; Trần Ngọc Xương — *Lửa cách mạng*; Nguyễn Xinh — *Non sông một dải*; Nguyễn Văn Nam — chương I Giao hưởng số 3, 4, 5, 7; Vĩnh Cát — chương I Giao hưởng số 1; Nguyễn Đình Tấn — chương I giao hưởng *Cây đuốc sống*.
+
+## §7. Những trường hợp đặc biệt của hình thức sonata
+Khi phân tích phải giữ những dấu hiệu đầu tiên của sonata, vai trò dàn dựng cơ bản của nó, và tính chất lịch sử – phong cách [^nguyen-thi-nhung-2005, tr. 241].
+
+| Trường hợp | Đặc điểm theo giáo trình | Ví dụ |
+|---|---|---|
+| **a. Không có phần phát triển** | Hay ở chương chậm — chủ đề ca xướng, ít tương phản, đã cạn khả năng ở trình bày; chỉ còn trình bày – tái hiện (coda), có khi nối ngắn; tái hiện thường là biến tấu trang sức; ít nối tiếp và kết nên hai chủ đề đối chiếu tương phản [^nguyen-thi-nhung-2005, tr. 241 – 242] | Chương II Sonata số 5, số 7 và một concerto piano của Beethoven; Giao hưởng số 9 của Shostakovich; chương I Sonata violin của Franck; chương I Giao hưởng số 5 của Honegger (chủ đề hai nhắc ba lần kiểu biến tấu, lần thứ ba như phần phát triển, tới cao trào tái hiện giả). Cả ở nhịp độ nhanh: overture *Đám cưới Figaro*, chương II Giao hưởng số 8 của Beethoven, chương III Giao hưởng số 6 của Tchaikovsky [^nguyen-thi-nhung-2005, tr. 242 – 243] |
+| | Việt Nam | Thơ giao hưởng *Tháng Tám lịch sử* (Doãn Nho): mở đầu từ điệu *Lâm thâm* (Chèo); khối chính gồm chủ đề phát xít Nhật và chủ đề thực dân Pháp; nối tiếp có chủ đề cách mạng từ *Hội nghị Diên Hồng* và *Du kích ca*; chủ đề hai — hình tượng nhân dân — từ điệu *Xẩm* (*Tháng Xuân đến*) trong hát then Tày; tái hiện có chủ đề mới, gần tổ khúc. Chương I *Trở về Điện Biên* (Trần Trọng Hùng): chủ đề chính La thứ hai nhân tố (giọng nữ cao; tiếng gió từ dân ca Thái), chủ đề hai Rê thứ kêu gọi, tái hiện từ ô 47 cả hai chủ đề ở La thứ [^nguyen-thi-nhung-2005, tr. 243 – 244] |
+| **b. Tái hiện ngược hướng** (chủ đề hai trước) | Do phần phát triển: chủ đề tích cực hơn ở phần phát triển đòi đổi thứ tự [^nguyen-thi-nhung-2005, tr. 244] | *Les Préludes* của Liszt; chương I Giao hưởng số 1 của Shostakovich; chương I Concerto piano số 4 của Rachmaninov và Ballade số 1 của Chopin (các chủ đề còn giữ điệu tính ban đầu); chương I Giao hưởng số 1 của Vĩnh Cát; chương I *Cây đuốc sống* (Nguyễn Đình Tấn); concerto *Tuổi trẻ* (Chu Minh), *Bất khuất* (Đỗ Dũng), thơ giao hưởng *Nữ anh hùng miền Nam* (Nguyễn Thị Nhung), sonata một chương cho piano (Trần Tất Toại) [^nguyen-thi-nhung-2005, tr. 244 – 245] |
+| **c. Đoạn chen trong phần phát triển** | Chất liệu mới; có khi căng thẳng như phần phát triển [^nguyen-thi-nhung-2005, tr. 245] | Chương kết Sonata số 1, chương chậm Sonata số 7 của Beethoven; chương chậm Concerto piano số 1 của Brahms (đoạn chen hai đoạn đơn Si thứ bù cho thiếu tương phản); chương I Giao hưởng số 7 *Leningrad* của Shostakovich (rõ nhất); concerto *Tuổi trẻ* (Chu Minh), *Tổ quốc tôi* (Nguyễn Đình Lượng) [^nguyen-thi-nhung-2005, tr. 245 – 246] |
+| **d. Hoạ lại đồng thời các chủ đề** trong tái hiện | Ít gặp: các chủ đề chồng lên thành khối phức điệu | Overture *Những ca sĩ bậc thầy thành Nuremberg* của Wagner; chương I *Non sông một dải* (Nguyễn Xinh) — chủ đề hai lồng vào chủ đề chính với trường độ gấp đôi; chương II Giao hưởng *Quê hương* (Hoàng Việt) [^nguyen-thi-nhung-2005, tr. 246 – 247] |
+| **e. Tái hiện bỏ một chủ đề** | Thường bỏ chủ đề chính vì đã cạn ở phần phát triển [^nguyen-thi-nhung-2005, tr. 247] | Chương I Sonata Si giáng thứ và Si thứ của Chopin; chương I Concerto cello của Dvořák; chương *Lời mẹ ru* trong Giao hưởng số 5 *Mẹ Việt Nam* (Nguyễn Văn Nam); bỏ chủ đề hai: chương I Concerto violin số 1 của Prokofiev [^nguyen-thi-nhung-2005, tr. 247] |
+| **g. Thay chủ đề bằng chủ đề mới** | Chủ yếu ở nhạc có tiêu đề | *Don Juan* của R. Strauss — bốn chủ đề, chủ đề thứ tư (xuất hiện ở phần phát triển) thay chủ đề hai trong tái hiện; *Tượng đài vô danh* (Đức Trịnh), chương *Huyền thoại máu* [^nguyen-thi-nhung-2005, tr. 247 – 248] |
+| **h. Chương I concerto nhạc cụ** | Hai lần trình bày (lần một cho dàn nhạc, gọn, ở điệu tính chính — truyền thống từ Mozart; lần hai phát triển hơn, nhiều passage); đoạn chuyển của dàn nhạc; **cadenza** — ở concerto cổ điển giữa tái hiện và coda, ở thời lãng mạn thường giữa phát triển và tái hiện, có khi ngay đầu (Concerto piano số 5 của Beethoven); sau Mendelssohn lần trình bày thứ nhất thường bị bỏ, thay bằng mở đầu ngắn (Concerto piano của Schumann) [^nguyen-thi-nhung-2005, tr. 248 – 250] | Concertino của Ca Lê Thuần — cadenza 18 ô cuối phần phát triển trên âm hưởng **vọng cổ**; *Tuổi trẻ* (Chu Minh); *Tổ quốc tôi* (Nguyễn Đình Lượng) — cadenza chiếm cả phần tái hiện; Sonata violin – piano của Nguyễn Thị Nhung — cadenza là cả phần mở đầu; ballade *Thị Kính – Thị Mầu* (Nguyễn Đình Bảng) — bộ gõ Chèo tấu khổ *Trống Thượng Đình* như một cadenza [^nguyen-thi-nhung-2005, tr. 250 – 251] |
+
+## Tư liệu trong thư viện
+[[phan-tich-sonata-k545]], [[phan-tich-sonatina-clementi-op36-1]], [[phan-tich-anh-trang-chuong-1]] (chương I *Ánh trăng*), [[phan-tich-scriabin-sonata-so-2]].
+
+## Đọc thêm (trường phái Nga)
+[[hinh-thuc-nga-sonata]] — phần trình bày, phát triển, tái hiện, các biến thể, sonata thế kỷ 19 – 20 theo Sposobin, Mazel, Asafyev.
+
+## Câu hỏi và bài tập
+1. Vì sao chủ đề hai là "bước nhảy chất lượng" của phần trình bày?
+2. Phân tích ba giai đoạn nối tiếp trong chương I *Waldstein*.
+3. Lập bảng điệu tính hai chủ đề cho chương I năm sonata của Beethoven.
+4. Phần phát triển phụ thuộc vào ba yếu tố nào? Áp dụng cho chương I Sonata số 8.
+5. Vì sao tái hiện "ngả về hạ át"?
+6. Ở Shostakovich, tương phản cơ bản nằm ở đâu?
+7. Cadenza đứng ở đâu trong concerto cổ điển và lãng mạn?`,
+  },
+  {
+    slug: 'ptam-rondo-sonata',
+    title: 'Phân tích tác phẩm âm nhạc — Phần II, IX. Hình thức rondo – sonata',
+    category: 'analysis',
+    aliases: ['rondo – sonata', 'rondo sonata'],
+    summary: 'Chương IX Phần thứ hai giáo trình Nguyễn Thị Nhung: rondo – sonata — tổng hợp rondo (chủ đề chính trở lại ít nhất ba lần) và sonata (hai chủ đề với quan hệ điệu tính xác định); sơ đồ A B A – C – A B A coda; nét rondo hay nét sonata trội; cấu trúc đặc biệt (thêm đoạn chen, bỏ lần A thứ ba, chủ đề biến hoá); rondo – sonata lãng mạn, cận đại và Việt Nam.',
+    refs: [NHUNG_REF],
+    body: `## §1. Định nghĩa. Sơ đồ chung
+Rondo – sonata là **hình thức tổng hợp** của rondo và sonata, nhận dấu hiệu điển hình nhất của mỗi bên: của rondo là **chủ đề chính trở lại có chu kỳ, ít nhất ba lần**; của sonata là **trần thuật và tái hiện hai chủ đề** trong quan hệ điệu tính xác định [^nguyen-thi-nhung-2005, tr. 252].
+
+| Rondo | A | B | A | C | A | B | A | Coda |
+|---|---|---|---|---|---|---|---|---|
+| Sonata | Chủ đề chính | Chủ đề hai | Chủ đề chính | Đoạn chen / phát triển | Chủ đề chính | Chủ đề hai | (Chủ đề chính) | |
+
+Quan hệ điệu tính A – B ở đầu và A – B ở cuối giống quan hệ chủ đề chính – chủ đề hai của sonata. Lần cuối của chủ đề chính nhiều khi có thể bỏ, không quyết định; có khi được phát triển trong coda [^nguyen-thi-nhung-2005, tr. 252].
+
+## §2. Cấu trúc
+Tuỳ tác phẩm, nét rondo hay nét sonata trội hơn [^nguyen-thi-nhung-2005, tr. 253]:
+- **Nét rondo trội**: trước hết về thể loại, rồi các passage trong nối tiếp, tương phản tập trung quanh **đoạn chen trung tâm C** — chương kết Sonata piano số 2, 3; Concerto piano số 1, 2, 3 và Concerto violin của Beethoven; chương III Tứ tấu dây *Tây Nguyên* (Đỗ Nhuận).
+- **Nét sonata trội**: đoạn chen C thành **phần phát triển** thay cho chất liệu tương phản, nối tiếp phát triển, phần trình bày có giai đoạn kết — chương kết Giao hưởng số 2 của Beethoven; Giao hưởng số 2, số 3 của Brahms; nhất là chương I Sonata violin số 1, 2 của Brahms; chương III *Ngày toàn thắng niềm vui và nỗi buồn* trong Giao hưởng số 1 của Vĩnh Cát.
+
+## §3. Cấu trúc đặc biệt
+[^nguyen-thi-nhung-2005, tr. 253 – 254]
+- **Thêm đoạn chen**: chương kết Concerto violin số 5 của Mozart — A B A C A D A B A coda.
+- **Bỏ lần A thứ ba**: chương kết Giao hưởng số 3 của Brahms.
+- Chương kết **Concerto piano số 4** của Beethoven: bỏ lần A thứ ba **và** B trở lại thêm một lần (A – nối – B – A – C – B – A – B – cadenza – coda; Sol trưởng, B lần đầu ở Rê trưởng); chủ đề hai trình bày ba lần, được thêm vai trò thứ hai trong cấu trúc.
+- **Chủ đề biến hoá** như biến khúc (chương kết Sonata số 2 của Beethoven), có khi đổi cả cấu trúc (chương kết Concerto piano số 4).
+- **Coda** thường tổng hợp, có thể dùng chất liệu đoạn chen C.
+
+## §4. Rondo – sonata trong âm nhạc lãng mạn, cận đại
+Ít gặp ở âm nhạc lãng mạn; chủ đề chính có thể trở lại ở điệu tính phụ (chương kết Sonata piano của Schumann). Chương kết **Concerto piano số 1** của Brahms phức tạp hơn mẫu cổ điển: đoạn chen C trở lại ở **trưởng của điệu tính chính**, rồi chủ đề chính trong coda cũng ở trưởng (Rê thứ … Rê trưởng) — C cùng lần cuối của A tạo một hiệu quả điệu tính mới ở giai đoạn kết [^nguyen-thi-nhung-2005, tr. 254 – 255].
+
+Thế kỷ XX: chương kết Sonata piano số 6 của Prokofiev, chương kết Giao hưởng số 9 của Shostakovich có sơ đồ khác hẳn [^nguyen-thi-nhung-2005, tr. 255]. **Việt Nam**: chương kết Giao hưởng số 1 của Vĩnh Cát — A B A1 C A2 B1 coda; chương II *Hồi tưởng* trong *Non sông một dải* (Nguyễn Xinh) — tái hiện đưa **chủ đề hai lên trước** chủ đề chính, và phần phát triển nối thẳng vào chủ đề hai [^nguyen-thi-nhung-2005, tr. 255].
+
+## Tư liệu phân tích (theo giáo trình)
+[^nguyen-thi-nhung-2005, tr. 256] Mozart — chương kết Sonata piano số 7, 9, 13, 17; Beethoven — chương kết Sonata piano số 2, 3, 4, 8; Sonata violin Op. 12 số 1, 2; Giao hưởng số 2; Schumann — chương kết Concerto piano; Brahms — chương kết Concerto kép cho violin và cello; Prokofiev — chương kết Sonata piano số 4.
+
+Trong thư viện: [[phan-tich-pathetique-chuong-3]] (chương kết Sonata số 8 — có trong danh mục).
+
+## Đọc thêm (trường phái Nga)
+[[hinh-thuc-nga-rondo-sonata]] — lần hai của phần chính, episode giữa, đưa phát triển vào rondo – sonata, lịch sử theo Sposobin và Mazel.
+
+## Câu hỏi
+1. Rondo – sonata lấy gì của rondo, gì của sonata?
+2. Khi nào nét sonata trội? Kiểm trên chương kết Giao hưởng số 2 của Beethoven.
+3. Vẽ sơ đồ chương kết Concerto piano số 4 của Beethoven.`,
+  },
+  {
+    slug: 'ptam-hai-doan-co-va-sonata-co',
+    title: 'Phân tích tác phẩm âm nhạc — Phần II, X. Hình thức hai đoạn cổ và hình thức sonata cổ',
+    category: 'analysis',
+    aliases: ['hai đoạn cổ', 'sonata cổ', 'hình thức hai đoạn cổ', 'Scarlatti sonata'],
+    summary: 'Chương X Phần thứ hai giáo trình Nguyễn Thị Nhung: hai đoạn cổ (cuối thế kỷ XVI – đầu XVII, hoàn thiện ở Bach, Handel): phần một đoạn nhạc phát triển phức điệu đi tới át, phần hai dài gấp hai – ba, ngả về hạ át rồi về chủ, kết phần một trở lại ở điệu tính chính; sonata cổ (Scarlatti): hai phần — trình bày (chủ đề chính, nối tiếp, chủ đề hai, kết) và phát triển – tái hiện chỉ tái hiện chủ đề hai và kết.',
+    refs: [NHUNG_REF],
+    body: `## §1. Hình thức hai đoạn đơn cổ
+**Định nghĩa.** Một trong những hình thức hình thành sớm nhất; gắn với thành tựu trước Bach và Handel nhưng hoàn thiện nhất ở họ; chứa tiền đề của sonata cổ và qua đó của sonata cổ điển [^nguyen-thi-nhung-2005, tr. 257]. Gắn với **tổ khúc cổ** và một số hình thức phức điệu — có ở invention của Bach và cả vài fugue. Xuất hiện cuối thế kỷ XVI – đầu XVII; hai phần, mỗi phần thường **nhắc lại**: ‖: A :‖: B :‖ [^nguyen-thi-nhung-2005, tr. 257].
+
+**Phần thứ nhất** là một đoạn nhạc, nhiều khi khó chia bộ phận vì phức điệu phát triển mạnh; có khi là đoạn nhạc trình bày gần các dạng chủ điệu (Menuet II trong Tổ khúc Pháp số 1 của Bach), có khi là đoạn nhạc mở rộng (Courante, Sarabande trong Partita số 6). Đặc trưng là những đường nét liên tục ở các bè với tiết tấu đa dạng; điệu tính đi từ chính tới **át**, kết thường không hoàn toàn. Ở vài tác phẩm Bach, điệu tính át đến cùng một chuyển động tiết tấu mới tạo tương phản (Courante, Partita số 6) — đầu mối của hai chủ đề trong phần trình bày sonata sau này [^nguyen-thi-nhung-2005, tr. 260] (ví dụ chính của giáo trình: Allemande, Tổ khúc Anh số 3).
+
+**Phần thứ hai** phát triển chất liệu phần một, dài **gấp hai, ba lần**; vừa phát triển vừa kết cả hình thức. Hai ô kết của phần một trở lại ở cuối phần hai **ở điệu tính chính** — chi tiết quyết định cho sự nảy sinh tái hiện ở sonata cổ [^nguyen-thi-nhung-2005, tr. 263]. Đường đi: từ điểm cuối phần một tới không ổn định, chuyển điệu, đạt **điệu tính hạ át** rồi về chính; khuynh hướng hạ át thường ở nửa sau phần hai (Courante, Partita số 6: vùng hạ át phát triển mạnh, cả bậc VI và bậc II). Khuynh hướng hạ át tạo chức năng lôgic rõ, thừa hưởng từ phức điệu, và sẽ là một điểm tựa của hầu hết các hình thức sau [^nguyen-thi-nhung-2005, tr. 263].
+
+::form A_(T→D):1 B_(D→S→T):2 | Hai đoạn cổ: phần một đi tới át, phần hai dài hơn, ngả về hạ át rồi về chủ
+
+## §2. Hình thức sonata cổ
+**Định nghĩa.** Gắn chặt với hai đoạn cổ: hai phần với chức năng tương tự (phần hai phức tạp hơn); phần một trình bày chất liệu chủ đề; cả hai hình thức đi từ điệu tính chính tới át (hiếm: từ thứ sang trưởng song song). Nhưng hai đoạn cổ phát triển **một chủ đề**, còn sonata cổ có **hai chủ đề** — dù thường thiếu tương phản mạnh — và nhiều khi có nối tiếp, kết phần trình bày [^nguyen-thi-nhung-2005, tr. 264]. Ở phần hai, nửa đầu phát triển căng thẳng, nửa sau kết; cả hai đều có khuynh hướng hạ át (còn giữ trong nhiều sonata cổ điển). Khác biệt then chốt: ở hai đoạn cổ, nửa sau phần hai chỉ **tái hiện điệu tính**; ở sonata cổ có **tái hiện chất liệu chủ đề** rõ, trùng tái hiện điệu tính [^nguyen-thi-nhung-2005, tr. 264].
+
+| Hình thức | Phần một | Phần hai |
+|---|---|---|
+| Hai đoạn cổ | T → D | không ổn định → T |
+| Sonata cổ | Chủ đề chính (T) – chủ đề hai (D) | không ổn định – **chủ đề hai (T)** |
+
+[^nguyen-thi-nhung-2005, tr. 265]
+
+Ví dụ: Allemande trong Tổ khúc Pháp Sol trưởng của Bach — 6 ô kết bổ sung của phần một trở lại ở cuối phần hai ở điệu tính chính; cấu trúc tương tự ở Sonata số 11 (Đô thứ) của **Scarlatti**: năm ô cuối phần một trở lại ở phần hai, chuyển về điệu tính chính, có giá trị như **chủ đề hai**; năm ô giữa phần một là một cơ cấu chuyển điệu như nối tiếp [^nguyen-thi-nhung-2005, tr. 265 – 266].
+
+**Cấu trúc sonata cổ** (nhiều sonata của Scarlatti) [^nguyen-thi-nhung-2005, tr. 266 – 268]:
+
+| Phần trình bày | | | | Phát triển – tái hiện | | | |
+|---|---|---|---|---|---|---|---|
+| Chủ đề chính | Nối tiếp | Chủ đề hai | Kết | Chủ đề chính (biến đổi) | Nối tiếp | Chủ đề hai | Kết |
+| Điệu tính chính | Chuyển điệu | Điệu tính phụ | Điệu tính phụ | Từ điệu tính phụ | Chuyển về chính | Điệu tính chính | Điệu tính chính |
+
+- Chỉ **hai phần**: trình bày và phát triển – tái hiện; phát triển và tái hiện không độc lập; **tái hiện chỉ phục hồi chủ đề hai và kết**, chủ đề chính không trở lại [^nguyen-thi-nhung-2005, tr. 266, 268].
+- **Chủ đề chính** sống động, thường là đoạn nhạc 8 – 16 ô, một điệu tính, kết đủ; có khi nhắc lại (Sonata số 38), có khi kết ở át [^nguyen-thi-nhung-2005, tr. 266].
+- **Nối tiếp** là cơ cấu mô tiến ngắn, ít nét mới, đưa tới điệu tính chủ đề hai; hiếm khi phát triển (Sonata số 35: chủ đề chính 14 ô, nối tiếp 40 ô…) [^nguyen-thi-nhung-2005, tr. 266 – 267].
+- **Chủ đề hai** thường hoạ lại yếu tố chủ đề chính ở át, không tương phản mạnh (Sonata số 2); rất hiếm chủ đề tương phản (Sonata số 29) [^nguyen-thi-nhung-2005, tr. 267].
+- **Kết phần trình bày** đôi khi có chất liệu mới (như ở vài sonata Haydn, Mozart) và không có chức năng tóm tắt [^nguyen-thi-nhung-2005, tr. 267].
+- **Phần hai** bắt đầu bằng chủ đề chính biến đổi ở điệu tính kết của phần trình bày, tạo cân xứng [^nguyen-thi-nhung-2005, tr. 268].
+
+Giáo trình kết: sonata cổ ít được nghiên cứu, nhưng cần hiểu vì những nguyên tắc cơ bản của **tính kịch sonata** bắt nguồn từ đây [^nguyen-thi-nhung-2005, tr. 268].
+
+## Tư liệu phân tích (theo giáo trình)
+[^nguyen-thi-nhung-2005, tr. 268] Bach — các chương trong Tổ khúc Pháp, Tổ khúc Anh; Fugue Rê thứ, *Clavier bình quân* tập I; Scarlatti — các sonata cho clavier; Mozart — một chương sonata piano.
+
+Trong thư viện: [[phan-tich-invention-so-1]], [[phan-tich-minuet-sol-truong]].
+
+## Tài liệu tham khảo của giáo trình
+Giáo trình liệt kê [^nguyen-thi-nhung-2005, tr. 269]: Tyulin, *Hình thức âm nhạc* (1947; tái bản lần 5, Moskva 1972); Asafyev, *Hình thức âm nhạc như quá trình* (Moskva 1971); P. Stoyanov, *Phân tích tác phẩm âm nhạc* (Sofia 1969), *Hình thức âm nhạc bao gồm những phần tương phản*, *Mối quan hệ giữa các hình thức âm nhạc* (Sofia 1975); A. Sokolov, *Sáng tác âm nhạc thế kỷ XX: phép biện chứng sáng tạo*; các sách của chính tác giả (*Hình thức âm nhạc*, *Thể loại âm nhạc*, *Âm nhạc thính phòng và giao hưởng Việt Nam*) và *Âm nhạc mới Việt Nam: tiến trình và thành tựu* (Viện Âm nhạc 2000). Người biên soạn đọc được Asafyev (bản 1971) và Sokolov (bản 2004); xem [[phan-tich-tac-pham-am-nhac-lo-trinh]].
+
+## Đọc thêm (trường phái Nga)
+[[hinh-thuc-nga-sonata-co-va-hai-phan-co]] — hai đoạn cổ, sonata cổ, sự ra đời của tái hiện trọn, concerto cổ, điệu nhảy cổ.
+
+## Câu hỏi
+1. Hai đoạn cổ khác hai đoạn đơn (chương II) ở những điểm nào?
+2. Chi tiết nào ở hai đoạn cổ báo trước tái hiện của sonata?
+3. Vì sao tái hiện của sonata cổ chỉ có chủ đề hai?`,
   },
 ]
