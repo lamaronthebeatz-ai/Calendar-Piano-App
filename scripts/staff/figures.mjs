@@ -1,18 +1,16 @@
-// Engraving sources for the notation directives of the Jazz Theory Book volumes: every `::staff`, `::grand` and
-// `::rhythm` line in their chapters becomes a LilyPond block `fig-<hash>` in music/ex/jazz-figures.txt; the reader
-// then shows the engraving (scripts/sheets/build.py) in place of the drawn staff, and keeps its play button.
+// Engraving sources for the notation directives of the whole library: every `::staff`, `::grand` and `::rhythm`
+// line of every article becomes a LilyPond block `fig-<hash>` in music/ex/figures.txt; articles and books then show
+// the engraving (scripts/sheets/build.py) in place of the drawn staff, and keep its play button.
+// (First written for the Jazz Theory Book volumes only; extended to all articles 11/2026.)
 // Usage: node scripts/staff/figures.mjs && LILYPOND=… python3 scripts/sheets/build.py
 import { writeFileSync } from 'node:fs'
 import { createServer } from 'vite'
 
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 const { ARTICLES } = await server.ssrLoadModule('/src/features/theory/articles.source.ts')
-const { BOOKS } = await server.ssrLoadModule('/src/features/curriculum/books.ts')
 const { figureId, parseKey, NOTE_RE } = await server.ssrLoadModule('/src/features/theory/notation.ts')
 await server.close()
 
-const BOOK_IDS = (id) => id.startsWith('jazz-theory-book')
-const slugs = new Set(BOOKS.filter((b) => BOOK_IDS(b.id)).flatMap((b) => b.parts.flatMap((p) => p.chapters.map((c) => c.slug))))
 
 const ACC = { '#': 'is', b: 'es', '##': 'isis', bb: 'eses', n: '!', '': '' }
 /** "Bb3" → "bes", "C4" → "c'", "Fn4" → "f'!" (forced natural). */
@@ -42,6 +40,8 @@ function staff(args) {
     null_.push('c1')
     words.push(lyric(label ?? (body.includes('+') ? '' : pretty(body))))
   }
+  // a key signature on its own (no notes): an invisible whole rest gives LilyPond something to engrave
+  if (!notes.length) { notes.push('s1'); null_.push('s1') }
   const k = key ? `\\key ${KEYS[key]} \\major ` : ''
   return `\\score { <<
   \\new Staff \\with { \\remove "Time_signature_engraver" } << { \\cadenzaOn \\clef ${clef} ${k}${notes.join(' ')} \\bar "|." }
@@ -101,8 +101,8 @@ function rhythm(args) {
 }
 
 const seen = new Map()
+const failed = []
 for (const a of ARTICLES) {
-  if (!slugs.has(a.slug)) continue
   for (const raw of a.body.split('\n')) {
     const line = raw.trim()
     const m = /^::(staff|grand|rhythm)\s+(.*)$/.exec(line)
@@ -110,8 +110,15 @@ for (const a of ARTICLES) {
     const spec = m[2].split(' | ')[0]
     const args = spec.trim().split(/\s+/)
     const id = figureId(`${m[1]} ${spec}`)
-    if (!seen.has(id)) seen.set(id, m[1] === 'staff' ? staff(args) : m[1] === 'grand' ? grand(args) : rhythm(args))
+    if (seen.has(id)) continue
+    try {
+      seen.set(id, m[1] === 'staff' ? staff(args) : m[1] === 'grand' ? grand(args) : rhythm(args))
+    } catch (e) {
+      // a spec this translator does not read stays a drawn diagram
+      failed.push(`${a.slug}: ${line} (${e.message})`)
+    }
   }
 }
-writeFileSync('music/ex/jazz-figures.txt', '% Music examples of the Jazz Theory Book volumes: written by scripts/staff/figures.mjs, do not edit by hand.\n\n' + [...seen].map(([id, ly]) => `=== ${id}\n#(set-global-staff-size 24)\n${ly}`).join('\n\n') + '\n')
-console.log(seen.size, 'figures from', slugs.size, 'chapters')
+writeFileSync('music/ex/figures.txt', '% Notation examples of the library: written by scripts/staff/figures.mjs, do not edit by hand.\n\n' + [...seen].map(([id, ly]) => `=== ${id}\n#(set-global-staff-size 24)\n${ly}`).join('\n\n') + '\n')
+console.log(seen.size, 'figures;', failed.length, 'not translated')
+for (const f of failed) console.log('  ', f)

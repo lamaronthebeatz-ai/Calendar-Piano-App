@@ -154,3 +154,12 @@ test('các trang nghiên cứu không tràn ngang trên điện thoại', async 
     expect(over, url).toEqual([])
   }
 })
+
+test('ví dụ nhạc là bản khắc LilyPond; nút Nghe giữ dạng kể cả sau khi đã mở Bản đồ', async ({ page }) => {
+  await page.goto('/#/musicology/ban-do') // its stylesheet stays loaded: a shared class name once turned every play button into a circle
+  await page.waitForTimeout(1500)
+  await page.goto('/#/theory/ky-am-binh-ca-gregorian')
+  await expect(page.locator('.engraved').first()).toBeVisible()
+  const box = await page.locator('.mm-play').first().boundingBox()
+  expect(box!.width).toBeGreaterThan(box!.height * 1.5)
+})

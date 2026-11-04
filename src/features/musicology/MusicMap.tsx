@@ -604,7 +604,7 @@ export function MusicMap() {
             <input type="range" min={YEAR_MIN} max={YEAR_MAX} step={5} value={yrs[1]} aria-label="Đến năm" onChange={(e) => { setPlaying(false); setYrs(([a]) => [a, Math.max(Number(e.target.value), a + 10)]) }} />
           </div>
         </div>
-        <button onClick={play} className="mm-play" aria-label={playing ? 'Dừng' : 'Cho lịch sử chạy'}>{playing ? '❚❚' : '▶'}</button>
+        <button onClick={play} className="mm-tl-play" aria-label={playing ? 'Dừng' : 'Cho lịch sử chạy'}>{playing ? '❚❚' : '▶'}</button>
       </div>
 
       {/* the place (or journey) sheet: a timeline tree of what happened there */}
@@ -700,7 +700,7 @@ function PlaceTree({ place, shows, thumbs, focusEv, back, onClose }: {
         </div>
       )}
 
-      <div className="mm-tree">
+      <div className="mm-ptree">
         {groups.map((g) => (
           <section key={g.label} className="mm-branch">
             <h4><span>{g.label}</span>{g.span && <small>{g.span}</small>}</h4>

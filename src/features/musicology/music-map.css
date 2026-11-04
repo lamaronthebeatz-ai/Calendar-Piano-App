@@ -58,7 +58,9 @@
 }
 .mm-zoom button:active { transform: scale(0.92); }
 
-.mm-play {
+/* named apart from .mm-play (play buttons of the theory diagrams): this sheet stays loaded after a visit to the map
+   and the shared name turned every "Nghe" button into a 40 px circle */
+.mm-tl-play {
   width: 40px; height: 40px; flex-shrink: 0;
   border-radius: 999px;
   background: linear-gradient(135deg, #e2b66e, #c9773f);
@@ -66,7 +68,7 @@
   font-size: 13px;
   box-shadow: 0 6px 16px -6px #c9773f;
 }
-.mm-play:active { transform: scale(0.94); }
+.mm-tl-play:active { transform: scale(0.94); }
 .mm-range { position: relative; height: 22px; }
 .mm-track {
   position: absolute; left: 0; right: 0; top: 9px; height: 4px; border-radius: 4px;
@@ -257,7 +259,7 @@
 .mm-axis-end { position: absolute; top: 20px; font-size: 11px; font-variant-numeric: tabular-nums; color: var(--color-ink-faint); }
 
 /* the tree: centuries as branches, events as leaves */
-.mm-tree { display: grid; gap: 18px; }
+.mm-ptree { display: grid; gap: 18px; }
 .mm-branch h4 { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--color-ink); }
 .mm-branch h4 small { font-family: inherit; font-size: 11.5px; font-weight: 400; color: var(--color-ink-faint); font-variant-numeric: tabular-nums; }
 .mm-branch ol { position: relative; display: grid; gap: 12px; padding-left: 22px; }
