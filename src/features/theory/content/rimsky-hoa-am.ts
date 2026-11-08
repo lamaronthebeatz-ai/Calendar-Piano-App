@@ -93,6 +93,13 @@ Bốn điệu thức nền: trưởng tự nhiên, **trưởng hoà âm**, thứ
 
 Xem thêm trong thư viện: [[hop-am-ba]], [[the-dao-hop-am]], [[hop-am-bay]], [[truong-hoa-am]].
 
+::scan rimsky #1,#2,#3 | Phần dẫn nhập (tr. 9, bản in 2014)
+::scan rimsky #4 | Thí dụ trong sách, § 1 (tr. 11, bản in 2014)
+::scan rimsky #5 | Thí dụ trong sách, § 3 (tr. 14, bản in 2014)
+::scan rimsky #6,#7,#8 | Thí dụ trong sách, § 4 (tr. 14 – 15, bản in 2014)
+::scan rimsky #9 | Thí dụ trong sách, § 5 (tr. 15, bản in 2014)
+::scan rimsky #10,#11,#12 | Thí dụ trong sách, § 6 (tr. 16 – 17, bản in 2014)
+
 ## Ba quan hệ giữa các hợp âm ba
 | Quan hệ | Âm chung | Ví dụ ở Đô trưởng |
 |---|---|---|
@@ -102,10 +109,14 @@ Xem thêm trong thư viện: [[hop-am-ba]], [[the-dao-hop-am]], [[hop-am-bay]], 
 
 [^rimsky-korsakov-1886, tr. 18]. Số âm chung quyết định cách nối — đây là chìa khoá của cả phần dẫn giọng.
 
+::scan rimsky #13,#14,#15 | Thí dụ trong sách, § 8 (tr. 18, bản in 2014)
+
 ## Bốn bè, nhân đôi, xếp gần và xa
 - Bốn bè: soprano (giai điệu), alto, tenor, bass. Ba kiểu chuyển động: **thuận** (song song là trường hợp riêng), **ngược**, **xiên** [^rimsky-korsakov-1886, tr. 19].
 - Hợp âm ba bốn bè: **nhân đôi âm gốc** — "lúc đầu chỉ dùng cách này" [^rimsky-korsakov-1886, tr. 19].
 - **Xếp gần**: ba bè trên cách nhau quãng 3, 4; **xếp xa**: quãng 5, 6. Theo âm ở giai điệu, hợp âm có ba **vị trí giai điệu**: vị trí quãng 8, quãng 3, quãng 5; hợp âm đầy đủ chuyển tự do giữa xếp gần và xa, đổi vị trí giai điệu [^rimsky-korsakov-1886, tr. 20].
+
+::scan rimsky #16,#17,#18,#19,#20,#21,#22 | Thí dụ trong sách, § 9 (tr. 19 – 20, bản in 2014)
 
 ## Nối hoà thanh và nối giai điệu
 § 11 là quy tắc nền của sách [^rimsky-korsakov-1886, tr. 21]:
@@ -117,10 +128,14 @@ Xem thêm trong thư viện: [[hop-am-ba]], [[the-dao-hop-am]], [[hop-am-bay]], 
 
 Xem cách trình bày hiện đại ở [[noi-hop-am]] và [[dan-giong]].
 
+::scan rimsky #23,#24,#25 | Thí dụ trong sách, § 11 (tr. 21 – 22, bản in 2014)
+
 ## Các tiến hành bị cấm
 Hệ quả trực tiếp của luật nối: **không đặt hai hợp âm ba liền nhau ở cùng vị trí giai điệu** — vì sẽ sinh ra **quãng 5 và quãng 8 song song** hoặc ngược hướng, cùng đồng âm song song, những tiến hành "tuyệt đối cấm với học trò". Cũng cấm đi **quãng tăng** ở bất kỳ bè nào, kể cả quãng 2 tăng trong thứ và trưởng hoà âm [^rimsky-korsakov-1886, tr. 22].
 
 Luật bốn bè hiện đại: [[luat-hoa-am-bon-be]].
+
+::scan rimsky #26,#27,#28 | Thí dụ trong sách, § 12 (tr. 22, bản in 2014)
 
 ## Câu hỏi
 1. Vì sao Rimsky-Korsakov gác hợp âm ba tăng tới Phần V?
@@ -151,11 +166,19 @@ Mọi ví dụ trưởng áp dụng cả cho thứ, trừ chỗ có ví dụ ri�
 
 (Biên tập viên lưu ý: ở vài mẫu, tác giả cho cả bốn bè đi cùng hướng khi nối IV – I, I – V; người mới học nên giữ luật nghiêm của § 11 [^rimsky-korsakov-1886, tr. 24].)
 
+::scan rimsky #29,#30 | Thí dụ trong sách, § 13 (tr. 23 – 24, bản in 2014)
+::scan rimsky #31,#32,#33 | Thí dụ trong sách, § 14 (tr. 24 – 25, bản in 2014)
+::scan rimsky #34,#35 | Thí dụ trong sách, § 15 (tr. 25, bản in 2014)
+
 ## Hợp âm sáu (§ 16 – 19)
 - Ở hợp âm sáu bậc I, IV, V nhân đôi **âm gốc hoặc quãng 5, không nhân đôi quãng 3** (trừ khi ba bè trên đứng yên và bass đi từ thế gốc sang hợp âm sáu); mỗi hợp âm sáu có 10 dạng sắp xếp. Hợp âm sáu giữa hai hợp âm gốc là cách tốt để **đổi cách xếp** [^rimsky-korsakov-1886, tr. 26].
 - Chưa viết hai hợp âm sáu liền nhau; nối hợp âm sáu với hợp âm ba khác bậc **luôn nối hoà thanh**; bass được nhảy quãng 6 từ hợp âm ba sang hợp âm sáu, không ngược lại; **cấm nhảy quãng 7** [^rimsky-korsakov-1886, tr. 27].
 - IV6 – V: mỗi bè trên đi quãng 2 hay 3; tránh nhân đôi quãng 5 ở hai bè trên. IV – V6: bass đi **quãng 5 giảm xuống**, không đi quãng 4 tăng lên [^rimsky-korsakov-1886, tr. 27 – 28].
 - IV6 – V6: IV6 nhân đôi âm gốc, V6 nhân đôi quãng 5; IV6 ở vị trí giai điệu âm gốc; hai bè trên song song, một bè ngược bass; ở thứ, bass của IV6 đi theo **âm giai giai điệu** để tránh quãng 2 tăng [^rimsky-korsakov-1886, tr. 29].
+
+::scan rimsky #36,#37,#38,#39,#40,#41 | Thí dụ trong sách, § 16 (tr. 26 – 28, bản in 2014)
+::scan rimsky #42,#43 | Thí dụ trong sách, § 18 (tr. 28, bản in 2014)
+::scan rimsky #44,#45,#46 | Thí dụ trong sách, § 19 (tr. 29, bản in 2014)
 
 ## Kết (§ 20 – 24)
 - **Kết** là chỗ khép một ý nhạc và chia lời nhạc thành câu. Kết về hợp âm chủ là **kết trọn**: **chính cách** (V – I) hoặc **plagal** (IV – I). Kết trọn là **hoàn toàn** khi hai hợp âm cuối ở thế gốc, hợp âm chủ ở vị trí quãng 8 và rơi vào phách mạnh; thiếu một điều kiện là **không hoàn toàn** [^rimsky-korsakov-1886, tr. 30].
@@ -166,11 +189,18 @@ Mọi ví dụ trưởng áp dụng cả cho thứ, trừ chỗ có ví dụ ri�
 
 Bài tập trên đàn: chơi các loại kết ở mọi giọng trưởng và thứ thông dụng [^rimsky-korsakov-1886, tr. 32]. Xem [[cau-ket]], [[hop-am-sau-bon]].
 
+::scan rimsky #47,#48 | Thí dụ trong sách, § 20 (tr. 30, bản in 2014)
+::scan rimsky #49,#50,#51,#52 | Thí dụ trong sách, § 21 (tr. 31 – 33, bản in 2014)
+::scan rimsky #53,#54,#55,#56,#57,#58,#59,#60 | Thí dụ trong sách, § 24 (tr. 33 – 36, bản in 2014)
+
 ## Bước nhảy (§ 25 – 27)
 - **Nhảy quãng 4, 5** ở giai điệu hoặc bè giữa giữa hai hợp âm khác bậc mở rộng nhiều khả năng dẫn giọng và cho phép đổi cách xếp. Sau bước nhảy bè phải đi **ngược hướng**. Với I – IV, I – V: nếu nốt đầu có hợp âm gốc thì nốt sau đặt hợp âm sáu và ngược lại; **không hai bè nhảy cùng lúc**; ba bè trên không cách nhau quá một quãng 8 [^rimsky-korsakov-1886, tr. 34].
 - **Quãng 8 và quãng 5 ẩn** giữa hai bè ngoài khi giai điệu nhảy: được phép nếu giai điệu nhảy lên và hợp âm đầu ở thế gốc, hợp âm sau là hợp âm sáu [^rimsky-korsakov-1886, tr. 35].
 - **Nhảy giữa hai quãng 3** ở giai điệu chỉ giữa hai hợp âm gốc I – IV, I – V; nối hoà thanh; sau đó đi ngược hướng quãng 2 hay 3; ở tenor cũng được, alto thì không [^rimsky-korsakov-1886, tr. 36].
 - **Nhảy quãng 3 ở bass**: giữa I6 và IV6, nối hoà thanh [^rimsky-korsakov-1886, tr. 37].
+
+::scan rimsky #61,#62 | Thí dụ trong sách, § 26 (tr. 36 – 37, bản in 2014)
+::scan rimsky #63,#64,#65 | Thí dụ trong sách, § 27 (tr. 37 – 38, bản in 2014)
 
 ## Các bậc phụ (§ 28 – 33)
 | Hợp âm | Dùng thế nào | Trang |
@@ -186,6 +216,12 @@ Bài tập trên đàn: chơi các loại kết ở mọi giọng trưởng và 
 
 Xem [[hop-am-cam-am]], [[cau-ket]].
 
+::scan rimsky #66,#67,#68,#69,#70,#71 | Thí dụ trong sách, § 28 (tr. 38 – 40, bản in 2014)
+::scan rimsky #72,#73,#74,#75,#76,#77,#78,#79 | Thí dụ trong sách, § 29 (tr. 40 – 43, bản in 2014)
+::scan rimsky #80 | Thí dụ trong sách, § 31 (tr. 43, bản in 2014)
+::scan rimsky #81 | Thí dụ trong sách, § 32 (tr. 44, bản in 2014)
+::scan rimsky #82,#83,#84,#85,#86,#87 | Thí dụ trong sách, § 33 (tr. 44 – 47, bản in 2014)
+
 ## Phối hoà âm chorale (§ 34)
 Giai điệu chorale phần lớn đi đều bằng nốt trắng, chia câu bằng các kết có **fermata**. Mọi phương tiện đã học, áp vào chorale, làm thành **"hoà âm phong cách nghiêm"** [^rimsky-korsakov-1886, tr. 45]. Luật riêng [^rimsky-korsakov-1886, tr. 45 – 46]:
 - kết càng đa dạng càng tốt, **không hai kết giống nhau liền nhau**;
@@ -196,6 +232,8 @@ Giai điệu chorale phần lớn đi đều bằng nốt trắng, chia câu b�
 
 ## Hạ át thứ của trưởng hoà âm (§ 35)
 Từ đây, bài trưởng bắt đầu dùng nhóm hạ át của **trưởng hoà âm**: hợp âm ba thứ và hợp âm sáu bậc IV, hợp âm sáu bậc II có quãng 5 hạ. Không dùng tiến hành cromatic La – La giáng; không trộn hạ át của trưởng hoà âm với của trưởng tự nhiên trong cùng một câu; **không áp dụng vào chorale** [^rimsky-korsakov-1886, tr. 47]. Xem [[truong-hoa-am]].
+
+::scan rimsky #88,#89,#90,#91,#92,#93,#94,#95,#96 | Thí dụ trong sách, § 35 (tr. 47 – 50, bản in 2014)
 
 ## Đối chiếu
 Sách bốn tác giả học cùng các chủ đề này (chủ đề 1 – 14, 19 – 20) nhưng đặt trong nhóm chức năng: II, II6 là **SII**, VI là **TSVI**, VII6 là **DVII6**. Luật nối hoà thanh – giai điệu, K64, kết ngắt nhân đôi quãng 3 giữ gần nguyên — xem [[phoi-hoa-am-giai-dieu]], [[noi-hop-am]].
@@ -230,6 +268,8 @@ Sách bốn tác giả học cùng các chủ đề này (chủ đề 1 – 14, 
 
 Xem [[hop-am-bay]].
 
+::scan rimsky #97,#98,#99,#100,#101,#102,#103,#104,#105 | Thí dụ trong sách, § 37 (tr. 50 – 53, bản in 2014)
+
 ## Hai hợp âm bảy cảm âm (§ 38)
 - **Nhỏ** (trưởng tự nhiên) và **giảm** (trưởng hoà âm, thứ hoà âm) là **hoà âm át**, giải quyết về hợp âm chủ: âm dẫn lên âm gốc, quãng 7 xuống một bậc vào quãng 5, quãng 3 và quãng 5 của hợp âm bảy **hội tụ** thành quãng 3 nhân đôi của hợp âm chủ [^rimsky-korsakov-1886, tr. 53].
 - Dùng ở thế gốc và hai thể đảo đầu; hợp âm bảy cảm âm nhỏ chỉ ở vị trí giai điệu quãng 7; **thể đảo hai (2) không dùng** vì giải quyết vào hợp âm bốn sáu [^rimsky-korsakov-1886, tr. 53].
@@ -237,13 +277,19 @@ Xem [[hop-am-bay]].
 
 Xem [[hop-am-cam-am]].
 
+::scan rimsky #106,#107,#108,#109,#110,#111,#112,#113 | Thí dụ trong sách, § 38 (tr. 53 – 56, bản in 2014)
+
 ## Hợp âm bảy bậc II (§ 39 – 40)
 - Thường dùng nhất trong các hợp âm bảy phụ là **II6/5** và **II7**: trong kết phức, thay cho II6 và II [^rimsky-korsakov-1886, tr. 54].
 - **Quãng 7 phải được chuẩn bị** bằng âm chung ở I, IV hay VI; sang V thì quãng 7 xuống nửa cung; sang K64 thì **giữ nguyên**, thành quãng 4 của K64 [^rimsky-korsakov-1886, tr. 55].
 - **Kết plagal đặc biệt**: II6/5 và VII4/3 tới hợp âm chủ bằng bass **xuống quãng 4** vào âm chủ, các bè trên đi êm; chuẩn bị bằng IV thế gốc [^rimsky-korsakov-1886, tr. 56].
 
+::scan rimsky #114,#115 | Thí dụ trong sách, § 40 (tr. 56, bản in 2014)
+
 ## Hợp âm bảy trong chorale (§ 41)
 Dùng D7 với các thể đảo và II6/5; thường nhất là **quãng 7 lướt**; tránh D7 thế gốc, nhất là khi quãng 7 nằm ở giai điệu; thể đảo dùng khá thường, nhất là D6/5 và D2. Tác giả chú thích: phối như vậy là bước sang **phong cách tự do** [^rimsky-korsakov-1886, tr. 57].
+
+::scan rimsky #116,#117,#118,#119,#120,#121,#122 | Thí dụ trong sách, § 41 (tr. 57 – 59, bản in 2014)
 
 ## Hợp âm chín (§ 42)
 Hợp âm năm âm: hợp âm bảy + quãng 9 tính từ bass. Coi là hợp âm độc lập **chỉ ở bậc V** — tức hoà âm át. **Chín trưởng** ở trưởng tự nhiên, **chín thứ** ở trưởng và thứ hoà âm. Bốn bè thì bỏ quãng 5; giải quyết về hợp âm chủ thế gốc, **quãng 9 xuống một bậc** vào quãng 5 của hợp âm chủ. Đặt sau IV, II, II6, II7, nối hoà thanh, thường để quãng 9 ở giai điệu. Trong thể đảo chỉ thể đảo ba đôi khi được dùng. Không có bài tập riêng — học trò tự soạn vài câu 8 ô [^rimsky-korsakov-1886, tr. 57 – 59]. Xem [[hop-am-mo-rong]].
@@ -256,6 +302,10 @@ Hợp âm năm âm: hợp âm bảy + quãng 9 tính từ bass. Coi là hợp â
 - Bài tập trên đàn: chơi mọi mô tiến ở mọi giọng, bắt đầu từ bất kỳ bậc nào [^rimsky-korsakov-1886, tr. 61, 64].
 
 Xem [[mo-tien-hoa-am]].
+
+::scan rimsky #123,#124,#125 | Thí dụ trong sách, § 43 (tr. 59 – 60, bản in 2014)
+::scan rimsky #126,#127,#128,#129,#130 | Thí dụ trong sách, § 44 (tr. 60 – 61, bản in 2014)
+::scan rimsky #131,#132,#133,#134,#135,#136,#137,#138,#139,#140,#141,#142,#143,#144,#145,#146,#147,#148,#149,#150,#151 | Thí dụ trong sách, § 45 (tr. 62 – 68, bản in 2014)
 
 ## Dùng tự do mọi bậc (§ 46)
 Cho học trò đã vững, mười ba quy tắc [^rimsky-korsakov-1886, tr. 64 – 68], trong đó:
@@ -307,6 +357,11 @@ Trường hợp riêng [^rimsky-korsakov-1886, tr. 70 – 72]:
 
 Bài tập trên đàn: chơi chuyển giọng từ mọi giọng trưởng, thứ sang các giọng họ hàng mức một bằng mọi cách trên [^rimsky-korsakov-1886, tr. 72].
 
+::scan rimsky #152,#153 | Thí dụ trong sách, § 48 (tr. 69, bản in 2014)
+::scan rimsky #154,#155,#156,#157,#158 | Thí dụ trong sách, § 49 (tr. 70 – 71, bản in 2014)
+::scan rimsky #159,#160 | Thí dụ trong sách, § 50 (tr. 71 – 72, bản in 2014)
+::scan rimsky #161,#162,#163,#164,#165,#166,#167,#168,#169,#170,#171,#172,#173,#174,#175,#176 | Thí dụ trong sách, § 51 (tr. 72 – 79, bản in 2014)
+
 ## Cromatic, quan hệ chéo, chuyển cromatic (§ 53 – 55)
 - Nối thẳng hợp âm của điệu thức tự nhiên và hoà âm sinh ra **bước cromatic** ở một bè (lên khi thứ tự nhiên → thứ hoà âm, xuống khi trưởng tự nhiên → trưởng hoà âm) [^rimsky-korsakov-1886, tr. 73].
 - Bước cromatic **phải nằm trong cùng một bè**; nếu rơi vào hai bè khác nhau là **quan hệ chéo** (*перечение*), "nghiêm cấm" [^rimsky-korsakov-1886, tr. 74].
@@ -328,6 +383,8 @@ Xem [[hop-am-at-phu]] (lệch giọng bằng át phụ theo sách bốn tác gi�
 - Trong chorale **không dùng** chuyển trưởng → hạ át thứ, thứ → át trưởng; phong cách nhà thờ nghiêm cũng **không dùng chuyển cromatic**. Phải **định các kết trước**, rồi dẫn chuyển giọng tới chúng [^rimsky-korsakov-1886, tr. 79].
 - Tác giả chú thích: **hợp âm bảy và chuyển cromatic cùng nhau** mới thật sự xác lập **phong cách tự do** của hoà âm [^rimsky-korsakov-1886, tr. 79].
 
+::scan rimsky #177,#178,#179,#180,#181,#182,#183 | Thí dụ trong sách, § 57 (tr. 79 – 82, bản in 2014)
+
 ## Họ hàng mức hai và kế hoạch chuyển giọng (§ 58 – 60)
 - **Họ hàng mức hai**: giọng có hợp âm chủ không nằm trong giọng đã cho nhưng có **ít nhất một hợp âm ba chung**. Mỗi giọng có **12 giọng** mức hai; của Đô trưởng gồm La giáng, La, Si giáng, Si, Rê giáng, Rê, Mi giáng, Mi trưởng và Sol thứ, Si giáng thứ, Si thứ, Đô thứ [^rimsky-korsakov-1886, tr. 81].
 - Hợp âm chung chỉ đường đi. Hai giọng cách nhau **2 dấu hoá**: đi qua **giọng trung gian** cách 1 dấu, nhưng **tránh ba giọng trưởng (hay ba giọng thứ) liền nhau**. Ví dụ Đô → Rê: kế hoạch Đô – Sol – Rê (ba trưởng, đi quãng 5 đều đặn, đơn điệu) kém hơn Đô – Mi thứ – Rê (có một giọng thứ xen giữa, bước một lên quãng 3, bước hai xuống quãng 2) [^rimsky-korsakov-1886, tr. 82 – 83].
@@ -335,6 +392,9 @@ Xem [[hop-am-at-phu]] (lệch giọng bằng át phụ theo sách bốn tác gi�
 - Trưởng → thứ cùng tên (Đô – Đô thứ) phải chèn thêm giọng song song của giọng mới: Đô – (Fa thứ – Mi giáng) – Đô thứ — "chỉ dùng cách này" [^rimsky-korsakov-1886, tr. 83 – 84].
 - **Chuyển hoàn toàn**: đi qua đủ các giọng của kế hoạch và củng cố giọng mới bằng kết; bài tập: chuyển giọng bằng nốt tròn không chia ô; câu 8 ô; bài 16 ô hai phần (đi rồi về) [^rimsky-korsakov-1886, tr. 84 – 86].
 - **Chuyển không hoàn toàn**: thay giọng trung gian bằng **chỉ hợp âm chủ** của nó, không củng cố [^rimsky-korsakov-1886, tr. 86].
+
+::scan rimsky #184,#185,#186 | Thí dụ trong sách, § 59 (tr. 84 – 86, bản in 2014)
+::scan rimsky #187 | Thí dụ trong sách, § 60 (tr. 86, bản in 2014)
 
 ## Giọng xa (§ 61)
 Mọi giọng ngoài mức một và mức hai là **giọng xa**; chuyển qua các giọng gần. Từ giọng thăng sang phía giáng: từ trưởng thì **nhảy ngay 4 dấu** (vào hạ át thứ), từ thứ thì trước hết sang trưởng song song hay một trưởng gần. Từ giọng giáng sang phía thăng: từ thứ nhảy 4 dấu (vào át trưởng), từ trưởng thì trước hết sang thứ song song hay một thứ gần. Ví dụ: Si – Mi thứ – Đô – Rê thứ – Si giáng [^rimsky-korsakov-1886, tr. 86 – 87].
@@ -347,6 +407,9 @@ Mọi giọng ngoài mức một và mức hai là **giọng xa**; chuyển qua 
 - Bài tập: viết **prelude chuyển giọng** có âm ngân át trước khi trở về và âm ngân chủ để kết [^rimsky-korsakov-1886, tr. 89].
 
 Xem [[bass-ngan]].
+
+::scan rimsky #188,#189,#190 | Thí dụ trong sách, § 62 (tr. 88 – 89, bản in 2014)
+::scan rimsky #191,#192,#193,#194 | Thí dụ trong sách, § 63 (tr. 90, bản in 2014)
 
 ## Đối chiếu
 Sách bốn tác giả giữ ý trung tâm của Rimsky-Korsakov — chuyển giọng **qua hợp âm chung**, phân biệt **chuyển hẳn** và **lệch giọng** — nhưng giải thích lệch giọng chủ yếu bằng **át phụ** (DD, D/S…) và gọi tên theo chức năng. Khái niệm "họ hàng mức hai" và cách lập kế hoạch qua giọng trung gian vẫn dùng trong giảng dạy.
@@ -380,6 +443,10 @@ Hình hoá giai điệu gồm **nốt lướt**, **nốt thêu** và **nốt ch�
 
 Với nốt lướt cromatic kép, ba, đôi khi chọn cách viết **dễ đọc hơn**. Nốt lướt cromatic đặt trong khoảng **một cung** giữa hai âm hợp âm (hay giữa nốt lướt diatonic); âm đã biến cromatic **không đồng thời với chính âm đó chưa biến** ở bè khác [^rimsky-korsakov-1886, tr. 94 – 95].
 
+::scan rimsky #195,#196,#197,#198,#199,#200 | Thí dụ trong sách, § 65 (tr. 91 – 93, bản in 2014)
+::scan rimsky #201,#202,#203,#204 | Thí dụ trong sách, § 66 (tr. 93 – 94, bản in 2014)
+::scan rimsky #205,#206,#207,#208,#209,#210,#211,#212,#213,#214 | Thí dụ trong sách, § 67 (tr. 94 – 97, bản in 2014)
+
 ## Nốt thêu (§ 68)
 Âm ở phách yếu giữa hai lần lặp của **cùng một âm hợp âm**, cách nó một bậc lên (**thêu trên**) hoặc xuống (**thêu dưới**); cách một cung hay nửa cung theo âm giai, nhưng có thể **kéo sát nửa cung** bằng dấu hoá — dấu hoá ấy không phải dấu hiệu chuyển giọng. Thêu trên quanh quãng 7 thì không được. Âm chính có thể đồng thời được nhân đôi ở bè khác cách ít nhất một quãng 8 (với quãng 3: chỉ ở hợp âm sáu, khi thêu trên). Thêu ở hai, ba bè đi song song quãng 3/6 hoặc ngược hướng, có khi tạo **hợp âm "giả"** [^rimsky-korsakov-1886, tr. 95 – 97].
 
@@ -390,11 +457,17 @@ Với nốt lướt cromatic kép, ba, đôi khi chọn cách viết **dễ đ�
 - **Đi lên**: nửa cung đẹp hơn một cung; thường nhất là **nốt chờ âm dẫn**; âm giải quyết không có ở bè cao hơn. Nốt chờ kép, ba đi song song quãng 3/6 hoặc ngược hướng; hai nốt chờ sai riêng lẻ có khi ghép thành một nốt chờ đúng. Một số nốt chờ phức được vài tác giả coi là **hợp âm mười một, mười ba** [^rimsky-korsakov-1886, tr. 102 – 104].
 - **Nốt chờ quãng 8 giảm** (hay đồng âm tăng) với bass của hợp âm bảy giảm: gặp khi chuyển cromatic sang thứ, ở kết ngắt trong trưởng, kết nửa trong thứ… [^rimsky-korsakov-1886, tr. 104].
 
+::scan rimsky #215,#216,#217,#218,#219 | Thí dụ trong sách, § 69 (tr. 98 – 99, bản in 2014)
+::scan rimsky #220,#221,#222,#223,#224,#225,#226,#227,#228,#229,#230,#231,#232,#233,#234,#235 | Thí dụ trong sách, § 70 (tr. 100 – 104, bản in 2014)
+
 ## Hình hoá nghiêm (§ 73 – 74)
 - Các âm hợp âm thuận và quãng 7 nhỏ được lấy và rời **bằng bước nhảy** tự do, vừa giữ chuyển động vừa tạo chỗ cho nốt chờ hay nốt lướt ở nơi "tưởng không thể": dẫn giọng nhảy thì không có chỗ cho nốt chờ, dẫn giọng liền bậc thì không có chỗ cho nốt lướt [^rimsky-korsakov-1886, tr. 105].
 - Nốt lướt và nốt thêu đôi khi **ở phách mạnh**, nếu không tạo hợp âm mới; âm giải quyết của nghịch âm có thể ở bè khác cách quãng 8, nhưng **phải ở dưới**, và không được là quãng 3 của hợp âm [^rimsky-korsakov-1886, tr. 105 – 106]. Một số quãng 8, 5 "ẩn" trong hình hoá vẫn **bị coi là song song** và cấm; ở phách yếu thì được [^rimsky-korsakov-1886, tr. 107].
 - **Cần tránh**: hình chỉ gồm nốt thêu; hình lặp âm hợp âm; nhiều hình liền chỉ có âm hợp âm (đó là hình hoá hoà âm); nhảy sau khi giải quyết nốt chờ; nhảy quãng 3 xuống sau âm dẫn ngắn; lặp âm giải quyết của nốt chờ; lặp ngay ở phách mạnh âm vừa kết thúc hình [^rimsky-korsakov-1886, tr. 108 – 109].
 - **Chorale hình hoá**: giữ nguyên giai điệu chorale, ba bè dưới **duy trì chuyển động liên tục**, chỉ dừng ở fermata; không dùng nốt lướt cromatic. Phối giai điệu có sẵn hình hoá: các bè đệm giữ chuyển động khi giai điệu dừng [^rimsky-korsakov-1886, tr. 109].
+
+::scan rimsky #236,#237,#238,#239,#240,#241,#242,#243 | Thí dụ trong sách, § 73 (tr. 105 – 107, bản in 2014)
+::scan rimsky #244,#245,#246,#247,#248,#249,#250,#251,#252,#253,#254,#255,#256,#257 | Thí dụ trong sách, § 74 (tr. 108 – 112, bản in 2014)
 
 ## Hình hoá tự do (§ 75 – 76)
 Các thủ pháp chính, chủ yếu để trang trí bè trên [^rimsky-korsakov-1886, tr. 112 – 116]:
@@ -408,6 +481,8 @@ Các thủ pháp chính, chủ yếu để trang trí bè trên [^rimsky-korsako
 **Luật chung**: các nghịch âm ấy theo luật nốt chờ — không nhân đôi âm giải quyết ở bè khác, trừ âm gốc ở bass cách ít nhất một quãng 8 [^rimsky-korsakov-1886, tr. 113]. Quãng 5 song song sinh ra do nhảy tới nốt chờ không chuẩn bị "không có ý nghĩa" [^rimsky-korsakov-1886, tr. 114]. Theo tác giả, dùng đúng chỗ nốt đón, nốt thoát và nốt chờ bỏ dở "rất khó với học trò" [^rimsky-korsakov-1886, tr. 116].
 
 Xem cách trình bày hiện đại: [[not-ngoai-hop-am]].
+
+::scan rimsky #258,#259,#260,#261,#262,#263,#264,#265,#266,#267,#268,#269 | Thí dụ trong sách, § 75 (tr. 112 – 117, bản in 2014)
 
 ## Bài tập
 1. Viết âm giai cromatic đi lên và đi xuống ở Rê trưởng và Si thứ đúng cách viết của § 66.
@@ -437,6 +512,11 @@ Xem [[hop-am-napoli]].
 
 Xem [[hop-am-ba-tang]].
 
+::scan rimsky #270,#271,#272,#273,#274,#275 | Thí dụ trong sách, § 78 (tr. 118 – 119, bản in 2014)
+::scan rimsky #276,#277,#278,#279 | Thí dụ trong sách, § 79 (tr. 120, bản in 2014)
+::scan rimsky #280,#281,#282 | Thí dụ trong sách, § 80 (tr. 121, bản in 2014)
+::scan rimsky #283,#284,#285 | Thí dụ trong sách, § 81 (tr. 121 – 122, bản in 2014)
+
 ## Hợp âm có quãng 6 tăng (§ 82)
 Biến đổi cromatic các hợp âm bậc II và IV của trưởng và thứ hoà âm; để dễ nhìn, tác giả dựng tất cả **trên bậc VI** làm bass [^rimsky-korsakov-1886, tr. 122 – 123]:
 
@@ -454,6 +534,8 @@ Biến đổi cromatic các hợp âm bậc II và IV của trưởng và thứ 
 
 Xem [[hop-am-sau-tang]].
 
+::scan rimsky #286,#287,#288,#289,#290,#291,#292 | Thí dụ trong sách, § 82 (tr. 122 – 124, bản in 2014)
+
 ## Trùng âm và chuyển giọng đột ngột (§ 83 – 86)
 Phương tiện chuyển giọng đột ngột: trùng âm của hợp âm quãng 6 tăng, của **hợp âm bảy giảm**, của **hợp âm ba tăng**, và các **tiến hành giả** [^rimsky-korsakov-1886, tr. 124].
 
@@ -462,6 +544,10 @@ Phương tiện chuyển giọng đột ngột: trùng âm của hợp âm quãn
 - **Hợp âm ba tăng**: 4 cách giải quyết, 3 cách viết → **12 cách**; trong bốn bè hiếm khi dùng để chuyển giọng [^rimsky-korsakov-1886, tr. 127 – 128].
 
 Xem [[hop-am-bay-giam]].
+
+::scan rimsky #293,#294,#295 | Thí dụ trong sách, § 84 (tr. 124 – 125, bản in 2014)
+::scan rimsky #296,#297,#298,#299,#300 | Thí dụ trong sách, § 85 (tr. 125 – 127, bản in 2014)
+::scan rimsky #301,#302,#303,#304 | Thí dụ trong sách, § 86 (tr. 127 – 128, bản in 2014)
 
 ## Tiến hành giả (§ 87 – 92)
 **Tiến hành giả** là nối hai hợp âm thuộc **hai giọng hay hai điệu thức khác nhau**. Điều kiện bắt buộc: **dẫn giọng thật êm, giữ âm chung tại chỗ**; càng nhiều âm chung càng "mềm và đẹp" [^rimsky-korsakov-1886, tr. 128].
@@ -473,16 +559,30 @@ Xem [[hop-am-bay-giam]].
 
 Xem [[trung-am-cromatic]].
 
+::scan rimsky #305,#306,#307 | Thí dụ trong sách, § 88 (tr. 128 – 129, bản in 2014)
+::scan rimsky #308,#309 | Thí dụ trong sách, § 89 (tr. 129, bản in 2014)
+::scan rimsky #310,#311,#312 | Thí dụ trong sách, § 90 (tr. 130, bản in 2014)
+::scan rimsky #313,#314,#315,#316,#317,#318,#319,#320 | Thí dụ trong sách, § 91 (tr. 131 – 132, bản in 2014)
+::scan rimsky #321,#322,#323,#324 | Thí dụ trong sách, § 92 (tr. 133 – 134, bản in 2014)
+
 ## Ba phong cách hoà âm chorale (§ 93)
 Mọi tổ hợp nghịch, chuyển giọng cromatic và đột ngột, tiến hành giả đều áp vào chorale được. Tác giả phân biệt **phong cách nghiêm**, **tự do** và phong cách thứ ba — **"phong cách hoà âm tinh tế"** (*изысканный гармонический стиль*). Bài tập 35: mỗi chorale phối **ba lần** — nghiêm bằng hợp âm; có nốt chờ, nốt lướt, hình hoá nghiêm ở ba bè dưới; và tự do với hợp âm nghịch, tiến hành giả [^rimsky-korsakov-1886, tr. 135].
+
+::scan rimsky #325,#326 | Thí dụ trong sách, § 93 (tr. 135, bản in 2014)
+::scan rimsky #327,#328,#329 | Thí dụ trong sách, § 94 (tr. 136, bản in 2014)
+::scan rimsky #330,#331,#332,#333,#334,#335,#336 | Thí dụ trong sách, § 95 (tr. 136 – 138, bản in 2014)
 
 ## Ba phụ lục
 - **Phụ lục I — hình hoá hoà âm** (§ 94): rải hợp âm, lấy các âm lần lượt theo thứ tự bất kỳ; chủ yếu để làm **phần đệm nhạc cụ**, thuộc môn sáng tác tự do. Có cả các hình hoá giai điệu trên âm ngân [^rimsky-korsakov-1886, tr. 136].
 - **Phụ lục II — các ngoại lệ của luật dẫn giọng** (§ 95), "chỉ để biết, nên tránh": quãng 5 giảm – đúng ở bè giữa khi VII6 → I6; quãng 7 của D4/3 đi lên khi bè giữa giữ âm át; quãng 7 át đi lên ở alto khi xếp gần, bass đi xuống; quãng 5 đúng song song khi giải quyết năm sáu tăng; quãng 5 song song sau kết khi mở câu mới; quãng 5 đúng (song song hay ngược) ở kết cuối để có hợp âm chủ đầy đủ; quãng 2 tăng (1½ cung) của âm giai thứ hoà âm ở giai điệu [^rimsky-korsakov-1886, tr. 136 – 138].
 - **Phụ lục III — tiến hành giả kiểu mô tiến** (§ 96): âm giai cromatic đi xuống ở bass phối bằng chuỗi năm sáu tăng; âm giai toàn cung đi xuống ở bass phối bằng chuỗi D7; chuỗi bảy giảm cromatic lên xuống; chuỗi hợp âm sáu trưởng cromatic trên âm ngân [^rimsky-korsakov-1886, tr. 138 – 139].
 
+::scan rimsky #337,#338,#339 | Thí dụ trong sách, § 96 (tr. 138 – 139, bản in 2014)
+
 ## Mẫu: biến tấu hoà âm và prelude chuyển giọng
 Khi đã vững, học trò viết **prelude chuyển giọng tự do bốn bè**, hai hay ba đoạn, và **biến tấu hoà âm** trên một câu cho sẵn; sách in mẫu: các biến tấu "kiểu chorale", hình hoá giai điệu ở bè trên, phối lại bằng tiến hành giả… và một prelude chuyển giọng dùng mọi phương tiện hoà âm (từ bản 16 là mẫu của N. A. Sokolov) [^rimsky-korsakov-1886, tr. 139 – 141]. Sau đó là phần bài tập (bè trầm và giai điệu cho sẵn) [^rimsky-korsakov-1886, tr. 142 – 148].
+
+::scan rimsky #340,#341,#342,#343,#344,#345,#346,#347,#348,#349 | Mẫu cuối sách: biến tấu hoà âm và prelude (tr. 140 – 147, bản in 2014)
 
 ## Đối chiếu
 Sách bốn tác giả học hợp âm Napoli, hợp âm quãng 6 tăng, hợp âm bảy giảm và chuyển giọng trùng âm ở cuối giáo trình (chủ đề 52 – 59 trở đi), cùng tên gọi; khái niệm "tiến hành giả" của Rimsky-Korsakov tương ứng phần **quan hệ trung âm** và **chuyển giọng đột ngột** trong cách trình bày hiện đại — xem [[trung-am-cromatic]], [[hop-am-not-chung]].

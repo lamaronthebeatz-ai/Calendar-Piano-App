@@ -14,6 +14,7 @@ export const SCAN_BOOKS: Record<string, { source: string; url: string; unit: 'ex
   fux: { source: 'Fux, Practical Rules for Learning Composition', url: 'https://archive.org/details/practicalrulesfo00fuxj', unit: 'page' },
   neuhaus: { source: 'Neuhaus, The Art of Piano Playing (Kahn & Averill, 1993)', url: '', unit: 'fig', small: 0.5 },
   taneev: { source: 'Phạm Tú Hương, Phức điệu nghiêm khắc (Nhạc viện Hà Nội, 1991)', url: '', unit: 'ex', exWord: 'Thí dụ' },
+  rimsky: { source: 'Rimsky-Korsakov, Практический учебник гармонии (Lan\' – Planeta muzyki, 2014)', url: '', unit: 'ex' },
   scriabin2: { source: 'Scriabin, Sonate-Fantaisie Op. 19 (Belaieff, 1898)', url: 'https://imslp.org/wiki/Piano_Sonata_No.2,_Op.19_(Scriabin,_Aleksandr)', unit: 'page' },
 }
 
@@ -23,6 +24,7 @@ const loaders: Record<string, () => Promise<{ default: ScanItem[] }>> = {
   taneev: () => import('./scans/taneev.json'),
   neuhaus: () => import('./scans/neuhaus.json'),
   scriabin2: () => import('./scans/scriabin2.json'),
+  rimsky: () => import('./scans/rimsky.json'),
 }
 const cache = new Map<string, Promise<ScanItem[]>>()
 export function loadScans(book: string): Promise<ScanItem[]> {
