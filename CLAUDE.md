@@ -17,6 +17,8 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 5. **Kiểm tra trước khi báo xong:** chạy bộ lệnh dưới; thay đổi giao diện thì chụp ảnh Playwright (điện thoại 393×852 + màn rộng) và đo khung hình khi có hiệu ứng. Không đưa lệnh kiểm qua `| tail` mà không có `set -o pipefail` (từng nuốt mất lỗi `check:links`). File thử nghiệm chỉ ghi vào scratchpad, không vào repo. Tắt server bằng PID, không `pkill -f`.
 6. **Cập nhật ghi chú** của phần vừa đổi trong `docs/notes/` (ngắn, ghi điều Claude sau cần biết: file, quyết định, lỗi đã gặp). Thêm phần mới thì thêm một dòng vào bảng dưới. Không phình CLAUDE.md.
 7. Báo cáo cuối: vài gạch đầu dòng — đã làm gì, chưa kiểm được gì (vd. Safari thật).
+8. **Tiết kiệm token cho việc lớn:** gộp nhiều bước vào một lệnh/script Python (sửa hàng loạt, sinh nội dung, kiểm tra), xem output bằng `tail`/đếm thay vì in toàn bộ. Ảnh: xem ít, cắt đúng vùng, ghép nhiều ảnh vào một tờ (contact sheet) thay vì đọc từng cái. Việc thủ công lặp lại hàng trăm lần (chép nhạc bằng tay, xem từng trang) → tìm cách tự động trước (vd. thí dụ sách: **cắt ảnh từ scan bằng `::scan`, không khắc LilyPond** — Lamar đã chọn). Chạy bộ kiểm tra đầy đủ **một lần** trước push, không chạy lặp sau mỗi sửa nhỏ. Không chờ CI bằng tay: `send_later` ~10 phút rồi báo một dòng.
+9. **Nội dung thư viện không đánh lẻ:** kiến thức từ sách mới gộp vào bài cùng chủ đề (mục `## Theo sách gốc …`), không tạo loạt bài riêng theo từng cuốn, trừ khi Lamar yêu cầu.
 
 ## Trước khi push
 ```bash
