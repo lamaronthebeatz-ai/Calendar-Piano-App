@@ -45,6 +45,16 @@ Sự giải quyết của hợp âm Tristan bị trì hoãn **gần bốn giờ*
 ## Các bài khác trong nhóm
 - Bè trầm: [[bass-ngan]] (bass ngân dưới các hợp âm cromatic), [[bass-so]] (bè trầm có số của thời [[thoi-ky-baroque|Baroque]]).
 - Hai cách [[phan-tich-hoa-am|phân tích hoà âm]] cromatic: [[phan-tich-schenker]] (tầng cấu trúc) và [[neo-riemann]] (biến đổi P – L – R giữa các hợp âm ba).
+
+## Theo sách gốc Rimsky-Korsakov
+*Phần này đọc theo* Практический учебник гармонии *(Sách giáo khoa hoà âm thực hành, 1884 – 1886) của N. A. Rimsky-Korsakov, sách gốc của trường hoà âm Petersburg mà sách bốn tác giả kế thừa; thí dụ là ảnh cắt từ bản in 2014.*
+
+### Cromatic, quan hệ chéo, chuyển cromatic (§ 53 – 55)
+- Nối thẳng hợp âm của điệu thức tự nhiên và hoà âm sinh ra **bước cromatic** ở một bè (lên khi thứ tự nhiên → thứ hoà âm, xuống khi trưởng tự nhiên → trưởng hoà âm) [^rimsky-korsakov-1886, tr. 73].
+- Bước cromatic **phải nằm trong cùng một bè**; nếu rơi vào hai bè khác nhau là **quan hệ chéo** (*перечение*), "nghiêm cấm" [^rimsky-korsakov-1886, tr. 74].
+- **Chuyển cromatic**: hợp âm trung gian thuộc điệu thức tự nhiên chạm vào và biến thành hợp âm của điệu thức hoà âm (thường là V, VII của thứ hoà âm), rồi dẫn vào giọng mới. Bước cromatic đi lên dẫn vào **thứ**. Cần dẫn giọng êm và âm chung — **bước cromatic được tính như âm chung** [^rimsky-korsakov-1886, tr. 74]. Cụ thể: từ trưởng sang bậc II và VI; từ thứ sang hạ át; nếu một âm được nhân đôi đi cromatic thì bè kia phải đi một cung ngược hướng [^rimsky-korsakov-1886, tr. 74 – 75].
+- Bước cromatic **đi xuống** không phải phương tiện chuyển giọng (không đem dấu hiệu giọng mới) nhưng "nghe đẹp" [^rimsky-korsakov-1886, tr. 75].
+- Ưu điểm của chuyển cromatic: **ngắn mà cực kỳ rõ**, vì cromatic biểu lộ ngay dấu hiệu giọng mới [^rimsky-korsakov-1886, tr. 76].
 `,
   },
   {
@@ -127,6 +137,28 @@ Trong Đô trưởng/thứ: **A♭** (bậc 6 giáng) ở bè trầm và **F♯*
 Ger+6 (A♭ – C – E♭ – F♯) nghe giống hệt A♭7 (A♭ – C – E♭ – G♭) — một cửa ngõ để [[chuyen-giong]] qua [[trung-am]]. Cũng là cơ sở của [[thay-the-tritone]] trong jazz.
 
 Tổng quan: [[hoa-am-cromatic]].
+
+## Theo sách gốc Rimsky-Korsakov
+*Phần này đọc theo* Практический учебник гармонии *(Sách giáo khoa hoà âm thực hành, 1884 – 1886) của N. A. Rimsky-Korsakov, sách gốc của trường hoà âm Petersburg mà sách bốn tác giả kế thừa; thí dụ là ảnh cắt từ bản in 2014.*
+
+### Hợp âm có quãng 6 tăng (§ 82)
+Biến đổi cromatic các hợp âm bậc II và IV của trưởng và thứ hoà âm; để dễ nhìn, tác giả dựng tất cả **trên bậc VI** làm bass [^rimsky-korsakov-1886, tr. 122 – 123]:
+
+| Hợp âm | Ở đâu | Tương đương trùng âm |
+|---|---|---|
+| **Hợp âm sáu tăng** | Trưởng và thứ | D7 thiếu |
+| **Năm sáu tăng kép** | Chỉ trưởng | D7 có quãng 5 nâng |
+| **Năm sáu tăng** | Chỉ thứ | D7 đầy đủ |
+| **Ba bốn tăng** | Trưởng và thứ | Không giống hợp âm nào |
+| **Ba bốn tăng kép** | Chỉ trưởng | D7 đầy đủ |
+
+- Tất cả giải quyết về **hợp âm át** hay **hợp âm chủ bốn sáu**; ba bốn tăng thì cả hai như nhau. Hai âm của quãng 6 tăng **không bao giờ nhân đôi** [^rimsky-korsakov-1886, tr. 123].
+- Vì **quãng 6 tăng = quãng 7 thứ** về âm thanh, vài hợp âm này nghe như D7 — đó là cơ sở của chuyển giọng trùng âm [^rimsky-korsakov-1886, tr. 123].
+- Tác giả khuyên: dùng hợp âm quãng 6 và quãng 5 tăng **độc lập, không để chuyển giọng** thì "không nên cho học trò", vì làm bài "có vẻ kịch tính giả tạo và khoa trương"; dùng như hợp âm lướt thì được [^rimsky-korsakov-1886, tr. 123 – 124].
+
+Xem [[hop-am-sau-tang]].
+
+::scan rimsky #286,#287,#288,#289,#290,#291,#292 | Thí dụ trong sách, § 82 (tr. 122 – 124, bản in 2014)
 `,
   },
   {
@@ -194,6 +226,21 @@ Một nốt chỉ được gọi là bass ngân khi phía trên nó có **ít nh
 
 ## Tác dụng
 Khi hoà âm trên không còn chứa nốt ngân, ta có một [[thuan-nghich|nghịch âm]] được "cho phép" — sức căng tăng dần cho đến khi hoà âm quay về khớp với bass. Trên piano, bass ngân thường được giữ bằng [[ban-dap|pedal sostenuto]] hoặc lặp lại theo [[ostinato]].
+
+## Theo sách gốc Rimsky-Korsakov
+*Phần này đọc theo* Практический учебник гармонии *(Sách giáo khoa hoà âm thực hành, 1884 – 1886) của N. A. Rimsky-Korsakov, sách gốc của trường hoà âm Petersburg mà sách bốn tác giả kế thừa; thí dụ là ảnh cắt từ bản in 2014.*
+
+### Âm ngân (§ 62 – 63)
+- **Âm ngân** (*органный пункт*, "pedal") là âm giữ dài ở bass, ba bè trên đi hợp âm theo luật **ba bè** (thường bỏ quãng 5) [^rimsky-korsakov-1886, tr. 88].
+- Hai loại: **trên át** — kéo dài bass của K64, kết bằng hoà âm át giải quyết về chủ; **trên chủ** — kéo dài bass của hợp âm chủ, khép bằng kết chính cách hay plagal ở ba bè trên. Âm ngân **bắt đầu ở phách mạnh**; âm ngân chủ có thể theo ngay âm ngân át [^rimsky-korsakov-1886, tr. 88].
+- Trên âm ngân được mọi hợp âm của giọng và cả lệch giọng — âm ngân dài thì lệch giọng "rất nên có". Trên âm ngân át ở Đô trưởng: lệch sang mọi giọng mức một; trên âm ngân chủ: sang hạ át thứ, trưởng và các giọng gần của nó [^rimsky-korsakov-1886, tr. 88 – 89].
+- Âm giữ cũng có thể ở bè trên hay bè giữa; có cả âm ngân kép chủ – át ở các bè dưới [^rimsky-korsakov-1886, tr. 90].
+- Bài tập: viết **prelude chuyển giọng** có âm ngân át trước khi trở về và âm ngân chủ để kết [^rimsky-korsakov-1886, tr. 89].
+
+Xem [[bass-ngan]].
+
+::scan rimsky #188,#189,#190 | Thí dụ trong sách, § 62 (tr. 88 – 89, bản in 2014)
+::scan rimsky #191,#192,#193,#194 | Thí dụ trong sách, § 63 (tr. 90, bản in 2014)
 `,
   },
   {
@@ -239,6 +286,22 @@ Trong mô tiến, quy tắc thông thường được **nới**: [[hop-am-cam-am
 
 ## Ứng dụng
 Rất phổ biến trong nhạc [[thoi-ky-baroque|Baroque]] ([[antonio-vivaldi|Vivaldi]], [[johann-sebastian-bach|Bach]], [[george-frideric-handel|Handel]]), dùng để [[chuyen-giong]] hoặc kéo dài đoạn nối. Có thể thay mỗi hợp âm bằng [[hop-am-bay|hợp âm 7]] hoặc [[hop-am-at-phu|át phụ]] để tăng lực đẩy (E7 – A7 – D7 – G7 – C). Vòng [[vong-hop-am|"Autumn Leaves"]] là mô tiến quãng 5 kinh điển của jazz.
+
+## Theo sách gốc Rimsky-Korsakov
+*Phần này đọc theo* Практический учебник гармонии *(Sách giáo khoa hoà âm thực hành, 1884 – 1886) của N. A. Rimsky-Korsakov, sách gốc của trường hoà âm Petersburg mà sách bốn tác giả kế thừa; thí dụ là ảnh cắt từ bản in 2014.*
+
+### Mô tiến: bản đồ quan hệ của mọi hợp âm (§ 43 – 45)
+Đây là ý sư phạm đặc sắc của sách: dùng **mô tiến** để học trò thấy mọi hợp âm của giọng liên hệ với nhau thế nào.
+- **Mô tiến quãng 4 – 5**: lấy motif V → I, nhắc lại mỗi lần thấp một bậc → chuỗi I – IV – VII – III – VI – II – V – I (quan hệ "tự nhiên nhất" của mọi hợp âm ba). Nối luân phiên hoà thanh – giai điệu; hợp âm ba giảm, ngoài mô tiến chỉ dùng ở dạng hợp âm sáu, trong mô tiến được dùng thế gốc. Ở thứ dùng hợp âm của thứ tự nhiên để tránh quãng 2 tăng [^rimsky-korsakov-1886, tr. 59 – 60].
+- **Mô tiến quãng 2 – 3**: motif IV → V hạ dần một bậc — luân phiên nối giai điệu (quan hệ quãng 2) và nối hoà thanh (quan hệ quãng 3) [^rimsky-korsakov-1886, tr. 60 – 61].
+- **Mô tiến hợp âm bảy**: mỗi hợp âm bảy giải quyết vào hợp âm ba **cao hơn quãng 4**; đầy đủ → thiếu và ngược lại. Giữ quãng 3 của hợp âm bảy này làm quãng 7 của hợp âm bảy sau thì được chuỗi toàn hợp âm bảy, thể đảo luân phiên 6/5 – 2 và 4/3 – thế gốc [^rimsky-korsakov-1886, tr. 62 – 63].
+- Bài tập trên đàn: chơi mọi mô tiến ở mọi giọng, bắt đầu từ bất kỳ bậc nào [^rimsky-korsakov-1886, tr. 61, 64].
+
+Xem [[mo-tien-hoa-am]].
+
+::scan rimsky #123,#124,#125 | Thí dụ trong sách, § 43 (tr. 59 – 60, bản in 2014)
+::scan rimsky #126,#127,#128,#129,#130 | Thí dụ trong sách, § 44 (tr. 60 – 61, bản in 2014)
+::scan rimsky #131,#132,#133,#134,#135,#136,#137,#138,#139,#140,#141,#142,#143,#144,#145,#146,#147,#148,#149,#150,#151 | Thí dụ trong sách, § 45 (tr. 62 – 68, bản in 2014)
 `,
   },
   {
@@ -280,6 +343,57 @@ Kopp xây dựng cả một hệ thống để coi các quan hệ quãng 3 này 
 Trong chương 1 Sonata **"Waldstein"** ([[ludwig-van-beethoven|Beethoven]], Op. 53, Đô trưởng), chủ đề 2 ở phần trình bày nằm ở **Mi trưởng** (III♯) thay vì Sol trưởng (V) như thông lệ — một quan hệ trung âm cromatic ở tầm cả [[hinh-thuc-am-nhac|hình thức]] (xem [[hinh-thuc-sonata]]).
 
 Phân tích quan hệ này một cách hệ thống: [[neo-riemann]]. Liên quan: [[hop-am-muon]] (A♭ cũng là ♭VI mượn), [[hoa-am-cromatic]].
+
+## Theo sách gốc Rimsky-Korsakov
+*Phần này đọc theo* Практический учебник гармонии *(Sách giáo khoa hoà âm thực hành, 1884 – 1886) của N. A. Rimsky-Korsakov, sách gốc của trường hoà âm Petersburg mà sách bốn tác giả kế thừa; thí dụ là ảnh cắt từ bản in 2014.*
+
+### Hợp âm biến đổi cromatic (§ 77 – 79)
+Nốt lướt cromatic tạo nên một số hợp âm đã có giá trị độc lập — **hợp âm biến đổi**. Hai loại [^rimsky-korsakov-1886, tr. 118]:
+1. Hợp âm quen thuộc nhưng xuất hiện **ở bậc không thể có** nếu không có nốt lướt cromatic: **hợp âm bảy át giả** trên bậc II, **hợp âm bảy giảm** trên bậc II nâng, **hợp âm ba trưởng trên bậc II hạ**.
+2. Hợp âm **mới về cấu tạo**: hợp âm có **quãng 5 tăng** và **quãng 6 tăng**.
+
+- **D7 giả**: nâng quãng 3 của II7 (ở trưởng); giải quyết về I hay V. **Bảy giảm giả**: nâng thêm âm gốc; chỉ về I. Cả hai thường ở dạng 6/5, 4/3 trong kết phức; cũng dùng độc lập sau I, VI, IV. Ở thứ, D7 giả trên bậc II còn phải nâng quãng 5; bảy giảm giả trên bậc II ở thứ không có, nhưng dựng được trên bậc IV nâng [^rimsky-korsakov-1886, tr. 118 – 119].
+- **Hợp âm ba trưởng trên bậc II hạ** (từ hạ âm gốc của hợp âm II trong trưởng hay thứ hoà âm): dùng ở dạng **hợp âm sáu nhân đôi quãng 3 — "hợp âm sáu Napoli"**, giải quyết về K64 hay hợp âm chủ; cũng dùng độc lập, nhất là sau I trong kết phức; sang V hay V7 thì có một bè đi **quãng 3 giảm** xuống. Hạ bậc II cũng tạo **D7 có quãng 5 hạ**. Dùng trong bài chuyển giọng, "không lạm dụng" [^rimsky-korsakov-1886, tr. 120].
+
+Xem [[hop-am-napoli]].
+
+### Trùng âm và chuyển giọng đột ngột (§ 83 – 86)
+Phương tiện chuyển giọng đột ngột: trùng âm của hợp âm quãng 6 tăng, của **hợp âm bảy giảm**, của **hợp âm ba tăng**, và các **tiến hành giả** [^rimsky-korsakov-1886, tr. 124].
+
+- **Hợp âm quãng 6 tăng**: lấy D7 của giọng cũ (thiếu thì nhân đôi quãng 3), đọc lại thành hợp âm quãng 6 tăng, giải quyết về hợp âm ba hay K64 → sang giọng xa (từ Đô: Fa thăng, Si, Si thứ…). Thực hành: tìm D7 cao hơn nửa cung, hay hợp âm hai thấp hơn nửa cung, so với át của giọng mới; có được nó (trực tiếp hay bằng chuyển giọng ngắn nhất) rồi đọc lại và giải quyết [^rimsky-korsakov-1886, tr. 124 – 125].
+- **Hợp âm bảy giảm**: một hợp âm bảy giải quyết được vào mọi hợp âm ba trừ hai hợp âm ba cấu thành nó → **6 cách** giải quyết; mỗi hợp âm bảy giảm có **3 cách viết trùng âm** khác → **24 cách**, nghĩa là dẫn được vào **bất kỳ giọng nào trong 24 giọng**. Thực hành: tìm hợp âm bảy giảm chứa âm chủ của giọng mới, xếp để giải quyết vào K64 của giọng mới; trước đó có thể biến nó thành hợp âm quãng 6 tăng bằng một nốt lướt cromatic [^rimsky-korsakov-1886, tr. 125 – 126].
+- **Hợp âm ba tăng**: 4 cách giải quyết, 3 cách viết → **12 cách**; trong bốn bè hiếm khi dùng để chuyển giọng [^rimsky-korsakov-1886, tr. 127 – 128].
+
+Xem [[hop-am-bay-giam]].
+
+::scan rimsky #293,#294,#295 | Thí dụ trong sách, § 84 (tr. 124 – 125, bản in 2014)
+::scan rimsky #296,#297,#298,#299,#300 | Thí dụ trong sách, § 85 (tr. 125 – 127, bản in 2014)
+::scan rimsky #301,#302,#303,#304 | Thí dụ trong sách, § 86 (tr. 127 – 128, bản in 2014)
+
+### Tiến hành giả (§ 87 – 92)
+**Tiến hành giả** là nối hai hợp âm thuộc **hai giọng hay hai điệu thức khác nhau**. Điều kiện bắt buộc: **dẫn giọng thật êm, giữ âm chung tại chỗ**; càng nhiều âm chung càng "mềm và đẹp" [^rimsky-korsakov-1886, tr. 128].
+
+- **Kết giả** ở trưởng: V hay V7 giải quyết vào **hợp âm trưởng trên bậc VI hạ** (mượn của thứ cùng tên) có nhân đôi quãng 3; dùng như kết ngắt, rồi thêm kết phức qua hạ át thứ, II6 của trưởng hoà âm hay hợp âm Napoli. Năm sáu tăng và bảy giảm trên IV nâng giải quyết vào K64 trong trưởng cũng giải thích bằng sự **mượn của thứ**. Một dạng khác: V đi vào bảy giảm trên IV nâng, rồi K64 và kết phức. Nên dùng các kết giả trước khi kết bài chuyển giọng [^rimsky-korsakov-1886, tr. 128 – 130].
+- **Tiến hành giả của hợp âm ba**: hai hợp âm trưởng (hay hai thứ) cách nhau quãng 3 trưởng hay thứ; hợp âm trưởng với hợp âm sáu của hợp âm thứ thấp hơn quãng 3 trưởng; hợp âm thứ với hợp âm bốn sáu của hợp âm trưởng cao hơn quãng 3 trưởng [^rimsky-korsakov-1886, tr. 130].
+- **Tiến hành giả của D7**: hợp âm ba với D7 cách quãng 3; D7 với hợp âm ba trưởng cách quãng 3; hai D7 cách quãng 3; hai D7 cách quãng 4 – 5 — loại sau rất thông dụng, sinh ra **mô tiến chuyển giọng liên tục** (mô tiến quãng 4 – 5 mà mọi hợp âm bảy đều biến thành D7), và nhờ đổi trùng âm một hợp âm, đưa về lại giọng ban đầu. Ngoài ra: hai D7 cách quãng 4 tăng / 5 giảm, và hợp âm ba cách quãng 4 tăng [^rimsky-korsakov-1886, tr. 131 – 132].
+- **Dùng để chuyển giọng đột ngột**: áp dụng cho cả giọng gần và xa, nhưng **chuyển đột ngột chỉ nên đi tới họ hàng mức hai**; giọng xa hơn chỉ chuyển dần mới nối được thoả đáng. Lệch đột ngột sang giọng mức hai thì nên ngay sau đó sang giọng mức một đã bị bỏ qua rồi mới về giọng ban đầu; đôi khi về thẳng cũng đủ. Khi phối hoà âm giai điệu, tiến hành giả hợp nhất ở chỗ giai điệu có dạng mô tiến và sau các kết [^rimsky-korsakov-1886, tr. 133 – 134].
+
+Xem [[trung-am-cromatic]].
+
+::scan rimsky #305,#306,#307 | Thí dụ trong sách, § 88 (tr. 128 – 129, bản in 2014)
+::scan rimsky #308,#309 | Thí dụ trong sách, § 89 (tr. 129, bản in 2014)
+::scan rimsky #310,#311,#312 | Thí dụ trong sách, § 90 (tr. 130, bản in 2014)
+::scan rimsky #313,#314,#315,#316,#317,#318,#319,#320 | Thí dụ trong sách, § 91 (tr. 131 – 132, bản in 2014)
+::scan rimsky #321,#322,#323,#324 | Thí dụ trong sách, § 92 (tr. 133 – 134, bản in 2014)
+
+### Đối chiếu
+Sách bốn tác giả học hợp âm Napoli, hợp âm quãng 6 tăng, hợp âm bảy giảm và chuyển giọng trùng âm ở cuối giáo trình (chủ đề 52 – 59 trở đi), cùng tên gọi; khái niệm "tiến hành giả" của Rimsky-Korsakov tương ứng phần **quan hệ trung âm** và **chuyển giọng đột ngột** trong cách trình bày hiện đại — xem [[trung-am-cromatic]], [[hop-am-not-chung]].
+
+### Bài tập
+1. Từ Đô trưởng chuyển sang Si trưởng bằng trùng âm D7 = hợp âm sáu tăng.
+2. Dùng một hợp âm bảy giảm để đi sang bốn giọng khác nhau.
+3. Viết kết giả V7 – ♭VI ở Đô trưởng rồi kết phức về Đô.
+4. Phối một câu chorale ba lần: nghiêm, có hình hoá, và "tinh tế".
 `,
   },
   {
@@ -480,6 +594,20 @@ Có nhà lý thuyết cho rằng hợp âm ba tăng thường **không chỉ là
 
 ## Thời Lãng mạn
 [[franz-liszt|Liszt]] dùng hợp âm ba tăng nhiều hơn hẳn mức trung bình thời ông. Ở tầng lớn, nhiều tác phẩm [[thoi-ky-lang-man|Lãng mạn]] tổ chức các giọng theo chuỗi **đi xuống quãng 3 trưởng** — có thể xem là hợp âm ba tăng "phóng to" thành cấu trúc giọng (xem [[trung-am-cromatic]]). Hợp âm ba tăng cũng nằm trọn trong [[am-giai-cromatic|âm giai toàn cung]].
+
+## Theo sách gốc Rimsky-Korsakov
+*Phần này đọc theo* Практический учебник гармонии *(Sách giáo khoa hoà âm thực hành, 1884 – 1886) của N. A. Rimsky-Korsakov, sách gốc của trường hoà âm Petersburg mà sách bốn tác giả kế thừa; thí dụ là ảnh cắt từ bản in 2014.*
+
+### Hợp âm có quãng 5 tăng (§ 80 – 81)
+- **Hợp âm ba tăng**: nâng quãng 5 của hợp âm ba trưởng hay hạ âm gốc của hợp âm ba thứ. Ngoài vai trò hợp âm lướt cromatic, dùng độc lập khi được chuẩn bị bằng chính hợp âm nó giải quyết vào [^rimsky-korsakov-1886, tr. 121].
+- **D7 có quãng 5 tăng** — chỉ ở trưởng; chuẩn bị bằng chính hợp âm giải quyết, hay bằng IV; thường xếp sao cho **quãng 3 giảm thành quãng 6 tăng**. Bốn bè thì có cả hợp âm chín có quãng 5 tăng [^rimsky-korsakov-1886, tr. 121 – 122].
+
+Xem [[hop-am-ba-tang]].
+
+::scan rimsky #270,#271,#272,#273,#274,#275 | Thí dụ trong sách, § 78 (tr. 118 – 119, bản in 2014)
+::scan rimsky #276,#277,#278,#279 | Thí dụ trong sách, § 79 (tr. 120, bản in 2014)
+::scan rimsky #280,#281,#282 | Thí dụ trong sách, § 80 (tr. 121, bản in 2014)
+::scan rimsky #283,#284,#285 | Thí dụ trong sách, § 81 (tr. 121 – 122, bản in 2014)
 `,
   },
 ]

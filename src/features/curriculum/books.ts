@@ -457,7 +457,7 @@ Cuốn này dạy **hoà âm cổ điển** — hoà âm của thời kỳ thôn
 ## Hệ thống của sách
 Trình tự các bài bám theo thứ tự chủ đề của *Учебник гармонии* (Giáo trình hoà âm) của **I. Dubovsky, S. Evseev, I. Sposobin, V. Sokolov** — thường gọi là "sách giáo khoa bốn tác giả", in lần đầu ở Moskva năm 1937 – 38. Mỗi bài ghi rõ chủ đề tương ứng trong sách đó ở phần "Mục tiêu bài học"; số thứ tự chủ đề theo các bản in gần đây (2005 – 2012), lệch khoảng hai số so với bản 1965, và vài số ở giữa còn mâu thuẫn giữa các nguồn. Lịch sử, gốc lý thuyết (Riemann qua Catoire) và đặc trưng của sách được trình bày ở bài đầu tiên của Phần I.
 
-Cuốn sách còn đọc kèm **sách gốc của trường hoà âm Petersburg**: *Практический учебник гармонии* (Sách giáo khoa hoà âm thực hành, 1884 – 1886) của **N. A. Rimsky-Korsakov** — cuốn mà sách bốn tác giả kế thừa phần thực hành (luật bốn bè, cách nối hợp âm, họ hàng giọng và chuyển giọng qua hợp âm chung). Sáu bài đọc theo năm phần của sách ấy được đặt cạnh các chương tương ứng, để bạn thấy mỗi quy tắc bắt nguồn từ đâu và sách bốn tác giả đã thêm hệ chức năng như thế nào.
+Cuốn sách còn đọc kèm **sách gốc của trường hoà âm Petersburg**: *Практический учебник гармонии* (Sách giáo khoa hoà âm thực hành, 1884 – 1886) của **N. A. Rimsky-Korsakov** — cuốn mà sách bốn tác giả kế thừa phần thực hành (luật bốn bè, cách nối hợp âm, họ hàng giọng và chuyển giọng qua hợp âm chung). Nội dung và thí dụ của sách ấy được lồng thẳng vào từng bài cùng chủ đề, ở mục **Theo sách gốc Rimsky-Korsakov** (bài Kết, Hợp âm bảy, Chuyển giọng, Nốt ngoài hợp âm…); bài đầu của Phần I giới thiệu cả cuốn sách — để bạn thấy mỗi quy tắc bắt nguồn từ đâu và sách bốn tác giả đã thêm hệ chức năng như thế nào.
 
 Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị di động của lối viết nghiêm khắc*, 1909) là hệ thống của môn **phức điệu**, không phải của môn hoà âm — xem cuốn *Phức Điệu Nghiêm Khắc* trong tủ sách và bài [[phuc-dieu-nghiem-khac]]. Cuốn sách này theo hệ thống hoà âm của sách bốn tác giả.
 
@@ -476,8 +476,6 @@ Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị d
           { slug: 'hai-truong-phai-hoa-am', focus: 'Hai truyền thống dạy hoà âm và vì sao thư viện trình bày song song.' },
           { slug: 'ky-hieu-chuc-nang-truong-phai-nga', focus: 'Đọc và viết ký hiệu T, S, D, K64, SII, TSVI, DVII7, DD.' },
           { slug: 'he-thong-hoa-am-co-dien', focus: 'Bức tranh chung: hoà âm cổ điển hình thành thế nào (Rameau, Weber, Riemann).' },
-          { slug: 'rimsky-korsakov-hoa-am-thuc-hanh', focus: 'Sách gốc của trường Petersburg: Rimsky-Korsakov 1884 – 1886, mục đích, bảy bài thi, năm phần.' },
-          { slug: 'rimsky-korsakov-hoa-am-1-khai-niem', focus: 'Rimsky-Korsakov, Phần I: hợp âm, điệu thức, nối hoà thanh và nối giai điệu.' },
         ],
         exercises: [
           'Ghi ký hiệu chức năng cho các hợp âm ba trên bảy bậc của Đô trưởng và La thứ hoà âm.',
@@ -494,7 +492,6 @@ Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị d
           { slug: 'noi-hop-am', focus: 'Chủ đề 3 và 8: nối hoà thanh, nối giai điệu, nhảy quãng 3.' },
           { slug: 'dan-giong', focus: 'Dẫn giọng: đi gần nhất, giữ nốt chung, tránh song song quãng 5 – 8.' },
           { slug: 'phoi-hoa-am-giai-dieu', focus: 'Chủ đề 4: phối hoà âm giai điệu bằng T, S, D.' },
-          { slug: 'rimsky-korsakov-hoa-am-2-hop-am-thuan', focus: 'Đọc thêm — Rimsky-Korsakov, Phần II (1): kết, bước nhảy, các bậc phụ, kết Phrygian, chorale.' },
         ],
         exercises: [
           'Viết bốn bè chuỗi T – S – D – T ở Đô, Sol, Fa trưởng và La, Mi, Rê thứ, mỗi giọng cả ba cách sắp xếp ban đầu.',
@@ -528,8 +525,6 @@ Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị d
           { slug: 'hop-am-mo-rong', focus: 'Chủ đề 23: hợp âm chín át D9 và các hợp âm mở rộng.' },
           { slug: 'not-ngoai-hop-am', focus: 'Nốt lướt, nốt thêu, nốt chờ, nốt luyến trong bốn bè.' },
           { slug: 'mo-tien-hoa-am', focus: 'Chủ đề 26: mô tiến diatonic.' },
-          { slug: 'rimsky-korsakov-hoa-am-3-hop-am-nghich', focus: 'Đọc thêm — Rimsky-Korsakov, Phần II (2): D7, hợp âm bảy cảm âm, II7, hợp âm chín, mô tiến.' },
-          { slug: 'rimsky-korsakov-hoa-am-5-hinh-hoa-giai-dieu', focus: 'Đọc thêm — Rimsky-Korsakov, Phần IV: nốt lướt, thêu, chờ; hình hoá nghiêm và tự do.' },
         ],
         exercises: [
           'Viết D7 và ba thể đảo ở bốn giọng, giải quyết về T đúng quy tắc nốt 7 và âm dẫn.',
@@ -552,8 +547,6 @@ Lưu ý về tên gọi: hệ thống **Taneyev** (S. I. Taneyev, *Đối vị d
           { slug: 'hop-am-not-chung', focus: 'Hợp âm nốt chung.' },
           { slug: 'hop-am-ba-tang', focus: 'Hợp âm ba tăng.' },
           { slug: 'trung-am-cromatic', focus: 'Quan hệ trung âm cromatic — cầu sang hoà âm thế kỷ 19.' },
-          { slug: 'rimsky-korsakov-hoa-am-4-chuyen-giong', focus: 'Đọc thêm — Rimsky-Korsakov, Phần III: họ hàng giọng, kế hoạch chuyển giọng, âm ngân.' },
-          { slug: 'rimsky-korsakov-hoa-am-6-trung-am', focus: 'Đọc thêm — Rimsky-Korsakov, Phần V: hợp âm biến đổi, trùng âm, tiến hành giả.' },
         ],
         exercises: [
           'Viết một câu 8 ô ở Đô trưởng có lệch giọng sang Rê thứ và Sol trưởng bằng át phụ.',
