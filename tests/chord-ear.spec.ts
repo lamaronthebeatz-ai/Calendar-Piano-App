@@ -6,7 +6,7 @@ import { join } from 'node:path'
 /**
  * The chord ear end to end: a synthesized piano (C – G7 – C – Am) is fed to Chromium's fake microphone, and the page
  * must name each chord, light the way taken ("Kết trọn") and never name the cluster and noise that follow.
- * Chromium only: WebKit has no fake audio capture.
+ * Chromium only (WebKit projects ignore this file in playwright.config.ts: it has no fake audio capture).
  */
 const SR = 22050
 function synth(chords: number[][], dur = 2.4) {

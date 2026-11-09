@@ -9,3 +9,4 @@
 - `test-results/`, `playwright-report/` nằm trong `.gitignore`.
 
 - **Deploy Pages treo (11/2026):** bước `deploy-pages` hết giờ 10 phút dù build + test xanh (lỗi phía GitHub). Chạy lại job trên **cùng commit** bị "Deployment cancelled" ngay, vì mã deploy = SHA commit đã bị huỷ. Muốn deploy lại phải có commit mới (có nội dung thật, không commit rỗng).
+- Test cần cờ khởi động riêng của Chromium (micro giả `chord-ear.spec.ts`) phải được `testIgnore` ở hai dự án WebKit trong `playwright.config.ts`: `test.skip` trong test chạy quá muộn, WebKit đã từ chối khởi động với cờ lạ (CI #319 đỏ).
