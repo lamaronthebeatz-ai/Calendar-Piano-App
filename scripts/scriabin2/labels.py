@@ -1,0 +1,26 @@
+I={0:("g♯: t (bỏ quãng 3)","lấy đà"),1:("t64 – VI♯43","T"),2:("D43 – D7 – D2","D, dừng chưa giải quyết"),3:("VI – II65 – t64 – s6","S trên pedal G♯"),4:("s64 – II43","S, fermata"),
+5:("II65 – t64 – s6 – IV♯6♭3","S → D của D"),6:("II7♯3 → IV♯6♭3","D của D"),7:("D – s – VI64 – t","bè trầm đi xuống"),8:("D – s7 – VI64 – t","lặp biến hoá"),9:("s – VI64 – t – II♭6","Napoli → t"),10:("II65♯3♭5 – t – D","6 tăng Pháp → D"),
+11:("d♯: t (bỏ quãng 3)","mô tiến lên q5"),12:("D43 – D7 – D2 (d♯)","→ F♯ = D của Si"),13:("Si: T64 – T – D – T","giọng III"),14:("VI + E♯","T thay"),15:("d♯: K64 – D – t","ly điệu"),16:("D7→IV","→ S"),17:("S (Mi)","S"),18:("II7 mượn (G♮)","S thứ"),
+19:("K64","T"),20:("D7♭5","D biến"),21:("VI → III","T thay"),22:("D7♭5 (viết B♯)","D biến"),23:("T (q4 treo) – S6 – II7","chủ đề 2"),24:("VI – II6 – VII43 – VI","T thay – S"),25:("= ô 24",""),26:("D7 treo","D"),27:("D2→IV → S6","A♮ ở bè trầm"),28:("D2→IV → II7","S"),
+29:("II7 → VII65","S → D"),30:("II65 – D – T","kết trọn"),31:("T","nhắc lại"),32:("VI → S6","F𝄪 thêu"),33:("II7 → D7","S – D"),34:("D2→IV – T – II43 – S6","pp"),35:("D2→IV – II2","lướt cromatic"),36:("II7 → S64","S"),
+37:("một bè giai điệu","đoạn chuyển"),38:("D7 (B treo)","D của Si"),39:("II64","S"),40:("D7","D"),41:("II64 → II6","S"),42:("VI – … – II6","T thay – S"),43:("VI7 rải","cresc."),44:("II7 – VII6 – D7","S – D"),45:("T (Si)","→ pedal B"),
+46:("pedal B: T – II7 – VI7 – T9","chủ đề 3"),47:("pedal B",""),48:("pedal B",""),49:("pedal B",""),50:("pedal B",""),51:("pedal B",""),52:("pedal B: T","đoạn kết"),53:("pedal B",""),54:("pedal B",""),55:("pedal B",""),56:("pedal B",""),57:("T (Si)","khép trình bày"),
+58:("Si: motif","phát triển"),59:("Si",""),60:("Rê trưởng = III♭","trung âm cromatic"),61:("Rê",""),62:("g – c – f","mô tiến q5 ↓"),63:("mô tiến",""),64:("mô tiến",""),65:("mô tiến",""),66:("Fø7 → B♭7","II7 → D7 của e♭"),67:("e♭ (= d♯)","giọng át viết giáng"),68:("e♭",""),69:("e♭",""),
+75:("II7 → D7♭9","g♯: S – D"),76:("II7 → D7♭9","S – D"),77:("Sol trưởng","trượt nửa cung"),78:("D7→IV – III+ – II43♯3♭5","→ pedal D♯"),79:("pedal D♯: II43♯3♭5 ↔ D9♭","D của D – D"),
+80:("pedal D♯",""),81:("pedal D♯",""),82:("pedal D♯",""),83:("pedal D♯",""),84:("pedal D♯",""),85:("pedal D♯",""),86:("pedal D♯","cresc. → ff"),87:("t (bỏ quãng 3)","motif ff"),88:("D43 – D7 – D2","fermata"),
+89:("Mi: T64 …","tái hiện ở VI"),90:("VI + A♯ (Mi)","= ô 14 ↓ q5"),91:("g♯: K64 – D – t","= ô 15"),92:("D7→IV","= ô 16"),93:("S (La)","= ô 17"),94:("II7 mượn","= ô 18"),
+95:("D7♭5 (Mi)","≈ ô 19–20"),96:("≈ ô 21–22",""),97:("≈ ô 21–22",""),98:("≈ ô 21–22",""),99:("≈ ô 21–22","")}
+for b in range(70,75): I[b]=("e♭ / d♯: S – D","đỉnh ff xen p")
+I18=[(("pedal E: T (8va)","chủ đề 3 ở Mi"),("Coda: T","pedal E1")),(("VI7 / E","màu plagal"),),(("T thêm 6/9","pedal E1"),),(("S (La) – T","plagal"),),(("motif ở Mi: E–B rỗng → T6","smorz. – T"),)]
+II={1:("D – D2","mở chương bằng át"),2:("VI","T/S"),3:("s7 ↔ II65","S"),4:("s","S"),5:("VI7 + 9","T/S"),6:("IV♯65♭3 của d♯","q3 giảm → D của D"),7:("II7♯3 (♭9)","D của D"),8:("D9♭","kết nửa"),
+9:("D7→IV","mô tiến q4"),10:("c♯: VI","S"),11:("c♯: IV2 ↔ II7","S"),12:("c♯: s","S"),13:("VI + 7, 9 (= II♭ của g♯)","S"),14:("IV♯65♭3","D của D"),15:("D9♭ (4–3)","D"),16:("t","kết trọn"),
+17:("Mi: D9 (+13)","dolcissimo"),18:("D7 (Mi)","D"),19:("D7 trên T","pedal E"),20:("Mi: T64 + 6","T của VI"),21:("E7 = D7 của La","La = II♭ của g♯"),22:("E7 (4–3)",""),23:("E7 / A","D trên T của La"),24:("II♭6 – s6 – D7","La → Napoli"),
+25:("D – D2","= ô 1"),26:("VI","= ô 2"),27:("s7 ↔ II65","= ô 3"),28:("s","= ô 4"),29:("VI thứ hoá + 7","G♮"),30:("→ IV♯65♭3","D của D"),31:("D9♭ (4–3)","D"),32:("t","kết"),
+33:("t → II♭","Napoli"),34:("t → VII7","T – D"),35:("t ↔ II♭6 + 6","T – S"),36:("t – v – t","át thứ"),37:("III (Si)","T thay"),38:("d♯: K64","D"),39:("VI♯7","lướt"),40:("t → D7♭9 của d♯","A♯ = B♭"),
+41:("e♭: t","chuyển giọng trùng âm"),42:("II43 → D(♭6)","S – D"),43:("t6 + 6 nâng","T"),44:("II43♯3♭5","D của D"),45:("pedal B♭: t64","D"),46:("pedal B♭",""),47:("bè trầm cromatic ↑","hợp âm lướt"),48:("b♭: t64 → D7♭9","D của b♭"),
+49:("b♭: t","= ô 41 lên q5"),50:("II43 → D6","S – D"),51:("t6 + 6 nâng","T"),52:("G♭7 = IV♯65♭3 (b♭)","đổi tên → F♯7"),53:("Si: T64 + 6 / F♯","pedal F♯"),54:("VI♭ (Gmaj7)","pedal F♯"),55:("II♭ + 6","Napoli"),56:("D9♭","D"),
+57:("IV♯65♭3 (viết G7)","6 tăng Đức → F♯"),58:("VII2 → D7","D của D → D"),59:("b♭: pedal F, t64","D"),60:("pedal F",""),61:("bè trầm cromatic ↑","lướt"),62:("D♭: D9 (A♭9)","B𝄫 ↓ A♭"),
+63:("D♭: T","f"),64:("T",""),65:("T64 + 6 thêu",""),66:("T64 + 6 thêu",""),67:("c♯: t","D♭ = C♯"),68:("t",""),69:("t → t64 (♭6 thêu)",""),70:("t64 (♭6 thêu)",""),
+71:("D65→II♭ – D2→II♭","át của Napoli"),72:("D2→II♭ → s6","D♮ ↑ E"),73:("D65→II♭ – D2→II♭","= ô 71"),74:("IV♯7♭3 → s6","C𝄪 → D♯ (ô 75)"),75:("pedal D♯: K64","D"),76:("K64","D"),77:("D – VI6 – D",""),78:("D9♭","→ A′"),
+93:("IV♯7♭3 (C𝄪 ở bè trầm)","D của D"),94:("IV♯7♭3","ngân, 8va"),95:("pedal D♯: K64","giai điệu đoạn B"),96:("II7 → D7(♭6)","S – D"),97:("K64 + 6 nâng",""),98:("IV♯65♭3 / D♯","D của D"),99:("K64","ff"),100:("IV♯65♭3 / D♯","ff"),
+101:("s → D7","S – D"),102:("t","p cresc."),103:("t (C𝄪 thêu)","T"),104:("t (5 – ♭6)","T"),105:("t","T"),106:("t","T"),107:("t → D♯","T"),108:("D (không âm dẫn) – t","D – T"),109:("D – t",""),110:("t","sf")}

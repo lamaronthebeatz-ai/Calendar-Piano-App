@@ -1614,10 +1614,10 @@ Chương 1 đã xác lập cơ sở lý luận của tiểu luận. Về hình t
     category: 'analysis',
     summary: 'Tiểu luận Sonata số 2 Scriabin, chương 2: phân tích tiến trình hoà âm chương Andante qua phần mở đầu, trình bày ở Si trưởng, phát triển và tái hiện ở Mi trưởng.',
     body: `
-Chương I của Sonata số 2 (Andante, Sol♯ thứ, nhịp 3/4, 136 ô nhịp) viết theo hình thức sonata có phần mở đầu và coda. Trong chương này, chúng tôi lần lượt phân tích tiến trình hoà âm của phần mở đầu, phần trình bày, phần phát triển, phần tái hiện và coda. Các hợp âm được ghi theo bậc trong giọng đang xét; giọng đang xét được nêu rõ ở đầu mỗi đoạn phân tích. Ví dụ nhạc được trích từ bản in đầu Belaieff 1898. Bảng phân tích chi tiết theo từng ô nhịp được trình bày ở [[scriabin-op19-phu-luc|Phụ lục]].
+Chương I của Sonata số 2 (Andante, Sol♯ thứ, nhịp 3/4, 136 ô nhịp) viết theo hình thức sonata có phần mở đầu và coda. Trong chương này, chúng tôi lần lượt phân tích tiến trình hoà âm của phần mở đầu, phần trình bày, phần phát triển, phần tái hiện và coda. Các hợp âm được ghi theo bậc trong giọng đang xét; giọng đang xét được nêu rõ ở đầu mỗi đoạn phân tích. Ví dụ nhạc được trích từ bản in đầu Belaieff 1898; dưới mỗi ô nhịp của ví dụ, chúng tôi ghi trực tiếp tên hợp âm theo bậc (dòng trên) và chức năng hoặc hướng đi của hoà âm (dòng dưới), để người đọc có thể theo dõi bản nhạc song song với văn bản. Bảng phân tích chi tiết theo từng ô nhịp được trình bày ở [[scriabin-op19-phu-luc|Phụ lục]].
 
 ## 2.1. Phần mở đầu (ô 1–12)
-Chương I không bắt đầu bằng một hợp âm chủ trọn vẹn mà bằng một motif ba nốt vang trên quãng 5 rỗng G♯ – D♯ (ô lấy đà và ô 1). Hợp âm chủ bị lược bỏ quãng 3 — âm quyết định tính chất trưởng hay thứ — tạo nên một màu sắc "trống" và bất định, được nhấn mạnh thêm bởi dấu lặng ngân ở cuối ô. Ở phách thứ hai của ô 1, Scriabin đặt hợp âm B – D♯ – E♯ – G♯, tức hợp âm bảy nửa giảm bậc VI nâng của Sol♯ thứ giai điệu ở thể năm sáu (VI♯65). Ngay trong ô nhạc đầu tiên, tác giả đã đưa vào một bậc biến âm của điệu thứ giai điệu thay cho các hợp âm chính của giọng.
+Chương I không bắt đầu bằng một hợp âm chủ trọn vẹn mà bằng một motif ba nốt vang trên quãng 5 rỗng G♯ – D♯ (ô lấy đà và ô 1). Hợp âm chủ bị lược bỏ quãng 3 — âm quyết định tính chất trưởng hay thứ — tạo nên một màu sắc "trống" và bất định, được nhấn mạnh thêm bởi dấu lặng ngân ở cuối ô. Ở phách thứ nhất của ô 1, bè trầm không giữ G♯ mà xuống quãng 8 D♯ (liên ba D♯ – D♯), nên quãng 5 rỗng G♯ – D♯ ngân từ ô lấy đà nay vang trên âm át: về chức năng đây là hợp âm t64 bỏ quãng 3. Ở phách thứ hai, bè trầm lên B, phía trên là E♯ – F♯ rồi G♯ – D♯: các âm E♯ – G♯ – B – D♯ tạo thành hợp âm bảy nửa giảm bậc VI nâng của Sol♯ thứ giai điệu. Vì âm B là quãng 5 của hợp âm (âm gốc E♯) nằm ở bè trầm, hợp âm ở thể ba bốn (VI♯43), không phải thể năm sáu như bản phân tích trước của chúng tôi đã ghi; thể năm sáu đòi hỏi quãng 3 G♯ ở bè trầm. Về âm thanh, E♯ – G♯ – B – D♯ cũng chính là hợp âm chủ G♯ – B – D♯ thêm âm bậc VI nâng E♯, nên chức năng chủ của ô 1 không bị phá vỡ. Ngay trong ô nhạc đầu tiên, tác giả đã đưa vào một bậc biến âm của điệu thứ giai điệu thay cho các hợp âm chính của giọng.
 
 ::scan scriabin2 #1 | Ví dụ 2.1. Ô 1–4: motif quãng 5 rỗng G♯–D♯, hai lần dừng trên dấu ngân; ô 2 dừng trên D2 chưa giải quyết; ô 3–4 có G♯ ở bè trầm
 
@@ -1774,7 +1774,7 @@ Từ ô 45, **pedal B♭** (âm át của Mi♭ thứ) được đặt dưới h
 
 ::scan scriabin2 #27 | Ví dụ 3.12. Ô 53–58: hoá biểu xoá, pedal F♯; Si trưởng – Sol trưởng – Đô trưởng thêm quãng 6 – F♯7♭9
 
-Trên **pedal F♯** kéo dài từ ô 53 đến ô 58, Scriabin đặt một chuỗi hợp âm theo quan hệ trung âm cromatic. Ô 54 là hợp âm Sol trưởng (Gmaj7 với F♯ ở bè trầm), tức hợp âm bậc VI hạ của Si trưởng (VI♭). Ô 55 là hợp âm Đô trưởng có thêm quãng 6 (C – E – G – A), tức hợp âm bậc II hạ (II♭, hợp âm Napoli) của Si trưởng, đặt trên bè trầm F♯ — cách âm gốc của hợp âm một quãng 4 tăng. Ô 56 là hợp âm F♯7♭9 (F♯ – A♯ – C♯ – E – G♮), tức hợp âm chín át có quãng 9 nhỏ của Si trưởng, với một nhóm chín nốt đi xuống cromatic. Ô 57 là hợp âm G7 trên bè trầm G, tức hợp âm bảy bậc II hạ (II♭7) so với âm F♯. Ô 58 là hợp âm bảy giảm G – A♯ – C♯ – E, tới hợp âm F♯7 ở phách cuối — mà về âm thanh lại chính là G♭7, hợp âm sáu tăng kiểu Đức của Si♭ thứ ở ô 52. Vòng trùng âm khép lại, và tiến trình trở về Si♭ thứ.
+Trên **pedal F♯** kéo dài từ ô 53 đến ô 56, Scriabin đặt một chuỗi hợp âm theo quan hệ trung âm cromatic. Ô 54 là hợp âm Sol trưởng (Gmaj7 với F♯ ở bè trầm), tức hợp âm bậc VI hạ của Si trưởng (VI♭). Ô 55 là hợp âm Đô trưởng có thêm quãng 6 (C – E – G – A), tức hợp âm bậc II hạ (II♭, hợp âm Napoli) của Si trưởng, đặt trên bè trầm F♯ — cách âm gốc của hợp âm một quãng 4 tăng. Ô 56 là hợp âm F♯7♭9 (F♯ – A♯ – C♯ – E – G♮), tức hợp âm chín át có quãng 9 nhỏ của Si trưởng, với một nhóm chín nốt đi xuống cromatic. Ở ô 57, bè trầm rời F♯ lên G và phía trên vang G – B – D – F♮, về âm thanh là G7. Trong bản phân tích trước, chúng tôi gọi hợp âm này là "II♭7 so với F♯"; cách gọi đó không đứng được, vì bậc II hạ chỉ có nghĩa so với một âm chủ, mà F♯ ở đây là âm át chứ không phải âm chủ. Xét trong Si trưởng, G là bậc VI hạ và F♮ là cách viết trùng âm của E♯ (bậc IV nâng): G – B – D – E♯ chính là hợp âm sáu tăng kiểu Đức của Si trưởng (thể IV♯65♭3, âm bậc VI hạ ở bè trầm), được viết như một hợp âm bảy át — đúng thủ pháp đã gặp ở ô 52. Quãng 6 tăng G – E♯ đòi giải quyết ra quãng 8 F♯, và đó là hướng đi của hai ô tiếp theo. Ô 58 là hợp âm A♯ – C♯ – E – G với G vẫn ở bè trầm, tức hợp âm bảy giảm bậc VII của Si trưởng hoà thanh (G là bậc VI hạ) ở thể hai (VII2); bè trầm G đi xuống F♯ ở phách cuối, tới hợp âm F♯7 — mà về âm thanh lại chính là G♭7, hợp âm sáu tăng kiểu Đức của Si♭ thứ ở ô 52. Vòng trùng âm khép lại, và tiến trình trở về Si♭ thứ.
 
 ::scan scriabin2 #28 | Ví dụ 3.13. Ô 59–62: pedal F rồi bè trầm đi lên cromatic; ô 62 bè trầm B𝄫
 
@@ -1788,9 +1788,9 @@ Trên **pedal F♯** kéo dài từ ô 53 đến ô 58, Scriabin đặt một ch
 
 Ở ô 67, hoá biểu năm thăng trở lại và nhạc chuyển sang **Đô♯ thứ**: giai điệu E – D♯ – C♯ – B♯ – C♯ trên hợp âm chủ, ở sắc thái fp. Rê♭ trưởng và Đô♯ thứ có cùng âm chủ về âm thanh (D♭ = C♯); việc chuyển từ giọng này sang giọng kia vừa là chuyển từ trưởng sang thứ cùng tên, vừa là chuyển giọng trùng âm. Ô 69 – 70 có hợp âm t64 với nốt thêu bậc VI hạ (A – G♯ luân phiên trên G♯). Đô♯ thứ là giọng bậc IV của Sol♯ thứ; tiến trình đã trở lại gần giọng chính.
 
-::scan scriabin2 #31 | Ví dụ 3.16. Ô 70–74: E7 với D♮ ở bè trầm (ô 71), viết lại thành C𝄪 (ô 72) — cùng hợp âm, đổi chức năng tại chỗ
+::scan scriabin2 #31 | Ví dụ 3.16. Ô 70–74: E7 với D♮ ở bè trầm (ô 71–73), in lại thành C𝄪 ở ô 74 — cùng hợp âm, đổi chức năng
 
-Ô 71 – 74 lặp lại hiện tượng trùng âm của đoạn A ở dạng tập trung nhất. Ở ô 71, hợp âm E7 (E – G♯ – B – D♮) với bè trầm luân phiên G♯ – D, tức D65 và D2 của La trưởng, ở sắc thái p, cresc. Trong Sol♯ thứ, hợp âm này là hợp âm bảy bậc VI. Ở ô 72, âm D♮ ở bè trầm được viết lại thành C𝄪, đi về E: hợp âm E7 được hiểu lại thành hợp âm sáu tăng kiểu Đức của Sol♯ thứ ở thể có âm gốc C𝄪 ở bè trầm (IV♯7♭3), rồi tới s6 (C♯m với E ở bè trầm), ở sắc thái f. Việc đổi cách viết diễn ra ngay tại chỗ, giữa hai ô nhịp kế tiếp, và được lặp lại ở ô 73 – 74.
+Ô 71 – 74 lặp lại hiện tượng trùng âm của đoạn A ở dạng tập trung nhất. Ở ô 71, hợp âm E – G♯ – B – D♮ với bè trầm luân phiên G♯ – D, ở sắc thái p, cresc. Đây là một hợp âm bảy át (trưởng – thứ) của La trưởng, lần lượt ở thể năm sáu và thể hai. Trong bản phân tích trước, chúng tôi gọi nó là "hợp âm bảy bậc VI" của Sol♯ thứ; cách gọi này sai, vì hợp âm bảy bậc VI của Sol♯ thứ là E – G♯ – B – D♯ (hợp âm bảy trưởng), còn ở đây âm bảy là D♮. Vì La trưởng là hợp âm bậc II hạ (Napoli) của Sol♯ thứ, hợp âm này cần được ghi là hợp âm át phụ của hợp âm Napoli: D65→II♭ và D2→II♭. Hợp âm Napoli không xuất hiện: ở ô 72, âm D♮ ở bè trầm (in rõ dấu bình) đi lên E, dưới hình móc kép trên hợp âm C♯ – E – G♯ (có A♮ lướt), tức s6 của Sol♯ thứ, ở sắc thái f. Ô 73 nhắc lại ô 71. Đến ô 74, cùng phím đàn ấy ở bè trầm được in thành **C𝄪**: hợp âm E – G♯ – B – C𝄪 nay là hợp âm sáu tăng kiểu Đức của Sol♯ thứ ở thể có âm gốc ở bè trầm (IV♯7♭3), và bè trầm C𝄪 – E (s6) – D♯ dẫn vào ô 75, nơi pedal át và hợp âm K64 bắt đầu: âm C𝄪 đi về D♯ đúng với hướng giải quyết của quãng 6 tăng, chỉ bị chen giữa bởi s6. Như vậy, việc đổi cách viết không diễn ra ngay giữa ô 71 và ô 72 như bản phân tích trước đã mô tả, mà giữa hai lần trình bày của cùng một cặp ô: lần đầu (ô 71 – 72) hợp âm được viết và dẫn như át phụ của Napoli, lần thứ hai (ô 73 – 74) nó được viết lại và dẫn như hợp âm sáu tăng về hợp âm át.
 
 ::scan scriabin2 #32 | Ví dụ 3.17. Ô 75–78: pedal D♯, K64 rồi D9♭ — đoạn A′ vào ngay sau ô 78
 
@@ -1812,7 +1812,7 @@ Từ ô 95, trên **pedal D♯**, giai điệu của đoạn B trở về ở gi
 Phần cuối coda (ô 103 – 110) kéo dài hợp âm chủ. Ở ô 103, bè trầm có nốt thêu C𝄪, gợi màu sắc của hợp âm sáu tăng kiểu Đức; giai điệu đi B tới D♯. Ở ô 104, tay trái luân phiên D♯ – E, tức bậc 5 và bậc 6 hạ trên nền hợp âm chủ, ở sắc thái mf, dim. Ô 105 – 107 lặp lại các hình này, giai điệu lên một quãng 8 ở ô 106. Ở ô 108 – 109, bè trầm luân phiên D♯ – G♯, tức hợp âm át – hợp âm chủ, ở sắc thái pp. Nhưng hợp âm át ở đây chứa các âm G♯, E và B — quãng 4 treo, quãng 9 nhỏ và quãng 13 nhỏ — mà **không có âm dẫn F𝄪**. Kết của chương vì vậy là một kết át – chủ không có âm dẫn. Ô 110 khép lại bằng hợp âm chủ Sol♯ thứ (G♯ – B – D♯) ở sắc thái sf, với pedal.
 
 ## Tiểu kết chương 3
-Chương II cho thấy rõ hơn chương I sự căng giãn của điệu tính chức năng. Chương mở đầu bằng chức năng át chứ không bằng hợp âm chủ, và đoạn A′ vào ngay trên chức năng át, không có kết. Hợp âm sáu tăng kiểu Đức xuất hiện với tần suất cao và giữ vai trò trung tâm: nó được viết với quãng 3 giảm ở bè trầm (ô 6, 14, 30), được viết lại thành hợp âm bảy át của giọng khác (ô 21 và 14; ô 52 và 53; ô 71 và 72), và được phóng to ở coda thay cho hợp âm át. Kế hoạch giọng của đoạn B đi qua các giọng xa bằng những chuyển giọng trùng âm (Rê♯ thứ → Mi♭ thứ, Si♭ thứ → Si trưởng, Rê♭ trưởng → Đô♯ thứ), với một chuỗi trung âm cromatic trên pedal F♯. Bè trầm đi liền bậc theo gam hoặc cromatic, với cách viết phụ thuộc vào hướng đi, sinh ra những hợp âm lướt không mang chức năng độc lập. Cuối cùng, chương khép lại bằng một kết át – chủ không có âm dẫn. Tuy vậy, khác với chương I, chương II trở về và kết thúc ở giọng chủ Sol♯ thứ, đảm bảo tính thống nhất giọng của cả tác phẩm.
+Chương II cho thấy rõ hơn chương I sự căng giãn của điệu tính chức năng. Chương mở đầu bằng chức năng át chứ không bằng hợp âm chủ, và đoạn A′ vào ngay trên chức năng át, không có kết. Hợp âm sáu tăng kiểu Đức xuất hiện với tần suất cao và giữ vai trò trung tâm: nó được viết với quãng 3 giảm ở bè trầm (ô 6, 14, 30), được viết lại thành hợp âm bảy át của giọng khác (ô 21 và 14; ô 52 và 53; ô 72 và 74; ô 57 viết G7 thay cho G – B – D – E♯), và được phóng to ở coda thay cho hợp âm át. Kế hoạch giọng của đoạn B đi qua các giọng xa bằng những chuyển giọng trùng âm (Rê♯ thứ → Mi♭ thứ, Si♭ thứ → Si trưởng, Rê♭ trưởng → Đô♯ thứ), với một chuỗi trung âm cromatic trên pedal F♯. Bè trầm đi liền bậc theo gam hoặc cromatic, với cách viết phụ thuộc vào hướng đi, sinh ra những hợp âm lướt không mang chức năng độc lập. Cuối cùng, chương khép lại bằng một kết át – chủ không có âm dẫn. Tuy vậy, khác với chương I, chương II trở về và kết thúc ở giọng chủ Sol♯ thứ, đảm bảo tính thống nhất giọng của cả tác phẩm.
 `,
   },
   {
@@ -1835,7 +1835,7 @@ Như vậy, bộ khung hoà âm của tác phẩm vẫn là bộ khung của ho�
 ## 4.2. Các thủ pháp hoà âm mới
 **Hợp âm bảy át quãng 5 hạ và màu sắc toàn cung.** Hợp âm F♯ – A♯ – C♮ – E ở ô 20, 22 chương I, và hợp âm tương ứng ở ô 95 – 99, là hợp âm bảy át có quãng 5 hạ (D7♭5). Bốn âm của nó thuộc một gam toàn cung, và về âm thanh nó trùng với hợp âm sáu tăng kiểu Pháp. Scriabin viết âm quãng 5 khi là C♮ (hạ), khi là B♯ (quãng 4 nâng), tuỳ theo hướng giải quyết. Hợp âm sáu tăng kiểu Pháp ở ô 44 chương II cũng đồng thời là hợp âm bảy át quãng 5 hạ của âm B♭. Theo chúng tôi, đây là mầm quan trọng nhất của ngôn ngữ hoà âm Scriabin thời kỳ sau, phù hợp với mô hình của Dernova xem hoà âm Scriabin phát triển từ hợp âm át và các biến thể của nó.
 
-**Hợp âm sáu tăng trùng âm với hợp âm bảy át.** Hợp âm sáu tăng kiểu Đức có âm thanh trùng với một hợp âm bảy át. Scriabin khai thác sự trùng âm này một cách có hệ thống: hợp âm E7 với D♮ (ô 21 chương II) và hợp âm sáu tăng kiểu Đức với C𝄪 (ô 14) là cùng một âm thanh với hai chức năng; ở ô 71 – 72, hợp âm được viết lại ngay tại chỗ, D♮ thành C𝄪; ở ô 52 – 53, hợp âm G♭7 (hợp âm sáu tăng kiểu Đức của Si♭ thứ) được viết lại thành F♯7 (hợp âm bảy át của Si trưởng) để chuyển giọng. Quãng 6 tăng còn được đảo thành quãng 3 giảm ở bè trầm (B – G𝄪 ở ô 6, E – C𝄪 ở ô 14 chương II). Hợp âm sáu tăng không còn chỉ là một hợp âm biến âm chuẩn bị cho át, mà trở thành một điểm xoay giữa các giọng.
+**Hợp âm sáu tăng trùng âm với hợp âm bảy át.** Hợp âm sáu tăng kiểu Đức có âm thanh trùng với một hợp âm bảy át. Scriabin khai thác sự trùng âm này một cách có hệ thống: hợp âm E7 với D♮ (ô 21 chương II) và hợp âm sáu tăng kiểu Đức với C𝄪 (ô 14) là cùng một âm thanh với hai chức năng; ở ô 71 – 74, cùng một cặp ô được trình bày hai lần, lần đầu với D♮ (át phụ của Napoli), lần sau với C𝄪 (hợp âm sáu tăng của Sol♯ thứ); ở ô 52 – 53, hợp âm G♭7 (hợp âm sáu tăng kiểu Đức của Si♭ thứ) được viết lại thành F♯7 (hợp âm bảy át của Si trưởng) để chuyển giọng. Quãng 6 tăng còn được đảo thành quãng 3 giảm ở bè trầm (B – G𝄪 ở ô 6, E – C𝄪 ở ô 14 chương II). Hợp âm sáu tăng không còn chỉ là một hợp âm biến âm chuẩn bị cho át, mà trở thành một điểm xoay giữa các giọng.
 
 **Hợp âm thêm nốt và hợp âm quãng 4 treo.** Hợp âm thêm nốt sáu (sixte ajoutée) xuất hiện ở ô 20, 35, 65 chương II; hợp âm thêm quãng 7 trưởng và quãng 9 ở ô 5, 13 chương II; hợp âm chủ có quãng 4 treo không giải quyết ở ô 23 – 27 chương I. Ở các hợp âm này, ranh giới giữa âm hợp âm và âm ngoài hợp âm bị xoá mờ: âm treo không còn đòi hỏi giải quyết mà trở thành một thành phần của âm thanh hợp âm. Chương II còn có những hợp âm át không có âm dẫn ở ô 108 – 109, với quãng 4 treo, quãng 9 nhỏ và quãng 13 nhỏ thay cho quãng 3 dẫn âm (xem [[hop-am-mo-rong]], [[not-ngoai-hop-am]]).
 
@@ -1886,7 +1886,9 @@ Thứ tư, các hợp âm thêm nốt, hợp âm quãng 4 treo không giải quy
 
 Tổng hợp lại, Sonata số 2 chưa có hợp âm huyền bí và chưa vượt ra khỏi điệu tính, nhưng hầu hết vật liệu hoà âm của Scriabin thời kỳ sau đã có mặt, ở dạng vẫn còn giải thích được bằng logic chức năng. Các yếu tố mới không xuất hiện như những yếu tố ngoại lai mà nảy sinh từ bên trong chính các phương tiện của hoà âm chức năng. Theo chúng tôi, chính điều đó làm nên ý nghĩa "chuyển tiếp" của tác phẩm trong tiến trình phát triển ngôn ngữ hoà âm của Scriabin.
 
-Tiểu luận còn những hạn chế nhất định. Mức độ chi tiết của phân tích không đồng đều: các ô 46 – 57 và phần tái hiện, coda của chương I (ô 89 – 136) được phân tích theo đoạn và theo sự tương ứng với phần trình bày, không theo từng ô như các phần khác. Ở một số chỗ, cách gọi tên hợp âm còn có thể hiểu theo nhiều cách: hợp âm ở các ô 5, 13, 83, 91 chương II có thể đọc là hợp âm bảy bậc VI thêm quãng 9 hoặc hợp âm bảy chủ thêm âm bậc VI hạ; hợp âm ở ô 23 chương II có thể xem là một pedal hạ át; các hợp âm ở ô 39 và 47 chương II là hợp âm lướt, khó gán một tên duy nhất; hợp âm ở ô 57 – 58 chương II có thể đọc là át phụ lướt. Một số công trình trong phần lịch sử nghiên cứu chúng tôi mới tiếp cận qua nguồn thứ cấp, và chương trình về biển của tác phẩm chưa được đối chiếu với nguyên văn tiếng Nga.
+Tiểu luận còn những hạn chế nhất định. Mức độ chi tiết của phân tích không đồng đều: các ô 46 – 57 và phần tái hiện, coda của chương I (ô 89 – 136) được phân tích theo đoạn và theo sự tương ứng với phần trình bày, không theo từng ô như các phần khác. Ở một số chỗ, cách gọi tên hợp âm còn có thể hiểu theo nhiều cách: hợp âm ở các ô 5, 13, 83, 91 chương II có thể đọc là hợp âm bảy bậc VI thêm quãng 9 hoặc hợp âm bảy chủ thêm âm bậc VI hạ; hợp âm ở ô 23 chương II có thể xem là một pedal hạ át; các hợp âm ở ô 39 và 47 chương II là hợp âm lướt, khó gán một tên duy nhất; hợp âm ở ô 72 chương II có hình móc kép chứa A♮ nên còn có thể nghe như hợp âm Napoli thể sáu bốn lướt trên bè trầm E. Một số công trình trong phần lịch sử nghiên cứu chúng tôi mới tiếp cận qua nguồn thứ cấp, và chương trình về biển của tác phẩm chưa được đối chiếu với nguyên văn tiếng Nga.
+
+Trong lần rà soát cuối cùng, đối chiếu từng hợp âm với bản in Belaieff 1898 theo các tiêu chuẩn gọi tên của sách giáo khoa bốn tác giả và Rimsky-Korsakov, chúng tôi đã đính chính ba chỗ ghi sai của bản phân tích trước: hợp âm ở phách 2 ô 1 chương I là VI♯43 (âm B ở bè trầm là quãng 5 của hợp âm), không phải VI♯65, và bè trầm phách 1 của ô này là D♯; hợp âm G7 ở ô 57 chương II là hợp âm sáu tăng kiểu Đức của Si trưởng viết trùng âm, không phải "II♭7 so với F♯", và ô 58 là VII2 của Si trưởng hoà thanh; hợp âm E7 ở ô 71 chương II là hợp âm át phụ của hợp âm Napoli (D65→II♭), không phải hợp âm bảy bậc VI, và cách viết C𝄪 xuất hiện ở ô 74 chứ không phải ô 72. Các chỗ đính chính được giải thích ngay trong văn bản phân tích và đánh dấu trong Phụ lục.
 
 Trên cơ sở kết quả đạt được, chúng tôi cho rằng hướng nghiên cứu tiếp theo có thể là so sánh thủ pháp hoà âm của Sonata số 2 với Sonata số 1 Op. 6 và Sonata số 3 Op. 23, để xác định chính xác hơn vị trí của tác phẩm trong chuỗi sonata của Scriabin, cũng như mở rộng phân tích sang các bình diện tiết tấu và phức điệu mà luận văn của Cha Min-hee đã gợi mở.
 
@@ -1938,7 +1940,7 @@ Phụ lục trình bày bảng phân tích hoà âm theo từng ô nhịp của 
 ### Trình bày (ô 1–57)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| Lấy đà–1 | G♯–D♯ quãng 5 rỗng; phách 2 B–D♯–E♯–G♯ (VI♯65: bậc VI nâng của thứ giai điệu) | T | Chủ âm **bỏ quãng 3** — màu "rỗng" mở đầu; fermata |
+| Lấy đà–1 | Lấy đà: G♯ (bè trầm) + G♯–D♯ quãng 5 rỗng; ô 1 phách 1: bè trầm **D♯** (quãng 8) → t64 bỏ quãng 3; phách 2: E♯–G♯–B–D♯ trên bè trầm B = **VI♯43** (đính chính: trước ghi nhầm VI♯65) | T | Chủ âm **bỏ quãng 3** — màu "rỗng" mở đầu; fermata |
 | 2 | D43 (D♯7/A♯) → D7 → D2 (bass C♯) | D | Dừng trên D2 chưa giải quyết |
 | 3 | E/B → VI – II65 – t64 – s6; phách mạnh có G♯ ở bè trầm | S trên T | Bè trầm đi liền bậc trên **pedal chủ** G♯ |
 | 4 | s64 trên pedal G♯; II43 (A♯ø7/E) | S | Fermata |
@@ -2137,8 +2139,8 @@ Phụ lục trình bày bảng phân tích hoà âm theo từng ô nhịp của 
 | 54 | **Sol trưởng** (Gmaj7/F♯) = VI♭ của Si, trên pedal F♯ | | Trung âm cromatic trên pedal |
 | 55 | **Đô trưởng thêm 6** (C–E–G–A) = II♭ (Napoli) (Napoli) của Si, trên F♯ | S | Napoli cách bè trầm một tritone |
 | 56 | **F♯7♭9** (F♯–A♯–C♯–E–G♮) = D9 của Si; nhóm chín nốt đi xuống cromatic | D | |
-| 57 | G7, bè trầm G | | II♭7 so với F♯ |
-| 58 | G°7 (G–A♯–C♯–E) → **F♯7** ở phách cuối (= G♭7, IV♯65♭3 của Si♭ thứ) | D của D | |
+| 57 | G7 (G–B–D–F♮), bè trầm G = **IV♯65♭3 của Si trưởng** viết như D7 (F♮ = E♯) | D của D | Đính chính: trước ghi "II♭7 so với F♯"; quãng 6 tăng G–E♯ → F♯ |
+| 58 | **VII2** của Si trưởng hoà thanh (A♯–C♯–E–G, G ở bè trầm) → **F♯7** ở phách cuối (= G♭7, IV♯65♭3 của Si♭ thứ) | D của D | |
 
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
@@ -2163,10 +2165,10 @@ Phụ lục trình bày bảng phân tích hoà âm theo từng ô nhịp của 
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 70 | như 69 | T | |
-| 71 | **E7** (E–G♯–B–D♮), bè trầm G♯ – D luân phiên (D65 – D2 của La); p, cresc. | D của IV | E7 = VI7 của Sol♯ thứ, trùng âm với IV♯65♭3 |
-| 72 | Bè trầm **C𝄪** (D♮ viết lại) → E: IV♯65♭3 của Sol♯ thứ (đảo) → s6 (C♯m/E); f | D của D → S | Đổi cách viết D♮ → C𝄪 ngay tại chỗ: E7 hiểu lại thành IV♯65♭3 |
+| 71 | **E7** (E–G♯–B–D♮), bè trầm G♯ – D luân phiên = **D65→II♭ – D2→II♭** (át của Napoli La trưởng); p, cresc. | D của S (Napoli) | Đính chính: không phải VI7 (VI7 của Sol♯ thứ có D♯) |
+| 72 | Bè trầm **D♮** (in dấu bình) đi lên E: D2→II♭ không giải quyết, sang s6 (C♯m/E); f | D của S → S | |
 | 73 | = 71 | | |
-| 74 | = 72 | | |
+| 74 | Như 72 nhưng bè trầm in **C𝄪**: E–G♯–B–C𝄪 = **IV♯7♭3** (6 tăng Đức, âm gốc ở bè trầm) → s6 → K64 trên D♯ ô 75 | D của D → S → K64 | Đổi cách viết ở lần nhắc lại: D♮ (ô 72) → C𝄪 (ô 74) |
 
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
@@ -2182,7 +2184,7 @@ Phụ lục trình bày bảng phân tích hoà âm theo từng ô nhịp của 
 
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 93–94 | **IV♯65♭3** (E–G♯–B trên bè trầm C𝄪) ngân hai ô; mf cresc., hợp âm 8va | D của D | Thay cho D ở ô 15: hợp âm 6 tăng được phóng to |
+| 93–94 | **IV♯7♭3** (E–G♯–B trên bè trầm C𝄪, âm gốc ở bè trầm) ngân hai ô; mf cresc., hợp âm 8va | D của D | Thay cho D ở ô 15: hợp âm 6 tăng được phóng to |
 
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|

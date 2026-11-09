@@ -898,7 +898,7 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 .book-lesson .book-text figure:has(figcaption):not(:has(.aspect-video)) figcaption::before {
   content: "Hình " var(--lesson) "." counter(fig) ". "; font-weight: 700; color: var(--color-ink);
 }
-.book-lesson.is-essay .book-text figcaption::before { content: none; } /* the essay's captions carry their own "Ví dụ 2.3" */
+.book-lesson.is-essay .book-text figure:has(figcaption):not(:has(.aspect-video)) figcaption::before { content: none; } /* the essay's captions carry their own "Ví dụ 2.3" */
 .book-text div:has(> table) {
   margin: 1.3em 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; font-family: var(--font-serif);
 }
