@@ -9,13 +9,13 @@ export interface ScanFile { f: string; w: number; h: number }
  */
 export interface ScanItem { n: number; page: number; ex?: number[]; sd?: number; label?: string; files: ScanFile[] }
 
-export const SCAN_BOOKS: Record<string, { source: string; url: string; unit: 'ex' | 'page' | 'fig'; exWord?: string; small?: number }> = {
+export const SCAN_BOOKS: Record<string, { source: string; url: string; unit: 'ex' | 'page' | 'fig'; exWord?: string; small?: number; v?: number }> = {
   albrechtsberger: { source: 'Albrechtsberger, Collected Writings (Novello, 1855)', url: 'https://archive.org/details/jgalbrechtsberg00albrgoog', unit: 'ex' },
   fux: { source: 'Fux, Practical Rules for Learning Composition', url: 'https://archive.org/details/practicalrulesfo00fuxj', unit: 'page' },
   neuhaus: { source: 'Neuhaus, The Art of Piano Playing (Kahn & Averill, 1993)', url: '', unit: 'fig', small: 0.5 },
   taneev: { source: 'Phạm Tú Hương, Phức điệu nghiêm khắc (Nhạc viện Hà Nội, 1991)', url: '', unit: 'ex', exWord: 'Thí dụ' },
   rimsky: { source: 'Rimsky-Korsakov, Практический учебник гармонии (Lan\' – Planeta muzyki, 2014)', url: '', unit: 'ex' },
-  scriabin2: { source: 'Scriabin, Sonate-Fantaisie Op. 19 (Belaieff, 1898)', url: 'https://imslp.org/wiki/Piano_Sonata_No.2,_Op.19_(Scriabin,_Aleksandr)', unit: 'page' },
+  scriabin2: { source: 'Scriabin, Sonate-Fantaisie Op. 19 (Belaieff, 1898)', url: 'https://imslp.org/wiki/Piano_Sonata_No.2,_Op.19_(Scriabin,_Aleksandr)', unit: 'page', v: 2 },
 }
 
 const loaders: Record<string, () => Promise<{ default: ScanItem[] }>> = {
@@ -36,7 +36,8 @@ export function loadScans(book: string): Promise<ScanItem[]> {
 /** Display width: books whose small figures were drawn as inline glyphs (Neuhaus's rhythm figures) show them at a fraction of their pixel size. */
 export const scanWidth = (book: string, w: number) => (SCAN_BOOKS[book]?.small && w < 700 ? Math.round(w * SCAN_BOOKS[book].small!) : w)
 
-export const scanUrl = (book: string, f: string) => `${import.meta.env.BASE_URL}scans/${book}/${f}`
+// scans are cached CacheFirst under their URL; bump `v` when a book's images are redrawn under the same names
+export const scanUrl = (book: string, f: string) => `${import.meta.env.BASE_URL}scans/${book}/${f}${SCAN_BOOKS[book]?.v ? `?v=${SCAN_BOOKS[book].v}` : ''}`
 
 export function scanLabel(book: string, it: ScanItem) {
   const meta = SCAN_BOOKS[book]
