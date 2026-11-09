@@ -1556,26 +1556,28 @@ Trong lý luận âm nhạc hiện nay tồn tại hai hệ thống ký hiệu h
 
 Bên cạnh đó, với hoà âm cuối thế kỷ XIX và thế kỷ XX, các nhà nghiên cứu còn dùng **tên hợp âm theo chữ cái** (B7, A♯ø7, E7♭9…) để chỉ âm thanh thực của hợp âm, độc lập với chức năng. Trong tiểu luận, tên chữ cái chỉ được dùng để nêu cấu trúc âm thanh; chức năng và bậc luôn được ghi theo hệ thống Nga – Xô viết.
 
-Để thuận tiện cho người đọc, chúng tôi ghi các hợp âm theo **bậc cụ thể trong giọng đang xét**, kết hợp với ký hiệu chức năng ở những trường hợp cơ bản (T, S, D, K64, D7). Các hợp âm biến âm được ghi bằng bậc của âm gốc kèm dấu biến âm của âm bị thay đổi, thay cho các ký hiệu khái quát như DD hay TSVI. Bảng 1.1 tóm tắt các ký hiệu dùng trong tiểu luận.
+Phần cơ sở lý thuyết sử dụng đúng hệ thống ký hiệu chức năng của sách bốn tác giả. Riêng trong phần phân tích tác phẩm (chương 2, chương 3, chương 4 và phụ lục), để người đọc dễ theo dõi tiến trình trên bản phổ, chúng tôi ghi các hợp âm phụ và hợp âm biến âm theo **bậc cụ thể trong giọng đang xét**, giữ ký hiệu chức năng cho các trường hợp cơ bản (T, S, D, K64, D7 và các thể đảo). Bảng 1.1 đối chiếu hai cách ghi này với hệ thống phương Tây.
 
-**Bảng 1.1. Ký hiệu hoà âm sử dụng trong tiểu luận**
-| Ký hiệu | Tên gọi | Tương đương trong hệ thống phương Tây |
-|---|---|---|
-| T, S, D / t, s, d | Hợp âm ba chủ, hạ át, át (chữ thường: hợp âm thứ) | I, IV, V / i, iv, v |
-| T6, T64, S6, s64 | Hợp âm sáu, hợp âm bốn sáu | I6, I6/4, IV6, iv6/4 |
-| K64 | Hợp âm bốn sáu kết | Cad. 6/4 |
-| D7, D65, D43, D2 | Hợp âm bảy át và ba thể đảo | V7, V6/5, V4/3, V4/2 |
-| D9, D9♭ | Hợp âm chín át với quãng 9 lớn, quãng 9 nhỏ | V9, V♭9 |
-| D7♭5 | Hợp âm bảy át có quãng 5 hạ | V7♭5 |
-| II, II7, II65, II43 | Hợp âm ba và hợp âm bảy bậc II cùng các thể đảo | ii, ii7, ii6/5, ii4/3 |
-| III, VI | Hợp âm ba bậc III, bậc VI | iii / III, vi / VI |
-| VII7, VII65 | Hợp âm bảy bậc VII (nhỏ hoặc giảm) | viiø7, vii°7 |
-| II7♯3 | Hợp âm bảy bậc II có quãng 3 nâng, tức hợp âm bảy át của giọng bậc V | V7/V |
-| D7→IV, D→x | Hợp âm át của bậc IV, của bậc x (ly điệu) | V7/IV, V/x |
-| II♭6 | Hợp âm sáu bậc II hạ (hợp âm sáu Napoli) | N6 |
-| IV♯6♭3 | Hợp âm ba bậc IV nâng có quãng 3 hạ, thể hợp âm sáu (hợp âm sáu tăng kiểu Ý) | It+6 |
-| II43♯3♭5 | Hợp âm bảy bậc II có quãng 3 nâng và quãng 5 hạ, thể hợp âm ba bốn (hợp âm sáu tăng kiểu Pháp) | Fr+6 |
-| IV♯65♭3 | Hợp âm bảy giảm bậc IV nâng có quãng 3 hạ, thể hợp âm năm sáu (hợp âm sáu tăng kiểu Đức) | Ger+6 |
+**Bảng 1.1. Hệ thống ký hiệu chức năng Nga – Xô viết và cách ghi trong phần phân tích**
+| Ký hiệu Nga – Xô viết | Nghĩa | Tương đương phương Tây | Cách ghi trong phần phân tích |
+|---|---|---|---|
+| **T, S, D** / **t, s, d** | Chủ, hạ át, át — chữ thường khi hợp âm thứ | I, IV, V / i, iv, v | giữ nguyên |
+| **T6, T64, S6, s64…** | Thể đảo: hợp âm sáu, hợp âm bốn sáu | I6, I6/4, IV6, iv6/4 | giữ nguyên |
+| **K64** | Hợp âm bốn sáu kết | Cad. 6/4 | giữ nguyên |
+| **D7, D65, D43, D2** | Hợp âm bảy át và ba thể đảo | V7, V6/5, V4/3, V4/2 | giữ nguyên |
+| **D9, D9♭** | Hợp âm chín át (quãng 9 lớn / nhỏ) | V9, V♭9 | giữ nguyên |
+| **D7♭5** | Hợp âm bảy át có quãng 5 hạ | V7♭5 | giữ nguyên |
+| **SII, SII7, SII65, SII43** | Hạ át bậc II và các thể của hợp âm bảy bậc II | ii, ii7 (iiø7), ii6/5, ii4/3 | II, II7, II65, II43 |
+| **TSVI, DTIII** | Bậc VI (chủ – hạ át), bậc III (át – chủ) | vi / VI, iii / III | VI, III |
+| **DVII7, DVII65** | Hợp âm bảy cảm âm (nhỏ hoặc giảm) | viiø7 / vii°7 | VII7, VII65 |
+| **DD, DD7** | Át của át | V/V, V7/V | II♯3, II7♯3 (bậc II có quãng 3 nâng) |
+| **D7→S, D→x** | Hợp âm át phụ — ly điệu sang bậc x | V7/IV, V/x | D7→IV, D→x |
+| **SII♭6 (N)** | Hợp âm sáu Napoli (bậc II hạ) | N6, ♭II6 | II♭6 |
+| **DDVII6♭3** | Át của át bậc VII, quãng 3 hạ, hợp âm sáu | It+6 (6 tăng Ý) | IV♯6♭3 |
+| **DD43♭5** | Hợp âm bảy át của át, quãng 5 hạ, hợp âm ba bốn | Fr+6 (6 tăng Pháp) | II43♯3♭5 |
+| **DDVII65♭3** | Hợp âm bảy cảm âm của át, quãng 3 hạ, hợp âm năm sáu | Ger+6 (6 tăng Đức) | IV♯65♭3 |
+
+Số bậc luôn tính theo giọng đang xét. Tên hợp âm chữ cái (E7, A♯ø7, G♯m…) chỉ âm thanh thực, không chỉ chức năng.
 
 Có thể thấy ba hợp âm sáu tăng, dù mang tên gọi riêng trong hệ thống phương Tây, đều thuộc nhóm hợp âm át của giọng bậc V (nhóm "át kép" theo cách gọi của sách bốn tác giả): chúng có chung hai âm quan trọng là bậc IV nâng và bậc VI hạ, tạo thành quãng 6 tăng cùng hướng về âm át.
 
@@ -1603,7 +1605,7 @@ Có thể thấy ba hợp âm sáu tăng, dù mang tên gọi riêng trong hệ 
 **Văn bản nghiên cứu.** Toàn bộ số ô nhịp và tên nốt trong tiểu luận được đọc trên bản in đầu Belaieff 1898 (lưu trữ tại IMSLP). Chúng tôi tự đếm và xác định chương I có 136 ô, chương II có 110 ô. Cao độ được đối chiếu thêm với bản ghi MIDI của một buổi biểu diễn trong bộ dữ liệu MAESTRO v3; do MIDI ghi lại âm thanh biểu diễn thực, có thể lẫn nốt chơi sai hoặc tiếng pedal nhoè, nên khi hai nguồn khác nhau chúng tôi theo bản phổ. Ví dụ, ở ô 41 chương II, bản ghi MIDI có âm E♮ trong khi bản in ghi E♭.
 
 ## Tiểu kết chương 1
-Chương 1 đã xác lập cơ sở lý luận của tiểu luận. Về hình thức, các khái niệm liên khúc sonata, hình thức sonata, sonata tự do và rondo – sonata được tiếp nhận theo các giáo trình của trường phái Xô viết và giáo trình của Nguyễn Thị Nhung; theo đó, Sonata số 2 là một liên khúc sonata tự do hai chương, với chương I ở hình thức sonata và chương II ở hình thức ba đoạn có coda. Về ký hiệu, tiểu luận sử dụng hệ thống chức năng của trường phái Nga – Xô viết, ghi hợp âm theo bậc cụ thể trong giọng. Về hoà âm, tiểu luận dựa trên lý thuyết hoà âm chức năng cổ điển, có đối chiếu với lý thuyết hoà âm cromatic cuối thế kỷ XIX và lý thuyết hoà âm thế kỷ XX, để xác định những yếu tố truyền thống và những yếu tố mới trong tác phẩm.
+Chương 1 đã xác lập cơ sở lý luận của tiểu luận. Về hình thức, các khái niệm liên khúc sonata, hình thức sonata, sonata tự do và rondo – sonata được tiếp nhận theo các giáo trình của trường phái Xô viết và giáo trình của Nguyễn Thị Nhung; theo đó, Sonata số 2 là một liên khúc sonata tự do hai chương, với chương I ở hình thức sonata và chương II ở hình thức ba đoạn có coda. Về ký hiệu, tiểu luận sử dụng hệ thống chức năng của trường phái Nga – Xô viết; riêng trong phần phân tích tác phẩm, các hợp âm phụ và hợp âm biến âm được ghi theo bậc cụ thể trong giọng, đối chiếu ở bảng 1.1. Về hoà âm, tiểu luận dựa trên lý thuyết hoà âm chức năng cổ điển, có đối chiếu với lý thuyết hoà âm cromatic cuối thế kỷ XIX và lý thuyết hoà âm thế kỷ XX, để xác định những yếu tố truyền thống và những yếu tố mới trong tác phẩm.
 `,
   },
   {
