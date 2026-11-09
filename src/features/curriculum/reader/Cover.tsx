@@ -16,6 +16,9 @@ export function Cover({ book, className, size = 1 }: { book: ReaderBook; classNa
   // "Nhạc Lý Cơ Bản" → "Nhạc Lý" / "Cơ Bản": split the title in half by words.
   const half = Math.ceil(words.length / 2)
   const [line1, line2] = [words.slice(0, half).join(' '), words.slice(half).join(' ')]
+  // long titles (an essay's full name) would wrap and overflow the square: shrink past ~14 characters a line (measured on the Scriabin essay)
+  const longest = Math.max(line1.length, line2.length)
+  const titleSize = `${longest > 14 ? (3.6 * 8) / longest : 3.6}em`
   if (book.coverImage)
     return (
       <div className={clsx('cover-photo relative aspect-square overflow-hidden', className)}>
@@ -28,8 +31,8 @@ export function Cover({ book, className, size = 1 }: { book: ReaderBook; classNa
       <div className={clsx('cover-cream relative flex aspect-square flex-col items-center justify-center overflow-hidden text-center', className)} style={{ fontSize: `${size * 16}px` }}>
         <span aria-hidden className="cover-cream-spine absolute inset-y-0 left-0 w-[4.5%]" />
         <span aria-hidden className="cover-cream-grain absolute inset-0" />
-        <p className="relative font-display text-[3.6em] font-bold leading-[0.92] tracking-[-0.035em] text-[#141210]">{line1}</p>
-        <p className="relative font-display text-[3.6em] font-bold leading-[0.98] tracking-[-0.035em] text-[#8f7a5c]">{line2}</p>
+        <p className="relative font-display font-bold leading-[0.92] tracking-[-0.035em] text-[#141210]" style={{ fontSize: titleSize }}>{line1}</p>
+        <p className="relative font-display font-bold leading-[0.98] tracking-[-0.035em] text-[#8f7a5c]" style={{ fontSize: titleSize }}>{line2}</p>
         {book.volume && <p className="relative mt-[0.9em] font-serif text-[1.3em] text-[#1d1a16]">{book.volume}</p>}
         <span aria-hidden className="relative mt-[0.8em] h-px w-[3.4em] bg-[#a8916d]" />
         <p className="relative mt-[0.8em] font-serif text-[1.05em] font-semibold text-[#1d1a16]">by {book.author}</p>
