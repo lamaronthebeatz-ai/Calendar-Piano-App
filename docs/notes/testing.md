@@ -7,3 +7,5 @@
 - `scripts/budget.mjs` (`npm run budget`, sau build; gzip): JS khởi động ≤ 600 KB (hiện 409), chỉ mục ≤ 600 KB (256), mảnh tìm kiếm lớn nhất ≤ 80 KB (6), precache ≤ 15 MB thô (9,2). Nâng ngưỡng chỉ khi có lý do, ghi vào đây.
 - CI (`.github/workflows/deploy-pages.yml`): lint → `check:links` → build `--base=./` → budget → cài Chromium + WebKit → `test:e2e`; hỏng bước nào thì **không deploy**, ảnh/trace lỗi ở artifact `playwright-results` (7 ngày). `retries: 1` trên CI.
 - `test-results/`, `playwright-report/` nằm trong `.gitignore`.
+
+- **Deploy Pages treo (11/2026):** bước `deploy-pages` hết giờ 10 phút dù build + test xanh (lỗi phía GitHub). Chạy lại job trên **cùng commit** bị "Deployment cancelled" ngay, vì mã deploy = SHA commit đã bị huỷ. Muốn deploy lại phải có commit mới (có nội dung thật, không commit rỗng).
