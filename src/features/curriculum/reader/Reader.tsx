@@ -596,9 +596,9 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
 
 /** Running head at the top of each page (book title on the left page, lesson on the right) and the page number at the foot. */
 function RunningHeads({ book, item, page, wide, padY, padX }: { book: ReaderBook; item: ReaderItem; page: number; wide: boolean; padY: number; padX: number }) {
-  const lesson = item.kind === 'chapter' ? `Bài ${item.n} · ${item.title}` : item.title
+  const lesson = item.kind === 'chapter' && !book.essay ? `Bài ${item.n} · ${item.title}` : item.title
   const left = `${book.title}${book.volume ? ` · ${book.volume}` : ''}`
-  const prefix = item.kind === 'chapter' ? `${item.n}.` : ''
+  const prefix = item.kind === 'chapter' && !book.essay ? `${item.n}.` : ''
   const cols = wide ? [page * 2, page * 2 + 1] : [page]
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 flex" style={{ padding: `0 ${padX}px`, gap: wide ? GAP : 0 }}>
@@ -689,7 +689,7 @@ function Toc({ book, current, marks, onGo, onClose }: { book: ReaderBook; curren
         </div>
         <div className="min-w-0">
           <p className="truncate font-display text-[15px] font-semibold text-[var(--color-ink)]">{book.title}{book.volume ? ` · ${book.volume}` : ''}</p>
-          <p className="text-[12px] text-[var(--color-ink-muted)]">Đã học {doneCount}/{chapters.length} bài</p>
+          <p className="text-[12px] text-[var(--color-ink-muted)]">{book.essay ? 'Đã đọc' : 'Đã học'} {doneCount}/{chapters.length} {book.essay ? 'mục' : 'bài'}</p>
           <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-[var(--color-surface-sunken)]">
             <span className="block h-full rounded-full bg-[var(--tint)]" style={{ width: `${(doneCount / Math.max(1, chapters.length)) * 100}%` }} />
           </div>
@@ -902,7 +902,7 @@ function Search({ book, onGo, onClose }: { book: ReaderBook; onGo: (i: number, q
           <li key={it.key}>
             <button onClick={() => onGo(i, q)} className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-2.5 text-left transition-colors hover:border-[var(--tint)]">
               <span className="flex items-baseline justify-between gap-2">
-                <span className="truncate text-[13.5px] font-medium text-[var(--color-ink)]">{it.kind === 'chapter' ? `Bài ${it.n} · ` : ''}{it.title}</span>
+                <span className="truncate text-[13.5px] font-medium text-[var(--color-ink)]">{it.kind === 'chapter' && !book.essay ? `Bài ${it.n} · ` : ''}{it.title}</span>
                 <span className="shrink-0 text-[11px] text-[var(--color-ink-faint)]">{count}×</span>
               </span>
               <span className="mt-0.5 line-clamp-2 block text-[12.5px] leading-snug text-[var(--color-ink-muted)]">{snippet}</span>

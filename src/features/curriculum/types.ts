@@ -100,6 +100,8 @@ export interface Book {
   preface: string
   /** Photographic cover (an imported asset URL) used instead of the typographic one. */
   coverImage?: string
+  /** A finished study (an essay, a thesis) rather than a textbook: the reader drops the lesson frame — lesson numbers, goals, summaries, review questions. */
+  essay?: boolean
   parts: Part[]
 }
 

@@ -885,6 +885,8 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 }
 .book-lesson .book-text h2 { counter-increment: sec; }
 .book-lesson .book-text h2::before { content: var(--lesson) "." counter(sec) "\2002"; color: var(--tint); font-variant-numeric: tabular-nums; }
+/* an essay numbers its own sections (1.1, 2.3…) */
+.book-lesson.is-essay .book-text h2::before { content: none; }
 .book-text h3 { font-family: var(--font-display); font-style: italic; font-weight: 600; }
 .book-text figure {
   margin: 1.3em 0; padding: 0.8em 0 0.6em; gap: 0.5em; border: 0; border-radius: 0; box-shadow: none; background: transparent;
@@ -896,6 +898,7 @@ footer.reader-bar { border-top: 1px solid var(--color-border); }
 .book-lesson .book-text figure:has(figcaption):not(:has(.aspect-video)) figcaption::before {
   content: "Hình " var(--lesson) "." counter(fig) ". "; font-weight: 700; color: var(--color-ink);
 }
+.book-lesson.is-essay .book-text figcaption::before { content: none; } /* the essay's captions carry their own "Ví dụ 2.3" */
 .book-text div:has(> table) {
   margin: 1.3em 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; font-family: var(--font-serif);
 }

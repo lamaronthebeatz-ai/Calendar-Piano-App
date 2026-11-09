@@ -28,7 +28,7 @@ const LETTERS = ['A', 'B', 'C', 'D']
 function useXref(book: ReaderBook) {
   return useCallback((slug: string) => {
     const c = chaptersOf(book).find((x) => x.slug === slug)
-    return c ? `Bài ${c.n}` : undefined
+    return c && !book.essay ? `Bài ${c.n}` : undefined
   }, [book])
 }
 
@@ -113,7 +113,7 @@ function CoverPage({ book, onStart, onToc }: { book: ReaderBook; onStart: () => 
         <p className="rc-sub">{book.subtitle}</p>
         <p className="rc-meta">
           {parts > 0 && <span>{parts} {book.kind === 'course' ? 'cấp' : 'phần'}</span>}
-          <span>{lessons} bài</span>
+          <span>{lessons} {book.essay ? 'mục' : 'bài'}</span>
         </p>
         <div className="rc-actions">
           <button onClick={onStart} className="rc-cta">
@@ -208,7 +208,7 @@ function TocPage({ book, onGo }: { book: ReaderBook; onGo: (key: string) => void
           return (
             <li key={it.key} className={clsx(it.kind !== 'chapter' && it.kind !== 'score' && 'is-extra')}>
               <button onClick={() => onGo(it.key)}>
-                <span className="book-toc-num">{it.kind === 'chapter' ? `Bài ${it.n}` : it.kind === 'score' ? `TP ${it.n}` : ''}</span>
+                <span className="book-toc-num">{it.kind === 'chapter' ? (book.essay ? '' : `Bài ${it.n}`) : it.kind === 'score' ? `TP ${it.n}` : ''}</span>
                 <span className="book-toc-name">{it.title}</span>
                 <span aria-hidden className="book-toc-leader" />
                 {isDone && <CheckIcon width={12} height={12} strokeWidth={3} className="shrink-0 text-[var(--color-status-completed)]" />}
@@ -280,7 +280,7 @@ function LessonPage({ book, item, mode, progressive }: { book: ReaderBook; item:
   const questions = lessonQuestions(a.slug)
   const part = book.items.find((i) => i.kind === 'part' && i.n === item.part)
   return (
-    <article className="book-lesson" style={{ '--lesson': `"${item.n}"` } as CSSProperties}>
+    <article className={`book-lesson${book.essay ? ' is-essay' : ''}`} style={{ '--lesson': `"${item.n}"` } as CSSProperties}>
       <header className="book-lesson-head">
         {mode === 'screen' && <HeroBackdrop slug={a.slug} category={a.category} />}
         {part && part.kind === 'part' && (
@@ -288,15 +288,17 @@ function LessonPage({ book, item, mode, progressive }: { book: ReaderBook; item:
             {unit(book)} {roman(part.n)} · {part.title}
           </p>
         )}
-        <p className="book-lesson-num">
-          <span>Bài</span>
-          {item.n}
-        </p>
+        {!book.essay && (
+          <p className="book-lesson-num">
+            <span>Bài</span>
+            {item.n}
+          </p>
+        )}
         <h1 className="book-lesson-title">{a.title}</h1>
         <span aria-hidden className="book-rule" />
       </header>
 
-      {item.focus && (
+      {item.focus && !book.essay && (
         <section className="book-box is-goal">
           <h4>Mục tiêu bài học</h4>
           <p>{item.focus}</p>
@@ -307,12 +309,14 @@ function LessonPage({ book, item, mode, progressive }: { book: ReaderBook; item:
         <Markup source={a.body} sections={shown} />
       </div>
 
-      <section className="book-box is-summary">
-        <h4>Tóm tắt</h4>
-        <p>{a.summary}</p>
-      </section>
+      {!book.essay && (
+        <section className="book-box is-summary">
+          <h4>Tóm tắt</h4>
+          <p>{a.summary}</p>
+        </section>
+      )}
 
-      {questions.length > 0 && (
+      {questions.length > 0 && !book.essay && (
         <section className="book-questions">
           <h4>Câu hỏi ôn tập</h4>
           <ol>

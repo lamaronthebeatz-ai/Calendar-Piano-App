@@ -1443,10 +1443,10 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
   },
   {
     slug: 'phan-tich-scriabin-sonata-so-2',
-    title: 'Tiểu luận: Thủ pháp hoà âm trong Sonata số 2 Op. 19 "Sonate-Fantaisie" của Scriabin',
+    title: 'Thủ pháp hoà âm trong Sonata số 2 Op. 19 của A. Scriabin — Mở đầu',
     category: 'analysis',
     aliases: ['Scriabin Sonata số 2', 'Sonata-fantaisie', 'Sonata-fantasy', 'Op. 19', 'Sonata Sol thăng thứ Scriabin', 'Scriabin Op. 19', 'Sonata số 2 Scriabin'],
-    summary: 'Phân tích từng ô hai chương của Sonata Sol♯ thứ Op. 19 (Belaieff in năm 1898): công năng và chức năng của từng hợp âm, các thủ pháp hoà âm của Scriabin thời đầu — pedal át, hợp âm 6 tăng viết trùng âm thành át 7, Napoli, hợp âm thêm nốt, chuyển giọng trùng âm Sol♯ thứ → Mi♭ thứ, Si♭ thứ → Si trưởng. Số ô đếm trên bản Belaieff, đối chiếu bảng hình thức của Leikin (qua Wikipedia) và dữ liệu MIDI biểu diễn.',
+    summary: 'Phần mở đầu của tiểu luận về thủ pháp hoà âm trong Sonata số 2 Sol♯ thứ Op. 19 "Sonate-Fantaisie" của Scriabin: lý do chọn đề tài, lịch sử nghiên cứu, mục đích, đối tượng, phạm vi, phương pháp và bố cục.',
     wiki: 'Piano_Sonata_No._2_(Scriabin)',
     refs: [
       ['IMSLP — Piano Sonata No. 2, Op. 19 (Scriabin): bản Belaieff, Leipzig 1898 (tệp #111216), dùng để đọc từng ô', 'https://imslp.org/wiki/Piano_Sonata_No.2,_Op.19_(Scriabin,_Aleksandr)'],
@@ -1463,211 +1463,525 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     body: `
 ::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
 
-*Tiểu luận phân tích hoà âm. Toàn bài dùng **hệ ký hiệu chức năng của trường phái Nga – Xô viết** (T – S – D, SII, DVII7, K64, DD…); bảng đối chiếu với số La Mã phương Tây ở mục 1.2.*
+## 1. Lý do chọn đề tài
+Trong lịch sử âm nhạc Nga cuối thế kỷ XIX – đầu thế kỷ XX, Alexander Nikolayevich Scriabin (1872 – 1915) là một trong số ít nhà soạn nhạc mà toàn bộ con đường sáng tác có thể đọc như một quá trình biến đổi liên tục của ngôn ngữ hoà âm: từ hoà âm chức năng mang đậm dấu ấn Chopin và Liszt ở các tác phẩm thời trẻ, tới hệ thống hoà âm dựa trên những cấu trúc đối xứng và "hợp âm huyền bí" ở các tác phẩm cuối đời. Mười bản sonata cho piano của ông trải dài gần trọn quá trình ấy, và vì vậy thường được giới nghiên cứu xem như "cuốn nhật ký" của tư duy hoà âm Scriabin.
 
-## I. Mở đầu
-### 1. Lý do chọn đề tài
-Sonata số 2 Op. 19 (*Sonate-Fantaisie*, 1892 – 1897) đứng giữa Sonata số 1 Op. 6 (1892), còn gần Chopin và Liszt, và Sonata số 3 Op. 23 (1897 – 1898). Vì vậy tác phẩm thường được nhìn như một **sonata chuyển tiếp** của Scriabin: ngôn ngữ vẫn là hoà âm chức năng có điệu tính cuối thế kỷ 19, nhưng đã có những yếu tố mà các sonata muộn sẽ phát triển thành hệ thống riêng. *Người biên soạn chưa tìm được nguồn gốc nguyên văn của chữ "chuyển tiếp"; đây là nhận định phổ biến, và phần phân tích dưới đây kiểm lại nó trên bản phổ.*
+Sonata số 2 giọng Sol♯ thứ, Op. 19, mang tên *Sonate-Fantaisie*, được Scriabin bắt đầu ở Genova năm 1892, hoàn thành ở Crimea năm 1897 và được nhà Belaieff (Leipzig) xuất bản năm 1898. Về mặt niên đại, tác phẩm đứng giữa Sonata số 1 Op. 6 (1892) — còn gần với ngôn ngữ của Chopin và Liszt — và Sonata số 3 Op. 23 (1897 – 1898), nơi phong cách riêng của Scriabin đã định hình rõ. Vì vị trí ấy, Sonata số 2 thường được nhắc đến như một **sonata chuyển tiếp**. Tuy vậy, nhận định này phần lớn mới dừng ở mức khái quát: người ta chỉ ra rằng tác phẩm "vẫn còn lãng mạn" nhưng "đã có màu sắc riêng", mà ít khi chứng minh cụ thể tính chuyển tiếp ấy nằm ở đâu trong cấu trúc âm nhạc. Chúng tôi chưa xác định được ai là người đầu tiên dùng chữ "chuyển tiếp" cho tác phẩm này; trong tiểu luận, chúng tôi coi đó là một nhận định phổ biến cần được kiểm chứng trên bản phổ.
 
-Chúng tôi chọn đề tài vì ba lẽ:
-- **Hoà âm là nơi tính chuyển tiếp lộ rõ nhất.** Trên bề mặt là T – S – D, kết trọn, ly điệu; bên dưới là hợp âm át quãng 5 hạ mang màu toàn cung, hợp âm 6 tăng được viết trùng âm thành hợp âm bảy át, hợp âm thêm nốt và các pedal dài — những mầm của "hợp âm huyền bí" về sau (xem mục Mục 3).
-- **Hình thức "sonata – fantasia"** hai chương (chậm – nhanh) đặt câu hỏi về quan hệ giữa hình thức và kế hoạch giọng: chương I đặt cả ba chủ đề ở giọng III, tái hiện ở giọng VI và kết ở Mi trưởng, không trở về Sol♯ thứ.
-- **Chưa có bài phân tích hoà âm từng ô** của tác phẩm bằng hệ ký hiệu Nga – Xô viết, là hệ được dạy trong các nhạc viện Việt Nam (mục 2).
+Theo chúng tôi, hoà âm là bình diện thể hiện rõ nhất tính chuyển tiếp ấy. Trên bề mặt, tác phẩm vẫn vận hành theo logic chức năng chủ – hạ át – át, với kết, ly điệu và chuyển giọng theo đúng các quy tắc của hoà âm cổ điển. Nhưng ở tầng sâu hơn, nhiều hiện tượng đã vượt ra ngoài khuôn khổ ấy: hợp âm át có quãng 5 hạ mang màu sắc toàn cung, hợp âm sáu tăng được viết trùng âm thành hợp âm bảy át của giọng khác, hợp âm thêm nốt và hợp âm quãng 4 treo không giải quyết, những pedal kéo dài làm các chức năng chồng lên nhau. Đây chính là những yếu tố mà về sau sẽ được Scriabin phát triển thành hệ thống riêng.
 
-### 2. Lịch sử nghiên cứu đề tài
-Chúng tôi chia các công trình đã tìm được thành hai nhóm: **A — nghiên cứu hoà âm Scriabin nói chung** (chia theo thời kỳ) và **B — nghiên cứu riêng về Sonata số 2**. Trong mỗi nhóm, công trình xếp theo năm. Cột cuối ghi mức độ chúng tôi đã tiếp cận; những năm hoặc tên sách chưa đối chiếu được nguyên bản thì ghi rõ.
+Bên cạnh đó, hình thức "sonata – fantasia" hai chương của tác phẩm cũng đặt ra những câu hỏi đáng chú ý về quan hệ giữa hình thức và kế hoạch giọng: chương I đặt cả ba chủ đề của phần trình bày ở giọng bậc III, đưa phần tái hiện sang giọng bậc VI và kết thúc ở Mi trưởng, không trở về giọng chủ Sol♯ thứ.
 
-**A. Hoà âm Scriabin nói chung**
-| Năm | Tác giả – công trình | Thời kỳ, trường phái | Nội dung chính về hoà âm | Tiếp cận |
-|---|---|---|---|---|
-| 1916 | L. Sabaneev, *Скрябин* (Moskva) | Nga trước 1917 | Người quen của Scriabin; mô tả các hợp âm và quan niệm âm thanh của nhạc sĩ, chủ yếu thời muộn | Chưa đọc toàn văn |
-| 1968 | V. Dernova, *Гармония Скрябина* (Leningrad) | Xô viết | Mô hình hoà âm Scriabin xây trên hợp âm át và các biến thể của nó; có ích cho tác phẩm thời trưởng thành, ít giải thích các tác phẩm muộn dựa trên đối xứng (theo đánh giá trong sách của Indiana University Press) | Qua nguồn thứ cấp; một nguồn tiếng Anh ghi là luận án năm 1973, chưa đối chiếu |
-| 1969 | S. Pavchinsky, *Произведения Скрябина позднего периода* | Xô viết | Tác phẩm thời muộn | Chưa đối chiếu năm và nội dung |
-| 1983 | J. Reise, "Late Skriabin: Some Principles behind the Style", *19th-Century Music* 6/3 | Phương Tây | Nguyên tắc cấu tạo hợp âm thời muộn | Qua nguồn thứ cấp |
-| 1984 | G. Perle, "Scriabin's Self-Analyses", *Music Analysis* 3/2 | Phương Tây | Ghi chép tự phân tích của Scriabin, cấu trúc đối xứng | Qua nguồn thứ cấp |
-| 1986 | J. Baker, *The Music of Alexander Scriabin* (Yale University Press) | Phương Tây | Đi từ tác phẩm có điệu tính sang thời muộn, kết hợp phân tích Schenker và tập hợp âm | Qua nguồn thứ cấp |
-| 1993 | Yu. Kholopov, "Скрябин и гармония XX века", *Учёные записки* 1 (Bảo tàng Scriabin, Moskva); bản tiếng Anh 2006 – 2007 | Nga hậu Xô viết | Scriabin là một trong những người mở đầu "hoà âm mới" của thế kỷ 20 | Đọc bản giới thiệu tiếng Anh |
-| 2003 | P. Sabbagh, *The Development of Harmony in Scriabin's Works* (Universal Publishers) | Phương Tây | Hoà âm Scriabin phát triển từng bước, mỗi bước suy ra được từ bước trước, nối thế kỷ 19 với thế kỷ 20 | Qua mô tả của nhà xuất bản |
-| 2025 | Yuhe Wang, luận án DMA, University of Maryland | Phương Tây | So sánh Chopin và Scriabin; màu sắc hoà âm, giọng xa | Đọc toàn văn |
+Cuối cùng, qua khảo sát tư liệu (trình bày ở mục 2), chúng tôi chưa tìm thấy công trình nào phân tích hoà âm Sonata số 2 một cách chi tiết, theo từng ô nhịp, bằng hệ thống lý thuyết chức năng của trường phái Nga – Xô viết, là hệ thống đang được giảng dạy trong các nhạc viện ở Việt Nam. Đó là những lý do khiến chúng tôi chọn đề tài **"Thủ pháp hoà âm trong Sonata số 2 Op. 19 của A. Scriabin"**.
 
-**B. Riêng về Sonata số 2**
-| Năm | Tác giả – công trình | Loại | Nội dung chính | Tiếp cận |
-|---|---|---|---|---|
-| 2000 | Bae Su-jin, luận văn thạc sĩ, ĐH Nữ Ewha (Hàn Quốc) | Phân tích | Chương I hình thức sonata, chương II ba đoạn có coda; hợp âm ba bỏ quãng 3, hợp âm quãng 4, chuyển giọng trùng âm | Chỉ đọc tóm tắt |
-| 2007 | Luận án về các sonata của Scriabin, ĐH Kentucky | Phân tích | — | Bị chặn truy cập |
-| 2013 | Emily Chiang, luận án DMA, University of Toronto | Biểu diễn | Rubato và cách dựng cao trào trong hai sonata | Đọc toàn văn |
-| 2015 | Cha Min-hee, luận văn thạc sĩ, ĐH Chosun (Hàn Quốc) | Phân tích | Phân tích theo đoạn và theo thủ pháp (hình thức, tiết tấu, hoà âm), bản Peters 1971 | Đọc toàn văn; đối chiếu ở Mục 4 |
+## 2. Lịch sử nghiên cứu đề tài
+Để có cái nhìn hệ thống, chúng tôi chia các công trình đã khảo sát thành hai nhóm: nhóm thứ nhất gồm những nghiên cứu về **hoà âm của Scriabin nói chung**, được trình bày theo từng thời kỳ; nhóm thứ hai gồm những nghiên cứu **riêng về Sonata số 2**. Trong mỗi nhóm, các công trình được xếp theo trình tự thời gian công bố.
 
-Ở Việt Nam, qua tìm kiếm mở chúng tôi **chưa thấy** tiểu luận, luận văn nào về hoà âm Scriabin hay về Sonata số 2; thư viện các nhạc viện có thể còn tài liệu chưa số hoá.
+**2.1. Các công trình nghiên cứu hoà âm Scriabin nói chung**
 
-**2.1. Nhận xét, đánh giá**
-- Nhóm A chủ yếu bàn **thời kỳ muộn** (hợp âm huyền bí, cấu trúc đối xứng); các tác phẩm thời đầu và chuyển tiếp chỉ được nhắc như tiền đề. Mô hình của trường phái Xô viết (Dernova) lấy **hợp âm át** làm gốc, nên rất hợp để đọc Op. 19, nơi các biến thể của D (D7 quãng 5 hạ, D9, D với ♭6) đã xuất hiện. Kholopov và Sabbagh cho khung nhìn "từ truyền thống tới hoà âm mới" mà đề tài này cần.
-- Nhóm B ít và phần lớn viết ở Hàn Quốc, Bắc Mỹ. Chiang nhìn từ góc độ **biểu diễn**; Bae và Cha phân tích theo **đoạn** và theo **thủ pháp**, chưa gán chức năng cho từng hợp âm. Luận văn của Cha chi tiết nhất nhưng có vài chỗ chia hình thức và đọc giọng khác bản Belaieff, cùng một số lỗi in (Mục 4).
-- Không công trình nào dùng hệ ký hiệu chức năng Nga – Xô viết cho Op. 19.
+*Thời kỳ trước năm 1917.* Công trình sớm nhất mà chúng tôi biết tới là cuốn *Скрябин* (Moskva, 1916) của Leonid Sabaneev, một nhà phê bình và nhà soạn nhạc có quan hệ gần gũi với Scriabin. Sách mô tả quan niệm âm thanh và các loại hợp âm của Scriabin, chủ yếu thuộc giai đoạn sáng tác cuối đời, từ góc nhìn của người đương thời. Chúng tôi chưa tiếp cận được toàn văn cuốn sách và chỉ biết đến nó qua các nguồn dẫn thứ cấp.
 
-**2.2. Kết luận**
-Những công trình trên giúp ích cho chúng tôi rất nhiều: nhóm A cho khung lý thuyết về hướng phát triển của hoà âm Scriabin; nhóm B cho các mốc hình thức và những nhận xét để đối chiếu. Qua những tư liệu chúng tôi tìm thấy, **không có tư liệu nào trùng với đề tài** phân tích thủ pháp hoà âm từng ô của Sonata số 2 theo hệ chức năng Nga – Xô viết.
+*Thời kỳ Xô viết.* Công trình tiêu biểu nhất của giai đoạn này là cuốn *Гармония Скрябина* (Hoà âm Scriabin, Leningrad) của Varvara Dernova. Các nguồn mà chúng tôi tiếp cận ghi năm công bố khác nhau: phần lớn ghi năm 1968, trong khi một nguồn tiếng Anh ghi đây là luận án năm 1973; chúng tôi chưa đối chiếu được bản gốc. Dernova xây dựng mô hình hoà âm Scriabin trên cơ sở hợp âm át và các biến thể của nó. Theo đánh giá trong một chuyên khảo về âm nhạc piano Nga do Indiana University Press xuất bản, mô hình này có giá trị lớn trong việc lý giải các tác phẩm thời kỳ trưởng thành của Scriabin, nhưng ít giải thích được các tác phẩm cuối đời vốn dựa trên nguyên tắc đối xứng. Cũng trong giai đoạn này, S. Pavchinsky có công trình về các tác phẩm thời kỳ muộn của Scriabin (*Произведения Скрябина позднего периода*, thường được ghi năm 1969), song chúng tôi chưa xác minh được năm xuất bản và nội dung cụ thể.
 
-### 3. Phương pháp nghiên cứu
-- **Phương pháp tư liệu**: thu thập, đọc các công trình ở mục 2; dùng bản in đầu Belaieff 1898 làm văn bản gốc, đối chiếu cao độ với bản ghi MIDI trong bộ MAESTRO v3.
-- **Phương pháp phân tích – tổng hợp**: phân tích từng ô (hợp âm, bè trầm, chức năng, thủ pháp), rồi tổng hợp thành các thủ pháp chung của tác phẩm (Mục 3).
-- **Phương pháp so sánh – đối chiếu**: so sánh với các luận văn đi trước (Mục 4) và với lý thuyết hoà âm cổ điển để xác định chỗ nào là truyền thống, chỗ nào là mới.
+*Các nghiên cứu phương Tây những năm 1980.* Thập niên 1980 chứng kiến sự quan tâm mạnh mẽ của giới lý luận phương Tây đối với Scriabin. Jay Reise (1983), trong bài "Late Skriabin: Some Principles behind the Style" (*19th-Century Music*, số 6/3), tìm cách xác lập những nguyên tắc cấu tạo hợp âm ở các tác phẩm cuối đời. George Perle (1984), trong bài "Scriabin's Self-Analyses" (*Music Analysis*, số 3/2), dựa trên những ghi chép tự phân tích của chính nhà soạn nhạc để làm sáng tỏ các cấu trúc đối xứng. Công trình đồ sộ nhất của giai đoạn này là chuyên khảo *The Music of Alexander Scriabin* (Yale University Press, 1986) của James Baker, đi từ các tác phẩm có điệu tính tới thời kỳ cuối, kết hợp phương pháp phân tích Schenker với lý thuyết tập hợp âm. Ba công trình này chúng tôi tiếp cận chủ yếu qua các nguồn dẫn thứ cấp.
 
-### 4. Đối tượng và phạm vi nghiên cứu
-- **Đối tượng**: các thủ pháp hoà âm trong Sonata số 2 Sol♯ thứ Op. 19 của A. Scriabin.
-- **Phạm vi**: cả hai chương (136 + 110 ô), theo bản Belaieff 1898. Tiểu luận **giới hạn trong hoà âm**; hình thức chỉ dùng làm khung để định vị; tiết tấu, phức điệu và biểu diễn không thuộc phạm vi, chỉ nhắc khi liên quan tới hoà âm.
+*Thời kỳ hậu Xô viết và những năm gần đây.* Năm 1993, Yuri Kholopov công bố bài "Скрябин и гармония XX века" (Scriabin và hoà âm thế kỷ XX) trong tập *Учёные записки* số 1 của Bảo tàng Tưởng niệm Scriabin ở Moskva; bài được dịch sang tiếng Anh trong các năm 2006 – 2007. Kholopov khẳng định Scriabin là một trong những người khai mở "hoà âm mới" của thế kỷ XX. Năm 2003, Peter Sabbagh xuất bản cuốn *The Development of Harmony in Scriabin's Works*, với luận điểm rằng hoà âm Scriabin phát triển từng bước, mỗi bước đều có thể suy ra từ bước trước, qua đó nối liền âm nhạc thế kỷ XIX với thế kỷ XX; chúng tôi mới tiếp cận cuốn sách qua phần giới thiệu của nhà phát hành. Gần đây nhất, luận án tiến sĩ nghệ thuật biểu diễn của Yuhe Wang (University of Maryland, 2025) so sánh âm nhạc piano của Chopin và Scriabin, trong đó có nhận xét chung về màu sắc hoà âm và việc sử dụng các giọng xa.
 
-### 5. Bố cục tiểu luận
-Ngoài Mở đầu, Kết luận, Tài liệu tham khảo và Phụ lục, phần Nội dung gồm bốn mục: **Mục 1** — cơ sở lý thuyết; **Mục 2** — phân tích hoà âm hai chương có giải thích; **Mục 3** — tổng hợp các thủ pháp hoà âm; **Mục 4** — đối chiếu với luận văn của Cha Min-hee.
+**2.2. Các công trình nghiên cứu riêng về Sonata số 2**
 
-### Các chương của tiểu luận
-- [[scriabin-op19-co-so-ly-thuyet]]
-- [[scriabin-op19-chuong-1]]
-- [[scriabin-op19-chuong-2]]
-- [[scriabin-op19-thu-phap]]
-- [[scriabin-op19-ket-luan]]
+Năm 2000, Bae Su-jin bảo vệ luận văn thạc sĩ về Sonata số 2 tại Đại học Nữ Ewha (Hàn Quốc). Theo phần tóm tắt mà chúng tôi đọc được, tác giả xác định chương I viết theo hình thức sonata, chương II theo hình thức ba đoạn có coda, đồng thời ghi nhận các hiện tượng như hợp âm ba bỏ quãng 3, hợp âm xây theo quãng 4 và chuyển giọng trùng âm. Năm 2007, một luận án tại Đại học Kentucky (Hoa Kỳ) bàn về các sonata của Scriabin, song chúng tôi không truy cập được văn bản. Năm 2013, Emily Chiang bảo vệ luận án tiến sĩ nghệ thuật biểu diễn tại University of Toronto với đề tài về rubato và cách xây dựng cao trào trong hai sonata của Scriabin; đây là một nghiên cứu thuần tuý từ góc độ biểu diễn. Năm 2015, Cha Min-hee bảo vệ luận văn thạc sĩ tại Đại học Chosun (Hàn Quốc), phân tích tác phẩm theo từng đoạn và theo các thủ pháp hình thức, tiết tấu và hoà âm, trên cơ sở bản in Peters năm 1971. Đây là công trình chi tiết nhất về Sonata số 2 mà chúng tôi tiếp cận được.
 
+Ở Việt Nam, qua tra cứu các nguồn mở, chúng tôi chưa tìm thấy tiểu luận, luận văn hay bài nghiên cứu nào về hoà âm Scriabin nói chung cũng như về Sonata số 2 nói riêng. Có thể thư viện các nhạc viện còn lưu giữ những tài liệu chưa được số hoá mà chúng tôi chưa có điều kiện khảo sát.
+
+**2.3. Nhận xét, đánh giá các công trình đi trước**
+
+Các công trình thuộc nhóm thứ nhất tập trung chủ yếu vào giai đoạn sáng tác cuối đời của Scriabin, với các vấn đề như hợp âm huyền bí, cấu trúc đối xứng và sự tan rã của điệu tính. Các tác phẩm thời kỳ đầu và thời kỳ chuyển tiếp thường chỉ được nhắc tới như tiền đề. Tuy vậy, chính những công trình này cung cấp cho chúng tôi khung lý thuyết quan trọng. Mô hình của Dernova, lấy hợp âm át làm gốc của hoà âm Scriabin, đặc biệt phù hợp với đối tượng của tiểu luận, bởi trong Sonata số 2 các biến thể của hợp âm át — hợp âm bảy át quãng 5 hạ, hợp âm chín át, hợp âm át có âm ♭6 — đã xuất hiện với tần suất cao. Các công trình của Kholopov và Sabbagh gợi ý cách nhìn hoà âm Scriabin như một quá trình liên tục từ truyền thống tới cái mới, đúng với hướng tiếp cận "chuyển tiếp" mà tiểu luận theo đuổi.
+
+Các công trình thuộc nhóm thứ hai còn ít và phần lớn được thực hiện ở Hàn Quốc và Bắc Mỹ. Luận án của Chiang nghiêng về biểu diễn; các luận văn của Bae và Cha phân tích tác phẩm theo đoạn và theo thủ pháp, nhưng chưa xác định chức năng của từng hợp âm trong tiến trình hoà âm. Luận văn của Cha Min-hee là tài liệu tham khảo quý giá nhất, song ở một số chỗ cách chia hình thức và cách đọc giọng của tác giả khác với văn bản bản in đầu Belaieff; luận văn cũng có một số lỗi in (những điểm này được chúng tôi trình bày ở chương 4). Không công trình nào sử dụng hệ thống ký hiệu chức năng của trường phái Nga – Xô viết.
+
+**2.4. Kết luận về tình hình nghiên cứu**
+
+Những công trình nói trên đã giúp ích cho chúng tôi rất nhiều trong việc thực hiện tiểu luận: nhóm thứ nhất cung cấp khung lý thuyết về hướng phát triển của hoà âm Scriabin, nhóm thứ hai cung cấp các mốc hình thức và những nhận định để đối chiếu. Qua những tư liệu chúng tôi tìm thấy, không có tư liệu nào trùng với đề tài phân tích thủ pháp hoà âm Sonata số 2 của Scriabin theo từng ô nhịp, bằng hệ thống lý thuyết chức năng của trường phái Nga – Xô viết.
+
+## 3. Mục đích và nhiệm vụ nghiên cứu
+Mục đích của tiểu luận là làm sáng tỏ các thủ pháp hoà âm trong Sonata số 2 Op. 19 của Scriabin, qua đó xác định cụ thể tính chuyển tiếp của tác phẩm trong tiến trình phát triển ngôn ngữ hoà âm của nhà soạn nhạc.
+
+Để đạt mục đích đó, tiểu luận đặt ra các nhiệm vụ sau: hệ thống hoá cơ sở lý thuyết về hình thức sonata và về hoà âm chức năng cổ điển cũng như hoà âm cuối thế kỷ XIX – đầu thế kỷ XX; phân tích tiến trình hoà âm của hai chương theo từng ô nhịp; khái quát các thủ pháp hoà âm đặc trưng của tác phẩm và đối chiếu kết quả với các nghiên cứu đi trước.
+
+## 4. Đối tượng và phạm vi nghiên cứu
+Đối tượng nghiên cứu của tiểu luận là các thủ pháp hoà âm trong Sonata số 2 giọng Sol♯ thứ Op. 19 của A. Scriabin.
+
+Về phạm vi, tiểu luận khảo sát toàn bộ hai chương của tác phẩm (chương I gồm 136 ô nhịp, chương II gồm 110 ô nhịp), dựa trên văn bản bản in đầu của nhà Belaieff, Leipzig, 1898. Tiểu luận giới hạn trong lĩnh vực hoà âm. Hình thức chỉ được sử dụng làm khung để định vị các hiện tượng hoà âm; các vấn đề tiết tấu, phức điệu và biểu diễn nằm ngoài phạm vi nghiên cứu và chỉ được đề cập khi có liên quan trực tiếp đến hoà âm.
+
+## 5. Phương pháp nghiên cứu
+Tiểu luận sử dụng phương pháp tư liệu để thu thập và hệ thống hoá các công trình đi trước, đồng thời xác lập văn bản nghiên cứu. Bản in đầu Belaieff năm 1898 được dùng làm văn bản gốc; cao độ các nốt được đối chiếu thêm với bản ghi MIDI của một buổi biểu diễn thực trong bộ dữ liệu MAESTRO v3. Khi hai nguồn không thống nhất, chúng tôi theo bản phổ.
+
+Phương pháp chủ đạo là phân tích – tổng hợp: tiến trình hoà âm được phân tích theo từng ô nhịp, xác định cấu trúc, bậc và chức năng của từng hợp âm, sau đó tổng hợp thành các thủ pháp đặc trưng của tác phẩm. Phương pháp so sánh – đối chiếu được dùng để so sánh tác phẩm với các quy tắc của hoà âm cổ điển, nhằm phân biệt yếu tố truyền thống với yếu tố mới, và để đối chiếu kết quả phân tích với các nghiên cứu đi trước.
+
+## 6. Đóng góp của tiểu luận
+Tiểu luận cung cấp một bản phân tích hoà âm chi tiết theo từng ô nhịp cho cả hai chương của Sonata số 2, sử dụng hệ thống ký hiệu chức năng của trường phái Nga – Xô viết. Trên cơ sở đó, tiểu luận góp phần chứng minh cụ thể nhận định về tính chuyển tiếp của tác phẩm, và có thể làm tài liệu tham khảo cho việc học tập, giảng dạy hoà âm và phân tích tác phẩm ở bậc đại học.
+
+## 7. Bố cục của tiểu luận
+Ngoài phần Mở đầu, Kết luận, Tài liệu tham khảo và Phụ lục, nội dung chính của tiểu luận gồm bốn chương:
+
+- [[scriabin-op19-co-so-ly-thuyet|Chương 1. Cơ sở lý luận và khái quát về tác phẩm]]
+- [[scriabin-op19-chuong-1|Chương 2. Thủ pháp hoà âm trong chương I (Andante)]]
+- [[scriabin-op19-chuong-2|Chương 3. Thủ pháp hoà âm trong chương II (Presto)]]
+- [[scriabin-op19-thu-phap|Chương 4. Đặc điểm thủ pháp hoà âm và tính chuyển tiếp của tác phẩm]]
+- [[scriabin-op19-ket-luan|Kết luận và tài liệu tham khảo]]
+- [[scriabin-op19-phu-luc|Phụ lục. Bảng phân tích hoà âm theo từng ô nhịp]]
 `,
   },
   {
     slug: 'scriabin-op19-co-so-ly-thuyet',
-    title: 'Scriabin Op. 19 — Mục 1: Cơ sở lý thuyết',
+    title: 'Chương 1. Cơ sở lý luận và khái quát về tác phẩm',
     category: 'analysis',
-    summary: 'Cơ sở lý thuyết của tiểu luận: liên khúc sonata, hình thức sonata, sonata tự do, rondo – sonata; hệ ký hiệu hoà âm Nga – Xô viết và phương Tây (bảng đối chiếu); hoà âm chức năng, kết tránh, ly điệu, chuyển giọng trùng âm, hoà âm mới; bối cảnh Sonata số 2.',
+    summary: 'Tiểu luận Sonata số 2 Scriabin, chương 1: liên khúc sonata và các dạng hình thức sonata, hệ thống ký hiệu hoà âm, lý thuyết hoà âm chức năng và hoà âm cuối thế kỷ XIX – đầu thế kỷ XX, khái quát về tác phẩm.',
     body: `
-::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
+## 1.1. Liên khúc sonata và các dạng hình thức sonata
+Lý thuyết về liên khúc sonata và hình thức sonata được trình bày có hệ thống trong các giáo trình hình thức âm nhạc của trường phái Xô viết, tiêu biểu là cuốn *Музыкальная форма* (Hình thức âm nhạc) của I. Sposobin, in lần đầu năm 1947 và được tái bản nhiều lần; cuốn *Анализ музыкальных произведений* (Phân tích tác phẩm âm nhạc, 1967) của L. Mazel và V. Zukkerman; cuốn *Музыкальная форма* (1974) của Yu. Tyulin, T. Bershadskaya và I. Pustylnik. Ở Việt Nam, hệ thống này được kế thừa và trình bày trong giáo trình *Phân tích tác phẩm âm nhạc* của PGS. TS Nguyễn Thị Nhung (Nhạc viện Hà Nội, 2006). Tiểu luận dựa trên các giáo trình này để xác lập các khái niệm về hình thức (xem thêm [[ptam-sonata]], [[hinh-thuc-sonata]]).
 
-## II. Nội dung — Mục 1: Cơ sở lý thuyết
-### 1.1. Liên khúc sonata, hình thức sonata, sonata tự do, rondo – sonata
-- **Liên khúc sonata** (сонатный цикл) là chuỗi chương tương phản về tốc độ và tính chất, thường ba hoặc bốn chương, chương đầu viết theo hình thức sonata. Lý thuyết này được hệ thống trong các giáo trình hình thức Xô viết: I. Sposobin, *Музыкальная форма* (1947, nhiều lần in lại); L. Mazel và V. Zukkerman, *Анализ музыкальных произведений* (1967); Yu. Tyulin, T. Bershadskaya, I. Pustylnik, *Музыкальная форма* (1974); và ở Việt Nam là giáo trình phân tích tác phẩm của Nguyễn Thị Nhung (2006). Xem [[ptam-sonata]] và [[hinh-thuc-sonata]].
-- **Hình thức sonata**: trình bày (chủ đề chính ở giọng chính, chủ đề phụ ở giọng gần), phát triển, tái hiện (các chủ đề trở về giọng chính) và coda. Op. 19 giữ ba phần này ở chương I nhưng **đổi kế hoạch giọng**: chủ đề ở giọng III khi trình bày, giọng VI khi tái hiện.
-- **Sonata tự do, sonata – fantasia**: liên khúc rút gọn hoặc đổi trật tự chương, gần tinh thần fantasia. Tiền lệ trực tiếp là hai sonata *quasi una fantasia* Op. 27 của Beethoven (xem [[phan-tich-anh-trang-chuong-1]]). Op. 19 chỉ có hai chương, chậm rồi nhanh, và được Scriabin đặt tên *Sonate-Fantaisie*.
-- **Rondo – sonata**: kết hợp điệp khúc của rondo với tái hiện của sonata (xem [[ptam-rondo-sonata]]). Chương II của Op. 19 **không** theo rondo – sonata mà theo **ba đoạn có coda** (A – B – A′ – coda), như Leikin, Bae và Cha đều ghi nhận.
+**Liên khúc sonata** (сонатный цикл) là một chuỗi các chương tương phản về tốc độ, tính chất và giọng điệu, thường gồm ba hoặc bốn chương, trong đó chương thứ nhất, và nhiều khi cả chương cuối, được viết theo hình thức sonata. Các chương liên kết với nhau bằng sự thống nhất về giọng chủ và về ý đồ nghệ thuật chung.
 
-### 1.2. Ký hiệu hoà âm cổ điển và hiện đại
-Có hai hệ ký hiệu chính:
-- **Hệ bậc (số La Mã)** của phương Tây, từ G. Weber (đầu thế kỷ 19) tới W. Piston, *Harmony* (1941): ghi bậc của hợp âm, chữ hoa cho hợp âm trưởng, chữ thường cho hợp âm thứ.
-- **Hệ chức năng** của H. Riemann (cuối thế kỷ 19), được G. Catoire đưa vào Nga và được **sách giáo khoa bốn tác giả** (Dubovsky – Evseev – Sposobin – Sokolov, 1937 – 1938) chuẩn hoá. Đây là hệ dạy ở các nhạc viện Nga – Xô viết và Việt Nam (xem [[ky-hieu-chuc-nang-truong-phai-nga]], [[hoa-am-truong-phai-nga-xo-viet]]).
-- **Ký hiệu hiện đại** (dùng cho hoà âm thế kỷ 20): tên hợp âm theo chữ cái (B7, A♯ø7, E7♭9…), tập hợp âm; tiểu luận này dùng tên chữ cái để chỉ **âm thanh** của hợp âm, còn chức năng ghi theo hệ Nga.
+**Hình thức sonata** gồm ba phần chính là trình bày, phát triển và tái hiện, thường có thêm phần mở đầu và coda. Trong phần trình bày, chủ đề chính vang lên ở giọng chính, chủ đề phụ ở một giọng gần, thường là giọng át hoặc giọng song song; giữa hai chủ đề là đoạn nối, sau chủ đề phụ là chủ đề kết. Phần phát triển biến đổi các chất liệu chủ đề qua nhiều giọng khác nhau. Phần tái hiện đưa các chủ đề trở lại, trong đó chủ đề phụ được chuyển về giọng chính. Nguyên tắc thống nhất giọng ở phần tái hiện là một trong những đặc trưng cơ bản của hình thức sonata cổ điển.
 
-Bảng ký hiệu dùng trong toàn bài:
-| Ký hiệu Nga – Xô viết | Nghĩa | Tương đương phương Tây |
+**Sonata tự do** hay sonata – fantasia là dạng liên khúc sonata có cấu trúc được rút gọn hoặc thay đổi trật tự các chương, mang tinh thần ngẫu hứng của thể loại fantasia. Tiền lệ trực tiếp và nổi tiếng nhất là hai sonata *quasi una fantasia* Op. 27 của Beethoven, trong đó Sonata số 14 Op. 27 số 2 mở đầu bằng một chương chậm (xem [[phan-tich-anh-trang-chuong-1]]). Sonata số 2 của Scriabin chỉ có hai chương, chậm rồi nhanh, và được chính tác giả đặt tên *Sonate-Fantaisie*.
+
+**Rondo – sonata** là hình thức kết hợp nguyên tắc luân phiên điệp khúc của rondo với nguyên tắc tái hiện có thống nhất giọng của sonata (xem [[ptam-rondo-sonata]]). Hình thức này thường dùng cho chương cuối của liên khúc sonata cổ điển. Chương II của Sonata số 2 không viết theo rondo – sonata mà theo hình thức ba đoạn có coda, như các nhà nghiên cứu Leikin, Bae và Cha đều đã xác định.
+
+## 1.2. Hệ thống ký hiệu hoà âm cổ điển và hiện đại
+Trong lý luận âm nhạc hiện nay tồn tại hai hệ thống ký hiệu hoà âm chính. **Hệ thống bậc** của phương Tây dùng chữ số La Mã ghi bậc của âm gốc hợp âm trong giọng; hệ thống này được G. Weber đề xuất từ đầu thế kỷ XIX và được hoàn thiện trong các giáo trình thế kỷ XX, tiêu biểu là *Harmony* (1941) của W. Piston, trong đó chữ hoa chỉ hợp âm trưởng, chữ thường chỉ hợp âm thứ.
+
+**Hệ thống chức năng** do H. Riemann khởi xướng cuối thế kỷ XIX, được G. Catoire đưa vào nước Nga, và được chuẩn hoá trong sách giáo khoa hoà âm của bốn tác giả I. Dubovsky, S. Evseev, I. Sposobin và V. Sokolov (1937 – 1938). Hệ thống này dùng các chữ cái T (chủ), S (hạ át), D (át) để ghi chức năng, kết hợp với chữ số La Mã để ghi bậc và chữ số Ả Rập để ghi thể đảo (xem [[ky-hieu-chuc-nang-truong-phai-nga]], [[hoa-am-truong-phai-nga-xo-viet]]). Đây là hệ thống được giảng dạy trong các nhạc viện Nga – Xô viết và Việt Nam, và được tiểu luận sử dụng xuyên suốt.
+
+Bên cạnh đó, với hoà âm cuối thế kỷ XIX và thế kỷ XX, các nhà nghiên cứu còn dùng **tên hợp âm theo chữ cái** (B7, A♯ø7, E7♭9…) để chỉ âm thanh thực của hợp âm, độc lập với chức năng. Trong tiểu luận, tên chữ cái chỉ được dùng để nêu cấu trúc âm thanh; chức năng và bậc luôn được ghi theo hệ thống Nga – Xô viết.
+
+Để thuận tiện cho người đọc, chúng tôi ghi các hợp âm theo **bậc cụ thể trong giọng đang xét**, kết hợp với ký hiệu chức năng ở những trường hợp cơ bản (T, S, D, K64, D7). Các hợp âm biến âm được ghi bằng bậc của âm gốc kèm dấu biến âm của âm bị thay đổi, thay cho các ký hiệu khái quát như DD hay TSVI. Bảng 1.1 tóm tắt các ký hiệu dùng trong tiểu luận.
+
+**Bảng 1.1. Ký hiệu hoà âm sử dụng trong tiểu luận**
+| Ký hiệu | Tên gọi | Tương đương trong hệ thống phương Tây |
 |---|---|---|
-| **T, S, D** / **t, s, d** | Chủ, hạ át, át — chữ thường khi hợp âm thứ | I, IV, V / i, iv, v |
-| **T6, T64, S6, s64…** | Thể đảo: hợp âm sáu, hợp âm bốn sáu | I6, I6/4, IV6, iv6/4 |
-| **K64** | Hợp âm bốn sáu kết | Cad. 6/4 |
-| **D7, D65, D43, D2** | Hợp âm bảy át và ba thể đảo | V7, V6/5, V4/3, V4/2 |
-| **D9, D9♭** | Hợp âm chín át (quãng 9 lớn / nhỏ) | V9, V♭9 |
-| **D7♭5** / "D7 quãng 5 hạ" | Hợp âm bảy át có quãng 5 hạ | V7♭5 |
-| **SII, SII7, SII65, SII43** | Hạ át bậc II và các thể của hợp âm bảy bậc II | ii, ii7 (iiø7), ii6/5, ii4/3 |
-| **TSVI, DTIII** | Bậc VI (chủ – hạ át), bậc III (át – chủ) | vi / VI, iii / III |
-| **DVII7, DVII65** | Hợp âm bảy cảm âm (nhỏ hoặc giảm) | viiø7 / vii°7 |
-| **DD, DD7** | Át của át | V/V, V7/V |
-| **D7→S, D→x** | Hợp âm át phụ — **ly điệu** sang bậc x | V7/IV, V/x |
-| **SII♭6 (N)** | Hợp âm sáu Napoli (bậc II hạ) | N6, ♭II6 |
-| **DDVII6♭3** | Át của át bậc VII, quãng 3 hạ, hợp âm sáu | It+6 (6 tăng Ý) |
-| **DD43♭5** | Hợp âm bảy át của át, quãng 5 hạ, hợp âm ba bốn | Fr+6 (6 tăng Pháp) |
-| **DDVII65♭3** | Hợp âm bảy cảm âm của át, quãng 3 hạ, hợp âm năm sáu | Ger+6 (6 tăng Đức) |
+| T, S, D / t, s, d | Hợp âm ba chủ, hạ át, át (chữ thường: hợp âm thứ) | I, IV, V / i, iv, v |
+| T6, T64, S6, s64 | Hợp âm sáu, hợp âm bốn sáu | I6, I6/4, IV6, iv6/4 |
+| K64 | Hợp âm bốn sáu kết | Cad. 6/4 |
+| D7, D65, D43, D2 | Hợp âm bảy át và ba thể đảo | V7, V6/5, V4/3, V4/2 |
+| D9, D9♭ | Hợp âm chín át với quãng 9 lớn, quãng 9 nhỏ | V9, V♭9 |
+| D7♭5 | Hợp âm bảy át có quãng 5 hạ | V7♭5 |
+| II, II7, II65, II43 | Hợp âm ba và hợp âm bảy bậc II cùng các thể đảo | ii, ii7, ii6/5, ii4/3 |
+| III, VI | Hợp âm ba bậc III, bậc VI | iii / III, vi / VI |
+| VII7, VII65 | Hợp âm bảy bậc VII (nhỏ hoặc giảm) | viiø7, vii°7 |
+| II7♯3 | Hợp âm bảy bậc II có quãng 3 nâng, tức hợp âm bảy át của giọng bậc V | V7/V |
+| D7→IV, D→x | Hợp âm át của bậc IV, của bậc x (ly điệu) | V7/IV, V/x |
+| II♭6 | Hợp âm sáu bậc II hạ (hợp âm sáu Napoli) | N6 |
+| IV♯6♭3 | Hợp âm ba bậc IV nâng có quãng 3 hạ, thể hợp âm sáu (hợp âm sáu tăng kiểu Ý) | It+6 |
+| II43♯3♭5 | Hợp âm bảy bậc II có quãng 3 nâng và quãng 5 hạ, thể hợp âm ba bốn (hợp âm sáu tăng kiểu Pháp) | Fr+6 |
+| IV♯65♭3 | Hợp âm bảy giảm bậc IV nâng có quãng 3 hạ, thể hợp âm năm sáu (hợp âm sáu tăng kiểu Đức) | Ger+6 |
 
-Số bậc luôn tính theo **giọng đang xét** (ghi ở đầu bảng hoặc trong ngoặc). Tên hợp âm chữ cái (E7, A♯ø7, G♯m…) chỉ âm thanh thực, không chỉ chức năng.
+Có thể thấy ba hợp âm sáu tăng, dù mang tên gọi riêng trong hệ thống phương Tây, đều thuộc nhóm hợp âm át của giọng bậc V (nhóm "át kép" theo cách gọi của sách bốn tác giả): chúng có chung hai âm quan trọng là bậc IV nâng và bậc VI hạ, tạo thành quãng 6 tăng cùng hướng về âm át.
 
-### 1.3. Cơ sở lý thuyết hoà âm
-- **Hoà âm cổ điển chức năng**: ba nhóm T – S – D, luật nối hợp âm, kết (trọn, nửa, plagal, ngắt) theo sách bốn tác giả và Rimsky-Korsakov (xem [[chuc-nang-hoa-am]], [[cau-ket]]); phía phương Tây đối chiếu W. Piston, *Harmony*.
-- **Kết tránh** (kết ngắt, прерванный каданс): D không về T mà về TSVI hoặc hợp âm khác, làm câu kéo dài (xem [[cau-ket]]).
-- **Ly điệu** (отклонение) và **chuyển giọng** (модуляция): ly điệu là chạm qua giọng khác bằng hợp âm át phụ (D→x) mà không xác lập giọng mới; chuyển giọng là xác lập giọng mới bằng kết (xem [[hop-am-at-phu]], [[chuyen-giong]]). **Chuyển giọng trùng âm** đổi tên một hợp âm hay một âm để vào giọng xa (xem [[trung-am]]).
-- **Hoà âm cromatic cuối thế kỷ 19**: hợp âm 6 tăng, Napoli, hợp âm mượn, trung âm cromatic (quan hệ quãng 3), pedal dài (xem [[hoa-am-cromatic]], [[hop-am-sau-tang]], [[hop-am-napoli]], [[trung-am-cromatic]], [[bass-ngan]]).
-- **Hoà âm mới và vô điệu tính**: từ đầu thế kỷ 20, điệu tính chức năng dần nhường chỗ cho các hệ khác — hợp âm xây trên quãng 4, gam toàn cung, cấu trúc đối xứng, rồi vô điệu tính. Ở trường phái Nga, Yu. Kholopov (*Очерки современной гармонии*, 1974) là người hệ thống hoá hoà âm thế kỷ 20. Op. 19 **chưa vô điệu tính**; tiểu luận chỉ ra những yếu tố báo trước hướng ấy (Mục 3).
+## 1.3. Cơ sở lý thuyết hoà âm
+**Hoà âm chức năng cổ điển.** Theo sách giáo khoa bốn tác giả, các hợp âm trong giọng được tổ chức thành ba nhóm chức năng: nhóm chủ (T) có tính ổn định, nhóm hạ át (S) và nhóm át (D) có tính không ổn định với mức độ căng khác nhau. Tiến trình hoà âm cơ bản đi theo vòng T – S – D – T và được khép lại bằng các kết: kết trọn (D – T), kết nửa (dừng trên D), kết plagal (S – T) và kết ngắt (D đi tới một hợp âm khác thay cho T, phổ biến nhất là bậc VI). Trong cách gọi của người Việt Nam, kết ngắt còn được gọi là kết tránh hay kết lừa (xem [[chuc-nang-hoa-am]], [[cau-ket]]). Các nguyên tắc nối hợp âm và dẫn giọng bốn bè được tiểu luận đối chiếu thêm với sách giáo khoa hoà âm thực hành của N. Rimsky-Korsakov và giáo trình *Harmony* của W. Piston.
 
-### 1.4. Bối cảnh tác phẩm và văn bản nghiên cứu
-[[alexander-scriabin|Scriabin]] bắt đầu Sonata số 2 ở Genova năm 1892 và viết xong ở Crimea năm 1897; Belaieff (Leipzig) in năm 1898 với tên ***Sonate-Fantaisie*** *№ 2, en sol dièse mineur*; đầu bản nhạc ghi "1892–1897". Theo Leikin (2011), chương Presto được viết trước chương đầu khoảng bốn năm. Scriabin chơi lần đầu ở Salle Érard, Paris, ngày 5/5/1896, khi tác phẩm còn chưa hoàn chỉnh. Bowers kể rằng tờ chương trình buổi ấy ghi giọng **"La♭"** thay vì "Sol♯". Đây là một chi tiết nhỏ nhưng hợp với lối nghĩ [[trung-am|trùng âm]] chạy suốt tác phẩm. *(Wikipedia, dẫn Leikin 2011, Ballard & Bengtson 2017, Bowers 1996)*
+**Ly điệu và chuyển giọng.** Sách bốn tác giả phân biệt rõ hai hiện tượng. Ly điệu (отклонение) là sự chạm qua một giọng khác trong thời gian ngắn, thường bằng hợp âm át của một bậc nào đó trong giọng (hợp âm át phụ), mà không xác lập giọng mới; sau đó tiến trình trở lại giọng chính. Chuyển giọng (модуляция) là sự xác lập một giọng mới, được khẳng định bằng kết ở giọng ấy. Chuyển giọng có thể thực hiện qua hợp âm chung của hai giọng, qua biến âm cromatic, hoặc qua trùng âm. **Chuyển giọng trùng âm** dựa trên việc thay đổi cách viết của một âm hay một hợp âm, qua đó thay đổi chức năng của nó, cho phép chuyển nhanh sang các giọng xa (xem [[hop-am-at-phu]], [[chuyen-giong]], [[trung-am]]).
 
-Tác phẩm có **hai chương**, chậm rồi nhanh, như *Sonata quasi una fantasia* của Beethoven (xem [[phan-tich-anh-trang-chuong-1]]):
-- **I. Andante** (nốt đen = 60), Sol♯ thứ, nhịp 3/4, **136 ô**.
-- **II. Presto**, Sol♯ thứ, nhịp 3/2, Presto (nốt trắng = 96–100), **110 ô**.
+**Hoà âm cromatic cuối thế kỷ XIX.** Trong âm nhạc lãng mạn muộn, hoà âm chức năng được mở rộng bằng nhiều phương tiện: các hợp âm biến âm thuộc nhóm hạ át và nhóm át của át (hợp âm sáu Napoli, các hợp âm sáu tăng), hợp âm mượn từ điệu thức cùng tên, quan hệ quãng 3 giữa các giọng và hợp âm (trung âm cromatic), các pedal kéo dài trên âm chủ hoặc âm át, các hợp âm thêm nốt (xem [[hoa-am-cromatic]], [[hop-am-sau-tang]], [[hop-am-napoli]], [[trung-am-cromatic]], [[bass-ngan]]). Những phương tiện này làm cho điệu tính trở nên rộng và linh hoạt hơn, nhưng vẫn chưa phá vỡ nền tảng chức năng.
 
-Wikipedia dẫn một chương trình về biển, theo Leikin là do người viết tiểu sử Yuri Engel ghi lại. Chương I là đêm phương Nam yên tĩnh bên bờ biển, phần phát triển là biển sâu tối và động. Đoạn Mi trưởng là ánh trăng vuốt ve sau bóng tối. Presto là mặt biển mênh mông nổi sóng. Câu này có ít nhất hai bản dịch tiếng Anh khác nhau, và người biên soạn chưa đối chiếu được nguyên văn tiếng Nga.
+**Hoà âm mới và vô điệu tính.** Từ đầu thế kỷ XX, điệu tính chức năng dần nhường chỗ cho những nguyên tắc tổ chức khác: hợp âm xây theo quãng 4, gam toàn cung, các cấu trúc đối xứng, và cuối cùng là vô điệu tính, nơi không còn một âm chủ làm trung tâm. Ở trường phái Nga, Yu. Kholopov là người hệ thống hoá lý thuyết hoà âm thế kỷ XX trong cuốn *Очерки современной гармонии* (Khảo luận về hoà âm hiện đại, 1974). Sonata số 2 của Scriabin chưa thuộc lĩnh vực vô điệu tính; tuy vậy, như sẽ được chứng minh ở các chương sau, tác phẩm đã chứa những yếu tố báo trước hướng phát triển ấy.
 
-**Văn bản và cách đọc:**
-- **Văn bản**: bản in đầu Belaieff 1898 (IMSLP). Mọi số ô và tên nốt trong bài đều đọc trên bản này. Người biên soạn tự đếm và được **136 + 110 ô**. Các mốc hình thức khớp đúng bảng Wikipedia dẫn Leikin.
-- **Kiểm cao độ**: đối chiếu với MIDI một bản biểu diễn trong bộ MAESTRO v3. MIDI là tiếng đàn thật nên có thể lẫn nốt chơi sai và tiếng pedal nhoè; chỗ nào hai nguồn khác nhau thì theo **bản phổ**. Ví dụ ô 41 chương II, MIDI có E♮ nhưng bản in là E♭.
+## 1.4. Khái quát về tác phẩm
+**Lịch sử sáng tác.** Scriabin bắt đầu viết Sonata số 2 ở Genova năm 1892 và hoàn thành ở Crimea năm 1897. Bản in đầu của nhà Belaieff (Leipzig, 1898) mang tên *Sonate-Fantaisie № 2, en sol dièse mineur*, đầu bản nhạc ghi niên đại "1892–1897". Theo nhà nghiên cứu A. Leikin (2011), chương Presto được viết trước chương đầu khoảng bốn năm. Scriabin biểu diễn tác phẩm lần đầu tại Salle Érard, Paris, ngày 5 tháng 5 năm 1896, khi tác phẩm còn chưa hoàn chỉnh. Theo F. Bowers (1996), tờ chương trình buổi hoà nhạc ấy ghi giọng của tác phẩm là La♭ thay vì Sol♯ — một chi tiết nhỏ nhưng phù hợp một cách thú vị với tư duy trùng âm chi phối toàn bộ tác phẩm. *(Các thông tin trên được chúng tôi dẫn qua bài viết về tác phẩm trên Wikipedia, vốn dẫn Leikin 2011, Ballard và Bengtson 2017, Bowers 1996.)*
 
-Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
+**Nội dung hình tượng.** Wikipedia dẫn một chương trình về biển do người viết tiểu sử Yuri Engel ghi lại, theo Leikin: chương I là đêm phương Nam yên tĩnh bên bờ biển, phần phát triển là biển sâu tối và động; đoạn Mi trưởng là ánh trăng vuốt ve sau bóng tối; chương Presto là mặt biển mênh mông nổi sóng. Câu chương trình này có ít nhất hai bản dịch tiếng Anh khác nhau, và chúng tôi chưa đối chiếu được nguyên văn tiếng Nga, vì vậy tiểu luận chỉ dùng nó như một thông tin tham khảo.
+
+**Cấu trúc tổng thể.** Tác phẩm gồm hai chương, chậm rồi nhanh, theo mô hình *sonata quasi una fantasia* của Beethoven. Chương I, Andante (nốt đen = 60), giọng Sol♯ thứ, nhịp 3/4, dài 136 ô nhịp, viết theo hình thức sonata có phần mở đầu và coda. Chương II, Presto (nốt trắng = 96 – 100), giọng Sol♯ thứ, nhịp 3/2, dài 110 ô nhịp, viết theo hình thức ba đoạn có coda. Các mốc hình thức dưới đây được chúng tôi xác định trên bản Belaieff và khớp với cách chia của Leikin.
+
+::form Mở_đầu:12 CĐ1:6 Chuyển:4 CĐ2:14 Chuyển:9 CĐ3:6 Kết:6 Phát_triển:31 CĐ1:6 Chuyển:5 CĐ2:13 Chuyển:9 CĐ3:6 Coda:9 | Sơ đồ 1.1. Chương I — hình thức sonata (số dưới mỗi khối là số ô nhịp)
+::form A:16 Xen:8 A:8 Kết:8 Mi♭–Si♭:12 F♯:6 Si♭–Rê♭–Đô♯:12 Về_át:8 A′:14 Coda:18 | Sơ đồ 1.2. Chương II — hình thức ba đoạn có coda: A (ô 1–40), B (ô 41–78), A′ (ô 79–92), coda (ô 93–110)
+
+Điểm đáng chú ý nhất về hình thức là kế hoạch giọng của chương I: cả ba chủ đề của phần trình bày được đặt ở Si trưởng (giọng song song, bậc III), phần tái hiện chuyển cả ba sang Mi trưởng (bậc VI), và chương kết thúc ở Mi trưởng. Như vậy, nguyên tắc thống nhất giọng của tái hiện sonata cổ điển đã được thay bằng một quan hệ quãng 3 giữa trình bày và tái hiện — một đặc điểm mà chúng tôi sẽ phân tích kỹ ở chương 2.
+
+**Văn bản nghiên cứu.** Toàn bộ số ô nhịp và tên nốt trong tiểu luận được đọc trên bản in đầu Belaieff 1898 (lưu trữ tại IMSLP). Chúng tôi tự đếm và xác định chương I có 136 ô, chương II có 110 ô. Cao độ được đối chiếu thêm với bản ghi MIDI của một buổi biểu diễn trong bộ dữ liệu MAESTRO v3; do MIDI ghi lại âm thanh biểu diễn thực, có thể lẫn nốt chơi sai hoặc tiếng pedal nhoè, nên khi hai nguồn khác nhau chúng tôi theo bản phổ. Ví dụ, ở ô 41 chương II, bản ghi MIDI có âm E♮ trong khi bản in ghi E♭.
+
+## Tiểu kết chương 1
+Chương 1 đã xác lập cơ sở lý luận của tiểu luận. Về hình thức, các khái niệm liên khúc sonata, hình thức sonata, sonata tự do và rondo – sonata được tiếp nhận theo các giáo trình của trường phái Xô viết và giáo trình của Nguyễn Thị Nhung; theo đó, Sonata số 2 là một liên khúc sonata tự do hai chương, với chương I ở hình thức sonata và chương II ở hình thức ba đoạn có coda. Về ký hiệu, tiểu luận sử dụng hệ thống chức năng của trường phái Nga – Xô viết, ghi hợp âm theo bậc cụ thể trong giọng. Về hoà âm, tiểu luận dựa trên lý thuyết hoà âm chức năng cổ điển, có đối chiếu với lý thuyết hoà âm cromatic cuối thế kỷ XIX và lý thuyết hoà âm thế kỷ XX, để xác định những yếu tố truyền thống và những yếu tố mới trong tác phẩm.
 `,
   },
   {
     slug: 'scriabin-op19-chuong-1',
-    title: 'Scriabin Op. 19 — Mục 2.1: Phân tích hoà âm chương I (Andante)',
+    title: 'Chương 2. Thủ pháp hoà âm trong chương I (Andante)',
     category: 'analysis',
-    summary: 'Phân tích hoà âm từng ô chương I Sonata số 2 của Scriabin bằng ký hiệu Nga – Xô viết: trình bày ở Si trưởng, phát triển, tái hiện ở Mi trưởng.',
+    summary: 'Tiểu luận Sonata số 2 Scriabin, chương 2: phân tích tiến trình hoà âm chương Andante qua phần mở đầu, trình bày ở Si trưởng, phát triển và tái hiện ở Mi trưởng.',
     body: `
-::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
+Chương I của Sonata số 2 (Andante, Sol♯ thứ, nhịp 3/4, 136 ô nhịp) viết theo hình thức sonata có phần mở đầu và coda. Trong chương này, chúng tôi lần lượt phân tích tiến trình hoà âm của phần mở đầu, phần trình bày, phần phát triển, phần tái hiện và coda. Các hợp âm được ghi theo bậc trong giọng đang xét; giọng đang xét được nêu rõ ở đầu mỗi đoạn phân tích. Ví dụ nhạc được trích từ bản in đầu Belaieff 1898. Bảng phân tích chi tiết theo từng ô nhịp được trình bày ở [[scriabin-op19-phu-luc|Phụ lục]].
 
-## II. Nội dung — Mục 2: Phân tích hoà âm có giải thích
-Mỗi bảng ghi theo từng ô: **hợp âm** (tên âm thanh và bè trầm, kèm ký hiệu chức năng theo giọng đang xét), **chức năng** (T – S – D), và **thủ pháp** đáng chú ý. Ảnh cắt từ bản Belaieff 1898 đặt ngay trên bảng tương ứng.
+## 2.1. Phần mở đầu (ô 1–12)
+Chương I không bắt đầu bằng một hợp âm chủ trọn vẹn mà bằng một motif ba nốt vang trên quãng 5 rỗng G♯ – D♯ (ô lấy đà và ô 1). Hợp âm chủ bị lược bỏ quãng 3 — âm quyết định tính chất trưởng hay thứ — tạo nên một màu sắc "trống" và bất định, được nhấn mạnh thêm bởi dấu lặng ngân ở cuối ô. Ở phách thứ hai của ô 1, Scriabin đặt hợp âm B – D♯ – E♯ – G♯, tức hợp âm bảy nửa giảm bậc VI nâng của Sol♯ thứ giai điệu ở thể năm sáu (VI♯65). Ngay trong ô nhạc đầu tiên, tác giả đã đưa vào một bậc biến âm của điệu thứ giai điệu thay cho các hợp âm chính của giọng.
 
-### Hình thức hai chương
-::form Mở_đầu:12 CĐ1:6 Chuyển:4 CĐ2:14 Chuyển:9 CĐ3:6 Kết:6 Phát_triển:31 CĐ1:6 Chuyển:5 CĐ2:13 Chuyển:9 CĐ3:6 Coda:9 | Chương I — [[hinh-thuc-sonata|hình thức sonata]] (số dưới khối là số ô; mốc theo Leikin qua Wikipedia, khớp bản Belaieff)
-::form A:16 Xen:8 A:8 Kết:8 Mi♭–Si♭:12 F♯:6 Si♭–Rê♭–Đô♯:12 Về_át:8 A′:14 Coda:18 | Chương II — ba đoạn có coda: A (1–40), B (41–78), A′ (79–92), coda (93–110). Các khối con do bài viết chia: ô 17–24 là đoạn xen dolcissimo ở Mi trưởng, ô 53–58 là pedal F♯
+::scan scriabin2 #1 | Ví dụ 2.1. Ô 1–4: motif quãng 5 rỗng G♯–D♯, hai lần dừng trên dấu ngân; ô 2 dừng trên D2 chưa giải quyết; ô 3–4 có G♯ ở bè trầm
 
-## Mục 2.1: Chương I — Andante (136 ô)
-Đặc điểm chung: chương mở bằng một motif ba nốt có quãng 5 rỗng, dừng ở các dấu lặng ngân (fermata). Trình bày đặt cả ba chủ đề ở **Si trưởng** (III, giọng song song). Tái hiện chuyển cả ba sang **Mi trưởng** (VI), và chương **kết ở Mi trưởng**, không trở về Sol♯ thứ.
+Ô 2 trình bày hợp âm bảy át qua ba thể: D43 (D♯7 với A♯ ở bè trầm), D7 rồi D2 (C♯ ở bè trầm). Theo quy tắc cổ điển, D2 phải giải quyết về T6; nhưng ở đây tiến trình dừng lại trên D2 dưới dấu ngân, để lơ lửng sự căng thẳng của chức năng át. Ô 3 và ô 4 chuyển sang nhóm hạ át: VI64 (E/B), II65, t64, s6, rồi s64 và II43 (A♯ø7 với E ở bè trầm). Điều đáng chú ý là ở các phách mạnh, âm G♯ vẫn được giữ ở bè trầm, khiến toàn bộ các hợp âm nhóm hạ át vang lên trên nền **pedal chủ**. Như vậy, ngay từ những ô nhạc đầu tiên đã xuất hiện hiện tượng chồng chức năng — chức năng hạ át ở các bè trên, chức năng chủ ở bè trầm — một thủ pháp sẽ trở đi trở lại suốt tác phẩm.
+
+::scan scriabin2 #2 | Ví dụ 2.2. Ô 5–10: hợp âm sáu tăng kiểu Ý trên pedal chủ, hợp âm bảy bậc II có quãng 3 nâng (ô 6), bè trầm đi xuống ô 7–9, hợp âm sáu Napoli (ô 9) và hợp âm sáu tăng kiểu Pháp có C𝄪 ở bè trầm (ô 10)
+
+Từ ô 5, nhóm hạ át được đẩy về phía các hợp âm biến âm. Sau chuỗi II65 – t64 – s6, Scriabin đưa vào hợp âm IV♯6♭3 (E – G♯ – C𝄪), tức hợp âm sáu tăng kiểu Ý, vẫn trên pedal chủ G♯. Ở ô 6, hợp âm này nhường chỗ cho hợp âm bảy bậc II có quãng 3 nâng (II7♯3: A♯ – C𝄪 – G♯), tức hợp âm bảy át của giọng bậc V, được nhấn mạnh bằng sắc thái sf; nhưng thay vì giải quyết về hợp âm át, tiến trình lại lùi về IV♯6♭3 ở sắc thái p. Đây là một trường hợp đảo ngược trật tự chức năng thường gặp: hợp âm át của át không tiến về át mà quay về hợp âm sáu tăng, vốn cùng nhóm chức năng với nó.
+
+Các ô 7 – 9 được xây dựng trên một bè trầm đi xuống liền bậc theo kiểu "lament": D – s – (B) – (A♯) – VI64 – G♯. Ở ô 8, bè trầm lặp lại đường đi ấy với hợp âm bảy bậc IV (s7: C♯ – E – G♯ – B). Ô 9 kết thúc chuỗi đi xuống bằng hợp âm sáu bậc II hạ (II♭6: La trưởng với C♯ ở bè trầm), tức hợp âm sáu Napoli, chỉ được chạm qua trong thời gian ngắn rồi trở lại âm chủ. Ô 10 đưa nhóm át của át lên đỉnh điểm bằng hợp âm bảy bậc II có quãng 3 nâng và quãng 5 hạ — hợp âm sáu tăng kiểu Pháp — với cách sắp xếp đặc biệt: âm C𝄪 (quãng 3 nâng của bậc II) nằm ở bè trầm, tạo thành thể năm sáu (II65♯3♭5). Hợp âm này đi về âm chủ G♯ rồi tới hợp âm át ở sắc thái mf.
+
+::scan scriabin2 #3 | Ví dụ 2.3. Ô 11–12: motif mở đầu chuyển lên Rê♯ thứ, dừng trên D2 của Rê♯ thứ; cuối ô 12 lấy đà pp sang chủ đề 1
+
+Ô 11 – 12 nhắc lại motif mở đầu ở giọng bậc V, Rê♯ thứ: quãng 5 rỗng D♯ – A♯, rồi hợp âm bảy nửa giảm bậc VI nâng của Rê♯ thứ (F♯ – A♯ – B♯ – D♯). Ở ô 12, hợp âm bảy át của Rê♯ thứ xuất hiện qua ba thể D43 (A♯7 với E♯ ở bè trầm), D7, D2 (G♯ ở bè trầm), lại dừng dưới dấu ngân. Theo logic cổ điển, D2 của Rê♯ thứ phải giải quyết về t6 của giọng này; nhưng ô 13 lại vào thẳng Si trưởng. Như vậy, phần mở đầu khép lại bằng một sự giải quyết lệch hướng: hợp âm át của giọng bậc V không dẫn về giọng bậc V mà dẫn sang giọng song song.
+
+Tóm lại, phần mở đầu chứa đựng gần như toàn bộ "từ vựng" hoà âm của chương: hợp âm chủ bỏ quãng 3, pedal chủ dưới các hợp âm hạ át, ba loại hợp âm biến âm thuộc nhóm át của át (hợp âm sáu tăng kiểu Ý, kiểu Pháp, hợp âm bảy bậc II có quãng 3 nâng), hợp âm sáu Napoli, và những hợp âm át dừng lại không giải quyết.
+
+## 2.2. Phần trình bày (ô 13–57)
+**Chủ đề thứ nhất (ô 13–18).** Chủ đề thứ nhất vang lên ngay ở Si trưởng, giọng song song (bậc III) của Sol♯ thứ, mà không cần đoạn chuyển giọng chuẩn bị. Ô 13 xác lập giọng mới bằng chuỗi T64 – (nốt dựa C♯ trên E) – T – D – T. Ô 14 đặt hợp âm bậc VI của Si trưởng (Sol♯ thứ) có thêm âm E♯ — tức hợp âm thêm nốt sáu nâng — một hợp âm mang sắc thái lưỡng chức năng, vừa là bậc VI của Si trưởng, vừa gợi lại hợp âm chủ của giọng gốc.
+
+::scan scriabin2 #4 | Ví dụ 2.4. Chủ đề 1 ở Si trưởng (ô 13–18); ô 18 có G♮ — hợp âm bảy bậc II mượn từ Si thứ
+
+Ô 15 thực hiện ly điệu sang Rê♯ thứ (bậc III của Si trưởng) bằng chuỗi K64 – D (A♯ – C𝄪 – E♯) – t; âm A♮ ở cuối ô báo trước sự trở lại Si trưởng. Ô 16 dùng hợp âm bảy B7, tức hợp âm bảy át của bậc IV (D7→IV), dẫn tới hợp âm bậc IV (Mi trưởng) ở ô 17. Ô 18 đưa vào hợp âm C♯ – E – G♮ – B: đó là hợp âm bảy bậc II nhưng với âm G♮ thay cho G♯, tức hợp âm bảy nửa giảm bậc II mượn từ Si thứ. Đây là một trường hợp điển hình của hợp âm mượn (xem [[hop-am-muon]]), làm tối màu nhóm hạ át trước khi chủ đề đi vào đoạn nối.
+
+**Đoạn nối (ô 19–22).** Đoạn nối ngắn này chứa một trong những hiện tượng hoà âm quan trọng nhất của tác phẩm. Sau hợp âm T64 ở ô 19, ô 20 vang lên hợp âm F♯ – A♯ – C♮ – E: đây là hợp âm bảy át của Si trưởng với quãng 5 hạ (D7♭5). Về cấu trúc, hợp âm gồm hai quãng 3 trưởng cách nhau một quãng 4 tăng, và về âm thanh, nó trùng với hợp âm sáu tăng kiểu Pháp; bốn âm của nó đều thuộc một gam toàn cung. Ô 21 trở lại hợp âm bậc VI rồi bậc III, với E♯ là âm lướt. Ô 22 nhắc lại hợp âm của ô 20, nhưng lần này Scriabin viết B♯ thay cho C♮ (F♯ – A♯ – B♯ – E).
+
+::scan scriabin2 #5 | Ví dụ 2.5. Ô 19–22: hai lần hợp âm bảy át quãng 5 hạ — viết C♮ ở ô 20, viết B♯ ở ô 22
+
+Hai cách viết cho cùng một âm thanh không phải là sự tuỳ tiện về ký âm. Âm C♮ là quãng 5 hạ của hợp âm át (C♯ hạ xuống), hướng về B; âm B♯ là quãng 4 nâng (B nâng lên), hướng về C♯. Cách viết phản ánh hướng dẫn giọng mà tác giả hình dung, đồng thời cho thấy cùng một tập hợp âm thanh có thể được hiểu theo hai cách khác nhau. Hợp âm át quãng 5 hạ mang màu sắc toàn cung chính là một trong những "mầm" của ngôn ngữ hoà âm Scriabin thời kỳ sau.
+
+**Chủ đề thứ hai (ô 23–36).** Chủ đề thứ hai, ở sắc thái p và với chỉ dẫn rubato, vẫn ở Si trưởng. Ngay hợp âm đầu tiên ở ô 23 là hợp âm chủ có quãng 4 treo thay cho quãng 3 (B – E – F♯); tiếp theo là IV6 và II7. Ở ô 24 và 25, âm G♯ với quãng 4 treo dẫn tới II6 (C♯m/E), VII43 (A♯ø7 với E ở bè trầm) và bậc VI. Quãng 4 treo ở đây không được giải quyết theo quy tắc nốt treo cổ điển mà được duy trì như một thành phần của hợp âm.
+
+::scan scriabin2 #6 | Ví dụ 2.6. Chủ đề 2 (p, rubato): hợp âm chủ có quãng 4 treo (ô 23), B7 trên A♮ ở bè trầm (ô 27), kết trọn ở Si trưởng ô 30
+
+Ô 26 dừng trên hợp âm bảy át (F♯7) có quãng 4 treo. Ô 27 đưa vào hợp âm B7 có quãng 4 treo với âm A♮ ở bè trầm: đó là hợp âm át của bậc IV ở thể hai (D2→IV), giải quyết về IV6 (E/G♯). Ô 28 và 29 tiếp tục nhóm hạ át với hợp âm bảy bậc II (C♯m7) được rải, rồi hợp âm VII65 (A♯ø7 với C♯ ở bè trầm) trên sắc thái cresc. Câu thứ nhất của chủ đề kết thúc ở ô 30 bằng **kết trọn** II65 – D – T ở Si trưởng — kết trọn đầu tiên của chương.
+
+Câu thứ hai của chủ đề (ô 31 – 36) nhắc lại câu đầu với tiết tấu móc kép. Ô 32 có âm G♯ với quãng 4 treo đi tới IV6, kèm nốt thêu dưới cromatic F𝄪. Ô 33 đi II7 – D7. Ô 34 lặp lại hợp âm D2→IV, về T, rồi II7 trên G♯, IV6. Ô 35 đáng chú ý ở chuỗi lướt cromatic đi xuống E – D♯ – D – C♯ – C – B ở bè trên, trên bè trầm G♯ đứng yên: các hợp âm sinh ra từ chuỗi này là hợp âm lướt, không mang chức năng độc lập. Ô 36 khép lại bằng II7 – IV64.
+
+::scan scriabin2 #7 | Ví dụ 2.7. Câu nhắc lại chủ đề 2 với móc kép (ô 31–36)
+
+**Đoạn chuyển và chủ đề thứ ba (ô 37–57).** Đoạn chuyển mở đầu ở ô 37 bằng một bè giai điệu đơn G♯ – A♯ – B – A♯ – G♯, tay trái nghỉ. Từ ô 38, hoà âm luân phiên giữa nhóm át và nhóm hạ át của Si trưởng: D7 (F♯7, với âm treo B về A♯) ở ô 38 và 40, II64 (C♯m/G♯) ở ô 39 và 41. Ô 42 đi qua hợp âm bậc VI (G♯m); ô 43 rải hợp âm bảy bậc VI bằng móc kép trên sắc thái cresc.; ô 44 đi II7 – VII6 – D7, chuẩn bị cho chủ đề thứ ba. Ô 45 xác lập hợp âm chủ Si trưởng trên các âm B rất trầm ở sắc thái mf, mở ra một pedal chủ.
+
+::scan scriabin2 #8 | Ví dụ 2.8. Đoạn chuyển mở bằng một bè (ô 37), luân phiên D7 và II64 ở Si trưởng
+
+Chủ đề thứ ba (ô 46 – 51), với chỉ dẫn "ben marcato il canto", được trình bày hoàn toàn trên **pedal B**. Hoà âm phía trên đi T – II7 – VI7 – T thêm quãng 9, tức gồm toàn những hợp âm bảy và hợp âm thêm nốt, không có hợp âm át. Đoạn kết của phần trình bày (ô 52 – 57) tiếp tục trên pedal B và khép lại ở Si trưởng bằng một hợp âm rải có dấu nhấn ở ô 57. Như vậy, từ ô 45 đến ô 57, tức mười ba ô nhịp, bè trầm hầu như không rời âm chủ của giọng mới: chức năng chủ được kéo dài, còn sự vận động hoà âm diễn ra ở các bè trên.
+
+::scan scriabin2 #9 | Ví dụ 2.9. Chủ đề 3 ("ben marcato il canto") trên pedal B (ô 46–51)
+
+::scan scriabin2 #10 | Ví dụ 2.10. Đoạn kết phần trình bày trên pedal B (ô 52–57)
+
+Tổng quát, phần trình bày đặt cả ba chủ đề ở cùng một giọng — Si trưởng, giọng song song của giọng chủ. Đây là một sự khác biệt căn bản so với hình thức sonata cổ điển, nơi chủ đề chính phải ở giọng chính và chủ đề phụ ở một giọng khác. Sự tương phản giữa các chủ đề vì vậy không dựa trên tương phản giọng mà dựa trên tương phản về tính chất, kết cấu và thủ pháp hoà âm: chủ đề thứ nhất có ly điệu và hợp âm mượn, chủ đề thứ hai có quãng 4 treo và các hợp âm thêm nốt, chủ đề thứ ba đứng trên pedal chủ.
+
+## 2.3. Phần phát triển (ô 58–88)
+Phần phát triển mở đầu bằng motif của phần mở đầu, vang ở Si trưởng (ô 58 – 59), rồi được nhắc lại ở **Rê trưởng** (ô 60 – 61). Quan hệ giữa Si trưởng và Rê trưởng là quan hệ quãng 3 thứ đi lên: Rê trưởng là bậc III hạ (III♭) của Si trưởng. Đây là quan hệ trung âm cromatic (xem [[trung-am-cromatic]]), một phương tiện chuyển giọng đặc trưng của hoà âm lãng mạn muộn. Cuối ô 61, hoá biểu năm thăng được xoá.
+
+::scan scriabin2 #11 | Ví dụ 2.11. Đầu phần phát triển: motif ở Si trưởng (ô 58–59) rồi ở Rê trưởng (ô 60–61)
+
+Ô 62 – 66 là một chuỗi mô tiến theo vòng quãng 5 đi xuống: Sol thứ – Đô thứ – Fa thứ, viết bằng dấu giáng (xem [[mo-tien-hoa-am]]). Từ ô 66 đến ô 74, tiến trình đi qua hợp âm Fø7 (hợp âm bảy bậc II của Mi♭ thứ) và B♭7 (hợp âm bảy át của Mi♭ thứ) để xác lập **Mi♭ thứ**. Mi♭ thứ trùng âm với Rê♯ thứ, giọng bậc V của Sol♯ thứ. Như vậy, ở trung tâm của phần phát triển, Scriabin đặt giọng át của giọng chủ nhưng viết nó bằng dấu giáng. Đoạn này xen kẽ những đỉnh cao trào ở sắc thái ff với những đoạn hợp âm rải ở sắc thái p.
+
+::scan scriabin2 #12 | Ví dụ 2.12. Vùng dấu giáng: mô tiến vòng quãng 5 Sol thứ – Đô thứ – Fa thứ (ô 62–69)
+
+::scan scriabin2 #13 | Ví dụ 2.13. Ô 70–75: cao trào ff xen các đoạn p rải; ô 75 trở lại hoá biểu năm thăng
+
+Ở ô 75 – 76, hoá biểu năm thăng trở lại ở sắc thái ff, với hợp âm A♯ø7 — tức hợp âm bảy bậc II của Sol♯ thứ — tiến tới D♯7♭9, tức hợp âm bảy át có quãng 9 nhỏ của Sol♯ thứ. Mi♭ thứ được hiểu lại là Rê♯ thứ, và giọng Rê♯ thứ được hiểu lại là vùng chức năng át của Sol♯ thứ. Đây là một chuyển giọng trùng âm được thực hiện ở tầm cấu trúc lớn: không phải một hợp âm được viết lại, mà cả một vùng giọng được "đổi tên" khi quay về giọng chính.
+
+::scan scriabin2 #14 | Ví dụ 2.14. Ô 76–78: Sol trưởng bất ngờ (ô 77), hợp âm ba tăng và hợp âm sáu tăng kiểu Pháp (ô 78)
+
+Ô 77 bất ngờ đưa vào hợp âm Sol trưởng ở sắc thái p, cách hợp âm trước nửa cung — một sự "trượt" nửa cung đặc trưng. Ô 78 đi từ B7 về E, qua hợp âm ba tăng E – G♯ – B♯ (xem [[hop-am-ba-tang]]), rồi tới hợp âm sáu tăng kiểu Pháp của Sol♯ thứ (II43♯3♭5: E – G♯ – A♯ – C𝄪).
+
+::scan scriabin2 #15 | Ví dụ 2.15. Pedal át D♯ (ô 79–86), cresc. tới ff
+
+Ô 79 – 86 là một **pedal át** dài tám ô nhịp trên âm D♯. Phía trên pedal, hoà âm luân phiên giữa hợp âm sáu tăng kiểu Pháp (II43♯3♭5), hợp âm bảy bậc II có quãng 3 nâng với quãng 9 nhỏ (hợp âm át của bậc V: A♯7♭9) và hợp âm át, với sắc thái tăng dần tới ff. Chức năng át của át và chức năng át chồng lên nhau trên một bè trầm không đổi, tích tụ sức căng chuẩn bị cho phần tái hiện. Ô 87 – 88 nhắc lại motif mở đầu ở Sol♯ thứ, ở sắc thái ff: quãng 5 rỗng G♯ – D♯, rồi D43 – D7 – D2 và dấu ngân, như ô 1 – 2 được phóng to.
+
+## 2.4. Phần tái hiện và coda (ô 89–136)
+::scan scriabin2 #16 | Ví dụ 2.16. Ô 88 → 89: sau pedal át, tái hiện vào ở Mi trưởng
+
+Sau pedal át D♯ và motif mở đầu với D2 của Sol♯ thứ, người nghe chờ đợi một sự giải quyết về hợp âm chủ Sol♯ thứ. Nhưng phần tái hiện lại bắt đầu ở **Mi trưởng** (hoá biểu bốn thăng), tức giọng bậc VI. Hợp âm át của Sol♯ thứ dẫn tới bậc VI thay cho bậc I: đây chính là cấu trúc của kết ngắt, nhưng được thực hiện ở tầm hình thức. Chủ đề thứ nhất (ô 89 – 94) là sự dịch giọng của ô 13 – 18 xuống quãng 5, với toàn bộ các thủ pháp hoà âm được giữ nguyên ở giọng mới.
+
+::scan scriabin2 #17 | Ví dụ 2.17. Ô 95–99: hợp âm bảy át quãng 5 hạ của Mi trưởng, tương ứng ô 19–22
+
+Đoạn nối (ô 95 – 99) nhắc lại hợp âm bảy át quãng 5 hạ, nay ở Mi trưởng (B – D♯ – F♮ viết thành E♯ – A), và kéo dài hơn phần trình bày một ô nhịp. Chủ đề thứ hai (ô 100 – 112) được nhắc lại ở Mi trưởng với các hợp âm tương ứng: IV (La trưởng), II7 (F♯m7), VII7 (D♯ø7). Đoạn chuyển (ô 113 – 121) tương ứng ô 37 – 45, với D7 (B7) và bậc VI (C♯m). Chủ đề thứ ba (ô 122 – 127) vang lên ở Mi trưởng trên **pedal E**, một quãng 8 cao hơn.
+
+::scan scriabin2 #18 | Ví dụ 2.18. Coda trên pedal E (ô 127–136); hợp âm cuối là Mi trưởng
+
+Coda (ô 128 – 136) tiếp tục trên pedal E ở âm vực rất trầm. Phía trên pedal, hoà âm đi T – VI7 (C♯m7 với E ở bè trầm) – T thêm quãng 6 và quãng 9, với màu sắc plagal của hợp âm bậc IV (La trưởng). Ô 135 – 136 nhắc lại motif mở đầu ở Mi trưởng: quãng 5 rỗng E – B, rồi hợp âm Mi trưởng với G♯ ở bè trầm và nốt hoa mỹ C♯, ở sắc thái smorzando, kết thúc dưới dấu ngân. Như vậy, chương I khép lại ở Mi trưởng, không trở về giọng chủ Sol♯ thứ. Quãng 5 rỗng của motif mở đầu, vốn để ngỏ tính chất trưởng – thứ của giọng ở đầu chương, nay được "lấp đầy" bằng một hợp âm trưởng của một giọng khác.
+
+## Tiểu kết chương 2
+Phân tích chương I cho thấy khung hoà âm của chương vẫn dựa trên các nguyên tắc chức năng cổ điển: các câu nhạc được khép bằng kết trọn, ly điệu được thực hiện bằng hợp âm át phụ, các hợp âm biến âm thuộc nhóm hạ át và nhóm át của át giữ đúng vai trò chuẩn bị cho hợp âm át. Tuy vậy, trong khung ấy, Scriabin đã đưa vào nhiều yếu tố vượt ra ngoài hoà âm cổ điển. Hợp âm chủ bỏ quãng 3 và những hợp âm át dừng lại không giải quyết làm cho giọng chủ trở nên bất định. Hợp âm bảy át quãng 5 hạ, với hai cách viết C♮ và B♯ cho cùng một âm thanh, mang màu sắc toàn cung. Hợp âm quãng 4 treo không giải quyết và các hợp âm thêm nốt làm mờ ranh giới giữa âm hợp âm và âm ngoài hợp âm. Pedal kéo dài làm các chức năng chồng lên nhau. Ở tầm hình thức, kế hoạch giọng Sol♯ thứ – Si trưởng – Mi trưởng dựa trên quan hệ quãng 3, thay cho quan hệ quãng 5 và nguyên tắc thống nhất giọng của tái hiện cổ điển; và cả chương khép lại ở một giọng khác giọng chủ.
+`,
+  },
+  {
+    slug: 'scriabin-op19-chuong-2',
+    title: 'Chương 3. Thủ pháp hoà âm trong chương II (Presto)',
+    category: 'analysis',
+    summary: 'Tiểu luận Sonata số 2 Scriabin, chương 3: phân tích tiến trình hoà âm chương Presto, hợp âm sáu tăng trùng âm với hợp âm bảy át, chuyển giọng trùng âm qua các giọng xa.',
+    body: `
+Chương II của Sonata số 2 (Presto, Sol♯ thứ, nhịp 3/2, 110 ô nhịp) viết theo hình thức ba đoạn có coda: đoạn A (ô 1 – 40), đoạn B (ô 41 – 78), đoạn A′ (ô 79 – 92) và coda (ô 93 – 110). Kết cấu của chương khá thống nhất: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay phải chạy móc đơn liên tục; ở đoạn B xuất hiện thêm một giai điệu nốt dài với chỉ dẫn "ben marcato il canto". Một hình giai điệu gồm các bậc 3 – 2 – 1 – 7 – 1 của đoạn B lần lượt đi qua năm giọng: Mi♭ thứ, Si♭ thứ, Rê♭ trưởng, Đô♯ thứ, rồi trở về Sol♯ thứ ở coda. Do kết cấu móc đơn liên tục, bè trầm (quãng 8 ở tay trái) là nơi thể hiện rõ nhất tiến trình hoà âm của chương, và vì vậy sẽ được chúng tôi đặc biệt chú ý trong phân tích.
+
+## 3.1. Đoạn A (ô 1–40)
+**Câu thứ nhất (ô 1–8).** Khác với thông lệ, chương II không mở đầu bằng hợp âm chủ mà bằng chức năng át. Ở ô 1, bè trầm luân phiên D♯ – C♯, tức D và D2; ở bè giữa, các âm G♯ và B vờn quanh F𝄪 và A♯, nghĩa là chất liệu của hợp âm chủ được đặt treo trên nền hợp âm át. Ô 2 chuyển sang hợp âm bậc VI (Mi trưởng), bè trầm E – B, với giai điệu đi xuống theo gam G♯ – F♯ – E – D♯ – C♯. Ô 3 luân phiên hai hợp âm nhóm hạ át: hợp âm bảy bậc IV với âm bảy B ở bè trầm (s2: C♯ – E – G♯ – B) và hợp âm bảy bậc II khi bè trầm xuống A♯ (II7: A♯ – C♯ – E – G♯). Hai hợp âm này có chung ba âm, chỉ khác nhau ở bè trầm; âm B♯ là nốt thêu của C♯. Ô 4 dừng ở hợp âm bậc IV (Đô♯ thứ), bè trầm C♯ – G♯.
+
+::scan scriabin2 #19 | Ví dụ 3.1. Câu 1 (ô 1–8): mở trên chức năng át, bè trầm D♯–C♯; hợp âm sáu tăng kiểu Đức của giọng bậc V với B–G𝄪 ở bè trầm (ô 6); kết nửa trên D9♭ (ô 8)
+
+Ô 5 là một hợp âm năm âm E – G♯ – B – D♯ – F♯, tức hợp âm Mi trưởng có thêm quãng 7 trưởng và quãng 9, với bè trầm B – G♯. Hợp âm này có thể được hiểu theo hai cách: là hợp âm bảy bậc VI có thêm quãng 9, hoặc là hợp âm bảy chủ có thêm âm bậc VI hạ. Tính lưỡng nghĩa này là đặc điểm của các hợp âm thêm nốt trong tác phẩm.
+
+Ô 6 chứa một trong những cách viết đáng chú ý nhất của chương. Hợp âm B – D♯ – F♯ – G𝄪 là hợp âm sáu tăng kiểu Đức của giọng bậc V, Rê♯ thứ (IV♯65♭3 của Rê♯ thứ). Theo cách viết thông thường, quãng 6 tăng B – G𝄪 phải đặt với B ở bè trầm và G𝄪 ở bè trên để hai âm mở rộng về quãng 8 A♯. Nhưng ở đây, bè trầm luân phiên B – G𝄪, tức quãng 6 tăng được đảo thành **quãng 3 giảm**, và cả hai âm cùng đổ về A♯. Ô 7 là hợp âm bảy bậc II có quãng 3 nâng (II7♯3: A♯ – C𝄪 – E♯ – G♯), tức hợp âm bảy át của Rê♯ thứ, kèm âm treo D♯ và âm B (quãng 9 nhỏ); bè giữa đi D♯ – E♯ – F♯ – A♯, và âm E♮ ở cuối ô báo trước quãng 9 nhỏ của hợp âm át. Ô 8 dừng trên hợp âm chín át có quãng 9 nhỏ (D9♭: D♯ – F𝄪 – A♯ – C♯ – E): câu thứ nhất khép lại bằng **kết nửa**.
+
+::grand D#4+F#4+G##4/B2=IV♯65♭3_của_Rê♯ C##4+E#4+G#4/A#2=II7♯3 C#4+E4+F##4+A#4/D#2=D9♭ | Ví dụ 3.2. Ô 6–8 (rút gọn): hợp âm sáu tăng kiểu Đức của giọng bậc V → hợp âm bảy bậc II có quãng 3 nâng → hợp âm chín át — kết nửa. Ở bản phổ, B và G𝄪 nằm ở bè trầm luân phiên (quãng 3 giảm) rồi cùng đổ về A♯
+
+**Câu thứ hai (ô 9–16).** Câu thứ hai bắt đầu như một **mô tiến** của câu thứ nhất lên quãng 4. Ô 9 là hợp âm bảy át của bậc IV (D7→IV: G♯ – B♯ – D♯ – F♯), bè trầm G♯ – F♯, tương ứng ô 1. Ô 10 là hợp âm La trưởng — bậc VI của Đô♯ thứ — bè trầm A – E, tương ứng ô 2. Ô 11 luân phiên hợp âm bảy bậc IV của Đô♯ thứ (F♯m7 với E ở bè trầm) và hợp âm bảy bậc II của Đô♯ thứ (D♯ø7), tương ứng ô 3. Ô 12 là hợp âm bậc IV của Đô♯ thứ (Fa♯ thứ), tương ứng ô 4. Ô 13 là hợp âm La trưởng có thêm quãng 7 và quãng 9, tương ứng ô 5. Điều đáng chú ý là hợp âm La trưởng, vốn là bậc VI của Đô♯ thứ trong mô tiến, đồng thời cũng là hợp âm bậc II hạ (hợp âm Napoli) của Sol♯ thứ.
+
+::scan scriabin2 #20 | Ví dụ 3.3. Câu 2 (ô 9–16): mô tiến câu 1 lên quãng 4; hợp âm sáu tăng kiểu Đức của Sol♯ thứ với E–C𝄪 ở bè trầm (ô 14), kết trọn ô 16
+
+Chính ở điểm này, mô tiến bị "bẻ" về giọng chính. Ô 14 không tiếp tục mô tiến ô 6 mà đưa vào hợp âm sáu tăng kiểu Đức của Sol♯ thứ (IV♯65♭3: E – G♯ – B – C𝄪, có âm A♮ lướt), bè trầm luân phiên E – C𝄪 — một lần nữa là quãng 3 giảm thay cho quãng 6 tăng. Ô 15 là hợp âm chín át có quãng 9 nhỏ với âm G♯ treo (4 – 3), và ô 16 khép lại bằng hợp âm chủ Sol♯ thứ với nốt thêu F𝄪: **kết trọn**. Câu thứ nhất và câu thứ hai tạo thành một đoạn nhạc mười sáu ô (8 + 8).
+
+**Đoạn xen (ô 17–24).** Đoạn xen ở sắc thái dolcissimo, pp, đưa vào một màu sắc hoàn toàn khác. Ô 17 là hợp âm B9 có thêm quãng 13, trên bè trầm B ở âm vực rất trầm, tức hợp âm chín át của Mi trưởng (bậc VI của Sol♯ thứ). Ô 18 là hợp âm bảy át của Mi trưởng (B7) với âm A♮. Ở ô 19, hợp âm B7 được đặt trên bè trầm E giữ bằng pedal: hợp âm át chồng lên âm chủ của Mi trưởng. Ô 20 là hợp âm T64 của Mi trưởng có thêm quãng 6 (âm C♯), tức hợp âm thêm nốt sáu (sixte ajoutée).
+
+::scan scriabin2 #21 | Ví dụ 3.4. Đoạn xen dolcissimo (ô 17–24): B9 trên B, B7 trên bè trầm E, E7 có D♮ (ô 21–23), hợp âm sáu Napoli – s6 – D7 (ô 24)
+
+Ô 21 đưa vào hợp âm E7 với âm D♮, có thêm quãng 9 và quãng 13: đó là hợp âm bảy át của La trưởng. Ô 22 nhắc lại hợp âm này với âm A treo (4 – 3), và ô 23 đặt nó trên bè trầm A — một lần nữa, hợp âm át chồng lên âm chủ của giọng mà nó hướng tới. Ô 24 khép lại đoạn xen bằng chuỗi II♭6 (La trưởng với C♯ ở bè trầm) – s6 (C♯m với E ở bè trầm, có D♮ thêu) – D7 (D♯ – F𝄪 – A♯ – C♯). Ở đây diễn ra một sự đổi vai hoà âm tinh tế: hợp âm La trưởng, vừa được chuẩn bị như giọng đích của hợp âm E7 (tức như hợp âm chủ của một ly điệu), nay trở thành hợp âm sáu Napoli của Sol♯ thứ, dẫn về hợp âm át của giọng chính.
+
+::grand G#4+B4+Dn5/E3=E7_(ô_21) G#4+B4+C##5/E3=IV♯65♭3_(ô_14) F##4+A#4+C#5/D#3=D7_(ô_15) | Ví dụ 3.5. Cùng một âm thanh, hai cách viết: D♮ (E7, hợp âm bảy át của La trưởng) và C𝄪 (hợp âm sáu tăng kiểu Đức của Sol♯ thứ, đổ về D♯)
+
+Ví dụ 3.5 đặt cạnh nhau hai hợp âm có cùng âm thanh trên bàn phím: E7 ở ô 21 (với D♮) và hợp âm sáu tăng kiểu Đức ở ô 14 (với C𝄪). Cách viết D♮ hướng hợp âm về La trưởng; cách viết C𝄪 hướng nó về âm D♯, tức hợp âm át của Sol♯ thứ. Sự trùng âm giữa hợp âm bảy át và hợp âm sáu tăng kiểu Đức là một hiện tượng đã được hoà âm cổ điển biết tới, nhưng ở Scriabin, nó trở thành một nguyên tắc tổ chức chi phối nhiều đoạn của tác phẩm.
+
+**Tái hiện rút gọn và đoạn kết (ô 25–40).** Ô 25 – 28 nhắc lại nguyên văn ô 1 – 4. Ô 29 đưa vào hợp âm Mi thứ có thêm quãng 7 trưởng (E – G♮ – B – D♯), bè trầm B – G♮, ở sắc thái f với rit.: hợp âm bậc VI vốn là trưởng nay được thứ hoá, trong đó âm G♮ trùng âm với F𝄪, âm dẫn của Sol♯ thứ. Ô 30 đi từ hợp âm E – G – B tới hợp âm sáu tăng kiểu Đức (E – G♯ – B – C𝄪), bè trầm B – E, với các bè cromatic G♮ – G♯ và A – A♯. Ô 31 và 32 nhắc lại ô 15 và 16: hợp âm chín át có quãng 4 treo rồi hợp âm chủ. Như vậy, đoạn ô 25 – 32 nén mười sáu ô của đoạn đầu thành tám ô.
+
+::scan scriabin2 #22 | Ví dụ 3.6. Ô 25–32: tái hiện rút gọn; Mi thứ (G♮) ở ô 29, hợp âm sáu tăng kiểu Đức với C𝄪 ở ô 30
+
+Đoạn kết của phần A (ô 33 – 40) xoay quanh nhóm hạ át biến âm. Ô 33 đi từ âm G♯ tới hợp âm bậc II hạ ở thể nguyên vị (La trưởng, II♭), ở sắc thái f có dấu nhấn. Ô 34 đi từ G♯ tới hợp âm bảy giảm bậc VII (VII7: F𝄪 – A♯ – C♯ – E). Ô 35 luân phiên hợp âm chủ (có thêm âm E) và hợp âm sáu Napoli có thêm quãng 6 (A – C♯ – E – F♯, bè trầm C♯), một hợp âm cũng có thể đọc là F♯m7 với C♯ ở bè trầm. Ô 36 khép lại bằng một kết đặc biệt: bè trầm D♯ đặt dưới gam thứ tự nhiên đi xuống, trong đó âm F♯ không được nâng thành F𝄪 — tức kết bằng **hợp âm át thứ** (d), không có âm dẫn.
+
+::scan scriabin2 #23 | Ví dụ 3.7. Ô 33–40: hợp âm Napoli (A♮, ô 33), hợp âm bảy giảm bậc VII có F𝄪 (ô 34), kết bằng hợp âm át thứ (ô 36), Si trưởng (ô 37) và chạy xuống tới A♯ ở ô 40
+
+Ô 37 đưa vào hợp âm Si trưởng (bậc III), với bè trầm G𝄪 đi tới B ở sắc thái f; âm G𝄪 chuẩn bị cho âm A♯ ở ô sau. Ô 38 là hợp âm Rê♯ thứ ở thể bốn sáu (D♯m với A♯ ở bè trầm), với các nốt thêu A♯ – C𝄪 – E♯: về chức năng, đây là hợp âm K64 của Rê♯ thứ. Ô 39 có bè trầm A♯ – F♯ – G♯ – B và hợp âm bảy nửa giảm bậc VI nâng (E♯ – G♯ – B – D♯) với các nốt thêu F𝄪 và B♯. Ô 40 trở về hợp âm chủ Sol♯ thứ ở âm vực rộng, rồi chạy xuống qua E♯ và C𝄪 tới hợp âm bảy át có quãng 9 nhỏ của Rê♯ thứ (A♯7♭9) trên bè trầm A♯. Âm A♯ này, trùng âm với B♭, chính là chiếc cầu nối sang đoạn B.
+
+## 3.2. Đoạn B (ô 41–78)
+**Mi♭ thứ (ô 41–48).** Ô 41 mở đầu đoạn B ở **Mi♭ thứ**, với hoá biểu sáu giáng. Giai điệu nốt dài G♭ – F – E♭ – D♮ – E♭ (các bậc 3 – 2 – 1 – 7 – 1) vang trên hợp âm chủ, với âm B♭ ngân ở bè trong. Đây là một **chuyển giọng trùng âm**: giọng Rê♯ thứ, vừa được chuẩn bị bằng hợp âm át của nó ở ô 40, được viết lại thành Mi♭ thứ, trong đó âm chung A♯ = B♭ là điểm chuyển. Về âm thanh, giọng không đổi; về ký âm và về tư duy hoà âm, tác phẩm bước sang thế giới các giọng dấu giáng.
+
+::scan scriabin2 #24 | Ví dụ 3.8. Đoạn B mở ở Mi♭ thứ (hoá biểu sáu giáng): giai điệu G♭–F–E♭–D♮–E♭; ô 44 hợp âm sáu tăng kiểu Pháp C♭–E♭–F–A♮, sff
+
+Ô 42 đi từ hợp âm bảy nửa giảm bậc II ở thể ba bốn (II43: Fø7 với C♭ ở bè trầm) tới **hợp âm át có âm bậc VI hạ** (B♭ – D – G♭), trong đó âm G♭ thay cho quãng 5 F của hợp âm át; bè trầm đi B♭ – A♭ – G♭ bằng liên ba có dấu nhấn. Ô 43 là hợp âm t6 có thêm âm bậc VI nâng (C♮, giai điệu C – D – E♭ theo điệu thứ giai điệu), bè trầm G♭, rồi F – E♭ – D♭. Ô 44 đưa tiến trình tới hợp âm sáu tăng kiểu Pháp của Mi♭ thứ (II43♯3♭5: C♭ – E♭ – F – A♮), ở sắc thái sff. Trong suốt bốn ô 41 – 44, bè trầm đi xuống theo gam Mi♭ thứ từ B♭ tới C♭. Hợp âm sáu tăng kiểu Pháp ở ô 44 đồng thời có thể hiểu là hợp âm bảy át có quãng 5 hạ của âm B♭ — một lần nữa, hai cấu trúc trùng nhau về âm thanh.
+
+::scan scriabin2 #25 | Ví dụ 3.9. Ô 45–48: pedal B♭ rồi bè trầm đi lên cromatic
+
+Từ ô 45, **pedal B♭** (âm át của Mi♭ thứ) được đặt dưới hình hợp âm t64 (E♭ – G♭ – B♭ cùng các âm F, C♭), ở sắc thái p. Từ ô 46, bè trầm bắt đầu đi lên: C♭ ở ô 46, C♮ – D♭ – D♮ – E♭ ở ô 47 dưới hình hợp âm Mi♭ thứ đứng yên. Các hợp âm sinh ra ở đây là **hợp âm lướt**, xuất hiện do sự vận động cromatic của bè trầm chứ không do logic chức năng. Ô 48 đưa bè trầm lên E♮ – F, xác lập hợp âm t64 của Si♭ thứ, rồi hợp âm bảy át có quãng 9 nhỏ của Si♭ thứ (F – A – C – E♭ cùng G♭, D♭).
+
+**Si♭ thứ và Si trưởng (ô 49–62).** Ô 49 – 51 nhắc lại ô 41 – 43 ở **Si♭ thứ** (hoá biểu năm giáng), tức dịch lên quãng 5: giai điệu D♭ – C – B♭ – A – B♭ trên hợp âm chủ; II43 (Cø7 với G♭ ở bè trầm) tới hợp âm át có âm bậc VI hạ (F – A – D♭); rồi t6 có thêm âm bậc VI nâng (G♮).
+
+::scan scriabin2 #26 | Ví dụ 3.10. Ô 49–52: Si♭ thứ; ô 52 hợp âm G♭7 viết với F♭ (hợp âm sáu tăng kiểu Đức của Si♭ thứ), sff
+
+Ô 52 là điểm then chốt của đoạn B. Hợp âm G♭ – B♭ – D♭ – F♭, ở sắc thái sff, về chức năng là hợp âm sáu tăng kiểu Đức của Si♭ thứ (IV♯65♭3), nhưng được Scriabin viết như một hợp âm bảy át của Đô♭ trưởng, với âm F♭ thay cho E♮. Ở ô 53, hoá biểu được xoá và nhạc chuyển sang dấu thăng: hợp âm G♭7 được hiểu lại thành F♯7, tức **hợp âm bảy át của Si trưởng**, trong khi bè trầm G♭ = F♯ vẫn đứng yên. Phía trên bè trầm ấy vang lên hợp âm Si trưởng ở thể bốn sáu có thêm quãng 6, ở sắc thái pp. Đây là chuyển giọng trùng âm thứ hai của chương: hợp âm sáu tăng kiểu Đức của một giọng được viết lại thành hợp âm bảy át của một giọng khác, cách giọng ban đầu nửa cung.
+
+::grand Gb4+Bb4+Db5+Fb5/Gb2=G♭7_(ô_52) F#4+B4+D#5+G#5/F#2=Si:_T64_(ô_53) | Ví dụ 3.11. Chuyển giọng trùng âm ở ô 52–53: G♭7 (hợp âm sáu tăng kiểu Đức của Si♭ thứ) được hiểu thành F♯7 = hợp âm bảy át của Si trưởng; bè trầm G♭ = F♯ đứng yên, phía trên vào hợp âm Si trưởng
+
+::scan scriabin2 #27 | Ví dụ 3.12. Ô 53–58: hoá biểu xoá, pedal F♯; Si trưởng – Sol trưởng – Đô trưởng thêm quãng 6 – F♯7♭9
+
+Trên **pedal F♯** kéo dài từ ô 53 đến ô 58, Scriabin đặt một chuỗi hợp âm theo quan hệ trung âm cromatic. Ô 54 là hợp âm Sol trưởng (Gmaj7 với F♯ ở bè trầm), tức hợp âm bậc VI hạ của Si trưởng (VI♭). Ô 55 là hợp âm Đô trưởng có thêm quãng 6 (C – E – G – A), tức hợp âm bậc II hạ (II♭, hợp âm Napoli) của Si trưởng, đặt trên bè trầm F♯ — cách âm gốc của hợp âm một quãng 4 tăng. Ô 56 là hợp âm F♯7♭9 (F♯ – A♯ – C♯ – E – G♮), tức hợp âm chín át có quãng 9 nhỏ của Si trưởng, với một nhóm chín nốt đi xuống cromatic. Ô 57 là hợp âm G7 trên bè trầm G, tức hợp âm bảy bậc II hạ (II♭7) so với âm F♯. Ô 58 là hợp âm bảy giảm G – A♯ – C♯ – E, tới hợp âm F♯7 ở phách cuối — mà về âm thanh lại chính là G♭7, hợp âm sáu tăng kiểu Đức của Si♭ thứ ở ô 52. Vòng trùng âm khép lại, và tiến trình trở về Si♭ thứ.
+
+::scan scriabin2 #28 | Ví dụ 3.13. Ô 59–62: pedal F rồi bè trầm đi lên cromatic; ô 62 bè trầm B𝄫
+
+Ô 59 – 62 tương ứng ô 45 – 48 dịch lên quãng 5: **pedal F** (âm át của Si♭ thứ) dưới hình hợp âm t64 (B♭ – D♭ – F cùng C, G♭) ở sắc thái pp; bè trầm đi F – C – D♭ – F – G♭ ở ô 60, rồi đi lên cromatic G♮ – A♭ – A♮ – B♭ ở ô 61. Ở ô 62, bè trầm đi xuống B𝄫 rồi A♭, xác lập hợp âm A♭9, tức hợp âm chín át của Rê♭ trưởng. Đáng chú ý là cùng một phím đàn được viết A♮ khi bè trầm đi lên (ô 61) và B𝄫 khi bè trầm đi xuống (ô 62): cách viết luôn tuân theo hướng vận động của bè.
+
+**Rê♭ trưởng, Đô♯ thứ và trở về giọng chính (ô 63–78).** Ô 63 – 66 ở **Rê♭ trưởng**: hình giai điệu 3 – 2 – 1 – 7 – 1 (F – E♭ – D♭ – C – D♭) nay vang ở một giọng trưởng, ở sắc thái f. Hoà âm đứng trên hợp âm chủ, với hợp âm T64 có nốt thêu bậc VI (B♭ – A♭ luân phiên trên bè trầm A♭) ở ô 65 – 66 — một dạng hợp âm thêm nốt sáu.
+
+::scan scriabin2 #29 | Ví dụ 3.14. Ô 63–66: Rê♭ trưởng, giai điệu F–E♭–D♭–C–D♭
+
+::scan scriabin2 #30 | Ví dụ 3.15. Ô 67–69: Đô♯ thứ (hoá biểu năm thăng), giai điệu E–D♯–C♯–B♯–C♯
+
+Ở ô 67, hoá biểu năm thăng trở lại và nhạc chuyển sang **Đô♯ thứ**: giai điệu E – D♯ – C♯ – B♯ – C♯ trên hợp âm chủ, ở sắc thái fp. Rê♭ trưởng và Đô♯ thứ có cùng âm chủ về âm thanh (D♭ = C♯); việc chuyển từ giọng này sang giọng kia vừa là chuyển từ trưởng sang thứ cùng tên, vừa là chuyển giọng trùng âm. Ô 69 – 70 có hợp âm t64 với nốt thêu bậc VI hạ (A – G♯ luân phiên trên G♯). Đô♯ thứ là giọng bậc IV của Sol♯ thứ; tiến trình đã trở lại gần giọng chính.
+
+::scan scriabin2 #31 | Ví dụ 3.16. Ô 70–74: E7 với D♮ ở bè trầm (ô 71), viết lại thành C𝄪 (ô 72) — cùng hợp âm, đổi chức năng tại chỗ
+
+Ô 71 – 74 lặp lại hiện tượng trùng âm của đoạn A ở dạng tập trung nhất. Ở ô 71, hợp âm E7 (E – G♯ – B – D♮) với bè trầm luân phiên G♯ – D, tức D65 và D2 của La trưởng, ở sắc thái p, cresc. Trong Sol♯ thứ, hợp âm này là hợp âm bảy bậc VI. Ở ô 72, âm D♮ ở bè trầm được viết lại thành C𝄪, đi về E: hợp âm E7 được hiểu lại thành hợp âm sáu tăng kiểu Đức của Sol♯ thứ ở thể có âm gốc C𝄪 ở bè trầm (IV♯7♭3), rồi tới s6 (C♯m với E ở bè trầm), ở sắc thái f. Việc đổi cách viết diễn ra ngay tại chỗ, giữa hai ô nhịp kế tiếp, và được lặp lại ở ô 73 – 74.
+
+::scan scriabin2 #32 | Ví dụ 3.17. Ô 75–78: pedal D♯, K64 rồi D9♭ — đoạn A′ vào ngay sau ô 78
+
+Ô 75 – 78 là một **pedal át** trên âm D♯. Ô 75 và 76 đặt hợp âm K64 (G♯m với D♯ ở bè trầm) dưới giai điệu A♯ – G♯ – G♯ – A♯ – B và D♯ – C♯ – B – C♯ – D♯, ở sắc thái mf. Ô 77 đi D (quãng 8 D♯, sf) – VI6 (E/G♯) – D. Ô 78 dừng trên hợp âm chín át có quãng 9 nhỏ, có thêm âm B. Đoạn A′ vào ngay sau đó, trên chức năng át, không có kết.
+
+## 3.3. Đoạn A′ và coda (ô 79–110)
+Đoạn A′ (ô 79 – 92) nhắc lại nguyên văn ô 1 – 14, với cùng bè trầm và hợp âm, nhưng sắc thái mạnh hơn (sf, f, cresc.). Như vậy, A′ chỉ nhắc lại câu thứ nhất và phần đầu câu thứ hai, dừng ở hợp âm sáu tăng kiểu Đức của ô 14 (tương ứng ô 92).
+
+::scan scriabin2 #33 | Ví dụ 3.18. Ô 93–94: hợp âm sáu tăng kiểu Đức ngân trên bè trầm C𝄪
+
+Coda (ô 93 – 110) bắt đầu bằng hợp âm sáu tăng kiểu Đức (E – G♯ – B trên bè trầm C𝄪, IV♯7♭3) ngân suốt hai ô ở sắc thái mf, cresc., hợp âm được nhắc ở quãng 8 cao. Ở vị trí mà đoạn A dùng hợp âm át (ô 15), Scriabin phóng to hợp âm sáu tăng.
+
+::scan scriabin2 #34 | Ví dụ 3.19. Ô 95–102: giai điệu đoạn B trở về ở giọng chính trên pedal D♯; kết trọn ô 101–102
+
+Từ ô 95, trên **pedal D♯**, giai điệu của đoạn B trở về ở giọng chính (B – A♯ – G♯ – F𝄪 – G♯), ở sắc thái p, trên hợp âm K64. Đây là sự tổng hợp hai chất liệu tương phản của chương. Ô 96 tương ứng ô 42 ở giọng chính: hợp âm bảy bậc II (A♯ – C♯ – E – G♯) tới hợp âm bảy át có âm bậc VI hạ, trên pedal D♯. Ô 97 tương ứng ô 43: hợp âm t64 có thêm âm bậc VI nâng (E♯; giai điệu E♯ – F𝄪 – G♯), vẫn trên D♯. Ô 98 – 100 luân phiên hợp âm sáu tăng kiểu Đức (E – G♯ – B – C𝄪, ở ô 100 có thêm A♯) và hợp âm K64 trên pedal D♯, với sắc thái tăng từ f tới ff. Ô 101 đi s (C♯m với D♯ ở bè trầm) – D7 (D♯ – F𝄪 – A♯ – C♯), và ô 102 khép lại bằng hợp âm chủ trên bè trầm G♯: **kết trọn** của toàn chương. Giai điệu đoạn B tiếp tục vang trên hợp âm chủ ở sắc thái p, cresc.
+
+::scan scriabin2 #35 | Ví dụ 3.20. Ô 103–110: C𝄪 ở bè trầm (màu hợp âm sáu tăng), D♯–E luân phiên, hợp âm át không có âm dẫn ở ô 108–109, hợp âm chủ cuối ô 110
+
+Phần cuối coda (ô 103 – 110) kéo dài hợp âm chủ. Ở ô 103, bè trầm có nốt thêu C𝄪, gợi màu sắc của hợp âm sáu tăng kiểu Đức; giai điệu đi B tới D♯. Ở ô 104, tay trái luân phiên D♯ – E, tức bậc 5 và bậc 6 hạ trên nền hợp âm chủ, ở sắc thái mf, dim. Ô 105 – 107 lặp lại các hình này, giai điệu lên một quãng 8 ở ô 106. Ở ô 108 – 109, bè trầm luân phiên D♯ – G♯, tức hợp âm át – hợp âm chủ, ở sắc thái pp. Nhưng hợp âm át ở đây chứa các âm G♯, E và B — quãng 4 treo, quãng 9 nhỏ và quãng 13 nhỏ — mà **không có âm dẫn F𝄪**. Kết của chương vì vậy là một kết át – chủ không có âm dẫn. Ô 110 khép lại bằng hợp âm chủ Sol♯ thứ (G♯ – B – D♯) ở sắc thái sf, với pedal.
+
+## Tiểu kết chương 3
+Chương II cho thấy rõ hơn chương I sự căng giãn của điệu tính chức năng. Chương mở đầu bằng chức năng át chứ không bằng hợp âm chủ, và đoạn A′ vào ngay trên chức năng át, không có kết. Hợp âm sáu tăng kiểu Đức xuất hiện với tần suất cao và giữ vai trò trung tâm: nó được viết với quãng 3 giảm ở bè trầm (ô 6, 14, 30), được viết lại thành hợp âm bảy át của giọng khác (ô 21 và 14; ô 52 và 53; ô 71 và 72), và được phóng to ở coda thay cho hợp âm át. Kế hoạch giọng của đoạn B đi qua các giọng xa bằng những chuyển giọng trùng âm (Rê♯ thứ → Mi♭ thứ, Si♭ thứ → Si trưởng, Rê♭ trưởng → Đô♯ thứ), với một chuỗi trung âm cromatic trên pedal F♯. Bè trầm đi liền bậc theo gam hoặc cromatic, với cách viết phụ thuộc vào hướng đi, sinh ra những hợp âm lướt không mang chức năng độc lập. Cuối cùng, chương khép lại bằng một kết át – chủ không có âm dẫn. Tuy vậy, khác với chương I, chương II trở về và kết thúc ở giọng chủ Sol♯ thứ, đảm bảo tính thống nhất giọng của cả tác phẩm.
+`,
+  },
+  {
+    slug: 'scriabin-op19-thu-phap',
+    title: 'Chương 4. Đặc điểm thủ pháp hoà âm và tính chuyển tiếp của tác phẩm',
+    category: 'analysis',
+    summary: 'Tiểu luận Sonata số 2 Scriabin, chương 4: các thủ pháp kế thừa hoà âm cổ điển, các thủ pháp mới, tính chuyển tiếp của tác phẩm và đối chiếu với luận văn của Cha Min-hee.',
+    body: `
+Trên cơ sở phân tích chi tiết hai chương ở chương 2 và chương 3, chương này khái quát các thủ pháp hoà âm đặc trưng của Sonata số 2, xác định những yếu tố kế thừa truyền thống và những yếu tố mới, qua đó làm rõ tính chuyển tiếp của tác phẩm. Phần cuối chương đối chiếu kết quả phân tích với luận văn của Cha Min-hee (2015), công trình chi tiết nhất về tác phẩm mà chúng tôi tiếp cận được.
+
+## 4.1. Các thủ pháp hoà âm kế thừa hoà âm chức năng cổ điển
+**Kết và ly điệu.** Trong cả hai chương, các câu nhạc vẫn được khép lại bằng những kết chức năng rõ ràng. Kết trọn II65 – D – T ở ô 30 chương I khép câu đầu chủ đề thứ hai; đoạn nhạc mười sáu ô đầu chương II gồm một câu kết nửa trên hợp âm chín át (ô 8) và một câu kết trọn (ô 16), đúng cấu trúc đoạn nhạc cổ điển. Ly điệu được thực hiện bằng hợp âm át phụ theo đúng quy tắc: ly điệu sang bậc III ở ô 15 chương I, hợp âm bảy át của bậc IV ở ô 16, ô 27 chương I và ô 9 chương II.
+
+**Các hợp âm biến âm nhóm hạ át và nhóm át của át.** Hợp âm sáu Napoli xuất hiện ở ô 9 chương I và ô 24, 33, 35 chương II, ô 55 chương II (ở giọng Si trưởng). Ba loại hợp âm sáu tăng đều có mặt: kiểu Ý (IV♯6♭3) ở ô 5 – 6 chương I; kiểu Pháp (II43♯3♭5 và II65♯3♭5) ở ô 10, 78 – 86 chương I và ô 44 chương II; kiểu Đức (IV♯65♭3, IV♯7♭3) ở ô 6, 14, 30, 72, 93 – 100 chương II. Hợp âm bảy bậc II có quãng 3 nâng — hợp âm bảy át của giọng bậc V — xuất hiện ở ô 6 chương I và ô 7 chương II. Trong phần lớn các trường hợp, các hợp âm này vẫn làm nhiệm vụ cổ điển là chuẩn bị cho hợp âm át.
+
+**Hợp âm mượn và mô tiến.** Hợp âm bảy nửa giảm bậc II mượn từ Si thứ ở ô 18 chương I, hợp âm bậc VI thứ hoá ở ô 29 chương II là những hợp âm mượn quen thuộc của hoà âm lãng mạn. Mô tiến được dùng ở phần phát triển chương I (vòng quãng 5 Sol thứ – Đô thứ – Fa thứ, ô 62 – 66) và ở câu thứ hai chương II (mô tiến câu thứ nhất lên quãng 4, ô 9 – 13).
+
+Như vậy, bộ khung hoà âm của tác phẩm vẫn là bộ khung của hoà âm chức năng cuối thế kỷ XIX, gần với Chopin và Liszt, như sách giáo khoa bốn tác giả đã mô tả.
+
+## 4.2. Các thủ pháp hoà âm mới
+**Hợp âm bảy át quãng 5 hạ và màu sắc toàn cung.** Hợp âm F♯ – A♯ – C♮ – E ở ô 20, 22 chương I, và hợp âm tương ứng ở ô 95 – 99, là hợp âm bảy át có quãng 5 hạ (D7♭5). Bốn âm của nó thuộc một gam toàn cung, và về âm thanh nó trùng với hợp âm sáu tăng kiểu Pháp. Scriabin viết âm quãng 5 khi là C♮ (hạ), khi là B♯ (quãng 4 nâng), tuỳ theo hướng giải quyết. Hợp âm sáu tăng kiểu Pháp ở ô 44 chương II cũng đồng thời là hợp âm bảy át quãng 5 hạ của âm B♭. Theo chúng tôi, đây là mầm quan trọng nhất của ngôn ngữ hoà âm Scriabin thời kỳ sau, phù hợp với mô hình của Dernova xem hoà âm Scriabin phát triển từ hợp âm át và các biến thể của nó.
+
+**Hợp âm sáu tăng trùng âm với hợp âm bảy át.** Hợp âm sáu tăng kiểu Đức có âm thanh trùng với một hợp âm bảy át. Scriabin khai thác sự trùng âm này một cách có hệ thống: hợp âm E7 với D♮ (ô 21 chương II) và hợp âm sáu tăng kiểu Đức với C𝄪 (ô 14) là cùng một âm thanh với hai chức năng; ở ô 71 – 72, hợp âm được viết lại ngay tại chỗ, D♮ thành C𝄪; ở ô 52 – 53, hợp âm G♭7 (hợp âm sáu tăng kiểu Đức của Si♭ thứ) được viết lại thành F♯7 (hợp âm bảy át của Si trưởng) để chuyển giọng. Quãng 6 tăng còn được đảo thành quãng 3 giảm ở bè trầm (B – G𝄪 ở ô 6, E – C𝄪 ở ô 14 chương II). Hợp âm sáu tăng không còn chỉ là một hợp âm biến âm chuẩn bị cho át, mà trở thành một điểm xoay giữa các giọng.
+
+**Hợp âm thêm nốt và hợp âm quãng 4 treo.** Hợp âm thêm nốt sáu (sixte ajoutée) xuất hiện ở ô 20, 35, 65 chương II; hợp âm thêm quãng 7 trưởng và quãng 9 ở ô 5, 13 chương II; hợp âm chủ có quãng 4 treo không giải quyết ở ô 23 – 27 chương I. Ở các hợp âm này, ranh giới giữa âm hợp âm và âm ngoài hợp âm bị xoá mờ: âm treo không còn đòi hỏi giải quyết mà trở thành một thành phần của âm thanh hợp âm. Chương II còn có những hợp âm át không có âm dẫn ở ô 108 – 109, với quãng 4 treo, quãng 9 nhỏ và quãng 13 nhỏ thay cho quãng 3 dẫn âm (xem [[hop-am-mo-rong]], [[not-ngoai-hop-am]]).
+
+**Pedal và sự chồng chức năng.** Nhiều đoạn dài của tác phẩm được xây dựng trên một bè trầm đứng yên: pedal chủ ở ô 3 – 6, 45 – 57, 122 – 136 chương I; pedal át ở ô 79 – 86 chương I và ô 45 – 46, 59 – 60, 75 – 78, 95 – 101 chương II; pedal F♯ ở ô 53 – 58 chương II. Phía trên pedal là những hợp âm thuộc chức năng khác: nhóm hạ át trên âm chủ, hợp âm át trên âm chủ của giọng đích (ô 19, 23 chương II), hợp âm Napoli trên âm át (ô 55 chương II). Sự chồng chức năng này làm cho tiến trình hoà âm mất đi tính rạch ròi của hoà âm cổ điển (xem [[bass-ngan]]).
+
+**Chuyển giọng trùng âm và quan hệ quãng 3.** Kế hoạch giọng của tác phẩm dựa nhiều vào trùng âm và quan hệ quãng 3. Ở chương I: Mi♭ thứ của phần phát triển được hiểu lại là Rê♯ thứ (ô 66 – 75); quan hệ Si trưởng – Rê trưởng (ô 58 – 61); kế hoạch Sol♯ thứ – Si trưởng – Mi trưởng của toàn chương. Ở chương II: Rê♯ thứ → Mi♭ thứ (ô 40 – 41, qua âm chung A♯ = B♭), Si♭ thứ → Si trưởng (ô 52 – 53), Rê♭ trưởng → Đô♯ thứ (ô 66 – 67), cùng chuỗi Si trưởng – Sol trưởng – Đô trưởng trên pedal F♯ (ô 53 – 55) (xem [[chuyen-giong]], [[trung-am]], [[trung-am-cromatic]]).
+
+**Mở đầu lệch khỏi hợp âm chủ và bè trầm tuyến tính.** Chương I mở đầu bằng quãng 5 rỗng và dừng trên D2 chưa giải quyết; chương II mở đầu bằng chức năng át; đoạn A′ vào ngay sau pedal át mà không có kết. Bè trầm thường đi liền bậc: đi xuống theo gam (ô 7 – 9 chương I; ô 41 – 44 chương II), đi lên cromatic dưới một hình hợp âm đứng yên (ô 46 – 48, 60 – 62 chương II), sinh ra những hợp âm lướt không có chức năng độc lập; cách viết của bè trầm luôn tuân theo hướng đi (A♮ khi đi lên, B𝄫 khi đi xuống).
+
+## 4.3. Tính chuyển tiếp của Sonata số 2
+Đặt hai nhóm thủ pháp trên cạnh nhau, có thể thấy tính chuyển tiếp của Sonata số 2 không nằm ở chỗ tác phẩm "pha trộn" cũ và mới một cách ngẫu nhiên, mà ở chỗ các yếu tố mới đều nảy sinh **từ bên trong** các phương tiện của hoà âm chức năng. Hợp âm át quãng 5 hạ là một biến thể của hợp âm át; sự trùng âm giữa hợp âm sáu tăng và hợp âm bảy át vốn đã có trong hoà âm cổ điển; hợp âm thêm nốt và quãng 4 treo bắt nguồn từ âm ngoài hợp âm; pedal và quan hệ quãng 3 là những phương tiện quen thuộc của hoà âm lãng mạn. Điều mới ở Scriabin là những phương tiện ấy được sử dụng với tần suất cao, được đặt vào những vị trí quan trọng của hình thức, và được khai thác vì giá trị màu sắc tự thân của chúng hơn là vì chức năng dẫn tới một hợp âm khác.
+
+Sonata số 2 chưa có "hợp âm huyền bí" và chưa vượt ra khỏi điệu tính: cả tác phẩm vẫn mở đầu và kết thúc ở Sol♯ thứ, các câu nhạc vẫn được khép bằng kết chức năng. Nhưng hầu hết vật liệu của Scriabin thời kỳ sau — hợp âm át quãng 5 hạ, màu sắc toàn cung, hợp âm thêm nốt, quãng 4, pedal kéo dài — đã có mặt trong tác phẩm, ở dạng vẫn còn giải thích được bằng logic chức năng. Kết quả phân tích này phù hợp với luận điểm của Sabbagh rằng hoà âm Scriabin phát triển từng bước, mỗi bước suy ra được từ bước trước, và với nhận định của Kholopov về Scriabin như một trong những người khai mở hoà âm thế kỷ XX.
+
+## 4.4. Đối chiếu với luận văn của Cha Min-hee (2015)
+Luận văn thạc sĩ của Cha Min-hee (Đại học Chosun, người hướng dẫn Kim Ji-hyun) sử dụng bản in Peters năm 1971. Đối chiếu với kết quả phân tích của tiểu luận, chúng tôi nhận thấy những điểm thống nhất, những điểm luận văn bổ sung cho tiểu luận, và những điểm khác biệt. Số trang dưới đây là số trang in trong luận văn.
+
+**Những điểm thống nhất.** Cha xác định chương II theo hình thức ba đoạn A (ô 1 – 40) – B (ô 41 – 78) – A′, trong đó A′ chỉ nhắc lại ô 1 – 14 (ô 79 – 92), còn coda (ô 93 – 110) dùng lại giai điệu đoạn B (tr. 35 – 39). Ở ô 40 – 41 chương II, Cha cũng ghi nhận bè trầm A♯ → B♭ và chuyển giọng trùng âm Rê♯ thứ → Mi♭ thứ (tr. 37). Về coda chương II, Cha chỉ ra pedal D♯ từ ô 98 với các hợp âm tầng cao đi lên cromatic C𝄪 – D♯ – E, giai điệu đoạn B được nhắc lên một quãng 8 ở ô 102 – 107 và tay trái chuyển sang quãng 2 thứ D♯ – E luân phiên (tr. 39); điều này thống nhất với phân tích của chúng tôi về hợp âm sáu tăng kiểu Đức trên âm C𝄪, hợp âm K64 trên D♯ và các âm D♯ – E thêu. Ở chương I, Cha ghi nhận bè trong đi lên cromatic G♯ – A – A♯ ở ô 9 – 10 (tương ứng hợp âm Napoli có âm A♮ trong phân tích của chúng tôi), âm E thay cho D♯ trong hợp âm chủ ở ô 23 (tương ứng hợp âm chủ có quãng 4 treo), âm B được nhấn như một pedal ở ô 46 – 56, và sự nối D♭ sang C♯ trùng âm ở ô 74 – 75 để trở về Sol♯ thứ (tr. 23, 25, 28, 31 – 32).
+
+**Những điểm luận văn bổ sung.** Luận văn của Cha chú ý nhiều tới tiết tấu và phức điệu — những lĩnh vực nằm ngoài phạm vi tiểu luận. Cha chỉ ra rằng từ cuối ô 6 chương I, tay phải giữ nhịp 3/4 trong khi tay trái chuyển sang hình nhịp 9/8 (phức nhịp); đoạn kết thứ nhất từ ô 37 dùng giai điệu ô 29 thành canon quãng 8; tay trái chia nhịp ngày càng nhỏ, tạo các tỷ lệ nghịch nhịp 3:4, 4:5, 3:6 rồi 2:3, 6:4, 4:3 ở ô 46 – 56 (tr. 23, 27 – 29). Ở phần phát triển, Cha ghi nhận mô tiến giai điệu ô 23 – 24 cách quãng 4 và quãng 8 từ ô 62, bè trầm đi cromatic C – C♭ – B♭ ở ô 68 – 70 (tr. 30 – 32). Ở chương II, Cha chỉ ra mô tiến của ô 1 – 2 ở ô 3 – 4, và nhóm ba nốt ở bè trầm trải rộng quãng 11 ở ô 19 – 20, được tác giả gọi là "tiếng tù và" và cho là gợi lại motif chương I (tr. 36).
+
+**Những điểm khác biệt.** Thứ nhất, về hình thức chương I: Cha xem ô 1 – 12 là chủ đề thứ nhất ở Sol♯ thứ và ô 13 – 22 là đoạn nối ở Si trưởng, đặt phần tái hiện từ ô 87 và coda từ ô 122 (tr. 22, 33). Chúng tôi, thống nhất với Leikin, xem ô 1 – 12 là phần mở đầu, chủ đề thứ nhất bắt đầu từ ô 13, tái hiện từ ô 89, chủ đề thứ ba ở ô 122 – 127 và coda ở ô 128 – 136. Hai cách chia khác nhau ở cách hiểu vai trò của motif mở đầu: với chúng tôi, motif này mang tính chất mở đầu — không có chủ đề hoàn chỉnh, dừng trên hợp âm át không giải quyết, và trở lại nguyên dạng ở đầu phần phát triển, cuối phần phát triển và cuối coda.
+
+Thứ hai, về giọng của phần phát triển: bảng của Cha ghi "f – g♯" cho ô 62 – 86. Trên bản Belaieff, vùng dấu giáng đi Sol thứ → Đô thứ → Fa thứ, rồi qua B♭7♭9 tới Mi♭ thứ trước khi trở về hoá biểu năm thăng ở ô 75; chúng tôi giữ cách đọc này. Thứ ba, về đoạn B chương II: Cha ghi Mi♭ thứ cho ô 41 – 52, "Si♭ thứ – Si" cho ô 53 – 62 và "Đô – Si♭ thứ – Đô♯ thứ – Sol♯ thứ" cho ô 63 – 78. Trên bản Belaieff, ô 49 – 52 đã ở Si♭ thứ (hoá biểu năm giáng), ô 53 – 58 ở Si trưởng trên pedal F♯, ô 59 – 62 ở Si♭ thứ, ô 63 – 66 ở Rê♭ trưởng (vẫn năm giáng, giai điệu F – E♭ – D♭ – C – D♭), không phải Đô.
+
+Ngoài ra, luận văn có một số lỗi in: các bảng và chú thích ví dụ ghi "Op. 12" thay cho Op. 19; bảng 2 ghi chương I "86 – 136" và A′ "79 – 109"; nhịp chương II được ghi 3/4, trong khi bản Belaieff ghi 3/2. Cha cũng kết luận rằng các hợp âm quãng 4, quãng 5 dày đặc trong tác phẩm là "điềm báo của hợp âm huyền bí" (tr. 25, 42); đây là nhận định của tác giả, không kèm phân tích cấu trúc hợp âm, nên chúng tôi không lấy làm căn cứ.
+
+## Tiểu kết chương 4
+Các thủ pháp hoà âm của Sonata số 2 có thể chia thành hai nhóm. Nhóm thứ nhất kế thừa hoà âm chức năng cổ điển: kết, ly điệu, hợp âm Napoli, các hợp âm sáu tăng, hợp âm mượn, mô tiến. Nhóm thứ hai gồm những thủ pháp mới: hợp âm át quãng 5 hạ với màu sắc toàn cung, sự trùng âm có hệ thống giữa hợp âm sáu tăng và hợp âm bảy át, hợp âm thêm nốt và quãng 4 treo, pedal và sự chồng chức năng, chuyển giọng trùng âm và quan hệ quãng 3, mở đầu lệch khỏi hợp âm chủ và bè trầm tuyến tính. Các thủ pháp mới đều nảy sinh từ bên trong các phương tiện của hoà âm chức năng; chính điều đó làm nên tính chuyển tiếp của tác phẩm. Đối chiếu với luận văn của Cha Min-hee cho thấy sự thống nhất ở nhiều nhận định cơ bản, đồng thời giúp chúng tôi xác định rõ hơn những điểm cần đính chính về hình thức và kế hoạch giọng.
+`,
+  },
+  {
+    slug: 'scriabin-op19-ket-luan',
+    title: 'Kết luận và tài liệu tham khảo',
+    category: 'analysis',
+    summary: 'Kết luận tiểu luận về thủ pháp hoà âm trong Sonata số 2 của Scriabin, những hạn chế, hướng nghiên cứu tiếp theo và danh mục tài liệu tham khảo.',
+    body: `
+## Kết luận
+Sonata số 2 Op. 19 của Alexander Scriabin, dù là một tác phẩm thời trẻ, đã cho thấy rõ những đặc điểm của một ngôn ngữ hoà âm đang chuyển mình. Qua việc phân tích tiến trình hoà âm của hai chương theo từng ô nhịp, tiểu luận đã làm sáng tỏ nhận định vốn phổ biến về tính chuyển tiếp của tác phẩm, đồng thời chỉ ra cụ thể tính chuyển tiếp ấy được thể hiện ở những phương diện nào.
+
+Trước hết, bộ khung hoà âm của tác phẩm vẫn thuộc hoà âm chức năng có điệu tính cuối thế kỷ XIX. Các câu nhạc được khép bằng kết trọn và kết nửa; ly điệu được thực hiện bằng hợp âm át phụ; hợp âm sáu Napoli, ba loại hợp âm sáu tăng và hợp âm bảy bậc II có quãng 3 nâng giữ vai trò chuẩn bị cho hợp âm át theo đúng các nguyên tắc mà sách giáo khoa bốn tác giả đã hệ thống hoá. Ở phương diện này, Scriabin đứng trong truyền thống của Chopin và Liszt.
+
+Thứ hai, trong bộ khung ấy, các biến thể của hợp âm át đã được đẩy rất xa. Hợp âm bảy át quãng 5 hạ mang màu sắc toàn cung, hợp âm chín át có quãng 9 nhỏ, hợp âm át có âm bậc VI hạ thay cho quãng 5, hợp âm át không có âm dẫn ở cuối tác phẩm — tất cả cho thấy hợp âm át đang dần được nhìn như một âm thanh có giá trị tự thân. Đây đúng là hướng phát triển mà Dernova và các nhà nghiên cứu sau này mô tả khi xem hoà âm Scriabin phát triển từ hợp âm át.
+
+Thứ ba, sự trùng âm giữa hợp âm sáu tăng kiểu Đức và hợp âm bảy át được Scriabin khai thác một cách có hệ thống, biến hợp âm sáu tăng thành điểm xoay giữa các giọng. Cùng với các chuyển giọng trùng âm (Rê♯ thứ → Mi♭ thứ, Si♭ thứ → Si trưởng, Rê♭ trưởng → Đô♯ thứ) và các quan hệ quãng 3 (Sol♯ thứ – Si trưởng – Mi trưởng ở chương I; Si trưởng – Sol trưởng – Đô trưởng trên pedal F♯ ở chương II), điều này tạo nên một kế hoạch giọng rộng và đa dạng, làm điệu tính giãn ra mà chưa mất đi.
+
+Thứ tư, các hợp âm thêm nốt, hợp âm quãng 4 treo không giải quyết và các pedal kéo dài làm mờ ranh giới giữa âm hợp âm với âm ngoài hợp âm, và giữa các chức năng với nhau. Ở tầm hình thức, những phương tiện ấy góp phần tạo nên các giải pháp khác thường: chương I mở đầu bằng hợp âm chủ bỏ quãng 3, đặt cả ba chủ đề trình bày ở giọng song song, đưa phần tái hiện sang giọng bậc VI theo kiểu một kết ngắt ở tầm hình thức, và kết thúc ở Mi trưởng; chương II mở đầu bằng chức năng át và đưa đoạn A′ vào trên chức năng át, không có kết.
+
+Tổng hợp lại, Sonata số 2 chưa có hợp âm huyền bí và chưa vượt ra khỏi điệu tính, nhưng hầu hết vật liệu hoà âm của Scriabin thời kỳ sau đã có mặt, ở dạng vẫn còn giải thích được bằng logic chức năng. Các yếu tố mới không xuất hiện như những yếu tố ngoại lai mà nảy sinh từ bên trong chính các phương tiện của hoà âm chức năng. Theo chúng tôi, chính điều đó làm nên ý nghĩa "chuyển tiếp" của tác phẩm trong tiến trình phát triển ngôn ngữ hoà âm của Scriabin.
+
+Tiểu luận còn những hạn chế nhất định. Mức độ chi tiết của phân tích không đồng đều: các ô 46 – 57 và phần tái hiện, coda của chương I (ô 89 – 136) được phân tích theo đoạn và theo sự tương ứng với phần trình bày, không theo từng ô như các phần khác. Ở một số chỗ, cách gọi tên hợp âm còn có thể hiểu theo nhiều cách: hợp âm ở các ô 5, 13, 83, 91 chương II có thể đọc là hợp âm bảy bậc VI thêm quãng 9 hoặc hợp âm bảy chủ thêm âm bậc VI hạ; hợp âm ở ô 23 chương II có thể xem là một pedal hạ át; các hợp âm ở ô 39 và 47 chương II là hợp âm lướt, khó gán một tên duy nhất; hợp âm ở ô 57 – 58 chương II có thể đọc là át phụ lướt. Một số công trình trong phần lịch sử nghiên cứu chúng tôi mới tiếp cận qua nguồn thứ cấp, và chương trình về biển của tác phẩm chưa được đối chiếu với nguyên văn tiếng Nga.
+
+Trên cơ sở kết quả đạt được, chúng tôi cho rằng hướng nghiên cứu tiếp theo có thể là so sánh thủ pháp hoà âm của Sonata số 2 với Sonata số 1 Op. 6 và Sonata số 3 Op. 23, để xác định chính xác hơn vị trí của tác phẩm trong chuỗi sonata của Scriabin, cũng như mở rộng phân tích sang các bình diện tiết tấu và phức điệu mà luận văn của Cha Min-hee đã gợi mở.
+
+## Tài liệu tham khảo
+**Tài liệu tiếng Việt**
+1. Nguyễn Thị Nhung (2006), *Phân tích tác phẩm âm nhạc*, Quyển 1, Nhạc viện Hà Nội.
+
+**Tài liệu tiếng Nga**
+2. Дубовский И., Евсеев С., Способин И., Соколов В. (1937 – 1938), *Учебник гармонии*, Москва.
+3. Дернова В. (1968), *Гармония Скрябина*, Ленинград. (Năm và hình thức công bố chưa được đối chiếu với bản gốc.)
+4. Мазель Л., Цуккерман В. (1967), *Анализ музыкальных произведений*, Москва.
+5. Павчинский С. (1969), *Произведения Скрябина позднего периода*, Москва. (Chưa đối chiếu.)
+6. Римский-Корсаков Н. (1884 – 1886), *Практический учебник гармонии*, Санкт-Петербург.
+7. Сабанеев Л. (1916), *Скрябин*, Москва.
+8. Способин И. (1947; in lại 1984), *Музыкальная форма*, Москва.
+9. Тюлин Ю., Бершадская Т., Пустыльник И. (1974), *Музыкальная форма*, Москва.
+10. Холопов Ю. (1974), *Очерки современной гармонии*, Москва.
+11. Холопов Ю. (1993), "Скрябин и гармония XX века", *Учёные записки* 1, Москва: Государственный мемориальный музей А. Н. Скрябина.
+
+**Tài liệu tiếng Anh và tiếng Hàn**
+12. Bae Su-jin (2000), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Nữ Ewha, Seoul (tiếp cận qua tóm tắt).
+13. Baker J. M. (1986), *The Music of Alexander Scriabin*, New Haven: Yale University Press.
+14. Ballard L., Bengtson M. (2017), *The Alexander Scriabin Companion*, Lanham: Rowman & Littlefield (dẫn qua Wikipedia).
+15. Bowers F. (1996), *Scriabin: A Biography*, 2nd ed., New York: Dover (dẫn qua Wikipedia).
+16. Cha Min-hee (2015), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Chosun, Gwangju.
+17. Chiang E. C. (2013), *Rubato and Climax Projection in Two Piano Sonatas by Scriabin*, luận án DMA, University of Toronto.
+18. Leikin A. (2011), *The Performing Style of Alexander Scriabin*, Farnham: Ashgate (dẫn qua Wikipedia).
+19. Perle G. (1984), "Scriabin's Self-Analyses", *Music Analysis* 3/2.
+20. Piston W. (1941), *Harmony*, New York: Norton.
+21. Reise J. (1983), "Late Skriabin: Some Principles behind the Style", *19th-Century Music* 6/3.
+22. Sabbagh P. (2003), *The Development of Harmony in Scriabin's Works*, Universal Publishers.
+23. Wang Yuhe (2025), *An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin*, luận án DMA, University of Maryland.
+
+**Văn bản âm nhạc và dữ liệu**
+24. Scriabin A. (1898), *Sonate-Fantaisie № 2, Op. 19*, Leipzig: M. P. Belaieff (bản lưu trữ tại IMSLP).
+25. Google Magenta, *MAESTRO Dataset v3* (bản ghi MIDI các buổi biểu diễn piano).
+`,
+  },
+  {
+    slug: 'scriabin-op19-phu-luc',
+    title: 'Phụ lục. Bảng phân tích hoà âm theo từng ô nhịp',
+    category: 'analysis',
+    summary: 'Phụ lục tiểu luận Sonata số 2 Scriabin: bảng phân tích hoà âm từng ô nhịp hai chương Andante và Presto, ghi theo bậc trong giọng.',
+    body: `
+Phụ lục trình bày bảng phân tích hoà âm theo từng ô nhịp của hai chương, làm cơ sở cho phần phân tích ở chương 2 và chương 3. Hợp âm được ghi theo bậc trong giọng đang xét, theo hệ thống ký hiệu ở bảng 1.1 (chương 1). Cột "Hợp âm" ghi tên âm thanh của hợp âm và bè trầm kèm ký hiệu bậc; cột "Chức năng" ghi nhóm chức năng; cột "Thủ pháp" ghi hiện tượng hoà âm đáng chú ý.
+
+## Bảng P.1. Chương I — Andante (136 ô nhịp)
 
 ### Trình bày (ô 1–57)
-::scan scriabin2 #1 | Mở đầu: motif quãng 5 rỗng G♯–D♯ và hai lần dừng trên dấu ngân; ô 2 dừng trên D2 chưa giải quyết; ô 3–4 có G♯ ở bè trầm
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | Lấy đà–1 | G♯–D♯ quãng 5 rỗng; phách 2 B–D♯–E♯–G♯ (VI♯65: bậc VI nâng của thứ giai điệu) | T | Chủ âm **bỏ quãng 3** — màu "rỗng" mở đầu; fermata |
 | 2 | D43 (D♯7/A♯) → D7 → D2 (bass C♯) | D | Dừng trên D2 chưa giải quyết |
-| 3 | E/B → TSVI – SII65 – t64 – s6; phách mạnh có G♯ ở bè trầm | S trên T | Bè trầm đi liền bậc trên **pedal chủ** G♯ |
-| 4 | s64 trên pedal G♯; SII43 (A♯ø7/E) | S | Fermata |
+| 3 | E/B → VI – II65 – t64 – s6; phách mạnh có G♯ ở bè trầm | S trên T | Bè trầm đi liền bậc trên **pedal chủ** G♯ |
+| 4 | s64 trên pedal G♯; II43 (A♯ø7/E) | S | Fermata |
 
-::scan scriabin2 #2 | Ô 5–10: DDVII6♭3 trên pedal chủ, DD7 có sf (ô 6), bè trầm đi xuống ô 7–9, Napoli (ô 9) và DD43♭5 có C𝄪 ở bè trầm (ô 10)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 5 | SII65 – t64 – s6 – **DDVII6♭3** (E–G♯–C𝄪) | S → DD | 6 tăng Ý trên pedal chủ |
-| 6 | **DD7** (A♯–C𝄪–G♯), sf → DDVII6♭3 (p) | DD | Át phụ của át đi lùi về 6 tăng |
-| 7 | D – s – bass B, A♯ – TSVI64 (E/B) – G♯ | D–S–T | Bè trầm đi xuống liền bậc kiểu "lament" |
-| 8 | D – s7 (C♯–E–G♯–B) – B – A♯ – TSVI64 – G♯ | D–S–T | Lặp có biến hoá |
-| 9 | s – B – A♯ – TSVI64 – G♯ – **SII♭6 (N)** (La trưởng/C♯, A♮) – G♯ | S | Napoli chạm qua rồi trở lại chủ |
-| 10 | **DD43♭5** (E–G♯–A♯–C𝄪, C𝄪 ở bè trầm) – G♯ – D (mf) | DD → D | 6 tăng Pháp **thể đảo** (âm 6 tăng ở bè trầm) |
+| 5 | II65 – t64 – s6 – **IV♯6♭3** (E–G♯–C𝄪) | S → D của D | 6 tăng Ý trên pedal chủ |
+| 6 | **II7♯3** (A♯–C𝄪–G♯), sf → IV♯6♭3 (p) | D của D | Át phụ của át đi lùi về 6 tăng |
+| 7 | D – s – bass B, A♯ – VI64 (E/B) – G♯ | D–S–T | Bè trầm đi xuống liền bậc kiểu "lament" |
+| 8 | D – s7 (C♯–E–G♯–B) – B – A♯ – VI64 – G♯ | D–S–T | Lặp có biến hoá |
+| 9 | s – B – A♯ – VI64 – G♯ – **II♭6 (Napoli)** (La trưởng/C♯, A♮) – G♯ | S | Napoli chạm qua rồi trở lại chủ |
+| 10 | **II65♯3♭5** (E–G♯–A♯–C𝄪, C𝄪 ở bè trầm) – G♯ – D (mf) | D của D → D | 6 tăng Pháp **thể đảo** (âm 6 tăng ở bè trầm) |
 
-::scan scriabin2 #3 | Motif mở đầu chuyển lên Rê♯ thứ (d), dừng trên D2 của d; cuối ô 12 lấy đà pp sang chủ đề 1
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 11 | Motif mở đầu trên **d** (Rê♯ thứ): D♯–A♯ rỗng; F♯–A♯–B♯–D♯ | D (thứ) | Mô tiến motif lên quãng 5 |
-| 12 | A♯7/E♯ (D43 của d) – D7 – D2 (bass G♯), fermata | DD | Giải quyết lệch sang F♯ ở ô 13 |
+| 12 | A♯7/E♯ (D43 của d) – D7 – D2 (bass G♯), fermata | D của D | Giải quyết lệch sang F♯ ở ô 13 |
 
-::scan scriabin2 #4 | Chủ đề 1 ở Si trưởng (ô 13–18); ô 18 có G♮ — SII7 mượn từ Si thứ
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 13 | **Si trưởng**: T64 – nốt dựa C♯/E – T – D – T | T của III | Chủ đề 1 vào thẳng giọng song song |
-| 14 | G♯m thêm E♯ (TSVI của Si) | T thay | Hợp âm thêm nốt 6 nâng |
-| 15 | Rê♯ thứ (DTIII của Si): K64 – D (A♯–C𝄪–E♯) – t; cuối ô A♮ | D của Si | Ly điệu chạm qua |
-| 16 | B7 (D7→S) | DS | Át phụ của S |
+| 14 | G♯m thêm E♯ (VI của Si) | T thay | Hợp âm thêm nốt 6 nâng |
+| 15 | Rê♯ thứ (III của Si): K64 – D (A♯–C𝄪–E♯) – t; cuối ô A♮ | D của Si | Ly điệu chạm qua |
+| 16 | B7 (D7→IV) | D của IV | Át phụ của S |
 | 17 | S (Mi trưởng) | S | |
-| 18 | C♯–E–G♮–B = SII7 **mượn Si thứ** | S thứ | [[hop-am-muon|Hợp âm mượn]] (G♮) |
+| 18 | C♯–E–G♮–B = II7 **mượn Si thứ** | S thứ | [[hop-am-muon|Hợp âm mượn]] (G♮) |
 
-::scan scriabin2 #5 | Ô 19–22: hai lần D7 quãng 5 hạ — viết C♮ ở ô 20, viết B♯ ở ô 22
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 19 | T64 | T (K64) | |
-| 20 | F♯–A♯–C♮–E = **D7 quãng 5 hạ** | D biến | Âm hình toàn cung, gần DD43♭5 |
-| 21 | TSVI → DTIII (E♯ lướt) | T thay | |
+| 20 | F♯–A♯–C♮–E = **D7 quãng 5 hạ** | D biến | Âm hình toàn cung, gần II43♯3♭5 |
+| 21 | VI → III (E♯ lướt) | T thay | |
 | 22 | như ô 20 nhưng viết **B♯** (F♯–A♯–B♯–E) | D biến | Cùng âm thanh, hai cách viết |
 
-::scan scriabin2 #6 | Chủ đề 2 (p rubato): I quãng 4 treo (ô 23), B7 trên A♮ ở bè trầm (ô 27), kết trọn ở Si trưởng ô 30
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 23 | Chủ đề 2 (p, rubato): B–E–F♯ (T quãng 4 treo) – S6 – SII7 | T–S | Nhiều lớp phức điệu |
-| 24 | G♯ quãng 4 treo – C♯m/E – A♯ø7/E – TSVI | T thay–S | |
+| 23 | Chủ đề 2 (p, rubato): B–E–F♯ (T quãng 4 treo) – S6 – II7 | T–S | Nhiều lớp phức điệu |
+| 24 | G♯ quãng 4 treo – C♯m/E – A♯ø7/E – VI | T thay–S | |
 | 25 | như 24 | | |
 | 26 | … F♯7 (D) treo | D | |
-| 27 | B7 quãng 4 treo với **A♮ ở bè trầm** (D2 của S) → E/G♯ (S6) | DS → S | |
+| 27 | B7 quãng 4 treo với **A♮ ở bè trầm** (D2 của S) → E/G♯ (S6) | D của IV → S | |
 | 28 | như 27 → C♯m7 rải | S | |
 | 29 | C♯m7 + A♯ (A♯ø7/C♯), cresc. | S | |
-| 30 | SII65 – D – T (Si) | S–D–T | [[cau-ket|Kết trọn]] câu đầu chủ đề 2 |
+| 30 | II65 – D – T (Si) | S–D–T | [[cau-ket|Kết trọn]] câu đầu chủ đề 2 |
 
-::scan scriabin2 #7 | Câu nhắc lại chủ đề 2 với nhiều nốt lướt; ô 35 có đường cromatic đi xuống
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 31 | T — câu nhắc lại, móc kép | T | |
@@ -1677,7 +1991,6 @@ Mỗi bảng ghi theo từng ô: **hợp âm** (tên âm thanh và bè trầm, k
 | 35 | B7 treo/A♮ → C♯m7/B → chuỗi lướt E–D♯–D–C♯–C–B trên bè trầm G♯ | | Lướt cromatic đi xuống |
 | 36 | C♯m7 → E/B | S | |
 
-::scan scriabin2 #8 | Đoạn chuyển mở bằng một bè (ô 37), F♯7 – C♯m luân phiên, tới I của Si ở ô 45
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 37 | Giai điệu đơn G♯–A♯–B–A♯–G♯ (tay trái nghỉ) | — | Đoạn chuyển mở bằng một bè |
@@ -1685,137 +1998,109 @@ Mỗi bảng ghi theo từng ô: **hợp âm** (tên âm thanh và bè trầm, k
 | 39 | C♯m/G♯ | S | |
 | 40 | F♯7 | D | |
 | 41 | C♯m/G♯ → C♯m/E | S | |
-| 42 | TSVI (G♯m) – D♯ – G♯ – C♯m/E | T thay–S | |
+| 42 | VI (G♯m) – D♯ – G♯ – C♯m/E | T thay–S | |
 | 43 | G♯m7 rải móc kép, cresc. | | |
 | 44 | C♯m7 – A♯°/C♯ – F♯7 | S–D | |
 | 45 | T (Si) trên B0–B1, mf | T | Mở pedal chủ cho chủ đề 3 |
 
-::scan scriabin2 #9 | Chủ đề 3 ("ben marcato il canto") trên pedal B
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 46–51 | Chủ đề 3 ("ben marcato il canto") trên **pedal B**: T – SII7 – TSVI7 – T thêm 9 | T kéo dài | Pedal chủ, hợp âm thêm nốt |
+| 46–51 | Chủ đề 3 ("ben marcato il canto") trên **pedal B**: T – II7 – VI7 – T thêm 9 | T kéo dài | Pedal chủ, hợp âm thêm nốt |
 
-::scan scriabin2 #10 | Đoạn kết phần trình bày trên pedal B
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 52–57 | Đoạn kết trên pedal B; ô 57 hợp âm rải nhấn, đóng ở Si trưởng | T | |
 
 ### Phát triển (ô 58–88)
-::scan scriabin2 #11 | Đầu phát triển: motif trên Si (ô 58–59) rồi trên Rê trưởng (ô 60–61); cuối ô 61 xoá hoá biểu
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 58–59 | Motif mở đầu trên Si | | |
 | 60–61 | Motif trên **Rê trưởng** (III♭ của Si); cuối ô 61 xoá hoá biểu | | Quan hệ [[trung-am-cromatic|trung âm cromatic]] |
 
-::scan scriabin2 #12 | Vùng dấu giáng: vòng quãng 5 Sol thứ → Đô thứ → Fa thứ (ô 62–69)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 62–66 | Vòng quãng 5 đi xuống: Sol thứ → Đô thứ → Fa thứ (viết dấu giáng) | | [[mo-tien-hoa-am|Mô tiến]] |
 | 66–74 | Fø7 → B♭7 → **Mi♭ thứ** (= Rê♯ thứ, giọng át viết trùng âm); đỉnh ff xen các đoạn p rải | S–D của Mi♭ | Viết giọng át bằng dấu giáng |
 
-::scan scriabin2 #13 | Ô 70–75: đỉnh ff xen các đoạn p; B♭7♭9 → Mi♭ thứ (ô 73–74); ô 75 trở lại năm thăng, ff
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 75–76 | Hoá biểu năm thăng trở lại, ff: A♯ø7 (SII7) → D♯7♭9 (D7♭9) của Sol♯ thứ | S–D | Mi♭ thứ được hiểu lại là Rê♯ thứ |
+| 75–76 | Hoá biểu năm thăng trở lại, ff: A♯ø7 (II7) → D♯7♭9 (D7♭9) của Sol♯ thứ | S–D | Mi♭ thứ được hiểu lại là Rê♯ thứ |
 
-::scan scriabin2 #14 | Ô 76–78: Sol trưởng bất ngờ (ô 77, p) rồi B7 → E
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 77 | **Sol trưởng** bất ngờ (p) | | Trượt nửa cung |
-| 78 | B7 → E; hợp âm ba tăng E–G♯–B♯; rồi DD43♭5 | | [[hop-am-ba-tang|Hợp âm ba tăng]] |
+| 78 | B7 → E; hợp âm ba tăng E–G♯–B♯; rồi II43♯3♭5 | | [[hop-am-ba-tang|Hợp âm ba tăng]] |
 
-::scan scriabin2 #15 | Pedal át D♯ (ô 79–86), cresc. tới ff; ô 87–88 motif mở đầu ff ở Sol♯ thứ, ô 88 dừng trên dấu ngân và đổi hoá biểu
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 79–86 | **Pedal át D♯**: DD43♭5 (E–G♯–A♯–C𝄪) ↔ D7♭9/V (A♯) ↔ D; cresc. tới ff | DD–D | Pedal át dài trước tái hiện |
+| 79–86 | **Pedal át D♯**: II43♯3♭5 (E–G♯–A♯–C𝄪) ↔ D7♭9/V (A♯) ↔ D; cresc. tới ff | D của D–D | Pedal át dài trước tái hiện |
 | 87–88 | Motif mở đầu ff ở Sol♯ thứ: G♯–D♯ rỗng; D43 – D7 – D2; fermata | D | Như ô 1–2, phóng to |
 
 ### Tái hiện và coda (ô 89–136)
-::scan scriabin2 #16 | Ô 88 → 89: sau pedal át, tái hiện vào Mi trưởng (hoá biểu bốn thăng), pp
 | Ô | Hợp âm | Ghi chú |
 |---|---|---|
 | 89–94 | Chủ đề 1 ở **Mi trưởng** (hoá biểu 4 thăng): T64… | = ô 13–18 dịch **xuống quãng 5**. Sau pedal D♯ (V của Sol♯ thứ), nhạc vào VI (Mi) — một dạng [[cau-ket|kết lừa]] ở tầm hình thức |
 
-::scan scriabin2 #17 | Ô 95–99: D7 quãng 5 hạ của Mi trưởng, tương ứng ô 19–22
 | Ô | Hợp âm | Ghi chú |
 |---|---|---|
 | 95–99 | B–D♯–E♯–A = D7 quãng 5 hạ của Mi | tương ứng ô 19–22 (dài hơn một ô) |
-| 100–112 | Chủ đề 2 ở Mi trưởng (A = S, F♯m7 = SII7, D♯ø7…) | tương ứng ô 23–36 |
+| 100–112 | Chủ đề 2 ở Mi trưởng (A = S, F♯m7 = II7, D♯ø7…) | tương ứng ô 23–36 |
 | 113–121 | Đoạn chuyển (B7 … C♯m …) | tương ứng ô 37–45 |
 | 122–127 | Chủ đề 3 ở Mi trưởng trên **pedal E**, 8va | tương ứng ô 46–51 |
 
-::scan scriabin2 #18 | Coda trên pedal E (ô 127–136); hai ô cuối nhắc motif mở đầu ở Mi trưởng, smorz.
 | Ô | Hợp âm | Ghi chú |
 |---|---|---|
-| 128–136 | Coda trên pedal E1: T – TSVI7 (C♯m7/E) – T thêm 6/9 – màu plagal (A); ô 135–136 motif mở đầu ở Mi trưởng: E–B rỗng → E/G♯ có nốt hoa mỹ C♯; smorz., fermata | Kết ở **Mi trưởng** |
-Phần tái hiện và coda được ghi theo đoạn vì là dịch giọng của phần trình bày; độ chi tiết ở đây thấp hơn bảng ô 1–45.
+| 128–136 | Coda trên pedal E1: T – VI7 (C♯m7/E) – T thêm 6/9 – màu plagal (A); ô 135–136 motif mở đầu ở Mi trưởng: E–B rỗng → E/G♯ có nốt hoa mỹ C♯; smorz., fermata | Kết ở **Mi trưởng** |
 
-Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
-`,
-  },
-  {
-    slug: 'scriabin-op19-chuong-2',
-    title: 'Scriabin Op. 19 — Mục 2.2: Phân tích hoà âm chương II (Presto)',
-    category: 'analysis',
-    summary: 'Phân tích hoà âm từng ô chương II Sonata số 2 của Scriabin bằng ký hiệu Nga – Xô viết: đoạn A, đoạn B qua Mi♭ thứ – Si♭ thứ – Si trưởng – Rê♭ trưởng, A′ và coda.',
-    body: `
-::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
-
-## Mục 2.2: Chương II — Presto (110 ô)
-Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay phải chạy móc đơn liên tục. Đoạn B có giai điệu nốt dài ("ben marcato il canto"). Một hình giai điệu **3 – 2 – 1 – 7 – 1** của đoạn B đi qua năm giọng: Mi♭ thứ, Si♭ thứ, Rê♭ trưởng, Đô♯ thứ, rồi về Sol♯ thứ ở coda.
+## Bảng P.2. Chương II — Presto (110 ô nhịp)
 
 ### Đoạn A (ô 1–40), Sol♯ thứ
-::scan scriabin2 #19 | Câu 1 (ô 1–8): mở trên át, bè trầm D♯–C♯; DDVII65♭3 của giọng át với B–G𝄪 ở bè trầm (ô 6); kết nửa trên D9♭ (ô 8)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 1 | Bè trầm D♯ – C♯ luân phiên (D – D2); bè giữa vờn G♯ – B quanh F𝄪, A♯ | D (chất liệu T treo trên D) | **Mở chương bằng át**, không bằng chủ |
-| 2 | TSVI (Mi), bè trầm E – B | T/S | Gam đi xuống G♯–F♯–E–D♯–C♯ |
-| 3 | s7/B (C♯–E–G♯–B) ↔ SII65 (A♯–C♯–E–G♯); bè trầm B – A♯; B♯ thêu C♯ | S | Hai hợp âm S chung ba nốt, chỉ đổi bè trầm |
+| 2 | VI (Mi), bè trầm E – B | T/S | Gam đi xuống G♯–F♯–E–D♯–C♯ |
+| 3 | s7/B (C♯–E–G♯–B) ↔ II65 (A♯–C♯–E–G♯); bè trầm B – A♯; B♯ thêu C♯ | S | Hai hợp âm S chung ba nốt, chỉ đổi bè trầm |
 | 4 | s (Đô♯ thứ), bè trầm C♯ – G♯ | S | |
-| 5 | Mi trưởng thêm 7 trưởng và 9 (E–G♯–B–D♯–F♯), bè trầm B – G♯ | T/S | Hợp âm thêm nốt; nghe được cả TSVI7 lẫn t7 có ♭6 |
-| 6 | **DDVII65♭3 của giọng át**: B–D♯–F♯–G𝄪; bè trầm B – G𝄪 luân phiên | DD | Quãng 6 tăng viết thành **quãng 3 giảm** B–G𝄪, hai nốt cùng đổ về A♯ |
-| 7 | DD7 (A♯–C𝄪–E♯–G♯) có D♯ treo, B (♭9); bè giữa D♯–E♯–F♯–A♯; cuối ô E♮ báo trước ♭9 của D | DD | |
+| 5 | Mi trưởng thêm 7 trưởng và 9 (E–G♯–B–D♯–F♯), bè trầm B – G♯ | T/S | Hợp âm thêm nốt; nghe được cả VI7 lẫn t7 có ♭6 |
+| 6 | **IV♯65♭3 của giọng bậc V**: B–D♯–F♯–G𝄪; bè trầm B – G𝄪 luân phiên | D của D | Quãng 6 tăng viết thành **quãng 3 giảm** B–G𝄪, hai nốt cùng đổ về A♯ |
+| 7 | II7♯3 (A♯–C𝄪–E♯–G♯) có D♯ treo, B (♭9); bè giữa D♯–E♯–F♯–A♯; cuối ô E♮ báo trước ♭9 của D | D của D | |
 | 8 | **D9♭** (D♯–F𝄪–A♯–C♯–E); bè giữa B–A♯–G♯–F𝄪 | D | Kết nửa — hết câu 1 |
 
-::scan scriabin2 #20 | Câu 2 (ô 9–16): mô tiến câu 1 lên quãng 4; DDVII65♭3 của Sol♯ thứ với E–C𝄪 ở bè trầm (ô 14), kết trọn ô 16
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 9 | D7→s (G♯–B♯–D♯–F♯), bè trầm G♯ – F♯ | D/S | **Mô tiến** ô 1 lên quãng 4 |
-| 10 | La trưởng (TSVI của Đô♯ thứ), bè trầm A – E | S/iv | = ô 2 lên quãng 4 |
+| 9 | D7→IV (G♯–B♯–D♯–F♯), bè trầm G♯ – F♯ | D/S | **Mô tiến** ô 1 lên quãng 4 |
+| 10 | La trưởng (VI của Đô♯ thứ), bè trầm A – E | S/iv | = ô 2 lên quãng 4 |
 | 11 | F♯m7/E ↔ D♯ø7, bè trầm E – D♯ | S của s | = ô 3 lên quãng 4; E♯ thêu |
 | 12 | F♯m (s của Đô♯ thứ), bè trầm F♯ – C♯ | | = ô 4 lên quãng 4 |
 | 13 | La thêm 7, 9, bè trầm E – C♯ | | = ô 5 lên quãng 4. La cũng là Napoli của Sol♯ thứ |
-| 14 | **DDVII65♭3 của Sol♯ thứ**: E–G♯–B–C𝄪 (có A♮ lướt); bè trầm E – C𝄪 | DD | Mô tiến được "bẻ" về giọng chính |
+| 14 | **IV♯65♭3 của Sol♯ thứ**: E–G♯–B–C𝄪 (có A♮ lướt); bè trầm E – C𝄪 | D của D | Mô tiến được "bẻ" về giọng chính |
 | 15 | D9♭ có G♯ treo (4–3); bè giữa G♯–A♯–B–D♯ | D | |
 | 16 | **t** (Sol♯ thứ), F𝄪 thêu; bè giữa E–D♯–C♯–B | T | Kết trọn — hết đoạn 16 ô (8 + 8) |
 
-::scan scriabin2 #21 | Đoạn xen dolcissimo (ô 17–24): B9 trên B, B7 trên bè trầm E, E7 có D♮ (ô 21–23), SII♭6 (N) – s6 – D7 (ô 24)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 17 | B9 (+13) trên bè trầm B (8va bassa) = D9 của Mi, dolcissimo pp | D của VI | |
+| 17 | B9 (+13) trên bè trầm B (8va bassa) = D9 của Mi, dolcissimo pp | D của Mi trưởng (VI) | |
 | 18 | B7 (D7 của Mi), A♮ | | |
 | 19 | B7 trên bè trầm E (Ped.) | D trên T | Át chồng lên chủ của Mi |
 | 20 | Mi trưởng T64 thêm 6 (C♯) | T của VI | Màu sixte ajoutée |
 | 21 | **E7 (D♮)** +9 +13 = D7 của La | | D♮ |
 | 22 | E7 có A treo (4–3) | | |
 | 23 | E7 chồng trên bè trầm A | | Át chồng lên chủ của La |
-| 24 | SII♭6 (N) (A/C♯) – s6 (C♯m/E, D♮ thêu) – D7 (D♯–F𝄪–A♯–C♯) | S–S–D | La trưởng đổi vai: TSVI của Mi → **Napoli** của Sol♯ thứ |
+| 24 | II♭6 (Napoli) (A/C♯) – s6 (C♯m/E, D♮ thêu) – D7 (D♯–F𝄪–A♯–C♯) | S–S–D | La trưởng đổi vai: VI của Mi → **Napoli** của Sol♯ thứ |
 
-::scan scriabin2 #22 | Ô 25–32: tái hiện rút gọn; Mi thứ (G♮) ở ô 29, DDVII65♭3 với C𝄪 ở ô 30
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 25–28 | = ô 1–4 | | Tái hiện rút gọn |
-| 29 | **Mi thứ** thêm 7 trưởng (E–G♮–B–D♯), bè trầm B – G♮; f rit. | T/S thứ hoá | TSVI chuyển sang thứ (G♮ trùng âm với F𝄪) |
-| 30 | E–G–B → **DDVII65♭3** (E–G♯–B–C𝄪); bè trầm B – E; bè cromatic G♮–G♯, A–A♯ | DD | |
+| 29 | **Mi thứ** thêm 7 trưởng (E–G♮–B–D♯), bè trầm B – G♮; f rit. | T/S thứ hoá | VI chuyển sang thứ (G♮ trùng âm với F𝄪) |
+| 30 | E–G–B → **IV♯65♭3** (E–G♯–B–C𝄪); bè trầm B – E; bè cromatic G♮–G♯, A–A♯ | D của D | |
 | 31 | = ô 15 (D9♭ có quãng 4 treo), a tempo dim. | D | |
 | 32 | = ô 16 (t) | T | Câu 25–32 nén 16 ô thành 8 |
 
-::scan scriabin2 #23 | Ô 33–40: Napoli (A♮, ô 33), DVII7 có F𝄪 (ô 34), kết bằng át thứ (ô 36), Si trưởng (ô 37) và chạy xuống tới A♯ ở ô 40
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 33 | G♯ → **N** (La trưởng thế gốc, A♮), f, có dấu nhấn | T–S | |
-| 34 | G♯ → DVII7 (F𝄪–A♯–C♯–E) | T–D | |
-| 35 | t (G♯–B–D♯ + E) ↔ **SII♭6 (N) thêm sixte** (A–C♯–E–F♯, bè trầm C♯); p | T–S | Napoli thêm nốt 6, cũng là F♯m7/C♯ |
+| 33 | G♯ → **II♭ (Napoli)** (La trưởng thế gốc, A♮), f, có dấu nhấn | T–S | |
+| 34 | G♯ → VII7 (F𝄪–A♯–C♯–E) | T–D | |
+| 35 | t (G♯–B–D♯ + E) ↔ **II♭6 (Napoli) thêm sixte** (A–C♯–E–F♯, bè trầm C♯); p | T–S | Napoli thêm nốt 6, cũng là F♯m7/C♯ |
 | 36 | t – bè trầm D♯ dưới gam thứ tự nhiên đi xuống (F♯ không nâng) – t | T–D–T | Kết bằng **át thứ** |
 | 37 | Si trưởng (III); bè trầm G𝄪 → B; f | T thay | G𝄪 chuẩn bị A♯ ở ô sau |
 | 38 | D♯m/A♯ (d64) với các nốt thêu A♯–C𝄪–E♯ | K64 của Rê♯ thứ | |
@@ -1823,15 +2108,13 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 | 40 | **t** (Sol♯ thứ, hợp âm lớn) → chạy xuống E♯, C𝄪 tới **D7♭9 của Rê♯ thứ** (A♯) trên bè trầm A♯ | T → D/v | **A♯ = B♭**: nốt chung mở cửa sang Mi♭ thứ |
 
 ### Đoạn B (ô 41–78)
-::scan scriabin2 #24 | Đoạn B mở ở Mi♭ thứ (hoá biểu sáu giáng): giai điệu G♭–F–E♭–D♮–E♭; ô 44 DD43♭5 C♭–E♭–F–A♮, sff
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 41 | **Mi♭ thứ** (hoá biểu sáu giáng): t; giai điệu G♭–F–E♭–D♮–E♭; B♭ ngân ở bè trong | T | **Chuyển giọng trùng âm**: Rê♯ thứ (d) viết thành Mi♭ thứ |
-| 42 | SII43 (Fø7/C♭) → **D có ♭6** (B♭–D–G♭); bè trầm B♭–A♭–G♭ (liên ba có dấu nhấn) | S–D | G♭ = nốt ♭6 trên át |
+| 42 | II43 (Fø7/C♭) → **D có ♭6** (B♭–D–G♭); bè trầm B♭–A♭–G♭ (liên ba có dấu nhấn) | S–D | G♭ = nốt ♭6 trên át |
 | 43 | t6 thêm **6 nâng** (C♮; giai điệu C–D–E♭ theo thứ giai điệu), bè trầm G♭; rồi F–E♭–D♭ | T | |
-| 44 | **DD43♭5** (C♭–E♭–F–A♮), sff | DD | Bè trầm đi xuống gam Mi♭ thứ B♭→C♭ suốt ô 41–44; DD43♭5 = D7 quãng 5 hạ của B♭ |
+| 44 | **II43♯3♭5** (C♭–E♭–F–A♮), sff | D của D | Bè trầm đi xuống gam Mi♭ thứ B♭→C♭ suốt ô 41–44; II43♯3♭5 = D7 quãng 5 hạ của B♭ |
 
-::scan scriabin2 #25 | Ô 45–48: pedal B♭ rồi bè trầm đi lên cromatic tới F, đổi sang năm giáng
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 45 | **Pedal B♭** (D) dưới hình t64 (E♭–G♭–B♭ + F, C♭); p | D | |
@@ -1839,25 +2122,22 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 | 47 | Bè trầm C♮–D♭–D♮–E♭ dưới hình Mi♭ thứ đứng yên | lướt | Hợp âm lướt sinh ra từ bè trầm cromatic |
 | 48 | Bè trầm E♮ – F: t64 của Si♭ thứ → D7♭9 (F–A–C–E♭ + G♭, D♭) | D của Si♭ thứ | |
 
-::scan scriabin2 #26 | Ô 49–52: Si♭ thứ, ô 52 G♭7 viết với F♭ (DDVII65♭3 của Si♭ thứ), sff
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 49 | **Si♭ thứ** (năm giáng): t; giai điệu D♭–C–B♭–A–B♭ | T | = ô 41 dịch lên quãng 5 |
-| 50 | SII43 (Cø7/G♭) → D♭6 (F–A–D♭); bè trầm F–E♭–D♭ | S–D | = ô 42 |
+| 50 | II43 (Cø7/G♭) → D♭6 (F–A–D♭); bè trầm F–E♭–D♭ | S–D | = ô 42 |
 | 51 | t6 + 6 nâng (G♮; giai điệu G–A–B♭); bè trầm D♭ rồi C–B♭–A♭ | T | = ô 43 |
-| 52 | **G♭7** (G♭–B♭–D♭–F♭), sff | DD | DDVII65♭3 của Si♭ thứ **viết như D7 của C♭** (F♭ thay E) |
+| 52 | **G♭7** (G♭–B♭–D♭–F♭), sff | D của D | IV♯65♭3 của Si♭ thứ **viết như D7 của C♭** (F♭ thay E) |
 
-::scan scriabin2 #27 | Ô 53–58: hoá biểu xoá, pedal F♯ dưới Si trưởng – Sol trưởng – Đô trưởng – F♯7♭9; ô 57–58 G7 → G°7 → F♯7
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 53 | **Si trưởng** (= Đô♭) T64 thêm 6, trên **pedal F♯** (= G♭); pp; hoá biểu xoá, viết dấu thăng | T trên D | G♭7 hiểu thành F♯7 = D7 của Si; bè trầm giữ nguyên |
 | 54 | **Sol trưởng** (Gmaj7/F♯) = VI♭ của Si, trên pedal F♯ | | Trung âm cromatic trên pedal |
-| 55 | **Đô trưởng thêm 6** (C–E–G–A) = SII♭ (N) (Napoli) của Si, trên F♯ | S | Napoli cách bè trầm một tritone |
+| 55 | **Đô trưởng thêm 6** (C–E–G–A) = II♭ (Napoli) (Napoli) của Si, trên F♯ | S | Napoli cách bè trầm một tritone |
 | 56 | **F♯7♭9** (F♯–A♯–C♯–E–G♮) = D9 của Si; nhóm chín nốt đi xuống cromatic | D | |
-| 57 | G7, bè trầm G | | SII♭7 so với F♯ |
-| 58 | G°7 (G–A♯–C♯–E) → **F♯7** ở phách cuối (= G♭7, DDVII65♭3 của Si♭ thứ) | DD | |
+| 57 | G7, bè trầm G | | II♭7 so với F♯ |
+| 58 | G°7 (G–A♯–C♯–E) → **F♯7** ở phách cuối (= G♭7, IV♯65♭3 của Si♭ thứ) | D của D | |
 
-::scan scriabin2 #28 | Ô 59–62: pedal F rồi bè trầm đi lên cromatic, B𝄫 → A♭ ở ô 62
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 59 | Si♭ thứ, **pedal F** (D) dưới hình t64 (B♭–D♭–F + C, G♭); pp | D | = ô 45 lên quãng 5 |
@@ -1865,7 +2145,6 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 | 61 | Bè trầm G♮–A♭–A♮–B♭ đi lên cromatic | lướt | |
 | 62 | Bè trầm **B𝄫** (= A, viết theo chiều đi xuống) → A♭: A♭9 (D9 của Rê♭) | D | Cùng một phím viết A♮ khi đi lên, B𝄫 khi đi xuống |
 
-::scan scriabin2 #29 | Ô 63–66: Rê♭ trưởng, giai điệu F–E♭–D♭–C–D♭ trên bè trầm A♭; B♭–A♭ luân phiên ở ô 65–66
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 63 | **Rê♭ trưởng**: T; giai điệu F–E♭–D♭–C–D♭; f | T | Hình 3–2–1–7–1 sang giọng trưởng |
@@ -1873,28 +2152,25 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 | 65 | T → T64 có nốt 6 thêu (B♭–A♭ luân phiên trên bè trầm A♭) | T | Sixte ajoutée |
 | 66 | như 65; giai điệu F → A♭ | T | |
 
-::scan scriabin2 #30 | Ô 67–69: Đô♯ thứ (hoá biểu năm thăng), giai điệu E–D♯–C♯–B♯–C♯; A–G♯ luân phiên ở ô 69
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 67 | **Đô♯ thứ** (hoá biểu năm thăng): t; giai điệu E–D♯–C♯–B♯–C♯; fp | T | Rê♭ trưởng → Đô♯ thứ: cùng chủ âm, trưởng hoá thứ, viết trùng âm |
 | 68 | t; E → G♯ (ten.) | T | |
 | 69 | t → t64 có ♭6 thêu (A–G♯ luân phiên trên G♯) | T | |
 
-::scan scriabin2 #31 | Ô 70–74: E7 với D♮ ở bè trầm (ô 71, 73) rồi C𝄪 ở bè trầm (ô 72, 74)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 70 | như 69 | T | |
-| 71 | **E7** (E–G♯–B–D♮), bè trầm G♯ – D luân phiên (D65 – D2 của La); p, cresc. | DS | E7 = TSVI7 của Sol♯ thứ, trùng âm với DDVII65♭3 |
-| 72 | Bè trầm **C𝄪** (D♮ viết lại) → E: DDVII65♭3 của Sol♯ thứ (đảo) → s6 (C♯m/E); f | DD → S | Đổi cách viết D♮ → C𝄪 ngay tại chỗ: E7 hiểu lại thành DDVII65♭3 |
+| 71 | **E7** (E–G♯–B–D♮), bè trầm G♯ – D luân phiên (D65 – D2 của La); p, cresc. | D của IV | E7 = VI7 của Sol♯ thứ, trùng âm với IV♯65♭3 |
+| 72 | Bè trầm **C𝄪** (D♮ viết lại) → E: IV♯65♭3 của Sol♯ thứ (đảo) → s6 (C♯m/E); f | D của D → S | Đổi cách viết D♮ → C𝄪 ngay tại chỗ: E7 hiểu lại thành IV♯65♭3 |
 | 73 | = 71 | | |
 | 74 | = 72 | | |
 
-::scan scriabin2 #32 | Ô 75–78: pedal D♯, K64 rồi D9♭ — A′ vào ngay sau ô 78
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 75 | **Pedal D♯**: t64 kết (G♯m/D♯); giai điệu A♯–G♯–G♯–A♯–B; mf | D | |
 | 76 | như 75; giai điệu D♯–C♯–B–C♯–D♯; C♯, B♯ thêu | D | |
-| 77 | D (D♯ quãng 8, sf) – TSVI6 (E/G♯) – D | D–T/S–D | |
+| 77 | D (D♯ quãng 8, sf) – VI6 (E/G♯) – D | D–T/S–D | |
 | 78 | D9♭ (D♯–F𝄪–A♯–C♯–E, thêm B) | D | Đoạn A′ vào ngay trên át — không có kết |
 
 ### A′ (ô 79–92) và coda (ô 93–110)
@@ -1902,27 +2178,24 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 |---|---|---|---|
 | 79–92 | = ô 1–14 (cùng bè trầm và hợp âm; sắc thái mạnh hơn: sf, f, cresc.) | | |
 
-::scan scriabin2 #33 | Ô 93–94: DDVII65♭3 ngân trên bè trầm C𝄪
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 93–94 | **DDVII65♭3** (E–G♯–B trên bè trầm C𝄪) ngân hai ô; mf cresc., hợp âm 8va | DD | Thay cho D ở ô 15: hợp âm 6 tăng được phóng to |
+| 93–94 | **IV♯65♭3** (E–G♯–B trên bè trầm C𝄪) ngân hai ô; mf cresc., hợp âm 8va | D của D | Thay cho D ở ô 15: hợp âm 6 tăng được phóng to |
 
-::scan scriabin2 #34 | Ô 95–102: giai điệu đoạn B ở giọng chính trên pedal D♯, cao trào ff (ô 99–101), về i ở ô 102
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
 | 95 | Pedal D♯: t64 kết; **giai điệu đoạn B trở về ở giọng chính** (B–A♯–G♯–F𝄪–G♯); p | D | Tổng hợp hai đoạn |
-| 96 | SII7 (A♯–C♯–E–G♯) → D7 có ♭6, trên pedal D♯ | S–D | = ô 42 ở giọng chính |
+| 96 | II7 (A♯–C♯–E–G♯) → D7 có ♭6, trên pedal D♯ | S–D | = ô 42 ở giọng chính |
 | 97 | t64 + 6 nâng (E♯; giai điệu E♯–F𝄪–G♯) trên D♯ | | = ô 43 |
-| 98 | DDVII65♭3 (E–G♯–B–C𝄪) trên pedal D♯; f cresc. | DD | |
+| 98 | IV♯65♭3 (E–G♯–B–C𝄪) trên pedal D♯; f cresc. | D của D | |
 | 99 | t64 kết, ff | D | |
-| 100 | DDVII65♭3 (thêm A♯) trên D♯, ff | DD | |
+| 100 | IV♯65♭3 (thêm A♯) trên D♯, ff | D của D | |
 | 101 | s/D♯ → **D7** (D♯–F𝄪–A♯–C♯), ff | S–D | |
 | 102 | **t** (bè trầm G♯): giai điệu đoạn B trên chủ âm; p cresc. | T | Kết trọn của cả chương |
 
-::scan scriabin2 #35 | Ô 103–110: C𝄪 ở bè trầm (ô 103), D♯–E luân phiên (ô 104–107), V – i luân phiên rồi i sf (ô 108–110)
 | Ô | Hợp âm (bè trầm) | Chức năng | Thủ pháp |
 |---|---|---|---|
-| 103 | t với C𝄪 thêu ở bè trầm (màu DDVII65♭3); giai điệu B → D♯ (ten.) | T | |
+| 103 | t với C𝄪 thêu ở bè trầm (màu IV♯65♭3); giai điệu B → D♯ (ten.) | T | |
 | 104 | t với D♯–E luân phiên (5 – ♭6); mf dim. | T | |
 | 105 | giai điệu B → D♯ (ten.) như 103; tay trái D♯–E luân phiên như 104 | T | |
 | 106 | như 104, giai điệu lên một quãng 8; p | T | |
@@ -1930,127 +2203,6 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 | 108 | Bè trầm D♯ – G♯ luân phiên: D (có G♯, E, B nhưng **không có âm dẫn F𝄪**) – t; pp | D–T | Át không có âm dẫn |
 | 109 | như 108 | D–T | |
 | 110 | **t** (G♯–B–D♯), sf, Ped. | T | Kết ở **Sol♯ thứ** |
-
-::grand D#4+F#4+G##4/B2=DDVII65♭3_của_D C##4+E#4+G#4/A#2=DD7 C#4+E4+F##4+A#4/D#2=D9♭ | Chương II, ô 6–8 (rút gọn): DDVII65♭3 của giọng át → DD7 → D9♭ — kết nửa. Ở bản phổ, B và G𝄪 nằm ở bè trầm luân phiên (quãng 3 giảm) rồi cùng đổ về A♯
-
-::grand G#4+B4+Dn5/E3=E7_(ô_21) G#4+B4+C##5/E3=DDVII65♭3_(ô_14) F##4+A#4+C#5/D#3=D7_(ô_15) | Cùng một âm thanh, hai cách viết: D♮ (E7, át của La) và C𝄪 (6 tăng Đức của Sol♯ thứ, đổ về D♯). Ô 71–74 đổi cách viết ngay tại chỗ
-
-::grand Gb4+Bb4+Db5+Fb5/Gb2=G♭7_(ô_52) F#4+B4+D#5+G#5/F#2=Si:_T64_(ô_53) | Chuyển giọng trùng âm ở ô 52–53: G♭7 (DDVII65♭3 của Si♭ thứ) được hiểu thành F♯7 = D7 của Si; bè trầm G♭ = F♯ đứng yên, phía trên vào hợp âm Si trưởng
-
-Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
-`,
-  },
-  {
-    slug: 'scriabin-op19-thu-phap',
-    title: 'Scriabin Op. 19 — Mục 3 – 4: Thủ pháp hoà âm và đối chiếu',
-    category: 'analysis',
-    summary: 'Tổng hợp mười một thủ pháp hoà âm của Sonata số 2 Scriabin và đối chiếu với luận văn của Cha Min-hee (2015).',
-    body: `
-::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
-
-## Mục 3: Tổng hợp các thủ pháp hoà âm trong Op. 19
-1. **Pedal và chồng chức năng.** Nhiều đoạn dài đứng trên một bè trầm: pedal chủ (chương I ô 3–6, 46–57, 122–136), pedal át (chương I ô 79–86; chương II ô 45–46, 59–60, 75–78, 95–101). Trên pedal là hợp âm của chức năng khác: S trên T, T trên D, Napoli trên D (chương II ô 55). Xem [[bass-ngan]].
-2. **Hợp âm 6 tăng và họ hàng trùng âm của nó.** Có DDVII6♭3 (I ô 5–6), DD43♭5 thể đảo (I ô 10), DDVII65♭3 (II ô 6, 14, 30, 72, 93–100), DD43♭5 ở cao trào (II ô 44). DDVII65♭3 thường **viết lại thành át 7**: E7 ↔ E–G♯–B–C𝄪 (II ô 21 ↔ 14, ô 71 ↔ 72), G♭7 ↔ F♯7 (II ô 52–53). Cũng có quãng 6 tăng đảo thành **quãng 3 giảm** ở bè trầm (B–G𝄪, ô 6). Xem [[hop-am-sau-tang]].
-3. **Át quãng 5 hạ và màu toàn cung.** F♯–A♯–C♮–E (I ô 20, 22, 95–99) và DD43♭5 cùng một tập âm thanh; Scriabin viết khi C♮, khi B♯ theo hướng giải quyết. Đây là mầm của lối viết muộn hơn.
-4. **Napoli.** Chương I ô 9; chương II ô 24, 33, 35, 55. La trưởng ở chương II đổi vai liên tục: VI của Mi (ô 21–23) → Napoli của Sol♯ thứ (ô 24, 33). Xem [[hop-am-napoli]].
-5. **Hợp âm thêm nốt.** Thêm 6 (sixte ajoutée: II ô 20, 35, 65), thêm 7 trưởng và 9 (II ô 5, 13), quãng 4 treo không giải quyết (I ô 23–27). Ở các hợp âm này, ranh giới giữa nốt hoà âm và [[not-ngoai-hop-am|nốt ngoài hợp âm]] mờ đi. Xem [[hop-am-6-va-add]], [[hop-am-mo-rong]].
-6. **Chuyển giọng trùng âm.** Sol♯ thứ → Rê♯ thứ = **Mi♭ thứ** (II ô 40–41, qua nốt chung A♯ = B♭). Si♭ thứ → **Si trưởng** (II ô 52–53). Rê♭ trưởng → **Đô♯ thứ** (II ô 66–67). Trong phát triển chương I, giọng át viết thành Mi♭ thứ (ô 66–74) rồi hiểu lại là Rê♯ thứ (ô 75). Xem [[chuyen-giong]], [[trung-am]].
-7. **Quan hệ quãng 3 và trung âm cromatic.** Có Si → Rê (I ô 58–61), Si trưởng → Sol trưởng → Đô trưởng trên pedal F♯ (II ô 53–55), Sol♯ thứ → Mi trưởng ở tái hiện chương I. Xem [[trung-am-cromatic]].
-8. **Mở đầu lệch khỏi chủ âm.** Chương I mở bằng quãng 5 rỗng và dừng trên D2. Chương II bắt đầu thẳng trên át, và A′ (ô 79) vào ngay sau pedal át mà không có kết.
-9. **Mô tiến có điểm bẻ.** Chương II ô 9–13 mô tiến ô 1–5 lên quãng 4 (sang vùng Đô♯ thứ). Ô 14 bẻ về DDVII65♭3 của giọng chính, nên câu thứ hai kết trọn ở Sol♯ thứ. Xem [[mo-tien-hoa-am]].
-10. **Bè trầm đi liền bậc.** Đi xuống theo gam (II ô 41–44: B♭→C♭; I ô 7–9), đi lên cromatic dưới một hình hợp âm đứng yên (II ô 46–48, 60–62). Chữ viết theo hướng đi: A♮ khi lên, B𝄫 khi xuống.
-11. **Kết không âm dẫn.** Coda chương II luân phiên D♯ – G♯, nhưng tầng trên không có F𝄪: át mang G♯, E, B (quãng 4 treo, ♭9, ♭13) thay vì quãng 3 dẫn âm.
-
-Nhìn chung, Op. 19 vẫn nằm trong [[hoa-am-cromatic|hoà âm chức năng mở rộng]] cuối thế kỷ 19, gần Chopin và Liszt. Chưa có "hợp âm huyền bí" của Scriabin thời muộn. Nhưng các mầm của nó đã có: át quãng 5 hạ, hợp âm 6 tăng đồng nhất với át 7, màu toàn cung, hợp âm thêm nốt và pedal dài.
-
-## Mục 4: Đối chiếu với luận văn của Cha Min-hee (2015)
-Luận văn thạc sĩ ĐH Chosun (người hướng dẫn: Kim Ji-hyun) dùng bản Peters 1971. Đây là nguồn mở duy nhất bài viết tìm được có phân tích tác phẩm theo từng đoạn. Dưới đây là những điểm **khớp**, **bổ sung** và **khác** so với bài này. Số trang ghi theo số in trong luận văn.
-
-**Khớp với cách đọc của bài:**
-- Chương II là ba đoạn **A (1–40) – B (41–78) – A′**. A′ chỉ nhắc lại ô 1–14 (ô 79–92), coda 93–110 dùng lại giai điệu đoạn B *(tr. 35–39)*.
-- Ô 40–41 chương II: bè trầm A♯ → B♭, **chuyển giọng trùng âm Rê♯ thứ → Mi♭ thứ** *(tr. 37)*.
-- Coda chương II: pedal D♯ từ ô 98, hợp âm tầng cao đi lên cromatic C𝄪 – D♯ – E. Ô 102–107 giai điệu đoạn B lên một quãng 8, tay trái chuyển sang quãng 2 thứ D♯ – E luân phiên như láy *(tr. 39)*. Bảng ô 98–107 của bài này là C𝄪/DDVII65♭3 – D♯/K64 – E, rồi D♯ – E thêu.
-- Chương I ô 9–10: bè trong đi lên cromatic G♯ – A – A♯ (bài này: SII♭6 (N) có A♮). Ô 23: nốt E thay cho D♯ trong hợp âm I (B–D♯–F♯) (bài này: I quãng 4 treo). Ô 46–56: nốt đầu mỗi nhóm bè trầm nhấn B như một **pedal** *(tr. 23, 25, 28)*.
-- Ô 74–75 chương I: nối D♭ sang C♯ trùng âm để trở về Sol♯ thứ. Ô 83–86: nốt D♯ (át của Sol♯ thứ) được thêm vào để nối sang tái hiện *(tr. 31–32)*.
-
-**Bổ sung (bài này chưa nêu):**
-- Chương I: từ cuối ô 6, tay phải theo nhịp 3/4, tay trái thành hình 9/8 (**phức nhịp**), hai bè đi ngược chiều. Đoạn kết thứ nhất (từ ô 37) dùng giai điệu ô 29 thành **canon quãng 8**. Tay trái chia nhịp ngày càng nhỏ, tạo **nghịch nhịp** 3:4, 4:5, 3:6, rồi 2:3, 6:4, 4:3 ở ô 46–56. Trình bày không có dấu nhắc lại *(tr. 23, 27–29)*.
-- Phát triển chương I: giai điệu ô 23–24 được mô tiến cách quãng 4 và quãng 8 từ ô 62. Ô 68–70 bè trầm đi cromatic C – C♭ – B♭, trên đó tay phải chen vào ô 1 của chủ đề 1. Ô 75 rút gọn tiết tấu chủ đề 1. Ô 79–82 tay phải là liên ba quãng 8 đi lên cromatic *(tr. 30–32)*.
-- Chương II: ô 1–2 được mô tiến ở ô 3–4 (tay phải lên quãng 4, quãng 8 tay trái xuống quãng 3 thứ). Ô 17 tay trái rải át 7, ô 18 mô tiến lên một quãng 8. Ô 19–20 có nghịch nhịp 6:4 và nhóm ba nốt ở bè trầm trải quãng 11, Cha gọi là "tiếng tù và" (horn call) và cho rằng nó gợi lại motif chương I *(tr. 36)*.
-
-**Khác hoặc cần dè dặt:**
-- **Hình thức chương I**: Cha coi ô 1–12 là **chủ đề 1** ở Sol♯ thứ và ô 13–22 là đoạn nối ở Si trưởng. Leikin (qua Wikipedia) và bài này coi ô 1–12 là **mở đầu**, chủ đề 1 từ ô 13. Cha đặt tái hiện từ **ô 87** (chủ đề 1 nhắc hai ô có dấu nhấn, ô 87–88), coda từ ô 122. Leikin đặt tái hiện từ ô 89, chủ đề 3 ở 122–127, coda 128–136 *(tr. 22, 33)*. Hai cách chia khác nhau vì cách hiểu vai trò của motif mở đầu.
-- **Giọng đoạn phát triển**: bảng của Cha ghi "f – g♯" cho ô 62–86. Trên bản Belaieff, vùng dấu giáng đi Sol thứ → Đô thứ → Fa thứ, rồi B♭7♭9 → **Mi♭ thứ** trước khi trở về năm thăng ở ô 75. Bài này giữ cách đọc ấy.
-- **Đoạn B chương II**: bảng của Cha ghi c (Mi♭ thứ) 41–52, d (Si♭ thứ – Si) 53–62, c′ (Đô – Si♭ thứ – Đô♯ thứ – Sol♯ thứ) 63–78. Trên bản Belaieff, ô 49–52 đã ở Si♭ thứ (hoá biểu năm giáng), ô 53–58 là Si trưởng trên pedal F♯, ô 59–62 Si♭ thứ, ô 63–66 Rê♭ trưởng (vẫn năm giáng, giai điệu F–E♭–D♭–C–D♭), không phải Đô.
-- **Lỗi in trong luận văn**: các bảng và chú thích ví dụ ghi "Op. 12" thay vì Op. 19. Bảng 2 ghi chương I "86–136", A′ "79–109". Nhịp chương II ghi 3/4, trong khi bản Belaieff ghi 3/2.
-- Kết luận của Cha cho rằng hợp âm quãng 4, quãng 5 dày đặc là "điềm báo của hợp âm huyền bí" *(tr. 25, 42)*. Đây là nhận định của tác giả, không kèm phân tích cấu trúc hợp âm. Bài này không lấy làm căn cứ.
-
-Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
-`,
-  },
-  {
-    slug: 'scriabin-op19-ket-luan',
-    title: 'Scriabin Op. 19 — Kết luận, tài liệu tham khảo, phụ lục',
-    category: 'analysis',
-    summary: 'Kết luận tiểu luận về thủ pháp hoà âm Sonata số 2 Scriabin, tóm tắt theo LaRue, tài liệu tham khảo và phụ lục.',
-    body: `
-::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
-
-## III. Kết luận
-Phân tích từng ô cho thấy Sonata số 2 đúng là một tác phẩm **chuyển tiếp**, và tính chuyển tiếp ấy nằm chủ yếu ở hoà âm:
-- **Khung vẫn là hoà âm chức năng có điệu tính.** Các câu khép bằng kết trọn D – T hoặc kết nửa trên D; ly điệu bằng hợp âm át phụ (D→x), Napoli SII♭6, các hợp âm 6 tăng (DDVII6♭3, DD43♭5, DDVII65♭3) đều giải quyết theo luật cổ điển. Đây là ngôn ngữ của Chopin và Liszt mà sách bốn tác giả mô tả.
-- **Trong khung ấy, các biến thể của hợp âm át đã đi xa.** D7 quãng 5 hạ mang màu toàn cung; DDVII65♭3 được viết trùng âm thành D7 của giọng khác; D9♭ và D có ♭6 thay quãng 3 dẫn âm; hợp âm quãng 4 treo không giải quyết. Đây đúng là hướng mà Dernova và các nhà nghiên cứu sau gọi là sự phát triển hoà âm Scriabin **từ hợp âm át**.
-- **Kế hoạch giọng xa và trùng âm** (Sol♯ thứ – Si trưởng – Mi trưởng ở chương I; Mi♭ thứ – Si♭ thứ – Si trưởng – Rê♭ trưởng – Đô♯ thứ ở chương II), cùng các **pedal dài** làm chức năng chồng lên nhau, làm điệu tính giãn ra mà chưa mất.
-- Op. 19 **chưa có hợp âm huyền bí** và chưa vô điệu tính. Nhưng hầu hết vật liệu của Scriabin thời muộn — át quãng 5 hạ, toàn cung, hợp âm thêm nốt, quãng 4, pedal — đã có mặt dưới dạng còn giải thích được bằng chức năng.
-
-Đóng góp của tiểu luận: một bảng phân tích hoà âm **từng ô** cho cả hai chương theo hệ ký hiệu Nga – Xô viết, tổng hợp thành mười một thủ pháp, và đối chiếu với luận văn đi trước. Hướng mở: so sánh với Sonata số 1 và số 3 để xác định đúng vị trí "chuyển tiếp" của Op. 19 trong chuỗi sonata.
-
-### Tóm tắt theo khung phân tích
-Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]].
-| Yếu tố | Tóm tắt |
-|---|---|
-| **Âm thanh** | Chương T nhiều lớp, pedal dài; chương SII móc đơn liên tục trên quãng 8 tay trái |
-| **Hoà âm** | Sol♯ thứ; chương T đặt chủ đề ở Si trưởng, tái hiện ở Mi trưởng; chương SII đi qua Mi♭ thứ – Si♭ thứ – Si trưởng – Rê♭ trưởng – Đô♯ thứ; nhiều hợp âm 6 tăng, Napoli, pedal, chuyển giọng trùng âm |
-| **Giai điệu** | Motif quãng 5 rỗng (T); hình 3–2–1–7–1 đi qua năm giọng (SII) |
-| **[[tiet-tau|Nhịp điệu]]** | I: 3/4, nhiều dấu ngân; II: 3/2 Presto, móc đơn không dứt |
-| **Phát triển** | T: sonata 57 + 31 + 48 ô; SII: A 40 – B 38 – A′ 14 – coda 18 ô |
-
-## Tài liệu tham khảo
-1. Baker, J. M. (1986). *The Music of Alexander Scriabin*. New Haven: Yale University Press.
-2. Bae Su-jin (2000). Luận văn thạc sĩ về Sonata số 2 của Scriabin. ĐH Nữ Ewha (chỉ đọc tóm tắt).
-3. Cha Min-hee (2015). Luận văn thạc sĩ về Sonata số 2 của Scriabin. ĐH Chosun.
-4. Chiang, E. C. (2013). *Rubato and Climax Projection in Two Piano Sonatas by Scriabin*. Luận án DMA, University of Toronto.
-5. Dernova, V. (1968). *Гармония Скрябина*. Leningrad (năm và dạng xuất bản chưa đối chiếu).
-6. Dubovsky, I., Evseev, S., Sposobin, I., Sokolov, V. (1937 – 1938). *Учебник гармонии*. Moskva.
-7. Kholopov, Yu. (1974). *Очерки современной гармонии*. Moskva.
-8. Kholopov, Yu. (1993). "Скрябин и гармония XX века". *Учёные записки* 1. Moskva: Bảo tàng Scriabin.
-9. Mazel, L., Zukkerman, V. (1967). *Анализ музыкальных произведений*. Moskva.
-10. Nguyễn Thị Nhung (2006). Giáo trình phân tích tác phẩm âm nhạc.
-11. Perle, G. (1984). "Scriabin's Self-Analyses". *Music Analysis* 3/2.
-12. Piston, W. (1941). *Harmony*. New York: Norton.
-13. Reise, J. (1983). "Late Skriabin: Some Principles behind the Style". *19th-Century Music* 6/3.
-14. Rimsky-Korsakov, N. (1884 – 1886). *Практический учебник гармонии*.
-15. Sabaneev, L. (1916). *Скрябин*. Moskva.
-16. Sabbagh, P. (2003). *The Development of Harmony in Scriabin's Works*. Universal Publishers.
-17. Scriabin, A. (1898). *Sonate-Fantaisie № 2, Op. 19*. Leipzig: M. P. Belaieff.
-18. Sposobin, I. (1947; in lại 1984). *Музыкальная форма*. Moskva.
-19. Tyulin, Yu., Bershadskaya, T., Pustylnik, I. (1974). *Музыкальная форма*. Moskva.
-20. Wang, Yuhe (2025). *An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin*. Luận án DMA, University of Maryland.
-
-Các mục 5, 15 và năm của mục 2 chưa đối chiếu với bản gốc; mục 7 – 8, 11, 13, 16 chúng tôi chỉ tiếp cận qua nguồn thứ cấp hoặc mô tả.
-
-## Phụ lục 1: Tự kiểm
-- **Chắc chắn** (đọc trực tiếp trên bản phổ và khớp MIDI): số ô; các mốc hình thức; giọng và hoá biểu từng đoạn; bè trầm từng ô chương II; cách viết C𝄪/D♮, G𝄪, B𝄫, F♭ ở các ô đã nêu; hợp âm cuối hai chương.
-- **Là cách đọc của bài viết** (có thể hiểu khác): ô 5/13/83/91 chương II (TSVI7 thêm 9 hay t7 thêm ♭6); ô 23 (E7 chồng trên A — có thể coi là pedal hạ át); ô 39 và ô 47 (hợp âm lướt, khó gán một tên); ô 57–58 (G7 → G°7 có thể đọc là át phụ lướt).
-- **Độ chi tiết thấp hơn**: chương I ô 46–57 và phần tái hiện – coda (ô 89–136) chỉ ghi theo đoạn và theo tương ứng với phần trình bày. Câu chương trình về biển chưa đối chiếu nguyên văn tiếng Nga.
-
-## Phụ lục 2: Gợi ý khi dạy
-- Cho học trò nghe và chơi riêng **bè trầm** chương II (quãng 8 tay trái). Phần lớn câu chuyện hoà âm nằm ở đó: D♯ – C♯, B – G𝄪, E – C𝄪, rồi các đường cromatic ở đoạn B.
-- So sánh ô 14 với ô 21 và ô 71 với ô 72: cùng một hợp âm trên phím đàn, nhưng mỗi lần mang một chức năng khác.
-- Chương I: giữ các dấu ngân ở ô 1–2 và ô 11–12 thật lâu. Chất "rỗng" của quãng 5 không có quãng 3 là màu chủ đạo của chương.
-- Đọc thêm [[phan-tich-hoa-am]] và [[phuong-phap-phan-tich-tac-pham]] về cách lập bảng phân tích từng ô.
-
-Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
 `,
   },
 

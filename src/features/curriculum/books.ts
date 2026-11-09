@@ -1065,30 +1065,34 @@ Cuối mỗi chương, người biên soạn thêm **Tư liệu trong thư việ
   },
   {
     id: 'tieu-luan-scriabin-sonata-2',
+    essay: true,
     title: 'Thủ Pháp Hoà Âm Trong Sonata Số 2 Của Scriabin',
     volume: 'Tiểu luận',
-    subtitle: 'Tiểu luận phân tích hoà âm Sonata số 2 Sol♯ thứ Op. 19 "Sonate-Fantaisie" — sonata chuyển tiếp của Scriabin — từng ô hai chương, bằng hệ ký hiệu chức năng Nga – Xô viết.',
+    subtitle: 'Tiểu luận âm nhạc học: thủ pháp hoà âm trong Sonata số 2 Sol♯ thứ Op. 19 "Sonate-Fantaisie" của A. Scriabin, phân tích theo hệ thống lý thuyết chức năng của trường phái Nga – Xô viết.',
     author: 'Lamar',
-    audience: 'Sinh viên nhạc viện đã học hoà âm và phân tích tác phẩm',
+    audience: 'Sinh viên âm nhạc học, sáng tác và lý luận',
     hue: 280,
     glyph: '𝄐',
     preface: `
-Cuốn sách là một **tiểu luận** theo khung của các nhạc viện: Mở đầu (lý do chọn đề tài, lịch sử nghiên cứu, phương pháp, đối tượng và phạm vi), Nội dung (cơ sở lý thuyết, phân tích hoà âm có giải thích, tổng hợp thủ pháp, đối chiếu), Kết luận, Tài liệu tham khảo và Phụ lục.
+Tiểu luận nghiên cứu các thủ pháp hoà âm trong Sonata số 2 giọng Sol♯ thứ Op. 19 (*Sonate-Fantaisie*, 1892 – 1897) của Alexander Scriabin — tác phẩm thường được xem là sonata chuyển tiếp giữa giai đoạn sáng tác chịu ảnh hưởng của Chopin, Liszt và phong cách riêng của nhà soạn nhạc.
 
-Toàn bộ phân tích dùng **hệ ký hiệu chức năng Nga – Xô viết** (T – S – D, K64, D65, SII7, DVII7, DD, D→x…), có bảng đối chiếu với số La Mã phương Tây ở chương Cơ sở lý thuyết. Ví dụ nhạc là ảnh cắt từ bản in đầu Belaieff 1898.
+Tiến trình hoà âm của hai chương được phân tích theo từng ô nhịp trên văn bản bản in đầu Belaieff 1898, bằng hệ thống ký hiệu chức năng của trường phái Nga – Xô viết, với các hợp âm được ghi theo bậc cụ thể trong giọng. Các ví dụ nhạc được trích từ bản in đầu.
 `,
     parts: [
-      { title: 'I. Mở đầu', intro: 'Lý do chọn đề tài, lịch sử nghiên cứu, phương pháp, đối tượng và phạm vi, bố cục.', chapters: [
-        { slug: 'phan-tich-scriabin-sonata-so-2', focus: 'Sonata chuyển tiếp; các công trình đi trước chia theo thời kỳ, chung và riêng.' },
+      { title: 'Mở đầu', intro: '', chapters: [
+        { slug: 'phan-tich-scriabin-sonata-so-2', focus: 'Lý do chọn đề tài, lịch sử nghiên cứu, mục đích, đối tượng, phạm vi, phương pháp, bố cục.' },
       ], exercises: [] },
-      { title: 'II. Nội dung', intro: 'Cơ sở lý thuyết, phân tích hoà âm hai chương, tổng hợp thủ pháp và đối chiếu.', chapters: [
-        { slug: 'scriabin-op19-co-so-ly-thuyet', focus: 'Mục 1: hình thức sonata, hệ ký hiệu, lý thuyết hoà âm.' },
-        { slug: 'scriabin-op19-chuong-1', focus: 'Mục 2.1: chương I Andante, từng ô.' },
-        { slug: 'scriabin-op19-chuong-2', focus: 'Mục 2.2: chương II Presto, từng ô.' },
-        { slug: 'scriabin-op19-thu-phap', focus: 'Mục 3 – 4: mười một thủ pháp; đối chiếu với Cha Min-hee.' },
-      ], exercises: ['Lập bảng chức năng (ký hiệu Nga) cho ô 1–16 chương II, so với bảng trong sách.', 'Tìm trong Op. 19 ba chỗ hợp âm 6 tăng được viết trùng âm thành D7 và giải thích chức năng mỗi lần.'] },
-      { title: 'III. Kết luận', intro: 'Kết luận, tài liệu tham khảo, phụ lục.', chapters: [
-        { slug: 'scriabin-op19-ket-luan', focus: 'Tính chuyển tiếp nằm ở hoà âm; tài liệu tham khảo; tự kiểm.' },
+      { title: 'Nội dung', intro: '', chapters: [
+        { slug: 'scriabin-op19-co-so-ly-thuyet', focus: 'Chương 1. Cơ sở lý luận và khái quát về tác phẩm.' },
+        { slug: 'scriabin-op19-chuong-1', focus: 'Chương 2. Thủ pháp hoà âm trong chương I (Andante).' },
+        { slug: 'scriabin-op19-chuong-2', focus: 'Chương 3. Thủ pháp hoà âm trong chương II (Presto).' },
+        { slug: 'scriabin-op19-thu-phap', focus: 'Chương 4. Đặc điểm thủ pháp hoà âm và tính chuyển tiếp của tác phẩm.' },
+      ], exercises: [] },
+      { title: 'Kết luận', intro: '', chapters: [
+        { slug: 'scriabin-op19-ket-luan', focus: 'Kết luận, hạn chế, hướng nghiên cứu; tài liệu tham khảo.' },
+      ], exercises: [] },
+      { title: 'Phụ lục', intro: '', chapters: [
+        { slug: 'scriabin-op19-phu-luc', focus: 'Bảng phân tích hoà âm theo từng ô nhịp.' },
       ], exercises: [] },
     ],
   },

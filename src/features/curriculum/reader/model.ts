@@ -36,6 +36,8 @@ export interface ReaderBook {
   coverImage?: string
   /** 'kids': a volume of the children's course (one ABRSM grade), with pieces in full at the back. */
   kind: 'book' | 'course' | 'kids'
+  /** See Book.essay. */
+  essay?: boolean
   items: ReaderItem[]
 }
 
@@ -63,8 +65,8 @@ function fromBook(b: Book): ReaderBook {
     if (p.exercises.length)
       items.push({ key: `on-tap-phan-${i + 1}`, kind: 'review', title: `Ôn tập Phần ${roman(i + 1)}`, label: p.title, part: i + 1, body: `## Bài tập\n${p.exercises.map((e, k) => `${k + 1}. ${e}`).join('\n')}` })
   })
-  items.push({ key: 'dap-an', kind: 'answers', title: 'Đáp án câu hỏi ôn tập' })
-  return { id: b.id, title: b.title, volume: b.volume, subtitle: b.subtitle, author: b.author, audience: b.audience, hue: b.hue, glyph: b.glyph, style: 'cream', coverImage: b.coverImage, kind: 'book', items }
+  if (!b.essay) items.push({ key: 'dap-an', kind: 'answers', title: 'Đáp án câu hỏi ôn tập' })
+  return { id: b.id, title: b.title, volume: b.volume, subtitle: b.subtitle, author: b.author, audience: b.audience, hue: b.hue, glyph: b.glyph, style: 'cream', coverImage: b.coverImage, kind: 'book', essay: b.essay, items }
 }
 
 /** A course level's opener: its chapters with goals, practice at the piano, pieces and the end-of-level check. */

@@ -299,7 +299,7 @@ export function NotesPanel({ book, onGo }: { book: ReaderBook; onGo: (index: num
   const [q, setQ] = useState('')
   const titleOf = (key: string) => {
     const it = book.items.find((i) => i.key === key)
-    return it ? (it.kind === 'chapter' ? `Bài ${it.n}. ${it.title}` : it.title) : key
+    return it ? (it.kind === 'chapter' && !book.essay ? `Bài ${it.n}. ${it.title}` : it.title) : key
   }
   const order = new Map(book.items.map((it, i) => [it.key, i]))
   const nq = normalize(q.trim())
