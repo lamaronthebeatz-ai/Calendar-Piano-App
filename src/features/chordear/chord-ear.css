@@ -1,0 +1,129 @@
+/* Chord ear (ChordEarPage.tsx): a black stage, the chord in gold that lights up like a filament bulb.
+   Only transform/opacity animate; every element is visible without its animation (fill "both", no base opacity 0). */
+.ce-page {
+  --ce-gold: oklch(0.83 0.12 82);
+  --ce-gold-deep: oklch(0.62 0.11 70);
+  --ce-ink: oklch(0.93 0.02 85);
+  --ce-mute: oklch(0.66 0.02 80);
+  --ce-faint: oklch(0.45 0.015 80);
+  --ce-line: oklch(0.83 0.12 82 / 0.16);
+  position: relative; min-height: 100%; overflow-x: hidden; overflow-y: auto; height: 100%;
+  background:
+    radial-gradient(80% 45% at 50% 0%, oklch(0.83 0.12 82 / 0.07), transparent 70%),
+    radial-gradient(120% 80% at 50% 120%, oklch(0.3 0.04 60 / 0.35), transparent 60%),
+    #050404;
+  color: var(--ce-ink);
+  padding-bottom: 7rem;
+}
+
+.ce-top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 16px; max-width: 56rem; margin: 0 auto; background: linear-gradient(#050404 70%, transparent); }
+.ce-top h1 { flex: 1; min-width: 0; font-family: var(--font-display); font-size: 19px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ce-icon-btn { display: flex; width: 36px; height: 36px; margin-left: -8px; align-items: center; justify-content: center; border-radius: 99px; color: var(--ce-mute); }
+.ce-icon-btn:hover { background: oklch(1 0 0 / 0.06); }
+.ce-select { max-width: 46vw; height: 32px; padding: 0 12px; border-radius: 99px; border: 1px solid var(--ce-line); background: oklch(1 0 0 / 0.03); color: var(--ce-gold); font-size: 13px; }
+.ce-select option { background: #111; color: var(--ce-ink); }
+
+.ce-stage { position: relative; max-width: 56rem; margin: 0 auto; padding: 18px 16px 8px; text-align: center; }
+.ce-eyebrow { font-size: 10.5px; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ce-gold-deep); }
+
+/* ---------- the chord: an unlit glass name, a lit gold copy that flickers on, a soft halo ---------- */
+.ce-center { position: relative; display: grid; place-items: center; min-height: clamp(190px, 34vh, 300px); margin-top: 2px; }
+.ce-bulb { position: relative; display: grid; justify-items: center; transition: opacity 0.45s ease, transform 0.45s ease; }
+.ce-bulb.is-leaving { opacity: 0; transform: scale(0.9); }
+.ce-name { position: relative; display: block; font-family: var(--font-display); font-weight: 600; font-size: clamp(72px, 22vw, 150px); line-height: 1; letter-spacing: -0.03em; white-space: nowrap; }
+.ce-name .off { color: oklch(0.8 0.05 85 / 0.12); }
+.ce-name .on {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, oklch(0.98 0.05 95) 0%, var(--ce-gold) 42%, var(--ce-gold-deep) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: ce-ignite 1.15s linear both;
+}
+/* drop-shadow on the line, never text-shadow on gradient text (iOS draws a dark smear) */
+.ce-lit { filter: drop-shadow(0 0 18px oklch(0.83 0.13 80 / 0.45)) drop-shadow(0 0 2px oklch(0.95 0.08 90 / 0.6)); }
+.ce-halo {
+  position: absolute; left: 50%; top: 38%; width: min(120vw, 640px); aspect-ratio: 1.6; translate: -50% -50%; pointer-events: none;
+  background: radial-gradient(closest-side, oklch(0.8 0.13 78 / 0.28), oklch(0.8 0.13 78 / 0.08) 55%, transparent);
+  animation: ce-ignite 1.15s linear both, ce-breathe 4.5s 1.2s ease-in-out infinite;
+}
+@keyframes ce-ignite {
+  0% { opacity: 0; } 5% { opacity: 0.8; } 9% { opacity: 0.1; } 15% { opacity: 0.95; } 20% { opacity: 0.35; }
+  30% { opacity: 1; } 36% { opacity: 0.75; } 100% { opacity: 1; }
+}
+@keyframes ce-breathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.72; } }
+
+.ce-func { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-top: 10px; animation: ce-rise 0.7s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.ce-func b { font-family: var(--font-display); font-size: clamp(26px, 7vw, 36px); font-weight: 600; color: var(--ce-ink); letter-spacing: 0.01em; }
+.ce-func span { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ce-mute); }
+.ce-tones { margin-top: 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--ce-faint); animation: ce-rise 0.7s 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+.ce-empty .ce-dim { color: oklch(0.8 0.05 85 / 0.14); }
+.ce-empty p { margin-top: 14px; font-size: 13.5px; color: var(--ce-mute); }
+
+/* the next chord flies in from its card; drawn over the centre */
+.ce-flyer { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.ce-flyer span {
+  font-family: var(--font-display); font-weight: 600; font-size: clamp(72px, 22vw, 150px); line-height: 1; letter-spacing: -0.03em;
+  background: linear-gradient(180deg, oklch(0.98 0.05 95), var(--ce-gold) 42%, var(--ce-gold-deep));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ce-flyer { filter: drop-shadow(0 0 16px oklch(0.83 0.13 80 / 0.5)); }
+
+.ce-caption { min-height: 22px; margin: 4px auto 0; max-width: 34rem; font-family: var(--font-serif, var(--font-display)); font-style: italic; font-size: 14.5px; color: var(--ce-gold); opacity: 0; transition: opacity 0.4s ease; }
+.ce-caption.is-on { opacity: 1; }
+
+/* ---------- the ways forward ---------- */
+.ce-ways { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 18px auto 0; max-width: 46rem; }
+.ce-way {
+  position: relative; display: grid; justify-items: center; gap: 2px; width: min(30%, 168px); min-width: 104px; padding: 12px 10px 11px;
+  border-radius: 16px; border: 1px solid var(--ce-line); background: linear-gradient(180deg, oklch(1 0 0 / 0.035), oklch(1 0 0 / 0.01));
+  cursor: default; overflow: hidden;
+  animation: ce-way-in 0.7s calc(0.75s + var(--i) * 0.09s) cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.ce-way b { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--ce-gold); }
+.ce-way i { font-style: normal; font-size: 13px; color: var(--ce-ink); opacity: 0.85; }
+.ce-way small { font-size: 11px; line-height: 1.35; color: var(--ce-faint); }
+.ce-way-lit {
+  position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
+  background: radial-gradient(120% 90% at 50% 0%, oklch(0.83 0.13 80 / 0.35), oklch(0.83 0.13 80 / 0.06) 70%);
+  box-shadow: inset 0 0 0 1px oklch(0.83 0.13 80 / 0.7);
+  border-radius: inherit;
+}
+.ce-way.is-hit { transform: scale(1.06); }
+.ce-way.is-hit .ce-way-lit { opacity: 1; }
+.ce-way.is-hit small { color: var(--ce-ink); }
+.ce-way.is-dim { opacity: 0.22; transform: scale(0.97); }
+@keyframes ce-way-in { from { opacity: 0; transform: translateY(16px) scale(0.95); } }
+@keyframes ce-rise { from { opacity: 0; transform: translateY(8px); } }
+.ce-noway { margin: 16px auto 0; max-width: 30rem; font-size: 12.5px; color: var(--ce-faint); }
+
+/* ---------- one octave showing the pitch classes heard ---------- */
+.ce-controls { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 4px; }
+.ce-keys { position: relative; flex: none; width: 196px; height: 54px; }
+.ce-key { position: absolute; left: calc(var(--x) * 28px); top: 0; transition: background 0.15s ease, box-shadow 0.15s ease; }
+.ce-key.is-white { width: 27px; height: 54px; border-radius: 0 0 5px 5px; background: oklch(0.9 0.01 85 / 0.12); }
+.ce-key.is-black { z-index: 1; width: 18px; height: 33px; margin-left: 5px; border-radius: 0 0 4px 4px; background: #0b0a09; box-shadow: inset 0 0 0 1px oklch(0.9 0.01 85 / 0.14); }
+.ce-key.is-on { background: var(--ce-gold); box-shadow: 0 0 12px oklch(0.83 0.13 80 / 0.55); }
+.ce-key.is-bass::after { content: ''; position: absolute; left: 50%; bottom: 6px; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 99px; background: #050404; }
+
+/* ---------- microphone ---------- */
+.ce-mic { position: relative; display: grid; place-items: center; flex: none; width: 64px; height: 64px; border-radius: 99px; color: var(--ce-gold); background: radial-gradient(circle at 50% 35%, oklch(0.25 0.03 75), #0b0a09 70%); box-shadow: inset 0 0 0 1px var(--ce-line), 0 18px 40px -20px oklch(0.83 0.13 80 / 0.5); transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1); }
+.ce-mic:active { transform: scale(0.94); }
+.ce-ring { position: absolute; inset: -6px; border-radius: inherit; box-shadow: 0 0 0 1px oklch(0.83 0.13 80 / 0.35); opacity: 0; transform: scale(calc(1 + var(--lv) * 0.35)); transition: transform 0.12s ease, opacity 0.3s ease; }
+.ce-mic.is-on { color: #0b0a09; background: radial-gradient(circle at 50% 35%, oklch(0.95 0.07 92), var(--ce-gold) 60%, var(--ce-gold-deep)); }
+.ce-mic.is-on .ce-ring { opacity: 1; }
+.ce-status { margin: 8px 0 6px; font-size: 12px; color: var(--ce-faint); }
+
+/* ---------- history ---------- */
+.ce-history { max-width: 56rem; margin: 26px auto 0; padding: 0 16px; }
+.ce-history-row { display: flex; gap: 6px; overflow-x: auto; padding: 10px 2px; border-top: 1px solid var(--ce-line); border-bottom: 1px solid var(--ce-line); scrollbar-width: none; }
+.ce-history-row span { display: grid; flex: none; justify-items: center; min-width: 56px; padding: 6px 8px; border-radius: 10px; background: oklch(1 0 0 / 0.025); animation: ce-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.ce-history-row b { font-family: var(--font-display); font-size: 15px; color: var(--ce-ink); }
+.ce-history-row i { font-style: normal; font-size: 11px; color: var(--ce-gold-deep); }
+.ce-clear { display: block; margin: 8px auto 0; font-size: 12px; color: var(--ce-faint); }
+.ce-foot { max-width: 34rem; margin: 22px auto 0; padding: 0 16px; font-size: 11.5px; line-height: 1.6; text-align: center; color: var(--ce-faint); }
+
+html.is-android .ce-lit, html.is-android .ce-flyer { filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .ce-name .on, .ce-halo, .ce-way, .ce-func, .ce-tones, .ce-history-row span { animation: none; }
+}

@@ -234,6 +234,11 @@ export function TheoryPage() {
               <Link to="/solfege" aria-label="Solfège: luyện đoán nốt và quãng" title="Solfège: đoán nốt, đoán quãng" className="tools-btn solfege-btn">
                 <span aria-hidden>𝄞</span>
               </Link>
+              <Link to="/chord-ear" aria-label="Nghe hợp âm qua micro" title="Nghe hợp âm: mở micro, đàn piano, máy gọi tên và chỉ hướng đi" className="tools-btn chord-ear-btn">
+                <span aria-hidden>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" /></svg>
+                </span>
+              </Link>
               <Link to="/tools" aria-label="Bảng tính nhạc lý" title="Bảng tính: vòng quãng năm, hợp âm, jazz…" className="tools-btn">
                 <span aria-hidden>♫</span>
               </Link>
