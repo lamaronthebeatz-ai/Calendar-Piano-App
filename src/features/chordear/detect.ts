@@ -31,7 +31,9 @@ export function readFrame(db: Float32Array, sampleRate: number, level: number): 
     for (let m = LO; m <= HI; m++) {
       const a = s[m]
       // loud enough, and not just leakage from a much louder neighbour (a strict local maximum would hide clusters)
-      if (a < peak * 0.16 || a < (s[m - 1] ?? 0) * 0.5 || a < (s[m + 1] ?? 0) * 0.5) continue
+      // below G3 two semitones share so few bins that leakage is strong: demand more there
+      const r = m < 55 ? 0.85 : 0.5
+      if (a < peak * 0.16 || a < (s[m - 1] ?? 0) * r || a < (s[m + 1] ?? 0) * r) continue
       notes.push({ m, a })
       for (let k = 2; k <= 8; k++) {
         const h = m + Math.round(12 * Math.log2(k))
@@ -50,6 +52,7 @@ export function readFrame(db: Float32Array, sampleRate: number, level: number): 
 /* ---------- notes → chord ---------- */
 
 export type Quality = 'maj' | 'min' | 'dim' | 'aug' | 'sus4' | 'sus2' | '7' | 'maj7' | 'm7' | 'hdim7' | 'dim7' | '6' | 'm6' | 'add9'
+  | '9' | 'maj9' | 'm9' | '7b9' | '7#9' | '7sus4' | '13' | '69' | 'mMaj7'
 type Shape = { iv: number[]; steps: number[]; sym: string; fam: 'M' | 'm' | 'd' | 'a' | 's'; seventh?: boolean; fifthOptional?: boolean }
 
 /** Semitones above the root, and the letter steps used to spell each tone (third = 2 letters up…). */
@@ -68,7 +71,21 @@ export const SHAPES: Record<Quality, Shape> = {
   '6': { iv: [0, 4, 7, 9], steps: [0, 2, 4, 5], sym: '6', fam: 'M' },
   m6: { iv: [0, 3, 7, 9], steps: [0, 2, 4, 5], sym: 'm6', fam: 'm' },
   add9: { iv: [0, 2, 4, 7], steps: [0, 1, 2, 4], sym: 'add9', fam: 'M' },
+  // jazz colours: the ninth and thirteenth sit after the seventh so inversion figures still count 1-3-5-7
+  '9': { iv: [0, 4, 7, 10, 2], steps: [0, 2, 4, 6, 1], sym: '9', fam: 'M', seventh: true, fifthOptional: true },
+  maj9: { iv: [0, 4, 7, 11, 2], steps: [0, 2, 4, 6, 1], sym: 'maj9', fam: 'M', seventh: true, fifthOptional: true },
+  m9: { iv: [0, 3, 7, 10, 2], steps: [0, 2, 4, 6, 1], sym: 'm9', fam: 'm', seventh: true, fifthOptional: true },
+  '7b9': { iv: [0, 4, 7, 10, 1], steps: [0, 2, 4, 6, 1], sym: '7♭9', fam: 'M', seventh: true, fifthOptional: true },
+  '7#9': { iv: [0, 4, 7, 10, 3], steps: [0, 2, 4, 6, 1], sym: '7♯9', fam: 'M', seventh: true, fifthOptional: true },
+  '7sus4': { iv: [0, 5, 7, 10], steps: [0, 3, 4, 6], sym: '7sus4', fam: 's', seventh: true, fifthOptional: true },
+  '13': { iv: [0, 4, 7, 10, 9], steps: [0, 2, 4, 6, 5], sym: '13', fam: 'M', seventh: true, fifthOptional: true },
+  '69': { iv: [0, 4, 7, 9, 2], steps: [0, 2, 4, 5, 1], sym: '6/9', fam: 'M', fifthOptional: true },
+  mMaj7: { iv: [0, 3, 7, 11], steps: [0, 2, 4, 6], sym: 'm(maj7)', fam: 'm', seventh: true, fifthOptional: true },
 }
+/** Dominant-function qualities: any of them answers a way that asks for a "7". */
+export const DOM: Quality[] = ['7', '9', '13', '7b9', '7#9', '7sus4']
+/** Jazz roman numerals count every root from the major scale of the tonic (♭III, ♭VI… in minor too). */
+const JAZZ_ROMAN = ['I', '♭II', 'II', '♭III', 'III', 'IV', '♯IV', 'V', '♭VI', 'VI', '♭VII', 'VII']
 
 export type Chord = { root: number; q: Quality; bass: number }
 export type Guess = { chord: Chord | null; sure: boolean; fit: number }
@@ -162,7 +179,7 @@ export function spell(ch: Chord, k: Key): Spelled {
 /* ---------- function names (Soviet school, as in the library's harmony books) ---------- */
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']
-export type Reading = { label: string; role: string; deg: number | null; inKey: boolean; isK64?: boolean }
+export type Reading = { label: string; role: string; jazz: string; deg: number | null; inKey: boolean; isK64?: boolean }
 
 /** Inversion figure: triads 6, 64; seventh chords 7, 65, 43, 2. */
 function figure(ch: Chord) {
@@ -174,6 +191,11 @@ function figure(ch: Chord) {
 }
 
 export function read(ch: Chord, k: Key): Reading {
+  const rel0 = (ch.root - k.tonic + 12) % 12
+  return { ...readFn(ch, k), jazz: JAZZ_ROMAN[rel0] + SHAPES[ch.q].sym }
+}
+
+function readFn(ch: Chord, k: Key): Omit<Reading, 'jazz'> {
   const sh = SHAPES[ch.q]
   const scale = k.minor ? MINOR : MAJOR
   const rel = (ch.root - k.tonic + 12) % 12
@@ -187,7 +209,8 @@ export function read(ch: Chord, k: Key): Reading {
     if (fig === '64') return { label: 'K64', role: 'Hợp âm sáu – bốn kết (chủ trên âm át)', deg, inKey: true, isK64: true }
     return { label: tri(k.minor ? 't' : 'T'), role: 'Chủ', deg, inKey: true }
   }
-  if (deg === 4 && fam === 'M' && !['maj7', '6', 'add9'].includes(ch.q)) return { label: tri('D'), role: 'Át', deg, inKey: true }
+  const dom = DOM.includes(ch.q)
+  if (deg === 4 && (dom || ch.q === 'maj')) return { label: tri('D'), role: 'Át', deg, inKey: true }
   if (deg === 3 && (fam === 'M' || fam === 'm') && diatonic) return { label: tri(fam === 'm' ? 's' : 'S'), role: 'Hạ át', deg, inKey: true }
   if (diatonic && deg >= 0) {
     const role = deg === 1 ? 'Hạ át (bậc II)' : deg === 5 ? 'Bậc VI (chủ – hạ át)' : deg === 2 ? 'Bậc III' : deg === 6 ? 'Át (bậc VII)' : 'Bậc ' + ROMAN[deg]
@@ -195,28 +218,37 @@ export function read(ch: Chord, k: Key): Reading {
   }
   // major key borrowing the minor subdominant
   if (!k.minor && deg === 3 && fam === 'm') return { label: 's' + fig, role: 'Hạ át thứ (mượn)', deg, inKey: true }
+  // tritone substitute of the dominant, and the backdoor dominant (♭VII7 → I)
+  if (dom && rel === 1) return { label: 'II♭7', role: 'Át thay thế (tritone) của D', deg: null, inKey: true }
+  if (!k.minor && dom && rel === 10) return { label: 'VII♭7', role: 'Át cửa sau (backdoor)', deg: null, inKey: true }
   // Neapolitan
   if (rel === 1 && fam === 'M' && !sh.seventh) return { label: 'II♭' + fig, role: 'Hợp âm Napoli', deg: 1, inKey: true }
   // secondary dominants and leading-tone sevenths
   const target = fam === 'd' ? (rel + 1) % 12 : (rel + 5) % 12
   const td = scale.indexOf(target)
-  if (td > 0 && (fam === 'M' && (ch.q === 'maj' || ch.q === '7') || ch.q === 'dim7' || ch.q === 'dim')) {
+  if (td > 0 && ((fam === 'M' && (ch.q === 'maj' || dom)) || ch.q === 'dim7' || ch.q === 'dim')) {
     const name = (fam === 'd' ? 'VII' : 'D') + fig
     return { label: `${name}→${ROMAN[td]}`, role: `Át phụ của bậc ${ROMAN[td]}`, deg: null, inKey: true }
   }
+  // secondary tritone substitute: a dominant a semitone above a degree
+  const ts = scale.indexOf((rel + 11) % 12)
+  if (dom && ts > 0) return { label: `II♭7→${ROMAN[ts]}`, role: `Át thay thế của bậc ${ROMAN[ts]}`, deg: null, inKey: true }
   return { label: '—', role: 'Ngoài giọng', deg: null, inKey: false }
 }
 
-/** A chain's key when it starts: the chord as tonic, except a dominant seventh, which points a fifth down. */
-export function keyFromChord(ch: Chord): Key {
-  if (ch.q === '7') return { tonic: (ch.root + 5) % 12, minor: false }
+/** A chain's key when it starts: the chord as tonic, except a dominant seventh, which points a fifth down — and, when jazz
+ *  is in play, a minor seventh, heard as the ii of a major key a tone below (Dm7 → Đô trưởng). */
+export function keyFromChord(ch: Chord, style: Style = 'classic'): Key {
+  if (style !== 'classic' && (ch.q === 'm7' || ch.q === 'm9')) return { tonic: (ch.root + 10) % 12, minor: false }
+  if (DOM.includes(ch.q)) return { tonic: (ch.root + 5) % 12, minor: false }
   if (ch.q === 'dim7' || ch.q === 'dim' || ch.q === 'hdim7') return { tonic: (ch.root + 1) % 12, minor: ch.q !== 'hdim7' }
   return { tonic: ch.root, minor: SHAPES[ch.q].fam === 'm' }
 }
 
 /* ---------- where the harmony may go next ---------- */
 
-export type Way = { root: number; fam: Shape['fam'] | 'any'; bassFifth?: boolean; q: Quality; title: string; note: string }
+export type Way = { root: number; fam: Shape['fam'] | 'any'; bassFifth?: boolean; q: Quality; title: string; note: string; jazz?: boolean }
+export type Style = 'classic' | 'jazz' | 'both'
 
 const at = (k: Key, deg: number) => (k.tonic + (k.minor ? MINOR : MAJOR)[deg]) % 12
 /** Quality of the diatonic triad on a degree (harmonic minor). */
@@ -233,15 +265,14 @@ const way = (k: Key, deg: number, title: string, note: string, extra?: Partial<W
 }
 
 /** Common continuations from the chord just heard, in the order a harmony book would teach them. */
-export function nextWays(ch: Chord, k: Key): Way[] {
-  const r = read(ch, k)
+function classicWays(ch: Chord, k: Key, r: Reading): Way[] {
   const T = k.minor ? 't' : 'T'
   if (r.isK64) return [way(k, 4, 'D', 'K64 → D: hai bè đi xuống, chủ âm ở bè trầm giữ nguyên', { q: 'maj' }), way(k, 4, 'D7', 'K64 → D7: kết trọn sắp tới', { q: '7' })]
-  if (r.label.includes('→')) {
+  if (r.label.includes('→') && !r.label.startsWith('II♭7')) {
     const td = ROMAN.indexOf(r.label.split('→')[1])
     return [way(k, td, ROMAN[td], `Giải quyết ly điệu về bậc ${ROMAN[td]}`), way(k, 0, T, 'Bỏ ly điệu, trở về chủ', { fam: 'any' })]
   }
-  if (r.label.startsWith('II♭')) return [way(k, 0, 'K64', 'Napoli → K64 → D', { bassFifth: true }), way(k, 4, 'D', 'Napoli → D: kết nửa', { q: 'maj' }), way(k, 4, 'D7', 'Napoli → D7', { q: '7' })]
+  if (r.label.startsWith('II♭') && !r.label.startsWith('II♭7')) return [way(k, 0, 'K64', 'Napoli → K64 → D', { bassFifth: true }), way(k, 4, 'D', 'Napoli → D: kết nửa', { q: 'maj' }), way(k, 4, 'D7', 'Napoli → D7', { q: '7' })]
   switch (r.deg) {
     case 4:
       return [
@@ -277,12 +308,60 @@ export function nextWays(ch: Chord, k: Key): Way[] {
   }
 }
 
+/** Jazz continuations: ii – V – I and its substitutes, turnarounds, the backdoor, blues. */
+function jazzWays(k: Key, r: Reading): Way[] {
+  const j = (rel: number, q: Quality, title: string, note: string): Way => ({ root: (k.tonic + rel) % 12, fam: SHAPES[q].fam, q, title, note, jazz: true })
+  const home = k.minor ? j(0, 'm6', 'Im6', 'ii – V – i: về chủ thứ') : j(0, 'maj7', 'Imaj7', 'ii – V – I: về chủ')
+  if (r.label.startsWith('II♭7→')) {
+    const td = ROMAN.indexOf(r.label.split('→')[1])
+    return [{ ...way(k, td, ROMAN[td], `Thay thế tritone: trượt nửa cung xuống bậc ${ROMAN[td]}`), jazz: true }]
+  }
+  if (r.label === 'II♭7') return [{ ...home, note: 'Thay thế tritone: ♭II7 trượt nửa cung xuống chủ' }]
+  if (r.label === 'VII♭7') return [{ ...home, note: 'Backdoor: ♭VII7 → I' }]
+  if (r.label.startsWith('D') && r.label.includes('→')) {
+    const td = ROMAN.indexOf(r.label.split('→')[1])
+    const tgt = (k.tonic + (k.minor ? MINOR : MAJOR)[td]) % 12
+    return [j((tgt + 1 - k.tonic + 12) % 12, '7', `♭II7/${ROMAN[td]}`, `Thay thế tritone của át phụ, rồi về bậc ${ROMAN[td]}`)]
+  }
+  if (r.label.startsWith('s')) return [j(10, '7', '♭VII7', 'Backdoor: IVm7 – ♭VII7 – I')]
+  switch (r.deg) {
+    case 0:
+      return k.minor
+        ? [j(8, 'maj7', '♭VImaj7', 'i – ♭VI – iiø – V'), j(2, 'hdim7', 'IIø7', 'Mở ii – V – i thứ'), j(5, 'm7', 'IVm7', 'i – iv7')]
+        : [j(9, '7', 'VI7', 'Turnaround: I – VI7 – II – V'), j(2, 'm7', 'IIm7', 'Mở ii – V – I'), j(5, '7', 'IV7', 'Blues: I7 – IV7'), j(1, 'dim7', '♯I°7', 'Giảm lướt lên IIm7'), j(4, 'm7', 'IIIm7', 'iii – VI – ii – V')]
+    case 1:
+      return [j(7, '7', 'V7', 'ii – V'), j(1, '7', '♭II7', 'ii – ♭II7 – I: thay thế tritone')]
+    case 4:
+      return [home, j(4, 'm7', 'IIIm7', 'Kết lừa kiểu jazz: V7 → IIIm7')]
+    case 3:
+      return k.minor ? [j(7, '7', 'V7', 'iv – V7')] : [j(5, 'm7', 'IVm7', 'IV – IVm7: thứ hoá, sắp về chủ'), j(6, 'hdim7', '♯IVø7', 'IV – ♯IVø7 – I64')]
+    case 5:
+      return [j(2, '7', 'II7', 'VI – II7 – V: át của át')]
+    case 2:
+      return [j(9, '7', 'VI7', 'iii – VI7 – ii – V'), j(3, 'dim7', '♭III°7', 'Giảm lướt xuống IIm7')]
+    default:
+      return []
+  }
+}
+
+const sameWay = (a: Way, b: Way) => a.root === b.root && a.fam === b.fam && DOM.includes(a.q) === DOM.includes(b.q) && !!a.bassFifth === !!b.bassFifth
+
+/** Ways forward in the chosen style; "both" keeps the classical ones first and adds the jazz ones that differ. */
+export function nextWays(ch: Chord, k: Key, style: Style = 'both'): Way[] {
+  const r = read(ch, k)
+  const c = classicWays(ch, k, r)
+  const jz = jazzWays(k, r)
+  if (style === 'classic') return c.length ? c : jz
+  if (style === 'jazz') return jz.length ? jz : c
+  return [...c, ...jz.filter((w) => !c.some((x) => sameWay(x, w)))].slice(0, 7)
+}
+
 /** Did the chord just heard take one of the ways? */
 export function takes(w: Way, ch: Chord, k: Key): boolean {
   if (ch.root !== w.root) return false
   if (w.bassFifth) return ch.bass === (k.tonic + 7) % 12
   if (w.fam === 'any') return true
   const fam = SHAPES[ch.q].fam
-  if (w.q === '7') return ch.q === '7'
+  if (DOM.includes(w.q)) return DOM.includes(ch.q)
   return fam === w.fam || (w.fam === 'M' && fam === 's')
 }

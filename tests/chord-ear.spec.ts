@@ -4,8 +4,9 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
 /**
- * The chord ear end to end: a synthesized piano (C – G7 – C – Am) is fed to Chromium's fake microphone, and the page
- * must name each chord, light the way taken ("Kết trọn") and never name the cluster and noise that follow.
+ * The chord ear end to end: a synthesized piano (C – G7 – C – Am, a cluster, noise, then the jazz Dm7 – D♭7 – Cmaj7) is fed
+ * to Chromium's fake microphone; the page must name each chord, light the ways taken ("Kết trọn", the tritone substitute)
+ * and never name the cluster or the noise.
  * Chromium only (WebKit projects ignore this file in playwright.config.ts: it has no fake audio capture).
  */
 const SR = 22050
@@ -36,13 +37,13 @@ function synth(chords: number[][], dur = 2.4) {
   return buf
 }
 const wav = join(tmpdir(), 'chord-ear-test.wav')
-writeFileSync(wav, synth([[48, 52, 55, 60, 64], [43, 59, 62, 65, 67], [48, 52, 55, 60, 64], [45, 57, 60, 64], [60, 62, 63, 64, 65, 66], []]))
+writeFileSync(wav, synth([[48, 52, 55, 60, 64], [43, 59, 62, 65, 67], [48, 52, 55, 60, 64], [45, 57, 60, 64], [60, 62, 63, 64, 65, 66], [], [38, 57, 60, 65], [37, 56, 59, 65], [36, 55, 59, 64]]))
 
 test.use({ launchOptions: { args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream', `--use-file-for-fake-audio-capture=${wav}%noloop`] } })
 
 test('nghe hợp âm: gọi tên, sáng hướng đi, không đoán bừa', async ({ page, browserName }) => {
   test.skip(browserName !== 'chromium', 'micro giả chỉ có trên Chromium')
-  test.setTimeout(40_000)
+  test.setTimeout(60_000)
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
     localStorage.setItem('onboarding-done', '1')
@@ -53,8 +54,10 @@ test('nghe hợp âm: gọi tên, sáng hướng đi, không đoán bừa', asyn
   await expect(history).toContainText('G7', { timeout: 15_000 })
   await expect(page.locator('.ce-caption')).toContainText('Kết trọn', { timeout: 6_000 })
   await expect(history).toContainText('Am', { timeout: 8_000 })
-  await page.waitForTimeout(5_500) // cluster, then noise
+  await expect(history).toContainText('D♭7', { timeout: 14_000 }) // after the cluster and the noise
+  await expect(page.locator('.ce-caption')).toContainText('tritone', { timeout: 6_000 })
+  await expect(history).toContainText('Cmaj7', { timeout: 6_000 })
   const names = await page.locator('.ce-history-row b').allTextContents()
-  expect(names).toEqual(['C', 'G7', 'C', 'Am'])
+  expect(names).toEqual(['C', 'G7', 'C', 'Am', 'Dm7', 'D♭7', 'Cmaj7'])
   await expect(page.locator('.ce-history-row i').first()).toHaveText('T')
 })

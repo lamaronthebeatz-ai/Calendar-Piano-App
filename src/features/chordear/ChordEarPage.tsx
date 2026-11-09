@@ -5,7 +5,7 @@ import { ArrowLeftIcon } from '../../components/icons'
 import { IS_ANDROID } from '../../lib/device'
 import {
   ALL_KEYS, guessChord, keyFromChord, keyName, nextWays, read, readFrame, sameChord, spell, takes,
-  type Chord, type Key, type Way,
+  type Chord, type Key, type Style, type Way,
 } from './detect'
 import './chord-ear.css'
 
@@ -29,6 +29,13 @@ export function ChordEarPage() {
   const back = useBack('/theory')
   const [status, setStatus] = useState<'idle' | 'asking' | 'on' | 'denied' | 'error'>('idle')
   const [fixedKey, setFixedKey] = useState<number>(-1) // index in ALL_KEYS, −1 = guess
+  const [style, setStyle] = useState<Style>(() => {
+    try {
+      return (localStorage.getItem('chord-ear:style') as Style) || 'both'
+    } catch {
+      return 'both'
+    }
+  })
   const [shown, setShown] = useState<Shown | null>(null)
   const [hit, setHit] = useState<number | null>(null)
   const [caption, setCaption] = useState('')
@@ -39,6 +46,7 @@ export function ChordEarPage() {
   const audio = useRef<{ ctx: AudioContext; stream: MediaStream; timer: number } | null>(null)
   const shownRef = useRef<Shown | null>(null)
   const fixedRef = useRef(fixedKey)
+  const styleRef = useRef(style)
   const busy = useRef(false)
   const nameRef = useRef<HTMLDivElement>(null)
   const wayRefs = useRef<(HTMLButtonElement | null)[]>([])
@@ -47,6 +55,21 @@ export function ChordEarPage() {
   useEffect(() => {
     fixedRef.current = fixedKey
   }, [fixedKey])
+  useEffect(() => {
+    styleRef.current = style
+    try {
+      localStorage.setItem('chord-ear:style', style)
+    } catch {
+      /* private mode: the choice just isn't remembered */
+    }
+    // the ways on screen follow the style at once
+    const cur = shownRef.current
+    if (cur) {
+      const next = { ...cur, ways: nextWays(cur.chord, cur.key, style) }
+      shownRef.current = next
+      setShown(next)
+    }
+  }, [style])
 
   const show = useCallback((s: Shown) => {
     shownRef.current = s
@@ -77,7 +100,7 @@ export function ChordEarPage() {
           // the swap never waits on the animation: content changes on a timer
           window.setTimeout(() => {
             const key = fixed ?? cur.key
-            show({ id: nextId.current++, chord: ch, key, ways: nextWays(ch, key), fresh: false })
+            show({ id: nextId.current++, chord: ch, key, ways: nextWays(ch, key, styleRef.current), fresh: false })
             setHit(null)
             setFlight(null)
             busy.current = false
@@ -85,9 +108,9 @@ export function ChordEarPage() {
           return
         }
       }
-      const key = fixed ?? (cur && read(ch, cur.key).inKey ? cur.key : keyFromChord(ch))
+      const key = fixed ?? (cur && read(ch, cur.key).inKey ? cur.key : keyFromChord(ch, styleRef.current))
       setCaption(cur ? 'Không theo hướng nào — bắt đầu chuỗi mới' : '')
-      show({ id: nextId.current++, chord: ch, key, ways: nextWays(ch, key), fresh: true })
+      show({ id: nextId.current++, chord: ch, key, ways: nextWays(ch, key, styleRef.current), fresh: true })
     },
     [show],
   )
@@ -193,6 +216,19 @@ export function ChordEarPage() {
       </div>
 
       <div className="ce-stage">
+        <div className="ce-style" role="radiogroup" aria-label="Hướng đi theo">
+          {(
+            [
+              ['classic', 'Cổ điển'],
+              ['jazz', 'Jazz'],
+              ['both', 'Cả hai'],
+            ] as [Style, string][]
+          ).map(([v, t]) => (
+            <button key={v} role="radio" aria-checked={style === v} className={clsx(style === v && 'is-on')} onClick={() => setStyle(v)}>
+              {t}
+            </button>
+          ))}
+        </div>
         <p className="ce-eyebrow">{shown ? `${keyName(shown.key)}${fixedKey < 0 ? ' · đoán' : ''}` : 'Đàn một hợp âm trên piano'}</p>
 
         <div className="ce-center">
@@ -206,6 +242,7 @@ export function ChordEarPage() {
               <p className="ce-func">
                 <b>{rd.label}</b>
                 <span>{rd.role}</span>
+                <em>{rd.jazz}</em>
               </p>
               <p className="ce-tones">{sp.tones.join(' · ')}</p>
             </div>
@@ -258,11 +295,12 @@ export function ChordEarPage() {
                   ref={(el) => {
                     wayRefs.current[i] = el
                   }}
-                  className={clsx('ce-way', hit === i && 'is-hit', hit !== null && hit !== i && 'is-dim')}
+                  className={clsx('ce-way', w.jazz && 'is-jazz', hit === i && 'is-hit', hit !== null && hit !== i && 'is-dim')}
                   style={{ '--i': i } as CSSProperties}
                   tabIndex={-1}
                 >
                   <span aria-hidden className="ce-way-lit" />
+                  {w.jazz && <span className="ce-tag">Jazz</span>}
                   <b>{w.title}</b>
                   <i>{target}</i>
                   <small>{w.note}</small>
