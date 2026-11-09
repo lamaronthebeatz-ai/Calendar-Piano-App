@@ -652,6 +652,8 @@ Sau đó chuyển sang hệ thống thứ hai: [[hoa-am-the-ky-20]].
       ['Teoria — Extended harmony in Debussy\'s La fille aux cheveux de lin', 'https://teoria.com/en/articles/debussy-fille-aux-cheveux-de-lin/02.php'],
     ],
     body: `
+Đọc đầy đủ theo một giáo trình: bộ 13 bài [[hoa-am-the-ky-xx-lo-trinh|Hoà âm thế kỷ XX theo Persichetti]] (Twentieth-Century Harmony, 1961) — quãng, thang âm, hợp âm quãng 3, 4, 2, thêm nốt, hợp âm chồng, ghép, soi gương, hướng hoà âm, đa điệu tính, chuỗi.
+
 Sau năm 1900, nhiều nhà soạn nhạc tìm cách **phá vỡ** hoặc **mở rộng** hệ thống [[he-thong-hoa-am-co-dien|hoà âm cổ điển]]. Thay đổi cốt lõi gồm hai mặt:
 - **Cách xây [[hop-am-ba|hợp âm]]**: không chỉ chồng [[quang|quãng 3]] mà còn chồng quãng 4, quãng 5, quãng 2, hoặc chồng hai hợp âm.
 - **Vai trò của hợp âm**: hợp âm được chọn vì **màu sắc âm thanh** nhiều hơn vì **chức năng** (đi đâu, giải quyết thế nào).

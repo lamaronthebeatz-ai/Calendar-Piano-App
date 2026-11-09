@@ -13,12 +13,12 @@ const SMALL = new Map(Object.entries(FULL).map(([k, url]) => [url, THUMB[k.repla
  */
 export function Cover({ book, className, size = 1 }: { book: ReaderBook; className?: string; size?: number }) {
   const words = book.title.split(' ')
-  // "Nhạc Lý Cơ Bản" → "Nhạc Lý" / "Cơ Bản": split the title in half by words.
-  const half = Math.ceil(words.length / 2)
-  const [line1, line2] = [words.slice(0, half).join(' '), words.slice(half).join(' ')]
-  // long titles (an essay's full name) would wrap and overflow the square: shrink past ~14 characters a line (measured on the Scriabin essay)
+  // "Nhạc Lý Cơ Bản" → "Nhạc Lý" / "Cơ Bản": split where the longer line is shortest ("Hoà Âm" / "Thế Kỷ XX", not "Hoà Âm Thế" / "Kỷ XX").
+  const splits = words.slice(1).map((_, i) => [words.slice(0, i + 1).join(' '), words.slice(i + 1).join(' ')])
+  const [line1, line2] = splits.length ? splits.reduce((a, b) => (Math.max(b[0].length, b[1].length) < Math.max(a[0].length, a[1].length) ? b : a)) : [book.title, '']
+  // about 7 characters fit a line at 3.6em; longer lines would wrap and overflow the square
   const longest = Math.max(line1.length, line2.length)
-  const titleSize = `${longest > 14 ? (3.6 * 8) / longest : 3.6}em`
+  const titleSize = `${longest > 7 ? (3.6 * 7) / longest : 3.6}em`
   if (book.coverImage)
     return (
       <div className={clsx('cover-photo relative aspect-square overflow-hidden', className)}>

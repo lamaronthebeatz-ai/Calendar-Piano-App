@@ -442,6 +442,51 @@ Sau Quyển 2, đường đi tiếp là [[giao-trinh-hoa-am]] (hoà âm bốn b�
     ],
   },
   {
+    id: 'hoa-am-the-ky-xx',
+    title: 'Hoà Âm Thế Kỷ XX',
+    volume: 'Vincent Persichetti',
+    subtitle: 'Đọc theo Twentieth-Century Harmony (1961): quãng và độ căng, thang âm, hợp âm chồng quãng 3, quãng 4, quãng 2, hợp âm thêm nốt, hợp âm chồng, hợp âm ghép và soi gương; hướng hoà âm, nhịp điệu hoà âm, trang trí; điệu tính, đa điệu tính, phi điệu tính, hoà âm chuỗi; tổng hợp các lối viết.',
+    author: 'Lamar',
+    audience: 'Sinh viên hoà âm nâng cao, sáng tác, lý luận; người chơi nhạc muốn hiểu chất liệu hoà âm của âm nhạc thế kỷ XX',
+    hue: 200,
+    glyph: '♯',
+    preface: `
+**Vincent Persichetti** (1915 – 1987), nhà soạn nhạc và giáo sư ở Juilliard, viết *Twentieth-Century Harmony* (Norton, 1961) như một bản kê những chất liệu hoà âm mà các nhà soạn nhạc nửa đầu thế kỷ XX thực sự dùng — không phải một hệ thống riêng của tác giả. Sách đi từ quãng, thang âm, qua từng họ hợp âm, tới chuyển động, thời gian và tổ chức điệu tính, rồi khép lại bằng nghệ thuật phối các lối viết với nhau.
+
+## Tinh thần của cuốn này
+Mỗi bài tóm lược một chương bằng lời của bộ bài, trích ngắn kèm số trang bản in. Sách còn bản quyền (Norton vẫn in) nên không dịch nguyên văn và không in lại ví dụ nhạc hay bài tập; các ví dụ nhạc trong bài do người biên soạn tự viết để minh hoạ ý. Bài tập cuối mỗi bài phỏng theo tinh thần bài tập của sách, có ghi số bài và trang để bạn tra bản gốc.
+
+## Cách đọc
+1. Đọc Phần I trước: cách Persichetti đo độ căng của quãng (thuận mở, thuận êm, nghịch nhẹ, nghịch gắt) được dùng suốt các chương sau.
+2. Phần II có thể đọc theo bất kỳ thứ tự nào; mỗi bài là một họ hợp âm.
+3. Phần III và IV cần đã nắm Phần II. Bài 13 nên đọc cuối cùng.
+`,
+    parts: [
+      { title: 'Vật liệu gốc', intro: 'Quãng và thang âm: hai thứ mọi hợp âm được dựng nên từ đó.', chapters: [
+        { slug: 'hoa-am-the-ky-xx-lo-trinh', focus: 'Sách nói gì, cách sắp xếp, giới hạn của bản tóm lược.' },
+        { slug: 'persichetti-quang', focus: 'Bốn mức căng; quãng 4 và tritone; thể đảo, khoảng cách; phân loại hợp âm; bồi âm; chất liệu nhạc cụ.' },
+        { slug: 'persichetti-thang-am', focus: 'Hợp âm chính của điệu thức; tối – sáng; đa điệu thức; thang nhân tạo; ngũ cung, lục âm, toàn cung, cromatic.' },
+      ], exercises: ['Kê sáu quãng bên trong ba hợp âm bốn nốt bất kỳ và xếp chúng vào bốn nhóm căng.', 'Viết một câu nhạc ngắn ở Rê lydia sao cho G♯ xuất hiện trong phần lớn hợp âm.'] },
+      { title: 'Các họ hợp âm', intro: 'Hợp âm chồng quãng 3, quãng 4, quãng 2, hợp âm thêm nốt, hợp âm chồng, hợp âm ghép và soi gương — mỗi họ một cách nghe và một cách đi.', chapters: [
+        { slug: 'persichetti-hop-am-quang-3', focus: 'Vòng quãng 3, quãng 2; hợp âm ba cromatic; mười hai hợp âm chín; 11, 13 đến mười hai âm.' },
+        { slug: 'persichetti-hop-am-quang-4', focus: 'Ba loại ba nốt; nối với hợp âm quãng 3; kết quãng 4; hợp âm ghép quãng 4 + quãng 3.' },
+        { slug: 'persichetti-hop-am-them-not', focus: 'Năm hợp âm sáu tăng gốc; thêm quãng 2 vào từng loại; êm và gắt; nốt thêm ở bè trầm.' },
+        { slug: 'persichetti-hop-am-quang-2', focus: 'Bốn loại ba nốt; tăng đôi và âm nghịch; cụm âm, khung hai bè ngoài, đa cụm âm.' },
+        { slug: 'persichetti-hop-am-chong', focus: 'Độ vang theo lớp dưới; bảng theo vòng quãng 5; đối hợp âm; ba lớp trở lên.' },
+        { slug: 'persichetti-hop-am-ghep-soi-guong', focus: 'Hợp âm ghép, kim tự tháp, hợp âm hoà nhập; soi gương, thang phản chiếu, gương bàn phím.' },
+      ], exercises: ['Viết tám ô đi lần lượt qua hợp âm quãng 3, quãng 4, thêm nốt và quãng 2, giữ một giai điệu chung ở bè trên.', 'Dựng bảng hợp âm chồng trưởng – trưởng trên lớp dưới Đô trưởng sáu – bốn và đánh dấu năm hợp âm vang nhất theo tai bạn.'] },
+      { title: 'Chuyển động', intro: 'Hướng của tiến trình, cách nối, nghịch âm, song song, kết; thời gian và cường độ; trang trí và biến đổi.', chapters: [
+        { slug: 'persichetti-huong-hoa-am', focus: 'Quãng âm gốc; nối hợp âm cho tươi; nghịch âm tương đối; song song; quãng 5 liên tiếp; kết lừa theo vòng.' },
+        { slug: 'persichetti-thoi-gian-cuong-do', focus: 'Nhịp điệu hoà âm; đa nhịp, isorhythm; hoà âm bộ gõ; toàn diatonic; cường độ, dấu lặng.' },
+        { slug: 'persichetti-trang-tri-bien-doi', focus: 'Âm trang trí từ thang trên gốc; mở rộng; biến âm, quan hệ chéo; pedal, ostinato; đồng âm.' },
+      ], exercises: ['Viết một chuỗi song song tám hợp âm rồi làm mới nó bằng bốn thủ pháp khác nhau.', 'Viết hai kết lừa: một trong vòng quãng 3, một trong vòng quãng 2.'] },
+      { title: 'Tổ chức điệu tính và tổng hợp', intro: 'Trung tâm giọng từ điệu tính tới phi điệu tính, đa điệu tính, hoà âm chuỗi; rồi nghệ thuật phối các lối viết trong một tác phẩm.', chapters: [
+        { slug: 'persichetti-trung-tam-giong', focus: 'Các cách xác lập trung tâm; chuyển giọng; đa điệu tính theo vòng quãng 5; chuỗi tự do với hợp âm trung tâm.' },
+        { slug: 'persichetti-tong-hop', focus: 'Chuyển giữa các kết cấu bằng đảo quãng đặc trưng; chủ đề; hình thức và phong cách.' },
+      ], exercises: ['Viết một đoạn song điệu tính Đô / Fa♯ cho piano bốn tay, mỗi tay giữ một thang rõ.', 'Viết một bản ngắn (24 – 32 ô) đi qua ít nhất bốn loại kết cấu hoà âm, ghi rõ thủ pháp chuyển ở mỗi chỗ nối.'] },
+    ],
+  },
+  {
     id: 'hoa-am-co-dien',
     title: 'Hoà Âm Cổ Điển',
     volume: 'Trường phái Nga – Xô viết',
