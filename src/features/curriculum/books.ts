@@ -1064,6 +1064,35 @@ Cuối mỗi chương, người biên soạn thêm **Tư liệu trong thư việ
     ],
   },
   {
+    id: 'tieu-luan-scriabin-sonata-2',
+    title: 'Thủ Pháp Hoà Âm Trong Sonata Số 2 Của Scriabin',
+    volume: 'Tiểu luận',
+    subtitle: 'Tiểu luận phân tích hoà âm Sonata số 2 Sol♯ thứ Op. 19 "Sonate-Fantaisie" — sonata chuyển tiếp của Scriabin — từng ô hai chương, bằng hệ ký hiệu chức năng Nga – Xô viết.',
+    author: 'Lamar',
+    audience: 'Sinh viên nhạc viện đã học hoà âm và phân tích tác phẩm',
+    hue: 280,
+    glyph: '𝄐',
+    preface: `
+Cuốn sách là một **tiểu luận** theo khung của các nhạc viện: Mở đầu (lý do chọn đề tài, lịch sử nghiên cứu, phương pháp, đối tượng và phạm vi), Nội dung (cơ sở lý thuyết, phân tích hoà âm có giải thích, tổng hợp thủ pháp, đối chiếu), Kết luận, Tài liệu tham khảo và Phụ lục.
+
+Toàn bộ phân tích dùng **hệ ký hiệu chức năng Nga – Xô viết** (T – S – D, K64, D65, SII7, DVII7, DD, D→x…), có bảng đối chiếu với số La Mã phương Tây ở chương Cơ sở lý thuyết. Ví dụ nhạc là ảnh cắt từ bản in đầu Belaieff 1898.
+`,
+    parts: [
+      { title: 'I. Mở đầu', intro: 'Lý do chọn đề tài, lịch sử nghiên cứu, phương pháp, đối tượng và phạm vi, bố cục.', chapters: [
+        { slug: 'phan-tich-scriabin-sonata-so-2', focus: 'Sonata chuyển tiếp; các công trình đi trước chia theo thời kỳ, chung và riêng.' },
+      ], exercises: [] },
+      { title: 'II. Nội dung', intro: 'Cơ sở lý thuyết, phân tích hoà âm hai chương, tổng hợp thủ pháp và đối chiếu.', chapters: [
+        { slug: 'scriabin-op19-co-so-ly-thuyet', focus: 'Mục 1: hình thức sonata, hệ ký hiệu, lý thuyết hoà âm.' },
+        { slug: 'scriabin-op19-chuong-1', focus: 'Mục 2.1: chương I Andante, từng ô.' },
+        { slug: 'scriabin-op19-chuong-2', focus: 'Mục 2.2: chương II Presto, từng ô.' },
+        { slug: 'scriabin-op19-thu-phap', focus: 'Mục 3 – 4: mười một thủ pháp; đối chiếu với Cha Min-hee.' },
+      ], exercises: ['Lập bảng chức năng (ký hiệu Nga) cho ô 1–16 chương II, so với bảng trong sách.', 'Tìm trong Op. 19 ba chỗ hợp âm 6 tăng được viết trùng âm thành D7 và giải thích chức năng mỗi lần.'] },
+      { title: 'III. Kết luận', intro: 'Kết luận, tài liệu tham khảo, phụ lục.', chapters: [
+        { slug: 'scriabin-op19-ket-luan', focus: 'Tính chuyển tiếp nằm ở hoà âm; tài liệu tham khảo; tự kiểm.' },
+      ], exercises: [] },
+    ],
+  },
+  {
     id: 'neuhaus',
     title: 'Nghệ Thuật Chơi Piano',
     volume: 'Heinrich Neuhaus',

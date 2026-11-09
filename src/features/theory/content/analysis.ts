@@ -1520,6 +1520,23 @@ Những công trình trên giúp ích cho chúng tôi rất nhiều: nhóm A cho
 ### 5. Bố cục tiểu luận
 Ngoài Mở đầu, Kết luận, Tài liệu tham khảo và Phụ lục, phần Nội dung gồm bốn mục: **Mục 1** — cơ sở lý thuyết; **Mục 2** — phân tích hoà âm hai chương có giải thích; **Mục 3** — tổng hợp các thủ pháp hoà âm; **Mục 4** — đối chiếu với luận văn của Cha Min-hee.
 
+### Các chương của tiểu luận
+- [[scriabin-op19-co-so-ly-thuyet]]
+- [[scriabin-op19-chuong-1]]
+- [[scriabin-op19-chuong-2]]
+- [[scriabin-op19-thu-phap]]
+- [[scriabin-op19-ket-luan]]
+
+`,
+  },
+  {
+    slug: 'scriabin-op19-co-so-ly-thuyet',
+    title: 'Scriabin Op. 19 — Mục 1: Cơ sở lý thuyết',
+    category: 'analysis',
+    summary: 'Cơ sở lý thuyết của tiểu luận: liên khúc sonata, hình thức sonata, sonata tự do, rondo – sonata; hệ ký hiệu hoà âm Nga – Xô viết và phương Tây (bảng đối chiếu); hoà âm chức năng, kết tránh, ly điệu, chuyển giọng trùng âm, hoà âm mới; bối cảnh Sonata số 2.',
+    body: `
+::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
+
 ## II. Nội dung — Mục 1: Cơ sở lý thuyết
 ### 1.1. Liên khúc sonata, hình thức sonata, sonata tự do, rondo – sonata
 - **Liên khúc sonata** (сонатный цикл) là chuỗi chương tương phản về tốc độ và tính chất, thường ba hoặc bốn chương, chương đầu viết theo hình thức sonata. Lý thuyết này được hệ thống trong các giáo trình hình thức Xô viết: I. Sposobin, *Музыкальная форма* (1947, nhiều lần in lại); L. Mazel và V. Zukkerman, *Анализ музыкальных произведений* (1967); Yu. Tyulin, T. Bershadskaya, I. Pustylnik, *Музыкальная форма* (1974); và ở Việt Nam là giáo trình phân tích tác phẩm của Nguyễn Thị Nhung (2006). Xem [[ptam-sonata]] và [[hinh-thuc-sonata]].
@@ -1573,6 +1590,17 @@ Wikipedia dẫn một chương trình về biển, theo Leikin là do người v
 **Văn bản và cách đọc:**
 - **Văn bản**: bản in đầu Belaieff 1898 (IMSLP). Mọi số ô và tên nốt trong bài đều đọc trên bản này. Người biên soạn tự đếm và được **136 + 110 ô**. Các mốc hình thức khớp đúng bảng Wikipedia dẫn Leikin.
 - **Kiểm cao độ**: đối chiếu với MIDI một bản biểu diễn trong bộ MAESTRO v3. MIDI là tiếng đàn thật nên có thể lẫn nốt chơi sai và tiếng pedal nhoè; chỗ nào hai nguồn khác nhau thì theo **bản phổ**. Ví dụ ô 41 chương II, MIDI có E♮ nhưng bản in là E♭.
+
+Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
+`,
+  },
+  {
+    slug: 'scriabin-op19-chuong-1',
+    title: 'Scriabin Op. 19 — Mục 2.1: Phân tích hoà âm chương I (Andante)',
+    category: 'analysis',
+    summary: 'Phân tích hoà âm từng ô chương I Sonata số 2 của Scriabin bằng ký hiệu Nga – Xô viết: trình bày ở Si trưởng, phát triển, tái hiện ở Mi trưởng.',
+    body: `
+::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
 
 ## II. Nội dung — Mục 2: Phân tích hoà âm có giải thích
 Mỗi bảng ghi theo từng ô: **hợp âm** (tên âm thanh và bè trầm, kèm ký hiệu chức năng theo giọng đang xét), **chức năng** (T – S – D), và **thủ pháp** đáng chú ý. Ảnh cắt từ bản Belaieff 1898 đặt ngay trên bảng tương ứng.
@@ -1721,6 +1749,17 @@ Mỗi bảng ghi theo từng ô: **hợp âm** (tên âm thanh và bè trầm, k
 |---|---|---|
 | 128–136 | Coda trên pedal E1: T – TSVI7 (C♯m7/E) – T thêm 6/9 – màu plagal (A); ô 135–136 motif mở đầu ở Mi trưởng: E–B rỗng → E/G♯ có nốt hoa mỹ C♯; smorz., fermata | Kết ở **Mi trưởng** |
 Phần tái hiện và coda được ghi theo đoạn vì là dịch giọng của phần trình bày; độ chi tiết ở đây thấp hơn bảng ô 1–45.
+
+Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
+`,
+  },
+  {
+    slug: 'scriabin-op19-chuong-2',
+    title: 'Scriabin Op. 19 — Mục 2.2: Phân tích hoà âm chương II (Presto)',
+    category: 'analysis',
+    summary: 'Phân tích hoà âm từng ô chương II Sonata số 2 của Scriabin bằng ký hiệu Nga – Xô viết: đoạn A, đoạn B qua Mi♭ thứ – Si♭ thứ – Si trưởng – Rê♭ trưởng, A′ và coda.',
+    body: `
+::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
 
 ## Mục 2.2: Chương II — Presto (110 ô)
 Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay phải chạy móc đơn liên tục. Đoạn B có giai điệu nốt dài ("ben marcato il canto"). Một hình giai điệu **3 – 2 – 1 – 7 – 1** của đoạn B đi qua năm giọng: Mi♭ thứ, Si♭ thứ, Rê♭ trưởng, Đô♯ thứ, rồi về Sol♯ thứ ở coda.
@@ -1898,6 +1937,17 @@ Kết cấu: tay trái đánh quãng 8 nốt đen hoặc rải móc đơn, tay p
 
 ::grand Gb4+Bb4+Db5+Fb5/Gb2=G♭7_(ô_52) F#4+B4+D#5+G#5/F#2=Si:_T64_(ô_53) | Chuyển giọng trùng âm ở ô 52–53: G♭7 (DDVII65♭3 của Si♭ thứ) được hiểu thành F♯7 = D7 của Si; bè trầm G♭ = F♯ đứng yên, phía trên vào hợp âm Si trưởng
 
+Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
+`,
+  },
+  {
+    slug: 'scriabin-op19-thu-phap',
+    title: 'Scriabin Op. 19 — Mục 3 – 4: Thủ pháp hoà âm và đối chiếu',
+    category: 'analysis',
+    summary: 'Tổng hợp mười một thủ pháp hoà âm của Sonata số 2 Scriabin và đối chiếu với luận văn của Cha Min-hee (2015).',
+    body: `
+::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
+
 ## Mục 3: Tổng hợp các thủ pháp hoà âm trong Op. 19
 1. **Pedal và chồng chức năng.** Nhiều đoạn dài đứng trên một bè trầm: pedal chủ (chương I ô 3–6, 46–57, 122–136), pedal át (chương I ô 79–86; chương II ô 45–46, 59–60, 75–78, 95–101). Trên pedal là hợp âm của chức năng khác: S trên T, T trên D, Napoli trên D (chương II ô 55). Xem [[bass-ngan]].
 2. **Hợp âm 6 tăng và họ hàng trùng âm của nó.** Có DDVII6♭3 (I ô 5–6), DD43♭5 thể đảo (I ô 10), DDVII65♭3 (II ô 6, 14, 30, 72, 93–100), DD43♭5 ở cao trào (II ô 44). DDVII65♭3 thường **viết lại thành át 7**: E7 ↔ E–G♯–B–C𝄪 (II ô 21 ↔ 14, ô 71 ↔ 72), G♭7 ↔ F♯7 (II ô 52–53). Cũng có quãng 6 tăng đảo thành **quãng 3 giảm** ở bè trầm (B–G𝄪, ô 6). Xem [[hop-am-sau-tang]].
@@ -1934,6 +1984,17 @@ Luận văn thạc sĩ ĐH Chosun (người hướng dẫn: Kim Ji-hyun) dùng b
 - **Đoạn B chương II**: bảng của Cha ghi c (Mi♭ thứ) 41–52, d (Si♭ thứ – Si) 53–62, c′ (Đô – Si♭ thứ – Đô♯ thứ – Sol♯ thứ) 63–78. Trên bản Belaieff, ô 49–52 đã ở Si♭ thứ (hoá biểu năm giáng), ô 53–58 là Si trưởng trên pedal F♯, ô 59–62 Si♭ thứ, ô 63–66 Rê♭ trưởng (vẫn năm giáng, giai điệu F–E♭–D♭–C–D♭), không phải Đô.
 - **Lỗi in trong luận văn**: các bảng và chú thích ví dụ ghi "Op. 12" thay vì Op. 19. Bảng 2 ghi chương I "86–136", A′ "79–109". Nhịp chương II ghi 3/4, trong khi bản Belaieff ghi 3/2.
 - Kết luận của Cha cho rằng hợp âm quãng 4, quãng 5 dày đặc là "điềm báo của hợp âm huyền bí" *(tr. 25, 42)*. Đây là nhận định của tác giả, không kèm phân tích cấu trúc hợp âm. Bài này không lấy làm căn cứ.
+
+Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
+`,
+  },
+  {
+    slug: 'scriabin-op19-ket-luan',
+    title: 'Scriabin Op. 19 — Kết luận, tài liệu tham khảo, phụ lục',
+    category: 'analysis',
+    summary: 'Kết luận tiểu luận về thủ pháp hoà âm Sonata số 2 Scriabin, tóm tắt theo LaRue, tài liệu tham khảo và phụ lục.',
+    body: `
+::wiki Alexander_Scriabin | Alexander Scriabin (1872–1915)
 
 ## III. Kết luận
 Phân tích từng ô cho thấy Sonata số 2 đúng là một tác phẩm **chuyển tiếp**, và tính chuyển tiếp ấy nằm chủ yếu ở hoà âm:
@@ -1988,6 +2049,8 @@ Các mục 5, 15 và năm của mục 2 chưa đối chiếu với bản gốc; 
 - So sánh ô 14 với ô 21 và ô 71 với ô 72: cùng một hợp âm trên phím đàn, nhưng mỗi lần mang một chức năng khác.
 - Chương I: giữ các dấu ngân ở ô 1–2 và ô 11–12 thật lâu. Chất "rỗng" của quãng 5 không có quãng 3 là màu chủ đạo của chương.
 - Đọc thêm [[phan-tich-hoa-am]] và [[phuong-phap-phan-tich-tac-pham]] về cách lập bảng phân tích từng ô.
+
+Chương trước – sau: xem mục lục ở [[phan-tich-scriabin-sonata-so-2]].
 `,
   },
 
