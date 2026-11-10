@@ -97,6 +97,8 @@ export function ScoreSvg({ voices, meter, keySig, total, below = [], above = [],
   const attacks = new Map<string, { step: number; up: boolean }>()
   voices.forEach((v) => v.segs.forEach((s) => attacks.set(`${s.start}|${v.up}`, { step: s.p.step, up: v.up })))
   voices.forEach((v, vi) => {
+    // an accidental holds to the end of its bar (per voice, per staff position)
+    const shown = new Map<string, number>()
     v.segs.forEach((s, i) => {
       const si = sysOf(s.start)
       const oy = si * SYS_H
@@ -127,7 +129,9 @@ export function ScoreSvg({ voices, meter, keySig, total, below = [], above = [],
         els.push(<line key={`s${vi}${i}`} x1={sx} x2={sx} y1={y} y2={v.up ? y - 27 : y + 27} className={`${cls}-stem`} />)
       }
       if (s.dur === 3 || s.dur === 6) els.push(<circle key={`d${vi}${i}`} cx={x + 9} cy={y - (((s.p.step - bottomStep) % 2) === 0 ? 2.5 : 0)} r={1.7} className={`${cls}-fill`} />)
-      const want = sigAlter(keySig, letterOf(s.p))
+      const pos = `${Math.floor(s.start / B)}|${s.p.step}`
+      const want = shown.get(pos) ?? sigAlter(keySig, letterOf(s.p))
+      shown.set(pos, s.p.alter)
       if (s.p.alter !== want && !s.tied) {
         const g = s.p.alter > 0 ? '♯' : s.p.alter < 0 ? '♭' : '♮'
         els.push(<text key={`a${vi}${i}`} x={x - 16} y={y + 4.5} fontSize={14} className={cls}>{g}</text>)

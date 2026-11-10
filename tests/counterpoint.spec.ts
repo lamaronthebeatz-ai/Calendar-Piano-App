@@ -50,3 +50,16 @@ test('sinh đề có lời giải, luyện từng nốt với gợi ý', async (
   await ok.click()
   await expect(page.locator('.cp-live p')).toContainText('✓')
 })
+
+test('nhập nốt thăng / giáng / bình cho nốt kế tiếp', async ({ page }) => {
+  await page.goto('/#/counterpoint')
+  await page.getByRole('button', { name: 'Xoá hết' }).click()
+  const fa4 = page.locator('.cp-key').filter({ hasText: 'Fa' }).filter({ hasText: '4' })
+  await page.getByTitle('Thăng cho nốt kế tiếp').click()
+  await fa4.click()
+  await fa4.click()
+  await page.getByTitle('Giáng cho nốt kế tiếp').click()
+  await page.locator('.cp-key').filter({ hasText: 'Si' }).filter({ hasText: '4' }).click()
+  await expect(page.locator('.cp-hint')).toHaveText('Fa♯4 · Fa4 · Si♭4')
+  await expect(page.locator('.cp-card svg text').filter({ hasText: '♮' })).toHaveCount(1)
+})

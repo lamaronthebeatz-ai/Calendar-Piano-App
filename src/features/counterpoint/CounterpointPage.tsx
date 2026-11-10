@@ -96,11 +96,12 @@ const DUR_BTNS: { d: number; label: string; glyph: string }[] = [
 ]
 
 /** Append a note, splitting it across bar lines into tied segments. */
-function appendNote(segs: Seg[], step: number, key: Key, dur: number, tie: boolean, B: number): Seg[] {
+function appendNote(segs: Seg[], step: number, key: Key, dur: number, tie: boolean, B: number, acc: number | null): Seg[] {
   const out = segs.slice()
   let t = out.length ? out[out.length - 1].start + out[out.length - 1].dur : 0
   const last = out[out.length - 1]
-  const p = tie && last ? last.p : inKey(key, step)
+  // an accidental is absolute: ♮ means alter 0 even where the key signature has a sharp or flat
+  const p = tie && last ? last.p : acc === null ? inKey(key, step) : pitch(step, acc)
   let left = dur
   let tied = tie && !!last
   while (left > 0) {
@@ -167,6 +168,7 @@ export function CounterpointPage() {
   const [st, setSt] = useState<Saved>(load)
   const [dur, setDur] = useState(2)
   const [tie, setTie] = useState(false)
+  const [acc, setAcc] = useState<number | null>(null)
   const [editing, setEditing] = useState<'given' | 'mine'>('given')
   const [busy, setBusy] = useState<Req['kind'] | null>(null)
   const [result, setResult] = useState<SolveResult | null>(null)
@@ -390,6 +392,12 @@ export function CounterpointPage() {
               <span>⁀</span>
               <small>Nối</small>
             </button>
+            {([[1, '♯', 'Thăng'], [-1, '♭', 'Giáng'], [0, '♮', 'Bình']] as const).map(([a, g, label]) => (
+              <button key={a} className={clsx(acc === a && 'is-on')} onClick={() => setAcc((x) => (x === a ? null : a))} title={`${label} cho nốt kế tiếp`} aria-pressed={acc === a}>
+                <span>{g}</span>
+                <small>{label}</small>
+              </button>
+            ))}
           </div>
           <div className="cp-kb" aria-label="Phím đàn: bấm để thêm nốt">
             {keys.map((s) => (
@@ -397,8 +405,9 @@ export function CounterpointPage() {
                 key={s}
                 className={clsx('cp-key', letterOf(pitch(s)) === 0 && 'is-c')}
                 onClick={() => {
-                  setEditSegs(appendNote(editSegs, s, key, dur, tie, B))
+                  setEditSegs(appendNote(editSegs, s, key, dur, tie, B, acc))
                   setTie(false)
+                  setAcc(null)
                 }}
               >
                 <b>{SOLFA[letterOf(pitch(s))]}</b>
