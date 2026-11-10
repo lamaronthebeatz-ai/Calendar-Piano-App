@@ -9,7 +9,8 @@ import {
   type Key, type Meter, type Motion, type Seg, type Version,
 } from './model'
 import { check, RULES, totalOf, versionsOf, type Problem, type Report, type VersionSpec, type Violation } from './rules'
-import type { SolveResult } from './solver'
+import type { Generated, Hint, Level, Rescue, Solution, SolveResult } from './solver'
+import type { Req } from './solver.worker'
 import { ScoreSvg, type Mark } from './ScoreSvg'
 import './counterpoint.css'
 
@@ -39,7 +40,14 @@ const PRESETS: { label: string; v: VersionSpec }[] = [
 ]
 const MOTIONS: [Motion, string][] = [['swap', 'chuyển chỗ'], ['near', 'chuyển gần'], ['far', 'chuyển xa']]
 
-type Saved = { keyIdx: number; meterIdx: number; givenIs: 'I' | 'II'; given: Seg[]; stars: number[]; versions: VersionSpec[]; quarterPrep: boolean; mine: Seg[] }
+/** `origin`: a teacher's đề (the app never alters it; `locked` also stops the editor) or one the generator made (free to
+ *  edit; its `answer` is shown only while the đề is still exactly as generated, checked by `answerSig`). */
+type Saved = {
+  keyIdx: number; meterIdx: number; givenIs: 'I' | 'II'; given: Seg[]; stars: number[]; versions: VersionSpec[]; quarterPrep: boolean; mine: Seg[]
+  origin: 'teacher' | 'gen'; locked: boolean; answer: Seg[] | null; answerSig: string
+}
+const sigOf = (s: Saved) => JSON.stringify([s.keyIdx, s.meterIdx, s.givenIs, s.given, s.stars, s.versions])
+const LEVELS: [Level, string][] = [['de', 'Dễ'], ['vua', 'Vừa'], ['kho', 'Khó']]
 
 /** The exercise Lamar brought (Iv = −7 with two variants): the đề in the lower voice, five ✱. */
 function example(): Saved {
@@ -64,6 +72,10 @@ function example(): Saved {
     versions: [PRESETS[0].v, { shift: { I: -4, II: -3 }, motion: 'swap', label: 'BT1' }, { shift: { I: -5, II: -2 }, motion: 'swap', label: 'BT2' }],
     quarterPrep: false,
     mine: [],
+    origin: 'teacher',
+    locked: false,
+    answer: null,
+    answerSig: '',
   }
 }
 const STORE = 'counterpoint:v1'
@@ -160,8 +172,11 @@ export function CounterpointPage() {
   const [dur, setDur] = useState(2)
   const [tie, setTie] = useState(false)
   const [editing, setEditing] = useState<'given' | 'mine'>('given')
-  const [busy, setBusy] = useState(false)
+  const [busy, setBusy] = useState<Req['kind'] | null>(null)
   const [result, setResult] = useState<SolveResult | null>(null)
+  const [rescued, setRescued] = useState<Rescue | null>(null)
+  const [hintList, setHintList] = useState<Hint[] | null>(null)
+  const [showAnswer, setShowAnswer] = useState(false)
   const [pick, setPick] = useState(0)
   const [graded, setGraded] = useState<Report | null>(null)
   const [playing, setPlaying] = useState<string | null>(null)
@@ -196,31 +211,63 @@ export function CounterpointPage() {
   const total = st.given.length ? totalOf(problem) : 0
   const bars = Math.ceil(total / B)
   const editSegs = editing === 'given' ? st.given : st.mine
+  const locked = st.locked && editing === 'given'
   const setEditSegs = (segs: Seg[]) => {
+    if (locked) return
     setResult(null)
+    setRescued(null)
+    setHintList(null)
     setGraded(null)
-    setSt((s) => (editing === 'given' ? { ...s, given: segs, stars: s.stars.filter((t) => t < (segs.length ? segs[segs.length - 1].start + segs[segs.length - 1].dur : 0)) } : { ...s, mine: segs }))
+    setSt((s) => (editing === 'given' ? { ...s, given: segs, ...(segs.length ? {} : { origin: 'teacher' as const, answer: null }), stars: s.stars.filter((t) => t < (segs.length ? segs[segs.length - 1].start + segs[segs.length - 1].dur : 0)) } : { ...s, mine: segs }))
+  }
+
+  /** One search at a time, in a fresh worker (terminating it is the only way to stop a search mid-way). */
+  const run = <T,>(req: Req, done: (r: T) => void) => {
+    worker.current?.terminate()
+    const w = new Worker(new URL('./solver.worker.ts', import.meta.url), { type: 'module' })
+    worker.current = w
+    setBusy(req.kind)
+    w.onmessage = (e: MessageEvent<T>) => {
+      done(e.data)
+      setBusy(null)
+      w.terminate()
+      worker.current = null
+    }
+    w.postMessage(req)
   }
 
   const solve = () => {
     if (!st.given.length) return
-    worker.current?.terminate()
-    const w = new Worker(new URL('./solver.worker.ts', import.meta.url), { type: 'module' })
-    worker.current = w
-    setBusy(true)
     setResult(null)
+    setRescued(null)
     setGraded(null)
     setPick(0)
-    w.onmessage = (e: MessageEvent<SolveResult>) => {
-      setResult(e.data)
-      setBusy(false)
-      w.terminate()
-      worker.current = null
-    }
-    w.postMessage({ problem, timeMs: 7000 })
+    run<SolveResult>({ kind: 'solve', problem, timeMs: 7000 }, setResult)
   }
+  const findRescue = () => run<Rescue>({ kind: 'rescue', problem, timeMs: 9000 }, (r) => {
+    setRescued(r)
+    setPick(0)
+  })
+  const askHints = () => run<Hint[]>({ kind: 'hints', problem, prefix: st.mine, timeMs: 3500 }, setHintList)
+  const makeExercise = (level: Level) =>
+    run<Generated | null>({ kind: 'generate', level, seed: 0, timeMs: 6000 }, (g) => {
+      if (!g) return
+      const keyIdx = KEYS.findIndex((k) => JSON.stringify(k.key) === JSON.stringify(g.key))
+      const meterIdx = METERS.findIndex((m) => m.num === g.meter.num)
+      const next: Saved = { ...st, keyIdx, meterIdx, givenIs: g.givenIs, given: g.given, stars: g.stars, versions: g.versions, quarterPrep: false, mine: [], origin: 'gen', locked: false, answer: g.answer.cp, answerSig: '' }
+      setSt({ ...next, answerSig: sigOf(next) })
+      setResult(null)
+      setRescued(null)
+      setHintList(null)
+      setGraded(null)
+      setShowAnswer(false)
+      setEditing('mine')
+    })
 
   const grade = () => setGraded(check(problem, st.mine, Infinity))
+  const mineEnd = st.mine.length ? st.mine[st.mine.length - 1].start + st.mine[st.mine.length - 1].dur : 0
+  const live = useMemo(() => (st.mine.length && st.given.length ? check(problem, st.mine, mineEnd) : null), [problem, st.mine, mineEnd, st.given.length])
+  const answerOk = st.origin === 'gen' && !!st.answer && st.answerSig === sigOf(st)
 
   const play = (id: string, v: Version) => {
     if (playing === id) {
@@ -256,7 +303,7 @@ export function CounterpointPage() {
           <ArrowLeftIcon width={18} height={18} />
         </button>
         <h1>Giải phức điệu</h1>
-        <button className="cp-ghost" onClick={() => setSt(example())}>Bài mẫu</button>
+        <button className="cp-ghost" onClick={() => setSt(example())} disabled={st.locked}>Bài mẫu</button>
       </div>
 
       <div className="cp-body" ref={boxRef}>
@@ -265,23 +312,33 @@ export function CounterpointPage() {
           <Link to="/curriculum/phuc-dieu-nghiem-khac">Phức điệu nghiêm khắc</Link> ở cả nguyên thể lẫn biến thể — hoặc chứng minh là không có lời giải và chỉ ra chỗ bế tắc.
         </p>
 
+        <div className="cp-card cp-gen">
+          <h2>Sinh đề luyện tập</h2>
+          <p className="cp-note">Máy viết bè đề theo cùng luật giai điệu, đặt ✱ ở chỗ có thể nghịch, rồi tự giải trước — đề nào đưa ra cũng chắc chắn có lời giải. Đề máy sinh được sửa thoải mái.</p>
+          <div className="cp-presets">
+            {LEVELS.map(([lv, label]) => (
+              <button key={lv} onClick={() => makeExercise(lv)} disabled={!!busy || st.locked}>{busy === 'generate' ? 'Đang soạn…' : label}</button>
+            ))}
+          </div>
+        </div>
+
         {/* settings */}
         <div className="cp-row">
           <label>
             Nhịp
-            <select value={st.meterIdx} onChange={(e) => setSt((s) => ({ ...s, meterIdx: +e.target.value, given: [], stars: [], mine: [] }))}>
+            <select value={st.meterIdx} disabled={st.locked} onChange={(e) => setSt((s) => ({ ...s, meterIdx: +e.target.value, given: [], stars: [], mine: [], origin: 'teacher', answer: null }))}>
               {METERS.map((m, i) => <option key={i} value={i}>{m.num}/{m.den}</option>)}
             </select>
           </label>
           <label>
             Giọng
-            <select value={st.keyIdx} onChange={(e) => setSt((s) => ({ ...s, keyIdx: +e.target.value }))}>
+            <select value={st.keyIdx} disabled={st.locked} onChange={(e) => setSt((s) => ({ ...s, keyIdx: +e.target.value }))}>
               {KEYS.map((k, i) => <option key={i} value={i}>{k.label}</option>)}
             </select>
           </label>
           <label>
             Đề là
-            <select value={st.givenIs} onChange={(e) => setSt((s) => ({ ...s, givenIs: e.target.value as 'I' | 'II' }))}>
+            <select value={st.givenIs} disabled={st.locked} onChange={(e) => setSt((s) => ({ ...s, givenIs: e.target.value as 'I' | 'II' }))}>
               <option value="II">bè dưới (II)</option>
               <option value="I">bè trên (I)</option>
             </select>
@@ -292,7 +349,17 @@ export function CounterpointPage() {
         <div className="cp-card">
           <div className="cp-tabs">
             <button className={clsx(editing === 'given' && 'is-on')} onClick={() => setEditing('given')}>Bè đề</button>
-            <button className={clsx(editing === 'mine' && 'is-on')} onClick={() => setEditing('mine')}>Bài của tôi (để chấm)</button>
+            <button className={clsx(editing === 'mine' && 'is-on')} onClick={() => setEditing('mine')}>Bài của tôi</button>
+          </div>
+          <div className="cp-origin">
+            {st.origin === 'gen' ? (
+              <span>Đề máy sinh · sửa tự do</span>
+            ) : (
+              <label className="cp-check">
+                <input type="checkbox" checked={st.locked} onChange={(e) => setSt((s) => ({ ...s, locked: e.target.checked }))} disabled={!st.given.length} />
+                Khoá đề của thầy (máy không sửa nốt, ✱, giọng, nhịp hay biến thể)
+              </label>
+            )}
           </div>
           <ScoreSvg
             voices={editing === 'given' ? [{ segs: st.given, up: st.givenIs === 'I' }] : [{ segs: st.given, up: st.givenIs === 'I', muted: true }, { segs: st.mine, up: st.givenIs === 'II' }]}
@@ -302,6 +369,7 @@ export function CounterpointPage() {
             above={stars}
             width={width}
           />
+          {!locked && (<>
           <div className="cp-durs" role="radiogroup" aria-label="Trường độ">
             {DUR_BTNS.filter((d) => d.d <= B).map((d) => (
               <button key={d.d} role="radio" aria-checked={dur === d.d} className={clsx(dur === d.d && 'is-on')} onClick={() => setDur(d.d)} title={d.label}>
@@ -345,6 +413,42 @@ export function CounterpointPage() {
             <button onClick={() => setEditSegs([])} disabled={!editSegs.length}>Xoá hết</button>
             <span className="cp-hint">{editSegs.length ? `${notesOf(editSegs).map((n) => pitchName(n.p)).join(' · ')}` : 'Chọn trường độ rồi bấm phím'}</span>
           </div>
+          </>)}
+          {editing === 'mine' && st.given.length > 0 && (
+            <div className="cp-live">
+              <p className={clsx(live?.hard.length && 'is-bad')}>
+                {!live
+                  ? 'Viết từng nốt: máy kiểm luật ngay sau mỗi nốt, ở mọi biến thể.'
+                  : live.hard.length
+                    ? `✗ ${place(meter, live.hard[0].t)} (${live.hard[0].version}) · ${RULES[live.hard[0].rule].text}${live.hard[0].detail ? ` — ${live.hard[0].detail}` : ''}`
+                    : mineEnd >= total
+                      ? '✓ Xong — đúng mọi luật bắt buộc.'
+                      : `✓ Đúng luật tới ${place(meter, mineEnd)}.`}
+              </p>
+              {mineEnd < total && !live?.hard.length && (
+                <button className="cp-ghost" onClick={askHints} disabled={!!busy}>{busy === 'hints' ? 'Đang tính…' : 'Gợi ý nốt tiếp'}</button>
+              )}
+              {hintList && (
+                <div className="cp-hints">
+                  {hintList.length === 0 && <span>Không còn nốt nào hợp luật ở đây — xoá bớt nốt cuối.</span>}
+                  {hintList.map((h, i) => (
+                    <button
+                      key={i}
+                      className={`is-${h.status}`}
+                      disabled={h.status === 'dead'}
+                      title={h.status === 'ok' ? 'Đi tiếp được tới lời giải' : h.status === 'dead' ? 'Hợp luật lúc này nhưng chắc chắn bế tắc về sau' : 'Chưa kịp xét hết'}
+                      onClick={() => {
+                        setEditSegs([...st.mine, h.seg])
+                      }}
+                    >
+                      {h.seg.tied ? '⁀ ' : ''}
+                      {pitchName(h.seg.p)} <small>{DUR_BTNS.find((d) => d.d === h.seg.dur)?.label ?? h.seg.dur}</small>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
           {editing === 'given' && bars > 0 && (
             <div className="cp-stars">
               <span>✱ ở đầu ô:</span>
@@ -352,6 +456,7 @@ export function CounterpointPage() {
                 <button
                   key={b}
                   className={clsx(st.stars.includes(b * B) && 'is-on')}
+                  disabled={st.locked}
                   onClick={() => setSt((s) => ({ ...s, stars: s.stars.includes(b * B) ? s.stars.filter((x) => x !== b * B) : [...s.stars, b * B].sort((x, y) => x - y) }))}
                 >
                   {b + 1}
@@ -371,10 +476,11 @@ export function CounterpointPage() {
                 <span>
                   I = {v.shift.I}, II = {v.shift.II} · Iv = {ivOf(v.shift)} · {MOTIONS.find((m) => m[0] === v.motion)?.[1]}
                 </span>
-                <button aria-label="Bỏ biến thể" onClick={() => setSt((s) => ({ ...s, versions: s.versions.filter((_, k) => k !== i) }))}>×</button>
+                <button aria-label="Bỏ biến thể" disabled={st.locked} onClick={() => setSt((s) => ({ ...s, versions: s.versions.filter((_, k) => k !== i) }))}>×</button>
               </li>
             ))}
           </ul>
+          {!st.locked && (<>
           <div className="cp-presets">
             {PRESETS.map((pr) => (
               <button key={pr.label} onClick={() => setSt((s) => ({ ...s, versions: [...s.versions, pr.v] }))}>+ {pr.label}</button>
@@ -394,6 +500,7 @@ export function CounterpointPage() {
             </select>
             <button onClick={() => setSt((s) => ({ ...s, versions: [...s.versions, { shift: { I: custom.I, II: custom.II }, motion: custom.motion, label: `BT${s.versions.length}` }] }))}>Thêm</button>
           </div>
+          </>)}
           <p className="cp-note">
             Dấu theo quy ước của sách: bè I đi xuống ghi −, bè II đi lên ghi −; Iv = I + II. Mỗi bè được dời đúng bằng quãng của giọng (Đô xuống 4 bậc = Fa, quãng 5 đúng), nên biến thể có thể sang giọng khác.{' '}
             <Link to="/theory/doi-vi-chuyen-dong-chieu-doc">Đối vị chuyển động chiều dọc</Link>
@@ -405,11 +512,33 @@ export function CounterpointPage() {
         </div>
 
         <div className="cp-actions">
-          <button className="cp-go" onClick={solve} disabled={busy || !st.given.length}>{busy ? 'Đang giải…' : 'Giải'}</button>
+          <button className="cp-go" onClick={solve} disabled={!!busy || !st.given.length}>{busy === 'solve' ? 'Đang giải…' : 'Giải'}</button>
           <button className="cp-ghost" onClick={grade} disabled={!st.mine.length}>Chấm bài của tôi</button>
+          {answerOk && <button className="cp-ghost" onClick={() => setShowAnswer((x) => !x)}>{showAnswer ? 'Ẩn đáp án' : 'Xem đáp án'}</button>}
         </div>
 
-        {result && <Outcome result={result} meter={meter} />}
+        {answerOk && showAnswer && (
+          <div className="cp-card">
+            <h2>Đáp án của máy (một trong nhiều cách)</h2>
+            {versionsOf(problem, st.answer!).map((v, i) => (
+              <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `a${i}`} now={playing === `a${i}` ? now : -1} onPlay={() => play(`a${i}`, v)} />
+            ))}
+          </div>
+        )}
+
+        {result && <Outcome result={result} meter={meter} onRescue={findRescue} busy={busy === 'rescue'} rescued={!!rescued} />}
+
+        {rescued && (
+          <RescueView
+            r={rescued}
+            meter={meter}
+            render={(sol, id) =>
+              versionsOf(problem, sol.cp).map((v, i) => (
+                <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `${id}${i}`} now={playing === `${id}${i}` ? now : -1} onPlay={() => play(`${id}${i}`, v)} bad={sol.report.hard.filter((x) => x.version === v.label)} />
+              ))
+            }
+          />
+        )}
 
         {sol && shown && (
           <div className="cp-card">
@@ -487,7 +616,7 @@ function Remarks({ report, meter, title, hard }: { report: Report; meter: Meter;
   )
 }
 
-function Outcome({ result, meter }: { result: SolveResult; meter: Meter }) {
+function Outcome({ result, meter, onRescue, busy, rescued }: { result: SolveResult; meter: Meter; onRescue: () => void; busy: boolean; rescued: boolean }) {
   if (result.solutions.length) return null
   return (
     <div className="cp-card cp-fail">
@@ -512,7 +641,48 @@ function Outcome({ result, meter }: { result: SolveResult; meter: Meter }) {
           </ul>
         </>
       )}
-      <p className="cp-note">Có thể bỏ một dấu ✱, đổi biến thể, hoặc bật lựa chọn của thầy (nốt đen chuẩn bị) rồi giải lại.</p>
+      {!rescued && (
+        <div className="cp-actions">
+          <button className="cp-go" onClick={onRescue} disabled={busy}>{busy ? 'Đang tìm…' : 'Tìm cách gỡ (giữ nguyên đề)'}</button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+type Option = { id: string; title: string; note: string; sol: Solution; hard: boolean }
+
+/** Ways out of a dead end. The đề itself is never offered back changed: each option keeps it note for note. */
+function RescueView({ r, meter, render }: { r: Rescue; meter: Meter; render: (s: Solution, id: string) => React.ReactNode }) {
+  const [pick, setPick] = useState(0)
+  const opts: Option[] = []
+  for (const x of r.relax) {
+    if (!x.solutions.length) continue
+    const sol = x.solutions[0]
+    if (x.id === 'quarterPrep')
+      opts.push({ id: 'q', title: 'Nốt đen chuẩn bị', sol, hard: false, note: 'Mọi luật của sách đều giữ, trừ một điều: có nốt chuẩn bị là nốt đen. Chỉ dùng nếu thầy chấp nhận.' })
+    else
+      opts.push({ id: `n${x.t}`, title: `✱ ${place(meter, x.t!)} để thuận`, sol, hard: false, note: `Đề giữ nguyên. Riêng ${place(meter, x.t!)} không viết được quãng nghịch đúng luật (lý do ở trên), nên ở đó bè đối vị thuận; mọi chỗ khác đúng luật ở mọi biến thể. Nên hỏi lại thầy chỗ này.` })
+  }
+  if (r.near.length)
+    opts.push({ id: 'f', title: `Ít lỗi nhất (${r.nearFaults})`, sol: r.near[0], hard: true, note: `Đề giữ nguyên, bài phạm ${r.nearFaults} luật bắt buộc — ít nhất máy tìm được. Các lỗi được tô đỏ và kể dưới đây.` })
+  const o = opts[Math.min(pick, opts.length - 1)]
+  return (
+    <div className="cp-card">
+      <h2>Cách gỡ — đề của thầy giữ nguyên</h2>
+      {!o && <p className="cp-note">Không tìm được cách gỡ nào trong thời gian cho phép.</p>}
+      {o && (
+        <>
+          <div className="cp-sols">
+            {opts.map((x, i) => (
+              <button key={x.id} className={clsx(x === o && 'is-on')} onClick={() => setPick(i)}>{x.title}</button>
+            ))}
+          </div>
+          <p className="cp-note">{o.note}</p>
+          {render(o.sol, `r${o.id}`)}
+          <Remarks report={o.sol.report} meter={meter} title={o.hard ? 'Lỗi và ghi chú' : 'Ghi chú (luật mềm, không bắt buộc)'} hard={o.hard} />
+        </>
+      )}
     </div>
   )
 }

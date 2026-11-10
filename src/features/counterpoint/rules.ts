@@ -121,63 +121,12 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
   /* ----- the counterpoint line itself (same in every version) ----- */
   const cpNotes = notesOf(cp)
   const B = barQ(p.meter)
-  for (let i = 0; i < cp.length; i++) {
-    const s = cp[i]
-    if (!placeOk(p.meter, s.start % B, s.dur)) add('seg-place', s.start, 'Nguyên thể')
-    if (s.tied) {
-      const prev = cp[i - 1]
-      const ok = prev && prev.p.midi === s.p.midi && prev.start + prev.dur === s.start && (prev.dur >= 2 || p.quarterPrep) && (prev.dur >= s.dur || (prev.dur === 2 && s.dur === 4))
-      if (!ok) add('tie', s.start, 'Nguyên thể')
-      // even when the teacher allows it, a tied quarter is only a suspension's preparation: over the bar line, into a dissonance
-      else if (prev.dur === 1) {
-        const g = notesOf(p.given).find((n) => n.start <= s.start && s.start < n.start + n.dur)
-        const iv = g && (p.givenIs === 'II' ? interval(s.p, g.p) : interval(g.p, s.p))
-        if (s.start % B !== 0 || !iv || consonant(iv)) add('tie', s.start, 'Nguyên thể', 'nốt đen chỉ được nối khi làm nốt chuẩn bị cho nốt lưu ở phách mạnh')
-      }
-    }
-    if (done()) return out
+  const quarterTieOk = (seg: Seg) => {
+    const g = notesOf(p.given).find((n) => n.start <= seg.start && seg.start < n.start + n.dur)
+    const iv = g && (p.givenIs === 'II' ? interval(seg.p, g.p) : interval(g.p, seg.p))
+    return seg.start % B === 0 && !!iv && !consonant(iv)
   }
-  for (let i = 1; i < cpNotes.length; i++) {
-    const a = cpNotes[i - 1]
-    const b = cpNotes[i]
-    const m = melodicOk(a.p, b.p)
-    if (!m.ok) add('leap', b.start, 'Nguyên thể', m.why)
-    if (strength(p.meter, b.start) === 3 && b.dur < a.dur) add('rhythm-change', b.start, 'Nguyên thể')
-    if (b.p.midi === a.p.midi) {
-      add('repeat', b.start, 'Nguyên thể')
-      if (i >= 2 && cpNotes[i - 2].p.midi === a.p.midi) add('repeat3', b.start, 'Nguyên thể')
-    }
-    if (i >= 2) {
-      const z = cpNotes[i - 2]
-      const leap = a.p.step - z.p.step
-      const next = b.p.step - a.p.step
-      const answered = next !== 0 && Math.sign(next) === -Math.sign(leap)
-      if (Math.abs(leap) >= 3 && !answered) add('leap-response', b.start, 'Nguyên thể')
-      else if (Math.abs(leap) === 2 && !answered) add('leap3-response', b.start, 'Nguyên thể')
-      if (Math.abs(leap) >= 2 && Math.abs(next) >= 2 && Math.sign(next) === Math.sign(leap)) add('two-leaps', b.start, 'Nguyên thể')
-    }
-    if (i >= 3) {
-      const w = [cpNotes[i - 3], cpNotes[i - 2], cpNotes[i - 1], b].map((n) => n.p)
-      const d = w.slice(1).map((x, k) => x.step - w[k].step)
-      if (d.every((x) => x === d[0] && Math.abs(x) === 1)) {
-        const hi = d[0] > 0 ? w[3] : w[0]
-        const lo = d[0] > 0 ? w[0] : w[3]
-        if (hi.midi - lo.midi === 6) add('tritone-line', b.start, 'Nguyên thể')
-      }
-    }
-    if (done()) return out
-  }
-  if (cpNotes.length) {
-    const steps = cpNotes.map((n) => n.p.step)
-    if (Math.max(...steps) - Math.min(...steps) > 9) add('range', 0, 'Nguyên thể')
-  }
-  const cpEnd = cp.length ? cp[cp.length - 1].start + cp[cp.length - 1].dur : 0
-  if (H >= total && cpEnd !== total) add('end', cpEnd, 'Nguyên thể')
-  if (H >= total && cpNotes.length >= 2) {
-    const a = cpNotes[cpNotes.length - 2]
-    const b = cpNotes[cpNotes.length - 1]
-    if (Math.abs(b.p.step - a.p.step) !== 1) add('cadence-step', b.start, 'Nguyên thể')
-  }
+  checkLine(p.meter, cp, H, total, { quarterPrep: p.quarterPrep, quarterTieOk }, (r, t, d) => add(r, t, 'Nguyên thể', d))
   if (done()) return out
 
   /* ----- every version ----- */
@@ -275,20 +224,43 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (nx && nx.t < r) return 'bè tự do không được đánh nốt mới trước khi nốt lưu giải quyết'
       const res = ons.find((x) => x.t === r)
       if (!res) return 'không tìm thấy nốt giải quyết'
+      const sv = heldIsUp ? up : lo
       const after = heldIsUp ? res.up : res.lo
-      if (after.p.step !== h.p.step - 1) return 'nốt lưu phải giải quyết xuống liền bậc'
-      if (!consonant(res.iv)) return 'nốt giải quyết phải là quãng thuận'
-      return 'ok'
+      const z = sv[sv.indexOf(after) + 1]
+      /** The second step of a two-step resolution, or why it fails. */
+      const thenAt = (want: number, fail: string): 'ok' | 'later' | string => {
+        if (!z) return after.start + after.dur >= Math.min(H, total) ? (after.start + after.dur >= total ? fail : 'later') : fail
+        if (z.p.step !== want) return fail
+        if (z.start >= H) return 'later'
+        if (ons.some((x) => x.t > r && x.t < z.start)) return 'bè tự do không được đánh nốt mới trước khi nốt lưu giải quyết'
+        const o2 = ons.find((x) => x.t === z.start)
+        return o2 && consonant(o2.iv) ? 'ok' : fail
+      }
+      if (after.p.step === h.p.step - 1) {
+        if (consonant(res.iv)) return 'ok'
+        // giải quyết lướt: the resolution falls on a dissonance in this version and passes on by step to a consonance
+        // (doi-vi-chuyen-dong-chieu-doc, nguyên tắc 3)
+        if (after.dur > 2) return 'nốt giải quyết rơi vào quãng nghịch'
+        return thenAt(after.p.step - 1, 'nốt giải quyết rơi vào quãng nghịch và không giải quyết lướt được')
+      }
+      // giải quyết có trang trí: the dissonant note first leaps to a note consonant with the free note, then goes down
+      // to the step below it (doi-vi-don-gian-hai-be §3c, cách 2)
+      if (!consonant(res.iv) || after.dur > 1) return 'nốt lưu phải giải quyết xuống liền bậc'
+      return thenAt(h.p.step - 1, 'nốt lưu phải giải quyết xuống liền bậc')
     }
 
     function melodic(o: Onset, i: number, x: Note, xIsUp: boolean): 'ok' | 'later' | 'upper' | string {
       const st = strength(p.meter, o.t)
-      if (i === 0 || !consonant(ons[i - 1].iv)) return 'trước quãng nghịch phải là quãng thuận'
       const voice = xIsUp ? up : lo
       const k = voice.indexOf(x)
       const a = voice[k - 1]
       const b = voice[k + 1]
+      if (i === 0) return 'trước quãng nghịch phải là quãng thuận'
       if (!a || a.start + a.dur !== x.start) return 'nốt nghịch không có nốt đứng trước'
+      // a dissonance just before is allowed only when it is the suspension this note resolves by passing on
+      const prev = ons[i - 1]
+      const passingResolution = !consonant(prev.iv) && a.start < prev.t && x.p.step === a.p.step - 1
+      if (!consonant(prev.iv) && !passingResolution) return 'trước quãng nghịch phải là quãng thuận'
       const D = x.p.step - a.p.step
       if (Math.abs(D) !== 1) return 'nốt nghịch phải đến bằng liền bậc'
       if (x.dur > 2 || (x.dur === 2 && st !== 2)) return 'nốt nghịch ở phách nhẹ phải ngắn (nốt đen, hoặc nốt trắng lướt ở phách)'
@@ -313,4 +285,72 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
     if (g && g.dur === n.dur && n.start < H) add('same-rhythm', n.start, 'Nguyên thể')
   }
   return out
+}
+
+/**
+ * Melodic and rhythmic rules of one line (giai-dieu-phuc-dieu-nghiem-khac): placement, ties, leaps and their answers,
+ * repetitions, the tritone outline, range, the end. Used for the counterpoint and for a generated đề.
+ */
+export function checkLine(
+  m: Meter,
+  segs: Seg[],
+  H: number,
+  total: number,
+  o: { quarterPrep?: boolean; quarterTieOk?: (s: Seg) => boolean },
+  emit: (rule: RuleId, t: number, detail?: string) => void,
+) {
+  const notes = notesOf(segs)
+  const B = barQ(m)
+  for (let i = 0; i < segs.length; i++) {
+    const s = segs[i]
+    if (!placeOk(m, s.start % B, s.dur)) emit('seg-place', s.start)
+    if (s.tied) {
+      const prev = segs[i - 1]
+      const ok = prev && prev.p.midi === s.p.midi && prev.start + prev.dur === s.start && (prev.dur >= 2 || o.quarterPrep) && (prev.dur >= s.dur || (prev.dur === 2 && s.dur === 4))
+      if (!ok) emit('tie', s.start)
+      // even when the teacher allows it, a tied quarter is only a suspension's preparation: over the bar line, into a dissonance
+      else if (prev.dur === 1 && !o.quarterTieOk?.(s)) emit('tie', s.start, 'nốt đen chỉ được nối khi làm nốt chuẩn bị cho nốt lưu ở phách mạnh')
+    }
+  }
+  for (let i = 1; i < notes.length; i++) {
+    const a = notes[i - 1]
+    const b = notes[i]
+    const mo = melodicOk(a.p, b.p)
+    if (!mo.ok) emit('leap', b.start, mo.why)
+    if (strength(m, b.start) === 3 && b.dur < a.dur) emit('rhythm-change', b.start)
+    if (b.p.midi === a.p.midi) {
+      emit('repeat', b.start)
+      if (i >= 2 && notes[i - 2].p.midi === a.p.midi) emit('repeat3', b.start)
+    }
+    if (i >= 2) {
+      const z = notes[i - 2]
+      const leap = a.p.step - z.p.step
+      const next = b.p.step - a.p.step
+      const answered = next !== 0 && Math.sign(next) === -Math.sign(leap)
+      if (Math.abs(leap) >= 3 && !answered) emit('leap-response', b.start)
+      else if (Math.abs(leap) === 2 && !answered) emit('leap3-response', b.start)
+      if (Math.abs(leap) >= 2 && Math.abs(next) >= 2 && Math.sign(next) === Math.sign(leap)) emit('two-leaps', b.start)
+    }
+    if (i >= 3) {
+      const w = [notes[i - 3], notes[i - 2], notes[i - 1], b].map((n) => n.p)
+      const d = w.slice(1).map((x, k) => x.step - w[k].step)
+      if (d.every((x) => x === d[0] && Math.abs(x) === 1)) {
+        const hi = d[0] > 0 ? w[3] : w[0]
+        const lo = d[0] > 0 ? w[0] : w[3]
+        if (hi.midi - lo.midi === 6) emit('tritone-line', b.start)
+      }
+    }
+  }
+  if (notes.length) {
+    const steps = notes.map((n) => n.p.step)
+    if (Math.max(...steps) - Math.min(...steps) > 9) emit('range', 0)
+  }
+  const cpEnd = segs.length ? segs[segs.length - 1].start + segs[segs.length - 1].dur : 0
+  if (H >= total && cpEnd !== total) emit('end', cpEnd)
+  if (H >= total && notes.length >= 2) {
+    const a = notes[notes.length - 2]
+    const b = notes[notes.length - 1]
+    if (Math.abs(b.p.step - a.p.step) !== 1) emit('cadence-step', b.start)
+  }
+
 }

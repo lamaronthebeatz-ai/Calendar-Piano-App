@@ -4,13 +4,18 @@
  * When nothing is found the search reports where it got furthest and which rules stopped it there.
  */
 import { barQ, inKey, interval, makeVersion, notesOf, pitchName, upperLower, type Pitch, type Seg } from './model'
-import { check, placeOk, totalOf, type Problem, type Report, type RuleId } from './rules'
+import { check, checkLine, isSoft, placeOk, totalOf, type Problem, type Report, type RuleId, type VersionSpec } from './rules'
+import type { Key, Meter } from './model'
 
 export type Solution = { cp: Seg[]; penalty: number; report: Report }
 export type Blocker = { rule: RuleId; t: number; count: number; detail?: string; version: string }
 export type StarIssue = { t: number; reason: string }
 export type SolveResult = { solutions: Solution[]; nodes: number; exhausted: boolean; furthest: number; blockers: Blocker[]; stars?: StarIssue[] }
-export type SolveOpts = { timeMs: number; maxSolutions: number; seed?: number }
+/** `prefix`: notes already written (the search continues after them); `budget`: how many broken hard rules a line may
+ *  carry (0 = a lawful line; 1–2 = the "fewest faults" search used when an exercise has no lawful answer). */
+export type SolveOpts = { timeMs: number; maxSolutions: number; seed?: number; prefix?: Seg[]; budget?: number }
+/** Distinct hard faults: the same broken rule at the same moment counts once, however many versions show it. */
+export const faultsOf = (r: Report) => new Set(r.hard.map((v) => `${v.rule}|${v.t}`)).size
 
 const DURS = [6, 4, 3, 2, 1]
 
@@ -37,14 +42,15 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
   let furthest = 0
   const fails = new Map<string, Blocker>()
 
-  const cp: Seg[] = []
+  const cp: Seg[] = (o.prefix ?? []).slice()
+  const budget = o.budget ?? 0
   /** States already searched to the end without an answer. Hard rules look back at most three notes, so the time plus
    *  the last three notes (and how the last segment may be tied) decide everything that can still follow. */
   const dead = new Set<string>()
   const stateKey = (t: number) => {
     const n = notesOf(cp).slice(-3)
     const last = cp[cp.length - 1]
-    return `${t}|${n.map((x) => `${x.start}.${x.dur}.${x.p.midi}`).join(',')}|${last ? last.dur : 0}`
+    return `${t}|${n.map((x) => `${x.start}.${x.dur}.${x.p.midi}`).join(',')}|${last ? last.dur : 0}|${budget ? faults : 0}`
   }
   const keyOf = (segs: Seg[]) => segs.map((s) => `${s.start}:${s.dur}:${s.p.midi}${s.tied ? '~' : ''}`).join(' ')
 
@@ -82,6 +88,7 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
     return out.sort((a, b) => a.cost - b.cost).map((x) => x.s)
   }
 
+  let faults = 0
   function dfs(t: number): void {
     if (timedOut || found.size >= o.maxSolutions) return
     const key = t < total ? stateKey(t) : ''
@@ -89,26 +96,42 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
     const before = found.size
     if (t >= total) {
       const report = check(p, cp, total)
-      if (report.hard.length === 0) {
+      const f = faultsOf(report)
+      if (f <= budget) {
         const k = keyOf(cp)
-        if (!found.has(k)) found.set(k, { cp: cp.slice(), penalty: report.penalty, report })
+        if (!found.has(k)) found.set(k, { cp: cp.slice(), penalty: f * 1000 + report.penalty, report })
       } else note(report)
       return
     }
-    for (const s of moves(t)) {
+    let tries: { s: Seg; r?: Report; f?: number }[] = moves(t).map((s) => ({ s }))
+    if (budget) {
+      // with faults allowed, spend them as late as possible: lawful continuations first
+      for (const x of tries) {
+        cp.push(x.s)
+        x.r = check(p, cp, x.s.start + x.s.dur)
+        x.f = faultsOf(x.r)
+        cp.pop()
+      }
+      tries = tries.sort((a, b) => a.f! - b.f!)
+    }
+    for (const { s, r: pre, f: preF } of tries) {
       if ((++nodes & 1023) === 0 && Date.now() - t0 > o.timeMs) {
         timedOut = true
         return
       }
       cp.push(s)
       const end = s.start + s.dur
-      const r = check(p, cp, end, true)
-      if (r.hard.length === 0) {
+      const r = pre ?? check(p, cp, end, true)
+      const f = preF ?? r.hard.length
+      if (f <= budget) {
         if (end > furthest) {
           furthest = end
           fails.clear()
         }
+        const keep = faults
+        faults = f
         dfs(end)
+        faults = keep
       } else note(r)
       cp.pop()
       if (timedOut || found.size >= o.maxSolutions) return
@@ -125,7 +148,9 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
     else fails.set(k, { rule: v.rule, t: v.t, count: 1, detail: v.detail, version: v.version })
   }
 
-  dfs(0)
+  const start = cp.length ? cp[cp.length - 1].start + cp[cp.length - 1].dur : 0
+  if (cp.length) faults = faultsOf(check(p, cp, start))
+  if (faults <= budget) dfs(start)
   const solutions = [...found.values()].sort((a, b) => a.penalty - b.penalty)
   const blockers = [...fails.values()].sort((a, b) => b.t - a.t || b.count - a.count).slice(0, 8)
   return { solutions, nodes, exhausted: !timedOut && found.size < o.maxSolutions, furthest, blockers }
@@ -241,4 +266,187 @@ export function starCheck(p: Problem): StarIssue[] {
     }
   }
   return out
+}
+
+/* ---------- when there is no lawful answer: ways out that never touch the đề ---------- */
+
+export type Relax = { id: 'quarterPrep' | 'noStar'; t?: number; label: string; solutions: Solution[]; exhausted: boolean }
+export type Rescue = { stars: StarIssue[]; relax: Relax[]; near: Solution[]; nearFaults: number }
+
+/**
+ * The đề (notes, ✱, required versions) stays exactly as given; nothing here is offered as a corrected đề. Ways out:
+ * a teacher's allowance the book does not make (a quarter-note preparation); for each ✱ the book makes impossible, the
+ * answer that keeps every other rule with only that spot left consonant; failing those, the line breaking the fewest
+ * hard rules — each named, so the student can ask the teacher about that one spot.
+ */
+export function rescue(p: Problem, timeMs: number): Rescue {
+  const t0 = Date.now()
+  const stars = starCheck(p)
+  const relax: Relax[] = []
+  const slice = timeMs / (2 + stars.length)
+  if (!p.quarterPrep) {
+    const q = { ...p, quarterPrep: true }
+    const r = starCheck(q).length ? { solutions: [], exhausted: true } : solveMany(q, slice, 4)
+    relax.push({ id: 'quarterPrep', label: 'Nếu thầy cho phép nốt đen làm nốt chuẩn bị', solutions: r.solutions, exhausted: r.exhausted })
+  }
+  const bad = [...new Set(stars.map((x) => x.t))]
+  for (const t of bad) {
+    const q = { ...p, stars: p.stars.filter((x) => x !== t) }
+    const r = starCheck(q).length ? { solutions: [], exhausted: true } : solveMany(q, slice, 4)
+    relax.push({ id: 'noStar', t, label: '', solutions: r.solutions, exhausted: r.exhausted })
+  }
+  let near: Solution[] = []
+  let nearFaults = 0
+  if (!relax.some((x) => x.solutions.length)) {
+    for (const budget of [1, 2, 3]) {
+      const left = timeMs - (Date.now() - t0)
+      if (left < 300) break
+      const r = solve(p, { timeMs: left / (4 - budget), maxSolutions: 4, budget, seed: 11 * budget })
+      if (r.solutions.length) {
+        near = r.solutions
+        nearFaults = budget
+        break
+      }
+    }
+  }
+  return { stars, relax, near, nearFaults }
+}
+
+/* ---------- practice: which next notes still lead to an answer ---------- */
+
+export type Hint = { seg: Seg; status: 'ok' | 'dead' | 'unknown' }
+
+/** Every lawful next note after `prefix`, each tested by a short search: does a complete answer still exist from it? */
+export function hints(p: Problem, prefix: Seg[], timeMs: number): Hint[] {
+  const t0 = Date.now()
+  const total = totalOf(p)
+  const B = barQ(p.meter)
+  const t = prefix.length ? prefix[prefix.length - 1].start + prefix[prefix.length - 1].dur : 0
+  if (t >= total) return []
+  const last = prefix[prefix.length - 1]
+  const gSteps = p.given.map((x) => x.p.step)
+  const cpUpper = p.givenIs === 'II'
+  const lo = cpUpper ? Math.min(...gSteps) - 2 : Math.min(...gSteps) - 10
+  const hi = cpUpper ? Math.max(...gSteps) + 10 : Math.max(...gSteps) + 2
+  const cands: Seg[] = []
+  for (const d of DURS) {
+    if (t + d > total || !placeOk(p.meter, t % B, d) || (t + d === total && d < 2)) continue
+    if (last && last.start + last.dur === t && (last.dur >= 2 || p.quarterPrep) && (last.dur >= d || (last.dur === 2 && d === 4))) cands.push({ start: t, dur: d, p: last.p, tied: true })
+    for (let st = lo; st <= hi; st++) cands.push({ start: t, dur: d, p: inKey(p.key, st) })
+  }
+  const legal = cands.filter((c) => check(p, [...prefix, c], c.start + c.dur, true).hard.length === 0)
+  const out: Hint[] = []
+  for (const c of legal) {
+    const left = timeMs - (Date.now() - t0)
+    if (left < 40) {
+      out.push({ seg: c, status: 'unknown' })
+      continue
+    }
+    const r = solve(p, { timeMs: Math.min(700, left / 2), maxSolutions: 1, prefix: [...prefix, c], seed: 3 })
+    out.push({ seg: c, status: r.solutions.length ? 'ok' : r.exhausted ? 'dead' : 'unknown' })
+  }
+  const rank = { ok: 0, unknown: 1, dead: 2 }
+  return out.sort((a, b) => rank[a.status] - rank[b.status])
+}
+
+/* ---------- the exercise generator ---------- */
+
+export type Level = 'de' | 'vua' | 'kho'
+export type Generated = { key: Key; meter: Meter; given: Seg[]; givenIs: 'I' | 'II'; stars: number[]; versions: VersionSpec[]; answer: Solution }
+
+const GEN_KEYS: Key[] = [
+  { tonic: 0, alter: 0, minor: false },
+  { tonic: 4, alter: 0, minor: false },
+  { tonic: 3, alter: 0, minor: false },
+  { tonic: 5, alter: 0, minor: true },
+  { tonic: 1, alter: 0, minor: true, sig: 0, mode: 'Dorian' },
+  { tonic: 4, alter: 0, minor: false, sig: 0, mode: 'Mixolydian' },
+]
+
+/**
+ * A new exercise that is sure to have an answer: a đề written by the same melodic and rhythmic rules, ✱ only where a
+ * lawful dissonance can exist, and a full solve before it is handed out (the answer comes with it).
+ */
+export function generate(level: Level, seed: number, timeMs: number): Generated | null {
+  const t0 = Date.now()
+  let sd = seed
+  const rnd = () => ((sd = (sd * 16807) % 2147483647) / 2147483647)
+  const pick = <T,>(xs: T[]) => xs[Math.floor(rnd() * xs.length)]
+  const conf = {
+    de: { bars: 4, stars: [1, 2], versions: [[{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }]] },
+    vua: { bars: 6, stars: [2, 3], versions: [[{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }, { shift: { I: -4, II: -3 }, motion: 'swap', label: 'BT1' }]] },
+    kho: { bars: 8, stars: [3, 4], versions: [[{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }, { shift: { I: -11, II: 0 }, motion: 'swap', label: 'Iv −11' }], [{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }, { shift: { I: -9, II: 0 }, motion: 'swap', label: 'Iv −9' }]] },
+  }[level] as { bars: number; stars: number[]; versions: VersionSpec[][] }
+  while (Date.now() - t0 < timeMs) {
+    const key = pick(GEN_KEYS)
+    const meter: Meter = pick([{ num: 3, den: 2 }, { num: 2, den: 2 }, { num: 4, den: 2 }] as Meter[])
+    const givenIs: 'I' | 'II' = level === 'kho' && rnd() < 0.5 ? 'I' : 'II'
+    const given = genLine(key, meter, conf.bars, givenIs, rnd)
+    if (!given) continue
+    const B = barQ(meter)
+    const versions = pick(conf.versions)
+    const base: Problem = { key, meter, given, givenIs, stars: [], versions, starsOnly: true }
+    const cands: number[] = []
+    for (let b = 1; b < conf.bars - 1; b++) if (starCheck({ ...base, stars: [b * B] }).length === 0) cands.push(b * B)
+    const want = conf.stars[0] + Math.floor(rnd() * (conf.stars[1] - conf.stars[0] + 1))
+    if (cands.length < conf.stars[0]) continue
+    const stars = cands.sort(() => rnd() - 0.5).slice(0, want).sort((a, b) => a - b)
+    const p = { ...base, stars }
+    const r = solveMany(p, Math.min(3000, timeMs - (Date.now() - t0)), 3)
+    if (r.solutions.length) return { key, meter, given, givenIs, stars, versions, answer: r.solutions[0] }
+  }
+  return null
+}
+
+/** A đề line: starts and ends on the final, mostly stepwise, mixed values with some ties, every line rule obeyed. */
+function genLine(key: Key, meter: Meter, bars: number, voice: 'I' | 'II', rnd: () => number): Seg[] | null {
+  const B = barQ(meter)
+  const total = bars * B
+  const tonic = voice === 'II' ? 28 + key.tonic - (key.tonic > 4 ? 7 : 0) : 35 + key.tonic - (key.tonic > 2 ? 7 : 0)
+  const segs: Seg[] = []
+  let tries = 0
+  const ok = (H: number) => {
+    let bad = false
+    checkLine(meter, segs, H, total, {}, (r) => {
+      if (!isSoft(r)) bad = true
+    })
+    return !bad
+  }
+  const go = (t: number): boolean => {
+    if (++tries > 4000) return false
+    if (t === total) return ok(total)
+    const bar = Math.floor(t / B)
+    const off = t % B
+    // the last bar: the final, held for the whole bar, reached by step
+    if (bar === bars - 1) {
+      if (off !== 0) return false
+      const last = segs[segs.length - 1]
+      if (!last || Math.abs(last.p.step - tonic) !== 1) return false
+      segs.push({ start: t, dur: B, p: inKey(key, tonic) })
+      if (ok(total)) return true
+      segs.pop()
+      return false
+    }
+    const durs = (off === 0 ? [4, 2, 2, 3, 6, 1] : [2, 2, 1, 1, 4, 3]).filter((d) => placeOk(meter, off, d))
+    const last = segs[segs.length - 1]
+    const opts: Seg[] = []
+    for (const d of durs.sort(() => rnd() - 0.5)) {
+      // a tie over the bar line now and then: it gives the counterpoint a suspension in the đề to answer
+      if (last && off === 0 && last.dur >= 2 && last.dur >= d && rnd() < 0.3) opts.push({ start: t, dur: d, p: last.p, tied: true })
+      const moves = [-1, 1, -1, 1, -2, 2, 3, -3, 4, -4].sort(() => rnd() - 0.5)
+      for (const mv of moves) {
+        const st = t === 0 ? tonic : (last?.p.step ?? tonic) + mv
+        if (Math.abs(st - tonic) > 5) continue
+        opts.push({ start: t, dur: d, p: inKey(key, st) })
+        if (t === 0) break
+      }
+    }
+    for (const sg of opts.slice(0, 14)) {
+      segs.push(sg)
+      if (ok(t + sg.dur) && go(t + sg.dur)) return true
+      segs.pop()
+    }
+    return false
+  }
+  return go(0) ? segs.slice() : null
 }
