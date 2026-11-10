@@ -16,3 +16,10 @@
 - **Cây hướng đi:** thẻ cũ đổi thành cây phân nhánh ngang (`.ce-tree`: gốc = hợp âm hiện tại, nhánh SVG, lá ROW 50 px). Đàn trúng: tia sáng chạy dọc nhánh bằng `offset-path` (0,45 s) → lá sáng → chữ bay vào giữa (480 ms) → đổi nội dung (1 150 ms, timer). Lá khác mờ 0,38 nhưng vẫn đọc được.
 - Tên hợp âm dài (Am(maj7)/G♯) co theo `--len` (~0,6 em/ký tự) — từng tràn khỏi màn.
 
+## Giải phức điệu `/counterpoint` (11/2026)
+- `src/features/counterpoint/`: `model.ts` (cao độ, giọng + điệu thức cổ `sig`, quãng số Taneyev, dời bè theo quãng của giọng: Đô xuống 4 bậc = Fa), `rules.ts` (bộ kiểm — mỗi luật trích bài nguồn: `doi-vi-don-gian-hai-be`, `giai-dieu-phuc-dieu-nghiem-khac`, `doi-vi-chuyen-dong-chieu-doc`), `solver.ts` (DFS kiểm luật từng nốt, nhớ trạng thái chết theo thời điểm + 3 nốt cuối vì luật cứng chỉ nhìn tối đa 3 nốt, nên "hết cách" = chứng minh; `starCheck` xét riêng từng ✱ trước), `solver.worker.ts`, `ScoreSvg.tsx` (hai bè một khuông, số dưới, ✱ trên), `CounterpointPage.tsx`. Nút 𝄪 trên trang chủ Lý thuyết.
+- Biến thể = mọi bản đều phải đúng luật đối vị đơn giản ⇒ bảng chuẩn bị của từng Iv tự suy ra; kiểu chuyển (chỗ/gần/xa) chọn tay vì −7 có cả chuyển chỗ lẫn chuyển gần.
+- Luật cứng: nốt lưu (chuẩn bị thuận, ≥ nốt lưu, **không nốt đen**, giải quyết xuống liền bậc, vị trí 1 dưới · 6 trên · 3/8 cả hai · 10, 13 trên), nghịch phách nhẹ (lướt, thêu, sớm, thoát), song song hoàn toàn, nhảy cấm, phản hồi sau nhảy ≥ quãng 4, nối nốt, đổi trường độ ở phách mạnh, kết hoàn toàn, chéo bè. Luật mềm (điểm trừ): phản hồi sau quãng 3, hai nhảy cùng hướng, cùng hướng vào hoàn toàn, đồng âm giữa bài, thêu trên, ba cung…
+- Tuỳ chọn của thầy (sách cấm): nốt đen chuẩn bị — kể cả khi bật, nốt đen chỉ được nối qua vạch nhịp vào nốt lưu.
+- Bài của Lamar (11/2026): ✱ ô 5 không có lời giải theo sách (nốt chuẩn bị nốt trắng phải thuận với cả Mi4 và Rê4) — đã kiểm bằng `starCheck` và bằng tay. Test: `tests/counterpoint.spec.ts`.
+

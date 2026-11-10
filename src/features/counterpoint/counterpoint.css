@@ -1,0 +1,80 @@
+/* Counterpoint solver (CounterpointPage.tsx): a working sheet in the app's dark – gold style. */
+.cp-page { height: 100%; overflow-y: auto; overflow-x: hidden; padding-bottom: 7rem; background: var(--color-surface); color: var(--color-ink); }
+.cp-top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 16px; max-width: 60rem; margin: 0 auto; background: linear-gradient(var(--color-surface) 75%, transparent); }
+.cp-top h1 { flex: 1; min-width: 0; font-family: var(--font-display); font-size: 19px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cp-icon { display: flex; width: 36px; height: 36px; margin-left: -8px; align-items: center; justify-content: center; border-radius: 99px; color: var(--color-ink-muted); }
+.cp-body { max-width: 60rem; margin: 0 auto; padding: 4px 16px 0; }
+.cp-lead { font-size: 13.5px; line-height: 1.6; color: var(--color-ink-muted); }
+.cp-lead a, .cp-note a, .cp-remarks a { color: var(--color-gold); text-decoration: underline; text-underline-offset: 2px; }
+.cp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 12px; }
+.cp-row label { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--color-ink-muted); }
+.cp-row select, .cp-row input, .cp-custom select { height: 32px; padding: 0 8px; border-radius: 10px; border: 1px solid var(--color-border); background: var(--color-surface-sunken); color: var(--color-ink); font-size: 13px; }
+.cp-row input { width: 58px; }
+.cp-card { margin-top: 14px; padding: 12px; border-radius: 18px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.cp-card h2 { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.cp-tabs { display: inline-flex; gap: 4px; padding: 3px; margin-bottom: 8px; border-radius: 99px; background: var(--color-surface-sunken); }
+.cp-tabs button { height: 30px; padding: 0 14px; border-radius: 99px; font-size: 12.5px; color: var(--color-ink-muted); }
+.cp-tabs button.is-on { background: var(--color-gold); color: #0b0a09; font-weight: 600; }
+.cp-durs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.cp-durs button { display: grid; justify-items: center; min-width: 56px; padding: 4px 8px; border-radius: 12px; border: 1px solid var(--color-border); color: var(--color-ink); }
+.cp-durs button span { font-family: 'Noto Music', 'Segoe UI Symbol', serif; font-size: 20px; line-height: 1.2; }
+.cp-durs button small { font-size: 10.5px; color: var(--color-ink-muted); }
+.cp-durs button.is-on { border-color: var(--color-gold); background: var(--color-gold-soft); }
+.cp-kb { display: flex; gap: 3px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
+.cp-key { display: grid; justify-items: center; flex: none; width: 36px; padding: 10px 0 6px; border-radius: 0 0 8px 8px; background: oklch(0.95 0.01 85); color: #1a1714; box-shadow: inset 0 -3px 0 oklch(0.8 0.02 85); }
+.cp-key b { font-size: 11px; font-weight: 600; }
+.cp-key i { font-style: normal; font-size: 9px; opacity: 0.6; }
+.cp-key.is-c { box-shadow: inset 0 -3px 0 var(--color-gold); }
+.cp-key:active { transform: translateY(1px); background: var(--color-gold); }
+.cp-edit button, .cp-ghost, .cp-presets button, .cp-custom button { height: 32px; padding: 0 12px; border-radius: 99px; border: 1px solid var(--color-border); font-size: 12.5px; color: var(--color-ink); }
+.cp-edit button:disabled { opacity: 0.4; }
+.cp-hint { font-size: 12px; color: var(--color-ink-muted); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+.cp-stars { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-top: 10px; font-size: 12.5px; color: var(--color-ink-muted); }
+.cp-stars button { width: 30px; height: 30px; border-radius: 99px; border: 1px solid var(--color-border); color: var(--color-ink); }
+.cp-stars button.is-on { background: var(--color-gold); color: #0b0a09; border-color: var(--color-gold); font-weight: 700; }
+.cp-vers { display: grid; gap: 6px; }
+.cp-vers li { display: flex; align-items: center; gap: 10px; padding: 6px 10px; border-radius: 12px; background: var(--color-surface-sunken); font-size: 13px; }
+.cp-vers li span { flex: 1; color: var(--color-ink-muted); }
+.cp-vers li button { width: 26px; height: 26px; border-radius: 99px; color: var(--color-ink-muted); }
+.cp-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.cp-note { margin-top: 10px; font-size: 12px; line-height: 1.55; color: var(--color-ink-faint); }
+.cp-check { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; font-size: 12.5px; color: var(--color-ink-muted); }
+.cp-check input { margin-top: 2px; accent-color: var(--color-gold); }
+.cp-actions { display: flex; gap: 10px; margin-top: 16px; }
+.cp-go { height: 42px; padding: 0 28px; border-radius: 99px; font-weight: 600; color: #0b0a09; background: linear-gradient(180deg, oklch(0.93 0.07 92), var(--color-gold) 60%, oklch(0.62 0.11 70)); }
+.cp-go:disabled { opacity: 0.6; }
+.cp-fail { border-color: oklch(0.6 0.17 25 / 0.5); }
+.cp-fail p, .cp-fail li { margin-top: 8px; font-size: 13px; line-height: 1.6; }
+.cp-fail ul { padding-left: 18px; list-style: disc; }
+.cp-sols { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; }
+.cp-sols button { display: grid; flex: none; padding: 6px 12px; border-radius: 12px; border: 1px solid var(--color-border); font-size: 12.5px; text-align: left; }
+.cp-sols button small { font-size: 10.5px; color: var(--color-ink-faint); }
+.cp-sols button.is-on { border-color: var(--color-gold); background: var(--color-gold-soft); }
+.cp-ver { margin-top: 12px; }
+.cp-ver-head { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
+.cp-ver-head b { font-family: var(--font-display); font-size: 15px; }
+.cp-ver-head span { flex: 1; font-size: 12px; color: var(--color-ink-muted); }
+.cp-ver-head button { height: 28px; padding: 0 12px; border-radius: 99px; border: 1px solid var(--color-border); font-size: 12px; color: var(--color-gold); }
+.cp-remarks { margin-top: 12px; font-size: 12.5px; }
+.cp-remarks summary { cursor: pointer; color: var(--color-ink-muted); }
+.cp-remarks ul { display: grid; gap: 6px; margin-top: 8px; }
+.cp-remarks li { line-height: 1.5; color: var(--color-ink-muted); }
+.cp-remarks li span { color: var(--color-ink-faint); }
+.cp-remarks li.is-hard { color: var(--color-ink); }
+.cp-remarks li.is-hard b { color: oklch(0.7 0.17 25); }
+
+/* the staff */
+.sv { display: block; max-width: 100%; }
+.sv-line { stroke: var(--color-ink-muted); stroke-width: 1; }
+.sv-ink { fill: var(--color-ink); }
+.sv-fill, .sv-ink-fill { fill: var(--color-ink); }
+.sv-ink-open { fill: none; stroke: var(--color-ink); }
+.sv-ink-stem { stroke: var(--color-ink); stroke-width: 1.3; }
+.sv-ink-tie { fill: none; stroke: var(--color-ink); stroke-width: 1.2; }
+.sv-mute, .sv-mute-fill { fill: var(--color-ink-faint); }
+.sv-mute-open { fill: none; stroke: var(--color-ink-faint); }
+.sv-mute-stem, .sv-mute-tie { stroke: var(--color-ink-faint); fill: none; stroke-width: 1.2; }
+.sv-num { fill: var(--color-ink-muted); font-variant-numeric: tabular-nums; }
+.sv-bad { fill: oklch(0.68 0.18 25); font-weight: 700; }
+.sv-star { fill: var(--color-gold); }
+.sv-now { stroke: var(--color-gold); stroke-width: 2; }

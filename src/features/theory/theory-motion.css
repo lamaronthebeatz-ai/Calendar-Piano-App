@@ -125,6 +125,7 @@ html.reveal-on .theory-article .prose-theory :is(figure, table, blockquote) { an
 .solfege-btn { font-family: 'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif; font-size: 22px; }
 .solfege-btn span { animation-delay: -1.6s; }
 .chord-ear-btn span { display: flex; animation-delay: -0.8s; }
+.cp-glyph { font-family: 'Noto Music', 'Segoe UI Symbol', serif; font-size: 18px; animation-delay: -2.2s !important; }
 .tools-btn:hover { transform: scale(1.08) rotate(-8deg); }
 .tools-btn span { animation: tools-bob 3.2s ease-in-out infinite; }
 @keyframes tools-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-2px) rotate(-6deg); } }
