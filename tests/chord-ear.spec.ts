@@ -53,6 +53,9 @@ test('nghe hợp âm: gọi tên, sáng hướng đi, không đoán bừa', asyn
   const history = page.locator('.ce-history-row')
   await expect(history).toContainText('G7', { timeout: 15_000 })
   await expect(page.locator('.ce-caption')).toContainText('Kết trọn', { timeout: 6_000 })
+  // the way taken links to its source article; "Tất cả" (the default) mixes in the twentieth-century ways
+  await expect(page.locator('.ce-caption a')).toHaveAttribute('href', /cau-ket$/)
+  await expect(page.locator('.ce-leaf.is-xx').first()).toBeVisible()
   await expect(history).toContainText('Am', { timeout: 8_000 })
   await expect(history).toContainText('D♭7', { timeout: 14_000 }) // after the cluster and the noise
   await expect(page.locator('.ce-caption')).toContainText('tritone', { timeout: 6_000 })
@@ -80,3 +83,17 @@ test('phân tích: chép nốt từ file rồi đọc chuỗi hợp âm và hư�
   await expect(strip).toContainText('D♭7')
 })
 
+
+test('chọn bộ hướng đi: Cổ điển, Jazz, TK XX, Tất cả — nhớ lựa chọn', async ({ page }) => {
+  await page.addInitScript(() => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+  })
+  await page.goto('/#/chord-ear')
+  await expect(page.getByRole('radio', { name: 'Tất cả' })).toHaveAttribute('aria-checked', 'true')
+  await page.getByRole('radio', { name: 'TK XX' }).click()
+  await expect(page.getByRole('radio', { name: 'TK XX' })).toHaveAttribute('aria-checked', 'true')
+  expect(await page.evaluate(() => localStorage.getItem('chord-ear:style'))).toBe('xx')
+  await page.reload()
+  await expect(page.getByRole('radio', { name: 'TK XX' })).toHaveAttribute('aria-checked', 'true')
+})
