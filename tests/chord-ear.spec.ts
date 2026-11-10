@@ -61,3 +61,22 @@ test('nghe hợp âm: gọi tên, sáng hướng đi, không đoán bừa', asyn
   expect(names).toEqual(['C', 'G7', 'C', 'Am', 'Dm7', 'D♭7', 'Cmaj7'])
   await expect(page.locator('.ce-history-row i').first()).toHaveText('T')
 })
+
+test('phân tích: chép nốt từ file rồi đọc chuỗi hợp âm và hướng đi', async ({ page }, info) => {
+  test.skip(info.project.name !== 'chromium-desktop', 'mô hình chạy ~30 giây: một dự án là đủ')
+  test.setTimeout(150_000)
+  await page.addInitScript(() => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+  })
+  await page.goto('/#/chord-ear')
+  await page.getByRole('radio', { name: 'Phân tích' }).click()
+  await page.locator('.ce-an-file input').setInputFiles(wav)
+  const strip = page.locator('.ce-an-strip')
+  await expect(strip).toBeVisible({ timeout: 120_000 })
+  const names = await page.locator('.ce-an-card b').allTextContents()
+  expect(names.slice(0, 4)).toEqual(['C', 'G7', 'C', 'Am'])
+  await expect(strip).toContainText('Kết trọn')
+  await expect(strip).toContainText('D♭7')
+})
+

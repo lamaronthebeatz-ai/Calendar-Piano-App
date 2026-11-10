@@ -36,7 +36,8 @@ export default defineConfig({
         // Scanned music examples and the engraved sheets of the children's books (thousands of small images) load on demand and are cached as they are seen.
         // Library: only the index is precached; articles and search shards are cached as they are read (and a topic or
         // book can be saved for offline reading in one go, see theory/offline.ts), so installing does not grow with it.
-        globIgnores: ['scans/**', 'sheets/**', 'content/!(index.*).json', 'content/search/**', 'images/home/!(duet*)', 'images/shelf/**'],
+        // the chord ear's transcription model (TensorFlow.js + Basic Pitch, ~2 MB) loads only in its analysis mode
+        globIgnores: ['assets/transcribe-*.js', 'models/**', 'scans/**', 'sheets/**', 'content/!(index.*).json', 'content/search/**', 'images/home/!(duet*)', 'images/shelf/**'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
@@ -57,6 +58,11 @@ export default defineConfig({
             urlPattern: ({ url }) => url.pathname.includes('/images/home/') || url.pathname.includes('/images/shelf/'),
             handler: 'CacheFirst',
             options: { cacheName: 'home-images', expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 } },
+          },
+          {
+            urlPattern: ({ url }) => url.pathname.includes('/models/') || /\/assets\/transcribe-/.test(url.pathname),
+            handler: 'CacheFirst',
+            options: { cacheName: 'ml-models', expiration: { maxEntries: 10 } },
           },
           {
             urlPattern: ({ url }) => url.pathname.includes('/scans/') || url.pathname.includes('/sheets/'),

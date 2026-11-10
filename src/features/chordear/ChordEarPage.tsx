@@ -7,12 +7,22 @@ import {
   ALL_KEYS, guessChord, keyFromChord, keyName, nextWays, read, readFrame, sameChord, spell, takes,
   type Chord, type Key, type Style, type Way,
 } from './detect'
+import { AnalyzePanel } from './AnalyzePanel'
 import './chord-ear.css'
 
 type Shown = { id: number; chord: Chord; key: Key; ways: Way[]; fresh: boolean }
 type Flight = { text: string; label: string; dx: number; dy: number; s: number }
 
 const STABLE = 3 // frames (~0.3 s) a reading must hold before it counts
+// branch tree geometry (px): one leaf row and the gap under it; the curves live in a BRANCH_W-wide strip
+const ROW = 50
+const GAP = 7
+const BRANCH_W = 46
+const branchPath = (i: number, n: number) => {
+  const h = n * (ROW + GAP) - GAP
+  const y = i * (ROW + GAP) + ROW / 2
+  return `M0 ${h / 2} C ${BRANCH_W * 0.55} ${h / 2}, ${BRANCH_W * 0.45} ${y}, ${BRANCH_W} ${y}`
+}
 const KEY_W = [0, 0.6, 1, 1.6, 2, 3, 3.6, 4, 4.6, 5, 5.6, 6]
 const BLACK = [1, 3, 6, 8, 10]
 
@@ -42,6 +52,7 @@ export function ChordEarPage() {
   const [history, setHistory] = useState<{ id: number; letter: string; label: string }[]>([])
   const [live, setLive] = useState<{ pcs: number[]; bass: number | null; level: number; unsure: boolean }>({ pcs: [], bass: null, level: 0, unsure: false })
   const [flight, setFlight] = useState<Flight | null>(null)
+  const [mode, setMode] = useState<'live' | 'analyze'>('live')
 
   const audio = useRef<{ ctx: AudioContext; stream: MediaStream; timer: number } | null>(null)
   const shownRef = useRef<Shown | null>(null)
@@ -49,7 +60,7 @@ export function ChordEarPage() {
   const styleRef = useRef(style)
   const busy = useRef(false)
   const nameRef = useRef<HTMLDivElement>(null)
-  const wayRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const wayRefs = useRef<(HTMLDivElement | null)[]>([])
   const nextId = useRef(1)
 
   useEffect(() => {
@@ -92,11 +103,14 @@ export function ChordEarPage() {
           busy.current = true
           setHit(i)
           setCaption(`Hướng đi: ${w.note}`)
-          const card = wayRefs.current[i]?.getBoundingClientRect()
-          const name = nameRef.current?.getBoundingClientRect()
-          if (card && name) {
-            setFlight({ text: spell(ch, cur.key).letter, label: w.title, dx: card.left + card.width / 2 - (name.left + name.width / 2), dy: card.top + card.height / 2 - (name.top + name.height / 2), s: 0.32 })
-          }
+          // the spark runs along the branch first (≈0.45 s), then the chord flies to the centre
+          window.setTimeout(() => {
+            const card = wayRefs.current[i]?.getBoundingClientRect()
+            const name = nameRef.current?.getBoundingClientRect()
+            if (card && name) {
+              setFlight({ text: spell(ch, cur.key).letter, label: w.title, dx: card.left + card.width / 2 - (name.left + name.width / 2), dy: card.top + card.height / 2 - (name.top + name.height / 2), s: 0.3 })
+            }
+          }, 480)
           // the swap never waits on the animation: content changes on a timer
           window.setTimeout(() => {
             const key = fixed ?? cur.key
@@ -104,7 +118,7 @@ export function ChordEarPage() {
             setHit(null)
             setFlight(null)
             busy.current = false
-          }, 720)
+          }, 1150)
           return
         }
       }
@@ -193,7 +207,7 @@ export function ChordEarPage() {
         { transform: `translate(${flight.dx}px, ${flight.dy}px) scale(${flight.s})`, opacity: 0.9 },
         { transform: 'translate(0, 0) scale(1)', opacity: 1 },
       ],
-      { duration: 700, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' },
+      { duration: 640, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' },
     )
   }, [flight])
 
@@ -216,7 +230,7 @@ export function ChordEarPage() {
       </div>
 
       <div className="ce-stage">
-        <div className="ce-style" role="radiogroup" aria-label="Hướng đi theo">
+        <div className="ce-style" role="radiogroup" aria-label="Hướng đi theo, hoặc phân tích bản thu">
           {(
             [
               ['classic', 'Cổ điển'],
@@ -224,18 +238,42 @@ export function ChordEarPage() {
               ['both', 'Cả hai'],
             ] as [Style, string][]
           ).map(([v, t]) => (
-            <button key={v} role="radio" aria-checked={style === v} className={clsx(style === v && 'is-on')} onClick={() => setStyle(v)}>
+            <button
+              key={v}
+              role="radio"
+              aria-checked={mode === 'live' && style === v}
+              className={clsx(mode === 'live' && style === v && 'is-on')}
+              onClick={() => {
+                setStyle(v)
+                setMode('live')
+              }}
+            >
               {t}
             </button>
           ))}
+          <button
+            role="radio"
+            aria-checked={mode === 'analyze'}
+            className={clsx('ce-style-an', mode === 'analyze' && 'is-on')}
+            onClick={() => {
+              stop()
+              setMode('analyze')
+            }}
+          >
+            Phân tích
+          </button>
         </div>
+        {mode === 'analyze' ? (
+          <AnalyzePanel fixedKey={fixedKey} style={style} />
+        ) : (
+          <>
         <p className="ce-eyebrow">{shown ? `${keyName(shown.key)}${fixedKey < 0 ? ' · đoán' : ''}` : 'Đàn một hợp âm trên piano'}</p>
 
         <div className="ce-center">
           {shown && sp && rd ? (
             <div key={shown.id} ref={nameRef} className={clsx('ce-bulb', flight && 'is-leaving')}>
               <span aria-hidden className="ce-halo" />
-              <div className="ce-name ce-lit">
+              <div className="ce-name ce-lit" style={{ '--len': sp.letter.length } as CSSProperties}>
                 <span className="off" aria-hidden>{sp.letter}</span>
                 <span className="on">{sp.letter}</span>
               </div>
@@ -254,7 +292,7 @@ export function ChordEarPage() {
           )}
           {flight && (
             <div ref={flyer} className="ce-flyer" aria-hidden>
-              <span>{flight.text}</span>
+              <span style={{ '--len': flight.text.length } as CSSProperties}>{flight.text}</span>
             </div>
           )}
         </div>
@@ -284,36 +322,53 @@ export function ChordEarPage() {
         </p>
         <p className={clsx('ce-caption', caption && 'is-on')} aria-live="polite">{caption}</p>
 
-        {shown && shown.ways.length > 0 && (
-          <div key={shown.id} className="ce-ways" role="list" aria-label="Các hướng đi tiếp">
-            {shown.ways.map((w, i) => {
-              const target = spell({ root: w.root, q: w.q, bass: w.bassFifth ? (shown.key.tonic + 7) % 12 : w.root }, shown.key).letter
-              return (
-                <button
-                  key={i}
-                  role="listitem"
-                  ref={(el) => {
-                    wayRefs.current[i] = el
-                  }}
-                  className={clsx('ce-way', w.jazz && 'is-jazz', hit === i && 'is-hit', hit !== null && hit !== i && 'is-dim')}
-                  style={{ '--i': i } as CSSProperties}
-                  tabIndex={-1}
-                >
-                  <span aria-hidden className="ce-way-lit" />
-                  {w.jazz && <span className="ce-tag">Jazz</span>}
-                  <b>{w.title}</b>
-                  <i>{target}</i>
-                  <small>{w.note}</small>
-                </button>
-              )
-            })}
+        {shown && sp && rd && shown.ways.length > 0 && (
+          <div key={shown.id} className={clsx('ce-tree', hit !== null && 'is-moving')} aria-label="Các hướng đi tiếp">
+            <div className="ce-root">
+              <b>{sp.letter}</b>
+              <i>{rd.label}</i>
+            </div>
+            <div className="ce-branches" style={{ width: BRANCH_W, height: shown.ways.length * (ROW + GAP) - GAP }}>
+              <svg width={BRANCH_W} height={shown.ways.length * (ROW + GAP) - GAP} aria-hidden>
+                {shown.ways.map((_, i) => (
+                  <path key={i} d={branchPath(i, shown.ways.length)} className={clsx('ce-limb', hit === i && 'is-hit')} style={{ '--i': i } as CSSProperties} />
+                ))}
+              </svg>
+              {hit !== null && <span aria-hidden className="ce-spark" style={{ offsetPath: `path('${branchPath(hit, shown.ways.length)}')` } as CSSProperties} />}
+            </div>
+            <div className="ce-leaves" role="list">
+              {shown.ways.map((w, i) => {
+                const target = spell({ root: w.root, q: w.q, bass: w.bassFifth ? (shown.key.tonic + 7) % 12 : w.root }, shown.key).letter
+                return (
+                  <div
+                    key={i}
+                    role="listitem"
+                    ref={(el) => {
+                      wayRefs.current[i] = el
+                    }}
+                    className={clsx('ce-leaf', w.jazz && 'is-jazz', hit === i && 'is-hit', hit !== null && hit !== i && 'is-dim')}
+                    style={{ '--i': i, height: ROW } as CSSProperties}
+                  >
+                    <span aria-hidden className="ce-way-lit" />
+                    <b>{w.title}</b>
+                    <i>{target}</i>
+                    <small>
+                      {w.jazz && <em>Jazz · </em>}
+                      {w.note}
+                    </small>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         )}
         {shown && shown.ways.length === 0 && <p className="ce-noway">Hợp âm ngoài các công thức quen thuộc — hợp âm tiếp theo sẽ mở một chuỗi mới.</p>}
+          </>
+        )}
 
       </div>
 
-      {history.length > 0 && (
+      {mode === 'live' && history.length > 0 && (
         <div className="ce-history">
           <div className="ce-history-row">
             {history.map((h) => (
@@ -326,9 +381,9 @@ export function ChordEarPage() {
           <button onClick={reset} className="ce-clear">Xoá chuỗi</button>
         </div>
       )}
-      <p className="ce-foot">
+      {mode === 'live' && <p className="ce-foot">
         Đoán theo phổ âm thanh: chắc nhất với hợp âm ba và hợp âm bảy đàn rõ trên piano. Hợp âm dày, cụm âm, tiếng ồn hay giọng hát sẽ khiến máy báo “chưa chắc” thay vì đoán bừa. Tên chức năng ghi theo hệ Nga – Xô viết của sách hoà âm trong thư viện; giọng tự đoán từ hợp âm đầu chuỗi, hoặc chọn giọng ở góc trên.
-      </p>
+      </p>}
     </div>
   )
 }
