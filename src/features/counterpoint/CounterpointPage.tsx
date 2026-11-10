@@ -202,10 +202,22 @@ export function CounterpointPage() {
   const key = KEYS[st.keyIdx].key
   const meter = METERS[st.meterIdx]
   const B = barQ(meter)
-  const problem: Problem = useMemo(
-    () => ({ key, meter, given: st.given, givenIs: st.givenIs, stars: st.stars, versions: st.versions, starsOnly: true, quarterPrep: st.quarterPrep }),
-    [key, meter, st.given, st.givenIs, st.stars, st.versions, st.quarterPrep],
-  )
+  // the đề's Iv is a rule of the nguyên thể itself: its plain transposition is always checked, never shown as a version
+  const main = splitsOf(st.iv)[0]
+  const mainLabel = labelled([main], st.iv)[0].label
+  const isMain = (v: { shift: { I: number } }) => v.shift.I === main.shift.I
+  const problem: Problem = useMemo(() => {
+    const versions = st.versions.some(isMain) ? st.versions : labelled([main, ...st.versions], st.iv)
+    return { key, meter, given: st.given, givenIs: st.givenIs, stars: st.stars, versions, starsOnly: true, quarterPrep: st.quarterPrep }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, meter, st.given, st.givenIs, st.stars, st.versions, st.quarterPrep, st.iv])
+  const isNT = (v: Version) => v.shift.I === 0 && v.shift.II === 0
+  /** What is drawn: the nguyên thể (named with its Iv) and the BT; the Iv transposition only lends its faults to the NT. */
+  const shownOf = (cp: Seg[]) =>
+    versionsOf(problem, cp)
+      .filter((v) => isNT(v) || !(isMain(v) && v.label === mainLabel))
+      .map((v) => (isNT(v) ? { ...v, label: `Nguyên thể · Iv ${minus(st.iv)}` } : v))
+  const badOf = (r: Report, v: Version) => r.hard.filter((x) => (isNT(v) ? x.version === 'Nguyên thể' || x.version === mainLabel : x.version === v.label))
   const total = st.given.length ? totalOf(problem) : 0
   const bars = Math.ceil(total / B)
   const editSegs = editing === 'given' ? st.given : st.mine
@@ -252,6 +264,7 @@ export function CounterpointPage() {
   const splitList = splits?.sig === scanSig ? splits.list : null
   const toggleSplit = (v: VersionSpec) =>
     setSt((s) => {
+      if (v.shift.I === splitsOf(s.iv)[0].shift.I) return s
       const has = s.versions.some((x) => x.shift.I === v.shift.I)
       const vs = has ? s.versions.filter((x) => x.shift.I !== v.shift.I) : [...s.versions, v]
       const main = splitsOf(s.iv)[0].shift.I
@@ -303,8 +316,8 @@ export function CounterpointPage() {
   const sig = keySig(key)
 
   const sol = result?.solutions[pick]
-  const shown = sol ? versionsOf(problem, sol.cp) : null
-  const mineVersions = graded ? versionsOf(problem, st.mine) : null
+  const shown = sol ? shownOf(sol.cp) : null
+  const mineVersions = graded ? shownOf(st.mine) : null
   const stars: Mark[] = st.stars.map((t) => ({ t, text: '✱' }))
 
   return (
@@ -505,8 +518,8 @@ export function CounterpointPage() {
               const on = st.versions.find((x) => x.shift.I === v.shift.I)
               const r = splitList?.find((x) => x.I === v.shift.I)
               return (
-                <button key={v.shift.I} className={clsx(on && 'is-on', r && `is-${r.status}`)} disabled={st.locked} onClick={() => toggleSplit(v)} aria-pressed={!!on}>
-                  {on && <b>{on.label}</b>}
+                <button key={v.shift.I} className={clsx((on || isMain(v)) && 'is-on', r && `is-${r.status}`)} disabled={st.locked || isMain(v)} onClick={() => toggleSplit(v)} aria-pressed={!!on || isMain(v)}>
+                  {isMain(v) ? <b>Luật của nguyên thể</b> : on && <b>{on.label}</b>}
                   <span>I {minus(v.shift.I)} · II {minus(v.shift.II)}</span>
                   {r && <i>{r.status === 'ok' ? '✓ giải được' : r.status === 'none' ? '✗ không có' : '? chưa rõ'}</i>}
                 </button>
@@ -537,7 +550,7 @@ export function CounterpointPage() {
         {answerOk && showAnswer && (
           <div className="cp-card">
             <h2>Đáp án của máy (một trong nhiều cách)</h2>
-            {versionsOf(problem, st.answer!).map((v, i) => (
+            {shownOf(st.answer!).map((v, i) => (
               <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `a${i}`} now={playing === `a${i}` ? now : -1} onPlay={() => play(`a${i}`, v)} />
             ))}
           </div>
@@ -550,8 +563,8 @@ export function CounterpointPage() {
             r={rescued}
             meter={meter}
             render={(sol, id) =>
-              versionsOf(problem, sol.cp).map((v, i) => (
-                <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `${id}${i}`} now={playing === `${id}${i}` ? now : -1} onPlay={() => play(`${id}${i}`, v)} bad={sol.report.hard.filter((x) => x.version === v.label)} />
+              shownOf(sol.cp).map((v, i) => (
+                <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `${id}${i}`} now={playing === `${id}${i}` ? now : -1} onPlay={() => play(`${id}${i}`, v)} bad={badOf(sol.report, v)} />
               ))
             }
           />
@@ -578,7 +591,7 @@ export function CounterpointPage() {
           <div className="cp-card">
             <h2>{graded.hard.length ? `Bài của bạn có ${graded.hard.length} lỗi` : 'Bài của bạn đúng mọi luật bắt buộc'}</h2>
             {mineVersions.map((v, i) => (
-              <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `m${i}`} now={playing === `m${i}` ? now : -1} onPlay={() => play(`m${i}`, v)} bad={graded.hard.filter((x) => x.version === v.label)} />
+              <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `m${i}`} now={playing === `m${i}` ? now : -1} onPlay={() => play(`m${i}`, v)} bad={badOf(graded, v)} />
             ))}
             <Remarks report={graded} meter={meter} title="Danh sách lỗi" hard />
           </div>

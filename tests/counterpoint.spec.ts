@@ -31,6 +31,9 @@ test('giải phức điệu: bế tắc ở ô 5, cách gỡ giữ nguyên đề
   await page.getByLabel(/Cho phép nốt đen làm nốt chuẩn bị/).check()
   await page.locator('.cp-actions .cp-go').first().click()
   await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 25_000 })
+  // the Iv belongs to the nguyên thể: drawn are NT, BT1, BT2 — no separate "Iv −7" staff
+  await expect(page.locator('.cp-ver')).toHaveCount(3)
+  await expect(page.locator('.cp-ver-head b').first()).toHaveText('Nguyên thể · Iv −7')
   // every split I + II = −7 is offered, and each is decided
   await expect(page.locator('.cp-splits button')).toHaveCount(8)
   await page.getByRole('button', { name: 'Xét mọi BT' }).click()
