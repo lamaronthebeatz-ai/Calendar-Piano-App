@@ -6,7 +6,8 @@ const GAP = 8 // staff line spacing
 const TOP = 34 // staff top inside a system
 const SYS_H = 118
 
-export type Mark = { t: number; text: string; bad?: boolean }
+/** `line`: the short bar of a prepared dissonance, over or under the number. */
+export type Mark = { t: number; text: string; bad?: boolean; line?: 'over' | 'under' }
 type Voice = { segs: Seg[]; up: boolean; muted?: boolean }
 
 const SHARP_STEPS = [38, 35, 39, 36, 33, 37, 34] // treble F5 C5 G5 D5 A4 E5 B4
@@ -148,7 +149,13 @@ export function ScoreSvg({ voices, meter, keySig, total, below = [], above = [],
   for (const m of below) {
     const si = sysOf(m.t)
     if (si < 0) continue
-    els.push(<text key={`n${m.t}${m.text}`} x={xOf(m.t)} y={si * SYS_H + TOP + 4 * GAP + 40} textAnchor="middle" fontSize={12.5} className={m.bad ? 'sv-bad' : 'sv-num'}>{m.text}</text>)
+    const y = si * SYS_H + TOP + 4 * GAP + 40
+    els.push(<text key={`n${m.t}${m.text}`} x={xOf(m.t)} y={y} textAnchor="middle" fontSize={12.5} className={m.bad ? 'sv-bad' : 'sv-num'}>{m.text}</text>)
+    if (m.line) {
+      const w = 4 + m.text.length * 3.8
+      const ly = m.line === 'over' ? y - 11.5 : y + 3.5
+      els.push(<line key={`nl${m.t}`} x1={xOf(m.t) - w} x2={xOf(m.t) + w} y1={ly} y2={ly} className={m.bad ? 'sv-bad-line' : 'sv-num-line'} />)
+    }
   }
   for (const m of above) {
     const si = sysOf(m.t)

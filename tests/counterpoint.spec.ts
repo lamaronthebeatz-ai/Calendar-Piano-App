@@ -34,6 +34,10 @@ test('giải phức điệu: bế tắc ở ô 5, cách gỡ giữ nguyên đề
   // the Iv belongs to the nguyên thể: drawn are NT, BT1, BT2 — no separate "Iv −7" staff
   await expect(page.locator('.cp-ver')).toHaveCount(3)
   await expect(page.locator('.cp-ver-head b').first()).toHaveText('Nguyên thể · Iv −7')
+  // Taneyev's numbers (octave = 7) and the bar on the numbers of the prepared dissonances at the ✱
+  const nt = page.locator('.cp-ver').first()
+  await expect(nt.locator('.sv-num').last()).toHaveText(/^(0|2|4|5|7|9|11|12|14)$/)
+  expect(await nt.locator('.sv-num-line').count()).toBeGreaterThanOrEqual(4)
   // every split I + II = −7 is offered, and each is decided
   await expect(page.locator('.cp-splits button')).toHaveCount(8)
   await page.getByRole('button', { name: 'Xét mọi BT' }).click()

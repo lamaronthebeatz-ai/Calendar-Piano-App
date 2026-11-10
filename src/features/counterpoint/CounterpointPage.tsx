@@ -5,7 +5,7 @@ import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { playSequence, type Step } from '../theory/audio'
 import {
-  barQ, beatQ, inKey, interval, keyName, keySig, letterOf, notesOf, pitch, pitchName, SOLFA, upperLower,
+  barQ, beatQ, strength, inKey, interval, keyName, keySig, letterOf, notesOf, pitch, pitchName, SOLFA, upperLower,
   type Key, type Meter, type Seg, type Version,
 } from './model'
 import { check, RULES, totalOf, versionsOf, type Problem, type Report, type VersionSpec, type Violation } from './rules'
@@ -123,8 +123,12 @@ function place(m: Meter, t: number) {
   return `ô ${Math.floor(t / B) + 1}, phách ${b}${off % beatQ(m) ? ' (nửa sau)' : ''}`
 }
 
-/** Interval numbers under the staff at every onset of a version. */
-function numbersOf(v: Version): Mark[] {
+/**
+ * Taneyev's numbers under the staff at every onset (number = steps = interval name − 1; quality is not written). A
+ * prepared dissonance on a strong beat — the held note is the dissonant one — gets the book's short bar: over the number
+ * when it sits in the upper voice, under it when in the lower.
+ */
+function numbersOf(v: Version, m: Meter): Mark[] {
   const { upper, lower } = upperLower(v)
   const up = notesOf(upper)
   const lo = notesOf(lower)
@@ -135,7 +139,19 @@ function numbersOf(v: Version): Mark[] {
     const l = lo.find((n) => n.start <= t && t < n.start + n.dur)
     if (u && l) {
       const iv = interval(u.p, l.p)
-      out.push({ t, text: iv.name, bad: iv.n < 0 })
+      // on the downbeat a dissonance is a suspension (the book); on a later beat the moving voice may instead be passing or
+      // neighbouring (in and out by step), and then nothing is suspended
+      const byStep = (ns: typeof up, n: (typeof up)[number]) => {
+        if (strength(m, t) === 3) return false
+        const i = ns.indexOf(n)
+        return i > 0 && i < ns.length - 1 && Math.abs(ns[i - 1].p.step - n.p.step) === 1 && Math.abs(ns[i + 1].p.step - n.p.step) === 1
+      }
+      let held: Mark['line']
+      if (iv.kind === 'dissonant' && strength(m, t) >= 2) {
+        if (u.start < t && l.start === t && !byStep(lo, l)) held = 'over'
+        if (l.start < t && u.start === t && !byStep(up, u)) held = 'under'
+      }
+      out.push({ t, text: String(iv.n), bad: iv.n < 0, line: held })
     }
   }
   return out
@@ -606,7 +622,7 @@ function VersionView({ v, problem, stars, width, playing, now, onPlay, bad = [] 
   const same = v.keyI.tonic === v.keyII.tonic && v.keyI.alter === v.keyII.alter
   const sig = same ? keySig(v.keyI) : 0
   const total = totalOf(problem)
-  const nums = numbersOf(v).map((m) => (bad.some((b) => b.t === m.t) ? { ...m, bad: true } : m))
+  const nums = numbersOf(v, problem.meter).map((m) => (bad.some((b) => b.t === m.t) ? { ...m, bad: true } : m))
   return (
     <div className="cp-ver">
       <div className="cp-ver-head">

@@ -76,6 +76,8 @@
 .sv-mute-stem, .sv-mute-tie { stroke: var(--color-ink-faint); fill: none; stroke-width: 1.2; }
 .sv-num { fill: var(--color-ink-muted); font-variant-numeric: tabular-nums; }
 .sv-bad { fill: oklch(0.68 0.18 25); font-weight: 700; }
+.sv-num-line { stroke: var(--color-ink-muted); stroke-width: 1.3; }
+.sv-bad-line { stroke: oklch(0.68 0.18 25); stroke-width: 1.3; }
 .sv-star { fill: var(--color-gold); }
 .sv-now { stroke: var(--color-gold); stroke-width: 2; }
 
