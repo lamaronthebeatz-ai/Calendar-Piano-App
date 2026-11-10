@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react'
 import clsx from 'clsx'
+import { Link } from 'react-router-dom'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { IS_ANDROID } from '../../lib/device'
@@ -49,6 +50,7 @@ export function ChordEarPage() {
   const [shown, setShown] = useState<Shown | null>(null)
   const [hit, setHit] = useState<number | null>(null)
   const [caption, setCaption] = useState('')
+  const [captionRef, setCaptionRef] = useState<string | null>(null)
   const [history, setHistory] = useState<{ id: number; letter: string; label: string }[]>([])
   const [live, setLive] = useState<{ pcs: number[]; bass: number | null; level: number; unsure: boolean }>({ pcs: [], bass: null, level: 0, unsure: false })
   const [flight, setFlight] = useState<Flight | null>(null)
@@ -103,6 +105,7 @@ export function ChordEarPage() {
           busy.current = true
           setHit(i)
           setCaption(`Hướng đi: ${w.note}`)
+          setCaptionRef(w.ref)
           // the spark runs along the branch first (≈0.45 s), then the chord flies to the centre
           window.setTimeout(() => {
             const card = wayRefs.current[i]?.getBoundingClientRect()
@@ -124,6 +127,7 @@ export function ChordEarPage() {
       }
       const key = fixed ?? (cur && read(ch, cur.key).inKey ? cur.key : keyFromChord(ch, styleRef.current))
       setCaption(cur ? 'Không theo hướng nào — bắt đầu chuỗi mới' : '')
+      setCaptionRef(null)
       show({ id: nextId.current++, chord: ch, key, ways: nextWays(ch, key, styleRef.current), fresh: true })
     },
     [show],
@@ -195,6 +199,7 @@ export function ChordEarPage() {
     setShown(null)
     setHistory([])
     setCaption('')
+    setCaptionRef(null)
   }
 
   // the flying chord: from the way card to the centre, transform only
@@ -235,7 +240,8 @@ export function ChordEarPage() {
             [
               ['classic', 'Cổ điển'],
               ['jazz', 'Jazz'],
-              ['both', 'Cả hai'],
+              ['xx', 'TK XX'],
+              ['both', 'Tất cả'],
             ] as [Style, string][]
           ).map(([v, t]) => (
             <button
@@ -320,7 +326,15 @@ export function ChordEarPage() {
           {status === 'denied' && 'Trình duyệt chưa cho dùng micro — bật lại trong cài đặt trang.'}
           {status === 'error' && 'Không mở được micro trên thiết bị này.'}
         </p>
-        <p className={clsx('ce-caption', caption && 'is-on')} aria-live="polite">{caption}</p>
+        <p className={clsx('ce-caption', caption && 'is-on')} aria-live="polite">
+          {caption}
+          {captionRef && (
+            <>
+              {' '}
+              <Link to={`/theory/${captionRef}`}>Đọc bài</Link>
+            </>
+          )}
+        </p>
 
         {shown && sp && rd && shown.ways.length > 0 && (
           <div key={shown.id} className={clsx('ce-tree', hit !== null && 'is-moving')} aria-label="Các hướng đi tiếp">
@@ -346,14 +360,14 @@ export function ChordEarPage() {
                     ref={(el) => {
                       wayRefs.current[i] = el
                     }}
-                    className={clsx('ce-leaf', w.jazz && 'is-jazz', hit === i && 'is-hit', hit !== null && hit !== i && 'is-dim')}
+                    className={clsx('ce-leaf', `is-${w.src}`, hit === i && 'is-hit', hit !== null && hit !== i && 'is-dim')}
                     style={{ '--i': i, height: ROW } as CSSProperties}
                   >
                     <span aria-hidden className="ce-way-lit" />
                     <b>{w.title}</b>
                     <i>{target}</i>
                     <small>
-                      {w.jazz && <em>Jazz · </em>}
+                      {style === 'both' && w.src !== 'classic' && <em>{w.src === 'jazz' ? 'Jazz' : 'TK XX'} · </em>}
                       {w.note}
                     </small>
                   </div>

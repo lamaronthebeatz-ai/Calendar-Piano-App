@@ -59,7 +59,7 @@
 .ce-func em::before { content: 'jazz · '; font-style: normal; font-family: inherit; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ce-faint); }
 
 .ce-style { display: inline-flex; gap: 2px; margin-bottom: 12px; padding: 3px; border-radius: 99px; border: 1px solid var(--ce-line); background: oklch(1 0 0 / 0.02); }
-.ce-style button { height: 28px; padding: 0 14px; border-radius: 99px; font-size: 12.5px; letter-spacing: 0.04em; color: var(--ce-mute); transition: background 0.3s ease, color 0.3s ease; }
+.ce-style button { height: 28px; padding: 0 10px; border-radius: 99px; font-size: 12px; letter-spacing: 0.04em; color: var(--ce-mute); transition: background 0.3s ease, color 0.3s ease; }
 .ce-style button.is-on { background: linear-gradient(180deg, oklch(0.9 0.08 90), var(--ce-gold) 55%, var(--ce-gold-deep)); color: #0b0a09; font-weight: 600; }
 .ce-tones { margin-top: 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--ce-faint); animation: ce-rise 0.7s 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
@@ -103,6 +103,7 @@
 .ce-leaf small { font-size: 11px; line-height: 1.3; color: var(--ce-faint); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .ce-leaf small em { font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; font-size: 9px; color: var(--ce-gold-deep); }
 .ce-leaf.is-jazz { border-style: dashed; }
+.ce-leaf.is-xx { border-style: dotted; }
 .ce-leaf.is-jazz b { font-style: italic; }
 .ce-way-lit {
   position: absolute; inset: 0; opacity: 0; pointer-events: none; border-radius: inherit;
@@ -184,3 +185,5 @@ html.is-android .ce-lit, html.is-android .ce-flyer { filter: none; }
 @media (prefers-reduced-motion: reduce) {
   .ce-name .on, .ce-halo, .ce-leaf, .ce-limb, .ce-root, .ce-spark, .ce-func, .ce-tones, .ce-history-row span { animation: none; }
 }
+
+.ce-caption a { color: var(--ce-gold); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }

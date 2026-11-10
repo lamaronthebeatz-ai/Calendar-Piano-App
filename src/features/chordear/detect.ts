@@ -247,8 +247,11 @@ export function keyFromChord(ch: Chord, style: Style = 'classic'): Key {
 
 /* ---------- where the harmony may go next ---------- */
 
-export type Way = { root: number; fam: Shape['fam'] | 'any'; bassFifth?: boolean; q: Quality; title: string; note: string; jazz?: boolean }
-export type Style = 'classic' | 'jazz' | 'both'
+/** `src`: which body of theory the way comes from; `ref`: the library article that teaches it. */
+export type Way = { root: number; fam: Shape['fam'] | 'any'; bassFifth?: boolean; q: Quality; title: string; note: string; src: Src; ref: string }
+export type Src = 'classic' | 'jazz' | 'xx'
+/** 'both' (stored name kept from the two-style days) = every body of theory at once. */
+export type Style = Src | 'both'
 
 const at = (k: Key, deg: number) => (k.tonic + (k.minor ? MINOR : MAJOR)[deg]) % 12
 /** Quality of the diatonic triad on a degree (harmonic minor). */
@@ -259,101 +262,215 @@ function triadQ(k: Key, deg: number): Quality {
   const f = (s[(deg + 4) % 7] - r + 12) % 12
   return t === 4 ? (f === 8 ? 'aug' : 'maj') : f === 6 ? 'dim' : 'min'
 }
-const way = (k: Key, deg: number, title: string, note: string, extra?: Partial<Way>): Way => {
+const way = (k: Key, deg: number, title: string, note: string, ref: string, extra?: Partial<Way>): Way => {
   const q = extra?.q ?? triadQ(k, deg)
-  return { root: at(k, deg), fam: SHAPES[q].fam, q, title, note, ...extra }
+  return { root: at(k, deg), fam: SHAPES[q].fam, q, title, note, src: 'classic', ref, ...extra }
+}
+/** A way named by its root's distance from the tonic (♭VI, ♯IV…), as jazz and modal writing count. */
+const byRel = (k: Key, src: Src, rel: number, q: Quality, title: string, note: string, ref: string): Way => ({
+  root: (k.tonic + rel + 120) % 12, fam: SHAPES[q].fam, q, title, note, src, ref,
+})
+const relOf = (ch: Chord, k: Key) => (ch.root - k.tonic + 12) % 12
+const rn = (rel: number) => JAZZ_ROMAN[(rel + 120) % 12]
+
+/** The diminished seventh read four ways: each of its notes can be the leading tone of a new tonic. */
+function dim7Ways(ch: Chord, k: Key): Way[] {
+  return [0, 3, 6, 9].map((n) => {
+    const t = (ch.root + n + 1) % 12
+    return { root: t, fam: 'any' as const, q: 'maj' as const, title: rn(t - k.tonic), note: `7 giảm đọc trùng âm: nốt ${n ? 'khác' : 'gốc'} làm cảm âm, giải quyết về ${rn(t - k.tonic)}`, src: 'classic' as const, ref: 'hop-am-bay-giam' }
+  })
 }
 
 /** Common continuations from the chord just heard, in the order a harmony book would teach them. */
 function classicWays(ch: Chord, k: Key, r: Reading): Way[] {
   const T = k.minor ? 't' : 'T'
-  if (r.isK64) return [way(k, 4, 'D', 'K64 → D: hai bè đi xuống, chủ âm ở bè trầm giữ nguyên', { q: 'maj' }), way(k, 4, 'D7', 'K64 → D7: kết trọn sắp tới', { q: '7' })]
+  const S = k.minor ? 's' : 'S'
+  const fn = 'chuc-nang-hoa-am'
+  if (ch.q === 'aug') {
+    // V+ → I: the augmented triad divides the octave in three, so any of its notes may be the raised fifth of a dominant
+    return [0, 4, 8].map((n) => byRel(k, 'classic', (ch.root + n + 5 - k.tonic) % 12, 'maj', rn(ch.root + n + 5 - k.tonic), 'Hợp âm ba tăng giải quyết như V+ → I (nốt 5 nâng đi lên)', 'hop-am-ba-tang'))
+  }
+  if (r.isK64) return [way(k, 4, 'D', 'K64 → D: hai bè đi xuống, chủ âm ở bè trầm giữ nguyên', 'hop-am-sau-bon', { q: 'maj' }), way(k, 4, 'D7', 'K64 → D7: kết trọn sắp tới', 'cau-ket', { q: '7' })]
+  // the German sixth sounds as a dominant seventh a semitone above V
+  if (r.label === 'II♭7→V') return [way(k, 0, 'K64', '6 tăng (Đức) → K64 → D: tránh quãng 5 song song', 'hop-am-sau-tang', { bassFifth: true }), way(k, 4, 'D', '6 tăng → D: hai nốt quãng 6 tăng mở ra quãng 8', 'hop-am-sau-tang', { q: 'maj' })]
   if (r.label.includes('→') && !r.label.startsWith('II♭7')) {
     const td = ROMAN.indexOf(r.label.split('→')[1])
-    return [way(k, td, ROMAN[td], `Giải quyết ly điệu về bậc ${ROMAN[td]}`), way(k, 0, T, 'Bỏ ly điệu, trở về chủ', { fam: 'any' })]
+    const out = [way(k, td, ROMAN[td], `Giải quyết ly điệu về bậc ${ROMAN[td]}`, 'hop-am-at-phu'), way(k, 0, T, 'Bỏ ly điệu, trở về chủ', 'hop-am-at-phu', { fam: 'any' })]
+    return ch.q === 'dim7' ? [...out, ...dim7Ways(ch, k).filter((w) => w.root !== out[0].root)] : out
   }
-  if (r.label.startsWith('II♭') && !r.label.startsWith('II♭7')) return [way(k, 0, 'K64', 'Napoli → K64 → D', { bassFifth: true }), way(k, 4, 'D', 'Napoli → D: kết nửa', { q: 'maj' }), way(k, 4, 'D7', 'Napoli → D7', { q: '7' })]
+  if (r.label.startsWith('II♭') && !r.label.startsWith('II♭7')) return [way(k, 0, 'K64', 'Napoli → K64 → D', 'hop-am-napoli', { bassFifth: true }), way(k, 4, 'D', 'Napoli → D: kết nửa', 'hop-am-napoli', { q: 'maj' }), way(k, 4, 'D7', 'Napoli → D7', 'hop-am-napoli', { q: '7' })]
+  if (r.label.startsWith('s') && !k.minor) return [way(k, 4, 'D', 's → D', fn, { q: 'maj' }), way(k, 0, 'K64', 's → K64', 'hop-am-sau-bon', { bassFifth: true }), way(k, 0, T, 'Kết plagal thứ: s → T', 'hop-am-muon')]
+  const toV = [way(k, 1, 'D7→V', 'Át của át: dẫn mạnh về D', 'hop-am-at-phu', { q: '7', fam: 'M' }), byRel(k, 'classic', 6, 'dim7', 'VII7→V', '7 giảm của át (bè trầm đi nửa cung lên bậc V)', 'hop-am-at-phu')]
   switch (r.deg) {
     case 4:
       return [
-        way(k, 0, T, 'Kết trọn: D → ' + T),
-        way(k, 5, 'VI', 'Kết ngắt (kết lừa): D → VI'),
-        ...(SHAPES[ch.q].seventh ? [] : [way(k, 4, 'D7', 'Thêm quãng 7: tăng sức hút về chủ', { q: '7' })]),
+        way(k, 0, T, 'Kết trọn: D → ' + T, 'cau-ket'),
+        way(k, 5, 'VI', 'Kết lừa: D → VI', 'cau-ket'),
+        ...(SHAPES[ch.q].seventh ? [] : [way(k, 4, 'D7', 'Thêm quãng 7: tăng sức hút về chủ', 'hop-am-bay', { q: '7' })]),
+        ...(k.minor ? [] : [byRel(k, 'classic', 8, 'maj', 'VI♭', 'Kết lừa sang VI hạ (mượn giọng thứ)', 'trung-am-cromatic')]),
       ]
     case 6:
-      return [way(k, 0, T, 'Âm dẫn lên chủ: VII → ' + T), way(k, 4, 'D7', 'VII → D7', { q: '7' })]
+      return ch.q === 'dim7'
+        ? [way(k, 0, T, 'Âm dẫn lên chủ: VII7 → ' + T, 'hop-am-cam-am'), way(k, 4, 'D7', 'VII7 → D7', 'hop-am-cam-am', { q: '7' }), ...dim7Ways(ch, k).filter((w) => w.root !== k.tonic)]
+        : [way(k, 0, T, 'Âm dẫn lên chủ: VII → ' + T, 'hop-am-cam-am'), way(k, 4, 'D7', 'VII → D7', 'hop-am-cam-am', { q: '7' })]
     case 0:
       return [
-        way(k, 3, k.minor ? 's' : 'S', 'Sang hạ át'),
-        way(k, 4, 'D', 'Sang át', { q: 'maj' }),
-        way(k, 5, 'VI', 'Sang bậc VI (quãng 3 xuống)'),
-        way(k, 1, 'II', 'Bậc II — chuẩn bị át'),
-        way(k, 0, 'D7→IV', 'Thêm 7 thứ: ly điệu sang hạ át', { q: '7', fam: 'M' }),
+        way(k, 3, S, 'Sang hạ át', fn),
+        way(k, 4, 'D', 'Sang át', fn, { q: 'maj' }),
+        way(k, 5, 'VI', 'Sang bậc VI (quãng 3 xuống)', fn),
+        way(k, 1, 'II', 'Bậc II — chuẩn bị át', fn),
+        ...(k.minor ? [] : [way(k, 3, 's', 'Hạ át thứ mượn: T → s → T', 'hop-am-muon', { q: 'min' })]),
+        way(k, 0, 'D7→IV', 'Thêm 7 thứ: ly điệu sang hạ át', 'hop-am-at-phu', { q: '7', fam: 'M' }),
+        ...toV,
       ]
     case 3:
       return [
-        way(k, 4, 'D', 'S → D', { q: 'maj' }),
-        way(k, 0, 'K64', 'S → K64: chuẩn bị kết', { bassFifth: true }),
-        way(k, 0, T, 'Kết plagal: S → ' + T),
-        way(k, 1, 'II', 'Sang bậc II'),
+        way(k, 4, 'D', 'S → D', fn, { q: 'maj' }),
+        way(k, 0, 'K64', 'S → K64: chuẩn bị kết', 'hop-am-sau-bon', { bassFifth: true }),
+        way(k, 0, T, 'Kết plagal: S → ' + T, 'cau-ket'),
+        way(k, 1, 'II', 'Sang bậc II', fn),
+        way(k, 4, 'D7', 'S → D7', fn, { q: '7' }),
+        ...(k.minor ? [] : [way(k, 3, 's', 'S → s: hạ bậc VI, bè trong đi la – la♭ – sol', 'truong-hoa-am', { q: 'min' })]),
+        toV[1],
       ]
     case 1:
-      return [way(k, 4, 'D', 'II → D', { q: 'maj' }), way(k, 0, 'K64', 'II → K64', { bassFifth: true }), way(k, 4, 'D7', 'II → D7', { q: '7' })]
+      return [way(k, 4, 'D', 'II → D', fn, { q: 'maj' }), way(k, 0, 'K64', 'II → K64', 'hop-am-sau-bon', { bassFifth: true }), way(k, 4, 'D7', 'II → D7', fn, { q: '7' }), toV[1]]
     case 5:
-      return [way(k, 1, 'II', 'Vòng quãng 5 đi xuống: VI → II'), way(k, 3, k.minor ? 's' : 'S', 'VI → S'), way(k, 4, 'D', 'VI → D', { q: 'maj' })]
+      return [way(k, 1, 'II', 'Vòng quãng 5 đi xuống: VI → II', 'mo-tien-hoa-am'), way(k, 3, S, 'VI → S', fn), way(k, 4, 'D', 'VI → D', fn, { q: 'maj' }), way(k, 5, 'D7→II', 'Thêm 7, nâng quãng 3: VI thành át của II', 'hop-am-at-phu', { q: '7', fam: 'M' })]
     case 2:
-      return [way(k, 5, 'VI', 'Vòng quãng 5: III → VI'), way(k, 3, k.minor ? 's' : 'S', 'III → S')]
+      return [way(k, 5, 'VI', 'Vòng quãng 5: III → VI', 'mo-tien-hoa-am'), way(k, 3, S, 'III → S', fn), way(k, 2, 'D7→VI', 'III thành át của VI', 'hop-am-at-phu', { q: '7', fam: 'M' })]
     default:
       return []
   }
 }
 
-/** Jazz continuations: ii – V – I and its substitutes, turnarounds, the backdoor, blues. */
-function jazzWays(k: Key, r: Reading): Way[] {
-  const j = (rel: number, q: Quality, title: string, note: string): Way => ({ root: (k.tonic + rel) % 12, fam: SHAPES[q].fam, q, title, note, jazz: true })
-  const home = k.minor ? j(0, 'm6', 'Im6', 'ii – V – i: về chủ thứ') : j(0, 'maj7', 'Imaj7', 'ii – V – I: về chủ')
+/** Jazz continuations: ii – V – I and its substitutes, turnarounds, the backdoor, blues, Coltrane, deceptive resolutions. */
+function jazzWays(ch: Chord, k: Key, r: Reading): Way[] {
+  const j = (rel: number, q: Quality, title: string, note: string, ref: string) => byRel(k, 'jazz', rel, q, title, note, ref)
+  const home = k.minor ? j(0, 'm6', 'Im6', 'ii – V – i: về chủ thứ', 'ii-v-i') : j(0, 'maj7', 'Imaj7', 'ii – V – I: về chủ', 'ii-v-i')
+  const rel = relOf(ch, k)
+  let out: Way[] = []
   if (r.label.startsWith('II♭7→')) {
     const td = ROMAN.indexOf(r.label.split('→')[1])
-    return [{ ...way(k, td, ROMAN[td], `Thay thế tritone: trượt nửa cung xuống bậc ${ROMAN[td]}`), jazz: true }]
-  }
-  if (r.label === 'II♭7') return [{ ...home, note: 'Thay thế tritone: ♭II7 trượt nửa cung xuống chủ' }]
-  if (r.label === 'VII♭7') return [{ ...home, note: 'Backdoor: ♭VII7 → I' }]
-  if (r.label.startsWith('D') && r.label.includes('→')) {
+    out = [{ ...way(k, td, ROMAN[td], `Thay thế tritone: trượt nửa cung xuống bậc ${ROMAN[td]}`, 'thay-the-tritone'), src: 'jazz' }]
+  } else if (r.label === 'II♭7') out = [{ ...home, note: 'Thay thế tritone: ♭II7 trượt nửa cung xuống chủ', ref: 'thay-the-tritone' }]
+  else if (r.label === 'VII♭7') out = [{ ...home, note: 'Backdoor: ♭VII7 → I', ref: 'thay-the-hop-am' }]
+  else if (r.label.startsWith('D') && r.label.includes('→')) {
     const td = ROMAN.indexOf(r.label.split('→')[1])
-    const tgt = (k.tonic + (k.minor ? MINOR : MAJOR)[td]) % 12
-    return [j((tgt + 1 - k.tonic + 12) % 12, '7', `♭II7/${ROMAN[td]}`, `Thay thế tritone của át phụ, rồi về bậc ${ROMAN[td]}`)]
+    const tgt = (at(k, td) - k.tonic + 12) % 12
+    out = [
+      j(tgt + 1, '7', `♭II7/${ROMAN[td]}`, `Thay thế tritone của át phụ, rồi về bậc ${ROMAN[td]}`, 'thay-the-tritone'),
+      j(tgt, '7', `${rn(tgt)}7`, 'Chuỗi át theo quãng 5 (đoạn B của rhythm changes)', 'rhythm-changes'),
+      ...(td === 5 && !k.minor ? [{ ...home, note: 'Cửa trước: ii – V của vi nhưng về I', ref: 'thay-the-hop-am' }] : []),
+    ]
+  } else if (r.label.startsWith('s')) out = [j(10, '7', '♭VII7', 'Backdoor: IVm7 – ♭VII7 – I', 'thay-the-hop-am')]
+  else
+    switch (r.deg) {
+      case 0:
+        out = k.minor
+          ? [j(8, 'maj7', '♭VImaj7', 'i – ♭VI – iiø – V', 'turnaround-jazz'), j(2, 'hdim7', 'IIø7', 'Mở ii – V – i thứ', 'ii-v-i'), j(5, 'm7', 'IVm7', 'i – iv7', 'blues-12-nhip'), j(8, '7', '♭VI7', 'Blues thứ: ♭VI7 – V7 – i', 'blues-12-nhip'), j(0, 'mMaj7', 'Im(maj7)', 'Line cliché: bè trong đi xuống nửa cung', 'line-cliche')]
+          : [
+              j(9, '7', 'VI7', 'Turnaround: I – VI7 – II – V', 'turnaround-jazz'),
+              j(2, 'm7', 'IIm7', 'Mở ii – V – I', 'ii-v-i'),
+              j(5, '7', 'IV7', 'Blues: I7 – IV7', 'blues-12-nhip'),
+              j(1, 'dim7', '♯I°7', 'Giảm lướt lên IIm7', 'hop-am-luot-jazz'),
+              j(4, 'm7', 'IIIm7', 'iii – VI – ii – V', 'turnaround-jazz'),
+              j(11, 'hdim7', 'VIIø7', 'Cửa trước: ii – V của vi', 'thay-the-hop-am'),
+              j(3, '7', '♭III7', 'Coltrane: át dẫn sang giọng cách quãng 3 trưởng', 'vong-coltrane'),
+            ]
+        break
+      case 1:
+        out = [j(7, '7', 'V7', 'ii – V', 'ii-v-i'), j(1, '7', '♭II7', 'ii – ♭II7 – I: thay thế tritone', 'thay-the-tritone'), j(2, '7', 'II7', 'ii thành V của V', 'tai-hoa-am'), j(7, '7sus4', 'V7sus4', 'Hợp âm sus thay cả cặp ii – V', 'ket-lua-va-tiep-can-hop-am')]
+        break
+      case 4:
+        out = [home, j(4, 'm7', 'IIIm7', 'Kết lừa kiểu jazz: V7 → IIIm7', 'ket-lua-va-tiep-can-hop-am'), j(9, 'm7', 'VIm7', 'Kết lừa: V7 → VIm7', 'ket-lua-va-tiep-can-hop-am'), j(0, '7', 'I7', 'Blues: ii – V – I7 ở ô 9 – 11', 'blues-12-nhip')]
+        break
+      case 3:
+        out = k.minor ? [j(7, '7', 'V7', 'iv – V7', 'ii-v-i')] : [j(5, 'm7', 'IVm7', 'IV – IVm7: thứ hoá, sắp về chủ', 'thay-the-hop-am'), j(6, 'hdim7', '♯IVø7', 'IV – ♯IVø7 – I64', 'hop-am-luot-jazz'), j(0, '7', 'I7', 'Blues: IV7 → I7', 'blues-12-nhip')]
+        break
+      case 5:
+        out = [j(2, '7', 'II7', 'VI – II7 – V: át của át', 'turnaround-jazz'), j(2, 'm7', 'IIm7', 'I – vi – ii – V', 'turnaround-jazz')]
+        break
+      case 2:
+        out = [j(9, '7', 'VI7', 'iii – VI7 – ii – V', 'turnaround-jazz'), j(3, 'dim7', '♭III°7', 'Giảm lướt xuống IIm7', 'turnaround-jazz'), j(3, 'm7', '♭IIIm7', 'Chuỗi ii – V đi xuống cromatic', 'blues-12-nhip')]
+        break
+      case 6:
+        if (ch.q === 'hdim7') out = [j(4, '7', 'III7', 'Cửa trước: iiø – V của vi', 'thay-the-hop-am')]
+        break
+    }
+  // any dominant also goes down a fifth, slides a semitone down (tritone resolution) or, Strayhorn's way, up a major third
+  if (DOM.includes(ch.q)) {
+    const more = [
+      j(rel + 5, 'maj7', `${rn(rel + 5)}maj7`, 'Át giải quyết xuống quãng 5', 'ii-v-i'),
+      j(rel - 1, 'maj7', `${rn(rel - 1)}maj7`, 'Tiếp cận nửa cung: át trượt xuống', 'hop-am-luot-jazz'),
+      j(rel + 4, 'maj7', `${rn(rel + 4)}maj7`, 'Kết lừa kiểu Strayhorn: lên quãng 3 trưởng', 'ket-lua-va-tiep-can-hop-am'),
+    ]
+    out = [...out, ...more.filter((w) => !out.some((x) => x.root === w.root))]
   }
-  if (r.label.startsWith('s')) return [j(10, '7', '♭VII7', 'Backdoor: IVm7 – ♭VII7 – I')]
-  switch (r.deg) {
-    case 0:
-      return k.minor
-        ? [j(8, 'maj7', '♭VImaj7', 'i – ♭VI – iiø – V'), j(2, 'hdim7', 'IIø7', 'Mở ii – V – i thứ'), j(5, 'm7', 'IVm7', 'i – iv7')]
-        : [j(9, '7', 'VI7', 'Turnaround: I – VI7 – II – V'), j(2, 'm7', 'IIm7', 'Mở ii – V – I'), j(5, '7', 'IV7', 'Blues: I7 – IV7'), j(1, 'dim7', '♯I°7', 'Giảm lướt lên IIm7'), j(4, 'm7', 'IIIm7', 'iii – VI – ii – V')]
-    case 1:
-      return [j(7, '7', 'V7', 'ii – V'), j(1, '7', '♭II7', 'ii – ♭II7 – I: thay thế tritone')]
-    case 4:
-      return [home, j(4, 'm7', 'IIIm7', 'Kết lừa kiểu jazz: V7 → IIIm7')]
-    case 3:
-      return k.minor ? [j(7, '7', 'V7', 'iv – V7')] : [j(5, 'm7', 'IVm7', 'IV – IVm7: thứ hoá, sắp về chủ'), j(6, 'hdim7', '♯IVø7', 'IV – ♯IVø7 – I64')]
-    case 5:
-      return [j(2, '7', 'II7', 'VI – II7 – V: át của át')]
-    case 2:
-      return [j(9, '7', 'VI7', 'iii – VI7 – ii – V'), j(3, 'dim7', '♭III°7', 'Giảm lướt xuống IIm7')]
-    default:
-      return []
-  }
+  return out
+}
+
+/**
+ * Twentieth-century ways, counted from the chord itself (it needs no key): Neo-Riemann P, L, R; chromatic mediants;
+ * the modal cadences and colour chords; planing; the tritone relation Persichetti calls ambiguous.
+ */
+function xxWays(ch: Chord, k: Key): Way[] {
+  const fam = SHAPES[ch.q].fam
+  if (fam !== 'M' && fam !== 'm') return []
+  const rel = relOf(ch, k)
+  // named from the tonic like every other way (P, L, R keep their Neo-Riemann names)
+  const x = (n: number, q: Quality, title: string, note: string, ref: string): Way => ({
+    root: (ch.root + n + 120) % 12, fam: SHAPES[q].fam, q, title: /^[PLR]$/.test(title) ? title : rn(rel + n) + (SHAPES[q].fam === 'm' ? 'm' : ''), note, src: 'xx', ref,
+  })
+  const out: Way[] = []
+  // colour chords of a mode, heard against the key
+  if (fam === 'M' && !k.minor && rel === 10) out.push(x(2, 'maj', 'I', 'Mixolydian: ♭VII – I', 'hoa-am-dieu-thuc'), x(7, 'maj', 'IV', 'Plagal kép: ♭VII – IV – I', 'hoa-am-pop'))
+  if (fam === 'M' && !k.minor && rel === 8) out.push(x(2, 'maj', '♭VII', 'I – ♭VI – ♭VII – I: "kết anh hùng"', 'hop-am-muon'), x(-3, 'maj', 'IV', 'I – ♭VI – IV', 'hop-am-muon'))
+  if (fam === 'M' && !k.minor && rel === 2) out.push(x(3, 'maj', 'IV', 'Lydian: kết II – IV – I', 'hoa-am-dieu-thuc'))
+  if (fam === 'M' && k.minor && rel === 1) out.push(x(-1, 'min', 'i', 'Kết Phrygian: ♭II – i', 'hoa-am-dieu-thuc'))
+  if (fam === 'M' && k.minor && rel === 5) out.push(x(-5, 'min', 'i', 'Dorian: IV – i (con thoi Dorian)', 'hoa-am-dieu-thuc'))
+  if (fam === 'm' && !k.minor && rel === 5) out.push(x(-5, 'maj', 'I', 'Plagal sigh: IV – iv – I', 'hoa-am-pop'))
+  if (fam === 'M')
+    out.push(
+      x(0, 'min', 'P', 'Neo-Riemann P: quãng 3 hạ nửa cung, trưởng → thứ', 'neo-riemann'),
+      x(4, 'min', 'L', 'Neo-Riemann L: nốt gốc đi xuống nửa cung', 'neo-riemann'),
+      x(-3, 'min', 'R', 'Neo-Riemann R: nốt 5 đi lên một cung', 'neo-riemann'),
+      x(-4, 'maj', '♭VI', 'Trung âm cromatic: quãng 3 trưởng xuống, chung một nốt', 'trung-am-cromatic'),
+      x(4, 'maj', 'III', 'Trung âm cromatic: quãng 3 trưởng lên', 'trung-am-cromatic'),
+      x(3, 'maj', '♭III', 'Trung âm cromatic: quãng 3 thứ lên', 'trung-am-cromatic'),
+      x(-3, 'maj', 'VI', 'Trung âm cromatic: quãng 3 thứ xuống', 'trung-am-cromatic'),
+      x(-2, 'maj', '♭VII', 'Mixolydian ♭VII / song song đi xuống một cung', 'hoa-am-dieu-thuc'),
+      x(2, 'maj', 'II', 'Lydian I – II / song song thực đi lên', 'hoa-am-song-song'),
+      x(6, 'maj', '♯IV', 'Gốc cách tritone: hướng mơ hồ', 'persichetti-huong-hoa-am'),
+    )
+  else
+    out.push(
+      x(0, 'maj', 'P', 'Neo-Riemann P: quãng 3 nâng nửa cung, thứ → trưởng', 'neo-riemann'),
+      x(-4, 'maj', 'L', 'Neo-Riemann L: nốt 5 đi lên nửa cung', 'neo-riemann'),
+      x(3, 'maj', 'R', 'Neo-Riemann R: nốt gốc đi xuống một cung', 'neo-riemann'),
+      x(5, 'maj', 'IV', 'Dorian: i – IV trưởng', 'hoa-am-dieu-thuc'),
+      x(8, 'maj', '♭VI', 'Aeolian: i – ♭VI – ♭VII', 'hoa-am-dieu-thuc'),
+      x(10, 'maj', '♭VII', 'Aeolian: i – ♭VII', 'hoa-am-dieu-thuc'),
+      x(1, 'maj', '♭II', 'Phrygian: i ↔ ♭II', 'hoa-am-dieu-thuc'),
+      x(4, 'min', 'iii', 'Trung âm cromatic (thứ – thứ): quãng 3 trưởng lên', 'trung-am-cromatic'),
+      x(-4, 'min', '♭vi', 'Trung âm cromatic (thứ – thứ): quãng 3 trưởng xuống', 'trung-am-cromatic'),
+      x(6, 'min', '♯iv', 'Gốc cách tritone: hướng mơ hồ', 'persichetti-huong-hoa-am'),
+    )
+  // the key's own colour chords first; a way to the same chord is offered once
+  return out.filter((w, i) => out.findIndex((y) => y.root === w.root && y.fam === w.fam) === i).slice(0, 10)
 }
 
 const sameWay = (a: Way, b: Way) => a.root === b.root && a.fam === b.fam && DOM.includes(a.q) === DOM.includes(b.q) && !!a.bassFifth === !!b.bassFifth
 
-/** Ways forward in the chosen style; "both" keeps the classical ones first and adds the jazz ones that differ. */
+/** Ways forward in the chosen style; "both" takes from each body of theory in turn, the same way only once. */
 export function nextWays(ch: Chord, k: Key, style: Style = 'both'): Way[] {
   const r = read(ch, k)
-  const c = classicWays(ch, k, r)
-  const jz = jazzWays(k, r)
-  if (style === 'classic') return c.length ? c : jz
-  if (style === 'jazz') return jz.length ? jz : c
-  return [...c, ...jz.filter((w) => !c.some((x) => sameWay(x, w)))].slice(0, 7)
+  const lists = { classic: classicWays(ch, k, r), jazz: jazzWays(ch, k, r), xx: xxWays(ch, k) }
+  if (style !== 'both') return lists[style]
+  const out: Way[] = []
+  for (let i = 0; out.length < 10 && i < 12; i++)
+    for (const l of [lists.classic, lists.jazz, lists.xx]) if (l[i] && !out.some((x) => sameWay(x, l[i])) && out.length < 10) out.push(l[i])
+  return out
 }
 
 /** Did the chord just heard take one of the ways? */
