@@ -5,11 +5,11 @@ import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { playSequence, type Step } from '../theory/audio'
 import {
-  barQ, beatQ, inKey, interval, ivOf, keyName, keySig, letterOf, notesOf, pitch, pitchName, SOLFA, upperLower,
-  type Key, type Meter, type Motion, type Seg, type Version,
+  barQ, beatQ, inKey, interval, keyName, keySig, letterOf, notesOf, pitch, pitchName, SOLFA, upperLower,
+  type Key, type Meter, type Seg, type Version,
 } from './model'
 import { check, RULES, totalOf, versionsOf, type Problem, type Report, type VersionSpec, type Violation } from './rules'
-import type { Generated, Hint, Level, Rescue, Solution, SolveResult } from './solver'
+import { labelled, splitsOf, type Generated, type Hint, type Level, type Rescue, type Solution, type SolveResult, type SplitStatus } from './solver'
 import type { Req } from './solver.worker'
 import { ScoreSvg, type Mark } from './ScoreSvg'
 import './counterpoint.css'
@@ -32,21 +32,16 @@ const KEYS: { label: string; key: Key }[] = [
   { label: 'Sol Mixolydian', key: { tonic: 4, alter: 0, minor: false, sig: 0, mode: 'Mixolydian' } },
 ]
 const METERS: Meter[] = [{ num: 3, den: 2 }, { num: 4, den: 2 }, { num: 2, den: 2 }]
-const PRESETS: { label: string; v: VersionSpec }[] = [
-  { label: 'Iv −7 · chuyển chỗ quãng 8', v: { shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' } },
-  { label: 'Iv −14 · chuyển chỗ quãng 15', v: { shift: { I: -7, II: -7 }, motion: 'swap', label: 'Iv −14' } },
-  { label: 'Iv −9 · chuyển chỗ quãng 10', v: { shift: { I: -9, II: 0 }, motion: 'swap', label: 'Iv −9' } },
-  { label: 'Iv −11 · chuyển chỗ quãng 12', v: { shift: { I: -11, II: 0 }, motion: 'swap', label: 'Iv −11' } },
-]
-const MOTIONS: [Motion, string][] = [['swap', 'chuyển chỗ'], ['near', 'chuyển gần'], ['far', 'chuyển xa']]
+const IVS = [-7, -9, -11, -14]
+const minus = (n: number) => String(n).replace('-', '−')
 
 /** `origin`: a teacher's đề (the app never alters it; `locked` also stops the editor) or one the generator made (free to
  *  edit; its `answer` is shown only while the đề is still exactly as generated, checked by `answerSig`). */
 type Saved = {
-  keyIdx: number; meterIdx: number; givenIs: 'I' | 'II'; given: Seg[]; stars: number[]; versions: VersionSpec[]; quarterPrep: boolean; mine: Seg[]
+  keyIdx: number; meterIdx: number; givenIs: 'I' | 'II'; given: Seg[]; stars: number[]; iv: number; versions: VersionSpec[]; quarterPrep: boolean; mine: Seg[]
   origin: 'teacher' | 'gen'; locked: boolean; answer: Seg[] | null; answerSig: string
 }
-const sigOf = (s: Saved) => JSON.stringify([s.keyIdx, s.meterIdx, s.givenIs, s.given, s.stars, s.versions])
+const sigOf = (s: Saved) => JSON.stringify([s.keyIdx, s.meterIdx, s.givenIs, s.given, s.stars, s.iv, s.versions])
 const LEVELS: [Level, string][] = [['de', 'Dễ'], ['vua', 'Vừa'], ['kho', 'Khó']]
 
 /** The exercise Lamar brought (Iv = −7 with two variants): the đề in the lower voice, five ✱. */
@@ -69,7 +64,8 @@ function example(): Saved {
     givenIs: 'II',
     given: c('C4:4 F4:2 | E4:2 F4:1 G4:1 F4:2~ | F4:1 E4:1 D4:1 E4:1 C4:2 | G4:3 F4:1 E4:1 D4:1 | F4:2 E4:2 D4:2~ | D4:1 C4:1 B3:3 C4:1 | C4:6'),
     stars: [6, 12, 18, 24, 30],
-    versions: [PRESETS[0].v, { shift: { I: -4, II: -3 }, motion: 'swap', label: 'BT1' }, { shift: { I: -5, II: -2 }, motion: 'swap', label: 'BT2' }],
+    iv: -7,
+    versions: labelled([{ I: -7, II: 0 }, { I: -4, II: -3 }, { I: -5, II: -2 }].map((shift) => ({ shift, motion: 'swap', label: '' })), -7),
     quarterPrep: false,
     mine: [],
     origin: 'teacher',
@@ -181,7 +177,7 @@ export function CounterpointPage() {
   const [graded, setGraded] = useState<Report | null>(null)
   const [playing, setPlaying] = useState<string | null>(null)
   const [now, setNow] = useState(-1)
-  const [custom, setCustom] = useState({ I: -4, II: -3, motion: 'swap' as Motion })
+  const [splits, setSplits] = useState<{ sig: string; list: SplitStatus[] } | null>(null)
   const [boxRef, width] = useWidth()
   const worker = useRef<Worker | null>(null)
   const stopPlay = useRef<(() => void) | null>(null)
@@ -248,13 +244,26 @@ export function CounterpointPage() {
     setRescued(r)
     setPick(0)
   })
+  // the split scan depends on everything in the đề but the chosen BT
+  const scanSig = JSON.stringify([st.keyIdx, st.meterIdx, st.givenIs, st.given, st.stars, st.iv, st.quarterPrep])
+  const scanSplits = () => run<SplitStatus[]>({ kind: 'splits', problem, iv: st.iv, timeMs: 8000 }, (list) => setSplits({ sig: scanSig, list }))
+  const splitList = splits?.sig === scanSig ? splits.list : null
+  const toggleSplit = (v: VersionSpec) =>
+    setSt((s) => {
+      const has = s.versions.some((x) => x.shift.I === v.shift.I)
+      const vs = has ? s.versions.filter((x) => x.shift.I !== v.shift.I) : [...s.versions, v]
+      const main = splitsOf(s.iv)[0].shift.I
+      // the plain form stays first; the BT keep the order they were picked in
+      vs.sort((a, b) => Number(b.shift.I === main) - Number(a.shift.I === main))
+      return { ...s, versions: labelled(vs, s.iv) }
+    })
   const askHints = () => run<Hint[]>({ kind: 'hints', problem, prefix: st.mine, timeMs: 3500 }, setHintList)
   const makeExercise = (level: Level) =>
     run<Generated | null>({ kind: 'generate', level, seed: 0, timeMs: 6000 }, (g) => {
       if (!g) return
       const keyIdx = KEYS.findIndex((k) => JSON.stringify(k.key) === JSON.stringify(g.key))
       const meterIdx = METERS.findIndex((m) => m.num === g.meter.num)
-      const next: Saved = { ...st, keyIdx, meterIdx, givenIs: g.givenIs, given: g.given, stars: g.stars, versions: g.versions, quarterPrep: false, mine: [], origin: 'gen', locked: false, answer: g.answer.cp, answerSig: '' }
+      const next: Saved = { ...st, keyIdx, meterIdx, givenIs: g.givenIs, given: g.given, stars: g.stars, iv: g.iv, versions: g.versions, quarterPrep: false, mine: [], origin: 'gen', locked: false, answer: g.answer.cp, answerSig: '' }
       setSt({ ...next, answerSig: sigOf(next) })
       setResult(null)
       setRescued(null)
@@ -357,7 +366,7 @@ export function CounterpointPage() {
             ) : (
               <label className="cp-check">
                 <input type="checkbox" checked={st.locked} onChange={(e) => setSt((s) => ({ ...s, locked: e.target.checked }))} disabled={!st.given.length} />
-                Khoá đề của thầy (máy không sửa nốt, ✱, giọng, nhịp hay biến thể)
+                Khoá đề của thầy (máy không sửa nốt, ✱, giọng, nhịp, Iv hay biến thể)
               </label>
             )}
           </div>
@@ -466,45 +475,44 @@ export function CounterpointPage() {
           )}
         </div>
 
-        {/* versions */}
+        {/* versions: all from the đề's Iv */}
         <div className="cp-card">
-          <h2>Biến thể cần đúng luật</h2>
-          <ul className="cp-vers">
-            {st.versions.map((v, i) => (
-              <li key={i}>
-                <b>{v.label}</b>
-                <span>
-                  I = {v.shift.I}, II = {v.shift.II} · Iv = {ivOf(v.shift)} · {MOTIONS.find((m) => m[0] === v.motion)?.[1]}
-                </span>
-                <button aria-label="Bỏ biến thể" disabled={st.locked} onClick={() => setSt((s) => ({ ...s, versions: s.versions.filter((_, k) => k !== i) }))}>×</button>
-              </li>
-            ))}
-          </ul>
-          {!st.locked && (<>
-          <div className="cp-presets">
-            {PRESETS.map((pr) => (
-              <button key={pr.label} onClick={() => setSt((s) => ({ ...s, versions: [...s.versions, pr.v] }))}>+ {pr.label}</button>
-            ))}
-          </div>
-          <div className="cp-row cp-custom">
+          <h2>Iv của đề và các biến thể</h2>
+          <div className="cp-row">
             <label>
-              I =
-              <input type="number" value={custom.I} onChange={(e) => setCustom((c) => ({ ...c, I: +e.target.value }))} />
+              Iv
+              <select value={st.iv} disabled={st.locked} onChange={(e) => setSt((s) => ({ ...s, iv: +e.target.value, versions: labelled([splitsOf(+e.target.value)[0]], +e.target.value) }))}>
+                {IVS.map((n) => <option key={n} value={n}>{minus(n)}</option>)}
+              </select>
             </label>
-            <label>
-              II =
-              <input type="number" value={custom.II} onChange={(e) => setCustom((c) => ({ ...c, II: +e.target.value }))} />
-            </label>
-            <select value={custom.motion} onChange={(e) => setCustom((c) => ({ ...c, motion: e.target.value as Motion }))}>
-              {MOTIONS.map(([m, t]) => <option key={m} value={m}>{t}</option>)}
-            </select>
-            <button onClick={() => setSt((s) => ({ ...s, versions: [...s.versions, { shift: { I: custom.I, II: custom.II }, motion: custom.motion, label: `BT${s.versions.length}` }] }))}>Thêm</button>
+            <button className="cp-ghost" onClick={scanSplits} disabled={!!busy || !st.given.length}>{busy === 'splits' ? 'Đang xét…' : 'Xét mọi BT'}</button>
           </div>
-          </>)}
           <p className="cp-note">
-            Dấu theo quy ước của sách: bè I đi xuống ghi −, bè II đi lên ghi −; Iv = I + II. Mỗi bè được dời đúng bằng quãng của giọng (Đô xuống 4 bậc = Fa, quãng 5 đúng), nên biến thể có thể sang giọng khác.{' '}
+            Mọi biến thể của Iv {minus(st.iv)}: I + II = {minus(st.iv)} (bè I đi xuống ghi −, bè II đi lên ghi −). Bấm để chọn biến thể bài phải đúng. "Xét mọi BT" tính riêng từng cách chia (nguyên thể + biến thể đó) xem có lời giải không.{' '}
             <Link to="/theory/doi-vi-chuyen-dong-chieu-doc">Đối vị chuyển động chiều dọc</Link>
           </p>
+          <div className="cp-splits">
+            {splitsOf(st.iv).map((v) => {
+              const on = st.versions.find((x) => x.shift.I === v.shift.I)
+              const r = splitList?.find((x) => x.I === v.shift.I)
+              return (
+                <button key={v.shift.I} className={clsx(on && 'is-on', r && `is-${r.status}`)} disabled={st.locked} onClick={() => toggleSplit(v)} aria-pressed={!!on}>
+                  {on && <b>{on.label}</b>}
+                  <span>I {minus(v.shift.I)} · II {minus(v.shift.II)}</span>
+                  {r && <i>{r.status === 'ok' ? '✓ giải được' : r.status === 'none' ? '✗ không có' : '? chưa rõ'}</i>}
+                </button>
+              )
+            })}
+          </div>
+          {splitList?.some((x) => x.reason) && (
+            <ul className="cp-split-why">
+              {[...new Set(splitList.flatMap((x) => (x.reason ? [x.reason] : [])))].map((why) => [why, splitList.filter((x) => x.reason === why)] as const).map(([why, xs]) => (
+                <li key={why}>
+                  <b>{xs.length === splitList.length ? 'Mọi cách chia' : xs.map((x) => `I ${minus(x.I)} · II ${minus(x.II)}`).join('; ')}</b> — {why}
+                </li>
+              ))}
+            </ul>
+          )}
           <label className="cp-check">
             <input type="checkbox" checked={st.quarterPrep} onChange={(e) => setSt((s) => ({ ...s, quarterPrep: e.target.checked }))} />
             Cho phép nốt đen làm nốt chuẩn bị (sách không cho — chỉ bật nếu thầy chấp nhận)

@@ -349,10 +349,41 @@ export function hints(p: Problem, prefix: Seg[], timeMs: number): Hint[] {
   return out.sort((a, b) => rank[a.status] - rank[b.status])
 }
 
+/* ---------- the variants (BT) of one Iv ---------- */
+
+/**
+ * Every split I + II = Iv with both voices moving the book's "−" way (I down, II up). The first is the plain form:
+ * Iv −14 as two octaves (−7, −7) so neither voice leaves its register by two octaves, any other Iv as I alone.
+ */
+export function splitsOf(iv: number): VersionSpec[] {
+  const main = iv === -14 ? -7 : iv
+  const out: VersionSpec[] = []
+  for (let I = iv; I <= 0; I++) out.push({ shift: { I, II: iv - I }, motion: 'swap', label: '' })
+  out.sort((a, b) => Number(b.shift.I === main) - Number(a.shift.I === main))
+  return out
+}
+/** Names in the order the student sees them: the plain form "Iv −7", then BT1, BT2… */
+export const labelled = (vs: VersionSpec[], iv: number): VersionSpec[] =>
+  vs.map((v, i) => ({ ...v, label: i === 0 && v.shift.I === splitsOf(iv)[0].shift.I ? `Iv ${String(iv).replace('-', '−')}` : `BT${i}` }))
+
+export type SplitStatus = { I: number; II: number; status: 'ok' | 'none' | 'unknown'; reason?: string }
+
+/** For each split of the đề's Iv alone (nguyên thể + that one version): does a lawful counterpoint exist? */
+export function splitScan(p: Problem, iv: number, timeMs: number): SplitStatus[] {
+  const all = splitsOf(iv)
+  return all.map((v) => {
+    const q = { ...p, versions: [{ ...v, label: 'BT' }] }
+    const star = starCheck(q)
+    if (star.length) return { ...v.shift, status: 'none' as const, reason: `✱ ô ${Math.floor(star[0].t / barQ(p.meter)) + 1}: ${star[0].reason}` }
+    const r = solveMany(q, timeMs / all.length, 1)
+    return { ...v.shift, status: r.solutions.length ? 'ok' as const : r.exhausted ? 'none' as const : 'unknown' as const }
+  })
+}
+
 /* ---------- the exercise generator ---------- */
 
 export type Level = 'de' | 'vua' | 'kho'
-export type Generated = { key: Key; meter: Meter; given: Seg[]; givenIs: 'I' | 'II'; stars: number[]; versions: VersionSpec[]; answer: Solution }
+export type Generated = { key: Key; meter: Meter; given: Seg[]; givenIs: 'I' | 'II'; stars: number[]; iv: number; versions: VersionSpec[]; answer: Solution }
 
 const GEN_KEYS: Key[] = [
   { tonic: 0, alter: 0, minor: false },
@@ -372,11 +403,7 @@ export function generate(level: Level, seed: number, timeMs: number): Generated 
   let sd = seed
   const rnd = () => ((sd = (sd * 16807) % 2147483647) / 2147483647)
   const pick = <T,>(xs: T[]) => xs[Math.floor(rnd() * xs.length)]
-  const conf = {
-    de: { bars: 4, stars: [1, 2], versions: [[{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }]] },
-    vua: { bars: 6, stars: [2, 3], versions: [[{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }, { shift: { I: -4, II: -3 }, motion: 'swap', label: 'BT1' }]] },
-    kho: { bars: 8, stars: [3, 4], versions: [[{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }, { shift: { I: -11, II: 0 }, motion: 'swap', label: 'Iv −11' }], [{ shift: { I: -7, II: 0 }, motion: 'swap', label: 'Iv −7' }, { shift: { I: -9, II: 0 }, motion: 'swap', label: 'Iv −9' }]] },
-  }[level] as { bars: number; stars: number[]; versions: VersionSpec[][] }
+  const conf = { de: { bars: 4, stars: [1, 2], bt: 0 }, vua: { bars: 6, stars: [2, 3], bt: 1 }, kho: { bars: 8, stars: [3, 4], bt: 2 } }[level]
   while (Date.now() - t0 < timeMs) {
     const key = pick(GEN_KEYS)
     const meter: Meter = pick([{ num: 3, den: 2 }, { num: 2, den: 2 }, { num: 4, den: 2 }] as Meter[])
@@ -384,7 +411,9 @@ export function generate(level: Level, seed: number, timeMs: number): Generated 
     const given = genLine(key, meter, conf.bars, givenIs, rnd)
     if (!given) continue
     const B = barQ(meter)
-    const versions = pick(conf.versions)
+    const iv = level === 'kho' && rnd() < 0.5 ? -14 : -7
+    const others = splitsOf(iv).slice(1).sort(() => rnd() - 0.5).slice(0, conf.bt)
+    const versions = labelled([splitsOf(iv)[0], ...others], iv)
     const base: Problem = { key, meter, given, givenIs, stars: [], versions, starsOnly: true }
     const cands: number[] = []
     for (let b = 1; b < conf.bars - 1; b++) if (starCheck({ ...base, stars: [b * B] }).length === 0) cands.push(b * B)
@@ -393,7 +422,7 @@ export function generate(level: Level, seed: number, timeMs: number): Generated 
     const stars = cands.sort(() => rnd() - 0.5).slice(0, want).sort((a, b) => a - b)
     const p = { ...base, stars }
     const r = solveMany(p, Math.min(3000, timeMs - (Date.now() - t0)), 3)
-    if (r.solutions.length) return { key, meter, given, givenIs, stars, versions, answer: r.solutions[0] }
+    if (r.solutions.length) return { key, meter, given, givenIs, stars, iv, versions, answer: r.solutions[0] }
   }
   return null
 }
