@@ -52,3 +52,6 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Pages has stalled past the default 10 minutes twice (runs #317, #322) with a green build
+          timeout: 1200000
