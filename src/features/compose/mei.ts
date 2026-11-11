@@ -145,14 +145,14 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
     body += '</measure>'
   })
   const mei =
-    `<?xml version="1.0" encoding="UTF-8"?><mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0"><meiHead><fileDesc><titleStmt><title/></titleStmt><pubStmt/></fileDesc></meiHead>` +
+    `<?xml version="1.0" encoding="UTF-8"?><mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0"><meiHead><fileDesc><titleStmt><title>${esc(s.title)}</title></titleStmt><pubStmt/></fileDesc></meiHead>` +
     `<music><body><mdiv><score><scoreDef meter.count="${s.time[0]}" meter.unit="${s.time[1]}" key.sig="${sigAttr(s.key)}">` +
     `<staffGrp${grand ? (choir ? ' symbol="bracket" bar.thru="false"' : ' symbol="brace" bar.thru="true"') : ''}>${staffDefs}</staffGrp></scoreDef><section>${body}</section></score></mdiv></body></music></mei>`
   return { mei, pieces }
 }
 
 /** An event cut at the bar lines it crosses. */
-function segments(ev: Ev, bars: Bar[]) {
+export function segments(ev: Ev, bars: Bar[]) {
   const out: { bar: number; start: number; len: number }[] = []
   let t = ev.start
   const end = ev.start + ev.dur
@@ -169,7 +169,7 @@ function segments(ev: Ev, bars: Bar[]) {
 
 const esc = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
-const JUMP_TEXT: Record<Jump, string> = {
+export const JUMP_TEXT: Record<Jump, string> = {
   fine: 'Fine',
   dc: 'D.C.',
   dcfine: 'D.C. al Fine',

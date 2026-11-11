@@ -10,7 +10,8 @@ import {
   type Note, type Orn, type Right, type Score, type Span, type Template,
 } from './model'
 import { chordText, toMei, type PieceInfo } from './mei'
-import { engraver, render } from './engrave'
+import { engraver, render, renderPages } from './engrave'
+import { fileName, fromMusicXml, toMidi, toMusicXml, unzipMxl } from './exchange'
 import './compose.css'
 
 /* ---------- storage: every score on this device, in localStorage ---------- */
@@ -710,6 +711,54 @@ export function ComposePage() {
     setSel(null)
     setMenu(false)
   }
+  /* ---------- files in and out ---------- */
+
+  const save = (data: BlobPart, type: string, name: string) => {
+    const url = URL.createObjectURL(new Blob([data], { type }))
+    const a = Object.assign(document.createElement('a'), { href: url, download: name })
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    setTimeout(() => URL.revokeObjectURL(url), 10_000)
+  }
+  const exportXml = () => save(toMusicXml(score), 'application/vnd.recordare.musicxml+xml', fileName(score, 'musicxml'))
+  const exportMidi = () => save(toMidi(score), 'audio/midi', fileName(score, 'mid'))
+  /** The browser's print dialog, with only the engraved A4 pages in the document (Lưu thành PDF there). */
+  const printScore = () => {
+    if (!tk) return
+    const pages = renderPages(tk, toMei(score).mei)
+    // the screen keeps its SVG; the next edit sets the screen options on the toolkit again (render)
+    document.getElementById('score-print')?.remove()
+    const root = Object.assign(document.createElement('div'), { id: 'score-print' })
+    root.innerHTML = pages.map((p) => `<div>${p}</div>`).join('')
+    document.body.appendChild(root)
+    document.documentElement.classList.add('is-printing-score')
+    const done = () => {
+      document.documentElement.classList.remove('is-printing-score')
+      root.remove()
+    }
+    window.addEventListener('afterprint', done, { once: true })
+    setMenu(false)
+    setTimeout(() => window.print(), 50)
+  }
+  const importFile = async (file: File) => {
+    try {
+      const text = /\.mxl$/i.test(file.name) ? await unzipMxl(await file.arrayBuffer()) : await file.text()
+      const s = fromMusicXml(text, file.name.replace(/\.(musicxml|xml|mxl)$/i, ''))
+      setList((l) => [s, ...l])
+      setCurrentId(s.id)
+      setPast([])
+      setFuture([])
+      setCaret({ staff: 0, t: 0 })
+      setSel(null)
+      setMenu(false)
+      setFlash(`Đã mở “${s.title}”`)
+    } catch (e) {
+      setMenu(false)
+      setFlash(e instanceof Error ? e.message : 'Không mở được tệp này')
+    }
+  }
+
   const openScore = (id: string) => {
     setCurrentId(id)
     setPast([])
@@ -890,6 +939,21 @@ export function ComposePage() {
               <button key={t.id} onClick={() => newScore(t.id)}>+ {t.label}</button>
             ))}
           </div>
+          <h2>Xuất – nhập</h2>
+          <div className="cmp-row">
+            <button onClick={exportXml}>MusicXML</button>
+            <button onClick={exportMidi}>MIDI</button>
+            <button onClick={printScore} disabled={!tk}>In / PDF</button>
+            <label className="cmp-file">
+              Mở MusicXML…
+              <input type="file" accept=".musicxml,.xml,.mxl,application/vnd.recordare.musicxml+xml,application/vnd.recordare.musicxml" onChange={(e) => {
+                const f = e.target.files?.[0]
+                e.target.value = ''
+                if (f) void importFile(f)
+              }} />
+            </label>
+          </div>
+          <p className="cmp-help">MusicXML mở được trong Sibelius, MuseScore, Finale, Dorico. MIDI phát đúng như nút Nghe (kể cả nhắc lại). PDF: chọn “Lưu thành PDF” trong hộp thoại in.</p>
           <h2>Tuỳ chọn</h2>
           <div className="cmp-row">
             <label>Nhịp độ ♩ = <input type="number" min={20} max={300} value={score.tempo} onChange={(e) => commit({ ...score, tempo: Math.max(20, Math.min(300, +e.target.value || 80)) })} /></label>

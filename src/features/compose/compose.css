@@ -98,3 +98,16 @@
 .cmp-entry-row input { flex: 1; min-width: 0; height: 40px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--color-gold); background: var(--color-surface-sunken); color: var(--color-ink); font-size: 16px; }
 .cmp-entry-row button { flex: none; height: 40px; padding: 0 12px; border-radius: 12px; background: var(--color-surface-sunken); font-size: 13px; }
 .cmp-entry-show { margin-top: 4px; font-family: var(--font-display); font-size: 15px; color: var(--color-ink-muted); }
+
+/* print: only the engraved pages (see printScore) */
+#score-print { display: none; }
+@media print {
+  html.is-printing-score, html.is-printing-score body { height: auto !important; overflow: visible !important; background: #fff !important; }
+  html.is-printing-score body > *:not(#score-print) { display: none !important; }
+  html.is-printing-score #score-print { display: block; }
+  #score-print > div { break-after: page; }
+  #score-print > div:last-child { break-after: auto; }
+  #score-print svg { display: block; width: 100%; height: auto; }
+}
+.cmp-file { position: relative; display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 99px; border: 1px solid var(--color-gold); color: var(--color-gold); cursor: pointer; }
+.cmp-file input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }

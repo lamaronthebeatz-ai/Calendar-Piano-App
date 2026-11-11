@@ -31,3 +31,23 @@ export function render(t: VerovioToolkit, mei: string, widthPx: number, scale: n
   t.loadData(mei)
   return t.renderToSVG(1)
 }
+
+/** Pages for print, sized to the A4 sheet inside the app's print margins (178 × 259 mm), title at the top. */
+export function renderPages(t: VerovioToolkit, mei: string): string[] {
+  t.setOptions({
+    pageWidth: 1780,
+    pageHeight: 2560, // a little under the sheet: an SVG exactly as tall spills a blank page
+    adjustPageHeight: false,
+    scale: 40,
+    pageMarginLeft: 60, // brackets and braces hang left of the staff
+    pageMarginRight: 10,
+    pageMarginTop: 0,
+    pageMarginBottom: 0,
+    header: 'auto',
+    footer: 'none',
+    breaks: 'auto',
+    svgHtml5: false,
+  })
+  t.loadData(mei)
+  return Array.from({ length: t.getPageCount() }, (_, i) => t.renderToSVG(i + 1))
+}
