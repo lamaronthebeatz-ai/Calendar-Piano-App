@@ -38,9 +38,13 @@ jobs:
           path: dist
 
   test:
-    runs-on: ubuntu-24.04  # Playwright 1.56 has no browser builds for ubuntu-latest (26.04)
+    runs-on: ubuntu-24.04
+    # Playwright's own image carries the browsers and every system library they need: no apt install on the runner,
+    # which hung for 24 minutes once and failed on an Ubuntu mirror that would not resolve another time
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble  # keep in step with @playwright/test in package.json
     # a stuck runner otherwise holds the deploy for GitHub's default 6 hours
-    timeout-minutes: 25
+    timeout-minutes: 20
     strategy:
       fail-fast: true
       matrix:
@@ -56,24 +60,9 @@ jobs:
       - run: npm ci
       # building here (about 20 s) is quicker than moving the built site between machines
       - run: npm run build -- --base=./
-      # the browser is kept between runs, keyed by the Playwright version; the install once hung 24 minutes on a runner
-      - id: pw
-        run: echo "version=$(npx playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
-      - uses: actions/cache@v4
-        id: pw-cache
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ matrix.browser }}-${{ steps.pw.outputs.version }}
-      - name: Install ${{ matrix.browser }} (3 tries of 5 minutes)
-        timeout-minutes: 16
-        run: |
-          if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then cmd="install-deps"; else cmd="install --with-deps"; fi
-          for i in 1 2 3; do
-            timeout 300 npx playwright $cmd ${{ matrix.browser }} && exit 0
-            echo "::warning::playwright $cmd try $i did not finish, retrying"
-          done
-          exit 1
       - run: npx playwright test --project='${{ matrix.browser }}-*' --shard=${{ matrix.shard }}/2
+        env:
+          HOME: /root # the image keeps its browsers under /root/.cache
       - if: failure()
         uses: actions/upload-artifact@v4
         with:
