@@ -89,3 +89,12 @@
 .cmp-words button.is-italic { font-style: italic; font-weight: 500; }
 .cmp-words button.is-on { background: var(--color-gold-soft); box-shadow: inset 0 0 0 1px var(--color-gold); }
 .cmp-words button:disabled { opacity: 0.4; }
+
+/* lyrics and chord symbols are typed in a bar at the bottom */
+.cmp-entry { position: absolute; z-index: 45; left: 0; right: 0; bottom: 0; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: var(--color-surface-raised); border-top: 1px solid var(--color-border); box-shadow: 0 -12px 30px -18px rgba(0, 0, 0, 0.7); }
+.cmp-entry-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; font-size: 12.5px; color: var(--color-ink-muted); }
+.cmp-entry-head b { color: var(--color-gold); font-weight: 600; }
+.cmp-entry-row { display: flex; gap: 6px; }
+.cmp-entry-row input { flex: 1; min-width: 0; height: 40px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--color-gold); background: var(--color-surface-sunken); color: var(--color-ink); font-size: 16px; }
+.cmp-entry-row button { flex: none; height: 40px; padding: 0 12px; border-radius: 12px; background: var(--color-surface-sunken); font-size: 13px; }
+.cmp-entry-show { margin-top: 4px; font-family: var(--font-display); font-size: 15px; color: var(--color-ink-muted); }

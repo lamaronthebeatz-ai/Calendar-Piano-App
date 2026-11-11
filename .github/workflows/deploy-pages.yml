@@ -62,7 +62,7 @@ jobs:
       - run: npm run build -- --base=./
       - run: npx playwright test --project='${{ matrix.browser }}-*' --shard=${{ matrix.shard }}/2
         env:
-          HOME: /root # the image keeps its browsers under /root/.cache
+          HOME: /root # Firefox refuses to start under GitHub's own HOME when it is not the user's; Playwright's docs set this
       - if: failure()
         uses: actions/upload-artifact@v4
         with:

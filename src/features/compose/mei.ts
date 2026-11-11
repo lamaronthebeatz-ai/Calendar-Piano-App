@@ -1,9 +1,11 @@
-import { dn, layout, midiOf, sigAlter, spell, type Bar, type Clef, type Ev, type Jump, type Score } from './model'
+import { dn, lanesOf, layout, midiOf, sigAlter, spell, type Bar, type Clef, type Ev, type Jump, type Score } from './model'
 
 /** What a drawn element stands for: the event it belongs to and the stretch of time it covers. */
-export type PieceInfo = { staff: number; evId: string; start: number; dur: number; note?: number; bar: number }
+/** `staff` is the lane (a voice on a staff, the index into `Score.staves`); `phys` the staff it is drawn on. */
+export type PieceInfo = { staff: number; phys: number; evId: string; start: number; dur: number; note?: number; bar: number }
 
-const CLEF: Record<Clef, [string, number]> = { treble: ['G', 2], bass: ['F', 4], alto: ['C', 3], tenor: ['C', 4] }
+const CLEF: Record<Clef, [string, number]> = { treble: ['G', 2], treble8: ['G', 2], bass: ['F', 4], alto: ['C', 3], tenor: ['C', 4] }
+const DIS = (c: Clef, pre = 'clef.') => (c === 'treble8' ? ` ${pre}dis="8" ${pre}dis.place="below"` : '')
 const ACCID: Record<number, string> = { [-2]: 'ff', [-1]: 'f', 0: 'n', 1: 's', 2: 'x' }
 const sigAttr = (k: number) => (k === 0 ? '0' : k > 0 ? `${k}s` : `${-k}f`)
 
@@ -16,6 +18,8 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
   const bars = layout(s)
   const pieces = new Map<string, PieceInfo>()
   // per staff, per bar: the layer's XML
+  const lanes = lanesOf(s)
+  const phys = (lane: number) => lanes[lane]?.staff ?? lane
   const layers: string[][] = s.staves.map(() => bars.map(() => ''))
   // control events (dynamics, ornaments, slurs, text…) go after the staves of the bar where they start
   const ctrl: string[] = bars.map(() => '')
@@ -45,7 +49,7 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
         if (!firstBar.has(ev.id)) firstBar.set(ev.id, sg.bar)
         if (!ev.notes.length && !ev.tup && sg.start === bar.start && sg.len === bar.len) {
           const id = k === 0 ? ev.id : `${ev.id}_${k}`
-          pieces.set(id, { staff: st, evId: ev.id, start: sg.start, dur: sg.len, bar: sg.bar })
+          pieces.set(id, { staff: st, phys: phys(st), evId: ev.id, start: sg.start, dur: sg.len, bar: sg.bar })
           layers[st][sg.bar] += `<mRest xml:id="${id}"/>`
           k += spell(sg.len).length
           continue
@@ -55,7 +59,7 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
           const id = k === 0 ? ev.id : `${ev.id}_${k}`
           const dur = `dur="${p.dur}"${p.dots ? ` dots="${p.dots}"` : ''}`
           const real = ev.tup ? (p.ticks * ev.tup.base) / ev.tup.n : p.ticks
-          pieces.set(id, { staff: st, evId: ev.id, start: t, dur: real, bar: sg.bar })
+          pieces.set(id, { staff: st, phys: phys(st), evId: ev.id, start: t, dur: real, bar: sg.bar })
           lastPiece.set(ev.id, id)
           const artic = k === 0 && ev.artic?.length ? ` artic="${ev.artic.join(' ')}"` : ''
           if (!ev.notes.length) layers[st][sg.bar] += `<rest xml:id="${id}" ${dur}/>`
@@ -71,8 +75,10 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
               else if (n.alter) acc = ` accid.ges="${ACCID[n.alter]}"`
               shown.set(pos, n.alter)
               const nid = ev.notes.length > 1 ? `${id}-${j}` : id
-              if (ev.notes.length > 1) pieces.set(nid, { staff: st, evId: ev.id, start: t, dur: p.ticks, note: j, bar: sg.bar })
-              return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}${artic}`}/>`
+              if (ev.notes.length > 1) pieces.set(nid, { staff: st, phys: phys(st), evId: ev.id, start: t, dur: p.ticks, note: j, bar: sg.bar })
+              // the lyric sits on the first note of the event's first piece; a hyphen joins it to the next syllable
+              const verse = k === 0 && j === 0 && ev.lyric?.text ? `<verse n="1"><syl${sylAttrs(ev, evs.slice(0, ei))}>${esc(ev.lyric.text)}</syl></verse>` : ''
+              return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}${artic}`}>${verse}</note>`
             })
             layers[st][sg.bar] += ev.notes.length > 1 ? `<chord xml:id="${id}" ${dur}${artic}>${notes.join('')}</chord>` : notes[0]
           }
@@ -88,8 +94,9 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
   s.staves.forEach((evs, st) => {
     for (const ev of evs) {
       const bar = firstBar.get(ev.id)
-      if (bar === undefined || !ev.notes.length) continue
-      const at = `startid="#${ev.id}" staff="${st + 1}"`
+      if (bar === undefined || (!ev.notes.length && !ev.harm)) continue
+      const at = `startid="#${ev.id}" staff="${phys(st) + 1}"`
+      if (ev.harm) ctrl[bar] += `<harm ${at} place="above">${esc(chordText(ev.harm))}</harm>`
       if (ev.fermata) ctrl[bar] += `<fermata ${at}/>`
       if (ev.orn === 'trill') ctrl[bar] += `<trill ${at}/>`
       if (ev.orn === 'mordent') ctrl[bar] += `<mordent ${at} form="lower"/>`
@@ -105,12 +112,15 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
     const bar = firstBar.get(sp.from)
     const end = lastPiece.get(sp.to)
     if (bar === undefined || !end) continue
-    const ends = `startid="#${sp.from}" endid="#${end}" staff="${sp.staff + 1}"`
+    const ends = `startid="#${sp.from}" endid="#${end}" staff="${phys(sp.staff) + 1}"`
     ctrl[bar] += sp.kind === 'slur' ? `<slur ${ends}/>` : `<hairpin ${ends} form="${sp.kind}" place="below"/>`
   }
 
-  const grand = s.staves.length > 1
-  const staffDefs = s.clefs.map((c, i) => `<staffDef n="${i + 1}" lines="5" clef.shape="${CLEF[c][0]}" clef.line="${CLEF[c][1]}"/>`).join('')
+  const grand = s.clefs.length > 1
+  const choir = !!s.labels?.length
+  const staffDefs = s.clefs
+    .map((c, i) => `<staffDef n="${i + 1}" lines="5" clef.shape="${CLEF[c][0]}" clef.line="${CLEF[c][1]}"${DIS(c)}>${s.labels?.[i] ? `<label>${esc(s.labels[i])}</label>` : ''}</staffDef>`)
+    .join('')
   let body = ''
   bars.forEach((b, i) => {
     const prev = bars[i - 1]
@@ -119,9 +129,17 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
     }
     const attrs = `${b.left ? ` left="${b.left}"` : ''}${b.right && b.right !== 'single' ? ` right="${b.right}"` : ''}`
     body += `<measure n="${i + 1}" xml:id="m${i}"${attrs}>`
-    s.staves.forEach((_, st) => {
-      const clefChange = prev && prev.clefs[st] !== b.clefs[st] ? `<clef shape="${CLEF[b.clefs[st]][0]}" line="${CLEF[b.clefs[st]][1]}"/>` : ''
-      body += `<staff n="${st + 1}"><layer n="1">${clefChange}${layers[st][i]}</layer></staff>`
+    s.clefs.forEach((_, st) => {
+      const clefChange = prev && prev.clefs[st] !== b.clefs[st] ? `<clef shape="${CLEF[b.clefs[st]][0]}" line="${CLEF[b.clefs[st]][1]}"${DIS(b.clefs[st], '')}/>` : ''
+      // the voices of this staff; a second voice with nothing in the bar is left blank, not filled with rests
+      const voices = lanes.map((l, lane) => ({ ...l, lane })).filter((l) => l.staff === st).sort((a, c) => a.voice - c.voice)
+      body += `<staff n="${st + 1}">`
+      for (const v of voices) {
+        const xml = layers[v.lane][i]
+        const empty = v.voice > 1 && !/<note|<chord/.test(xml)
+        body += `<layer n="${v.voice}">${v.voice === voices[0].voice ? clefChange : ''}${empty ? '<mSpace/>' : xml}</layer>`
+      }
+      body += '</staff>'
     })
     body += ctrl[i] + navigation(s.attrs[i], b)
     body += '</measure>'
@@ -129,7 +147,7 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
   const mei =
     `<?xml version="1.0" encoding="UTF-8"?><mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0"><meiHead><fileDesc><titleStmt><title/></titleStmt><pubStmt/></fileDesc></meiHead>` +
     `<music><body><mdiv><score><scoreDef meter.count="${s.time[0]}" meter.unit="${s.time[1]}" key.sig="${sigAttr(s.key)}">` +
-    `<staffGrp${grand ? ' symbol="brace" bar.thru="true"' : ''}>${staffDefs}</staffGrp></scoreDef><section>${body}</section></score></mdiv></body></music></mei>`
+    `<staffGrp${grand ? (choir ? ' symbol="bracket" bar.thru="false"' : ' symbol="brace" bar.thru="true"') : ''}>${staffDefs}</staffGrp></scoreDef><section>${body}</section></score></mdiv></body></music></mei>`
   return { mei, pieces }
 }
 
@@ -172,4 +190,16 @@ function navigation(a: Score['attrs'][number] | undefined, b: Bar): string {
   else if (a.jump === 'tocoda') out += `<dir tstamp="${endBeat}" staff="1" place="above"><rend fontstyle="italic">To Coda</rend></dir><repeatMark func="coda" tstamp="${endBeat}" staff="1" place="above"/>`
   else if (a.jump) out += `<dir tstamp="${endBeat}" staff="1" place="above"><rend fontstyle="italic">${JUMP_TEXT[a.jump]}</rend></dir>`
   return out
+}
+
+/** Chord symbols as typed (Bb7, F#m7b5) with real flat and sharp signs. */
+export const chordText = (t: string) => t.replace(/(?<=^[A-G])b|(?<=[0-9(/])b(?=[0-9])|(?<=\/[A-G])b/g, '♭').replace(/#/g, '♯')
+
+/** Where a syllable sits in its word, from whether it and the syllable before it carry a hyphen. */
+function sylAttrs(ev: Ev, before: Ev[]): string {
+  const prev = [...before].reverse().find((e) => e.lyric?.text)
+  const joinedFrom = !!prev?.lyric?.hyph
+  const joinsOn = !!ev.lyric?.hyph
+  if (joinsOn) return ` con="d" wordpos="${joinedFrom ? 'm' : 'i'}"`
+  return joinedFrom ? ' wordpos="t"' : ''
 }

@@ -5,11 +5,11 @@ import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { playNow, playSequence } from '../theory/audio'
 import {
-  barAt, blank, CLEF_BOTTOM, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
+  barAt, blank, CLEF_BOTTOM, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
   sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
-  type Note, type Orn, type Right, type Score, type Span,
+  type Note, type Orn, type Right, type Score, type Span, type Template,
 } from './model'
-import { toMei, type PieceInfo } from './mei'
+import { chordText, toMei, type PieceInfo } from './mei'
 import { engraver, render } from './engrave'
 import './compose.css'
 
@@ -85,6 +85,8 @@ export function ComposePage() {
   const [restMode, setRestMode] = useState(false)
   const [chordMode, setChordMode] = useState(false)
   const [tupletMode, setTupletMode] = useState<number | null>(null) // 3, 5 or 6 while on
+  const [voice, setVoice] = useState(1) // the voice a tap on a staff writes into
+  const [entry, setEntry] = useState<{ kind: 'lyric' | 'harm'; lane: number; evId: string; text: string } | null>(null)
   const [flash, setFlash] = useState('')
   useEffect(() => {
     if (!flash) return
@@ -160,6 +162,7 @@ export function ComposePage() {
     return () => ro.disconnect()
   }, [])
   const bars = useMemo(() => layout(score), [score])
+  const physOf = (lane: number) => staffOfLane(score, lane)
   const { svg, pieces } = useMemo(() => {
     if (!tk) return { svg: '', pieces: new Map<string, PieceInfo>() }
     const { mei, pieces } = toMei(score)
@@ -184,8 +187,8 @@ export function ComposePage() {
         root.querySelector(`[data-id="${id}"]`)?.classList.add('is-sel')
       }
     }
-    setCaretBox(caretGeometry(root, paperRef.current!, pieces, bars, caret))
-  }, [svg, sel, caret, pieces, bars])
+    setCaretBox(caretGeometry(root, paperRef.current!, pieces, bars, caret, staffOfLane(score, caret.staff)))
+  }, [svg, sel, caret, pieces, bars, score])
 
   /* ---------- input ---------- */
 
@@ -196,16 +199,16 @@ export function ComposePage() {
    * Put a note (spelled `alter`, or by the armed accidental, or by the key signature) or a rest at `t` on a staff, or
    * add it to the chord just written when chord mode is on. The caret moves past it and a bar of room stays ahead.
    */
-  const insert = (staff: number, t: number, d: number, alter?: number) => {
-    const bar = barAt(bars, Math.min(t, totalOf(score) - 1))
+  const insert = (staff: number, t: number, d: number, alter?: number, from: Score = score) => {
+    const bar = barAt(bars, Math.min(t, totalOf(from) - 1))
     const spelled = alter ?? armed ?? sigAlter(bar.key, ((d % 7) + 7) % 7)
     if (chordMode && !restMode) {
-      const evs = score.staves[staff]
+      const evs = from.staves[staff]
       const host = evs.find((e) => e.start + e.dur === t && e.notes.length) ?? evs.find((e) => e.start === t && e.notes.length)
       if (host) {
         const note: Note = fromDn(d, spelled)
         if (!host.notes.some((n) => midiOf(n) === midiOf(note))) {
-          commit(updateEv(score, staff, host.id, (e) => ({ ...e, notes: [...e.notes, note].sort((a, b) => dn(a) - dn(b)) })))
+          commit(updateEv(from, staff, host.id, (e) => ({ ...e, notes: [...e.notes, note].sort((a, b) => dn(a) - dn(b)) })))
           sound([note])
         }
         setArmed(null)
@@ -214,11 +217,11 @@ export function ComposePage() {
     }
     const notes: Note[] = restMode ? [] : [{ ...fromDn(d, spelled), tie: tieNext }]
     // inside a tuplet the note fills the slot; with tuplet input on, the first note opens a new group
-    let base = score
-    let slot = score.staves[staff].find((e) => e.tup && e.start === t)
+    let base = from
+    let slot = from.staves[staff].find((e) => e.tup && e.start === t)
     if (!slot && tupletMode) {
       const kind = TUPLETS.find((x) => x.n === tupletMode)!
-      const open = openTuplet(score, staff, t, inputTicks, kind.n, kind.base)
+      const open = openTuplet(from, staff, t, inputTicks, kind.n, kind.base)
       if (!open) {
         setFlash(`${kind.label} ${DUR_LABEL[dur].toLowerCase()} không vừa phần còn lại của ô`)
         return
@@ -326,7 +329,7 @@ export function ComposePage() {
   /** Clef, key, time and bar lines apply from the measure of the selection or caret. */
   const here = () => {
     const t = sel ? (score.staves[sel.staff].find((e) => e.id === sel.ids[0])?.start ?? caret.t) : caret.t
-    return { bar: barAt(bars, Math.min(t, totalOf(score) - 1)).index, staff: sel?.staff ?? caret.staff }
+    return { bar: barAt(bars, Math.min(t, totalOf(score) - 1)).index, staff: physOf(sel?.staff ?? caret.staff) }
   }
   const setAttr = (f: (a: Score['attrs'][number], bar: number, staff: number) => Score['attrs'][number]) => {
     const { bar, staff } = here()
@@ -497,12 +500,13 @@ export function ComposePage() {
         const hi = Math.max(rg.x0, rg.x1)
         const ids = new Set<string>()
         for (const [id, p] of pieces) {
-          if (p.staff !== rg.staff || p.note !== undefined) continue
+          if (p.staff !== laneIndex(score, rg.staff, voice) || p.note !== undefined) continue
           const r = svgRef.current!.querySelector(`[data-id="${id}"]`)?.getBoundingClientRect()
           if (r && r.right >= lo && r.left <= hi) ids.add(p.evId)
         }
-        const evs = score.staves[rg.staff].filter((x) => ids.has(x.id) && x.notes.length).map((x) => x.id)
-        setSel(evs.length ? { staff: rg.staff, ids: evs } : null)
+        const lane = laneIndex(score, rg.staff, voice)
+        const evs = lane < 0 ? [] : score.staves[lane].filter((x) => ids.has(x.id) && x.notes.length).map((x) => x.id)
+        setSel(evs.length ? { staff: lane, ids: evs } : null)
       }
       return
     }
@@ -518,6 +522,7 @@ export function ComposePage() {
       if (p && ev?.notes.length) {
         setSel({ staff: p.staff, ids: [p.evId], note: p.note })
         setCaret({ staff: p.staff, t: ev.start })
+        setVoice(voiceOfLane(score, p.staff))
         sound(p.note === undefined ? ev.notes : [ev.notes[p.note]])
         return
       }
@@ -529,9 +534,11 @@ export function ComposePage() {
     }
     const bar = bars[spot.bar]
     const d = CLEF_BOTTOM[bar.clefs[spot.staff]] + Math.round((spot.bottom - y) / (spot.space / 2))
-    const t = timeAt(svgRef.current!, pieces, spot.staff, spot.bar, x, inputTicks, bars)
+    // the chosen voice on the tapped staff (its line is added the first time it is written in)
+    const { score: withLane, lane } = ensureLane(score, spot.staff, voice)
+    const t = timeAt(svgRef.current!, pieces, lane, spot.staff, spot.bar, x, inputTicks, bars)
     setSel(null)
-    insert(spot.staff, t, d)
+    insert(lane, t, d, undefined, withLane)
   }
 
   /* ---------- marks: on the selection, or on the note just written ---------- */
@@ -593,6 +600,35 @@ export function ComposePage() {
   const toggleNav = (k: 'segno' | 'coda' | Jump) =>
     setAttr((a) => (k === 'segno' || k === 'coda' ? { ...a, [k]: !a[k] } : { ...a, jump: a.jump === k ? undefined : k }))
 
+  /* ---------- lyrics and chord symbols: typed note after note ---------- */
+
+  const startEntry = (kind: 'lyric' | 'harm') => {
+    const tg = targets()
+    const lane = tg?.staff ?? caret.staff
+    const ev = tg ? score.staves[lane].find((e) => e.id === tg.ids[0]) : score.staves[lane].find((e) => e.notes.length)
+    if (!ev) return setFlash('Viết vài nốt trước đã')
+    setEntry({ kind, lane, evId: ev.id, text: (kind === 'lyric' ? ev.lyric?.text : ev.harm) ?? '' })
+    setSel({ staff: lane, ids: [ev.id] })
+  }
+  /** Keep what was typed for this note; with `move`, go on to the next note (a hyphen joins the syllables). */
+  const entryNext = (text: string, hyph: boolean, move: boolean) => {
+    if (!entry) return
+    const t = text.trim()
+    const s = updateEv(score, entry.lane, entry.evId, (e) =>
+      entry.kind === 'lyric' ? { ...e, lyric: t ? { text: t, hyph: hyph || undefined } : undefined } : { ...e, harm: t || undefined },
+    )
+    commit(s)
+    const evs = s.staves[entry.lane]
+    const cur = evs.find((e) => e.id === entry.evId)
+    const next = move && cur ? evs.find((e) => e.start > cur.start && e.notes.length) : undefined
+    if (!next) {
+      setEntry(null)
+      return
+    }
+    setEntry({ ...entry, evId: next.id, text: (entry.kind === 'lyric' ? next.lyric?.text : next.harm) ?? '' })
+    setSel({ staff: entry.lane, ids: [next.id] })
+  }
+
   /* ---------- playback ---------- */
 
   const togglePlay = () => {
@@ -631,7 +667,7 @@ export function ComposePage() {
         // the octave nearest the last note written on this staff
         const step = 'cdefgab'.indexOf(k.toLowerCase())
         const prev = [...score.staves[caret.staff]].reverse().find((x) => x.start < caret.t && x.notes.length)
-        const ref = prev ? dn(prev.notes[0]) : CLEF_BOTTOM[barAt(bars, caret.t).clefs[caret.staff]] + 4
+        const ref = prev ? dn(prev.notes[0]) : CLEF_BOTTOM[barAt(bars, caret.t).clefs[physOf(caret.staff)]] + 4
         let best = step + 7 * Math.floor(ref / 7)
         for (const c of [best - 7, best + 7]) if (Math.abs(c - ref) < Math.abs(best - ref)) best = c
         insert(caret.staff, caret.t, best)
@@ -664,8 +700,8 @@ export function ComposePage() {
 
   /* ---------- scores ---------- */
 
-  const newScore = (grand: boolean) => {
-    const s = blank(grand ? 'Bản nhạc mới' : 'Giai điệu mới', grand)
+  const newScore = (t: Template) => {
+    const s = fromTemplate(t)
     setList((l) => [s, ...l])
     setCurrentId(s.id)
     setPast([])
@@ -695,7 +731,7 @@ export function ComposePage() {
     ? selEv?.notes.length
       ? `${sel.ids.length > 1 ? `${sel.ids.length} nốt · ` : ''}${(sel.note === undefined ? selEv.notes : [selEv.notes[sel.note]]).map(pitchName).join(' + ')} · ô ${barAt(bars, selEv.start).index + 1}`
       : ''
-    : `Nhập: ${restMode ? 'dấu lặng' : 'nốt'} ${DUR_LABEL[dur].toLowerCase()}${dots ? ' ' + '·'.repeat(dots) : ''}${armed !== null ? ` ${ACCIDENTALS.find((a) => a[0] === armed)?.[1]}` : ''}${chordMode ? ' · hợp âm' : ''}${tupletMode ? ` · liên ${tupletMode}` : ''} · ô ${barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1}`
+    : `Nhập: ${restMode ? 'dấu lặng' : 'nốt'} ${DUR_LABEL[dur].toLowerCase()}${dots ? ' ' + '·'.repeat(dots) : ''}${armed !== null ? ` ${ACCIDENTALS.find((a) => a[0] === armed)?.[1]}` : ''}${chordMode ? ' · hợp âm' : ''}${tupletMode ? ` · liên ${tupletMode}` : ''}${voice > 1 ? ` · bè ${voice}` : ''} · ô ${barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1}`
 
   return (
     <div className="cmp-page">
@@ -793,6 +829,19 @@ export function ComposePage() {
         onDyn={setDyn}
         onText={setText}
         onNav={toggleNav}
+        voice={voice}
+        onVoice={(v) => {
+          // the new voice starts at the bar of the note just written or chosen (as in Sibelius), not after it
+          const tg = targets()
+          const ev = tg && score.staves[tg.staff].find((e) => e.id === tg.ids[0])
+          const t = ev ? barAt(bars, ev.start).start : caret.t
+          const { score: withLane, lane } = ensureLane(score, physOf(tg?.staff ?? caret.staff), v)
+          if (withLane !== score) commit(withLane)
+          setVoice(v)
+          setSel(null)
+          setCaret({ staff: lane, t })
+        }}
+        onEntry={startEntry}
         onRemoveBar={() => {
           if (score.measures <= 1) return
           const lastBar = bars[bars.length - 1]
@@ -802,10 +851,22 @@ export function ComposePage() {
         }}
       />
 
-      {showKeys && (
+      {entry && (
+        <EntryBar
+          entry={entry}
+          where={(() => {
+            const ev = score.staves[entry.lane].find((e) => e.id === entry.evId)
+            return ev ? `${ev.notes.map(pitchName).join(' + ')} · ô ${barAt(bars, ev.start).index + 1}` : ''
+          })()}
+          onText={(text) => setEntry({ ...entry, text })}
+          onNext={entryNext}
+          onClose={() => setEntry(null)}
+        />
+      )}
+      {showKeys && !entry && (
         <Keys
           staff={caret.staff}
-          clef={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).clefs[caret.staff]}
+          clef={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).clefs[physOf(caret.staff)]}
           keySig={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).key}
           onKey={(d, alter) => insert(caret.staff, caret.t, d, alter)}
         />
@@ -819,14 +880,15 @@ export function ComposePage() {
               <li key={s.id}>
                 <button className={clsx(s.id === score.id && 'is-on')} onClick={() => openScore(s.id)}>
                   <b>{s.title}</b>
-                  <small>{s.staves.length > 1 ? 'Khuông đôi' : 'Khuông đơn'} · {s.measures} ô · {new Date(s.updated).toLocaleDateString('vi-VN')}</small>
+                  <small>{s.labels?.length ? 'Hợp xướng' : s.clefs.length > 1 ? 'Khuông đôi' : 'Khuông đơn'} · {s.measures} ô · {new Date(s.updated).toLocaleDateString('vi-VN')}</small>
                 </button>
               </li>
             ))}
           </ul>
           <div className="cmp-row">
-            <button onClick={() => newScore(true)}>+ Khuông đôi (piano)</button>
-            <button onClick={() => newScore(false)}>+ Khuông đơn</button>
+            {TEMPLATES.map((t) => (
+              <button key={t.id} onClick={() => newScore(t.id)}>+ {t.label}</button>
+            ))}
           </div>
           <h2>Tuỳ chọn</h2>
           <div className="cmp-row">
@@ -909,7 +971,7 @@ function staffAt(root: HTMLElement, x: number, y: number): Spot | null {
 }
 
 /** The time a point in a measure stands for: the start of the element under it, finer inside a long rest. */
-function timeAt(root: HTMLElement, pieces: Map<string, PieceInfo>, staff: number, bar: number, x: number, grid: number, bars: ReturnType<typeof layout>): number {
+function timeAt(root: HTMLElement, pieces: Map<string, PieceInfo>, staff: number, phys: number, bar: number, x: number, grid: number, bars: ReturnType<typeof layout>): number {
   const here = [...pieces.entries()].filter(([, p]) => p.staff === staff && p.bar === bar && p.note === undefined).sort((a, b) => a[1].start - b[1].start)
   const b = bars[bar]
   if (!here.length) return b.start
@@ -926,7 +988,7 @@ function timeAt(root: HTMLElement, pieces: Map<string, PieceInfo>, staff: number
   // inside a rest longer than the note being written, place it where the finger is, on the grid
   if (r && el && (el.getAttribute('data-class') === 'rest' || el.getAttribute('data-class') === 'mRest') && p.dur > grid) {
     const measure = root.querySelector(`[data-id="m${bar}"]`)?.getBoundingClientRect()
-    const left = el.getAttribute('data-class') === 'mRest' && measure ? contentLeft(root, bar, staff) ?? measure.left : r.left
+    const left = el.getAttribute('data-class') === 'mRest' && measure ? contentLeft(root, bar, phys) ?? measure.left : r.left
     const right = xs[i + 1]?.left ?? measure?.right ?? r.right
     const f = Math.min(0.999, Math.max(0, (x - left) / Math.max(1, right - left)))
     const off = Math.floor((f * p.dur) / grid) * grid
@@ -947,12 +1009,12 @@ function contentLeft(root: HTMLElement, bar: number, staff: number): number | nu
 }
 
 /** The caret: a thin line across the caret's staff, just before the element at its time. */
-function caretGeometry(root: HTMLElement, paper: HTMLElement, pieces: Map<string, PieceInfo>, bars: ReturnType<typeof layout>, c: Caret) {
+function caretGeometry(root: HTMLElement, paper: HTMLElement, pieces: Map<string, PieceInfo>, bars: ReturnType<typeof layout>, c: Caret, phys: number) {
   if (!root.firstElementChild) return null
   const pr = paper.getBoundingClientRect()
   const total = bars.reduce((n, b) => n + b.len, 0)
   const bar = barAt(bars, Math.min(c.t, total - 1))
-  const st = root.querySelectorAll(`[data-id="m${bar.index}"] > [data-class="staff"]`)[c.staff]
+  const st = root.querySelectorAll(`[data-id="m${bar.index}"] > [data-class="staff"]`)[phys]
   if (!st) return null
   const lines = [...st.querySelectorAll(':scope > path')].slice(0, 5).map((p) => p.getBoundingClientRect())
   if (lines.length < 5) return null
@@ -966,7 +1028,7 @@ function caretGeometry(root: HTMLElement, paper: HTMLElement, pieces: Map<string
     const r = el?.getBoundingClientRect()
     if (r && here[1].start === c.t && el?.getAttribute('data-class') !== 'mRest') x = r.left - 4
     else {
-      const left = contentLeft(root, bar.index, c.staff) ?? lines[0].left
+      const left = contentLeft(root, bar.index, phys) ?? lines[0].left
       x = left + ((c.t - bar.start) / bar.len) * (lines[0].right - left)
     }
   } else x = lines[0].left
@@ -1014,8 +1076,11 @@ type PaletteProps = {
   onDyn: (d: Dyn) => void
   onText: (kind: 'tempo' | 'expr', preset?: string) => void
   onNav: (k: 'segno' | 'coda' | Jump) => void
+  voice: number
+  onVoice: (v: number) => void
+  onEntry: (k: 'lyric' | 'harm') => void
 }
-const TABS = [['notes', 'Nốt'], ['acc', 'Dấu hoá'], ['link', 'Liên kết'], ['artic', 'Kỹ thuật'], ['dyn', 'Sắc thái'], ['text', 'Chữ'], ['sig', 'Khoá · Giọng · Nhịp'], ['bar', 'Vạch nhịp · Nhắc lại']] as const
+const TABS = [['notes', 'Nốt'], ['acc', 'Dấu hoá'], ['link', 'Liên kết'], ['artic', 'Kỹ thuật'], ['dyn', 'Sắc thái'], ['text', 'Chữ'], ['words', 'Lời · Hợp âm'], ['sig', 'Khoá · Giọng · Nhịp'], ['bar', 'Vạch nhịp · Nhắc lại']] as const
 const ARTICS: [Artic, string, string][] = [['stacc', '•', 'Staccato'], ['stacciss', '▾', 'Staccatissimo'], ['ten', '–', 'Tenuto'], ['acc', '>', 'Accent'], ['marc', '^', 'Marcato']]
 const ORNS: [Orn, string, string][] = [['trill', '𝆖', 'Láy rền (tr)'], ['mordent', '∿', 'Láy dưới'], ['mordentInv', '≈', 'Láy trên'], ['turn', '𝆗', 'Láy vòng']]
 const DYNS: [Dyn, string][] = [['ppp', '𝆏𝆏𝆏'], ['pp', '𝆏𝆏'], ['p', '𝆏'], ['mp', '𝆐𝆏'], ['mf', '𝆐𝆑'], ['f', '𝆑'], ['ff', '𝆑𝆑'], ['fff', '𝆑𝆑𝆑'], ['sf', '𝆍𝆑'], ['sfz', '𝆍𝆑𝆎'], ['fp', '𝆑𝆏']]
@@ -1095,6 +1160,15 @@ function Palette(p: PaletteProps) {
           <Tool disabled={!p.hasSel} title="Lên một bậc" onClick={p.onUp} glyph="↑" label="Lên" />
           <Tool disabled={!p.hasSel} title="Xuống một bậc" onClick={p.onDown} glyph="↓" label="Xuống" />
           <Tool title="Xoá" onClick={p.onDelete} glyph="⌫" label="Xoá" />
+          <Tool on={p.voice === 1} title="Bè 1 (đuôi lên)" onClick={() => p.onVoice(1)} glyph="①" label="Bè 1" />
+          <Tool on={p.voice === 2} title="Bè 2 (đuôi xuống, cùng khuông)" onClick={() => p.onVoice(2)} glyph="②" label="Bè 2" />
+        </div>
+      )}
+      {tab === 'words' && (
+        <div className="cmp-grid">
+          <Tool on={false} title="Lời ca" onClick={() => p.onEntry('lyric')} glyph={<span className="cmp-word">La</span>} label="Lời ca" />
+          <Tool on={false} title="Tên hợp âm" onClick={() => p.onEntry('harm')} glyph={<span className="cmp-word">C7</span>} label="Hợp âm" />
+          <p className="cmp-note">Bắt đầu ở nốt đang chọn (hoặc nốt vừa viết). Gõ một âm tiết rồi bấm dấu cách để sang nốt sau, dấu gạch (-) để nối âm tiết. Tên hợp âm gõ kiểu Bb7, F#m7b5, G/B — máy tự đổi b, # thành ♭, ♯.</p>
         </div>
       )}
       {tab === 'acc' && (
@@ -1270,6 +1344,51 @@ function Sheet({ children, onClose }: { children: ReactNode; onClose: () => void
         <button className="cmp-sheet-x" onClick={onClose} aria-label="Đóng">✕</button>
         {children}
       </div>
+    </div>
+  )
+}
+
+/** The line where lyrics or chord symbols are typed, one note at a time. */
+function EntryBar({ entry, where, onText, onNext, onClose }: {
+  entry: { kind: 'lyric' | 'harm'; text: string }
+  where: string
+  onText: (t: string) => void
+  onNext: (text: string, hyph: boolean, move: boolean) => void
+  onClose: () => void
+}) {
+  const lyric = entry.kind === 'lyric'
+  return (
+    <div className="cmp-entry" role="group" aria-label={lyric ? 'Gõ lời ca' : 'Gõ tên hợp âm'}>
+      <div className="cmp-entry-head">
+        <b>{lyric ? 'Lời ca' : 'Tên hợp âm'}</b>
+        <span>{where}</span>
+      </div>
+      <div className="cmp-entry-row">
+        <input
+          autoFocus
+          value={entry.text}
+          placeholder={lyric ? 'Âm tiết…' : 'Vd. Cmaj7, Bb7, G/B'}
+          autoCapitalize="off"
+          autoCorrect="off"
+          spellCheck={false}
+          enterKeyHint="next"
+          // the last character decides: a space moves on, a hyphen joins (phone keyboards send no reliable key codes)
+          onChange={(e) => {
+            const v = e.target.value
+            if (/\s$/.test(v) && v.trim()) onNext(v, false, true)
+            else if (lyric && v.endsWith('-') && v.length > 1) onNext(v.slice(0, -1), true, true)
+            else onText(v)
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') onNext(entry.text, false, true)
+            else if (e.key === 'Escape') onClose()
+          }}
+        />
+        <button onClick={() => onNext(entry.text, false, true)}>Tiếp →</button>
+        {lyric && <button onClick={() => onNext(entry.text, true, true)}>– Nối</button>}
+        <button onClick={() => onNext(entry.text, false, false)}>Xong</button>
+      </div>
+      {lyric ? null : <p className="cmp-entry-show">{entry.text ? chordText(entry.text) : ' '}</p>}
     </div>
   )
 }

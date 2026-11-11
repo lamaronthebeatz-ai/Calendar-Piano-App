@@ -130,3 +130,37 @@ test('soạn nhạc: bản lưu theo đơn vị cũ (48 tick) tự chuyển khi 
   expect(v.v).toBe(2)
   expect(v.staves[0][0].dur).toBe(240)
 })
+
+test('soạn nhạc đợt 3: SATB 2 khuông 4 bè, bè 2, lời ca nối âm tiết, tên hợp âm', async ({ page }) => {
+  test.setTimeout(90_000)
+  await open(page)
+  await page.getByRole('button', { name: 'Bản nhạc và tuỳ chọn' }).click()
+  await page.getByRole('button', { name: /SATB — 2 khuông/ }).click()
+  await expect(page.locator('.cmp-svg [data-class="label"]').first()).toBeVisible({ timeout: 20_000 })
+  // soprano: two notes; then voice 2 (alto) on the same staff: one note
+  for (const k of ['e', 'd']) await page.keyboard.press(k)
+  await page.getByRole('button', { name: /^Bè 2/ }).click()
+  await expect(page.locator('.cmp-status')).toContainText('bè 2')
+  await page.keyboard.press('c')
+  const s = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0])
+  const count = (i: number) => s.staves[i].filter((e: { notes: unknown[] }) => e.notes.length).length
+  expect([count(0), count(1)]).toEqual([2, 1])
+  await expect(page.locator('.cmp-svg [data-class="layer"]')).not.toHaveCount(0)
+  // lyrics on the soprano: "Ha-" joins to "le"
+  await page.getByRole('button', { name: /^Bè 1/ }).click()
+  await page.locator('.cmp-svg [data-class="note"]').first().locator('[data-class="notehead"]').click()
+  await page.getByRole('tab', { name: 'Lời · Hợp âm' }).click()
+  await page.getByRole('button', { name: 'Lời ca', exact: true }).click()
+  const box = page.locator('.cmp-entry input')
+  await box.pressSequentially('Ha-le ')
+  await expect(page.locator('.cmp-svg [data-class="syl"]')).toHaveCount(2)
+  await expect(page.locator('.cmp-entry')).toHaveCount(0)
+  // a chord symbol on the first soprano note
+  await page.locator('.cmp-svg [data-class="note"]').first().locator('[data-class="notehead"]').click()
+  await page.getByRole('button', { name: 'Tên hợp âm' }).click()
+  await box.fill('Bb7')
+  await page.getByRole('button', { name: 'Xong' }).click()
+  // Verovio draws the flat as a SMuFL glyph, a private-use character between B and 7
+  await expect(page.locator('.cmp-svg [data-class="harm"]')).toContainText(/B[\s\S]*7/)
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0].staves[0][0].harm)).toBe('Bb7')
+})

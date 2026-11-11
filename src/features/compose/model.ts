@@ -11,7 +11,7 @@ export const DUR = { 1: 960, 2: 480, 4: 240, 8: 120, 16: 60, 32: 30, 64: 15 } as
 export type DurName = keyof typeof DUR
 export const DUR_NAMES: DurName[] = [1, 2, 4, 8, 16, 32, 64]
 
-export type Clef = 'treble' | 'bass' | 'alto' | 'tenor'
+export type Clef = 'treble' | 'treble8' | 'bass' | 'alto' | 'tenor' // treble8: the tenor's G clef sounding an octave lower
 export type Pitch = { step: number; oct: number; alter: number } // step 0–6 = C–B; middle C = { step 0, oct 4 }
 export type Note = Pitch & { tie?: boolean } // tied to the same pitch in the next event of the staff
 export type Artic = 'stacc' | 'stacciss' | 'ten' | 'acc' | 'marc'
@@ -19,7 +19,7 @@ export type Orn = 'trill' | 'mordent' | 'mordentInv' | 'turn'
 export type Dyn = 'ppp' | 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'fff' | 'sf' | 'sfz' | 'fp'
 /** `n` notes in the time of `base` (3 in 2, 5 in 4, 6 in 4); the events of one group share `g`. */
 export type Tup = { n: number; base: number; g: string }
-export type Marks = { artic?: Artic[]; orn?: Orn; fermata?: boolean; arpeg?: boolean; dyn?: Dyn; tup?: Tup; text?: { kind: 'tempo' | 'expr'; text: string; bpm?: number } }
+export type Marks = { lyric?: { text: string; hyph?: boolean }; harm?: string; artic?: Artic[]; orn?: Orn; fermata?: boolean; arpeg?: boolean; dyn?: Dyn; tup?: Tup; text?: { kind: 'tempo' | 'expr'; text: string; bpm?: number } }
 export type Ev = { id: string; start: number; dur: number; notes: Note[] } & Marks // no notes = a rest
 /** A slur or hairpin from one event to another on the same staff. */
 export type Span = { id: string; kind: 'slur' | 'cres' | 'dim'; staff: number; from: string; to: string }
@@ -36,7 +36,10 @@ export type Score = {
   tempo: number // quarter notes per minute
   measures: number
   attrs: Record<number, MeasureAttr> // changes from a measure on (0-based)
-  staves: Ev[][]
+  staves: Ev[][] // one event line per lane (a voice on a staff), see `lanes`
+  /** Which staff and voice each line of `staves` is; missing = one voice per staff, line i on staff i. */
+  lanes?: { staff: number; voice: number }[]
+  labels?: string[] // staff names (Soprano, Alto…)
   spans: Span[]
   updated: number
   v?: number // 2 = ticks at TPQ 240
@@ -63,7 +66,7 @@ export const SOLFA = ['Đô', 'Rê', 'Mi', 'Fa', 'Sol', 'La', 'Si']
 const ACC: Record<number, string> = { [-2]: '𝄫', [-1]: '♭', 0: '', 1: '♯', 2: '𝄪' }
 export const pitchName = (p: Pitch) => `${SOLFA[p.step]}${ACC[p.alter] ?? ''}${p.oct}`
 /** Diatonic number of the bottom staff line for each clef (treble E4, bass G2, alto F3, tenor D3). */
-export const CLEF_BOTTOM: Record<Clef, number> = { treble: 30, bass: 18, alto: 24, tenor: 22 }
+export const CLEF_BOTTOM: Record<Clef, number> = { treble: 30, treble8: 23, bass: 18, alto: 24, tenor: 22 }
 
 /* ---------- measures ---------- */
 
@@ -180,6 +183,43 @@ export function resize(s: Score, staff: number, id: string, dur: number): Score 
 
 /** Deleting a note or chord leaves a rest of the same length; the bar stays full. */
 export const clearEv = (s: Score, staff: number, id: string) => updateEv(s, staff, id, (e) => ({ ...e, notes: [] }))
+
+/* ---------- lanes: a voice on a staff ---------- */
+
+export const lanesOf = (s: Score) => s.lanes ?? s.staves.map((_, i) => ({ staff: i, voice: 1 }))
+export const staffOfLane = (s: Score, lane: number) => lanesOf(s)[lane]?.staff ?? 0
+export const voiceOfLane = (s: Score, lane: number) => lanesOf(s)[lane]?.voice ?? 1
+export const laneIndex = (s: Score, staff: number, voice: number) => lanesOf(s).findIndex((l) => l.staff === staff && l.voice === voice)
+/** The lane of a voice on a staff, added (all rest) the first time it is written in. */
+export function ensureLane(s: Score, staff: number, voice: number): { score: Score; lane: number } {
+  const i = laneIndex(s, staff, voice)
+  if (i >= 0) return { score: s, lane: i }
+  const lanes = [...lanesOf(s), { staff, voice }]
+  return { score: normalized({ ...s, lanes, staves: [...s.staves, []] }), lane: lanes.length - 1 }
+}
+
+export type Template = 'grand' | 'single' | 'satb4' | 'satb2'
+export const TEMPLATES: { id: Template; label: string }[] = [
+  { id: 'grand', label: 'Khuông đôi (piano)' },
+  { id: 'single', label: 'Khuông đơn' },
+  { id: 'satb4', label: 'Hợp xướng SATB — 4 khuông' },
+  { id: 'satb2', label: 'Hợp xướng SATB — 2 khuông, 4 bè' },
+]
+
+export function fromTemplate(t: Template): Score {
+  const base = blank(t === 'single' ? 'Giai điệu mới' : t.startsWith('satb') ? 'Hợp xướng mới' : 'Bản nhạc mới', t !== 'single')
+  if (t === 'satb4')
+    return normalized({ ...base, clefs: ['treble', 'treble', 'treble8', 'bass'], labels: ['Soprano', 'Alto', 'Tenor', 'Bass'], staves: [[], [], [], []] })
+  if (t === 'satb2')
+    return normalized({
+      ...base,
+      clefs: ['treble', 'bass'],
+      labels: ['S A', 'T B'],
+      lanes: [{ staff: 0, voice: 1 }, { staff: 0, voice: 2 }, { staff: 1, voice: 1 }, { staff: 1, voice: 2 }],
+      staves: [[], [], [], []],
+    })
+  return base
+}
 
 export function blank(title = 'Bản nhạc mới', grand = true): Score {
   const s: Score = {
