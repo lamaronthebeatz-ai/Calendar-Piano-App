@@ -3,9 +3,9 @@ import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
-import { playNow, playSequence } from '../theory/audio'
+import { loadInstruments, playNow, playSequence, type Inst } from '../theory/audio'
 import {
-  barAt, blank, CLEF_BOTTOM, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
+  barAt, blank, CLEF_BOTTOM, INSTRUMENTS, instOf, transposeOf, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
   sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
   type Note, type Orn, type Right, type Score, type Span, type Template,
 } from './model'
@@ -104,6 +104,7 @@ export function ComposePage() {
   const [menu, setMenu] = useState(false)
   const [playing, setPlaying] = useState(false)
   const stopPlay = useRef<(() => void) | null>(null)
+  const playToken = useRef(0) // a press of Stop while the strings load cancels the start
 
   const [tk, setTk] = useState<VerovioToolkit | null>(null)
   const [failed, setFailed] = useState(false)
@@ -117,6 +118,11 @@ export function ComposePage() {
     }
   }, [])
   useEffect(() => saveAll(list), [list])
+  // a score with strings fetches their samples as it opens, so the first tap already sounds right
+  const instKey = (score.instruments ?? []).filter((i) => i !== 'piano').join()
+  useEffect(() => {
+    if (instKey) void loadInstruments(instKey.split(',') as Inst[])
+  }, [instKey])
   useEffect(() => savePref(CURRENT, score.id), [score.id])
   useEffect(() => savePref('compose:zoom', zoom), [zoom])
   useEffect(() => savePref('compose:ivory', ivory), [ivory])
@@ -194,7 +200,11 @@ export function ComposePage() {
   /* ---------- input ---------- */
 
   const inputTicks = ticksOf(dur, dots)
-  const sound = (notes: Note[]) => notes.length && playNow(notes.map(midiOf), 0.6)
+  /** A note as it sounds on its staff's instrument (the double bass an octave down). */
+  const sound = (notes: Note[], lane: number) => {
+    const inst = instOf(score, staffOfLane(score, lane))
+    if (notes.length) playNow(notes.map((n) => midiOf(n) + transposeOf(inst)), 0.6, 0, inst)
+  }
 
   /**
    * Put a note (spelled `alter`, or by the armed accidental, or by the key signature) or a rest at `t` on a staff, or
@@ -210,7 +220,7 @@ export function ComposePage() {
         const note: Note = fromDn(d, spelled)
         if (!host.notes.some((n) => midiOf(n) === midiOf(note))) {
           commit(updateEv(from, staff, host.id, (e) => ({ ...e, notes: [...e.notes, note].sort((a, b) => dn(a) - dn(b)) })))
-          sound([note])
+          sound([note], staff)
         }
         setArmed(null)
         return
@@ -234,7 +244,7 @@ export function ComposePage() {
     const end = t + (slot ? slot.dur : inputTicks)
     const room = totalOf(next) - end < barAt(layout(next), Math.max(0, end - 1)).len ? normalized({ ...next, measures: next.measures + 1 }) : next
     commit(room)
-    sound(notes)
+    sound(notes, staff)
     setCaret({ staff, t: end })
     setSel(null)
     setArmed(null)
@@ -249,7 +259,7 @@ export function ComposePage() {
       s = updateEv(s, sel.staff, id, (e) => ({ ...e, notes: e.notes.map((n, j) => (sel.note === undefined || sel.note === j ? { ...n, alter } : n)) }))
     commit(s)
     const ev = s.staves[sel.staff].find((e) => e.id === sel.ids[0])
-    if (ev) sound(sel.note === undefined ? ev.notes : [ev.notes[sel.note]])
+    if (ev) sound(sel.note === undefined ? ev.notes : [ev.notes[sel.note]], sel.staff)
   }
   const applyDur = (d: DurName, dts = 0) => {
     setDur(d)
@@ -413,7 +423,7 @@ export function ComposePage() {
           const s = transpose(steps, r.base, { staff: r.staff, ids: [r.evId], note: r.note })
           setList((l) => l.map((x) => (x.id === score.id ? s : x)))
           const ev = s.staves[r.staff].find((x) => x.id === r.evId)
-          if (ev) sound(r.note === undefined ? ev.notes : [ev.notes[r.note]])
+          if (ev) sound(r.note === undefined ? ev.notes : [ev.notes[r.note]], r.staff)
         }
         setRadial({ ...r, steps, hover: null })
       } else if (Math.hypot(dx, dy) > 40) {
@@ -524,7 +534,7 @@ export function ComposePage() {
         setSel({ staff: p.staff, ids: [p.evId], note: p.note })
         setCaret({ staff: p.staff, t: ev.start })
         setVoice(voiceOfLane(score, p.staff))
-        sound(p.note === undefined ? ev.notes : [ev.notes[p.note]])
+        sound(p.note === undefined ? ev.notes : [ev.notes[p.note]], p.staff)
         return
       }
     }
@@ -633,13 +643,29 @@ export function ComposePage() {
   /* ---------- playback ---------- */
 
   const togglePlay = () => {
+    playToken.current++
     if (playing) {
       stopPlay.current?.()
+      setPlaying(false)
       return
     }
+    const token = playToken.current
     const from = sel ? (score.staves[sel.staff].find((e) => e.id === sel.ids[0])?.start ?? 0) : 0
     const { steps, anchors } = soundOf(score, from)
     setPlaying(true)
+    // string samples come on first use: wait for them so the opening is not played on the piano
+    const insts = [...new Set(steps.map((x) => x.inst))]
+    const ready = insts.some((i) => i !== 'piano') ? (setFlash('Đang tải tiếng đàn dây…'), loadInstruments(insts)) : null
+    if (ready) {
+      void ready.then(() => {
+        setFlash('')
+        if (token === playToken.current) start(steps, anchors)
+      })
+      return
+    }
+    start(steps, anchors)
+  }
+  const start = (steps: ReturnType<typeof soundOf>['steps'], anchors: ReturnType<typeof soundOf>['anchors']) => {
     const staff = caret.staff
     stopPlay.current = playSequence(steps, {
       // the caret follows the bars as they sound, back to the segno or the start when the score repeats
@@ -757,6 +783,22 @@ export function ComposePage() {
       setMenu(false)
       setFlash(e instanceof Error ? e.message : 'Không mở được tệp này')
     }
+  }
+
+  /** A staff's sound; a staff named after its old instrument takes the new name, and a string its usual clef. */
+  const setInstrument = (staff: number, inst: Inst) => {
+    const old = instOf(score, staff)
+    const meta = INSTRUMENTS.find((x) => x.id === inst)!
+    const oldLabel = INSTRUMENTS.find((x) => x.id === old)!.label
+    const label = score.labels?.[staff]
+    const labels = !label || label === oldLabel ? score.clefs.map((_, i) => (i === staff ? (inst === 'piano' ? '' : meta.label) : score.labels?.[i] ?? '')) : score.labels
+    commit({
+      ...score,
+      instruments: score.clefs.map((_, i) => (i === staff ? inst : instOf(score, i))),
+      labels: labels?.some(Boolean) ? labels : undefined,
+      clefs: inst === 'piano' ? score.clefs : score.clefs.map((c, i) => (i === staff ? meta.clef : c)),
+    })
+    if (inst !== 'piano') void loadInstruments([inst])
   }
 
   const openScore = (id: string) => {
@@ -929,7 +971,7 @@ export function ComposePage() {
               <li key={s.id}>
                 <button className={clsx(s.id === score.id && 'is-on')} onClick={() => openScore(s.id)}>
                   <b>{s.title}</b>
-                  <small>{s.labels?.length ? 'Hợp xướng' : s.clefs.length > 1 ? 'Khuông đôi' : 'Khuông đơn'} · {s.measures} ô · {new Date(s.updated).toLocaleDateString('vi-VN')}</small>
+                  <small>{s.instruments?.some((i) => i !== 'piano') ? 'Đàn dây' : s.labels?.length ? 'Hợp xướng' : s.clefs.length > 1 ? 'Khuông đôi' : 'Khuông đơn'} · {s.measures} ô · {new Date(s.updated).toLocaleDateString('vi-VN')}</small>
                 </button>
               </li>
             ))}
@@ -937,6 +979,19 @@ export function ComposePage() {
           <div className="cmp-row">
             {TEMPLATES.map((t) => (
               <button key={t.id} onClick={() => newScore(t.id)}>+ {t.label}</button>
+            ))}
+          </div>
+          <h2>Nhạc cụ</h2>
+          <div className="cmp-insts">
+            {score.clefs.map((_, i) => (
+              <label key={i} className="cmp-select">
+                <span>{score.labels?.[i] || `Khuông ${i + 1}`}</span>
+                <select aria-label={`Nhạc cụ khuông ${i + 1}`} value={instOf(score, i)} onChange={(e) => setInstrument(i, e.target.value as Inst)}>
+                  {INSTRUMENTS.map((x) => (
+                    <option key={x.id} value={x.id}>{x.label}</option>
+                  ))}
+                </select>
+              </label>
             ))}
           </div>
           <h2>Xuất – nhập</h2>
@@ -975,7 +1030,7 @@ export function ComposePage() {
           <p className="cmp-help">
             Chạm lên khuông để đặt nốt đúng cao độ chỗ chạm. Chạm vào nốt để chọn. Nhấn giữ một nốt: vòng lựa chọn hiện ra — trượt tới mục rồi nhả tay, hoặc kéo thẳng lên xuống để đổi cao độ. Kéo ngang trên khuông để chọn nhiều nốt. Hai ngón để phóng to, thu nhỏ. Máy tính: A – G đặt nốt, 1 – 7 trường độ (7 = tròn), dấu chấm = chấm dôi, + − = thăng giáng, 0 = dấu lặng, mũi tên, Ctrl+Z, phím cách để nghe.
           </p>
-          <p className="cmp-help">Bộ khắc nhạc: Verovio (giấy phép LGPL-3.0).</p>
+          <p className="cmp-help">Bộ khắc nhạc: Verovio (giấy phép LGPL-3.0). Tiếng đàn dây: <a href="https://versilian-studios.com/vsco-community/" target="_blank" rel="noreferrer">VSCO 2: Community Edition</a> của Versilian Studios (CC0).</p>
         </Sheet>
       )}
     </div>

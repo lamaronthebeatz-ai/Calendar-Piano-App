@@ -112,8 +112,112 @@ function sampled({ ctx, out }: Ctx, midi: number, at: number, dur: number, vel: 
 }
 
 /** A struck string: a few partials through a closing low-pass, fast attack and a long exponential decay. */
-function strike(c: Ctx, midi: number, at: number, dur: number, vel: number): Voice {
-  return sampled(c, midi, at, dur, vel) ?? synth(c, midi, at, dur, vel)
+function strike(c: Ctx, midi: number, at: number, dur: number, vel: number, inst: Inst = 'piano'): Voice {
+  return (inst !== 'piano' && bowed(c, inst, midi, at, dur, vel)) || sampled(c, midi, at, dur, vel) || synth(c, midi, at, dur, vel)
+}
+
+/* ---------- bowed strings (score editor) ---------- */
+
+/**
+ * VSCO 2: Community Edition (Versilian Studios, CC0): violin, viola and cello sections and a solo double bass,
+ * sustained with vibrato, a soft and a loud take per pitch (public/media/strings, scripts/strings/build.py). A note
+ * longer than the file repeats its 1.4–4.6 s part (see `bowed`), so it can be held as long as the score asks. Measured pitch is within
+ * 4 cents of equal temperament, so there is no retuning table. Fetched only when a score uses the instrument.
+ */
+export type Inst = 'piano' | 'violin' | 'viola' | 'cello' | 'contrabass'
+const STRING_NOTES: Record<Exclude<Inst, 'piano'>, number[]> = {
+  violin: [55, 57, 59, 62, 66, 69, 72, 76, 79, 83, 86],
+  viola: [48, 50, 52, 55, 59, 62, 65, 69, 72, 76, 79, 83, 86],
+  cello: [36, 40, 43, 47, 50, 53, 57, 60, 64, 67, 71, 74, 77],
+  contrabass: [30, 31, 34, 36, 38, 40, 42, 44, 45, 49, 52, 56, 59],
+}
+const LOOP = [1.4, 4.6] as const
+const strings = new Map<string, AudioBuffer>()
+const stringLoads = new Map<string, Promise<void>>()
+
+/** Fetch and decode an instrument's samples once; resolves when they are in (or failed: the piano stands in). */
+export function loadInstruments(insts: Inst[]): Promise<void> {
+  const a = audio()
+  if (!a) return Promise.resolve()
+  const ext = typeof Audio !== 'undefined' && new Audio().canPlayType('audio/ogg; codecs=opus') ? 'ogg' : 'm4a'
+  const jobs = insts.flatMap((inst) => {
+    if (inst === 'piano') return []
+    if (!stringLoads.has(inst))
+      stringLoads.set(
+        inst,
+        Promise.all(
+          STRING_NOTES[inst].flatMap((m) =>
+            (['p', 'f'] as const).map((l) =>
+              fetch(`${import.meta.env.BASE_URL}media/strings/${inst}/${m}-${l}.${ext}`)
+                .then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(new Error(r.statusText))))
+                .then((b) => a.ctx.decodeAudioData(b))
+                .then((buf) => void strings.set(`${inst}-${m}-${l}`, buf))
+                .catch(() => undefined),
+            ),
+          ),
+        ).then(() => undefined),
+      )
+    return [stringLoads.get(inst)!]
+  })
+  return Promise.all(jobs).then(() => undefined)
+}
+
+function bowed({ ctx, out }: Ctx, inst: Exclude<Inst, 'piano'>, midi: number, at: number, dur: number, vel: number): Voice | null {
+  const base = STRING_NOTES[inst].reduce((a, b) => (Math.abs(b - midi) < Math.abs(a - midi) ? b : a))
+  const soft = strings.get(`${inst}-${base}-p`)
+  const loud = strings.get(`${inst}-${base}-f`)
+  if (!soft || !loud || Math.abs(base - midi) > 4) return null
+  const w = Math.min(1, Math.max(0, (vel - 0.45) / 0.45))
+  const rate = 2 ** ((midi - base) / 12)
+  const env = ctx.createGain()
+  env.connect(out)
+  const level = 0.9 * (0.55 + 0.45 * vel)
+  const end = at + Math.max(0.12, dur)
+  env.gain.setValueAtTime(0, at)
+  env.gain.linearRampToValueAtTime(level, at + 0.03)
+  env.gain.setValueAtTime(level, end)
+  env.gain.setTargetAtTime(0, end, 0.09) // the bow leaves the string
+  const stopAt = end + 0.6
+  // a long note: the file's 1.4–4.6 s again and again, each pass faded into the next over X seconds (the samples
+  // are made alike there); overlapping sources rather than a sample loop, which a lossy codec leaves with a click
+  const X = 0.3
+  const srcs: AudioBufferSourceNode[] = []
+  const pass = (t: number, off: number, first: boolean) => {
+    const reach = t + (LOOP[1] - off) / rate // when this pass gets to the loop end
+    const last = reach + X / 2 >= stopAt
+    for (const [buf, g] of [[soft, 1 - w], [loud, w]] as const) {
+      if (g <= 0.02) continue
+      const src = ctx.createBufferSource()
+      src.buffer = buf
+      src.playbackRate.value = rate
+      const pg = ctx.createGain()
+      pg.gain.setValueAtTime(first ? g : 0, t)
+      if (!first) pg.gain.linearRampToValueAtTime(g, t + X)
+      if (!last) {
+        pg.gain.setValueAtTime(g, reach - X / 2)
+        pg.gain.linearRampToValueAtTime(0, reach + X / 2)
+      }
+      src.connect(pg).connect(env)
+      src.start(t, off)
+      src.stop(last ? stopAt : reach + X / 2 + 0.01)
+      srcs.push(src)
+    }
+    if (!last) pass(reach - X / 2, LOOP[0] - (X / 2) * rate, false)
+  }
+  pass(at, 0, true)
+  return {
+    stop: (t) => {
+      env.gain.cancelScheduledValues(t)
+      env.gain.setTargetAtTime(0, t, 0.05)
+      srcs.forEach((src) => {
+        try {
+          src.stop(t + 0.3)
+        } catch {
+          /* already stopped */
+        }
+      })
+    },
+  }
 }
 
 function synth({ ctx, out }: Ctx, midi: number, at: number, dur: number, vel: number): Voice {
@@ -262,14 +366,15 @@ function synthTick({ ctx, out }: Ctx, at: number, accent: boolean): Voice {
 }
 
 /** Play one note (or chord) now, e.g. when a key is pressed. */
-export function playNow(midis: number[], dur = 1.2, roll = 0) {
+export function playNow(midis: number[], dur = 1.2, roll = 0, inst: Inst = 'piano') {
   const a = audio()
   if (!a) return
-  midis.forEach((m, i) => strike(a, m, a.ctx.currentTime + 0.005 + i * roll, dur, 0.8))
+  midis.forEach((m, i) => strike(a, m, a.ctx.currentTime + 0.005 + i * roll, dur, 0.8, inst))
 }
 
 /** One step of a sequence, in seconds from its start. A step without midis and without a tick is silent (a rest). */
-export type Step = { at: number; dur: number; midis?: number[]; tick?: 'accent' | 'beat' }
+/** `inst` and `vel` (0–1, from the dynamics) are the score editor's; elsewhere every step is the piano at 0.75. */
+export type Step = { at: number; dur: number; midis?: number[]; tick?: 'accent' | 'beat'; inst?: Inst; vel?: number }
 
 let current: (() => void) | null = null
 
@@ -287,7 +392,7 @@ export function playSequence(steps: Step[], cb: { onStep?: (i: number) => void; 
   const t0 = a.ctx.currentTime + 0.08
   const voices: Voice[] = []
   for (const s of steps) {
-    s.midis?.forEach((m) => voices.push(strike(a, m, t0 + s.at, s.dur, 0.75)))
+    s.midis?.forEach((m) => voices.push(strike(a, m, t0 + s.at, s.dur, s.vel ?? 0.75, s.inst)))
     if (s.tick) voices.push(tick(a, t0 + s.at, s.tick === 'accent'))
   }
   const last = steps.at(-1)!

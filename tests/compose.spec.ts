@@ -215,3 +215,30 @@ test('soạn nhạc đợt 4: xuất MusicXML rồi mở lại, xuất MIDI, tra
   await page.emulateMedia({ media: 'print' })
   await expect(page.locator('#score-print')).toBeVisible()
 })
+
+test('soạn nhạc: tứ tấu đàn dây — tiếng dây thật, đổi nhạc cụ, MusicXML ghi nhạc cụ', async ({ page }) => {
+  test.setTimeout(90_000)
+  const fetched: string[] = []
+  page.on('request', (r) => r.url().includes('/media/strings/') && fetched.push(r.url()))
+  await open(page)
+  await page.getByRole('button', { name: 'Bản nhạc và tuỳ chọn' }).click()
+  await page.getByRole('button', { name: 'Tứ tấu đàn dây' }).click()
+  await expect(page.locator('.cmp-svg [data-class="label"]')).toHaveCount(4, { timeout: 20_000 })
+  // the samples of the three instruments come as the score opens
+  await expect.poll(() => new Set(fetched.map((u) => u.split('/media/strings/')[1].split('/')[0])).size).toBe(3)
+  await page.keyboard.press('c')
+  await page.getByRole('button', { name: 'Nghe' }).click()
+  await expect(page.getByRole('button', { name: 'Dừng' })).toBeVisible({ timeout: 15_000 })
+  await page.getByRole('button', { name: 'Dừng' }).click()
+  // the cello becomes a double bass: name, clef stay bass, sound an octave down
+  await page.getByRole('button', { name: 'Bản nhạc và tuỳ chọn' }).click()
+  await page.getByLabel('Nhạc cụ khuông 4').selectOption('contrabass')
+  const s = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0])
+  expect(s.instruments).toEqual(['violin', 'violin', 'viola', 'contrabass'])
+  expect(s.labels[3]).toBe('Contrabass')
+  expect(s.clefs).toEqual(['treble', 'treble', 'alto', 'bass'])
+  const [xml] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'MusicXML', exact: true }).click()])
+  const text = (await import('node:fs')).readFileSync((await xml.path())!, 'utf8')
+  expect(text).toContain('<midi-program>41</midi-program>')
+  expect(text).toContain('<octave-change>-1</octave-change>')
+})

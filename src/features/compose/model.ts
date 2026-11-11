@@ -6,6 +6,8 @@
  */
 
 // ticks per quarter: 240 = 48 × 5, so triplets, quintuplets and sextuplets down to the 64th stay whole numbers
+import type { Inst } from '../theory/audio'
+
 export const TPQ = 240
 export const DUR = { 1: 960, 2: 480, 4: 240, 8: 120, 16: 60, 32: 30, 64: 15 } as const
 export type DurName = keyof typeof DUR
@@ -40,6 +42,7 @@ export type Score = {
   /** Which staff and voice each line of `staves` is; missing = one voice per staff, line i on staff i. */
   lanes?: { staff: number; voice: number }[]
   labels?: string[] // staff names (Soprano, Alto…)
+  instruments?: Inst[] // the sound of each staff; missing = piano
   spans: Span[]
   updated: number
   v?: number // 2 = ticks at TPQ 240
@@ -198,16 +201,39 @@ export function ensureLane(s: Score, staff: number, voice: number): { score: Sco
   return { score: normalized({ ...s, lanes, staves: [...s.staves, []] }), lane: lanes.length - 1 }
 }
 
-export type Template = 'grand' | 'single' | 'satb4' | 'satb2'
+/** What each staff can sound as. `transpose`: the double bass sounds an octave below the written note. */
+export const INSTRUMENTS: { id: Inst; label: string; clef: Clef; program: number; transpose: number }[] = [
+  { id: 'piano', label: 'Piano', clef: 'treble', program: 0, transpose: 0 },
+  { id: 'violin', label: 'Violin', clef: 'treble', program: 40, transpose: 0 },
+  { id: 'viola', label: 'Viola', clef: 'alto', program: 41, transpose: 0 },
+  { id: 'cello', label: 'Cello', clef: 'bass', program: 42, transpose: 0 },
+  { id: 'contrabass', label: 'Contrabass', clef: 'bass', program: 43, transpose: -12 },
+]
+export const instOf = (s: Score, staff: number): Inst => s.instruments?.[staff] ?? 'piano'
+export const transposeOf = (inst: Inst) => INSTRUMENTS.find((i) => i.id === inst)?.transpose ?? 0
+
+export type Template = 'grand' | 'single' | 'satb4' | 'satb2' | 'quartet' | 'strings'
 export const TEMPLATES: { id: Template; label: string }[] = [
   { id: 'grand', label: 'Khuông đôi (piano)' },
   { id: 'single', label: 'Khuông đơn' },
   { id: 'satb4', label: 'Hợp xướng SATB — 4 khuông' },
   { id: 'satb2', label: 'Hợp xướng SATB — 2 khuông, 4 bè' },
+  { id: 'quartet', label: 'Tứ tấu đàn dây' },
+  { id: 'strings', label: 'Dàn dây (5 bè)' },
 ]
 
 export function fromTemplate(t: Template): Score {
-  const base = blank(t === 'single' ? 'Giai điệu mới' : t.startsWith('satb') ? 'Hợp xướng mới' : 'Bản nhạc mới', t !== 'single')
+  const base = blank(t === 'single' ? 'Giai điệu mới' : t.startsWith('satb') ? 'Hợp xướng mới' : t === 'quartet' ? 'Tứ tấu mới' : t === 'strings' ? 'Bản cho dàn dây' : 'Bản nhạc mới', t !== 'single')
+  if (t === 'quartet' || t === 'strings') {
+    const insts: Inst[] = t === 'quartet' ? ['violin', 'violin', 'viola', 'cello'] : ['violin', 'violin', 'viola', 'cello', 'contrabass']
+    return normalized({
+      ...base,
+      clefs: insts.map((i) => INSTRUMENTS.find((x) => x.id === i)!.clef),
+      labels: ['Violin I', 'Violin II', 'Viola', 'Cello', 'Contrabass'].slice(0, insts.length),
+      instruments: insts,
+      staves: insts.map(() => []),
+    })
+  }
   if (t === 'satb4')
     return normalized({ ...base, clefs: ['treble', 'treble', 'treble8', 'bass'], labels: ['Soprano', 'Alto', 'Tenor', 'Bass'], staves: [[], [], [], []] })
   if (t === 'satb2')
@@ -276,13 +302,21 @@ export type Anchor = { sec: number; tick: number; tps: number } // seconds per t
  * The score as sound: every note once, tied notes joined, bars in the order the repeats, D.C. and D.S. ask for, at the
  * tempo of the last tempo mark with a number (or the score's). `anchors` map the sounding time back to score time.
  */
-export function soundOf(s: Score, from = 0): { steps: { at: number; dur: number; midis: number[] }[]; anchors: Anchor[] } {
+const DYN_VEL: Record<Dyn, number> = { ppp: 0.25, pp: 0.35, p: 0.45, mp: 0.55, mf: 0.65, f: 0.8, ff: 0.9, fff: 1, sf: 0.85, sfz: 0.9, fp: 0.8 }
+export type SoundStep = { at: number; dur: number; midis: number[]; inst: Inst; vel: number }
+export function soundOf(s: Score, from = 0): { steps: SoundStep[]; anchors: Anchor[] } {
   const bars = layout(s)
   const order = playOrder(bars, s.attrs)
   const marks = s.staves.flat().filter((e) => e.text?.bpm).sort((a, b) => a.start - b.start)
   const tempoAt = (t: number) => [...marks].reverse().find((e) => e.start <= t)?.text?.bpm ?? s.tempo
   const first = Math.max(0, order.findIndex((b) => bars[b].start + bars[b].len > from))
-  const steps: { at: number; dur: number; midis: number[] }[] = []
+  const steps: SoundStep[] = []
+  const lanes = lanesOf(s)
+  // the dynamic in force at each event of a voice (mf until the first mark)
+  const vels = s.staves.map((evs) => {
+    let v = 0.65
+    return new Map(evs.map((e) => [e.id, (v = e.dyn ? DYN_VEL[e.dyn] : v)]))
+  })
   const anchors: Anchor[] = []
   const open = s.staves.map(() => new Map<number, { step: { at: number; dur: number }; end: number }>())
   let acc = 0
@@ -300,16 +334,18 @@ export function soundOf(s: Score, from = 0): { steps: { at: number; dur: number;
         if (p1 <= p0 || e.start >= bEnd) return
         const at = acc + (p0 - b.start) * tps - (from0 - b.start) * tps
         const prev = evs[ei - 1]
+        const inst = instOf(s, lanes[st]?.staff ?? st)
+        const shift = transposeOf(inst)
         for (const n of e.notes) {
-          const m = midiOf(n)
+          const m = midiOf(n) + shift
           const held = open[st].get(m)
           const continuing = p0 > e.start && p0 === b.start && prevBar === bi - 1
-          const tied = p0 === e.start && !!prev && prev.start + prev.dur === e.start && prev.notes.some((x) => x.tie && midiOf(x) === m) && (e.start > b.start || prevBar === bi - 1)
+          const tied = p0 === e.start && !!prev && prev.start + prev.dur === e.start && prev.notes.some((x) => x.tie && midiOf(x) + shift === m) && (e.start > b.start || prevBar === bi - 1)
           if (held && (continuing || tied) && Math.abs(held.end - at) < 1e-6) {
             held.step.dur += (p1 - p0) * tps
             held.end = at + (p1 - p0) * tps
           } else {
-            const step = { at, dur: (p1 - p0) * tps, midis: [m] }
+            const step = { at, dur: (p1 - p0) * tps, midis: [m], inst, vel: vels[st].get(e.id) ?? 0.65 }
             steps.push(step)
             open[st].set(m, { step, end: at + step.dur })
           }

@@ -1,8 +1,11 @@
 import {
   type Artic, type Clef, type Dyn, type Ev, type Jump, type Note, type Orn, type Score,
-  TPQ, barLen, lanesOf, layout, midiOf, newId, normalized, soundOf, spell,
+  INSTRUMENTS, TPQ, barLen, instOf, lanesOf, layout, midiOf, newId, normalized, soundOf, spell,
 } from './model'
 import { JUMP_TEXT, segments } from './mei'
+import type { Inst } from '../theory/audio'
+
+const meta = (i: Inst) => INSTRUMENTS.find((x) => x.id === i)!
 
 /* ---------- MusicXML out: what Sibelius, MuseScore, Finale and Dorico all open ---------- */
 
@@ -36,7 +39,8 @@ function harmonyXml(t: string, staffTag: string): string {
 export function toMusicXml(s: Score): string {
   const bars = layout(s)
   const lanes = lanesOf(s)
-  const parts: number[][] = s.labels?.length ? s.clefs.map((_, i) => [i]) : [s.clefs.map((_, i) => i)]
+  const ensemble = !!s.labels?.length || !!s.instruments?.some((i) => i !== 'piano')
+  const parts: number[][] = ensemble ? s.clefs.map((_, i) => [i]) : [s.clefs.map((_, i) => i)]
   const slurStart = new Map<string, number>()
   const slurStop = new Map<string, number>()
   const wedgeStart = new Map<string, 'crescendo' | 'diminuendo'>()
@@ -52,7 +56,15 @@ export function toMusicXml(s: Score): string {
   })
 
   const partList = parts
-    .map((p, i) => `<score-part id="P${i + 1}"><part-name>${esc(s.labels?.[p[0]] ?? (p.length > 1 ? 'Piano' : 'Giai điệu'))}</part-name></score-part>`)
+    .map((p, i) => {
+      const m = meta(instOf(s, p[0]))
+      const id = `P${i + 1}-I1`
+      return (
+        `<score-part id="P${i + 1}"><part-name>${esc(s.labels?.[p[0]] || (p.length > 1 || instOf(s, p[0]) !== 'piano' ? m.label : 'Giai điệu'))}</part-name>` +
+        `<score-instrument id="${id}"><instrument-name>${m.label}</instrument-name></score-instrument>` +
+        `<midi-instrument id="${id}"><midi-channel>${Math.min(16, i + 1 + (i >= 9 ? 1 : 0))}</midi-channel><midi-program>${m.program + 1}</midi-program></midi-instrument></score-part>`
+      )
+    })
     .join('')
 
   const body = parts.map((staves, pi) => {
@@ -70,6 +82,8 @@ export function toMusicXml(s: Score): string {
       staves.forEach((st, k) => {
         if (!prev || prev.clefs[st] !== b.clefs[st]) attrs.push(`<clef${staves.length > 1 ? ` number="${k + 1}"` : ''}>${CLEF_XML[b.clefs[st]]}</clef>`)
       })
+      // the double bass is written an octave above its sound
+      if (!prev && meta(instOf(s, staves[0])).transpose) attrs.push(`<transpose><diatonic>0</diatonic><chromatic>0</chromatic><octave-change>${meta(instOf(s, staves[0])).transpose / 12}</octave-change></transpose>`)
       if (attrs.length) xml += `<attributes>${attrs.join('')}</attributes>`
       if (bi === 0) xml += `<direction placement="above"><direction-type><metronome><beat-unit>quarter</beat-unit><per-minute>${s.tempo}</per-minute></metronome></direction-type><sound tempo="${s.tempo}"/></direction>`
       if (pi === 0 && a.segno) xml += '<direction placement="above"><direction-type><segno/></direction-type><sound segno="segno"/></direction>'
@@ -213,6 +227,17 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
   const title = doc.querySelector('work > work-title')?.textContent?.trim() || doc.querySelector('movement-title')?.textContent?.trim() || fallbackTitle
   const partEls = [...doc.querySelectorAll('score-partwise > part')]
   const names = new Map([...doc.querySelectorAll('part-list > score-part')].map((p) => [p.getAttribute('id'), kid(p, 'part-name')?.textContent?.trim() ?? '']))
+  // a part's sound: its General MIDI program, else a string's name (a choir's "Bass" stays a voice)
+  const soundOfPart = new Map(
+    [...doc.querySelectorAll('part-list > score-part')].map((p): [string | null, Inst] => {
+      const prog = +(p.querySelector('midi-instrument > midi-program')?.textContent ?? 0) - 1
+      const byProg = INSTRUMENTS.find((x) => x.program === prog && x.id !== 'piano')?.id
+      const name = `${kid(p, 'part-name')?.textContent ?? ''} ${p.querySelector('instrument-name')?.textContent ?? ''}`
+      const byName: Inst | undefined = /contrabass|double bass|kontrabass/i.test(name) ? 'contrabass' : /cello/i.test(name) ? 'cello' : /viola|bratsche/i.test(name) ? 'viola' : /violin|violino/i.test(name) ? 'violin' : undefined
+      return [p.getAttribute('id'), byProg ?? byName ?? 'piano']
+    }),
+  )
+  const instruments: Inst[] = []
 
   let key = 0
   let time: [number, number] = [4, 4]
@@ -245,6 +270,7 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
     const base = clefs.length
     for (let k = 0; k < nStaves; k++) {
       clefs.push('treble')
+      instruments.push(soundOfPart.get(part.getAttribute('id')) ?? 'piano')
       labels.push(nStaves > 1 ? '' : names.get(part.getAttribute('id')) ?? '')
     }
     const voiceMap = new Map<string, number>() // file voice → our voice on its staff
@@ -441,6 +467,7 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
     staves: staves.map((evs) => evs.filter((e) => e.dur > 0)),
     ...(plain ? {} : { lanes }),
     ...(labels.some(Boolean) && clefs.length > 1 ? { labels } : {}),
+    ...(instruments.some((i) => i !== 'piano') ? { instruments } : {}),
     spans,
     v: 2,
     updated: Date.now(),
@@ -490,10 +517,15 @@ export function toMidi(s: Score): Uint8Array<ArrayBuffer> {
   const { steps } = soundOf(s)
   const PPQ = 480
   const tick = (sec: number) => Math.round(sec * PPQ * 2) // tempo 120: one second is two quarters
-  const evs: { t: number; on: boolean; m: number }[] = []
+  // one channel per instrument, its General MIDI program set at the start (channel 10 is the drums: skipped)
+  const insts = [...new Set(steps.map((x) => x.inst))]
+  const chan = (i: Inst) => { const n = insts.indexOf(i); return n >= 9 ? n + 1 : n }
+  const evs: { t: number; on: boolean; m: number; c: number; v: number }[] = []
   for (const st of steps) for (const m of st.midis) {
-    evs.push({ t: tick(st.at), on: true, m })
-    evs.push({ t: Math.max(tick(st.at) + 1, tick(st.at + st.dur) - 1), on: false, m })
+    const c = chan(st.inst)
+    const v = Math.round(30 + st.vel * 97)
+    evs.push({ t: tick(st.at), on: true, m, c, v })
+    evs.push({ t: Math.max(tick(st.at) + 1, tick(st.at + st.dur) - 1), on: false, m, c, v: 0 })
   }
   evs.sort((a, b) => a.t - b.t || (a.on === b.on ? 0 : a.on ? 1 : -1))
   const out: number[] = []
@@ -508,12 +540,12 @@ export function toMidi(s: Score): Uint8Array<ArrayBuffer> {
   vlq(name.length)
   out.push(...name)
   out.push(0, 0xff, 0x51, 0x03, 0x07, 0xa1, 0x20) // 500 000 µs per quarter
-  out.push(0, 0xc0, 0) // piano
+  for (const i of insts) out.push(0, 0xc0 | chan(i), meta(i).program)
   let last = 0
   for (const e of evs) {
     vlq(e.t - last)
     last = e.t
-    out.push(e.on ? 0x90 : 0x80, e.m, e.on ? 84 : 0)
+    out.push((e.on ? 0x90 : 0x80) | e.c, e.m, e.v)
   }
   out.push(0, 0xff, 0x2f, 0)
   const head = [0x4d, 0x54, 0x68, 0x64, 0, 0, 0, 6, 0, 0, 0, 1, PPQ >> 8, PPQ & 0xff]

@@ -111,3 +111,7 @@
 }
 .cmp-file { position: relative; display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border-radius: 99px; border: 1px solid var(--color-gold); color: var(--color-gold); cursor: pointer; }
 .cmp-file input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.cmp-insts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0 6px; margin-top: 8px; }
+.cmp-insts .cmp-select { padding: 0 0 8px; }
+.cmp-insts .cmp-select span { width: 76px; flex: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cmp-help a { color: var(--color-gold); }
