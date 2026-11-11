@@ -13,7 +13,7 @@ export default defineConfig({
   testDir: 'tests',
   timeout: 45_000,
   retries: process.env.CI ? 1 : 0,
-  workers: process.env.CI ? 2 : 4,
+  workers: process.env.CI ? 3 : 4, // CI runners have 4 cores; the four test jobs run side by side (deploy-pages.yml)
   reporter: process.env.CI ? [['github'], ['list']] : 'list',
   use: { baseURL: 'http://localhost:4173', serviceWorkers: 'allow' },
   projects: [

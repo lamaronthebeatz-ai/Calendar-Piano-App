@@ -15,10 +15,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Lint, links, the deployed build and the size budget. The tests run beside it, on four machines at once; nothing is
+  # deployed unless every one of them passes (docs/roadmap.md, stage 1).
   build:
-    runs-on: ubuntu-24.04  # Playwright 1.56 has no browser builds for ubuntu-latest (26.04)
-    # a stuck runner otherwise holds the deploy for GitHub's default 6 hours
-    timeout-minutes: 40
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,42 +29,60 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      # Nothing is deployed unless every check passes (docs/roadmap.md, stage 1).
       - run: npm run lint
       - run: npm run check:links
       - run: npm run build -- --base=./
       - run: npm run budget
-      # the browsers are kept between runs, keyed by the Playwright version; the install once hung 24 minutes on a runner
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  test:
+    runs-on: ubuntu-24.04  # Playwright 1.56 has no browser builds for ubuntu-latest (26.04)
+    # a stuck runner otherwise holds the deploy for GitHub's default 6 hours
+    timeout-minutes: 25
+    strategy:
+      fail-fast: true
+      matrix:
+        browser: [chromium, webkit]
+        shard: [1, 2]
+    name: test (${{ matrix.browser }} ${{ matrix.shard }}/2)
+    steps:
+      - uses: actions/checkout@v4 # shallow: the tests do not read article dates
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # building here (about 20 s) is quicker than moving the built site between machines
+      - run: npm run build -- --base=./
+      # the browser is kept between runs, keyed by the Playwright version; the install once hung 24 minutes on a runner
       - id: pw
         run: echo "version=$(npx playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v4
         id: pw-cache
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
-      - name: Install Playwright browsers (3 tries of 5 minutes)
+          key: playwright-${{ runner.os }}-${{ matrix.browser }}-${{ steps.pw.outputs.version }}
+      - name: Install ${{ matrix.browser }} (3 tries of 5 minutes)
         timeout-minutes: 16
         run: |
-          what="chromium webkit"
           if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then cmd="install-deps"; else cmd="install --with-deps"; fi
           for i in 1 2 3; do
-            timeout 300 npx playwright $cmd $what && exit 0
+            timeout 300 npx playwright $cmd ${{ matrix.browser }} && exit 0
             echo "::warning::playwright $cmd try $i did not finish, retrying"
           done
           exit 1
-      - run: npm run test:e2e
+      - run: npx playwright test --project='${{ matrix.browser }}-*' --shard=${{ matrix.shard }}/2
       - if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-results
+          name: playwright-results-${{ matrix.browser }}-${{ matrix.shard }}
           path: test-results
           retention-days: 7
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
 
   deploy:
-    needs: build
+    needs: [build, test]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
