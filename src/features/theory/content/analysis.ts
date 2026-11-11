@@ -1451,6 +1451,8 @@ Bảng tổng hợp theo [[phan-tich-phong-cach|năm yếu tố của LaRue]]; q
     refs: [
       ['IMSLP — Piano Sonata No. 2, Op. 19 (Scriabin): bản Belaieff, Leipzig 1898 (tệp #111216), dùng để đọc từng ô', 'https://imslp.org/wiki/Piano_Sonata_No.2,_Op.19_(Scriabin,_Aleksandr)'],
       ['Wikipedia — Piano Sonata No. 2 (Scriabin): bảng hình thức và lịch sử, dẫn Leikin 2011, Ballard & Bengtson 2017, Bowers 1996', 'https://en.wikipedia.org/wiki/Piano_Sonata_No._2_(Scriabin)'],
+      ['Wikipedia — Alexander Scriabin: tiểu sử, các giai đoạn sáng tác, đặc điểm hoà âm (dẫn Powell 2001, Bowers 1996, Samson 1977, Sabbagh 2003, Kallis 2008)', 'https://en.wikipedia.org/wiki/Alexander_Scriabin'],
+      ['Wikipedia — List of compositions by Alexander Scriabin: niên đại các sonata và tác phẩm dàn nhạc', 'https://en.wikipedia.org/wiki/List_of_compositions_by_Alexander_Scriabin'],
       ['Google Magenta — bộ dữ liệu MAESTRO v3 (MIDI các bản biểu diễn piano thật, có bốn bản Sonata số 2), dùng để kiểm cao độ', 'https://magenta.tensorflow.org/datasets/maestro'],
       ['Yuhe Wang (2025), An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin — luận án DMA, University of Maryland', 'https://drum.lib.umd.edu/bitstreams/dc35a0f3-3c1e-4335-a35f-eefd792b9782/download'],
       ['Emily Chialin Chiang (2013), Rubato and Climax Projection in Two Piano Sonatas by Scriabin — luận án DMA, University of Toronto', 'https://tspace.library.utoronto.ca/bitstream/1807/35791/1/Chiang_Emily_CL_201306_DMA_thesis.pdf'],
@@ -1506,7 +1508,7 @@ Những công trình nói trên đã giúp ích cho chúng tôi rất nhiều tr
 ## 3. Mục đích và nhiệm vụ nghiên cứu
 Mục đích của tiểu luận là làm sáng tỏ các thủ pháp hoà âm trong Sonata số 2 Op. 19 của Scriabin, qua đó xác định cụ thể tính chuyển tiếp của tác phẩm trong tiến trình phát triển ngôn ngữ hoà âm của nhà soạn nhạc.
 
-Để đạt mục đích đó, tiểu luận đặt ra các nhiệm vụ sau: hệ thống hoá cơ sở lý thuyết về hình thức sonata và về hoà âm chức năng cổ điển cũng như hoà âm cuối thế kỷ XIX – đầu thế kỷ XX; phân tích tiến trình hoà âm của hai chương theo từng ô nhịp; khái quát các thủ pháp hoà âm đặc trưng của tác phẩm và đối chiếu kết quả với các nghiên cứu đi trước.
+Để đạt mục đích đó, tiểu luận đặt ra các nhiệm vụ sau: hệ thống hoá cơ sở lý thuyết về hình thức sonata và về hoà âm chức năng cổ điển cũng như hoà âm cuối thế kỷ XIX – đầu thế kỷ XX; khái quát tiểu sử và đặc điểm âm nhạc của Scriabin để xác định vị trí của tác phẩm trong con đường sáng tác của ông; phân tích tiến trình hoà âm của hai chương theo từng ô nhịp; khái quát các thủ pháp hoà âm đặc trưng của tác phẩm và đối chiếu kết quả với các nghiên cứu đi trước.
 
 ## 4. Đối tượng và phạm vi nghiên cứu
 Đối tượng nghiên cứu của tiểu luận là các thủ pháp hoà âm trong Sonata số 2 giọng Sol♯ thứ Op. 19 của A. Scriabin.
@@ -1536,7 +1538,7 @@ Ngoài phần Mở đầu, Kết luận, Tài liệu tham khảo và Phụ lục
     slug: 'scriabin-op19-co-so-ly-thuyet',
     title: 'Chương 1. Cơ sở lý luận và khái quát về tác phẩm',
     category: 'analysis',
-    summary: 'Tiểu luận Sonata số 2 Scriabin, chương 1: liên khúc sonata và các dạng hình thức sonata, hệ thống ký hiệu hoà âm, lý thuyết hoà âm chức năng và hoà âm cuối thế kỷ XIX – đầu thế kỷ XX, khái quát về tác phẩm.',
+    summary: 'Tiểu luận Sonata số 2 Scriabin, chương 1: liên khúc sonata và các dạng hình thức sonata, hệ thống ký hiệu hoà âm, lý thuyết hoà âm chức năng và hoà âm cuối thế kỷ XIX – đầu thế kỷ XX, tiểu sử và đặc điểm âm nhạc của Scriabin qua ba giai đoạn sáng tác, khái quát về tác phẩm.',
     body: `
 ## 1.1. Liên khúc sonata và các dạng hình thức sonata
 Lý thuyết về liên khúc sonata và hình thức sonata được trình bày có hệ thống trong các giáo trình hình thức âm nhạc của trường phái Xô viết, tiêu biểu là cuốn *Музыкальная форма* (Hình thức âm nhạc) của I. Sposobin, in lần đầu năm 1947 và được tái bản nhiều lần; cuốn *Анализ музыкальных произведений* (Phân tích tác phẩm âm nhạc, 1967) của L. Mazel và V. Zukkerman; cuốn *Музыкальная форма* (1974) của Yu. Tyulin, T. Bershadskaya và I. Pustylnik. Ở Việt Nam, hệ thống này được kế thừa và trình bày trong giáo trình *Phân tích tác phẩm âm nhạc* của PGS. TS Nguyễn Thị Nhung (Nhạc viện Hà Nội, 2006). Tiểu luận dựa trên các giáo trình này để xác lập các khái niệm về hình thức (xem thêm [[ptam-sonata]], [[hinh-thuc-sonata]]).
@@ -1590,7 +1592,43 @@ Có thể thấy ba hợp âm sáu tăng, dù mang tên gọi riêng trong hệ 
 
 **Hoà âm mới và vô điệu tính.** Từ đầu thế kỷ XX, điệu tính chức năng dần nhường chỗ cho những nguyên tắc tổ chức khác: hợp âm xây theo quãng 4, gam toàn cung, các cấu trúc đối xứng, và cuối cùng là vô điệu tính, nơi không còn một âm chủ làm trung tâm. Ở trường phái Nga, Yu. Kholopov là người hệ thống hoá lý thuyết hoà âm thế kỷ XX trong cuốn *Очерки современной гармонии* (Khảo luận về hoà âm hiện đại, 1974). Sonata số 2 của Scriabin chưa thuộc lĩnh vực vô điệu tính; tuy vậy, như sẽ được chứng minh ở các chương sau, tác phẩm đã chứa những yếu tố báo trước hướng phát triển ấy.
 
-## 1.4. Khái quát về tác phẩm
+## 1.4. Tiểu sử và đặc điểm âm nhạc của Scriabin
+Để đặt Sonata số 2 vào đúng chỗ của nó trong con đường sáng tác của tác giả, mục này tóm lược tiểu sử và những đặc điểm chính trong âm nhạc của Scriabin. Các sự kiện tiểu sử chủ yếu được dẫn qua bài viết về Scriabin trên Wikipedia tiếng Anh, vốn dựa trên mục từ của J. Powell trong từ điển *New Grove* (2001) và cuốn tiểu sử của F. Bowers (1996); chúng tôi chưa đối chiếu trực tiếp hai nguồn gốc này.
+
+**Tuổi thơ và những năm học tập.** Alexander Nikolayevich Scriabin sinh ngày 6 tháng 1 năm 1872 (25 tháng 12 năm 1871 theo lịch Julius) tại Moscow. Cha ông, Nikolai Aleksandrovich, khi ấy là sinh viên Đại học Moscow, về sau làm việc trong ngành ngoại giao; mẹ ông, Lyubov Petrovna (nhũ danh Shchetinina), là một nghệ sĩ piano từng học Theodor Leschetizky, mất vì bệnh lao khi con trai mới một tuổi. Cậu bé được bà nội, bà cô và cô ruột nuôi dưỡng. Năm 1882, Scriabin vào Trường thiếu sinh quân số 2 Moscow; song song, ông học piano với Nikolai Zverev — người thầy nổi tiếng nghiêm khắc, cũng là thầy của [[sergei-rachmaninoff|Rachmaninov]] (Bowers 1996). Tại Nhạc viện Moscow, ông học piano với Vasily Safonov, học đối vị và sáng tác với Sergei Taneyev và Anton Arensky. Năm 1892, Scriabin tốt nghiệp với huy chương vàng nhỏ về biểu diễn piano, nhưng không nhận bằng sáng tác vì bất đồng sâu sắc với Arensky (Powell 2001).
+
+**Chấn thương và bước vào nghề.** Trong thời gian học, vì muốn ganh đua với Josef Lhévinne, Scriabin tập quá sức *Réminiscences de Don Juan* của Liszt và *Islamey* của Balakirev, và bị thương ở tay phải; bác sĩ từng cho rằng ông khó hồi phục, nhưng về sau ông vẫn trở lại biểu diễn. Wikipedia ghi lại rằng Sonata số 1 Op. 6 được ông viết như "một tiếng kêu chống lại Chúa, chống lại số phận" sau biến cố này. Năm 1894, nhà xuất bản Mitrofan Belyayev (Belaieff) nhận trả tiền để Scriabin sáng tác cho nhà mình (Bowers 1996); cũng năm đó ông ra mắt với tư cách nghệ sĩ piano ở Saint Petersburg. Tháng 8 năm 1897, ông cưới nữ nghệ sĩ piano Vera Isakovich, rồi lưu diễn trong và ngoài nước Nga, mà đỉnh cao là một buổi hoà nhạc thành công ở Paris năm 1898 (Powell 2001). Từ năm 1898, Scriabin giảng dạy tại Nhạc viện Moscow trong khoảng năm năm; trong thời gian này Safonov chỉ huy công diễn hai bản giao hưởng đầu của ông.
+
+**Những năm ở nước ngoài và cuối đời.** Năm 1904, Scriabin chuyển sang Genève và sống ly thân với vợ; người bạn đời từ đó của ông là Tatiana Schlözer, một học trò cũ. Ông sống nhiều năm ở Thụy Sĩ, Ý, Pháp, Bỉ và Mỹ, rồi trở về Nga hẳn năm 1909. Các tác phẩm dàn nhạc quan trọng của giai đoạn này là Giao hưởng số 3 *Le Divin Poème* Op. 43 (danh mục ghi năm 1903, công diễn ở Paris năm 1905), *Le Poème de l'extase* Op. 54 (danh mục ghi năm 1907; một đoạn khác của Wikipedia ghi 1908) và *Prométhée, le Poème du feu* Op. 60 (1910), tác phẩm có bè dành cho "đàn ánh sáng" (*clavier à lumières*). Dự định lớn nhất của ông, tác phẩm tổng hợp nghệ thuật *Mysterium*, chỉ còn lại các phác thảo. Buổi biểu diễn cuối cùng của Scriabin diễn ra ở Petrograd ngày 2 tháng 4 năm 1915; ông mất ngày 27 tháng 4 năm 1915 (14 tháng 4 theo lịch cũ) tại Moscow vì nhiễm trùng máu, bắt đầu từ một mụn nhọt ở môi, khi mới 43 tuổi.
+
+**Các giai đoạn sáng tác.** Giới nghiên cứu thường chia sáng tác của Scriabin làm ba giai đoạn, nhưng mốc phân chia không hoàn toàn thống nhất. Bài viết về Scriabin trên Wikipedia chia: giai đoạn đầu (thập niên 1880 – 1903), từ những tác phẩm đầu tay tới Giao hưởng số 2 Op. 29; giai đoạn giữa (1903 – 1907), từ Sonata số 4 Op. 30 tới Sonata số 5 Op. 53 và *Le Poème de l'extase* Op. 54; giai đoạn cuối (1907 – 1915). Danh mục tác phẩm trên cùng trang lại chia: sớm 1883 – 1902 (Op. 1 – 29), giữa 1903 – 1909 (Op. 30 – 58), muộn 1910 – 1915 (Op. 59 – 74). Theo cả hai cách chia, Sonata số 2 đều thuộc **giai đoạn đầu**. Mười bản sonata cho piano — xương sống trong sáng tác piano của Scriabin — phân bố như sau:
+
+| Sonata | Op. | Năm (theo danh mục) | Giai đoạn |
+|---|---|---|---|
+| Số 1, Fa thứ | 6 | 1892 | Đầu |
+| **Số 2, Sol♯ thứ (*Sonate-Fantaisie*)** | **19** | **1897** | **Đầu** |
+| Số 3, Fa♯ thứ | 23 | 1898 | Đầu |
+| Số 4, Fa♯ trưởng | 30 | 1903 | Giữa |
+| Số 5 | 53 | 1907 | Giữa |
+| Số 6 | 62 | 1911 – 1912 | Cuối |
+| Số 7 (*Messe blanche*) | 64 | 1912 | Cuối |
+| Số 8 | 66 | 1912 – 1913 | Cuối |
+| Số 9 (*Messe noire*) | 68 | 1913 | Cuối |
+| Số 10 | 70 | 1913 | Cuối |
+
+Năm sonata cuối không còn hoá biểu (Wikipedia). Cùng thời với Sonata số 2 còn có 12 Etude Op. 8 (1894) và 24 Prelude Op. 11 (1888 – 1896), hai tập tiểu phẩm cho thấy rõ tầm ảnh hưởng của Chopin ở Scriabin thời trẻ.
+
+**Đặc điểm âm nhạc giai đoạn đầu.** Các tác phẩm giai đoạn đầu đi theo truyền thống lãng mạn và dùng ngôn ngữ hoà âm chức năng thông dụng (Samson 1977). Những tiểu phẩm piano đầu tiên của Scriabin — prelude, etude, mazurka, nocturne — gần với Chopin cả về thể loại lẫn lối viết; các sonata đầu cho thấy ảnh hưởng của Chopin và đôi khi của Liszt. Nét riêng đáng chú ý nhất đã xuất hiện ngay trong hoà âm: Scriabin ưa **kết hợp đồng thời hai hay nhiều âm làm giàu cho hợp âm bảy át** — âm 9, quãng 5 biến âm, quãng 11 tăng — và các âm thêm này giải quyết vào những nốt kề bên (Sabbagh, dẫn qua Wikipedia). Đặc biệt, một thế xếp của hợp âm 13 át, trong đó âm 7, âm 3 và âm 13 xếp theo quãng 4, được P. Sabbagh (2003, tr. 16) xem là nguồn gốc chính của "hợp âm huyền bí" về sau. Đây chính là những hiện tượng mà các chương 2 – 4 của tiểu luận sẽ kiểm chứng trên bản phổ Sonata số 2.
+
+**Đặc điểm âm nhạc giai đoạn giữa và cuối.** Ở giai đoạn giữa, âm nhạc của Scriabin trở nên cromatic và nghịch hơn, nhưng phần lớn vẫn giữ điệu tính chức năng; khi hợp âm át được mở rộng ngày càng nhiều, nó dần mất sức căng đòi giải quyết, và trọng tâm chuyển dần sang **màu sắc của hợp âm** (Sabbagh, dẫn qua Wikipedia). J. Samson (1977, tr. 207) nhận xét rằng trong khoảng 1903 – 1908, sự thống nhất điệu tính đã được thay thế, gần như không nhận ra, bằng sự thống nhất hoà âm. Ở giai đoạn cuối, chất liệu cao độ chủ yếu dựa trên gam âm học (acoustic), gam bát cung và gam chín âm (Kallis 2008, dẫn qua Wikipedia). Hợp âm trung tâm của *Prométhée* — thường gọi là "hợp âm huyền bí" hay "hợp âm Prometheus" — được chính Scriabin mô tả, theo hồi ký của L. Sabaneev, là "không phải hợp âm át, mà là hợp âm cơ bản, một thuận âm" (Sabaneev 1925, dẫn qua Sabbagh 2003, tr. 40); ông cho biết mình dựng các hợp âm ấy "theo quãng 4, hay cũng thế, theo quãng 5". V. Dernova, người khảo sát hoà âm Scriabin có hệ thống ở Liên Xô, cho rằng trong các tác phẩm cuối, chủ âm "chỉ còn tồn tại như trong tưởng tượng" (dẫn qua Wikipedia). Yu. Kholopov đã dành riêng một bài viết cho mối quan hệ giữa Scriabin và hoà âm thế kỷ XX (Kholopov 1993).
+
+**Tư tưởng thẩm mỹ.** Từ giai đoạn giữa, âm nhạc của Scriabin gắn với những ý niệm triết học – thần bí: ông quan tâm tới thông thiên học (theosophy) và các trước tác của Helena Blavatsky, tiếp nhận ý niệm "tác phẩm nghệ thuật tổng hợp" (*Gesamtkunstwerk*) và liên cảm âm thanh – màu sắc. Tuy vậy, mức độ ông thực sự nghiên cứu thông thiên học còn được tranh luận (Ballard, Bengtson 2017), và việc ông thật sự có cảm giác liên cảm cũng bị nghi ngờ (Galeyev, Vanechkina 2001). Những ý niệm này hầu như chưa hiện diện trong Sonata số 2; nhưng chương trình về biển đêm được ghi lại cho tác phẩm (xem mục 1.5) cho thấy xu hướng gắn âm nhạc với hình ảnh và cảm giác đã có từ rất sớm.
+
+**Scriabin – nghệ sĩ piano.** Scriabin là nghệ sĩ piano biểu diễn chính các tác phẩm của mình suốt đời, dù bàn tay nhỏ, "khó với tới quãng 9" (Wikipedia). Ông để lại các bản thu trên cuộn piano tự động (Welte-Mignon và Hupfeld) cho 19 tác phẩm của mình; theo Wikipedia, các cuộn Hupfeld có cả Sonata số 2 và số 3 — một tư liệu quý về cách chính tác giả trình tấu tác phẩm, nằm ngoài phạm vi của tiểu luận này.
+
+**Vị trí của Sonata số 2.** Sonata số 2 được viết trong những năm 1892 – 1897, tức đúng quãng thời gian Scriabin tốt nghiệp nhạc viện, vượt qua chấn thương tay, ký hợp đồng với nhà Belaieff và bắt đầu sự nghiệp biểu diễn ở châu Âu. Tác phẩm thuộc giai đoạn đầu, cùng thời với các tập prelude và etude mang dấu ấn Chopin, nhưng đứng ngay trước Sonata số 3 và cách Sonata số 4 — tác phẩm mở đầu giai đoạn giữa — sáu năm. Vị trí ấy là cơ sở để đặt câu hỏi về tính chuyển tiếp của tác phẩm, mà các chương sau sẽ trả lời bằng phân tích hoà âm cụ thể.
+
+## 1.5. Khái quát về tác phẩm
 **Lịch sử sáng tác.** Scriabin bắt đầu viết Sonata số 2 ở Genova năm 1892 và hoàn thành ở Crimea năm 1897. Bản in đầu của nhà Belaieff (Leipzig, 1898) mang tên *Sonate-Fantaisie № 2, en sol dièse mineur*, đầu bản nhạc ghi niên đại "1892–1897". Theo nhà nghiên cứu A. Leikin (2011), chương Presto được viết trước chương đầu khoảng bốn năm. Scriabin biểu diễn tác phẩm lần đầu tại Salle Érard, Paris, ngày 5 tháng 5 năm 1896, khi tác phẩm còn chưa hoàn chỉnh. Theo F. Bowers (1996), tờ chương trình buổi hoà nhạc ấy ghi giọng của tác phẩm là La♭ thay vì Sol♯ — một chi tiết nhỏ nhưng phù hợp một cách thú vị với tư duy trùng âm chi phối toàn bộ tác phẩm. *(Các thông tin trên được chúng tôi dẫn qua bài viết về tác phẩm trên Wikipedia, vốn dẫn Leikin 2011, Ballard và Bengtson 2017, Bowers 1996.)*
 
 **Nội dung hình tượng.** Wikipedia dẫn một chương trình về biển do người viết tiểu sử Yuri Engel ghi lại, theo Leikin: chương I là đêm phương Nam yên tĩnh bên bờ biển, phần phát triển là biển sâu tối và động; đoạn Mi trưởng là ánh trăng vuốt ve sau bóng tối; chương Presto là mặt biển mênh mông nổi sóng. Câu chương trình này có ít nhất hai bản dịch tiếng Anh khác nhau, và chúng tôi chưa đối chiếu được nguyên văn tiếng Nga, vì vậy tiểu luận chỉ dùng nó như một thông tin tham khảo.
@@ -1605,7 +1643,7 @@ Có thể thấy ba hợp âm sáu tăng, dù mang tên gọi riêng trong hệ 
 **Văn bản nghiên cứu.** Toàn bộ số ô nhịp và tên nốt trong tiểu luận được đọc trên bản in đầu Belaieff 1898 (lưu trữ tại IMSLP). Chúng tôi tự đếm và xác định chương I có 136 ô, chương II có 110 ô. Cao độ được đối chiếu thêm với bản ghi MIDI của một buổi biểu diễn trong bộ dữ liệu MAESTRO v3; do MIDI ghi lại âm thanh biểu diễn thực, có thể lẫn nốt chơi sai hoặc tiếng pedal nhoè, nên khi hai nguồn khác nhau chúng tôi theo bản phổ. Ví dụ, ở ô 41 chương II, bản ghi MIDI có âm E♮ trong khi bản in ghi E♭.
 
 ## Tiểu kết chương 1
-Chương 1 đã xác lập cơ sở lý luận của tiểu luận. Về hình thức, các khái niệm liên khúc sonata, hình thức sonata, sonata tự do và rondo – sonata được tiếp nhận theo các giáo trình của trường phái Xô viết và giáo trình của Nguyễn Thị Nhung; theo đó, Sonata số 2 là một liên khúc sonata tự do hai chương, với chương I ở hình thức sonata và chương II ở hình thức ba đoạn có coda. Về ký hiệu, tiểu luận sử dụng hệ thống chức năng của trường phái Nga – Xô viết; riêng trong phần phân tích tác phẩm, các hợp âm phụ và hợp âm biến âm được ghi theo bậc cụ thể trong giọng, đối chiếu ở bảng 1.1. Về hoà âm, tiểu luận dựa trên lý thuyết hoà âm chức năng cổ điển, có đối chiếu với lý thuyết hoà âm cromatic cuối thế kỷ XIX và lý thuyết hoà âm thế kỷ XX, để xác định những yếu tố truyền thống và những yếu tố mới trong tác phẩm.
+Chương 1 đã xác lập cơ sở lý luận của tiểu luận. Về hình thức, các khái niệm liên khúc sonata, hình thức sonata, sonata tự do và rondo – sonata được tiếp nhận theo các giáo trình của trường phái Xô viết và giáo trình của Nguyễn Thị Nhung; theo đó, Sonata số 2 là một liên khúc sonata tự do hai chương, với chương I ở hình thức sonata và chương II ở hình thức ba đoạn có coda. Về ký hiệu, tiểu luận sử dụng hệ thống chức năng của trường phái Nga – Xô viết; riêng trong phần phân tích tác phẩm, các hợp âm phụ và hợp âm biến âm được ghi theo bậc cụ thể trong giọng, đối chiếu ở bảng 1.1. Về hoà âm, tiểu luận dựa trên lý thuyết hoà âm chức năng cổ điển, có đối chiếu với lý thuyết hoà âm cromatic cuối thế kỷ XIX và lý thuyết hoà âm thế kỷ XX, để xác định những yếu tố truyền thống và những yếu tố mới trong tác phẩm. Về tác giả, Sonata số 2 (1892 – 1897) thuộc giai đoạn sáng tác đầu của Scriabin, khi ngôn ngữ hoà âm của ông còn dựa trên truyền thống lãng mạn chịu ảnh hưởng Chopin, nhưng đã có nét riêng ở cách làm giàu hợp âm át bằng nhiều âm biến âm cùng lúc — chính hạt mầm của hoà âm giai đoạn giữa và cuối; đó là căn cứ để kiểm chứng tính chuyển tiếp của tác phẩm ở các chương tiếp theo.
 `,
   },
   {
@@ -1903,28 +1941,36 @@ Trên cơ sở kết quả đạt được, chúng tôi cho rằng hướng nghi
 5. Павчинский С. (1969), *Произведения Скрябина позднего периода*, Москва. (Chưa đối chiếu.)
 6. Римский-Корсаков Н. (1884 – 1886), *Практический учебник гармонии*, Санкт-Петербург.
 7. Сабанеев Л. (1916), *Скрябин*, Москва.
-8. Способин И. (1947; in lại 1984), *Музыкальная форма*, Москва.
-9. Тюлин Ю., Бершадская Т., Пустыльник И. (1974), *Музыкальная форма*, Москва.
-10. Холопов Ю. (1974), *Очерки современной гармонии*, Москва.
-11. Холопов Ю. (1993), "Скрябин и гармония XX века", *Учёные записки* 1, Москва: Государственный мемориальный музей А. Н. Скрябина.
+8. Сабанеев Л. (1925), *Воспоминания о Скрябине*, Москва (dẫn qua Sabbagh 2003 và Wikipedia).
+9. Способин И. (1947; in lại 1984), *Музыкальная форма*, Москва.
+10. Тюлин Ю., Бершадская Т., Пустыльник И. (1974), *Музыкальная форма*, Москва.
+11. Холопов Ю. (1974), *Очерки современной гармонии*, Москва.
+12. Холопов Ю. (1993), "Скрябин и гармония XX века", *Учёные записки* 1, Москва: Государственный мемориальный музей А. Н. Скрябина.
 
 **Tài liệu tiếng Anh và tiếng Hàn**
-12. Bae Su-jin (2000), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Nữ Ewha, Seoul (tiếp cận qua tóm tắt).
-13. Baker J. M. (1986), *The Music of Alexander Scriabin*, New Haven: Yale University Press.
-14. Ballard L., Bengtson M. (2017), *The Alexander Scriabin Companion*, Lanham: Rowman & Littlefield (dẫn qua Wikipedia).
-15. Bowers F. (1996), *Scriabin: A Biography*, 2nd ed., New York: Dover (dẫn qua Wikipedia).
-16. Cha Min-hee (2015), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Chosun, Gwangju.
-17. Chiang E. C. (2013), *Rubato and Climax Projection in Two Piano Sonatas by Scriabin*, luận án DMA, University of Toronto.
-18. Leikin A. (2011), *The Performing Style of Alexander Scriabin*, Farnham: Ashgate (dẫn qua Wikipedia).
-19. Perle G. (1984), "Scriabin's Self-Analyses", *Music Analysis* 3/2.
-20. Piston W. (1941), *Harmony*, New York: Norton.
-21. Reise J. (1983), "Late Skriabin: Some Principles behind the Style", *19th-Century Music* 6/3.
-22. Sabbagh P. (2003), *The Development of Harmony in Scriabin's Works*, Universal Publishers.
-23. Wang Yuhe (2025), *An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin*, luận án DMA, University of Maryland.
+13. Bae Su-jin (2000), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Nữ Ewha, Seoul (tiếp cận qua tóm tắt).
+14. Baker J. M. (1986), *The Music of Alexander Scriabin*, New Haven: Yale University Press.
+15. Ballard L., Bengtson M. (2017), *The Alexander Scriabin Companion*, Lanham: Rowman & Littlefield (dẫn qua Wikipedia).
+16. Bowers F. (1996), *Scriabin: A Biography*, 2nd ed., New York: Dover (dẫn qua Wikipedia).
+17. Cha Min-hee (2015), luận văn thạc sĩ về Sonata số 2 của Scriabin, Đại học Chosun, Gwangju.
+18. Chiang E. C. (2013), *Rubato and Climax Projection in Two Piano Sonatas by Scriabin*, luận án DMA, University of Toronto.
+19. Galeyev B., Vanechkina I. (2001), "Was Scriabin a Synesthete?", *Leonardo* 34/4 (dẫn qua Wikipedia).
+20. Kallis V. (2008), "Principles of Pitch Organization in Scriabin's Early Post-Tonal Period: The Piano Miniatures", *Music Theory Online* 14/3 (dẫn qua Wikipedia).
+21. Leikin A. (2011), *The Performing Style of Alexander Scriabin*, Farnham: Ashgate (dẫn qua Wikipedia).
+22. Perle G. (1984), "Scriabin's Self-Analyses", *Music Analysis* 3/2.
+23. Piston W. (1941), *Harmony*, New York: Norton.
+24. Powell J. (2001), "Skryabin [Scriabin], Aleksandr Nikolayevich", *The New Grove Dictionary of Music and Musicians*, 2nd ed., London: Macmillan (dẫn qua Wikipedia).
+25. Reise J. (1983), "Late Skriabin: Some Principles behind the Style", *19th-Century Music* 6/3.
+26. Sabbagh P. (2003), *The Development of Harmony in Scriabin's Works*, Universal Publishers.
+27. Samson J. (1977), *Music in Transition: A Study of Tonal Expansion and Atonality, 1900–1920*, London: Dent (dẫn qua Wikipedia).
+28. Wang Yuhe (2025), *An Exploration of the Selected Piano Music of Frederic Chopin and Alexander Scriabin*, luận án DMA, University of Maryland.
 
 **Văn bản âm nhạc và dữ liệu**
-24. Scriabin A. (1898), *Sonate-Fantaisie № 2, Op. 19*, Leipzig: M. P. Belaieff (bản lưu trữ tại IMSLP).
-25. Google Magenta, *MAESTRO Dataset v3* (bản ghi MIDI các buổi biểu diễn piano).
+29. Scriabin A. (1898), *Sonate-Fantaisie № 2, Op. 19*, Leipzig: M. P. Belaieff (bản lưu trữ tại IMSLP).
+30. Google Magenta, *MAESTRO Dataset v3* (bản ghi MIDI các buổi biểu diễn piano).
+
+**Nguồn trực tuyến**
+31. Wikipedia tiếng Anh, "Alexander Scriabin" và "List of compositions by Alexander Scriabin" (truy cập tháng 11 năm 2026) — nguồn chính của các sự kiện tiểu sử, niên đại tác phẩm và nhận định dẫn lại ở mục 1.4.
 `,
   },
   {
