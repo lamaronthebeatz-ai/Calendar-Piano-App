@@ -48,8 +48,8 @@ const PRIVATE_PATHS = new Set(['/', '/students'])
 export function Assistant() {
   const { open } = useAssistant()
   const { pathname } = useLocation()
-  // Not over the book reader, which covers the app.
-  const inReader = /^\/curriculum\/[^/]+\/(?!tong-quan$|in$)[^/]+/.test(pathname)
+  // Not over the book reader, which covers the app, nor over the score editor, whose palette floats there.
+  const inReader = /^\/curriculum\/[^/]+\/(?!tong-quan$|in$)[^/]+/.test(pathname) || pathname === '/compose'
   return (
     <>
       {!inReader && !open && (

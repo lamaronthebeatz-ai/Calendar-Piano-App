@@ -28,8 +28,8 @@ export function AppShell() {
   // Where view transitions run (layout/viewTransitions.ts) they animate every page change instead.
   const { pathname } = useLocation()
   const section = pathname.split('/')[1]
-  // the full-screen musicology map needs the whole height: the bottom bar stays out of the way there
-  const navHidden = autoHidden || pathname === '/musicology/ban-do'
+  // the full-screen musicology map and the score editor need the whole height: the bottom bar stays out of the way there
+  const navHidden = autoHidden || pathname === '/musicology/ban-do' || pathname === '/compose'
   // the home page runs edge to edge under the tab bar, so the bar hiding never resizes it mid-scroll
   const fullBleed = pathname === '/home'
   useCardGlow()

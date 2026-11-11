@@ -24,6 +24,7 @@ const TermsPage = lazy(() => import('./features/terms/TermsPage').then((m) => ({
 const SourcesPage = lazy(() => import('./features/sources/SourcesPage').then((m) => ({ default: m.SourcesPage })))
 const ToolsPage = lazy(() => import('./features/tools/ToolsPage').then((m) => ({ default: m.ToolsPage })))
 const CounterpointPage = lazy(() => import('./features/counterpoint/CounterpointPage').then((m) => ({ default: m.CounterpointPage })))
+const ComposePage = lazy(() => import('./features/compose/ComposePage').then((m) => ({ default: m.ComposePage })))
 const ChordEarPage = lazy(() => import('./features/chordear/ChordEarPage').then((m) => ({ default: m.ChordEarPage })))
 const SolfegePage = lazy(() => import('./features/solfege/SolfegePage').then((m) => ({ default: m.SolfegePage })))
 const MusicologyPage = lazy(() => loadMusicology().then((m) => ({ default: m.MusicologyPage })))
@@ -102,6 +103,7 @@ const router = createHashRouter(
       <Route path="/solfege" element={<Suspense><SolfegePage /></Suspense>} />
       <Route path="/chord-ear" element={<Suspense><ChordEarPage /></Suspense>} />
       <Route path="/counterpoint" element={<Suspense><CounterpointPage /></Suspense>} />
+      <Route path="/compose" element={<Suspense><ComposePage /></Suspense>} />
       <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />
       <Route path="/home" element={<Suspense><HomePage /></Suspense>} />
     </Route>,

@@ -37,7 +37,7 @@ export default defineConfig({
         // Library: only the index is precached; articles and search shards are cached as they are read (and a topic or
         // book can be saved for offline reading in one go, see theory/offline.ts), so installing does not grow with it.
         // the chord ear's transcription model (TensorFlow.js + Basic Pitch, ~2 MB) loads only in its analysis mode
-        globIgnores: ['assets/transcribe-*.js', 'models/**', 'scans/**', 'sheets/**', 'content/!(index.*).json', 'content/search/**', 'images/home/!(duet*)', 'images/shelf/**'],
+        globIgnores: ['assets/transcribe-*.js', 'assets/verovio-*.js', 'models/**', 'scans/**', 'sheets/**', 'content/!(index.*).json', 'content/search/**', 'images/home/!(duet*)', 'images/shelf/**'],
         navigateFallbackDenylist: [/^\/api\//],
         // Theory pages: Wikipedia image lookups, Wikimedia images and web fonts keep working offline once seen.
         runtimeCaching: [
@@ -60,7 +60,7 @@ export default defineConfig({
             options: { cacheName: 'home-images', expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 } },
           },
           {
-            urlPattern: ({ url }) => url.pathname.includes('/models/') || /\/assets\/transcribe-/.test(url.pathname),
+            urlPattern: ({ url }) => url.pathname.includes('/models/') || /\/assets\/(transcribe|verovio)-/.test(url.pathname),
             handler: 'CacheFirst',
             options: { cacheName: 'ml-models', expiration: { maxEntries: 10 } },
           },

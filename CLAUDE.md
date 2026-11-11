@@ -48,6 +48,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `curriculum.md` | Tủ sách, danh sách sách/giáo trình, trình đọc (`reader/`), ghi chú – Sổ nghiên cứu, trang tủ sách 2,5D, Android |
 | `home.md` | Trang chủ `/home` (sân khấu tranh tách lớp, chương dính) và màn khoá |
 | `ui.md` | Theme, thương hiệu đen – vàng, điều hướng, ngăn kéo, View Transitions, hook hiệu ứng, âm thanh piano/máy nhịp, logo |
+| `compose.md` | Trình soạn nhạc `/compose` (Verovio, giấy trắng, cử chỉ chạm, bảng công cụ nổi, mô hình ghi đè kiểu Sibelius) |
 | `features.md` | Bảng tính `/tools`, trang Solfège, trợ lý lệnh, Ủng hộ, tour hướng dẫn |
 | `testing.md` | Test Playwright (Chromium + WebKit, chế độ không hiệu ứng), ngân sách dung lượng, CI chặn deploy |
 | `sources.md` | Thư mục học: nguồn dựng lúc build, `curated.ts`, `[^id, tr. n]`, `::verify`, trang `/sources`, trích dẫn Chicago/APA/BibTeX |
