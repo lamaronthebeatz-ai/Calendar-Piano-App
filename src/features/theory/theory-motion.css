@@ -248,3 +248,17 @@ html.reveal-on .theory-article .prose-theory :is(figure, table, blockquote) { an
 }
 .toc-link[data-active="true"] { border-color: transparent; }
 @media (prefers-reduced-motion: reduce) { .toc-bar { transition: none; } }
+
+/* ---------- "Có thể bạn chưa biết" (Spotlight in TheoryPage.tsx), set like the musicology quote banner ---------- */
+.dyk-card { box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 22px 44px -34px rgba(40, 30, 15, 0.45); }
+/* A large gold question mark in the corner, as the quotation mark is on the quote banner. */
+.dyk-mark { color: color-mix(in oklch, var(--color-gold) 15%, transparent); }
+/* Gold pill: the one call to action on the card. */
+.dyk-go {
+  color: #0b0a09;
+  background: linear-gradient(180deg, oklch(0.93 0.07 92), var(--color-gold) 60%, oklch(0.62 0.11 70));
+  box-shadow: 0 8px 18px -10px color-mix(in oklch, var(--color-gold) 70%, transparent);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.dyk-go:hover { transform: translateY(-1px); box-shadow: 0 12px 22px -10px color-mix(in oklch, var(--color-gold) 80%, transparent); }
+.dyk-go:active { transform: translateY(0); }

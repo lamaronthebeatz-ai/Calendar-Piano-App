@@ -21,6 +21,7 @@ import {
   ListIcon,
   SearchIcon,
   ShuffleIcon,
+  SparkleIcon,
   TypeIcon,
   XIcon,
 } from '../../components/icons'
@@ -61,6 +62,7 @@ import { isTouchUI } from '../../hooks/useEdgeSwipeBack'
 import { morphTarget, setMorphTarget, setNextDirection } from '../../layout/viewTransitions'
 import { useUIStore } from '../../store/uiStore'
 import './theory-motion.css'
+import './motion-music.css'
 
 type CategoryId = Article['category']
 
@@ -477,7 +479,7 @@ function Index() {
             <TopicBrowser onSelect={select} />
           </section>
           <StaffRule />
-          {/* A rotating quiz on the library, beside a rotating random article. */}
+          {/* A rotating quiz on the library, beside a rotating "did you know" fact. */}
           <div data-reveal className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <QuizCard />
             <Spotlight />
@@ -558,18 +560,38 @@ function pictureOf(a: Article): Picture | null {
 const SPOTLIGHT_MS = 12000
 const SPOTLIGHT_TICK = 200
 
+/** Summaries that only say where a chapter sits in a book make poor "did you know" lines. */
+const DRY = /^(Chương|Phần|Bài \d|Mục lục|Tiểu luận|Phụ lục|Kết luận)\b|^[A-ZÀ-Ỹ][\p{L} .–-]{0,30}:\s/u
+const plain = (t: string) => t.replace(/\[\[(?:[^\]|]+\|)?([^\]]+)\]\]/g, '$1').replace(/\*\*?|__/g, '').trim()
+
 /**
- * A random illustrated article that changes on its own every few seconds. It pauses while the reader
- * points at it, focuses inside it or the tab is hidden, and can be skipped by hand.
+ * The line a card shows: a person's "years · country · deed" summary becomes the deed with the years and country set
+ * apart; any other summary gives its first sentence or two, kept short enough to read before the card turns.
+ */
+function factOf(a: Article): { text: string; meta?: string } {
+  const sum = plain(a.summary)
+  const person = /^(\d{3,4}[^·]*?)\s·\s([^·]+?)\s·\s(.+)$/.exec(sum)
+  if (person) return { text: person[3], meta: `${person[1]} · ${person[2]}` }
+  const parts = sum.split(/(?<=[.!?…])\s+/)
+  let text = parts[0]
+  if (text.length < 70 && parts[1]) text += ' ' + parts[1]
+  if (text.length > 230) text = text.slice(0, 230).replace(/[\s,;:–-]+\S*$/, '') + '…'
+  return { text }
+}
+
+/**
+ * "Có thể bạn chưa biết": one curious fact from the library at a time, set like the quotation banner of the musicology
+ * page — the article's picture faded in behind, the words rising in one after another, a large gold question mark. It
+ * turns every 12 seconds, pauses while held or while the tab is hidden, and each fact opens its article.
  */
 function Spotlight({ wide }: { wide?: boolean }) {
   const [pool] = useState(() => {
-    const withPictures = ARTICLES.filter((a) => !a.unlisted && pictureOf(a))
-    for (let i = withPictures.length - 1; i > 0; i--) {
+    const good = ARTICLES.filter((a) => !a.unlisted && pictureOf(a) && a.summary.length > 60 && !DRY.test(plain(a.summary)))
+    for (let i = good.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[withPictures[i], withPictures[j]] = [withPictures[j], withPictures[i]]
+      ;[good[i], good[j]] = [good[j], good[i]]
     }
-    return withPictures
+    return good
   })
   const [{ index, elapsed }, setTurn] = useState({ index: 0, elapsed: 0 })
   const [held, setHeld] = useState(false)
@@ -585,52 +607,79 @@ function Spotlight({ wide }: { wide?: boolean }) {
     return () => clearInterval(timer)
   }, [held])
 
-  if (!article) return null
+  const fact = useMemo(() => (article ? factOf(article) : null), [article])
+  // each word starts when the pen would reach it, as in the quotation banner
+  const words = useMemo(() => {
+    const out: { w: string; delay: number; dur: number }[] = []
+    let chars = 0
+    for (const w of fact?.text.split(/\s+/) ?? []) {
+      out.push({ w, delay: Math.min(chars * 22, 2400), dur: Math.min(160 + w.length * 45, 520) })
+      chars += w.length + 1
+    }
+    return out
+  }, [fact])
+  if (!article || !fact) return null
+  const penDone = Math.min((words.at(-1)?.delay ?? 0) + 200, 2000)
+  const long = fact.text.length > 150
+
   return (
     <section className={clsx('flex flex-col space-y-3', wide && 'lg:col-span-2')}>
-      <SectionTitle icon={<ShuffleIcon width={15} height={15} />} hint="Tự đổi sau 12 giây">
-        Bài ngẫu nhiên
+      <SectionTitle icon={<SparkleIcon width={15} height={15} />} hint="Tự đổi sau 12 giây">
+        Có thể bạn chưa biết
       </SectionTitle>
-      <div
+      <figure
         onMouseEnter={() => setHeld(true)}
         onMouseLeave={() => setHeld(false)}
         onFocus={() => setHeld(true)}
         onBlur={() => setHeld(false)}
         style={tint(article.category)}
-        className={clsx(
-          'theory-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)]',
-          wide && 'sm:flex-row',
-        )}
+        aria-roledescription="điều thú vị"
+        className="dyk-card theory-card relative isolate flex min-h-[300px] flex-1 flex-col overflow-hidden rounded-[24px] border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-5 pb-6 pt-5 sm:px-7 sm:pt-6"
       >
-        <Link key={article.slug} to={`/theory/${article.slug}`} aria-label={article.title} className={clsx('spot-zoom animate-fade-in relative block min-h-48 flex-1 overflow-hidden', wide && 'sm:min-h-64 sm:w-1/2 sm:flex-none')}>
-          <SpotlightPicture article={article} />
-        </Link>
-        <div key={`${article.slug}-text`} className={clsx('animate-fade-in flex flex-col p-5', wide && 'sm:w-1/2 sm:justify-center sm:p-7')}>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--tint)]">{CATEGORIES[article.category].title}</span>
-          <Link to={`/theory/${article.slug}`} className="mt-1.5 font-display text-[20px] font-semibold leading-snug text-[var(--color-ink)] hover:text-[var(--tint)]">
-            {article.title}
-          </Link>
-          <p className="mt-2 line-clamp-3 text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">{article.summary}</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Link to={`/theory/${article.slug}`} className="inline-flex items-center gap-1 rounded-xl bg-[var(--color-ink)] px-3.5 py-2 text-[13px] font-medium text-[var(--color-surface)] transition-transform hover:-translate-y-px">
+        <DykPicture key={article.slug} article={article} />
+        <span aria-hidden className="dyk-mark pointer-events-none absolute -top-10 right-2 -z-10 select-none font-display text-[190px] italic leading-none sm:right-6 sm:text-[230px]">
+          ?
+        </span>
+        <span aria-hidden className="pointer-events-none absolute -left-24 -bottom-28 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--tint)_18%,transparent),transparent)]" />
+
+        <div key={article.slug} className="flex flex-1 flex-col" aria-live="polite">
+          <span className="quote-fade inline-flex w-fit items-center rounded-full border border-[color-mix(in_oklch,var(--tint)_40%,transparent)] bg-[color-mix(in_oklch,var(--tint)_10%,transparent)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--tint)]">
+            {CATEGORIES[article.category].title}
+          </span>
+          <p className={clsx('mt-4 font-display leading-snug text-[var(--color-ink)]', long ? 'text-[17px] sm:text-[19px]' : 'text-[20px] sm:text-[23px]')}>
+            {words.map(({ w, delay, dur }, i) => (
+              <span key={i} className="quote-word mm-write" style={{ animationDelay: `${delay}ms`, animationDuration: `${dur}ms` }}>
+                {w}{' '}
+              </span>
+            ))}
+          </p>
+          <div className="quote-fade mt-auto flex flex-wrap items-baseline gap-x-2 gap-y-0.5 pt-4" style={{ animationDelay: `${penDone}ms` }}>
+            <span className="h-px w-6 translate-y-[-4px] bg-[var(--color-gold)]" aria-hidden />
+            <Link to={`/theory/${article.slug}`} className="text-[14px] font-semibold text-[var(--color-ink)] hover:text-[var(--tint)]">
+              {article.title}
+            </Link>
+            {fact.meta && <span className="text-[12.5px] text-[var(--color-ink-muted)]">{fact.meta}</span>}
+          </div>
+          <div className="quote-fade mt-4 flex items-center gap-2" style={{ animationDelay: `${penDone + 150}ms` }}>
+            <Link to={`/theory/${article.slug}`} className="dyk-go inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-semibold">
               Đọc bài <ArrowUpRightIcon width={14} height={14} />
             </Link>
-            <button type="button" onClick={next} className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-[13px] font-medium text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]">
-              <ShuffleIcon width={14} height={14} /> Bài khác
+            <button type="button" onClick={next} className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-[13px] font-medium text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-sunken)] hover:text-[var(--color-ink)]">
+              <ShuffleIcon width={14} height={14} /> Điều khác
             </button>
           </div>
         </div>
-        {/* Time until the next article; it stops while the card is held. */}
+        {/* Time until the next fact; it stops while the card is held. */}
         <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-surface-sunken)]">
           <span className="block h-full origin-left bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)] transition-transform duration-200 ease-linear" style={{ transform: `scaleX(${elapsed / SPOTLIGHT_MS})` }} />
         </span>
-      </div>
+      </figure>
     </section>
   )
 }
 
-/** The article's picture over a tinted glyph backdrop, which stays when there is no image or it cannot load. */
-function SpotlightPicture({ article }: { article: Article }) {
+/** The article's picture, faded into the card from the right like the portraits behind the musicology quotations. */
+function DykPicture({ article }: { article: Article }) {
   const pic = pictureOf(article)
   const wikiKey = pic && 'wiki' in pic ? pic.wiki.join('|') : ''
   const years = pic && 'wiki' in pic ? pic.years : undefined
@@ -645,27 +694,8 @@ function SpotlightPicture({ article }: { article: Article }) {
     }
   }, [wikiKey, years])
   const src = pic && 'src' in pic ? pic.src : lead?.key === wikiKey ? lead.src : null
-  const drawing = !!pic && 'drawing' in pic && !!pic.drawing
-  return (
-    <>
-      <span aria-hidden className="absolute inset-0 flex items-center justify-center bg-[linear-gradient(135deg,color-mix(in_oklch,var(--tint)_22%,var(--color-surface-raised)),color-mix(in_oklch,var(--color-gold)_12%,var(--color-surface-raised)))] font-['Noto_Music'] text-[110px] leading-none text-[color-mix(in_oklch,var(--tint)_30%,transparent)]">
-        {GLYPHS[article.category]}
-      </span>
-      {src && (
-        <img
-          src={src}
-          alt=""
-          onLoad={() => setLoaded(true)}
-          onError={() => setLoaded(false)}
-          className={clsx(
-            'kb-img absolute inset-0 h-full w-full transition-opacity duration-500',
-            drawing ? 'bg-white object-contain p-4' : article.portrait ? 'object-cover object-[50%_20%]' : 'object-cover',
-            loaded ? 'opacity-100' : 'opacity-0',
-          )}
-        />
-      )}
-    </>
-  )
+  if (!src) return null
+  return <img src={src} alt="" aria-hidden onLoad={() => setLoaded(true)} className={clsx('quote-portrait mm-sketch', loaded && 'is-loaded')} />
 }
 
 function CategoryView({ id, onSelect }: { id: CategoryId; onSelect: (id?: CategoryId) => void }) {
