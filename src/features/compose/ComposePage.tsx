@@ -5,8 +5,9 @@ import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { playNow, playSequence } from '../theory/audio'
 import {
-  barAt, blank, CLEF_BOTTOM, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, normalized, pitchName, resize, sigAlter, soundOf,
-  spell, ticksOf, totalOf, updateEv, writeAt, type Clef, type DurName, type Ev, type Left, type Note, type Right, type Score,
+  barAt, blank, CLEF_BOTTOM, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
+  sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
+  type Note, type Orn, type Right, type Score, type Span,
 } from './model'
 import { toMei, type PieceInfo } from './mei'
 import { engraver, render } from './engrave'
@@ -20,7 +21,7 @@ function loadAll(): Score[] {
   try {
     const raw = localStorage.getItem(STORE)
     const list = raw ? (JSON.parse(raw) as Score[]) : []
-    return list.length ? list : [blank()]
+    return list.length ? list.map(migrate) : [blank()]
   } catch {
     return [blank()]
   }
@@ -83,6 +84,13 @@ export function ComposePage() {
   const [dots, setDots] = useState(0)
   const [restMode, setRestMode] = useState(false)
   const [chordMode, setChordMode] = useState(false)
+  const [tupletMode, setTupletMode] = useState<number | null>(null) // 3, 5 or 6 while on
+  const [flash, setFlash] = useState('')
+  useEffect(() => {
+    if (!flash) return
+    const t = window.setTimeout(() => setFlash(''), 2600)
+    return () => clearTimeout(t)
+  }, [flash])
   const [armed, setArmed] = useState<number | null>(null) // accidental for the next note
   const [tieNext, setTieNext] = useState(false)
   const [caret, setCaret] = useState<Caret>({ staff: 0, t: 0 })
@@ -205,8 +213,21 @@ export function ComposePage() {
       }
     }
     const notes: Note[] = restMode ? [] : [{ ...fromDn(d, spelled), tie: tieNext }]
-    const { score: next } = writeAt(score, staff, t, inputTicks, notes)
-    const end = t + inputTicks
+    // inside a tuplet the note fills the slot; with tuplet input on, the first note opens a new group
+    let base = score
+    let slot = score.staves[staff].find((e) => e.tup && e.start === t)
+    if (!slot && tupletMode) {
+      const kind = TUPLETS.find((x) => x.n === tupletMode)!
+      const open = openTuplet(score, staff, t, inputTicks, kind.n, kind.base)
+      if (!open) {
+        setFlash(`${kind.label} ${DUR_LABEL[dur].toLowerCase()} không vừa phần còn lại của ô`)
+        return
+      }
+      base = open.score
+      slot = base.staves[staff].find((e) => e.tup?.g === open.g && e.start === t)
+    }
+    const { score: next } = slot ? writeAt(base, staff, t, slot.dur, notes, newId(), { tup: slot.tup }) : writeAt(base, staff, t, inputTicks, notes)
+    const end = t + (slot ? slot.dur : inputTicks)
     const room = totalOf(next) - end < barAt(layout(next), Math.max(0, end - 1)).len ? normalized({ ...next, measures: next.measures + 1 }) : next
     commit(room)
     sound(notes)
@@ -230,12 +251,20 @@ export function ComposePage() {
     setDur(d)
     setDots(dts)
     if (!sel) return
+    if (inTuplet(sel)) return
     let s = score
     for (const id of sel.ids) s = resize(s, sel.staff, id, ticksOf(d, dts))
     commit(s)
   }
+  /** A note inside a tuplet keeps its slot: the group must still add up to its length. */
+  const inTuplet = (x: NonNullable<Sel>) => {
+    const hit = score.staves[x.staff].some((e) => x.ids.includes(e.id) && e.tup)
+    if (hit) setFlash('Nốt trong nhóm liên ba giữ nguyên trường độ — xoá nhóm (viết đè nốt thường) để đổi')
+    return hit
+  }
   const toggleDot = (n: number) => {
     if (!sel) return setDots((x) => (x === n ? 0 : n))
+    if (inTuplet(sel)) return
     let s = score
     for (const id of sel.ids) {
       const e = s.staves[sel.staff].find((x) => x.id === id)
@@ -303,8 +332,8 @@ export function ComposePage() {
     const { bar, staff } = here()
     if (bar === 0) {
       // the first measure's key, time and clefs are the score's own
-      const a = f({}, 0, staff)
-      commit(normalized({ ...score, key: a.key ?? score.key, time: a.time ?? score.time, clefs: score.clefs.map((c, i) => a.clefs?.[i] ?? c), attrs: { ...score.attrs, 0: { ...score.attrs[0], left: a.left ?? score.attrs[0]?.left, right: a.right ?? score.attrs[0]?.right } } }))
+      const { key, time, clefs, ...rest } = f({ ...score.attrs[0] }, 0, staff)
+      commit(normalized({ ...score, key: key ?? score.key, time: time ?? score.time, clefs: score.clefs.map((c, i) => clefs?.[i] ?? c), attrs: { ...score.attrs, 0: rest } }))
       return
     }
     commit(normalized({ ...score, attrs: { ...score.attrs, [bar]: f({ ...score.attrs[bar] }, bar, staff) } }))
@@ -450,7 +479,8 @@ export function ComposePage() {
         setSel(null)
       } else if (act === 'dot') {
         const ev = base.staves[r.staff].find((x) => x.id === r.evId)
-        if (ev) {
+        if (ev?.tup) setFlash('Nốt trong nhóm liên ba giữ nguyên trường độ')
+        else if (ev) {
           const sp = spell(ev.dur)
           const plainDur = sp.length === 1 ? DUR[sp[0].dur] : ev.dur
           run(resize(base, r.staff, r.evId, sp.length === 1 && sp[0].dots ? plainDur : plainDur * 1.5))
@@ -504,6 +534,65 @@ export function ComposePage() {
     insert(spot.staff, t, d)
   }
 
+  /* ---------- marks: on the selection, or on the note just written ---------- */
+
+  const targets = (): { staff: number; ids: string[] } | null => {
+    if (sel) return { staff: sel.staff, ids: sel.ids }
+    const last = [...score.staves[caret.staff]].reverse().find((e) => e.start < caret.t && e.notes.length)
+    return last ? { staff: caret.staff, ids: [last.id] } : null
+  }
+  const target = (() => {
+    const tg = targets()
+    return tg ? score.staves[tg.staff].find((e) => e.id === tg.ids[0]) : undefined
+  })()
+  const onTargets = (f: (e: Ev, all: Ev[]) => Ev) => {
+    const tg = targets()
+    if (!tg) return setFlash('Chọn một nốt (hoặc viết một nốt) trước đã')
+    const all = score.staves[tg.staff].filter((e) => tg.ids.includes(e.id))
+    let s = score
+    for (const id of tg.ids) s = updateEv(s, tg.staff, id, (e) => f(e, all))
+    commit(s)
+  }
+  const toggleArtic = (a: Artic) =>
+    onTargets((e, all) => {
+      const on = all.every((x) => x.artic?.includes(a))
+      const rest = (e.artic ?? []).filter((x) => x !== a)
+      return { ...e, artic: on ? rest : [...rest, a] }
+    })
+  const toggleOrn = (o: Orn) => onTargets((e, all) => ({ ...e, orn: all.every((x) => x.orn === o) ? undefined : o }))
+  const toggleFlag = (k: 'fermata' | 'arpeg') => onTargets((e, all) => ({ ...e, [k]: !all.every((x) => x[k]) }))
+  const setDyn = (d: Dyn) => {
+    const tg = targets()
+    if (!tg) return setFlash('Chọn một nốt (hoặc viết một nốt) trước đã')
+    commit(updateEv(score, tg.staff, tg.ids[0], (e) => ({ ...e, dyn: e.dyn === d ? undefined : d })))
+  }
+  const setText = (kind: 'tempo' | 'expr', preset?: string) => {
+    const tg = targets()
+    if (!tg) return setFlash('Chọn một nốt (hoặc viết một nốt) trước đã')
+    let text = preset
+    if (text === undefined) {
+      const ask = window.prompt(kind === 'tempo' ? 'Chữ nhịp độ — thêm số nếu muốn máy nghe theo (vd. Andante ♩ = 72)' : 'Chỉ dẫn diễn tấu (vd. dolce, con fuoco)', target?.text?.kind === kind ? target.text.text : '')
+      if (ask === null) return
+      text = ask.trim()
+    }
+    const bpm = kind === 'tempo' ? Number(/(\d{2,3})\s*$/.exec(text)?.[1]) || undefined : undefined
+    commit(updateEv(score, tg.staff, tg.ids[0], (e) => ({ ...e, text: text ? { kind, text, bpm } : undefined })))
+  }
+  const toggleSpan = (kind: Span['kind']) => {
+    const tg = targets()
+    if (!tg) return setFlash('Chọn các nốt cần nối trước đã')
+    const evs = score.staves[tg.staff]
+    const chosen = evs.filter((e) => tg.ids.includes(e.id)).sort((a, b) => a.start - b.start)
+    const from = chosen[0]
+    // one note chosen: to the next note on the staff
+    const to = chosen.length > 1 ? chosen[chosen.length - 1] : evs.find((e) => e.start > from.start && e.notes.length)
+    if (!to) return setFlash('Cần ít nhất hai nốt')
+    const same = score.spans.find((sp) => sp.staff === tg.staff && sp.kind === kind && sp.from === from.id && sp.to === to.id)
+    commit({ ...score, spans: same ? score.spans.filter((sp) => sp !== same) : [...score.spans, { id: newId(), kind, staff: tg.staff, from: from.id, to: to.id }] })
+  }
+  const toggleNav = (k: 'segno' | 'coda' | Jump) =>
+    setAttr((a) => (k === 'segno' || k === 'coda' ? { ...a, [k]: !a[k] } : { ...a, jump: a.jump === k ? undefined : k }))
+
   /* ---------- playback ---------- */
 
   const togglePlay = () => {
@@ -512,12 +601,15 @@ export function ComposePage() {
       return
     }
     const from = sel ? (score.staves[sel.staff].find((e) => e.id === sel.ids[0])?.start ?? 0) : 0
-    const steps = soundOf(score, from)
-    const perTick = 60 / score.tempo / 48
+    const { steps, anchors } = soundOf(score, from)
     setPlaying(true)
     const staff = caret.staff
     stopPlay.current = playSequence(steps, {
-      onFrame: (sec) => setCaret({ staff, t: Math.min(totalOf(score), from + Math.round(sec / perTick / 12) * 12) }),
+      // the caret follows the bars as they sound, back to the segno or the start when the score repeats
+      onFrame: (sec) => {
+        const a = [...anchors].reverse().find((x) => x.sec <= sec) ?? anchors[0]
+        if (a) setCaret({ staff, t: Math.min(totalOf(score), a.tick + Math.floor((sec - a.sec) / a.tps / 60) * 60) })
+      },
       onEnd: () => {
         setPlaying(false)
         stopPlay.current = null
@@ -599,11 +691,11 @@ export function ComposePage() {
   }
 
   const selEv: Ev | undefined = sel ? score.staves[sel.staff].find((e) => e.id === sel.ids[0]) : undefined
-  const status = sel
+  const status = flash ? flash : sel
     ? selEv?.notes.length
       ? `${sel.ids.length > 1 ? `${sel.ids.length} nốt · ` : ''}${(sel.note === undefined ? selEv.notes : [selEv.notes[sel.note]]).map(pitchName).join(' + ')} · ô ${barAt(bars, selEv.start).index + 1}`
       : ''
-    : `Nhập: ${restMode ? 'dấu lặng' : 'nốt'} ${DUR_LABEL[dur].toLowerCase()}${dots ? ' ' + '·'.repeat(dots) : ''}${armed !== null ? ` ${ACCIDENTALS.find((a) => a[0] === armed)?.[1]}` : ''}${chordMode ? ' · hợp âm' : ''} · ô ${barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1}`
+    : `Nhập: ${restMode ? 'dấu lặng' : 'nốt'} ${DUR_LABEL[dur].toLowerCase()}${dots ? ' ' + '·'.repeat(dots) : ''}${armed !== null ? ` ${ACCIDENTALS.find((a) => a[0] === armed)?.[1]}` : ''}${chordMode ? ' · hợp âm' : ''}${tupletMode ? ` · liên ${tupletMode}` : ''} · ô ${barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1}`
 
   return (
     <div className="cmp-page">
@@ -689,6 +781,18 @@ export function ComposePage() {
           setAttr((a) => (kind === 'rptstart' ? { ...a, left: a.left ? undefined : 'rptstart' } : { ...a, right: kind as Right }))
         }
         onAddBar={() => commit(normalized({ ...score, measures: score.measures + 1 }))}
+        target={target}
+        spans={score.spans}
+        tupletMode={tupletMode}
+        attrs={score.attrs}
+        onTuplet={(n) => setTupletMode((m) => (m === n ? null : n))}
+        onSpan={toggleSpan}
+        onArtic={toggleArtic}
+        onOrn={toggleOrn}
+        onFlag={toggleFlag}
+        onDyn={setDyn}
+        onText={setText}
+        onNav={toggleNav}
         onRemoveBar={() => {
           if (score.measures <= 1) return
           const lastBar = bars[bars.length - 1]
@@ -898,8 +1002,29 @@ type PaletteProps = {
   onBarline: (kind: Right | Left) => void
   onAddBar: () => void
   onRemoveBar: () => void
+  target?: Ev
+  spans: Span[]
+  tupletMode: number | null
+  attrs: Score['attrs']
+  onTuplet: (n: number) => void
+  onSpan: (k: Span['kind']) => void
+  onArtic: (a: Artic) => void
+  onOrn: (o: Orn) => void
+  onFlag: (k: 'fermata' | 'arpeg') => void
+  onDyn: (d: Dyn) => void
+  onText: (kind: 'tempo' | 'expr', preset?: string) => void
+  onNav: (k: 'segno' | 'coda' | Jump) => void
 }
-const TABS = [['notes', 'Nốt'], ['acc', 'Dấu hoá'], ['sig', 'Khoá · Giọng · Nhịp'], ['bar', 'Vạch nhịp']] as const
+const TABS = [['notes', 'Nốt'], ['acc', 'Dấu hoá'], ['link', 'Liên kết'], ['artic', 'Kỹ thuật'], ['dyn', 'Sắc thái'], ['text', 'Chữ'], ['sig', 'Khoá · Giọng · Nhịp'], ['bar', 'Vạch nhịp · Nhắc lại']] as const
+const ARTICS: [Artic, string, string][] = [['stacc', '•', 'Staccato'], ['stacciss', '▾', 'Staccatissimo'], ['ten', '–', 'Tenuto'], ['acc', '>', 'Accent'], ['marc', '^', 'Marcato']]
+const ORNS: [Orn, string, string][] = [['trill', '𝆖', 'Láy rền (tr)'], ['mordent', '∿', 'Láy dưới'], ['mordentInv', '≈', 'Láy trên'], ['turn', '𝆗', 'Láy vòng']]
+const DYNS: [Dyn, string][] = [['ppp', '𝆏𝆏𝆏'], ['pp', '𝆏𝆏'], ['p', '𝆏'], ['mp', '𝆐𝆏'], ['mf', '𝆐𝆑'], ['f', '𝆑'], ['ff', '𝆑𝆑'], ['fff', '𝆑𝆑𝆑'], ['sf', '𝆍𝆑'], ['sfz', '𝆍𝆑𝆎'], ['fp', '𝆑𝆏']]
+const TEMPOS = ['Largo', 'Adagio', 'Andante', 'Moderato', 'Allegro', 'Presto', 'rit.', 'a tempo']
+const EXPRS = ['dolce', 'cantabile', 'espressivo', 'legato', 'leggiero', 'con moto', 'cresc.', 'dim.']
+const NAVS: ['segno' | 'coda' | Jump, string, string, 'start' | 'end'][] = [
+  ['segno', '𝄋', 'Segno', 'start'], ['coda', '𝄌', 'Coda', 'start'], ['fine', 'Fine', 'Fine', 'end'], ['dc', '𝄊', 'D.C.', 'end'], ['dcfine', 'D.C.', 'D.C. al Fine', 'end'],
+  ['dccoda', 'D.C.', 'D.C. al Coda', 'end'], ['ds', '𝄉', 'D.S.', 'end'], ['dsfine', 'D.S.', 'D.S. al Fine', 'end'], ['dscoda', 'D.S.', 'D.S. al Coda', 'end'], ['tocoda', '→𝄌', 'To Coda', 'end'],
+]
 
 /**
  * Tools in a panel that floats over the paper: dragged by its handle anywhere on screen, folded into a round button,
@@ -1018,6 +1143,65 @@ function Palette(p: PaletteProps) {
           <Tool title="Thêm một ô ở cuối" onClick={p.onAddBar} glyph="+" label="Thêm ô" />
           <Tool title="Bỏ ô cuối" onClick={p.onRemoveBar} glyph="−" label="Bỏ ô cuối" />
           <p className="cmp-note">Vạch nhịp đặt ở cuối ô {bar + 1}.</p>
+          {NAVS.map(([k, g, label, where]) => {
+            const a = p.attrs[bar] ?? {}
+            const on = k === 'segno' || k === 'coda' ? !!a[k] : a.jump === k
+            return <Tool key={k} on={on} title={`${label} (${where === 'start' ? 'đầu' : 'cuối'} ô ${bar + 1})`} onClick={() => p.onNav(k)} glyph={<span className={clsx(g.length > 3 && 'cmp-word')}>{g}</span>} label={label} />
+          })}
+          <p className="cmp-note">Segno, Coda ở đầu ô; Fine, D.C., D.S., To Coda ở cuối ô. Khi nghe lại, máy đi theo các dấu này.</p>
+        </div>
+      )}
+      {tab === 'link' && (
+        <div className="cmp-grid">
+          <Tool on={!!p.target && p.spans.some((sp) => sp.kind === 'slur' && sp.from === p.target!.id)} title="Dấu luyến" onClick={() => p.onSpan('slur')} glyph="⁀" label="Luyến" />
+          <Tool on={!!p.target && p.spans.some((sp) => sp.kind === 'cres' && sp.from === p.target!.id)} title="Mạnh dần (hình nêm)" onClick={() => p.onSpan('cres')} glyph="𝆒" label="Mạnh dần" />
+          <Tool on={!!p.target && p.spans.some((sp) => sp.kind === 'dim' && sp.from === p.target!.id)} title="Nhỏ dần (hình nêm)" onClick={() => p.onSpan('dim')} glyph="𝆓" label="Nhỏ dần" />
+          {TUPLETS.map((t) => (
+            <Tool key={t.n} on={p.tupletMode === t.n} title={`${t.label}: ${t.n} nốt trong thời gian ${t.base}`} onClick={() => p.onTuplet(t.n)} glyph={<span className="cmp-tup">{t.n}</span>} label={t.label} />
+          ))}
+          <p className="cmp-note">Luyến, hình nêm: chọn nhiều nốt (kéo ngang), hoặc một nốt để nối tới nốt kế. Liên ba/năm/sáu: bật lên rồi viết — nốt đầu mở cả nhóm theo trường độ đang chọn.</p>
+        </div>
+      )}
+      {tab === 'artic' && (
+        <div className="cmp-grid">
+          {ARTICS.map(([a, g, label]) => (
+            <Tool key={a} on={!!p.target?.artic?.includes(a)} title={label} onClick={() => p.onArtic(a)} glyph={g} label={label} />
+          ))}
+          <Tool on={!!p.target?.fermata} title="Dấu lưu (fermata)" onClick={() => p.onFlag('fermata')} glyph="𝄐" label="Fermata" />
+          {ORNS.map(([o, g, label]) => (
+            <Tool key={o} on={p.target?.orn === o} title={label} onClick={() => p.onOrn(o)} glyph={g} label={label} />
+          ))}
+          <Tool on={!!p.target?.arpeg} disabled={(p.target?.notes.length ?? 0) < 2} title="Rải hợp âm (arpeggio)" onClick={() => p.onFlag('arpeg')} glyph="≀" label="Rải" />
+          <p className="cmp-note">{p.hasSel ? 'Gắn vào nốt đang chọn.' : 'Gắn vào nốt vừa viết.'}</p>
+        </div>
+      )}
+      {tab === 'dyn' && (
+        <div className="cmp-grid">
+          {DYNS.map(([d, g]) => (
+            <Tool key={d} on={p.target?.dyn === d} title={d} onClick={() => p.onDyn(d)} glyph={<span className="cmp-dyn">{g}</span>} label={d} />
+          ))}
+          <Tool title="Mạnh dần (hình nêm)" onClick={() => p.onSpan('cres')} glyph="𝆒" label="Mạnh dần" />
+          <Tool title="Nhỏ dần (hình nêm)" onClick={() => p.onSpan('dim')} glyph="𝆓" label="Nhỏ dần" />
+          <p className="cmp-note">{p.hasSel ? 'Gắn vào nốt đang chọn.' : 'Gắn vào nốt vừa viết.'} Hình nêm cần chọn nhiều nốt.</p>
+        </div>
+      )}
+      {tab === 'text' && (
+        <div className="cmp-sig">
+          <p className="cmp-note">Nhịp độ (in đậm, trên khuông) — thêm số để máy nghe theo, vd. "Andante ♩ = 72".</p>
+          <div className="cmp-words">
+            {TEMPOS.map((w) => (
+              <button key={w} className={clsx(p.target?.text?.text === w && 'is-on')} onClick={() => p.onText('tempo', w)}>{w}</button>
+            ))}
+            <button onClick={() => p.onText('tempo')}>Khác…</button>
+          </div>
+          <p className="cmp-note">Chỉ dẫn diễn tấu (in nghiêng).</p>
+          <div className="cmp-words">
+            {EXPRS.map((w) => (
+              <button key={w} className={clsx('is-italic', p.target?.text?.text === w && 'is-on')} onClick={() => p.onText('expr', w)}>{w}</button>
+            ))}
+            <button onClick={() => p.onText('expr')}>Khác…</button>
+            <button disabled={!p.target?.text} onClick={() => p.onText(p.target?.text?.kind ?? 'expr', '')}>Bỏ chữ</button>
+          </div>
         </div>
       )}
     </div>

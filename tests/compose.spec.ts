@@ -66,3 +66,67 @@ test('soạn nhạc: đổi số chỉ nhịp và giọng từ bảng công cụ
   expect(s.key).toBe(-2)
   await expect(page.locator('.cmp-svg [data-class="keySig"]').first()).toBeVisible()
 })
+
+test('soạn nhạc đợt 2: liên ba, staccato, sắc thái, luyến, chữ nhịp độ, Segno – D.S.', async ({ page }) => {
+  test.setTimeout(90_000)
+  await open(page)
+  const tab = (name: string) => page.getByRole('tab', { name }).click()
+  // a triplet of eighths: tuplet input on, eighth value, three letters
+  await page.getByRole('button', { name: 'Móc đơn', exact: true }).click()
+  await tab('Liên kết')
+  await page.getByRole('button', { name: /^Liên ba/ }).click()
+  for (const k of ['c', 'd', 'e']) await page.keyboard.press(k)
+  await expect(page.locator('.cmp-svg [data-class="tuplet"]')).toHaveCount(1)
+  await page.getByRole('button', { name: /^Liên ba/ }).click()
+  await page.keyboard.press('5') // quarter
+  await page.keyboard.press('f')
+  // staccato and ff on the note just written
+  await tab('Kỹ thuật')
+  await page.getByRole('button', { name: 'Staccato', exact: true }).click()
+  await tab('Sắc thái')
+  await page.getByRole('button', { name: 'ff', exact: true }).click()
+  await expect(page.locator('.cmp-svg [data-class="artic"]')).not.toHaveCount(0)
+  await expect(page.locator('.cmp-svg [data-class="dynam"]')).toHaveCount(1)
+  // a slur over the whole first measure: drag across it, then Luyến
+  const m = (await page.locator('[data-id="m0"]').boundingBox())!
+  const mid = await page.evaluate(() => {
+    const ls = [...document.querySelector('[data-id="m0"] > [data-class="staff"]')!.querySelectorAll(':scope > path')].slice(0, 5).map((x) => x.getBoundingClientRect())
+    return (ls[0].top + ls[4].bottom) / 2
+  })
+  await page.mouse.move(m.x + 30, mid)
+  await page.mouse.down()
+  await page.mouse.move(m.x + m.width - 4, mid, { steps: 8 })
+  await page.mouse.up()
+  await tab('Liên kết')
+  await page.getByRole('button', { name: 'Dấu luyến' }).click()
+  await expect(page.locator('.cmp-svg [data-class="slur"]')).toHaveCount(1)
+  // tempo text, segno and D.S. al Fine
+  await tab('Chữ')
+  await page.getByRole('button', { name: 'Allegro', exact: true }).click()
+  await expect(page.locator('.cmp-svg [data-class="tempo"]')).toContainText('Allegro')
+  await tab('Vạch nhịp · Nhắc lại')
+  await page.getByRole('button', { name: /^Segno/ }).click()
+  await page.getByRole('button', { name: /^D\.S\. al Fine/ }).click()
+  await expect(page.locator('.cmp-svg [data-class="repeatMark"]')).not.toHaveCount(0)
+  await page.reload()
+  await expect(page.locator('.cmp-svg [data-class="slur"]')).toHaveCount(1, { timeout: 40_000 })
+  await expect(page.locator('.cmp-svg [data-class="tuplet"]')).toHaveCount(1)
+})
+
+test('soạn nhạc: bản lưu theo đơn vị cũ (48 tick) tự chuyển khi mở', async ({ page }) => {
+  await page.addInitScript(() => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+    const old = { id: 'old', title: 'Bản cũ', clefs: ['treble'], key: 0, time: [4, 4], tempo: 80, measures: 2, attrs: {}, updated: 1,
+      staves: [[{ id: 'a', start: 0, dur: 48, notes: [{ step: 0, oct: 5, alter: 0 }] }, { id: 'r', start: 48, dur: 336, notes: [] }]] }
+    localStorage.setItem('compose:scores', JSON.stringify([old]))
+    localStorage.setItem('compose:current', JSON.stringify('old'))
+  })
+  await page.goto('/#/compose')
+  await expect(page.locator('.cmp-svg [data-class="note"]')).toHaveCount(1, { timeout: 40_000 })
+  // a quarter note still: it fills one beat, the rest of the two bars is rest
+  await expect(page.locator('.cmp-svg [data-class="note"] [data-class="stem"]')).toHaveCount(1)
+  const v = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0])
+  expect(v.v).toBe(2)
+  expect(v.staves[0][0].dur).toBe(240)
+})

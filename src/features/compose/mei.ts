@@ -1,4 +1,4 @@
-import { dn, layout, midiOf, sigAlter, spell, type Bar, type Clef, type Ev, type Score } from './model'
+import { dn, layout, midiOf, sigAlter, spell, type Bar, type Clef, type Ev, type Jump, type Score } from './model'
 
 /** What a drawn element stands for: the event it belongs to and the stretch of time it covers. */
 export type PieceInfo = { staff: number; evId: string; start: number; dur: number; note?: number; bar: number }
@@ -17,6 +17,10 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
   const pieces = new Map<string, PieceInfo>()
   // per staff, per bar: the layer's XML
   const layers: string[][] = s.staves.map(() => bars.map(() => ''))
+  // control events (dynamics, ornaments, slurs, text…) go after the staves of the bar where they start
+  const ctrl: string[] = bars.map(() => '')
+  const firstBar = new Map<string, number>()
+  const lastPiece = new Map<string, string>()
 
   s.staves.forEach((evs, st) => {
     // accidentals shown so far in the bar, by staff position
@@ -27,7 +31,10 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
       const next = evs[ei + 1]
       const segs = segments(ev, bars)
       let k = 0
-      const count = segs.reduce((n, sg) => n + spell(sg.len).length, 0)
+      // a tuplet note is written as the value it looks like (three eighths in the time of two)
+      const written = (len: number) => (ev.tup ? (len * ev.tup.n) / ev.tup.base : len)
+      const count = segs.reduce((n, sg) => n + spell(written(sg.len)).length, 0)
+      if (ev.tup && prev?.tup?.g !== ev.tup.g) layers[st][segs[0].bar] += `<tuplet num="${ev.tup.n}" numbase="${ev.tup.base}">`
       for (const sg of segs) {
         const bar = bars[sg.bar]
         if (sg.bar !== shownBar) {
@@ -35,7 +42,8 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
           shownBar = sg.bar
         }
         // a rest filling a whole bar is drawn as a bar rest
-        if (!ev.notes.length && sg.start === bar.start && sg.len === bar.len) {
+        if (!firstBar.has(ev.id)) firstBar.set(ev.id, sg.bar)
+        if (!ev.notes.length && !ev.tup && sg.start === bar.start && sg.len === bar.len) {
           const id = k === 0 ? ev.id : `${ev.id}_${k}`
           pieces.set(id, { staff: st, evId: ev.id, start: sg.start, dur: sg.len, bar: sg.bar })
           layers[st][sg.bar] += `<mRest xml:id="${id}"/>`
@@ -43,10 +51,13 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
           continue
         }
         let t = sg.start
-        for (const p of spell(sg.len)) {
+        for (const p of spell(written(sg.len))) {
           const id = k === 0 ? ev.id : `${ev.id}_${k}`
           const dur = `dur="${p.dur}"${p.dots ? ` dots="${p.dots}"` : ''}`
-          pieces.set(id, { staff: st, evId: ev.id, start: t, dur: p.ticks, bar: sg.bar })
+          const real = ev.tup ? (p.ticks * ev.tup.base) / ev.tup.n : p.ticks
+          pieces.set(id, { staff: st, evId: ev.id, start: t, dur: real, bar: sg.bar })
+          lastPiece.set(ev.id, id)
+          const artic = k === 0 && ev.artic?.length ? ` artic="${ev.artic.join(' ')}"` : ''
           if (!ev.notes.length) layers[st][sg.bar] += `<rest xml:id="${id}" ${dur}/>`
           else {
             const notes = ev.notes.map((n, j) => {
@@ -61,16 +72,42 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
               shown.set(pos, n.alter)
               const nid = ev.notes.length > 1 ? `${id}-${j}` : id
               if (ev.notes.length > 1) pieces.set(nid, { staff: st, evId: ev.id, start: t, dur: p.ticks, note: j, bar: sg.bar })
-              return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}`}/>`
+              return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}${artic}`}/>`
             })
-            layers[st][sg.bar] += ev.notes.length > 1 ? `<chord xml:id="${id}" ${dur}>${notes.join('')}</chord>` : notes[0]
+            layers[st][sg.bar] += ev.notes.length > 1 ? `<chord xml:id="${id}" ${dur}${artic}>${notes.join('')}</chord>` : notes[0]
           }
-          t += p.ticks
+          t += real
           k++
         }
       }
+      if (ev.tup && next?.tup?.g !== ev.tup.g) layers[st][segs[segs.length - 1].bar] += '</tuplet>'
     })
   })
+
+  // marks that hang on an event: written in the bar where the event starts, pointing at its first drawn piece
+  s.staves.forEach((evs, st) => {
+    for (const ev of evs) {
+      const bar = firstBar.get(ev.id)
+      if (bar === undefined || !ev.notes.length) continue
+      const at = `startid="#${ev.id}" staff="${st + 1}"`
+      if (ev.fermata) ctrl[bar] += `<fermata ${at}/>`
+      if (ev.orn === 'trill') ctrl[bar] += `<trill ${at}/>`
+      if (ev.orn === 'mordent') ctrl[bar] += `<mordent ${at} form="lower"/>`
+      if (ev.orn === 'mordentInv') ctrl[bar] += `<mordent ${at} form="upper"/>`
+      if (ev.orn === 'turn') ctrl[bar] += `<turn ${at}/>`
+      if (ev.arpeg && ev.notes.length > 1) ctrl[bar] += `<arpeg plist="#${ev.id}"/>`
+      if (ev.dyn) ctrl[bar] += `<dynam ${at} place="below">${ev.dyn}</dynam>`
+      if (ev.text?.kind === 'tempo') ctrl[bar] += `<tempo ${at} place="above">${esc(ev.text.text)}</tempo>`
+      if (ev.text?.kind === 'expr') ctrl[bar] += `<dir ${at} place="above"><rend fontstyle="italic">${esc(ev.text.text)}</rend></dir>`
+    }
+  })
+  for (const sp of s.spans ?? []) {
+    const bar = firstBar.get(sp.from)
+    const end = lastPiece.get(sp.to)
+    if (bar === undefined || !end) continue
+    const ends = `startid="#${sp.from}" endid="#${end}" staff="${sp.staff + 1}"`
+    ctrl[bar] += sp.kind === 'slur' ? `<slur ${ends}/>` : `<hairpin ${ends} form="${sp.kind}" place="below"/>`
+  }
 
   const grand = s.staves.length > 1
   const staffDefs = s.clefs.map((c, i) => `<staffDef n="${i + 1}" lines="5" clef.shape="${CLEF[c][0]}" clef.line="${CLEF[c][1]}"/>`).join('')
@@ -86,6 +123,7 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
       const clefChange = prev && prev.clefs[st] !== b.clefs[st] ? `<clef shape="${CLEF[b.clefs[st]][0]}" line="${CLEF[b.clefs[st]][1]}"/>` : ''
       body += `<staff n="${st + 1}"><layer n="1">${clefChange}${layers[st][i]}</layer></staff>`
     })
+    body += ctrl[i] + navigation(s.attrs[i], b)
     body += '</measure>'
   })
   const mei =
@@ -108,5 +146,30 @@ function segments(ev: Ev, bars: Bar[]) {
     out.push({ bar: b.index, start: t, len })
     t += len
   }
+  return out
+}
+
+const esc = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+const JUMP_TEXT: Record<Jump, string> = {
+  fine: 'Fine',
+  dc: 'D.C.',
+  dcfine: 'D.C. al Fine',
+  dccoda: 'D.C. al Coda',
+  ds: 'D.S.',
+  dsfine: 'D.S. al Fine',
+  dscoda: 'D.S. al Coda',
+  tocoda: 'To Coda',
+}
+/** Segno and coda at the start of a bar; Fine, D.C., D.S. and To Coda at its end. */
+function navigation(a: Score['attrs'][number] | undefined, b: Bar): string {
+  if (!a) return ''
+  const endBeat = b.time[0] + 0.99
+  let out = ''
+  if (a.segno) out += '<repeatMark func="segno" tstamp="1" staff="1" place="above"/>'
+  if (a.coda) out += '<repeatMark func="coda" tstamp="1" staff="1" place="above"/>'
+  if (a.jump === 'fine') out += `<repeatMark func="fine" tstamp="${endBeat}" staff="1" place="above"/>`
+  else if (a.jump === 'tocoda') out += `<dir tstamp="${endBeat}" staff="1" place="above"><rend fontstyle="italic">To Coda</rend></dir><repeatMark func="coda" tstamp="${endBeat}" staff="1" place="above"/>`
+  else if (a.jump) out += `<dir tstamp="${endBeat}" staff="1" place="above"><rend fontstyle="italic">${JUMP_TEXT[a.jump]}</rend></dir>`
   return out
 }

@@ -5,18 +5,28 @@
  * tied pieces only when it is drawn.
  */
 
-export const TPQ = 48 // ticks per quarter: 3 per 64th, so dotted 64ths and (later) triplets stay whole numbers
-export const DUR = { 1: 192, 2: 96, 4: 48, 8: 24, 16: 12, 32: 6, 64: 3 } as const
+// ticks per quarter: 240 = 48 × 5, so triplets, quintuplets and sextuplets down to the 64th stay whole numbers
+export const TPQ = 240
+export const DUR = { 1: 960, 2: 480, 4: 240, 8: 120, 16: 60, 32: 30, 64: 15 } as const
 export type DurName = keyof typeof DUR
 export const DUR_NAMES: DurName[] = [1, 2, 4, 8, 16, 32, 64]
 
 export type Clef = 'treble' | 'bass' | 'alto' | 'tenor'
 export type Pitch = { step: number; oct: number; alter: number } // step 0–6 = C–B; middle C = { step 0, oct 4 }
 export type Note = Pitch & { tie?: boolean } // tied to the same pitch in the next event of the staff
-export type Ev = { id: string; start: number; dur: number; notes: Note[] } // no notes = a rest
+export type Artic = 'stacc' | 'stacciss' | 'ten' | 'acc' | 'marc'
+export type Orn = 'trill' | 'mordent' | 'mordentInv' | 'turn'
+export type Dyn = 'ppp' | 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'fff' | 'sf' | 'sfz' | 'fp'
+/** `n` notes in the time of `base` (3 in 2, 5 in 4, 6 in 4); the events of one group share `g`. */
+export type Tup = { n: number; base: number; g: string }
+export type Marks = { artic?: Artic[]; orn?: Orn; fermata?: boolean; arpeg?: boolean; dyn?: Dyn; tup?: Tup; text?: { kind: 'tempo' | 'expr'; text: string; bpm?: number } }
+export type Ev = { id: string; start: number; dur: number; notes: Note[] } & Marks // no notes = a rest
+/** A slur or hairpin from one event to another on the same staff. */
+export type Span = { id: string; kind: 'slur' | 'cres' | 'dim'; staff: number; from: string; to: string }
+export type Jump = 'fine' | 'dc' | 'dcfine' | 'dccoda' | 'ds' | 'dsfine' | 'dscoda' | 'tocoda'
 export type Left = 'rptstart'
 export type Right = 'single' | 'dbl' | 'end' | 'rptend'
-export type MeasureAttr = { key?: number; time?: [number, number]; clefs?: Partial<Record<number, Clef>>; left?: Left; right?: Right }
+export type MeasureAttr = { key?: number; time?: [number, number]; clefs?: Partial<Record<number, Clef>>; left?: Left; right?: Right; segno?: boolean; coda?: boolean; jump?: Jump }
 export type Score = {
   id: string
   title: string
@@ -27,7 +37,9 @@ export type Score = {
   measures: number
   attrs: Record<number, MeasureAttr> // changes from a measure on (0-based)
   staves: Ev[][]
+  spans: Span[]
   updated: number
+  v?: number // 2 = ticks at TPQ 240
 }
 
 let seq = 0
@@ -98,7 +110,7 @@ function normalize(evs: Ev[], total: number): Ev[] {
   const merged: Ev[] = []
   for (const e of out) {
     const last = merged[merged.length - 1]
-    if (last && !last.notes.length && !e.notes.length) merged[merged.length - 1] = { ...last, dur: last.dur + e.dur }
+    if (last && !last.notes.length && !e.notes.length && !last.tup && !e.tup) merged[merged.length - 1] = { ...last, dur: last.dur + e.dur }
     else merged.push(e)
   }
   return merged
@@ -113,27 +125,40 @@ function reach(s: Score, t: number): Score {
 
 export const normalized = (s: Score): Score => {
   const total = totalOf(s)
-  return { ...s, staves: s.staves.map((evs) => normalize(evs, total)) }
+  const staves = s.staves.map((evs) => normalize(evs, total))
+  // a slur or hairpin whose ends are gone goes too
+  const spans = (s.spans ?? []).filter((sp) => staves[sp.staff]?.some((e) => e.id === sp.from) && staves[sp.staff].some((e) => e.id === sp.to))
+  return { ...s, staves, spans }
+}
+
+/** Scores saved before tuplets counted 48 ticks to the quarter. */
+export function migrate(s: Score): Score {
+  if (s.v === 2) return s
+  const k = TPQ / 48
+  return { ...s, v: 2, spans: s.spans ?? [], staves: s.staves.map((evs) => evs.map((e) => ({ ...e, start: e.start * k, dur: e.dur * k }))) }
 }
 
 /**
  * Write an event over [t, t + dur) on one staff: whatever was there is cut away — a note that started before keeps its
  * head, and what is left after the new event turns into rest.
  */
-export function writeAt(s0: Score, staff: number, t: number, dur: number, notes: Note[], id = newId()): { score: Score; id: string } {
+export function writeAt(s0: Score, staff: number, t: number, dur: number, notes: Note[], id = newId(), marks: Marks = {}): { score: Score; id: string } {
   const s = reach(s0, t + dur)
   const end = t + dur
+  // a plain note over part of a tuplet dissolves the whole group into rest first; a tuplet note fills its own slot
+  const broken = new Set(marks.tup ? [] : s.staves[staff].filter((e) => e.tup && e.start < end && e.start + e.dur > t).map((e) => e.tup!.g))
+  const src = broken.size ? s.staves[staff].map((e) => (e.tup && broken.has(e.tup.g) ? { id: e.id, start: e.start, dur: e.dur, notes: [] } : e)) : s.staves[staff]
   const evs: Ev[] = []
-  for (const e of s.staves[staff]) {
+  for (const e of src) {
     const eEnd = e.start + e.dur
     if (eEnd <= t || e.start >= end) {
       evs.push(e)
       continue
     }
     if (e.start < t) evs.push({ ...e, dur: t - e.start, notes: e.notes.map((n) => ({ ...n, tie: false })) })
-    if (eEnd > end) evs.push(rest(end, eEnd - end))
+    if (eEnd > end) evs.push(e.tup ? { ...rest(end, eEnd - end), tup: e.tup } : rest(end, eEnd - end))
   }
-  evs.push({ id, start: t, dur, notes })
+  evs.push({ ...marks, id, start: t, dur, notes })
   const staves = s.staves.slice()
   staves[staff] = evs
   return { score: normalized({ ...s, staves }), id }
@@ -149,7 +174,8 @@ export function updateEv(s: Score, staff: number, id: string, f: (e: Ev) => Ev):
 export function resize(s: Score, staff: number, id: string, dur: number): Score {
   const e = s.staves[staff].find((x) => x.id === id)
   if (!e) return s
-  return writeAt(s, staff, e.start, dur, e.notes, e.id).score
+  const { id: _id, start: _s, dur: _d, notes, ...marks } = e
+  return writeAt(s, staff, e.start, dur, notes, e.id, marks).score
 }
 
 /** Deleting a note or chord leaves a rest of the same length; the bar stays full. */
@@ -166,6 +192,8 @@ export function blank(title = 'Bản nhạc mới', grand = true): Score {
     measures: 8,
     attrs: {},
     staves: grand ? [[], []] : [[]],
+    spans: [],
+    v: 2,
     updated: Date.now(),
   }
   return normalized(s)
@@ -203,25 +231,111 @@ export const keyLabel = (k: number) =>
 
 /* ---------- playback ---------- */
 
-/** Every sounding note once, tied notes joined: start and length in seconds at the score's tempo. */
-export function soundOf(s: Score, from = 0): { at: number; dur: number; midis: number[] }[] {
-  const sec = (ticks: number) => (ticks / TPQ) * (60 / s.tempo)
-  const out: { at: number; dur: number; midis: number[] }[] = []
-  for (const evs of s.staves) {
-    const open = new Map<number, { at: number; end: number }>() // midi → note still held by a tie
-    for (const e of evs) {
-      for (const n of e.notes) {
-        const m = midiOf(n)
-        const held = open.get(m)
-        if (held && held.end === e.start) held.end = e.start + e.dur
-        else open.set(m, { at: e.start, end: e.start + e.dur })
-        if (!n.tie) {
-          const h = open.get(m)!
-          if (h.end > from) out.push({ at: sec(Math.max(0, h.at - from)), dur: sec(h.end - Math.max(h.at, from)), midis: [m] })
-          open.delete(m)
+export type Anchor = { sec: number; tick: number; tps: number } // seconds per tick from here
+/**
+ * The score as sound: every note once, tied notes joined, bars in the order the repeats, D.C. and D.S. ask for, at the
+ * tempo of the last tempo mark with a number (or the score's). `anchors` map the sounding time back to score time.
+ */
+export function soundOf(s: Score, from = 0): { steps: { at: number; dur: number; midis: number[] }[]; anchors: Anchor[] } {
+  const bars = layout(s)
+  const order = playOrder(bars, s.attrs)
+  const marks = s.staves.flat().filter((e) => e.text?.bpm).sort((a, b) => a.start - b.start)
+  const tempoAt = (t: number) => [...marks].reverse().find((e) => e.start <= t)?.text?.bpm ?? s.tempo
+  const first = Math.max(0, order.findIndex((b) => bars[b].start + bars[b].len > from))
+  const steps: { at: number; dur: number; midis: number[] }[] = []
+  const anchors: Anchor[] = []
+  const open = s.staves.map(() => new Map<number, { step: { at: number; dur: number }; end: number }>())
+  let acc = 0
+  let prevBar = -2
+  for (const bi of order.slice(first)) {
+    const b = bars[bi]
+    const tps = 60 / (tempoAt(b.start) * TPQ)
+    const from0 = acc === 0 && from > b.start ? from : b.start
+    anchors.push({ sec: acc - (from0 - b.start) * tps, tick: b.start, tps })
+    const bEnd = b.start + b.len
+    s.staves.forEach((evs, st) => {
+      evs.forEach((e, ei) => {
+        const p0 = Math.max(e.start, from0)
+        const p1 = Math.min(e.start + e.dur, bEnd)
+        if (p1 <= p0 || e.start >= bEnd) return
+        const at = acc + (p0 - b.start) * tps - (from0 - b.start) * tps
+        const prev = evs[ei - 1]
+        for (const n of e.notes) {
+          const m = midiOf(n)
+          const held = open[st].get(m)
+          const continuing = p0 > e.start && p0 === b.start && prevBar === bi - 1
+          const tied = p0 === e.start && !!prev && prev.start + prev.dur === e.start && prev.notes.some((x) => x.tie && midiOf(x) === m) && (e.start > b.start || prevBar === bi - 1)
+          if (held && (continuing || tied) && Math.abs(held.end - at) < 1e-6) {
+            held.step.dur += (p1 - p0) * tps
+            held.end = at + (p1 - p0) * tps
+          } else {
+            const step = { at, dur: (p1 - p0) * tps, midis: [m] }
+            steps.push(step)
+            open[st].set(m, { step, end: at + step.dur })
+          }
         }
+      })
+    })
+    acc += (bEnd - from0) * tps
+    prevBar = bi
+  }
+  return { steps: steps.sort((a, b) => a.at - b.at), anchors }
+}
+
+/* ---------- tuplets ---------- */
+
+export const TUPLETS: { n: number; base: number; label: string }[] = [
+  { n: 3, base: 2, label: 'Liên ba' },
+  { n: 5, base: 4, label: 'Liên năm' },
+  { n: 6, base: 4, label: 'Liên sáu' },
+]
+
+/**
+ * Open a tuplet group at `t`: `n` rests, each a written `unit`, together lasting `base` of them. It must fit in the bar;
+ * returns null when it does not (or the ticks would not be whole).
+ */
+export function openTuplet(s: Score, staff: number, t: number, unit: number, n: number, base: number): { score: Score; slot: number; g: string } | null {
+  const span = unit * base
+  const slot = span / n
+  if (!Number.isInteger(slot)) return null
+  const s1 = writeAt(s, staff, t, span, []).score
+  const bar = barAt(layout(s1), t)
+  if (t + span > bar.start + bar.len) return null
+  const g = newId()
+  const staves = s1.staves.slice()
+  staves[staff] = [...staves[staff].filter((e) => e.start + e.dur <= t || e.start >= t + span), ...Array.from({ length: n }, (_, i) => ({ id: newId(), start: t + i * slot, dur: slot, notes: [], tup: { n, base, g } }))]
+  return { score: normalized({ ...s1, staves }), slot, g }
+}
+
+/* ---------- repeats in playback ---------- */
+
+/** The order bars are played in: repeat signs taken once each, then D.C. / D.S. with al Fine / al Coda. */
+export function playOrder(bars: Bar[], attrs: Record<number, MeasureAttr>): number[] {
+  const out: number[] = []
+  const pass = (from: number, opts: { stopAtFine: boolean; toCoda: boolean; repeats: boolean }) => {
+    let start = from
+    const done = new Set<number>()
+    for (let i = from; i < bars.length; i++) {
+      if (bars[i].left === 'rptstart') start = i
+      out.push(i)
+      const a = attrs[i] ?? {}
+      if (opts.stopAtFine && a.jump === 'fine') return 'end'
+      if (opts.toCoda && a.jump === 'tocoda') {
+        const coda = bars.findIndex((_b, j) => j > i && attrs[j]?.coda)
+        if (coda > 0) return pass(coda, { stopAtFine: false, toCoda: false, repeats: false })
+      }
+      if (opts.repeats && bars[i].right === 'rptend' && !done.has(i)) {
+        done.add(i)
+        i = start - 1
+        continue
+      }
+      if (opts.repeats && a.jump && a.jump !== 'fine' && a.jump !== 'tocoda') {
+        const target = a.jump.startsWith('dc') ? 0 : Math.max(0, bars.findIndex((_, j) => attrs[j]?.segno))
+        return pass(target, { stopAtFine: a.jump.endsWith('fine'), toCoda: a.jump.endsWith('coda'), repeats: false })
       }
     }
+    return 'end'
   }
-  return out.sort((a, b) => a.at - b.at)
+  pass(0, { stopAtFine: false, toCoda: false, repeats: true })
+  return out.slice(0, 2000)
 }
