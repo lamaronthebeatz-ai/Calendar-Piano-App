@@ -10,3 +10,4 @@
 
 - **Deploy Pages treo (11/2026):** bước `deploy-pages` hết giờ 10 phút dù build + test xanh (lỗi phía GitHub). Chạy lại job trên **cùng commit** bị "Deployment cancelled" ngay, vì mã deploy = SHA commit đã bị huỷ. Muốn deploy lại phải có commit mới (có nội dung thật, không commit rỗng).
 - Test cần cờ khởi động riêng của Chromium (micro giả `chord-ear.spec.ts`) phải được `testIgnore` ở hai dự án WebKit trong `playwright.config.ts`: `test.skip` trong test chạy quá muộn, WebKit đã từ chối khởi động với cờ lạ (CI #319 đỏ).
+- **CI chống treo (11/2026):** job build `timeout-minutes: 40`; trình duyệt Playwright lưu ở `actions/cache` (`~/.cache/ms-playwright`, khoá theo phiên bản Playwright) — trúng cache thì chỉ `install-deps`; bước cài thử 3 lần, mỗi lần `timeout 300`. Lý do: bước cài từng treo 24 phút trên máy chủ GitHub (run 43035345320).

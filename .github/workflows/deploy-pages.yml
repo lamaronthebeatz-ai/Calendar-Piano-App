@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-24.04  # Playwright 1.56 has no browser builds for ubuntu-latest (26.04)
+    # a stuck runner otherwise holds the deploy for GitHub's default 6 hours
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,7 +33,24 @@ jobs:
       - run: npm run check:links
       - run: npm run build -- --base=./
       - run: npm run budget
-      - run: npx playwright install --with-deps chromium webkit
+      # the browsers are kept between runs, keyed by the Playwright version; the install once hung 24 minutes on a runner
+      - id: pw
+        run: echo "version=$(npx playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        id: pw-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
+      - name: Install Playwright browsers (3 tries of 5 minutes)
+        timeout-minutes: 16
+        run: |
+          what="chromium webkit"
+          if [ "${{ steps.pw-cache.outputs.cache-hit }}" = "true" ]; then cmd="install-deps"; else cmd="install --with-deps"; fi
+          for i in 1 2 3; do
+            timeout 300 npx playwright $cmd $what && exit 0
+            echo "::warning::playwright $cmd try $i did not finish, retrying"
+          done
+          exit 1
       - run: npm run test:e2e
       - if: failure()
         uses: actions/upload-artifact@v4
