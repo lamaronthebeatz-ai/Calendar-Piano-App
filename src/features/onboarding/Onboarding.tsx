@@ -100,7 +100,7 @@ const STEPS: Step[] = [
     title: 'Tìm mọi thứ, từ một ô',
     lead: 'Ô tìm kiếm tìm trong toàn ứng dụng: bài viết, sách, chương, trang, thao tác — và học viên, buổi học khi đã mở khoá.',
     points: [
-      ['Mở nhanh', 'Phím ⌘K / Ctrl+K hoặc / trên máy tính; trên điện thoại bấm "+" → Tìm & đi nhanh.'],
+      ['Mở nhanh', 'Phím ⌘K / Ctrl+K hoặc / trên máy tính; trên điện thoại bấm "+" → Tìm & đi nhanh (nút "+" cũng mở Soạn nhạc, Solfège, Bảng tính…).'],
       ['Không cần dấu', 'Gõ "hoa am", "sonata", "chopin" đều ra kết quả. Dùng ↑ ↓ để chọn, Enter để mở.'],
       ['Đọc gần đây', 'Mở ô tìm kiếm khi chưa gõ gì để quay lại những bài vừa đọc.'],
     ],

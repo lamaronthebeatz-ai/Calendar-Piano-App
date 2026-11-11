@@ -348,7 +348,7 @@ Taneyev chia **đối vị phức tạp** (*сложный контрапунк�
     body: `
 Ký hiệu và cách ghi quãng bằng số: [[khai-niem-va-quy-uoc-phuc-dieu]]. Tổng quan về nguyên thể – biến thể: [[doi-vi-phuc-tap]].
 
-**Giải thử bằng máy:** công cụ **Giải phức điệu** (nút 𝄪 ở đầu trang chủ Lý thuyết) nhận một bè đề, các chỗ ✱ và các biến thể Iv, rồi viết bè đối vị đúng mọi luật trong bài này (hoặc chứng minh là không có lời giải) và chấm bài bạn tự viết.
+**Giải thử bằng máy:** công cụ **Giải phức điệu** (trên điện thoại: nút + ở giữa thanh dưới; trên máy tính: nút 𝄪 ở đầu trang chủ Lý thuyết) nhận một bè đề, các chỗ ✱ và các biến thể Iv, rồi viết bè đối vị đúng mọi luật trong bài này (hoặc chứng minh là không có lời giải) và chấm bài bạn tự viết.
 
 ## Chỉ số Iv
 Giáo trình đưa ra ví dụ: nguyên thể có chuỗi quãng **5 4 3 2 5 4 0**; hai biến thể khác nhau (một bè dời lên quãng 8, hoặc hai bè cùng dời) đều cho chuỗi **2 3 4 5 2 3 7**. Cộng từng cặp:

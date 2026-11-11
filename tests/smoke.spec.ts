@@ -79,3 +79,26 @@ for (const still of [false, true]) {
       })
   })
 }
+
+test('nút + xoè các công cụ có tên, bấm một mục thì mở trang đó', async ({ page }) => {
+  test.skip(test.info().project.name.endsWith('desktop'), 'máy tính không có thanh dưới')
+  await page.addInitScript(() => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+  })
+  await page.goto('/#/theory')
+  await page.getByRole('button', { name: 'Thêm nhanh' }).click()
+  const fan = page.getByRole('dialog', { name: 'Thao tác nhanh' })
+  for (const name of ['Solfège', 'Nghe hợp âm', 'Giải phức điệu', 'Bảng tính', 'Tìm & đi nhanh', 'Soạn nhạc', 'Thêm buổi học', 'Thêm học viên'])
+    await expect(fan.getByRole('button', { name })).toBeVisible()
+  // every item stays on screen on a phone, once the fan has settled
+  await fan.locator('.qf-item').last().evaluate((el) => Promise.all(el.getAnimations().map((x) => x.finished)))
+  for (const b of await fan.locator('.qf-item').all()) {
+    const r = (await b.boundingBox())!
+    expect(r.x).toBeGreaterThanOrEqual(0)
+    expect(r.x + r.width).toBeLessThanOrEqual(page.viewportSize()!.width)
+  }
+  await fan.getByRole('button', { name: 'Bảng tính' }).click()
+  await expect(page).toHaveURL(/#\/tools/)
+  await expect(fan).toHaveCount(0)
+})

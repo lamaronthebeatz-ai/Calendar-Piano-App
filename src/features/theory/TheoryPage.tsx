@@ -221,7 +221,8 @@ export function TheoryPage() {
           {article ? (
             <ArticleActions article={article} />
           ) : (
-            <div className="flex flex-none items-center gap-2">
+            // on a phone these tools live in the "+" of the bottom bar (QuickActionsSheet); the computer has no bar
+            <div className="hidden flex-none items-center gap-2 lg:flex">
               <button
                 onClick={() => {
                   scroller.current?.scrollTo({ top: 0 })
