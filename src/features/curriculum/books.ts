@@ -1128,7 +1128,7 @@ Tiến trình hoà âm của hai chương được phân tích theo từng ô nh
         { slug: 'phan-tich-scriabin-sonata-so-2', focus: 'Lý do chọn đề tài, lịch sử nghiên cứu, mục đích, đối tượng, phạm vi, phương pháp, bố cục.' },
       ], exercises: [] },
       { title: 'Nội dung', intro: '', chapters: [
-        { slug: 'scriabin-op19-co-so-ly-thuyet', focus: 'Chương 1. Cơ sở lý luận và khái quát về tác phẩm.' },
+        { slug: 'scriabin-op19-co-so-ly-thuyet', focus: 'Chương 1. Cơ sở lý luận; tiểu sử và đặc điểm âm nhạc của Scriabin; khái quát về tác phẩm.' },
         { slug: 'scriabin-op19-chuong-1', focus: 'Chương 2. Thủ pháp hoà âm trong chương I (Andante).' },
         { slug: 'scriabin-op19-chuong-2', focus: 'Chương 3. Thủ pháp hoà âm trong chương II (Presto).' },
         { slug: 'scriabin-op19-thu-phap', focus: 'Chương 4. Đặc điểm thủ pháp hoà âm và tính chuyển tiếp của tác phẩm.' },
