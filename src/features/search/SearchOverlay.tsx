@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { Avatar } from '../../components/Badge'
-import { BookIcon, ClockIcon, GraduationIcon, LockIcon, PlusIcon, SearchIcon, ShuffleIcon, SparkleIcon, UsersIcon } from '../../components/icons'
+import { BookIcon, ClockIcon, GraduationIcon, LockIcon, PlusIcon, SearchIcon, ShuffleIcon, UsersIcon } from '../../components/icons'
 import { usePrivateUnlocked } from '../../components/privateLock'
 import { useUIStore } from '../../store/uiStore'
 import { useStudents, useTimetableSlots } from '../../hooks/useLiveData'
@@ -13,7 +13,6 @@ import { formatTimeRange } from '../../utils/time'
 import { LEVEL_LABELS } from '../../utils/labels'
 import { fold, matches, score } from './fold'
 import { pushRecent, recentPaths } from './recent'
-import { openAssistant } from '../assistant/store'
 import { openDonate } from '../donate/store'
 import { canAnimate, useFlip } from '../../components/motion'
 import '../../components/motion-ui.css'
@@ -134,9 +133,6 @@ function Palette({ onClose }: { onClose: () => void }) {
     }
 
     const hit = (title: string) => score(tokens, fold(title), '', '') > 0
-    // A phrase of two words or more can go to the command assistant.
-    if (tokens.length >= 2 || query.includes('?'))
-      out.push({ id: 'ask', group: 'Trợ lý', title: `Ra lệnh: ${query.trim()}`, hint: 'Trợ lý lệnh — lịch, học viên, dịch chuyển', icon: <SparkleIcon width={16} height={16} />, run: () => (close(), openAssistant(query.trim())) })
     out.push(...pages.filter((p) => hit(p.title)), ...actions.filter((a) => hit(a.title)))
 
     if (privateOpen) {
