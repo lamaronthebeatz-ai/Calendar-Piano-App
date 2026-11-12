@@ -47,6 +47,8 @@ async function open(page: Page, url: string, still = false) {
       })
   }, still)
   await page.goto(url)
+  // a slow machine may still be fetching the page's code: the Lamar curtain is up until it has come
+  await expect(page.locator('.pc-root')).toHaveCount(0, { timeout: 20_000 })
   await page.waitForTimeout(2500)
   return errors
 }
