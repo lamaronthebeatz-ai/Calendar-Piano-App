@@ -409,9 +409,10 @@ test.describe('soạn nhạc trên tablet: mọi ngăn nằm gọn một hàng',
 test('soạn nhạc: thu từ phím đàn theo máy đánh nhịp, làm tròn rồi ghi vào bản nhạc', async ({ page }) => {
   test.setTimeout(90_000)
   await open(page)
-  await page.getByRole('button', { name: 'Thu từ phím đàn' }).click()
+  await page.getByRole('button', { name: 'Thu', exact: true }).click()
   // a fast click so the test is short: 240 → a beat is 0.25 s, the bar counted in is 1 s
-  const sheet = page.getByRole('dialog', { name: 'Thu từ phím đàn' })
+  const sheet = page.getByRole('dialog', { name: 'Thu', exact: true })
+  await sheet.getByRole('radio', { name: /Phím đàn app/ }).click()
   await sheet.getByRole('spinbutton').fill('240')
   await sheet.getByRole('button', { name: 'Móc đơn', exact: true }).click()
   await sheet.getByRole('button', { name: '● Bắt đầu thu' }).click()

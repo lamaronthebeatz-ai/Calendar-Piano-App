@@ -3,7 +3,8 @@ import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
-import { audioNow, loadInstruments, playNow, playSequence, startMetronome, type Inst } from '../theory/audio'
+import { audioContext, audioNow, loadInstruments, playNow, playSequence, startMetronome, type Inst } from '../theory/audio'
+import { audioInputs, openInput, startCapture } from './listen'
 import {
   barAt, blank, CLEF_BOTTOM, meter, quantize, TPQ, type Take, INSTRUMENTS, instOf, transposeOf, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
   sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
@@ -185,11 +186,21 @@ export function ComposePage() {
   }, [])
   const bars = useMemo(() => layout(score), [score])
   const physOf = (lane: number) => staffOfLane(score, lane)
+  // while recording from a microphone, the grey draft; after it, the preview of what Basic Pitch heard
+  const [draft, setDraft] = useState<Score | null>(null)
+  const [review, setReview] = useState<{ notes: (Take & { a?: number; midi: number })[]; at: number; secPerTick: number; grid: number; split: number; minAmp: number; key: number; lane: number } | null>(null)
+  const reviewed = useMemo(() => {
+    if (!review) return null
+    const keep = review.notes.filter((x) => (x.a ?? 1) >= review.minAmp)
+    return writeTake(score, review.at, handsOf(review.lane), keep, review.secPerTick, review.grid, review.split)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [review, score])
+  const shown = reviewed?.score ?? draft ?? score
   const { svg, pieces } = useMemo(() => {
     if (!tk) return { svg: '', pieces: new Map<string, PieceInfo>() }
-    const { mei, pieces } = toMei(score)
+    const { mei, pieces } = toMei(shown)
     return { svg: render(tk, mei, width, zoom), pieces }
-  }, [tk, score, width, zoom])
+  }, [tk, shown, width, zoom])
 
   // selection marks and the caret are placed after the SVG is in the page
   const [caretBox, setCaretBox] = useState<{ x: number; y: number; h: number } | null>(null)
@@ -777,17 +788,68 @@ export function ComposePage() {
     if (c) pasteAt(c.staff, c.end)
   }
 
-  /* ---------- recording from the keys, against a click ---------- */
+  /* ---------- recording: the app's keys, a microphone or a line input, against a click ---------- */
 
-  const [recOpts, setRecOpts] = useState<{ tempo: number; grid: number }>(() => loadPref('compose:rec', { tempo: 0, grid: 60 }))
+  type Method = 'keys' | 'mic' | 'line'
+  const [recOpts, setRecOpts] = useState<{ tempo: number; grid: number; method: Method; device?: string; click?: boolean }>(() => ({ method: 'keys', ...loadPref('compose:rec', { tempo: 0, grid: 60 }) }))
   useEffect(() => savePref('compose:rec', recOpts), [recOpts])
   const [recSheet, setRecSheet] = useState(false)
+  const [inputs, setInputs] = useState<{ id: string; label: string }[]>([])
   // 'count' while the click counts the bar in, then 'rec' with the bar and beat being played
-  const [rec, setRec] = useState<{ phase: 'count' | 'rec'; bar: number; beat: number; perBar: number } | null>(null)
-  const take = useRef<{ t0: number; lane: number; at: number; secPerTick: number; grid: number; held: Map<number, Take>; done: Take[]; stop: () => void } | null>(null)
-  const startRec = () => {
+  const [rec, setRec] = useState<{ phase: 'count' | 'rec'; bar: number; beat: number; perBar: number; method: Method } | null>(null)
+  type Taken = Take & { a?: number }
+  const take = useRef<{
+    t0: number; lane: number; at: number; secPerTick: number; grid: number; key: number; method: Method
+    held: Map<number, Take>; done: Taken[]; stop: () => void
+    audio?: ReturnType<typeof startCapture>; live?: { midi: number; on: number } | null; cand?: { midi: number | null; n: number }
+  } | null>(null)
+  const [analysing, setAnalysing] = useState<number | null>(null)
+
+  /** The lanes a take goes to: both hands of a piano staff split at a pitch, or just the caret's voice. */
+  function handsOf(lane: number) {
+    const top = laneIndex(score, 0, 1)
+    const bottom = laneIndex(score, 1, 1)
+    return score.clefs.length >= 2 && physOf(lane) <= 1 && !score.labels?.length && top >= 0 && bottom >= 0 ? [top, bottom] : [lane]
+  }
+  /** Notes played, rounded to the grid, over the recorded bars (cleared first) of one or two lanes. */
+  function writeTake(base: Score, at: number, lanes: number[], takes: (Take & { a?: number })[], secPerTick: number, grid: number, split: number, grey = false) {
+    const groups = lanes.map((_, i) => quantize(takes.filter((t) => (lanes.length < 2 ? true : (midiOf(fromDn(t.d, t.alter)) >= split) === (i === 0))), secPerTick, grid))
+    const end = Math.max(0, ...groups.flat().map((e) => e.start + e.dur))
+    if (!end) return { score: base, count: 0, end: 0 }
+    let s = base
+    const barL = barAt(layout(s), at).len
+    const total = Math.ceil(end / barL) * barL
+    lanes.forEach((lane, i) => {
+      s = writeAt(s, lane, at, total, []).score
+      for (const e of groups[i]) s = writeAt(s, lane, at + e.start, e.dur, e.notes, newId(), grey ? { draft: true } : {}).score
+    })
+    return { score: s, count: groups.flat().length, end }
+  }
+
+  const listInputs = async () => {
+    try {
+      // the names of the inputs show only once a page may use one
+      ;(await openInput()).getTracks().forEach((t) => t.stop())
+      const list = await audioInputs()
+      setInputs(list)
+      if (!recOpts.device && list.length > 1) setRecOpts((o) => ({ ...o, device: list[list.length - 1].id }))
+    } catch {
+      setFlash('Chưa được phép dùng micro / cổng vào')
+    }
+  }
+
+  const startRec = async () => {
     setRecSheet(false)
     stopPlay.current?.()
+    const method = recOpts.method
+    let stream: MediaStream | null = null
+    if (method !== 'keys') {
+      try {
+        stream = await openInput(method === 'line' ? recOpts.device : undefined)
+      } catch {
+        return setFlash(method === 'mic' ? 'Không mở được micro — hãy cho phép trong cài đặt trình duyệt' : 'Không mở được cổng vào')
+      }
+    }
     const lane = caret.staff
     const bar = barAt(bars, Math.min(caret.t, totalOf(score) - 1))
     const m = meter(bar.time)
@@ -804,16 +866,46 @@ export function ComposePage() {
       (b) => {
         n++
         // the bar number of the score (the bar counted in is the one before the first recorded bar)
-        setRec({ phase: n <= perBar ? 'count' : 'rec', bar: bar.index + Math.floor((n - 1) / perBar), beat: b + 1, perBar })
+        setRec({ phase: n <= perBar ? 'count' : 'rec', bar: bar.index + Math.floor((n - 1) / perBar), beat: b + 1, perBar, method })
       },
       // the recording starts on the first beat after the bar counted in
-      (first) => (take.current = { t0: first + perBar * unit * secPerTick, lane, at: bar.start, secPerTick, grid: recOpts.grid, held: new Map(), done: [], stop: () => {} }), // the real stop is set just below (this runs inside the call)
+      (first) => (take.current = { t0: first + perBar * unit * secPerTick, lane, at: bar.start, secPerTick, grid: recOpts.grid, key: bar.key, method, held: new Map(), done: [], stop: () => {} }), // the real stop is set just below (this runs inside the call)
+      // a microphone would hear the clicks and write them down: shown only, unless headphones are said to be on
+      method === 'mic' && !recOpts.click,
     )
-    if (take.current) take.current.stop = stop
-    setShowKeys(true)
+    if (take.current) {
+      take.current.stop = stop
+      const ctx = audioContext()
+      if (stream && ctx) take.current.audio = startCapture(ctx, stream, hear)
+    }
+    setShowKeys(method === 'keys' || showKeys)
     setSel(null)
-    setRec({ phase: 'count', bar: 0, beat: 0, perBar })
+    setDraft(null)
+    setRec({ phase: 'count', bar: bar.index, beat: 0, perBar, method })
   }
+
+  /** While a microphone records: the pitch heard now, as a grey draft (one note at a time) on the staff. */
+  const hear = (midi: number | null) => {
+    const tk = take.current
+    if (!tk) return
+    const now = audioNow() - tk.t0
+    // a pitch must be heard twice running before it counts (about 0.17 s)
+    const c = tk.cand?.midi === midi ? { midi, n: (tk.cand?.n ?? 0) + 1 } : { midi, n: 1 }
+    tk.cand = c
+    if (c.n !== 2 || now < -0.1) return
+    const close = () => {
+      if (!tk.live) return
+      const note = respell(tk.live.midi, tk.key)
+      tk.done.push({ d: dn(note), alter: note.alter, on: Math.max(0, tk.live.on), off: now - 0.17 })
+      tk.live = null
+      setDraft(writeTake(score, tk.at, handsOf(tk.lane), tk.done, tk.secPerTick, tk.grid, 60, true).score)
+    }
+    if (midi === null) return close()
+    if (tk.live?.midi === midi) return
+    close()
+    tk.live = { midi, on: now - 0.17 }
+  }
+
   const keyDown = (d: number, alter: number, id: number) => {
     const tk = take.current
     if (!tk) return
@@ -828,30 +920,65 @@ export function ComposePage() {
     tk.held.delete(id)
     tk.done.push({ ...k, off: audioNow() - tk.t0 })
   }
-  /** Stop: what was played, rounded to the grid, over the staff from the bar the recording started in. */
-  const stopRec = () => {
+
+  /** Stop. The keys: what was played, rounded and written. A microphone or line: Basic Pitch hears it all again, then a preview. */
+  const stopRec = async () => {
     const tk = take.current
     take.current = null
     setRec(null)
     if (!tk) return
     tk.stop()
     const now = audioNow() - tk.t0
+    if (tk.audio) {
+      const { pcm, rate, startedAt } = tk.audio.stop()
+      if (pcm.length < rate * 0.5) return setDraft(null), setFlash('Bản thu quá ngắn')
+      setAnalysing(0)
+      try {
+        const { transcribe } = await import('../chordear/transcribe')
+        const buf = new AudioBuffer({ length: pcm.length, sampleRate: rate, numberOfChannels: 1 })
+        buf.copyToChannel(pcm, 0)
+        const all = await transcribe(buf, (p) => setAnalysing(p))
+        // an overtone heard as a note of its own: it starts with a lower note that has it as a partial (octave,
+        // twelfth, two octaves, the 17th, 19th…) and is clearly quieter — a played octave is about as loud
+        const heard = all.filter((h) => !all.some((b) => b !== h && Math.abs(b.t - h.t) < 0.07 && [12, 19, 24, 28, 31, 34, 36].includes(h.m - b.m) && h.a < b.a * 0.8))
+        const offset = startedAt - tk.t0
+        const notes = heard
+          .map((h) => {
+            const note = respell(h.m, tk.key)
+            return { midi: h.m, d: dn(note), alter: note.alter, on: h.t + offset, off: h.t + h.d + offset, a: h.a }
+          })
+          .filter((x) => x.off > 0)
+          .map((x) => ({ ...x, on: Math.max(0, x.on) }))
+        if (!notes.length) return setFlash('Không nghe ra nốt nào — thử đàn gần micro hơn, ít pedal')
+        setReview({ notes, at: tk.at, secPerTick: tk.secPerTick, grid: tk.grid, split: 60, minAmp: 0.3, key: tk.key, lane: tk.lane })
+      } catch {
+        setFlash('Không phân tích được bản thu')
+      } finally {
+        setAnalysing(null)
+        setDraft(null)
+      }
+      return
+    }
     for (const k of tk.held.values()) tk.done.push({ ...k, off: now })
     // a press just before the first beat belongs to it
     const played = tk.done.filter((k) => k.off > 0).map((k) => ({ ...k, on: Math.max(0, k.on) }))
     if (!played.length) return setFlash('Chưa thu được nốt nào')
-    const evs = quantize(played, tk.secPerTick, tk.grid)
-    const end = Math.max(...evs.map((e) => e.start + e.dur))
-    // what was there over the recorded bars goes first (a rest), then the notes
-    let s = score
-    const total = Math.ceil(end / barAt(layout(s), tk.at).len) * barAt(layout(s), tk.at).len
-    s = writeAt(s, tk.lane, tk.at, total, []).score
-    for (const e of evs) s = writeAt(s, tk.lane, tk.at + e.start, e.dur, e.notes).score
-    commit(s)
-    setCaret({ staff: tk.lane, t: tk.at + end })
-    setFlash(`Đã thu ${evs.length} nốt (Hoàn tác để bỏ)`)
+    const r = writeTake(score, tk.at, [tk.lane], played, tk.secPerTick, tk.grid, 60)
+    commit(r.score)
+    setCaret({ staff: tk.lane, t: tk.at + r.end })
+    setFlash(`Đã thu ${r.count} nốt (Hoàn tác để bỏ)`)
   }
-  useEffect(() => () => take.current?.stop(), [])
+  const acceptReview = () => {
+    if (!review || !reviewed) return
+    commit(reviewed.score)
+    setCaret({ staff: review.lane, t: review.at + reviewed.end })
+    setFlash(`Đã ghi ${reviewed.count} nốt (Hoàn tác để bỏ)`)
+    setReview(null)
+  }
+  useEffect(() => () => {
+    take.current?.stop()
+    take.current?.audio?.stop()
+  }, [])
 
   /* ---------- what the MuseScore shortcuts need ---------- */
 
@@ -1160,11 +1287,11 @@ export function ComposePage() {
         <button className="cmp-icon" onClick={undo} disabled={!past.length} aria-label="Hoàn tác">↶</button>
         <button className="cmp-icon" onClick={redo} disabled={!future.length} aria-label="Làm lại">↷</button>
         <button className={clsx('cmp-icon cmp-play', playing && 'is-on')} onClick={togglePlay} aria-label={playing ? 'Dừng' : 'Nghe'}>{playing ? '■' : '▶'}</button>
-        <button className={clsx('cmp-icon cmp-rec-btn', rec && 'is-on')} onClick={() => (rec ? stopRec() : setRecSheet(true))} aria-label={rec ? 'Dừng thu' : 'Thu từ phím đàn'}>{rec ? '■' : '●'}</button>
+        <button className={clsx('cmp-icon cmp-rec-btn', rec && 'is-on', rec && ((rec.bar * 64 + rec.beat) % 2 ? 'beat-a' : 'beat-b'), rec?.beat === 1 && 'is-down')} onClick={() => (rec ? void stopRec() : setRecSheet(true))} aria-label={rec ? 'Dừng thu' : 'Thu'}>{rec ? '■' : '●'}</button>
         <button className="cmp-icon" onClick={() => setMenu(true)} aria-label="Bản nhạc và tuỳ chọn">⋯</button>
       </header>
       <p className={clsx('cmp-status', rec && 'is-rec')} aria-live="polite">
-        {rec ? (rec.phase === 'count' ? `Đếm vào… ${rec.beat || ''}${rec.beat ? ` / ${rec.perBar}` : ''}` : `● Đang thu — ô ${rec.bar} · phách ${rec.beat} (bấm ■ để dừng)`) : status}
+        {rec ? (rec.phase === 'count' ? `Đếm vào… ${rec.beat || ''}${rec.beat ? ` / ${rec.perBar}` : ''}` : `● Đang thu${rec.method === 'mic' ? ' bằng micro' : rec.method === 'line' ? ' từ line-in' : ''} — ô ${rec.bar} · phách ${rec.beat} (bấm ■ để dừng)`) : status}
       </p>
 
       <div
@@ -1333,14 +1460,41 @@ export function ComposePage() {
           clef={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).clefs[physOf(caret.staff)]}
           keySig={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).key}
           onKey={(d, alter) => insert(caret.staff, caret.t, d, alter)}
-          rec={rec ? { down: keyDown, up: keyUp } : undefined}
+          rec={rec?.method === 'keys' ? { down: keyDown, up: keyUp } : undefined}
         />
       )}
 
       {recSheet && (
-        <Sheet onClose={() => setRecSheet(false)} label="Thu từ phím đàn">
-          <h2>Thu từ phím đàn</h2>
-          <p className="cmp-help">Máy đánh nhịp đếm vào một ô rồi gõ tiếp; đàn trên phím đàn của app, bấm ■ để dừng. Các nốt được làm tròn theo lưới dưới đây và ghi đè lên {score.labels?.[physOf(caret.staff)] || `khuông ${physOf(caret.staff) + 1}`} từ ô {barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1} — Hoàn tác để lấy lại bản cũ.</p>
+        <Sheet onClose={() => setRecSheet(false)} label="Thu">
+          <h2>Thu</h2>
+          <div className="cmp-row cmp-methods" role="radiogroup" aria-label="Cách thu">
+            {([['keys', 'Phím đàn app', 'Bấm – nhả trên phím của app'], ['mic', 'Micro', 'Đàn piano thật trước máy'], ['line', 'Line-in', 'Cắm cổng ra của đàn điện']] as const).map(([m, label, hint]) => (
+              <button key={m} role="radio" aria-checked={recOpts.method === m} className={clsx(recOpts.method === m && 'is-on')} onClick={() => {
+                setRecOpts((o) => ({ ...o, method: m }))
+                if (m === 'line') void listInputs()
+              }}>
+                <b>{label}</b>
+                <small>{hint}</small>
+              </button>
+            ))}
+          </div>
+          {recOpts.method === 'line' && (
+            <label className="cmp-select cmp-input-pick">
+              Cổng vào
+              <select value={recOpts.device ?? ''} onChange={(e) => setRecOpts((o) => ({ ...o, device: e.target.value || undefined }))}>
+                <option value="">Mặc định của máy</option>
+                {inputs.map((d) => <option key={d.id} value={d.id}>{d.label}</option>)}
+              </select>
+            </label>
+          )}
+          <p className="cmp-help">
+            {recOpts.method === 'keys'
+              ? 'Máy đánh nhịp đếm vào một ô rồi gõ tiếp; đàn trên phím của app, bấm ■ để dừng.'
+              : recOpts.method === 'mic'
+                ? 'Đặt máy gần đàn, đàn rõ, ít pedal. Khi đàn, nốt nháp (xám, từng nốt một) hiện ngay; bấm ■ để dừng — máy nghe lại cả đoạn (Basic Pitch, chạy trên máy) để ra đủ hợp âm, tách hai tay, rồi cho xem trước. Tiếng gõ chỉ nháy trên màn hình để micro không thu vào, trừ khi bạn đeo tai nghe.'
+                : 'Nối cổng LINE OUT / tai nghe của đàn điện vào máy (bộ chuyển USB-C có cổng âm thanh, hoặc card âm thanh). Tín hiệu sạch nên đúng hơn micro nhiều. Tiếng gõ vẫn phát qua loa của máy.'}
+            {' '}Nốt được làm tròn theo lưới dưới đây và ghi đè lên {score.labels?.[physOf(caret.staff)] || `khuông ${physOf(caret.staff) + 1}`} từ ô {barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1} — Hoàn tác để lấy lại bản cũ.
+          </p>
           <div className="cmp-row">
             <label>Nhịp độ thu ♩ = <input type="number" min={30} max={240} value={recOpts.tempo || score.tempo} onChange={(e) => setRecOpts((o) => ({ ...o, tempo: Math.max(30, Math.min(240, +e.target.value || score.tempo)) }))} /></label>
             <button onClick={() => setRecOpts((o) => ({ ...o, tempo: Math.round((o.tempo || score.tempo) * 0.75) }))}>Chậm hơn</button>
@@ -1351,10 +1505,54 @@ export function ComposePage() {
               <button key={g} className={clsx(recOpts.grid === g && 'is-on')} onClick={() => setRecOpts((o) => ({ ...o, grid: g }))}>{label}</button>
             ))}
           </div>
+          {recOpts.method === 'mic' && (
+            <div className="cmp-row">
+              <button className={clsx(recOpts.click && 'is-on')} onClick={() => setRecOpts((o) => ({ ...o, click: !o.click }))}>Tiếng gõ (đang đeo tai nghe)</button>
+            </div>
+          )}
           <div className="cmp-row">
-            <button className="cmp-rec-start" onClick={startRec}>● Bắt đầu thu</button>
+            <button className="cmp-rec-start" onClick={() => void startRec()}>● Bắt đầu thu</button>
           </div>
         </Sheet>
+      )}
+      {analysing !== null && (
+        <div className="cmp-analysing" role="status">
+          <b>Đang nghe lại bản thu…</b>
+          <span className="cmp-analysing-bar"><span style={{ transform: `scaleX(${analysing})` }} /></span>
+          <small>{Math.round(analysing * 100)}% · chạy ngay trên máy, không gửi đi đâu</small>
+        </div>
+      )}
+      {review && reviewed && (
+        <div className="cmp-review" role="dialog" aria-label="Xem trước bản thu">
+          <div className="cmp-review-head">
+            <b>Xem trước: {reviewed.count} nốt</b>
+            <span>{handsOf(review.lane).length > 1 ? 'tay phải / tay trái chia ở ' + pitchName(respell(review.split, review.key)) : 'một khuông'}</span>
+          </div>
+          <div className="cmp-row">
+            <span>Làm tròn</span>
+            {([[240, 'Đen'], [120, 'Móc đơn'], [60, 'Móc kép']] as const).map(([g, label]) => (
+              <button key={g} className={clsx(review.grid === g && 'is-on')} onClick={() => setReview({ ...review, grid: g })}>{label}</button>
+            ))}
+          </div>
+          {handsOf(review.lane).length > 1 && (
+            <div className="cmp-row">
+              <span>Chia tay ở</span>
+              <button aria-label="Điểm chia thấp hơn" onClick={() => setReview({ ...review, split: review.split - 1 })}>−</button>
+              <b>{pitchName(respell(review.split, review.key))}</b>
+              <button aria-label="Điểm chia cao hơn" onClick={() => setReview({ ...review, split: review.split + 1 })}>+</button>
+            </div>
+          )}
+          <div className="cmp-row">
+            <span>Nốt nhẹ</span>
+            {([[0, 'Giữ hết'], [0.3, 'Bỏ nốt rất nhẹ'], [0.45, 'Bỏ nhiều hơn']] as const).map(([a, label]) => (
+              <button key={a} className={clsx(review.minAmp === a && 'is-on')} onClick={() => setReview({ ...review, minAmp: a })}>{label}</button>
+            ))}
+          </div>
+          <div className="cmp-row">
+            <button className="cmp-rec-start" onClick={acceptReview}>Ghi vào bản nhạc</button>
+            <button onClick={() => setReview(null)}>Bỏ bản thu</button>
+          </div>
+        </div>
       )}
       {menu && (
         <Sheet onClose={() => setMenu(false)}>

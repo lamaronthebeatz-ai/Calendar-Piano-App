@@ -21,7 +21,7 @@ export type Orn = 'trill' | 'mordent' | 'mordentInv' | 'turn'
 export type Dyn = 'ppp' | 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'fff' | 'sf' | 'sfz' | 'fp'
 /** `n` notes in the time of `base` (3 in 2, 5 in 4, 6 in 4); the events of one group share `g`. */
 export type Tup = { n: number; base: number; g: string }
-export type Marks = { lyric?: { text: string; hyph?: boolean }; harm?: string; artic?: Artic[]; orn?: Orn; fermata?: boolean; arpeg?: boolean; dyn?: Dyn; tup?: Tup; text?: { kind: 'tempo' | 'expr'; text: string; bpm?: number } }
+export type Marks = { lyric?: { text: string; hyph?: boolean }; harm?: string; artic?: Artic[]; orn?: Orn; fermata?: boolean; arpeg?: boolean; dyn?: Dyn; tup?: Tup; text?: { kind: 'tempo' | 'expr'; text: string; bpm?: number }; draft?: boolean } // draft: heard while recording, drawn grey
 export type Ev = { id: string; start: number; dur: number; notes: Note[] } & Marks // no notes = a rest
 /** A slur or hairpin from one event to another on the same staff. */
 export type Span = { id: string; kind: 'slur' | 'cres' | 'dim'; staff: number; from: string; to: string }

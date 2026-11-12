@@ -20,8 +20,8 @@ export default defineConfig({
     { name: 'chromium-phone', use: { ...devices['Desktop Chrome'], ...phone } },
     { name: 'chromium-desktop', use: { ...devices['Desktop Chrome'], ...desktop } },
     // the chord-ear test launches with Chromium's fake-microphone flags, which WebKit refuses to start with
-    { name: 'webkit-phone', use: { ...devices['Desktop Safari'], ...phone }, testIgnore: /chord-ear/ },
-    { name: 'webkit-desktop', use: { ...devices['Desktop Safari'], ...desktop }, testIgnore: /chord-ear/ },
+    { name: 'webkit-phone', use: { ...devices['Desktop Safari'], ...phone }, testIgnore: /chord-ear|compose-mic/ },
+    { name: 'webkit-desktop', use: { ...devices['Desktop Safari'], ...desktop }, testIgnore: /chord-ear|compose-mic/ },
   ],
   webServer: { command: 'npx vite preview --port 4173 --strictPort', url: 'http://localhost:4173', reuseExistingServer: !process.env.CI, timeout: 60_000 },
 })

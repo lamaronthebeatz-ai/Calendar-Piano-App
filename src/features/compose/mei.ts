@@ -80,7 +80,7 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
               if (ev.notes.length > 1) pieces.set(nid, { staff: st, phys: phys(st), evId: ev.id, start: t, dur: p.ticks, note: j, bar: sg.bar })
               // the lyric sits on the first note of the event's first piece; a hyphen joins it to the next syllable
               const verse = k === 0 && j === 0 && ev.lyric?.text ? `<verse n="1"><syl${sylAttrs(ev, evs.slice(0, ei))}>${esc(ev.lyric.text)}</syl></verse>` : ''
-              return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}${artic}`}>${verse}</note>`
+              return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}${artic}`}${ev.draft ? ' color="#9a968f"' : ''}>${verse}</note>`
             })
             layers[st][sg.bar].push({
               xml: ev.notes.length > 1 ? `<chord xml:id="${id}" ${dur}${artic}>${notes.join('')}</chord>` : notes[0],

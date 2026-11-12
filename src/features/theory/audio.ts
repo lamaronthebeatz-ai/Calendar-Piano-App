@@ -324,9 +324,11 @@ function tick(a: Ctx, at: number, accent: boolean): Voice {
  */
 /** The audio clock, in seconds: what a recording measures key presses against, the same clock the clicks are on. */
 export const audioNow = () => audio()?.ctx.currentTime ?? 0
+/** The app's one AudioContext (a microphone recording runs on it, so its times match the clicks'). */
+export const audioContext = () => audio()?.ctx ?? null
 
 /** `onStart` gets the audio-clock time of the first click (a recording counts its bars from there). */
-export function startMetronome(bpm: number, beats: number, onBeat: (beat: number) => void, onStart?: (at: number) => void) {
+export function startMetronome(bpm: number, beats: number, onBeat: (beat: number) => void, onStart?: (at: number) => void, silent = false) {
   const a = audio()
   if (!a) return () => {}
   const period = 60 / bpm
@@ -338,7 +340,8 @@ export function startMetronome(bpm: number, beats: number, onBeat: (beat: number
   const pump = () => {
     while (next < a.ctx.currentTime + 0.12) {
       const b = n % beats
-      voices.push(tick(a, next, b === 0))
+      // silent: the beats are only shown (a microphone recording must not hear the clicks)
+      if (!silent) voices.push(tick(a, next, b === 0))
       if (voices.length > 16) voices.shift()
       const id = window.setTimeout(() => {
         timers.delete(id)
