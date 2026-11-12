@@ -187,3 +187,26 @@ test('bầu trời âm nhạc học: các chủ đề và bài lý thuyết là 
   await page.waitForTimeout(3500)
   expect(await frame()).not.toBe(a)
 })
+
+test('bầu trời vẫn tự xoay sau khi ngón tay cuộn trang từ trên bầu trời (pointercancel)', async ({ page }) => {
+  await page.addInitScript(() => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+  })
+  await page.goto('/#/musicology')
+  const cv = page.locator('.s3-canvas')
+  await expect(cv).toBeVisible({ timeout: 20_000 })
+  await page.waitForTimeout(2500)
+  // a finger lands on the sky and the browser takes the gesture for a scroll: pointerdown, then pointercancel, no pointerup
+  await cv.evaluate((c) => {
+    const r = c.getBoundingClientRect()
+    const o = { pointerId: 7, pointerType: 'touch', clientX: r.left + r.width / 2, clientY: r.top + r.height / 2, bubbles: true }
+    c.dispatchEvent(new PointerEvent('pointerdown', o))
+    c.dispatchEvent(new PointerEvent('pointercancel', o))
+  })
+  const frame = () => cv.evaluate((c: HTMLCanvasElement) => c.toDataURL().length)
+  await page.waitForTimeout(3000)
+  const a = await frame()
+  await page.waitForTimeout(1500)
+  expect(await frame()).not.toBe(a)
+})

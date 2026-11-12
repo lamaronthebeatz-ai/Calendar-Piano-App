@@ -301,7 +301,7 @@ export function Sky3D({ selected, onSelect, lit, onTheory }: { selected: string 
         }
       }
     }
-    // the web turns slowly by itself (about 2.5 minutes a turn) while nothing is chosen or held, the page is not
+    // the web turns slowly by itself (about 70 s a turn — 2.5 minutes looked still on a phone) while nothing is chosen or held, the page is not
     // scrolling, the sky is on screen and the tab is shown — 20 frames a second is plenty for so slow a turn, and it
     // stays still when the reader asked for less motion
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -322,7 +322,7 @@ export function Sky3D({ selected, onSelect, lit, onTheory }: { selected: string 
           raf = requestAnimationFrame(loop)
           return
         }
-        cam.current.yaw += (dt / 1000) * 0.042
+        cam.current.yaw += (dt / 1000) * 0.09
       }
       prev = now
       render()
@@ -392,6 +392,14 @@ export function Sky3D({ selected, onSelect, lit, onTheory }: { selected: string 
       pickTheory.current(null)
       onSelect(null)
     }
+    // a finger that starts on the sky and scrolls the page: the browser takes the gesture (pointercancel, no
+    // pointerup) — without this the sky thought it was still held and never turned again (seen on phones)
+    const onCancel = () => {
+      if (!down) return
+      down = null
+      holdUntil = performance.now() + 2500
+      kick()
+    }
     const onWheel = (e: WheelEvent) => {
       e.preventDefault()
       anim = null
@@ -423,6 +431,7 @@ export function Sky3D({ selected, onSelect, lit, onTheory }: { selected: string 
     cv.addEventListener('pointerdown', onDown)
     addEventListener('pointermove', onMove)
     addEventListener('pointerup', onUp)
+    addEventListener('pointercancel', onCancel)
     cv.addEventListener('wheel', onWheel, { passive: false })
     const ro = new ResizeObserver(resize)
     ro.observe(cv)
@@ -434,6 +443,7 @@ export function Sky3D({ selected, onSelect, lit, onTheory }: { selected: string 
       cv.removeEventListener('pointerdown', onDown)
       removeEventListener('pointermove', onMove)
       removeEventListener('pointerup', onUp)
+      removeEventListener('pointercancel', onCancel)
       cv.removeEventListener('wheel', onWheel)
       io.disconnect()
       removeEventListener('scroll', onScroll, { capture: true })
