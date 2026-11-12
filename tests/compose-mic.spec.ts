@@ -9,15 +9,18 @@ import { join } from 'node:path'
  * "Ghi vào bản nhạc" writes the four notes in order. Chromium only (WebKit has no fake audio capture).
  */
 const SR = 22050
-function melody(midis: number[], lead: number, beat: number) {
+function melody(chords: number[][], lead: number, beat: number, weakBelow = 0) {
   const out: number[] = new Array(Math.round(SR * lead)).fill(0)
-  for (const m of midis) {
-    const f = 440 * 2 ** ((m - 69) / 12)
+  for (const ch of chords) {
     const n = Math.round(SR * beat)
     for (let i = 0; i < n; i++) {
       const t = i / SR
       let v = 0
-      for (let k = 1; k <= 6; k++) v += (1 / k ** 1.1) * Math.exp(-t * (1.2 + 0.4 * k)) * Math.sin(2 * Math.PI * f * k * t + k)
+      for (const m of ch) {
+        const f = 440 * 2 ** ((m - 69) / 12)
+        // a phone's microphone hears almost nothing of a low note's fundamental
+        for (let k = 1; k <= 6; k++) v += ((k === 1 && m < weakBelow ? 0.05 : 1) / k ** 1.1) * Math.exp(-t * (1.2 + 0.4 * k)) * Math.sin(2 * Math.PI * f * k * t + k)
+      }
       out.push(i < n - SR * 0.04 ? v * Math.min(1, t / 0.004) : 0)
     }
   }
@@ -32,7 +35,7 @@ function melody(midis: number[], lead: number, beat: number) {
 }
 const wav = join(tmpdir(), 'compose-mic-test.wav')
 // the click counts in one bar of 4/4 at 120 (2 s) before the first recorded beat
-writeFileSync(wav, melody([72, 76, 79, 84], 2.05, 0.5))
+writeFileSync(wav, melody([[72], [76], [79], [84]], 2.05, 0.5))
 test.use({ launchOptions: { args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream', `--use-file-for-fake-audio-capture=${wav}%noloop`] } })
 
 test('soạn nhạc: thu bằng micro — nốt nháp, Basic Pitch nghe lại, xem trước rồi ghi', async ({ page }) => {

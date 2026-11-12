@@ -4,7 +4,7 @@ import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { audioContext, audioNow, loadInstruments, playNow, playSequence, startMetronome, type Inst } from '../theory/audio'
-import { audioInputs, openInput, startCapture } from './listen'
+import { audioInputs, fixOctaves, openInput, PARTIALS, startCapture } from './listen'
 import {
   barAt, blank, CLEF_BOTTOM, meter, quantize, TPQ, type Take, INSTRUMENTS, instOf, transposeOf, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
   sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
@@ -889,10 +889,12 @@ export function ComposePage() {
     const tk = take.current
     if (!tk) return
     const now = audioNow() - tk.t0
-    // a pitch must be heard twice running before it counts (about 0.17 s)
+    // a pitch must be heard twice running before it counts (about 0.17 s) — three times to jump exactly an octave
+    // from the note sounding, the usual way a detector goes wrong
     const c = tk.cand?.midi === midi ? { midi, n: (tk.cand?.n ?? 0) + 1 } : { midi, n: 1 }
     tk.cand = c
-    if (c.n !== 2 || now < -0.1) return
+    const need = midi !== null && tk.live && Math.abs(midi - tk.live.midi) === 12 ? 3 : 2
+    if (c.n !== need || now < -0.1) return
     const close = () => {
       if (!tk.live) return
       const note = respell(tk.live.midi, tk.key)
@@ -937,10 +939,11 @@ export function ComposePage() {
         const { transcribe } = await import('../chordear/transcribe')
         const buf = new AudioBuffer({ length: pcm.length, sampleRate: rate, numberOfChannels: 1 })
         buf.copyToChannel(pcm, 0)
-        const all = await transcribe(buf, (p) => setAnalysing(p))
+        // octave errors (a phone hears little of a low note's fundamental) are checked on the recording itself
+        const all = fixOctaves(await transcribe(buf, (p) => setAnalysing(p)), pcm, rate)
         // an overtone heard as a note of its own: it starts with a lower note that has it as a partial (octave,
         // twelfth, two octaves, the 17th, 19th…) and is clearly quieter — a played octave is about as loud
-        const heard = all.filter((h) => !all.some((b) => b !== h && Math.abs(b.t - h.t) < 0.07 && [12, 19, 24, 28, 31, 34, 36].includes(h.m - b.m) && h.a < b.a * 0.8))
+        const heard = all.filter((h) => !all.some((b) => b !== h && Math.abs(b.t - h.t) < 0.07 && PARTIALS.includes(h.m - b.m) && h.a < b.a * 0.8))
         const offset = startedAt - tk.t0
         const notes = heard
           .map((h) => {
