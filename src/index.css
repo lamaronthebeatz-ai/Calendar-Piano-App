@@ -415,7 +415,8 @@ body {
 .text-gold-gradient {
   background-image: linear-gradient(90deg, #f3cf8e, #d9954a 25%, #f7dca6 50%, #d9954a 75%, #f3cf8e);
   background-size: 200% auto;
-  animation: gold-shimmer 7s linear infinite;
+  /* once, as the page opens: an endless shimmer repainted every gold title 60 times a second on every page */
+  animation: gold-shimmer 2.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s 1 both;
 }
 
 /* Navigation: the icon of a newly chosen tab gives a small spring. */

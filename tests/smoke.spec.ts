@@ -102,3 +102,44 @@ test('nút + xoè các công cụ có tên, bấm một mục thì mở trang đ
   await expect(page).toHaveURL(/#\/tools/)
   await expect(fan).toHaveCount(0)
 })
+
+// the service worker would answer from its cache and hide the slow request
+test.describe('màn che khi tải trang', () => {
+  test.use({ serviceWorkers: 'block' })
+
+  test('trang tải lâu: màn logo Lamar che lại rồi mở ra trên trang đã sẵn sàng', async ({ page }) => {
+    await page.addInitScript(() => {
+      sessionStorage.setItem('app:unlocked', '1')
+      localStorage.setItem('onboarding-done', '1')
+  })
+    // the Tools page's code arrives late, as on a first visit over a slow network
+    await page.route(/assets\/ToolsPage-[^/]+\.js$/, async (route) => {
+      await new Promise((r) => setTimeout(r, 1500))
+      await route.continue()
+  })
+    await page.goto('/#/theory')
+    await expect(page.locator('#theory-search')).toBeVisible({ timeout: 20_000 })
+    await page.evaluate(() => (location.hash = '#/tools'))
+    await expect(page.locator('.pc-root')).toBeVisible({ timeout: 3000 })
+    await expect(page.locator('.pc-root img')).toHaveAttribute('src', /logo-full/)
+    await expect(page.locator('.pc-root')).toHaveCount(0, { timeout: 10_000 })
+    await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible()
+  })
+
+  test('trang mở nhanh thì không chớp màn logo', async ({ page }) => {
+    await page.addInitScript(() => {
+      sessionStorage.setItem('app:unlocked', '1')
+      localStorage.setItem('onboarding-done', '1')
+      // count every time the curtain is put up
+      new MutationObserver((ms) => ms.forEach((m) => m.addedNodes.forEach((n) => (n as Element).classList?.contains('pc-root') && ((window as unknown as { curtains: number }).curtains = ((window as unknown as { curtains: number }).curtains ?? 0) + 1)))).observe(document, { subtree: true, childList: true })
+  })
+    await page.goto('/#/theory')
+    await expect(page.locator('#theory-search')).toBeVisible({ timeout: 20_000 })
+    // the first load may show it (the page's code came over the network); count from here
+    await page.waitForTimeout(800)
+    await page.evaluate(() => ((window as unknown as { curtains: number }).curtains = 0))
+    await page.evaluate(() => (location.hash = '#/theory/johann-sebastian-bach'))
+    await page.waitForTimeout(1200)
+    expect(await page.evaluate(() => (window as unknown as { curtains?: number }).curtains ?? 0)).toBe(0)
+  })
+})

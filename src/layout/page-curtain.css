@@ -1,0 +1,27 @@
+/* The loading curtain (PageCurtain.tsx): black with the gold signature breathing and a thread of light under it.
+   Only opacity and transform move. */
+.pc-root {
+  position: fixed; inset: 0; z-index: 80;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  background: radial-gradient(circle at 50% 46%, #1a150b, #070604 62%);
+  animation: pc-in 260ms ease-out both;
+}
+.pc-root.is-out { animation: pc-out 320ms ease-in both; pointer-events: none; }
+.pc-logo {
+  width: 132px; height: auto;
+  filter: drop-shadow(0 0 18px rgb(216 170 80 / 0.28));
+  animation: pc-breathe 1600ms ease-in-out infinite alternate;
+}
+.pc-line { position: relative; width: 120px; height: 1px; overflow: hidden; background: rgb(216 170 80 / 0.18); }
+.pc-line::after {
+  content: ''; position: absolute; inset: 0; width: 40%;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  animation: pc-sweep 1100ms cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+@keyframes pc-in { from { opacity: 0; } }
+@keyframes pc-out { to { opacity: 0; } }
+@keyframes pc-breathe { from { opacity: 0.6; transform: scale(0.985); } to { opacity: 1; transform: scale(1); } }
+@keyframes pc-sweep { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+@media (prefers-reduced-motion: reduce) {
+  .pc-logo, .pc-line::after { animation: none; }
+}

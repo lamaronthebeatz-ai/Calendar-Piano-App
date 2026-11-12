@@ -4,6 +4,7 @@ import { BrandMark } from '../components/icons'
 import { Sidebar } from './Sidebar'
 import { BottomNav } from './BottomNav'
 import { QuickActionsSheet } from './QuickActionsSheet'
+import { PageCurtain } from './PageCurtain'
 import { ToastHost } from '../components/ToastHost'
 import { LessonFormModal } from '../features/lessons/LessonFormModal'
 import { LessonDetailSheet } from '../features/lessons/LessonDetailSheet'
@@ -82,6 +83,7 @@ export function AppShell() {
       <BottomNav hidden={navHidden || fullBleed} />
 
       <QuickActionsSheet />
+      <PageCurtain />
       <LessonFormModal />
       <LessonDetailSheet />
       <StudentFormModal />

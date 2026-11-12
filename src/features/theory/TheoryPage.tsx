@@ -36,6 +36,7 @@ import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, 
 import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useArticle, type ArticleText } from './body'
+import { CountdownBar } from '../../components/CountdownBar'
 import { useBack } from '../../hooks/useBack'
 import { leadImage } from './wikiImage'
 import { branchesOf } from '../musicology/taxonomy'
@@ -550,7 +551,6 @@ function pictureOf(a: Article): Picture | null {
 }
 
 const SPOTLIGHT_MS = 12000
-const SPOTLIGHT_TICK = 200
 
 /** Summaries that only say where a chapter sits in a book make poor "did you know" lines. */
 const DRY = /^(Chương|Phần|Bài \d|Mục lục|Tiểu luận|Phụ lục|Kết luận)\b|^[A-ZÀ-Ỹ][\p{L} .–-]{0,30}:\s/u
@@ -585,19 +585,10 @@ function Spotlight({ wide }: { wide?: boolean }) {
     }
     return good
   })
-  const [{ index, elapsed }, setTurn] = useState({ index: 0, elapsed: 0 })
+  const [index, setIndex] = useState(0)
   const [held, setHeld] = useState(false)
   const article = pool[index % pool.length]
-  const next = () => setTurn((s) => ({ index: s.index + 1, elapsed: 0 }))
-
-  useEffect(() => {
-    if (held) return
-    const timer = setInterval(() => {
-      if (document.visibilityState !== 'visible') return
-      setTurn((s) => (s.elapsed + SPOTLIGHT_TICK >= SPOTLIGHT_MS ? { index: s.index + 1, elapsed: 0 } : { ...s, elapsed: s.elapsed + SPOTLIGHT_TICK }))
-    }, SPOTLIGHT_TICK)
-    return () => clearInterval(timer)
-  }, [held])
+  const next = () => setIndex((i) => i + 1)
 
   const fact = useMemo(() => (article ? factOf(article) : null), [article])
   // each word starts when the pen would reach it, as in the quotation banner
@@ -663,7 +654,7 @@ function Spotlight({ wide }: { wide?: boolean }) {
         </div>
         {/* Time until the next fact; it stops while the card is held. */}
         <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-surface-sunken)]">
-          <span className="block h-full origin-left bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)] transition-transform duration-200 ease-linear" style={{ transform: `scaleX(${elapsed / SPOTLIGHT_MS})` }} />
+          <CountdownBar key={index} ms={SPOTLIGHT_MS} paused={held} onDone={next} className="bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)]" />
         </span>
       </figure>
     </section>

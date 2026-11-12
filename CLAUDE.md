@@ -31,6 +31,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 ## Luật code đã trả giá mới có
 - **Effect không trả về giá trị** ngoài hàm dọn dẹp: `useEffect(() => { x() }, …)` — `scrollIntoView`/`scrollTo` trả Promise trên Chrome mới, React gọi nó như hàm dọn dẹp → sập (Android).
 - **Hiệu ứng không bao giờ là điều kiện để nội dung hiện ra** (lỗi iPhone/Safari): nội dung phải thấy được cả khi animation không chạy. Ưu tiên hiệu ứng theo thời gian chạy một lần; scroll-driven chỉ trang trí.
+- Không animation lặp vô hạn bằng thuộc tính ngoài compositor (từng làm cả trang tính lại style 60 lần/giây); thanh đếm giờ dùng `CountdownBar`, không `setInterval` + state.
 - Chỉ animate `transform`/`opacity`. Không `mask-image`, `clip-path` động, `backdrop-filter` lồng nhau trên lớp đang chuyển động. Shorthand `animation` reset `animation-timeline` → khai báo timeline sau cùng.
 - Trong callback `startViewTransition` chờ bằng `setTimeout`, không `requestAnimationFrame` (rAF không chạy → treo).
 - Android (`IS_ANDROID`, `html.is-android`): không nghiêng theo con quay, không blur kính, bìa nhỏ `covers/thumb`.

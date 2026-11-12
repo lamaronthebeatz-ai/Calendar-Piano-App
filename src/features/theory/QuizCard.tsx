@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useReducer, useState, type KeyboardEvent } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
+import { CountdownBar } from '../../components/CountdownBar'
 import { CheckIcon, ChevronRightIcon, SparkleIcon, XIcon } from '../../components/icons'
 import { CATEGORIES } from './articles'
 import { findArticle } from './wiki'
@@ -13,7 +14,6 @@ const ASK_MS = 12_000
 /** How long the result stays on screen before moving on. */
 const SHOW_RIGHT_MS = 2_200
 const SHOW_WRONG_MS = 3_800
-const TICK = 100
 const LETTERS = ['A', 'B', 'C', 'D']
 
 type Phase = 'ask' | 'right' | 'wrong' | 'timeout'
@@ -55,9 +55,8 @@ interface Turn {
   index: number
   phase: Phase
   choice: number | null
-  elapsed: number
 }
-type Action = { type: 'tick' } | { type: 'next' } | { type: 'answer'; choice: number; right: boolean }
+type Action = { type: 'timeup' } | { type: 'next' } | { type: 'answer'; choice: number; right: boolean }
 
 const limitOf = (phase: Phase) => (phase === 'ask' ? ASK_MS : phase === 'wrong' ? SHOW_WRONG_MS : SHOW_RIGHT_MS)
 
@@ -65,20 +64,17 @@ const limitOf = (phase: Phase) => (phase === 'ask' ? ASK_MS : phase === 'wrong' 
 function turn(s: Turn, action: Action): Turn {
   switch (action.type) {
     case 'next':
-      return { ...s, index: s.index + 1, phase: 'ask', choice: null, elapsed: 0 }
+      return { ...s, index: s.index + 1, phase: 'ask', choice: null }
     case 'answer':
       if (s.phase !== 'ask') return s
-      return { ...s, phase: action.right ? 'right' : 'wrong', choice: action.choice, elapsed: 0 }
-    case 'tick': {
-      const elapsed = s.elapsed + TICK
-      if (elapsed < limitOf(s.phase)) return { ...s, elapsed }
-      return s.phase === 'ask' ? { ...s, phase: 'timeout', elapsed: 0 } : turn(s, { type: 'next' })
-    }
+      return { ...s, phase: action.right ? 'right' : 'wrong', choice: action.choice }
+    case 'timeup':
+      return s.phase === 'ask' ? { ...s, phase: 'timeout' } : turn(s, { type: 'next' })
   }
 }
 
 function Quiz({ bank }: { bank: QuizQuestion[] }) {
-  const [{ index, phase, choice, elapsed }, dispatch] = useReducer(turn, { index: 0, phase: 'ask', choice: null, elapsed: 0 })
+  const [{ index, phase, choice }, dispatch] = useReducer(turn, { index: 0, phase: 'ask', choice: null })
   const [paused, setPaused] = useState(false)
 
   const question = bank[index % bank.length]
@@ -95,15 +91,6 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
   }
 
   const limit = limitOf(phase)
-  const stopped = paused
-
-  useEffect(() => {
-    if (stopped) return
-    const timer = setInterval(() => {
-      if (document.visibilityState === 'visible') dispatch({ type: 'tick' })
-    }, TICK)
-    return () => clearInterval(timer)
-  }, [stopped])
 
   const onKey = (e: KeyboardEvent) => {
     const k = e.key.toUpperCase()
@@ -239,12 +226,13 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
 
       {/* Countdown: time left to answer, then time until the next question. Stops only while paused. */}
       <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-[var(--color-surface-sunken)]">
-        <span
-          className={clsx(
-            'block h-full origin-left transition-transform duration-100 ease-linear',
-            phase === 'ask' ? 'bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)]' : phase === 'right' ? 'bg-[var(--color-status-completed)]' : phase === 'wrong' ? 'bg-[var(--color-status-cancelled)]' : 'bg-[var(--color-ink-faint)]',
-          )}
-          style={{ transform: `scaleX(${1 - Math.min(1, elapsed / limit)})` }}
+        <CountdownBar
+          key={`${index}-${phase}`}
+          ms={limit}
+          empty
+          paused={paused}
+          onDone={() => dispatch({ type: 'timeup' })}
+          className={phase === 'ask' ? 'bg-gradient-to-r from-[var(--tint)] to-[var(--color-gold)]' : phase === 'right' ? 'bg-[var(--color-status-completed)]' : phase === 'wrong' ? 'bg-[var(--color-status-cancelled)]' : 'bg-[var(--color-ink-faint)]'}
         />
       </span>
     </div>

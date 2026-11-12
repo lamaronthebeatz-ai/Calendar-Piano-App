@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from 'react'
+import { RouteLoading } from './layout/pageCurtain'
 import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider, useRouteError } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
@@ -34,6 +35,18 @@ const HomePage = lazy(() => import('./features/home/HomePage').then((m) => ({ de
 if (typeof window !== 'undefined') {
   const idle = window.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 2500))
   idle(() => [loadTheory, loadMusicology, loadCurriculum, loadNotebook].forEach((load) => load().catch(() => {})))
+  // then, one at a time, the code of every other page: a first visit then opens without the curtain
+  const rest = [
+    () => import('./features/home/HomePage'), () => import('./features/tools/ToolsPage'), () => import('./features/solfege/SolfegePage'),
+    () => import('./features/compose/ComposePage'), () => import('./features/explore/ExplorePage'), () => import('./features/research/ResearchPage'),
+    () => import('./features/sources/SourcesPage'), () => import('./features/terms/TermsPage'), () => import('./features/counterpoint/CounterpointPage'),
+    () => import('./features/chordear/ChordEarPage'),
+  ]
+  const next = () => {
+    const load = rest.shift()
+    if (load) load().catch(() => {}).finally(() => idle(next))
+  }
+  setTimeout(() => idle(next), 4000)
 }
 
 export function App() {
@@ -91,21 +104,21 @@ const router = createHashRouter(
       <Route path="/students" element={<PrivateArea title="Học viên"><StudentsListPage /></PrivateArea>} />
       <Route path="/students/:id" element={<PrivateArea title="Học viên"><StudentProfilePage /></PrivateArea>} />
       <Route path="/statistics" element={<Navigate to="/curriculum" replace />} />
-      <Route path="/curriculum/:id?/:item?" element={<Suspense><CurriculumPage /></Suspense>} />
+      <Route path="/curriculum/:id?/:item?" element={<Suspense fallback={<RouteLoading />}><CurriculumPage /></Suspense>} />
       <Route path="/settings" element={<SettingsPage />} />
-      <Route path="/musicology/:branch?" element={<Suspense><MusicologyPage /></Suspense>} />
-      <Route path="/notes" element={<Suspense><NotebookPage /></Suspense>} />
-      <Route path="/research/:id?" element={<Suspense><ResearchPage /></Suspense>} />
-      <Route path="/explore" element={<Suspense><ExplorePage /></Suspense>} />
-      <Route path="/terms" element={<Suspense><TermsPage /></Suspense>} />
-      <Route path="/sources/:id?" element={<Suspense><SourcesPage /></Suspense>} />
-      <Route path="/tools" element={<Suspense><ToolsPage /></Suspense>} />
-      <Route path="/solfege" element={<Suspense><SolfegePage /></Suspense>} />
-      <Route path="/chord-ear" element={<Suspense><ChordEarPage /></Suspense>} />
-      <Route path="/counterpoint" element={<Suspense><CounterpointPage /></Suspense>} />
-      <Route path="/compose" element={<Suspense><ComposePage /></Suspense>} />
-      <Route path="/theory/:slug?" element={<Suspense><TheoryPage /></Suspense>} />
-      <Route path="/home" element={<Suspense><HomePage /></Suspense>} />
+      <Route path="/musicology/:branch?" element={<Suspense fallback={<RouteLoading />}><MusicologyPage /></Suspense>} />
+      <Route path="/notes" element={<Suspense fallback={<RouteLoading />}><NotebookPage /></Suspense>} />
+      <Route path="/research/:id?" element={<Suspense fallback={<RouteLoading />}><ResearchPage /></Suspense>} />
+      <Route path="/explore" element={<Suspense fallback={<RouteLoading />}><ExplorePage /></Suspense>} />
+      <Route path="/terms" element={<Suspense fallback={<RouteLoading />}><TermsPage /></Suspense>} />
+      <Route path="/sources/:id?" element={<Suspense fallback={<RouteLoading />}><SourcesPage /></Suspense>} />
+      <Route path="/tools" element={<Suspense fallback={<RouteLoading />}><ToolsPage /></Suspense>} />
+      <Route path="/solfege" element={<Suspense fallback={<RouteLoading />}><SolfegePage /></Suspense>} />
+      <Route path="/chord-ear" element={<Suspense fallback={<RouteLoading />}><ChordEarPage /></Suspense>} />
+      <Route path="/counterpoint" element={<Suspense fallback={<RouteLoading />}><CounterpointPage /></Suspense>} />
+      <Route path="/compose" element={<Suspense fallback={<RouteLoading />}><ComposePage /></Suspense>} />
+      <Route path="/theory/:slug?" element={<Suspense fallback={<RouteLoading />}><TheoryPage /></Suspense>} />
+      <Route path="/home" element={<Suspense fallback={<RouteLoading />}><HomePage /></Suspense>} />
     </Route>,
   ),
 )

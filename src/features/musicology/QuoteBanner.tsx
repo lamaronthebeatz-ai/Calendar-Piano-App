@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { CountdownBar } from '../../components/CountdownBar'
 import clsx from 'clsx'
 import { ChevronLeftIcon, ChevronRightIcon } from '../../components/icons'
 import type { Quote } from './quotes/types'
@@ -7,7 +8,6 @@ import '../theory/motion-music.css'
 
 /** How long each quotation stays before the next one. */
 const SHOW_MS = 12_000
-const TICK = 100
 
 const shuffled = <T,>(xs: T[]): T[] => {
   const out = xs.slice()
@@ -84,19 +84,10 @@ export function QuoteBanner() {
 }
 
 function Banner({ quotes }: { quotes: Quote[] }) {
-  const [{ index, elapsed }, setTurn] = useState({ index: 0, elapsed: 0 })
+  const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const quote = quotes[((index % quotes.length) + quotes.length) % quotes.length]
-  const go = (step: number) => setTurn((t) => ({ index: t.index + step, elapsed: 0 }))
-
-  useEffect(() => {
-    if (paused) return
-    const timer = setInterval(() => {
-      if (document.visibilityState !== 'visible') return
-      setTurn((t) => (t.elapsed + TICK >= SHOW_MS ? { index: t.index + 1, elapsed: 0 } : { ...t, elapsed: t.elapsed + TICK }))
-    }, TICK)
-    return () => clearInterval(timer)
-  }, [paused])
+  const go = (step: number) => setIndex((i) => i + step)
 
   // Each word starts when the pen would reach it: delays follow the characters written so far, not the word count.
   const words = useMemo(() => {
@@ -178,7 +169,7 @@ function Banner({ quotes }: { quotes: Quote[] }) {
       </div>
 
       <span aria-hidden className="absolute inset-x-0 bottom-0 h-[2px] bg-[var(--color-surface-sunken)]">
-        <span className="block h-full origin-left bg-gradient-to-r from-[var(--color-gold)] to-[#c9773f] transition-transform duration-100 ease-linear" style={{ transform: `scaleX(${elapsed / SHOW_MS})` }} />
+        <CountdownBar key={index} ms={SHOW_MS} paused={paused} onDone={() => go(1)} className="bg-gradient-to-r from-[var(--color-gold)] to-[#c9773f]" />
       </span>
     </figure>
   )

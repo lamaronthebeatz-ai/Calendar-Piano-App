@@ -12,6 +12,7 @@ import {
 import { chordText, toMei, type PieceInfo } from './mei'
 import { engraver, render, renderPages } from './engrave'
 import { fileName, fromMusicXml, toMidi, toMusicXml, unzipMxl } from './exchange'
+import { usePageLoading } from '../../layout/pageCurtain'
 import './compose.css'
 
 /* ---------- storage: every score on this device, in localStorage ---------- */
@@ -117,6 +118,8 @@ export function ComposePage() {
       live = false
     }
   }, [])
+  // the first visit fetches the engraver (several MB): the Lamar curtain covers the wait
+  usePageLoading(!tk && !failed)
   useEffect(() => saveAll(list), [list])
   // a score with strings fetches their samples as it opens, so the first tap already sounds right
   const instKey = (score.instruments ?? []).filter((i) => i !== 'piano').join()
