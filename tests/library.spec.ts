@@ -165,3 +165,25 @@ test('ví dụ nhạc là bản khắc LilyPond; nút Nghe giữ dạng kể c�
   const box = await page.locator('.mm-play').first().boundingBox()
   expect(box!.width).toBeGreaterThan(box!.height * 1.5)
 })
+
+test('bầu trời âm nhạc học: các chủ đề và bài lý thuyết là mạng nơron, chọn được, mở được', async ({ page }) => {
+  await page.addInitScript(() => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+  })
+  await page.goto('/#/musicology')
+  await expect(page.locator('.s3-canvas')).toBeVisible({ timeout: 20_000 })
+  // every topic of the library is in the web (the keyboard list mirrors the canvas)
+  expect(await page.locator('.s3 .sr-only button', { hasText: 'Chủ đề lý thuyết:' }).count()).toBeGreaterThanOrEqual(20)
+  // the list for keyboards is hidden from sight: pressed the way a keyboard would
+  await page.locator('.s3 .sr-only button', { hasText: 'Chủ đề lý thuyết: Phức điệu' }).evaluate((b: HTMLButtonElement) => b.click())
+  const card = page.getByRole('dialog', { name: 'Phức điệu' })
+  await expect(card).toBeVisible()
+  await expect(card.getByRole('link', { name: 'Mở chủ đề' })).toHaveAttribute('href', '#/theory?c=polyphony')
+  // the canvas keeps turning by itself when nothing is chosen
+  await card.getByRole('button', { name: 'Đóng' }).click()
+  const frame = () => page.locator('.s3-canvas').evaluate((c: HTMLCanvasElement) => c.toDataURL().length)
+  const a = await frame()
+  await page.waitForTimeout(3500)
+  expect(await frame()).not.toBe(a)
+})

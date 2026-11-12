@@ -135,6 +135,7 @@ function MapIndex() {
   const pct = progress.total ? Math.round((progress.read / progress.total) * 100) : 0
   const [query, setQuery] = useState('')
   const [sel, setSel] = useState<string | null>(null)
+  const [theoryOpen, setTheoryOpen] = useState(false)
   const q = normalize(query)
   // One part at a time: the chips switch the chapter shown below instead of jumping down a long page.
   const [part, setPart] = useState<PartId>(() => {
@@ -157,7 +158,7 @@ function MapIndex() {
     <>
       {/* 1 · the sky: every branch a star, every part a constellation, every shared article a thread between stars */}
       <section className="mc-stage" aria-label="Bầu trời âm nhạc học">
-        <div className={`mc-stage-pin${sel ? ' has-sel' : ''}`}>
+        <div className={`mc-stage-pin${sel || theoryOpen ? ' has-sel' : ''}`}>
           <div className="mc-stage-head">
             <p className="text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Musikwissenschaft · Musicology</p>
             <h2 data-collapse className="collapse-large mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[46px]">
@@ -180,8 +181,8 @@ function MapIndex() {
             </dl>
           </div>
           <div className="mc3">
-            <Sky3D selected={sel} onSelect={setSel} lit={lit} />
-            {!sel && <p className="mc-hint">Kéo để xoay bầu trời · chạm một ngôi sao để bay tới</p>}
+            <Sky3D selected={sel} onSelect={setSel} lit={lit} onTheory={setTheoryOpen} />
+            {!sel && !theoryOpen && <p className="mc-hint">Kéo để xoay · chạm một ngôi sao, một chủ đề hay một bài để bay tới</p>}
             {sel && <StarCard id={sel} lit={lit} onPick={setSel} onClose={() => setSel(null)} />}
           </div>
         </div>
