@@ -134,9 +134,12 @@
 .cmp-palette.is-docked .cmp-tabs { padding: 0 10px 6px; }
 .cmp-palette.is-docked .cmp-pane { display: flex; align-items: center; gap: 6px; height: 64px; padding: 0 10px; overflow-x: auto; scrollbar-width: none; }
 .cmp-palette.is-docked .cmp-pane::-webkit-scrollbar { display: none; }
-.cmp-palette.is-docked .cmp-grid { display: flex; flex-wrap: nowrap; gap: 6px; padding: 0; }
+/* every tab's groups (the clefs, the key, the times; the tempo and expression words) flow into the one row */
+.cmp-palette.is-docked .cmp-grid, .cmp-palette.is-docked .cmp-sig, .cmp-palette.is-docked .cmp-words { display: contents; }
+.cmp-palette.is-docked .cmp-words button { flex: none; height: 44px; }
 .cmp-palette.is-docked .cmp-tool { flex: none; width: 64px; min-height: 58px; }
 .cmp-palette.is-docked .cmp-note { display: none; }
-.cmp-palette.is-docked .cmp-select { flex: none; width: 260px; padding: 0; }
+.cmp-palette.is-docked .cmp-select { flex: none; width: 300px; padding: 0 4px; }
+.cmp-palette.is-docked .cmp-select select { height: 44px; }
 .cmp-palette.is-docked .cmp-qb.is-inline { flex: 1; min-width: 0; }
 .cmp-qb.is-inline { position: static; height: 58px; padding: 0; border: 0; background: none; }

@@ -384,3 +384,24 @@ test('soạn nhạc: nhóm trường độ và gạch nối đuôi theo số ch�
     await expect(page.locator('.cmp-svg [data-class="tie"]')).toHaveCount(ties)
   }
 })
+
+test.describe('soạn nhạc trên tablet: mọi ngăn nằm gọn một hàng', () => {
+  test.use({ viewport: { width: 834, height: 1194 }, hasTouch: true, isMobile: true })
+  test('không ngăn nào tràn khỏi dải công cụ hay đè lên phím đàn', async ({ page }) => {
+    test.setTimeout(90_000)
+    await open(page)
+    const tabs = await page.getByRole('tab').allTextContents()
+    for (const name of tabs) {
+      await page.getByRole('tab', { name, exact: true }).tap()
+      const r = await page.evaluate(() => {
+        const pane = document.querySelector('.cmp-pane')!.getBoundingClientRect()
+        const keys = document.querySelector('.cmp-keys')!.getBoundingClientRect()
+        const kids = [...document.querySelectorAll('.cmp-pane button, .cmp-pane select')].map((e) => e.getBoundingClientRect()).filter((b) => b.width)
+        return { out: kids.filter((b) => b.top < pane.top - 1 || b.bottom > pane.bottom + 1).length, overKeys: kids.filter((b) => b.bottom > keys.top + 1).length, n: kids.length }
+      })
+      expect(r.n, name).toBeGreaterThan(0)
+      expect(r.out, `${name}: nút tràn khỏi hàng`).toBe(0)
+      expect(r.overKeys, `${name}: đè lên phím đàn`).toBe(0)
+    }
+  })
+})
