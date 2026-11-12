@@ -37,7 +37,7 @@
 .cmp-grip-bar { width: 40px; height: 4px; border-radius: 99px; background: var(--color-ink-faint); opacity: 0.6; }
 .cmp-grip button { position: absolute; right: 6px; top: 0; width: 30px; height: 24px; font-size: 18px; line-height: 1; color: var(--color-ink-muted); }
 .cmp-tabs { display: flex; gap: 2px; padding: 0 6px 6px; overflow-x: auto; scrollbar-width: none; }
-.cmp-tabs button { flex: none; height: 28px; padding: 0 10px; border-radius: 99px; font-size: 12px; color: var(--color-ink-muted); }
+.cmp-tabs button { flex: none; height: 34px; padding: 0 10px; border-radius: 99px; font-size: 12px; color: var(--color-ink-muted); }
 .cmp-tabs button.is-on { background: var(--color-gold); color: #0b0a09; font-weight: 600; }
 .cmp-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; padding: 0 6px 8px; }
 .cmp-tool { display: grid; justify-items: center; align-content: center; gap: 1px; min-height: 52px; padding: 4px 2px; border-radius: 12px; color: var(--color-ink); background: var(--color-surface-sunken); }
@@ -113,3 +113,17 @@
 .cmp-insts .cmp-select { padding: 0 0 8px; }
 .cmp-insts .cmp-select span { width: 76px; flex: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cmp-help a { color: var(--color-gold); }
+
+/* the quick bar (QuickBar): one scrollable row above the keys */
+.cmp-qb { position: absolute; z-index: 41; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 2px; height: 52px; padding: 4px 6px calc(4px + env(safe-area-inset-bottom)); overflow-x: auto; scrollbar-width: none; background: #141210; border-top: 1px solid var(--color-border); }
+.cmp-qb.is-above { bottom: 118px; padding-bottom: 4px; }
+.cmp-qb::-webkit-scrollbar { display: none; }
+.cmp-qb-btn { flex: none; display: grid; place-items: center; min-width: 42px; height: 42px; padding: 0 6px; border-radius: 12px; font-size: 20px; color: var(--color-ink); }
+.cmp-qb-btn.is-wide { padding: 0 12px; }
+.cmp-qb-btn.is-on { background: var(--color-gold); color: #0b0a09; }
+.cmp-qb-btn:active { background: var(--color-surface-sunken); }
+.cmp-qb-btn .cmp-glyph { font-size: 24px; line-height: 1; }
+.cmp-qb-word { font-size: 13px; font-weight: 600; white-space: nowrap; }
+.cmp-qb-sep { flex: none; width: 1px; height: 24px; margin: 0 4px; background: var(--color-border); }
+/* on a computer the fixed Lamar mark (.rail-mark) sits at the top left: the header starts after it */
+@media (min-width: 1024px) { .cmp-top { padding-left: 104px; } }

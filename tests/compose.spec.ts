@@ -9,6 +9,8 @@ async function open(page: Page) {
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
     localStorage.setItem('onboarding-done', '1')
+    // these tests drive the full palette; a phone starts with it folded away
+    localStorage.setItem('compose:palette-open2', 'true')
   })
   await page.goto('/#/compose')
   await page.evaluate(() => localStorage.removeItem('compose:scores'))
@@ -72,7 +74,7 @@ test('soạn nhạc đợt 2: liên ba, staccato, sắc thái, luyến, chữ nh
   await open(page)
   const tab = (name: string) => page.getByRole('tab', { name }).click()
   // a triplet of eighths: tuplet input on, eighth value, three letters
-  await page.getByRole('button', { name: 'Móc đơn', exact: true }).click()
+  await page.locator('.cmp-palette').getByRole('button', { name: 'Móc đơn', exact: true }).click()
   await tab('Liên kết')
   await page.getByRole('button', { name: /^Liên ba/ }).click()
   for (const k of ['c', 'd', 'e']) await page.keyboard.press(k)
@@ -266,4 +268,32 @@ test('soạn nhạc: kèn gỗ, kèn đồng và dàn nhạc — đúng nhạc c
   const s = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0])
   expect(s.instruments).toEqual(['flute', 'oboe', 'clarinet', 'bassoon', 'horn', 'trumpet', 'trombone', 'tuba', 'violin', 'violin', 'viola', 'cello', 'contrabass'])
   expect(s.clefs[3]).toBe('bass')
+})
+
+test('soạn nhạc: thanh nhập nhanh — phím đàn, đổi trường độ, chọn một ô, nhân đôi, sang khuông dưới', async ({ page }) => {
+  test.setTimeout(90_000)
+  await open(page)
+  const key = (n: string) => page.locator(`.cmp-keys button[aria-label="${n}"]`).first().click()
+  for (const n of ['Đô4', 'Rê4', 'Mi4', 'Fa4']) await key(n)
+  await page.getByRole('toolbar', { name: 'Thanh nhập nhanh' }).getByRole('button', { name: 'Trắng', exact: true }).click()
+  await key('Sol4')
+  // drag across bar 1 only (the second system lies right under it), then ×2
+  const m = (await page.locator('[data-id="m0"]').boundingBox())!
+  const mid = await page.evaluate(() => {
+    const ls = [...document.querySelector('[data-id="m0"] > [data-class="staff"]')!.querySelectorAll(':scope > path')].slice(0, 5).map((x) => x.getBoundingClientRect())
+    return (ls[0].top + ls[4].bottom) / 2
+  })
+  await page.mouse.move(m.x + 30, mid)
+  await page.mouse.down()
+  await page.mouse.move(m.x + m.width - 4, mid, { steps: 8 })
+  await page.mouse.up()
+  await page.getByRole('button', { name: 'Nhân đôi đoạn chọn' }).click()
+  await expect(page.locator('.cmp-status')).toContainText('đè lên 1 nốt')
+  const treble = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0].staves[0].filter((e: { notes: unknown[] }) => e.notes.length).map((e: { notes: { step: number }[] }) => 'CDEFGAB'[e.notes[0].step]).join(''))
+  expect(treble).toBe('CDEFCDEF')
+  // the bass staff starts where it was left: empty, so at the beginning
+  await page.getByRole('button', { name: 'Sang khuông khác' }).click()
+  await key('Đô3')
+  const bass = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0].staves[1].find((e: { notes: unknown[] }) => e.notes.length))
+  expect(bass.start).toBe(0)
 })

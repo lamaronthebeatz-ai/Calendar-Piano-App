@@ -525,7 +525,8 @@ export function ComposePage() {
         for (const [id, p] of pieces) {
           if (p.staff !== laneIndex(score, rg.staff, voice) || p.note !== undefined) continue
           const r = svgRef.current!.querySelector(`[data-id="${id}"]`)?.getBoundingClientRect()
-          if (r && r.right >= lo && r.left <= hi) ids.add(p.evId)
+          // only the system the finger drew on: the systems below share the same x
+          if (r && r.right >= lo && r.left <= hi && Math.abs((r.top + r.bottom) / 2 - rg.y) < 70) ids.add(p.evId)
         }
         const lane = laneIndex(score, rg.staff, voice)
         const evs = lane < 0 ? [] : score.staves[lane].filter((x) => ids.has(x.id) && x.notes.length).map((x) => x.id)
@@ -698,6 +699,72 @@ export function ComposePage() {
     })
   }
 
+  /* ---------- moving about, copy and paste ---------- */
+
+  /** The caret to the previous or next event of its voice, which becomes the selection when it is a note. */
+  const stepCaret = (d: 1 | -1) => {
+    const evs = score.staves[caret.staff]
+    const i = evs.findIndex((x) => x.start >= (sel ? (evs.find((e) => e.id === sel.ids[0])?.start ?? caret.t) : caret.t))
+    const j = d > 0 ? Math.min(evs.length - 1, (i < 0 ? evs.length : i) + 1) : Math.max(0, (i < 0 ? evs.length : i) - 1)
+    setCaret({ ...caret, t: evs[j]?.start ?? 0 })
+    setSel(evs[j]?.notes.length ? { staff: caret.staff, ids: [evs[j].id] } : null)
+  }
+  /** The next staff down (back to the top after the last), first voice, the caret where that staff's writing stopped. */
+  const nextStaff = () => {
+    const phys = (physOf(caret.staff) + 1) % score.clefs.length
+    const lane = Math.max(0, laneIndex(score, phys, 1))
+    const last = [...score.staves[lane]].reverse().find((e) => e.notes.length)
+    setVoice(1)
+    setSel(null)
+    setCaret({ staff: lane, t: last ? last.start + last.dur : 0 })
+    setFlash(`Viết vào ${score.labels?.[phys] || `khuông ${phys + 1}`}`)
+  }
+  /** What was copied: the events of a stretch of one voice, rests included, as offsets from its start. */
+  const clip = useRef<{ len: number; evs: { off: number; dur: number; notes: Note[]; marks: Ev }[] } | null>(null)
+  const [hasClip, setHasClip] = useState(false)
+  const copySel = () => {
+    const tg = targets()
+    if (!tg) return setFlash('Chọn nốt hoặc kéo chọn một đoạn trước đã'), null
+    const picked = score.staves[tg.staff].filter((e) => tg.ids.includes(e.id))
+    const t0 = Math.min(...picked.map((e) => e.start))
+    const t1 = Math.max(...picked.map((e) => e.start + e.dur))
+    const evs = score.staves[tg.staff].filter((e) => e.start >= t0 && e.start + e.dur <= t1)
+    if (evs.some((e) => e.tup)) return setFlash('Đoạn có liên ba: chưa chép được'), null
+    setHasClip(true)
+    clip.current = { len: t1 - t0, evs: evs.map((e) => ({ off: e.start - t0, dur: e.dur, notes: e.notes, marks: e })) }
+    setFlash(`Đã chép ${evs.filter((e) => e.notes.length).length} nốt`)
+    return { staff: tg.staff, end: t1 }
+  }
+  /** Write the copied stretch from `t` on, over what is there (as everything is written here). */
+  const pasteAt = (lane: number, t: number) => {
+    const c = clip.current
+    if (!c) return setFlash('Chưa chép gì')
+    let s = score
+    const ids: string[] = []
+    // writing is overwriting here: say so when notes already there go, so Undo is the obvious way back
+    const lost = score.staves[lane]?.filter((e) => e.notes.length && e.start < t + c.len && e.start + e.dur > t).length ?? 0
+    for (const e of c.evs) {
+      const { id: _id, start: _s, dur: _d, notes: _n, tup: _t, ...marks } = e.marks
+      const r = writeAt(s, lane, t + e.off, e.dur, e.notes.map((n) => ({ ...n })), newId(), e.notes.length ? marks : {})
+      s = r.score
+      if (e.notes.length) ids.push(r.id)
+    }
+    const end = t + c.len
+    commit(totalOf(s) - end < barAt(layout(s), Math.max(0, end - 1)).len ? normalized({ ...s, measures: s.measures + 1 }) : s)
+    setCaret({ staff: lane, t: end })
+    setSel(ids.length ? { staff: lane, ids } : null)
+    setFlash(lost ? `Đã dán — đè lên ${lost} nốt cũ (Hoàn tác để lấy lại)` : `Đã dán ${ids.length} nốt`)
+  }
+  const paste = () => {
+    const at = sel ? score.staves[sel.staff].find((e) => e.id === sel.ids[0])?.start : undefined
+    pasteAt(sel?.staff ?? caret.staff, at ?? caret.t)
+  }
+  /** The selection again, right after itself: the quickest way to repeat a bar or a figure. */
+  const duplicate = () => {
+    const c = copySel()
+    if (c) pasteAt(c.staff, c.end)
+  }
+
   /* ---------- keyboard shortcuts on a computer (Sibelius-like) ---------- */
 
   useEffect(() => {
@@ -728,11 +795,12 @@ export function ComposePage() {
         commit(transpose(k === 'ArrowUp' ? (e.ctrlKey ? 7 : 1) : e.ctrlKey ? -7 : -1))
       } else if (k === 'ArrowRight' || k === 'ArrowLeft') {
         e.preventDefault()
-        const evs = score.staves[caret.staff]
-        const i = evs.findIndex((x) => x.start >= caret.t)
-        const j = k === 'ArrowRight' ? Math.min(evs.length - 1, (i < 0 ? evs.length : i) + 1) : Math.max(0, (i < 0 ? evs.length : i) - 1)
-        setCaret({ ...caret, t: evs[j]?.start ?? 0 })
-        setSel(evs[j]?.notes.length ? { staff: caret.staff, ids: [evs[j].id] } : null)
+        stepCaret(k === 'ArrowRight' ? 1 : -1)
+      } else if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'c') copySel()
+      else if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'v') paste()
+      else if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'd') {
+        e.preventDefault()
+        duplicate()
       } else if (k === 'Escape') setSel(null)
       else if (k === ' ') {
         e.preventDefault()
@@ -970,6 +1038,28 @@ export function ComposePage() {
           onText={(text) => setEntry({ ...entry, text })}
           onNext={entryNext}
           onClose={() => setEntry(null)}
+        />
+      )}
+      {!entry && (
+        <QuickBar
+          above={showKeys}
+          dur={dur}
+          dots={dots}
+          restMode={restMode}
+          armed={armed}
+          hasSel={!!sel}
+          hasClip={hasClip}
+          staffName={score.clefs.length > 1 ? score.labels?.[(physOf(caret.staff) + 1) % score.clefs.length] || `Khuông ${((physOf(caret.staff) + 1) % score.clefs.length) + 1}` : ''}
+          onDur={(d) => applyDur(d, 0)}
+          onDot={() => toggleDot(1)}
+          onRest={toRest}
+          onAlter={applyAlter}
+          onDelete={remove}
+          onStep={stepCaret}
+          onStaff={nextStaff}
+          onCopy={copySel}
+          onPaste={paste}
+          onDuplicate={duplicate}
         />
       )}
       {showKeys && !entry && (
@@ -1234,12 +1324,13 @@ const NAVS: ['segno' | 'coda' | Jump, string, string, 'start' | 'end'][] = [
  */
 function Palette(p: PaletteProps) {
   const [pos, setPos] = useState<{ x: number; y: number }>(() => loadPref('compose:palette', { x: 12, y: -1 }))
-  const [open, setOpen] = useState<boolean>(() => loadPref('compose:palette-open', true))
+  // closed at first on a phone, where it would cover half the score (the quick bar holds the everyday tools)
+  const [open, setOpen] = useState<boolean>(() => loadPref('compose:palette-open2', window.innerWidth >= 700))
   const [tab, setTab] = useState<(typeof TABS)[number][0]>('notes')
   const drag = useRef<{ dx: number; dy: number; id: number } | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => savePref('compose:palette', pos), [pos])
-  useEffect(() => savePref('compose:palette-open', open), [open])
+  useEffect(() => savePref('compose:palette-open2', open), [open])
   // a first visit, or a window that got smaller: keep the panel on screen
   useLayoutEffect(() => {
     const el = ref.current
@@ -1247,7 +1338,7 @@ function Palette(p: PaletteProps) {
     const w = el.offsetWidth
     const h = el.offsetHeight
     const x = Math.min(Math.max(6, pos.x), window.innerWidth - w - 6)
-    const y = pos.y < 0 ? window.innerHeight - h - (loadPref('compose:keys', true) ? 132 : 18) : Math.min(Math.max(60, pos.y), window.innerHeight - h - 6)
+    const y = pos.y < 0 ? window.innerHeight - h - (loadPref('compose:keys', true) ? 188 : 74) : Math.min(Math.max(60, pos.y), window.innerHeight - h - 6)
     if (x !== pos.x || y !== pos.y) setPos({ x, y })
   }, [pos, open, tab])
   const grip = {
@@ -1526,6 +1617,58 @@ function EntryBar({ entry, where, onText, onNext, onClose }: {
         <button onClick={() => onNext(entry.text, false, false)}>Xong</button>
       </div>
       {lyric ? null : <p className="cmp-entry-show">{entry.text ? chordText(entry.text) : ' '}</p>}
+    </div>
+  )
+}
+
+/* ---------- the quick bar: what is pressed most, one tap away above the keys ---------- */
+
+const B = ({ label, on, children, onClick, wide }: { label: string; on?: boolean; children: ReactNode; onClick: () => void; wide?: boolean }) => (
+  <button className={clsx('cmp-qb-btn', on && 'is-on', wide && 'is-wide')} aria-label={label} aria-pressed={on} title={label} onClick={onClick}>
+    {children}
+  </button>
+)
+
+function QuickBar(p: {
+  above: boolean
+  dur: DurName
+  dots: number
+  restMode: boolean
+  armed: number | null
+  hasSel: boolean
+  hasClip: boolean
+  staffName: string
+  onDur: (d: DurName) => void
+  onDot: () => void
+  onRest: () => void
+  onAlter: (a: number) => void
+  onDelete: () => void
+  onStep: (d: 1 | -1) => void
+  onStaff: () => void
+  onCopy: () => void
+  onPaste: () => void
+  onDuplicate: () => void
+}) {
+  return (
+    <div className={clsx('cmp-qb', p.above && 'is-above')} role="toolbar" aria-label="Thanh nhập nhanh">
+      <B label="Nốt trước" onClick={() => p.onStep(-1)}>‹</B>
+      <B label="Nốt sau" onClick={() => p.onStep(1)}>›</B>
+      <span className="cmp-qb-sep" />
+      {([1, 2, 4, 8, 16] as DurName[]).map((d) => (
+        <B key={d} label={DUR_LABEL[d]} on={!p.hasSel && p.dur === d} onClick={() => p.onDur(d)}>
+          <span className="cmp-glyph">{p.restMode ? REST_GLYPH[d] : NOTE_GLYPH[d]}</span>
+        </B>
+      ))}
+      <B label="Chấm dôi" on={!p.hasSel && p.dots > 0} onClick={p.onDot}>·</B>
+      <B label="Dấu lặng" on={p.restMode} onClick={p.onRest}><span className="cmp-glyph">{REST_GLYPH[4]}</span></B>
+      <B label="Thăng" on={!p.hasSel && p.armed === 1} onClick={() => p.onAlter(1)}>♯</B>
+      <B label="Giáng" on={!p.hasSel && p.armed === -1} onClick={() => p.onAlter(-1)}>♭</B>
+      <B label="Xoá nốt" onClick={p.onDelete}>⌫</B>
+      <span className="cmp-qb-sep" />
+      {p.staffName && <B label="Sang khuông khác" wide onClick={p.onStaff}><span className="cmp-qb-word">→ {p.staffName}</span></B>}
+      <B label="Nhân đôi đoạn chọn" wide onClick={p.onDuplicate}><span className="cmp-qb-word">×2</span></B>
+      <B label="Chép" wide onClick={p.onCopy}><span className="cmp-qb-word">Chép</span></B>
+      {p.hasClip && <B label="Dán" wide onClick={p.onPaste}><span className="cmp-qb-word">Dán</span></B>}
     </div>
   )
 }
