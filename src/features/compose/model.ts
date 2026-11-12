@@ -523,3 +523,30 @@ export function piecesIn(ev: Ev, bar: Bar, start: number, len: number, m: Meter 
   const from = start - bar.start
   return ev.notes.length ? notePieces(m, from, from + len) : restPieces(m, from, from + len)
 }
+
+/* ---------- a recording from the keys ---------- */
+
+export type Take = { d: number; alter: number; on: number; off: number } // seconds from the first beat of the first bar
+
+/**
+ * Key presses as events: each start and end rounded to the grid (ticks), presses that start together as a chord
+ * (held as long as its longest note), a note cut where the next one starts (one voice), at least one grid step long.
+ */
+export function quantize(take: Take[], secPerTick: number, grid: number): { start: number; dur: number; notes: Note[] }[] {
+  const q = (sec: number) => Math.max(0, Math.round(sec / secPerTick / grid) * grid)
+  const byStart = new Map<number, { end: number; notes: Note[] }>()
+  for (const k of take) {
+    const start = q(k.on)
+    const end = Math.max(start + grid, q(k.off))
+    const g = byStart.get(start) ?? { end, notes: [] }
+    g.end = Math.max(g.end, end)
+    if (!g.notes.some((n) => dn(n) === k.d && n.alter === k.alter)) g.notes.push(fromDn(k.d, k.alter))
+    byStart.set(start, g)
+  }
+  const starts = [...byStart.keys()].sort((a, b) => a - b)
+  return starts.map((start, i) => {
+    const g = byStart.get(start)!
+    const end = i + 1 < starts.length ? Math.min(g.end, starts[i + 1]) : g.end
+    return { start, dur: end - start, notes: g.notes.sort((a, b) => dn(a) - dn(b)) }
+  })
+}

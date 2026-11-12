@@ -322,11 +322,16 @@ function tick(a: Ctx, at: number, accent: boolean): Voice {
  * A running metronome scheduled on the audio clock (a short look-ahead loop, so the beat never drifts the way a
  * plain timer does). `onBeat` fires on screen at the moment each beat sounds. Returns a stop function.
  */
-export function startMetronome(bpm: number, beats: number, onBeat: (beat: number) => void) {
+/** The audio clock, in seconds: what a recording measures key presses against, the same clock the clicks are on. */
+export const audioNow = () => audio()?.ctx.currentTime ?? 0
+
+/** `onStart` gets the audio-clock time of the first click (a recording counts its bars from there). */
+export function startMetronome(bpm: number, beats: number, onBeat: (beat: number) => void, onStart?: (at: number) => void) {
   const a = audio()
   if (!a) return () => {}
   const period = 60 / bpm
   let next = a.ctx.currentTime + 0.06
+  onStart?.(next)
   let n = 0
   const timers = new Set<number>()
   const voices: Voice[] = []

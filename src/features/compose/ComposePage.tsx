@@ -3,9 +3,9 @@ import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
-import { loadInstruments, playNow, playSequence, type Inst } from '../theory/audio'
+import { audioNow, loadInstruments, playNow, playSequence, startMetronome, type Inst } from '../theory/audio'
 import {
-  barAt, blank, CLEF_BOTTOM, INSTRUMENTS, instOf, transposeOf, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
+  barAt, blank, CLEF_BOTTOM, meter, quantize, TPQ, type Take, INSTRUMENTS, instOf, transposeOf, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
   sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
   type Note, type Orn, type Right, type Score, type Span, type Template,
 } from './model'
@@ -777,6 +777,82 @@ export function ComposePage() {
     if (c) pasteAt(c.staff, c.end)
   }
 
+  /* ---------- recording from the keys, against a click ---------- */
+
+  const [recOpts, setRecOpts] = useState<{ tempo: number; grid: number }>(() => loadPref('compose:rec', { tempo: 0, grid: 60 }))
+  useEffect(() => savePref('compose:rec', recOpts), [recOpts])
+  const [recSheet, setRecSheet] = useState(false)
+  // 'count' while the click counts the bar in, then 'rec' with the bar and beat being played
+  const [rec, setRec] = useState<{ phase: 'count' | 'rec'; bar: number; beat: number; perBar: number } | null>(null)
+  const take = useRef<{ t0: number; lane: number; at: number; secPerTick: number; grid: number; held: Map<number, Take>; done: Take[]; stop: () => void } | null>(null)
+  const startRec = () => {
+    setRecSheet(false)
+    stopPlay.current?.()
+    const lane = caret.staff
+    const bar = barAt(bars, Math.min(caret.t, totalOf(score) - 1))
+    const m = meter(bar.time)
+    // the click: on the beats when they are equal (dotted quarters in 6/8), else on every denominator unit (5/8, 7/8)
+    const equal = m.beats.every(([b0, b1]) => b1 - b0 === m.beats[0][1] - m.beats[0][0])
+    const unit = equal ? m.beats[0][1] - m.beats[0][0] : DUR[1] / bar.time[1]
+    const perBar = Math.round(m.len / unit)
+    const tempo = recOpts.tempo || score.tempo
+    const secPerTick = 60 / (tempo * TPQ)
+    let n = 0
+    const stop = startMetronome(
+      60 / (unit * secPerTick),
+      perBar,
+      (b) => {
+        n++
+        // the bar number of the score (the bar counted in is the one before the first recorded bar)
+        setRec({ phase: n <= perBar ? 'count' : 'rec', bar: bar.index + Math.floor((n - 1) / perBar), beat: b + 1, perBar })
+      },
+      // the recording starts on the first beat after the bar counted in
+      (first) => (take.current = { t0: first + perBar * unit * secPerTick, lane, at: bar.start, secPerTick, grid: recOpts.grid, held: new Map(), done: [], stop: () => {} }), // the real stop is set just below (this runs inside the call)
+    )
+    if (take.current) take.current.stop = stop
+    setShowKeys(true)
+    setSel(null)
+    setRec({ phase: 'count', bar: 0, beat: 0, perBar })
+  }
+  const keyDown = (d: number, alter: number, id: number) => {
+    const tk = take.current
+    if (!tk) return
+    const inst = instOf(score, staffOfLane(score, tk.lane))
+    playNow([midiOf(fromDn(d, alter)) + transposeOf(inst)], 1.4, 0, inst)
+    tk.held.set(id, { d, alter, on: audioNow() - tk.t0, off: 0 })
+  }
+  const keyUp = (id: number) => {
+    const tk = take.current
+    const k = tk?.held.get(id)
+    if (!tk || !k) return
+    tk.held.delete(id)
+    tk.done.push({ ...k, off: audioNow() - tk.t0 })
+  }
+  /** Stop: what was played, rounded to the grid, over the staff from the bar the recording started in. */
+  const stopRec = () => {
+    const tk = take.current
+    take.current = null
+    setRec(null)
+    if (!tk) return
+    tk.stop()
+    const now = audioNow() - tk.t0
+    for (const k of tk.held.values()) tk.done.push({ ...k, off: now })
+    // a press just before the first beat belongs to it
+    const played = tk.done.filter((k) => k.off > 0).map((k) => ({ ...k, on: Math.max(0, k.on) }))
+    if (!played.length) return setFlash('Chưa thu được nốt nào')
+    const evs = quantize(played, tk.secPerTick, tk.grid)
+    const end = Math.max(...evs.map((e) => e.start + e.dur))
+    // what was there over the recorded bars goes first (a rest), then the notes
+    let s = score
+    const total = Math.ceil(end / barAt(layout(s), tk.at).len) * barAt(layout(s), tk.at).len
+    s = writeAt(s, tk.lane, tk.at, total, []).score
+    for (const e of evs) s = writeAt(s, tk.lane, tk.at + e.start, e.dur, e.notes).score
+    commit(s)
+    setCaret({ staff: tk.lane, t: tk.at + end })
+    setFlash(`Đã thu ${evs.length} nốt (Hoàn tác để bỏ)`)
+  }
+  useEffect(() => () => take.current?.stop(), [])
+
   /* ---------- what the MuseScore shortcuts need ---------- */
 
   /** A pitch a semitone (or more) away, spelt with sharps, or flats in a flat key. */
@@ -1084,9 +1160,12 @@ export function ComposePage() {
         <button className="cmp-icon" onClick={undo} disabled={!past.length} aria-label="Hoàn tác">↶</button>
         <button className="cmp-icon" onClick={redo} disabled={!future.length} aria-label="Làm lại">↷</button>
         <button className={clsx('cmp-icon cmp-play', playing && 'is-on')} onClick={togglePlay} aria-label={playing ? 'Dừng' : 'Nghe'}>{playing ? '■' : '▶'}</button>
+        <button className={clsx('cmp-icon cmp-rec-btn', rec && 'is-on')} onClick={() => (rec ? stopRec() : setRecSheet(true))} aria-label={rec ? 'Dừng thu' : 'Thu từ phím đàn'}>{rec ? '■' : '●'}</button>
         <button className="cmp-icon" onClick={() => setMenu(true)} aria-label="Bản nhạc và tuỳ chọn">⋯</button>
       </header>
-      <p className="cmp-status" aria-live="polite">{status}</p>
+      <p className={clsx('cmp-status', rec && 'is-rec')} aria-live="polite">
+        {rec ? (rec.phase === 'count' ? `Đếm vào… ${rec.beat || ''}${rec.beat ? ` / ${rec.perBar}` : ''}` : `● Đang thu — ô ${rec.bar} · phách ${rec.beat} (bấm ■ để dừng)`) : status}
+      </p>
 
       <div
         ref={paperRef}
@@ -1254,9 +1333,29 @@ export function ComposePage() {
           clef={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).clefs[physOf(caret.staff)]}
           keySig={barAt(bars, Math.min(caret.t, totalOf(score) - 1)).key}
           onKey={(d, alter) => insert(caret.staff, caret.t, d, alter)}
+          rec={rec ? { down: keyDown, up: keyUp } : undefined}
         />
       )}
 
+      {recSheet && (
+        <Sheet onClose={() => setRecSheet(false)} label="Thu từ phím đàn">
+          <h2>Thu từ phím đàn</h2>
+          <p className="cmp-help">Máy đánh nhịp đếm vào một ô rồi gõ tiếp; đàn trên phím đàn của app, bấm ■ để dừng. Các nốt được làm tròn theo lưới dưới đây và ghi đè lên {score.labels?.[physOf(caret.staff)] || `khuông ${physOf(caret.staff) + 1}`} từ ô {barAt(bars, Math.min(caret.t, totalOf(score) - 1)).index + 1} — Hoàn tác để lấy lại bản cũ.</p>
+          <div className="cmp-row">
+            <label>Nhịp độ thu ♩ = <input type="number" min={30} max={240} value={recOpts.tempo || score.tempo} onChange={(e) => setRecOpts((o) => ({ ...o, tempo: Math.max(30, Math.min(240, +e.target.value || score.tempo)) }))} /></label>
+            <button onClick={() => setRecOpts((o) => ({ ...o, tempo: Math.round((o.tempo || score.tempo) * 0.75) }))}>Chậm hơn</button>
+          </div>
+          <div className="cmp-row">
+            <span>Làm tròn tới</span>
+            {([[240, 'Nốt đen'], [120, 'Móc đơn'], [60, 'Móc kép']] as const).map(([g, label]) => (
+              <button key={g} className={clsx(recOpts.grid === g && 'is-on')} onClick={() => setRecOpts((o) => ({ ...o, grid: g }))}>{label}</button>
+            ))}
+          </div>
+          <div className="cmp-row">
+            <button className="cmp-rec-start" onClick={startRec}>● Bắt đầu thu</button>
+          </div>
+        </Sheet>
+      )}
       {menu && (
         <Sheet onClose={() => setMenu(false)}>
           <h2>Bản nhạc của tôi</h2>
@@ -1721,7 +1820,7 @@ function Tool({ glyph, label, title, on, disabled, onClick }: { glyph: ReactNode
 const WHITE = [0, 2, 4, 5, 7, 9, 11]
 
 /** Two octaves and a half of keys around the caret's staff; a black key is spelled sharp, or flat in a flat key. */
-function Keys({ staff, clef, keySig, onKey }: { staff: number; clef: Clef; keySig: number; onKey: (dn: number, alter: number) => void }) {
+function Keys({ staff, clef, keySig, onKey, rec }: { staff: number; clef: Clef; keySig: number; onKey: (dn: number, alter: number) => void; rec?: { down: (d: number, alter: number, id: number) => void; up: (id: number) => void } }) {
   const scroller = useRef<HTMLDivElement>(null)
   // a tablet or a computer: as many keys as fill the width, about 44 px each, around the middle of the staff;
   // a phone: two octaves and a half, 34 px, scrolled
@@ -1762,15 +1861,28 @@ function Keys({ staff, clef, keySig, onKey }: { staff: number; clef: Clef; keySi
     if (keySig < 0) return { d: oct * 7 + WHITE.indexOf(pc + 1), alter: -1 }
     return { d: oct * 7 + WHITE.indexOf(pc - 1), alter: 1 }
   }
+  // writing: a tap places a note. Recording: the press and the release are timed, each finger on its own
+  const press = (sp: { d: number; alter: number }) =>
+    rec
+      ? {
+          onPointerDown: (e: React.PointerEvent) => {
+            e.currentTarget.releasePointerCapture?.(e.pointerId)
+            rec.down(sp.d, sp.alter, e.pointerId)
+          },
+          onPointerUp: (e: React.PointerEvent) => rec.up(e.pointerId),
+          onPointerCancel: (e: React.PointerEvent) => rec.up(e.pointerId),
+          onPointerLeave: (e: React.PointerEvent) => rec.up(e.pointerId),
+        }
+      : { onClick: () => onKey(sp.d, sp.alter) }
   const whites = keys.filter((k) => !k.black)
   const w = fill ? (width - 16) / whites.length : 34
   return (
-    <div ref={scroller} className="cmp-keys" aria-label="Phím đàn: bấm để đặt nốt">
+    <div ref={scroller} className={clsx('cmp-keys', rec && 'is-rec')} aria-label={rec ? 'Phím đàn: đang thu' : 'Phím đàn: bấm để đặt nốt'}>
       <div className="cmp-keys-row" style={{ width: whites.length * w }}>
         {whites.map((k, i) => {
           const s = spellKey(k.midi)
           return (
-            <button key={k.midi} className="cmp-white" data-c4={k.midi === 60 || undefined} style={{ left: i * w, width: w - 2 }} onClick={() => onKey(s.d, s.alter)} aria-label={pitchName(fromDn(s.d, s.alter))}>
+            <button key={k.midi} className="cmp-white" data-c4={k.midi === 60 || undefined} style={{ left: i * w, width: w - 2 }} {...press(s)} aria-label={pitchName(fromDn(s.d, s.alter))}>
               {k.midi % 12 === 0 && <small>Đô{Math.floor(k.midi / 12) - 1}</small>}
             </button>
           )
@@ -1779,17 +1891,17 @@ function Keys({ staff, clef, keySig, onKey }: { staff: number; clef: Clef; keySi
           if (!k.black) return null
           const i = whites.findIndex((w) => w.midi === k.midi - 1)
           const s = spellKey(k.midi)
-          return <button key={k.midi} className="cmp-black" style={{ left: i * w + w * 0.68, width: w * 0.62 }} onClick={() => onKey(s.d, s.alter)} aria-label={pitchName(fromDn(s.d, s.alter))} />
+          return <button key={k.midi} className="cmp-black" style={{ left: i * w + w * 0.68, width: w * 0.62 }} {...press(s)} aria-label={pitchName(fromDn(s.d, s.alter))} />
         })}
       </div>
     </div>
   )
 }
 
-function Sheet({ children, onClose }: { children: ReactNode; onClose: () => void }) {
+function Sheet({ children, onClose, label = 'Bản nhạc và tuỳ chọn' }: { children: ReactNode; onClose: () => void; label?: string }) {
   return (
     <div className="cmp-sheet-bg" onClick={onClose}>
-      <div className="cmp-sheet" role="dialog" aria-label="Bản nhạc và tuỳ chọn" onClick={(e) => e.stopPropagation()}>
+      <div className="cmp-sheet" role="dialog" aria-label={label} onClick={(e) => e.stopPropagation()}>
         <button className="cmp-sheet-x" onClick={onClose} aria-label="Đóng">✕</button>
         {children}
       </div>

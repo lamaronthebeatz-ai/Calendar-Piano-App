@@ -143,3 +143,10 @@
 .cmp-palette.is-docked .cmp-select select { height: 44px; }
 .cmp-palette.is-docked .cmp-qb.is-inline { flex: 1; min-width: 0; }
 .cmp-qb.is-inline { position: static; height: 58px; padding: 0; border: 0; background: none; }
+
+/* recording from the keys */
+.cmp-rec-btn { color: #e5484d; font-size: 15px; }
+.cmp-rec-btn.is-on { background: #e5484d; color: #fff; }
+.cmp-status.is-rec { color: #ff6b6f; font-weight: 600; }
+.cmp-keys.is-rec { touch-action: none; box-shadow: inset 0 3px 0 #e5484d; }
+.cmp-row .cmp-rec-start { background: #e5484d; border-color: #e5484d; color: #fff; font-weight: 600; }

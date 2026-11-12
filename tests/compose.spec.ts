@@ -405,3 +405,34 @@ test.describe('soạn nhạc trên tablet: mọi ngăn nằm gọn một hàng',
     }
   })
 })
+
+test('soạn nhạc: thu từ phím đàn theo máy đánh nhịp, làm tròn rồi ghi vào bản nhạc', async ({ page }) => {
+  test.setTimeout(90_000)
+  await open(page)
+  await page.getByRole('button', { name: 'Thu từ phím đàn' }).click()
+  // a fast click so the test is short: 240 → a beat is 0.25 s, the bar counted in is 1 s
+  const sheet = page.getByRole('dialog', { name: 'Thu từ phím đàn' })
+  await sheet.getByRole('spinbutton').fill('240')
+  await sheet.getByRole('button', { name: 'Móc đơn', exact: true }).click()
+  await sheet.getByRole('button', { name: '● Bắt đầu thu' }).click()
+  await expect(page.locator('.cmp-status')).toContainText('Đang thu', { timeout: 5000 })
+  // two quarter notes on beats 1 and 2 of the first bar (held for most of a beat)
+  const key = (n: string) => page.locator(`.cmp-keys button[aria-label="${n}"]`).first()
+  for (const n of ['Đô5', 'Mi5']) {
+    const b = (await key(n).boundingBox())!
+    await page.mouse.move(b.x + b.width / 2, b.y + b.height - 10)
+    await page.mouse.down()
+    await page.waitForTimeout(200)
+    await page.mouse.up()
+    await page.waitForTimeout(50)
+  }
+  await page.getByRole('button', { name: 'Dừng thu' }).click()
+  await expect(page.locator('.cmp-status')).toContainText('Đã thu 2 nốt')
+  const s = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0])
+  const notes = s.staves[0].filter((e: { notes: unknown[] }) => e.notes.length)
+  expect(notes.map((e: { notes: { step: number; oct: number }[] }) => 'CDEFGAB'[e.notes[0].step] + e.notes[0].oct)).toEqual(['C5', 'E5'])
+  // rounded to the eighth grid, in time order, within the first two bars (the test's mouse is not a pianist's hand)
+  for (const e of notes) expect([e.start % 120, e.dur % 120]).toEqual([0, 0])
+  expect(notes[1].start).toBeGreaterThan(notes[0].start)
+  expect(notes[1].start + notes[1].dur).toBeLessThanOrEqual(1920)
+})
