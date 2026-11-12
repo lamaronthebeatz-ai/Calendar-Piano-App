@@ -1,4 +1,4 @@
-import { dn, lanesOf, layout, midiOf, sigAlter, spell, type Bar, type Clef, type Ev, type Jump, type Score } from './model'
+import { dn, lanesOf, layout, meter, midiOf, piecesIn, sigAlter, type Bar, type Clef, type Ev, type Jump, type Meter, type Score } from './model'
 
 /** What a drawn element stands for: the event it belongs to and the stretch of time it covers. */
 /** `staff` is the lane (a voice on a staff, the index into `Score.staves`); `phys` the staff it is drawn on. */
@@ -20,7 +20,11 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
   // per staff, per bar: the layer's XML
   const lanes = lanesOf(s)
   const phys = (lane: number) => lanes[lane]?.staff ?? lane
-  const layers: string[][] = s.staves.map(() => bars.map(() => ''))
+  // what each voice writes in each bar, in order; beams are added once a bar is complete (beamed)
+  const layers: Item[][][] = s.staves.map(() => bars.map(() => []))
+  const meters = bars.map((b) => meter(b.time))
+  // the written values of one bar-slice of an event: tuplet notes as they look, others grouped by the meter
+  const piecesOf = (ev: Ev, sg: { bar: number; start: number; len: number }) => piecesIn(ev, bars[sg.bar], sg.start, sg.len, meters[sg.bar])
   // control events (dynamics, ornaments, slurs, text…) go after the staves of the bar where they start
   const ctrl: string[] = bars.map(() => '')
   const firstBar = new Map<string, number>()
@@ -35,10 +39,8 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
       const next = evs[ei + 1]
       const segs = segments(ev, bars)
       let k = 0
-      // a tuplet note is written as the value it looks like (three eighths in the time of two)
-      const written = (len: number) => (ev.tup ? (len * ev.tup.n) / ev.tup.base : len)
-      const count = segs.reduce((n, sg) => n + spell(written(sg.len)).length, 0)
-      if (ev.tup && prev?.tup?.g !== ev.tup.g) layers[st][segs[0].bar] += `<tuplet num="${ev.tup.n}" numbase="${ev.tup.base}">`
+      const count = segs.reduce((n, sg) => n + piecesOf(ev, sg).length, 0)
+      if (ev.tup && prev?.tup?.g !== ev.tup.g) layers[st][segs[0].bar].push({ xml: `<tuplet num="${ev.tup.n}" numbase="${ev.tup.base}">`, mark: 'open' })
       for (const sg of segs) {
         const bar = bars[sg.bar]
         if (sg.bar !== shownBar) {
@@ -50,19 +52,19 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
         if (!ev.notes.length && !ev.tup && sg.start === bar.start && sg.len === bar.len) {
           const id = k === 0 ? ev.id : `${ev.id}_${k}`
           pieces.set(id, { staff: st, phys: phys(st), evId: ev.id, start: sg.start, dur: sg.len, bar: sg.bar })
-          layers[st][sg.bar] += `<mRest xml:id="${id}"/>`
-          k += spell(sg.len).length
+          layers[st][sg.bar].push({ xml: `<mRest xml:id="${id}"/>` })
+          k += piecesOf(ev, sg).length
           continue
         }
         let t = sg.start
-        for (const p of spell(written(sg.len))) {
+        for (const p of piecesOf(ev, sg)) {
           const id = k === 0 ? ev.id : `${ev.id}_${k}`
           const dur = `dur="${p.dur}"${p.dots ? ` dots="${p.dots}"` : ''}`
           const real = ev.tup ? (p.ticks * ev.tup.base) / ev.tup.n : p.ticks
           pieces.set(id, { staff: st, phys: phys(st), evId: ev.id, start: t, dur: real, bar: sg.bar })
           lastPiece.set(ev.id, id)
           const artic = k === 0 && ev.artic?.length ? ` artic="${ev.artic.join(' ')}"` : ''
-          if (!ev.notes.length) layers[st][sg.bar] += `<rest xml:id="${id}" ${dur}/>`
+          if (!ev.notes.length) layers[st][sg.bar].push({ xml: `<rest xml:id="${id}" ${dur}/>` })
           else {
             const notes = ev.notes.map((n, j) => {
               const incoming = k > 0 || (!!prev && prev.start + prev.dur === ev.start && prev.notes.some((x) => x.tie && midiOf(x) === midiOf(n)))
@@ -80,13 +82,16 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
               const verse = k === 0 && j === 0 && ev.lyric?.text ? `<verse n="1"><syl${sylAttrs(ev, evs.slice(0, ei))}>${esc(ev.lyric.text)}</syl></verse>` : ''
               return `<note xml:id="${nid}" pname="${'cdefgab'[n.step]}" oct="${n.oct}"${acc}${tie}${ev.notes.length > 1 ? '' : ` ${dur}${artic}`}>${verse}</note>`
             })
-            layers[st][sg.bar] += ev.notes.length > 1 ? `<chord xml:id="${id}" ${dur}${artic}>${notes.join('')}</chord>` : notes[0]
+            layers[st][sg.bar].push({
+              xml: ev.notes.length > 1 ? `<chord xml:id="${id}" ${dur}${artic}>${notes.join('')}</chord>` : notes[0],
+              beam: p.dur >= 8 ? { t: t - bar.start, eighth: p.dur === 8 && !p.dots && !ev.tup, tup: ev.tup?.g } : undefined,
+            })
           }
           t += real
           k++
         }
       }
-      if (ev.tup && next?.tup?.g !== ev.tup.g) layers[st][segs[segs.length - 1].bar] += '</tuplet>'
+      if (ev.tup && next?.tup?.g !== ev.tup.g) layers[st][segs[segs.length - 1].bar].push({ xml: '</tuplet>', mark: 'close' })
     })
   })
 
@@ -135,7 +140,7 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
       const voices = lanes.map((l, lane) => ({ ...l, lane })).filter((l) => l.staff === st).sort((a, c) => a.voice - c.voice)
       body += `<staff n="${st + 1}">`
       for (const v of voices) {
-        const xml = layers[v.lane][i]
+        const xml = beamed(layers[v.lane][i], meters[i])
         const empty = v.voice > 1 && !/<note|<chord/.test(xml)
         body += `<layer n="${v.voice}">${v.voice === voices[0].voice ? clefChange : ''}${empty ? '<mSpace/>' : xml}</layer>`
       }
@@ -149,6 +154,34 @@ export function toMei(s: Score): { mei: string; pieces: Map<string, PieceInfo> }
     `<music><body><mdiv><score><scoreDef meter.count="${s.time[0]}" meter.unit="${s.time[1]}" key.sig="${sigAttr(s.key)}">` +
     `<staffGrp${grand ? (choir ? ' symbol="bracket" bar.thru="false"' : ' symbol="brace" bar.thru="true"') : ''}>${staffDefs}</staffGrp></scoreDef><section>${body}</section></score></mdiv></body></music></mei>`
   return { mei, pieces }
+}
+
+type Item = { xml: string; mark?: 'open' | 'close'; beam?: { t: number; eighth: boolean; tup?: string } }
+
+/**
+ * A bar of one voice with its beams: eighths and shorter are beamed beat by beat (a tuplet as a whole); a rest, a
+ * longer note or a tuplet's edge breaks a beam. Where half a bar of 4/4, or a whole bar of 2/4 or 3/4, is nothing but
+ * plain eighths, they are beamed as one group, as engravers do.
+ */
+function beamed(items: Item[], m: Meter): string {
+  const beatOf = (t: number) => m.beats.findIndex(([b0, b1]) => t >= b0 && t < b1)
+  const keys = items.map((it) => (it.beam ? (it.beam.tup ? `t${it.beam.tup}` : `b${beatOf(it.beam.t)}`) : null))
+  m.wide.forEach(([w0, w1], wi) => {
+    if (w1 - w0 <= (m.beats[0][1] - m.beats[0][0])) return
+    const inside = items.map((it, i) => ({ it, i })).filter(({ it }) => it.beam && it.beam.t >= w0 && it.beam.t < w1)
+    if (inside.length * 120 === w1 - w0 && inside.every(({ it }) => it.beam!.eighth) && inside.every(({ i }, j) => j === 0 || i === inside[j - 1].i + 1))
+      for (const { i } of inside) keys[i] = `w${wi}`
+  })
+  let out = ''
+  let i = 0
+  while (i < items.length) {
+    let j = i
+    while (keys[i] && j + 1 < items.length && keys[j + 1] === keys[i]) j++
+    const run = items.slice(i, j + 1).map((x) => x.xml).join('')
+    out += j > i ? `<beam>${run}</beam>` : run
+    i = j + 1
+  }
+  return out
 }
 
 /** An event cut at the bar lines it crosses. */

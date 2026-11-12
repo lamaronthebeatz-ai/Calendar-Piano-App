@@ -1,6 +1,6 @@
 import {
   type Artic, type Clef, type Dyn, type Ev, type Jump, type Note, type Orn, type Score,
-  INSTRUMENTS, TPQ, barLen, instOf, lanesOf, layout, midiOf, newId, normalized, soundOf, spell,
+  INSTRUMENTS, TPQ, barLen, instOf, lanesOf, layout, midiOf, newId, normalized, piecesIn, soundOf,
 } from './model'
 import { JUMP_TEXT, segments } from './mei'
 import type { Inst } from '../theory/audio'
@@ -103,11 +103,11 @@ export function toMusicXml(s: Score): string {
         }
         evs.forEach((ev, ei) => {
           const segs = segments(ev, bars)
-          const total = segs.reduce((n, sg) => n + spell(ev.tup ? (sg.len * ev.tup.n) / ev.tup.base : sg.len).length, 0)
+          const total = segs.reduce((n, sg) => n + piecesIn(ev, bars[sg.bar], sg.start, sg.len).length, 0)
           let piece = 0
           for (const sg of segs) {
             if (sg.bar !== bi) {
-              piece += spell(ev.tup ? (sg.len * ev.tup.n) / ev.tup.base : sg.len).length
+              piece += piecesIn(ev, bars[sg.bar], sg.start, sg.len).length
               continue
             }
             const first = piece === 0
@@ -119,8 +119,7 @@ export function toMusicXml(s: Score): string {
               const w = wedgeStart.get(ev.id)
               if (w) xml += dir(`<wedge type="${w}"/>`)
             }
-            const written = ev.tup ? (sg.len * ev.tup.n) / ev.tup.base : sg.len
-            const ps = spell(written)
+            const ps = piecesIn(ev, b, sg.start, sg.len)
             const wholeBarRest = !ev.notes.length && !ev.tup && sg.len === b.len && sg.start === b.start
             ps.forEach((p) => {
               const real = ev.tup ? (p.ticks * ev.tup.base) / ev.tup.n : p.ticks

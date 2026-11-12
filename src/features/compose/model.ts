@@ -312,6 +312,81 @@ export function spell(ticks: number): Piece[] {
 }
 export const ticksOf = (d: DurName, dots: number) => DUR[d] * (dots === 2 ? 1.75 : dots === 1 ? 1.5 : 1)
 
+/* ---------- the meter: how notes and rests are grouped and beamed ---------- */
+
+/**
+ * The beat structure of a bar (ticks from its start). Compound meters (6/8, 9/8, 12/8, 3/8, 6/4…) beat in dotted
+ * values; 5/8 and 7/8 in 3+2 and 2+2+3; 5/4 as 3+2. `barriers` are the points a note may not tie across unless it
+ * starts at the bar (or that point) and ends on a beat — the middle of 4/4, every beat of a compound meter.
+ * `half` is a rest that may stand for two beats (the half rest on beat 1 or 3 of 4/4). `wide` is the window in which
+ * eighths alone are beamed together (half a bar of 4/4, the whole of 2/4 and 3/4); otherwise beams follow the beats.
+ */
+export type Meter = { len: number; beats: [number, number][]; barriers: number[]; half: number | null; sub: number; wide: [number, number][] }
+export function meter([n, d]: [number, number]): Meter {
+  const unit = DUR[1] / d
+  const len = n * unit
+  const compound = n % 3 === 0 && (n > 3 || d >= 8) && d >= 4
+  let sizes: number[]
+  if (compound) sizes = Array(n / 3).fill(3)
+  else if (d >= 8 && n > 3) sizes = n === 5 ? [3, 2] : n === 7 ? [2, 2, 3] : [...Array(Math.floor(n / 2) - (n % 2)).fill(2), ...(n % 2 ? [3] : [2])]
+  else if (n === 5) sizes = [1, 1, 1, 1, 1]
+  else sizes = Array(n).fill(1)
+  const beats: [number, number][] = []
+  let t = 0
+  for (const sz of sizes) beats.push([t, (t += sz * unit)])
+  const barriers = compound || (d >= 8 && n > 3) ? beats.slice(1).map((b) => b[0]) : n === 4 ? [len / 2] : n === 5 ? [3 * unit] : []
+  const half = n === 4 && !compound ? len / 2 : n === 12 && compound ? len / 2 : null
+  const sub = compound || (d >= 8 && n > 3) ? unit : unit / 2
+  const wide: [number, number][] = compound || (d >= 8 && n > 3) ? beats : n === 4 ? [[0, len / 2], [len / 2, len]] : n === 2 || n === 3 ? [[0, len]] : beats
+  return { len, beats, barriers, half, sub, wide }
+}
+
+const value = (ticks: number): Piece[] => {
+  const v = VALUES.find((x) => x.ticks === ticks)
+  return v ? [v] : spell(ticks)
+}
+
+/** A rest from `s` to `e` (ticks from the bar's start) as the rests a reader expects: whole beats, then parts of a beat. */
+export function restPieces(m: Meter, s: number, e: number): Piece[] {
+  const out: Piece[] = []
+  let t = s
+  while (t < e) {
+    if (m.half && t % m.half === 0 && t + m.half <= e) {
+      out.push(...value(m.half))
+      t += m.half
+      continue
+    }
+    const b = m.beats.find(([b0, b1]) => t >= b0 && t < b1) ?? [t, e]
+    if (t === b[0] && b[1] <= e) {
+      out.push(...value(b[1] - b[0]))
+      t = b[1]
+      continue
+    }
+    const room = Math.min(e, b[1]) - t
+    let u = m.sub
+    while (u > 15 && (u > room || (t - b[0]) % u)) u /= 2
+    u = Math.max(15, Math.min(u, room))
+    out.push(...value(u))
+    t += u
+  }
+  return out
+}
+
+/** A note (or chord) from `s` to `e` as tied values that show the beats: the fewest values that do not hide a barrier. */
+export function notePieces(m: Meter, s: number, e: number): Piece[] {
+  // one value only where it starts on half of its plain length: a quarter on an off-beat is fine, a double-dotted
+  // quarter starting on the second sixteenth is not
+  const v = VALUES.find((x) => x.ticks === e - s)
+  const single = !!v && s % (DUR[v.dur] / 2) === 0
+  const inside = m.barriers.filter((b) => b > s && b < e)
+  const onBeat = (x: number) => x === m.len || m.beats.some(([b0]) => b0 === x)
+  // a long note may stand across the middle when it starts at the bar or barrier and ends on a beat (a dotted half on 1)
+  const crossing = (s === 0 || m.barriers.includes(s)) && onBeat(e)
+  if (!inside.length || crossing) return single ? value(e - s) : restPieces(m, s, e)
+  const cuts = [s, ...inside, e]
+  return cuts.slice(1).flatMap((c, i) => notePieces(m, cuts[i], c))
+}
+
 /* ---------- key names ---------- */
 
 const MAJ = ['Đô', 'Sol', 'Rê', 'La', 'Mi', 'Si', 'Fa♯', 'Đô♯']
@@ -440,4 +515,11 @@ export function playOrder(bars: Bar[], attrs: Record<number, MeasureAttr>): numb
   }
   pass(0, { stopAtFine: false, toCoda: false, repeats: true })
   return out.slice(0, 2000)
+}
+
+/** The written values of the slice of an event that lies in one bar: tuplet notes as they look, the rest by the meter. */
+export function piecesIn(ev: Ev, bar: Bar, start: number, len: number, m: Meter = meter(bar.time)): Piece[] {
+  if (ev.tup) return spell((len * ev.tup.n) / ev.tup.base)
+  const from = start - bar.start
+  return ev.notes.length ? notePieces(m, from, from + len) : restPieces(m, from, from + len)
 }

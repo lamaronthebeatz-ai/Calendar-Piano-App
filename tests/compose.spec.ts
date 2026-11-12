@@ -353,3 +353,34 @@ test('soạn nhạc: phím tắt như MuseScore 4', async ({ page }) => {
   n = await notes()
   expect(n.length).toBe(4)
 })
+
+test('soạn nhạc: nhóm trường độ và gạch nối đuôi theo số chỉ nhịp (4/4, 3/4, 6/8)', async ({ page }) => {
+  test.setTimeout(90_000)
+  const E = 120
+  const score = (id: string, time: number[], evs: number[][]) => ({
+    id, title: id, clefs: ['treble'], key: 0, time, tempo: 80, measures: 1, attrs: {}, spans: [], v: 2, updated: 1,
+    staves: [evs.map(([s, d], i) => ({ id: `${id}${i}`, start: s, dur: d, notes: [{ step: i % 7, oct: 4, alter: 0 }] }))],
+  })
+  const cases: [ReturnType<typeof score>, number, number][] = [
+    [score('a', [4, 4], [0, 1, 2, 3, 4, 5, 6, 7].map((i) => [i * E, E])), 2, 0], // two groups of four, never across the middle
+    [score('b', [3, 4], [0, 1, 2, 3, 4, 5].map((i) => [i * E, E])), 1, 0], // the whole bar
+    [score('c', [6, 8], [0, 1, 2, 3, 4, 5].map((i) => [i * E, E])), 2, 0], // by dotted quarter
+    [score('d', [4, 4], [[0, 240], [240, 480], [720, 240]]), 0, 1], // a half on beat 2 is two tied quarters
+  ]
+  await page.addInitScript((all) => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+    if (!sessionStorage.getItem('seeded')) {
+      localStorage.setItem('compose:scores', JSON.stringify(all))
+      sessionStorage.setItem('seeded', '1')
+    }
+  }, cases.map((c) => c[0]))
+  await page.goto('/#/compose')
+  for (const [s, beams, ties] of cases) {
+    await page.evaluate((id) => localStorage.setItem('compose:current', JSON.stringify(id)), s.id)
+    await page.reload()
+    await expect(page.locator('.cmp-svg > svg')).toBeVisible({ timeout: 40_000 })
+    await expect(page.locator('.cmp-svg [data-class="beam"]')).toHaveCount(beams)
+    await expect(page.locator('.cmp-svg [data-class="tie"]')).toHaveCount(ties)
+  }
+})
