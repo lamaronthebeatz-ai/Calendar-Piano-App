@@ -113,27 +113,37 @@ function sampled({ ctx, out }: Ctx, midi: number, at: number, dur: number, vel: 
 
 /** A struck string: a few partials through a closing low-pass, fast attack and a long exponential decay. */
 function strike(c: Ctx, midi: number, at: number, dur: number, vel: number, inst: Inst = 'piano'): Voice {
-  return (inst !== 'piano' && bowed(c, inst, midi, at, dur, vel)) || sampled(c, midi, at, dur, vel) || synth(c, midi, at, dur, vel)
+  return (inst !== 'piano' && held(c, inst, midi, at, dur, vel)) || sampled(c, midi, at, dur, vel) || synth(c, midi, at, dur, vel)
 }
 
-/* ---------- bowed strings (score editor) ---------- */
+/* ---------- orchestra (score editor) ---------- */
 
 /**
- * VSCO 2: Community Edition (Versilian Studios, CC0): violin, viola and cello sections and a solo double bass,
- * sustained with vibrato, a soft and a loud take per pitch (public/media/strings, scripts/strings/build.py). A note
- * longer than the file repeats its 1.4–4.6 s part (see `bowed`), so it can be held as long as the score asks. Measured pitch is within
- * 4 cents of equal temperament, so there is no retuning table. Fetched only when a score uses the instrument.
+ * VSCO 2: Community Edition (Versilian Studios, CC0): string sections and a solo double bass, flute, oboe, clarinet,
+ * bassoon, horn, trumpet, trombone and tuba, all sustained, a soft and a loud take per pitch (public/media/instruments,
+ * scripts/instruments/build.py). A note longer than its file repeats the file's loop (see `held`), so it can be held as
+ * long as the score asks. Measured pitch is within 7 cents of equal temperament: no retuning table. Each instrument is
+ * fetched only when a score uses it.
  */
-export type Inst = 'piano' | 'violin' | 'viola' | 'cello' | 'contrabass'
-const STRING_NOTES: Record<Exclude<Inst, 'piano'>, number[]> = {
-  violin: [55, 57, 59, 62, 66, 69, 72, 76, 79, 83, 86],
-  viola: [48, 50, 52, 55, 59, 62, 65, 69, 72, 76, 79, 83, 86],
-  cello: [36, 40, 43, 47, 50, 53, 57, 60, 64, 67, 71, 74, 77],
-  contrabass: [30, 31, 34, 36, 38, 40, 42, 44, 45, 49, 52, 56, 59],
+export type Inst = 'piano' | 'violin' | 'viola' | 'cello' | 'contrabass' | 'flute' | 'oboe' | 'clarinet' | 'bassoon' | 'horn' | 'trumpet' | 'trombone' | 'tuba'
+type Sampled = Exclude<Inst, 'piano'>
+// the recorded pitches of each instrument and the part of every file that repeats (from build.py)
+const KIT: Record<Sampled, { notes: number[]; loop: [number, number] }> = {
+  violin: { notes: [55, 57, 59, 62, 66, 69, 72, 76, 79, 83, 86], loop: [1.4, 4.6] },
+  viola: { notes: [48, 50, 52, 55, 59, 62, 65, 69, 72, 76, 79, 83, 86], loop: [1.4, 4.6] },
+  cello: { notes: [36, 40, 43, 47, 50, 53, 57, 60, 64, 67, 71, 74, 77], loop: [1.4, 4.6] },
+  contrabass: { notes: [30, 31, 34, 36, 38, 40, 42, 44, 45, 49, 52, 56, 59], loop: [1.4, 4.6] },
+  flute: { notes: [60, 64, 69, 72, 76, 81, 84, 88, 93, 96], loop: [1.4, 4.39] },
+  oboe: { notes: [58, 62, 65, 70, 74, 77, 82, 86, 89], loop: [1.4, 4.6] },
+  clarinet: { notes: [50, 53, 58, 62, 65, 70, 74, 77, 82, 86, 89], loop: [1.4, 4.22] },
+  bassoon: { notes: [34, 37, 41, 45, 46, 48, 55, 60, 63, 68, 69, 72, 75], loop: [1.4, 4.6] },
+  horn: { notes: [33, 36, 39, 43, 46, 50, 53, 57, 60, 74, 77], loop: [1.4, 3.64] },
+  trumpet: { notes: [53, 57, 60, 63, 65, 67, 70, 74, 77, 81, 84], loop: [1.4, 3.94] },
+  trombone: { notes: [34, 37, 39, 41, 46, 50, 53, 60, 61, 63, 65], loop: [1.4, 3.82] },
+  tuba: { notes: [29, 34, 39, 41, 46, 50, 53, 58, 62], loop: [1.14, 2.86] },
 }
-const LOOP = [1.4, 4.6] as const
-const strings = new Map<string, AudioBuffer>()
-const stringLoads = new Map<string, Promise<void>>()
+const kitBuffers = new Map<string, AudioBuffer>()
+const kitLoads = new Map<string, Promise<void>>()
 
 /** Fetch and decode an instrument's samples once; resolves when they are in (or failed: the piano stands in). */
 export function loadInstruments(insts: Inst[]): Promise<void> {
@@ -142,31 +152,33 @@ export function loadInstruments(insts: Inst[]): Promise<void> {
   const ext = typeof Audio !== 'undefined' && new Audio().canPlayType('audio/ogg; codecs=opus') ? 'ogg' : 'm4a'
   const jobs = insts.flatMap((inst) => {
     if (inst === 'piano') return []
-    if (!stringLoads.has(inst))
-      stringLoads.set(
+    if (!kitLoads.has(inst))
+      kitLoads.set(
         inst,
         Promise.all(
-          STRING_NOTES[inst].flatMap((m) =>
+          KIT[inst].notes.flatMap((m) =>
             (['p', 'f'] as const).map((l) =>
-              fetch(`${import.meta.env.BASE_URL}media/strings/${inst}/${m}-${l}.${ext}`)
+              fetch(`${import.meta.env.BASE_URL}media/instruments/${inst}/${m}-${l}.${ext}`)
                 .then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(new Error(r.statusText))))
                 .then((b) => a.ctx.decodeAudioData(b))
-                .then((buf) => void strings.set(`${inst}-${m}-${l}`, buf))
+                .then((buf) => void kitBuffers.set(`${inst}-${m}-${l}`, buf))
                 .catch(() => undefined),
             ),
           ),
         ).then(() => undefined),
       )
-    return [stringLoads.get(inst)!]
+    return [kitLoads.get(inst)!]
   })
   return Promise.all(jobs).then(() => undefined)
 }
 
-function bowed({ ctx, out }: Ctx, inst: Exclude<Inst, 'piano'>, midi: number, at: number, dur: number, vel: number): Voice | null {
-  const base = STRING_NOTES[inst].reduce((a, b) => (Math.abs(b - midi) < Math.abs(a - midi) ? b : a))
-  const soft = strings.get(`${inst}-${base}-p`)
-  const loud = strings.get(`${inst}-${base}-f`)
-  if (!soft || !loud || Math.abs(base - midi) > 4) return null
+function held({ ctx, out }: Ctx, inst: Sampled, midi: number, at: number, dur: number, vel: number): Voice | null {
+  const { notes, loop: LOOP } = KIT[inst]
+  const base = notes.reduce((a, b) => (Math.abs(b - midi) < Math.abs(a - midi) ? b : a))
+  const soft = kitBuffers.get(`${inst}-${base}-p`)
+  const loud = kitBuffers.get(`${inst}-${base}-f`)
+  // the horn's recordings leave a gap of a ninth: up to a fifth of stretching keeps its own sound
+  if (!soft || !loud || Math.abs(base - midi) > 7) return null
   const w = Math.min(1, Math.max(0, (vel - 0.45) / 0.45))
   const rate = 2 ** ((midi - base) / 12)
   const env = ctx.createGain()
@@ -391,10 +403,21 @@ export function playSequence(steps: Step[], cb: { onStep?: (i: number) => void; 
   }
   const t0 = a.ctx.currentTime + 0.08
   const voices: Voice[] = []
-  for (const s of steps) {
-    s.midis?.forEach((m) => voices.push(strike(a, m, t0 + s.at, s.dur, s.vel ?? 0.75, s.inst)))
-    if (s.tick) voices.push(tick(a, t0 + s.at, s.tick === 'accent'))
+  // Notes are put on the audio clock a little ahead of time, not all at once: a full orchestral score is thousands
+  // of audio nodes, and building them in one go froze the page for half a second at the press of Play.
+  let next = 0
+  let feeder = 0
+  const AHEAD = 1.5
+  const feed = () => {
+    const until = a.ctx.currentTime - t0 + AHEAD
+    while (next < steps.length && steps[next].at <= until) {
+      const s = steps[next++]
+      s.midis?.forEach((m) => voices.push(strike(a, m, t0 + s.at, s.dur, s.vel ?? 0.75, s.inst)))
+      if (s.tick) voices.push(tick(a, t0 + s.at, s.tick === 'accent'))
+    }
+    if (next < steps.length) feeder = window.setTimeout(feed, 250)
   }
+  feed()
   const last = steps.at(-1)!
   const total = last.at + Math.min(last.dur, 1.2)
   let raf = 0
@@ -409,6 +432,7 @@ export function playSequence(steps: Step[], cb: { onStep?: (i: number) => void; 
     cb.onEnd?.()
   }
   const stop = () => {
+    clearTimeout(feeder)
     voices.forEach((v) => v.stop(a.ctx.currentTime))
     finish()
   }

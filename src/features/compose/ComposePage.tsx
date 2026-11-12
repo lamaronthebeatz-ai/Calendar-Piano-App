@@ -376,8 +376,17 @@ export function ComposePage() {
     const stop = (e: TouchEvent) => {
       if (g.current?.mode === 'radial' || g.current?.mode === 'range' || pinch.current) e.preventDefault()
     }
+    // a finger that starts on a note holds or drags it, never scrolls the page. One listener here rather than
+    // touch-action on every note: thousands of touch regions made each repaint of a big score slow (layerize)
+    const onNote = (e: TouchEvent) => {
+      if ((e.target as Element).closest?.('[data-class="note"], [data-class="chord"]')) e.preventDefault()
+    }
     el.addEventListener('touchmove', stop, { passive: false })
-    return () => el.removeEventListener('touchmove', stop)
+    el.addEventListener('touchstart', onNote, { passive: false })
+    return () => {
+      el.removeEventListener('touchmove', stop)
+      el.removeEventListener('touchstart', onNote)
+    }
   }, [])
 
   const onDown = (e: React.PointerEvent) => {
@@ -658,7 +667,7 @@ export function ComposePage() {
     setPlaying(true)
     // string samples come on first use: wait for them so the opening is not played on the piano
     const insts = [...new Set(steps.map((x) => x.inst))]
-    const ready = insts.some((i) => i !== 'piano') ? (setFlash('Đang tải tiếng đàn dây…'), loadInstruments(insts)) : null
+    const ready = insts.some((i) => i !== 'piano') ? (setFlash('Đang tải tiếng nhạc cụ…'), loadInstruments(insts)) : null
     if (ready) {
       void ready.then(() => {
         setFlash('')
@@ -670,11 +679,17 @@ export function ComposePage() {
   }
   const start = (steps: ReturnType<typeof soundOf>['steps'], anchors: ReturnType<typeof soundOf>['anchors']) => {
     const staff = caret.staff
+    const total = totalOf(score)
     stopPlay.current = playSequence(steps, {
       // the caret follows the bars as they sound, back to the segno or the start when the score repeats
       onFrame: (sec) => {
         const a = [...anchors].reverse().find((x) => x.sec <= sec) ?? anchors[0]
-        if (a) setCaret({ staff, t: Math.min(totalOf(score), a.tick + Math.floor((sec - a.sec) / a.tps / 60) * 60) })
+        // the caret steps from beat to beat: a new object every frame re-rendered the editor 60 times a second, and
+        // each move repaints the whole score, which is heavy for a big orchestral page
+        if (a) {
+          const t = Math.min(total, a.tick + Math.floor((sec - a.sec) / a.tps / 240) * 240)
+          setCaret((c) => (c.t === t && c.staff === staff ? c : { staff, t }))
+        }
       },
       onEnd: () => {
         setPlaying(false)
@@ -861,7 +876,7 @@ export function ComposePage() {
       >
         {!tk && <p className="cmp-loading">{failed ? 'Không nạp được bộ khắc nhạc — kiểm tra mạng rồi mở lại trang.' : 'Đang nạp bộ khắc nhạc…'}</p>}
         <div ref={svgRef} className="cmp-svg" style={pinchScale !== 1 ? { transform: `scale(${pinchScale})`, transformOrigin: 'top center' } : undefined} />
-        {caretBox && !sel && <span className={clsx('cmp-caret', playing && 'is-playing')} style={{ left: caretBox.x, top: caretBox.y, height: caretBox.h }} aria-hidden />}
+        {caretBox && !sel && <span className={clsx('cmp-caret', playing && 'is-playing')} style={{ transform: `translate(${caretBox.x}px, ${caretBox.y}px)`, height: caretBox.h }} aria-hidden />}
         {range && <span className="cmp-range" style={{ left: Math.min(range.x0, range.x1) - range.ox, width: Math.abs(range.x1 - range.x0), top: range.y - range.oy - 40 }} aria-hidden />}
       </div>
 
@@ -974,7 +989,7 @@ export function ComposePage() {
               <li key={s.id}>
                 <button className={clsx(s.id === score.id && 'is-on')} onClick={() => openScore(s.id)}>
                   <b>{s.title}</b>
-                  <small>{s.instruments?.some((i) => i !== 'piano') ? 'Đàn dây' : s.labels?.length ? 'Hợp xướng' : s.clefs.length > 1 ? 'Khuông đôi' : 'Khuông đơn'} · {s.measures} ô · {new Date(s.updated).toLocaleDateString('vi-VN')}</small>
+                  <small>{s.instruments?.some((i) => i !== 'piano') ? 'Hoà tấu' : s.labels?.length ? 'Hợp xướng' : s.clefs.length > 1 ? 'Khuông đôi' : 'Khuông đơn'} · {s.measures} ô · {new Date(s.updated).toLocaleDateString('vi-VN')}</small>
                 </button>
               </li>
             ))}
@@ -1033,7 +1048,7 @@ export function ComposePage() {
           <p className="cmp-help">
             Chạm lên khuông để đặt nốt đúng cao độ chỗ chạm. Chạm vào nốt để chọn. Nhấn giữ một nốt: vòng lựa chọn hiện ra — trượt tới mục rồi nhả tay, hoặc kéo thẳng lên xuống để đổi cao độ. Kéo ngang trên khuông để chọn nhiều nốt. Hai ngón để phóng to, thu nhỏ. Máy tính: A – G đặt nốt, 1 – 7 trường độ (7 = tròn), dấu chấm = chấm dôi, + − = thăng giáng, 0 = dấu lặng, mũi tên, Ctrl+Z, phím cách để nghe.
           </p>
-          <p className="cmp-help">Bộ khắc nhạc: Verovio (giấy phép LGPL-3.0). Tiếng đàn dây: <a href="https://versilian-studios.com/vsco-community/" target="_blank" rel="noreferrer">VSCO 2: Community Edition</a> của Versilian Studios (CC0).</p>
+          <p className="cmp-help">Bộ khắc nhạc: Verovio (giấy phép LGPL-3.0). Tiếng dàn nhạc (dây, kèn gỗ, kèn đồng): <a href="https://versilian-studios.com/vsco-community/" target="_blank" rel="noreferrer">VSCO 2: Community Edition</a> của Versilian Studios (CC0).</p>
         </Sheet>
       )}
     </div>

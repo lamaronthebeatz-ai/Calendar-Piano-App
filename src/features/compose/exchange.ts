@@ -233,7 +233,12 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
       const prog = +(p.querySelector('midi-instrument > midi-program')?.textContent ?? 0) - 1
       const byProg = INSTRUMENTS.find((x) => x.program === prog && x.id !== 'piano')?.id
       const name = `${kid(p, 'part-name')?.textContent ?? ''} ${p.querySelector('instrument-name')?.textContent ?? ''}`
-      const byName: Inst | undefined = /contrabass|double bass|kontrabass/i.test(name) ? 'contrabass' : /cello/i.test(name) ? 'cello' : /viola|bratsche/i.test(name) ? 'viola' : /violin|violino/i.test(name) ? 'violin' : undefined
+      const NAMES: [RegExp, Inst][] = [
+        [/contrabass|double bass|kontrabass/i, 'contrabass'], [/cello/i, 'cello'], [/viola|bratsche/i, 'viola'], [/violin|violino/i, 'violin'],
+        [/flute|flauto|flöte/i, 'flute'], [/oboe/i, 'oboe'], [/clarinet|clarinetto|klarinette/i, 'clarinet'], [/bassoon|fagott/i, 'bassoon'],
+        [/horn|corno/i, 'horn'], [/trumpet|tromba|trompete/i, 'trumpet'], [/trombone|posaune/i, 'trombone'], [/tuba/i, 'tuba'],
+      ]
+      const byName = NAMES.find(([re]) => re.test(name))?.[1]
       return [p.getAttribute('id'), byProg ?? byName ?? 'piano']
     }),
   )

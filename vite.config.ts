@@ -48,10 +48,10 @@ export default defineConfig({
             options: { cacheName: 'library', expiration: { maxEntries: 12000, purgeOnQuotaError: true } },
           },
           {
-            // string samples of the score editor (theory/audio.ts loadInstruments): fetched when a score uses them
-            urlPattern: ({ url }) => url.pathname.includes('/media/strings/'),
+            // orchestral samples of the score editor (theory/audio.ts loadInstruments): fetched when a score uses them
+            urlPattern: ({ url }) => url.pathname.includes('/media/instruments/'),
             handler: 'CacheFirst',
-            options: { cacheName: 'string-samples', expiration: { maxEntries: 160, maxAgeSeconds: 60 * 60 * 24 * 365 } },
+            options: { cacheName: 'instrument-samples', expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 365 } },
           },
           {
             // piano samples and metronome ticks (theory/audio.ts): fetched on the first played note, then kept for offline use

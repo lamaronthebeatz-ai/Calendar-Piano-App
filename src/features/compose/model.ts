@@ -208,11 +208,20 @@ export const INSTRUMENTS: { id: Inst; label: string; clef: Clef; program: number
   { id: 'viola', label: 'Viola', clef: 'alto', program: 41, transpose: 0 },
   { id: 'cello', label: 'Cello', clef: 'bass', program: 42, transpose: 0 },
   { id: 'contrabass', label: 'Contrabass', clef: 'bass', program: 43, transpose: -12 },
+  // winds are written at sounding pitch for now (a transposing score for clarinet, horn, trumpet is a later step)
+  { id: 'flute', label: 'Flute', clef: 'treble', program: 73, transpose: 0 },
+  { id: 'oboe', label: 'Oboe', clef: 'treble', program: 68, transpose: 0 },
+  { id: 'clarinet', label: 'Clarinet', clef: 'treble', program: 71, transpose: 0 },
+  { id: 'bassoon', label: 'Bassoon', clef: 'bass', program: 70, transpose: 0 },
+  { id: 'horn', label: 'Horn', clef: 'treble', program: 60, transpose: 0 },
+  { id: 'trumpet', label: 'Trumpet', clef: 'treble', program: 56, transpose: 0 },
+  { id: 'trombone', label: 'Trombone', clef: 'bass', program: 57, transpose: 0 },
+  { id: 'tuba', label: 'Tuba', clef: 'bass', program: 58, transpose: 0 },
 ]
 export const instOf = (s: Score, staff: number): Inst => s.instruments?.[staff] ?? 'piano'
 export const transposeOf = (inst: Inst) => INSTRUMENTS.find((i) => i.id === inst)?.transpose ?? 0
 
-export type Template = 'grand' | 'single' | 'satb4' | 'satb2' | 'quartet' | 'strings'
+export type Template = 'grand' | 'single' | 'satb4' | 'satb2' | 'quartet' | 'strings' | 'winds' | 'brass' | 'orchestra'
 export const TEMPLATES: { id: Template; label: string }[] = [
   { id: 'grand', label: 'Khuông đôi (piano)' },
   { id: 'single', label: 'Khuông đơn' },
@@ -220,20 +229,37 @@ export const TEMPLATES: { id: Template; label: string }[] = [
   { id: 'satb2', label: 'Hợp xướng SATB — 2 khuông, 4 bè' },
   { id: 'quartet', label: 'Tứ tấu đàn dây' },
   { id: 'strings', label: 'Dàn dây (5 bè)' },
+  { id: 'winds', label: 'Ngũ tấu kèn gỗ' },
+  { id: 'brass', label: 'Ngũ tấu kèn đồng' },
+  { id: 'orchestra', label: 'Dàn nhạc (13 bè)' },
 ]
 
+// staves of the ensemble templates: instrument and staff name, in score order
+const ENSEMBLES: Partial<Record<Template, { title: string; parts: [Inst, string][] }>> = {
+  quartet: { title: 'Tứ tấu mới', parts: [['violin', 'Violin I'], ['violin', 'Violin II'], ['viola', 'Viola'], ['cello', 'Cello']] },
+  strings: { title: 'Bản cho dàn dây', parts: [['violin', 'Violin I'], ['violin', 'Violin II'], ['viola', 'Viola'], ['cello', 'Cello'], ['contrabass', 'Contrabass']] },
+  winds: { title: 'Ngũ tấu kèn gỗ', parts: [['flute', 'Flute'], ['oboe', 'Oboe'], ['clarinet', 'Clarinet'], ['horn', 'Horn'], ['bassoon', 'Bassoon']] },
+  brass: { title: 'Ngũ tấu kèn đồng', parts: [['trumpet', 'Trumpet I'], ['trumpet', 'Trumpet II'], ['horn', 'Horn'], ['trombone', 'Trombone'], ['tuba', 'Tuba']] },
+  orchestra: {
+    title: 'Bản cho dàn nhạc',
+    parts: [
+      ['flute', 'Flute'], ['oboe', 'Oboe'], ['clarinet', 'Clarinet'], ['bassoon', 'Bassoon'], ['horn', 'Horn'], ['trumpet', 'Trumpet'],
+      ['trombone', 'Trombone'], ['tuba', 'Tuba'], ['violin', 'Violin I'], ['violin', 'Violin II'], ['viola', 'Viola'], ['cello', 'Cello'], ['contrabass', 'Contrabass'],
+    ],
+  },
+}
+
 export function fromTemplate(t: Template): Score {
-  const base = blank(t === 'single' ? 'Giai điệu mới' : t.startsWith('satb') ? 'Hợp xướng mới' : t === 'quartet' ? 'Tứ tấu mới' : t === 'strings' ? 'Bản cho dàn dây' : 'Bản nhạc mới', t !== 'single')
-  if (t === 'quartet' || t === 'strings') {
-    const insts: Inst[] = t === 'quartet' ? ['violin', 'violin', 'viola', 'cello'] : ['violin', 'violin', 'viola', 'cello', 'contrabass']
+  const ens = ENSEMBLES[t]
+  const base = blank(ens?.title ?? (t === 'single' ? 'Giai điệu mới' : t.startsWith('satb') ? 'Hợp xướng mới' : 'Bản nhạc mới'), t !== 'single')
+  if (ens)
     return normalized({
       ...base,
-      clefs: insts.map((i) => INSTRUMENTS.find((x) => x.id === i)!.clef),
-      labels: ['Violin I', 'Violin II', 'Viola', 'Cello', 'Contrabass'].slice(0, insts.length),
-      instruments: insts,
-      staves: insts.map(() => []),
+      clefs: ens.parts.map(([i]) => INSTRUMENTS.find((x) => x.id === i)!.clef),
+      labels: ens.parts.map(([, l]) => l),
+      instruments: ens.parts.map(([i]) => i),
+      staves: ens.parts.map(() => []),
     })
-  }
   if (t === 'satb4')
     return normalized({ ...base, clefs: ['treble', 'treble', 'treble8', 'bass'], labels: ['Soprano', 'Alto', 'Tenor', 'Bass'], staves: [[], [], [], []] })
   if (t === 'satb2')
