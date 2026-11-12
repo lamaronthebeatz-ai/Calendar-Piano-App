@@ -297,3 +297,59 @@ test('soạn nhạc: thanh nhập nhanh — phím đàn, đổi trường độ,
   const bass = await page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0].staves[1].find((e: { notes: unknown[] }) => e.notes.length))
   expect(bass.start).toBe(0)
 })
+
+test.describe('soạn nhạc trên tablet', () => {
+  test.use({ viewport: { width: 834, height: 1194 }, hasTouch: true, isMobile: true })
+  test('phím đàn phủ hết chiều ngang, công cụ gom vào dải trên phím đàn', async ({ page }) => {
+    test.setTimeout(90_000)
+    await open(page)
+    // no floating panel: one band with the tabs, "Nhanh" first
+    await expect(page.locator('.cmp-palette.is-docked')).toBeVisible()
+    await expect(page.locator('.cmp-fab')).toHaveCount(0)
+    await expect(page.getByRole('tab', { name: 'Nhanh' })).toHaveAttribute('aria-selected', 'true')
+    const k = await page.evaluate(() => ({ row: document.querySelector('.cmp-keys-row')!.getBoundingClientRect().width, vw: innerWidth }))
+    expect(k.row).toBeGreaterThan(k.vw - 24)
+    await page.locator('.cmp-keys button[aria-label="Đô5"]').first().tap()
+    await page.getByRole('tab', { name: 'Sắc thái' }).tap()
+    await page.getByRole('button', { name: 'ff', exact: true }).tap()
+    await expect(page.locator('.cmp-svg [data-class="dynam"]')).toHaveCount(1)
+  })
+})
+
+test('soạn nhạc: phím tắt như MuseScore 4', async ({ page }) => {
+  test.skip(test.info().project.name.endsWith('phone'), 'bàn phím máy tính')
+  test.setTimeout(90_000)
+  await open(page)
+  const notes = () => page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores')!)[0].staves[0].filter((e: { notes: unknown[] }) => e.notes.length))
+  await page.keyboard.press('5') // quarter
+  for (const k of ['c', 'e', 'g']) await page.keyboard.press(k)
+  await page.keyboard.press('Shift+C') // C above the G: G5 + C6
+  await page.keyboard.press('Alt+Digit3') // a third above the top: E6
+  let n = await notes()
+  expect(n.length).toBe(3)
+  expect(n[2].notes.map((x: { step: number; oct: number }) => 'CDEFGAB'[x.step] + x.oct)).toEqual(['G5', 'C6', 'E6'])
+  // select the first note, a semitone up, an octave up
+  await page.keyboard.press('Control+ArrowLeft')
+  await page.keyboard.press('ArrowUp')
+  n = await notes()
+  expect(n[0].notes[0]).toMatchObject({ step: 0, oct: 5, alter: 1 })
+  await page.keyboard.press('Control+ArrowUp')
+  n = await notes()
+  expect(n[0].notes[0]).toMatchObject({ step: 0, oct: 6, alter: 1 })
+  // J: C♯ is D♭
+  await page.keyboard.press('j')
+  n = await notes()
+  expect(n[0].notes[0]).toMatchObject({ step: 1, oct: 6, alter: -1 })
+  // Shift+S staccato, W doubles the value of the selection
+  await page.keyboard.press('Shift+S')
+  await page.keyboard.press('w')
+  n = await notes()
+  expect(n[0].artic).toEqual(['stacc'])
+  expect(n[0].dur).toBe(480)
+  // the half note took the second beat's note (writing overwrites): two left; Ctrl+A, then R repeats them after
+  expect(n.length).toBe(2)
+  await page.keyboard.press('Control+a')
+  await page.keyboard.press('r')
+  n = await notes()
+  expect(n.length).toBe(4)
+})

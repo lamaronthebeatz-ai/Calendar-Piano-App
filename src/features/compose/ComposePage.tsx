@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore, type CSSProperties, type ReactNode } from 'react'
 import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
@@ -14,6 +14,16 @@ import { engraver, render, renderPages } from './engrave'
 import { fileName, fromMusicXml, toMidi, toMusicXml, unzipMxl } from './exchange'
 import { usePageLoading } from '../../layout/pageCurtain'
 import './compose.css'
+
+const useMedia = (q: string) =>
+  useSyncExternalStore(
+    (cb) => {
+      const m = matchMedia(q)
+      m.addEventListener('change', cb)
+      return () => m.removeEventListener('change', cb)
+    },
+    () => matchMedia(q).matches,
+  )
 
 /* ---------- storage: every score on this device, in localStorage ---------- */
 
@@ -87,7 +97,9 @@ export function ComposePage() {
   const [restMode, setRestMode] = useState(false)
   const [chordMode, setChordMode] = useState(false)
   const [tupletMode, setTupletMode] = useState<number | null>(null) // 3, 5 or 6 while on
-  const [voice, setVoice] = useState(1) // the voice a tap on a staff writes into
+  const [voice, setVoice] = useState(1)
+  // a tablet held in the hands: every tool sits in one band on top of the keys instead of a floating panel
+  const tablet = useMedia('(pointer: coarse) and (min-width: 700px)') // the voice a tap on a staff writes into
   const [entry, setEntry] = useState<{ kind: 'lyric' | 'harm'; lane: number; evId: string; text: string } | null>(null)
   const [flash, setFlash] = useState('')
   useEffect(() => {
@@ -765,47 +777,196 @@ export function ComposePage() {
     if (c) pasteAt(c.staff, c.end)
   }
 
-  /* ---------- keyboard shortcuts on a computer (Sibelius-like) ---------- */
+  /* ---------- what the MuseScore shortcuts need ---------- */
+
+  /** A pitch a semitone (or more) away, spelt with sharps, or flats in a flat key. */
+  const respell = (midi: number, key: number): Note => {
+    const pc = ((midi % 12) + 12) % 12
+    const oct = Math.floor(midi / 12) - 1
+    if (WHITE.includes(pc)) return { step: WHITE.indexOf(pc), oct, alter: 0 }
+    return key < 0 ? { step: WHITE.indexOf(pc + 1), oct, alter: -1 } : { step: WHITE.indexOf(pc - 1), oct, alter: 1 }
+  }
+  const onSel = (f: (n: Note, key: number) => Note, s0 = score) => {
+    if (!sel) return s0
+    let s = s0
+    for (const id of sel.ids) {
+      const ev = s.staves[sel.staff].find((x) => x.id === id)
+      if (!ev) continue
+      const key = barAt(layout(s), ev.start).key
+      s = updateEv(s, sel.staff, id, (x) => ({ ...x, notes: x.notes.map((n, j) => (sel.note === undefined || sel.note === j ? { ...f(n, key), tie: n.tie } : n)) }))
+    }
+    return s
+  }
+  const semitone = (d: number) => onSel((n, key) => respell(midiOf(n) + d, key))
+  /** The same sound, the other name: C♯ ↔ D♭, E♯ ↔ F. */
+  const enharmonic = () => {
+    if (!sel) return
+    commit(
+      onSel((n) => {
+        const m = midiOf(n)
+        for (const step of [n.step + 1, n.step - 1].map((x) => fromDn(dn(n) + (x - n.step)))) {
+          const alter = m - midiOf({ ...step, alter: 0 })
+          if (Math.abs(alter) <= 1 && (alter !== 0 || n.alter !== 0)) return { ...step, alter }
+        }
+        return n
+      }),
+    )
+  }
+  /** The chord to add to: the selection, or the note just written. */
+  const chordHost = () => {
+    const tg = targets()
+    return tg ? { staff: tg.staff, ev: score.staves[tg.staff].find((x) => x.id === tg.ids[0]) } : null
+  }
+  const addPitch = (d: number) => {
+    const h = chordHost()
+    if (!h?.ev?.notes.length) return setFlash('Viết một nốt trước đã')
+    const key = barAt(bars, h.ev.start).key
+    const note: Note = fromDn(d, sigAlter(key, ((d % 7) + 7) % 7))
+    if (h.ev.notes.some((n) => midiOf(n) === midiOf(note))) return
+    commit(updateEv(score, h.staff, h.ev.id, (x) => ({ ...x, notes: [...x.notes, note].sort((a, b) => dn(a) - dn(b)) })))
+    sound([note], h.staff)
+  }
+  /** Shift + letter: that note, the nearest one above the chord's top. */
+  const addToChord = (letter: number) => {
+    const top = chordHost()?.ev?.notes.at(-1)
+    if (!top) return setFlash('Viết một nốt trước đã')
+    let d = letter + 7 * Math.floor(dn(top) / 7)
+    while (d <= dn(top)) d += 7
+    addPitch(d)
+  }
+  /** Alt + 2…9: a second … a ninth above the top note (Alt + 1, the unison, adds nothing). */
+  const addInterval = (n: number) => {
+    const top = chordHost()?.ev?.notes.at(-1)
+    if (!top) return setFlash('Viết một nốt trước đã')
+    if (n > 1) addPitch(dn(top) + n - 1)
+  }
+  /** Q / W: half or twice the value, of the selection or of the next note. */
+  const halveDouble = (d: 1 | -1) => {
+    const i = DUR_NAMES.indexOf(dur) - d
+    if (i >= 0 && i < DUR_NAMES.length) applyDur(DUR_NAMES[i], dots)
+  }
+  const switchVoice = (v: number) => {
+    if (v > 2) return setFlash('Mỗi khuông có hai bè')
+    const lane = laneIndex(score, physOf(caret.staff), v)
+    setVoice(v)
+    setSel(null)
+    if (lane >= 0) setCaret({ staff: lane, t: caret.t })
+    setFlash(`Bè ${v}`)
+  }
+  /** Ctrl + ←/→: the start of the previous or next measure. */
+  const stepBar = (d: 1 | -1) => {
+    const b = barAt(bars, Math.min(caret.t, totalOf(score) - 1))
+    const to = bars[Math.max(0, Math.min(bars.length - 1, b.index + d))]
+    const ev = score.staves[caret.staff].find((x) => x.start >= to.start && x.notes.length && x.start < to.start + to.len)
+    setCaret({ ...caret, t: to.start })
+    setSel(ev ? { staff: caret.staff, ids: [ev.id] } : null)
+  }
+  /** Shift + ←/→: one more note in the selection. */
+  const extendSel = (d: 1 | -1) => {
+    const evs = score.staves[caret.staff].filter((x) => x.notes.length)
+    if (!sel) return stepCaret(d)
+    const idx = sel.ids.map((id) => evs.findIndex((x) => x.id === id)).filter((x) => x >= 0)
+    const nx = d > 0 ? Math.max(...idx) + 1 : Math.min(...idx) - 1
+    if (evs[nx]) setSel({ staff: sel.staff, ids: [...sel.ids, evs[nx].id] })
+  }
+  /** Ctrl + Shift + ←/→: to the start or end of the measure. */
+  const extendToBar = (d: 1 | -1) => {
+    const lane = sel?.staff ?? caret.staff
+    const first = sel ? score.staves[lane].find((x) => x.id === sel.ids[0]) : undefined
+    const b = barAt(bars, first?.start ?? caret.t)
+    const ids = score.staves[lane].filter((x) => x.notes.length && x.start >= b.start && x.start < b.start + b.len && (d > 0 ? x.start >= (first?.start ?? 0) : x.start <= (first?.start ?? Infinity))).map((x) => x.id)
+    if (ids.length) setSel({ staff: lane, ids })
+  }
+  const selectAll = () => {
+    const ids = score.staves[caret.staff].filter((x) => x.notes.length).map((x) => x.id)
+    setSel(ids.length ? { staff: caret.staff, ids } : null)
+  }
+  const cutSel = () => {
+    if (!copySel() || !sel) return
+    let s = score
+    for (const id of sel.ids) s = clearEv(s, sel.staff, id)
+    commit(s)
+    setSel(null)
+  }
+  const askDyn = () => {
+    const d = window.prompt('Sắc thái: ppp, pp, p, mp, mf, f, ff, fff, sf, sfz, fp', target?.dyn ?? 'mf')?.trim() as Dyn | undefined
+    if (d && DYNS.some(([x]) => x === d)) setDyn(d)
+  }
+
+  /* ---------- keyboard shortcuts on a computer (MuseScore 4) ---------- */
 
   useEffect(() => {
+    // MuseScore 4's default shortcuts (handbook.musescore.org, "All keyboard shortcuts"); Cmd on a Mac stands for Ctrl
     const onKey = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement).closest('input, textarea, select')) return
+      if ((e.target as HTMLElement).closest('input, textarea, select') || entry) return
       const k = e.key
-      if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'z') {
-        e.preventDefault()
-        return e.shiftKey ? redo() : undo()
+      const ctrl = e.metaKey || e.ctrlKey
+      const lower = k.length === 1 ? k.toLowerCase() : k
+      const letter = /^[a-g]$/i.test(k) ? 'cdefgab'.indexOf(lower) : -1
+      const take = () => e.preventDefault()
+      if (ctrl && !e.altKey) {
+        if (lower === 'z') return take(), e.shiftKey ? redo() : undo()
+        if (lower === 'y') return take(), redo()
+        if (lower === 'c') return copySel()
+        if (lower === 'x') return cutSel()
+        if (lower === 'v') return take(), paste()
+        if (lower === 'a') return take(), selectAll()
+        if (lower === 'b') return take(), commit(normalized({ ...score, measures: score.measures + 1 }))
+        if (lower === 't') return take(), setText('expr')
+        if (lower === 'l') return take(), startEntry('lyric')
+        if (lower === 'k') return take(), startEntry('harm')
+        if (lower === 'd') return take(), askDyn()
+        if (lower === 'j') return take(), enharmonic()
+        // an octave keeps the accidental (a step transposition would respell it from the key)
+        if (k === 'ArrowUp' || k === 'ArrowDown') return take(), sel && commit(onSel((n) => ({ ...n, oct: n.oct + (k === 'ArrowUp' ? 1 : -1) })))
+        if (k === 'ArrowRight' || k === 'ArrowLeft') return take(), e.shiftKey ? extendToBar(k === 'ArrowRight' ? 1 : -1) : stepBar(k === 'ArrowRight' ? 1 : -1)
+        if (k === '=' || k === '+') return take(), setZoom((z) => Math.min(110, z + 6))
+        if (k === '-') return take(), setZoom((z) => Math.max(26, z - 6))
+        if (k === '0') return take(), setZoom(60)
+        if (/^[2-9]$/.test(k)) {
+          take()
+          const n = +k
+          return TUPLETS.some((t) => t.n === n) ? setTupletMode((m) => (m === n ? null : n)) : setFlash(`Chưa có liên ${n}`)
+        }
+        return
       }
-      if (/^[a-gA-G]$/.test(k)) {
+      if (ctrl && e.altKey && /^Digit[1-4]$/.test(e.code)) return take(), switchVoice(+e.code.slice(5))
+      if (e.altKey && e.shiftKey && (k === 'ArrowUp' || k === 'ArrowDown')) return take(), sel && commit(transpose(k === 'ArrowUp' ? 1 : -1))
+      if (e.altKey && e.shiftKey && lower === 't') return take(), setText('tempo')
+      if (e.altKey && /^Digit[1-9]$/.test(e.code)) return take(), addInterval(+e.code.slice(5))
+      if (e.altKey) return
+      if (letter >= 0 && e.shiftKey) return addToChord(letter)
+      if (e.shiftKey && lower === 's') return toggleArtic('stacc')
+      if (e.shiftKey && lower === 'v') return toggleArtic('acc')
+      if (e.shiftKey && lower === 'n') return toggleArtic('ten')
+      if (e.shiftKey && lower === 'o') return toggleArtic('marc')
+      if (e.shiftKey && (k === 'ArrowRight' || k === 'ArrowLeft')) return take(), extendSel(k === 'ArrowRight' ? 1 : -1)
+      if (letter >= 0) {
         // the octave nearest the last note written on this staff
-        const step = 'cdefgab'.indexOf(k.toLowerCase())
         const prev = [...score.staves[caret.staff]].reverse().find((x) => x.start < caret.t && x.notes.length)
         const ref = prev ? dn(prev.notes[0]) : CLEF_BOTTOM[barAt(bars, caret.t).clefs[physOf(caret.staff)]] + 4
-        let best = step + 7 * Math.floor(ref / 7)
+        let best = letter + 7 * Math.floor(ref / 7)
         for (const c of [best - 7, best + 7]) if (Math.abs(c - ref) < Math.abs(best - ref)) best = c
-        insert(caret.staff, caret.t, best)
-      } else if (/^[1-7]$/.test(k)) applyDur(DUR_NAMES[7 - +k], 0)
-      else if (k === '.') toggleDot(1)
-      else if (k === '0') toRest()
-      else if (k === '+' || k === '=') applyAlter(k === '+' ? 1 : 0)
-      else if (k === '-') applyAlter(-1)
-      else if (k === 'Backspace' || k === 'Delete') remove()
-      else if (k === 'ArrowUp' || k === 'ArrowDown') {
-        if (!sel) return
-        e.preventDefault()
-        commit(transpose(k === 'ArrowUp' ? (e.ctrlKey ? 7 : 1) : e.ctrlKey ? -7 : -1))
-      } else if (k === 'ArrowRight' || k === 'ArrowLeft') {
-        e.preventDefault()
-        stepCaret(k === 'ArrowRight' ? 1 : -1)
-      } else if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'c') copySel()
-      else if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'v') paste()
-      else if ((e.metaKey || e.ctrlKey) && k.toLowerCase() === 'd') {
-        e.preventDefault()
-        duplicate()
-      } else if (k === 'Escape') setSel(null)
-      else if (k === ' ') {
-        e.preventDefault()
-        togglePlay()
-      } else return
+        return insert(caret.staff, caret.t, best)
+      }
+      if (/^[1-7]$/.test(k)) return applyDur(DUR_NAMES[7 - +k], 0)
+      if (k === '.') return toggleDot(1)
+      if (k === '0') return toRest()
+      if (k === '+') return applyAlter(1)
+      if (k === '-') return applyAlter(-1)
+      if (k === '=') return applyAlter(0)
+      if (lower === 't') return toggleTie()
+      if (lower === 's') return toggleSpan('slur')
+      if (lower === 'r') return duplicate()
+      if (lower === 'j') return enharmonic()
+      if (lower === 'q' || lower === 'w') return halveDouble(lower === 'w' ? 1 : -1)
+      if (lower === 'n' || k === 'Escape') return setSel(null)
+      if (k === '<') return toggleSpan('cres')
+      if (k === '>') return toggleSpan('dim')
+      if (k === 'Backspace' || k === 'Delete') return remove()
+      if (k === 'ArrowUp' || k === 'ArrowDown') return sel && (take(), commit(semitone(k === 'ArrowUp' ? 1 : -1)))
+      if (k === 'ArrowRight' || k === 'ArrowLeft') return take(), stepCaret(k === 'ArrowRight' ? 1 : -1)
+      if (k === ' ') return take(), togglePlay()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -968,6 +1129,31 @@ export function ComposePage() {
       )}
 
       <Palette
+        docked={tablet}
+        above={showKeys}
+        quick={
+          <QuickBar
+            inline
+            above={showKeys}
+            dur={dur}
+            dots={dots}
+            restMode={restMode}
+            armed={armed}
+            hasSel={!!sel}
+            hasClip={hasClip}
+            staffName={score.clefs.length > 1 ? score.labels?.[(physOf(caret.staff) + 1) % score.clefs.length] || `Khuông ${((physOf(caret.staff) + 1) % score.clefs.length) + 1}` : ''}
+            onDur={(d) => applyDur(d, 0)}
+            onDot={() => toggleDot(1)}
+            onRest={toRest}
+            onAlter={applyAlter}
+            onDelete={remove}
+            onStep={stepCaret}
+            onStaff={nextStaff}
+            onCopy={copySel}
+            onPaste={paste}
+            onDuplicate={duplicate}
+          />
+        }
         dur={dur}
         dots={dots}
         restMode={restMode}
@@ -1040,7 +1226,7 @@ export function ComposePage() {
           onClose={() => setEntry(null)}
         />
       )}
-      {!entry && (
+      {!entry && !tablet && (
         <QuickBar
           above={showKeys}
           dur={dur}
@@ -1136,7 +1322,7 @@ export function ComposePage() {
             <button className="is-danger" onClick={deleteScore}>Xoá bản này</button>
           </div>
           <p className="cmp-help">
-            Chạm lên khuông để đặt nốt đúng cao độ chỗ chạm. Chạm vào nốt để chọn. Nhấn giữ một nốt: vòng lựa chọn hiện ra — trượt tới mục rồi nhả tay, hoặc kéo thẳng lên xuống để đổi cao độ. Kéo ngang trên khuông để chọn nhiều nốt. Hai ngón để phóng to, thu nhỏ. Máy tính: A – G đặt nốt, 1 – 7 trường độ (7 = tròn), dấu chấm = chấm dôi, + − = thăng giáng, 0 = dấu lặng, mũi tên, Ctrl+Z, phím cách để nghe.
+            Chạm lên khuông để đặt nốt đúng cao độ chỗ chạm. Chạm vào nốt để chọn. Nhấn giữ một nốt: vòng lựa chọn hiện ra — trượt tới mục rồi nhả tay, hoặc kéo thẳng lên xuống để đổi cao độ. Kéo ngang trên khuông để chọn nhiều nốt. Hai ngón để phóng to, thu nhỏ. Máy tính dùng phím tắt mặc định của MuseScore 4 (Mac: Cmd thay Ctrl, Option thay Alt): A – G nốt, Shift + chữ thêm vào hợp âm, Alt + 2…9 thêm quãng phía trên; 1 – 7 trường độ (5 = đen, 7 = tròn), dấu chấm = chấm dôi, 0 = dấu lặng, + − = thăng giáng hoá; ↑ ↓ nửa cung, Ctrl + ↑ ↓ quãng tám, Alt + Shift + ↑ ↓ một bậc; ← → nốt, Ctrl + ← → ô, Shift + ← → chọn thêm; T nối, S luyến, {'< >'} to dần / nhỏ dần, Shift + S/V/N/O staccato, accent, tenuto, marcato; Ctrl + 3/5/6 liên ba, năm, sáu; Q / W giảm / tăng đôi trường độ; J đổi tên đồng âm; R lặp đoạn chọn; Ctrl + C/X/V chép, cắt, dán; Ctrl + A chọn hết; Ctrl + B thêm ô; Ctrl + T chữ, Alt + Shift + T nhịp độ, Ctrl + L lời, Ctrl + K hợp âm, Ctrl + D sắc thái; Ctrl + Alt + 1/2 bè; Ctrl + Z / Ctrl + Shift + Z hoàn tác, làm lại; phím cách để nghe. Vài tổ hợp Ctrl + số trình duyệt giữ cho việc đổi tab.
           </p>
           <p className="cmp-help">Bộ khắc nhạc: Verovio (giấy phép LGPL-3.0). Tiếng dàn nhạc (dây, kèn gỗ, kèn đồng): <a href="https://versilian-studios.com/vsco-community/" target="_blank" rel="noreferrer">VSCO 2: Community Edition</a> của Versilian Studios (CC0).</p>
         </Sheet>
@@ -1322,11 +1508,11 @@ const NAVS: ['segno' | 'coda' | Jump, string, string, 'start' | 'end'][] = [
  * Tools in a panel that floats over the paper: dragged by its handle anywhere on screen, folded into a round button,
  * and remembered where it was left.
  */
-function Palette(p: PaletteProps) {
+function Palette(p: PaletteProps & { docked?: boolean; quick?: ReactNode; above?: boolean }) {
   const [pos, setPos] = useState<{ x: number; y: number }>(() => loadPref('compose:palette', { x: 12, y: -1 }))
   // closed at first on a phone, where it would cover half the score (the quick bar holds the everyday tools)
   const [open, setOpen] = useState<boolean>(() => loadPref('compose:palette-open2', window.innerWidth >= 700))
-  const [tab, setTab] = useState<(typeof TABS)[number][0]>('notes')
+  const [tab, setTab] = useState<(typeof TABS)[number][0] | 'quick'>(p.docked ? 'quick' : 'notes')
   const drag = useRef<{ dx: number; dy: number; id: number } | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => savePref('compose:palette', pos), [pos])
@@ -1334,13 +1520,13 @@ function Palette(p: PaletteProps) {
   // a first visit, or a window that got smaller: keep the panel on screen
   useLayoutEffect(() => {
     const el = ref.current
-    if (!el) return
+    if (!el || p.docked) return
     const w = el.offsetWidth
     const h = el.offsetHeight
     const x = Math.min(Math.max(6, pos.x), window.innerWidth - w - 6)
     const y = pos.y < 0 ? window.innerHeight - h - (loadPref('compose:keys', true) ? 188 : 74) : Math.min(Math.max(60, pos.y), window.innerHeight - h - 6)
     if (x !== pos.x || y !== pos.y) setPos({ x, y })
-  }, [pos, open, tab])
+  }, [pos, open, tab, p.docked])
   const grip = {
     onPointerDown: (e: React.PointerEvent) => {
       e.currentTarget.setPointerCapture(e.pointerId)
@@ -1358,23 +1544,33 @@ function Palette(p: PaletteProps) {
   const { bar } = p.here()
   const b = p.bars[bar]
 
-  if (!open)
+  if (!open && !p.docked)
     return (
       <button ref={ref as never} className="cmp-fab" style={{ left: pos.x, top: pos.y }} {...grip} onClick={() => !drag.current && setOpen(true)} aria-label="Mở bảng công cụ">
         <span>{p.restMode ? REST_GLYPH[p.dur] : NOTE_GLYPH[p.dur]}</span>
       </button>
     )
   return (
-    <div ref={ref} className="cmp-palette" style={{ left: pos.x, top: pos.y } as CSSProperties} role="toolbar" aria-label="Bảng công cụ">
-      <div className="cmp-grip" {...grip}>
-        <span aria-hidden className="cmp-grip-bar" />
-        <button onPointerDown={(e) => e.stopPropagation()} onClick={() => setOpen(false)} aria-label="Thu gọn bảng công cụ">–</button>
-      </div>
+    <div
+      ref={ref}
+      className={clsx('cmp-palette', p.docked && 'is-docked', p.docked && p.above && 'is-above')}
+      style={p.docked ? undefined : ({ left: pos.x, top: pos.y } as CSSProperties)}
+      role="toolbar"
+      aria-label="Bảng công cụ"
+    >
+      {!p.docked && (
+        <div className="cmp-grip" {...grip}>
+          <span aria-hidden className="cmp-grip-bar" />
+          <button onPointerDown={(e) => e.stopPropagation()} onClick={() => setOpen(false)} aria-label="Thu gọn bảng công cụ">–</button>
+        </div>
+      )}
       <div className="cmp-tabs" role="tablist">
-        {TABS.map(([id, label]) => (
+        {(p.docked ? ([['quick', 'Nhanh'], ...TABS] as const) : TABS).map(([id, label]) => (
           <button key={id} role="tab" aria-selected={tab === id} className={clsx(tab === id && 'is-on')} onClick={() => setTab(id)}>{label}</button>
         ))}
       </div>
+      <div className="cmp-pane">
+      {tab === 'quick' && p.quick}
       {tab === 'notes' && (
         <div className="cmp-grid">
           {DUR_NAMES.map((d) => (
@@ -1506,6 +1702,7 @@ function Palette(p: PaletteProps) {
           </div>
         </div>
       )}
+      </div>
     </div>
   )
 }
@@ -1525,16 +1722,39 @@ const WHITE = [0, 2, 4, 5, 7, 9, 11]
 
 /** Two octaves and a half of keys around the caret's staff; a black key is spelled sharp, or flat in a flat key. */
 function Keys({ staff, clef, keySig, onKey }: { staff: number; clef: Clef; keySig: number; onKey: (dn: number, alter: number) => void }) {
-  const low = clef === 'bass' ? 36 : clef === 'treble' ? 55 : 48 // C2, G3, C3
-  const keys: { midi: number; black: boolean }[] = []
-  for (let m = low; m <= low + 31; m++) keys.push({ midi: m, black: !WHITE.includes(m % 12) })
   const scroller = useRef<HTMLDivElement>(null)
+  // a tablet or a computer: as many keys as fill the width, about 44 px each, around the middle of the staff;
+  // a phone: two octaves and a half, 34 px, scrolled
+  const [width, setWidth] = useState(() => window.innerWidth)
+  useEffect(() => {
+    const el = scroller.current
+    if (!el) return
+    const ro = new ResizeObserver(() => setWidth(el.clientWidth))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+  const fill = width >= 700
+  const whitesWanted = fill ? Math.max(15, Math.min(52, Math.floor((width - 16) / 44))) : 0
+  const centre = clef === 'bass' ? 48 : clef === 'treble' ? 71 : 60 // C3, B4, C4
+  let low = clef === 'bass' ? 36 : clef === 'treble' ? 55 : 48 // C2, G3, C3
+  let high = low + 31
+  if (fill) {
+    low = centre
+    for (let n = 0; n < Math.floor(whitesWanted / 2); ) if (WHITE.includes(--low % 12)) n++
+    while (!WHITE.includes(low % 12)) low--
+    high = low
+    for (let n = 1; n < whitesWanted; ) if (WHITE.includes(++high % 12)) n++
+    low = Math.max(21, low)
+    high = Math.min(108, high)
+  }
+  const keys: { midi: number; black: boolean }[] = []
+  for (let m = low; m <= high; m++) keys.push({ midi: m, black: !WHITE.includes(m % 12) })
   useEffect(() => {
     const el = scroller.current
     if (!el) return
     const c = el.querySelector<HTMLElement>('[data-c4]') ?? el.querySelector<HTMLElement>('.cmp-white')
-    if (c) el.scrollLeft = c.offsetLeft - 12
-  }, [staff, clef])
+    if (c && !fill) el.scrollLeft = c.offsetLeft - 12
+  }, [staff, clef, fill])
   const spellKey = (m: number) => {
     const pc = m % 12
     const oct = Math.floor(m / 12) - 1
@@ -1543,13 +1763,14 @@ function Keys({ staff, clef, keySig, onKey }: { staff: number; clef: Clef; keySi
     return { d: oct * 7 + WHITE.indexOf(pc - 1), alter: 1 }
   }
   const whites = keys.filter((k) => !k.black)
+  const w = fill ? (width - 16) / whites.length : 34
   return (
     <div ref={scroller} className="cmp-keys" aria-label="Phím đàn: bấm để đặt nốt">
-      <div className="cmp-keys-row" style={{ width: whites.length * 34 }}>
+      <div className="cmp-keys-row" style={{ width: whites.length * w }}>
         {whites.map((k, i) => {
           const s = spellKey(k.midi)
           return (
-            <button key={k.midi} className="cmp-white" data-c4={k.midi === 60 || undefined} style={{ left: i * 34 }} onClick={() => onKey(s.d, s.alter)} aria-label={pitchName(fromDn(s.d, s.alter))}>
+            <button key={k.midi} className="cmp-white" data-c4={k.midi === 60 || undefined} style={{ left: i * w, width: w - 2 }} onClick={() => onKey(s.d, s.alter)} aria-label={pitchName(fromDn(s.d, s.alter))}>
               {k.midi % 12 === 0 && <small>Đô{Math.floor(k.midi / 12) - 1}</small>}
             </button>
           )
@@ -1558,7 +1779,7 @@ function Keys({ staff, clef, keySig, onKey }: { staff: number; clef: Clef; keySi
           if (!k.black) return null
           const i = whites.findIndex((w) => w.midi === k.midi - 1)
           const s = spellKey(k.midi)
-          return <button key={k.midi} className="cmp-black" style={{ left: i * 34 + 23 }} onClick={() => onKey(s.d, s.alter)} aria-label={pitchName(fromDn(s.d, s.alter))} />
+          return <button key={k.midi} className="cmp-black" style={{ left: i * w + w * 0.68, width: w * 0.62 }} onClick={() => onKey(s.d, s.alter)} aria-label={pitchName(fromDn(s.d, s.alter))} />
         })}
       </div>
     </div>
@@ -1631,6 +1852,7 @@ const B = ({ label, on, children, onClick, wide }: { label: string; on?: boolean
 
 function QuickBar(p: {
   above: boolean
+  inline?: boolean
   dur: DurName
   dots: number
   restMode: boolean
@@ -1650,7 +1872,7 @@ function QuickBar(p: {
   onDuplicate: () => void
 }) {
   return (
-    <div className={clsx('cmp-qb', p.above && 'is-above')} role="toolbar" aria-label="Thanh nhập nhanh">
+    <div className={clsx('cmp-qb', p.inline ? 'is-inline' : p.above && 'is-above')} role="toolbar" aria-label="Thanh nhập nhanh">
       <B label="Nốt trước" onClick={() => p.onStep(-1)}>‹</B>
       <B label="Nốt sau" onClick={() => p.onStep(1)}>›</B>
       <span className="cmp-qb-sep" />
