@@ -64,6 +64,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `decisions.md` | Quyết định Lamar đã chốt (giao diện, nội dung, bảo mật, văn bản học thuật) — tra trước khi hỏi |
 | `brain.md` | Sổ tay tri thức `/brain` (second brain): ghi chú tự do, ngữ pháp liên kết `[[ ]]` `n:` `p:`, liên kết ngược, đồ thị, phân giải tên bài `keyIndex.ts` |
 | `security.md` | Giấy phép, dòng bản quyền, kho mã hoá `vault.ts`/`secureStore.ts`, dấu kiểm PBKDF2, giới hạn thật của bảo mật |
+| `analyze.md` | Phân tích tác phẩm `/analyze`: bộ máy (hợp âm DP, giọng Viterbi, nhãn Nga – Xô viết, nốt ngoài hợp âm, câu kết), đo độ đúng trên hợp xướng Bach, nhãn ghi vào MEI cho Verovio |
 | `omr.md` | Thử OMR trong trình duyệt (oemer + onnxruntime-web): số đo tốc độ, độ đúng, vá cần làm — kết luận chưa dùng được |
 | `library-content.md` | Danh sách các mục nội dung đã có |
 | `../STATUS.md` | **Trạng thái hiện tại**: việc dở, chờ Lamar, đề xuất tiếp, số liệu nền |

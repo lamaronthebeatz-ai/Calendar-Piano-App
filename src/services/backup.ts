@@ -4,6 +4,7 @@ import { allNotes, importNotes, notesLocked, type Note } from '../features/curri
 import { allProjects, importProjects, projectsLocked, type Project } from '../features/research/store'
 
 import { allBrainNotes, brainLocked, importBrainNotes, type BrainNote } from '../features/brain/store'
+import { allSaved, importSaved, savedLocked, type Saved } from '../features/analyze/store'
 
 const LOCKED = 'Ghi chú và đề tài đang được mã hoá và chưa mở. Hãy đóng hẳn ứng dụng, mở lại và nhập mã khoá rồi thử lại.'
 
@@ -19,6 +20,8 @@ export interface BackupPayload {
   projects?: Project[]
   /** the second brain's own notes (features/brain) */
   brain?: BrainNote[]
+  /** scores brought into the analysis page (features/analyze) */
+  analyses?: Saved[]
 }
 
 export async function exportBackup(): Promise<BackupPayload> {
@@ -27,7 +30,7 @@ export async function exportBackup(): Promise<BackupPayload> {
     db.timetableSlots.toArray(),
     db.settings.get('default'),
   ])
-  if (notesLocked() || projectsLocked() || brainLocked()) throw new Error(LOCKED)
+  if (notesLocked() || projectsLocked() || brainLocked() || savedLocked()) throw new Error(LOCKED)
   return {
     version: 2,
     exportedAt: new Date().toISOString(),
@@ -37,6 +40,7 @@ export async function exportBackup(): Promise<BackupPayload> {
     notes: allNotes(),
     projects: allProjects(),
     brain: allBrainNotes(),
+    analyses: allSaved(),
   }
 }
 
@@ -163,7 +167,7 @@ function dedupePayload(students: Student[], slots: TimetableSlot[]) {
  * student name / by student + day + start time — and only genuinely new records are added.
  */
 export async function importBackup(file: File, mode: 'replace' | 'merge'): Promise<{ students: number; timetableSlots: number }> {
-  if (notesLocked() || projectsLocked() || brainLocked()) throw new Error(LOCKED)
+  if (notesLocked() || projectsLocked() || brainLocked() || savedLocked()) throw new Error(LOCKED)
   let data: unknown
   try {
     data = parseBackup(await file.text())
@@ -212,6 +216,7 @@ export async function importBackup(file: File, mode: 'replace' | 'merge'): Promi
   if (data.notes && typeof data.notes === 'object') importNotes(data.notes, mode)
   if (data.projects) importProjects(data.projects, mode)
   if (data.brain) importBrainNotes(data.brain, mode)
+  if (data.analyses) importSaved(data.analyses, mode)
 
   return { students: incoming.students.length, timetableSlots: incoming.slots.length }
 }

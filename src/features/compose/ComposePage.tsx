@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore, type CSSProperties, type ReactNode } from 'react'
 import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
@@ -87,6 +88,7 @@ const RADIUS = 74
 /** The page that opens a score and edits it: white paper, black staves, a floating palette and touch gestures. */
 export function ComposePage() {
   const back = useBack('/theory')
+  const navigate = useNavigate()
   const [list, setList] = useState<Score[]>(loadAll)
   const [currentId, setCurrentId] = useState<string>(() => loadPref(CURRENT, ''))
   const score = list.find((s) => s.id === currentId) ?? list[0]
@@ -1593,6 +1595,7 @@ export function ComposePage() {
             <button onClick={exportXml}>MusicXML</button>
             <button onClick={exportMidi}>MIDI</button>
             <button onClick={printScore} disabled={!tk}>In / PDF</button>
+            <button onClick={() => navigate(`/analyze/c-${score.id}`)}>Phân tích bản này</button>
             <label className="cmp-file">
               Mở MusicXML…
               <input type="file" accept=".musicxml,.xml,.mxl,application/vnd.recordare.musicxml+xml,application/vnd.recordare.musicxml" onChange={(e) => {

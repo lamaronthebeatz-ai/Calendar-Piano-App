@@ -1,0 +1,41 @@
+/**
+ * Concepts the analysis names → the library article that explains them. Every slug is checked by
+ * scripts/check-links.mjs (a renamed article fails the build, it never becomes a dead link on a score).
+ */
+export const THEORY = {
+  function: 'chuc-nang-hoa-am',
+  inversion: 'the-dao-hop-am',
+  triad: 'hop-am-ba',
+  seventh: 'hop-am-bay',
+  dim7: 'hop-am-bay-giam',
+  augmented: 'hop-am-ba-tang',
+  cadence: 'cau-ket',
+  applied: 'hop-am-at-phu',
+  neapolitan: 'hop-am-napoli',
+  augSixth: 'hop-am-sau-tang',
+  mixture: 'hop-am-muon',
+  modulation: 'chuyen-giong',
+  chromatic: 'hoa-am-cromatic',
+  chromaticMediant: 'trung-am-cromatic',
+  sequence: 'mo-tien-hoa-am',
+  nct: 'not-ngoai-hop-am',
+  accidental: 'dau-hoa',
+  keySignature: 'hoa-bieu',
+  timeSignature: 'so-chi-nhip',
+  key: 'dieu-tinh',
+  harmonicMinor: 'am-giai-thu',
+  parallelKeys: 'giong-song-song',
+  phrase: 'cau-nhac',
+  period: 'hinh-thuc-nga-doan-nhac',
+  binary: 'ptam-hai-doan-don',
+  ternary: 'ptam-ba-doan-don',
+  rondo: 'rondo',
+  sonata: 'hinh-thuc-sonata',
+  variations: 'bien-tau',
+  motif: 'motif',
+  texture: 'ket-cau',
+  pedal: 'persichetti-trang-tri-bien-doi',
+  xxChords: 'persichetti-hop-am-quang-3',
+  tonalCentre: 'persichetti-trung-tam-giong',
+} as const
+export type Concept = keyof typeof THEORY

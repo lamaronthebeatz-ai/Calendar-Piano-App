@@ -10,9 +10,12 @@ const { ARTICLES } = await server.ssrLoadModule('/src/features/theory/articles.s
 const { findArticle } = await server.ssrLoadModule('/src/features/theory/wiki.ts')
 const { PLACES, JOURNEYS } = await server.ssrLoadModule('/src/features/musicology/places.ts')
 const { SCHOOLS } = await server.ssrLoadModule('/src/features/terms/schools.ts')
+const { THEORY } = await server.ssrLoadModule('/src/features/analyze/links.ts')
 await server.close()
 
 const broken = []
+// every concept the score analysis links to must be an article
+for (const [k, slug] of Object.entries(THEORY)) if (!findArticle(slug)) broken.push(`analyze/links.ts ${k} → ${slug}`)
 for (const a of ARTICLES) for (const m of a.body.matchAll(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g)) if (!findArticle(m[1])) broken.push(`${a.slug} → ${m[1]}`)
 const known = new Set(ARTICLES.map((a) => a.slug))
 for (const pl of PLACES) for (const ev of pl.events) for (const s of ev.slugs) if (!known.has(s)) broken.push(`map:${pl.id} → ${s}`)

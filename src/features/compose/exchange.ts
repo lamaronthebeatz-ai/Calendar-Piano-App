@@ -520,7 +520,9 @@ export async function unzipMxl(buf: ArrayBuffer): Promise<string> {
 export function toMidi(s: Score): Uint8Array<ArrayBuffer> {
   const { steps } = soundOf(s)
   const PPQ = 480
-  const tick = (sec: number) => Math.round(sec * PPQ * 2) // tempo 120: one second is two quarters
+  // the file's tempo is the score's, so its beats line up with the score's beats (bar lines, metre) in any program
+  const bpm = s.tempo || 120
+  const tick = (sec: number) => Math.round((sec * PPQ * bpm) / 60)
   // one channel per instrument, its General MIDI program set at the start (channel 10 is the drums: skipped)
   const insts = [...new Set(steps.map((x) => x.inst))]
   const chan = (i: Inst) => { const n = insts.indexOf(i); return n >= 9 ? n + 1 : n }
@@ -543,7 +545,11 @@ export function toMidi(s: Score): Uint8Array<ArrayBuffer> {
   out.push(0xff, 0x03)
   vlq(name.length)
   out.push(...name)
-  out.push(0, 0xff, 0x51, 0x03, 0x07, 0xa1, 0x20) // 500 000 µs per quarter
+  const us = Math.round(60_000_000 / bpm)
+  out.push(0, 0xff, 0x51, 0x03, (us >> 16) & 0xff, (us >> 8) & 0xff, us & 0xff)
+  // metre and key signature, as notation programs read them
+  out.push(0, 0xff, 0x58, 0x04, s.time[0], Math.round(Math.log2(s.time[1])), 24, 8)
+  out.push(0, 0xff, 0x59, 0x02, s.key & 0xff, 0)
   for (const i of insts) out.push(0, 0xc0 | chan(i), meta(i).program)
   let last = 0
   for (const e of evs) {

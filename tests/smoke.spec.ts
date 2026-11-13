@@ -20,6 +20,8 @@ const PAGES: [string, string, string?, number?][] = [
   ['Giải phức điệu', '/#/counterpoint'],
   ['Sổ nghiên cứu', '/#/notes'],
   ['Sổ tay tri thức', '/#/brain'],
+  ['Phân tích tác phẩm', '/#/analyze'],
+  ['Một bản phân tích', '/#/analyze/bach-bwv269', '.an-svg svg', 60],
   ['Thư mục học', '/#/sources'],
   ['Một nguồn', '/#/sources/sposobin-1984'],
   ['Việc còn treo', '/#/sources/treo'],
