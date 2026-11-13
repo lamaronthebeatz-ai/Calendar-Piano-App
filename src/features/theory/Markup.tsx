@@ -1,5 +1,7 @@
 import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { CURATED_BY_ID, shortCite } from '../sources/data'
+import { titleOf, useBrainNotes } from '../brain/store'
+import { useProjects } from '../research/store'
 import '../sources/sources.css'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
@@ -29,6 +31,8 @@ function Inline({ text }: { text: string }) {
     if (part.startsWith('[^')) return <InlineCite key={i} spec={part.slice(2, -1)} />
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
+    const own = /^([np]):(.+)$/.exec(target)
+    if (own) return <OwnLink key={i} kind={own[1] as 'n' | 'p'} id={own[2]} label={label} />
     const article = findArticle(target)
     const xref = article && ref?.(article.slug)
     return article ? (
@@ -44,6 +48,17 @@ function Inline({ text }: { text: string }) {
       </span>
     )
   })
+}
+
+/** A link to one of Lamar's own notes ([[n:id]]) or projects ([[p:id]]): red when it no longer exists. */
+function OwnLink({ kind, id, label }: { kind: 'n' | 'p'; id: string; label?: string }) {
+  const notes = useBrainNotes()
+  const projects = useProjects()
+  const note = kind === 'n' ? notes.find((n) => n.id === id) : undefined
+  const project = kind === 'p' ? projects.find((p) => p.id === id) : undefined
+  const text = label ?? (note ? titleOf(note) : project?.title ?? id)
+  if (!note && !project) return <span title="Ghi chú hay đề tài này đã bị xoá" className="text-[var(--color-status-cancelled)]">{text}</span>
+  return <Link to={note ? `/brain/${id}` : `/research/${id}`} className="wiki-link is-own">{text}</Link>
 }
 
 /** [^sposobin-1984, tr. 45] → "(Sposobin 1984, tr. 45)" linking to the work in the bibliography. */

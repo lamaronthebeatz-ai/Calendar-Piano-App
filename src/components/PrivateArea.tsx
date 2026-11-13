@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState, type CSSProperties, type ReactNode } from 'react'
 import clsx from 'clsx'
+import { checkCode } from '../lib/passcode'
 import { isUnlocked as welcomePassed } from './LockScreen'
 import { setPrivateUnlocked as set, usePrivateUnlocked } from './privateLock'
 import './lock-motion.css'
@@ -11,10 +12,7 @@ import './lock-motion.css'
  */
 const LENGTH = 6
 const HASH = 'f097eeb70c91d47a592f00b7ecd261567c8098a45133c1ef8325b18dbcf15ef6'
-async function matches(code: string) {
-  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(code))
-  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('') === HASH
-}
+const matches = (code: string) => checkCode(code, HASH)
 
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'] as const
 type Phase = 'input' | 'wrong' | 'right' | 'leaving'

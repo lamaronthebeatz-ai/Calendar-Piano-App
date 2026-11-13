@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BookmarkIcon, BranchesIcon, CompassIcon, EditIcon, NoteIcon, TypeIcon } from '../../components/icons'
+import { BookmarkIcon, BranchesIcon, CompassIcon, EditIcon, NoteIcon, SparkleIcon, TypeIcon } from '../../components/icons'
 import './research.css'
 
 /**
@@ -7,6 +7,7 @@ import './research.css'
  * only exists on desktop, so the libraries' home pages carry this row.
  */
 const TOOLS = [
+  { to: '/brain', icon: SparkleIcon, title: 'Sổ tay tri thức', text: 'Ghi chú nối nhau, liên kết hai chiều, đồ thị' },
   { to: '/explore', icon: CompassIcon, title: 'Tra cứu', text: 'Người, tác phẩm, dòng thời gian, thầy – trò' },
   { to: '/explore?tab=pha-he', icon: BranchesIcon, title: 'Dòng truyền', text: 'Chuỗi thầy – trò trên trục thời gian' },
   { to: '/sources', icon: BookmarkIcon, title: 'Thư mục học', text: 'Nguồn, trích dẫn, sức khoẻ thư viện' },

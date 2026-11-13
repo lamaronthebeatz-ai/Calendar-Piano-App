@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react'
+import { secureStore } from '../../lib/secureStore'
 
 /**
  * Research projects (giai đoạn 5): a question, a draft, and what it draws on. Notes join a project by its tag —
@@ -24,28 +25,16 @@ export interface Project {
   updated: number
 }
 
-const KEY = 'research:projects'
-let state: Project[] = load()
+// encrypted with the vault once it is open (lib/secureStore)
+const store = secureStore<Project[]>('research:projects', [], (v) => (Array.isArray(v) ? v : null))
+let state = store.get()
 const listeners = new Set<() => void>()
-
-function load(): Project[] {
-  try {
-    const v = JSON.parse(localStorage.getItem(KEY) ?? '[]')
-    return Array.isArray(v) ? v : []
-  } catch {
-    return []
-  }
-}
-
-function commit(next: Project[]) {
-  state = next
-  try {
-    localStorage.setItem(KEY, JSON.stringify(state))
-  } catch {
-    // storage full or blocked: keep it for this session
-  }
+store.subscribe(() => {
+  state = store.get()
   listeners.forEach((l) => l())
-}
+})
+
+const commit = (next: Project[]) => store.set(next)
 
 export const useProjects = () =>
   useSyncExternalStore(
@@ -53,6 +42,7 @@ export const useProjects = () =>
     () => state,
   )
 export const allProjects = () => state
+export const projectsLocked = () => store.locked()
 
 /** "Nhạc Việt 1930 – 1945" → "nhac-viet-1930-1945" (the tag notes use). */
 export const tagOf = (title: string) =>

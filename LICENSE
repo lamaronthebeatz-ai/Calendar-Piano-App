@@ -1,0 +1,30 @@
+Bản quyền © 2026 Trần Lâm (Lamar). Giữ toàn quyền.
+Copyright © 2026 Trần Lâm (Lamar). All rights reserved.
+
+TIẾNG VIỆT
+
+Mã nguồn, thiết kế giao diện, bộ máy xử lý âm nhạc (soạn nhạc, nghe hợp âm, giải phức điệu,
+xướng âm, bảng tính hoà âm), các kịch bản dựng nội dung, cấu trúc dữ liệu và toàn bộ bài viết,
+tiểu luận, bản dịch, tóm lược và chú giải trong kho này là tài sản của tác giả.
+
+Việc kho mã được công khai trên GitHub chỉ để xem. Không ai được sao chép, sửa đổi, phân phối,
+đăng tải lại, bán, dùng để huấn luyện mô hình máy học, hay dựng sản phẩm phái sinh từ bất kỳ
+phần nào của kho này, toàn bộ hay một phần, khi chưa có sự đồng ý bằng văn bản của tác giả.
+
+Ngoại lệ: các tài liệu thuộc phạm vi công cộng (bản in nhạc cũ, tranh, bản quét sách hết bản quyền)
+và các thư viện mã nguồn mở được dùng theo giấy phép riêng của chúng; tác phẩm của bên thứ ba
+được trích dẫn thuộc về người giữ quyền tương ứng. Giấy phép này không giới hạn các quyền đó.
+
+ENGLISH
+
+The source code, interface design, music-processing engines, content build scripts, data
+structures and all articles, essays, translations, summaries and annotations in this repository
+are the author's property.
+
+The repository is public for viewing only. No part of it may be copied, modified, distributed,
+republished, sold, used to train machine-learning models, or used to build derivative works,
+in whole or in part, without the author's prior written permission.
+
+Exceptions: public-domain materials (old music editions, paintings, out-of-copyright scans) and
+open-source libraries remain under their own terms; quoted third-party works belong to their
+respective rights holders. This licence does not restrict those rights.

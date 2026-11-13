@@ -53,6 +53,7 @@ import { useThumbs } from './thumbs'
 import { HeroBackdrop } from './HeroBackdrop'
 import { HeroArt } from './TheoryStage'
 import { LinkStaff, PathStrip } from './ArticleLinks'
+import { MyLinks } from '../brain/MyLinks'
 import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicBrowser } from './TheoryHome'
 import { morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
@@ -1247,6 +1248,7 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
         )}
 
         <LinkStaff article={article} body={article.body} backlinks={backlinks} />
+        <MyLinks slug={article.slug} title={article.title} />
       </article>
 
       {sections.length > 1 && (

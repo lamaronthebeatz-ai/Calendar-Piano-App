@@ -22,7 +22,7 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 
 ## Trước khi push
 ```bash
-npx tsc -b && npm run lint && npm run check:links && npm run build && npm run budget
+npx tsc -b && npm run lint && npm test && npm run check:links && npm run build && npm run budget
 npx playwright test --project='chromium-*'   # khi đổi giao diện; WebKit chạy trên CI
 ```
 CI chạy đủ các bước + WebKit, hỏng là không deploy (`docs/notes/testing.md`).
@@ -56,6 +56,8 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `terms.md` | Thuật ngữ đa ngữ: tên bài + nhãn Wikidata (không có TCVN), `scripts/terms/build.py`, `xl` trong chỉ mục, trang `/terms` |
 | `explore.md` | Mạng tri thức `/explore`: `people.json` từ composers/pianists, ghép bản đồ + phân ngành, hồ sơ người, dòng thời gian |
 | `research.md` | Bàn làm việc `/research`: đề tài (thẻ gom ghi chú), bản nháp có `[^id]`, xuất Markdown/Word chú thích Chicago, sao lưu |
+| `brain.md` | Sổ tay tri thức `/brain` (second brain): ghi chú tự do, ngữ pháp liên kết `[[ ]]` `n:` `p:`, liên kết ngược, đồ thị, phân giải tên bài `keyIndex.ts` |
+| `security.md` | Giấy phép, dòng bản quyền, kho mã hoá `vault.ts`/`secureStore.ts`, dấu kiểm PBKDF2, giới hạn thật của bảo mật |
 | `library-content.md` | Danh sách các mục nội dung đã có |
 | `../roadmap.md` | Lộ trình nâng cấp thành trung tâm tri thức cho nhà âm nhạc học (giai đoạn 0 – 6) |
 

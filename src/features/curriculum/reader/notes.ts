@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from 'react'
 import type { ReaderBook, ReaderItem } from './model'
 import { splitOldJazz } from '../books'
+import { secureStore } from '../../../lib/secureStore'
 
 /** Highlights and notes per book, anchored by the quoted text (plus a little of what precedes it) so they survive re-pagination. */
 export const COLORS = ['yellow', 'green', 'blue', 'pink', 'purple'] as const
@@ -26,27 +27,17 @@ export interface Note {
 /** Scope of the library articles (books use their own id). */
 export const LIBRARY = 'thu-vien'
 
-const KEY = 'reader:notes'
-let state: Record<string, Note[]> = load()
+// encrypted with the vault once it is open (lib/secureStore); plain JSON on devices from before
+const store = secureStore<Record<string, Note[]>>('reader:notes', {}, (v) => (v && typeof v === 'object' && !Array.isArray(v) ? splitOldJazz(v as Record<string, Note[]>) : null))
+let state = store.get()
 const listeners = new Set<() => void>()
-
-function load(): Record<string, Note[]> {
-  try {
-    const v = JSON.parse(localStorage.getItem(KEY) ?? '{}')
-    return v && typeof v === 'object' ? splitOldJazz(v) : {}
-  } catch {
-    return {}
-  }
-}
+store.subscribe(() => {
+  state = store.get()
+  listeners.forEach((l) => l())
+})
 
 function commit(book: string, notes: Note[]) {
-  state = { ...state, [book]: notes }
-  try {
-    localStorage.setItem(KEY, JSON.stringify(state))
-  } catch {
-    // Storage full or blocked: keep the change for this session.
-  }
-  listeners.forEach((l) => l())
+  store.set({ ...state, [book]: notes })
 }
 
 const EMPTY: Note[] = []
@@ -63,6 +54,8 @@ export const useAllNotes = () =>
     () => state ?? ALL_EMPTY,
   )
 export const allNotes = () => state
+/** Sealed notes not yet readable (the vault is closed): a backup must not be made or restored now. */
+export const notesLocked = () => store.locked()
 
 /** Restore from a backup: replace everything, or add notes this device doesn't have yet (matched by id). */
 export function importNotes(data: Record<string, Note[]>, mode: 'replace' | 'merge') {
@@ -73,13 +66,7 @@ export function importNotes(data: Record<string, Note[]>, mode: 'replace' | 'mer
     for (const n of list) if (n && typeof n.text === 'string' && n.text && typeof n.id === 'string') have.set(n.id, n)
     next[book] = [...have.values()]
   }
-  state = next
-  try {
-    localStorage.setItem(KEY, JSON.stringify(state))
-  } catch {
-    /* keep for this session */
-  }
-  listeners.forEach((l) => l())
+  store.set(next)
 }
 
 /** Note ids whose quotes overlap [start, end) in the flat text. */

@@ -14,6 +14,7 @@ import { LEVEL_LABELS } from '../../utils/labels'
 import { fold, matches, score } from './fold'
 import { pushRecent, recentPaths } from './recent'
 import { openDonate } from '../donate/store'
+import { createBrainNote, titleOf, useBrainNotes } from '../brain/store'
 import { canAnimate, useFlip } from '../../components/motion'
 import '../../components/motion-ui.css'
 
@@ -103,6 +104,7 @@ function Palette({ onClose }: { onClose: () => void }) {
     navigate(path)
   }
 
+  const brain = useBrainNotes()
   const items = useMemo<Item[]>(() => {
     const tokens = fold(query).split(/\s+/).filter(Boolean)
     const out: Item[] = []
@@ -118,6 +120,14 @@ function Palette({ onClose }: { onClose: () => void }) {
             { id: 'act-student', group: 'Thao tác', title: 'Thêm học viên', icon: <UsersIcon width={16} height={16} />, run: () => (close(), navigate('/students'), openCreateStudent()) },
           ]
         : []),
+      {
+        id: 'act-capture',
+        group: 'Thao tác',
+        title: query.trim() ? `Ghi nhanh: “${query.trim()}”` : 'Ghi nhanh một ý',
+        hint: 'Sổ tay tri thức',
+        icon: <PlusIcon width={16} height={16} />,
+        run: () => go(`/brain/${createBrainNote(query.trim()).id}?edit`),
+      },
       { id: 'act-donate', group: 'Thao tác', title: 'Ủng hộ Lamar', hint: 'Mời một ly cà phê ☕', icon: <span className="text-[15px]">☕</span>, run: () => (close(), openDonate()) },
       ...(index ? [{ id: 'act-random', group: 'Thao tác', title: 'Mở một bài ngẫu nhiên', hint: 'Thư viện', icon: <ShuffleIcon width={16} height={16} />, run: () => go(index.randomArticle().path) }] : []),
     ]
@@ -161,6 +171,9 @@ function Palette({ onClose }: { onClose: () => void }) {
       }
     }
 
+    for (const n of brain) {
+      if (score(tokens, fold(titleOf(n)), '', fold(n.body)) > 0) out.push({ id: `bn${n.id}`, group: 'Sổ tay của bạn', title: titleOf(n), hint: 'Ghi chú', icon: <PlusIcon width={16} height={16} />, run: () => go(`/brain/${n.id}`) })
+    }
     if (index) {
       const ranked = (list: Index['INDEX']['articles'], n: number) =>
         list
@@ -177,7 +190,7 @@ function Palette({ onClose }: { onClose: () => void }) {
     return out
     // go/close are recreated each render but only read state that the listed deps cover.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, index, students, slots, privateOpen])
+  }, [query, index, students, slots, privateOpen, brain])
 
   const tokens = useMemo(() => fold(query).split(/\s+/).filter(Boolean), [query])
   const current = Math.min(active, Math.max(0, items.length - 1))

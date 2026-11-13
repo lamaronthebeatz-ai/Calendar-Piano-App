@@ -1,0 +1,25 @@
+/* The second brain (/brain). Lists and the editor reuse sources.css / research.css. */
+.bn-area { min-height: 42svh; }
+.bn-suggest { position: absolute; left: 12px; right: 12px; top: 12px; z-index: 5; max-height: 300px; overflow: auto; padding: 6px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--color-gold) 45%, transparent); background: var(--color-surface-raised); box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.9); }
+.bn-opt { display: flex; align-items: baseline; gap: 8px; width: 100%; padding: 7px 10px; border-radius: 10px; text-align: left; font-size: 14px; color: var(--color-ink); }
+.bn-opt.is-on, .bn-opt:hover { background: color-mix(in oklch, var(--color-gold) 16%, transparent); }
+.bn-kind { flex-shrink: 0; font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-gold); }
+.bn-h { margin-bottom: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink-faint); }
+.bn-links { display: grid; gap: 18px; }
+@media (min-width: 900px) { .bn-links { grid-template-columns: 1fr 1fr; } }
+.bn-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.bn-chip { display: inline-flex; align-items: baseline; gap: 6px; max-width: 100%; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface-raised); font-size: 13px; color: var(--color-ink); }
+.bn-chip:hover { border-color: color-mix(in oklch, var(--color-gold) 55%, transparent); }
+.bn-empty { font-size: 13px; color: var(--color-ink-faint); }
+.bn-graph { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--color-border); background: radial-gradient(circle at 50% 50%, color-mix(in oklch, var(--color-gold) 7%, transparent), transparent 70%), var(--color-surface-raised); }
+.bn-graph line { stroke: color-mix(in oklch, var(--color-gold) 22%, transparent); stroke-width: 1; }
+.bn-graph line.is-near { stroke: color-mix(in oklch, var(--color-gold) 55%, transparent); }
+.bn-node { cursor: pointer; }
+.bn-node circle { fill: var(--color-surface); stroke: var(--color-gold); stroke-width: 1.5; }
+.bn-node[data-kind='n'] circle { fill: var(--color-gold); }
+.bn-node[data-kind='p'] circle { stroke-dasharray: 2 2; }
+.bn-node text { fill: var(--color-ink-muted); font-size: 12px; paint-order: stroke; stroke: var(--color-surface-raised); stroke-width: 4px; }
+.bn-node text.is-main { fill: var(--color-ink); font-size: 14px; font-weight: 600; }
+.bn-node:hover text { fill: var(--color-gold); }
+/* "In your notebook" on an article page (MyLinks) */
+.bn-mine { padding: 14px 16px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }

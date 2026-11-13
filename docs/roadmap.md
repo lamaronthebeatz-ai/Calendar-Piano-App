@@ -138,3 +138,9 @@ Kích hoạt khi bước dựng nội dung > 10 s hoặc > 4.000 bài.
 - ✅ **A. Phả hệ**: cây thầy – trò trong hồ sơ người, tab Dòng truyền (chuỗi dài nhất trên trục thời gian).
 - ✅ **B. Độ tin cậy**: kiểm 4.073 link (66 hỏng thật, 37 có bản lưu Wayback), "link hỏng · bản lưu" trong bài, nhãn loại bài, trang Sức khoẻ thư viện.
 - Tiếp theo theo đề xuất: **C. Nghe kèm phân tích** (bản nhạc + tiếng piano mẫu, ô nhịp sáng theo tiếng đàn, dải hình thức), **D. Tìm kiếm nghiên cứu**.
+
+## Đợt "khép kín – khoá cứng – second brain – bảo mật" (11/2026)
+- ✅ Vitest cho logic thuần + CI; smoke tự bắt route mới chưa kiểm; nhật ký lỗi cục bộ; TS chặt hơn (`notes/testing.md`).
+- ✅ Sổ tay tri thức `/brain`: ghi chú tự do nối mọi thứ bằng `[[ ]]`, liên kết ngược hai chiều tới bài, đồ thị lân cận, ⌘K ghi nhanh; phân giải 297 alias trùng theo luật cố định (`notes/brain.md`).
+- ✅ Giấy phép giữ toàn quyền, dòng bản quyền trong mọi file JS, kho mã hoá ghi chú / đề tài / sổ tay, dấu kiểm PBKDF2 chờ Lamar tạo (`notes/security.md`).
+- Còn lại: mã hoá Dexie (học viên, lịch); đồ thị toàn mạng; liên kết ghi chú ↔ người / tác phẩm Wikidata (`w:Q…`); `noUncheckedIndexedAccess`.

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { RouteLoading } from './layout/pageCurtain'
 import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider, useRouteError } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
@@ -10,6 +10,7 @@ import { SettingsPage } from './features/settings/SettingsPage'
 import { PrivateArea } from './components/PrivateArea'
 import { Onboarding } from './features/onboarding/Onboarding'
 import { installViewTransitions } from './layout/viewTransitions'
+import { logError } from './lib/errorLog'
 
 // Theory content is large and independent of the timetable, so it loads on demand.
 const loadTheory = () => import('./features/theory/TheoryPage')
@@ -19,6 +20,7 @@ const loadMusicology = () => import('./features/musicology/MusicologyPage')
 const TheoryPage = lazy(() => loadTheory().then((m) => ({ default: m.TheoryPage })))
 const CurriculumPage = lazy(() => loadCurriculum().then((m) => ({ default: m.CurriculumPage })))
 const NotebookPage = lazy(() => loadNotebook().then((m) => ({ default: m.NotebookPage })))
+const BrainPage = lazy(() => import('./features/brain/BrainPage').then((m) => ({ default: m.BrainPage })))
 const ResearchPage = lazy(() => import('./features/research/ResearchPage').then((m) => ({ default: m.ResearchPage })))
 const ExplorePage = lazy(() => import('./features/explore/ExplorePage').then((m) => ({ default: m.ExplorePage })))
 const TermsPage = lazy(() => import('./features/terms/TermsPage').then((m) => ({ default: m.TermsPage })))
@@ -80,6 +82,9 @@ export function App() {
 function RouteError() {
   const err = useRouteError()
   const msg = err instanceof Error ? err.message : String(err)
+  useEffect(() => {
+    logError(err)
+  }, [err])
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-[var(--color-surface)] px-6 text-center">
       <p className="font-display text-[24px] font-semibold text-[var(--color-ink)]">Có lỗi khi mở trang này</p>
@@ -108,6 +113,7 @@ const router = createHashRouter(
       <Route path="/settings" element={<SettingsPage />} />
       <Route path="/musicology/:branch?" element={<Suspense fallback={<RouteLoading />}><MusicologyPage /></Suspense>} />
       <Route path="/notes" element={<Suspense fallback={<RouteLoading />}><NotebookPage /></Suspense>} />
+      <Route path="/brain/:id?" element={<Suspense fallback={<RouteLoading />}><BrainPage /></Suspense>} />
       <Route path="/research/:id?" element={<Suspense fallback={<RouteLoading />}><ResearchPage /></Suspense>} />
       <Route path="/explore" element={<Suspense fallback={<RouteLoading />}><ExplorePage /></Suspense>} />
       <Route path="/terms" element={<Suspense fallback={<RouteLoading />}><TermsPage /></Suspense>} />

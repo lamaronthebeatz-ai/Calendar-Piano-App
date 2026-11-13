@@ -5,7 +5,12 @@ import { defineConfig } from 'vite'
 import { theoryContent } from './scripts/theory-content.ts'
 
 // https://vite.dev/config/
+const BANNER = '/*! © 2026 Trần Lâm (Lamar). Giữ toàn quyền / All rights reserved. Xem LICENSE. */'
+
 export default defineConfig({
+  // every script carries the copyright line, added after minification so it cannot be stripped (see LICENSE)
+  build: { rolldownOptions: { output: { postBanner: BANNER } } },
+  worker: { rolldownOptions: { output: { postBanner: BANNER } } },
   plugins: [
     react(),
     tailwindcss(),

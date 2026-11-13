@@ -12,6 +12,9 @@ import { LOCATION_PALETTE } from '../../utils/color'
 import { ScrollArea } from '../../components/ScrollArea'
 import { startTour } from '../onboarding/tour'
 import { openDonate } from '../donate/store'
+import { clearErrors, useErrors } from '../../lib/errorLog'
+import { makeVerifier } from '../../lib/passcode'
+import { closeVault, vaultKey } from '../../lib/vault'
 
 const CURRENCIES = ['VND', 'USD', 'EUR', 'GBP']
 
@@ -23,7 +26,13 @@ export function SettingsPage() {
   const [pendingFile, setPendingFile] = useState<File | null>(null)
 
   async function handleExport() {
-    const payload = await exportBackup()
+    let payload
+    try {
+      payload = await exportBackup()
+    } catch (e) {
+      pushToast(e instanceof Error ? e.message : String(e), 'error')
+      return
+    }
     const outcome = await downloadBackupFile(payload)
     if (outcome === 'saved') pushToast('Đã tải bản sao lưu', 'success')
     else if (outcome === 'declined') pushToast('Đã huỷ xuất dữ liệu')
@@ -136,6 +145,10 @@ export function SettingsPage() {
           </div>
         </Section>
 
+        <SecuritySection />
+
+        <ErrorLogSection />
+
         <Section title="Hướng dẫn sử dụng">
           <p className="text-[13px] text-[var(--color-ink-muted)]">Xem lại tour giới thiệu từng khu vực của ứng dụng: lịch, học viên, thư viện, âm nhạc học, tủ sách, tìm kiếm và sao lưu.</p>
           <Button variant="secondary" icon={<SparkleIcon width={15} height={15} />} onClick={startTour} fullWidth>
@@ -191,5 +204,98 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
       <h2 className="text-[12px] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">{title}</h2>
       {children}
     </section>
+  )
+}
+
+/** Errors seen on this device (lib/errorLog): kept here only, to copy and send when something breaks. */
+function ErrorLogSection() {
+  const errors = useErrors()
+  const [copied, setCopied] = useState(false)
+  const text = () => errors.map((e) => `${new Date(e.at).toLocaleString('vi-VN')} · ${e.where}\n${e.msg}${e.stack ? `\n${e.stack}` : ''}`).join('\n\n')
+  return (
+    <Section title="Nhật ký lỗi">
+      {errors.length === 0 ? (
+        <p className="text-[13px] text-[var(--color-ink-muted)]">Chưa ghi nhận lỗi nào trên máy này.</p>
+      ) : (
+        <>
+          <p className="text-[13px] text-[var(--color-ink-muted)]">{errors.length} lỗi gần nhất trên máy này (chỉ lưu tại đây, không gửi đi đâu). Sao chép gửi Lamar khi cần sửa.</p>
+          <ul className="max-h-56 space-y-2 overflow-auto rounded-lg bg-[var(--color-surface-sunken)] p-3 text-[12px] text-[var(--color-ink-muted)]">
+            {errors.slice(0, 10).map((e) => (
+              <li key={e.at + e.msg}>
+                <span className="text-[var(--color-ink-faint)]">{new Date(e.at).toLocaleString('vi-VN')} · {e.where}</span>
+                <br />
+                <span className="break-words text-[var(--color-ink)]">{e.msg}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <Button variant="secondary" fullWidth onClick={() => void navigator.clipboard?.writeText(text()).then(() => setCopied(true))}>
+              {copied ? 'Đã sao chép' : 'Sao chép nhật ký'}
+            </Button>
+            <Button variant="secondary" fullWidth onClick={clearErrors}>
+              Xoá nhật ký
+            </Button>
+          </div>
+        </>
+      )}
+    </Section>
+  )
+}
+
+/**
+ * Security: the state of the vault, locking now, and making the slow verifier that replaces the code's bare hash in
+ * the public bundle — computed here on Lamar's device, so the code itself is never typed anywhere else.
+ */
+function SecuritySection() {
+  const pushToast = useUIStore((s) => s.pushToast)
+  const [a, setA] = useState('')
+  const [b, setB] = useState('')
+  const [out, setOut] = useState('')
+  const [busy, setBusy] = useState(false)
+  const ok = /^\d{6}$/.test(a) && a === b
+  async function make() {
+    setBusy(true)
+    setOut(await makeVerifier(a))
+    setA('')
+    setB('')
+    setBusy(false)
+  }
+  function lockNow() {
+    closeVault()
+    try {
+      sessionStorage.clear()
+    } catch {
+      // ignore
+    }
+    location.reload()
+  }
+  return (
+    <Section title="Bảo mật">
+      <p className="text-[13px] text-[var(--color-ink-muted)]">
+        {vaultKey() ? 'Kho riêng đang mở: ghi chú và đề tài trên máy này được mã hoá (AES-GCM, khoá suy ra từ mã khoá).' : 'Kho riêng chưa mở trong phiên này. Mở lại ứng dụng và nhập mã khoá để mã hoá ghi chú và đề tài.'}
+      </p>
+      <Button variant="secondary" fullWidth onClick={lockNow}>
+        Khoá ứng dụng ngay
+      </Button>
+      <details className="rounded-lg border border-[var(--color-border)] p-3 text-[13px] text-[var(--color-ink-muted)]">
+        <summary className="cursor-pointer text-[var(--color-ink)]">Tạo dấu kiểm mã khoá (thay bản băm cũ)</summary>
+        <p className="mt-2">Nhập mã khoá màn chào hai lần. Ứng dụng tính một dấu kiểm chậm (PBKDF2, 1 triệu vòng) ngay trên máy này; mã khoá không được lưu hay gửi đi. Sao chép dòng kết quả gửi Lamar để thay vào bản dựng.</p>
+        <div className="mt-2 flex flex-col gap-2">
+          <TextInput type="password" inputMode="numeric" autoComplete="off" maxLength={6} placeholder="Mã khoá" value={a} onChange={(e) => setA(e.target.value.replace(/\D/g, ''))} />
+          <TextInput type="password" inputMode="numeric" autoComplete="off" maxLength={6} placeholder="Nhập lại" value={b} onChange={(e) => setB(e.target.value.replace(/\D/g, ''))} />
+          <Button variant="secondary" fullWidth disabled={!ok || busy} onClick={() => void make()}>
+            {busy ? 'Đang tính…' : 'Tạo dấu kiểm'}
+          </Button>
+          {out && (
+            <>
+              <code className="break-all rounded-lg bg-[var(--color-surface-sunken)] px-3 py-2 text-[11px]">{out}</code>
+              <Button variant="secondary" fullWidth onClick={() => void navigator.clipboard?.writeText(out).then(() => pushToast('Đã sao chép dấu kiểm', 'success'))}>
+                Sao chép
+              </Button>
+            </>
+          )}
+        </div>
+      </details>
+    </Section>
   )
 }

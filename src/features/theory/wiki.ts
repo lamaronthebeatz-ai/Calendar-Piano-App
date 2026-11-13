@@ -1,4 +1,5 @@
 import { ARTICLES, CATEGORIES, LINK_COUNT, SEARCH } from './articles'
+import { buildKeyIndex, normalize } from './keyIndex'
 
 /**
  * A theory article. `body` uses a tiny line-based markup (see Markup.tsx):
@@ -45,13 +46,10 @@ export interface ArticleMeta extends Omit<Article, 'body' | 'refs'> {
 /** Section titles of an article, in order (Markup gives them ids sec-0, sec-1…). */
 export const headings = (body: string) => [...body.matchAll(/^\s*## (.+)$/gm)].map((m) => m[1].replace(/\s*\[\^[^\]]+\]/g, '').trim())
 
-export const normalize = (s: string) =>
-  s.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase().trim()
+export { normalize }
 
-const byKey = new Map<string, ArticleMeta>()
-for (const a of ARTICLES) for (const k of [a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a)
-// Slugs win over titles/aliases that normalise to the same key (e.g. "trùng âm" vs "trung âm").
-for (const a of ARTICLES) byKey.set(a.slug, a)
+// who answers to a shared name is a fixed rule (keyIndex.ts), not the order of the content files
+const byKey = buildKeyIndex(ARTICLES)
 
 /** Resolve a slug, title or alias to its article. */
 export const findArticle = (key: string) => byKey.get(normalize(key))

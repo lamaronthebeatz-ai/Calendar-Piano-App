@@ -32,6 +32,7 @@ export function PageCurtain() {
       const t = window.setTimeout(() => setPhase('off'), FADE)
       return () => window.clearTimeout(t)
     }
+    return undefined
   }, [held, phase, since])
 
   if (phase === 'off') return null

@@ -14,6 +14,7 @@ import { createHash } from 'node:crypto'
 import { readdirSync, readFileSync } from 'node:fs'
 import type { CuratedSource } from '../src/features/sources/curated.ts'
 import { createServer, type Plugin, type ViteDevServer } from 'vite'
+import { buildKeyIndex } from '../src/features/theory/keyIndex.ts'
 
 const SOURCE = '/src/features/theory/articles.source.ts'
 const CURATED_SOURCES = '/src/features/sources/curated.ts'
@@ -172,9 +173,8 @@ function foreignNames(): Map<string, string> {
 }
 
 function build(articles: SourceArticle[], curated: CuratedSource[], rows: PeopleRows[]): Built {
-  const byKey = new Map<string, string>()
-  for (const a of articles) for (const k of [a.title, ...(a.aliases ?? [])]) byKey.set(normalize(k), a.slug)
-  for (const a of articles) byKey.set(a.slug, a.slug)
+  // the same rule the app resolves links by, so backlinks match what a link opens
+  const byKey = new Map([...buildKeyIndex(articles)].map(([k, a]) => [k, a.slug]))
 
   // "What links here" is worked out once, here, and travels with each article's text.
   const backlinks = new Map<string, string[]>()

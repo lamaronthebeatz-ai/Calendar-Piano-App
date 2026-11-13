@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState, type CSSProperties } from 'react'
 import clsx from 'clsx'
+import { checkCode } from '../lib/passcode'
 import logoFull from '../assets/logo-full.webp'
 import './lock.css'
+import { openVault } from '../lib/vault'
 
 /**
  * The lock screen is the entrance hall of the home page: the same painting (P. S. Krøyer, Duet, 1887; public domain,
@@ -24,10 +26,7 @@ export function isUnlocked() {
   }
 }
 
-async function matches(code: string) {
-  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(code))
-  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('') === HASH
-}
+const matches = (code: string) => checkCode(code, HASH)
 
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'] as const
 type Phase = 'input' | 'wrong' | 'right' | 'leaving'
@@ -75,6 +74,8 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
       matches(next).then((ok) => {
         if (ok) {
           setPhase('right')
+          // the same code opens the vault of private data (derivation runs in the background)
+          void openVault(next)
           try {
             sessionStorage.setItem(KEY, '1')
           } catch {

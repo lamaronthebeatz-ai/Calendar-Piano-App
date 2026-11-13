@@ -6,6 +6,9 @@ import { seedDatabaseIfEmpty, ensureSettingsExist } from './data/seed'
 import { applyDarkTheme } from './services/settingsService'
 import { IS_ANDROID } from './lib/device'
 import { installSpotlight } from './lib/spotlight'
+import { installErrorLog } from './lib/errorLog'
+
+installErrorLog()
 
 async function bootstrap() {
   await seedDatabaseIfEmpty()

@@ -1,8 +1,9 @@
 import { expect, test, type Page } from '@playwright/test'
+import { readFileSync } from 'node:fs'
 
 /** Every main page: opens without a script error and shows its content, with and without animations. */
-/** [name, address, what must be visible on the first screen — headings unless the page has none] */
-const PAGES: [string, string, string?][] = [
+/** [name, address, what must be visible on the first screen — headings unless the page has none, least text (200)] */
+const PAGES: [string, string, string?, number?][] = [
   ['Trang chủ', '/#/home'],
   ['Thời khoá biểu', '/#/'],
   ['Học viên', '/#/students'],
@@ -18,6 +19,7 @@ const PAGES: [string, string, string?][] = [
   ['Nghe hợp âm', '/#/chord-ear'],
   ['Giải phức điệu', '/#/counterpoint'],
   ['Sổ nghiên cứu', '/#/notes'],
+  ['Sổ tay tri thức', '/#/brain'],
   ['Thư mục học', '/#/sources'],
   ['Một nguồn', '/#/sources/sposobin-1984'],
   ['Việc còn treo', '/#/sources/treo'],
@@ -29,6 +31,8 @@ const PAGES: [string, string, string?][] = [
   ['Dòng truyền', '/#/explore?tab=pha-he'],
   ['Sức khoẻ thư viện', '/#/sources/suc-khoe'],
   ['Cài đặt', '/#/settings'],
+  // an editor: a sheet and its tools, little prose
+  ['Soạn nhạc', '/#/compose', '.cmp-paper', 60],
 ]
 
 /** Unlocked session, tour done: the pages themselves, not the lock screen (the passcode is never used in tests). */
@@ -72,15 +76,32 @@ const visible = (page: Page, selector = 'h1, h2') =>
 
 for (const still of [false, true]) {
   test.describe(still ? 'không hiệu ứng' : 'bình thường', () => {
-    for (const [name, url, key] of PAGES)
+    for (const [name, url, key, least = 200] of PAGES)
       test(name, async ({ page }) => {
         const errors = await open(page, url, still)
         expect(errors, 'lỗi script').toEqual([])
-        expect((await page.locator('body').innerText()).length, 'trang có nội dung').toBeGreaterThan(200)
+        expect((await page.locator('body').innerText()).length, 'trang có nội dung').toBeGreaterThan(least)
         expect(await visible(page, key), 'màn đầu có nội dung chính nhìn thấy được').not.toEqual([])
       })
   })
 }
+
+// a page added to the router without a line in PAGES fails here, so no page goes untested
+test('mọi trang trong router đều có trong danh sách kiểm', () => {
+  test.skip(test.info().project.name !== 'chromium-phone', 'kiểm một lần là đủ')
+  const app = readFileSync(new URL('../src/App.tsx', import.meta.url), 'utf8')
+  const routes = [...app.matchAll(/<Route path="([^"]+)" element=\{(<Navigate)?/g)].filter((m) => !m[2]).map((m) => m[1])
+  // need a record that exists only on the device (a student's id)
+  const NEEDS_DATA = ['/students/:id']
+  const missing = routes
+    .filter((r) => !NEEDS_DATA.includes(r))
+    .filter((r) => {
+      const base = r.replace(/\/:[^/]+\??/g, '') || '/'
+      return !PAGES.some(([, url]) => url.slice(2).split('?')[0] === base)
+    })
+  expect(routes.length).toBeGreaterThan(15)
+  expect(missing).toEqual([])
+})
 
 test('nút + xoè các công cụ có tên, bấm một mục thì mở trang đó', async ({ page }) => {
   test.skip(test.info().project.name.endsWith('desktop'), 'máy tính không có thanh dưới')
