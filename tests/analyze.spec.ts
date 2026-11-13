@@ -68,39 +68,44 @@ test('kho bản nhạc: bản nhập còn sau khi tải lại (thân bản ở I
   await expect(page.getByText('Không có bản nào khớp')).toBeVisible()
 })
 
-test('kho bản nhạc: dữ liệu kiểu cũ (bản nhạc nằm trong localStorage) được chuyển sang IndexedDB mà không mất', async ({ page }) => {
+test('kho bản nhạc: dữ liệu kiểu cũ (bản nhạc nằm trong localStorage) được chuyển sang IndexedDB mà không mất', async ({ page, browser }) => {
   await page.goto('/#/analyze')
   const xml = await (await page.request.get('/analyze/bach-bwv269.musicxml')).text()
   await page.locator('input[type=file]').setInputFiles({ name: 'cu.musicxml', mimeType: 'application/xml', buffer: Buffer.from(xml) })
   await expect(page).toHaveURL(/#\/analyze\/ps-/)
   const id = page.url().split('/').pop()!
-  // rebuild the old layout: score inline in the list, IndexedDB emptied
   await page.waitForFunction(() => (localStorage.getItem('analyze:scores') ?? '').includes('ps-'))
-  await page.evaluate(async (id) => {
-    const db: IDBDatabase = await new Promise((ok, no) => {
-      const r = indexedDB.open('analyze-scores')
-      r.onsuccess = () => ok(r.result)
-      r.onerror = () => no(r.error)
-    })
-    const row: { data: string } = await new Promise((ok) => {
-      const g = db.transaction('bodies').objectStore('bodies').get(id)
-      g.onsuccess = () => ok(g.result)
-    })
-    const list = JSON.parse(localStorage.getItem('analyze:scores')!)
-    list[0].score = JSON.parse(row.data)
-    localStorage.setItem('analyze:scores', JSON.stringify(list))
-    await new Promise((ok) => {
-      const tx = db.transaction('bodies', 'readwrite')
-      tx.objectStore('bodies').clear()
-      tx.oncomplete = ok
-    })
-    db.close()
-  }, id)
-  await page.reload()
-  await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
-  await page.waitForFunction(() => !(localStorage.getItem('analyze:scores') ?? '').includes('"score"'))
-  await page.reload()
-  await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
+  // the old layout: the score inline in the list. Built in a fresh context (empty IndexedDB) before the app starts,
+  // never by writing to the database the running app holds open (WebKit crashed on reload after that)
+  const legacy = await page.evaluate(
+    (id) =>
+      new Promise<string>((ok) => {
+        const r = indexedDB.open('analyze-scores')
+        r.onsuccess = () => {
+          const g = r.result.transaction('bodies').objectStore('bodies').get(id)
+          g.onsuccess = () => {
+            const list = JSON.parse(localStorage.getItem('analyze:scores')!)
+            list[0].score = JSON.parse(g.result.data)
+            r.result.close()
+            ok(JSON.stringify(list))
+          }
+        }
+      }),
+    id,
+  )
+  const ctx = await browser.newContext({ viewport: page.viewportSize() ?? undefined })
+  await ctx.addInitScript((legacy) => {
+    sessionStorage.setItem('app:unlocked', '1')
+    localStorage.setItem('onboarding-done', '1')
+    if (!localStorage.getItem('analyze:scores')) localStorage.setItem('analyze:scores', legacy)
+  }, legacy)
+  const fresh = await ctx.newPage()
+  await fresh.goto(`/#/analyze/${id}`)
+  await expect(fresh.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
+  await fresh.waitForFunction(() => !(localStorage.getItem('analyze:scores') ?? '').includes('"score"'))
+  await fresh.reload()
+  await expect(fresh.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
+  await ctx.close()
 })
 
 test('nhận file theo nội dung, không theo đuôi (điện thoại hay lưu thành .txt); file lạ thì báo lỗi', async ({ page }) => {
