@@ -23,6 +23,7 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - **Giữ mã 6 số** + mã hoá dữ liệu riêng (đã biết giới hạn).
 - Thư viện **mở cho người xem**; chỉ dữ liệu riêng bị khoá.
 - `data/seed-backup.json` (học viên thật) **giữ trong repo**, tự nạp máy mới.
+- Tên trên `LICENSE` / dòng bản quyền: giữ như hiện tại (tên thật + Lamar) — Lamar để tuỳ, 11/2026. Không thêm thông tin cá nhân khác vào repo.
 
 ## Văn bản học thuật của Lamar
 - Lamar học **Cao học II/II, chuyên ngành Âm nhạc học**, Nhạc viện TP.HCM. Bìa: "Bộ Văn hoá, Thể thao và Du lịch" / "Nhạc viện Thành phố Hồ Chí Minh" / logo / TIỂU LUẬN / tên đề tài / "Học viên thực hiện: <tên thật>" / "Chuyên ngành: Âm nhạc học" / "Hệ: Cao học II/II" / "Thành phố Hồ Chí Minh, tháng … năm …". **Tên thật không ghi vào repo công khai** — dùng tên Lamar đưa trong chat; không có thì hỏi.

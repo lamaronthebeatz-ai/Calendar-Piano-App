@@ -5,7 +5,6 @@
 
 ## Đang dở / chờ Lamar
 - **Dấu kiểm mã khoá PBKDF2**: Lamar vào Cài đặt → Bảo mật → "Tạo dấu kiểm" rồi gửi dòng `pbkdf2$…`. Nhận được thì thay `HASH` ở `src/components/LockScreen.tsx` (mã màn chào). Nếu Lamar gửi dấu kiểm cho mã khu riêng tư thì thay ở `PrivateArea.tsx` (hai mã **khác nhau**). Không bao giờ hỏi hay ghi mã thật.
-- `LICENSE` + dòng `BANNER` (`vite.config.ts`) đang ghi tên thật kèm "Lamar" trong repo công khai — đã hỏi Lamar có muốn chỉ để "Lamar" không; chờ trả lời.
 
 ## Vừa xong (đợt 11/2026, commit a2c4d21, CI xanh, đã deploy)
 - Vitest + CI, test chặn route chưa kiểm, nhật ký lỗi, TS chặt hơn — `notes/testing.md`.
