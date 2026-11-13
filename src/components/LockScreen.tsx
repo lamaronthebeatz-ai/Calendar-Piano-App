@@ -9,11 +9,11 @@ import { openVault } from '../lib/vault'
  * The lock screen is the entrance hall of the home page: the same painting (P. S. Krøyer, Duet, 1887; public domain,
  * Statens Museum for Kunst) under a quiet column — signature, date, time, six dots, a hairline keypad. A correct code
  * fades the column away and then the hall itself, uncovering the home page's hero on the very same painting, whose
- * title rises as the curtain goes. This is a privacy curtain, not security: everything runs on the device, so only a
- * hash of the code ships in the bundle.
+ * title rises as the curtain goes. Everything runs on the device, so what ships is a slow PBKDF2 verifier of the code
+ * (lib/passcode.ts, made in Settings → Bảo mật), never the code; the code also opens the vault of private data.
  */
 const LENGTH = 6
-const HASH = 'dab66e8584ed9a873292351037637ac6530b38370739bba605c9fbe42bbb6f1c'
+const HASH = 'pbkdf2$1000000$4+7hiSBix4JdVfAEYE1MNw==$Gh7ZGKIGbq6KMq1GPTP3jRQTSVYqDsxN+kW9kw/e68w='
 const KEY = 'app:unlocked'
 const ART = `${import.meta.env.BASE_URL}images/home/duet`
 
@@ -29,7 +29,7 @@ export function isUnlocked() {
 const matches = (code: string) => checkCode(code, HASH)
 
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'] as const
-type Phase = 'input' | 'wrong' | 'right' | 'leaving'
+type Phase = 'input' | 'checking' | 'wrong' | 'right' | 'leaving'
 const reducedMotion = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches
 
 /** The current time, ticking on the minute. */
@@ -71,6 +71,8 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
       const next = code + key
       setCode(next)
       if (next.length < LENGTH) return
+      // the slow check takes a moment on a phone: say so, and take no keys meanwhile
+      setPhase('checking')
       matches(next).then((ok) => {
         if (ok) {
           setPhase('right')
@@ -156,7 +158,7 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
         ))}
       </div>
 
-      <main className={clsx('lk-column', phase === 'wrong' && 'is-wrong', done && 'is-done')}>
+      <main className={clsx('lk-column', phase === 'wrong' && 'is-wrong', phase === 'checking' && 'is-checking', done && 'is-done')}>
         <div className="lk-sign" style={{ '--logo': `url(${logoFull})` } as CSSProperties}>
           <img src={logoFull} alt="Lamar" draggable={false} />
         </div>
@@ -167,7 +169,7 @@ export function LockScreen({ onUnlock, onDone }: { onUnlock: () => void; onDone:
         </p>
 
         <p className="lk-status" aria-live="polite">
-          {phase === 'wrong' ? 'Mã chưa đúng' : done ? 'Mời vào' : 'Nhập mã riêng'}
+          {phase === 'wrong' ? 'Mã chưa đúng' : phase === 'checking' ? 'Đang kiểm…' : done ? 'Mời vào' : 'Nhập mã riêng'}
         </p>
         <div className="lk-dots" aria-label={`${code.length} trên ${LENGTH} số`}>
           {Array.from({ length: LENGTH }, (_, i) => (

@@ -89,6 +89,8 @@
   transition: background-color 180ms ease, box-shadow 220ms ease, transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .lk-dot.is-on { background: var(--gold); box-shadow: 0 0 10px rgb(226 189 120 / 0.65); transform: scale(1.12); }
+.lk-column.is-checking .lk-dot.is-on { animation: lk-wait 900ms ease-in-out infinite alternate; }
+@keyframes lk-wait { to { opacity: 0.35; } }
 .lk-column.is-wrong .lk-dots { animation: lk-shake 460ms cubic-bezier(0.36, 0.07, 0.19, 0.97); }
 .lk-column.is-wrong .lk-dot.is-on { background: #e9a99a; box-shadow: 0 0 10px rgb(233 169 154 / 0.6); }
 .lk-column.is-done .lk-dot { transition-delay: calc(var(--d) * 30ms); box-shadow: 0 0 16px rgb(241 207 140 / 0.9); }

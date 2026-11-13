@@ -5,7 +5,7 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 ## Làm việc với chủ repo
 - Trả lời bằng tiếng Việt, xưng "tao – mày" **chỉ trong khung chat**. Nội dung app không bao giờ dùng "mày/tao": gọi người đọc là "bạn", ghi chú người soạn viết "người biên soạn".
 - **Trích dẫn và sự kiện phải có nguồn.** Chưa đối chiếu nguyên văn hoặc nguồn mâu thuẫn thì ghi rõ trong bài. Không đưa câu nổi tiếng nguồn gốc mập mờ. Không chép/phát tán sách còn bản quyền (chỉ tóm lược, trích ngắn có trang); không vượt captcha IMSLP.
-- Repo **công khai**: không bao giờ ghi mã khoá app vào code/commit/file; kiểm thử màn khoá bằng cách giả `crypto.subtle.digest`. Không ghi thông tin cá nhân của Lamar (tên thật, trường, liên lạc) vào file trong repo trừ khi Lamar bảo.
+- Repo **công khai**: không bao giờ ghi mã khoá app vào code/commit/file; kiểm thử màn khoá bằng cách giả `crypto.subtle.deriveBits` (màn chào, dấu kiểm PBKDF2) hoặc `crypto.subtle.digest` (khu riêng tư, SHA-256 cũ) — mẫu ở `notes/security.md`. Không ghi thông tin cá nhân của Lamar (tên thật, trường, liên lạc) vào file trong repo trừ khi Lamar bảo.
 - Làm trên `main`. Push lên `main` là GitHub Actions tự deploy GitHub Pages.
 - Commit: tiếng Việt, một dòng tóm tắt + trailer phiên; không ghi tên/model ID trong commit hay code.
 

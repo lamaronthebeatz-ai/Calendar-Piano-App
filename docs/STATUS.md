@@ -4,7 +4,7 @@
 > Cập nhật lần cuối: 13/11/2026.
 
 ## Đang dở / chờ Lamar
-- **Dấu kiểm mã khoá PBKDF2**: Lamar vào Cài đặt → Bảo mật → "Tạo dấu kiểm" rồi gửi dòng `pbkdf2$…`. Nhận được thì thay `HASH` ở `src/components/LockScreen.tsx` (mã màn chào). Nếu Lamar gửi dấu kiểm cho mã khu riêng tư thì thay ở `PrivateArea.tsx` (hai mã **khác nhau**). Không bao giờ hỏi hay ghi mã thật.
+- Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong (đợt 11/2026, commit a2c4d21, CI xanh, đã deploy)
 - Vitest + CI, test chặn route chưa kiểm, nhật ký lỗi, TS chặt hơn — `notes/testing.md`.
