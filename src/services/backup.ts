@@ -4,7 +4,7 @@ import { allNotes, importNotes, notesLocked, type Note } from '../features/curri
 import { allProjects, importProjects, projectsLocked, type Project } from '../features/research/store'
 
 import { allBrainNotes, brainLocked, importBrainNotes, type BrainNote } from '../features/brain/store'
-import { allSaved, importSaved, savedLocked, type Saved } from '../features/analyze/store'
+import { allSavedFull, importSaved, savedLocked, type Saved } from '../features/analyze/store'
 
 const LOCKED = 'Ghi chú và đề tài đang được mã hoá và chưa mở. Hãy đóng hẳn ứng dụng, mở lại và nhập mã khoá rồi thử lại.'
 
@@ -40,7 +40,7 @@ export async function exportBackup(): Promise<BackupPayload> {
     notes: allNotes(),
     projects: allProjects(),
     brain: allBrainNotes(),
-    analyses: allSaved(),
+    analyses: await allSavedFull(),
   }
 }
 

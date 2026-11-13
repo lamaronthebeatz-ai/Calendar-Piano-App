@@ -10,6 +10,7 @@ import { toMei } from '../compose/mei'
 import { fromMusicXml, unzipMxl } from '../compose/exchange'
 import type { Score } from '../compose/model'
 import { findArticle } from '../theory/wiki'
+import { fold } from '../search/fold'
 import { annotateMei, COLORS, DEFAULT_LAYERS, labelOf, type Layers, type Notation } from './annotate'
 import type { Analysis } from './engine/index'
 import { barNumbering, keyName, report, toMarkdown, type Run } from './engine/report'
@@ -17,7 +18,7 @@ import { explain } from './explain'
 import { fromMidi } from './midi'
 import { runAnalysis } from './runAnalysis'
 import { SAMPLES, sampleUrl } from './samples'
-import { addSaved, removeSaved, updateSaved, useSaved, type Lens } from './store'
+import { addSaved, removeSaved, savedLocked, scoreOf, updateSaved, useSaved, type Lens } from './store'
 import { THEORY, type Concept } from './links'
 import { createBrainNote } from '../brain/store'
 import { updateProject, useProjects } from '../research/store'
@@ -62,7 +63,6 @@ export function AnalyzePage() {
 
 function Shelf() {
   const navigate = useNavigate()
-  const saved = useSaved()
   const [err, setErr] = useState('')
   const own = useMemo(() => composeScores(), [])
   const input = useRef<HTMLInputElement>(null)
@@ -78,8 +78,10 @@ function Shelf() {
       const head = new TextDecoder().decode(new Uint8Array(buf, 0, Math.min(4, buf.byteLength)))
       if (head !== 'MThd' && !head.startsWith('PK') && !/<score-(partwise|timewise)/.test(new TextDecoder().decode(buf.slice(0, 4096))))
         throw new Error('File này không phải MusicXML hay MIDI.')
-      const score = head === 'MThd' ? fromMidi(buf, name) : fromMusicXml(head.startsWith('PK') ? await unzipMxl(buf) : new TextDecoder().decode(buf), name)
-      navigate(`/analyze/${addSaved(score, 'import').id}`)
+      const xml = head === 'MThd' ? '' : head.startsWith('PK') ? await unzipMxl(buf) : new TextDecoder().decode(buf)
+      const score = xml ? fromMusicXml(xml, name) : fromMidi(buf, name)
+      const composer = /<creator[^>]*type="composer"[^>]*>([^<]+)</.exec(xml)?.[1].trim()
+      navigate(`/analyze/${addSaved(score, 'import', composer || undefined).id}`)
     } catch (x) {
       setErr(x instanceof Error ? x.message : String(x))
     }
@@ -101,61 +103,81 @@ function Shelf() {
       </div>
       {err && <p className="text-[13px] text-[var(--color-status-cancelled)]">{err}</p>}
 
-      <section className="space-y-3">
-        <h3 className="an-h">Bản mẫu</h3>
+      <Library own={own} />
+    </>
+  )
+}
+
+type Item = { id: string; to: string; kind: 'sample' | 'import' | 'compose'; tag: string; title: string; sub: string; note?: string; hay: string; remove?: () => void }
+const KINDS = [
+  { id: 'all', label: 'Tất cả' },
+  { id: 'sample', label: 'Bản mẫu' },
+  { id: 'import', label: 'Đã nhập' },
+  { id: 'compose', label: 'Trình soạn nhạc' },
+] as const
+
+/** The shelf: samples, imported scores and the editor's scores in one place, searchable by title, composer, note. */
+function Library({ own }: { own: Score[] }) {
+  const saved = useSaved()
+  const [q, setQ] = useState('')
+  const [kind, setKind] = useState<(typeof KINDS)[number]['id']>('all')
+  const items = useMemo<Item[]>(() => {
+    const date = (n: number) => new Date(n).toLocaleDateString('vi-VN')
+    const lensLabel = (l?: Lens) => LENSES.find((x) => x.id === (l ?? 'classical'))!.label
+    const list: Item[] = [
+      ...saved.map((s): Item => ({
+        id: s.id,
+        to: `/analyze/${s.id}`,
+        kind: s.from === 'compose' ? 'compose' : 'import',
+        tag: `${s.from === 'compose' ? 'Chép từ trình soạn' : 'Đã nhập'} · ${lensLabel(s.lens)}`,
+        title: s.title,
+        sub: [s.composer, s.measures ? `${s.measures} ô` : '', date(s.created)].filter(Boolean).join(' · '),
+        hay: `${s.title} ${s.composer ?? ''}`,
+        remove: () => confirm(`Xoá “${s.title}” khỏi kho?`) && removeSaved(s.id),
+      })),
+      ...SAMPLES.map((s): Item => ({ id: s.id, to: `/analyze/${s.id}`, kind: 'sample', tag: `Bản mẫu · ${lensLabel(s.lens)}`, title: s.title, sub: `${s.composer} · ${s.year}`, note: s.note, hay: `${s.title} ${s.composer} ${s.year} ${s.note}` })),
+      ...own.map((s): Item => ({ id: `c-${s.id}`, to: `/analyze/c-${s.id}`, kind: 'compose', tag: 'Trình soạn nhạc', title: s.title, sub: `${s.measures} ô · sửa ${date(s.updated)}`, hay: s.title })),
+    ]
+    return list.map((x) => ({ ...x, hay: fold(`${x.hay} ${x.tag}`) }))
+  }, [saved, own])
+  const words = fold(q).split(/\s+/).filter(Boolean)
+  const shown = items.filter((x) => (kind === 'all' || x.kind === kind) && words.every((w) => x.hay.includes(w)))
+  return (
+    <section className="space-y-3">
+      <div className="flex flex-wrap items-center gap-3">
+        <h3 className="an-h">Kho bản nhạc</h3>
+        <span className="text-[12.5px] text-[var(--color-ink-faint)]">{items.length} bản</span>
+      </div>
+      <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Tìm theo tên, tác giả, ghi chú…" aria-label="Tìm trong kho bản nhạc" className="an-search" />
+      <div className="an-chips" role="group" aria-label="Lọc theo nguồn">
+        {KINDS.map((k) => (
+          <button key={k.id} aria-pressed={kind === k.id} onClick={() => setKind(k.id)}>
+            {k.label}
+          </button>
+        ))}
+      </div>
+      {shown.length ? (
         <ul className="an-grid">
-          {SAMPLES.map((s) => (
-            <li key={s.id}>
-              <Link to={`/analyze/${s.id}`} className="an-card">
-                <span className="an-card-lens">{LENSES.find((l) => l.id === s.lens)!.label}</span>
-                <span className="an-card-title">{s.title}</span>
-                <span className="an-card-sub">{s.composer} · {s.year}</span>
-                <span className="an-card-note">{s.note}</span>
+          {shown.map((x) => (
+            <li key={x.id} className="relative">
+              <Link to={x.to} className="an-card">
+                <span className="an-card-lens">{x.tag}</span>
+                <span className="an-card-title">{x.title}</span>
+                <span className="an-card-sub">{x.sub}</span>
+                {x.note && <span className="an-card-note">{x.note}</span>}
               </Link>
+              {x.remove && (
+                <button aria-label={`Xoá ${x.title}`} onClick={x.remove} className="absolute right-2 top-2 p-2 text-[var(--color-ink-faint)] hover:text-[var(--color-status-cancelled)]">
+                  <TrashIcon width={15} height={15} />
+                </button>
+              )}
             </li>
           ))}
         </ul>
-      </section>
-
-      {saved.length > 0 && (
-        <section className="space-y-3">
-          <h3 className="an-h">Bản của bạn</h3>
-          <ul className="src-list">
-            {saved.map((s) => (
-              <li key={s.id} className="flex items-center gap-2">
-                <Link to={`/analyze/${s.id}`} className="src-row min-w-0 flex-1">
-                  <span className="min-w-0 flex-1">
-                    <span className="src-title">{s.title}</span>
-                    <span className="src-sub">{s.from === 'compose' ? 'Từ trình soạn nhạc' : 'Nhập từ tệp'} · {new Date(s.created).toLocaleDateString('vi-VN')}</span>
-                  </span>
-                </Link>
-                <button aria-label={`Xoá ${s.title}`} onClick={() => confirm(`Xoá “${s.title}” khỏi danh sách phân tích?`) && removeSaved(s.id)} className="p-2 text-[var(--color-ink-faint)] hover:text-[var(--color-status-cancelled)]">
-                  <TrashIcon width={15} height={15} />
-                </button>
-              </li>
-            ))}
-          </ul>
-        </section>
+      ) : (
+        <p className="text-[13.5px] text-[var(--color-ink-faint)]">Không có bản nào khớp “{q}”.</p>
       )}
-
-      {own.length > 0 && (
-        <section className="space-y-3">
-          <h3 className="an-h">Từ trình soạn nhạc</h3>
-          <ul className="src-list">
-            {own.map((s) => (
-              <li key={s.id}>
-                <Link to={`/analyze/c-${s.id}`} className="src-row">
-                  <span className="min-w-0 flex-1">
-                    <span className="src-title">{s.title}</span>
-                    <span className="src-sub">{s.measures} ô · sửa {new Date(s.updated).toLocaleDateString('vi-VN')}</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-    </>
+    </section>
   )
 }
 
@@ -169,30 +191,40 @@ function useScore(id: string): { data: Loaded | null; error: string } {
   const [fetched, setFetched] = useState<{ id: string; data?: Loaded; error?: string } | null>(null)
   const mine = saved.find((s) => s.id === id)
   const local = useMemo<{ data: Loaded | null; error: string } | null>(() => {
-    if (sample) return null
-    if (id.startsWith('c-')) {
-      const s = composeScores().find((x) => x.id === id.slice(2))
-      return s ? { data: { score: s, title: s.title, sub: 'Bản trong trình soạn nhạc', lens: 'classical' }, error: '' } : { data: null, error: 'Không thấy bản nhạc này trong trình soạn nhạc trên máy.' }
-    }
-    if (mine) return { data: { score: mine.score, title: mine.title, sub: mine.from === 'compose' ? 'Từ trình soạn nhạc' : 'Nhập từ tệp', lens: mine.lens ?? 'classical', savedId: mine.id }, error: '' }
-    return { data: null, error: 'Không có bản nhạc này trên máy.' }
-  }, [id, sample, mine])
+    if (!id.startsWith('c-')) return null
+    const s = composeScores().find((x) => x.id === id.slice(2))
+    return s ? { data: { score: s, title: s.title, sub: 'Bản trong trình soạn nhạc', lens: 'classical' }, error: '' } : { data: null, error: 'Không thấy bản nhạc này trong trình soạn nhạc trên máy.' }
+  }, [id])
+  const known = !!sample || !!mine
   useEffect(() => {
-    if (!sample) return
+    if (!known || id.startsWith('c-')) return
     let live = true
-    fetch(sampleUrl(sample))
-      .then((r) => {
-        if (!r.ok) throw new Error('Không tải được bản nhạc mẫu.')
-        return r.text()
-      })
-      .then((t) => live && setFetched({ id, data: { score: fromMusicXml(t, sample.title), title: sample.title, sub: `${sample.composer} · ${sample.year}`, lens: sample.lens } }))
-      .catch((e: Error) => live && setFetched({ id, error: e.message }))
+    const load = sample
+      ? fetch(sampleUrl(sample))
+          .then((r) => {
+            if (!r.ok) throw new Error('Không tải được bản nhạc mẫu.')
+            return r.text()
+          })
+          .then((t): Loaded => ({ score: fromMusicXml(t, sample.title), title: sample.title, sub: `${sample.composer} · ${sample.year}`, lens: sample.lens }))
+      : scoreOf(id).then((score) => {
+          if (!score) throw new Error('Không còn thân bản nhạc này trên máy.')
+          return { score } as Loaded
+        })
+    load.then((data) => live && setFetched({ id, data })).catch((e: Error) => live && setFetched({ id, error: e.message }))
     return () => {
       live = false
     }
-  }, [id, sample])
+  }, [id, sample, known])
+  // a saved score's title and lens come from the live list (kept stable: the analysis re-runs when `data` changes)
+  const data = useMemo<Loaded | null>(() => {
+    if (fetched?.id !== id || !fetched.data) return null
+    if (!mine) return fetched.data
+    const sub = [mine.composer, mine.from === 'compose' ? 'Từ trình soạn nhạc' : 'Nhập từ tệp'].filter(Boolean).join(' · ')
+    return { ...fetched.data, title: mine.title, sub, lens: mine.lens ?? 'classical', savedId: mine.id }
+  }, [fetched, id, mine])
   if (local) return local
-  return fetched?.id === id ? { data: fetched.data ?? null, error: fetched.error ?? '' } : { data: null, error: '' }
+  if (!known) return { data: null, error: savedLocked() ? 'Kho đang khoá: mở khoá app để xem bản này.' : 'Không có bản nhạc này trên máy.' }
+  return { data, error: fetched?.id === id ? (fetched.error ?? '') : '' }
 }
 
 function Work({ id }: { id: string }) {
