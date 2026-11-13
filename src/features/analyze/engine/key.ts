@@ -1,5 +1,5 @@
 import type { Chord } from './chords'
-import { chordPcs } from './chords'
+import { chordPcs, core } from './chords'
 import type { AScore } from './extract'
 import { barAt } from './extract'
 import { above, majorOfSig, mod, pcOf, type Spelled } from './pitch'
@@ -46,7 +46,7 @@ const SCALE_MAJOR = [0, 2, 4, 5, 7, 9, 11]
 const SCALE_MINOR = [0, 2, 3, 5, 7, 8, 10, 11, 9]
 
 /** How strongly a chord points to a key: diatonic chords, and above all dominant → tonic. */
-function chordFit(c: Chord, k: Key, next?: Chord): number {
+function chordFit(c: Chord, k: Key, next?: Chord, jazz = false): number {
   const t = keyPc(k)
   const pcs = chordPcs(c)
   const scale = k.minor ? SCALE_MINOR : SCALE_MAJOR
@@ -56,16 +56,20 @@ function chordFit(c: Chord, k: Key, next?: Chord): number {
   // inside the key (V/V, VII7/II…), not a reason to leave it
   const applied =
     out > 0 && !!next && mod(next.root - t, 12) !== 0 && scale.includes(mod(next.root - t, 12)) &&
-    ((['M', '7', '9', 'b9'].includes(c.quality) && mod(next.root - c.root, 12) === 5) || (['d', 'o7', 'ø7'].includes(c.quality) && mod(next.root - c.root, 12) === 1))
+    (((core(c.quality) === 'M' || core(c.quality) === '7') && mod(next.root - c.root, 12) === 5) || (core(c.quality) === 'd' && mod(next.root - c.root, 12) === 1))
   let v = applied ? -0.25 : -0.9 * out
   // the chords that define a key
-  if (r === 0 && (k.minor ? c.quality === 'm' : c.quality === 'M' || c.quality === 'M7')) v += 1.1
-  if (r === 7 && (c.quality === 'M' || c.quality === '7' || c.quality === '9' || c.quality === 'b9')) v += 0.9
-  if (r === 11 && (c.quality === 'd' || c.quality === 'o7' || c.quality === 'ø7')) v += 0.5
-  if (r === 5 && (k.minor ? c.quality === 'm' : c.quality === 'M')) v += 0.5
-  if (r === 2 && (k.minor ? c.quality === 'd' || c.quality === 'ø7' : c.quality === 'm' || c.quality === 'm7')) v += 0.35
+  const q = core(c.quality)
+  if (r === 0 && (k.minor ? q === 'm' : q === 'M')) v += 1.1
+  // blues and jazz: a dominant seventh on the tonic is the tonic (I7), and the ♭7 and ♭3 of the blues are not foreign
+  if (jazz && r === 0 && q === '7') v += 1.4 + 0.9 * out
+  if (jazz && r === 5 && q === '7') v += 0.6 + 0.9 * out
+  if (r === 7 && (q === 'M' || q === '7')) v += 0.9
+  if (r === 11 && q === 'd') v += 0.5
+  if (r === 5 && (k.minor ? q === 'm' : q === 'M')) v += 0.5
+  if (r === 2 && (k.minor ? q === 'd' : q === 'm')) v += 0.35
   // a cadence: V(7) → I confirms the key strongly
-  if (next && r === 7 && mod(next.root - t, 12) === 0 && ['M', '7', '9', 'b9'].includes(c.quality)) v += 1.2
+  if (next && r === 7 && mod(next.root - t, 12) === 0 && (q === 'M' || q === '7')) v += 1.2
   if (next && r === 0 && mod(next.root - t, 12) === 7) v += 0.2
   return v
 }
@@ -89,7 +93,7 @@ function profileFit(hist: number[], k: Key) {
   return dx && dy ? num / Math.sqrt(dx * dy) : 0
 }
 
-export type KeyOptions = { change?: number; window?: number; sigBonus?: number }
+export type KeyOptions = { change?: number; window?: number; sigBonus?: number; jazz?: boolean }
 
 /**
  * The key of every chord: a hidden-Markov path through the 24 keys (Viterbi). Each chord votes by how it fits the key
@@ -116,7 +120,8 @@ export function keysOf(sc: AScore, chords: Chord[], opts: KeyOptions = {}): Key[
   const emit = (i: number, k: Key) => {
     const c = chords[i]
     const sig = barAt(sc.bars, c.start).key
-    let v = 1.6 * chordFit(c, k, chords[i + 1]) + 2.2 * profileFit(hists[i], k)
+    let v = 1.6 * chordFit(c, k, chords[i + 1], opts.jazz) + (opts.jazz ? 1.2 : 2.2) * profileFit(hists[i], k)
+
     if (sigOf(k) === sig) v += sigBonus
     return v * Math.min(2, (c.end - c.start) / 240 + 0.5)
   }

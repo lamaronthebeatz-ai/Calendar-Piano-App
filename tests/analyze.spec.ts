@@ -36,3 +36,20 @@ test('nhập MusicXML từ máy: bản nhạc vào danh sách của bạn và đ
   await page.goto('/#/analyze')
   await expect(page.locator('.src-list').getByText('Nhập từ tệp', { exact: false }).first()).toBeVisible()
 })
+
+test('ba lăng kính: jazz ghi ký hiệu hợp âm và thang âm, TK XX ghi tên Forte, có sơ đồ hình thức và bảng từng ô', async ({ page }) => {
+  await page.goto('/#/analyze/joplin-maple-leaf')
+  await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
+  await page.getByRole('radio', { name: 'Jazz' }).click()
+  await expect(page.locator('.an-report')).toContainText('Thang âm và nốt dẫn hướng', { timeout: 30_000 })
+  await expect(page.locator('.an-report')).toContainText('march / ragtime')
+  await expect(page.getByRole('figure', { name: 'Sơ đồ hình thức' })).toBeVisible()
+  await expect(page.locator('.an-table tbody tr').first()).toBeVisible()
+
+  await page.goto('/#/analyze/schoenberg-op19-6')
+  await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
+  await expect(page.locator('.an-report')).toContainText('Tập cao độ')
+  await expect(page.locator('.an-svg .harm').filter({ hasText: /\d-\d+/ }).first()).toBeVisible()
+  // no keys or cadences drawn for atonal music
+  await expect(page.locator('.an-svg .dir').filter({ hasText: /kết nửa|kết trọn|trưởng|thứ$/ })).toHaveCount(0)
+})

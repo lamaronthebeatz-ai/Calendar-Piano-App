@@ -12,13 +12,16 @@ import type { Score } from '../compose/model'
 import { findArticle } from '../theory/wiki'
 import { annotateMei, COLORS, DEFAULT_LAYERS, labelOf, type Layers, type Notation } from './annotate'
 import type { Analysis } from './engine/index'
-import { barNumbering, keyName, report, type Run } from './engine/report'
+import { barNumbering, keyName, report, toMarkdown, type Run } from './engine/report'
 import { explain } from './explain'
 import { fromMidi } from './midi'
 import { runAnalysis } from './runAnalysis'
 import { SAMPLES, sampleUrl } from './samples'
 import { addSaved, removeSaved, updateSaved, useSaved, type Lens } from './store'
 import { THEORY, type Concept } from './links'
+import { createBrainNote } from '../brain/store'
+import { updateProject, useProjects } from '../research/store'
+import { download } from '../research/exportDraft'
 import '../research/research.css'
 import '../sources/sources.css'
 import './analyze.css'
@@ -50,7 +53,7 @@ export function AnalyzePage() {
           <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id ? '' : 'Phân tích tác phẩm'}</h1>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl space-y-6 px-4 py-6 lg:px-8">{id ? <Work id={id} /> : <Shelf />}</div>
+      <div className="mx-auto max-w-6xl space-y-6 px-4 py-6 lg:px-8">{id ? <Work key={id} id={id} /> : <Shelf />}</div>
     </ScrollArea>
   )
 }
@@ -228,6 +231,7 @@ function Work({ id }: { id: string }) {
   }
   const onPick = (kind: string, i: number) => {
     if (kind === 'ah') setPick(i)
+    if (kind === 'ax') setPick(-1 - i)
     if (kind === 'm') {
       // a tap on a bar: the text scrolls to where it is first named
       const n = i + (numbering?.pickup ? 0 : 1)
@@ -284,10 +288,13 @@ function Work({ id }: { id: string }) {
               ['harmony', 'Hợp âm'],
               ['keys', 'Giọng'],
               ['cadences', 'Câu kết'],
+              ['form', 'Hình thức'],
               ['accidentals', 'Dấu hoá bất thường'],
               ['ncts', 'Nốt ngoài hợp âm'],
             ] as [keyof Layers, string][]
-          ).map(([k, l]) => (
+          )
+            .filter(([k]) => active !== 'xx' || (k !== 'keys' && k !== 'cadences'))
+            .map(([k, l]) => (
             <button key={k} aria-pressed={layers[k]} onClick={() => setLayers((x) => ({ ...x, [k]: !x[k] }))} className={clsx('an-chip', layers[k] && 'is-on')}>
               {k === 'accidentals' && <i style={{ background: COLORS.accidental }} />}
               {k === 'ncts' && <i style={{ background: COLORS.nct }} />}
@@ -302,7 +309,12 @@ function Work({ id }: { id: string }) {
 
       <ScoreView score={data.score} analysis={analysis} layers={layers} notation={notation} focus={focus} pick={pick} onPick={onPick} />
 
-      {analysis && pick !== null && analysis.harmony[pick] && <PickCard a={analysis} i={pick} notation={notation} onClose={() => setPick(null)} num={numbering!.num} />}
+      {analysis && pick !== null && pick >= 0 && analysis.harmony[pick] && <PickCard a={analysis} i={pick} notation={notation} onClose={() => setPick(null)} num={numbering!.num} />}
+      {analysis?.xx && pick !== null && pick < 0 && analysis.xx.sonorities[-1 - pick] && <SetCard a={analysis} i={-1 - pick} onClose={() => setPick(null)} num={numbering!.num} />}
+
+      {analysis && analysis.form.sections.length > 1 && <FormDiagram a={analysis} onBars={(b) => setFocus(b)} />}
+
+      {analysis && <ExportBar title={data.title} blocks={blocks} />}
 
       {analysis && (
         <div ref={textRef} className="an-report prose-theory" data-font="serif">
@@ -314,6 +326,27 @@ function Work({ id }: { id: string }) {
                   <Runs runs={p} onBars={showBars} />
                 </p>
               ))}
+              {b.table && (
+                <div className="an-table-wrap">
+                  <table className="an-table">
+                    <thead>
+                      <tr>{b.table.head.map((h) => <th key={h}>{h}</th>)}</tr>
+                    </thead>
+                    <tbody>
+                      {b.table.rows.map((r) => (
+                        <tr key={r.bar}>
+                          <td>
+                            <button className="an-barref" data-bar-from={r.bar} onClick={() => showBars([r.bar, r.bar])}>
+                              {r.cells[0]}
+                            </button>
+                          </td>
+                          {r.cells.slice(1).map((c, i) => <td key={i}>{c}</td>)}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </section>
           ))}
           <p className="an-foot">
@@ -322,6 +355,69 @@ function Work({ id }: { id: string }) {
         </div>
       )}
     </article>
+  )
+}
+
+/** The form as blocks proportional to their length, one colour per letter; a tap lights the section on the score. */
+function FormDiagram({ a, onBars }: { a: Analysis; onBars: (b: [number, number]) => void }) {
+  const total = a.score.bars.length
+  const { num } = barNumbering(a)
+  const hue = (l: string) => [42, 200, 330, 140, 270, 20][(l.charCodeAt(0) - 65) % 6]
+  return (
+    <figure className="an-form" aria-label="Sơ đồ hình thức">
+      <div className="an-form-bar">
+        {a.form.sections.map((x, i) => (
+          <button key={i} style={{ flexGrow: x.bars[1] - x.bars[0] + 1, ['--h' as string]: hue(x.letter) }} onClick={() => onBars(x.bars)} title={`${x.letter}: ô ${num(a.score.bars[x.bars[0]].start)}–${num(a.score.bars[x.bars[1]].start)}${x.key ? ` · ${x.key}` : ''}`}>
+            <b>{x.letter}</b>
+            <span>
+              {num(a.score.bars[x.bars[0]].start)}–{num(a.score.bars[x.bars[1]].start)}
+            </span>
+          </button>
+        ))}
+      </div>
+      <figcaption>
+        {a.form.guess ? `Gợi ý: ${a.form.guess.name}` : 'Sơ đồ các phần'} · {total} ô
+      </figcaption>
+    </figure>
+  )
+}
+
+/** Take the analysis out: a note in the second brain, a project's draft, a Markdown file. */
+function ExportBar({ title, blocks }: { title: string; blocks: ReturnType<typeof report> }) {
+  const navigate = useNavigate()
+  const projects = useProjects()
+  const [done, setDone] = useState('')
+  const md = () => toMarkdown(`Phân tích: ${title}`, blocks, (c) => THEORY[c])
+  return (
+    <div className="an-export" aria-label="Xuất bản phân tích">
+      <button className="btn-line rounded-full px-4 py-1.5 text-[13px]" onClick={() => navigate(`/brain/${createBrainNote(`Phân tích: ${title}`, md()).id}`)}>
+        Lưu vào Sổ tay
+      </button>
+      {projects.length > 0 && (
+        <select
+          className="src-select h-9 rounded-full px-3 text-[12.5px]"
+          aria-label="Gắn vào đề tài"
+          value=""
+          onChange={(e) => {
+            const p = projects.find((x) => x.id === e.target.value)
+            if (!p) return
+            updateProject(p.id, { draft: `${p.draft}${p.draft ? '\n\n' : ''}${md()}` })
+            setDone(`Đã thêm vào bản nháp “${p.title}”`)
+          }}
+        >
+          <option value="">Gắn vào đề tài…</option>
+          {projects.map((p) => (
+            <option key={p.id} value={p.id}>
+              {p.title}
+            </option>
+          ))}
+        </select>
+      )}
+      <button className="btn-line rounded-full px-4 py-1.5 text-[13px]" onClick={() => download(`phan-tich-${title.replace(/[^\p{L}\p{N}]+/gu, '-').toLowerCase()}.md`, md(), 'text/markdown')}>
+        Tải Markdown
+      </button>
+      {done && <span className="text-[12.5px] text-[var(--color-ink-faint)]">{done}</span>}
+    </div>
   )
 }
 
@@ -373,6 +469,34 @@ function PickCard({ a, i, notation, onClose, num }: { a: Analysis; i: number; no
       </div>
       <p className="mt-2 text-[14px] leading-relaxed text-[var(--color-ink)]">
         <Runs runs={ex.runs} onBars={() => {}} />
+      </p>
+    </aside>
+  )
+}
+
+/** One sonority read as a pitch-class set. */
+function SetCard({ a, i, onClose, num }: { a: Analysis; i: number; onClose: () => void; num: (t: number) => number }) {
+  const so = a.xx!.sonorities[i]
+  const names = so.pcs.map((p) => ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B'][p]).join(' ')
+  return (
+    <aside className="an-pick" aria-label="Tập cao độ đã chọn">
+      <div className="flex items-start gap-3">
+        <div className="min-w-0 flex-1">
+          <p className="an-pick-big">{so.forte ?? `${so.pcs.length} âm`}</p>
+          <p className="text-[12.5px] text-[var(--color-ink-faint)]">
+            ô {num(so.start)} · dạng nguyên thuỷ {so.prime ?? '—'} · vectơ quãng {so.iv ?? '—'}
+          </p>
+        </div>
+        <button onClick={onClose} aria-label="Đóng" className="px-2 text-[18px] text-[var(--color-ink-faint)]">
+          ✕
+        </button>
+      </div>
+      <p className="mt-2 text-[14px] leading-relaxed text-[var(--color-ink)]">
+        Các lớp cao độ: {names}. {so.name ? `Đây là ${so.name}. ` : ''}
+        <ConceptLink concept="setTheory" text="Lý thuyết tập cao độ" />: hai hợp âm cùng tên Forte là cùng một "hình dạng" quãng, dù chuyển cao độ hay đảo ngược.
+        {so.quartal ? ' Các nốt chồng theo quãng 4 — ' : ''}
+        {so.quartal ? <ConceptLink concept="quartal" text="hoà âm quãng 4" /> : null}
+        {so.quartal ? '.' : ''}
       </p>
     </aside>
   )
@@ -439,8 +563,8 @@ function ScoreView({ score, analysis, layers, notation, focus, pick, onPick }: {
           // the label's own group, not the text spans inside it (they carry ids of their own)
           const el = (e.target as Element).closest('.harm, .dir')
           const id = el?.getAttribute('data-id') ?? ''
-          const m = /^(ah|ak|ac|at)(\d+)$/.exec(id)
-          if (m) return onPick(m[1], +m[2])
+          const m = /^(ah|aj|ak|ac|at|ap|ax)(\d+)$/.exec(id)
+          if (m) return onPick(m[1] === 'aj' ? 'ah' : m[1], +m[2])
           const bar = (e.target as Element).closest('[data-id^="m"]')?.getAttribute('data-id')
           if (bar && /^m\d+$/.test(bar)) onPick('m', +bar.slice(1))
         }}

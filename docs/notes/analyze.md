@@ -20,3 +20,20 @@ Lamar muốn: đưa bản nhạc vào → nhận diện khoá, nhịp, hoá bi�
 - `/analyze/:id`: lăng kính, cách ghi (Nga – Xô viết / Quốc tế / Tên hợp âm), lớp (hợp âm, giọng, câu kết, dấu hoá bất thường cam, nốt ngoài hợp âm xanh). **`annotate.ts` ghi phân tích vào MEI** trước khi Verovio khắc: `<harm xml:id="ah{i}" place="below">` ở khuông thấp nhất, `<dir>` cho giọng (`ak`), ly điệu (`at`), câu kết (`ac`); `color` trên `<note>`. Bấm nhãn: `closest('.harm, .dir')` (tspan bên trong có data-id riêng!) → thẻ `PickCard` (`explain.ts`). Văn bản: ô nhịp là nút tô `.measure.is-focus` + cuộn; bấm ô trên bản nhạc → cuộn văn bản tới chỗ nhắc ô đó.
 - Trình soạn nhạc: nút "Phân tích bản này" (bảng ⋯ → Xuất – nhập). Xuất MIDI nay ghi nhịp độ thật, số chỉ nhịp, hoá biểu (trước cố định 120).
 - Test: `engine.test.ts` (cadence, thể đảo, K64, II♯3, D7→IV, Napoli, sáu tăng Đức, tìm giọng, chuyển giọng), `midi.test.ts`, e2e `tests/analyze.spec.ts`, smoke 2 trang.
+
+## Lăng kính Jazz (đợt 2)
+- `chords.ts` `JAZZ` (thêm 6, m6, maj9, m9, 7♯9, 7♯11, 13, 7sus4, sus4, 6/9, m11, 7alt), `core(q)` = hợp âm ba bên dưới (tìm giọng và chức năng đọc theo nó). `leadsheet.ts`: bản có ký hiệu hợp âm (MusicXML `<harmony>` → `ev.harm`) thì **dùng chính ký hiệu đó** (≥ 4 ký hiệu), `parseSymbol` đọc Dm7, G7♭9, F♯ø7, E-7, AΔ7, C/E…
+- `jazz.ts`: số La Mã tính từ âm giai trưởng của chủ âm (♭VII7, IIm7), SubV, V/x, backdoor ♭VII7 → I, vòng I–VI–II–V; **thang âm theo Levine** (II Dorian, III Phrygian, VI Aeolian, IV Lydian, V7 Mixolydian, át về thứ → Phrygian dominant, ♭9 → giảm nửa cung – cung, alt → altered, ø7 → Locrian ♮2, °7 → giảm cung – nửa cung); nốt dẫn hướng (quãng 3 – 7; hợp âm ba chỉ quãng 3).
+- Tìm giọng ở lăng kính Jazz (`keysOf {jazz}`): I7 là chủ (blues), IV7 hợp giọng; gộp ly điệu tới 2.880 tick (vòng quay đầu cuối bài không thành giọng mới). Không thưởng hợp âm đầu bài (bài jazz hay mở bằng II).
+- Bản nhạc: ký hiệu hợp âm **trên** khuông 1 (`ah`), số La Mã jazz **dưới** khuông thấp nhất (`aj`), tên mẫu tiến hành (`ap`). Văn bản: chuỗi hợp âm từng ô, mẫu tiến hành, thang âm + nốt dẫn hướng, khung blues 12 ô.
+
+## Lăng kính TK XX (đợt 3)
+- `xx.ts`: hợp âm theo phách (nốt vang ≥ 1/5 phách), gộp giống nhau liền nhau; **tên Forte** tra bảng `forte.ts` (208 lớp 3–9 âm, sinh bằng music21, khoá = mặt nạ 12 bit nhỏ nhất qua mọi chuyển vị và đảo → không phụ thuộc quy ước dạng nguyên thuỷ Forte/Rahn); `SET_NAMES` tên quen (3-11 hợp âm ba, 4-28 bảy giảm, 6-34 hợp âm huyền bí, 8-28 bát cung…). Tập hợp theo ô (≥ 5 lớp cao độ): toàn cung, lục cung, ngũ cung, bát cung, diatonic, âm học, thứ hoà âm, đủ 12 âm. Kỹ thuật: quãng 4, chuyển động song song, pedal (≥ 2 ô ở bè trầm), ostinato (2–8 nốt × ≥ 3), dãy 12 âm + 48 dạng (P/I/R/RI) + ma trận. Trung tâm cao độ (âm dài nhất, bè trầm ×2, phải trội 1,35×), tổng vectơ quãng.
+- Lăng kính TK XX **không vẽ giọng, câu kết** (ý niệm điệu tính) và văn bản bỏ "Giọng chính".
+
+## Hình thức (đợt 4, mọi lăng kính)
+- `form.ts`: "dấu vân tay" mỗi ô (giai điệu bè cao theo **bậc chữ** — mô tiến đi theo bậc, nửa cung đổi từ ô này sang ô khác; nhịp điệu; chroma). Câu: ranh giới ở câu kết đủ mạnh (`strength` ≥ 0,55; nốt dài ở bè cao +0,15) và dấu lưu. Nhắc lại ≥ 2 ô (nguyên / dời cao độ / mô tiến / biến đổi) + **mô tiến từng ô** (≥ 3 ô liền, cùng số bậc dời). Phần: cắt ở cuối câu + đầu/cuối khối nhắc lại ≥ 4 ô; phần nhắc lại lấy chữ của phần gốc (′ khi biến đổi); hai phần chỉ nghe một lần đứng cạnh nhau gộp thành một.
+- Đoán hình thức: AABA 32 ô (jazz), đoạn nhạc hai câu (HC/IAC → PAC), A–B–A, rondo, A–B, **sonata theo tiêu chí sách** (B nghe hai lần: lần đầu giọng khác, lần sau giọng chính; A trở lại), **march / ragtime** (A–B–A–C, trio ở giọng IV), biến tấu. Maple Leaf Rag ra đúng "A–B–A′–C, trio ở giọng hạ át".
+- Giao diện: sơ đồ khối (bấm → tô ô), lớp "Hình thức" (chữ phần `as`, nhắc lại / mô tiến `ar`), bảng từng ô (cột theo lăng kính), xuất: Lưu vào Sổ tay (Markdown có `[[slug|thuật ngữ]]` → vào mạng second brain), Gắn vào đề tài (nối vào bản nháp), Tải Markdown.
+- Lỗi đã gặp: `Work` giữ lăng kính khi đổi bản nhạc → `key={id}`.
+- Test: `jazz.test.ts`, `xx.test.ts`, `form.test.ts`, e2e 3 lăng kính.

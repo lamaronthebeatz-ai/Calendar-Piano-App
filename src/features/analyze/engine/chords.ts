@@ -6,7 +6,7 @@ import { above, mod, pcOf, type Spelled } from './pitch'
  * Chord qualities as spelled intervals from the root ([letter steps, semitones]). `opt` marks tones a chord may
  * lack without losing its name (the fifth of a seventh chord, the fifth of a triad, the root of a ninth chord).
  */
-export type Quality = 'M' | 'm' | 'd' | 'A' | '7' | 'M7' | 'm7' | 'ø7' | 'o7' | 'mM7' | 'Fr' | '9' | 'b9'
+export type Quality = 'M' | 'm' | 'd' | 'A' | '7' | 'M7' | 'm7' | 'ø7' | 'o7' | 'mM7' | 'Fr' | '9' | 'b9' | '6' | 'm6' | 'M9' | 'm9' | '#9' | '7#11' | '13' | '7sus4' | 'sus4' | '69' | 'm11' | '7alt'
 export const QUALITIES: Record<Quality, { iv: [number, number][]; opt: number[]; prior: number; name: string }> = {
   M: { iv: [[0, 0], [2, 4], [4, 7]], opt: [2], prior: 0.06, name: 'trưởng' },
   m: { iv: [[0, 0], [2, 3], [4, 7]], opt: [2], prior: 0.05, name: 'thứ' },
@@ -22,6 +22,30 @@ export const QUALITIES: Record<Quality, { iv: [number, number][]; opt: number[];
   Fr: { iv: [[0, 0], [2, 4], [3, 6], [5, 10]], opt: [], prior: -0.02, name: 'sáu tăng Pháp' },
   '9': { iv: [[0, 0], [2, 4], [4, 7], [6, 10], [1, 2]], opt: [2], prior: -0.06, name: 'chín át' },
   b9: { iv: [[0, 0], [2, 4], [4, 7], [6, 10], [1, 1]], opt: [2], prior: -0.05, name: 'chín át thứ' },
+  // jazz vocabulary: sixth chords, extensions and alterations
+  '6': { iv: [[0, 0], [2, 4], [4, 7], [5, 9]], opt: [2], prior: -0.02, name: 'sáu trưởng' },
+  m6: { iv: [[0, 0], [2, 3], [4, 7], [5, 9]], opt: [2], prior: -0.03, name: 'sáu thứ' },
+  M9: { iv: [[0, 0], [2, 4], [4, 7], [6, 11], [1, 2]], opt: [2], prior: -0.04, name: 'chín trưởng' },
+  m9: { iv: [[0, 0], [2, 3], [4, 7], [6, 10], [1, 2]], opt: [2], prior: -0.04, name: 'chín thứ' },
+  '#9': { iv: [[0, 0], [2, 4], [4, 7], [6, 10], [1, 3]], opt: [2], prior: -0.06, name: 'bảy át chín tăng' },
+  '7#11': { iv: [[0, 0], [2, 4], [6, 10], [3, 6]], opt: [], prior: -0.07, name: 'bảy át mười một tăng' },
+  '13': { iv: [[0, 0], [2, 4], [6, 10], [5, 9]], opt: [], prior: -0.06, name: 'mười ba át' },
+  '7sus4': { iv: [[0, 0], [3, 5], [4, 7], [6, 10]], opt: [2], prior: -0.05, name: 'bảy át treo bốn' },
+  sus4: { iv: [[0, 0], [3, 5], [4, 7]], opt: [], prior: -0.07, name: 'treo bốn' },
+  '69': { iv: [[0, 0], [2, 4], [4, 7], [5, 9], [1, 2]], opt: [2], prior: -0.06, name: 'sáu – chín' },
+  m11: { iv: [[0, 0], [2, 3], [6, 10], [3, 5], [1, 2]], opt: [4], prior: -0.07, name: 'mười một thứ' },
+  '7alt': { iv: [[0, 0], [2, 4], [6, 10], [1, 3], [5, 8]], opt: [], prior: -0.08, name: 'bảy át biến (alt)' },
+}
+/** The jazz vocabulary: every quality but the French sixth (it is a 7♭5 sound there). */
+export const JAZZ: Quality[] = ['M', 'm', 'd', 'A', '7', 'M7', 'm7', 'ø7', 'o7', 'mM7', '6', 'm6', '9', 'b9', 'M9', 'm9', '#9', '7#11', '13', '7sus4', 'sus4', '69', 'm11', '7alt']
+/** The triad underneath a quality — what key finding and functions read. */
+export function core(q: Quality): 'M' | 'm' | 'd' | 'A' | '7' | 'sus' {
+  if (['7', '9', 'b9', '#9', '7#11', '13', '7alt'].includes(q)) return '7'
+  if (['M', 'M7', '6', 'M9', '69'].includes(q)) return 'M'
+  if (['m', 'm7', 'm6', 'm9', 'm11', 'mM7'].includes(q)) return 'm'
+  if (['d', 'o7', 'ø7'].includes(q)) return 'd'
+  if (q === 'A') return 'A'
+  return q === 'Fr' ? '7' : 'sus'
 }
 
 /** The chord vocabulary of common-practice harmony (ninth chords are left to the jazz and 20th-century lenses). */

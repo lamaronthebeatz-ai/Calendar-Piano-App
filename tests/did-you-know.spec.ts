@@ -7,6 +7,8 @@ test('có thể bạn chưa biết: hiện một điều thú vị, mở đượ
     localStorage.setItem('onboarding-done', '1')
   })
   await page.goto('/#/theory')
+  // the page may still be arriving behind the Lamar curtain (and mount again): read the card once it has settled
+  await expect(page.locator('.pc-root')).toHaveCount(0, { timeout: 20_000 })
   const card = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Có thể bạn chưa biết' }) })
   await card.scrollIntoViewIfNeeded()
   const read = card.getByRole('link', { name: /Đọc bài/ })

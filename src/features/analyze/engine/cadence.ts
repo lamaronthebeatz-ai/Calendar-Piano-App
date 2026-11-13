@@ -33,7 +33,10 @@ export function cadencesOf(sc: AScore, harmony: HarmonyItem[]): Cadence[] {
     const silence = next ? next.chord.start - c.end : 0
     const last = i === harmony.length - 1
     // how much the music stops here
-    let stop = (fermata ? 0.7 : 0) + (last ? 0.7 : 0) + (len >= 480 ? 0.25 : 0) + (silence >= 240 ? 0.3 : 0) + (strongBeat ? 0.15 : 0)
+    // the top voice holding a long note where the chord arrives is the clearest sign of a phrase end
+    const top = sounding.filter((n) => n.start >= c.start - 1).reduce<(typeof sounding)[number] | null>((t, n) => (!t || n.midi > t.midi ? n : t), null)
+    const held = !!top && top.end - top.start >= Math.max(480, len / 2)
+    let stop = (fermata ? 0.7 : 0) + (last ? 0.7 : 0) + (len >= 480 ? 0.25 : 0) + (len >= 960 ? 0.1 : 0) + (held ? 0.15 : 0) + (silence >= 240 ? 0.3 : 0) + (strongBeat ? 0.15 : 0)
     stop = Math.min(1, stop)
     if (stop < 0.4) return
     const prev = harmony[i - 1]

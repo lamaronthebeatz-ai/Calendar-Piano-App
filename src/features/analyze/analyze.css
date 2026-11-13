@@ -43,3 +43,16 @@
 .an-barref:hover { background: color-mix(in oklch, var(--color-gold) 14%, transparent); }
 .an-barref.is-flash { background: color-mix(in oklch, var(--color-gold) 30%, transparent); }
 .an-foot { margin-top: 18px; font-size: 12.5px; color: var(--color-ink-faint); }
+
+.an-form { margin: 4px 0; }
+.an-form-bar { display: flex; gap: 3px; height: 46px; }
+.an-form-bar button { flex-basis: 0; min-width: 34px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid color-mix(in oklch, oklch(0.75 0.12 var(--h)) 55%, transparent); background: color-mix(in oklch, oklch(0.75 0.12 var(--h)) 18%, transparent); color: var(--color-ink); line-height: 1.1; }
+.an-form-bar b { font-family: var(--font-display); font-size: 16px; }
+.an-form-bar span { font-size: 10.5px; color: var(--color-ink-faint); }
+.an-form figcaption { margin-top: 6px; font-size: 12.5px; color: var(--color-ink-faint); }
+.an-export { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.an-table-wrap { overflow-x: auto; margin-top: 8px; }
+.an-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans, system-ui); font-size: 12.5px; }
+.an-table th, .an-table td { padding: 5px 8px; border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: top; }
+.an-table th { color: var(--color-ink-faint); font-weight: 600; }
+.an-table td:first-child { width: 3em; }

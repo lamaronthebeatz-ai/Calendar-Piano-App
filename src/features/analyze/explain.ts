@@ -33,6 +33,17 @@ export function explain(a: Analysis, i: number): { runs: Run[]; symbol: string }
   if (here.length) {
     runs.push({ t: ' ' }, { t: 'Nốt ngoài hợp âm', concept: 'nct' }, { t: `: ${here.map((x) => `${nameOf(x.note)} (${NCT_NAME[x.kind]})`).join(', ')}.` })
   }
+  if (a.jazz) {
+    const j = a.jazz.readings[i]
+    const role: Record<string, Run[]> = {
+      II: [{ t: ' Vai trò ' }, { t: 'II trong II–V–I', concept: 'iiVI' }, { t: '.' }],
+      V: [{ t: ' Hợp âm át (V) của giọng.' }],
+      subV: [{ t: ' ' }, { t: 'Thay thế tritone', concept: 'subV' }, { t: ': hợp âm át cách át thật một tritone, xuống nửa cung vào đích.' }],
+      secV: [{ t: ' ' }, { t: 'Hợp âm át phụ', concept: 'applied' }, { t: '.' }],
+      backdoor: [{ t: ' Tiến hành "backdoor" ♭VII7 → I.' }],
+    }
+    runs.push(...(j.role ? role[j.role] ?? [] : []), { t: ' ' }, { t: 'Thang âm', concept: 'chordScale' }, { t: `: ${j.scale}. ` }, { t: 'Nốt dẫn hướng', concept: 'guideTones' }, { t: `: ${j.guide}.` })
+  }
   if (c.fit < 0.6) runs.push({ t: ` Độ khớp ${Math.round(c.fit * 100)}% — cách đọc này chưa chắc.` })
   return { runs, symbol: chordSymbol(c) }
 }
