@@ -61,9 +61,10 @@ function chordFit(c: Chord, k: Key, next?: Chord, jazz = false): number {
   // the chords that define a key
   const q = core(c.quality)
   if (r === 0 && (k.minor ? q === 'm' : q === 'M')) v += 1.1
-  // blues and jazz: a dominant seventh on the tonic is the tonic (I7), and the ♭7 and ♭3 of the blues are not foreign
-  if (jazz && r === 0 && q === '7') v += 1.4 + 0.9 * out
-  if (jazz && r === 5 && q === '7') v += 0.6 + 0.9 * out
+  // blues and jazz: a dominant seventh on the tonic is the tonic (I7), and the ♭7 and ♭3 of the blues are not foreign.
+  // Major keys only: a minor blues has i7 and iv7 minor, and D7, G7 in D minor are V/iv and IV of the melodic scale
+  if (jazz && !k.minor && r === 0 && q === '7') v += 1.4 + 0.9 * out
+  if (jazz && !k.minor && r === 5 && q === '7') v += 0.6 + 0.9 * out
   if (r === 7 && (q === 'M' || q === '7')) v += 0.9
   if (r === 11 && q === 'd') v += 0.5
   if (r === 5 && (k.minor ? q === 'm' : q === 'M')) v += 0.5
@@ -93,7 +94,48 @@ function profileFit(hist: number[], k: Key) {
   return dx && dy ? num / Math.sqrt(dx * dy) : 0
 }
 
-export type KeyOptions = { change?: number; window?: number; sigBonus?: number; jazz?: boolean; chordW?: number; profW?: number }
+export type KeyOptions = { change?: number; window?: number; sigBonus?: number; jazz?: boolean; chordW?: number; profW?: number; endBonus?: number }
+
+/**
+ * How well a chord closes a piece in a key, 0–1: its tonic triad (or I7 in jazz), or the major tonic of a minor key
+ * under that key's signature (tierce de Picardie). The signature it stands under adds a little.
+ */
+function tonicFit(c: Chord, k: Key, sig: number, jazz = false): number {
+  if (mod(c.root - keyPc(k), 12) !== 0) return 0
+  const q = core(c.quality)
+  const own = k.minor ? q === 'm' : q === 'M' || (jazz && q === '7')
+  const picardy = k.minor && q === 'M' && sigOf(k) === sig
+  if (!own && !picardy) return 0
+  return (own ? 0.75 : 0.5) + (sigOf(k) === sig ? 0.25 : 0)
+}
+
+/**
+ * The home key of a piece: the key it spends longest in, weighed against where it ends (the final tonic), where it
+ * starts, and the written signature. The last chord alone misleads (a borrowed iv at the close, a plagal ending).
+ */
+export function homeOf(sc: AScore, chords: Chord[], keys: Key[], jazz = false): Key | null {
+  if (!chords.length) return null
+  const total = chords[chords.length - 1].end - chords[0].start || 1
+  const share = new Map<string, { k: Key; d: number }>()
+  chords.forEach((c, i) => {
+    const id = `${keyPc(keys[i])}${keys[i].minor}`
+    const e = share.get(id) ?? { k: keys[i], d: 0 }
+    e.d += c.end - c.start
+    share.set(id, e)
+  })
+  const startSig = sc.bars[0]?.key ?? 0
+  const endSig = barAt(sc.bars, chords[chords.length - 1].start).key
+  let best: Key | null = null
+  let bv = -Infinity
+  for (const { k, d } of share.values()) {
+    const v = 4 * (d / total) + 3 * tonicFit(chords[chords.length - 1], k, endSig, jazz) + 1 * tonicFit(chords[0], k, startSig, jazz) + (sigOf(k) === startSig ? 1 : 0)
+    if (v > bv) {
+      bv = v
+      best = k
+    }
+  }
+  return best
+}
 
 /**
  * The key of every chord: a hidden-Markov path through the 24 keys (Viterbi). Each chord votes by how it fits the key
@@ -149,7 +191,11 @@ export function keysOf(sc: AScore, chords: Chord[], opts: KeyOptions = {}): Key[
     back.push(row)
     score = next
   }
-  // the piece ends at home: a final bonus for the key of the start signature (a minor piece may end on its major tonic)
+  // the piece ends at home: its last chord is the tonic (a minor piece may end on its major tonic, the tierce de
+  // Picardie), usually under the signature it ends with
+  const endSig = barAt(sc.bars, chords[n - 1].start).key
+  const endBonus = opts.endBonus ?? 1
+  score = score.map((v, j) => v + endBonus * tonicFit(chords[n - 1], KEYS[j], endSig, opts.jazz))
   let last = 0
   for (let j = 1; j < K; j++) if (score[j] > score[last]) last = j
   const path = [last]

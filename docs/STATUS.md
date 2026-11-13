@@ -11,7 +11,7 @@
 
 - **Kho bản nhạc `/analyze`** (13/11): bản mẫu + bản nhập + trình soạn chung một kho, ô tìm + lọc nguồn; thân bản nhập chuyển sang IndexedDB (mã hoá); thêm bản mẫu Clair de lune.
 - Nhập file ở `/analyze`, `/compose`: bỏ `accept` (iPhone làm xám .musicxml), nhận theo nội dung.
-- **Lỗi đã thấy, chưa sửa (chờ Lamar gật):** "giọng chính" = giọng của hợp âm cuối (`report.ts:47`); thưởng cuối bài trong `keysOf` có comment nhưng chưa viết. Sai ở Clair de lune (ra La♭ thứ) và khung Georgia (ra Rê thứ). Hướng sửa: chọn giọng chính theo hợp âm chủ cuối + hoá biểu + số ô; thêm 2 bài vào test; đo lại Bach. Clair de lune MusicXML dựng từ Mutopia (.mid + chính tả từ .ly qua engraver `spy`) — công thức ở `notes/analyze.md`.
+- **Giọng chính** sửa xong (13/11): `homeOf` thay cho "giọng hợp âm cuối"; Clair de lune → Rê♭ trưởng, Georgia (Jazz) → Fa trưởng; Bach giữ 77,1%. Clair de lune MusicXML dựng từ Mutopia — công thức ở `notes/analyze.md`.
 
 ## Trước đó (đợt 11/2026, commit a2c4d21)
 - Vitest + CI, test chặn route chưa kiểm, nhật ký lỗi, TS chặt hơn — `notes/testing.md`.

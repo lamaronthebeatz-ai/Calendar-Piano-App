@@ -43,8 +43,7 @@ export function report(a: Analysis): Block[] {
   const { num } = barNumbering(a)
   const sc = a.score
   const blocks: Block[] = []
-  const home = a.regions.length ? a.regions.reduce((x, y) => (y.end - y.start > x.end - x.start ? y : x)).key : null
-  const homeKey = a.harmony.length ? a.harmony[a.harmony.length - 1].key : home
+  const homeKey = a.home
   const first = sc.bars[0]
   const lastBar = num(sc.end - 1)
 
