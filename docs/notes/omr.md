@@ -1,0 +1,9 @@
+# OMR (đọc bản nhạc từ ảnh) — kết quả thử 13/11/2026, chưa đưa vào app
+
+Lamar hỏi "score intelligence" (nhận diện khuông, khoá, nhịp, hoá biểu, hợp âm, câu, mô hình tương đồng → nối thư viện) và muốn thử OMR **chạy trong trình duyệt**. Đã thử trong scratchpad, không cài vào app.
+
+- **oemer 0.1.8** (MIT, 2 mô hình ONNX từ GitHub release BreezeWhite/oemer: `1st_model.onnx` 71 MB, `2nd_model.onnx` 38 MB → **~109 MB tải về**). Hậu xử lý bằng Python (OpenCV, scikit-learn pickle) — muốn chạy trong trình duyệt phải viết lại toàn bộ phần này bằng JS.
+- Phải vá: onnxruntime mới từ chối ConvTranspose `pads [0,0,-1,-1]` ở mô hình 1 → đổi thành `pads 0` + `output_padding [1,1]` (4 nút). `bbox.py` dòng `line = line[0]` vỡ với OpenCV mới → `np.asarray(line).reshape(-1)`.
+- **Trình duyệt (onnxruntime-web 1.20.1, WASM, cần COOP/COEP cho đa luồng)**: kết quả khớp Python 100% từng điểm ảnh. Tốc độ trên CPU máy cloud: mô hình 1 ≈ 1,1 s/ô (4 luồng) hoặc 2,4 s/ô (1 luồng); mô hình 2 ≈ 2,4 s/ô hoặc 5,5 s/ô; một trang ≈ 250 ô mỗi mô hình → **~14 phút/trang (4 luồng), ~35 phút (1 luồng)**, điện thoại còn chậm hơn. WebGPU không có GPU trong máy cloud nên chưa đo (trên máy có GPU có thể nhanh hơn nhiều).
+- **Độ đúng**: trang sạch tự khắc LilyPond (Sol trưởng 3/4, 8 ô, 49 nốt): khuông trên đúng cao độ 28/32 nhưng trường độ sai gần hết và bỏ hoá biểu (F♯ → F); khuông dưới chỉ ra 7/17 nốt (bỏ nốt trắng rỗng, hợp âm). Bản Scriabin Belaieff 1898 (`scans/scriabin2/i-013-1.png`): đọc 5 thăng thành 1 thăng, mất khoảng một nửa đầu nốt, bỏ liên ba → vô dụng.
+- **Kết luận**: OMR mở trong trình duyệt hiện **không dùng được** cho nhu cầu của Lamar (piano, bản in cũ). Hướng thực tế: MusicXML/MIDI làm đầu vào chính; PDF qua MuseScore 4 / Audiveris trên máy tính rồi nhập; máy chủ Audiveris nếu Lamar chấp nhận backend (chưa thử độ đúng Audiveris).

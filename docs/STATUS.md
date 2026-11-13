@@ -14,6 +14,7 @@
 - Quy trình xuất tiểu luận PDF vào repo: `scripts/essay/` — `notes/workflow.md` § Tiểu luận.
 
 ## Việc tiếp theo đề xuất (chưa được giao)
+0. **Score intelligence** (Lamar hỏi 13/11): đầu vào MusicXML/MIDI → khoá, nhịp, hoá biểu, dấu hoá bất thường, hợp âm theo phách, câu, mô hình tương đồng, nối thư viện. OMR trong trình duyệt đã thử: chưa dùng được (`notes/omr.md`). Chờ Lamar chọn hướng.
 1. Bản đồ toàn mạng ghi chú (đồ thị toàn cục ở `/brain`, có lọc theo loại nút).
 2. Liên kết ghi chú ↔ tác phẩm Wikidata (`[[w:Q…]]`) và ↔ người trong `/explore`.
 3. Mã hoá Dexie (học viên, lịch) — cần lớp bọc bất đồng bộ quanh `db`, cẩn thận mất dữ liệu.
