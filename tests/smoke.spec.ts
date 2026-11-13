@@ -21,7 +21,8 @@ const PAGES: [string, string, string?, number?][] = [
   ['Sổ nghiên cứu', '/#/notes'],
   ['Sổ tay tri thức', '/#/brain'],
   ['Phân tích tác phẩm', '/#/analyze'],
-  ['Một bản phân tích', '/#/analyze/bach-bwv269', '.an-svg svg', 60],
+  // the title; the engraving (Verovio, several MB on a first visit) is waited for in analyze.spec.ts
+  ['Một bản phân tích', '/#/analyze/bach-bwv269', 'h2', 60],
   ['Thư mục học', '/#/sources'],
   ['Một nguồn', '/#/sources/sposobin-1984'],
   ['Việc còn treo', '/#/sources/treo'],
