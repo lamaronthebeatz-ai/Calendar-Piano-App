@@ -5,9 +5,13 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 ## Làm việc với chủ repo
 - Trả lời bằng tiếng Việt, xưng "tao – mày" **chỉ trong khung chat**. Nội dung app không bao giờ dùng "mày/tao": gọi người đọc là "bạn", ghi chú người soạn viết "người biên soạn".
 - **Trích dẫn và sự kiện phải có nguồn.** Chưa đối chiếu nguyên văn hoặc nguồn mâu thuẫn thì ghi rõ trong bài. Không đưa câu nổi tiếng nguồn gốc mập mờ. Không chép/phát tán sách còn bản quyền (chỉ tóm lược, trích ngắn có trang); không vượt captcha IMSLP.
-- Repo **công khai**: không bao giờ ghi mã khoá app vào code/commit/file; kiểm thử màn khoá bằng cách giả `crypto.subtle.digest`.
+- Repo **công khai**: không bao giờ ghi mã khoá app vào code/commit/file; kiểm thử màn khoá bằng cách giả `crypto.subtle.digest`. Không ghi thông tin cá nhân của Lamar (tên thật, trường, liên lạc) vào file trong repo trừ khi Lamar bảo.
 - Làm trên `main`. Push lên `main` là GitHub Actions tự deploy GitHub Pages.
 - Commit: tiếng Việt, một dòng tóm tắt + trailer phiên; không ghi tên/model ID trong commit hay code.
+
+## Mở đầu và kết thúc phiên (bắt buộc)
+- **Đầu phiên:** đọc `docs/STATUS.md` (việc dở, việc chờ Lamar, số liệu nền) rồi chỉ mở `docs/notes/<phần>.md` của việc đang làm. Định hỏi Lamar điều gì → tra `docs/notes/decisions.md` trước. Cần một quy trình (kiểm tra, chụp ảnh, chờ CI, xuất PDF, thêm trang) → `docs/notes/workflow.md`.
+- **Cuối phiên / sau mỗi push:** sửa `docs/STATUS.md` (vừa xong, dở gì, chờ gì, đề xuất tiếp), ghi quyết định mới của Lamar vào `decisions.md`, lỗi công cụ mới vào `workflow.md` § Bẫy.
 
 ## Cách làm việc (tối ưu token, code chuẩn)
 1. **Đọc ít, đọc đúng chỗ.** Ghi chú chi tiết từng phần nằm ở `docs/notes/*.md` (bảng dưới) — chỉ mở file của phần đang làm. Tìm bằng `grep -n` rồi đọc đoạn cần (`sed -n a,bp`), không đọc cả file lớn; không đọc lại file vừa sửa.
@@ -17,13 +21,13 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 5. **Kiểm tra trước khi báo xong:** chạy bộ lệnh dưới; thay đổi giao diện thì chụp ảnh Playwright (điện thoại 393×852 + màn rộng) và đo khung hình khi có hiệu ứng. Không đưa lệnh kiểm qua `| tail` mà không có `set -o pipefail` (từng nuốt mất lỗi `check:links`). File thử nghiệm chỉ ghi vào scratchpad, không vào repo. Tắt server bằng PID, không `pkill -f`.
 6. **Cập nhật ghi chú** của phần vừa đổi trong `docs/notes/` (ngắn, ghi điều Claude sau cần biết: file, quyết định, lỗi đã gặp). Thêm phần mới thì thêm một dòng vào bảng dưới. Không phình CLAUDE.md.
 7. Báo cáo cuối: vài gạch đầu dòng — đã làm gì, chưa kiểm được gì (vd. Safari thật).
-8. **Tiết kiệm token cho việc lớn:** gộp nhiều bước vào một lệnh/script Python (sửa hàng loạt, sinh nội dung, kiểm tra), xem output bằng `tail`/đếm thay vì in toàn bộ. Ảnh: xem ít, cắt đúng vùng, ghép nhiều ảnh vào một tờ (contact sheet) thay vì đọc từng cái. Việc thủ công lặp lại hàng trăm lần (chép nhạc bằng tay, xem từng trang) → tìm cách tự động trước (vd. thí dụ sách: **cắt ảnh từ scan bằng `::scan`, không khắc LilyPond** — Lamar đã chọn). Chạy bộ kiểm tra đầy đủ **một lần** trước push, không chạy lặp sau mỗi sửa nhỏ. Không chờ CI bằng tay: `send_later` ~10 phút rồi báo một dòng.
+8. **Tiết kiệm token cho việc lớn:** gộp nhiều bước vào một lệnh/script Python (sửa hàng loạt, sinh nội dung, kiểm tra), xem output bằng `tail`/đếm thay vì in toàn bộ. Ảnh: xem ít, cắt đúng vùng, ghép nhiều ảnh vào một tờ (contact sheet) thay vì đọc từng cái. Việc thủ công lặp lại hàng trăm lần (chép nhạc bằng tay, xem từng trang) → tìm cách tự động trước (vd. thí dụ sách: **cắt ảnh từ scan bằng `::scan`, không khắc LilyPond** — Lamar đã chọn). Chạy bộ kiểm tra đầy đủ **một lần** trước push, không chạy lặp sau mỗi sửa nhỏ. Lệnh dài hơn 2 phút (Playwright đủ, chờ CI) chạy nền với vòng `until` — một thông báo khi xong (công thức ở `workflow.md`).
 9. **Nội dung thư viện không đánh lẻ:** kiến thức từ sách mới gộp vào bài cùng chủ đề (mục `## Theo sách gốc …`), không tạo loạt bài riêng theo từng cuốn, trừ khi Lamar yêu cầu.
 
 ## Trước khi push
 ```bash
 npx tsc -b && npm run lint && npm test && npm run check:links && npm run build && npm run budget
-npx playwright test --project='chromium-*'   # khi đổi giao diện; WebKit chạy trên CI
+npx playwright test --project='chromium-*' --trace off   # khi đổi giao diện (~5 phút, chạy nền); WebKit chạy trên CI
 ```
 CI chạy đủ các bước + WebKit, hỏng là không deploy (`docs/notes/testing.md`).
 Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận được. `check:links` kiểm mọi `[[slug]]`, slug trùng, slug và chặng trên bản đồ.
@@ -56,9 +60,12 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `terms.md` | Thuật ngữ đa ngữ: tên bài + nhãn Wikidata (không có TCVN), `scripts/terms/build.py`, `xl` trong chỉ mục, trang `/terms` |
 | `explore.md` | Mạng tri thức `/explore`: `people.json` từ composers/pianists, ghép bản đồ + phân ngành, hồ sơ người, dòng thời gian |
 | `research.md` | Bàn làm việc `/research`: đề tài (thẻ gom ghi chú), bản nháp có `[^id]`, xuất Markdown/Word chú thích Chicago, sao lưu |
+| `workflow.md` | **Quy trình của Claude**: vòng một phiên, lệnh kiểm tra, thêm trang, dữ liệu riêng, script đọc thư viện, chụp ảnh, chờ CI, xuất tiểu luận PDF (`scripts/essay/`), bẫy công cụ |
+| `decisions.md` | Quyết định Lamar đã chốt (giao diện, nội dung, bảo mật, văn bản học thuật) — tra trước khi hỏi |
 | `brain.md` | Sổ tay tri thức `/brain` (second brain): ghi chú tự do, ngữ pháp liên kết `[[ ]]` `n:` `p:`, liên kết ngược, đồ thị, phân giải tên bài `keyIndex.ts` |
 | `security.md` | Giấy phép, dòng bản quyền, kho mã hoá `vault.ts`/`secureStore.ts`, dấu kiểm PBKDF2, giới hạn thật của bảo mật |
 | `library-content.md` | Danh sách các mục nội dung đã có |
+| `../STATUS.md` | **Trạng thái hiện tại**: việc dở, chờ Lamar, đề xuất tiếp, số liệu nền |
 | `../roadmap.md` | Lộ trình nâng cấp thành trung tâm tri thức cho nhà âm nhạc học (giai đoạn 0 – 6) |
 
 Thời khoá biểu: `src/features/calendar`, `students`, `lessons`, `settings`, `search` (Dexie/IndexedDB, Zustand); route `/` và `/students` bọc `PrivateArea`; máy chưa có học viên tự nạp `data/seed-backup.json` (bản sao lưu thật, Lamar đồng ý công khai). Học viên mở từ nút "Học viên" trên thanh Thời khoá biểu.

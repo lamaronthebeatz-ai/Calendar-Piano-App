@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><title>{{KIND}}</title>
+<style>
+@page { size: A4; margin: 2.5cm 2cm 2.5cm 4cm;
+  @bottom-right { content: counter(page); font-family: 'Times New Roman','Liberation Serif',serif; font-size: 13pt; } }
+@page cover { @bottom-right { content: none; } }
+@page toc { @bottom-right { content: none; } }
+html { font-family: 'Times New Roman','Liberation Serif',serif; font-size: 13pt; color:#000; }
+body { margin:0; }
+p { margin:0 0 6pt; line-height:1.5; text-align:justify; text-indent:1cm; orphans:2; widows:2; }
+h1,h2,h3 { font-weight:bold; break-after:avoid; line-height:1.4; }
+h1 { font-size:14pt; text-align:center; margin:0 0 16pt; }
+h1 .sub { font-size:13pt; text-transform:none; }
+h2 { font-size:13pt; margin:14pt 0 6pt; }
+h3 { font-size:13pt; font-style:italic; margin:10pt 0 4pt; }
+.chapter { break-before:page; }
+.first-body { counter-reset: page 1; }
+ul,ol { margin:0 0 6pt; padding-left:1.6cm; } li { line-height:1.5; text-align:justify; }
+figure.ex { margin:8pt 0 10pt; break-inside:avoid; text-align:center; }
+.imgs { display:flex; flex-wrap:wrap; justify-content:center; gap:4pt 0; }
+.imgs img { max-width:100%; }
+.imgs img.grand { width:12cm; }
+figcaption { font-size:11.5pt; font-style:italic; line-height:1.35; margin-top:4pt; text-align:center; }
+.formbar { display:flex; border:0.8pt solid #000; font-size:8pt; line-height:1.2; }
+.formbar div { border-right:0.6pt solid #000; padding:3pt 0; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; }
+.formbar div:last-child { border-right:0; }
+.formbar .n { font-weight:bold; }
+table { width:100%; border-collapse:collapse; margin:6pt 0 10pt; font-size:11pt; }
+th,td { border:0.6pt solid #000; padding:2.5pt 4pt; vertical-align:top; line-height:1.3; text-align:left; }
+th { background:#eee; } tr { break-inside:avoid; }
+.appendix table { font-size:10pt; }
+.refs ol li { margin-bottom:4pt; line-height:1.4; text-align:left; }
+/* cover */
+.cover { page:cover; height:24.4cm; display:flex; flex-direction:column; align-items:center; text-align:center; border:3pt double #000; padding:1cm; box-sizing:border-box; }
+.cover p { text-indent:0; text-align:center; }
+.cover .top { font-weight:bold; text-transform:uppercase; margin:0; }
+.cover .rule { width:40%; border-top:1pt solid #000; margin:6pt auto 0; }
+.cover .logo { width:4cm; height:4cm; margin-top:1.2cm; }
+.cover .kind { margin-top:1cm; font-size:22pt; font-weight:bold; letter-spacing:2pt; }
+.cover .topic { margin-top:0.4cm; font-size:17pt; font-weight:bold; text-transform:uppercase; line-height:1.4; }
+.cover .sub { font-size:13.5pt; font-style:italic; line-height:1.4; }
+.cover .meta { margin-top:auto; align-self:stretch; padding-left:4.2cm; }
+.cover .meta p { text-align:left; line-height:1.8; margin:0; }
+.cover .place { margin-top:1cm; font-weight:bold; }
+/* toc */
+.toc { page:toc; } .toc ol { list-style:none; padding:0; margin:0; }
+.toc li { text-align:left; line-height:1.45; font-size:13pt; }
+.toc li.l1 { font-weight:bold; margin-top:4pt; } .toc li.l2 { padding-left:0.8cm; } .toc li.l3 { padding-left:1.6cm; font-style:italic; font-size:12.5pt; }
+.toc a { color:#000; text-decoration:none; display:flex; align-items:flex-end; }
+.toc a .t { flex:0 1 auto; max-width:90%; } .toc a .dots { flex:1; border-bottom:1pt dotted #000; margin:0 4pt 5pt; }
+.toc a::after { content: target-counter(attr(href), page); flex:none; }
+</style></head><body>
+<section class="cover">
+  <p class="top">{{AGENCY}}</p>
+  <p class="top" style="font-size:14pt">{{SCHOOL}}</p>
+  <div class="rule"></div>
+  <img class="logo" src="{{LOGO}}" alt="">
+  <p class="kind">{{KIND}}</p>
+  <p class="topic">{{TITLE_HTML}}</p>
+  <p class="sub">{{SUBTITLE}}</p>
+  <div class="meta">
+    <p>{{ROLE}}: <b>{{AUTHOR}}</b></p>
+    <p>Chuyên ngành: <b>{{MAJOR}}</b></p>
+    <p>Hệ: <b>{{LEVEL}}</b></p>
+  </div>
+  <p class="place">{{PLACE_DATE}}</p>
+</section>
+<section class="toc"><h1>MỤC LỤC</h1><ol>{{TOC}}</ol></section>
+{{BODY}}
+<script>window.PagedConfig = { after: () => { window.__paged = true } }</script>
+<script src="{{PAGED}}"></script>
+</body></html>
