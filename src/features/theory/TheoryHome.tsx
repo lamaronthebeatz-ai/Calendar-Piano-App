@@ -1,14 +1,13 @@
-import { useEffect, useState, type CSSProperties } from 'react'
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
-import { BookmarkIcon, CheckIcon, ClockIcon, CompassIcon } from '../../components/icons'
+import { BookmarkIcon, CheckIcon, ChevronRightIcon, ClockIcon, CompassIcon, ListIcon, ShuffleIcon, SparkleIcon } from '../../components/icons'
 import { articlesByCategory, findArticle, type ArticleMeta as Article } from './wiki'
-import { unfinished, useLibrary } from './library'
+import { lastUnfinished, unfinished, useLibrary } from './library'
 import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { useThumbs } from './thumbs'
 import { lastTopic, morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { CountUp } from '../../components/CountUp'
-import { playNow } from './audio'
 import './theory-home.css'
 
 type CategoryId = Article['category']
@@ -80,17 +79,17 @@ export function TopicBrowser({ onSelect }: { onSelect: (id: CategoryId) => void 
 }
 
 /** Articles left part-way and saved ones, side by side in one swipeable row, so the next read is one tap away. */
-export function ContinueRow() {
+export function ContinueRow({ skip, title = 'Đọc tiếp' }: { skip?: string; title?: string } = {}) {
   const { saved } = useLibrary()
   const thumbs = useThumbs()
   const items = [
     ...unfinished(8).map((u) => ({ a: findArticle(u.slug), ratio: u.ratio })),
     ...saved.slice(0, 8).map((s) => ({ a: findArticle(s), ratio: -1 })),
-  ].filter((x, i, all): x is { a: Article; ratio: number } => !!x.a && all.findIndex((y) => y.a?.slug === x.a!.slug) === i)
+  ].filter((x, i, all): x is { a: Article; ratio: number } => !!x.a && x.a.slug !== skip && all.findIndex((y) => y.a?.slug === x.a!.slug) === i)
   if (!items.length) return null
   return (
-    <section aria-label="Đọc tiếp" className="space-y-2.5">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)]">Đọc tiếp</p>
+    <section aria-label={title} className="space-y-2.5">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-gold)]">{title}</p>
       <div className="cr-row no-scrollbar">
         {items.map(({ a, ratio }) => (
           <Link key={a.slug} to={`/theory/${a.slug}`} className="cr-card theory-card" style={tint(a.category)}>
@@ -162,48 +161,47 @@ export function ArticleQuiz({ slug }: { slug: string }) {
 }
 
 
-const CHORDS: { label: string; ys: number[]; midis: number[] }[] = [
-  { label: 'I', ys: [50, 40, 25], midis: [64, 67, 72] },
-  { label: 'IV', ys: [45, 35, 25], midis: [65, 69, 72] },
-  { label: 'V', ys: [40, 30, 20], midis: [67, 71, 74] },
-  { label: 'I', ys: [50, 40, 25], midis: [64, 67, 72] },
-]
+const jump = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
 /**
- * Five gold staff lines drawn across the hero, then the progression I – IV – V – I in C lands on them chord by chord
- * (runs once). Tapping the chords plays them softly, each lighting up as it sounds.
+ * What to do here, right under the hero: the article left half-read (with its progress), then a quiz, a random
+ * article and the topics. Without a half-read article the three small tiles stand alone.
  */
-export function HeroStaff() {
-  const [on, setOn] = useState(-1)
-  useEffect(() => {
-    if (on < 0) return
-    const t = setTimeout(() => setOn(on + 1 < CHORDS.length ? on + 1 : -1), 700)
-    if (on < CHORDS.length) playNow(CHORDS[on].midis, 1.6, 0.025)
-    return () => clearTimeout(t)
-  }, [on])
+export function QuickStart({ onRandom }: { onRandom: () => void }) {
+  useLibrary() // re-render when the reading positions change
+  const last = lastUnfinished()
+  const a = last && findArticle(last.slug)
+  const tiles: { label: string; sub: string; icon: ReactNode; go: () => void }[] = [
+    { label: 'Quiz nhanh', sub: 'Thử kiến thức', icon: <SparkleIcon width={17} height={17} />, go: () => jump('th-quiz') },
+    { label: 'Ngẫu nhiên', sub: 'Một bài lạ', icon: <ShuffleIcon width={17} height={17} />, go: onRandom },
+    { label: 'Chủ đề', sub: `${articlesByCategory.length} mục`, icon: <ListIcon width={17} height={17} />, go: () => jump('th-topics') },
+  ]
   return (
-    <span className="hero-staff">
-      <svg aria-hidden viewBox="0 0 100 60" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
-        {[10, 20, 30, 40, 50].map((y, k) => (
-          <line key={y} x1={0} x2={100} y1={y} y2={y} vectorEffect="non-scaling-stroke" style={{ '--k': k } as CSSProperties} />
-        ))}
-      </svg>
-      <button type="button" onClick={() => setOn(0)} aria-label="Nghe tiến trình I – IV – V – I (Đô trưởng)" title="Nghe I – IV – V – I" className="hs-play">
-        <svg viewBox="0 0 230 72" preserveAspectRatio="xMaxYMid meet" className="h-full w-full">
-          {CHORDS.map((c, k) => {
-            const x = 45 + k * 50
-            return (
-              <g key={k} className={clsx('hs-chord', on === k && 'is-on')} style={{ '--k': k } as CSSProperties}>
-                {c.ys.map((y) => (
-                  <ellipse key={y} cx={x} cy={y} rx={6.2} ry={4.4} transform={`rotate(-20 ${x} ${y})`} className="hs-note" />
-                ))}
-                <text x={x} y={68} textAnchor="middle" className="hs-label">{c.label}</text>
-              </g>
-            )
-          })}
-        </svg>
-      </button>
-    </span>
+    <section aria-label="Bắt đầu nhanh" className="qs">
+      {a && (
+        <Link to={`/theory/${a.slug}`} className="qs-continue" style={tint(a.category)}>
+          <span className="min-w-0 flex-1">
+            <span className="qs-kicker">Đọc tiếp</span>
+            <span className="qs-title">{a.title}</span>
+            <span className="qs-bar" aria-label={`Đã đọc ${Math.round(last.ratio * 100)}%`}>
+              <span style={{ transform: `scaleX(${last.ratio})` }} />
+            </span>
+          </span>
+          <span className="qs-go" aria-hidden>
+            <ChevronRightIcon width={18} height={18} />
+          </span>
+        </Link>
+      )}
+      {tiles.map((x) => (
+        <button key={x.label} type="button" onClick={x.go} className="qs-tile">
+          <span className="qs-icon" aria-hidden>{x.icon}</span>
+          <span>
+            <b>{x.label}</b>
+            <span>{x.sub}</span>
+          </span>
+        </button>
+      ))}
+    </section>
   )
 }
 

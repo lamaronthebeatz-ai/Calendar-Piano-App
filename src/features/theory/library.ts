@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react'
+import { findArticle } from './wiki'
 
 /**
  * Per-device reading state for the theory library: reader preferences, saved articles and
@@ -82,6 +83,9 @@ export const unfinished = (limit = 8) =>
     .reverse()
     .slice(0, limit)
     .map(([slug, r]) => ({ slug, ratio: r }))
+
+/** The most recent half-read article that still exists (slugs can be renamed). */
+export const lastUnfinished = () => unfinished(8).find((u) => findArticle(u.slug))
 
 export function saveReadingPosition(slug: string, ratio: number) {
   // Keep the 300 most recent so the store stays small.

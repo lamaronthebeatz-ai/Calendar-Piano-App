@@ -9,6 +9,7 @@
 ## Vừa xong
 - **Phân tích tác phẩm `/analyze`** (4 đợt, 13/11): lăng kính Cổ điển / Jazz / TK XX, hình thức, nhãn trên bản nhạc + văn bản + bảng từng ô — `notes/analyze.md` (có mốc độ đúng).
 
+- **Đầu trang Lý thuyết** (13/11): bỏ khung — tranh tràn viền + "Đọc tiếp" và 3 ô bấm nhanh (`notes/theory.md`).
 - **Kho bản nhạc `/analyze`** (13/11): bản mẫu + bản nhập + trình soạn chung một kho, ô tìm + lọc nguồn; thân bản nhập chuyển sang IndexedDB (mã hoá); thêm bản mẫu Clair de lune.
 - Nhập file ở `/analyze`, `/compose`: bỏ `accept` (iPhone làm xám .musicxml), nhận theo nội dung.
 - **Giọng chính** sửa xong (13/11): `homeOf` thay cho "giọng hợp âm cuối"; Clair de lune → Rê♭ trưởng, Georgia (Jazz) → Fa trưởng; Bach giữ 77,1%. Clair de lune MusicXML dựng từ Mutopia — công thức ở `notes/analyze.md`.

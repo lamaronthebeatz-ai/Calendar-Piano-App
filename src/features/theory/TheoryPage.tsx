@@ -33,7 +33,7 @@ import { CiteBox } from '../sources/CiteBox'
 import { citeArticle } from '../sources/cite'
 import { articleKind } from '../sources/kind'
 import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadBodyMatches, searchArticles, type ArticleMeta as Article } from './wiki'
-import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, updateLibrary, useLibrary } from './library'
+import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, lastUnfinished, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useArticle, type ArticleText } from './body'
 import { CountdownBar } from '../../components/CountdownBar'
@@ -54,7 +54,7 @@ import { HeroBackdrop } from './HeroBackdrop'
 import { HeroArt } from './TheoryStage'
 import { LinkStaff, PathStrip } from './ArticleLinks'
 import { MyLinks } from '../brain/MyLinks'
-import { ArticleQuiz, ContinueRow, HeroStaff, StaffRule, TopicBrowser } from './TheoryHome'
+import { ArticleQuiz, ContinueRow, QuickStart, StaffRule, TopicBrowser } from './TheoryHome'
 import { morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
@@ -394,39 +394,38 @@ function Index() {
   const bodyIds = body?.q === q ? body.ids : null
   const results = useMemo(() => searchArticles(query, bodyIds), [query, bodyIds])
   const surprise = () => navigate(`/theory/${randomArticle().slug}`)
+  const browsing = !active && !query
 
   return (
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
-      <section className={clsx('hero-ebony relative isolate overflow-hidden rounded-[28px] shadow-[var(--shadow-float)]', active || query ? 'p-2.5' : 'animate-float-up px-5 pb-6 pt-7 sm:px-9 sm:pb-9 sm:pt-10')}>
+      {/* Browsing: the painting runs edge to edge and fades into the page, no card. Searching or in a topic: the same
+          search field sits in a slim dark capsule. One element throughout, so typing never drops the field's focus. */}
+      <section className={clsx(browsing ? 'th-hero animate-float-up' : 'hero-ebony relative isolate overflow-hidden rounded-[28px] p-2.5 shadow-[var(--shadow-float)]')}>
         {/* The Lý thuyết painting of the home page, the camera drifting towards its music book. */}
-        {active || query ? null : <HeroArt />}
-        <div aria-hidden className="hero-wash pointer-events-none absolute inset-0 -z-10" />
-        {!active && !query && (
+        {browsing ? <HeroArt /> : null}
+        <div aria-hidden className={browsing ? 'th-wash' : 'hero-wash pointer-events-none absolute inset-0 -z-10'} />
+        {browsing && (
           <>
             <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Thư viện lý thuyết</p>
-            <h2 data-collapse className="collapse-large relative mt-3 max-w-xl font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-[#f6ecdc] sm:text-[44px]">
+            <h2 data-collapse className="th-title collapse-large relative mt-2.5 max-w-3xl font-display font-semibold tracking-tight text-[#f6ecdc]">
               Âm nhạc phương Tây <span className="text-gold-gradient italic">&amp; piano</span>
             </h2>
-            <p className="relative mt-3 max-w-md text-[14px] leading-relaxed text-[#e9dcc6]/75 sm:text-[15px]">
-              Từ ký âm cơ bản đến hoà âm jazz và phân tích tác phẩm — mọi trang liên kết với nhau như một bách khoa toàn thư, để học và để dạy.
-            </p>
-            <dl className="hero-stats relative mt-6 grid max-w-lg grid-cols-4">
+            <dl className="th-meta relative mt-3 flex flex-wrap gap-x-4 gap-y-1">
               {[
                 [ARTICLES.length, 'trang'],
                 [articlesByCategory.length, 'chủ đề'],
                 [libraryStats.links, 'liên kết'],
                 [libraryStats.figures, 'hình vẽ'],
               ].map(([n, label]) => (
-                <div key={label} className="flex min-w-0 flex-col-reverse gap-0.5 px-3 first:pl-0 sm:px-4">
-                  <dt className="truncate text-[10.5px] uppercase tracking-[0.12em] text-[#e9dcc6]/55 sm:text-[11px]">{label}</dt>
-                  <dd className="font-display text-[19px] font-semibold tabular-nums text-[#f0c987] sm:text-[24px]"><CountUp to={Number(n)} /></dd>
+                <div key={label} className="flex items-baseline gap-1">
+                  <dd className="font-display text-[16px] font-semibold tabular-nums text-[#f0c987] sm:text-[18px]"><CountUp to={Number(n)} /></dd>
+                  <dt className="text-[13px] text-[#e9dcc6]/65">{label}</dt>
                 </div>
               ))}
             </dl>
-            <HeroStaff />
           </>
         )}
-        <label className={clsx(!active && !query && 'mt-6', 'hero-search relative flex h-12 items-center gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
+        <label className={clsx(browsing && 'th-search mt-5', 'hero-search relative flex h-12 items-center gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
           <SearchIcon width={18} height={18} className="shrink-0" />
           <input
             value={query}
@@ -445,10 +444,10 @@ function Index() {
             </button>
           )}
         </label>
-        {!active && !query && (
-          <div className="relative mt-3 flex flex-wrap gap-2">
+        {browsing && (
+          <div className="th-chips no-scrollbar relative mt-3">
             {SUGGESTIONS.map((s) => (
-              <button key={s} onClick={() => setQuery(s)} className="rounded-full border border-[#e2b66e]/25 bg-black/30 px-3 py-1 text-[12.5px] text-[#efe3cf]/85 backdrop-blur-sm transition-colors hover:border-[#e2b66e]/70 hover:bg-[#e2b66e]/15 hover:text-[#f6ecdc]">
+              <button key={s} onClick={() => setQuery(s)}>
                 {s}
               </button>
             ))}
@@ -465,17 +464,20 @@ function Index() {
         <CategoryView id={active.id} onSelect={select} />
       ) : (
         <>
-          <ContinueRow />
+          <QuickStart onRandom={surprise} />
+          <ContinueRow skip={lastUnfinished()?.slug} title="Đọc dở khác" />
           <ResearchTools />
           <StaffRule />
-          <section className="space-y-3">
+          <section id="th-topics" className="scroll-mt-20 space-y-3">
             <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>
             <TopicBrowser onSelect={select} />
           </section>
           <StaffRule />
           {/* A rotating quiz on the library, beside a rotating "did you know" fact. */}
           <div data-reveal className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <QuizCard />
+            <div id="th-quiz" className="scroll-mt-20">
+              <QuizCard />
+            </div>
             <Spotlight />
           </div>
 

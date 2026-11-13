@@ -73,32 +73,6 @@
 .aq-opt[data-state="right"] { border-color: var(--color-gold); background: color-mix(in oklch, var(--color-gold) 14%, var(--color-surface-raised)); }
 .aq-opt[data-state="wrong"] { border-color: color-mix(in oklch, #c0533f 55%, transparent); color: var(--color-ink-muted); }
 
-/* ---------- the gold staff of the hero ---------- */
-.hero-staff { position: relative; display: block; height: 64px; margin-top: 18px; max-width: 34rem; }
-.hero-staff line { stroke: #e2b66e; stroke-width: 1; opacity: 0.45; }
-.hero-staff .hs-note { fill: #e2b66e; opacity: 0.8; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero-staff line { transform-box: fill-box; transform-origin: 0 50%; transform: scaleX(0); animation: hs-draw 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards; animation-delay: calc(var(--k) * 90ms + 200ms); }
-  .hero-staff .hs-note { opacity: 0; transform-box: fill-box; transform-origin: center; }
-}
-@keyframes hs-draw { to { transform: scaleX(1); } }
-@keyframes hs-note { from { opacity: 0; transform: translateY(6px) scale(0.6); } to { opacity: 0.8; transform: none; } }
-
-/* ---------- hero: chord labels, playing chord, the staff leaving as the page scrolls ---------- */
-.hs-play { position: absolute; inset: -4px 4% -4px auto; width: 58%; cursor: pointer; border-radius: 12px; }
-.hs-play:focus-visible { outline: 1px solid #e2b66e; }
-.hs-label { fill: #e2b66e; font-family: var(--font-display); font-style: italic; font-size: 9px; opacity: 0; }
-.hs-chord.is-on .hs-note { fill: #fff3d6; }
-.hs-chord.is-on .hs-label { fill: #fff3d6; }
-@media (prefers-reduced-motion: no-preference) {
-  .hs-chord .hs-note, .hs-chord .hs-label { animation: hs-note 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: calc(var(--k) * 180ms + 1000ms); }
-  .hs-chord .hs-label { animation-name: hs-label; }
-  @supports (animation-timeline: view()) {
-    .hero-staff { animation: hs-away linear both; animation-timeline: view(); animation-range: exit 0% exit 100%; transform-origin: 50% 100%; }
-  }
-}
-@media (prefers-reduced-motion: reduce) { .hs-label { opacity: 0.6; } .hero-staff .hs-note { opacity: 0.8; } }
-@keyframes hs-label { from { opacity: 0; } to { opacity: 0.6; } }
 @keyframes hs-away { to { opacity: 0; transform: scaleY(0.3); } }
 
 /* ---------- the staff, compressed into a divider between blocks ---------- */
@@ -184,3 +158,60 @@ html.vt-topic .vt-tt, html.vt-topic .vt-cat-title { view-transition-name: topic-
 /* lighter wash over the painting than over the old photograph: dark only where the text sits */
 .ha + .hero-wash { background: linear-gradient(90deg, rgb(11 10 8 / 0.82), rgb(11 10 8 / 0.5) 52%, rgb(11 10 8 / 0.18)), linear-gradient(0deg, rgb(11 10 8 / 0.55), rgb(11 10 8 / 0) 45%); }
 @media (max-width: 640px) { .ha + .hero-wash { background: linear-gradient(180deg, rgb(11 10 8 / 0.55), rgb(11 10 8 / 0.78) 55%, rgb(11 10 8 / 0.9)); } }
+
+/* ============ hero without a frame (TheoryPage: browsing the index) ============
+   The painting runs edge to edge (out of the page's max-width column) and fades into the page colour; the text sits
+   on the fade. Content lines up with the column below: same max width, same side padding. */
+.th-hero {
+  --col: max(16px, calc((100vw - 72rem) / 2 + 16px));
+  position: relative; isolation: isolate; color: #f6ecdc;
+  margin-top: -20px; margin-inline: calc(50% - 50vw); padding: 150px var(--col) 8px;
+}
+@media (min-width: 1024px) { .th-hero { --col: max(32px, calc((100vw - 72rem) / 2 + 32px)); margin-top: -32px; padding-top: 230px; } }
+.th-hero .ha { z-index: -2; }
+.th-hero .ha-layer img { object-position: 58% 30%; }
+.th-hero .ha-layer { transform-origin: 58% 40%; }
+.th-wash {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgb(11 10 8 / 0.2), rgb(11 10 8 / 0.55) 42%, var(--color-surface) 94%),
+    linear-gradient(90deg, rgb(11 10 8 / 0.55), transparent 72%);
+}
+.th-hero > p, .th-meta { text-shadow: 0 1px 12px rgb(0 0 0 / 0.8); }
+/* gold-gradient text takes no text-shadow (iOS paints a dark smear): the shadow goes on the heading as a filter */
+.th-title { font-size: 40px; line-height: 1.03; filter: drop-shadow(0 2px 14px rgb(0 0 0 / 0.7)); }
+@media (min-width: 640px) { .th-title { font-size: 52px; } }
+@media (min-width: 1024px) { .th-title { font-size: 64px; } }
+.th-search { height: 54px; border-radius: 18px; max-width: 40rem; }
+.is-android .th-search { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgb(18 14 10 / 0.92); }
+.th-chips { display: flex; gap: 8px; overflow-x: auto; margin-inline: calc(var(--col) * -1); padding: 0 var(--col) 2px; }
+.th-chips button {
+  flex-shrink: 0; padding: 7px 13px; border-radius: 999px; font-size: 13px; color: rgb(239 227 207 / 0.88);
+  border: 1px solid rgb(226 182 110 / 0.25); background: rgb(255 255 255 / 0.04); transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+.th-chips button:hover { border-color: rgb(226 182 110 / 0.7); background: rgb(226 182 110 / 0.15); color: #f6ecdc; }
+
+/* ============ quick start under the hero (TheoryHome.tsx: QuickStart) ============ */
+.qs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 1024px) { .qs { grid-template-columns: 2fr repeat(3, minmax(0, 1fr)); } }
+.qs-continue {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 18px;
+  border: 1px solid color-mix(in oklch, var(--color-gold) 32%, transparent);
+  background: linear-gradient(110deg, color-mix(in oklch, var(--color-gold) 16%, transparent), color-mix(in oklch, var(--color-gold) 3%, transparent) 60%), var(--color-surface-raised);
+  transition: border-color 0.2s;
+}
+@media (min-width: 1024px) { .qs-continue { grid-column: auto; } }
+.qs-continue:hover { border-color: color-mix(in oklch, var(--color-gold) 60%, transparent); }
+.qs-kicker { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-gold); }
+.qs-title { display: block; margin-top: 3px; font-size: 15.5px; font-weight: 600; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qs-bar { display: block; margin-top: 9px; height: 4px; border-radius: 4px; overflow: hidden; background: color-mix(in oklch, var(--color-ink) 10%, transparent); }
+.qs-bar > span { display: block; height: 100%; transform-origin: 0 50%; background: linear-gradient(90deg, #c8913f, #f0c987); }
+.qs-go { flex-shrink: 0; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: var(--color-gold); background: color-mix(in oklch, var(--color-gold) 12%, transparent); }
+.qs-tile {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 14px; min-height: 96px; padding: 12px;
+  border-radius: 18px; text-align: left; border: 1px solid var(--color-border); background: var(--color-surface-raised); transition: border-color 0.2s;
+}
+.qs-tile:hover { border-color: color-mix(in oklch, var(--color-gold) 50%, transparent); }
+.qs-tile b { display: block; font-size: 14px; font-weight: 600; color: var(--color-ink); }
+.qs-tile b + span { display: block; margin-top: 2px; font-size: 12px; color: var(--color-ink-muted); }
+.qs-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; color: var(--color-gold); background: color-mix(in oklch, var(--color-gold) 11%, transparent); }
