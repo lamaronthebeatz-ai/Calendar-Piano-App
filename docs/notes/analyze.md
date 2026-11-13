@@ -13,6 +13,7 @@ Lamar muốn: đưa bản nhạc vào → nhận diện khoá, nhịp, hoá bi�
 ## Đo độ đúng (bắt buộc chạy lại khi đổi bộ máy)
 - `python3 scripts/analyze/export_gt.py` (venv có music21 — wheel ở gốc repo) → thư mục ngoài repo: 19 hợp xướng Bach + phân tích chuyên gia (rntxt Tymoczko và cộng sự trong kho music21; 011 bị loại: kho có cả chương cantata). `node scripts/analyze/eval.mjs <dir> [--verbose --key|--sec|--chord] [--opts '{...}']` tự dò dịch giọng / lệch ô.
 - **Mốc 11/2026:** gốc hợp âm 83,9% · đủ nốt 78% · giọng 77,5% · gốc + thể đảo 78% · át phụ 36/90. Câu kết: 98/127 dấu lưu có câu kết. Giọng kẹt ~80% vì người phân tích ghi cả đổi giọng ngắn — chênh nhau ở ranh ly điệu / chuyển giọng là chuyện quan điểm.
+- **Trần của mô hình luật (13/11):** lưới chordW × profW × sigBonus (`--opts`) — mặc định 1,6 / 2,2 / 0,35 đã tốt nhất (giọng 77,1%). Đẩy cao hơn cần mô hình học từ dữ liệu + bộ đáp án lớn (When in Rome, ABC Beethoven, DCML Mozart) — chưa làm.
 - `node scripts/analyze/run.mjs <xml>` in văn bản; `chords.mjs <xml> [n]` in từng hợp âm.
 
 ## Trang (`AnalyzePage.tsx`, `analyze.css`)

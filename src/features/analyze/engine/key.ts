@@ -93,7 +93,7 @@ function profileFit(hist: number[], k: Key) {
   return dx && dy ? num / Math.sqrt(dx * dy) : 0
 }
 
-export type KeyOptions = { change?: number; window?: number; sigBonus?: number; jazz?: boolean }
+export type KeyOptions = { change?: number; window?: number; sigBonus?: number; jazz?: boolean; chordW?: number; profW?: number }
 
 /**
  * The key of every chord: a hidden-Markov path through the 24 keys (Viterbi). Each chord votes by how it fits the key
@@ -120,7 +120,7 @@ export function keysOf(sc: AScore, chords: Chord[], opts: KeyOptions = {}): Key[
   const emit = (i: number, k: Key) => {
     const c = chords[i]
     const sig = barAt(sc.bars, c.start).key
-    let v = 1.6 * chordFit(c, k, chords[i + 1], opts.jazz) + (opts.jazz ? 1.2 : 2.2) * profileFit(hists[i], k)
+    let v = (opts.chordW ?? 1.6) * chordFit(c, k, chords[i + 1], opts.jazz) + (opts.profW ?? (opts.jazz ? 1.2 : 2.2)) * profileFit(hists[i], k)
 
     if (sigOf(k) === sig) v += sigBonus
     return v * Math.min(2, (c.end - c.start) / 240 + 0.5)
