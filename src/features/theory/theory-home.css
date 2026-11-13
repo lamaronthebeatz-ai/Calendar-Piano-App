@@ -159,59 +159,59 @@ html.vt-topic .vt-tt, html.vt-topic .vt-cat-title { view-transition-name: topic-
 .ha + .hero-wash { background: linear-gradient(90deg, rgb(11 10 8 / 0.82), rgb(11 10 8 / 0.5) 52%, rgb(11 10 8 / 0.18)), linear-gradient(0deg, rgb(11 10 8 / 0.55), rgb(11 10 8 / 0) 45%); }
 @media (max-width: 640px) { .ha + .hero-wash { background: linear-gradient(180deg, rgb(11 10 8 / 0.55), rgb(11 10 8 / 0.78) 55%, rgb(11 10 8 / 0.9)); } }
 
-/* ============ hero without a frame (TheoryPage: browsing the index) ============
-   The painting runs edge to edge (out of the page's max-width column) and fades into the page colour; the text sits
-   on the fade. Content lines up with the column below: same max width, same side padding. */
+/* ============ the Lý thuyết index in the brand "Phòng hoà nhạc" (phn.css; brand book docs/notes/brand.md) ============
+   The painting runs edge to edge under a curtain lit from one point; the greeting stands in the light, centred.
+   Below it nothing is boxed: rows split by a velvet hairline, pictures without frames. Only `.phn-theory` changes. */
 .th-hero {
-  --col: max(16px, calc((100vw - 72rem) / 2 + 16px));
-  position: relative; isolation: isolate; color: #f6ecdc;
-  margin-top: -20px; margin-inline: calc(50% - 50vw); padding: 150px var(--col) 8px;
+  --col: max(24px, calc((100vw - 72rem) / 2 + 24px));
+  position: relative; isolation: isolate; color: var(--phn-candle); text-align: center;
+  margin-top: -20px; margin-inline: calc(50% - 50vw); padding: 180px var(--col) 8px;
 }
-@media (min-width: 1024px) { .th-hero { --col: max(32px, calc((100vw - 72rem) / 2 + 32px)); margin-top: -32px; padding-top: 230px; } }
+@media (min-width: 1024px) { .th-hero { --col: max(32px, calc((100vw - 72rem) / 2 + 32px)); margin-top: -32px; padding-top: 260px; } }
 .th-hero .ha { z-index: -2; }
 .th-hero .ha-layer img { object-position: 58% 30%; }
 .th-hero .ha-layer { transform-origin: 58% 40%; }
 .th-wash {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background:
-    linear-gradient(180deg, rgb(11 10 8 / 0.2), rgb(11 10 8 / 0.55) 42%, var(--color-surface) 94%),
-    linear-gradient(90deg, rgb(11 10 8 / 0.55), transparent 72%);
+    radial-gradient(70% 55% at 55% 34%, transparent, var(--phn-curtain) 62%, var(--phn-stage) 94%),
+    linear-gradient(180deg, var(--phn-curtain), transparent 26%, transparent 55%, var(--phn-stage));
 }
-.th-hero > p, .th-meta { text-shadow: 0 1px 12px rgb(0 0 0 / 0.8); }
-/* gold-gradient text takes no text-shadow (iOS paints a dark smear): the shadow goes on the heading as a filter */
-.th-title { font-size: 40px; line-height: 1.03; filter: drop-shadow(0 2px 14px rgb(0 0 0 / 0.7)); }
-@media (min-width: 640px) { .th-title { font-size: 52px; } }
-@media (min-width: 1024px) { .th-title { font-size: 64px; } }
-.th-search { height: 54px; border-radius: 18px; max-width: 40rem; }
-.is-android .th-search { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgb(18 14 10 / 0.92); }
-.th-chips { display: flex; gap: 8px; overflow-x: auto; margin-inline: calc(var(--col) * -1); padding: 0 var(--col) 2px; }
-.th-chips button {
-  flex-shrink: 0; padding: 7px 13px; border-radius: 999px; font-size: 13px; color: rgb(239 227 207 / 0.88);
-  border: 1px solid rgb(226 182 110 / 0.25); background: rgb(255 255 255 / 0.04); transition: border-color 0.2s, background-color 0.2s, color 0.2s;
-}
-.th-chips button:hover { border-color: rgb(226 182 110 / 0.7); background: rgb(226 182 110 / 0.15); color: #f6ecdc; }
+@media (prefers-reduced-motion: no-preference) { .th-wash { animation: th-house-dim 0.6s var(--phn-ease) both; } }
+@keyframes th-house-dim { from { opacity: 0.35; } }
+.th-hero .phn-eyebrow { text-shadow: 0 1px 12px rgb(0 0 0 / 0.8); }
+/* Bodoni italic carries no gold here, so a text shadow is safe (the iOS smear only hits gradient text) */
+.th-hero .phn-greeting { text-shadow: 0 2px 18px rgb(0 0 0 / 0.75); }
+.th-search { max-width: 34rem; margin-inline: auto; text-align: left; }
+.th-suggest { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; font-size: 13px; color: var(--phn-ash); }
+.th-suggest > span { color: var(--phn-ash); }
+.th-suggest button { color: var(--phn-candle-dim); text-decoration: underline; text-decoration-color: var(--phn-velvet); text-underline-offset: 4px; transition: color 0.2s, text-decoration-color 0.2s; }
+.th-suggest button:hover { color: var(--phn-spot); text-decoration-color: var(--phn-spot); }
 
-/* ============ quick start under the hero (TheoryHome.tsx: QuickStart) ============ */
-.qs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-@media (min-width: 1024px) { .qs { grid-template-columns: 2fr repeat(3, minmax(0, 1fr)); } }
-.qs-continue {
-  grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 18px;
-  border: 1px solid color-mix(in oklch, var(--color-gold) 32%, transparent);
-  background: linear-gradient(110deg, color-mix(in oklch, var(--color-gold) 16%, transparent), color-mix(in oklch, var(--color-gold) 3%, transparent) 60%), var(--color-surface-raised);
-  transition: border-color 0.2s;
-}
-@media (min-width: 1024px) { .qs-continue { grid-column: auto; } }
-.qs-continue:hover { border-color: color-mix(in oklch, var(--color-gold) 60%, transparent); }
-.qs-kicker { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-gold); }
-.qs-title { display: block; margin-top: 3px; font-size: 15.5px; font-weight: 600; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.qs-bar { display: block; margin-top: 9px; height: 4px; border-radius: 4px; overflow: hidden; background: color-mix(in oklch, var(--color-ink) 10%, transparent); }
-.qs-bar > span { display: block; height: 100%; transform-origin: 0 50%; background: linear-gradient(90deg, #c8913f, #f0c987); }
-.qs-go { flex-shrink: 0; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: var(--color-gold); background: color-mix(in oklch, var(--color-gold) 12%, transparent); }
-.qs-tile {
-  display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 14px; min-height: 96px; padding: 12px;
-  border-radius: 18px; text-align: left; border: 1px solid var(--color-border); background: var(--color-surface-raised); transition: border-color 0.2s;
-}
-.qs-tile:hover { border-color: color-mix(in oklch, var(--color-gold) 50%, transparent); }
-.qs-tile b { display: block; font-size: 14px; font-weight: 600; color: var(--color-ink); }
-.qs-tile b + span { display: block; margin-top: 2px; font-size: 12px; color: var(--color-ink-muted); }
-.qs-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; color: var(--color-gold); background: color-mix(in oklch, var(--color-gold) 11%, transparent); }
+/* rows under the hero align with the page column */
+.phn-theory > .phn-rows { max-width: 40rem; }
+
+/* research tools: rows, no cards */
+.phn-theory .rt-list { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 28px; }
+.phn-theory .rt-card { border: 0; border-bottom: 1px solid var(--phn-velvet); border-radius: 0; background: none; padding: 13px 0; align-items: center; }
+.phn-theory .rt-card:hover { border-color: var(--phn-velvet); }
+.phn-theory .rt-card:hover .rt-title { color: var(--phn-spot); }
+.phn-theory .rt-icon { color: var(--phn-candle-dim); margin-top: 0; }
+.phn-theory .rt-title { font-family: var(--font-display); font-size: 17px; font-weight: 500; }
+.phn-theory .rt-text { color: var(--phn-ash); }
+
+/* half-read articles: a thumbnail and words on the stage */
+.phn-theory .cr-card { border: 0; border-radius: 0; background: none; padding: 6px 0; }
+.phn-theory .cr-thumb { border-radius: 0; }
+
+/* topics: text tabs over pictures without frames */
+.phn-theory .tb-chip { border: 0; background: none; border-radius: 0; padding-inline: 2px; margin-right: 10px; font-family: var(--font-display); font-size: 15px; }
+.phn-theory .tb-chip[aria-pressed="true"] { background: none; color: var(--phn-spot); box-shadow: inset 0 -1.5px 0 var(--phn-spot); }
+.phn-theory .tb-tile { border: 0; border-radius: 0; background: none; overflow: visible; }
+.phn-theory .tb-media { border-radius: 0; }
+.phn-theory .tb-title { padding-inline: 0; font-family: var(--font-display); font-size: 14.5px; font-weight: 500; }
+.phn-theory .tb-path { border: 0; padding: 0; margin-inline: 0; }
+
+/* the quiz, the fact, the sources: open space and one hairline, no cards */
+.phn-theory .qz-card, .phn-theory .dyk-card { border: 0; border-top: 1px solid var(--phn-velvet); border-radius: 0; background: none; box-shadow: none; }
+.phn-theory .th-sources { border: 0; border-top: 1px solid var(--phn-velvet); border-radius: 0; background: none; padding-inline: 0; }

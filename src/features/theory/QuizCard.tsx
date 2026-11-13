@@ -111,7 +111,7 @@ function Quiz({ bank }: { bank: QuizQuestion[] }) {
       tabIndex={-1}
       onKeyDown={onKey}
       style={tint(category)}
-      className="relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] shadow-[0_1px_0_rgba(0,0,0,0.02),0_18px_40px_-28px_rgba(40,30,15,0.35)] outline-none"
+      className="qz-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] shadow-[0_1px_0_rgba(0,0,0,0.02),0_18px_40px_-28px_rgba(40,30,15,0.35)] outline-none"
     >
       {/* Category watermark */}
       <span aria-hidden className="pointer-events-none absolute -right-4 -top-6 select-none font-['Noto_Music'] text-[120px] leading-none text-[color-mix(in_oklch,var(--tint)_9%,transparent)]">

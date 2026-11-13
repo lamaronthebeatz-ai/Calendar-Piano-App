@@ -1,8 +1,8 @@
-import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useState, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import clsx from 'clsx'
-import { BookmarkIcon, CheckIcon, ChevronRightIcon, ClockIcon, CompassIcon, ListIcon, ShuffleIcon, SparkleIcon } from '../../components/icons'
-import { articlesByCategory, findArticle, type ArticleMeta as Article } from './wiki'
+import { BookIcon, BookmarkIcon, CheckIcon, ClockIcon, CompassIcon, ShuffleIcon, SparkleIcon } from '../../components/icons'
+import { articlesByCategory, findArticle, readingMinutes, type ArticleMeta as Article } from './wiki'
 import { lastUnfinished, unfinished, useLibrary } from './library'
 import { GLYPHS, TOPIC_IMAGES, tint } from './categoryStyle'
 import { useThumbs } from './thumbs'
@@ -164,44 +164,52 @@ export function ArticleQuiz({ slug }: { slug: string }) {
 const jump = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
 /**
- * What to do here, right under the hero: the article left half-read (with its progress), then a quiz, a random
- * article and the topics. Without a half-read article the three small tiles stand alone.
+ * What to do here, right under the greeting (brand "Phòng hoà nhạc": rows on the stage, no boxes): the article left
+ * half-read with its progress and the minutes left — in the light — then the quiz and an article never opened.
  */
 export function QuickStart({ onRandom }: { onRandom: () => void }) {
   useLibrary() // re-render when the reading positions change
   const last = lastUnfinished()
   const a = last && findArticle(last.slug)
-  const tiles: { label: string; sub: string; icon: ReactNode; go: () => void }[] = [
-    { label: 'Quiz nhanh', sub: 'Thử kiến thức', icon: <SparkleIcon width={17} height={17} />, go: () => jump('th-quiz') },
-    { label: 'Ngẫu nhiên', sub: 'Một bài lạ', icon: <ShuffleIcon width={17} height={17} />, go: onRandom },
-    { label: 'Chủ đề', sub: `${articlesByCategory.length} mục`, icon: <ListIcon width={17} height={17} />, go: () => jump('th-topics') },
-  ]
+  const left = a ? Math.max(1, Math.round(readingMinutes(a) * (1 - last.ratio))) : 0
   return (
-    <section aria-label="Bắt đầu nhanh" className="qs">
+    <ul aria-label="Bắt đầu nhanh" className="phn-rows">
       {a && (
-        <Link to={`/theory/${a.slug}`} className="qs-continue" style={tint(a.category)}>
-          <span className="min-w-0 flex-1">
-            <span className="qs-kicker">Đọc tiếp</span>
-            <span className="qs-title">{a.title}</span>
-            <span className="qs-bar" aria-label={`Đã đọc ${Math.round(last.ratio * 100)}%`}>
-              <span style={{ transform: `scaleX(${last.ratio})` }} />
+        <li>
+          <Link to={`/theory/${a.slug}`} className="phn-row" aria-current="true">
+            <BookIcon width={20} height={20} className="phn-row-icon" aria-hidden />
+            <span className="min-w-0">
+              <span className="phn-row-title">Đọc tiếp: {a.title}</span>
+              <span className="phn-row-sub">Còn khoảng {left} phút</span>
+              <span className="phn-row-bar" aria-hidden>
+                <span style={{ transform: `scaleX(${last.ratio})` }} />
+              </span>
             </span>
-          </span>
-          <span className="qs-go" aria-hidden>
-            <ChevronRightIcon width={18} height={18} />
-          </span>
-        </Link>
+            <span className="phn-row-end">{Math.round(last.ratio * 100)}%</span>
+          </Link>
+        </li>
       )}
-      {tiles.map((x) => (
-        <button key={x.label} type="button" onClick={x.go} className="qs-tile">
-          <span className="qs-icon" aria-hidden>{x.icon}</span>
-          <span>
-            <b>{x.label}</b>
-            <span>{x.sub}</span>
+      <li>
+        <button type="button" onClick={() => jump('th-quiz')} className="phn-row">
+          <SparkleIcon width={20} height={20} className="phn-row-icon" aria-hidden />
+          <span className="min-w-0">
+            <span className="phn-row-title">Câu đố</span>
+            <span className="phn-row-sub">Một câu hỏi từ thư viện, đổi liên tục</span>
           </span>
+          <span className="phn-row-end" />
         </button>
-      ))}
-    </section>
+      </li>
+      <li>
+        <button type="button" onClick={onRandom} className="phn-row">
+          <ShuffleIcon width={20} height={20} className="phn-row-icon" aria-hidden />
+          <span className="min-w-0">
+            <span className="phn-row-title">Ngẫu nhiên</span>
+            <span className="phn-row-sub">Một bài bạn chưa từng mở</span>
+          </span>
+          <span className="phn-row-end" />
+        </button>
+      </li>
+    </ul>
   )
 }
 

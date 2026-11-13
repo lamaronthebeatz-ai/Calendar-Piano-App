@@ -1,0 +1,48 @@
+/*
+ * Phòng hoà nhạc — the brand's tokens, scoped. A page opts in with the class `phn` on its root; nothing global changes,
+ * so the home page (/home) and the musicology sky keep their own look. Brand book: docs/notes/brand.md.
+ */
+.phn {
+  --font-display: "Libre Bodoni", "Playfair Display", Georgia, serif;
+  --font-sans: Manrope, Inter, ui-sans-serif, system-ui, sans-serif;
+  --phn-stage: var(--color-surface);
+  --phn-box: #14110d;
+  --phn-velvet: #2b251d;
+  --phn-candle: #f3ead9;
+  --phn-candle-dim: #b9ad97;
+  --phn-ash: #8c816f;
+  --phn-spot: #e0b764;
+  --phn-on-spot: #050404;
+  --phn-glow: rgb(224 183 100 / 0.42);
+  --phn-haze: rgb(224 183 100 / 0.1);
+  --phn-curtain: rgb(5 4 4 / 0.72);
+  --phn-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: var(--font-sans);
+}
+.phn :focus-visible { outline: 2px solid var(--phn-spot); outline-offset: 3px; }
+
+/* the greeting: one line, Bodoni italic, the only large type on the screen */
+.phn-greeting { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 54px; line-height: 0.98; letter-spacing: -0.01em; color: var(--phn-candle); text-wrap: balance; }
+@media (min-width: 640px) { .phn-greeting { font-size: 72px; } }
+@media (min-width: 1024px) { .phn-greeting { font-size: 88px; } }
+.phn-eyebrow { font: 600 10.5px/1 var(--font-sans); letter-spacing: 0.3em; text-transform: uppercase; color: var(--phn-spot); }
+
+/* search: a rule to write on, no box */
+.phn-search { display: flex; align-items: center; gap: 10px; height: 52px; border-bottom: 1px solid var(--phn-candle-dim); color: var(--phn-candle-dim); transition: border-color 0.2s, color 0.2s; }
+.phn-search:focus-within { border-bottom-color: var(--phn-spot); color: var(--phn-spot); }
+.phn-search input { font-family: var(--font-display); font-style: italic; font-size: 19px; color: var(--phn-candle); }
+.phn-search input::placeholder { color: var(--phn-ash); }
+
+/* rows: things to do, lying on the stage, split by a velvet hairline; the one that matters stands in the light */
+.phn-rows { list-style: none; padding: 0; }
+.phn-row { position: relative; isolation: isolate; display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; align-items: center; column-gap: 8px; width: 100%; padding: 13px 0; border-bottom: 1px solid var(--phn-velvet); text-align: left; color: var(--phn-candle); transition: background-color 0.18s var(--phn-ease); }
+.phn-rows > li:first-child > .phn-row { border-top: 1px solid var(--phn-velvet); }
+.phn-row-icon { color: var(--phn-candle-dim); }
+.phn-row-title { display: block; font: 500 19px/1.2 var(--font-display); color: var(--phn-candle); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phn-row-sub { display: block; margin-top: 3px; font: 500 12px/1.3 var(--font-sans); color: var(--phn-ash); }
+.phn-row-end { font: 500 12px/1 var(--font-sans); color: var(--phn-candle-dim); font-variant-numeric: tabular-nums; }
+.phn-row:active { background: var(--phn-haze); }
+.phn-row[aria-current="true"] .phn-row-title, .phn-row[aria-current="true"] .phn-row-icon { color: var(--phn-spot); }
+.phn-row[aria-current="true"]::before { content: ""; position: absolute; inset: -4px -24px; z-index: -1; pointer-events: none; background: radial-gradient(60% 120% at 18% 50%, var(--phn-haze), transparent 70%); }
+.phn-row-bar { display: block; height: 2px; margin-top: 8px; max-width: 14rem; background: var(--phn-velvet); }
+.phn-row-bar > span { display: block; height: 100%; transform-origin: 0 50%; background: var(--phn-spot); }

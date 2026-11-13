@@ -32,7 +32,7 @@ import { OfflineSave } from './OfflineSave'
 import { CiteBox } from '../sources/CiteBox'
 import { citeArticle } from '../sources/cite'
 import { articleKind } from '../sources/kind'
-import { articlesByCategory, findArticle, getBacklinks, headings, libraryStats, readingMinutes, loadBodyMatches, searchArticles, type ArticleMeta as Article } from './wiki'
+import { articlesByCategory, findArticle, getBacklinks, headings, readingMinutes, loadBodyMatches, searchArticles, type ArticleMeta as Article } from './wiki'
 import { markRead, toggleDone, readingPosition, saveReadingPosition, toggleSaved, lastUnfinished, updateLibrary, useLibrary } from './library'
 import { useScrollMemory } from '../../hooks/useScrollMemory'
 import { useArticle, type ArticleText } from './body'
@@ -55,6 +55,8 @@ import { HeroArt } from './TheoryStage'
 import { LinkStaff, PathStrip } from './ArticleLinks'
 import { MyLinks } from '../brain/MyLinks'
 import { ArticleQuiz, ContinueRow, QuickStart, StaffRule, TopicBrowser } from './TheoryHome'
+import { useGreeting } from '../../hooks/useGreeting'
+import '../../phn.css'
 import { morphTopic, TOPIC_GROUPS } from './topicGroups'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
@@ -73,7 +75,12 @@ type CategoryId = Article['category']
 const SUGGESTIONS = ['Vòng quãng 5', 'ii – V – I', 'Hình thức sonata', 'Hợp âm 7', 'Chopin', 'Đảo phách']
 
 const LISTED = ARTICLES.filter((a) => !a.unlisted)
-const randomArticle = () => LISTED[Math.floor(Math.random() * LISTED.length)]
+/** A random article, preferring one never opened (the brand's "Một bài bạn chưa từng mở"). */
+const randomArticle = (read: string[] = []) => {
+  const fresh = LISTED.filter((a) => !read.includes(a.slug))
+  const pool = fresh.length ? fresh : LISTED
+  return pool[Math.floor(Math.random() * pool.length)]
+}
 
 /** Browsers with scroll-driven animations fill the reading bar in CSS (theory-motion.css), off the main thread. */
 const SCROLL_TL = typeof CSS !== 'undefined' && CSS.supports('animation-timeline: scroll()')
@@ -393,11 +400,13 @@ function Index() {
   }, [q])
   const bodyIds = body?.q === q ? body.ids : null
   const results = useMemo(() => searchArticles(query, bodyIds), [query, bodyIds])
-  const surprise = () => navigate(`/theory/${randomArticle().slug}`)
+  const { read } = useLibrary()
+  const surprise = () => navigate(`/theory/${randomArticle(read).slug}`)
+  const greeting = useGreeting()
   const browsing = !active && !query
 
   return (
-    <div className="mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
+    <div className="phn phn-theory mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
       {/* Browsing: the painting runs edge to edge and fades into the page, no card. Searching or in a topic: the same
           search field sits in a slim dark capsule. One element throughout, so typing never drops the field's focus. */}
       <section className={clsx(browsing ? 'th-hero animate-float-up' : 'hero-ebony relative isolate overflow-hidden rounded-[28px] p-2.5 shadow-[var(--shadow-float)]')}>
@@ -406,26 +415,12 @@ function Index() {
         <div aria-hidden className={browsing ? 'th-wash' : 'hero-wash pointer-events-none absolute inset-0 -z-10'} />
         {browsing && (
           <>
-            <p className="relative text-[11.5px] font-semibold uppercase tracking-[0.24em] text-[#e2b66e]">Thư viện lý thuyết</p>
-            <h2 data-collapse className="th-title collapse-large relative mt-2.5 max-w-3xl font-display font-semibold tracking-tight text-[#f6ecdc]">
-              Âm nhạc phương Tây <span className="text-gold-gradient italic">&amp; piano</span>
-            </h2>
-            <dl className="th-meta relative mt-3 flex flex-wrap gap-x-4 gap-y-1">
-              {[
-                [ARTICLES.length, 'trang'],
-                [articlesByCategory.length, 'chủ đề'],
-                [libraryStats.links, 'liên kết'],
-                [libraryStats.figures, 'hình vẽ'],
-              ].map(([n, label]) => (
-                <div key={label} className="flex items-baseline gap-1">
-                  <dd className="font-display text-[16px] font-semibold tabular-nums text-[#f0c987] sm:text-[18px]"><CountUp to={Number(n)} /></dd>
-                  <dt className="text-[13px] text-[#e9dcc6]/65">{label}</dt>
-                </div>
-              ))}
-            </dl>
+            <p className="phn-eyebrow relative">Thư viện lý thuyết</p>
+            {/* a short greeting for this part of the day (lib/greeting.ts); the bar title takes over as it scrolls away */}
+            <h2 data-collapse className="phn-greeting collapse-large relative mx-auto mt-4 max-w-3xl">{greeting}</h2>
           </>
         )}
-        <label className={clsx(browsing && 'th-search mt-5', 'hero-search relative flex h-12 items-center gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
+        <label className={clsx('relative flex items-center', browsing ? 'phn-search th-search mt-9' : 'hero-search h-12 gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
           <SearchIcon width={18} height={18} className="shrink-0" />
           <input
             value={query}
@@ -438,20 +433,21 @@ function Index() {
             <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-full p-1 text-[#e9dcc6]/70 hover:bg-white/10">
               <XIcon width={16} height={16} />
             </button>
-          ) : (
+          ) : browsing ? null : (
             <button onClick={surprise} title="Mở một bài ngẫu nhiên" className="flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12.5px] font-medium text-[#e2b66e] hover:bg-[#e2b66e]/12">
               <ShuffleIcon width={14} height={14} /> <span className="hidden sm:inline">Ngẫu nhiên</span>
             </button>
           )}
         </label>
         {browsing && (
-          <div className="th-chips no-scrollbar relative mt-3">
+          <p className="th-suggest relative mt-4">
+            <span>Thử tìm</span>
             {SUGGESTIONS.map((s) => (
               <button key={s} onClick={() => setQuery(s)}>
                 {s}
               </button>
             ))}
-          </div>
+          </p>
         )}
       </section>
 
@@ -481,7 +477,7 @@ function Index() {
             <Spotlight />
           </div>
 
-          <footer data-reveal className="grid gap-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] text-[var(--color-ink-muted)] sm:grid-cols-[1fr_2fr] sm:p-6">
+          <footer data-reveal className="th-sources grid gap-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] text-[var(--color-ink-muted)] sm:grid-cols-[1fr_2fr] sm:p-6">
             <div>
               <p className="font-display text-[17px] font-semibold text-[var(--color-ink)]">Nguồn tham khảo mở</p>
               <p className="mt-1 leading-relaxed">Mỗi bài ghi nguồn ở cuối trang. Đây là các nguồn miễn phí dùng nhiều nhất.</p>
@@ -1366,22 +1362,4 @@ function LinkPreviews({ children }: { children: ReactNode }) {
       )}
     </div>
   )
-}
-
-/** A number that counts up from zero once, easing out; shows the final value straight away when motion is reduced. */
-function CountUp({ to, ms = 1400 }: { to: number; ms?: number }) {
-  const [value, setValue] = useState(() => (matchMedia('(prefers-reduced-motion: reduce)').matches ? to : 0))
-  useEffect(() => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    let frame = 0
-    const start = performance.now()
-    const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / ms)
-      setValue(Math.round(to * (1 - (1 - t) ** 4)))
-      if (t < 1) frame = requestAnimationFrame(tick)
-    }
-    frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
-  }, [to, ms])
-  return <>{value.toLocaleString('vi-VN')}</>
 }

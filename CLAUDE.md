@@ -52,6 +52,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `musicology.md` | Bản đồ âm nhạc `/musicology/ban-do`, bầu trời 3D `Sky3D`, chòm từng phần, trích dẫn |
 | `curriculum.md` | Tủ sách, danh sách sách/giáo trình, trình đọc (`reader/`), ghi chú – Sổ nghiên cứu, trang tủ sách 2,5D, Android |
 | `home.md` | Trang chủ `/home` (sân khấu tranh tách lớp, chương dính) và màn khoá |
+| `brand.md` | Thương hiệu "Phòng hoà nhạc": lớp `.phn` (`src/phn.css`), Libre Bodoni + Manrope, lời chào theo giờ, trang đã áp dụng; **cấm đụng `/home` và bầu trời chòm sao** |
 | `ui.md` | Theme, thương hiệu đen – vàng, điều hướng, ngăn kéo, View Transitions, hook hiệu ứng, âm thanh piano/máy nhịp, logo |
 | `compose.md` | Trình soạn nhạc `/compose` (Verovio, giấy trắng, cử chỉ chạm, bảng công cụ nổi, mô hình ghi đè kiểu Sibelius) |
 | `features.md` | Bảng tính `/tools`, trang Solfège, Ủng hộ, tour hướng dẫn |
