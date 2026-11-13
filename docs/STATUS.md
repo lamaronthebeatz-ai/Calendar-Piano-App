@@ -9,6 +9,9 @@
 ## Vừa xong
 - **Phân tích tác phẩm `/analyze`** (4 đợt, 13/11): lăng kính Cổ điển / Jazz / TK XX, hình thức, nhãn trên bản nhạc + văn bản + bảng từng ô — `notes/analyze.md` (có mốc độ đúng).
 
+- Nhập file ở `/analyze`, `/compose`: bỏ `accept` (iPhone làm xám .musicxml), nhận theo nội dung.
+- **Lỗi đã thấy, chưa sửa (chờ Lamar gật):** "giọng chính" = giọng của hợp âm cuối (`report.ts:47`); thưởng cuối bài trong `keysOf` có comment nhưng chưa viết. Sai ở Clair de lune (ra La♭ thứ) và khung Georgia (ra Rê thứ). Hướng sửa: chọn giọng chính theo hợp âm chủ cuối + hoá biểu + số ô; thêm 2 bài vào test; đo lại Bach. Clair de lune MusicXML dựng từ Mutopia (.mid + chính tả từ .ly qua engraver `spy`) — công thức ở `notes/analyze.md`.
+
 ## Trước đó (đợt 11/2026, commit a2c4d21)
 - Vitest + CI, test chặn route chưa kiểm, nhật ký lỗi, TS chặt hơn — `notes/testing.md`.
 - Sổ tay tri thức `/brain` (second brain) — `notes/brain.md`.

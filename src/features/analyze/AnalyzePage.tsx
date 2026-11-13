@@ -74,7 +74,11 @@ function Shelf() {
     try {
       const name = f.name.replace(/\.[^.]+$/, '')
       const buf = await f.arrayBuffer()
-      const score = /\.midi?$/i.test(f.name) ? fromMidi(buf, name) : fromMusicXml(/\.mxl$/i.test(f.name) ? await unzipMxl(buf) : new TextDecoder().decode(buf), name)
+      // by content, not name: phones often save a download as .txt or without an extension
+      const head = new TextDecoder().decode(new Uint8Array(buf, 0, Math.min(4, buf.byteLength)))
+      if (head !== 'MThd' && !head.startsWith('PK') && !/<score-(partwise|timewise)/.test(new TextDecoder().decode(buf.slice(0, 4096))))
+        throw new Error('File này không phải MusicXML hay MIDI.')
+      const score = head === 'MThd' ? fromMidi(buf, name) : fromMusicXml(head.startsWith('PK') ? await unzipMxl(buf) : new TextDecoder().decode(buf), name)
       navigate(`/analyze/${addSaved(score, 'import').id}`)
     } catch (x) {
       setErr(x instanceof Error ? x.message : String(x))
@@ -92,7 +96,8 @@ function Shelf() {
       <div className="flex flex-wrap items-center gap-3">
         <button onClick={() => input.current?.click()} className="btn-gold rounded-full px-5 py-2.5 text-[13.5px] font-medium">Nhập bản nhạc…</button>
         <span className="text-[12.5px] text-[var(--color-ink-faint)]">.musicxml, .xml, .mxl, .mid — bản PDF: xuất MusicXML từ MuseScore trước</span>
-        <input ref={input} type="file" hidden accept=".musicxml,.xml,.mxl,.mid,.midi,application/vnd.recordare.musicxml+xml,audio/midi" onChange={onFile} />
+        {/* no `accept`: iOS greys out .musicxml/.mxl (no system file type for them) */}
+        <input ref={input} type="file" hidden onChange={onFile} />
       </div>
       {err && <p className="text-[13px] text-[var(--color-status-cancelled)]">{err}</p>}
 

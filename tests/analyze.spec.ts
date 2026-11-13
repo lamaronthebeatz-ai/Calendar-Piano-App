@@ -37,6 +37,17 @@ test('nhập MusicXML từ máy: bản nhạc vào danh sách của bạn và đ
   await expect(page.locator('.src-list').getByText('Nhập từ tệp', { exact: false }).first()).toBeVisible()
 })
 
+test('nhận file theo nội dung, không theo đuôi (điện thoại hay lưu thành .txt); file lạ thì báo lỗi', async ({ page }) => {
+  await page.goto('/#/analyze')
+  const input = page.locator('input[type=file]')
+  await expect(input).not.toHaveAttribute('accept')
+  await input.setInputFiles({ name: 'ghi-chu.txt', mimeType: 'text/plain', buffer: Buffer.from('xin chào') })
+  await expect(page.getByText('không phải MusicXML hay MIDI')).toBeVisible()
+  const xml = await (await page.request.get('/analyze/bach-bwv269.musicxml')).text()
+  await input.setInputFiles({ name: 'bach.musicxml.txt', mimeType: 'text/plain', buffer: Buffer.from(xml) })
+  await expect(page).toHaveURL(/#\/analyze\/ps-/)
+})
+
 test('ba lăng kính: jazz ghi ký hiệu hợp âm và thang âm, TK XX ghi tên Forte, có sơ đồ hình thức và bảng từng ô', async ({ page }) => {
   await page.goto('/#/analyze/joplin-maple-leaf')
   await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })

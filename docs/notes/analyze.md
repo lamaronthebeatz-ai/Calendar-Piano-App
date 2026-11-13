@@ -38,3 +38,6 @@ Lamar muốn: đưa bản nhạc vào → nhận diện khoá, nhịp, hoá bi�
 - Giao diện: sơ đồ khối (bấm → tô ô), lớp "Hình thức" (chữ phần `as`, nhắc lại / mô tiến `ar`), bảng từng ô (cột theo lăng kính), xuất: Lưu vào Sổ tay (Markdown có `[[slug|thuật ngữ]]` → vào mạng second brain), Gắn vào đề tài (nối vào bản nháp), Tải Markdown.
 - Lỗi đã gặp: `Work` giữ lăng kính khi đổi bản nhạc → `key={id}`.
 - Test: `jazz.test.ts`, `xx.test.ts`, `form.test.ts`, e2e 3 lăng kính.
+
+## Dựng MusicXML từ Mutopia (Clair de lune, 13/11)
+Mutopia chỉ có .ly + .mid. `python-ly` không chuyển được. Cách đã chạy: music21 đọc .mid (2 phần, ô và hoá biểu đúng) → chính tả nốt lấy từ LilyPond: thêm engraver Scheme in `SPY <thời điểm×4> <midi> <tên nốt> <dấu>` cho mỗi `note-event` (`lilypond -dno-print-pages`), ghép theo (thời điểm, midi), lệch thì lấy nốt cùng midi gần nhất (±2 phách) → 1.503/1.503 nốt. Khoá khuông dưới chọn theo cao độ trung bình từng ô. Chia bè do music21 tự xếp nên rối hơn bản in.

@@ -49,4 +49,5 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - Comment `/*! … */` trong mã nguồn bị bộ nén xoá → bản quyền gắn bằng `postBanner` (vite.config.ts).
 - Python heredoc sửa file: dùng `<<'EOF'` (có nháy) để `$`/`\` không bị shell ăn; trong chuỗi Python thường, `\s` `\d` sinh SyntaxWarning nhưng vẫn giữ nguyên — kiểm lại file bằng `grep -n`.
 - `git status --short | head` có thể cắt mất file mới → đếm `| wc -l` trước khi commit.
+- `<input type=file accept=".musicxml…">`: iPhone làm xám file `.musicxml`/`.mxl` (hệ máy không biết loại này) → không đặt `accept`, nhận diện theo nội dung (`MThd` = MIDI, `PK` = .mxl, `<score-partwise` = MusicXML) — `AnalyzePage`, `ComposePage` (13/11).
 - Smoke chỉ chờ 2,5 s sau màn che: đừng lấy phần cần Verovio (bản nhạc khắc) làm bộ chọn — WebKit trên CI tải chậm, từng đỏ (13/11). Kiểm bản khắc ở spec riêng với timeout dài.

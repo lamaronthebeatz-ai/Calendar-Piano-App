@@ -1224,7 +1224,9 @@ export function ComposePage() {
   }
   const importFile = async (file: File) => {
     try {
-      const text = /\.mxl$/i.test(file.name) ? await unzipMxl(await file.arrayBuffer()) : await file.text()
+      const buf = await file.arrayBuffer()
+      const zip = new Uint8Array(buf, 0, Math.min(2, buf.byteLength))
+      const text = zip[0] === 0x50 && zip[1] === 0x4b ? await unzipMxl(buf) : new TextDecoder().decode(buf)
       const s = fromMusicXml(text, file.name.replace(/\.(musicxml|xml|mxl)$/i, ''))
       setList((l) => [s, ...l])
       setCurrentId(s.id)
@@ -1598,7 +1600,7 @@ export function ComposePage() {
             <button onClick={() => navigate(`/analyze/c-${score.id}`)}>Phân tích bản này</button>
             <label className="cmp-file">
               Mở MusicXML…
-              <input type="file" accept=".musicxml,.xml,.mxl,application/vnd.recordare.musicxml+xml,application/vnd.recordare.musicxml" onChange={(e) => {
+              <input type="file" onChange={(e) => {
                 const f = e.target.files?.[0]
                 e.target.value = ''
                 if (f) void importFile(f)
