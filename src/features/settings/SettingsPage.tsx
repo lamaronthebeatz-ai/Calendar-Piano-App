@@ -1,4 +1,6 @@
 import { useRef, useState, type ChangeEvent, type ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+import './about-card.css'
 import { useSettings } from '../../hooks/useLiveData'
 import { updateSettings } from '../../services/settingsService'
 import { downloadBackupFile, exportBackup, importBackup } from '../../services/backup'
@@ -75,6 +77,15 @@ export function SettingsPage() {
       </p>
 
       <div className="mx-auto max-w-xl space-y-8 px-4 py-6 lg:px-6">
+        <Link to="/settings/about" className="about-card">
+          <img src={`${import.meta.env.BASE_URL}images/about/lamar-sm.jpg`} alt="" width={72} height={96} />
+          <span className="min-w-0 flex-1">
+            <span className="about-card-kicker">Về Lamar</span>
+            <span className="about-card-title">Người dựng nên căn phòng này</span>
+            <span className="about-card-sub">Đã làm gì, đang làm gì, sẽ đi tới đâu</span>
+          </span>
+          <span aria-hidden className="about-card-go">→</span>
+        </Link>
         <Section title="Hồ sơ">
           <Field label="Tên giáo viên">
             <TextInput value={settings.teacherName} onChange={(e) => updateSettings({ teacherName: e.target.value })} />

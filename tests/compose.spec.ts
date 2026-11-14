@@ -16,6 +16,19 @@ async function open(page: Page) {
   await page.evaluate(() => localStorage.removeItem('compose:scores'))
   await page.reload()
   await expect(page.locator('.cmp-svg > svg')).toBeVisible({ timeout: 40_000 })
+  // a click only lands once the loading curtain is gone and the score has stopped moving (fonts, palette, page fade);
+  // measuring a moving staff put the click off the staff on slow WebKit runners
+  await expect(page.locator('.pc-root')).toHaveCount(0, { timeout: 20_000 })
+  await page.evaluate(() => document.fonts.ready)
+  let last = ''
+  await expect
+    .poll(async () => {
+      const now = await page.evaluate(() => JSON.stringify(document.querySelector('[data-id="m0"]')?.getBoundingClientRect()))
+      const steady = now === last
+      last = now
+      return steady
+    }, { intervals: [250] })
+    .toBe(true)
 }
 const stored = (page: Page) =>
   page.evaluate(() => JSON.parse(localStorage.getItem('compose:scores') ?? '[]')[0]?.staves[0].filter((e: { notes: unknown[] }) => e.notes.length).length ?? 0)

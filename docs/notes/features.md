@@ -26,3 +26,6 @@
 
 
 - **Trợ lý lệnh đã bỏ (11/2026):** Lamar không dùng — xoá `src/features/assistant/`, nút ✦ góc dưới trái, mục "Ra lệnh" trong ⌘K, `draftName` của form học viên, `assist-jump` ở trang bài. Đừng thêm lại.
+
+## Về Lamar (`/settings/about`, 14/11/2026)
+- `src/features/about/AboutPage.tsx` + `about.css` (tải lười), lối vào là thẻ có ảnh ở đầu Cài đặt (`settings/about-card.css`). Ảnh Lamar gửi: `public/images/about/lamar.jpg` (960 px) + `lamar-sm.jpg` (không precache). Bố cục: chân dung tan vào nền tối + tên lớn Bodoni nghiêng → dải năm vạch → 3 con số (bài, sách lấy trực tiếp từ dữ liệu; 6.430 mục Grove) → ba "chương" theo chỉ dẫn tốc độ (I Adagio – đã làm, II Allegro con brio – đang làm, III Andante maestoso – sẽ làm) → "Điều Lamar tin" → chữ ký. Nội dung lấy từ `ABOUT_AUTHOR`/`foreword` (`curriculum/books.ts`) và `decisions.md`; sửa tiểu sử thì sửa cả hai nơi. Hiệu ứng chạy một lần, chỉ transform/opacity.
