@@ -11,7 +11,7 @@
 - **Quay lại đúng trang** (14/11): đóng sách về lại trang đã mở sách; nút quay lại ở Thư mục/Sổ tay/Đề tài/Bản nhạc lùi lịch sử — `notes/ui.md`.
 - **Trang Về Lamar** (14/11): `/settings/about`, thẻ ảnh ở đầu Cài đặt — `notes/features.md`. Sửa test soạn nhạc chập chờn trên WebKit (chờ màn che tắt + khuông ngừng dịch chuyển trước khi bấm).
 - **Thẻ giới thiệu khi bấm link** (14/11): mọi `[[slug]]` mở thẻ ngắn (tóm tắt + thuật ngữ 5 thứ tiếng + mục Grove) trước khi vào bài — `notes/theory.md`.
-- **Từ điển âm nhạc Lamar** (14/11): "Thuật ngữ" đổi tên; tab Grove 1904 – 1910 đủ 5 tập (6.430 mục A–Z + Phụ lục, nguyên văn + tập/trang + link bản quét; dữ liệu sinh lúc build) và tab thuật ngữ đa ngữ. **Dở:** tiếng Việt có 3.783/6.430 mục; **tạm ngưng theo Lamar (14/11)**. Phần đã xong: 87 file `scripts/grove/vi/uNNN.json` (tới u082, thiếu vài phần lẻ); phần chưa làm được dựng lại bằng cách tách mục chưa có tiếng Việt (cách làm ở `notes/terms.md`).
+- **Từ điển âm nhạc Lamar** (14/11): "Thuật ngữ" đổi tên; tab Grove 1904 – 1910 đủ 5 tập (6.430 mục A–Z + Phụ lục, nguyên văn + tập/trang + link bản quét; dữ liệu sinh lúc build) và tab thuật ngữ đa ngữ. **Dở:** tiếng Việt **đủ 6.430/6.430 mục** (15/11) — 150 phần `scripts/grove/vi/u001–u150.json` + các lô viết tay. Việc còn có thể làm: rà các mục ghi "đọc mờ" bằng ảnh quét; mục dài chỉ tóm phần đầu (ghi "bài viết trình bày tiếp").
 - **Phân tích tác phẩm `/analyze`** (4 đợt, 13/11): lăng kính Cổ điển / Jazz / TK XX, hình thức, nhãn trên bản nhạc + văn bản + bảng từng ô — `notes/analyze.md` (có mốc độ đúng).
 
 - **Thương hiệu — đợt 2** (14/11): toàn app (trừ /home và trình đọc; Âm nhạc học có nhưng bầu trời giữ nguyên), thanh điều hướng dưới, nút + thành bảng trượt dòng, nút công cụ máy tính — `notes/brand.md`.
