@@ -58,7 +58,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `features.md` | Bảng tính `/tools`, trang Solfège, Ủng hộ, tour hướng dẫn |
 | `testing.md` | Test Playwright (Chromium + WebKit, chế độ không hiệu ứng), ngân sách dung lượng, CI chặn deploy |
 | `sources.md` | Thư mục học: nguồn dựng lúc build, `curated.ts`, `[^id, tr. n]`, `::verify`, trang `/sources`, trích dẫn Chicago/APA/BibTeX |
-| `terms.md` | Thuật ngữ đa ngữ: tên bài + nhãn Wikidata (không có TCVN), `scripts/terms/build.py`, `xl` trong chỉ mục, trang `/terms` |
+| `terms.md` | Từ điển âm nhạc Lamar `/terms`: Grove 1907 tập III (`scripts/grove/`, luật viết tiếng Việt) + thuật ngữ đa ngữ: tên bài + nhãn Wikidata (không có TCVN), `scripts/terms/build.py`, `xl` trong chỉ mục, trang `/terms` |
 | `explore.md` | Mạng tri thức `/explore`: `people.json` từ composers/pianists, ghép bản đồ + phân ngành, hồ sơ người, dòng thời gian |
 | `research.md` | Bàn làm việc `/research`: đề tài (thẻ gom ghi chú), bản nháp có `[^id]`, xuất Markdown/Word chú thích Chicago, sao lưu |
 | `workflow.md` | **Quy trình của Claude**: vòng một phiên, lệnh kiểm tra, thêm trang, dữ liệu riêng, script đọc thư viện, chụp ảnh, chờ CI, xuất tiểu luận PDF (`scripts/essay/`), bẫy công cụ |

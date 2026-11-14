@@ -1,4 +1,14 @@
-# Thuật ngữ đa ngữ (`src/features/terms/`, giai đoạn 3, 11/2026)
+# Từ điển âm nhạc Lamar (`src/features/terms/`, trang `/terms`)
+
+## Grove 1907 (tab mặc định `?tab=grove`)
+- Nguồn: *Grove's Dictionary of Music and Musicians*, bản 2 (Fuller Maitland), tập III "M to P", Macmillan NY 1907 — PD. Internet Archive `cu31924021782853` (Wikimedia trả 429 → lấy từ archive.org). Các tập I, II, IV, V cũng có trên IA, chưa làm.
+- `scripts/grove/parse.py` đọc `djvu.xml` (có trang/đoạn/dòng; `djvu.txt` không có ngắt trang) → `entries-iii.json.gz` (1.094 mục, 819k chữ, commit). Bẫy đã gặp: chữ OCR có khoảng trắng đuôi (strip), đầu mục theo sau là "(", chân trang "VOL. III" nuốt bài, số trang in neo (leaf 20 = tr. 1) + số đầu trang được hàng xóm xác nhận.
+- `scripts/grove/build.py <gz>` ghép `scripts/grove/vi/*.json` (`{id:{title,kind,vi}}`) → `public/grove/iii-{m,n,o,p}.json` (tải khi mở mục, không precache: `globIgnores grove/**`) + `grove-index.json` (`{id,h,p,s,k,t?,g?}`). id = `slug(đầu mục)-trang`, giữ nguyên lỗi OCR của đầu mục (vd. `monocoedo-247`). Vần gán theo đa số cửa sổ ±6 (đầu mục rác không đổi vần).
+- **Luật viết tiếng Việt:** chỉ viết điều có trong đoạn đã đọc; bài dài thì tóm phần đã đọc và nói "bài viết trình bày tiếp / xem nguyên văn". Điều người biên soạn thêm (niên đại hiện đại, chỗ Grove in sai) ghi rõ "ghi chú của người biên soạn" / "Grove ghi vậy". Kiểm từng câu bằng regex trên nguyên văn trước khi build.
+- Tiến độ: `m1–m3.json` = 100 mục thuật ngữ/tác phẩm vần M. Tiếp: nhân vật vần M, rồi N, O, P.
+- Test: `library.spec.ts` "từ điển Grove" (tìm mordent → tiếng Việt, tr. 258, link quét).
+
+## Thuật ngữ đa ngữ (tab `?tab=da-ngu`, giai đoạn 3, 11/2026)
 
 - **Không dùng TCVN 14301:2024** (văn bản bán, không công bố miễn phí — Lamar không có). Thay bằng:
   - tên tiếng Việt = **tên bài** của khái niệm trong thư viện (cách thư viện đang dùng);

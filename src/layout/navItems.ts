@@ -13,6 +13,6 @@ export const navItems = [
   { to: '/research', label: 'Bàn làm việc', icon: EditIcon, end: false, desktop: true },
   { to: '/explore', label: 'Tra cứu', icon: CompassIcon, end: false, desktop: true },
   { to: '/sources', label: 'Thư mục học', icon: BookmarkIcon, end: false, desktop: true },
-  { to: '/terms', label: 'Thuật ngữ', icon: TypeIcon, end: false, desktop: true },
+  { to: '/terms', label: 'Từ điển âm nhạc Lamar', icon: TypeIcon, end: false, desktop: true },
   { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
 ]

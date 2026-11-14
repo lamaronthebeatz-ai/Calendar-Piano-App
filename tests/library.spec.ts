@@ -55,6 +55,15 @@ test('tìm bằng tên tiếng Nga / Đức ra đúng bài, đầu bài hiện t
   await expect(page.locator('.term-names')).toContainText('Fuge')
 })
 
+test('từ điển Grove: tìm "mordent", mở mục có tiếng Việt, nguyên văn và trang quét', async ({ page }) => {
+  await page.goto('/#/terms')
+  await page.getByLabel('Tìm trong từ điển').fill('mordent')
+  await page.locator('.gv-head').first().click()
+  await expect(page.locator('.gv-vi')).toContainText('nốt ngay dưới')
+  await expect(page.locator('.gv-en summary')).toContainText('tr. 258')
+  await expect(page.locator('.gv-scan')).toHaveAttribute('href', /archive\.org\/details\/cu31924021782853\/page\/n\d+/)
+})
+
 test('mạng tri thức: hồ sơ Bach nối nơi chốn, hành trình, khái niệm; lọc theo thời kỳ', async ({ page }) => {
   await page.goto('/#/explore?p=johann-sebastian-bach')
   await expect(page.getByText('Leipzig').first()).toBeVisible()
@@ -144,12 +153,12 @@ test('tab Dòng truyền nằm trọn trong màn hình điện thoại', async (
 })
 
 test('các trang nghiên cứu không tràn ngang trên điện thoại', async ({ page }) => {
-  for (const url of ['/#/terms', '/#/sources', '/#/sources/suc-khoe', '/#/explore', '/#/explore?tab=tac-pham', '/#/explore?tab=pha-he', '/#/explore?p=franz-liszt', '/#/research']) {
+  for (const url of ['/#/terms', '/#/terms?tab=da-ngu', '/#/sources', '/#/sources/suc-khoe', '/#/explore', '/#/explore?tab=tac-pham', '/#/explore?tab=pha-he', '/#/explore?p=franz-liszt', '/#/research']) {
     await page.goto(url)
     await page.waitForTimeout(1200)
     const over = await page.evaluate(() => {
       const w = document.documentElement.clientWidth
-      return [...document.querySelectorAll('.term-card, .src-row, .rt-card, .lg-chain, .ex-block, .src-cite, header, .src-tabs')]
+      return [...document.querySelectorAll('.term-card, .gv-item, .src-row, .rt-card, .lg-chain, .ex-block, .src-cite, header, .src-tabs')]
         .filter((e) => e.getBoundingClientRect().right > w + 1)
         .map((e) => e.className)
     })
