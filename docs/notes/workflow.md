@@ -44,6 +44,7 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- `compose-mic-low.spec.ts` (thu micro, nốt trầm thiếu âm cơ bản) từng đỏ trên CI chromium (14/11: ra hợp âm thừa C4+E5…) nhưng qua 6/6 trên máy — chập chờn khi máy CI chậm; chạy lại job hỏng một lần thì xanh. Nếu đỏ lần nữa: sửa test (nới thời gian/ngưỡng), đừng chạy lại mãi.
 - Push liên tiếp: lần chạy CI trước bị **huỷ** (concurrency) — gom commit rồi push một lần, chờ CI xanh rồi mới push tiếp.
 - `compose.spec.ts` (soạn nhạc, bước lưu bản nháp) từng hỏng một lần trên WebKit rồi tự qua ở lần sau — chập chờn, không do từ điển.
 - Bash giới hạn 2 phút: build ~1 phút, Playwright đủ ~5 phút → nền.

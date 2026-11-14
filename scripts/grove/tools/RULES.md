@@ -19,7 +19,7 @@ Một file JSON duy nhất, dạng:
 1. **Chỉ viết điều có trong đoạn nguyên văn được cấp.** Không thêm kiến thức ngoài, không đoán. Không bịa ngày, số opus, tên. Mọi con số (năm, ngày, opus, số trang) phải lấy từ nguyên văn. Số mà nguyên văn viết bằng chữ ("twenty-seven", "five") thì viết bằng chữ tiếng Việt ("hai mươi bảy", "năm"), vì bộ kiểm so chữ số với nguyên văn.
 2. Bài bị trích ("[TRÍCH … bài còn tiếp]"): tóm phần đã có, kết bằng "(bài viết trình bày tiếp)". Không nêu số chữ của bài.
 3. Độ dài: mục ngắn → dịch gần đủ ý; mục dài → 80–220 chữ tiếng Việt, giữ sự kiện chính (ngày sinh–mất, nơi, chức vụ, tác phẩm chính, định nghĩa).
-4. Chỗ OCR hỏng không đọc được → bỏ qua chi tiết đó, hoặc ghi "(bản quét chỗ này đọc mờ)". Lỗi OCR hiển nhiên (bom → born, Wiirzburg → Würzburg) thì sửa ngầm.
+4. Năm OCR có chữ lẫn số hiển nhiên ("1S67" = 1867, "l845" = 1845, "179S" = 1798) thì viết số đã sửa — bộ kiểm hiểu S/B = 8, l/I = 1, O = 0. Chỗ OCR hỏng không đọc được → bỏ qua chi tiết đó, hoặc ghi "(bản quét chỗ này đọc mờ)". Lỗi OCR hiển nhiên (bom → born, Wiirzburg → Würzburg) thì sửa ngầm.
 5. Ý kiến của Grove (khen chê, "không đúng", "vô lý") → ghi là của Grove: "Theo Grove, …". Thông tin là của năm 1904–1910: viết "nay (thời Grove)" khi Grove nói "now", "hiện nay" — không tự thêm năm.
 6. Mục là **mảnh rác OCR** (danh mục tác phẩm bị tách, chữ ký, tiêu đề phụ như "LIST OF WORKS", "FROM OP", "XIV", số trang, tên quảng cáo sách) → `kind` để nguyên, `title` = đầu mục nguyên văn, `vi` = "Đoạn tách lẻ của bản quét (…mô tả ngắn: danh mục tác phẩm / ví dụ nhạc / phần tiếp của bài trước…); xem nguyên văn."
 7. Mục chỉ là tham chiếu ("See X") → "Xem mục *X*."
