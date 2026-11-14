@@ -7,6 +7,7 @@ const PAGES: [string, string, string?, number?][] = [
   ['Trang chủ', '/#/home'],
   ['Thời khoá biểu', '/#/'],
   ['Về Lamar', '/#/settings/about'],
+  ['Về Trung tâm', '/#/settings/center'],
   ['Học viên', '/#/students'],
   ['Lý thuyết', '/#/theory'],
   ['Mục Lý thuyết', '/#/theory?c=harmony'],

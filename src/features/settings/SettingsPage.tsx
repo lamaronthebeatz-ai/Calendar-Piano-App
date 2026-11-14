@@ -77,6 +77,7 @@ export function SettingsPage() {
       </p>
 
       <div className="mx-auto max-w-xl space-y-8 px-4 py-6 lg:px-6">
+        <div className="space-y-2.5">
         <Link to="/settings/about" className="about-card">
           <img src={`${import.meta.env.BASE_URL}images/about/lamar-sm.jpg`} alt="" width={72} height={96} />
           <span className="min-w-0 flex-1">
@@ -86,6 +87,16 @@ export function SettingsPage() {
           </span>
           <span aria-hidden className="about-card-go">→</span>
         </Link>
+        <Link to="/settings/center" className="about-card">
+          <img src={`${import.meta.env.BASE_URL}images/app/sky.webp`} alt="" width={72} height={96} style={{ objectPosition: '62% 50%' }} />
+          <span className="min-w-0 flex-1">
+            <span className="about-card-kicker">Về Trung tâm</span>
+            <span className="about-card-title">Ứng dụng này có gì, làm được gì</span>
+            <span className="about-card-sub">Thư viện, tủ sách, từ điển, phân tích, soạn nhạc…</span>
+          </span>
+          <span aria-hidden className="about-card-go">→</span>
+        </Link>
+        </div>
         <Section title="Hồ sơ">
           <Field label="Tên giáo viên">
             <TextInput value={settings.teacherName} onChange={(e) => updateSettings({ teacherName: e.target.value })} />

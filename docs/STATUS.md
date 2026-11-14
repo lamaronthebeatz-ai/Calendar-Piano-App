@@ -7,6 +7,7 @@
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
+- **Trang Về Trung tâm** (14/11): `/settings/center`, ảnh chụp app tràn viền, 12 hệ thống — `notes/features.md`.
 - **Quay lại đúng trang** (14/11): đóng sách về lại trang đã mở sách; nút quay lại ở Thư mục/Sổ tay/Đề tài/Bản nhạc lùi lịch sử — `notes/ui.md`.
 - **Trang Về Lamar** (14/11): `/settings/about`, thẻ ảnh ở đầu Cài đặt — `notes/features.md`. Sửa test soạn nhạc chập chờn trên WebKit (chờ màn che tắt + khuông ngừng dịch chuyển trước khi bấm).
 - **Thẻ giới thiệu khi bấm link** (14/11): mọi `[[slug]]` mở thẻ ngắn (tóm tắt + thuật ngữ 5 thứ tiếng + mục Grove) trước khi vào bài — `notes/theory.md`.

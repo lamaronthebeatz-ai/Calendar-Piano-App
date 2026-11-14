@@ -17,6 +17,7 @@ const loadTheory = () => import('./features/theory/TheoryPage')
 const loadCurriculum = () => import('./features/curriculum/CurriculumPage')
 const loadNotebook = () => import('./features/notebook/NotebookPage')
 const loadMusicology = () => import('./features/musicology/MusicologyPage')
+const CenterPage = lazy(() => import('./features/about/CenterPage').then((m) => ({ default: m.CenterPage })))
 const AboutPage = lazy(() => import('./features/about/AboutPage').then((m) => ({ default: m.AboutPage })))
 const TheoryPage = lazy(() => loadTheory().then((m) => ({ default: m.TheoryPage })))
 const CurriculumPage = lazy(() => loadCurriculum().then((m) => ({ default: m.CurriculumPage })))
@@ -113,6 +114,7 @@ const router = createHashRouter(
       <Route path="/statistics" element={<Navigate to="/curriculum" replace />} />
       <Route path="/curriculum/:id?/:item?" element={<Suspense fallback={<RouteLoading />}><CurriculumPage /></Suspense>} />
       <Route path="/settings" element={<SettingsPage />} />
+      <Route path="/settings/center" element={<Suspense fallback={<RouteLoading />}><CenterPage /></Suspense>} />
       <Route path="/settings/about" element={<Suspense fallback={<RouteLoading />}><AboutPage /></Suspense>} />
       <Route path="/musicology/:branch?" element={<Suspense fallback={<RouteLoading />}><MusicologyPage /></Suspense>} />
       <Route path="/notes" element={<Suspense fallback={<RouteLoading />}><NotebookPage /></Suspense>} />
