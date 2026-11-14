@@ -1,3 +1,4 @@
+import { useBack } from '../../hooks/useBack'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -17,6 +18,7 @@ import './research.css'
 
 /** The research desk: /research (projects), /research/:id (one project: draft, notes, sources, export). */
 export function ResearchPage() {
+  const back = useBack('/research')
   const { id } = useParams()
   const projects = useProjects()
   const project = id ? projects.find((p) => p.id === id) : undefined
@@ -24,7 +26,7 @@ export function ResearchPage() {
     <ScrollArea className="relative h-full overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
-          {id && <Link to="/research" className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Đề tài</Link>}
+          {id && <button onClick={back} className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Quay lại</button>}
           <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id ? '' : 'Bàn làm việc'}</h1>
         </div>
       </div>

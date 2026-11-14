@@ -1,3 +1,4 @@
+import { useBack } from '../../hooks/useBack'
 import { useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -16,6 +17,7 @@ import './brain.css'
 
 /** The second brain: /brain (every note, the whole web), /brain/:id (one note: write, links in and out, its neighbourhood). */
 export function BrainPage() {
+  const back = useBack('/brain')
   const { id } = useParams()
   const notes = useBrainNotes()
   const note = id ? notes.find((n) => n.id === id) : undefined
@@ -23,7 +25,7 @@ export function BrainPage() {
     <ScrollArea className="relative h-full overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
-          {id && <Link to="/brain" className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Sổ tay</Link>}
+          {id && <button onClick={back} className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Quay lại</button>}
           <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id ? '' : 'Sổ tay tri thức'}</h1>
         </div>
       </div>

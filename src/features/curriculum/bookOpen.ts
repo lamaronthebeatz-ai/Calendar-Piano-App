@@ -2,8 +2,8 @@ import type { ReaderBook } from './reader/model'
 
 export type Opening =
   | { mode: 'open'; book: ReaderBook; from: DOMRect; to: string }
-  /** Leaving the reader: the book closes and flies back to its cover on the shelf. */
-  | { mode: 'close'; book: ReaderBook; to: string }
+  /** Leaving the reader: the book closes and flies back to its cover on the shelf; `to` -1 steps back to wherever the book was opened from. */
+  | { mode: 'close'; book: ReaderBook; to: string | number }
 
 /** sessionStorage key for the Cover Flow's centred book. */
 export const COVERFLOW_KEY = 'coverflow-index'
@@ -24,7 +24,7 @@ export function openBook(book: ReaderBook, from: Element, to: string, navigate: 
   set({ mode: 'open', book, from: from.getBoundingClientRect(), to })
 }
 
-export function closeBook(book: ReaderBook, to: string, navigate: (to: string) => void) {
+export function closeBook(book: ReaderBook, to: string | number, navigate: (to: string | number) => void) {
   if (current) return
   if (reduced()) return navigate(to)
   set({ mode: 'close', book, to })

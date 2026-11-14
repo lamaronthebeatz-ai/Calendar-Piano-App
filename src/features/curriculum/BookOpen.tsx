@@ -63,7 +63,7 @@ function Animation({ o }: { o: Opening }) {
       } catch {
         /* optional */
       }
-      navigate(o.to)
+      go(navigate, o.to)
       // 2. The board swings shut while the book slides back to its closed spot.
       shade.current!.animate([{ opacity: 0.35 }, { opacity: 0 }], { duration: 760, easing: 'ease-out', fill })
       el.animate([{ transform: 'translate(0, 0)' }, { transform: `translate(-${size / 2}px, 0)` }], { duration: 760, easing: ease, fill })
@@ -125,14 +125,14 @@ function Animation({ o }: { o: Opening }) {
         { duration: 820, easing: 'cubic-bezier(0.45, 0.05, 0.25, 1)', fill: 'forwards' },
       ).finished
       if (!alive) return
-      navigate(o.to)
+      go(navigate, o.to)
       // 3. The first page grows to fill the screen while everything fades into the reader.
       page.current!.animate([{ transform: 'scale(1)' }, { transform: grown }], { duration: 520, easing: 'cubic-bezier(0.7, 0, 0.84, 0)', fill: 'forwards' })
       await root.current!.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 520, delay: 160, easing: 'ease-in', fill: 'forwards' }).finished
       set(null)
     }
     ;(o.mode === 'close' ? close() : run()).catch(() => {
-      if (o.mode === 'close') navigate(o.to)
+      if (o.mode === 'close') go(navigate, o.to)
       set(null)
     })
     return () => {
@@ -161,4 +161,10 @@ function Animation({ o }: { o: Opening }) {
       </div>
     </div>
   )
+}
+
+/** The reader closes either back through history (-1) or to a path. */
+function go(navigate: ReturnType<typeof useNavigate>, to: string | number) {
+  if (typeof to === 'number') navigate(to)
+  else navigate(to)
 }

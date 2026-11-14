@@ -69,6 +69,16 @@ test('bấm link trong bài mở thẻ giới thiệu (có thuật ngữ) trư�
   await expect(page).toHaveURL(/#\/theory\/fugue/)
 })
 
+test('mở sách từ một bài lý thuyết rồi đóng sách thì quay về đúng bài đó, không về tủ sách', async ({ page }) => {
+  await page.goto('/#/theory/fugue')
+  const open = page.getByRole('link', { name: /Đọc trong sách/ }).first()
+  await open.scrollIntoViewIfNeeded()
+  await open.click()
+  await expect(page).toHaveURL(/#\/curriculum\//)
+  await page.getByRole('link', { name: 'Về giá sách' }).click()
+  await expect(page).toHaveURL(/#\/theory\/fugue$/)
+})
+
 test('từ điển Grove: tìm "mordent", mở mục có tiếng Việt, nguyên văn và trang quét', async ({ page }) => {
   await page.goto('/#/terms')
   await page.getByLabel('Tìm trong từ điển').fill('mordent')

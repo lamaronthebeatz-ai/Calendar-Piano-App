@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactNode, type WheelEvent as ReactWheelEvent } from 'react'
 import { createPortal, flushSync } from 'react-dom'
-import { Link, useNavigate } from 'react-router-dom'
+import { useLocation, Link, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { ArrowLeftIcon, BookmarkIcon, CheckIcon, ChevronLeftIcon, ChevronRightIcon, DownloadIcon, ExpandIcon, GraduationIcon, ListIcon, NoteIcon, SearchIcon, TypeIcon, XIcon } from '../../../components/icons'
 import { findArticle, normalize } from '../../theory/wiki'
@@ -30,6 +30,7 @@ type Panel = 'toc' | 'settings' | 'search' | 'notes' | null
  * with a tap in the middle. The address of a chapter is its library slug.
  */
 export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }) {
+  const location = useLocation()
   const navigate = useNavigate()
   const { prefs, bookmarks } = useReader()
   const items = book.items
@@ -448,7 +449,8 @@ export function Reader({ book, itemKey }: { book: ReaderBook; itemKey?: string }
           className="reader-btn"
           onClick={(e) => {
             e.preventDefault()
-            closeBook(book, '/curriculum', navigate)
+            // back to wherever the book was opened from (an article, the home page…); a cold open goes to the shelf
+            closeBook(book, location.key !== 'default' ? -1 : '/curriculum', (to) => (typeof to === 'number' ? navigate(to) : navigate(to)))
           }}
         >
           <ArrowLeftIcon width={18} height={18} />

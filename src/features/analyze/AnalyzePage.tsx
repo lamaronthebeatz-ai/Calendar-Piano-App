@@ -1,3 +1,4 @@
+import { useBack } from '../../hooks/useBack'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -45,12 +46,13 @@ const LENSES: { id: Lens; label: string; hint: string }[] = [
 
 /** Score analysis: /analyze (the shelf of pieces), /analyze/:id (one piece analysed, on the score and in words). */
 export function AnalyzePage() {
+  const back = useBack('/analyze')
   const { id } = useParams()
   return (
     <ScrollArea className="relative h-full overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 lg:px-8">
-          {id && <Link to="/analyze" className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Bản nhạc</Link>}
+          {id && <button onClick={back} className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Quay lại</button>}
           <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id ? '' : 'Phân tích tác phẩm'}</h1>
         </div>
       </div>

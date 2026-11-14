@@ -1,3 +1,4 @@
+import { useBack } from '../../hooks/useBack'
 import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
@@ -34,6 +35,7 @@ const PAGE = 60
 
 /** The library's bibliography: /sources (list), /sources/:id (one work), /sources/treo (what is still unverified). */
 export function SourcesPage() {
+  const back = useBack('/sources')
   const { id } = useParams()
   const { data, error } = useBibliography()
   const tab: Tab | null = id === 'treo' || id === 'suc-khoe' ? id : id ? null : 'chinh'
@@ -42,7 +44,7 @@ export function SourcesPage() {
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
           {id && id !== 'treo' && id !== 'suc-khoe' && (
-            <Link to="/sources" className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Thư mục</Link>
+            <button onClick={back} className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Quay lại</button>
           )}
           <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id && id !== 'treo' && id !== 'suc-khoe' ? '' : 'Thư mục học'}</h1>
         </div>
