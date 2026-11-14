@@ -33,7 +33,7 @@ const LANGS = ['en', 'ru', 'de', 'fr', 'it'] as const
 const LANG_LABEL = { en: 'Anh', ru: 'Nga', de: 'Đức', fr: 'Pháp', it: 'Ý' }
 
 /**
- * Từ điển âm nhạc Lamar (/terms): Grove 1907 entries with Vietnamese text (?tab=grove, the default) and the multilingual
+ * Từ điển âm nhạc Lamar (/terms): Grove (1904 – 1910, 5 vols) entries with Vietnamese text (?tab=grove, the default) and the multilingual
  * glossary of the library's own concepts (?tab=da-ngu). ?q= opens with a query in either.
  */
 export function TermsPage() {
@@ -77,7 +77,7 @@ export function TermsPage() {
           <h2 className="mt-1 font-display text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[34px]">Mỗi mục một nguồn, mỗi nguồn một trang</h2>
         </header>
         <nav className="gv-tabs" aria-label="Phần của từ điển">
-          <button aria-pressed={tab === 'grove'} onClick={() => setParams(q ? { q } : {}, { replace: true })}>Grove 1907 · M – P</button>
+          <button aria-pressed={tab === 'grove'} onClick={() => setParams(q ? { q } : {}, { replace: true })}>Grove 1904 – 1910</button>
           <button aria-pressed={tab === 'da-ngu'} onClick={() => setParams({ ...(q ? { q } : {}), tab: 'da-ngu' }, { replace: true })}>Thuật ngữ đa ngữ</button>
         </nav>
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={tab === 'grove' ? 'Tìm mục từ: madrigal, Mozart, organ, nocturne…' : 'Tìm bằng tiếng Việt, Anh, Nga, Đức, Pháp, Ý…'} aria-label="Tìm trong từ điển" className="hero-search h-10 w-full rounded-full px-4 text-[14px] outline-none" />

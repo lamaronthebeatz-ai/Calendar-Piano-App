@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "grove": "python3 scripts/grove/build.py",
+    "predev": "npm run grove",
     "dev": "vite",
+    "prebuild": "npm run grove",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "check:links": "node scripts/check-links.mjs",

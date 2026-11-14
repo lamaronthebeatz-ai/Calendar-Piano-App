@@ -28,3 +28,7 @@ artifact-output.html
 # Playwright
 test-results/
 playwright-report/
+
+# Grove dictionary, generated from scripts/grove (npm run grove)
+public/grove/
+src/features/terms/grove-index.json

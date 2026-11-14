@@ -12,7 +12,7 @@ const TOOLS = [
   { to: '/explore', icon: CompassIcon, title: 'Tra cứu', text: 'Người, tác phẩm, dòng thời gian, thầy – trò' },
   { to: '/explore?tab=pha-he', icon: BranchesIcon, title: 'Dòng truyền', text: 'Chuỗi thầy – trò trên trục thời gian' },
   { to: '/sources', icon: BookmarkIcon, title: 'Thư mục học', text: 'Nguồn, trích dẫn, sức khoẻ thư viện' },
-  { to: '/terms', icon: TypeIcon, title: 'Từ điển âm nhạc Lamar', text: 'Grove 1907 và thuật ngữ năm thứ tiếng' },
+  { to: '/terms', icon: TypeIcon, title: 'Từ điển âm nhạc Lamar', text: 'Grove 1904 – 1910 (5 tập) và thuật ngữ năm thứ tiếng' },
   { to: '/research', icon: EditIcon, title: 'Bàn làm việc', text: 'Đề tài, bản nháp, xuất Word' },
   { to: '/notes', icon: NoteIcon, title: 'Sổ nghiên cứu', text: 'Mọi đánh dấu và ghi chú' },
 ]

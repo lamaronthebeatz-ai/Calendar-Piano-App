@@ -1,11 +1,12 @@
 # Từ điển âm nhạc Lamar (`src/features/terms/`, trang `/terms`)
 
-## Grove 1907 (tab mặc định `?tab=grove`)
-- Nguồn: *Grove's Dictionary of Music and Musicians*, bản 2 (Fuller Maitland), tập III "M to P", Macmillan NY 1907 — PD. Internet Archive `cu31924021782853` (Wikimedia trả 429 → lấy từ archive.org). Các tập I, II, IV, V cũng có trên IA, chưa làm.
-- `scripts/grove/parse.py` đọc `djvu.xml` (có trang/đoạn/dòng; `djvu.txt` không có ngắt trang) → `entries-iii.json.gz` (1.094 mục, 819k chữ, commit). Bẫy đã gặp: chữ OCR có khoảng trắng đuôi (strip), đầu mục theo sau là "(", chân trang "VOL. III" nuốt bài, số trang in neo (leaf 20 = tr. 1) + số đầu trang được hàng xóm xác nhận.
-- `scripts/grove/build.py <gz>` ghép `scripts/grove/vi/*.json` (`{id:{title,kind,vi}}`) → `public/grove/iii-{m,n,o,p}.json` (tải khi mở mục, không precache: `globIgnores grove/**`) + `grove-index.json` (`{id,h,p,s,k,t?,g?}`). id = `slug(đầu mục)-trang`, giữ nguyên lỗi OCR của đầu mục (vd. `monocoedo-247`). Vần gán theo đa số cửa sổ ±6 (đầu mục rác không đổi vần).
+## Grove 1904 – 1910, đủ 5 tập (tab mặc định `?tab=grove`)
+- Nguồn: *Grove's Dictionary of Music and Musicians*, bản 2 (Fuller Maitland), 5 tập, Macmillan NY 1904 – 1910 — PD. Bản quét Cornell trên Internet Archive: I `cu31924021782838` (A–E), II `…846` (F–L), III `…853` (M–P), IV `…861` (Q–S), V `…879` (T–Z + **Phụ lục** bổ sung/đính chính cả bộ từ tr. 605). Wikimedia trả 429 → tải `<id>_djvu.xml` từ archive.org.
+- `scripts/grove/parse.py <djvu.xml> <out.json>` → `entries-<tập>.json.gz` (commit, ~1,8 MB/tập; tổng 6.430 mục, ~3,7 triệu chữ). Bẫy đã gặp: chữ OCR có khoảng trắng đuôi; đầu mục theo sau là "("; chân trang "VOL. III"; trang 1 không in số → lấy lá "DICTIONARY" cuối cùng trước số trang đầu tiên đã xác nhận; OCR đọc nhầm cả loạt số trang (646 cho 546) → giữ dãy dài nhất mà (lá − trang) không giảm (tranh ảnh chèn giữa làm nó tăng); chữ hoa thả ở trang 1 ("T" + "rPABLATURE"); cuối tập: END OF VOL / ADDENDA / danh sách người viết / quảng cáo sách (tập V) bị cắt.
+- `scripts/grove/build.py` (`npm run grove`, tự chạy trong `predev`/`prebuild`; **đầu ra không commit**, có trong `.gitignore`) ghép `scripts/grove/vi/*.json` (`{id:{title,kind,vi}}`) → `public/grove/<vần><n>.json` (mảnh 80 mục, tải khi mở mục, không precache: `globIgnores grove/**`) + `src/features/terms/grove-index.json` (`{id,h,v,p,s,k,a?,t?,g?}`, ~480 KB thô). id = `slug(đầu mục)-<tập>-<trang>`, giữ nguyên lỗi OCR của đầu mục (vd. `monocoedo-3-247`). Vần gán theo đa số cửa sổ ±6, không lùi, trong dải vần của tập; Phụ lục lấy chữ đầu của đầu mục.
+- `*chữ*` trong tiếng Việt → nghiêng (`italics()` trong `GroveDictionary.tsx`).
 - **Luật viết tiếng Việt:** chỉ viết điều có trong đoạn đã đọc; bài dài thì tóm phần đã đọc và nói "bài viết trình bày tiếp / xem nguyên văn". Điều người biên soạn thêm (niên đại hiện đại, chỗ Grove in sai) ghi rõ "ghi chú của người biên soạn" / "Grove ghi vậy". Kiểm từng câu bằng regex trên nguyên văn trước khi build.
-- Tiến độ: `m1–m3.json` = 100 mục thuật ngữ/tác phẩm vần M. Tiếp: nhân vật vần M, rồi N, O, P.
+- Tiến độ: `m1–m3.json` = 100 mục thuật ngữ/tác phẩm vần M. Tiếp: thuật ngữ các vần khác (ưu tiên thuật ngữ cốt lõi), rồi nhân vật.
 - Test: `library.spec.ts` "từ điển Grove" (tìm mordent → tiếng Việt, tr. 258, link quét).
 
 ## Thuật ngữ đa ngữ (tab `?tab=da-ngu`, giai đoạn 3, 11/2026)

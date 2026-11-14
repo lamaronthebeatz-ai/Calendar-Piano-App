@@ -3,22 +3,26 @@ import { ArrowUpRightIcon } from '../../components/icons'
 import { normalize } from '../theory/wiki'
 import indexUrl from './grove-index.json?url'
 
-/** One headword of Grove (scripts/grove/build.py): id, headword, page, letter shard, kind, Vietnamese title + gist. */
+/** One headword of Grove (scripts/grove/build.py): id, headword, volume, page, piece of the letter it is fetched in, kind, appendix of vol. V, Vietnamese title + gist. */
 interface Head {
   id: string
   h: string
+  v: number
   p: number
   s: string
   k: Kind
+  a?: 1
   t?: string
   g?: string
 }
 interface Entry {
   id: string
   head: string
+  vol: number
   page: number
   leaf: number
   kind: Kind
+  app?: 1
   title?: string
   vi?: string
   en: string
@@ -32,9 +36,13 @@ const KINDS: { id: '' | Kind; label: string }[] = [
   { id: 'work', label: 'Tác phẩm' },
   { id: 'institution', label: 'Tổ chức' },
 ]
-const LETTERS = ['m', 'n', 'o', 'p']
-const SCAN = 'https://archive.org/details/cu31924021782853'
-const shardUrl = (s: string) => `${import.meta.env.BASE_URL}grove/iii-${s}.json`
+const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('')
+const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V']
+// the Cornell copies on the Internet Archive, vol. I–V
+const SCAN = ['', 'cu31924021782838', 'cu31924021782846', 'cu31924021782853', 'cu31924021782861', 'cu31924021782879']
+const YEAR = [0, 1904, 1906, 1907, 1908, 1910]
+const letterOf = (s: string) => s.replace(/\d+$/, '')
+const shardUrl = (s: string) => `${import.meta.env.BASE_URL}grove/${s}.json`
 const shardCache = new Map<string, Promise<Entry[]>>()
 const loadShard = (s: string) => {
   if (!shardCache.has(s)) shardCache.set(s, fetch(shardUrl(s)).then((r) => (r.ok ? r.json() : Promise.reject(new Error('grove')))))
@@ -43,12 +51,12 @@ const loadShard = (s: string) => {
 
 /**
  * The Grove part of the dictionary: Grove's Dictionary of Music and Musicians, 2nd ed. (ed. J. A. Fuller Maitland),
- * vol. III "M to P", New York: Macmillan, 1907 — public domain. Each entry: the Vietnamese text written for the app
+ * 5 vols, New York: Macmillan, 1904–1910 — public domain. Each entry: the Vietnamese text written for the app
  * (where done), the original English (OCR), the page and a link to that page of the scan for checking.
  */
 export function GroveDictionary({ q }: { q: string }) {
   const [heads, setHeads] = useState<Head[] | null>(null)
-  const [letter, setLetter] = useState('m')
+  const [letter, setLetter] = useState('a')
   const [kind, setKind] = useState<'' | Kind>('')
   const [onlyVi, setOnlyVi] = useState(false)
   const [open, setOpen] = useState<string | null>(null)
@@ -65,17 +73,17 @@ export function GroveDictionary({ q }: { q: string }) {
   const n = normalize(q)
   const list = useMemo(() => {
     if (!heads) return []
-    return heads.filter((h) => (n ? normalize(`${h.h} ${h.t ?? ''} ${h.g ?? ''}`).includes(n) : h.s === letter) && (!kind || h.k === kind) && (!onlyVi || h.t))
+    return heads.filter((h) => (n ? normalize(`${h.h} ${h.t ?? ''} ${h.g ?? ''}`).includes(n) : letterOf(h.s) === letter) && (!kind || h.k === kind) && (!onlyVi || h.t))
   }, [heads, n, letter, kind, onlyVi])
   const done = heads?.filter((h) => h.t).length ?? 0
 
   return (
-    <section className="space-y-4" aria-label="Grove 1907">
+    <section className="space-y-4" aria-label="Grove 1904 – 1910">
       <p className="max-w-3xl text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">
-        Theo <i>Grove's Dictionary of Music and Musicians</i>, bản thứ hai do J. A. Fuller Maitland biên tập, tập III (M – P), Macmillan, New York, 1907 — sách đã thuộc phạm vi công cộng. Mỗi mục có phần tiếng Việt viết cho thư viện, nguyên văn tiếng Anh (chữ nhận dạng từ bản quét, có thể sai vài ký tự) và số trang kèm liên kết tới đúng trang bản quét để đối chiếu. Thông tin là của năm 1907: niên đại, quan điểm, tình trạng nghiên cứu có thể đã khác ngày nay.
+        Theo <i>Grove's Dictionary of Music and Musicians</i>, bản thứ hai do J. A. Fuller Maitland biên tập, 5 tập, Macmillan, New York, 1904 – 1910 — sách đã thuộc phạm vi công cộng. Cuối tập V có phần Phụ lục bổ sung và đính chính cho cả bộ. Mỗi mục có phần tiếng Việt viết cho thư viện, nguyên văn tiếng Anh (chữ nhận dạng từ bản quét, có thể sai vài ký tự) và số trang kèm liên kết tới đúng trang bản quét để đối chiếu. Thông tin là của những năm 1904 – 1910: niên đại, quan điểm, tình trạng nghiên cứu có thể đã khác ngày nay.
       </p>
       <dl className="src-stats">
-        <div><dt>{heads?.length ?? '…'}</dt><dd>mục Grove (M – P)</dd></div>
+        <div><dt>{heads?.length ?? '…'}</dt><dd>mục Grove (A – Z, 5 tập)</dd></div>
         <div><dt>{heads ? done : '…'}</dt><dd>đã có tiếng Việt</dd></div>
       </dl>
       <div className="gv-bar">
@@ -142,7 +150,7 @@ function GroveRow({ h, open, onToggle }: { h: Head; open: boolean; onToggle: () 
         </span>
         <span className="gv-meta">
           {KIND_LABEL[h.k]}
-          <br />tr. {h.p}
+          <br />{h.a ? 'Phụ lục, ' : ''}t. {ROMAN[h.v]}, tr. {h.p}
         </span>
       </button>
       {open && (
@@ -159,7 +167,7 @@ function GroveRow({ h, open, onToggle }: { h: Head; open: boolean; onToggle: () 
           {entry && !entry.vi && <p className="text-[13px] text-[var(--color-ink-faint)]">Mục này chưa có phần tiếng Việt; dưới đây là nguyên văn.</p>}
           {entry && (
             <details className="gv-en" open={!entry.vi}>
-              <summary>Nguyên văn — Grove (1907), tập III, tr. {entry.page}</summary>
+              <summary>Nguyên văn — Grove, tập {ROMAN[entry.vol]} ({YEAR[entry.vol]}){entry.app ? ', Phụ lục' : ''}, tr. {entry.page}</summary>
               <div lang="en">
                 {entry.en.split(/\n{2,}/).slice(0, 400).map((p, i) => (
                   <p key={i}>{p}</p>
@@ -168,7 +176,7 @@ function GroveRow({ h, open, onToggle }: { h: Head; open: boolean; onToggle: () 
             </details>
           )}
           {entry && (
-            <a className="gv-scan" href={`${SCAN}/page/n${entry.leaf}/mode/1up`} target="_blank" rel="noreferrer">
+            <a className="gv-scan" href={`https://archive.org/details/${SCAN[entry.vol]}/page/n${entry.leaf}/mode/1up`} target="_blank" rel="noreferrer">
               Xem bản quét trang {entry.page} <ArrowUpRightIcon width={11} height={11} />
             </a>
           )}
