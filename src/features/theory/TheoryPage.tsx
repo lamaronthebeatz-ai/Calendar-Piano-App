@@ -460,21 +460,19 @@ function Index() {
         <CategoryView id={active.id} onSelect={select} />
       ) : (
         <>
+          {/* order chosen by Lamar (14/11): did-you-know, shortcuts, topics, research tools, quiz */}
+          <Spotlight />
           <QuickStart onRandom={surprise} />
           <ContinueRow skip={lastUnfinished()?.slug} title="Đọc dở khác" />
-          <ResearchTools />
           <StaffRule />
           <section id="th-topics" className="scroll-mt-20 space-y-3">
             <SectionTitle hint={`${articlesByCategory.length} chủ đề · ${TOPIC_GROUPS.length} nhóm`}>Chủ đề</SectionTitle>
             <TopicBrowser onSelect={select} />
           </section>
+          <ResearchTools />
           <StaffRule />
-          {/* A rotating quiz on the library, beside a rotating "did you know" fact. */}
-          <div data-reveal className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div id="th-quiz" className="scroll-mt-20">
-              <QuizCard />
-            </div>
-            <Spotlight />
+          <div id="th-quiz" data-reveal className="scroll-mt-20">
+            <QuizCard />
           </div>
 
           <footer data-reveal className="th-sources grid gap-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5 text-[13px] text-[var(--color-ink-muted)] sm:grid-cols-[1fr_2fr] sm:p-6">

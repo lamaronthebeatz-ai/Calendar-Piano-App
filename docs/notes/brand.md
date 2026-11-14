@@ -16,4 +16,5 @@ Bộ quy chuẩn đầy đủ (màu, chữ, thành phần có xem trước sốn
 
 ## Đã áp dụng
 - Đợt 1 (13/11): trang Lý thuyết (`TheoryPage` Index, `.phn-theory`, CSS ở `theory-home.css` mục "the Lý thuyết index…"): tranh tràn viền dưới lớp màn có luồng sáng, lời chào căn giữa, ô tìm là đường kẻ, gợi ý tìm là chữ gạch chân, `QuickStart` thành 3 dòng (Đọc tiếp + % + phút còn lại · Câu đố · Ngẫu nhiên = bài chưa từng mở, lấy từ `library.read`), Công cụ nghiên cứu / Đọc dở / Chủ đề / Câu đố / Có thể bạn chưa biết / Nguồn bỏ khung.
+- Thứ tự khối trang Lý thuyết (Lamar chốt 14/11): lời chào → Có thể bạn chưa biết → phím đi tắt (`QuickStart` + Đọc dở khác) → Chủ đề → Công cụ nghiên cứu → Câu đố → Nguồn.
 - Còn lại (đề xuất thứ tự): trang bài, Tủ sách + trình đọc, `/analyze`, `/brain`, `/research`, Âm nhạc học (trừ bầu trời), Lịch / Học viên, thanh điều hướng dưới (dùng chung với /home — hỏi Lamar trước).
