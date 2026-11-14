@@ -44,6 +44,8 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- Push liên tiếp: lần chạy CI trước bị **huỷ** (concurrency) — gom commit rồi push một lần, chờ CI xanh rồi mới push tiếp.
+- `compose.spec.ts` (soạn nhạc, bước lưu bản nháp) từng hỏng một lần trên WebKit rồi tự qua ở lần sau — chập chờn, không do từ điển.
 - Bash giới hạn 2 phút: build ~1 phút, Playwright đủ ~5 phút → nền.
 - `npm run lint | tail -1` có thể là một warning chứ không phải dòng tổng → đếm bằng `grep -cE "warning|error"`.
 - Comment `/*! … */` trong mã nguồn bị bộ nén xoá → bản quyền gắn bằng `postBanner` (vite.config.ts).
