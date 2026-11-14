@@ -8,6 +8,7 @@
 - `*chữ*` trong tiếng Việt → nghiêng (`italics()` trong `GroveDictionary.tsx`).
 - **Luật viết tiếng Việt:** chỉ viết điều có trong đoạn đã đọc; bài dài thì tóm phần đã đọc và nói "bài viết trình bày tiếp / xem nguyên văn". Điều người biên soạn thêm (niên đại hiện đại, chỗ Grove in sai) ghi rõ "ghi chú của người biên soạn" / "Grove ghi vậy". Kiểm từng câu bằng regex trên nguyên văn trước khi build.
 - Tiến độ: `m1–m3.json` = 100 mục vần M (tập III); `a1–a2.json` = 66 thuật ngữ cốt lõi A–E (tập I); `f1.json` = 47 thuật ngữ F–L (tập II); `q1.json`, `t1.json` = 59 thuật ngữ Q–Z (tập IV–V). Còn lại chủ yếu nhân vật, tác phẩm, thuật ngữ hiếm. Tiếp: thuật ngữ các vần khác (ưu tiên thuật ngữ cốt lõi), rồi nhân vật.
+- **Viết song song bằng phiên phụ:** mục chưa có tiếng Việt chia thành 150 phần (`uNNN`, ~40 mục/phần, trích ≤1.500 ký tự mỗi mục) trong scratchpad; mỗi phiên phụ theo `scripts/grove/tools/RULES.md`, viết `out/uNNN.json`, tự chạy `tools/verify.py` (đủ id, không "mày/tao", mọi số ≥2 chữ số phải có trong nguyên văn — chấp nhận năm OCR tách "1 767", khoảng "1657-75", tháng). File qua kiểm mới chép vào `scripts/grove/vi/uNNN.json`. Bẫy: 10 phiên phụ cùng lúc làm hết hạn mức 5 giờ trong vài phút — chạy ít phiên một lúc.
 - Test: `library.spec.ts` "từ điển Grove" (tìm mordent → tiếng Việt, tr. 258, link quét).
 
 ## Thuật ngữ đa ngữ (tab `?tab=da-ngu`, giai đoạn 3, 11/2026)
