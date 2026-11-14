@@ -22,7 +22,7 @@ for k, v in d.items():
         errs.append(f'{k}: thiếu title/vi'); continue
     if v.get('kind') not in ('term', 'person', 'work', 'institution'):
         errs.append(f'{k}: kind sai {v.get("kind")}')
-    if re.search(r'\b(mày|tao)\b', v['vi'], re.I):
+    if re.search(r'\b(mày|tao)\b', re.sub(r'(tao nhã|(nhướng|lông|chân|nhíu) mày)', '', v['vi'], flags=re.I), re.I):
         errs.append(f'{k}: có chữ mày/tao')
     en = re.sub(r'(?<=\d)[ ,.]+(?=\d)', '', blocks[k])  # OCR splits years: '1 767'
     en = re.sub(r'\b(1\d)(\d\d)\s*[-–]\s*(\d\d)\b', lambda m: f'{m.group(0)} {m.group(1)}{m.group(3)}', en)  # 1657-75 → also 1675
