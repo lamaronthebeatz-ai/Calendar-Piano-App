@@ -34,9 +34,9 @@ export function AppShell() {
   const navHidden = autoHidden || pathname === '/musicology/ban-do' || pathname === '/compose'
   // the home page runs edge to edge under the tab bar, so the bar hiding never resizes it mid-scroll
   const fullBleed = pathname === '/home'
-  // brand "Phòng hoà nhạc" (notes/brand.md) everywhere except the home page and the musicology sky (Lamar: never touch),
-  // and the book reader, which keeps its own paper themes
-  const branded = !fullBleed && section !== 'musicology' && !/^\/curriculum\/[^/]+/.test(pathname)
+  // brand "Phòng hoà nhạc" (notes/brand.md) everywhere except the home page (Lamar: never touch) and the book reader,
+  // which keeps its own paper themes; the musicology sky keeps its look inside the brand (phn-pages.css)
+  const branded = !fullBleed && !/^\/curriculum\/[^/]+/.test(pathname)
   useCardGlow()
   // Desktop navigation is a drawer behind the Lamar mark in the top-left corner, so every page gets the full width.
   const [railOpen, setRailOpen] = useState(false)

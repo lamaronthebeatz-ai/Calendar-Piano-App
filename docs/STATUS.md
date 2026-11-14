@@ -9,7 +9,7 @@
 ## Vừa xong
 - **Phân tích tác phẩm `/analyze`** (4 đợt, 13/11): lăng kính Cổ điển / Jazz / TK XX, hình thức, nhãn trên bản nhạc + văn bản + bảng từng ô — `notes/analyze.md` (có mốc độ đúng).
 
-- **Thương hiệu — đợt 2** (14/11): toàn app (trừ /home, Âm nhạc học, trình đọc), thanh điều hướng dưới, nút + thành bảng trượt dòng, nút công cụ máy tính — `notes/brand.md`.
+- **Thương hiệu — đợt 2** (14/11): toàn app (trừ /home và trình đọc; Âm nhạc học có nhưng bầu trời giữ nguyên), thanh điều hướng dưới, nút + thành bảng trượt dòng, nút công cụ máy tính — `notes/brand.md`.
 - **Thương hiệu "Phòng hoà nhạc" — đợt 1** (13/11): trang Lý thuyết + lời chào theo giờ (300 câu) — `notes/brand.md`. **Tiếp:** áp dụng từng trang theo thứ tự trong brand.md; không đụng `/home` và bầu trời chòm sao.
 - **Đầu trang Lý thuyết** (13/11): bỏ khung — tranh tràn viền + "Đọc tiếp" và 3 ô bấm nhanh (`notes/theory.md`).
 - **Kho bản nhạc `/analyze`** (13/11): bản mẫu + bản nhập + trình soạn chung một kho, ô tìm + lọc nguồn; thân bản nhập chuyển sang IndexedDB (mã hoá); thêm bản mẫu Clair de lune.

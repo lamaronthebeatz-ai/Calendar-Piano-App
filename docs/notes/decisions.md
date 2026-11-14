@@ -9,6 +9,7 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Chuyển trang: mờ dần vào/ra; tải lâu thì màn logo Lamar che rồi mở — 11/2026.
 - Trang chủ Lý thuyết gọn (6 nhóm chủ đề) vì kéo xuống mệt — 11/2026.
 - **Thương hiệu "Phòng hoà nhạc"** (13/11/2026): Lamar chọn mẫu 3 từ 3 hệ nhận diện; bỏ ngôn ngữ "tiết mục / chương trình"; lời chào đổi theo 6 buổi, chỉ là câu chào ngắn (không slogan). **Cấm đụng `/home` và bầu trời chòm sao.** Chi tiết `notes/brand.md`.
+- Thương hiệu áp cho Âm nhạc học (trừ bầu trời chòm sao); trình đọc sách giữ nguyên; Tủ sách không có lời chào theo giờ — 14/11/2026.
 - Thứ tự trang Lý thuyết: Có thể bạn chưa biết → phím đi tắt → Chủ đề → Công cụ nghiên cứu → Câu đố — 14/11/2026.
 - Đầu trang Lý thuyết **không đóng khung**: tranh tràn viền mờ vào nền (phương án A) + thẻ Đọc tiếp và 3 ô bấm nhanh ngay dưới (phương án B) — 13/11/2026 (Lamar chọn từ 3 mẫu A/B/C).
 - Bầu trời âm nhạc học: các bài lý thuyết thành mạng nơron, tự xoay chậm — 11/2026.
