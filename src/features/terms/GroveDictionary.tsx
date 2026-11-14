@@ -73,7 +73,11 @@ export function GroveDictionary({ q }: { q: string }) {
   const n = normalize(q)
   const list = useMemo(() => {
     if (!heads) return []
-    return heads.filter((h) => (n ? normalize(`${h.h} ${h.t ?? ''} ${h.g ?? ''}`).includes(n) : letterOf(h.s) === letter) && (!kind || h.k === kind) && (!onlyVi || h.t))
+    const hits = heads.filter((h) => (n ? normalize(`${h.h} ${h.t ?? ''} ${h.g ?? ''}`).includes(n) : letterOf(h.s) === letter) && (!kind || h.k === kind) && (!onlyVi || h.t))
+    if (!n) return hits
+    // a headword or Vietnamese title that starts with the query outranks a mention in another entry's gist
+    const rank = (h: Head) => (normalize(h.h).startsWith(n) || normalize(h.t ?? '').startsWith(n) ? 0 : normalize(`${h.h} ${h.t ?? ''}`).includes(n) ? 1 : 2)
+    return hits.map((h, i) => [rank(h), i, h] as const).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map((x) => x[2])
   }, [heads, n, letter, kind, onlyVi])
   const done = heads?.filter((h) => h.t).length ?? 0
 
