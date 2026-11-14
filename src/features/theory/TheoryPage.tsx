@@ -409,10 +409,10 @@ function Index() {
     <div className="phn phn-theory mx-auto max-w-6xl space-y-10 px-4 py-5 lg:px-8 lg:py-8">
       {/* Browsing: the painting runs edge to edge and fades into the page, no card. Searching or in a topic: the same
           search field sits in a slim dark capsule. One element throughout, so typing never drops the field's focus. */}
-      <section className={clsx(browsing ? 'th-hero animate-float-up' : 'hero-ebony relative isolate overflow-hidden rounded-[28px] p-2.5 shadow-[var(--shadow-float)]')}>
+      <section className={clsx(browsing ? 'th-hero animate-float-up' : 'relative')}>
         {/* The Lý thuyết painting of the home page, the camera drifting towards its music book. */}
         {browsing ? <HeroArt /> : null}
-        <div aria-hidden className={browsing ? 'th-wash' : 'hero-wash pointer-events-none absolute inset-0 -z-10'} />
+        {browsing && <div aria-hidden className="th-wash" />}
         {browsing && (
           <>
             <p className="phn-eyebrow relative">Thư viện lý thuyết</p>
@@ -420,7 +420,7 @@ function Index() {
             <h2 data-collapse className="phn-greeting collapse-large relative mx-auto mt-4 max-w-3xl">{greeting}</h2>
           </>
         )}
-        <label className={clsx('relative flex items-center', browsing ? 'phn-search th-search mt-9' : 'hero-search h-12 gap-2.5 rounded-full px-5 text-[#e2b66e]')}>
+        <label className={clsx('relative flex items-center', 'phn-search', browsing && 'th-search mt-9')}>
           <SearchIcon width={18} height={18} className="shrink-0" />
           <input
             value={query}

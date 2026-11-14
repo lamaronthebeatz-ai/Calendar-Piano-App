@@ -1,0 +1,39 @@
+/* The "+" sheet (QuickActionsSheet, brand "Phòng hoà nhạc"): rows on a sheet that rises from the bottom.
+   Only transform and opacity move; the resting style is the final look. */
+.qs-root { position: fixed; inset: 0; z-index: 70; }
+.qs-scrim { position: absolute; inset: 0; border: 0; cursor: default; background: rgb(5 4 4 / 0.72); animation: qs-fade 240ms ease-out both; }
+.qs-sheet {
+  position: absolute; left: 0; right: 0; bottom: 0; max-height: 86dvh; overflow-y: auto; overscroll-behavior: contain;
+  padding: 10px max(24px, env(safe-area-inset-left)) calc(84px + env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-right));
+  border-radius: 26px 26px 0 0; background: var(--phn-box); border-top: 1px solid var(--phn-velvet);
+  box-shadow: 0 -30px 60px -30px rgb(0 0 0 / 0.9);
+  animation: qs-rise 380ms var(--phn-ease) both;
+}
+@media (min-width: 640px) { .qs-sheet { left: 50%; right: auto; width: 440px; margin-left: -220px; } }
+.qs-grab { display: block; width: 38px; height: 4px; margin: 0 auto 8px; border-radius: 2px; background: var(--phn-velvet); }
+.qs-head { margin: 18px 0 6px; }
+.qs-sheet section:first-of-type .qs-head { margin-top: 6px; }
+.qs-row { padding-block: 11px; }
+.qs-row .phn-row-title { font-size: 18px; }
+.qs-icon { display: flex; align-items: center; justify-content: flex-start; }
+.qs-row:hover .phn-row-title, .qs-row:hover .qs-icon { color: var(--phn-spot); }
+.qs-glyph { font-family: "Noto Music", serif; font-size: 22px; line-height: 1; }
+.qs-glyph.is-small { font-size: 17px; }
+/* the double sharp is drawn tiny in Noto Music */
+.qs-glyph.is-x { font-size: 30px; }
+/* the "+" turned into × sits where the bar's "+" was */
+.qs-close {
+  position: absolute; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom)); width: 48px; height: 48px; margin-left: -24px;
+  display: flex; align-items: center; justify-content: center; border-radius: 999px;
+  color: var(--phn-on-spot); background: var(--phn-spot);
+}
+.qs-close svg { transform: rotate(45deg); }
+.qs-root.is-closing .qs-scrim { animation: qs-fade-out 200ms ease-in both; }
+.qs-root.is-closing .qs-sheet { animation: qs-sink 220ms cubic-bezier(0.5, 0, 0.8, 0.4) both; }
+@keyframes qs-fade { from { opacity: 0; } }
+@keyframes qs-fade-out { to { opacity: 0; } }
+@keyframes qs-rise { from { transform: translateY(40%); opacity: 0; } }
+@keyframes qs-sink { to { transform: translateY(40%); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .qs-sheet, .qs-root.is-closing .qs-sheet { animation: qs-fade 140ms both; }
+}

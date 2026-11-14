@@ -1,0 +1,40 @@
+/*
+ * Brand "Phòng hoà nhạc" across the app's pages (AppShell puts `phn phn-app` on <main> except on /home, the musicology
+ * sky and the book reader). One rule set takes the frames off the content cards: no box, no rounded border, no raised
+ * fill — the card lies on the stage, a velvet hairline under it. Controls (chips, buttons, inputs, segmented switches)
+ * keep their shapes; dialogs and sheets live outside <main> and are untouched.
+ */
+
+/* the app's own card classes */
+.phn-app :is(.an-card, .rt-card, .term-card, .rs-note, .src-row, .tl-fact, .cr-card, .bn-mine, .cp-card) {
+  border: 0;
+  border-bottom: 1px solid var(--phn-velvet);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  padding-inline: 0;
+}
+.phn-app :is(.an-card, .rt-card, .term-card, .src-row, .cr-card):hover { border-color: var(--phn-velvet); }
+.phn-app :is(.an-card, .rt-card, .src-row):hover :is(.an-card-title, .rt-title, .src-title) { color: var(--phn-spot); }
+.phn-app :is(.rt-card, .an-card) { padding-block: 13px; }
+.phn-app .rt-icon { color: var(--phn-candle-dim); }
+.phn-app .rt-title { font-family: var(--font-display); font-size: 17px; font-weight: 500; }
+.phn-app .an-grid { column-gap: 28px; row-gap: 0; }
+.phn-app .src-list { gap: 0; }
+
+/* Tailwind-built cards: large rounded corners + border + raised fill (rounded-xl and full stay: those are controls) */
+.phn-app :where(div, section, article, figure, aside, header, footer, li, a, details, p)[class*="rounded-2xl"][class*="border-[var(--color-border)]"][class*="bg-[var(--color-surface-raised)]"],
+.phn-app :where(div, section, article, figure, aside, header, footer, li, a, details, p)[class*="rounded-3xl"][class*="border-[var(--color-border)]"][class*="bg-[var(--color-surface-raised)]"],
+.phn-app :where(div, section, article, figure, aside, header, footer, li, a, details, p)[class*="rounded-[2"][class*="border-[var(--color-border)]"][class*="bg-[var(--color-surface-raised)]"] {
+  border-width: 0 0 1px;
+  border-color: var(--phn-velvet);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* page titles in the sticky bars and section headings take the brand serif through --font-display already */
+.phn-app .section-title h2 { font-weight: 500; }
+
+/* a topic's header in the library: the picture stays, the box goes */
+.phn-app .cat-head { border: 0; border-radius: 0; background: none; padding-inline: 0; }

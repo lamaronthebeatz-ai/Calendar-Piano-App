@@ -120,16 +120,15 @@ html.reveal-on .theory-article .prose-theory :is(figure, table, blockquote) { an
   [data-card].is-pressing { transform: none; }
 }
 
-/* Library header: the calculators button. */
-.tools-btn { position: relative; display: flex; height: 38px; width: 38px; flex: none; align-items: center; justify-content: center; border-radius: 99px; font-size: 20px; color: var(--color-gold); background: var(--color-gold-soft); box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-gold) 30%, transparent); transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1); }
-.solfege-btn { font-family: 'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif; font-size: 22px; }
-.solfege-btn span { animation-delay: -1.6s; }
-.chord-ear-btn span { display: flex; animation-delay: -0.8s; }
-.cp-glyph { font-family: 'Noto Music', 'Segoe UI Symbol', serif; font-size: 18px; animation-delay: -2.2s !important; }
-.tools-btn:hover { transform: scale(1.08) rotate(-8deg); }
-.tools-btn span { animation: tools-bob 3.2s ease-in-out infinite; }
-@keyframes tools-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-2px) rotate(-6deg); } }
-@media (prefers-reduced-motion: reduce) { .tools-btn span { animation: none; } }
+/* Library header tools (computer only): in the brand "Phòng hoà nhạc" they are thin marks on the bar, not bubbles —
+   ink at rest, gold under the pointer, a short gold rule beneath; the same idea as the bottom bar's dot. */
+.tools-btn { position: relative; display: flex; height: 38px; width: 34px; flex: none; align-items: center; justify-content: center; font-size: 19px; color: var(--color-ink-muted); background: none; transition: color 0.2s; }
+.tools-btn::after { content: ""; position: absolute; left: 50%; bottom: 3px; width: 14px; height: 1.5px; margin-left: -7px; background: var(--color-gold); transform: scaleX(0); transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+.tools-btn:hover, .tools-btn:focus-visible { color: var(--color-gold); }
+.tools-btn:hover::after, .tools-btn:focus-visible::after { transform: scaleX(1); }
+.solfege-btn { font-family: 'Noto Music', 'Segoe UI Symbol', 'Apple Symbols', serif; font-size: 21px; }
+.chord-ear-btn span { display: flex; }
+.cp-glyph { font-family: 'Noto Music', 'Segoe UI Symbol', serif; font-size: 28px; line-height: 1; margin-top: -8px; }
 
 /* Topic cards on the library home: a picture on the left that melts into the card, the category glyph as a small seal. */
 .topic-media {

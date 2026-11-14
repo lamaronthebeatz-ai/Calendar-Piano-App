@@ -1,0 +1,13 @@
+/* Bottom bar in the brand "Phòng hoà nhạc": no glass and no blur — the stage colour with a velvet hairline on top. */
+.phn-tabbar { background: linear-gradient(180deg, rgb(11 10 8 / 0.9), var(--phn-stage) 45%); border-top: 1px solid var(--phn-velvet); }
+.tb-item { color: var(--phn-ash); }
+.tb-item.is-on { color: var(--phn-candle); }
+.tb-item.is-on .tb-icon { color: var(--phn-spot); }
+.tb-icon { stroke-width: 1.6; }
+.tb-label { font: 500 10.5px/1 var(--font-sans); letter-spacing: 0.01em; }
+@media (min-width: 400px) { .tb-label { font-size: 11px; } }
+/* the one gold mark of the bar: a dot over the current place (it still glides between tabs) */
+.tb-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--phn-spot); box-shadow: 0 0 10px 1px var(--phn-glow); }
+/* "+": a gold disc level with the bar, not a raised bubble */
+.tb-plus { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 999px; color: var(--phn-on-spot); background: var(--phn-spot); transition: transform 0.18s var(--phn-ease); }
+.tb-plus:active { transform: scale(0.94); }

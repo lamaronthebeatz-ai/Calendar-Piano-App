@@ -3,6 +3,8 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { BrandMark } from '../components/icons'
 import { Sidebar } from './Sidebar'
 import { BottomNav } from './BottomNav'
+import '../phn.css'
+import '../phn-pages.css'
 import { QuickActionsSheet } from './QuickActionsSheet'
 import { PageCurtain } from './PageCurtain'
 import { ToastHost } from '../components/ToastHost'
@@ -32,6 +34,9 @@ export function AppShell() {
   const navHidden = autoHidden || pathname === '/musicology/ban-do' || pathname === '/compose'
   // the home page runs edge to edge under the tab bar, so the bar hiding never resizes it mid-scroll
   const fullBleed = pathname === '/home'
+  // brand "Phòng hoà nhạc" (notes/brand.md) everywhere except the home page and the musicology sky (Lamar: never touch),
+  // and the book reader, which keeps its own paper themes
+  const branded = !fullBleed && section !== 'musicology' && !/^\/curriculum\/[^/]+/.test(pathname)
   useCardGlow()
   // Desktop navigation is a drawer behind the Lamar mark in the top-left corner, so every page gets the full width.
   const [railOpen, setRailOpen] = useState(false)
@@ -74,7 +79,7 @@ export function AppShell() {
       <Sidebar open={railOpen} onClose={() => setRailOpen(false)} everywhere={fullBleed} />
       <main
         ref={mainRef}
-        className={clsx('app-main relative min-w-0 flex-1 overflow-hidden lg:pb-0', fullBleed ? 'pb-0' : clsx('transition-[padding] duration-300', navHidden ? 'pb-0' : 'pb-16'))}
+        className={clsx('app-main relative min-w-0 flex-1 overflow-hidden lg:pb-0', branded && 'phn phn-app', fullBleed ? 'pb-0' : clsx('transition-[padding] duration-300', navHidden ? 'pb-0' : 'pb-16'))}
       >
         <div key={section} className={clsx('vt-page h-full', !viewTransitionsOn() && 'page-enter')}>
           <Outlet />
