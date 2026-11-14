@@ -6,7 +6,7 @@
 - `scripts/grove/build.py` (`npm run grove`, tự chạy trong `predev`/`prebuild`; **đầu ra không commit**, có trong `.gitignore`) ghép `scripts/grove/vi/*.json` (`{id:{title,kind,vi}}`) → `public/grove/<vần><n>.json` (mảnh 80 mục, tải khi mở mục, không precache: `globIgnores grove/**`) + `src/features/terms/grove-index.json` (`{id,h,v,p,s,k,a?,t?,g?}`, ~480 KB thô). id = `slug(đầu mục)-<tập>-<trang>`, giữ nguyên lỗi OCR của đầu mục (vd. `monocoedo-3-247`). Vần gán theo đa số cửa sổ ±6, không lùi, trong dải vần của tập; Phụ lục lấy chữ đầu của đầu mục.
 - `*chữ*` trong tiếng Việt → nghiêng (`italics()` trong `GroveDictionary.tsx`).
 - **Luật viết tiếng Việt:** chỉ viết điều có trong đoạn đã đọc; bài dài thì tóm phần đã đọc và nói "bài viết trình bày tiếp / xem nguyên văn". Điều người biên soạn thêm (niên đại hiện đại, chỗ Grove in sai) ghi rõ "ghi chú của người biên soạn" / "Grove ghi vậy". Kiểm từng câu bằng regex trên nguyên văn trước khi build.
-- Tiến độ: `m1–m3.json` = 100 mục vần M (tập III); `a1–a2.json` = 66 thuật ngữ cốt lõi A–E (tập I). Tiếp: thuật ngữ các vần khác (ưu tiên thuật ngữ cốt lõi), rồi nhân vật.
+- Tiến độ: `m1–m3.json` = 100 mục vần M (tập III); `a1–a2.json` = 66 thuật ngữ cốt lõi A–E (tập I); `f1.json` = 47 thuật ngữ F–L (tập II). Tiếp: thuật ngữ các vần khác (ưu tiên thuật ngữ cốt lõi), rồi nhân vật.
 - Test: `library.spec.ts` "từ điển Grove" (tìm mordent → tiếng Việt, tr. 258, link quét).
 
 ## Thuật ngữ đa ngữ (tab `?tab=da-ngu`, giai đoạn 3, 11/2026)
