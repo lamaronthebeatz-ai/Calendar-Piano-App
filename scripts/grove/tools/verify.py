@@ -26,7 +26,8 @@ for k, v in d.items():
         errs.append(f'{k}: có chữ mày/tao')
     en = re.sub(r'(?<=\d)[ ,.]+(?=\d)', '', blocks[k])  # OCR splits years: '1 767'
     en = re.sub(r'\b(1\d)(\d\d)\s*[-–]\s*(\d\d)\b', lambda m: f'{m.group(0)} {m.group(1)}{m.group(3)}', en)  # 1657-75 → also 1675
-    en = en.translate(str.maketrans({'l': '1', 'I': '1', 'O': '0', 'o': '0', 'S': '5'})) + ' ' + blocks[k]
+    # OCR reads 8 as S or B, 1 as l/I, 0 as O: '1S67' is 1867
+    en = ' '.join(en.translate(str.maketrans({'l': '1', 'I': '1', 'O': '0', 'o': '0', 'S': d, 'B': '8'})) for d in '58') + ' ' + blocks[k]
     en_digits = re.sub(r'\D', ' ', en)
     vi_nums = re.sub(r'tháng\s*(1[0-2]|0?[1-9])\b', '', v['vi'], flags=re.I)
     vi_nums = re.sub(r'\b\d{1,2}/(1[0-2]|0?[1-9])(?=/\d{4})', '', vi_nums)  # 22/12/1819: day and month come from 'Dec. 22'
