@@ -1,0 +1,46 @@
+/* The card a wiki link opens (LinkPeek): a sheet on phones, a centred card on wide screens. Only transform and
+   opacity move, and the resting style is the final look, so the card shows even when no animation runs. */
+.lpk { position: fixed; inset: 0; z-index: 75; display: flex; align-items: flex-end; justify-content: center; }
+.lpk-scrim { position: absolute; inset: 0; border: 0; cursor: default; background: rgb(5 4 4 / 0.66); animation: lpk-fade 200ms ease-out both; }
+.lpk-card {
+  position: relative; width: min(440px, calc(100% - 24px)); max-height: 84dvh; overflow-y: auto; overscroll-behavior: contain;
+  margin-bottom: calc(12px + env(safe-area-inset-bottom));
+  border-radius: 22px; background: var(--phn-box); border: 1px solid var(--phn-velvet);
+  box-shadow: 0 30px 70px -30px rgb(0 0 0 / 0.95);
+  animation: lpk-rise 320ms var(--phn-ease) both;
+}
+@media (min-width: 640px) { .lpk { align-items: center; } .lpk-card { margin-bottom: 0; } }
+.lpk-img { display: block; width: 100%; height: 120px; object-fit: cover; }
+@media (min-width: 640px) { .lpk-img { height: 150px; } }
+.lpk-img.is-drawing { object-fit: contain; background: #fff; }
+.lpk-body { padding: 18px 20px 14px; border-top: 3px solid var(--tint, var(--phn-spot)); }
+.lpk-kicker { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--tint, var(--phn-spot)); }
+.lpk-title { margin-top: 4px; font-family: var(--font-display); font-size: 23px; line-height: 1.2; color: var(--color-ink); }
+.lpk-summary { margin-top: 8px; font-size: 14px; line-height: 1.6; color: var(--color-ink-muted); }
+
+.lpk-term { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--phn-velvet); }
+.lpk-term-head { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--phn-spot); }
+.lpk-names { margin-top: 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px 14px; }
+.lpk-names div { min-width: 0; }
+.lpk-names dt { font-size: 10.5px; color: var(--color-ink-faint); }
+.lpk-names dd { font-size: 14px; color: var(--color-ink); overflow-wrap: anywhere; }
+.lpk-grove { display: block; margin-top: 12px; padding: 10px 12px; border-radius: 12px; background: color-mix(in oklch, var(--phn-spot) 7%, transparent); }
+.lpk-grove > span { display: block; }
+.lpk-grove-src { font-size: 11px; color: var(--color-ink-faint); }
+.lpk-grove-title { margin-top: 2px; font-family: var(--font-display); font-size: 16px; color: var(--color-ink); }
+.lpk-grove-gist { margin-top: 3px; font-size: 13px; line-height: 1.5; color: var(--color-ink-muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.lpk-grove-go { margin-top: 6px; font-size: 12.5px; color: var(--phn-spot); }
+.lpk-grove:hover .lpk-grove-title { color: var(--phn-spot); }
+
+.lpk-actions { position: sticky; bottom: 0; display: flex; gap: 10px; padding: 12px 20px 16px; background: var(--phn-box); border-top: 1px solid var(--phn-velvet); }
+.lpk-read { flex: 1; height: 44px; border-radius: 999px; font-weight: 600; font-size: 15px; color: var(--phn-on-spot); background: var(--phn-spot); }
+.lpk-close { height: 44px; padding-inline: 18px; border-radius: 999px; font-size: 14px; color: var(--color-ink-muted); border: 1px solid var(--phn-velvet); }
+.lpk-read:active, .lpk-close:active { transform: scale(0.97); }
+
+.lpk.is-closing .lpk-scrim { animation: lpk-fade-out 180ms ease-in both; }
+.lpk.is-closing .lpk-card { animation: lpk-sink 200ms ease-in both; }
+@keyframes lpk-fade { from { opacity: 0; } }
+@keyframes lpk-fade-out { to { opacity: 0; } }
+@keyframes lpk-rise { from { transform: translateY(24px) scale(0.98); opacity: 0; } }
+@keyframes lpk-sink { to { transform: translateY(24px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .lpk-card, .lpk.is-closing .lpk-card { animation: lpk-fade 120ms both; } }

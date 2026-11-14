@@ -34,3 +34,4 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Định dạng TL-LV của trường: `notes/workflow.md` § Tiểu luận.
 - Tiểu luận Scriabin: **giữ bản đầy đủ** (59 trang thân bài) dù đề yêu cầu 30 trang — 11/2026.
 - "Lấy từ tủ sách" = dùng nguyên văn bài trong app, không phân tích lại.
+- (14/11) Bấm link `[[slug]]` ở bất cứ đâu → thẻ giới thiệu ngắn trước, nút "Đọc bài" mới vào bài; bài thuật ngữ gắn tên đa ngữ + mục Grove. Việc viết tiếng Việt Grove bằng phiên phụ: tạm ngưng.

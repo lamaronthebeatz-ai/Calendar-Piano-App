@@ -28,6 +28,7 @@ test('sổ tay: ghi chú nối tới bài bằng [[, bài hiện ghi chú ở m�
 
   // the other side of the link: the article lists the note
   await page.locator('.rs-preview a.wiki-link').first().click()
+  await page.getByRole('button', { name: 'Đọc bài' }).click()
   await expect(page).toHaveURL(/#\/theory\/passacaglia-va-chaconne/)
   const mine = page.getByRole('region', { name: 'Trong sổ tay của bạn' })
   await expect(mine).toContainText('Fuga ở Bach', { timeout: 15_000 })

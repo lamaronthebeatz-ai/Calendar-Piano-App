@@ -7,7 +7,8 @@
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
-- **Từ điển âm nhạc Lamar** (14/11): "Thuật ngữ" đổi tên; tab Grove 1904 – 1910 đủ 5 tập (6.430 mục A–Z + Phụ lục, nguyên văn + tập/trang + link bản quét; dữ liệu sinh lúc build) và tab thuật ngữ đa ngữ. **Dở:** tiếng Việt có 649/6.430 mục; đang viết song song bằng phiên phụ theo phần `u001–u150` (xong u001, u004, u007…u025) — `notes/terms.md`.
+- **Thẻ giới thiệu khi bấm link** (14/11): mọi `[[slug]]` mở thẻ ngắn (tóm tắt + thuật ngữ 5 thứ tiếng + mục Grove) trước khi vào bài — `notes/theory.md`.
+- **Từ điển âm nhạc Lamar** (14/11): "Thuật ngữ" đổi tên; tab Grove 1904 – 1910 đủ 5 tập (6.430 mục A–Z + Phụ lục, nguyên văn + tập/trang + link bản quét; dữ liệu sinh lúc build) và tab thuật ngữ đa ngữ. **Dở:** tiếng Việt có 793/6.430 mục; **tạm ngưng theo Lamar** (hết hạn mức phiên phụ). Đã xong u001, u002, u004, u005, u007, u008, u010, u013, u016, u019, u022, u025; còn lại 138 phần — cách chạy ở `notes/terms.md`.
 - **Phân tích tác phẩm `/analyze`** (4 đợt, 13/11): lăng kính Cổ điển / Jazz / TK XX, hình thức, nhãn trên bản nhạc + văn bản + bảng từng ô — `notes/analyze.md` (có mốc độ đúng).
 
 - **Thương hiệu — đợt 2** (14/11): toàn app (trừ /home và trình đọc; Âm nhạc học có nhưng bầu trời giữ nguyên), thanh điều hướng dưới, nút + thành bảng trượt dòng, nút công cụ máy tính — `notes/brand.md`.

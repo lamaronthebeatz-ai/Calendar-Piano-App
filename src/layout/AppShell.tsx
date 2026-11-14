@@ -6,6 +6,7 @@ import { BottomNav } from './BottomNav'
 import '../phn.css'
 import '../phn-pages.css'
 import { QuickActionsSheet } from './QuickActionsSheet'
+import { LinkPeekHost } from './LinkPeekHost'
 import { PageCurtain } from './PageCurtain'
 import { ToastHost } from '../components/ToastHost'
 import { LessonFormModal } from '../features/lessons/LessonFormModal'
@@ -88,6 +89,7 @@ export function AppShell() {
       <BottomNav hidden={navHidden || fullBleed} />
 
       <QuickActionsSheet />
+      <LinkPeekHost />
       <PageCurtain />
       <LessonFormModal />
       <LessonDetailSheet />

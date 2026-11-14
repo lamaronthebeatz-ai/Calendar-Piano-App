@@ -55,6 +55,20 @@ test('tìm bằng tên tiếng Nga / Đức ra đúng bài, đầu bài hiện t
   await expect(page.locator('.term-names')).toContainText('Fuge')
 })
 
+test('bấm link trong bài mở thẻ giới thiệu (có thuật ngữ) trước, nút Đọc bài mới sang bài', async ({ page }) => {
+  await page.goto('/#/theory/choi-phuc-dieu')
+  const link = page.locator('.prose-theory a.wiki-link[data-slug="fugue"]').first()
+  await link.scrollIntoViewIfNeeded()
+  await link.click()
+  const card = page.getByRole('dialog', { name: /Giới thiệu: / })
+  await expect(card).toBeVisible()
+  await expect(page).toHaveURL(/choi-phuc-dieu/)
+  await expect(card.getByRole('region', { name: 'Thuật ngữ' })).toContainText('Fuge')
+  await expect(card.locator('.lpk-grove').first()).toContainText('Grove')
+  await card.getByRole('button', { name: 'Đọc bài' }).click()
+  await expect(page).toHaveURL(/#\/theory\/fugue/)
+})
+
 test('từ điển Grove: tìm "mordent", mở mục có tiếng Việt, nguyên văn và trang quét', async ({ page }) => {
   await page.goto('/#/terms')
   await page.getByLabel('Tìm trong từ điển').fill('mordent')
