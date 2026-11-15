@@ -12,6 +12,7 @@ export const trungCo: Chapter = {
   years: 'thế kỷ IX – XIV',
   style: 'medieval',
   cover: 'olomouc-david',
+  theme: 'phong-chep-sach',
   intro:
     'Một luồng gió lạnh, mùi sáp ong và da thuộc. {ten} mở mắt giữa một phòng chép sách, tay còn cầm cây bút lông ngỗng. Ngoài cửa sổ hẹp là một châu Âu chưa có khuông nhạc năm dòng, chưa có hợp âm, chưa có cái tên "nhà soạn nhạc" theo nghĩa ngày nay. Để trở về, {ten} phải đi hết năm thế kỷ âm nhạc này — và tự viết lại lịch sử của nó bằng những chứng cứ mình nhặt được.',
   scenes: [

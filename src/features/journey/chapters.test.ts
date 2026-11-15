@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { ARTICLES } from '../theory/articles.source'
 import { CHAPTERS } from './chapters'
 import { CREDITS } from './credits'
+import { MUSIC } from './music'
 
 // The story is read through the library: every question, card and verdict must point at a real article, and every
 // picture must be on disk with a credit — the same guarantee check:links gives to [[links]].
@@ -12,11 +13,13 @@ const picture = (id: string) => existsSync(`public/images/journey/${id}.webp`) &
 describe.each(CHAPTERS)('chương $numeral — $title', (ch) => {
   it('mỗi cảnh trỏ tới bài có thật, ảnh có nguồn, đáp án nằm trong các lựa chọn', () => {
     expect(picture(ch.cover)).toBe(true)
+    expect(MUSIC[ch.theme], `theme ${ch.theme}`).toBeDefined()
     for (const s of ch.scenes) {
       expect(slugs.has(s.quest.read), `${s.id}: quest.read ${s.quest.read}`).toBe(true)
       expect(slugs.has(s.card.read), `${s.id}: card.read ${s.card.read}`).toBe(true)
       if (s.npc.slug) expect(slugs.has(s.npc.slug), `${s.id}: npc ${s.npc.slug}`).toBe(true)
       expect(picture(s.bg), `${s.id}: bg ${s.bg}`).toBe(true)
+      expect(MUSIC[s.id]?.src, `${s.id}: nhạc nền`).toMatch(/^https:\/\/upload\.wikimedia\.org\//)
       if (s.npc.img) expect(picture(s.npc.img), `${s.id}: img ${s.npc.img}`).toBe(true)
       expect(s.quest.answer).toBeGreaterThanOrEqual(0)
       expect(s.quest.answer).toBeLessThan(s.quest.choices.length)

@@ -18,6 +18,12 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Lối vào: nút vàng "⚜ Hành trình" trên thanh trên của bản đồ (`MusicMap.tsx`, `.mm-quest`).
 - Kiểm tra: `chapters.test.ts` (Vitest — mọi `read`/`card.read`/`npc.slug`/`claim.read` là slug có thật, ảnh có file + credit, đáp án trong khoảng, id không trùng); `tests/journey.spec.ts` (tạo nhân vật → cảnh → đọc bài → Back → trả lời sai rồi đúng → thẻ); route trong `smoke.spec.ts`.
 
+## Nhạc nền (15/11, Lamar: "âm thanh lấy từ các bản nhạc thời kỳ hoặc nhà soạn nhạc đang giao tiếp")
+- `music.ts` — `MUSIC[sceneId]` (+ `chapter.theme` cho bản đồ chương và phiên toà): bản thu **tự do trên Wikimedia Commons**, phát từ bản MP3 chuyển mã (`upload.wikimedia.org/.../transcoded/...ogg.mp3`, CORS `*`, chạy trên iOS), không tải về repo, cần mạng. Mỗi bài có người biểu diễn, giấy phép, link trang file; hiện ở góc dưới cảnh và trên nút nhạc.
+- **Chỉ bản người biểu diễn thật**; Commons có nhiều bản MIDI của "Tetraktys" — script `scratchpad/journey/vet.py` đọc mục Description/Author để loại. Vitry và Landini chưa có bản thu tự do → tạm dùng MIDI, có `note` "Bản MIDI" hiện trên màn. Tìm bản thu: quét file âm thanh trong trang Wikipedia (`audio.py`) và trang `Category:<Tên>` của Commons (HTML; API trả 429).
+- `soundtrack.ts` — một bài mỗi lúc, crossfade bằng Web Audio GainNode (iOS bỏ qua `audio.volume`), lặp; trình duyệt chỉ cho phát sau một lần chạm nên `onClickCapture={nudge}` ở gốc game thử lại; tắt/bật nhớ ở `journey:mute`; mở video YouTube trong cảnh thì nhạc nền dừng; rời `/hanh-trinh` thì tắt. Nút `SoundToggle` (tên bài đang phát).
+- Test `chapters.test.ts` đòi mọi cảnh có `MUSIC[id]` trỏ về upload.wikimedia.org.
+
 ## Luật viết chương
 - Mọi sự kiện trong lời thoại/câu hỏi phải có trong bài thư viện hoặc tiểu sử; chi tiết đẹp nhưng không nguồn thì bỏ (đã bỏ: vai ma quỷ chỉ nói trong *Ordo Virtutum*, "Kyrie đến Ite missa est", con ngựa Fauvel). Không đặt tên NPC hư cấu trùng người thật (Notker → Wolfram).
 - Phiên toà lấy chất liệu từ mục `## Giai thoại và điều chưa chắc` của tiểu sử và các bài phân định.
@@ -26,6 +32,9 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 ## Chương đã có
 - **I. Ánh nến và bản chép tay** (Trung cổ, `trung-co.ts`): Bourgogne (thánh ca đơn âm) → Sankt Gallen (neume) → Arezzo (Guido, Ut queant laxis) → Pomposa (Boethius, Pythagoras) → Rupertsberg (Hildegard, Ordo Virtutum) → Ventadorn (troubadour) → Notre-Dame 1198 (Pérotin, 4 bè) → Paris k. 1320 (Vitry, isorhythm) → Reims (Machaut) → Firenze (Landini, kết 7–6–8); phiên toà 7 lời khai.
 
+- **II. Những bè đan như dây leo** (Phục hưng, `phuc-hung.ts`, style `renaissance`): Firenze 1436 (Du Fay, Dunstable) → Venezia 1501 (Petrucci, in nhiều lượt) → Ferrara 1503 (Josquin, mô phỏng) → Paris k. 1528 (Janequin, Attaingnant in một lượt) → Roma (Palestrina, nghịch âm phách yếu) → München (Lassus, 4 thứ tiếng) → London (Tallis, 40 bè) → Gesualdo (madrigal than thở) → San Marco (G. Gabrieli, hai gác đàn) → London 1600 (Dowland, Lachrimae); phiên toà 8 lời khai (Petrucci đầu tiên, Trent, Gesualdo nôi…). Tiểu sử 40 nhạc sĩ Phục hưng: `composer-details-ren-{a,b}.ts` (a: 1 nguồn Wikipedia Anh; b: Wikipedia Anh + một bản ngôn ngữ khác; vài câu "Bối cảnh" ở b là kiến thức chung — rà khi rảnh).
+- Chương mở khi xong mọi cảnh chương trước (`opened`), hàng chip chương ở bản đồ; không có `?c=` thì vào chương đầu tiên chưa xong; outro phiên toà có nút sang chương sau.
+
 ## Tiếp theo
-- Chương II Phục hưng (Dufay, Josquin, Palestrina, Venice/Gabrieli, madrigal) + bổ sung tiểu sử nhóm `ren:*` trước.
+- Chương III Baroque (Monteverdi 1605 seconda pratica, opera Firenze/Mantova, Corelli, Vivaldi, Bach, Handel) + bổ sung tiểu sử nhóm `bar:*` trước; tìm nhạc nền (Commons có nhiều bản Musopen cho Baroque).
 - Có thể thêm: âm thanh nền (drone quãng 5 bằng `audio.ts`), nhật ký hành trình ghi vào Sổ tay `/brain`, đề tài `/research` từ thẻ chứng cứ, chặng tự sinh từ PLACES + people.

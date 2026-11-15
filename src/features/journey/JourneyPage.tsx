@@ -6,6 +6,8 @@ import { H, W, proj } from '../musicology/projection'
 import world from '../musicology/world-lo.json'
 import { CHAPTERS } from './chapters'
 import { CREDITS } from './credits'
+import { MUSIC } from './music'
+import { nudge, playTrack, setMuted, useSoundtrack } from './soundtrack'
 import { named, resetJourney, update, useSave, type Save } from './progress'
 import type { Card, Chapter, Claim, Scene, Verdict } from './types'
 import './journey.css'
@@ -14,6 +16,9 @@ const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.web
 /** Renaissance portraits the player can wear (public domain, credits.ts). */
 const PORTRAITS = ['p-leonardo-musician', 'p-durer', 'p-van-eyck', 'p-castiglione', 'p-ermine', 'p-pollaiuolo']
 const key = (c: Chapter, s: Scene | Claim) => `${c.id}/${s.id}`
+/** A chapter opens once every scene of the one before it is done. */
+const finished = (c: Chapter, save: Save) => c.scenes.every((s) => save.done.includes(key(c, s)))
+const opened = (i: number, save: Save) => i === 0 || finished(CHAPTERS[i - 1], save)
 const VERDICT: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Giai thoại', unsure: 'Chưa chắc' }
 
 /**
@@ -23,12 +28,15 @@ const VERDICT: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Gi
 export function JourneyPage() {
   const save = useSave()
   const [params, setParams] = useSearchParams()
-  const chapter = CHAPTERS.find((c) => c.id === params.get('c')) ?? CHAPTERS[0]
+  const asked = CHAPTERS.findIndex((c) => c.id === params.get('c'))
+  // no chapter in the address: the first one not yet finished (or the last)
+  const chapter = asked >= 0 && opened(asked, save) ? CHAPTERS[asked] : (CHAPTERS.find((c, i) => opened(i, save) && !finished(c, save)) ?? CHAPTERS[CHAPTERS.length - 1])
   const scene = chapter.scenes.find((s) => s.id === params.get('s'))
   const view = !save.name ? 'create' : scene ? 'scene' : params.get('v') === 'court' ? 'court' : 'atlas'
   const go = (p: Record<string, string>) => setParams({ c: chapter.id, ...p })
+  useEffect(() => () => playTrack(undefined), [])
   return (
-    <div className={`jr jr-era-${chapter.style}`}>
+    <div className={`jr jr-era-${chapter.style}`} onClickCapture={nudge}>
       {view === 'create' && <Create />}
       {view === 'atlas' && <Atlas chapter={chapter} save={save} go={go} />}
       {view === 'scene' && scene && <ScenePlayer key={scene.id} chapter={chapter} scene={scene} save={save} go={go} />}
@@ -96,6 +104,9 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
     return `${cx - w / 2} ${cy - h / 2} ${w} ${h}`
   }, [pts])
   const courtOpen = !next
+  useEffect(() => {
+    playTrack(MUSIC[chapter.theme])
+  }, [chapter])
   const judged = chapter.court.claims.filter((c) => save.verdicts[key(chapter, c)]).length
   return (
     <section className="jr-atlas">
@@ -103,9 +114,22 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
       <div className="jr-atlas-wash" />
       <header className="jr-atlas-head">
         <Exit />
+        <div className="jr-atlas-sound">
+          <SoundToggle />
+        </div>
         <p className="jr-kicker">Chương {chapter.numeral} · {chapter.era} · {chapter.years}</p>
         <h1 className="jr-atlas-title">{chapter.title}</h1>
         {done.length === 0 && <p className="jr-atlas-intro">{named(chapter.intro, save.name)}</p>}
+        {CHAPTERS.length > 1 && (
+          <nav className="jr-chapters" aria-label="Các chương">
+            {CHAPTERS.map((c, i) => (
+              <Link key={c.id} to={`/hanh-trinh?c=${c.id}`} replace aria-current={c === chapter ? 'page' : undefined} className={opened(i, save) ? '' : 'is-locked'} onClick={(e) => !opened(i, save) && e.preventDefault()}>
+                <b>{c.numeral}</b> {c.era}
+                {!opened(i, save) && ' 🔒'}
+              </Link>
+            ))}
+          </nav>
+        )}
       </header>
       <svg className="jr-map" viewBox={view} preserveAspectRatio="xMidYMid meet" aria-label={`Bản đồ chương ${chapter.numeral}`}>
         <rect x={-W} y={-H} width={W * 3} height={H * 3} className="jr-sea" />
@@ -233,6 +257,10 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
     return () => window.clearTimeout(t)
   }, [phase])
 
+  useEffect(() => {
+    playTrack(listen ? undefined : MUSIC[scene.id])
+  }, [scene, listen])
+  const track = MUSIC[scene.id]
   const remember = (step: number) => update((s) => ({ step: { ...s.step, [k]: step } }))
   const advance = () => {
     if (phase === 'title') return setPhase('talk')
@@ -276,11 +304,14 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
         <p>
           Chương {chapter.numeral} · Chặng {index + 1}/{chapter.scenes.length}
         </p>
-        {scene.listen && (
-          <button className="jr-ghost is-small" onClick={() => setListen(true)}>
-            ♪ Nghe
-          </button>
-        )}
+        <span className="jr-head-tools">
+          <SoundToggle />
+          {scene.listen && (
+            <button className="jr-ghost is-small" onClick={() => setListen(true)}>
+              Xem video
+            </button>
+          )}
+        </span>
       </header>
 
       {phase === 'title' && (
@@ -369,11 +400,19 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
         </div>
       )}
 
-      {credit && (
-        <a className="jr-credit" href={credit[3]} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
-          Tranh: {credit[1]} · {credit[2]}
-        </a>
-      )}
+      <p className="jr-credit" onClick={(e) => e.stopPropagation()}>
+        {track && (
+          <a href={track.page} target="_blank" rel="noreferrer">
+            ♫ {track.title} — {track.by} · {track.licence}
+            {track.note && ` · ${track.note}`}
+          </a>
+        )}
+        {credit && (
+          <a href={credit[3]} target="_blank" rel="noreferrer">
+            Tranh: {credit[1]} · {credit[2]}
+          </a>
+        )}
+      </p>
 
       {listen && scene.listen && (
         <div className="jr-drawer" role="dialog" aria-label="Nghe" onClick={(e) => e.stopPropagation()}>
@@ -390,6 +429,18 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
   )
 }
 
+/** Sound on / off, with the name of what is playing. */
+function SoundToggle() {
+  const { track, muted } = useSoundtrack()
+  if (!track) return null
+  return (
+    <button className={`jr-sound${muted ? ' is-off' : ''}`} onClick={(e) => (e.stopPropagation(), setMuted(!muted))} aria-label={muted ? 'Bật nhạc nền' : 'Tắt nhạc nền'} title={track.title}>
+      <span aria-hidden>{muted ? '♪̸' : '♫'}</span>
+      <span className="jr-sound-t">{muted ? 'Nhạc tắt' : track.title}</span>
+    </button>
+  )
+}
+
 function NpcFace({ scene }: { scene: Scene }) {
   return scene.npc.img ? <img className="jr-face" src={IMG(scene.npc.img)} alt="" /> : <span className="jr-face is-initial">{scene.npc.name.charAt(0)}</span>
 }
@@ -400,7 +451,11 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
   const claims = chapter.court.claims
   const judged = claims.filter((c) => save.verdicts[key(chapter, c)])
   const right = judged.filter((c) => save.verdicts[key(chapter, c)] === c.verdict).length
+  const next = CHAPTERS[CHAPTERS.indexOf(chapter) + 1]
   const navigate = useNavigate()
+  useEffect(() => {
+    playTrack(MUSIC[chapter.theme])
+  }, [chapter])
   return (
     <section className="jr-court">
       <img className="jr-atlas-bg" src={IMG(chapter.cover)} alt="" />
@@ -447,10 +502,18 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
             {right}/{claims.length} phán quyết khớp với sử liệu
           </p>
           <p>{named(chapter.outro, save.name)}</p>
-          <button className="jr-cta" onClick={() => navigate('/musicology/ban-do')}>
-            Về bản đồ âm nhạc
-          </button>
-          <p className="jr-soon">Chương II — Phục hưng: đang được viết.</p>
+          {next ? (
+            <button className="jr-cta" onClick={() => navigate(`/hanh-trinh?c=${next.id}`)}>
+              Sang Chương {next.numeral} — {next.era} →
+            </button>
+          ) : (
+            <>
+              <button className="jr-cta" onClick={() => navigate('/musicology/ban-do')}>
+                Về bản đồ âm nhạc
+              </button>
+              <p className="jr-soon">Chương tiếp theo đang được viết.</p>
+            </>
+          )}
         </footer>
       )}
     </section>

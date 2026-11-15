@@ -84,6 +84,8 @@ export interface Chapter {
   /** The chapter's look: a class on the stage (`jr-era-medieval`…). */
   style: string
   cover: string
+  /** Music on the chapter map and in the court: a key of MUSIC (music.ts). */
+  theme: string
   intro: string
   scenes: Scene[]
   court: { intro: string; claims: Claim[] }
