@@ -57,7 +57,7 @@ const TOPICS: { id: string; short: string; title: string; blurb: string; ids: st
     short: 'Việt Nam',
     title: 'Âm nhạc Việt Nam',
     blurb: 'Từ cổ – trung đại tới hôm nay: lý thuyết cổ truyền, dân ca, nhạc khí, tân nhạc và chân dung nhạc sĩ.',
-    ids: ['am-nhac-viet-nam'],
+    ids: ['am-nhac-viet-nam', 'nghien-cuu-thanh-ca-viet-nam'],
   },
   {
     id: 'my-hoc',

@@ -28,5 +28,6 @@ export const TOPIC_CREDITS: Partial<Record<Article['category'], [string, string,
   organology: ["Syntagma08.png", "Michael Praetorius", "Public domain", "https://commons.wikimedia.org/wiki/File:Syntagma08.png"],
   vietnam: ["Musiciens Annamites, Saïgon, Cochinchine MET DP151638.jpg", "Émile Gsell (ảnh: Bảo tàng Metropolitan)", "CC0", "https://commons.wikimedia.org/wiki/File:Musiciens_Annamites,_Sa%C3%AFgon,_Cochinchine_MET_DP151638.jpg"],
   organ: ["Décoration extérieure en perspective de l'Orgue de l'Abbaye de Weingarthen dans la Souabe en Allemagne.png", "P.C. Delagardette", "CC0", "https://commons.wikimedia.org/wiki/File:D%C3%A9coration_ext%C3%A9rieure_en_perspective_de_l%27Orgue_de_l%27Abbaye_de_Weingarthen_dans_la_Souabe_en_Allemagne.png"],
+  thanhca: ["Phát Diệm Cathedral, 1920s.jpg", "Không rõ tác giả", "Public domain", "https://commons.wikimedia.org/wiki/File:Ph%C3%A1t_Di%E1%BB%87m_Cathedral,_1920s.jpg"],
   sacred: ["Interieur van de Sint-Bavokerk in Haarlem Rijksmuseum SK-A-359.jpeg", "Pieter Jansz. Saenredam", "Public domain", "https://commons.wikimedia.org/wiki/File:Interieur_van_de_Sint-Bavokerk_in_Haarlem_Rijksmuseum_SK-A-359.jpeg"],
 }

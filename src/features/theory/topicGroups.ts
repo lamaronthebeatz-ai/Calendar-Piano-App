@@ -9,7 +9,7 @@ export const TOPIC_GROUPS: { id: string; title: string; ids: CategoryId[] }[] = 
   { id: 'piano', title: 'Piano & Organ', ids: ['technique', 'instrument', 'expression', 'pianists', 'organ'] },
   { id: 'jazz', title: 'Jazz & Ngẫu hứng', ids: ['jazz', 'improvisation'] },
   { id: 'lich-su', title: 'Lịch sử & Thể loại', ids: ['modern', 'genres', 'composers', 'sacred', 'organology'] },
-  { id: 'viet-nam', title: 'Việt Nam & Âm nhạc học', ids: ['vietnam', 'musicology', 'philosophy', 'listening'] },
+  { id: 'viet-nam', title: 'Việt Nam & Âm nhạc học', ids: ['vietnam', 'thanhca', 'musicology', 'philosophy', 'listening'] },
 ]
 
 let last: string | undefined

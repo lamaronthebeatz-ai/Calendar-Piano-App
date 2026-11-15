@@ -24,6 +24,7 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 | **4. Lý thuyết và hoà âm** | [[ly-thuyet-am-nhac-co-truyen-viet-nam]], [[hoa-am-cho-giai-dieu-ngu-cung]], [[am-giai-ngu-cung]], [[am-nhac-va-ngon-ngu]] |
 | **5. Nhạc cụ** | [[nhac-cu-viet-nam]] |
 | **6. Piano và nhạc hàn lâm** | [[piano-viet-nam]], [[nhac-co-dien-viet-nam]], [[dem-dieu-viet-nam]] |
+| **Thánh ca Công giáo** | [[thanh-ca-viet-nam]] — mục riêng: lịch sử, phụng vụ, thanh điệu và giai điệu, nhạc sĩ, nghiên cứu |
 | **7. Nghiên cứu, giai thoại** | [[nghien-cuu-am-nhac-viet-nam]], [[giai-thoai-am-nhac-viet-nam]], [[ban-quyen-am-nhac-viet-nam]] |
 
 ## Lộ trình gợi ý
@@ -715,6 +716,8 @@ Hát ru ba miền: [[hat-ru]].
 *(Phần này dựa chủ yếu vào báo chí; xem [[dan-toc-nhac-hoc]] về phương pháp nghiên cứu.)*
 
 Liên quan: [[the-loai-am-nhac-viet-nam]], [[nhac-cu-viet-nam]], [[ranat|dàn piphat]] (họ hàng của dàn ngũ âm Khmer).
+
+**Mục riêng:** [[thanh-ca-viet-nam]] — lịch sử, văn kiện, thanh điệu – giai điệu, nhạc sĩ và nghiên cứu thánh ca Việt Nam.
 
 **Xem thêm:** [[binh-ca-va-organ-o-viet-nam]] — bình ca Gregorian, organ Nhà thờ Lớn Hà Nội và quy định phép in thánh ca.
 

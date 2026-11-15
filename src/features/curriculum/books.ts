@@ -19,6 +19,7 @@ import jazzCover3 from '../../assets/covers/jazz-theory-book-3.webp'
 import jazzCover4 from '../../assets/covers/jazz-theory-book-4.webp'
 import jazzLicksCover from '../../assets/covers/jazz-licks.webp'
 import xuongAmCover from '../../assets/covers/xuong-am-cromatic.webp'
+import thanhCaCover from '../../assets/covers/nghien-cuu-thanh-ca-viet-nam.webp'
 import type { Book } from './types'
 
 /** The Jazz Theory Book, all thirteen parts in order; the four volumes below are slices of it. */
@@ -1795,6 +1796,112 @@ Cuốn này là giáo trình **xướng âm một bè** cho chặng thứ hai c�
         { slug: 'xuong-am-cromatic-5-6', focus: 'Chuyển giọng trùng âm qua hợp âm bảy giảm; Hát hợp âm bảy giảm và giải quyết; Chuỗi hợp âm.' },
         { slug: 'xuong-am-cromatic-5-7', focus: 'Chuyển giọng trùng âm qua hợp âm bảy át và hợp âm ba tăng; Các cách giải quyết hợp âm bảy át và hợp âm ba tăng; Chuỗi hợp âm.' },
       ], exercises: ['Viết lại hợp âm bảy giảm Si – Rê – Fa – La♭ theo bốn giọng thứ khác nhau và giải quyết mỗi cách.', 'Hát hợp âm bảy át Sol – Si – Rê – Fa giải quyết về Đô, rồi viết lại thành hợp âm sáu tăng và giải quyết về Si.', 'Tìm một đường đi từ Đô trưởng tới Mi trưởng qua hai giọng trung gian; hát chuỗi hợp âm của đường đi ấy.'] },
+    ],
+  },
+  {
+    id: 'nghien-cuu-thanh-ca-viet-nam',
+    title: 'Nghiên Cứu Thánh Ca Việt Nam',
+    volume: 'Lịch sử · Phụng vụ · Thanh điệu · Nhạc sĩ',
+    subtitle: 'Thánh ca và thánh nhạc Công giáo Việt Nam qua nguồn tư liệu: từ đọc kinh và Ngắm thời truyền giáo, các nhạc đoàn 1945 – 1975, tiếng Việt vào phụng vụ, văn kiện và Uỷ ban Thánh nhạc, đến thanh điệu – giai điệu, dân ca trong thánh ca và chân dung nhạc sĩ.',
+    author: 'Lamar',
+    audience: 'Ca trưởng, ca viên, người soạn thánh ca, sinh viên âm nhạc và người nghiên cứu âm nhạc Việt Nam muốn có một bản tổng hợp có nguồn',
+    hue: 52,
+    glyph: '✠',
+    coverImage: thanhCaCover,
+    preface: `
+Thánh ca Công giáo là một trong những kho ca khúc tiếng Việt lớn nhất, được hát mỗi tuần ở hàng nghìn giáo xứ, nhưng rất ít được trình bày thành sách tham khảo. Tư liệu nằm rải rác: văn kiện của Giáo hội, tổng kết của các Uỷ ban Thánh nhạc, vài luận án trong và ngoài nước, báo chí Công giáo, hồi ức của các nhạc sĩ. Cuốn sách này gom những gì đọc được và kiểm được thành một lộ trình.
+
+## Tinh thần của sách
+- **Mỗi khẳng định có nguồn.** Mỗi chương có tài liệu tham khảo ở cuối; chỗ có số trang thì ghi ngay trong câu.
+- **Ghi chỗ lệch thay vì chọn một bên.** Năm thành lập Uỷ ban Thánh nhạc, tác giả lời một bài hát, số bài của một nhạc sĩ… khi các nguồn khác nhau, chương nêu cả hai.
+- **Tôn trọng bản quyền.** Sách của Văn Chi, Kim Long, luận án Nguyễn Xuân Thảo và các công trình còn bản quyền chỉ được tóm lược bằng lời người biên soạn, trích ngắn có trang. Phần chưa đọc được toàn văn được ghi rõ.
+- **Trung tính.** Sách trình bày âm nhạc và tư liệu; không đánh giá đức tin, không tung hô cá nhân.
+
+## Cấu trúc
+1. **Phần I – IV:** lịch sử, từ đêm Tuần Thánh thời Rhodes đến thánh ca sau 1975 và ở hải ngoại.
+2. **Phần V – VI:** văn kiện, cấu trúc phụng vụ, thể chế (Hướng dẫn mục vụ Thánh nhạc, chuẩn nhận, ca đoàn, nhạc cụ).
+3. **Phần VII – VIII:** lý thuyết — thanh điệu và giai điệu, cung kinh, Ngắm, thánh vịnh đáp ca, hoà âm hợp xướng lời Việt; chất liệu dân tộc và hội nhập văn hoá.
+4. **Phần IX:** chân dung nhạc sĩ và bảng tra.
+5. **Phần X:** đọc theo sách và luận án; danh mục nghiên cứu và những câu hỏi còn mở.
+
+## Cách đọc
+1. **Ca trưởng, ca viên:** Phần V – VI rồi các chương lý thuyết ở Phần VII.
+2. **Người soạn thánh ca:** Phần VII – VIII, sau đó đọc chân dung các nhạc sĩ ở Phần IX.
+3. **Người nghiên cứu:** đọc theo thứ tự, kết thúc ở Phần X — nơi liệt kê những gì còn thiếu tư liệu để bạn bổ sung.
+`,
+    parts: [
+      { title: 'Nhập môn: bản đồ và các cách chia thời kỳ', intro: 'Thánh ca Việt Nam được kể theo nhiều cách chia thời kỳ khác nhau. Phần mở đầu đặt chúng cạnh nhau và chỉ ra chỗ chúng khớp, chỗ lệch.', chapters: [
+        { slug: 'thanh-ca-viet-nam', focus: 'Bản đồ toàn mục, lộ trình đọc và nguyên tắc ghi nguồn.' },
+        { slug: 'phan-ky-thanh-nhac-viet-nam', focus: 'Ba cách chia thời kỳ thánh nhạc Công giáo Việt Nam (Văn Chi 1945 – 1975, Nguyễn Đình Lâm qua Bùi Trung Thành, Tuan Hoang) đặt cạnh nhau, kèm dòng thời gian các mốc từ…' },
+      ], exercises: ['Vẽ một dòng thời gian từ 1624 đến nay, đặt ba cách chia thời kỳ lên ba dòng song song; đánh dấu những mốc mà các nguồn ghi khác nhau.'] },
+      { title: 'Thời truyền giáo đến 1944', intro: 'Trước khi có "thánh ca tiếng Việt" theo nghĩa hiện đại đã có đọc kinh, ngâm Ngắm, ca vãn và sách Nôm Công giáo. Phần này phân biệt rõ chứng cứ sơ cấp với điều chỉ được kể lại.', chapters: [
+        { slug: 'dem-tuan-thanh-thoi-rhodes', focus: 'Đoạn Alexandre de Rhodes kể việc chia thương khó thành mười lăm đề tài và tắt dần mười lăm ngọn nến ở Đàng Ngoài;' },
+        { slug: 'maiorica-va-sach-nom-cong-giao', focus: 'Girolamo Maiorica SJ (sinh 1591 hoặc 1589, mất 27.01.1656) được ghi là soạn 48 cuốn sách đạo bằng chữ Nôm;' },
+        { slug: 'ca-van-va-van-van-cong-giao', focus: 'Các tác phẩm văn vần Công giáo bằng chữ Nôm thế kỷ XVII – XIX (lục bát, song thất lục bát, vãn, diễn ca) theo bài tổng quan của Bùi Công Thuấn;' },
+        { slug: 'nhung-bai-hat-tieng-viet-dau-tien', focus: 'Các nhân vật và tập hát được nêu cho giai đoạn trước 1945: Lm.' },
+      ], exercises: ['Chọn một mốc trong phần này (bản văn Ngắm, sách hát đầu tiên…) và liệt kê: nguồn nào nói, nguồn đó thuộc loại sơ cấp hay thứ cấp, còn thiếu gì để khẳng định.'] },
+      { title: '1945 – 1975: các nhạc đoàn và tiếng Việt vào phụng vụ', intro: 'Ba mươi năm hình thành kho thánh ca tiếng Việt: các nhạc đoàn miền Bắc, cuộc di cư 1954, đời sống thánh nhạc miền Nam và các văn kiện cho phép dùng tiếng Việt trong phụng vụ.', chapters: [
+        { slug: 'nhac-doan-le-bao-tinh', focus: 'Nhạc đoàn thành lập tháng 7/1945 (Sở Kiện, Hà Nam theo hai nguồn;' },
+        { slug: 'cac-nhac-doan-mien-bac-1946-1957', focus: 'Điểm lại Sao Mai (Bùi Chu), Ca Thánh (Phát Diệm), Thiên Cung (Hải Phòng), Minh Nhạc (Bắc Ninh) và Tiếng Chuông Nam (Thanh Hoá) cùng các tập in của họ;' },
+        { slug: 'thanh-nhac-mien-nam-1954-1975', focus: 'Sau 1954 nhiều nhạc sĩ vào Nam, hình thành các nhóm Thánh Gia, Phụng Ca, Suối Nhạc, tập Hương Thánh Kinh, ca đoàn Hồn Nước và Seraphim;' },
+        { slug: 'tieng-viet-vao-phung-vu-1964-1971', focus: 'Bảng các văn kiện cho phép dùng tiếng Việt trong phụng vụ: sắc lệnh 15/6/1964, cho thánh ca 10/9/1965, Lễ Quy 1968, Sách Lễ Rôma 1971, kèm Uỷ ban Phụng tự (24/01/1968);' },
+      ], exercises: ['Lập bảng các nhạc đoàn: năm, nơi thành lập, thành viên, tuyển tập; cột cuối ghi chỗ các nguồn còn lệch nhau.'] },
+      { title: 'Sau 1975: trong nước và hải ngoại', intro: 'Thánh ca tiếp tục ở hai không gian: trong nước với sách hát chung, Uỷ ban Thánh nhạc và các ban thánh nhạc giáo phận; ở hải ngoại với các cộng đoàn và nhà xuất bản sách hát.', chapters: [
+        { slug: 'thanh-ca-sau-1975', focus: 'Thánh ca trong nước sau 1975: nhạc sĩ tự in ronéo vì phần lớn toà giám mục không cấp imprimatur, các tập Chung Lời Ngợi Ca, Trầm Khúc Hoan Ca, Kinh Ngọc, nhạc Taizé…' },
+        { slug: 'thanh-ca-hai-ngoai', focus: 'Điều có nguồn về thánh ca của người Việt ở hải ngoại sau 1975 còn rất ít: hai sách hát của OCP (2001 và 2009), hành trình của Paul Văn Chi, Hải Linh, Ngô Duy Linh;' },
+      ], exercises: ['So sánh hai bài: những câu hỏi nào về thánh ca hải ngoại hiện chưa có nguồn trả lời, và bạn sẽ tìm ở đâu?'] },
+      { title: 'Văn kiện và phụng vụ', intro: 'Thánh ca được dùng trong phụng vụ theo những quy định cụ thể. Phần này đọc các văn kiện từ 1903 đến 1967 và giải thích vị trí của từng bài hát trong Thánh lễ và năm phụng vụ.', chapters: [
+        { slug: 'tu-tra-le-sollecitudini-den-vatican-ii', focus: 'Bốn văn kiện của Toà Thánh từ tự sắc Tra le sollecitudini (22-11-1903) đến huấn thị Musicam sacram (5-3-1967) và cách quy định về bình ca, tiếng bản xứ, phụ nữ trong…' },
+        { slug: 'sacrosanctum-concilium-chuong-vi', focus: 'Chương VI hiến chế Sacrosanctum Concilium (4-12-1963) gồm số 112–121: kho tàng thánh nhạc, ca đoàn, đào tạo, bình ca, nhạc bản địa, organ và người sáng tác.' },
+        { slug: 'musicam-sacram-1967', focus: 'Huấn thị Musicam sacram (5-3-1967) chia việc hát trong Thánh lễ thành ba bậc, quy định vai trò ca đoàn, nhạc cụ và việc phổ nhạc bản dịch.' },
+        { slug: 'latinh-va-tieng-viet-trong-thanh-nhac', focus: 'Từ điều 7 năm 1903 (cấm hát tiếng bản xứ ở nghi lễ trọng thể) đến Musicam sacram 1967 và Hướng dẫn mục vụ Thánh nhạc (số 57–62, 70–71): lập trường về Latinh và tiếng…' },
+        { slug: 'cac-bai-hat-trong-thanh-le', focus: 'Bảng vị trí và quy tắc hát từng phần Thánh lễ theo Hướng dẫn mục vụ Thánh nhạc (số 126–190) và Quy chế tổng quát Sách lễ Rôma bản Việt (số 40–90), từ ca nhập lễ đến…' },
+        { slug: 'nam-phung-vu-va-chon-bai-hat', focus: 'Các mùa trong năm phụng vụ (Vọng, Giáng sinh, Chay, Tam nhật, Phục sinh, Thường niên) và quy tắc kèm theo về Alleluia, Gloria, nhạc cụ khi chọn bài hát, kể cả các…' },
+      ], exercises: ['Chọn một Chúa nhật bất kỳ: lập danh sách các phần cần hát theo đúng thứ tự Thánh lễ, ghi quy tắc nào (số điều văn kiện) quyết định lựa chọn ở từng phần.'] },
+      { title: 'Thể chế và thực hành', intro: 'Ai quyết định một bài hát được dùng trong phụng vụ, ca đoàn tổ chức thế nào, nhạc cụ nào được phép: Hướng dẫn mục vụ Thánh nhạc, Uỷ ban Thánh nhạc, chuẩn nhận và tác quyền.', chapters: [
+        { slug: 'huong-dan-muc-vu-thanh-nhac', focus: 'Văn kiện 232 số của Ủy ban Thánh nhạc HĐGMVN: quyết định áp dụng ký ngày 28-4-2017, bản cập nhật tháng 12-2022, dựa nhiều vào Sing to the Lord (HĐGM Hoa Kỳ, 2007).' },
+        { slug: 'uy-ban-thanh-nhac', focus: 'Cơ quan thánh nhạc của Hội đồng Giám mục Việt Nam: các mốc thành lập lệch nhau (1967, 1972, 1994, 1996), nội san Hương Trầm, các kỳ hội thảo (27 năm 2010, 46 năm…' },
+        { slug: 'chuan-nhan-imprimatur-thanh-ca', focus: 'Thủ tục chuẩn nhận bài thánh ca (*imprimatur*, phép in) hai tầng thẩm quyền, Thông cáo 2/94 và 3/94 (30-8-1994), ba thẩm định phụng vụ – mục vụ – âm nhạc, tiêu chuẩn…' },
+        { slug: 'ca-doan-ca-truong-ca-xuong-vien', focus: 'Vai trò ca đoàn, ca trưởng, người xướng thánh vịnh, ca xướng viên và nhạc công theo Musicam sacram 1967, Quy chế Sách lễ Rôma và Hướng dẫn mục vụ Thánh nhạc (số 29–56).' },
+        { slug: 'nhac-cu-trong-phung-vu-viet-nam', focus: 'Từ điều 19 năm 1903 (cấm piano) đến Sacrosanctum Concilium 120, Musicam sacram 62–66 và Hướng dẫn mục vụ số 81–97;' },
+      ], exercises: ['Lấy một bài thánh ca mới bạn biết: thử thẩm định theo ba tiêu chuẩn phụng vụ – mục vụ – âm nhạc, mỗi tiêu chuẩn ba câu hỏi.'] },
+      { title: 'Lý thuyết: lời Việt và giai điệu', intro: 'Tiếng Việt có sáu thanh điệu, nên viết giai điệu cho lời Việt là vấn đề lý thuyết trung tâm của thánh ca. Phần này trình bày từng hệ quy tắc đã được đề xuất và nói rõ hệ nào có nguồn gốc ở đâu.', chapters: [
+        { slug: 'thanh-dieu-va-giai-dieu-thanh-ca', focus: 'Tiếng Việt có sáu thanh (năm hoặc bốn ở một số vùng) nên giai điệu đặt cho lời Việt dễ làm đổi nghĩa;' },
+        { slug: 'cung-kinh-cung-sach', focus: 'Cách người Công giáo Việt Nam ngâm lời kinh và đọc sách theo công thức vài nốt, chia ba sắc thái Vui, Thương, Mừng;' },
+        { slug: 'ngam-mua-chay', focus: 'Truyền thống ngâm mười lăm đoạn suy niệm Thương khó trong Mùa Chay, có từ thời Alexandre de Rhodes theo một nguồn sơ cấp, nhưng tác giả và niên đại bản văn hiện dùng…' },
+        { slug: 'thanh-ca-co-truyen-va-van-dang-hoa', focus: 'Nhóm bài hát của giáo dân theo thang ngũ cung, phần lớn ở ba điệu Xang, Xự, Xê (có thêm Liu);' },
+        { slug: 'thanh-vinh-dap-ca-va-dau-tru', focus: 'Vị trí của thánh vịnh đáp ca trong Thánh lễ (QCTQ số 61, HDMVTN số 144 – 149) và đề xuất ba dấu trụ cao – trung – trầm của Ngọc Kôn (2012) để xướng lời Việt;' },
+        { slug: 'dau-giong-trong-hop-xuong', focus: 'Theo luận án Nguyễn Bách (2015), ca từ và dấu giọng là khó khăn hàng đầu của hoà âm hợp xướng tiếng Việt;' },
+        { slug: 'hoang-kieu-thanh-dieu-va-dieu-thuc', focus: 'Luận điểm của Hoàng Kiều (2001, qua tổng quan 2025) rằng thanh điệu quyết định cấu trúc điệu thức nhạc cổ truyền Việt Nam, nghiên cứu 127 làn điệu chèo;' },
+      ], exercises: ['Chọn một câu Thánh vịnh tiếng Việt khoảng 12 chữ: ghi thanh điệu từng chữ, viết hai giai điệu theo hai hệ quy tắc khác nhau, hát lại và ghi chỗ lời bị "ngược dấu".'] },
+      { title: 'Sáng tác và hội nhập văn hoá', intro: 'Thánh ca Việt dùng chất liệu dân tộc đến đâu: ngũ cung, làn điệu Quan họ, âm nhạc người Mường; và cuộc thảo luận về "hội nhập" hay "tiếp biến" văn hoá.', chapters: [
+        { slug: 'bon-huong-sang-tac-thanh-ca', focus: 'Phân loại của Tùng Công Kiều (Boston University, 2009) về bốn hướng sáng tác thánh ca Việt Nam: dùng bình ca, hợp xướng Tây phương, nhạc trẻ và hội nhập thật sự trên…' },
+        { slug: 'ngu-cung-trong-thanh-ca', focus: 'Con số duy nhất tìm thấy về tỉ lệ ngũ cung trong thánh ca đương đại là 10 trên 20 bài phụng vụ dùng nhiều nhất (Thảo, qua Kiều), kèm ước lượng truyền miệng 100.000 bài;' },
+        { slug: 'hoi-nhap-van-hoa-trong-thanh-ca', focus: 'Hội nhập văn hoá (inculturation) và tiếp biến văn hoá (acculturation) áp dụng cho thánh ca: câu hỏi của Thảo, ba lớp hội nhập theo các nguồn, câu trích Thư chung 1980…' },
+        { slug: 'thanh-ca-lan-dieu-quan-ho', focus: 'Năm bài thánh ca đặt lời trên làn điệu Quan họ cổ (Tám mối phúc thật, Ai hỏi vì sao, Mến Chúa yêu người, Nghĩa sinh thành, Chúa chăn nuôi tôi) theo Nguyễn Đình Lâm…' },
+        { slug: 'thanh-nhac-nguoi-muong-phat-diem', focus: 'Khảo sát thực địa năm 2020 của Bùi Trung Thành ở hai giáo xứ Mường Đồng Bài và An Ngải (Nho Quan, Ninh Bình): làn Bộ Mẹng và Rằng Thường trong Ngắm, bài tự sáng tác,…' },
+      ], exercises: ['Phân tích một bài thánh ca bạn biết: thang âm (ngũ cung hay bảy âm), hình thức, quan hệ thanh điệu – giai điệu; xếp nó vào một trong bốn hướng sáng tác và giải thích.'] },
+      { title: 'Chân dung nhạc sĩ', intro: 'Những người viết nên kho thánh ca tiếng Việt, mỗi người một trang có nguồn; bảng tra cuối phần gom cả những người mới chỉ có tên và năm.', chapters: [
+        { slug: 'bang-tra-nhac-si-thanh-ca', focus: 'Bảng tra nhanh các nhạc sĩ thánh ca đã xuất hiện trong thư viện: tên thánh, bút danh, giáo dân hay linh mục, năm sinh – mất, nguồn và chỗ lệch.' },
+        { slug: 'kim-long', focus: 'Phêrô Nguyễn Kim Long (9.1.1941 – 17.6.2025), linh mục học bình ca ở Rôma, tác giả loạt tuyển tập Ca lên đi;' },
+        { slug: 'van-chi', focus: 'Paul Chu Văn Chi (sinh 14.5.1949), linh mục thụ phong 15.6.1975, bị giam từ 5.3.1984, sang Úc 1989;' },
+        { slug: 'hai-linh', focus: 'Hải Linh (Phanxicô Trần Văn Linh, 1920 – 6.1.1988), giáo dân, nhạc sư và ca trưởng;' },
+        { slug: 'hang-belem-1945', focus: 'Bài thánh ca Giáng sinh 1945 của Hải Linh, được kể là viết xong trong ba ngày và hát lần đầu ở nhà thờ chính toà Phát Diệm đêm Giáng sinh;' },
+        { slug: 'hung-lan', focus: 'Hùng Lân (Phêrô, 23.6.1922 – 17.9.1986), đoàn trưởng Nhạc đoàn Lê Bảo Tịnh, nhà giáo âm nhạc với nhiều giáo trình;' },
+        { slug: 'hoai-duc-va-cao-cung-len', focus: 'Linh mục Giuse Lê Đức Triệu, bút danh Hoài Đức (1.7.1922 – 7.7.2007), phó đoàn Nhạc đoàn Lê Bảo Tịnh;' },
+        { slug: 'tien-dung', focus: 'Linh mục Antôn Nguyễn Tiến Dũng (8.6.1924 – 8.8.2005), học sáng tác ở Rôma, lập trường Suối Nhạc năm 1968, tác giả giáo trình và cuốn Tôi viết ca khúc tiếng Việt;' },
+        { slug: 'vinh-hanh-huong-thanh-kinh', focus: 'Linh mục Giuse Trần Phúc Hạnh, bút danh Vinh Hạnh (7.5.1931 – 16.3.1966), đưa Thánh Kinh vào thánh ca qua tập Hương Thánh Kinh (1957, 46 bài;' },
+        { slug: 'ngo-duy-linh', focus: 'Linh mục Giuse Ngô Duy Linh (30.4.1922 – 20.2.1998), bút danh Thăng Ca, học hoà âm ở Paris, lập Trường Quốc gia Âm nhạc và Kịch nghệ Huế (1961), tự nhận là nhà giáo…' },
+        { slug: 'thanh-tam-va-ban-nhac-alleluia', focus: 'Linh mục Phêrô Nguyễn Thành Tâm, Dòng Chúa Cứu Thế, cùng anh em lập ban nhạc Alleluia năm 1967 với bài "Vào Đời";' },
+        { slug: 'nguyen-van-hoa-seraphim', focus: 'Phaolô Nguyễn Văn Hoà (20.7.1931 – 14.2.2017), linh mục thụ phong 1959, sau là giám mục Nha Trang và chủ tịch Ủy ban Thánh nhạc;' },
+      ], exercises: ['Chọn một nhạc sĩ trong bảng tra chưa có trang riêng: tìm hai nguồn độc lập về năm sinh – mất và ba tác phẩm, ghi rõ nguồn và chỗ lệch.'] },
+      { title: 'Theo sách và luận án; câu hỏi còn mở', intro: 'Đọc các công trình chính theo lời của tác giả: Kim Long, Văn Chi, luận án Nguyễn Xuân Thảo; điểm danh các nghiên cứu và những khoảng trống tư liệu.', chapters: [
+        { slug: 'kim-long-ve-thanh-nhac', focus: 'Quan điểm của Lm Kim Long (phỏng vấn RFA 2011, bài tiểu sử, đoạn trích của Lm Xuân Thảo): thánh nhạc trước hết là lời cầu nguyện, giai điệu đơn sơ, học bình ca để…' },
+        { slug: 'van-chi-catholic-choral-music-in-vietnam', focus: 'Mô tả cuốn Catholic Choral Music in Vietnam 1945–1975 của Paul Văn Chi (Portland, 286 tr.): ba thời kỳ 1945–55, 1955–70, 1970–75 và các tiêu chí phân tích;' },
+        { slug: 'luan-an-xuan-thao-2007', focus: 'Tóm lược Chương II (tr.' },
+        { slug: 'cac-cong-trinh-nghien-cuu-thanh-ca', focus: 'Bảng các công trình học thuật và tài liệu chính về thánh ca Việt Nam, kèm mức người biên soạn đã đọc: Thảo 2007, Kiều 2009, Văn Chi, Bách 2015, Bùi Trung Thành 2024…' },
+        { slug: 'nhung-dieu-chua-biet-ve-thanh-ca-viet-nam', focus: 'Danh sách những điều chưa tìm được nguồn hoặc nguồn còn lệch trong tư liệu về thánh ca Công giáo Việt Nam: tên thật, năm tháng, tuyển tập, văn bản gốc, và các nghiên…' },
+      ], exercises: ['Từ danh sách khoảng trống, chọn một câu hỏi và viết đề cương nghiên cứu một trang: câu hỏi, nguồn cần tìm, phương pháp.'] },
     ],
   },
 ]

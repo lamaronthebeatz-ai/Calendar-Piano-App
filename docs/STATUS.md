@@ -7,6 +7,7 @@
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
+- **Thánh ca Việt Nam** (15/11): mục mới `thanhca` 52 bài + sách *Nghiên Cứu Thánh Ca Việt Nam* (10 phần), tư liệu từ 5 lượt tra mạng lưu ở `docs/research/thanh-ca/` — `notes/thanh-ca.md`. **Chờ Lamar:** bản sách Văn Chi / Kim Long (nếu có) để tóm lược từng chương.
 - **Thuật ngữ → từ điển** (15/11): 2.384 liên kết `[[g:id]]` tự động lúc build trong 690 bài (Lý thuyết + Âm nhạc học), thẻ Grove khi bấm, `/terms?g=` ghim mục, mục Grove có link về bài thư viện — `notes/terms.md`. Có thể còn nối sai lẻ tẻ: thấy chữ nào sai thì thêm vào `GROVE_STOP`.
 - **Trang Về Trung tâm** (14/11): `/settings/center`, ảnh chụp app tràn viền, 12 hệ thống — `notes/features.md`.
 - **Quay lại đúng trang** (14/11): đóng sách về lại trang đã mở sách; nút quay lại ở Thư mục/Sổ tay/Đề tài/Bản nhạc lùi lịch sử — `notes/ui.md`.
@@ -38,7 +39,7 @@
 5. Nút + quạt: thêm "Ghi nhanh" cần đổi bố cục 8 → 9 mục (hỏi Lamar trước).
 
 ## Số liệu nền (để biết khi có gì lệch)
-- 1.479 bài, 153 nơi trên bản đồ, 0 link hỏng; 297 alias trùng (đã có luật, không cần sửa nội dung).
+- 1.531 bài, 153 nơi trên bản đồ, 0 link hỏng; 297 alias trùng (đã có luật, không cần sửa nội dung).
 - 60 unit test; Playwright Chromium ~215 test, ~5 phút; lint đúng **4 warning** cũ.
 - Phân tích (hợp xướng Bach): gốc hợp âm 83,9% · giọng 77,1% · gốc + thể đảo 78,3%.
 - Ngân sách: JS khởi động 419/600 KB, chỉ mục 272/600 KB, precache 10,6/15 MB.

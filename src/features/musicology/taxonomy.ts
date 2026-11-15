@@ -229,6 +229,7 @@ export const BRANCHES: Branch[] = [
       { title: 'Nhạc sĩ', slugs: ['nhac-si-viet-nam', 'van-cao', 'pham-duy', 'luu-huu-phuoc', 'nguyen-xuan-khoat', 'nguyen-van-thuong', 'doan-chuan', 'do-nhuan', 'hoang-viet', 'pham-tuyen', 'tran-tien', 'phu-quang', 'dang-huu-phuc', 'ton-that-tiet', 'nguyen-thien-dao', 'le-thuong', 'van-chung', 'hoang-trong', 'hoang-thi-tho', 'tu-cong-phung', 'y-van', 'nguyen-anh-9', 'pho-duc-phuong', 'hong-dang', 'nguyen-tai-tue', 'nguyen-cuong', 'tran-lap', 'son-tung-m-tp'] },
       { title: 'Lý thuyết và thực hành', slugs: ['ly-thuyet-am-nhac-co-truyen-viet-nam', 'am-giai-ngu-cung', 'hoa-am-cho-giai-dieu-ngu-cung', 'dem-dieu-viet-nam', 'hoi-trong-nhac-tai-tu-cai-luong', 'long-ban-va-ky-thuat-to-diem'] },
       { title: 'Nghiên cứu và giai thoại', slugs: ['nghien-cuu-am-nhac-viet-nam', 'giai-thoai-am-nhac-viet-nam', 'dan-toc-nhac-hoc'] },
+      { title: 'Thánh ca Công giáo Việt Nam', cats: ['thanhca'] },
     ],
   },
 
