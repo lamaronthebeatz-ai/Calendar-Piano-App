@@ -183,11 +183,14 @@ export function fixOctaves<T extends { m: number; t: number; d: number; a: numbe
   })
   const once = fixed.filter((n, i) => !fixed.some((o, j) => j !== i && o.m === n.m && Math.abs(o.t - n.t) < 0.06 && (o.a > n.a || (o.a === n.a && j < i))))
   return once.filter((n) => {
-    const b = once.find((o) => o.m === n.m - 12 && Math.abs(o.t - n.t) < 0.07)
-    if (!b || b.d < 0.08) return true
-    const from = Math.floor((b.t + 0.03) * rate)
-    const len = Math.min(Math.floor(Math.min(b.d - 0.03, 0.3) * rate), 16384)
-    if (len < 1024 || from + len > pcm.length) return true
+    // a ghost's onset can trail the real note's by a frame or two more on a slow machine (CI dropped a few: kept C4 on C3)
+    const b = once.find((o) => o.m === n.m - 12 && Math.abs(o.t - n.t) < 0.12)
+    if (!b) return true
+    // the two sound together, so when the lower note is cut short its partials are read where the upper one sounds
+    const span = b.d >= 0.08 ? b : n
+    const from = Math.floor((span.t + 0.03) * rate)
+    const len = Math.min(Math.floor(Math.min(span.d - 0.03, 0.3) * rate), 16384, pcm.length - from)
+    if (len < 1024) return true
     // only the notes sounding then may explain a partial (a note a beat later once kept every ghost)
     // nor a note that is itself one of the lower note's partials (a ghost twelfth would vouch for a ghost octave)
     const others = once.filter((o) => o !== n && o !== b && o.t < b.t + 0.3 && o.t + o.d > b.t + 0.03 && !PARTIALS.includes(o.m - b.m)).map((o) => o.m)
