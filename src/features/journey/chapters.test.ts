@@ -9,16 +9,18 @@ import { MUSIC } from './music'
 // picture must be on disk with a credit — the same guarantee check:links gives to [[links]].
 const slugs = new Set(ARTICLES.map((a) => a.slug))
 const picture = (id: string) => existsSync(`public/images/journey/${id}.webp`) && !!CREDITS[id]
+/** A background also has its phone-sized copy. */
+const backdrop = (id: string) => picture(id) && existsSync(`public/images/journey/${id}-m.webp`)
 
 describe.each(CHAPTERS)('chương $numeral — $title', (ch) => {
   it('mỗi cảnh trỏ tới bài có thật, ảnh có nguồn, đáp án nằm trong các lựa chọn', () => {
-    expect(picture(ch.cover)).toBe(true)
+    expect(backdrop(ch.cover), `cover ${ch.cover}`).toBe(true)
     expect(MUSIC[ch.theme], `theme ${ch.theme}`).toBeDefined()
     for (const s of ch.scenes) {
       expect(slugs.has(s.quest.read), `${s.id}: quest.read ${s.quest.read}`).toBe(true)
       expect(slugs.has(s.card.read), `${s.id}: card.read ${s.card.read}`).toBe(true)
       if (s.npc.slug) expect(slugs.has(s.npc.slug), `${s.id}: npc ${s.npc.slug}`).toBe(true)
-      expect(picture(s.bg), `${s.id}: bg ${s.bg}`).toBe(true)
+      expect(backdrop(s.bg), `${s.id}: bg ${s.bg}`).toBe(true)
       expect(MUSIC[s.id]?.src, `${s.id}: nhạc nền`).toMatch(/^https:\/\/upload\.wikimedia\.org\//)
       if (s.npc.img) expect(picture(s.npc.img), `${s.id}: img ${s.npc.img}`).toBe(true)
       expect(s.quest.answer).toBeGreaterThanOrEqual(0)

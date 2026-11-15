@@ -1,4 +1,4 @@
-/** Where each picture of the journey comes from: [Commons file, author, licence, page]. All public domain (Commons PD-Art / PD-old). */
+/** Where each picture of the journey comes from: [Commons file, author, licence, page]. Public domain unless the entry names a CC licence. */
 export const CREDITS: Record<string, [string, string, string, string]> = {
   'scriptorium': ['Tavernier_Jean_Mielot.jpg', 'Jean Le Tavernier (thế kỷ XV)', 'Public domain', 'https://commons.wikimedia.org/wiki/File:Tavernier_Jean_Mielot.jpg'],
   'gregory-dove': ['Gregory_I_-_Antiphonary_of_Hartker_of_Sankt_Gallen.jpg', 'Antiphonary of Hartker, Sankt Gallen', 'Public domain', 'https://commons.wikimedia.org/wiki/File:Gregory_I_-_Antiphonary_of_Hartker_of_Sankt_Gallen.jpg'],
@@ -38,4 +38,22 @@ export const CREDITS: Record<string, [string, string, string, string]> = {
   'petrucci': ['Petrucci2.jpg', 'Petrucci, Harmonice Musices Odhecaton (1501)', 'Public domain', 'https://commons.wikimedia.org/wiki/File:Petrucci2.jpg'],
   'san-marco': ['Gentile_bellini,_processione_in_piazza_san_marco_03.jpg', 'Gentile Bellini, Rước lễ ở quảng trường San Marco (1496)', 'Public domain', 'https://commons.wikimedia.org/wiki/File:Gentile_bellini%2C_processione_in_piazza_san_marco_03.jpg'],
   'ditchley': ['Gheeraerts_Elizabeth_I_The_Ditchley_Portrait_c1592.jpg', 'Marcus Gheeraerts, Chân dung Ditchley của Elizabeth I (k. 1592)', 'Public domain', 'https://commons.wikimedia.org/wiki/File:Gheeraerts_Elizabeth_I_The_Ditchley_Portrait_c1592.jpg'],
+  'orfeo-gennari': ["Cesare_Gennari_Orfeo.jpg", "Cesare Gennari, Orfeo (thế kỷ XVII)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Cesare_Gennari_Orfeo.jpg"],
+  'gonzaga': ["Frans_Pourbus_the_Younger_-_Portrait_of_Vicenzo_I._Gonzaga,_Duke_of_Mantua.jpg", "Frans Pourbus, Vincenzo I Gonzaga, công tước Mantova", 'Public domain', "https://commons.wikimedia.org/wiki/File:Frans_Pourbus_the_Younger_-_Portrait_of_Vicenzo_I._Gonzaga%2C_Duke_of_Mantua.jpg"],
+  'strozzi': ["Bernardo_Strozzi_001.jpg", "Bernardo Strozzi, Người chơi viola da gamba (k. 1635; được cho là vẽ Barbara Strozzi)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Bernardo_Strozzi_001.jpg"],
+  'schutz': ["Schutz.jpg", "Christoph Spetner, chân dung Heinrich Schütz", 'Public domain', "https://commons.wikimedia.org/wiki/File:Schutz.jpg"],
+  'versailles': ["Chateau_de_Versailles_1668_Pierre_Patel.jpg", "Pierre Patel, Lâu đài Versailles (1668)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Chateau_de_Versailles_1668_Pierre_Patel.jpg"],
+  'purcell-closterman': ["Purcell_portrait.jpg", "John Closterman, chân dung Henry Purcell", 'Public domain', "https://commons.wikimedia.org/wiki/File:Purcell_portrait.jpg"],
+  'ottoboni': ["Pietro_Ottoboni_by_Francesco_Trevisani.jpg", "Francesco Trevisani, Hồng y Pietro Ottoboni", 'Public domain', "https://commons.wikimedia.org/wiki/File:Pietro_Ottoboni_by_Francesco_Trevisani.jpg"],
+  'buxtehude': ["Dieterich_Buxtehude.png", "Johannes Voorhout, Buổi hoà nhạc gia đình (1674) — ảnh: Alexander M. Winkler", 'CC BY-SA 4.0', "https://commons.wikimedia.org/wiki/File:Dieterich_Buxtehude.png"],
+  'guardi-concert': ["Francesco-Guardi_Venezianisches-Galakonzert-8574_833139_BSTGS.jpg", "Francesco Guardi, Buổi hoà nhạc gala ở Venezia (1782) — ảnh: Bayerische Staatsgemäldesammlungen", 'CC BY-SA 4.0', "https://commons.wikimedia.org/wiki/File:Francesco-Guardi_Venezianisches-Galakonzert-8574_833139_BSTGS.jpg"],
+  'brandenburg': ["Title_page_of_Brandenburg_Concertos.png", "Bach, trang đề tặng Brandenburg Concertos (1721)", 'CC0', "https://commons.wikimedia.org/wiki/File:Title_page_of_Brandenburg_Concertos.png"],
+  'bach-haussmann': ["Johann_Sebastian_Bach.jpg", "Elias Gottlob Haussmann, Bach (1748)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach.jpg"],
+  'rameau': ["Attribué_à_Joseph_Aved,_Portrait_de_Jean-Philippe_Rameau_(vers_1728)_-_001.jpg", "Được cho là của Joseph Aved, Rameau (k. 1728)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Attribu%C3%A9_%C3%A0_Joseph_Aved%2C_Portrait_de_Jean-Philippe_Rameau_%28vers_1728%29_-_001.jpg"],
+  'handel-denner': ["George_Frideric_Handel_by_Balthasar_Denner.jpg", "Balthasar Denner, Handel", 'Public domain', "https://commons.wikimedia.org/wiki/File:George_Frideric_Handel_by_Balthasar_Denner.jpg"],
+  'monteverdi': ["Bernardo_Strozzi_-_Claudio_Monteverdi_(c.1630).jpg", "Bernardo Strozzi, Monteverdi (k. 1630)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Bernardo_Strozzi_-_Claudio_Monteverdi_%28c.1630%29.jpg"],
+  'lully': ["Paul_Mignard_-_Jean-Baptiste_Lully.jpg", "Paul Mignard, Lully", 'Public domain', "https://commons.wikimedia.org/wiki/File:Paul_Mignard_-_Jean-Baptiste_Lully.jpg"],
+  'purcell': ["Portrait_of_Henry_Purcell_(cropped).png", "Chân dung Henry Purcell", 'Public domain', "https://commons.wikimedia.org/wiki/File:Portrait_of_Henry_Purcell_%28cropped%29.png"],
+  'corelli': ["Arcangelo_Corelli,_portrait_by_Hugh_Howard_(1697).jpg", "Hugh Howard, Corelli (1697)", 'Public domain', "https://commons.wikimedia.org/wiki/File:Arcangelo_Corelli%2C_portrait_by_Hugh_Howard_%281697%29.jpg"],
+  'vivaldi': ["Vivaldi.jpg", "Chân dung được cho là Vivaldi", 'Public domain', "https://commons.wikimedia.org/wiki/File:Vivaldi.jpg"],
 }

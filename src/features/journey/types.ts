@@ -12,6 +12,8 @@ export interface Line {
   text: string
   /** A real quotation: where it comes from (article slug). */
   quote?: string
+  /** An invented episode (not just reconstructed speech): shown as such, so it is never mistaken for history. */
+  fiction?: boolean
 }
 
 export interface Quest {

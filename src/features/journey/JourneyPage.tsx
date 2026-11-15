@@ -13,6 +13,8 @@ import type { Card, Chapter, Claim, Scene, Verdict } from './types'
 import './journey.css'
 
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
+/** Backgrounds come in two widths: 1080 for phones, 1920 for wide screens. */
+const bg = (id: string) => ({ src: IMG(id), srcSet: `${IMG(id + '-m')} 1080w, ${IMG(id)} 1920w`, sizes: '100vw' })
 /** Renaissance portraits the player can wear (public domain, credits.ts). */
 const PORTRAITS = ['p-leonardo-musician', 'p-durer', 'p-van-eyck', 'p-castiglione', 'p-ermine', 'p-pollaiuolo']
 const key = (c: Chapter, s: Scene | Claim) => `${c.id}/${s.id}`
@@ -110,7 +112,7 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
   const judged = chapter.court.claims.filter((c) => save.verdicts[key(chapter, c)]).length
   return (
     <section className="jr-atlas">
-      <img className="jr-atlas-bg" src={IMG(chapter.cover)} alt="" />
+      <img className="jr-atlas-bg" {...bg(chapter.cover)} alt="" />
       <div className="jr-atlas-wash" />
       <header className="jr-atlas-head">
         <Exit />
@@ -285,7 +287,7 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
   return (
     <section className={`jr-scene is-${phase}`} onClick={phase === 'talk' || phase === 'title' ? advance : undefined}>
       <div className="jr-frame">
-        <img className="jr-bg" src={IMG(scene.bg)} alt="" style={{ objectPosition: scene.focus }} />
+        <img className="jr-bg" {...bg(scene.bg)} alt="" style={{ objectPosition: scene.focus }} />
       </div>
       <div className="jr-grade" />
       <div className="jr-glow" />
@@ -348,7 +350,9 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
               ))}
           </p>
           <p className="jr-dialog-foot">
-            <span>Lời dựng lại · {line + 1}/{scene.lines.length}</span>
+            <span>
+              {l.fiction ? <b className="jr-fiction">✦ Tình tiết hư cấu</b> : 'Lời dựng lại'} · {line + 1}/{scene.lines.length}
+            </span>
             <span className="jr-tap">Chạm để tiếp ›</span>
           </p>
         </div>
@@ -458,7 +462,7 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
   }, [chapter])
   return (
     <section className="jr-court">
-      <img className="jr-atlas-bg" src={IMG(chapter.cover)} alt="" />
+      <img className="jr-atlas-bg" {...bg(chapter.cover)} alt="" />
       <div className="jr-atlas-wash" />
       <header className="jr-atlas-head">
         <button className="jr-exit" aria-label="Về bản đồ chương" onClick={() => go({})}>
