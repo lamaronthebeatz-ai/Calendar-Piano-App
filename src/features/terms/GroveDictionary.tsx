@@ -1,20 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ArrowUpRightIcon } from '../../components/icons'
 import { normalize } from '../theory/wiki'
-import indexUrl from './grove-index.json?url'
+import { Link } from 'react-router-dom'
+import { articleForGrove, loadGrove, ROMAN, type GroveHead as Head } from './grove'
 
-/** One headword of Grove (scripts/grove/build.py): id, headword, volume, page, piece of the letter it is fetched in, kind, appendix of vol. V, Vietnamese title + gist. */
-interface Head {
-  id: string
-  h: string
-  v: number
-  p: number
-  s: string
-  k: Kind
-  a?: 1
-  t?: string
-  g?: string
-}
 interface Entry {
   id: string
   head: string
@@ -37,7 +26,6 @@ const KINDS: { id: '' | Kind; label: string }[] = [
   { id: 'institution', label: 'Tổ chức' },
 ]
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('')
-const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V']
 // the Cornell copies on the Internet Archive, vol. I–V
 const SCAN = ['', 'cu31924021782838', 'cu31924021782846', 'cu31924021782853', 'cu31924021782861', 'cu31924021782879']
 const YEAR = [0, 1904, 1906, 1907, 1908, 1910]
@@ -54,18 +42,17 @@ const loadShard = (s: string) => {
  * 5 vols, New York: Macmillan, 1904–1910 — public domain. Each entry: the Vietnamese text written for the app
  * (where done), the original English (OCR), the page and a link to that page of the scan for checking.
  */
-export function GroveDictionary({ q }: { q: string }) {
+export function GroveDictionary({ q, focus }: { q: string; focus?: string }) {
   const [heads, setHeads] = useState<Head[] | null>(null)
   const [letter, setLetter] = useState('a')
   const [kind, setKind] = useState<'' | Kind>('')
   const [onlyVi, setOnlyVi] = useState(false)
   const [open, setOpen] = useState<string | null>(null)
   const [limit, setLimit] = useState(60)
+  const [pinOpen, setPinOpen] = useState(true)
   useEffect(() => {
     let live = true
-    fetch(indexUrl)
-      .then((r) => r.json())
-      .then((h: Head[]) => live && setHeads(h), () => {})
+    loadGrove().then((h) => live && setHeads(h))
     return () => {
       live = false
     }
@@ -80,9 +67,16 @@ export function GroveDictionary({ q }: { q: string }) {
     return hits.map((h, i) => [rank(h), i, h] as const).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map((x) => x[2])
   }, [heads, n, letter, kind, onlyVi])
   const done = heads?.filter((h) => h.t).length ?? 0
+  // /terms?g=<id> (a link from an article): that entry first, open
+  const pinned = focus ? heads?.find((h) => h.id === focus) : undefined
 
   return (
     <section className="space-y-4" aria-label="Grove 1904 – 1910">
+      {pinned && (
+        <ul className="gv-list is-pinned" aria-label="Mục được mở từ liên kết">
+          <GroveRow h={pinned} open={pinOpen} onToggle={() => setPinOpen(!pinOpen)} />
+        </ul>
+      )}
       <p className="max-w-3xl text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">
         Theo <i>Grove's Dictionary of Music and Musicians</i>, bản thứ hai do J. A. Fuller Maitland biên tập, 5 tập, Macmillan, New York, 1904 – 1910 — sách đã thuộc phạm vi công cộng. Cuối tập V có phần Phụ lục bổ sung và đính chính cho cả bộ. Mỗi mục có phần tiếng Việt viết cho thư viện, nguyên văn tiếng Anh (chữ nhận dạng từ bản quét, có thể sai vài ký tự) và số trang kèm liên kết tới đúng trang bản quét để đối chiếu. Thông tin là của những năm 1904 – 1910: niên đại, quan điểm, tình trạng nghiên cứu có thể đã khác ngày nay.
       </p>
@@ -133,6 +127,7 @@ const KIND_LABEL: Record<Kind, string> = { term: 'Thuật ngữ', person: 'Nhân
 function GroveRow({ h, open, onToggle }: { h: Head; open: boolean; onToggle: () => void }) {
   const [entry, setEntry] = useState<Entry | null>(null)
   const [failed, setFailed] = useState(false)
+  const article = open ? articleForGrove(h) : undefined
   useEffect(() => {
     if (!open || entry) return
     let live = true
@@ -178,6 +173,11 @@ function GroveRow({ h, open, onToggle }: { h: Head; open: boolean; onToggle: () 
                 ))}
               </div>
             </details>
+          )}
+          {article && (
+            <Link className="gv-lib" to={`/theory/${article.slug}`}>
+              Đọc trong thư viện: {article.title} →
+            </Link>
           )}
           {entry && (
             <a className="gv-scan" href={`https://archive.org/details/${SCAN[entry.vol]}/page/n${entry.leaf}/mode/1up`} target="_blank" rel="noreferrer">

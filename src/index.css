@@ -290,6 +290,8 @@ body {
   transition: text-decoration-color 150ms ease, background-color 150ms ease;
   border-radius: 3px;
 }
+/* a link into the Grove dictionary (the build adds them to foreign terms): dotted, so it reads as a gloss */
+a.wiki-link.is-grove { text-decoration-style: dotted; text-decoration-color: color-mix(in oklch, var(--color-gold) 70%, transparent); }
 .prose-theory a.wiki-link:hover {
   text-decoration-color: var(--color-accent);
   background: color-mix(in oklch, var(--color-accent) 8%, transparent);

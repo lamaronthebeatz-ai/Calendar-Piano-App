@@ -79,6 +79,21 @@ test('mở sách từ một bài lý thuyết rồi đóng sách thì quay về 
   await expect(page).toHaveURL(/#\/theory\/fugue$/)
 })
 
+test('thuật ngữ trong bài nối vào từ điển: thẻ Grove, rồi mục được ghim mở sẵn kèm bài thư viện', async ({ page }) => {
+  await page.goto('/#/theory/fugue-doi-de-va-nhieu-chu-de-fux')
+  const link = page.locator('.prose-theory a.wiki-link[data-grove="fugue-2-114"]').first()
+  await link.scrollIntoViewIfNeeded()
+  await link.click()
+  const card = page.getByRole('dialog', { name: /Từ điển: / })
+  await expect(card).toContainText('Grove, tập II, tr. 114')
+  await expect(card.getByRole('region', { name: 'Trong thư viện' })).toContainText('Fugue')
+  await card.getByRole('button', { name: 'Mở trong từ điển' }).click()
+  await expect(page).toHaveURL(/#\/terms\?g=fugue-2-114/)
+  const pinned = page.locator('.gv-list.is-pinned')
+  await expect(pinned.locator('.gv-vi')).toBeVisible()
+  await expect(pinned.locator('.gv-lib')).toHaveAttribute('href', '#/theory/fugue')
+})
+
 test('từ điển Grove: tìm "mordent", mở mục có tiếng Việt, nguyên văn và trang quét', async ({ page }) => {
   await page.goto('/#/terms')
   await page.getByLabel('Tìm trong từ điển').fill('mordent')

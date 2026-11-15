@@ -82,7 +82,7 @@ export function TermsPage() {
         </nav>
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={tab === 'grove' ? 'Tìm mục từ: madrigal, Mozart, organ, nocturne…' : 'Tìm bằng tiếng Việt, Anh, Nga, Đức, Pháp, Ý…'} aria-label="Tìm trong từ điển" className="hero-search h-10 w-full rounded-full px-4 text-[14px] outline-none" />
         {tab === 'grove' ? (
-          <GroveDictionary q={q} />
+          <GroveDictionary key={params.get('g') ?? ''} q={q} focus={params.get('g') ?? undefined} />
         ) : (
         <>
         <p className="max-w-2xl text-[14px] leading-relaxed text-[var(--color-ink-muted)]">

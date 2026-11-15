@@ -14,7 +14,7 @@ import { createHash } from 'node:crypto'
 import { readdirSync, readFileSync } from 'node:fs'
 import type { CuratedSource } from '../src/features/sources/curated.ts'
 import { createServer, type Plugin, type ViteDevServer } from 'vite'
-import { buildKeyIndex } from '../src/features/theory/keyIndex.ts'
+import { buildKeyIndex, normalize as keyNorm } from '../src/features/theory/keyIndex.ts'
 
 const SOURCE = '/src/features/theory/articles.source.ts'
 const CURATED_SOURCES = '/src/features/sources/curated.ts'
@@ -162,6 +162,72 @@ function linkStatus(): { dead: Record<string, { code: number | string; archive?:
   }
 }
 
+/** Grove dictionary terms by headword (scripts/grove/build.py writes the index before the build): "fugue" → "fugue-2-114". */
+function groveTerms(): Map<string, string> {
+  try {
+    type Head = { id: string; h: string; k: string; a?: 1; t?: string; g?: string }
+    const heads = JSON.parse(readFileSync('src/features/terms/grove-index.json', 'utf8')) as Head[]
+    // scan fragments, errata and broken headwords say nothing about the term; "bổ sung" pieces lose to the main entry
+    const junk = (h: Head) => /mảnh|đính chính|OCR|phần tiếp|tách lẻ/i.test(`${h.t ?? ''} ${h.g?.slice(0, 60) ?? ''}`)
+    const supplement = (h: Head) => !!h.a || /bổ sung/i.test(h.t ?? '')
+    const best = new Map<string, Head>()
+    for (const h of heads) {
+      const key = keyNorm(h.h)
+      // people Grove filed as terms ("Bach, Johann…" titles) and plain English words are not glosses worth a link
+      if (h.k !== 'term' || h.h.length < 4 || /\d/.test(h.h) || /^[^,]+, [A-ZÀ-Ỹ]/.test(h.t ?? '') || GROVE_STOP.has(key) || junk(h)) continue
+      const was = best.get(key)
+      // the first main entry is the article; later ones are its continuations ("Organ: những cải tiến hiện đại") and supplements
+      if (!was || (supplement(was) && !supplement(h))) best.set(key, h)
+    }
+    const map = new Map<string, string>()
+    for (const [key, h] of best) {
+      // "Valse — Xem mục Waltz.": the link goes where the reader is sent
+      const to = h.g?.match(/^Xem (?:mục )?([^.;,(]+)/)?.[1]
+      const target = to ? best.get(keyNorm(to.trim())) : undefined
+      if (to && !target) continue
+      map.set(key, (target ?? h).id)
+    }
+    return map
+  } catch {
+    return new Map()
+  }
+}
+const VIET = /[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/i
+const GROVE_STOP = new Set(
+  'music musical minor major double period verse contra scale pitch bridge passage theory technique authentic perfect imperfect repetition voicing mixture senza troppo canto studies voices analysis piston leipzig florence cambridge figaro faust london paris vienna venice rome naples dresden berlin oxford second third fourth sixth seventh common little great grand english french german italian spanish russian modern ancient church chamber appassionata pathetique sharp flat super tuba cornet figured action'.split(' '),
+)
+
+/**
+ * Terms of the Grove dictionary become links into it, once per article: a foreign word in italics (*sonata*,
+ * *musica ficta*), in brackets ("đối vị (counterpoint)") or written plain in lower case (legato, tritone).
+ * Directive lines, headings and anything already inside brackets (links, citations) are left alone; so are names of
+ * people the library has a page for.
+ */
+function linkGrove(body: string, terms: Map<string, string>, people: Set<string>) {
+  if (!terms.size) return body
+  const seen = new Set<string>()
+  const RE = /\*([^*\n[\]]{3,40})\*|\(([A-Za-z][A-Za-z' -]{3,30})\)|(?<![\w*/-])([a-z][a-z'-]{4,})(?![\w*])/g
+  return body
+    .split('\n')
+    .map((line) => {
+      if (/^\s*(::|#)/.test(line) || line.includes('http')) return line
+      return line.replace(RE, (m: string, it: string | undefined, par: string | undefined, plain: string | undefined, at: number) => {
+        const before = line.slice(0, at)
+        if ((before.match(/\[/g)?.length ?? 0) > (before.match(/\]/g)?.length ?? 0)) return m
+        const word = (it ?? par ?? plain)!.trim()
+        // a Vietnamese word ("lỏng") folds to an English headword ("Long") once its marks are gone
+        if (VIET.test(word) || word.endsWith('-')) return m
+        const key = keyNorm(word)
+        const id = terms.get(key)
+        if (!id || seen.has(id) || people.has(key)) return m
+        seen.add(id)
+        const link = `[[g:${id}|${word}]]`
+        return it ? `*${link}*` : par ? `(${link})` : link
+      })
+    })
+    .join('\n')
+}
+
 /** Names in other languages (glossary, scripts/terms/build.py): "en:fugue|ru:фуга|…", for search and the article head. */
 function foreignNames(): Map<string, string> {
   try {
@@ -228,15 +294,18 @@ function build(articles: SourceArticle[], curated: CuratedSource[], rows: People
   }
 
   const xl = foreignNames()
+  const grove = groveTerms()
   const people = peopleData(rows, new Set(articles.map((a) => a.slug)))
   const personIds = new Set(people.people.map((p) => p.id as string))
+  // names of the people the library has a page for: "Schumann" is not a term
+  const personKeys = new Set([...byKey].filter(([, slug]) => personIds.has(slug)).map(([k]) => k))
   const files = new Map<string, string>()
   const index = articles.map((a) => {
     const { body, refs, ...meta } = a
     const sourceIds = articleSources(a)
     // dead links of this article's references → archived copy ('' when none was found)
     const dead = Object.fromEntries((refs ?? []).filter(([, u]) => u && deadLinks[u]).map(([, u]) => [u, deadLinks[u].archive ?? '']))
-    const json = JSON.stringify({ body, refs, backlinks: backlinks.get(a.slug) ?? [], sources: sourceIds, updated: updated.get(a.slug), ...(Object.keys(dead).length ? { dead } : {}) })
+    const json = JSON.stringify({ body: linkGrove(body, grove, personKeys), refs, backlinks: backlinks.get(a.slug) ?? [], sources: sourceIds, updated: updated.get(a.slug), ...(Object.keys(dead).length ? { dead } : {}) })
     const h = hash(json)
     files.set(`${a.slug}.${h}.json`, json)
     const lead = {

@@ -31,6 +31,8 @@ function Inline({ text }: { text: string }) {
     if (part.startsWith('[^')) return <InlineCite key={i} spec={part.slice(2, -1)} />
     if (!part.startsWith('[[')) return part
     const [target, label] = part.slice(2, -2).split('|')
+    // a Grove dictionary entry ([[g:id|word]]); the build links foreign terms to it, the tap opens its card
+    if (target.startsWith('g:')) return <Link key={i} to={`/terms?g=${encodeURIComponent(target.slice(2))}`} data-grove={target.slice(2)} className="wiki-link is-grove">{label ?? target.slice(2)}</Link>
     const own = /^([np]):(.+)$/.exec(target)
     if (own) return <OwnLink key={i} kind={own[1] as 'n' | 'p'} id={own[2]} label={label} />
     const article = findArticle(target)
