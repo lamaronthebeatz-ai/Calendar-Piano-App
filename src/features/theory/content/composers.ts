@@ -1,6 +1,7 @@
 import type { Article } from '../wiki'
 import { buildPeople, person, type Person } from './people'
 import { COMPOSER_DETAILS } from './composer-details'
+import { COMPOSER_DETAILS_MED } from './composer-details-med'
 import { COMPOSER_VIDEOS } from './composer-videos'
 
 /**
@@ -458,7 +459,7 @@ const COMPOSERS: Person[] = [
 /** The raw rows, for the knowledge graph built at build time (scripts/theory-content.ts → content/people.json). */
 export const COMPOSER_ROWS = { periods: PERIODS, people: COMPOSERS, role: 'composer' as const }
 
-export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...COMPOSER_DETAILS[c.name], videos: COMPOSER_VIDEOS[c.name] })), {
+export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...(COMPOSER_DETAILS[c.name] ?? COMPOSER_DETAILS_MED[c.name]), videos: COMPOSER_VIDEOS[c.name] })), {
   category: 'composers',
   noun: 'nhà soạn nhạc',
   groupLabel: 'Trường phái',

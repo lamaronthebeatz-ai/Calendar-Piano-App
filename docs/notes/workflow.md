@@ -44,6 +44,8 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- **Wikimedia API 429** khi nhiều agent cùng tra (cả `en.wikipedia.org/w/api.php` lẫn Commons API): đọc trang HTML (`/wiki/<Bài>`, `commons…/wiki/File:<tên>`) để lấy tên ảnh và giấy phép; tải ảnh qua `upload.wikimedia.org/.../thumb/.../<960|1920>px-<tên>` — cỡ lạ (640, 800) trả 400. Script mẫu `scratchpad/journey/fetch.py`.
+- Agent viết nội dung đôi khi xưng "tôi" ("nguồn tôi đối chiếu") — `grep -n '\btôi\b'` trước khi commit, đổi thành "người biên soạn".
 - `compose.spec.ts` "chạm đặt nốt" đỏ 2 lần trên WebKit CI (bấm trước khi khuông đứng yên/màn che còn) → `open()` nay chờ `.pc-root` biến mất, `document.fonts.ready` và khung ô nhịp đứng yên. Máy cloud không có WebKit (`/opt/pw-browsers/webkit-*` thiếu) — WebKit chỉ kiểm được trên CI.
 - `compose-mic-low.spec.ts` (thu micro, nốt trầm thiếu âm cơ bản) từng đỏ trên CI chromium (14/11: ra hợp âm thừa C4+E5…) nhưng qua 6/6 trên máy — chập chờn khi máy CI chậm; chạy lại job hỏng một lần thì xanh. Nếu đỏ lần nữa: sửa test (nới thời gian/ngưỡng), đừng chạy lại mãi.
 - Push liên tiếp: lần chạy CI trước bị **huỷ** (concurrency) — gom commit rồi push một lần, chờ CI xanh rồi mới push tiếp.

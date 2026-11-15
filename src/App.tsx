@@ -18,6 +18,7 @@ const loadCurriculum = () => import('./features/curriculum/CurriculumPage')
 const loadNotebook = () => import('./features/notebook/NotebookPage')
 const loadMusicology = () => import('./features/musicology/MusicologyPage')
 const CenterPage = lazy(() => import('./features/about/CenterPage').then((m) => ({ default: m.CenterPage })))
+const JourneyPage = lazy(() => import('./features/journey/JourneyPage').then((m) => ({ default: m.JourneyPage })))
 const AboutPage = lazy(() => import('./features/about/AboutPage').then((m) => ({ default: m.AboutPage })))
 const TheoryPage = lazy(() => loadTheory().then((m) => ({ default: m.TheoryPage })))
 const CurriculumPage = lazy(() => loadCurriculum().then((m) => ({ default: m.CurriculumPage })))
@@ -122,6 +123,7 @@ const router = createHashRouter(
       <Route path="/analyze/:id?" element={<Suspense fallback={<RouteLoading />}><AnalyzePage /></Suspense>} />
       <Route path="/research/:id?" element={<Suspense fallback={<RouteLoading />}><ResearchPage /></Suspense>} />
       <Route path="/explore" element={<Suspense fallback={<RouteLoading />}><ExplorePage /></Suspense>} />
+      <Route path="/hanh-trinh" element={<Suspense fallback={<RouteLoading />}><JourneyPage /></Suspense>} />
       <Route path="/terms" element={<Suspense fallback={<RouteLoading />}><TermsPage /></Suspense>} />
       <Route path="/sources/:id?" element={<Suspense fallback={<RouteLoading />}><SourcesPage /></Suspense>} />
       <Route path="/tools" element={<Suspense fallback={<RouteLoading />}><ToolsPage /></Suspense>} />

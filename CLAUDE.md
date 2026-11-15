@@ -67,6 +67,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `security.md` | Giấy phép, dòng bản quyền, kho mã hoá `vault.ts`/`secureStore.ts`, dấu kiểm PBKDF2, giới hạn thật của bảo mật |
 | `analyze.md` | Phân tích tác phẩm `/analyze`: bộ máy (hợp âm DP, giọng Viterbi, nhãn Nga – Xô viết, nốt ngoài hợp âm, câu kết), đo độ đúng trên hợp xướng Bach, nhãn ghi vào MEI cho Verovio |
 | `omr.md` | Thử OMR trong trình duyệt (oemer + onnxruntime-web): số đo tốc độ, độ đúng, vá cần làm — kết luận chưa dùng được |
+| `journey.md` | Game nhập vai **Hành trình** `/hanh-trinh` (`src/features/journey/`): chương = thời kỳ, NPC hỏi → đọc bài, phiên toà sử gia, ảnh PD, luật viết chương |
 | `thanh-ca.md` | Mục Thánh ca Việt Nam `thanhca` (52 bài `content/thanh-ca*.ts`), sách Nghiên cứu Thánh ca Việt Nam, tư liệu gốc `docs/research/thanh-ca/` |
 | `library-content.md` | Danh sách các mục nội dung đã có |
 | `../STATUS.md` | **Trạng thái hiện tại**: việc dở, chờ Lamar, đề xuất tiếp, số liệu nền |

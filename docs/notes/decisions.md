@@ -35,5 +35,6 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Tiểu luận Scriabin: **giữ bản đầy đủ** (59 trang thân bài) dù đề yêu cầu 30 trang — 11/2026.
 - "Lấy từ tủ sách" = dùng nguyên văn bài trong app, không phân tích lại.
 - (14/11) Bấm link `[[slug]]` ở bất cứ đâu → thẻ giới thiệu ngắn trước, nút "Đọc bài" mới vào bài; bài thuật ngữ gắn tên đa ngữ + mục Grove. Việc viết tiếng Việt Grove bằng phiên phụ: tạm ngưng.
+- (15/11) **Game Hành trình:** lời thoại dựng lại theo giọng từng thời kỳ; tên tự đặt, chân dung Phục hưng; không có thua — NPC hỏi, phải đọc bài lý thuyết để trả lời; bắt đầu Trung cổ; bổ sung tiểu sử nhà soạn nhạc từng thời kỳ; hiệu ứng điện ảnh; game dài, cập nhật dần; dùng mọi nguồn của app.
 - (15/11) Thánh ca Công giáo Việt Nam là **mục riêng** (`thanhca`, nhóm Việt Nam) + sách riêng; sách còn bản quyền (Văn Chi, Kim Long) chỉ tóm lược có trang, chưa có bản thì chỉ mô tả.
 - (15/11) Mọi thuật ngữ trong Lý thuyết + Âm nhạc học nối vào Từ điển Grove (`[[g:id]]`, tự động lúc build, một lần mỗi mục mỗi bài, gạch chấm để phân biệt với link bài).

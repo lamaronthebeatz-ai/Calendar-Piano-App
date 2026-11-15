@@ -7,20 +7,8 @@ import { ArrowUpRightIcon, FilterIcon, SearchIcon, XIcon } from '../../component
 import { ERAS, JOURNEYS, KINDS, PLACES, REGIONS, YEAR_MAX, YEAR_MIN, eraOf, kindOf, yearsOf, type Era, type Journey, type MapEvent, type Place, type Region } from './places'
 import './music-map.css'
 
-/* ------------------------------------------------------------------ projection: Equal Earth, as in scripts/map/world.py */
+import { H, W, proj } from './projection'
 
-const W = 1000
-const A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2
-function raw(lon: number, lat: number): [number, number] {
-  const l = (lon * Math.PI) / 180, t = Math.asin(M * Math.sin((lat * Math.PI) / 180)), t2 = t * t, t6 = t2 * t2 * t2
-  return [(l * Math.cos(t)) / (M * (A1 + 3 * A2 * t2 + t6 * (7 * A3 + 9 * A4 * t2))), t * (A1 + A2 * t2 + t6 * (A3 + A4 * t2))]
-}
-const XMAX = raw(180, 0)[0], YMAX = raw(0, 90)[1], S = W / (2 * XMAX)
-const H = 2 * YMAX * S
-const proj = (lon: number, lat: number): [number, number] => {
-  const [x, y] = raw(lon, lat)
-  return [W / 2 + x * S, (YMAX - y) * S]
-}
 const at = (pl: Place) => proj(pl.lon, pl.lat)
 
 const polyline = (pts: [number, number][]) => 'M' + pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join('L')
@@ -524,6 +512,9 @@ export function MusicMap() {
             />
             {query && <button onClick={() => setQuery('')} aria-label="Xoá" className="rounded-lg p-0.5 text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]"><XIcon width={15} height={15} /></button>}
           </label>
+          <Link to="/hanh-trinh" className="mm-quest" aria-label="Hành trình âm nhạc: trò chơi nhập vai">
+            <span aria-hidden>⚜</span> Hành trình
+          </Link>
           <button onClick={() => setLayers((v) => !v)} aria-expanded={layers} className={clsx('mm-round', layers && 'is-on')} aria-label="Thời kỳ và hành trình">
             <FilterIcon width={17} height={17} />
           </button>
