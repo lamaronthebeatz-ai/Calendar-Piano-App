@@ -6,6 +6,8 @@ import { COMPOSER_DETAILS_REN_A } from './composer-details-ren-a'
 import { COMPOSER_DETAILS_REN_B } from './composer-details-ren-b'
 import { COMPOSER_DETAILS_BAR_A } from './composer-details-bar-a'
 import { COMPOSER_DETAILS_BAR_B } from './composer-details-bar-b'
+import { COMPOSER_DETAILS_CLA_A } from './composer-details-cla-a'
+import { COMPOSER_DETAILS_CLA_B } from './composer-details-cla-b'
 import { COMPOSER_DETAILS_BAR_C } from './composer-details-bar-c'
 import { COMPOSER_VIDEOS } from './composer-videos'
 
@@ -464,7 +466,7 @@ const COMPOSERS: Person[] = [
 /** The raw rows, for the knowledge graph built at build time (scripts/theory-content.ts → content/people.json). */
 export const COMPOSER_ROWS = { periods: PERIODS, people: COMPOSERS, role: 'composer' as const }
 
-export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...(COMPOSER_DETAILS[c.name] ?? COMPOSER_DETAILS_MED[c.name] ?? COMPOSER_DETAILS_REN_A[c.name] ?? COMPOSER_DETAILS_REN_B[c.name] ?? COMPOSER_DETAILS_BAR_A[c.name] ?? COMPOSER_DETAILS_BAR_C[c.name] ?? COMPOSER_DETAILS_BAR_B[c.name]), videos: COMPOSER_VIDEOS[c.name] })), {
+export const composers: Article[] = buildPeople(PERIODS, COMPOSERS.map((c) => ({ ...c, ...(COMPOSER_DETAILS[c.name] ?? COMPOSER_DETAILS_MED[c.name] ?? COMPOSER_DETAILS_REN_A[c.name] ?? COMPOSER_DETAILS_REN_B[c.name] ?? COMPOSER_DETAILS_BAR_A[c.name] ?? COMPOSER_DETAILS_BAR_C[c.name] ?? COMPOSER_DETAILS_BAR_B[c.name] ?? COMPOSER_DETAILS_CLA_A[c.name] ?? COMPOSER_DETAILS_CLA_B[c.name]), videos: COMPOSER_VIDEOS[c.name] })), {
   category: 'composers',
   noun: 'nhà soạn nhạc',
   groupLabel: 'Trường phái',
