@@ -185,3 +185,25 @@ Phần thưởng kỹ năng là điều kiện dữ liệu (`{ skill, level }`) 
 | Không mất dữ liệu cũ | ✓ (chuyển đổi + bản dự phòng + test) |
 | Không nút giả, không nhiệm vụ không hoàn thành được, không hội thoại cụt, không câu đố không giải được | ✓ (validator + e2e chơi trọn) |
 | Responsive | ✓ (393, 360, 1280) |
+
+## Phase 7 — Nhân rộng ra Chương II–VI (16/11)
+**A. Đã làm.** Năm tuyến điều tra trên cùng engine, mỗi tuyến 4 nơi, 3 nhân vật (1 người thật nói đúng tiểu sử, 2 hư cấu có nhãn), tuyến chính 4 giai đoạn + nhiệm vụ phụ + tranh luận + kết luận bằng chứng cứ:
+| Chương | Tuyến (`content/`) | Câu hỏi | Câu đố đặc trưng |
+|---|---|---|---|
+| II | Thánh lễ của Giáo hoàng Marcellus (`thanh-le.ts`) | Missa Papae Marcelli có "cứu" nhạc nhiều bè ở Trent? | phân biệt lối Palestrina / madrigal, năm loại đối âm Fux, nghe thánh lễ – chanson – madrigal |
+| III | Đàn phím được lên dây tốt (`clavier.ts`) | Clavier bình quân có viết cho bình quân 12? | **bass số** (`figured`, Đô và Sol trưởng), bốn hệ thống lên dây |
+| IV | Lời đồn ở bệnh viện (`loi-don.ts`) | Salieri có đầu độc Mozart? | xếp các phần hình thức sonata, giọng từng phần, ai đặt tên (Marx) |
+| V | Cái tên của một giai điệu (`leitmotif.ts`) | Wagner có đặt ra chữ "leitmotif"? | tuần hoàn / biến đổi chủ đề / leitmotif, Gesamtkunstwerk, nghe Lied – nocturne – nhạc kịch |
+| VI | Bài hát trở về (`goin-home.ts`) | Largo Thế giới mới có phải spiritual cổ? | **thang âm** (`scale`: ngũ cung, mixolydian, dorian, thứ hoà thanh), màu điệu thức theo Mazel |
+
+**B. Engine.** `figured`: đáp án tính từ giọng + bè trầm + số (`figuredNotes`, dùng `tools/harmony.ts`); `scale`: tính từ `SCALES`, bảng chọn là nốt của giọng trưởng và thứ cùng tên gộp lại (`scalePalette`) để thang âm không lộ. Cả hai vào `APPLIED` (mastery "áp dụng"); `APPLIED` nay một bản duy nhất ở `progression.ts`. Màn tuyến bỏ câu kết thúc viết cứng cho tuyến Guido.
+
+**C. Nguồn.** Mọi dữ kiện lấy từ bài thư viện đã có (không cần viết bài mới): `giovanni-pierluigi-da-palestrina`, `thanh-le-va-requiem`, `thoi-ky-phuc-hung`, `doi-am-5-loai`, `luat-binh-quan`, `fugue`, `bass-so`, `am-nhac-truyen-thong-trung-hoa`, `antonio-salieri`, `phuong-phap-su-hoc-am-nhac`, `hinh-thuc-sonata`, `bien-doi-chu-de`, `richard-wagner`, `hector-berlioz`, `antonin-dvorak`, `hinh-thuc-nga-phuong-tien`, `am-giai-ngu-cung`. Câu nhìn từ hôm nay ghi "(Lời người biên soạn)".
+
+**D. Nghe.** 15 đoạn thu thật (Commons), mỗi đoạn kiểm độ dài và âm lượng trung bình bằng ffmpeg để không rơi vào chỗ lặng (Tristan lấy 180 – 192 s, Largo 60 – 70 s, Vltava 90 – 100 s).
+
+**E. Kiểm.** Vitest: mỗi tuyến qua `validateChapter`, mọi câu đố tự giải, tuyến chính đi hết bằng engine, mọi nơi ẩn có giai đoạn mở, mọi chứng cứ của câu kết luận đều nhặt được trong tuyến. E2E: nút mở từng tuyến trên bản đồ chương, giải `figured`/`scale` qua giao diện (sai đánh dấu đúng hàng).
+
+**F. Chưa.** Chưa có e2e chơi trọn từng tuyến mới như tuyến Guido; chưa thử Safari thật.
+
+**G. Tiếp.** Tuyến thứ hai cho mỗi chương, hoặc Chương VII.

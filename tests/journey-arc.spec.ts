@@ -1,5 +1,7 @@
 import { expect, test, type Page } from '@playwright/test'
 import { banThao } from '../src/features/journey/content/ban-thao'
+import { ARCS } from '../src/features/journey/content/arcs'
+import { CHAPTERS } from '../src/features/journey/chapters'
 import type { PuzzleDef } from '../src/features/journey/engine/types'
 
 /**
@@ -253,4 +255,61 @@ test('bàn phím: hội thoại nhận focus ở nút chính, Esc đóng hội t
   await page.getByRole('button', { name: 'Sổ hành trình' }).click()
   await page.keyboard.press('Escape')
   await expect(page.locator('.ar-book')).toBeHidden()
+})
+
+test.describe('Phase 7: tuyến điều tra của chương II – VI', () => {
+  /** A v1 save with every scene done up to and including the arc's opening scene, so its chapter is open. */
+  const seed = async (page: Page, arc: (typeof ARCS)[number]) => {
+    const scene = (arc.opens as { quest: string }).quest.slice(2)
+    const at = CHAPTERS.findIndex((c) => c.id === arc.chapter)
+    const done = [...CHAPTERS.slice(0, at).flatMap((c) => c.scenes.map((s) => `${c.id}/${s.id}`)), scene]
+    await page.addInitScript((d) => localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co', 'phuc-hung', 'baroque', 'co-dien', 'lang-man', 'quoc-gia'], done: d })), done)
+  }
+
+  for (const arc of ARCS.slice(1))
+    test(`${arc.title}: nút mở trên bản đồ chương, vào được câu chuyện`, async ({ page }) => {
+      await seed(page, arc)
+      await page.goto(`/#/hanh-trinh?c=${arc.chapter}`)
+      await page.getByRole('button', { name: new RegExp(`✦ ${arc.title}`) }).click()
+      await expect(page.locator('.jr-atlas-intro')).toContainText(arc.intro.slice(0, 20))
+      await page.locator('.ar-places').getByRole('button', { name: new RegExp(arc.locations[0].name) }).click()
+      await expect(page.getByRole('button', { name: `Nói chuyện với ${arc.characters[0].name}` })).toBeVisible()
+    })
+
+  /** Toggles the given notes in each row of a pick puzzle, then checks. */
+  const pick = async (page: Page, rows: Record<string, string[]>, labels: Record<string, string>) => {
+    for (const [id, notes] of Object.entries(rows)) {
+      const group = page.getByRole('group', { name: labels[id] })
+      for (const n of notes) await group.getByRole('button', { name: n, exact: true }).click()
+    }
+    await page.getByRole('button', { name: 'Kiểm tra' }).click()
+  }
+
+  test('bass số và thang âm: chọn nốt bằng nút, sai thì đánh dấu đúng hàng, đúng thì giải thích', async ({ page }) => {
+    const clavier = ARCS.find((a) => a.id === 'clavier')!
+    // the last chapter's seed opens every chapter before it too
+    await seed(page, ARCS.find((a) => a.id === 'goin-home')!)
+    const fig = clavier.puzzles.find((p) => p.id === 'pz:cb/bass-so')!
+    const c = fig.content as { items: { id: string; bass: string; figure: string }[] }
+    const vi: Record<string, string> = { C: 'Đô', D: 'Rê', E: 'Mi', F: 'Fa', G: 'Sol', A: 'La', B: 'Si' }
+    const labels = Object.fromEntries(c.items.map((x) => [x.id, `${vi[x.bass[0]]} – ${x.figure}`]))
+    const answer = fig.answer as Record<string, string[]>
+    await page.goto(`/#/hanh-trinh?c=baroque&v=arc&a=clavier&p=${encodeURIComponent(fig.id)}`)
+    // row a wrong on purpose (a sixth instead of a fifth)
+    await pick(page, { ...answer, a: ['Mi', 'La'] }, labels)
+    await expect(page.locator('.ar-pick li.is-wrong')).toHaveCount(1)
+    await page.getByRole('group', { name: labels.a }).getByRole('button', { name: 'La', exact: true }).click()
+    await page.getByRole('group', { name: labels.a }).getByRole('button', { name: 'Sol', exact: true }).click()
+    await page.getByRole('button', { name: 'Kiểm tra' }).click()
+    await expect(page.locator('.ar-ok')).toBeVisible()
+
+    const home = ARCS.find((a) => a.id === 'goin-home')!
+    const sc = home.puzzles.find((p) => p.id === 'pz:gh/thang-am')!
+    const names: Record<string, string> = { penta: 'Ngũ cung trưởng', mixolydian: 'Mixolydian', dorian: 'Dorian', harmonic: 'Thứ hoà thanh' }
+    const items = (sc.content as { items: { id: string; tonic: string; scale: string }[] }).items
+    await page.goto(`/#/hanh-trinh?c=quoc-gia&v=arc&a=goin-home&p=${encodeURIComponent(sc.id)}`)
+    const scLabels = Object.fromEntries(items.map((x) => [x.id, `${names[x.scale] ?? x.scale} trên ${vi[x.tonic[0]]}`]))
+    await pick(page, sc.answer as Record<string, string[]>, scLabels)
+    await expect(page.locator('.ar-ok')).toBeVisible()
+  })
 })

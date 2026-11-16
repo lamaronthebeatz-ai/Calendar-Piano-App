@@ -1,4 +1,5 @@
 import { normalize } from '../../theory/keyIndex'
+import { parse, SCALES, scaleNotes, type Note } from '../../tools/harmony'
 import type { PuzzleDef } from './types'
 
 /**
@@ -186,7 +187,73 @@ const debate: Kind<DebateContent, Record<string, string>> = {
   valid: (c, a) => (c.turns.length && c.turns.every((t) => t.options.some((o) => o.id === a[t.id])) && Object.keys(a).length === c.turns.length ? null : 'mỗi lượt cần đúng một câu đáp có trong danh sách'),
 }
 
-export const PUZZLE_KINDS = { choice, order, match, classify, blank, neume, hexachord, aural, investigation, debate } as const
+/** Notes in Vietnamese names (Đô, Fa♯…), spelled by harmony.ts so a key's notes come out the way they are written. */
+const VI = ['Đô', 'Rê', 'Mi', 'Fa', 'Sol', 'La', 'Si']
+const ACC: Record<number, string> = { [-1]: '♭', 0: '', 1: '♯' }
+export const viName = (n: Note) => VI[n.l] + (ACC[n.a] ?? '?')
+const sameNotes = (a: string[], b: string[]) => a.length === b.length && a.every((x) => b.includes(x))
+
+/**
+ * Figured bass (bass-so): a bass note of a major key and its figure; the player names the notes above it, diatonic
+ * in the key. The answer is worked out from key, bass and figure — the one written in the content must agree.
+ */
+export const FIGURES = { '5/3': [3, 5], '6': [3, 6], '6/4': [4, 6], '7': [3, 5, 7] } as const
+export type Figure = keyof typeof FIGURES
+export type FiguredContent = { ask: string; key: string; items: { id: string; bass: string; figure: Figure }[] }
+export const keyNotes = (key: string) => scaleNotes(parse(key)!, SCALES[0])
+export function figuredNotes(key: string, bass: string, figure: Figure): string[] | null {
+  const scale = keyNotes(key)
+  const b = parse(bass)
+  const i = b ? scale.findIndex((n) => n.l === b.l && n.a === b.a) : -1
+  if (i < 0 || !FIGURES[figure]) return null
+  return FIGURES[figure].map((k) => viName(scale[(i + k - 1) % 7]))
+}
+const figured: Kind<FiguredContent, Record<string, string[]>> = {
+  check: (c, _a, given) => {
+    const wrong = c.items.filter((x) => !sameNotes(given[x.id] ?? [], figuredNotes(c.key, x.bass, x.figure) ?? ['?'])).map((x) => x.id)
+    return { ok: !wrong.length, wrong }
+  },
+  valid: (c, a) => (c.items.length && c.items.every((x) => figuredNotes(c.key, x.bass, x.figure) && sameNotes(a[x.id] ?? [], figuredNotes(c.key, x.bass, x.figure)!)) ? null : 'nốt trên bè trầm không khớp với giọng và con số'),
+}
+
+/**
+ * Building a scale (am-giai-ngu-cung, dieu-thuc): from a tonic, which notes of the parent major or natural minor
+ * scale belong to it. Worked out from harmony.ts SCALES.
+ */
+export type ScaleContent = { ask: string; items: { id: string; tonic: string; scale: string }[] }
+const scaleOf = (id: string) => SCALES.find((s) => s.id === id)
+export function scaleSet(tonic: string, scale: string): string[] | null {
+  const t = parse(tonic)
+  const s = scaleOf(scale)
+  return t && s ? scaleNotes(t, s).map(viName) : null
+}
+/** The notes offered: the major and the natural minor on the same tonic together, so no scale's notes stand out. */
+export function scalePalette(tonic: string): string[] {
+  const t = parse(tonic)
+  if (!t) return []
+  const both = [...scaleNotes(t, SCALES[0]), ...scaleNotes(t, SCALES[1])]
+  const seen = new Set<string>()
+  return both
+    .sort((a, b) => ((a.l - t.l + 7) % 7) - ((b.l - t.l + 7) % 7) || a.a - b.a)
+    .map(viName)
+    .filter((n) => !seen.has(n) && !!seen.add(n))
+}
+const scale: Kind<ScaleContent, Record<string, string[]>> = {
+  check: (c, _a, given) => {
+    const wrong = c.items.filter((x) => !sameNotes(given[x.id] ?? [], scaleSet(x.tonic, x.scale) ?? ['?'])).map((x) => x.id)
+    return { ok: !wrong.length, wrong }
+  },
+  valid: (c, a) =>
+    c.items.length && c.items.every((x) => {
+      const want = scaleSet(x.tonic, x.scale)
+      const pal = scalePalette(x.tonic)
+      return want && want.every((n) => pal.includes(n)) && sameNotes(a[x.id] ?? [], want)
+    })
+      ? null
+      : 'thang âm không khớp, hoặc có nốt ngoài bảng chọn',
+}
+
+export const PUZZLE_KINDS = { choice, order, match, classify, blank, neume, hexachord, aural, investigation, debate, figured, scale } as const
 export type PuzzleType = keyof typeof PUZZLE_KINDS
 
 export function checkPuzzle(p: PuzzleDef, given: unknown): Result {

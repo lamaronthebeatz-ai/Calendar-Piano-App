@@ -1,0 +1,440 @@
+import type { ArcDef } from '../engine/types'
+
+/**
+ * Chương VI — "Bài hát trở về": is the Largo of the New World Symphony an old spiritual?
+ * Facts: antonin-dvorak (tiểu sử 1891 – 1895, New York Herald 15/12/1893, Goin' Home – Fisher 1922, lời đồn cor anglais
+ * – Burleigh, Apollo 11), hinh-thuc-nga-phuong-tien (Mazel: ngũ cung, mixolydian, dorian trong giai điệu Nga; thứ hoà
+ * thanh trong dân ca Ukraina; ngũ cung — Buổi sáng của Grieg), am-giai-ngu-cung. Ruth and Mr. Hale are made up;
+ * Dvořák says only what his biography says.
+ */
+const NEW_YORK = { lat: 40.76, lon: -73.98, far: true }
+
+export const goinHome: ArcDef = {
+  id: 'goin-home',
+  chapter: 'quoc-gia',
+  title: 'Bài hát trở về',
+  year: '1893',
+  intro: 'New York, tháng 12 năm 1893. Một bản giao hưởng "từ Thế giới mới" sắp ra mắt ở Carnegie Hall. Ba mươi năm sau, giai điệu chương chậm của nó được hát khắp nước Mỹ như một bài ca cổ. Giai điệu ấy là của ai?',
+  opens: { quest: 'q:quoc-gia/dvorak', is: 'done' },
+  main: 'q:gh/goin-home',
+  music: 'dvorak',
+  period: 'a:thoi-ky-lang-man',
+
+  locations: [
+    {
+      id: 'loc:gh/nhac-vien',
+      name: 'Nhạc viện Quốc gia Mỹ, Manhattan',
+      ...NEW_YORK,
+      year: '12/1893',
+      bg: 'dvorak',
+      present: [{ npc: 'npc:gh/ruth', dialogue: 'dlg:gh/ruth' }],
+      objects: [
+        { id: 'to-bao', label: 'Tờ New York Herald ngày 15/12', when: { all: [{ quest: 'q:gh/goin-home', is: 'active' }, { not: { item: 'item:gh/herald' } }] }, effects: [{ give: 'item:gh/herald' }, { evidence: 'ev:gh/herald' }, { discover: 'a:antonin-dvorak' }] },
+        { id: 'thang-am', label: 'Bảng thang âm trên tường lớp học', when: { topic: 'mau', with: 'npc:gh/ruth' }, puzzle: 'pz:gh/thang-am' },
+        { id: 'dan-toc', label: 'Màu điệu thức của từng dân tộc', when: { solved: 'pz:gh/thang-am' }, effects: [{ startQuest: 'q:gh/mau-dieu-thuc' }], puzzle: 'pz:gh/mau-dieu-thuc' },
+      ],
+    },
+    {
+      id: 'loc:gh/carnegie',
+      name: 'Carnegie Hall',
+      ...NEW_YORK,
+      year: '16/12/1893',
+      bg: 'carnegie-1895',
+      hidden: true,
+      present: [{ npc: 'npc:gh/dvorak', dialogue: 'dlg:gh/dvorak' }],
+      objects: [
+        { id: 'doi', label: 'Ba năm ở Thế giới mới', when: { met: 'npc:gh/dvorak' }, puzzle: 'pz:gh/nien-dai' },
+        { id: 'nghe', label: 'Ba dòng sông, ba quê hương', when: { met: 'npc:gh/dvorak' }, puzzle: 'pz:gh/nghe-ba-noi' },
+      ],
+    },
+    {
+      id: 'loc:gh/nha-in',
+      name: 'Một nhà xuất bản nhạc, năm 1922',
+      ...NEW_YORK,
+      year: '1922',
+      bg: 'slav-composers',
+      hidden: true,
+      present: [{ npc: 'npc:gh/hale', dialogue: 'dlg:gh/hale' }],
+      objects: [{ id: 'chung-cu', label: 'Phân loại chứng cứ', when: { all: [{ evidence: 'ev:gh/fisher' }, { evidence: 'ev:gh/burleigh' }] }, puzzle: 'pz:gh/phan-loai' }],
+    },
+    {
+      id: 'loc:gh/phong-hop',
+      name: 'Lớp học ở Nhạc viện, buổi tối',
+      ...NEW_YORK,
+      year: '1893',
+      bg: 'dvorak',
+      focus: '30% 40%',
+      hidden: true,
+      present: [{ npc: 'npc:gh/ruth', dialogue: 'dlg:gh/ket-luan' }],
+      objects: [
+        { id: 'tranh-luan', label: 'Cuộc tranh luận: giai điệu của ai?', when: { topic: 'ket-luan', with: 'npc:gh/ruth' }, effects: [{ startQuest: 'q:gh/tranh-luan' }], puzzle: 'pz:gh/tranh-luan' },
+        { id: 'ban', label: 'Đặt chứng cứ lên bàn', when: { met: 'npc:gh/ruth' }, puzzle: 'pz:gh/ket-luan' },
+      ],
+    },
+  ],
+
+  characters: [
+    { id: 'npc:gh/ruth', name: 'Ruth', status: 'fictional', role: 'Học viên Nhạc viện Quốc gia Mỹ', sources: [] },
+    {
+      id: 'npc:gh/dvorak',
+      name: 'Antonín Dvořák',
+      status: 'historical',
+      person: 'a:antonin-dvorak',
+      role: 'Giám đốc Nhạc viện Quốc gia Mỹ (từ 9/1892)',
+      sources: ['a:antonin-dvorak'],
+    },
+    { id: 'npc:gh/hale', name: 'Ông Hale', status: 'fictional', role: 'Biên tập viên một nhà xuất bản nhạc, năm 1922', sources: [] },
+  ],
+
+  dialogues: [
+    {
+      id: 'dlg:gh/ruth',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Manhattan, tháng 12 năm 1893. Nhạc viện do bà Jeannette Thurber lập, mở cửa cho cả phụ nữ và học viên da màu.', refs: ['a:antonin-dvorak'], effects: [{ remember: 'gap', with: 'npc:gh/ruth' }], next: 'n1' },
+        n1: { speaker: 'npc:gh/ruth', voice: 'fiction', text: '{ten}! Thầy Dvořák sắp ra mắt giao hưởng mới. Em dám chắc chương chậm là một bài hát cổ thầy nghe được ở đâu đó rồi chép lại.', effects: [{ evidence: 'ev:gh/loi-ruth' }], next: 'n2' },
+        n2: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn muốn hỏi gì?)',
+          choices: [
+            { text: 'Mỗi dân tộc có một màu giai điệu riêng sao?', when: { not: { topic: 'mau', with: 'npc:gh/ruth' } }, next: 'n3' },
+            { text: 'Thầy có nói gì về chuyện ấy không?', next: 'n4' },
+          ],
+        },
+        n3: {
+          speaker: 'narrator',
+          voice: 'narration',
+          text: '(Lời người biên soạn.) Nhà lý thuyết Xô viết Mazel về sau viết rằng mặt điệu thức gắn với bản sắc dân tộc: ngũ cung, mixolydian, dorian trong giai điệu Nga; thứ hoà thanh trong dân ca Ukraina.',
+          refs: ['a:hinh-thuc-nga-phuong-tien', 'a:am-giai-ngu-cung'],
+          effects: [{ remember: 'mau', with: 'npc:gh/ruth' }, { discover: 'a:am-giai-ngu-cung' }],
+          next: 'n2',
+        },
+        n4: { speaker: 'npc:gh/ruth', voice: 'fiction', text: 'Có, trên báo hôm nay! Tờ Herald ở trên bàn kia. Rồi chị qua Carnegie Hall mà hỏi thẳng thầy.', effects: [{ startQuest: 'q:gh/goin-home' }], end: true },
+      },
+    },
+    {
+      id: 'dlg:gh/dvorak',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Carnegie Hall, 16/12/1893. Anton Seidl chỉ huy New York Philharmonic trong buổi ra mắt Giao hưởng số 9.', refs: ['a:antonin-dvorak'], effects: [{ remember: 'gap', with: 'npc:gh/dvorak' }], next: 'n1' },
+        n1: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn muốn hỏi gì?)',
+          choices: [
+            { text: 'Ông sang Mỹ thế nào?', when: { not: { topic: 'sang', with: 'npc:gh/dvorak' } }, next: 'n2' },
+            { text: 'Mùa hè vừa rồi ông ở đâu?', when: { not: { topic: 'he', with: 'npc:gh/dvorak' } }, next: 'n3' },
+            { text: 'Ông có dùng giai điệu dân gian Mỹ không?', when: { not: { topic: 'giai-dieu', with: 'npc:gh/dvorak' } }, next: 'n4' },
+            { text: 'Cảm ơn ông', next: 'n5' },
+          ],
+        },
+        n2: { speaker: 'npc:gh/dvorak', voice: 'reconstructed', text: 'Tháng 9 năm ngoái ta sang New York làm giám đốc Nhạc viện Quốc gia. Trước đó ta là giáo sư Nhạc viện Praha.', refs: ['a:antonin-dvorak'], effects: [{ remember: 'sang', with: 'npc:gh/dvorak' }], next: 'n1' },
+        n3: { speaker: 'npc:gh/dvorak', voice: 'reconstructed', text: 'Ở Spillville, một làng người Séc ở Iowa. Ở đó ta viết bản tứ tấu người ta gọi là "Mỹ", op. 96.', refs: ['a:antonin-dvorak'], effects: [{ remember: 'he', with: 'npc:gh/dvorak' }], next: 'n1' },
+        n4: {
+          speaker: 'narrator',
+          voice: 'narration',
+          text: 'Trên New York Herald ngày 15/12/1893, Dvořák nói ông không dùng giai điệu thổ dân, mà viết những chủ đề của riêng mình mang đặc điểm của thứ nhạc ấy.',
+          refs: ['a:antonin-dvorak'],
+          effects: [{ remember: 'giai-dieu', with: 'npc:gh/dvorak' }, { evidence: 'ev:gh/herald' }],
+          next: 'n1',
+        },
+        n5: { speaker: 'npc:gh/dvorak', voice: 'fiction', text: 'Nghe đi — rồi hẵng hỏi nó từ đâu đến.', end: true },
+      },
+    },
+    {
+      id: 'dlg:gh/hale',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Năm 1922. Trên bàn biên tập là bản in thử một bài hát mới: Goin\' Home.', effects: [{ remember: 'gap', with: 'npc:gh/hale' }], next: 'n1' },
+        n1: { speaker: 'npc:gh/hale', voice: 'fiction', text: 'Bài này sẽ bán chạy lắm — nghe cứ như hát từ bao đời. Ngài muốn biết gì?', next: 'n2' },
+        n2: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn muốn hỏi gì?)',
+          choices: [
+            { text: 'Ai đặt lời cho bài này?', when: { not: { evidence: 'ev:gh/fisher' } }, next: 'n3' },
+            { text: 'Sao giai điệu lại do kèn cor anglais thổi?', when: { not: { evidence: 'ev:gh/burleigh' } }, next: 'n4' },
+            { text: 'Giai điệu ấy còn đi xa tới đâu?', when: { not: { evidence: 'ev:gh/apollo' } }, next: 'n6' },
+            { text: 'Tôi sẽ xếp lại chứng cứ', next: 'n5' },
+          ],
+        },
+        n3: { speaker: 'npc:gh/hale', voice: 'reconstructed', text: 'William Arms Fisher, học trò cũ của Dvořák. Năm nay ông đặt lời lên chủ đề chương Largo.', refs: ['a:antonin-dvorak'], effects: [{ evidence: 'ev:gh/fisher' }], next: 'n2' },
+        n4: { speaker: 'npc:gh/hale', voice: 'fiction', text: 'Người ta đồn ông Dvořák đổi chủ đề sang cor anglais vì nhớ giọng hát của Harry Burleigh. Tôi chẳng biết thật hay không.', refs: ['a:antonin-dvorak'], effects: [{ evidence: 'ev:gh/burleigh' }], next: 'n2' },
+        n6: { speaker: 'narrator', voice: 'narration', text: '(Lời người biên soạn, nhìn từ hôm nay.) Có chuyện kể Neil Armstrong mang băng thu Giao hưởng số 9 theo Apollo 11 — nhưng chuyện ấy chỉ dựa trên một cuốn sách năm 2005.', refs: ['a:antonin-dvorak'], effects: [{ evidence: 'ev:gh/apollo' }], next: 'n2' },
+        n5: { speaker: 'narrator', voice: 'narration', text: 'Một tờ báo, một bài hát mới, một lời đồn. Phải biết cái nào đỡ được cái nào.', end: true },
+      },
+    },
+    {
+      id: 'dlg:gh/ket-luan',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Trở lại lớp học năm 1893. Ruth vẫn ngồi bên cây đàn.', effects: [{ remember: 'ket-luan', with: 'npc:gh/ruth' }], next: 'n1' },
+        n1: { speaker: 'npc:gh/ruth', voice: 'fiction', text: 'Vậy em đoán đúng không? Chị bày chứng cứ ra đi.', end: true },
+      },
+    },
+  ],
+
+  quests: [
+    {
+      id: 'q:gh/goin-home',
+      chapter: 'quoc-gia',
+      title: 'Bài hát trở về',
+      summary: 'Giai điệu Largo của Giao hưởng "Từ Thế giới mới" có phải một bài spiritual cổ? Từ Manhattan 1893 tới một nhà xuất bản năm 1922.',
+      kind: 'main',
+      stages: [
+        { id: 'lop', text: 'Ở Nhạc viện: đọc tờ Herald, dựng các thang âm trên bảng.', objectives: [{ talk: 'npc:gh/ruth' }, { collect: 'item:gh/herald' }, { solve: 'pz:gh/thang-am' }], onDone: [{ unlock: 'loc:gh/carnegie' }, { xp: 20, skill: 'theory' }] },
+        { id: 'carnegie', text: 'Ở Carnegie Hall: hỏi Dvořák, xếp mốc đời ông, nghe ba bản thu.', objectives: [{ talk: 'npc:gh/dvorak' }, { solve: 'pz:gh/nien-dai' }, { solve: 'pz:gh/nghe-ba-noi' }], onDone: [{ unlock: 'loc:gh/nha-in' }, { xp: 30, skill: 'aural' }] },
+        { id: 'loi', text: 'Năm 1922: tìm người đặt lời, phân loại chứng cứ.', objectives: [{ talk: 'npc:gh/hale' }, { solve: 'pz:gh/phan-loai' }], onDone: [{ unlock: 'loc:gh/phong-hop' }, { xp: 30, skill: 'sources' }] },
+        { id: 'ket-luan', text: 'Trở lại lớp học: đặt chứng cứ lên bàn.', objectives: [{ solve: 'pz:gh/ket-luan' }], onDone: [{ xp: 50, skill: 'research' }] },
+      ],
+      rewards: [{ xp: 40, skill: 'history' }],
+      links: ['a:antonin-dvorak'],
+    },
+    {
+      id: 'q:gh/mau-dieu-thuc',
+      chapter: 'quoc-gia',
+      title: 'Màu điệu thức',
+      summary: 'Theo Mazel, mỗi truyền thống dân ca ưa những điệu thức riêng. Ghép cho đúng.',
+      kind: 'side',
+      stages: [{ id: 'ghep', text: 'Ghép truyền thống với điệu thức.', objectives: [{ solve: 'pz:gh/mau-dieu-thuc' }] }],
+      rewards: [{ xp: 30, skill: 'theory' }],
+      links: ['a:hinh-thuc-nga-phuong-tien'],
+    },
+    {
+      id: 'q:gh/tranh-luan',
+      chapter: 'quoc-gia',
+      title: 'Ba lời trong lớp học',
+      summary: 'Ba người, ba ý. Đáp lại bằng chứng cứ.',
+      kind: 'academic',
+      stages: [{ id: 'tranh-luan', text: 'Đáp lại từng lượt.', objectives: [{ solve: 'pz:gh/tranh-luan' }] }],
+      rewards: [{ xp: 30, skill: 'research' }],
+      links: ['a:antonin-dvorak'],
+    },
+  ],
+
+  puzzles: [
+    {
+      id: 'pz:gh/thang-am',
+      type: 'scale',
+      difficulty: 3,
+      title: 'Bảng thang âm trên tường',
+      instructions: 'Với mỗi thang âm, chọn đủ các nốt của nó (không cần theo thứ tự). Bảng chọn có cả nốt của giọng trưởng lẫn giọng thứ cùng tên.',
+      content: {
+        ask: 'Các nốt của từng thang âm.',
+        items: [
+          { id: 'a', tonic: 'F', scale: 'penta' },
+          { id: 'b', tonic: 'G', scale: 'mixolydian' },
+          { id: 'c', tonic: 'D', scale: 'dorian' },
+          { id: 'd', tonic: 'A', scale: 'harmonic' },
+        ],
+      },
+      answer: { a: ['Fa', 'Sol', 'La', 'Đô', 'Rê'], b: ['Sol', 'La', 'Si', 'Đô', 'Rê', 'Mi', 'Fa'], c: ['Rê', 'Mi', 'Fa', 'Sol', 'La', 'Si', 'Đô'], d: ['La', 'Si', 'Đô', 'Rê', 'Mi', 'Fa', 'Sol♯'] },
+      hints: ['Ngũ cung trưởng: bỏ bậc 4 và bậc 7 của âm giai trưởng.', 'Mixolydian = trưởng với bậc 7 hạ; dorian = thứ với bậc 6 nâng; thứ hoà thanh = thứ với bậc 7 nâng.'],
+      explanation: 'Ngũ cung Fa: Fa Sol La Đô Rê (không có Si♭ và Mi — hai nốt tạo nửa cung). Mixolydian Sol: như Sol trưởng nhưng Fa thường. Dorian Rê: như Rê thứ nhưng Si thường. Thứ hoà thanh La: như La thứ nhưng Sol♯.',
+      skills: ['theory'],
+      links: ['a:am-giai-ngu-cung', 'a:dieu-thuc'],
+    },
+    {
+      id: 'pz:gh/mau-dieu-thuc',
+      type: 'classify',
+      difficulty: 3,
+      title: 'Màu điệu thức của từng dân tộc',
+      instructions: 'Theo Mazel, mỗi điều sau thuộc truyền thống nào?',
+      content: {
+        ask: 'Xếp từng điều theo truyền thống Mazel nêu.',
+        items: [
+          { id: 'mixo', text: 'Mixolydian, dorian' },
+          { id: 'hoa-thanh', text: 'Thứ hoà thanh, có khi bậc IV tăng' },
+          { id: 'doi', text: 'Đổi qua lại trưởng – thứ song song' },
+          { id: 'ngu-cung', text: 'Ngũ cung, không lực hút nửa cung, dùng cho tĩnh lặng, thiên nhiên — như Buổi sáng của Grieg' },
+        ],
+        labels: [
+          { id: 'nga', text: 'Giai điệu Nga' },
+          { id: 'ukraina', text: 'Dân ca Ukraina' },
+          { id: 'cang', text: 'Độ căng điệu thức' },
+        ],
+      },
+      answer: { mixo: 'nga', 'hoa-thanh': 'ukraina', doi: 'nga', 'ngu-cung': 'cang' },
+      hints: ['Đọc đoạn Mazel về mặt điệu thức trong bài Phương tiện biểu hiện.'],
+      explanation: 'Mazel gắn mặt điệu thức với bản sắc dân tộc: giai điệu Nga có tính đổi trưởng – thứ song song, ngũ cung, mixolydian, dorian; dân ca Ukraina có thứ hoà thanh và thứ hoà thanh với bậc IV tăng. Ông cũng nói về độ căng điệu thức: ngũ cung không có lực hút nửa cung, hợp với trạng thái tĩnh lặng, thiên nhiên — Buổi sáng của Grieg.',
+      skills: ['theory', 'analysis'],
+      links: ['a:hinh-thuc-nga-phuong-tien'],
+    },
+    {
+      id: 'pz:gh/nien-dai',
+      type: 'order',
+      difficulty: 2,
+      title: 'Ba năm ở Thế giới mới',
+      instructions: 'Xếp các mốc đời Dvořák, sớm nhất trước.',
+      content: {
+        ask: 'Từ sớm đến muộn.',
+        items: [
+          { id: 'spillville', text: 'Nghỉ hè ở Spillville, viết Tứ tấu "Mỹ"' },
+          { id: 'praha', text: 'Giáo sư Nhạc viện Praha' },
+          { id: 'cello', text: 'Hoàn thành Concerto cello Si thứ' },
+          { id: 'new-york', text: 'Sang New York làm giám đốc Nhạc viện Quốc gia' },
+          { id: 'carnegie', text: 'Giao hưởng số 9 ra mắt ở Carnegie Hall' },
+          { id: 've', text: 'Về hẳn Bohemia' },
+        ],
+      },
+      answer: ['praha', 'new-york', 'spillville', 'carnegie', 'cello', 've'],
+      hints: ['1891, 9/1892, hè 1893, 16/12/1893, 2/1895, 1895 (sau khi xong concerto).'],
+      explanation: '1891 giáo sư Nhạc viện Praha → 9/1892 sang New York → hè 1893 Spillville → 16/12/1893 Giao hưởng số 9 → 2/1895 xong Concerto cello → 1895 về hẳn Bohemia.',
+      skills: ['history'],
+      links: ['a:antonin-dvorak'],
+    },
+    {
+      id: 'pz:gh/nghe-ba-noi',
+      type: 'aural',
+      difficulty: 3,
+      title: 'Ba dòng sông, ba quê hương',
+      instructions: 'Ba đoạn thu thật của ba nhà soạn nhạc "dân tộc". Nghe rồi xếp mỗi đoạn vào đúng tác phẩm.',
+      content: {
+        ask: 'Mỗi đoạn là tác phẩm nào?',
+        mode: 'classify',
+        clips: [
+          { id: 'a', track: 'grieg', start: 60, end: 70, caption: 'Đoạn A' },
+          { id: 'b', track: 'dvorak', start: 60, end: 70, caption: 'Đoạn B' },
+          { id: 'c', track: 'smetana', start: 90, end: 100, caption: 'Đoạn C' },
+        ],
+        labels: [
+          { id: 'vltava', text: 'Smetana — Vltava (Bohemia)' },
+          { id: 'buoi-sang', text: 'Grieg — Buổi sáng, Peer Gynt (Na Uy)' },
+          { id: 'largo', text: 'Dvořák — Largo, Giao hưởng số 9 (New York)' },
+        ],
+      },
+      answer: { a: 'buoi-sang', b: 'largo', c: 'vltava' },
+      hints: ['Largo là chương chậm, trầm lắng; Vltava là dòng sông chảy cuồn cuộn; Buổi sáng sáng trong, ngũ cung.'],
+      explanation: 'Đoạn A: Buổi sáng trong Peer Gynt của Grieg — Mazel lấy làm ví dụ ngũ cung cho thiên nhiên tĩnh lặng. Đoạn B: chương Largo Giao hưởng số 9 của Dvořák. Đoạn C: Vltava trong Má vlast của Smetana.',
+      skills: ['aural'],
+      links: ['a:antonin-dvorak', 'a:edvard-grieg', 'a:bedrich-smetana'],
+    },
+    {
+      id: 'pz:gh/phan-loai',
+      type: 'classify',
+      difficulty: 3,
+      title: 'Phân loại chứng cứ',
+      instructions: 'Mỗi điều thuộc loại nào?',
+      content: {
+        ask: 'Xếp từng điều theo loại.',
+        items: [
+          { id: 'herald', text: 'Dvořák trên New York Herald: "chủ đề riêng mang đặc điểm" của thứ nhạc ấy' },
+          { id: 'fisher', text: 'Fisher đặt lời Goin\' Home lên chủ đề Largo năm 1922' },
+          { id: 'burleigh', text: 'Dvořák đổi chủ đề sang cor anglais vì nhớ giọng Burleigh' },
+          { id: 'ruth', text: 'Ruth: "chắc chắn là một bài hát cổ thầy chép lại"' },
+        ],
+        labels: [
+          { id: 'tac-gia', text: 'Lời của chính tác giả' },
+          { id: 'ghi-nhan', text: 'Sự việc có niên đại, được ghi nhận' },
+          { id: 'don', text: 'Lời đồn' },
+          { id: 'doan', text: 'Phỏng đoán của nhân vật trong truyện' },
+        ],
+      },
+      answer: { herald: 'tac-gia', fisher: 'ghi-nhan', burleigh: 'don', ruth: 'doan' },
+      hints: ['Ai nói, khi nào, và có ai kiểm lại chưa?'],
+      explanation: 'Phát biểu trên Herald là lời chính Dvořák. Việc Fisher đặt lời năm 1922 là sự việc có niên đại. Chuyện cor anglais và Burleigh, tiểu sử ghi rõ "chỉ là lời đồn". Lời Ruth là phỏng đoán trong truyện.',
+      skills: ['sources'],
+      links: ['a:antonin-dvorak', 'a:phuong-phap-su-hoc-am-nhac'],
+    },
+    {
+      id: 'pz:gh/tranh-luan',
+      type: 'debate',
+      difficulty: 3,
+      title: 'Ba lời trong lớp học',
+      instructions: 'Chọn câu đáp có căn cứ cho từng lượt — đồng ý cũng là một câu đáp, nếu điều họ nói đứng được.',
+      content: {
+        topic: 'Giai điệu Largo và Goin\' Home',
+        turns: [
+          {
+            id: 't1',
+            speaker: 'Ruth',
+            text: 'Ai cũng hát Goin\' Home như bài ca cổ, vậy nó là spiritual cổ.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'fisher', text: 'Lời Goin\' Home do Fisher đặt năm 1922 lên chủ đề Largo — không phải spiritual cổ truyền. Nghe "như cổ" không làm nó cổ.' },
+              { id: 'my', text: 'Không, vì Dvořák là người Séc.' },
+            ],
+          },
+          {
+            id: 't2',
+            speaker: 'Một học viên',
+            text: 'Thầy đã chép giai điệu của người thổ dân.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'herald', text: 'Trên New York Herald (15/12/1893) ông nói không dùng giai điệu thổ dân mà viết chủ đề riêng mang đặc điểm của thứ nhạc ấy.' },
+              { id: 'spillville', text: 'Không, vì ông nghỉ hè ở làng người Séc.' },
+            ],
+          },
+          {
+            id: 't3',
+            speaker: 'Ông Hale',
+            text: 'Ông ấy đổi sang kèn cor anglais vì nhớ giọng Burleigh — chuyện ai cũng biết.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'don', text: 'Tiểu sử Dvořák ghi chuyện ấy chỉ là lời đồn; ai cũng biết không thay được nguồn.' },
+              { id: 'burleigh', text: 'Đúng, vì Burleigh hát rất hay.' },
+            ],
+          },
+        ],
+      },
+      answer: { t1: 'fisher', t2: 'herald', t3: 'don' },
+      hints: ['Lời của chính tác giả và một niên đại cụ thể nặng hơn cảm giác "nghe như cổ".'],
+      feedback: [
+        { key: 't1:dong-y', text: 'Bài hát có lời từ 1922; cảm giác cổ xưa không phải niên đại.' },
+        { key: 't1:my', text: 'Quốc tịch không trả lời được giai điệu từ đâu.' },
+        { key: 't2:dong-y', text: 'Chính Dvořák nói ông không dùng giai điệu thổ dân.' },
+        { key: 't2:spillville', text: 'Nơi nghỉ hè không nói gì về nguồn gốc giai điệu.' },
+        { key: 't3:dong-y', text: 'Tiểu sử ghi rõ đó chỉ là lời đồn.' },
+        { key: 't3:burleigh', text: 'Giọng hay của Burleigh không chứng minh lý do Dvořák chọn nhạc cụ.' },
+      ],
+      explanation: 'Dvořák tự nói ông viết chủ đề riêng mang đặc điểm của nhạc Mỹ, không chép giai điệu thổ dân; Goin\' Home là lời Fisher đặt năm 1922 lên chủ đề Largo; chuyện cor anglais – Burleigh chỉ là lời đồn.',
+      skills: ['research', 'sources'],
+      links: ['a:antonin-dvorak'],
+    },
+    {
+      id: 'pz:gh/ket-luan',
+      type: 'investigation',
+      difficulty: 4,
+      title: 'Giai điệu của ai?',
+      instructions: 'Chọn một kết luận và đặt lên bàn ít nhất hai chứng cứ đỡ nó. Chứng cứ yếu đặt làm chỗ dựa sẽ bị bác.',
+      content: {
+        question: 'Có thể nói "Largo của Giao hưởng số 9 là một bài spiritual cổ mà Dvořák chép lại" không?',
+        conclusions: [
+          { id: 'spiritual', text: 'Có — Goin\' Home là spiritual cổ, Dvořák chỉ phối cho dàn nhạc.' },
+          { id: 'chu-de-rieng', text: 'Không: Dvořák nói ông viết chủ đề riêng mang đặc điểm của nhạc Mỹ; lời Goin\' Home do Fisher đặt năm 1922 lên chủ đề ấy, nên bài hát ra đời sau giao hưởng.' },
+          { id: 'khong-quan-tam', text: 'Dvořák chẳng quan tâm gì tới nhạc Mỹ.' },
+        ],
+        evidence: ['ev:gh/herald', 'ev:gh/fisher', 'ev:gh/burleigh', 'ev:gh/apollo', 'ev:gh/loi-ruth'],
+        min: 2,
+      },
+      answer: { conclusion: 'chu-de-rieng', support: ['ev:gh/herald', 'ev:gh/fisher'], reject: ['ev:gh/burleigh', 'ev:gh/loi-ruth', 'ev:gh/apollo'] },
+      explanation: 'Kết luận vững nhất: theo chính Dvořák (New York Herald, 15/12/1893), ông viết chủ đề riêng mang đặc điểm của nhạc Mỹ; Goin\' Home là lời William Arms Fisher đặt năm 1922 lên chủ đề Largo. Bài hát đi từ giao hưởng ra, không phải ngược lại.',
+      hints: ['Cái gì có trước: giao hưởng (1893) hay lời bài hát?', 'Lời đồn và phỏng đoán không đỡ được kết luận.'],
+      feedback: [
+        { key: 'ket-luan:spiritual', text: 'Lời Goin\' Home có từ 1922, gần ba mươi năm sau giao hưởng; tiểu sử ghi nó không phải spiritual cổ truyền.' },
+        { key: 'ket-luan:khong-quan-tam', text: 'Quá tay: chính ông nói muốn viết chủ đề mang đặc điểm của nhạc Mỹ.' },
+        { key: 'yeu:ev:gh/burleigh', text: 'Chuyện cor anglais – Burleigh chỉ là lời đồn.' },
+        { key: 'yeu:ev:gh/loi-ruth', text: 'Phỏng đoán của Ruth chính là điều cần kiểm.' },
+        { key: 'yeu:ev:gh/apollo', text: 'Chuyện Apollo 11 chỉ dựa trên một cuốn sách năm 2005, và không liên quan đến nguồn gốc giai điệu.' },
+        { key: 'thieu', text: 'Đúng hướng, nhưng cần cả lời của Dvořák lẫn niên đại của bài hát.' },
+      ],
+      skills: ['research', 'sources'],
+      links: ['a:antonin-dvorak'],
+      sources: ['a:antonin-dvorak'],
+    },
+  ],
+
+  evidence: [
+    { id: 'ev:gh/loi-ruth', title: 'Phỏng đoán của Ruth', text: '"Chương chậm là một bài hát cổ thầy chép lại." Lời nhân vật trong truyện, lặp lại một niềm tin phổ biến.', kind: 'anecdote', source: 'a:antonin-dvorak', reliability: 'Tiểu sử Dvořák xếp chuyện này vào mục giai thoại.', verification: 'library' },
+    { id: 'ev:gh/herald', title: 'Phát biểu trên New York Herald', text: 'Dvořák nói ông không dùng giai điệu thổ dân mà viết "chủ đề riêng mang đặc điểm" của thứ nhạc ấy.', kind: 'primary', source: 'a:antonin-dvorak', date: '15/12/1893', reliability: 'Lời chính tác giả trên báo, tóm theo bài thư viện.', verification: 'library' },
+    { id: 'ev:gh/fisher', title: 'Goin\' Home, 1922', text: 'William Arms Fisher, học trò Dvořák, đặt lời Goin\' Home năm 1922 lên chủ đề chương Largo — không phải spiritual cổ truyền.', kind: 'secondary', source: 'a:antonin-dvorak', date: '1922', reliability: 'Bài thư viện, theo các nguồn ghi ở bài.', verification: 'library' },
+    { id: 'ev:gh/burleigh', title: 'Cor anglais và Burleigh', text: 'Chuyện Dvořák đổi chủ đề sang cor anglais vì nhớ giọng Harry Burleigh.', kind: 'anecdote', source: 'a:antonin-dvorak', reliability: 'Tiểu sử ghi rõ: chỉ là lời đồn.', verification: 'library' },
+    { id: 'ev:gh/apollo', title: 'Giao hưởng lên Mặt Trăng', text: 'Chuyện Neil Armstrong mang băng thu Giao hưởng số 9 theo Apollo 11.', kind: 'anecdote', source: 'a:antonin-dvorak', reliability: 'Chỉ dựa trên một cuốn sách năm 2005.', verification: 'library' },
+  ],
+
+  items: [{ id: 'item:gh/herald', name: 'Tờ New York Herald', kind: 'document', text: 'Số ra ngày 15/12/1893, có bài phỏng vấn Dvořák. (Bản trong truyện.)', links: ['a:antonin-dvorak'] }],
+
+  claims: [],
+  completion: { quest: 'q:gh/goin-home', is: 'done' },
+}

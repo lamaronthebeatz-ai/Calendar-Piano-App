@@ -32,7 +32,7 @@ export function masteryOf(m: MasteryState | undefined): 0 | 1 | 2 | 3 | 4 {
 export const MASTERY_LABEL = ['Chưa gặp', 'Đã gặp', 'Đã hiểu', 'Đã vận dụng', 'Thành thạo'] as const
 
 /** Puzzle types that count as using knowledge, not recalling it. */
-const APPLIED = new Set(['neume', 'hexachord', 'aural', 'interval', 'chord', 'cadence', 'counterpoint', 'score', 'compose', 'investigation'])
+export const APPLIED = new Set(['neume', 'hexachord', 'figured', 'scale', 'aural', 'interval', 'chord', 'cadence', 'counterpoint', 'score', 'compose', 'investigation', 'debate'])
 
 const day = (t: number) => new Date(t).toISOString().slice(0, 10)
 

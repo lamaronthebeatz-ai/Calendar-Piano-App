@@ -33,6 +33,12 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Ôn luyện: `dueReviews(puzzles, save)`, `recordReview` (không XP); `?v=arc&a=…&p=…&r=1` → `PuzzleScreen review`.
 - `replayChapter`, `newGamePlus` (nút trên bản đồ chương; NG+ khi xong cả 6 chương). `save.ngPlus`.
 
+## Phase 7 (16/11) — một tuyến điều tra cho mỗi chương II–VI
+- `content/thanh-le.ts` (tl), `clavier.ts` (cb), `loi-don.ts` (sl), `leitmotif.ts` (lm), `goin-home.ts` (gh); đăng ký ở `arcs.ts`; mở khi xong cảnh tương ứng (`opens`). Bảng tóm ở `docs/journey/REPORTS.md` § Phase 7.
+- Câu đố mới `figured` (`{key, items: {bass, figure: '5/3'|'6'|'6/4'|'7'}}`, chỉ giọng trưởng) và `scale` (`{items: {tonic, scale: id của harmony.ts SCALES}}`); giao diện `PickUI` (nút bật/tắt từng nốt, `role=group` tên "Đô – 6" / "Dorian trên Rê").
+- Test chung trong `engine.test.ts` chạy cho mọi `ARCS`: thêm tuyến mới không cần viết test engine riêng. Chứng cứ nào câu kết luận cần mà không có hiệu ứng `evidence` nào cho → test đỏ (đã bắt 2 lần).
+- Đoạn nghe: chọn mốc bằng `ffmpeg volumedetect` trên bản tải về scratchpad (Wikimedia hay trả 429 → thử lại chậm).
+
 ## File
 - `types.ts` — `Chapter` (cảnh + phiên toà + intro/outro), `Scene` (nơi, toạ độ, năm, ảnh nền, NPC, lời, `quest {ask, choices, answer, read, where, explain}`, `card`, `listen` YouTube), `Claim` (verdict `fact|legend|unsure`).
 - `chapters/<thời kỳ>.ts` + `chapters/index.ts` (`CHAPTERS` theo thứ tự lịch sử). **Thêm chương = một file + một dòng.**

@@ -400,3 +400,34 @@ describe('Phase 8: chơi lại, độ khó theo năng lực, thử thách ngày,
     expect(ng).toMatchObject({ done: [], quests: {}, ngPlus: 1, cards: ['c'], codex: ['a:x'], xp: 90, chaptersOpen: ['a', 'b'] })
   })
 })
+
+describe('mọi tuyến điều tra (Phase 7)', async () => {
+  const { ARCS } = await import('../content/arcs')
+  for (const arc of ARCS)
+    it(`${arc.title}: hợp lệ, tuyến chính đi hết được bằng engine`, () => {
+      expect(validateChapter(arc, (s) => slugs.has(s), (id) => id.startsWith(`q:${arc.chapter}/`))).toEqual([])
+      for (const p of arc.puzzles) expect([p.id, puzzleProblem(p)]).toEqual([p.id, null])
+      const defs = (id: string) => arc.quests.find((q) => q.id === id)
+      const scene = arc.opens as { quest: string }
+      let s = s0({ done: [scene.quest.slice(2)] })
+      expect(holds(arc.opens, s)).toBe(true)
+      s = apply({ startQuest: arc.main }, s, defs, 1)
+      for (const stage of defs(arc.main)!.stages) {
+        expect(s.quests[arc.main]?.stage).toBe(stage.id)
+        for (const o of stage.objectives) {
+          if ('talk' in o) s = { ...s, dialogue: { ...s.dialogue, topics: { ...s.dialogue.topics, [o.talk]: [...(s.dialogue.topics[o.talk] ?? []), 'gap'] } } }
+          if ('visit' in o) s = { ...s, visited: [...s.visited, o.visit] }
+          if ('collect' in o) s = { ...s, inventory: [...s.inventory, o.collect] }
+          if ('solve' in o) s = { ...s, puzzles: { ...s.puzzles, [o.solve]: { solved: true, tries: 1, hints: 0, at: 1 } } }
+        }
+        s = settleQuests(s, defs, 1)
+      }
+      expect(holds(arc.completion, s)).toBe(true)
+      // every place a stage opens exists, and every hidden place is opened by some stage
+      const opened = defs(arc.main)!.stages.flatMap((st) => st.onDone ?? []).flatMap((e) => ('unlock' in e ? [e.unlock] : []))
+      for (const l of arc.locations.filter((x) => x.hidden)) expect(opened).toContain(l.id)
+      // every piece of evidence a puzzle asks for can be found somewhere in the arc
+      const given = new Set(JSON.stringify(arc).match(/"evidence":"ev:[^"]+"/g)?.map((x) => x.slice(12, -1)))
+      for (const p of arc.puzzles.filter((x) => x.type === 'investigation')) for (const e of (p.content as { evidence: string[] }).evidence) expect([p.id, e, given.has(e)]).toEqual([p.id, e, true])
+    })
+})

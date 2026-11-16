@@ -11,7 +11,7 @@ import { attempt, currentStage, effects, enter, visibleLocations } from '../engi
 import { dueReviews, recordReview } from '../engine/replay'
 import { checkPuzzle } from '../engine/puzzles'
 import { holds } from '../engine/world'
-import { NOTE_NAMES, SYLLABLES, HEXACHORDS, type AuralContent, type BlankContent, type DebateContent, type ChoiceContent, type ClassifyContent, type HexachordContent, type InvestigationContent, type MatchContent, type NeumeContent, type OrderContent, type Result } from '../engine/puzzles'
+import { NOTE_NAMES, SYLLABLES, HEXACHORDS, keyNotes, scalePalette, viName, type FiguredContent, type ScaleContent, type AuralContent, type BlankContent, type DebateContent, type ChoiceContent, type ClassifyContent, type HexachordContent, type InvestigationContent, type MatchContent, type NeumeContent, type OrderContent, type Result } from '../engine/puzzles'
 import { MASTERY_LABEL, levelOf, masteryOf } from '../engine/progression'
 import { SKILL_TREE, PERKS, branch, hasPerk } from '../engine/skills'
 import { reportDraft, reportProblems } from '../engine/report'
@@ -79,7 +79,7 @@ function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (op
         </header>
         <div className="ar-objective" role="status">
           <span>{done ? 'Đã khép lại' : stage ? 'Việc đang làm' : 'Bắt đầu'}</span>
-          <p>{done ? 'Bạn đã phân định xong lời đồn về bàn tay Guido. Các nhiệm vụ phụ vẫn mở.' : stage ? stage.text : `Tới ${arc.locations[0].name} và nói chuyện.`}</p>
+          <p>{done ? `Bạn đã khép lại «${arc.title}». Các nhiệm vụ phụ vẫn mở.` : stage ? stage.text : `Tới ${arc.locations[0].name} và nói chuyện.`}</p>
         </div>
         {map((id) => go({ v: 'arc', a: arc.id, l: id }), (id) => save.visited.includes(id))}
         <ul className="ar-places">
@@ -316,6 +316,15 @@ function PuzzleBody({ arc, puzzle, save, wrong, onSubmit, locked }: { arc: ArcDe
       return <NeumeUI c={c as NeumeContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     case 'hexachord':
       return <HexachordUI c={c as HexachordContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
+    case 'figured': {
+      const f = c as FiguredContent
+      const pal = keyNotes(f.key).map(viName)
+      return <PickUI rows={f.items.map((x) => ({ id: x.id, head: <FigureMark bass={bassName(x.bass)} figure={x.figure} />, label: `${bassName(x.bass)} – ${x.figure}`, palette: pal }))} wrong={wrong} onSubmit={onSubmit} locked={locked} />
+    }
+    case 'scale': {
+      const sc = c as ScaleContent
+      return <PickUI rows={sc.items.map((x) => ({ id: x.id, head: <b>{SCALE_LABEL[x.scale] ?? x.scale} trên {bassName(x.tonic)}</b>, label: `${SCALE_LABEL[x.scale] ?? x.scale} trên ${bassName(x.tonic)}`, palette: scalePalette(x.tonic) }))} wrong={wrong} onSubmit={onSubmit} locked={locked} />
+    }
     case 'aural':
       return <AuralUI c={c as AuralContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     case 'debate':
@@ -479,6 +488,41 @@ function HexachordUI({ c, wrong, onSubmit, locked }: UI & { c: HexachordContent 
       </table>
       <p className="ar-small">Bảng chỉ ghi các nốt; âm tiết ut … la là việc của bạn.</p>
       <SelectUI rows={rows} options={SYLLABLES.map((s) => ({ id: s, text: s }))} wrong={wrong} onSubmit={onSubmit} locked={locked} />
+    </div>
+  )
+}
+
+const VI_OF: Record<string, string> = { C: 'Đô', D: 'Rê', E: 'Mi', F: 'Fa', G: 'Sol', A: 'La', B: 'Si' }
+const bassName = (x: string) => VI_OF[x[0].toUpperCase()] + x.slice(1).replace('#', '♯').replace(/^b$/, '♭')
+const SCALE_LABEL: Record<string, string> = { penta: 'Ngũ cung trưởng', pentam: 'Ngũ cung thứ', major: 'Âm giai trưởng', minor: 'Thứ tự nhiên', harmonic: 'Thứ hoà thanh', dorian: 'Dorian', mixolydian: 'Mixolydian', phrygian: 'Phrygian', lydian: 'Lydian' }
+
+/** A bass note with its figures stacked above, as on a continuo part. */
+const FigureMark = ({ bass, figure }: { bass: string; figure: string }) => (
+  <span className="ar-figure" aria-hidden="true">
+    <span className="ar-figure-num">{figure.split('/').map((d) => <i key={d}>{d}</i>)}</span>
+    <b>{bass}</b>
+  </span>
+)
+
+/** Rows of note toggles: for each row, pick the notes that belong (figured bass, scales). */
+function PickUI({ rows, wrong, onSubmit, locked }: UI & { rows: { id: string; head: ReactNode; label: string; palette: string[] }[] }) {
+  const [v, setV] = useState<Record<string, string[]>>({})
+  const flip = (id: string, n: string) => setV((x) => ({ ...x, [id]: (x[id] ?? []).includes(n) ? x[id].filter((y) => y !== n) : [...(x[id] ?? []), n] }))
+  return (
+    <div>
+      <ul className="ar-pick">
+        {rows.map((r) => (
+          <li key={r.id} className={wrong.includes(r.id) ? 'is-wrong' : ''}>
+            <div className="ar-pick-head">{r.head}</div>
+            <div className="ar-pick-notes" role="group" aria-label={r.label}>
+              {r.palette.map((n) => (
+                <button key={n} type="button" className="ar-pick-note" aria-pressed={(v[r.id] ?? []).includes(n)} disabled={locked} onClick={() => flip(r.id, n)}>{n}</button>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+      <Check ok={rows.every((r) => (v[r.id] ?? []).length > 0)} onClick={() => onSubmit(v)} locked={locked} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import type { MasteryState, Save } from './save'
-import { masteryOf } from './progression'
+import { APPLIED, masteryOf } from './progression'
 import type { PuzzleDef } from './types'
 
 /**
@@ -69,7 +69,6 @@ export function dueReviews(puzzles: PuzzleDef[], s: Save, now = Date.now()): Puz
     .sort((a, b) => s.puzzles[a.id].at - s.puzzles[b.id].at)
 }
 
-const APPLIED = new Set(['neume', 'hexachord', 'aural', 'interval', 'chord', 'cadence', 'counterpoint', 'score', 'compose', 'investigation', 'debate'])
 const isoDay = (t: number) => new Date(t).toISOString().slice(0, 10)
 
 /**
