@@ -36,7 +36,7 @@
 ## 5. Sao lưu
 Thêm `journey?: SaveV2` vào `BackupPayload` (tuỳ chọn; file v2/v3 cũ nhập như trước). Nhập "gộp": giữ bản có nhiều tiến trình hơn theo từng phần (quest đã xong ∪, evidence ∪, xp = max); "thay thế": chép bản đang có vào `journey:v2.bak` trước.
 
-## 6. Quyết định cần Lamar chốt trước Phase 1
+## 6. Quyết định (Lamar đã chốt 16/11: 1 duyệt, 2 duyệt, 3 push thẳng main, 4 chỉ bản thu thật)
 1. **Nhãn lời thoại theo dòng** (`voice`): giữ cách cũ "Lời dựng lại" cho lời của nhân vật lịch sử, hay đổi thành mặc định lời người kể/nhân vật hư cấu nói, nhân vật lịch sử chỉ nói câu có nguồn (`quote`) — như kế hoạch mới đòi ("không gán lời thoại hư cấu như thể là lời thật")? Đề xuất: giữ lời dựng lại nhưng **mỗi dòng của nhân vật lịch sử có dấu nhỏ** "dựng lại" / "trích nguyên văn", dòng bịa vẫn "✦ hư cấu"; chương mới dùng nhân vật hư cấu (thầy tu chép nhạc…) dẫn chuyện nhiều hơn.
 2. **Không có thua** (quyết định 15/11) vs "quest failure & retry" của kế hoạch: đề xuất giữ không có thua — sai thì mất điểm/gợi ý, rẽ nhánh, thử lại; không có màn game over.
 3. **Git**: CLAUDE.md quy định làm trên `main` (push = deploy); kế hoạch mới đòi branch riêng, không deploy thẳng. Đề xuất: engine + lát cắt Trung cổ làm trên branch `journey-max`, mở PR, CI chạy đủ; chỉ merge khi Lamar duyệt. Hệ quả: Lamar không thấy trên app thật cho tới khi merge (không có bản xem trước) — hoặc chọn cách thứ hai: merge từng phần nhưng ẩn sau cờ `?beta=1`.

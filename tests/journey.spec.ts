@@ -76,3 +76,14 @@ test('nút ← trong game lùi lịch sử: về bản đồ rồi Back của m�
   await page.goBack()
   await expect(page).toHaveURL(/#\/theory/)
 })
+
+test('save cũ journey:v1 được chuyển sang v2 một lần, bản gốc giữ ở journey:v1.bak, tiến trình còn nguyên', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'], done: ['trung-co/phong-chep-sach'], cards: [] }))
+  })
+  await page.goto('/#/hanh-trinh')
+  await expect(page.locator('.jr-player-name')).toHaveText('Minh')
+  const store = await page.evaluate(() => ({ v2: JSON.parse(localStorage.getItem('journey:v2') ?? '{}'), bak: localStorage.getItem('journey:v1.bak') }))
+  expect(store.bak).toContain('"Minh"')
+  expect(store.v2).toMatchObject({ version: 2, name: 'Minh', done: ['trung-co/phong-chep-sach'], chaptersOpen: ['trung-co'] })
+})

@@ -7,6 +7,7 @@ import { allBrainNotes, brainLocked, importBrainNotes, type BrainNote } from '..
 import { allSavedFull, importSaved, savedLocked, type Saved } from '../features/analyze/store'
 import { exportKnowledge, importKnowledge, knowledgeLocked } from '../features/knowledge/store'
 import type { KnowledgeDump } from '../features/knowledge/model'
+import type { Save as JourneySave } from '../features/journey/engine/save'
 
 const LOCKED = 'Ghi chú và đề tài đang được mã hoá và chưa mở. Hãy đóng hẳn ứng dụng, mở lại và nhập mã khoá rồi thử lại.'
 
@@ -27,6 +28,8 @@ export interface BackupPayload {
   analyses?: Saved[]
   /** sources, excerpts, claims, evidence and links of the knowledge platform (features/knowledge) */
   knowledge?: KnowledgeDump
+  /** the Hành trình game save (features/journey) */
+  journey?: JourneySave
 }
 
 export async function exportBackup(): Promise<BackupPayload> {
@@ -47,6 +50,8 @@ export async function exportBackup(): Promise<BackupPayload> {
     brain: allBrainNotes(),
     analyses: await allSavedFull(),
     knowledge: await exportKnowledge(),
+    // the game's code (six chapters) loads only for a backup, not with the app
+    journey: (await import('../features/journey/progress')).currentSave(),
   }
 }
 
@@ -224,6 +229,11 @@ export async function importBackup(file: File, mode: 'replace' | 'merge'): Promi
   if (data.brain) importBrainNotes(data.brain, mode)
   if (data.analyses) importSaved(data.analyses, mode)
   if (data.knowledge) await importKnowledge(data.knowledge, mode)
+  if (data.journey) {
+    const [{ currentSave, replaceSave }, { mergeSaves, readSave }] = await Promise.all([import('../features/journey/progress'), import('../features/journey/engine/save')])
+    const incoming = readSave(data.journey).save
+    replaceSave(mode === 'replace' ? incoming : mergeSaves(currentSave(), incoming))
+  }
 
   return { students: incoming.students.length, timetableSlots: incoming.slots.length }
 }

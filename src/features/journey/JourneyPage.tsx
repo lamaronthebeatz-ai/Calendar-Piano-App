@@ -9,8 +9,10 @@ import { ERA, loadPool, makeTrip, type Pool } from './endless'
 import { CREDITS } from './credits'
 import { MUSIC } from './music'
 import { nudge, playTrack, setMuted, useSoundtrack } from './soundtrack'
-import { named, resetJourney, update, useSave, type Endless as Trip, type Save } from './progress'
+import { finished, named, opened, resetJourney, update, useSave, type Endless as Trip, type Save } from './progress'
 import type { Card, Chapter, Claim, Scene, Verdict } from './types'
+import { recordAttempt, verdictXp } from './engine/progression'
+import { legacyPuzzle } from './content/legacy'
 import './journey.css'
 
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
@@ -19,9 +21,6 @@ const bg = (id: string) => ({ src: IMG(id), srcSet: `${IMG(id + '-m')} 1080w, ${
 /** Renaissance portraits the player can wear (public domain, credits.ts). */
 const PORTRAITS = ['p-leonardo-musician', 'p-durer', 'p-van-eyck', 'p-castiglione', 'p-ermine', 'p-pollaiuolo']
 const key = (c: Chapter, s: Scene | Claim) => `${c.id}/${s.id}`
-/** A chapter opens once every scene of the one before it is done. */
-const finished = (c: Chapter, save: Save) => c.scenes.every((s) => save.done.includes(key(c, s)))
-const opened = (i: number, save: Save) => i === 0 || finished(CHAPTERS[i - 1], save)
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
 const VERDICT: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Giai thoại', unsure: 'Chưa chắc' }
 
@@ -531,6 +530,8 @@ function ScenePlayer({ chapter, scene, save, go, endless }: { chapter: Chapter; 
     }
   }
   const answer = (i: number) => {
+    // story puzzles feed the engine's records (tries, XP, mastery, codex); generated stops have no stable id
+    if (!endless) update((s) => recordAttempt(s, legacyPuzzle(chapter, scene), i === scene.quest.answer, 0))
     if (i !== scene.quest.answer) return setWrong((w) => (w.includes(i) ? w : [...w, i]))
     if (endless) {
       endless.onDone(wrong.length === 0)
@@ -744,7 +745,7 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
               {!v ? (
                 <div className="jr-verdicts">
                   {(Object.keys(VERDICT) as Verdict[]).map((x) => (
-                    <button key={x} onClick={() => update((s) => ({ verdicts: { ...s.verdicts, [key(chapter, c)]: x } }))}>
+                    <button key={x} onClick={() => update((s) => ({ verdicts: { ...s.verdicts, [key(chapter, c)]: x }, ...verdictXp(s, key(chapter, c), x === c.verdict) }))}>
                       {VERDICT[x]}
                     </button>
                   ))}

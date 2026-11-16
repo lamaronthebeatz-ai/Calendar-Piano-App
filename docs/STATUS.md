@@ -4,7 +4,7 @@
 > Cập nhật lần cuối: 16/11/2026.
 
 ## Đang dở / chờ Lamar
-- **Hành trình Maximum Edition — Phase 0 xong, CHỜ LAMAR DUYỆT thiết kế** (16/11): `docs/journey/` (ARCHITECTURE_AUDIT, GAME_DESIGN_DOCUMENT, DATA_MODEL, TECHNICAL_ROADMAP, MIGRATION_PLAN). Chưa đổi code game. Bốn câu chờ chốt ở `MIGRATION_PLAN.md §6` (nhãn lời thoại từng dòng, giữ "không có thua", branch hay main, âm thanh thử thách nghe). Sau khi duyệt: Phase 1 theo `TECHNICAL_ROADMAP.md`.
+- **Hành trình Maximum Edition**: Phase 0 duyệt (quyết định ở `decisions.md`); **Phase 1 xong (16/11)** — engine thuần + save v2 + mở chương bền + 6 chương cũ qua engine + sao lưu (`notes/journey.md` § Engine). Người chơi chưa thấy khác. **Tiếp:** lát cắt Trung cổ "Bản thảo thất lạc" (TECHNICAL_ROADMAP Phase 2–4): renderer thoại phân nhánh, màn địa điểm, câu đố neume/hexachord/nghe (bản thu thật), điều tra. L4 (WebKit chập chờn) chưa tái hiện được.
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong

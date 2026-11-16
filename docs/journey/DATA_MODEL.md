@@ -161,6 +161,9 @@ interface ItemDef { id: string; name: string; kind: 'document' | 'manuscript' | 
 Không có vật phẩm trang trí: mỗi item có `links` (Codex) hoặc `use`.
 
 ## 10. Player Profile (save v2)
+
+> Đã làm (Phase 1): khác bản phác dưới đây ở chỗ **các trường v1 giữ phẳng ở gốc** (name, portrait, done, cards, verdicts, step, seen, endless) để màn cũ đọc không đổi; xem `engine/save.ts`.
+
 ```ts
 interface SaveV2 {
   version: 2

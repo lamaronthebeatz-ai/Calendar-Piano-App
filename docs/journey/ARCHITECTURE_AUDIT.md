@@ -103,9 +103,9 @@ Save { name, portrait, done: string[] /* chương/cảnh */, cards: string[], ve
 ## 7. Lỗi đã phát hiện
 | # | Lỗi | Mức |
 |---|---|---|
-| L1 | Thêm cảnh/nhiệm vụ vào chương đã xong làm khoá lại chương sau (`opened` tính lại từ nội dung) | **Cao** khi mở rộng |
-| L2 | Tiến trình không vào bản sao lưu | Cao (mất dữ liệu khi đổi máy) |
-| L3 | `read()` không kiểm kiểu từng trường; dữ liệu hỏng có thể làm sập trang (không có error boundary riêng cho game) | Trung bình |
+| L1 | Thêm cảnh/nhiệm vụ vào chương đã xong làm khoá lại chương sau (`opened` tính lại từ nội dung) | **Cao** khi mở rộng — **đã sửa Phase 1** (`chaptersOpen`) |
+| L2 | Tiến trình không vào bản sao lưu | Cao — **đã sửa Phase 1** |
+| L3 | `read()` không kiểm kiểu từng trường | Trung bình — **đã sửa Phase 1** (`readSave` sửa từng trường) |
 | L4 | Test WebKit `journey.spec` chập chờn trên CI một lần (nút đáp án bị tháo khỏi DOM) — chưa tái hiện ở máy (48/48) | Trung bình (chặn deploy khi trúng) |
 | L5 | `asked` của vô tận cắt ở 1.500 mục, cắt đầu danh sách — có thể lặp lại câu cũ sau rất lâu (thiết kế, chấp nhận) | Thấp |
 | L6 | Nhãn "Lời dựng lại" áp cho toàn bộ thoại: kế hoạch mới đòi nhân vật lịch sử không bị gán lời hư cấu "như thể có thật" — cách hiện tại có nhãn nhưng ở mức cả cảnh, chưa ở mức dòng | Cần quyết định (xem MIGRATION_PLAN §6) |

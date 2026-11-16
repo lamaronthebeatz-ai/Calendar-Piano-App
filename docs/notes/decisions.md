@@ -29,6 +29,12 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - `data/seed-backup.json` (học viên thật) **giữ trong repo**, tự nạp máy mới.
 - Tên trên `LICENSE` / dòng bản quyền: giữ như hiện tại (tên thật + Lamar) — Lamar để tuỳ, 11/2026. Không thêm thông tin cá nhân khác vào repo.
 
+## Hành trình Maximum Edition (16/11/2026, duyệt thiết kế `docs/journey/`)
+- Lời của nhân vật lịch sử vẫn là lời dựng lại, nhưng **mỗi dòng có nhãn** (dựng lại / trích nguyên văn / ✦ hư cấu).
+- Giữ **không có thua**: sai thì mất điểm, có gợi ý, rẽ nhánh, thử lại.
+- **Push thẳng `main`, không cần hỏi** (không branch/PR cho game).
+- Thử thách nghe dùng **bản thu thật** (người hát/chơi thật, giấy phép tự do), không dùng âm tổng hợp.
+
 ## Nền tảng tri thức (16/11/2026)
 - Mọi đối tượng một mã `<tiền tố>:<mã>` (mở rộng ngữ pháp sổ tay); đồ thị dựng trong trình duyệt từ dữ liệu sẵn có, không server đồ thị, không đổi công nghệ lõi.
 - Mỗi quan hệ mang nguồn gốc: thư viện / Wikidata / máy tính / nghiên cứu — tách bạch dữ liệu xác thực, kết quả tính toán, nhận định nghiên cứu.

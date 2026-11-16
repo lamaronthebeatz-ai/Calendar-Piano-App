@@ -10,6 +10,13 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 
 > **Nâng cấp Maximum Edition (16/11):** khảo sát + thiết kế ở `docs/journey/` — đọc `ARCHITECTURE_AUDIT.md` và `TECHNICAL_ROADMAP.md` trước khi sửa engine. Lỗi đã biết: thêm cảnh vào chương cũ làm khoá lại chương sau (L1); tiến trình chưa vào sao lưu (L2).
 
+## Engine (Phase 1, 16/11) — `src/features/journey/engine/`, logic thuần, test `engine.test.ts`
+- `types.ts` mô hình nội dung (Cond/Effect là dữ liệu, Dialogue đồ thị node có `voice` từng dòng, Quest nhiều giai đoạn, Puzzle, Evidence, Item, ChapterDef). `world.ts` `holds`/`apply`; `dialogue.ts` `enter`/`step`/`analyzeDialogue` (ngõ cụt, vòng kín, không tới được, trích không nguồn); `quest.ts` `settleQuests`/`analyzeQuest`; `puzzles.ts` registry `choice order match classify blank` (`check`, `puzzleProblem`: đáp án phải tự giải được); `progression.ts` XP (một lần/câu, trừ gợi ý và lần sai), level, kỹ năng 6 nhánh, mastery 4 bậc (một câu đúng không vượt "Đã gặp"), thành tích; `validate.ts` kiểm cả chương.
+- **Save v2** (`engine/save.ts`, `progress.ts`): khoá `journey:v2`, giữ phẳng mọi trường v1 (màn cũ đọc như trước) + `chaptersOpen flags visited quests puzzles dialogue inventory codex xp skills mastery achievements`. Đọc v1 một lần → `journey:v1.bak` (v1 để nguyên); trường hỏng sửa riêng, ghi `journey:repair-log`; JSON hỏng cất `journey:v2.broken`; "Bắt đầu lại" cất `journey:v2.reset`; nhập sao lưu cất `journey:v2.bak`. **Chương đã mở không khoá lại** (`opened` = chương đầu ∨ `chaptersOpen` ∨ chương trước xong; `settle` ghi mọi chương mở vào save).
+- `content/legacy.ts`: 6 chương cũ → `ChapterDef` (id `q:/pz:/loc:/dlg:` suy từ id cũ; `q:chương/cảnh` xong ⇔ `save.done`; thẻ giữ id). Cả 6 qua `validateChapter` 0 lỗi. Trả lời câu hỏi cảnh ghi `recordAttempt` (XP, mastery, Codex); phán quyết đúng lần đầu +5 kỹ năng nguồn.
+- `content/ids.lock.json` (190 id chương/cảnh/thẻ/lời khai đã phát hành) — test đòi không id nào biến mất. Thêm chương mới: chạy lại script sinh khoá (xem engine.test) hoặc thêm tay.
+- Sao lưu: `BackupPayload.journey` (nạp lười module game), nhập "gộp" = `mergeSaves` (hợp, không mất gì), "thay" cất bản cũ trước.
+
 ## File
 - `types.ts` — `Chapter` (cảnh + phiên toà + intro/outro), `Scene` (nơi, toạ độ, năm, ảnh nền, NPC, lời, `quest {ask, choices, answer, read, where, explain}`, `card`, `listen` YouTube), `Claim` (verdict `fact|legend|unsure`).
 - `chapters/<thời kỳ>.ts` + `chapters/index.ts` (`CHAPTERS` theo thứ tự lịch sử). **Thêm chương = một file + một dòng.**
