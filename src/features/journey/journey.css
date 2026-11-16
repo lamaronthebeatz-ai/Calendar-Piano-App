@@ -8,6 +8,8 @@
 }
 .jr-era-baroque { --jr-tint: 350; --jr-grade: linear-gradient(180deg, rgb(30 6 10 / 0.42), rgb(24 14 4 / 0.12) 40%, rgb(6 3 3 / 0.86)); }
 .jr-era-baroque .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; font-size: 2.7em; line-height: 0.85; color: var(--jr-gold-2); text-shadow: none; filter: drop-shadow(0 0 10px rgb(240 212 143 / 0.45)); }
+.jr-era-national { --jr-tint: 210; --jr-grade: linear-gradient(180deg, rgb(10 18 30 / 0.4), rgb(16 18 22 / 0.1) 40%, rgb(4 6 8 / 0.88)); }
+.jr-era-national .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; padding: 0.04em 0.14em 0; font-size: 2.4em; line-height: 0.88; color: var(--jr-ink); background: rgb(122 30 18 / 0.85); border-radius: 3px; }
 .jr-era-romantic { --jr-tint: 330; --jr-grade: linear-gradient(180deg, rgb(26 10 22 / 0.42), rgb(22 12 10 / 0.12) 40%, rgb(6 4 6 / 0.88)); }
 .jr-era-romantic .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; font-size: 2.8em; line-height: 0.82; font-style: italic; color: var(--jr-gold-2); filter: drop-shadow(0 0 12px rgb(200 120 140 / 0.45)); }
 .jr-era-classical { --jr-tint: 190; --jr-grade: linear-gradient(180deg, rgb(14 22 30 / 0.34), rgb(28 24 18 / 0.08) 40%, rgb(6 6 8 / 0.84)); }
@@ -68,6 +70,7 @@
 .jr-stop-num { text-anchor: middle; fill: #7a1e12; font-family: var(--font-display); font-weight: 700; pointer-events: none; }
 .jr-stop.is-done .jr-stop-num { fill: #f4e6c4; }
 .jr-stop.is-open { cursor: pointer; }
+.jr-stop-far { fill: #7a1e12; font-family: var(--font-display); font-style: italic; font-weight: 700; paint-order: stroke; stroke: rgb(250 242 222 / 0.9); stroke-width: 0.35em; pointer-events: none; }
 .jr-stop-ring { fill: none; stroke: #7a1e12; transform-box: fill-box; transform-origin: center; animation: jr-ping 2.4s ease-out infinite; }
 .jr-prologue { position: absolute; inset: 0; overflow: hidden; }
 .jr-prologue-panel { position: absolute; z-index: 3; left: 50%; bottom: calc(7vh + 18px + env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(640px, calc(100% - 28px)); padding: 20px 20px 16px; border-radius: 18px; background: rgb(10 8 6 / 0.72); border: 1px solid var(--jr-line); box-shadow: 0 30px 80px -30px #000; animation: jr-panel 900ms var(--phn-ease, ease) both; }
@@ -76,6 +79,7 @@
 .jr-prologue-nav { display: grid; gap: 12px; margin-top: 4px; }
 .jr-prologue-nav > div { display: flex; justify-content: flex-end; gap: 8px; }
 .jr-prologue-nav .jr-cta { width: auto; padding-inline: 22px; }
+.jr-prologue-panel .jr-kicker { padding-right: 64px; }
 .jr-skip { position: absolute; top: 18px; right: 18px; font-size: 12px; color: var(--jr-faint); text-decoration: underline; text-underline-offset: 3px; }
 .jr-atlas-foot { position: relative; max-width: 860px; margin: 0 auto; padding: 8px 16px calc(40px + env(safe-area-inset-bottom)); }
 .jr-player { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 16px; background: var(--jr-panel); border: 1px solid var(--jr-line); }

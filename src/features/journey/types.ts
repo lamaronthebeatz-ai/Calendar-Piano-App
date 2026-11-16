@@ -66,6 +66,8 @@ export interface Scene {
   listen?: { youtube: string; caption: string }
   /** Generated stops borrow a track of the chapter (MUSIC key); story scenes use their own id. */
   track?: string
+  /** Beyond the edge of the chapter's old map (New York on a map of Europe): drawn at the edge, with its name. */
+  far?: boolean
 }
 
 export type Verdict = 'fact' | 'legend' | 'unsure'

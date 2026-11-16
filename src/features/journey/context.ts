@@ -177,4 +177,36 @@ export const CONTEXT: Record<string, ContextPanel[]> = {
       read: 'am-nhac-tuyet-doi',
     },
   ],
+  'quoc-gia': [
+    {
+      title: 'Dân ca, truyền thuyết, tên những dòng sông',
+      text: 'Chủ nghĩa dân tộc trong âm nhạc: các nhà soạn nhạc đưa dân ca, vũ điệu, truyền thuyết và điệu thức của quê hương vào giao hưởng và opera. Ở Séc có Smetana và Dvořák; Na Uy có Grieg; Phần Lan có Sibelius; Tây Ban Nha có Albéniz và Granados.',
+      img: 'smetana-friends',
+      read: 'thoi-ky-lang-man',
+    },
+    {
+      title: 'Hai con đường của nước Nga',
+      text: 'Glinka thường được xem là người mở đầu nhạc cổ điển Nga. Thập niên 1860, Balakirev tập hợp một nhóm phần lớn tự học theo hướng dân tộc. Hướng kia là đào tạo bài bản kiểu châu Âu: Anton Rubinstein lập Nhạc viện Sankt-Peterburg năm 1862, nơi Tchaikovsky học.',
+      img: 'slav-composers',
+      read: 'mily-balakirev',
+    },
+    {
+      title: 'Những dân tộc chưa có nhà nước',
+      text: 'Praha thuộc Đế quốc Habsburg và đang "phục hưng dân tộc": người Séc lập hội hợp xướng, Nhà hát Tạm, quyên tiền xây Nhà hát Quốc gia. Phần Lan là đại công quốc dưới quyền Sa hoàng và bị Nga hoá; Na Uy còn trong liên minh với Thuỵ Điển cho tới 1905.',
+      img: 'symposion',
+      read: 'bedrich-smetana',
+    },
+    {
+      title: 'Opera hiện thực',
+      text: 'Ở Ý, sau Verdi là trào lưu verismo (hiện thực) với Cavalleria rusticana (1890) của Mascagni và các vở của Puccini. Nhà xuất bản Ricordi đứng sau cả hai thế hệ.',
+      img: 'boheme-set',
+      read: 'giacomo-puccini',
+    },
+    {
+      title: 'Những bản giao hưởng khổng lồ',
+      text: 'Thế hệ cuối của Lãng mạn Đức – Áo — Bruckner, Mahler, Richard Strauss — mở rộng dàn nhạc và hoà âm sắc thể đến giới hạn, dẫn sang phi điệu tính của thế kỷ XX.',
+      img: 'hofoper',
+      read: 'gustav-mahler',
+    },
+  ],
 }

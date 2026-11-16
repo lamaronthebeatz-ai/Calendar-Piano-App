@@ -42,7 +42,7 @@ describe.each(CHAPTERS)('chương $numeral — $title', (ch) => {
     }
     const m = MAPS[ch.id]
     expect(m && picture(m.img), 'bản đồ').toBe(true)
-    for (const s of ch.scenes) {
+    for (const s of ch.scenes.filter((s) => !s.far)) {
       const [x, y] = onMap(m, s.lat, s.lon)
       expect(x > 0 && x < m.w && y > 0 && y < m.h, `${s.id} nằm ngoài bản đồ (${Math.round(x)}, ${Math.round(y)})`).toBe(true)
     }

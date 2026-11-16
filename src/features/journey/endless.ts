@@ -25,8 +25,15 @@ export interface Pool {
 
 export const loadPool = () => import('./pool.json').then((m) => m.default as unknown as Pool)
 
-/** Thời kỳ của chương → mã nhóm trong composers.ts. */
-export const ERA: Record<string, string> = { 'trung-co': 'med', 'phuc-hung': 'ren', baroque: 'bar', 'co-dien': 'cla', 'lang-man': 'rom' }
+/** Thời kỳ của chương → các nhóm trong composers.ts (tiền tố "thời kỳ:nhóm"). */
+export const ERA: Record<string, string[]> = {
+  'trung-co': ['med:'],
+  'phuc-hung': ['ren:'],
+  baroque: ['bar:'],
+  'co-dien': ['cla:'],
+  'lang-man': ['rom:early', 'rom:opera', 'rom:german', 'rom:france'],
+  'quoc-gia': ['rom:russia', 'rom:national', 'rom:americas'],
+}
 
 const PLACE: Record<string, [string, number, number]> = {
   Ý: ['Nước Ý', 43.4, 11.6],
@@ -92,7 +99,8 @@ export function makeTrip(chapter: Chapter, pool: Pool, seed: number, asked: stri
   const pick = <T,>(xs: T[]) => xs[Math.floor(r() * xs.length)]
   const shuffle = <T,>(xs: T[]) => xs.map((x) => [r(), x] as const).sort((a, b) => a[0] - b[0]).map((x) => x[1])
   const era = ERA[chapter.id]
-  const inEra = (i: number) => pool.people[i].g.startsWith(era + ':')
+  const inEra = (i: number) => era.some((g) => pool.people[i].g.startsWith(g))
+  const mood = MOOD[era[0].slice(0, 3)]
   const events = pool.events.map((e, i) => ({ e, key: `e${i}` })).filter((x) => inEra(x.e[0]))
   const claims = pool.claims.map((c, i) => ({ c, key: `c${i}` })).filter((x) => inEra(x.c[0]))
   const people = pool.people.map((p, i) => ({ p, i })).filter((x) => inEra(x.i) && x.p.w.length > 0)
@@ -180,7 +188,7 @@ export function makeTrip(chapter: Chapter, pool: Pool, seed: number, asked: stri
         bg: pick(bgs),
         npc: { name: p.n, role: `${p.y} · ${p.c}`, slug: p.s, img: FACES[p.s] },
         lines: [
-          { who: 'narrator', text: `${placeName}. ${pick(MOOD[era])}` },
+          { who: 'narrator', text: `${placeName}. ${pick(mood)}` },
           { who: 'npc', text: pick(GREET) },
           { who: 'npc', text: `Người đời tóm tắt về ta thế này: «${p.d}»` },
           { who: 'me', text: meQ },

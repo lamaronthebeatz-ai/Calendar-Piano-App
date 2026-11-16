@@ -201,7 +201,15 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
   const box = useRef<HTMLDivElement>(null)
   const [zoom, setZoom] = useState(false)
   // a stop off the old map's edge is held just inside it
-  const pts = scenes.map((s) => onMap(m, s.lat, s.lon).map((v, i) => Math.min(Math.max(v, 30), (i ? m.h : m.w) - 30)) as [number, number])
+  const u = m.w / 100
+  const pts: [number, number][] = []
+  for (const s of scenes) {
+    let [x, y] = onMap(m, s.lat, s.lon).map((v, i) => Math.min(Math.max(v, 30), (i ? m.h : m.w) - 30))
+    // stops in the same city fan out around it instead of hiding one another
+    const near = pts.filter((p) => Math.hypot(p[0] - x, p[1] - y) < u * 2.4).length
+    if (near) [x, y] = [x + Math.cos(near * 1.2) * u * 3.2, y + Math.sin(near * 1.2) * u * 3.2]
+    pts.push([x, y])
+  }
   const here = pts[Math.max(0, (next ? scenes.indexOf(next) : scenes.length) - 1)] ?? pts[0]
   const [hx, hy] = here
   // keep the traveller in sight whenever the zoom changes
@@ -209,7 +217,6 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
     const b = box.current
     if (b) b.scrollTo({ left: (hx / m.w) * b.scrollWidth - b.clientWidth / 2, top: (hy / m.h) * b.scrollHeight - b.clientHeight / 2 })
   }, [zoom, hx, hy, m])
-  const u = m.w / 100
   return (
     <figure className="jr-oldmap">
       <div ref={box} className="jr-oldmap-box">
@@ -228,6 +235,11 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
                   <text dy="0.35em" className="jr-stop-num" style={{ fontSize: u * 1.7 }}>
                     {i + 1}
                   </text>
+                  {s.far && (
+                    <text x={u * 2.2} dy="0.35em" className="jr-stop-far" style={{ fontSize: u * 1.9 }}>
+                      ◂ {s.place.split(', ').pop()}
+                    </text>
+                  )}
                 </g>
               )
             })}
