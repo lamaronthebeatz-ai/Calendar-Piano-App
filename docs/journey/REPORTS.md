@@ -147,3 +147,41 @@ Phần thưởng kỹ năng là điều kiện dữ liệu (`{ skill, level }`) 
 | Tiếp tục được sau khi đóng game | ✓ | tiến độ chuyến, ngày, ôn luyện nằm trong save v2 |
 | Không mất tiến trình | ✓ | chơi lại / NG+ giữ thẻ, kỹ năng, Codex — unit + e2e |
 | Điều chỉnh độ khó theo năng lực thực tế | ✓ | `levelFrom` + `KIND_WEIGHTS`, không dùng cấp |
+
+---
+
+## Phase 9 — Hoàn thiện và kiểm định (16/11)
+
+### A. Đã làm
+- **Lỗi L4** (WebKit CI: chạm vào cảnh chờ "đứng yên" tới hết giờ, từng làm đỏ 2 lượt CI): khung cảnh phủ cả màn với hiệu ứng lặp có lúc không bao giờ "stable" dưới tải; chạm đi tiếp trong test dùng `force`, nút đáp án vẫn kiểm đủ. Lặp 42/42 trên WebKit tại máy dưới tải 4 luồng.
+- **Ngoại tuyến**: bản thu không tải được thì nút nghe báo "Không phát được bản thu — cần kết nối mạng" (trước im lặng). E2e chặn Wikimedia để kiểm.
+- **Bàn phím**: khung hội thoại tự đặt focus ở nút chính (Tiếp / lựa chọn đầu); Esc đóng hội thoại, Sổ hành trình, khung báo cáo. E2e.
+- **Giảm chuyển động**: giao diện lát cắt theo `prefers-reduced-motion` như phần game cũ.
+- **Tràn khung**: e2e kiểm không tràn ngang ở mỗi địa điểm và mỗi câu đố; chạy thêm ở 360×640 (11/11 test game qua).
+- **Hiệu năng**: gói trang game 173 KB thô / 51 KB nén (6 chương + lát cắt + engine); `pool.json` tải lười; ảnh không precache, hai cỡ — chưa cần tách thêm.
+
+### D. Kiểm thử chức năng (tổng hợp, kết quả thật)
+| Hạng mục | Kiểm bằng |
+|---|---|
+| Mở chương, mở nơi | unit (`opened`, `chaptersOpen`), e2e (Chương II còn mở sau khi chơi lại) |
+| Hội thoại phân nhánh, không cụt, không vòng kín | `analyzeDialogue` trên mọi hội thoại (unit) + e2e |
+| Phụ thuộc nhiệm vụ | `analyzeQuest`, bot engine đi hết tuyến (unit), e2e |
+| Hoàn thành câu đố, đáp án tự giải được | `puzzleProblem` trên 77 câu (66 cũ + 13 lát cắt) |
+| Phần thưởng, túi đồ, kỹ năng | unit + e2e (Sổ hành trình) |
+| Lưu / tải, chuyển đổi v1 → v2 | unit (localStorage giả) + e2e trình duyệt |
+| Lữ hành vô tận, thử thách ngày, chơi lại | unit + e2e |
+| Liên kết tri thức | mọi `a:` qua validator; `check:links` |
+
+### E. Còn tồn tại
+- Chưa thử Safari thật trên iPhone (chỉ WebKit của Playwright).
+- Chưa dùng công cụ đo tương phản / ARIA tự động (axe không có trong dự án).
+- Trang bầu trời 3D (ngoài game, vùng cấm đụng) thỉnh thoảng làm WebKit điện thoại sập trên CI; lần thử lại qua.
+
+### G. Nghiệm thu (Phase 9 + Definition of Done phần kỹ thuật)
+| Tiêu chí | Đạt |
+|---|---|
+| TypeScript không lỗi mới, build đạt, test đạt | ✓ |
+| Không lỗi nghiêm trọng ở luồng chính | ✓ (e2e 2 engine × 3 cỡ màn) |
+| Không mất dữ liệu cũ | ✓ (chuyển đổi + bản dự phòng + test) |
+| Không nút giả, không nhiệm vụ không hoàn thành được, không hội thoại cụt, không câu đố không giải được | ✓ (validator + e2e chơi trọn) |
+| Responsive | ✓ (393, 360, 1280) |

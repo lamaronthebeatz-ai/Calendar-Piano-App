@@ -4,7 +4,7 @@
 > Cập nhật lần cuối: 16/11/2026.
 
 ## Đang dở / chờ Lamar
-- **Hành trình Maximum Edition**: Phase 0–6 xong; **Phase 8 xong (16/11)**: độ khó vô tận theo năng lực thật, thử thách hôm nay + chuỗi ngày, ôn luyện giãn cách, chơi lại chương, Hành trình mới+ — `docs/journey/REPORTS.md`. **Tiếp:** Phase 9 (QA: bot rà toàn game kể cả lát cắt, hiệu năng tải chương, khả năng tiếp cận, thử thách nghe ngoại tuyến) → Phase 7 nhân lát cắt cho chương II–VI (Lamar chốt: xong các phase rồi mới nhân rộng). Chưa thử Safari thật.
+- **Hành trình Maximum Edition**: **Phase 0–6, 8, 9 xong (16/11)** — engine, save v2, lát cắt Trung cổ "Bản thảo thất lạc", kỹ năng – Codex – tranh luận – phiên toà chỉ nguồn – báo cáo nghiên cứu, độ khó theo năng lực – thử thách ngày – ôn luyện – chơi lại – NG+, QA (L4 xử lý, ngoại tuyến, bàn phím, 360px) — `docs/journey/REPORTS.md`. **Tiếp: Phase 7** — nhân lát cắt cho Chương II–VI (mỗi chương một câu chuyện điều tra + câu đố đặc trưng; viết bài thư viện còn thiếu trước). Chưa thử Safari thật.
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong

@@ -93,6 +93,7 @@ async function solve(page: Page, thing: string, id: string) {
     else await selects(page, clips.clips.map((x) => [label(x.id), textOf(clips.labels, (a as Record<string, string>)[x.id])]))
   }
   await expect(page.locator('.ar-explain')).toContainText(p.explanation.slice(0, 40))
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), `tràn ngang ở ${id}`).toBeLessThanOrEqual(0)
   await page.getByRole('button', { name: 'Tiếp tục →' }).click()
 }
 
@@ -101,6 +102,7 @@ const place = async (page: Page, name: string) => {
   if (await back.isVisible()) await back.click()
   await page.locator('.ar-places').getByRole('button', { name: new RegExp(name) }).click()
   await expect(page.locator('.ar-place-title')).toHaveText(name)
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), `tràn ngang ở ${name}`).toBeLessThanOrEqual(0)
 }
 
 test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, kết luận cần chứng cứ, mở lại vẫn còn', async ({ page }) => {
@@ -229,4 +231,24 @@ test('ôn luyện: câu đã giải từ hôm qua hiện ở màn tổng; làm l
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('journey:v2')!))
   expect(saved.xp).toBe(15)
   expect(saved.mastery['a:ky-am-binh-ca-gregorian'].right).toBe(2)
+})
+
+test('ngoại tuyến: bản thu không tải được thì nói rõ, không im lặng', async ({ page }) => {
+  await page.route('https://upload.wikimedia.org/**', (r) => r.abort())
+  await page.goto('/#/hanh-trinh?c=trung-co&v=arc&a=ban-thao&l=loc%3Abt%2Fthu-vien&p=pz%3Abt%2Fdon-am-nhieu-be')
+  await page.getByRole('button', { name: 'Nghe Đoạn A' }).click()
+  await expect(page.locator('.ar-clip-err').first()).toContainText('cần kết nối mạng')
+})
+
+test('bàn phím: hội thoại nhận focus ở nút chính, Esc đóng hội thoại và sổ', async ({ page }) => {
+  await page.goto('/#/hanh-trinh?c=trung-co&v=arc&a=ban-thao&l=loc%3Abt%2Fthu-vien')
+  await page.getByRole('button', { name: 'Nói chuyện với Thầy quản thư' }).click()
+  await expect(page.getByRole('button', { name: 'Tiếp →' })).toBeFocused()
+  await page.keyboard.press('Enter')
+  await page.keyboard.press('Escape')
+  await expect(page.getByRole('dialog')).toBeHidden()
+  await page.getByRole('button', { name: /^← Bản thảo thất lạc/ }).click()
+  await page.getByRole('button', { name: 'Sổ hành trình' }).click()
+  await page.keyboard.press('Escape')
+  await expect(page.locator('.ar-book')).toBeHidden()
 })

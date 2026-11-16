@@ -21,6 +21,21 @@ import { createProject, updateProject } from '../../research/store'
 import './arc.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
+
+/** Escape closes the panel on top (dialogue, journal, report) — keyboard players are never stuck in one. */
+function useEscape(close: () => void) {
+  const ref = useRef(close)
+  useEffect(() => {
+    ref.current = close
+  })
+  useEffect(() => {
+    const on = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') ref.current()
+    }
+    addEventListener('keydown', on)
+    return () => removeEventListener('keydown', on)
+  }, [])
+}
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
 const bg = (id: string) => ({ src: IMG(id), srcSet: `${IMG(id + '-m')} 1080w, ${IMG(id)} 1920w`, sizes: '100vw' })
 
@@ -167,6 +182,7 @@ function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; sa
   const [at, setAt] = useState<string | null>(() => enterNode(d, d.start, save))
   const applied = useRef(new Set<string>())
   const node = at ? d.nodes[at] : null
+  useEscape(onClose)
   // a node's own effects run once, when it is shown
   useEffect(() => {
     if (!at || applied.current.has(at) || !d.nodes[at].effects) return
@@ -202,11 +218,11 @@ function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; sa
         {choices.length ? (
           <div className="jr-choices">
             {choices.map((c) => (
-              <button key={c.i} className="jr-choice" onClick={() => move(c.i)}>{c.text}</button>
+              <button key={c.i} className="jr-choice" autoFocus={c === choices[0]} onClick={() => move(c.i)}>{c.text}</button>
             ))}
           </div>
         ) : (
-          <button className="jr-cta ar-next" onClick={() => move()}>{node.end || !node.next ? 'Xong' : 'Tiếp →'}</button>
+          <button className="jr-cta ar-next" autoFocus onClick={() => move()}>{node.end || !node.next ? 'Xong' : 'Tiếp →'}</button>
         )}
         <button className="ar-close" onClick={onClose} aria-label="Đóng hội thoại">✕</button>
       </div>
@@ -470,6 +486,7 @@ function HexachordUI({ c, wrong, onSubmit, locked }: UI & { c: HexachordContent 
 /** Plays a stretch of a real recording (Commons transcode), the background music silenced meanwhile. */
 function ClipButton({ clip, label }: { clip: AuralContent['clips'][number]; label: string }) {
   const [on, setOn] = useState(false)
+  const [failed, setFailed] = useState(false)
   const el = useRef<HTMLAudioElement | null>(null)
   useEffect(
     () => () => {
@@ -492,12 +509,20 @@ function ClipButton({ clip, label }: { clip: AuralContent['clips'][number]; labe
     }
     a.addEventListener('timeupdate', stop)
     a.onpause = () => setOn(false)
-    void a.play().then(() => setOn(true), () => setOn(false))
+    // the recordings stream from Wikimedia Commons: offline (or blocked), say so instead of a silent button
+    a.onerror = () => (setOn(false), setFailed(true))
+    void a.play().then(
+      () => (setOn(true), setFailed(false)),
+      (e: DOMException) => (setOn(false), setFailed(e?.name !== 'NotAllowedError')),
+    )
   }
   return (
-    <button className={`ar-clip${on ? ' is-on' : ''}`} onClick={play} aria-label={`Nghe ${label}`}>
-      {on ? '♪' : '▶'} {label}
-    </button>
+    <span className="ar-clip-wrap">
+      <button className={`ar-clip${on ? ' is-on' : ''}`} onClick={play} aria-label={`Nghe ${label}`}>
+        {on ? '♪' : '▶'} {label}
+      </button>
+      {failed && <small className="ar-clip-err">Không phát được bản thu — cần kết nối mạng.</small>}
+    </span>
   )
 }
 
@@ -588,6 +613,7 @@ function ReportPanel({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose:
   const [chosen, setChosen] = useState<string[]>([])
   const [analysis, setAnalysis] = useState('')
   const [conclusion, setConclusion] = useState(best?.text ?? '')
+  useEscape(onClose)
   const input = { title: `Báo cáo: ${arc.title}`, question, evidence: have.filter((e) => chosen.includes(e.id)), analysis, conclusion }
   const problems = reportProblems(input)
   const save_ = () => {
@@ -644,6 +670,7 @@ function ReportPanel({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose:
 
 function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => void }) {
   const [tab, setTab] = useState<'quest' | 'skills' | 'bag' | 'evidence' | 'codex'>('quest')
+  useEscape(onClose)
   const codex = useMemo(() => save.codex.filter((id) => id.startsWith('a:') && findArticle(id.slice(2))), [save.codex])
   const groups = useMemo(() => {
     const by = new Map<ReturnType<typeof articleKind>, string[]>()

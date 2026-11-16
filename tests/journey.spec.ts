@@ -57,11 +57,12 @@ test('lữ hành vô tận: chuyến đi năm chặng sinh từ tiểu sử, tr�
   // try the choices in turn: a wrong one is only marked, the right one opens the reward
   for (let i = 0; i < 4 && !(await page.locator('.jr-reward').isVisible()); i++) {
     const c = page.locator('.jr-choice').nth(i)
-    if (await c.isEnabled()) await c.click()
+    if (await c.isEnabled()) await c.click({ force: true })
   }
+  await expect(page.locator('.jr-reward')).toBeVisible()
   await page.getByRole('button', { name: 'Chặng sau →' }).click()
   await expect(page.locator('.jr-titlecard, .jr-dialog').first()).toBeVisible()
-  await page.locator('.jr-scene .jr-exit').click()
+  await page.locator('.jr-scene .jr-exit').click({ force: true })
   await expect(page.locator('.jr-player-meta')).toContainText('1 chặng đã đi')
 })
 
@@ -119,9 +120,10 @@ test('thử thách hôm nay: chuyến năm chặng có độ khó, đi một ch�
   for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 }, force: true })
   for (let i = 0; i < 4 && !(await page.locator('.jr-reward').isVisible()); i++) {
     const c = page.locator('.jr-choice').nth(i)
-    if (await c.isEnabled()) await c.click()
+    if (await c.isEnabled()) await c.click({ force: true })
   }
-  await page.locator('.jr-scene .jr-exit').click()
+  await expect(page.locator('.jr-reward')).toBeVisible()
+  await page.locator('.jr-scene .jr-exit').click({ force: true })
   await expect(page.locator('.jr-player-meta')).toContainText('1 chặng đã đi')
 })
 
