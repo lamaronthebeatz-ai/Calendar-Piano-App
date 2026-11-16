@@ -46,6 +46,8 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 ## Bẫy công cụ đã gặp
 - **Chạy WebKit tại máy (16/11):** máy chỉ có Chromium. Cài WebKit vào thư mục riêng, không đụng Chromium: `PLAYWRIGHT_BROWSERS_PATH=<scratchpad>/pwb npx playwright install webkit` + `npx playwright install-deps webkit` (apt, ~2 phút), rồi chạy test `--project='webkit-*'` với cùng biến đó (đừng gộp với `chromium-*` trong một lệnh: Chromium không có ở thư mục đó).
 - **Đọc lại canvas WebGL trong test:** `toDataURL()` cả khung bầu trời làm tiến trình trang WebKit sập trên CI ("Target page … has been closed"). Dùng ảnh thu nhỏ 48×48 (`thumb` trong `library.spec.ts`).
+- **Test bấm vào danh sách vừa lọc** (16/11, Grove "mordent"): ô tìm lọc trễ một nhịp; trên WebKit CI dòng đầu vẫn là mục cũ khi bấm → đợi dòng đầu chứa từ khoá rồi mới bấm.
+- **Bầu trời 3D trên WebKit điện thoại (CI):** tiến trình trang thỉnh thoảng sập ("Target page… closed") ngay cả khi không đọc canvas — lần thử lại qua. Vùng `Sky3D` cấm đụng; chỉ theo dõi.
 - **Ép tải ≠ CI:** `--workers=6 --repeat-each` làm vài test WebKit cũ (Grove ghim, bầu trời) hỏng vì máy quá tải; lỗi chỉ ở chế độ đó không phải lỗi mới.
 - **Test thu micro** (`chord-ear`, `compose-mic*`) hỏng trên CI vì máy bận làm micro giả giật (nốt ma C4, E7…) → tách thành project `mic-phone`/`mic-desktop`, CI chạy riêng một bước `--workers=1` sau các test khác (`deploy-pages.yml`); `chromium-*` không còn chứa chúng. Local: `npx playwright test --project='mic-*' --workers=1`.
 - Server preview thử nghiệm sót lại chiếm cổng 4174 → script chụp ảnh/bot chạy trên bản build cũ mà không báo. Ghi PID server, tắt bằng PID; kiểm `ps aux | grep 'vite preview --port 4174'` trước khi chạy.

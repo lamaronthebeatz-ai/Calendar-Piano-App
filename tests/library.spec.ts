@@ -109,7 +109,10 @@ test('thuật ngữ trong bài nối vào từ điển: thẻ Grove, rồi mục
 test('từ điển Grove: tìm "mordent", mở mục có tiếng Việt, nguyên văn và trang quét', async ({ page }) => {
   await page.goto('/#/terms')
   await page.getByLabel('Tìm trong từ điển').fill('mordent')
-  await page.locator('.gv-head').first().click()
+  // the list filters after the input (deferred): on a slow WebKit the first row is still "Aaron" for a moment
+  const head = page.locator('.gv-head').first()
+  await expect(head).toContainText(/mordent/i)
+  await head.click()
   await expect(page.locator('.gv-vi')).toContainText('nốt ngay dưới')
   await expect(page.locator('.gv-en summary')).toContainText('tr. 258')
   await expect(page.locator('.gv-scan')).toHaveAttribute('href', /archive\.org\/details\/cu31924021782853\/page\/n\d+/)
