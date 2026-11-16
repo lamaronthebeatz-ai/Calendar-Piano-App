@@ -61,3 +61,18 @@ test('lữ hành vô tận: chuyến đi năm chặng sinh từ tiểu sử, tr�
   await page.locator('.jr-scene .jr-exit').click()
   await expect(page.locator('.jr-player-meta')).toContainText('1 chặng đã đi')
 })
+
+test('nút ← trong game lùi lịch sử: về bản đồ rồi Back của máy là rời game, không vào lại cảnh', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'] }))
+  })
+  await page.goto('/#/theory')
+  await page.goto('/#/hanh-trinh')
+  await page.locator('.jr-stop-row.is-next').click()
+  await expect(page).toHaveURL(/s=/)
+  await page.locator('.jr-scene .jr-exit').click()
+  await expect(page.locator('.jr-stop-row').first()).toBeVisible()
+  await expect(page).not.toHaveURL(/s=/)
+  await page.goBack()
+  await expect(page).toHaveURL(/#\/theory/)
+})
