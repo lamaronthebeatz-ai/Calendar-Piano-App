@@ -7,7 +7,9 @@ import type { PuzzleDef } from '../src/features/journey/engine/types'
  * picking things up, every kind of puzzle answered through its own controls, a wrong conclusion first, then reload.
  * The answers come from the content file, so the test follows the content as it changes.
  */
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ page }, info) => {
+  // WebKit on CI under load: buttons over the looping light layers never read as "stable"; reduced motion turns the loops off
+  if (info.project.name.startsWith('webkit')) await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
     localStorage.setItem('onboarding-done', '1')

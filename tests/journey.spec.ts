@@ -3,7 +3,9 @@ import { CHAPTERS } from '../src/features/journey/chapters'
 
 // Taps on the full-screen scene skip Playwright's "stable" wait (force): under CI load WebKit sometimes never gives two
 // still frames for a full-screen layer full of looping light effects, and stability is not what these taps test.
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ page }, info) => {
+  // WebKit on CI under load: buttons over the looping light layers never read as "stable"; reduced motion turns the loops off
+  if (info.project.name.startsWith('webkit')) await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
     localStorage.setItem('onboarding-done', '1')
