@@ -13,10 +13,12 @@ export interface Save {
   verdicts: Record<string, Verdict>
   /** Within a scene: which line the player had reached, so reading an article and coming back resumes there. */
   step: Record<string, number>
+  /** Chapters whose historical prologue has been watched. */
+  seen: string[]
 }
 
 const KEY = 'journey:v1'
-const EMPTY: Save = { name: '', portrait: '', done: [], cards: [], verdicts: {}, step: {} }
+const EMPTY: Save = { name: '', portrait: '', done: [], cards: [], verdicts: {}, step: {}, seen: [] }
 
 let cache: Save | undefined
 const listeners = new Set<() => void>()

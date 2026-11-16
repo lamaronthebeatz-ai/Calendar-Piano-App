@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { findArticle } from '../theory/wiki'
 import { YouTubeVideo } from '../theory/YouTube'
-import { H, W, proj } from '../musicology/projection'
-import world from '../musicology/world-lo.json'
 import { CHAPTERS } from './chapters'
+import { CONTEXT } from './context'
+import { MAPS, onMap } from './maps'
 import { CREDITS } from './credits'
 import { MUSIC } from './music'
 import { nudge, playTrack, setMuted, useSoundtrack } from './soundtrack'
@@ -34,12 +34,15 @@ export function JourneyPage() {
   // no chapter in the address: the first one not yet finished (or the last)
   const chapter = asked >= 0 && opened(asked, save) ? CHAPTERS[asked] : (CHAPTERS.find((c, i) => opened(i, save) && !finished(c, save)) ?? CHAPTERS[CHAPTERS.length - 1])
   const scene = chapter.scenes.find((s) => s.id === params.get('s'))
-  const view = !save.name ? 'create' : scene ? 'scene' : params.get('v') === 'court' ? 'court' : 'atlas'
+  const v = params.get('v')
+  // a chapter opens on its historical prologue the first time
+  const view = !save.name ? 'create' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
   const go = (p: Record<string, string>) => setParams({ c: chapter.id, ...p })
   useEffect(() => () => playTrack(undefined), [])
   return (
     <div className={`jr jr-era-${chapter.style}`} onClickCapture={nudge}>
       {view === 'create' && <Create />}
+      {view === 'prologue' && <Prologue key={chapter.id} chapter={chapter} go={go} />}
       {view === 'atlas' && <Atlas chapter={chapter} save={save} go={go} />}
       {view === 'scene' && scene && <ScenePlayer key={scene.id} chapter={chapter} scene={scene} save={save} go={go} />}
       {view === 'court' && <Court chapter={chapter} save={save} go={go} />}
@@ -96,15 +99,6 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
   const [drawer, setDrawer] = useState(false)
   const done = chapter.scenes.filter((s) => save.done.includes(key(chapter, s)))
   const next = chapter.scenes.find((s) => !save.done.includes(key(chapter, s)))
-  const pts = chapter.scenes.map((s) => proj(s.lon, s.lat))
-  const here = pts[Math.max(0, (next ? chapter.scenes.indexOf(next) : chapter.scenes.length) - 1)] ?? pts[0]
-  // a window on the route, a little wider than it, at the screen's shape
-  const view = useMemo(() => {
-    const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1])
-    const cx = (Math.min(...xs) + Math.max(...xs)) / 2, cy = (Math.min(...ys) + Math.max(...ys)) / 2
-    const w = Math.max(60, (Math.max(...xs) - Math.min(...xs)) * 1.7), h = Math.max(50, (Math.max(...ys) - Math.min(...ys)) * 1.9)
-    return `${cx - w / 2} ${cy - h / 2} ${w} ${h}`
-  }, [pts])
   const courtOpen = !next
   useEffect(() => {
     playTrack(MUSIC[chapter.theme])
@@ -122,6 +116,11 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
         <p className="jr-kicker">Chương {chapter.numeral} · {chapter.era} · {chapter.years}</p>
         <h1 className="jr-atlas-title">{chapter.title}</h1>
         {done.length === 0 && <p className="jr-atlas-intro">{named(chapter.intro, save.name)}</p>}
+        {CONTEXT[chapter.id] && (
+          <button className="jr-ghost is-small jr-context-btn" onClick={() => go({ v: 'prologue' })}>
+            Bối cảnh lịch sử
+          </button>
+        )}
         {CHAPTERS.length > 1 && (
           <nav className="jr-chapters" aria-label="Các chương">
             {CHAPTERS.map((c, i) => (
@@ -133,25 +132,7 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
           </nav>
         )}
       </header>
-      <svg className="jr-map" viewBox={view} preserveAspectRatio="xMidYMid meet" aria-label={`Bản đồ chương ${chapter.numeral}`}>
-        <rect x={-W} y={-H} width={W * 3} height={H * 3} className="jr-sea" />
-        <path d={(world as { land: string }).land} className="jr-land" />
-        <path d={'M' + pts.map((p) => p.join(',')).join('L')} className="jr-route" />
-        {chapter.scenes.map((s, i) => {
-          const [x, y] = pts[i]
-          const isDone = save.done.includes(key(chapter, s)), isNext = s === next
-          return (
-            <g key={s.id} className={`jr-stop${isDone ? ' is-done' : ''}${isNext ? ' is-next' : ''}`} transform={`translate(${x} ${y})`}>
-              {isNext && <circle r={2.6} className="jr-stop-ring" />}
-              <circle r={1.3} className="jr-stop-dot" />
-              <text y={-2.4} className="jr-stop-num">{i + 1}</text>
-            </g>
-          )
-        })}
-        <g className="jr-traveller" style={{ transform: `translate(${here[0]}px, ${here[1]}px)` }}>
-          <circle r={1.9} className="jr-traveller-ring" />
-        </g>
-      </svg>
+      <ChapterMap chapter={chapter} save={save} next={next} go={go} />
       <footer className="jr-atlas-foot">
         <div className="jr-player">
           <Me save={save} />
@@ -201,6 +182,124 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
         </button>
       </footer>
       {drawer && <Evidence chapter={chapter} save={save} onClose={() => setDrawer(false)} />}
+    </section>
+  )
+}
+
+/** The chapter's period map: an old map of Europe with the route drawn on it, to be scrolled and zoomed. */
+function ChapterMap({ chapter, save, next, go }: { chapter: Chapter; save: Save; next?: Scene; go: (p: Record<string, string>) => void }) {
+  const m = MAPS[chapter.id]
+  const box = useRef<HTMLDivElement>(null)
+  const [zoom, setZoom] = useState(false)
+  const pts = chapter.scenes.map((s) => onMap(m, s.lat, s.lon))
+  const here = pts[Math.max(0, (next ? chapter.scenes.indexOf(next) : chapter.scenes.length) - 1)] ?? pts[0]
+  // keep the traveller in sight whenever the zoom changes
+  useEffect(() => {
+    const b = box.current
+    if (b) b.scrollTo({ left: (here[0] / m.w) * b.scrollWidth - b.clientWidth / 2, top: (here[1] / m.h) * b.scrollHeight - b.clientHeight / 2 })
+  }, [zoom, here, m])
+  const u = m.w / 100
+  return (
+    <figure className="jr-oldmap">
+      <div ref={box} className="jr-oldmap-box">
+        <div className="jr-oldmap-canvas" style={{ width: zoom ? `min(260%, ${m.w}px)` : '100%', aspectRatio: `${m.w} / ${m.h}` }}>
+          <img src={IMG(m.img)} alt={CREDITS[m.img]?.[1] ?? ''} />
+          <svg viewBox={`0 0 ${m.w} ${m.h}`} aria-label={`Bản đồ chương ${chapter.numeral}`}>
+            <path d={'M' + pts.map((p) => p.join(',')).join('L')} className="jr-route" style={{ strokeWidth: u * 0.45, strokeDasharray: `${u * 1.2} ${u * 0.9}` }} />
+            {chapter.scenes.map((s, i) => {
+              const [x, y] = pts[i]
+              const isDone = save.done.includes(key(chapter, s)), isNext = s === next
+              const open = isDone || isNext
+              return (
+                <g key={s.id} className={`jr-stop${isDone ? ' is-done' : ''}${isNext ? ' is-next' : ''}${open ? ' is-open' : ''}`} transform={`translate(${x} ${y})`} onClick={() => open && go({ s: s.id })}>
+                  {isNext && <circle r={u * 2.6} className="jr-stop-ring" style={{ strokeWidth: u * 0.3 }} />}
+                  <circle r={u * 1.5} className="jr-stop-dot" style={{ strokeWidth: u * 0.3 }} />
+                  <text dy="0.35em" className="jr-stop-num" style={{ fontSize: u * 1.7 }}>
+                    {i + 1}
+                  </text>
+                </g>
+              )
+            })}
+          </svg>
+        </div>
+      </div>
+      <figcaption>
+        <button className="jr-ghost is-small" onClick={() => setZoom((z) => !z)}>
+          {zoom ? 'Thu nhỏ bản đồ' : 'Phóng to bản đồ'}
+        </button>
+        <span>{CREDITS[m.img]?.[1]}</span>
+      </figcaption>
+    </figure>
+  )
+}
+
+/** Before the map: the history the chapter happens in, a few panels long. */
+function Prologue({ chapter, go }: { chapter: Chapter; go: (p: Record<string, string>) => void }) {
+  const panels = CONTEXT[chapter.id]
+  const [i, setI] = useState(0)
+  const p = panels[i]
+  const a = findArticle(p.read)
+  const finish = () => {
+    update((s) => ({ seen: s.seen.includes(chapter.id) ? s.seen : [...s.seen, chapter.id] }))
+    go({})
+  }
+  useEffect(() => {
+    playTrack(MUSIC[chapter.theme])
+  }, [chapter])
+  return (
+    <section className="jr-prologue">
+      <div className="jr-frame" key={p.img}>
+        <img className="jr-bg" {...bg(p.img)} alt="" />
+      </div>
+      <div className="jr-grade" />
+      <div className="jr-bar is-top" />
+      <div className="jr-bar is-bottom" />
+      <header className="jr-scene-head">
+        <Exit />
+        <span>
+          Chương {chapter.numeral} · Bối cảnh lịch sử · {i + 1}/{panels.length}
+        </span>
+        <SoundToggle />
+      </header>
+      <article className="jr-prologue-panel" key={i}>
+        {i === 0 && (
+          <p className="jr-kicker">
+            {chapter.era} · {chapter.years}
+          </p>
+        )}
+        <h2>{p.title}</h2>
+        <p>{p.text}</p>
+        <div className="jr-prologue-nav">
+          {a && (
+            <Link to={`/theory/${a.slug}`} className="jr-read">
+              <span>📖 Đọc thêm</span>
+              <b>{a.title}</b>
+            </Link>
+          )}
+          <div>
+            {i > 0 && (
+              <button className="jr-ghost" onClick={() => setI(i - 1)}>
+                ←
+              </button>
+            )}
+            {i < panels.length - 1 ? (
+              <button className="jr-cta" onClick={() => setI(i + 1)}>
+                Tiếp
+              </button>
+            ) : (
+              <button className="jr-cta" onClick={finish}>
+                Vào bản đồ chương {chapter.numeral}
+              </button>
+            )}
+          </div>
+        </div>
+        {i < panels.length - 1 && (
+          <button className="jr-skip" onClick={finish}>
+            Bỏ qua
+          </button>
+        )}
+      </article>
+      <p className="jr-credit">{CREDITS[p.img] && `Tranh: ${CREDITS[p.img][1]} · ${CREDITS[p.img][2]}`}</p>
     </section>
   )
 }

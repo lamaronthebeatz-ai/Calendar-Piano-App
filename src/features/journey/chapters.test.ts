@@ -2,7 +2,9 @@ import { existsSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { ARTICLES } from '../theory/articles.source'
 import { CHAPTERS } from './chapters'
+import { CONTEXT } from './context'
 import { CREDITS } from './credits'
+import { MAPS, onMap } from './maps'
 import { MUSIC } from './music'
 
 // The story is read through the library: every question, card and verdict must point at a real article, and every
@@ -29,6 +31,21 @@ describe.each(CHAPTERS)('chương $numeral — $title', (ch) => {
       for (const l of s.lines) if (l.quote) expect(slugs.has(l.quote), `${s.id}: quote ${l.quote}`).toBe(true)
     }
     for (const c of ch.court.claims) expect(slugs.has(c.read), `court ${c.id}: ${c.read}`).toBe(true)
+  })
+
+  it('có phần bối cảnh lịch sử và bản đồ cổ chứa mọi chặng', () => {
+    const ctx = CONTEXT[ch.id]
+    expect(ctx?.length, 'bối cảnh').toBeGreaterThan(2)
+    for (const p of ctx) {
+      expect(slugs.has(p.read), `bối cảnh ${p.title}: ${p.read}`).toBe(true)
+      expect(backdrop(p.img), `bối cảnh ${p.title}: ${p.img}`).toBe(true)
+    }
+    const m = MAPS[ch.id]
+    expect(m && picture(m.img), 'bản đồ').toBe(true)
+    for (const s of ch.scenes) {
+      const [x, y] = onMap(m, s.lat, s.lon)
+      expect(x > 0 && x < m.w && y > 0 && y < m.h, `${s.id} nằm ngoài bản đồ (${Math.round(x)}, ${Math.round(y)})`).toBe(true)
+    }
   })
 
   it('không trùng id cảnh, thẻ, lời khai', () => {
