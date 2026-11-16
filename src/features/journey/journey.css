@@ -8,6 +8,8 @@
 }
 .jr-era-baroque { --jr-tint: 350; --jr-grade: linear-gradient(180deg, rgb(30 6 10 / 0.42), rgb(24 14 4 / 0.12) 40%, rgb(6 3 3 / 0.86)); }
 .jr-era-baroque .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; font-size: 2.7em; line-height: 0.85; color: var(--jr-gold-2); text-shadow: none; filter: drop-shadow(0 0 10px rgb(240 212 143 / 0.45)); }
+.jr-era-romantic { --jr-tint: 330; --jr-grade: linear-gradient(180deg, rgb(26 10 22 / 0.42), rgb(22 12 10 / 0.12) 40%, rgb(6 4 6 / 0.88)); }
+.jr-era-romantic .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; font-size: 2.8em; line-height: 0.82; font-style: italic; color: var(--jr-gold-2); filter: drop-shadow(0 0 12px rgb(200 120 140 / 0.45)); }
 .jr-era-classical { --jr-tint: 190; --jr-grade: linear-gradient(180deg, rgb(14 22 30 / 0.34), rgb(28 24 18 / 0.08) 40%, rgb(6 6 8 / 0.84)); }
 .jr-era-classical .jr-line.is-narration::first-letter { float: left; margin: 3px 9px 0 0; padding: 0 0.12em; font-size: 2.4em; line-height: 0.9; color: var(--jr-gold-2); border-bottom: 1px solid rgb(240 212 143 / 0.5); }
 .jr-era-renaissance { --jr-tint: 205; --jr-grade: linear-gradient(180deg, rgb(10 24 34 / 0.4), rgb(30 20 8 / 0.1) 40%, rgb(6 5 4 / 0.85)); }
