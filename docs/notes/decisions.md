@@ -29,6 +29,12 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - `data/seed-backup.json` (học viên thật) **giữ trong repo**, tự nạp máy mới.
 - Tên trên `LICENSE` / dòng bản quyền: giữ như hiện tại (tên thật + Lamar) — Lamar để tuỳ, 11/2026. Không thêm thông tin cá nhân khác vào repo.
 
+## Nền tảng tri thức (16/11/2026)
+- Mọi đối tượng một mã `<tiền tố>:<mã>` (mở rộng ngữ pháp sổ tay); đồ thị dựng trong trình duyệt từ dữ liệu sẵn có, không server đồ thị, không đổi công nghệ lõi.
+- Mỗi quan hệ mang nguồn gốc: thư viện / Wikidata / máy tính / nghiên cứu — tách bạch dữ liệu xác thực, kết quả tính toán, nhận định nghiên cứu.
+- Tài liệu, luận điểm, bằng chứng của Lamar ở IndexedDB riêng `musicology-knowledge`, niêm phong theo kho khoá, có phiên bản lược đồ + bản chụp trước chuyển đổi; nằm trong sao lưu (v3).
+- App không tự điền metadata thư mục; không có dữ liệu mẫu trong kho; đánh dấu "đã đối chiếu" phải ghi đối chiếu ở đâu.
+
 ## Văn bản học thuật của Lamar
 - Lamar học **Cao học II/II, chuyên ngành Âm nhạc học**, Nhạc viện TP.HCM. Bìa: "Bộ Văn hoá, Thể thao và Du lịch" / "Nhạc viện Thành phố Hồ Chí Minh" / logo / TIỂU LUẬN / tên đề tài / "Học viên thực hiện: <tên thật>" / "Chuyên ngành: Âm nhạc học" / "Hệ: Cao học II/II" / "Thành phố Hồ Chí Minh, tháng … năm …". **Tên thật không ghi vào repo công khai** — dùng tên Lamar đưa trong chat; không có thì hỏi.
 - Định dạng TL-LV của trường: `notes/workflow.md` § Tiểu luận.

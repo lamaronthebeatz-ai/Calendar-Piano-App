@@ -37,6 +37,10 @@ const PAGES: [string, string, string?, number?][] = [
   ['Dòng thời gian', '/#/explore?tab=thoi-gian'],
   ['Dòng truyền', '/#/explore?tab=pha-he'],
   ['Sức khoẻ thư viện', '/#/sources/suc-khoe'],
+  ['Nguồn của tôi', '/#/sources/cua-toi'],
+  ['Đồ thị tri thức', '/#/graph'],
+  ['Đồ thị — một tác phẩm', '/#/graph?id=w:Q991701'],
+  ['Đồ thị — một phương pháp', '/#/graph?id=m:giong'],
   ['Cài đặt', '/#/settings'],
   // an editor: a sheet and its tools, little prose
   ['Soạn nhạc', '/#/compose', '.cmp-paper', 60],

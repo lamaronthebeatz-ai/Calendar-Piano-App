@@ -28,6 +28,7 @@ const AnalyzePage = lazy(() => import('./features/analyze/AnalyzePage').then((m)
 const ResearchPage = lazy(() => import('./features/research/ResearchPage').then((m) => ({ default: m.ResearchPage })))
 const ExplorePage = lazy(() => import('./features/explore/ExplorePage').then((m) => ({ default: m.ExplorePage })))
 const TermsPage = lazy(() => import('./features/terms/TermsPage').then((m) => ({ default: m.TermsPage })))
+const GraphPage = lazy(() => import('./features/knowledge/GraphPage').then((m) => ({ default: m.GraphPage })))
 const SourcesPage = lazy(() => import('./features/sources/SourcesPage').then((m) => ({ default: m.SourcesPage })))
 const ToolsPage = lazy(() => import('./features/tools/ToolsPage').then((m) => ({ default: m.ToolsPage })))
 const CounterpointPage = lazy(() => import('./features/counterpoint/CounterpointPage').then((m) => ({ default: m.CounterpointPage })))
@@ -46,7 +47,7 @@ if (typeof window !== 'undefined') {
     () => import('./features/home/HomePage'), () => import('./features/tools/ToolsPage'), () => import('./features/solfege/SolfegePage'),
     () => import('./features/compose/ComposePage'), () => import('./features/explore/ExplorePage'), () => import('./features/research/ResearchPage'),
     () => import('./features/sources/SourcesPage'), () => import('./features/terms/TermsPage'), () => import('./features/counterpoint/CounterpointPage'),
-    () => import('./features/chordear/ChordEarPage'),
+    () => import('./features/chordear/ChordEarPage'), () => import('./features/knowledge/GraphPage'),
   ]
   const next = () => {
     const load = rest.shift()
@@ -125,6 +126,7 @@ const router = createHashRouter(
       <Route path="/explore" element={<Suspense fallback={<RouteLoading />}><ExplorePage /></Suspense>} />
       <Route path="/hanh-trinh" element={<Suspense fallback={<RouteLoading />}><JourneyPage /></Suspense>} />
       <Route path="/terms" element={<Suspense fallback={<RouteLoading />}><TermsPage /></Suspense>} />
+      <Route path="/graph" element={<Suspense fallback={<RouteLoading />}><GraphPage /></Suspense>} />
       <Route path="/sources/:id?" element={<Suspense fallback={<RouteLoading />}><SourcesPage /></Suspense>} />
       <Route path="/tools" element={<Suspense fallback={<RouteLoading />}><ToolsPage /></Suspense>} />
       <Route path="/solfege" element={<Suspense fallback={<RouteLoading />}><SolfegePage /></Suspense>} />

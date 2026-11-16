@@ -5,11 +5,14 @@ import { allProjects, importProjects, projectsLocked, type Project } from '../fe
 
 import { allBrainNotes, brainLocked, importBrainNotes, type BrainNote } from '../features/brain/store'
 import { allSavedFull, importSaved, savedLocked, type Saved } from '../features/analyze/store'
+import { exportKnowledge, importKnowledge, knowledgeLocked } from '../features/knowledge/store'
+import type { KnowledgeDump } from '../features/knowledge/model'
 
 const LOCKED = 'Ghi chú và đề tài đang được mã hoá và chưa mở. Hãy đóng hẳn ứng dụng, mở lại và nhập mã khoá rồi thử lại.'
 
 export interface BackupPayload {
-  version: 2
+  /** 3 adds `knowledge`; files of version 2 import the same way */
+  version: 2 | 3
   exportedAt: string
   students: Student[]
   timetableSlots: TimetableSlot[]
@@ -22,6 +25,8 @@ export interface BackupPayload {
   brain?: BrainNote[]
   /** scores brought into the analysis page (features/analyze) */
   analyses?: Saved[]
+  /** sources, excerpts, claims, evidence and links of the knowledge platform (features/knowledge) */
+  knowledge?: KnowledgeDump
 }
 
 export async function exportBackup(): Promise<BackupPayload> {
@@ -30,9 +35,9 @@ export async function exportBackup(): Promise<BackupPayload> {
     db.timetableSlots.toArray(),
     db.settings.get('default'),
   ])
-  if (notesLocked() || projectsLocked() || brainLocked() || savedLocked()) throw new Error(LOCKED)
+  if (notesLocked() || projectsLocked() || brainLocked() || savedLocked() || knowledgeLocked()) throw new Error(LOCKED)
   return {
-    version: 2,
+    version: 3,
     exportedAt: new Date().toISOString(),
     students,
     timetableSlots,
@@ -41,6 +46,7 @@ export async function exportBackup(): Promise<BackupPayload> {
     projects: allProjects(),
     brain: allBrainNotes(),
     analyses: await allSavedFull(),
+    knowledge: await exportKnowledge(),
   }
 }
 
@@ -167,7 +173,7 @@ function dedupePayload(students: Student[], slots: TimetableSlot[]) {
  * student name / by student + day + start time — and only genuinely new records are added.
  */
 export async function importBackup(file: File, mode: 'replace' | 'merge'): Promise<{ students: number; timetableSlots: number }> {
-  if (notesLocked() || projectsLocked() || brainLocked() || savedLocked()) throw new Error(LOCKED)
+  if (notesLocked() || projectsLocked() || brainLocked() || savedLocked() || knowledgeLocked()) throw new Error(LOCKED)
   let data: unknown
   try {
     data = parseBackup(await file.text())
@@ -217,6 +223,7 @@ export async function importBackup(file: File, mode: 'replace' | 'merge'): Promi
   if (data.projects) importProjects(data.projects, mode)
   if (data.brain) importBrainNotes(data.brain, mode)
   if (data.analyses) importSaved(data.analyses, mode)
+  if (data.knowledge) await importKnowledge(data.knowledge, mode)
 
   return { students: incoming.students.length, timetableSlots: incoming.slots.length }
 }

@@ -266,6 +266,7 @@ function WorksList({ data, onOpen }: { data: People; onOpen: (id: string) => voi
               <span className="flex shrink-0 flex-col items-end gap-0.5 text-[11.5px]">
                 {w.article && <Link to={`/theory/${w.article}`} className="text-[var(--color-gold)] hover:underline">Bài trong thư viện</Link>}
                 <a href={`https://www.wikidata.org/wiki/${w.id}`} target="_blank" rel="noreferrer" className="text-[var(--color-ink-faint)] hover:text-[var(--color-gold)]">Wikidata</a>
+                <Link to={`/graph?id=w:${w.id}`} className="text-[var(--color-ink-faint)] hover:text-[var(--color-gold)]">Đồ thị</Link>
               </span>
             </li>
           )
@@ -370,6 +371,7 @@ function PersonView({ data, id, onOpen }: { data: People; id: string; onOpen: (i
         <p className="mt-1 text-[14px] text-[var(--color-ink-muted)]">{p.years} · {p.country}</p>
         <div className="mt-4 flex flex-wrap items-center gap-2">
           {p.page && <Link to={`/theory/${p.id}`} className="btn-gold inline-flex rounded-full px-4 py-2 text-[13px] font-medium">Đọc trang {p.name.split(' ').at(-1)}</Link>}
+          <Link to={`/graph?id=a:${p.id}`} className="btn-line inline-flex rounded-full px-4 py-2 text-[13px]">Đồ thị tri thức</Link>
           <AddToProject person={p.id} />
         </div>
       </header>
@@ -444,6 +446,7 @@ function PersonWorks({ id }: { id: string }) {
           <li key={w.id}>
             {w.article ? <Link to={`/theory/${w.article}`} className="wiki-link">{w.vi ?? w.en}</Link> : <a href={`https://www.wikidata.org/wiki/${w.id}`} target="_blank" rel="noreferrer" className="text-[var(--color-ink)] hover:text-[var(--color-gold)]">{w.vi ?? w.en}</a>}
             <span className="text-[var(--color-ink-faint)]">{[workYear(w), w.key && keyVi(w.key)].filter(Boolean).map((x) => ` · ${x}`)}</span>
+            <Link to={`/graph?id=w:${w.id}`} className="ml-2 text-[12px] text-[var(--color-ink-faint)] hover:text-[var(--color-gold)]">đồ thị</Link>
           </li>
         ))}
       </ul>

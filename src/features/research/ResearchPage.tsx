@@ -12,6 +12,9 @@ import { sourceTitle, useBibliography, type Source } from '../sources/data'
 import { createProject, removeProject, updateProject, useProjects, type Project } from './store'
 import { download, toDocx, toMarkdown, type ExportStyle } from './exportDraft'
 import { loadPeople, useWorks, workYear, type Person } from '../explore/data'
+import { ProjectClaims } from '../knowledge/ProjectClaims'
+import { useKnowledge } from '../knowledge/store'
+import { graphHref } from '../knowledge/ids'
 import '../sources/sources.css'
 import '../explore/explore.css'
 import './research.css'
@@ -88,13 +91,14 @@ interface Entry extends Note {
   link: string
 }
 
-type Pane = 'nhap' | 'ghi-chu' | 'nguon' | 'lien-quan'
+type Pane = 'nhap' | 'ghi-chu' | 'nguon' | 'lien-quan' | 'luan-diem'
 
 function ProjectView({ p }: { p: Project }) {
   const navigate = useNavigate()
   const all = useAllNotes()
   const { data: bib } = useBibliography()
   const [pane, setPane] = useState<Pane>('nhap')
+  const claims = useKnowledge().claims.filter((c) => c.project === p.id).length
   const [preview, setPreview] = useState(false)
   const [busy, setBusy] = useState(false)
   const draft = useRef<HTMLTextAreaElement>(null)
@@ -152,6 +156,7 @@ function ProjectView({ p }: { p: Project }) {
         <div className="flex flex-wrap items-center gap-2">
           <button disabled={busy} onClick={() => exportAs('doc')} className="btn-gold rounded-full px-4 py-2 text-[13px] font-medium">Xuất Word (.docx)</button>
           <button disabled={busy} onClick={() => exportAs('md')} className="btn-line rounded-full px-4 py-2 text-[13px]">Xuất Markdown</button>
+          <Link to={graphHref(`p:${p.id}`)} className="btn-line rounded-full px-4 py-2 text-[13px]">Đồ thị đề tài</Link>
           <select value={style} onChange={(e) => setStyle(e.target.value as ExportStyle)} aria-label="Kiểu trích dẫn" className="src-select h-9 rounded-full px-3 text-[12.5px]">
             <option value="chicago">Chicago (chú thích cuối trang)</option>
             <option value="apa">APA (tác giả, năm)</option>
@@ -179,6 +184,7 @@ function ProjectView({ p }: { p: Project }) {
             ['ghi-chu', `Ghi chú · ${notes.length}`],
             ['nguon', `Nguồn · ${p.sources.length}`],
             ['lien-quan', `Người & tác phẩm · ${(p.people?.length ?? 0) + (p.works?.length ?? 0)}`],
+            ['luan-diem', `Luận điểm · ${claims}`],
           ] as [Pane, string][]
         ).map(([k, label]) => (
           <button key={k} onClick={() => setPane(k)} className={clsx(pane === k && 'is-on')}>{label}</button>
@@ -217,6 +223,7 @@ function ProjectView({ p }: { p: Project }) {
       )}
 
       {pane === 'lien-quan' && <Related p={p} onInsert={insert} />}
+      {pane === 'luan-diem' && <ProjectClaims p={p} />}
       {pane === 'nguon' && <Sources p={p} bib={bib?.byId} sources={bib?.sources} onCite={(id) => insert(`[^${id}, tr. ]`, 1)} />}
     </article>
   )

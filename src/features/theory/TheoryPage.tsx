@@ -1108,9 +1108,12 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
             </p>
           )}
           <h1 className="vt-morph font-display text-[32px] font-semibold leading-[1.12] tracking-tight text-[var(--color-ink)] sm:text-[42px]">{article.title}</h1>
-          {article.person && (
-            <Link to={`/explore?p=${article.slug}`} className="term-names-link inline-block">Mạng tri thức: nơi chốn, sự kiện, người cùng thời →</Link>
-          )}
+          <p className="flex flex-wrap gap-x-4">
+            {article.person && (
+              <Link to={`/explore?p=${article.slug}`} className="term-names-link inline-block">Mạng tri thức: nơi chốn, sự kiện, người cùng thời →</Link>
+            )}
+            <Link to={`/graph?id=a:${article.slug}`} className="term-names-link inline-block">Đồ thị tri thức: tác phẩm, khái niệm, nguồn liên quan →</Link>
+          </p>
           {article.xl && (
             <p className="term-names">
               {article.xl.split('|').map((pair) => {

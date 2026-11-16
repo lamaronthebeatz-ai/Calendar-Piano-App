@@ -11,11 +11,16 @@ const { findArticle } = await server.ssrLoadModule('/src/features/theory/wiki.ts
 const { PLACES, JOURNEYS } = await server.ssrLoadModule('/src/features/musicology/places.ts')
 const { SCHOOLS } = await server.ssrLoadModule('/src/features/terms/schools.ts')
 const { THEORY } = await server.ssrLoadModule('/src/features/analyze/links.ts')
+const { PERIOD_ARTICLE, GENRE_ARTICLE } = await server.ssrLoadModule('/src/features/knowledge/graph.ts')
+const { METHODS, methodSlugs } = await server.ssrLoadModule('/src/features/knowledge/methods.ts')
 await server.close()
 
 const broken = []
 // every concept the score analysis links to must be an article
 for (const [k, slug] of Object.entries(THEORY)) if (!findArticle(slug)) broken.push(`analyze/links.ts ${k} → ${slug}`)
+// the knowledge graph's own pointers: period and genre articles, the articles each analysis method rests on
+for (const [k, slug] of Object.entries({ ...PERIOD_ARTICLE, ...GENRE_ARTICLE })) if (!findArticle(slug)) broken.push(`knowledge/graph.ts ${k} → ${slug}`)
+for (const m of METHODS) for (const slug of methodSlugs(m)) if (!findArticle(slug)) broken.push(`knowledge/methods.ts ${m.id} → ${slug}`)
 for (const a of ARTICLES) for (const m of a.body.matchAll(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g)) if (!findArticle(m[1])) broken.push(`${a.slug} → ${m[1]}`)
 const known = new Set(ARTICLES.map((a) => a.slug))
 for (const pl of PLACES) for (const ev of pl.events) for (const s of ev.slugs) if (!known.has(s)) broken.push(`map:${pl.id} → ${s}`)

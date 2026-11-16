@@ -1,0 +1,94 @@
+/* The knowledge platform: /graph, Nguồn của tôi (/sources/cua-toi), Luận điểm in a project, the analysis methods. Lists reuse sources.css. */
+.kg-start { display: flex; flex-wrap: wrap; gap: 8px; }
+.kg-chip { display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--color-border); font-size: 13px; color: var(--color-ink-muted); transition: border-color 0.2s, color 0.2s; }
+.kg-chip:hover { color: var(--color-ink); border-color: color-mix(in oklch, var(--color-gold) 60%, transparent); }
+.kg-chip.is-gold { color: var(--color-ink); border-color: var(--color-gold); }
+.kg-chip.is-small { padding: 3px 10px; font-size: 12px; }
+.kg-chip.is-danger:hover { color: var(--color-status-cancelled); border-color: var(--color-status-cancelled); }
+.kg-chip:disabled { opacity: 0.5; }
+
+.kg-find { position: relative; }
+.kg-hits { margin-top: 6px; display: grid; gap: 2px; padding: 6px; border-radius: 16px; border: 1px solid color-mix(in oklch, var(--color-gold) 40%, transparent); background: var(--color-surface-raised); max-height: 360px; overflow: auto; }
+.kg-hits button { display: flex; width: 100%; align-items: baseline; gap: 10px; padding: 7px 10px; border-radius: 10px; text-align: left; }
+.kg-hits button:hover { background: color-mix(in oklch, var(--color-gold) 14%, transparent); }
+.kg-hits .src-kind { width: auto; min-width: 72px; }
+
+.kg-focus { padding-bottom: 4px; }
+.kg-id { font-size: 11.5px; padding: 6px 10px; border-radius: 999px; background: var(--color-surface-sunken); color: var(--color-ink-faint); }
+.kg-warn { font-size: 13px; color: var(--color-status-cancelled); }
+.kg-ok { font-size: 13px; color: var(--color-status-completed); }
+.kg-note { font-size: 12.5px; color: var(--color-ink-faint); }
+.kg-sub { margin-left: 6px; font-size: 12.5px; color: var(--color-ink-faint); }
+
+.kg-dl { display: grid; grid-template-columns: minmax(96px, max-content) 1fr; gap: 4px 14px; margin-top: 12px; font-size: 13.5px; }
+.kg-dl dt { color: var(--color-ink-faint); }
+.kg-dl dd { color: var(--color-ink); min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 520px) { .kg-dl { grid-template-columns: 1fr; } .kg-dl dd { margin-bottom: 6px; } }
+
+.kg-group-title { margin-bottom: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink-muted); }
+.kg-group-title span { margin-left: 6px; color: var(--color-gold); }
+.kg-items { display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.kg-item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; height: 100%; padding: 9px 12px; border-radius: 14px; border: 1px solid var(--color-border); background: var(--color-surface-raised); transition: border-color 0.2s; }
+.kg-item:hover { border-color: color-mix(in oklch, var(--color-gold) 55%, transparent); }
+.kg-item-kind { width: 100%; font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold); }
+.kg-item-title { flex: 1; min-width: 0; font-size: 14px; line-height: 1.35; color: var(--color-ink); overflow-wrap: anywhere; }
+.kg-item-note { width: 100%; font-size: 12px; color: var(--color-ink-faint); }
+.kg-more { margin-top: 8px; font-size: 13px; color: var(--color-gold); }
+
+/* Provenance: one accent (gold) for what the library vouches for; the rest in ink, told apart by the border. */
+.kg-prov { flex-shrink: 0; padding: 1px 8px; border-radius: 999px; font-size: 10.5px; letter-spacing: 0.04em; border: 1px solid var(--color-border-strong); color: var(--color-ink-muted); }
+.kg-prov.is-library { border-color: var(--color-gold); color: var(--color-gold); }
+.kg-prov.is-wikidata { border-style: dashed; }
+.kg-prov.is-computed { border-style: dotted; }
+.kg-prov.is-research { background: var(--color-surface-sunken); }
+.kg-legend { display: grid; gap: 4px; padding-top: 12px; border-top: 1px solid var(--color-border); font-size: 12.5px; color: var(--color-ink-faint); }
+.kg-legend .kg-prov { margin-right: 6px; }
+
+.kg-chain { padding: 14px 16px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); border-left-width: 3px; }
+.kg-chain.is-error { border-left-color: var(--color-status-cancelled); }
+.kg-chain.is-warn { border-left-color: var(--color-gold); }
+.kg-chain.is-info, .kg-chain.is-ok { border-left-color: var(--color-status-completed); }
+.kg-chain-head { font-size: 15px; line-height: 1.5; color: var(--color-ink); }
+.kg-step { display: inline-block; margin-right: 6px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold); }
+.kg-tag { display: inline-block; margin-left: 4px; padding: 0 8px; border-radius: 999px; font-size: 11.5px; border: 1px solid var(--color-border-strong); color: var(--color-ink-muted); }
+.kg-tag.is-against { border-color: var(--color-status-cancelled); color: var(--color-status-cancelled); }
+.kg-chain-list { margin-top: 10px; display: grid; gap: 10px; }
+.kg-chain-list > li { display: grid; gap: 3px; padding: 10px 12px; border-radius: 12px; background: var(--color-surface-sunken); font-size: 13.5px; color: var(--color-ink); overflow-wrap: anywhere; }
+.kg-quote { display: block; margin-top: 4px; font-family: var(--font-serif, Georgia, serif); font-style: italic; color: var(--color-ink-muted); }
+.kg-del { justify-self: start; font-size: 12px; color: var(--color-ink-faint); }
+.kg-del:hover { color: var(--color-status-cancelled); }
+.kg-issues { margin-top: 10px; display: grid; gap: 4px; font-size: 13px; }
+.kg-issues li { padding-left: 14px; position: relative; color: var(--color-ink-muted); }
+.kg-issues li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--color-ink-faint); }
+.kg-issues li.is-error { color: var(--color-status-cancelled); }
+.kg-issues li.is-error::before { background: var(--color-status-cancelled); }
+.kg-issues li.is-warn::before { background: var(--color-gold); }
+.kg-chain .kg-ok { margin-top: 10px; }
+
+.kg-card { border-radius: 14px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.kg-card.is-open { border-color: color-mix(in oklch, var(--color-gold) 45%, transparent); }
+.kg-card-head { display: flex; width: 100%; align-items: center; gap: 12px; padding: 10px 14px; text-align: left; }
+.kg-card-body { padding: 0 14px 14px; }
+.kg-verify { flex-shrink: 0; font-size: 11.5px; color: var(--color-ink-faint); }
+.kg-verify.is-record, .kg-verify.is-original { color: var(--color-status-completed); }
+.kg-verify.is-disputed { color: var(--color-status-cancelled); }
+.kg-cite { white-space: pre-wrap; overflow-wrap: anywhere; padding: 10px 12px; border-radius: 12px; background: var(--color-surface-sunken); font-family: var(--font-serif, Georgia, serif); font-size: 13.5px; line-height: 1.55; color: var(--color-ink); user-select: all; }
+.kg-excerpts { margin: 6px 0; display: grid; gap: 4px; font-size: 13.5px; color: var(--color-ink); }
+.kg-excerpts li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+
+.kg-form { display: grid; gap: 10px; padding: 14px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
+.kg-form-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.kg-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.kg-field { display: grid; gap: 4px; font-size: 12px; color: var(--color-ink-faint); min-width: 0; }
+.kg-input { width: 100%; min-width: 0; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--color-border); background: var(--color-surface-sunken); font-size: 14px; color: var(--color-ink); outline: none; }
+.kg-input:focus { border-color: color-mix(in oklch, var(--color-gold) 60%, transparent); }
+.kg-input.w-20 { width: 5rem; flex: none; }
+.kg-input.w-auto { width: auto; }
+.kg-check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-ink-muted); }
+.kg-claim { padding-top: 4px; }
+
+.kg-methods { margin: 16px 0; padding: 12px 16px; border-radius: 16px; border: 1px solid var(--color-border); background: var(--color-surface-raised); font-size: 13.5px; line-height: 1.55; color: var(--color-ink-muted); }
+.kg-methods summary { cursor: pointer; font-weight: 600; color: var(--color-ink); }
+.kg-methods section { margin-top: 12px; display: grid; gap: 4px; }
+.kg-methods h4 { font-size: 14.5px; color: var(--color-ink); }
+.kg-methods b { color: var(--color-ink); font-weight: 600; }

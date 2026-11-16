@@ -19,6 +19,7 @@ import { explain } from './explain'
 import { fromMidi } from './midi'
 import { runAnalysis } from './runAnalysis'
 import { SAMPLES, sampleUrl } from './samples'
+import { MethodsPanel } from '../knowledge/MethodsPanel'
 import { addSaved, removeSaved, savedLocked, scoreOf, updateSaved, useSaved, type Lens } from './store'
 import { THEORY, type Concept } from './links'
 import { createBrainNote } from '../brain/store'
@@ -354,6 +355,7 @@ function Work({ id }: { id: string }) {
       {analysis && analysis.form.sections.length > 1 && <FormDiagram a={analysis} onBars={(b) => setFocus(b)} />}
 
       {analysis && <ExportBar title={data.title} blocks={blocks} />}
+      {analysis && <MethodsPanel lens={active} />}
 
       {analysis && (
         <div ref={textRef} className="an-report prose-theory" data-font="serif">

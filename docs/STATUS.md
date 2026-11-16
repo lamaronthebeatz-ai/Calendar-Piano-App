@@ -1,12 +1,13 @@
 # Trạng thái làm việc — đọc ĐẦU mỗi phiên, sửa CUỐI mỗi phiên
 
 > Sổ tay của Claude: đang ở đâu, chờ gì, làm gì tiếp. Ngắn, hiện tại; lịch sử thì để git log và `docs/roadmap.md`.
-> Cập nhật lần cuối: 15/11/2026.
+> Cập nhật lần cuối: 16/11/2026.
 
 ## Đang dở / chờ Lamar
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
+- **Nền tảng tri thức âm nhạc học** (16/11): mã thống nhất cho mọi đối tượng, đồ thị quan hệ hai chiều dựng từ dữ liệu thật (bài, thư mục, người, 4.899 tác phẩm Wikidata, thầy – trò, trường phái, phương pháp phân tích, dữ liệu nghiên cứu), mỗi cạnh ghi nguồn gốc; trang `/graph`; **Nguồn của tôi** `/sources/cua-toi` (metadata, sơ cấp/thứ cấp, kiểm chứng, trích đoạn theo trang, trích dẫn); **Luận điểm** trong đề tài với chuỗi bằng chứng → trích dẫn → tài liệu → trang và cảnh báo thiếu nguồn; khối Phương pháp và căn cứ ở `/analyze`; sao lưu v3 — `notes/knowledge.md`. **Chưa:** hình vẽ đồ thị, `[[w:…]]` trong sổ tay.
 - **Game Hành trình** (15/11): `/hanh-trinh`, Chương I Trung cổ + **Chương II Phục hưng**, **Chương III Baroque** (13 cảnh, lời thoại dày, tình tiết hư cấu gắn nhãn), **Chương IV Cổ điển** (11 cảnh, C. P. E. Bach → Giao hưởng số 9, phiên toà 9 lời khai), **Chương V Lãng mạn** (11 cảnh, Schubertiade → Brahms – Hanslick), **Chương VI Dân tộc và cuối Lãng mạn** (11 cảnh, Glinka 1836 → Mahler 1897), ảnh nền 1920/1080 cho mọi chương, **nhạc nền thật từng cảnh** (bản thu Commons, crossfade), tiểu sử chi tiết 17 + 40 + 49 + 26 + 73 nhạc sĩ Trung cổ → Lãng mạn — `notes/journey.md`. Mỗi chương mở đầu bằng **Bối cảnh lịch sử** và đi trên **bản đồ cổ của thời kỳ** (Ortelius 1570, Delisle 1724, Bonne 1780, Radefeld 1843…). **Lữ hành vô tận** (bộ sinh màn chơi từ 1.832 mốc tiểu sử + 809 giai thoại + danh mục tác phẩm, chuyến 5 chặng không lặp). Rà lỗi game (bot chơi trọn game: 0 lỗi; bản đồ không còn chặn vuốt) và sửa gốc test micro chập chờn (`joinBroken`, test micro chạy riêng trên CI). **Tiếp:** Chương VII thế kỷ XX (cần tiểu sử thế kỷ XX trước); đề xuất mở rộng Baroque → Lãng mạn kèm bài học lý thuyết (chờ Lamar chốt trình độ và bài tập điền nốt); Chương VI dân tộc + cuối Lãng mạn.
 - **Thánh ca Việt Nam** (15/11): mục mới `thanhca` 52 bài + sách *Nghiên Cứu Thánh Ca Việt Nam* (10 phần), tư liệu từ 5 lượt tra mạng lưu ở `docs/research/thanh-ca/` — `notes/thanh-ca.md`. **Chờ Lamar:** bản sách Văn Chi / Kim Long (nếu có) để tóm lược từng chương.
 - **Thuật ngữ → từ điển** (15/11): 2.384 liên kết `[[g:id]]` tự động lúc build trong 690 bài (Lý thuyết + Âm nhạc học), thẻ Grove khi bấm, `/terms?g=` ghim mục, mục Grove có link về bài thư viện — `notes/terms.md`. Có thể còn nối sai lẻ tẻ: thấy chữ nào sai thì thêm vào `GROVE_STOP`.

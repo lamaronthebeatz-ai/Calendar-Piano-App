@@ -2,6 +2,8 @@ import { useBack } from '../../hooks/useBack'
 import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clsx from 'clsx'
+import { MySources } from '../knowledge/MySources'
+import { graphHref } from '../knowledge/ids'
 import { ScrollArea } from '../../components/ScrollArea'
 import { ArrowUpRightIcon } from '../../components/icons'
 import { findArticle, normalize } from '../theory/wiki'
@@ -30,7 +32,8 @@ const pageList = (pages: string[]) => {
   const first = (p: string) => parseInt(p, 10) || 0
   return `tr. ${[...new Set(bare)].sort((x, y) => first(x) - first(y) || x.length - y.length).join(', ')}`
 }
-type Tab = 'chinh' | 'tat-ca' | 'treo' | 'suc-khoe'
+type Tab = 'chinh' | 'tat-ca' | 'treo' | 'suc-khoe' | 'cua-toi'
+const ROUTED = (x: string | undefined): x is 'treo' | 'suc-khoe' | 'cua-toi' => x === 'treo' || x === 'suc-khoe' || x === 'cua-toi'
 const PAGE = 60
 
 /** The library's bibliography: /sources (list), /sources/:id (one work), /sources/treo (what is still unverified). */
@@ -38,15 +41,15 @@ export function SourcesPage() {
   const back = useBack('/sources')
   const { id } = useParams()
   const { data, error } = useBibliography()
-  const tab: Tab | null = id === 'treo' || id === 'suc-khoe' ? id : id ? null : 'chinh'
+  const tab: Tab | null = ROUTED(id) ? id : id ? null : 'chinh'
   return (
     <ScrollArea className="relative h-full overflow-y-auto pb-28 lg:pb-10">
       <div className="glass sticky top-0 z-20 border-b border-[var(--color-border)]">
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-2 px-4 lg:px-8">
-          {id && id !== 'treo' && id !== 'suc-khoe' && (
+          {id && !ROUTED(id) && (
             <button onClick={back} className="text-[13px] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]">← Quay lại</button>
           )}
-          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id && id !== 'treo' && id !== 'suc-khoe' ? '' : 'Thư mục học'}</h1>
+          <h1 className="min-w-0 flex-1 truncate font-display text-[19px] font-semibold tracking-tight text-[var(--color-ink)] lg:text-[20px]">{id && !ROUTED(id) ? '' : 'Thư mục học'}</h1>
         </div>
       </div>
       <div className="mx-auto max-w-5xl space-y-6 px-4 py-6 lg:px-8">
@@ -60,7 +63,7 @@ export function SourcesPage() {
 
 function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
   const [current, setTab] = useState<Tab>(tab)
-  const t = tab === 'treo' || tab === 'suc-khoe' ? tab : current
+  const t = ROUTED(tab) ? tab : current
   return (
     <>
       <header className="animate-float-up">
@@ -82,9 +85,10 @@ function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
             ['tat-ca', 'Tất cả nguồn'],
             ['treo', 'Việc còn treo'],
             ['suc-khoe', 'Sức khoẻ thư viện'],
+            ['cua-toi', 'Nguồn của tôi'],
           ] as [Tab, string][]
         ).map(([k, label]) =>
-          k === 'treo' || k === 'suc-khoe' ? (
+          ROUTED(k) ? (
             <Link key={k} to={`/sources/${k}`} className={clsx(t === k && 'is-on')}>{label}</Link>
           ) : (
             <Link key={k} to="/sources" onClick={() => setTab(k)} className={clsx(t === k && 'is-on')}>{label}</Link>
@@ -95,6 +99,7 @@ function Overview({ data, tab }: { data: Bibliography; tab: Tab }) {
       {t === 'tat-ca' && <AllSources data={data} />}
       {t === 'treo' && <OpenItems data={data} />}
       {t === 'suc-khoe' && <Health data={data} />}
+      {t === 'cua-toi' && <MySources bib={data} />}
     </>
   )
 }
@@ -206,6 +211,7 @@ function SourceDetail({ data, id }: { data: Bibliography; id: string }) {
         <p className="brand-eyebrow">{KIND_LABEL[s.kind] ?? s.kind}</p>
         <h2 className="mt-1 font-display text-[26px] font-semibold leading-tight tracking-tight text-[var(--color-ink)] sm:text-[32px]">{sourceTitle(s)}</h2>
         {s.access && <p className={`src-access is-${s.access} mt-3 inline-block`}>{ACCESS_LABEL[s.access]}</p>}
+        <p className="mt-3"><Link to={graphHref(`s:${s.id}`)} className="wiki-link">Xem trên đồ thị tri thức →</Link></p>
       </header>
       {s.authors ? (
         <dl className="src-facts">
