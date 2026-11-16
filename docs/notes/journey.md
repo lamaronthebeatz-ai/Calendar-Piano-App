@@ -8,6 +8,8 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 5. Bổ sung tiểu sử nhà soạn nhạc từng thời kỳ khi làm chương tương ứng (Trung cổ: `theory/content/composer-details-med.ts`, 17 người, nối trong `composers.ts` sau `COMPOSER_DETAILS`).
 6. Hiệu ứng điện ảnh, nhập vai.
 
+> **Nâng cấp Maximum Edition (16/11):** khảo sát + thiết kế ở `docs/journey/` — đọc `ARCHITECTURE_AUDIT.md` và `TECHNICAL_ROADMAP.md` trước khi sửa engine. Lỗi đã biết: thêm cảnh vào chương cũ làm khoá lại chương sau (L1); tiến trình chưa vào sao lưu (L2).
+
 ## File
 - `types.ts` — `Chapter` (cảnh + phiên toà + intro/outro), `Scene` (nơi, toạ độ, năm, ảnh nền, NPC, lời, `quest {ask, choices, answer, read, where, explain}`, `card`, `listen` YouTube), `Claim` (verdict `fact|legend|unsure`).
 - `chapters/<thời kỳ>.ts` + `chapters/index.ts` (`CHAPTERS` theo thứ tự lịch sử). **Thêm chương = một file + một dòng.**
