@@ -303,3 +303,41 @@ describe('lát cắt "Bản thảo thất lạc"', async () => {
     expect(holds(banThao.completion, s)).toBe(true)
   })
 })
+
+describe('Phase 5–6: kỹ năng, tranh luận, báo cáo, phiên toà', async () => {
+  const { banThao } = await import('../content/ban-thao')
+  const { branch, hasPerk } = await import('./skills')
+  const { reportDraft, reportProblems } = await import('./report')
+  it('cây kỹ năng: bậc theo điểm, phần thưởng mở đúng bậc', () => {
+    expect(branch(s0(), 'theory')).toMatchObject({ level: 0, toNext: 50 })
+    const s = s0({ skills: { ...s0().skills, theory: 60, research: 150 } })
+    expect(branch(s, 'theory')).toMatchObject({ level: 1, title: 'Người đọc nốt', toNext: 90 })
+    expect(hasPerk(s, 'mutation')).toBe(true)
+    expect(hasPerk(s0(), 'report')).toBe(false)
+    // the hidden quest's object only shows with the skill and the item
+    const obj = banThao.locations.find((l) => l.id === 'loc:bt/arezzo')!.objects!.find((o) => o.id === 'doi-luc-am')!
+    expect(holds(obj.when!, s0({ inventory: ['item:bt/ban-tay'] }))).toBe(false)
+    expect(holds(obj.when!, { ...s, inventory: ['item:bt/ban-tay'] })).toBe(true)
+  })
+  it('tranh luận: mỗi lượt một câu đáp có căn cứ; câu dựa vào uy tín có lời giải thích riêng', () => {
+    const p = banThao.puzzles.find((x) => x.id === 'pz:bt/tranh-luan')!
+    expect(checkPuzzle(p, { t1: 'enchiriadis', t2: 'giao-hoang', t3: 'so-dong' })).toMatchObject({ ok: false, wrong: ['t2'], feedback: 't2:giao-hoang' })
+    expect(checkPuzzle(p, { t1: 'enchiriadis', t2: 'khoa', t3: 'so-dong' }).ok).toBe(true)
+    expect(puzzleProblem({ ...p, answer: { t1: 'zzz' } })).toMatch(/mỗi lượt/)
+  })
+  it('báo cáo: cần câu hỏi, hai chứng cứ có nguồn, không dựa vào giai thoại; tham khảo là nguồn thật', () => {
+    const ev = (id: string) => banThao.evidence.find((e) => e.id === id)!
+    const base = { title: 'x', question: 'Ai vẽ bàn tay?', analysis: 'a'.repeat(90), conclusion: 'Đời sau.' }
+    expect(reportProblems({ ...base, evidence: [ev('ev:bt/micrologus')] }).join()).toMatch(/hai chứng cứ/)
+    expect(reportProblems({ ...base, evidence: [ev('ev:bt/micrologus'), ev('ev:bt/sigebert'), ev('ev:bt/loi-ca-truong')] }).join()).toMatch(/Lời ca trưởng/)
+    const ok = { ...base, evidence: [ev('ev:bt/micrologus'), ev('ev:bt/ban-tay-the-ky-12')] }
+    expect(reportProblems(ok)).toEqual([])
+    const r = reportDraft(ok)
+    expect(r.articles).toEqual(['hexachord-va-ban-tay-guido'])
+    expect(r.draft).toMatch(/## Tài liệu tham khảo\n- \[\[hexachord-va-ban-tay-guido\]\]/)
+  })
+  it('phiên toà: nguồn đã chỉ ra được giữ khi gộp hai save', () => {
+    expect(mergeSaves(s0({ trial: { 'a/1': 'x' } }), s0({ trial: { 'a/2': 'y' } })).trial).toEqual({ 'a/1': 'x', 'a/2': 'y' })
+    expect(readSave({ trial: { k: 3 } }).repaired).toEqual(['trial'])
+  })
+})

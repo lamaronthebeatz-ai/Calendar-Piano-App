@@ -26,6 +26,12 @@ const bg = (id: string) => ({ src: IMG(id), srcSet: `${IMG(id + '-m')} 1080w, ${
 const PORTRAITS = ['p-leonardo-musician', 'p-durer', 'p-van-eyck', 'p-castiglione', 'p-ermine', 'p-pollaiuolo']
 const key = (c: Chapter, s: Scene | Claim) => `${c.id}/${s.id}`
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
+/** Three candidate sources for a claim: its own article and two others the court cites, in a fixed order. */
+const groundsOf = (claims: Claim[], c: Claim) => {
+  const others = [...new Set(claims.map((x) => x.read))].filter((r) => r !== c.read)
+  const i = claims.indexOf(c)
+  return [c.read, ...[0, 1].map((k) => others[(i + k) % Math.max(others.length, 1)]).filter(Boolean)].filter((x, j, xs) => xs.indexOf(x) === j).sort()
+}
 const VERDICT: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Giai thoại', unsure: 'Chưa chắc' }
 
 /**
@@ -774,11 +780,26 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
                     </button>
                   ))}
                 </div>
+              ) : !save.trial[key(chapter, c)] ? (
+                // the second question of the trial: which source settles it? Then the explanation
+                <div className="jr-claim-out">
+                  <p>
+                    <b>{v === c.verdict ? 'Khớp với sử liệu' : `Sử liệu nói: ${VERDICT[c.verdict]}`}</b> — căn cứ nằm ở bài nào?
+                  </p>
+                  <div className="jr-verdicts">
+                    {groundsOf(claims, c).map((slug) => (
+                      <button key={slug} data-slug={slug} onClick={() => update((s) => ({ trial: { ...s.trial, [key(chapter, c)]: slug }, ...(slug === c.read ? { xp: s.xp + 5, skills: { ...s.skills, sources: (s.skills.sources ?? 0) + 5 } } : {}) }))}>
+                        {findArticle(slug)?.title ?? slug}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               ) : (
                 <div className="jr-claim-out">
                   <p>
                     <b>{v === c.verdict ? 'Khớp với sử liệu' : `Sử liệu nói: ${VERDICT[c.verdict]}`}</b> — {c.explain}
                   </p>
+                  <p className="jr-ground">{save.trial[key(chapter, c)] === c.read ? '✓ Đúng nguồn.' : `Căn cứ thật nằm ở bài khác.`}</p>
                   {a && <Link to={`/theory/${a.slug}`}>Đọc trong bài: {a.title} →</Link>}
                 </div>
               )}

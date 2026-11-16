@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { CHAPTERS } from '../src/features/journey/chapters'
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
@@ -86,4 +87,19 @@ test('save cũ journey:v1 được chuyển sang v2 một lần, bản gốc gi�
   const store = await page.evaluate(() => ({ v2: JSON.parse(localStorage.getItem('journey:v2') ?? '{}'), bak: localStorage.getItem('journey:v1.bak') }))
   expect(store.bak).toContain('"Minh"')
   expect(store.v2).toMatchObject({ version: 2, name: 'Minh', done: ['trung-co/phong-chep-sach'], chaptersOpen: ['trung-co'] })
+})
+
+test('phiên toà sử gia: phán quyết rồi chỉ ra bài làm căn cứ, mới thấy lời giải', async ({ page }) => {
+  const ch = CHAPTERS[0]
+  await page.addInitScript((done) => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'], done }))
+  }, ch.scenes.map((s) => `${ch.id}/${s.id}`))
+  await page.goto(`/#/hanh-trinh?c=${ch.id}&v=court`)
+  const first = page.locator('.jr-claim').first()
+  const claim = ch.court.claims[0]
+  await first.getByRole('button', { name: 'Có chứng cứ' }).click()
+  await expect(first).toContainText('căn cứ nằm ở bài nào?')
+  await first.locator(`button[data-slug="${claim.read}"]`).click()
+  await expect(first).toContainText('✓ Đúng nguồn.')
+  await expect(first).toContainText(claim.explain.slice(0, 30))
 })

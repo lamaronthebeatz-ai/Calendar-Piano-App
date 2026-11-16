@@ -171,7 +171,22 @@ const investigation: Kind<InvestigationContent, InvestigationAnswer> = {
           : null,
 }
 
-export const PUZZLE_KINDS = { choice, order, match, classify, blank, neume, hexachord, aural, investigation } as const
+/**
+ * A debate: speakers take turns; at each turn the player answers with one of several replies (accept, rebut with
+ * evidence, a reply that sounds right but proves nothing). Every turn has one sound reply; the wrong ones carry
+ * their own explanation (`feedback` key `<turn>:<option>`).
+ */
+export type DebateContent = { topic: string; turns: { id: string; speaker: string; text: string; options: { id: string; text: string }[] }[] }
+const debate: Kind<DebateContent, Record<string, string>> = {
+  check: (c, a, given) => {
+    const wrong = c.turns.map((t) => t.id).filter((t) => given[t] !== a[t])
+    const first = wrong[0]
+    return { ok: !wrong.length, wrong, feedback: first && given[first] ? `${first}:${given[first]}` : undefined }
+  },
+  valid: (c, a) => (c.turns.length && c.turns.every((t) => t.options.some((o) => o.id === a[t.id])) && Object.keys(a).length === c.turns.length ? null : 'mỗi lượt cần đúng một câu đáp có trong danh sách'),
+}
+
+export const PUZZLE_KINDS = { choice, order, match, classify, blank, neume, hexachord, aural, investigation, debate } as const
 export type PuzzleType = keyof typeof PUZZLE_KINDS
 
 export function checkPuzzle(p: PuzzleDef, given: unknown): Result {

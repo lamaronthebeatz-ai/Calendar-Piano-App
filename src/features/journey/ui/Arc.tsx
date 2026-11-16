@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { findArticle } from '../../theory/wiki'
 import { MUSIC } from '../music'
 import { playTrack } from '../soundtrack'
@@ -9,8 +9,13 @@ import type { ArcDef, DNode, EvidenceKind, LocationDef, PuzzleDef } from '../eng
 import { choicesOf, enter as enterNode, step } from '../engine/dialogue'
 import { attempt, currentStage, effects, enter, visibleLocations } from '../engine/runtime'
 import { holds } from '../engine/world'
-import { NOTE_NAMES, SYLLABLES, HEXACHORDS, type AuralContent, type BlankContent, type ChoiceContent, type ClassifyContent, type HexachordContent, type InvestigationContent, type MatchContent, type NeumeContent, type OrderContent, type Result } from '../engine/puzzles'
+import { NOTE_NAMES, SYLLABLES, HEXACHORDS, type AuralContent, type BlankContent, type DebateContent, type ChoiceContent, type ClassifyContent, type HexachordContent, type InvestigationContent, type MatchContent, type NeumeContent, type OrderContent, type Result } from '../engine/puzzles'
 import { MASTERY_LABEL, levelOf, masteryOf } from '../engine/progression'
+import { SKILL_TREE, PERKS, branch, hasPerk } from '../engine/skills'
+import { reportDraft, reportProblems } from '../engine/report'
+import { SKILLS, type EvidenceDef } from '../engine/types'
+import { articleKind, KIND_LABEL } from '../../knowledge/ids'
+import { createProject, updateProject } from '../../research/store'
 import './arc.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
@@ -19,7 +24,6 @@ const bg = (id: string) => ({ src: IMG(id), srcSet: `${IMG(id + '-m')} 1080w, ${
 
 const VOICE: Record<DNode['voice'], string> = { reconstructed: 'Lời dựng lại', quote: 'Trích nguyên văn', fiction: '✦ Hư cấu', narration: '' }
 const KIND: Record<EvidenceKind, string> = { primary: 'Nguồn sơ cấp', secondary: 'Nguồn thứ cấp', artifact: 'Hiện vật', interpretation: 'Diễn giải', anecdote: 'Giai thoại', hypothesis: 'Giả thuyết', fiction: 'Hư cấu' }
-const SKILL_LABEL = { history: 'Lịch sử', theory: 'Lý thuyết', aural: 'Nghe', analysis: 'Phân tích', sources: 'Phê bình nguồn', research: 'Nghiên cứu' } as const
 
 /**
  * A story arc played on the engine: the hub (objective, map, places), a place (people, things to use), a dialogue, a
@@ -39,6 +43,7 @@ export function ArcPlayer({ arc, save, go, l, p, map }: { arc: ArcDef; save: Sav
 
 function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
   const [book, setBook] = useState(false)
+  const [report, setReport] = useState(false)
   const stage = currentStage(arc, save)
   const done = holds(arc.completion, save)
   const places = visibleLocations(arc, save)
@@ -72,12 +77,22 @@ function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (op
             </li>
           ))}
         </ul>
+        {done && (
+          <div className="ar-report-cta">
+            {hasPerk(save, 'report') ? (
+              <button className="jr-cta" onClick={() => setReport(true)}>Viết báo cáo nghiên cứu →</button>
+            ) : (
+              <p className="ar-small">Đạt cấp 1 Tư duy nghiên cứu để viết báo cáo nghiên cứu từ câu chuyện này.</p>
+            )}
+          </div>
+        )}
         <div className="ar-bar">
           <p>Cấp {levelOf(save.xp)} · {save.xp} XP · {save.cards.filter((c) => arc.evidence.some((e) => e.id === c)).length}/{arc.evidence.length} chứng cứ</p>
           <button className="jr-ghost" onClick={() => setBook(true)}>Sổ hành trình</button>
         </div>
       </div>
       {book && <Book arc={arc} save={save} onClose={() => setBook(false)} />}
+      {report && <ReportPanel arc={arc} save={save} onClose={() => setReport(false)} />}
     </section>
   )
 }
@@ -187,12 +202,15 @@ function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; sa
 
 function PuzzleScreen({ arc, puzzle, save, onClose }: { arc: ArcDef; puzzle: PuzzleDef; save: Save; onClose: () => void }) {
   const [hints, setHints] = useState(0)
+  // hints opened with an item cost nothing
+  const [free, setFree] = useState(0)
   const [result, setResult] = useState<Result | null>(null)
+  const tools = arc.items.filter((i) => i.use?.at === puzzle.id && save.inventory.includes(i.id))
   const solved = !!save.puzzles[puzzle.id]?.solved
   const submit = (given: unknown) => {
     let r: Result = { ok: false, wrong: [] }
     update((s) => {
-      const out = attempt(arc, puzzle.id, given, hints, s)
+      const out = attempt(arc, puzzle.id, given, Math.max(0, hints - free), s)
       r = out.result
       return out.save
     })
@@ -219,6 +237,12 @@ function PuzzleScreen({ arc, puzzle, save, onClose }: { arc: ArcDef; puzzle: Puz
           <div className="ar-hints">
             {puzzle.hints.slice(0, hints).map((h) => <p key={h}>💡 {h}</p>)}
             {hints < puzzle.hints.length && <button className="jr-ghost is-small" onClick={() => setHints((n) => n + 1)}>Gợi ý ({puzzle.hints.length - hints})</button>}
+            {hints < puzzle.hints.length &&
+              tools.map((t) => (
+                <button key={t.id} className="jr-ghost is-small" onClick={() => (setHints((n) => n + 1), setFree((n) => n + 1))}>
+                  Dùng {t.name} — gợi ý không mất điểm
+                </button>
+              ))}
           </div>
         )}
         {done && (
@@ -257,6 +281,8 @@ function PuzzleBody({ arc, puzzle, save, wrong, onSubmit, locked }: { arc: ArcDe
       return <HexachordUI c={c as HexachordContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     case 'aural':
       return <AuralUI c={c as AuralContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
+    case 'debate':
+      return <DebateUI c={c as DebateContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     case 'investigation':
       return <InvestigationUI c={c as InvestigationContent} save={save} evidence={(id) => arc.evidence.find((e) => e.id === id)} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     default:
@@ -508,11 +534,104 @@ function InvestigationUI({ c, save, wrong, onSubmit, locked, evidence }: UI & { 
   )
 }
 
+
+function DebateUI({ c, wrong, onSubmit, locked }: UI & { c: DebateContent }) {
+  const [pick, setPick] = useState<Record<string, string>>({})
+  return (
+    <div className="ar-debate">
+      <p className="ar-small">Chủ đề: {c.topic}</p>
+      {c.turns.map((t) => (
+        <fieldset key={t.id} className={`ar-fs ar-turn${wrong.includes(t.id) ? ' is-wrong' : ''}`}>
+          <legend>{t.speaker}</legend>
+          <p className="ar-turn-say">“{t.text}”</p>
+          {t.options.map((o) => (
+            <label key={o.id} className="ar-radio">
+              <input type="radio" name={t.id} checked={pick[t.id] === o.id} disabled={locked} onChange={() => setPick((p) => ({ ...p, [t.id]: o.id }))} /> {o.text}
+            </label>
+          ))}
+        </fieldset>
+      ))}
+      <Check ok={c.turns.every((t) => pick[t.id])} onClick={() => onSubmit(pick)} locked={locked} />
+    </div>
+  )
+}
+
+/** Writing up the investigation; saved as a project at the research desk with its references. */
+function ReportPanel({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => void }) {
+  const navigate = useNavigate()
+  const inv = arc.puzzles.find((p) => p.type === 'investigation')
+  const content = inv?.content as InvestigationContent | undefined
+  const best = content?.conclusions.find((x) => x.id === (inv?.answer as { conclusion: string } | undefined)?.conclusion)
+  const have = arc.evidence.filter((e) => save.cards.includes(e.id))
+  const [question, setQuestion] = useState(content?.question ?? '')
+  const [chosen, setChosen] = useState<string[]>([])
+  const [analysis, setAnalysis] = useState('')
+  const [conclusion, setConclusion] = useState(best?.text ?? '')
+  const input = { title: `Báo cáo: ${arc.title}`, question, evidence: have.filter((e) => chosen.includes(e.id)), analysis, conclusion }
+  const problems = reportProblems(input)
+  const save_ = () => {
+    const { draft, articles } = reportDraft(input)
+    const p = createProject(input.title)
+    updateProject(p.id, { question, draft, articles })
+    update((s) => effects(arc, s.flags.includes(`bao-cao:${arc.id}`) ? [] : [{ set: `bao-cao:${arc.id}` }, { xp: 40, skill: 'research' }], s))
+    navigate(`/research/${p.id}`)
+  }
+  return (
+    <div className="ar-book" role="dialog" aria-label="Báo cáo nghiên cứu">
+      <div className="ar-book-inner ar-report">
+        <header className="ar-book-head">
+          <h3>Báo cáo nghiên cứu</h3>
+          <button className="ar-close" onClick={onClose} aria-label="Đóng báo cáo">✕</button>
+        </header>
+        <label className="ar-field">
+          <span>Câu hỏi nghiên cứu</span>
+          <textarea value={question} onChange={(e) => setQuestion(e.target.value)} rows={2} />
+        </label>
+        <fieldset className="ar-fs">
+          <legend>Chứng cứ dùng trong báo cáo</legend>
+          {have.map((e: EvidenceDef) => (
+            <label key={e.id} className="ar-check-row">
+              <input type="checkbox" checked={chosen.includes(e.id)} onChange={(x) => setChosen((c) => (x.target.checked ? [...c, e.id] : c.filter((y) => y !== e.id)))} />
+              <span>
+                <b>{e.title}</b> <em>{KIND[e.kind]}</em>
+                <small>{e.reliability}</small>
+              </span>
+            </label>
+          ))}
+        </fieldset>
+        <label className="ar-field">
+          <span>Phân tích — chứng cứ nào nói gì, tin được tới đâu</span>
+          <textarea value={analysis} onChange={(e) => setAnalysis(e.target.value)} rows={5} aria-label="Phân tích" />
+        </label>
+        <label className="ar-field">
+          <span>Kết luận</span>
+          <textarea value={conclusion} onChange={(e) => setConclusion(e.target.value)} rows={3} />
+        </label>
+        {problems.length > 0 && (
+          <ul className="ar-problems">
+            {problems.map((p) => <li key={p}>{p}</li>)}
+          </ul>
+        )}
+        <button className="jr-cta" disabled={problems.length > 0} onClick={save_}>Lưu thành đề tài ở Bàn làm việc →</button>
+        <p className="ar-small">Tài liệu tham khảo lấy từ nguồn của các chứng cứ bạn chọn.</p>
+      </div>
+    </div>
+  )
+}
+
 /* ------------------------------------------------------------------ the journal */
 
 function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => void }) {
-  const [tab, setTab] = useState<'quest' | 'bag' | 'evidence' | 'codex'>('quest')
+  const [tab, setTab] = useState<'quest' | 'skills' | 'bag' | 'evidence' | 'codex'>('quest')
   const codex = useMemo(() => save.codex.filter((id) => id.startsWith('a:') && findArticle(id.slice(2))), [save.codex])
+  const groups = useMemo(() => {
+    const by = new Map<ReturnType<typeof articleKind>, string[]>()
+    for (const id of codex) {
+      const k = articleKind(findArticle(id.slice(2))!)
+      by.set(k, [...(by.get(k) ?? []), id])
+    }
+    return [...by.entries()]
+  }, [codex])
   return (
     <div className="ar-book" role="dialog" aria-label="Sổ hành trình">
       <div className="ar-book-inner">
@@ -524,6 +643,7 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
           {(
             [
               ['quest', 'Nhiệm vụ'],
+              ['skills', 'Kỹ năng'],
               ['bag', 'Túi đồ'],
               ['evidence', 'Chứng cứ'],
               ['codex', 'Codex'],
@@ -544,11 +664,30 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
                 </li>
               )
             })}
-            <li className="ar-skills">
-              {(Object.keys(SKILL_LABEL) as (keyof typeof SKILL_LABEL)[]).map((k) => (
-                <span key={k}>{SKILL_LABEL[k]} {save.skills[k] ?? 0}</span>
-              ))}
+          </ul>
+        )}
+        {tab === 'skills' && (
+          <ul className="ar-list ar-tree">
+            <li>
+              <b>Cấp {levelOf(save.xp)}</b> <em>{save.xp} XP</em>
             </li>
+            {SKILLS.map((k) => {
+              const b = branch(save, k)
+              return (
+                <li key={k}>
+                  <b>{SKILL_TREE[k].title}</b> <em>bậc {b.level}/4 · {b.title}</em>
+                  <span className="ar-meter" aria-hidden>
+                    <i style={{ transform: `scaleX(${b.next === undefined ? 1 : Math.min(1, b.points / b.next)})` }} />
+                  </span>
+                  <small>{b.points} điểm{b.next !== undefined ? ` · còn ${b.toNext} điểm tới bậc ${b.level + 1}` : ' · bậc cao nhất'} · {SKILL_TREE[k].text}</small>
+                  {PERKS.filter((p) => p.skill === k).map((p) => (
+                    <small key={p.id} className={hasPerk(save, p.id) ? 'ar-perk is-on' : 'ar-perk'}>
+                      {hasPerk(save, p.id) ? '✓' : `bậc ${p.level}:`} {p.title} — {p.text}
+                    </small>
+                  ))}
+                </li>
+              )
+            })}
           </ul>
         )}
         {tab === 'bag' && (
@@ -575,14 +714,22 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
           </ul>
         )}
         {tab === 'codex' && (
-          <ul className="ar-list">
-            {codex.map((id) => (
-              <li key={id}>
-                <Link to={`/theory/${id.slice(2)}`} className="ar-ref">{findArticle(id.slice(2))!.title}</Link> <em>{MASTERY_LABEL[masteryOf(save.mastery[id])]}</em>
-              </li>
+          <div className="ar-codex">
+            {groups.map(([kind, ids]) => (
+              <section key={kind}>
+                <h4>{KIND_LABEL[kind]} <span>{ids.length}</span></h4>
+                <ul className="ar-list">
+                  {ids.map((id) => (
+                    <li key={id}>
+                      <Link to={`/theory/${id.slice(2)}`} className="ar-ref">{findArticle(id.slice(2))!.title}</Link> <em>{MASTERY_LABEL[masteryOf(save.mastery[id])]}</em>
+                      <Link to={`/graph?id=${encodeURIComponent(id)}`} className="ar-small">Xem trên đồ thị tri thức →</Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
-            {!codex.length && <li><small>Chưa khám phá mục nào.</small></li>}
-          </ul>
+            {!codex.length && <p className="ar-small">Chưa khám phá mục nào.</p>}
+          </div>
         )}
       </div>
     </div>

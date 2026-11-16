@@ -23,6 +23,7 @@ describe('ids', () => {
   it('reads the kind of an article from its index entry', () => {
     expect(articleKind({ slug: 'bach', category: 'composers' })).toBe('person')
     expect(articleKind({ slug: 'thoi-ky-baroque', category: 'modern' })).toBe('period')
+    expect(articleKind({ slug: 'thoi-ky-trung-co', category: 'composers' })).toBe('period')
     expect(articleKind({ slug: 'opera', category: 'genres' })).toBe('genre')
     expect(articleKind({ slug: 'hinh-thuc-sonata', category: 'form' })).toBe('form')
     expect(articleKind({ slug: 'violin', category: 'organology' })).toBe('instrument')

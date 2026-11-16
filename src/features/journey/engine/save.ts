@@ -72,6 +72,8 @@ export interface Save {
   skills: Record<SkillId, number>
   mastery: Record<string, MasteryState>
   achievements: string[]
+  /** historian's court: the article the player named as the ground of each verdict, `chapter/claim` → slug */
+  trial: Record<string, string>
 }
 
 export const emptySave = (): Save => ({
@@ -96,6 +98,7 @@ export const emptySave = (): Save => ({
   skills: Object.fromEntries(SKILLS.map((s) => [s, 0])) as Record<SkillId, number>,
   mastery: {},
   achievements: [],
+  trial: {},
 })
 
 const isObj = (x: unknown): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x)
@@ -125,6 +128,7 @@ const CHECKS: { [K in keyof Save]?: (v: unknown) => boolean } = {
   skills: (v) => isObj(v) && SKILLS.every((s) => num(v[s]) || v[s] === undefined),
   mastery: (v) => recordOf(v, (m) => isObj(m) && num(m.seen) && num(m.right) && strs(m.kinds) && num(m.applied) && strs(m.days)),
   achievements: strs,
+  trial: (v) => recordOf(v, (x) => typeof x === 'string'),
 }
 
 /**
@@ -193,5 +197,6 @@ export function mergeSaves(a: Save, b: Save): Save {
     skills: Object.fromEntries(SKILLS.map((k) => [k, Math.max(a.skills[k] ?? 0, b.skills[k] ?? 0)])) as Record<SkillId, number>,
     mastery: later(a.mastery, b.mastery, (p, q) => p.applied + p.right > q.applied + q.right),
     achievements: u(a.achievements, b.achievements),
+    trial: { ...a.trial, ...b.trial },
   }
 }

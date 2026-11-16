@@ -66,3 +66,54 @@ Lát cắt là **dữ liệu**; thêm lát cắt = một file + một dòng `ARC
 | Mở nội dung tri thức liên quan | ✓ | link bài trong thoại, giải thích, Codex |
 | Lưu và tiếp tục | ✓ | e2e mở trang mới vẫn "Đã khép lại" |
 | Không lỗi chặn; chơi được trên máy tính và điện thoại | ✓ | e2e 2 cỡ màn × 2 engine; ảnh chụp không tràn |
+
+---
+
+## Phase 5–6 — Tiến trình, kỹ năng, điều tra học thuật (16/11)
+
+### A. Đã làm
+- **Cây kỹ năng** (`engine/skills.ts`): 6 nhánh × 5 bậc có tên (Lữ khách → Sử gia…), thước điểm tới bậc sau, **phần thưởng mở thật** (`PERKS`): Lý thuyết bậc 1 mở nhiệm vụ ẩn "Đổi lục âm"; Tư duy nghiên cứu bậc 1 mở "Báo cáo nghiên cứu". Tab "Kỹ năng" trong Sổ hành trình.
+- **Mastery** hiển thị ở Codex (Chưa gặp / Đã gặp / Đã hiểu / Đã vận dụng / Thành thạo — luật ở Phase 1, một câu đúng không vượt "Đã gặp").
+- **Codex** chia theo loại đối tượng của nền tảng tri thức (người, thời kỳ, khái niệm, thể loại…), mỗi mục mở bài và `/graph`.
+- **Vật phẩm có công dụng**: `item.use.at` — "Bàn tay vẽ trên giấy da" cho gợi ý không mất điểm ở câu đổi lục âm.
+- **Tranh luận** (dạng câu đố `debate`): 3 nhân vật, mỗi lượt chọn câu đáp; câu đúng dựa trên dữ kiện, câu sai dựa vào quê quán / uy tín / số đông / chứng cứ muộn, mỗi câu sai có lời giải thích riêng. Nhiệm vụ học thuật "Ai nghĩ ra khuông nhạc?".
+- **Phiên toà sử gia nâng cấp** (cả 6 chương cũ): sau phán quyết phải **chỉ ra bài làm căn cứ** (3 bài để chọn), rồi mới thấy lời giải + "Đúng nguồn / căn cứ ở bài khác"; đúng lần đầu +5 Phê bình nguồn. Lưu `save.trial` (trường mới, có kiểm và gộp).
+- **Báo cáo nghiên cứu** (`engine/report.ts` + khung trong game): câu hỏi, chứng cứ đã thu, phân tích, kết luận; bị chặn nếu < 2 chứng cứ có nguồn, dùng giai thoại / hư cấu làm chỗ dựa, phân tích quá ngắn; lưu thành **đề tài ở Bàn làm việc** (bản nháp Markdown có `[[slug]]`, danh mục tham khảo = nguồn của chứng cứ), +40 Nghiên cứu một lần.
+
+### B. File
+Thêm `engine/skills.ts`, `engine/report.ts`. Sửa `engine/puzzles.ts` (`debate`), `engine/save.ts` (`trial`), `engine/validate.ts` (kiểm `item.use`), `content/ban-thao.ts` (tranh luận, nhiệm vụ ẩn, công dụng vật), `ui/Arc.tsx` + `arc.css`, `JourneyPage.tsx` (phiên toà), `journey.css`, `knowledge/ids.ts` (trang thời kỳ trong mục Nhà soạn nhạc giờ là "Thời kỳ"), test.
+
+### C. Kiến trúc
+Phần thưởng kỹ năng là điều kiện dữ liệu (`{ skill, level }`) — nội dung tự khai báo cái gì mở ở bậc nào. Báo cáo không tạo kho mới: ghi thẳng vào đề tài `/research` (đã vào sao lưu).
+
+### D. Kiểm thử
+- Vitest 149/149 (thêm: bậc và phần thưởng, nhiệm vụ ẩn chỉ hiện khi đủ kỹ năng + vật, tranh luận và lời giải riêng, báo cáo bị chặn / bản nháp đúng tham khảo, `trial` khi gộp và khi hỏng).
+- E2e (Chromium + WebKit, điện thoại + máy tính, 14/14): tuyến chính thêm tranh luận; sau khi khép: tab Kỹ năng có phần thưởng đã mở, nhiệm vụ ẩn mở + dùng vật lấy gợi ý + giải, báo cáo bị chặn khi có giai thoại rồi lưu thành đề tài với `[[hexachord-va-ban-tay-guido]]`; phiên toà Chương I: phán quyết → chỉ nguồn → lời giải.
+- Ảnh điện thoại: tranh luận, màn tổng khép lại, Kỹ năng, Codex, báo cáo, phiên toà — không tràn ngang.
+
+### E. Còn tồn tại
+- Phần thưởng kỹ năng mới có 2 (Lý thuyết, Nghiên cứu); 4 nhánh còn lại chỉ có bậc + tên — sẽ thêm khi có nội dung chương sau.
+- Phiên toà: 3 lựa chọn nguồn lấy từ chính các bài phiên toà chương đó; chưa phân loại "sự kiện / diễn giải / giả thuyết" riêng (vẫn 3 phán quyết cũ).
+- Báo cáo chưa tạo luận điểm – bằng chứng trong kho tri thức (`knowledge`), vì chứng cứ game trỏ tới bài thư viện (a:), còn bằng chứng của kho cần tài liệu (s:/ms:).
+
+### F. Kiểm chứng học thuật (dữ kiện mới)
+| Dữ kiện | Nguồn | Trạng thái |
+|---|---|---|
+| Musica enchiriadis (thế kỷ 9) dùng lưới giống khuông | `lich-su-ky-am` §1 | theo bài |
+| Giáo hoàng John XIX mời Guido tới Roma k. 1028 | `guido-d-arezzo` (Tiểu sử) | theo bài |
+| Mutation đổi tên âm tiết ở nốt chung; La = la (naturale) / mi (molle), Si♭ = fa (molle) | `hexachord-va-ban-tay-guido` | đáp án tự tính bởi validator |
+
+### G. Nghiệm thu
+| Tiêu chí (Phase 5–6) | Đạt | Bằng chứng |
+|---|---|---|
+| Thấy rõ tiến trình phát triển | ✓ | tab Kỹ năng: cấp, bậc, thước, phần thưởng |
+| Phần thưởng có ý nghĩa; mở khoá đúng | ✓ | nhiệm vụ ẩn, báo cáo — e2e + unit |
+| Mastery không tăng vô lý | ✓ | unit (Phase 1) + hiển thị Codex |
+| Túi đồ không trùng, vật có công dụng | ✓ | `add()` không trùng; validator đòi `links` hoặc `use` |
+| Codex cập nhật theo khám phá, nối thư viện | ✓ | e2e Codex có bài hexachord; link `/graph` |
+| Mỗi kết luận truy ngược được chứng cứ | ✓ | điều tra + báo cáo (tham khảo = nguồn chứng cứ) |
+| Phân biệt dữ kiện / diễn giải / giai thoại / hư cấu | ✓ | loại chứng cứ, phân loại chứng cứ, báo cáo chặn giai thoại |
+| Không có nguồn bịa | ✓ | mọi nguồn là bài thư viện có thật (validator) |
+| Chứng cứ dùng lại ở nhiều nhiệm vụ | ✓ | cùng thẻ dùng ở phân loại, kết luận, báo cáo |
+| Tranh luận nhiều nhân vật, chọn lập luận | ✓ | `debate` 3 lượt |
+| Phiên toà: xác định nguồn, phán quyết có lý do | ✓ | bước chỉ nguồn ở 6 chương |

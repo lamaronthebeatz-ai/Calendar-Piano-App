@@ -58,6 +58,7 @@ export const banThao: ArcDef = {
         { id: 'ca-doan', label: 'Nghe ca đoàn hát Ut queant laxis', when: { topic: 'ut-queant', with: 'npc:bt/guido' }, puzzle: 'pz:bt/nghe-ut-queant' },
         { id: 'bang-sap', label: 'Bảng sáp: sáu nửa câu', when: { topic: 'ut-queant', with: 'npc:bt/guido' }, puzzle: 'pz:bt/dien-am-tiet' },
         { id: 'ba-luc-am', label: 'Ba khuôn sáu âm', when: { solved: 'pz:bt/dien-am-tiet' }, puzzle: 'pz:bt/luc-am' },
+        { id: 'doi-luc-am', label: 'Thử đổi lục âm trên bàn tay giấy da', when: { all: [{ skill: 'theory', level: 1 }, { item: 'item:bt/ban-tay' }] }, effects: [{ startQuest: 'q:bt/doi-luc-am' }], puzzle: 'pz:bt/doi-luc-am' },
       ],
     },
     {
@@ -83,7 +84,10 @@ export const banThao: ArcDef = {
       focus: '30% 40%',
       hidden: true,
       present: [{ npc: 'npc:bt/quan-thu', dialogue: 'dlg:bt/ket-luan' }],
-      objects: [{ id: 'ban-chung-cu', label: 'Đặt chứng cứ lên bàn', when: { met: 'npc:bt/quan-thu' }, puzzle: 'pz:bt/ket-luan' }],
+      objects: [
+        { id: 'tranh-luan', label: 'Cuộc tranh luận: ai nghĩ ra khuông nhạc?', when: { topic: 'ket-luan', with: 'npc:bt/quan-thu' }, effects: [{ startQuest: 'q:bt/tranh-luan' }], puzzle: 'pz:bt/tranh-luan' },
+        { id: 'ban-chung-cu', label: 'Đặt chứng cứ lên bàn', when: { met: 'npc:bt/quan-thu' }, puzzle: 'pz:bt/ket-luan' },
+      ],
     },
   ],
 
@@ -288,6 +292,26 @@ export const banThao: ArcDef = {
       stages: [{ id: 'doc', text: 'Đọc các nốt trên dòng có khoá Fa.', objectives: [{ solve: 'pz:bt/doc-khoa-fa' }] }],
       rewards: [{ xp: 30, skill: 'theory' }],
       links: ['a:ky-am-binh-ca-gregorian'],
+    },
+    {
+      id: 'q:bt/tranh-luan',
+      chapter: 'trung-co',
+      title: 'Ai nghĩ ra khuông nhạc?',
+      summary: 'Ba người, ba ý. Đáp lại từng người bằng lập luận có căn cứ, không bằng uy tín hay số đông.',
+      kind: 'academic',
+      stages: [{ id: 'tranh-luan', text: 'Đáp lại từng lượt trong cuộc tranh luận.', objectives: [{ solve: 'pz:bt/tranh-luan' }] }],
+      rewards: [{ xp: 30, skill: 'research' }, { xp: 20, skill: 'sources' }],
+      links: ['a:lich-su-ky-am'],
+    },
+    {
+      id: 'q:bt/doi-luc-am',
+      chapter: 'trung-co',
+      title: 'Đổi lục âm',
+      summary: 'Một nốt chung, hai tên: thử chuyển từ lục âm này sang lục âm khác.',
+      kind: 'hidden',
+      stages: [{ id: 'doi', text: 'Gọi tên các nốt trước và sau khi đổi lục âm.', objectives: [{ solve: 'pz:bt/doi-luc-am' }] }],
+      rewards: [{ xp: 40, skill: 'theory' }],
+      links: ['a:hexachord-va-ban-tay-guido'],
     },
     {
       id: 'q:bt/mot-be-nhieu-be',
@@ -509,6 +533,81 @@ export const banThao: ArcDef = {
       links: ['a:thanh-ca-gregorian', 'a:organum', 'a:giovanni-pierluigi-da-palestrina'],
     },
     {
+      id: 'pz:bt/tranh-luan',
+      type: 'debate',
+      difficulty: 3,
+      title: 'Ai nghĩ ra khuông nhạc?',
+      instructions: 'Ba người bạn đã gặp, mỗi người một ý. Chọn câu đáp lại có căn cứ cho từng lượt — đồng ý cũng là một câu đáp, nếu điều họ nói đứng được.',
+      content: {
+        topic: 'Khuông nhạc và bàn tay Guido',
+        turns: [
+          {
+            id: 't1',
+            speaker: 'Thầy Rinaldo',
+            text: 'Guido nghĩ ra khuông nhạc từ con số không — trước ông chẳng ai ghi cao độ trên dòng kẻ.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'enchiriadis', text: 'Chưa hẳn: chuyên luận Musica enchiriadis (thế kỷ 9) đã dùng một lưới giống khuông, và khoảng năm 1000 ở Ý người ta đã đặt neume theo độ cao.' },
+              { id: 'nguoi-y', text: 'Chưa hẳn: Guido là người Ý, mà người Ý vốn giỏi nhạc.' },
+            ],
+          },
+          {
+            id: 't2',
+            speaker: 'Thầy quản thư',
+            text: 'Vậy thì Guido chẳng đóng góp gì cả.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'khoa', text: 'Không hẳn: ông dùng dòng kẻ có tổ chức với chữ cái làm khoá để ca sĩ đọc được cả giai điệu chưa từng nghe — điều các nguồn ghi công cho ông.' },
+              { id: 'giao-hoang', text: 'Không hẳn: giáo hoàng đã mời ông tới Roma, chắc ông phải giỏi.' },
+            ],
+          },
+          {
+            id: 't3',
+            speaker: 'Ca trưởng Gualtiero',
+            text: 'Sách nào cũng gọi là "bàn tay Guido", vậy chắc chắn chính tay ông vẽ.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'sigebert', text: 'Đúng thế, vì Sigebert đã viết vậy.' },
+              { id: 'so-dong', text: 'Nhiều người nhắc lại không thành chứng cứ: hình bàn tay đầy đủ chỉ có từ thế kỷ 12, và lời kể sớm nhất (Sigebert) cũng viết sau Guido gần một thế kỷ.' },
+            ],
+          },
+        ],
+      },
+      answer: { t1: 'enchiriadis', t2: 'khoa', t3: 'so-dong' },
+      hints: ['Mỗi lượt có một câu đáp dựa trên dữ kiện; các câu kia dựa vào quê quán, uy tín hay số đông.', 'Đọc mục 1 – 2 của bài Cổ tự học âm nhạc.'],
+      feedback: [
+        { key: 't1:dong-y', text: 'Trước Guido đã có Musica enchiriadis (thế kỷ 9) với lưới giống khuông, và neume định cao độ ở Ý khoảng năm 1000.' },
+        { key: 't1:nguoi-y', text: 'Quê quán không chứng minh điều gì về một phát minh.' },
+        { key: 't2:dong-y', text: 'Quá tay: Guido được xem là người phát triển khuông với chữ cái làm khoá, để đọc được giai điệu chưa từng nghe.' },
+        { key: 't2:giao-hoang', text: 'Việc giáo hoàng mời ông (khoảng 1028) là có thật, nhưng sự trọng vọng không chứng minh ông làm ra cái gì — đó là dựa vào uy tín.' },
+        { key: 't3:dong-y', text: 'Nhiều sách gọi tên như thế không biến tên gọi thành chứng cứ.' },
+        { key: 't3:sigebert', text: 'Sigebert viết sau Guido gần một thế kỷ, và chỉ kể chuyện dạy bằng khớp ngón tay — không nói Guido vẽ bàn tay.' },
+      ],
+      explanation: 'Guido không làm ra khuông từ con số không (đã có lưới của Musica enchiriadis, neume định cao độ ở Ý), nhưng đóng góp của ông là có thật: dòng kẻ có tổ chức, chữ cái làm khoá, đọc được bài chưa từng nghe. Còn "bàn tay Guido" là tên đời sau đặt; số đông và uy tín không thay được chứng cứ.',
+      skills: ['research', 'sources'],
+      links: ['a:lich-su-ky-am', 'a:hexachord-va-ban-tay-guido'],
+    },
+    {
+      id: 'pz:bt/doi-luc-am',
+      type: 'hexachord',
+      difficulty: 4,
+      title: 'Đổi lục âm',
+      instructions: 'Giai điệu đi từ Đô lên rồi chạm Si giáng: người hát rời lục âm tự nhiên, sang lục âm mềm, đổi tên ở nốt La chung. Gọi tên âm tiết của từng nốt.',
+      content: {
+        ask: 'Âm tiết của từng nốt, trước và sau khi đổi.',
+        items: [
+          { id: 'la-truoc', note: 'La', hexachord: 'naturale' },
+          { id: 'la-sau', note: 'La', hexachord: 'molle' },
+          { id: 'si-giang', note: 'Si♭', hexachord: 'molle' },
+        ],
+      },
+      answer: { 'la-truoc': 'la', 'la-sau': 'mi', 'si-giang': 'fa' },
+      hints: ['Trong lục âm tự nhiên (từ Đô) La là âm thứ sáu.', 'Trong lục âm mềm (từ Fa): Fa Sol La Si♭ … — La là âm thứ ba.'],
+      explanation: 'Cùng một nốt La: là "la" trong lục âm tự nhiên, nhưng thành "mi" khi chuyển sang lục âm mềm — và nốt kế tiếp Si♭ là "fa", giữ nửa cung mi – fa đúng chỗ. Chuyển như thế ở một nốt chung gọi là mutation.',
+      skills: ['theory'],
+      links: ['a:hexachord-va-ban-tay-guido'],
+    },
+    {
       id: 'pz:bt/ket-luan',
       type: 'investigation',
       difficulty: 4,
@@ -551,7 +650,14 @@ export const banThao: ArcDef = {
 
   items: [
     { id: 'item:bt/trang-ban-thao', name: 'Trang chép tay ở Pomposa', kind: 'manuscript', text: 'Neume nằm trên dòng kẻ, đầu dòng có chữ cái. (Vật trong truyện.)', links: ['a:lich-su-ky-am', 'a:ky-am-binh-ca-gregorian'] },
-    { id: 'item:bt/ban-tay', name: 'Bàn tay vẽ trên giấy da', kind: 'special', text: 'Bạn tự vẽ để nhớ ba khuôn sáu âm và chỗ nửa cung mi – fa. (Vật trong truyện.)', links: ['a:hexachord-va-ban-tay-guido'] },
+    {
+      id: 'item:bt/ban-tay',
+      name: 'Bàn tay vẽ trên giấy da',
+      kind: 'special',
+      text: 'Bạn tự vẽ để nhớ ba khuôn sáu âm và chỗ nửa cung mi – fa. Dùng được khi đổi lục âm: xem gợi ý mà không mất điểm. (Vật trong truyện.)',
+      links: ['a:hexachord-va-ban-tay-guido'],
+      use: { at: 'pz:bt/doi-luc-am', effects: [] },
+    },
   ],
 
   claims: [],

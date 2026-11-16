@@ -233,3 +233,4 @@ html.is-android .jr-motes, html.is-android .jr-glow { display: none; }
 .jr-chapters a[aria-current='page'] b { color: #1a1206; }
 .jr-chapters a.is-locked { opacity: 0.45; }
 .jr-fiction { font-weight: 600; color: #e7b98a; }
+.jr-ground { margin-top: 6px; font-size: 13px; color: var(--jr-gold); }

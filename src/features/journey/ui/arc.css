@@ -90,3 +90,18 @@
 .ar-list small { font-size: 12.5px; line-height: 1.5; color: var(--jr-dim); }
 .ar-rel { font-style: italic; }
 .ar-skills { display: flex !important; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--jr-dim); }
+.ar-report-cta { display: grid; justify-items: start; }
+.ar-turn { padding: 10px 12px; border-radius: 14px; border: 1px solid var(--jr-line); }
+.ar-turn.is-wrong { border-color: #b4382a; }
+.ar-turn-say { font-family: var(--font-display); font-size: 17px; line-height: 1.5; color: var(--jr-ink); }
+.ar-field { display: grid; gap: 4px; margin-top: 10px; font-size: 12px; letter-spacing: 0.06em; color: var(--jr-gold); }
+.ar-field textarea { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--jr-line); background: #1a130d; color: var(--jr-ink); font-size: 14.5px; line-height: 1.5; letter-spacing: 0; resize: vertical; }
+.ar-problems { margin: 10px 0; display: grid; gap: 4px; font-size: 13px; color: #f0c0b0; }
+.ar-report .jr-cta { margin-top: 8px; }
+.ar-meter { display: block; height: 4px; margin: 4px 0 2px; border-radius: 999px; background: var(--jr-line); overflow: hidden; }
+.ar-meter i { display: block; height: 100%; background: var(--jr-gold); transform-origin: left; }
+.ar-perk { color: var(--jr-faint) !important; }
+.ar-perk.is-on { color: var(--jr-gold) !important; }
+.ar-codex { display: grid; gap: 12px; }
+.ar-codex h4 { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jr-gold); margin-bottom: 6px; }
+.ar-codex h4 span { color: var(--jr-faint); margin-left: 4px; }

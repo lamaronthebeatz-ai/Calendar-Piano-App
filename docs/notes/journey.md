@@ -22,6 +22,11 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Câu đố mới: `neume` (vị trí 0 = dòng 1, khoá Đô/Fa; đáp án do validator tự tính), `hexachord` (`HEXACHORDS`, đáp án tự tính), `aural` (`{track: khoá MUSIC, start, end}` — bản thu thật Commons; mốc đầu câu Ut queant đo bằng YIN, ghi trong REPORTS §F), `investigation` (đáp án = kết luận + `support` bắt buộc + `reject` không được dùng làm chỗ dựa; feedback `ket-luan:<id>`, `yeu:<ev>`, `thieu`).
 - Viết lát cắt mới: mọi dữ kiện phải có bài thư viện (thiếu thì viết bài trước — đã viết `hexachord-va-ban-tay-guido`); nhân vật hư cấu đặt tên không trùng người thật; mỗi node thoại có `voice`; vật/chứng cứ hư cấu có `kind: 'fiction'`. Test e2e đọc đáp án từ file nội dung (`tests/journey-arc.spec.ts`), hội thoại đi theo danh sách lựa chọn ưu tiên (đặt lựa chọn kết thúc trước lựa chọn lặp lại).
 
+## Phase 5–6 (16/11) — báo cáo `docs/journey/REPORTS.md`
+- `engine/skills.ts`: `SKILL_TREE` (6 nhánh × 5 bậc có tên), `PERKS` (phần thưởng thật; nội dung dùng điều kiện `{ skill, level }`), `branch()`, `hasPerk()`. `engine/report.ts`: `reportProblems` (≥ 2 chứng cứ có nguồn, không giai thoại/hư cấu làm chỗ dựa, phân tích ≥ 80 ký tự) + `reportDraft` → đề tài `/research` (`createProject` + `updateProject`).
+- Câu đố `debate` (lượt → câu đáp; feedback `<lượt>:<câu>`). Vật phẩm `use.at` = id câu đố → nút "Dùng …" mở gợi ý không trừ điểm.
+- Phiên toà (JourneyPage `Court`): sau phán quyết chọn bài căn cứ (`groundsOf`: bài của lời khai + 2 bài khác của phiên toà, `data-slug` cho test) → `save.trial`.
+
 ## File
 - `types.ts` — `Chapter` (cảnh + phiên toà + intro/outro), `Scene` (nơi, toạ độ, năm, ảnh nền, NPC, lời, `quest {ask, choices, answer, read, where, explain}`, `card`, `listen` YouTube), `Claim` (verdict `fact|legend|unsure`).
 - `chapters/<thời kỳ>.ts` + `chapters/index.ts` (`CHAPTERS` theo thứ tự lịch sử). **Thêm chương = một file + một dòng.**

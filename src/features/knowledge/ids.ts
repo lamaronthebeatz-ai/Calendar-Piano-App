@@ -68,8 +68,9 @@ const SCHOOL = /(^|-)(truong-phai|trao-luu|chu-nghia|phong-trao)(-|$)|^(an-tuong
 
 /** What an article is about, from its index entry: categories are topical, so the slug settles the rest. */
 export function articleKind(a: Pick<ArticleMeta, 'slug' | 'category' | 'person'>): EntityKind {
-  if (a.person || a.category === 'composers' || a.category === 'pianists') return 'person'
+  // period pages live in the composers' category: the slug decides before the category does
   if (a.slug.startsWith('thoi-ky-')) return 'period'
+  if (a.person || a.category === 'composers' || a.category === 'pianists') return 'person'
   if (SCHOOL.test(a.slug)) return 'school'
   if (a.category === 'genres') return 'genre'
   if (a.category === 'form') return 'form'

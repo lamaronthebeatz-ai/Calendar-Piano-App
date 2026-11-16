@@ -33,6 +33,7 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Lời của nhân vật lịch sử vẫn là lời dựng lại, nhưng **mỗi dòng có nhãn** (dựng lại / trích nguyên văn / ✦ hư cấu).
 - Giữ **không có thua**: sai thì mất điểm, có gợi ý, rẽ nhánh, thử lại.
 - **Push thẳng `main`, không cần hỏi** (không branch/PR cho game).
+- Thứ tự: làm xong các phase (5–6, rồi 8–9) trước, sau đó mới nhân rộng nội dung ra các chương khác (16/11).
 - Thử thách nghe dùng **bản thu thật** (người hát/chơi thật, giấy phép tự do), không dùng âm tổng hợp.
 
 ## Nền tảng tri thức (16/11/2026)

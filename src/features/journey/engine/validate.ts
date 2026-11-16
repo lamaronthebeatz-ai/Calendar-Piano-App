@@ -134,6 +134,10 @@ export function validateChapter(ch: ChapterDef, articleExists: (slug: string) =>
   for (const i of ch.items) {
     if (!i.links.length && !i.use) errs.push(`${i.id}: vật phẩm không có công dụng hay tri thức`)
     i.links.forEach((x) => entity(i.id, x))
+    if (i.use) {
+      ref(i.id, i.use.at)
+      i.use.effects.forEach((e) => effect(i.id, e))
+    }
   }
   for (const c of ch.claims) entity(c.id, c.source)
   cond(`${ch.id}: completion`, ch.completion)

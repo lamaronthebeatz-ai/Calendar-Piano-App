@@ -79,8 +79,12 @@ async function solve(page: Page, thing: string, id: string) {
     for (const [k, v] of Object.entries(a as Record<string, string>)) await page.getByLabel(`Ô ${k}`).fill(v)
     await page.getByRole('button', { name: 'Kiểm tra' }).click()
   } else if (p.type === 'hexachord') {
-    const items = (c as unknown as { items: { id: string; note: string }[] }).items
-    for (const it of items) await page.locator('.ar-rows li', { hasText: new RegExp(`^${it.note} trong`) }).locator('select').selectOption((a as Record<string, string>)[it.id])
+    const items = (c as unknown as { items: { id: string; note: string; hexachord: string }[] }).items
+    for (const it of items) await page.getByLabel(new RegExp(`^Chọn cho: ${it.note} trong hexachordum ${it.hexachord}`)).selectOption((a as Record<string, string>)[it.id])
+    await page.getByRole('button', { name: 'Kiểm tra' }).click()
+  } else if (p.type === 'debate') {
+    const turns = (c as unknown as { turns: { id: string; speaker: string; options: { id: string; text: string }[] }[] }).turns
+    for (const t of turns) await page.locator('.ar-turn', { hasText: t.speaker }).getByLabel(textOf(t.options, (a as Record<string, string>)[t.id])).check()
     await page.getByRole('button', { name: 'Kiểm tra' }).click()
   } else if (p.type === 'aural') {
     const clips = (c as unknown as { clips: { id: string }[]; mode: string; labels: { id: string; text: string }[] })
@@ -93,7 +97,8 @@ async function solve(page: Page, thing: string, id: string) {
 }
 
 const place = async (page: Page, name: string) => {
-  await page.getByRole('button', { name: /^← Bản thảo thất lạc/ }).click()
+  const back = page.getByRole('button', { name: /^← Bản thảo thất lạc/ })
+  if (await back.isVisible()) await back.click()
   await page.locator('.ar-places').getByRole('button', { name: new RegExp(name) }).click()
   await expect(page.locator('.ar-place-title')).toHaveText(name)
 }
@@ -136,6 +141,7 @@ test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, k�
 
   await place(page, 'Phòng họp tu viện Pomposa')
   await talk(page, 'Thầy quản thư', [])
+  await solve(page, 'Cuộc tranh luận', 'pz:bt/tranh-luan')
   await page.getByRole('button', { name: /^Đặt chứng cứ lên bàn/ }).click()
   // the popular answer, propped up by hearsay: refused, with the reason
   await page.getByLabel(/Có — chính Guido vẽ cả bàn tay/).check()
@@ -158,6 +164,32 @@ test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, k�
   await expect(page.locator('.ar-book')).toContainText('Lời kể của Sigebert')
   await page.getByRole('button', { name: 'Codex' }).click()
   await expect(page.locator('.ar-book')).toContainText('Hexachord và bàn tay Guido')
+  await page.getByRole('button', { name: 'Kỹ năng' }).click()
+  await expect(page.locator('.ar-tree')).toContainText('✓ Báo cáo nghiên cứu')
+  await page.getByRole('button', { name: 'Đóng sổ' }).click()
+
+  // the hidden quest opens with the theory level the story gave, and the drawn hand gives a free hint
+  await place(page, 'Nhà thờ chính toà Arezzo')
+  await page.getByRole('button', { name: /^Thử đổi lục âm/ }).click()
+  await page.getByRole('button', { name: /^Dùng Bàn tay vẽ trên giấy da/ }).click()
+  await expect(page.locator('.ar-hints')).toContainText('lục âm tự nhiên')
+  await page.getByRole('button', { name: '← Quay lại' }).click()
+  await solve(page, 'Thử đổi lục âm', 'pz:bt/doi-luc-am')
+
+  // the report: weak evidence is refused, then it saves as a project with its references
+  await page.getByRole('button', { name: /^← Bản thảo thất lạc/ }).click()
+  await page.getByRole('button', { name: 'Viết báo cáo nghiên cứu →' }).click()
+  const report = page.getByRole('dialog', { name: 'Báo cáo nghiên cứu' })
+  await report.getByLabel(/Lời ca trưởng/).check()
+  await report.getByLabel(/Văn bản của chính Guido/).check()
+  await report.getByLabel(/Hình bàn tay đầy đủ/).check()
+  await report.getByLabel('Phân tích').fill('Văn bản của chính Guido mô tả hexachord; lời kể về bàn tay đến sau gần một thế kỷ, hình vẽ đầy đủ là của thế kỷ 12.')
+  await expect(report.locator('.ar-problems')).toContainText('không làm chỗ dựa được')
+  await report.getByLabel(/Lời ca trưởng/).uncheck()
+  await report.getByRole('button', { name: /^Lưu thành đề tài/ }).click()
+  await expect(page).toHaveURL(/#\/research\/de-tai-/)
+  await expect(page.locator('textarea.rs-draft')).toHaveValue(/## Tài liệu tham khảo\n- \[\[hexachord-va-ban-tay-guido\]\]/)
+  await page.goBack()
 
   // the save outlives the page: a fresh page of the same browser reads it back. (Not page.reload(): Playwright's WebKit
   // crashes reloading after pushState → back → pushState, even on a bare page — see workflow.md § Bẫy.)
