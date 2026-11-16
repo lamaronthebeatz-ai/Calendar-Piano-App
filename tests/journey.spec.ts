@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 import { CHAPTERS } from '../src/features/journey/chapters'
 
+// Taps on the full-screen scene skip Playwright's "stable" wait (force): under CI load WebKit sometimes never gives two
+// still frames for a full-screen layer full of looping light effects, and stability is not what these taps test.
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
@@ -24,7 +26,7 @@ test('hành trình: tạo nhân vật, vào cảnh, đọc bài rồi quay lại
   await page.locator('.jr-stop-row.is-next').click()
   const scene = page.locator('.jr-scene')
   // tap through the title card and every line
-  for (let i = 0; i < 12 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 } })
+  for (let i = 0; i < 12 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 }, force: true })
   await expect(page.locator('.jr-ask')).toContainText('Thánh ca Gregorian')
 
   // the answer is in the library: open the article, come back, the question is still there
@@ -50,7 +52,7 @@ test('lữ hành vô tận: chuyến đi năm chặng sinh từ tiểu sử, tr�
   await expect(page.locator('.jr-stop-row')).toHaveCount(5)
   await page.locator('.jr-stop-row.is-next').click()
   const scene = page.locator('.jr-scene')
-  for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 } })
+  for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 }, force: true })
   await expect(page.locator('.jr-read')).toBeVisible()
   // try the choices in turn: a wrong one is only marked, the right one opens the reward
   for (let i = 0; i < 4 && !(await page.locator('.jr-reward').isVisible()); i++) {
@@ -114,7 +116,7 @@ test('thử thách hôm nay: chuyến năm chặng có độ khó, đi một ch�
   await expect(page.locator('.jr-stop-row')).toHaveCount(5)
   await page.locator('.jr-stop-row.is-next').click()
   const scene = page.locator('.jr-scene')
-  for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 } })
+  for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 }, force: true })
   for (let i = 0; i < 4 && !(await page.locator('.jr-reward').isVisible()); i++) {
     const c = page.locator('.jr-choice').nth(i)
     if (await c.isEnabled()) await c.click()
