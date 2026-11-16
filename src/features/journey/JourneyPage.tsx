@@ -203,11 +203,12 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
   // a stop off the old map's edge is held just inside it
   const pts = scenes.map((s) => onMap(m, s.lat, s.lon).map((v, i) => Math.min(Math.max(v, 30), (i ? m.h : m.w) - 30)) as [number, number])
   const here = pts[Math.max(0, (next ? scenes.indexOf(next) : scenes.length) - 1)] ?? pts[0]
+  const [hx, hy] = here
   // keep the traveller in sight whenever the zoom changes
   useEffect(() => {
     const b = box.current
-    if (b) b.scrollTo({ left: (here[0] / m.w) * b.scrollWidth - b.clientWidth / 2, top: (here[1] / m.h) * b.scrollHeight - b.clientHeight / 2 })
-  }, [zoom, here, m])
+    if (b) b.scrollTo({ left: (hx / m.w) * b.scrollWidth - b.clientWidth / 2, top: (hy / m.h) * b.scrollHeight - b.clientHeight / 2 })
+  }, [zoom, hx, hy, m])
   const u = m.w / 100
   return (
     <figure className="jr-oldmap">

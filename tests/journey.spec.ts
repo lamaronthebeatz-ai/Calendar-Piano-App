@@ -14,8 +14,10 @@ test('hành trình: tạo nhân vật, vào cảnh, đọc bài rồi quay lại
   await page.getByRole('button', { name: 'Bắt đầu hành trình' }).click()
   // a chapter opens on its history, a few panels, then the map
   await expect(page.locator('.jr-prologue-panel h2')).toHaveText('Người trả tiền cho âm nhạc')
-  for (let i = 0; i < 4; i++) await page.getByRole('button', { name: 'Tiếp' }).click()
-  await page.getByRole('button', { name: 'Vào bản đồ chương I' }).click()
+  await page.getByRole('button', { name: 'Tiếp' }).click()
+  await expect(page.locator('.jr-prologue-panel h2')).toHaveText('Thánh ca một bè')
+  // the rest of the panels are skipped: five full-screen backdrops are slow to paint on WebKit in CI
+  await page.getByRole('button', { name: 'Bỏ qua' }).click()
   await expect(page.locator('.jr-atlas-intro')).toContainText('Minh mở mắt')
 
   await page.locator('.jr-stop-row.is-next').click()

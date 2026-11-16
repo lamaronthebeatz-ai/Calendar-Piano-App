@@ -44,6 +44,7 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- `journey.spec.ts` trên **WebKit CI quá 45 s** khi bấm qua cả 5 tấm bối cảnh (ảnh nền 1920 + Ken Burns vẽ chậm) → test chỉ xem tấm 1–2 rồi "Bỏ qua". Test e2e đừng đi qua nhiều màn ảnh lớn liên tiếp.
 - **Agent hết hạn mức giữa chừng** (429 "5-hour limit"): file đã ghi vẫn còn trên đĩa — kiểm `ls` + `esbuild` + đếm mục từng người, rồi `SendMessage` cho agent cũ làm tiếp phần thiếu khi hạn mức mở lại (đừng tạo agent mới làm lại từ đầu).
 - Nhạc Commons "thật" vẫn có thể là dàn nhạc giả lập (sample library, vd. Philip Milman) — `vet.py` không bắt được; đọc mục Description/Author trước khi dùng.
 - WebKit-phone trên CI có lúc **sập trang Âm nhạc học** (bầu trời 3D) ở smoke "không hiệu ứng": `Target page, context or browser has been closed`, sập cả lần retry trong cùng job; chạy lại job thì qua (15/11, commit chỉ thêm nội dung). Nghi giới hạn bộ nhớ WebKit; nếu lặp lại thường xuyên thì giảm tải `Sky3D` trên WebKit.
