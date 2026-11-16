@@ -103,3 +103,36 @@ test('phiên toà sử gia: phán quyết rồi chỉ ra bài làm căn cứ, m�
   await expect(first).toContainText('✓ Đúng nguồn.')
   await expect(first).toContainText(claim.explain.slice(0, 30))
 })
+
+test('thử thách hôm nay: chuyến năm chặng có độ khó, đi một chặng thì đếm', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'] }))
+  })
+  await page.goto('/#/hanh-trinh')
+  await page.getByRole('button', { name: /☀ Thử thách hôm nay/ }).click()
+  await expect(page.locator('.jr-kicker')).toContainText('độ khó vừa')
+  await expect(page.locator('.jr-stop-row')).toHaveCount(5)
+  await page.locator('.jr-stop-row.is-next').click()
+  const scene = page.locator('.jr-scene')
+  for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 } })
+  for (let i = 0; i < 4 && !(await page.locator('.jr-reward').isVisible()); i++) {
+    const c = page.locator('.jr-choice').nth(i)
+    if (await c.isEnabled()) await c.click()
+  }
+  await page.locator('.jr-scene .jr-exit').click()
+  await expect(page.locator('.jr-player-meta')).toContainText('1 chặng đã đi')
+})
+
+test('chơi lại chương: chặng và phán quyết làm lại, thẻ vẫn giữ', async ({ page }) => {
+  const ch = CHAPTERS[0]
+  await page.addInitScript((done) => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'], done, cards: ['don-am'] }))
+  }, ch.scenes.map((s) => `${ch.id}/${s.id}`))
+  await page.goto(`/#/hanh-trinh?c=${ch.id}`)
+  await expect(page.locator('.jr-player-meta')).toContainText(`${ch.scenes.length}/${ch.scenes.length} chặng`)
+  page.once('dialog', (d) => d.accept())
+  await page.getByRole('button', { name: '↺ Chơi lại chương này' }).click()
+  await expect(page.locator('.jr-player-meta')).toContainText(`0/${ch.scenes.length} chặng · 1 thẻ chứng cứ`)
+  // chapter II stays open
+  await expect(page.locator('.jr-chapters a').nth(1)).not.toHaveClass(/is-locked/)
+})

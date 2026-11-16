@@ -341,3 +341,62 @@ describe('Phase 5–6: kỹ năng, tranh luận, báo cáo, phiên toà', async 
     expect(readSave({ trial: { k: 3 } }).repaired).toEqual(['trial'])
   })
 })
+
+describe('Phase 8: chơi lại, độ khó theo năng lực, thử thách ngày, ôn luyện', async () => {
+  const r = await import('./replay')
+  const { makeTrip, loadPool } = await import('../endless')
+  const { banThao } = await import('../content/ban-thao')
+  it('độ khó theo tỉ lệ đúng ngay gần đây, không theo cấp', () => {
+    expect(r.levelFrom([true, true])).toBe('vua')
+    expect(r.levelFrom(Array(10).fill(true))).toBe('kho')
+    expect(r.levelFrom([...Array(6).fill(false), ...Array(4).fill(true)])).toBe('de')
+    // only the last 20 count
+    expect(r.levelFrom([...Array(30).fill(false), ...Array(20).fill(true)])).toBe('kho')
+  })
+  it('chuyến khó nhiều câu năm và giai thoại hơn chuyến dễ (cùng kho dữ liệu đã kiểm)', async () => {
+    const pool = await loadPool()
+    const count = (w: Record<'event' | 'year' | 'work' | 'claim', number>) => {
+      const kinds = { y: 0, c: 0 }
+      for (let seed = 1; seed <= 40; seed++)
+        for (const st of makeTrip(CHAPTERS[2], pool, seed, [], 5, w)) {
+          if (st.scene.title === 'Dòng thời gian') kinds.y++
+          if (st.scene.title === 'Lời đồn') kinds.c++
+        }
+      return kinds.y + kinds.c
+    }
+    expect(count(r.KIND_WEIGHTS.kho)).toBeGreaterThan(count(r.KIND_WEIGHTS.de))
+  })
+  it('thử thách ngày: cùng ngày cùng hạt giống và chương; chuỗi ngày liên tiếp', () => {
+    expect(r.dailySeed('2026-11-16')).toBe(r.dailySeed('2026-11-16'))
+    expect(r.dailySeed('2026-11-16')).not.toBe(r.dailySeed('2026-11-17'))
+    expect(r.dailyChapter('2026-11-16', [])).toBeNull()
+    expect(['a', 'b']).toContain(r.dailyChapter('2026-11-16', ['a', 'b']))
+    const e = { seed: 1, at: 5, total: 5, right: 4, asked: [] }
+    const s = s0({ endless: { [r.dailyKey('2026-11-14')]: e, [r.dailyKey('2026-11-15')]: e } })
+    expect(r.streak(s, '2026-11-16')).toBe(2)
+    expect(r.streak({ ...s, endless: { ...s.endless, [r.dailyKey('2026-11-16')]: e } }, '2026-11-16')).toBe(3)
+  })
+  it('ôn luyện: câu đã giải đến hạn theo mức thành thạo; lần ôn đúng nâng mức, không cộng XP', () => {
+    const p = banThao.puzzles.find((x) => x.id === 'pz:bt/doc-khoa-do')!
+    const day = 86_400_000
+    let s = s0({ ...recordAttempt(s0(), p, true, 0, 0) })
+    expect(r.dueReviews(banThao.puzzles, s, day / 2)).toEqual([])
+    expect(r.dueReviews(banThao.puzzles, s, day + 1).map((x) => x.id)).toEqual(['pz:bt/doc-khoa-do'])
+    const xp = s.xp
+    s = { ...s, ...r.recordReview(s, { ...p, type: 'order' }, true, 0, day + 1) }
+    expect(s.xp).toBe(xp)
+    // right twice in two kinds, and the first solve was a practical (neume) one: applied
+    expect(masteryOf(s.mastery['a:ky-am-binh-ca-gregorian'])).toBe(3)
+    // a wrong review leaves the clock where it was: due again at once
+    const before = s.puzzles[p.id].at
+    s = { ...s, ...r.recordReview(s, p, false, 0, 3 * day) }
+    expect(s.puzzles[p.id].at).toBe(before)
+  })
+  it('chơi lại chương và Hành trình mới+ giữ kỹ năng, thẻ, Codex, chương đã mở', () => {
+    const s = s0({ done: ['a/1', 'b/1'], verdicts: { 'a/k': 'fact', 'b/k': 'legend' }, trial: { 'a/k': 'x' }, step: { 'a/1': 2 }, cards: ['c'], codex: ['a:x'], xp: 90, chaptersOpen: ['a', 'b'], quests: { 'q:z': { stage: 's', status: 'done', started: 1 } } })
+    const one = { ...s, ...r.replayChapter(s, 'a') }
+    expect(one).toMatchObject({ done: ['b/1'], verdicts: { 'b/k': 'legend' }, trial: {}, step: {}, cards: ['c'], xp: 90 })
+    const ng = { ...s, ...r.newGamePlus(s) }
+    expect(ng).toMatchObject({ done: [], quests: {}, ngPlus: 1, cards: ['c'], codex: ['a:x'], xp: 90, chaptersOpen: ['a', 'b'] })
+  })
+})

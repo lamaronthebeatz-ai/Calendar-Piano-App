@@ -14,6 +14,8 @@ export interface Endless {
   total: number
   right: number
   asked: string[]
+  /** right at first try, for the last stops (difficulty follows it) */
+  recent?: boolean[]
 }
 
 export interface PuzzleState {
@@ -74,6 +76,8 @@ export interface Save {
   achievements: string[]
   /** historian's court: the article the player named as the ground of each verdict, `chapter/claim` → slug */
   trial: Record<string, string>
+  /** how many times the whole journey was started again (New Game+) */
+  ngPlus: number
 }
 
 export const emptySave = (): Save => ({
@@ -99,6 +103,7 @@ export const emptySave = (): Save => ({
   mastery: {},
   achievements: [],
   trial: {},
+  ngPlus: 0,
 })
 
 const isObj = (x: unknown): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x)
@@ -129,6 +134,7 @@ const CHECKS: { [K in keyof Save]?: (v: unknown) => boolean } = {
   mastery: (v) => recordOf(v, (m) => isObj(m) && num(m.seen) && num(m.right) && strs(m.kinds) && num(m.applied) && strs(m.days)),
   achievements: strs,
   trial: (v) => recordOf(v, (x) => typeof x === 'string'),
+  ngPlus: (v) => num(v) && (v as number) >= 0,
 }
 
 /**
@@ -198,5 +204,6 @@ export function mergeSaves(a: Save, b: Save): Save {
     mastery: later(a.mastery, b.mastery, (p, q) => p.applied + p.right > q.applied + q.right),
     achievements: u(a.achievements, b.achievements),
     trial: { ...a.trial, ...b.trial },
+    ngPlus: Math.max(a.ngPlus, b.ngPlus),
   }
 }

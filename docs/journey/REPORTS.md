@@ -117,3 +117,33 @@ Phần thưởng kỹ năng là điều kiện dữ liệu (`{ skill, level }`) 
 | Chứng cứ dùng lại ở nhiều nhiệm vụ | ✓ | cùng thẻ dùng ở phân loại, kết luận, báo cáo |
 | Tranh luận nhiều nhân vật, chọn lập luận | ✓ | `debate` 3 lượt |
 | Phiên toà: xác định nguồn, phán quyết có lý do | ✓ | bước chỉ nguồn ở 6 chương |
+
+---
+
+## Phase 8 — Lữ hành vô tận và chơi lại (16/11)
+
+### A. Đã làm (`engine/replay.ts` + giao diện)
+- **Độ khó theo năng lực thật**: `levelFrom` — tỉ lệ đúng ngay ở 20 chặng gần nhất (dưới 5 chặng = vừa; ≥ 80 % = khó; ≤ 50 % = dễ). Mức chốt khi chuyến bắt đầu (câu trả lời trong chuyến tính cho chuyến sau). `KIND_WEIGHTS`: chuyến khó nhiều câu "năm nào" và "nguồn nói gì về giai thoại", chuyến dễ nhiều câu "việc gì" và "tác phẩm nào". Nhãn "độ khó …" trên màn chuyến. Không theo cấp nhân vật.
+- **Thử thách hôm nay** (`?v=daily`): cùng hạt giống cho cả ngày (theo giờ máy người chơi), ở một chương đã mở, chọn theo ngày; không lặp câu đã hỏi ở Lữ hành vô tận của chương đó; ✓ trên nút khi xong; **chuỗi ngày liên tiếp**.
+- **Ôn luyện** (lặp lại giãn cách): câu đố đã giải đến hạn sau 1 / 1 / 2 / 4 ngày tuỳ mức thành thạo yếu nhất của khái niệm liên quan (hết ôn khi Thành thạo); làm lại từ đầu, **không cộng XP**, câu đúng sạch tính vào mức thành thạo (thêm dạng, thêm ngày vận dụng); ôn sai thì đến hạn lại ngay. Ô "Ôn luyện" trên màn tổng của lát cắt.
+- **Chơi lại chương** (khi chương đã xong): chặng, bước thoại, phán quyết, nguồn phiên toà của chương làm lại; thẻ, XP, kỹ năng, Codex giữ; chương sau vẫn mở.
+- **Hành trình mới+** (khi xong cả 6 chương): cốt truyện, nhiệm vụ, nơi, túi đồ, trí nhớ NPC làm lại; kỹ năng, XP, thẻ, Codex, mức thành thạo, thành tích, câu đố đã giải (không cho XP lần hai) giữ; `save.ngPlus` đếm số lần.
+- Lưu: `Endless.recent` (tuỳ chọn), `save.ngPlus` (có kiểm, có gộp).
+
+### D. Kiểm thử
+- Vitest 154/154 (thêm: ngưỡng độ khó; chuyến khó có nhiều câu năm/giai thoại hơn chuyến dễ trên 40 chuyến thật; hạt giống ngày ổn định, chương ngày, chuỗi ngày; đến hạn ôn, ôn không cộng XP mà nâng mức, ôn sai không dời đồng hồ; chơi lại chương và NG+ giữ đúng phần cần giữ).
+- E2e (Chromium + WebKit, 20/20 phần game): thử thách hôm nay có nhãn độ khó và đếm chặng; chơi lại chương (0/10 chặng, thẻ còn, Chương II vẫn mở); ôn luyện một câu đến hạn (XP không đổi, mức đúng tăng).
+
+### E. Còn tồn tại
+- Câu hỏi vô tận vẫn là trắc nghiệm 4 lựa chọn từ kho tiểu sử; chưa trộn câu đố của lát cắt vào chuyến vô tận (sẽ có ý nghĩa khi các chương có lát cắt).
+- Thử thách ngày đổi theo nửa đêm giờ máy; hai máy khác múi giờ có thể khác ngày.
+- NG+ chưa đổi nội dung (chỉ chơi lại); chưa có "biến thể khó hơn".
+
+### G. Nghiệm thu (Phase 8)
+| Tiêu chí | Đạt | Bằng chứng |
+|---|---|---|
+| Không lặp nội dung quá thường | ✓ | `asked` (≤ 1.500) dùng chung cho chuyến và thử thách ngày; test "câu đã hỏi không lặp" |
+| Không có câu hỏi thiếu đáp án | ✓ | test 40 chuyến/thời kỳ đủ 4 lựa chọn khác nhau; câu chỉ lấy từ kho đã kiểm |
+| Tiếp tục được sau khi đóng game | ✓ | tiến độ chuyến, ngày, ôn luyện nằm trong save v2 |
+| Không mất tiến trình | ✓ | chơi lại / NG+ giữ thẻ, kỹ năng, Codex — unit + e2e |
+| Điều chỉnh độ khó theo năng lực thực tế | ✓ | `levelFrom` + `KIND_WEIGHTS`, không dùng cấp |

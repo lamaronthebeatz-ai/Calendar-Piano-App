@@ -8,6 +8,8 @@ import type { Save } from '../engine/save'
 import type { ArcDef, DNode, EvidenceKind, LocationDef, PuzzleDef } from '../engine/types'
 import { choicesOf, enter as enterNode, step } from '../engine/dialogue'
 import { attempt, currentStage, effects, enter, visibleLocations } from '../engine/runtime'
+import { dueReviews, recordReview } from '../engine/replay'
+import { checkPuzzle } from '../engine/puzzles'
 import { holds } from '../engine/world'
 import { NOTE_NAMES, SYLLABLES, HEXACHORDS, type AuralContent, type BlankContent, type DebateContent, type ChoiceContent, type ClassifyContent, type HexachordContent, type InvestigationContent, type MatchContent, type NeumeContent, type OrderContent, type Result } from '../engine/puzzles'
 import { MASTERY_LABEL, levelOf, masteryOf } from '../engine/progression'
@@ -29,14 +31,14 @@ const KIND: Record<EvidenceKind, string> = { primary: 'Nguồn sơ cấp', secon
  * A story arc played on the engine: the hub (objective, map, places), a place (people, things to use), a dialogue, a
  * puzzle. URL: ?v=arc&a=<arc>[&l=<place>][&p=<puzzle>] — reading an article and coming back returns to the same spot.
  */
-export function ArcPlayer({ arc, save, go, l, p, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
+export function ArcPlayer({ arc, save, go, l, p, review, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; review?: boolean; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
   const loc = arc.locations.find((x) => x.id === l && visibleLocations(arc, save).includes(x))
   const puzzle = arc.puzzles.find((x) => x.id === p)
   const music = MUSIC[arc.music]
   useEffect(() => {
     if (!puzzle || puzzle.type !== 'aural') playTrack(music)
   }, [music, puzzle])
-  if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} onClose={() => go(l ? { v: 'arc', a: arc.id, l } : { v: 'arc', a: arc.id }, 'back')} />
+  if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} review={review} onClose={() => go(l ? { v: 'arc', a: arc.id, l } : { v: 'arc', a: arc.id }, 'back')} />
   if (loc) return <PlaceScreen key={loc.id} arc={arc} loc={loc} save={save} go={go} />
   return <Hub arc={arc} save={save} go={go} map={map} />
 }
@@ -44,6 +46,8 @@ export function ArcPlayer({ arc, save, go, l, p, map }: { arc: ArcDef; save: Sav
 function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
   const [book, setBook] = useState(false)
   const [report, setReport] = useState(false)
+  const [now] = useState(() => Date.now())
+  const due = dueReviews(arc.puzzles, save, now)
   const stage = currentStage(arc, save)
   const done = holds(arc.completion, save)
   const places = visibleLocations(arc, save)
@@ -77,6 +81,18 @@ function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (op
             </li>
           ))}
         </ul>
+        {due.length > 0 && (
+          <div className="ar-review">
+            <p>Ôn luyện: {due.length} câu đến hạn — làm lại để lên mức thành thạo.</p>
+            <ul>
+              {due.slice(0, 5).map((x) => (
+                <li key={x.id}>
+                  <button className="jr-ghost is-small" onClick={() => go({ v: 'arc', a: arc.id, p: x.id, r: '1' })}>{x.title}</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         {done && (
           <div className="ar-report-cta">
             {hasPerk(save, 'report') ? (
@@ -200,7 +216,8 @@ function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; sa
 
 /* ------------------------------------------------------------------ puzzles */
 
-function PuzzleScreen({ arc, puzzle, save, onClose }: { arc: ArcDef; puzzle: PuzzleDef; save: Save; onClose: () => void }) {
+/** `review`: spaced review of a solved puzzle — answered again from scratch, counted toward mastery, no experience. */
+function PuzzleScreen({ arc, puzzle, save, onClose, review }: { arc: ArcDef; puzzle: PuzzleDef; save: Save; onClose: () => void; review?: boolean }) {
   const [hints, setHints] = useState(0)
   // hints opened with an item cost nothing
   const [free, setFree] = useState(0)
@@ -210,20 +227,24 @@ function PuzzleScreen({ arc, puzzle, save, onClose }: { arc: ArcDef; puzzle: Puz
   const submit = (given: unknown) => {
     let r: Result = { ok: false, wrong: [] }
     update((s) => {
+      if (review) {
+        r = checkPuzzle(puzzle, given)
+        return { ...s, ...recordReview(s, puzzle, r.ok, Math.max(0, hints - free)) }
+      }
       const out = attempt(arc, puzzle.id, given, Math.max(0, hints - free), s)
       r = out.result
       return out.save
     })
     setResult(r)
   }
-  const done = solved || result?.ok
+  const done = review ? result?.ok : solved || result?.ok
   const feedback = result?.feedback && puzzle.feedback?.find((f) => f.key === result.feedback)?.text
   return (
     <section className="ar-screen is-puzzle">
       <div className="ar-inner ar-puzzle">
         <header>
           <button className="jr-ghost is-small" onClick={onClose}>← Quay lại</button>
-          <p className="jr-kicker">Thử thách · độ khó {puzzle.difficulty}/5</p>
+          <p className="jr-kicker">{review ? 'Ôn luyện · không cộng XP, tính vào mức thành thạo' : `Thử thách · độ khó ${puzzle.difficulty}/5`}</p>
           <h2 className="ar-place-title">{puzzle.title}</h2>
           <p className="ar-instr">{puzzle.instructions}</p>
         </header>

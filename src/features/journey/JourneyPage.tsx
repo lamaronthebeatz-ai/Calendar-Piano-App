@@ -17,6 +17,7 @@ import { ARCS } from './content/arcs'
 import { ArcPlayer } from './ui/Arc'
 import { visibleLocations } from './engine/runtime'
 import { holds } from './engine/world'
+import { KIND_WEIGHTS, LEVEL_LABEL, dailyChapter, dailyKey, dailySeed, levelFrom, newGamePlus, replayChapter, streak, today } from './engine/replay'
 import './journey.css'
 
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
@@ -47,8 +48,11 @@ export function JourneyPage() {
   const scene = chapter.scenes.find((s) => s.id === params.get('s'))
   const v = params.get('v')
   // a chapter opens on its historical prologue the first time
+  const day = today()
+  const dailyId = dailyChapter(day, CHAPTERS.filter((c, i) => ERA[c.id] && opened(i, save)).map((c) => c.id))
+  const dailyCh = CHAPTERS.find((c) => c.id === dailyId)
   const arc = ARCS.find((a) => a.id === params.get('a') && a.chapter === chapter.id && holds(a.opens, save))
-  const view = !save.name ? 'create' : v === 'arc' && arc ? 'arc' : v === 'endless' ? 'endless' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
+  const view = !save.name ? 'create' : v === 'arc' && arc ? 'arc' : v === 'endless' ? 'endless' : v === 'daily' && dailyCh ? 'daily' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
   const navigate = useNavigate()
   const { state } = useLocation()
   /**
@@ -66,6 +70,7 @@ export function JourneyPage() {
       {view === 'prologue' && <Prologue key={chapter.id} chapter={chapter} go={go} />}
       {view === 'atlas' && <Atlas chapter={chapter} save={save} go={go} />}
       {view === 'endless' && <EndlessTrip key={chapter.id} chapter={chapter} save={save} go={go} stopId={params.get('s')} />}
+      {view === 'daily' && dailyCh && <EndlessTrip key={`daily-${day}`} chapter={dailyCh} save={save} go={go} stopId={params.get('s')} daily={day} />}
       {view === 'scene' && scene && <ScenePlayer key={scene.id} chapter={chapter} scene={scene} save={save} go={go} />}
       {view === 'court' && <Court chapter={chapter} save={save} go={go} />}
       {view === 'arc' && arc && (
@@ -75,6 +80,7 @@ export function JourneyPage() {
           go={go}
           l={params.get('l')}
           p={params.get('p')}
+          review={params.get('r') === '1'}
           map={(open, done) => {
             const places = visibleLocations(arc, save).map((l) => ({ id: l.id, place: l.name, title: l.name, year: l.year ?? '', lat: l.lat, lon: l.lon, far: l.far }) as unknown as Scene)
             return <ChapterMap chapter={chapter} scenes={places} isDone={(x) => done(x.id)} next={places.find((x) => !done(x.id))} open={(x) => open(x.id)} />
@@ -161,6 +167,11 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
                 ∞ Lữ hành vô tận
               </button>
             )}
+            {ERA[chapter.id] && (
+              <button className="jr-ghost is-small" onClick={() => go({ v: 'daily' })}>
+                ☀ Thử thách hôm nay{(save.endless[dailyKey(today())]?.at ?? 0) >= 5 ? ' ✓' : ''}
+              </button>
+            )}
             {ARCS.filter((a) => a.chapter === chapter.id && holds(a.opens, save)).map((a) => (
               <button key={a.id} className="jr-ghost is-small is-arc" onClick={() => go({ v: 'arc', a: a.id })}>
                 ✦ {a.title}
@@ -225,6 +236,18 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
             </button>
           </li>
         </ol>
+        <div className="jr-replay">
+          {finished(chapter, save) && (
+            <button className="jr-ghost is-small" onClick={() => confirm(`Chơi lại Chương ${chapter.numeral}? Các chặng và phán quyết của chương này làm lại từ đầu; thẻ, kỹ năng và Codex vẫn giữ.`) && update((s) => replayChapter(s, chapter.id))}>
+              ↺ Chơi lại chương này
+            </button>
+          )}
+          {CHAPTERS.every((c) => finished(c, save)) && (
+            <button className="jr-ghost is-small" onClick={() => confirm('Bắt đầu Hành trình mới+? Cốt truyện mọi chương làm lại từ đầu; kỹ năng, thẻ chứng cứ, Codex, thành tích vẫn giữ, các chương vẫn mở.') && update((s) => newGamePlus(s))}>
+              ✦ Hành trình mới+{save.ngPlus ? ` (lần ${save.ngPlus + 1})` : ''}
+            </button>
+          )}
+        </div>
         <button className="jr-reset" onClick={() => confirm('Bắt đầu lại từ đầu? Tiến độ và thẻ sẽ bị xoá.') && resetJourney()}>
           Chơi lại từ đầu
         </button>
@@ -296,7 +319,8 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
 }
 
 /** Lữ hành vô tận: trips of five generated stops on the chapter's old map, one after another, without end. */
-function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Save; go: Go; stopId: string | null }) {
+/** `daily`: today's challenge — a fixed seed for the day, its own record, no new trip once done. */
+function EndlessTrip({ chapter, save, go, stopId, daily }: { chapter: Chapter; save: Save; go: Go; stopId: string | null; daily?: string }) {
   const [pool, setPool] = useState<Pool>()
   const [failed, setFailed] = useState(false)
   useEffect(() => {
@@ -306,12 +330,19 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
     if (!stopId) playTrack(MUSIC[chapter.theme])
   }, [chapter, stopId])
   const [fresh] = useState(() => 1 + Math.floor(Math.random() * 1e9))
-  const trip: Trip = save.endless[chapter.id] ?? { seed: fresh, at: 0, total: 0, right: 0, asked: [] }
-  const setTrip = (t: Partial<Trip>) => update((s) => ({ endless: { ...s.endless, [chapter.id]: { ...(s.endless[chapter.id] ?? trip), ...t } } }))
+  const slot = daily ? dailyKey(daily) : chapter.id
+  const view = daily ? 'daily' : 'endless'
+  // the day's challenge also learns from the player's road: its difficulty follows the chapter's recent answers
+  const road = save.endless[chapter.id]
+  const trip: Trip = save.endless[slot] ?? { seed: daily ? dailySeed(daily) : fresh, at: 0, total: 0, right: 0, asked: daily ? (road?.asked ?? []) : [], recent: daily ? road?.recent : [] }
+  const setTrip = (t: Partial<Trip>) => update((s) => ({ endless: { ...s.endless, [slot]: { ...(s.endless[slot] ?? trip), ...t } } }))
+  // the level is fixed for the whole trip: answers given during it count for the next one
+  const recent = trip.recent ?? []
+  const level = levelFrom(recent.slice(0, recent.length - trip.at))
   // the trip is drawn from its seed only, so it stays the same while it is played (asked facts leave the next trip)
   const asked = trip.asked
-  const stops = useMemo(() => (pool ? makeTrip(chapter, pool, trip.seed, asked.slice(0, asked.length - trip.at)) : []), [pool, chapter, trip.seed]) // eslint-disable-line react-hooks/exhaustive-deps
-  const back = () => go({ v: 'endless' }, 'back')
+  const stops = useMemo(() => (pool ? makeTrip(chapter, pool, trip.seed, asked.slice(0, asked.length - trip.at), 5, KIND_WEIGHTS[level]) : []), [pool, chapter, trip.seed]) // eslint-disable-line react-hooks/exhaustive-deps
+  const back = () => go({ v: view }, 'back')
   const newTrip = () => setTrip({ seed: 1 + Math.floor(Math.random() * 1e9), at: 0 })
   const stop = stops.find((x) => x.scene.id === stopId)
   if (stop) {
@@ -325,13 +356,13 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
         save={save}
         go={go}
         endless={{
-          label: `Lữ hành vô tận · ${chapter.era} · chặng ${i + 1}/${stops.length}`,
+          label: `${daily ? 'Thử thách hôm nay' : 'Lữ hành vô tận'} · ${chapter.era} · chặng ${i + 1}/${stops.length}`,
           onDone: (first) => {
             if (i < trip.at) return
-            setTrip({ at: i + 1, total: trip.total + 1, right: trip.right + (first ? 1 : 0), asked: [...trip.asked, stop.item].slice(-1500) })
+            setTrip({ at: i + 1, total: trip.total + 1, right: trip.right + (first ? 1 : 0), asked: [...trip.asked, stop.item].slice(-1500), recent: [...recent, first].slice(-40) })
           },
           nextLabel: last ? 'Hết chuyến — về bản đồ' : 'Chặng sau →',
-          onNext: () => (last ? back() : go({ v: 'endless', s: stops[i + 1].scene.id }, 'replace')),
+          onNext: () => (last ? back() : go({ v: view, s: stops[i + 1].scene.id }, 'replace')),
           onBack: back,
         }}
       />
@@ -348,11 +379,14 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
           <SoundToggle />
         </div>
         <p className="jr-kicker">
-          Lữ hành vô tận · {chapter.era} · {chapter.years}
+          {daily ? `Thử thách hôm nay · ${daily}` : 'Lữ hành vô tận'} · {chapter.era} · độ khó {LEVEL_LABEL[level]}
         </p>
-        <h1 className="jr-atlas-title">Những con đường chưa kể</h1>
+        <h1 className="jr-atlas-title">{daily ? 'Năm chặng của ngày' : 'Những con đường chưa kể'}</h1>
         <p className="jr-atlas-intro">
-          Mỗi chuyến đi năm chặng, gặp những nhạc sĩ thời {chapter.era} do máy chọn ngẫu nhiên. Câu hỏi lấy đúng một dòng trong tiểu sử, danh mục tác phẩm hoặc mục giai thoại của họ — đáp án luôn nằm trong bài.
+          {daily
+            ? `Cùng một chuyến cho cả ngày, ở một chương bạn đã mở. Chuỗi ngày liên tiếp: ${streak(save, daily)}.`
+            : `Mỗi chuyến đi năm chặng, gặp những nhạc sĩ thời ${chapter.era} do máy chọn ngẫu nhiên. Câu hỏi lấy đúng một dòng trong tiểu sử, danh mục tác phẩm hoặc mục giai thoại của họ — đáp án luôn nằm trong bài.`}{' '}
+          Độ khó theo những câu bạn đúng ngay gần đây — không theo cấp nhân vật.
         </p>
         <div className="jr-atlas-actions">
           <button className="jr-ghost is-small" onClick={() => go({}, 'back')}>
@@ -363,7 +397,7 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
       {!pool ? (
         <p className="jr-atlas-intro jr-endless-wait">{failed ? 'Không tải được dữ liệu chuyến đi — kiểm tra kết nối mạng rồi mở lại.' : 'Đang trải bản đồ…'}</p>
       ) : (
-        <ChapterMap chapter={chapter} scenes={stops.map((x) => x.scene)} isDone={(s) => stops.findIndex((x) => x.scene === s) < trip.at} next={next} open={(s) => go({ v: 'endless', s: s.id })} />
+        <ChapterMap chapter={chapter} scenes={stops.map((x) => x.scene)} isDone={(s) => stops.findIndex((x) => x.scene === s) < trip.at} next={next} open={(s) => go({ v: view, s: s.id })} />
       )}
       <footer className="jr-atlas-foot">
         <div className="jr-player">
@@ -380,7 +414,7 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
             const done = i < trip.at, locked = i > trip.at
             return (
               <li key={x.scene.id}>
-                <button className={`jr-stop-row${done ? ' is-done' : ''}${i === trip.at ? ' is-next' : ''}`} disabled={locked} onClick={() => go({ v: 'endless', s: x.scene.id })}>
+                <button className={`jr-stop-row${done ? ' is-done' : ''}${i === trip.at ? ' is-next' : ''}`} disabled={locked} onClick={() => go({ v: view, s: x.scene.id })}>
                   <span className="jr-stop-i">{i + 1}</span>
                   <span className="jr-stop-t">
                     <b>{x.scene.npc.name}</b>
@@ -394,11 +428,12 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
             )
           })}
         </ol>
-        {pool && trip.at >= stops.length && (
+        {pool && trip.at >= stops.length && !daily && (
           <button className="jr-cta jr-endless-new" onClick={newTrip}>
             Chuyến đi mới →
           </button>
         )}
+        {pool && trip.at >= stops.length && daily && <p className="jr-player-meta">Xong thử thách hôm nay — mai có chuyến mới. Chuỗi: {streak(save, daily)} ngày.</p>}
       </footer>
     </section>
   )

@@ -213,3 +213,20 @@ test('nhiệm vụ phụ nghe một bè hay nhiều bè (đoạn thu thật) và
   await expect(page.locator('.ar-book')).toContainText('Một bè hay nhiều bè')
   await expect(page.locator('.ar-book')).toContainText('xong')
 })
+
+test('ôn luyện: câu đã giải từ hôm qua hiện ở màn tổng; làm lại không cộng XP', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v2'))
+      localStorage.setItem('journey:v2', JSON.stringify({ version: 2, name: 'Minh', portrait: 'p-durer', seen: ['trung-co'], done: ['trung-co/phong-chep-sach', 'trung-co/neume'], xp: 15, puzzles: { 'pz:bt/doc-khoa-do': { solved: true, tries: 1, hints: 0, at: Date.now() - 2 * 86_400_000 } }, mastery: { 'a:ky-am-binh-ca-gregorian': { seen: 1, right: 1, kinds: ['neume'], applied: 1, days: ['2026-01-01'] } } }))
+  })
+  await page.goto('/#/hanh-trinh?c=trung-co&v=arc&a=ban-thao')
+  await expect(page.locator('.ar-review')).toContainText('1 câu đến hạn')
+  await page.locator('.ar-review').getByRole('button', { name: 'Sáu nốt trên khoá Đô' }).click()
+  await expect(page.locator('.jr-kicker')).toContainText('Ôn luyện')
+  for (const [i, n] of puzzle('pz:bt/doc-khoa-do').answer.entries()) await page.getByLabel(`Tên nốt ${i + 1}`).selectOption(n as string)
+  await page.getByRole('button', { name: 'Kiểm tra' }).click()
+  await expect(page.locator('.ar-explain')).toBeVisible()
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('journey:v2')!))
+  expect(saved.xp).toBe(15)
+  expect(saved.mastery['a:ky-am-binh-ca-gregorian'].right).toBe(2)
+})

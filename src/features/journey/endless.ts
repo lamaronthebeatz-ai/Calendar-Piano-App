@@ -94,7 +94,8 @@ export interface Stop {
   item: string
 }
 
-export function makeTrip(chapter: Chapter, pool: Pool, seed: number, asked: string[], n = 5): Stop[] {
+/** `weights`: how often each kind of question comes (engine/replay.ts KIND_WEIGHTS, from the player's recent answers). */
+export function makeTrip(chapter: Chapter, pool: Pool, seed: number, asked: string[], n = 5, weights: Record<'event' | 'year' | 'work' | 'claim', number> = { event: 2, year: 1, work: 1, claim: 2 }): Stop[] {
   const r = rng(seed)
   const pick = <T,>(xs: T[]) => xs[Math.floor(r() * xs.length)]
   const shuffle = <T,>(xs: T[]) => xs.map((x) => [r(), x] as const).sort((a, b) => a[0] - b[0]).map((x) => x[1])
@@ -117,7 +118,7 @@ export function makeTrip(chapter: Chapter, pool: Pool, seed: number, asked: stri
       .slice(0, 3)
 
   for (let tries = 0; stops.length < n && tries < 200; tries++) {
-    const kind = pick(['event', 'event', 'year', 'work', 'claim', 'claim'] as const)
+    const kind = pick((Object.keys(weights) as (keyof typeof weights)[]).flatMap((k) => Array<keyof typeof weights>(weights[k]).fill(k)))
     let who = -1, item = '', year = '', ask = '', right = '', wrong: string[] = [], where = '', title = '', meQ = '', about = ''
     if (kind === 'event' || kind === 'year') {
       const x = pick(events)

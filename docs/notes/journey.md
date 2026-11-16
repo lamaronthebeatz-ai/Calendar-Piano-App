@@ -27,6 +27,12 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Câu đố `debate` (lượt → câu đáp; feedback `<lượt>:<câu>`). Vật phẩm `use.at` = id câu đố → nút "Dùng …" mở gợi ý không trừ điểm.
 - Phiên toà (JourneyPage `Court`): sau phán quyết chọn bài căn cứ (`groundsOf`: bài của lời khai + 2 bài khác của phiên toà, `data-slug` cho test) → `save.trial`.
 
+## Phase 8 (16/11) — `engine/replay.ts`
+- `levelFrom(recent)` → `KIND_WEIGHTS` truyền vào `makeTrip(…, weights)`; mức chốt đầu chuyến (`recent.slice(0, len − at)`, cùng mẹo với `asked`). `Endless.recent` (40 câu gần nhất).
+- Thử thách ngày: `?v=daily`, khoá save `endless["daily:YYYY-MM-DD"]`, `dailySeed`, `dailyChapter` (chương đã mở có `ERA`), `streak`. `EndlessTrip` nhận `daily`.
+- Ôn luyện: `dueReviews(puzzles, save)`, `recordReview` (không XP); `?v=arc&a=…&p=…&r=1` → `PuzzleScreen review`.
+- `replayChapter`, `newGamePlus` (nút trên bản đồ chương; NG+ khi xong cả 6 chương). `save.ngPlus`.
+
 ## File
 - `types.ts` — `Chapter` (cảnh + phiên toà + intro/outro), `Scene` (nơi, toạ độ, năm, ảnh nền, NPC, lời, `quest {ask, choices, answer, read, where, explain}`, `card`, `listen` YouTube), `Claim` (verdict `fact|legend|unsure`).
 - `chapters/<thời kỳ>.ts` + `chapters/index.ts` (`CHAPTERS` theo thứ tự lịch sử). **Thêm chương = một file + một dòng.**
