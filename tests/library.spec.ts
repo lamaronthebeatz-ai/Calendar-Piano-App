@@ -8,6 +8,18 @@ test.beforeEach(async ({ page }) => {
   })
 })
 
+/**
+ * A 48 × 48 copy of the sky's frame, as text. Reading the whole WebGL canvas back (toDataURL) made WebKit's page
+ * process crash on CI runners ("Target page … has been closed"); a small copy is enough to tell two frames apart.
+ */
+const thumb = (c: HTMLCanvasElement) => {
+  const t = document.createElement('canvas')
+  t.width = t.height = 48
+  const x = t.getContext('2d')!
+  x.drawImage(c, 0, 0, 48, 48)
+  return Array.from(x.getImageData(0, 0, 48, 48).data).join(',')
+}
+
 test('tìm trong thân bài tải vài mảnh nhỏ và ra đúng bài', async ({ page }) => {
   const shards: string[] = []
   page.on('request', (r) => r.url().includes('/content/search/') && shards.push(r.url()))
@@ -230,7 +242,7 @@ test('bầu trời âm nhạc học: các chủ đề và bài lý thuyết là 
   await expect(card.getByRole('link', { name: 'Mở chủ đề' })).toHaveAttribute('href', '#/theory?c=polyphony')
   // the canvas keeps turning by itself when nothing is chosen
   await card.getByRole('button', { name: 'Đóng' }).click()
-  const frame = () => page.locator('.s3-canvas').evaluate((c: HTMLCanvasElement) => c.toDataURL().length)
+  const frame = () => page.locator('.s3-canvas').evaluate(thumb)
   const a = await frame()
   await page.waitForTimeout(3500)
   expect(await frame()).not.toBe(a)
@@ -252,7 +264,7 @@ test('bầu trời vẫn tự xoay sau khi ngón tay cuộn trang từ trên b�
     c.dispatchEvent(new PointerEvent('pointerdown', o))
     c.dispatchEvent(new PointerEvent('pointercancel', o))
   })
-  const frame = () => cv.evaluate((c: HTMLCanvasElement) => c.toDataURL().length)
+  const frame = () => cv.evaluate(thumb)
   await page.waitForTimeout(3000)
   const a = await frame()
   await page.waitForTimeout(1500)

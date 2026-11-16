@@ -8,7 +8,7 @@ import { graphHref, makeId, type EntityId } from './ids'
 import { doiOf, isbnOk, SCHEMA_VERSION, SOURCE_TYPES, VERIFICATION, type Excerpt, type MySource, type SourceType, type Verification } from './model'
 import { citeMine } from './cite'
 import { knowledgeLocked, newId, put, remove, useKnowledge } from './store'
-import { useKnowledgeGraph } from './useGraph'
+import { findArticle } from '../theory/wiki'
 import './knowledge.css'
 
 type Draft = Omit<MySource, 'id' | 'v' | 'created' | 'updated' | 'authors' | 'about'> & { authors: string; about: string }
@@ -58,9 +58,9 @@ export function MySources({ bib }: { bib: Bibliography }) {
 
 function SourceCard({ s, open, onToggle, onEdit, excerpts }: { s: MySource; open: boolean; onToggle: () => void; onEdit: () => void; excerpts: Excerpt[] }) {
   const [style, setStyle] = useState<Style>('chicago')
-  const g = useKnowledgeGraph()
+  const k = useKnowledge()
   const id = makeId('ms', s.id)
-  const used = g.k.evidence.filter((e) => e.source === id)
+  const used = k.evidence.filter((e) => e.source === id)
   return (
     <div className={clsx('kg-card', open && 'is-open')} data-testid="my-source">
       <button className="kg-card-head" onClick={onToggle} aria-expanded={open}>
@@ -93,7 +93,7 @@ function SourceCard({ s, open, onToggle, onEdit, excerpts }: { s: MySource; open
             {s.about.length > 0 && (
               <>
                 <dt>Dùng cho</dt>
-                <dd className="flex flex-wrap gap-1">{s.about.map((x) => <Link key={x} to={graphHref(x)} className="kg-chip is-small">{g.label(x)}</Link>)}</dd>
+                <dd className="flex flex-wrap gap-1">{s.about.map((x) => <Link key={x} to={graphHref(x)} className="kg-chip is-small">{x.startsWith('a:') ? (findArticle(x.slice(2))?.title ?? x) : x}</Link>)}</dd>
               </>
             )}
             {used.length > 0 && <><dt>Bằng chứng dùng tài liệu này</dt><dd>{used.length} — <Link to={graphHref(id)} className="wiki-link">xem trên đồ thị</Link></dd></>}
