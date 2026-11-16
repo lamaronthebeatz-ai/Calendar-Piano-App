@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "grove": "python3 scripts/grove/build.py",
+    "journey:pool": "python3 scripts/journey/pool.py",
     "predev": "npm run grove",
     "dev": "vite",
     "prebuild": "npm run grove",

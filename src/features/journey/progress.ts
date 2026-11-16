@@ -15,10 +15,20 @@ export interface Save {
   step: Record<string, number>
   /** Chapters whose historical prologue has been watched. */
   seen: string[]
+  /** Lữ hành vô tận, per chapter: the current trip (seed, stop reached), stops done, right first time, facts asked. */
+  endless: Record<string, Endless>
+}
+
+export interface Endless {
+  seed: number
+  at: number
+  total: number
+  right: number
+  asked: string[]
 }
 
 const KEY = 'journey:v1'
-const EMPTY: Save = { name: '', portrait: '', done: [], cards: [], verdicts: {}, step: {}, seen: [] }
+const EMPTY: Save = { name: '', portrait: '', done: [], cards: [], verdicts: {}, step: {}, seen: [], endless: {} }
 
 let cache: Save | undefined
 const listeners = new Set<() => void>()

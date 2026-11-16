@@ -64,6 +64,8 @@ export interface Scene {
   card: Card
   /** A recording to hear, from the library's YouTube examples. */
   listen?: { youtube: string; caption: string }
+  /** Generated stops borrow a track of the chapter (MUSIC key); story scenes use their own id. */
+  track?: string
 }
 
 export type Verdict = 'fact' | 'legend' | 'unsure'

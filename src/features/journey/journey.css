@@ -51,7 +51,10 @@
 .jr-atlas-head { position: relative; max-width: 860px; margin: 0 auto; padding: calc(64px + env(safe-area-inset-top)) 20px 6px; }
 .jr-atlas-title { margin-top: 8px; font-family: var(--font-display); font-size: clamp(30px, 8vw, 54px); line-height: 1.05; animation: jr-rise 1s var(--phn-ease, ease) both; }
 .jr-atlas-intro { margin-top: 14px; max-width: 40rem; font-family: var(--font-display); font-size: 17px; line-height: 1.6; color: var(--jr-dim); animation: jr-rise 1s 180ms var(--phn-ease, ease) both; }
-.jr-context-btn { margin-top: 14px; }
+.jr-atlas-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.jr-atlas-actions .is-endless { border-color: var(--jr-gold); color: var(--jr-gold-2); }
+.jr-endless-new { display: block; margin: 18px auto 0; }
+.jr-endless-wait { text-align: center; }
 .jr-oldmap { position: relative; width: min(860px, 100%); margin: 14px auto 0; padding-inline: 12px; }
 .jr-oldmap-box { max-height: min(64vh, 600px); overflow: auto; overscroll-behavior: contain; border-radius: 14px; border: 1px solid var(--jr-line); background: #d9c9a3; box-shadow: 0 24px 60px -24px rgb(0 0 0 / 0.9); }
 .jr-oldmap-canvas { position: relative; margin: 0 auto; }

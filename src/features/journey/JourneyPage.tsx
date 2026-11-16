@@ -1,14 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { findArticle } from '../theory/wiki'
 import { YouTubeVideo } from '../theory/YouTube'
 import { CHAPTERS } from './chapters'
 import { CONTEXT } from './context'
 import { MAPS, onMap } from './maps'
+import { ERA, loadPool, makeTrip, type Pool } from './endless'
 import { CREDITS } from './credits'
 import { MUSIC } from './music'
 import { nudge, playTrack, setMuted, useSoundtrack } from './soundtrack'
-import { named, resetJourney, update, useSave, type Save } from './progress'
+import { named, resetJourney, update, useSave, type Endless as Trip, type Save } from './progress'
 import type { Card, Chapter, Claim, Scene, Verdict } from './types'
 import './journey.css'
 
@@ -36,7 +37,7 @@ export function JourneyPage() {
   const scene = chapter.scenes.find((s) => s.id === params.get('s'))
   const v = params.get('v')
   // a chapter opens on its historical prologue the first time
-  const view = !save.name ? 'create' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
+  const view = !save.name ? 'create' : v === 'endless' ? 'endless' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
   const go = (p: Record<string, string>) => setParams({ c: chapter.id, ...p })
   useEffect(() => () => playTrack(undefined), [])
   return (
@@ -44,6 +45,7 @@ export function JourneyPage() {
       {view === 'create' && <Create />}
       {view === 'prologue' && <Prologue key={chapter.id} chapter={chapter} go={go} />}
       {view === 'atlas' && <Atlas chapter={chapter} save={save} go={go} />}
+      {view === 'endless' && <EndlessTrip key={chapter.id} chapter={chapter} save={save} go={go} stopId={params.get('s')} />}
       {view === 'scene' && scene && <ScenePlayer key={scene.id} chapter={chapter} scene={scene} save={save} go={go} />}
       {view === 'court' && <Court chapter={chapter} save={save} go={go} />}
     </div>
@@ -117,9 +119,16 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
         <h1 className="jr-atlas-title">{chapter.title}</h1>
         {done.length === 0 && <p className="jr-atlas-intro">{named(chapter.intro, save.name)}</p>}
         {CONTEXT[chapter.id] && (
-          <button className="jr-ghost is-small jr-context-btn" onClick={() => go({ v: 'prologue' })}>
-            Bối cảnh lịch sử
-          </button>
+          <div className="jr-atlas-actions">
+            <button className="jr-ghost is-small" onClick={() => go({ v: 'prologue' })}>
+              Bối cảnh lịch sử
+            </button>
+            {ERA[chapter.id] && (
+              <button className="jr-ghost is-small is-endless" onClick={() => go({ v: 'endless' })}>
+                ∞ Lữ hành vô tận
+              </button>
+            )}
+          </div>
         )}
         {CHAPTERS.length > 1 && (
           <nav className="jr-chapters" aria-label="Các chương">
@@ -132,7 +141,7 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
           </nav>
         )}
       </header>
-      <ChapterMap chapter={chapter} save={save} next={next} go={go} />
+      <ChapterMap chapter={chapter} scenes={chapter.scenes} isDone={(s) => save.done.includes(key(chapter, s))} next={next} open={(s) => go({ s: s.id })} />
       <footer className="jr-atlas-foot">
         <div className="jr-player">
           <Me save={save} />
@@ -187,12 +196,13 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: (p: Re
 }
 
 /** The chapter's period map: an old map of Europe with the route drawn on it, to be scrolled and zoomed. */
-function ChapterMap({ chapter, save, next, go }: { chapter: Chapter; save: Save; next?: Scene; go: (p: Record<string, string>) => void }) {
+function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: Chapter; scenes: Scene[]; isDone: (s: Scene) => boolean; next?: Scene; open: (s: Scene) => void }) {
   const m = MAPS[chapter.id]
   const box = useRef<HTMLDivElement>(null)
   const [zoom, setZoom] = useState(false)
-  const pts = chapter.scenes.map((s) => onMap(m, s.lat, s.lon))
-  const here = pts[Math.max(0, (next ? chapter.scenes.indexOf(next) : chapter.scenes.length) - 1)] ?? pts[0]
+  // a stop off the old map's edge is held just inside it
+  const pts = scenes.map((s) => onMap(m, s.lat, s.lon).map((v, i) => Math.min(Math.max(v, 30), (i ? m.h : m.w) - 30)) as [number, number])
+  const here = pts[Math.max(0, (next ? scenes.indexOf(next) : scenes.length) - 1)] ?? pts[0]
   // keep the traveller in sight whenever the zoom changes
   useEffect(() => {
     const b = box.current
@@ -206,12 +216,12 @@ function ChapterMap({ chapter, save, next, go }: { chapter: Chapter; save: Save;
           <img src={IMG(m.img)} alt={CREDITS[m.img]?.[1] ?? ''} />
           <svg viewBox={`0 0 ${m.w} ${m.h}`} aria-label={`Bản đồ chương ${chapter.numeral}`}>
             <path d={'M' + pts.map((p) => p.join(',')).join('L')} className="jr-route" style={{ strokeWidth: u * 0.45, strokeDasharray: `${u * 1.2} ${u * 0.9}` }} />
-            {chapter.scenes.map((s, i) => {
+            {scenes.map((s, i) => {
               const [x, y] = pts[i]
-              const isDone = save.done.includes(key(chapter, s)), isNext = s === next
-              const open = isDone || isNext
+              const done = isDone(s), isNext = s === next
+              const open = done || isNext
               return (
-                <g key={s.id} className={`jr-stop${isDone ? ' is-done' : ''}${isNext ? ' is-next' : ''}${open ? ' is-open' : ''}`} transform={`translate(${x} ${y})`} onClick={() => open && go({ s: s.id })}>
+                <g key={s.id} className={`jr-stop${done ? ' is-done' : ''}${isNext ? ' is-next' : ''}${open ? ' is-open' : ''}`} transform={`translate(${x} ${y})`} onClick={() => open && enter(s)}>
                   {isNext && <circle r={u * 2.6} className="jr-stop-ring" style={{ strokeWidth: u * 0.3 }} />}
                   <circle r={u * 1.5} className="jr-stop-dot" style={{ strokeWidth: u * 0.3 }} />
                   <text dy="0.35em" className="jr-stop-num" style={{ fontSize: u * 1.7 }}>
@@ -230,6 +240,114 @@ function ChapterMap({ chapter, save, next, go }: { chapter: Chapter; save: Save;
         <span>{CREDITS[m.img]?.[1]}</span>
       </figcaption>
     </figure>
+  )
+}
+
+/** Lữ hành vô tận: trips of five generated stops on the chapter's old map, one after another, without end. */
+function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Save; go: (p: Record<string, string>) => void; stopId: string | null }) {
+  const [pool, setPool] = useState<Pool>()
+  useEffect(() => {
+    loadPool().then(setPool)
+  }, [])
+  useEffect(() => {
+    if (!stopId) playTrack(MUSIC[chapter.theme])
+  }, [chapter, stopId])
+  const [fresh] = useState(() => 1 + Math.floor(Math.random() * 1e9))
+  const trip: Trip = save.endless[chapter.id] ?? { seed: fresh, at: 0, total: 0, right: 0, asked: [] }
+  const setTrip = (t: Partial<Trip>) => update((s) => ({ endless: { ...s.endless, [chapter.id]: { ...(s.endless[chapter.id] ?? trip), ...t } } }))
+  // the trip is drawn from its seed only, so it stays the same while it is played (asked facts leave the next trip)
+  const asked = trip.asked
+  const stops = useMemo(() => (pool ? makeTrip(chapter, pool, trip.seed, asked.slice(0, asked.length - trip.at)) : []), [pool, chapter, trip.seed]) // eslint-disable-line react-hooks/exhaustive-deps
+  const back = () => go({ v: 'endless' })
+  const newTrip = () => setTrip({ seed: 1 + Math.floor(Math.random() * 1e9), at: 0 })
+  const stop = stops.find((x) => x.scene.id === stopId)
+  if (stop) {
+    const i = stops.indexOf(stop)
+    const last = i === stops.length - 1
+    return (
+      <ScenePlayer
+        key={stop.scene.id}
+        chapter={chapter}
+        scene={stop.scene}
+        save={save}
+        go={go}
+        endless={{
+          label: `Lữ hành vô tận · ${chapter.era} · chặng ${i + 1}/${stops.length}`,
+          onDone: (first) => {
+            if (i < trip.at) return
+            setTrip({ at: i + 1, total: trip.total + 1, right: trip.right + (first ? 1 : 0), asked: [...trip.asked, stop.item].slice(-1500) })
+          },
+          nextLabel: last ? 'Hết chuyến — về bản đồ' : 'Chặng sau →',
+          onNext: () => (last ? back() : go({ v: 'endless', s: stops[i + 1].scene.id })),
+          onBack: back,
+        }}
+      />
+    )
+  }
+  const next = stops[trip.at]?.scene
+  return (
+    <section className="jr-atlas">
+      <img className="jr-atlas-bg" {...bg(chapter.cover)} alt="" />
+      <div className="jr-atlas-wash" />
+      <header className="jr-atlas-head">
+        <Exit />
+        <div className="jr-atlas-sound">
+          <SoundToggle />
+        </div>
+        <p className="jr-kicker">
+          Lữ hành vô tận · {chapter.era} · {chapter.years}
+        </p>
+        <h1 className="jr-atlas-title">Những con đường chưa kể</h1>
+        <p className="jr-atlas-intro">
+          Mỗi chuyến đi năm chặng, gặp những nhạc sĩ thời {chapter.era} do máy chọn ngẫu nhiên. Câu hỏi lấy đúng một dòng trong tiểu sử, danh mục tác phẩm hoặc mục giai thoại của họ — đáp án luôn nằm trong bài.
+        </p>
+        <div className="jr-atlas-actions">
+          <button className="jr-ghost is-small" onClick={() => go({})}>
+            ← Về cốt truyện chương {chapter.numeral}
+          </button>
+        </div>
+      </header>
+      {!pool ? (
+        <p className="jr-atlas-intro jr-endless-wait">Đang trải bản đồ…</p>
+      ) : (
+        <ChapterMap chapter={chapter} scenes={stops.map((x) => x.scene)} isDone={(s) => stops.findIndex((x) => x.scene === s) < trip.at} next={next} open={(s) => go({ v: 'endless', s: s.id })} />
+      )}
+      <footer className="jr-atlas-foot">
+        <div className="jr-player">
+          <Me save={save} />
+          <div>
+            <p className="jr-player-name">{save.name}</p>
+            <p className="jr-player-meta">
+              {trip.total} chặng đã đi · {trip.right} lần đúng ngay
+            </p>
+          </div>
+        </div>
+        <ol className="jr-stops">
+          {stops.map((x, i) => {
+            const done = i < trip.at, locked = i > trip.at
+            return (
+              <li key={x.scene.id}>
+                <button className={`jr-stop-row${done ? ' is-done' : ''}${i === trip.at ? ' is-next' : ''}`} disabled={locked} onClick={() => go({ v: 'endless', s: x.scene.id })}>
+                  <span className="jr-stop-i">{i + 1}</span>
+                  <span className="jr-stop-t">
+                    <b>{x.scene.npc.name}</b>
+                    <small>
+                      {x.scene.title} · {x.scene.place}
+                    </small>
+                  </span>
+                  <span className="jr-stop-s">{done ? '✓' : locked ? '🔒' : 'Vào →'}</span>
+                </button>
+              </li>
+            )
+          })}
+        </ol>
+        {pool && trip.at >= stops.length && (
+          <button className="jr-cta jr-endless-new" onClick={newTrip}>
+            Chuyến đi mới →
+          </button>
+        )}
+      </footer>
+    </section>
   )
 }
 
@@ -342,10 +460,19 @@ function EvidenceCard({ card, fresh }: { card: Card; fresh?: boolean }) {
 
 type Phase = 'title' | 'talk' | 'quest' | 'reward'
 
-function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Scene; save: Save; go: (p: Record<string, string>) => void }) {
-  const k = key(chapter, scene)
+/** A generated stop runs in the same player, with its own way back, forward and of counting. */
+interface EndlessHooks {
+  label: string
+  onDone: (firstTry: boolean) => void
+  onNext: () => void
+  nextLabel: string
+  onBack: () => void
+}
+
+function ScenePlayer({ chapter, scene, save, go, endless }: { chapter: Chapter; scene: Scene; save: Save; go: (p: Record<string, string>) => void; endless?: EndlessHooks }) {
+  const k = endless ? `x/${scene.id}` : key(chapter, scene)
   const saved = save.step[k] ?? -1
-  const [phase, setPhase] = useState<Phase>(save.done.includes(k) ? 'talk' : saved >= scene.lines.length ? 'quest' : saved >= 0 ? 'talk' : 'title')
+  const [phase, setPhase] = useState<Phase>(!endless && save.done.includes(k) ? 'talk' : saved >= scene.lines.length ? 'quest' : saved >= 0 ? 'talk' : 'title')
   const [line, setLine] = useState(Math.max(0, Math.min(saved, scene.lines.length - 1)))
   const [wrong, setWrong] = useState<number[]>([])
   const [listen, setListen] = useState(false)
@@ -359,9 +486,9 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
   }, [phase])
 
   useEffect(() => {
-    playTrack(listen ? undefined : MUSIC[scene.id])
+    playTrack(listen ? undefined : MUSIC[scene.track ?? scene.id])
   }, [scene, listen])
-  const track = MUSIC[scene.id]
+  const track = MUSIC[scene.track ?? scene.id]
   const remember = (step: number) => update((s) => ({ step: { ...s.step, [k]: step } }))
   const advance = () => {
     if (phase === 'title') return setPhase('talk')
@@ -376,6 +503,10 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
   }
   const answer = (i: number) => {
     if (i !== scene.quest.answer) return setWrong((w) => (w.includes(i) ? w : [...w, i]))
+    if (endless) {
+      endless.onDone(wrong.length === 0)
+      return setPhase('reward')
+    }
     update((s) => ({ done: s.done.includes(k) ? s.done : [...s.done, k], cards: s.cards.includes(scene.card.id) ? s.cards : [...s.cards, scene.card.id] }))
     setPhase('reward')
   }
@@ -399,11 +530,11 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
       <div className="jr-bar is-bottom" />
 
       <header className="jr-scene-head" onClick={(e) => e.stopPropagation()}>
-        <button className="jr-exit" aria-label="Về bản đồ chương" onClick={() => go({})}>
+        <button className="jr-exit" aria-label="Về bản đồ chương" onClick={() => (endless ? endless.onBack() : go({}))}>
           ←
         </button>
         <p>
-          Chương {chapter.numeral} · Chặng {index + 1}/{chapter.scenes.length}
+          {endless ? endless.label : `Chương ${chapter.numeral} · Chặng ${index + 1}/${chapter.scenes.length}`}
         </p>
         <span className="jr-head-tools">
           <SoundToggle />
@@ -494,11 +625,12 @@ function ScenePlayer({ chapter, scene, save, go }: { chapter: Chapter; scene: Sc
           <button
             className="jr-cta"
             onClick={() => {
+              if (endless) return endless.onNext()
               const next = chapter.scenes[index + 1]
               go(next ? {} : { v: 'court' })
             }}
           >
-            {index + 1 < chapter.scenes.length ? 'Lên đường →' : 'Đến phiên toà của sử gia →'}
+            {endless ? endless.nextLabel : index + 1 < chapter.scenes.length ? 'Lên đường →' : 'Đến phiên toà của sử gia →'}
           </button>
         </div>
       )}

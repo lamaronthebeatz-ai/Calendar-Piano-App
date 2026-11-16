@@ -37,3 +37,25 @@ test('hành trình: tạo nhân vật, vào cảnh, đọc bài rồi quay lại
   await page.getByRole('button', { name: /Lên đường/ }).click()
   await expect(page.locator('.jr-player-meta')).toContainText('1/10 chặng · 1 thẻ chứng cứ')
 })
+
+test('lữ hành vô tận: chuyến đi năm chặng sinh từ tiểu sử, trả lời xong thì đếm chặng', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'] }))
+  })
+  await page.goto('/#/hanh-trinh')
+  await page.getByRole('button', { name: '∞ Lữ hành vô tận' }).click()
+  await expect(page.locator('.jr-stop-row')).toHaveCount(5)
+  await page.locator('.jr-stop-row.is-next').click()
+  const scene = page.locator('.jr-scene')
+  for (let i = 0; i < 10 && !(await page.locator('.jr-quest').isVisible()); i++) await scene.click({ position: { x: 20, y: 160 } })
+  await expect(page.locator('.jr-read')).toBeVisible()
+  // try the choices in turn: a wrong one is only marked, the right one opens the reward
+  for (let i = 0; i < 4 && !(await page.locator('.jr-reward').isVisible()); i++) {
+    const c = page.locator('.jr-choice').nth(i)
+    if (await c.isEnabled()) await c.click()
+  }
+  await page.getByRole('button', { name: 'Chặng sau →' }).click()
+  await expect(page.locator('.jr-titlecard, .jr-dialog').first()).toBeVisible()
+  await page.locator('.jr-scene .jr-exit').click()
+  await expect(page.locator('.jr-player-meta')).toContainText('1 chặng đã đi')
+})
