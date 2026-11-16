@@ -9,7 +9,7 @@ import type { Track } from './music'
 const LEVEL = 0.5
 const MUTE_KEY = 'journey:mute'
 
-type Voice = { el: HTMLAudioElement; gain?: GainNode; track: Track }
+type Voice = { el: HTMLAudioElement; gain?: GainNode; source?: MediaElementAudioSourceNode; track: Track }
 let ctx: AudioContext | undefined
 let voice: Voice | undefined
 let muted = (() => {
@@ -44,6 +44,9 @@ function release(v: Voice) {
     v.el.pause()
     v.el.removeAttribute('src')
     v.el.load()
+    // a scene changes the track: without this every old track stayed wired into the audio graph for the whole visit
+    v.source?.disconnect()
+    v.gain?.disconnect()
   }, 1500)
 }
 
@@ -62,16 +65,18 @@ export function playTrack(track: Track | undefined) {
   el.src = track.src
   const ac = audioContext()
   let gain: GainNode | undefined
+  let source: MediaElementAudioSourceNode | undefined
   if (ac) {
     try {
       gain = ac.createGain()
       gain.gain.value = 0
-      ac.createMediaElementSource(el).connect(gain).connect(ac.destination)
+      source = ac.createMediaElementSource(el)
+      source.connect(gain).connect(ac.destination)
     } catch {
-      gain = undefined
+      gain = source = undefined
     }
   }
-  voice = { el, gain, track }
+  voice = { el, gain, source, track }
   if (!muted) start(voice)
 }
 

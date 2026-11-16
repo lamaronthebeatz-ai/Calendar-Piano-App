@@ -64,6 +64,11 @@ jobs:
       - run: npx playwright test --project='${{ matrix.browser }}-*' --shard=${{ matrix.shard }}/2
         env:
           HOME: /root # Firefox refuses to start under GitHub's own HOME when it is not the user's; Playwright's docs set this
+      # microphone tests alone, one at a time: a busy runner makes the fake capture stutter (playwright.config.ts)
+      - if: matrix.browser == 'chromium'
+        run: npx playwright test --project='mic-*' --shard=${{ matrix.shard }}/2 --workers=1
+        env:
+          HOME: /root
       - if: failure()
         uses: actions/upload-artifact@v4
         with:

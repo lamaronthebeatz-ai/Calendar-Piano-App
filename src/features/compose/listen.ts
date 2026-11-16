@@ -172,6 +172,27 @@ export function octaveFix(sp: { mag: Float32Array; hz: number }, midi: number, o
  * Basic Pitch's notes checked against the recording itself: each one's spectrum (from just after its attack, up to
  * 0.3 s) tested by `octaveFix` with the notes sounding with it; then a note found twice at the same time is kept once.
  */
+/**
+ * A note split in two where nothing was played: a busy device drops a few samples of the recording and the
+ * transcription hears a fresh attack, mid-note. Such a piece starts where the same pitch just ended and brings no rise in
+ * loudness; a real repeated strike does. The pieces are joined back (the leftovers slipped past the octave check).
+ */
+export function joinBroken<T extends { m: number; t: number; d: number; a: number }>(notes: T[], pcm: Float32Array, rate: number): T[] {
+  const rms = (from: number, to: number) => {
+    const a = Math.max(0, Math.floor(from * rate)), b = Math.min(pcm.length, Math.floor(to * rate))
+    let e = 0
+    for (let i = a; i < b; i++) e += pcm[i] * pcm[i]
+    return b > a ? Math.sqrt(e / (b - a)) : 0
+  }
+  const out: T[] = []
+  for (const n of [...notes].sort((x, y) => x.t - y.t)) {
+    const p = out.find((o) => o.m === n.m && Math.abs(o.t + o.d - n.t) < 0.025)
+    if (p && rms(n.t, n.t + 0.05) < rms(n.t - 0.05, n.t) * 1.25) Object.assign(p, { d: n.t + n.d - p.t, a: Math.max(p.a, n.a) })
+    else out.push({ ...n })
+  }
+  return out
+}
+
 export function fixOctaves<T extends { m: number; t: number; d: number; a: number }>(notes: T[], pcm: Float32Array, rate: number): T[] {
   const fixed = notes.map((n) => {
     if (n.d < 0.08) return n

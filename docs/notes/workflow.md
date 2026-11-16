@@ -44,6 +44,8 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- **Test thu micro** (`chord-ear`, `compose-mic*`) hỏng trên CI vì máy bận làm micro giả giật (nốt ma C4, E7…) → tách thành project `mic-phone`/`mic-desktop`, CI chạy riêng một bước `--workers=1` sau các test khác (`deploy-pages.yml`); `chromium-*` không còn chứa chúng. Local: `npx playwright test --project='mic-*' --workers=1`.
+- Server preview thử nghiệm sót lại chiếm cổng 4174 → script chụp ảnh/bot chạy trên bản build cũ mà không báo. Ghi PID server, tắt bằng PID; kiểm `ps aux | grep 'vite preview --port 4174'` trước khi chạy.
 - `journey.spec.ts` trên **WebKit CI quá 45 s** khi bấm qua cả 5 tấm bối cảnh (ảnh nền 1920 + Ken Burns vẽ chậm) → test chỉ xem tấm 1–2 rồi "Bỏ qua". Test e2e đừng đi qua nhiều màn ảnh lớn liên tiếp.
 - **Agent hết hạn mức giữa chừng** (429 "5-hour limit"): file đã ghi vẫn còn trên đĩa — kiểm `ls` + `esbuild` + đếm mục từng người, rồi `SendMessage` cho agent cũ làm tiếp phần thiếu khi hạn mức mở lại (đừng tạo agent mới làm lại từ đầu).
 - Nhạc Commons "thật" vẫn có thể là dàn nhạc giả lập (sample library, vd. Philip Milman) — `vet.py` không bắt được; đọc mục Description/Author trước khi dùng.

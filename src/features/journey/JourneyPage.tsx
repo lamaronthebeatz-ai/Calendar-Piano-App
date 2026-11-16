@@ -229,7 +229,7 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
   }, [zoom, hx, hy, m])
   return (
     <figure className="jr-oldmap">
-      <div ref={box} className="jr-oldmap-box">
+      <div ref={box} className={`jr-oldmap-box${zoom ? ' is-zoom' : ''}`}>
         <div className="jr-oldmap-canvas" style={{ width: zoom ? `min(260%, ${m.w}px)` : '100%', aspectRatio: `${m.w} / ${m.h}` }}>
           <img src={IMG(m.img)} alt={CREDITS[m.img]?.[1] ?? ''} />
           <svg viewBox={`0 0 ${m.w} ${m.h}`} aria-label={`Bản đồ chương ${chapter.numeral}`}>
@@ -269,8 +269,9 @@ function ChapterMap({ chapter, scenes, isDone, next, open: enter }: { chapter: C
 /** Lữ hành vô tận: trips of five generated stops on the chapter's old map, one after another, without end. */
 function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Save; go: Go; stopId: string | null }) {
   const [pool, setPool] = useState<Pool>()
+  const [failed, setFailed] = useState(false)
   useEffect(() => {
-    loadPool().then(setPool)
+    loadPool().then(setPool, () => setFailed(true))
   }, [])
   useEffect(() => {
     if (!stopId) playTrack(MUSIC[chapter.theme])
@@ -331,7 +332,7 @@ function EndlessTrip({ chapter, save, go, stopId }: { chapter: Chapter; save: Sa
         </div>
       </header>
       {!pool ? (
-        <p className="jr-atlas-intro jr-endless-wait">Đang trải bản đồ…</p>
+        <p className="jr-atlas-intro jr-endless-wait">{failed ? 'Không tải được dữ liệu chuyến đi — kiểm tra kết nối mạng rồi mở lại.' : 'Đang trải bản đồ…'}</p>
       ) : (
         <ChapterMap chapter={chapter} scenes={stops.map((x) => x.scene)} isDone={(s) => stops.findIndex((x) => x.scene === s) < trip.at} next={next} open={(s) => go({ v: 'endless', s: s.id })} />
       )}
@@ -380,10 +381,15 @@ function Prologue({ chapter, go }: { chapter: Chapter; go: Go }) {
   const [i, setI] = useState(0)
   const p = panels[i]
   const a = findArticle(p.read)
-  const finish = () => {
+  // shown once, it counts as seen: leaving half-way (Back, ✕) must not bring it back every time the chapter opens.
+  // The address names the prologue first, so marking it seen does not close it under the reader.
+  const [auto] = useState(() => new URLSearchParams(window.location.hash.split('?')[1]).get('v') !== 'prologue')
+  useEffect(() => {
+    if (auto) go({ v: 'prologue' }, 'replace')
     update((s) => ({ seen: s.seen.includes(chapter.id) ? s.seen : [...s.seen, chapter.id] }))
-    go({}, 'back')
-  }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  // opened by itself it gives way to the map; opened from the map's button it returns there
+  const finish = () => go({}, auto ? 'replace' : 'back')
   useEffect(() => {
     playTrack(MUSIC[chapter.theme])
   }, [chapter])

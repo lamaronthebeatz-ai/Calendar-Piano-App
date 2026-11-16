@@ -54,6 +54,13 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 ## Điều hướng (16/11, Lamar báo lỗi)
 - `go(p, how)` trong JourneyPage: `push` khi mở sâu (cảnh, phiên toà, vô tận — gắn `state.jr`), `back` khi quay về (nút ←, "Lên đường", "Về cốt truyện"): có `state.jr` thì `navigate(-1)`, không thì thay trang hiện tại; `replace` khi đổi ngang (cảnh cuối → phiên toà, chặng vô tận kế tiếp). Trước đây ← đẩy thêm trang bản đồ vào lịch sử nên Back của máy quay lại cảnh. Test e2e "nút ← trong game lùi lịch sử".
 
+## Rà lỗi trải nghiệm (16/11, Lamar: "đôi khi bị đứng, vuốt không được")
+- Khung bản đồ cổ: trước tự cuộn bên trong (`overflow: auto` + `overscroll-behavior: contain`), vuốt trên bản đồ (hơn nửa màn) không cuộn được trang → nay khung không cuộn khi chưa phóng to; phóng to (`.is-zoom`) mới cuộn, và trả cú vuốt cho trang ở mép (`overscroll-behavior: auto`).
+- Khung bối cảnh lịch sử: thêm `max-height` + cuộn (chữ dài tràn trên máy nhỏ).
+- Phần mở đầu: mở một lần là tính đã xem (`seen`) — trước đó thoát giữa chừng thì lần nào vào chương cũng bị kéo lại vào bối cảnh. Tự mở thì "Vào bản đồ" thay trang; mở từ nút thì lùi về.
+- Nhạc nền: bài cũ được tháo khỏi đồ thị Web Audio khi chuyển bài (trước để lại mọi nút qua cả buổi chơi). Hạt phim bỏ `mix-blend-mode` (đắt trên điện thoại). Cảnh: `-webkit-touch-callout: none` (nhấn giữ không bật menu ảnh). Kho vô tận tải lỗi thì báo, không treo "Đang trải bản đồ…".
+- **Bot rà toàn game** `scratchpad/sweep.cjs` (máy 360×640, chạm): mọi tấm bối cảnh, vuốt trên bản đồ phải cuộn trang, mọi cảnh tới câu hỏi → bấm đáp án → nút đi tiếp thấy được, khung không tràn/không cuộn được, phiên toà, một chuyến vô tận mỗi chương. Lần chạy 16/11: 0 lỗi.
+
 ## Lữ hành vô tận — bộ sinh màn chơi (16/11)
 - `scripts/journey/pool.py` (`npm run journey:pool`, chạy lại khi tiểu sử đổi) → `src/features/journey/pool.json` (commit; ~390 KB, tải lười): 324 người (tên, slug, năm, quốc gia, nhóm, mô tả, tác phẩm từ `composers.ts`), 1.832 mốc từ bảng "Tiểu sử" (bỏ dòng có "hoặc", "bài tiếng…", "Wikipedia", "có lẽ", năm "?"; năm "k." giữ cho câu "việc gì" nhưng không làm đáp án câu "năm nào"), 809 giai thoại (đề + lời nguồn, cắt ≤230 ký tự).
 - `endless.ts` `makeTrip(chương, pool, seed, asked)`: 5 chặng/chuyến, hạt giống cố định (cùng seed = cùng chuyến); 4 kiểu câu: việc gì năm X, năm nào, tác phẩm nào của ai, nguồn nói gì về giai thoại (2 nhiễu là giai thoại khác của chính người đó). Nhiễu = dữ kiện của người khác cùng thời kỳ, không chứa tên người được hỏi. Lời dẫn tự viết (`MOOD`, `GREET`) không chứa sự kiện. Nơi chốn = quốc gia → toạ độ (`PLACE`), chấm ngoài bản đồ bị kẹp vào mép.

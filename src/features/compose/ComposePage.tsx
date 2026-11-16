@@ -5,7 +5,7 @@ import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { audioContext, audioNow, loadInstruments, playNow, playSequence, startMetronome, type Inst } from '../theory/audio'
-import { audioInputs, fixOctaves, openInput, PARTIALS, startCapture } from './listen'
+import { audioInputs, fixOctaves, joinBroken, openInput, PARTIALS, startCapture } from './listen'
 import {
   barAt, blank, CLEF_BOTTOM, meter, quantize, TPQ, type Take, INSTRUMENTS, instOf, transposeOf, ensureLane, fromTemplate, laneIndex, staffOfLane, TEMPLATES, voiceOfLane, clearEv, DUR, DUR_NAMES, dn, fromDn, keyLabel, layout, midiOf, migrate, newId, normalized, openTuplet, pitchName, resize,
   sigAlter, soundOf, spell, ticksOf, totalOf, TUPLETS, updateEv, writeAt, type Artic, type Clef, type DurName, type Dyn, type Ev, type Jump, type Left,
@@ -942,7 +942,7 @@ export function ComposePage() {
         const buf = new AudioBuffer({ length: pcm.length, sampleRate: rate, numberOfChannels: 1 })
         buf.copyToChannel(pcm, 0)
         // octave errors (a phone hears little of a low note's fundamental) are checked on the recording itself
-        const all = fixOctaves(await transcribe(buf, (p) => setAnalysing(p)), pcm, rate)
+        const all = fixOctaves(joinBroken(await transcribe(buf, (p) => setAnalysing(p)), pcm, rate), pcm, rate)
         // an overtone heard as a note of its own: it starts with a lower note that has it as a partial (octave,
         // twelfth, two octaves, the 17th, 19th…) and is clearly quieter — a played octave is about as loud
         const heard = all.filter((h) => !all.some((b) => b !== h && Math.abs(b.t - h.t) < 0.07 && PARTIALS.includes(h.m - b.m) && h.a < b.a * 0.8))

@@ -28,6 +28,7 @@ App cá nhân của Lamar (giáo viên piano): thời khoá biểu + học viên
 ```bash
 npx tsc -b && npm run lint && npm test && npm run check:links && npm run build && npm run budget
 npx playwright test --project='chromium-*' --trace off   # khi đổi giao diện (~5 phút, chạy nền); WebKit chạy trên CI
+npx playwright test --project='mic-*' --workers=1 --trace off   # test thu micro, chạy riêng (máy bận làm micro giả giật)
 ```
 CI chạy đủ các bước + WebKit, hỏng là không deploy (`docs/notes/testing.md`).
 Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận được. `check:links` kiểm mọi `[[slug]]`, slug trùng, slug và chặng trên bản đồ.

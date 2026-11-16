@@ -18,3 +18,4 @@
 - `smoke.spec.ts` có test **"mọi trang trong router đều có trong danh sách kiểm"**: đọc `src/App.tsx`, route nào không có dòng trong `PAGES` là đỏ (ngoại lệ `NEEDS_DATA`). Trang Soạn nhạc dùng bộ chọn `.cmp-paper` (giấy), ít chữ nên ngưỡng 60.
 - **Nhật ký lỗi** (`lib/errorLog.ts`): lỗi script, promise hỏng, trang sập (`RouteError`) ghi vào `localStorage['app:errors']` (30 mục, chống lặp 2 s), xem / sao chép / xoá ở Cài đặt. Không gửi đi đâu.
 - `tsconfig.app.json` thêm `noImplicitReturns`, `noImplicitOverride` (strict mặc định bật ở TS 6). `noUncheckedIndexedAccess` = 1.053 lỗi — chưa bật.
+- Test micro tách project `mic-*` (chỉ Chromium), CI chạy riêng `--workers=1` sau bộ chính — xem `workflow.md` § Bẫy.

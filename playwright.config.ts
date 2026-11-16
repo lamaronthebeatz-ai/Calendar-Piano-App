@@ -8,6 +8,8 @@ import { defineConfig, devices } from '@playwright/test'
  */
 const phone = { viewport: { width: 393, height: 852 }, hasTouch: true, isMobile: true }
 const desktop = { viewport: { width: 1280, height: 820 } }
+/** Tests that record through Chromium's fake microphone (WebKit refuses the flags). */
+const MIC = /chord-ear|compose-mic/
 
 export default defineConfig({
   testDir: 'tests',
@@ -17,11 +19,16 @@ export default defineConfig({
   reporter: process.env.CI ? [['github'], ['list']] : 'list',
   use: { baseURL: 'http://localhost:4173', serviceWorkers: 'allow' },
   projects: [
-    { name: 'chromium-phone', use: { ...devices['Desktop Chrome'], ...phone } },
-    { name: 'chromium-desktop', use: { ...devices['Desktop Chrome'], ...desktop } },
+    { name: 'chromium-phone', use: { ...devices['Desktop Chrome'], ...phone }, testIgnore: MIC },
+    { name: 'chromium-desktop', use: { ...devices['Desktop Chrome'], ...desktop }, testIgnore: MIC },
+    // the microphone tests feed a recording through Chromium's fake capture in real time: next to other tests on a busy
+    // CI runner the capture stutters and the transcription hears ghosts, so CI runs them on their own, one at a time
+    // (deploy-pages.yml). Locally: npx playwright test --project='mic-*' --workers=1
+    { name: 'mic-phone', use: { ...devices['Desktop Chrome'], ...phone }, testMatch: MIC },
+    { name: 'mic-desktop', use: { ...devices['Desktop Chrome'], ...desktop }, testMatch: MIC },
     // the chord-ear test launches with Chromium's fake-microphone flags, which WebKit refuses to start with
-    { name: 'webkit-phone', use: { ...devices['Desktop Safari'], ...phone }, testIgnore: /chord-ear|compose-mic/ },
-    { name: 'webkit-desktop', use: { ...devices['Desktop Safari'], ...desktop }, testIgnore: /chord-ear|compose-mic/ },
+    { name: 'webkit-phone', use: { ...devices['Desktop Safari'], ...phone }, testIgnore: MIC },
+    { name: 'webkit-desktop', use: { ...devices['Desktop Safari'], ...desktop }, testIgnore: MIC },
   ],
   webServer: { command: 'npx vite preview --port 4173 --strictPort', url: 'http://localhost:4173', reuseExistingServer: !process.env.CI, timeout: 60_000 },
 })
