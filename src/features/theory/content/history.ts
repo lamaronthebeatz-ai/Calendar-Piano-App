@@ -46,7 +46,7 @@ export const history: Article[] = [
 ## 2. Guido xứ Arezzo: khuông nhạc và tên nốt
 - Chuyên luận *Micrologus* của Guido, theo nghiên cứu gần đây, viết năm **1025 hoặc 1026** tại Arezzo. Guido được xem là người phát triển **khuông nhạc**: các dòng kẻ cùng chữ cái làm [[khoa-nhac|khoá]], nhờ đó người hát đọc được giai điệu **chưa từng nghe**.
 - Ông dùng bài thánh ca *Ut queant laxis* để dạy: sáu câu đầu bắt đầu lần lượt cao dần một bậc, cho ra các âm tiết **ut – re – mi – fa – sol – la**. Guido **không viết** bài thánh ca này (lời có trong một bản chép khoảng năm 800). Âm tiết "si" được thêm về sau. Xem [[xuong-am]].
-- "Bàn tay Guido" chỉ có ở dạng sơ khai trong chính tác phẩm của Guido; hình bàn tay đầy đủ là của đời sau.
+- "Bàn tay Guido" chỉ có ở dạng sơ khai trong chính tác phẩm của Guido; hình bàn tay đầy đủ là của đời sau — xem [[hexachord-va-ban-tay-guido]].
 
 ## 3. Notre-Dame: tiết tấu theo khuôn
 Phức điệu Notre-Dame ([[leonin|Léonin]], [[perotin|Pérotin]] — xem [[organum]]) cần ghi **[[tiet-tau|tiết tấu]]**. Giải pháp là sáu **[[dieu-thuc|điệu thức]] tiết tấu** (*rhythmic modes*), tương ứng các nhịp thơ (dài – ngắn, ngắn – dài…). Trường độ của một nốt **không nằm ở hình nốt**, mà suy ra từ cách các nốt được nối thành nhóm (*ligature*). Chuyên luận *De mensurabili musica* mô tả hệ thống này. Trước đây sách gán nó cho Johannes de Garlandia (khoảng 1250); nghiên cứu từ thập niên 1980 cho rằng đây là văn bản khuyết danh **khoảng 1240**, được Garlandia biên tập lại về sau.
@@ -676,5 +676,61 @@ UNESCO đã ghi danh nhiều loại hình âm nhạc Việt Nam: Nhã nhạc (20
 3. Lịch sử của chính ngành nghiên cứu (Viện Âm nhạc, các thế hệ nhà nghiên cứu) chưa được tổng hợp đầy đủ trong các nguồn tra được.
 `,
   },
-]
+  {
+    slug: 'hexachord-va-ban-tay-guido',
+    title: 'Hexachord và bàn tay Guido',
+    category: 'musicology',
+    also: ['basics'],
+    aliases: ['hexachord', 'lục âm Guido', 'hệ lục âm', 'bàn tay Guido', 'Guidonian hand', 'hexachordum naturale', 'hexachordum durum', 'hexachordum molle', 'mutation', 'chuyển lục âm', 'gamut', 'gamma ut', 'Ut queant laxis', 'ut re mi fa sol la'],
+    summary: 'Sáu âm tiết ut – re – mi – fa – sol – la lấy từ thánh ca Ut queant laxis; ba loại hexachord bắt đầu từ Đô, Sol, Fa; nửa cung luôn ở giữa mi – fa; người hát chuyển (mutation) sang hexachord khác khi giai điệu vượt quãng sáu hay gặp Si giáng/Si bình. Guido mô tả hexachord trong thư và Micrologus, nhưng hình bàn tay đầy đủ là của đời sau.',
+    wiki: 'Guidonian_hand',
+    refs: [
+      ['Wikipedia — Guidonian hand', 'https://en.wikipedia.org/wiki/Guidonian_hand'],
+      ['Wikipedia — Hexachord', 'https://en.wikipedia.org/wiki/Hexachord'],
+      ['Wikipedia — Ut queant laxis', 'https://en.wikipedia.org/wiki/Ut_queant_laxis'],
+    ],
+    body: `
+Trước khi có [[xuong-am|xướng âm]] bảy âm như ngày nay, ca sĩ thời Trung cổ học [[thanh-ca-gregorian|thánh ca]] bằng một khuôn **sáu âm** (*hexachord*) gắn với tên [[guido-d-arezzo|Guido d'Arezzo]]. Lịch sử ký âm mà khuôn này thuộc về ở [[lich-su-ky-am]].
 
+## Sáu âm tiết từ một bài thánh ca
+Khổ đầu thánh ca *Ut queant laxis* kính Thánh Gioan Tẩy giả có sáu nửa câu, mỗi nửa câu bắt đầu **cao hơn nửa câu trước một bậc**:
+
+| Nửa câu | Âm tiết |
+|---|---|
+| *Ut queant laxis* | ut |
+| *resonare fibris* | re |
+| *Mira gestorum* | mi |
+| *famuli tuorum* | fa |
+| *Solve polluti* | sol |
+| *labii reatum* | la |
+| *Sancte Iohannes* | — |
+
+Lời bài thường được gán cho Paulus Diaconus (thế kỷ 8); **không rõ ai viết giai điệu** — Guido có thể đã soạn, nhưng nhiều khả năng ông dùng một giai điệu có sẵn (Wikipedia — Ut queant laxis). Việc lấy âm tiết đầu mỗi nửa câu làm tên nốt thường được gán cho Guido.
+
+## Ba loại hexachord
+Trong mỗi hexachord, các âm kề nhau cách nhau **một cung**, trừ cặp ở giữa: **mi – fa luôn là nửa cung** (Wikipedia — Guidonian hand). Một hexachord có thể bắt đầu từ ba nốt:
+
+| Tên | Bắt đầu | ut re mi fa sol la | Vì sao gọi thế |
+|---|---|---|---|
+| *Hexachordum naturale* | Đô | Đô Rê Mi Fa Sol La | không chứa nốt Si nào |
+| *Hexachordum durum* ("cứng") | Sol | Sol La Si Đô Rê Mi | chứa **Si bình** (*B durum*, chữ b vuông) |
+| *Hexachordum molle* ("mềm") | Fa | Fa Sol La Si♭ Đô Rê | chứa **Si giáng** (*B molle*, chữ b tròn) |
+
+Vì vậy cùng một âm tiết có thể là nhiều nốt: *mi* là Mi trong lục âm tự nhiên, nhưng là Si trong lục âm cứng và La trong lục âm mềm. Âm tiết cho biết **vị trí của nửa cung**, không cho biết [[cao-do-tuyet-doi|cao độ tuyệt đối]] — đúng tinh thần khoá Đô, khoá Fa của [[ky-am-binh-ca-gregorian|ký âm bình ca]].
+
+## Chuyển hexachord (mutation)
+Giai điệu vượt quá quãng sáu, hay đi giữa Si bình và Si giáng, thì người hát phải **chuyển** (*mutation*) sang một hexachord khác, đổi tên âm tiết ở một nốt chung của hai hexachord (Wikipedia — Guidonian hand). Các hexachord chồng lên nhau phủ gần ba quãng tám, từ **Γ ut** (Sol thấp nhất) đến **E la**.
+
+## Bàn tay Guido: điều chắc và điều chưa chắc
+- **Chắc:** Guido mô tả hexachord như một phương tiện ghi nhớ trong bức thư *Epistola de ignoto cantu* và trong *Micrologus* (Wikipedia — Guidonian hand).
+- **Chứng cứ gián tiếp:** khoảng 1105 – 1110, Sigebert xứ Gembloux viết rằng Guido dùng các khớp ngón tay để dạy hexachord — gần một thế kỷ sau Guido.
+- **Đời sau:** một dạng "bàn tay" để tìm nửa cung đã có trong vài bản chép tay trước Guido; hình bàn tay đầy đủ như ta quen thấy chỉ xuất hiện từ **thế kỷ 12**.
+- Kết luận của thư viện: gọi là "bàn tay Guido" là theo truyền thống; như [[guido-d-arezzo|tiểu sử Guido]] ghi, hệ thống bàn tay hoàn chỉnh **không thể gán chắc cho ông**.
+
+## Từ ut đến do, và nốt si
+- *Ut* về sau được thay bằng *do*, theo nhà lý thuyết Giovanni Battista Doni, vì âm mở dễ hát hơn.
+- Âm tiết thứ bảy *si* (từ *Sancte Iohannes*) được thêm vào sau; trang Wikipedia về bài thánh ca ghi là thế kỷ 18. *Hai câu trên cùng trang chưa thống nhất về chi tiết này — chưa đối chiếu nguồn gốc.*
+- Thế kỷ 19, Sarah Glover (Anh) đổi *si* thành *ti* để mỗi âm tiết có một chữ cái đầu riêng; các nước dùng "do cố định" không theo.
+`,
+  },
+]

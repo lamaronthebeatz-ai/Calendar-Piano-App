@@ -13,6 +13,10 @@ import { finished, named, opened, resetJourney, update, useSave, type Endless as
 import type { Card, Chapter, Claim, Scene, Verdict } from './types'
 import { recordAttempt, verdictXp } from './engine/progression'
 import { legacyPuzzle } from './content/legacy'
+import { ARCS } from './content/arcs'
+import { ArcPlayer } from './ui/Arc'
+import { visibleLocations } from './engine/runtime'
+import { holds } from './engine/world'
 import './journey.css'
 
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
@@ -37,7 +41,8 @@ export function JourneyPage() {
   const scene = chapter.scenes.find((s) => s.id === params.get('s'))
   const v = params.get('v')
   // a chapter opens on its historical prologue the first time
-  const view = !save.name ? 'create' : v === 'endless' ? 'endless' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
+  const arc = ARCS.find((a) => a.id === params.get('a') && a.chapter === chapter.id && holds(a.opens, save))
+  const view = !save.name ? 'create' : v === 'arc' && arc ? 'arc' : v === 'endless' ? 'endless' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
   const navigate = useNavigate()
   const { state } = useLocation()
   /**
@@ -57,6 +62,19 @@ export function JourneyPage() {
       {view === 'endless' && <EndlessTrip key={chapter.id} chapter={chapter} save={save} go={go} stopId={params.get('s')} />}
       {view === 'scene' && scene && <ScenePlayer key={scene.id} chapter={chapter} scene={scene} save={save} go={go} />}
       {view === 'court' && <Court chapter={chapter} save={save} go={go} />}
+      {view === 'arc' && arc && (
+        <ArcPlayer
+          arc={arc}
+          save={save}
+          go={go}
+          l={params.get('l')}
+          p={params.get('p')}
+          map={(open, done) => {
+            const places = visibleLocations(arc, save).map((l) => ({ id: l.id, place: l.name, title: l.name, year: l.year ?? '', lat: l.lat, lon: l.lon, far: l.far }) as unknown as Scene)
+            return <ChapterMap chapter={chapter} scenes={places} isDone={(x) => done(x.id)} next={places.find((x) => !done(x.id))} open={(x) => open(x.id)} />
+          }}
+        />
+      )}
     </div>
   )
 }
@@ -137,6 +155,12 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
                 ∞ Lữ hành vô tận
               </button>
             )}
+            {ARCS.filter((a) => a.chapter === chapter.id && holds(a.opens, save)).map((a) => (
+              <button key={a.id} className="jr-ghost is-small is-arc" onClick={() => go({ v: 'arc', a: a.id })}>
+                ✦ {a.title}
+                {holds(a.completion, save) ? ' ✓' : ''}
+              </button>
+            ))}
           </div>
         )}
         {CHAPTERS.length > 1 && (

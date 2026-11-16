@@ -1,0 +1,92 @@
+/* Story arcs on the engine (ui/Arc.tsx): hub, place, dialogue, puzzles, journal. Reuses the stage and buttons of journey.css. */
+.ar-screen { position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.ar-inner { position: relative; z-index: 2; width: min(760px, 100%); margin: 0 auto; padding: calc(16px + env(safe-area-inset-top)) 16px calc(32px + env(safe-area-inset-bottom)); display: grid; gap: 14px; }
+.ar-inner header { display: grid; gap: 6px; justify-items: start; }
+.ar-objective { padding: 12px 14px; border-radius: 14px; border: 1px solid var(--jr-gold); background: rgb(20 15 10 / 0.82); }
+.ar-objective span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--jr-gold); }
+.ar-objective p { margin-top: 4px; font-size: 15px; line-height: 1.5; color: var(--jr-ink); }
+.ar-places { display: grid; gap: 6px; }
+.ar-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 13px; color: var(--jr-dim); }
+
+.ar-screen.is-place { background: #0e0a07; }
+.ar-place-bg { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.38; }
+.ar-place-title { font-family: var(--font-display); font-size: clamp(24px, 6vw, 34px); line-height: 1.15; color: var(--jr-ink); }
+.ar-hint-line { font-size: 13.5px; line-height: 1.5; color: var(--jr-dim); }
+.ar-actions { display: grid; gap: 8px; }
+.ar-act { display: grid; gap: 2px; text-align: left; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--jr-line); background: rgb(20 15 10 / 0.85); color: var(--jr-ink); }
+.ar-act b { font-family: var(--font-display); font-weight: 400; font-size: 17px; }
+.ar-act small { font-size: 12px; color: var(--jr-faint); }
+.ar-act.is-talk { border-color: var(--jr-gold); }
+.ar-act.is-done small { color: var(--jr-gold); }
+.ar-act:active { transform: scale(0.98); }
+
+.ar-dialog { position: fixed; inset: 0; z-index: 5; display: flex; align-items: flex-end; justify-content: center; padding: 10px 10px calc(10px + env(safe-area-inset-bottom)); background: rgb(0 0 0 / 0.35); }
+.ar-dialog-box { position: relative; left: auto; bottom: auto; transform: none; width: min(760px, 100%); max-height: 80svh; }
+.ar-dialog-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; padding-right: 28px; }
+.ar-voice { font-size: 10.5px; letter-spacing: 0.06em; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--jr-line); color: var(--jr-faint); }
+.ar-voice.is-fiction { color: var(--jr-gold); border-color: var(--jr-gold); }
+.ar-voice.is-quote { color: var(--jr-ink); border-color: var(--jr-ink); }
+.ar-next { margin-top: 12px; }
+.ar-close { position: absolute; top: 10px; right: 12px; width: 28px; height: 28px; border-radius: 999px; color: var(--jr-faint); }
+.ar-refs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ar-ref { font-size: 12.5px; color: var(--jr-gold); text-decoration: underline; text-underline-offset: 3px; }
+
+.ar-screen.is-puzzle { background: radial-gradient(120% 80% at 50% 0%, #2a2018, #0e0a07); }
+.ar-instr, .ar-ask { font-size: 15px; line-height: 1.55; color: var(--jr-ink); }
+.ar-small { font-size: 12px; line-height: 1.5; color: var(--jr-faint); }
+.ar-check { margin-top: 12px; }
+.ar-wrong { padding: 10px 12px; border-radius: 12px; border: 1px solid #b4382a; color: #f0c0b0; background: rgb(180 56 42 / 0.12); font-size: 14px; line-height: 1.5; }
+.ar-hints { display: grid; gap: 6px; justify-items: start; font-size: 14px; line-height: 1.5; color: var(--jr-dim); }
+.ar-explain { display: grid; gap: 8px; padding: 14px; border-radius: 14px; border: 1px solid var(--jr-gold); background: rgb(20 15 10 / 0.9); font-size: 14.5px; line-height: 1.6; color: var(--jr-ink); }
+.ar-ok { color: var(--jr-gold); font-weight: 600; }
+
+.ar-order, .ar-rows, .ar-notes { display: grid; gap: 6px; }
+.ar-order li, .ar-rows li, .ar-notes li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--jr-line); background: rgb(255 255 255 / 0.04); color: var(--jr-ink); }
+.ar-order li.is-wrong, .ar-rows li.is-wrong, .ar-notes li.is-wrong { border-color: #b4382a; }
+.ar-order-n { width: 22px; text-align: center; color: var(--jr-gold); font-family: var(--font-display); }
+.ar-order-t, .ar-row-t { flex: 1; min-width: 0; font-size: 14px; line-height: 1.4; }
+.ar-order-btns { display: flex; gap: 4px; }
+.ar-order-btns button { width: 34px; height: 34px; border-radius: 10px; border: 1px solid var(--jr-line); color: var(--jr-ink); }
+.ar-order-btns button:disabled { opacity: 0.3; }
+.ar-rows li { flex-wrap: wrap; }
+.ar-rows .ar-row-t { flex: 1 1 100%; }
+@media (min-width: 640px) { .ar-rows .ar-row-t { flex: 1 1 0; } }
+.ar-rows select, .ar-notes select { min-width: 0; max-width: 100%; flex: 1 1 180px; height: 38px; padding: 0 8px; border-radius: 10px; border: 1px solid var(--jr-line); background: #1a130d; color: var(--jr-ink); font-size: 14px; }
+.ar-notes { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.ar-notes li span { font-size: 13px; color: var(--jr-dim); }
+
+.ar-blank { font-family: var(--font-display); font-size: 18px; line-height: 2.2; color: var(--jr-ink); }
+.ar-blank-in { width: 4.2em; margin: 0 2px; padding: 0 6px; height: 34px; border-radius: 8px; border: 1px solid var(--jr-gold); background: #1a130d; color: var(--jr-ink); font-size: 16px; text-align: center; }
+.ar-blank-in.is-wrong { border-color: #b4382a; }
+
+.ar-parchment { padding: 10px; border-radius: 12px; background: #efe3c8; overflow-x: auto; }
+.ar-staff { display: block; width: 100%; min-width: 300px; height: auto; }
+.ar-hexa { width: 100%; border-collapse: collapse; font-size: 13px; color: var(--jr-ink); }
+.ar-hexa th, .ar-hexa td { padding: 4px 6px; border-bottom: 1px solid var(--jr-line); text-align: center; }
+.ar-hexa th { text-align: left; color: var(--jr-gold); font-weight: 400; font-style: italic; }
+
+.ar-clip { min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--jr-gold); color: var(--jr-ink); background: rgb(214 174 96 / 0.08); font-size: 14px; }
+.ar-clip.is-on { background: rgb(214 174 96 / 0.25); }
+
+.ar-fs { display: grid; gap: 8px; margin-top: 10px; border: 0; padding: 0; }
+.ar-fs legend { margin-bottom: 4px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--jr-gold); }
+.ar-radio, .ar-check-row { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--jr-line); background: rgb(255 255 255 / 0.04); font-size: 14px; line-height: 1.45; color: var(--jr-ink); }
+.ar-radio input, .ar-check-row input { margin-top: 3px; accent-color: var(--jr-gold); }
+.ar-radio.is-wrong, .ar-check-row.is-wrong { border-color: #b4382a; }
+.ar-check-row span { display: grid; gap: 2px; }
+.ar-check-row em { font-style: normal; font-size: 11px; color: var(--jr-gold); }
+.ar-check-row small { font-size: 12.5px; color: var(--jr-dim); }
+.ar-check-row.is-missing { opacity: 0.55; }
+
+.ar-book { position: fixed; inset: 0; z-index: 6; display: flex; justify-content: center; align-items: flex-end; background: rgb(0 0 0 / 0.5); }
+.ar-book-inner { position: relative; width: min(760px, 100%); max-height: 86svh; overflow-y: auto; padding: 16px 16px calc(20px + env(safe-area-inset-bottom)); border-radius: 18px 18px 0 0; background: #17110c; border: 1px solid var(--jr-line); }
+.ar-book-head h3 { font-family: var(--font-display); font-size: 22px; color: var(--jr-ink); }
+.ar-tabs { display: flex; gap: 4px; margin: 10px 0; border-bottom: 1px solid var(--jr-line); }
+.ar-tabs button { padding: 8px 10px; font-size: 13.5px; color: var(--jr-dim); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.ar-tabs button.is-on { color: var(--jr-ink); border-color: var(--jr-gold); }
+.ar-list { display: grid; gap: 8px; }
+.ar-list li { display: grid; gap: 3px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--jr-line); color: var(--jr-ink); font-size: 14px; }
+.ar-list em { font-style: normal; font-size: 11.5px; color: var(--jr-gold); }
+.ar-list small { font-size: 12.5px; line-height: 1.5; color: var(--jr-dim); }
+.ar-rel { font-style: italic; }
+.ar-skills { display: flex !important; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--jr-dim); }

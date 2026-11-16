@@ -178,3 +178,17 @@ export interface ChapterDef {
   /** when the chapter counts as finished (opens the next one) */
   completion: Cond
 }
+
+/** A story arc inside a chapter (the "Bản thảo thất lạc" kind): its own places, people and quests on the chapter's map. */
+export interface ArcDef extends ChapterDef {
+  chapter: string
+  title: string
+  year: string
+  intro: string
+  /** when the arc shows on the chapter's map */
+  opens: Cond
+  /** the main quest (its completion is the arc's) */
+  main: string
+  /** MUSIC key played on the arc's hub */
+  music: string
+}

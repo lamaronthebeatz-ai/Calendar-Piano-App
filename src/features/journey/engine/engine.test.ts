@@ -262,3 +262,44 @@ describe('id đã phát hành', () => {
     expect(locked.filter((id) => !now.has(id))).toEqual([])
   })
 })
+
+describe('lát cắt "Bản thảo thất lạc"', async () => {
+  const { banThao } = await import('../content/ban-thao')
+  const defs = (id: string) => banThao.quests.find((q) => q.id === id)
+  it('nội dung hợp lệ, mọi câu đố tự giải được', () => {
+    expect(validateChapter(banThao, (s) => slugs.has(s), (id) => id.startsWith('q:trung-co/'))).toEqual([])
+  })
+  it('đáp án neume và hexachord đúng theo khoá và lục âm (không tin lời người soạn)', () => {
+    for (const id of ['pz:bt/doc-khoa-do', 'pz:bt/doc-khoa-fa', 'pz:bt/luc-am']) expect(puzzleProblem(banThao.puzzles.find((p) => p.id === id)!)).toBeNull()
+    const fa = banThao.puzzles.find((p) => p.id === 'pz:bt/doc-khoa-fa')!
+    expect(puzzleProblem({ ...fa, answer: ['Đô', 'Rê', 'Mi', 'Fa', 'Sol'] })).toMatch(/không khớp/)
+  })
+  it('kết luận phải có chứng cứ: lời đồn làm chỗ dựa bị bác, thiếu chứng cứ bị nhắc', () => {
+    const p = banThao.puzzles.find((x) => x.id === 'pz:bt/ket-luan')!
+    expect(checkPuzzle(p, { conclusion: 'co', evidence: ['ev:bt/sigebert', 'ev:bt/loi-ca-truong'] })).toMatchObject({ ok: false, feedback: 'ket-luan:co' })
+    expect(checkPuzzle(p, { conclusion: 'mot-phan', evidence: ['ev:bt/micrologus', 'ev:bt/ban-tay-the-ky-12', 'ev:bt/loi-ca-truong'] })).toMatchObject({ ok: false, feedback: 'yeu:ev:bt/loi-ca-truong' })
+    expect(checkPuzzle(p, { conclusion: 'mot-phan', evidence: ['ev:bt/micrologus', 'ev:bt/sigebert'] })).toMatchObject({ ok: false, feedback: 'thieu' })
+    expect(checkPuzzle(p, { conclusion: 'mot-phan', evidence: ['ev:bt/micrologus', 'ev:bt/ban-tay-the-ky-12', 'ev:bt/sigebert'] }).ok).toBe(true)
+  })
+  it('đi hết tuyến chính bằng engine: mỗi giai đoạn mở đúng nơi tiếp theo, kết thúc có phần thưởng', () => {
+    let s = s0({ done: ['trung-co/neume'] })
+    expect(holds(banThao.opens, s)).toBe(true)
+    const solve = (...ids: string[]) => (s = settleQuests({ ...s, puzzles: { ...s.puzzles, ...Object.fromEntries(ids.map((id) => [id, { solved: true, tries: 1, hints: 0, at: 1 }])) } }, defs, 1))
+    s = apply({ startQuest: 'q:bt/ban-thao' }, s, defs, 1)
+    s = settleQuests({ ...s, visited: ['loc:bt/thu-vien'], inventory: ['item:bt/trang-ban-thao'] }, defs, 1)
+    expect(s.quests['q:bt/ban-thao'].stage).toBe('doc')
+    s = { ...s, dialogue: { ...s.dialogue, topics: { 'npc:bt/rinaldo': ['gap'] } } }
+    solve('pz:bt/hai-loi-ghi', 'pz:bt/doc-khoa-do')
+    expect(s.flags).toContain('open:loc:bt/arezzo')
+    s = { ...s, dialogue: { ...s.dialogue, topics: { ...s.dialogue.topics, 'npc:bt/guido': ['gap'] } } }
+    solve('pz:bt/nghe-ut-queant', 'pz:bt/dien-am-tiet', 'pz:bt/luc-am')
+    expect(s.inventory).toContain('item:bt/ban-tay')
+    s = { ...s, dialogue: { ...s.dialogue, topics: { ...s.dialogue.topics, 'npc:bt/gualtiero': ['gap'] } } }
+    solve('pz:bt/nien-dai', 'pz:bt/phan-loai-chung-cu', 'pz:bt/tac-pham-guido')
+    expect(s.flags).toContain('open:loc:bt/phong-hop')
+    solve('pz:bt/ket-luan')
+    expect(s.quests['q:bt/ban-thao'].status).toBe('done')
+    expect(s.flags).toContain('bt-xong')
+    expect(holds(banThao.completion, s)).toBe(true)
+  })
+})

@@ -17,6 +17,11 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - `content/ids.lock.json` (190 id chương/cảnh/thẻ/lời khai đã phát hành) — test đòi không id nào biến mất. Thêm chương mới: chạy lại script sinh khoá (xem engine.test) hoặc thêm tay.
 - Sao lưu: `BackupPayload.journey` (nạp lười module game), nhập "gộp" = `mergeSaves` (hợp, không mất gì), "thay" cất bản cũ trước.
 
+## Lát cắt "Bản thảo thất lạc" (Phase 2–4, 16/11) — báo cáo `docs/journey/REPORTS.md`
+- Nội dung `content/ban-thao.ts` (`ArcDef`, đăng ký ở `content/arcs.ts`), chạy bằng `engine/runtime.ts`, giao diện `ui/Arc.tsx` + `arc.css`. View `?v=arc&a=<arc>&l=<nơi>&p=<câu đố>`; nút "✦ <tên>" trên bản đồ chương khi `arc.opens` đúng. Mở/đóng câu đố là push/back (Back của máy về địa điểm).
+- Câu đố mới: `neume` (vị trí 0 = dòng 1, khoá Đô/Fa; đáp án do validator tự tính), `hexachord` (`HEXACHORDS`, đáp án tự tính), `aural` (`{track: khoá MUSIC, start, end}` — bản thu thật Commons; mốc đầu câu Ut queant đo bằng YIN, ghi trong REPORTS §F), `investigation` (đáp án = kết luận + `support` bắt buộc + `reject` không được dùng làm chỗ dựa; feedback `ket-luan:<id>`, `yeu:<ev>`, `thieu`).
+- Viết lát cắt mới: mọi dữ kiện phải có bài thư viện (thiếu thì viết bài trước — đã viết `hexachord-va-ban-tay-guido`); nhân vật hư cấu đặt tên không trùng người thật; mỗi node thoại có `voice`; vật/chứng cứ hư cấu có `kind: 'fiction'`. Test e2e đọc đáp án từ file nội dung (`tests/journey-arc.spec.ts`), hội thoại đi theo danh sách lựa chọn ưu tiên (đặt lựa chọn kết thúc trước lựa chọn lặp lại).
+
 ## File
 - `types.ts` — `Chapter` (cảnh + phiên toà + intro/outro), `Scene` (nơi, toạ độ, năm, ảnh nền, NPC, lời, `quest {ask, choices, answer, read, where, explain}`, `card`, `listen` YouTube), `Claim` (verdict `fact|legend|unsure`).
 - `chapters/<thời kỳ>.ts` + `chapters/index.ts` (`CHAPTERS` theo thứ tự lịch sử). **Thêm chương = một file + một dòng.**

@@ -44,6 +44,7 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- **WebKit của Playwright sập khi tải lại** (16/11) sau chuỗi `pushState → pushState → back → pushState` — tái hiện được trên trang trống, không phải lỗi app (game đi tới đi lui đúng như vậy). Test kiểm "lưu còn sau khi mở lại" dùng `page.context().newPage()` + `goto`, không `page.reload()` sau khi đã lùi lịch sử.
 - **Chạy WebKit tại máy (16/11):** máy chỉ có Chromium. Cài WebKit vào thư mục riêng, không đụng Chromium: `PLAYWRIGHT_BROWSERS_PATH=<scratchpad>/pwb npx playwright install webkit` + `npx playwright install-deps webkit` (apt, ~2 phút), rồi chạy test `--project='webkit-*'` với cùng biến đó (đừng gộp với `chromium-*` trong một lệnh: Chromium không có ở thư mục đó).
 - **Đọc lại canvas WebGL trong test:** `toDataURL()` cả khung bầu trời làm tiến trình trang WebKit sập trên CI ("Target page … has been closed"). Dùng ảnh thu nhỏ 48×48 (`thumb` trong `library.spec.ts`).
 - **Test bấm vào danh sách vừa lọc** (16/11, Grove "mordent"): ô tìm lọc trễ một nhịp; trên WebKit CI dòng đầu vẫn là mục cũ khi bấm → đợi dòng đầu chứa từ khoá rồi mới bấm.

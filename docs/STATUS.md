@@ -4,7 +4,7 @@
 > Cập nhật lần cuối: 16/11/2026.
 
 ## Đang dở / chờ Lamar
-- **Hành trình Maximum Edition**: Phase 0 duyệt (quyết định ở `decisions.md`); **Phase 1 xong (16/11)** — engine thuần + save v2 + mở chương bền + 6 chương cũ qua engine + sao lưu (`notes/journey.md` § Engine). Người chơi chưa thấy khác. **Tiếp:** lát cắt Trung cổ "Bản thảo thất lạc" (TECHNICAL_ROADMAP Phase 2–4): renderer thoại phân nhánh, màn địa điểm, câu đố neume/hexachord/nghe (bản thu thật), điều tra. L4 (WebKit chập chờn) chưa tái hiện được.
+- **Hành trình Maximum Edition**: Phase 0 duyệt; Phase 1 xong (engine, save v2, mở chương bền); **Phase 2–4 xong (16/11): lát cắt Trung cổ "Bản thảo thất lạc"** — 5 nơi, 4 nhân vật, hội thoại phân nhánh, 11 câu đố 8 dạng (neume, hexachord, nghe bản thu thật, điều tra…), chứng cứ, Codex — báo cáo `docs/journey/REPORTS.md`. **Tiếp:** Phase 5–6 (cây kỹ năng hiển thị, tranh luận, phiên toà nâng cấp, báo cáo nghiên cứu → /research) hoặc nhân lát cắt cho chương II. Còn mở: thử thách nghe cần mạng; L4 WebKit chưa tái hiện; chưa thử Safari thật.
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
