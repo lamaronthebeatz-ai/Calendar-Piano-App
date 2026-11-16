@@ -1,0 +1,425 @@
+import type { ArcDef } from '../engine/types'
+
+/**
+ * Hành trình Việt Nam, Chương IV — "Ba con số": thương vong của một trận đánh được ghi thế nào? Sự kiện lấy từ
+ * chien-tranh-dong-duong-1945-1954 (Điện Biên Phủ: ba bộ số liệu; tổng thương vong 1946 – 1954; Genève, vĩ tuyến 17,
+ * tổng tuyển cử 1956) và tan-nhac-1945-1954. Anh bộ đội Tư, thư ký Hélène và nhà nghiên cứu Hạnh là nhân vật hư cấu.
+ */
+const DIEN_BIEN = { lat: 21.39, lon: 103.02 }
+const HA_NOI = { lat: 21.03, lon: 105.85 }
+
+export const baConSo: ArcDef = {
+  id: 'ba-con-so',
+  chapter: 'vn-khang-chien',
+  title: 'Một trận đánh, ba con số',
+  year: '1954',
+  intro: 'Điện Biên Phủ, tháng 5 năm 1954. Trận đánh vừa dứt, và ai cũng hỏi: bao nhiêu người đã ngã xuống? Bảy mươi năm sau, các cuốn sách vẫn đưa ra những con số khác nhau. {ten} sẽ học cách đọc một con số chiến tranh: ai đếm, đếm cái gì, và vì sao.',
+  opens: { quest: 'q:vn-khang-chien/vn-dien-bien', is: 'done' },
+  main: 'q:db/ba-con-so',
+  music: 'vn-dien-bien',
+  period: 'a:chien-tranh-dong-duong-1945-1954',
+
+  locations: [
+    {
+      id: 'loc:db/thung-lung',
+      name: 'Thung lũng Điện Biên',
+      ...DIEN_BIEN,
+      year: '5/1954',
+      bg: 'vn-dien-bien',
+      present: [{ npc: 'npc:db/tu', dialogue: 'dlg:db/tu' }],
+      objects: [
+        { id: 'so-tay', label: 'Cuốn sổ tay ướt mưa', when: { all: [{ quest: 'q:db/ba-con-so', is: 'active' }, { not: { item: 'item:db/so-tay' } }] }, effects: [{ give: 'item:db/so-tay' }, { evidence: 'ev:db/so-tay' }, { discover: 'a:chien-tranh-dong-duong-1945-1954' }] },
+        { id: 'moc', label: 'Mười năm trên một dòng thời gian', when: { item: 'item:db/so-tay' }, puzzle: 'pz:db/moc' },
+      ],
+    },
+    {
+      id: 'loc:db/geneve',
+      name: 'Bến cảng Hải Phòng, sau Genève',
+      lat: 20.86,
+      lon: 106.68,
+      year: '8/1954',
+      bg: 'vn-di-cu',
+      hidden: true,
+      present: [{ npc: 'npc:db/helene', dialogue: 'dlg:db/helene' }],
+      objects: [
+        { id: 'nghe', label: 'Ba bản thu của hai nhà nước', when: { met: 'npc:db/helene' }, effects: [{ startQuest: 'q:db/hai-nha-nuoc' }], puzzle: 'pz:db/nghe' },
+        { id: 'hiep-dinh', label: 'Điều gì Genève định, điều gì đã xảy ra', when: { met: 'npc:db/helene' }, puzzle: 'pz:db/hiep-dinh' },
+      ],
+    },
+    {
+      id: 'loc:db/tu-lieu',
+      name: 'Phòng tư liệu, Hà Nội, ngày nay',
+      ...HA_NOI,
+      year: 'ngày nay',
+      bg: 'vn-ha-noi-1945',
+      hidden: true,
+      present: [{ npc: 'npc:db/hanh', dialogue: 'dlg:db/hanh' }],
+      objects: [
+        { id: 'ai-dem', label: 'Ai đưa ra con số nào?', when: { all: [{ evidence: 'ev:db/ba-so' }, { evidence: 'ev:db/phap' }] }, puzzle: 'pz:db/ai-dem' },
+        { id: 'chung-cu', label: 'Phân loại chứng cứ', when: { evidence: 'ev:db/dinh-nghia' }, puzzle: 'pz:db/phan-loai' },
+      ],
+    },
+    {
+      id: 'loc:db/phong-hop',
+      name: 'Thung lũng Điện Biên, đêm',
+      ...DIEN_BIEN,
+      year: '5/1954',
+      bg: 'vn-dien-bien',
+      focus: '30% 50%',
+      hidden: true,
+      present: [{ npc: 'npc:db/tu', dialogue: 'dlg:db/ket-luan' }],
+      objects: [
+        { id: 'tranh-luan', label: 'Cuộc tranh luận: con số nào đúng?', when: { topic: 'ket-luan', with: 'npc:db/tu' }, effects: [{ startQuest: 'q:db/tranh-luan' }], puzzle: 'pz:db/tranh-luan' },
+        { id: 'ban', label: 'Đặt chứng cứ lên bàn', when: { met: 'npc:db/tu' }, puzzle: 'pz:db/ket-luan' },
+      ],
+    },
+  ],
+
+  characters: [
+    { id: 'npc:db/tu', name: 'Anh bộ đội Tư', status: 'fictional', role: 'Chiến sĩ Quân đội Nhân dân', sources: [] },
+    { id: 'npc:db/helene', name: 'Cô thư ký Hélène', status: 'fictional', role: 'Thư ký của Uỷ ban Quốc tế ở Hải Phòng', sources: [] },
+    { id: 'npc:db/hanh', name: 'Chị Hạnh', status: 'fictional', role: 'Nhà nghiên cứu lịch sử quân sự, ngày nay', sources: [] },
+  ],
+
+  dialogues: [
+    {
+      id: 'dlg:db/tu',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Ngày 7/5/1954. Đại tá Christian de Castries đầu hàng; thung lũng im lặng sau năm mươi sáu ngày.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ remember: 'gap', with: 'npc:db/tu' }], next: 'n1' },
+        n1: { speaker: 'npc:db/tu', voice: 'fiction', text: '{ten}, tôi nghe người ta đã đếm xong rồi: một con số, chính xác đến từng người. Không ai cãi được.', effects: [{ evidence: 'ev:db/loi-tu' }], next: 'n2' },
+        n2: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn muốn nói gì?)',
+          choices: [
+            { text: 'Anh có nhớ bài hát nào của những ngày này không?', when: { not: { topic: 'bai-hat', with: 'npc:db/tu' } }, next: 'n3' },
+            { text: 'Ta sẽ đi tìm các con số', next: 'n4' },
+          ],
+        },
+        n3: { speaker: 'npc:db/tu', voice: 'reconstructed', text: 'Ông Đỗ Nhuận vừa viết bài Chiến thắng Điện Biên, năm nay.', refs: ['a:tan-nhac-1945-1954', 'a:do-nhuan'], effects: [{ remember: 'bai-hat', with: 'npc:db/tu' }], next: 'n2' },
+        n4: { speaker: 'npc:db/tu', voice: 'fiction', text: 'Cuốn sổ tay của đơn vị tôi đây, ngài cầm lấy. Mưa làm nhoè hết mấy trang cuối.', effects: [{ startQuest: 'q:db/ba-con-so' }], end: true },
+      },
+    },
+    {
+      id: 'dlg:db/helene',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Hải Phòng, tháng 8/1954. Ở Genève, hội nghị họp từ 26/4 đã ký các hiệp định ngày 21/7. Trên bến, người ta xếp hàng lên tàu.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ remember: 'gap', with: 'npc:db/helene' }], next: 'n1' },
+        n1: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn muốn hỏi gì?)',
+          choices: [
+            { text: 'Hiệp định chia đất nước ở đâu?', when: { not: { topic: 'vi-tuyen', with: 'npc:db/helene' } }, next: 'n2' },
+            { text: 'Rồi sẽ có bầu cử chứ?', when: { not: { evidence: 'ev:db/tong-tuyen-cu' } }, next: 'n3' },
+            { text: 'Cảm ơn cô', next: 'n4' },
+          ],
+        },
+        n2: { speaker: 'npc:db/helene', voice: 'reconstructed', text: 'Ở vĩ tuyến 17. Lời tuyên bố cuối cùng nói đó chỉ là ranh giới tạm thời.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ remember: 'vi-tuyen', with: 'npc:db/helene' }], next: 'n1' },
+        n3: { speaker: 'narrator', voice: 'narration', text: 'Tổng tuyển cử dự định vào tháng 7/1956. Năm 1955, thủ tướng miền Nam Ngô Đình Diệm tuyên bố miền Nam không tham gia.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ evidence: 'ev:db/tong-tuyen-cu' }], next: 'n1' },
+        n4: { speaker: 'npc:db/helene', voice: 'fiction', text: 'Ở Genève người ta viết những dòng chữ rất ngắn. Ở bến này, hậu quả của chúng xếp thành hàng dài.', end: true },
+      },
+    },
+    {
+      id: 'dlg:db/hanh',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Ngày nay. Phòng tư liệu chất đầy những tập hồ sơ, sách tiếng Việt, tiếng Pháp, tiếng Anh.', effects: [{ remember: 'gap', with: 'npc:db/hanh' }], next: 'n1' },
+        n1: { speaker: 'npc:db/hanh', voice: 'fiction', text: 'Con số thương vong là câu hỏi khó nhất của nghề tôi. Bạn muốn xem gì?', next: 'n2' },
+        n2: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn muốn hỏi gì?)',
+          choices: [
+            { text: 'Phía Việt Minh thương vong bao nhiêu ở Điện Biên Phủ?', when: { not: { evidence: 'ev:db/ba-so' } }, next: 'n3' },
+            { text: 'Còn phía Pháp?', when: { not: { evidence: 'ev:db/phap' } }, next: 'n4' },
+            { text: 'Ba con số ấy có so được với nhau không?', when: { all: [{ evidence: 'ev:db/ba-so' }, { not: { evidence: 'ev:db/dinh-nghia' } }] }, next: 'n5' },
+            { text: 'Cả cuộc chiến 1946 – 1954 thì sao?', when: { not: { evidence: 'ev:db/ca-cuoc-chien' } }, next: 'n6' },
+            { text: 'Tôi sẽ xếp lại chứng cứ', next: 'n7' },
+          ],
+        },
+        n3: { speaker: 'npc:db/hanh', voice: 'reconstructed', text: 'Ba nguồn, ba con số: sử gia phương Tây ước khoảng 8.000 chết và 15.000 bị thương; sử gia châu Á 23.000 – 25.000 thương vong; số liệu Việt Nam 13.930 thương vong.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ evidence: 'ev:db/ba-so' }], next: 'n2' },
+        n4: { speaker: 'npc:db/hanh', voice: 'reconstructed', text: 'Phía Pháp: chết trong trận được ghi từ 1.142 đến 2.293; hơn 11.000 người bị bắt.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ evidence: 'ev:db/phap' }], next: 'n2' },
+        n5: { speaker: 'npc:db/hanh', voice: 'fiction', text: 'Chưa chắc. "Chết" và "thương vong" là hai thứ khác nhau: thương vong gồm cả người bị thương. Phải biết mỗi con số đếm cái gì trước khi so.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ evidence: 'ev:db/dinh-nghia' }], next: 'n2' },
+        n6: { speaker: 'npc:db/hanh', voice: 'reconstructed', text: 'Hộp thông tin của trang nguồn ghi tổng số người chết khoảng 400.000 đến 842.707, trong đó dân thường 125.000 đến 400.000.', refs: ['a:chien-tranh-dong-duong-1945-1954'], effects: [{ evidence: 'ev:db/ca-cuoc-chien' }], next: 'n2' },
+        n7: { speaker: 'narrator', voice: 'narration', text: 'Mỗi con số có một người đếm, một cách đếm, và một lý do để đếm.', end: true },
+      },
+    },
+    {
+      id: 'dlg:db/ket-luan',
+      start: 'n0',
+      nodes: {
+        n0: { speaker: 'narrator', voice: 'narration', text: 'Trở lại thung lũng. Đêm xuống, đống lửa nhỏ trước hầm.', effects: [{ remember: 'ket-luan', with: 'npc:db/tu' }], next: 'n1' },
+        n1: { speaker: 'npc:db/tu', voice: 'fiction', text: 'Vậy con số đúng là con số nào? Ngài bày chứng cứ ra đi.', end: true },
+      },
+    },
+  ],
+
+  quests: [
+    {
+      id: 'q:db/ba-con-so',
+      chapter: 'vn-khang-chien',
+      title: 'Một trận đánh, ba con số',
+      summary: 'Thương vong ở Điện Biên Phủ được ghi thế nào? Từ thung lũng năm 1954 tới bến cảng sau Genève và một phòng tư liệu hôm nay.',
+      kind: 'main',
+      stages: [
+        { id: 'thung-lung', text: 'Ở Điện Biên: cầm cuốn sổ tay, xếp mười năm trên dòng thời gian.', objectives: [{ talk: 'npc:db/tu' }, { collect: 'item:db/so-tay' }, { solve: 'pz:db/moc' }], onDone: [{ unlock: 'loc:db/geneve' }, { xp: 20, skill: 'history' }] },
+        { id: 'geneve', text: 'Ở Hải Phòng sau Genève: tách điều hiệp định định ra với điều đã xảy ra.', objectives: [{ talk: 'npc:db/helene' }, { solve: 'pz:db/hiep-dinh' }], onDone: [{ unlock: 'loc:db/tu-lieu' }, { xp: 30, skill: 'history' }] },
+        { id: 'so-lieu', text: 'Ngày nay: tìm các con số, ai đưa ra, đếm cái gì; phân loại chứng cứ.', objectives: [{ talk: 'npc:db/hanh' }, { solve: 'pz:db/ai-dem' }, { solve: 'pz:db/phan-loai' }], onDone: [{ unlock: 'loc:db/phong-hop' }, { xp: 30, skill: 'sources' }] },
+        { id: 'ket-luan', text: 'Trở lại thung lũng: đặt chứng cứ lên bàn.', objectives: [{ solve: 'pz:db/ket-luan' }], onDone: [{ xp: 50, skill: 'research' }] },
+      ],
+      rewards: [{ xp: 40, skill: 'history' }],
+      links: ['a:chien-tranh-dong-duong-1945-1954'],
+    },
+    {
+      id: 'q:db/hai-nha-nuoc',
+      chapter: 'vn-khang-chien',
+      title: 'Ba bản thu của hai nhà nước',
+      summary: 'Sau Genève có hai nhà nước, hai quốc ca. Nghe và nhận ra.',
+      kind: 'side',
+      stages: [{ id: 'nghe', text: 'Xếp ba bản thu vào đúng loại.', objectives: [{ solve: 'pz:db/nghe' }] }],
+      rewards: [{ xp: 30, skill: 'aural' }],
+      links: ['a:chien-tranh-dong-duong-1945-1954', 'a:van-cao'],
+    },
+    {
+      id: 'q:db/tranh-luan',
+      chapter: 'vn-khang-chien',
+      title: 'Ba lời bên đống lửa',
+      summary: 'Ba người, ba ý. Đáp lại bằng chứng cứ.',
+      kind: 'academic',
+      stages: [{ id: 'tranh-luan', text: 'Đáp lại từng lượt.', objectives: [{ solve: 'pz:db/tranh-luan' }] }],
+      rewards: [{ xp: 30, skill: 'research' }],
+      links: ['a:chien-tranh-dong-duong-1945-1954'],
+    },
+  ],
+
+  puzzles: [
+    {
+      id: 'pz:db/moc',
+      type: 'order',
+      difficulty: 2,
+      title: 'Mười năm trên một dòng thời gian',
+      instructions: 'Xếp theo thời gian, sớm nhất trước.',
+      content: {
+        ask: 'Từ sớm đến muộn.',
+        items: [
+          { id: 'geneve', text: 'Các hiệp định Genève được ký' },
+          { id: 'tuyen-ngon', text: 'Tuyên ngôn độc lập ở Hà Nội' },
+          { id: 'dien-bien-ket', text: 'De Castries đầu hàng ở Điện Biên Phủ' },
+          { id: 'ha-noi', text: 'Tiếng nổ mở đầu chiến sự ở Hà Nội' },
+          { id: 'dien-bien-mo', text: 'Trận Điện Biên Phủ bắt đầu' },
+          { id: 'hoi-van-nghe', text: 'Hội Văn nghệ Việt Nam thành lập' },
+        ],
+      },
+      answer: ['tuyen-ngon', 'ha-noi', 'hoi-van-nghe', 'dien-bien-mo', 'dien-bien-ket', 'geneve'],
+      hints: ['2/9/1945, 19/12/1946, 7/1948, 13/3/1954, 7/5/1954, 21/7/1954.'],
+      explanation: '2/9/1945 → 19/12/1946 → 7/1948 → 13/3/1954 → 7/5/1954 → 21/7/1954. Mười tuần sau trận đánh là hiệp định.',
+      skills: ['history'],
+      links: ['a:chien-tranh-dong-duong-1945-1954', 'a:tan-nhac-1945-1954'],
+    },
+    {
+      id: 'pz:db/hiep-dinh',
+      type: 'classify',
+      difficulty: 3,
+      title: 'Điều Genève định, điều đã xảy ra',
+      instructions: 'Mỗi điều là điều hiệp định định ra, hay điều đã xảy ra sau đó?',
+      content: {
+        ask: 'Xếp từng điều.',
+        items: [
+          { id: 'vi-tuyen', text: 'Chia đất nước ở vĩ tuyến 17, gọi là ranh giới tạm thời' },
+          { id: 'bau-cu', text: 'Tổng tuyển cử vào tháng 7/1956' },
+          { id: 'diem', text: 'Miền Nam tuyên bố không tham gia tổng tuyển cử' },
+          { id: 'di-cu', text: 'Ít nhất 892.876 người miền Bắc vào Nam' },
+        ],
+        labels: [
+          { id: 'dinh', text: 'Hiệp định định ra' },
+          { id: 'xay-ra', text: 'Điều đã xảy ra sau đó' },
+        ],
+      },
+      answer: { 'vi-tuyen': 'dinh', 'bau-cu': 'dinh', diem: 'xay-ra', 'di-cu': 'xay-ra' },
+      hints: ['Một văn bản định một điều không có nghĩa điều đó sẽ xảy ra.'],
+      explanation: 'Hiệp định chia ở vĩ tuyến 17 và định tổng tuyển cử tháng 7/1956. Năm 1955 miền Nam tuyên bố không tham gia; cuộc tổng tuyển cử không diễn ra. Ít nhất 892.876 người miền Bắc đi qua các trạm tiếp nhận để vào Nam.',
+      skills: ['history', 'sources'],
+      links: ['a:chien-tranh-dong-duong-1945-1954'],
+    },
+    {
+      id: 'pz:db/nghe',
+      type: 'aural',
+      difficulty: 2,
+      title: 'Ba bản thu của hai nhà nước',
+      instructions: 'Ba bản thu thật. Nghe rồi xếp mỗi đoạn vào đúng loại.',
+      content: {
+        ask: 'Mỗi đoạn là gì?',
+        mode: 'classify',
+        clips: [
+          { id: 'a', track: 'vn-geneve', start: 8, end: 18, caption: 'Đoạn A' },
+          { id: 'b', track: 'vn-thang-tam', start: 30, end: 40, caption: 'Đoạn B' },
+          { id: 'c', track: 'vn-dien-bien', start: 8, end: 18, caption: 'Đoạn C' },
+        ],
+        labels: [
+          { id: 'tien-quan-ca', text: 'Tiến quân ca — quốc ca Việt Nam Dân chủ Cộng hoà' },
+          { id: 'vnch', text: 'Quốc ca Việt Nam Cộng hoà' },
+          { id: 'tuyen-ngon', text: 'Lời đọc Tuyên ngôn độc lập' },
+        ],
+      },
+      answer: { a: 'vnch', b: 'tuyen-ngon', c: 'tien-quan-ca' },
+      hints: ['Một đoạn là lời nói, không phải nhạc.', 'Tiến quân ca là bài Văn Cao viết cuối 1944.'],
+      explanation: 'Đoạn A: quốc ca Việt Nam Cộng hoà (1955 – 1975). Đoạn B: Hồ Chí Minh đọc Tuyên ngôn độc lập — bản thu đọc lại sau 1954. Đoạn C: Tiến quân ca, bản thu chính thức.',
+      skills: ['aural', 'history'],
+      links: ['a:van-cao', 'a:chien-tranh-dong-duong-1945-1954'],
+    },
+    {
+      id: 'pz:db/ai-dem',
+      type: 'match',
+      difficulty: 3,
+      title: 'Ai đưa ra con số nào?',
+      instructions: 'Ghép mỗi con số về phía Việt Minh ở Điện Biên Phủ với nguồn đưa ra nó.',
+      content: {
+        ask: 'Ghép con số với nguồn.',
+        left: [
+          { id: 'tay', text: 'Sử gia phương Tây' },
+          { id: 'a', text: 'Sử gia châu Á' },
+          { id: 'vn', text: 'Số liệu Việt Nam' },
+        ],
+        right: [
+          { id: '8000', text: 'Khoảng 8.000 chết, 15.000 bị thương' },
+          { id: '23000', text: '23.000 – 25.000 thương vong' },
+          { id: '13930', text: '13.930 thương vong' },
+        ],
+      },
+      answer: { tay: '8000', a: '23000', vn: '13930' },
+      hints: ['Đọc mục "Điện Biên Phủ và Genève" trong bài lịch sử.'],
+      explanation: 'Sử gia phương Tây: khoảng 8.000 chết và 15.000 bị thương; sử gia châu Á: 23.000 – 25.000 thương vong; số liệu Việt Nam: 13.930 thương vong. Ghi một con số mà không ghi ai đưa ra là đã bỏ mất nửa thông tin.',
+      skills: ['sources'],
+      links: ['a:chien-tranh-dong-duong-1945-1954'],
+    },
+    {
+      id: 'pz:db/phan-loai',
+      type: 'classify',
+      difficulty: 3,
+      title: 'Phân loại chứng cứ',
+      instructions: 'Mỗi điều thuộc loại nào?',
+      content: {
+        ask: 'Xếp từng điều.',
+        items: [
+          { id: 'ba-so', text: 'Ba bộ số liệu thương vong khác nhau' },
+          { id: 'dinh-nghia', text: '"Chết" và "thương vong" đếm hai thứ khác nhau' },
+          { id: 'tu', text: 'Anh Tư: "đã đếm xong, chính xác đến từng người"' },
+          { id: 'so-tay', text: 'Cuốn sổ tay ướt mưa' },
+        ],
+        labels: [
+          { id: 'du-lieu', text: 'Dữ liệu, ghi rõ nguồn' },
+          { id: 'phuong-phap', text: 'Cách đọc dữ liệu' },
+          { id: 'qua-quyet', text: 'Lời quả quyết không căn cứ' },
+          { id: 'hu-cau', text: 'Vật trong truyện' },
+        ],
+      },
+      answer: { 'ba-so': 'du-lieu', 'dinh-nghia': 'phuong-phap', tu: 'qua-quyet', 'so-tay': 'hu-cau' },
+      hints: ['Một nhận xét về cách đếm cũng là một chứng cứ — loại khác.'],
+      explanation: 'Ba bộ số liệu là dữ liệu có ghi nguồn. Việc "chết" khác "thương vong" là cách đọc dữ liệu. Lời anh Tư là quả quyết; cuốn sổ tay là vật trong truyện.',
+      skills: ['sources', 'research'],
+      links: ['a:chien-tranh-dong-duong-1945-1954', 'a:phuong-phap-su-hoc-am-nhac'],
+    },
+    {
+      id: 'pz:db/tranh-luan',
+      type: 'debate',
+      difficulty: 3,
+      title: 'Ba lời bên đống lửa',
+      instructions: 'Chọn câu đáp có căn cứ cho từng lượt — đồng ý cũng là một câu đáp, nếu điều họ nói đứng được.',
+      content: {
+        topic: 'Con số thương vong ở Điện Biên Phủ',
+        turns: [
+          {
+            id: 't1',
+            speaker: 'Anh bộ đội Tư',
+            text: 'Con số đã chính xác đến từng người, không ai cãi được.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'ba-nguon', text: 'Ba nguồn đưa ba con số khác nhau; mỗi con số phải đi kèm tên người đưa ra.' },
+              { id: 'linh', text: 'Không, vì lính thì không biết đếm.' },
+            ],
+          },
+          {
+            id: 't2',
+            speaker: 'Một phóng viên',
+            text: 'Phương Tây nói 8.000, Việt Nam nói 13.930 — vậy Việt Nam nói nhiều hơn.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'khac-loai', text: 'Hai con số đếm hai thứ khác nhau: 8.000 là số chết (thêm 15.000 bị thương), còn 13.930 là thương vong — gồm cả người bị thương.' },
+              { id: 'lam-tron', text: 'Không, vì 8.000 là số làm tròn.' },
+            ],
+          },
+          {
+            id: 't3',
+            speaker: 'Chị Hạnh',
+            text: 'Đã không thống nhất thì đừng ghi con số nào nữa.',
+            options: [
+              { id: 'dong-y', text: 'Đồng ý.' },
+              { id: 'ghi-ca', text: 'Không: ghi cả ba, kèm nguồn và cách đếm — người đọc cần biết khoảng, không cần một con số giả chính xác.' },
+              { id: 'chon-mot', text: 'Không: cứ chọn con số ở giữa.' },
+            ],
+          },
+        ],
+      },
+      answer: { t1: 'ba-nguon', t2: 'khac-loai', t3: 'ghi-ca' },
+      hints: ['Trước khi so hai con số, hỏi: mỗi số đếm cái gì?'],
+      feedback: [
+        { key: 't1:dong-y', text: 'Các nguồn còn khác nhau nhiều; "chính xác đến từng người" là quá chắc.' },
+        { key: 't1:linh', text: 'Đánh vào người nói, không vào chứng cứ.' },
+        { key: 't2:dong-y', text: 'So sai: một bên là số chết, một bên là thương vong.' },
+        { key: 't2:lam-tron', text: 'Làm tròn không phải lý do chính khiến hai con số khác nhau.' },
+        { key: 't3:dong-y', text: 'Bỏ hết con số thì người đọc mất luôn cả cái khoảng mà các nguồn đồng ý.' },
+        { key: 't3:chon-mot', text: 'Lấy trung bình ba cách đếm khác nhau tạo ra một con số không ai đếm.' },
+      ],
+      explanation: 'Ba nguồn, ba con số, và không phải lúc nào chúng cũng đếm cùng một thứ. Cách đúng là ghi cả ba, kèm tên nguồn và cách đếm.',
+      skills: ['research', 'sources'],
+      links: ['a:chien-tranh-dong-duong-1945-1954'],
+    },
+    {
+      id: 'pz:db/ket-luan',
+      type: 'investigation',
+      difficulty: 4,
+      title: 'Con số nào đúng?',
+      instructions: 'Chọn một kết luận và đặt lên bàn ít nhất hai chứng cứ đỡ nó. Chứng cứ yếu đặt làm chỗ dựa sẽ bị bác.',
+      content: {
+        question: 'Có thể ghi "phía Việt Minh có đúng 13.930 thương vong ở Điện Biên Phủ" như một sự thật đã thống nhất không?',
+        conclusions: [
+          { id: 'co', text: 'Có — đó là con số chính thức, chính xác đến từng người.' },
+          { id: 'ba-nguon', text: 'Không: đó là số liệu Việt Nam; sử gia phương Tây và châu Á đưa con số khác, và các con số không đếm cùng một thứ (chết hay thương vong). Phải ghi cả ba, kèm nguồn.' },
+          { id: 'khong-dem', text: 'Không ai từng đếm thương vong ở Điện Biên Phủ.' },
+        ],
+        evidence: ['ev:db/ba-so', 'ev:db/dinh-nghia', 'ev:db/phap', 'ev:db/ca-cuoc-chien', 'ev:db/tong-tuyen-cu', 'ev:db/loi-tu', 'ev:db/so-tay'],
+        min: 2,
+      },
+      answer: { conclusion: 'ba-nguon', support: ['ev:db/ba-so', 'ev:db/dinh-nghia'], reject: ['ev:db/loi-tu', 'ev:db/so-tay'] },
+      explanation: 'Kết luận vững nhất: 13.930 là con số của phía Việt Nam; sử gia phương Tây (khoảng 8.000 chết, 15.000 bị thương) và sử gia châu Á (23.000 – 25.000 thương vong) đưa con số khác, và "chết" với "thương vong" không phải cùng một thứ. Một con số chiến tranh luôn cần tên người đếm và cách đếm.',
+      hints: ['Kết luận nào gắn mỗi con số với người đưa ra nó?', 'Lời anh Tư và cuốn sổ tay trong truyện không đỡ được kết luận.'],
+      feedback: [
+        { key: 'ket-luan:co', text: 'Đó là một trong ba bộ số liệu; các nguồn khác đưa con số khác.' },
+        { key: 'ket-luan:khong-dem', text: 'Quá tay: có ba bộ số liệu từ ba phía.' },
+        { key: 'yeu:ev:db/loi-tu', text: 'Lời anh Tư là điều cần kiểm.' },
+        { key: 'yeu:ev:db/so-tay', text: 'Cuốn sổ tay là vật trong truyện.' },
+        { key: 'thieu', text: 'Đúng hướng, nhưng cần cả ba bộ số liệu lẫn việc chúng đếm khác nhau.' },
+      ],
+      skills: ['research', 'sources'],
+      links: ['a:chien-tranh-dong-duong-1945-1954'],
+      sources: ['a:chien-tranh-dong-duong-1945-1954'],
+    },
+  ],
+
+  evidence: [
+    { id: 'ev:db/so-tay', title: 'Cuốn sổ tay ướt mưa', text: 'Sổ ghi chép của một đơn vị, nhoè mấy trang cuối. Vật trong truyện.', kind: 'fiction', reliability: 'Tình tiết hư cấu của game.', verification: 'library' },
+    { id: 'ev:db/loi-tu', title: 'Lời anh Tư', text: '"Đã đếm xong, chính xác đến từng người." Lời nhân vật trong truyện.', kind: 'anecdote', source: 'a:chien-tranh-dong-duong-1945-1954', reliability: 'Bài thư viện ghi ba bộ số liệu khác nhau.', verification: 'library' },
+    { id: 'ev:db/ba-so', title: 'Ba bộ số liệu', text: 'Phía Việt Minh: khoảng 8.000 chết, 15.000 bị thương (sử gia phương Tây); 23.000 – 25.000 thương vong (sử gia châu Á); 13.930 thương vong (số liệu Việt Nam).', kind: 'secondary', source: 'a:chien-tranh-dong-duong-1945-1954', reliability: 'Theo hộp thông tin của trang nguồn, ghi rõ từng phía.', verification: 'library' },
+    { id: 'ev:db/dinh-nghia', title: 'Chết và thương vong', text: '"Thương vong" gồm cả người bị thương; "chết" thì không. Hai con số đếm khác nhau không so thẳng được.', kind: 'interpretation', source: 'a:chien-tranh-dong-duong-1945-1954', reliability: 'Cách đọc dữ liệu, suy từ chính các con số bài thư viện ghi.', verification: 'library' },
+    { id: 'ev:db/phap', title: 'Phía Pháp', text: 'Chết trong trận 1.142 – 2.293; hơn 11.000 người bị bắt.', kind: 'secondary', source: 'a:chien-tranh-dong-duong-1945-1954', reliability: 'Theo trang nguồn; cũng là một khoảng, không phải một con số.', verification: 'library' },
+    { id: 'ev:db/ca-cuoc-chien', title: 'Cả cuộc chiến 1946 – 1954', text: 'Tổng số người chết khoảng 400.000 đến 842.707, trong đó dân thường 125.000 đến 400.000.', kind: 'secondary', source: 'a:chien-tranh-dong-duong-1945-1954', reliability: 'Hộp thông tin của trang nguồn.', verification: 'library' },
+    { id: 'ev:db/tong-tuyen-cu', title: 'Tổng tuyển cử 1956', text: 'Genève định tổng tuyển cử tháng 7/1956; năm 1955 miền Nam tuyên bố không tham gia.', kind: 'secondary', source: 'a:chien-tranh-dong-duong-1945-1954', reliability: 'Bài thư viện, theo trang nguồn.', verification: 'library' },
+  ],
+
+  items: [{ id: 'item:db/so-tay', name: 'Cuốn sổ tay ướt mưa', kind: 'document', text: 'Sổ ghi chép của một đơn vị. (Vật trong truyện.)', links: ['a:chien-tranh-dong-duong-1945-1954'] }],
+
+  claims: [],
+  completion: { quest: 'q:db/ba-con-so', is: 'done' },
+}

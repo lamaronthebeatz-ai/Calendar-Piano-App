@@ -44,6 +44,8 @@ Mọi thông tin đều có nguồn ở cuối trang. Những gì chưa kiểm c
 
 **Bình ca và organ ở Việt Nam:** điều đã biết và những khoảng trống — [[binh-ca-va-organ-o-viet-nam]].
 
+**Lịch sử nền:** các cuộc chiến và mốc chính trị mà âm nhạc đi cùng — [[lich-su-viet-nam-qua-cac-cuoc-chien]].
+
 **Di sản và thị trường:** [[di-san-phi-vat-the-va-am-nhac]] (các di sản UNESCO và phê phán) và [[cong-nghiep-am-nhac]] (tác quyền, VCPMC, streaming).
 `,
   },

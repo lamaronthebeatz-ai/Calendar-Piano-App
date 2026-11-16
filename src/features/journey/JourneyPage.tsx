@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { findArticle } from '../theory/wiki'
 import { YouTubeVideo } from '../theory/YouTube'
-import { CHAPTERS } from './chapters'
+import { ALL_CHAPTERS, CHAPTERS, TRACKS, trackOf } from './chapters'
 import { CONTEXT } from './context'
 import { MAPS, onMap } from './maps'
 import { ERA, loadPool, makeTrip, type Pool } from './endless'
@@ -42,14 +42,16 @@ const VERDICT: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Gi
 export function JourneyPage() {
   const save = useSave()
   const [params, setParams] = useSearchParams()
-  const asked = CHAPTERS.findIndex((c) => c.id === params.get('c'))
-  // no chapter in the address: the first one not yet finished (or the last)
-  const chapter = asked >= 0 && opened(asked, save) ? CHAPTERS[asked] : (CHAPTERS.find((c, i) => opened(i, save) && !finished(c, save)) ?? CHAPTERS[CHAPTERS.length - 1])
+  const asked = ALL_CHAPTERS.find((c) => c.id === params.get('c'))
+  // the journey: the asked chapter's, else ?t= (world by default)
+  const track = asked ? trackOf(asked.id) : (TRACKS.find((t) => t.id === params.get('t') && t.chapters.length) ?? TRACKS[0])
+  // no chapter in the address: the first one of the journey not yet finished (or the last)
+  const chapter = asked && opened(asked, save) ? asked : (track.chapters.find((c) => opened(c, save) && !finished(c, save)) ?? track.chapters[track.chapters.length - 1])
   const scene = chapter.scenes.find((s) => s.id === params.get('s'))
   const v = params.get('v')
   // a chapter opens on its historical prologue the first time
   const day = today()
-  const dailyId = dailyChapter(day, CHAPTERS.filter((c, i) => ERA[c.id] && opened(i, save)).map((c) => c.id))
+  const dailyId = dailyChapter(day, CHAPTERS.filter((c) => ERA[c.id] && opened(c, save)).map((c) => c.id))
   const dailyCh = CHAPTERS.find((c) => c.id === dailyId)
   const arc = ARCS.find((a) => a.id === params.get('a') && a.chapter === chapter.id && holds(a.opens, save))
   const view = !save.name ? 'create' : v === 'arc' && arc ? 'arc' : v === 'endless' ? 'endless' : v === 'daily' && dailyCh ? 'daily' : scene ? 'scene' : v === 'court' ? 'court' : v === 'prologue' || (CONTEXT[chapter.id] && !save.seen.includes(chapter.id)) ? 'prologue' : 'atlas'
@@ -138,6 +140,7 @@ function Me({ save, size = 40 }: { save: Save; size?: number }) {
 
 function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) {
   const [drawer, setDrawer] = useState(false)
+  const track = trackOf(chapter.id)
   const done = chapter.scenes.filter((s) => save.done.includes(key(chapter, s)))
   const next = chapter.scenes.find((s) => !save.done.includes(key(chapter, s)))
   const courtOpen = !next
@@ -180,12 +183,21 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
             ))}
           </div>
         )}
-        {CHAPTERS.length > 1 && (
+        {TRACKS.filter((t) => t.chapters.length).length > 1 && (
+          <nav className="jr-tracks" aria-label="Hành trình">
+            {TRACKS.filter((t) => t.chapters.length).map((t) => (
+              <Link key={t.id} to={`/hanh-trinh?t=${t.id}`} replace aria-current={t === track ? 'page' : undefined}>
+                {t.title}
+              </Link>
+            ))}
+          </nav>
+        )}
+        {track.chapters.length > 1 && (
           <nav className="jr-chapters" aria-label="Các chương">
-            {CHAPTERS.map((c, i) => (
-              <Link key={c.id} to={`/hanh-trinh?c=${c.id}`} replace aria-current={c === chapter ? 'page' : undefined} className={opened(i, save) ? '' : 'is-locked'} onClick={(e) => !opened(i, save) && e.preventDefault()}>
+            {track.chapters.map((c) => (
+              <Link key={c.id} to={`/hanh-trinh?c=${c.id}`} replace aria-current={c === chapter ? 'page' : undefined} className={opened(c, save) ? '' : 'is-locked'} onClick={(e) => !opened(c, save) && e.preventDefault()}>
                 <b>{c.numeral}</b> {c.era}
-                {!opened(i, save) && ' 🔒'}
+                {!opened(c, save) && ' 🔒'}
               </Link>
             ))}
           </nav>
@@ -242,7 +254,7 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
               ↺ Chơi lại chương này
             </button>
           )}
-          {CHAPTERS.every((c) => finished(c, save)) && (
+          {track.id === 'the-gioi' && CHAPTERS.every((c) => finished(c, save)) && (
             <button className="jr-ghost is-small" onClick={() => confirm('Bắt đầu Hành trình mới+? Cốt truyện mọi chương làm lại từ đầu; kỹ năng, thẻ chứng cứ, Codex, thành tích vẫn giữ, các chương vẫn mở.') && update((s) => newGamePlus(s))}>
               ✦ Hành trình mới+{save.ngPlus ? ` (lần ${save.ngPlus + 1})` : ''}
             </button>
@@ -782,7 +794,8 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
   const claims = chapter.court.claims
   const judged = claims.filter((c) => save.verdicts[key(chapter, c)])
   const right = judged.filter((c) => save.verdicts[key(chapter, c)] === c.verdict).length
-  const next = CHAPTERS[CHAPTERS.indexOf(chapter) + 1]
+  const list = trackOf(chapter.id).chapters
+  const next = list[list.indexOf(chapter) + 1]
   const navigate = useNavigate()
   useEffect(() => {
     playTrack(MUSIC[chapter.theme])

@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { ARTICLES } from '../theory/articles.source'
-import { CHAPTERS } from './chapters'
+import { ALL_CHAPTERS, TRACKS } from './chapters'
 import { CONTEXT } from './context'
 import { CREDITS } from './credits'
 import { MAPS, onMap } from './maps'
@@ -14,7 +14,7 @@ const picture = (id: string) => existsSync(`public/images/journey/${id}.webp`) &
 /** A background also has its phone-sized copy. */
 const backdrop = (id: string) => picture(id) && existsSync(`public/images/journey/${id}-m.webp`)
 
-describe.each(CHAPTERS)('chương $numeral — $title', (ch) => {
+describe.each(ALL_CHAPTERS)('chương $numeral — $title', (ch) => {
   it('mỗi cảnh trỏ tới bài có thật, ảnh có nguồn, đáp án nằm trong các lựa chọn', () => {
     expect(backdrop(ch.cover), `cover ${ch.cover}`).toBe(true)
     expect(MUSIC[ch.theme], `theme ${ch.theme}`).toBeDefined()
@@ -51,5 +51,19 @@ describe.each(CHAPTERS)('chương $numeral — $title', (ch) => {
   it('không trùng id cảnh, thẻ, lời khai', () => {
     const ids = [...ch.scenes.map((s) => s.id), ...ch.scenes.map((s) => 'card:' + s.card.id), ...ch.court.claims.map((c) => 'claim:' + c.id)]
     expect(new Set(ids).size).toBe(ids.length)
+  })
+})
+
+describe('các hành trình', () => {
+  it('thẻ và chương không trùng id giữa mọi hành trình (thẻ lưu chung một save)', () => {
+    const cards = ALL_CHAPTERS.flatMap((c) => c.scenes.map((s) => s.card.id))
+    expect(new Set(cards).size).toBe(cards.length)
+    const ids = ALL_CHAPTERS.flatMap((c) => [c.id, ...c.scenes.map((s) => `${c.id}/${s.id}`)])
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+  it('hành trình Việt Nam có đủ sáu chương, mỗi chương ít nhất sáu chặng', () => {
+    const vn = TRACKS.find((t) => t.id === 'viet-nam')!
+    expect(vn.chapters.length).toBe(6)
+    for (const c of vn.chapters) expect(c.scenes.length).toBeGreaterThanOrEqual(6)
   })
 })

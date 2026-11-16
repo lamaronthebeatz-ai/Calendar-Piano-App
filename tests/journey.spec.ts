@@ -91,7 +91,7 @@ test('save cũ journey:v1 được chuyển sang v2 một lần, bản gốc gi�
   await expect(page.locator('.jr-player-name')).toHaveText('Minh')
   const store = await page.evaluate(() => ({ v2: JSON.parse(localStorage.getItem('journey:v2') ?? '{}'), bak: localStorage.getItem('journey:v1.bak') }))
   expect(store.bak).toContain('"Minh"')
-  expect(store.v2).toMatchObject({ version: 2, name: 'Minh', done: ['trung-co/phong-chep-sach'], chaptersOpen: ['trung-co'] })
+  expect(store.v2).toMatchObject({ version: 2, name: 'Minh', done: ['trung-co/phong-chep-sach'], chaptersOpen: ['trung-co', 'vn-co-dai'] })
 })
 
 test('phiên toà sử gia: phán quyết rồi chỉ ra bài làm căn cứ, mới thấy lời giải', async ({ page }) => {
@@ -141,4 +141,18 @@ test('chơi lại chương: chặng và phán quyết làm lại, thẻ vẫn gi
   await expect(page.locator('.jr-player-meta')).toContainText(`0/${ch.scenes.length} chặng · 1 thẻ chứng cứ`)
   // chapter II stays open
   await expect(page.locator('.jr-chapters a').nth(1)).not.toHaveClass(/is-locked/)
+})
+
+test('hành trình Việt Nam chơi độc lập: chọn từ bản đồ, chương I mở sẵn, chương sau khoá, vào được chặng đầu', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co', 'vn-co-dai'] }))
+  })
+  await page.goto('/#/hanh-trinh')
+  await page.locator('.jr-tracks').getByRole('link', { name: 'Hành trình Việt Nam' }).click()
+  await expect(page.locator('.jr-atlas-title')).toHaveText('Tiếng trống và bãi cọc')
+  await expect(page.locator('.jr-chapters a.is-locked')).toHaveCount(5)
+  // the world journey's own chapters are not in this row
+  await expect(page.locator('.jr-chapters')).not.toContainText('Phục hưng')
+  await page.locator('.jr-stop-row.is-next').click()
+  await expect(page).toHaveURL(/s=vn-dong-son/)
 })

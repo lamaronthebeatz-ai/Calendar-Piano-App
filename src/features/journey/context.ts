@@ -1,3 +1,5 @@
+import { CONTEXT_VN } from './context-vn'
+
 /**
  * Phần mở đầu mỗi chương: bối cảnh lịch sử của thời kỳ, xem trước khi vào bản đồ. Mọi sự kiện lấy từ bài thư viện
  * (`read`), chủ yếu các đoạn giới thiệu thời kỳ – trường phái (theory/content/schools.ts) và bài
@@ -210,3 +212,5 @@ export const CONTEXT: Record<string, ContextPanel[]> = {
     },
   ],
 }
+
+Object.assign(CONTEXT, CONTEXT_VN)

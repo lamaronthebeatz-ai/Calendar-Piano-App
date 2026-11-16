@@ -1,3 +1,5 @@
+import { MUSIC_VN } from './music-vn'
+
 /** Background music of each scene: free recordings on Wikimedia Commons, played from their MP3 transcodes (CORS open). */
 export interface Track { src: string; title: string; by: string; licence: string; page: string; note?: string }
 export const MUSIC: Record<string, Track> = {
@@ -68,3 +70,6 @@ export const MUSIC: Record<string, Track> = {
   'sibelius': { src: "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Grieg_-_Peer_Gynt_Suite_No._1%2C_Op._46_-_II._The_Death_of_Aase_%28Musopen_Symphony%29.flac/Grieg_-_Peer_Gynt_Suite_No._1%2C_Op._46_-_II._The_Death_of_Aase_%28Musopen_Symphony%29.flac.mp3", title: "Grieg — Peer Gynt: Cái chết của Åse", by: "Musopen Symphony", licence: 'Public domain', page: "https://commons.wikimedia.org/wiki/File:Grieg_-_Peer_Gynt_Suite_No._1%2C_Op._46_-_II._The_Death_of_Aase_%28Musopen_Symphony%29.flac", note: "Nhạc Bắc Âu của Grieg — chưa có bản thu tự do nhạc Sibelius" },
   'mahler': { src: "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b2/Mahler_Symphony_No._5%2C_IV._Adagietto.ogg/Mahler_Symphony_No._5%2C_IV._Adagietto.ogg.mp3", title: "Mahler — Giao hưởng số 5: Adagietto", by: "Peabody Symphony Orchestra", licence: 'CC0', page: "https://commons.wikimedia.org/wiki/File:Mahler_Symphony_No._5%2C_IV._Adagietto.ogg" },
 }
+
+// the Vietnamese journey; its Chopin stop borrows the world journey's Nocturne (not Đặng Thái Sơn's recording)
+Object.assign(MUSIC, MUSIC_VN, { 'vn-chopin-1980': { ...MUSIC.chopin, note: 'Một bản Nocturne của Chopin — không phải bản thu của Đặng Thái Sơn' } })

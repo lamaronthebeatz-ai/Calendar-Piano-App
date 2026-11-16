@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { ARTICLES } from '../../theory/articles.source'
-import { CHAPTERS } from '../chapters'
+import { CHAPTERS, VN_CHAPTERS } from '../chapters'
 import { legacyChapter, legacyPuzzle } from '../content/legacy'
 import { analyzeDialogue, choicesOf, enter, step } from './dialogue'
 import { checkPuzzle, puzzleProblem } from './puzzles'
@@ -62,7 +62,7 @@ describe('progress store (localStorage)', () => {
     expect(s.chaptersOpen).toContain(CHAPTERS[1].id)
     expect(s.xp).toBeGreaterThan(0)
     // the first chapter gains a scene the player has not played: chapter II stays open
-    expect(p.opened(1, { ...s, done: s.done.slice(1) })).toBe(true)
+    expect(p.opened(CHAPTERS[1], { ...s, done: s.done.slice(1) })).toBe(true)
   })
   it('an unreadable v2 save is set aside, not overwritten', async () => {
     mem.set('journey:v2', '{broken')
@@ -242,7 +242,7 @@ describe('progression', () => {
   })
 })
 
-describe.each(CHAPTERS)('chương $numeral qua engine', (ch) => {
+describe.each([...CHAPTERS, ...VN_CHAPTERS])('chương $numeral qua engine', (ch) => {
   const def = legacyChapter(ch)
   it('nội dung cũ hợp lệ: tham chiếu, thoại, câu đố tự giải được, nhân vật lịch sử có nguồn', () => {
     expect(validateChapter(def, (s) => slugs.has(s))).toEqual([])

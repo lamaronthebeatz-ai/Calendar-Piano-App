@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test'
 import { banThao } from '../src/features/journey/content/ban-thao'
 import { ARCS } from '../src/features/journey/content/arcs'
-import { CHAPTERS } from '../src/features/journey/chapters'
+import { ALL_CHAPTERS, trackOf } from '../src/features/journey/chapters'
 import type { PuzzleDef } from '../src/features/journey/engine/types'
 
 /**
@@ -261,9 +261,10 @@ test.describe('Phase 7: tuyến điều tra của chương II – VI', () => {
   /** A v1 save with every scene done up to and including the arc's opening scene, so its chapter is open. */
   const seed = async (page: Page, arc: (typeof ARCS)[number]) => {
     const scene = (arc.opens as { quest: string }).quest.slice(2)
-    const at = CHAPTERS.findIndex((c) => c.id === arc.chapter)
-    const done = [...CHAPTERS.slice(0, at).flatMap((c) => c.scenes.map((s) => `${c.id}/${s.id}`)), scene]
-    await page.addInitScript((d) => localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co', 'phuc-hung', 'baroque', 'co-dien', 'lang-man', 'quoc-gia'], done: d })), done)
+    const list = trackOf(arc.chapter).chapters
+    const at = list.findIndex((c) => c.id === arc.chapter)
+    const done = [...list.slice(0, at).flatMap((c) => c.scenes.map((s) => `${c.id}/${s.id}`)), scene]
+    await page.addInitScript((d) => localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: d.seen, done: d.done })), { done, seen: ALL_CHAPTERS.map((c) => c.id) })
   }
 
   for (const arc of ARCS.slice(1))

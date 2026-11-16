@@ -33,6 +33,13 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Ôn luyện: `dueReviews(puzzles, save)`, `recordReview` (không XP); `?v=arc&a=…&p=…&r=1` → `PuzzleScreen review`.
 - `replayChapter`, `newGamePlus` (nút trên bản đồ chương; NG+ khi xong cả 6 chương). `save.ngPlus`.
 
+## Hành trình Việt Nam (16/11) — thiết kế ở `docs/journey/VIETNAM.md`
+- Hai hành trình chơi độc lập: `TRACKS` (`chapters/index.ts`), `opened(chapter, save)` theo hành trình, `?t=viet-nam`; nút chọn hành trình (`.jr-tracks`) trên bản đồ chương. Vô tận / thử thách ngày / NG+ chỉ cho hành trình thế giới.
+- 6 chương `chapters/vn-*.ts` (id chương và thẻ có tiền tố `vn-`); nhạc `music-vn.ts`, bối cảnh `context-vn.ts`, bản đồ Taberd 1838 `map-vn`; style `jr-era-vn`.
+- Nền sự kiện: 6 bài `lich-su-viet-nam-*` (`theory/content/lich-su-viet-nam.ts`), viết từ Wikipedia tiếng Anh qua agent đọc web — chỉ giữ điều trang nguồn ghi; số thương vong ghi khoảng và của bên nào.
+- Người còn sống không có lời thoại bịa; nhạc nền phần lớn là "âm thanh minh hoạ" (Commons gần như không có nhạc cổ truyền Việt tự do) — `note` hiện trên màn.
+- Commons: ảnh gốc bị 429, bản `/thumb/` thì được → bộ tải xin thumb rộng = min(1920, rộng gốc − 1). Tìm file: API `generator=search` + `filemime:audio`/`filetype:bitmap` (quét danh mục "Music of Vietnam" sâu 3 tầng quá chậm vì có cả danh mục nhạc sĩ).
+
 ## Phase 7 (16/11) — một tuyến điều tra cho mỗi chương II–VI
 - `content/thanh-le.ts` (tl), `clavier.ts` (cb), `loi-don.ts` (sl), `leitmotif.ts` (lm), `goin-home.ts` (gh); đăng ký ở `arcs.ts`; mở khi xong cảnh tương ứng (`opens`). Bảng tóm ở `docs/journey/REPORTS.md` § Phase 7.
 - Câu đố mới `figured` (`{key, items: {bass, figure: '5/3'|'6'|'6/4'|'7'}}`, chỉ giọng trưởng) và `scale` (`{items: {tonic, scale: id của harmony.ts SCALES}}`); giao diện `PickUI` (nút bật/tắt từng nốt, `role=group` tên "Đô – 6" / "Dorian trên Rê").

@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react'
-import { CHAPTERS } from './chapters'
+import { ALL_CHAPTERS, trackOf } from './chapters'
 import { emptySave, fromV1, readSave, type Save } from './engine/save'
 import { newAchievements, puzzleXp } from './engine/progression'
 import type { Chapter } from './types'
@@ -17,13 +17,17 @@ const LOG = 'journey:repair-log'
 
 /** A chapter is finished once every story scene in it is done. */
 export const finished = (c: Chapter, s: Pick<Save, 'done'>) => c.scenes.every((x) => s.done.includes(`${c.id}/${x.id}`))
-/** Open: the first chapter, any chapter ever opened, or the one after a finished chapter. */
-export const opened = (i: number, s: Pick<Save, 'done' | 'chaptersOpen'>) => i === 0 || s.chaptersOpen.includes(CHAPTERS[i].id) || finished(CHAPTERS[i - 1], s)
+/** Open: the first chapter of its journey, any chapter ever opened, or the one after a finished chapter of the same journey. */
+export const opened = (c: Chapter, s: Pick<Save, 'done' | 'chaptersOpen'>) => {
+  const list = trackOf(c.id).chapters
+  const i = list.indexOf(c)
+  return i <= 0 || s.chaptersOpen.includes(c.id) || finished(list[i - 1], s)
+}
 
-const openNow = (s: Save) => CHAPTERS.filter((_, i) => opened(i, s)).map((c) => c.id)
+const openNow = (s: Save) => ALL_CHAPTERS.filter((c) => opened(c, s)).map((c) => c.id)
 /** What the finished story scenes taught: the articles they ask about and the people met. */
 const learned = (s: Save) =>
-  CHAPTERS.flatMap((c) => c.scenes.filter((x) => s.done.includes(`${c.id}/${x.id}`)).flatMap((x) => [x.quest.read, x.card.read, ...(x.npc.slug ? [x.npc.slug] : [])])).map((slug) => `a:${slug}`)
+  ALL_CHAPTERS.flatMap((c) => c.scenes.filter((x) => s.done.includes(`${c.id}/${x.id}`)).flatMap((x) => [x.quest.read, x.card.read, ...(x.npc.slug ? [x.npc.slug] : [])])).map((slug) => `a:${slug}`)
 
 /** Opening is an event: what the rule opens today stays open even if an older chapter later gains content. */
 const settle = (s: Save): Save => {

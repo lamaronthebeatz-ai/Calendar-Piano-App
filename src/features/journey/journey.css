@@ -10,6 +10,8 @@
 .jr-era-baroque .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; font-size: 2.7em; line-height: 0.85; color: var(--jr-gold-2); text-shadow: none; filter: drop-shadow(0 0 10px rgb(240 212 143 / 0.45)); }
 .jr-era-national { --jr-tint: 210; --jr-grade: linear-gradient(180deg, rgb(10 18 30 / 0.4), rgb(16 18 22 / 0.1) 40%, rgb(4 6 8 / 0.88)); }
 .jr-era-national .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; padding: 0.04em 0.14em 0; font-size: 2.4em; line-height: 0.88; color: var(--jr-ink); background: rgb(122 30 18 / 0.85); border-radius: 3px; }
+.jr-era-vn { --jr-tint: 12; --jr-grade: linear-gradient(180deg, rgb(30 10 6 / 0.42), rgb(20 12 6 / 0.12) 40%, rgb(8 4 2 / 0.9)); }
+.jr-era-vn .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; padding: 0.04em 0.14em 0; font-size: 2.4em; line-height: 0.88; color: var(--jr-gold-2); background: rgb(140 26 16 / 0.9); border-radius: 3px; }
 .jr-era-romantic { --jr-tint: 330; --jr-grade: linear-gradient(180deg, rgb(26 10 22 / 0.42), rgb(22 12 10 / 0.12) 40%, rgb(6 4 6 / 0.88)); }
 .jr-era-romantic .jr-line.is-narration::first-letter { float: left; margin: 2px 9px 0 0; font-size: 2.8em; line-height: 0.82; font-style: italic; color: var(--jr-gold-2); filter: drop-shadow(0 0 12px rgb(200 120 140 / 0.45)); }
 .jr-era-classical { --jr-tint: 190; --jr-grade: linear-gradient(180deg, rgb(14 22 30 / 0.34), rgb(28 24 18 / 0.08) 40%, rgb(6 6 8 / 0.84)); }
@@ -226,6 +228,9 @@ html.is-android .jr-motes, html.is-android .jr-glow { display: none; }
 .jr-atlas-sound { position: absolute; z-index: 5; top: calc(16px + env(safe-area-inset-top)); right: 14px; }
 .jr-credit { display: grid; justify-items: end; gap: 1px; white-space: normal; }
 .jr-credit a { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.jr-tracks { margin-top: 16px; display: inline-flex; gap: 4px; padding: 3px; border-radius: 999px; border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.55); }
+.jr-tracks a { height: 30px; display: inline-flex; align-items: center; padding-inline: 14px; border-radius: 999px; font-size: 13px; color: var(--jr-dim); }
+.jr-tracks a[aria-current='page'] { background: var(--jr-gold); color: #1a130d; }
 .jr-chapters { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 .jr-chapters a { height: 32px; display: inline-flex; align-items: center; gap: 6px; padding-inline: 12px; border-radius: 999px; font-size: 12.5px; color: var(--jr-dim); border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.5); }
 .jr-chapters a b { font-family: var(--font-display); color: var(--jr-gold); font-weight: 400; }

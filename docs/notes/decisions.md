@@ -54,3 +54,4 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - (15/11) Thánh ca Công giáo Việt Nam là **mục riêng** (`thanhca`, nhóm Việt Nam) + sách riêng; sách còn bản quyền (Văn Chi, Kim Long) chỉ tóm lược có trang, chưa có bản thì chỉ mô tả.
 - (15/11) Mọi thuật ngữ trong Lý thuyết + Âm nhạc học nối vào Từ điển Grove (`[[g:id]]`, tự động lúc build, một lần mỗi mục mỗi bài, gạch chấm để phân biệt với link bài).
 - Hành trình (16/11): mỗi chương mở đầu bằng bối cảnh lịch sử của thời kỳ; bản đồ dùng bản đồ cổ đúng thời kỳ (PD) thay bản đồ phác, chi tiết, phóng to được.
+- (16/11) **Hành trình Việt Nam**: chơi độc lập với chuỗi chương thế giới, cùng công thức (chương theo thời kỳ, chặng, phiên toà, bối cảnh, bản đồ cổ, sau đó tuyến điều tra), gắn với lịch sử và chiến tranh Việt Nam, kể sinh động. Người biên soạn chọn: kể trung lập, dùng cả hai tên gọi các cuộc chiến, ghi con số của từng bên; không gán lời bịa cho người còn sống.

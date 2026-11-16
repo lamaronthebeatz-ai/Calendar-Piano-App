@@ -1,4 +1,4 @@
-import { CHAPTERS } from './chapters'
+import { ALL_CHAPTERS } from './chapters'
 import { CONTEXT } from './context'
 import { MUSIC } from './music'
 import type { Chapter, Scene, Verdict } from './types'
@@ -84,7 +84,7 @@ function rng(seed: number) {
 }
 
 /** Ảnh chân dung NPC đã có trong các chương, theo slug. */
-const FACES: Record<string, string> = Object.fromEntries(CHAPTERS.flatMap((c) => c.scenes.flatMap((s) => (s.npc.slug && s.npc.img ? [[s.npc.slug, s.npc.img]] : []))))
+const FACES: Record<string, string> = Object.fromEntries(ALL_CHAPTERS.flatMap((c) => c.scenes.flatMap((s) => (s.npc.slug && s.npc.img ? [[s.npc.slug, s.npc.img]] : []))))
 
 export const VERDICT_LABEL: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Giai thoại', unsure: 'Chưa chắc' }
 
