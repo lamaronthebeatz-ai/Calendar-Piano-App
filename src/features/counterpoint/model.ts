@@ -81,7 +81,8 @@ export const perfectClass = (i: Interval) => (i.kind !== 'perfect' ? null : ((i.
 export function melodicOk(from: Pitch, to: Pitch): { ok: boolean; why?: string } {
   const n = to.step - from.step
   const a = Math.abs(n)
-  if (a === 0) return { ok: true }
+  // "Bán cung Cromatic không được sử dụng" (Phạm Tú Hương tr. 6): Si – Si♭ in a row
+  if (a === 0) return to.midi === from.midi ? { ok: true } : { ok: false, why: 'nửa cung cromatic' }
   const up = n > 0 ? to : from
   const lo = n > 0 ? from : to
   const iv = interval(up, lo)

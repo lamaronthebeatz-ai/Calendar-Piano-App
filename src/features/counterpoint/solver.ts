@@ -1,35 +1,71 @@
 /**
- * Depth-first search for a counterpoint line: note by note, every partial line is checked with `check` (hard rules
- * only), so a branch dies at the first broken rule. Complete lines are ranked by the soft-rule penalty.
- * When nothing is found the search reports where it got furthest and which rules stopped it there.
+ * Depth-first search (a CSP over the counterpoint's notes): every partial line is checked with `check` (hard rules
+ * only), so a branch dies at the first broken rule. The move order is only a heuristic for speed — every candidate in
+ * the domain is tried, so the set of answers does not depend on it. A complete line counts only when the independent
+ * checker (`verify.ts`) agrees. Answers are listed by the soft-rule notes, which never decide validity.
+ * Three outcomes: 'valid' (an answer passed both checkers), 'unsat' (the whole domain was searched, or a ✱ is
+ * impossible by necessary conditions alone), 'unknown' (time ran out, or the two checkers disagreed).
  */
-import { barQ, inKey, interval, makeVersion, notesOf, pitchName, upperLower, type Pitch, type Seg } from './model'
+import { barQ, inKey, interval, letterOf, makeVersion, notesOf, pitch, pitchName, upperLower, type Pitch, type Seg } from './model'
 import { check, checkLine, isSoft, placeOk, totalOf, type Problem, type Report, type RuleId, type VersionSpec } from './rules'
+import { verify } from './verify'
 import type { Key, Meter } from './model'
 
 export type Solution = { cp: Seg[]; penalty: number; report: Report }
 export type Blocker = { rule: RuleId; t: number; count: number; detail?: string; version: string }
 export type StarIssue = { t: number; reason: string }
-export type SolveResult = { solutions: Solution[]; nodes: number; exhausted: boolean; furthest: number; blockers: Blocker[]; stars?: StarIssue[] }
+export type Status = 'valid' | 'unsat' | 'unknown'
+export type SolveResult = {
+  solutions: Solution[]; nodes: number; exhausted: boolean; furthest: number; blockers: Blocker[]; stars?: StarIssue[]
+  status: Status
+  /** lines the search accepted but the independent checker refused (a bug in one of them) */
+  disputed?: number
+}
 /** `prefix`: notes already written (the search continues after them); `budget`: how many broken hard rules a line may
  *  carry (0 = a lawful line; 1–2 = the "fewest faults" search used when an exercise has no lawful answer). */
 export type SolveOpts = { timeMs: number; maxSolutions: number; seed?: number; prefix?: Seg[]; budget?: number }
 /** Distinct hard faults: the same broken rule at the same moment counts once, however many versions show it. */
 export const faultsOf = (r: Report) => new Set(r.hard.map((v) => `${v.rule}|${v.t}`)).size
 
-const DURS = [6, 4, 3, 2, 1]
+const DURS = [8, 6, 4, 3, 2, 1]
+/** How far the counterpoint may stray from the đề on its own side (steps). Crossing bounds the other side exactly. */
+export const SPAN = 14
+
+/**
+ * The search space, stated so that "no answer" always means "none in this space": the counterpoint starts at the
+ * beginning, has no rests and no eighth notes, uses the key's notes plus any alteration the đề itself uses (the book
+ * allows biến âm), and stays within two octaves of the đề on its side.
+ */
+export function domainOf(p: Problem) {
+  const steps = p.given.map((s) => s.p.step)
+  const gLo = Math.min(...steps)
+  const gHi = Math.max(...steps)
+  const cpUpper = p.givenIs === 'II'
+  const lo = cpUpper ? gLo : gLo - SPAN
+  const hi = cpUpper ? gHi + SPAN : gHi
+  const alters = new Map<number, Set<number>>()
+  for (const s of p.given) {
+    if (s.p.alter === inKey(p.key, s.p.step).alter) continue
+    const L = letterOf(s.p)
+    if (!alters.has(L)) alters.set(L, new Set())
+    alters.get(L)!.add(s.p.alter)
+  }
+  const pitches: Pitch[] = []
+  for (let st = lo; st <= hi; st++) {
+    pitches.push(inKey(p.key, st))
+    for (const a of alters.get(((st % 7) + 7) % 7) ?? []) pitches.push(pitch(st, a))
+  }
+  const altered = [...alters.entries()].flatMap(([L, as]) => [...as].map((a) => pitchName(pitch(L + 28, a)).slice(0, -1) + (a === 0 ? '♮' : '')))
+  const text = `bè đối vị bắt đầu từ đầu bài, không dấu lặng, không nốt móc đơn, dùng nốt của giọng${altered.length ? ` và biến âm có trong đề (${altered.join(', ')})` : ''}, trong khoảng ${pitchName(inKey(p.key, lo))} – ${pitchName(inKey(p.key, hi))}`
+  return { lo, hi, pitches, text }
+}
 
 export function solve(p: Problem, o: SolveOpts): SolveResult {
   const total = totalOf(p)
   const B = barQ(p.meter)
-  const gSteps = p.given.map((s) => s.p.step)
-  const gLo = Math.min(...gSteps)
-  const gHi = Math.max(...gSteps)
   const cpUpper = p.givenIs === 'II'
-  const lo = cpUpper ? gLo - 2 : gLo - 10
-  const hi = cpUpper ? gHi + 10 : gHi + 2
-  const steps: number[] = []
-  for (let s = lo; s <= hi; s++) steps.push(s)
+  const { pitches } = domainOf(p)
+  let disputed = 0
   const givenNotes = notesOf(p.given)
   const givenAt = (t: number) => givenNotes.find((n) => n.start <= t && t < n.start + n.dur)!
 
@@ -50,7 +86,7 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
   const stateKey = (t: number) => {
     const n = notesOf(cp).slice(-3)
     const last = cp[cp.length - 1]
-    return `${t}|${n.map((x) => `${x.start}.${x.dur}.${x.p.midi}`).join(',')}|${last ? last.dur : 0}|${budget ? faults : 0}`
+    return `${t}|${n.map((x) => `${x.start}.${x.dur}.${x.p.step}.${x.p.alter}`).join(',')}|${last ? last.dur : 0}|${budget ? faults : 0}`
   }
   const keyOf = (segs: Seg[]) => segs.map((s) => `${s.start}:${s.dur}:${s.p.midi}${s.tied ? '~' : ''}`).join(' ')
 
@@ -61,16 +97,14 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
     const g = givenAt(t)
     for (const d of DURS) {
       if (t + d > total || !placeOk(p.meter, off, d)) continue
-      // the last note must reach the end, and nothing shorter than a half ends the piece
-      if (t + d === total && d < 2) continue
       // held over: a tie from the previous segment (no quarter ties, no short-to-long)
       // a tie inside a bar only where one note could not be written instead (a whole note, not a dotted half + a quarter)
       const oneNote = last && off !== 0 && placeOk(p.meter, last.start % B, last.dur + d)
       if (last && !oneNote && last.start + last.dur === t && (last.dur >= 2 || p.quarterPrep) && (last.dur >= d || (last.dur === 2 && d === 4))) {
         out.push({ s: { start: t, dur: d, p: last.p, tied: true }, cost: 0.6 + rnd() * 1.2 })
       }
-      for (const st of steps) {
-        const pt = inKey(p.key, st)
+      for (const pt of pitches) {
+        const st = pt.step
         const iv = cpUpper ? interval(pt, g.p) : interval(g.p, pt)
         if (iv.n < 0) continue
         let cost = rnd() * 1.6
@@ -97,6 +131,11 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
     if (t >= total) {
       const report = check(p, cp, total)
       const f = faultsOf(report)
+      // a lawful line must also pass the independent checker; a disagreement is a bug, never an answer
+      if (f === 0 && budget === 0 && verify(p, cp).length) {
+        disputed++
+        return
+      }
       if (f <= budget) {
         const k = keyOf(cp)
         if (!found.has(k)) found.set(k, { cp: cp.slice(), penalty: f * 1000 + report.penalty, report })
@@ -153,22 +192,26 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
   if (faults <= budget) dfs(start)
   const solutions = [...found.values()].sort((a, b) => a.penalty - b.penalty)
   const blockers = [...fails.values()].sort((a, b) => b.t - a.t || b.count - a.count).slice(0, 8)
-  return { solutions, nodes, exhausted: !timedOut && found.size < o.maxSolutions, furthest, blockers }
+  const exhausted = !timedOut && found.size < o.maxSolutions && !disputed
+  const status: Status = solutions.length && budget === 0 ? 'valid' : exhausted && budget === 0 ? 'unsat' : 'unknown'
+  return { solutions, nodes, exhausted, furthest, blockers, status, disputed }
 }
 
 /** Several searches with different random orders: more varied answers than one long search. */
 export function solveMany(p: Problem, timeMs: number, want = 6): SolveResult {
   const stars = starCheck(p)
-  if (stars.length) return { solutions: [], nodes: 0, exhausted: true, furthest: 0, blockers: [], stars }
+  if (stars.length) return { solutions: [], nodes: 0, exhausted: true, furthest: 0, blockers: [], stars, status: 'unsat' }
   const t0 = Date.now()
   const all = new Map<string, Solution>()
   let nodes = 0
   let last: SolveResult | null = null
   let exhausted = false
+  let disputed = 0
   for (let seed = 1; Date.now() - t0 < timeMs && all.size < want * 3; seed++) {
     const left = timeMs - (Date.now() - t0)
     const r = solve(p, { timeMs: seed === 1 ? left : Math.min(left, timeMs / 4), maxSolutions: seed === 1 ? 2 : 4, seed: seed * 7919 })
     nodes += r.nodes
+    disputed += r.disputed ?? 0
     last = r
     for (const s of r.solutions) all.set(s.cp.map((x) => `${x.start}:${x.dur}:${x.p.midi}${x.tied ? '~' : ''}`).join(' '), s)
     // the first search ran with the whole budget: if it finished without a single answer, there is none
@@ -178,41 +221,41 @@ export function solveMany(p: Problem, timeMs: number, want = 6): SolveResult {
     }
   }
   const solutions = [...all.values()].sort((a, b) => a.penalty - b.penalty).slice(0, want)
-  return { solutions, nodes, exhausted, furthest: last?.furthest ?? 0, blockers: last?.blockers ?? [] }
+  const status: Status = solutions.length ? 'valid' : exhausted ? 'unsat' : 'unknown'
+  return { solutions, nodes, exhausted, furthest: last?.furthest ?? 0, blockers: last?.blockers ?? [], status, disputed }
 }
 
 /**
- * Each ✱ on its own: is there any way at all to sound a lawful dissonance there? A strong-beat dissonance can only be
- * a suspension (doi-vi-don-gian-hai-be §3a), so either the đề holds a note over the ✱ and the counterpoint strikes
- * against it, or the đề strikes and the counterpoint must hold a prepared note. Checked in the original and every
- * version, with the same placement and tie rules as the search. A ✱ with no way is a proof that the exercise has no
- * answer, and the reason names the notes of the đề that close every door.
+ * Each ✱ on its own, by necessary conditions only, so a ✱ reported here is a proof that the exercise has no answer in
+ * the domain. A strong-beat dissonance can only be a suspension (doi-vi-don-gian-hai-be §3a): either the đề strikes and
+ * the counterpoint holds a prepared note, or the đề holds a prepared note and the counterpoint strikes. Checked in the
+ * original and every version. Deliberately left out, because a later note can still satisfy them: how the
+ * suspension resolves (the free voice may leap at the resolution, the resolution may pass on, Thí dụ 30–31) and
+ * where exactly the preparation starts.
  */
 export function starCheck(p: Problem): StarIssue[] {
   const total = totalOf(p)
-  const B = barQ(p.meter)
   const g = notesOf(p.given)
-  const gAt = (t: number) => g.find((n) => n.start <= t && t < n.start + n.dur)!
-  const steps = p.given.map((x) => x.p.step)
-  const cpUpper = p.givenIs === 'II'
-  const lo = cpUpper ? Math.min(...steps) - 2 : Math.min(...steps) - 10
-  const hi = cpUpper ? Math.max(...steps) + 10 : Math.max(...steps) + 2
+  const gAt = (t: number) => g.find((n) => n.start <= t && t < n.start + n.dur)
+  const { pitches } = domainOf(p)
+  const minPrep = p.quarterPrep ? 1 : 2
   const specs = [{ shift: { I: 0, II: 0 }, motion: 'near' as const, label: 'Nguyên thể' }, ...p.versions]
   /** The interval at time t when the counterpoint sounds `c`, in every version (index 0 = the original). */
   const ivs = (c: Pitch, t: number) =>
     specs.map((sp) => {
       const cpSeg: Seg[] = [{ start: 0, dur: total, p: c }]
-      const gSeg: Seg[] = [{ start: 0, dur: total, p: gAt(t).p }]
+      const gSeg: Seg[] = [{ start: 0, dur: total, p: gAt(t)!.p }]
       const v = makeVersion(p.key, p.givenIs === 'I' ? gSeg : cpSeg, p.givenIs === 'I' ? cpSeg : gSeg, sp.shift, sp.label, sp.motion)
       const { upper, lower } = upperLower(v)
       const it = interval(upper[0].p, lower[0].p)
       // which voice is on top in this version: the counterpoint or the đề
       const cpIsUp = (upper === v.I) === (p.givenIs === 'II')
-      return { it, cpIsUp }
+      return { it, cpIsUp, dis: it.kind === 'dissonant' }
     })
+  /** Sơ đồ 2: where the dissonant (held) note may sit. */
   const posOk = (n: number, heldIsUp: boolean) => {
     const s = ((n % 7) + 7) % 7
-    if (s === 1 && n === 1 && heldIsUp) return false
+    if (n === 1 && heldIsUp) return false
     if (s === 6 && !heldIsUp) return false
     if (s === 3 && n >= 10 && !heldIsUp) return false
     return true
@@ -220,53 +263,50 @@ export function starCheck(p: Problem): StarIssue[] {
   const out: StarIssue[] = []
   for (const t of p.stars) {
     const gn = gAt(t)
-    const gStrikes = gn.start === t
-    let ok = false
-    if (gStrikes) {
-      // the counterpoint holds a prepared note over the ✱
-      for (let s0 = t - (p.quarterPrep ? 1 : 2); s0 >= Math.max(0, t - B) && !ok; s0--) {
-        const L = t - s0
-        if (!placeOk(p.meter, s0 % B, L) || Math.floor(s0 / B) !== Math.floor((t - 1) / B)) continue
-        // thuận – nghịch – thuận: consonant where the preparation enters and just before the ✱; what the đề does in
-        // between is left to the full search (weak-beat passing dissonances are allowed there)
-        const inner = g.filter((n) => n.start > s0 && n.start < t).map((n) => n.start)
-        const gTimes = inner.length ? [s0, inner[inner.length - 1]] : [s0]
-        for (let st = lo; st <= hi && !ok; st++) {
-          const c = inKey(p.key, st)
-          if (!gTimes.every((x) => ivs(c, x).every((r) => r.it.n >= 0 && r.it.kind !== 'dissonant'))) continue
-          const at = ivs(c, t)
-          if (at[0].it.kind !== 'dissonant') continue
-          if (!at.every((r) => r.it.n >= 0 && (r.it.kind !== 'dissonant' || posOk(r.it.n, r.cpIsUp)))) continue
-          for (let dd = 1; dd <= L && !ok; dd++) {
-            const r = t + dd
-            if (r >= total || !placeOk(p.meter, t % B, dd) || g.some((n) => n.start > t && n.start < r)) continue
-            const res = inKey(p.key, st - 1)
-            if (ivs(res, r).every((x) => x.it.n >= 0 && x.it.kind !== 'dissonant')) ok = true
-          }
+    if (!gn || t === 0) continue
+    if (gn.start === t) {
+      // the đề strikes, so the counterpoint holds c from s0 (its own attack) over the ✱ and c is the suspension
+      const before = gAt(t - 1)!
+      const ok = pitches.some((c) => {
+        const at = ivs(c, t)
+        if (!at[0].dis || at.some((r) => r.it.n < 0 || (r.dis && !posOk(r.it.n, r.cpIsUp)))) return false
+        // thuận – nghịch – thuận: the sound just before the ✱ is consonant wherever the ✱ is dissonant
+        const bf = ivs(c, t - 1)
+        if (bf.some((r, k) => r.it.n < 0 || (at[k].dis && r.dis))) return false
+        // some entry s0 ≤ t − minPrep: consonant entry, no crossing while held, and room to resolve before the end
+        for (let s0 = t - minPrep; s0 >= 0; s0--) {
+          const en = ivs(c, s0)
+          if (en.some((r, k) => r.it.n < 0 || (at[k].dis && r.dis))) continue
+          if (g.some((n) => n.start > s0 && n.start < t && ivs(c, n.start).some((r) => r.it.n < 0))) continue
+          // the resolution needs at least one more quarter before the end
+          if (t + 1 < total) return true
         }
-      }
-      if (!ok) {
-        const before = gAt(t - 1)
-        out.push({ t, reason: `Bè đề đánh nốt mới (${pitchName(gn.p)}) ngay ở chỗ ✱, nên quãng nghịch chỉ có thể là nốt lưu ở bè đối vị. Nốt lưu phải thuận ngay trước ✱ (với ${pitchName(before.p)} của bè đề), nghịch đúng vị trí với ${pitchName(gn.p)}, rồi giải quyết xuống liền bậc vào quãng thuận (thuận – nghịch – thuận), ở cả nguyên thể lẫn biến thể, không vượt bè đề; nốt chuẩn bị dài từ nốt trắng trở lên và vào bằng quãng thuận — không có nốt nào thoả hết các điều kiện đó.` })
-      }
-    } else {
-      // the đề holds its note over the ✱: the counterpoint strikes a dissonance and the đề must resolve down by step
-      const nx = g.find((n) => n.start === gn.start + gn.dur)
-      const prep = t - gn.start
-      const r = gn.start + gn.dur
-      if (!nx || nx.p.step !== gn.p.step - 1) out.push({ t, reason: `Bè đề giữ ${pitchName(gn.p)} qua chỗ ✱ nhưng không giải quyết xuống liền bậc, nên không thành nốt lưu được.` })
-      else if ((prep < 2 && !p.quarterPrep) || prep < r - t) out.push({ t, reason: `Nốt lưu ở bè đề (${pitchName(gn.p)}) có phần chuẩn bị ngắn hơn phần nghịch hoặc là nốt đen.` })
-      else {
-        for (let st = lo; st <= hi && !ok; st++) {
-          const c = inKey(p.key, st)
-          const at = ivs(c, t)
-          if (at[0].it.kind !== 'dissonant') continue
-          if (!at.every((x) => x.it.n >= 0 && (x.it.kind !== 'dissonant' || posOk(x.it.n, !x.cpIsUp)))) continue
-          if (ivs(c, r).every((x) => x.it.n >= 0 && x.it.kind !== 'dissonant')) ok = true
-        }
-        if (!ok) out.push({ t, reason: `Bè đề giữ ${pitchName(gn.p)} làm nốt lưu, nhưng không có nốt nào của bè đối vị vừa nghịch đúng vị trí ở chỗ ✱ vừa thuận với nốt giải quyết ${pitchName(nx.p)} ở mọi bản.` })
-      }
+        return false
+      })
+      if (!ok)
+        out.push({ t, reason: `Bè đề đánh nốt mới (${pitchName(gn.p)}) ngay ở chỗ ✱, nên quãng nghịch chỉ có thể là nốt lưu ở bè đối vị. Nốt lưu phải thuận ngay trước ✱ (với ${pitchName(before.p)} của bè đề), nghịch đúng vị trí với ${pitchName(gn.p)} (sơ đồ 2), không chéo bè, ở cả nguyên thể lẫn mọi biến thể; nốt chuẩn bị dài từ nốt trắng trở lên và vào bằng quãng thuận — không nốt nào trong phạm vi tìm kiếm thoả hết các điều kiện đó.` })
+      continue
     }
+    // the đề holds gn over the ✱: it is the suspension, the counterpoint strikes c against it
+    const nx = g.find((n) => n.start === gn.start + gn.dur)
+    const nx2 = nx && g.find((n) => n.start === nx.start + nx.dur)
+    const prep = t - gn.start
+    const r = gn.start + gn.dur
+    const stepDown = !!nx && nx.p.step === gn.p.step - 1
+    const ornamented = !!nx && nx.dur <= 1 && !!nx2 && nx2.p.step === gn.p.step - 1
+    if (!nx || (!stepDown && !ornamented)) {
+      out.push({ t, reason: `Bè đề giữ ${pitchName(gn.p)} qua chỗ ✱ (nên nó là nốt lưu) nhưng sau đó không xuống liền bậc, kể cả kiểu nhảy một nốt đen rồi xuống liền bậc (Thí dụ 31).` })
+      continue
+    }
+    if (prep < minPrep || prep < r - t) {
+      out.push({ t, reason: `Nốt lưu ở bè đề (${pitchName(gn.p)}) có phần chuẩn bị ${prep < minPrep ? 'là nốt đen' : 'ngắn hơn phần nghịch'} — giáo trình tr. 10: nốt chuẩn bị dài hơn hoặc bằng nốt lưu, không dùng nốt đen.` })
+      continue
+    }
+    const ok = pitches.some((c) => {
+      const at = ivs(c, t)
+      return at[0].dis && at.every((x) => x.it.n >= 0 && (!x.dis || posOk(x.it.n, !x.cpIsUp)))
+    })
+    if (!ok) out.push({ t, reason: `Bè đề giữ ${pitchName(gn.p)} làm nốt lưu, nhưng không có nốt nào của bè đối vị vừa nghịch với nó ở nguyên thể vừa đặt nốt nghịch đúng vị trí (sơ đồ 2) và không chéo bè ở mọi biến thể.` })
   }
   return out
 }
@@ -329,15 +369,12 @@ export function hints(p: Problem, prefix: Seg[], timeMs: number): Hint[] {
   const t = prefix.length ? prefix[prefix.length - 1].start + prefix[prefix.length - 1].dur : 0
   if (t >= total) return []
   const last = prefix[prefix.length - 1]
-  const gSteps = p.given.map((x) => x.p.step)
-  const cpUpper = p.givenIs === 'II'
-  const lo = cpUpper ? Math.min(...gSteps) - 2 : Math.min(...gSteps) - 10
-  const hi = cpUpper ? Math.max(...gSteps) + 10 : Math.max(...gSteps) + 2
+  const { pitches } = domainOf(p)
   const cands: Seg[] = []
   for (const d of DURS) {
-    if (t + d > total || !placeOk(p.meter, t % B, d) || (t + d === total && d < 2)) continue
+    if (t + d > total || !placeOk(p.meter, t % B, d)) continue
     if (last && last.start + last.dur === t && (last.dur >= 2 || p.quarterPrep) && (last.dur >= d || (last.dur === 2 && d === 4))) cands.push({ start: t, dur: d, p: last.p, tied: true })
-    for (let st = lo; st <= hi; st++) cands.push({ start: t, dur: d, p: inKey(p.key, st) })
+    for (const pt of pitches) cands.push({ start: t, dur: d, p: pt })
   }
   const legal = cands.filter((c) => check(p, [...prefix, c], c.start + c.dur, true).hard.length === 0)
   const out: Hint[] = []

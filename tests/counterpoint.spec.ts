@@ -21,7 +21,11 @@ test('giải phức điệu: bế tắc ở ô 5, cách gỡ giữ nguyên đề
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('counterpoint:v1')!).given)
   await page.locator('.cp-go').first().click()
   const fail = page.locator('.cp-fail')
-  await expect(fail).toContainText('Không có lời giải', { timeout: 20_000 })
+  await expect(fail).toContainText('Không có lời giải', { timeout: 40_000 })
+  // proven, not timed out — and the search space is named
+  await expect(fail).toHaveAttribute('data-status', 'unsat')
+  await expect(fail).toContainText('Đã chứng minh')
+  await expect(fail).toContainText('trong khoảng')
   await expect(fail).toContainText('ô 5, phách 1')
   await fail.getByRole('button', { name: /Tìm cách gỡ/ }).click()
   await expect(page.getByText('Cách gỡ — đề của thầy giữ nguyên')).toBeVisible({ timeout: 25_000 })

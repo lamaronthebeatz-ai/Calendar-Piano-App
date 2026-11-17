@@ -6,7 +6,7 @@
  * so the Iv preparation tables follow from checking each version on its own.
  */
 import {
-  barQ, consonant, interval, isPerfect, makeVersion, melodicOk, notesOf, perfectClass, strength, upperLower,
+  barQ, consonant, interval, isPerfect, letterOf, makeVersion, melodicOk, notesOf, perfectClass, strength, upperLower,
   type Interval, type Key, type Meter, type Motion, type Note, type Seg, type Shift, type Version,
 } from './model'
 
@@ -32,20 +32,22 @@ export type RuleId =
   | 'crossing' | 'dis-both' | 'dis-strong' | 'dis-weak' | 'suspension' | 'star' | 'star-extra' | 'parallel' | 'final'
   | 'leap' | 'leap-response' | 'leap3-response' | 'two-leaps' | 'repeat3' | 'seg-place' | 'tie' | 'rhythm-change' | 'end' | 'first'
   | 'hidden' | 'perfects' | 'unison' | 'upper-neighbor' | 'tritone-line' | 'repeat' | 'range' | 'cadence-step' | 'same-rhythm' | 'strong-perfect'
+  | 'perfects3' | 'weak-form' | 'chromatic-near'
 
 export const RULES: Record<RuleId, { text: string; ref: string }> = {
   crossing: { text: 'Hai bè chéo nhau (ở biến thể: khoảng cách ở nguyên thể vượt giới hạn của Iv)', ref: 'doi-vi-chuyen-dong-chieu-doc' },
-  'dis-both': { text: 'Quãng nghịch mà cả hai bè cùng đánh nốt mới — quãng nghịch phải có một bè giữ nốt', ref: 'doi-vi-don-gian-hai-be' },
+  'dis-both': { text: 'Quãng nghịch ở phách nhẹ mà cả hai bè cùng đánh nốt mới (giáo trình không nói tới; thí dụ chỉ có một bè đi)', ref: 'doi-vi-don-gian-hai-be' },
   'dis-strong': { text: 'Quãng nghịch ở phách mạnh phải là nốt lưu: chuẩn bị bằng quãng thuận, giải quyết xuống liền bậc', ref: 'doi-vi-don-gian-hai-be' },
   'dis-weak': { text: 'Quãng nghịch ở phách nhẹ chỉ được là nốt lướt, nốt thêu, nốt sớm hay nốt thoát, trước và sau là quãng thuận', ref: 'doi-vi-don-gian-hai-be' },
   suspension: { text: 'Nốt lưu sai luật', ref: 'doi-vi-don-gian-hai-be' },
   star: { text: 'Chỗ ✱ phải là quãng nghịch', ref: 'doi-vi-don-gian-hai-be' },
   'star-extra': { text: 'Quãng nghịch ở phách mạnh nằm ngoài các chỗ ✱', ref: 'doi-vi-don-gian-hai-be' },
-  parallel: { text: 'Quãng thuận hoàn toàn đi song song (bị cấm)', ref: 'doi-vi-don-gian-hai-be' },
-  final: { text: 'Kết phải là quãng thuận hoàn toàn', ref: 'doi-vi-don-gian-hai-be' },
-  leap: { text: 'Bước nhảy cấm: quãng 7, quãng tăng – giảm, rộng hơn quãng 8', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
-  'leap-response': { text: 'Sau bước nhảy (từ quãng 4) phải có phản hồi: đi ngược hướng', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
-  'leap3-response': { text: 'Sau bước nhảy quãng 3 nên phản hồi ngược hướng', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
+  parallel: { text: 'Quãng thuận hoàn toàn tiến hành song song (bị cấm)', ref: 'doi-vi-don-gian-hai-be' },
+  perfects3: { text: 'Nhiều quãng thuận hoàn toàn liền nhau (từ ba quãng) — giáo trình: "không được phép"', ref: 'doi-vi-don-gian-hai-be' },
+  final: { text: 'Quãng thuận hoàn toàn chủ yếu dùng ở chỗ kết', ref: 'doi-vi-don-gian-hai-be' },
+  leap: { text: 'Bước cấm: nửa cung cromatic, quãng 7, quãng tăng – giảm, rộng hơn quãng 8', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
+  'leap-response': { text: 'Sau bước nhảy (kể cả quãng 3) phải có phản hồi: đi ngược hướng', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
+  'leap3-response': { text: 'Sau bước nhảy quãng 3 phải phản hồi ngược hướng', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
   'two-leaps': { text: 'Hai bước nhảy liên tiếp cùng hướng (nên tránh)', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
   repeat3: { text: 'Nhắc một nốt ba lần liền', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
   'seg-place': { text: 'Trường độ đặt lệch phách (đảo phách)', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
@@ -63,10 +65,12 @@ export const RULES: Record<RuleId, { text: string; ref: string }> = {
   range: { text: 'Âm vực bè đối vị quá rộng', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
   'cadence-step': { text: 'Nên vào nốt kết bằng liền bậc', ref: 'doi-vi-don-gian-hai-be' },
   'same-rhythm': { text: 'Hai bè cùng tiết tấu (giảm đối tỉ)', ref: 'doi-vi-don-gian-hai-be' },
+  'weak-form': { text: 'Nốt nghịch phách nhẹ khác các thí dụ của giáo trình (ở phách mà không phải nốt lướt, hoặc dài hơn nốt đen mà không phải nốt trắng lướt) — giáo trình không nêu thành luật', ref: 'doi-vi-don-gian-hai-be' },
+  'chromatic-near': { text: 'Âm nguyên và âm biến đứng gần nhau — giáo trình: "phải ở xa nhau"', ref: 'giai-dieu-phuc-dieu-nghiem-khac' },
 }
 /** Soft rules and their cost; every other rule is hard. */
 const SOFT: Partial<Record<RuleId, number>> = {
-  first: 2, 'leap3-response': 4, 'two-leaps': 6, hidden: 3, perfects: 2, unison: 6, 'strong-perfect': 2, 'upper-neighbor': 2, 'tritone-line': 8, repeat: 3, range: 4, 'cadence-step': 5, 'same-rhythm': 1,
+  first: 2, final: 4, 'dis-both': 3, 'weak-form': 3, 'chromatic-near': 4, 'two-leaps': 6, hidden: 3, perfects: 2, unison: 6, 'strong-perfect': 2, 'upper-neighbor': 2, 'tritone-line': 8, repeat: 3, range: 4, 'cadence-step': 5, 'same-rhythm': 1,
 }
 export const isSoft = (r: RuleId) => r in SOFT
 
@@ -170,9 +174,14 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
         const movedL = o.atkLo && o.lo.p.midi !== a.lo.p.midi
         const c1 = perfectClass(a.iv)
         const c2 = perfectClass(o.iv)
-        if (movedU && movedL && c1 && c1 === c2) add('parallel', o.t, v.label, `${a.iv.name} → ${o.iv.name}`)
-        else if (movedU && movedL && c2 && Math.sign(o.up.p.step - a.up.p.step) === Math.sign(o.lo.p.step - a.lo.p.step)) add('hidden', o.t, v.label)
-        if (c1 && c2) add('perfects', o.t, v.label)
+        const same = Math.sign(o.up.p.step - a.up.p.step) === Math.sign(o.lo.p.step - a.lo.p.step)
+        // "song song" = both voices the same way; contrary consecutive perfects fall under "perfects" below
+        if (movedU && movedL && c1 && c1 === c2 && same) add('parallel', o.t, v.label, `${a.iv.name} → ${o.iv.name}`)
+        else if (movedU && movedL && c2 && same) add('hidden', o.t, v.label)
+        if (c1 && c2) {
+          if (i > 1 && perfectClass(ons[i - 2].iv)) add('perfects3', o.t, v.label)
+          else add('perfects', o.t, v.label)
+        }
       } else if (!isPerfect(o.iv)) add('first', o.t, v.label)
       if (done()) return out
     }
@@ -185,7 +194,19 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
 
     /** Why a dissonant onset is not allowed, or null when it is (or cannot be judged yet). */
     function dissonanceOk(o: Onset, i: number): { rule: RuleId; detail?: string } | null {
-      if (o.atkUp && o.atkLo) return { rule: 'dis-both' }
+      const st0 = strength(p.meter, o.t)
+      if (o.atkUp && o.atkLo) {
+        if (st0 === 3) return { rule: 'dis-strong', detail: 'cả hai bè cùng đánh nốt mới' }
+        // the book only shows one voice moving; accept when either voice's motion is a lawful ornament
+        const mu = melodic(o, i, o.up, true)
+        const ml = melodic(o, i, o.lo, false)
+        if (mu === 'later' || ml === 'later') return null
+        if (mu === 'ok' || ml === 'ok' || mu === 'upper' || ml === 'upper') {
+          add('dis-both', o.t, v.label)
+          return null
+        }
+        return { rule: 'dis-weak', detail: `${mu}; ${ml}` }
+      }
       const heldIsUp = !o.atkUp
       const held = heldIsUp ? o.up : o.lo
       const moving = heldIsUp ? o.lo : o.up
@@ -267,19 +288,20 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (!consonant(prev.iv) && !passingResolution) return 'trước quãng nghịch phải là quãng thuận'
       const D = x.p.step - a.p.step
       if (Math.abs(D) !== 1) return 'nốt nghịch phải đến bằng liền bậc'
-      if (x.dur > 2 || (x.dur === 2 && st !== 2)) return 'nốt nghịch ở phách nhẹ phải ngắn (nốt đen, hoặc nốt trắng lướt ở phách)'
       const nx = nextOnset(i)
       const xEnd = x.start + x.dur
       if (!b) return xEnd >= total ? 'nốt nghịch ở cuối bài' : xEnd >= H ? 'later' : 'nốt nghịch không có nốt đi tiếp'
       if (!nx) return 'later'
       if (!consonant(nx.iv)) return 'sau quãng nghịch phải là quãng thuận'
       const E = b.p.step - x.p.step
-      if (E === D) return 'ok' // nốt lướt
-      if (st === 2) return 'ở phách, nốt nghịch chỉ được là nốt lướt'
-      if (E === -D) return D === -1 ? 'ok' : 'upper' // nốt thêu (dưới / trên)
-      if (D === -1 && E === -2) return 'ok' // nốt thoát
-      if (E === 0 && x.dur === 1) return 'ok' // nốt sớm
-      return 'không phải nốt lướt, thêu, sớm hay thoát'
+      // Thí dụ 25–28 show passing notes up to a half, the other forms as quarters off the beat; the text sets no rule
+      const form = (kind: 'pass' | 'other') => {
+        if ((kind === 'other' && (st === 2 || x.dur > 1)) || x.dur > 2) add('weak-form', o.t, v.label)
+      }
+      const kind = E === D ? 'pass' : E === -D ? (D === -1 ? 'lower' : 'upper') : D === -1 && E === -2 ? 'cambiata' : E === 0 ? 'anticipation' : null
+      if (!kind) return 'không phải nốt lướt, thêu, sớm hay thoát'
+      form(kind === 'pass' ? 'pass' : 'other')
+      return kind === 'upper' ? 'upper' : 'ok'
     }
   }
   // same-rhythm (rhythmic contrast) and the line count once
@@ -331,8 +353,10 @@ export function checkLine(
       const leap = a.p.step - z.p.step
       const next = b.p.step - a.p.step
       const answered = next !== 0 && Math.sign(next) === -Math.sign(leap)
+      // "Quãng ba … đã được xem là bước nhảy" + "sau bước nhảy phải có phản hồi" (tr. 6)
       if (Math.abs(leap) >= 3 && !answered) emit('leap-response', b.start)
       else if (Math.abs(leap) === 2 && !answered) emit('leap3-response', b.start)
+      if (letterOf(z.p) === letterOf(b.p) && z.p.alter !== b.p.alter) emit('chromatic-near', b.start)
       if (Math.abs(leap) >= 2 && Math.abs(next) >= 2 && Math.sign(next) === Math.sign(leap)) emit('two-leaps', b.start)
     }
     if (i >= 3) {

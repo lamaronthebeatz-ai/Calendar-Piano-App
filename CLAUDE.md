@@ -56,6 +56,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `brand.md` | Thương hiệu "Phòng hoà nhạc": lớp `.phn` (`src/phn.css`), Libre Bodoni + Manrope, lời chào theo giờ, trang đã áp dụng; **cấm đụng `/home` và bầu trời chòm sao** |
 | `ui.md` | Theme, thương hiệu đen – vàng, điều hướng, ngăn kéo, View Transitions, hook hiệu ứng, âm thanh piano/máy nhịp, logo |
 | `compose.md` | Trình soạn nhạc `/compose` (Verovio, giấy trắng, cử chỉ chạm, bảng công cụ nổi, mô hình ghi đè kiểu Sibelius) |
+| `counterpoint.md` | Giải phức điệu `/counterpoint`: bảng luật đối chiếu giáo trình (bắt buộc / khuyến nghị / cần xác minh), miền tìm kiếm, ba trạng thái valid/unsat/unknown, bộ kiểm độc lập `verify.ts` |
 | `features.md` | Bảng tính `/tools`, trang Solfège, Ủng hộ, tour hướng dẫn |
 | `testing.md` | Test Playwright (Chromium + WebKit, chế độ không hiệu ứng), ngân sách dung lượng, CI chặn deploy |
 | `sources.md` | Thư mục học: nguồn dựng lúc build, `curated.ts`, `[^id, tr. n]`, `::verify`, trang `/sources`, trích dẫn Chicago/APA/BibTeX |

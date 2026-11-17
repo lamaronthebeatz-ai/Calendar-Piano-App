@@ -281,7 +281,9 @@ test.describe('Phase 7: tuyến điều tra của chương II – VI', () => {
   const pick = async (page: Page, rows: Record<string, string[]>, labels: Record<string, string>) => {
     for (const [id, notes] of Object.entries(rows)) {
       const group = page.getByRole('group', { name: labels[id] })
-      for (const n of notes) await group.getByRole('button', { name: n, exact: true }).click()
+      // WebKit-phone on CI kept these buttons "not stable" inside the momentum-scrolling sheet; this test is about
+      // grading, so the click goes to the button itself rather than to screen coordinates
+      for (const n of notes) await group.getByRole('button', { name: n, exact: true }).dispatchEvent('click')
     }
     await page.getByRole('button', { name: 'Kiểm tra' }).click()
   }

@@ -9,7 +9,7 @@ import {
   type Key, type Meter, type Seg, type Version,
 } from './model'
 import { check, RULES, totalOf, versionsOf, type Problem, type Report, type VersionSpec, type Violation } from './rules'
-import { labelled, splitsOf, type Generated, type Hint, type Level, type Rescue, type Solution, type SolveResult, type SplitStatus } from './solver'
+import { domainOf, labelled, splitsOf, type Generated, type Hint, type Level, type Rescue, type Solution, type SolveResult, type SplitStatus } from './solver'
 import type { Req } from './solver.worker'
 import { ScoreSvg, type Mark } from './ScoreSvg'
 import './counterpoint.css'
@@ -268,7 +268,7 @@ export function CounterpointPage() {
     setRescued(null)
     setGraded(null)
     setPick(0)
-    run<SolveResult>({ kind: 'solve', problem, timeMs: 7000 }, setResult)
+    run<SolveResult>({ kind: 'solve', problem, timeMs: 15000 }, setResult)
   }
   const findRescue = () => run<Rescue>({ kind: 'rescue', problem, timeMs: 9000 }, (r) => {
     setRescued(r)
@@ -572,7 +572,7 @@ export function CounterpointPage() {
           </div>
         )}
 
-        {result && <Outcome result={result} meter={meter} onRescue={findRescue} busy={busy === 'rescue'} rescued={!!rescued} />}
+        {result && <Outcome result={result} meter={meter} domain={domainOf(problem).text} onRescue={findRescue} busy={busy === 'rescue'} rescued={!!rescued} />}
 
         {rescued && (
           <RescueView
@@ -662,11 +662,19 @@ function Remarks({ report, meter, title, hard }: { report: Report; meter: Meter;
   )
 }
 
-function Outcome({ result, meter, onRescue, busy, rescued }: { result: SolveResult; meter: Meter; onRescue: () => void; busy: boolean; rescued: boolean }) {
-  if (result.solutions.length) return null
+function Outcome({ result, meter, domain, onRescue, busy, rescued }: { result: SolveResult; meter: Meter; domain: string; onRescue: () => void; busy: boolean; rescued: boolean }) {
+  if (result.status === 'valid') return null
+  const unsat = result.status === 'unsat'
   return (
-    <div className="cp-card cp-fail">
-      <h2>{result.exhausted ? 'Không có lời giải đúng luật' : 'Chưa tìm được lời giải trong thời gian cho phép'}</h2>
+    <div className="cp-card cp-fail" data-status={result.status}>
+      <h2>{unsat ? 'Không có lời giải đúng luật' : 'Chưa kết luận được'}</h2>
+      <p className="cp-note">
+        {unsat
+          ? `Đã chứng minh: không có bè đối vị nào đúng mọi luật bắt buộc trong phạm vi tìm kiếm (${domain}).`
+          : result.disputed
+            ? 'Hai bộ kiểm luật không thống nhất về một lời giải, nên máy không công nhận nó và cũng không kết luận vô nghiệm. Hãy báo lỗi này.'
+            : 'Máy hết thời gian trước khi duyệt hết các khả năng: chưa tìm thấy lời giải nhưng cũng chưa chứng minh được là không có.'}
+      </p>
       {result.stars?.map((s, i) => (
         <p key={i}>
           <b>✱ {place(meter, s.t)}:</b> {s.reason}
@@ -675,7 +683,7 @@ function Outcome({ result, meter, onRescue, busy, rescued }: { result: SolveResu
       {!result.stars?.length && (
         <>
           <p>
-            {result.exhausted ? 'Máy đã thử hết mọi khả năng.' : 'Máy dừng sau giới hạn thời gian.'} Xa nhất chỉ tới {place(meter, result.furthest)}; những luật chặn lại ở đó:
+            {unsat ? 'Máy đã thử hết mọi khả năng.' : 'Máy dừng sau giới hạn thời gian.'} Xa nhất chỉ tới {place(meter, result.furthest)}; những luật chặn lại ở đó:
           </p>
           <ul>
             {result.blockers.map((b, i) => (
