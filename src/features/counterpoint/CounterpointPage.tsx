@@ -671,9 +671,7 @@ export function CounterpointPage() {
         {answerOk && showAnswer && (
           <div className="cp-card">
             <h2>Đáp án của máy (một trong nhiều cách)</h2>
-            {shownOf(st.answer!).map((v, i) => (
-              <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `a${i}`} now={playing === `a${i}` ? now : -1} onPlay={() => play(`a${i}`, v)} />
-            ))}
+            <Versions list={shownOf(st.answer!)} id="a" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} />
           </div>
         )}
 
@@ -683,11 +681,7 @@ export function CounterpointPage() {
           <RescueView
             r={rescued}
             meter={meter}
-            render={(sol, id) =>
-              shownOf(sol.cp).map((v, i) => (
-                <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `${id}${i}`} now={playing === `${id}${i}` ? now : -1} onPlay={() => play(`${id}${i}`, v)} bad={badOf(sol.report, v)} />
-              ))
-            }
+            render={(sol, id) => <Versions list={shownOf(sol.cp)} id={id} problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} bad={(v) => badOf(sol.report, v)} />}
           />
         )}
 
@@ -701,9 +695,7 @@ export function CounterpointPage() {
                 </button>
               ))}
             </div>
-            {shown.map((v, i) => (
-              <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `s${i}`} now={playing === `s${i}` ? now : -1} onPlay={() => play(`s${i}`, v)} />
-            ))}
+            <Versions list={shown} id="s" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} />
             <Remarks report={sol.report} meter={meter} title="Ghi chú (luật mềm, không bắt buộc)" />
           </div>
         )}
@@ -711,14 +703,66 @@ export function CounterpointPage() {
         {graded && mineVersions && (
           <div className="cp-card">
             <h2>{graded.hard.length ? `Bài của bạn có ${graded.hard.length} lỗi` : 'Bài của bạn đúng mọi luật bắt buộc'}</h2>
-            {mineVersions.map((v, i) => (
-              <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `m${i}`} now={playing === `m${i}` ? now : -1} onPlay={() => play(`m${i}`, v)} bad={badOf(graded, v)} />
-            ))}
+            <Versions list={mineVersions} id="m" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} bad={(v) => badOf(graded, v)} />
             <Remarks report={graded} meter={meter} title="Danh sách lỗi" hard />
           </div>
         )}
         </>}
       </div>
+    </div>
+  )
+}
+
+type ListProps = { list: Version[]; id: string; problem: Problem; stars: Mark[]; width: number; playing: string | null; now: number; onPlay: (id: string, v: Version) => void; bad?: (v: Version) => Violation[] }
+
+/** The versions of an answer: one staff pair each, except the horizontal shift (Ih), set as one score — see IhScore. */
+function Versions({ list, id, problem, stars, width, playing, now, onPlay, bad }: ListProps) {
+  const nt = list.find((v) => isOriginal(v))
+  const bt = list.filter((v) => v.ih)
+  if (nt && bt.length === 1 && list.length === 2) return <IhScore nt={nt} bt={bt[0]} id={id} problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={onPlay} bad={bad} />
+  return (
+    <>
+      {list.map((v, i) => (
+        <VersionView key={i} v={v} problem={problem} stars={stars} width={width} playing={playing === `${id}${i}`} now={playing === `${id}${i}` ? now : -1} onPlay={() => onPlay(`${id}${i}`, v)} bad={bad?.(v)} />
+      ))}
+    </>
+  )
+}
+
+/**
+ * Chuyển động chiều ngang (tr. 30–35): the book sets the original and the shifted copy as one score, I – I′ – II (or
+ * I – II – II′), bar under bar, so the two combinations are compared in place. The original's numbers go under II, the
+ * version's under the copied voice.
+ */
+function IhScore({ nt, bt, id, problem, stars, width, playing, now, onPlay, bad }: Omit<ListProps, 'list'> & { nt: Version; bt: Version }) {
+  const movedI = (bt.ih ?? 0) > 0
+  const copy = movedI ? bt.I : bt.II
+  const mean = (segs: Seg[]) => segs.reduce((a, x) => a + x.p.step, 0) / Math.max(1, segs.length)
+  const mark = (v: Version) => numbersOf(v, problem.meter).map((m) => (bad?.(v).some((b) => b.t === m.t) ? { ...m, bad: true } : m))
+  const lines = [
+    { label: 'I', segs: nt.I },
+    { label: 'II', segs: nt.II, below: mark(nt) },
+    { label: movedI ? 'I′' : 'II′', segs: copy, below: mark(bt) },
+  ].sort((a, b) => mean(b.segs) - mean(a.segs))
+  const total = Math.max(totalOf(problem), ...lines.flatMap((l) => l.segs.map((x) => x.start + x.dur)))
+  const ids = [`${id}0`, `${id}1`]
+  const at = ids.includes(playing ?? '') ? now : -1
+  return (
+    <div className="cp-ver">
+      <div className="cp-ver-head">
+        <b>{lines.map((l) => l.label).join(' · ')}</b>
+        <span>{bt.label}</span>
+        <button onClick={() => onPlay(ids[0], nt)}>{playing === ids[0] ? '■ Dừng' : '▶ Nguyên thể'}</button>
+        <button onClick={() => onPlay(ids[1], bt)}>{playing === ids[1] ? '■ Dừng' : '▶ Biến thể'}</button>
+      </div>
+      <ScoreSvg
+        staves={lines.map((l, k) => ({ label: l.label, voices: [{ segs: l.segs, up: true }], below: l.below, above: k === 0 ? stars : [] }))}
+        meter={problem.meter}
+        keySig={keySig(nt.keyI)}
+        total={total}
+        width={width}
+        now={at}
+      />
     </div>
   )
 }

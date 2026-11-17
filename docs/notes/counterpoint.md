@@ -81,6 +81,10 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - Xếp hạng: ba – bốn bè thử trước âm vực "nhà" của từng bè (cách bè đề ~ quãng 5 mỗi bè) — chỉ là thứ tự; `msolveMany`/`canonSolveMany` tìm dư rồi xếp theo luật mềm.
 - **Móc xích nốt nghịch (tr. 38)**: luật từng cặp vốn đã cho — nốt giải quyết nghịch với bè thứ ba thì quãng nghịch mới được xét như nốt lưu của bè kia ở cặp đó (chuẩn bị thuận, giải quyết xuống). Không nới luật; test trong `multi.test.ts`.
 
+## Trình bày dạng Ih (17/11, Lamar: "ba khuông I, I′, II phải xếp đều song song từng ô nhịp như ví dụ trong sách")
+- `ScoreSvg` nhận `staves` (nhiều khuông một hàng, vạch nhịp chạy suốt, nhãn bè bên trái, chiều cao mỗi khuông chỉ chừa chỗ số quãng khi có); không truyền `staves` thì như cũ.
+- `Versions` trong `CounterpointPage` thay mọi chỗ liệt kê biến thể: đúng một NT + một BT có `ih` (dạng Ih, ngang – dọc) → `IhScore`: một tổng phổ I · I′ · II (hoặc I · II · II′ khi bè II vào muộn), xếp khuông theo âm vực, số quãng NT dưới khuông II, của BT dưới khuông chép; hai nút nghe Nguyên thể / Biến thể.
+
 ## Phần IV hình thức (`forms.ts`, `FormPanel.tsx`, `forms.worker.ts`; dạng `hai-doan`, `hai-doan-mo-phong`, `ba-doan`; tr. 64–68)
 - Giáo trình chỉ tả cấu trúc, không có luật riêng → máy dựng từng đoạn bằng bộ giải chương trước, viết câu nối, rồi kiểm **cả bài** bằng `mcheck` + `mverify` (luật ba – bốn bè).
 - Hai đoạn tương phản: đoạn 1 = `msolve` nguyên thể với đúng một biến thể đổi chỗ quãng 8 được tick (để đoạn 2 hợp lệ); đoạn 2 = biến thể đó **xếp theo âm vực** (`versionByRegister`: dòng trên cùng chơi bè mà biến thể đặt lên trên). Ba đoạn: đoạn 2 = mô phỏng (`kind: 'simple'`, thủ pháp chọn) trên ≤ 2 ô đầu của đề, đoạn 3 = biến thể của đoạn 1. Hai đoạn mô phỏng: đoạn 1 = canon ba bè (`preset('ba-be-1')`) trên đề, đoạn 2 = mô phỏng ba bè với thủ pháp chọn; mọi đoạn canon có đoạn kết 1 ô (sách: đoạn nhạc kết khi mọi bè cùng dừng). Chưa chuyển giọng ở đoạn 2.

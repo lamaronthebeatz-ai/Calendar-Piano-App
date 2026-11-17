@@ -80,7 +80,7 @@ test('nhập nốt thăng / giáng / bình cho nốt kế tiếp', async ({ page
   await expect(page.locator('.cp-card svg text').filter({ hasText: '♮' })).toHaveCount(1)
 })
 
-test('dạng bài chuyển động chiều ngang: tick chọn dạng, giải bài mẫu, biến thể Ih được vẽ riêng', async ({ page }) => {
+test('dạng bài chuyển động chiều ngang: tick chọn dạng, giải bài mẫu, nguyên thể và biến thể Ih chung một tổng phổ ba khuông', async ({ page }) => {
   test.setTimeout(180_000)
   await page.goto('/#/counterpoint')
   await page.getByRole('radio', { name: 'Chuyển động chiều ngang (Ih)' }).check()
@@ -91,7 +91,10 @@ test('dạng bài chuyển động chiều ngang: tick chọn dạng, giải bà
   // a slow engine may only time out first; searching on must reach a verdict
   if (await page.locator('.cp-fail[data-status="unknown"]').count()) await page.getByRole('button', { name: /Tìm tiếp/ }).click()
   await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 80_000 })
-  await expect(page.locator('.cp-ver-head b').filter({ hasText: 'BT · Ih −1' }).first()).toBeVisible()
+  // the book's layout: original and shifted copy as one score, I – I′ – II bar under bar
+  await expect(page.locator('.cp-ver-head span').filter({ hasText: 'BT · Ih −1' }).first()).toBeVisible()
+  await expect(page.getByRole('img', { name: 'Bản nhạc 3 khuông' }).first()).toBeVisible()
+  await expect(page.locator('.cp-ver-head b').first()).toHaveText(/^I · (I′ · II|II · II′)$/)
 })
 
 test('dạng bài ba bè và tam trùng: chọn dạng, đề làm bè dưới, máy viết hai bè trên, vẽ mọi biến thể đã tick', async ({ page }) => {
