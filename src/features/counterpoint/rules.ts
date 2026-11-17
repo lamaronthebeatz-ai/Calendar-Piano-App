@@ -26,13 +26,22 @@ export type Problem = {
   starsOnly: boolean
   /** a teacher's allowance the book does not make: a quarter note may prepare (and be tied into) a suspension */
   quarterPrep?: boolean
+  /** length of the piece when `given` is only known in part (one pair of a three- or four-voice search) */
+  total?: number
+  /** judge only the vertical rules (the line rules of each voice are checked once, elsewhere) */
+  noLine?: boolean
+  /** one pair inside three or four voices (tr. 37–45): `fourthOk` — an upper pair, where the perfect fourth counts as
+   *  a consonance; `outer` — the outer pair, where similar motion into a perfect consonance with a leap in the top
+   *  voice is forbidden; `hiddenHard` — similar motion into a perfect consonance forbidden outright (complex
+   *  counterpoint: a pair that is the outer pair in some version) */
+  pair?: { fourthOk?: boolean; outer?: boolean; hiddenHard?: boolean }
 }
 
 export type RuleId =
   | 'crossing' | 'dis-both' | 'dis-strong' | 'dis-weak' | 'suspension' | 'star' | 'star-extra' | 'parallel' | 'final'
   | 'leap' | 'leap-response' | 'leap3-response' | 'two-leaps' | 'repeat3' | 'seg-place' | 'tie' | 'rhythm-change' | 'end' | 'first'
   | 'hidden' | 'perfects' | 'unison' | 'upper-neighbor' | 'tritone-line' | 'repeat' | 'range' | 'cadence-step' | 'same-rhythm' | 'strong-perfect'
-  | 'perfects3' | 'weak-form' | 'chromatic-near'
+  | 'perfects3' | 'weak-form' | 'chromatic-near' | 'hidden-hard'
 
 export const RULES: Record<RuleId, { text: string; ref: string }> = {
   crossing: { text: 'Hai bè chéo nhau (ở biến thể: khoảng cách ở nguyên thể vượt giới hạn của Iv)', ref: 'doi-vi-chuyen-dong-chieu-doc' },
@@ -56,6 +65,7 @@ export const RULES: Record<RuleId, { text: string; ref: string }> = {
   end: { text: 'Bè đối vị phải kéo dài đến hết bài', ref: 'doi-vi-don-gian-hai-be' },
   first: { text: 'Mở đầu bằng quãng thuận hoàn toàn thì tốt hơn', ref: 'doi-vi-don-gian-hai-be' },
   hidden: { text: 'Vào quãng thuận hoàn toàn bằng cùng hướng (nên hạn chế)', ref: 'doi-vi-don-gian-hai-be' },
+  'hidden-hard': { text: 'Cùng hướng vào quãng thuận hoàn toàn ở cặp bè ngoài khi bè trên nhảy, hoặc ở cặp sẽ thành cặp ngoài trong biến thể (bị cấm)', ref: 'doi-am-ba-bon-be' },
   perfects: { text: 'Nhiều quãng thuận hoàn toàn liền nhau (nên tránh)', ref: 'doi-vi-don-gian-hai-be' },
   unison: { text: 'Đồng âm ở giữa bài tạo cảm giác ngưng đọng (nên tránh)', ref: 'doi-vi-don-gian-hai-be' },
   'strong-perfect': { text: 'Quãng thuận hoàn toàn ở phách mạnh giữa bài (nên đặt ở phách nhẹ)', ref: 'doi-vi-don-gian-hai-be' },
@@ -77,7 +87,7 @@ export const isSoft = (r: RuleId) => r in SOFT
 export type Violation = { rule: RuleId; t: number; version: string; detail?: string }
 export type Report = { hard: Violation[]; soft: Violation[]; penalty: number }
 
-export const totalOf = (p: Problem) => Math.max(...p.given.map((s) => s.start + s.dur))
+export const totalOf = (p: Problem) => p.total ?? Math.max(...p.given.map((s) => s.start + s.dur))
 
 /** All the versions (the original first) for a given counterpoint. */
 export function versionsOf(p: Problem, cp: Seg[]): Version[] {
@@ -124,6 +134,8 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
     } else out.hard.push(v)
   }
   const done = () => stopAtHard && out.hard.length > 0
+  // in an upper pair of three or four voices the perfect fourth is a consonance (tr. 39, 45)
+  const cons = (iv: Interval) => consonant(iv) || (!!p.pair?.fourthOk && ((iv.n % 7) + 7) % 7 === 3 && iv.quality === 0)
 
   /* ----- the counterpoint line itself (same in every version) ----- */
   const cpNotes = notesOf(cp)
@@ -131,9 +143,9 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
   const quarterTieOk = (seg: Seg) => {
     const g = notesOf(p.given).find((n) => n.start <= seg.start && seg.start < n.start + n.dur)
     const iv = g && (p.givenIs === 'II' ? interval(seg.p, g.p) : interval(g.p, seg.p))
-    return seg.start % B === 0 && !!iv && !consonant(iv)
+    return seg.start % B === 0 && !!iv && !cons(iv)
   }
-  checkLine(p.meter, cp, H, total, { quarterPrep: p.quarterPrep, quarterTieOk, from }, (r, t, d) => add(r, t, 'Nguyên thể', d))
+  if (!p.noLine) checkLine(p.meter, cp, H, total, { quarterPrep: p.quarterPrep, quarterTieOk, from }, (r, t, d) => add(r, t, 'Nguyên thể', d))
   if (done()) return out
 
   /* ----- every version ----- */
@@ -161,8 +173,8 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (o.t < from) continue
       if (o.iv.n < 0) add('crossing', o.t, v.label)
       const st = strength(p.meter, o.t)
-      if (isNT && p.stars.includes(o.t) && consonant(o.iv)) add('star', o.t, v.label)
-      if (!consonant(o.iv)) {
+      if (isNT && p.stars.includes(o.t) && cons(o.iv)) add('star', o.t, v.label)
+      if (!cons(o.iv)) {
         if (isNT && p.starsOnly && st === 3 && !p.stars.includes(o.t)) add('star-extra', o.t, v.label)
         const why = dissonanceOk(o, i)
         if (why) add(why.rule, o.t, v.label, why.detail)
@@ -180,7 +192,10 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
         const same = Math.sign(o.up.p.step - a.up.p.step) === Math.sign(o.lo.p.step - a.lo.p.step)
         // "song song" = both voices the same way; contrary consecutive perfects fall under "perfects" below
         if (movedU && movedL && c1 && c1 === c2 && same) add('parallel', o.t, v.label, `${a.iv.name} → ${o.iv.name}`)
-        else if (movedU && movedL && c2 && same) add('hidden', o.t, v.label)
+        else if (movedU && movedL && c2 && same) {
+          const topLeap = Math.abs(o.up.p.step - a.up.p.step) >= 2
+          add(p.pair?.hiddenHard || (p.pair?.outer && topLeap) ? 'hidden-hard' : 'hidden', o.t, v.label)
+        }
         if (c1 && c2) {
           if (i > 1 && perfectClass(ons[i - 2].iv)) add('perfects3', o.t, v.label)
           else add('perfects', o.t, v.label)
@@ -237,8 +252,8 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       // only "thuận – nghịch – thuận" (Phạm Tú Hương tr. 10): the preparation enters consonant and the sound just before the
       // suspension is consonant; in between, the other voice may pass through weak-beat dissonances, judged on their own
       const enter = ons.find((x) => x.t === h.start)
-      if (!enter || !consonant(enter.iv)) return 'nốt chuẩn bị phải vang lên bằng quãng thuận (bè kia đang vang)'
-      if (i > 0 && !consonant(ons[i - 1].iv)) return 'ngay trước nốt lưu phải là quãng thuận (thuận – nghịch – thuận)'
+      if (!enter || !cons(enter.iv)) return 'nốt chuẩn bị phải vang lên bằng quãng thuận (bè kia đang vang)'
+      if (i > 0 && !cons(ons[i - 1].iv)) return 'ngay trước nốt lưu phải là quãng thuận (thuận – nghịch – thuận)'
       if (prep < r - o.t) return 'nốt chuẩn bị ngắn hơn nốt lưu'
       // position of the dissonant note (doi-vi-don-gian-hai-be: 1 dưới · 3 trên/dưới · 6 trên · 8 dưới/trên · 10 trên · 13 trên)
       const n = o.iv.n
@@ -262,10 +277,10 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
         if (z.start >= H) return 'later'
         if (ons.some((x) => x.t > r && x.t < z.start)) return 'bè tự do không được đánh nốt mới trước khi nốt lưu giải quyết'
         const o2 = ons.find((x) => x.t === z.start)
-        return o2 && consonant(o2.iv) ? 'ok' : fail
+        return o2 && cons(o2.iv) ? 'ok' : fail
       }
       if (after.p.step === h.p.step - 1) {
-        if (consonant(res.iv)) return 'ok'
+        if (cons(res.iv)) return 'ok'
         // giải quyết lướt: the resolution falls on a dissonance in this version and passes on by step to a consonance
         // (doi-vi-chuyen-dong-chieu-doc, nguyên tắc 3)
         if (after.dur > 2) return 'nốt giải quyết rơi vào quãng nghịch'
@@ -273,7 +288,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       }
       // giải quyết có trang trí: the dissonant note first leaps to a note consonant with the free note, then goes down
       // to the step below it (doi-vi-don-gian-hai-be §3c, cách 2)
-      if (!consonant(res.iv) || after.dur > 1) return 'nốt lưu phải giải quyết xuống liền bậc'
+      if (!cons(res.iv) || after.dur > 1) return 'nốt lưu phải giải quyết xuống liền bậc'
       return thenAt(h.p.step - 1, 'nốt lưu phải giải quyết xuống liền bậc')
     }
 
@@ -287,15 +302,15 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (!a || a.start + a.dur !== x.start) return 'nốt nghịch không có nốt đứng trước'
       // a dissonance just before is allowed only when it is the suspension this note resolves by passing on
       const prev = ons[i - 1]
-      const passingResolution = !consonant(prev.iv) && a.start < prev.t && x.p.step === a.p.step - 1
-      if (!consonant(prev.iv) && !passingResolution) return 'trước quãng nghịch phải là quãng thuận'
+      const passingResolution = !cons(prev.iv) && a.start < prev.t && x.p.step === a.p.step - 1
+      if (!cons(prev.iv) && !passingResolution) return 'trước quãng nghịch phải là quãng thuận'
       const D = x.p.step - a.p.step
       if (Math.abs(D) !== 1) return 'nốt nghịch phải đến bằng liền bậc'
       const nx = nextOnset(i)
       const xEnd = x.start + x.dur
       if (!b) return xEnd >= total ? 'nốt nghịch ở cuối bài' : xEnd >= H ? 'later' : 'nốt nghịch không có nốt đi tiếp'
       if (!nx) return 'later'
-      if (!consonant(nx.iv)) return 'sau quãng nghịch phải là quãng thuận'
+      if (!cons(nx.iv)) return 'sau quãng nghịch phải là quãng thuận'
       const E = b.p.step - x.p.step
       // Thí dụ 25–28 show passing notes up to a half, the other forms as quarters off the beat; the text sets no rule
       const form = (kind: 'pass' | 'other') => {

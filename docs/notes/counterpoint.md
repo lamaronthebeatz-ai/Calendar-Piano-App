@@ -58,8 +58,16 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - Sách: đảo ảnh làm quãng 2, 7 không dùng được ở phách mạnh — máy tự suy ra (test).
 - Máy sinh đề vẫn chỉ sinh dạng `doc`.
 
+## Ba – bốn bè (`multi.ts`, `MultiPanel.tsx`, `multi.worker.ts`; dạng `ba-be`, `tam-trung`, `bon-be`, `tu-trung`)
+- Luật (tr. 37–45): mỗi cặp của mỗi bản theo đối vị đơn giản (`check` với `noLine` + `pair`), cộng: quãng 4 thuận ở cặp trên (`pair.fourthOk`: ba bè I–II; bốn bè I–II, II–III); cùng hướng vào quãng hoàn toàn khi bè trên nhảy cấm ở cặp ngoài (`pair.outer` → `hidden-hard`); đối vị phức tạp: cặp nào là cặp ngoài ở một bản nào đó thì cấm hẳn cùng hướng vào quãng hoàn toàn (`hiddenHard`, theo chữ "không được" ở BT1, BT2, tam trùng tr. 41–43). Các lời dặn riêng từng biến thể (số 3 cặp trên phải/không phải chuẩn bị, không song song quãng 4 vì thành quãng 5…) tự suy ra khi kiểm từng bản.
+- Biến thể: `MVersion {steps, order}`; `octaveVersions(n)` = mọi hoán vị bằng quãng 8 (bè dời 7 × đổi hạng) — tam trùng 5, tứ trùng 23 (tick chọn). Chưa có Iv tự chọn từng cặp (Thí dụ 77–78: Iv1 = −7, Iv2 = 7…).
+- Tìm chung mọi bè tự do: luôn kéo bè đang ngắn nhất; nhớ trạng thái chết theo 3 nốt cuối của từng bè; cấm chéo bè ngay khi sinh nước; thứ tự thử ưu tiên quãng bán thuận, khoảng 3–6 với bè cạnh (chỉ là thứ tự). Kiểm độc lập `mverify` (verify.ts từng cặp + luật giai điệu từng bè).
+- **Chưa cài (ghi trong miền tìm kiếm):** móc xích nốt nghịch (tr. 38: nốt giải quyết được đồng thời nghịch với bè khác) — luật từng cặp vẫn đòi trước/sau nốt nghịch là quãng thuận; "chồng âm thuận hoàn toàn", hợp âm đảo 1 tránh ở kết (khuyến nghị). Chưa chấm bài tự viết cho ba – bốn bè.
+- Đo (node): ba bè 4 ô < 0,1 s, bốn bè 0,4 s, tứ trùng 23 bản 3,2 s. Đúng luật mà xấu vẫn nhận (vd. bốn bè cùng tên nốt) — test.
+- Hiển thị: mỗi bản hai khuông (hai bè trên / các bè dưới), mỗi khuông tự xuống dòng nên không thẳng hàng theo ô.
+
 ## Test
-`src/features/counterpoint/counterpoint.test.ts` (31 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
+`src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
 
 ## Còn mở (X)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.

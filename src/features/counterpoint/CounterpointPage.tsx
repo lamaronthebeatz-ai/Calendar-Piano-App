@@ -12,6 +12,8 @@ import { check, RULES, totalOf, versionsOf, type Problem, type Report, type Vers
 import { domainOf, labelled, splitsOf, type Generated, type Hint, type Level, type Rescue, type Solution, type SolveResult, type SplitStatus } from './solver'
 import type { Req } from './solver.worker'
 import { ScoreSvg, type Mark } from './ScoreSvg'
+import { MultiPanel } from './MultiPanel'
+import { MULTI_FORMS, type MultiForm } from './multi'
 import './counterpoint.css'
 
 /* ---------- settings ---------- */
@@ -34,12 +36,13 @@ const KEYS: { label: string; key: Key }[] = [
 const METERS: Meter[] = [{ num: 3, den: 2 }, { num: 4, den: 2 }, { num: 2, den: 2 }]
 const IVS = [-7, -9, -11, -14]
 /** The exercise forms of the book, in its order (tr. 13–36). */
-type Form = 'doc' | 'ngang' | 'ngang-doc' | 'dao-anh'
+type Form = 'doc' | 'ngang' | 'ngang-doc' | 'dao-anh' | MultiForm
 const FORMS: { id: Form; label: string; ref: string }[] = [
-  { id: 'doc', label: 'Chuyển động chiều dọc (Iv)', ref: 'doi-vi-chuyen-dong-chieu-doc' },
-  { id: 'ngang', label: 'Chuyển động chiều ngang (Ih)', ref: 'doi-vi-chuyen-dong-chieu-ngang' },
-  { id: 'ngang-doc', label: 'Chuyển động ngang – dọc (Ih + Iv)', ref: 'doi-vi-chuyen-dong-chieu-ngang' },
-  { id: 'dao-anh', label: 'Đảo ảnh', ref: 'doi-vi-dao-anh' },
+  { id: 'doc', label: 'Hai bè · chuyển động chiều dọc (Iv)', ref: 'doi-vi-chuyen-dong-chieu-doc' },
+  { id: 'ngang', label: 'Hai bè · chuyển động chiều ngang (Ih)', ref: 'doi-vi-chuyen-dong-chieu-ngang' },
+  { id: 'ngang-doc', label: 'Hai bè · chuyển động ngang – dọc (Ih + Iv)', ref: 'doi-vi-chuyen-dong-chieu-ngang' },
+  { id: 'dao-anh', label: 'Hai bè · đảo ảnh', ref: 'doi-vi-dao-anh' },
+  ...MULTI_FORMS,
 ]
 /** Ih in bars, the book's sign: voice I entering later is "−". Half bars only in even metres (tr. 31). */
 const ihChoices = (m: Meter) => (m.num % 2 === 0 ? [-2, -1.5, -1, -0.5, 0.5, 1, 1.5, 2] : [-2, -1, 1, 2])
@@ -236,7 +239,8 @@ export function CounterpointPage() {
   const main = splitsOf(st.iv)[0]
   const mainLabel = labelled([main], st.iv)[0].label
   const isMain = (v: { shift: { I: number } }) => v.shift.I === main.shift.I
-  const form = st.form ?? 'doc'
+  const form: Form = FORMS.some((f) => f.id === st.form) ? st.form : 'doc'
+  const multi = MULTI_FORMS.some((f) => f.id === form)
   const ihOk = ihChoices(meter).includes(st.ih) ? st.ih : -1
   const problem: Problem = useMemo(() => {
     // Ih counts bars with "−" for voice I entering later; the versions take the delay of voice I in quarters
@@ -520,7 +524,7 @@ export function CounterpointPage() {
               )}
             </div>
           )}
-          {editing === 'given' && bars > 0 && (
+          {editing === 'given' && bars > 0 && !multi && (
             <div className="cp-stars">
               <span>✱ ở đầu ô:</span>
               {Array.from({ length: bars }, (_, b) => (
@@ -548,7 +552,7 @@ export function CounterpointPage() {
               </label>
             ))}
           </div>
-          {form !== 'doc' && (
+          {form !== 'doc' && !multi && (
             <>
               <div className="cp-row">
                 {form !== 'dao-anh' && (
@@ -613,12 +617,15 @@ export function CounterpointPage() {
               ))}
             </ul>
           )}
-          <label className="cp-check">
+          {!multi && <label className="cp-check">
             <input type="checkbox" checked={st.quarterPrep} onChange={(e) => setSt((s) => ({ ...s, quarterPrep: e.target.checked }))} />
             Cho phép nốt đen làm nốt chuẩn bị (sách không cho — chỉ bật nếu thầy chấp nhận)
-          </label>
+          </label>}
         </div>
 
+        {multi && <MultiPanel k={key} meter={meter} given={st.given} form={form as MultiForm} width={width} place={(t) => place(meter, t)} />}
+
+        {!multi && <>
         <div className="cp-actions">
           <button className="cp-go" onClick={solve} disabled={!!busy || !st.given.length}>{busy === 'solve' ? 'Đang giải…' : 'Giải'}</button>
           <button className="cp-ghost" onClick={grade} disabled={!st.mine.length}>Chấm bài của tôi</button>
@@ -674,6 +681,7 @@ export function CounterpointPage() {
             <Remarks report={graded} meter={meter} title="Danh sách lỗi" hard />
           </div>
         )}
+        </>}
       </div>
     </div>
   )

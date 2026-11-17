@@ -12,13 +12,15 @@ type Cell = { p: Pitch; start: number; end: number }
 const WHITE = [0, 2, 4, 5, 7, 9, 11]
 
 /** Taneyev number (upper − lower in steps) and consonance class of two pitches. */
-function judge(up: Pitch, lo: Pitch) {
+function judge(up: Pitch, lo: Pitch, fourthOk = false) {
   const n = up.step - lo.step
   const simple = ((n % 7) + 7) % 7
   const q = up.midi - lo.midi - 12 * Math.floor(n / 7) - WHITE[simple]
   const perfect = (simple === 0 || simple === 4) && q === 0
   const imperfect = (simple === 2 || simple === 5) && (q === 0 || q === -1)
-  return { n, simple, perfect, consonant: perfect || imperfect, octaveClass: simple === 0 }
+  // an upper pair of three or four voices takes the perfect fourth as a consonance
+  const fourth = fourthOk && simple === 3 && q === 0
+  return { n, simple, perfect, consonant: perfect || imperfect || fourth, octaveClass: simple === 0 }
 }
 
 /** A melodic step the book allows: repeat, m2/M2, m3/M3, P4, P5, m6/M6, P8 (giai điệu §2). */
@@ -46,12 +48,15 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
   const bar = p.meter.num * (4 / p.meter.den)
   const beat = 4 / p.meter.den
   const level = (t: number) => (t % bar === 0 ? 3 : (t % bar) % beat === 0 ? 2 : 1)
-  const end = Math.max(...p.given.map((s) => s.start + s.dur))
+  const end = p.total ?? Math.max(...p.given.map((s) => s.start + s.dur))
+  const fourthOk = !!p.pair?.fourthOk
   const out: Fault[] = []
   const fault = (rule: string, t: number, version = 'Nguyên thể') => out.push({ rule, t, version })
   const minPrep = p.quarterPrep ? 1 : 2
 
   /* ---- the counterpoint as a line ---- */
+  if (!p.noLine) lineFaults()
+  function lineFaults() {
   let clock = 0
   for (let i = 0; i < cp.length; i++) {
     const s = cp[i]
@@ -88,6 +93,7 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
       if (Math.abs(leap) >= 2 && !(next !== 0 && Math.sign(next) !== Math.sign(leap))) fault('leap-response', b.start)
     }
   }
+  }
 
   /* ---- every version, vertically ---- */
   const I = p.givenIs === 'I' ? p.given : cp
@@ -106,7 +112,7 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
     for (const t of times) {
       const u = at(U, t)
       const l = at(L, t)
-      if (u && l) ons.push({ t, u, l, hitU: u.start === t, hitL: l.start === t, j: judge(u.p, l.p) })
+      if (u && l) ons.push({ t, u, l, hitU: u.start === t, hitL: l.start === t, j: judge(u.p, l.p, fourthOk) })
     }
     const onAt = (t: number) => ons.find((o) => o.t === t)
     const anyBetween = (a: number, b: number) => ons.some((o) => o.t > a && o.t < b)
@@ -179,6 +185,7 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
         const movedU = o.hitU && o.u.p.midi !== a.u.p.midi
         const movedL = o.hitL && o.l.p.midi !== a.l.p.midi
         if (movedU && movedL && du === dl && a.j.perfect && o.j.perfect && a.j.octaveClass === o.j.octaveClass) fault('parallel', o.t, sp.label)
+        else if (movedU && movedL && du === dl && o.j.perfect && (p.pair?.hiddenHard || (p.pair?.outer && Math.abs(o.u.p.step - a.u.p.step) >= 2))) fault('hidden-hard', o.t, sp.label)
         if (k > 1 && ons[k - 2].j.perfect && a.j.perfect && o.j.perfect) fault('perfects3', o.t, sp.label)
       }
     }
