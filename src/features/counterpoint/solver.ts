@@ -273,7 +273,7 @@ export function starCheck(p: Problem): StarIssue[] {
 
 /* ---------- when there is no lawful answer: ways out that never touch the đề ---------- */
 
-export type Relax = { id: 'quarterPrep' | 'noStar'; t?: number; label: string; solutions: Solution[]; exhausted: boolean }
+export type Relax = { id: 'quarterPrep' | 'noStar'; t?: number; label: string; solutions: Solution[]; exhausted: boolean; proved?: boolean }
 export type Rescue = { stars: StarIssue[]; relax: Relax[]; near: Solution[]; nearFaults: number }
 
 /**
@@ -292,11 +292,13 @@ export function rescue(p: Problem, timeMs: number): Rescue {
     const r = starCheck(q).length ? { solutions: [], exhausted: true } : solveMany(q, slice, 4)
     relax.push({ id: 'quarterPrep', label: 'Nếu thầy cho phép nốt đen làm nốt chuẩn bị', solutions: r.solutions, exhausted: r.exhausted })
   }
-  const bad = [...new Set(stars.map((x) => x.t))]
+  // no single ✱ is impossible on its own but the whole is: try leaving each ✱ consonant in turn
+  const bad = stars.length ? [...new Set(stars.map((x) => x.t))] : p.stars
+  const each = stars.length ? slice : timeMs / (2 + bad.length)
   for (const t of bad) {
     const q = { ...p, stars: p.stars.filter((x) => x !== t) }
-    const r = starCheck(q).length ? { solutions: [], exhausted: true } : solveMany(q, slice, 4)
-    relax.push({ id: 'noStar', t, label: '', solutions: r.solutions, exhausted: r.exhausted })
+    const r = starCheck(q).length ? { solutions: [], exhausted: true } : solveMany(q, each, 4)
+    relax.push({ id: 'noStar', t, label: '', solutions: r.solutions, exhausted: r.exhausted, proved: stars.length > 0 })
   }
   let near: Solution[] = []
   let nearFaults = 0

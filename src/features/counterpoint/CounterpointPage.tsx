@@ -708,7 +708,9 @@ function RescueView({ r, meter, render }: { r: Rescue; meter: Meter; render: (s:
     if (x.id === 'quarterPrep')
       opts.push({ id: 'q', title: 'Nốt đen chuẩn bị', sol, hard: false, note: 'Mọi luật của sách đều giữ, trừ một điều: có nốt chuẩn bị là nốt đen. Chỉ dùng nếu thầy chấp nhận.' })
     else
-      opts.push({ id: `n${x.t}`, title: `✱ ${place(meter, x.t!)} để thuận`, sol, hard: false, note: `Đề giữ nguyên. Riêng ${place(meter, x.t!)} không viết được quãng nghịch đúng luật (lý do ở trên), nên ở đó bè đối vị thuận; mọi chỗ khác đúng luật ở mọi biến thể. Nên hỏi lại thầy chỗ này.` })
+      opts.push({ id: `n${x.t}`, title: `✱ ${place(meter, x.t!)} để thuận`, sol, hard: false, note: x.proved
+        ? `Đề giữ nguyên. Riêng ${place(meter, x.t!)} không viết được quãng nghịch đúng luật (lý do ở trên), nên ở đó bè đối vị thuận; mọi chỗ khác đúng luật ở mọi biến thể. Nên hỏi lại thầy chỗ này.`
+        : `Đề giữ nguyên. Không ✱ nào bất khả khi xét riêng, nhưng cả bài thì không có lời giải; chỉ cần để ${place(meter, x.t!)} thuận là mọi chỗ khác đúng luật ở mọi biến thể. Nên hỏi lại thầy chỗ này.` })
   }
   if (r.near.length)
     opts.push({ id: 'f', title: `Ít lỗi nhất (${r.nearFaults})`, sol: r.near[0], hard: true, note: `Đề giữ nguyên, bài phạm ${r.nearFaults} luật bắt buộc — ít nhất máy tìm được. Các lỗi được tô đỏ và kể dưới đây.` })
