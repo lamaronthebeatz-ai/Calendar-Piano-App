@@ -111,6 +111,8 @@ const place = async (page: Page, name: string) => {
 }
 
 test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, kết luận cần chứng cứ, mở lại vẫn còn', async ({ page }) => {
+  // the whole arc through the UI: WebKit on CI ran out of the 120 s mid-dialogue (17/11)
+  test.slow(test.info().project.name.startsWith('webkit'))
   test.setTimeout(120_000)
   await page.goto('/#/hanh-trinh?c=trung-co')
   await page.locator('.jr-stop-row.is-arc', { hasText: 'Bản thảo thất lạc' }).click()
@@ -274,7 +276,11 @@ test.describe('Phase 7: tuyến điều tra của chương II – VI', () => {
       await page.goto(`/#/hanh-trinh?c=${arc.chapter}`)
       await page.locator('.jr-stop-row.is-arc', { hasText: arc.title }).click()
       await expect(page.locator('.jr-atlas-intro')).toContainText(arc.intro.slice(0, 20))
-      await page.locator('.ar-places').getByRole('button', { name: new RegExp(arc.locations[0].name) }).click()
+      // WebKit-desktop on CI (17/11) never read this button as "stable"; the test is about the arc opening, so the click
+      // goes to the button itself once it is there
+      const first = page.locator('.ar-places').getByRole('button', { name: new RegExp(arc.locations[0].name) })
+      await expect(first).toBeVisible()
+      await first.dispatchEvent('click')
       await expect(page.getByRole('button', { name: `Nói chuyện với ${arc.characters[0].name}` })).toBeVisible()
     })
 

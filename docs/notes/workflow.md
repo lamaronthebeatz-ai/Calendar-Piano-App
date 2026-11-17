@@ -75,3 +75,4 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - Playwright chạy `vite preview` trên `dist` có sẵn → sửa code xong phải `npm run build` rồi mới chạy test, không thì test chạy bản cũ và "qua" giả (17/11: lỗi lọt lên CI).
 - Bộ giải phức điệu trong WebKit trên CI chậm hơn V8 khoảng 10 lần (bài mẫu: 1,6 s ở node, >15 s ở WebKit CI) → test E2E không được dựa vào một mốc giờ để thấy "vô nghiệm"; hết giờ là `unknown`, bấm "Tìm tiếp". Hãm CPU bằng CDP không tác động lên Web Worker.
 - WebKit trên CI: nút trong cảnh Hành trình/câu đố hay kẹt "not stable" (cả `force: true` cũng từng bấm trượt). Test kiểm logic thì bấm bằng `dispatchEvent('click')`; giữ `.click()` thật cho test giao diện.
+- (17/11) WebKit-desktop trên CI: nút địa điểm trong tuyến điều tra (`.ar-places .jr-stop-row`) không bao giờ "stable" dù đã bật reduced motion → `toBeVisible` rồi `dispatchEvent('click')`; test chơi trọn tuyến cần `test.slow()` trên WebKit.
