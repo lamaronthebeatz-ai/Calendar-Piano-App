@@ -62,7 +62,7 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - Luật (tr. 37–45): mỗi cặp của mỗi bản theo đối vị đơn giản (`check` với `noLine` + `pair`), cộng: quãng 4 thuận ở cặp trên (`pair.fourthOk`: ba bè I–II; bốn bè I–II, II–III); cùng hướng vào quãng hoàn toàn khi bè trên nhảy cấm ở cặp ngoài (`pair.outer` → `hidden-hard`); đối vị phức tạp: cặp nào là cặp ngoài ở một bản nào đó thì cấm hẳn cùng hướng vào quãng hoàn toàn (`hiddenHard`, theo chữ "không được" ở BT1, BT2, tam trùng tr. 41–43). Các lời dặn riêng từng biến thể (số 3 cặp trên phải/không phải chuẩn bị, không song song quãng 4 vì thành quãng 5…) tự suy ra khi kiểm từng bản.
 - Biến thể: `MVersion {steps, order}`; `octaveVersions(n)` = mọi hoán vị bằng quãng 8 (bè dời 7 × đổi hạng) — tam trùng 5, tứ trùng 23 (tick chọn). Chưa có Iv tự chọn từng cặp (Thí dụ 77–78: Iv1 = −7, Iv2 = 7…).
 - Tìm chung mọi bè tự do: luôn kéo bè đang ngắn nhất; nhớ trạng thái chết theo 3 nốt cuối của từng bè; cấm chéo bè ngay khi sinh nước; thứ tự thử ưu tiên quãng bán thuận, khoảng 3–6 với bè cạnh (chỉ là thứ tự). Kiểm độc lập `mverify` (verify.ts từng cặp + luật giai điệu từng bè).
-- **Chưa cài (ghi trong miền tìm kiếm):** móc xích nốt nghịch (tr. 38: nốt giải quyết được đồng thời nghịch với bè khác) — luật từng cặp vẫn đòi trước/sau nốt nghịch là quãng thuận; "chồng âm thuận hoàn toàn", hợp âm đảo 1 tránh ở kết (khuyến nghị). Chưa chấm bài tự viết cho ba – bốn bè.
+- **Chưa cài (ghi trong miền tìm kiếm):** "chồng âm thuận hoàn toàn", hợp âm đảo 1 tránh ở kết (khuyến nghị). Chưa chấm bài tự viết cho ba – bốn bè.
 - Đo (node): ba bè 4 ô < 0,1 s, bốn bè 0,4 s, tứ trùng 23 bản 3,2 s. Đúng luật mà xấu vẫn nhận (vd. bốn bè cùng tên nốt) — test.
 - Hiển thị: mỗi bản hai khuông (hai bè trên / các bè dưới), mỗi khuông tự xuống dòng nên không thẳng hàng theo ô.
 
@@ -79,10 +79,18 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - `canon.ts` tổng quát: ngoài phần tiếp của P còn các đoạn máy viết (`plan(spec).items`): bè R "chỉ nhắc tiết tấu" (`transform: 'rhythm'`, cao độ tự do, trường độ khoá theo A), bè tự do thứ ba (`extraFree`, mô phỏng ba bè tr. 55), đoạn kết (`coda`, mọi bè cùng dừng). Luôn kéo đoạn đang ngắn nhất; đoạn kết chờ phần nó nối vào viết xong. **Lỗi đã sửa:** khi P xong mà kết cấu vẫn dựng một chu kỳ thì đoạn kết không được kiểm từng bước (mọi lỗi dồn tới cuối, tìm mãi không ra) — `judge` dựng đủ chu kỳ ngay khi P xong.
 - Chấm bài tự viết cho ba – bốn bè và canon: trình nhập có ô cho từng bè học viên viết (`Saved.extra`, panel báo `onSlots` gồm tên + chỗ bắt đầu); `gradeMulti`, `gradeCanon` (kiểm thêm bè tiết tấu giữ đúng tiết tấu A, báo đoạn chưa viết xong); thẻ `GradeCard`.
 - Xếp hạng: ba – bốn bè thử trước âm vực "nhà" của từng bè (cách bè đề ~ quãng 5 mỗi bè) — chỉ là thứ tự; `msolveMany`/`canonSolveMany` tìm dư rồi xếp theo luật mềm.
-- **Chưa làm, chờ Lamar duyệt cách hiểu:** móc xích nốt nghịch (tr. 38), phần IV hình thức (tr. 64–68: chỉ mô tả cấu trúc).
+- **Móc xích nốt nghịch (tr. 38)**: luật từng cặp vốn đã cho — nốt giải quyết nghịch với bè thứ ba thì quãng nghịch mới được xét như nốt lưu của bè kia ở cặp đó (chuẩn bị thuận, giải quyết xuống). Không nới luật; test trong `multi.test.ts`.
+
+## Phần IV hình thức (`forms.ts`, `FormPanel.tsx`, `forms.worker.ts`; dạng `hai-doan`, `hai-doan-mo-phong`, `ba-doan`; tr. 64–68)
+- Giáo trình chỉ tả cấu trúc, không có luật riêng → máy dựng từng đoạn bằng bộ giải chương trước, viết câu nối, rồi kiểm **cả bài** bằng `mcheck` + `mverify` (luật ba – bốn bè).
+- Hai đoạn tương phản: đoạn 1 = `msolve` nguyên thể với đúng một biến thể đổi chỗ quãng 8 được tick (để đoạn 2 hợp lệ); đoạn 2 = biến thể đó **xếp theo âm vực** (`versionByRegister`: dòng trên cùng chơi bè mà biến thể đặt lên trên). Ba đoạn: đoạn 2 = mô phỏng (`kind: 'simple'`, thủ pháp chọn) trên ≤ 2 ô đầu của đề, đoạn 3 = biến thể của đoạn 1. Hai đoạn mô phỏng: đoạn 1 = canon ba bè (`preset('ba-be-1')`) trên đề, đoạn 2 = mô phỏng ba bè với thủ pháp chọn; mọi đoạn canon có đoạn kết 1 ô (sách: đoạn nhạc kết khi mọi bè cùng dừng). Chưa chuyển giọng ở đoạn 2.
+- Câu nối: `MProblem.head`/`tail` — mỗi bè tự do giữa đầu cố định và đuôi cố định (đuôi bắt đầu muộn với bè mô phỏng vào sau → bè đó đi tự do tới lúc vào). Nước đi chạm đuôi gắn luôn cả đuôi (bẫy đã gặp: gắn muộn làm máy thử mọi câu nối của các bè khác trước khi thấy chỗ nối hỏng, 30 s → 1 s; lỗi hay gặp là `rhythm-change` ở đầu ô).
+- `MProblem.fixed`: vùng đề (cantus firmus) trong bài dài không bị chấm luật giai điệu bè tự do (đề E–F–D–C phạm `leap3-response`); luật giữa các cặp vẫn chấm.
+- Trạng thái: đoạn nào `unsat`/`unknown` thì cả bài như thế kèm lý do (`why`); các đoạn có lời giải mà câu nối không ghép được với các lời giải đã thử → `unknown` (không phải chứng minh). Mỗi lần thử câu nối tối đa ~1/10 thời gian.
+- Chưa chấm bài tự viết cho Phần IV.
 
 ## Test
-`src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test) + `canon.test.ts` (7 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
+`src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test) + `canon.test.ts` (7 test) + `forms.test.ts` (4 test: ba hình thức qua hai bộ kiểm; phóng to phạm luật ngay trong A → `unsat` có lý do): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
 
 ## Còn mở (X)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.

@@ -136,6 +136,28 @@ test('canon vô tận: đề ngắn làm đoạn A, máy viết tiếp bè P, b�
   await expect(page.locator('.cp-ver-head span')).toContainText('R1: sau 2 ô, quãng 8 dưới')
 })
 
+test('phần IV, thể hai đoạn mô phỏng: đoạn 1 canon ba bè, câu nối, đoạn 2 đảo ảnh — ghép thành một bài', async ({ page }) => {
+  test.setTimeout(180_000)
+  const p = (step: number, midi: number) => ({ step, alter: 0, midi })
+  const A = [
+    { start: 0, dur: 2, p: p(35, 72) },
+    { start: 2, dur: 2, p: p(36, 74) },
+    { start: 4, dur: 2, p: p(37, 76) },
+    { start: 6, dur: 2, p: p(35, 72) },
+  ]
+  await page.addInitScript((given) => {
+    localStorage.setItem('counterpoint:v1', JSON.stringify({ keyIdx: 0, meterIdx: 2, givenIs: 'II', given, stars: [], form: 'hai-doan-mo-phong' }))
+  }, A)
+  await page.goto('/#/counterpoint')
+  await expect(page.getByRole('radio', { name: 'Thể hai đoạn mô phỏng' })).toBeChecked()
+  await page.locator('.cp-go').first().click()
+  await expect(page.locator('.cp-sols button, .cp-fail').first()).toBeVisible({ timeout: 40_000 })
+  if (await page.locator('.cp-fail[data-status="unknown"]').count()) await page.getByRole('button', { name: /Tìm tiếp/ }).click()
+  await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 80_000 })
+  await expect(page.locator('.cp-parts li')).toHaveCount(3)
+  await expect(page.locator('.cp-parts li').nth(1)).toContainText('Câu nối')
+})
+
 test('chấm bài tự viết cho canon: trình nhập có ô cho từng bè học viên viết, bài viết dở thì báo chưa xong', async ({ page }) => {
   const p = (step: number, midi: number) => ({ step, alter: 0, midi })
   const A = [

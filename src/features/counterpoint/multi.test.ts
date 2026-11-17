@@ -38,6 +38,12 @@ describe('ba bè: luật riêng (tr. 37–40)', () => {
     const step = M(['D5:4 | C5:4', 'A4:4 | E4:4', 'F4:4 | C4:4'], 2)
     expect(hardOf(step).some((h) => h.startsWith('hidden-hard'))).toBe(false)
   })
+  it('móc xích nốt nghịch (tr. 38): nốt giải quyết của bè I thành quãng nghịch mới với bè III — mỗi cặp vẫn thuận – nghịch – thuận nên được', () => {
+    // I–II: Đô5 ngân thành quãng 7 với Rê4, giải quyết xuống Si4; Si4 lại nghịch (5 giảm) với Fa3 bè III đang ngân, Fa3 giải quyết xuống Mi3
+    const chain = M(['C5:4~ | C5:2 B4:2 | G4:4', 'E4:4 | D4:4 | C4:4', 'E3:4 | F3:4 | E3:4'], 0)
+    expect(hardOf(chain)).toEqual([])
+    expect(mverify(chain, chain.voices)).toEqual([])
+  })
 })
 
 describe('bộ giải ba – bốn bè', () => {

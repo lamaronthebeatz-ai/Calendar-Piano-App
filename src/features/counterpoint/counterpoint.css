@@ -111,3 +111,5 @@
 .cp-custom { display: grid; gap: 6px; margin-top: 8px; }
 .cp-custom .cp-row { flex-wrap: wrap; }
 .cp-iv { font-size: 12px; color: var(--color-ink-muted); }
+.cp-parts { margin: 8px 0 4px; padding-left: 20px; font-size: 13px; color: var(--color-ink-muted); }
+.cp-parts b { color: var(--color-ink); font-weight: 600; }

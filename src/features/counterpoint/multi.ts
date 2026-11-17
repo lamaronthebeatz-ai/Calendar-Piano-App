@@ -24,7 +24,13 @@ export type MProblem = {
   versions: MVersion[]
   /** where each voice ends when they do not end together (a canon's voices finish one after another) */
   ends?: number[]
+  /** a bridge (phần IV): every voice is free only between its fixed head and its fixed tail (absolute times) */
+  head?: Seg[][]
+  tail?: Seg[][]
+  /** stretches of a voice that are the đề (a cantus firmus inside a longer form): its own line is not judged there */
+  fixed?: { voice: number; start: number; end: number }[]
 }
+const inFixed = (mp: MProblem, voice: number, t: number) => !!mp.fixed?.some((f) => f.voice === voice && t >= f.start && t < f.end)
 export type MViolation = { rule: RuleId; t: number; version: string; detail?: string }
 export type MReport = { hard: MViolation[]; soft: MViolation[]; penalty: number }
 export type MSolution = { lines: Seg[][]; report: MReport }
@@ -96,6 +102,7 @@ export function mcheck(mp: MProblem, lines: Seg[][], stopAtHard = false, only = 
   for (let i = 0; i < n; i++) {
     if (!mp.free[i] || (only >= 0 && i !== only)) continue
     checkLine(mp.meter, lines[i], ends[i], endOf(mp, total, i), { from: from[i] ?? 0 }, (rule, t, detail) => {
+      if (inFixed(mp, i, t)) return
       const x = { rule, t, version: `bè ${ROMAN[i]}`, detail }
       if (isSoft(rule)) out.soft.push(x)
       else out.hard.push(x)
@@ -134,7 +141,7 @@ export function mverify(mp: MProblem, lines: Seg[][]): string[] {
     const other = lines[(i + 1) % n]
     const p: Problem = { key: mp.key, meter: mp.meter, given: other, givenIs: 'I', stars: [], versions: [], starsOnly: false, total: endOf(mp, total, i) }
     // only the line faults of voice i: the pair itself is judged below with its proper role
-    for (const f of verify(p, lines[i])) if (['gap', 'seg-place', 'tie', 'end', 'leap', 'rhythm-change', 'repeat3', 'leap-response'].includes(f.rule)) faults.push(`bè ${ROMAN[i]}: ${f.rule}@${f.t}`)
+    for (const f of verify(p, lines[i])) if (['gap', 'seg-place', 'tie', 'end', 'leap', 'rhythm-change', 'repeat3', 'leap-response'].includes(f.rule) && !inFixed(mp, i, f.t)) faults.push(`bè ${ROMAN[i]}: ${f.rule}@${f.t}`)
   }
   for (const v of [original(n), ...mp.versions]) {
     const moved = lines.map((l, i) => (v.steps[i] ? shiftLine(mp.key, v.steps[i], l) : l))
@@ -151,7 +158,7 @@ export function mverify(mp: MProblem, lines: Seg[][]): string[] {
 
 /** The search space of each free voice: the key's notes (plus the đề's alterations), two octaves around the given voices. */
 export function mdomain(mp: MProblem) {
-  const given = mp.voices.flatMap((v, i) => (mp.free[i] ? [] : v))
+  const given = [...mp.voices.flatMap((v, i) => (mp.free[i] ? [] : v)), ...(mp.head ?? []).flat(), ...(mp.tail ?? []).flat()]
   const steps = given.map((s) => s.p.step)
   const lo = Math.min(...steps) - SPAN
   const hi = Math.max(...steps) + SPAN
@@ -167,7 +174,7 @@ export function mdomain(mp: MProblem) {
     pitches.push(inKey(mp.key, st))
     for (const a of alters.get(((st % 7) + 7) % 7) ?? []) pitches.push({ step: st, alter: a, midi: inKey(mp.key, st).midi - inKey(mp.key, st).alter + a })
   }
-  const text = `các bè tự do bắt đầu từ đầu bài, không dấu lặng, không nốt móc đơn, dùng nốt của giọng, trong khoảng ${pitchName(inKey(mp.key, lo))} – ${pitchName(inKey(mp.key, hi))}; chưa xét móc xích nốt nghịch (tr. 38)`
+  const text = `${mp.head ? 'câu nối' : 'các bè tự do bắt đầu từ đầu bài'}, không dấu lặng, không nốt móc đơn, dùng nốt của giọng, trong khoảng ${pitchName(inKey(mp.key, lo))} – ${pitchName(inKey(mp.key, hi))}`
   return { pitches, text }
 }
 
@@ -176,7 +183,8 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
   const total = totalOfM(mp)
   const B = barQ(mp.meter)
   const { pitches, text } = mdomain(mp)
-  const lines = mp.voices.map((v, i) => (mp.free[i] ? [] : v.slice()))
+  const lines = mp.voices.map((v, i) => (mp.free[i] ? (mp.head?.[i] ?? []).slice() : v.slice()))
+  const tailAt = mp.voices.map((_, i) => mp.tail?.[i]?.[0]?.start ?? total)
   const freeIdx = [...Array(n).keys()].filter((i) => mp.free[i])
   let seed = o.seed ?? 1
   const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647)
@@ -195,7 +203,12 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
   // order only: each free voice keeps a register of its own, about a fifth per voice from the given one
   const gi = mp.free.findIndex((f) => !f)
   const gSteps = mp.voices[gi]?.map((x) => x.p.step).sort((a, b) => a - b) ?? [28]
-  const home = (i: number) => gSteps[gSteps.length >> 1] + 4 * (gi - i)
+  const home = (i: number) => {
+    const h = mp.head?.[i]?.at(-1)?.p.step
+    const z = mp.tail?.[i]?.[0]?.p.step
+    if (h !== undefined && z !== undefined) return (h + z) / 2
+    return gSteps[gSteps.length >> 1] + 4 * (gi - i)
+  }
   const neighbour = (i: number, t: number, dir: -1 | 1) => {
     for (let j = i + dir; j >= 0 && j < n; j += dir) {
       const s = lines[j].find((x) => x.start <= t && t < x.start + x.dur)
@@ -213,7 +226,7 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
     const above = neighbour(i, t, -1)
     const below = neighbour(i, t, 1)
     for (const d of DURS) {
-      if (t + d > total || !placeOk(mp.meter, off, d)) continue
+      if (t + d > tailAt[i] || !placeOk(mp.meter, off, d)) continue
       const oneNote = last && off !== 0 && placeOk(mp.meter, last.start % B, last.dur + d)
       if (last && !oneNote && last.start + last.dur === t && last.dur >= 2 && (last.dur >= d || (last.dur === 2 && d === 4)))
         out.push({ s: { start: t, dur: d, p: last.p, tied: true }, cost: 0.6 + rnd() * 1.2 })
@@ -258,19 +271,23 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
     const key = stateKey()
     if (dead.has(key)) return
     const before = found.length
-    for (const s of moves(i)) {
+    // a bridge reaching its tail goes on into it at once, so a junction that cannot work fails here, not after the
+    // other voices have tried every way through the bridge
+    const tl = mp.tail?.[i] ?? []
+    for (const s of endOf(i) === tailAt[i] && tl.length ? [tl] : moves(i).map((x) => (tl.length && x.start + x.dur === tailAt[i] ? [x, ...tl] : [x]))) {
       if ((++nodes & 1023) === 0 && Date.now() - t0 > o.timeMs) {
         timedOut = true
         return
       }
-      lines[i].push(s)
       const from = lines.map((l) => notesOf(l).slice(-3)[0]?.start ?? 0)
+      lines[i].push(...s)
+      if (s.length === 1) from[i] = notesOf(lines[i]).slice(-3)[0]?.start ?? 0
       const r = mcheck(mp, lines, true, i, from)
       if (!r.hard.length) {
         furthest = Math.max(furthest, Math.min(...freeIdx.map(endOf)))
         dfs()
       }
-      lines[i].pop()
+      lines[i].length -= s.length
       if (timedOut || found.length >= o.maxSolutions) return
     }
     if (found.length === before) dead.add(key)
