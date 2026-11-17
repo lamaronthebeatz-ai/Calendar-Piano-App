@@ -4,7 +4,8 @@ import clsx from 'clsx'
 import { playSequence, type Step } from '../theory/audio'
 import { barQ, keySig, notesOf, type Key, type Meter, type Seg } from './model'
 import { RULES } from './rules'
-import { CANON_FORMS, IMIT_STEPS, stepsName, TRANSFORMS, type CanonForm, type CanonResult, type CanonSpec, type Follower, type Transform } from './canon'
+import { CANON_FORMS, gradeCanon, IMIT_STEPS, slotsOf, stepsName, TRANSFORMS, type CanonForm, type CanonResult, type CanonSpec, type Follower, type Transform } from './canon'
+import { GradeCard } from './GradeCard'
 import type { CReq } from './canon.worker'
 import { ScoreSvg } from './ScoreSvg'
 
@@ -15,7 +16,7 @@ const VOICE = ['P', 'R1', 'R2']
  * Imitation and canon from the đề as the opening A (tr. 46–63): set where and how the followers come in, the machine writes
  * the rest of the leader so that every voice, copied from it, keeps the two- and three-voice rules.
  */
-export function CanonPanel({ k, meter, given, form, width, place }: { k: Key; meter: Meter; given: Seg[]; form: CanonForm; width: number; place: (t: number) => string }) {
+export function CanonPanel({ k, meter, given, form, width, place, mine, onSlots }: { k: Key; meter: Meter; given: Seg[]; form: CanonForm; width: number; place: (t: number) => string; mine: Seg[][]; onSlots: (s: { label: string; start: number }[]) => void }) {
   const B = barQ(meter)
   const a = lenOf(given)
   const half = meter.num % 2 === 0 ? B / 2 : B
@@ -27,6 +28,9 @@ export function CanonPanel({ k, meter, given, form, width, place }: { k: Key; me
   const [cycles, setCycles] = useState(form === 'canon-mo-tien' ? 3 : 2)
   const [step, setStep] = useState(-1)
   const [real, setReal] = useState(false)
+  // mô phỏng ba bè (tr. 55): two voices imitate, a third is free; 'top' | 'mid' | 'bottom' or none
+  const [freeAt, setFreeAt] = useState<'' | 'top' | 'mid' | 'bottom'>('')
+  const [codaBars, setCodaBars] = useState(0)
   // defaults follow the book: the follower enters when A ends (loại I), a cycle is A + B
   const d = delays ?? (three ? [a, 2 * a] : [a])
   const L = (cycleBars ?? 0) * B || (three ? 3 * a : 2 * a)
@@ -35,13 +39,28 @@ export function CanonPanel({ k, meter, given, form, width, place }: { k: Key; me
     const fs: Follower[] = (three ? [0, 1] : [0]).map((i) => ({ delay: d[i] ?? a, steps: steps[i], transform: form === 'mo-phong' ? transform : 'same' }))
     const pitchOf = [0, ...fs.map((f) => f.steps)]
     const order = [...pitchOf.keys()].sort((x, y) => pitchOf[y] - pitchOf[x] || x - y)
+    const extra = form === 'mo-phong' && freeAt ? 1 : 0
+    if (extra) order.splice(freeAt === 'top' ? 0 : freeAt === 'mid' ? 1 : order.length, 0, pitchOf.length)
     return {
+      extraFree: extra, coda: codaBars * B,
       key: k, meter, kind: form === 'mo-phong' ? 'simple' : 'canon', A: given, L: form === 'mo-phong' ? Math.max(L, a) : L,
       cycles: form === 'mo-phong' ? 1 : form === 'canon-ba-be' ? 1 : cycles, step: form === 'canon-mo-tien' ? step : 0, followers: fs, order, real,
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [k, meter, given, form, three, steps.join(), d.join(), transform, L, cycles, step, real])
+  }, [k, meter, given, form, three, steps.join(), d.join(), transform, L, cycles, step, real, freeAt, codaBars, B])
 
+  // what the student writes: P's continuation and each line the machine would write (tabs in the editor above)
+  const slots = spec ? slotsOf(spec) : []
+  const slotKey = JSON.stringify(slots)
+  useEffect(() => {
+    onSlots(slots.map((x) => ({ label: x.label, start: x.start })))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slotKey])
+  const [graded, setGraded] = useState<{ sig: string; g: NonNullable<ReturnType<typeof gradeCanon>> } | null>(null)
+  const grade = () => {
+    const g = spec && gradeCanon(spec, mine)
+    if (g) setGraded({ sig, g })
+  }
   const [result, setResult] = useState<CanonResult | null>(null)
   const [shownSig, setShownSig] = useState('')
   const [busy, setBusy] = useState(false)
@@ -153,6 +172,26 @@ export function CanonPanel({ k, meter, given, form, width, place }: { k: Key; me
             </label>
           )}
         </div>
+        <div className="cp-row">
+          {form === 'mo-phong' && (
+            <label>
+              Bè tự do thứ ba
+              <select value={freeAt} onChange={(e) => setFreeAt(e.target.value as typeof freeAt)}>
+                <option value="">không có</option>
+                <option value="top">ở trên</option>
+                <option value="mid">ở giữa</option>
+                <option value="bottom">ở dưới</option>
+              </select>
+            </label>
+          )}
+          <label>
+            Đoạn kết
+            <select value={codaBars} onChange={(e) => setCodaBars(+e.target.value)}>
+              <option value={0}>không (các bè dừng lần lượt)</option>
+              {[1, 2, 3].map((n) => <option key={n} value={n}>{n} ô, mọi bè cùng kết</option>)}
+            </select>
+          </label>
+        </div>
         <label className="cp-check">
           <input type="checkbox" checked={real} onChange={(e) => setReal(e.target.checked)} />
           Dời đúng quãng (sang giọng khác, như biến thể Iv) thay vì dời theo các nốt của giọng — giáo trình có cả hai, cần hỏi thầy
@@ -161,7 +200,12 @@ export function CanonPanel({ k, meter, given, form, width, place }: { k: Key; me
 
       <div className="cp-actions">
         <button className="cp-go" onClick={() => run(15000)} disabled={busy || !spec}>{busy ? 'Đang giải…' : 'Giải'}</button>
+        <button className="cp-ghost" onClick={grade} disabled={!spec || !mine.some((l) => l.length)}>Chấm bài của tôi</button>
       </div>
+
+      {graded?.sig === sig && spec && (
+        <GradeCard g={graded.g} k={k} meter={meter} width={width} place={place} staves={[spec.order.slice(0, 2), spec.order.slice(2)].filter((g) => g.length).map((g) => g.map((i, x) => ({ segs: graded.g.texture[i] ?? [], up: x === 0 && g.length > 1 })))} />
+      )}
 
       {shown && shown.status !== 'valid' && (
         <div className="cp-card cp-fail" data-status={shown.status}>
@@ -191,7 +235,7 @@ export function CanonPanel({ k, meter, given, form, width, place }: { k: Key; me
           </div>
           <div className="cp-ver">
             <div className="cp-ver-head">
-              <b>{spec.order.map((i) => VOICE[i]).join(' · ')}</b>
+              <b>{spec.order.map((i) => (i <= spec.followers.length ? VOICE[i] : 'Tự do')).join(' · ')}</b>
               <span>{spec.followers.map((f, i) => `${VOICE[i + 1]}: sau ${fmtBars(f.delay)}, ${stepsName(f.steps)}`).join(' · ')}</span>
               <button onClick={() => play(sol.lines)}>{playing ? '■ Dừng' : '▶ Nghe'}</button>
             </div>

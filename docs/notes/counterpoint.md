@@ -74,6 +74,13 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - **Cần xác minh (X):** dời cao độ theo giọng (mặc định) hay đúng quãng (ô tick) — Thí dụ 101 có bè mang hoá biểu khác (đúng quãng), chuỗi mô tiến chưa rõ. **Chưa có:** mô phỏng ba bè có một bè tự do (tr. 55), mô phỏng tiết tấu (tr. 48, R chỉ giữ tiết tấu), đoạn kết riêng (các bè dừng lần lượt), thu nhỏ ra nốt móc đơn. Canon nhiều chu kỳ không dùng bảng nhớ trạng thái chết (chu kỳ sau mang cả P trở lại) nên có thể chậm.
 - Đo (node, A 2 ô 2/2): mô phỏng < 10 ms, vô tận loại I < 10 ms, mô tiến 3 chu kỳ 0,8 s, canon ba bè 1,9 s.
 
+## Bổ sung 17/11 (đợt 4)
+- Ba – bốn bè: "Biến thể tự chọn" (`MultiPanel`, `custom`): mỗi biến thể chọn độ dời từng bè + thứ tự; trang hiện Iv từng cặp theo cách ghi sách (`pairIv`: bè trên lên +, bè dưới lên −; Iv1 + Iv2 = Iv3).
+- `canon.ts` tổng quát: ngoài phần tiếp của P còn các đoạn máy viết (`plan(spec).items`): bè R "chỉ nhắc tiết tấu" (`transform: 'rhythm'`, cao độ tự do, trường độ khoá theo A), bè tự do thứ ba (`extraFree`, mô phỏng ba bè tr. 55), đoạn kết (`coda`, mọi bè cùng dừng). Luôn kéo đoạn đang ngắn nhất; đoạn kết chờ phần nó nối vào viết xong. **Lỗi đã sửa:** khi P xong mà kết cấu vẫn dựng một chu kỳ thì đoạn kết không được kiểm từng bước (mọi lỗi dồn tới cuối, tìm mãi không ra) — `judge` dựng đủ chu kỳ ngay khi P xong.
+- Chấm bài tự viết cho ba – bốn bè và canon: trình nhập có ô cho từng bè học viên viết (`Saved.extra`, panel báo `onSlots` gồm tên + chỗ bắt đầu); `gradeMulti`, `gradeCanon` (kiểm thêm bè tiết tấu giữ đúng tiết tấu A, báo đoạn chưa viết xong); thẻ `GradeCard`.
+- Xếp hạng: ba – bốn bè thử trước âm vực "nhà" của từng bè (cách bè đề ~ quãng 5 mỗi bè) — chỉ là thứ tự; `msolveMany`/`canonSolveMany` tìm dư rồi xếp theo luật mềm.
+- **Chưa làm, chờ Lamar duyệt cách hiểu:** móc xích nốt nghịch (tr. 38), phần IV hình thức (tr. 64–68: chỉ mô tả cấu trúc).
+
 ## Test
 `src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test) + `canon.test.ts` (7 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
 

@@ -57,6 +57,8 @@ const minus = (n: number) => String(n).replace('-', '−')
 type Saved = {
   keyIdx: number; meterIdx: number; givenIs: 'I' | 'II'; given: Seg[]; stars: number[]; iv: number; versions: VersionSpec[]; quarterPrep: boolean; mine: Seg[]
   form: Form; ih: number
+  /** the student's further lines for three/four voices and canons (the first one is `mine`) */
+  extra: Seg[][]
   origin: 'teacher' | 'gen'; locked: boolean; answer: Seg[] | null; answerSig: string
 }
 const sigOf = (s: Saved) => JSON.stringify([s.keyIdx, s.meterIdx, s.givenIs, s.given, s.stars, s.iv, s.versions, s.form, s.ih])
@@ -88,6 +90,7 @@ function example(): Saved {
     mine: [],
     form: 'doc',
     ih: -1,
+    extra: [],
     origin: 'teacher',
     locked: false,
     answer: null,
@@ -116,9 +119,9 @@ const DUR_BTNS: { d: number; label: string; glyph: string }[] = [
 ]
 
 /** Append a note, splitting it across bar lines into tied segments. */
-function appendNote(segs: Seg[], step: number, key: Key, dur: number, tie: boolean, B: number, acc: number | null): Seg[] {
+function appendNote(segs: Seg[], step: number, key: Key, dur: number, tie: boolean, B: number, acc: number | null, from = 0): Seg[] {
   const out = segs.slice()
-  let t = out.length ? out[out.length - 1].start + out[out.length - 1].dur : 0
+  let t = out.length ? out[out.length - 1].start + out[out.length - 1].dur : from
   const last = out[out.length - 1]
   // an accidental is absolute: ♮ means alter 0 even where the key signature has a sharp or flat
   const p = tie && last ? last.p : acc === null ? inKey(key, step) : pitch(step, acc)
@@ -205,7 +208,9 @@ export function CounterpointPage() {
   const [dur, setDur] = useState(2)
   const [tie, setTie] = useState(false)
   const [acc, setAcc] = useState<number | null>(null)
-  const [editing, setEditing] = useState<'given' | 'mine'>('given')
+  const [editing, setEditing] = useState<'given' | 'mine' | number>('given')
+  // the lines a three/four-voice or canon exercise asks the student for (set by its panel)
+  const [slots, setSlots] = useState<{ label: string; start: number }[]>([])
   const [busy, setBusy] = useState<Req['kind'] | null>(null)
   const [result, setResult] = useState<SolveResult | null>(null)
   const [rescued, setRescued] = useState<Rescue | null>(null)
@@ -268,7 +273,9 @@ export function CounterpointPage() {
   const badOf = (r: Report, v: Version) => r.hard.filter((x) => (isNT(v) ? x.version === 'Nguyên thể' || (form === 'doc' && x.version === mainLabel) : x.version === v.label))
   const total = st.given.length ? totalOf(problem) : 0
   const bars = Math.ceil(total / B)
-  const editSegs = editing === 'given' ? st.given : st.mine
+  const mineLines = [st.mine, ...(st.extra ?? [])]
+  const slot = typeof editing === 'number' ? slots[editing] : undefined
+  const editSegs = editing === 'given' ? st.given : editing === 'mine' ? st.mine : (mineLines[editing] ?? [])
   const locked = st.locked && editing === 'given'
   const setEditSegs = (segs: Seg[]) => {
     if (locked) return
@@ -276,6 +283,14 @@ export function CounterpointPage() {
     setRescued(null)
     setHintList(null)
     setGraded(null)
+    if (typeof editing === 'number') {
+      setSt((s) => {
+        const lines = [s.mine, ...(s.extra ?? [])]
+        lines[editing] = segs
+        return { ...s, mine: lines[0] ?? [], extra: lines.slice(1).map((l) => l ?? []) }
+      })
+      return
+    }
     setSt((s) => (editing === 'given' ? { ...s, given: segs, ...(segs.length ? {} : { origin: 'teacher' as const, answer: null }), stars: s.stars.filter((t) => t < (segs.length ? segs[segs.length - 1].start + segs[segs.length - 1].dur : 0)) } : { ...s, mine: segs }))
   }
 
@@ -423,7 +438,10 @@ export function CounterpointPage() {
         <div className="cp-card">
           <div className="cp-tabs">
             <button className={clsx(editing === 'given' && 'is-on')} onClick={() => setEditing('given')}>Bè đề</button>
-            <button className={clsx(editing === 'mine' && 'is-on')} onClick={() => setEditing('mine')}>Bài của tôi</button>
+            {!special && <button className={clsx(editing === 'mine' && 'is-on')} onClick={() => setEditing('mine')}>Bài của tôi</button>}
+            {special && slots.map((sl, i) => (
+              <button key={i} className={clsx(editing === i && 'is-on')} onClick={() => setEditing(i)}>{sl.label}</button>
+            ))}
           </div>
           <div className="cp-origin">
             {st.origin === 'gen' ? (
@@ -436,7 +454,7 @@ export function CounterpointPage() {
             )}
           </div>
           <ScoreSvg
-            voices={editing === 'given' ? [{ segs: st.given, up: st.givenIs === 'I' }] : [{ segs: st.given, up: st.givenIs === 'I', muted: true }, { segs: st.mine, up: st.givenIs === 'II' }]}
+            voices={editing === 'given' ? [{ segs: st.given, up: st.givenIs === 'I' }] : [{ segs: st.given, up: st.givenIs === 'I', muted: true }, { segs: editSegs, up: st.givenIs === 'II' }]}
             meter={meter}
             keySig={sig}
             total={Math.max(total, B)}
@@ -468,7 +486,7 @@ export function CounterpointPage() {
                 key={s}
                 className={clsx('cp-key', letterOf(pitch(s)) === 0 && 'is-c')}
                 onClick={() => {
-                  setEditSegs(appendNote(editSegs, s, key, dur, tie, B, acc))
+                  setEditSegs(appendNote(editSegs, s, key, dur, tie, B, acc, slot?.start ?? 0))
                   setTie(false)
                   setAcc(null)
                 }}
@@ -553,7 +571,11 @@ export function CounterpointPage() {
           <div className="cp-forms" role="radiogroup" aria-label="Dạng bài">
             {FORMS.map((f) => (
               <label key={f.id} className={clsx('cp-check', form === f.id && 'is-on')}>
-                <input type="radio" name="cp-form" checked={form === f.id} disabled={st.locked} onChange={() => setSt((s) => ({ ...s, form: f.id }))} />
+                <input type="radio" name="cp-form" checked={form === f.id} disabled={st.locked} onChange={() => {
+                  setSt((s) => ({ ...s, form: f.id }))
+                  // the student's lines differ by form: start again from the đề tab
+                  setEditing('given')
+                }} />
                 {f.label}
               </label>
             ))}
@@ -629,9 +651,9 @@ export function CounterpointPage() {
           </label>}
         </div>
 
-        {multi && <MultiPanel k={key} meter={meter} given={st.given} form={form as MultiForm} width={width} place={(t) => place(meter, t)} />}
+        {multi && <MultiPanel k={key} meter={meter} given={st.given} form={form as MultiForm} width={width} place={(t) => place(meter, t)} mine={mineLines} onSlots={setSlots} />}
 
-        {canonForm && <CanonPanel k={key} meter={meter} given={st.given} form={form as CanonForm} width={width} place={(t) => place(meter, t)} />}
+        {canonForm && <CanonPanel k={key} meter={meter} given={st.given} form={form as CanonForm} width={width} place={(t) => place(meter, t)} mine={mineLines} onSlots={setSlots} />}
 
         {!special && <>
         <div className="cp-actions">

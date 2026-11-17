@@ -192,6 +192,10 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
     freeIdx.map((i) => `${endOf(i)}:${notesOf(lines[i]).slice(-3).map((x) => `${x.start}.${x.dur}.${x.p.step}.${x.p.alter}`).join(',')}:${lines[i].length ? lines[i][lines[i].length - 1].dur : 0}`).join('|')
 
   /** The voice sounding just above / below voice i at time t in the original, to keep the order without crossing. */
+  // order only: each free voice keeps a register of its own, about a fifth per voice from the given one
+  const gi = mp.free.findIndex((f) => !f)
+  const gSteps = mp.voices[gi]?.map((x) => x.p.step).sort((a, b) => a - b) ?? [28]
+  const home = (i: number) => gSteps[gSteps.length >> 1] + 4 * (gi - i)
   const neighbour = (i: number, t: number, dir: -1 | 1) => {
     for (let j = i + dir; j >= 0 && j < n; j += dir) {
       const s = lines[j].find((x) => x.start <= t && t < x.start + x.dur)
@@ -229,6 +233,7 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
           cost += interval(inKey(mp.key, Math.max(nb, pt.step)), inKey(mp.key, Math.min(nb, pt.step))).kind === 'imperfect' ? 0 : 1
         }
         cost += d === 1 ? 0.6 : d >= 4 ? 0.4 : 0
+        cost += Math.abs(pt.step - home(i)) / 3
         out.push({ s: { start: t, dur: d, p: pt }, cost })
       }
     }
@@ -279,11 +284,18 @@ export function msolve(mp: MProblem, o: { timeMs: number; maxSolutions: number; 
 /* ---------- the versions the book names ---------- */
 
 /** Every re-ordering of n voices by octave shifts (tam trùng / tứ trùng quãng 8, tr. 43–45): voice moved by 7 × (rank change). */
-export function octaveVersions(n: number): MVersion[] {
-  const perms: number[][] = []
-  const go = (a: number[], rest: number[]) => (rest.length ? rest.forEach((x, k) => go([...a, x], rest.filter((_, j) => j !== k))) : perms.push(a))
+/** Every order of n voices, the original first. */
+export function perms(n: number): number[][] {
+  const out: number[][] = []
+  const go = (a: number[], rest: number[]) => (rest.length ? rest.forEach((x, k) => go([...a, x], rest.filter((_, j) => j !== k))) : out.push(a))
   go([], [...Array(n).keys()])
-  return perms
+  return out
+}
+/** The book's Iv of the pair (upper v, lower w) in the original: v up is +, w up is − (tr. 40, sơ đồ 29); Iv1 + Iv2 = Iv3. */
+export const pairIv = (steps: number[], v: number, w: number) => steps[v] - steps[w]
+
+export function octaveVersions(n: number): MVersion[] {
+  return perms(n)
     .filter((p) => p.some((x, k) => x !== k))
     .map((order, k) => ({ label: `BT${k + 1}`, order, steps: [...Array(n).keys()].map((v) => 7 * (order.indexOf(v) * -1 + v)) }))
 }
@@ -295,10 +307,28 @@ export function msolveMany(mp: MProblem, timeMs: number, want = 4): MResult {
   if (first.status !== 'valid') return first
   const all = new Map(first.solutions.map((s) => [JSON.stringify(s.lines), s]))
   let nodes = first.nodes
-  for (let seed = 2; all.size < want && Date.now() - t0 < timeMs; seed++) {
-    const r = msolve(mp, { timeMs: Math.min(timeMs - (Date.now() - t0), timeMs / 4), maxSolutions: 2, seed: seed * 7919 })
+  // more answers than shown, then the ones with the fewest soft remarks (none of them breaks a hard rule)
+  for (let seed = 2; all.size < want * 3 && Date.now() - t0 < timeMs / 2; seed++) {
+    const r = msolve(mp, { timeMs: Math.min(timeMs / 2 - (Date.now() - t0), timeMs / 8), maxSolutions: 2, seed: seed * 7919 })
     nodes += r.nodes
     for (const s of r.solutions) all.set(JSON.stringify(s.lines), s)
   }
-  return { ...first, nodes, solutions: [...all.values()].slice(0, want) }
+  return { ...first, nodes, solutions: [...all.values()].sort((a, b) => a.report.penalty - b.report.penalty).slice(0, want) }
+}
+
+export type Graded = { report: MReport; unfinished: string[]; disputed: string[] }
+/** Grade a texture the student wrote: every rule (as for an answer), what is not written to the end, and any line
+ *  the independent checker sees differently (a bug, shown rather than hidden). */
+export function gradeMulti(mp: MProblem, lines: Seg[][]): Graded {
+  const total = totalOfM(mp)
+  const unfinished: string[] = []
+  lines.forEach((l, i) => {
+    if (!mp.free[i]) return
+    const end = mp.ends?.[i] ?? total
+    const got = l.length ? l[l.length - 1].start + l[l.length - 1].dur : 0
+    if (got !== end) unfinished.push(`bè ${ROMAN[i]}`)
+  })
+  const report = mcheck(mp, lines)
+  const faults = mverify(mp, lines)
+  return { report, unfinished, disputed: (faults.length === 0) !== (report.hard.length === 0) ? faults : [] }
 }

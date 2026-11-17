@@ -135,3 +135,20 @@ test('canon vô tận: đề ngắn làm đoạn A, máy viết tiếp bè P, b�
   await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 80_000 })
   await expect(page.locator('.cp-ver-head span')).toContainText('R1: sau 2 ô, quãng 8 dưới')
 })
+
+test('chấm bài tự viết cho canon: trình nhập có ô cho từng bè học viên viết, bài viết dở thì báo chưa xong', async ({ page }) => {
+  const p = (step: number, midi: number) => ({ step, alter: 0, midi })
+  const A = [
+    { start: 0, dur: 2, p: p(35, 72) },
+    { start: 2, dur: 2, p: p(36, 74) },
+    { start: 4, dur: 2, p: p(37, 76) },
+    { start: 6, dur: 2, p: p(35, 72) },
+  ]
+  await page.addInitScript((given) => {
+    localStorage.setItem('counterpoint:v1', JSON.stringify({ keyIdx: 0, meterIdx: 2, givenIs: 'II', given, stars: [], form: 'canon-vo-tan', mine: [{ start: 8, dur: 4, p: { step: 35, alter: 0, midi: 72 } }], extra: [] }))
+  }, A)
+  await page.goto('/#/counterpoint')
+  await expect(page.getByRole('button', { name: 'P (viết tiếp sau A)' })).toBeVisible()
+  await page.getByRole('button', { name: 'Chấm bài của tôi' }).click()
+  await expect(page.locator('[data-graded="bad"]')).toContainText('Chưa viết tới cuối: P (viết tiếp sau A)')
+})

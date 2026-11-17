@@ -12,8 +12,9 @@
 .cp-row input { width: 58px; }
 .cp-card { margin-top: 14px; padding: 12px; border-radius: 18px; border: 1px solid var(--color-border); background: var(--color-surface-raised); }
 .cp-card h2 { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin-bottom: 6px; }
-.cp-tabs { display: inline-flex; gap: 4px; padding: 3px; margin-bottom: 8px; border-radius: 99px; background: var(--color-surface-sunken); }
-.cp-tabs button { height: 30px; padding: 0 14px; border-radius: 99px; font-size: 12.5px; color: var(--color-ink-muted); }
+.cp-tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 3px; margin-bottom: 8px; border-radius: 18px; background: var(--color-surface-sunken); }
+/* canon and three-voice exercises add one tab per line the student writes: let them wrap, never squeeze */
+.cp-tabs button { min-height: 30px; padding: 4px 14px; border-radius: 99px; font-size: 12.5px; color: var(--color-ink-muted); white-space: nowrap; }
 .cp-tabs button.is-on { background: var(--color-gold); color: #0b0a09; font-weight: 600; }
 .cp-durs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .cp-durs button { display: grid; justify-items: center; min-width: 56px; padding: 4px 8px; border-radius: 12px; border: 1px solid var(--color-border); color: var(--color-ink); }
@@ -107,3 +108,6 @@
 .cp-forms { display: grid; gap: 4px; margin-bottom: 10px; }
 .cp-forms .cp-check { margin-top: 4px; }
 .cp-forms .cp-check.is-on { color: var(--color-gold); }
+.cp-custom { display: grid; gap: 6px; margin-top: 8px; }
+.cp-custom .cp-row { flex-wrap: wrap; }
+.cp-iv { font-size: 12px; color: var(--color-ink-muted); }

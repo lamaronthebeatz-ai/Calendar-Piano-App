@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { pitch, type Seg } from './model'
-import { canonSolve, preset, textureOf, transformLine, type CanonSpec, type Transform } from './canon'
-import { mcheck, mverify, type MProblem } from './multi'
+import { canonSolve, gradeCanon, preset, textureOf, transformLine, type CanonSpec, type Transform } from './canon'
+import { gradeMulti, mcheck, msolve, mverify, type MProblem } from './multi'
 
 function line(s: string): Seg[] {
   const out: Seg[] = []
@@ -68,4 +68,56 @@ describe('bộ giải mô phỏng – canon', () => {
     expect(r.status).toBe('unsat')
     expect(r.problem).toContain('đoạn A')
   })
+})
+
+describe('mô phỏng tiết tấu, bè tự do thứ ba, đoạn kết', () => {
+  const lenOf = (l: Seg[]) => (l.length ? l[l.length - 1].start + l[l.length - 1].dur : 0)
+  const solved = (s: CanonSpec) => {
+    const r = canonSolve(s, { timeMs: 20_000, maxSolutions: 1 })
+    expect(r.status).toBe('valid')
+    const lines = r.solutions[0].lines
+    const ends = lines.map(lenOf)
+    const mp: MProblem = { key: s.key, meter: s.meter, voices: s.order.map((i) => lines[i]), free: s.order.map(() => true), versions: [], ends: s.order.map((i) => ends[i]) }
+    expect(mverify(mp, mp.voices)).toEqual([])
+    return lines
+  }
+  it('mô phỏng tiết tấu: bè R giữ đúng tiết tấu của A, cao độ do máy viết (tr. 48)', () => {
+    const lines = solved(spec({ followers: [{ delay: 8, steps: -7, transform: 'rhythm' }] }))
+    expect(lines[1].map((x) => [x.start, x.dur])).toEqual(A.map((x) => [x.start + 8, x.dur]))
+  }, 30_000)
+  it('mô phỏng ba bè: hai bè mô phỏng, một bè tự do ở dưới (tr. 55)', () => {
+    const lines = solved(spec({ followers: [{ delay: 8, steps: -4, transform: 'same' }], extraFree: 1, order: [0, 1, 2] }))
+    expect(lines).toHaveLength(3)
+    expect(lines[2][0].start).toBe(0)
+    expect(lenOf(lines[2])).toBe(16)
+  }, 30_000)
+  it('đoạn kết: mọi bè cùng dừng sau một ô thêm', () => {
+    for (const s of [spec({ coda: 4 }), spec({ ...preset('vo-tan-1', 8, 4, -7), coda: 4 }), spec({ ...preset('ba-be-1', 8, 4, -4), coda: 4 })]) {
+      const lines = solved(s)
+      const end = Math.max(...lines.map(lenOf))
+      expect(lines.every((l) => lenOf(l) === end)).toBe(true)
+    }
+  }, 60_000)
+})
+
+describe('chấm bài tự viết (canon, ba bè)', () => {
+  it('canon: bài đúng (lấy từ lời giải) được nhận, sửa một nốt thành nhảy quãng 7 thì bị bắt, viết thiếu thì báo chưa xong', () => {
+    const s = spec(preset('vo-tan-1', 8, 4, -7))
+    const sol = canonSolve(s, { timeMs: 10_000, maxSolutions: 1 }).solutions[0]
+    const cont = sol.lines[0].filter((x) => x.start >= 8 && x.start < s.L)
+    const ok = gradeCanon(s, [cont])!
+    expect(ok.report.hard).toEqual([])
+    expect(ok.unfinished).toEqual([])
+    const bad = gradeCanon(s, [cont.map((x, i) => (i === 0 ? { ...x, tied: false, p: pitch(x.p.step + 6) } : x))])!
+    expect(bad.report.hard.length).toBeGreaterThan(0)
+    expect(gradeCanon(s, [cont.slice(0, 1)])!.unfinished).toContain('P (viết tiếp sau A)')
+  }, 30_000)
+  it('ba bè: lời giải của máy chấm lại vẫn đúng', () => {
+    const mp: MProblem = { key: C, meter, voices: [[], [], line('C3:4 | D3:4 | B2:4 | C3:4')], free: [true, true, false], versions: [] }
+    const r = msolve(mp, { timeMs: 10_000, maxSolutions: 1 })
+    const g = gradeMulti(mp, r.solutions[0].lines)
+    expect(g.report.hard).toEqual([])
+    expect(g.unfinished).toEqual([])
+    expect(gradeMulti(mp, [r.solutions[0].lines[0], [], r.solutions[0].lines[2]]).unfinished).toEqual(['bè II'])
+  }, 30_000)
 })

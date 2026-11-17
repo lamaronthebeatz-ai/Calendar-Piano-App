@@ -8,10 +8,10 @@
  */
 import { barQ, inKey, mirrorOf, notesOf, pitchName, transposeBy, type Key, type Meter, type Pitch, type Seg } from './model'
 import { placeOk } from './rules'
-import { mcheck, mverify, type MProblem, type MReport } from './multi'
+import { gradeMulti, mcheck, mverify, type Graded, type MProblem, type MReport } from './multi'
 import type { Status } from './solver'
 
-export type Transform = 'same' | 'inv' | 'aug' | 'dim' | 'retro' | 'inv-aug' | 'inv-dim'
+export type Transform = 'same' | 'inv' | 'aug' | 'dim' | 'retro' | 'inv-aug' | 'inv-dim' | 'rhythm'
 export const TRANSFORMS: { id: Transform; label: string }[] = [
   { id: 'same', label: 'Cùng hướng' },
   { id: 'inv', label: 'Đảo ảnh' },
@@ -20,6 +20,7 @@ export const TRANSFORMS: { id: Transform; label: string }[] = [
   { id: 'retro', label: 'Ngược hướng' },
   { id: 'inv-aug', label: 'Đảo ảnh + phóng to' },
   { id: 'inv-dim', label: 'Đảo ảnh + thu nhỏ' },
+  { id: 'rhythm', label: 'Chỉ nhắc tiết tấu (cao độ tự do)' },
 ]
 export type Follower = { delay: number; steps: number; transform: Transform }
 export type CanonSpec = {
@@ -38,6 +39,10 @@ export type CanonSpec = {
   order: number[]
   /** move by the exact interval (into the related key, like the Iv versions) instead of along the key's own notes */
   real?: boolean
+  /** free voices besides P and the followers (mô phỏng ba bè: one, tr. 55); their texture index follows the followers */
+  extraFree?: number
+  /** quarters of free ending after the imitation, every voice reaching the same final (đoạn nhạc kết) */
+  coda?: number
 }
 export type CanonSolution = { lines: Seg[][]; report: MReport }
 export type CanonResult = { solutions: CanonSolution[]; status: Status; nodes: number; disputed: number; furthest: number; domain: string; problem?: string }
@@ -88,19 +93,60 @@ function leaderOf(spec: CanonSpec, u: Seg[], complete: boolean): Seg[] {
   return out
 }
 
-/** All the voices (index 0 = P), and where each must end. */
-export function textureOf(spec: CanonSpec, u: Seg[], complete: boolean): { lines: Seg[][]; ends: number[] } | null {
-  const P = leaderOf(spec, u, complete)
-  const lines = [P]
-  const ends = [spec.kind === 'simple' ? spec.L : spec.L * spec.cycles]
+/** The rhythm a "tiết tấu" follower keeps: the durations of A, augmented or not, from its entry. */
+const rhythmOf = (spec: CanonSpec, f: Follower) => {
+  let t = f.delay
+  return notesOf(spec.A).map((n) => {
+    const s = { start: t, dur: n.dur }
+    t += n.dur
+    return s
+  })
+}
+
+/** Where every voice's own material ends, and where the piece ends (after the coda). */
+export function plan(spec: CanonSpec) {
+  const nF = spec.followers.length
+  const own: number[] = [spec.kind === 'simple' ? spec.L : spec.L * spec.cycles]
   for (const f of spec.followers) {
-    const src = spec.kind === 'simple' ? spec.A : P
-    const r = transformLine(spec.key, src, f, spec.real)
-    if (!r) return null
-    lines.push(r)
-    ends.push(spec.kind === 'simple' ? f.delay + lenOf(transformLine(spec.key, spec.A, { ...f, delay: 0 }) ?? []) : f.delay + spec.L * spec.cycles)
+    if (f.transform === 'rhythm') own.push(f.delay + lenOf(spec.A))
+    else own.push(spec.kind === 'simple' ? f.delay + lenOf(transformLine(spec.key, spec.A, { ...f, delay: 0 }) ?? []) : f.delay + spec.L * spec.cycles)
   }
-  return { lines, ends }
+  const natural = Math.max(...own)
+  for (let i = 0; i < (spec.extraFree ?? 0); i++) own.push(natural)
+  const end = natural + (spec.coda ?? 0)
+  const ends = own.map((e) => (spec.coda ? end : e))
+  /** the lines the machine writes besides P's continuation, in a fixed order */
+  const items: { voice: number; start: number; end: number; rhythm?: { start: number; dur: number }[] }[] = []
+  spec.followers.forEach((f, j) => f.transform === 'rhythm' && items.push({ voice: j + 1, start: f.delay, end: own[j + 1], rhythm: rhythmOf(spec, f) }))
+  for (let i = 0; i < (spec.extraFree ?? 0); i++) items.push({ voice: nF + 1 + i, start: 0, end: natural })
+  if (spec.coda) own.forEach((e, v) => e < end && v <= nF && items.push({ voice: v, start: e, end }))
+  return { own, ends, end, items }
+}
+
+/** All the voices (index 0 = P, then the followers, then the free voices), from P's material and the written lines. */
+export function textureOf(spec: CanonSpec, u: Seg[], complete: boolean, written: Seg[][] = []): { lines: Seg[][]; ends: number[] } | null {
+  const pl = plan(spec)
+  const P = leaderOf(spec, u, complete)
+  const lines: Seg[][] = [P]
+  spec.followers.forEach((f, j) => {
+    if (f.transform === 'rhythm') {
+      const k = pl.items.findIndex((it) => it.voice === j + 1 && it.rhythm)
+      lines.push((written[k] ?? []).slice())
+      return
+    }
+    const src = spec.kind === 'simple' ? spec.A : P
+    lines.push(transformLine(spec.key, src, f, spec.real) ?? [])
+  })
+  if (spec.followers.some((f) => f.transform !== 'rhythm' && !transformLine(spec.key, spec.A, f, spec.real))) return null
+  pl.items.forEach((it, k) => {
+    if (it.rhythm) return
+    const w = written[k] ?? []
+    if (it.voice > spec.followers.length) lines[it.voice] = w.slice()
+    // a coda only joins a voice whose own material is complete
+    else if (w.length && lenOf(lines[it.voice]) === it.start) lines[it.voice] = [...lines[it.voice], ...w]
+  })
+  for (let v = 0; v < pl.ends.length; v++) lines[v] ??= []
+  return { lines, ends: pl.ends }
 }
 
 /** The texture as a multi-voice problem: voices re-ordered top to bottom, every one judged (none is fixed). */
@@ -119,7 +165,13 @@ export function canonDomain(spec: CanonSpec) {
   const pitches: Pitch[] = []
   for (let st = lo; st <= hi; st++) pitches.push(inKey(spec.key, st))
   for (const s of spec.A) if (!pitches.some((x) => x.step === s.p.step && x.alter === s.p.alter)) pitches.push(s.p)
-  const text = `bè P viết tiếp bằng nốt của giọng (và biến âm có trong đề), trong khoảng ${pitchName(inKey(spec.key, lo))} – ${pitchName(inKey(spec.key, hi))}, không dấu lặng, không nốt móc đơn; chưa có đoạn kết riêng (các bè dừng lần lượt)`
+  const parts = [
+    'bè P viết tiếp',
+    spec.followers.some((f) => f.transform === 'rhythm') && 'cao độ bè nhắc tiết tấu',
+    spec.extraFree && 'bè tự do',
+    spec.coda && 'đoạn kết',
+  ].filter(Boolean)
+  const text = `${parts.join(', ')} bằng nốt của giọng (và biến âm có trong đề), trong khoảng ${pitchName(inKey(spec.key, lo))} – ${pitchName(inKey(spec.key, hi))}, không dấu lặng, không nốt móc đơn${spec.coda ? '' : '; không có đoạn kết riêng (các bè dừng lần lượt)'}`
   return { pitches, text }
 }
 
@@ -129,8 +181,9 @@ export function canonProblem(spec: CanonSpec): string | null {
   if (!spec.A.length) return 'Chưa có đoạn mở đầu A (bè đề).'
   if (a > spec.L) return 'Đoạn A dài hơn độ dài của bè P.'
   if (spec.followers.some((f) => f.transform !== 'same') && spec.kind === 'canon') return 'Canon chỉ chép nguyên giai điệu (cùng hướng).'
-  if (spec.followers.some((f) => !transformLine(spec.key, spec.A, f))) return 'Thu nhỏ trường độ làm xuất hiện nốt móc đơn — ngoài phạm vi tìm kiếm.'
+  if (spec.followers.some((f) => f.transform !== 'rhythm' && !transformLine(spec.key, spec.A, f))) return 'Thu nhỏ trường độ làm xuất hiện nốt móc đơn — ngoài phạm vi tìm kiếm.'
   if (spec.followers.some((f) => f.delay <= 0)) return 'Bè mô phỏng phải vào sau bè P.'
+  if (spec.coda && spec.coda % barQ(spec.meter)) return 'Đoạn kết phải tròn ô.'
   return null
 }
 
@@ -139,7 +192,9 @@ export function canonSolve(spec: CanonSpec, o: { timeMs: number; maxSolutions: n
   const bad = canonProblem(spec)
   if (bad) return { solutions: [], status: 'unsat', nodes: 0, disputed: 0, furthest: 0, domain: text, problem: bad }
   const B = barQ(spec.meter)
+  const pl = plan(spec)
   const u: Seg[] = spec.A.map((s) => ({ ...s }))
+  const written: Seg[][] = pl.items.map(() => [])
   let seed = o.seed ?? 1
   const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647)
   const t0 = Date.now()
@@ -150,32 +205,39 @@ export function canonSolve(spec: CanonSpec, o: { timeMs: number; maxSolutions: n
   const found: CanonSolution[] = []
   const dead = new Set<string>()
   const maxDelay = Math.max(...spec.followers.map((f) => f.delay))
-  /** Everything later checks can depend on: the followers replay the leader, so the last `maxDelay` of it, plus three notes. */
-  const stateKey = (h: number) => {
-    if (spec.kind === 'canon' && spec.cycles > 1) return '' // the cycles bring back the whole of P: no shortcut
+  const uDone = () => lenOf(u) >= spec.L
+  const itemEnd = (k: number) => (written[k].length ? lenOf(written[k]) : pl.items[k].start)
+  /** Everything later checks can depend on: the followers replay the leader, so the last `maxDelay` of it, plus three notes per line. */
+  const stateKey = () => {
+    const tail = (l: Seg[]) => notesOf(l).slice(-3).map((x) => `${x.start}.${x.dur}.${x.p.step}.${x.p.alter}`).join(',')
+    const lines = written.map((w, k) => `${itemEnd(k)}:${tail(w)}:${w[w.length - 1]?.dur ?? 0}`).join('/')
+    // the cycles bring back the whole of P: no shortcut while P is being written, but once it is fixed the key holds all of it
+    if (spec.kind === 'canon' && spec.cycles > 1) return uDone() ? `P${u.map((x) => `${x.dur}.${x.p.step}.${x.p.alter}${x.tied ? '~' : ''}`).join(',')}|${lines}` : ''
+    const h = lenOf(u)
     const ns = notesOf(u)
     const from = ns.findIndex((n) => n.start + n.dur > h - (spec.kind === 'canon' ? maxDelay : 0))
-    return `${h}|${ns.slice(Math.max(0, Math.min(from, ns.length - 3))).map((x) => `${x.start}.${x.dur}.${x.p.step}.${x.p.alter}`).join(',')}|${u[u.length - 1]?.dur ?? 0}`
+    return `${h}|${ns.slice(Math.max(0, Math.min(from, ns.length - 3))).map((x) => `${x.start}.${x.dur}.${x.p.step}.${x.p.alter}`).join(',')}|${u[u.length - 1]?.dur ?? 0}|${lines}`
   }
 
   const judge = (complete: boolean): MReport | null => {
-    const tx = textureOf(spec, u, complete)
+    // once P is written its cycles are known too, so a coda joins and is checked note by note
+    const tx = textureOf(spec, u, uDone(), written)
     if (!tx) return null
     const { mp, lines } = asProblem(spec, tx.ends, tx.lines)
     if (complete) return mcheck(mp, lines)
-    // only what is known from the start on: P up to h, each follower up to its delay + h
     const from = lines.map((l) => notesOf(l).slice(-3)[0]?.start ?? 0)
     return mcheck(mp, lines, true, -1, from)
   }
 
-  function moves(h: number): Seg[] {
-    const last = u[u.length - 1]
+  /** The candidates for the next segment of a line ending at `h`, last segment `last`, up to `limit`; or one fixed duration. */
+  function moves(h: number, last: Seg | undefined, limit: number, dur?: number): Seg[] {
     const off = h % B
     const out: { s: Seg; cost: number }[] = []
-    for (const d of DURS) {
-      if (h + d > spec.L || !placeOk(spec.meter, off, d)) continue
-      const oneNote = last && off !== 0 && placeOk(spec.meter, last.start % B, last.dur + d)
-      if (last && !oneNote && last.dur >= 2 && (last.dur >= d || (last.dur === 2 && d === 4))) out.push({ s: { start: h, dur: d, p: last.p, tied: true }, cost: 0.6 + rnd() * 1.2 })
+    for (const d of dur ? [dur] : DURS) {
+      if (h + d > limit || !placeOk(spec.meter, off, d)) continue
+      const contiguous = last && last.start + last.dur === h
+      const oneNote = contiguous && off !== 0 && placeOk(spec.meter, last.start % B, last.dur + d)
+      if (!dur && contiguous && !oneNote && last.dur >= 2 && (last.dur >= d || (last.dur === 2 && d === 4))) out.push({ s: { start: h, dur: d, p: last.p, tied: true }, cost: 0.6 + rnd() * 1.2 })
       for (const pt of pitches) {
         let cost = rnd() * 1.6
         if (last) {
@@ -189,13 +251,36 @@ export function canonSolve(spec: CanonSpec, o: { timeMs: number; maxSolutions: n
     return out.sort((a, b) => a.cost - b.cost).map((x) => x.s)
   }
 
+  /** The unknown that is furthest behind moves next: P's continuation (-1) or a written line (its index). */
+  function next(): number | null {
+    let best: number | null = null
+    let at = Infinity
+    if (!uDone()) {
+      best = -1
+      at = lenOf(u)
+    }
+    pl.items.forEach((it, k) => {
+      if (itemEnd(k) >= it.end) return
+      // a coda waits until the material it follows is complete
+      if (!it.rhythm && it.voice <= spec.followers.length) {
+        const own = pl.items.findIndex((x) => x.rhythm && x.voice === it.voice)
+        if (own >= 0 ? itemEnd(own) < pl.items[own].end : !uDone()) return
+      }
+      if (itemEnd(k) < at) {
+        best = k
+        at = itemEnd(k)
+      }
+    })
+    return best
+  }
+
   function dfs(): void {
     if (timedOut || found.length >= o.maxSolutions) return
-    const h = lenOf(u)
-    if (h >= spec.L) {
+    const k = next()
+    if (k === null) {
       const report = judge(true)
       if (!report || report.hard.length) return
-      const tx = textureOf(spec, u, true)!
+      const tx = textureOf(spec, u, true, written)!
       const { mp, lines } = asProblem(spec, tx.ends, tx.lines)
       if (mverify(mp, lines).length) {
         disputed++
@@ -204,54 +289,52 @@ export function canonSolve(spec: CanonSpec, o: { timeMs: number; maxSolutions: n
       found.push({ lines: tx.lines.map((l) => l.slice()), report })
       return
     }
-    const key = stateKey(h)
+    const key = stateKey()
     if (key && dead.has(key)) return
     const before = found.length
-    for (const s of moves(h)) {
+    const line = k < 0 ? u : written[k]
+    const it = k >= 0 ? pl.items[k] : null
+    const h = k < 0 ? lenOf(u) : itemEnd(k)
+    const dur = it?.rhythm?.[line.length]?.dur
+    for (const s of moves(h, line[line.length - 1], k < 0 ? spec.L : it!.end, dur)) {
       if ((++nodes & 1023) === 0 && Date.now() - t0 > o.timeMs) {
         timedOut = true
         return
       }
-      u.push(s)
+      line.push(s)
       const r = judge(false)
       if (r && !r.hard.length) {
-        furthest = Math.max(furthest, s.start + s.dur)
+        furthest = Math.max(furthest, Math.min(lenOf(u), ...written.map((_, j) => itemEnd(j))))
         dfs()
       }
-      u.pop()
+      line.pop()
       if (timedOut || found.length >= o.maxSolutions) return
     }
     if (key && found.length === before) dead.add(key)
   }
   // the opening itself must already be lawful against what the followers play over it
-  const pre = judge(lenOf(u) >= spec.L)
+  const pre = judge(false)
   if (pre?.hard.length) {
     const v = pre.hard[0]
     return { solutions: [], status: 'unsat', nodes: 0, disputed: 0, furthest: 0, domain: text, problem: `Ngay trong đoạn A đã phạm luật với bè mô phỏng (${v.version}, phách đen thứ ${v.t + 1}): ${v.rule}. Đổi quãng hoặc thời điểm vào của bè mô phỏng.` }
   }
-  if (pre) {
-    if (lenOf(u) >= spec.L) {
-      const tx = textureOf(spec, u, true)!
-      const { mp, lines } = asProblem(spec, tx.ends, tx.lines)
-      if (!mverify(mp, lines).length) found.push({ lines: tx.lines, report: pre })
-    } else dfs()
-  }
+  if (pre) dfs()
   const exhausted = !timedOut && found.length < o.maxSolutions && !disputed
   const status: Status = found.length ? 'valid' : exhausted ? 'unsat' : 'unknown'
   return { solutions: found, status, nodes, disputed, furthest, domain: text }
 }
 
-/** Several searches for variety; the first one decides 'unsat'. */
+/** Several searches for variety; the first one decides 'unsat'. The answers come back with the fewest soft remarks first. */
 export function canonSolveMany(spec: CanonSpec, timeMs: number, want = 3): CanonResult {
   const t0 = Date.now()
   const first = canonSolve(spec, { timeMs, maxSolutions: 1, seed: 1 })
   if (first.status !== 'valid') return first
   const all = new Map(first.solutions.map((s) => [JSON.stringify(s.lines), s]))
-  for (let seed = 2; all.size < want && Date.now() - t0 < timeMs; seed++) {
+  for (let seed = 2; all.size < want * 2 && Date.now() - t0 < timeMs; seed++) {
     const r = canonSolve(spec, { timeMs: Math.min(timeMs - (Date.now() - t0), timeMs / 3), maxSolutions: 1, seed: seed * 7919 })
     for (const s of r.solutions) all.set(JSON.stringify(s.lines), s)
   }
-  return { ...first, solutions: [...all.values()] }
+  return { ...first, solutions: [...all.values()].sort((a, b) => a.report.penalty - b.report.penalty).slice(0, want) }
 }
 
 /** Ready-made settings for the book's kinds (a = the length of the opening A, B = one bar). */
@@ -282,3 +365,38 @@ export const CANON_FORMS: { id: CanonForm; label: string; ref: string }[] = [
 export const IMIT_STEPS = [-14, -11, -9, -7, -5, -4, -3, -2, 0, 2, 3, 4, 5, 7, 9, 11]
 const NAMES = ['đồng âm', 'quãng 2', 'quãng 3', 'quãng 4', 'quãng 5', 'quãng 6', 'quãng 7', 'quãng 8', 'quãng 9', 'quãng 10', 'quãng 11', 'quãng 12', 'quãng 13', 'quãng 14', 'quãng 15']
 export const stepsName = (n: number) => (n === 0 ? 'đồng âm' : `${NAMES[Math.abs(n)]} ${n < 0 ? 'dưới' : 'trên'}`)
+
+/** The lines a student writes for a spec: P's continuation after A, then each line the machine would write. */
+export function slotsOf(spec: CanonSpec): { label: string; start: number; end: number }[] {
+  const pl = plan(spec)
+  const nF = spec.followers.length
+  const name = (v: number) => (v === 0 ? 'P' : v <= nF ? `R${v}` : 'bè tự do')
+  return [
+    { label: 'P (viết tiếp sau A)', start: lenOf(spec.A), end: spec.L },
+    ...pl.items.map((it) => ({
+      label: it.rhythm ? `${name(it.voice)} (cao độ, giữ tiết tấu A)` : it.voice > nF ? 'Bè tự do' : `Đoạn kết ${name(it.voice)}`,
+      start: it.start,
+      end: it.end,
+    })),
+  ]
+}
+
+/** Grade what the student wrote for a canon or imitation: the texture built from it, judged like an answer. */
+export function gradeCanon(spec: CanonSpec, lines: Seg[][]): (Graded & { texture: Seg[][] }) | null {
+  const slots = slotsOf(spec)
+  const unfinished = slots.filter((sl, k) => lenOf(lines[k] ?? []) !== sl.end && !(k === 0 && sl.start === sl.end)).map((sl) => sl.label)
+  const pl = plan(spec)
+  const written = pl.items.map((_, k) => lines[k + 1] ?? [])
+  const u = [...spec.A.map((x) => ({ ...x })), ...(lines[0] ?? [])]
+  const tx = textureOf(spec, u, lenOf(u) >= spec.L, written)
+  if (!tx) return null
+  const { mp, lines: ordered } = asProblem(spec, tx.ends, tx.lines)
+  const g = gradeMulti({ ...mp, free: mp.free }, ordered)
+  // a "tiết tấu" follower must keep A's rhythm exactly
+  pl.items.forEach((it, k) => {
+    if (!it.rhythm) return
+    const got = notesOf(written[k]).map((n) => `${n.start}.${n.dur}`).join()
+    if (got && got !== it.rhythm.map((r) => `${r.start}.${r.dur}`).join()) g.report.hard.push({ rule: 'seg-place', t: it.start, version: slots[k + 1].label, detail: 'không giữ đúng tiết tấu của A' })
+  })
+  return { ...g, unfinished, texture: tx.lines }
+}

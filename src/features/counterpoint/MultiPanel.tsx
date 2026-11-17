@@ -4,7 +4,8 @@ import clsx from 'clsx'
 import { playSequence, type Step } from '../theory/audio'
 import { keySig, notesOf, type Key, type Meter, type Seg } from './model'
 import { RULES } from './rules'
-import { mdomain, octaveVersions, original, ROMAN, shiftLine, type MProblem, type MResult, type MultiForm, type MVersion } from './multi'
+import { gradeMulti, mdomain, octaveVersions, original, pairIv, perms, ROMAN, shiftLine, type Graded, type MProblem, type MResult, type MultiForm, type MVersion } from './multi'
+import { GradeCard } from './GradeCard'
 import type { MReq } from './multi.worker'
 import { ScoreSvg } from './ScoreSvg'
 
@@ -15,18 +16,32 @@ const orderText = (v: MVersion) => v.order.map((i) => ROMAN[i]).join(' · ')
  * Three or four voices from one đề (tr. 37–45): the đề takes one voice, the machine writes the others. In tam/tứ trùng
  * every re-ordering by octaves is a version; untick the ones the exercise does not ask for.
  */
-export function MultiPanel({ k, meter, given, form, width, place }: { k: Key; meter: Meter; given: Seg[]; form: MultiForm; width: number; place: (t: number) => string }) {
+export function MultiPanel({ k, meter, given, form, width, place, mine, onSlots }: { k: Key; meter: Meter; given: Seg[]; form: MultiForm; width: number; place: (t: number) => string; mine: Seg[][]; onSlots: (s: { label: string; start: number }[]) => void }) {
   const n = form === 'ba-be' || form === 'tam-trung' ? 3 : 4
   const [pos, setPos] = useState(n - 1)
   const at = Math.min(pos, n - 1)
   const all = useMemo(() => (form === 'tam-trung' || form === 'tu-trung' ? octaveVersions(n) : []), [form, n])
   const [off, setOff] = useState<string[]>([])
-  const versions = all.filter((v) => !off.includes(v.label))
+  // complex counterpoint with an Iv of its own for every pair (Thí dụ 77–78): versions the student sets up
+  const [custom, setCustom] = useState<MVersion[]>([])
+  const versions = [...all.filter((v) => !off.includes(v.label)), ...(all.length ? [] : custom)]
   const mp: MProblem = useMemo(
     () => ({ key: k, meter, voices: [...Array(n).keys()].map((i) => (i === at ? given : [])), free: [...Array(n).keys()].map((i) => i !== at), versions }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [k, meter, given, n, at, off.join(), all],
+    [k, meter, given, n, at, off.join(), all, JSON.stringify(custom)],
   )
+  // the student writes the other voices, top to bottom (tabs in the editor above)
+  const freeVoices = [...Array(n).keys()].filter((i) => i !== at)
+  const slotKey = freeVoices.join()
+  useEffect(() => {
+    onSlots(freeVoices.map((i) => ({ label: `Bè ${ROMAN[i]} của tôi`, start: 0 })))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slotKey])
+  const [graded, setGraded] = useState<{ sig: string; g: Graded; lines: Seg[][] } | null>(null)
+  const grade = () => {
+    const lines = [...Array(n).keys()].map((i) => (i === at ? given : mine[freeVoices.indexOf(i)] ?? []))
+    setGraded({ sig, g: gradeMulti(mp, lines), lines })
+  }
   const [result, setResult] = useState<MResult | null>(null)
   const [busy, setBusy] = useState(false)
   const [pick, setPick] = useState(0)
@@ -42,7 +57,7 @@ export function MultiPanel({ k, meter, given, form, width, place }: { k: Key; me
     [],
   )
   // a new đề or setting makes the old answer meaningless
-  const sig = JSON.stringify([mp.voices, mp.free, mp.versions.map((v) => v.label), meter, k])
+  const sig = JSON.stringify([mp.voices, mp.free, mp.versions, meter, k])
   const [shownSig, setShownSig] = useState(sig)
   const shown = shownSig === sig ? result : null
 
@@ -95,6 +110,37 @@ export function MultiPanel({ k, meter, given, form, width, place }: { k: Key; me
           {all.length > 0 && 'Mỗi biến thể là một cách đổi chỗ các bè bằng quãng 8; cặp nào thành cặp ngoài ở một biến thể thì không được đi cùng hướng vào quãng thuận hoàn toàn (tr. 40–43). Bỏ tick biến thể đề không yêu cầu.'}{' '}
           <Link to="/theory/doi-am-ba-bon-be">Lý thuyết</Link>
         </p>
+        {all.length === 0 && (
+          <div className="cp-custom" role="group" aria-label="Biến thể tự chọn">
+            {custom.map((v, ci) => {
+              const set = (nv: Partial<MVersion>) => setCustom((cs) => cs.map((x, j) => (j === ci ? { ...x, ...nv } : x)))
+              return (
+                <div className="cp-row" key={ci}>
+                  <b>{v.label}</b>
+                  {[...Array(n).keys()].map((i) => (
+                    <label key={i}>
+                      bè {ROMAN[i]} dời
+                      <select value={v.steps[i]} onChange={(e) => set({ steps: Object.assign([...v.steps], { [i]: +e.target.value }) })}>
+                        {[-14, -11, -9, -7, -4, -3, -2, 0, 2, 3, 4, 7, 9, 11, 14].map((x) => <option key={x} value={x}>{x > 0 ? `+${x}` : x}</option>)}
+                      </select>
+                    </label>
+                  ))}
+                  <label>
+                    thứ tự
+                    <select value={v.order.join()} onChange={(e) => set({ order: e.target.value.split(',').map(Number) })}>
+                      {perms(n).map((o) => <option key={o.join()} value={o.join()}>{o.map((i) => ROMAN[i]).join(' · ')}</option>)}
+                    </select>
+                  </label>
+                  <span className="cp-iv">{[...Array(n - 1).keys()].map((i) => `Iv${i + 1} = ${pairIv(v.steps, i, i + 1)}`).join(' · ')}{n === 3 ? ` · Iv3 = ${pairIv(v.steps, 0, 2)}` : ''}</span>
+                  <button className="cp-ghost" onClick={() => setCustom((cs) => cs.filter((_, j) => j !== ci))}>Bỏ</button>
+                </div>
+              )
+            })}
+            <button className="cp-ghost" onClick={() => setCustom((cs) => [...cs, { label: `BT${cs.length + 1}`, steps: Array(n).fill(0), order: [...Array(n).keys()] }])}>
+              + Thêm biến thể (đối vị phức tạp: Iv cho từng cặp)
+            </button>
+          </div>
+        )}
         {all.length > 0 && (
           <div className="cp-splits" role="group" aria-label="Biến thể">
             {all.map((v) => {
@@ -112,7 +158,12 @@ export function MultiPanel({ k, meter, given, form, width, place }: { k: Key; me
 
       <div className="cp-actions">
         <button className="cp-go" onClick={() => run(15000)} disabled={busy || !given.length}>{busy ? 'Đang giải…' : 'Giải'}</button>
+        <button className="cp-ghost" onClick={grade} disabled={!given.length || !mine.some((l) => l.length)}>Chấm bài của tôi</button>
       </div>
+
+      {graded?.sig === sig && (
+        <GradeCard g={graded.g} k={k} meter={meter} width={width} place={place} staves={[[0, 1], [2, 3].filter((i) => i < n)].map((g) => g.map((i, j) => ({ segs: graded.lines[i], up: j === 0 && g.length > 1 })))} />
+      )}
 
       {shown && shown.status !== 'valid' && (
         <div className="cp-card cp-fail" data-status={shown.status}>
