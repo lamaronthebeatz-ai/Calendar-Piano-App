@@ -3,7 +3,7 @@
  * accepted on the word of the code that searched for it. It shares only the data types and the version builder
  * (an exact transposition) with the rest; the rule list it follows is docs/notes/counterpoint.md.
  */
-import { makeVersion, upperLower, type Pitch, type Seg } from './model'
+import { isOriginal, makeVersion, upperLower, type Pitch, type Seg } from './model'
 import type { Problem } from './rules'
 
 export type Fault = { rule: string; t: number; version: string }
@@ -94,11 +94,11 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
   const II = p.givenIs === 'I' ? cp : p.given
   const specs = [{ shift: { I: 0, II: 0 }, motion: 'near' as const, label: 'Nguyên thể' }, ...p.versions]
   for (const sp of specs) {
-    const v = makeVersion(p.key, I, II, sp.shift, sp.label, sp.motion)
+    const v = makeVersion(p.key, I, II, sp.shift, sp.label, sp.motion, { ih: sp.ih, mirror: sp.mirror })
     const { upper, lower } = upperLower(v)
     const U = cellsOf(upper)
     const L = cellsOf(lower)
-    const nt = sp.shift.I === 0 && sp.shift.II === 0
+    const nt = isOriginal(sp)
     const at = (cs: Cell[], t: number) => cs.find((c) => c.start <= t && t < c.end)
     const times = [...new Set([...U, ...L].map((c) => c.start))].filter((t) => t < end).sort((a, b) => a - b)
     type On = { t: number; u: Cell; l: Cell; hitU: boolean; hitL: boolean; j: ReturnType<typeof judge> }

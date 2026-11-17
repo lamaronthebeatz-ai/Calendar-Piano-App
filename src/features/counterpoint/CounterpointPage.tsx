@@ -5,7 +5,7 @@ import { useBack } from '../../hooks/useBack'
 import { ArrowLeftIcon } from '../../components/icons'
 import { playSequence, type Step } from '../theory/audio'
 import {
-  barQ, beatQ, strength, inKey, interval, keyName, keySig, letterOf, notesOf, pitch, pitchName, SOLFA, upperLower,
+  barQ, beatQ, strength, inKey, interval, isOriginal, keyName, keySig, letterOf, notesOf, pitch, pitchName, SOLFA, upperLower,
   type Key, type Meter, type Seg, type Version,
 } from './model'
 import { check, RULES, totalOf, versionsOf, type Problem, type Report, type VersionSpec, type Violation } from './rules'
@@ -33,15 +33,27 @@ const KEYS: { label: string; key: Key }[] = [
 ]
 const METERS: Meter[] = [{ num: 3, den: 2 }, { num: 4, den: 2 }, { num: 2, den: 2 }]
 const IVS = [-7, -9, -11, -14]
+/** The exercise forms of the book, in its order (tr. 13–36). */
+type Form = 'doc' | 'ngang' | 'ngang-doc' | 'dao-anh'
+const FORMS: { id: Form; label: string; ref: string }[] = [
+  { id: 'doc', label: 'Chuyển động chiều dọc (Iv)', ref: 'doi-vi-chuyen-dong-chieu-doc' },
+  { id: 'ngang', label: 'Chuyển động chiều ngang (Ih)', ref: 'doi-vi-chuyen-dong-chieu-ngang' },
+  { id: 'ngang-doc', label: 'Chuyển động ngang – dọc (Ih + Iv)', ref: 'doi-vi-chuyen-dong-chieu-ngang' },
+  { id: 'dao-anh', label: 'Đảo ảnh', ref: 'doi-vi-dao-anh' },
+]
+/** Ih in bars, the book's sign: voice I entering later is "−". Half bars only in even metres (tr. 31). */
+const ihChoices = (m: Meter) => (m.num % 2 === 0 ? [-2, -1.5, -1, -0.5, 0.5, 1, 1.5, 2] : [-2, -1, 1, 2])
+const ihText = (n: number) => (n < 0 ? '−' : '+') + (Math.abs(n) % 1 ? `${Math.floor(Math.abs(n)) || ''}${Math.floor(Math.abs(n)) ? ' ' : ''}½` : String(Math.abs(n)))
 const minus = (n: number) => String(n).replace('-', '−')
 
 /** `origin`: a teacher's đề (the app never alters it; `locked` also stops the editor) or one the generator made (free to
  *  edit; its `answer` is shown only while the đề is still exactly as generated, checked by `answerSig`). */
 type Saved = {
   keyIdx: number; meterIdx: number; givenIs: 'I' | 'II'; given: Seg[]; stars: number[]; iv: number; versions: VersionSpec[]; quarterPrep: boolean; mine: Seg[]
+  form: Form; ih: number
   origin: 'teacher' | 'gen'; locked: boolean; answer: Seg[] | null; answerSig: string
 }
-const sigOf = (s: Saved) => JSON.stringify([s.keyIdx, s.meterIdx, s.givenIs, s.given, s.stars, s.iv, s.versions])
+const sigOf = (s: Saved) => JSON.stringify([s.keyIdx, s.meterIdx, s.givenIs, s.given, s.stars, s.iv, s.versions, s.form, s.ih])
 const LEVELS: [Level, string][] = [['de', 'Dễ'], ['vua', 'Vừa'], ['kho', 'Khó']]
 
 /** The exercise Lamar brought (Iv = −7 with two variants): the đề in the lower voice, five ✱. */
@@ -68,6 +80,8 @@ function example(): Saved {
     versions: labelled([{ I: -7, II: 0 }, { I: -4, II: -3 }, { I: -5, II: -2 }].map((shift) => ({ shift, motion: 'swap', label: '' })), -7),
     quarterPrep: false,
     mine: [],
+    form: 'doc',
+    ih: -1,
     origin: 'teacher',
     locked: false,
     answer: null,
@@ -222,18 +236,26 @@ export function CounterpointPage() {
   const main = splitsOf(st.iv)[0]
   const mainLabel = labelled([main], st.iv)[0].label
   const isMain = (v: { shift: { I: number } }) => v.shift.I === main.shift.I
+  const form = st.form ?? 'doc'
+  const ihOk = ihChoices(meter).includes(st.ih) ? st.ih : -1
   const problem: Problem = useMemo(() => {
-    const versions = st.versions.some(isMain) ? st.versions : labelled([main, ...st.versions], st.iv)
+    // Ih counts bars with "−" for voice I entering later; the versions take the delay of voice I in quarters
+    const ihQ = -ihOk * B
+    const versions: VersionSpec[] =
+      form === 'ngang' ? [{ shift: { I: 0, II: 0 }, motion: 'near', ih: ihQ, label: `BT · Ih ${ihText(ihOk)}` }]
+      : form === 'ngang-doc' ? [{ shift: { I: st.iv, II: 0 }, motion: 'swap', ih: ihQ, label: `BT · Ih ${ihText(ihOk)} · Iv ${minus(st.iv)}` }]
+      : form === 'dao-anh' ? [{ shift: { I: 0, II: 0 }, motion: 'near', mirror: true, label: 'BT · đảo ảnh' }]
+      : st.versions.some(isMain) ? st.versions : labelled([main, ...st.versions], st.iv)
     return { key, meter, given: st.given, givenIs: st.givenIs, stars: st.stars, versions, starsOnly: true, quarterPrep: st.quarterPrep }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key, meter, st.given, st.givenIs, st.stars, st.versions, st.quarterPrep, st.iv])
-  const isNT = (v: Version) => v.shift.I === 0 && v.shift.II === 0
+  }, [key, meter, st.given, st.givenIs, st.stars, st.versions, st.quarterPrep, st.iv, form, ihOk])
+  const isNT = (v: Version) => isOriginal(v)
   /** What is drawn: the nguyên thể (named with its Iv) and the BT; the Iv transposition only lends its faults to the NT. */
   const shownOf = (cp: Seg[]) =>
     versionsOf(problem, cp)
-      .filter((v) => isNT(v) || !(isMain(v) && v.label === mainLabel))
-      .map((v) => (isNT(v) ? { ...v, label: `Nguyên thể · Iv ${minus(st.iv)}` } : v))
-  const badOf = (r: Report, v: Version) => r.hard.filter((x) => (isNT(v) ? x.version === 'Nguyên thể' || x.version === mainLabel : x.version === v.label))
+      .filter((v) => isNT(v) || form !== 'doc' || !(isMain(v) && v.label === mainLabel))
+      .map((v) => (isNT(v) && form === 'doc' ? { ...v, label: `Nguyên thể · Iv ${minus(st.iv)}` } : v))
+  const badOf = (r: Report, v: Version) => r.hard.filter((x) => (isNT(v) ? x.version === 'Nguyên thể' || (form === 'doc' && x.version === mainLabel) : x.version === v.label))
   const total = st.given.length ? totalOf(problem) : 0
   const bars = Math.ceil(total / B)
   const editSegs = editing === 'given' ? st.given : st.mine
@@ -515,9 +537,46 @@ export function CounterpointPage() {
           )}
         </div>
 
-        {/* versions: all from the đề's Iv */}
+        {/* the exercise form (tick what to solve), then its versions */}
         <div className="cp-card">
-          <h2>Iv của đề và các biến thể</h2>
+          <h2>Dạng bài</h2>
+          <div className="cp-forms" role="radiogroup" aria-label="Dạng bài">
+            {FORMS.map((f) => (
+              <label key={f.id} className={clsx('cp-check', form === f.id && 'is-on')}>
+                <input type="radio" name="cp-form" checked={form === f.id} disabled={st.locked} onChange={() => setSt((s) => ({ ...s, form: f.id }))} />
+                {f.label}
+              </label>
+            ))}
+          </div>
+          {form !== 'doc' && (
+            <>
+              <div className="cp-row">
+                {form !== 'dao-anh' && (
+                  <label>
+                    Ih
+                    <select value={ihOk} disabled={st.locked} onChange={(e) => setSt((s) => ({ ...s, ih: +e.target.value }))}>
+                      {ihChoices(meter).map((n) => <option key={n} value={n}>{ihText(n)} ô</option>)}
+                    </select>
+                  </label>
+                )}
+                {form === 'ngang-doc' && (
+                  <label>
+                    Iv
+                    <select value={st.iv} disabled={st.locked} onChange={(e) => setSt((s) => ({ ...s, iv: +e.target.value }))}>
+                      {IVS.map((n) => <option key={n} value={n}>{minus(n)}</option>)}
+                    </select>
+                  </label>
+                )}
+              </div>
+              <p className="cp-note">
+                {form === 'ngang' && 'Biến thể: bè I chép lại cùng cao độ, vào lệch Ih ô (− là bè I vào muộn hơn); bè đối vị phải đúng luật đối vị đơn giản với cả bè I lẫn bè chép (tr. 30–33).'}
+                {form === 'ngang-doc' && 'Biến thể: bè I chép lệch Ih ô và dời Iv; bè đối vị nằm giữa hai bè canon giả và theo luật đối vị đơn giản (tr. 33–35).'}
+                {form === 'dao-anh' && `Biến thể: cả hai bè soi gương quanh trục ${SOLFA[(key.tonic + (key.minor ? 3 : 1)) % 7]} (giọng trưởng lấy bậc II, giọng thứ bậc IV); vì nốt nghịch ở nguyên thể thành giải quyết đi lên ở biến thể, quãng 2 và quãng 7 không dùng được ở phách mạnh (tr. 35–36).`}{' '}
+                <Link to={`/theory/${FORMS.find((f) => f.id === form)!.ref}`}>Lý thuyết</Link>
+              </p>
+            </>
+          )}
+          {form === 'doc' && (<>
           <div className="cp-row">
             <label>
               Iv
@@ -544,7 +603,8 @@ export function CounterpointPage() {
               )
             })}
           </div>
-          {splitList?.some((x) => x.reason) && (
+          </>)}
+          {form === 'doc' && splitList?.some((x) => x.reason) && (
             <ul className="cp-split-why">
               {[...new Set(splitList.flatMap((x) => (x.reason ? [x.reason] : [])))].map((why) => [why, splitList.filter((x) => x.reason === why)] as const).map(([why, xs]) => (
                 <li key={why}>
@@ -623,16 +683,17 @@ function VersionView({ v, problem, stars, width, playing, now, onPlay, bad = [] 
   const { upper, lower } = upperLower(v)
   const same = v.keyI.tonic === v.keyII.tonic && v.keyI.alter === v.keyII.alter
   const sig = same ? keySig(v.keyI) : 0
-  const total = totalOf(problem)
+  // a time-shifted version runs past the original's end
+  const total = Math.max(totalOf(problem), ...[...upper, ...lower].map((s) => s.start + s.dur))
   const nums = numbersOf(v, problem.meter).map((m) => (bad.some((b) => b.t === m.t) ? { ...m, bad: true } : m))
   return (
     <div className="cp-ver">
       <div className="cp-ver-head">
         <b>{v.label}</b>
-        <span>{v.shift.I === 0 && v.shift.II === 0 ? keyName(problem.key) : same ? keyName(v.keyI) : `bè I ${keyName(v.keyI)} · bè II ${keyName(v.keyII)}`}</span>
+        <span>{(v.shift.I === 0 && v.shift.II === 0) ? keyName(problem.key) : same ? keyName(v.keyI) : `bè I ${keyName(v.keyI)} · bè II ${keyName(v.keyII)}`}</span>
         <button onClick={onPlay}>{playing ? '■ Dừng' : '▶ Nghe'}</button>
       </div>
-      <ScoreSvg voices={[{ segs: upper, up: true }, { segs: lower, up: false }]} meter={problem.meter} keySig={sig} total={total} below={nums} above={stars} width={width} now={now} />
+      <ScoreSvg voices={[{ segs: upper, up: true }, { segs: lower, up: false }]} meter={problem.meter} keySig={sig} total={total} below={nums} above={v.ih ? [] : stars} width={width} now={now} />
     </div>
   )
 }

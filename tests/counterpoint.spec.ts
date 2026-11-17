@@ -79,3 +79,17 @@ test('nhập nốt thăng / giáng / bình cho nốt kế tiếp', async ({ page
   await expect(page.locator('.cp-hint')).toHaveText('Fa♯4 · Fa4 · Si♭4')
   await expect(page.locator('.cp-card svg text').filter({ hasText: '♮' })).toHaveCount(1)
 })
+
+test('dạng bài chuyển động chiều ngang: tick chọn dạng, giải bài mẫu, biến thể Ih được vẽ riêng', async ({ page }) => {
+  test.setTimeout(180_000)
+  await page.goto('/#/counterpoint')
+  await page.getByRole('radio', { name: 'Chuyển động chiều ngang (Ih)' }).check()
+  await expect(page.locator('select').filter({ hasText: '−1 ô' })).toBeVisible()
+  await page.locator('.cp-go').first().click()
+  const done = page.locator('.cp-sols button, .cp-fail')
+  await expect(done.first()).toBeVisible({ timeout: 40_000 })
+  // a slow engine may only time out first; searching on must reach a verdict
+  if (await page.locator('.cp-fail[data-status="unknown"]').count()) await page.getByRole('button', { name: /Tìm tiếp/ }).click()
+  await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 80_000 })
+  await expect(page.locator('.cp-ver-head b').filter({ hasText: 'BT · Ih −1' }).first()).toBeVisible()
+})

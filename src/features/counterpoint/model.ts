@@ -136,20 +136,50 @@ export function shiftedKey(k: Key, steps: number): Key {
 
 /** How the voices stand in a version: change places (chuyển chỗ), come closer (chuyển gần) or move apart (chuyển xa). */
 export type Motion = 'swap' | 'near' | 'far'
-export type Version = { shift: Shift; label: string; motion: Motion; I: Seg[]; II: Seg[]; keyI: Key; keyII: Key }
-/** Build a version: transposed copies of both voices. In a swap, voice II sounds above voice I. */
-export function makeVersion(k: Key, I: Seg[], II: Seg[], shift: Shift, label: string, motion: Motion): Version {
+/**
+ * The other ways a version may differ from the original (Phạm Tú Hương tr. 30–36):
+ * `ih` — horizontal shift in quarters: voice I enters this much later than in the original (negative: earlier, which is
+ * drawn as voice II entering later). The book's Ih counts bars, with I moving later written "−".
+ * `mirror` — both voices inverted around the key's axis (major: degree II, minor: degree IV — C major and A minor both
+ * turn around D); the vertical intervals keep their size and the voices change places.
+ */
+export type Extra = { ih?: number; mirror?: boolean }
+export type Version = { shift: Shift; label: string; motion: Motion; I: Seg[]; II: Seg[]; keyI: Key; keyII: Key } & Extra
+/** The original combination, as opposed to any transformed version. */
+export const isOriginal = (v: { shift: Shift } & Extra) => v.shift.I === 0 && v.shift.II === 0 && !v.ih && !v.mirror
+
+/** Diatonic mirror around the key's axis; a chromatic alteration mirrors too (a raised note comes back lowered). */
+function mirrorOf(k: Key, I: Seg[], II: Seg[]): (p: Pitch) => Pitch {
+  const axisClass = (k.tonic + (k.minor ? 3 : 1)) % 7
+  const steps = [...I, ...II].map((s) => s.p.step)
+  const mid = steps.length ? (Math.min(...steps) + Math.max(...steps)) / 2 : 28
+  const axis = axisClass + 7 * Math.round((mid - axisClass) / 7)
+  return (p) => {
+    const step = 2 * axis - p.step
+    const dev = p.alter - inKey(k, p.step).alter
+    return pitch(step, inKey(k, step).alter - dev)
+  }
+}
+
+/** Build a version: transposed (and possibly mirrored, time-shifted) copies of both voices. In a swap, voice II sounds above voice I. */
+export function makeVersion(k: Key, I: Seg[], II: Seg[], shift: Shift, label: string, motion: Motion, extra: Extra = {}): Version {
   const v = voiceSteps(shift)
   const tI = transposeBy(k, v.upper)
   const tII = transposeBy(k, v.lower)
+  const m = extra.mirror ? mirrorOf(k, I, II) : (p: Pitch) => p
+  const ih = extra.ih ?? 0
+  const dI = Math.max(0, ih)
+  const dII = Math.max(0, -ih)
   return {
     shift,
     label,
-    motion,
-    I: I.map((s) => ({ ...s, p: tI(s.p) })),
-    II: II.map((s) => ({ ...s, p: tII(s.p) })),
+    // inverting both voices puts voice I below voice II
+    motion: extra.mirror ? (motion === 'swap' ? 'near' : 'swap') : motion,
+    I: I.map((s) => ({ ...s, start: s.start + dI, p: tI(m(s.p)) })),
+    II: II.map((s) => ({ ...s, start: s.start + dII, p: tII(m(s.p)) })),
     keyI: shiftedKey(k, v.upper),
     keyII: shiftedKey(k, v.lower),
+    ...extra,
   }
 }
 /** Upper and lower voice of a version. */

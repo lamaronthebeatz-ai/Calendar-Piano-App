@@ -6,11 +6,11 @@
  * so the Iv preparation tables follow from checking each version on its own.
  */
 import {
-  barQ, consonant, interval, isPerfect, letterOf, makeVersion, melodicOk, noteAt, notesOf, perfectClass, strength, transposeBy, upperLower, voiceSteps,
-  type Interval, type Key, type Meter, type Motion, type Note, type Seg, type Shift, type Version,
+  barQ, consonant, interval, isPerfect, letterOf, makeVersion, melodicOk, noteAt, notesOf, perfectClass, strength, isOriginal, upperLower,
+  type Extra, type Interval, type Key, type Meter, type Motion, type Note, type Seg, type Shift, type Version,
 } from './model'
 
-export type VersionSpec = { shift: Shift; motion: Motion; label: string }
+export type VersionSpec = { shift: Shift; motion: Motion; label: string } & Extra
 export type Problem = {
   key: Key
   meter: Meter
@@ -79,22 +79,14 @@ export type Report = { hard: Violation[]; soft: Violation[]; penalty: number }
 
 export const totalOf = (p: Problem) => Math.max(...p.given.map((s) => s.start + s.dur))
 
-/** The đề's side of each version, which never changes during a search (keyed by the đề array itself). */
-const givenSide = new WeakMap<Seg[], Map<string, Version>>()
 /** All the versions (the original first) for a given counterpoint. */
 export function versionsOf(p: Problem, cp: Seg[]): Version[] {
-  let cache = givenSide.get(p.given)
-  if (!cache) givenSide.set(p.given, (cache = new Map()))
-  const specs = [{ shift: { I: 0, II: 0 }, label: 'Nguyên thể', motion: 'near' as Motion }, ...p.versions]
-  return specs.map((sp) => {
-    const key = `${p.key.tonic}.${p.key.alter}.${p.key.minor}.${p.key.sig}|${p.givenIs}|${sp.shift.I},${sp.shift.II}|${sp.motion}|${sp.label}`
-    let base = cache.get(key)
-    if (!base) cache.set(key, (base = makeVersion(p.key, p.givenIs === 'I' ? p.given : [], p.givenIs === 'I' ? [] : p.given, sp.shift, sp.label, sp.motion)))
-    const steps = voiceSteps(sp.shift)
-    const t = transposeBy(p.key, p.givenIs === 'I' ? steps.lower : steps.upper)
-    const moved = cp.map((s) => ({ ...s, p: t(s.p) }))
-    return p.givenIs === 'I' ? { ...base, II: moved } : { ...base, I: moved }
-  })
+  const I = p.givenIs === 'I' ? p.given : cp
+  const II = p.givenIs === 'I' ? cp : p.given
+  return [
+    makeVersion(p.key, I, II, { I: 0, II: 0 }, 'Nguyên thể', 'near'),
+    ...p.versions.map((v) => makeVersion(p.key, I, II, v.shift, v.label, v.motion, { ih: v.ih, mirror: v.mirror })),
+  ]
 }
 
 type Onset = { t: number; up: Note; lo: Note; atkUp: boolean; atkLo: boolean; iv: Interval }
@@ -159,7 +151,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (!u || !l) continue
       ons.push({ t, up: u, lo: l, atkUp: upAt.has(t), atkLo: loAt.has(t), iv: interval(u.p, l.p) })
     }
-    const isNT = v.shift.I === 0 && v.shift.II === 0
+    const isNT = isOriginal(v)
     // a ✱ where neither voice sounds a new note cannot hold a dissonance
     if (isNT) for (const t of p.stars) if (t < H && t >= from && !ons.some((o) => o.t === t)) add('star', t, v.label, 'không có nốt nào vào ở chỗ ✱')
     const nextOnset = (i: number) => ons[i + 1]
@@ -245,7 +237,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       // only "thuận – nghịch – thuận" (Phạm Tú Hương tr. 10): the preparation enters consonant and the sound just before the
       // suspension is consonant; in between, the other voice may pass through weak-beat dissonances, judged on their own
       const enter = ons.find((x) => x.t === h.start)
-      if (enter && !consonant(enter.iv)) return 'nốt chuẩn bị phải vang lên bằng quãng thuận'
+      if (!enter || !consonant(enter.iv)) return 'nốt chuẩn bị phải vang lên bằng quãng thuận (bè kia đang vang)'
       if (i > 0 && !consonant(ons[i - 1].iv)) return 'ngay trước nốt lưu phải là quãng thuận (thuận – nghịch – thuận)'
       if (prep < r - o.t) return 'nốt chuẩn bị ngắn hơn nốt lưu'
       // position of the dissonant note (doi-vi-don-gian-hai-be: 1 dưới · 3 trên/dưới · 6 trên · 8 dưới/trên · 10 trên · 13 trên)

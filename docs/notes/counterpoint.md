@@ -45,8 +45,21 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - Nút Giải chạy 15 s; hết giờ → "Chưa kết luận" + nút "Tìm tiếp (thêm 60 giây)". `check(…, from)` chỉ xét lại quanh 3 nốt cuối khi tìm (lời giải cuối vẫn kiểm toàn bài, hai bộ kiểm).
 - `hints`: `dead` chỉ khi tìm hết; `rescue`: phương án nới (nốt đen chuẩn bị, bỏ một ✱, ít lỗi nhất) luôn ghi rõ điều đã đổi, không bao giờ là đáp án của đề gốc.
 
+## Dạng bài (ô "Dạng bài" trên trang, `Saved.form`)
+| Dạng | Biến thể dựng thế nào | Nguồn |
+|---|---|---|
+| `doc` Chuyển động chiều dọc | `shift` (Iv), chọn các cách chia I + II | tr. 13–30 |
+| `ngang` Chuyển động chiều ngang | `ih` = độ trễ của bè I (phách đen); Ih theo ô, "−" = bè I vào muộn; nửa ô chỉ ở nhịp chẵn | tr. 30–33 |
+| `ngang-doc` Ngang – dọc | `ih` + `shift {I: Iv}` + `swap` (bè đối vị nằm giữa hai bè canon giả) | tr. 33–35 |
+| `dao-anh` Đảo ảnh | `mirror`: soi cả hai bè quanh trục (trưởng bậc II, thứ bậc IV — Đô trưởng và La thứ cùng trục Rê), nốt biến soi thành biến ngược; hai bè đổi chỗ | tr. 35–36 |
+- Mọi dạng quy về một luật: mỗi bản (NT + BT) đúng đối vị đơn giản; ✱ chỉ thuộc NT. `isOriginal(v)` thay cho "shift = 0" (Ih/đảo ảnh có shift 0 mà không phải NT).
+- Biến thể dời thời gian chỉ xét chỗ hai bè cùng vang; nốt chuẩn bị phải vào lúc bè kia đang vang (cả `rules.ts` lẫn `verify.ts`). `starCheck` bỏ qua biến thể có `ih` (ghép ✱ với nốt khác của đề) — ít điều kiện hơn nên vẫn chặt chẽ.
+- Bài mẫu: Ih −1 giải được (~5,5 s node); ngang – dọc (Ih −1, Iv −7) và đảo ảnh: vô nghiệm đã chứng minh.
+- Sách: đảo ảnh làm quãng 2, 7 không dùng được ở phách mạnh — máy tự suy ra (test).
+- Máy sinh đề vẫn chỉ sinh dạng `doc`.
+
 ## Test
-`src/features/counterpoint/counterpoint.test.ts` (26 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
+`src/features/counterpoint/counterpoint.test.ts` (31 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
 
 ## Còn mở (X)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.

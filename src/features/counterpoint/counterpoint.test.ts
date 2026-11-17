@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { melodicOk, pitch, type Seg } from './model'
-import { check, type Problem, type RuleId } from './rules'
+import { makeVersion, melodicOk, pitch, type Seg } from './model'
+import { check, type Problem, type RuleId, type VersionSpec } from './rules'
 import { domainOf, generate, labelled, solve, solveMany, splitsOf, starCheck } from './solver'
 import { verify } from './verify'
 
@@ -240,4 +240,45 @@ describe('hai bộ kiểm thống nhất quanh lời giải', () => {
     }
     expect(compared).toBeGreaterThan(80)
   }, 120_000)
+})
+
+describe('chuyển động chiều ngang, ngang – dọc, đảo ảnh (tr. 30–36)', () => {
+  it('đảo ảnh soi gương quanh Rê ở cả Đô trưởng lẫn La thứ; nốt biến soi thành nốt biến ngược', () => {
+    const v = makeVersion(C, line('E4:4'), line('C4:4'), { I: 0, II: 0 }, 'BT', 'near', { mirror: true })
+    // E4 and C4 lie around D4: E4 ↔ C4
+    expect([v.I[0].p.midi, v.II[0].p.midi]).toEqual([line('C4:1')[0].p.midi, line('E4:1')[0].p.midi])
+    const am = { tonic: 5, alter: 0, minor: true }
+    const w = makeVersion(am, line('G#4:4'), line('D4:4'), { I: 0, II: 0 }, 'BT', 'near', { mirror: true })
+    expect(w.I[0].p).toEqual(line('Ab3:1')[0].p) // Rê4 – Sol♯4 là quãng 4 tăng đi lên ⇒ soi thành quãng 4 tăng đi xuống
+    expect(w.motion).toBe('swap')
+  })
+  it('đảo ảnh: nốt lưu quãng 2 ở phách mạnh không dùng được (thành quãng 2 nốt nghịch ở bè trên)', () => {
+    const p = P('C5:2 A4:2 | G4:4 | E4:4', { stars: [4] })
+    const cp = 'A3:2 F4:2~ | F4:2 E4:2 | C4:4'
+    expect(hard(p, cp)).toEqual([])
+    const q = { ...p, versions: [{ shift: { I: 0, II: 0 }, motion: 'near' as const, mirror: true, label: 'BT' }] }
+    expect(check(q, line(cp), Infinity).hard.some((v) => v.version === 'BT')).toBe(true)
+    agree(q, cp)
+  })
+  const base = (): Problem => ({ ...sample(), stars: [6, 18], versions: [] })
+  for (const [name, spec] of [
+    ['Ih −1', { shift: { I: 0, II: 0 }, motion: 'near', ih: 6, label: 'BT' }],
+    ['Ih −1, Iv −9', { shift: { I: -9, II: 0 }, motion: 'swap', ih: 6, label: 'BT' }],
+    ['đảo ảnh', { shift: { I: 0, II: 0 }, motion: 'near', mirror: true, label: 'BT' }],
+  ] as const) {
+    it(`${name}: kết luận chắc chắn, lời giải qua bộ kiểm độc lập, hai bộ kiểm khớp quanh lời giải`, () => {
+      const p = { ...base(), versions: [spec as VersionSpec] }
+      const r = solveMany(p, 30_000, 2)
+      expect(r.status).not.toBe('unknown')
+      for (const s of r.solutions) {
+        expect(verify(p, s.cp)).toEqual([])
+        expect(check(p, s.cp, Infinity).hard.some((v) => v.version === 'BT')).toBe(false)
+        for (let i = 0; i < s.cp.length; i++)
+          for (const d of [-1, 1]) {
+            const m = s.cp.map((x, k) => (k === i || (k === i + 1 && x.tied) ? { ...x, p: pitch(s.cp[i].p.step + d) } : x))
+            expect(verify(p, m).length === 0, `${name} nốt ${i} ${d}`).toBe(check(p, m, Infinity).hard.length === 0)
+          }
+      }
+    }, 60_000)
+  }
 })

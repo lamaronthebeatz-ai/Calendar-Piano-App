@@ -240,13 +240,14 @@ export function starCheck(p: Problem): StarIssue[] {
   const gAt = (t: number) => g.find((n) => n.start <= t && t < n.start + n.dur)
   const { pitches } = domainOf(p)
   const minPrep = p.quarterPrep ? 1 : 2
-  const specs = [{ shift: { I: 0, II: 0 }, motion: 'near' as const, label: 'Nguyên thể' }, ...p.versions]
+  // a time-shifted version pairs the ✱ with other notes of the đề: left out here (fewer conditions keep this sound)
+  const specs = [{ shift: { I: 0, II: 0 }, motion: 'near' as const, label: 'Nguyên thể', mirror: false }, ...p.versions.filter((v) => !v.ih)]
   /** The interval at time t when the counterpoint sounds `c`, in every version (index 0 = the original). */
   const ivs = (c: Pitch, t: number) =>
     specs.map((sp) => {
       const cpSeg: Seg[] = [{ start: 0, dur: total, p: c }]
       const gSeg: Seg[] = [{ start: 0, dur: total, p: gAt(t)!.p }]
-      const v = makeVersion(p.key, p.givenIs === 'I' ? gSeg : cpSeg, p.givenIs === 'I' ? cpSeg : gSeg, sp.shift, sp.label, sp.motion)
+      const v = makeVersion(p.key, p.givenIs === 'I' ? gSeg : cpSeg, p.givenIs === 'I' ? cpSeg : gSeg, sp.shift, sp.label, sp.motion, { mirror: sp.mirror })
       const { upper, lower } = upperLower(v)
       const it = interval(upper[0].p, lower[0].p)
       // which voice is on top in this version: the counterpoint or the đề

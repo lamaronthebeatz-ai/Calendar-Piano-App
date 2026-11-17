@@ -104,3 +104,6 @@
 .cp-splits button.is-none i { color: oklch(0.72 0.16 25); }
 .cp-splits button:disabled { cursor: default; }
 .cp-split-why { display: grid; gap: 4px; margin-top: 8px; font-size: 12px; line-height: 1.5; color: var(--color-ink-muted); }
+.cp-forms { display: grid; gap: 4px; margin-bottom: 10px; }
+.cp-forms .cp-check { margin-top: 4px; }
+.cp-forms .cp-check.is-on { color: var(--color-gold); }
