@@ -160,7 +160,8 @@ export function solve(p: Problem, o: SolveOpts): SolveResult {
       }
       cp.push(s)
       const end = s.start + s.dur
-      const r = pre ?? check(p, cp, end, true)
+      const recent = notesOf(cp).slice(-3)[0]
+      const r = pre ?? check(p, cp, end, true, recent ? recent.start : 0)
       const f = preF ?? r.hard.length
       if (f <= budget) {
         if (end > furthest) {

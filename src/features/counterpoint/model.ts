@@ -105,7 +105,7 @@ export function melodicOk(from: Pitch, to: Pitch): { ok: boolean; why?: string }
 export type Shift = { I: number; II: number }
 export const ivOf = (s: Shift) => s.I + s.II
 
-function transposeBy(k: Key, steps: number): (p: Pitch) => Pitch {
+export function transposeBy(k: Key, steps: number): (p: Pitch) => Pitch {
   if (steps === 0) return (p) => p
   const t = inKey(k, 28 + k.tonic)
   const target = inKey(k, 28 + k.tonic + steps)

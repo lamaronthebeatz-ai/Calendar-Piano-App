@@ -270,6 +270,8 @@ export function CounterpointPage() {
     setPick(0)
     run<SolveResult>({ kind: 'solve', problem, timeMs: 15000 }, setResult)
   }
+  // a timeout is not a verdict: let the search run longer instead of guessing
+  const solveMore = () => run<SolveResult>({ kind: 'solve', problem, timeMs: 60000 }, setResult)
   const findRescue = () => run<Rescue>({ kind: 'rescue', problem, timeMs: 9000 }, (r) => {
     setRescued(r)
     setPick(0)
@@ -572,7 +574,7 @@ export function CounterpointPage() {
           </div>
         )}
 
-        {result && <Outcome result={result} meter={meter} domain={domainOf(problem).text} onRescue={findRescue} busy={busy === 'rescue'} rescued={!!rescued} />}
+        {result && <Outcome result={result} meter={meter} domain={domainOf(problem).text} onRescue={findRescue} onMore={solveMore} busy={busy === 'rescue'} searching={busy === 'solve'} rescued={!!rescued} />}
 
         {rescued && (
           <RescueView
@@ -662,7 +664,7 @@ function Remarks({ report, meter, title, hard }: { report: Report; meter: Meter;
   )
 }
 
-function Outcome({ result, meter, domain, onRescue, busy, rescued }: { result: SolveResult; meter: Meter; domain: string; onRescue: () => void; busy: boolean; rescued: boolean }) {
+function Outcome({ result, meter, domain, onRescue, onMore, busy, searching, rescued }: { result: SolveResult; meter: Meter; domain: string; onRescue: () => void; onMore: () => void; busy: boolean; searching: boolean; rescued: boolean }) {
   if (result.status === 'valid') return null
   const unsat = result.status === 'unsat'
   return (
@@ -694,6 +696,11 @@ function Outcome({ result, meter, domain, onRescue, busy, rescued }: { result: S
             ))}
           </ul>
         </>
+      )}
+      {result.status === 'unknown' && !result.disputed && (
+        <div className="cp-actions">
+          <button className="cp-ghost" onClick={onMore} disabled={searching}>{searching ? 'Đang tìm…' : 'Tìm tiếp (thêm 60 giây)'}</button>
+        </div>
       )}
       {!rescued && (
         <div className="cp-actions">

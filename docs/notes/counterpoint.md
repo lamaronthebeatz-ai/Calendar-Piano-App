@@ -42,6 +42,7 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - **Bộ kiểm độc lập** `verify.ts`: viết lại mọi luật B trên lưới phách đen, không dùng `rules.ts`. Test đổi từng nốt quanh lời giải của 6 đề sinh ra: hai bộ kiểm phải cùng kết luận.
 - **Nhớ trạng thái chết**: khoá = thời điểm + 3 nốt cuối (bước + dấu hoá) + trường độ đoạn cuối; đúng vì luật B nhìn lùi tối đa 3 nốt (phản hồi bước nhảy, nhắc 3 lần, giải quyết hai bước). Thêm luật nhìn xa hơn thì phải nới khoá.
 - **`starCheck`** chỉ dùng điều kiện cần (không xét cách giải quyết, không xét chỗ bắt đầu chuẩn bị) — trước 17/11 nó đòi giải quyết thuận ở mọi bản và chuẩn bị trong một ô, có thể báo vô nghiệm sai.
+- Nút Giải chạy 15 s; hết giờ → "Chưa kết luận" + nút "Tìm tiếp (thêm 60 giây)". `check(…, from)` chỉ xét lại quanh 3 nốt cuối khi tìm (lời giải cuối vẫn kiểm toàn bài, hai bộ kiểm).
 - `hints`: `dead` chỉ khi tìm hết; `rescue`: phương án nới (nốt đen chuẩn bị, bỏ một ✱, ít lỗi nhất) luôn ghi rõ điều đã đổi, không bao giờ là đáp án của đề gốc.
 
 ## Test

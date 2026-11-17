@@ -14,16 +14,21 @@ test.beforeEach(async ({ page }) => {
  * option (a quarter-note preparation) is on.
  */
 test('giải phức điệu: bế tắc ở ô 5, cách gỡ giữ nguyên đề, rồi lời giải khi cho nốt đen chuẩn bị', async ({ page }) => {
-  test.setTimeout(90_000)
+  test.setTimeout(180_000)
   await page.goto('/#/counterpoint')
   await page.getByLabel(/Khoá đề của thầy/).check()
   await expect(page.locator('.cp-kb')).toHaveCount(0)
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('counterpoint:v1')!).given)
   await page.locator('.cp-go').first().click()
   const fail = page.locator('.cp-fail')
-  await expect(fail).toContainText('Không có lời giải', { timeout: 40_000 })
-  // proven, not timed out — and the search space is named
-  await expect(fail).toHaveAttribute('data-status', 'unsat')
+  await expect(fail).toHaveAttribute('data-status', /unsat|unknown/, { timeout: 40_000 })
+  // a slow engine (WebKit on CI) may time out first: that must read as "not decided", and searching on must prove it
+  if ((await fail.getAttribute('data-status')) === 'unknown') {
+    await expect(fail).toContainText('Chưa kết luận')
+    await fail.getByRole('button', { name: /Tìm tiếp/ }).click()
+  }
+  await expect(fail).toHaveAttribute('data-status', 'unsat', { timeout: 80_000 })
+  await expect(fail).toContainText('Không có lời giải')
   await expect(fail).toContainText('Đã chứng minh')
   await expect(fail).toContainText('trong khoảng')
   await expect(fail).toContainText('ô 5, phách 1')

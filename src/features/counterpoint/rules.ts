@@ -6,7 +6,7 @@
  * so the Iv preparation tables follow from checking each version on its own.
  */
 import {
-  barQ, consonant, interval, isPerfect, letterOf, makeVersion, melodicOk, notesOf, perfectClass, strength, upperLower,
+  barQ, consonant, interval, isPerfect, letterOf, makeVersion, melodicOk, noteAt, notesOf, perfectClass, strength, transposeBy, upperLower, voiceSteps,
   type Interval, type Key, type Meter, type Motion, type Note, type Seg, type Shift, type Version,
 } from './model'
 
@@ -79,14 +79,22 @@ export type Report = { hard: Violation[]; soft: Violation[]; penalty: number }
 
 export const totalOf = (p: Problem) => Math.max(...p.given.map((s) => s.start + s.dur))
 
+/** The đề's side of each version, which never changes during a search (keyed by the đề array itself). */
+const givenSide = new WeakMap<Seg[], Map<string, Version>>()
 /** All the versions (the original first) for a given counterpoint. */
 export function versionsOf(p: Problem, cp: Seg[]): Version[] {
-  const I = p.givenIs === 'I' ? p.given : cp
-  const II = p.givenIs === 'I' ? cp : p.given
-  return [
-    makeVersion(p.key, I, II, { I: 0, II: 0 }, 'Nguyên thể', 'near'),
-    ...p.versions.map((v) => makeVersion(p.key, I, II, v.shift, v.label, v.motion)),
-  ]
+  let cache = givenSide.get(p.given)
+  if (!cache) givenSide.set(p.given, (cache = new Map()))
+  const specs = [{ shift: { I: 0, II: 0 }, label: 'Nguyên thể', motion: 'near' as Motion }, ...p.versions]
+  return specs.map((sp) => {
+    const key = `${p.key.tonic}.${p.key.alter}.${p.key.minor}.${p.key.sig}|${p.givenIs}|${sp.shift.I},${sp.shift.II}|${sp.motion}|${sp.label}`
+    let base = cache.get(key)
+    if (!base) cache.set(key, (base = makeVersion(p.key, p.givenIs === 'I' ? p.given : [], p.givenIs === 'I' ? [] : p.given, sp.shift, sp.label, sp.motion)))
+    const steps = voiceSteps(sp.shift)
+    const t = transposeBy(p.key, p.givenIs === 'I' ? steps.lower : steps.upper)
+    const moved = cp.map((s) => ({ ...s, p: t(s.p) }))
+    return p.givenIs === 'I' ? { ...base, II: moved } : { ...base, I: moved }
+  })
 }
 
 type Onset = { t: number; up: Note; lo: Note; atkUp: boolean; atkLo: boolean; iv: Interval }
@@ -108,8 +116,11 @@ export function placeOk(m: Meter, offset: number, dur: number): boolean {
  * Check a counterpoint known up to `horizon` (quarters). Rules that need notes after the horizon are skipped,
  * so the solver can call this on partial lines; with `horizon = total` every rule runs.
  * `stopAtHard` returns at the first hard violation (fast pruning).
+ * `from` judges only what is reported at or after that time: the search passes the start of the counterpoint's
+ * third-last note, since every hard rule reports within that window (the same reach the solver's memo relies on).
+ * A complete line is always judged whole, and independently again by verify.ts.
  */
-export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false): Report {
+export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false, from = 0): Report {
   const total = totalOf(p)
   const H = Math.min(horizon, total)
   const out: Report = { hard: [], soft: [], penalty: 0 }
@@ -130,7 +141,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
     const iv = g && (p.givenIs === 'II' ? interval(seg.p, g.p) : interval(g.p, seg.p))
     return seg.start % B === 0 && !!iv && !consonant(iv)
   }
-  checkLine(p.meter, cp, H, total, { quarterPrep: p.quarterPrep, quarterTieOk }, (r, t, d) => add(r, t, 'Nguyên thể', d))
+  checkLine(p.meter, cp, H, total, { quarterPrep: p.quarterPrep, quarterTieOk, from }, (r, t, d) => add(r, t, 'Nguyên thể', d))
   if (done()) return out
 
   /* ----- every version ----- */
@@ -141,21 +152,21 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
     const upAt = new Map(up.map((n) => [n.start, n]))
     const loAt = new Map(lo.map((n) => [n.start, n]))
     const times = [...new Set([...up.map((n) => n.start), ...lo.map((n) => n.start)])].filter((t) => t < H).sort((a, b) => a - b)
-    const findAt = (ns: Note[], t: number) => ns.find((n) => n.start <= t && t < n.start + n.dur)
     const ons: Onset[] = []
     for (const t of times) {
-      const u = findAt(up, t)
-      const l = findAt(lo, t)
+      const u = noteAt(up, t)
+      const l = noteAt(lo, t)
       if (!u || !l) continue
       ons.push({ t, up: u, lo: l, atkUp: upAt.has(t), atkLo: loAt.has(t), iv: interval(u.p, l.p) })
     }
     const isNT = v.shift.I === 0 && v.shift.II === 0
     // a ✱ where neither voice sounds a new note cannot hold a dissonance
-    if (isNT) for (const t of p.stars) if (t < H && !ons.some((o) => o.t === t)) add('star', t, v.label, 'không có nốt nào vào ở chỗ ✱')
+    if (isNT) for (const t of p.stars) if (t < H && t >= from && !ons.some((o) => o.t === t)) add('star', t, v.label, 'không có nốt nào vào ở chỗ ✱')
     const nextOnset = (i: number) => ons[i + 1]
 
     for (let i = 0; i < ons.length; i++) {
       const o = ons[i]
+      if (o.t < from) continue
       if (o.iv.n < 0) add('crossing', o.t, v.label)
       const st = strength(p.meter, o.t)
       if (isNT && p.stars.includes(o.t) && consonant(o.iv)) add('star', o.t, v.label)
@@ -308,7 +319,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
   const giv = notesOf(p.given)
   for (const n of cpNotes) {
     const g = giv.find((x) => x.start === n.start)
-    if (g && g.dur === n.dur && n.start < H) add('same-rhythm', n.start, 'Nguyên thể')
+    if (g && g.dur === n.dur && n.start < H && n.start >= from) add('same-rhythm', n.start, 'Nguyên thể')
   }
   return out
 }
@@ -322,13 +333,15 @@ export function checkLine(
   segs: Seg[],
   H: number,
   total: number,
-  o: { quarterPrep?: boolean; quarterTieOk?: (s: Seg) => boolean },
+  o: { quarterPrep?: boolean; quarterTieOk?: (s: Seg) => boolean; from?: number },
   emit: (rule: RuleId, t: number, detail?: string) => void,
 ) {
   const notes = notesOf(segs)
   const B = barQ(m)
+  const from = o.from ?? 0
   for (let i = 0; i < segs.length; i++) {
     const s = segs[i]
+    if (s.start < from) continue
     if (!placeOk(m, s.start % B, s.dur)) emit('seg-place', s.start)
     if (s.tied) {
       const prev = segs[i - 1]
@@ -341,6 +354,7 @@ export function checkLine(
   for (let i = 1; i < notes.length; i++) {
     const a = notes[i - 1]
     const b = notes[i]
+    if (b.start < from) continue
     const mo = melodicOk(a.p, b.p)
     if (!mo.ok) emit('leap', b.start, mo.why)
     if (strength(m, b.start) === 3 && b.dur < a.dur) emit('rhythm-change', b.start)
