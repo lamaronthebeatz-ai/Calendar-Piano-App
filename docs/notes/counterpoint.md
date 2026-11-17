@@ -83,7 +83,7 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 
 ## Trình bày dạng Ih (17/11, Lamar: "ba khuông I, I′, II phải xếp đều song song từng ô nhịp như ví dụ trong sách")
 - `ScoreSvg` nhận `staves` (nhiều khuông một hàng, vạch nhịp chạy suốt, nhãn bè bên trái, chiều cao mỗi khuông chỉ chừa chỗ số quãng khi có); không truyền `staves` thì như cũ.
-- `Versions` trong `CounterpointPage` thay mọi chỗ liệt kê biến thể: đúng một NT + một BT có `ih` (dạng Ih, ngang – dọc) → `IhScore`: một tổng phổ I · I′ · II (hoặc I · II · II′ khi bè II vào muộn), xếp khuông theo âm vực, số quãng NT dưới khuông II, của BT dưới khuông chép; hai nút nghe Nguyên thể / Biến thể.
+- `Versions` trong `CounterpointPage` thay mọi chỗ liệt kê biến thể: đúng một NT + một BT có `ih` (dạng Ih, ngang – dọc) → `IhScore`: một tổng phổ I · I′ · II (hoặc I · II · II′ khi bè II vào muộn), xếp khuông theo âm vực, số quãng NT dưới khuông II, của BT dưới khuông chép; ba nút nghe Nguyên thể / Biến thể / Cả ba bè (`stepsOf` nhận cả mảng bè).
 
 ## Phần IV hình thức (`forms.ts`, `FormPanel.tsx`, `forms.worker.ts`; dạng `hai-doan`, `hai-doan-mo-phong`, `ba-doan`; tr. 64–68)
 - Giáo trình chỉ tả cấu trúc, không có luật riêng → máy dựng từng đoạn bằng bộ giải chương trước, viết câu nối, rồi kiểm **cả bài** bằng `mcheck` + `mverify` (luật ba – bốn bè).

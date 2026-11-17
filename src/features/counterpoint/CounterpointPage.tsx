@@ -183,10 +183,11 @@ function numbersOf(v: Version, m: Meter): Mark[] {
   return out
 }
 
-function stepsOf(v: Version, q: number): Step[] {
-  const { upper, lower } = upperLower(v)
+/** A version's two voices, or any set of lines (the Ih score plays I, II and the copy together). */
+function stepsOf(v: Version | Seg[][], q: number): Step[] {
+  const lines = Array.isArray(v) ? v : Object.values(upperLower(v))
   const s: Step[] = []
-  for (const n of [...notesOf(upper), ...notesOf(lower)]) s.push({ at: n.start * q, dur: n.dur * q, midis: [n.p.midi] })
+  for (const n of lines.flatMap((l) => notesOf(l))) s.push({ at: n.start * q, dur: n.dur * q, midis: [n.p.midi] })
   return s.sort((a, b) => a.at - b.at)
 }
 
@@ -362,7 +363,7 @@ export function CounterpointPage() {
   const live = useMemo(() => (st.mine.length && st.given.length ? check(problem, st.mine, mineEnd) : null), [problem, st.mine, mineEnd, st.given.length])
   const answerOk = st.origin === 'gen' && !!st.answer && st.answerSig === sigOf(st)
 
-  const play = (id: string, v: Version) => {
+  const play = (id: string, v: Version | Seg[][]) => {
     if (playing === id) {
       stopPlay.current?.()
       return
@@ -713,7 +714,7 @@ export function CounterpointPage() {
   )
 }
 
-type ListProps = { list: Version[]; id: string; problem: Problem; stars: Mark[]; width: number; playing: string | null; now: number; onPlay: (id: string, v: Version) => void; bad?: (v: Version) => Violation[] }
+type ListProps = { list: Version[]; id: string; problem: Problem; stars: Mark[]; width: number; playing: string | null; now: number; onPlay: (id: string, v: Version | Seg[][]) => void; bad?: (v: Version) => Violation[] }
 
 /** The versions of an answer: one staff pair each, except the horizontal shift (Ih), set as one score — see IhScore. */
 function Versions({ list, id, problem, stars, width, playing, now, onPlay, bad }: ListProps) {
@@ -745,7 +746,7 @@ function IhScore({ nt, bt, id, problem, stars, width, playing, now, onPlay, bad 
     { label: movedI ? 'I′' : 'II′', segs: copy, below: mark(bt) },
   ].sort((a, b) => mean(b.segs) - mean(a.segs))
   const total = Math.max(totalOf(problem), ...lines.flatMap((l) => l.segs.map((x) => x.start + x.dur)))
-  const ids = [`${id}0`, `${id}1`]
+  const ids = [`${id}0`, `${id}1`, `${id}all`]
   const at = ids.includes(playing ?? '') ? now : -1
   return (
     <div className="cp-ver">
@@ -754,6 +755,7 @@ function IhScore({ nt, bt, id, problem, stars, width, playing, now, onPlay, bad 
         <span>{bt.label}</span>
         <button onClick={() => onPlay(ids[0], nt)}>{playing === ids[0] ? '■ Dừng' : '▶ Nguyên thể'}</button>
         <button onClick={() => onPlay(ids[1], bt)}>{playing === ids[1] ? '■ Dừng' : '▶ Biến thể'}</button>
+        <button onClick={() => onPlay(ids[2], lines.map((l) => l.segs))}>{playing === ids[2] ? '■ Dừng' : '▶ Cả ba bè'}</button>
       </div>
       <ScoreSvg
         staves={lines.map((l, k) => ({ label: l.label, voices: [{ segs: l.segs, up: true }], below: l.below, above: k === 0 ? stars : [] }))}

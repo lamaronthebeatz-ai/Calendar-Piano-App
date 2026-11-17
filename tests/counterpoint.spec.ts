@@ -95,6 +95,11 @@ test('dạng bài chuyển động chiều ngang: tick chọn dạng, giải bà
   await expect(page.locator('.cp-ver-head span').filter({ hasText: 'BT · Ih −1' }).first()).toBeVisible()
   await expect(page.getByRole('img', { name: 'Bản nhạc 3 khuông' }).first()).toBeVisible()
   await expect(page.locator('.cp-ver-head b').first()).toHaveText(/^I · (I′ · II|II · II′)$/)
+  // the three lines together, then stop
+  const all = page.getByRole('button', { name: '▶ Cả ba bè' }).first()
+  await all.click()
+  await expect(page.getByRole('button', { name: '■ Dừng' }).first()).toBeVisible()
+  await page.getByRole('button', { name: '■ Dừng' }).first().click()
 })
 
 test('dạng bài ba bè và tam trùng: chọn dạng, đề làm bè dưới, máy viết hai bè trên, vẽ mọi biến thể đã tick', async ({ page }) => {

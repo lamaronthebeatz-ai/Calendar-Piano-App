@@ -52,7 +52,7 @@
 .cp-sols button small { font-size: 10.5px; color: var(--color-ink-faint); }
 .cp-sols button.is-on { border-color: var(--color-gold); background: var(--color-gold-soft); }
 .cp-ver { margin-top: 12px; }
-.cp-ver-head { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
+.cp-ver-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 2px; }
 .cp-ver-head b { font-family: var(--font-display); font-size: 15px; }
 .cp-ver-head span { flex: 1; font-size: 12px; color: var(--color-ink-muted); }
 .cp-ver-head button { height: 28px; padding: 0 12px; border-radius: 99px; border: 1px solid var(--color-border); font-size: 12px; color: var(--color-gold); }
