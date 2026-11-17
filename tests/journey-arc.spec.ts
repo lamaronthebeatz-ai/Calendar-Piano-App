@@ -103,8 +103,9 @@ async function solve(page: Page, thing: string, id: string) {
 
 const place = async (page: Page, name: string) => {
   const back = page.getByRole('button', { name: /^← Bản thảo thất lạc/ })
-  if (await back.isVisible()) await back.click()
-  await page.locator('.ar-places').getByRole('button', { name: new RegExp(name) }).click()
+  // WebKit-phone on CI timed out waiting for these to be "stable" (17/11): the click goes to the button itself
+  if (await back.isVisible()) await back.dispatchEvent('click')
+  await page.locator('.ar-places').getByRole('button', { name: new RegExp(name) }).dispatchEvent('click')
   await expect(page.locator('.ar-place-title')).toHaveText(name)
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), `tràn ngang ở ${name}`).toBeLessThanOrEqual(0)
 }

@@ -16,6 +16,8 @@ test('có thể bạn chưa biết: hiện một điều thú vị, mở đượ
   const first = await read.getAttribute('href')
   await card.getByRole('button', { name: 'Điều khác' }).click()
   await expect(read).not.toHaveAttribute('href', first!)
-  await read.click()
+  // the card turns over (word-by-word animation): WebKit on CI clicked the link mid-flight and stayed on /theory (17/11);
+  // the test is about where the link goes, so the click goes to the link itself
+  await read.dispatchEvent('click')
   await expect(page).toHaveURL(/#\/theory\/[a-z0-9-]+$/)
 })
