@@ -239,6 +239,7 @@ Quãng nghịch gồm **quãng 2, quãng 7, mọi quãng tăng – giảm, và c
 ::form Nốt_chuẩn_bị_(thuận) Nốt_lưu_=_nốt_nghịch_(phách_mạnh) Nốt_giải_quyết_(thuận,_xuống_liền_bậc) | Ba thời của nốt lưu; bè kia giữ "nốt tự do"
 ::scan taneev 20 | Nốt chuẩn bị – nốt nghịch – nốt giải quyết; bè kia là nốt tự do (chú thích viết tay trên bản quét)
 - **Trường độ nốt chuẩn bị ≥ trường độ nốt lưu**, và **không** dùng nốt đen làm nốt chuẩn bị.
+- Giáo trình chỉ đòi: "Quãng nghịch bao giờ cũng phải đứng giữa hai quãng thuận" (tr. 10) — tức **thuận – nghịch – thuận**. Nốt chuẩn bị phải **vang lên bằng quãng thuận**, và quãng **ngay trước** nốt lưu phải thuận; giáo trình không bắt nốt chuẩn bị thuận với mọi nốt của bè kia trong lúc nó ngân. Vì thế nốt chuẩn bị có thể vào sớm hơn (xa hơn), và trong lúc nó ngân, bè kia vẫn được đi qua nốt nghịch ở phách yếu (nốt lướt, nốt thêu) theo đúng luật nốt nghịch phách yếu.
 - Bè không chứa nốt nghịch gọi là bè có **nốt tự do**.
 Giáo trình chia quãng nghịch phách mạnh làm hai loại:
 | Loại | Quãng (số) | Nốt nghịch ở đâu | Giải quyết thành |

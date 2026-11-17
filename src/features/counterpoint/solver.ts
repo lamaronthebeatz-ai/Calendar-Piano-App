@@ -227,7 +227,10 @@ export function starCheck(p: Problem): StarIssue[] {
       for (let s0 = t - (p.quarterPrep ? 1 : 2); s0 >= Math.max(0, t - B) && !ok; s0--) {
         const L = t - s0
         if (!placeOk(p.meter, s0 % B, L) || Math.floor(s0 / B) !== Math.floor((t - 1) / B)) continue
-        const gTimes = [s0, ...g.filter((n) => n.start > s0 && n.start < t).map((n) => n.start)]
+        // thuận – nghịch – thuận: consonant where the preparation enters and just before the ✱; what the đề does in
+        // between is left to the full search (weak-beat passing dissonances are allowed there)
+        const inner = g.filter((n) => n.start > s0 && n.start < t).map((n) => n.start)
+        const gTimes = inner.length ? [s0, inner[inner.length - 1]] : [s0]
         for (let st = lo; st <= hi && !ok; st++) {
           const c = inKey(p.key, st)
           if (!gTimes.every((x) => ivs(c, x).every((r) => r.it.n >= 0 && r.it.kind !== 'dissonant'))) continue
@@ -243,8 +246,8 @@ export function starCheck(p: Problem): StarIssue[] {
         }
       }
       if (!ok) {
-        const win = g.filter((n) => n.start + n.dur > t - B && n.start < t)
-        out.push({ t, reason: `Bè đề đánh nốt mới (${pitchName(gn.p)}) ngay ở chỗ ✱, nên quãng nghịch chỉ có thể là nốt lưu ở bè đối vị. Nốt chuẩn bị phải dài từ nốt trắng trở lên, đặt đúng phách, thuận với mọi nốt bè đề vang trong lúc chuẩn bị (${win.map((n) => pitchName(n.p)).join(', ')}) ở cả nguyên thể lẫn biến thể, rồi giải quyết xuống liền bậc vào quãng thuận — không có nốt nào thoả cả bốn điều kiện.` })
+        const before = gAt(t - 1)
+        out.push({ t, reason: `Bè đề đánh nốt mới (${pitchName(gn.p)}) ngay ở chỗ ✱, nên quãng nghịch chỉ có thể là nốt lưu ở bè đối vị. Nốt lưu phải thuận ngay trước ✱ (với ${pitchName(before.p)} của bè đề), nghịch đúng vị trí với ${pitchName(gn.p)}, rồi giải quyết xuống liền bậc vào quãng thuận (thuận – nghịch – thuận), ở cả nguyên thể lẫn biến thể, không vượt bè đề; nốt chuẩn bị dài từ nốt trắng trở lên và vào bằng quãng thuận — không có nốt nào thoả hết các điều kiện đó.` })
       }
     } else {
       // the đề holds its note over the ✱: the counterpoint strikes a dissonance and the đề must resolve down by step

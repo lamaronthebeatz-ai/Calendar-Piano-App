@@ -210,7 +210,11 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       const r = h.start + h.dur
       if (prep < 2 && !p.quarterPrep) return 'nốt chuẩn bị không được là nốt đen'
       if (prep < 1) return 'nốt lưu không có nốt chuẩn bị'
-      for (let k = i - 1; k >= 0 && ons[k].t >= h.start; k--) if (!consonant(ons[k].iv)) return 'nốt chuẩn bị phải là quãng thuận'
+      // only "thuận – nghịch – thuận" (Phạm Tú Hương tr. 10): the preparation enters consonant and the sound just before the
+      // suspension is consonant; in between, the other voice may pass through weak-beat dissonances, judged on their own
+      const enter = ons.find((x) => x.t === h.start)
+      if (enter && !consonant(enter.iv)) return 'nốt chuẩn bị phải vang lên bằng quãng thuận'
+      if (i > 0 && !consonant(ons[i - 1].iv)) return 'ngay trước nốt lưu phải là quãng thuận (thuận – nghịch – thuận)'
       if (prep < r - o.t) return 'nốt chuẩn bị ngắn hơn nốt lưu'
       // position of the dissonant note (doi-vi-don-gian-hai-be: 1 dưới · 3 trên/dưới · 6 trên · 8 dưới/trên · 10 trên · 13 trên)
       const n = o.iv.n
