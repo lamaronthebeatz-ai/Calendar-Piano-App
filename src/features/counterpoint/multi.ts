@@ -22,6 +22,8 @@ export type MProblem = {
   voices: Seg[][]
   free: boolean[]
   versions: MVersion[]
+  /** where each voice ends when they do not end together (a canon's voices finish one after another) */
+  ends?: number[]
 }
 export type MViolation = { rule: RuleId; t: number; version: string; detail?: string }
 export type MReport = { hard: MViolation[]; soft: MViolation[]; penalty: number }
@@ -39,7 +41,9 @@ export const ROMAN = ['I', 'II', 'III', 'IV']
 const DURS = [8, 6, 4, 3, 2, 1]
 const SPAN = 14
 
-export const totalOfM = (mp: MProblem) => Math.max(...mp.voices.flatMap((v, i) => (mp.free[i] ? [] : v.map((s) => s.start + s.dur))))
+export const totalOfM = (mp: MProblem) => (mp.ends ? Math.max(...mp.ends) : Math.max(...mp.voices.flatMap((v, i) => (mp.free[i] ? [] : v.map((s) => s.start + s.dur)))))
+/** The end of one voice, and of the stretch where two voices sound together. */
+const endOf = (mp: MProblem, total: number, i: number) => mp.ends?.[i] ?? total
 export const original = (n: number): MVersion => ({ label: 'Nguyên thể', steps: Array(n).fill(0), order: [...Array(n).keys()] })
 
 /** Every pair of a version, upper first, with the book's three-/four-voice role of the pair. */
@@ -91,7 +95,7 @@ export function mcheck(mp: MProblem, lines: Seg[][], stopAtHard = false, only = 
   // the line of each free voice
   for (let i = 0; i < n; i++) {
     if (!mp.free[i] || (only >= 0 && i !== only)) continue
-    checkLine(mp.meter, lines[i], ends[i], total, { from: from[i] ?? 0 }, (rule, t, detail) => {
+    checkLine(mp.meter, lines[i], ends[i], endOf(mp, total, i), { from: from[i] ?? 0 }, (rule, t, detail) => {
       const x = { rule, t, version: `bè ${ROMAN[i]}`, detail }
       if (isSoft(rule)) out.soft.push(x)
       else out.hard.push(x)
@@ -107,7 +111,8 @@ export function mcheck(mp: MProblem, lines: Seg[][], stopAtHard = false, only = 
       if (H <= 0) continue
       const role = { fourthOk: pr.fourthOk, outer: pr.outer, hiddenHard: hardOuter.has([pr.a, pr.b].sort().join(',')) }
       const f = Math.min(from[pr.a] ?? 0, from[pr.b] ?? 0)
-      const r = check(pairProblem(mp, total, moved[pr.a], role), moved[pr.b], H, stopAtHard, f)
+      const together = Math.min(endOf(mp, total, pr.a), endOf(mp, total, pr.b))
+      const r = check(pairProblem(mp, together, moved[pr.a], role), moved[pr.b], Math.min(H, together), stopAtHard, f)
       const label = `${v.label} · ${pr.name}`
       for (const x of r.hard) out.hard.push({ ...x, version: label })
       for (const x of r.soft) out.soft.push({ ...x, version: label })
@@ -127,7 +132,7 @@ export function mverify(mp: MProblem, lines: Seg[][]): string[] {
   for (let i = 0; i < n; i++) {
     if (!mp.free[i]) continue
     const other = lines[(i + 1) % n]
-    const p: Problem = { key: mp.key, meter: mp.meter, given: other, givenIs: 'I', stars: [], versions: [], starsOnly: false, total }
+    const p: Problem = { key: mp.key, meter: mp.meter, given: other, givenIs: 'I', stars: [], versions: [], starsOnly: false, total: endOf(mp, total, i) }
     // only the line faults of voice i: the pair itself is judged below with its proper role
     for (const f of verify(p, lines[i])) if (['gap', 'seg-place', 'tie', 'end', 'leap', 'rhythm-change', 'repeat3', 'leap-response'].includes(f.rule)) faults.push(`bè ${ROMAN[i]}: ${f.rule}@${f.t}`)
   }
@@ -136,7 +141,9 @@ export function mverify(mp: MProblem, lines: Seg[][]): string[] {
     for (const pr of pairsOf(n, v)) {
       if (!mp.free[pr.a] && !mp.free[pr.b]) continue
       const role = { fourthOk: pr.fourthOk, outer: pr.outer, hiddenHard: hardOuter.has([pr.a, pr.b].sort().join(',')) }
-      for (const f of verify(pairProblem(mp, total, moved[pr.a], role), moved[pr.b])) faults.push(`${v.label} · ${pr.name}: ${f.rule}@${f.t}`)
+      const together = Math.min(endOf(mp, total, pr.a), endOf(mp, total, pr.b))
+      const cut = (l: Seg[]) => l.filter((x) => x.start < together)
+      for (const f of verify(pairProblem(mp, together, cut(moved[pr.a]), role), cut(moved[pr.b]))) faults.push(`${v.label} · ${pr.name}: ${f.rule}@${f.t}`)
     }
   }
   return faults

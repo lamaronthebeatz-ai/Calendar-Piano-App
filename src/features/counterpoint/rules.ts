@@ -274,7 +274,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       const thenAt = (want: number, fail: string): 'ok' | 'later' | string => {
         if (!z) return after.start + after.dur >= Math.min(H, total) ? (after.start + after.dur >= total ? fail : 'later') : fail
         if (z.p.step !== want) return fail
-        if (z.start >= H) return 'later'
+        if (z.start >= H) return z.start >= total ? fail : 'later'
         if (ons.some((x) => x.t > r && x.t < z.start)) return 'bè tự do không được đánh nốt mới trước khi nốt lưu giải quyết'
         const o2 = ons.find((x) => x.t === z.start)
         return o2 && cons(o2.iv) ? 'ok' : fail
@@ -309,7 +309,8 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       const nx = nextOnset(i)
       const xEnd = x.start + x.dur
       if (!b) return xEnd >= total ? 'nốt nghịch ở cuối bài' : xEnd >= H ? 'later' : 'nốt nghịch không có nốt đi tiếp'
-      if (!nx) return 'later'
+      // nothing sounds after it: at the end of the stretch the two voices share, that is final, not "later"
+      if (!nx) return H >= total ? 'sau quãng nghịch không còn quãng thuận nào' : 'later'
       if (!cons(nx.iv)) return 'sau quãng nghịch phải là quãng thuận'
       const E = b.p.step - x.p.step
       // Thí dụ 25–28 show passing notes up to a half, the other forms as quarters off the beat; the text sets no rule

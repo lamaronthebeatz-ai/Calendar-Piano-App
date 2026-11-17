@@ -57,7 +57,8 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
   /* ---- the counterpoint as a line ---- */
   if (!p.noLine) lineFaults()
   function lineFaults() {
-  let clock = 0
+  // a voice may enter late (a canon's follower); after that it runs without gaps
+  let clock = cp.length ? cp[0].start : 0
   for (let i = 0; i < cp.length; i++) {
     const s = cp[i]
     if (s.start !== clock) fault('gap', s.start)

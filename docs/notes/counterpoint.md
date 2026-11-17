@@ -66,8 +66,16 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 - Đo (node): ba bè 4 ô < 0,1 s, bốn bè 0,4 s, tứ trùng 23 bản 3,2 s. Đúng luật mà xấu vẫn nhận (vd. bốn bè cùng tên nốt) — test.
 - Hiển thị: mỗi bản hai khuông (hai bè trên / các bè dưới), mỗi khuông tự xuống dòng nên không thẳng hàng theo ô.
 
+## Mô phỏng – canon (`canon.ts`, `CanonPanel.tsx`, `canon.worker.ts`; dạng `mo-phong`, `canon-vo-tan`, `canon-mo-tien`, `canon-ba-be`; tr. 46–63)
+- Một hình chung: bè P = đoạn A (đề) + phần máy viết; bè R = bản sao của P vào sau `delay`, dời `steps`; mô phỏng đơn giản chép riêng A, có thể đảo ảnh / phóng to / thu nhỏ / ngược hướng (`transformLine`); canon chép cả P và lặp `cycles` chu kỳ, mô tiến thêm `step` mỗi chu kỳ. Ba bè: hai R. Thứ tự bè trên – dưới suy từ quãng (cao hơn ở trên).
+- Kiểm: kết cấu dựng lại từ P rồi đưa vào `mcheck` (mọi cặp, quãng 4 thuận ở cặp trên của ba bè); trong lúc tìm chỉ xét phần đã biết liền từ đầu (P tới h, R tới delay + h); khi P xong xét đủ mọi chu kỳ, rồi `mverify`. `MProblem.ends`: các bè dừng lệch nhau, mỗi cặp chỉ xét đoạn hai bè cùng vang.
+- Lỗi đã sửa nhờ bộ kiểm độc lập (17/11): nốt nghịch sát chỗ một bè dừng bị `rules.ts` hoãn xét ("later") mãi — nay hết đoạn chung là xét luôn.
+- Loại I / loại II không phải hai thuật toán: chọn "Vào sau" bằng A là loại I, sớm hơn là loại II. 6 cách xuất phát của canon ba bè = chọn quãng của R1, R2 (trên/dưới).
+- **Cần xác minh (X):** dời cao độ theo giọng (mặc định) hay đúng quãng (ô tick) — Thí dụ 101 có bè mang hoá biểu khác (đúng quãng), chuỗi mô tiến chưa rõ. **Chưa có:** mô phỏng ba bè có một bè tự do (tr. 55), mô phỏng tiết tấu (tr. 48, R chỉ giữ tiết tấu), đoạn kết riêng (các bè dừng lần lượt), thu nhỏ ra nốt móc đơn. Canon nhiều chu kỳ không dùng bảng nhớ trạng thái chết (chu kỳ sau mang cả P trở lại) nên có thể chậm.
+- Đo (node, A 2 ô 2/2): mô phỏng < 10 ms, vô tận loại I < 10 ms, mô tiến 3 chu kỳ 0,8 s, canon ba bè 1,9 s.
+
 ## Test
-`src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
+`src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test) + `canon.test.ts` (7 test): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
 
 ## Còn mở (X)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.

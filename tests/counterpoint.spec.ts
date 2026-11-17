@@ -114,3 +114,24 @@ test('dạng bài ba bè và tam trùng: chọn dạng, đề làm bè dưới, 
   await expect(page.locator('.cp-fail[data-status="unsat"], .cp-sols button').first()).toBeVisible({ timeout: 80_000 })
   if (await page.locator('.cp-sols button').count()) await expect(page.locator('.cp-ver')).toHaveCount(3)
 })
+
+test('canon vô tận: đề ngắn làm đoạn A, máy viết tiếp bè P, bè R chép lại quãng 8 dưới', async ({ page }) => {
+  test.setTimeout(180_000)
+  const p = (step: number, midi: number) => ({ step, alter: 0, midi })
+  const A = [
+    { start: 0, dur: 2, p: p(35, 72) },
+    { start: 2, dur: 2, p: p(36, 74) },
+    { start: 4, dur: 2, p: p(37, 76) },
+    { start: 6, dur: 2, p: p(35, 72) },
+  ]
+  await page.addInitScript((given) => {
+    localStorage.setItem('counterpoint:v1', JSON.stringify({ keyIdx: 0, meterIdx: 2, givenIs: 'II', given, stars: [], form: 'canon-vo-tan' }))
+  }, A)
+  await page.goto('/#/counterpoint')
+  await expect(page.getByRole('radio', { name: 'Canon vô tận (hai bè)' })).toBeChecked()
+  await expect(page.getByText('Vào sau')).toBeVisible()
+  await page.locator('.cp-go').first().click()
+  if (await page.locator('.cp-fail[data-status="unknown"]').count()) await page.getByRole('button', { name: /Tìm tiếp/ }).click()
+  await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 80_000 })
+  await expect(page.locator('.cp-ver-head span')).toContainText('R1: sau 2 ô, quãng 8 dưới')
+})

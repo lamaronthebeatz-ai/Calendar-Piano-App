@@ -149,7 +149,7 @@ export type Version = { shift: Shift; label: string; motion: Motion; I: Seg[]; I
 export const isOriginal = (v: { shift: Shift } & Extra) => v.shift.I === 0 && v.shift.II === 0 && !v.ih && !v.mirror
 
 /** Diatonic mirror around the key's axis; a chromatic alteration mirrors too (a raised note comes back lowered). */
-function mirrorOf(k: Key, I: Seg[], II: Seg[]): (p: Pitch) => Pitch {
+export function mirrorOf(k: Key, I: Seg[], II: Seg[]): (p: Pitch) => Pitch {
   const axisClass = (k.tonic + (k.minor ? 3 : 1)) % 7
   const steps = [...I, ...II].map((s) => s.p.step)
   const mid = steps.length ? (Math.min(...steps) + Math.max(...steps)) / 2 : 28
