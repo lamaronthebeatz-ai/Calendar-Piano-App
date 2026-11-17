@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test'
 import { CHAPTERS } from '../src/features/journey/chapters'
+import { sceneChallenge } from '../src/features/journey/engine/challenge'
 
 // Taps on the full-screen scene skip Playwright's "stable" wait (force): under CI load WebKit sometimes never gives two
 // still frames for a full-screen layer full of looping light effects, and stability is not what these taps test.
@@ -42,9 +43,37 @@ test('hành trình: tạo nhân vật, vào cảnh, đọc bài rồi quay lại
   await page.locator('.jr-choice').nth(1).dispatchEvent('click')
   await expect(page.locator('.jr-hint')).toBeVisible()
   await page.locator('.jr-choice').nth(0).dispatchEvent('click')
+  // then the stop's music challenge (Trung cổ: read a neume line); a wrong name is marked, the right ones open the card
+  const pz = sceneChallenge(CHAPTERS[0].id, CHAPTERS[0].scenes[0].id, 0)!
+  const names = pz.answer as string[]
+  await expect(page.locator('.jr-music')).toContainText('Đọc một dòng neume')
+  for (let i = 0; i < names.length; i++) await page.getByLabel(`Tên nốt ${i + 1}`).selectOption(i === 0 ? (names[0] === 'Đô' ? 'Rê' : 'Đô') : names[i])
+  await page.locator('.jr-music').getByRole('button', { name: 'Kiểm tra' }).dispatchEvent('click')
+  await expect(page.locator('.jr-music .ar-notes .is-wrong')).toHaveCount(1)
+  await page.getByLabel('Tên nốt 1').selectOption(names[0])
+  await page.locator('.jr-music').getByRole('button', { name: 'Kiểm tra' }).dispatchEvent('click')
+  await page.getByRole('button', { name: /Nhận thẻ chứng cứ/ }).dispatchEvent('click')
   await expect(page.locator('.jr-ev h3')).toHaveText('Thánh ca đơn âm')
   await page.getByRole('button', { name: /Lên đường/ }).dispatchEvent('click')
   await expect(page.locator('.jr-player-meta')).toContainText('1/10 chặng · 1 thẻ chứng cứ')
+  // the profile shows level, XP and the solved puzzles
+  await expect(page.locator('.jr-player-lv')).toContainText('Cấp')
+  await page.locator('.jr-player-me').click()
+  const profile = page.getByRole('dialog', { name: 'Hồ sơ người chơi' })
+  await expect(profile.locator('.jr-stats dd').nth(1)).toHaveText('2')
+  await profile.getByRole('tab', { name: 'Kỹ năng' }).click()
+  await expect(profile).toContainText('bậc')
+})
+
+test('tuyến điều tra hiện trong danh sách chặng từ đầu, khoá tới khi xong chặng mở nó', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'] }))
+  })
+  await page.goto('/#/hanh-trinh')
+  const arc = page.locator('.jr-stop-row.is-arc').first()
+  await expect(arc).toBeDisabled()
+  await expect(arc).toContainText('đọc neume')
+  await expect(arc).toContainText('mở sau chặng')
 })
 
 test('lữ hành vô tận: chuyến đi năm chặng sinh từ tiểu sử, trả lời xong thì đếm chặng', async ({ page }) => {

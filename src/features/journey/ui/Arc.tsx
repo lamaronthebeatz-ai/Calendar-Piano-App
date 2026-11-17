@@ -299,7 +299,7 @@ function PuzzleScreen({ arc, puzzle, save, onClose, review }: { arc: ArcDef; puz
   )
 }
 
-function PuzzleBody({ arc, puzzle, save, wrong, onSubmit, locked }: { arc: ArcDef; puzzle: PuzzleDef; save: Save; wrong: string[]; onSubmit: (given: unknown) => void; locked: boolean }) {
+export function PuzzleBody({ arc, puzzle, save, wrong, onSubmit, locked }: { arc?: ArcDef; puzzle: PuzzleDef; save: Save; wrong: string[]; onSubmit: (given: unknown) => void; locked: boolean }) {
   const c = puzzle.content
   switch (puzzle.type) {
     case 'choice':
@@ -330,7 +330,7 @@ function PuzzleBody({ arc, puzzle, save, wrong, onSubmit, locked }: { arc: ArcDe
     case 'debate':
       return <DebateUI c={c as DebateContent} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     case 'investigation':
-      return <InvestigationUI c={c as InvestigationContent} save={save} evidence={(id) => arc.evidence.find((e) => e.id === id)} wrong={wrong} onSubmit={onSubmit} locked={locked} />
+      return <InvestigationUI c={c as InvestigationContent} save={save} evidence={(id) => arc?.evidence.find((e) => e.id === id)} wrong={wrong} onSubmit={onSubmit} locked={locked} />
     default:
       return <p className="ar-wrong">Dạng thử thách {puzzle.type} chưa có giao diện.</p>
   }
@@ -758,30 +758,7 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
             })}
           </ul>
         )}
-        {tab === 'skills' && (
-          <ul className="ar-list ar-tree">
-            <li>
-              <b>Cấp {levelOf(save.xp)}</b> <em>{save.xp} XP</em>
-            </li>
-            {SKILLS.map((k) => {
-              const b = branch(save, k)
-              return (
-                <li key={k}>
-                  <b>{SKILL_TREE[k].title}</b> <em>bậc {b.level}/4 · {b.title}</em>
-                  <span className="ar-meter" aria-hidden>
-                    <i style={{ transform: `scaleX(${b.next === undefined ? 1 : Math.min(1, b.points / b.next)})` }} />
-                  </span>
-                  <small>{b.points} điểm{b.next !== undefined ? ` · còn ${b.toNext} điểm tới bậc ${b.level + 1}` : ' · bậc cao nhất'} · {SKILL_TREE[k].text}</small>
-                  {PERKS.filter((p) => p.skill === k).map((p) => (
-                    <small key={p.id} className={hasPerk(save, p.id) ? 'ar-perk is-on' : 'ar-perk'}>
-                      {hasPerk(save, p.id) ? '✓' : `bậc ${p.level}:`} {p.title} — {p.text}
-                    </small>
-                  ))}
-                </li>
-              )
-            })}
-          </ul>
-        )}
+        {tab === 'skills' && <SkillList save={save} />}
         {tab === 'bag' && (
           <ul className="ar-list">
             {arc.items.filter((i) => save.inventory.includes(i.id)).map((i) => (
@@ -825,5 +802,33 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
         )}
       </div>
     </div>
+  )
+}
+
+/** Level, XP and the six skill branches with their perks (also on the player's profile in the story). */
+export function SkillList({ save }: { save: Save }) {
+  return (
+    <ul className="ar-list ar-tree">
+      <li>
+        <b>Cấp {levelOf(save.xp)}</b> <em>{save.xp} XP</em>
+      </li>
+      {SKILLS.map((k) => {
+        const b = branch(save, k)
+        return (
+          <li key={k}>
+            <b>{SKILL_TREE[k].title}</b> <em>bậc {b.level}/4 · {b.title}</em>
+            <span className="ar-meter" aria-hidden>
+              <i style={{ transform: `scaleX(${b.next === undefined ? 1 : Math.min(1, b.points / b.next)})` }} />
+            </span>
+            <small>{b.points} điểm{b.next !== undefined ? ` · còn ${b.toNext} điểm tới bậc ${b.level + 1}` : ' · bậc cao nhất'} · {SKILL_TREE[k].text}</small>
+            {PERKS.filter((p) => p.skill === k).map((p) => (
+              <small key={p.id} className={hasPerk(save, p.id) ? 'ar-perk is-on' : 'ar-perk'}>
+                {hasPerk(save, p.id) ? '✓' : `bậc ${p.level}:`} {p.title} — {p.text}
+              </small>
+            ))}
+          </li>
+        )
+      })}
+    </ul>
   )
 }

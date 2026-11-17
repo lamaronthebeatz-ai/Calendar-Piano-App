@@ -11,10 +11,14 @@ import { MUSIC } from './music'
 import { nudge, playTrack, setMuted, useSoundtrack } from './soundtrack'
 import { finished, named, opened, resetJourney, update, useSave, type Endless as Trip, type Save } from './progress'
 import type { Card, Chapter, Claim, Scene, Verdict } from './types'
-import { recordAttempt, verdictXp } from './engine/progression'
+import { levelOf, recordAttempt, verdictXp } from './engine/progression'
+import { sceneChallenge } from './engine/challenge'
+import { checkPuzzle, type Result } from './engine/puzzles'
+import type { PuzzleDef } from './engine/types'
 import { legacyPuzzle } from './content/legacy'
 import { ARCS } from './content/arcs'
-import { ArcPlayer } from './ui/Arc'
+import { ArcPlayer, PuzzleBody } from './ui/Arc'
+import { Profile } from './ui/Profile'
 import { visibleLocations } from './engine/runtime'
 import { holds } from './engine/world'
 import { KIND_WEIGHTS, LEVEL_LABEL, dailyChapter, dailyKey, dailySeed, levelFrom, newGamePlus, replayChapter, streak, today } from './engine/replay'
@@ -140,6 +144,7 @@ function Me({ save, size = 40 }: { save: Save; size?: number }) {
 
 function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) {
   const [drawer, setDrawer] = useState(false)
+  const [profile, setProfile] = useState(false)
   const track = trackOf(chapter.id)
   const done = chapter.scenes.filter((s) => save.done.includes(key(chapter, s)))
   const next = chapter.scenes.find((s) => !save.done.includes(key(chapter, s)))
@@ -175,12 +180,6 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
                 ☀ Thử thách hôm nay{(save.endless[dailyKey(today())]?.at ?? 0) >= 5 ? ' ✓' : ''}
               </button>
             )}
-            {ARCS.filter((a) => a.chapter === chapter.id && holds(a.opens, save)).map((a) => (
-              <button key={a.id} className="jr-ghost is-small is-arc" onClick={() => go({ v: 'arc', a: a.id })}>
-                ✦ {a.title}
-                {holds(a.completion, save) ? ' ✓' : ''}
-              </button>
-            ))}
           </div>
         )}
         {TRACKS.filter((t) => t.chapters.length).length > 1 && (
@@ -206,13 +205,16 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
       <ChapterMap chapter={chapter} scenes={chapter.scenes} isDone={(s) => save.done.includes(key(chapter, s))} next={next} open={(s) => go({ s: s.id })} />
       <footer className="jr-atlas-foot">
         <div className="jr-player">
-          <Me save={save} />
-          <div>
-            <p className="jr-player-name">{save.name}</p>
-            <p className="jr-player-meta">
-              {done.length}/{chapter.scenes.length} chặng · {save.cards.length} thẻ chứng cứ
-            </p>
-          </div>
+          <button className="jr-player-me" onClick={() => setProfile(true)} aria-label={`Hồ sơ người chơi: ${save.name}, cấp ${levelOf(save.xp)}`}>
+            <Me save={save} />
+            <span>
+              <span className="jr-player-name">{save.name}</span>
+              <span className="jr-player-lv">Cấp {levelOf(save.xp)} · {save.xp} XP · Hồ sơ ›</span>
+              <span className="jr-player-meta">
+                {done.length}/{chapter.scenes.length} chặng · {save.cards.length} thẻ chứng cứ
+              </span>
+            </span>
+          </button>
           <button className="jr-ghost" onClick={() => setDrawer(true)}>
             Sổ chứng cứ
           </button>
@@ -232,6 +234,19 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
                   </span>
                   <span className="jr-stop-s">{isDone ? '✓' : locked ? '🔒' : 'Vào cảnh →'}</span>
                 </button>
+                {ARCS.filter((a) => a.chapter === chapter.id && JSON.stringify(a.opens).includes(`"q:${chapter.id}/${s.id}"`)).map((a) => {
+                  const open = holds(a.opens, save)
+                  return (
+                    <button key={a.id} className={`jr-stop-row is-arc${open ? ' is-open' : ''}`} disabled={!open} onClick={() => go({ v: 'arc', a: a.id })}>
+                      <span className="jr-stop-i">✦</span>
+                      <span className="jr-stop-t">
+                        <b>{a.title}</b>
+                        <small>Tuyến điều tra · {puzzleKinds(a.puzzles)}{open ? '' : ` · mở sau chặng ${i + 1}`}</small>
+                      </span>
+                      <span className="jr-stop-s">{holds(a.completion, save) ? '✓' : open ? 'Mở →' : '🔒'}</span>
+                    </button>
+                  )
+                })}
               </li>
             )
           })}
@@ -265,6 +280,7 @@ function Atlas({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
         </button>
       </footer>
       {drawer && <Evidence chapter={chapter} save={save} onClose={() => setDrawer(false)} />}
+      {profile && <Profile save={save} portrait={<Me save={save} size={64} />} onClose={() => setProfile(false)} />}
     </section>
   )
 }
@@ -563,7 +579,7 @@ function EvidenceCard({ card, fresh }: { card: Card; fresh?: boolean }) {
 
 /* ------------------------------------------------------------------ a scene */
 
-type Phase = 'title' | 'talk' | 'quest' | 'reward'
+type Phase = 'title' | 'talk' | 'quest' | 'music' | 'reward'
 
 /** A generated stop runs in the same player, with its own way back, forward and of counting. */
 interface EndlessHooks {
@@ -615,8 +631,10 @@ function ScenePlayer({ chapter, scene, save, go, endless }: { chapter: Chapter; 
       return setPhase('reward')
     }
     update((s) => ({ done: s.done.includes(k) ? s.done : [...s.done, k], cards: s.cards.includes(scene.card.id) ? s.cards : [...s.cards, scene.card.id] }))
-    setPhase('reward')
+    setPhase(challenge ? 'music' : 'reward')
   }
+  // cheap and deterministic: rebuilt each render rather than memoized
+  const challenge = endless ? null : sceneChallenge(chapter.id, scene.id, index)
   const l = scene.lines[line]
   const speaker = l.who === 'npc' ? scene.npc.name : l.who === 'me' ? save.name : ''
   const credit = CREDITS[scene.bg]
@@ -722,6 +740,8 @@ function ScenePlayer({ chapter, scene, save, go, endless }: { chapter: Chapter; 
           {wrong.length > 0 && <p className="jr-hint">Chưa phải. Hãy đọc {scene.quest.where} rồi thử lại — không có gì mất cả.</p>}
         </div>
       )}
+
+      {phase === 'music' && challenge && <MusicChallenge puzzle={challenge} save={save} onDone={() => setPhase('reward')} />}
 
       {phase === 'reward' && (
         <div className="jr-reward" onClick={(e) => e.stopPropagation()}>
@@ -876,5 +896,51 @@ function Court({ chapter, save, go }: { chapter: Chapter; save: Save; go: Go }) 
         </footer>
       )}
     </section>
+  )
+}
+
+const KIND_LABEL: Record<string, string> = { neume: 'đọc neume', hexachord: 'hexachord', aural: 'nghe bản thu', figured: 'bè trầm có số', scale: 'dựng thang âm', investigation: 'điều tra', debate: 'tranh luận', order: 'sắp xếp', match: 'ghép đôi', classify: 'phân loại', choice: 'trắc nghiệm', blank: 'điền chỗ trống' }
+/** The kinds of puzzle an investigation holds, the musical ones first. */
+function puzzleKinds(ps: PuzzleDef[]) {
+  const kinds = [...new Set(ps.map((p) => p.type))].sort((a, b) => Number(!['neume', 'hexachord', 'aural', 'figured', 'scale'].includes(a)) - Number(!['neume', 'hexachord', 'aural', 'figured', 'scale'].includes(b)))
+  return kinds.slice(0, 3).map((k) => KIND_LABEL[k] ?? k).join(', ')
+}
+
+/** The stop's music challenge, between the question and the evidence card: XP, hints, an explanation; it may be skipped. */
+function MusicChallenge({ puzzle, save, onDone }: { puzzle: PuzzleDef; save: Save; onDone: () => void }) {
+  const [hints, setHints] = useState(0)
+  const [result, setResult] = useState<Result | null>(null)
+  const before = save.puzzles[puzzle.id]?.solved
+  const submit = (given: unknown) => {
+    const r = checkPuzzle(puzzle, given)
+    update((s) => recordAttempt(s, puzzle, r.ok, hints))
+    setResult(r)
+  }
+  const ok = !!result?.ok
+  return (
+    <div className="jr-music" onClick={(e) => e.stopPropagation()}>
+      <p className="jr-kicker">♫ Thử thách âm nhạc · độ khó {puzzle.difficulty}/5{before ? ' · đã giải trước đây' : ''}</p>
+      <h3 className="jr-ask">{puzzle.title}</h3>
+      <p className="jr-music-instr">{puzzle.instructions}</p>
+      <PuzzleBody puzzle={puzzle} save={save} wrong={result && !result.ok ? result.wrong : []} onSubmit={submit} locked={ok} />
+      {result && !ok && <p className="jr-hint" role="alert">Chưa đúng — các chỗ đánh dấu cần xem lại. Thử lại nhé.</p>}
+      {!ok && (
+        <div className="jr-music-tools">
+          {puzzle.hints.slice(0, hints).map((h) => <p key={h} className="jr-music-hint">💡 {h}</p>)}
+          {hints < puzzle.hints.length && <button className="jr-ghost is-small" onClick={() => setHints((n) => n + 1)}>Gợi ý ({puzzle.hints.length - hints})</button>}
+          <button className="jr-ghost is-small" onClick={onDone}>Bỏ qua</button>
+        </div>
+      )}
+      {ok && (
+        <div className="jr-music-done" role="status">
+          <p className="ar-ok">✓ Đúng rồi!</p>
+          <p>{puzzle.explanation}</p>
+          {puzzle.links.filter((r) => findArticle(r.slice(2))).map((r) => (
+            <Link key={r} to={`/theory/${r.slice(2)}`} className="ar-ref">📖 {findArticle(r.slice(2))!.title}</Link>
+          ))}
+          <button className="jr-cta" onClick={onDone}>Nhận thẻ chứng cứ →</button>
+        </div>
+      )}
+    </div>
   )
 }

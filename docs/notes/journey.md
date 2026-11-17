@@ -106,6 +106,13 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Test: `endless.test.ts` (mọi người trong kho là bài có thật; 40 chuyến/thời kỳ đều 4 lựa chọn khác nhau, có ảnh, có nhạc; cùng seed cùng chuyến; câu đã hỏi không lặp) + e2e trong `journey.spec.ts`.
 - Giới hạn: Trung cổ chỉ 54 mốc (đa số năm "k."); 108 nhạc sĩ chưa có tiểu sử chi tiết (thế kỷ XX, ngoài châu Âu) nên chưa vào kho; phán quyết thật/giai thoại tự động chỉ chắc cho 25 mục nên chưa dùng kiểu câu phiên toà.
 
+## Thử thách âm nhạc mỗi chặng + hồ sơ người chơi (17/11, Lamar: "không thấy thông tin người chơi", "không có giải đố âm nhạc, chỉ đi")
+- Nguyên nhân: XP/cấp/kỹ năng/thành tích có trong save nhưng màn chính chỉ hiện "x chặng · y thẻ"; câu đố âm nhạc chỉ nằm trong tuyến điều tra, mở bằng nút "✦" nhỏ sau một chặng nhất định.
+- `engine/challenge.ts` `sceneChallenge(chương, chặng, thứ tự)`: một câu đố theo thời kỳ sau câu hỏi của chặng — Trung cổ đọc neume, Phục hưng hexachord, Baroque/Cổ điển bè trầm có số, Lãng mạn thang trưởng/thứ, Quốc gia Dorian/Mixolydian/ngũ cung, Việt Nam ngũ cung. Sinh từ id chặng (cố định), đáp án do hàm của dạng câu đố tính; id `pz:ch/<chương>/<chặng>`; ghi `recordAttempt` (XP, thông thạo). Phrygian/Lydian không dùng (nốt ngoài bảng chọn trưởng + thứ). Test `engine/challenge.test.ts` chạy mọi chặng mọi chương.
+- Màn chặng: pha `music` giữa câu hỏi và thẻ (`MusicChallenge` trong JourneyPage, dùng `PuzzleBody` xuất từ `ui/Arc.tsx`); có gợi ý, giải thích, "Bỏ qua" (chặng vẫn tính xong từ lúc trả lời đúng câu hỏi). Lữ hành vô tận không có.
+- Hồ sơ: thẻ người chơi ở chân bản đồ hiện "Cấp N · XP · Hồ sơ ›", bấm mở `ui/Profile.tsx` (thanh XP tới cấp sau, số liệu, mức thông thạo, tiến độ từng chương, tab Kỹ năng = `SkillList` dùng chung với Arc, tab Thành tích).
+- Tuyến điều tra là một dòng trong danh sách chặng, ngay dưới chặng mở nó, thấy từ đầu (khoá, "mở sau chặng N", kể các dạng câu đố). Nút "✦" ở đầu bản đồ đã bỏ; test chọn `.jr-stop-row.is-arc`.
+
 ## Tiếp theo
 - Chương VII: thế kỷ XX (Debussy, Stravinsky – Diaghilev, Schoenberg, Bartók, Shostakovich…) — cần bổ sung tiểu sử thế kỷ XX trước; có thể kéo dài lời thoại chương I – II bằng cùng giọng chương III.
 - Có thể thêm: âm thanh nền (drone quãng 5 bằng `audio.ts`), nhật ký hành trình ghi vào Sổ tay `/brain`, đề tài `/research` từ thẻ chứng cứ, chặng tự sinh từ PLACES + people.

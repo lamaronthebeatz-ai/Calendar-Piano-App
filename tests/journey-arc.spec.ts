@@ -113,7 +113,7 @@ const place = async (page: Page, name: string) => {
 test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, kết luận cần chứng cứ, mở lại vẫn còn', async ({ page }) => {
   test.setTimeout(120_000)
   await page.goto('/#/hanh-trinh?c=trung-co')
-  await page.getByRole('button', { name: /✦ Bản thảo thất lạc/ }).click()
+  await page.locator('.jr-stop-row.is-arc', { hasText: 'Bản thảo thất lạc' }).click()
   await expect(page.locator('.ar-objective')).toContainText('Bắt đầu')
 
   await page.locator('.ar-places').getByRole('button', { name: /Thư viện tu viện Pomposa/ }).click()
@@ -204,7 +204,7 @@ test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, k�
   await again.goto('/#/hanh-trinh?c=trung-co&v=arc&a=ban-thao')
   await expect(again.locator('.ar-objective')).toContainText('Đã khép lại')
   await again.goto('/#/hanh-trinh?c=trung-co')
-  await expect(again.getByRole('button', { name: /✦ Bản thảo thất lạc ✓/ })).toBeVisible()
+  await expect(again.locator('.jr-stop-row.is-arc', { hasText: 'Bản thảo thất lạc' }).locator('.jr-stop-s')).toHaveText('✓')
 })
 
 test('nhiệm vụ phụ nghe một bè hay nhiều bè (đoạn thu thật) vào sổ; chưa có trang bản thảo thì phòng chép chưa mở thử thách', async ({ page }) => {
@@ -272,7 +272,7 @@ test.describe('Phase 7: tuyến điều tra của chương II – VI', () => {
     test(`${arc.title}: nút mở trên bản đồ chương, vào được câu chuyện`, async ({ page }) => {
       await seed(page, arc)
       await page.goto(`/#/hanh-trinh?c=${arc.chapter}`)
-      await page.getByRole('button', { name: new RegExp(`✦ ${arc.title}`) }).click()
+      await page.locator('.jr-stop-row.is-arc', { hasText: arc.title }).click()
       await expect(page.locator('.jr-atlas-intro')).toContainText(arc.intro.slice(0, 20))
       await page.locator('.ar-places').getByRole('button', { name: new RegExp(arc.locations[0].name) }).click()
       await expect(page.getByRole('button', { name: `Nói chuyện với ${arc.characters[0].name}` })).toBeVisible()
