@@ -43,7 +43,7 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - App không tự điền metadata thư mục; không có dữ liệu mẫu trong kho; đánh dấu "đã đối chiếu" phải ghi đối chiếu ở đâu.
 
 ## Văn bản học thuật của Lamar
-- Lamar học **Cao học II/II, chuyên ngành Âm nhạc học**, Nhạc viện TP.HCM. Bìa: "Bộ Văn hoá, Thể thao và Du lịch" / "Nhạc viện Thành phố Hồ Chí Minh" / logo / TIỂU LUẬN / tên đề tài / "Học viên thực hiện: <tên thật>" / "Chuyên ngành: Âm nhạc học" / "Hệ: Cao học II/II" / "Thành phố Hồ Chí Minh, tháng … năm …". **Tên thật không ghi vào repo công khai** — dùng tên Lamar đưa trong chat; không có thì hỏi.
+- Lamar học **Đại học II/IV, chuyên ngành Âm nhạc học**, Nhạc viện TP.HCM (Lamar báo 18/11; trước ghi Cao học II/II). Bìa: "Bộ Văn hoá, Thể thao và Du lịch" / "Nhạc viện Thành phố Hồ Chí Minh" / logo / TIỂU LUẬN / tên đề tài / "Sinh viên thực hiện: <tên thật>" / "Chuyên ngành: Âm nhạc học" / "Hệ: Đại học II/IV" / "Thành phố Hồ Chí Minh, tháng … năm …". **Tên thật không ghi vào repo công khai** — chỉ đưa vào cover.json trong scratchpad.
 - Định dạng TL-LV của trường: `notes/workflow.md` § Tiểu luận.
 - Tiểu luận Scriabin: **giữ bản đầy đủ** (59 trang thân bài) dù đề yêu cầu 30 trang — 11/2026.
 - "Lấy từ tủ sách" = dùng nguyên văn bài trong app, không phân tích lại.
@@ -62,3 +62,4 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - (17/11) **Phần IV hình thức phức điệu**: máy dựng thể hai đoạn / ba đoạn tương phản (đoạn 1 nguyên thể, câu nối máy viết, đoạn 2 – 3 là biến thể đổi chỗ bè do học viên chọn) và thể hai đoạn mô phỏng (đoạn 1 canon ba bè, đoạn 2 canon theo thủ pháp học viên chọn); phần "phát triển cho hay" không phải luật — máy chỉ kiểm luật.
 - (17/11) **Hành trình — mỗi chặng có thử thách âm nhạc** (sau câu hỏi, theo kỹ năng của thời kỳ, được bỏ qua) và **hồ sơ người chơi** hiện trên bản đồ; tuyến điều tra hiện trong danh sách chặng từ đầu. Lamar báo game "chỉ đi", không thấy thông tin người chơi.
 - (17/11) **Giải phức điệu — dạng Ih**: nguyên thể và biến thể vẽ chung một tổng phổ ba khuông (I, I′, II hoặc I, II, II′) thẳng hàng từng ô như ví dụ trong sách.
+- (18/11) **Tiểu luận giới thiệu app** "Ứng dụng Trung tâm lý thuyết âm nhạc học by Lamar: công cụ hỗ trợ dạy và học âm nhạc học cho người Việt Nam — thiết kế, nội dung và khả năng ứng dụng": không giới hạn số trang, không khảo sát người dùng (viết "khả năng ứng dụng"), chỉ ghi địa chỉ trang web, không ghi link GitHub. Nguồn bài: `docs/essays/gioi-thieu-app/`.

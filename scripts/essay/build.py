@@ -51,7 +51,8 @@ def table(rows):
     rows=[re.sub(r'\[\[[^\]|]+\|([^\]]+)\]\]', r'\1', r) for r in rows]
     cells=[[c.strip() for c in r.strip().strip('|').split('|')] for r in rows]
     head,body=cells[0],[c for c in cells[2:]]
-    o='<table><thead><tr>'+''.join(f'<th>{inline(c)}</th>' for c in head)+'</tr></thead><tbody>'
+    # a short table stays on one page (a header row alone at the foot of a page reads badly)
+    o=('<table class="short">' if len(body)<=14 else '<table>')+'<thead><tr>'+''.join(f'<th>{inline(c)}</th>' for c in head)+'</tr></thead><tbody>'
     for r in body: o+='<tr>'+''.join(f'<td>{inline(c)}</td>' for c in r)+'</tr>'
     return o+'</tbody></table>'
 
@@ -89,6 +90,12 @@ def body(md):
             flush(); spec,cap=l[8:].split('|',1)
             out.append(f'<figure class="ex"><div class="imgs"><img class="grand" src="{grand(spec.strip())}"></div><figcaption>{inline(cap.strip())}</figcaption></figure>'); i+=1; continue
         if l.startswith('::form'): flush(); out.append(form(l[7:])); i+=1; continue
+        if l.startswith('::img'):
+            # a screenshot: ::img file.png | caption (file in $ESSAY_IMG, default: next to the chapters json)
+            flush(); f,cap=l[6:].split('|',1)
+            src=os.path.join(os.environ.get('ESSAY_IMG', os.path.dirname(os.path.abspath(src_json))), f.strip())
+            assert os.path.exists(src), src
+            out.append(f'<figure class="ex shot"><div class="imgs"><img src="{src}"></div><figcaption>{inline(cap.strip())}</figcaption></figure>'); i+=1; continue
         assert not l.startswith('::'), l
         if l.startswith('|'):
             flush(); rows=[]
@@ -106,9 +113,12 @@ def body(md):
         if m: flush(); out.append(head(3,inline(m.group(1)))); i+=1; continue
         if re.match(r'(- |\d+\. )',l):
             flush(); ordered=bool(re.match(r'\d',l)); items=[]
+            first=re.match(r'(\d+)\. ',l)
             while i<len(lines) and re.match(r'(- |\d+\. )',lines[i]): items.append(re.sub(r'^(- |\d+\. )','',lines[i])); i+=1
             tag='ol' if ordered else 'ul'
-            out.append(f'<{tag}>'+''.join(f'<li>{inline(x)}</li>' for x in items)+f'</{tag}>'); continue
+            # a numbered list split by subheadings (references by language) keeps counting
+            start=f' start="{first.group(1)}"' if first and first.group(1)!='1' else ''
+            out.append(f'<{tag}{start}>'+''.join(f'<li>{inline(x)}</li>' for x in items)+f'</{tag}>'); continue
         para.append(l.strip()); i+=1
     flush(); return '\n'.join(out)
 
