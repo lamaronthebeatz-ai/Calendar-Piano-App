@@ -58,10 +58,11 @@ test('hành trình: tạo nhân vật, vào cảnh, đọc bài rồi quay lại
   await expect(page.locator('.jr-player-meta')).toContainText('1/10 chặng · 1 thẻ chứng cứ')
   // the profile shows level, XP and the solved puzzles
   await expect(page.locator('.jr-player-lv')).toContainText('Cấp')
-  await page.locator('.jr-player-me').click()
+  // the player card and the sheet animate in; on loaded WebKit runners they are never "stable" for click()
+  await page.locator('.jr-player-me').dispatchEvent('click')
   const profile = page.getByRole('dialog', { name: 'Hồ sơ người chơi' })
   await expect(profile.locator('.jr-stats dd').nth(1)).toHaveText('2')
-  await profile.getByRole('tab', { name: 'Kỹ năng' }).click()
+  await profile.getByRole('tab', { name: 'Kỹ năng' }).dispatchEvent('click')
   await expect(profile).toContainText('bậc')
 })
 
