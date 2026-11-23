@@ -6,7 +6,7 @@ Hai tầng: kiểm **cấu trúc** tổng phổ (GĐ1, `repr/validate.ts`) và k
 Chỉ kiểm cấu trúc và ký hiệu, không kiểm luật âm nhạc. Mã lỗi: `schema`, `version`, `id-missing`, `id-duplicate`, `ref`, `clef-start`, `meter-start`, `keysig-start`, `order`, `meter`, `keysig`, `mode`, `pickup`, `meter-barline`, `layout`, `time`, `onset`, `duration`, `pitch`, `overlap`, `tie`, `span`, `chord-bass`, `form-nest`. Cảnh báo: `range` (ngoài MIDI 0–127), `group` (nốt cùng onset trong một bè không chung `group`), `span-end`.
 
 ## 2. Kiểm chứng lời giải (GĐ5) — `Validator.validate(task, solution, rulebook)`
-Bộ kiểm nhận **bài gốc, một phương án, sổ luật**; không nhận gì từ bộ giải. Đã có: `umre.validate.counterpoint.two-voice`, `umre.validate.counterpoint.multi-voice` (phiên bản 1, sổ luật `counterpoint.strict.pham-tu-huong-1991@1`).
+Bộ kiểm nhận **bài gốc, một phương án, sổ luật**; không nhận gì từ bộ giải. Đã có: `umre.validate.counterpoint.two-voice`, `umre.validate.counterpoint.multi-voice` (phiên bản 1, sổ luật `counterpoint.strict.pham-tu-huong-1991@2`), `umre.validate.harmony.four-part` (sổ luật `harmony.four-part.rimsky-korsakov-1886@2`).
 
 ### Trạng thái của MỘT phương án
 | | Khi nào |

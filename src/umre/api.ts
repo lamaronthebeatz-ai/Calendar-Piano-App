@@ -23,6 +23,7 @@ import type { Task } from './task'
 import type { Level } from '../features/counterpoint/solver'
 import { classify, Diagnostics, fingerprintOf, ResultCache, UMRE_API_VERSION, type DiagEvent, type Meta, type UmreError } from './runtime/ops'
 import { UMRE_ENGINE_VERSION } from './version'
+import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION } from './rulebook/counterpoint'
 
 /**
  * The single entry point of UMRE. Every app part (Counterpoint, Analyze, Compose, Theory, Research) talks to the
@@ -149,7 +150,7 @@ async function dispatch(req: UmreRequest, signal?: AbortSignal): Promise<UmreRes
       return { op: 'analyze', result: await runAnalysis(mods, { score: req.score, context: ctx }, { signal }) }
     }
     case 'counterpoint.generate': {
-      const rb = rulebookOf({ id: 'counterpoint.strict.pham-tu-huong-1991', version: '1' })
+      const rb = rulebookOf({ id: COUNTERPOINT_RULEBOOK_ID, version: COUNTERPOINT_RULEBOOK_VERSION })
       return { op: req.op, result: generateExercise(req.level, req.seed, req.timeMs, rb) }
     }
     case 'counterpoint.hints':

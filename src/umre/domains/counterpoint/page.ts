@@ -21,6 +21,8 @@ export function taskFromProblem(p: Problem, id = 'trang'): Task<TwoVoiceParams> 
 
 export type PageCheck = {
   readonly engine: string
+  /** rulebook id@version the answers were judged against */
+  readonly rulebook: string
   /** answers the independent UMRE checkers confirmed (the page shows only these) */
   readonly confirmed: number
   /** answers the search returned that UMRE did not confirm, with why */
@@ -40,7 +42,7 @@ let rb: ReturnType<typeof counterpointRulebook> | null = null
  */
 export function confirmForPage(p: Problem, r: SolveResult): SolveResult & { umre: PageCheck } {
   rb ??= counterpointRulebook()
-  if (!r.solutions.length) return { ...r, umre: { engine: UMRE_ENGINE_VERSION, confirmed: 0, rejected: [], checkers: [] } }
+  if (!r.solutions.length) return { ...r, umre: { engine: UMRE_ENGINE_VERSION, rulebook: `${rb.id}@${rb.version}`, confirmed: 0, rejected: [], checkers: [] } }
   const t = taskFromProblem(p)
   const judged = r.solutions.map((s, i) => {
     const v = twoVoiceValidator.validate(t, twoVoiceSolution(t, s.cp, i + 1), rb!)
@@ -55,7 +57,7 @@ export function confirmForPage(p: Problem, r: SolveResult): SolveResult & { umre
     ...r, solutions,
     status: solutions.length ? 'valid' : 'unknown',
     disputed: (r.disputed ?? 0) + rejected.length,
-    umre: { engine: UMRE_ENGINE_VERSION, confirmed: solutions.length, rejected, checkers },
+    umre: { engine: UMRE_ENGINE_VERSION, rulebook: `${rb.id}@${rb.version}`, confirmed: solutions.length, rejected, checkers },
   }
 }
 

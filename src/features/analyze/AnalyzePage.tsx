@@ -1,5 +1,5 @@
 import { useBack } from '../../hooks/useBack'
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
+import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
@@ -20,6 +20,9 @@ import { fromMidi } from './midi'
 import { runAnalysis } from './runAnalysis'
 import { SAMPLES, sampleUrl } from './samples'
 import { MethodsPanel } from '../knowledge/MethodsPanel'
+
+// UMRE is loaded only with this panel: the page's own analysis does not wait for it
+const UmrePanel = lazy(() => import('./UmrePanel').then((m) => ({ default: m.UmrePanel })))
 import { addSaved, removeSaved, savedLocked, scoreOf, updateSaved, useSaved, type Lens } from './store'
 import { THEORY, type Concept } from './links'
 import { createBrainNote } from '../brain/store'
@@ -356,6 +359,11 @@ function Work({ id }: { id: string }) {
 
       {analysis && <ExportBar title={data.title} blocks={blocks} />}
       {analysis && <MethodsPanel lens={active} />}
+      {analysis && (
+        <Suspense fallback={null}>
+          <UmrePanel score={data.score} title={data.title} runKey={runKey} />
+        </Suspense>
+      )}
 
       {analysis && (
         <div ref={textRef} className="an-report prose-theory" data-font="serif">

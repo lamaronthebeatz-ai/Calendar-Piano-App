@@ -1,0 +1,13 @@
+.um-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 6px; }
+.um-export { padding: 5px 12px; border-radius: 999px; font-size: 12.5px; border: 1px solid var(--color-border); color: var(--color-ink-muted); }
+.um-status { font-size: 13px; color: var(--color-ink-muted); }
+.um-module { margin-top: 12px; }
+.um-module h4 { display: flex; align-items: center; gap: 8px; }
+.um-badge { font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--color-border); color: var(--color-ink-faint); }
+.um-badge[data-status='AMBIGUOUS'], .um-badge[data-status='PARTIAL'] { color: var(--color-gold); border-color: color-mix(in oklch, var(--color-gold) 45%, transparent); }
+.um-badge[data-status='ERROR'], .um-badge[data-status='INSUFFICIENT_DATA'] { color: var(--color-status-cancelled); }
+.um-line, .um-topic li { font-size: 13px; line-height: 1.55; color: var(--color-ink-muted); }
+.um-topic ul { margin: 2px 0 6px; padding-left: 18px; list-style: disc; }
+.um-topic-name { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-ink-faint); margin-top: 6px; }
+.um-alt { color: var(--color-ink-faint); }
+.um-meta code { font-size: 11px; }

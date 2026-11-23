@@ -718,6 +718,12 @@ export function CounterpointPage() {
                 ✓ {result!.umre.confirmed} lời giải được kiểm lại độc lập ({result!.umre.checkers.join(', ')}) — bộ kiểm không phải của chính máy tìm; xếp theo điểm trừ luật mềm.
               </p>
             )}
+            {result!.umre && (
+              <details className="cp-note cp-umre-acad">
+                <summary>Chi tiết học thuật</summary>
+                Sổ luật <code>{result!.umre.rulebook}</code> (Phạm Tú Hương 1991, theo Taneyev) · máy UMRE {result!.umre.engine}. Mỗi luật bắt buộc được ít nhất một bộ kiểm mà máy tìm không chạy xác nhận ({result!.umre.checkers.join(', ')}); luật mềm chỉ dùng để xếp hạng. Bảng luật, trang sách và mức kiểm chứng: bài lý thuyết <a className="wiki-link" href="#/theory/doi-vi-don-gian-hai-be">Đối vị đơn giản hai bè</a> → “Luật trong bộ máy UMRE”.
+              </details>
+            )}
             <Versions list={shown} id="s" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} />
             <Remarks report={sol.report} meter={meter} title="Ghi chú (luật mềm, không bắt buộc)" />
           </div>

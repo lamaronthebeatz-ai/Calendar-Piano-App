@@ -39,7 +39,7 @@
 - **Huỷ / hết giờ**: trong luồng chính, bộ giải đồng bộ chỉ tự dừng ở `timeMs`; huỷ thật (terminate) chỉ khi chạy qua `runtime/host.ts`. Trang phức điệu dùng worker riêng của nó (huỷ bằng terminate), lời giải đi qua `domains/counterpoint/page.ts`; chỉ phần hai bè — ba/bốn bè, canon, Phần IV chưa qua UMRE.
 - **Giải thích** là mẫu câu tiếng Việt cố định từ dữ liệu; "nhánh bị loại" chỉ là các `blockers` ở điểm xa nhất bộ giải tới, không phải toàn bộ cây tìm kiếm.
 - **Mã nguồn chưa xác minh**: ✱ và nốt đen chuẩn bị (quy ước người dạy, chưa có văn bản); độ mạnh phách (quy ước bộ giải).
-- Chỉ trang phức điệu (hai bè: giải, sinh đề, chấm bài) dùng UMRE; các trang khác chưa.
+- Trang dùng UMRE: Phức điệu (hai bè: giải, sinh đề, chấm bài), Phân tích (khối UMRE), Lý thuyết (luật dưới bài), Soạn nhạc (phối hoà âm). Ba – bốn bè, canon, Phần IV của trang phức điệu, Solfège, Nghe hợp âm, Hành trình, Sổ tay, Khám phá: không gọi UMRE (không cần bộ suy luận, hoặc chưa có lĩnh vực tương ứng).
 
 ## Phạm vi
 - Chưa màn hình nào dùng UMRE; các mô-đun cũ chạy như trước.
@@ -53,3 +53,10 @@
 - **Tiết tấu:** chỉ số chỉ nhịp đầu; đa tiết tấu chỉ 2 chồng 3 trong một phách.
 - **Phong cách:** không có mô hình; không quy kết.
 - **Worker:** test trên `node:worker_threads`; chưa chạy trong trình duyệt thật.
+
+## Wave D (23/11)
+- **Kiểm chứng học thuật là đối chiếu tài liệu do trợ lý máy làm**, không phải chứng nhận chuyên gia (`ACADEMIC_VERIFICATION.md`). 31/51 luật mới ở mức "một phần", "có nguồn nhưng thiếu ca kiểm" (luật mềm phức điệu), quy ước hoặc cách hiểu.
+- **Số đo hiệu năng** là của máy chạy bộ đo (4 lõi Xeon, Node 22); điện thoại chậm hơn; bộ /analyze dao động ±20%.
+- **Giải bài không tất định theo thời gian** (bộ giải dừng ở giới hạn thời gian): tái lập qua cache / lưu kết quả kèm dấu vân, không phải chạy lại trên máy khác.
+- **Tiến độ tác vụ**: chưa báo phần trăm (bộ tìm kiếm không có điểm báo); giao diện chỉ báo đang chạy / xong / huỷ.
+- **Dựng lại kết quả của phiên bản cũ**: cần commit cũ (máy chỉ giữ phiên bản sổ luật hiện tại).

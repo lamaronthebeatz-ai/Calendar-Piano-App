@@ -21,7 +21,7 @@ const common = {
   representations: ['umre.score@1'],
   rulebooks: [{ id: COUNTERPOINT_RULEBOOK_ID, versions: [COUNTERPOINT_RULEBOOK_VERSION] }],
   output: { schema: 'umre.score@1', description: 'mỗi phương án là một tổng phổ UMRE đủ các bè, bè đề giữ nguyên' },
-  requires: { umre: '0.5' },
+  requires: { umre: '1.0' },
   // solver.ts / multi.ts run rules.ts (search-rules) and verify.ts on every answer before returning it
   consults: ['search-rules', 'verify'],
 } as const

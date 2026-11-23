@@ -81,7 +81,7 @@ describe('GĐ5 — kiểm chứng độc lập: hai bè', () => {
     const cp = solutions[0].cp
     const other = V(t2, cp)
     expect(other.status).toBe('VALID')
-    const wrong = twoVoiceValidator.validate(t2, twoVoiceSolution(t2, cp), { ...rb, version: '2' })
+    const wrong = twoVoiceValidator.validate(t2, twoVoiceSolution(t2, cp), { ...rb, version: '99' })
     expect(wrong.status).toBe('UNKNOWN')
     expect(wrong.reasons[0]).toMatch(/không được bộ kiểm/)
     const wider = { ...rb, rules: [...rb.rules, { id: 'luat-moi', statement: 'Một luật mới chưa có bộ kiểm', severity: 'hard' as const, citations: [], scope: '' }] }

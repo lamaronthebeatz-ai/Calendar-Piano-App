@@ -18,7 +18,10 @@ Nhãn: **IMPLEMENTED** có code · **TESTED** có test chạy thật · **INTEGR
 | C | 8 | Phức điệu thành bộ giải lĩnh vực: sổ luật chuẩn hoá + bảng phủ, phân tích, sinh đề/gợi ý/chẩn đoán, xếp hạng luật mềm, worker | IMPLEMENTED AND TESTED (chưa nối giao diện) — `WAVE_C.md` |
 | C | 9 | Hoà âm cổ điển: nhận diện, suy luận, phối hoà âm § 13, adapter /analyze, chuẩn Bach | IMPLEMENTED AND TESTED (hợp âm ba thế gốc) — `WAVE_C.md` |
 | C | 10 | Giai điệu, tiết tấu, kết cấu, hình thức, phong cách (chỉ quan sát) | IMPLEMENTED AND TESTED; phong cách PARTIALLY (cố ý) — `WAVE_C.md` |
-| D | 11–12 | (chưa có chỉ thị) | NOT IMPLEMENTED |
+| D | 11 | Hiệu năng và độ tin cậy: bộ đo tái lập (`scripts/umre/bench.mjs`, `BENCHMARKS.md`), 3 tối ưu có test giữ kết quả, dấu vân + cache có giới hạn, lỗi có mã, nhật ký chẩn đoán, worker huỷ thật | IMPLEMENTED AND TESTED |
+| D | 12A | Kiểm chứng học thuật: bảng từng luật sinh từ test, ca vi phạm viết tay cho mọi luật, thí dụ in, chuẩn Bach | 20/51 luật ACADEMICALLY VERIFIED WITHIN DECLARED SCOPE (đối chiếu tài liệu, chưa chuyên gia) — `ACADEMIC_VERIFICATION.md` |
+| D | 12B | Tích hợp: Phức điệu (giải, sinh đề, chấm bài, mức học thuật), Phân tích (khối UMRE, 3 mức, xuất báo cáo), Lý thuyết (luật UMRE dưới bài), Soạn nhạc (phối hoà âm bốn bè) | IMPLEMENTED AND TESTED (E2E) |
+| D | 12C | Tài liệu, phiên bản 1.0.0, checklist phát hành | `API.md`, `EXTENSION_GUIDE.md`, `RULEBOOK_CHANGELOG.md`, `RELEASE_CHECKLIST.md` |
 
 **Tiêu chí vào Wave C — đạt (có bằng chứng test):** lĩnh vực thứ hai (hoà âm bốn bè) chạy trên phần chung mà không viết bộ giải hay thuật toán tìm kiếm riêng: chỉ thêm sổ luật có nguồn, 7 luật trong ngôn ngữ luật, mô hình miền (nốt của hợp âm trong âm vực), và một bộ kiểm viết tay để có xác nhận độc lập (`src/umre/domains/harmony/harmony.test.ts`).
 
@@ -34,4 +37,4 @@ Nhãn: **IMPLEMENTED** có code · **TESTED** có test chạy thật · **INTEGR
 5. **Không phá dữ liệu cũ, không sửa mô-đun cũ.** Wave B không sửa dòng nào trong `features/`.
 
 ## Tài liệu
-`WAVE_C.md` · `COVERAGE.md` · `ARCHITECTURE.md` · `UNIFIED_MUSIC_REPRESENTATION.md` · `RULEBOOK_SPECIFICATION.md` · `SOLVER_SPECIFICATION.md` · `VALIDATION_SPECIFICATION.md` · `EVIDENCE_AND_EXPLANATION.md` · `PERFORMANCE_SPECIFICATION.md` · `ACADEMIC_VERIFICATION.md` · `IMPLEMENTATION_LOG.md` · `KNOWN_LIMITATIONS.md`
+`WAVE_D.md` · `API.md` · `EXTENSION_GUIDE.md` · `RULEBOOK_CHANGELOG.md` · `RELEASE_CHECKLIST.md` · `BENCHMARKS.md` · `WAVE_C.md` · `COVERAGE.md` · `ARCHITECTURE.md` · `UNIFIED_MUSIC_REPRESENTATION.md` · `RULEBOOK_SPECIFICATION.md` · `SOLVER_SPECIFICATION.md` · `VALIDATION_SPECIFICATION.md` · `EVIDENCE_AND_EXPLANATION.md` · `PERFORMANCE_SPECIFICATION.md` · `ACADEMIC_VERIFICATION.md` · `IMPLEMENTATION_LOG.md` · `KNOWN_LIMITATIONS.md`

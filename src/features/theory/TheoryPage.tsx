@@ -1,4 +1,9 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
+import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from 'react'
+import { hasUmreRules } from '../../umre/theorySlugs'
+import '../knowledge/knowledge.css'
+
+// the rule list loads UMRE's rulebooks: only for the articles that have rules, and only when shown
+const UmreRules = lazy(() => import('./UmreRules').then((m) => ({ default: m.UmreRules })))
 import '../terms/terms.css'
 import { SchoolViews } from '../terms/SchoolViews'
 import { ResearchTools } from '../research/ResearchTools'
@@ -1188,6 +1193,12 @@ function ArticleView({ article, scroller, sections, onJump: jump }: { article: A
           }}
           cite={(t) => `“${t.trim()}”\n— ${article.title}, thư viện Trung tâm lý thuyết âm nhạc học by Lamar`}
         />
+
+        {hasUmreRules(article.slug) && (
+          <Suspense fallback={null}>
+            <UmreRules slug={article.slug} />
+          </Suspense>
+        )}
 
         {(article.wiki || article.refs) && (
           <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-raised)] p-5">

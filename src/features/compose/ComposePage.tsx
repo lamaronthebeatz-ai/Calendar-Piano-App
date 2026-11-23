@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore, type CSSProperties, type ReactNode } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore, type CSSProperties, type ReactNode, lazy, Suspense } from 'react'
 import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
 import { useBack } from '../../hooks/useBack'
@@ -86,6 +86,9 @@ const RADIAL_ITEMS: { id: string; label: string; angle: number; title: string }[
 const RADIUS = 74
 
 /** The page that opens a score and edits it: white paper, black staves, a floating palette and touch gestures. */
+// UMRE loads only when the menu shows this section
+const HarmonizePanel = lazy(() => import('./HarmonizePanel').then((m) => ({ default: m.HarmonizePanel })))
+
 export function ComposePage() {
   const back = useBack('/theory')
   const navigate = useNavigate()
@@ -1608,6 +1611,22 @@ export function ComposePage() {
             </label>
           </div>
           <p className="cmp-help">MusicXML mở được trong Sibelius, MuseScore, Finale, Dorico. MIDI phát đúng như nút Nghe (kể cả nhắc lại). PDF: chọn “Lưu thành PDF” trong hộp thoại in.</p>
+          <h2>Phối hoà âm bốn bè (UMRE)</h2>
+          <Suspense fallback={null}>
+            <HarmonizePanel
+              score={score}
+              onOpen={(s) => {
+                setList((l) => [s, ...l])
+                setCurrentId(s.id)
+                setPast([])
+                setFuture([])
+                setCaret({ staff: 0, t: 0 })
+                setSel(null)
+                setMenu(false)
+                setFlash(`Đã mở “${s.title}”`)
+              }}
+            />
+          </Suspense>
           <h2>Tuỳ chọn</h2>
           <div className="cmp-row">
             <label>Nhịp độ ♩ = <input type="number" min={20} max={300} value={score.tempo} onChange={(e) => commit({ ...score, tempo: Math.max(20, Math.min(300, +e.target.value || 80)) })} /></label>

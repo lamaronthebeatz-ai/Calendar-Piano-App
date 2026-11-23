@@ -11,7 +11,8 @@ import type { AmbiguousSpec, Definition, ExceptionSpec, PermittedSpec, Rulebook,
  * holds every locator to that table. Nothing here adds or changes a rule.
  */
 export const COUNTERPOINT_RULEBOOK_ID = 'counterpoint.strict.pham-tu-huong-1991'
-export const COUNTERPOINT_RULEBOOK_VERSION = '1'
+/** 2 (Wave C): names, logic, weights, permitted / ambiguous entries; quarter-prep applies in versions too. History: docs/umre/RULEBOOK_CHANGELOG.md */
+export const COUNTERPOINT_RULEBOOK_VERSION = '2'
 
 const BOOK = 'pham-tu-huong-1991'
 const CONVENTION = 'umre.exercise-convention'

@@ -14,6 +14,7 @@ import { CHOICE_RULES, HARMONY_RULES } from '../../rules/harmony'
 import type { HKey } from './check'
 import type { ConsonanceDef } from '../../repr/texture'
 import type { Rulebook } from '../../rulebook/rulebook'
+import { HARMONY_RULEBOOK_ID, HARMONY_RULEBOOK_VERSION } from '../../rulebook/harmony'
 
 /**
  * Four-part harmony exercise: a given soprano and one chord per soprano note (root-position triads); alto, tenor and
@@ -93,7 +94,7 @@ export function fourPartModel(t: Task<FourPartParams>, rb: Rulebook, o: { choice
 /** A four-part task from a soprano line written like the counterpoint helpers ("C5:4 | D5:4"). */
 export function fourPartTask(id: string, soprano: Seg[], chords: Chord[], key = { tonic: 0, alter: 0, minor: false }): Task<FourPartParams> {
   const score = fromCounterpoint({ key, meter: { num: 4, den: 4 }, lines: [soprano, [], [], []], names: ['Soprano', 'Alto', 'Tenor', 'Bass'], roles: ['given', 'free', 'free', 'free'], id })
-  return { id, type: FOUR_PART, domain: 'harmony', rulebook: { id: 'harmony.four-part.rimsky-korsakov-1886', version: '1' }, score, params: { chords } }
+  return { id, type: FOUR_PART, domain: 'harmony', rulebook: { id: HARMONY_RULEBOOK_ID, version: HARMONY_RULEBOOK_VERSION }, score, params: { chords } }
 }
 
 export function checkHarmonizeTask(t: Task): string[] {
@@ -110,7 +111,7 @@ export function checkHarmonizeTask(t: Task): string[] {
 /** A harmonization task from a soprano line ("E5:4 | D5:4 | C5:4") in a key. */
 export function harmonizeTask(id: string, soprano: Seg[], k: HKey = { tonic: { letter: 0, alter: 0 }, minor: false }, meter: Meter = { num: 4, den: 4 }): Task<HarmonizeParams> {
   const score = fromCounterpoint({ key: { tonic: k.tonic.letter, alter: k.tonic.alter, minor: k.minor }, meter, lines: [soprano, [], [], []], names: ['Soprano', 'Alto', 'Tenor', 'Bass'], roles: ['given', 'free', 'free', 'free'], id })
-  return { id, type: HARMONIZE, domain: 'harmony', rulebook: { id: 'harmony.four-part.rimsky-korsakov-1886', version: '1' }, score, params: { key: k } }
+  return { id, type: HARMONIZE, domain: 'harmony', rulebook: { id: HARMONY_RULEBOOK_ID, version: HARMONY_RULEBOOK_VERSION }, score, params: { key: k } }
 }
 
 /** The diatonic triad on degree `d` of the key (minor = harmonic minor), built from repr/tonal. */

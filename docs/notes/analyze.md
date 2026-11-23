@@ -42,3 +42,6 @@ Lamar muốn: đưa bản nhạc vào → nhận diện khoá, nhịp, hoá bi�
 
 ## Dựng MusicXML từ Mutopia (Clair de lune, 13/11)
 Mutopia chỉ có .ly + .mid. `python-ly` không chuyển được. Cách đã chạy: music21 đọc .mid (2 phần, ô và hoá biểu đúng) → chính tả nốt lấy từ LilyPond: thêm engraver Scheme in `SPY <thời điểm×4> <midi> <tên nốt> <dấu>` cho mỗi `note-event` (`lilypond -dno-print-pages`), ghép theo (thời điểm, midi), lệch thì lấy nốt cùng midi gần nhất (±2 phách) → 1.503/1.503 nốt. Khoá khuông dưới chọn theo cao độ trung bình từng ô. Chia bè do music21 tự xếp nên rối hơn bản in.
+
+## UMRE (Wave D)
+Khối "Phân tích và kiểm chứng của UMRE" (`UmrePanel.tsx`, tải lười, mặc định đóng): chạy 6 mô-đun UMRE trong `umre.worker.ts` qua `UmreHost` (huỷ khi đổi bản / rời trang), ba mức xem, xuất `.md`. Không thay phân tích của trang. `harmony.tonal`/`form.sections` dùng chung một lần `analyze()` (`analyzeOnce`).

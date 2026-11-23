@@ -28,7 +28,7 @@ export const cspCounterpointSolver: Solver = {
     capabilities: { proofOfUnsat: true, multipleSolutions: true, cancellation: 'none' },
     defaults: { timeMs: 15_000, maxSolutions: 4 },
     limits: { maxTimeMs: 120_000, maxSolutions: 24 },
-    requires: { umre: '0.5' },
+    requires: { umre: '1.0' },
     consults: ['umre-rules'],
     // the page's own solvers stay the default; this one is asked for by id or used when they are disabled
     priority: -1,

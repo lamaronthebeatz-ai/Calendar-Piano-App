@@ -40,8 +40,11 @@ test('hành trình: tạo nhân vật, vào cảnh, đọc bài rồi quay lại
 
   // WebKit on CI keeps these buttons "not stable" while the scene settles (17/11: failed twice in a row); the test is
   // about the answer logic, so the click goes to the button itself
-  await page.locator('.jr-choice').nth(1).dispatchEvent('click')
-  await expect(page.locator('.jr-hint')).toBeVisible()
+  // right after goBack the scene may not take the first event yet: press again until the hint answers
+  await expect(async () => {
+    await page.locator('.jr-choice').nth(1).dispatchEvent('click')
+    await expect(page.locator('.jr-hint')).toBeVisible({ timeout: 1000 })
+  }).toPass({ timeout: 15_000 })
   await page.locator('.jr-choice').nth(0).dispatchEvent('click')
   // then the stop's music challenge (Trung cổ: read a neume line); a wrong name is marked, the right ones open the card
   const pz = sceneChallenge(CHAPTERS[0].id, CHAPTERS[0].scenes[0].id, 0)!

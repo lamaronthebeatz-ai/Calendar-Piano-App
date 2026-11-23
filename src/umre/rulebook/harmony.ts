@@ -9,7 +9,8 @@ import type { AmbiguousSpec, Definition, ExceptionSpec, PermittedSpec, Rulebook,
  * reading. Voice ranges are NOT a rule here: they bound the search domain only.
  */
 export const HARMONY_RULEBOOK_ID = 'harmony.four-part.rimsky-korsakov-1886'
-export const HARMONY_RULEBOOK_VERSION = '1'
+/** 2 (Wave C): § 11 connection rules, § 13 – tr. 25 harmonization rules (3 soft), permitted / ambiguous. History: docs/umre/RULEBOOK_CHANGELOG.md */
+export const HARMONY_RULEBOOK_VERSION = '2'
 const BOOK = 'rimsky-korsakov-1886'
 const INTERNAL = 'umre.internal-reading'
 
