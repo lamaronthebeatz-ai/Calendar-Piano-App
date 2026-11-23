@@ -53,3 +53,8 @@
 **Tạo mới:** `domains/counterpoint/{versions,csp}.ts` (+ test), `constraints/model.ts`, `search/search.ts` (+ test), `rules/harmony.ts`, `rulebook/harmony.ts`, `domains/harmony/{task,check}.ts` (+ test), `validation/harmony.ts`, `solvers/csp.ts` (hai bộ giải).
 **Sửa ngoài UMRE:** `features/counterpoint/{rules,verify,multi}.ts` — ba chỗ lệch giáo trình (ghi ở `docs/notes/counterpoint.md`).
 **Kết quả:** `src/umre` 124/124; phức điệu 56/56; E2E phức điệu Chromium 16/16.
+
+## 2026-11-23 — Wave C (GĐ8 – 10 + tích hợp)
+**Tạo mới:** `api.ts`, `analysis/{types,run}.ts`, `runtime/{host,serve,umre.worker}.ts`, `orchestration/rank.ts`, `validation/coverage.ts`, `rulebook/cases.ts`, `domains/counterpoint/{ops,analysis}.ts`, `domains/harmony/{identify,harmonize,reasoning,tonal,analysis}.ts`, `domains/general/*`, tài liệu `WAVE_C.md`, `COVERAGE.md`.
+**Sửa:** sổ luật (phân loại, logic, permitted/ambiguous, trọng số), truy vấn `harmony.progression`, luật hoà âm + bộ kiểm viết tay, bộ kiểm hoà âm (hai loại bài, luật mềm, not-applicable), bộ điều phối (bước xếp hạng), `scripts/analyze/eval.mjs --umre`. Ngoài UMRE: chỉ thêm `softWeight` (`features/counterpoint/rules.ts`).
+**Kết quả:** toàn bộ vitest đạt; Bach qua UMRE = bộ máy gốc (83,9 / 78,1 / 77,1%).

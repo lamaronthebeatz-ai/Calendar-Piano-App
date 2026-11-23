@@ -3,6 +3,11 @@ import type { AnalysisModule, AnalysisResult } from './analysis/types'
 import { counterpointCheck } from './domains/counterpoint/analysis'
 import { harmonyProgression } from './domains/harmony/analysis'
 import { harmonyTonal } from './domains/harmony/tonal'
+import { melodyModule } from './domains/general/melody'
+import { rhythmModule } from './domains/general/rhythm'
+import { textureModule } from './domains/general/texture'
+import { formModule } from './domains/general/form'
+import { styleModule } from './domains/general/style'
 import { identify, type Identification } from './domains/harmony/identify'
 import { consequences, continuations, type Change, type Consequence, type Continuation } from './domains/harmony/reasoning'
 import type { HarmonizeParams } from './domains/harmony/task'
@@ -55,7 +60,7 @@ export type UmreResponse =
 let engine: ReturnType<typeof createEngine> | null = null
 const getEngine = () => (engine ??= createEngine())
 
-const ANALYSIS: AnalysisModule[] = [counterpointCheck, harmonyTonal, harmonyProgression]
+const ANALYSIS: AnalysisModule[] = [counterpointCheck, harmonyTonal, harmonyProgression, melodyModule, rhythmModule, textureModule, formModule, styleModule]
 /** Analysis modules by id (later phases register theirs here). */
 export function analysisModules(): readonly AnalysisModule[] {
   return ANALYSIS

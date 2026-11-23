@@ -36,11 +36,20 @@
 - **`suspension`** không tách riêng: lỗi nốt lưu báo dưới `dis-strong` / `dis-weak` (outcome `subsumed`).
 - **Vị trí ở biến thể**: `eventIds` chỉ điền cho nguyên thể; ở bản biến thể có dời thời gian (Ih) `location.at` là thời điểm trong bản đó.
 - **PROVEN_UNSAT không kiểm lại được độc lập** (không có phương án); tin vào bộ giải trong miền nó khai báo.
-- **Huỷ / hết giờ**: hai bộ giải phức điệu chạy đồng bộ — huỷ giữa chừng và hẹn giờ của bộ điều phối chỉ có tác dụng với bộ giải bất đồng bộ; chúng tự dừng ở `timeMs`. Chưa có lớp web worker.
+- **Huỷ / hết giờ**: trong luồng chính, bộ giải đồng bộ chỉ tự dừng ở `timeMs`; huỷ thật (terminate) chỉ khi chạy qua `runtime/host.ts`. Trang phức điệu chưa dùng host này.
 - **Giải thích** là mẫu câu tiếng Việt cố định từ dữ liệu; "nhánh bị loại" chỉ là các `blockers` ở điểm xa nhất bộ giải tới, không phải toàn bộ cây tìm kiếm.
 - **Mã nguồn chưa xác minh**: ✱ và nốt đen chuẩn bị (quy ước người dạy, chưa có văn bản); độ mạnh phách (quy ước bộ giải).
-- Chưa có giao diện; chưa màn hình nào gọi `createEngine()`.
+- Chưa có giao diện; chưa màn hình nào gọi `createEngine()` hay `api.ts`.
 
 ## Phạm vi
 - Chưa màn hình nào dùng UMRE; các mô-đun cũ chạy như trước.
 - Trạng thái từng giai đoạn ở `MASTER_SPECIFICATION.md`.
+
+## Wave C (23/11)
+- **Hoà âm:** chỉ hợp âm ba thế gốc trong bài bốn bè; hợp âm chủ cuối thiếu quãng 5 (tr. 24) chưa cài → "vô nghiệm" chỉ trong miền nhân đôi âm gốc. "Phách mạnh" = phách đầu ô (4/4: phách 3 coi là nhẹ).
+- **Phân tích điệu tính** (`harmony.tonal`): Schoenberg op. 19 số 2 vẫn ra COMPLETED với một "giọng chính" — độ điệu tính 86% vượt ngưỡng 80%. Nhạc phi điệu tính nên dùng lăng kính xx của /analyze.
+- **Kết cấu:** giai điệu + đệm không tách được khỏi phức điệu tự do bằng số đo hiện có → AMBIGUOUS có hai cách đọc. Phức điệu chỉ khẳng định khi thấy mô phỏng (mẫu 7 nốt có bước nhảy).
+- **Giai điệu:** motif = lặp đúng hoặc dịch giọng; chưa nhận đảo / nghịch hành / giãn. Câu chỉ theo dấu lặng và nốt dài.
+- **Tiết tấu:** chỉ số chỉ nhịp đầu; đa tiết tấu chỉ 2 chồng 3 trong một phách.
+- **Phong cách:** không có mô hình; không quy kết.
+- **Worker:** test trên `node:worker_threads`; chưa chạy trong trình duyệt thật.
