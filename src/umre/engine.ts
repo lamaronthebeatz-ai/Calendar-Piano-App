@@ -3,7 +3,9 @@ import { SolverRegistry, ValidatorRegistry } from './orchestration/registry'
 import { counterpointRulebook } from './rulebook/counterpoint'
 import { RulebookRegistry } from './rulebook/rulebook'
 import { COUNTERPOINT_SOLVERS } from './solvers/counterpoint'
-import { cspCounterpointSolver } from './solvers/csp'
+import { cspCounterpointSolver, cspHarmonySolver } from './solvers/csp'
+import { harmonyRulebook } from './rulebook/harmony'
+import { harmonyValidator } from './validation/harmony'
 import { COUNTERPOINT_VALIDATORS } from './validation/counterpoint'
 
 /**
@@ -14,10 +16,14 @@ import { COUNTERPOINT_VALIDATORS } from './validation/counterpoint'
 export function createEngine() {
   const rulebooks = new RulebookRegistry()
   rulebooks.add(counterpointRulebook())
+  rulebooks.add(harmonyRulebook())
   const validators = new ValidatorRegistry()
   for (const v of COUNTERPOINT_VALIDATORS) validators.register(v)
+  validators.register(harmonyValidator)
   const solvers = new SolverRegistry()
   for (const s of COUNTERPOINT_SOLVERS) solvers.register(s)
   solvers.register(cspCounterpointSolver)
+  // a second domain on the shared engine: four-part harmony (rulebook + rules + domain model only)
+  solvers.register(cspHarmonySolver)
   return { rulebooks, validators, solvers, orchestrator: new Orchestrator(solvers, validators, rulebooks) }
 }

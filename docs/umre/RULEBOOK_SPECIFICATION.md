@@ -18,5 +18,8 @@
 - `queries.ts`: truy vấn sinh **sự kiện** (bước giai điệu, bộ ba nốt, nốt viết, dấu nối, điểm cùng vang, quãng nghịch kèm chuẩn bị / giải quyết / cách đến – đi), không phán xét.
 - `counterpoint.ts`: 17 luật cứng; mỗi luật một dòng chú thích dẫn câu chữ. Bảng quãng thuận đọc từ `def.dissonance.data` của sổ luật.
 
+## Sổ luật hoà âm bốn bè `harmony.four-part.rimsky-korsakov-1886@1` (thí điểm)
+7 luật cứng: âm của hợp âm (tr. 11), thế gốc (tr. 12 – 13), nhân đôi âm gốc (tr. 19), khoảng cách ba bè trên (tr. 20, caveat: giới hạn quãng 6 là cách hiểu), quãng 5 / 8 song song hoặc ngược hướng (tr. 22), quãng tăng (tr. 22), chéo bè (cách hiểu của người biên soạn). Số trang theo bài `luat-hoa-am-bon-be`; test buộc khớp dòng bài. Âm vực KHÔNG là luật — chỉ giới hạn miền tìm kiếm.
+
 ## Chưa có
 Sổ luật thứ hai (hoà âm cổ điển…), so sánh hai sổ luật, kế thừa sổ luật. Kiểm luật thật vẫn do code của từng lĩnh vực làm.

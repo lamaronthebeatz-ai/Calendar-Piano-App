@@ -29,5 +29,9 @@
 |---|---|---|
 | `counterpoint.two-voice.search@1.0.0` | `solveMany` (như worker của trang) | valid → solved; unsat → unsat (bằng chứng: ✱ bất khả hoặc đã duyệt hết miền); unknown → unknown nếu `disputed` > 0, còn lại timeout |
 | `counterpoint.multi-voice.search@1.0.0` | `msolve` | như trên |
+| `umre.csp.counterpoint@1.0.0` | tìm kiếm chung trên mô hình phức điệu (`consults: umre-rules`, ưu tiên −1: chọn theo id) | solved / unsat (đã duyệt hết miền) / timeout |
+| `umre.csp.harmony@1.0.0` | tìm kiếm chung trên mô hình hoà âm bốn bè | như trên |
+
+Đối chiếu: trên 40 đề ngẫu nhiên, `umre.csp.counterpoint` và `solveMany` cùng kết luận mọi đề cả hai kết luận được (1 đề `solveMany` chứng minh vô nghiệm, bộ chung hết 6 s). Bộ chung chậm hơn bộ riêng ở ba bè (≈ 2 s so với < 0,1 s).
 
 Cả hai chạy đồng bộ tới giới hạn giờ của chính chúng (`cancellation: 'none'`): huỷ giữa chừng chỉ có tác dụng với bộ giải bất đồng bộ.

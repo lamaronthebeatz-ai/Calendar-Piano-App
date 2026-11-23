@@ -69,3 +69,4 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Không bịa luật, không trộn hệ lý thuyết, thiếu bằng chứng ghi "chưa xác minh"; không dựng lại app, không bỏ tính năng có sẵn — mô-đun cũ nối vào UMRE qua bộ chuyển đổi.
 - Tài liệu ở `docs/umre/` phải phản ánh đúng trạng thái thật.
 - (23/11) **Wave B** (GĐ5 kiểm chứng, GĐ6 giải thích – bằng chứng, GĐ7 điều phối): bộ giải tìm, bộ kiểm kiểm; LLM không được quyết định đúng sai; phân biệt dữ kiện / luật / suy luận / giả thuyết / giới hạn; lỗi kỹ thuật không bao giờ là vô nghiệm; không đánh giá thẩm mỹ trước khi xong cả bốn đợt.
+- (23/11) Lamar: "làm luôn không cần hỏi" — đã sửa trang phức điệu theo giáo trình ở ba chỗ (nốt sớm, giải quyết lướt chỉ ở biến thể, giải quyết có trang trí phải nhảy). Nếu thầy chốt khác thì đảo lại ở `rules.ts` + `verify.ts` + `src/umre/rules/counterpoint.ts` cùng lúc.

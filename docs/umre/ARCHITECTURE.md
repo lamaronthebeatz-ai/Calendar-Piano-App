@@ -11,6 +11,13 @@ src/umre/
     counterpoint.ts          sổ luật phức điệu nghiêm khắc (34 luật, 2 ngoại lệ, 2 định nghĩa)
   evidence/evidence.ts       GĐ6 — SourceRecord, Citation, EvidenceRegistry, formatCitation (dữ liệu sách lấy từ features/sources/curated.ts)
   domains/counterpoint/task.ts   loại bài counterpoint.two-voice / multi-voice, kiểm đầu vào, đổi Task ⇄ Problem / MProblem, dựng tổng phổ lời giải
+  repr/texture.ts            truy vấn chuẩn: điểm cùng vang, chuyển động, lớp quãng, vị trí trong ô
+  rules/                     GĐ2 — lang.ts (ngôn ngữ luật + bộ đánh giá), queries.ts (sự kiện), counterpoint.ts, harmony.ts (luật)
+  constraints/model.ts       GĐ3 — CspModel: bè tự do, miền, cách ghi nốt, các góc nhìn (nguyên thể, biến thể), vi phạm chắc chắn
+  search/search.ts           GĐ4 — tìm kiếm chung: quay lui, nhớ trạng thái chết, ba kết luận
+  domains/counterpoint/      versions.ts (tự dựng biến thể), csp.ts (miền phức điệu)
+  domains/harmony/           task.ts (bài bốn bè + miền), check.ts (bộ kiểm viết tay)
+  rulebook/harmony.ts        sổ luật hoà âm bốn bè (Rimsky-Korsakov)
   validation/                GĐ5
     types.ts                 ValidationStatus, Violation, RuleOutcome, Coverage, ValidationResult, Validator, digest
     native.ts                bộ kiểm thứ ba viết trên biểu diễn UMRE (một phần luật)
@@ -23,6 +30,7 @@ src/umre/
     registry.ts              SolverRegistry, ValidatorRegistry, checkDescriptor
     orchestrator.ts          Orchestrator.run, decideStatus (hàm thuần), checkOutput, auditResult
   solvers/counterpoint.ts    adapter: twoVoiceSolver (solveMany), multiVoiceSolver (msolve)
+  solvers/csp.ts             umre.csp.counterpoint, umre.csp.harmony — mô hình lĩnh vực + tìm kiếm chung
   testing/fixtures.ts        dựng bài mẫu cho test
 ```
 

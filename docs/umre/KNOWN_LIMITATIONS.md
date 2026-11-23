@@ -19,7 +19,10 @@
 - **Bảng tính hoà âm**: chỉ đổi tên nốt `{l, a}` ⇄ `Spelling`.
 
 ## Sau rà soát (23/11)
-- Bài có biến thể: UNKNOWN (bộ kiểm UMRE chưa dựng biến thể).
+- ~~Bài có biến thể: UNKNOWN~~ — đã gỡ: UMRE tự dựng biến thể (23/11).
+- Tìm kiếm chung chưa tối ưu theo luật mềm (chưa có luật mềm trong ngôn ngữ luật); chậm hơn bộ riêng ở ba – bốn bè.
+- Hoà âm bốn bè mới có 7 luật cứng, hợp âm ba thế gốc, nốt đối nốt, giọng trưởng; chưa có thể đảo, hợp âm bảy, nốt khuynh hướng, chuyển giọng.
+- Chưa có lớp web worker: gọi bộ giải trên luồng chính sẽ đứng giao diện; huỷ / hết giờ của bộ điều phối không cắt được vòng lặp đồng bộ.
 - Đáp án chuẩn mới có 5 thí dụ nốt lưu, do trợ lý chép từ scan, chưa có người duyệt; thí dụ 18–19, 24b, 25–29 bỏ vì không đọc chắc.
 - `verify.ts` lỏng hơn câu chữ ở hai chỗ (nốt sớm theo tên nốt; nốt nghịch ngay sau nốt nghịch) — đã ghi, chưa sửa.
 - Luật mềm vẫn chỉ do bộ kiểm của bộ giải chấm.

@@ -3,6 +3,8 @@ import { checkMultiVoiceTask, checkTwoVoiceTask, MULTI_VOICE, TWO_VOICE, type Mu
 import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION, counterpointRulebook } from '../rulebook/counterpoint'
 import { search } from '../search/search'
 import type { Task } from '../task'
+import { checkFourPartTask, FOUR_PART, fourPartModel, type FourPartParams } from '../domains/harmony/task'
+import { HARMONY_RULEBOOK_ID, HARMONY_RULEBOOK_VERSION, harmonyRulebook } from '../rulebook/harmony'
 import type { Solver, SolverOutput, SolverStep } from '../orchestration/solver'
 
 /**
@@ -48,6 +50,38 @@ export const cspCounterpointSolver: Solver = {
       solutions: r.solutions.map((s, i) => ({ ...s, id: `${task.id}-g${i + 1}` })),
       diagnostics: { nodes: r.nodes, deadStates: r.deadStates, furthest: r.furthest, domain: model.domain },
       steps,
+    }
+  },
+}
+
+/** The same shared search on the four-part harmony model: no search code of its own. */
+export const cspHarmonySolver: Solver = {
+  descriptor: {
+    ...cspCounterpointSolver.descriptor,
+    id: 'umre.csp.harmony',
+    domain: 'harmony',
+    taskTypes: [FOUR_PART],
+    rulebooks: [{ id: HARMONY_RULEBOOK_ID, versions: [HARMONY_RULEBOOK_VERSION] }],
+    input: { schema: 'harmony.four-part/params@1', description: 'soprano cho trước và một hợp âm ba thế gốc cho mỗi nốt' },
+    output: { schema: 'umre.score@1', description: 'tổng phổ bốn bè S-A-T-B' },
+    priority: 0,
+  },
+  checkInput: (t) => checkFourPartTask(t),
+  solve(task, ctx): SolverOutput {
+    const model = fourPartModel(task as Task<FourPartParams>, harmonyRulebook())
+    const r = search(model, { timeMs: ctx.timeMs, maxSolutions: ctx.maxSolutions, signal: ctx.signal })
+    const proof = r.status === 'unsat' ? `đã duyệt hết miền tìm kiếm (${model.domain})` : undefined
+    return {
+      status: r.status, proof, reason: r.status === 'timeout' ? `hết ${ctx.timeMs} ms, đã thử ${r.nodes} nút` : undefined,
+      solutions: r.solutions.map((s, i) => ({ ...s, id: `${task.id}-g${i + 1}` })),
+      diagnostics: { nodes: r.nodes, deadStates: r.deadStates, domain: model.domain },
+      steps: [
+        { operation: 'problem', output: { summary: `hoà âm bốn bè: ${(task.params as FourPartParams).chords.length} hợp âm, soprano cho trước` } },
+        { operation: 'domain', output: model.domain, level: 'detailed' },
+        { operation: 'search', output: { status: r.status, nodes: r.nodes, deadStates: r.deadStates, solutions: r.solutions.length } },
+        ...(proof ? [{ operation: 'proof', output: proof }] : []),
+        ...(r.blockers.length ? [{ operation: 'blockers', ruleIds: [...new Set(r.blockers.map((b) => b.rule))], output: r.blockers.map((b) => ({ rule: b.rule, bar: Math.floor(b.at / 4) + 1, count: b.count, version: b.view })), level: 'detailed' as const }] : []),
+      ],
     }
   },
 }

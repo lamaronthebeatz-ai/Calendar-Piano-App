@@ -48,3 +48,8 @@
 **Tạo mới:** `repr/texture.ts` (+ test), `rules/lang.ts`, `rules/queries.ts`, `rules/counterpoint.ts`, `rules/rules.test.ts`, `validation/independence.ts`, `testing/gold.ts`.
 **Sửa:** `validation/counterpoint.ts` (thêm bộ kiểm `umre-rules`, so mọi cặp bộ kiểm độc lập, `complete` theo biến thể), `validation/native.ts` (dùng `verticals`), `validation/types.ts`, `orchestration/{solver,orchestrator}.ts` (`consults`, xác nhận độc lập, bước `confirm`), `solvers/counterpoint.ts`, `rulebook/{rulebook,counterpoint}.ts` (`data` cho định nghĩa, caveat `dis-weak`, `checkedBy`), `evidence/evidence.ts` (`checkedBy` bắt buộc khi trên mức chưa xác minh), `explain/explain.ts`. Không sửa `features/`.
 **Kết quả:** `npx vitest run src/umre` 111/111. Thử đột biến ngoài repo: 2.004 + 1.775 phương án — 0 bất đồng trên lời giải thật; mọi bất đồng còn lại là `umre-rules` chặt hơn `verify.ts` (hai loại đã ghi).
+
+## 2026-11-23 — Biến thể, GĐ3–4, thí điểm hoà âm
+**Tạo mới:** `domains/counterpoint/{versions,csp}.ts` (+ test), `constraints/model.ts`, `search/search.ts` (+ test), `rules/harmony.ts`, `rulebook/harmony.ts`, `domains/harmony/{task,check}.ts` (+ test), `validation/harmony.ts`, `solvers/csp.ts` (hai bộ giải).
+**Sửa ngoài UMRE:** `features/counterpoint/{rules,verify,multi}.ts` — ba chỗ lệch giáo trình (ghi ở `docs/notes/counterpoint.md`).
+**Kết quả:** `src/umre` 124/124; phức điệu 56/56; E2E phức điệu Chromium 16/16.

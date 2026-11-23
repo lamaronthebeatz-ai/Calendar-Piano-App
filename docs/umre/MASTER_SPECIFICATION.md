@@ -6,18 +6,20 @@ UMRE là lõi suy luận âm nhạc dùng chung cho các phần đã có của a
 
 Nhãn: **IMPLEMENTED** có code · **TESTED** có test chạy thật · **INTEGRATED** nối với mô-đun thật của app · **NOT IMPLEMENTED** chưa có.
 
-| Đợt | GĐ | Nội dung | Trạng thái |
+| Đợt | GĐ | Nội dung | Trạng thái (23/11, sau rà soát và bổ sung) |
 |---|---|---|---|
-| A | 1 | Biểu diễn âm nhạc thống nhất `src/umre/repr/` | IMPLEMENTED · TESTED · INTEGRATED (bộ chuyển đổi phức điệu, soạn nhạc, MusicXML, MIDI) |
-| A | 2 | Sổ luật + ngôn ngữ luật | IMPLEMENTED · TESTED cho phức điệu (23/11 sau rà soát): `src/umre/rules/` — luật là dữ liệu, bộ đánh giá chung, ngoại lệ có phạm vi, cùng mã với sổ luật. Trước đó: chỉ khai báo — hợp đồng tối thiểu `src/umre/rulebook/` + sổ luật phức điệu (dữ liệu, có nguồn) — làm trong Wave B vì GĐ5–7 cần mã luật và nguồn. Chưa có ngôn ngữ luật, chưa có bộ chạy luật chung. |
-| A | 3 | Bộ máy ràng buộc chung | NOT IMPLEMENTED ở mức UMRE. Ràng buộc phức điệu nằm trong `features/counterpoint/rules.ts`. |
-| A | 4 | Tìm kiếm – tối ưu chung | NOT IMPLEMENTED ở mức UMRE. Dùng bộ giải chuyên ngành có sẵn (`solveMany`, `msolve`) qua adapter. |
-| B | 5 | Kiểm chứng độc lập `src/umre/validation/` | IMPLEMENTED · TESTED · INTEGRATED — xác nhận độc lập với bộ giải (bộ kiểm luật UMRE) cho bài không biến thể; bài có biến thể → UNKNOWN cho tới khi UMRE tự dựng biến thể; 5 thí dụ giáo trình làm đáp án chuẩn |
-| B | 6 | Giải thích, bằng chứng, truy vết `src/umre/explain/`, `src/umre/evidence/` | IMPLEMENTED · TESTED · INTEGRATED — truy vết dựng lại được quyết định, **không** dựng lại được quá trình tìm; "verified" = máy đối chiếu theo bảng kiểm toán, chưa có người duyệt |
-| B | 7 | Điều phối bộ giải `src/umre/orchestration/`, `src/umre/solvers/` | IMPLEMENTED · TESTED · INTEGRATED (hai bộ giải phức điệu) — hết giờ / huỷ vô hiệu với bộ giải đồng bộ |
+| A | 1 | Biểu diễn âm nhạc thống nhất `src/umre/repr/` (+ `texture.ts`: điểm cùng vang, dẫn giọng, lớp quãng, vị trí trong ô) | IMPLEMENTED · TESTED · INTEGRATED |
+| A | 2 | Sổ luật + ngôn ngữ luật `src/umre/rulebook/`, `src/umre/rules/` | IMPLEMENTED · TESTED — luật là dữ liệu, một bộ đánh giá chung, ngoại lệ có phạm vi, nguồn theo mã luật; hai sổ luật (phức điệu, hoà âm bốn bè) |
+| A | 3 | Bộ máy ràng buộc chung `src/umre/constraints/` | IMPLEMENTED · TESTED — biến (nốt của bè tự do), miền (do lĩnh vực khai), ràng buộc = luật cứng của sổ luật, "chắc chắn vi phạm" mới cắt nhánh |
+| A | 4 | Tìm kiếm chung `src/umre/search/` | IMPLEMENTED · TESTED · INTEGRATED — quay lui, nhớ trạng thái chết, ba kết luận (có / vô nghiệm trong miền / hết giờ); chạy cho cả phức điệu và hoà âm. Chưa có tối ưu theo luật mềm |
+| B | 5 | Kiểm chứng độc lập `src/umre/validation/` | IMPLEMENTED · TESTED · INTEGRATED — xác nhận độc lập với bộ giải (bộ giải khai `consults`), phủ mọi biến thể; đáp án chuẩn từ thí dụ giáo trình |
+| B | 6 | Giải thích, bằng chứng, truy vết | IMPLEMENTED · TESTED · INTEGRATED — dựng lại quyết định, không dựng lại cây tìm kiếm; trích dẫn ghi ai đã đối chiếu (hiện: trợ lý máy) |
+| B | 7 | Điều phối `src/umre/orchestration/`, `src/umre/solvers/` | IMPLEMENTED · TESTED · INTEGRATED — 5 bộ giải thật / 2 lĩnh vực; hết giờ / huỷ chưa có tác dụng với bộ giải đồng bộ (chưa có lớp worker) |
 | C–D | 8–12 | (chưa có chỉ thị chi tiết) | NOT IMPLEMENTED |
 
-Vì sao làm GĐ5–7 khi GĐ2–4 chưa đủ: chỉ thị Wave B cho phép "chỉ sửa phần cần thiết". GĐ5–7 cần (a) mã luật ổn định có nguồn — đã làm bản tối thiểu; (b) một bộ tìm kiếm — dùng bộ giải phức điệu có sẵn, vốn đã có ba trạng thái valid/unsat/unknown và bộ kiểm độc lập. Không có bộ máy ràng buộc chung thì UMRE **chưa** giải được bài của lĩnh vực mới nếu lĩnh vực đó không tự mang bộ giải.
+**Tiêu chí vào Wave C — đạt (có bằng chứng test):** lĩnh vực thứ hai (hoà âm bốn bè) chạy trên phần chung mà không viết bộ giải hay thuật toán tìm kiếm riêng: chỉ thêm sổ luật có nguồn, 7 luật trong ngôn ngữ luật, mô hình miền (nốt của hợp âm trong âm vực), và một bộ kiểm viết tay để có xác nhận độc lập (`src/umre/domains/harmony/harmony.test.ts`).
+
+(Lịch sử) Vì sao từng làm GĐ5–7 khi GĐ2–4 chưa đủ: chỉ thị Wave B cho phép "chỉ sửa phần cần thiết". GĐ5–7 cần (a) mã luật ổn định có nguồn — đã làm bản tối thiểu; (b) một bộ tìm kiếm — dùng bộ giải phức điệu có sẵn, vốn đã có ba trạng thái valid/unsat/unknown và bộ kiểm độc lập. Không có bộ máy ràng buộc chung thì UMRE **chưa** giải được bài của lĩnh vực mới nếu lĩnh vực đó không tự mang bộ giải.
 
 **Rà soát 23/11:** `AUDIT_2026-11-23.md` — trạng thái từng tiêu chí, rủi ro R1–R8, thứ tự việc cần làm. Chưa sang Wave C.
 

@@ -3,6 +3,8 @@ import { toQuarters, type Rational } from '../repr/rational'
 import { soundingNotes, type Score, type SoundingNote } from '../repr/score'
 import { consonance, intervalClass, metricPosition, verticals, type ConsonanceDef, type Vertical } from '../repr/texture'
 import type { Item, Queries } from './lang'
+import { chordMembers, type Chord } from '../repr/harmony'
+import { sameSpelling } from '../repr/pitch'
 
 /**
  * Queries over a two-or-more-voice texture, for rules written in the rule language. They compute FACTS (durations in
@@ -19,13 +21,15 @@ export type TextureContext = {
   readonly end: Rational
   readonly consonance: (pair: readonly [number, number]) => ConsonanceDef
   /** roles of a pair in three or four voices */
-  readonly role?: (pair: readonly [number, number]) => { outer: boolean; outerSomewhere: boolean }
+  readonly role?: (pair: readonly [number, number]) => { outer: boolean; outerSomewhere: boolean; adjacentUpper?: boolean }
   readonly stars?: readonly number[]
   readonly starsOnly?: boolean
   /** the texture is a VERSION of the combination (allowances the book makes for versions only) */
   readonly inVersion?: boolean
   /** the texture is still being written (search): items whose facts need notes not written yet carry `pending: true` */
   readonly partial?: boolean
+  /** chords the texture should sound, by position (quarters), for the sonority query */
+  readonly chords?: readonly { readonly at: number; readonly end: number; readonly chord: Chord }[]
 }
 
 const q = (r: Rational) => toQuarters(r)
@@ -137,12 +141,30 @@ export function textureQueries(ctx: TextureContext): Queries {
               movedU: !!a && x.hitU && midi(x.u.pitch) !== midi(a.u.pitch), movedL: !!a && x.hitL && midi(x.l.pitch) !== midi(a.l.pitch),
               dirU: a ? Math.sign(diatonic(x.u.pitch) - diatonic(a.u.pitch)) : 0, dirL: a ? Math.sign(diatonic(x.l.pitch) - diatonic(a.l.pitch)) : 0,
               upperLeap: a ? Math.abs(diatonic(x.u.pitch) - diatonic(a.u.pitch)) : 0,
-              level: level(ctx, x.at), star: !!ctx.stars?.includes(q(x.at)), starsOnly: !!ctx.starsOnly, outer: role.outer, outerSomewhere: role.outerSomewhere,
+              level: level(ctx, x.at), star: !!ctx.stars?.includes(q(x.at)), starsOnly: !!ctx.starsOnly, outer: role.outer, outerSomewhere: role.outerSomewhere, adjacentUpper: !!role.adjacentUpper,
             },
           }
         }),
       ),
     'pair.dissonances': () => ctx.pairs.flatMap((p) => dissonances(ctx, p, V(p), sn, (x) => cons(p, x), (t) => vAt(p, t))),
+    // every moment a voice strikes: which chord member each voice sounds (null = not in the chord), and the doubling
+    'texture.sonorities': () => {
+      const voices = s.voices.map((_, i) => i)
+      const times = [...new Set(sn.flatMap((xs) => xs.map((n) => q(n.onset))))].filter((t) => t < q(ctx.end)).sort((a, b) => a - b)
+      return times.flatMap((t) => {
+        const ch = ctx.chords?.find((c) => c.at <= t && t < c.end)
+        if (!ch) return []
+        const members = chordMembers(ch.chord)
+        const sounding = voices.map((i) => sn[i].find((n) => q(n.onset) <= t && t < q(n.onset) + q(n.duration)))
+        if (sounding.some((x) => !x)) return ctx.partial ? [] : [{ at: t, voices, facts: { complete: false } }]
+        const role = sounding.map((n) => members.findIndex((m) => sameSpelling(m, { letter: n!.pitch.letter, alter: n!.pitch.alter })))
+        const count = (k: number) => role.filter((r) => r === k).length
+        return [{
+          at: t, voices, ids: sounding.flatMap((n) => n!.ids),
+          facts: { complete: true, allMembers: role.every((r) => r >= 0), bassMember: role[role.length - 1], roots: count(0), thirds: count(1), fifths: count(2), sevenths: count(3) },
+        }]
+      })
+    },
     'pair.stars': () =>
       ctx.pairs.flatMap((p) => (ctx.stars ?? []).map((t) => ({ at: t, voices: [...p], facts: { sounding: V(p).some((x) => toQuarters(x.at) === t) } }))),
   }
