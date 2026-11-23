@@ -103,7 +103,8 @@ test('kho bản nhạc: dữ liệu kiểu cũ (bản nhạc nằm trong localSt
   await fresh.goto(`/#/analyze/${id}`)
   await expect(fresh.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
   await fresh.waitForFunction(() => !(localStorage.getItem('analyze:scores') ?? '').includes('"score"'))
-  await fresh.reload()
+  // WebKit on CI sometimes never fires 'load' on this reload (service worker + IndexedDB); the next line waits for the page itself
+  await fresh.reload({ waitUntil: 'domcontentloaded' })
   await expect(fresh.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
   await ctx.close()
 })

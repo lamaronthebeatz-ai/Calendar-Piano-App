@@ -22,7 +22,7 @@ Giải thích ba mức: `renderExplanation` (lời giải) và `renderFinding` (
 2. **Tệp:** `rulebook/{rulebook,counterpoint,cases}.ts`, `validation/coverage.ts`, `orchestration/rank.ts`, `analysis/{types,run}.ts`, `domains/counterpoint/{ops,analysis}.ts`, `api.ts`, `runtime/{host,serve,umre.worker}.ts`; ngoài UMRE chỉ thêm `softWeight` ở `features/counterpoint/rules.ts` (không đổi hành vi).
 3. **Thiết kế:** heuristic = thứ tự thử giá trị (`csp.ts`); ràng buộc = luật cứng cắt nhánh; tối ưu = `rankSolutions` sau kiểm chứng, ổn định (hoà điểm giữ thứ tự bộ giải). Huỷ: tìm kiếm đồng bộ nên host **terminate** worker, mỗi yêu cầu có mã, trả lời mang mã cũ bị bỏ; yêu cầu mới thay yêu cầu đang chạy ("superseded").
 4. **Kiểm thử:** `rulebook/rulebook.test.ts`, `domains/counterpoint/phase8.test.ts`, `runtime/runtime.test.ts` (worker thật bằng `node:worker_threads`, bundle esbuild), cộng toàn bộ test cũ.
-5. **Kết quả:** đạt hết. Huỷ trả về < 200 ms dù bộ giải đang chạy 20 s; hết giờ cứng 2 s đúng hạn, luồng chính vẫn chạy hẹn giờ; hai lần chạy cùng bài cho cùng digest.
+5. **Kết quả:** đạt hết. Huỷ trả về < 200 ms dù bộ giải đang chạy 20 s; hết giờ cứng 2 s đúng hạn, luồng chính vẫn chạy hẹn giờ; hai lần chạy cùng bài cho cùng digest (giải). Sinh đề KHÔNG tất định theo hạt giống: `generate()` của trang chạy theo giới hạn thời gian — máy chậm có thể ra đề khác (test cũ khẳng định sai, đã bỏ).
 6. **Độ phủ:** 18/18 luật bắt buộc có ca kiểm; mỗi ca bị **mọi** bộ kiểm độc lập phủ luật đó bắt (2 – 3 bộ kiểm). Luật mềm (16) chỉ dùng xếp hạng.
 7. **Chuẩn:** 5 thí dụ giáo trình (Wave B) vẫn là đáp án chuẩn; ca vi phạm viết tay theo câu chữ sách.
 8. **Hiệu năng:** sinh đề "dễ" ~3 s; gợi ý < 0,1 s; chẩn đoán ~2 s; worker khởi động < 0,3 s.

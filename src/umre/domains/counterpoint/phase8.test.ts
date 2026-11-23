@@ -12,13 +12,14 @@ const rb = counterpointRulebook()
 const CF = 'C4:4 | D4:4 | F4:4 | E4:4 | D4:4 | C4:4'
 
 describe('GĐ8 — mọi khả năng của trang phức điệu qua UMRE', () => {
-  it('sinh đề: có đáp án, đáp án được bộ kiểm độc lập xác nhận (không phải bộ kiểm của máy sinh); cùng hạt giống → cùng đề', () => {
+  it('sinh đề: có đáp án, đáp án được bộ kiểm độc lập xác nhận (không phải bộ kiểm của máy sinh)', () => {
     const a = generateExercise('de', 7, 8000, rb)!
     const b = generateExercise('de', 7, 8000, rb)!
     expect(a.validation.status).toBe('VALID')
     expect(a.confirmation.independent).toBe(true)
     expect(a.task.params.stars.length).toBeGreaterThan(0)
-    expect(JSON.stringify(a.task.score)).toBe(JSON.stringify(b.task.score))
+    // not asserted: the same seed giving the same đề — generate() works to a time limit, so a slow machine can give another one
+    expect(b.validation.status).toBe('VALID')
   }, 60_000)
   it('gợi ý nốt tiếp: mỗi nốt có trạng thái ok/dead/unknown; đi theo một nốt "ok" thì vẫn còn đáp án', () => {
     const t = twoVoiceTask(CF)
