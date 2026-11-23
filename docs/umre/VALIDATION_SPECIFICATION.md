@@ -23,11 +23,14 @@ Trạng thái **bài toán** (PROVEN_UNSAT, TIMEOUT…) là của quá trình gi
 |---|---|---|
 | `verify` | độc lập với `rules.ts`, **không độc lập với bộ giải**: `solver.ts` và `multi.ts` đã chạy nó để chấp nhận phương án | mọi luật bắt buộc (`features/counterpoint/verify.ts`, lưới phách đen) |
 | `umre-native` | có | `leap`, `leap-response`, `leap3-response`, `repeat3`, `no-gap`, `end` (mọi bản, vì đường giai điệu giống nhau ở mọi bản); `crossing`, `parallel`, `perfects3` **chỉ ở nguyên thể** — viết lại trên biểu diễn UMRE, không dùng chung code với hai bộ kia |
+| `umre-rules` | có, **và bộ giải không dùng** | 17 luật cứng (mọi luật cứng của hai bè và ba – bốn bè) viết bằng ngôn ngữ luật theo câu chữ giáo trình (`src/umre/rules/`); chiều dọc chỉ ở nguyên thể |
 | `search-rules` | **không** | mọi luật (`rules.ts` `check` / `mcheck` — chính bộ kiểm bộ giải dùng khi tìm). Chỉ là nhân chứng; chấm luật mềm |
 
 Luật nào cả `verify` và `umre-native` cùng phủ thì so từng lỗi (luật, bè, thời điểm) trong phạm vi chung; khác nhau → `disputed`. `search-rules` báo lỗi cứng mà hai bộ độc lập không thấy → `disputed`. Bộ độc lập thấy mà `search-rules` không thấy → vẫn `fail` (đây chính là ca "bộ giải nhận nhầm").
 
-> **Giới hạn độc lập (rà soát 23/11):** với phương án thật của bộ giải, `verify` không phải xác nhận mới — bộ giải đã qua nó. Họ luật quãng nghịch (`dis-strong`, `dis-weak`, `suspension`) chỉ có `verify`, nên hiện **không có xác nhận độc lập với bộ giải**. `umre-native` được viết theo cách hiểu của `verify.ts`. Xem `AUDIT_2026-11-23.md` (R1, R2).
+> **Xác nhận độc lập với bộ giải (từ 23/11):** bộ giải khai báo `consults`; một luật cứng chỉ được tính là đã xác nhận khi một bộ kiểm độc lập, không nằm trong `consults`, phủ mọi bản của bài, cho qua (`validation/independence.ts`). Bộ điều phối chỉ trả SOLVED khi mọi luật cứng được xác nhận như vậy.
+
+> **Giới hạn độc lập (rà soát 23/11, trước khi có `umre-rules`):** với phương án thật của bộ giải, `verify` không phải xác nhận mới — bộ giải đã qua nó. Họ luật quãng nghịch (`dis-strong`, `dis-weak`, `suspension`) chỉ có `verify`, nên hiện **không có xác nhận độc lập với bộ giải**. `umre-native` được viết theo cách hiểu của `verify.ts`. Xem `AUDIT_2026-11-23.md` (R1, R2).
 
 ### Vi phạm (`Violation`)
 `ruleId`, `rulebookId`, `rulebookVersion`, `severity`, `location {at (nốt tròn), measure, offset, version, voices, eventIds}`, `actual` (cao độ và quãng **tính từ tổng phổ** ở chỗ đó, kể cả ở bản biến thể), `expected` (phát biểu luật trong sổ luật), `description`, `citations` (id trích dẫn), `checkers`, `exceptionOutOfScope` (ví dụ quãng 4 ở cặp có bè trầm: ngoại lệ "quãng 4 ở cặp trên" không áp).

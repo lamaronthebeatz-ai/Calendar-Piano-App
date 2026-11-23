@@ -38,6 +38,9 @@ export type Citation = {
   /** what the source is cited FOR (the scope of the support) */
   readonly scope: string
   readonly note?: string
+  /** who checked the locator against the text: the assistant (machine-assisted, from a scan), the compiler, or a
+   *  teacher / specialist. Required for anything above 'unverified'. */
+  readonly checkedBy?: 'assistant' | 'compiler' | 'teacher'
 }
 
 export class EvidenceError extends Error {}
@@ -72,6 +75,7 @@ export class EvidenceRegistry {
     // a citation can never be more checked than its source
     if (ORDER[c.verification] > ORDER[s.verification]) throw new EvidenceError(`${c.id}: trích dẫn không thể "${c.verification}" khi nguồn chỉ "${s.verification}"`)
     if (c.verification === 'verified' && !c.locator) throw new EvidenceError(`${c.id}: đã xác minh thì phải có vị trí (trang, thí dụ)`)
+    if (c.verification !== 'unverified' && !c.checkedBy) throw new EvidenceError(`${c.id}: phải ghi ai đã đối chiếu (checkedBy)`)
     if (s.origin === 'umre' && c.locator) throw new EvidenceError(`${c.id}: nguồn nội bộ không có số trang`)
     this.citations.set(c.id, c)
   }
@@ -94,9 +98,10 @@ export class EvidenceRegistry {
 export function formatCitation(c: Citation, s: SourceRecord): string {
   if (s.origin === 'umre') return `${s.title} (${LABEL[s.type]}, ${VLABEL[c.verification]})`
   const pub = [s.place && s.publisher ? `${s.place}: ${s.publisher}` : s.publisher ?? s.place, s.year].filter(Boolean).join(', ')
-  return `${s.authors.join(', ')}, ${s.title}${s.edition ? `, ${s.edition}` : ''}${pub ? ` (${pub})` : ''}${c.locator ? `, ${c.locator}` : ''} — ${VLABEL[c.verification]}`
+  return `${s.authors.join(', ')}, ${s.title}${s.edition ? `, ${s.edition}` : ''}${pub ? ` (${pub})` : ''}${c.locator ? `, ${c.locator}` : ''} — ${VLABEL[c.verification]}${c.checkedBy ? ` (${CHECKED[c.checkedBy]})` : ''}`
 }
 export const LABEL: Record<SourceType, string> = {
   primary: 'nguồn gốc', secondary: 'nguồn thứ cấp', tertiary: 'tài liệu tra cứu', 'internal-interpretation': 'cách hiểu của người biên soạn', 'unverified-claim': 'chưa có văn bản đối chiếu',
 }
+export const CHECKED = { assistant: 'trợ lý máy đối chiếu với bản scan, chưa có người duyệt', compiler: 'người biên soạn đối chiếu', teacher: 'người dạy / chuyên gia đã duyệt' } as const
 export const VLABEL: Record<Verification, string> = { verified: 'đã đối chiếu', 'partially-verified': 'đối chiếu một phần', unverified: 'chưa xác minh' }

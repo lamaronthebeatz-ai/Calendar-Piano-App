@@ -43,3 +43,8 @@
 - Đếm tay sai số trích dẫn có trang (32 → đúng là 29); test đã bắt.
 - Bộ giải thích tự tra kho bằng chứng nên sập khi kho hỏng (thành `explanation-error`) → nay tra an toàn, nói rõ "không truy được nguồn của …".
 - `erasableSyntaxOnly`: không dùng tham số thuộc tính (`constructor(readonly x)`) trong class.
+
+## 2026-11-23 — Sau rà soát: bước 1–4 (xem `AUDIT_2026-11-23.md` § 6)
+**Tạo mới:** `repr/texture.ts` (+ test), `rules/lang.ts`, `rules/queries.ts`, `rules/counterpoint.ts`, `rules/rules.test.ts`, `validation/independence.ts`, `testing/gold.ts`.
+**Sửa:** `validation/counterpoint.ts` (thêm bộ kiểm `umre-rules`, so mọi cặp bộ kiểm độc lập, `complete` theo biến thể), `validation/native.ts` (dùng `verticals`), `validation/types.ts`, `orchestration/{solver,orchestrator}.ts` (`consults`, xác nhận độc lập, bước `confirm`), `solvers/counterpoint.ts`, `rulebook/{rulebook,counterpoint}.ts` (`data` cho định nghĩa, caveat `dis-weak`, `checkedBy`), `evidence/evidence.ts` (`checkedBy` bắt buộc khi trên mức chưa xác minh), `explain/explain.ts`. Không sửa `features/`.
+**Kết quả:** `npx vitest run src/umre` 111/111. Thử đột biến ngoài repo: 2.004 + 1.775 phương án — 0 bất đồng trên lời giải thật; mọi bất đồng còn lại là `umre-rules` chặt hơn `verify.ts` (hai loại đã ghi).

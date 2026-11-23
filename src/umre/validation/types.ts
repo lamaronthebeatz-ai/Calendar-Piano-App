@@ -51,7 +51,8 @@ export type RuleOutcome = {
   readonly ruleId: string
   readonly severity: Severity
   readonly outcome: 'pass' | 'fail' | 'disputed' | 'subsumed' | 'not-applicable' | 'not-checked'
-  readonly checkers: readonly { readonly id: string; readonly independent: boolean; readonly faults: number }[]
+  /** `complete`: this checker judged the rule everywhere the task needs it (every version), not only the original */
+  readonly checkers: readonly { readonly id: string; readonly independent: boolean; readonly faults: number; readonly complete: boolean }[]
   readonly note?: string
 }
 

@@ -31,7 +31,8 @@ export type ExceptionSpec = {
 }
 
 /** A definition the rules depend on (what counts as a dissonance, which beat is strong). */
-export type Definition = { readonly id: string; readonly statement: string; readonly citations: readonly string[]; readonly caveat?: string }
+/** `data`: the machine form a checker reads (e.g. a consonance table), so a definition lives in one place. */
+export type Definition = { readonly id: string; readonly statement: string; readonly citations: readonly string[]; readonly caveat?: string; readonly data?: unknown }
 
 export type Rulebook = {
   readonly id: string

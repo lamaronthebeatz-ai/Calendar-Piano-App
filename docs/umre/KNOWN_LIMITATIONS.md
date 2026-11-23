@@ -18,6 +18,12 @@
 - **Phức điệu**: chỉ nhịp có mẫu 2 hoặc 4; dấu lặng bị bỏ khi ra (mô hình phức điệu không có dấu lặng); khoá nhạc đoán theo cao độ trung bình (Sol hay Fa).
 - **Bảng tính hoà âm**: chỉ đổi tên nốt `{l, a}` ⇄ `Spelling`.
 
+## Sau rà soát (23/11)
+- Bài có biến thể: UNKNOWN (bộ kiểm UMRE chưa dựng biến thể).
+- Đáp án chuẩn mới có 5 thí dụ nốt lưu, do trợ lý chép từ scan, chưa có người duyệt; thí dụ 18–19, 24b, 25–29 bỏ vì không đọc chắc.
+- `verify.ts` lỏng hơn câu chữ ở hai chỗ (nốt sớm theo tên nốt; nốt nghịch ngay sau nốt nghịch) — đã ghi, chưa sửa.
+- Luật mềm vẫn chỉ do bộ kiểm của bộ giải chấm.
+
 ## Wave B (GĐ5–7)
 - **Vòng tròn kiểm chứng (rà soát 23/11):** bộ giải phức điệu đã chạy `verify.ts` trước khi trả phương án, nên `verify` không phải xác nhận mới cho phương án của bộ giải; họ luật quãng nghịch không có bộ kiểm độc lập với bộ giải. Không có tập đáp án chuẩn từ thí dụ giáo trình.
 - **GĐ2–4 chưa đủ**: sổ luật chỉ là dữ liệu + kiểm toán, không có ngôn ngữ luật hay bộ chạy luật chung; không có bộ máy ràng buộc / tìm kiếm chung. Lĩnh vực mới phải tự mang bộ giải và bộ kiểm.

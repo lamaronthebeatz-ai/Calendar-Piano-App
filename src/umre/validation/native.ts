@@ -1,7 +1,8 @@
 import { between, quality, simple } from '../repr/interval'
 import { diatonic, midi, type Pitch } from '../repr/pitch'
-import { add, cmp, eq, type Rational } from '../repr/rational'
+import { cmp, eq, type Rational } from '../repr/rational'
 import { endOf, soundingNotes, type SoundingNote, type Voice } from '../repr/score'
+import { verticals } from '../repr/texture'
 
 /**
  * A third implementation of part of the hard counterpoint rules, written on the UMRE representation (rational time,
@@ -71,20 +72,9 @@ export function lineFaults(v: Voice, pieceEnd: Rational): NativeFault[] {
 
 type Onset = { at: Rational; u: SoundingNote; l: SoundingNote; hitU: boolean; hitL: boolean; cls: 'octave' | 'fifth' | null }
 
-/** Moments where both voices sound, with the notes sounding and whether each voice strikes there. */
+/** Moments where both voices sound (repr/texture.ts), with this checker's perfect-consonance class. */
 export function onsets(upper: Voice, lower: Voice, until: Rational): Onset[] {
-  const U = soundingNotes(upper)
-  const L = soundingNotes(lower)
-  const at = (xs: SoundingNote[], t: Rational) => xs.find((n) => cmp(n.onset, t) <= 0 && cmp(t, add(n.onset, n.duration)) < 0)
-  const times = [...U, ...L].map((n) => n.onset).filter((t) => cmp(t, until) < 0)
-  const uniq = times.filter((t, i) => times.findIndex((x) => eq(x, t)) === i).sort(cmp)
-  const out: Onset[] = []
-  for (const t of uniq) {
-    const u = at(U, t)
-    const l = at(L, t)
-    if (u && l) out.push({ at: t, u, l, hitU: eq(u.onset, t), hitL: eq(l.onset, t), cls: perfectClass(l.pitch, u.pitch) })
-  }
-  return out
+  return verticals(upper, lower, until).map((v) => ({ at: v.at, u: v.u, l: v.l, hitU: v.hitU, hitL: v.hitL, cls: perfectClass(v.l.pitch, v.u.pitch) }))
 }
 
 /** Vertical faults of a pair in the original: `upper` is the voice written above. */

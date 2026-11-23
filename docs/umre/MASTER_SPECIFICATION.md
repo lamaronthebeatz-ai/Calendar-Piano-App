@@ -9,10 +9,10 @@ Nhãn: **IMPLEMENTED** có code · **TESTED** có test chạy thật · **INTEGR
 | Đợt | GĐ | Nội dung | Trạng thái |
 |---|---|---|---|
 | A | 1 | Biểu diễn âm nhạc thống nhất `src/umre/repr/` | IMPLEMENTED · TESTED · INTEGRATED (bộ chuyển đổi phức điệu, soạn nhạc, MusicXML, MIDI) |
-| A | 2 | Sổ luật | **Chỉ khai báo** (rà soát 23/11): không có ngôn ngữ luật, không có bộ đánh giá — hợp đồng tối thiểu `src/umre/rulebook/` + sổ luật phức điệu (dữ liệu, có nguồn) — làm trong Wave B vì GĐ5–7 cần mã luật và nguồn. Chưa có ngôn ngữ luật, chưa có bộ chạy luật chung. |
+| A | 2 | Sổ luật + ngôn ngữ luật | IMPLEMENTED · TESTED cho phức điệu (23/11 sau rà soát): `src/umre/rules/` — luật là dữ liệu, bộ đánh giá chung, ngoại lệ có phạm vi, cùng mã với sổ luật. Trước đó: chỉ khai báo — hợp đồng tối thiểu `src/umre/rulebook/` + sổ luật phức điệu (dữ liệu, có nguồn) — làm trong Wave B vì GĐ5–7 cần mã luật và nguồn. Chưa có ngôn ngữ luật, chưa có bộ chạy luật chung. |
 | A | 3 | Bộ máy ràng buộc chung | NOT IMPLEMENTED ở mức UMRE. Ràng buộc phức điệu nằm trong `features/counterpoint/rules.ts`. |
 | A | 4 | Tìm kiếm – tối ưu chung | NOT IMPLEMENTED ở mức UMRE. Dùng bộ giải chuyên ngành có sẵn (`solveMany`, `msolve`) qua adapter. |
-| B | 5 | Kiểm chứng độc lập `src/umre/validation/` | IMPLEMENTED · TESTED · INTEGRATED — **độc lập một phần**: bộ kiểm chính (`verify.ts`) cũng là bộ bộ giải đã dùng; họ luật quãng nghịch chưa có xác nhận độc lập |
+| B | 5 | Kiểm chứng độc lập `src/umre/validation/` | IMPLEMENTED · TESTED · INTEGRATED — xác nhận độc lập với bộ giải (bộ kiểm luật UMRE) cho bài không biến thể; bài có biến thể → UNKNOWN cho tới khi UMRE tự dựng biến thể; 5 thí dụ giáo trình làm đáp án chuẩn |
 | B | 6 | Giải thích, bằng chứng, truy vết `src/umre/explain/`, `src/umre/evidence/` | IMPLEMENTED · TESTED · INTEGRATED — truy vết dựng lại được quyết định, **không** dựng lại được quá trình tìm; "verified" = máy đối chiếu theo bảng kiểm toán, chưa có người duyệt |
 | B | 7 | Điều phối bộ giải `src/umre/orchestration/`, `src/umre/solvers/` | IMPLEMENTED · TESTED · INTEGRATED (hai bộ giải phức điệu) — hết giờ / huỷ vô hiệu với bộ giải đồng bộ |
 | C–D | 8–12 | (chưa có chỉ thị chi tiết) | NOT IMPLEMENTED |

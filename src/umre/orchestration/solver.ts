@@ -4,6 +4,7 @@ import type { Score } from '../repr/score'
 import type { RulebookRef } from '../rulebook/rulebook'
 import type { Task } from '../task'
 import type { ValidationResult } from '../validation/types'
+import type { Confirmation } from '../validation/independence'
 import type { Explanation } from '../explain/explain'
 import type { Trace } from '../explain/trace'
 
@@ -35,6 +36,8 @@ export type SolverDescriptor = {
   readonly limits: { readonly maxTimeMs: number; readonly maxSolutions: number }
   /** UMRE engine major.minor the solver was written against */
   readonly requires: { readonly umre: string }
+  /** checker ids (validation/*) the solver itself runs before returning a candidate — they cannot confirm its answers */
+  readonly consults: readonly string[]
   /** higher is preferred when several solvers fit */
   readonly priority?: number
 }
@@ -68,7 +71,7 @@ export type ExecutionStatus = 'SOLVED' | 'PROVEN_UNSAT' | 'UNKNOWN' | 'TIMEOUT' 
 export type ErrorCode =
   | 'no-solver' | 'no-validator' | 'rulebook-unknown' | 'invalid-input' | 'solver-error' | 'resource' | 'output-schema' | 'validation-error' | 'evidence-error' | 'explanation-error'
 
-export type ValidatedSolution = { readonly score: Score; readonly validation: ValidationResult }
+export type ValidatedSolution = { readonly score: Score; readonly validation: ValidationResult; readonly confirmation: Confirmation }
 
 export type UnifiedResult = {
   readonly taskId: string
@@ -79,9 +82,9 @@ export type UnifiedResult = {
   readonly rulebook: RulebookRef
   readonly status: ExecutionStatus
   readonly statusReason: string
-  /** candidates the validator judged VALID — the only ones UMRE calls solutions */
+  /** candidates judged VALID AND confirmed by checkers the solver did not itself run — the only ones UMRE calls solutions */
   readonly solutions: readonly ValidatedSolution[]
-  /** candidates the solver returned that the validator did not accept (INVALID / INCOMPLETE / UNKNOWN) */
+  /** every other candidate: INVALID / INCOMPLETE / UNKNOWN, or VALID only on the word of checkers the solver ran */
   readonly rejected: readonly ValidatedSolution[]
   readonly explanation: Explanation | null
   /** every citation the explanation relies on, resolved with its source */

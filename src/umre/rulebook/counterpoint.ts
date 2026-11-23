@@ -42,7 +42,7 @@ const RULE_CITES: Record<RuleId | 'no-gap', { cites: Cite[]; scope?: string; cav
   unison: { cites: [P('tr. 9')] },
   'dis-strong': { cites: [P('tr. 10')] },
   suspension: { cites: [P('tr. 10'), P('tr. 11')], caveat: 'Nốt lưu ở các quãng nghịch ngoài sơ đồ 2 đang được cho phép (sơ đồ không nhắc tới) — cần xác minh.' },
-  'dis-weak': { cites: [P('tr. 11–12')] },
+  'dis-weak': { cites: [P('tr. 11–12')], caveat: 'Nốt lưu ở phách nhẹ (phách 2 của nhịp 2/2) được chấp nhận vì giáo trình nói quãng nghịch phách mạnh "chủ yếu" là nốt lưu; giữa hai phách chỉ chấp nhận nốt lướt, thêu, sớm, thoát. Nốt sớm phải đúng cao độ của nốt sau và đến bằng liền bậc (sách chỉ nêu nốt thoát là dạng có bước nhảy). Cách hiểu của người biên soạn — cần xác minh.' },
   'upper-neighbor': { cites: [P('tr. 11–12')] },
   'weak-form': { cites: [P('Thí dụ 25–28', 'partially-verified', 'chỉ thấy trong thí dụ, không thành chữ')] },
   'dis-both': { cites: [{ src: INTERNAL, note: 'giáo trình không nhắc; thí dụ chỉ có một bè đi' }] },
@@ -70,6 +70,8 @@ export function counterpointRulebook(): Rulebook {
         id, sourceId: c.src, locator: c.loc ?? null, scope: owner,
         verification: c.src === BOOK ? (c.v ?? 'verified') : 'unverified',
         ...(c.note ? { note: c.note } : {}),
+        // the 17/11 audit table was made by the assistant reading the scan; no person has checked it yet
+        ...(c.src === BOOK ? { checkedBy: 'assistant' as const } : {}),
       }
       ev.addCitation(citation)
       return id
@@ -100,7 +102,11 @@ export function counterpointRulebook(): Rulebook {
     },
   ]
   const definitions: Definition[] = [
-    { id: 'def.dissonance', statement: 'Quãng nghịch: quãng 2, 7, quãng tăng, giảm và quãng 4 đúng; còn lại là thuận (hoàn toàn: đồng âm, 5, 8 đúng)', citations: cite('def.dissonance', [P('tr. 10')]) },
+    {
+      id: 'def.dissonance', statement: 'Quãng nghịch: quãng 2, 7, quãng tăng, giảm và quãng 4 đúng; quãng thuận hoàn toàn: đồng âm, 5 đúng, 8 đúng; thuận không hoàn toàn: 3, 6 (trưởng, thứ) và quãng kép', citations: cite('def.dissonance', [P('tr. 10')]),
+      // [steps within the octave (0 = unison/octave), quality]
+      data: { perfect: [[0, 'P'], [4, 'P']], imperfect: [[2, 'm'], [2, 'M'], [5, 'm'], [5, 'M']] },
+    },
     { id: 'def.strong-beat', statement: 'Phách mạnh = phách đầu ô nhịp (mức 3 trong mã); phách nhẹ = các phách còn lại', citations: cite('def.strong-beat', [{ src: INTERNAL, note: 'cách bộ giải đặt mức phách (model.strength); chưa đối chiếu chữ của sách' }]), caveat: 'Độ mạnh phách là quy ước của bộ giải, chưa đối chiếu nguyên văn giáo trình.' },
   ]
   return { id: COUNTERPOINT_RULEBOOK_ID, version: COUNTERPOINT_RULEBOOK_VERSION, domain: 'counterpoint', title: 'Phức điệu nghiêm khắc (Phạm Tú Hương 1991, theo Taneyev) — luật bộ giải đang áp', rules, exceptions, definitions, evidence: ev }

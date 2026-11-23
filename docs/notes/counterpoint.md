@@ -96,5 +96,8 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 ## Test
 `src/features/counterpoint/counterpoint.test.ts` (31 test) + `multi.test.ts` (8 test) + `canon.test.ts` (7 test) + `forms.test.ts` (4 test: ba hình thức qua hai bộ kiểm; phóng to phạm luật ngay trong A → `unsat` có lý do): từng luật (đúng/sai/biên/ngoại lệ), đúng ở NT sai ở BT, vô nghiệm (bài mẫu: `unsat` sau ~2 s), hết giờ → `unknown`, nhiều seed, `starCheck` không báo sai trên đề sinh ra, đối chiếu hai bộ kiểm. E2E: `tests/counterpoint.spec.ts`.
 
+## Đối chiếu với bộ luật UMRE (23/11)
+Bộ kiểm `umre-rules` (`src/umre/rules/counterpoint.ts`, viết theo câu chữ bài, không đọc file này) chặt hơn `verify.ts` ở hai chỗ, chưa sửa ở đây vì chờ Lamar: (a) nốt sớm so theo **tên nốt** (`E === 0`) nên Mi♯ → Mi được nhận; (b) `afterSuspension` cho nốt nghịch ngay sau nốt nghịch ở mọi chỗ (giáo trình chỉ nói giải quyết lướt ở biến thể). Thí dụ 21, 22, 23a, 23b, 24a chép làm đáp án chuẩn ở `src/umre/testing/gold.ts` — cả hai bộ kiểm qua.
+
 ## Còn mở (X)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.

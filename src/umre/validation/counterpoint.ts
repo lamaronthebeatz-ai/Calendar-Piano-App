@@ -12,6 +12,10 @@ import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION } from '../rule
 import type { Rulebook, RuleSpec } from '../rulebook/rulebook'
 import type { Task } from '../task'
 import { MULTI_VOICE, TWO_VOICE, toMProblem, toProblem, type MultiVoiceParams, type TwoVoiceParams } from '../domains/counterpoint/task'
+import { evaluate } from '../rules/lang'
+import { COUNTERPOINT_RULES } from '../rules/counterpoint'
+import { textureQueries } from '../rules/queries'
+import type { ConsonanceDef } from '../repr/texture'
 import { lineFaults, NATIVE_ORIGINAL_ONLY, NATIVE_RULES, pairFaults, perfectFourths } from './native'
 import { digest, type AppliedException, type CheckerInfo, type Location, type RuleOutcome, type ValidationResult, type Validator, type Violation } from './types'
 
@@ -29,10 +33,25 @@ const ORIGINAL = 'Nguyên thể'
 const CHECKERS: CheckerInfo[] = [
   { id: 'verify', independent: true, description: 'Bộ kiểm độc lập của mô-đun phức điệu (verify.ts), viết riêng, không dùng rules.ts' },
   { id: 'umre-native', independent: true, description: 'Bộ kiểm viết lại trên biểu diễn UMRE (native.ts): giai điệu, phản hồi bước nhảy, nhắc ba lần, đi liền đến hết bài; chéo bè, song song quãng hoàn toàn, ba quãng hoàn toàn liền — chỉ ở nguyên thể' },
+  { id: 'umre-rules', independent: true, description: 'Luật viết bằng ngôn ngữ luật UMRE (rules/counterpoint.ts) theo câu chữ giáo trình, đánh giá bằng bộ thông dịch chung (rules/lang.ts) — chiều dọc chỉ ở nguyên thể' },
   { id: 'search-rules', independent: false, description: 'Bộ kiểm của chính bộ giải (rules.ts / mcheck): chỉ làm nhân chứng và chấm luật mềm' },
 ]
 /** Hard rules verify.ts judges (its fault names mapped below). `suspension` is judged inside the dissonance rules. */
 const VERIFY_HARD = new Set(['crossing', 'dis-strong', 'dis-weak', 'star', 'star-extra', 'parallel', 'leap', 'leap-response', 'leap3-response', 'repeat3', 'seg-place', 'tie', 'rhythm-change', 'end', 'perfects3', 'hidden-hard', 'no-gap'])
+/** The rulebook's consonance table (def.dissonance); the rule checker cannot run without it. */
+function consonanceOf(rb: Rulebook): ConsonanceDef {
+  const d = rb.definitions.find((x) => x.id === 'def.dissonance')?.data as ConsonanceDef | undefined
+  if (!d?.perfect || !d.imperfect) throw new Error(`sổ luật ${rb.id} không có bảng quãng thuận (def.dissonance.data)`)
+  return d
+}
+const RULE_IDS = new Set(COUNTERPOINT_RULES.map((r) => r.id))
+const RULE_VERTICAL = new Set(COUNTERPOINT_RULES.filter((r) => r.query.startsWith('pair.')).map((r) => r.id))
+/** The independent checkers, what each covers, and which of them look at the original only. */
+const INDEPENDENT: { id: string; covers: (rule: string) => boolean; originalOnly: (rule: string) => boolean }[] = [
+  { id: 'verify', covers: (r) => VERIFY_HARD.has(r), originalOnly: () => false },
+  { id: 'umre-native', covers: (r) => (NATIVE_RULES as readonly string[]).includes(r), originalOnly: (r) => NATIVE_ORIGINAL_ONLY.has(r) },
+  { id: 'umre-rules', covers: (r) => RULE_IDS.has(r), originalOnly: (r) => RULE_VERTICAL.has(r) },
+]
 /** Rules compared as one family: checkers may name the members differently. */
 const family = (r: string) => (r === 'dis-strong' || r === 'dis-weak' || r === 'suspension' ? 'dissonance' : r === 'leap3-response' ? 'leap-response' : r === 'gap' ? 'no-gap' : r)
 
@@ -50,6 +69,8 @@ type Ctx = {
   /** voices of the version label → its lines top to bottom (for the "actual" text) */
   versionLines: (label: string) => Seg[][] | null
   notApplicable: Map<string, string>
+  /** the task has versions besides the original (checkers that look at the original only are then incomplete) */
+  hasVersions: boolean
 }
 
 const unsupported = (task: Task, rb: Rulebook, v: Validator): ValidationResult | null => {
@@ -127,7 +148,7 @@ function judge(ctx: Ctx, v: Validator, raws: Raw[], extra: { reasons: string[]; 
     const na = ctx.notApplicable.get(spec.id)
     if (spec.severity === 'soft') {
       const s = byRule('search-rules', spec.id)
-      outcomes.push({ ruleId: spec.id, severity: 'soft', outcome: na ? 'not-applicable' : s.length ? 'fail' : 'pass', checkers: [{ id: 'search-rules', independent: false, faults: s.length }], ...(na ? { note: na } : {}) })
+      outcomes.push({ ruleId: spec.id, severity: 'soft', outcome: na ? 'not-applicable' : s.length ? 'fail' : 'pass', checkers: [{ id: 'search-rules', independent: false, faults: s.length, complete: true }], ...(na ? { note: na } : {}) })
       if (!na && !extra.incomplete) for (const x of s) advisories.push(violation(ctx, spec, [x]))
       continue
     }
@@ -135,35 +156,40 @@ function judge(ctx: Ctx, v: Validator, raws: Raw[], extra: { reasons: string[]; 
       outcomes.push({ ruleId: spec.id, severity: 'hard', outcome: 'not-applicable', checkers: [], note: na })
       continue
     }
+    const covering = INDEPENDENT.filter((x) => x.covers(spec.id))
     if (spec.id === 'suspension') {
       const dis = raws.filter((r) => r.checker !== 'search-rules' && family(r.rule) === 'dissonance')
-      outcomes.push({ ruleId: spec.id, severity: 'hard', outcome: dis.length ? 'subsumed' : 'pass', checkers: [{ id: 'verify', independent: true, faults: 0 }], note: 'verify.ts xét nốt lưu bên trong luật quãng nghịch; lỗi (nếu có) báo ở dis-strong / dis-weak' })
+      outcomes.push({
+        ruleId: spec.id, severity: 'hard', outcome: dis.length ? 'subsumed' : 'pass',
+        checkers: INDEPENDENT.filter((x) => x.covers('dis-strong')).map((x) => ({ id: x.id, independent: true, faults: 0, complete: !(x.originalOnly('dis-strong') && ctx.hasVersions) })),
+        note: 'nốt lưu được xét bên trong luật quãng nghịch; lỗi (nếu có) báo ở dis-strong / dis-weak',
+      })
       continue
     }
-    const inVerify = VERIFY_HARD.has(spec.id)
-    const inNative = (NATIVE_RULES as readonly string[]).includes(spec.id)
-    if (!inVerify && !inNative) {
+    if (!covering.length) {
       outcomes.push({ ruleId: spec.id, severity: 'hard', outcome: 'not-checked', checkers: [], note: 'không bộ kiểm độc lập nào phủ luật này' })
       continue
     }
-    const fv = inVerify ? byRule('verify', spec.id) : []
-    const fn = inNative ? byRule('umre-native', spec.id) : []
+    const found = covering.map((x) => byRule(x.id, spec.id))
     const fs = byRule('search-rules', spec.id)
     const checkers = [
-      ...(inVerify ? [{ id: 'verify', independent: true, faults: fv.length }] : []),
-      ...(inNative ? [{ id: 'umre-native', independent: true, faults: fn.length }] : []),
-      { id: 'search-rules', independent: false, faults: fs.length },
+      ...covering.map((x, i) => ({ id: x.id, independent: true, faults: found[i].length, complete: !(x.originalOnly(spec.id) && ctx.hasVersions) })),
+      { id: 'search-rules', independent: false, faults: fs.length, complete: true },
     ]
-    // verify and native compared where both look: native sees only the original for the vertical rules
+    // every two independent checkers are compared where both look (a checker of the original only is compared there)
     let disputed = false
-    if (inVerify && inNative) {
-      const scope = (r: Raw) => !NATIVE_ORIGINAL_ONLY.has(spec.id) || r.version === ORIGINAL
-      const a = new Set(fv.filter(scope).map(key))
-      const b = new Set(fn.map(key))
-      disputed = a.size !== b.size || [...a].some((k) => !b.has(k))
-      if (disputed) reasons.push(`Hai bộ kiểm độc lập bất đồng ở luật ${spec.id}: verify ${[...a].join(' ')} / umre-native ${[...b].join(' ')}`)
-    }
-    const indep = [...fv, ...fn]
+    for (let i = 0; i < covering.length; i++)
+      for (let j = i + 1; j < covering.length; j++) {
+        const narrow = covering[i].originalOnly(spec.id) || covering[j].originalOnly(spec.id)
+        const scope = (r: Raw) => !narrow || r.version === ORIGINAL || r.version.startsWith('bè ')
+        const a = new Set(found[i].filter(scope).map(key))
+        const b = new Set(found[j].filter(scope).map(key))
+        if (a.size !== b.size || [...a].some((k) => !b.has(k))) {
+          disputed = true
+          reasons.push(`Bộ kiểm độc lập bất đồng ở luật ${spec.id}: ${covering[i].id} ${[...a].join(' ') || '∅'} / ${covering[j].id} ${[...b].join(' ') || '∅'}`)
+        }
+      }
+    const indep = found.flat()
     if (!disputed && !indep.length && fs.length) {
       disputed = true
       reasons.push(`Bộ kiểm của bộ giải báo ${spec.id} (${fs.map((x) => `t=${x.t} ${x.version}`).join(', ')}) mà bộ kiểm độc lập không thấy`)
@@ -266,6 +292,7 @@ export const twoVoiceValidator: Validator = {
         if (!v) return null
         return v.motion === 'swap' ? [v.II, v.I] : [v.I, v.II]
       },
+      hasVersions: p.versions.length > 0,
       notApplicable: new Map([
         ['hidden-hard', 'chỉ cho ba – bốn bè'],
         ...(p.stars.length ? [] : ([['star', 'đề không có ✱']] as [string, string][])),
@@ -292,17 +319,19 @@ export const twoVoiceValidator: Validator = {
     const end = fromQuarters(total)
     for (const f of lineFaults(solution.voices[ci], end)) raws.push({ checker: 'umre-native', rule: f.rule, t: toQuarters(f.at), version: ORIGINAL, voices: [ci] })
     for (const f of pairFaults(solution.voices[0], solution.voices[1], end)) raws.push({ checker: 'umre-native', rule: f.rule, t: toQuarters(f.at), version: ORIGINAL, voices: [0, 1] })
+    const cons = consonanceOf(rulebook)
+    const ev = evaluate(COUNTERPOINT_RULES, textureQueries({ score: solution, lines: [ci], pairs: [[0, 1]], end, consonance: () => cons, stars: p.stars, starsOnly: p.starsOnly }), new Set(p.quarterPrep ? ['quarter-prep'] : []))
+    for (const h of ev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: ORIGINAL, voices: [...h.item.voices] })
     const rep = check(p, cp, total)
     for (const x of [...rep.hard, ...rep.soft]) {
       const line = ['seg-place', 'tie', 'end', 'leap', 'rhythm-change', 'repeat3', 'repeat', 'leap-response', 'leap3-response', 'two-leaps', 'chromatic-near', 'tritone-line', 'range', 'cadence-step'].includes(x.rule)
       raws.push({ checker: 'search-rules', rule: x.rule, t: x.t, version: x.version, voices: line ? [ci] : [0, 1], detail: x.detail })
     }
-    // exceptions: a tie from a quarter note that the independent checker accepted used the teacher's allowance
+    // exceptions the rule checker applied (the teacher's quarter-note preparation), once per place
     const exceptions: AppliedException[] = []
-    if (p.quarterPrep) cp.forEach((s, i) => {
-      if (s.tied && cp[i - 1]?.dur === 1 && !raws.some((r) => r.checker === 'verify' && r.rule === 'tie' && r.t === s.start))
-        exceptions.push({ exceptionId: 'quarter-prep', location: locate(ctx, s.start, ORIGINAL, [ci]), detail: 'nốt đen nối sang nốt lưu (tuỳ chọn của đề)' })
-    })
+    for (const x of ev.exceptions)
+      if (!exceptions.some((e) => e.exceptionId === x.exceptionId && toQuarters(e.location.at) === x.item.at))
+        exceptions.push({ exceptionId: x.exceptionId, location: locate(ctx, x.item.at, ORIGINAL, [...x.item.voices]), detail: `nới luật ${x.ruleId}: nốt đen nối sang nốt lưu (tuỳ chọn của đề)` })
     // two voices never get the upper-pair fourth: a fourth judged dissonant is flagged as outside that exception
     const fourthOutOfScope = (r: Raw) => {
       const lines = ctx.versionLines(r.version)
@@ -346,6 +375,7 @@ export const multiVoiceValidator: Validator = {
         const v = versions.find((x) => x.label === label.split(' · ')[0])
         return v ? lines.map((l, i) => (v.steps[i] ? shiftLine(mp.key, v.steps[i], l) : l)) : null
       },
+      hasVersions: mp.versions.length > 0,
       notApplicable: new Map([['star', 'bài nhiều bè không có ✱'], ['star-extra', 'bài nhiều bè không có ✱']]),
     }
     const bar = barQ(mp.meter)
@@ -378,6 +408,19 @@ export const multiVoiceValidator: Validator = {
         if (!mp.free[a] && !mp.free[b]) continue
         for (const f of pairFaults(solution.voices[a], solution.voices[b], end)) raws.push({ checker: 'umre-native', rule: f.rule, t: toQuarters(f.at), version: ORIG_PAIR(a, b), voices: [a, b] })
       }
+    // the rule checker: the original, every line of a free voice, every pair holding one; upper pairs count the fourth
+    const base = consonanceOf(rulebook)
+    const withFourth: ConsonanceDef = { ...base, imperfect: [...base.imperfect, [3, 'P']] }
+    const isUpper = (a: number, b: number) => b === a + 1 && b <= n - 2
+    const outerSomewhere = new Set(mp.versions.length ? versions.map((v) => [v.order[0], v.order[n - 1]].sort().join(',')) : [])
+    const rulePairs: [number, number][] = []
+    for (let a = 0; a < n; a++) for (let b = a + 1; b < n; b++) if (mp.free[a] || mp.free[b]) rulePairs.push([a, b])
+    const ev = evaluate(COUNTERPOINT_RULES, textureQueries({
+      score: solution, lines: mp.free.flatMap((f, i) => (f ? [i] : [])), pairs: rulePairs, end,
+      consonance: ([a, b]) => (isUpper(a, b) ? withFourth : base),
+      role: ([a, b]) => ({ outer: a === 0 && b === n - 1, outerSomewhere: outerSomewhere.has(`${a},${b}`) }),
+    }), new Set())
+    for (const h of ev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: h.item.voices.length === 1 ? `bè ${ROMAN[h.item.voices[0]]}` : ORIGINAL, voices: [...h.item.voices] })
     // the native and verify versions of an original pair are compared under one label
     for (const r of raws) if (r.version.startsWith(ORIGINAL + ' · ')) r.version = ORIGINAL
     const rep = mcheck(mp, lines)

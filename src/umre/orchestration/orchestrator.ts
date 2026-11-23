@@ -5,6 +5,7 @@ import type { Score } from '../repr/score'
 import { refOf, type Rulebook, type RulebookRegistry } from '../rulebook/rulebook'
 import type { Task } from '../task'
 import type { ValidationResult, ValidationStatus } from '../validation/types'
+import { confirmation } from '../validation/independence'
 import { UMRE_ENGINE_VERSION } from '../version'
 import type { SolverRegistry, ValidatorRegistry } from './registry'
 import type { ErrorCode, ExecutionStatus, Solver, SolverOutput, SolverStatus, UnifiedResult, ValidatedSolution } from './solver'
@@ -28,13 +29,22 @@ export type RunOptions = {
 export type DecisionInput = {
   readonly solverStatus: SolverStatus
   readonly verdicts: readonly ValidationStatus[]
+  /** per verdict: VALID and every hard rule passed by a checker the solver did not itself run */
+  readonly confirmed: readonly boolean[]
+  /** per verdict: rules left without independent confirmation */
+  readonly unconfirmed?: readonly (readonly string[])[]
   readonly proofOfUnsat: boolean
   readonly solverReason?: string
 }
 export function decideStatus(d: DecisionInput): { status: ExecutionStatus; reason: string } {
   const valid = d.verdicts.filter((v) => v === 'VALID').length
   if (d.solverStatus === 'solved') {
-    if (valid) return { status: 'SOLVED', reason: `${valid}/${d.verdicts.length} phương án được bộ kiểm độc lập công nhận` }
+    const confirmed = d.verdicts.filter((v, i) => v === 'VALID' && d.confirmed[i]).length
+    if (confirmed) return { status: 'SOLVED', reason: `${confirmed}/${d.verdicts.length} phương án được bộ kiểm độc lập công nhận, kể cả bởi bộ kiểm mà bộ giải không dùng` }
+    if (valid) {
+      const missing = [...new Set(d.verdicts.flatMap((v, i) => (v === 'VALID' ? [...(d.unconfirmed?.[i] ?? [])] : [])))]
+      return { status: 'UNKNOWN', reason: `${valid} phương án VALID nhưng ở các luật ${missing.join(', ')} chỉ có bộ kiểm mà chính bộ giải đã chạy xác nhận — chưa đủ làm bằng chứng` }
+    }
     const tally = ['INVALID', 'INCOMPLETE', 'UNKNOWN'].map((k) => `${d.verdicts.filter((v) => v === k).length} ${k}`).join(', ')
     return { status: 'UNKNOWN', reason: `bộ giải báo có lời giải nhưng bộ kiểm độc lập không công nhận phương án nào (${tally})` }
   }
@@ -88,7 +98,7 @@ export class Orchestrator {
 
     const finish = (status: ExecutionStatus, reason: string, solutions: ValidatedSolution[] = [], rejected: ValidatedSolution[] = [], error?: UnifiedResult['error']): UnifiedResult => {
       if (error && !errors.some((e) => e.code === error.code)) errors.push({ code: error.code, message: error.message })
-      tr.step({ component: 'orchestrator', operation: 'decide', input: { solverStatus: solverOut?.status ?? null, verdicts: [...solutions, ...rejected].map((s) => s.validation.status), proofOfUnsat: solver?.descriptor.capabilities.proofOfUnsat ?? false, error: error?.code ?? null }, output: { status, reason } })
+      tr.step({ component: 'orchestrator', operation: 'decide', input: { solverStatus: solverOut?.status ?? null, verdicts: [...solutions, ...rejected].map((s) => s.validation.status), confirmed: [...solutions, ...rejected].map((s) => s.confirmation.independent), unconfirmed: [...solutions, ...rejected].map((s) => s.confirmation.unconfirmed), proofOfUnsat: solver?.descriptor.capabilities.proofOfUnsat ?? false, error: error?.code ?? null }, output: { status, reason } })
       let explanation: Explanation | null = null
       try {
         explanation = explain({ task, status, statusReason: reason, solverId: solver?.descriptor.id ?? null, solutions, rejected, rulebook, trace: tr.trace(), error })
@@ -195,9 +205,12 @@ export class Orchestrator {
         }
         tr.step({ component: 'validator', operation: 'validate', input: { solution: score.id, digest: v.inputDigest }, output: { status: v.status, violations: v.violations.map((x) => `${x.ruleId}@${x.location.measure}`), coverage: v.coverage }, ruleIds: [...new Set(v.violations.map((x) => x.ruleId))], check: v.status, level: 'detailed' })
         tr.step({ component: 'validator', operation: 'validate:checkers', input: { solution: score.id }, output: v.outcomes.filter((x) => x.severity === 'hard').map((x) => ({ rule: x.ruleId, outcome: x.outcome, checkers: x.checkers })), level: 'diagnostic' })
-        ;(v.status === 'VALID' ? accepted : refused).push({ score, validation: v })
+        const c = confirmation(v, d.consults)
+        tr.step({ component: 'validator', operation: 'confirm', input: { solution: score.id, consulted: d.consults }, output: c, check: c.independent ? 'independent' : `unconfirmed: ${c.unconfirmed.join(', ')}`, level: 'detailed' })
+        ;(c.independent ? accepted : refused).push({ score, validation: v, confirmation: c })
       }
-      const decision = decideStatus({ solverStatus: solverOut.status, verdicts: [...accepted, ...refused].map((x) => x.validation.status), proofOfUnsat: d.capabilities.proofOfUnsat, solverReason: solverOut.proof ?? solverOut.reason })
+      const all = [...accepted, ...refused]
+      const decision = decideStatus({ solverStatus: solverOut.status, verdicts: all.map((x) => x.validation.status), confirmed: all.map((x) => x.confirmation.independent), unconfirmed: all.map((x) => x.confirmation.unconfirmed), proofOfUnsat: d.capabilities.proofOfUnsat, solverReason: solverOut.proof ?? solverOut.reason })
       return finish(decision.status, decision.reason, accepted, refused)
     } catch (e) {
       // nothing a solver or validator does may bring the engine down
@@ -223,16 +236,16 @@ export function auditResult(r: UnifiedResult): string[] {
   if (!decide) return ['truy vết không có bước quyết định']
   const out0 = decide.output as { status: ExecutionStatus }
   if (out0.status !== r.status) out.push(`bước quyết định ghi ${out0.status}, kết quả là ${r.status}`)
-  const inp = decide.input as { solverStatus: SolverStatus | null; verdicts: ValidationStatus[]; proofOfUnsat: boolean; error: string | null }
+  const inp = decide.input as { solverStatus: SolverStatus | null; verdicts: ValidationStatus[]; confirmed: boolean[]; unconfirmed: string[][]; proofOfUnsat: boolean; error: string | null }
   if (inp.solverStatus && !inp.error && ['SOLVED', 'PROVEN_UNSAT', 'UNKNOWN', 'TIMEOUT'].includes(r.status)) {
-    const replay = decideStatus({ solverStatus: inp.solverStatus, verdicts: inp.verdicts, proofOfUnsat: inp.proofOfUnsat })
+    const replay = decideStatus({ solverStatus: inp.solverStatus, verdicts: inp.verdicts, confirmed: inp.confirmed, unconfirmed: inp.unconfirmed, proofOfUnsat: inp.proofOfUnsat })
     if (replay.status !== r.status) out.push(`dựng lại quyết định ra ${replay.status}, kết quả ghi ${r.status}`)
   }
   for (const s of [...r.solutions, ...r.rejected]) {
     const st = r.trace.steps.find((x) => x.operation === 'validate' && (x.input as { solution: string }).solution === s.score.id)
     if (st && st.check !== s.validation.status) out.push(`${s.score.id}: truy vết ghi ${st.check}, kết quả ${s.validation.status}`)
   }
-  if (r.solutions.some((s) => s.validation.status !== 'VALID')) out.push('có lời giải chưa được công nhận VALID')
+  if (r.solutions.some((s) => s.validation.status !== 'VALID' || !s.confirmation.independent)) out.push('có lời giải chưa được công nhận VALID hoặc chưa được xác nhận độc lập với bộ giải')
   if (r.status === 'SOLVED' && !r.solutions.length) out.push('SOLVED mà không có lời giải')
   return out
 }

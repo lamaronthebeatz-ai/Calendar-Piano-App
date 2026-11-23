@@ -115,7 +115,7 @@ export function explain(x: ExplainInput): Explanation {
     const broken = [...new Set(v.violations.map((y) => y.ruleId))]
     add('fact', 'validation',
       v.status === 'VALID' ? `Phương án ${i + 1} được kiểm lại độc lập: đúng mọi luật bắt buộc.` : `Phương án ${i + 1} được kiểm lại độc lập: ${v.status === 'INVALID' ? `sai luật ${broken.join(', ')}` : v.status === 'INCOMPLETE' ? 'chưa đủ dữ liệu' : 'chưa kết luận được'}.`,
-      `${s.score.id}: ${v.status} (bộ kiểm ${v.validator.id}@${v.validator.version}; phủ ${c.checked}/${c.hardRules - c.notApplicable} luật bắt buộc, vi phạm ${c.violated}, bất đồng ${c.disputed}, không kiểm được ${c.uncheckable}; ngoại lệ đã áp ${c.exceptionsApplied.length})${v.reasons.length ? ` — ${v.reasons.join('; ')}` : ''}.`,
+      `${s.score.id}: ${v.status} (bộ kiểm ${v.validator.id}@${v.validator.version}; phủ ${c.checked}/${c.hardRules - c.notApplicable} luật bắt buộc, vi phạm ${c.violated}, bất đồng ${c.disputed}, không kiểm được ${c.uncheckable}; ngoại lệ đã áp ${c.exceptionsApplied.length})${v.reasons.length ? ` — ${v.reasons.join('; ')}` : ''}${v.status === 'VALID' ? (s.confirmation.independent ? '; mọi luật bắt buộc được xác nhận bởi bộ kiểm mà bộ giải không dùng' : `; CHƯA xác nhận độc lập với bộ giải ở: ${s.confirmation.unconfirmed.join(', ')}`) : ''}.`,
       { steps: step ? [step.id] : [], rules: broken, citations: cites(broken), solutions: [i] })
   })
 

@@ -13,5 +13,10 @@
 - Ngoại lệ: `fourth-upper-pair` (quãng 4 thuận ở cặp trên ba – bốn bè, tr. 37–45), `quarter-prep` (nốt đen chuẩn bị — quy ước người dạy).
 - Định nghĩa: `def.dissonance` (tr. 10), `def.strong-beat` (quy ước của bộ giải, chưa đối chiếu sách).
 
+## Ngôn ngữ luật (từ 23/11) — `src/umre/rules/`
+- `lang.ts`: biểu thức dữ liệu (`var`, `const`, so sánh, `and`/`or`/`not`, `in`, `abs`, `sign`, `add`), `RuleDef {id, query, when?, require, exceptions?}`, `evaluate(rules, queries, ngoại lệ bật)` → vi phạm + chỗ dùng ngoại lệ. Luật tuần tự hoá JSON được.
+- `queries.ts`: truy vấn sinh **sự kiện** (bước giai điệu, bộ ba nốt, nốt viết, dấu nối, điểm cùng vang, quãng nghịch kèm chuẩn bị / giải quyết / cách đến – đi), không phán xét.
+- `counterpoint.ts`: 17 luật cứng; mỗi luật một dòng chú thích dẫn câu chữ. Bảng quãng thuận đọc từ `def.dissonance.data` của sổ luật.
+
 ## Chưa có
-Ngôn ngữ luật, bộ chạy luật chung, sổ luật thứ hai (hoà âm cổ điển…), so sánh hai sổ luật, kế thừa sổ luật. Kiểm luật thật vẫn do code của từng lĩnh vực làm.
+Sổ luật thứ hai (hoà âm cổ điển…), so sánh hai sổ luật, kế thừa sổ luật. Kiểm luật thật vẫn do code của từng lĩnh vực làm.

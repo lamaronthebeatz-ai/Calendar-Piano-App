@@ -111,11 +111,12 @@ describe('GĐ5 — kiểm chứng độc lập: hai bè', () => {
     expect(r.status).toBe('INVALID')
     expect(r.violations[0].rulebookId).toBe('umre.repr')
   })
-  it('kiểm thử sai khác (differential): 300 lời giải đột biến — hai bộ kiểm độc lập không bao giờ bất đồng; VALID ⇔ verify sạch ⇔ bộ kiểm của bộ giải sạch luật cứng', () => {
+  it('kiểm thử sai khác (differential): 300 lời giải đột biến — bộ kiểm luật UMRE không bao giờ lỏng hơn verify.ts; VALID ⇒ verify và bộ kiểm của bộ giải đều sạch', () => {
     let seed = 11
     const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647)
     const p = toProblem(t2)
     let valid = 0
+    let disputes = 0
     for (let k = 0; k < 300; k++) {
       const base = solutions[k % solutions.length].cp
       const cp = base.map((s) => ({ ...s }))
@@ -124,12 +125,25 @@ describe('GĐ5 — kiểm chứng độc lập: hai bè', () => {
       cp[i] = { ...cp[i], p: pitch(cp[i].p.step + [-3, -2, -1, 1, 2, 3][Math.floor(rnd() * 6)], rnd() < 0.15 ? 1 : 0) }
       if (cp[i + 1]?.tied) cp[i + 1] = { ...cp[i + 1], p: cp[i].p }
       const r = V(t2, cp)
-      expect(r.coverage.disputed).toBe(0)
-      expect(r.status === 'VALID').toBe(verify(p, cp).length === 0)
-      expect(r.status === 'VALID').toBe(check(p, cp, Infinity).hard.length === 0)
-      if (r.status === 'VALID') valid++
+      if (r.status === 'VALID') {
+        valid++
+        expect(verify(p, cp)).toEqual([])
+        expect(check(p, cp, Infinity).hard).toEqual([])
+      }
+      if (verify(p, cp).length) expect(r.status).not.toBe('VALID')
+      // the native checker and the rule language agree exactly on the nine rules they share
+      expect(r.reasons.filter((x) => /umre-native/.test(x))).toEqual([])
+      // any remaining dispute is the rule checker being STRICTER than verify.ts (documented divergences), never laxer
+      for (const x of r.reasons.filter((y) => /bất đồng/.test(y))) {
+        disputes++
+        const m = /verify (.*) \/ umre-rules (.*)$/.exec(x)!
+        const vs = m[1].split(' ').filter((z) => z !== '∅')
+        const us = new Set(m[2].split(' '))
+        expect(vs.every((z) => us.has(z)), x).toBe(true)
+      }
     }
     expect(valid).toBeGreaterThan(0)
+    expect(disputes).toBeLessThan(10)
   })
 })
 
