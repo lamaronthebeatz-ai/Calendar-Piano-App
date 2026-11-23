@@ -1,12 +1,17 @@
-# Đặc tả sổ luật (GĐ2) — **chưa triển khai**
+# Đặc tả sổ luật (GĐ2 — mới có bản tối thiểu)
 
-Tài liệu này là thiết kế dự kiến, chưa có code. Không có luật nào trong UMRE hiện nay.
+## Đã có (`src/umre/rulebook/`)
+- `Rulebook {id, version, domain, title, rules, exceptions, definitions, evidence}`.
+- `RuleSpec {id, statement, severity: hard | soft, citations, scope, caveat?}` — `caveat` = chỗ người biên soạn đọc thêm vào nguồn (một ngưỡng, một trang chưa ghim); giải thích trình bày nó như **giả thuyết**.
+- `ExceptionSpec {id, statement, lifts, scope, citations, enabledBy: task-option | context}`.
+- `Definition` (quãng nghịch là gì, phách nào mạnh).
+- `auditRulebook`: id không trùng, mọi mục có trích dẫn, trích dẫn tồn tại, ngoại lệ nới luật có thật. `RulebookRegistry` từ chối sổ luật không qua kiểm.
 
-## Yêu cầu dự kiến
-- Mỗi luật có: id ổn định, phát biểu, **nguồn** (sách, trang), phạm vi (hệ lý thuyết, trường phái, số bè, loại bài tập), mức (bắt buộc / khuyến nghị / cần xác minh), phiên bản.
-- Luật đọc biểu diễn GĐ1 qua truy vấn (`soundingNotes`, `between`, `layoutBars`…), không đọc mô hình riêng của từng màn hình.
-- Phán đoán phụ thuộc trường phái mà GĐ1 cố ý bỏ ra — tính thuận/nghịch của quãng, độ mạnh phách, tên chức năng — đặt ở đây, mỗi cái có nguồn.
-- Bảng luật phức điệu đã đối chiếu giáo trình (`docs/notes/counterpoint.md`) là nguồn đầu vào đầu tiên; chuyển sang phải giữ nguyên mức và trang trích.
+## Sổ luật phức điệu `counterpoint.strict.pham-tu-huong-1991@1`
+- 34 luật = 33 `RuleId` của `features/counterpoint/rules.ts` + `no-gap` (bè đối vị không chỗ trống — miền của bộ giải). Phát biểu và cứng/mềm **lấy thẳng từ `RULES`, `isSoft`** nên không lệch được với code.
+- Số trang lấy từ bảng kiểm toán `docs/notes/counterpoint.md` (17/11/2026). Test buộc mỗi số trang phải nằm đúng dòng của luật đó trong bảng.
+- Ngoại lệ: `fourth-upper-pair` (quãng 4 thuận ở cặp trên ba – bốn bè, tr. 37–45), `quarter-prep` (nốt đen chuẩn bị — quy ước người dạy).
+- Định nghĩa: `def.dissonance` (tr. 10), `def.strong-beat` (quy ước của bộ giải, chưa đối chiếu sách).
 
-## Tiêu chí bắt đầu
-GĐ1 đã nghiệm thu (xem `IMPLEMENTATION_LOG.md`).
+## Chưa có
+Ngôn ngữ luật, bộ chạy luật chung, sổ luật thứ hai (hoà âm cổ điển…), so sánh hai sổ luật, kế thừa sổ luật. Kiểm luật thật vẫn do code của từng lĩnh vực làm.

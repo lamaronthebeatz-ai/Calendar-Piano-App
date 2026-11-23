@@ -68,3 +68,4 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Làm từng giai đoạn; chỉ sang giai đoạn sau khi nghiệm thu giai đoạn trước. Làm xong thì push thẳng `main`, không cần hỏi.
 - Không bịa luật, không trộn hệ lý thuyết, thiếu bằng chứng ghi "chưa xác minh"; không dựng lại app, không bỏ tính năng có sẵn — mô-đun cũ nối vào UMRE qua bộ chuyển đổi.
 - Tài liệu ở `docs/umre/` phải phản ánh đúng trạng thái thật.
+- (23/11) **Wave B** (GĐ5 kiểm chứng, GĐ6 giải thích – bằng chứng, GĐ7 điều phối): bộ giải tìm, bộ kiểm kiểm; LLM không được quyết định đúng sai; phân biệt dữ kiện / luật / suy luận / giả thuyết / giới hạn; lỗi kỹ thuật không bao giờ là vô nghiệm; không đánh giá thẩm mỹ trước khi xong cả bốn đợt.

@@ -17,3 +17,29 @@
 
 ### Nghiệm thu GĐ1
 Đủ các yêu cầu trong chỉ thị: kiểu chặt, đơn vị rõ, id ổn định, kiểm hợp lệ, chuyển đổi hai chiều, phiên bản, tương thích MIDI và MusicXML, mở rộng qua `ext` và trường tuỳ chọn. Giới hạn ở `KNOWN_LIMITATIONS.md`.
+
+## 2026-11-23 — Wave B: GĐ5 kiểm chứng độc lập, GĐ6 giải thích – bằng chứng, GĐ7 điều phối
+
+### Kiểm tra điều kiện đầu vào (Wave A)
+| Thành phần | Thực trạng khi bắt đầu | Ảnh hưởng tới Wave B | Đã làm |
+|---|---|---|---|
+| GĐ1 biểu diễn | đủ, 61 test | — | dùng nguyên |
+| GĐ2 sổ luật | **không có** ở mức UMRE; luật phức điệu nằm trong `rules.ts` (RuleId, RULES, isSoft) và bảng kiểm toán `docs/notes/counterpoint.md` | GĐ5 cần mã luật + mức; GĐ6 cần nguồn | thêm hợp đồng tối thiểu `rulebook/` + sổ luật phức điệu dạng dữ liệu (không đổi luật nào) |
+| GĐ3 ràng buộc | **không có** ở mức UMRE | không chặn: bộ giải lĩnh vực tự mang ràng buộc | không làm |
+| GĐ4 tìm kiếm | **không có** ở mức UMRE; `solveMany`/`msolve` có sẵn, ba trạng thái, có bộ kiểm độc lập riêng | dùng làm bộ giải đầu tiên qua adapter | không viết lại |
+
+### Tạo mới
+`src/umre/version.ts`, `task.ts`, `engine.ts`; `rulebook/rulebook.ts`, `rulebook/counterpoint.ts`; `evidence/evidence.ts`; `domains/counterpoint/task.ts`; `validation/types.ts`, `validation/native.ts`, `validation/counterpoint.ts`; `explain/trace.ts`, `explain/explain.ts`; `orchestration/solver.ts`, `orchestration/registry.ts`, `orchestration/orchestrator.ts`; `solvers/counterpoint.ts`; `testing/fixtures.ts`. Test: `validation/validation.test.ts` (13), `explain/explain.test.ts` (8), `orchestration/orchestration.test.ts` (12).
+
+**Sửa:** không sửa mã nguồn có sẵn nào (kể cả `features/counterpoint/`). Tài liệu: `docs/umre/*`, `docs/STATUS.md`, `docs/notes/decisions.md`, `CLAUDE.md` (một dòng bảng).
+
+### Kết quả chạy thật
+- `npx vitest run src/umre`: 94/94 (GĐ1 61 + Wave B 33).
+- `npm test` toàn app: 349/349 (316 cũ không đổi + 33 mới). `tsc -b` sạch; `lint` 4 cảnh báo cũ, không cảnh báo mới; `check:links`, `build`, `budget` qua.
+- Kiểm sai khác: 300 lời giải đột biến — hai bộ kiểm độc lập không bất đồng lần nào; `VALID` ⇔ `verify` sạch ⇔ `check` sạch. (Thử ngoài repo trước đó: 1.197 đột biến trên ba bài, có bài có biến thể Iv: 178 VALID, 1.019 INVALID, 0 bất đồng.)
+- Tích hợp: hai bè → SOLVED (mọi lời giải VALID, bè đề giữ nguyên); ba bè → SOLVED; ✱ ở phách đầu → PROVEN_UNSAT; bài 12 ô hai biến thể với 5 ms → TIMEOUT; bộ giải "nói dối" (đổi một nốt thành bước quãng 7 sau khi tìm) → UNKNOWN, mọi phương án INVALID với lỗi `leap`; sai một nửa → SOLVED, phương án sai bị tách ra.
+
+### Lỗi gặp khi làm
+- Đếm tay sai số trích dẫn có trang (32 → đúng là 29); test đã bắt.
+- Bộ giải thích tự tra kho bằng chứng nên sập khi kho hỏng (thành `explanation-error`) → nay tra an toàn, nói rõ "không truy được nguồn của …".
+- `erasableSyntaxOnly`: không dùng tham số thuộc tính (`constructor(readonly x)`) trong class.

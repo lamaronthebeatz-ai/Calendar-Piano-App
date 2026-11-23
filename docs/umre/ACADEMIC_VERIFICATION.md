@@ -1,15 +1,15 @@
 # Kiểm chứng học thuật
 
-## Đã kiểm bằng máy (GĐ1)
-Các sự kiện lý thuyết trong biểu diễn chỉ là kiến thức nhạc lý phổ thông (tên quãng, hoá biểu, cấu tạo âm giai và hợp âm ba – bảy). Chúng được **đối chiếu chéo với mô-đun có sẵn của app** (đã dùng và kiểm từ trước), không chỉ tự kiểm:
-- `between`/`quality` khớp `interval()` của phức điệu trên hơn 800 cặp nốt.
-- `signatureAlter` khớp `sigAlter` cho hoá biểu −7…+7; `signatureOf` khớp `keySig` cho mọi giọng của trang phức điệu, gồm Dorian, Phrygian, Lydian, Mixolydian.
-- Khứ hồi với trình soạn nhạc, MusicXML (bộ đọc – ghi của trình soạn nhạc), lời giải thật của bộ giải ba bè.
+## Biểu diễn (GĐ1)
+Kiến thức nhạc lý phổ thông (tên quãng, hoá biểu, âm giai, hợp âm ba – bảy) được đối chiếu chéo với mô-đun có sẵn: `between`/`quality` khớp `interval()` của phức điệu trên hơn 800 cặp nốt; `signatureAlter`/`signatureOf` khớp `sigAlter`/`keySig`.
 
-## Quy ước tự chọn (không phải sự kiện lý thuyết)
-- Không có "quãng đồng âm giảm": viết là quãng đồng âm tăng đi xuống (`-A1`). Có sách dùng thuật ngữ này; đây là lựa chọn của UMRE, ghi ở `KNOWN_LIMITATIONS.md`.
-- `relative()` chỉ cho cặp trưởng – thứ.
-- Các dạng thứ hoà thanh và giai điệu dùng hoá biểu của thứ tự nhiên (theo cách ghi thông dụng).
+## Sổ luật phức điệu (GĐ2 tối thiểu, dùng cho GĐ5–7)
+- Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc* (Nhạc viện Hà Nội, 1991). Số trang theo bảng kiểm toán 17/11/2026 trong `docs/notes/counterpoint.md`, đã đối chiếu bản scan Lamar gửi (trang in = trang PDF − 2). Test giữ: mỗi số trang của sổ luật nằm đúng dòng của luật đó trong bảng.
+- **Đối chiếu một phần** (ghi trong sổ luật, hiện thành giả thuyết trong giải thích): `repeat3` (chữ và Thí dụ 12 lệch nhau), `perfects3` (ngưỡng "nhiều" = 3 là cách hiểu), `weak-form` (chỉ có trong Thí dụ 25–28), `crossing` (chưa ghim trang), `chromatic-near` (không định lượng), `rhythm-change` (mới áp ở phách đầu ô), `suspension` (nốt lưu ngoài sơ đồ 2 đang được cho phép).
+- **Chưa có văn bản**: ✱ và nốt đen chuẩn bị (quy ước người dạy); `end`, `no-gap`, `dis-both`, `range`, `cadence-step`, độ mạnh phách (cách hiểu của người biên soạn / miền của bộ giải).
 
-## Chưa xác minh
-Chưa có luật nào cần trích giáo trình trong GĐ1. Từ GĐ2, mỗi luật phải có nguồn và trang; luật chưa đối chiếu nguyên văn ghi "cần xác minh".
+## Quy ước tự chọn của UMRE (không phải sự kiện lý thuyết)
+Không có "quãng đồng âm giảm" (viết `-A1`); `relative()` chỉ cho trưởng – thứ; dạng thứ hoà thanh/giai điệu dùng hoá biểu thứ tự nhiên.
+
+## Chưa làm
+Đối chiếu sổ luật với nguồn thứ hai (Taneyev nguyên bản), với người dạy về các mục "cần xác minh" (danh sách ở `docs/notes/counterpoint.md` § Còn mở).

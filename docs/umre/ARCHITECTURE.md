@@ -2,37 +2,44 @@
 
 ```
 src/umre/
-  repr/                    GĐ1 — biểu diễn (không phụ thuộc React, DOM hay IndexedDB)
-    rational.ts            số hữu tỉ chính xác cho thời gian
-    pitch.ts               chữ + dấu hoá + quãng tám, MIDI, viết lại trùng âm
-    interval.ts            quãng = {bậc chữ, nửa cung}, tên, đảo, dịch giọng theo chữ
-    tonal.ts               điệu thức, âm giai, giọng, hoá biểu
-    time.ts                số chỉ nhịp, chia ô nhịp, vị trí phách ký hiệu
-    score.ts               tổng phổ: phần, khuông, bè, sự kiện, truy vấn
-    harmony.ts             hợp âm, thế đảo, số bass, cách xếp, nhãn hoà âm có hệ
-    structure.ts           cây hình thức (câu, đoạn, phần…) có hệ và nguồn gốc
-    validate.ts            bộ kiểm cấu trúc, mã lỗi ổn định
-    schema.ts              tên lược đồ, phiên bản, migrate, JSON
-    index.ts               lối vào công khai (không gồm bộ chuyển đổi)
-    adapters/              cầu nối hai chiều với mô-đun có sẵn
-      counterpoint.ts      ⇄ features/counterpoint/model.ts
-      compose.ts           ⇄ features/compose/model.ts; MusicXML và tệp MIDI qua exchange.ts
-      midi.ts              ⇄ danh sách nốt MIDI (key, tick)
-      harmonyCalc.ts       ⇄ features/tools/harmony.ts
+  version.ts                 UMRE_ENGINE_VERSION (ghi vào mọi truy vết, kết quả; bộ giải khai báo major.minor nó cần)
+  task.ts                    Task {id, type, domain, rulebook, score, params}
+  engine.ts                  createEngine(): sổ luật + bộ kiểm + bộ giải phức điệu, sẵn một Orchestrator
+  repr/                      GĐ1 — biểu diễn (xem UNIFIED_MUSIC_REPRESENTATION.md)
+  rulebook/                  GĐ2 (tối thiểu)
+    rulebook.ts              RuleSpec, ExceptionSpec, Definition, Rulebook, auditRulebook, RulebookRegistry
+    counterpoint.ts          sổ luật phức điệu nghiêm khắc (34 luật, 2 ngoại lệ, 2 định nghĩa)
+  evidence/evidence.ts       GĐ6 — SourceRecord, Citation, EvidenceRegistry, formatCitation (dữ liệu sách lấy từ features/sources/curated.ts)
+  domains/counterpoint/task.ts   loại bài counterpoint.two-voice / multi-voice, kiểm đầu vào, đổi Task ⇄ Problem / MProblem, dựng tổng phổ lời giải
+  validation/                GĐ5
+    types.ts                 ValidationStatus, Violation, RuleOutcome, Coverage, ValidationResult, Validator, digest
+    native.ts                bộ kiểm thứ ba viết trên biểu diễn UMRE (một phần luật)
+    counterpoint.ts          twoVoiceValidator, multiVoiceValidator
+  explain/                   GĐ6
+    trace.ts                 Tracer, TraceStep, ba mức truy vết
+    explain.ts               explain() → Explanation (câu có loại + tham chiếu), renderExplanation(basic | technical | academic)
+  orchestration/             GĐ7
+    solver.ts                hợp đồng Solver / SolverDescriptor / SolverOutput / UnifiedResult
+    registry.ts              SolverRegistry, ValidatorRegistry, checkDescriptor
+    orchestrator.ts          Orchestrator.run, decideStatus (hàm thuần), checkOutput, auditResult
+  solvers/counterpoint.ts    adapter: twoVoiceSolver (solveMany), multiVoiceSolver (msolve)
+  testing/fixtures.ts        dựng bài mẫu cho test
+```
+
+## Chu trình một nhiệm vụ
+```
+Task ──▶ Orchestrator.run
+          1 receive · 2 loại bài ↔ lĩnh vực · 3 sổ luật (RulebookRegistry) · 4 bộ kiểm (ValidatorRegistry)
+          5 route: SolverRegistry.match (lĩnh vực, loại bài, biểu diễn, sổ luật, sẵn sàng, bật/tắt) — không có thì ERROR, không tự thay
+          6 checkInput · 7 strategy (thời gian, số lời giải trong giới hạn của bộ giải)
+          8 solve (đua với hẹn giờ và tín hiệu huỷ) · 9 checkOutput (hợp đồng)
+          10 validate TỪNG phương án (bộ kiểm độc lập) · decideStatus
+          11 explain (từ truy vết + kết quả kiểm + sổ luật) · 12 evidence (trích dẫn đã giải được)
+      ──▶ UnifiedResult {status, solutions (chỉ VALID), rejected, explanation, evidence, trace, metadata}
 ```
 
 ## Hướng phụ thuộc
-- `repr/*` không import gì ngoài `repr/*`. Mô-đun cũ không import UMRE (chưa có màn hình nào dùng UMRE).
-- `adapters/*` import mô-đun cũ và **dùng lại hàm của chúng** (`keySig`, `pitch`, `layout`, `migrate`, `fromMusicXml`, `toMusicXml`, `toMidi`) thay vì viết lại, để hai bên không lệch nhau.
-- Bộ chuyển đổi không nằm trong `index.ts` để lõi không kéo theo code giao diện vào gói.
-
-## Luồng dữ liệu (hiện có)
-```
-counterpoint Seg[][] ─┐                       ┌─ MusicXML (qua compose)
-compose Score ────────┼──▶ UMRE Score ──▶─────┼─ tệp MIDI (qua compose)
-MusicXML ─▶ compose ──┘     │ validateScore   └─ MidiNote[]
-MidiNote[] ───────────────▶ │ toJson/fromJson
-```
-
-## Chưa có
-Sổ luật, bộ giải chung, bằng chứng, giao diện UMRE — xem `MASTER_SPECIFICATION.md`.
+- `repr/` không import gì ngoài `repr/`.
+- `validation/` không import `solvers/` hay `orchestration/`: bộ kiểm không biết bộ giải nào đã sinh lời giải.
+- `orchestration/` không import mô-đun lĩnh vực nào; lĩnh vực chỉ vào qua `engine.ts`.
+- Mô-đun cũ (`features/*`) không import UMRE. UMRE gọi hàm của chúng, không sửa chúng.
