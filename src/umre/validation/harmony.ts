@@ -1,7 +1,8 @@
 import { HARMONY_RULEBOOK_ID, HARMONY_RULEBOOK_VERSION } from '../rulebook/harmony'
 import type { Rulebook } from '../rulebook/rulebook'
-import { harmonyFaults } from '../domains/harmony/check'
-import { chordSpans, FOUR_PART, fourPartModel, type FourPartParams } from '../domains/harmony/task'
+import { harmonyFaults, progressionFaults, triadOnBass } from '../domains/harmony/check'
+import { chordSpans, chordsOfSolution, FOUR_PART, fourPartModel, HARMONIZE, type FourPartParams, type HarmonizeParams } from '../domains/harmony/task'
+import { CHOICE_RULE_IDS } from '../rules/harmony'
 import { evaluate } from '../rules/lang'
 import { formatPitch } from '../repr/pitch'
 import { fromQuarters, rat, toQuarters } from '../repr/rational'
@@ -25,18 +26,19 @@ type Raw = { checker: string; rule: string; at: number; voices: number[] }
 export const harmonyValidator: Validator = {
   id: 'umre.validate.harmony.four-part',
   version: '1',
-  taskTypes: [FOUR_PART],
+  taskTypes: [FOUR_PART, HARMONIZE],
   rulebooks: { [HARMONY_RULEBOOK_ID]: [HARMONY_RULEBOOK_VERSION] },
   validate(task, solution, rb) {
-    const t = task as Task<FourPartParams>
+    const choice = task.type === HARMONIZE
     const dig = digest({ task, solution, rulebook: { id: rb.id, version: rb.version } })
     const base = (status: ValidationResult['status'], reasons: string[], violations: Violation[] = [], outcomes: RuleOutcome[] = []): ValidationResult => {
       const hard = outcomes.filter((o) => o.severity === 'hard')
       const n = (k: RuleOutcome['outcome']) => hard.filter((o) => o.outcome === k).length
+      const soft = outcomes.filter((o) => o.severity === 'soft')
       return {
         status, reasons, taskId: task.id, rulebook: { id: rb.id, version: rb.version }, validator: { id: this.id, version: this.version }, checkers: CHECKERS,
-        violations, advisories: [], provisional: [], outcomes,
-        coverage: { hardRules: rb.rules.length, checked: hard.length - n('not-checked'), passed: n('pass'), violated: n('fail'), uncheckable: n('not-checked'), disputed: n('disputed'), notApplicable: 0, softChecked: 0, exceptionsApplied: [], ratio: hard.length ? (hard.length - n('not-checked')) / rb.rules.length : 0 },
+        violations: violations.filter((x) => x.severity === 'hard'), advisories: violations.filter((x) => x.severity === 'soft'), provisional: [], outcomes,
+        coverage: { hardRules: hard.length, checked: hard.length - n('not-checked') - n('not-applicable'), passed: n('pass'), violated: n('fail'), uncheckable: n('not-checked'), disputed: n('disputed'), notApplicable: n('not-applicable'), softChecked: soft.length, exceptionsApplied: [], ratio: hard.length - n('not-applicable') ? (hard.length - n('not-checked') - n('not-applicable')) / (hard.length - n('not-applicable')) : 0 },
         inputDigest: dig,
       }
     }
@@ -50,15 +52,25 @@ export const harmonyValidator: Validator = {
       return base('INVALID', ['Lời giải không giữ nguyên soprano'], [sysV(rb, 'task.given-preserved', 'umre.task', 'Soprano là đề nhưng lời giải đã sửa nó')])
     if (solution.voices.slice(1).some((v) => notesOf(v).length < sop.length)) return base('INCOMPLETE', ['Còn bè chưa viết đủ nốt'])
 
-    const model = fourPartModel(t, rb)
+    // the chords: given (four-part task) or read off the solution — each checker reads them its own way
+    const given = choice ? (task.params as HarmonizeParams).key : (task.params as FourPartParams).key
+    const k = given ?? { tonic: { letter: 0 as const, alter: 0 }, minor: false }
+    const chords = choice ? chordsOfSolution(solution, k) : (task.params as FourPartParams).chords
+    const nativeChords = choice ? notesOf(solution.voices[3]).map((n) => triadOnBass(n.pitch, k)) : chords
+    const t: Task<FourPartParams> = { ...task, type: FOUR_PART, params: { chords, key: k } }
+    const model = fourPartModel(t, rb, { choice, all: true })
     const view = model.views(solution, false)[0]
     const raws: Raw[] = evaluate(view.rules, view.queries, new Set()).hits.map((h) => ({ checker: 'umre-rules', rule: h.ruleId, at: h.item.at, voices: [...h.item.voices] }))
-    for (const f of harmonyFaults(solution, t.params.chords)) raws.push({ checker: 'harmony-native', rule: f.rule, at: f.at, voices: f.voices })
+    for (const f of [...harmonyFaults(solution, nativeChords), ...progressionFaults(solution, nativeChords, k, choice)]) raws.push({ checker: 'harmony-native', rule: f.rule, at: f.at, voices: f.voices })
     const key = (r: Raw) => `${r.voices.join(',')}|${r.at}`
     const outcomes: RuleOutcome[] = []
     const violations: Violation[] = []
     const reasons: string[] = []
     for (const spec of rb.rules) {
+      if (!choice && CHOICE_RULE_IDS.has(spec.id)) {
+        outcomes.push({ ruleId: spec.id, severity: spec.severity, outcome: 'not-applicable', checkers: [], note: 'hợp âm do đề cho sẵn: luật chọn hợp âm không áp' })
+        continue
+      }
       const a = raws.filter((r) => r.checker === 'umre-rules' && r.rule === spec.id)
       const b = raws.filter((r) => r.checker === 'harmony-native' && r.rule === spec.id)
       const A = new Set(a.map(key))
@@ -66,12 +78,12 @@ export const harmonyValidator: Validator = {
       const disputed = A.size !== B.size || [...A].some((k) => !B.has(k))
       if (disputed) reasons.push(`Bộ kiểm độc lập bất đồng ở luật ${spec.id}: umre-rules ${[...A].join(' ') || '∅'} / harmony-native ${[...B].join(' ') || '∅'}`)
       const outcome: RuleOutcome['outcome'] = disputed ? 'disputed' : a.length ? 'fail' : 'pass'
-      outcomes.push({ ruleId: spec.id, severity: 'hard', outcome, checkers: [{ id: 'umre-rules', independent: true, faults: a.length, complete: true }, { id: 'harmony-native', independent: true, faults: b.length, complete: true }] })
+      outcomes.push({ ruleId: spec.id, severity: spec.severity, outcome, checkers: [{ id: 'umre-rules', independent: true, faults: a.length, complete: true }, { id: 'harmony-native', independent: true, faults: b.length, complete: true }] })
       if (outcome === 'fail')
         for (const r of a) {
           const ps = solution.voices.map((v) => notesOf(v).find((n) => toQuarters(n.onset) <= r.at && r.at < toQuarters(n.onset) + toQuarters(n.duration)))
           violations.push({
-            ruleId: spec.id, rulebookId: rb.id, rulebookVersion: rb.version, severity: 'hard',
+            ruleId: spec.id, rulebookId: rb.id, rulebookVersion: rb.version, severity: spec.severity,
             location: { at: fromQuarters(r.at), measure: Math.floor(r.at / 4) + 1, offset: fromQuarters(r.at % 4), voices: r.voices.map((i) => solution.voices[i].id), eventIds: ps.flatMap((n) => (n ? [n.id] : [])) },
             actual: `S-A-T-B: ${ps.map((n) => (n ? formatPitch(n.pitch) : '—')).join(' ')} — hợp âm ${chordSpans(t).find((c) => c.at <= r.at && r.at < c.end)?.chord.quality ?? '?'}`,
             expected: spec.statement, description: `${spec.statement} (ô ${Math.floor(r.at / 4) + 1})`, citations: spec.citations, checkers: ['umre-rules', ...(b.some((x) => key(x) === key(r)) ? ['harmony-native'] : [])],

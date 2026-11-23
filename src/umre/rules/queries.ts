@@ -1,10 +1,10 @@
 import { diatonic, midi } from '../repr/pitch'
-import { toQuarters, type Rational } from '../repr/rational'
+import { fromQuarters, toQuarters, type Rational } from '../repr/rational'
 import { soundingNotes, type Score, type SoundingNote } from '../repr/score'
 import { consonance, intervalClass, metricPosition, verticals, type ConsonanceDef, type Vertical } from '../repr/texture'
 import type { Item, Queries } from './lang'
 import { chordMembers, type Chord } from '../repr/harmony'
-import { sameSpelling } from '../repr/pitch'
+import { sameSpelling, samePitch, type Spelling } from '../repr/pitch'
 
 /**
  * Queries over a two-or-more-voice texture, for rules written in the rule language. They compute FACTS (durations in
@@ -30,6 +30,8 @@ export type TextureContext = {
   readonly partial?: boolean
   /** chords the texture should sound, by position (quarters), for the sonority query */
   readonly chords?: readonly { readonly at: number; readonly end: number; readonly chord: Chord }[]
+  /** the key, for chord degrees (harmony.progression) */
+  readonly key?: { readonly tonic: Spelling; readonly minor: boolean }
 }
 
 const q = (r: Rational) => toQuarters(r)
@@ -163,6 +165,40 @@ export function textureQueries(ctx: TextureContext): Queries {
           at: t, voices, ids: sounding.flatMap((n) => n!.ids),
           facts: { complete: true, allMembers: role.every((r) => r >= 0), bassMember: role[role.length - 1], roots: count(0), thirds: count(1), fifths: count(2), sevenths: count(3) },
         }]
+      })
+    },
+    // one item per chord of a note-against-note four-part texture (voices S, A, T, B = 0–3): degrees, root relation,
+    // how each voice moved from the previous chord, metric strength. Facts only; the rules judge.
+    'harmony.progression': () => {
+      const spans = ctx.chords ?? []
+      const tonic = ctx.key?.tonic.letter ?? 0
+      const deg = (l: number) => (((l - tonic) % 7) + 7) % 7
+      const at = (i: number, t: number) => sn[i]?.find((n) => q(n.onset) <= t && t < q(n.onset) + q(n.duration))
+      const col = (t: number) => [0, 1, 2, 3].map((i) => at(i, t))
+      return spans.flatMap((sp, k) => {
+        const cur = col(sp.at)
+        const prevSp = spans[k - 1]
+        const prev = prevSp ? col(prevSp.at) : null
+        const missing = cur.some((x) => !x) || (prev && prev.some((x) => !x))
+        if (missing && ctx.partial) return []
+        const facts: Record<string, unknown> = {
+          k, first: k === 0, last: k === spans.length - 1, degree: deg(sp.chord.root.letter), prevDegree: prevSp ? deg(prevSp.chord.root.letter) : null,
+          relation: !prevSp ? null : (['same', 'second', 'third', 'fourth-fifth', 'fourth-fifth', 'third', 'second'] as const)[(((sp.chord.root.letter - prevSp.chord.root.letter) % 7) + 7) % 7],
+          sameChord: !!prevSp && sameSpelling(prevSp.chord.root, sp.chord.root) && prevSp.chord.quality === sp.chord.quality,
+          strong: level(ctx, fromQuarters(sp.at)) === 3, complete: !missing,
+        }
+        if (prev && !missing) {
+          const d = (i: number) => diatonic(cur[i]!.pitch) - diatonic(prev[i]!.pitch)
+          const [s1, a1, t1, b1] = [0, 1, 2, 3].map(d)
+          const pp = spans[k - 2] ? col(spans[k - 2].at) : null
+          Object.assign(facts, {
+            sSteps: s1, aSteps: a1, tSteps: t1, bSteps: b1, sDir: Math.sign(s1), aDir: Math.sign(a1), tDir: Math.sign(t1), bDir: Math.sign(b1),
+            sSame: samePitch(cur[0]!.pitch, prev[0]!.pitch), sameVoicing: [0, 1, 2, 3].every((i) => samePitch(cur[i]!.pitch, prev[i]!.pitch)),
+            prevSopDegree: deg(prev[0]!.pitch.letter), prevStrong: level(ctx, prev[0]!.onset) === 3,
+            prevBSteps: pp && pp[3] ? diatonic(prev[3]!.pitch) - diatonic(pp[3].pitch) : null,
+          })
+        }
+        return [{ at: sp.at, voices: [0, 1, 2, 3], ids: cur.flatMap((n) => n?.ids ?? []), facts }]
       })
     },
     'pair.stars': () =>

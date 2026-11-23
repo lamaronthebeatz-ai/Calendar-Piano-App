@@ -15,6 +15,9 @@ globalThis.DOMParser = new Window().DOMParser
 const server = await createServer({ configFile: false, server: { middlewareMode: true }, appType: 'custom', logLevel: 'error', optimizeDeps: { noDiscovery: true } })
 const { fromMusicXml } = await server.ssrLoadModule('/src/features/compose/exchange.ts')
 const { analyze } = await server.ssrLoadModule('/src/features/analyze/engine/index.ts')
+// --umre: the same pieces through UMRE (MusicXML → UMRE score → the harmony.tonal analysis module), to check the adapter keeps the accuracy
+const viaUmre = process.argv.includes('--umre')
+const umre = viaUmre ? { ...(await server.ssrLoadModule('/src/umre/api.ts')), ...(await server.ssrLoadModule('/src/umre/repr/adapters/compose.ts')) } : null
 await server.close()
 
 const gt = JSON.parse(fs.readFileSync(path.join(dir, 'gt.json'), 'utf8'))
@@ -22,7 +25,13 @@ const tot = { pts: 0, root: 0, pcs: 0, key: 0, inv: 0, func: 0, secGt: 0, secHit
 const confusion = new Map()
 for (const piece of gt) {
   const score = fromMusicXml(fs.readFileSync(path.join(dir, path.basename(piece.score)), 'utf8'))
-  const a = analyze(score, opts)
+  let a = analyze(score, opts)
+  if (umre) {
+    const r = (await umre.handle({ op: 'analyze', score: umre.fromCompose(score), modules: ['harmony.tonal'] })).result
+    const chords = r.findings.filter((f) => f.topic === 'hợp âm')
+    // the timeline (bars) is the engine's; the chords are what UMRE returned (quarters → 960 per whole note)
+    a = { ...a, harmony: chords.map((f) => ({ chord: { start: f.at * 240, end: f.end * 240, root: f.value.rootPc, inversion: f.value.inversion }, pcs: f.value.pcs, key: f.value.key, reading: { of: f.value.of ?? undefined, rn: f.value.rn } })) }
+  }
   const bars = a.score.bars
   // a score that is not the piece analysed (the corpus has the whole cantata movement): skip
   if (bars.length > 2 * Math.max(...piece.rn.map((r) => r.m)) + 4) { if (verbose) console.log(`  (${piece.name}: score has ${bars.length} bars, analysis ${Math.max(...piece.rn.map((r) => r.m))} — skipped)`); continue }
@@ -74,5 +83,5 @@ for (const piece of gt) {
   if (verbose) console.log(`${piece.name.padEnd(20)} root ${(100 * p.root / p.pts).toFixed(0)}% chord ${(100 * p.pcs / p.pts).toFixed(0)}% key ${(100 * p.key / p.pts).toFixed(0)}% full ${(100 * p.func / p.pts).toFixed(0)}%`)
 }
 const pct = (x) => (100 * x / tot.pts).toFixed(1) + '%'
-console.log(`points ${tot.pts} | root ${pct(tot.root)} | chord (exact tones) ${pct(tot.pcs)} | key ${pct(tot.key)} | root+inversion ${pct(tot.inv)} | root+inv+key ${pct(tot.func)} | applied found ${tot.secHit}/${tot.secGt}`)
+console.log(`${viaUmre ? '[UMRE] ' : ''}points ${tot.pts} | root ${pct(tot.root)} | chord (exact tones) ${pct(tot.pcs)} | key ${pct(tot.key)} | root+inversion ${pct(tot.inv)} | root+inv+key ${pct(tot.func)} | applied found ${tot.secHit}/${tot.secGt}`)
 if (verbose) console.log([...confusion].filter(([k]) => !only || k.startsWith(only)).sort((a, b) => b[1] - a[1]).slice(0, 30).map(([k, v]) => `${v}\t${k}`).join('\n'))

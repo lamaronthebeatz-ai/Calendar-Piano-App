@@ -39,7 +39,7 @@ describe('GĐ7 — sổ đăng ký bộ giải', () => {
     const harmony = fake('harmony.chorale.test', () => ({ status: 'unknown', solutions: [], diagnostics: {}, steps: [] }), { domain: 'harmony', taskTypes: ['harmony.chorale'], rulebooks: [{ id: 'harmony.test', versions: ['1'] }], priority: 0 })
     e.solvers.register(harmony)
     e.solvers.register(fake('counterpoint.two-voice.search', twoVoiceSolver.solve, { version: '1.1.0', priority: 0 }))
-    expect(e.solvers.list().map((d) => `${d.id}@${d.version}`).sort()).toEqual(['counterpoint.multi-voice.search@1.0.0', 'counterpoint.two-voice.search@1.0.0', 'counterpoint.two-voice.search@1.1.0', 'harmony.chorale.test@0.1.0', 'umre.csp.counterpoint@1.0.0', 'umre.csp.harmony@1.0.0'])
+    expect(e.solvers.list().map((d) => `${d.id}@${d.version}`).sort()).toEqual(['counterpoint.multi-voice.search@1.0.0', 'counterpoint.two-voice.search@1.0.0', 'counterpoint.two-voice.search@1.1.0', 'harmony.chorale.test@0.1.0', 'umre.csp.counterpoint@1.0.0', 'umre.csp.harmony@1.0.0', 'umre.harmonize@1.0.0'])
     expect(e.solvers.get('counterpoint.two-voice.search')!.descriptor.version).toBe('1.1.0')
     expect(() => e.solvers.register(harmony)).toThrow(/đã đăng ký/)
     expect(() => e.solvers.register(fake('old', twoVoiceSolver.solve, { requires: { umre: '0.4' } }))).toThrow(/UMRE 0.4/)

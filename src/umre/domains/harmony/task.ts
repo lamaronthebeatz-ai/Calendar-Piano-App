@@ -1,6 +1,7 @@
 import { fromCounterpoint } from '../../repr/adapters/counterpoint'
-import type { Seg } from '../../../features/counterpoint/model'
-import { chordMembers, type Chord } from '../../repr/harmony'
+import type { Meter, Seg } from '../../../features/counterpoint/model'
+import { chordMembers, chordsFromSpellings, type Chord } from '../../repr/harmony'
+import { scaleOf } from '../../repr/tonal'
 import { diatonic, fromDiatonic, type Pitch } from '../../repr/pitch'
 import { add, cmp, fromQuarters, toQuarters, type Rational } from '../../repr/rational'
 import { notesOf, type NoteEvent, type Score } from '../../repr/score'
@@ -9,7 +10,8 @@ import type { Task } from '../../task'
 import type { CspModel, View } from '../../constraints/model'
 import { frontierOf } from '../../constraints/model'
 import { textureQueries } from '../../rules/queries'
-import { HARMONY_RULES } from '../../rules/harmony'
+import { CHOICE_RULES, HARMONY_RULES } from '../../rules/harmony'
+import type { HKey } from './check'
 import type { ConsonanceDef } from '../../repr/texture'
 import type { Rulebook } from '../../rulebook/rulebook'
 
@@ -18,7 +20,14 @@ import type { Rulebook } from '../../rulebook/rulebook'
  * bass are to be written, note against note. Score voices top to bottom: S, A, T, B — S given, the rest empty.
  */
 export const FOUR_PART = 'harmony.four-part'
-export type FourPartParams = { readonly chords: readonly Chord[] }
+export type FourPartParams = { readonly chords: readonly Chord[]; readonly key?: HKey }
+
+/**
+ * Melody harmonization (Rimsky-Korsakov § 13): a given soprano and its key; the chords are to be CHOSEN (I, IV, V) and
+ * the three lower voices written. Score voices S, A, T, B — S given.
+ */
+export const HARMONIZE = 'harmony.harmonize-melody'
+export type HarmonizeParams = { readonly key: HKey }
 
 export function checkFourPartTask(t: Task): string[] {
   const out = validateScore(t.score).filter((i) => i.severity === 'error').map((i) => `${i.code}: ${i.message}`)
@@ -40,7 +49,11 @@ export function chordSpans(t: Task<FourPartParams>) {
   return notesOf(t.score.voices[0]).map((n, k) => ({ at: toQuarters(n.onset), end: toQuarters(n.onset) + toQuarters(n.duration), chord: t.params.chords[k] }))
 }
 
-export function fourPartModel(t: Task<FourPartParams>, rb: Rulebook): CspModel {
+/** Rules a search may prune with: the hard ones only (soft rules rank answers, they never cut the search). */
+const hardOnly = (rb: Rulebook, rules: typeof HARMONY_RULES) => rules.filter((r) => rb.rules.find((x) => x.id === r.id)?.severity !== 'soft')
+
+/** `all`: keep the soft rules too (validation judges them; a search must not). */
+export function fourPartModel(t: Task<FourPartParams>, rb: Rulebook, o: { choice?: boolean; all?: boolean } = {}): CspModel {
   const base = t.score
   const spans = chordSpans(t)
   const sop = notesOf(base.voices[0])
@@ -68,9 +81,9 @@ export function fourPartModel(t: Task<FourPartParams>, rb: Rulebook): CspModel {
     },
     write: (voice, at, c, n) => [{ kind: 'note', id: `${base.voices[voice].id}-h${n}`, onset: at, duration: c.duration, pitch: c.pitch }],
     views: (s: Score, partial): View[] => [{
-      label: 'Bốn bè', rules: HARMONY_RULES, frontier: frontierOf(s),
+      label: 'Bốn bè', rules: ((rs) => (o.all ? rs : hardOnly(rb, rs)))(o.choice ? [...HARMONY_RULES, ...CHOICE_RULES] : HARMONY_RULES), frontier: frontierOf(s),
       queries: textureQueries({
-        score: s, lines: [1, 2, 3], pairs, end, partial, chords: spans, consonance: () => cons,
+        score: s, lines: [1, 2, 3], pairs, end, partial, chords: spans, consonance: () => cons, key: t.params.key,
         role: ([a, b]) => ({ outer: a === 0 && b === 3, outerSomewhere: false, adjacentUpper: b === a + 1 && b <= 2 }),
       }),
     }],
@@ -81,4 +94,32 @@ export function fourPartModel(t: Task<FourPartParams>, rb: Rulebook): CspModel {
 export function fourPartTask(id: string, soprano: Seg[], chords: Chord[], key = { tonic: 0, alter: 0, minor: false }): Task<FourPartParams> {
   const score = fromCounterpoint({ key, meter: { num: 4, den: 4 }, lines: [soprano, [], [], []], names: ['Soprano', 'Alto', 'Tenor', 'Bass'], roles: ['given', 'free', 'free', 'free'], id })
   return { id, type: FOUR_PART, domain: 'harmony', rulebook: { id: 'harmony.four-part.rimsky-korsakov-1886', version: '1' }, score, params: { chords } }
+}
+
+export function checkHarmonizeTask(t: Task): string[] {
+  const out = validateScore(t.score).filter((i) => i.severity === 'error').map((i) => `${i.code}: ${i.message}`)
+  const p = t.params as Partial<HarmonizeParams> | undefined
+  if (t.type !== HARMONIZE) out.push(`loại bài phải là ${HARMONIZE}`)
+  if (t.score.voices.length !== 4) out.push('cần bốn bè S, A, T, B')
+  if (!t.score.voices[0] || !notesOf(t.score.voices[0]).length) out.push('bè soprano (giai điệu) không có nốt')
+  if (t.score.voices.slice(1).some((v) => v.events.length)) out.push('alto, tenor, bass phải để trống')
+  if (!p?.key || typeof p.key.minor !== 'boolean') out.push('params.key: giọng của giai điệu')
+  return out
+}
+
+/** A harmonization task from a soprano line ("E5:4 | D5:4 | C5:4") in a key. */
+export function harmonizeTask(id: string, soprano: Seg[], k: HKey = { tonic: { letter: 0, alter: 0 }, minor: false }, meter: Meter = { num: 4, den: 4 }): Task<HarmonizeParams> {
+  const score = fromCounterpoint({ key: { tonic: k.tonic.letter, alter: k.tonic.alter, minor: k.minor }, meter, lines: [soprano, [], [], []], names: ['Soprano', 'Alto', 'Tenor', 'Bass'], roles: ['given', 'free', 'free', 'free'], id })
+  return { id, type: HARMONIZE, domain: 'harmony', rulebook: { id: 'harmony.four-part.rimsky-korsakov-1886', version: '1' }, score, params: { key: k } }
+}
+
+/** The diatonic triad on degree `d` of the key (minor = harmonic minor), built from repr/tonal. */
+export function triadOn(k: HKey, d: number): Chord {
+  const sc = scaleOf(k.tonic, k.minor ? 'harmonic-minor' : 'major')
+  const r = sc[d % 7]
+  return chordsFromSpellings([r, sc[(d + 2) % 7], sc[(d + 4) % 7]], r)[0]
+}
+/** How the rule-language path reads an unlabelled solution: one root-position triad per column, on the bass note's degree. */
+export function chordsOfSolution(s: Score, k: HKey): Chord[] {
+  return notesOf(s.voices[3]).map((n) => triadOn(k, (((n.pitch.letter - k.tonic.letter) % 7) + 7) % 7))
 }

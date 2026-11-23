@@ -26,7 +26,7 @@ const withVoice = (s: Score, v: number, pitches: string[]): Score => ({
 describe('thí điểm lĩnh vực thứ hai — hoà âm bốn bè trên bộ máy chung (tiêu chí vào Wave C)', () => {
   it('sổ luật: mọi luật có nguồn; số trang là trang bài thư viện đã trích từ Rimsky-Korsakov, đúng dòng của ý đó', () => {
     expect(auditRulebook(rb)).toEqual([])
-    const anchor: Record<string, string> = { 'h.chord-tones': 'Hợp âm ba gồm âm gốc', 'h.root-position': 'Tên thể đảo chỉ phụ thuộc', 'h.double-root': 'nhân đôi âm gốc', 'h.spacing': 'Xếp gần', 'h.parallels': 'quãng 5 và quãng 8 song song', 'h.augmented': 'quãng tăng' }
+    const anchor: Record<string, string> = { 'h.chord-tones': 'Hợp âm ba gồm âm gốc', 'h.root-position': 'Tên thể đảo chỉ phụ thuộc', 'h.double-root': 'nhân đôi âm gốc', 'h.spacing': 'Xếp gần', 'h.parallels': 'quãng 5 và quãng 8 song song', 'h.augmented': 'quãng tăng', 'h.upper-third': '§ 11 là quy tắc nền', 'h.second-relation': '§ 11 là quy tắc nền', 'h.primary-only': 'Phối hoà âm giai điệu', 'h.tonic-frame': 'Phối hoà âm giai điệu', 'h.leap-same-chord': 'Phối hoà âm giai điệu', 'h.repeat-change': 'Phối hoà âm giai điệu', 'h.strong-weak': 'Phối hoà âm giai điệu', 'h.bass-fourths': 'Phối hoà âm giai điệu', 'a.iv-v-adjacent': 'Phối hoà âm giai điệu', 'h.leading-tone': 'Phối hoà âm bè trầm', 'h.no-v-iv': 'Phối hoà âm bè trầm', 'p.final-tonic-no-fifth': 'Phối hoà âm bè trầm' }
     for (const c of rb.evidence.allCitations().filter((x) => x.locator)) {
       const rows = ARTICLE.filter((l) => l.includes(anchor[c.scope]) && l.includes('rimsky-korsakov-1886'))
       expect(rows.some((l) => l.includes(`rimsky-korsakov-1886, ${c.locator}`)), `${c.scope}: ${c.locator}`).toBe(true)

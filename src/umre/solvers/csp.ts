@@ -3,7 +3,9 @@ import { checkMultiVoiceTask, checkTwoVoiceTask, MULTI_VOICE, TWO_VOICE, type Mu
 import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION, counterpointRulebook } from '../rulebook/counterpoint'
 import { search } from '../search/search'
 import type { Task } from '../task'
-import { checkFourPartTask, FOUR_PART, fourPartModel, type FourPartParams } from '../domains/harmony/task'
+import { checkFourPartTask, checkHarmonizeTask, FOUR_PART, fourPartModel, HARMONIZE, type FourPartParams, type HarmonizeParams } from '../domains/harmony/task'
+import { harmonize, romanOf } from '../domains/harmony/harmonize'
+import { notesOf } from '../repr/score'
 import { HARMONY_RULEBOOK_ID, HARMONY_RULEBOOK_VERSION, harmonyRulebook } from '../rulebook/harmony'
 import type { Solver, SolverOutput, SolverStep } from '../orchestration/solver'
 
@@ -81,6 +83,34 @@ export const cspHarmonySolver: Solver = {
         { operation: 'search', output: { status: r.status, nodes: r.nodes, deadStates: r.deadStates, solutions: r.solutions.length } },
         ...(proof ? [{ operation: 'proof', output: proof }] : []),
         ...(r.blockers.length ? [{ operation: 'blockers', ruleIds: [...new Set(r.blockers.map((b) => b.rule))], output: r.blockers.map((b) => ({ rule: b.rule, bar: Math.floor(b.at / 4) + 1, count: b.count, version: b.view })), level: 'detailed' as const }] : []),
+      ],
+    }
+  },
+}
+
+/** Melody harmonization: chord-sequence enumeration (§ 13 rules) + the same shared search for the voicing. */
+export const harmonizeSolver: Solver = {
+  descriptor: {
+    ...cspHarmonySolver.descriptor,
+    id: 'umre.harmonize',
+    taskTypes: [HARMONIZE],
+    input: { schema: 'harmony.harmonize-melody/params@1', description: 'giai điệu soprano và giọng; hợp âm do bộ giải chọn trong I, IV, V' },
+    output: { schema: 'umre.score@1', description: 'tổng phổ bốn bè S-A-T-B, mỗi phương án một chuỗi hợp âm khác nhau trước' },
+    defaults: { timeMs: 10_000, maxSolutions: 6 },
+  },
+  checkInput: (t) => checkHarmonizeTask(t),
+  solve(task, ctx): SolverOutput {
+    const t = task as Task<HarmonizeParams>
+    const r = harmonize(t, harmonyRulebook(), ctx)
+    return {
+      status: r.status, proof: r.proof, reason: r.reason, solutions: r.solutions,
+      diagnostics: { candidates: r.candidates, sequences: r.sequences.map((s) => ({ chords: romanOf(s.degrees), status: s.status, nodes: s.nodes })), options: r.options },
+      steps: [
+        { operation: 'problem', output: { summary: `phối hoà âm giai điệu ${notesOf(t.score.voices[0]).length} nốt, ${t.params.key.minor ? 'thứ' : 'trưởng'}` } },
+        { operation: 'chord-options', ruleIds: ['h.primary-only'], output: r.options.map((o) => o.map((d) => romanOf([d])).join('/') || '∅') },
+        { operation: 'chord-sequences', ruleIds: ['h.tonic-frame', 'h.no-v-iv', 'h.leap-same-chord', 'h.leading-tone'], output: { candidates: r.candidates } },
+        ...r.sequences.map((s) => ({ operation: 'voicing', input: romanOf(s.degrees), output: { status: s.status, nodes: s.nodes }, level: 'detailed' as const })),
+        ...(r.proof ? [{ operation: 'proof', output: r.proof }] : []),
       ],
     }
   },

@@ -1,6 +1,12 @@
 import { runAnalysis } from './analysis/run'
 import type { AnalysisModule, AnalysisResult } from './analysis/types'
 import { counterpointCheck } from './domains/counterpoint/analysis'
+import { harmonyProgression } from './domains/harmony/analysis'
+import { harmonyTonal } from './domains/harmony/tonal'
+import { identify, type Identification } from './domains/harmony/identify'
+import { consequences, continuations, type Change, type Consequence, type Continuation } from './domains/harmony/reasoning'
+import type { HarmonizeParams } from './domains/harmony/task'
+import type { Spelling } from './repr/pitch'
 import { diagnose, generateExercise, nextNotes, type Diagnosis, type Exercise, type NextNote } from './domains/counterpoint/ops'
 import type { TwoVoiceParams } from './domains/counterpoint/task'
 import { createEngine } from './engine'
@@ -23,6 +29,9 @@ export type UmreRequest =
   | { readonly op: 'counterpoint.hints'; readonly task: Task<TwoVoiceParams>; readonly partial: Score | null; readonly timeMs: number }
   | { readonly op: 'counterpoint.diagnose'; readonly task: Task<TwoVoiceParams>; readonly timeMs: number; readonly iv?: number }
   | { readonly op: 'rulebook'; readonly ref: RulebookRef }
+  | { readonly op: 'harmony.identify'; readonly notes: readonly Spelling[]; readonly bass?: Spelling | null; readonly spelled?: boolean }
+  | { readonly op: 'harmony.continuations'; readonly task: Task<HarmonizeParams>; readonly prefix: readonly number[] }
+  | { readonly op: 'harmony.consequences'; readonly task: Task; readonly solution: Score; readonly change: Change }
 
 export type RulebookView = {
   readonly ref: RulebookRef
@@ -39,11 +48,14 @@ export type UmreResponse =
   | { readonly op: 'counterpoint.hints'; readonly result: NextNote[] }
   | { readonly op: 'counterpoint.diagnose'; readonly result: Diagnosis }
   | { readonly op: 'rulebook'; readonly result: RulebookView | null }
+  | { readonly op: 'harmony.identify'; readonly result: Identification }
+  | { readonly op: 'harmony.continuations'; readonly result: Continuation[] }
+  | { readonly op: 'harmony.consequences'; readonly result: Consequence }
 
 let engine: ReturnType<typeof createEngine> | null = null
 const getEngine = () => (engine ??= createEngine())
 
-const ANALYSIS: AnalysisModule[] = [counterpointCheck]
+const ANALYSIS: AnalysisModule[] = [counterpointCheck, harmonyTonal, harmonyProgression]
 /** Analysis modules by id (later phases register theirs here). */
 export function analysisModules(): readonly AnalysisModule[] {
   return ANALYSIS
@@ -79,6 +91,12 @@ export async function handle(req: UmreRequest, signal?: AbortSignal): Promise<Um
       return { op: req.op, result: nextNotes(req.task, req.partial, req.timeMs) }
     case 'counterpoint.diagnose':
       return { op: req.op, result: diagnose(req.task, req.timeMs, rulebookOf(req.task.rulebook), req.iv) }
+    case 'harmony.identify':
+      return { op: req.op, result: identify(req.notes, req.bass ?? null, { spelled: req.spelled }) }
+    case 'harmony.continuations':
+      return { op: req.op, result: continuations(req.task, req.prefix) }
+    case 'harmony.consequences':
+      return { op: req.op, result: consequences(req.task, req.solution, req.change, rulebookOf(req.task.rulebook)) }
     case 'rulebook': {
       const rb = e.rulebooks.get(req.ref)
       if (!rb) return { op: 'rulebook', result: null }
