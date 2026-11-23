@@ -36,10 +36,10 @@
 - **`suspension`** không tách riêng: lỗi nốt lưu báo dưới `dis-strong` / `dis-weak` (outcome `subsumed`).
 - **Vị trí ở biến thể**: `eventIds` chỉ điền cho nguyên thể; ở bản biến thể có dời thời gian (Ih) `location.at` là thời điểm trong bản đó.
 - **PROVEN_UNSAT không kiểm lại được độc lập** (không có phương án); tin vào bộ giải trong miền nó khai báo.
-- **Huỷ / hết giờ**: trong luồng chính, bộ giải đồng bộ chỉ tự dừng ở `timeMs`; huỷ thật (terminate) chỉ khi chạy qua `runtime/host.ts`. Trang phức điệu chưa dùng host này.
+- **Huỷ / hết giờ**: trong luồng chính, bộ giải đồng bộ chỉ tự dừng ở `timeMs`; huỷ thật (terminate) chỉ khi chạy qua `runtime/host.ts`. Trang phức điệu dùng worker riêng của nó (huỷ bằng terminate), lời giải đi qua `domains/counterpoint/page.ts`; chỉ phần hai bè — ba/bốn bè, canon, Phần IV chưa qua UMRE.
 - **Giải thích** là mẫu câu tiếng Việt cố định từ dữ liệu; "nhánh bị loại" chỉ là các `blockers` ở điểm xa nhất bộ giải tới, không phải toàn bộ cây tìm kiếm.
 - **Mã nguồn chưa xác minh**: ✱ và nốt đen chuẩn bị (quy ước người dạy, chưa có văn bản); độ mạnh phách (quy ước bộ giải).
-- Chưa có giao diện; chưa màn hình nào gọi `createEngine()` hay `api.ts`.
+- Chỉ trang phức điệu (hai bè: giải, sinh đề, chấm bài) dùng UMRE; các trang khác chưa.
 
 ## Phạm vi
 - Chưa màn hình nào dùng UMRE; các mô-đun cũ chạy như trước.

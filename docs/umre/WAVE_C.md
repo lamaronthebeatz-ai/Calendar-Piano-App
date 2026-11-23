@@ -15,7 +15,7 @@ Mọi phần app nói với UMRE bằng `handle(req)` với dữ liệu thuần;
 | `rulebook` | Lý thuyết, Nghiên cứu | các mục sổ luật theo phân loại + trích dẫn |
 
 Giải thích ba mức: `renderExplanation` (lời giải) và `renderFinding` (phân tích) — basic / technical / academic; mức academic chỉ in trích dẫn có trong kho bằng chứng.
-**Chưa màn hình nào gọi `api.ts`** (chỉ thị: không đổi hành vi giao diện, không làm UI demo). Trang phức điệu vẫn chạy worker cũ của nó.
+**Trang phức điệu dùng UMRE (23/11, Lamar đồng ý):** worker `solver.worker.ts` cho mọi lời giải và đáp án đề máy sinh qua `domains/counterpoint/page.ts` (bộ kiểm độc lập + xác nhận + xếp hạng); chỉ lời giải được xác nhận mới hiện, kèm dòng "được kiểm lại độc lập"; "Chấm bài của tôi" thêm kết luận của bộ kiểm độc lập (tải khi bấm). Trang vẫn dùng worker riêng (đã huỷ bằng terminate từ trước), không dùng `UmreHost`. Các trang khác chưa gọi UMRE.
 
 ## GĐ8 — Phức điệu thành bộ giải lĩnh vực chính thức
 1. **Đã làm:** sổ luật chuẩn hoá (tên, logic đánh giá — luật ngôn ngữ luật + bộ kiểm nào, trọng số luật mềm, `permitted` ×3, `ambiguous` ×6 từ mục "Còn mở", phân loại hard / recommendation / permitted / exception / ambiguous); ca vi phạm viết tay cho cả 18 luật bắt buộc; bảng phủ công khai sinh từ test (`COVERAGE.md`); hợp đồng phân tích; mô-đun `counterpoint.check`; sinh đề / gợi ý / chẩn đoán qua UMRE (đáp án của máy sinh được bộ kiểm độc lập chấm lại); xếp hạng lời giải hợp lệ theo luật mềm tách khỏi heuristic và ràng buộc; worker có huỷ thật.
@@ -28,8 +28,8 @@ Giải thích ba mức: `renderExplanation` (lời giải) và `renderFinding` (
 8. **Hiệu năng:** sinh đề "dễ" ~3 s; gợi ý < 0,1 s; chẩn đoán ~2 s; worker khởi động < 0,3 s.
 9. **Giới hạn:** chẩn đoán/gợi ý chỉ hai bè (như trang phức điệu); test worker chạy trên node, chưa chạy trong trình duyệt thật.
 10. **Rủi ro:** `esbuild` là phụ thuộc gián tiếp (qua vite) — test worker cần nó.
-11. **Chưa làm:** nối trang phức điệu sang `UmreHost` (đổi hành vi UI — cần Lamar).
-12. **Nhãn:** IMPLEMENTED AND TESTED (tích hợp UI: NOT IMPLEMENTED theo chỉ thị).
+11. **Đã nối trang** (sau khi Lamar đồng ý): xem trên. Việc nối lộ ra một lỗi thật — bộ kiểm luật UMRE không áp ngoại lệ "nốt đen chuẩn bị" ở các bản biến thể, nên giữ lại mọi lời giải đúng của đề mẫu; đã sửa, có test hồi quy (`page.test.ts`) và E2E.
+12. **Nhãn:** IMPLEMENTED AND TESTED, INTEGRATED (trang phức điệu hai bè).
 
 ## GĐ9 — Hoà âm cổ điển
 1. **Đã làm:** nhận diện hợp âm từ nốt có cách viết (ba, bảy, thể đảo, thiếu quãng 5, nốt ngoài, cách viết lại trùng âm, mơ hồ khi không có cách viết); sổ luật hoà âm thêm 10 luật có trang Rimsky-Korsakov (§ 11 tr. 21; § 13 tr. 23; tr. 24, 25) — 7 bắt buộc, 3 khuyến nghị — ở **cả** ngôn ngữ luật lẫn bộ kiểm viết tay; bài mới "phối hoà âm giai điệu" + bộ giải `umre.harmonize` (liệt kê chuỗi I/IV/V hợp luật, xếp bè bằng tìm kiếm chung, nhiều phương án = các chuỗi khác nhau, chứng minh vô nghiệm); suy luận: quan hệ – âm chung – kiểu nối, chức năng T/S/D, nước đi tiếp, hệ quả khi sửa một nốt; adapter `/analyze` (`harmony.tonal`) tách dữ kiện (âm vang) khỏi diễn giải (gốc, giọng, chức năng, kết), độ tin cậy kèm cơ sở, cách đọc khác từ bộ nhận diện; `harmony.progression` giải thích + kiểm luật một bài bốn bè.

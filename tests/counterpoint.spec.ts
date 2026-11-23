@@ -40,6 +40,8 @@ test('giải phức điệu: bế tắc ở ô 5, cách gỡ giữ nguyên đề
   await page.getByLabel(/Cho phép nốt đen làm nốt chuẩn bị/).check()
   await page.locator('.cp-actions .cp-go').first().click()
   await expect(page.locator('.cp-sols button').first()).toBeVisible({ timeout: 25_000 })
+  // every answer shown was re-judged by UMRE's independent checkers in the worker
+  await expect(page.locator('.cp-umre')).toContainText('kiểm lại độc lập')
   // the Iv belongs to the nguyên thể: drawn are NT, BT1, BT2 — no separate "Iv −7" staff
   await expect(page.locator('.cp-ver')).toHaveCount(3)
   await expect(page.locator('.cp-ver-head b').first()).toHaveText('Nguyên thể · Iv −7')
@@ -65,6 +67,9 @@ test('sinh đề có lời giải, luyện từng nốt với gợi ý', async (
   await expect(ok).toBeVisible({ timeout: 15_000 })
   await ok.click()
   await expect(page.locator('.cp-live p')).toContainText('✓')
+  // grading a line still being written: UMRE's independent checkers say it is not finished
+  await page.getByRole('button', { name: 'Chấm bài của tôi' }).click()
+  await expect(page.locator('.cp-umre')).toContainText('bài chưa viết đủ', { timeout: 15_000 })
 })
 
 test('nhập nốt thăng / giáng / bình cho nốt kế tiếp', async ({ page }) => {

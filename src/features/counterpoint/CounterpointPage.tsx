@@ -217,6 +217,7 @@ export function CounterpointPage() {
   const [slots, setSlots] = useState<{ label: string; start: number }[]>([])
   const [busy, setBusy] = useState<Req['kind'] | null>(null)
   const [result, setResult] = useState<SolveResult | null>(null)
+  const [umreGrade, setUmreGrade] = useState<import('../../umre/domains/counterpoint/page').PageGrade | null>(null)
   const [rescued, setRescued] = useState<Rescue | null>(null)
   const [hintList, setHintList] = useState<Hint[] | null>(null)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -228,6 +229,7 @@ export function CounterpointPage() {
   const [boxRef, width] = useWidth()
   const worker = useRef<Worker | null>(null)
   const stopPlay = useRef<(() => void) | null>(null)
+  const gradeSeq = useRef(0)
 
   useEffect(() => {
     try {
@@ -288,6 +290,8 @@ export function CounterpointPage() {
     setRescued(null)
     setHintList(null)
     setGraded(null)
+    gradeSeq.current++
+    setUmreGrade(null)
     if (typeof editing === 'number') {
       setSt((s) => {
         const lines = [s.mine, ...(s.extra ?? [])]
@@ -319,6 +323,8 @@ export function CounterpointPage() {
     setResult(null)
     setRescued(null)
     setGraded(null)
+    gradeSeq.current++
+    setUmreGrade(null)
     setPick(0)
     run<SolveResult>({ kind: 'solve', problem, timeMs: 15000 }, setResult)
   }
@@ -354,11 +360,22 @@ export function CounterpointPage() {
       setRescued(null)
       setHintList(null)
       setGraded(null)
+      gradeSeq.current++
+      setUmreGrade(null)
+    gradeSeq.current++
+    setUmreGrade(null)
       setShowAnswer(false)
       setEditing('mine')
     })
 
-  const grade = () => setGraded(check(problem, st.mine, Infinity))
+  const grade = () => {
+    setGraded(check(problem, st.mine, Infinity))
+    setUmreGrade(null)
+    // the independent re-check, loaded on demand so the page's first load does not carry UMRE
+    const p = problem, mine = st.mine, seq = ++gradeSeq.current
+    // a late answer for a line that has since changed is dropped
+    void import('../../umre/domains/counterpoint/page').then((m) => seq === gradeSeq.current && setUmreGrade(m.gradeForPage(p, mine)))
+  }
   const mineEnd = st.mine.length ? st.mine[st.mine.length - 1].start + st.mine[st.mine.length - 1].dur : 0
   const live = useMemo(() => (st.mine.length && st.given.length ? check(problem, st.mine, mineEnd) : null), [problem, st.mine, mineEnd, st.given.length])
   const answerOk = st.origin === 'gen' && !!st.answer && st.answerSig === sigOf(st)
@@ -696,6 +713,11 @@ export function CounterpointPage() {
                 </button>
               ))}
             </div>
+            {result!.umre && (
+              <p className="cp-note cp-umre">
+                ✓ {result!.umre.confirmed} lời giải được kiểm lại độc lập ({result!.umre.checkers.join(', ')}) — bộ kiểm không phải của chính máy tìm; xếp theo điểm trừ luật mềm.
+              </p>
+            )}
             <Versions list={shown} id="s" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} />
             <Remarks report={sol.report} meter={meter} title="Ghi chú (luật mềm, không bắt buộc)" />
           </div>
@@ -706,6 +728,13 @@ export function CounterpointPage() {
             <h2>{graded.hard.length ? `Bài của bạn có ${graded.hard.length} lỗi` : 'Bài của bạn đúng mọi luật bắt buộc'}</h2>
             <Versions list={mineVersions} id="m" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} bad={(v) => badOf(graded, v)} />
             <Remarks report={graded} meter={meter} title="Danh sách lỗi" hard />
+            {umreGrade && (
+              <p className="cp-note cp-umre" data-status={umreGrade.status}>
+                Kiểm lại độc lập ({umreGrade.checkers.join(', ')}):{' '}
+                {umreGrade.status === 'VALID' ? 'đúng mọi luật bắt buộc' : umreGrade.status === 'INVALID' ? `sai ${umreGrade.rules.join(', ')}` : umreGrade.status === 'INCOMPLETE' ? 'bài chưa viết đủ' : 'chưa kết luận được'}
+                {umreGrade.disputed.length > 0 && ` — các bộ kiểm bất đồng: ${umreGrade.disputed.join('; ')}`}
+              </p>
+            )}
           </div>
         )}
         </>}
@@ -828,6 +857,13 @@ function Outcome({ result, meter, domain, onRescue, onMore, busy, searching, res
             ? 'Hai bộ kiểm luật không thống nhất về một lời giải, nên máy không công nhận nó và cũng không kết luận vô nghiệm. Hãy báo lỗi này.'
             : 'Máy hết thời gian trước khi duyệt hết các khả năng: chưa tìm thấy lời giải nhưng cũng chưa chứng minh được là không có.'}
       </p>
+      {!!result.umre?.rejected.length && (
+        <ul className="cp-note">
+          {result.umre.rejected.map((x, i) => (
+            <li key={i}>{x}</li>
+          ))}
+        </ul>
+      )}
       {result.stars?.map((s, i) => (
         <p key={i}>
           <b>✱ {place(meter, s.t)}:</b> {s.reason}

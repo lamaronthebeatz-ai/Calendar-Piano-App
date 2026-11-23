@@ -309,7 +309,7 @@ export const twoVoiceValidator: Validator = {
     const ev = evaluate(COUNTERPOINT_RULES, textureQueries({ score: solution, lines: [ci], pairs: [[0, 1]], end, consonance: () => cons, stars: p.stars, starsOnly: p.starsOnly }), new Set(p.quarterPrep ? ['quarter-prep'] : []))
     for (const h of ev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: ORIGINAL, voices: [...h.item.voices] })
     for (const vt of twoVoiceVersions(solution, p.versions)) {
-      const vev = evaluate(VERSION_RULES, textureQueries({ score: vt.score, lines: [], pairs: [[0, 1]], end: minR(vt.end, end), consonance: () => cons, inVersion: true }), new Set())
+      const vev = evaluate(VERSION_RULES, textureQueries({ score: vt.score, lines: [], pairs: [[0, 1]], end: minR(vt.end, end), consonance: () => cons, inVersion: true }), new Set(p.quarterPrep ? ['quarter-prep'] : []))
       for (const h of vev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: vt.label, voices: [0, 1] })
     }
     const rep = check(p, cp, total)

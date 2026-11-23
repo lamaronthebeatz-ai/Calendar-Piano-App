@@ -104,3 +104,6 @@ Sổ luật UMRE ghi các mục dưới thành `ambiguous` (áp cách đọc hi�
 - `p.weak-suspension` tr. 11–12 · `p.escape-leap` tr. 11–12 · `p.ornamented-resolution` tr. 11 (Thí dụ 30–31)
 - `a.suspension-intervals` tr. 10 · `a.many-perfects` tr. 9 · `a.repeat-count` tr. 7 · `a.rhythm-change-beats` tr. 8 · `a.rests` tr. 7 · `a.cross-relation` (chưa có trang)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.
+
+## UMRE trên trang (23/11)
+`solver.worker.ts`: `solve` → `confirmForPage` (`src/umre/domains/counterpoint/page.ts`) — lời giải qua bộ kiểm độc lập UMRE, chỉ giữ cái được xác nhận bởi bộ kiểm mà `solveMany` không chạy (umre-native, umre-rules), xếp theo trọng số luật mềm; lời giải bị giữ lại → `disputed` + lý do (`.cp-fail` liệt kê). `generate` → `generateConfirmed` (đáp án máy sinh phải được xác nhận). "Chấm bài" gọi `gradeForPage` bằng `import()` động (không nặng thêm lúc mở trang), dòng `.cp-umre`. Lỗi đã gặp khi nối: ngoại lệ `quarter-prep` không bật ở bản biến thể trong `validation/counterpoint.ts`.
