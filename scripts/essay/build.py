@@ -114,11 +114,18 @@ def body(md):
         if re.match(r'(- |\d+\. )',l):
             flush(); ordered=bool(re.match(r'\d',l)); items=[]
             first=re.match(r'(\d+)\. ',l)
-            while i<len(lines) and re.match(r'(- |\d+\. )',lines[i]): items.append(re.sub(r'^(- |\d+\. )','',lines[i])); i+=1
+            subs=[]  # per item: indented sub-bullets and continuation lines (one level of nesting)
+            while i<len(lines):
+                if re.match(r'(- |\d+\. )',lines[i]): items.append(re.sub(r'^(- |\d+\. )','',lines[i])); subs.append([]); i+=1
+                elif items and re.match(r' {2,}\S',lines[i]): subs[-1].append(lines[i].strip()); i+=1
+                else: break
             tag='ol' if ordered else 'ul'
             # a numbered list split by subheadings (references by language) keeps counting
             start=f' start="{first.group(1)}"' if first and first.group(1)!='1' else ''
-            out.append(f'<{tag}{start}>'+''.join(f'<li>{inline(x)}</li>' for x in items)+f'</{tag}>'); continue
+            def sub(ls):
+                bul=[x[2:] for x in ls if x.startswith('- ')]; txt=[x for x in ls if not x.startswith('- ')]
+                return (''.join(f'<br>{inline(t)}' for t in txt))+(('<ul>'+''.join(f'<li>{inline(b)}</li>' for b in bul)+'</ul>') if bul else '')
+            out.append(f'<{tag}{start}>'+''.join(f'<li>{inline(x)}{sub(ss)}</li>' for x,ss in zip(items,subs))+f'</{tag}>'); continue
         para.append(l.strip()); i+=1
     flush(); return '\n'.join(out)
 
@@ -139,6 +146,8 @@ toch=''.join(f'<li class="l{lv}"><a href="#{i}"><span class="t">{t}</span><span 
 tpl=open(os.path.join(HERE,'template.html')).read()
 cover.setdefault('PAGED', f'{REPO}/node_modules/pagedjs/dist/paged.polyfill.js')
 for k,v in cover.items(): tpl=tpl.replace('{{'+k+'}}',v)
+# a cover that is not a student's essay (a manual): its own lines in place of student / major / level
+if 'META_HTML' in cover: tpl=re.sub(r'<div class="meta">.*?</div>', '<div class="meta">'+cover['META_HTML']+'</div>', tpl, count=1, flags=re.S)
 open(os.path.join(OUT,'essay.html'),'w').write(tpl.replace('{{TOC}}',toch).replace('{{BODY}}','\n'.join(chap)))
 txt=re.sub(r'<table.*?</table>|<figure.*?</figure>','',''.join(chap),flags=re.S)
 print('headings',len(toc),'words(no tables/figures)',len(re.sub(r'<[^>]+>',' ',txt).split()))

@@ -8,6 +8,7 @@
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
+- **Sổ tay ứng dụng (manual)** (23/11): 50 trang PDF, 14 phần — route, kiến trúc, dữ liệu – lưu trữ, hệ thống liên kết, build, kiểm thử – CI, hướng dẫn từng khu vực, bảo mật, bảo trì nội dung, quy tắc kỹ thuật, giới hạn, hướng phát triển (6 nhóm, 4 giai đoạn). Nguồn `docs/manual/` — **cập nhật khi thêm route, khoá lưu trữ, khu vực mới**.
 - **Tiểu luận giới thiệu app** (18/11): 73 trang PDF theo quy chuẩn TL-LV (Mở đầu, 8 chương, Kết luận, 34 tài liệu, 3 phụ lục, 25 ảnh chụp); nguồn `docs/essays/gioi-thieu-app/`, cách dựng ở `notes/workflow.md` § Tiểu luận. Chờ Lamar đọc và góp ý.
 - **Giải phức điệu — trình bày dạng Ih** (17/11): nguyên thể và biến thể chung một tổng phổ ba khuông I · I′ · II (hoặc I · II · II′) thẳng hàng từng ô như ví dụ sách; nút nghe Nguyên thể / Biến thể / Cả ba bè — `notes/counterpoint.md`.
 - **Hành trình: thử thách âm nhạc + hồ sơ** (17/11): mỗi chặng của 12 chương có một câu đố âm nhạc theo thời kỳ (neume, hexachord, bè trầm có số, thang âm, ngũ cung); thẻ người chơi hiện cấp/XP, bấm mở hồ sơ (kỹ năng, thành tích, thông thạo, tiến độ); tuyến điều tra thành dòng trong danh sách chặng — `notes/journey.md`. Chưa có: câu đố nghe (quãng, hợp âm bằng tai) trong chặng chính.
