@@ -111,9 +111,10 @@ const place = async (page: Page, name: string) => {
 }
 
 test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, kết luận cần chứng cứ, mở lại vẫn còn', async ({ page }) => {
-  // the whole arc through the UI: WebKit on CI ran out of the 120 s mid-dialogue (17/11)
-  test.slow(test.info().project.name.startsWith('webkit'))
+  // the whole arc through the UI: WebKit on CI ran out of the 120 s mid-dialogue (17/11). slow() triples the
+  // CURRENT timeout, so it must come after setTimeout — the other order left WebKit at 120 s (CI 18–23/11)
   test.setTimeout(120_000)
+  test.slow(test.info().project.name.startsWith('webkit'))
   await page.goto('/#/hanh-trinh?c=trung-co')
   await page.locator('.jr-stop-row.is-arc', { hasText: 'Bản thảo thất lạc' }).click()
   await expect(page.locator('.ar-objective')).toContainText('Bắt đầu')
