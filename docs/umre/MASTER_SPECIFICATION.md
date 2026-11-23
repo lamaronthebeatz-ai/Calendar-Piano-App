@@ -9,15 +9,17 @@ Nhãn: **IMPLEMENTED** có code · **TESTED** có test chạy thật · **INTEGR
 | Đợt | GĐ | Nội dung | Trạng thái |
 |---|---|---|---|
 | A | 1 | Biểu diễn âm nhạc thống nhất `src/umre/repr/` | IMPLEMENTED · TESTED · INTEGRATED (bộ chuyển đổi phức điệu, soạn nhạc, MusicXML, MIDI) |
-| A | 2 | Sổ luật | **Một phần**: hợp đồng tối thiểu `src/umre/rulebook/` + sổ luật phức điệu (dữ liệu, có nguồn) — làm trong Wave B vì GĐ5–7 cần mã luật và nguồn. Chưa có ngôn ngữ luật, chưa có bộ chạy luật chung. |
+| A | 2 | Sổ luật | **Chỉ khai báo** (rà soát 23/11): không có ngôn ngữ luật, không có bộ đánh giá — hợp đồng tối thiểu `src/umre/rulebook/` + sổ luật phức điệu (dữ liệu, có nguồn) — làm trong Wave B vì GĐ5–7 cần mã luật và nguồn. Chưa có ngôn ngữ luật, chưa có bộ chạy luật chung. |
 | A | 3 | Bộ máy ràng buộc chung | NOT IMPLEMENTED ở mức UMRE. Ràng buộc phức điệu nằm trong `features/counterpoint/rules.ts`. |
 | A | 4 | Tìm kiếm – tối ưu chung | NOT IMPLEMENTED ở mức UMRE. Dùng bộ giải chuyên ngành có sẵn (`solveMany`, `msolve`) qua adapter. |
-| B | 5 | Kiểm chứng độc lập `src/umre/validation/` | IMPLEMENTED · TESTED · INTEGRATED (phức điệu hai bè, ba – bốn bè) |
-| B | 6 | Giải thích, bằng chứng, truy vết `src/umre/explain/`, `src/umre/evidence/` | IMPLEMENTED · TESTED · INTEGRATED (phức điệu) |
-| B | 7 | Điều phối bộ giải `src/umre/orchestration/`, `src/umre/solvers/` | IMPLEMENTED · TESTED · INTEGRATED (hai bộ giải phức điệu) |
+| B | 5 | Kiểm chứng độc lập `src/umre/validation/` | IMPLEMENTED · TESTED · INTEGRATED — **độc lập một phần**: bộ kiểm chính (`verify.ts`) cũng là bộ bộ giải đã dùng; họ luật quãng nghịch chưa có xác nhận độc lập |
+| B | 6 | Giải thích, bằng chứng, truy vết `src/umre/explain/`, `src/umre/evidence/` | IMPLEMENTED · TESTED · INTEGRATED — truy vết dựng lại được quyết định, **không** dựng lại được quá trình tìm; "verified" = máy đối chiếu theo bảng kiểm toán, chưa có người duyệt |
+| B | 7 | Điều phối bộ giải `src/umre/orchestration/`, `src/umre/solvers/` | IMPLEMENTED · TESTED · INTEGRATED (hai bộ giải phức điệu) — hết giờ / huỷ vô hiệu với bộ giải đồng bộ |
 | C–D | 8–12 | (chưa có chỉ thị chi tiết) | NOT IMPLEMENTED |
 
 Vì sao làm GĐ5–7 khi GĐ2–4 chưa đủ: chỉ thị Wave B cho phép "chỉ sửa phần cần thiết". GĐ5–7 cần (a) mã luật ổn định có nguồn — đã làm bản tối thiểu; (b) một bộ tìm kiếm — dùng bộ giải phức điệu có sẵn, vốn đã có ba trạng thái valid/unsat/unknown và bộ kiểm độc lập. Không có bộ máy ràng buộc chung thì UMRE **chưa** giải được bài của lĩnh vực mới nếu lĩnh vực đó không tự mang bộ giải.
+
+**Rà soát 23/11:** `AUDIT_2026-11-23.md` — trạng thái từng tiêu chí, rủi ro R1–R8, thứ tự việc cần làm. Chưa sang Wave C.
 
 ## Nguyên tắc
 1. **Không bịa luật.** Biểu diễn không chứa phán đoán phụ thuộc trường phái; sổ luật lấy luật từ code đang chạy và số trang từ bảng kiểm toán, có test giữ.

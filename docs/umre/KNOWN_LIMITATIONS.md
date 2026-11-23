@@ -19,6 +19,7 @@
 - **Bảng tính hoà âm**: chỉ đổi tên nốt `{l, a}` ⇄ `Spelling`.
 
 ## Wave B (GĐ5–7)
+- **Vòng tròn kiểm chứng (rà soát 23/11):** bộ giải phức điệu đã chạy `verify.ts` trước khi trả phương án, nên `verify` không phải xác nhận mới cho phương án của bộ giải; họ luật quãng nghịch không có bộ kiểm độc lập với bộ giải. Không có tập đáp án chuẩn từ thí dụ giáo trình.
 - **GĐ2–4 chưa đủ**: sổ luật chỉ là dữ liệu + kiểm toán, không có ngôn ngữ luật hay bộ chạy luật chung; không có bộ máy ràng buộc / tìm kiếm chung. Lĩnh vực mới phải tự mang bộ giải và bộ kiểm.
 - **Một lĩnh vực**: chỉ phức điệu nghiêm khắc (hai bè; ba – bốn bè). Chưa có canon, hình thức phần IV, hoà âm cổ điển qua UMRE.
 - **Độc lập có giới hạn**: `verify.ts` dùng chung với mô-đun phức điệu kiểu dữ liệu và hàm dựng biến thể (`makeVersion`, `shiftLine` — phép dịch giọng chính xác); bộ kiểm UMRE dùng chung cách đổi bài (`toProblem`) với adapter bộ giải. `umre-native` chỉ phủ 9 luật và chỉ nguyên thể cho luật chiều dọc. Luật quãng nghịch (nốt lưu, nốt lướt, thêu…) chỉ có MỘT bộ kiểm độc lập (`verify`).
