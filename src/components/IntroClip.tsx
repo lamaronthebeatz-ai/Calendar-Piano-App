@@ -8,7 +8,7 @@ import { INTRO_KEY as KEY } from './introGate'
  * Lamar's rule: everyone watches it whole, with sound — no skip, no mute. Browsers refuse to start a video with sound
  * before the user has touched the page, so when the unmuted play() is refused a black screen asks for one tap, and
  * the clip then plays from the start. The only way past it without watching is a clip that cannot play at all
- * (offline — the clips are not precached — or a decoding error, or nothing loaded after LOAD_MS): then the lock
+ * (offline — the clips are not precached — or neither the H.264 nor the VP9 file decodes, or nothing loaded after LOAD_MS): then the lock
  * screen comes at once, so no one is locked out of the app. Shown once per app session.
  */
 const BASE = `${import.meta.env.BASE_URL}media/intro-`
@@ -78,14 +78,17 @@ export function IntroClip({ onLeave, onDone }: { onLeave: () => void; onDone: ()
       <video
         ref={video}
         className="intro-video"
-        src={`${BASE}${cut}.mp4`}
         poster={`${BASE}${cut}.webp`}
         playsInline
         preload="auto"
         onEnded={() => finish(true)}
-        onError={() => finish(false)}
         aria-label="Đoạn mở đầu của ứng dụng"
-      />
+      >
+        {/* H.264 for Safari and most browsers; VP9 for builds without H.264 (Firefox / Chromium on Linux). An error on
+            the last source means neither could be played. */}
+        <source src={`${BASE}${cut}.mp4`} type="video/mp4" />
+        <source src={`${BASE}${cut}.webm`} type="video/webm" onError={() => finish(false)} />
+      </video>
       {needTap && (
         <button type="button" className="intro-tap" onClick={start}>
           Chạm để bắt đầu

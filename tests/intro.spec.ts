@@ -18,7 +18,7 @@ test('mở app: clip mở đầu đúng khổ, có tiếng, không bỏ qua đư
     .poll(async () => {
       if (await tap.isVisible().catch(() => false)) await tap.click().catch(() => {})
       return page.evaluate(() => { const v = document.querySelector('video'); return v ? !v.muted && v.currentTime > 0 : false })
-    }, { timeout: 15_000 })
+    }, { timeout: 15_000, message: 'clip không phát có tiếng' })
     .toBe(true)
   // still there half way through
   await page.waitForTimeout(5000)
@@ -35,4 +35,16 @@ test('clip không tải được (ngoại tuyến): màn mật khẩu hiện nga
   await page.goto('/')
   await expect(page.locator('.intro')).toHaveCount(0, { timeout: 4000 })
   await expect(page.locator('.lk-time')).toBeVisible()
+})
+
+test('trình duyệt không phát được mp4 (không có H.264): dùng bản webm, vẫn phát', async ({ page }) => {
+  await page.route('**/media/intro-*.mp4', (r) => r.abort())
+  await page.goto('/')
+  const tap = page.getByRole('button', { name: 'Chạm để bắt đầu' })
+  await expect
+    .poll(async () => {
+      if (await tap.isVisible().catch(() => false)) await tap.click().catch(() => {})
+      return page.evaluate(() => { const v = document.querySelector('video'); return v && v.currentTime > 0 ? v.currentSrc.split('.').pop() : '' })
+    }, { timeout: 15_000 })
+    .toBe('webm')
 })
