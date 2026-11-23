@@ -41,7 +41,7 @@ const RULE_CITES: Record<RuleId | 'no-gap', { cites: Cite[]; scope?: string; cav
   'strong-perfect': { cites: [P('tr. 9')] },
   unison: { cites: [P('tr. 9')] },
   'dis-strong': { cites: [P('tr. 10')] },
-  suspension: { cites: [P('tr. 10'), P('tr. 11')], caveat: 'Nốt lưu ở các quãng nghịch ngoài sơ đồ 2 đang được cho phép (sơ đồ không nhắc tới) — cần xác minh.' },
+  suspension: { cites: [P('tr. 10'), P('tr. 11')], caveat: 'Nốt lưu ở các quãng nghịch ngoài sơ đồ 2 đang được cho phép (sơ đồ không nhắc tới) — cần xác minh. Giải quyết có trang trí: nốt nghịch NHẢY (không đi liền bậc) sang nốt thuận với nốt tự do — nốt nhảy là nốt đen như ở cả hai thí dụ 30–31 — rồi xuống liền bậc; bè tự do đứng yên cho tới lúc giải quyết.' },
   'dis-weak': { cites: [P('tr. 11–12')], caveat: 'Nốt lưu ở phách nhẹ (phách 2 của nhịp 2/2) được chấp nhận vì giáo trình nói quãng nghịch phách mạnh "chủ yếu" là nốt lưu; giữa hai phách chỉ chấp nhận nốt lướt, thêu, sớm, thoát. Nốt sớm phải đúng cao độ của nốt sau và đến bằng liền bậc (sách chỉ nêu nốt thoát là dạng có bước nhảy). Cách hiểu của người biên soạn — cần xác minh.' },
   'upper-neighbor': { cites: [P('tr. 11–12')] },
   'weak-form': { cites: [P('Thí dụ 25–28', 'partially-verified', 'chỉ thấy trong thí dụ, không thành chữ')] },

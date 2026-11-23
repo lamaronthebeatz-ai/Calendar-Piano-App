@@ -1,3 +1,5 @@
+import type { ConsonanceDef } from '../repr/texture'
+import type { Rulebook } from '../rulebook/rulebook'
 import { abs, and, c, eq, ge, le, lt, ne, not, oneOf, or, sign, v, type Expr, type RuleDef } from './lang'
 
 /**
@@ -98,3 +100,13 @@ export const COUNTERPOINT_RULES: RuleDef[] = [
   { id: 'star', query: 'pair.verticals', when: eq(C('star'), c(true)), require: eq(C('cons'), c('dissonant')) },
   { id: 'star-extra', query: 'pair.verticals', when: and(eq(C('starsOnly'), c(true)), eq(C('level'), c(3)), eq(C('cons'), c('dissonant'))), require: eq(C('star'), c(true)) },
 ]
+
+/** Rules judged in every version (vertical ones; the ✱ convention belongs to the original only). */
+export const VERSION_RULES = COUNTERPOINT_RULES.filter((r) => r.query.startsWith('pair.') && !r.id.startsWith('star'))
+
+/** The rulebook's consonance table (def.dissonance); the rules cannot run without it. */
+export function consonanceOf(rb: Rulebook): ConsonanceDef {
+  const d = rb.definitions.find((x) => x.id === 'def.dissonance')?.data as ConsonanceDef | undefined
+  if (!d?.perfect || !d.imperfect) throw new Error(`sổ luật ${rb.id} không có bảng quãng thuận (def.dissonance.data)`)
+  return d
+}

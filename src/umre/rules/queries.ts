@@ -24,6 +24,8 @@ export type TextureContext = {
   readonly starsOnly?: boolean
   /** the texture is a VERSION of the combination (allowances the book makes for versions only) */
   readonly inVersion?: boolean
+  /** the texture is still being written (search): items whose facts need notes not written yet carry `pending: true` */
+  readonly partial?: boolean
 }
 
 const q = (r: Rational) => toQuarters(r)
@@ -75,7 +77,7 @@ export function textureQueries(ctx: TextureContext): Queries {
       ctx.lines.map((i) => {
         const evs = s.voices[i].events
         const endsAt = evs.length ? Math.max(...evs.map((e) => q(e.onset) + q(e.duration))) : 0
-        return { at: endsAt, voices: [i], facts: { endsAt, pieceEnd: q(ctx.end) } }
+        return { at: endsAt, voices: [i], facts: { endsAt, pieceEnd: q(ctx.end), pending: !!ctx.partial } }
       }),
     'line.segments': () =>
       ctx.lines.flatMap((i) =>
@@ -164,11 +166,13 @@ function dissonances(ctx: TextureContext, p: readonly [number, number], vs: Vert
       level: level(ctx, x.at), number, held, crossed, struckU: x.hitU, struckL: x.hitL, inVersion: !!ctx.inVersion,
       prevConsonant: k > 0 && cons(vs[k - 1]) !== 'dissonant', nextConsonant: k + 1 < vs.length && cons(vs[k + 1]) !== 'dissonant',
     }
+    let complete = true
     if (held !== 'none') {
       const hv = heldVoice === 'upper' ? p[0] : p[1]
       const h = heldVoice === 'upper' ? x.u : x.l
       const a1 = nextOf(sn[hv], h)
       const a2 = a1 && nextOf(sn[hv], a1)
+      complete = !!(a1 && a2)
       const hEnd = q(h.onset) + q(h.duration)
       Object.assign(facts, {
         prepDur: q(x.at) - q(h.onset), restDur: hEnd - q(x.at),
@@ -179,19 +183,24 @@ function dissonances(ctx: TextureContext, p: readonly [number, number], vs: Vert
         passingResolution: !!(a1 && a2 && d(h, a1) === -1 && d(a1, a2) === -1 && (cons(vAt(a1.onset)) ?? 'dissonant') === 'dissonant' && (cons(vAt(a2.onset)) ?? 'dissonant') !== 'dissonant'),
         freeStrikesBefore: vs.some((y) => q(y.at) > q(x.at) && q(y.at) < hEnd),
         // "nhảy sang nốt thuận với nốt tự do" (tr. 13): the free voice holds still from the dissonance until the resolution
-        ornamented: !!(a1 && a2 && d(h, a1) !== -1 && !vs.some((y) => q(y.at) > q(x.at) && q(y.at) < q(a2.onset) && (y.hitU && y.hitL ? true : heldVoice === 'upper' ? y.hitL : y.hitU)) && (cons(vAt(a1.onset)) ?? 'dissonant') !== 'dissonant' && diatonic(a2.pitch) === diatonic(h.pitch) - 1 && (cons(vAt(a2.onset)) ?? 'dissonant') !== 'dissonant'),
+        // "nốt nghịch được nhảy sang một nốt khác" — a leap, not a step
+        // and the leap note is a quarter: both of the book's examples (Thí dụ 30–31; audit table 17/11, "nốt đen: theo thí dụ")
+        ornamented: !!(a1 && a2 && Math.abs(d(h, a1)) >= 2 && q(a1.duration) === 1 && !vs.some((y) => q(y.at) > q(x.at) && q(y.at) < q(a2.onset) && (y.hitU && y.hitL ? true : heldVoice === 'upper' ? y.hitL : y.hitU)) && (cons(vAt(a1.onset)) ?? 'dissonant') !== 'dissonant' && diatonic(a2.pitch) === diatonic(h.pitch) - 1 && (cons(vAt(a2.onset)) ?? 'dissonant') !== 'dissonant'),
       })
     }
     for (const [side, struck, note, vi] of [['u', x.hitU, x.u, p[0]], ['l', x.hitL, x.l, p[1]]] as const) {
       if (!struck) continue
       const pr = prevOf(sn[vi], note)
       const nx = nextOf(sn[vi], note)
+      if (!nx) complete = false
       facts[`${side}In`] = pr ? d(pr, note) : null
       facts[`${side}Out`] = nx ? d(note, nx) : null
       facts[`${side}Same`] = !!nx && midi(nx.pitch) === midi(note.pitch)
       // this note is the step-down resolution of a note held into the previous (dissonant) vertical
       if (k > 0 && pr && q(pr.onset) < q(vs[k - 1].at) && d(pr, note) === -1) facts.afterSuspension = true
     }
+    // while writing: the facts above may change once the next vertical or the held voice's next notes exist
+    if (ctx.partial) facts.pending = k + 1 >= vs.length || !complete
     out.push({ at: q(x.at), voices: [...p], ids: [...x.u.ids, ...x.l.ids], facts })
   })
   return out

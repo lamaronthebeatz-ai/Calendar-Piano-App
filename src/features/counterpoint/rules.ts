@@ -35,6 +35,8 @@ export type Problem = {
    *  voice is forbidden; `hiddenHard` — similar motion into a perfect consonance forbidden outright (complex
    *  counterpoint: a pair that is the outer pair in some version) */
   pair?: { fourthOk?: boolean; outer?: boolean; hiddenHard?: boolean }
+  /** this pair belongs to a VERSION of a three- or four-voice combination (allowances for versions apply) */
+  inVersion?: boolean
 }
 
 export type RuleId =
@@ -163,7 +165,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (!u || !l) continue
       ons.push({ t, up: u, lo: l, atkUp: upAt.has(t), atkLo: loAt.has(t), iv: interval(u.p, l.p) })
     }
-    const isNT = isOriginal(v)
+    const isNT = isOriginal(v) && !p.inVersion
     // a ✱ where neither voice sounds a new note cannot hold a dissonance
     if (isNT) for (const t of p.stars) if (t < H && t >= from && !ons.some((o) => o.t === t)) add('star', t, v.label, 'không có nốt nào vào ở chỗ ✱')
     const nextOnset = (i: number) => ons[i + 1]
@@ -283,12 +285,13 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
         if (cons(res.iv)) return 'ok'
         // giải quyết lướt: the resolution falls on a dissonance in this version and passes on by step to a consonance
         // (doi-vi-chuyen-dong-chieu-doc, nguyên tắc 3)
-        if (after.dur > 2) return 'nốt giải quyết rơi vào quãng nghịch'
+        if (after.dur > 2 || isNT) return 'nốt giải quyết rơi vào quãng nghịch'
         return thenAt(after.p.step - 1, 'nốt giải quyết rơi vào quãng nghịch và không giải quyết lướt được')
       }
       // giải quyết có trang trí: the dissonant note first leaps to a note consonant with the free note, then goes down
       // to the step below it (doi-vi-don-gian-hai-be §3c, cách 2)
-      if (!cons(res.iv) || after.dur > 1) return 'nốt lưu phải giải quyết xuống liền bậc'
+      // "nhảy sang một nốt khác" (tr. 13; Thí dụ 31: a third down, then up to the resolution) — a step is not a leap
+      if (!cons(res.iv) || after.dur > 1 || Math.abs(after.p.step - h.p.step) < 2) return 'nốt lưu phải giải quyết xuống liền bậc'
       return thenAt(h.p.step - 1, 'nốt lưu phải giải quyết xuống liền bậc')
     }
 
@@ -302,7 +305,8 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       if (!a || a.start + a.dur !== x.start) return 'nốt nghịch không có nốt đứng trước'
       // a dissonance just before is allowed only when it is the suspension this note resolves by passing on
       const prev = ons[i - 1]
-      const passingResolution = !cons(prev.iv) && a.start < prev.t && x.p.step === a.p.step - 1
+      // giải quyết lướt is allowed in versions only (doi-vi-chuyen-dong-chieu-doc, nguyên tắc 3)
+      const passingResolution = !isNT && !cons(prev.iv) && a.start < prev.t && x.p.step === a.p.step - 1
       if (!cons(prev.iv) && !passingResolution) return 'trước quãng nghịch phải là quãng thuận'
       const D = x.p.step - a.p.step
       if (Math.abs(D) !== 1) return 'nốt nghịch phải đến bằng liền bậc'
@@ -317,7 +321,7 @@ export function check(p: Problem, cp: Seg[], horizon: number, stopAtHard = false
       const form = (kind: 'pass' | 'other') => {
         if ((kind === 'other' && (st === 2 || x.dur > 1)) || x.dur > 2) add('weak-form', o.t, v.label)
       }
-      const kind = E === D ? 'pass' : E === -D ? (D === -1 ? 'lower' : 'upper') : D === -1 && E === -2 ? 'cambiata' : E === 0 ? 'anticipation' : null
+      const kind = E === D ? 'pass' : E === -D ? (D === -1 ? 'lower' : 'upper') : D === -1 && E === -2 ? 'cambiata' : E === 0 && b.p.midi === x.p.midi ? 'anticipation' : null
       if (!kind) return 'không phải nốt lướt, thêu, sớm hay thoát'
       form(kind === 'pass' ? 'pass' : 'other')
       return kind === 'upper' ? 'upper' : 'ok'

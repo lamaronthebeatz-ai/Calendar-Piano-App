@@ -76,10 +76,10 @@ function outerSomewhere(mp: MProblem): Set<string> {
 }
 
 /** The two-voice problem for one pair of one version, with the given (upper) voice in the `given` slot. */
-function pairProblem(mp: MProblem, total: number, upper: Seg[], role: { fourthOk: boolean; outer: boolean; hiddenHard: boolean }): Problem {
+function pairProblem(mp: MProblem, total: number, upper: Seg[], role: { fourthOk: boolean; outer: boolean; hiddenHard: boolean }, inVersion = false): Problem {
   return {
     key: mp.key, meter: mp.meter, given: upper, givenIs: 'I', stars: [], versions: [], starsOnly: false,
-    total, noLine: true, pair: role,
+    total, noLine: true, pair: role, ...(inVersion ? { inVersion: true } : {}),
   }
 }
 
@@ -119,7 +119,7 @@ export function mcheck(mp: MProblem, lines: Seg[][], stopAtHard = false, only = 
       const role = { fourthOk: pr.fourthOk, outer: pr.outer, hiddenHard: hardOuter.has([pr.a, pr.b].sort().join(',')) }
       const f = Math.min(from[pr.a] ?? 0, from[pr.b] ?? 0)
       const together = Math.min(endOf(mp, total, pr.a), endOf(mp, total, pr.b))
-      const r = check(pairProblem(mp, together, moved[pr.a], role), moved[pr.b], Math.min(H, together), stopAtHard, f)
+      const r = check(pairProblem(mp, together, moved[pr.a], role, v.label !== 'Nguyên thể'), moved[pr.b], Math.min(H, together), stopAtHard, f)
       const label = `${v.label} · ${pr.name}`
       for (const x of r.hard) out.hard.push({ ...x, version: label })
       for (const x of r.soft) out.soft.push({ ...x, version: label })
@@ -150,7 +150,7 @@ export function mverify(mp: MProblem, lines: Seg[][]): string[] {
       const role = { fourthOk: pr.fourthOk, outer: pr.outer, hiddenHard: hardOuter.has([pr.a, pr.b].sort().join(',')) }
       const together = Math.min(endOf(mp, total, pr.a), endOf(mp, total, pr.b))
       const cut = (l: Seg[]) => l.filter((x) => x.start < together)
-      for (const f of verify(pairProblem(mp, together, cut(moved[pr.a]), role), cut(moved[pr.b]))) faults.push(`${v.label} · ${pr.name}: ${f.rule}@${f.t}`)
+      for (const f of verify(pairProblem(mp, together, cut(moved[pr.a]), role, v.label !== 'Nguyên thể'), cut(moved[pr.b]))) faults.push(`${v.label} · ${pr.name}: ${f.rule}@${f.t}`)
     }
   }
   return faults

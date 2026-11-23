@@ -74,8 +74,8 @@ describe('GĐ4 (bước 4) — đáp án chuẩn từ thí dụ giáo trình', (
   }
 })
 
-describe('bất đồng đã biết với verify.ts (bộ luật UMRE chặt hơn, theo câu chữ)', () => {
-  it('"nốt sớm" phải đúng cao độ nốt sau: Mi♯ → Mi không phải nốt sớm (verify.ts so theo tên nốt nên nhận)', () => {
+describe('bất đồng cũ với verify.ts, đã sửa ở mô-đun phức điệu (23/11) — hai bộ kiểm nay cùng kết luận', () => {
+  it('"nốt sớm" phải đúng cao độ nốt sau: Mi♯ → Mi không phải nốt sớm (verify.ts trước đây so theo tên nốt nên nhận)', () => {
     // a mutated solution observed in the differential run: F4 held into a fourth over C4 (bar 6), "resolving" to E♯4 —
     // an augmented third over C4 — then E4. E♯4 → E4 keeps the letter, not the pitch, so it is not an anticipation.
     const cp = 'G4:3 A4:1 | B4:1 C5:1 B4:2 | A4:3 B4:1 | C5:2 G4:2~ | G4:1 A4:1 F4:2~ | F4:2 E#4:1 E4:1'
@@ -84,6 +84,6 @@ describe('bất đồng đã biết với verify.ts (bộ luật UMRE chặt hơ
     const ours = evaluate(COUNTERPOINT_RULES.filter((r) => r.id === 'dis-weak'), queries(s), new Set()).hits.map((h) => h.item.at)
     expect(ours).toContain(22)
     const theirs = verify({ key: C, meter: { num: 2, den: 2 }, given: line(cf), givenIs: 'II', stars: [], versions: [], starsOnly: false }, line(cp)).filter((f) => f.rule === 'dissonance' && f.t === 22)
-    expect(theirs).toEqual([])
+    expect(theirs.length).toBe(1)
   })
 })

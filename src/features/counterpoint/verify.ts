@@ -105,7 +105,7 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
     const { upper, lower } = upperLower(v)
     const U = cellsOf(upper)
     const L = cellsOf(lower)
-    const nt = isOriginal(sp)
+    const nt = isOriginal(sp) && !p.inVersion
     const at = (cs: Cell[], t: number) => cs.find((c) => c.start <= t && t < c.end)
     const times = [...new Set([...U, ...L].map((c) => c.start))].filter((t) => t < end).sort((a, b) => a - b)
     type On = { t: number; u: Cell; l: Cell; hitU: boolean; hitL: boolean; j: ReturnType<typeof judge> }
@@ -147,8 +147,9 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
         const o2 = onAt(a2.start)
         return !!o2 && o2.j.consonant
       }
-      if (a1.p.step === h.p.step - 1) return r.j.consonant || (a1.end - a1.start <= 2 && twoStep(a1.p.step - 1))
-      return r.j.consonant && a1.end - a1.start === 1 && twoStep(h.p.step - 1)
+      // a passing resolution only in a version; an ornamented one leaps (Thí dụ 31), it does not step
+      if (a1.p.step === h.p.step - 1) return r.j.consonant || (!nt && a1.end - a1.start <= 2 && twoStep(a1.p.step - 1))
+      return r.j.consonant && a1.end - a1.start === 1 && Math.abs(a1.p.step - h.p.step) >= 2 && twoStep(h.p.step - 1)
     }
     /** The moving voice's note at onset k is a passing, neighbour, cambiata or anticipation note. */
     const ornament = (k: number, up: boolean): boolean => {
@@ -159,13 +160,14 @@ export function verify(p: Problem, cp: Seg[]): Fault[] {
       const b = nextCell(cs, x)
       if (k === 0 || !a || !b || k + 1 >= ons.length) return false
       const before = ons[k - 1]
-      const afterSuspension = !before.j.consonant && a.start < before.t && x.p.step === a.p.step - 1
+      const afterSuspension = !nt && !before.j.consonant && a.start < before.t && x.p.step === a.p.step - 1
       if (!before.j.consonant && !afterSuspension) return false
       if (!ons[k + 1].j.consonant) return false
       const D = x.p.step - a.p.step
       const E = b.p.step - x.p.step
       if (Math.abs(D) !== 1) return false
-      return E === D || E === -D || (D === -1 && E === -2) || E === 0
+      // an anticipation repeats the very note (pitch, not only letter)
+      return E === D || E === -D || (D === -1 && E === -2) || (E === 0 && b.p.midi === x.p.midi)
     }
 
     for (let k = 0; k < ons.length; k++) {

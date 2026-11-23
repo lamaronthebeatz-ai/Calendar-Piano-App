@@ -13,7 +13,7 @@ import type { Rulebook, RuleSpec } from '../rulebook/rulebook'
 import type { Task } from '../task'
 import { MULTI_VOICE, TWO_VOICE, toMProblem, toProblem, type MultiVoiceParams, type TwoVoiceParams } from '../domains/counterpoint/task'
 import { evaluate } from '../rules/lang'
-import { COUNTERPOINT_RULES } from '../rules/counterpoint'
+import { consonanceOf, COUNTERPOINT_RULES, VERSION_RULES } from '../rules/counterpoint'
 import { textureQueries } from '../rules/queries'
 import { multiVersions, twoVoiceVersions } from '../domains/counterpoint/versions'
 import type { ConsonanceDef } from '../repr/texture'
@@ -39,15 +39,7 @@ const CHECKERS: CheckerInfo[] = [
 ]
 /** Hard rules verify.ts judges (its fault names mapped below). `suspension` is judged inside the dissonance rules. */
 const VERIFY_HARD = new Set(['crossing', 'dis-strong', 'dis-weak', 'star', 'star-extra', 'parallel', 'leap', 'leap-response', 'leap3-response', 'repeat3', 'seg-place', 'tie', 'rhythm-change', 'end', 'perfects3', 'hidden-hard', 'no-gap'])
-/** The rulebook's consonance table (def.dissonance); the rule checker cannot run without it. */
-function consonanceOf(rb: Rulebook): ConsonanceDef {
-  const d = rb.definitions.find((x) => x.id === 'def.dissonance')?.data as ConsonanceDef | undefined
-  if (!d?.perfect || !d.imperfect) throw new Error(`sổ luật ${rb.id} không có bảng quãng thuận (def.dissonance.data)`)
-  return d
-}
 const RULE_IDS = new Set(COUNTERPOINT_RULES.map((r) => r.id))
-/** Rules judged in every version (vertical ones; the ✱ convention belongs to the original only). */
-const VERSION_RULES = COUNTERPOINT_RULES.filter((r) => r.query.startsWith('pair.') && !r.id.startsWith('star'))
 /** The independent checkers, what each covers, and which of them look at the original only. */
 const INDEPENDENT: { id: string; covers: (rule: string) => boolean; originalOnly: (rule: string) => boolean }[] = [
   { id: 'verify', covers: (r) => VERIFY_HARD.has(r), originalOnly: () => false },
