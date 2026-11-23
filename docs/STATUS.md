@@ -1,13 +1,14 @@
 # Trạng thái làm việc — đọc ĐẦU mỗi phiên, sửa CUỐI mỗi phiên
 
 > Sổ tay của Claude: đang ở đâu, chờ gì, làm gì tiếp. Ngắn, hiện tại; lịch sử thì để git log và `docs/roadmap.md`.
-> Cập nhật lần cuối: 16/11/2026.
+> Cập nhật lần cuối: 23/11/2026.
 
 ## Đang dở / chờ Lamar
 - **Hành trình Maximum Edition**: **Phase 0–9 xong (16/11)** — engine, save v2, lát cắt Trung cổ, kỹ năng – Codex – tranh luận – báo cáo nghiên cứu, độ khó – thử thách ngày – ôn luyện – NG+, QA; **Phase 7**: mỗi chương II–VI một tuyến điều tra (Trent – Palestrina; Clavier bình quân; Salieri; leitmotif; Goin' Home) + 2 dạng câu đố mới `figured` (bass số), `scale` (thang âm) — `docs/journey/REPORTS.md`. Chưa thử Safari thật. Đề xuất tiếp: thêm tuyến thứ hai cho mỗi chương hoặc Chương VII (thế kỷ XX, cần tiểu sử trước). Hành trình Việt Nam: chưa có bản thu nhạc cổ truyền tự do cho mọi cảnh (một số cảnh dùng "âm thanh minh hoạ").
 - Dấu kiểm PBKDF2 **màn chào: xong (13/11)**. Khu riêng tư (Lịch, Học viên) vẫn SHA-256 cũ — Lamar có thể gửi dấu kiểm thứ hai (nhập mã khu riêng tư ở Cài đặt → Bảo mật); nhận thì thay `HASH` ở `PrivateArea.tsx`. Không bao giờ hỏi hay ghi mã thật.
 
 ## Vừa xong
+- **UMRE GĐ1 — hệ biểu diễn âm nhạc thống nhất** (23/11): `src/umre/repr/` (thời gian hữu tỉ theo nốt tròn, cao độ – quãng – giọng – nhịp – tổng phổ – hợp âm – hình thức, kiểm hợp lệ có mã lỗi, lược đồ `umre.score` v1) + bộ chuyển đổi hai chiều phức điệu / soạn nhạc / MusicXML / MIDI / bảng tính; 61 test. Chưa màn hình nào dùng. Tài liệu `docs/umre/`. **Tiếp theo: GĐ2 sổ luật** (đề xuất cụ thể ở `docs/umre/IMPLEMENTATION_LOG.md` và báo cáo phiên).
 - **Sổ tay ứng dụng (manual)** (23/11): 50 trang PDF, 14 phần — route, kiến trúc, dữ liệu – lưu trữ, hệ thống liên kết, build, kiểm thử – CI, hướng dẫn từng khu vực, bảo mật, bảo trì nội dung, quy tắc kỹ thuật, giới hạn, hướng phát triển (6 nhóm, 4 giai đoạn). Nguồn `docs/manual/` — **cập nhật khi thêm route, khoá lưu trữ, khu vực mới**.
 - **Tiểu luận giới thiệu app** (18/11): 73 trang PDF theo quy chuẩn TL-LV (Mở đầu, 8 chương, Kết luận, 34 tài liệu, 3 phụ lục, 25 ảnh chụp); nguồn `docs/essays/gioi-thieu-app/`, cách dựng ở `notes/workflow.md` § Tiểu luận. Chờ Lamar đọc và góp ý.
 - **Giải phức điệu — trình bày dạng Ih** (17/11): nguyên thể và biến thể chung một tổng phổ ba khuông I · I′ · II (hoặc I · II · II′) thẳng hàng từng ô như ví dụ sách; nút nghe Nguyên thể / Biến thể / Cả ba bè — `notes/counterpoint.md`.

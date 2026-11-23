@@ -63,3 +63,8 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - (17/11) **Hành trình — mỗi chặng có thử thách âm nhạc** (sau câu hỏi, theo kỹ năng của thời kỳ, được bỏ qua) và **hồ sơ người chơi** hiện trên bản đồ; tuyến điều tra hiện trong danh sách chặng từ đầu. Lamar báo game "chỉ đi", không thấy thông tin người chơi.
 - (17/11) **Giải phức điệu — dạng Ih**: nguyên thể và biến thể vẽ chung một tổng phổ ba khuông (I, I′, II hoặc I, II, II′) thẳng hàng từng ô như ví dụ trong sách.
 - (18/11) **Tiểu luận giới thiệu app** "Ứng dụng Trung tâm lý thuyết âm nhạc học by Lamar: công cụ hỗ trợ dạy và học âm nhạc học cho người Việt Nam — thiết kế, nội dung và khả năng ứng dụng": không giới hạn số trang, không khảo sát người dùng (viết "khả năng ứng dụng"), chỉ ghi địa chỉ trang web, không ghi link GitHub. Nguồn bài: `docs/essays/gioi-thieu-app/`.
+
+## UMRE (23/11/2026, chỉ thị kỹ thuật 12 giai đoạn)
+- Làm từng giai đoạn; chỉ sang giai đoạn sau khi nghiệm thu giai đoạn trước. Làm xong thì push thẳng `main`, không cần hỏi.
+- Không bịa luật, không trộn hệ lý thuyết, thiếu bằng chứng ghi "chưa xác minh"; không dựng lại app, không bỏ tính năng có sẵn — mô-đun cũ nối vào UMRE qua bộ chuyển đổi.
+- Tài liệu ở `docs/umre/` phải phản ánh đúng trạng thái thật.

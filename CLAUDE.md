@@ -73,6 +73,7 @@ Lint còn 4 warning cũ (setState trong effect, fast refresh) — chấp nhận 
 | `thanh-ca.md` | Mục Thánh ca Việt Nam `thanhca` (52 bài `content/thanh-ca*.ts`), sách Nghiên cứu Thánh ca Việt Nam, tư liệu gốc `docs/research/thanh-ca/` |
 | `library-content.md` | Danh sách các mục nội dung đã có |
 | `knowledge.md` | Nền tảng tri thức `src/features/knowledge/`: mã thống nhất `a: w: s: ms: p: n: c: e: m:`, quan hệ hai chiều có nguồn gốc (thư viện / Wikidata / máy tính / nghiên cứu), `/graph`, Nguồn của tôi `/sources/cua-toi`, luận điểm – bằng chứng trong đề tài, IndexedDB `musicology-knowledge` có phiên bản lược đồ |
+| `../umre/*.md` | **UMRE** — lõi suy luận âm nhạc 12 giai đoạn: `MASTER_SPECIFICATION.md` (trạng thái từng GĐ), biểu diễn `src/umre/repr/` + bộ chuyển đổi, `KNOWN_LIMITATIONS.md`, `IMPLEMENTATION_LOG.md` |
 | `../STATUS.md` | **Trạng thái hiện tại**: việc dở, chờ Lamar, đề xuất tiếp, số liệu nền |
 | `../roadmap.md` | Lộ trình nâng cấp thành trung tâm tri thức cho nhà âm nhạc học (giai đoạn 0 – 6) |
 
