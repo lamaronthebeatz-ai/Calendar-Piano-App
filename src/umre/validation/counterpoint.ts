@@ -5,7 +5,7 @@ import { verify } from '../../features/counterpoint/verify'
 import { toCounterpoint } from '../repr/adapters/counterpoint'
 import { intervalName, between } from '../repr/interval'
 import { fromDiatonic } from '../repr/pitch'
-import { fromQuarters, rat, sub, toQuarters } from '../repr/rational'
+import { fromQuarters, min as minR, rat, sub, toQuarters } from '../repr/rational'
 import { notesOf, type Score } from '../repr/score'
 import { validateScore } from '../repr/validate'
 import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION } from '../rulebook/counterpoint'
@@ -15,6 +15,7 @@ import { MULTI_VOICE, TWO_VOICE, toMProblem, toProblem, type MultiVoiceParams, t
 import { evaluate } from '../rules/lang'
 import { COUNTERPOINT_RULES } from '../rules/counterpoint'
 import { textureQueries } from '../rules/queries'
+import { multiVersions, twoVoiceVersions } from '../domains/counterpoint/versions'
 import type { ConsonanceDef } from '../repr/texture'
 import { lineFaults, NATIVE_ORIGINAL_ONLY, NATIVE_RULES, pairFaults, perfectFourths } from './native'
 import { digest, type AppliedException, type CheckerInfo, type Location, type RuleOutcome, type ValidationResult, type Validator, type Violation } from './types'
@@ -45,12 +46,14 @@ function consonanceOf(rb: Rulebook): ConsonanceDef {
   return d
 }
 const RULE_IDS = new Set(COUNTERPOINT_RULES.map((r) => r.id))
-const RULE_VERTICAL = new Set(COUNTERPOINT_RULES.filter((r) => r.query.startsWith('pair.')).map((r) => r.id))
+/** Rules judged in every version (vertical ones; the ✱ convention belongs to the original only). */
+const VERSION_RULES = COUNTERPOINT_RULES.filter((r) => r.query.startsWith('pair.') && !r.id.startsWith('star'))
 /** The independent checkers, what each covers, and which of them look at the original only. */
 const INDEPENDENT: { id: string; covers: (rule: string) => boolean; originalOnly: (rule: string) => boolean }[] = [
   { id: 'verify', covers: (r) => VERIFY_HARD.has(r), originalOnly: () => false },
   { id: 'umre-native', covers: (r) => (NATIVE_RULES as readonly string[]).includes(r), originalOnly: (r) => NATIVE_ORIGINAL_ONLY.has(r) },
-  { id: 'umre-rules', covers: (r) => RULE_IDS.has(r), originalOnly: (r) => RULE_VERTICAL.has(r) },
+  // versions are built by domains/counterpoint/versions.ts, so the rule checker sees every version
+  { id: 'umre-rules', covers: (r) => RULE_IDS.has(r), originalOnly: () => false },
 ]
 /** Rules compared as one family: checkers may name the members differently. */
 const family = (r: string) => (r === 'dis-strong' || r === 'dis-weak' || r === 'suspension' ? 'dissonance' : r === 'leap3-response' ? 'leap-response' : r === 'gap' ? 'no-gap' : r)
@@ -142,7 +145,7 @@ function judge(ctx: Ctx, v: Validator, raws: Raw[], extra: { reasons: string[]; 
   const provisional: Violation[] = []
   const reasons = [...extra.reasons]
   const byRule = (checker: string, rule: string) => raws.filter((r) => r.checker === checker && r.rule === rule)
-  const key = (r: Raw) => `${family(r.rule)}|${r.voices.join(',')}|${r.t}`
+  const key = (r: Raw) => `${family(r.rule)}|${r.voices.join(',')}|${r.t}|${r.version.startsWith('bè ') ? ORIGINAL : r.version}`
 
   for (const spec of rb.rules) {
     const na = ctx.notApplicable.get(spec.id)
@@ -322,6 +325,10 @@ export const twoVoiceValidator: Validator = {
     const cons = consonanceOf(rulebook)
     const ev = evaluate(COUNTERPOINT_RULES, textureQueries({ score: solution, lines: [ci], pairs: [[0, 1]], end, consonance: () => cons, stars: p.stars, starsOnly: p.starsOnly }), new Set(p.quarterPrep ? ['quarter-prep'] : []))
     for (const h of ev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: ORIGINAL, voices: [...h.item.voices] })
+    for (const vt of twoVoiceVersions(solution, p.versions)) {
+      const vev = evaluate(VERSION_RULES, textureQueries({ score: vt.score, lines: [], pairs: [[0, 1]], end: minR(vt.end, end), consonance: () => cons, inVersion: true }), new Set())
+      for (const h of vev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: vt.label, voices: [0, 1] })
+    }
     const rep = check(p, cp, total)
     for (const x of [...rep.hard, ...rep.soft]) {
       const line = ['seg-place', 'tie', 'end', 'leap', 'rhythm-change', 'repeat3', 'repeat', 'leap-response', 'leap3-response', 'two-leaps', 'chromatic-near', 'tritone-line', 'range', 'cadence-step'].includes(x.rule)
@@ -418,9 +425,21 @@ export const multiVoiceValidator: Validator = {
     const ev = evaluate(COUNTERPOINT_RULES, textureQueries({
       score: solution, lines: mp.free.flatMap((f, i) => (f ? [i] : [])), pairs: rulePairs, end,
       consonance: ([a, b]) => (isUpper(a, b) ? withFourth : base),
-      role: ([a, b]) => ({ outer: a === 0 && b === n - 1, outerSomewhere: outerSomewhere.has(`${a},${b}`) }),
+      role: ([a, b]) => ({ outer: a === 0 && b === n - 1, outerSomewhere: outerSomewhere.has([a, b].sort().join(',')) }),
     }), new Set())
     for (const h of ev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: h.item.voices.length === 1 ? `bè ${ROMAN[h.item.voices[0]]}` : ORIGINAL, voices: [...h.item.voices] })
+    for (const mv of multiVersions(solution, mp.versions)) {
+      const ord = mv.order
+      const pairs: [number, number][] = []
+      const rank = (i: number) => ord.indexOf(i)
+      for (let x = 0; x < n; x++) for (let y = x + 1; y < n; y++) if (mp.free[ord[x]] || mp.free[ord[y]]) pairs.push([ord[x], ord[y]])
+      const vev = evaluate(VERSION_RULES, textureQueries({
+        score: mv.score, lines: [], pairs, end: minR(mv.end, end), inVersion: true,
+        consonance: ([a, b]) => (rank(b) === rank(a) + 1 && rank(b) <= n - 2 ? withFourth : base),
+        role: ([a, b]) => ({ outer: rank(a) === 0 && rank(b) === n - 1, outerSomewhere: outerSomewhere.has([a, b].sort().join(',')) }),
+      }), new Set())
+      for (const h of vev.hits) raws.push({ checker: 'umre-rules', rule: h.ruleId, t: h.item.at, version: `${mv.label} · ${ROMAN[h.item.voices[0]]}–${ROMAN[h.item.voices[1]]}`, voices: [...h.item.voices] })
+    }
     // the native and verify versions of an original pair are compared under one label
     for (const r of raws) if (r.version.startsWith(ORIGINAL + ' · ')) r.version = ORIGINAL
     const rep = mcheck(mp, lines)

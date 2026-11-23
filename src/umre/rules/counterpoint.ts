@@ -22,6 +22,8 @@ const positionOk: Expr = or(
 const suspensionBody = (minPrep: number): Expr =>
   and(
     oneOf(C('held'), ['upper', 'lower']),
+    // crossed voices are already a fault; no suspension is recognised across them
+    eq(C('crossed'), c(false)),
     positionOk,
     ge(C('prepDur'), c(minPrep)),
     ge(C('prepDur'), C('restDur')),
@@ -29,6 +31,8 @@ const suspensionBody = (minPrep: number): Expr =>
     or(
       and(eq(C('resolutionStep'), c(-1)), eq(C('resolutionConsonant'), c(true)), eq(C('freeStrikesBefore'), c(false))),
       and(eq(C('ornamented'), c(true)), eq(C('freeStrikesBefore'), c(false))),
+      // versions only (chuyển động chiều dọc, nguyên tắc 3): the resolution may pass through a dissonance
+      and(eq(C('inVersion'), c(true)), eq(C('passingResolution'), c(true)), eq(C('freeStrikesBefore'), c(false))),
     ),
   )
 const suspension = suspensionBody(2)
@@ -44,7 +48,7 @@ const figure = (s: 'u' | 'l'): Expr =>
       and(eq(C(`${s}In`), c(-1)), eq(C(`${s}Out`), c(-2))), // nốt thoát
     ),
   )
-const flanked = and(eq(C('prevConsonant'), c(true)), eq(C('nextConsonant'), c(true)))
+const flanked = and(or(eq(C('prevConsonant'), c(true)), and(eq(C('inVersion'), c(true)), eq(C('afterSuspension'), c(true)))), eq(C('nextConsonant'), c(true)))
 
 export const COUNTERPOINT_RULES: RuleDef[] = [
   // giai điệu (tr. 6–8)

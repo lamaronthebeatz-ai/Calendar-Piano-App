@@ -217,13 +217,14 @@ describe('GĐ7 — tích hợp bộ giải phức điệu qua bộ điều phố
     expect(g.rejected[0].validation.status).toBe('VALID')
     expect(g.statusReason).toMatch(/chính bộ giải đã chạy/)
   })
-  it('bài có biến thể: bộ kiểm UMRE chỉ dựng nguyên thể, nên các luật chiều dọc ở biến thể chưa có xác nhận độc lập → UNKNOWN (không SOLVED)', async () => {
+  it('bài có biến thể: UMRE tự dựng biến thể nên luật chiều dọc ở biến thể cũng được xác nhận độc lập → SOLVED', async () => {
     const t = twoVoiceTask('C4:4 | E4:4 | D4:4 | F4:4 | E4:4 | D4:4 | C4:4', { versions: [{ shift: { I: 0, II: -7 }, motion: 'near', label: 'Iv = −7' }] })
     const r = await e.orchestrator.run(t, { timeMs: 5000, maxSolutions: 1 })
-    expect(r.metadata.solverStatus).toBe('solved')
-    expect(r.status).toBe('UNKNOWN')
-    expect(r.rejected[0].confirmation.unconfirmed).toEqual(expect.arrayContaining(['parallel', 'dis-strong']))
-    expect(r.rejected[0].confirmation.unconfirmed).not.toContain('leap')
+    expect(r.status).toBe('SOLVED')
+    const c = r.solutions[0].confirmation
+    expect(c.unconfirmed).toEqual([])
+    expect(c.by.parallel).toContain('umre-rules')
+    expect(c.by.parallel).not.toContain('umre-native') // native looks at the original only
   })
   it('quyết định trạng thái là hàm thuần: phân biệt SOLVED / PROVEN_UNSAT / UNKNOWN / TIMEOUT', () => {
     expect(decideStatus({ solverStatus: 'solved', verdicts: ['INVALID', 'VALID'], confirmed: [false, true], proofOfUnsat: true }).status).toBe('SOLVED')

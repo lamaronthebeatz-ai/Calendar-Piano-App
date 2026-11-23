@@ -22,6 +22,8 @@ export type TextureContext = {
   readonly role?: (pair: readonly [number, number]) => { outer: boolean; outerSomewhere: boolean }
   readonly stars?: readonly number[]
   readonly starsOnly?: boolean
+  /** the texture is a VERSION of the combination (allowances the book makes for versions only) */
+  readonly inVersion?: boolean
 }
 
 const q = (r: Rational) => toQuarters(r)
@@ -159,7 +161,7 @@ function dissonances(ctx: TextureContext, p: readonly [number, number], vs: Vert
     let number = Math.abs(x.interval.steps)
     while (number > 13) number -= 7
     const facts: Record<string, unknown> = {
-      level: level(ctx, x.at), number, held, struckU: x.hitU, struckL: x.hitL,
+      level: level(ctx, x.at), number, held, crossed, struckU: x.hitU, struckL: x.hitL, inVersion: !!ctx.inVersion,
       prevConsonant: k > 0 && cons(vs[k - 1]) !== 'dissonant', nextConsonant: k + 1 < vs.length && cons(vs[k + 1]) !== 'dissonant',
     }
     if (held !== 'none') {
@@ -173,9 +175,11 @@ function dissonances(ctx: TextureContext, p: readonly [number, number], vs: Vert
         prepConsonant: (cons(vAt(h.onset)) ?? 'dissonant') !== 'dissonant',
         resolutionStep: a1 ? d(h, a1) : null,
         resolutionConsonant: a1 ? (cons(vAt(a1.onset)) ?? 'dissonant') !== 'dissonant' : false,
+        // "giải quyết lướt" (versions): the resolution falls on a dissonance and passes on down by step to a consonance
+        passingResolution: !!(a1 && a2 && d(h, a1) === -1 && d(a1, a2) === -1 && (cons(vAt(a1.onset)) ?? 'dissonant') === 'dissonant' && (cons(vAt(a2.onset)) ?? 'dissonant') !== 'dissonant'),
         freeStrikesBefore: vs.some((y) => q(y.at) > q(x.at) && q(y.at) < hEnd),
         // "nhảy sang nốt thuận với nốt tự do" (tr. 13): the free voice holds still from the dissonance until the resolution
-        ornamented: !!(a1 && a2 && d(h, a1) !== -1 && !vs.some((y) => q(y.at) > q(x.at) && q(y.at) < q(a2.onset) && q(y.at) !== q(a1.onset)) && (cons(vAt(a1.onset)) ?? 'dissonant') !== 'dissonant' && diatonic(a2.pitch) === diatonic(h.pitch) - 1 && (cons(vAt(a2.onset)) ?? 'dissonant') !== 'dissonant'),
+        ornamented: !!(a1 && a2 && d(h, a1) !== -1 && !vs.some((y) => q(y.at) > q(x.at) && q(y.at) < q(a2.onset) && (y.hitU && y.hitL ? true : heldVoice === 'upper' ? y.hitL : y.hitU)) && (cons(vAt(a1.onset)) ?? 'dissonant') !== 'dissonant' && diatonic(a2.pitch) === diatonic(h.pitch) - 1 && (cons(vAt(a2.onset)) ?? 'dissonant') !== 'dissonant'),
       })
     }
     for (const [side, struck, note, vi] of [['u', x.hitU, x.u, p[0]], ['l', x.hitL, x.l, p[1]]] as const) {
@@ -185,6 +189,8 @@ function dissonances(ctx: TextureContext, p: readonly [number, number], vs: Vert
       facts[`${side}In`] = pr ? d(pr, note) : null
       facts[`${side}Out`] = nx ? d(note, nx) : null
       facts[`${side}Same`] = !!nx && midi(nx.pitch) === midi(note.pitch)
+      // this note is the step-down resolution of a note held into the previous (dissonant) vertical
+      if (k > 0 && pr && q(pr.onset) < q(vs[k - 1].at) && d(pr, note) === -1) facts.afterSuspension = true
     }
     out.push({ at: q(x.at), voices: [...p], ids: [...x.u.ids, ...x.l.ids], facts })
   })
