@@ -47,7 +47,7 @@ test('kho bản nhạc: bản nhập còn sau khi tải lại (thân bản ở I
   const raw = await page.evaluate(() => localStorage.getItem('analyze:scores') ?? '')
   expect(raw.length).toBeLessThan(2000)
   const url = page.url()
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' }) // WebKit on CI sometimes never fires 'load' here
   await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
   expect(page.url()).toBe(url)
 
@@ -163,6 +163,6 @@ test('kho bản nhạc khi kho mã hoá mở: thân bản trong IndexedDB là b�
     )
     .toBe('enc1:')
   await expect.poll(() => page.evaluate(() => (localStorage.getItem('analyze:scores') ?? '').slice(0, 5))).toBe('enc1:')
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' }) // WebKit on CI sometimes never fires 'load' here
   await expect(page.locator('.an-svg .harm').first()).toBeVisible({ timeout: 60_000 })
 })

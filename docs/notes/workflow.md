@@ -46,6 +46,8 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- WebKit trên CI đôi khi không bao giờ phát sự kiện `load` khi `page.reload()` ở trang có service worker + IndexedDB (`analyze.spec`, lần 469/484/490/491) → `reload({ waitUntil: 'domcontentloaded' })` rồi chờ nội dung bằng `expect`.
+- Chromium trên CI (ảnh Playwright) có thể không phát mp4 H.264: video luôn kèm bản WebM VP9 (`<source>` thứ hai).
 - `cat > $TMPDIR/x <<EOF` khi lệnh trước trong cùng dòng là `cat > file` KHÔNG có heredoc → `cat` chờ stdin mãi, lệnh treo tới hết giờ. Ghi file bằng công cụ Write hoặc mỗi `cat` một heredoc riêng.
 - Test cần một worker thật: bundle entry bằng `esbuild` (API `build`, có sẵn qua vite) ra thư mục tạm rồi `new Worker(file)` của `node:worker_threads` — mẫu ở `src/umre/runtime/runtime.test.ts`.
 - Chuẩn Bach cho `/analyze` và UMRE: venv ở scratchpad, `pip install --no-index --find-links . music21` (wheel ở gốc repo), chạy `export_gt.py` trong thư mục có `eval/`, rồi `node scripts/analyze/eval.mjs <dir>/eval [--umre]`.
