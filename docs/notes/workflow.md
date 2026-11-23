@@ -46,6 +46,7 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- Test đơn vị chạy bộ giải trên CI chậm hơn máy phiên ~3 lần: thời hạn chung `testTimeout: 30_000` trong `vitest.config.ts`; test nào gần 10 s ở máy phiên thì tự đặt thời hạn riêng.
 - **Chép nốt từ scan:** khuông in hay nghiêng — đọc bằng mắt lệch được cả quãng 3. Dò dòng kẻ theo từng cột (mỗi cột lấy các hàng tối > 50 % trong cửa sổ 24 px) rồi vẽ vạch khe lên ảnh phóng 3–4 lần mới đọc; luôn so với chú số / chú thích sách in dưới nốt.
 - **CI đỏ 17–23/11 dù test qua**: (1) vitest "Timeout calling onTaskUpdate" — test phức điệu chạy bộ giải đồng bộ ~60 s liền, giữa các test vitest chỉ nhường microtask nên worker không đọc được RPC → `vitest.setup.ts` nhường một macrotask trước mỗi test. (2) Playwright: `test.slow()` nhân ba timeout HIỆN TẠI nên phải đặt SAU `test.setTimeout()`; đặt trước thì bị ghi đè (journey-arc WebKit chỉ còn 120 s). Sau mỗi push phải xem CI thật — 4 lần đỏ liền không ai thấy.
 - Chạy Playwright của repo (1.56.1) trong container mới: tạo thư mục trình duyệt giả trong scratchpad — `pw/chromium_headless_shell-1194/chrome-linux/headless_shell` symlink tới `/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell` — rồi `PLAYWRIGHT_BROWSERS_PATH=<đó> npx playwright test …` (đã chạy qua 23/11).
