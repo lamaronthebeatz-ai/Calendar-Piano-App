@@ -25,7 +25,7 @@ describe('GĐ6 — bằng chứng: sổ luật và nguồn', () => {
     expect([book.authors, book.title, book.year, book.publisher, book.place]).toEqual([c.authors, c.title, c.year, c.publisher, c.place])
     const anchor: Record<string, string> = { suspension: '`suspension()`', 'fourth-upper-pair': '`pair.fourthOk`', 'def.dissonance': 'Quãng nghịch: 2, 7' }
     const located = rb.evidence.allCitations().filter((x) => x.locator)
-    expect(located.length).toBe(29) // 27 rule citations + the upper-pair fourth + the dissonance definition
+    expect(located.length).toBe(37) // 27 rule citations + the upper-pair fourth + the dissonance definition + 3 permitted + 5 ambiguous
     for (const cit of located) {
       const a = anchor[cit.scope] ?? `\`${cit.scope}\``
       const rows = NOTES.filter((l) => l.includes(a))

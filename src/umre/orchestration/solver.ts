@@ -7,6 +7,7 @@ import type { ValidationResult } from '../validation/types'
 import type { Confirmation } from '../validation/independence'
 import type { Explanation } from '../explain/explain'
 import type { Trace } from '../explain/trace'
+import type { Rank } from './rank'
 
 /**
  * The unified solver contract. A specialised solver keeps its own algorithm and rules; it declares what it can do
@@ -71,7 +72,7 @@ export type ExecutionStatus = 'SOLVED' | 'PROVEN_UNSAT' | 'UNKNOWN' | 'TIMEOUT' 
 export type ErrorCode =
   | 'no-solver' | 'no-validator' | 'rulebook-unknown' | 'invalid-input' | 'solver-error' | 'resource' | 'output-schema' | 'validation-error' | 'evidence-error' | 'explanation-error'
 
-export type ValidatedSolution = { readonly score: Score; readonly validation: ValidationResult; readonly confirmation: Confirmation }
+export type ValidatedSolution = { readonly score: Score; readonly validation: ValidationResult; readonly confirmation: Confirmation; readonly rank?: Rank }
 
 export type UnifiedResult = {
   readonly taskId: string

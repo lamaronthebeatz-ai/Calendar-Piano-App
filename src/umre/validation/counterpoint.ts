@@ -17,7 +17,8 @@ import { consonanceOf, COUNTERPOINT_RULES, VERSION_RULES } from '../rules/counte
 import { textureQueries } from '../rules/queries'
 import { multiVersions, twoVoiceVersions } from '../domains/counterpoint/versions'
 import type { ConsonanceDef } from '../repr/texture'
-import { lineFaults, NATIVE_ORIGINAL_ONLY, NATIVE_RULES, pairFaults, perfectFourths } from './native'
+import { lineFaults, pairFaults, perfectFourths } from './native'
+import { INDEPENDENT } from './coverage'
 import { digest, type AppliedException, type CheckerInfo, type Location, type RuleOutcome, type ValidationResult, type Validator, type Violation } from './types'
 
 /**
@@ -36,16 +37,6 @@ const CHECKERS: CheckerInfo[] = [
   { id: 'umre-native', independent: true, description: 'Bộ kiểm viết lại trên biểu diễn UMRE (native.ts): giai điệu, phản hồi bước nhảy, nhắc ba lần, đi liền đến hết bài; chéo bè, song song quãng hoàn toàn, ba quãng hoàn toàn liền — chỉ ở nguyên thể' },
   { id: 'umre-rules', independent: true, description: 'Luật viết bằng ngôn ngữ luật UMRE (rules/counterpoint.ts) theo câu chữ giáo trình, đánh giá bằng bộ thông dịch chung (rules/lang.ts) — chiều dọc chỉ ở nguyên thể' },
   { id: 'search-rules', independent: false, description: 'Bộ kiểm của chính bộ giải (rules.ts / mcheck): chỉ làm nhân chứng và chấm luật mềm' },
-]
-/** Hard rules verify.ts judges (its fault names mapped below). `suspension` is judged inside the dissonance rules. */
-const VERIFY_HARD = new Set(['crossing', 'dis-strong', 'dis-weak', 'star', 'star-extra', 'parallel', 'leap', 'leap-response', 'leap3-response', 'repeat3', 'seg-place', 'tie', 'rhythm-change', 'end', 'perfects3', 'hidden-hard', 'no-gap'])
-const RULE_IDS = new Set(COUNTERPOINT_RULES.map((r) => r.id))
-/** The independent checkers, what each covers, and which of them look at the original only. */
-const INDEPENDENT: { id: string; covers: (rule: string) => boolean; originalOnly: (rule: string) => boolean }[] = [
-  { id: 'verify', covers: (r) => VERIFY_HARD.has(r), originalOnly: () => false },
-  { id: 'umre-native', covers: (r) => (NATIVE_RULES as readonly string[]).includes(r), originalOnly: (r) => NATIVE_ORIGINAL_ONLY.has(r) },
-  // versions are built by domains/counterpoint/versions.ts, so the rule checker sees every version
-  { id: 'umre-rules', covers: (r) => RULE_IDS.has(r), originalOnly: () => false },
 ]
 /** Rules compared as one family: checkers may name the members differently. */
 const family = (r: string) => (r === 'dis-strong' || r === 'dis-weak' || r === 'suspension' ? 'dissonance' : r === 'leap3-response' ? 'leap-response' : r === 'gap' ? 'no-gap' : r)

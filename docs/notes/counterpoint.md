@@ -100,4 +100,7 @@ Nguồn duy nhất: Phạm Tú Hương, *Phức điệu nghiêm khắc*, Nhạc 
 Bộ kiểm `umre-rules` (`src/umre/rules/counterpoint.ts`, viết theo câu chữ bài) và bộ tìm kiếm chung (`umre.csp.counterpoint`) lộ ra ba chỗ `rules.ts`/`verify.ts` lệch bảng kiểm toán — **đã sửa 23/11** (cả hai file, giữ chúng đồng ý nhau): (1) nốt sớm phải **đúng cao độ** nốt sau (trước so theo bước: Mi♯ → Mi được nhận); (2) "giải quyết lướt" (nốt giải quyết rơi vào quãng nghịch rồi đi tiếp) **chỉ ở biến thể** — trước cho cả ở nguyên thể; với ba – bốn bè, cặp thuộc biến thể mang cờ `Problem.inVersion`; (3) giải quyết có trang trí: nốt nghịch phải **nhảy** (|bước| ≥ 2) sang nốt đen thuận rồi mới xuống — trước cho cả đi **lên liền bậc** (Sol nghịch → La → Fa), điều Thí dụ 31 không có (31a: Sol4 → Mi4 → Fa4; 31b: Đô5 → La4 → Si4). 56 test phức điệu + E2E vẫn qua. Thí dụ 21, 22, 23a, 23b, 24a làm đáp án chuẩn ở `src/umre/testing/gold.ts`.
 
 ## Còn mở (X)
+Sổ luật UMRE ghi các mục dưới thành `ambiguous` (áp cách đọc hiện tại, có nhãn) và các điều sách cho phép thành `permitted`:
+- `p.weak-suspension` tr. 11–12 · `p.escape-leap` tr. 11–12 · `p.ornamented-resolution` tr. 11 (Thí dụ 30–31)
+- `a.suspension-intervals` tr. 10 · `a.many-perfects` tr. 9 · `a.repeat-count` tr. 7 · `a.rhythm-change-beats` tr. 8 · `a.rests` tr. 7 · `a.cross-relation` (chưa có trang)
 Nốt lưu ở quãng nghịch ngoài sơ đồ 2; "nhiều" quãng hoàn toàn/nhắc nốt là bao nhiêu; đổi trường độ ở phách không phải đầu ô; quan hệ đối chéo giữa hai bè; móc đơn và dấu lặng trong bè đối vị. Cần hỏi Lamar/thầy.

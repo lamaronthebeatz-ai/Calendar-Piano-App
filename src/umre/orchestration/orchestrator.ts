@@ -8,6 +8,7 @@ import type { ValidationResult, ValidationStatus } from '../validation/types'
 import { confirmation } from '../validation/independence'
 import { UMRE_ENGINE_VERSION } from '../version'
 import type { SolverRegistry, ValidatorRegistry } from './registry'
+import { rankSolutions } from './rank'
 import type { ErrorCode, ExecutionStatus, Solver, SolverOutput, SolverStatus, UnifiedResult, ValidatedSolution } from './solver'
 
 export type RunOptions = {
@@ -211,7 +212,10 @@ export class Orchestrator {
       }
       const all = [...accepted, ...refused]
       const decision = decideStatus({ solverStatus: solverOut.status, verdicts: all.map((x) => x.validation.status), confirmed: all.map((x) => x.confirmation.independent), unconfirmed: all.map((x) => x.confirmation.unconfirmed), proofOfUnsat: d.capabilities.proofOfUnsat, solverReason: solverOut.proof ?? solverOut.reason })
-      return finish(decision.status, decision.reason, accepted, refused)
+      // 11: optimization — rank confirmed solutions by soft-rule penalty (never changes which are valid)
+      const ranked = rankSolutions(accepted, rulebook)
+      if (ranked.length) tr.step({ component: 'orchestrator', operation: 'rank', input: { solutions: accepted.map((s) => s.score.id) }, output: ranked.map((s) => ({ solution: s.score.id, penalty: s.rank.penalty, faults: s.rank.faults })), level: 'detailed' })
+      return finish(decision.status, decision.reason, ranked, refused)
     } catch (e) {
       // nothing a solver or validator does may bring the engine down
       return fail('solver-error', `lỗi không lường trước: ${(e as Error).message}`)

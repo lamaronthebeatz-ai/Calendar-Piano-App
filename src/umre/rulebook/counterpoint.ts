@@ -1,6 +1,8 @@
-import { RULES, isSoft, type RuleId } from '../../features/counterpoint/rules'
+import { RULES, isSoft, softWeight, type RuleId } from '../../features/counterpoint/rules'
 import { EvidenceRegistry, fromCurated, type Citation } from '../evidence/evidence'
-import type { Definition, ExceptionSpec, Rulebook, RuleSpec } from './rulebook'
+import { COUNTERPOINT_RULES } from '../rules/counterpoint'
+import { checkersOf } from '../validation/coverage'
+import type { AmbiguousSpec, Definition, ExceptionSpec, PermittedSpec, Rulebook, RuleSpec } from './rulebook'
 
 /**
  * The strict-counterpoint rulebook as the counterpoint page already applies it. Statements and hard/soft come from
@@ -55,6 +57,18 @@ const RULE_CITES: Record<RuleId | 'no-gap', { cites: Cite[]; scope?: string; cav
   'cadence-step': { cites: [{ src: INTERNAL, note: 'không có dòng nào trong bảng kiểm toán' }] },
   'no-gap': { cites: [{ src: INTERNAL, note: 'miền tìm kiếm của bộ giải: bè đối vị không dấu lặng; giáo trình (tr. 7) chỉ khuyên tránh nhiều dấu lặng' }], scope: 'bè đối vị (bè tự do)' },
 }
+/** Short names (Vietnamese) for explanations and reviewers. */
+const NAMES: Record<RuleId | 'no-gap', string> = {
+  leap: 'Bước nhảy cho phép', 'chromatic-near': 'Biến âm cách xa', 'leap-response': 'Đáp bước nhảy lớn', 'leap3-response': 'Đáp bước nhảy quãng 3',
+  'two-leaps': 'Hai bước nhảy liền', 'tritone-line': 'Tritone trong giai điệu', repeat3: 'Nhắc nốt ba lần', repeat: 'Nhắc nốt', 'seg-place': 'Chỗ đặt nốt',
+  tie: 'Dấu nối', 'rhythm-change': 'Đổi trường độ', 'same-rhythm': 'Cùng tiết tấu', hidden: 'Quãng hoàn toàn ẩn', parallel: 'Song song quãng hoàn toàn',
+  perfects3: 'Nhiều quãng hoàn toàn liền', perfects: 'Quãng hoàn toàn liền', first: 'Quãng mở đầu', final: 'Quãng kết', 'strong-perfect': 'Quãng hoàn toàn phách mạnh',
+  unison: 'Đồng âm', 'dis-strong': 'Nghịch phách mạnh', suspension: 'Nốt lưu', 'dis-weak': 'Nghịch phách nhẹ', 'upper-neighbor': 'Nốt thêu trên',
+  'weak-form': 'Hình nghịch phách nhẹ', 'dis-both': 'Nghịch hai bè cùng đi', star: 'Chỗ ✱', 'star-extra': 'Nghịch ngoài ✱', crossing: 'Chéo bè',
+  'hidden-hard': 'Quãng ẩn ở cặp ngoài', end: 'Đi đến hết bài', range: 'Âm vực', 'cadence-step': 'Kết liền bậc', 'no-gap': 'Không chỗ trống',
+}
+const RULE_LANGUAGE = new Set(COUNTERPOINT_RULES.map((r) => r.id))
+
 const NO_GAP_TEXT = 'Bè đối vị đi liền, không có chỗ trống (dấu lặng) giữa chừng'
 
 export function counterpointRulebook(): Rulebook {
@@ -86,6 +100,9 @@ export function counterpointRulebook(): Rulebook {
       citations: cite(id, x.cites),
       scope: x.scope ?? 'đối vị đơn giản hai bè và từng cặp bè của ba – bốn bè, mọi bản',
       ...(x.caveat ? { caveat: x.caveat } : {}),
+      name: NAMES[id],
+      ...(id !== 'no-gap' && isSoft(id) ? { weight: softWeight(id) } : {}),
+      logic: { ruleLanguage: RULE_LANGUAGE.has(id) ? [id] : [], checkers: [...checkersOf(id), ...(id === 'no-gap' ? [] : ['search-rules'])] },
     }
   })
 
@@ -109,5 +126,20 @@ export function counterpointRulebook(): Rulebook {
     },
     { id: 'def.strong-beat', statement: 'Phách mạnh = phách đầu ô nhịp (mức 3 trong mã); phách nhẹ = các phách còn lại', citations: cite('def.strong-beat', [{ src: INTERNAL, note: 'cách bộ giải đặt mức phách (model.strength); chưa đối chiếu chữ của sách' }]), caveat: 'Độ mạnh phách là quy ước của bộ giải, chưa đối chiếu nguyên văn giáo trình.' },
   ]
-  return { id: COUNTERPOINT_RULEBOOK_ID, version: COUNTERPOINT_RULEBOOK_VERSION, domain: 'counterpoint', title: 'Phức điệu nghiêm khắc (Phạm Tú Hương 1991, theo Taneyev) — luật bộ giải đang áp', rules, exceptions, definitions, evidence: ev }
+  // what the book allows inside a rule's statement (licences), read off the same audited pages
+  const permitted: PermittedSpec[] = [
+    { id: 'p.weak-suspension', statement: 'Nốt lưu ở phách nhẹ (phách 2 của nhịp 2/2) là hình nghịch được phép', within: ['dis-weak'], scope: 'nhịp 2/2 trở lên', citations: cite('p.weak-suspension', [P('tr. 11–12', 'partially-verified', 'sách nói nghịch phách mạnh "chủ yếu" là nốt lưu')]) },
+    { id: 'p.escape-leap', statement: 'Nốt thoát được rời bằng bước nhảy (dạng nghịch phách nhẹ duy nhất có bước nhảy)', within: ['dis-weak'], scope: 'nghịch phách nhẹ', citations: cite('p.escape-leap', [P('tr. 11–12')]) },
+    { id: 'p.ornamented-resolution', statement: 'Nốt lưu được giải quyết có trang trí: nhảy (nốt đen) sang nốt thuận rồi xuống liền bậc', within: ['dis-strong'], scope: 'nốt lưu, bè tự do đứng yên', citations: cite('p.ornamented-resolution', [P('tr. 11', 'verified', 'Thí dụ 30–31')]) },
+  ]
+  // what the book leaves open (docs/notes/counterpoint.md § Còn mở): the current reading is applied and labelled
+  const ambiguous: AmbiguousSpec[] = [
+    { id: 'a.suspension-intervals', question: 'Nốt lưu ở các quãng nghịch ngoài sơ đồ 2 có được không?', currentReading: 'được (sơ đồ không cấm)', affects: ['dis-strong', 'suspension'], citations: cite('a.suspension-intervals', [P('tr. 10', 'partially-verified')]) },
+    { id: 'a.many-perfects', question: '"Nhiều" quãng thuận hoàn toàn liền nhau là bao nhiêu?', currentReading: 'từ ba quãng', affects: ['perfects3'], citations: cite('a.many-perfects', [P('tr. 9', 'partially-verified')]) },
+    { id: 'a.repeat-count', question: 'Nhắc nốt bị cấm từ hai hay ba lần? (lời văn và Thí dụ 12 lệch nhau)', currentReading: 'cấm từ ba lần; hai lần là luật mềm', affects: ['repeat3', 'repeat'], citations: cite('a.repeat-count', [P('tr. 7', 'partially-verified')]) },
+    { id: 'a.rhythm-change-beats', question: 'Luật đổi trường độ có áp ở phách không phải đầu ô?', currentReading: 'chỉ áp ở phách đầu ô', affects: ['rhythm-change'], citations: cite('a.rhythm-change-beats', [P('tr. 8', 'partially-verified')]) },
+    { id: 'a.rests', question: 'Bè đối vị được có móc đơn và dấu lặng tới đâu?', currentReading: 'không dấu lặng giữa chừng (miền của bộ giải)', affects: ['no-gap'], citations: cite('a.rests', [P('tr. 7', 'partially-verified', 'chỉ khuyên tránh nhiều dấu lặng')]) },
+    { id: 'a.cross-relation', question: 'Quan hệ đối chéo (biến âm chéo giữa hai bè) có bị cấm?', currentReading: 'chưa kiểm', affects: [], citations: cite('a.cross-relation', [{ src: INTERNAL, note: 'giáo trình chưa thấy nói; cần hỏi người dạy' }]) },
+  ]
+  return { id: COUNTERPOINT_RULEBOOK_ID, version: COUNTERPOINT_RULEBOOK_VERSION, domain: 'counterpoint', title: 'Phức điệu nghiêm khắc (Phạm Tú Hương 1991, theo Taneyev) — luật bộ giải đang áp', rules, exceptions, definitions, permitted, ambiguous, evidence: ev }
 }

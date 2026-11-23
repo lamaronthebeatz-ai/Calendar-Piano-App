@@ -85,6 +85,8 @@ const SOFT: Partial<Record<RuleId, number>> = {
   first: 2, final: 4, 'dis-both': 3, 'weak-form': 3, 'chromatic-near': 4, 'two-leaps': 6, hidden: 3, perfects: 2, unison: 6, 'strong-perfect': 2, 'upper-neighbor': 2, 'tritone-line': 8, repeat: 3, range: 4, 'cadence-step': 5, 'same-rhythm': 1,
 }
 export const isSoft = (r: RuleId) => r in SOFT
+/** penalty of one soft fault (ranking of valid answers) */
+export const softWeight = (r: RuleId) => SOFT[r] ?? 0
 
 export type Violation = { rule: RuleId; t: number; version: string; detail?: string }
 export type Report = { hard: Violation[]; soft: Violation[]; penalty: number }
