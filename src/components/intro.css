@@ -16,22 +16,17 @@
   object-fit: cover;
   display: block;
 }
-.intro-bar {
+.intro-tap {
   position: absolute;
-  right: max(16px, env(safe-area-inset-right));
-  bottom: max(20px, env(safe-area-inset-bottom));
+  inset: 0;
   display: flex;
-  gap: 8px;
-}
-.intro-btn {
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(232, 200, 120, 0.45);
-  background: rgba(0, 0, 0, 0.45);
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: max(48px, env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, 0.55);
   color: #f3e3b8;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-}
-.intro-btn:active {
-  background: rgba(232, 200, 120, 0.2);
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 0;
 }

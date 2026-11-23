@@ -5,26 +5,30 @@ import { INTRO_KEY as KEY } from './introGate'
 
 /**
  * The opening clip, before the lock screen (Lamar's two cuts: portrait for phones held upright, landscape otherwise).
- * It never stands between the user and the app: it starts muted (browsers refuse sound without a tap), can be skipped
- * at once, and gives way by itself when the video cannot play — offline (the clips are not precached), autoplay
- * blocked (iOS Low Power Mode), an error, or a stall. Shown once per app session.
+ * Lamar's rule: everyone watches it whole, with sound — no skip, no mute. Browsers refuse to start a video with sound
+ * before the user has touched the page, so when the unmuted play() is refused a black screen asks for one tap, and
+ * the clip then plays from the start. The only way past it without watching is a clip that cannot play at all
+ * (offline — the clips are not precached — or a decoding error, or nothing loaded after LOAD_MS): then the lock
+ * screen comes at once, so no one is locked out of the app. Shown once per app session.
  */
 const BASE = `${import.meta.env.BASE_URL}media/intro-`
-/** if playback has not begun by then, go straight to the lock screen */
-const START_MS = 2500
-/** the clips are 10 s: whatever happens, the lock screen comes after this */
-const CAP_MS = 14_000
+/** nothing playable loaded by then: the network cannot deliver it */
+const LOAD_MS = 8000
+/** after playback starts, the lock screen comes by this time even if 'ended' never fires (clips are 10 s) */
+const CAP_MS = 13_000
 
 export function IntroClip({ onLeave, onDone }: { onLeave: () => void; onDone: () => void }) {
   const video = useRef<HTMLVideoElement>(null)
   const [cut] = useState(() => (typeof matchMedia === 'function' && matchMedia('(orientation: portrait)').matches ? 'portrait' : 'landscape'))
   const [leaving, setLeaving] = useState(false)
-  const [muted, setMuted] = useState(true)
+  const [needTap, setNeedTap] = useState(false)
   const done = useRef(false)
+  const capTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const finish = (fade: boolean) => {
     if (done.current) return
     done.current = true
+    clearTimeout(capTimer.current)
     try {
       sessionStorage.setItem(KEY, '1')
     } catch {
@@ -37,21 +41,34 @@ export function IntroClip({ onLeave, onDone }: { onLeave: () => void; onDone: ()
     setTimeout(onDone, 700)
   }
 
+  const start = () => {
+    const v = video.current
+    if (!v) return
+    v.muted = false
+    v.currentTime = 0
+    v.play()
+      ?.then(() => setNeedTap(false))
+      .catch((e: DOMException) => {
+        // refused because no one has touched the page yet: ask for the tap; any other refusal means it cannot play
+        if (e?.name === 'NotAllowedError') setNeedTap(true)
+        else finish(false)
+      })
+  }
+
   useEffect(() => {
     const v = video.current
     if (!v) return
-    let started = false
     const onPlaying = () => {
-      started = true
+      clearTimeout(capTimer.current)
+      capTimer.current = setTimeout(() => finish(true), CAP_MS)
     }
     v.addEventListener('playing', onPlaying)
-    v.play()?.catch(() => finish(false))
-    const startTimer = setTimeout(() => !started && finish(false), START_MS)
-    const capTimer = setTimeout(() => finish(true), CAP_MS)
+    const loadTimer = setTimeout(() => v.readyState < 2 && finish(false), LOAD_MS)
+    start()
     return () => {
       v.removeEventListener('playing', onPlaying)
-      clearTimeout(startTimer)
-      clearTimeout(capTimer)
+      clearTimeout(loadTimer)
+      clearTimeout(capTimer.current)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -63,30 +80,17 @@ export function IntroClip({ onLeave, onDone }: { onLeave: () => void; onDone: ()
         className="intro-video"
         src={`${BASE}${cut}.mp4`}
         poster={`${BASE}${cut}.webp`}
-        muted={muted}
         playsInline
-        autoPlay
         preload="auto"
         onEnded={() => finish(true)}
         onError={() => finish(false)}
         aria-label="Đoạn mở đầu của ứng dụng"
       />
-      <div className="intro-bar">
-        <button
-          type="button"
-          className="intro-btn"
-          onClick={() => {
-            const v = video.current
-            setMuted((m) => !m)
-            if (v) v.muted = !muted
-          }}
-        >
-          {muted ? 'Bật tiếng' : 'Tắt tiếng'}
+      {needTap && (
+        <button type="button" className="intro-tap" onClick={start}>
+          Chạm để bắt đầu
         </button>
-        <button type="button" className="intro-btn" onClick={() => finish(true)}>
-          Bỏ qua
-        </button>
-      </div>
+      )}
     </div>
   )
 }

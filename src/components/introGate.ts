@@ -1,4 +1,4 @@
-/** The opening clip shows once per app session, and not to people who asked the system for less motion. */
+/** The opening clip shows once per app session (Lamar: everyone watches it, so no reduced-motion exemption). */
 export const INTRO_KEY = 'app:intro'
 
 export function shouldShowIntro() {
@@ -7,5 +7,5 @@ export function shouldShowIntro() {
   } catch {
     /* no storage: show it */
   }
-  return !(typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches)
+  return true
 }
