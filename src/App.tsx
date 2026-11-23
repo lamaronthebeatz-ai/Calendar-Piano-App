@@ -3,6 +3,8 @@ import { RouteLoading } from './layout/pageCurtain'
 import { createHashRouter, createRoutesFromElements, Navigate, Route, RouterProvider, useRouteError } from 'react-router-dom'
 import { AppShell } from './layout/AppShell'
 import { isUnlocked, LockScreen } from './components/LockScreen'
+import { IntroClip } from './components/IntroClip'
+import { shouldShowIntro } from './components/introGate'
 import { CalendarPage } from './features/calendar/CalendarPage'
 import { StudentsListPage } from './features/students/StudentsListPage'
 import { StudentProfilePage } from './features/students/StudentProfilePage'
@@ -60,6 +62,8 @@ export function App() {
   // The app renders behind the welcome glass from the start (so the frosting shows it), but stays inert until the code is right.
   const [unlocked, setUnlocked] = useState(isUnlocked)
   const [glass, setGlass] = useState(!unlocked)
+  // a fresh launch opens on Lamar's clip, then the lock screen (mounted after, so its entrance plays in view)
+  const [intro, setIntro] = useState<'on' | 'fading' | 'off'>(() => (!unlocked && shouldShowIntro() ? 'on' : 'off'))
   return (
     <>
       {/* The app waits, inert, under the opaque lock screen; the lock dissolves straight into it. */}
@@ -67,7 +71,9 @@ export function App() {
         <Router />
       </div>
       {unlocked && !glass && <Onboarding />}
-      {glass && (
+      {glass && intro !== 'off' && <IntroClip onLeave={() => setIntro('fading')} onDone={() => setIntro('off')} />}
+      {/* mounted as the clip starts fading, so the lock screen is already there underneath */}
+      {glass && intro !== 'on' && (
         <LockScreen
           onUnlock={() => {
             setUnlocked(true)
