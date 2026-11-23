@@ -12,10 +12,14 @@ test('mở app: clip mở đầu đúng khổ, có tiếng, không bỏ qua đư
   await expect(intro).toBeVisible()
   await expect(intro).toHaveAttribute('data-cut', info.project.name.endsWith('phone') ? 'portrait' : 'landscape')
   await expect(intro.getByRole('button', { name: /Bỏ qua|Tắt tiếng|Bật tiếng/ })).toHaveCount(0)
-  // a browser that refuses sound before a touch asks for one tap
+  // a browser that refuses sound before a touch asks for one tap — the refusal can come a moment after load
   const tap = intro.getByRole('button', { name: 'Chạm để bắt đầu' })
-  if (await tap.isVisible().catch(() => false)) await tap.click()
-  await expect.poll(() => page.evaluate(() => { const v = document.querySelector('video'); return v ? !v.muted && v.currentTime > 0 : false })).toBe(true)
+  await expect
+    .poll(async () => {
+      if (await tap.isVisible().catch(() => false)) await tap.click().catch(() => {})
+      return page.evaluate(() => { const v = document.querySelector('video'); return v ? !v.muted && v.currentTime > 0 : false })
+    }, { timeout: 15_000 })
+    .toBe(true)
   // still there half way through
   await page.waitForTimeout(5000)
   await expect(intro).toBeVisible()
