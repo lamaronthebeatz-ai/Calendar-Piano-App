@@ -57,8 +57,10 @@ describe('GĐ8 — chạy trong worker: huỷ thật, hết giờ thật, không
     expect(a.response.result.solutions.map((s) => s.validation.inputDigest)).toEqual(b.response.result.solutions.map((s) => s.validation.inputDigest))
     expect(h.spawned).toBe(1)
   }, 60_000)
-  it('huỷ giữa lúc tìm: trả CANCELLED ngay (không chờ bộ giải), worker bị thay, yêu cầu sau vẫn chạy', async () => {
-    const h = host()
+  it('huỷ giữa lúc tìm: trả CANCELLED ngay (không chờ bộ giải), worker bị thay, yêu cầu sau vẫn chạy; vòng đời tác vụ được ghi', async () => {
+    const events: string[] = []
+    const h = new UmreHost(nodeWorker, { onEvent: (e) => events.push(`${e.id}:${e.kind}`) })
+    hosts.push(h)
     const ac = new AbortController()
     const p = h.run(long, { timeMs: 60_000, signal: ac.signal })
     await new Promise((r) => setTimeout(r, 1500))
@@ -70,6 +72,8 @@ describe('GĐ8 — chạy trong worker: huỷ thật, hết giờ thật, không
     const next = await h.run(easy, { timeMs: 30_000 })
     expect(next.status).toBe('done')
     expect(h.spawned).toBe(2)
+    expect(events).toEqual(['1:start', '1:cancelled', '2:start', '2:done'])
+    expect(h.state).toBe('idle')
   }, 60_000)
   it('hết giờ cứng của host (kể cả khi giới hạn của bộ giải dài hơn): TIMEOUT đúng hạn, luồng chính không bị chặn', async () => {
     const h = host()
@@ -100,10 +104,10 @@ describe('GĐ8 — chạy trong worker: huỷ thật, hết giờ thật, không
     fake!.onmessage!({ data: { id: 1, ok: false, error: 'lỗi thật' } })
     expect(await p).toMatchObject({ status: 'error', error: 'lỗi thật' })
   })
-  it('lỗi trong worker thành trả lời lỗi, không làm sập host', async () => {
+  it('lỗi trong worker thành trả lời lỗi có mã (không ném ra), không làm sập host', async () => {
     const h = host()
     const o = await h.run({ op: 'counterpoint.diagnose', task: { ...twoVoiceTask('C4:4'), rulebook: { id: 'không-có', version: '9' } }, timeMs: 100 }, { timeMs: 30_000 })
-    expect(o).toMatchObject({ status: 'error' })
+    expect(o.status === 'done' && o.response.op === 'error' && o.response.error.code).toBe('rulebook-unknown')
     expect((await h.run(easy, { timeMs: 30_000 })).status).toBe('done')
   }, 60_000)
 })

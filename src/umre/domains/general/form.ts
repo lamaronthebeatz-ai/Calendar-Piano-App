@@ -1,6 +1,5 @@
-import { analyze } from '../../../features/analyze/engine'
+import { analyzeOnce } from '../harmony/analyzeOnce'
 import type { AnalysisModule, Finding } from '../../analysis/types'
-import { toCompose } from '../../repr/adapters/compose'
 import type { Score } from '../../repr/score'
 
 /**
@@ -20,7 +19,7 @@ export const formModule: AnalysisModule = {
   },
   checkInput: (input) => (input.score.voices.some((v) => v.events.some((e) => e.kind === 'note')) ? [] : ['không có nốt']),
   analyze(input) {
-    const a = analyze(toCompose(input.score as Score), { lens: 'classical' })
+    const a = analyzeOnce(input.score as Score)
     const Q = 240
     const barStart = (b: number) => (a.score.bars[b]?.start ?? 0) / Q
     const f: Finding[] = []

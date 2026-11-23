@@ -1,4 +1,7 @@
-import type { UmreRequest, UmreResponse } from '../api'
+import type { Answer, handle } from '../api'
+
+type UmreRequest = Parameters<typeof handle>[0]
+type UmreResponse = Answer
 
 /**
  * Runs UMRE requests in a worker so the page never freezes, with REAL cancellation: the searches are synchronous, so
@@ -12,6 +15,7 @@ export type WorkerLike = {
   onmessage: ((e: { data: unknown }) => void) | null
   onerror: ((e: unknown) => void) | null
 }
+export type HostEvent = { readonly id: number; readonly kind: 'start' | Outcome['status']; readonly ms: number; readonly op?: string }
 export type Envelope = { readonly id: number; readonly req: UmreRequest }
 export type Reply = { readonly id: number; readonly ok: true; readonly res: UmreResponse } | { readonly id: number; readonly ok: false; readonly error: string }
 
@@ -27,8 +31,15 @@ export class UmreHost {
   /** number of workers started (a test sees that a cancel really replaced the worker) */
   spawned = 0
   private spawn: () => WorkerLike
-  constructor(spawn: () => WorkerLike) {
+  /** task lifecycle for diagnostics (no request content): start, then one of done / timeout / cancelled / superseded / error */
+  private onEvent?: (e: HostEvent) => void
+  constructor(spawn: () => WorkerLike, o: { onEvent?: (e: HostEvent) => void } = {}) {
     this.spawn = spawn
+    this.onEvent = o.onEvent
+  }
+  /** what the host is doing now */
+  get state(): 'idle' | 'running' {
+    return this.pending ? 'running' : 'idle'
   }
 
   private ensure(): WorkerLike {
@@ -57,6 +68,7 @@ export class UmreHost {
 
   private finish(o: Outcome, p = this.pending) {
     if (!p) return
+    this.onEvent?.({ id: p.id, kind: o.status, ms: o.elapsedMs })
     if (p.timer) clearTimeout(p.timer)
     if (this.pending === p) this.pending = null
     p.settle(o)
@@ -78,6 +90,7 @@ export class UmreHost {
       if (o.signal?.aborted) return settle({ status: 'cancelled', elapsedMs: 0 })
       const p: NonNullable<UmreHost['pending']> = { id, settle, t0 }
       this.pending = p
+      this.onEvent?.({ id, kind: 'start', ms: 0, op: req.op })
       p.timer = setTimeout(() => {
         if (this.pending !== p) return
         this.kill()

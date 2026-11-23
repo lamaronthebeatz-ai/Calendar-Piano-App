@@ -35,18 +35,31 @@ export type Vertical = {
   readonly motion: Motion | null
 }
 
-const noteAt = (xs: readonly SoundingNote[], t: Rational) => xs.find((n) => cmp(n.onset, t) <= 0 && cmp(t, add(n.onset, n.duration)) < 0)
+function noteFrom(xs: readonly SoundingNote[], t: Rational, p: { i: number }) {
+  while (p.i < xs.length && cmp(add(xs[p.i].onset, xs[p.i].duration), t) <= 0) p.i++
+  for (let k = p.i; k < xs.length; k++) {
+    const n = xs[k]
+    if (cmp(n.onset, t) <= 0 && cmp(t, add(n.onset, n.duration)) < 0) return n
+  }
+  return undefined
+}
 
 /** Every moment before `until` where either voice strikes and both sound. */
 export function verticals(upper: Voice, lower: Voice, until: Rational): Vertical[] {
   const U = soundingNotes(upper)
   const L = soundingNotes(lower)
-  const times = [...U, ...L].map((n) => n.onset).filter((t) => cmp(t, until) < 0)
-  const uniq = times.filter((t, i) => times.findIndex((x) => eq(x, t)) === i).sort(cmp)
+  // distinct onsets: rationals are always in lowest terms, so n/d is a key (was a quadratic findIndex)
+  const seen = new Map<string, Rational>()
+  for (const n of [...U, ...L]) if (cmp(n.onset, until) < 0) seen.set(`${n.onset.n}/${n.onset.d}`, n.onset)
+  const uniq = [...seen.values()].sort(cmp)
   const out: Vertical[] = []
+  // times only grow: a note that has ended before t can never sound at a later t, so the scan starts past the leading
+  // run of ended notes — still returning the FIRST sounding note in array order, exactly like noteAt
+  const pu = { i: 0 }
+  const pl = { i: 0 }
   for (const t of uniq) {
-    const u = noteAt(U, t)
-    const l = noteAt(L, t)
+    const u = noteFrom(U, t, pu)
+    const l = noteFrom(L, t, pl)
     if (!u || !l) continue
     const prev = out[out.length - 1]
     out.push({ at: t, u, l, hitU: eq(u.onset, t), hitL: eq(l.onset, t), interval: between(l.pitch, u.pitch), motion: prev ? motionOf(prev.u.pitch, prev.l.pitch, u.pitch, l.pitch) : null })

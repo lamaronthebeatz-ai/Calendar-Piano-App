@@ -111,16 +111,25 @@ export const rhythmModule: AnalysisModule = {
         }
     })
     // polyrhythm: in one beat, one voice divides it in 2 (or 4) while another divides it in 3
-    const div = (ns: readonly SoundingNote[], t: number) => {
-      const xs = ns.filter((n) => q(n.onset) >= t - 1e-9 && q(n.onset) < t + beat - 1e-9)
-      return xs.length > 1 ? xs.length : 1
+    // attacks per beat, counted once per voice (was a filter over every note at every beat)
+    const perBeat = lines.map((ns) => {
+      const m = new Map<number, number>()
+      for (const n of ns) {
+        const k = Math.floor((q(n.onset) + 1e-9) / beat)
+        m.set(k, (m.get(k) ?? 0) + 1)
+      }
+      return m
+    })
+    const div = (v: number, t: number) => {
+      const c = perBeat[v].get(Math.round(t / beat)) ?? 0
+      return c > 1 ? c : 1
     }
     const poly: { at: number; voices: [number, number]; ratio: string }[] = []
     const end = Math.max(0, ...all.map((n) => q(n.onset) + q(n.duration)))
     for (let t = 0; t < end; t += beat)
       for (let a = 0; a < lines.length; a++)
         for (let b = a + 1; b < lines.length; b++) {
-          const x = div(lines[a], t), y = div(lines[b], t)
+          const x = div(a, t), y = div(b, t)
           if ((x % 3 === 0 && y % 2 === 0) || (x % 2 === 0 && y % 3 === 0)) poly.push({ at: t, voices: [a, b], ratio: `${x}:${y}` })
         }
     if (poly.length)

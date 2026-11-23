@@ -1,10 +1,10 @@
-import { analyze, type Analysis } from '../../../features/analyze/engine'
+import type { Analysis } from '../../../features/analyze/engine'
+import { analyzeOnce } from './analyzeOnce'
 import { CADENCE_NAME } from '../../../features/analyze/engine/cadence'
 import { QUALITIES } from '../../../features/analyze/engine/chords'
 import { NCT_NAME } from '../../../features/analyze/engine/nct'
 import { nameOf, type Spelled } from '../../../features/analyze/engine/pitch'
 import type { AnalysisModule, Finding, ModuleOutput } from '../../analysis/types'
-import { toCompose } from '../../repr/adapters/compose'
 import { spelling, type Letter } from '../../repr/pitch'
 import { notesOf, type Score } from '../../repr/score'
 import { identify } from './identify'
@@ -127,7 +127,7 @@ export const harmonyTonal: AnalysisModule = {
     return n ? [] : ['tổng phổ không có nốt']
   },
   analyze(input) {
-    const a = analyze(toCompose(input.score as Score), { lens: 'classical' })
+    const a = analyzeOnce(input.score as Score)
     if (a.harmony.length < 2) return { status: 'INSUFFICIENT_DATA', statusReason: 'quá ít hợp âm để đọc giọng và chức năng', findings: [], missing: ['ít nhất hai hợp âm (hoặc một giai điệu đủ dài để đoán hoà âm)'] }
     return tonalFindings(a)
   },

@@ -21,6 +21,8 @@ import type { Score } from './repr/score'
 import { entries, type Rulebook, type RulebookRef } from './rulebook/rulebook'
 import type { Task } from './task'
 import type { Level } from '../features/counterpoint/solver'
+import { classify, Diagnostics, fingerprintOf, ResultCache, UMRE_API_VERSION, type DiagEvent, type Meta, type UmreError } from './runtime/ops'
+import { UMRE_ENGINE_VERSION } from './version'
 
 /**
  * The single entry point of UMRE. Every app part (Counterpoint, Analyze, Compose, Theory, Research) talks to the
@@ -66,6 +68,7 @@ export function analysisModules(): readonly AnalysisModule[] {
   return ANALYSIS
 }
 export function registerAnalysis(m: AnalysisModule) {
+  environment = null // a new module changes every fingerprint
   if (ANALYSIS.some((x) => x.descriptor.id === m.descriptor.id)) throw new Error(`mô-đun phân tích trùng: ${m.descriptor.id}`)
   ANALYSIS.push(m)
 }
@@ -76,7 +79,64 @@ const rulebookOf = (ref: RulebookRef) => {
   return rb
 }
 
-export async function handle(req: UmreRequest, signal?: AbortSignal): Promise<UmreResponse> {
+const cache = new ResultCache<UmreResponse>(32)
+const diag = new Diagnostics(200)
+let environment: string | null = null
+/** Every component a result can depend on, with its version: a change anywhere changes every fingerprint. */
+function environmentOf() {
+  const e = getEngine()
+  return (environment ??= JSON.stringify({
+    engine: UMRE_ENGINE_VERSION, api: UMRE_API_VERSION,
+    solvers: e.solvers.list().map((d) => `${d.id}@${d.version}`).sort(),
+    validators: e.validators.list().map((v) => `${v.id}@${v.version}`).sort(),
+    rulebooks: e.rulebooks.list().map((r) => `${r.id}@${r.version}`).sort(),
+    analysis: ANALYSIS.map((m) => `${m.descriptor.id}@${m.descriptor.version}`).sort(),
+  }))
+}
+/** Requests whose answer does not depend on a time budget or randomness. */
+const REPRODUCIBLE = new Set(['analyze', 'harmony.identify', 'harmony.continuations', 'harmony.consequences', 'rulebook'])
+/** Results kept in the cache: reproducible ones, and solves that reached a verdict (SOLVED / PROVEN_UNSAT — their answers were validated). */
+const cacheable = (r: UmreResponse) =>
+  r.op === 'solve' ? r.result.status === 'SOLVED' || r.result.status === 'PROVEN_UNSAT' : r.op === 'analyze' ? r.result.status !== 'ERROR' : REPRODUCIBLE.has(r.op)
+
+export type Answer = (UmreResponse | { readonly op: 'error'; readonly error: UmreError } | { readonly op: 'diagnostics'; readonly result: { events: readonly DiagEvent[]; cache: { size: number; hits: number; misses: number; max: number } } }) & { readonly meta: Meta }
+
+/**
+ * The single entry point: never throws. Adds the fingerprint and reproducibility flag, answers repeated requests from
+ * the cache, turns any exception into a typed error, and records the event (no music) in the diagnostics ring.
+ */
+export async function handle(req: UmreRequest | { readonly op: 'diagnostics' } | { readonly op: 'cache.clear' }, signal?: AbortSignal): Promise<Answer> {
+  const t0 = Date.now()
+  if (req.op === 'diagnostics' || req.op === 'cache.clear') {
+    if (req.op === 'cache.clear') cache.clear()
+    return { op: 'diagnostics', result: { events: diag.list(), cache: { size: cache.size, hits: cache.hits, misses: cache.misses, max: cache.max } }, meta: { api: UMRE_API_VERSION, engine: UMRE_ENGINE_VERSION, fingerprint: '', cached: false, elapsedMs: 0, reproducible: true } }
+  }
+  let fp = ''
+  try {
+    fp = fingerprintOf(req, environmentOf())
+  } catch {
+    fp = 'unfingerprintable'
+  }
+  const meta = (cached: boolean): Meta => ({ api: UMRE_API_VERSION, engine: UMRE_ENGINE_VERSION, fingerprint: fp, cached, elapsedMs: Date.now() - t0, reproducible: REPRODUCIBLE.has(req.op) || cached })
+  const hit = fp !== 'unfingerprintable' ? cache.get(fp) : undefined
+  if (hit) {
+    diag.push({ t: t0, op: req.op, kind: 'cache-hit', ms: Date.now() - t0, fingerprint: fp })
+    return { ...hit, meta: meta(true) }
+  }
+  try {
+    const r = await dispatch(req, signal)
+    if (fp !== 'unfingerprintable' && cacheable(r) && !signal?.aborted) cache.set(fp, r)
+    const status = r.op === 'solve' || r.op === 'analyze' ? r.result.status : undefined
+    diag.push({ t: t0, op: req.op, kind: 'done', ms: Date.now() - t0, fingerprint: fp, ...(status ? { status } : {}) })
+    return { ...r, meta: meta(false) }
+  } catch (e) {
+    const error = classify(e, req.op, { op: req.op, ...('task' in req && req.task ? { task: req.task.id, type: req.task.type } : {}) })
+    diag.push({ t: t0, op: req.op, kind: 'error', ms: Date.now() - t0, fingerprint: fp, code: error.code })
+    return { op: 'error', error, meta: meta(false) }
+  }
+}
+
+async function dispatch(req: UmreRequest, signal?: AbortSignal): Promise<UmreResponse> {
   const e = getEngine()
   switch (req.op) {
     case 'solve':
