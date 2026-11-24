@@ -46,6 +46,7 @@ Bash nền: `until curl -s "https://api.github.com/repos/lamaronthebeatz-ai/Cale
 - IMSLP: trang tải có lớp chuyển hướng / chờ → không vượt; tìm nguồn khác hoặc dùng scan đã có trong repo.
 
 ## Bẫy công cụ đã gặp
+- **WebKit + `toBeInViewport` trên `<g>` của SVG** (24/11, CI lần 495): luôn ra tỉ lệ 0 dù phần tử đã cuộn tới. Đo bằng `getBoundingClientRect()` sau `scrollIntoView` (mẫu ở `tests/analyze.spec.ts`, bản 105 ô).
 - WebKit trên CI đôi khi không bao giờ phát sự kiện `load` khi `page.reload()` ở trang có service worker + IndexedDB (`analyze.spec`, lần 469/484/490/491) → `reload({ waitUntil: 'domcontentloaded' })` rồi chờ nội dung bằng `expect`.
 - Chromium trên CI (ảnh Playwright) có thể không phát mp4 H.264: video luôn kèm bản WebM VP9 (`<source>` thứ hai).
 - `cat > $TMPDIR/x <<EOF` khi lệnh trước trong cùng dòng là `cat > file` KHÔNG có heredoc → `cat` chờ stdin mãi, lệnh treo tới hết giờ. Ghi file bằng công cụ Write hoặc mỗi `cat` một heredoc riêng.

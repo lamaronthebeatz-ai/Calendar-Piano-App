@@ -228,7 +228,14 @@ test('nhập MusicXML dày (105 ô, 12 khuông, đổi nhịp, nhắc lại): đ
   await expect(page.getByTestId('measure-count')).toHaveText('Tệp: 105 thẻ ô · Bản nhạc: 105 ô · Đã khắc: 105 ô', { timeout: 90_000 })
   const bars = page.locator('.an-svg g.measure')
   expect(new Set(await bars.evaluateAll((g) => g.map((e) => e.getAttribute('data-id')))).size).toBe(105)
-  const last = page.locator('.an-svg g.measure[data-id="m104"]')
-  await last.scrollIntoViewIfNeeded()
-  await expect(last).toBeInViewport()
+  // scrolled to, then measured: the last bar has a real box inside the window (WebKit's viewport ratio for an SVG <g> reads 0)
+  const box = await page.locator('.an-svg g.measure[data-id="m104"]').evaluate((g) => {
+    g.scrollIntoView({ block: 'center' })
+    const r = g.getBoundingClientRect()
+    return { w: r.width, h: r.height, top: r.top, bottom: r.bottom, vh: innerHeight }
+  })
+  expect(box.w).toBeGreaterThan(10)
+  expect(box.h).toBeGreaterThan(10)
+  expect(box.bottom).toBeGreaterThan(0)
+  expect(box.top).toBeLessThan(box.vh)
 })
