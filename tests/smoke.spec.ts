@@ -54,6 +54,7 @@ async function open(page: Page, url: string, still = false) {
   page.on('pageerror', (e) => errors.push(e.message))
   await page.addInitScript((still) => {
     sessionStorage.setItem('app:unlocked', '1')
+    sessionStorage.setItem('journey:clip-off', '1')
     localStorage.setItem('onboarding-done', '1')
     // "still": every animation and transition off, as when they fail to run — content must not depend on them
     if (still)

@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { IntroClip } from '../../components/IntroClip'
+import { shouldShowJourneyClip } from '../../components/introGate'
 import { findArticle } from '../theory/wiki'
 import { YouTubeVideo } from '../theory/YouTube'
 import { ALL_CHAPTERS, CHAPTERS, TRACKS, trackOf } from './chapters'
@@ -43,7 +45,19 @@ const VERDICT: Record<Verdict, string> = { fact: 'Có chứng cứ', legend: 'Gi
  * Hành trình: a story game over the world map. The player crosses the history of music era by era; every character
  * asks a question whose answer is in a library article, so the game is read through the library.
  */
+/** Entering the Journey: Lamar's clip first (portrait / landscape), whole and with sound; the game — and its music —
+ *  mounts when the clip starts to fade. */
 export function JourneyPage() {
+  const [clip, setClip] = useState<'on' | 'fading' | 'off'>(() => (shouldShowJourneyClip() ? 'on' : 'off'))
+  return (
+    <>
+      {clip !== 'on' && <JourneyGame />}
+      {clip !== 'off' && <IntroClip clip="journey" label="Đoạn mở đầu Hành trình" remember={false} onLeave={() => setClip('fading')} onDone={() => setClip('off')} />}
+    </>
+  )
+}
+
+function JourneyGame() {
   const save = useSave()
   const [params, setParams] = useSearchParams()
   const asked = ALL_CHAPTERS.find((c) => c.id === params.get('c'))

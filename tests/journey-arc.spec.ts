@@ -14,6 +14,7 @@ test.beforeEach(async ({ page }, info) => {
   if (info.project.name.startsWith('webkit')) await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
+    sessionStorage.setItem('journey:clip-off', '1')
     localStorage.setItem('onboarding-done', '1')
     if (!localStorage.getItem('journey:v1')) localStorage.setItem('journey:v1', JSON.stringify({ name: 'Minh', portrait: 'p-durer', seen: ['trung-co'], done: ['trung-co/phong-chep-sach', 'trung-co/neume'] }))
   })
@@ -204,6 +205,7 @@ test('Bản thảo thất lạc: chơi trọn tuyến chính qua giao diện, k�
   // the save outlives the page: a fresh page of the same browser reads it back. (Not page.reload(): Playwright's WebKit
   // crashes reloading after pushState → back → pushState, even on a bare page — see workflow.md § Bẫy.)
   const again = await page.context().newPage()
+  await again.addInitScript(() => sessionStorage.setItem('journey:clip-off', '1'))
   await again.goto('/#/hanh-trinh?c=trung-co&v=arc&a=ban-thao')
   await expect(again.locator('.ar-objective')).toContainText('Đã khép lại')
   await again.goto('/#/hanh-trinh?c=trung-co')

@@ -116,3 +116,9 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 ## Tiếp theo
 - Chương VII: thế kỷ XX (Debussy, Stravinsky – Diaghilev, Schoenberg, Bartók, Shostakovich…) — cần bổ sung tiểu sử thế kỷ XX trước; có thể kéo dài lời thoại chương I – II bằng cùng giọng chương III.
 - Có thể thêm: âm thanh nền (drone quãng 5 bằng `audio.ts`), nhật ký hành trình ghi vào Sổ tay `/brain`, đề tài `/research` từ thẻ chứng cứ, chặng tự sinh từ PLACES + people.
+
+## Clip mở đầu Hành trình (24/11/2026, Lamar gửi 2 clip)
+- Mỗi lần vào `/hanh-trinh` (kể cả tải lại), clip chạy trước rồi game mới mount; nhạc nền của game bắt đầu khi clip tan. Wrapper `JourneyPage` → `JourneyGame` trong `JourneyPage.tsx`.
+- Dùng lại `components/IntroClip.tsx` với `clip="journey"`, `remember={false}`. Luật giống clip mở app: luôn có tiếng, không nút bỏ qua/tắt tiếng, xem hết; trình duyệt chặn tiếng thì hiện "Chạm để bắt đầu"; không tải được (ngoại tuyến, 8 s) thì vào thẳng game.
+- Tệp `public/media/journey-{portrait,landscape}.{mp4,webm,webp}` (mp4 H.264 CRF 25 ~1,7–1,9 MB, webm VP9 dự phòng, webp làm poster), **không precache** (`globIgnores: media/journey-*`).
+- Test: `tests/intro.spec.ts` (2 ca mới). Các test khác đặt `sessionStorage['journey:clip-off']='1'` để vào thẳng game (`shouldShowJourneyClip` trong `introGate.ts`; app không bao giờ đặt khoá này). Mở trang mới bằng `context().newPage()` thì phải `addInitScript` lại khoá đó.

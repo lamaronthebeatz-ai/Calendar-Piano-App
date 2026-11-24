@@ -9,6 +9,7 @@ test.beforeEach(async ({ page }, info) => {
   if (info.project.name.startsWith('webkit')) await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.addInitScript(() => {
     sessionStorage.setItem('app:unlocked', '1')
+    sessionStorage.setItem('journey:clip-off', '1')
     localStorage.setItem('onboarding-done', '1')
   })
 })

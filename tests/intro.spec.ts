@@ -48,3 +48,38 @@ test('trình duyệt không phát được mp4 (không có H.264): dùng bản w
     }, { timeout: 15_000 })
     .toBe('webm')
 })
+
+test('bấm vào Hành trình: clip Hành trình đúng khổ, có tiếng, xem hết rồi mới vào game; mỗi lần vào lại đều chiếu', async ({ page }, info) => {
+  test.setTimeout(90_000)
+  await page.addInitScript(() => sessionStorage.setItem('app:unlocked', '1'))
+  await page.goto('/#/theory')
+  await page.goto('/#/hanh-trinh')
+  const intro = page.locator('.intro')
+  await expect(intro).toBeVisible()
+  await expect(intro).toHaveAttribute('data-cut', info.project.name.endsWith('phone') ? 'portrait' : 'landscape')
+  await expect(intro.locator('video source').first()).toHaveAttribute('src', /media\/journey-(portrait|landscape)\.mp4$/)
+  await expect(intro.getByRole('button', { name: /Bỏ qua|Tắt tiếng|Bật tiếng/ })).toHaveCount(0)
+  // the game (and its music) waits for the clip
+  await expect(page.locator('.jr')).toHaveCount(0)
+  const tap = intro.getByRole('button', { name: 'Chạm để bắt đầu' })
+  await expect
+    .poll(async () => {
+      if (await tap.isVisible().catch(() => false)) await tap.click().catch(() => {})
+      return page.evaluate(() => { const v = document.querySelector('.intro video') as HTMLVideoElement | null; return v ? !v.muted && v.currentTime > 0 : false })
+    }, { timeout: 15_000, message: 'clip Hành trình không phát có tiếng' })
+    .toBe(true)
+  await expect(page.locator('.jr')).toBeVisible({ timeout: 20_000 })
+  await expect(intro).toHaveCount(0)
+  // leaving and coming back shows it again
+  await page.goto('/#/theory')
+  await page.goto('/#/hanh-trinh')
+  await expect(page.locator('.intro')).toBeVisible()
+})
+
+test('clip Hành trình không tải được (ngoại tuyến): vào thẳng game', async ({ page }) => {
+  await page.addInitScript(() => sessionStorage.setItem('app:unlocked', '1'))
+  await page.route('**/media/journey-*', (r) => r.abort())
+  await page.goto('/#/hanh-trinh')
+  await expect(page.locator('.jr')).toBeVisible({ timeout: 6000 })
+  await expect(page.locator('.intro')).toHaveCount(0)
+})
