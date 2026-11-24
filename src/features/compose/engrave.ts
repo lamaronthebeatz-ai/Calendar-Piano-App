@@ -12,7 +12,12 @@ export function engraver(): Promise<VerovioToolkit> {
   return tk
 }
 
-/** One page as tall as the music needs, `widthPx` wide, at `scale` per cent. */
+/**
+ * The whole score, `widthPx` wide, at `scale` per cent: the pages as tall as the music needs, one after the other.
+ * Verovio caps a page at 60 000 units (its maximum `pageHeight`); a long or many-staved score breaks onto further
+ * pages there — rendering only page 1 showed 11 of 105 bars of a dense score (fixed 24/11/2026). Every page is
+ * rendered; the caller's queries run over the container, so stacked <svg>s behave as one score.
+ */
 export function render(t: VerovioToolkit, mei: string, widthPx: number, scale: number): string {
   t.setOptions({
     pageWidth: Math.round((widthPx * 100) / scale),
@@ -29,7 +34,7 @@ export function render(t: VerovioToolkit, mei: string, widthPx: number, scale: n
     svgHtml5: true,
   })
   t.loadData(mei)
-  return t.renderToSVG(1)
+  return Array.from({ length: t.getPageCount() }, (_, i) => t.renderToSVG(i + 1)).join('')
 }
 
 /** Pages for print, sized to the A4 sheet inside the app's print margins (178 × 259 mm), title at the top. */

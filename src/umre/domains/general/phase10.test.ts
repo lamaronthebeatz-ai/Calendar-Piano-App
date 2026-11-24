@@ -116,7 +116,7 @@ describe('GĐ10 — hình thức (giả thuyết, adapter /analyze) và phong c�
 describe('GĐ10 — tích hợp: mọi mô-đun qua một đầu mối, đúng hợp đồng, giải thích ba mức', () => {
   it('chạy cả 8 mô-đun trên một hợp xướng: không mô-đun nào sai hợp đồng; mô-đun thiếu ngữ cảnh báo INSUFFICIENT_DATA thay vì lỗi; tổng PARTIAL', async () => {
     const r = await run(fromCompose(fromMusicXml(readFileSync('public/analyze/bach-bwv269.musicxml', 'utf8'))), [])
-    const all = await handle({ op: 'analyze', score: fromCompose(fromMusicXml(readFileSync('public/analyze/bach-bwv269.musicxml', 'utf8'))) })
+    const all = await handle({ op: 'analyze', score: fromCompose(fromMusicXml(readFileSync('public/analyze/bach-bwv269.musicxml', 'utf8'))), context: { globalKey: { step: 4, alter: 0, minor: false } } })
     if (all.op !== 'analyze') throw new Error('op')
     expect(r.modules.length).toBe(0)
     const res = all.result
@@ -125,8 +125,10 @@ describe('GĐ10 — tích hợp: mọi mô-đun qua một đầu mối, đúng h
     for (const m of res.modules) expect(checkModuleOutput(m, m.module)).toEqual([])
     expect(res.modules.find((m) => m.module === 'counterpoint.check')!.status).toBe('INSUFFICIENT_DATA')
     expect(res.status).toBe('PARTIAL')
-    const f = res.findings.find((x) => x.topic === 'giọng chính')!
-    expect(renderFinding(f, 'basic')).toBe('Giọng chính: G trưởng')
-    expect(renderFinding(f, 'academic')).toMatch(/^Diễn giải: .*Cơ sở độ tin cậy/)
+    const f = res.findings.find((x) => x.topic === 'giọng chủ')!
+    expect(renderFinding(f, 'basic')).toBe('Giọng chủ (người phân tích chọn): G trưởng')
+    expect(renderFinding(f, 'academic')).toMatch(/^Tiền đề \(người phân tích\): /)
+    const chord = res.findings.find((x) => x.topic === 'hợp âm')!
+    expect(renderFinding(chord, 'academic')).toMatch(/^Diễn giải: .*Cơ sở độ tin cậy/)
   }, 60_000)
 })

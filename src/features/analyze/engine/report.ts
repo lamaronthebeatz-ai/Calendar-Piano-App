@@ -39,6 +39,8 @@ export function barNumbering(a: Analysis) {
 const span = (a: number, b: number): Run => ({ t: a === b ? `ô ${a}` : `ô ${a}–${b}`, bars: [a, b] })
 
 /** The analysis as a text that reads in the order of the music; every bar reference and term is clickable. */
+const sameKeyName = (x: { tonicPc: number; minor: boolean }, y: { tonicPc: number; minor: boolean }) => x.tonicPc === y.tonicPc && x.minor === y.minor
+
 export function report(a: Analysis): Block[] {
   const { num } = barNumbering(a)
   const sc = a.score
@@ -58,7 +60,10 @@ export function report(a: Analysis): Block[] {
     { t: first.key === 0 ? 'không có dấu hoá ở hoá biểu' : `hoá biểu ${Math.abs(first.key)} dấu ${first.key > 0 ? 'thăng' : 'giáng'}`, concept: 'keySignature' },
     { t: '.' },
   ]
-  if (homeKey && a.lens !== 'xx') ov.push({ t: ' Giọng chính: ' }, { t: keyName(homeKey), concept: 'key' }, { t: '.' })
+  if (homeKey && a.lens !== 'xx') {
+    ov.push({ t: a.homeFrom === 'user' ? ' Giọng chủ (người phân tích chọn): ' : ' Giọng chính (máy ước lượng): ' }, { t: keyName(homeKey), concept: 'key' }, { t: '.' })
+    if (a.homeFrom === 'user' && a.homeEstimate && !sameKeyName(a.homeEstimate, homeKey)) ov.push({ t: ` Máy đọc riêng thì nghiêng về ${keyName(a.homeEstimate)} — xem cảnh báo ở đầu trang.` })
+  }
   blocks.push({ id: 'tong-quan', title: 'Tổng quan', paras: [ov] })
 
   if (a.lens === 'xx') {

@@ -86,9 +86,11 @@ describe('GĐ11 — độ tin cậy của đầu mối UMRE', () => {
   }, 60_000)
   it('tối ưu (một lần /analyze cho cả điệu tính và hình thức) không đổi kết quả: chạy chung = chạy riêng trên hai bản tổng phổ', async () => {
     const pick = (ids: string[]) => analysisModules().filter((m) => ids.includes(m.descriptor.id))
-    const together = await runAnalysis(pick(['harmony.tonal', 'form.sections']), { score: bach() })
-    const t1 = await runAnalysis(pick(['harmony.tonal']), { score: bach() })
-    const t2 = await runAnalysis(pick(['form.sections']), { score: bach() })
+    const context = { globalKey: { step: 4, alter: 0, minor: false } }
+    const together = await runAnalysis(pick(['harmony.tonal', 'form.sections']), { score: bach(), context })
+    const t1 = await runAnalysis(pick(['harmony.tonal']), { score: bach(), context })
+    const t2 = await runAnalysis(pick(['form.sections']), { score: bach(), context })
+    expect(t1.status).not.toBe('INSUFFICIENT_DATA')
     expect(together.findings).toEqual([...t1.findings, ...t2.findings])
   }, 60_000)
   it('đầu vào hỏng không làm sập máy: tổng phổ rỗng → INSUFFICIENT_DATA ở từng mô-đun; yêu cầu sau vẫn chạy', async () => {

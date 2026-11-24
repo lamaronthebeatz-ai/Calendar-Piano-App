@@ -1,5 +1,7 @@
 import type { Analysis } from '../../../features/analyze/engine'
-import { analyzeOnce } from './analyzeOnce'
+import { analyzeOnce, globalKeyOf } from './analyzeOnce'
+import { relation } from '../../../features/analyze/engine/report'
+import type { NamedKey } from '../../../features/analyze/engine'
 import { CADENCE_NAME } from '../../../features/analyze/engine/cadence'
 import { QUALITIES } from '../../../features/analyze/engine/chords'
 import { NCT_NAME } from '../../../features/analyze/engine/nct'
@@ -21,26 +23,69 @@ const ID = 'harmony.tonal'
 const Q = 240
 const sp = (s: Spelled) => spelling(s.step as Letter, s.alter)
 const keyName = (k: { name: string; minor: boolean }) => `${k.name.replace(/m$/, '')} ${k.minor ? 'thứ' : 'trưởng'}`
+const mod12 = (x: number) => ((x % 12) + 12) % 12
+// the local key's scale; minor takes natural, harmonic and melodic forms together (raised 6th and 7th are its own)
+const scaleOf = (k: { tonicPc: number; minor: boolean }) => new Set((k.minor ? [0, 2, 3, 5, 7, 8, 9, 10, 11] : [0, 2, 4, 5, 7, 9, 11]).map((d) => mod12(k.tonicPc + d)))
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']
+const ACC = (a: number) => (a > 0 ? '♯'.repeat(a) : '♭'.repeat(-a))
+
+/**
+ * What a chord is in its LOCAL key — the global key does not force every chord into its scale: diatonic; applied
+ * (secondary dominant / leading-tone chord of another degree); special chromatic (Neapolitan, augmented sixths);
+ * borrowed (not in the local mode, all in the parallel mode); other chromatic.
+ */
+export function chordClass(h: Analysis['harmony'][number]): 'diatonic' | 'applied' | 'special' | 'borrowed' | 'chromatic' {
+  if (h.reading.of !== undefined) return 'applied'
+  if (h.reading.special) return 'special'
+  const own = scaleOf(h.key)
+  if (h.pcs.every((p) => own.has(p))) return 'diatonic'
+  const parallel = scaleOf({ tonicPc: h.key.tonicPc, minor: !h.key.minor })
+  return h.pcs.every((p) => parallel.has(p)) ? 'borrowed' : 'chromatic'
+}
+const CLASS_NAME = { diatonic: 'hợp âm của giọng', applied: 'hợp âm phụ (át / VII của bậc khác)', special: 'hợp âm biến hoá đặc biệt', borrowed: 'hợp âm mượn từ điệu thức cùng tên', chromatic: 'hợp âm biến hoá khác' }
+/** The region's tonic as a degree of the global key: "V", "♭VI", "iii"… */
+export function degreeIn(k: NamedKey, home: NamedKey) {
+  const letters = (((k.tonic.step - home.tonic.step) % 7) + 7) % 7
+  // degrees of the home mode's own scale (natural minor in minor): III of A minor is C, ♭VI of C major is A♭
+  const scale = home.minor ? [0, 2, 3, 5, 7, 8, 10] : [0, 2, 4, 5, 7, 9, 11]
+  const acc = mod12(k.tonicPc - home.tonicPc - scale[letters] + 6) - 6
+  return `${ACC(acc)}${k.minor ? ROMAN[letters].toLowerCase() : ROMAN[letters]}`
+}
 
 export function tonalFindings(a: Analysis): ModuleOutput {
   const f: Finding[] = []
   const total = a.harmony.reduce((s, h) => s + (h.chord.end - h.chord.start), 0) || 1
   const lowFit = a.harmony.filter((h) => h.chord.fit < 0.6).length
+  const shareIn = (k: { tonicPc: number; minor: boolean }) => a.harmony.filter((h) => h.key.tonicPc === k.tonicPc && h.key.minor === k.minor).reduce((s, h) => s + h.chord.end - h.chord.start, 0) / total
   if (a.home) {
-    const inHome = a.harmony.filter((h) => h.key.tonicPc === a.home!.tonicPc && h.key.minor === a.home!.minor).reduce((s, h) => s + h.chord.end - h.chord.start, 0)
+    const inHome = shareIn(a.home)
+    const last = a.harmony.at(-1)?.key
     f.push({
-      id: `${ID}#home`, module: ID, kind: 'interpretation', topic: 'giọng chính', value: { tonicPc: a.home.tonicPc, minor: a.home.minor, name: a.home.name },
-      text: { basic: `Giọng chính: ${keyName(a.home)}`, technical: `home = ${a.home.name}; ${(100 * inHome / total).toFixed(0)}% thời lượng hợp âm đọc trong giọng này` },
-      confidence: { value: Math.round((100 * inHome) / total) / 100, basis: 'tỉ lệ thời lượng hợp âm mà bộ Viterbi đặt trong giọng chính' },
-      evidence: [`${a.harmony.length} hợp âm`, `${a.regions.length} vùng giọng`],
+      id: `${ID}#home`, module: ID, kind: 'premise', topic: 'giọng chủ', value: { tonicPc: a.home.tonicPc, minor: a.home.minor, name: a.home.name, from: 'user' },
+      text: { basic: `Giọng chủ (người phân tích chọn): ${keyName(a.home)}`, technical: `global key = ${a.home.name} (tiền đề của người phân tích, không suy ra); ${Math.round(100 * inHome)}% thời lượng hợp âm đọc trong giọng này` },
+      evidence: ['người phân tích chọn trước khi chạy', `${Math.round(100 * inHome)}% thời lượng hợp âm đọc ở giọng này; hợp âm cuối ở ${last ? keyName(last) : '?'}`],
     })
+    const est = a.homeEstimate
+    if (est && !(est.tonicPc === a.home.tonicPc && est.minor === a.home.minor)) {
+      const lastOk = !!last && last.tonicPc === a.home.tonicPc && last.minor === a.home.minor
+      const weak = inHome < 0.2 && !lastOk
+      f.push({
+        id: `${ID}#home-evidence`, module: ID, kind: 'estimate', topic: weak ? 'cảnh báo giọng chủ' : 'giọng ước lượng', value: { name: est.name, share: Math.round(shareIn(est) * 100) / 100, userShare: Math.round(inHome * 100) / 100, endsInUserKey: lastOk },
+        text: {
+          basic: `${weak ? 'Bằng chứng ít ủng hộ giọng chủ đã chọn: ' : ''}máy ước lượng ${keyName(est)} (${Math.round(shareIn(est) * 100)}% thời lượng); giọng chủ vẫn là ${keyName(a.home)}`,
+          technical: `homeEstimate ${est.name}: ${Math.round(shareIn(est) * 100)}% vs ${a.home.name}: ${Math.round(inHome * 100)}%; kết ${lastOk ? 'ở' : 'không ở'} giọng chủ`,
+        },
+        confidence: { value: Math.round(shareIn(est) * 100) / 100, basis: 'tỉ lệ thời lượng hợp âm bộ Viterbi đặt trong giọng ước lượng — chỉ là bằng chứng, không thay giọng chủ' },
+        evidence: [`${a.regions.length} vùng giọng`, `hợp âm cuối ở ${last ? keyName(last) : '?'}`],
+      })
+    }
   }
   a.regions.slice(1).forEach((r, i) => {
     const prev = a.regions[i]
     f.push({
       id: `${ID}#region-${i + 2}`, module: ID, kind: 'interpretation', topic: 'chuyển giọng', at: r.start / Q, end: r.end / Q,
-      value: { from: prev.key.name, to: r.key.name },
-      text: { basic: `Sang ${keyName(r.key)}`, technical: `${prev.key.name} → ${r.key.name} @${r.start / Q}` },
+      value: { from: prev.key.name, to: r.key.name, ...(a.home ? { degree: degreeIn(r.key, a.home), relation: relation(r.key, a.home) } : {}) },
+      text: { basic: `Sang ${keyName(r.key)}${a.home ? ` — ${relation(r.key, a.home)} (${degreeIn(r.key, a.home)})` : ''}`, technical: `${prev.key.name} → ${r.key.name} @${r.start / Q}${a.home ? `; ${degreeIn(r.key, a.home)} của ${a.home.name}` : ''}` },
       confidence: { value: Math.min(1, (r.end - r.start) / (4 * 960)), basis: 'độ dài vùng giọng mới tính bằng ô 4/4 (vùng ngắn hơn bốn ô có thể chỉ là ly giọng)' },
       alternatives: [{ value: { tonicization: true }, text: `chỉ là ly giọng tạm sang ${r.key.name}, vẫn ở ${prev.key.name}` }],
       evidence: [`hợp âm từ ${r.start / Q} đến ${r.end / Q} (phách đen) đọc trong ${r.key.name}`],
@@ -69,8 +114,8 @@ export function tonalFindings(a: Analysis): ModuleOutput {
       .map((r) => ({ value: { root: r.chord.root, quality: r.chord.quality }, text: `${nameOf({ step: r.chord.root.letter, alter: r.chord.root.alter })} ${r.chord.quality}${r.missing.length ? ` thiếu ${r.missing.join(', ')}` : ''}` }))
     f.push({
       id: `${ID}#chord-${i + 1}`, module: ID, kind: 'interpretation', topic: 'hợp âm', at, end,
-      value: { rootPc: h.chord.root, root: nameOf(h.chord.rootName), quality: h.chord.quality, inversion: h.chord.inversion, key: { tonicPc: h.key.tonicPc, minor: h.key.minor, name: h.key.name }, rn: h.reading.rn, ru: h.reading.ru, fn: h.reading.fn ?? null, of: h.reading.of ?? null, pcs: h.pcs },
-      text: { basic: `${h.reading.ru} (${h.reading.rn}) ở ${keyName(h.key)}`, technical: `${nameOf(h.chord.rootName)} ${QUALITIES[h.chord.quality].name}, đảo ${h.chord.inversion}; ${h.reading.rn} / ${h.reading.ru}${h.reading.fn ? `, chức năng ${h.reading.fn}` : ''}` },
+      value: { rootPc: h.chord.root, root: nameOf(h.chord.rootName), quality: h.chord.quality, inversion: h.chord.inversion, key: { tonicPc: h.key.tonicPc, minor: h.key.minor, name: h.key.name }, rn: h.reading.rn, ru: h.reading.ru, fn: h.reading.fn ?? null, of: h.reading.of ?? null, pcs: h.pcs, class: chordClass(h) },
+      text: { basic: `${h.reading.ru} (${h.reading.rn}) ở ${keyName(h.key)}`, technical: `${nameOf(h.chord.rootName)} ${QUALITIES[h.chord.quality].name}, đảo ${h.chord.inversion}; ${h.reading.rn} / ${h.reading.ru}${h.reading.fn ? `, chức năng ${h.reading.fn}` : ''}; ${CLASS_NAME[chordClass(h)]}` },
       confidence: { value: Math.round(h.chord.fit * 100) / 100, basis: 'độ khớp nốt – hợp âm của bộ quy hoạch động (fit); dưới 0,6 là đoán' },
       ...(alts.length ? { alternatives: alts } : {}),
       evidence: [`âm vang: ${h.chord.tones.map(nameOf).join(' ')}`, ...(h.chord.foreign.length ? [`${h.chord.foreign.length} nốt ngoài hợp âm`] : [])],
@@ -118,7 +163,7 @@ export function tonalFindings(a: Analysis): ModuleOutput {
 
 export const harmonyTonal: AnalysisModule = {
   descriptor: {
-    id: ID, version: '1.0.0', domain: 'harmony', kind: 'analytical',
+    id: ID, version: '1.1.0', domain: 'harmony', kind: 'analytical',
     method: 'bộ phân tích /analyze: hợp âm bằng quy hoạch động + Pardo – Birmingham, giọng bằng Viterbi trên 24 giọng, nhãn Nga – Xô viết và số La Mã, nốt ngoài hợp âm, kết',
     limits: ['đo trên 19 hợp xướng Bach (Tymoczko và cs.): gốc hợp âm ~84%, giọng ~77%, hợp âm phụ tìm ra ~38%', 'không phân tích dẫn giọng; không có luận cứ phong cách', 'nhạc phi điệu tính: dùng lăng kính xx của /analyze, không qua mô-đun này'],
   },
@@ -127,7 +172,10 @@ export const harmonyTonal: AnalysisModule = {
     return n ? [] : ['tổng phổ không có nốt']
   },
   analyze(input) {
-    const a = analyzeOnce(input.score as Score)
+    // the global key is the analyst's: without it there is no premise for degrees and functions, and none is guessed
+    const home = globalKeyOf(input.context)
+    if (!home) return { status: 'INSUFFICIENT_DATA', statusReason: 'chưa có giọng chủ — người phân tích chọn giọng chủ trước khi đọc bậc và chức năng', findings: [], missing: ['giọng chủ do người phân tích chọn (context.globalKey)'] }
+    const a = analyzeOnce(input.score as Score, home)
     if (a.harmony.length < 2) return { status: 'INSUFFICIENT_DATA', statusReason: 'quá ít hợp âm để đọc giọng và chức năng', findings: [], missing: ['ít nhất hai hợp âm (hoặc một giai điệu đủ dài để đoán hoà âm)'] }
     return tonalFindings(a)
   },

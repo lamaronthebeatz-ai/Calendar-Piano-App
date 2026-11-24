@@ -60,3 +60,9 @@
 - **Giải bài không tất định theo thời gian** (bộ giải dừng ở giới hạn thời gian): tái lập qua cache / lưu kết quả kèm dấu vân, không phải chạy lại trên máy khác.
 - **Tiến độ tác vụ**: chưa báo phần trăm (bộ tìm kiếm không có điểm báo); giao diện chỉ báo đang chạy / xong / huỷ.
 - **Dựng lại kết quả của phiên bản cũ**: cần commit cũ (máy chỉ giữ phiên bản sổ luật hiện tại).
+
+## Giọng chủ do người chọn + nhập MusicXML (24/11)
+- Giọng chủ chỉ là tiền đề cho nhãn và quan hệ: Viterbi giọng cục bộ vẫn chạy độc lập (thiết kế, để giọng chủ không ép hợp âm). Nên nếu máy đọc sai vùng giọng cục bộ thì chọn giọng chủ không sửa được.
+- Lớp hợp âm (`class`): "mượn" = mọi âm thuộc điệu thức cùng tên của giọng **cục bộ**; không phân biệt mượn với hợp âm phụ chưa giải quyết. Ngưỡng cảnh báo giọng chủ (< 20% thời lượng, không kết ở giọng đó) là quy ước của người biên soạn.
+- Chuyển giọng vs ly điệu vẫn theo ngưỡng độ dài của `/analyze` (`fold`), không phải bằng chứng hoà âm riêng.
+- Nhập MusicXML: nhạc cụ dịch giọng quãng 8 giữ cao độ viết; dấu nhắc phức tạp (volta, D.S., coda) chỉ giữ vạch nhắc, không trải ra; ô bất thường đọc theo độ dài thật ở part đầu (các part khác phải khớp). Chưa thử tệp `.mxl` nén thật ngoài bộ mẫu.

@@ -94,7 +94,7 @@ export function renderFinding(f: Finding, level: keyof Text, cite?: (id: string)
   if (level === 'basic') return f.text.basic
   const tech = `${f.text.technical}${f.confidence ? ` [tin cậy ${f.confidence.value.toFixed(2)}]` : ''}`
   if (level === 'technical') return tech
-  const label = { fact: 'Dữ kiện', interpretation: 'Diễn giải', hypothesis: 'Giả thuyết', estimate: 'Ước lượng', 'rule-check': 'Kiểm luật' }[f.kind]
+  const label = { premise: 'Tiền đề (người phân tích)', fact: 'Dữ kiện', interpretation: 'Diễn giải', hypothesis: 'Giả thuyết', estimate: 'Ước lượng', 'rule-check': 'Kiểm luật' }[f.kind]
   const src = f.citations?.length && cite ? ` Nguồn: ${f.citations.map(cite).join('; ')}.` : ''
   const conf = f.confidence ? ` Cơ sở độ tin cậy: ${f.confidence.basis}.` : ''
   const alt = f.alternatives?.length ? ` Cách đọc khác: ${f.alternatives.map((a) => a.text).join('; ')}.` : ''

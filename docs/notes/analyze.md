@@ -45,3 +45,12 @@ Mutopia chỉ có .ly + .mid. `python-ly` không chuyển được. Cách đã c
 
 ## UMRE (Wave D)
 Khối "Phân tích và kiểm chứng của UMRE" (`UmrePanel.tsx`, tải lười, mặc định đóng): chạy 6 mô-đun UMRE trong `umre.worker.ts` qua `UmreHost` (huỷ khi đổi bản / rời trang), ba mức xem, xuất `.md`. Không thay phân tích của trang. `harmony.tonal`/`form.sections` dùng chung một lần `analyze()` (`analyzeOnce`).
+
+## Giọng chủ do người phân tích chọn (24/11/2026)
+- `globalKey.ts`: `secureStore('analyze:global-keys')` → `{ [workId]: KeyChoice[] }` (lịch sử, phần tử cuối là hiện tại; chọn lại đúng giọng hiện tại không thêm phiên bản). `TONICS` 17 cách viết 12 âm chủ; `keyLabel` "Rê♭ trưởng (D♭ major)".
+- `AnalyzePage` `Work`: lăng kính Cổ điển / Jazz **chờ giọng chủ** (`runKey` rỗng → không chạy worker, bản nhạc vẫn khắc đủ); TK XX không cần. `GlobalKeyBar`: chưa chọn → ô nhắc + chọn âm chủ / trưởng – thứ; đã chọn → nhãn, "Đổi giọng chủ", lịch sử, cảnh báo có số liệu khi `homeEstimate` khác (mạnh khi < 20% thời lượng ở giọng chọn và không kết ở đó). `runKey` gồm giọng → đổi là chạy lại, kết quả cũ bị bỏ (khớp khoá).
+- Máy: `analyze(score, { home })` — `home` là của người dùng (`homeFrom: 'user'`), `homeEstimate` là ước lượng giữ làm bằng chứng; Viterbi giọng cục bộ, ly điệu, số La Mã **không phụ thuộc** giọng chủ (test: đổi G → E♭, mọi hợp âm giữ nguyên). Báo cáo: "Giọng chủ (người phân tích chọn): …".
+- UMRE nhận qua `context.globalKey` (`docs/umre/API.md` § Giọng chủ).
+
+## Đếm ô (24/11/2026, lỗi 105 ô chỉ hiện 11)
+Dòng dưới bản nhạc `data-testid="measure-count"`: Tệp (`<measure>` của part đầu, lưu `Saved.fileMeasures` lúc nhập) · Bản nhạc (`score.measures`) · Đã khắc (`g[data-class=measure]` khác nhau trong SVG); lệch thì đỏ. Gốc lỗi và test: `notes/compose.md` § Khắc nhiều trang.

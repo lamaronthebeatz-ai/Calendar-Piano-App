@@ -3,6 +3,9 @@ import { Window } from 'happy-dom'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { fromMusicXml } from '../../../features/compose/exchange'
 import { handle } from '../../api'
+import { analyzeOnce, type GlobalKey } from './analyzeOnce'
+import { degreeIn } from './tonal'
+import { named } from '../../../features/analyze/engine'
 import { createEngine } from '../../engine'
 import { auditResult } from '../../orchestration/orchestrator'
 import { fromCompose } from '../../repr/adapters/compose'
@@ -171,24 +174,53 @@ describe('GĐ9 — suy luận: nước đi tiếp, hệ quả của một thay �
 })
 
 describe('GĐ9 — adapter /analyze qua hợp đồng phân tích (chuẩn ngoài: giọng chính đã biết của các tác phẩm mẫu)', () => {
-  const run = async (f: string) => {
-    const score = fromCompose(fromMusicXml(readFileSync(`public/analyze/${f}.musicxml`, 'utf8')))
-    const r = await handle({ op: 'analyze', score, modules: ['harmony.tonal'] })
+  const load = (f: string) => fromCompose(fromMusicXml(readFileSync(`public/analyze/${f}.musicxml`, 'utf8')))
+  const run = async (f: string, globalKey?: GlobalKey, score = load(f)) => {
+    const r = await handle({ op: 'analyze', score, modules: ['harmony.tonal'], ...(globalKey ? { context: { globalKey } } : {}) })
     if (r.op !== 'analyze') throw new Error('op')
     return r.result
   }
-  // keys as published (Bach BWV 269 in G; Mozart K. 545 "Sonata facile" in C; Debussy Clair de lune in D♭; Joplin Maple Leaf Rag in A♭)
-  for (const [f, key] of [['bach-bwv269', 'G trưởng'], ['mozart-k545-1', 'C trưởng'], ['debussy-clair-de-lune', 'D♭ trưởng'], ['joplin-maple-leaf', 'A♭ trưởng']] as const)
-    it(`${f}: giọng chính ${key}; mọi hợp âm là diễn giải có độ tin cậy kèm cơ sở; âm vang là dữ kiện`, async () => {
-      const r = await run(f)
+  // keys as published (Bach BWV 269 in G; Mozart K. 545 "Sonata facile" in C; Debussy Clair de lune in D♭; Joplin
+  // Maple Leaf Rag in A♭), given as the analyst's premise; the engine's own estimate must agree (no warning finding)
+  for (const [f, key, gk] of [['bach-bwv269', 'G trưởng', { step: 4, alter: 0, minor: false }], ['mozart-k545-1', 'C trưởng', { step: 0, alter: 0, minor: false }], ['debussy-clair-de-lune', 'D♭ trưởng', { step: 1, alter: -1, minor: false }], ['joplin-maple-leaf', 'A♭ trưởng', { step: 5, alter: -1, minor: false }]] as const)
+    it(`${f}: giọng chủ ${key} là tiền đề; máy ước lượng cùng giọng; mọi hợp âm là diễn giải có độ tin cậy kèm cơ sở; âm vang là dữ kiện`, async () => {
+      const r = await run(f, gk)
       expect(r.status).toBe('COMPLETED')
-      expect(r.findings.find((x) => x.topic === 'giọng chính')!.text.basic).toBe(`Giọng chính: ${key}`)
+      const home = r.findings.find((x) => x.topic === 'giọng chủ')!
+      expect(home.kind).toBe('premise')
+      expect(home.text.basic).toBe(`Giọng chủ (người phân tích chọn): ${key}`)
+      expect(r.findings.some((x) => x.id === 'harmony.tonal#home-evidence')).toBe(false)
       for (const x of r.findings.filter((y) => y.topic === 'hợp âm')) expect(x.kind === 'interpretation' && !!x.confidence?.basis).toBe(true)
       expect(r.findings.filter((y) => y.topic === 'âm vang').every((y) => y.kind === 'fact')).toBe(true)
     }, 60_000)
+  it('chưa chọn giọng chủ → INSUFFICIENT_DATA, không tự đoán, không lấy C trưởng mặc định', async () => {
+    const r = await run('bach-bwv269')
+    expect(r.status).toBe('INSUFFICIENT_DATA')
+    expect(r.findings).toEqual([])
+    expect(r.modules[0].missing?.join(' ')).toMatch(/giọng chủ/)
+  }, 60_000)
+  it('giọng chủ sai hẳn (Bach G trưởng mà chọn Mi♭ trưởng): giữ nguyên lựa chọn, cảnh báo có số liệu, vùng giọng cục bộ và số La Mã trong từng vùng không bị ép theo', async () => {
+    const score = load('bach-bwv269')
+    const right = await run('bach-bwv269', { step: 4, alter: 0, minor: false }, score)
+    const wrong = await run('bach-bwv269', { step: 2, alter: -1, minor: false }, score)
+    expect(wrong.findings.find((x) => x.topic === 'giọng chủ')!.value).toMatchObject({ name: 'E♭', from: 'user' })
+    const warn = wrong.findings.find((x) => x.id === 'harmony.tonal#home-evidence')!
+    expect(warn.topic).toBe('cảnh báo giọng chủ')
+    expect(warn.value).toMatchObject({ name: 'G', userShare: 0, endsInUserKey: false })
+    const chords = (r: typeof right) => r.findings.filter((x) => x.topic === 'hợp âm').map((x) => `${(x.value as { key: { name: string } }).key.name}:${(x.value as { rn: string }).rn}`)
+    expect(chords(wrong)).toEqual(chords(right))
+    // a region's tonic is named as a degree of the chosen key (this chorale stays in one region, so checked directly)
+    const k = (step: number, alter: number, minor = false) => named({ tonic: { step, alter }, minor })
+    expect([degreeIn(k(1, 0), k(4, 0)), degreeIn(k(1, 0), k(2, -1)), degreeIn(k(5, -1), k(0, 0)), degreeIn(k(0, 0), k(5, 0, true)), degreeIn(k(4, 0, true), k(0, 0))]).toEqual(['V', 'VII', '♭VI', 'III', 'v'])
+  }, 60_000)
   it('Schoenberg op. 19 số 6 (phi điệu tính): AMBIGUOUS, không giả vờ chắc; op. 19 số 2 — LỖI ĐÃ BIẾT: vẫn đọc ra giọng (86% nốt trong âm giai), ghi trong KNOWN_LIMITATIONS', async () => {
-    expect((await run('schoenberg-op19-6')).status).toBe('AMBIGUOUS')
-    expect((await run('schoenberg-op19-2')).status).toBe('COMPLETED')
+    // the premise given is the engine's own estimate (what the analysis read before the key became the analyst's)
+    const est = (f: string) => {
+      const e = analyzeOnce(load(f)).homeEstimate!
+      return { step: e.tonic.step, alter: e.tonic.alter, minor: e.minor }
+    }
+    expect((await run('schoenberg-op19-6', est('schoenberg-op19-6'))).status).toBe('AMBIGUOUS')
+    expect((await run('schoenberg-op19-2', est('schoenberg-op19-2'))).status).toBe('COMPLETED')
   }, 60_000)
   it('thiếu dữ liệu: một nốt → INSUFFICIENT_DATA, nói rõ thiếu gì', async () => {
     const t = harmonizeTask('one', line('C5:4'))

@@ -64,3 +64,21 @@
 .an-chips button { flex-shrink: 0; padding: 0.4rem 0.85rem; border-radius: 999px; font-size: 13px; font-weight: 500; color: var(--color-ink-muted); border: 1px solid var(--color-border); background: var(--color-surface-raised); transition: color 0.25s, border-color 0.25s, background-color 0.25s; }
 .an-chips button[aria-pressed="true"] { color: var(--color-ink); border-color: color-mix(in oklch, var(--color-gold) 55%, transparent); background: color-mix(in oklch, var(--color-gold) 14%, var(--color-surface-raised)); }
 .an-grid > li > .an-card { padding-right: 40px; }
+
+/* global key: the analyst's premise */
+.an-key { margin: 10px 0; padding: 10px 12px; border: 1px solid var(--color-border); border-radius: 10px; font-size: 13px; }
+.an-key.is-empty { border-color: color-mix(in oklch, var(--color-gold) 45%, transparent); }
+.an-key p { margin: 0 0 8px; }
+.an-key-now { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.an-key-ver { color: var(--color-ink-faint); }
+.an-key-edit, .an-key-cancel { margin-left: auto; font-size: 12px; color: var(--color-gold); }
+.an-key-cancel { margin-left: 0; color: var(--color-ink-faint); }
+.an-key-form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.an-key-form select { background: var(--color-surface, #111); color: var(--color-ink); border: 1px solid var(--color-border); border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+.an-key-go { padding: 5px 12px; border-radius: 999px; border: 1px solid var(--color-gold); color: var(--color-gold); font-size: 12px; }
+.an-key-go:disabled { opacity: 0.4; }
+.an-key-warn { color: var(--color-ink-faint); }
+.an-key-warn.is-strong { color: var(--color-gold); }
+.an-key-hist ol { margin: 6px 0; padding-left: 18px; }
+.an-count { margin-top: 6px; }
+.an-count.is-warn { color: var(--color-status-cancelled); }

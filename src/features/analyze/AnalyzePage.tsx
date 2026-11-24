@@ -1,5 +1,5 @@
 import { useBack } from '../../hooks/useBack'
-import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
+import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, type ChangeEvent, type ReactNode } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import clsx from 'clsx'
 import type { VerovioToolkit } from 'verovio/esm'
@@ -8,12 +8,12 @@ import { TrashIcon } from '../../components/icons'
 import { usePageLoading } from '../../layout/pageCurtain'
 import { engraver, render } from '../compose/engrave'
 import { toMei } from '../compose/mei'
-import { fromMusicXml, unzipMxl } from '../compose/exchange'
+import { fileMeasureCount, fromMusicXml, unzipMxl } from '../compose/exchange'
 import type { Score } from '../compose/model'
 import { findArticle } from '../theory/wiki'
 import { fold } from '../search/fold'
 import { annotateMei, COLORS, DEFAULT_LAYERS, labelOf, type Layers, type Notation } from './annotate'
-import type { Analysis } from './engine/index'
+import type { Analysis, NamedKey } from './engine/index'
 import { barNumbering, keyName, report, toMarkdown, type Run } from './engine/report'
 import { explain } from './explain'
 import { fromMidi } from './midi'
@@ -23,6 +23,7 @@ import { MethodsPanel } from '../knowledge/MethodsPanel'
 
 // UMRE is loaded only with this panel: the page's own analysis does not wait for it
 const UmrePanel = lazy(() => import('./UmrePanel').then((m) => ({ default: m.UmrePanel })))
+import { chooseKey, keyLabel, TONICS, useGlobalKey, type GlobalKey, type KeyChoice } from './globalKey'
 import { addSaved, removeSaved, savedLocked, scoreOf, updateSaved, useSaved, type Lens } from './store'
 import { THEORY, type Concept } from './links'
 import { createBrainNote } from '../brain/store'
@@ -87,7 +88,7 @@ function Shelf() {
       const xml = head === 'MThd' ? '' : head.startsWith('PK') ? await unzipMxl(buf) : new TextDecoder().decode(buf)
       const score = xml ? fromMusicXml(xml, name) : fromMidi(buf, name)
       const composer = /<creator[^>]*type="composer"[^>]*>([^<]+)</.exec(xml)?.[1].trim()
-      navigate(`/analyze/${addSaved(score, 'import', composer || undefined).id}`)
+      navigate(`/analyze/${addSaved(score, 'import', composer || undefined, xml ? fileMeasureCount(xml) : undefined).id}`)
     } catch (x) {
       setErr(x instanceof Error ? x.message : String(x))
     }
@@ -189,7 +190,8 @@ function Library({ own }: { own: Score[] }) {
 
 /* ---------------------------------------------------------------- one piece */
 
-type Loaded = { score: Score; title: string; sub?: string; lens: Lens; savedId?: string }
+/** `fileMeasures`: <measure> elements of the file's first part (split bars and a pickup are two / one there) */
+type Loaded = { score: Score; title: string; sub?: string; lens: Lens; savedId?: string; fileMeasures?: number }
 
 function useScore(id: string): { data: Loaded | null; error: string } {
   const saved = useSaved()
@@ -211,7 +213,7 @@ function useScore(id: string): { data: Loaded | null; error: string } {
             if (!r.ok) throw new Error('Không tải được bản nhạc mẫu.')
             return r.text()
           })
-          .then((t): Loaded => ({ score: fromMusicXml(t, sample.title), title: sample.title, sub: `${sample.composer} · ${sample.year}`, lens: sample.lens }))
+          .then((t): Loaded => ({ score: fromMusicXml(t, sample.title), title: sample.title, sub: `${sample.composer} · ${sample.year}`, lens: sample.lens, fileMeasures: fileMeasureCount(t) }))
       : scoreOf(id).then((score) => {
           if (!score) throw new Error('Không còn thân bản nhạc này trên máy.')
           return { score } as Loaded
@@ -226,7 +228,7 @@ function useScore(id: string): { data: Loaded | null; error: string } {
     if (fetched?.id !== id || !fetched.data) return null
     if (!mine) return fetched.data
     const sub = [mine.composer, mine.from === 'compose' ? 'Từ trình soạn nhạc' : 'Nhập từ tệp'].filter(Boolean).join(' · ')
-    return { ...fetched.data, title: mine.title, sub, lens: mine.lens ?? 'classical', savedId: mine.id }
+    return { ...fetched.data, title: mine.title, sub, lens: mine.lens ?? 'classical', savedId: mine.id, fileMeasures: mine.fileMeasures }
   }, [fetched, id, mine])
   if (local) return local
   if (!known) return { data: null, error: savedLocked() ? 'Kho đang khoá: mở khoá app để xem bản này.' : 'Không có bản nhạc này trên máy.' }
@@ -245,20 +247,26 @@ function Work({ id }: { id: string }) {
   const [focus, setFocus] = useState<[number, number] | null>(null)
   const textRef = useRef<HTMLDivElement>(null)
 
-  const runKey = data ? `${id}|${active}|${data.score.updated ?? ''}` : ''
+  // the global key is the analyst's premise: harmony waits for it (the 20th-century lens needs none)
+  const history = useGlobalKey(id)
+  const choice = history?.at(-1) ?? null
+  const needsKey = active !== 'xx'
+  const keyId = choice ? `${choice.key.step}${choice.key.alter}${choice.key.minor ? 'm' : 'M'}` : '-'
+  const runKey = data && (!needsKey || choice) ? `${id}|${active}|${data.score.updated ?? ''}|${keyId}` : ''
   useEffect(() => {
-    if (!data) return
+    if (!data || !runKey) return
     let live = true
-    runAnalysis(data.score, { lens: active })
+    runAnalysis(data.score, { lens: active, ...(needsKey && choice ? { home: { tonic: { step: choice.key.step, alter: choice.key.alter }, minor: choice.key.minor } } : {}) })
       .then((a) => live && setResult({ key: runKey, analysis: a }))
       .catch((e: Error) => live && setResult({ key: runKey, error: e.message }))
     return () => {
       live = false
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, active, runKey])
-  const analysis = result?.key === runKey ? (result.analysis ?? null) : null
-  const failed = result?.key === runKey ? (result.error ?? '') : ''
-  const busy = !!data && result?.key !== runKey
+  const analysis = runKey && result?.key === runKey ? (result.analysis ?? null) : null
+  const failed = runKey && result?.key === runKey ? (result.error ?? '') : ''
+  const busy = !!runKey && result?.key !== runKey
 
   const blocks = useMemo(() => (analysis ? report(analysis) : []), [analysis])
   const numbering = useMemo(() => (analysis ? barNumbering(analysis) : null), [analysis])
@@ -347,10 +355,12 @@ function Work({ id }: { id: string }) {
         </div>
       </div>
 
+      {needsKey && <GlobalKeyBar workId={id} history={history ?? []} analysis={analysis} />}
+
       {busy && <p className="an-status">Đang phân tích…</p>}
       {failed && <p className="an-status text-[var(--color-status-cancelled)]">{failed}</p>}
 
-      <ScoreView score={data.score} analysis={analysis} layers={layers} notation={notation} focus={focus} pick={pick} onPick={onPick} />
+      <ScoreView score={data.score} analysis={analysis} layers={layers} notation={notation} focus={focus} pick={pick} onPick={onPick} fileMeasures={data.fileMeasures} />
 
       {analysis && pick !== null && pick >= 0 && analysis.harmony[pick] && <PickCard a={analysis} i={pick} notation={notation} onClose={() => setPick(null)} num={numbering!.num} />}
       {analysis?.xx && pick !== null && pick < 0 && analysis.xx.sonorities[-1 - pick] && <SetCard a={analysis} i={-1 - pick} onClose={() => setPick(null)} num={numbering!.num} />}
@@ -361,7 +371,7 @@ function Work({ id }: { id: string }) {
       {analysis && <MethodsPanel lens={active} />}
       {analysis && (
         <Suspense fallback={null}>
-          <UmrePanel score={data.score} title={data.title} runKey={runKey} />
+          <UmrePanel score={data.score} title={data.title} runKey={runKey} globalKey={needsKey && choice ? choice.key : null} />
         </Suspense>
       )}
 
@@ -552,7 +562,86 @@ function SetCard({ a, i, onClose, num }: { a: Analysis; i: number; onClose: () =
 }
 
 /** The engraved score with the analysis written into it; taps on labels and bars are reported. */
-function ScoreView({ score, analysis, layers, notation, focus, pick, onPick }: { score: Score; analysis: Analysis | null; layers: Layers; notation: Notation; focus: [number, number] | null; pick: number | null; onPick: (kind: string, i: number) => void }) {
+
+const sameTonal = (a: Pick<NamedKey, 'tonicPc' | 'minor'>, k: GlobalKey) => a.minor === k.minor && a.tonicPc === (([0, 2, 4, 5, 7, 9, 11][k.step] + k.alter + 12) % 12)
+
+/**
+ * The analyst's global key: chosen here, never guessed. Unset → a prompt (harmony waits); set → the label, a control to
+ * change it (a change reruns the analysis and is kept as a new version) and, when the music's own evidence points
+ * elsewhere, a warning with the figures — the key itself is never changed by the machine.
+ */
+function GlobalKeyBar({ workId, history, analysis }: { workId: string; history: readonly KeyChoice[]; analysis: Analysis | null }) {
+  const cur = history.at(-1)
+  const [editing, setEditing] = useState(false)
+  const [tonic, setTonic] = useState(() => (cur ? TONICS.findIndex((t) => t.step === cur.key.step && t.alter === cur.key.alter) : -1))
+  const [minor, setMinor] = useState(cur?.key.minor ?? false)
+  const form = (
+    <div className="an-key-form">
+      <label>
+        Âm chủ{' '}
+        <select value={tonic} onChange={(e) => setTonic(+e.target.value)} aria-label="Âm chủ">
+          <option value={-1} disabled>— chọn —</option>
+          {TONICS.map((t, i) => <option key={i} value={i}>{keyLabel({ ...t, minor: false }).replace(/ trưởng \((\S+) major\)/, ' ($1)')}</option>)}
+        </select>
+      </label>
+      <div className="an-seg" role="radiogroup" aria-label="Điệu thức">
+        {([false, true] as const).map((m) => (
+          <button key={String(m)} role="radio" aria-checked={minor === m} className={minor === m ? 'is-on' : ''} onClick={() => setMinor(m)}>{m ? 'Thứ' : 'Trưởng'}</button>
+        ))}
+      </div>
+      <button className="an-key-go" disabled={tonic < 0} onClick={() => { chooseKey(workId, { ...TONICS[tonic], minor }); setEditing(false) }}>
+        {cur ? 'Phân tích lại với giọng này' : 'Phân tích với giọng này'}
+      </button>
+      {cur && <button className="an-key-cancel" onClick={() => setEditing(false)}>Huỷ</button>}
+    </div>
+  )
+  if (!cur)
+    return (
+      <section className="an-key is-empty" aria-label="Giọng chủ">
+        <p><b>Chọn giọng chủ của tác phẩm.</b> Phân tích hoà âm (bậc La Mã, chức năng, ly điệu, chuyển giọng) lấy giọng chủ do bạn xác định làm tiền đề — máy không tự đoán, không lấy theo hoá biểu. Bản nhạc vẫn hiện đủ trong lúc chờ.</p>
+        {form}
+      </section>
+    )
+  // evidence, never a verdict: how much of the music the engine reads in the chosen key, and where it ends
+  let warn: ReactNode = null
+  if (analysis?.home && analysis.homeFrom === 'user' && analysis.regions.length) {
+    const total = analysis.regions.reduce((n, r) => n + r.end - r.start, 0) || 1
+    const share = (k: GlobalKey | NamedKey) => analysis.regions.filter((r) => ('tonicPc' in k ? r.key.tonicPc === k.tonicPc && r.key.minor === k.minor : sameTonal(r.key, k))).reduce((n, r) => n + r.end - r.start, 0) / total
+    const mine = share(cur.key)
+    const last = analysis.regions.at(-1)!.key
+    const est = analysis.homeEstimate
+    const pct = (x: number) => `${Math.round(x * 100)}%`
+    if (est && !sameTonal(est, cur.key))
+      warn = (
+        <p className={clsx('an-key-warn', mine < 0.2 && !sameTonal(last, cur.key) && 'is-strong')} role="note">
+          {mine < 0.2 && !sameTonal(last, cur.key) ? 'Bằng chứng trong bản nhạc ít ủng hộ giọng chủ này. ' : 'Lưu ý: '}
+          Thời lượng máy đọc ở {keyLabel(cur.key)}: {pct(mine)}; ở {est.name} (máy ước lượng): {pct(share(est))}; hợp âm cuối thuộc vùng {last.name}. Giọng chủ vẫn giữ theo lựa chọn của bạn.
+        </p>
+      )
+  }
+  return (
+    <section className="an-key" aria-label="Giọng chủ">
+      <p className="an-key-now">
+        Giọng chủ (bạn chọn): <b data-testid="global-key">{keyLabel(cur.key)}</b>
+        <span className="an-key-ver"> · phiên bản {history.length}</span>
+        {!editing && <button className="an-key-edit" onClick={() => setEditing(true)}>Đổi giọng chủ</button>}
+      </p>
+      {editing && form}
+      {warn}
+      {history.length > 1 && (
+        <details className="an-key-hist">
+          <summary>Các lần chọn trước ({history.length - 1})</summary>
+          <ol>
+            {history.slice(0, -1).map((h, i) => <li key={h.at}>Phiên bản {i + 1}: {keyLabel(h.key)} — {new Date(h.at).toLocaleString('vi-VN')}</li>)}
+          </ol>
+          <p className="kg-note">Đổi giọng chủ chỉ chạy lại phân tích; nốt nhạc không đổi. Kết quả với giọng cũ có thể xem lại bằng cách chọn lại giọng đó.</p>
+        </details>
+      )}
+    </section>
+  )
+}
+
+function ScoreView({ score, analysis, layers, notation, focus, pick, onPick, fileMeasures }: { score: Score; analysis: Analysis | null; layers: Layers; notation: Notation; focus: [number, number] | null; pick: number | null; onPick: (kind: string, i: number) => void; fileMeasures?: number }) {
   const [tk, setTk] = useState<VerovioToolkit | null>(null)
   const [failed, setFailed] = useState(false)
   useEffect(() => {
@@ -581,6 +670,8 @@ function ScoreView({ score, analysis, layers, notation, focus, pick, onPick }: {
     const annotated = analysis ? annotateMei(mei, score, analysis, layers, notation) : mei
     return render(tk, annotated, width, width < 600 ? 34 : 40)
   }, [tk, score, analysis, layers, notation, width])
+  // bars actually engraved: the MEI measure ids that reached the SVG (every page)
+  const drawn = useMemo(() => new Set(svg.match(/data-id="m\d+" data-class="measure"/g)).size, [svg])
   useLayoutEffect(() => {
     if (svgRef.current) svgRef.current.innerHTML = svg
   }, [svg])
@@ -619,6 +710,13 @@ function ScoreView({ score, analysis, layers, notation, focus, pick, onPick }: {
         }}
       />
       {!svg && <p className="an-status">Đang khắc bản nhạc…</p>}
+      {svg && (
+        <p className={clsx('an-status an-count', drawn !== score.measures && 'is-warn')} data-testid="measure-count">
+          {fileMeasures !== undefined && <>Tệp: {fileMeasures} thẻ ô · </>}Bản nhạc: {score.measures} ô · Đã khắc: {drawn} ô
+          {drawn !== score.measures && ' — thiếu ô khi khắc, hãy báo lỗi kèm tệp.'}
+          {fileMeasures !== undefined && fileMeasures !== score.measures && drawn === score.measures && ' (tệp tách ô ở dấu nhắc / ô lấy đà nên số thẻ khác số ô nhạc)'}
+        </p>
+      )}
     </div>
   )
 }

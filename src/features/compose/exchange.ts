@@ -213,6 +213,50 @@ const DYNS = new Set(['ppp', 'pp', 'p', 'mp', 'mf', 'f', 'ff', 'fff', 'sf', 'sfz
  * times, repeats, lyrics (verse 1), chord symbols, dynamics, slurs, articulations, ornaments, fermatas, words.
  * Grace and cue notes are left out; a pickup bar becomes a full bar with rests before its notes.
  */
+/** Real length (ticks) of each file measure of one part, the longest voice, with the time signature in force. */
+function irregularBars(measures: Element[], start: [number, number]) {
+  const out = new Map<number, { len: number; time: [number, number]; back: [number, number] }>()
+  const kidOf = (el: Element, n: string) => [...el.children].find((c) => c.tagName === n)
+  let div = 1
+  let t = start
+  const rows = measures.map((m) => {
+    let pos = 0
+    let mx = 0
+    for (const el of [...m.children]) {
+      if (el.tagName === 'attributes') {
+        div = +(kidOf(el, 'divisions')?.textContent ?? div) || div
+        const tt = kidOf(el, 'time')
+        if (tt) t = [+(kidOf(tt, 'beats')?.textContent ?? 4), +(kidOf(tt, 'beat-type')?.textContent ?? 4)]
+      } else if (el.tagName === 'note' && !kidOf(el, 'chord') && !kidOf(el, 'grace') && !kidOf(el, 'cue')) pos += +(kidOf(el, 'duration')?.textContent ?? 0)
+      else if (el.tagName === 'backup') pos -= +(kidOf(el, 'duration')?.textContent ?? 0)
+      else if (el.tagName === 'forward') pos += +(kidOf(el, 'duration')?.textContent ?? 0)
+      mx = Math.max(mx, pos)
+    }
+    return { len: Math.round((mx * TPQ) / div), full: barLen(t), time: t }
+  })
+  rows.forEach((r, i) => {
+    if (i === 0 || !r.len || r.len === r.full) return
+    const prev = rows[i - 1], next = rows[i + 1]
+    // half of a split bar, or the last bar completing the pickup: the "full bars" model already handles these
+    if (r.len < r.full && ((prev && prev.len < prev.full && prev.len + r.len === r.full) || (next && next.len < next.full && next.len + r.len === r.full) || i === rows.length - 1)) return
+    const den = [r.time[1], 8, 16, 32].find((d) => r.len % barLen([1, d]) === 0)
+    if (!den) return
+    out.set(i, { len: r.len, time: [r.len / barLen([1, den]), den], back: r.time })
+  })
+  return out
+}
+
+/** Written pitch → sounding pitch by a <transpose> interval, spelled by the interval (B♭ clarinet: D → C). */
+function concert(step: number, oct: number, alter: number, x: { dia: number; chr: number }) {
+  if (!x.dia && !x.chr) return { step, oct, alter }
+  const NAT = [0, 2, 4, 5, 7, 9, 11]
+  const d = oct * 7 + step + x.dia
+  const semis = 12 * (oct + 1) + NAT[step] + alter + x.chr
+  const s2 = ((d % 7) + 7) % 7
+  const o2 = Math.floor(d / 7)
+  return { step: s2, oct: o2, alter: semis - (12 * (o2 + 1) + NAT[s2]) }
+}
+
 export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Score {
   const doc = new DOMParser().parseFromString(text, 'application/xml')
   if (doc.querySelector('parsererror') || !doc.querySelector('score-partwise')) throw new Error('Không đọc được: tệp không phải MusicXML dạng partwise.')
@@ -248,6 +292,7 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
   let tempo = 80
   const clefs: Clef[] = []
   const labels: string[] = []
+  const sounding: number[] = [] // first staff of each transposing part
   const attrs: Score['attrs'] = {}
   const laneKey = new Map<string, number>() // "staff:voice" → lane
   const lanes: { staff: number; voice: number }[] = []
@@ -291,6 +336,9 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
       return laneKey.get(lk)!
     }
     let div = 1
+    // a transposing instrument (<transpose>: written → sounding): notes are kept at SOUNDING pitch, so analysis reads
+    // what is heard; the staff's label says so
+    let xpose = { dia: 0, chr: 0 }
     let mStart = 0
     let curTime: [number, number] = time
     let lastEv: Ev | null = null
@@ -298,15 +346,39 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
     const openSlur = new Map<string, { lane: number; id: string }>()
     const tupGroup = new Map<number, string>()
     const measureEls = kids(part, 'measure')
+    // bars whose real length is not the time signature's and that are not one half of a split bar (3 + 3a) or the
+    // pickup: such a bar keeps its own length with a time signature of its own (it used to be cut into a full bar and
+    // an overflow, shifting every bar line after it — Clair de lune bar 54)
+    const irregular = firstPart ? irregularBars(measureEls, time) : new Map<number, { len: number; time: [number, number]; back: [number, number] }>()
     measureEls.forEach((m, mi) => {
       const at = () => (attrs[barIdx(mStart)] ??= {})
       let pos = 0
       let longest = 0
       const before = staves.map((l) => l.length)
       const ticks = (el: Element) => Math.round((num(el, 'duration') * TPQ) / div)
+      let placed = false
+      const place = () => {
+        const ir = irregular.get(mi)
+        if (placed || !ir) return
+        placed = true
+        grid.length = barIdx(mStart)
+        grid.push({ start: mStart, len: ir.len })
+        at().time = ir.time
+        // the bar after goes back to the signature (unless the file changes it there itself)
+        ;(attrs[grid.length] ??= {}).time = ir.back
+      }
       for (const el of [...m.children]) {
+        if (el.tagName !== 'attributes') place()
         if (el.tagName === 'attributes') {
           div = num(el, 'divisions', div) || div
+          const tr = kid(el, 'transpose')
+          if (tr) {
+            // octave transposers (double bass, piccolo, guitar) stay written, as the editor's own files store them (its
+            // instrument plays them an octave off); only a change of pitch class is converted
+            const x = { dia: num(tr, 'diatonic') + 7 * num(tr, 'octave-change'), chr: num(tr, 'chromatic') + 12 * num(tr, 'octave-change') }
+            xpose = x.chr % 12 ? x : { dia: 0, chr: 0 }
+            if (x.chr % 12 && !sounding.includes(base)) sounding.push(base)
+          }
           const fifths = kid(kid(el, 'key'), 'fifths')
           const t = kid(el, 'time')
           if (fifths && firstPart) {
@@ -386,7 +458,7 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
           const dur = ticks(el)
           const p = kid(el, 'pitch')
           const note: Note | null = p
-            ? { step: 'CDEFGAB'.indexOf(kid(p, 'step')?.textContent ?? 'C'), oct: num(p, 'octave', 4), alter: Math.round(num(p, 'alter')), ...(kids(el, 'tie').some((t) => t.getAttribute('type') === 'start') ? { tie: true } : {}) }
+            ? { ...concert('CDEFGAB'.indexOf(kid(p, 'step')?.textContent ?? 'C'), num(p, 'octave', 4), Math.round(num(p, 'alter')), xpose), ...(kids(el, 'tie').some((t) => t.getAttribute('type') === 'start') ? { tie: true } : {}) }
             : null
           if (isChord && lastEv && note) {
             lastEv.notes.push(note)
@@ -470,7 +542,7 @@ export function fromMusicXml(text: string, fallbackTitle = 'Bản nhập'): Scor
     attrs,
     staves: staves.map((evs) => evs.filter((e) => e.dur > 0)),
     ...(plain ? {} : { lanes }),
-    ...(labels.some(Boolean) && clefs.length > 1 ? { labels } : {}),
+    ...(labels.some(Boolean) && clefs.length > 1 ? { labels: labels.map((l, i) => (sounding.includes(i) ? `${l} (cao độ thực)` : l)) } : {}),
     ...(instruments.some((i) => i !== 'piano') ? { instruments } : {}),
     spans,
     v: 2,
@@ -564,3 +636,9 @@ export function toMidi(s: Score): Uint8Array<ArrayBuffer> {
 }
 
 export const fileName = (s: Score, ext: string) => `${s.title.replace(/[\\/:*?"<>|]+/g, ' ').trim() || 'ban-nhac'}.${ext}`
+
+/** <measure> elements in the first part of a MusicXML text (what the file itself numbers, before split bars merge). */
+export function fileMeasureCount(xml: string) {
+  const part = /<part\s[^>]*>([\s\S]*?)<\/part>/.exec(xml)?.[1] ?? ''
+  return (part.match(/<measure[\s>]/g) ?? []).length
+}

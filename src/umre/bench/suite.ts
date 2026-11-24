@@ -40,6 +40,8 @@ export type BenchCase = {
 const CF6 = 'C4:4 | D4:4 | F4:4 | E4:4 | D4:4 | C4:4'
 const CF11 = 'C4:4 | D4:4 | E4:4 | F4:4 | G4:4 | A4:4 | G4:4 | F4:4 | E4:4 | D4:4 | C4:4'
 const xml = (f: string, read: (p: string) => string) => fromMusicXml(read(`public/analyze/${f}.musicxml`))
+// the analyst's global key as published (BWV 269 in G, Maple Leaf Rag in A♭): harmony.tonal needs it as premise
+const KEY = { 'bach-bwv269': { step: 4, alter: 0, minor: false }, 'joplin-maple-leaf': { step: 5, alter: -1, minor: false } } as const
 
 export function suite(read: (path: string) => string): BenchCase[] {
   const cprb = counterpointRulebook()
@@ -80,17 +82,17 @@ export function suite(read: (path: string) => string): BenchCase[] {
         setup: () => fromCompose(xml(f, read)),
         // straight to the module runner (the entry point's cache would answer repeats), on a fresh score object each run
         // (the shared /analyze memo is per score object: a run must not reuse the previous run's analysis)
-        run: async (s: Score) => { const r = await runAnalysis(analysisModules().filter((x) => x.descriptor.id === m), { score: { ...s } }); return { status: r.status, findings: r.findings.length } },
+        run: async (s: Score) => { const r = await runAnalysis(analysisModules().filter((x) => x.descriptor.id === m), { score: { ...s }, context: { globalKey: KEY[f] } }); return { status: r.status, findings: r.findings.length } },
       })),
     ),
     {
       id: 'analysis.six-modules.joplin', component: 'Phân tích (cả 6 mô-đun)', size: 'Maple Leaf Rag, piano', runs: 5, setup: () => fromCompose(xml('joplin-maple-leaf', read)),
-      run: async (s: Score) => { const r = await runAnalysis(analysisModules().filter((x) => ['harmony.tonal', 'melody.line', 'rhythm.meter', 'texture.voices', 'form.sections', 'style.features'].includes(x.descriptor.id)), { score: { ...s } }); return { status: r.status, findings: r.findings.length } },
+      run: async (s: Score) => { const r = await runAnalysis(analysisModules().filter((x) => ['harmony.tonal', 'melody.line', 'rhythm.meter', 'texture.voices', 'form.sections', 'style.features'].includes(x.descriptor.id)), { score: { ...s }, context: { globalKey: KEY['joplin-maple-leaf'] } }); return { status: r.status, findings: r.findings.length } },
     },
     {
       id: 'api.cache-hit.analyze', component: 'Đầu mối (cache)', size: 'Bach, mô-đun điệu tính, lần lặp', runs: 30,
-      setup: async () => { const s = fromCompose(xml('bach-bwv269', read)); await handle({ op: 'analyze', score: s, modules: ['harmony.tonal'] }); return s },
-      run: async (s: Score) => { const r = await handle({ op: 'analyze', score: s, modules: ['harmony.tonal'] }); return { cached: r.meta.cached, op: r.op } },
+      setup: async () => { const s = fromCompose(xml('bach-bwv269', read)); await handle({ op: 'analyze', score: s, modules: ['harmony.tonal'], context: { globalKey: KEY['bach-bwv269'] } }); return s },
+      run: async (s: Score) => { const r = await handle({ op: 'analyze', score: s, modules: ['harmony.tonal'], context: { globalKey: KEY['bach-bwv269'] } }); return { cached: r.meta.cached, op: r.op } },
     },
   ]
 }

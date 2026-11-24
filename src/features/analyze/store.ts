@@ -18,6 +18,8 @@ export type Saved = {
   lens?: Lens
   composer?: string
   measures?: number
+  /** <measure> elements in the imported file's first part, to show beside the bars read (they differ for split bars) */
+  fileMeasures?: number
   /** only on entries from before the move to IndexedDB, and inside backup files */
   score?: Score
 }
@@ -105,8 +107,8 @@ export const savedLocked = () => store.locked()
 export const allSavedFull = async (): Promise<Saved[]> =>
   Promise.all(state.map(async (x) => ({ ...x, score: (await scoreOf(x.id)) ?? undefined })))
 
-export function addSaved(score: Score, from: Saved['from'], composer?: string): Saved {
-  const x: Saved = { id: `ps-${Date.now().toString(36)}`, title: score.title || 'Bản nhạc', from, created: Date.now(), composer, measures: score.measures }
+export function addSaved(score: Score, from: Saved['from'], composer?: string, fileMeasures?: number): Saved {
+  const x: Saved = { id: `ps-${Date.now().toString(36)}`, title: score.title || 'Bản nhạc', from, created: Date.now(), composer, measures: score.measures, ...(fileMeasures ? { fileMeasures } : {}) }
   cache.set(x.id, score)
   // the list entry is written only once the body is safe, so the list never points at nothing
   void putBody(x.id, score).then(

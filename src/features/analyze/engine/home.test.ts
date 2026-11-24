@@ -41,7 +41,7 @@ describe('home key', () => {
     const A = ['Fmaj7 A7', 'Dm7 G7', 'Am7 D7', 'Gm7 C7', 'Fmaj7 Bb7', 'Am7 D7', 'Gm7 C7']
     const s = leadSheet([...A, 'Gm7 C7', ...A, 'F6', 'Dm Gm7', 'Dm Bb7', 'Dm Gm7', 'Bb7 A7', 'Dm Gm7', 'Dm G7', 'Am7 D7', 'Gm7 C7', ...A, 'F6'], -1)
     expect(analyze(s, { lens: 'jazz' }).home?.name).toBe('F')
-    expect(homeLine(s, 'jazz')).toContain('Giọng chính: Fa trưởng')
+    expect(homeLine(s, 'jazz')).toContain('Giọng chính (máy ước lượng): Fa trưởng')
   })
 
   it('stays in the major key when D7 and G7 appear in a minor-key reading (no I7 tonic in minor)', () => {
@@ -55,7 +55,7 @@ describe('home key', () => {
     const a = analyze(s, { lens: 'classical' })
     expect(a.home?.name).toBe('D♭')
     const text = report(a).map((b) => b.paras.map((p) => p.map((r) => r.t).join('')).join('\n')).join('\n')
-    expect(text).toContain('Giọng chính: Rê♭ trưởng')
+    expect(text).toContain('Giọng chính (máy ước lượng): Rê♭ trưởng')
     expect(text).toContain('Si♭ thứ (giọng song song (bậc VI))')
   })
 })

@@ -28,3 +28,8 @@ Lamar viết chủ yếu trên điện thoại, muốn giấy trắng khuông đ
 
 ## Phối hoà âm (UMRE, Wave D)
 Bảng ⋯ → "Phối hoà âm bốn bè (UMRE)" (`HarmonizePanel.tsx`, tải lười): giai điệu khuông 1 (≤ 16 nốt, không dấu lặng, mẫu số nhịp 2/4), giọng từ hoá biểu (trưởng / thứ hoà thanh do người chọn), bộ giải `umre.harmonize` trong worker; chỉ hiện phương án được bộ kiểm độc lập xác nhận; "Mở thành bản mới" (bản đang viết không bị sửa).
+
+## Khắc nhiều trang + nhập MusicXML toàn vẹn (24/11/2026)
+- **Gốc lỗi "105 ô chỉ hiện 11":** `engrave.ts render()` chỉ gọi `renderToSVG(1)`; Verovio giới hạn trang ở `pageHeight` 60 000 (tối đa) nên bản dày (nhiều khuông) sang trang 2+ và mất. Nay khắc **mọi trang** và nối SVG (truy vấn của trang chạy trên khung chứa nên vẫn đúng).
+- `exchange.ts`: `irregularBars` — ô dài/ngắn bất thường (không phải nửa ô tách 3 + 3a hay ô cuối) giữ đúng độ dài bằng số chỉ nhịp riêng rồi trả lại nhịp cũ (trước dời mọi vạch nhịp sau nó: Clair de lune 73 → 72 ô đúng). `<transpose>` đổi lớp cao độ (kèn Si♭, Fa…) → lưu **cao độ thực**, nhãn khuông thêm "(cao độ thực)"; dịch quãng 8 (contrabass) giữ cao độ viết như file của trình soạn nhạc.
+- Fixture tất định `scripts/fixtures/musicxml.py` → `tests/fixtures/musicxml/` (8, 11, 12, 32, 64, 105 ô, lấy đà, ba nhạc cụ); `pipeline.test.ts` đếm ô ở mô hình / MEI / SVG ở 360 và 1200 px, thêm bản 12 khuông (tái hiện lỗi: 2 trang), Bach, Clair de lune; bảo toàn nốt, lặng, nối, liên ba, sắc thái, luyến, chấm, nhắc lại, đổi nhịp. E2E `analyze.spec.ts` nhập bản 12 khuông và cuộn tới ô cuối.

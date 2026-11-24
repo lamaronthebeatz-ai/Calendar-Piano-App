@@ -9,11 +9,12 @@ export type AnalysisKind = 'formalizable' | 'analytical' | 'probabilistic'
 export type AnalysisStatus = 'COMPLETED' | 'PARTIAL' | 'AMBIGUOUS' | 'INSUFFICIENT_DATA' | 'UNKNOWN' | 'ERROR'
 
 /**
+ * premise: what the analyst states and the module takes as given (the global key) — not a result, never overridden;
  * fact: structural certainty from the notes (a pitch class set, an interval); interpretation: a reading in context
  * that other analysts could make differently (a Roman numeral, a cadence); hypothesis: a large-scale claim to be tested
  * (a form); estimate: a statistic or score with its basis; rule-check: compliance with a named rulebook rule.
  */
-export type FindingKind = 'fact' | 'interpretation' | 'hypothesis' | 'estimate' | 'rule-check'
+export type FindingKind = 'premise' | 'fact' | 'interpretation' | 'hypothesis' | 'estimate' | 'rule-check'
 
 export type Text = { readonly basic: string; readonly technical: string; readonly academic?: string }
 export type Confidence = { readonly value: number; readonly basis: string }

@@ -72,3 +72,8 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - (23/11) Lamar: "làm luôn không cần hỏi" — đã sửa trang phức điệu theo giáo trình ở ba chỗ (nốt sớm, giải quyết lướt chỉ ở biến thể, giải quyết có trang trí phải nhảy). Nếu thầy chốt khác thì đảo lại ở `rules.ts` + `verify.ts` + `src/umre/rules/counterpoint.ts` cùng lúc.
 
 - **Clip mở đầu (23/11):** Lamar gửi hai clip (dọc + ngang) và muốn mở app là chạy clip rồi mới tới màn mật khẩu — thay cho quyết định cũ bỏ intro. Sửa cùng ngày: **luôn có tiếng, không nút bỏ qua hay tắt tiếng, ai cũng xem hết**; trình duyệt chặn tiếng khi chưa chạm nên có màn "Chạm để bắt đầu"; clip không phát được (ngoại tuyến/lỗi) thì vào thẳng màn khoá.
+
+## Giọng chủ trong phân tích (24/11/2026, chỉ thị "Human-defined global key")
+- Giọng chủ của tác phẩm **do người dùng chọn**; máy không tự quyết, không mặc định Đô trưởng, không lấy theo hoá biểu, không bao giờ tự đổi. Chưa chọn → không chạy phân tích hoà âm (bản nhạc vẫn hiện đủ); lăng kính TK XX không cần.
+- Lưu theo từng tác phẩm (`analyze:global-keys`, mã hoá như dữ liệu phân tích), mỗi lần đổi là một phiên bản, lần cũ giữ trong lịch sử; không lan sang bản khác.
+- Bằng chứng ngược lại → cảnh báo có số liệu, giọng chủ vẫn giữ.

@@ -1,4 +1,4 @@
-import { analyzeOnce } from '../harmony/analyzeOnce'
+import { analyzeOnce, globalKeyOf } from '../harmony/analyzeOnce'
 import type { AnalysisModule, Finding } from '../../analysis/types'
 import type { Score } from '../../repr/score'
 
@@ -19,7 +19,7 @@ export const formModule: AnalysisModule = {
   },
   checkInput: (input) => (input.score.voices.some((v) => v.events.some((e) => e.kind === 'note')) ? [] : ['không có nốt']),
   analyze(input) {
-    const a = analyzeOnce(input.score as Score)
+    const a = analyzeOnce(input.score as Score, globalKeyOf(input.context))
     const Q = 240
     const barStart = (b: number) => (a.score.bars[b]?.start ?? 0) / Q
     const f: Finding[] = []

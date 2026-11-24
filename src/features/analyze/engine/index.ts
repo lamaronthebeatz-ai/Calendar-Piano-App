@@ -16,8 +16,13 @@ export type NamedKey = Key & { tonicPc: number; name: string }
 export type HarmonyItem = { chord: Chord; key: NamedKey; reading: Reading; pcs: number[] }
 /** A stretch in one key (after tonicisations are folded in): the key plan of the piece. */
 export type KeyRegion = { start: number; end: number; key: NamedKey }
-export type Analysis = { score: AScore; harmony: HarmonyItem[]; home: NamedKey | null; tonicizations: (Tonicization & { name: string })[]; regions: KeyRegion[]; ncts: Nct[]; accidentals: Accidental[]; cadences: Cadence[]; lens: 'classical' | 'jazz' | 'xx'; jazz?: { readings: JazzReading[]; patterns: Pattern[]; fromSymbols: boolean }; xx?: XxAnalysis; form: FormAnalysis }
-export type AnalyzeOptions = ChordOptions & KeyOptions & { fold?: number; lens?: 'classical' | 'jazz' | 'xx' }
+/**
+ * `home`: the global key. When the analyst states it (`opts.home`) it is theirs and is never replaced; `homeEstimate`
+ * is the engine's own reading, kept only as evidence (a warning when the two disagree). Local keys, modulations and
+ * tonicizations are always found from the music, whatever the global key.
+ */
+export type Analysis = { score: AScore; harmony: HarmonyItem[]; home: NamedKey | null; homeEstimate: NamedKey | null; homeFrom: 'user' | 'estimate'; tonicizations: (Tonicization & { name: string })[]; regions: KeyRegion[]; ncts: Nct[]; accidentals: Accidental[]; cadences: Cadence[]; lens: 'classical' | 'jazz' | 'xx'; jazz?: { readings: JazzReading[]; patterns: Pattern[]; fromSymbols: boolean }; xx?: XxAnalysis; form: FormAnalysis }
+export type AnalyzeOptions = ChordOptions & KeyOptions & { fold?: number; lens?: 'classical' | 'jazz' | 'xx'; home?: Key }
 
 export const named = (k: Key): NamedKey => ({ ...k, tonicPc: keyPc(k), name: `${nameOf(k.tonic)}${k.minor ? 'm' : ''}` })
 
@@ -48,8 +53,9 @@ export function analyze(s: Score, opts: AnalyzeOptions = {}): Analysis {
   const cadences = cadencesOf(sc, harmony)
   const xx = lens === 'xx' ? analyzeXx(sc) : undefined
   const jazz = lens === 'jazz' ? { readings: chords.map((c, i) => readJazz(c, keys[i], chords[i + 1])), patterns: patternsOf(chords, keys), fromSymbols } : undefined
-  const homeKey = homeOf(sc, chords, keys, lens === 'jazz')
-  const base = { score: sc, harmony, home: homeKey && named(homeKey), tonicizations: tonicizations.map((t) => ({ ...t, name: named(t.key).name })), regions, ncts, accidentals, cadences, lens, jazz, xx }
+  const estimate = homeOf(sc, chords, keys, lens === 'jazz')
+  const homeKey = opts.home ?? estimate
+  const base = { score: sc, harmony, home: homeKey && named(homeKey), homeEstimate: estimate && named(estimate), homeFrom: (opts.home ? 'user' : 'estimate') as Analysis['homeFrom'], tonicizations: tonicizations.map((t) => ({ ...t, name: named(t.key).name })), regions, ncts, accidentals, cadences, lens, jazz, xx }
   return { ...base, form: formOf(base as Analysis) }
 }
 

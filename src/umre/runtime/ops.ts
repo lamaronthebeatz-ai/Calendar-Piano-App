@@ -6,7 +6,7 @@ import { digest } from '../validation/types'
  */
 
 /** The API contract version (bump the major on a breaking change of requests or responses). */
-export const UMRE_API_VERSION = '1.0.0'
+export const UMRE_API_VERSION = '1.1.0'
 
 export type Meta = {
   readonly api: string
