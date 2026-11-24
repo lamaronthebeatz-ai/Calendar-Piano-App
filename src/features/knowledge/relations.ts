@@ -23,6 +23,14 @@ export const RELATIONS = {
   from: { out: 'Lấy từ tài liệu', in: 'Bằng chứng dựa trên tài liệu này' },
   sameAs: { out: 'Cùng là tài liệu thư viện', in: 'Bản ghi của người dùng' },
   related: { out: 'Liên kết với', in: 'Được liên kết từ' },
+  // UMK (src/umk/edges.ts): rulebooks, rules, glossary, analysis labels, reasoning domains
+  states: { out: 'Nêu luật', in: 'Được nêu trong bài' },
+  inRulebook: { out: 'Gồm mục', in: 'Thuộc sổ luật' },
+  lifts: { out: 'Nới luật', in: 'Ngoại lệ' },
+  within: { out: 'Cho phép trong luật', in: 'Điều được phép' },
+  affects: { out: 'Câu hỏi mở về luật', in: 'Còn câu hỏi mở' },
+  names: { out: 'Gọi tên bài', in: 'Thuật ngữ đa ngữ' },
+  formalizes: { out: 'Hình thức hoá tri thức của', in: 'Được hình thức hoá ở' },
 } as const satisfies Record<string, { out: string; in: string }>
 export type Rel = keyof typeof RELATIONS
 

@@ -371,7 +371,7 @@ function Work({ id }: { id: string }) {
       {analysis && <MethodsPanel lens={active} />}
       {analysis && (
         <Suspense fallback={null}>
-          <UmrePanel score={data.score} title={data.title} runKey={runKey} globalKey={needsKey && choice ? choice.key : null} />
+          <UmrePanel score={data.score} title={data.title} runKey={runKey} globalKey={needsKey && choice ? choice.key : null} lens={active} />
         </Suspense>
       )}
 

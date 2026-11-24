@@ -21,7 +21,8 @@ export type SolveResult = {
   /** lines the search accepted but the independent checker refused (a bug in one of them) */
   disputed?: number
   /** set when UMRE re-judged the answers (src/umre/domains/counterpoint/page.ts): only confirmed answers are kept */
-  umre?: { engine: string; rulebook: string; confirmed: number; rejected: readonly string[]; checkers: readonly string[] }
+  /** `tradition`: the rulebook's theoretical tradition as the UMK registry records it */
+  umre?: { engine: string; rulebook: string; tradition?: string; confirmed: number; rejected: readonly string[]; checkers: readonly string[] }
 }
 /** `prefix`: notes already written (the search continues after them); `budget`: how many broken hard rules a line may
  *  carry (0 = a lawful line; 1–2 = the "fewest faults" search used when an exercise has no lawful answer). */

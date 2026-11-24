@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Score as ComposeScore } from './model'
 import { pitch as cpPitch, type Seg } from '../counterpoint/model'
 import { fromCompose, toCompose } from '../../umre/repr/adapters/compose'
 import { harmonizeTask } from '../../umre/domains/harmony/task'
 import { UmreHost, type Outcome } from '../../umre/runtime/host'
+import { assembleReasoningContext, recordOf, toUmreRequest } from '../../umk/reasoning'
+import { KnowledgeUsed } from '../../umk/KnowledgeUsed'
 import { NATURAL } from '../../umre/repr/pitch'
 import { notesOf } from '../../umre/repr/score'
 import { toQuarters } from '../../umre/repr/rational'
@@ -56,6 +58,7 @@ export function HarmonizePanel({ score, onOpen }: { score: ComposeScore; onOpen:
   const host = useRef<UmreHost | null>(null)
   useEffect(() => () => host.current?.dispose(), [])
   const k = keyOf(score.key, minor)
+  const ctx = useMemo(() => assembleReasoningContext({ kind: 'harmonize' }), [])
   const [num, den] = score.time
 
   const run = async () => {
@@ -66,12 +69,14 @@ export function HarmonizePanel({ score, onOpen }: { score: ComposeScore; onOpen:
     setBusy(true)
     setOut(null)
     const task = harmonizeTask(`hz-${score.id}`, m.segs, k, { num, den: den as 2 | 4 })
-    setOut(await host.current.run({ op: 'solve', task, options: { timeMs: 15_000, maxSolutions: 4 } }, { timeMs: 30_000 }))
+    // the rulebook comes from UMK's context; a task on another rulebook is refused before UMRE runs
+    setOut(await host.current.run(toUmreRequest(ctx, { op: 'solve', task, options: { timeMs: 15_000, maxSolutions: 4 } }), { timeMs: 30_000 }))
     setBusy(false)
   }
   const cancel = () => host.current?.dispose()
 
   const res = out && 'status' in out && out.status === 'done' && out.response.op === 'solve' ? (out.response.result as UnifiedResult) : null
+  const record = out && 'status' in out ? recordOf(ctx, out.status === 'done' ? { ok: true, response: out.response as never } : { ok: false, status: out.status }) : null
   const deg = (l: number) => (((l - k.tonic.letter) % 7) + 7) % 7
   return (
     <div className="cmp-harmonize" data-umre-harmonize>
@@ -105,6 +110,7 @@ export function HarmonizePanel({ score, onOpen }: { score: ComposeScore; onOpen:
           {res.rejected.length > 0 && <p className="cmp-help">{res.rejected.length} phương án của máy tìm không được bộ kiểm độc lập xác nhận nên không hiện.</p>}
         </div>
       )}
+      <KnowledgeUsed ctx={ctx} record={record} />
     </div>
   )
 }

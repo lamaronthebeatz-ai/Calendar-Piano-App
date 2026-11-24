@@ -3,7 +3,8 @@ import type { SolveResult } from '../../../features/counterpoint/solver'
 import { rankOf } from '../../orchestration/rank'
 import { fromCounterpoint } from '../../repr/adapters/counterpoint'
 import { fromQuarters } from '../../repr/rational'
-import { counterpointRulebook, COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION } from '../../rulebook/counterpoint'
+import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION } from '../../rulebook/counterpoint'
+import { rulebook, rulebookRecord } from '../../../umk/rulebooks'
 import type { Task } from '../../task'
 import { twoVoiceValidator } from '../../validation/counterpoint'
 import { confirmation } from '../../validation/independence'
@@ -32,7 +33,7 @@ export type PageCheck = {
 }
 
 const CONSULTS = ['search-rules', 'verify'] // what solveMany runs itself (solver.ts)
-let rb: ReturnType<typeof counterpointRulebook> | null = null
+let rb: ReturnType<typeof rulebook> | null = null
 
 /**
  * The page's search result, re-judged by UMRE: every answer goes through the independent validator and must be
@@ -41,8 +42,8 @@ let rb: ReturnType<typeof counterpointRulebook> | null = null
  * as correct. Unsat and timeout results pass through unchanged (there is nothing to check).
  */
 export function confirmForPage(p: Problem, r: SolveResult): SolveResult & { umre: PageCheck } {
-  rb ??= counterpointRulebook()
-  if (!r.solutions.length) return { ...r, umre: { engine: UMRE_ENGINE_VERSION, rulebook: `${rb.id}@${rb.version}`, confirmed: 0, rejected: [], checkers: [] } }
+  rb ??= rulebook(COUNTERPOINT_RULEBOOK_ID)
+  if (!r.solutions.length) return { ...r, umre: { engine: UMRE_ENGINE_VERSION, rulebook: `${rb.id}@${rb.version}`, tradition: rulebookRecord(COUNTERPOINT_RULEBOOK_ID).tradition, confirmed: 0, rejected: [], checkers: [] } }
   const t = taskFromProblem(p)
   const judged = r.solutions.map((s, i) => {
     const v = twoVoiceValidator.validate(t, twoVoiceSolution(t, s.cp, i + 1), rb!)
@@ -57,14 +58,14 @@ export function confirmForPage(p: Problem, r: SolveResult): SolveResult & { umre
     ...r, solutions,
     status: solutions.length ? 'valid' : 'unknown',
     disputed: (r.disputed ?? 0) + rejected.length,
-    umre: { engine: UMRE_ENGINE_VERSION, rulebook: `${rb.id}@${rb.version}`, confirmed: solutions.length, rejected, checkers },
+    umre: { engine: UMRE_ENGINE_VERSION, rulebook: `${rb.id}@${rb.version}`, tradition: rulebookRecord(COUNTERPOINT_RULEBOOK_ID).tradition, confirmed: solutions.length, rejected, checkers },
   }
 }
 
 export type PageGrade = { readonly status: string; readonly rules: readonly string[]; readonly checkers: readonly string[]; readonly disputed: readonly string[] }
 /** A student's line judged by UMRE's independent validator (beside the page's own grading). */
 export function gradeForPage(p: Problem, mine: import('../../../features/counterpoint/model').Seg[]): PageGrade {
-  rb ??= counterpointRulebook()
+  rb ??= rulebook(COUNTERPOINT_RULEBOOK_ID)
   const t = taskFromProblem(p)
   const v = twoVoiceValidator.validate(t, twoVoiceSolution(t, mine), rb)
   return {

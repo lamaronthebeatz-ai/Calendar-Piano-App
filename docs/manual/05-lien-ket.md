@@ -37,6 +37,9 @@ Sổ tay, Đồ thị và Bàn làm việc dùng chung các *mã thống nhất*
 | p: | Đề tài nghiên cứu | #/research/‹mã› |
 | n: | Ghi chú sổ tay | #/brain/‹mã› |
 | c:, e:, m: | Luận điểm, bằng chứng, phương pháp phân tích | Trong đề tài, đồ thị |
+| x: | Thuật ngữ đa ngữ (terms.json) | #/umk?id=x:‹mã› |
+| d: | Lĩnh vực trong phân loại UMK (nhánh bản đồ âm nhạc học, mục thư viện, lĩnh vực suy luận) | #/umk?id=d:‹mã› |
+| rb:, r: | Sổ luật UMRE (`rb:‹mã›@‹bản›`) và một mục của nó (`r:‹sổ›/‹mục›`) | #/umk?id=… |
 
 Liên kết trong sổ tay dùng cùng cú pháp hai cặp ngoặc vuông, kèm tiền tố.
 

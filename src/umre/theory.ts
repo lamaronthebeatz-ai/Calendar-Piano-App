@@ -1,6 +1,7 @@
 import { RULES, type RuleId } from '../features/counterpoint/rules'
-import { counterpointRulebook } from './rulebook/counterpoint'
-import { harmonyRulebook } from './rulebook/harmony'
+import { COUNTERPOINT_RULEBOOK_ID } from './rulebook/counterpoint'
+import { HARMONY_RULEBOOK_ID } from './rulebook/harmony'
+import { rulebook } from '../umk/rulebooks'
 import { entries, type Rulebook } from './rulebook/rulebook'
 import { HARMONY_RULE_ARTICLES } from './theorySlugs'
 
@@ -21,7 +22,8 @@ export type RuleView = {
 let books: Rulebook[] | null = null
 
 export function rulesForArticle(slug: string): RuleView[] {
-  books ??= [counterpointRulebook(), harmonyRulebook()]
+  // the same rulebook objects UMRE reasons with, from the UMK registry
+  books ??= [rulebook(COUNTERPOINT_RULEBOOK_ID), rulebook(HARMONY_RULEBOOK_ID)]
   const [cp, h] = books
   const ids = new Set<string>([
     ...(Object.keys(RULES) as RuleId[]).filter((id) => RULES[id].ref === slug),

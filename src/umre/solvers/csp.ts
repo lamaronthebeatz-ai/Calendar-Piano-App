@@ -1,12 +1,13 @@
 import { multiVoiceModel, twoVoiceModel } from '../domains/counterpoint/csp'
 import { checkMultiVoiceTask, checkTwoVoiceTask, MULTI_VOICE, TWO_VOICE, type MultiVoiceParams, type TwoVoiceParams } from '../domains/counterpoint/task'
-import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION, counterpointRulebook } from '../rulebook/counterpoint'
+import { COUNTERPOINT_RULEBOOK_ID, COUNTERPOINT_RULEBOOK_VERSION } from '../rulebook/counterpoint'
+import { rulebook } from '../../umk/rulebooks'
 import { search } from '../search/search'
 import type { Task } from '../task'
 import { checkFourPartTask, checkHarmonizeTask, FOUR_PART, fourPartModel, HARMONIZE, type FourPartParams, type HarmonizeParams } from '../domains/harmony/task'
 import { harmonize, romanOf } from '../domains/harmony/harmonize'
 import { notesOf } from '../repr/score'
-import { HARMONY_RULEBOOK_ID, HARMONY_RULEBOOK_VERSION, harmonyRulebook } from '../rulebook/harmony'
+import { HARMONY_RULEBOOK_ID, HARMONY_RULEBOOK_VERSION } from '../rulebook/harmony'
 import type { Solver, SolverOutput, SolverStep } from '../orchestration/solver'
 
 /**
@@ -35,7 +36,7 @@ export const cspCounterpointSolver: Solver = {
   },
   checkInput: (t) => (t.type === TWO_VOICE ? checkTwoVoiceTask(t) : checkMultiVoiceTask(t)),
   solve(task, ctx): SolverOutput {
-    const rb = counterpointRulebook()
+    const rb = rulebook(COUNTERPOINT_RULEBOOK_ID)
     const model = task.type === TWO_VOICE ? twoVoiceModel(task as Task<TwoVoiceParams>, rb) : multiVoiceModel(task as Task<MultiVoiceParams>, rb)
     const steps: SolverStep[] = [
       { operation: 'problem', output: { summary: `mô hình ràng buộc chung: ${model.free.length} bè tự do, ${model.base.voices.length} bè` } },
@@ -70,7 +71,7 @@ export const cspHarmonySolver: Solver = {
   },
   checkInput: (t) => checkFourPartTask(t),
   solve(task, ctx): SolverOutput {
-    const model = fourPartModel(task as Task<FourPartParams>, harmonyRulebook())
+    const model = fourPartModel(task as Task<FourPartParams>, rulebook(HARMONY_RULEBOOK_ID))
     const r = search(model, { timeMs: ctx.timeMs, maxSolutions: ctx.maxSolutions, signal: ctx.signal })
     const proof = r.status === 'unsat' ? `đã duyệt hết miền tìm kiếm (${model.domain})` : undefined
     return {
@@ -101,7 +102,7 @@ export const harmonizeSolver: Solver = {
   checkInput: (t) => checkHarmonizeTask(t),
   solve(task, ctx): SolverOutput {
     const t = task as Task<HarmonizeParams>
-    const r = harmonize(t, harmonyRulebook(), ctx)
+    const r = harmonize(t, rulebook(HARMONY_RULEBOOK_ID), ctx)
     return {
       status: r.status, proof: r.proof, reason: r.reason, solutions: r.solutions,
       diagnostics: { candidates: r.candidates, sequences: r.sequences.map((s) => ({ chords: romanOf(s.degrees), status: s.status, nodes: s.nodes })), options: r.options },

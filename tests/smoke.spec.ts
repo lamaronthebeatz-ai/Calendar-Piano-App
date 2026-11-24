@@ -41,6 +41,8 @@ const PAGES: [string, string, string?, number?][] = [
   ['Đồ thị tri thức', '/#/graph'],
   ['Đồ thị — một tác phẩm', '/#/graph?id=w:Q991701'],
   ['Đồ thị — một phương pháp', '/#/graph?id=m:giong'],
+  ['Trung tâm tri thức', '/#/umk'],
+  ['Trung tâm tri thức — một luật', '/#/umk?id=r%3Acounterpoint.strict.pham-tu-huong-1991%2Fdis-strong'],
   ['Cài đặt', '/#/settings'],
   // an editor: a sheet and its tools, little prose
   ['Soạn nhạc', '/#/compose', '.cmp-paper', 60],

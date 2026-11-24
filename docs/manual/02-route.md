@@ -20,6 +20,7 @@ Mọi trang đều nằm trong một *khung chung* (AppShell). Khung này gồm 
 | #/musicology/:branch | Một phân ngành | branch = mã phân ngành; ban-do = bản đồ âm nhạc |
 | #/explore | Mạng tri thức | Người, tác phẩm, dòng thời gian, dòng truyền |
 | #/graph | Đồ thị đối tượng | Tham số id |
+| #/umk | Trung tâm tri thức (UMK): phân loại, thuật ngữ, sổ luật, nguồn, khoảng trống | Tham số id, tab |
 | #/terms | Từ điển âm nhạc | Grove, thuật ngữ đa ngữ |
 | #/sources | Thư mục học | |
 | #/sources/:id | Trang một nguồn | id = mã nguồn; cua-toi = Nguồn của tôi |

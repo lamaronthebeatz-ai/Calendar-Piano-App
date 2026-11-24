@@ -13,6 +13,7 @@ const TOOLS = [
   { to: '/explore?tab=pha-he', icon: BranchesIcon, title: 'Dòng truyền', text: 'Chuỗi thầy – trò trên trục thời gian' },
   { to: '/sources', icon: BookmarkIcon, title: 'Thư mục học', text: 'Nguồn, trích dẫn, nguồn của bạn, sức khoẻ thư viện' },
   { to: '/graph', icon: BranchesIcon, title: 'Đồ thị tri thức', text: 'Người – tác phẩm – khái niệm – nguồn – luận điểm, hai chiều' },
+  { to: '/umk', icon: BranchesIcon, title: 'Trung tâm tri thức (UMK)', text: 'Phân loại, thuật ngữ, sổ luật, nguồn — tri thức UMRE dùng và chỗ còn thiếu' },
   { to: '/terms', icon: TypeIcon, title: 'Từ điển âm nhạc Lamar', text: 'Grove 1904 – 1910 (5 tập) và thuật ngữ năm thứ tiếng' },
   { to: '/research', icon: EditIcon, title: 'Bàn làm việc', text: 'Đề tài, bản nháp, xuất Word' },
   { to: '/notes', icon: NoteIcon, title: 'Sổ nghiên cứu', text: 'Mọi đánh dấu và ghi chú' },

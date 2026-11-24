@@ -19,13 +19,15 @@ export interface Base {
   work: Map<string, Work>
   rel: Relations
   bib?: Bibliography
+  /** UMK: rulebooks, rule entries, glossary terms, taxonomy (src/umk) */
+  umk?: { edges: Edge[]; title: (id: EntityId) => string | undefined }
 }
 
 let baseLoad: Promise<Base> | null = null
 /** The build-time datasets the graph is made of (each already cached by its own loader). */
 export const loadBase = () =>
-  (baseLoad ??= Promise.all([loadPeople() as Promise<People>, loadWorks() as Promise<Work[]>, (loadRelations() as Promise<Relations>).catch(() => ({}) as Relations), loadBibliography().catch(() => undefined)])
-    .then(([people, works, rel, bib]): Base => ({ people, person: personIndex(people), works, work: new Map(works.map((w) => [w.id, w])), rel, bib }))
+  (baseLoad ??= Promise.all([loadPeople() as Promise<People>, loadWorks() as Promise<Work[]>, (loadRelations() as Promise<Relations>).catch(() => ({}) as Relations), loadBibliography().catch(() => undefined), import('../../umk/graphBridge').then((m) => m.umkGraph()).catch(() => undefined)])
+    .then(([people, works, rel, bib, umk]): Base => ({ people, person: personIndex(people), works, work: new Map(works.map((w) => [w.id, w])), rel, bib, umk }))
     .catch((e) => {
       baseLoad = null
       throw e
@@ -34,7 +36,7 @@ export const loadBase = () =>
 let staticIndex: { base: Base; index: EdgeIndex } | null = null
 const indexOf = (base: Base) => {
   if (staticIndex?.base !== base)
-    staticIndex = { base, index: new EdgeIndex().add([...peopleEdges(base.people), ...workEdges(base.works), ...lineageEdges(base.rel), ...(base.bib ? bibliographyEdges(base.bib) : []), ...schoolEdges(), ...methodEdges()]) }
+    staticIndex = { base, index: new EdgeIndex().add([...peopleEdges(base.people), ...workEdges(base.works), ...lineageEdges(base.rel), ...(base.bib ? bibliographyEdges(base.bib) : []), ...schoolEdges(), ...methodEdges(), ...(base.umk?.edges ?? [])]) }
   return staticIndex.index
 }
 
@@ -91,7 +93,7 @@ export function useKnowledgeGraph() {
       case 'm':
         return METHOD_BY_ID.get(local)?.title ?? local
       default:
-        return local
+        return base?.umk?.title(id) ?? local
     }
   }
 
@@ -118,6 +120,11 @@ export function useKnowledgeGraph() {
         return k.evidence.some((x) => x.id === p.local)
       case 'm':
         return METHOD_BY_ID.has(p.local)
+      case 'x':
+      case 'd':
+      case 'rb':
+      case 'r':
+        return !!base?.umk?.title(id)
       default:
         return true
     }

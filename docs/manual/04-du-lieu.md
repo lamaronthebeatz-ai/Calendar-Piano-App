@@ -39,6 +39,7 @@ Tên tệp mang mã băm (hash) theo nội dung. Bài nào sửa thì bài đó 
 | compose:* | compose:scores, compose:current, compose:palette, compose:zoom | Bản nhạc đã soạn, bản đang mở, vị trí bảng công cụ, cỡ phóng |
 | solfege:* | solfege:tab, solfege:stats | Tab đang mở, thống kê đúng – sai |
 | journey:* | journey:v2, journey:v1.bak, journey:repair-log | Tiến trình trò chơi (bản 2), bản cũ cất lại, nhật ký sửa dữ liệu hỏng |
+| analyze:global-keys, umk:feedback | | Giọng chủ do người phân tích chọn (lịch sử theo tác phẩm); báo cáo khoảng trống tri thức và đề xuất của UMK (mã hoá) |
 | khác | chord-ear:style, musicology:view, tools:key, palette-recent, onboarding-done | Tuỳ chọn nhỏ, lịch sử ⌘K, đã xem tour |
 
 Trong sessionStorage (mất khi đóng trình duyệt): app:unlocked (đã qua màn chào) và app:vault (khoá mã hoá của phiên).

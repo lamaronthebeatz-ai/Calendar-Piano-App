@@ -14,6 +14,7 @@ export const navItems = [
   { to: '/explore', label: 'Tra cứu', icon: CompassIcon, end: false, desktop: true },
   { to: '/sources', label: 'Thư mục học', icon: BookmarkIcon, end: false, desktop: true },
   { to: '/graph', label: 'Đồ thị tri thức', icon: BranchesIcon, end: false, desktop: true },
+  { to: '/umk', label: 'Trung tâm tri thức', icon: BranchesIcon, end: false, desktop: true },
   { to: '/terms', label: 'Từ điển âm nhạc Lamar', icon: TypeIcon, end: false, desktop: true },
   { to: '/settings', label: 'Cài đặt', icon: SettingsIcon, end: false },
 ]

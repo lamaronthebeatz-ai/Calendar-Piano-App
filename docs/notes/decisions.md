@@ -77,3 +77,8 @@ Mỗi dòng: quyết định · khi nào · ghi chú. Lamar đổi ý thì sửa
 - Giọng chủ của tác phẩm **do người dùng chọn**; máy không tự quyết, không mặc định Đô trưởng, không lấy theo hoá biểu, không bao giờ tự đổi. Chưa chọn → không chạy phân tích hoà âm (bản nhạc vẫn hiện đủ); lăng kính TK XX không cần.
 - Lưu theo từng tác phẩm (`analyze:global-keys`, mã hoá như dữ liệu phân tích), mỗi lần đổi là một phiên bản, lần cũ giữ trong lịch sử; không lan sang bản khác.
 - Bằng chứng ngược lại → cảnh báo có số liệu, giọng chủ vẫn giữ.
+
+## UMK (24/11/2026, chỉ thị "Unified Music Knowledge")
+- Hợp nhất bằng một lớp đọc tại chỗ, **không chép** tri thức sang kho mới (mỗi loại tri thức giữ một nhà). UMRE chỉ lấy sổ luật từ sổ đăng ký UMK.
+- Các truyền thống lý thuyết không trộn: mỗi truyền thống một sổ luật. Thuật ngữ gần nghĩa không gộp; dạng viết trỏ hai nơi → báo cho người biên soạn.
+- Kết quả UMRE không bao giờ tự thành tri thức: khoảng trống / đề xuất chỉ là danh sách việc có trạng thái.

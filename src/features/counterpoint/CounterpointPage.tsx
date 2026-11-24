@@ -721,7 +721,7 @@ export function CounterpointPage() {
             {result!.umre && (
               <details className="cp-note cp-umre-acad">
                 <summary>Chi tiết học thuật</summary>
-                Sổ luật <code>{result!.umre.rulebook}</code> (Phạm Tú Hương 1991, theo Taneyev) · máy UMRE {result!.umre.engine}. Mỗi luật bắt buộc được ít nhất một bộ kiểm mà máy tìm không chạy xác nhận ({result!.umre.checkers.join(', ')}); luật mềm chỉ dùng để xếp hạng. Bảng luật, trang sách và mức kiểm chứng: bài lý thuyết <a className="wiki-link" href="#/theory/doi-vi-don-gian-hai-be">Đối vị đơn giản hai bè</a> → “Luật trong bộ máy UMRE”.
+                Sổ luật <code>{result!.umre.rulebook}</code> ({result!.umre.tradition ?? 'Phạm Tú Hương 1991, theo Taneyev'} — <Link to={`/umk?id=${encodeURIComponent(`rb:${result!.umre.rulebook}`)}`}>xem trong Trung tâm tri thức</Link>) · máy UMRE {result!.umre.engine}. Mỗi luật bắt buộc được ít nhất một bộ kiểm mà máy tìm không chạy xác nhận ({result!.umre.checkers.join(', ')}); luật mềm chỉ dùng để xếp hạng. Bảng luật, trang sách và mức kiểm chứng: bài lý thuyết <a className="wiki-link" href="#/theory/doi-vi-don-gian-hai-be">Đối vị đơn giản hai bè</a> → “Luật trong bộ máy UMRE”.
               </details>
             )}
             <Versions list={shown} id="s" problem={problem} stars={stars} width={width} playing={playing} now={now} onPlay={play} />

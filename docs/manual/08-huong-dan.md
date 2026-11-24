@@ -31,6 +31,7 @@
 - **Bầu trời** (#/musicology): xoay bằng kéo, phóng bằng chụm hai ngón hoặc lăn chuột. Bấm một ngôi sao để mở phân ngành, bấm một chấm để mở bài. Có chế độ xem danh sách cho máy yếu.
 - **Bản đồ âm nhạc** (#/musicology/ban-do): kéo thanh thời gian để lọc theo thế kỷ, lọc theo loại sự kiện, tìm địa điểm. Bấm một chấm để xem ảnh, năm, nguồn và mở bài. Chọn một *hành trình* để xem đường đi của một nhà soạn nhạc.
 - **Mạng tri thức** (#/explore): có các tab Người, Tác phẩm, Dòng thời gian, Dòng truyền. Lọc theo thời kỳ, quốc gia, khoảng năm. Bấm một người để mở hồ sơ: năm sinh – mất, tác phẩm, thầy – trò, ảnh hưởng, các bài liên quan.
+- **Trung tâm tri thức** (#/umk): xem tri thức của app trong một hệ — tổng quan (số liệu, toàn vẹn, tri thức UMRE đang dùng, độ phủ các ngành), cấu trúc và tra cứu (cây phân loại, tìm theo mọi thứ tiếng), sổ luật (truyền thống, nguồn, từng mục), khoảng trống (UMRE báo về, đề xuất bổ sung, điều thư viện tự đánh dấu cần kiểm). Không gì ở đây tự sửa thư viện.
 - **Đồ thị** (#/graph): gõ tên một bài, tác phẩm, tài liệu, luận điểm, hoặc dán mã thống nhất. Đồ thị hiện thẻ đối tượng và các nhóm quan hệ, mỗi quan hệ có nhãn nguồn gốc.
 
 ## 8.4. Từ điển và Thư mục học

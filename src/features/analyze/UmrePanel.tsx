@@ -1,4 +1,8 @@
 import { keyLabel, type GlobalKey } from './globalKey'
+import { assembleReasoningContext, recordOf, toUmreRequest } from '../../umk/reasoning'
+import { KnowledgeUsed } from '../../umk/KnowledgeUsed'
+import { reportKnowledgeGap } from '../../umk/feedback'
+import type { Lens } from './store'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Score as ComposeScore } from '../compose/model'
 import { fromCompose } from '../../umre/repr/adapters/compose'
@@ -23,7 +27,7 @@ const STATUS: Record<string, string> = { COMPLETED: 'xong', PARTIAL: 'một ph�
 const MANY = new Set(['hợp âm', 'âm vang', 'nốt ngoài hợp âm', 'mẫu lặp', 'câu', 'nhắc lại'])
 type Level = 'basic' | 'technical' | 'academic'
 
-export function UmrePanel({ score, title, runKey, globalKey }: { score: ComposeScore; title: string; runKey: string; globalKey: GlobalKey | null }) {
+export function UmrePanel({ score, title, runKey, globalKey, lens = 'classical' }: { score: ComposeScore; title: string; runKey: string; globalKey: GlobalKey | null; lens?: Lens }) {
   const [open, setOpen] = useState(false)
   const [level, setLevel] = useState<Level>('basic')
   const [state, setState] = useState<{ key: string; outcome?: Outcome } | null>(null)
@@ -34,25 +38,35 @@ export function UmrePanel({ score, title, runKey, globalKey }: { score: ComposeS
     host.current ??= new UmreHost(() => new Worker(new URL('../../umre/runtime/umre.worker.ts', import.meta.url), { type: 'module' }) as never)
     let live = true
     host.current
-      .run({ op: 'analyze', score: fromCompose(score), modules: MODULES, ...(globalKey ? { context: { globalKey } } : {}) }, { timeMs: 60_000 })
-      .then((o) => live && setState({ key: runKey, outcome: o }))
+      .run(toUmreRequest(ctx, { op: 'analyze', score: fromCompose(score), modules: MODULES }), { timeMs: 60_000 })
+      .then((o) => {
+        if (!live) return
+        setState({ key: runKey, outcome: o })
+        // gaps UMRE exposed go back to UMK as reports (never as knowledge)
+        const rec = recordOf(ctx, o.status === 'done' ? { ok: true, response: o.response as never } : { ok: false, status: o.status })
+        reportKnowledgeGap(rec.gaps.filter((g) => g.origin === 'umre' || g.kind === 'missing-premise'), ctx.id)
+      })
     return () => {
       live = false
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- runKey carries the global key
   }, [open, score, runKey])
   useEffect(() => () => host.current?.dispose(), [])
+  // the knowledge UMK hands UMRE for this run: concepts, methods, the analyst's global key
+  const ctx = useMemo(() => assembleReasoningContext({ kind: 'harmony-analysis', globalKey, lens }), [globalKey, lens])
 
   const outcome = state?.key === runKey ? state.outcome : undefined
   const done = outcome?.status === 'done' && outcome.response.op === 'analyze' ? outcome.response : null
   const result = done?.op === 'analyze' ? (done.result as AnalysisResult) : null
   const meta = done?.meta as Meta | undefined
+  const record = useMemo(() => (outcome ? recordOf(ctx, outcome.status === 'done' ? { ok: true, response: outcome.response as never } : { ok: false, status: outcome.status }) : null), [ctx, outcome])
 
   return (
     <details className="kg-methods um-panel" onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}>
       <summary>Phân tích và kiểm chứng của UMRE</summary>
       <p className="kg-note">Bộ máy suy luận chung của app chạy lại bản nhạc này qua các mô-đun hoà âm, giai điệu, tiết tấu, kết cấu, hình thức, phong cách. Mỗi kết quả nói rõ là <b>dữ kiện</b> (đếm trên nốt), <b>diễn giải</b> hay <b>giả thuyết</b> — người nghiên cứu là người kết luận.</p>
       <p className="kg-note">{globalKey ? <>Tiền đề: giọng chủ <b>{keyLabel(globalKey)}</b> do bạn chọn — các mô-đun đọc vùng giọng, ly điệu, chuyển giọng so với giọng này nhưng không ép mọi hợp âm vào âm giai của nó.</> : <>Chưa chọn giọng chủ: mô-đun hoà âm sẽ báo <b>thiếu dữ liệu</b>; các mô-đun khác vẫn chạy.</>}</p>
+      {open && <KnowledgeUsed ctx={ctx} record={record} />}
       {open && !outcome && <p className="an-status">Đang phân tích trong luồng riêng…</p>}
       {outcome && outcome.status !== 'done' && <p className="an-status">{outcome.status === 'timeout' ? 'Quá thời gian (60 giây) — bản nhạc quá dài cho máy này.' : outcome.status === 'error' ? `Lỗi: ${outcome.error}` : 'Đã dừng.'}</p>}
       {outcome?.status === 'done' && outcome.response.op === 'error' && <p className="an-status">Lỗi ({outcome.response.error.code}): {outcome.response.error.message}</p>}

@@ -10,8 +10,12 @@ import type { ArticleMeta } from '../theory/wiki'
  *   p:id     research project · n:id brain note · c:id claim · e:id evidence (knowledge store)
  *   t:id     Grove dictionary entry
  *   m:id     analysis method (knowledge/methods.ts)
+ *   x:id     glossary term (terms/terms.json) — the multilingual terminology, not the Grove dictionary (t:)
+ *   d:id     domain of the knowledge taxonomy (UMK: a part or branch of the musicology map, or a reasoning domain)
+ *   rb:id    rulebook, `rb:<id>@<version>` (UMK registry)
+ *   r:id     rulebook entry, `r:<rulebook id>/<entry id>` (a rule, exception, definition, permission, open question)
  */
-export const PREFIXES = ['a', 'w', 's', 'ms', 'p', 'n', 'c', 'e', 't', 'm'] as const
+export const PREFIXES = ['a', 'w', 's', 'ms', 'p', 'n', 'c', 'e', 't', 'm', 'x', 'd', 'rb', 'r'] as const
 export type Prefix = (typeof PREFIXES)[number]
 export type EntityId = `${Prefix}:${string}`
 
@@ -32,6 +36,10 @@ export type EntityKind =
   | 'claim'
   | 'evidence'
   | 'term'
+  | 'glossary'
+  | 'domain'
+  | 'rulebook'
+  | 'rule'
 
 export const KIND_LABEL: Record<EntityKind, string> = {
   person: 'Người',
@@ -50,6 +58,10 @@ export const KIND_LABEL: Record<EntityKind, string> = {
   claim: 'Luận điểm',
   evidence: 'Bằng chứng',
   term: 'Mục từ điển',
+  glossary: 'Thuật ngữ đa ngữ',
+  domain: 'Lĩnh vực tri thức',
+  rulebook: 'Sổ luật',
+  rule: 'Luật – định nghĩa',
 }
 
 export function parseId(id: string): { prefix: Prefix; local: string } | null {
@@ -79,7 +91,7 @@ export function articleKind(a: Pick<ArticleMeta, 'slug' | 'category' | 'person'>
   return 'concept'
 }
 
-const KIND_OF_PREFIX: Partial<Record<Prefix, EntityKind>> = { w: 'work', s: 'source', ms: 'source', p: 'project', n: 'note', c: 'claim', e: 'evidence', t: 'term', m: 'method' }
+const KIND_OF_PREFIX: Partial<Record<Prefix, EntityKind>> = { w: 'work', s: 'source', ms: 'source', p: 'project', n: 'note', c: 'claim', e: 'evidence', t: 'term', m: 'method', x: 'glossary', d: 'domain', rb: 'rulebook', r: 'rule' }
 
 /** The kind of an id; articles need their index entry (`find`), unknown articles read as concepts. */
 export function kindOf(id: EntityId, find: (slug: string) => Pick<ArticleMeta, 'slug' | 'category' | 'person'> | undefined): EntityKind {
@@ -107,6 +119,11 @@ export function hrefOf(id: EntityId): string | null {
       return `/brain/${local}`
     case 't':
       return `/terms?g=${encodeURIComponent(local)}`
+    case 'x':
+    case 'd':
+    case 'rb':
+    case 'r':
+      return `/umk?id=${encodeURIComponent(`${prefix}:${local}`)}`
     default:
       return null
   }

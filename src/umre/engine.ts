@@ -1,10 +1,9 @@
 import { Orchestrator } from './orchestration/orchestrator'
 import { SolverRegistry, ValidatorRegistry } from './orchestration/registry'
-import { counterpointRulebook } from './rulebook/counterpoint'
+import { allRulebooks } from '../umk/rulebooks'
 import { RulebookRegistry } from './rulebook/rulebook'
 import { COUNTERPOINT_SOLVERS } from './solvers/counterpoint'
 import { cspCounterpointSolver, cspHarmonySolver, harmonizeSolver } from './solvers/csp'
-import { harmonyRulebook } from './rulebook/harmony'
 import { harmonyValidator } from './validation/harmony'
 import { COUNTERPOINT_VALIDATORS } from './validation/counterpoint'
 
@@ -15,8 +14,8 @@ import { COUNTERPOINT_VALIDATORS } from './validation/counterpoint'
  */
 export function createEngine() {
   const rulebooks = new RulebookRegistry()
-  rulebooks.add(counterpointRulebook())
-  rulebooks.add(harmonyRulebook())
+  // rulebooks come from UMK, the registry of record (src/umk/rulebooks.ts) — the engine owns none
+  for (const r of allRulebooks()) rulebooks.add(r)
   const validators = new ValidatorRegistry()
   for (const v of COUNTERPOINT_VALIDATORS) validators.register(v)
   validators.register(harmonyValidator)

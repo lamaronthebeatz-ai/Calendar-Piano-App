@@ -31,6 +31,7 @@ const ResearchPage = lazy(() => import('./features/research/ResearchPage').then(
 const ExplorePage = lazy(() => import('./features/explore/ExplorePage').then((m) => ({ default: m.ExplorePage })))
 const TermsPage = lazy(() => import('./features/terms/TermsPage').then((m) => ({ default: m.TermsPage })))
 const GraphPage = lazy(() => import('./features/knowledge/GraphPage').then((m) => ({ default: m.GraphPage })))
+const KnowledgeCenter = lazy(() => import('./umk/KnowledgeCenter').then((m) => ({ default: m.KnowledgeCenter })))
 const SourcesPage = lazy(() => import('./features/sources/SourcesPage').then((m) => ({ default: m.SourcesPage })))
 const ToolsPage = lazy(() => import('./features/tools/ToolsPage').then((m) => ({ default: m.ToolsPage })))
 const CounterpointPage = lazy(() => import('./features/counterpoint/CounterpointPage').then((m) => ({ default: m.CounterpointPage })))
@@ -133,6 +134,7 @@ const router = createHashRouter(
       <Route path="/hanh-trinh" element={<Suspense fallback={<RouteLoading />}><JourneyPage /></Suspense>} />
       <Route path="/terms" element={<Suspense fallback={<RouteLoading />}><TermsPage /></Suspense>} />
       <Route path="/graph" element={<Suspense fallback={<RouteLoading />}><GraphPage /></Suspense>} />
+      <Route path="/umk" element={<Suspense fallback={<RouteLoading />}><KnowledgeCenter /></Suspense>} />
       <Route path="/sources/:id?" element={<Suspense fallback={<RouteLoading />}><SourcesPage /></Suspense>} />
       <Route path="/tools" element={<Suspense fallback={<RouteLoading />}><ToolsPage /></Suspense>} />
       <Route path="/solfege" element={<Suspense fallback={<RouteLoading />}><SolfegePage /></Suspense>} />
