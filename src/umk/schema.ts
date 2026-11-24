@@ -7,12 +7,14 @@ import type { EntityId } from '../features/knowledge/ids'
  * unit one id in the platform's id space (features/knowledge/ids.ts), one provenance vocabulary and one taxonomy, and
  * is the only way UMRE gets knowledge. Changing this contract = bump UMK_SCHEMA_VERSION (major when it breaks callers).
  */
-export const UMK_SCHEMA_VERSION = '1.0.0'
+export const UMK_SCHEMA_VERSION = '1.1.0'
 
 /* ------------------------------------------------------------------ provenance */
 
 /** What kind of authority a unit rests on. `machine`: computed by the app (never presented as a fact). */
-export type ProvenanceKind = 'primary' | 'secondary' | 'reference' | 'educational' | 'editorial' | 'machine' | 'external-data' | 'user'
+/** `editorial`: the compiler's reading of a source; `unsourced-claim` (1.1.0): a claim with no text behind it yet — a
+ *  teacher's exercise convention, for instance (its source record says which) */
+export type ProvenanceKind = 'primary' | 'secondary' | 'reference' | 'educational' | 'editorial' | 'unsourced-claim' | 'machine' | 'external-data' | 'user'
 export type VerificationState = 'verified' | 'partial' | 'unverified' | 'disputed'
 /** One unit's provenance, normalised — `original` keeps the value in the vocabulary of the system that recorded it. */
 export type Provenance = {
@@ -22,6 +24,8 @@ export type Provenance = {
   readonly sources: readonly EntityId[]
   /** the place in the source, as recorded ("tr. 9–10"); never invented */
   readonly locator?: string
+  /** who checked the locator against the text (1.1.0): an assistant reading a scan is not a specialist's confirmation */
+  readonly checkedBy?: 'assistant' | 'compiler' | 'teacher'
   readonly original: { readonly system: 'library' | 'glossary' | 'bibliography' | 'umre-evidence' | 'knowledge-graph' | 'my-sources' | 'umk'; readonly value: string }
   readonly note?: string
 }
@@ -59,7 +63,9 @@ export type DomainNode = {
 /* ------------------------------------------------------------------ terminology */
 
 /** How one written form relates to a term — kept apart, never collapsed into "synonym". */
-export type TermFormRelation = 'preferred' | 'glossary-variant' | 'article-alias' | 'foreign'
+/** `wikidata-label`: the Vietnamese label of the Wikidata item the article was matched to (1.1.0) — external data,
+ *  possibly naming a broader concept, never a compiler-recorded synonym */
+export type TermFormRelation = 'preferred' | 'glossary-variant' | 'wikidata-label' | 'article-alias' | 'foreign'
 export type TermForm = { readonly text: string; readonly lang: string; readonly relation: TermFormRelation }
 export type Term = {
   readonly id: EntityId
@@ -184,7 +190,7 @@ export type UpdateProposal = {
 
 const ID = /^(a|w|s|ms|p|n|c|e|t|m|x|d|rb|r):.+/
 const isId = (x: unknown): x is EntityId => typeof x === 'string' && ID.test(x)
-const PROV_KINDS = new Set<ProvenanceKind>(['primary', 'secondary', 'reference', 'educational', 'editorial', 'machine', 'external-data', 'user'])
+const PROV_KINDS = new Set<ProvenanceKind>(['primary', 'secondary', 'reference', 'educational', 'editorial', 'unsourced-claim', 'machine', 'external-data', 'user'])
 const VERIF = new Set<VerificationState>(['verified', 'partial', 'unverified', 'disputed'])
 
 export function checkProvenance(p: Provenance, where: string): string[] {
@@ -195,6 +201,9 @@ export function checkProvenance(p: Provenance, where: string): string[] {
   for (const s of p.sources) if (!isId(s)) out.push(`${where}: mã nguồn sai "${s}"`)
   // a machine result is never verified knowledge
   if (p.kind === 'machine' && p.verification === 'verified') out.push(`${where}: kết quả máy tính không được ghi là đã kiểm chứng`)
+  // a reading or an unwritten convention is never 'verified', whoever reads it
+  if ((p.kind === 'editorial' || p.kind === 'unsourced-claim') && p.verification === 'verified') out.push(`${where}: cách hiểu / quy ước chưa có văn bản không được ghi là đã kiểm chứng`)
+  if (p.verification === 'verified' && !p.checkedBy && p.original.system === 'umre-evidence') out.push(`${where}: đã đối chiếu thì phải ghi ai đối chiếu`)
   return out
 }
 export function checkUnit(u: KnowledgeUnit): string[] {

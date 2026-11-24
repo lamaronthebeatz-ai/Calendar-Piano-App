@@ -32,3 +32,13 @@
 .umk-tag[data-v='verified'] { color: var(--color-gold); }
 .umk-rule { padding: 6px 0; border-top: 1px solid var(--color-border); }
 .umk-rule:first-child { border-top: 0; }
+.umk-dl { display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr); gap: 2px 10px; margin: 6px 0; font-size: 13px; }
+.umk-dl dt { color: var(--color-ink-faint); }
+.umk-dl dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 520px) { .umk-dl { grid-template-columns: minmax(0, 1fr); } .umk-dl dd { margin-bottom: 4px; } }
+.umk-form { display: grid; gap: 6px; margin-top: 6px; }
+.umk-form select { background: var(--color-surface, #111); color: var(--color-ink); border: 1px solid var(--color-border); border-radius: 8px; padding: 6px; max-width: 100%; }
+.umk-history { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; list-style: disc; }
+.umk-history li[data-undone] { color: var(--color-ink-faint); text-decoration: line-through; }
+.umk-history li[data-undone] .umk-tag { text-decoration: none; }
+.umk-tag[data-by='assistant'] { color: var(--color-ink-faint); }

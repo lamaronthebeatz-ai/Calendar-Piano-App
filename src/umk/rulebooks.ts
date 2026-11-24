@@ -80,7 +80,9 @@ export function rulebookRecord(id: string): RulebookRecord {
     const src = worst ? rb.evidence.source(worst.sourceId) : undefined
     const sources = [...new Set(cs.map((c) => rb.evidence.source(c.sourceId)).filter((s) => s.origin === 'curated').map((s) => `s:${s.id}` as Id))]
     const locator = cs.map((c) => c.locator).filter(Boolean).join(', ') || null
-    return fromUmreEvidence(src?.type ?? 'unverified-claim', worst?.verification ?? 'unverified', sources, locator, cs.some((c) => c.checkedBy === 'assistant') ? 'đối chiếu bởi trợ lý máy với bản scan, chưa có người duyệt' : undefined)
+    // and the least authoritative checker: one citation checked only by the assistant makes the entry assistant-checked
+    const by = cs.some((c) => !c.checkedBy) ? undefined : cs.some((c) => c.checkedBy === 'assistant') ? 'assistant' : cs.some((c) => c.checkedBy === 'compiler') ? 'compiler' : cs.length ? 'teacher' : undefined
+    return fromUmreEvidence(src?.type ?? 'unverified-claim', worst?.verification ?? 'unverified', sources, locator, by === 'assistant' ? 'đối chiếu bởi trợ lý máy với bản scan, chưa có người duyệt' : undefined, by)
   }
   const arts = (local: string) => reg.articlesOf(local).map((s) => `a:${s}` as Id)
   const e = (local: string, standing: RuleStanding, name: string, statement: string, scope: string, citations: readonly string[], relates: string[], evaluatedBy: readonly string[], caveat?: string): RuleEntry => ({

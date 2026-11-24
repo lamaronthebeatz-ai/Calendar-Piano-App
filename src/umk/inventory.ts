@@ -7,6 +7,7 @@ import { rulebook, rulebookIds, rulebookRecord } from './rulebooks'
 import { taxonomy } from './taxonomy'
 import { glossaryTerms, termConflicts } from './terminology'
 import type { KnowledgeGap } from './schema'
+import { basisLabel } from './provenance'
 
 /**
  * What UMK serves, counted against the homes it reads from — the integrity check of the consolidation: nothing the
@@ -55,7 +56,7 @@ export function knowledgeGaps(): KnowledgeGap[] {
   for (const id of rulebookIds())
     for (const e of rulebookRecord(id).entries)
       if (e.standing === 'ambiguous') out.push({ id: `open:${e.id}`, kind: 'open-question', about: e.id, text: e.statement, origin: 'umk' })
-      else if (e.provenance.verification === 'unverified' && e.standing !== 'definition') out.push({ id: `unverified:${e.id}`, kind: 'unverified-source', about: e.id, text: `"${e.name}" chưa có nguồn đã đối chiếu (${e.provenance.kind === 'editorial' ? 'cách hiểu của người biên soạn / quy ước người dạy' : 'nguồn chưa xác minh'})`, origin: 'umk' })
+      else if (e.provenance.verification === 'unverified' && e.standing !== 'definition') out.push({ id: `unverified:${e.id}`, kind: 'unverified-source', about: e.id, text: `"${e.name}" chưa có nguồn đã đối chiếu (${basisLabel(e.provenance.kind)})`, origin: 'umk' })
   for (const t of glossaryTerms()) if (!t.article) out.push({ id: `term-no-article:${t.id}`, kind: 'missing-definition', about: t.id, text: `Thuật ngữ "${t.preferred}" chưa có bài thư viện riêng (chỉ có định nghĩa trong bảng thuật ngữ)`, origin: 'umk' })
   return out
 }

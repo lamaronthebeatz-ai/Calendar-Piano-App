@@ -1,6 +1,6 @@
 # UMK — Unified Music Knowledge: kiểm kê, kiến trúc, nghiệm thu (24/11/2026)
 
-Lược đồ UMK 1.0.0 · UMRE máy 1.0.0, API 1.1.0 · mã: `src/umk/` · trang: `/umk` (Trung tâm tri thức).
+Lược đồ UMK 1.0.0 → **1.1.0** (Phase 1.5) · UMRE máy 1.0.0, API 1.1.0 · mã: `src/umk/` · trang: `/umk` (Trung tâm tri thức).
 
 Trạng thái dùng trong báo cáo: **IMPLEMENTED AND VERIFIED** (có test chạy thật) · **IMPLEMENTED BUT NOT FULLY VERIFIED** · **PARTIALLY IMPLEMENTED** · **NOT IMPLEMENTED** · **BLOCKED**.
 
@@ -114,3 +114,9 @@ Xem `docs/STATUS.md` phiên 24/11 và mục 8 dưới; `src/umk/umk.test.ts` 14 
 - Người biên soạn xử lý 9 chỗ thuật ngữ trỏ hai nơi, 9 luật chỉ dựa cách hiểu/quy ước, 7 câu hỏi mở của sổ luật (`/umk?tab=gaps`).
 - Thêm sổ luật thứ hai cho hoà âm (truyền thống khác) = sổ mới trong sổ đăng ký, không thêm luật vào sổ cũ.
 - E2E cho khối tri thức ở Phối hoà âm và Phức điệu; mở một luật trên `/graph`.
+
+## Cập nhật Phase 1.5 (24/11/2026)
+Rà soát học thuật: `docs/umk/reviews/` (`TERMINOLOGY_REVIEW.md`, `RULEBOOK_REVIEW.md`, `OPEN_QUESTIONS.md`, `PHASE_1_5_REPORT.md`). Trạng thái thay đổi so với mục 2:
+- Lớp 3 (thuật ngữ): bộ dò xung đột phân biệt dấu thanh; nhãn Wikidata tách khỏi biến thể người biên soạn ghi. 9 → 8 xung đột (1 dương tính giả). Vẫn IMPLEMENTED AND VERIFIED; 6 vấn đề thuật ngữ chờ người biên soạn.
+- Lớp 5 (nguồn gốc): quy ước người dạy (`unsourced-claim`) tách khỏi cách hiểu người biên soạn (`editorial`); ghi người đối chiếu (`checkedBy`). Mọi trích dẫn "đã đối chiếu" của hai sổ luật là **trợ lý máy đọc scan, chưa người duyệt**.
+- Quyết định biên soạn có quy trình (ghi, lý do, nguồn, trước/sau, hoàn tác, lưu trên thiết bị). Không quyết định nào được áp vào dữ liệu.

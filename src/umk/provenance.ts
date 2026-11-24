@@ -12,12 +12,12 @@ import type { SourceType, Verification } from '../umre/evidence/evidence'
  *  Knowledge graph edges (relations.ts)        library · wikidata · computed · research
  *  My sources (knowledge/model.ts)             unverified · record · original · disputed
  */
-const UMRE_KIND: Record<SourceType, ProvenanceKind> = { primary: 'primary', secondary: 'secondary', tertiary: 'reference', 'internal-interpretation': 'editorial', 'unverified-claim': 'editorial' }
+const UMRE_KIND: Record<SourceType, ProvenanceKind> = { primary: 'primary', secondary: 'secondary', tertiary: 'reference', 'internal-interpretation': 'editorial', 'unverified-claim': 'unsourced-claim' }
 const UMRE_VERIF: Record<Verification, VerificationState> = { verified: 'verified', 'partially-verified': 'partial', unverified: 'unverified' }
 
-export function fromUmreEvidence(type: SourceType, verification: Verification, sources: EntityId[], locator: string | null, note?: string): Provenance {
+export function fromUmreEvidence(type: SourceType, verification: Verification, sources: EntityId[], locator: string | null, note?: string, checkedBy?: Provenance['checkedBy']): Provenance {
   return {
-    kind: UMRE_KIND[type], verification: UMRE_VERIF[verification], sources, ...(locator ? { locator } : {}),
+    kind: UMRE_KIND[type], verification: UMRE_VERIF[verification], sources, ...(locator ? { locator } : {}), ...(checkedBy && verification !== 'unverified' ? { checkedBy } : {}),
     original: { system: 'umre-evidence', value: `${type}/${verification}` }, ...(note ? { note } : {}),
   }
 }
@@ -51,6 +51,11 @@ export const glossary = (): Provenance => ({ kind: 'educational', verification: 
 export const umkDerived = (value: string): Provenance => ({ kind: 'machine', verification: 'unverified', sources: [], original: { system: 'umk', value } })
 
 export const PROVENANCE_LABEL: Record<ProvenanceKind, string> = {
-  primary: 'Nguồn gốc', secondary: 'Nguồn thứ cấp', reference: 'Tài liệu tra cứu', educational: 'Tài liệu học tập (người biên soạn)', editorial: 'Cách hiểu của người biên soạn', machine: 'Máy tính suy ra', 'external-data': 'Dữ liệu ngoài (chưa đối chiếu)', user: 'Người dùng nhập',
+  primary: 'Nguồn gốc', secondary: 'Nguồn thứ cấp', reference: 'Tài liệu tra cứu', educational: 'Tài liệu học tập (người biên soạn)', editorial: 'Cách hiểu của người biên soạn', 'unsourced-claim': 'Chưa có văn bản (quy ước, khẳng định)', machine: 'Máy tính suy ra', 'external-data': 'Dữ liệu ngoài (chưa đối chiếu)', user: 'Người dùng nhập',
 }
 export const VERIFICATION_LABEL: Record<VerificationState, string> = { verified: 'đã đối chiếu', partial: 'đối chiếu một phần', unverified: 'chưa xác minh', disputed: 'có nghi vấn' }
+
+export const CHECKED_BY_LABEL = { assistant: 'trợ lý máy đối chiếu với bản scan — chưa người duyệt', compiler: 'người biên soạn đối chiếu', teacher: 'người dạy / chuyên gia xác nhận' } as const
+
+/** What an unverified entry rests on, in words: a reading and an unwritten convention are not the same thing. */
+export const basisLabel = (k: ProvenanceKind) => (k === 'editorial' ? 'cách hiểu của người biên soạn' : k === 'unsourced-claim' ? 'khẳng định chưa có văn bản (quy ước của người dạy)' : 'nguồn chưa xác minh')

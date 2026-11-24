@@ -10,3 +10,10 @@ Báo cáo đầy đủ + kiểm kê: `docs/umk/REPORT.md`. Ở đây: điều Cl
 - **Phản hồi** `feedback.ts` (`umk:feedback`, v1): khoảng trống + đề xuất có trạng thái; không bao giờ sửa tri thức.
 - **Test**: `vitest.config.ts` alias `virtual:theory-index` → `src/umk/testing/theoryIndex.node.ts` (thư viện thật từ content modules, có `BODIES`). Test đơn vị nào cũng dùng được bài thật từ nay.
 - Giao diện: `KnowledgeUsed.tsx` (khối "Tri thức UMK đã dùng" dưới kết quả UMRE), `KnowledgeCenter.tsx`, `umk.css`; nhãn ở `labels.ts` (tách khỏi component vì fast refresh).
+
+## Phase 1.5 — rà soát học thuật (24/11, branch `umk/phase-1-5-academic-verification`)
+- Kết quả rà là **dữ liệu**: `src/umk/reviews.json` (thuật ngữ / luật / câu hỏi mở; phân loại, bằng chứng, đề xuất, trạng thái). `reviews.ts` gom thành `editorialIssues()` cho tab Khoảng trống. Báo cáo `docs/umk/reviews/*.md` viết từ cùng dữ liệu. Thêm hay đổi rà soát thì sửa JSON. Test `review.test.ts` bắt mục nào cần rà mà chưa có (tiêu chí tính từ sổ luật).
+- Lược đồ **1.1.0**: dạng viết `wikidata-label` (nhãn tiếng Việt của mục Wikidata mà `build.py` chèn vào biến thể — thường là khái niệm rộng hơn); nguồn gốc `unsourced-claim` (quy ước người dạy, tách khỏi `editorial` = cách hiểu người biên soạn); `checkedBy` (trợ lý máy ≠ người dạy).
+- Bộ dò xung đột so **có dấu thanh** (`toneKey`: chỉ gộp hai cách đặt dấu oà/òa). Bộ phân giải liên kết của thư viện (`keyIndex`) vẫn bỏ dấu — chờ quyết.
+- Quyết định của người biên soạn: `feedback.ts` v2 (`recordDecision`, `undoDecision`, `decisionOf`), đọc được kho v1; chỉ ghi, không sửa dữ liệu; người quyết chỉ khi người dùng gõ.
+- Bản scan sách không có trong repo: rà không đọc lại trang sách → không luật nào được nâng mức căn cứ.
