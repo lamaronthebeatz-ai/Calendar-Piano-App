@@ -8,6 +8,7 @@ import type { Score } from '../umre/repr/score'
 import type { Task } from '../umre/task'
 import { COUNTERPOINT_RULE_ARTICLES, HARMONY_RULE_ARTICLES } from '../umre/theorySlugs'
 import { searchKnowledge } from './api'
+import { basisLabel } from './provenance'
 import { rulebookRecord } from './rulebooks'
 import { COUNTERPOINT_RULEBOOK_ID } from '../umre/rulebook/counterpoint'
 import { HARMONY_RULEBOOK_ID } from '../umre/rulebook/harmony'
@@ -37,7 +38,7 @@ function fromRulebook(rb: RulebookRecord) {
   for (const e of rb.entries) {
     if (e.standing === 'ambiguous') gaps.push({ id: `open:${e.id}`, kind: 'open-question', about: e.id, text: `${e.statement} (${e.scope})`, origin: 'umk' })
     else if (e.provenance.verification === 'unverified' && e.standing !== 'definition')
-      gaps.push({ id: `unverified:${e.id}`, kind: e.provenance.kind === 'editorial' ? 'unverified-source' : 'missing-source', about: e.id, text: `"${e.name}" dựa trên ${e.provenance.kind === 'editorial' ? 'cách hiểu của người biên soạn / quy ước người dạy' : 'nguồn chưa xác minh'} — chưa có trang sách đối chiếu`, origin: 'umk' })
+      gaps.push({ id: `unverified:${e.id}`, kind: e.provenance.kind === 'editorial' || e.provenance.kind === 'unsourced-claim' ? 'unverified-source' : 'missing-source', about: e.id, text: `"${e.name}" dựa trên ${basisLabel(e.provenance.kind)} — chưa có trang sách đối chiếu`, origin: 'umk' })
   }
   return { rules: rb.entries.map((e) => e.id), sources: [...new Set(rb.entries.flatMap((e) => e.provenance.sources))], gaps }
 }

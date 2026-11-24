@@ -48,3 +48,28 @@ test('Phân tích → UMRE → UMK: ngữ cảnh tri thức đi kèm kết quả
   await expect(page.getByTestId('umk-reported')).toContainText('Mâu thuẫn')
   await expect(page.getByTestId('umk-reported')).toContainText('open')
 })
+
+test('Khoảng trống: vấn đề học thuật chờ quyết đủ trường; ghi quyết định rồi hoàn tác; lưu trên máy, không tràn điện thoại', async ({ page }) => {
+  await page.goto('/#/umk?tab=gaps')
+  const box = page.getByTestId('umk-issues')
+  // counts settle once the glossary has loaded: 6 term issues + 24 rules + 7 questions, 1 rule needs no action
+  await expect(box.getByRole('tab', { name: /^Tất cả \(38\)$/ })).toBeVisible()
+  await expect(box.getByRole('tab', { name: /^Đang chờ quyết \(36\)$/ })).toBeVisible()
+  await expect(box).toContainText('chỉ nằm trên thiết bị này')
+  await box.getByRole('tab', { name: /^Xung đột thuật ngữ/ }).click()
+  await expect(box.locator('.umk-issue')).toHaveCount(6)
+  const card = box.locator('[data-issue="r:counterpoint.strict.pham-tu-huong-1991/no-gap"]')
+  await box.getByRole('tab', { name: /^Tất cả/ }).click()
+  await expect(card).toContainText('lệch với nguồn')
+  await expect(card).toContainText('Không chỗ trống') // the rule's name, not only its id
+  await card.locator('summary', { hasText: 'Ghi quyết định' }).click()
+  await card.getByLabel('Phương án đã chọn').fill('Giữ, ghi là giới hạn miền tìm kiếm')
+  await card.getByLabel('Lý do').fill('kiểm thử')
+  await card.getByRole('button', { name: 'Ghi quyết định' }).click()
+  await expect(card).toContainText('đã quyết: Giữ, ghi là giới hạn miền tìm kiếm')
+  await expect(box.getByRole('tab', { name: /^Đã quyết \(1\)$/ })).toBeVisible()
+  await card.getByRole('button', { name: 'hoàn tác' }).click()
+  await expect(card).toContainText('đã hoàn tác')
+  await expect(box.getByRole('tab', { name: /^Đã quyết \(0\)$/ })).toBeVisible()
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+})

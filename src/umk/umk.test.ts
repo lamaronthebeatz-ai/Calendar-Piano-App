@@ -49,7 +49,8 @@ describe('Toàn vẹn tri thức (không mất, không gộp nhầm)', () => {
     for (const raw of TERMS) {
       const t = glossaryTerms().find((x) => x.id === `x:${raw.id}`)!
       expect(t.preferred).toBe(raw.vi)
-      expect(t.forms.filter((f) => f.relation === 'glossary-variant').map((f) => f.text)).toEqual(raw.variants ?? [])
+      // compiler variants and Wikidata labels together are the glossary's variant list (1.1.0 tells them apart)
+      expect(t.forms.filter((f) => f.relation === 'glossary-variant' || f.relation === 'wikidata-label').map((f) => f.text)).toEqual(raw.variants ?? [])
     }
     // "dấu hoá" is listed under both the accidental and the key signature: reported, both terms kept apart
     const shared = termConflicts().find((g) => g.id === 'term-shared:dau hoa')!

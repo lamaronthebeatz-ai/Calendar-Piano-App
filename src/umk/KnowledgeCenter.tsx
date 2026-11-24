@@ -5,10 +5,11 @@ import { useBack } from '../hooks/useBack'
 import { graphHref, KIND_LABEL, type EntityId } from '../features/knowledge/ids'
 import { RELATIONS } from '../features/knowledge/relations'
 import { getConcept, getKnowledge, getRelatedConcepts, getSources, listRulebooks, ruleEntry, searchKnowledge, STANDING, type Hit } from './api'
-import { decideProposal, proposeKnowledgeUpdate, setGapStatus, useFeedback } from './feedback'
+import { decideProposal, decisionOf, proposeKnowledgeUpdate, recordDecision, setGapStatus, undoDecision, useFeedback } from './feedback'
+import { editorialIssues, REVIEW, type Issue, type IssueKind } from './reviews'
 import { danglingEdges, inventory, knowledgeGaps, libraryGaps } from './inventory'
 import { gapLabel } from './labels'
-import { PROVENANCE_LABEL, VERIFICATION_LABEL } from './provenance'
+import { CHECKED_BY_LABEL, PROVENANCE_LABEL, VERIFICATION_LABEL } from './provenance'
 import { assembleReasoningContext } from './reasoning'
 import { UMK_SCHEMA_VERSION, type KnowledgeGap, type Provenance, type RuleEntry } from './schema'
 import { children, coverage, node, REASONING_DOMAINS } from './taxonomy'
@@ -80,6 +81,7 @@ function Prov({ p }: { p: Provenance }) {
       <span className="umk-tag">{PROVENANCE_LABEL[p.kind]}</span>
       <span className="umk-tag" data-v={p.verification}>{VERIFICATION_LABEL[p.verification]}</span>
       {p.locator && <span className="umk-tag">{p.locator}</span>}
+      {p.checkedBy && <span className="umk-tag" data-by={p.checkedBy}>{CHECKED_BY_LABEL[p.checkedBy]}</span>}
     </span>
   )
 }
@@ -259,6 +261,7 @@ function Gaps() {
   }
   return (
     <>
+      <Issues />
       <section className="umk-card" data-testid="umk-reported">
         <h3>Báo về từ UMRE và người dùng ({fb.gaps.length})</h3>
         <p className="umk-note">Chỉ là danh sách việc: không gì ở đây tự thành tri thức. Sửa thư viện / sổ luật là việc của người biên soạn.</p>
@@ -405,5 +408,111 @@ function Focus({ id }: { id: EntityId }) {
         </section>
       )}
     </article>
+  )
+}
+
+const ISSUE_KINDS: [IssueKind | 'all' | 'pending' | 'decided', string][] = [
+  ['all', 'Tất cả'], ['pending', 'Đang chờ quyết'], ['decided', 'Đã quyết'], ['term-conflict', 'Xung đột thuật ngữ'], ['rulebook-question', 'Câu hỏi mở của sổ luật'],
+  ['convention', 'Quy ước người biên soạn / người dạy'], ['missing-source', 'Thiếu nguồn'], ['interpretation', 'Nguồn cần diễn giải'], ['detector', 'Đã sửa ở bộ dò'],
+]
+
+/** The Phase 1.5 review as a worklist: every issue with its evidence, and a decision a person records (never applied). */
+function Issues() {
+  const issues = useMemo(() => editorialIssues(), [])
+  const fb = useFeedback()
+  const [filter, setFilter] = useState<(typeof ISSUE_KINDS)[number][0]>('pending')
+  const decided = (i: Issue) => !!decisionOf(fb, i.id)
+  const shown = issues.filter((i) => (filter === 'all' ? true : filter === 'pending' ? i.pending && !decided(i) : filter === 'decided' ? decided(i) : i.kind === filter))
+  const count = (k: (typeof ISSUE_KINDS)[number][0]) => issues.filter((i) => (k === 'all' ? true : k === 'pending' ? i.pending && !decided(i) : k === 'decided' ? decided(i) : i.kind === k)).length
+  return (
+    <section className="umk-card" data-testid="umk-issues">
+      <h3>Vấn đề học thuật chờ quyết ({count('pending')})</h3>
+      <p className="umk-note">
+        Rà soát ngày {REVIEW.reviewed} — {REVIEW.reviewer}. Quyết định ghi ở đây <b>chỉ nằm trên thiết bị này</b> (lưu cục bộ, mã hoá khi kho mở) và <b>không tự sửa</b> thư viện hay sổ luật: người biên soạn sửa tệp nội dung sau khi quyết. Báo cáo đầy đủ: <code>docs/umk/reviews/</code>.
+      </p>
+      <div className="umk-tabs" role="tablist" aria-label="Lọc vấn đề">
+        {ISSUE_KINDS.map(([k, l]) => (
+          <button key={k} role="tab" aria-selected={filter === k} onClick={() => setFilter(k)}>{l} ({count(k)})</button>
+        ))}
+      </div>
+      {!shown.length && <p className="umk-note">Không có mục nào.</p>}
+      {shown.map((i) => <IssueCard key={i.id} i={i} />)}
+    </section>
+  )
+}
+
+function IssueCard({ i }: { i: Issue }) {
+  const fb = useFeedback()
+  const current = decisionOf(fb, i.id)
+  const history = fb.decisions.filter((d) => d.issue === i.id)
+  const [choice, setChoice] = useState('')
+  const [custom, setCustom] = useState('')
+  const outcome = i.options.length && choice !== 'Khác' ? choice : custom
+  const [reason, setReason] = useState('')
+  const [source, setSource] = useState('')
+  const [by, setBy] = useState('')
+  const [err, setErr] = useState('')
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="umk-issue umk-rule" data-issue={i.id}>
+      <p>
+        <b>{i.title}</b> <span className="umk-tag">{i.domain}</span>
+        <span className="umk-tag" data-v={current ? 'verified' : undefined}>{current ? `đã quyết: ${current.outcome}` : i.status}</span>
+      </p>
+      <p className="umk-note"><code>{i.id}</code>{i.about && !i.about.startsWith('x:') ? <> · <Link className="umk-link" to={href(i.about)}>{getKnowledge(i.about)?.title ?? 'mở'}</Link></> : null}</p>
+      <dl className="umk-dl">
+        <dt>Vấn đề</dt><dd>{i.problem}</dd>
+        <dt>Nguồn / bằng chứng</dt><dd>{i.source || '—'}</dd>
+        <dt>Mức căn cứ</dt><dd>{i.support}</dd>
+        <dt>Ảnh hưởng tới bộ giải</dt><dd>{i.impact}</dd>
+        <dt>Đề xuất</dt><dd>{i.proposal}</dd>
+      </dl>
+      {i.pending && (
+        <details open={open} onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}>
+          <summary>{current ? 'Quyết định lại' : 'Ghi quyết định'}</summary>
+          <div className="umk-form">
+            {i.options.length > 0 && (
+              <select value={choice} onChange={(e) => setChoice(e.target.value)} aria-label="Phương án">
+                <option value="">— chọn phương án —</option>
+                {i.options.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            )}
+            {(!i.options.length || choice === 'Khác') && <input className="umk-search" value={custom} onChange={(e) => setCustom(e.target.value)} placeholder="Phương án đã chọn" aria-label="Phương án đã chọn" />}
+            <input className="umk-search" value={reason} onChange={(e) => setReason(e.target.value)} placeholder="Lý do" aria-label="Lý do" />
+            <input className="umk-search" value={source} onChange={(e) => setSource(e.target.value)} placeholder="Nguồn (sách, trang) — để trống nếu là quyết định biên tập" aria-label="Nguồn của quyết định" />
+            <input className="umk-search" value={by} onChange={(e) => setBy(e.target.value)} placeholder="Người quyết (không bắt buộc)" aria-label="Người quyết" />
+            <button
+              className="umk-link justify-self-start"
+              onClick={() => {
+                try {
+                  recordDecision({ issue: i.id, outcome, reason, source, decidedBy: by, before: current ? `đã quyết: ${current.outcome}` : i.status, after: outcome })
+                  setChoice('')
+                  setCustom('')
+                  setReason('')
+                  setSource('')
+                  setErr('')
+                  setOpen(false)
+                } catch (e) {
+                  setErr((e as Error).message)
+                }
+              }}
+            >
+              Ghi quyết định
+            </button>
+            {err && <p className="umk-note">{err}</p>}
+          </div>
+        </details>
+      )}
+      {history.length > 0 && (
+        <ul className="umk-history">
+          {history.map((d) => (
+            <li key={d.id} data-undone={d.undoneAt ? 'true' : undefined}>
+              {new Date(d.at).toLocaleString('vi-VN')}{d.decidedBy ? ` · ${d.decidedBy}` : ''}: <b>{d.outcome}</b> — {d.reason}{d.source ? ` (${d.source})` : ''} · trước: {d.before}
+              {d.undoneAt ? <span className="umk-tag">đã hoàn tác {new Date(d.undoneAt).toLocaleString('vi-VN')}</span> : <> <button className="umk-link" onClick={() => undoDecision(d.id)}>hoàn tác</button></>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   )
 }
