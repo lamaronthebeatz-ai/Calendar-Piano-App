@@ -126,12 +126,7 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 ## Phase 1 — khung cảnh 2D nhìn ngang (25/11/2026, Lamar giao "Phase 1 — prototype hình ảnh và lối chơi")
 - **Một cảnh thử: Thư viện Pomposa** (`loc:bt/thu-vien` của tuyến "Bản thảo thất lạc"). URL thêm `&w=1`: `?c=trung-co&v=arc&a=ban-thao&l=loc:bt/thu-vien&w=1`; màn danh sách của nơi đó có nút "Đi vào khung cảnh", khung cảnh có "← Danh sách". Màn danh sách cũ giữ nguyên.
 - **Không có hệ thống nghiệp vụ mới**: ai ở đó, đồ vật nào dùng được (điều kiện `when`), hội thoại, effects, quest, item, chứng cứ đều lấy từ `LocationDef` qua `engine/runtime.ts` (`enter`, `effects`) và `DialoguePanel` dùng chung với màn danh sách; ghi vào save v2 qua `progress.update`. Khoá `journey:v2` và định dạng save **không đổi**. Vị trí nhân vật chỉ giữ trong bộ nhớ (`lastSpot`), không phải save — tải lại thì về chỗ đứng đầu.
-- File `ui/walk/`:
-  - `actor.ts`: trạng thái `idle walk turn approach interact talk examine scripted locked`, va chạm (sàn + khối chặn), chỗ đứng cạnh vật, hàm thuần, test ở `walk.test.ts`.
-  - `scenes.ts`: bố cục từng nơi (chỉ toạ độ; id phải có trong nội dung, test kiểm).
-  - `Library.tsx`: tranh SVG tự vẽ (lớp giữa + tiền cảnh).
-  - `WalkScene.tsx` + `walk.css`.
-  - `ui/arcShared.ts`: `useEscape`, `KIND` tách khỏi `Arc.tsx` để không thêm cảnh báo fast refresh.
+- File: từ Phase 2 xem mục dưới (`scene/` + `ui/walk/`). `ui/arcShared.ts`: `useEscape`, `KIND` tách khỏi `Arc.tsx` để không thêm cảnh báo fast refresh.
 - Lớp: xa (ảnh `bg` của nơi đó, thị sai 0,4) · giữa (tường, cửa sổ, giá sách, bục đọc, rương, rào, cửa kho) · nhân vật · tiền cảnh che (cột, đèn, thị sai 1,18) · lớp tương tác (nút trong suốt phủ người/vật + hình thoi vàng) · va chạm (dữ liệu).
 - Điều khiển: chạm sàn để đi; chạm người hoặc vật thì nhân vật tự đi tới cạnh rồi dùng; giữ ◀ ▶; phím ← →, E/Enter, Esc. Nút ở hàng riêng dưới khung cảnh, có vùng an toàn. Khi hội thoại hoặc xem xét: khoá di chuyển, ẩn nút; đóng lại thì trả điều khiển. Rào gỗ chặn kho lưu trữ, đi vào thì hiện câu báo. Lần đầu vào có đoạn tự bước vào (khoá điều khiển); khi giảm chuyển động thì bỏ.
 - Camera: tỷ lệ = chiều cao khung, nhưng luôn hiện ít nhất 560 đơn vị bề ngang (điện thoại dọc có dải cảnh ở giữa); cuộn ngang có giới hạn theo nhân vật.
@@ -142,3 +137,34 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
   - Route là `/hanh-trinh`; gõ `/journey` thì ra lỗi 404 của router hiện "[object Object]".
 - Test: `tests/journey-walk.spec.ts` (save cũ v1 → đi, nói chuyện có khoá, xem giá sách nhận item + chứng cứ, rào, tải lại, quay về danh sách; phím; bố cục điện thoại), `ui/walk/walk.test.ts`.
 - Chưa có: các nơi khác của tuyến (thêm bố cục vào `scenes.ts` + tranh), âm bước chân, chân dung người chơi trên hình nhân vật (đang dùng một hình lữ khách chung). Chưa thử iPhone/Safari thật.
+
+## Phase 2 — Scene & World Engine (25/11/2026)
+- **Tách ba tầng**: `scene/` = lõi TS thuần (không React), `content/scenes/<arc>.ts` = dữ liệu cảnh/thế giới (chỉ dữ liệu thuần, test kiểm), `ui/walk/` = hiển thị.
+  - `scene/types.ts`: `SceneDef`, `LayerDef`, `InteractableDef`, `TransitionDef`, `SceneEventDef`, `RegionDef`, `WorldDef`.
+  - `scene/actor.ts`: nhân vật + va chạm + `standSpot` (khoảng cách, phía tiếp cận, null khi không tới được).
+  - `scene/view.ts`: hệ toạ độ cảnh/thế giới/màn hình, camera.
+  - `scene/lifecycle.ts`: `SceneHost`.
+  - `scene/world.ts`: registry cảnh, thế giới/khu vực, `passage`.
+  - `scene/interact.ts`: điểm tương tác lấy nhãn và điều kiện từ arc.
+  - `scene/session.ts`: vị trí đứng và câu đã nói, lưu trong sessionStorage — **không phải tiến trình**.
+- **Không nhân đôi dữ liệu**: cảnh chỉ trỏ id (`ref`) vào `LocationDef` (người, đồ vật); nhãn, điều kiện, hội thoại, effects đều lấy từ arc. Quyền vào một nơi = `isOpen` của arc (hidden/unlock); khu vực mở khi có nơi mở. Trạng thái lâu dài chỉ là save v2 có sẵn (visited, flags…). Khoá/định dạng save không đổi.
+- **URL**: `&w=<scene id>` (hoặc `1` = cảnh đầu của nơi đó, giữ được địa chỉ Phase 1), `&sp=<spawn>` chỉ dùng một lần rồi bị gỡ khỏi địa chỉ (để tải lại trang thì giữ chỗ đứng). `w` sai → màn danh sách.
+- **Vòng đời**: unloaded → loading (định nghĩa + chunk tranh `ui/walk/art/<module>.tsx` tải động + giải mã ảnh, có hạn giờ) → ready → active ⇄ suspended (app chạy nền: dừng vòng khung hình, nhân vật đứng yên) → unloading → unloaded. Ảnh hỏng thì bỏ lớp đó, cảnh vẫn chơi; định nghĩa hoặc tranh hỏng → `failed`, màn báo lỗi có Thử lại và ← Danh sách.
+- **Lớp**: vai trò distant/background/midground/effects/characters/foreground/occlusion/interaction, `z`, `parallax`, `opacity`, `when` (điều kiện trên save — cửa phòng họp vẽ mở khi `open:loc:bt/phong-hop`). Thị sai chỉ khi camera di chuyển.
+- **Camera**:
+  - `follow`: có vùng chết (`deadZone`), không rung, kẹp trong cảnh.
+  - `fixed`: hiện trọn phòng — trừ khi màn quá hẹp (thu nhỏ dưới 75% so với vừa chiều cao) thì cuộn như cảnh rộng.
+  - Khi đổi cỡ hoặc xoay màn: đặt lại theo nhân vật.
+- **Tương tác** (một cơ chế, hành động riêng theo loại): npc → hội thoại của arc; object → effects/câu đố/xem xét; door/exit → chuyển cảnh; lookout → câu mô tả của cảnh. Vùng chạm (`width/height`) tách khỏi vùng va chạm (`solids`) và chỗ đứng (`approach`).
+- **Chuyển cảnh**: `passage()` kiểm nơi đích mở + `when`. Đi qua được: tối dần 0,28 s → cảnh cũ suspend → URL mới → cảnh mới tải, nhân vật ở spawn. Đóng: nói lý do. Nơi đích chưa có cảnh → màn danh sách.
+- **Sự kiện vùng**: `once: session|visit`, `when`, `note`, `effects` (đi qua engine).
+- **Hai cảnh mẫu**: thư viện (`sc:bt/thu-vien`, 2000 đơn vị, follow) ⇄ phòng chép sách (`sc:bt/phong-chep`, 1000 đơn vị, fixed, bàn chép là vật cản, chỉ dùng được từ bên trái). Thế giới `w:ban-thao`: khu vực Pomposa (3 nơi) và Arezzo (2 nơi, chưa có cảnh). Bảng "Khu vực" trong cảnh.
+- **Bẫy đã gặp**:
+  - `.wk-stage` không có stacking context → các lớp z 40/60 đè lên hộp thoại (z 5) và chặn bấm → `isolation: isolate`.
+  - `setState` trong hàm gọi từ layout effect bị lint bắt → tách `paint` (chỉ DOM) và `sense` (state, gọi từ vòng khung hình và sự kiện).
+  - Vùng chạm cửa sổ kéo tới sàn nên chạm sàn lại mở cửa sổ → thêm `height`.
+- Test: `scene/scene.test.ts` (22), `tests/journey-walk.spec.ts` (7 × 2 dự án: chuyển cảnh hai chiều, cửa khoá, bảng khu vực, tải lại, lỗi tải chunk tranh, `w` sai).
+- **Thêm cảnh mới**:
+  1. Thêm `SceneDef` vào `content/scenes/<arc>.ts`, đăng ký trong `scene/world.ts` (`SCENES`, `WORLDS`).
+  2. Vẽ tranh trong `ui/walk/art/<module>.tsx` và khai báo khoá ở `art/index.ts`.
+  3. Test nội dung sẽ báo id sai hoặc điểm không tới được.

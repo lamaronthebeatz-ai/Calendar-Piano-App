@@ -101,7 +101,8 @@ function JourneyGame() {
           l={params.get('l')}
           p={params.get('p')}
           review={params.get('r') === '1'}
-          walk={params.get('w') === '1'}
+          walk={params.get('w')}
+          spawn={params.get('sp')}
           map={(open, done) => {
             const places = visibleLocations(arc, save).map((l) => ({ id: l.id, place: l.name, title: l.name, year: l.year ?? '', lat: l.lat, lon: l.lon, far: l.far }) as unknown as Scene)
             return <ChapterMap chapter={chapter} scenes={places} isDone={(x) => done(x.id)} next={places.find((x) => !done(x.id))} open={(x) => open(x.id)} />

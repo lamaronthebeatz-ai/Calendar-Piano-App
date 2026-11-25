@@ -7,17 +7,31 @@
 .wk-title h2 { font-family: var(--font-display); font-size: clamp(18px, 4.6vw, 26px); line-height: 1.15; color: var(--jr-ink); }
 .wk-title p { margin-top: 2px; font-size: 12.5px; line-height: 1.4; color: var(--jr-dim); }
 
-.wk-stage { position: relative; overflow: hidden; overflow: clip; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; margin-inline: max(0px, env(safe-area-inset-left)) max(0px, env(safe-area-inset-right)); }
+.wk-stage { position: relative; isolation: isolate; overflow: hidden; overflow: clip; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; margin-inline: max(0px, env(safe-area-inset-left)) max(0px, env(safe-area-inset-right)); }
 .wk-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 60px 18px #0b0907; }
 .wk-layer { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
-.wk-far img { width: 100%; height: 100%; object-fit: cover; filter: sepia(0.55) brightness(0.5) contrast(1.05); }
-.wk-front-layer { pointer-events: none; z-index: 3; }
-.wk-mid { position: absolute; inset: 0; }
+.wk-img { width: 100%; height: 100%; object-fit: cover; filter: sepia(0.55) brightness(0.5) contrast(1.05); }
+.wk-art { position: absolute; inset: 0; }
+.wk-layer.is-occlusion, .wk-layer.is-effects, .wk-layer.is-background, .wk-layer.is-distant, .wk-layer.is-foreground { pointer-events: none; }
+/* leaving through a door: a short fade to black; arriving: the veil lifts. At rest the veil is fully transparent, so
+   the scene shows even if no animation ever runs. */
+.wk-fade { position: absolute; inset: 0; z-index: 60; pointer-events: none; background: #0b0907; opacity: 0; animation: wk-unveil 0.32s ease-out; transition: opacity 0.26s ease-in; }
+.wk-fade.is-out { opacity: 1; }
+.wk-status { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; }
+.wk-status-acts { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.wk-map { flex: none; margin-left: auto; }
+.wk-places { display: grid; gap: 6px; margin-top: 8px; }
+.wk-place { width: 100%; display: grid; gap: 2px; text-align: left; padding: 9px 12px; border-radius: 12px; border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.4); color: var(--jr-ink); }
+.wk-place small { font-size: 11.5px; color: var(--jr-faint); }
+.wk-place.is-here { border-color: var(--jr-gold); }
+.wk-place:disabled:not(.is-here) { opacity: 0.55; }
+.wk-region-world { margin-top: 14px; }
+.wk-spot.is-shut .wk-mark { border-style: dashed; background: transparent; }
 .wk-note { position: absolute; z-index: 4; top: 10px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 24px); padding: 6px 14px; border-radius: 999px; font-size: 13px; color: var(--jr-ink); background: var(--jr-panel); border: 1px solid var(--jr-line); animation: wk-in 0.25s ease-out both; }
 
 /* figures: a zero-size anchor on the floor line; the figure stands on it */
-.wk-actor { position: absolute; left: 0; width: 0; height: 0; z-index: 1; }
-.wk-actor.is-player { z-index: 2; }
+.wk-actor { position: absolute; left: 0; width: 0; height: 0; }
+.wk-actor.is-player { z-index: 1; }
 .wk-flip { position: absolute; left: -40px; bottom: 0; width: 80px; height: 180px; transform-origin: 50% 100%; transition: transform 0.14s ease-out; }
 .wk-body { position: absolute; inset: 0; transform-origin: 50% 100%; transition: transform 0.25s ease-out; }
 .wk-shadow { position: absolute; left: 6px; bottom: -7px; width: 68px; height: 14px; border-radius: 50%; background: radial-gradient(closest-side, rgb(0 0 0 / 0.45), transparent); }
@@ -45,7 +59,7 @@
 .wk-body[data-bump] { animation: wk-bump 0.32s ease-out; }
 
 /* things to use: the whole thing is the tap target, a gold lozenge marks it */
-.wk-spot { position: absolute; width: 130px; z-index: 2; border-radius: 12px; }
+.wk-spot { position: absolute; border-radius: 12px; }
 .wk-spot:disabled { pointer-events: none; }
 .wk-spot:focus-visible { outline: 3px solid var(--jr-gold); outline-offset: 4px; }
 .wk-mark { position: absolute; left: 50%; top: -40px; width: 24px; height: 24px; margin-left: -12px; border: 3px solid var(--jr-gold-2); background: rgb(214 174 96 / 0.25); transform: rotate(45deg); transition: transform 0.2s ease-out, background-color 0.2s; animation: wk-pop 0.35s ease-out both; }
@@ -73,6 +87,7 @@
 @keyframes wk-bump { 30% { transform: translateX(-7px); } 60% { transform: translateX(3px); } }
 @keyframes wk-pop { from { opacity: 0; transform: rotate(45deg) scale(0.4); } }
 @keyframes wk-in { from { opacity: 0; } }
+@keyframes wk-unveil { from { opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
   .wk *, .wk *::before { animation: none !important; transition: none !important; }

@@ -1,15 +1,15 @@
+import type { Approach, CollisionDef, Facing } from './types'
+export type { Facing }
 /**
  * The walking figure of the side-view scene, as plain data: where it stands, which way it faces, what it is doing.
  * Pure functions only — the scene component runs them each frame and paints the result. Nothing here is saved: the
  * place the figure stands is screen state, the story state stays in the Journey save.
  */
 export type ActorState = 'idle' | 'walk' | 'turn' | 'approach' | 'interact' | 'talk' | 'examine' | 'scripted' | 'locked'
-export type Facing = 1 | -1
 type Going = 'walk' | 'approach' | 'scripted'
 /** `then`: what the figure goes on doing once it has turned round. */
 export type Actor = { x: number; facing: Facing; state: ActorState; target: number | null; turnLeft: number; then?: Going }
-/** The walkable floor: one span, with blocks the figure cannot pass (a rail, a chest). */
-export type Collision = { min: number; max: number; blocks: readonly { x0: number; x1: number }[] }
+type Collision = CollisionDef
 
 export const SPEED = 230 // world units per second
 export const TURN = 0.14 // seconds spent turning round before walking
@@ -22,7 +22,7 @@ export const moving = (a: Actor) => a.state === 'walk' || a.state === 'approach'
 /** The furthest point toward `to` the figure can reach from `from` without entering a block or leaving the floor. */
 export function reach(c: Collision, from: number, to: number): number {
   let x = Math.min(c.max, Math.max(c.min, to))
-  for (const b of c.blocks) {
+  for (const b of c.solids) {
     if (from <= b.x0 - HALF && x > b.x0 - HALF) x = b.x0 - HALF
     if (from >= b.x1 + HALF && x < b.x1 + HALF) x = b.x1 + HALF
   }
@@ -53,13 +53,20 @@ export function tick(a: Actor, dt: number): { actor: Actor; arrived: boolean } {
   return { actor: { ...a, x: a.x + Math.sign(d) * stepLen, facing: d > 0 ? 1 : -1 }, arrived: false }
 }
 
-/** Where to stand to use something at `at`: beside it, on the side the figure comes from, on the floor it can reach. */
-export function standSpot(c: Collision, from: number, at: number, gap: number): number {
-  const side = from <= at ? -1 : 1
-  const want = at + side * gap
-  const got = reach(c, from, want)
-  // the near side is cut off by a block: try the far side
-  return Math.abs(got - want) > 2 ? reach(c, from, at - side * gap) : got
+/**
+ * Where to stand to use something at `at`: `distance` beside it — never on top of it — on the side the figure comes
+ * from, unless the thing is only approached from one side (a desk against the wall), on floor the figure can reach.
+ * Returns null when no reachable spot is close enough (the thing is behind a rail).
+ */
+export function standSpot(c: Collision, from: number, at: number, a: Approach): number | null {
+  const near = from <= at ? -1 : 1
+  const sides = a.side === 'left' ? [-1] : a.side === 'right' ? [1] : [near, -near]
+  for (const side of sides) {
+    const want = at + side * a.distance
+    const got = reach(c, from, want)
+    if (Math.abs(got - want) <= 2) return got
+  }
+  return null
 }
 
 /** The thing within `range` of the figure, nearest first. */

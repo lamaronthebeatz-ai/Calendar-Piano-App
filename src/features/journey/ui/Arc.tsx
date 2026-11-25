@@ -19,7 +19,7 @@ import { SKILLS, type EvidenceDef } from '../engine/types'
 import { articleKind, KIND_LABEL } from '../../knowledge/ids'
 import { createProject, updateProject } from '../../research/store'
 import { WalkScene } from './walk/WalkScene'
-import { walkLayout } from './walk/scenes'
+import { sceneFor, scenesOf } from '../scene/world'
 import { KIND, useEscape } from './arcShared'
 import './arc.css'
 
@@ -33,18 +33,18 @@ const VOICE: Record<DNode['voice'], string> = { reconstructed: 'Lời dựng l�
 /**
  * A story arc played on the engine: the hub (objective, map, places), a place (people, things to use), a dialogue, a
  * puzzle. URL: ?v=arc&a=<arc>[&l=<place>][&p=<puzzle>] — reading an article and coming back returns to the same spot.
- * `&w=1`: the place walked through side-on (ui/walk), for places that have a walk layout.
+ * `&w=<scene>` (or `1`: the place's first scene) walks the place side-on (scene/, ui/walk); `&sp=` picks the spawn.
  */
-export function ArcPlayer({ arc, save, go, l, p, review, walk, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; review?: boolean; walk?: boolean; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
+export function ArcPlayer({ arc, save, go, l, p, review, walk, spawn, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; review?: boolean; walk?: string | null; spawn?: string | null; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
   const loc = arc.locations.find((x) => x.id === l && visibleLocations(arc, save).includes(x))
   const puzzle = arc.puzzles.find((x) => x.id === p)
   const music = MUSIC[arc.music]
   useEffect(() => {
     if (!puzzle || puzzle.type !== 'aural') playTrack(music)
   }, [music, puzzle])
-  if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} review={review} onClose={() => go(l ? { v: 'arc', a: arc.id, l, ...(walk ? { w: '1' } : {}) } : { v: 'arc', a: arc.id }, 'back')} />
-  const layout = loc && walk ? walkLayout(loc.id) : undefined
-  if (loc && layout) return <WalkScene key={loc.id} arc={arc} loc={loc} layout={layout} save={save} go={go} />
+  if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} review={review} onClose={() => go(l ? { v: 'arc', a: arc.id, l, ...(walk ? { w: walk } : {}) } : { v: 'arc', a: arc.id }, 'back')} />
+  const scene = loc ? sceneFor(loc.id, walk) : undefined
+  if (loc && scene) return <WalkScene key={scene.id} arc={arc} loc={loc} scene={scene} spawn={spawn ?? null} save={save} go={go} />
   if (loc) return <PlaceScreen key={loc.id} arc={arc} loc={loc} save={save} go={go} />
   return <Hub arc={arc} save={save} go={go} map={map} />
 }
@@ -142,8 +142,8 @@ function PlaceScreen({ arc, loc, save, go }: { arc: ArcDef; loc: LocationDef; sa
           <h2 className="ar-place-title">{loc.name}</h2>
           {stage && <p className="ar-hint-line">{stage.text}</p>}
         </header>
-        {walkLayout(loc.id) && (
-          <button className="jr-cta ar-walk" onClick={() => go({ v: 'arc', a: arc.id, l: loc.id, w: '1' }, 'replace')}>Đi vào khung cảnh</button>
+        {scenesOf(loc.id).length > 0 && (
+          <button className="jr-cta ar-walk" onClick={() => go({ v: 'arc', a: arc.id, l: loc.id, w: scenesOf(loc.id)[0].id }, 'replace')}>Đi vào khung cảnh</button>
         )}
         <div className="ar-actions">
           {people.map((x) => {

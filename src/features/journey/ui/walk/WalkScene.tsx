@@ -1,6 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { findArticle } from '../../../theory/wiki'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { update } from '../../progress'
 import type { Save } from '../../engine/save'
 import type { ArcDef, LocationDef } from '../../engine/types'
@@ -8,108 +6,202 @@ import { currentStage, effects, enter } from '../../engine/runtime'
 import { holds } from '../../engine/world'
 import { prefersReducedMotion } from '../../../../hooks/useEdgeSwipeBack'
 import { DialoguePanel } from '../Arc'
-import { KIND, useEscape } from '../arcShared'
-import { LOCKED, goTo, moving, nearest, reach, standSpot, tick, type Actor, type ActorState, type Facing } from './actor'
-import { LibraryFront, LibraryMid } from './Library'
-import type { WalkLayout } from './scenes'
+import { LOCKED, goTo, moving, reach, standSpot, tick, type Actor, type ActorState } from '../../scene/actor'
+import { SceneHost, type Loaded } from '../../scene/lifecycle'
+import { centreOn, follow, layerTransform, layerWidth, screenToScene, viewOf, type View } from '../../scene/view'
+import { live, type Live } from '../../scene/interact'
+import { passage, sceneById, spawnOf } from '../../scene/world'
+import { forgetStanding, keepStanding, markSaid, said, standingIn } from '../../scene/session'
+import type { Facing, SceneDef } from '../../scene/types'
+import { loadArt, type Art } from './art'
+import { Examine, Figure, Lookout } from './parts'
+import { RegionPanel } from './RegionPanel'
 import './walk.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
-type Spot = { key: string; x: number; gap: number; top: number; label: string; verb: string; kind: 'npc' | 'thing'; dialogue?: string; object?: NonNullable<LocationDef['objects']>[number] }
-
-const RANGE = 120 // world units: close enough to use something
-const MIN_VIEW = 560 // the narrowest slice of the room shown, in world units (a phone held upright)
-const FAR = 0.4 // the far layer moves at this fraction of the room's speed
-const NEAR = 1.18 // the front layer, a little faster
-
-/** Where the figure stood when the player left for a puzzle or an article: memory only, gone on reload (not a save). */
-const lastSpot = new Map<string, { x: number; facing: Facing }>()
+type Props = { arc: ArcDef; loc: LocationDef; scene: SceneDef; spawn: string | null; save: Save; go: Go }
 
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
+const decode = (id: string) => {
+  const i = new Image()
+  i.src = IMG(id)
+  return i.decode()
+}
+const NEAR = 34 // scene units: standing this close to the stand spot counts as "at" the thing
 
 /**
- * One place of an arc, walked through side-on: tap the floor to walk, tap a person or a thing to walk up to it and
- * use it, or hold ◀ ▶ (arrow keys, E to use). What is there, when, and what it does comes from the arc's LocationDef
- * through the same engine calls as the list screen (enter, effects, the dialogue runner); this screen adds only where
- * things stand and a figure to walk. Moving is locked while a conversation or a look is open.
+ * A scene of a place, walked side-on. The scene host loads it (definition, drawings, images), this component shows
+ * it while it is ready/active, pauses it when the app goes to the background, and unloads it when the player leaves.
+ * What is there and what it does comes from the arc's LocationDef through the engine (enter, effects, the dialogue
+ * runner) — the scene adds where things stand, how to walk there, and doors to other scenes.
  */
-export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: LocationDef; layout: WalkLayout; save: Save; go: Go }) {
+export function WalkScene(props: Props) {
+  const [host] = useState(() => new SceneHost<Art>({ definition: sceneById, art: loadArt, image: decode }))
+  const phase = useSyncExternalStore(
+    (f) => host.subscribe(f),
+    () => host.phase,
+  )
+  const id = props.scene.id
+  useEffect(() => {
+    void host.load(id)
+    return () => host.unload()
+  }, [host, id])
+  const back = () => props.go({ v: 'arc', a: props.arc.id, l: props.loc.id }, 'replace')
+  if (phase === 'failed')
+    return (
+      <section className="wk wk-status" role="alert">
+        <p className="jr-kicker">Không mở được khung cảnh</p>
+        <p className="jr-line">{host.error}</p>
+        <div className="wk-status-acts">
+          <button className="jr-cta" onClick={() => void host.retry(id)}>Thử lại</button>
+          <button className="jr-ghost" onClick={back}>← Danh sách</button>
+        </div>
+      </section>
+    )
+  if (!host.loaded || phase === 'loading' || phase === 'unloaded' || phase === 'unloading')
+    return (
+      <section className="wk wk-status" aria-busy="true">
+        <p className="jr-kicker">Đang mở {props.scene.name.toLowerCase()}…</p>
+      </section>
+    )
+  return <Playfield key={id} {...props} host={host} loaded={host.loaded} />
+}
+
+function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: SceneHost<Art>; loaded: Loaded<Art> }) {
+  const { def, art, missing } = loaded
   const [{ init, intro }] = useState(() => {
-    const remembered = lastSpot.get(loc.id)
-    const intro = !remembered && !prefersReducedMotion()
-    return { intro, init: { x: remembered?.x ?? (intro ? layout.enterFrom : layout.start), facing: remembered?.facing ?? 1, state: 'idle', target: null, turnLeft: 0 } as Actor }
+    const at = spawn ? null : standingIn(def.id)
+    const sp = spawnOf(def, spawn)
+    // the scripted entrance: only the first time a scene is entered in this tab, not through a door, motion allowed
+    const intro = !spawn && !at && !prefersReducedMotion()
+    if (spawn) forgetStanding(def.id)
+    const x = at?.x ?? (intro ? def.collision.min - 130 : sp.x)
+    return { intro, init: { x, facing: at?.facing ?? sp.facing, state: 'idle', target: null, turnLeft: 0 } as Actor }
   })
   const actor = useRef<Actor>(init)
-  const introDone = useRef(false)
+  const cam = useRef(0)
   const [shown, setShown] = useState<{ state: ActorState; facing: Facing }>({ state: init.state, facing: init.facing })
   const [near, setNear] = useState<string | null>(null)
   const [talk, setTalk] = useState<{ dialogue: string; npc: string; from: number } | null>(null)
-  const [look, setLook] = useState<Spot | null>(null)
+  const [look, setLook] = useState<Live | null>(null)
+  const [panel, setPanel] = useState(false)
+  const [leaving, setLeaving] = useState(false)
   const [note, setNote] = useState<string | null>(null)
   const [bump, setBump] = useState(0)
   const [size, setSize] = useState({ w: 0, h: 0 })
   const stage = useRef<HTMLDivElement>(null)
-  const world = useRef<HTMLDivElement>(null)
-  const far = useRef<HTMLDivElement>(null)
-  const front = useRef<HTMLDivElement>(null)
+  const layerEls = useRef(new Map<string, HTMLDivElement>())
   const figure = useRef<HTMLDivElement>(null)
-  const pending = useRef<Spot | null>(null)
+  const pending = useRef<Live | null>(null)
   const blocked = useRef(false)
   const raf = useRef(0)
   const last = useRef(0)
   const timers = useRef<number[]>([])
   const held = useRef(new Set<string>())
+  const fired = useRef(new Set<string>())
+  const saveRef = useRef(save)
+  const introDone = useRef(false)
 
   useEffect(() => {
+    host.activate()
     update((s) => enter(arc, loc, s))
-  }, [arc, loc])
+  }, [host, arc, loc])
+  // the spawn is used once: dropped from the address, so a reload restores where the figure stood instead
+  useEffect(() => {
+    if (spawn) go({ v: 'arc', a: arc.id, l: loc.id, w: def.id }, 'replace')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
-  // people and things the layout places, filtered by their conditions on the current save
-  const spots: Spot[] = [
-    ...loc.present
-      .filter((p) => layout.people[p.npc] && (!p.when || holds(p.when, save)))
-      .map((p) => {
-        const at = layout.people[p.npc]
-        const c = arc.characters.find((x) => x.id === p.npc)!
-        return { key: p.npc, x: at.x, gap: at.gap, top: 300, label: c.name, verb: 'Nói chuyện', kind: 'npc' as const, dialogue: p.dialogue }
-      }),
-    ...(loc.objects ?? [])
-      .filter((o) => layout.things[o.id] && (!o.when || holds(o.when, save)))
-      .map((o) => ({ key: o.id, x: layout.things[o.id].x, gap: layout.things[o.id].gap, top: layout.things[o.id].top, label: o.label, verb: layout.things[o.id].verb, kind: 'thing' as const, object: o })),
-  ]
+  const spots = live(arc, loc, def, save)
   const spotsRef = useRef(spots)
   useEffect(() => {
     spotsRef.current = spots
+    saveRef.current = save
   })
 
-  // scale: the room's height fills the stage, unless that would show less than MIN_VIEW of it across
-  const scale = size.h ? Math.min(size.h / layout.height, size.w / MIN_VIEW) : 0
-  const viewW = scale ? size.w / scale : layout.width
-  const offY = scale ? (size.h - layout.height * scale) / 2 : 0
+  const view: View | null = viewOf(def, size.w, size.h)
+  const layers = [...def.layers].sort((a, b) => a.z - b.z).filter((l) => !(l.source && 'image' in l.source && missing.includes(l.source.image)))
+
+  /** where to stand to use a spot from here (null: out of reach) */
+  const standFor = (s: Live, from: number) => standSpot(def.collision, from, s.x, s.approach)
+  const say = (t: string) => {
+    setNote(t)
+    later(2600, () => setNote((o) => (o === t ? null : o)))
+  }
+  const later = (ms: number, f: () => void) => timers.current.push(window.setTimeout(f, ms))
+
+  // events: a zone walked into says its line / runs its effects (through the engine), once per tab or per visit
+  const events = useCallback(
+    (x: number) => {
+      for (const e of def.events ?? []) {
+        if (x < e.x0 || x > e.x1 || fired.current.has(e.id) || (e.once === 'session' && said(e.id))) continue
+        if (e.when && !holds(e.when, saveRef.current)) continue
+        fired.current.add(e.id)
+        if (e.once === 'session') markSaid(e.id)
+        if (e.note) say(e.note)
+        if (e.effects) update((s) => effects(arc, e.effects, s))
+      }
+    },
+    // say/later only touch state setters and refs
+    [def, arc], // eslint-disable-line react-hooks/exhaustive-deps
+  )
 
   const paint = useCallback(() => {
     const a = actor.current
-    if (!scale) return
-    // the camera follows the figure inside the room's bounds; a room narrower than the view stays centred
-    const cam = viewW >= layout.width ? (layout.width - viewW) / 2 : Math.min(layout.width - viewW, Math.max(0, a.x - viewW / 2))
-    if (world.current) world.current.style.transform = `translate3d(${-cam * scale}px, ${offY}px, 0) scale(${scale})`
-    if (far.current) far.current.style.transform = `translate3d(${-cam * FAR * scale}px, ${offY}px, 0) scale(${scale})`
-    if (front.current) front.current.style.transform = `translate3d(${-cam * NEAR * scale}px, ${offY}px, 0) scale(${scale})`
+    if (!view) return
+    cam.current = follow(def, view, cam.current, a.x)
+    for (const l of def.layers) {
+      const el = layerEls.current.get(l.id)
+      if (el) el.style.transform = layerTransform(def, view, cam.current, l.parallax)
+    }
     if (figure.current) figure.current.style.transform = `translate3d(${a.x}px, 0, 0)`
-    const n = LOCKED.has(a.state) ? null : (nearest(a.x, spotsRef.current, RANGE)?.key ?? null)
+  }, [view, def])
+  /** what the figure is next to, and the event zones it stands in (state; called from the frame loop and handlers) */
+  const sense = useCallback(() => {
+    const a = actor.current
+    let n: string | null = null
+    if (!LOCKED.has(a.state))
+      for (const s of spotsRef.current) {
+        const at = standSpot(def.collision, a.x, s.x, s.approach)
+        if (at !== null && Math.abs(at - a.x) <= NEAR) n = s.id
+      }
     setNear((o) => (o === n ? o : n))
-  }, [scale, viewW, offY, layout.width])
+    if (!LOCKED.has(a.state) || a.state === 'scripted') events(a.x)
+  }, [def, events])
 
   const show = () => setShown((o) => (o.state === actor.current.state && o.facing === actor.current.facing ? o : { state: actor.current.state, facing: actor.current.facing }))
-  const later = (ms: number, f: () => void) => timers.current.push(window.setTimeout(f, ms))
 
-  const activate = useRef<(s: Spot) => void>(() => {})
-  const operate = (s: Spot) => {
+  const operate = (s: Live) => {
     const a = actor.current
-    const face: Facing = s.x >= a.x ? 1 : -1
+    const face: Facing = s.x >= a.x ? 1 : s.x < a.x - 1 ? -1 : a.facing
     if (s.kind === 'npc') {
       actor.current = { ...a, facing: face, state: 'talk', target: null }
-      setTalk({ dialogue: s.dialogue!, npc: s.key, from: a.x })
+      setTalk({ dialogue: s.dialogue!, npc: s.id, from: a.x })
+    } else if (s.kind === 'lookout') {
+      actor.current = { ...a, facing: face, state: 'examine', target: null }
+      setLook(s)
+    } else if (s.kind === 'door' || s.kind === 'exit') {
+      const p = passage(arc, def, s.transition, saveRef.current)
+      if (!p.ok) {
+        say(p.reason)
+        setBump((b) => b + 1)
+      } else {
+        actor.current = { ...a, state: 'locked', target: null }
+        keepStanding(def.id, a.x, a.facing)
+        const t = def.transitions.find((x) => x.id === s.transition)!
+        const leave = () => {
+          host.suspend()
+          if (p.scene) {
+            forgetStanding(p.scene.id)
+            go({ v: 'arc', a: arc.id, l: p.location.id, w: p.scene.id, ...(p.spawn ? { sp: p.spawn } : {}) }, 'replace')
+          } else go({ v: 'arc', a: arc.id, l: p.location.id })
+        }
+        if (t.effect === 'none' || prefersReducedMotion()) leave()
+        else {
+          setLeaving(true)
+          later(280, leave)
+        }
+      }
     } else {
       actor.current = { ...a, facing: face, state: 'interact', target: null }
       const o = s.object!
@@ -117,9 +209,9 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
       later(380, () => {
         if (o.effects) update((sv) => effects(arc, o.effects, sv))
         if (o.puzzle) {
-          lastSpot.set(loc.id, { x: actor.current.x, facing: actor.current.facing })
+          keepStanding(def.id, actor.current.x, actor.current.facing)
           actor.current = { ...actor.current, state: 'idle' }
-          go({ v: 'arc', a: arc.id, l: loc.id, p: o.puzzle, w: '1' })
+          go({ v: 'arc', a: arc.id, l: loc.id, p: o.puzzle, w: def.id })
           return
         }
         actor.current = { ...actor.current, state: 'examine' }
@@ -129,54 +221,55 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
     }
     show()
     paint()
+    sense()
   }
 
-  // the frame loop outlives renders: it reaches the latest paint and use through refs, never a stale closure
+  // the frame loop outlives renders: it reaches the latest paint and operate through refs, never a stale closure
+  const activate = useRef(operate)
   const paintRef = useRef(paint)
+  const senseRef = useRef(sense)
   useEffect(() => {
     activate.current = operate
     paintRef.current = paint
+    senseRef.current = sense
   })
 
-  const frame = useCallback(
-    function frame(t: number) {
-      const dt = Math.min(0.05, (t - last.current) / 1000)
-      last.current = t
-      const r = tick(actor.current, dt)
-      actor.current = r.actor
-      if (r.arrived) {
-        const was = actor.current.state
-        actor.current = { ...actor.current, state: 'idle' }
-        if (blocked.current) {
-          blocked.current = false
-          setBump((b) => b + 1)
-        }
-        const p = pending.current
-        pending.current = null
-        if (p && was === 'approach') activate.current(p)
+  const frame = useCallback(function frame(t: number) {
+    const dt = Math.min(0.05, (t - last.current) / 1000)
+    last.current = t
+    const r = tick(actor.current, dt)
+    actor.current = r.actor
+    if (r.arrived) {
+      const was = actor.current.state
+      actor.current = { ...actor.current, state: 'idle' }
+      if (blocked.current) {
+        blocked.current = false
+        setBump((b) => b + 1)
       }
-      show()
-      paintRef.current()
-      raf.current = moving(actor.current) ? requestAnimationFrame(frame) : 0
-    },
-    [],
-  )
+      const p = pending.current
+      pending.current = null
+      if (p && was === 'approach') activate.current(p)
+    }
+    setShown((o) => (o.state === actor.current.state && o.facing === actor.current.facing ? o : { state: actor.current.state, facing: actor.current.facing }))
+    paintRef.current()
+    senseRef.current()
+    raf.current = moving(actor.current) ? requestAnimationFrame(frame) : 0
+  }, [])
   const run = useCallback(() => {
-    if (raf.current) return
+    if (raf.current || host.phase !== 'active') return
     last.current = performance.now()
     raf.current = requestAnimationFrame(frame)
-  }, [frame])
+  }, [frame, host])
 
   const walkTo = (x: number, state: 'walk' | 'approach' = 'walk') => {
     if (LOCKED.has(actor.current.state)) return
-    const c = layout.collision
+    const c = def.collision
     const got = reach(c, actor.current.x, x)
     blocked.current = state === 'walk' && Math.abs(got - Math.min(c.max, Math.max(c.min, x))) > 4
-    if (blocked.current) say(layout.blocked)
+    if (blocked.current) say('Không đi qua được.')
     if (state === 'walk') pending.current = null
     actor.current = goTo(actor.current, c, x, state)
     if (actor.current.target === null) {
-      // already standing there
       if (blocked.current) {
         blocked.current = false
         setBump((b) => b + 1)
@@ -190,10 +283,15 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
     show()
     run()
   }
-  const approach = (s: Spot) => {
+  const approach = (s: Live) => {
     if (LOCKED.has(actor.current.state)) return
+    const at = standFor(s, actor.current.x)
+    if (at === null) {
+      say('Không tới gần được chỗ ấy.')
+      return
+    }
     pending.current = s
-    walkTo(standSpot(layout.collision, actor.current.x, s.x, s.gap), 'approach')
+    walkTo(at, 'approach')
   }
   const stop = () => {
     const a = actor.current
@@ -201,17 +299,14 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
     actor.current = { ...a, target: null, state: 'idle', then: undefined }
     show()
   }
-  const say = (t: string) => {
-    setNote(t)
-    later(2400, () => setNote((o) => (o === t ? null : o)))
-  }
   const release = () => {
     actor.current = { ...actor.current, state: 'idle' }
     show()
     paint()
+    sense()
   }
 
-  // the stage's size decides the scale; paint whenever it (or the scale) changes
+  // stage size → view; on the first view (and on rotation) the camera is placed on the figure
   useLayoutEffect(() => {
     const el = stage.current
     if (!el) return
@@ -222,28 +317,62 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
     return () => ro.disconnect()
   }, [])
   useLayoutEffect(() => {
+    if (view) cam.current = centreOn(def, view, actor.current.x)
     paint()
+    // only when the stage size changes, not on every paint identity change
+  }, [size.w, size.h]) // eslint-disable-line react-hooks/exhaustive-deps
+  useLayoutEffect(() => {
+    paint()
+    // near / events once laid out (a frame later: not a state change inside the effect itself)
+    const f = requestAnimationFrame(() => senseRef.current())
+    return () => cancelAnimationFrame(f)
   }, [paint])
 
-  // the scripted entrance: walks in from the edge with the controls locked, once per visit
   useEffect(() => {
     if (!intro || introDone.current) return
     introDone.current = true
-    actor.current = goTo({ ...actor.current, state: 'idle' }, layout.collision, layout.start, 'scripted')
+    actor.current = goTo({ ...actor.current, state: 'idle' }, def.collision, spawnOf(def, null).x, 'scripted')
     show()
     run()
-  }, [intro, run, layout.start, layout.collision])
+  }, [intro, run, def])
+
+  // the app in the background: the scene pauses (no frames), the figure stops where it is; back: it resumes
+  useEffect(() => {
+    const vis = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(raf.current)
+        raf.current = 0
+        held.current.clear()
+        const a = actor.current
+        if (a.state === 'walk' || a.state === 'approach' || a.state === 'turn' || a.state === 'scripted') actor.current = { ...a, target: null, state: 'idle', then: undefined }
+        keepStanding(def.id, actor.current.x, actor.current.facing)
+        host.suspend()
+      } else {
+        host.resume()
+        show()
+        paintRef.current()
+        senseRef.current()
+      }
+    }
+    const hide = () => keepStanding(def.id, actor.current.x, actor.current.facing)
+    document.addEventListener('visibilitychange', vis)
+    addEventListener('pagehide', hide)
+    return () => {
+      document.removeEventListener('visibilitychange', vis)
+      removeEventListener('pagehide', hide)
+    }
+  }, [def.id, host])
 
   // keyboard: hold ← → to walk, E / Enter to use what is near
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (talk || look || e.repeat || (e.target as HTMLElement).closest?.('input, textarea')) return
+      if (talk || look || panel || e.repeat || (e.target as HTMLElement).closest?.('input, textarea')) return
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
         held.current.add(e.key)
         walkTo(e.key === 'ArrowLeft' ? -1e4 : 1e4)
         e.preventDefault()
-      } else if ((e.key === 'e' || e.key === 'E' || (e.key === 'Enter' && (e.target as HTMLElement).tagName !== 'BUTTON'))) {
-        const s = spotsRef.current.find((x) => x.key === near)
+      } else if (e.key === 'e' || e.key === 'E' || (e.key === 'Enter' && (e.target as HTMLElement).tagName !== 'BUTTON')) {
+        const s = spotsRef.current.find((x) => x.id === near)
         if (s) approach(s)
       }
     }
@@ -269,17 +398,16 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
     () => () => {
       cancelAnimationFrame(raf.current)
       timers.current.forEach(clearTimeout)
-      lastSpot.set(loc.id, { x: actor.current.state === 'scripted' ? layout.start : actor.current.x, facing: actor.current.facing })
+      const a = actor.current
+      if (a.state !== 'scripted') keepStanding(def.id, a.x, a.facing)
     },
-    [loc.id, layout.start],
+    [def.id],
   )
 
   const onStage = (e: React.PointerEvent) => {
-    if ((e.target as HTMLElement).closest('button, a') || !scale) return
+    if ((e.target as HTMLElement).closest('button, a') || !view) return
     const r = stage.current!.getBoundingClientRect()
-    const a = actor.current
-    const cam = viewW >= layout.width ? (layout.width - viewW) / 2 : Math.min(layout.width - viewW, Math.max(0, a.x - viewW / 2))
-    walkTo((e.clientX - r.left) / scale + cam)
+    walkTo(screenToScene(view, cam.current, e.clientX - r.left, e.clientY - r.top).x)
   }
   const hold = (dir: -1 | 1) => ({
     onPointerDown: (e: React.PointerEvent) => {
@@ -291,56 +419,96 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
     onLostPointerCapture: stop,
   })
 
-  const locked = LOCKED.has(shown.state)
-  const nearSpot = spots.find((s) => s.key === near)
+  const locked = LOCKED.has(shown.state) || panel
+  const nearSpot = spots.find((s) => s.id === near)
   const stageText = currentStage(arc, save)?.text
-  const npcFacing = (key: string) => (talk?.npc === key ? (talk.from < layout.people[key].x ? -1 : 1) : layout.people[key].facing)
+  const { width, height, floor } = def.dimensions
+  const npcFacing = (s: Live & { kind: 'npc' }) => (talk?.npc === s.id ? (talk.from < s.x ? -1 : 1) : s.facing)
+  const npcs = def.interactables.filter((i): i is Extract<typeof i, { kind: 'npc' }> => i.kind === 'npc')
+
+  const layerNode = (l: SceneDef['layers'][number]) => {
+    if (l.when && !holds(l.when, save)) return null
+    const w = view ? layerWidth(def, view, l.parallax) : width
+    const style = { width: w, height, opacity: l.opacity, zIndex: l.z }
+    const ref = (el: HTMLDivElement | null) => {
+      if (el) layerEls.current.set(l.id, el)
+      else layerEls.current.delete(l.id)
+    }
+    let body: React.ReactNode = null
+    if (l.role === 'characters')
+      body = (
+        <>
+          {npcs.map((n) => {
+            const s = spots.find((x) => x.id === n.id)
+            if (!s) return null
+            return (
+              <div key={n.id} className={`wk-actor is-npc is-${n.look}${talk?.npc === n.id ? ' is-talk' : ''}`} style={{ transform: `translate3d(${n.x}px, 0, 0)`, top: floor }}>
+                <Figure look={n.look} facing={npcFacing(s as Live & { kind: 'npc' })} />
+              </div>
+            )
+          })}
+          <div ref={figure} className={`wk-actor is-player is-${shown.state}`} data-state={shown.state} data-testid="walk-player" style={{ top: floor }}>
+            <Figure look="traveller" facing={shown.facing} bump={bump} />
+          </div>
+        </>
+      )
+    else if (l.role === 'interaction')
+      body = spots.map((s) => {
+        const sw = s.width ?? 130
+        const shut = (s.kind === 'door' || s.kind === 'exit') && !s.open
+        return (
+          <button
+            key={s.id}
+            className={`wk-spot is-${s.kind}${near === s.id ? ' is-near' : ''}${shut ? ' is-shut' : ''}`}
+            style={{ left: s.x - sw / 2, width: sw, top: s.top, height: s.height ?? floor - s.top }}
+            aria-label={s.kind === 'npc' ? `Nói chuyện với ${s.label}` : `${s.verb}: ${s.label}${shut ? ' (đang đóng)' : ''}`}
+            disabled={locked}
+            onClick={() => approach(s)}
+          >
+            <span className="wk-mark" aria-hidden="true" />
+            <span className="wk-tag">{s.label}</span>
+          </button>
+        )
+      })
+    else if (l.source && 'image' in l.source) body = <img className="wk-img" src={IMG(l.source.image)} alt="" />
+    else if (l.source && 'art' in l.source) {
+      const A = art[l.source.art]
+      body = A ? <A width={w} height={height} floor={floor} /> : null
+    }
+    return (
+      <div key={l.id} ref={ref} className={`wk-layer is-${l.role}`} data-layer={l.id} style={style}>
+        {body}
+      </div>
+    )
+  }
 
   return (
-    <section className={`wk${locked ? ' is-locked' : ''}`} aria-label={`${loc.name} — khám phá`}>
+    <section className={`wk${locked ? ' is-locked' : ''}`} aria-label={`${loc.name} — khám phá`} data-scene={def.id} data-phase={host.phase}>
       <header className="wk-top">
         <button className="jr-ghost is-small" onClick={() => go({ v: 'arc', a: arc.id, l: loc.id }, 'replace')}>← Danh sách</button>
         <div className="wk-title">
           <h2>{loc.name}</h2>
           {stageText && <p>{stageText}</p>}
         </div>
+        <button
+          className="jr-ghost is-small wk-map"
+          disabled={LOCKED.has(shown.state)}
+          onClick={() => {
+            stop()
+            setPanel(true)
+          }}
+        >
+          Khu vực
+        </button>
       </header>
 
       <div className="wk-stage" ref={stage} onPointerDown={onStage} onScroll={(e) => e.currentTarget.scrollTo(0, 0)} data-testid="walk-stage">
-        <div className="wk-layer wk-far" ref={far} style={{ width: layout.width * FAR + viewW, height: layout.height }}>
-          <img src={IMG(loc.bg)} alt="" />
-        </div>
-        <div className="wk-layer" ref={world} style={{ width: layout.width, height: layout.height }}>
-          <LibraryMid width={layout.width} height={layout.height} floor={layout.floor} />
-          {loc.present.filter((p) => layout.people[p.npc]).map((p) => (
-            <div key={p.npc} className={`wk-actor is-npc is-${layout.people[p.npc].look}${talk?.npc === p.npc ? ' is-talk' : ''}`} style={{ transform: `translate3d(${layout.people[p.npc].x}px, 0, 0)`, top: layout.floor }}>
-              <Figure look={layout.people[p.npc].look} facing={npcFacing(p.npc)} />
-            </div>
-          ))}
-          <div ref={figure} className={`wk-actor is-player is-${shown.state}`} data-state={shown.state} data-testid="walk-player" style={{ top: layout.floor }}>
-            <Figure look="traveller" facing={shown.facing} bump={bump} />
-          </div>
-          {spots.map((s) => (
-            <button
-              key={s.key}
-              className={`wk-spot is-${s.kind}${near === s.key ? ' is-near' : ''}`}
-              style={{ left: s.x - 65, top: s.top, height: layout.floor - s.top }}
-              aria-label={s.kind === 'npc' ? `Nói chuyện với ${s.label}` : `${s.verb}: ${s.label}`}
-              disabled={locked}
-              onClick={() => approach(s)}
-            >
-              <span className="wk-mark" aria-hidden="true" />
-              <span className="wk-tag">{s.label}</span>
-            </button>
-          ))}
-        </div>
-        <div className="wk-layer wk-front-layer" ref={front} style={{ width: layout.width * NEAR + viewW, height: layout.height }}>
-          <LibraryFront width={Math.round(layout.width * NEAR + viewW)} height={layout.height} />
-        </div>
+        {layers.map(layerNode)}
         {note && <p className="wk-note" role="status">{note}</p>}
+        <div className={`wk-fade${leaving ? ' is-out' : ''}`} aria-hidden="true" />
       </div>
 
-      <div className="wk-controls" hidden={!!talk || !!look}>
+      <div className="wk-controls" hidden={!!talk || !!look || panel}>
         <button className="wk-dir" aria-label="Đi sang trái" disabled={locked} {...hold(-1)}>◀</button>
         <div className="wk-prompt">
           {nearSpot && !locked ? (
@@ -348,7 +516,7 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
               {nearSpot.verb} · {nearSpot.label}
             </button>
           ) : (
-            <p className="wk-help">{shown.state === 'scripted' ? 'Bạn bước vào thư viện…' : 'Chạm sàn để đi · chạm người hay đồ vật để tới gần'}</p>
+            <p className="wk-help">{shown.state === 'scripted' ? 'Bạn bước vào…' : 'Chạm sàn để đi · chạm người, đồ vật hay cửa để tới gần'}</p>
           )}
         </div>
         <button className="wk-dir" aria-label="Đi sang phải" disabled={locked} {...hold(1)}>▶</button>
@@ -365,88 +533,40 @@ export function WalkScene({ arc, loc, layout, save, go }: { arc: ArcDef; loc: Lo
           }}
         />
       )}
-      {look && (
-        <Examine
-          arc={arc}
-          spot={look}
+      {look && look.kind === 'lookout' && (
+        <Lookout
+          label={look.label}
+          text={look.text}
           onClose={() => {
             setLook(null)
             release()
           }}
         />
       )}
+      {look && look.kind === 'object' && (
+        <Examine
+          arc={arc}
+          label={look.label}
+          object={look.object}
+          onClose={() => {
+            setLook(null)
+            release()
+          }}
+        />
+      )}
+      {panel && (
+        <RegionPanel
+          arc={arc}
+          here={loc.id}
+          save={save}
+          go={go}
+          onClose={() => {
+            setPanel(false)
+            paint()
+            sense()
+          }}
+        />
+      )}
     </section>
-  )
-}
-
-/** A close look at a thing: what it gave (items, evidence, articles), read from the arc's own definitions. */
-function Examine({ arc, spot, onClose }: { arc: ArcDef; spot: Spot; onClose: () => void }) {
-  useEscape(onClose)
-  const fx = spot.object?.effects ?? []
-  const items = fx.flatMap((e) => ('give' in e ? [arc.items.find((i) => i.id === e.give)] : [])).filter((x) => !!x)
-  const evidence = fx.flatMap((e) => ('evidence' in e ? [arc.evidence.find((v) => v.id === e.evidence)] : [])).filter((x) => !!x)
-  const reads = fx.flatMap((e) => ('discover' in e && e.discover.startsWith('a:') ? [findArticle(e.discover.slice(2))] : [])).filter((x) => !!x)
-  return (
-    <div className="ar-dialog" role="dialog" aria-label={`Xem: ${spot.label}`}>
-      <div className="jr-dialog ar-dialog-box wk-examine">
-        <p className="jr-kicker">Xem xét</p>
-        <p className="jr-speaker-name">{spot.label}</p>
-        {items.map((i) => (
-          <div key={i.id} className="wk-found">
-            <b>{i.name}</b>
-            <p className="jr-line">{i.text}</p>
-            <small>Đã cho vào túi đồ.</small>
-          </div>
-        ))}
-        {evidence.map((v) => (
-          <div key={v.id} className="wk-found is-evidence">
-            <span className="ar-voice is-fiction">{KIND[v.kind]}</span> <b>{v.title}</b>
-            <p className="ar-small">{v.reliability}</p>
-            <small>Đã ghi vào sổ chứng cứ.</small>
-          </div>
-        ))}
-        {!items.length && !evidence.length && <p className="jr-line">Không có gì mới ở đây.</p>}
-        {reads.length ? (
-          <p className="ar-refs">
-            {reads.map((a) => (
-              <Link key={a.slug} to={`/theory/${a.slug}`} className="ar-ref">📖 {a.title}</Link>
-            ))}
-          </p>
-        ) : null}
-        <button className="jr-cta ar-next" autoFocus onClick={onClose}>Xong</button>
-        <button className="ar-close" onClick={onClose} aria-label="Đóng">✕</button>
-      </div>
-    </div>
-  )
-}
-
-/** A flat, ink-outlined figure; the state classes on its wrapper move its parts (transforms only). */
-function Figure({ look, facing, bump }: { look: 'traveller' | 'monk' | 'scholar'; facing: Facing; bump?: number }) {
-  return (
-    <div className="wk-flip" style={{ transform: `scaleX(${facing})` }}>
-      <div className="wk-body" key={bump ? `b${bump}` : undefined} data-bump={bump ? '1' : undefined}>
-        <span className="wk-shadow" />
-        <span className="wk-leg is-back" />
-        <span className="wk-leg is-front" />
-        <svg className="wk-robe" viewBox="0 0 80 120" aria-hidden="true">
-          {look === 'traveller' ? (
-            <>
-              <path d="M22 4H58L72 116H8Z" fill="#8a5a24" stroke="#24170d" strokeWidth="3" />
-              <path d="M22 4L40 60L58 4" fill="#6b4318" stroke="#24170d" strokeWidth="2" />
-              <path d="M14 70H66" stroke="#d6ae60" strokeWidth="4" />
-              <rect x="50" y="62" width="18" height="22" rx="3" fill="#5e3a1e" stroke="#24170d" strokeWidth="2" />
-            </>
-          ) : (
-            <>
-              <path d="M20 4H60L74 116H6Z" fill="#3b2a1e" stroke="#24170d" strokeWidth="3" />
-              <path d="M40 10V116" stroke="#24170d" strokeWidth="2" />
-              <path d="M18 52H62" stroke="#a88a5a" strokeWidth="3" />
-            </>
-          )}
-        </svg>
-        <span className="wk-arm" />
-        <span className={`wk-head is-${look}`} />
-      </div>
-    </div>
   )
 }
