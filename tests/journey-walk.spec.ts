@@ -43,7 +43,8 @@ test('đi vào khung cảnh từ màn danh sách, đi, nói chuyện, xem giá s
   await page.getByRole('button', { name: 'Nói chuyện với Thầy quản thư' }).evaluate((b: HTMLElement) => b.click())
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()
-  await expect(player(page)).toHaveAttribute('data-state', 'talk')
+  // the player listens to the narrator / the librarian, talks when it is their line
+  await expect(player(page)).toHaveAttribute('data-state', /^(talk|listen)$/)
   // moving is locked: the controls are put away and the arrow keys do nothing
   await expect(page.getByRole('button', { name: 'Đi sang phải' })).toBeHidden()
   const before = await x(page)
@@ -65,7 +66,8 @@ test('đi vào khung cảnh từ màn danh sách, đi, nói chuyện, xem giá s
   await page.getByRole('button', { name: 'Xem: Giá sách phía sau' }).evaluate((b: HTMLElement) => b.click())
   const look = page.getByRole('dialog', { name: 'Xem: Giá sách phía sau' })
   await expect(look).toBeVisible({ timeout: 15_000 })
-  await expect(player(page)).toHaveAttribute('data-state', 'examine')
+  await expect(player(page)).toHaveAttribute('data-state', 'inspect')
+  await expect(player(page)).toHaveAttribute('data-clip', 'read')
   await expect(look).toContainText('Đã ghi vào sổ chứng cứ')
   await look.getByRole('button', { name: 'Xong' }).click()
   await idle(page)
@@ -200,4 +202,43 @@ test('lỗi tải tranh của cảnh: báo lỗi, thử lại được, về dan
 test('địa chỉ khung cảnh không có → màn danh sách của nơi đó', async ({ page }) => {
   await page.goto(URL + '&w=sc%3Akhong-co')
   await expect(page.getByRole('button', { name: 'Nói chuyện với Thầy quản thư' })).toBeVisible()
+})
+
+test('nhân vật và hoạt ảnh: nói/nghe theo câu, nét mặt, NPC chỉ đường sau hội thoại, người đi ngang, với tay lấy đồ', async ({ page }) => {
+  await page.goto(URL + '&w=1')
+  await idle(page)
+  const npc = page.getByTestId('walk-npc-librarian')
+  await expect(npc).toHaveAttribute('data-clip', 'read') // his own resting clip
+  await use(page, 'Nói chuyện với Thầy quản thư')
+  const dialog = page.getByRole('dialog')
+  await expect(dialog).toBeVisible({ timeout: 15_000 })
+  // the narrator's line: both listen; then the librarian's line: he talks, thoughtful, the player listens
+  await expect(npc).toHaveAttribute('data-state', 'listen')
+  await dialog.getByRole('button', { name: 'Tiếp →' }).click()
+  await expect(npc).toHaveAttribute('data-state', 'talk')
+  await expect(npc).toHaveAttribute('data-clip', 'talk')
+  await expect(npc).toHaveAttribute('data-mood', 'thoughtful')
+  await expect(player(page)).toHaveAttribute('data-state', 'listen')
+  // he faces the player (the player stands to his left)
+  await expect(npc.locator('.ch-flip')).toHaveAttribute('style', /scaleX\(-1\)/)
+  for (let i = 0; i < 20 && (await dialog.isVisible()); i++) {
+    const c = dialog.getByRole('button', { name: 'Trang ấy lạ thế nào?' })
+    if (await c.isVisible()) await c.click()
+    else await dialog.getByRole('button', { name: /^(Tiếp →|Xong)$/ }).click()
+  }
+  await expect(dialog).toBeHidden()
+  // the quest is on: he turns to the shelf and points, says so, then rests; the player is free again
+  await expect(page.getByRole('status')).toContainText('chỉ về giá sách', { timeout: 15_000 })
+  await idle(page)
+  await expect(npc).toHaveAttribute('data-state', 'idle')
+
+  // walking toward the shelf: a lay brother crosses with his books, then leaves through the council door
+  await use(page, 'Xem: Giá sách phía sau')
+  await expect(page.locator('[data-testid^="walk-npc-extra:"]')).toBeAttached({ timeout: 15_000 })
+  await expect(player(page)).toHaveAttribute('data-clip', /^(reach|read)$/, { timeout: 15_000 })
+  await expect(page.getByRole('dialog', { name: 'Xem: Giá sách phía sau' })).toBeVisible({ timeout: 15_000 })
+  await expect(player(page)).toHaveAttribute('data-clip', 'read')
+  await page.getByRole('dialog').getByRole('button', { name: 'Xong' }).click()
+  await idle(page)
+  await expect(page.locator('[data-testid^="walk-npc-extra:"]')).toHaveCount(0, { timeout: 15_000 })
 })

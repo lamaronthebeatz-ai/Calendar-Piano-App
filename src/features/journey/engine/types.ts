@@ -54,6 +54,8 @@ export interface DNode {
   next?: string
   choices?: { text: string; when?: Cond; effects?: Effect[]; next: string }[]
   end?: true
+  /** how the speaker looks saying it (presentation only: the side-view scene shows it on the face) */
+  mood?: 'neutral' | 'focus' | 'surprise' | 'happy' | 'sad' | 'worried' | 'thoughtful'
 }
 
 export interface DialogueDef {

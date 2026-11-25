@@ -171,12 +171,20 @@ function PlaceScreen({ arc, loc, save, go }: { arc: ArcDef; loc: LocationDef; sa
   )
 }
 
-export function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; save: Save; onClose: () => void }) {
+export function DialoguePanel({ arc, id, save, onClose, onNode }: { arc: ArcDef; id: string; save: Save; onClose: () => void; onNode?: (n: DNode) => void }) {
   const d = arc.dialogues.find((x) => x.id === id)!
   const [at, setAt] = useState<string | null>(() => enterNode(d, d.start, save))
   const applied = useRef(new Set<string>())
   const node = at ? d.nodes[at] : null
   useEscape(onClose)
+  // the walk scene follows the conversation (who speaks, with what face) — presentation only
+  const report = useRef(onNode)
+  useEffect(() => {
+    report.current = onNode
+  })
+  useEffect(() => {
+    if (at) report.current?.(d.nodes[at])
+  }, [d, at])
   // a node's own effects run once, when it is shown
   useEffect(() => {
     if (!at || applied.current.has(at) || !d.nodes[at].effects) return

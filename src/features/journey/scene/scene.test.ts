@@ -59,7 +59,7 @@ describe('figure states', () => {
     expect(run(a).a.x).toBe(900)
   })
   it('locked states do not move', () => {
-    for (const s of ['talk', 'examine', 'interact', 'scripted', 'locked'] as const) expect(LOCKED.has(s)).toBe(true)
+    for (const s of ['talk', 'inspect', 'interact', 'scripted', 'disabled', 'listen', 'gesture'] as const) expect(LOCKED.has(s)).toBe(true)
     expect(tick({ ...at(300), state: 'talk', target: 900 }, 1).actor.x).toBe(300)
   })
 })

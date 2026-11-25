@@ -44,7 +44,9 @@ export const POMPOSA_SCENES: readonly SceneDef[] = [
     interactables: [
       { id: 'to-scriptorium', kind: 'exit', x: 110, top: 300, width: 110, approach: { distance: 0 }, verb: 'Đi', label: 'Hành lang sang phòng chép sách', transition: 't:thu-vien>phong-chep' },
       { id: 'window', kind: 'lookout', x: 380, top: 120, width: 140, height: 230, approach: { distance: 0 }, verb: 'Nhìn', label: 'Cửa sổ', text: 'Ngoài cửa sổ là sân tu viện và tháp chuông. Ánh sáng ban ngày là thứ quý nhất của người chép sách: họ làm việc gần cửa sổ, không dám để nến gần giấy da.' },
-      { id: 'librarian', kind: 'npc', ref: 'npc:bt/quan-thu', x: 700, top: 300, approach: { distance: 78 }, verb: 'Nói chuyện', look: 'monk', facing: -1 },
+      { id: 'librarian', kind: 'npc', ref: 'npc:bt/quan-thu', x: 700, top: 300, approach: { distance: 78 }, verb: 'Nói chuyện', facing: -1, watch: 260,
+        // once the search is on and the page not yet found, he points to the shelf
+        afterTalk: { when: { all: [{ quest: 'q:bt/ban-thao', is: 'active' }, { not: { item: 'item:bt/trang-ban-thao' } }] }, steps: [{ face: 1290 }, { play: 'point' }, { say: 'Thầy quản thư chỉ về giá sách phía sau.' }, { face: 'player' }] } },
       { id: 'council-door', kind: 'door', x: 1000, top: 300, width: 110, approach: { distance: 0 }, verb: 'Vào', label: 'Cửa phòng họp', transition: 't:thu-vien>phong-hop' },
       { id: 'shelf', kind: 'object', ref: 'gia-sach', x: 1290, top: 190, approach: { distance: 70 }, verb: 'Xem' },
       { id: 'music-box', kind: 'object', ref: 'hop-nhac', x: 1560, top: 420, approach: { distance: 74 }, verb: 'Mở' },
@@ -53,7 +55,11 @@ export const POMPOSA_SCENES: readonly SceneDef[] = [
       { id: 't:thu-vien>phong-chep', to: { location: 'loc:bt/phong-chep', scene: 'sc:bt/phong-chep', spawn: 'from-library' }, locked: 'Hành lang bị chặn.', effect: 'fade' },
       { id: 't:thu-vien>phong-hop', to: { location: 'loc:bt/phong-hop' }, locked: 'Cửa phòng họp đang đóng. Các tu sĩ chỉ họp khi bạn có đủ chứng cứ để trình bày.', effect: 'fade' },
     ],
-    events: [{ id: 'ev:thu-vien/nang', x0: 300, x1: 460, once: 'session', note: 'Nắng xiên qua ô cửa, rơi đúng chỗ bục đọc.' }],
+    events: [
+      { id: 'ev:thu-vien/nang', x0: 300, x1: 460, once: 'session', note: 'Nắng xiên qua ô cửa, rơi đúng chỗ bục đọc.' },
+      // a lay brother carries books from the archive to the council room, once a visit
+      { id: 'ev:thu-vien/tu-si', x0: 1050, x1: 1400, once: 'visit', extra: { look: 'extra:lay-brother', x: 1660, facing: -1, steps: [{ walk: 1000 }, { leave: true }] } },
+    ],
   },
   {
     id: 'sc:bt/phong-chep',
@@ -78,7 +84,7 @@ export const POMPOSA_SCENES: readonly SceneDef[] = [
     interactables: [
       { id: 'to-library', kind: 'exit', x: 80, top: 300, width: 100, approach: { distance: 0 }, verb: 'Đi', label: 'Hành lang về thư viện', transition: 't:phong-chep>thu-vien' },
       { id: 'square-book', kind: 'object', ref: 'sach-not-vuong', x: 300, top: 330, approach: { distance: 64 }, verb: 'Mở' },
-      { id: 'rinaldo', kind: 'npc', ref: 'npc:bt/rinaldo', x: 500, top: 300, approach: { distance: 78 }, verb: 'Nói chuyện', look: 'monk', facing: -1 },
+      { id: 'rinaldo', kind: 'npc', ref: 'npc:bt/rinaldo', x: 500, top: 300, approach: { distance: 78 }, verb: 'Nói chuyện', facing: 1, watch: 200 },
       { id: 'window', kind: 'lookout', x: 640, top: 110, width: 120, height: 220, approach: { distance: 0 }, verb: 'Nhìn', label: 'Cửa sổ', text: 'Bàn chép kê sát cửa sổ hướng nam để có nhiều ánh sáng nhất. Mực đen cho lời, mực đỏ cho tiêu đề và chữ đầu đoạn.' },
       { id: 'desk-sheets', kind: 'object', ref: 'ban-chep', x: 820, top: 360, approach: { distance: 70, side: 'left' }, verb: 'Xem' },
       { id: 'fa-line', kind: 'object', ref: 'khoa-fa', x: 900, top: 360, approach: { distance: 150, side: 'left' }, verb: 'Đọc' },

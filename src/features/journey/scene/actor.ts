@@ -5,7 +5,10 @@ export type { Facing }
  * Pure functions only — the scene component runs them each frame and paints the result. Nothing here is saved: the
  * place the figure stands is screen state, the story state stays in the Journey save.
  */
-export type ActorState = 'idle' | 'walk' | 'turn' | 'approach' | 'interact' | 'talk' | 'examine' | 'scripted' | 'locked'
+import { LOCKED, MOVING, canGo, type ControlState } from './character/machine'
+export { LOCKED }
+/** kept as an alias: the character's control state (character/machine.ts) */
+export type ActorState = ControlState
 type Going = 'walk' | 'approach' | 'scripted'
 /** `then`: what the figure goes on doing once it has turned round. */
 export type Actor = { x: number; facing: Facing; state: ActorState; target: number | null; turnLeft: number; then?: Going }
@@ -15,9 +18,12 @@ export const SPEED = 230 // world units per second
 export const TURN = 0.14 // seconds spent turning round before walking
 export const HALF = 22 // half the figure's width: it stops with its body, not its centre, against a block
 
-/** States in which the player's input moves nothing (a conversation, a look, a scripted walk). */
-export const LOCKED: ReadonlySet<ActorState> = new Set(['interact', 'talk', 'examine', 'scripted', 'locked'])
-export const moving = (a: Actor) => a.state === 'walk' || a.state === 'approach' || a.state === 'scripted' || a.state === 'turn'
+export const moving = (a: Actor) => MOVING.has(a.state)
+/** Moves the character to another control state if the machine allows it; otherwise leaves it as it is. */
+export function setState(a: Actor, to: ActorState): Actor {
+  if (!canGo(a.state, to)) return a
+  return to === a.state ? a : { ...a, state: to, ...(MOVING.has(to) ? {} : { target: null, then: undefined }) }
+}
 
 /** The furthest point toward `to` the figure can reach from `from` without entering a block or leaving the floor. */
 export function reach(c: Collision, from: number, to: number): number {
@@ -31,6 +37,8 @@ export function reach(c: Collision, from: number, to: number): number {
 
 /** Sets off toward `to` (as far as the floor allows). Turns round first when the target is behind. */
 export function goTo(a: Actor, c: Collision, to: number, state: Going = 'walk'): Actor {
+  // the machine decides: a character in a conversation or a look cannot be sent walking
+  if (!canGo(a.state, state) && !canGo(a.state, 'turn')) return a
   const t = state === 'scripted' ? to : reach(c, a.x, to)
   // already there: no target — the caller treats that as arriving at once
   if (Math.abs(t - a.x) < 1) return { ...a, target: null, state: 'idle' }

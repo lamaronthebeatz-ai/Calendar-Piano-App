@@ -29,34 +29,35 @@
 .wk-spot.is-shut .wk-mark { border-style: dashed; background: transparent; }
 .wk-note { position: absolute; z-index: 4; top: 10px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 24px); padding: 6px 14px; border-radius: 999px; font-size: 13px; color: var(--jr-ink); background: var(--jr-panel); border: 1px solid var(--jr-line); animation: wk-in 0.25s ease-out both; }
 
-/* figures: a zero-size anchor on the floor line; the figure stands on it */
-.wk-actor { position: absolute; left: 0; width: 0; height: 0; }
-.wk-actor.is-player { z-index: 1; }
-.wk-flip { position: absolute; left: -40px; bottom: 0; width: 80px; height: 180px; transform-origin: 50% 100%; transition: transform 0.14s ease-out; }
-.wk-body { position: absolute; inset: 0; transform-origin: 50% 100%; transition: transform 0.25s ease-out; }
-.wk-shadow { position: absolute; left: 6px; bottom: -7px; width: 68px; height: 14px; border-radius: 50%; background: radial-gradient(closest-side, rgb(0 0 0 / 0.45), transparent); }
-.wk-leg { position: absolute; bottom: 0; width: 13px; height: 46px; border: 2.5px solid #24170d; border-radius: 3px 3px 5px 5px; background: #3b2a1e; transform-origin: 50% 0; }
-.wk-leg.is-back { left: 26px; filter: brightness(0.75); }
-.wk-leg.is-front { left: 41px; }
-.wk-robe { position: absolute; left: 0; bottom: 16px; width: 80px; height: 120px; }
-.wk-arm { position: absolute; left: 45px; bottom: 82px; width: 13px; height: 54px; border: 2.5px solid #24170d; border-radius: 6px; background: #74491c; transform-origin: 50% 4px; transition: transform 0.3s ease-out; }
-.is-npc .wk-arm { background: #33241a; }
-.wk-head { position: absolute; left: 23px; bottom: 132px; width: 34px; height: 38px; border: 2.5px solid #24170d; border-radius: 46% 46% 44% 44%; background: #e2c29a; transform-origin: 50% 90%; transition: transform 0.3s ease-out; }
-.wk-head.is-traveller::before { content: ''; position: absolute; inset: -6px -5px 14px -5px; border: 2.5px solid #24170d; border-radius: 50% 50% 20% 20%; background: #6b4318; }
-.wk-head.is-monk::before { content: ''; position: absolute; inset: 2px -3px 18px -3px; border-radius: 50% 50% 0 0; border: 6px solid #4a3220; border-bottom: 0; background: transparent; }
-
-/* states */
-.is-walk .wk-leg.is-front, .is-approach .wk-leg.is-front, .is-scripted .wk-leg.is-front { animation: wk-stride 0.42s ease-in-out infinite alternate; }
-.is-walk .wk-leg.is-back, .is-approach .wk-leg.is-back, .is-scripted .wk-leg.is-back { animation: wk-stride 0.42s ease-in-out infinite alternate-reverse; }
-.is-walk .wk-body, .is-approach .wk-body, .is-scripted .wk-body { animation: wk-bob 0.21s ease-in-out infinite alternate; }
-.is-turn .wk-body { animation: wk-turn 0.14s ease-out; }
-.is-interact .wk-arm { transform: rotate(-80deg); }
-.is-talk .wk-arm { transform: rotate(-28deg); }
-.is-talk .wk-head { transform: rotate(-5deg); }
-.is-examine .wk-body { transform: rotate(5deg); }
-.is-examine .wk-head { transform: rotate(16deg); }
-.is-examine .wk-arm { transform: rotate(-55deg); }
-.wk-body[data-bump] { animation: wk-bump 0.32s ease-out; }
+/* characters (Character.tsx): a zero-size anchor on the floor line at the character's x; the rig stands on it.
+   Parts are moved only by Web Animations (transform); at rest every part sits in its drawn pose. */
+.ch { position: absolute; left: 0; width: 0; height: 0; }
+.ch.is-player { z-index: 1; }
+.ch-flip { position: absolute; left: -40px; bottom: 0; width: 80px; height: 180px; transform-origin: 50% 100%; transition: transform 0.14s ease-out; }
+.ch-rig { position: absolute; inset: 0; transform-origin: 50% 100%; }
+.ch-shadow { position: absolute; left: 6px; bottom: -7px; width: 68px; height: 14px; border-radius: 50%; background: radial-gradient(closest-side, rgb(0 0 0 / 0.45), transparent); }
+.ch-leg { position: absolute; bottom: 0; width: 13px; height: 46px; border: 2.5px solid #24170d; border-radius: 3px 3px 5px 5px; transform-origin: 50% 0; }
+.ch-leg.is-back { left: 26px; filter: brightness(0.7); }
+.ch-leg.is-front { left: 41px; }
+.ch-torso { position: absolute; inset: 0; transform-origin: 50% 80%; }
+.ch-robe { position: absolute; left: 0; bottom: 16px; width: 80px; height: 120px; }
+.ch-robe.is-tunic { bottom: 34px; height: 102px; }
+.ch-arm { position: absolute; bottom: 82px; width: 13px; height: 54px; border: 2.5px solid #24170d; border-radius: 6px; transform-origin: 50% 4px; }
+.ch-arm.is-back { left: 30px; filter: brightness(0.7); }
+.ch-arm.is-front { left: 45px; }
+.ch-head { position: absolute; left: 21px; bottom: 128px; width: 38px; height: 44px; transform-origin: 50% 90%; }
+.ch-face { position: absolute; inset: 0; overflow: visible; }
+/* the mouth: its own part so the talk clip can open and close it; its shape follows the mood */
+.ch-mouth { position: absolute; left: 22px; top: 30px; width: 8px; height: 2.5px; border-radius: 2px; background: #5a2a1e; transform-origin: 50% 50%; }
+.ch-mouth.is-happy { height: 4px; border-radius: 0 0 6px 6px; }
+.ch-mouth.is-sad, .ch-mouth.is-worried { height: 3px; border-radius: 6px 6px 0 0; }
+.ch-mouth.is-surprise { width: 5px; height: 5px; left: 23px; border-radius: 50%; }
+.ch-mouth.is-thoughtful { width: 6px; left: 24px; }
+.ch-held { position: absolute; left: 50%; top: 100%; }
+.ch-held.is-quill { width: 3px; height: 30px; margin-left: -1px; margin-top: -8px; background: linear-gradient(#efe2c2, #c8b07a); border-radius: 2px; transform: rotate(-24deg); transform-origin: 50% 100%; }
+.ch-held.is-books { width: 30px; height: 18px; margin-left: -6px; margin-top: -10px; background: linear-gradient(#7a2a1d 0 33%, #3b4a2a 33% 66%, #6b4a22 66%); border: 2px solid #24170d; }
+.ch-held.is-staff { width: 4px; height: 150px; margin-top: -60px; background: #5e3a1e; }
+@media (prefers-reduced-motion: reduce) { .ch-flip { transition: none; } }
 
 /* things to use: the whole thing is the tap target, a gold lozenge marks it */
 .wk-spot { position: absolute; border-radius: 12px; }
@@ -81,14 +82,19 @@
 .wk-examine .wk-found small { display: block; margin-top: 4px; font-size: 11.5px; color: var(--jr-gold); }
 .ar-walk { margin: 10px 0 14px; }
 
-@keyframes wk-stride { from { transform: rotate(20deg); } to { transform: rotate(-20deg); } }
-@keyframes wk-bob { from { transform: translateY(0); } to { transform: translateY(-4px); } }
-@keyframes wk-turn { 50% { transform: scaleX(0.82); } }
-@keyframes wk-bump { 30% { transform: translateX(-7px); } 60% { transform: translateX(3px); } }
 @keyframes wk-pop { from { opacity: 0; transform: rotate(45deg) scale(0.4); } }
 @keyframes wk-in { from { opacity: 0; } }
 @keyframes wk-unveil { from { opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
   .wk *, .wk *::before { animation: none !important; transition: none !important; }
+}
+
+/* panels over a scene: the characters stay visible — on a landscape screen the panel sits at the top (the figures
+   stand on the floor below it), on an upright phone at the bottom (the scene is a band in the middle) */
+.wk .ar-dialog { background: rgb(0 0 0 / 0.18); }
+/* .jr-dialog (journey.css, loaded later) would put the box back at the bottom, absolutely: keep it in the flow */
+.wk .ar-dialog-box { position: relative; left: auto; bottom: auto; transform: none; }
+@media (orientation: landscape) {
+  .wk .ar-dialog { align-items: flex-start; padding-top: calc(10px + env(safe-area-inset-top)); }
 }

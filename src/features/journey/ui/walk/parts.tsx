@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { findArticle } from '../../../theory/wiki'
 import type { ArcDef, LocationDef } from '../../engine/types'
-import type { Facing } from '../../scene/types'
 import { KIND, useEscape } from '../arcShared'
 
 type Obj = NonNullable<LocationDef['objects']>[number]
@@ -58,37 +57,6 @@ export function Lookout({ label, text, onClose }: { label: string; text: string;
         <p className="jr-line is-narration">{text}</p>
         <button className="jr-cta ar-next" autoFocus onClick={onClose}>Xong</button>
         <button className="ar-close" onClick={onClose} aria-label="Đóng">✕</button>
-      </div>
-    </div>
-  )
-}
-
-/** A flat, ink-outlined figure; the state classes on its wrapper move its parts (transforms only). */
-export function Figure({ look, facing, bump }: { look: 'traveller' | 'monk' | 'scholar'; facing: Facing; bump?: number }) {
-  return (
-    <div className="wk-flip" style={{ transform: `scaleX(${facing})` }}>
-      <div className="wk-body" key={bump ? `b${bump}` : undefined} data-bump={bump ? '1' : undefined}>
-        <span className="wk-shadow" />
-        <span className="wk-leg is-back" />
-        <span className="wk-leg is-front" />
-        <svg className="wk-robe" viewBox="0 0 80 120" aria-hidden="true">
-          {look === 'traveller' ? (
-            <>
-              <path d="M22 4H58L72 116H8Z" fill="#8a5a24" stroke="#24170d" strokeWidth="3" />
-              <path d="M22 4L40 60L58 4" fill="#6b4318" stroke="#24170d" strokeWidth="2" />
-              <path d="M14 70H66" stroke="#d6ae60" strokeWidth="4" />
-              <rect x="50" y="62" width="18" height="22" rx="3" fill="#5e3a1e" stroke="#24170d" strokeWidth="2" />
-            </>
-          ) : (
-            <>
-              <path d="M20 4H60L74 116H6Z" fill={look === 'scholar' ? '#2c3550' : '#3b2a1e'} stroke="#24170d" strokeWidth="3" />
-              <path d="M40 10V116" stroke="#24170d" strokeWidth="2" />
-              <path d="M18 52H62" stroke="#a88a5a" strokeWidth="3" />
-            </>
-          )}
-        </svg>
-        <span className="wk-arm" />
-        <span className={`wk-head is-${look === 'scholar' ? 'monk' : look}`} />
       </div>
     </div>
   )

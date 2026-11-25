@@ -168,3 +168,33 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
   1. Thêm `SceneDef` vào `content/scenes/<arc>.ts`, đăng ký trong `scene/world.ts` (`SCENES`, `WORLDS`).
   2. Vẽ tranh trong `ui/walk/art/<module>.tsx` và khai báo khoá ở `art/index.ts`.
   3. Test nội dung sẽ báo id sai hoặc điểm không tới được.
+
+## Phase 3 — nhân vật và hoạt ảnh (25/11/2026)
+- **Kiến trúc** (`scene/character/`, TS thuần, test ở `character.test.ts`):
+  - `defs.ts`: định nghĩa nhân vật = ngoại hình + rig + clip nghỉ + tốc độ. Khoá theo id nhân vật của arc (`npc:bt/rinaldo`), cộng thêm `player` và `extra:*`. Tên, vai, hội thoại vẫn ở `CharacterDef` của arc.
+  - `machine.ts`: máy trạng thái điều khiển `idle walk turn approach interact talk listen inspect gesture scripted disabled`. Có bảng chuyển; nước chuyển không hợp lệ bị bỏ qua.
+  - `actor.ts`: bộ điều khiển chuyển động (Character Controller): `setState`/`goTo` đi qua máy trạng thái.
+  - `clips.ts`: clip dạng dữ liệu (keyframe transform theo bộ phận rig + điểm sự kiện), `clipFor(state, ctx)`.
+  - `animator.ts`: bộ điều khiển hoạt ảnh (Animation Controller) — token, sự kiện một lần, `then`, pause/resume, giảm chuyển động.
+  - `npc.ts`: hành vi NPC (watch, kịch bản `walk/face/play/wait/say/leave`).
+  - `cast.ts`: các thể hiện nhân vật (Character Instance) của một cảnh, gửi sự kiện tới đúng lần play.
+  - Renderer: `ui/walk/Character.tsx` (một rig cho mọi nhân vật, Web Animations chỉ trên transform).
+- **Trạng thái điều khiển ≠ hoạt ảnh**: `Cast.sync` chọn clip chuyển động (start → walk → stop → nghỉ, turn). Clip của hành động (greet, reach, push, look-up, read, talk/listen/nod, surprise, point, settle) do cảnh phát theo ngữ cảnh.
+- **Sự kiện hoạt ảnh** điều khiển tương tác (không còn `setTimeout` ước lượng):
+  - `reach.contact` → effects của vật (lấy trang bản thảo).
+  - `reach.done` → mở ô xem xét hoặc câu đố.
+  - `push.open` → chuyển cảnh, hoặc báo cửa đóng.
+  - `greet.ready` → mở hội thoại.
+  - `look-up.open` → mở ô quan sát.
+  - Sự kiện của clip đã bị thay thì không bao giờ được gửi.
+- **Hội thoại**: `DialoguePanel` có thêm `onNode` (chỉ để trình bày). Người nói → `talk` (tay, miệng); người nghe → `nod` rồi `listen`; mặt theo `mood` của node (trường tuỳ chọn mới trong `DNode`, engine bỏ qua). Đóng hội thoại → `settle`, NPC về clip nghỉ hoặc chạy `afterTalk` (thầy quản thư chỉ về giá sách khi quest đang chạy).
+- **NPC**: thầy quản thư (`read`, râu xám, áo đen, chùm chìa khoá), Rinaldo (`write`, trẻ, bút lông), thầy trợ sĩ (nhân vật tạm thời trong sự kiện vùng: mang sách đi ngang rồi ra cửa phòng họp). NPC quay về người chơi khi tới gần (`watch`).
+- **Tích hợp Scene Engine**:
+  - `Cast` sống cùng cảnh, bỏ đi khi rời cảnh.
+  - App chạy nền → `cast.pause` + dừng Web Animations; quay lại → tiếp tục.
+  - Vòng khung hình chạy khi người chơi đi hoặc khi `cast.busy`.
+  - Điểm tương tác của NPC đi theo vị trí thể hiện.
+- **Bẫy**:
+  - Bảng chuyển thiếu `interact → listen` làm người chơi kẹt `interact` khi hội thoại mở.
+  - `.jr-dialog` (journey.css nạp sau) đè `.ar-dialog-box` về `position: absolute` đáy màn → hộp thoại trong cảnh không đổi chỗ được; sửa bằng `.wk .ar-dialog-box`. Trên màn ngang hộp thoại nằm trên để không che hai người đang nói.
+- **Tài nguyên tạm**: hình nhân vật vẽ vector đơn giản trên rig chung (không có sprite sheet). Mặt chỉ có lông mày/mắt/miệng đổi theo mood. Chưa có chân dung người chơi trên nhân vật, chưa có âm thanh.

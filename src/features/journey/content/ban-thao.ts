@@ -111,7 +111,7 @@ export const banThao: ArcDef = {
       start: 'n0',
       nodes: {
         n0: { speaker: 'narrator', voice: 'narration', text: 'Pomposa, khoảng năm 1025. Thư viện tu viện thơm mùi giấy da và sáp nến.', effects: [{ remember: 'gap', with: 'npc:bt/quan-thu' }], next: 'n1' },
-        n1: { speaker: 'npc:bt/quan-thu', voice: 'fiction', text: '{ten}, ngài đến đúng lúc. Ta vừa thấy một trang chép tay lạ kẹp sau giá sách, chẳng biết của ai.', next: 'n2' },
+        n1: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'thoughtful', text: '{ten}, ngài đến đúng lúc. Ta vừa thấy một trang chép tay lạ kẹp sau giá sách, chẳng biết của ai.', next: 'n2' },
         n2: {
           speaker: 'me',
           voice: 'fiction',
@@ -147,10 +147,11 @@ export const banThao: ArcDef = {
             { text: 'Chào thầy', next: 'n1' },
           ],
         },
-        n1: { speaker: 'npc:bt/rinaldo', voice: 'fiction', text: 'Ngài chưa có gì cho ta xem sao? Thầy quản thư ở thư viện đang tìm ngài đấy.', end: true },
+        n1: { speaker: 'npc:bt/rinaldo', voice: 'fiction', mood: 'happy', text: 'Ngài chưa có gì cho ta xem sao? Thầy quản thư ở thư viện đang tìm ngài đấy.', end: true },
         n2: {
           speaker: 'npc:bt/rinaldo',
           voice: 'reconstructed',
+          mood: 'surprise',
           text: 'Neume cũ chỉ nhắc hướng đi lên, đi xuống cho người đã thuộc bài. Còn ở đây mỗi nốt có chỗ trên dòng kẻ, và chữ cái đầu dòng cho biết dòng ấy là nốt gì.',
           refs: ['a:lich-su-ky-am', 'a:ky-am-binh-ca-gregorian'],
           effects: [{ remember: 'neume', with: 'npc:bt/rinaldo' }, { discover: 'a:ky-am-binh-ca-gregorian' }],

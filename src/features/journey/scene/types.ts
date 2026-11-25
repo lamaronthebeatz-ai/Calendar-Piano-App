@@ -1,4 +1,5 @@
 import type { Cond, Effect } from '../engine/types'
+import type { Step } from './character/npc'
 
 /**
  * The scene & world engine's data: where things stand, never what they mean. Who a person is, what a thing does,
@@ -53,7 +54,15 @@ type Spot = {
  * door / exit → a transition · lookout → a short description written here (scene text, not story content).
  */
 export type InteractableDef =
-  | (Spot & { kind: 'npc'; ref: string; look: 'monk' | 'scholar'; facing: Facing })
+  | (Spot & {
+      kind: 'npc'
+      ref: string
+      facing: Facing
+      /** turns toward the player who comes within this many units */
+      watch?: number
+      /** a script run when a conversation with them closes, while `when` holds (pointing the way…) */
+      afterTalk?: { when?: Cond; steps: Step[] }
+    })
   | (Spot & { kind: 'object'; ref: string })
   | (Spot & { kind: 'door' | 'exit'; transition: string; label: string })
   | (Spot & { kind: 'lookout'; label: string; text: string })
@@ -70,7 +79,17 @@ export type TransitionDef = {
 }
 
 /** A zone that does something when walked into: a line of narration, and/or Journey effects (through the engine). */
-export type SceneEventDef = { id: string; x0: number; x1: number; when?: Cond; note?: string; effects?: Effect[]; once: 'session' | 'visit' }
+export type SceneEventDef = {
+  id: string
+  x0: number
+  x1: number
+  when?: Cond
+  note?: string
+  effects?: Effect[]
+  once: 'session' | 'visit'
+  /** a passing character that appears for this event only (a visual definition id), runs its steps and leaves */
+  extra?: { look: string; x: number; facing: Facing; steps: Step[] }
+}
 
 export type CameraDef = { mode: 'fixed' | 'follow'; /** narrowest slice shown across (follow) */ minView?: number; /** the band the figure moves in before the camera follows */ deadZone?: number }
 

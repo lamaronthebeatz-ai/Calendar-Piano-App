@@ -6,7 +6,10 @@ import { currentStage, effects, enter } from '../../engine/runtime'
 import { holds } from '../../engine/world'
 import { prefersReducedMotion } from '../../../../hooks/useEdgeSwipeBack'
 import { DialoguePanel } from '../Arc'
-import { LOCKED, goTo, moving, reach, standSpot, tick, type Actor, type ActorState } from '../../scene/actor'
+import { LOCKED, goTo, moving, reach, setState, standSpot, tick, type Actor, type ActorState } from '../../scene/actor'
+import { Cast } from '../../scene/character/cast'
+import { visualOf, type Mood } from '../../scene/character/defs'
+import type { DNode } from '../../engine/types'
 import { SceneHost, type Loaded } from '../../scene/lifecycle'
 import { centreOn, follow, layerTransform, layerWidth, screenToScene, viewOf, type View } from '../../scene/view'
 import { live, type Live } from '../../scene/interact'
@@ -14,7 +17,8 @@ import { passage, sceneById, spawnOf } from '../../scene/world'
 import { forgetStanding, keepStanding, markSaid, said, standingIn } from '../../scene/session'
 import type { Facing, SceneDef } from '../../scene/types'
 import { loadArt, type Art } from './art'
-import { Examine, Figure, Lookout } from './parts'
+import { Examine, Lookout } from './parts'
+import { Character } from './Character'
 import { RegionPanel } from './RegionPanel'
 import './walk.css'
 
@@ -87,16 +91,24 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
   const cam = useRef(0)
   const [shown, setShown] = useState<{ state: ActorState; facing: Facing }>({ state: init.state, facing: init.facing })
   const [near, setNear] = useState<string | null>(null)
-  const [talk, setTalk] = useState<{ dialogue: string; npc: string; from: number } | null>(null)
+  const [talk, setTalk] = useState<{ dialogue: string; npc: string } | null>(null)
+  // the scene's characters: NPCs from the scene data (shown while the arc has them here), extras added by events
+  const [cast] = useState(() => {
+    const c = new Cast(prefersReducedMotion())
+    for (const i of def.interactables) if (i.kind === 'npc') c.addNpc(i.id, i.ref, i.x, i.facing, i.watch)
+    return c
+  })
+  const [, setVersion] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [reduced] = useState(prefersReducedMotion)
+  const charEls = useRef(new Map<string, HTMLDivElement>())
   const [look, setLook] = useState<Live | null>(null)
   const [panel, setPanel] = useState(false)
   const [leaving, setLeaving] = useState(false)
   const [note, setNote] = useState<string | null>(null)
-  const [bump, setBump] = useState(0)
   const [size, setSize] = useState({ w: 0, h: 0 })
   const stage = useRef<HTMLDivElement>(null)
   const layerEls = useRef(new Map<string, HTMLDivElement>())
-  const figure = useRef<HTMLDivElement>(null)
   const pending = useRef<Live | null>(null)
   const blocked = useRef(false)
   const raf = useRef(0)
@@ -145,6 +157,10 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
         if (e.once === 'session') markSaid(e.id)
         if (e.note) say(e.note)
         if (e.effects) update((s) => effects(arc, e.effects, s))
+        if (e.extra) {
+          cast.addNpc(`extra:${e.id}`, e.extra.look, e.extra.x, e.extra.facing, undefined, e.extra.steps)
+          runRef.current()
+        }
       }
     },
     // say/later only touch state setters and refs
@@ -159,84 +175,119 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
       const el = layerEls.current.get(l.id)
       if (el) el.style.transform = layerTransform(def, view, cam.current, l.parallax)
     }
-    if (figure.current) figure.current.style.transform = `translate3d(${a.x}px, 0, 0)`
-  }, [view, def])
+    charEls.current.get('player')?.style.setProperty('transform', `translate3d(${a.x}px, 0, 0)`)
+    for (const n of cast.npcs) charEls.current.get(n.id)?.style.setProperty('transform', `translate3d(${n.actor.x}px, 0, 0)`)
+  }, [view, def, cast])
   /** what the figure is next to, and the event zones it stands in (state; called from the frame loop and handlers) */
   const sense = useCallback(() => {
     const a = actor.current
     let n: string | null = null
     if (!LOCKED.has(a.state))
       for (const s of spotsRef.current) {
-        const at = standSpot(def.collision, a.x, s.x, s.approach)
+        const at = standSpot(def.collision, a.x, s.kind === 'npc' ? (cast.npc(s.id)?.actor.x ?? s.x) : s.x, s.approach)
         if (at !== null && Math.abs(at - a.x) <= NEAR) n = s.id
       }
     setNear((o) => (o === n ? o : n))
     if (!LOCKED.has(a.state) || a.state === 'scripted') events(a.x)
-  }, [def, events])
+  }, [def, events, cast])
 
+  const xOf = (s: Live) => (s.kind === 'npc' ? (cast.npc(s.id)?.actor.x ?? s.x) : s.x)
+  const refresh = () => setVersion(cast.version)
   const show = () => setShown((o) => (o.state === actor.current.state && o.facing === actor.current.facing ? o : { state: actor.current.state, facing: actor.current.facing }))
 
+  /** the player's control state, through the machine (a move it does not allow is ignored) */
+  const playerTo = (to: ActorState, facing?: Facing) => {
+    actor.current = setState({ ...actor.current, ...(facing ? { facing } : {}) }, to)
+    cast.sync('player', actor.current.state, performance.now())
+  }
+  /**
+   * Using something, once the figure stands at it: face it, play the act's clip, and let the clip's events do the
+   * rest — the hand touches the shelf (take), the door gives (leave), the greeting ends (the conversation opens).
+   */
   const operate = (s: Live) => {
     const a = actor.current
-    const face: Facing = s.x >= a.x ? 1 : s.x < a.x - 1 ? -1 : a.facing
+    const now = performance.now()
+    const face: Facing = xOf(s) >= a.x ? 1 : -1
     if (s.kind === 'npc') {
-      actor.current = { ...a, facing: face, state: 'talk', target: null }
-      setTalk({ dialogue: s.dialogue!, npc: s.id, from: a.x })
+      playerTo('interact', face)
+      cast.engage(s.id, a.x, now)
+      cast.play('player', 'greet', now, { ready: () => setTalk({ dialogue: s.dialogue!, npc: s.id }) })
     } else if (s.kind === 'lookout') {
-      actor.current = { ...a, facing: face, state: 'examine', target: null }
-      setLook(s)
+      playerTo('interact', face)
+      cast.play('player', 'look-up', now, {
+        open: () => {
+          playerTo('inspect')
+          setLook(s)
+        },
+      })
     } else if (s.kind === 'door' || s.kind === 'exit') {
       const p = passage(arc, def, s.transition, saveRef.current)
-      if (!p.ok) {
-        say(p.reason)
-        setBump((b) => b + 1)
-      } else {
-        actor.current = { ...a, state: 'locked', target: null }
-        keepStanding(def.id, a.x, a.facing)
-        const t = def.transitions.find((x) => x.id === s.transition)!
-        const leave = () => {
-          host.suspend()
-          if (p.scene) {
-            forgetStanding(p.scene.id)
-            go({ v: 'arc', a: arc.id, l: p.location.id, w: p.scene.id, ...(p.spawn ? { sp: p.spawn } : {}) }, 'replace')
-          } else go({ v: 'arc', a: arc.id, l: p.location.id })
-        }
-        if (t.effect === 'none' || prefersReducedMotion()) leave()
-        else {
-          setLeaving(true)
-          later(280, leave)
-        }
-      }
-    } else {
-      actor.current = { ...a, facing: face, state: 'interact', target: null }
-      const o = s.object!
-      // a short reach toward the thing, then its effects run through the engine, as on the list screen
-      later(380, () => {
-        if (o.effects) update((sv) => effects(arc, o.effects, sv))
-        if (o.puzzle) {
+      playerTo('interact', face)
+      cast.play('player', 'push', now, {
+        open: () => {
+          if (!p.ok) {
+            say(p.reason)
+            cast.play('player', 'settle', performance.now(), { end: () => release() })
+            return
+          }
+          playerTo('disabled')
           keepStanding(def.id, actor.current.x, actor.current.facing)
-          actor.current = { ...actor.current, state: 'idle' }
-          go({ v: 'arc', a: arc.id, l: loc.id, p: o.puzzle, w: def.id })
-          return
-        }
-        actor.current = { ...actor.current, state: 'examine' }
-        setLook(s)
-        show()
+          const t = def.transitions.find((x) => x.id === s.transition)!
+          const leave = () => {
+            host.suspend()
+            if (p.scene) {
+              forgetStanding(p.scene.id)
+              go({ v: 'arc', a: arc.id, l: p.location.id, w: p.scene.id, ...(p.spawn ? { sp: p.spawn } : {}) }, 'replace')
+            } else go({ v: 'arc', a: arc.id, l: p.location.id })
+          }
+          if (t.effect === 'none' || prefersReducedMotion()) leave()
+          else {
+            setLeaving(true)
+            later(280, leave)
+          }
+        },
+      })
+    } else {
+      const o = s.object!
+      playerTo('interact', face)
+      cast.play('player', 'reach', now, {
+        // the hand is at the thing: its effects run now, through the engine, as on the list screen
+        contact: () => {
+          if (o.effects) update((sv) => effects(arc, o.effects, sv))
+        },
+        done: () => {
+          if (o.puzzle) {
+            keepStanding(def.id, actor.current.x, actor.current.facing)
+            release()
+            go({ v: 'arc', a: arc.id, l: loc.id, p: o.puzzle, w: def.id })
+            return
+          }
+          playerTo('inspect')
+          cast.play('player', 'read', performance.now())
+          setLook(s)
+          refresh()
+        },
       })
     }
+    refresh()
     show()
     paint()
     sense()
+    runRef.current()
   }
 
   // the frame loop outlives renders: it reaches the latest paint and operate through refs, never a stale closure
   const activate = useRef(operate)
   const paintRef = useRef(paint)
   const senseRef = useRef(sense)
+  const runRef = useRef(() => {})
+  const sayRef = useRef<(t: string) => void>(() => {})
   useEffect(() => {
     activate.current = operate
     paintRef.current = paint
     senseRef.current = sense
+    runRef.current = run
+    sayRef.current = say
   })
 
   const frame = useCallback(function frame(t: number) {
@@ -249,20 +300,24 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
     actor.current = r.actor
     if (r.arrived) {
       const was = actor.current.state
-      actor.current = { ...actor.current, state: 'idle' }
+      actor.current = setState(actor.current, 'idle')
+      cast.sync('player', 'idle', t)
       if (blocked.current) {
         blocked.current = false
-        setBump((b) => b + 1)
+        cast.play('player', 'surprise', t)
       }
       const p = pending.current
       pending.current = null
       if (p && was === 'approach') activate.current(p)
     }
+    cast.sync('player', actor.current.state, t)
+    for (const line of cast.frame(t, dt, actor.current.x, def.collision)) sayRef.current(line)
     setShown((o) => (o.state === actor.current.state && o.facing === actor.current.facing ? o : { state: actor.current.state, facing: actor.current.facing }))
+    setVersion(cast.version)
     paintRef.current()
     senseRef.current()
-    raf.current = moving(actor.current) ? requestAnimationFrame(frame) : 0
-  }, [])
+    raf.current = moving(actor.current) || cast.busy(t) ? requestAnimationFrame(frame) : 0
+  }, [cast, def])
   const run = useCallback(() => {
     if (raf.current || host.phase !== 'active') return
     last.current = performance.now()
@@ -280,7 +335,8 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
     if (actor.current.target === null) {
       if (blocked.current) {
         blocked.current = false
-        setBump((b) => b + 1)
+        cast.play('player', 'surprise', performance.now())
+        run()
       }
       const p = pending.current
       pending.current = null
@@ -305,13 +361,35 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
     const a = actor.current
     if (a.state !== 'walk' && a.state !== 'turn') return
     actor.current = { ...a, target: null, state: 'idle', then: undefined }
+    cast.sync('player', 'idle', performance.now())
     show()
+    run()
   }
+  /** an act is over: the player is free again (the machine allows idle from every engaged state) */
   const release = () => {
-    actor.current = { ...actor.current, state: 'idle' }
+    playerTo('idle')
+    if (!actor.current.target) cast.play('player', 'idle', performance.now())
+    refresh()
     show()
     paint()
     sense()
+  }
+  const settle = () => {
+    cast.play('player', 'settle', performance.now(), { end: () => release() })
+    playerTo('idle')
+    show()
+    run()
+  }
+  /** the conversation moved to another line: who speaks, who listens, with what face */
+  const onLine = (n: DNode) => {
+    if (!talk) return
+    const ref = (def.interactables.find((i) => i.id === talk.npc) as { ref?: string } | undefined)?.ref
+    const talker = n.speaker === 'me' ? 'player' : n.speaker === ref ? talk.npc : null
+    playerTo(talker === 'player' ? 'talk' : 'listen')
+    cast.speak(talker, ['player', talk.npc], (n.mood ?? 'neutral') as Mood, performance.now())
+    refresh()
+    show()
+    run()
   }
 
   // stage size → view; on the first view (and on rotation) the camera is placed on the figure
@@ -339,10 +417,11 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
   useEffect(() => {
     if (!intro || introDone.current) return
     introDone.current = true
-    actor.current = goTo({ ...actor.current, state: 'idle' }, def.collision, spawnOf(def, null).x, 'scripted')
+    actor.current = goTo(actor.current, def.collision, spawnOf(def, null).x, 'scripted')
+    cast.sync('player', actor.current.state, performance.now())
     show()
     run()
-  }, [intro, run, def])
+  }, [intro, run, def, cast])
 
   // the app in the background: the scene pauses (no frames), the figure stops where it is; back: it resumes
   useEffect(() => {
@@ -354,9 +433,14 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
         const a = actor.current
         if (a.state === 'walk' || a.state === 'approach' || a.state === 'turn' || a.state === 'scripted') actor.current = { ...a, target: null, state: 'idle', then: undefined }
         keepStanding(def.id, actor.current.x, actor.current.facing)
+        cast.pause(performance.now())
+        setPaused(true)
         host.suspend()
       } else {
         host.resume()
+        cast.resume(performance.now())
+        setPaused(false)
+        runRef.current()
         show()
         paintRef.current()
         senseRef.current()
@@ -369,7 +453,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
       document.removeEventListener('visibilitychange', vis)
       removeEventListener('pagehide', hide)
     }
-  }, [def.id, host])
+  }, [def.id, host, cast])
 
   // keyboard: hold ← → to walk, E / Enter to use what is near
   useEffect(() => {
@@ -431,8 +515,13 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
   const nearSpot = spots.find((s) => s.id === near)
   const stageText = currentStage(arc, save)?.text
   const { width, height, floor } = def.dimensions
-  const npcFacing = (s: Live & { kind: 'npc' }) => (talk?.npc === s.id ? (talk.from < s.x ? -1 : 1) : s.facing)
-  const npcs = def.interactables.filter((i): i is Extract<typeof i, { kind: 'npc' }> => i.kind === 'npc')
+  // who is on stage: NPCs the arc has here now (live spots), extras of events, and the player
+  const present = new Set(spots.filter((x) => x.kind === 'npc').map((x) => x.id))
+  const cast_ = cast.views({ x: 0, facing: shown.facing, state: shown.state, target: null, turnLeft: 0 }).filter((v) => v.id === 'player' || v.extra || present.has(v.id))
+  const charRef = (id: string) => (el: HTMLDivElement | null) => {
+    if (el) charEls.current.set(id, el)
+    else charEls.current.delete(id)
+  }
 
   const layerNode = (l: SceneDef['layers'][number]) => {
     if (l.when && !holds(l.when, save)) return null
@@ -446,18 +535,24 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
     if (l.role === 'characters')
       body = (
         <>
-          {npcs.map((n) => {
-            const s = spots.find((x) => x.id === n.id)
-            if (!s) return null
-            return (
-              <div key={n.id} className={`wk-actor is-npc is-${n.look}${talk?.npc === n.id ? ' is-talk' : ''}`} style={{ transform: `translate3d(${n.x}px, 0, 0)`, top: floor }}>
-                <Figure look={n.look} facing={npcFacing(s as Live & { kind: 'npc' })} />
-              </div>
-            )
-          })}
-          <div ref={figure} className={`wk-actor is-player is-${shown.state}`} data-state={shown.state} data-testid="walk-player" style={{ top: floor }}>
-            <Figure look="traveller" facing={shown.facing} bump={bump} />
-          </div>
+          {cast_.map((c) => (
+            <Character
+              key={c.id}
+              ref={charRef(c.id)}
+              className={c.id === 'player' ? 'is-player' : 'is-npc'}
+              visual={visualOf(c.look)}
+              facing={c.facing}
+              clip={c.clip}
+              token={c.token}
+              mood={c.mood}
+              paused={paused}
+              reduced={reduced}
+              state={c.state}
+              testId={c.id === 'player' ? 'walk-player' : `walk-npc-${c.id}`}
+              top={floor}
+              x={c.id === 'player' ? undefined : c.x}
+            />
+          ))}
         </>
       )
     else if (l.role === 'interaction')
@@ -468,7 +563,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           <button
             key={s.id}
             className={`wk-spot is-${s.kind}${near === s.id ? ' is-near' : ''}${shut ? ' is-shut' : ''}`}
-            style={{ left: s.x - sw / 2, width: sw, top: s.top, height: s.height ?? floor - s.top }}
+            style={{ left: xOf(s) - sw / 2, width: sw, top: s.top, height: s.height ?? floor - s.top }}
             aria-label={s.kind === 'npc' ? `Nói chuyện với ${s.label}` : `${s.verb}: ${s.label}${shut ? ' (đang đóng)' : ''}`}
             disabled={locked}
             onClick={() => approach(s)}
@@ -535,9 +630,13 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           arc={arc}
           id={talk.dialogue}
           save={save}
+          onNode={onLine}
           onClose={() => {
+            const i = def.interactables.find((x) => x.id === talk.npc)
+            const after = i?.kind === 'npc' && i.afterTalk && (!i.afterTalk.when || holds(i.afterTalk.when, saveRef.current)) ? i.afterTalk.steps : []
             setTalk(null)
-            release()
+            cast.release(talk.npc, performance.now(), after)
+            settle()
           }}
         />
       )}
@@ -547,7 +646,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           text={look.text}
           onClose={() => {
             setLook(null)
-            release()
+            settle()
           }}
         />
       )}
@@ -558,7 +657,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           object={look.object}
           onClose={() => {
             setLook(null)
-            release()
+            settle()
           }}
         />
       )}
