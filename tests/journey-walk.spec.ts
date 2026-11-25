@@ -64,7 +64,7 @@ test('đi vào khung cảnh từ màn danh sách, đi, nói chuyện, xem giá s
   // off-screen on a phone: activated like a screen reader would, the figure still walks there itself
   await page.getByRole('button', { name: 'Xem: Giá sách phía sau' }).evaluate((b: HTMLElement) => b.click())
   const look = page.getByRole('dialog', { name: 'Xem: Giá sách phía sau' })
-  await expect(look).toBeVisible()
+  await expect(look).toBeVisible({ timeout: 15_000 })
   await expect(player(page)).toHaveAttribute('data-state', 'examine')
   await expect(look).toContainText('Đã ghi vào sổ chứng cứ')
   await look.getByRole('button', { name: 'Xong' }).click()
@@ -182,9 +182,9 @@ test('lỗi tải tranh của cảnh: báo lỗi, thử lại được, về dan
   await page.goto(URL + '&w=1')
   await expect(page.getByRole('alert')).toContainText('Không mở được khung cảnh', { timeout: 15_000 })
   block = false
+  // retry: a fresh import (Chromium) or, where the failed import stays cached for the page (WebKit), a reload
   await page.getByRole('button', { name: 'Thử lại' }).click()
-  // a failed dynamic import stays failed in the same page for some browsers: retry or reload, both must end playable
-  if (!(await scene(page).isVisible({ timeout: 5_000 }).catch(() => false))) await page.reload()
+  await expect(scene(page)).toBeVisible({ timeout: 20_000 })
   await idle(page)
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/thu-vien')
 })

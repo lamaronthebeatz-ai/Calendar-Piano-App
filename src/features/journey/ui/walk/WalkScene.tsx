@@ -47,13 +47,18 @@ export function WalkScene(props: Props) {
     return () => host.unload()
   }, [host, id])
   const back = () => props.go({ v: 'arc', a: props.arc.id, l: props.loc.id }, 'replace')
+  // WebKit keeps a failed import() failed for the life of the page (module map): if retrying fails again, reload
+  const retry = async () => {
+    await host.retry(id)
+    if (host.phase === 'failed') location.reload()
+  }
   if (phase === 'failed')
     return (
       <section className="wk wk-status" role="alert">
         <p className="jr-kicker">Không mở được khung cảnh</p>
         <p className="jr-line">{host.error}</p>
         <div className="wk-status-acts">
-          <button className="jr-cta" onClick={() => void host.retry(id)}>Thử lại</button>
+          <button className="jr-cta" onClick={() => void retry()}>Thử lại</button>
           <button className="jr-ghost" onClick={back}>← Danh sách</button>
         </div>
       </section>
@@ -236,7 +241,9 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
 
   const frame = useCallback(function frame(t: number) {
     // WebKit can hand rAF a timestamp earlier than the performance.now() taken when it was scheduled: never negative
-    const dt = Math.min(0.05, Math.max(0, (t - last.current) / 1000))
+    // capped so a long stall (a tab coming back) does not jump far, but high enough that a slow device (10 fps)
+    // still walks at full speed
+    const dt = Math.min(0.2, Math.max(0, (t - last.current) / 1000))
     last.current = t
     const r = tick(actor.current, dt)
     actor.current = r.actor
