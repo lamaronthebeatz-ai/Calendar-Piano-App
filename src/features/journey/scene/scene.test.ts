@@ -53,6 +53,11 @@ describe('figure states', () => {
     expect(a.state).toBe('walk')
     expect(run(a).a.x).toBe(400)
   })
+  it('a zero or negative frame time (WebKit rAF timestamps) never moves the figure backwards', () => {
+    const a = goTo(at(300), C, 900)
+    expect(tick(a, -0.016).actor.x).toBe(300)
+    expect(run(a).a.x).toBe(900)
+  })
   it('locked states do not move', () => {
     for (const s of ['talk', 'examine', 'interact', 'scripted', 'locked'] as const) expect(LOCKED.has(s)).toBe(true)
     expect(tick({ ...at(300), state: 'talk', target: 900 }, 1).actor.x).toBe(300)

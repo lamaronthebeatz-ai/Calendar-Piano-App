@@ -41,6 +41,7 @@ export function goTo(a: Actor, c: Collision, to: number, state: Going = 'walk'):
 
 /** One frame. `arrived` is true on the frame the figure reaches its target. */
 export function tick(a: Actor, dt: number): { actor: Actor; arrived: boolean } {
+  if (!(dt > 0)) return { actor: a, arrived: false }
   if (a.state === 'turn') {
     const left = a.turnLeft - dt
     if (left > 0) return { actor: { ...a, turnLeft: left }, arrived: false }

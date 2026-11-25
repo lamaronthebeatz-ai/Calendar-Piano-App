@@ -235,7 +235,8 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
   })
 
   const frame = useCallback(function frame(t: number) {
-    const dt = Math.min(0.05, (t - last.current) / 1000)
+    // WebKit can hand rAF a timestamp earlier than the performance.now() taken when it was scheduled: never negative
+    const dt = Math.min(0.05, Math.max(0, (t - last.current) / 1000))
     last.current = t
     const r = tick(actor.current, dt)
     actor.current = r.actor
