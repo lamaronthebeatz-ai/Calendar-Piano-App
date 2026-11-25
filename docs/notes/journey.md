@@ -122,3 +122,23 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
 - Dùng lại `components/IntroClip.tsx` với `clip="journey"`, `remember={false}`. Luật giống clip mở app: luôn có tiếng, không nút bỏ qua/tắt tiếng, xem hết; trình duyệt chặn tiếng thì hiện "Chạm để bắt đầu"; không tải được (ngoại tuyến, 8 s) thì vào thẳng game.
 - Tệp `public/media/journey-{portrait,landscape}.{mp4,webm,webp}` (mp4 H.264 CRF 25 ~1,7–1,9 MB, webm VP9 dự phòng, webp làm poster), **không precache** (`globIgnores: media/journey-*`).
 - Test: `tests/intro.spec.ts` (2 ca mới). Các test khác đặt `sessionStorage['journey:clip-off']='1'` để vào thẳng game (`shouldShowJourneyClip` trong `introGate.ts`; app không bao giờ đặt khoá này). Mở trang mới bằng `context().newPage()` thì phải `addInitScript` lại khoá đó.
+
+## Phase 1 — khung cảnh 2D nhìn ngang (25/11/2026, Lamar giao "Phase 1 — prototype hình ảnh và lối chơi")
+- **Một cảnh thử: Thư viện Pomposa** (`loc:bt/thu-vien` của tuyến "Bản thảo thất lạc"). URL thêm `&w=1`: `?c=trung-co&v=arc&a=ban-thao&l=loc:bt/thu-vien&w=1`; màn danh sách của nơi đó có nút "Đi vào khung cảnh", khung cảnh có "← Danh sách". Màn danh sách cũ giữ nguyên.
+- **Không có hệ thống nghiệp vụ mới**: ai ở đó, đồ vật nào dùng được (điều kiện `when`), hội thoại, effects, quest, item, chứng cứ đều lấy từ `LocationDef` qua `engine/runtime.ts` (`enter`, `effects`) và `DialoguePanel` dùng chung với màn danh sách; ghi vào save v2 qua `progress.update`. Khoá `journey:v2` và định dạng save **không đổi**. Vị trí nhân vật chỉ giữ trong bộ nhớ (`lastSpot`), không phải save — tải lại thì về chỗ đứng đầu.
+- File `ui/walk/`:
+  - `actor.ts`: trạng thái `idle walk turn approach interact talk examine scripted locked`, va chạm (sàn + khối chặn), chỗ đứng cạnh vật, hàm thuần, test ở `walk.test.ts`.
+  - `scenes.ts`: bố cục từng nơi (chỉ toạ độ; id phải có trong nội dung, test kiểm).
+  - `Library.tsx`: tranh SVG tự vẽ (lớp giữa + tiền cảnh).
+  - `WalkScene.tsx` + `walk.css`.
+  - `ui/arcShared.ts`: `useEscape`, `KIND` tách khỏi `Arc.tsx` để không thêm cảnh báo fast refresh.
+- Lớp: xa (ảnh `bg` của nơi đó, thị sai 0,4) · giữa (tường, cửa sổ, giá sách, bục đọc, rương, rào, cửa kho) · nhân vật · tiền cảnh che (cột, đèn, thị sai 1,18) · lớp tương tác (nút trong suốt phủ người/vật + hình thoi vàng) · va chạm (dữ liệu).
+- Điều khiển: chạm sàn để đi; chạm người hoặc vật thì nhân vật tự đi tới cạnh rồi dùng; giữ ◀ ▶; phím ← →, E/Enter, Esc. Nút ở hàng riêng dưới khung cảnh, có vùng an toàn. Khi hội thoại hoặc xem xét: khoá di chuyển, ẩn nút; đóng lại thì trả điều khiển. Rào gỗ chặn kho lưu trữ, đi vào thì hiện câu báo. Lần đầu vào có đoạn tự bước vào (khoá điều khiển); khi giảm chuyển động thì bỏ.
+- Camera: tỷ lệ = chiều cao khung, nhưng luôn hiện ít nhất 560 đơn vị bề ngang (điện thoại dọc có dải cảnh ở giữa); cuộn ngang có giới hạn theo nhân vật.
+- **Bẫy đã gặp**:
+  - Vòng `requestAnimationFrame` giữ closure `paint` cũ (lúc tỷ lệ = 0), nhân vật không hiện → đọc `paint` qua ref.
+  - Focus nút ngoài màn hình làm trình duyệt (và Playwright) cuộn `.wk-stage` dù `overflow: hidden` → `overflow: clip` + `onScroll` kéo về 0.
+  - Tập phím giữ tạo lại mỗi lần render nên thả phím không dừng → `useRef`.
+  - Route là `/hanh-trinh`; gõ `/journey` thì ra lỗi 404 của router hiện "[object Object]".
+- Test: `tests/journey-walk.spec.ts` (save cũ v1 → đi, nói chuyện có khoá, xem giá sách nhận item + chứng cứ, rào, tải lại, quay về danh sách; phím; bố cục điện thoại), `ui/walk/walk.test.ts`.
+- Chưa có: các nơi khác của tuyến (thêm bố cục vào `scenes.ts` + tranh), âm bước chân, chân dung người chơi trên hình nhân vật (đang dùng một hình lữ khách chung). Chưa thử iPhone/Safari thật.

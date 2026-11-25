@@ -5,7 +5,7 @@ import { MUSIC } from '../music'
 import { playTrack } from '../soundtrack'
 import { named, update } from '../progress'
 import type { Save } from '../engine/save'
-import type { ArcDef, DNode, EvidenceKind, LocationDef, PuzzleDef } from '../engine/types'
+import type { ArcDef, DNode, LocationDef, PuzzleDef } from '../engine/types'
 import { choicesOf, enter as enterNode, step } from '../engine/dialogue'
 import { attempt, currentStage, effects, enter, visibleLocations } from '../engine/runtime'
 import { dueReviews, recordReview } from '../engine/replay'
@@ -18,42 +18,33 @@ import { reportDraft, reportProblems } from '../engine/report'
 import { SKILLS, type EvidenceDef } from '../engine/types'
 import { articleKind, KIND_LABEL } from '../../knowledge/ids'
 import { createProject, updateProject } from '../../research/store'
+import { WalkScene } from './walk/WalkScene'
+import { walkLayout } from './walk/scenes'
+import { KIND, useEscape } from './arcShared'
 import './arc.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
 
-/** Escape closes the panel on top (dialogue, journal, report) — keyboard players are never stuck in one. */
-function useEscape(close: () => void) {
-  const ref = useRef(close)
-  useEffect(() => {
-    ref.current = close
-  })
-  useEffect(() => {
-    const on = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') ref.current()
-    }
-    addEventListener('keydown', on)
-    return () => removeEventListener('keydown', on)
-  }, [])
-}
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
 const bg = (id: string) => ({ src: IMG(id), srcSet: `${IMG(id + '-m')} 1080w, ${IMG(id)} 1920w`, sizes: '100vw' })
 
 const VOICE: Record<DNode['voice'], string> = { reconstructed: 'Lời dựng lại', quote: 'Trích nguyên văn', fiction: '✦ Hư cấu', narration: '' }
-const KIND: Record<EvidenceKind, string> = { primary: 'Nguồn sơ cấp', secondary: 'Nguồn thứ cấp', artifact: 'Hiện vật', interpretation: 'Diễn giải', anecdote: 'Giai thoại', hypothesis: 'Giả thuyết', fiction: 'Hư cấu' }
 
 /**
  * A story arc played on the engine: the hub (objective, map, places), a place (people, things to use), a dialogue, a
  * puzzle. URL: ?v=arc&a=<arc>[&l=<place>][&p=<puzzle>] — reading an article and coming back returns to the same spot.
+ * `&w=1`: the place walked through side-on (ui/walk), for places that have a walk layout.
  */
-export function ArcPlayer({ arc, save, go, l, p, review, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; review?: boolean; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
+export function ArcPlayer({ arc, save, go, l, p, review, walk, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; review?: boolean; walk?: boolean; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
   const loc = arc.locations.find((x) => x.id === l && visibleLocations(arc, save).includes(x))
   const puzzle = arc.puzzles.find((x) => x.id === p)
   const music = MUSIC[arc.music]
   useEffect(() => {
     if (!puzzle || puzzle.type !== 'aural') playTrack(music)
   }, [music, puzzle])
-  if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} review={review} onClose={() => go(l ? { v: 'arc', a: arc.id, l } : { v: 'arc', a: arc.id }, 'back')} />
+  if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} review={review} onClose={() => go(l ? { v: 'arc', a: arc.id, l, ...(walk ? { w: '1' } : {}) } : { v: 'arc', a: arc.id }, 'back')} />
+  const layout = loc && walk ? walkLayout(loc.id) : undefined
+  if (loc && layout) return <WalkScene key={loc.id} arc={arc} loc={loc} layout={layout} save={save} go={go} />
   if (loc) return <PlaceScreen key={loc.id} arc={arc} loc={loc} save={save} go={go} />
   return <Hub arc={arc} save={save} go={go} map={map} />
 }
@@ -151,6 +142,9 @@ function PlaceScreen({ arc, loc, save, go }: { arc: ArcDef; loc: LocationDef; sa
           <h2 className="ar-place-title">{loc.name}</h2>
           {stage && <p className="ar-hint-line">{stage.text}</p>}
         </header>
+        {walkLayout(loc.id) && (
+          <button className="jr-cta ar-walk" onClick={() => go({ v: 'arc', a: arc.id, l: loc.id, w: '1' }, 'replace')}>Đi vào khung cảnh</button>
+        )}
         <div className="ar-actions">
           {people.map((x) => {
             const c = arc.characters.find((y) => y.id === x.npc)!
@@ -177,7 +171,7 @@ function PlaceScreen({ arc, loc, save, go }: { arc: ArcDef; loc: LocationDef; sa
   )
 }
 
-function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; save: Save; onClose: () => void }) {
+export function DialoguePanel({ arc, id, save, onClose }: { arc: ArcDef; id: string; save: Save; onClose: () => void }) {
   const d = arc.dialogues.find((x) => x.id === id)!
   const [at, setAt] = useState<string | null>(() => enterNode(d, d.start, save))
   const applied = useRef(new Set<string>())

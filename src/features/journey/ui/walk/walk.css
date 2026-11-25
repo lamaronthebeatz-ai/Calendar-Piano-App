@@ -1,0 +1,79 @@
+/* Side-view walk scene (WalkScene.tsx). Moving parts animate transform/opacity only; the walk cycle runs only while
+   walking; nothing is hidden behind an animation — with motion reduced every part is simply still. */
+.wk { position: absolute; inset: 0; display: grid; grid-template-rows: auto 1fr auto; background: radial-gradient(120% 80% at 50% 40%, #241a10, #0b0907 70%); }
+.wk-top { display: flex; align-items: flex-start; gap: 12px; padding: calc(8px + env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 6px max(12px, env(safe-area-inset-left)); }
+.wk-top .jr-ghost { flex: none; }
+.wk-title { min-width: 0; }
+.wk-title h2 { font-family: var(--font-display); font-size: clamp(18px, 4.6vw, 26px); line-height: 1.15; color: var(--jr-ink); }
+.wk-title p { margin-top: 2px; font-size: 12.5px; line-height: 1.4; color: var(--jr-dim); }
+
+.wk-stage { position: relative; overflow: hidden; overflow: clip; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; margin-inline: max(0px, env(safe-area-inset-left)) max(0px, env(safe-area-inset-right)); }
+.wk-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 60px 18px #0b0907; }
+.wk-layer { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+.wk-far img { width: 100%; height: 100%; object-fit: cover; filter: sepia(0.55) brightness(0.5) contrast(1.05); }
+.wk-front-layer { pointer-events: none; z-index: 3; }
+.wk-mid { position: absolute; inset: 0; }
+.wk-note { position: absolute; z-index: 4; top: 10px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 24px); padding: 6px 14px; border-radius: 999px; font-size: 13px; color: var(--jr-ink); background: var(--jr-panel); border: 1px solid var(--jr-line); animation: wk-in 0.25s ease-out both; }
+
+/* figures: a zero-size anchor on the floor line; the figure stands on it */
+.wk-actor { position: absolute; left: 0; width: 0; height: 0; z-index: 1; }
+.wk-actor.is-player { z-index: 2; }
+.wk-flip { position: absolute; left: -40px; bottom: 0; width: 80px; height: 180px; transform-origin: 50% 100%; transition: transform 0.14s ease-out; }
+.wk-body { position: absolute; inset: 0; transform-origin: 50% 100%; transition: transform 0.25s ease-out; }
+.wk-shadow { position: absolute; left: 6px; bottom: -7px; width: 68px; height: 14px; border-radius: 50%; background: radial-gradient(closest-side, rgb(0 0 0 / 0.45), transparent); }
+.wk-leg { position: absolute; bottom: 0; width: 13px; height: 46px; border: 2.5px solid #24170d; border-radius: 3px 3px 5px 5px; background: #3b2a1e; transform-origin: 50% 0; }
+.wk-leg.is-back { left: 26px; filter: brightness(0.75); }
+.wk-leg.is-front { left: 41px; }
+.wk-robe { position: absolute; left: 0; bottom: 16px; width: 80px; height: 120px; }
+.wk-arm { position: absolute; left: 45px; bottom: 82px; width: 13px; height: 54px; border: 2.5px solid #24170d; border-radius: 6px; background: #74491c; transform-origin: 50% 4px; transition: transform 0.3s ease-out; }
+.is-npc .wk-arm { background: #33241a; }
+.wk-head { position: absolute; left: 23px; bottom: 132px; width: 34px; height: 38px; border: 2.5px solid #24170d; border-radius: 46% 46% 44% 44%; background: #e2c29a; transform-origin: 50% 90%; transition: transform 0.3s ease-out; }
+.wk-head.is-traveller::before { content: ''; position: absolute; inset: -6px -5px 14px -5px; border: 2.5px solid #24170d; border-radius: 50% 50% 20% 20%; background: #6b4318; }
+.wk-head.is-monk::before { content: ''; position: absolute; inset: 2px -3px 18px -3px; border-radius: 50% 50% 0 0; border: 6px solid #4a3220; border-bottom: 0; background: transparent; }
+
+/* states */
+.is-walk .wk-leg.is-front, .is-approach .wk-leg.is-front, .is-scripted .wk-leg.is-front { animation: wk-stride 0.42s ease-in-out infinite alternate; }
+.is-walk .wk-leg.is-back, .is-approach .wk-leg.is-back, .is-scripted .wk-leg.is-back { animation: wk-stride 0.42s ease-in-out infinite alternate-reverse; }
+.is-walk .wk-body, .is-approach .wk-body, .is-scripted .wk-body { animation: wk-bob 0.21s ease-in-out infinite alternate; }
+.is-turn .wk-body { animation: wk-turn 0.14s ease-out; }
+.is-interact .wk-arm { transform: rotate(-80deg); }
+.is-talk .wk-arm { transform: rotate(-28deg); }
+.is-talk .wk-head { transform: rotate(-5deg); }
+.is-examine .wk-body { transform: rotate(5deg); }
+.is-examine .wk-head { transform: rotate(16deg); }
+.is-examine .wk-arm { transform: rotate(-55deg); }
+.wk-body[data-bump] { animation: wk-bump 0.32s ease-out; }
+
+/* things to use: the whole thing is the tap target, a gold lozenge marks it */
+.wk-spot { position: absolute; width: 130px; z-index: 2; border-radius: 12px; }
+.wk-spot:disabled { pointer-events: none; }
+.wk-spot:focus-visible { outline: 3px solid var(--jr-gold); outline-offset: 4px; }
+.wk-mark { position: absolute; left: 50%; top: -40px; width: 24px; height: 24px; margin-left: -12px; border: 3px solid var(--jr-gold-2); background: rgb(214 174 96 / 0.25); transform: rotate(45deg); transition: transform 0.2s ease-out, background-color 0.2s; animation: wk-pop 0.35s ease-out both; }
+.wk-spot.is-near .wk-mark, .wk-spot:hover .wk-mark { transform: rotate(45deg) scale(1.3); background: var(--jr-gold); }
+.wk-tag { position: absolute; left: 50%; bottom: calc(100% + 56px); transform: translateX(-50%); white-space: nowrap; padding: 4px 14px; border-radius: 999px; font-size: 22px; color: #24170d; background: #efe2c2; border: 2px solid #24170d; opacity: 0; transition: opacity 0.2s; }
+.wk-spot.is-near .wk-tag, .wk-spot:hover .wk-tag, .wk-spot:focus-visible .wk-tag { opacity: 1; }
+.wk.is-locked .wk-mark { opacity: 0.35; }
+
+/* controls: their own row under the scene, never over it */
+.wk-controls { display: grid; grid-template-columns: 60px 1fr 60px; align-items: center; gap: 10px; padding: 8px max(12px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); }
+.wk-controls[hidden] { display: grid; visibility: hidden; }
+.wk-dir { width: 56px; height: 56px; border-radius: 999px; font-size: 18px; color: var(--jr-gold-2); border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.6); touch-action: none; }
+.wk-dir:active { background: rgb(214 174 96 / 0.22); }
+.wk-dir:disabled { opacity: 0.35; }
+.wk-prompt { min-width: 0; display: flex; justify-content: center; }
+.wk-use { width: 100%; max-width: 360px; animation: wk-in 0.2s ease-out both; }
+.wk-help { font-size: 12px; line-height: 1.4; text-align: center; color: var(--jr-faint); }
+.wk-examine .wk-found { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--jr-line); }
+.wk-examine .wk-found small { display: block; margin-top: 4px; font-size: 11.5px; color: var(--jr-gold); }
+.ar-walk { margin: 10px 0 14px; }
+
+@keyframes wk-stride { from { transform: rotate(20deg); } to { transform: rotate(-20deg); } }
+@keyframes wk-bob { from { transform: translateY(0); } to { transform: translateY(-4px); } }
+@keyframes wk-turn { 50% { transform: scaleX(0.82); } }
+@keyframes wk-bump { 30% { transform: translateX(-7px); } 60% { transform: translateX(3px); } }
+@keyframes wk-pop { from { opacity: 0; transform: rotate(45deg) scale(0.4); } }
+@keyframes wk-in { from { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .wk *, .wk *::before { animation: none !important; transition: none !important; }
+}
