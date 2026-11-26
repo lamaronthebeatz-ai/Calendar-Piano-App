@@ -78,7 +78,7 @@ test('đi vào khung cảnh từ màn danh sách, đi, nói chuyện, xem giá s
 
   // the rail: holding → stops short of it, with a note
   await page.getByRole('button', { name: 'Đi sang phải' }).dispatchEvent('pointerdown', { pointerId: 1 })
-  await expect(page.getByRole('status')).toContainText('Không đi qua được', { timeout: 15_000 })
+  await expect(page.locator('.wk-note')).toContainText('Không đi qua được', { timeout: 15_000 })
   await expect.poll(() => x(page), { timeout: 15_000 }).toBeGreaterThan(1600)
   await idle(page)
   expect(await x(page)).toBeLessThan(1690)
@@ -120,7 +120,7 @@ test('điện thoại dọc: khung cảnh, nút điều khiển không chồng l
 })
 
 const scene = (page: Page) => page.locator('[data-scene]')
-const use = (page: Page, name: string | RegExp) => page.getByRole('button', { name }).evaluate((b: HTMLElement) => b.click())
+const press = (page: Page, name: string | RegExp) => page.getByRole('button', { name }).evaluate((b: HTMLElement) => b.click())
 
 test('chuyển cảnh: thư viện → phòng chép sách → thư viện, xuất hiện đúng chỗ, cửa phòng họp đóng theo tuyến', async ({ page }) => {
   await page.goto(URL + '&w=1')
@@ -128,13 +128,13 @@ test('chuyển cảnh: thư viện → phòng chép sách → thư viện, xuấ
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/thu-vien')
 
   // the council-room door: shut until the arc opens the place — says why, nothing moves
-  await use(page, /^Vào: Cửa phòng họp/)
-  await expect(page.getByRole('status')).toContainText('Cửa phòng họp đang đóng', { timeout: 15_000 })
+  await press(page, /^Vào: Cửa phòng họp/)
+  await expect(page.locator('.wk-note')).toContainText('Cửa phòng họp đang đóng', { timeout: 15_000 })
   await idle(page)
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/thu-vien')
 
   // through the passage: the scriptorium loads, the figure stands at its spawn by the door
-  await use(page, 'Đi: Hành lang sang phòng chép sách')
+  await press(page, 'Đi: Hành lang sang phòng chép sách')
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/phong-chep', { timeout: 15_000 })
   // the spawn is used once, then dropped from the address (a reload keeps where the figure stood)
   await expect(page).not.toHaveURL(/sp=/)
@@ -150,7 +150,7 @@ test('chuyển cảnh: thư viện → phòng chép sách → thư viện, xuấ
   expect(await x(page)).toBeLessThanOrEqual(758)
 
   // and back: the library, at the spawn by the passage
-  await use(page, 'Đi: Hành lang về thư viện')
+  await press(page, 'Đi: Hành lang về thư viện')
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/thu-vien', { timeout: 15_000 })
   await idle(page)
   expect(await x(page)).toBe(190)
@@ -209,7 +209,7 @@ test('nhân vật và hoạt ảnh: nói/nghe theo câu, nét mặt, NPC chỉ �
   await idle(page)
   const npc = page.getByTestId('walk-npc-librarian')
   await expect(npc).toHaveAttribute('data-clip', 'read') // his own resting clip
-  await use(page, 'Nói chuyện với Thầy quản thư')
+  await press(page, 'Nói chuyện với Thầy quản thư')
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible({ timeout: 15_000 })
   // the narrator's line: both listen; then the librarian's line: he talks, thoughtful, the player listens
@@ -228,12 +228,12 @@ test('nhân vật và hoạt ảnh: nói/nghe theo câu, nét mặt, NPC chỉ �
   }
   await expect(dialog).toBeHidden()
   // the quest is on: he turns to the shelf and points, says so, then rests; the player is free again
-  await expect(page.getByRole('status')).toContainText('chỉ về giá sách', { timeout: 15_000 })
+  await expect(page.locator('.wk-note')).toContainText('chỉ về giá sách', { timeout: 15_000 })
   await idle(page)
   await expect(npc).toHaveAttribute('data-state', 'idle')
 
   // walking toward the shelf: a lay brother crosses with his books, then leaves through the council door
-  await use(page, 'Xem: Giá sách phía sau')
+  await press(page, 'Xem: Giá sách phía sau')
   await expect(page.locator('[data-testid^="walk-npc-extra:"]')).toBeAttached({ timeout: 15_000 })
   await expect(player(page)).toHaveAttribute('data-clip', /^(reach|read)$/, { timeout: 15_000 })
   await expect(page.getByRole('dialog', { name: 'Xem: Giá sách phía sau' })).toBeVisible({ timeout: 15_000 })
@@ -241,4 +241,82 @@ test('nhân vật và hoạt ảnh: nói/nghe theo câu, nét mặt, NPC chỉ �
   await page.getByRole('dialog').getByRole('button', { name: 'Xong' }).click()
   await idle(page)
   await expect(page.locator('[data-testid^="walk-npc-extra:"]')).toHaveCount(0, { timeout: 15_000 })
+})
+
+/** a conversation through the scene: take each wanted line once when offered, else go on, until it closes */
+async function converse(page: Page, who: string, picks: string[]) {
+  await press(page, `Nói chuyện với ${who}`)
+  const d = page.getByRole('dialog')
+  await expect(d).toBeVisible({ timeout: 15_000 })
+  const left = [...picks]
+  for (let i = 0; i < 30 && (await d.isVisible()); i++) {
+    const wanted = []
+    for (const t of left) if (await d.getByRole('button', { name: t, exact: true }).isVisible()) wanted.push(t)
+    if (wanted.length) {
+      await d.getByRole('button', { name: wanted[0], exact: true }).click()
+      left.splice(left.indexOf(wanted[0]), 1)
+      continue
+    }
+    const on = d.getByRole('button', { name: /^(Tiếp →|Xong)$/ })
+    if (await on.isVisible()) await on.click()
+    else break
+  }
+  await expect(d).toBeHidden()
+  await idle(page)
+}
+const journal = async (page: Page) => {
+  await page.locator('.wk-top').getByRole('button', { name: 'Sổ tay', exact: true }).click()
+  const book = page.getByRole('dialog', { name: 'Sổ hành trình' })
+  await expect(book).toBeVisible()
+  const text = await book.locator('.st-journal').innerText()
+  await book.getByRole('button', { name: 'Đóng sổ' }).click()
+  return text
+}
+
+test('tuyến "Ghi chú bên lề": khảo sát trang sách, hỏi, chọn điều tra, lời kể thứ hai, nhật ký, tải lại', async ({ page }) => {
+  await page.goto(URL + '&w=1')
+  await idle(page)
+  await converse(page, 'Thầy quản thư', ['Trang ấy lạ thế nào?'])
+  await expect(page.locator('.st-lines')).toContainText('cuốn sách ca đang mở', { timeout: 15_000 })
+
+  // the open book on the lectern: looked over spot by spot (not one text box)
+  await press(page, 'Khảo sát: Sách ca trên bục đọc')
+  const doc = page.getByRole('dialog', { name: /^Khảo sát:/ })
+  await expect(doc).toBeVisible({ timeout: 15_000 })
+  await expect(doc.getByRole('button', { name: /Ghi chú bên lề/ })).toHaveCount(0) // not noticed yet
+  await doc.getByRole('button', { name: /Xem kỹ: Dòng kẻ và chữ khoá/ }).click()
+  await expect(doc).toContainText('Dữ kiện có nguồn')
+  await expect(doc).toContainText('Neume trên dòng kẻ') // the evidence it rests on
+  await doc.getByRole('button', { name: /Xem kỹ: Chỗ giấy da bị cạo/ }).click()
+  await expect(doc).toContainText('Hư cấu')
+  await doc.getByRole('button', { name: /Xem kỹ: Ghi chú bên lề/ }).click()
+  await expect(page.locator('.st-lines')).toContainText('Rinaldo?')
+  await doc.getByRole('button', { name: 'Xong' }).click()
+  await idle(page)
+
+  // the librarian's account, then the decision: ask Rinaldo first
+  await converse(page, 'Thầy quản thư', ['Ai đã cạo trang sách ca trên bục đọc?', 'Con muốn hỏi thầy Rinaldo trước đã.'])
+  let j = await journal(page)
+  expect(j).toContain('Giả thuyết')
+  expect(j).toContain('bạn muốn nghe thầy Rinaldo trước khi tin')
+  expect(j).not.toContain('chính thầy nhận') // nothing told before it is found
+
+  // reload: the story stands where it was
+  await page.reload()
+  await idle(page)
+  j = await journal(page)
+  expect(j).toContain('bạn muốn nghe thầy Rinaldo trước khi tin')
+
+  // the second account: Rinaldo, in the scriptorium
+  await press(page, 'Đi: Hành lang sang phòng chép sách')
+  await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/phong-chep', { timeout: 15_000 })
+  await idle(page)
+  await converse(page, 'Thầy Rinaldo', ['Thầy có cạo một trang sách ca trong thư viện không?'])
+  j = await journal(page)
+  expect(j).toContain('Đã xác nhận')
+  expect(j).toContain('chính thầy nhận')
+  expect(j).toContain('Một trang, hai lời kể')
+  const s = await save(page)
+  expect(s.inventory).toContain('item:bt/manh-cu')
+  expect(s.quests['q:bt/ghi-chu']).toMatchObject({ status: 'active', stage: 'doi-chieu' })
 })

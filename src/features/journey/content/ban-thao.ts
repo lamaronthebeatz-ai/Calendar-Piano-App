@@ -1,4 +1,5 @@
 import type { ArcDef } from '../engine/types'
+import { BAN_THAO_DOCUMENTS, BAN_THAO_STORY } from './story-ban-thao'
 
 /**
  * Chương I — "Bản thảo thất lạc": the first arc built on the engine (docs/journey/GAME_DESIGN_DOCUMENT.md §4).
@@ -19,6 +20,8 @@ export const banThao: ArcDef = {
   main: 'q:bt/ban-thao',
   music: 'boethius',
   period: 'a:thoi-ky-trung-co',
+  narrative: BAN_THAO_STORY,
+  documents: BAN_THAO_DOCUMENTS,
 
   locations: [
     {
@@ -30,6 +33,7 @@ export const banThao: ArcDef = {
       present: [{ npc: 'npc:bt/quan-thu', dialogue: 'dlg:bt/quan-thu' }],
       objects: [
         { id: 'gia-sach', label: 'Giá sách phía sau', when: { all: [{ quest: 'q:bt/ban-thao', is: 'active' }, { not: { item: 'item:bt/trang-ban-thao' } }] }, effects: [{ give: 'item:bt/trang-ban-thao' }, { evidence: 'ev:bt/trang-ban-thao' }, { discover: 'a:lich-su-ky-am' }] },
+        { id: 'sach-ca', label: 'Sách ca trên bục đọc', when: { met: 'npc:bt/quan-thu' }, document: 'doc:bt/sach-ca' },
         { id: 'hop-nhac', label: 'Hộp nhạc của lữ khách', effects: [{ startQuest: 'q:bt/mot-be-nhieu-be' }], puzzle: 'pz:bt/don-am-nhieu-be' },
       ],
     },
@@ -119,6 +123,9 @@ export const banThao: ArcDef = {
           choices: [
             { text: 'Trang ấy lạ thế nào?', next: 'n3' },
             { text: 'Pomposa từng có thầy dạy hát nào nổi tiếng?', when: { not: { topic: 'guido', with: 'npc:bt/quan-thu' } }, next: 'n4' },
+            // "Ghi chú bên lề" (fiction): asked once the scraped patch was seen; told back once Rinaldo was heard
+            { text: 'Ai đã cạo trang sách ca trên bục đọc?', kind: 'info', when: { all: [{ flag: 'seen:doc:bt/sach-ca/cao' }, { not: { topic: 'ghi-chu', with: 'npc:bt/quan-thu' } }] }, next: 'g1' },
+            { text: 'Con đã nghe thầy Rinaldo kể về trang sách ca.', kind: 'conditional', when: { all: [{ item: 'item:bt/manh-cu' }, { not: { topic: 'hai-loi', with: 'npc:bt/quan-thu' } }] }, next: 'g6' },
           ],
         },
         n3: { speaker: 'npc:bt/quan-thu', voice: 'fiction', text: 'Neume trên đó không lơ lửng trên lời ca như thường lệ. Chúng nằm trên những dòng kẻ, đầu dòng có một chữ cái.', refs: ['a:lich-su-ky-am'], effects: [{ remember: 'ban-thao', with: 'npc:bt/quan-thu' }], next: 'n5' },
@@ -130,6 +137,21 @@ export const banThao: ArcDef = {
           effects: [{ remember: 'guido', with: 'npc:bt/quan-thu' }, { discover: 'a:guido-d-arezzo' }],
           next: 'n2',
         },
+        g1: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'worried', text: 'Trang ấy chép hỏng từ đời trước: neume lệch, chữ sai. Ta bảo thầy Rinaldo cạo đi mà chép lại cho đúng.', effects: [{ remember: 'ghi-chu', with: 'npc:bt/quan-thu' }], next: 'g2' },
+        g2: {
+          speaker: 'me',
+          voice: 'fiction',
+          text: '(Bạn nghĩ sao?)',
+          choices: [
+            { text: 'Sửa chỗ chép hỏng là việc nên làm.', kind: 'expressive', next: 'g3' },
+            { text: 'Con tin lời thầy. Chuyện trang ấy khép lại ở đây.', kind: 'consequence', effects: [{ set: 'bt:tin-quan-thu' }], next: 'g4' },
+            { text: 'Con muốn hỏi thầy Rinaldo trước đã.', kind: 'consequence', effects: [{ set: 'bt:dieu-tra' }], next: 'g5' },
+          ],
+        },
+        g3: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'happy', text: 'Ngài hiểu việc của người chép sách.', next: 'g2' },
+        g4: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'happy', text: 'Tốt. Sách của tu viện cần gọn gàng hơn là cần những câu hỏi.', end: true },
+        g5: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'worried', text: 'Tuỳ ngài. Thầy ấy ở phòng chép sách, bên kia hành lang.', end: true },
+        g6: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'thoughtful', text: 'Vậy ngài đã nghe cả hai lời. Một trang có thể bị cạo vì chép hỏng, cũng có thể vì người ta muốn chép lại theo lối mới. Ngài cứ ghi cả hai, ta không cãi.', effects: [{ remember: 'hai-loi', with: 'npc:bt/quan-thu' }], end: true },
         n5: { speaker: 'npc:bt/quan-thu', voice: 'fiction', text: 'Tìm nó trên giá sách phía sau, rồi mang sang phòng chép sách cho thầy Rinaldo xem. Thầy ấy đọc neume giỏi hơn ta.', effects: [{ startQuest: 'q:bt/ban-thao' }], end: true },
       },
     },
@@ -144,9 +166,15 @@ export const banThao: ArcDef = {
           effects: [{ remember: 'gap', with: 'npc:bt/rinaldo' }],
           choices: [
             { text: 'Đưa trang bản thảo', when: { item: 'item:bt/trang-ban-thao' }, next: 'n2' },
+            { text: 'Thầy có cạo một trang sách ca trong thư viện không?', kind: 'conditional', when: { all: [{ flag: 'bt:dieu-tra' }, { not: { item: 'item:bt/manh-cu' } }] }, next: 'r1' },
+            { text: 'Thầy quản thư bảo trang sách ca ấy chép hỏng.', kind: 'conditional', when: { all: [{ flag: 'bt:tin-quan-thu' }, { not: { topic: 'ghi-chu', with: 'npc:bt/rinaldo' } }] }, next: 'r4' },
             { text: 'Chào thầy', next: 'n1' },
           ],
         },
+        r1: { speaker: 'npc:bt/rinaldo', voice: 'fiction', mood: 'surprise', text: 'Có, tôi cạo. Nhưng trang ấy đâu có chép hỏng.', next: 'r2' },
+        r2: { speaker: 'npc:bt/rinaldo', voice: 'fiction', mood: 'thoughtful', text: 'Ca viên đọc lối mới trên dòng kẻ nhanh hơn, nên tôi chép lại trang cũ theo lối ấy. Thầy quản thư thì muốn sách trông như chưa từng bị sửa.', next: 'r3' },
+        r3: { speaker: 'npc:bt/rinaldo', voice: 'fiction', text: 'Mảnh giấy da cạo ra tôi vẫn giữ. Ngài cầm lấy mà so.', effects: [{ give: 'item:bt/manh-cu' }, { evidence: 'ev:bt/hai-loi-ke' }, { remember: 'ghi-chu', with: 'npc:bt/rinaldo' }], end: true },
+        r4: { speaker: 'npc:bt/rinaldo', voice: 'fiction', mood: 'sad', text: 'Thầy ấy nói thế thì là thế.', effects: [{ remember: 'ghi-chu', with: 'npc:bt/rinaldo' }], end: true },
         n1: { speaker: 'npc:bt/rinaldo', voice: 'fiction', mood: 'happy', text: 'Ngài chưa có gì cho ta xem sao? Thầy quản thư ở thư viện đang tìm ngài đấy.', end: true },
         n2: {
           speaker: 'npc:bt/rinaldo',
@@ -253,6 +281,21 @@ export const banThao: ArcDef = {
   ],
 
   quests: [
+    {
+      id: 'q:bt/ghi-chu',
+      chapter: 'trung-co',
+      title: 'Ghi chú bên lề',
+      summary: 'Một trang sách ca bị cạo và chép lại, bên lề có chữ R. Bạn nghe lời giải thích rồi chọn tin hay tìm hiểu tiếp. (Tình tiết hư cấu.)',
+      kind: 'investigation',
+      stages: [
+        { id: 'hoi', text: 'Hỏi thầy quản thư về trang bị cạo trên bục đọc.', objectives: [{ cond: { any: [{ flag: 'bt:tin-quan-thu' }, { flag: 'bt:dieu-tra' }] } }], next: [{ when: { flag: 'bt:dieu-tra' }, to: 'rinaldo' }, { when: { flag: 'bt:tin-quan-thu' }, to: 'khep' }] },
+        { id: 'rinaldo', text: 'Sang phòng chép sách hỏi thầy Rinaldo.', objectives: [{ collect: 'item:bt/manh-cu' }], next: 'doi-chieu' },
+        { id: 'doi-chieu', text: 'Kể lại với thầy quản thư: một trang, hai lời kể.', objectives: [{ cond: { topic: 'hai-loi', with: 'npc:bt/quan-thu' } }], onDone: [{ xp: 25, skill: 'sources' }], next: [] }, // ends here (not on into 'khep')
+        { id: 'khep', text: 'Bạn tin lời thầy quản thư; chuyện trang sách ca khép lại.', objectives: [{ cond: { flag: 'bt:tin-quan-thu' } }] },
+      ],
+      rewards: [],
+      links: ['a:lich-su-ky-am'],
+    },
     {
       id: 'q:bt/ban-thao',
       chapter: 'trung-co',
@@ -641,6 +684,7 @@ export const banThao: ArcDef = {
   ],
 
   evidence: [
+    { id: 'ev:bt/hai-loi-ke', title: 'Hai lời kể về một trang', text: 'Thầy quản thư: trang chép hỏng nên phải cạo. Thầy Rinaldo: trang được chép lại theo lối ghi trên dòng kẻ. (Tình tiết hư cấu.)', kind: 'fiction', reliability: 'Tình tiết hư cấu của game, để tập đối chiếu hai lời kể.', verification: 'library' },
     { id: 'ev:bt/trang-ban-thao', title: 'Trang chép tay ở Pomposa', text: 'Neume trên dòng kẻ, chữ cái đầu dòng. Vật trong truyện — không phải bản chép tay có thật.', kind: 'fiction', reliability: 'Tình tiết hư cấu của game.', verification: 'library' },
     { id: 'ev:bt/neume-dong-ke', title: 'Neume trên dòng kẻ', text: 'Khoảng năm 1000 các bản chép ở Ý đặt neume theo độ cao; Guido dùng dòng kẻ và chữ cái làm khoá để đọc được giai điệu chưa từng nghe.', kind: 'secondary', source: 'a:lich-su-ky-am', reliability: 'Bài thư viện, theo các nguồn ghi ở bài.', verification: 'library' },
     { id: 'ev:bt/micrologus', title: 'Văn bản của chính Guido', text: 'Guido mô tả hexachord như phương tiện ghi nhớ trong bức thư Epistola de ignoto cantu và trong Micrologus (1025 hoặc 1026).', kind: 'primary', source: 'a:hexachord-va-ban-tay-guido', date: '1025 – 1026', reliability: 'Văn bản của người trong cuộc; thư viện tóm theo Wikipedia, chưa đối chiếu nguyên văn Latin.', verification: 'library' },
@@ -650,6 +694,7 @@ export const banThao: ArcDef = {
   ],
 
   items: [
+    { id: 'item:bt/manh-cu', name: 'Mảnh giấy da cạo ra', kind: 'manuscript', text: 'Vụn giấy da còn vết neume không dòng kẻ. (Vật trong truyện.)', links: ['a:lich-su-ky-am'] },
     { id: 'item:bt/trang-ban-thao', name: 'Trang chép tay ở Pomposa', kind: 'manuscript', text: 'Neume nằm trên dòng kẻ, đầu dòng có chữ cái. (Vật trong truyện.)', links: ['a:lich-su-ky-am', 'a:ky-am-binh-ca-gregorian'] },
     {
       id: 'item:bt/ban-tay',

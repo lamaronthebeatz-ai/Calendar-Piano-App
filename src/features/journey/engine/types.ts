@@ -1,4 +1,6 @@
 import type { EntityId } from '../../knowledge/ids'
+import type { DocumentDef, NarrativeDef } from './narrative'
+export type { EntityId }
 import type { Verdict } from '../types'
 
 /**
@@ -52,7 +54,11 @@ export interface DNode {
   when?: Cond
   effects?: Effect[]
   next?: string
-  choices?: { text: string; when?: Cond; effects?: Effect[]; next: string }[]
+  /**
+   * `kind` says what a choice is for: expressive (how the player puts it — no change), info (what to ask), consequence
+   * (changes the state: must carry effects, checked), conditional (only offered when `when` holds).
+   */
+  choices?: { text: string; when?: Cond; effects?: Effect[]; next: string; kind?: 'expressive' | 'info' | 'consequence' | 'conditional' }[]
   end?: true
   /** how the speaker looks saying it (presentation only: the side-view scene shows it on the face) */
   mood?: 'neutral' | 'focus' | 'surprise' | 'happy' | 'sad' | 'worried' | 'thoughtful'
@@ -88,7 +94,8 @@ export interface LocationDef {
   hidden?: boolean
   unlock?: Cond
   present: { npc: string; dialogue: string; when?: Cond }[]
-  objects?: { id: string; label: string; when?: Cond; effects?: Effect[]; dialogue?: string; puzzle?: string }[]
+  /** `document`: examined closely (a manuscript to look over spot by spot — engine/narrative.ts) */
+  objects?: { id: string; label: string; when?: Cond; effects?: Effect[]; dialogue?: string; puzzle?: string; document?: string }[]
   onEnter?: Effect[]
 }
 
@@ -193,4 +200,8 @@ export interface ArcDef extends ChapterDef {
   main: string
   /** MUSIC key played on the arc's hub */
   music: string
+  /** how the arc's story unfolds (beats, journal) — engine/narrative.ts */
+  narrative?: NarrativeDef
+  /** documents examined spot by spot */
+  documents?: DocumentDef[]
 }

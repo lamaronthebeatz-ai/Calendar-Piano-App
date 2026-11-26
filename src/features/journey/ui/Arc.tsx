@@ -21,6 +21,10 @@ import { createProject, updateProject } from '../../research/store'
 import { WalkScene } from './walk/WalkScene'
 import { sceneFor, scenesOf } from '../scene/world'
 import { KIND, useEscape } from './arcShared'
+import { Journal } from './Journal'
+import { DocumentView } from './DocumentView'
+import { StoryLines } from './StoryLines'
+import { useStory, type Narrate } from './useStory'
 import './arc.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
@@ -36,6 +40,8 @@ const VOICE: Record<DNode['voice'], string> = { reconstructed: 'Lời dựng l�
  * `&w=<scene>` (or `1`: the place's first scene) walks the place side-on (scene/, ui/walk); `&sp=` picks the spawn.
  */
 export function ArcPlayer({ arc, save, go, l, p, review, walk, spawn, map }: { arc: ArcDef; save: Save; go: Go; l: string | null; p: string | null; review?: boolean; walk?: string | null; spawn?: string | null; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
+  const story = useStory(arc, save)
+  const lines = <StoryLines lines={story.lines} dismiss={story.dismiss} />
   const loc = arc.locations.find((x) => x.id === l && visibleLocations(arc, save).includes(x))
   const puzzle = arc.puzzles.find((x) => x.id === p)
   const music = MUSIC[arc.music]
@@ -44,9 +50,9 @@ export function ArcPlayer({ arc, save, go, l, p, review, walk, spawn, map }: { a
   }, [music, puzzle])
   if (puzzle) return <PuzzleScreen key={puzzle.id} arc={arc} puzzle={puzzle} save={save} review={review} onClose={() => go(l ? { v: 'arc', a: arc.id, l, ...(walk ? { w: walk } : {}) } : { v: 'arc', a: arc.id }, 'back')} />
   const scene = loc ? sceneFor(loc.id, walk) : undefined
-  if (loc && scene) return <WalkScene key={scene.id} arc={arc} loc={loc} scene={scene} spawn={spawn ?? null} save={save} go={go} />
-  if (loc) return <PlaceScreen key={loc.id} arc={arc} loc={loc} save={save} go={go} />
-  return <Hub arc={arc} save={save} go={go} map={map} />
+  if (loc && scene) return <>{lines}<WalkScene key={scene.id} arc={arc} loc={loc} scene={scene} spawn={spawn ?? null} save={save} go={go} narrate={story.narrate} /></>
+  if (loc) return <>{lines}<PlaceScreen key={loc.id} arc={arc} loc={loc} save={save} go={go} narrate={story.narrate} /></>
+  return <>{lines}<Hub arc={arc} save={save} go={go} map={map} /></>
 }
 
 function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (open: (id: string) => void, done: (id: string) => boolean) => ReactNode }) {
@@ -119,17 +125,21 @@ function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (op
   )
 }
 
-function PlaceScreen({ arc, loc, save, go }: { arc: ArcDef; loc: LocationDef; save: Save; go: Go }) {
+function PlaceScreen({ arc, loc, save, go, narrate }: { arc: ArcDef; loc: LocationDef; save: Save; go: Go; narrate: Narrate }) {
   const [talk, setTalk] = useState<string | null>(null)
+  const [doc, setDoc] = useState<string | null>(null)
   useEffect(() => {
     update((s) => enter(arc, loc, s))
-  }, [arc, loc])
+    narrate({ on: 'enter', place: loc.id })
+  }, [arc, loc, narrate])
   const people = loc.present.filter((x) => !x.when || holds(x.when, save))
   const things = (loc.objects ?? []).filter((o) => !o.when || holds(o.when, save))
   const use = (o: (typeof things)[number]) => {
     if (o.effects) update((s) => effects(arc, o.effects, s))
+    if (o.document) setDoc(o.document)
     if (o.puzzle) go({ v: 'arc', a: arc.id, l: loc.id, p: o.puzzle })
   }
+  const paper = arc.documents?.find((d) => d.id === doc)
   const stage = currentStage(arc, save)
   return (
     <section className="ar-screen is-place">
@@ -160,13 +170,24 @@ function PlaceScreen({ arc, loc, save, go }: { arc: ArcDef; loc: LocationDef; sa
             return (
               <button key={o.id} className={`ar-act${solved ? ' is-done' : ''}`} onClick={() => use(o)}>
                 <b>{o.label}</b>
-                <small>{o.puzzle ? (solved ? '✓ Đã giải — xem lại' : 'Thử thách') : 'Xem'}</small>
+                <small>{o.puzzle ? (solved ? '✓ Đã giải — xem lại' : 'Thử thách') : o.document ? 'Khảo sát' : 'Xem'}</small>
               </button>
             )
           })}
         </div>
       </div>
-      {talk && <DialoguePanel arc={arc} id={talk} save={save} onClose={() => setTalk(null)} />}
+      {talk && (
+        <DialoguePanel
+          arc={arc}
+          id={talk}
+          save={save}
+          onClose={() => {
+            narrate({ on: 'talked', dialogue: talk })
+            setTalk(null)
+          }}
+        />
+      )}
+      {paper && <DocumentView arc={arc} doc={paper} save={save} narrate={narrate} onClose={() => setDoc(null)} />}
     </section>
   )
 }
@@ -714,8 +735,8 @@ function ReportPanel({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose:
 
 /* ------------------------------------------------------------------ the journal */
 
-function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => void }) {
-  const [tab, setTab] = useState<'quest' | 'skills' | 'bag' | 'evidence' | 'codex'>('quest')
+export function Book({ arc, save, onClose, start }: { arc: ArcDef; save: Save; onClose: () => void; start?: 'story' }) {
+  const [tab, setTab] = useState<'story' | 'quest' | 'skills' | 'bag' | 'evidence' | 'codex'>(start ?? 'quest')
   useEscape(onClose)
   const codex = useMemo(() => save.codex.filter((id) => id.startsWith('a:') && findArticle(id.slice(2))), [save.codex])
   const groups = useMemo(() => {
@@ -736,6 +757,7 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
         <nav className="ar-tabs">
           {(
             [
+              ...(arc.narrative ? ([['story', 'Nhật ký']] as const) : []),
               ['quest', 'Nhiệm vụ'],
               ['skills', 'Kỹ năng'],
               ['bag', 'Túi đồ'],
@@ -746,6 +768,7 @@ function Book({ arc, save, onClose }: { arc: ArcDef; save: Save; onClose: () => 
             <button key={k} className={tab === k ? 'is-on' : ''} onClick={() => setTab(k)}>{t}</button>
           ))}
         </nav>
+        {tab === 'story' && <Journal arc={arc} save={save} />}
         {tab === 'quest' && (
           <ul className="ar-list">
             {arc.quests.filter((q) => save.quests[q.id]).map((q) => {

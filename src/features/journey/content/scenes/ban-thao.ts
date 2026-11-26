@@ -47,6 +47,8 @@ export const POMPOSA_SCENES: readonly SceneDef[] = [
       { id: 'librarian', kind: 'npc', ref: 'npc:bt/quan-thu', x: 700, top: 300, approach: { distance: 78 }, verb: 'Nói chuyện', facing: -1, watch: 260,
         // once the search is on and the page not yet found, he points to the shelf
         afterTalk: { when: { all: [{ quest: 'q:bt/ban-thao', is: 'active' }, { not: { item: 'item:bt/trang-ban-thao' } }] }, steps: [{ face: 1290 }, { play: 'point' }, { say: 'Thầy quản thư chỉ về giá sách phía sau.' }, { face: 'player' }] } },
+      // the antiphoner open on the lectern ("Ghi chú bên lề"): looked over from the reader's side, right of the lectern
+      { id: 'antiphoner', kind: 'object', ref: 'sach-ca', x: 790, top: 330, width: 100, height: 120, approach: { distance: 74, side: 'right' }, verb: 'Khảo sát' },
       { id: 'council-door', kind: 'door', x: 1000, top: 300, width: 110, approach: { distance: 0 }, verb: 'Vào', label: 'Cửa phòng họp', transition: 't:thu-vien>phong-hop' },
       { id: 'shelf', kind: 'object', ref: 'gia-sach', x: 1290, top: 190, approach: { distance: 70 }, verb: 'Xem' },
       { id: 'music-box', kind: 'object', ref: 'hop-nhac', x: 1560, top: 420, approach: { distance: 74 }, verb: 'Mở' },

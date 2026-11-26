@@ -198,3 +198,28 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
   - Bảng chuyển thiếu `interact → listen` làm người chơi kẹt `interact` khi hội thoại mở.
   - `.jr-dialog` (journey.css nạp sau) đè `.ar-dialog-box` về `position: absolute` đáy màn → hộp thoại trong cảnh không đổi chỗ được; sửa bằng `.wk .ar-dialog-box`. Trên màn ngang hộp thoại nằm trên để không che hai người đang nói.
 - **Tài nguyên tạm**: hình nhân vật vẽ vector đơn giản trên rig chung (không có sprite sheet). Mặt chỉ có lông mày/mắt/miệng đổi theo mood. Chưa có chân dung người chơi trên nhân vật, chưa có âm thanh.
+
+## Phase 4 — hệ thống kể chuyện (26/11/2026)
+- **Kiến trúc** (`engine/narrative.ts`, thuần, test `engine/narrative.test.ts`):
+  - Tuyến chính = chương (`ChapterDef`) → tuyến (`ArcDef`, quest chính).
+  - Tuyến thành phần = `NarrativeDef` gắn vào arc (`arc.narrative`): 4 hồi (setup / development / climax / resolution) chứa nhịp `BeatDef`.
+  - Mỗi nhịp có: kích hoạt (`state | enter | look | talked`), `when`, `after`, `effects` (đi qua engine), `show` (suy nghĩ / lời dẫn), `journal` (`knowing`: known / hypothesis / confirmed; `basis`: fact / interpretation / fiction; `refs`; `settles`).
+- **Không thêm lưu trữ**: nhịp đã xảy ra = cờ `beat:<id>`; chi tiết tài liệu đã xem = cờ `seen:<doc>/<spot>`. Lựa chọn ghi bằng cờ/topic có sẵn, quest vẫn là quest. Tải lại trang thì mọi thứ dựng lại từ save. Nhật ký sinh ra từ các nhịp đã xảy ra, không lưu riêng.
+- **`advanceStory`**: mỗi nhịp đặt cờ trước khi chạy, nên không bắn hai lần và không lặp vòng (có trần bằng số nhịp).
+- **`analyzeNarrative`** (test cho mọi arc) chặn trường hợp người chơi kẹt:
+  - id hợp lệ; cờ mà nhịp chờ phải có thứ gì đó đặt nó;
+  - `after` không vòng; điểm kích hoạt `look` tồn tại;
+  - dữ kiện `fact` phải có nguồn.
+- **Lựa chọn**: trường `kind` tuỳ chọn trên lựa chọn hội thoại (`expressive | info | consequence | conditional`). Test bắt buộc mọi lựa chọn `consequence` phải có effects (không có lựa chọn giả).
+- **Kể qua môi trường**: `arc.documents` (`DocumentDef`: trang vẽ + các điểm xem kỹ, mỗi điểm có basis/refs/when), mở từ đồ vật có `document`. Giao diện `ui/DocumentView.tsx`: xem từng điểm, chi tiết mới lộ ra sau chi tiết khác, có đếm "đã xem".
+- **Trình bày**:
+  - `ui/useStory.ts`: bộ đạo diễn của arc — `narrate(trigger)`, và tự chạy nhịp `state` mỗi khi save đổi.
+  - `ui/StoryLines.tsx`: suy nghĩ / lời dẫn / "Sổ tay có ghi chép mới".
+  - `ui/Journal.tsx`: tab "Nhật ký" trong Sổ hành trình (`Book`, nay export, có nút "Sổ tay" trong khung cảnh). Giả thuyết đã có lời giải bị gạch, chỉ tới lời giải; quyết định tách riêng; không lộ trước gì.
+- **Nguồn**: `refs` chỉ là `ev:` (chứng cứ có `source`) hoặc `a:` (bài thư viện); test kiểm từng ref có thật và chứng cứ được dẫn không phải hư cấu. Truy nguyên UMK: `getKnowledge(a:…)` (nạp động) hiện loại nguồn và trạng thái kiểm chứng đúng như UMK ghi, không nâng cấp.
+- **UMRE**: không dùng. UMRE chỉ có các lĩnh vực âm nhạc (phức điệu, hoà âm…), không có niên đại/sự kiện, và yêu cầu cấm đưa logic kể chuyện vào lõi UMRE. Phần kiểm nhất quán tự sự là `analyzeNarrative` + test nội dung, đặt ở Journey.
+- **Arc mẫu "Ghi chú bên lề"** (`content/story-ban-thao.ts`, HƯ CẤU, nguồn duy nhất là `ev:bt/neume-dong-ke` ← `a:lich-su-ky-am`):
+  - Diễn biến: sách ca trên bục đọc thư viện → khảo sát (dòng kẻ = dữ kiện có nguồn; chỗ cạo; ghi chú "R." chỉ lộ sau chỗ cạo) → lời thầy quản thư → chọn tin hoặc hỏi Rinaldo → (điều tra) lời kể thứ hai + mảnh giấy da, "R." được xác nhận → kể lại → khép.
+  - Quest `q:bt/ghi-chu` có rẽ nhánh. `next: []` để kết thúc rõ, vì mặc định quest đi tiếp sang giai đoạn đứng sau trong danh sách.
+  - Hội thoại đổi theo lựa chọn ở lần gặp sau.
+- **Bỏ ngỏ**: chưa có hồi tưởng / cảnh chuyển có hình; tuyến chính chưa có màn tổng quan riêng.

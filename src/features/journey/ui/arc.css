@@ -123,3 +123,50 @@
 .ar-figure-num { display: flex; flex-direction: column; font-size: 13px; color: var(--jr-gold); }
 .ar-figure-num i { font-style: normal; }
 .ar-figure b { margin-top: 3px; font-size: 17px; font-weight: 400; }
+
+/* ---- story (useStory / StoryLines / DocumentView / Journal) ---- */
+/* short lines over the screen, under the top bar: they never cover the floor where the figures stand */
+.st-lines { position: fixed; z-index: 8; left: 50%; top: calc(56px + env(safe-area-inset-top)); transform: translateX(-50%); width: min(560px, calc(100% - 24px)); display: grid; gap: 6px; pointer-events: none; }
+.st-line { pointer-events: auto; text-align: left; padding: 8px 14px; border-radius: 14px; font-size: 14px; line-height: 1.45; color: var(--jr-ink); background: var(--jr-panel); border: 1px solid var(--jr-line); animation: st-in 0.25s ease-out; }
+.st-line.is-thought { font-family: var(--font-display); font-style: italic; font-size: 16px; }
+.st-line.is-narration { color: var(--jr-dim); }
+.st-line.is-journal { justify-self: center; font-size: 12px; padding: 4px 12px; border-radius: 999px; color: var(--jr-gold-2); }
+@keyframes st-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .st-line { animation: none; } }
+
+.st-basis, .st-know { display: inline-block; font-size: 10.5px; letter-spacing: 0.04em; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--jr-line); color: var(--jr-faint); vertical-align: middle; }
+.st-basis.is-fact { color: #a8d0a0; border-color: #6a8a62; }
+.st-basis.is-interpretation { color: var(--jr-ink); border-color: var(--jr-ink); }
+.st-basis.is-fiction { color: var(--jr-gold); border-color: var(--jr-gold); }
+.st-know.is-hypothesis { border-style: dashed; color: var(--jr-dim); }
+.st-know.is-confirmed { color: #a8d0a0; border-color: #6a8a62; }
+.st-refs { margin-top: 6px; display: grid; gap: 3px; font-size: 12px; line-height: 1.45; color: var(--jr-faint); }
+.st-refs a { color: var(--jr-gold); text-decoration: underline; text-underline-offset: 3px; }
+.st-prov { font-size: 11.5px; color: var(--jr-faint); margin-top: 2px; }
+
+.st-journal { display: grid; gap: 10px; }
+.st-premise { font-size: 14px; }
+.st-entries { display: grid; gap: 8px; }
+.st-entry { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.35); }
+.st-entry.is-hypothesis { border-style: dashed; }
+.st-entry.is-settled .st-text { text-decoration: line-through; text-decoration-color: rgb(214 174 96 / 0.6); color: var(--jr-faint); }
+.st-chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 4px; }
+.st-settled { font-size: 11px; color: var(--jr-faint); }
+.st-text { font-size: 14px; line-height: 1.55; color: var(--jr-ink); }
+.st-dec-head { margin-top: 6px; }
+
+/* the document reader: the page first, the note under it; scrolls on a small phone */
+.dv { position: fixed; inset: 0; z-index: 9; overflow-y: auto; overscroll-behavior: contain; background: rgb(6 4 2 / 0.96); padding: calc(10px + env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left)); }
+.dv-inner { width: min(640px, 100%); margin: 0 auto; display: grid; gap: 10px; }
+.dv-head { position: relative; padding-right: 36px; }
+.dv-head h3 { font-family: var(--font-display); font-size: clamp(18px, 5vw, 24px); line-height: 1.2; color: var(--jr-ink); }
+.dv-page { position: relative; width: min(100%, 60svh * 0.75); justify-self: center; aspect-ratio: 3 / 4; }
+.dv-art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dv-spot { position: absolute; border-radius: 10px; border: 2px dashed rgb(154 42 29 / 0.55); background: rgb(214 174 96 / 0.06); }
+.dv-spot.is-seen { border-style: solid; border-color: rgb(106 138 98 / 0.75); }
+.dv-spot.is-open { border-color: var(--jr-gold); background: rgb(214 174 96 / 0.16); }
+.dv-spot:focus-visible { outline: 3px solid var(--jr-gold); outline-offset: 2px; }
+.dv-count { font-size: 12px; color: var(--jr-faint); text-align: center; }
+.dv-note { padding: 12px 14px; border-radius: 14px; background: var(--jr-panel); border: 1px solid var(--jr-line); }
+.dv-note-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 4px; }
+.dv-about { text-align: center; }

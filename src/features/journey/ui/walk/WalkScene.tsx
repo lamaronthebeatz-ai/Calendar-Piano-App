@@ -5,7 +5,9 @@ import type { ArcDef, LocationDef } from '../../engine/types'
 import { currentStage, effects, enter } from '../../engine/runtime'
 import { holds } from '../../engine/world'
 import { prefersReducedMotion } from '../../../../hooks/useEdgeSwipeBack'
-import { DialoguePanel } from '../Arc'
+import { Book, DialoguePanel } from '../Arc'
+import { DocumentView } from '../DocumentView'
+import type { Narrate } from '../useStory'
 import { LOCKED, goTo, moving, reach, setState, standSpot, tick, type Actor, type ActorState } from '../../scene/actor'
 import { Cast } from '../../scene/character/cast'
 import { visualOf, type Mood } from '../../scene/character/defs'
@@ -23,7 +25,7 @@ import { RegionPanel } from './RegionPanel'
 import './walk.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
-type Props = { arc: ArcDef; loc: LocationDef; scene: SceneDef; spawn: string | null; save: Save; go: Go }
+type Props = { arc: ArcDef; loc: LocationDef; scene: SceneDef; spawn: string | null; save: Save; go: Go; narrate: Narrate }
 
 const IMG = (id: string) => `${import.meta.env.BASE_URL}images/journey/${id}.webp`
 const decode = (id: string) => {
@@ -76,7 +78,7 @@ export function WalkScene(props: Props) {
   return <Playfield key={id} {...props} host={host} loaded={host.loaded} />
 }
 
-function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: SceneHost<Art>; loaded: Loaded<Art> }) {
+function Playfield({ arc, loc, spawn, save, go, narrate, host, loaded }: Props & { host: SceneHost<Art>; loaded: Loaded<Art> }) {
   const { def, art, missing } = loaded
   const [{ init, intro }] = useState(() => {
     const at = spawn ? null : standingIn(def.id)
@@ -104,6 +106,8 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
   const charEls = useRef(new Map<string, HTMLDivElement>())
   const [look, setLook] = useState<Live | null>(null)
   const [panel, setPanel] = useState(false)
+  const [book, setBook] = useState(false)
+  const [paper, setPaper] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
   const [note, setNote] = useState<string | null>(null)
   const [size, setSize] = useState({ w: 0, h: 0 })
@@ -122,7 +126,8 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
   useEffect(() => {
     host.activate()
     update((s) => enter(arc, loc, s))
-  }, [host, arc, loc])
+    narrate({ on: 'enter', place: loc.id })
+  }, [host, arc, loc, narrate])
   // the spawn is used once: dropped from the address, so a reload restores where the figure stood instead
   useEffect(() => {
     if (spawn) go({ v: 'arc', a: arc.id, l: loc.id, w: def.id }, 'replace')
@@ -264,7 +269,9 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           }
           playerTo('inspect')
           cast.play('player', 'read', performance.now())
-          setLook(s)
+          // a document is looked over spot by spot; anything else gets the short look card
+          if (o.document) setPaper(o.document)
+          else setLook(s)
           refresh()
         },
       })
@@ -511,7 +518,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
     onLostPointerCapture: stop,
   })
 
-  const locked = LOCKED.has(shown.state) || panel
+  const locked = LOCKED.has(shown.state) || panel || book
   const nearSpot = spots.find((s) => s.id === near)
   const stageText = currentStage(arc, save)?.text
   const { width, height, floor } = def.dimensions
@@ -603,6 +610,18 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
         >
           Khu vực
         </button>
+        {arc.narrative && (
+          <button
+            className="jr-ghost is-small wk-map"
+            disabled={LOCKED.has(shown.state)}
+            onClick={() => {
+              stop()
+              setBook(true)
+            }}
+          >
+            Sổ tay
+          </button>
+        )}
       </header>
 
       <div className="wk-stage" ref={stage} onPointerDown={onStage} onScroll={(e) => e.currentTarget.scrollTo(0, 0)} data-testid="walk-stage">
@@ -611,7 +630,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
         <div className={`wk-fade${leaving ? ' is-out' : ''}`} aria-hidden="true" />
       </div>
 
-      <div className="wk-controls" hidden={!!talk || !!look || panel}>
+      <div className="wk-controls" hidden={!!talk || !!look || panel || book || !!paper}>
         <button className="wk-dir" aria-label="Đi sang trái" disabled={locked} {...hold(-1)}>◀</button>
         <div className="wk-prompt">
           {nearSpot && !locked ? (
@@ -634,6 +653,7 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           onClose={() => {
             const i = def.interactables.find((x) => x.id === talk.npc)
             const after = i?.kind === 'npc' && i.afterTalk && (!i.afterTalk.when || holds(i.afterTalk.when, saveRef.current)) ? i.afterTalk.steps : []
+            narrate({ on: 'talked', dialogue: talk.dialogue })
             setTalk(null)
             cast.release(talk.npc, performance.now(), after)
             settle()
@@ -661,6 +681,19 @@ function Playfield({ arc, loc, spawn, save, go, host, loaded }: Props & { host: 
           }}
         />
       )}
+      {paper && arc.documents?.some((d) => d.id === paper) && (
+        <DocumentView
+          arc={arc}
+          doc={arc.documents.find((d) => d.id === paper)!}
+          save={save}
+          narrate={narrate}
+          onClose={() => {
+            setPaper(null)
+            settle()
+          }}
+        />
+      )}
+      {book && <Book arc={arc} save={save} start="story" onClose={() => setBook(false)} />}
       {panel && (
         <RegionPanel
           arc={arc}
