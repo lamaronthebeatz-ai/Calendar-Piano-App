@@ -24,6 +24,7 @@ const idle = (page: Page) => expect(player(page)).toHaveAttribute('data-state', 
 const save = (page: Page) => page.evaluate(() => JSON.parse(localStorage.getItem('journey:v2') ?? '{}'))
 
 test('đi vào khung cảnh từ màn danh sách, đi, nói chuyện, xem giá sách, vấp rào', async ({ page }) => {
+  test.slow() // a walk across the room and a reload; WebKit on a busy CI shard
   await page.goto(URL)
   await page.getByRole('button', { name: 'Đi vào khung cảnh' }).click()
   await expect(page).toHaveURL(/w=sc%3Abt%2Fthu-vien/)
@@ -84,7 +85,7 @@ test('đi vào khung cảnh từ màn danh sách, đi, nói chuyện, xem giá s
   expect(await x(page)).toBeLessThan(1690)
 
   // reload: the story state stays, the scene opens again on it
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' })
   await idle(page)
   await expect(page.getByRole('button', { name: 'Xem: Giá sách phía sau' })).toHaveCount(0)
   await page.getByRole('button', { name: '← Danh sách' }).click()
@@ -160,7 +161,7 @@ test('chuyển cảnh: thư viện → phòng chép sách → thư viện, xuấ
   await page.mouse.click(...(await (async () => { const b = (await page.getByTestId('walk-stage').boundingBox())!; return [b.x + b.width * 0.75, b.y + b.height * 0.6] as const })()))
   await idle(page)
   const before = await x(page)
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' })
   await idle(page)
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/thu-vien')
   expect(Math.abs((await x(page)) - before)).toBeLessThanOrEqual(1)
@@ -307,7 +308,7 @@ test('tuyến "Ghi chú bên lề": khảo sát trang sách, hỏi, chọn đi�
   expect(j).not.toContain('chính thầy nhận') // nothing told before it is found
 
   // reload: the story stands where it was
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' })
   await idle(page)
   j = await journal(page)
   expect(j).toContain('bạn muốn nghe thầy Rinaldo trước khi tin')

@@ -24,7 +24,7 @@ async function openWith(page: Page, place: string, change: (s: Record<string, un
     const s = JSON.parse(localStorage.getItem('journey:v2')!)
     localStorage.setItem('journey:v2', JSON.stringify(new Function('s', `return (${src})(s)`)(s)))
   }, change.toString())
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' })
   await expect(page.locator('.ar-place-title')).toBeVisible()
 }
 
@@ -86,7 +86,7 @@ test('bàn so bản chép: nghe, đọc bản nhạc (dữ liệu có cấu trú
   await expect.poll(async () => (await save(page)).flags).toContain('beat:bt:so-huong')
 
   // reload: the panel reopens on the same step, progress intact
-  await page.reload()
+  await page.reload({ waitUntil: 'domcontentloaded' })
   await page.getByRole('button', { name: /Bàn so bản chép/ }).click()
   await expect(panel.getByRole('button', { name: /So với neume cũ ✓/ })).toBeVisible({ timeout: 20_000 })
   await expect(panel).toContainText('Đúng theo dữ liệu')
