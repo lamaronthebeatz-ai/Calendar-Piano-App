@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { update } from '../../progress'
 import type { Save } from '../../engine/save'
 import type { ArcDef, LocationDef } from '../../engine/types'
@@ -8,6 +8,8 @@ import { prefersReducedMotion } from '../../../../hooks/useEdgeSwipeBack'
 import { Book, DialoguePanel } from '../Arc'
 import { DocumentView } from '../DocumentView'
 import type { Narrate } from '../useStory'
+
+const AcademicPanel = lazy(() => import('../academic/AcademicPanel'))
 import { LOCKED, goTo, moving, reach, setState, standSpot, tick, type Actor, type ActorState } from '../../scene/actor'
 import { Cast } from '../../scene/character/cast'
 import { visualOf, type Mood } from '../../scene/character/defs'
@@ -108,6 +110,7 @@ function Playfield({ arc, loc, spawn, save, go, narrate, host, loaded }: Props &
   const [panel, setPanel] = useState(false)
   const [book, setBook] = useState(false)
   const [paper, setPaper] = useState<string | null>(null)
+  const [study, setStudy] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
   const [note, setNote] = useState<string | null>(null)
   const [size, setSize] = useState({ w: 0, h: 0 })
@@ -271,6 +274,7 @@ function Playfield({ arc, loc, spawn, save, go, narrate, host, loaded }: Props &
           cast.play('player', 'read', performance.now())
           // a document is looked over spot by spot; anything else gets the short look card
           if (o.document) setPaper(o.document)
+          else if (o.academic) setStudy(o.academic)
           else setLook(s)
           refresh()
         },
@@ -518,7 +522,7 @@ function Playfield({ arc, loc, spawn, save, go, narrate, host, loaded }: Props &
     onLostPointerCapture: stop,
   })
 
-  const locked = LOCKED.has(shown.state) || panel || book
+  const locked = LOCKED.has(shown.state) || panel || book || !!study
   const nearSpot = spots.find((s) => s.id === near)
   const stageText = currentStage(arc, save)?.text
   const { width, height, floor } = def.dimensions
@@ -630,7 +634,7 @@ function Playfield({ arc, loc, spawn, save, go, narrate, host, loaded }: Props &
         <div className={`wk-fade${leaving ? ' is-out' : ''}`} aria-hidden="true" />
       </div>
 
-      <div className="wk-controls" hidden={!!talk || !!look || panel || book || !!paper}>
+      <div className="wk-controls" hidden={!!talk || !!look || panel || book || !!paper || !!study}>
         <button className="wk-dir" aria-label="Đi sang trái" disabled={locked} {...hold(-1)}>◀</button>
         <div className="wk-prompt">
           {nearSpot && !locked ? (
@@ -692,6 +696,19 @@ function Playfield({ arc, loc, spawn, save, go, narrate, host, loaded }: Props &
             settle()
           }}
         />
+      )}
+      {study && arc.sequences?.some((x) => x.id === study) && (
+        <Suspense fallback={<p className="st-lines">Đang mở…</p>}>
+          <AcademicPanel
+            arc={arc}
+            seq={arc.sequences.find((x) => x.id === study)!}
+            save={save}
+            onClose={() => {
+              setStudy(null)
+              settle()
+            }}
+          />
+        </Suspense>
       )}
       {book && <Book arc={arc} save={save} start="story" onClose={() => setBook(false)} />}
       {panel && (

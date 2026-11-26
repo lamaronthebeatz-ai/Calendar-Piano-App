@@ -170,6 +170,13 @@ export function ScriptoriumRoom({ width, height, floor }: P) {
         <path d="M262 414L300 405L300 386L262 395Z M302 404L342 394L340 376L302 386Z" fill="#efe2c2" strokeWidth="2" />
         <path d="M268 398H296M268 404H296M306 390H336M306 396H336" stroke="#24170d" strokeWidth="1.5" />
       </g>
+      {/* a small table under the window: the recopied page and the scraped fragment side by side */}
+      <g stroke={INK} strokeWidth="4">
+        <path d={`M600 ${floor}V${floor - 70}M680 ${floor}V${floor - 70}`} fill="none" />
+        <rect x="586" y={floor - 80} width="108" height="12" fill="#6b4a22" />
+        <rect x="596" y={floor - 92} width="40" height="12" fill="#efe2c2" strokeWidth="2" />
+        <rect x="644" y={floor - 90} width="28" height="10" fill="#d9c8a0" strokeWidth="2" />
+      </g>
       {/* the copying desk against the wall: slanted top, inkhorns, sheets */}
       <g stroke={INK} strokeWidth="4">
         <rect x="780" y={floor - 120} width="180" height="120" fill="#4a2c16" />

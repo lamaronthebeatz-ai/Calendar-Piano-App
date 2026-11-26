@@ -1,5 +1,6 @@
 import type { EntityId } from '../../knowledge/ids'
 import type { DocumentDef, NarrativeDef } from './narrative'
+import type { MusicDatum, SequenceDef } from './academic'
 export type { EntityId }
 import type { Verdict } from '../types'
 
@@ -95,7 +96,8 @@ export interface LocationDef {
   unlock?: Cond
   present: { npc: string; dialogue: string; when?: Cond }[]
   /** `document`: examined closely (a manuscript to look over spot by spot — engine/narrative.ts) */
-  objects?: { id: string; label: string; when?: Cond; effects?: Effect[]; dialogue?: string; puzzle?: string; document?: string }[]
+  /** `academic`: opens a sequence of academic activities (engine/academic.ts) */
+  objects?: { id: string; label: string; when?: Cond; effects?: Effect[]; dialogue?: string; puzzle?: string; document?: string; academic?: string }[]
   onEnter?: Effect[]
 }
 
@@ -204,4 +206,7 @@ export interface ArcDef extends ChapterDef {
   narrative?: NarrativeDef
   /** documents examined spot by spot */
   documents?: DocumentDef[]
+  /** structured music data (notes with ids) and academic activity sequences — engine/academic.ts */
+  scores?: MusicDatum[]
+  sequences?: SequenceDef[]
 }

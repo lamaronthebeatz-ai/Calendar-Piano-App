@@ -170,3 +170,47 @@
 .dv-note { padding: 12px 14px; border-radius: 14px; background: var(--jr-panel); border: 1px solid var(--jr-line); }
 .dv-note-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 4px; }
 .dv-about { text-align: center; }
+
+/* ---- academic activities (ui/academic) — the document reader's frame (.dv), with its own blocks ---- */
+.ac .dv-inner { gap: 12px; }
+.ac-steps { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+.ac-step { flex: none; padding: 6px 12px; border-radius: 999px; font-size: 12.5px; color: var(--jr-dim); border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.5); }
+.ac-step b { color: var(--jr-gold); margin-right: 2px; }
+.ac-step.is-on { color: var(--jr-ink); border-color: var(--jr-gold); }
+.ac-step.is-done { color: #a8d0a0; }
+.ac-act { display: grid; gap: 8px; padding: 12px 14px; border-radius: 14px; background: var(--jr-panel); border: 1px solid var(--jr-line); }
+.ac-title { font-family: var(--font-display); font-size: 19px; color: var(--jr-ink); }
+.ac-aim { font-size: 14px; line-height: 1.5; color: var(--jr-ink); }
+.ac-marks { display: flex; flex-wrap: wrap; gap: 6px; }
+.ac-marks span { font-size: 11px; padding: 1px 8px; border-radius: 999px; border: 1px dashed var(--jr-line); color: var(--jr-faint); }
+.ac-marks span.is-on { border-style: solid; color: #a8d0a0; border-color: #6a8a62; }
+.ac-origin { font-size: 12px; line-height: 1.45; color: var(--jr-faint); border-left: 2px solid var(--jr-line); padding-left: 8px; }
+.ac-umk summary { cursor: pointer; font-size: 13px; color: var(--jr-gold); }
+.ac-umk ul { display: grid; gap: 6px; margin-top: 6px; font-size: 13px; }
+.ac-umk a { color: var(--jr-gold); }
+.ac-umk .st-prov { display: block; }
+.ac-vol { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--jr-dim); }
+.ac-vol input { flex: 1; accent-color: var(--jr-gold); }
+.ac-verdict { font-size: 14px; color: var(--jr-ink); }
+.ac-verdict.is-ok { color: #a8d0a0; }
+.ac-explain { display: grid; gap: 6px; padding-top: 8px; border-top: 1px solid var(--jr-line); }
+.ac-foot { display: flex; justify-content: space-between; gap: 10px; }
+.ac-foot .jr-cta { width: auto; padding-inline: 18px; margin-left: auto; }
+/* the score: white paper like the editor's, scrolling sideways; drawn notes tinted by state */
+.ac-score { display: grid; gap: 6px; }
+.ac-zoom { display: flex; align-items: center; gap: 8px; justify-content: flex-end; font-size: 12px; color: var(--jr-faint); }
+.ac-sheet { overflow-x: auto; overscroll-behavior-x: contain; border-radius: 10px; background: #fbf8f1; min-height: 90px; padding: 4px; color: #1a1206; }
+.ac-sheet svg { display: block; max-width: none; height: auto; }
+.ac-sheet [data-class="note"] { cursor: pointer; }
+.ac-sheet .is-seen { fill: #3d6a8a; color: #3d6a8a; }
+.ac-sheet .is-picked { fill: #b8551e; color: #b8551e; }
+.ac-notes { display: flex; flex-wrap: wrap; gap: 6px; }
+.ac-note { min-width: 40px; height: 40px; border-radius: 10px; font-size: 14px; color: var(--jr-ink); border: 1px solid var(--jr-line); background: rgb(8 6 4 / 0.5); }
+.ac-note.is-seen { border-color: #6a8a9a; }
+.ac-note.is-picked { border-color: var(--jr-gold); background: rgb(214 174 96 / 0.2); }
+.ac-info { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 13.5px; }
+.ac-info dt { color: var(--jr-faint); }
+.ac-old { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 14px; }
+.ac-old span { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; border: 1px solid var(--jr-line); }
+.ac-findings ul { display: grid; gap: 6px; margin-top: 6px; }
+.ac-finding { font-size: 13.5px; line-height: 1.5; }

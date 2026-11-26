@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { findArticle } from '../../theory/wiki'
 import { MUSIC } from '../music'
@@ -20,11 +20,14 @@ import { articleKind, KIND_LABEL } from '../../knowledge/ids'
 import { createProject, updateProject } from '../../research/store'
 import { WalkScene } from './walk/WalkScene'
 import { sceneFor, scenesOf } from '../scene/world'
-import { KIND, useEscape } from './arcShared'
+import { KIND, clipVolume, onClipVolume, useEscape } from './arcShared'
 import { Journal } from './Journal'
 import { DocumentView } from './DocumentView'
 import { StoryLines } from './StoryLines'
 import { useStory, type Narrate } from './useStory'
+
+// academic activities bring the engraver and UMRE's worker: their own chunk, fetched when one opens
+const AcademicPanel = lazy(() => import('./academic/AcademicPanel'))
 import './arc.css'
 
 type Go = (p: Record<string, string>, how?: 'push' | 'replace' | 'back') => void
@@ -128,6 +131,7 @@ function Hub({ arc, save, go, map }: { arc: ArcDef; save: Save; go: Go; map: (op
 function PlaceScreen({ arc, loc, save, go, narrate }: { arc: ArcDef; loc: LocationDef; save: Save; go: Go; narrate: Narrate }) {
   const [talk, setTalk] = useState<string | null>(null)
   const [doc, setDoc] = useState<string | null>(null)
+  const [study, setStudy] = useState<string | null>(null)
   useEffect(() => {
     update((s) => enter(arc, loc, s))
     narrate({ on: 'enter', place: loc.id })
@@ -137,9 +141,11 @@ function PlaceScreen({ arc, loc, save, go, narrate }: { arc: ArcDef; loc: Locati
   const use = (o: (typeof things)[number]) => {
     if (o.effects) update((s) => effects(arc, o.effects, s))
     if (o.document) setDoc(o.document)
+    if (o.academic) setStudy(o.academic)
     if (o.puzzle) go({ v: 'arc', a: arc.id, l: loc.id, p: o.puzzle })
   }
   const paper = arc.documents?.find((d) => d.id === doc)
+  const sequence = arc.sequences?.find((x) => x.id === study)
   const stage = currentStage(arc, save)
   return (
     <section className="ar-screen is-place">
@@ -170,7 +176,7 @@ function PlaceScreen({ arc, loc, save, go, narrate }: { arc: ArcDef; loc: Locati
             return (
               <button key={o.id} className={`ar-act${solved ? ' is-done' : ''}`} onClick={() => use(o)}>
                 <b>{o.label}</b>
-                <small>{o.puzzle ? (solved ? '✓ Đã giải — xem lại' : 'Thử thách') : o.document ? 'Khảo sát' : 'Xem'}</small>
+                <small>{o.puzzle ? (solved ? '✓ Đã giải — xem lại' : 'Thử thách') : o.document ? 'Khảo sát' : o.academic ? 'Hoạt động học thuật' : 'Xem'}</small>
               </button>
             )
           })}
@@ -188,6 +194,11 @@ function PlaceScreen({ arc, loc, save, go, narrate }: { arc: ArcDef; loc: Locati
         />
       )}
       {paper && <DocumentView arc={arc} doc={paper} save={save} narrate={narrate} onClose={() => setDoc(null)} />}
+      {sequence && (
+        <Suspense fallback={<p className="st-lines">Đang mở…</p>}>
+          <AcademicPanel arc={arc} seq={sequence} save={save} onClose={() => setStudy(null)} />
+        </Suspense>
+      )}
     </section>
   )
 }
@@ -561,11 +572,14 @@ function ClipButton({ clip, label }: { clip: AuralContent['clips'][number]; labe
     },
     [],
   )
+  // the activity's volume slider reaches a clip that is already playing
+  useEffect(() => onClipVolume((v) => el.current && (el.current.volume = v)), [])
   const play = () => {
     playTrack(undefined)
     const t = MUSIC[clip.track]
     if (!t) return
     const a = (el.current ??= new Audio(t.src))
+    a.volume = clipVolume()
     a.currentTime = clip.start
     const stop = () => {
       if (a.currentTime >= clip.end) {

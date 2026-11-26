@@ -1,5 +1,6 @@
 import type { ArcDef } from '../engine/types'
 import { BAN_THAO_DOCUMENTS, BAN_THAO_STORY } from './story-ban-thao'
+import { BAN_THAO_ACADEMIC_EVIDENCE, BAN_THAO_ACADEMIC_PUZZLES, BAN_THAO_MUSIC, BAN_THAO_SEQUENCES } from './academic-ban-thao'
 
 /**
  * Chương I — "Bản thảo thất lạc": the first arc built on the engine (docs/journey/GAME_DESIGN_DOCUMENT.md §4).
@@ -22,6 +23,8 @@ export const banThao: ArcDef = {
   period: 'a:thoi-ky-trung-co',
   narrative: BAN_THAO_STORY,
   documents: BAN_THAO_DOCUMENTS,
+  scores: BAN_THAO_MUSIC,
+  sequences: BAN_THAO_SEQUENCES,
 
   locations: [
     {
@@ -33,6 +36,7 @@ export const banThao: ArcDef = {
       present: [{ npc: 'npc:bt/quan-thu', dialogue: 'dlg:bt/quan-thu' }],
       objects: [
         { id: 'gia-sach', label: 'Giá sách phía sau', when: { all: [{ quest: 'q:bt/ban-thao', is: 'active' }, { not: { item: 'item:bt/trang-ban-thao' } }] }, effects: [{ give: 'item:bt/trang-ban-thao' }, { evidence: 'ev:bt/trang-ban-thao' }, { discover: 'a:lich-su-ky-am' }] },
+        { id: 'tap-ghi-chep', label: 'Tập ghi chép về thầy Guido', when: { topic: 'guido', with: 'npc:bt/quan-thu' }, academic: 'seq:bt/nguon-guido' },
         { id: 'sach-ca', label: 'Sách ca trên bục đọc', when: { met: 'npc:bt/quan-thu' }, document: 'doc:bt/sach-ca' },
         { id: 'hop-nhac', label: 'Hộp nhạc của lữ khách', effects: [{ startQuest: 'q:bt/mot-be-nhieu-be' }], puzzle: 'pz:bt/don-am-nhieu-be' },
       ],
@@ -45,6 +49,7 @@ export const banThao: ArcDef = {
       bg: 'scriptorium',
       present: [{ npc: 'npc:bt/rinaldo', dialogue: 'dlg:bt/rinaldo' }],
       objects: [
+        { id: 'ban-so', label: 'Bàn so bản chép', when: { item: 'item:bt/manh-cu' }, academic: 'seq:bt/so-ban-chep' },
         { id: 'ban-chep', label: 'Bàn chép: hai lối ghi', when: { topic: 'neume', with: 'npc:bt/rinaldo' }, puzzle: 'pz:bt/hai-loi-ghi' },
         { id: 'sach-not-vuong', label: 'Cuốn sách nốt vuông của bạn', when: { topic: 'neume', with: 'npc:bt/rinaldo' }, puzzle: 'pz:bt/doc-khoa-do' },
         { id: 'khoa-fa', label: 'Một dòng có khoá Fa', when: { solved: 'pz:bt/doc-khoa-do' }, effects: [{ startQuest: 'q:bt/khoa-fa' }], puzzle: 'pz:bt/doc-khoa-fa' },
@@ -125,6 +130,7 @@ export const banThao: ArcDef = {
             { text: 'Pomposa từng có thầy dạy hát nào nổi tiếng?', when: { not: { topic: 'guido', with: 'npc:bt/quan-thu' } }, next: 'n4' },
             // "Ghi chú bên lề" (fiction): asked once the scraped patch was seen; told back once Rinaldo was heard
             { text: 'Ai đã cạo trang sách ca trên bục đọc?', kind: 'info', when: { all: [{ flag: 'seen:doc:bt/sach-ca/cao' }, { not: { topic: 'ghi-chu', with: 'npc:bt/quan-thu' } }] }, next: 'g1' },
+            { text: 'Trang chép lại rẽ khác neume cũ ở đúng một chỗ.', kind: 'conditional', when: { all: [{ evidence: 'ev:bt/so-huong' }, { not: { topic: 'mot-cho', with: 'npc:bt/quan-thu' } }] }, next: 'g7' },
             { text: 'Con đã nghe thầy Rinaldo kể về trang sách ca.', kind: 'conditional', when: { all: [{ item: 'item:bt/manh-cu' }, { not: { topic: 'hai-loi', with: 'npc:bt/quan-thu' } }] }, next: 'g6' },
           ],
         },
@@ -152,6 +158,7 @@ export const banThao: ArcDef = {
         g4: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'happy', text: 'Tốt. Sách của tu viện cần gọn gàng hơn là cần những câu hỏi.', end: true },
         g5: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'worried', text: 'Tuỳ ngài. Thầy ấy ở phòng chép sách, bên kia hành lang.', end: true },
         g6: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'thoughtful', text: 'Vậy ngài đã nghe cả hai lời. Một trang có thể bị cạo vì chép hỏng, cũng có thể vì người ta muốn chép lại theo lối mới. Ngài cứ ghi cả hai, ta không cãi.', effects: [{ remember: 'hai-loi', with: 'npc:bt/quan-thu' }], end: true },
+        g7: { speaker: 'npc:bt/quan-thu', voice: 'fiction', mood: 'thoughtful', text: 'Chỗ ấy… là chỗ ta bảo chép hỏng. Phần còn lại thì đúng là thầy Rinaldo chép theo lối mới.', effects: [{ remember: 'mot-cho', with: 'npc:bt/quan-thu' }], end: true },
         n5: { speaker: 'npc:bt/quan-thu', voice: 'fiction', text: 'Tìm nó trên giá sách phía sau, rồi mang sang phòng chép sách cho thầy Rinaldo xem. Thầy ấy đọc neume giỏi hơn ta.', effects: [{ startQuest: 'q:bt/ban-thao' }], end: true },
       },
     },
@@ -370,6 +377,7 @@ export const banThao: ArcDef = {
   ],
 
   puzzles: [
+    ...BAN_THAO_ACADEMIC_PUZZLES,
     {
       id: 'pz:bt/hai-loi-ghi',
       type: 'classify',
@@ -684,6 +692,7 @@ export const banThao: ArcDef = {
   ],
 
   evidence: [
+    ...BAN_THAO_ACADEMIC_EVIDENCE,
     { id: 'ev:bt/hai-loi-ke', title: 'Hai lời kể về một trang', text: 'Thầy quản thư: trang chép hỏng nên phải cạo. Thầy Rinaldo: trang được chép lại theo lối ghi trên dòng kẻ. (Tình tiết hư cấu.)', kind: 'fiction', reliability: 'Tình tiết hư cấu của game, để tập đối chiếu hai lời kể.', verification: 'library' },
     { id: 'ev:bt/trang-ban-thao', title: 'Trang chép tay ở Pomposa', text: 'Neume trên dòng kẻ, chữ cái đầu dòng. Vật trong truyện — không phải bản chép tay có thật.', kind: 'fiction', reliability: 'Tình tiết hư cấu của game.', verification: 'library' },
     { id: 'ev:bt/neume-dong-ke', title: 'Neume trên dòng kẻ', text: 'Khoảng năm 1000 các bản chép ở Ý đặt neume theo độ cao; Guido dùng dòng kẻ và chữ cái làm khoá để đọc được giai điệu chưa từng nghe.', kind: 'secondary', source: 'a:lich-su-ky-am', reliability: 'Bài thư viện, theo các nguồn ghi ở bài.', verification: 'library' },

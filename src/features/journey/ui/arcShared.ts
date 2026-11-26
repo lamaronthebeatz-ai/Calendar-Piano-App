@@ -19,3 +19,12 @@ export function useEscape(close: () => void) {
 export const KIND: Record<EvidenceKind, string> = { primary: 'Nguồn sơ cấp', secondary: 'Nguồn thứ cấp', artifact: 'Hiện vật', interpretation: 'Diễn giải', anecdote: 'Giai thoại', hypothesis: 'Giả thuyết', fiction: 'Hư cấu' }
 export const BASIS: Record<Basis, string> = { fact: 'Dữ kiện có nguồn', interpretation: 'Diễn giải', fiction: 'Hư cấu' }
 export const KNOWING: Record<Knowing, string> = { known: 'Đã biết', hypothesis: 'Giả thuyết', confirmed: 'Đã xác nhận' }
+/** the listening clips' volume (0–1), set from an activity's slider; read by every clip when it starts and while it plays */
+let volume = 1
+const volumeListeners = new Set<(v: number) => void>()
+export const clipVolume = () => volume
+export function setClipVolume(v: number) {
+  volume = Math.min(1, Math.max(0, v))
+  volumeListeners.forEach((f) => f(volume))
+}
+export const onClipVolume = (f: (v: number) => void) => (volumeListeners.add(f), () => void volumeListeners.delete(f))

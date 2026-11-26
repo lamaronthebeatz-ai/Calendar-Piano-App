@@ -136,6 +136,21 @@ export const BAN_THAO_STORY: NarrativeDef = {
           after: ['bt:loi-rinaldo'],
           journal: { text: 'Một trang, hai lời kể: chép hỏng (thầy quản thư) hay chép lại theo lối mới (thầy Rinaldo)? Trang sách không tự trả lời; cả hai được ghi lại.', knowing: 'hypothesis', basis: 'fiction' },
         },
+        {
+          id: 'bt:so-huong',
+          kind: 'reveal',
+          trigger: { on: 'state' },
+          when: { evidence: 'ev:bt/so-huong' },
+          show: { style: 'thought', text: 'Chép lại theo lối mới — nhưng có một chỗ đã được sửa.' },
+          journal: { text: 'So với vết neume cũ, bản chép lại giữ hướng đi ở mọi bước trừ bước tới nốt thứ 9. Neume cũ không ghi quãng, nên chỉ biết có một chỗ đổi — không biết bản nào đúng.', knowing: 'confirmed', basis: 'fiction' },
+        },
+        {
+          id: 'bt:ca-hai',
+          kind: 'turn',
+          trigger: { on: 'state' },
+          after: ['bt:so-huong', 'bt:hai-loi'],
+          journal: { text: 'Có thể cả hai lời kể cùng đúng một phần: trang được chép lại theo lối mới (thầy Rinaldo), và một chỗ được sửa (điều thầy quản thư gọi là chép hỏng).', knowing: 'hypothesis', basis: 'fiction' },
+        },
       ],
     },
     {

@@ -50,6 +50,7 @@ export const POMPOSA_SCENES: readonly SceneDef[] = [
       // the antiphoner open on the lectern ("Ghi chú bên lề"): looked over from the reader's side, right of the lectern
       { id: 'antiphoner', kind: 'object', ref: 'sach-ca', x: 790, top: 330, width: 100, height: 120, approach: { distance: 74, side: 'right' }, verb: 'Khảo sát' },
       { id: 'council-door', kind: 'door', x: 1000, top: 300, width: 110, approach: { distance: 0 }, verb: 'Vào', label: 'Cửa phòng họp', transition: 't:thu-vien>phong-hop' },
+      { id: 'guido-notes', kind: 'object', ref: 'tap-ghi-chep', x: 1180, top: 330, width: 80, height: 130, approach: { distance: 60 }, verb: 'Đọc' },
       { id: 'shelf', kind: 'object', ref: 'gia-sach', x: 1290, top: 190, approach: { distance: 70 }, verb: 'Xem' },
       { id: 'music-box', kind: 'object', ref: 'hop-nhac', x: 1560, top: 420, approach: { distance: 74 }, verb: 'Mở' },
     ],
@@ -88,6 +89,8 @@ export const POMPOSA_SCENES: readonly SceneDef[] = [
       { id: 'square-book', kind: 'object', ref: 'sach-not-vuong', x: 300, top: 330, approach: { distance: 64 }, verb: 'Mở' },
       { id: 'rinaldo', kind: 'npc', ref: 'npc:bt/rinaldo', x: 500, top: 300, approach: { distance: 78 }, verb: 'Nói chuyện', facing: 1, watch: 200 },
       { id: 'window', kind: 'lookout', x: 640, top: 110, width: 120, height: 220, approach: { distance: 0 }, verb: 'Nhìn', label: 'Cửa sổ', text: 'Bàn chép kê sát cửa sổ hướng nam để có nhiều ánh sáng nhất. Mực đen cho lời, mực đỏ cho tiêu đề và chữ đầu đoạn.' },
+      // the small table under the window where the two copies lie side by side (academic activities)
+      { id: 'compare-desk', kind: 'object', ref: 'ban-so', x: 640, top: 400, width: 110, height: 140, approach: { distance: 62 }, verb: 'So' },
       { id: 'desk-sheets', kind: 'object', ref: 'ban-chep', x: 820, top: 360, approach: { distance: 70, side: 'left' }, verb: 'Xem' },
       { id: 'fa-line', kind: 'object', ref: 'khoa-fa', x: 900, top: 360, approach: { distance: 150, side: 'left' }, verb: 'Đọc' },
     ],

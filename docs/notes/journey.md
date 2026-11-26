@@ -223,3 +223,24 @@ Lamar yêu cầu 15/11/2026: game cốt truyện đi qua lịch sử âm nhạc 
   - Quest `q:bt/ghi-chu` có rẽ nhánh. `next: []` để kết thúc rõ, vì mặc định quest đi tiếp sang giai đoạn đứng sau trong danh sách.
   - Hội thoại đổi theo lựa chọn ở lần gặp sau.
 - **Bỏ ngỏ**: chưa có hồi tưởng / cảnh chuyển có hình; tuyến chính chưa có màn tổng quan riêng.
+
+## Phase 5 — hoạt động học thuật (26/11/2026)
+- **Lớp tích hợp, không có hệ thứ hai**:
+  - `engine/academic.ts` (thuần): `ActivityDef` (mục tiêu, bối cảnh, `knowledge` = id UMK, `puzzle` = câu đố của arc, `music` = dữ liệu nốt, `reasoning` = yêu cầu UMRE, `onDone`), `SequenceDef`, `MusicDatum` (nốt có id), `progressOf`, `departures`.
+  - Tiến trình là cờ `ac:<id>:tried|done|correct|explained` trong save có sẵn; lượt giải vẫn ở `save.puzzles`.
+  - Nội dung ở `content/academic-ban-thao.ts`; đồ vật có `academic: <seq>` mở chuỗi hoạt động.
+- **Giao diện** `ui/academic/` (chunk riêng, nạp lười — Verovio và worker UMRE không vào chunk game):
+  - `AcademicPanel` gồm các bước, mỗi bước: mục tiêu, bối cảnh, 4 mức tiến trình, khung UMK, kết quả kèm nhãn nguồn gốc.
+  - `ScoreView`: khắc bằng `compose/engrave` + `toMei`; chạm nốt thì truy theo `data-id` về dữ liệu, không đọc pixel; có phóng to/thu nhỏ và cuộn ngang.
+  - `data.ts`: `composeOf` / `umreScoreOf` — một nguồn nốt cho cả hình khắc lẫn phân tích.
+  - Âm lượng: `setClipVolume` (arcShared), `ClipButton` đọc giá trị này.
+- **Chuỗi "Bàn so bản chép"** (phòng chép sách, mở khi có `item:bt/manh-cu`):
+  1. Nghe — câu đố `aural`, bản thu thật, chấm theo dữ liệu câu đố.
+  2. Khảo sát trang (`score`).
+  3. Phân tích giai điệu: **UMRE thật** `analyze` / `melody.line` qua `UmreHost` worker.
+  4. Câu đố so hướng `choice`: chấm theo dữ liệu; test buộc đáp án = `departures(old, notes)`. Hệ quả: chứng cứ `ev:bt/so-huong`, nhịp `bt:so-huong` / `bt:ca-hai`, lời thoại mới của thầy quản thư.
+- **"Tập ghi chép về thầy Guido"** (thư viện, sau khi nghe về Guido): câu đố `classify`; test buộc đáp án = `kind` của chứng cứ có nguồn của arc.
+- **Không dùng hoà âm UMRE**: thánh ca một bè, thời Guido; dùng hoà âm cổ điển (Rimsky) ở đây là trộn truyền thống. Giọng chủ: tác vụ giai điệu không cần, không đặt, không suy đoán.
+- **UMRE lỗi** (worker không tải / quá giờ): hiện lỗi + "Thử lại phân tích", không tạo kết quả thay; có test chặn chunk worker.
+- **Hư cấu**: dòng giai điệu chép lại và hướng neume cũ là dữ liệu game, ghi rõ trong game. Thật: bản thu Ut queant laxis (Commons, PD), chứng cứ về Guido (bài thư viện).
+- Test: `engine/academic.test.ts` (8, gồm UMRE thật trên dữ liệu), `tests/journey-academic.spec.ts` (3 × 2 dự án).
