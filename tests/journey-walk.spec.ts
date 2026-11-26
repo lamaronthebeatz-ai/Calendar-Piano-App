@@ -277,7 +277,8 @@ test('tuyến "Ghi chú bên lề": khảo sát trang sách, hỏi, chọn đi�
   await page.goto(URL + '&w=1')
   await idle(page)
   await converse(page, 'Thầy quản thư', ['Trang ấy lạ thế nào?'])
-  await expect(page.locator('.st-lines')).toContainText('cuốn sách ca đang mở', { timeout: 15_000 })
+  // the beat is recorded in the save (its short on-screen line may already have faded on a slow machine)
+  await expect.poll(async () => (await save(page)).flags, { timeout: 15_000 }).toContain('beat:bt:sach-mo')
 
   // the open book on the lectern: looked over spot by spot (not one text box)
   await press(page, 'Khảo sát: Sách ca trên bục đọc')
@@ -290,7 +291,7 @@ test('tuyến "Ghi chú bên lề": khảo sát trang sách, hỏi, chọn đi�
   await doc.getByRole('button', { name: /Xem kỹ: Chỗ giấy da bị cạo/ }).click()
   await expect(doc).toContainText('Hư cấu')
   await doc.getByRole('button', { name: /Xem kỹ: Ghi chú bên lề/ }).click()
-  await expect(page.locator('.st-lines')).toContainText('Rinaldo?')
+  await expect.poll(async () => (await save(page)).flags, { timeout: 15_000 }).toContain('beat:bt:chu-r')
   await doc.getByRole('button', { name: 'Xong' }).click()
   await idle(page)
 
