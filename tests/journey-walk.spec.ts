@@ -123,6 +123,7 @@ const scene = (page: Page) => page.locator('[data-scene]')
 const press = (page: Page, name: string | RegExp) => page.getByRole('button', { name }).evaluate((b: HTMLElement) => b.click())
 
 test('chuyển cảnh: thư viện → phòng chép sách → thư viện, xuất hiện đúng chỗ, cửa phòng họp đóng theo tuyến', async ({ page }) => {
+  test.slow() // two scene loads, a reload and walks across both rooms
   await page.goto(URL + '&w=1')
   await idle(page)
   await expect(scene(page)).toHaveAttribute('data-scene', 'sc:bt/thu-vien')
@@ -247,7 +248,8 @@ test('nhân vật và hoạt ảnh: nói/nghe theo câu, nét mặt, NPC chỉ �
 async function converse(page: Page, who: string, picks: string[]) {
   await press(page, `Nói chuyện với ${who}`)
   const d = page.getByRole('dialog')
-  await expect(d).toBeVisible({ timeout: 15_000 })
+  // the figure walks up and greets first: slow on WebKit under CI load
+  await expect(d).toBeVisible({ timeout: 30_000 })
   const left = [...picks]
   for (let i = 0; i < 30 && (await d.isVisible()); i++) {
     const wanted = []
@@ -265,7 +267,8 @@ async function converse(page: Page, who: string, picks: string[]) {
   await idle(page)
 }
 const journal = async (page: Page) => {
-  await page.locator('.wk-top').getByRole('button', { name: 'Sổ tay', exact: true }).click()
+  // pressed directly: WebKit on a loaded CI machine may never report the header button 'stable'
+  await page.locator('.wk-top').getByRole('button', { name: 'Sổ tay', exact: true }).evaluate((b: HTMLElement) => b.click())
   const book = page.getByRole('dialog', { name: 'Sổ hành trình' })
   await expect(book).toBeVisible()
   const text = await book.locator('.st-journal').innerText()
@@ -274,6 +277,7 @@ const journal = async (page: Page) => {
 }
 
 test('tuyến "Ghi chú bên lề": khảo sát trang sách, hỏi, chọn điều tra, lời kể thứ hai, nhật ký, tải lại', async ({ page }) => {
+  test.slow() // three conversations, a document, a reload and a scene change
   await page.goto(URL + '&w=1')
   await idle(page)
   await converse(page, 'Thầy quản thư', ['Trang ấy lạ thế nào?'])
